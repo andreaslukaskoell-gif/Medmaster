@@ -432,7 +432,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Totalreflexion tritt auf, wenn Licht von einem optisch dichteren Medium (höherer Brechungsindex, z.B. Glas) in ein optisch dünneres Medium (niedrigerer Brechungsindex, z.B. Luft) uebergeht und der Einfallswinkel größer als der kritische Grenzwinkel ist. In diesem Fall wird das gesamte Licht reflektiert und kein Licht tritt in das zweite Medium ueber. Dieses Prinzip wird in Glasfaserkabeln zur Datenuebertragung genutzt.",
+      "Totalreflexion tritt auf, wenn Licht von einem optisch dichteren Medium (höherer Brechungsindex, z.B. Glas) in ein optisch dünneres Medium (niedrigerer Brechungsindex, z.B. Luft) übergeht und der Einfallswinkel größer als der kritische Grenzwinkel ist. In diesem Fall wird das gesamte Licht reflektiert und kein Licht tritt in das zweite Medium über. Dieses Prinzip wird in Glasfaserkabeln zur Datenübertragung genutzt.",
   },
   {
     id: "phys-9",
@@ -462,7 +462,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Die mechanische Arbeit berechnet sich nach W = F x s (wenn Kraft und Weg parallel sind). Eingesetzt: W = 50 N x 4 m = 200 J (Joule). Ein Joule entspricht einem Newtonmeter (1 J = 1 N*m). Würde die Kraft nicht in Wegrichtung wirken, muesste der Cosinus des Winkels zwischen Kraft und Weg berücksichtigt werden: W = F x s x cos(alpha).",
+      "Die mechanische Arbeit berechnet sich nach W = F x s (wenn Kraft und Weg parallel sind). Eingesetzt: W = 50 N x 4 m = 200 J (Joule). Ein Joule entspricht einem Newtonmeter (1 J = 1 N*m). Würde die Kraft nicht in Wegrichtung wirken, müsste der Cosinus des Winkels zwischen Kraft und Weg berücksichtigt werden: W = F x s x cos(alpha).",
   },
 
   // === MATHEMATIK ===

@@ -581,7 +581,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "optik",
     topic: "Brechung",
-    text: "Licht geht von Wasser (n = 1,33) in Luft (n = 1) ueber. Wie groß ist der Grenzwinkel der Totalreflexion? (sin⁻¹(0,752) ≈ 48,8°)",
+    text: "Licht geht von Wasser (n = 1,33) in Luft (n = 1) über. Wie groß ist der Grenzwinkel der Totalreflexion? (sin⁻¹(0,752) ≈ 48,8°)",
     options: [
       { id: "a", text: "ca. 41,2°" },
       { id: "b", text: "ca. 48,8°" },

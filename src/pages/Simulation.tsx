@@ -158,7 +158,7 @@ const BMS_FULL_SECTIONS: SimSection[] = [
 ];
 
 const TV_FULL_SECTIONS: SimSection[] = [
-  { id: "tv", label: "Textverstaendnis", sectionType: "tv", questionCount: 12, timeLimitMinutes: 35 },
+  { id: "tv", label: "Textverständnis", sectionType: "tv", questionCount: 12, timeLimitMinutes: 35 },
 ];
 
 const KFF_FULL_SECTIONS: SimSection[] = [
@@ -826,7 +826,7 @@ export default function Simulation() {
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
                 <div className="flex items-center gap-2">
                   <FileText className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                  <span className="font-semibold text-sm text-gray-900 dark:text-gray-100">Textverstaendnis</span>
+                  <span className="font-semibold text-sm text-gray-900 dark:text-gray-100">Textverständnis</span>
                   <span className="text-xs text-muted">12 Aussagen, 35 Min</span>
                 </div>
               </div>
@@ -905,7 +905,7 @@ export default function Simulation() {
                   <FileText className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 dark:text-gray-100">Textverstaendnis</h3>
+                  <h3 className="font-bold text-gray-900 dark:text-gray-100">Textverständnis</h3>
                   <p className="text-xs text-muted">12 Aussagen, 35 Min</p>
                 </div>
               </div>
@@ -1032,7 +1032,7 @@ export default function Simulation() {
         <div className="flex items-center justify-between">
           <div>
             <Badge variant="info">Gedächtnis & Merkfähigkeit</Badge>
-            <span className="text-sm text-muted ml-2">Lernphase - Praege dir die Ausweise ein!</span>
+            <span className="text-sm text-muted ml-2">Lernphase - Präge dir die Ausweise ein!</span>
           </div>
           <div className={`flex items-center gap-2 px-3 py-1.5 rounded-lg ${learnTimeLeft < 120 ? "bg-red-50 dark:bg-red-900/20" : "bg-gray-100 dark:bg-gray-800"}`}>
             <Eye className="w-4 h-4 text-muted" />
@@ -1043,7 +1043,7 @@ export default function Simulation() {
         </div>
 
         <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3 text-sm text-blue-800 dark:text-blue-300">
-          <strong>Aufgabe:</strong> Praege dir die folgenden 8 Allergieausweise ein. Du wirst anschliessend Fragen zu den Personen, Blutgruppen, Allergien und weiteren Details beantworten muessen.
+          <strong>Aufgabe:</strong> Präge dir die folgenden 8 Allergieausweise ein. Du wirst anschließend Fragen zu den Personen, Blutgruppen, Allergien und weiteren Details beantworten müssen.
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1164,7 +1164,7 @@ export default function Simulation() {
         <Card>
           <CardContent className="p-5 space-y-3">
             <h3 className="font-bold text-gray-900 dark:text-gray-100 flex items-center gap-2">
-              <BarChart3 className="w-4 h-4" /> Detaillierte Aufschluesselung
+              <BarChart3 className="w-4 h-4" /> Detaillierte Aufschlüsselung
             </h3>
             {sectionScores.map((s) => (
               <div key={s.sec.id} className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-800 last:border-b-0">

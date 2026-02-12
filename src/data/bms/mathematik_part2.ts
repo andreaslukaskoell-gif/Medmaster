@@ -294,7 +294,7 @@ export const mathematikQuestionsPart2: Question[] = [
     subject: "mathematik",
     chapter: "zehnerpotenzen",
     topic: "Größenordnungen",
-    text: "Die Masse eines Protons beträgt etwa 1,67 × 10⁻²⁷ kg. Wie viele Protonen muessten zusammen etwa 1 Milligramm ergeben? (Größenordnung)",
+    text: "Die Masse eines Protons beträgt etwa 1,67 × 10⁻²⁷ kg. Wie viele Protonen müssten zusammen etwa 1 Milligramm ergeben? (Größenordnung)",
     options: [
       { id: "a", text: "ca. 6 × 10²⁰" },
       { id: "b", text: "ca. 6 × 10²³" },
