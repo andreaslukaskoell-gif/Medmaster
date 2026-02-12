@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { useStore } from "@/store/useStore";
-import { bmsChapters } from "@/data/bmsChapters";
+import { alleKapitel } from "@/data/bmsKapitel";
 
 // ---------------------------------------------------------------------------
 // Lightweight Markdown parser -- no external dependencies
@@ -182,7 +182,8 @@ export default function Notes() {
   const allNotes = Object.entries(notes)
     .filter(([, content]) => content.trim().length > 0)
     .map(([chapterId, content]) => {
-      const chapter = bmsChapters.find((c) => c.id === chapterId);
+      const chapter = alleKapitel.find((c) => c.id === chapterId) ||
+        alleKapitel.flatMap((k) => k.unterkapitel).find((u) => u.id === chapterId);
       return {
         chapterId,
         content,

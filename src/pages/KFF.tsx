@@ -557,38 +557,81 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
 // ==========================================
 
 function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
+  const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
+  const [questionCount, setQuestionCount] = useState(10);
+  const [questions, setQuestions] = useState<ImplikationQuestion[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, boolean | null>>({});
-  const [submitted, setSubmitted] = useState(false);
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
-  const q = implikationQuestions[index];
-  const allAnswered = implikationQuestions.every((q) => answers[q.id] !== undefined && answers[q.id] !== null);
+  const startQuiz = () => {
+    const shuffled = [...implikationQuestions].sort(() => Math.random() - 0.5);
+    setQuestions(shuffled.slice(0, questionCount));
+    setIndex(0);
+    setAnswers({});
+    setPhase("quiz");
+  };
+
+  const allAnswered = questions.every((q) => answers[q.id] !== undefined && answers[q.id] !== null);
 
   const handleSubmit = () => {
-    const score = implikationQuestions.filter((q) => answers[q.id] === q.isValid).length;
+    const score = questions.filter((q) => answers[q.id] === q.isValid).length;
     saveQuizResult({
-      id: `kff-imp-${Date.now()}`, type: "kff", subject: "Implikationen", score, total: implikationQuestions.length,
+      id: `kff-imp-${Date.now()}`, type: "kff", subject: "Implikationen", score, total: questions.length,
       date: new Date().toLocaleDateString("de-AT"),
-      answers: implikationQuestions.map((q) => ({ questionId: q.id, selectedAnswer: String(answers[q.id]), correct: answers[q.id] === q.isValid })),
+      answers: questions.map((q) => ({ questionId: q.id, selectedAnswer: String(answers[q.id]), correct: answers[q.id] === q.isValid })),
     });
     addXP(score * 10);
     checkStreak();
-    setSubmitted(true);
+    setPhase("result");
     setIndex(0);
   };
 
-  if (submitted) {
-    const score = implikationQuestions.filter((q) => answers[q.id] === q.isValid).length;
+  if (phase === "setup") {
+    return (
+      <div className="max-w-2xl mx-auto space-y-6">
+        <Button variant="ghost" size="sm" onClick={onBack}>
+          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+        </Button>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Implikationen erkennen</h1>
+        <Card>
+          <CardContent className="p-6 space-y-6">
+            <div>
+              <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">Anzahl Fragen</label>
+              <div className="flex gap-3">
+                {[10, 15, 20, 30].map((c) => (
+                  <button key={c} onClick={() => setQuestionCount(c)}
+                    className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
+                      questionCount === c
+                        ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                        : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                    }`}>
+                    {c}
+                  </button>
+                ))}
+              </div>
+              <p className="text-xs text-muted mt-2">{implikationQuestions.length} Fragen im Pool</p>
+            </div>
+            <Button className="w-full" size="lg" onClick={startQuiz}>
+              <Shuffle className="w-5 h-5 mr-2" /> {questionCount} Fragen starten
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  if (phase === "result") {
+    const score = questions.filter((q) => answers[q.id] === q.isValid).length;
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
         <Card><CardContent className="p-6 text-center">
-          <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">{score}/{implikationQuestions.length}</div>
-          <p className="text-muted mt-1">{Math.round((score / implikationQuestions.length) * 100)}% richtig</p>
+          <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">{score}/{questions.length}</div>
+          <p className="text-muted mt-1">{Math.round((score / questions.length) * 100)}% richtig</p>
           <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{score * 10} XP</p>
         </CardContent></Card>
-        {implikationQuestions.map((q, i) => {
+        {questions.map((q, i) => {
           const correct = answers[q.id] === q.isValid;
           return (
             <Card key={q.id} className={`border-l-4 ${correct ? "border-l-green-500" : "border-l-red-500"}`}>
@@ -610,14 +653,16 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
     );
   }
 
+  const q = questions[index];
+
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen</Button>
-        <span className="text-sm text-muted">Frage {index + 1} von {implikationQuestions.length}</span>
+        <span className="text-sm text-muted">Frage {index + 1} von {questions.length}</span>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-        <div className="bg-primary-600 h-2 rounded-full transition-all" style={{ width: `${((index + 1) / implikationQuestions.length) * 100}%` }} />
+        <div className="bg-primary-600 h-2 rounded-full transition-all" style={{ width: `${((index + 1) / questions.length) * 100}%` }} />
       </div>
       <Card><CardContent className="p-6">
         <p className="text-sm text-muted mb-2">Prämisse:</p>
@@ -638,7 +683,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
       </CardContent></Card>
       <div className="flex justify-between">
         <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
-        {index < implikationQuestions.length - 1
+        {index < questions.length - 1
           ? <Button onClick={() => setIndex((i) => i + 1)}>Weiter <ArrowRight className="w-4 h-4 ml-1" /></Button>
           : <Button onClick={handleSubmit} disabled={!allAnswered}><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
         }

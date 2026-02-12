@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Flame, Star, CalendarClock, Sun, Moon, Search, Menu, X } from "lucide-react";
 import { useStore } from "@/store/useStore";
 import { daysUntilMedAT } from "@/lib/utils";
-import { bmsChapters } from "@/data/bmsChapters";
+import { alleKapitel } from "@/data/bmsKapitel";
 import { bmsQuestions } from "@/data/bmsQuestions";
 
 interface TopBarProps {
@@ -36,11 +36,11 @@ export function TopBar({ onMenuToggle }: TopBarProps) {
 
   const searchResults = searchQuery.length >= 2
     ? [
-        ...bmsChapters
-          .filter((c) => c.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            c.sections.some((s) => s.heading.toLowerCase().includes(searchQuery.toLowerCase())))
+        ...alleKapitel
+          .filter((k) => k.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            k.unterkapitel.some((u) => u.title.toLowerCase().includes(searchQuery.toLowerCase())))
           .slice(0, 4)
-          .map((c) => ({ type: "chapter" as const, title: c.title, sub: c.subject, path: "/bms" })),
+          .map((k) => ({ type: "chapter" as const, title: k.title, sub: k.subject, path: "/bms" })),
         ...bmsQuestions
           .filter((q) => q.text.toLowerCase().includes(searchQuery.toLowerCase()))
           .slice(0, 3)

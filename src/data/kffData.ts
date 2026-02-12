@@ -442,9 +442,11 @@ export interface ImplikationQuestion {
   conclusion: string;
   isValid: boolean;
   explanation: string;
+  type: 'modus_ponens' | 'modus_tollens' | 'affirmation_consequent' | 'denial_antecedent' | 'contraposition' | 'biconditional';
 }
 
 export const implikationQuestions: ImplikationQuestion[] = [
+  // === EXISTING QUESTIONS (imp-1 through imp-10) with type field added ===
   {
     id: "imp-1",
     premise: "Wenn ein Patient Fieber hat, dann ist sein CRP-Wert erhöht.",
@@ -452,6 +454,7 @@ export const implikationQuestions: ImplikationQuestion[] = [
     isValid: true,
     explanation:
       "Dies ist ein gültiger Modus Tollens: Wenn A -> B, und nicht-B, dann nicht-A. Wenn Fieber -> CRP erhöht, und CRP NICHT erhöht, dann kein Fieber.",
+    type: "modus_tollens",
   },
   {
     id: "imp-2",
@@ -460,6 +463,7 @@ export const implikationQuestions: ImplikationQuestion[] = [
     isValid: false,
     explanation:
       "Ungültiger Umkehrschluss! Auch Vögel haben ein Vierkammerherz. Aus 'Alle A sind B' folgt nicht 'Alle B sind A'.",
+    type: "affirmation_consequent",
   },
   {
     id: "imp-3",
@@ -468,6 +472,7 @@ export const implikationQuestions: ImplikationQuestion[] = [
     isValid: false,
     explanation:
       "Ungültiger Umkehrschluss. Man kann ein Medizinstudium abschließen, ohne als Arzt tätig zu sein (z.B. Forschung). Aus A -> B und B folgt NICHT A.",
+    type: "affirmation_consequent",
   },
   {
     id: "imp-4",
@@ -476,6 +481,7 @@ export const implikationQuestions: ImplikationQuestion[] = [
     isValid: false,
     explanation:
       "Verneinung des Antecedens (ungültig). Nicht verschreibungspflichtig heißt nicht, dass es überall verkauft werden darf - es kann trotzdem apothekenpflichtig sein.",
+    type: "denial_antecedent",
   },
   {
     id: "imp-5",
@@ -484,6 +490,7 @@ export const implikationQuestions: ImplikationQuestion[] = [
     isValid: true,
     explanation:
       "Gültiger Modus Ponens: A (Temp < 35°C) ist wahr (33°C < 35°C), also folgt B (Hypothermie). Wenn A -> B, und A, dann B.",
+    type: "modus_ponens",
   },
   {
     id: "imp-6",
@@ -492,6 +499,7 @@ export const implikationQuestions: ImplikationQuestion[] = [
     isValid: true,
     explanation:
       "Gültiger Modus Tollens: Wenn A -> B, und nicht-B, dann nicht-A. Antibiotikum hilft nicht (nicht-B), also keine bakterielle Infektion (nicht-A).",
+    type: "modus_tollens",
   },
   {
     id: "imp-7",
@@ -500,6 +508,7 @@ export const implikationQuestions: ImplikationQuestion[] = [
     isValid: false,
     explanation:
       "Ungültiger Umkehrschluss. Die Prämisse besagt nur, dass Bestehen mindestens 60% erfordert, aber es könnten weitere Kriterien gelten (z.B. mündliche Prüfung). Aus 'Alle A sind B' folgt nicht 'Alle B sind A'.",
+    type: "affirmation_consequent",
   },
   {
     id: "imp-8",
@@ -508,6 +517,7 @@ export const implikationQuestions: ImplikationQuestion[] = [
     isValid: false,
     explanation:
       "Ungültiger Umkehrschluss (Bejahung des Konsequens). Peter könnte den Schirm auch vorsorglich mitnehmen oder weil Regen vorhergesagt wurde. Aus A -> B und B folgt nicht A.",
+    type: "affirmation_consequent",
   },
   {
     id: "imp-9",
@@ -516,6 +526,7 @@ export const implikationQuestions: ImplikationQuestion[] = [
     isValid: false,
     explanation:
       "Verneinung des Antecedens (ungültig). Nur weil die Bedingung 'enthält Gluten' nicht erfüllt ist, heißt das nicht automatisch, dass das Lebensmittel unbedenklich ist. Es könnten z.B. Kreuzkontaminationen vorliegen.",
+    type: "denial_antecedent",
   },
   {
     id: "imp-10",
@@ -524,5 +535,342 @@ export const implikationQuestions: ImplikationQuestion[] = [
     isValid: true,
     explanation:
       "Gültiger Modus Tollens: Wenn A (allergisch) -> B (kein Penicillin verabreichen), und nicht-B (Penicillin wurde verabreicht), dann nicht-A (nicht allergisch). Die Kontraposition ist logisch korrekt.",
+    type: "modus_tollens",
+  },
+
+  // === NEW QUESTIONS: MODUS PONENS (A -> B, A, therefore B — VALID) ===
+  {
+    id: "imp-11",
+    premise: "Wenn ein Patient Diabetes mellitus hat, dann ist sein Blutzucker erhöht.",
+    conclusion: "Herr Müller hat Diabetes mellitus. Also ist sein Blutzucker erhöht.",
+    isValid: true,
+    explanation:
+      "Gültiger Modus Ponens: A (Diabetes) ist gegeben, also folgt B (Blutzucker erhöht). Wenn A -> B und A wahr ist, dann muss B wahr sein.",
+    type: "modus_ponens",
+  },
+  {
+    id: "imp-12",
+    premise: "Wenn eine Substanz ein Enzym hemmt, dann sinkt die Reaktionsgeschwindigkeit.",
+    conclusion: "Substanz X hemmt das Enzym Amylase. Also sinkt die Reaktionsgeschwindigkeit der Amylase-Reaktion.",
+    isValid: true,
+    explanation:
+      "Gültiger Modus Ponens: Die Prämisse besagt A -> B (Enzymhemmung -> Reaktionsgeschwindigkeit sinkt). A ist erfüllt (Substanz X hemmt Amylase), also folgt B zwingend.",
+    type: "modus_ponens",
+  },
+  {
+    id: "imp-13",
+    premise: "Wenn der pH-Wert des Blutes unter 7,35 sinkt, liegt eine Azidose vor.",
+    conclusion: "Der pH-Wert des Patienten beträgt 7,20. Also liegt eine Azidose vor.",
+    isValid: true,
+    explanation:
+      "Gültiger Modus Ponens: A (pH < 7,35) ist wahr (7,20 < 7,35), also folgt B (Azidose). Die Bedingung ist erfüllt, die Konklusion folgt zwingend.",
+    type: "modus_ponens",
+  },
+  {
+    id: "imp-14",
+    premise: "Alle Viren benötigen eine Wirtszelle zur Vermehrung.",
+    conclusion: "SARS-CoV-2 ist ein Virus. Also benötigt es eine Wirtszelle zur Vermehrung.",
+    isValid: true,
+    explanation:
+      "Gültiger Modus Ponens: Aus 'Alle A sind B' und 'X ist A' folgt 'X ist B'. SARS-CoV-2 gehört zur Menge der Viren, also gilt die Eigenschaft (Wirtszelle nötig) auch für SARS-CoV-2.",
+    type: "modus_ponens",
+  },
+  {
+    id: "imp-15",
+    premise: "Wenn eine Person unter 18 Jahre alt ist, dann gilt sie in Österreich als minderjährig.",
+    conclusion: "Anna ist 15 Jahre alt. Also gilt sie in Österreich als minderjährig.",
+    isValid: true,
+    explanation:
+      "Gültiger Modus Ponens: A (unter 18 Jahre) ist erfüllt (15 < 18), also folgt B (minderjährig). Die Wenn-Dann-Bedingung ist klar erfüllt.",
+    type: "modus_ponens",
+  },
+  {
+    id: "imp-16",
+    premise: "Wenn ein Nerv durchtrennt wird, kann er keine Signale mehr weiterleiten.",
+    conclusion: "Der Nervus medianus des Patienten wurde durchtrennt. Also kann er keine Signale mehr weiterleiten.",
+    isValid: true,
+    explanation:
+      "Gültiger Modus Ponens: A (Nerv durchtrennt) ist gegeben, also folgt B (keine Signalweiterleitung). Wenn A -> B und A ist wahr, dann ist B wahr.",
+    type: "modus_ponens",
+  },
+  {
+    id: "imp-17",
+    premise: "Wenn ein Patient eine Fraktur hat, dann ist die Röntgenaufnahme auffällig.",
+    conclusion: "Der Patient hat eine Femurfraktur. Also ist seine Röntgenaufnahme auffällig.",
+    isValid: true,
+    explanation:
+      "Gültiger Modus Ponens: A (Fraktur vorhanden) ist wahr, also folgt B (Röntgen auffällig). Die Prämisse garantiert die Konklusion bei Vorliegen der Bedingung.",
+    type: "modus_ponens",
+  },
+
+  // === NEW QUESTIONS: MODUS TOLLENS (A -> B, not-B, therefore not-A — VALID) ===
+  {
+    id: "imp-18",
+    premise: "Wenn ein Organismus photosynthetisch aktiv ist, dann enthält er Chlorophyll.",
+    conclusion: "Dieser Organismus enthält kein Chlorophyll. Also ist er nicht photosynthetisch aktiv.",
+    isValid: true,
+    explanation:
+      "Gültiger Modus Tollens: Wenn A -> B (Photosynthese -> Chlorophyll), und nicht-B (kein Chlorophyll), dann nicht-A (keine Photosynthese). Die Verneinung des Konsequens erlaubt den Schluss auf die Verneinung des Antezedens.",
+    type: "modus_tollens",
+  },
+  {
+    id: "imp-19",
+    premise: "Wenn eine Zelle sich mitotisch teilt, dann wird die DNA vorher repliziert.",
+    conclusion: "Die DNA dieser Zelle wurde nicht repliziert. Also teilt sie sich nicht mitotisch.",
+    isValid: true,
+    explanation:
+      "Gültiger Modus Tollens: A -> B (Mitose -> DNA-Replikation). Nicht-B (keine Replikation), also nicht-A (keine Mitose). Ohne die notwendige Voraussetzung kann die Folge nicht eintreten.",
+    type: "modus_tollens",
+  },
+  {
+    id: "imp-20",
+    premise: "Wenn ein Medikament die Blut-Hirn-Schranke überwindet, dann ist es lipophil.",
+    conclusion: "Dieses Medikament ist nicht lipophil. Also überwindet es nicht die Blut-Hirn-Schranke.",
+    isValid: true,
+    explanation:
+      "Gültiger Modus Tollens: Wenn A -> B (Blut-Hirn-Schranke überwinden -> lipophil), und nicht-B (nicht lipophil), dann nicht-A (überwindet BHS nicht).",
+    type: "modus_tollens",
+  },
+  {
+    id: "imp-21",
+    premise: "Wenn ein Protein denaturiert wird, verliert es seine biologische Funktion.",
+    conclusion: "Dieses Protein hat seine biologische Funktion nicht verloren. Also wurde es nicht denaturiert.",
+    isValid: true,
+    explanation:
+      "Gültiger Modus Tollens: A -> B (Denaturierung -> Funktionsverlust). Nicht-B (Funktion erhalten), also nicht-A (nicht denaturiert). Der Schluss von der Verneinung der Folge auf die Verneinung der Ursache ist logisch korrekt.",
+    type: "modus_tollens",
+  },
+  {
+    id: "imp-22",
+    premise: "Wenn der Kaliumspiegel im Blut stark ansteigt, treten Herzrhythmusstörungen auf.",
+    conclusion: "Der Patient zeigt keine Herzrhythmusstörungen. Also ist sein Kaliumspiegel nicht stark angestiegen.",
+    isValid: true,
+    explanation:
+      "Gültiger Modus Tollens: A -> B (Hyperkaliämie -> Herzrhythmusstörungen). Nicht-B (keine Rhythmusstörungen), also nicht-A (kein starker Kaliumanstieg).",
+    type: "modus_tollens",
+  },
+  {
+    id: "imp-23",
+    premise: "Wenn jemand an der MedAT-Prüfung teilnimmt, muss er sich vorher angemeldet haben.",
+    conclusion: "Tobias hat sich nicht angemeldet. Also nimmt er nicht an der MedAT-Prüfung teil.",
+    isValid: true,
+    explanation:
+      "Gültiger Modus Tollens: A -> B (Teilnahme -> Anmeldung). Nicht-B (keine Anmeldung), also nicht-A (keine Teilnahme). Die notwendige Bedingung ist nicht erfüllt.",
+    type: "modus_tollens",
+  },
+
+  // === NEW QUESTIONS: AFFIRMATION OF THE CONSEQUENT (A -> B, B, therefore A — INVALID) ===
+  {
+    id: "imp-24",
+    premise: "Wenn ein Patient eine Lungenentzündung hat, dann hat er Husten.",
+    conclusion: "Der Patient hustet. Also hat er eine Lungenentzündung.",
+    isValid: false,
+    explanation:
+      "Ungültige Bejahung des Konsequens: Husten kann viele Ursachen haben (Erkältung, Asthma, Allergie). Aus A -> B und B folgt NICHT A. Nur weil die Folge eintritt, muss nicht die genannte Ursache vorliegen.",
+    type: "affirmation_consequent",
+  },
+  {
+    id: "imp-25",
+    premise: "Wenn eine Substanz eine Säure ist, dann hat sie einen pH-Wert unter 7.",
+    conclusion: "Diese Lösung hat einen pH-Wert von 5. Also ist sie eine Säure.",
+    isValid: false,
+    explanation:
+      "Ungültige Bejahung des Konsequens: Die Prämisse sagt, dass Säuren pH < 7 haben. Aber ein pH < 7 kann auch durch andere Faktoren entstehen (z.B. Pufferlösungen, saure Salze). Aus A -> B und B folgt nicht zwingend A. Hinweis: In der Praxis wäre dies zwar meist korrekt, aber die logische Schlussform ist ungültig.",
+    type: "affirmation_consequent",
+  },
+  {
+    id: "imp-26",
+    premise: "Wenn ein Mensch eine Grippe hat, dann hat er erhöhte Temperatur.",
+    conclusion: "Maria hat erhöhte Temperatur. Also hat sie die Grippe.",
+    isValid: false,
+    explanation:
+      "Ungültige Bejahung des Konsequens: Erhöhte Temperatur kann auch bei vielen anderen Erkrankungen auftreten (bakterielle Infekte, Autoimmunerkrankungen, etc.). Aus A -> B und B folgt nicht A.",
+    type: "affirmation_consequent",
+  },
+  {
+    id: "imp-27",
+    premise: "Wenn ein Tier ein Hund ist, dann hat es vier Beine.",
+    conclusion: "Dieses Tier hat vier Beine. Also ist es ein Hund.",
+    isValid: false,
+    explanation:
+      "Ungültige Bejahung des Konsequens: Viele Tiere haben vier Beine (Katzen, Pferde, Eidechsen). Aus A -> B und B folgt nicht A. Die Eigenschaft 'vier Beine' ist nicht exklusiv für Hunde.",
+    type: "affirmation_consequent",
+  },
+  {
+    id: "imp-28",
+    premise: "Wenn ein Patient einen Myokardinfarkt erleidet, steigt der Troponin-Wert im Blut.",
+    conclusion: "Der Troponin-Wert des Patienten ist erhöht. Also hat er einen Myokardinfarkt erlitten.",
+    isValid: false,
+    explanation:
+      "Ungültige Bejahung des Konsequens: Troponin kann auch bei Myokarditis, Lungenembolie oder Niereninsuffizienz erhöht sein. Aus A -> B und B folgt nicht zwingend A.",
+    type: "affirmation_consequent",
+  },
+  {
+    id: "imp-29",
+    premise: "Wenn eine Pflanze genügend Sonnenlicht bekommt, wächst sie gut.",
+    conclusion: "Diese Pflanze wächst gut. Also bekommt sie genügend Sonnenlicht.",
+    isValid: false,
+    explanation:
+      "Ungültige Bejahung des Konsequens: Die Pflanze könnte auch unter Kunstlicht gut wachsen, oder andere Faktoren (Dünger, Wasser) könnten das Wachstum fördern. Aus A -> B und B folgt nicht A.",
+    type: "affirmation_consequent",
+  },
+  {
+    id: "imp-30",
+    premise: "Wenn ein Student fleißig lernt, besteht er die Prüfung.",
+    conclusion: "Sophia hat die Prüfung bestanden. Also hat sie fleißig gelernt.",
+    isValid: false,
+    explanation:
+      "Ungültige Bejahung des Konsequens: Sophia könnte die Prüfung auch durch Glück, Vorwissen oder andere Strategien bestanden haben. Aus A -> B und B folgt nicht A.",
+    type: "affirmation_consequent",
+  },
+
+  // === NEW QUESTIONS: DENIAL OF THE ANTECEDENT (A -> B, not-A, therefore not-B — INVALID) ===
+  {
+    id: "imp-31",
+    premise: "Wenn es regnet, wird die Straße nass.",
+    conclusion: "Es regnet nicht. Also ist die Straße nicht nass.",
+    isValid: false,
+    explanation:
+      "Ungültige Verneinung des Antezedens: Die Straße kann auch durch andere Ursachen nass sein (Sprinkleranlage, Wasserrohrbruch, Schnee). Aus A -> B und nicht-A folgt NICHT nicht-B.",
+    type: "denial_antecedent",
+  },
+  {
+    id: "imp-32",
+    premise: "Wenn ein Patient raucht, hat er ein erhöhtes Lungenkrebsrisiko.",
+    conclusion: "Herr Schmidt raucht nicht. Also hat er kein erhöhtes Lungenkrebsrisiko.",
+    isValid: false,
+    explanation:
+      "Ungültige Verneinung des Antezedens: Auch Nichtraucher können ein erhöhtes Lungenkrebsrisiko haben (z.B. durch Passivrauchen, Asbest, genetische Faktoren). Aus A -> B und nicht-A folgt nicht nicht-B.",
+    type: "denial_antecedent",
+  },
+  {
+    id: "imp-33",
+    premise: "Wenn ein Patient Kortison einnimmt, kann sein Blutzucker ansteigen.",
+    conclusion: "Die Patientin nimmt kein Kortison ein. Also steigt ihr Blutzucker nicht an.",
+    isValid: false,
+    explanation:
+      "Ungültige Verneinung des Antezedens: Der Blutzucker kann auch aus anderen Gründen ansteigen (Diabetes, Stress, andere Medikamente). Aus A -> B und nicht-A folgt nicht nicht-B.",
+    type: "denial_antecedent",
+  },
+  {
+    id: "imp-34",
+    premise: "Wenn jemand Sport treibt, ist er körperlich fit.",
+    conclusion: "Lukas treibt keinen Sport. Also ist er nicht körperlich fit.",
+    isValid: false,
+    explanation:
+      "Ungültige Verneinung des Antezedens: Man kann auch ohne Sport körperlich fit sein (z.B. durch körperliche Arbeit). Aus A -> B und nicht-A folgt nicht nicht-B. Sport ist eine hinreichende, aber keine notwendige Bedingung für Fitness.",
+    type: "denial_antecedent",
+  },
+  {
+    id: "imp-35",
+    premise: "Wenn ein Enzym durch hohe Temperaturen denaturiert wird, verliert es seine Funktion.",
+    conclusion: "Das Enzym wurde nicht durch hohe Temperaturen denaturiert. Also hat es seine Funktion nicht verloren.",
+    isValid: false,
+    explanation:
+      "Ungültige Verneinung des Antezedens: Das Enzym könnte seine Funktion auch durch andere Ursachen verloren haben (pH-Änderung, chemische Denaturierung, Schwermetalle). Aus A -> B und nicht-A folgt nicht nicht-B.",
+    type: "denial_antecedent",
+  },
+  {
+    id: "imp-36",
+    premise: "Wenn ein Patient eine Bluttransfusion mit der falschen Blutgruppe erhält, kommt es zu einer Hämolyse.",
+    conclusion: "Der Patient hat keine falsche Bluttransfusion erhalten. Also liegt keine Hämolyse vor.",
+    isValid: false,
+    explanation:
+      "Ungültige Verneinung des Antezedens: Hämolyse kann auch durch andere Ursachen entstehen (Autoimmunerkrankungen, Malaria, mechanische Schädigung der Erythrozyten). Aus A -> B und nicht-A folgt nicht nicht-B.",
+    type: "denial_antecedent",
+  },
+  {
+    id: "imp-37",
+    premise: "Wenn ein Kind geimpft wird, ist es gegen die jeweilige Krankheit geschützt.",
+    conclusion: "Dieses Kind wurde nicht geimpft. Also ist es nicht gegen die Krankheit geschützt.",
+    isValid: false,
+    explanation:
+      "Ungültige Verneinung des Antezedens: Das Kind könnte auch durch eine natürlich durchgemachte Infektion Immunität erworben haben. Aus A -> B und nicht-A folgt nicht nicht-B. Die Impfung ist hinreichend, aber nicht notwendig für Schutz.",
+    type: "denial_antecedent",
+  },
+
+  // === NEW QUESTIONS: CONTRAPOSITION (A -> B is equivalent to not-B -> not-A — VALID) ===
+  {
+    id: "imp-38",
+    premise: "Wenn eine Zelle keine Mitochondrien besitzt, kann sie keine aerobe Zellatmung durchführen.",
+    conclusion: "Eine Zelle führt aerobe Zellatmung durch. Also besitzt sie Mitochondrien.",
+    isValid: true,
+    explanation:
+      "Gültige Kontraposition: Die Prämisse lautet: nicht-A (keine Mitochondrien) -> nicht-B (keine aerobe Zellatmung). Die Kontraposition ist: B (aerobe Zellatmung) -> A (Mitochondrien vorhanden). Die Kontraposition einer wahren Implikation ist immer gültig.",
+    type: "contraposition",
+  },
+  {
+    id: "imp-39",
+    premise: "Wenn eine chemische Reaktion exotherm ist, wird Energie freigesetzt.",
+    conclusion: "Wenn keine Energie freigesetzt wird, ist die Reaktion nicht exotherm.",
+    isValid: true,
+    explanation:
+      "Gültige Kontraposition: A -> B (exotherm -> Energie freigesetzt) ist äquivalent zu nicht-B -> nicht-A (keine Energie freigesetzt -> nicht exotherm). Die Kontraposition hat stets denselben Wahrheitswert wie die ursprüngliche Aussage.",
+    type: "contraposition",
+  },
+  {
+    id: "imp-40",
+    premise: "Wenn ein Patient eine Anämie hat, ist sein Hämoglobinwert erniedrigt.",
+    conclusion: "Wenn der Hämoglobinwert nicht erniedrigt ist, hat der Patient keine Anämie.",
+    isValid: true,
+    explanation:
+      "Gültige Kontraposition: A -> B (Anämie -> Hämoglobin niedrig) ist logisch äquivalent zu nicht-B -> nicht-A (Hämoglobin nicht niedrig -> keine Anämie). Die Kontraposition ist immer eine gültige Umformung.",
+    type: "contraposition",
+  },
+  {
+    id: "imp-41",
+    premise: "Alle Wirbeltiere besitzen eine Wirbelsäule.",
+    conclusion: "Wenn ein Tier keine Wirbelsäule besitzt, ist es kein Wirbeltier.",
+    isValid: true,
+    explanation:
+      "Gültige Kontraposition: 'Alle A sind B' (Wirbeltier -> Wirbelsäule) ist äquivalent zu 'nicht-B -> nicht-A' (keine Wirbelsäule -> kein Wirbeltier). Dies ist die logisch äquivalente Kontraposition der Ausgangsaussage.",
+    type: "contraposition",
+  },
+  {
+    id: "imp-42",
+    premise: "Wenn ein Stoff elektrisch leitfähig ist, enthält er frei bewegliche Ladungsträger.",
+    conclusion: "Wenn ein Stoff keine frei beweglichen Ladungsträger enthält, ist er nicht elektrisch leitfähig.",
+    isValid: true,
+    explanation:
+      "Gültige Kontraposition: A -> B (leitfähig -> frei bewegliche Ladungsträger) entspricht nicht-B -> nicht-A (keine Ladungsträger -> nicht leitfähig). Die Umformung zur Kontraposition bewahrt die logische Gültigkeit.",
+    type: "contraposition",
+  },
+
+  // === NEW QUESTIONS: BICONDITIONAL (A <-> B, special cases) ===
+  {
+    id: "imp-43",
+    premise: "Ein Patient hat genau dann Diabetes Typ 1, wenn seine Betazellen zerstört sind und er kein Insulin mehr produziert.",
+    conclusion: "Dieser Patient produziert kein Insulin und seine Betazellen sind zerstört. Also hat er Diabetes Typ 1.",
+    isValid: true,
+    explanation:
+      "Gültige Bikonditionale (Genau-dann-wenn): Bei einem Bikonditional (A <-> B) gilt sowohl A -> B als auch B -> A. Da die Bedingung 'Betazellen zerstört und kein Insulin' erfüllt ist, folgt zwingend 'Diabetes Typ 1'. Beide Richtungen der Implikation sind hier gültig.",
+    type: "biconditional",
+  },
+  {
+    id: "imp-44",
+    premise: "Ein Dreieck ist genau dann gleichseitig, wenn alle drei Seiten gleich lang sind.",
+    conclusion: "Alle drei Seiten dieses Dreiecks sind gleich lang. Also ist es gleichseitig.",
+    isValid: true,
+    explanation:
+      "Gültige Bikonditionale: 'Genau dann wenn' bedeutet A <-> B. Beide Richtungen gelten: gleichseitig -> alle Seiten gleich UND alle Seiten gleich -> gleichseitig. Die Rückrichtung ist hier angewandt und gültig.",
+    type: "biconditional",
+  },
+  {
+    id: "imp-45",
+    premise: "Eine Zahl ist genau dann durch 2 teilbar, wenn sie gerade ist.",
+    conclusion: "Die Zahl 17 ist nicht gerade. Also ist sie nicht durch 2 teilbar.",
+    isValid: true,
+    explanation:
+      "Gültige Bikonditionale mit Verneinung: Bei A <-> B gilt auch nicht-A <-> nicht-B. Die Zahl ist nicht gerade (nicht-B), also ist sie nicht durch 2 teilbar (nicht-A). Bei einem Bikonditional darf man in beide Richtungen schließen, auch mit Verneinung.",
+    type: "biconditional",
+  },
+  {
+    id: "imp-46",
+    premise: "Ein Mensch gilt in Österreich genau dann als volljährig, wenn er mindestens 18 Jahre alt ist.",
+    conclusion: "Frau Berger ist 25 Jahre alt. Also ist sie volljährig.",
+    isValid: true,
+    explanation:
+      "Gültige Bikonditionale: 'Genau dann wenn' (A <-> B) erlaubt den Schluss in beide Richtungen. Da 25 >= 18 (Bedingung B erfüllt), folgt A (volljährig). Bei einem Bikonditional ist der Umkehrschluss — anders als bei einer einfachen Implikation — gültig.",
+    type: "biconditional",
   },
 ];

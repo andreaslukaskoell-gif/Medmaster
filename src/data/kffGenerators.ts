@@ -119,6 +119,150 @@ function generateDifference(): { seq: number[]; answer: number; explanation: str
   };
 }
 
+function generatePrime(): { seq: number[]; answer: number; explanation: string } {
+  // Generate a list of primes using a simple sieve
+  const isPrime = (n: number): boolean => {
+    if (n < 2) return false;
+    if (n === 2) return true;
+    if (n % 2 === 0) return false;
+    for (let i = 3; i <= Math.sqrt(n); i += 2) {
+      if (n % i === 0) return false;
+    }
+    return true;
+  };
+  const primes: number[] = [];
+  let num = 2;
+  while (primes.length < 10) {
+    if (isPrime(num)) primes.push(num);
+    num++;
+  }
+  // Pick a random starting index so it's not always 2,3,5...
+  const startIdx = randInt(0, 3);
+  const len = randInt(5, 7);
+  const seq = primes.slice(startIdx, startIdx + len);
+  const answer = primes[startIdx + len];
+  return {
+    seq,
+    answer,
+    explanation: `Primzahlenfolge: Jede Zahl ist nur durch 1 und sich selbst teilbar. Die nächste Primzahl nach ${seq[seq.length - 1]} ist ${answer}.`,
+  };
+}
+
+function generateTriangular(): { seq: number[]; answer: number; explanation: string } {
+  // Triangular numbers: T(n) = n*(n+1)/2 → 1, 3, 6, 10, 15, 21, 28, ...
+  const offset = randInt(0, 3);
+  const len = randInt(5, 7);
+  const seq: number[] = [];
+  for (let i = 1; i <= len; i++) {
+    seq.push((i * (i + 1)) / 2 + offset);
+  }
+  const nextN = len + 1;
+  const answer = (nextN * (nextN + 1)) / 2 + offset;
+  return {
+    seq,
+    answer,
+    explanation: offset === 0
+      ? `Dreieckszahlen: T(n) = n·(n+1)/2. Das nächste Glied ist T(${nextN}) = ${nextN}·${nextN + 1}/2 = ${answer}.`
+      : `Dreieckszahlen + ${offset}: T(n) = n·(n+1)/2 + ${offset}. Das nächste Glied ist ${nextN}·${nextN + 1}/2 + ${offset} = ${answer}.`,
+  };
+}
+
+function generatePower(): { seq: number[]; answer: number; explanation: string } {
+  const base = randInt(2, 5);
+  const startExp = randInt(1, 2);
+  const len = randInt(5, 7);
+  const seq: number[] = [];
+  for (let i = 0; i < len; i++) {
+    seq.push(Math.pow(base, startExp + i));
+  }
+  const answer = Math.pow(base, startExp + len);
+  return {
+    seq,
+    answer,
+    explanation: `Potenzfolge mit Basis ${base}: ${base}^${startExp}, ${base}^${startExp + 1}, ${base}^${startExp + 2}, ... Das nächste Glied ist ${base}^${startExp + len} = ${answer}.`,
+  };
+}
+
+function generateNested(): { seq: number[]; answer: number; explanation: string } {
+  // Two interleaved sequences at odd/even positions
+  // Sequence A at positions 1, 3, 5, ... and Sequence B at positions 2, 4, 6, ...
+  const startA = randInt(1, 10);
+  const diffA = randInt(2, 7);
+  const startB = randInt(1, 10);
+  const diffB = randInt(2, 7);
+  // Ensure the two subsequences are distinguishable
+  while (startA === startB && diffA === diffB) {
+    // Regenerate is unnecessary since randInt is random; just adjust
+    break;
+  }
+  const len = 8; // even length so both subsequences are balanced
+  const seq: number[] = [];
+  let aIdx = 0;
+  let bIdx = 0;
+  for (let i = 0; i < len; i++) {
+    if (i % 2 === 0) {
+      seq.push(startA + diffA * aIdx);
+      aIdx++;
+    } else {
+      seq.push(startB + diffB * bIdx);
+      bIdx++;
+    }
+  }
+  // Next element is at position len (0-indexed), which is even → belongs to sequence A
+  const answer = startA + diffA * aIdx;
+  return {
+    seq,
+    answer,
+    explanation: `Verschachtelte Folge: An ungeraden Positionen (1., 3., 5., ...): ${startA}, ${startA + diffA}, ${startA + 2 * diffA}, ... (Differenz +${diffA}). An geraden Positionen (2., 4., 6., ...): ${startB}, ${startB + diffB}, ${startB + 2 * diffB}, ... (Differenz +${diffB}). Das nächste Glied gehört zur ersten Teilfolge: ${seq[seq.length - 2]} + ${diffA} = ${answer}.`,
+  };
+}
+
+function generateCombined(): { seq: number[]; answer: number; explanation: string } {
+  // Alternating two operations: e.g. +a then *b, or *a then +b
+  const variant = randInt(0, 1);
+  const start = randInt(1, 5);
+  const len = 7;
+  const seq: number[] = [start];
+
+  if (variant === 0) {
+    // Pattern: +a, then *b, repeating
+    const a = randInt(1, 6);
+    const b = randInt(2, 3);
+    for (let i = 1; i < len; i++) {
+      if (i % 2 === 1) {
+        seq.push(seq[i - 1] + a);
+      } else {
+        seq.push(seq[i - 1] * b);
+      }
+    }
+    const nextOp = len % 2 === 1 ? "add" : "mul";
+    const answer = nextOp === "add" ? seq[len - 1] + a : seq[len - 1] * b;
+    return {
+      seq,
+      answer,
+      explanation: `Kombinierte Folge: Abwechselnd +${a} und ×${b}. ${nextOp === "add" ? `${seq[len - 1]} + ${a} = ${answer}` : `${seq[len - 1]} × ${b} = ${answer}`}.`,
+    };
+  } else {
+    // Pattern: *a, then +b, repeating
+    const a = randInt(2, 3);
+    const b = randInt(1, 6);
+    for (let i = 1; i < len; i++) {
+      if (i % 2 === 1) {
+        seq.push(seq[i - 1] * a);
+      } else {
+        seq.push(seq[i - 1] + b);
+      }
+    }
+    const nextOp = len % 2 === 1 ? "mul" : "add";
+    const answer = nextOp === "mul" ? seq[len - 1] * a : seq[len - 1] + b;
+    return {
+      seq,
+      answer,
+      explanation: `Kombinierte Folge: Abwechselnd ×${a} und +${b}. ${nextOp === "mul" ? `${seq[len - 1]} × ${a} = ${answer}` : `${seq[len - 1]} + ${b} = ${answer}`}.`,
+    };
+  }
+}
+
 function generateDistractors(correct: number, count: number): number[] {
   const distractors = new Set<number>();
   const offsets = [-2, -1, 1, 2, -3, 3, -5, 5, -10, 10];
@@ -142,10 +286,10 @@ export function generateZahlenfolge(difficulty: "leicht" | "mittel" | "schwer"):
   if (difficulty === "leicht") {
     result = Math.random() > 0.5 ? generateArithmetic() : generateGeometric();
   } else if (difficulty === "mittel") {
-    const generators = [generateAlternating, generateSquare, generateDifference];
+    const generators = [generateAlternating, generateSquare, generateDifference, generateTriangular, generatePrime];
     result = generators[randInt(0, generators.length - 1)]();
   } else {
-    const generators = [generateFibonacciLike, generateDifference, generateSquare];
+    const generators = [generateFibonacciLike, generateDifference, generateSquare, generatePower, generateNested, generateCombined];
     result = generators[randInt(0, generators.length - 1)]();
   }
 
@@ -374,6 +518,7 @@ export interface WortflüssigkeitQuestion {
 }
 
 const WORD_POOL_LEICHT = [
+  // Originale 50 Wörter
   "HAUSTIER", "GESCHENK", "BRUNNEN", "PFLASTER", "BLUMENSTRAUSS",
   "HANDTUCH", "SCHAUKEL", "FENSTER", "GARTEN", "KUCHEN",
   "LAMPE", "TELLER", "ZIMMER", "DECKEL", "BEUTEL",
@@ -384,9 +529,35 @@ const WORD_POOL_LEICHT = [
   "BRIEF", "FRUCHT", "GLOCKE", "KISSEN", "MANTEL",
   "PLATZ", "STROM", "TURM", "WURZEL", "BLATT",
   "FEDER", "GRUND", "INSEL", "KUGEL", "NEBEL",
+  // Neue Wörter (120 zusätzliche, 4-7 Buchstaben)
+  "BLUME", "TORTE", "SCHUH", "TISCH", "PFERD",
+  "VOGEL", "KIRCHE", "HUND", "KATZE", "MAUS",
+  "FISCH", "BROT", "MILCH", "BIRNE", "APFEL",
+  "PILZ", "ROSE", "TULPE", "LILIE", "KERZE",
+  "DORF", "STADT", "FLUSS", "TEICH", "WIESE",
+  "HECKE", "ZAUN", "MAUER", "DACH", "WAND",
+  "BODEN", "SEIL", "KETTE", "RING", "NAGEL",
+  "DRAHT", "KNOPF", "NADEL", "GABEL", "MESSER",
+  "SCHALE", "KANNE", "KORB", "EIMER", "TONNE",
+  "DOSE", "GLAS", "TOPF", "OFEN", "HERD",
+  "BANK", "REGAL", "SOFA", "BETT", "KISTE",
+  "BILD", "RAHMEN", "STIFT", "KREIDE", "FARBE",
+  "PINSEL", "SCHERE", "PAPIER", "BLOCK", "HEFT",
+  "BUCH", "SEITE", "MARKE", "MÜNZE", "PERLE",
+  "HARFE", "GEIGE", "ORGEL", "KLEID", "HEMD",
+  "ROCK", "JACKE", "HOSE", "HELM", "KAPPE",
+  "SCHAL", "SOCKE", "ANKER", "FLAGGE", "HAFEN",
+  "DAMM", "DEICH", "BACH", "WELLE", "WOLKE",
+  "BLITZ", "DONNER", "STURM", "FROST", "SCHNEE",
+  "HAGEL", "DUNST", "ERNTE", "SAAT", "KORN",
+  "WEIZEN", "ROGGEN", "HAFER", "GERSTE", "MALZ",
+  "HONIG", "ZUCKER", "SALZ", "PFEFFER", "ESSIG",
+  "SAHNE", "BUTTER", "MEHL", "TEIG", "SUPPE",
+  "BRATEN", "SOSSE", "SENF", "WURST", "SPECK",
 ];
 
 const WORD_POOL_MITTEL = [
+  // Originale 52 Wörter
   "HANDWERK", "BRUNSTZEIT", "ERDBEERE", "SCHMETTERLING",
   "BERGSTEIGER", "ZEITGEIST", "STRASSENBAHN", "WANDERSCHUH",
   "BLUMENVASE", "REGENSCHIRM", "WINDMÜHLE", "SCHNEEFLOCKE",
@@ -400,9 +571,41 @@ const WORD_POOL_MITTEL = [
   "KUNSTWERK", "FINGERSPITZE", "TAGESBLATT", "NACHTFALTER",
   "SANDSTRAND", "KREISLAUF", "STEINBRUCH", "GARTENLAUBE",
   "FELSWAND", "KRONLEUCHTER", "BRUNNENWASSER", "STURMFLUT",
+  // Neue Wörter (118 zusätzliche, 8-12 Buchstaben)
+  "APOTHEKE", "WASSERFALL", "AUTOBAHN", "FAHRKARTE",
+  "RATHAUS", "FLUGHAFEN", "MARKTPLATZ", "TURNHALLE",
+  "SCHWIMMBAD", "KRANKENHAUS", "GRUNDSCHULE", "HOCHSCHULE",
+  "BUCHHANDEL", "SPIELKARTE", "BACKOFEN", "KAFFEEKANNE",
+  "TAGESZEIT", "NACHTRUHE", "WANDUHR", "ARMBANDUHR",
+  "ZEITSCHRIFT", "BILDSCHIRM", "TASTATUR", "LAUTSPRECHER",
+  "KOPFHÖRER", "FERNSEHER", "STAUBSAUGER", "KÜHLSCHRANK",
+  "WASCHBECKEN", "BADEWANNE", "HANDTASCHE", "RUCKSACK",
+  "GELDBEUTEL", "SCHLÜSSEL", "TÜRKLINKE", "FENSTERBRETT",
+  "DACHRINNE", "SCHORNSTEIN", "KACHELOFEN", "TREPPENHAUS",
+  "HAUSFLUR", "GARDEROBE", "SCHUHBANK", "KLEIDERBÜGEL",
+  "WÄSCHEKORB", "BÜGELEISEN", "NÄHNADEL", "STRICKZEUG",
+  "KOCHBUCH", "BACKBLECH", "SALATSCHÜSSEL", "SUPPENTOPF",
+  "BROTKRUSTE", "MILCHKANNE", "ZUCKERDOSE", "PFEFFERSTREUER",
+  "OBSTKORB", "GEMÜSEBEET", "BLUMENTOPF", "GIESSKANNE",
+  "RASENMÄHER", "GARTENZAUN", "VOGELHAUS", "FUTTERSTELLE",
+  "HUNDEHÜTTE", "STALLMIST", "HEUBALLEN", "ERNTEZEIT",
+  "KORNFELD", "ACKERLAND", "WALDRAND", "LICHTUNG",
+  "BAUMSTAMM", "BAUMKRONE", "WURZELWERK", "LAUBWALD",
+  "NADELBAUM", "TANNENWALD", "BIRKENHOLZ", "KIEFERNHARZ",
+  "WILDBLUME", "SONNENBLUME", "MOHNBLUME", "KORNBLUME",
+  "GÄNSEBLÜMCHEN", "KRÄUTERBEET", "HEILPFLANZE", "BRENNNESSEL",
+  "LÖWENZAHN", "KLETTERPFLANZE", "MOOSFLECHTE", "EFEURANKE",
+  "SEEROSE", "SCHILFGRAS", "FLUSSBETT", "BACHFORELLE",
+  "BERGZIEGE", "STEINBOCK", "WILDKATZE", "WALDKAUZ",
+  "SPECHTNEST", "FUCHSBAU", "DACHSBAU", "HASENBAU",
+  "BIENENSTOCK", "AMEISENHAUFEN", "SCHNECKENHAUS", "SPINNENETZ",
+  "SCHWALBE", "LERCHENNEST", "KRÄHENNEST", "STORCHENNEST",
+  "FISCHREIHER", "EISVOGEL", "ZAUNKÖNIG", "GOLDFISCH",
+  "FORELLENZUCHT", "KARPFENTEICH",
 ];
 
 const WORD_POOL_SCHWER = [
+  // Originale 42 Wörter
   "BLITZABLEITER", "KRANKENSCHWESTER", "VERSICHERUNG",
   "HANDELSPARTNER", "STRASSENKREUZUNG", "SCHNEELANDSCHAFT",
   "VERKEHRSMINISTER", "FEUERWEHRMANN", "BUNDESKANZLER",
@@ -417,6 +620,54 @@ const WORD_POOL_SCHWER = [
   "SCHWIERIGKEITSGRAD", "FORTPFLANZUNG", "GEBIRGSLANDSCHAFT",
   "WERKZEUGKASTEN", "NACHMITTAGSKAFFEE", "FRÜHLINGSBEGINN",
   "SCHNEESCHMELZE", "FERNBEDIENUNG", "SCHREIBTISCHLAMPE",
+  // Neue Wörter (128 zusätzliche, 13+ Buchstaben)
+  "WISSENSCHAFTLER", "KRANKENVERSICHERUNG", "REGIERUNGSSPRECHER",
+  "BUNDESSTRASSE", "GESCHWINDIGKEITSBEGRENZUNG", "STRASSENSPERRUNG",
+  "VERKEHRSZEICHEN", "EINBAHNSTRASSE", "FUSSGÄNGERZONE",
+  "KREISVERKEHR", "AUTOBAHNAUFFAHRT", "PARKPLATZSUCHE",
+  "FÜHRERSCHEINPRÜFUNG", "FAHRERLAUBNIS", "VERKEHRSKONTROLLE",
+  "GESCHÄFTSFÜHRER", "HANDELSREGISTER", "STEUERERKLÄRUNG",
+  "BUCHHALTUNG", "JAHRESABSCHLUSS", "GEWINNBETEILIGUNG",
+  "ARBEITGEBER", "ARBEITNEHMER", "BETRIEBSVERSAMMLUNG",
+  "GEWERKSCHAFTSBUND", "TARIFVERHANDLUNG", "KÜNDIGUNGSSCHUTZ",
+  "ARBEITSVERTRAG", "MINDESTLOHN", "SOZIALVERSICHERUNG",
+  "RENTENVERSICHERUNG", "PFLEGEVERSICHERUNG", "UNFALLVERSICHERUNG",
+  "ARBEITSLOSENVERSICHERUNG", "KINDERGELDANTRAG", "ELTERNZEITGESETZ",
+  "MUTTERSCHUTZGESETZ", "FAMILIENBERATUNG", "JUGENDSCHUTZGESETZ",
+  "VOLKSHOCHSCHULE", "ERWACHSENENBILDUNG", "BERUFSAUSBILDUNG",
+  "STUDIENABSCHLUSS", "HOCHSCHULABSCHLUSS", "PRÜFUNGSORDNUNG",
+  "FORSCHUNGSARBEIT", "NATURWISSENSCHAFT", "GEISTESWISSENSCHAFT",
+  "SPRACHWISSENSCHAFT", "WIRTSCHAFTSLEHRE", "INGENIEURWESEN",
+  "INFORMATIONSTECHNIK", "DATENVERARBEITUNG", "PROGRAMMIERSPRACHE",
+  "BETRIEBSSYSTEM", "SICHERHEITSLÜCKE", "DATENSCHUTZGESETZ",
+  "URHEBERRECHT", "PATENTANMELDUNG", "MARKENREGISTRIERUNG",
+  "GERICHTSVERHANDLUNG", "RECHTSANWALT", "STAATSANWALTSCHAFT",
+  "BUNDESVERFASSUNGSGERICHT", "VERWALTUNGSRECHT", "STRAFVERFOLGUNG",
+  "ERMITTLUNGSVERFAHREN", "BEWEISAUFNAHME", "ZEUGENAUSSAGE",
+  "SACHVERSTÄNDIGER", "GUTACHTERSTELLE", "BESCHWERDEVERFAHREN",
+  "WIDERSPRUCHSBESCHEID", "BERUFUNGSVERFAHREN", "VOLLSTRECKUNGSBESCHEID",
+  "KRANKENHAUSAUFENTHALT", "NOTAUFNAHME", "INTENSIVSTATION",
+  "OPERATIONSSAAL", "REHABILITATIONSZENTRUM", "PHYSIOTHERAPEUT",
+  "KRANKENPFLEGER", "GESUNDHEITSMINISTER", "ARZNEIMITTELGESETZ",
+  "MEDIKAMENTENPLAN", "NEBENWIRKUNGEN", "WECHSELWIRKUNG",
+  "BLUTDRUCKMESSUNG", "LABORUNTERSUCHUNG", "RÖNTGENAUFNAHME",
+  "COMPUTERTOMOGRAPHIE", "MAGNETRESONANZTOMOGRAPHIE", "ULTRASCHALLGERÄT",
+  "HERZSCHRITTMACHER", "ORGANTRANSPLANTATION", "KNOCHENBRUCHBEHANDLUNG",
+  "ZAHNFLEISCHENTZÜNDUNG", "BINDEHAUTENTZÜNDUNG", "MITTELOHRENTZÜNDUNG",
+  "LUNGENENTZÜNDUNG", "BLINDDARMENTZÜNDUNG", "BAUCHSPEICHELDRÜSE",
+  "SCHILDDRÜSENUNTERSUCHUNG", "BLUTGERINNUNGSSTÖRUNG", "STOFFWECHSELKRANKHEIT",
+  "NAHRUNGSMITTELUNVERTRÄGLICHKEIT", "HAUSSTAUBMILBENALLERGIE", "POLLENFLUGVORHERSAGE",
+  "WETTERVORHERSAGE", "TEMPERATURMESSUNG", "LUFTFEUCHTIGKEIT",
+  "NIEDERSCHLAGSMENGE", "WINDGESCHWINDIGKEIT", "GEWITTERWARNUNG",
+  "HOCHWASSERSCHUTZ", "ERDBEBENMESSUNG", "VULKANAUSBRUCH",
+  "KLIMAERWÄRMUNG", "UMWELTVERSCHMUTZUNG", "NATURSCHUTZGEBIET",
+  "TRINKWASSERAUFBEREITUNG", "MÜLLVERBRENNUNGSANLAGE", "RECYCLINGVERFAHREN",
+  "ENERGIEVERSORGUNG", "STROMVERBRAUCH", "WÄRMEPUMPENHEIZUNG",
+  "SONNENKRAFTWERK", "WINDKRAFTANLAGE", "WASSERKRAFTWERK",
+  "KERNKRAFTWERK", "KOHLEKRAFTWERK", "ENERGIESPEICHERTECHNIK",
+  "FORSCHUNGSZENTRUM", "ENTWICKLUNGSABTEILUNG", "QUALITÄTSKONTROLLE",
+  "PRODUKTIONSSTÄTTE", "LIEFERKETTENPROBLEM", "LAGERVERWALTUNG",
+  "KUNDENZUFRIEDENHEIT", "MARKTFORSCHUNG", "WERBUNGSKOSTEN",
 ];
 
 function scrambleWord(word: string): string {
