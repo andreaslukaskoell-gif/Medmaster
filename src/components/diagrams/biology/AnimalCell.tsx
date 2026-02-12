@@ -22,7 +22,7 @@ export default function AnimalCell() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Tierzelle — Aufbau</h4>
-      <p className="text-xs text-muted">Klicke auf eine Organelle fuer Details.</p>
+      <p className="text-xs text-muted">Klicke auf eine Organelle für Details.</p>
       <svg viewBox="0 0 420 400" className="w-full max-w-lg mx-auto">
         {/* Cell membrane */}
         <ellipse cx="210" cy="210" rx="190" ry="175" fill="#f0fdfa" stroke="#0d9488" strokeWidth="3" />

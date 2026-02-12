@@ -37,7 +37,7 @@ export default function UnitCircle() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Einheitskreis</h4>
-      <p className="text-xs text-muted">Klicke auf einen Winkel fuer trigonometrische Werte.</p>
+      <p className="text-xs text-muted">Klicke auf einen Winkel für trigonometrische Werte.</p>
 
       <div className="flex gap-2 flex-wrap mb-2">
         {angles.map((a) => (

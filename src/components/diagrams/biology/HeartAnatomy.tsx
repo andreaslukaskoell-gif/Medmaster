@@ -3,8 +3,8 @@ import { useState } from "react";
 const structures = [
   { id: "rv", label: "Rechter Ventrikel", detail: "Pumpt sauerstoffarmes Blut über die Lungenarterie in die Lunge. Dünnere Wand als linker Ventrikel." },
   { id: "lv", label: "Linker Ventrikel", detail: "Pumpt sauerstoffreiches Blut über die Aorta in den Körperkreislauf. Dickste Herzwand." },
-  { id: "ra", label: "Rechter Vorhof", detail: "Empfaengt sauerstoffarmes Blut aus dem Körper über obere und untere Hohlvene." },
-  { id: "la", label: "Linker Vorhof", detail: "Empfaengt sauerstoffreiches Blut aus der Lunge über die Lungenvenen." },
+  { id: "ra", label: "Rechter Vorhof", detail: "Empfängt sauerstoffarmes Blut aus dem Körper über obere und untere Hohlvene." },
+  { id: "la", label: "Linker Vorhof", detail: "Empfängt sauerstoffreiches Blut aus der Lunge über die Lungenvenen." },
   { id: "aorta", label: "Aorta", detail: "Größte Arterie. Führt sauerstoffreiches Blut vom linken Ventrikel in den Körperkreislauf." },
   { id: "pa", label: "Lungenarterie (Truncus pulmonalis)", detail: "Führt sauerstoffarmes Blut vom rechten Ventrikel zur Lunge. Einzige Arterie mit sauerstoffarmem Blut!" },
   { id: "pv", label: "Lungenvenen", detail: "Führen sauerstoffreiches Blut von der Lunge zum linken Vorhof. Einzige Venen mit sauerstoffreichem Blut!" },
@@ -25,7 +25,7 @@ export default function HeartAnatomy() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Herz — Anatomie &amp; Blutfluss</h4>
-      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen fuer Details. Blau = sauerstoffarm, Rot = sauerstoffreich.</p>
+      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen für Details. Blau = sauerstoffarm, Rot = sauerstoffreich.</p>
 
       <svg viewBox="0 0 480 440" className="w-full max-w-xl mx-auto">
         {/* Heart outline */}

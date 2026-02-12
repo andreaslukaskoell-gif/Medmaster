@@ -20,7 +20,7 @@ export default function Nephron() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Nephron — Aufbau &amp; Funktion</h4>
-      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen fuer Details.</p>
+      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen für Details.</p>
 
       <svg viewBox="0 0 480 420" className="w-full max-w-xl mx-auto">
         {/* Cortex / Medulla zones */}

@@ -7,7 +7,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "organische-chemie",
     topic: "Funktionelle Gruppen",
-    text: "Welche funktionelle Gruppe ist charakteristisch fuer Aldehyde?",
+    text: "Welche funktionelle Gruppe ist charakteristisch für Aldehyde?",
     options: [
       { id: "a", text: "-COOH" },
       { id: "b", text: "-CHO" },
@@ -74,7 +74,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Die Addition von Br₂ an die Doppelbindung eines Alkens ist eine elektrophile Addition. Das Brom-Molekuel wird durch die elektronenreiche Doppelbindung polarisiert und greift als Elektrophil an.",
+      "Die Addition von Br₂ an die Doppelbindung eines Alkens ist eine elektrophile Addition. Das Brom-Molekül wird durch die elektronenreiche Doppelbindung polarisiert und greift als Elektrophil an.",
     difficulty: "mittel",
     tags: ["reaktionstypen", "addition", "alkene"],
   },
@@ -124,7 +124,7 @@ export const chemieQuestionsPart2: Question[] = [
     text: "Welche Aussage über Benzol (C₆H₆) ist FALSCH?",
     options: [
       { id: "a", text: "Alle C-C-Bindungen im Benzol sind gleich lang" },
-      { id: "b", text: "Benzol ist ein planares Molekuel" },
+      { id: "b", text: "Benzol ist ein planares Molekül" },
       { id: "c", text: "Benzol hat 3 lokalisierte Doppelbindungen" },
       { id: "d", text: "Benzol zeigt bevorzugt Substitutionsreaktionen" },
       { id: "e", text: "Die Elektronen im Benzol sind delokalisiert" },
@@ -140,7 +140,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "organische-chemie",
     topic: "Polymere",
-    text: "Welches Monomer wird fuer die Herstellung von Polyethylen verwendet?",
+    text: "Welches Monomer wird für die Herstellung von Polyethylen verwendet?",
     options: [
       { id: "a", text: "Ethan" },
       { id: "b", text: "Ethin" },
@@ -159,7 +159,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "organische-chemie",
     topic: "Chiralität",
-    text: "Welche Aminosäure (ausser Glycin) besitzt KEIN chirales Zentrum?",
+    text: "Welche Aminosäure (außer Glycin) besitzt KEIN chirales Zentrum?",
     options: [
       { id: "a", text: "Alanin" },
       { id: "b", text: "Glycin besitzt als einzige proteinogene Aminosäure kein chirales Zentrum" },
@@ -218,7 +218,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "biochemie",
     topic: "Proteine",
-    text: "Welche Bindung verknuepft Aminosäuren in einem Protein?",
+    text: "Welche Bindung verknüpft Aminosäuren in einem Protein?",
     options: [
       { id: "a", text: "Esterbindung" },
       { id: "b", text: "Glykosidische Bindung" },
@@ -228,7 +228,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Aminosäuren werden durch Peptidbindungen (-CO-NH-) miteinander verknuepft. Diese Bindung entsteht durch eine Kondensationsreaktion zwischen der Carboxylgruppe einer Aminosäure und der Aminogruppe der nächsten Aminosäure unter Abspaltung von Wasser.",
+      "Aminosäuren werden durch Peptidbindungen (-CO-NH-) miteinander verknüpft. Diese Bindung entsteht durch eine Kondensationsreaktion zwischen der Carboxylgruppe einer Aminosäure und der Aminogruppe der nächsten Aminosäure unter Abspaltung von Wasser.",
     difficulty: "leicht",
     tags: ["proteine", "peptidbindung", "aminosäuren"],
   },
@@ -242,7 +242,7 @@ export const chemieQuestionsPart2: Question[] = [
       { id: "a", text: "Sie enthalten keine C=C-Doppelbindungen" },
       { id: "b", text: "Sie liegen bei Raumtemperatur meist flüssig vor" },
       { id: "c", text: "Sie enthalten mindestens eine C=C-Doppelbindung" },
-      { id: "d", text: "Sie kommen ausschliesslich in pflanzlichen Fetten vor" },
+      { id: "d", text: "Sie kommen ausschließlich in pflanzlichen Fetten vor" },
       { id: "e", text: "Sie haben stets eine ungerade Anzahl von C-Atomen" },
     ],
     correctOptionId: "a",
@@ -285,7 +285,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Die Michaelis-Menten-Konstante Km ist diejenige Substratkonzentration, bei der die Reaktionsgeschwindigkeit die Haelfte der maximalen Geschwindigkeit (Vmax/2) beträgt. Ein niedriger Km-Wert bedeutet eine hohe Affinität des Enzyms zum Substrat.",
+      "Die Michaelis-Menten-Konstante Km ist diejenige Substratkonzentration, bei der die Reaktionsgeschwindigkeit die Hälfte der maximalen Geschwindigkeit (Vmax/2) beträgt. Ein niedriger Km-Wert bedeutet eine hohe Affinität des Enzyms zum Substrat.",
     difficulty: "schwer",
     tags: ["enzyme", "kinetik", "michaelis-menten"],
   },
@@ -304,7 +304,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Die Hydrolyse von ATP zu ADP und anorganischem Phosphat setzt unter Standardbedingungen ca. -30,5 kJ/mol frei (ΔG°' = -30,5 kJ/mol). Diese Energie wird fuer viele energieverbrauchende Prozesse in der Zelle genutzt.",
+      "Die Hydrolyse von ATP zu ADP und anorganischem Phosphat setzt unter Standardbedingungen ca. -30,5 kJ/mol frei (ΔG°' = -30,5 kJ/mol). Diese Energie wird für viele energieverbrauchende Prozesse in der Zelle genutzt.",
     difficulty: "mittel",
     tags: ["atp", "energiestoffwechsel", "hydrolyse"],
   },
@@ -313,7 +313,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "biochemie",
     topic: "Glykolyse",
-    text: "Wie viele Molekuele ATP werden netto in der Glykolyse pro Molekuel Glukose gewonnen?",
+    text: "Wie viele Moleküle ATP werden netto in der Glykolyse pro Molekül Glukose gewonnen?",
     options: [
       { id: "a", text: "0 ATP" },
       { id: "b", text: "1 ATP" },
@@ -323,7 +323,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "In der Glykolyse werden brutto 4 ATP gebildet, aber 2 ATP werden in der Investitionsphase verbraucht. Die Nettobilanz beträgt daher 2 ATP pro Molekuel Glukose. Zusätzlich werden 2 NADH gebildet.",
+      "In der Glykolyse werden brutto 4 ATP gebildet, aber 2 ATP werden in der Investitionsphase verbraucht. Die Nettobilanz beträgt daher 2 ATP pro Molekül Glukose. Zusätzlich werden 2 NADH gebildet.",
     difficulty: "mittel",
     tags: ["glykolyse", "atp", "stoffwechsel"],
   },
@@ -332,12 +332,12 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "biochemie",
     topic: "Proteinstruktur",
-    text: "Welche Wechselwirkung ist primär fuer die alpha-Helix in der Sekundärstruktur von Proteinen verantwortlich?",
+    text: "Welche Wechselwirkung ist primär für die alpha-Helix in der Sekundärstruktur von Proteinen verantwortlich?",
     options: [
       { id: "a", text: "Disulfidbrücken" },
       { id: "b", text: "Ionische Wechselwirkungen" },
       { id: "c", text: "Hydrophobe Wechselwirkungen" },
-      { id: "d", text: "Van-der-Waals-Kraefte" },
+      { id: "d", text: "Van-der-Waals-Kräfte" },
       { id: "e", text: "Wasserstoffbrückenbindungen im Proteinrückgrat" },
     ],
     correctOptionId: "e",
@@ -361,7 +361,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Vitamin C (Ascorbinsäure) ist wasserlöslich. Die Vitamine A, D, E und K sind fettlöslich (Merkwort: ADEK oder EDKA). Wasserlösliche Vitamine können nicht im Körper gespeichert werden und muessen regelmäßig zugeführt werden.",
+      "Vitamin C (Ascorbinsäure) ist wasserlöslich. Die Vitamine A, D, E und K sind fettlöslich (Merkwort: ADEK oder EDKA). Wasserlösliche Vitamine können nicht im Körper gespeichert werden und müssen regelmäßig zugeführt werden.",
     difficulty: "leicht",
     tags: ["vitamine", "wasserlöslich", "fettlöslich"],
   },
@@ -391,7 +391,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "säuren-basen",
     topic: "pH-Berechnung",
-    text: "Welchen pH-Wert hat eine Salzsäureoesung (HCl) der Konzentration c = 0,01 mol/L?",
+    text: "Welchen pH-Wert hat eine Salzsäurelösung (HCl) der Konzentration c = 0,01 mol/L?",
     options: [
       { id: "a", text: "pH = 1" },
       { id: "b", text: "pH = 2" },
@@ -505,7 +505,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "säuren-basen",
     topic: "Titration",
-    text: "20 mL HCl (c = 0,1 mol/L) werden mit NaOH (c = 0,1 mol/L) titriert. Welches Volumen an NaOH wird bis zum Aequivalenzpunkt benötigt?",
+    text: "20 mL HCl (c = 0,1 mol/L) werden mit NaOH (c = 0,1 mol/L) titriert. Welches Volumen an NaOH wird bis zum Äquivalenzpunkt benötigt?",
     options: [
       { id: "a", text: "10 mL" },
       { id: "b", text: "20 mL" },
@@ -515,7 +515,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Am Aequivalenzpunkt gilt: n(HCl) = n(NaOH). Also c₁ · V₁ = c₂ · V₂ → 0,1 · 20 = 0,1 · V₂ → V₂ = 20 mL. Bei gleicher Konzentration benötigt man das gleiche Volumen.",
+      "Am Äquivalenzpunkt gilt: n(HCl) = n(NaOH). Also c₁ · V₁ = c₂ · V₂ → 0,1 · 20 = 0,1 · V₂ → V₂ = 20 mL. Bei gleicher Konzentration benötigt man das gleiche Volumen.",
     difficulty: "mittel",
     tags: ["titration", "neutralisation", "berechnung"],
   },
@@ -543,7 +543,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "säuren-basen",
     topic: "Ionenprodukt",
-    text: "Das Ionenprodukt des Wassers beträgt bei 25°C Kw = 10⁻¹⁴ mol²/L². Wie gross ist die H₃O⁺-Konzentration in reinem Wasser?",
+    text: "Das Ionenprodukt des Wassers beträgt bei 25°C Kw = 10⁻¹⁴ mol²/L². Wie groß ist die H₃O⁺-Konzentration in reinem Wasser?",
     options: [
       { id: "a", text: "10⁻¹⁴ mol/L" },
       { id: "b", text: "10⁻¹ mol/L" },
@@ -621,7 +621,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "redox",
     topic: "Elektrolyse",
-    text: "Bei der Elektrolyse einer CuSO₄-Lösung werden 2 mol Elektronen uebertragen. Wie viel Gramm Kupfer scheiden sich ab? (M(Cu) = 63,5 g/mol)",
+    text: "Bei der Elektrolyse einer CuSO₄-Lösung werden 2 mol Elektronen übertragen. Wie viel Gramm Kupfer scheiden sich ab? (M(Cu) = 63,5 g/mol)",
     options: [
       { id: "a", text: "31,75 g" },
       { id: "b", text: "63,50 g" },
@@ -631,7 +631,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Cu²⁺ + 2e⁻ → Cu. Fuer 1 mol Cu werden 2 mol Elektronen benötigt. Bei 2 mol Elektronen scheiden sich also 1 mol Cu ab: m = n · M = 1 mol · 63,5 g/mol = 63,50 g.",
+      "Cu²⁺ + 2e⁻ → Cu. Für 1 mol Cu werden 2 mol Elektronen benötigt. Bei 2 mol Elektronen scheiden sich also 1 mol Cu ab: m = n · M = 1 mol · 63,5 g/mol = 63,50 g.",
     difficulty: "schwer",
     tags: ["elektrolyse", "berechnung", "faraday"],
   },
@@ -718,7 +718,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "stoichiometrie",
     topic: "Molare Masse",
-    text: "Wie gross ist die molare Masse von Calciumcarbonat (CaCO₃)? (M: Ca=40, C=12, O=16 g/mol)",
+    text: "Wie groß ist die molare Masse von Calciumcarbonat (CaCO₃)? (M: Ca=40, C=12, O=16 g/mol)",
     options: [
       { id: "a", text: "68 g/mol" },
       { id: "b", text: "84 g/mol" },
@@ -737,7 +737,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "stoichiometrie",
     topic: "Stoffmenge",
-    text: "Wie viele Molekuele sind in 2 mol Wasser enthalten? (NA = 6,022 × 10²³ mol⁻¹)",
+    text: "Wie viele Moleküle sind in 2 mol Wasser enthalten? (NA = 6,022 × 10²³ mol⁻¹)",
     options: [
       { id: "a", text: "6,022 × 10²³" },
       { id: "b", text: "3,011 × 10²³" },
@@ -747,7 +747,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "N = n × NA = 2 mol × 6,022 × 10²³ mol⁻¹ = 12,044 × 10²³ = 1,2044 × 10²⁴ Molekuele. Antwort b und e sind rechnerisch gleich, aber b ist die direkte Berechnung in der angegebenen Notation.",
+      "N = n × NA = 2 mol × 6,022 × 10²³ mol⁻¹ = 12,044 × 10²³ = 1,2044 × 10²⁴ Moleküle. Antwort b und e sind rechnerisch gleich, aber b ist die direkte Berechnung in der angegebenen Notation.",
     difficulty: "leicht",
     tags: ["stoffmenge", "avogadro", "berechnung"],
   },
@@ -756,7 +756,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "stoichiometrie",
     topic: "Massenanteil",
-    text: "Wie gross ist der Massenanteil von Sauerstoff in Wasser (H₂O)? (M: H=1, O=16 g/mol)",
+    text: "Wie groß ist der Massenanteil von Sauerstoff in Wasser (H₂O)? (M: H=1, O=16 g/mol)",
     options: [
       { id: "a", text: "11,1 %" },
       { id: "b", text: "33,3 %" },
@@ -794,7 +794,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "stoichiometrie",
     topic: "Reaktionsgleichung",
-    text: "Bei der Verbrennung von Methan gilt: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Wie viel Liter O₂ (bei STP) werden fuer die Verbrennung von 8 g CH₄ benötigt? (M(CH₄) = 16 g/mol)",
+    text: "Bei der Verbrennung von Methan gilt: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Wie viel Liter O₂ (bei STP) werden für die Verbrennung von 8 g CH₄ benötigt? (M(CH₄) = 16 g/mol)",
     options: [
       { id: "a", text: "11,2 L" },
       { id: "b", text: "22,4 L" },
@@ -813,7 +813,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "stoichiometrie",
     topic: "Konzentration",
-    text: "Wie viel Gramm NaCl muessen in 500 mL Wasser gelöst werden, um eine 0,5 molare Lösung herzustellen? (M(NaCl) = 58,5 g/mol)",
+    text: "Wie viel Gramm NaCl müssen in 500 mL Wasser gelöst werden, um eine 0,5 molare Lösung herzustellen? (M(NaCl) = 58,5 g/mol)",
     options: [
       { id: "a", text: "29,25 g" },
       { id: "b", text: "58,5 g" },
@@ -832,7 +832,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "stoichiometrie",
     topic: "Limitierender Reaktand",
-    text: "2 mol H₂ und 2 mol O₂ reagieren gemaess 2 H₂ + O₂ → 2 H₂O. Welcher Stoff ist der limitierende Reaktand?",
+    text: "2 mol H₂ und 2 mol O₂ reagieren gemäß 2 H₂ + O₂ → 2 H₂O. Welcher Stoff ist der limitierende Reaktand?",
     options: [
       { id: "a", text: "O₂" },
       { id: "b", text: "H₂" },
@@ -842,7 +842,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Laut Gleichung werden 2 mol H₂ pro 1 mol O₂ benötigt. Fuer 2 mol O₂ waeren 4 mol H₂ nötig, aber nur 2 mol H₂ sind vorhanden. H₂ ist der limitierende Reaktand. Es verbleiben 1 mol O₂ im Überschuss.",
+      "Laut Gleichung werden 2 mol H₂ pro 1 mol O₂ benötigt. Für 2 mol O₂ wären 4 mol H₂ nötig, aber nur 2 mol H₂ sind vorhanden. H₂ ist der limitierende Reaktand. Es verbleiben 1 mol O₂ im Überschuss.",
     difficulty: "schwer",
     tags: ["limitierender-reaktand", "stoichiometrie", "berechnung"],
   },
@@ -851,7 +851,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "stoichiometrie",
     topic: "Verdünnung",
-    text: "Wie viel mL einer 2 mol/L HCl-Lösung muessen mit Wasser auf 500 mL verdünnt werden, um eine 0,1 mol/L Lösung zu erhalten?",
+    text: "Wie viel mL einer 2 mol/L HCl-Lösung müssen mit Wasser auf 500 mL verdünnt werden, um eine 0,1 mol/L Lösung zu erhalten?",
     options: [
       { id: "a", text: "10 mL" },
       { id: "b", text: "25 mL" },
@@ -872,7 +872,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "atombau",
     topic: "Quantenzahlen",
-    text: "Welche Kombination von Quantenzahlen ist fuer ein Elektron NICHT erlaubt?",
+    text: "Welche Kombination von Quantenzahlen ist für ein Elektron NICHT erlaubt?",
     options: [
       { id: "a", text: "n=2, l=1, ml=0, ms=+1/2" },
       { id: "b", text: "n=3, l=2, ml=-1, ms=-1/2" },
@@ -882,7 +882,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Fuer n=1 kann l nur den Wert 0 annehmen (l = 0, 1, ..., n-1). Die Kombination n=1, l=1 ist daher nicht erlaubt. Es gibt kein 1p-Orbital.",
+      "Für n=1 kann l nur den Wert 0 annehmen (l = 0, 1, ..., n-1). Die Kombination n=1, l=1 ist daher nicht erlaubt. Es gibt kein 1p-Orbital.",
     difficulty: "schwer",
     tags: ["quantenzahlen", "atommodell", "orbitale"],
   },
@@ -901,7 +901,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Stickstoff hat 7 Elektronen: 1s² (2) + 2s² (2) + 2p³ (3) = 7. Gemaess der Hundschen Regel besetzen die drei 2p-Elektronen je ein p-Orbital mit parallelem Spin.",
+      "Stickstoff hat 7 Elektronen: 1s² (2) + 2s² (2) + 2p³ (3) = 7. Gemäß der Hundschen Regel besetzen die drei 2p-Elektronen je ein p-Orbital mit parallelem Spin.",
     difficulty: "schwer",
     tags: ["elektronenkonfiguration", "stickstoff", "aufbauprinzip"],
   },
@@ -996,7 +996,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Fuer n=3 gibt es: 3s (2e⁻) + 3p (6e⁻) + 3d (10e⁻) = 18 Elektronen. Allgemein: maximale Elektronenzahl = 2n² = 2 × 3² = 18.",
+      "Für n=3 gibt es: 3s (2e⁻) + 3p (6e⁻) + 3d (10e⁻) = 18 Elektronen. Allgemein: maximale Elektronenzahl = 2n² = 2 × 3² = 18.",
     difficulty: "mittel",
     tags: ["orbitale", "elektronenkapazität", "hauptquantenzahl"],
   },
@@ -1045,7 +1045,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "bindungen",
     topic: "Kovalente Bindung",
-    text: "Wie viele Bindungselektronenpaare und freie Elektronenpaare besitzt ein Wassermolekuel (H₂O)?",
+    text: "Wie viele Bindungselektronenpaare und freie Elektronenpaare besitzt ein Wassermolekül (H₂O)?",
     options: [
       { id: "a", text: "2 Bindungspaare, 2 freie Paare" },
       { id: "b", text: "2 Bindungspaare, 0 freie Paare" },
@@ -1055,7 +1055,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Sauerstoff im Wasser bildet 2 kovalente Bindungen mit je einem H-Atom (2 Bindungselektronenpaare) und besitzt noch 2 freie Elektronenpaare. Dies ergibt die gewinkelte Molekuelgeometrie (ca. 104,5°).",
+      "Sauerstoff im Wasser bildet 2 kovalente Bindungen mit je einem H-Atom (2 Bindungselektronenpaare) und besitzt noch 2 freie Elektronenpaare. Dies ergibt die gewinkelte Molekülgeometrie (ca. 104,5°).",
     difficulty: "mittel",
     tags: ["kovalente-bindung", "elektronenpaare", "wasser"],
   },
@@ -1068,13 +1068,13 @@ export const chemieQuestionsPart2: Question[] = [
     options: [
       { id: "a", text: "Gemeinsame Nutzung von Elektronenpaaren zwischen zwei Atomen" },
       { id: "b", text: "Übertragung von Elektronen von einem Atom auf ein anderes" },
-      { id: "c", text: "Delokalisiertes Elektronengas aus Valenzelektronen um positive Atomruempfe" },
-      { id: "d", text: "Dipol-Dipol-Wechselwirkungen zwischen polaren Molekuelen" },
-      { id: "e", text: "Van-der-Waals-Kraefte zwischen unpolaren Atomen" },
+      { id: "c", text: "Delokalisiertes Elektronengas aus Valenzelektronen um positive Atomrümpfe" },
+      { id: "d", text: "Dipol-Dipol-Wechselwirkungen zwischen polaren Molekülen" },
+      { id: "e", text: "Van-der-Waals-Kräfte zwischen unpolaren Atomen" },
     ],
     correctOptionId: "c",
     explanation:
-      "Das Elektronengasmodell beschreibt die Metallbindung: Die Valenzelektronen der Metallatome sind delokalisiert und bilden ein 'Elektronengas', das die positiv geladenen Atomruempfe zusammenhält. Dies erklaert die elektrische Leitfähigkeit und Verformbarkeit von Metallen.",
+      "Das Elektronengasmodell beschreibt die Metallbindung: Die Valenzelektronen der Metallatome sind delokalisiert und bilden ein 'Elektronengas', das die positiv geladenen Atomrümpfe zusammenhält. Dies erklärt die elektrische Leitfähigkeit und Verformbarkeit von Metallen.",
     difficulty: "mittel",
     tags: ["metallbindung", "elektronengas", "bindungsmodell"],
   },
@@ -1101,10 +1101,10 @@ export const chemieQuestionsPart2: Question[] = [
     id: "chem-118",
     subject: "chemie",
     chapter: "bindungen",
-    topic: "Zwischenmolekulare Kraefte",
-    text: "Welche zwischenmolekulare Kraft ist fuer den hohen Siedepunkt von Wasser (100°C) im Vergleich zu H₂S (-60°C) hauptverantwortlich?",
+    topic: "Zwischenmolekulare Kräfte",
+    text: "Welche zwischenmolekulare Kraft ist für den hohen Siedepunkt von Wasser (100°C) im Vergleich zu H₂S (-60°C) hauptverantwortlich?",
     options: [
-      { id: "a", text: "London-Dispersionskraefte" },
+      { id: "a", text: "London-Dispersionskräfte" },
       { id: "b", text: "Dipol-Dipol-Wechselwirkungen" },
       { id: "c", text: "Wasserstoffbrückenbindungen" },
       { id: "d", text: "Ionische Wechselwirkungen" },
@@ -1112,16 +1112,16 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Wasser bildet starke Wasserstoffbrückenbindungen (H-Brücken) zwischen dem stark elektronegativen Sauerstoff und den Wasserstoffatomen benachbarter Molekuele. H₂S kann keine H-Brücken bilden (Schwefel ist nicht elektronegativ genug), daher ist sein Siedepunkt viel niedriger.",
+      "Wasser bildet starke Wasserstoffbrückenbindungen (H-Brücken) zwischen dem stark elektronegativen Sauerstoff und den Wasserstoffatomen benachbarter Moleküle. H₂S kann keine H-Brücken bilden (Schwefel ist nicht elektronegativ genug), daher ist sein Siedepunkt viel niedriger.",
     difficulty: "mittel",
-    tags: ["wasserstoffbrücken", "siedepunkt", "intermolekulare-kraefte"],
+    tags: ["wasserstoffbrücken", "siedepunkt", "intermolekulare-kräfte"],
   },
   {
     id: "chem-119",
     subject: "chemie",
     chapter: "bindungen",
     topic: "VSEPR-Modell",
-    text: "Welche Molekuelgeometrie sagt das VSEPR-Modell fuer Methan (CH₄) voraus?",
+    text: "Welche Molekülgeometrie sagt das VSEPR-Modell für Methan (CH₄) voraus?",
     options: [
       { id: "a", text: "Linear" },
       { id: "b", text: "Gewinkelt" },
@@ -1131,9 +1131,9 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Kohlenstoff in CH₄ hat 4 Bindungselektronenpaare und keine freien Elektronenpaare. Gemaess dem VSEPR-Modell ordnen sich die 4 Elektronenpaare tetraedrisch an (Bindungswinkel 109,5°), um den Abstand zueinander zu maximieren.",
+      "Kohlenstoff in CH₄ hat 4 Bindungselektronenpaare und keine freien Elektronenpaare. Gemäß dem VSEPR-Modell ordnen sich die 4 Elektronenpaare tetraedrisch an (Bindungswinkel 109,5°), um den Abstand zueinander zu maximieren.",
     difficulty: "mittel",
-    tags: ["vsepr", "molekuelgeometrie", "methan"],
+    tags: ["vsepr", "molekülgeometrie", "methan"],
   },
   {
     id: "chem-120",
@@ -1150,7 +1150,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "In Ethen (C₂H₄) bildet jedes C-Atom 3 Sigma-Bindungen (2× C-H, 1× C-C) und 1 Pi-Bindung. Dafuer werden 3 Hybridorbitale benötigt → sp²-Hybridisierung. Das verbleibende p-Orbital bildet die Pi-Bindung der Doppelbindung.",
+      "In Ethen (C₂H₄) bildet jedes C-Atom 3 Sigma-Bindungen (2× C-H, 1× C-C) und 1 Pi-Bindung. Dafür werden 3 Hybridorbitale benötigt → sp²-Hybridisierung. Das verbleibende p-Orbital bildet die Pi-Bindung der Doppelbindung.",
     difficulty: "schwer",
     tags: ["hybridisierung", "sp2", "doppelbindung"],
   },

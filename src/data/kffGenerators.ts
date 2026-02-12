@@ -211,17 +211,17 @@ const SECOND_SYLLABLES = [
 const ALLERGIES = [
   "Penicillin", "Amoxicillin", "Aspirin", "Ibuprofen", "Latex",
   "Bienengift", "Wespengift", "Hausstaubmilben", "Schimmelpilze",
-  "Erdnuesse", "Haselnuesse", "Walnuesse", "Soja", "Weizen", "Milch",
+  "Erdnüsse", "Haselnüsse", "Walnüsse", "Soja", "Weizen", "Milch",
   "Eier", "Fisch", "Garnelen", "Sellerie", "Senf", "Sesam",
   "Pollen", "Tierhaare", "Nickel", "Kontrastmittel", "Codein",
   "Sulfonamide", "Tetracyclin", "Morphin", "Novocain",
 ];
 
 const COUNTRIES = [
-  "Oesterreich", "Deutschland", "Schweiz", "Italien", "Frankreich",
+  "Österreich", "Deutschland", "Schweiz", "Italien", "Frankreich",
   "Spanien", "Portugal", "Niederlande", "Belgien", "Schweden",
-  "Norwegen", "Daenemark", "Polen", "Tschechien", "Ungarn",
-  "Griechenland", "Kroatien", "Rumaenien", "Irland", "Finnland",
+  "Norwegen", "Dänemark", "Polen", "Tschechien", "Ungarn",
+  "Griechenland", "Kroatien", "Rumänien", "Irland", "Finnland",
 ];
 
 const BLOOD_GROUPS = ["A+", "A-", "B+", "B-", "AB+", "AB-", "0+", "0-"];
@@ -363,7 +363,7 @@ export function generateMemoryQuestions(cards: AllergyCard[], count: number = 25
   return questions;
 }
 
-// --- WORTFLUESSIGKEIT-GENERATOR ---
+// --- WORTFLÜSSIGKEIT-GENERATOR ---
 
 export interface WortflüssigkeitQuestion {
   id: string;
@@ -389,7 +389,7 @@ const WORD_POOL_LEICHT = [
 const WORD_POOL_MITTEL = [
   "HANDWERK", "BRUNSTZEIT", "ERDBEERE", "SCHMETTERLING",
   "BERGSTEIGER", "ZEITGEIST", "STRASSENBAHN", "WANDERSCHUH",
-  "BLUMENVASE", "REGENSCHIRM", "WINDMUEHLE", "SCHNEEFLOCKE",
+  "BLUMENVASE", "REGENSCHIRM", "WINDMÜHLE", "SCHNEEFLOCKE",
   "FAHRSCHEIN", "BRIEFMARKE", "DACHBODEN", "KIRCHTURM",
   "SCHULRANZEN", "HALSKETTE", "LANDKARTE", "TRINKGLAS",
   "MAHLZEIT", "NACHRICHTEN", "SPIELPLATZ", "WERKSTATT",
@@ -407,15 +407,15 @@ const WORD_POOL_SCHWER = [
   "HANDELSPARTNER", "STRASSENKREUZUNG", "SCHNEELANDSCHAFT",
   "VERKEHRSMINISTER", "FEUERWEHRMANN", "BUNDESKANZLER",
   "KRISTALLGITTER", "SCHWERPUNKT", "ZUSAMMENFASSUNG",
-  "WETTBEWERB", "GRUNDSTUECK", "WELTMEISTERSCHAFT",
-  "PFLICHTBEWUSST", "STREITGESPRAECH", "ZWISCHENPRUFUNG",
-  "DURCHSCHNITT", "SCHUTZIMPFUNG", "GRENZUEBERGANG",
+  "WETTBEWERB", "GRUNDSTÜCK", "WELTMEISTERSCHAFT",
+  "PFLICHTBEWUSST", "STREITGESPRÄCH", "ZWISCHENPRÜFUNG",
+  "DURCHSCHNITT", "SCHUTZIMPFUNG", "GRENZÜBERGANG",
   "NACHBARSCHAFT", "TRINKWASSER", "LICHTGESCHWINDIGKEIT",
   "SELBSTBEWUSSTSEIN", "HANDLUNGSFADEN", "VERANTWORTUNG",
   "GESUNDHEITSWESEN", "AUFGABENSTELLUNG", "FRIEDENSVERTRAG",
   "REGENWALDFLASCHE", "WINTERSONNENWENDE", "BERUFSERFAHRUNG",
   "SCHWIERIGKEITSGRAD", "FORTPFLANZUNG", "GEBIRGSLANDSCHAFT",
-  "WERKZEUGKASTEN", "NACHMITTAGSKAFFEE", "FRUEHLINGSBEGINN",
+  "WERKZEUGKASTEN", "NACHMITTAGSKAFFEE", "FRÜHLINGSBEGINN",
   "SCHNEESCHMELZE", "FERNBEDIENUNG", "SCHREIBTISCHLAMPE",
 ];
 

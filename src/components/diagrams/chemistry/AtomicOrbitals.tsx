@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 const orbitals = [
-  { id: "s", label: "s-Orbital", maxE: 2, detail: "Kugelfoermig. Eine Orientierung. Maximale Besetzung: 2 Elektronen." },
-  { id: "px", label: "p_x-Orbital", maxE: 2, detail: "Hantelfoermig entlang der x-Achse. Teil des p-Unterraums (max. 6 e\u207B)." },
-  { id: "py", label: "p_y-Orbital", maxE: 2, detail: "Hantelfoermig entlang der y-Achse. Teil des p-Unterraums (max. 6 e\u207B)." },
-  { id: "pz", label: "p_z-Orbital", maxE: 2, detail: "Hantelfoermig entlang der z-Achse. Teil des p-Unterraums (max. 6 e\u207B)." },
-  { id: "d", label: "d-Orbital", maxE: 2, detail: "Kleeblattfoermig (d_xy gezeigt). 5 Orientierungen. d-Unterraum: max. 10 e\u207B." },
+  { id: "s", label: "s-Orbital", maxE: 2, detail: "Kugelförmig. Eine Orientierung. Maximale Besetzung: 2 Elektronen." },
+  { id: "px", label: "p_x-Orbital", maxE: 2, detail: "Hantelförmig entlang der x-Achse. Teil des p-Unterraums (max. 6 e\u207B)." },
+  { id: "py", label: "p_y-Orbital", maxE: 2, detail: "Hantelförmig entlang der y-Achse. Teil des p-Unterraums (max. 6 e\u207B)." },
+  { id: "pz", label: "p_z-Orbital", maxE: 2, detail: "Hantelförmig entlang der z-Achse. Teil des p-Unterraums (max. 6 e\u207B)." },
+  { id: "d", label: "d-Orbital", maxE: 2, detail: "Kleeblattförmig (d_xy gezeigt). 5 Orientierungen. d-Unterraum: max. 10 e\u207B." },
 ];
 
 export default function AtomicOrbitals() {
@@ -15,7 +15,7 @@ export default function AtomicOrbitals() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Atomorbitale</h4>
-      <p className="text-xs text-muted">Klicke auf ein Orbital fuer Details.</p>
+      <p className="text-xs text-muted">Klicke auf ein Orbital für Details.</p>
       <svg viewBox="0 0 480 320" className="w-full max-w-lg mx-auto">
         <defs>
           <radialGradient id="sGrad" cx="40%" cy="35%" r="55%">

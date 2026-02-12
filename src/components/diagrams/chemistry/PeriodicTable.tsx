@@ -76,7 +76,7 @@ export default function PeriodicTable() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Periodensystem der Elemente</h4>
-      <p className="text-xs text-muted">Klicke auf ein Element fuer Details.</p>
+      <p className="text-xs text-muted">Klicke auf ein Element für Details.</p>
       <svg viewBox="0 0 460 180" className="w-full max-w-2xl mx-auto">
         <text x="230" y="16" textAnchor="middle" fontSize="11" fill="#0f766e" fontWeight="bold">Periodensystem (1-36)</text>
 

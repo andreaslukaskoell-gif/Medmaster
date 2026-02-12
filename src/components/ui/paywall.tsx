@@ -21,7 +21,7 @@ export function Paywall({ feature, requiredTier = "standard", children }: Props)
             {requiredTier === "pro" ? "Pro" : "Standard"}-Feature
           </h3>
           <p className="text-sm text-muted mb-4">
-            Upgrade auf {requiredTier === "pro" ? "Pro" : "Standard"} fuer {feature}.
+            Upgrade auf {requiredTier === "pro" ? "Pro" : "Standard"} für {feature}.
           </p>
           <Link to="/pricing">
             <Button>Upgrade ansehen</Button>

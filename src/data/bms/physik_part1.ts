@@ -6,7 +6,7 @@ export const physikQuestionsPart1: Question[] = [
     id: "phys-1",
     subject: "physik",
     chapter: "mechanik",
-    topic: "Gleichfoermige Bewegung",
+    topic: "Gleichförmige Bewegung",
     text: "Ein Auto fährt mit konstanter Geschwindigkeit v = 72 km/h. Welche Strecke legt es in 5 Sekunden zurück?",
     options: [
       { id: "a", text: "100 m" },
@@ -19,7 +19,7 @@ export const physikQuestionsPart1: Question[] = [
     explanation:
       "v = 72 km/h = 72/3,6 = 20 m/s. s = v × t = 20 m/s × 5 s = 100 m.",
     difficulty: "leicht",
-    tags: ["gleichfoermige-bewegung", "geschwindigkeit", "berechnung"],
+    tags: ["gleichförmige-bewegung", "geschwindigkeit", "berechnung"],
   },
   {
     id: "phys-2",
@@ -83,7 +83,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "mechanik",
     topic: "Energie",
-    text: "Ein Körper der Masse 2 kg befindet sich in 10 m Höhe. Welche kinetische Energie hat er kurz vor dem Aufprall? (g = 10 m/s², Luftwiderstand vernachlaessigt)",
+    text: "Ein Körper der Masse 2 kg befindet sich in 10 m Höhe. Welche kinetische Energie hat er kurz vor dem Aufprall? (g = 10 m/s², Luftwiderstand vernachlässigt)",
     options: [
       { id: "a", text: "20 J" },
       { id: "b", text: "200 J" },
@@ -121,7 +121,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "mechanik",
     topic: "Arbeit",
-    text: "Ein Körper wird mit einer Kraft von 50 N über eine Strecke von 8 m in Kraftrichtung verschoben. Wie gross ist die verrichtete Arbeit?",
+    text: "Ein Körper wird mit einer Kraft von 50 N über eine Strecke von 8 m in Kraftrichtung verschoben. Wie groß ist die verrichtete Arbeit?",
     options: [
       { id: "a", text: "6,25 J" },
       { id: "b", text: "58 J" },
@@ -159,7 +159,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "mechanik",
     topic: "Kreisbewegung",
-    text: "Ein Körper bewegt sich mit v = 6 m/s auf einer Kreisbahn mit r = 3 m. Wie gross ist die Zentripetalbeschleunigung?",
+    text: "Ein Körper bewegt sich mit v = 6 m/s auf einer Kreisbahn mit r = 3 m. Wie groß ist die Zentripetalbeschleunigung?",
     options: [
       { id: "a", text: "2 m/s²" },
       { id: "b", text: "6 m/s²" },
@@ -199,7 +199,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "elektrizität",
     topic: "Ohmsches Gesetz",
-    text: "An einem Widerstand von R = 100 Ω liegt eine Spannung von U = 12 V an. Wie gross ist der Strom?",
+    text: "An einem Widerstand von R = 100 Ω liegt eine Spannung von U = 12 V an. Wie groß ist der Strom?",
     options: [
       { id: "a", text: "0,12 A" },
       { id: "b", text: "1,2 A" },
@@ -218,7 +218,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "elektrizität",
     topic: "Reihenschaltung",
-    text: "Drei Widerstände R₁ = 10 Ω, R₂ = 20 Ω, R₃ = 30 Ω sind in Reihe geschaltet. Wie gross ist der Gesamtwiderstand?",
+    text: "Drei Widerstände R₁ = 10 Ω, R₂ = 20 Ω, R₃ = 30 Ω sind in Reihe geschaltet. Wie groß ist der Gesamtwiderstand?",
     options: [
       { id: "a", text: "60 Ω" },
       { id: "b", text: "20 Ω" },
@@ -237,7 +237,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "elektrizität",
     topic: "Parallelschaltung",
-    text: "Zwei Widerstände R₁ = 6 Ω und R₂ = 3 Ω sind parallel geschaltet. Wie gross ist der Gesamtwiderstand?",
+    text: "Zwei Widerstände R₁ = 6 Ω und R₂ = 3 Ω sind parallel geschaltet. Wie groß ist der Gesamtwiderstand?",
     options: [
       { id: "a", text: "9 Ω" },
       { id: "b", text: "4,5 Ω" },
@@ -256,7 +256,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "elektrizität",
     topic: "Elektrische Leistung",
-    text: "Ein Geraet nimmt bei U = 230 V einen Strom von I = 2 A auf. Wie gross ist die elektrische Leistung?",
+    text: "Ein Gerät nimmt bei U = 230 V einen Strom von I = 2 A auf. Wie groß ist die elektrische Leistung?",
     options: [
       { id: "a", text: "115 W" },
       { id: "b", text: "460 W" },
@@ -275,7 +275,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "elektrizität",
     topic: "Coulomb-Gesetz",
-    text: "Zwei Punktladungen q₁ = q₂ = 1 μC befinden sich im Abstand r = 0,1 m. Wie gross ist die Kraft zwischen ihnen? (k = 9 × 10⁹ N·m²/C²)",
+    text: "Zwei Punktladungen q₁ = q₂ = 1 μC befinden sich im Abstand r = 0,1 m. Wie groß ist die Kraft zwischen ihnen? (k = 9 × 10⁹ N·m²/C²)",
     options: [
       { id: "a", text: "0,9 N" },
       { id: "b", text: "0,09 N" },
@@ -342,7 +342,7 @@ export const physikQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Die Lorentzkraft ist F = q × (v × B). Mit der Rechte-Hand-Regel: Finger zeigen nach rechts (v), kruemmen sich aus der Ebene heraus (B) → der Daumen zeigt nach unten. Die Kraft wirkt nach unten.",
+      "Die Lorentzkraft ist F = q × (v × B). Mit der Rechte-Hand-Regel: Finger zeigen nach rechts (v), krümmen sich aus der Ebene heraus (B) → der Daumen zeigt nach unten. Die Kraft wirkt nach unten.",
     difficulty: "schwer",
     tags: ["lorentzkraft", "magnetfeld", "rechte-hand-regel"],
   },
@@ -353,7 +353,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "optik",
     topic: "Brechung",
-    text: "Licht trifft unter einem Einfallswinkel von 30° auf eine Glasoberflaeche (nGlas = 1,5). Wie gross ist der Brechungswinkel? (sin 30° = 0,5)",
+    text: "Licht trifft unter einem Einfallswinkel von 30° auf eine Glasoberfläche (nGlas = 1,5). Wie groß ist der Brechungswinkel? (sin 30° = 0,5)",
     options: [
       { id: "a", text: "ca. 19,5°" },
       { id: "b", text: "ca. 45°" },
@@ -391,7 +391,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "optik",
     topic: "Reflexion",
-    text: "Welches Gesetz gilt fuer die Reflexion von Licht an einer glatten Oberflaeche?",
+    text: "Welches Gesetz gilt für die Reflexion von Licht an einer glatten Oberfläche?",
     options: [
       { id: "a", text: "Einfallswinkel = 2 × Ausfallswinkel" },
       { id: "b", text: "Einfallswinkel = Ausfallswinkel" },
@@ -401,7 +401,7 @@ export const physikQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Das Reflexionsgesetz besagt: Der Einfallswinkel ist gleich dem Ausfallswinkel (α = α'). Beide Winkel werden zum Lot auf die Oberflaeche gemessen. Einfallender Strahl, Lot und reflektierter Strahl liegen in einer Ebene.",
+      "Das Reflexionsgesetz besagt: Der Einfallswinkel ist gleich dem Ausfallswinkel (α = α'). Beide Winkel werden zum Lot auf die Oberfläche gemessen. Einfallender Strahl, Lot und reflektierter Strahl liegen in einer Ebene.",
     difficulty: "leicht",
     tags: ["reflexion", "reflexionsgesetz", "optik"],
   },
@@ -420,7 +420,7 @@ export const physikQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Grenzwinkel: sin(αc) = n₂/n₁ = 1/1,5 = 2/3 ≈ 0,667 → αc = sin⁻¹(2/3) ≈ 41,8°. Fuer Einfallswinkel größer als 41,8° tritt Totalreflexion auf.",
+      "Grenzwinkel: sin(αc) = n₂/n₁ = 1/1,5 = 2/3 ≈ 0,667 → αc = sin⁻¹(2/3) ≈ 41,8°. Für Einfallswinkel größer als 41,8° tritt Totalreflexion auf.",
     difficulty: "schwer",
     tags: ["totalreflexion", "grenzwinkel", "berechnung"],
   },
@@ -431,15 +431,15 @@ export const physikQuestionsPart1: Question[] = [
     topic: "Elektromagnetisches Spektrum",
     text: "In welcher Reihenfolge nehmen die Wellenlängen zu?",
     options: [
-      { id: "a", text: "Roentgen – UV – sichtbar – IR – Mikrowellen" },
-      { id: "b", text: "IR – sichtbar – UV – Roentgen – Gamma" },
+      { id: "a", text: "Röntgen – UV – sichtbar – IR – Mikrowellen" },
+      { id: "b", text: "IR – sichtbar – UV – Röntgen – Gamma" },
       { id: "c", text: "Gamma – sichtbar – UV – IR – Radio" },
       { id: "d", text: "Radio – Mikrowellen – IR – sichtbar – UV" },
-      { id: "e", text: "UV – sichtbar – IR – Mikrowellen – Roentgen" },
+      { id: "e", text: "UV – sichtbar – IR – Mikrowellen – Röntgen" },
     ],
     correctOptionId: "a",
     explanation:
-      "Die Wellenlänge nimmt zu in der Reihenfolge: Gammastrahlung < Roentgenstrahlung < UV < sichtbares Licht < Infrarot < Mikrowellen < Radiowellen. Option a zeigt einen korrekten Ausschnitt dieser Reihenfolge.",
+      "Die Wellenlänge nimmt zu in der Reihenfolge: Gammastrahlung < Röntgenstrahlung < UV < sichtbares Licht < Infrarot < Mikrowellen < Radiowellen. Option a zeigt einen korrekten Ausschnitt dieser Reihenfolge.",
     difficulty: "mittel",
     tags: ["em-spektrum", "wellenlänge", "strahlung"],
   },
@@ -448,7 +448,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "optik",
     topic: "Lichtgeschwindigkeit",
-    text: "Die Lichtgeschwindigkeit im Vakuum beträgt c = 3 × 10⁸ m/s. Wie gross ist sie in Glas mit n = 1,5?",
+    text: "Die Lichtgeschwindigkeit im Vakuum beträgt c = 3 × 10⁸ m/s. Wie groß ist sie in Glas mit n = 1,5?",
     options: [
       { id: "a", text: "4,5 × 10⁸ m/s" },
       { id: "b", text: "2 × 10⁸ m/s" },
@@ -469,7 +469,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "wellen",
     topic: "Wellengleichung",
-    text: "Eine Welle hat die Frequenz f = 500 Hz und die Wellenlänge λ = 0,68 m. Wie gross ist ihre Ausbreitungsgeschwindigkeit?",
+    text: "Eine Welle hat die Frequenz f = 500 Hz und die Wellenlänge λ = 0,68 m. Wie groß ist ihre Ausbreitungsgeschwindigkeit?",
     options: [
       { id: "a", text: "170 m/s" },
       { id: "b", text: "340 m/s" },
@@ -555,7 +555,7 @@ export const physikQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Destruktive Interferenz tritt auf, wenn der Gangunterschied Δ = (2n+1) × λ/2 beträgt (n = 0, 1, 2, ...), d. h. ein ungeradzahliges Vielfaches der halben Wellenlänge. Die Wellenberge der einen Welle treffen auf die Wellentaeler der anderen.",
+      "Destruktive Interferenz tritt auf, wenn der Gangunterschied Δ = (2n+1) × λ/2 beträgt (n = 0, 1, 2, ...), d. h. ein ungeradzahliges Vielfaches der halben Wellenlänge. Die Wellenberge der einen Welle treffen auf die Wellentäler der anderen.",
     difficulty: "mittel",
     tags: ["interferenz", "destruktiv", "gangunterschied"],
   },
@@ -608,13 +608,13 @@ export const physikQuestionsPart1: Question[] = [
     options: [
       { id: "a", text: "Die Wärmeleitfähigkeit des Materials" },
       { id: "b", text: "Die Temperaturdifferenz zwischen beiden Seiten" },
-      { id: "c", text: "Die Flaeche der Wand" },
+      { id: "c", text: "Die Fläche der Wand" },
       { id: "d", text: "Die Dicke der Wand" },
       { id: "e", text: "Die Farbe der Wand" },
     ],
     correctOptionId: "e",
     explanation:
-      "Der Wärmestrom durch eine Wand ist Q̇ = λ × A × ΔT / d (Fouriersches Gesetz). Er hängt von der Wärmeleitfähigkeit λ, der Flaeche A, der Temperaturdifferenz ΔT und der Dicke d ab. Die Farbe beeinflusst nur die Wärmestrahlung, nicht die Wärmeleitung.",
+      "Der Wärmestrom durch eine Wand ist Q̇ = λ × A × ΔT / d (Fouriersches Gesetz). Er hängt von der Wärmeleitfähigkeit λ, der Fläche A, der Temperaturdifferenz ΔT und der Dicke d ab. Die Farbe beeinflusst nur die Wärmestrahlung, nicht die Wärmeleitung.",
     difficulty: "leicht",
     tags: ["wärmeleitung", "fourier", "wärmestrom"],
   },
@@ -622,7 +622,7 @@ export const physikQuestionsPart1: Question[] = [
     id: "phys-33",
     subject: "physik",
     chapter: "wärmelehre",
-    topic: "Hauptsaetze der Thermodynamik",
+    topic: "Hauptsätze der Thermodynamik",
     text: "Was besagt der 1. Hauptsatz der Thermodynamik?",
     options: [
       { id: "a", text: "Wärme fließt immer vom kalten zum warmen Körper" },
@@ -633,7 +633,7 @@ export const physikQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Der 1. Hauptsatz ist die Energieerhaltung fuer thermodynamische Systeme: ΔU = Q + W. Die Änderung der inneren Energie ΔU entspricht der zugeführten Wärme Q plus der am System verrichteten Arbeit W. Option b ist der 2. Hauptsatz, d ist der 3. Hauptsatz.",
+      "Der 1. Hauptsatz ist die Energieerhaltung für thermodynamische Systeme: ΔU = Q + W. Die Änderung der inneren Energie ΔU entspricht der zugeführten Wärme Q plus der am System verrichteten Arbeit W. Option b ist der 2. Hauptsatz, d ist der 3. Hauptsatz.",
     difficulty: "mittel",
     tags: ["thermodynamik", "erster-hauptsatz", "energieerhaltung"],
   },
@@ -641,7 +641,7 @@ export const physikQuestionsPart1: Question[] = [
     id: "phys-34",
     subject: "physik",
     chapter: "wärmelehre",
-    topic: "Phasenuebergaenge",
+    topic: "Phasenübergänge",
     text: "Wie viel Energie wird benötigt, um 0,5 kg Eis bei 0°C vollständig zu schmelzen? (Schmelzwärme von Eis: Lf = 334 kJ/kg)",
     options: [
       { id: "a", text: "334 kJ" },
@@ -673,7 +673,7 @@ export const physikQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Anzahl der Halbwertszeiten: n = 24/8 = 3. Restanteil = (1/2)³ = 1/8. Nach 3 Halbwertszeiten ist nur noch 1/8 (= 12,5 %) der urspruenglichen Substanz vorhanden.",
+      "Anzahl der Halbwertszeiten: n = 24/8 = 3. Restanteil = (1/2)³ = 1/8. Nach 3 Halbwertszeiten ist nur noch 1/8 (= 12,5 %) der ursprünglichen Substanz vorhanden.",
     difficulty: "schwer",
     tags: ["halbwertszeit", "radioaktivität", "berechnung"],
   },
@@ -700,8 +700,8 @@ export const physikQuestionsPart1: Question[] = [
     id: "phys-37",
     subject: "physik",
     chapter: "kernphysik",
-    topic: "Masse-Energie-Aequivalenz",
-    text: "Welche Energie entspricht einer Masse von m = 1 kg gemaess E = mc²? (c = 3 × 10⁸ m/s)",
+    topic: "Masse-Energie-Äquivalenz",
+    text: "Welche Energie entspricht einer Masse von m = 1 kg gemäß E = mc²? (c = 3 × 10⁸ m/s)",
     options: [
       { id: "a", text: "3 × 10⁸ J" },
       { id: "b", text: "9 × 10¹⁶ J" },
@@ -722,7 +722,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "fluidmechanik",
     topic: "Hydrostatischer Druck",
-    text: "Wie gross ist der hydrostatische Druck in 5 m Wassertiefe? (ρ_Wasser = 1000 kg/m³, g = 10 m/s²)",
+    text: "Wie groß ist der hydrostatische Druck in 5 m Wassertiefe? (ρ_Wasser = 1000 kg/m³, g = 10 m/s²)",
     options: [
       { id: "a", text: "5000 Pa" },
       { id: "b", text: "50000 Pa" },
@@ -741,7 +741,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "fluidmechanik",
     topic: "Auftrieb",
-    text: "Ein Körper mit V = 0,002 m³ wird vollständig in Wasser eingetaucht (ρ_Wasser = 1000 kg/m³, g = 10 m/s²). Wie gross ist die Auftriebskraft?",
+    text: "Ein Körper mit V = 0,002 m³ wird vollständig in Wasser eingetaucht (ρ_Wasser = 1000 kg/m³, g = 10 m/s²). Wie groß ist die Auftriebskraft?",
     options: [
       { id: "a", text: "20 N" },
       { id: "b", text: "2 N" },
@@ -751,7 +751,7 @@ export const physikQuestionsPart1: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Archimedisches Prinzip: FA = ρ_Fluid × g × V = 1000 × 10 × 0,002 = 20 N. Die Auftriebskraft entspricht der Gewichtskraft der verdraengten Flüssigkeit.",
+      "Archimedisches Prinzip: FA = ρ_Fluid × g × V = 1000 × 10 × 0,002 = 20 N. Die Auftriebskraft entspricht der Gewichtskraft der verdrängten Flüssigkeit.",
     difficulty: "mittel",
     tags: ["auftrieb", "archimedes", "berechnung"],
   },
@@ -760,7 +760,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "fluidmechanik",
     topic: "Kontinuitätsgleichung",
-    text: "Wasser fließt durch ein Rohr mit Querschnitt A₁ = 10 cm² und Geschwindigkeit v₁ = 2 m/s. Das Rohr verengt sich auf A₂ = 5 cm². Wie gross ist v₂?",
+    text: "Wasser fließt durch ein Rohr mit Querschnitt A₁ = 10 cm² und Geschwindigkeit v₁ = 2 m/s. Das Rohr verengt sich auf A₂ = 5 cm². Wie groß ist v₂?",
     options: [
       { id: "a", text: "1 m/s" },
       { id: "b", text: "2 m/s" },
@@ -770,8 +770,8 @@ export const physikQuestionsPart1: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Kontinuitätsgleichung: A₁ × v₁ = A₂ × v₂ → v₂ = A₁ × v₁ / A₂ = 10 × 2 / 5 = 4 m/s. Bei Verengung des Querschnitts erhöht sich die Stroemungsgeschwindigkeit.",
+      "Kontinuitätsgleichung: A₁ × v₁ = A₂ × v₂ → v₂ = A₁ × v₁ / A₂ = 10 × 2 / 5 = 4 m/s. Bei Verengung des Querschnitts erhöht sich die Strömungsgeschwindigkeit.",
     difficulty: "mittel",
-    tags: ["kontinuität", "stroemung", "berechnung"],
+    tags: ["kontinuität", "strömung", "berechnung"],
   },
 ];

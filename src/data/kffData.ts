@@ -10,7 +10,7 @@ export const kffStrategyGuide = {
           "Bei Zahlenfolgen musst du das Muster erkennen, das die Zahlen verbindet. Berechne immer zuerst die Differenzen zwischen aufeinanderfolgenden Zahlen. Wenn die Differenzen konstant sind, handelt es sich um eine arithmetische Folge.",
       },
       {
-        heading: "Schritt-fuer-Schritt Vorgehen",
+        heading: "Schritt-für-Schritt Vorgehen",
         content: `1. Differenzen bilden: Berechne die Differenz zwischen jedem Paar aufeinanderfolgender Zahlen.
 2. Differenzen der Differenzen: Sind die ersten Differenzen nicht konstant, bilde die zweiten Differenzen.
 3. Häufige Muster prüfen:
@@ -25,14 +25,14 @@ export const kffStrategyGuide = {
       {
         heading: "Typische Fallen",
         content: `- Nicht nur die offensichtlichste Lösung annehmen - prüfe ob es auch mit allen Zahlen passt
-- Bei großen Spruengen an Potenzen oder Multiplikation denken
+- Bei großen Sprüngen an Potenzen oder Multiplikation denken
 - Manchmal sind zwei verschachtelte Folgen enthalten (gerade und ungerade Positionen bilden je eigene Folge)
 - Zeitmanagement: Wenn du nach 30 Sekunden kein Muster findest, markiere die Aufgabe und komme später zurück`,
       },
     ],
   },
   gedaechtnis: {
-    title: "Strategie-Guide: Allergiepaesse merken",
+    title: "Strategie-Guide: Allergiepässe merken",
     sections: [
       {
         heading: "Die Aufgabe",
@@ -40,10 +40,10 @@ export const kffStrategyGuide = {
           "Du bekommst 8 Allergieausweise mit je einem Namen, Geburtsdatum, Blutgruppe und 2-3 Allergien zu sehen (Lernphase: 8 Minuten). Dann werden Fragen zu den Ausweisen gestellt (Prüfphase).",
       },
       {
-        heading: "Die Loci-Methode (Gedaechtnispalast)",
-        content: `1. Wähle 8 bekannte Orte in deiner Wohnung (Eingangstür, Garderobe, Kueche, Bad, etc.)
+        heading: "Die Loci-Methode (Gedächtnispalast)",
+        content: `1. Wähle 8 bekannte Orte in deiner Wohnung (Eingangstür, Garderobe, Küche, Bad, etc.)
 2. Jeder Allergieausweis wird an einem Ort 'abgelegt'
-3. Erstelle fuer jede Person ein lebhaftes Bild an diesem Ort:
+3. Erstelle für jede Person ein lebhaftes Bild an diesem Ort:
    - Name: Assoziiere den Namen mit einer bekannten Person oder einem Gegenstand
    - Blutgruppe: A=Apfel, B=Banane, 0=Orange, AB=Apfel+Banane, +/- = oben/unten
    - Allergien: Stelle dir die allergische Reaktion bildlich an deinem Ort vor
@@ -66,11 +66,11 @@ export const kffStrategyGuide = {
       {
         heading: "Die Aufgabe",
         content:
-          "Dir wird ein Wort gezeigt, dessen Buchstaben vertauscht wurden. Du musst erkennen, mit welchem Buchstaben das urspruengliche Wort beginnt. Diese Aufgabe testet deine Fähigkeit, Wörter schnell zu erkennen und mental zu rekonstruieren.",
+          "Dir wird ein Wort gezeigt, dessen Buchstaben vertauscht wurden. Du musst erkennen, mit welchem Buchstaben das ursprüngliche Wort beginnt. Diese Aufgabe testet deine Fähigkeit, Wörter schnell zu erkennen und mental zu rekonstruieren.",
       },
       {
         heading: "Strategien",
-        content: `1. Buchstabenhäufigkeit analysieren: Welche Buchstaben kommen vor? Welche typischen deutschen Wortanfaenge sind möglich?
+        content: `1. Buchstabenhäufigkeit analysieren: Welche Buchstaben kommen vor? Welche typischen deutschen Wortanfänge sind möglich?
 2. Bekannte Silben suchen: Erkenne Silben wie -ung, -keit, -heit, -schaft im Buchstabensalat
 3. Zusammengesetzte Wörter: Viele deutsche Wörter sind zusammengesetzt - suche nach zwei bekannten Wortteilen
 4. Konsonanten-Vokal-Muster: Deutsche Wörter beginnen häufig mit bestimmten Konsonantenkombinationen (Sch-, Str-, Bl-, Fr-, etc.)
@@ -78,11 +78,11 @@ export const kffStrategyGuide = {
       },
       {
         heading: "Typische Fallen und Tipps",
-        content: `- Lass dich nicht von langen Wörtern einschuechtern - sie sind oft zusammengesetzt und leichter zu erkennen
+        content: `- Lass dich nicht von langen Wörtern einschüchtern - sie sind oft zusammengesetzt und leichter zu erkennen
 - Bei kurzen Wörtern gibt es oft mehrere Möglichkeiten - prüfe alle Optionen
 - Zeitmanagement: Max. 15-20 Sekunden pro Wort
 - Wenn ein Wort nicht sofort erkennbar ist, suche nach auffälligen Buchstabengruppen (qu, sch, ch, ck)
-- Uebe regelmäßig - mit der Zeit erkennst du Wörter immer schneller`,
+- Übe regelmäßig - mit der Zeit erkennst du Wörter immer schneller`,
       },
     ],
   },
@@ -95,15 +95,15 @@ export const kffStrategyGuide = {
           "Eine Implikation ist eine 'Wenn-Dann'-Aussage: 'Wenn A, dann B' (A -> B). Du musst bestimmen, welche Schlussfolgerungen logisch gültig sind.",
       },
       {
-        heading: "Gültige vs. ungültige Schluesse",
+        heading: "Gültige vs. ungültige Schlüsse",
         content: `Gegeben: 'Wenn A, dann B' (A -> B)
 
-GUELTIG:
+GÜLTIG:
 - Modus Ponens: A ist wahr -> B muss wahr sein
 - Modus Tollens (Kontraposition): B ist falsch -> A muss falsch sein
   ('Wenn es regnet, ist die Straße nass' = 'Straße nicht nass -> es regnet nicht')
 
-UNGUELTIG (häufige Fehler!):
+UNGÜLTIG (häufige Fehler!):
 - Umkehrschluss: B ist wahr -> A muss wahr sein (FALSCH! Straße nass -> Regnet? Nein, vielleicht Sprinkler)
 - Verneinung des Antecedens: A ist falsch -> B muss falsch sein (FALSCH! Kein Regen -> Straße trocken? Nicht zwingend)`,
       },
@@ -250,7 +250,7 @@ export const allergieAusweise: AllergieAusweis[] = [
     name: "Anna Gruber",
     geburtsdatum: "05.11.1998",
     blutgruppe: "B+",
-    allergien: ["Erdnuesse", "Soja"],
+    allergien: ["Erdnüsse", "Soja"],
   },
   {
     id: "aa-4",
@@ -295,7 +295,7 @@ export const allergieAusweiseSet2: AllergieAusweis[] = [
     name: "Elena Hartmann",
     geburtsdatum: "08.07.1994",
     blutgruppe: "0+",
-    allergien: ["Cephalosporine", "Meeresfruchte"],
+    allergien: ["Cephalosporine", "Meeresfrüchte"],
   },
   {
     id: "aa2-2",
@@ -309,14 +309,14 @@ export const allergieAusweiseSet2: AllergieAusweis[] = [
     name: "Sophie Richter",
     geburtsdatum: "16.10.2000",
     blutgruppe: "B+",
-    allergien: ["Haselnuesse", "Birke-Pollen"],
+    allergien: ["Haselnüsse", "Birke-Pollen"],
   },
   {
     id: "aa2-4",
     name: "Maximilian Keller",
     geburtsdatum: "03.05.1991",
     blutgruppe: "AB+",
-    allergien: ["Metamizol", "Roentgenkontrastmittel"],
+    allergien: ["Metamizol", "Röntgenkontrastmittel"],
   },
   {
     id: "aa2-5",
@@ -405,9 +405,9 @@ export const gedaechtnisQuestionsSet2: GedaechtnisQuestion[] = [
     text: "Gegen welche Substanzen ist Carolin Braun allergisch?",
     options: [
       "Glutenunverträglichkeit, Soja, Sesam",
-      "Haselnuesse, Soja, Sesam",
+      "Haselnüsse, Soja, Sesam",
       "Glutenunverträglichkeit, Weizen, Sesam",
-      "Glutenunverträglichkeit, Soja, Erdnuesse",
+      "Glutenunverträglichkeit, Soja, Erdnüsse",
     ],
     correctAnswer: "Glutenunverträglichkeit, Soja, Sesam",
   },
@@ -447,11 +447,11 @@ export interface ImplikationQuestion {
 export const implikationQuestions: ImplikationQuestion[] = [
   {
     id: "imp-1",
-    premise: "Wenn ein Patient Fieber hat, dann ist sein CRP-Wert erhoht.",
-    conclusion: "Der CRP-Wert des Patienten ist nicht erhoht. Also hat der Patient kein Fieber.",
+    premise: "Wenn ein Patient Fieber hat, dann ist sein CRP-Wert erhöht.",
+    conclusion: "Der CRP-Wert des Patienten ist nicht erhöht. Also hat der Patient kein Fieber.",
     isValid: true,
     explanation:
-      "Dies ist ein gültiger Modus Tollens: Wenn A -> B, und nicht-B, dann nicht-A. Wenn Fieber -> CRP erhoht, und CRP NICHT erhoht, dann kein Fieber.",
+      "Dies ist ein gültiger Modus Tollens: Wenn A -> B, und nicht-B, dann nicht-A. Wenn Fieber -> CRP erhöht, und CRP NICHT erhöht, dann kein Fieber.",
   },
   {
     id: "imp-2",
@@ -459,12 +459,12 @@ export const implikationQuestions: ImplikationQuestion[] = [
     conclusion: "Dieses Tier hat ein Herz mit vier Kammern. Also ist es ein Säugetier.",
     isValid: false,
     explanation:
-      "Ungültiger Umkehrschluss! Auch Voegel haben ein Vierkammerherz. Aus 'Alle A sind B' folgt nicht 'Alle B sind A'.",
+      "Ungültiger Umkehrschluss! Auch Vögel haben ein Vierkammerherz. Aus 'Alle A sind B' folgt nicht 'Alle B sind A'.",
   },
   {
     id: "imp-3",
     premise: "Wenn jemand Arzt ist, dann hat er ein Medizinstudium abgeschlossen.",
-    conclusion: "Lisa hat ein Medizinstudium abgeschlossen. Also ist Lisa Aerztin.",
+    conclusion: "Lisa hat ein Medizinstudium abgeschlossen. Also ist Lisa Ärztin.",
     isValid: false,
     explanation:
       "Ungültiger Umkehrschluss. Man kann ein Medizinstudium abschließen, ohne als Arzt tätig zu sein (z.B. Forschung). Aus A -> B und B folgt NICHT A.",
@@ -475,7 +475,7 @@ export const implikationQuestions: ImplikationQuestion[] = [
     conclusion: "Aspirin ist nicht verschreibungspflichtig. Also darf es auch außerhalb der Apotheke verkauft werden.",
     isValid: false,
     explanation:
-      "Verneinung des Antecedens (ungültig). Nicht verschreibungspflichtig heißt nicht, dass es ueberall verkauft werden darf - es kann trotzdem apothekenpflichtig sein.",
+      "Verneinung des Antecedens (ungültig). Nicht verschreibungspflichtig heißt nicht, dass es überall verkauft werden darf - es kann trotzdem apothekenpflichtig sein.",
   },
   {
     id: "imp-5",
@@ -499,7 +499,7 @@ export const implikationQuestions: ImplikationQuestion[] = [
     conclusion: "Max hat 75% der Punkte erreicht. Also hat Max die Prüfung bestanden.",
     isValid: false,
     explanation:
-      "Ungültiger Umkehrschluss. Die Prämisse besagt nur, dass Bestehen mindestens 60% erfordert, aber es koennten weitere Kriterien gelten (z.B. mündliche Prüfung). Aus 'Alle A sind B' folgt nicht 'Alle B sind A'.",
+      "Ungültiger Umkehrschluss. Die Prämisse besagt nur, dass Bestehen mindestens 60% erfordert, aber es könnten weitere Kriterien gelten (z.B. mündliche Prüfung). Aus 'Alle A sind B' folgt nicht 'Alle B sind A'.",
   },
   {
     id: "imp-8",
@@ -507,15 +507,15 @@ export const implikationQuestions: ImplikationQuestion[] = [
     conclusion: "Peter hat seinen Regenschirm mitgenommen. Also regnet es draußen.",
     isValid: false,
     explanation:
-      "Ungültiger Umkehrschluss (Bejahung des Konsequens). Peter koennte den Schirm auch vorsorglich mitnehmen oder weil Regen vorhergesagt wurde. Aus A -> B und B folgt nicht A.",
+      "Ungültiger Umkehrschluss (Bejahung des Konsequens). Peter könnte den Schirm auch vorsorglich mitnehmen oder weil Regen vorhergesagt wurde. Aus A -> B und B folgt nicht A.",
   },
   {
     id: "imp-9",
-    premise: "Wenn ein Lebensmittel Gluten enthält, dann duerfen Zoeliakie-Patienten es nicht essen.",
-    conclusion: "Reis enthält kein Gluten. Also duerfen Zoeliakie-Patienten Reis essen.",
+    premise: "Wenn ein Lebensmittel Gluten enthält, dann dürfen Zöliakie-Patienten es nicht essen.",
+    conclusion: "Reis enthält kein Gluten. Also dürfen Zöliakie-Patienten Reis essen.",
     isValid: false,
     explanation:
-      "Verneinung des Antecedens (ungültig). Nur weil die Bedingung 'enthält Gluten' nicht erfüllt ist, heißt das nicht automatisch, dass das Lebensmittel unbedenklich ist. Es koennten z.B. Kreuzkontaminationen vorliegen.",
+      "Verneinung des Antecedens (ungültig). Nur weil die Bedingung 'enthält Gluten' nicht erfüllt ist, heißt das nicht automatisch, dass das Lebensmittel unbedenklich ist. Es könnten z.B. Kreuzkontaminationen vorliegen.",
   },
   {
     id: "imp-10",

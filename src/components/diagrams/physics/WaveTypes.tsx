@@ -84,7 +84,7 @@ export default function WaveTypes() {
           <text x="158" y="218" fontSize="7" fill="#0f766e">Wellental</text>
 
           {/* Example */}
-          <text x="230" y="265" textAnchor="middle" fontSize="8" fill="#6b7280">Beispiele: Lichtwellen, Seilwellen, Wasserwellen (Oberflaeche)</text>
+          <text x="230" y="265" textAnchor="middle" fontSize="8" fill="#6b7280">Beispiele: Lichtwellen, Seilwellen, Wasserwellen (Oberfläche)</text>
         </svg>
       ) : (
         <svg viewBox="0 0 460 280" className="w-full max-w-lg mx-auto">

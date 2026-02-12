@@ -13,9 +13,9 @@ interface SpectrumBand {
 
 const bands: SpectrumBand[] = [
   { id: "gamma", label: "Gamma", color: "#7c3aed", fill: "#8b5cf6", width: 40, freq: "> 10\u00B9\u2079 Hz", wavelength: "< 10 pm", detail: "Höchste Energie. Entsteht bei Kernzerfall. Anwendung: Strahlentherapie, Sterilisation." },
-  { id: "xray", label: "Roentgen", color: "#6366f1", fill: "#818cf8", width: 45, freq: "10\u00B9\u2076\u201310\u00B9\u2079 Hz", wavelength: "10 pm \u2013 10 nm", detail: "Durchdringt Weichteilgewebe. Anwendung: Roentgendiagnostik, CT." },
+  { id: "xray", label: "Röntgen", color: "#6366f1", fill: "#818cf8", width: 45, freq: "10\u00B9\u2076\u201310\u00B9\u2079 Hz", wavelength: "10 pm \u2013 10 nm", detail: "Durchdringt Weichteilgewebe. Anwendung: Röntgendiagnostik, CT." },
   { id: "uv", label: "UV", color: "#3b82f6", fill: "#60a5fa", width: 40, freq: "10\u00B9\u2075\u201310\u00B9\u2076 Hz", wavelength: "10\u2013400 nm", detail: "UV-A, UV-B, UV-C. Kann DNA schädigen. Vitamin-D-Synthese in der Haut." },
-  { id: "visible", label: "Sichtbar", color: "#0f766e", fill: "url(#rainbowGrad)", width: 50, freq: "4\u201378 \u00D7 10\u00B9\u2074 Hz", wavelength: "380\u2013780 nm", detail: "Einziger fuer das Auge sichtbarer Bereich. Farben: Violett (380 nm) bis Rot (780 nm)." },
+  { id: "visible", label: "Sichtbar", color: "#0f766e", fill: "url(#rainbowGrad)", width: 50, freq: "4\u201378 \u00D7 10\u00B9\u2074 Hz", wavelength: "380\u2013780 nm", detail: "Einziger für das Auge sichtbarer Bereich. Farben: Violett (380 nm) bis Rot (780 nm)." },
   { id: "ir", label: "Infrarot", color: "#ef4444", fill: "#fca5a5", width: 50, freq: "10\u00B9\u00B2\u201310\u00B9\u2074 Hz", wavelength: "780 nm \u2013 1 mm", detail: "Wärmestrahlung. Anwendung: Thermographie, Fernbedienungen, IR-Spektroskopie." },
   { id: "micro", label: "Mikrowellen", color: "#f97316", fill: "#fdba74", width: 50, freq: "10\u2079\u201310\u00B9\u00B2 Hz", wavelength: "1 mm \u2013 1 m", detail: "Anwendung: Mikrowellenofen, Radar, Mobilfunk (GHz-Bereich)." },
   { id: "radio", label: "Radiowellen", color: "#eab308", fill: "#fde68a", width: 55, freq: "< 10\u2079 Hz", wavelength: "> 1 m", detail: "Längste Wellenlänge, niedrigste Energie. Anwendung: Radio, TV, MRT." },
@@ -39,7 +39,7 @@ export default function EMSpectrum() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Elektromagnetisches Spektrum</h4>
-      <p className="text-xs text-muted">Klicke auf einen Bereich fuer Details.</p>
+      <p className="text-xs text-muted">Klicke auf einen Bereich für Details.</p>
       <svg viewBox="0 0 460 300" className="w-full max-w-lg mx-auto">
         <defs>
           <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">

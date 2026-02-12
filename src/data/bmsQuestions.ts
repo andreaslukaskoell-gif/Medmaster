@@ -14,7 +14,7 @@ export const bmsQuestions: Question[] = [
     id: "bio-1",
     subject: "biologie",
     chapter: "zellbiologie",
-    text: "Welche Organelle ist fuer die oxidative Phosphorylierung und damit fuer die ATP-Synthese in eukaryotischen Zellen hauptverantwortlich?",
+    text: "Welche Organelle ist für die oxidative Phosphorylierung und damit für die ATP-Synthese in eukaryotischen Zellen hauptverantwortlich?",
     options: [
       { id: "a", text: "Endoplasmatisches Retikulum" },
       { id: "b", text: "Golgi-Apparat" },
@@ -92,13 +92,13 @@ export const bmsQuestions: Question[] = [
     text: "Beim ABO-Blutgruppensystem spricht man von kodominanter Vererbung. Was bedeutet Kodominanz?",
     options: [
       { id: "a", text: "Ein Allel unterdrückt die Expression des anderen vollständig" },
-      { id: "b", text: "Beide Allele werden im heterozygoten Zustand gleichermassen exprimiert" },
-      { id: "c", text: "Die Merkmale vermischen sich zu einem Zwischenphaenotyp" },
+      { id: "b", text: "Beide Allele werden im heterozygoten Zustand gleichermaßen exprimiert" },
+      { id: "c", text: "Die Merkmale vermischen sich zu einem Zwischenphänotyp" },
       { id: "d", text: "Nur das mütterliche Allel wird exprimiert" },
     ],
     correctOptionId: "b",
     explanation:
-      "Bei Kodominanz werden beide Allele im heterozygoten Zustand gleichermassen und unabhängig voneinander exprimiert. Beim ABO-System führt der Genotyp I^A I^B zur Blutgruppe AB, da beide Antigene (A und B) auf der Erythrozytenoberflaeche gebildet werden. Dies unterscheidet sich von intermediaerem Erbgang, bei dem ein Zwischenphaenotyp entsteht.",
+      "Bei Kodominanz werden beide Allele im heterozygoten Zustand gleichermaßen und unabhängig voneinander exprimiert. Beim ABO-System führt der Genotyp I^A I^B zur Blutgruppe AB, da beide Antigene (A und B) auf der Erythrozytenoberfläche gebildet werden. Dies unterscheidet sich von intermediärem Erbgang, bei dem ein Zwischenphänotyp entsteht.",
   },
   {
     id: "bio-7",
@@ -106,14 +106,14 @@ export const bmsQuestions: Question[] = [
     chapter: "humanbiologie",
     text: "Welche Struktur des Erregungsleitungssystems des Herzens ist der primäre Schrittmacher?",
     options: [
-      { id: "a", text: "Atrioventrikulaerknoten (AV-Knoten)" },
+      { id: "a", text: "Atrioventrikulärknoten (AV-Knoten)" },
       { id: "b", text: "His-Bündel" },
       { id: "c", text: "Sinusknoten (SA-Knoten)" },
       { id: "d", text: "Purkinje-Fasern" },
     ],
     correctOptionId: "c",
     explanation:
-      "Der Sinusknoten (SA-Knoten) liegt im rechten Vorhof und ist der primäre Schrittmacher des Herzens mit einer Eigenfrequenz von ca. 60-80 Schlaegen pro Minute. Er generiert spontane elektrische Impulse, die über die Vorhoefe zum AV-Knoten weitergeleitet werden. Fällt der Sinusknoten aus, kann der AV-Knoten als sekundärer Schrittmacher mit niedrigerer Frequenz (ca. 40-50/min) einspringen.",
+      "Der Sinusknoten (SA-Knoten) liegt im rechten Vorhof und ist der primäre Schrittmacher des Herzens mit einer Eigenfrequenz von ca. 60-80 Schlägen pro Minute. Er generiert spontane elektrische Impulse, die über die Vorhöfe zum AV-Knoten weitergeleitet werden. Fällt der Sinusknoten aus, kann der AV-Knoten als sekundärer Schrittmacher mit niedrigerer Frequenz (ca. 40-50/min) einspringen.",
   },
   {
     id: "bio-8",
@@ -128,7 +128,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Prokaryoten (z.B. Bakterien) besitzen keinen membranumhüllten Zellkern. Ihre DNA liegt frei im Cytoplasma als ringfoermiges Chromosom im sogenannten Nukleoid vor. Eukaryoten hingegen haben einen durch eine Doppelmembran (Kernhülle) abgegrenzten Zellkern. Ribosomen, Zellmembran und DNA sind in beiden Zelltypen vorhanden, wobei prokaryotische Ribosomen kleiner sind (70S vs. 80S).",
+      "Prokaryoten (z.B. Bakterien) besitzen keinen membranumhüllten Zellkern. Ihre DNA liegt frei im Cytoplasma als ringförmiges Chromosom im sogenannten Nukleoid vor. Eukaryoten hingegen haben einen durch eine Doppelmembran (Kernhülle) abgegrenzten Zellkern. Ribosomen, Zellmembran und DNA sind in beiden Zelltypen vorhanden, wobei prokaryotische Ribosomen kleiner sind (70S vs. 80S).",
   },
   {
     id: "bio-9",
@@ -149,7 +149,7 @@ export const bmsQuestions: Question[] = [
     id: "bio-10",
     subject: "biologie",
     chapter: "genetik",
-    text: "Bei autosomal-rezessivem Erbgang sind beide Eltern heterozygote Überträger (Aa). Wie gross ist die Wahrscheinlichkeit, dass ein Kind phaenotypisch betroffen (aa) ist?",
+    text: "Bei autosomal-rezessivem Erbgang sind beide Eltern heterozygote Überträger (Aa). Wie groß ist die Wahrscheinlichkeit, dass ein Kind phänotypisch betroffen (aa) ist?",
     options: [
       { id: "a", text: "0%" },
       { id: "b", text: "25%" },
@@ -158,7 +158,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Nach den Mendelschen Regeln ergibt die Kreuzung Aa x Aa folgende Genotypen: 1/4 AA, 2/4 Aa, 1/4 aa. Nur homozygot rezessive Individuen (aa) zeigen den betroffenen Phaenotyp, also beträgt die Wahrscheinlichkeit 25%. Die Haelfte der Nachkommen (Aa) sind heterozygote Überträger und 25% (AA) sind weder betroffen noch Überträger.",
+      "Nach den Mendelschen Regeln ergibt die Kreuzung Aa x Aa folgende Genotypen: 1/4 AA, 2/4 Aa, 1/4 aa. Nur homozygot rezessive Individuen (aa) zeigen den betroffenen Phänotyp, also beträgt die Wahrscheinlichkeit 25%. Die Hälfte der Nachkommen (Aa) sind heterozygote Überträger und 25% (AA) sind weder betroffen noch Überträger.",
   },
 
   // === CHEMIE ===
@@ -175,13 +175,13 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Die maximale Elektronenzahl pro Schale berechnet sich nach der Formel 2n². Fuer n=3: 2 x 3² = 2 x 9 = 18 Elektronen. Die dritte Schale hat die Unterschalen 3s (2e-), 3p (6e-) und 3d (10e-), zusammen 18 Elektronen.",
+      "Die maximale Elektronenzahl pro Schale berechnet sich nach der Formel 2n². Für n=3: 2 x 3² = 2 x 9 = 18 Elektronen. Die dritte Schale hat die Unterschalen 3s (2e-), 3p (6e-) und 3d (10e-), zusammen 18 Elektronen.",
   },
   {
     id: "chem-2",
     subject: "chemie",
     chapter: "bindungen",
-    text: "Welche Bindungsart entsteht, wenn ein Atom mit hoher Elektronegativität ein Elektron von einem Atom mit niedriger Elektronegativität uebernimmt?",
+    text: "Welche Bindungsart entsteht, wenn ein Atom mit hoher Elektronegativität ein Elektron von einem Atom mit niedriger Elektronegativität übernimmt?",
     options: [
       { id: "a", text: "Kovalente Bindung" },
       { id: "b", text: "Ionenbindung" },
@@ -190,7 +190,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Bei der Ionenbindung ist die Elektronegativitätsdifferenz so gross (>1.7), dass ein vollständiger Elektronenuebertrag stattfindet. Das elektronegativere Atom wird zum Anion, das weniger elektronegative zum Kation. Die elektrostatische Anziehung zwischen den entgegengesetzt geladenen Ionen bildet die Ionenbindung (z.B. NaCl).",
+      "Bei der Ionenbindung ist die Elektronegativitätsdifferenz so groß (>1.7), dass ein vollständiger Elektronenuebertrag stattfindet. Das elektronegativere Atom wird zum Anion, das weniger elektronegative zum Kation. Die elektrostatische Anziehung zwischen den entgegengesetzt geladenen Ionen bildet die Ionenbindung (z.B. NaCl).",
   },
   {
     id: "chem-3",
@@ -235,7 +235,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "17 Protonen identifizieren das Element Chlor (Ordnungszahl 17). Ein neutrales Cl-Atom haette 17 Elektronen. Da dieses Teilchen 18 Elektronen besitzt (eines mehr), handelt es sich um das einfach negativ geladene Chlorid-Ion Cl-. Die Massenzahl beträgt 17+18 = 35 (Cl-35, das häufigste Chlorisotop).",
+      "17 Protonen identifizieren das Element Chlor (Ordnungszahl 17). Ein neutrales Cl-Atom hätte 17 Elektronen. Da dieses Teilchen 18 Elektronen besitzt (eines mehr), handelt es sich um das einfach negativ geladene Chlorid-Ion Cl-. Die Massenzahl beträgt 17+18 = 35 (Cl-35, das häufigste Chlorisotop).",
   },
   {
     id: "chem-6",
@@ -280,7 +280,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Wasserstoffbrückenbindungen entstehen, wenn ein Wasserstoffatom kovalent an ein stark elektronegatives Atom (Stickstoff, Sauerstoff oder Fluor) gebunden ist und mit einem freien Elektronenpaar eines weiteren elektronegativen Atoms wechselwirkt. Diese intermolekulare Kraft ist deutlich schwächer als kovalente Bindungen, aber stärker als Van-der-Waals-Kraefte. Sie sind entscheidend fuer die besonderen Eigenschaften des Wassers und die Struktur von DNA und Proteinen.",
+      "Wasserstoffbrückenbindungen entstehen, wenn ein Wasserstoffatom kovalent an ein stark elektronegatives Atom (Stickstoff, Sauerstoff oder Fluor) gebunden ist und mit einem freien Elektronenpaar eines weiteren elektronegativen Atoms wechselwirkt. Diese intermolekulare Kraft ist deutlich schwächer als kovalente Bindungen, aber stärker als Van-der-Waals-Kräfte. Sie sind entscheidend für die besonderen Eigenschaften des Wassers und die Struktur von DNA und Proteinen.",
   },
   {
     id: "chem-9",
@@ -310,7 +310,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Im Wassermolekuel hat Sauerstoff die Oxidationszahl -2, da er als elektronegativeres Atom die Bindungselektronen formal zu sich zieht. Wasserstoff hat jeweils die Oxidationszahl +1. Die Summe aller Oxidationszahlen im neutralen Molekuel ergibt Null: 2 x (+1) + 1 x (-2) = 0. Die Oxidationszahl -2 ist der häufigste Wert fuer Sauerstoff in den meisten Verbindungen, mit Ausnahmen wie Peroxiden (-1) und OF2 (+2).",
+      "Im Wassermolekuel hat Sauerstoff die Oxidationszahl -2, da er als elektronegativeres Atom die Bindungselektronen formal zu sich zieht. Wasserstoff hat jeweils die Oxidationszahl +1. Die Summe aller Oxidationszahlen im neutralen Molekül ergibt Null: 2 x (+1) + 1 x (-2) = 0. Die Oxidationszahl -2 ist der häufigste Wert für Sauerstoff in den meisten Verbindungen, mit Ausnahmen wie Peroxiden (-1) und OF2 (+2).",
   },
 
   // === PHYSIK ===
@@ -318,7 +318,7 @@ export const bmsQuestions: Question[] = [
     id: "phys-1",
     subject: "physik",
     chapter: "mechanik",
-    text: "Ein Körper wird aus 20 m Höhe im freien Fall losgelassen (g = 10 m/s²). Mit welcher Geschwindigkeit trifft er auf dem Boden auf? (Luftwiderstand vernachlaessigt)",
+    text: "Ein Körper wird aus 20 m Höhe im freien Fall losgelassen (g = 10 m/s²). Mit welcher Geschwindigkeit trifft er auf dem Boden auf? (Luftwiderstand vernachlässigt)",
     options: [
       { id: "a", text: "10 m/s" },
       { id: "b", text: "20 m/s" },
@@ -348,7 +348,7 @@ export const bmsQuestions: Question[] = [
     id: "phys-3",
     subject: "physik",
     chapter: "optik",
-    text: "Welches optische Phaenomen ist fuer die Aufspaltung von weißem Licht in seine Spektralfarben beim Durchgang durch ein Prisma verantwortlich?",
+    text: "Welches optische Phänomen ist für die Aufspaltung von weißem Licht in seine Spektralfarben beim Durchgang durch ein Prisma verantwortlich?",
     options: [
       { id: "a", text: "Reflexion" },
       { id: "b", text: "Beugung" },
@@ -402,7 +402,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Newtons drittes Gesetz (actio = reactio) besagt, dass Kraefte immer paarweise auftreten: Uebt ein Körper A eine Kraft auf Körper B aus, so uebt Körper B eine gleich große, aber entgegengesetzt gerichtete Kraft auf Körper A aus. Beide Kraefte greifen an unterschiedlichen Körpern an und sind vom gleichen Typ. Ein Beispiel ist die Rakete: Die ausgestossenen Gase ueben eine Kraft auf die Rakete aus und umgekehrt.",
+      "Newtons drittes Gesetz (actio = reactio) besagt, dass Kräfte immer paarweise auftreten: Übt ein Körper A eine Kraft auf Körper B aus, so übt Körper B eine gleich große, aber entgegengesetzt gerichtete Kraft auf Körper A aus. Beide Kräfte greifen an unterschiedlichen Körpern an und sind vom gleichen Typ. Ein Beispiel ist die Rakete: Die ausgestoßenen Gase üben eine Kraft auf die Rakete aus und umgekehrt.",
   },
   {
     id: "phys-7",
@@ -426,9 +426,9 @@ export const bmsQuestions: Question[] = [
     text: "Unter welchen Bedingungen tritt Totalreflexion auf?",
     options: [
       { id: "a", text: "Wenn Licht von einem optisch dünneren in ein optisch dichteres Medium uebergeht" },
-      { id: "b", text: "Wenn Licht senkrecht auf eine Grenzflaeche trifft" },
+      { id: "b", text: "Wenn Licht senkrecht auf eine Grenzfläche trifft" },
       { id: "c", text: "Wenn Licht von einem optisch dichteren in ein optisch dünneres Medium uebergeht und der Einfallswinkel den Grenzwinkel ueberschreitet" },
-      { id: "d", text: "Wenn Licht auf eine verspiegelte Oberflaeche trifft" },
+      { id: "d", text: "Wenn Licht auf eine verspiegelte Oberfläche trifft" },
     ],
     correctOptionId: "c",
     explanation:
@@ -447,13 +447,13 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Wasser hat mit 4,18 kJ/(kg*K) eine aussergewoehnlich hohe spezifische Wärmekapazität. Das bedeutet, es wird viel Energie benötigt, um Wasser zu erwärmen, und es gibt beim Abkühlen entsprechend viel Energie ab. Diese Eigenschaft beruht auf den starken Wasserstoffbrückenbindungen zwischen den Wassermolekuelen und ist entscheidend fuer die Klimaregulation der Erde sowie die Thermoregulation des menschlichen Körpers.",
+      "Wasser hat mit 4,18 kJ/(kg*K) eine außergewöhnlich hohe spezifische Wärmekapazität. Das bedeutet, es wird viel Energie benötigt, um Wasser zu erwärmen, und es gibt beim Abkühlen entsprechend viel Energie ab. Diese Eigenschaft beruht auf den starken Wasserstoffbrückenbindungen zwischen den Wassermolekuelen und ist entscheidend für die Klimaregulation der Erde sowie die Thermoregulation des menschlichen Körpers.",
   },
   {
     id: "phys-10",
     subject: "physik",
     chapter: "mechanik",
-    text: "Eine konstante Kraft von 50 N verschiebt einen Körper um 4 m in Kraftrichtung. Wie gross ist die verrichtete Arbeit?",
+    text: "Eine konstante Kraft von 50 N verschiebt einen Körper um 4 m in Kraftrichtung. Wie groß ist die verrichtete Arbeit?",
     options: [
       { id: "a", text: "12,5 J" },
       { id: "b", text: "54 J" },
@@ -485,7 +485,7 @@ export const bmsQuestions: Question[] = [
     id: "math-2",
     subject: "mathematik",
     chapter: "statistik",
-    text: "In einer Urne befinden sich 3 rote und 7 blaue Kugeln. Wie gross ist die Wahrscheinlichkeit, bei zweimaligem Ziehen ohne Zurücklegen zwei rote Kugeln zu ziehen?",
+    text: "In einer Urne befinden sich 3 rote und 7 blaue Kugeln. Wie groß ist die Wahrscheinlichkeit, bei zweimaligem Ziehen ohne Zurücklegen zwei rote Kugeln zu ziehen?",
     options: [
       { id: "a", text: "9/100" },
       { id: "b", text: "3/45 = 1/15" },
@@ -500,7 +500,7 @@ export const bmsQuestions: Question[] = [
     id: "math-3",
     subject: "mathematik",
     chapter: "geometrie",
-    text: "Wie gross ist die Flaeche eines Kreises mit dem Radius r = 5 cm? (pi ~ 3,14)",
+    text: "Wie groß ist die Fläche eines Kreises mit dem Radius r = 5 cm? (pi ~ 3,14)",
     options: [
       { id: "a", text: "31,4 cm²" },
       { id: "b", text: "78,5 cm²" },
@@ -509,7 +509,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Die Kreisflaeche berechnet sich mit A = pi x r² = 3,14 x 5² = 3,14 x 25 = 78,5 cm². Der Kreisumfang wäre U = 2 x pi x r = 31,4 cm (Antwort a). Häufiger Fehler: Verwechslung von Flaeche und Umfang.",
+      "Die Kreisfläche berechnet sich mit A = pi x r² = 3,14 x 5² = 3,14 x 25 = 78,5 cm². Der Kreisumfang wäre U = 2 x pi x r = 31,4 cm (Antwort a). Häufiger Fehler: Verwechslung von Fläche und Umfang.",
   },
   {
     id: "math-4",
@@ -554,7 +554,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Die 68-95-99,7-Regel (empirische Regel) der Normalverteilung besagt, dass ca. 68% aller Werte innerhalb einer Standardabweichung (Mittelwert +/- 1 Sigma) liegen. Etwa 95% liegen innerhalb von zwei Standardabweichungen und ca. 99,7% innerhalb von drei Standardabweichungen. Diese Regel ist fundamental fuer die Interpretation von Messwerten und Konfidenzintervallen in der Medizin und Forschung.",
+      "Die 68-95-99,7-Regel (empirische Regel) der Normalverteilung besagt, dass ca. 68% aller Werte innerhalb einer Standardabweichung (Mittelwert +/- 1 Sigma) liegen. Etwa 95% liegen innerhalb von zwei Standardabweichungen und ca. 99,7% innerhalb von drei Standardabweichungen. Diese Regel ist fundamental für die Interpretation von Messwerten und Konfidenzintervallen in der Medizin und Forschung.",
   },
   {
     id: "math-7",
@@ -584,7 +584,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Die Stammfunktion von f(x) = 2x ist F(x) = x². Das bestimmte Integral berechnet sich als F(3) - F(0) = 3² - 0² = 9 - 0 = 9. Geometrisch entspricht dies der Flaeche des Dreiecks unter der Geraden f(x) = 2x von 0 bis 3, also ½ x Grundseite x Höhe = ½ x 3 x 6 = 9.",
+      "Die Stammfunktion von f(x) = 2x ist F(x) = x². Das bestimmte Integral berechnet sich als F(3) - F(0) = 3² - 0² = 9 - 0 = 9. Geometrisch entspricht dies der Fläche des Dreiecks unter der Geraden f(x) = 2x von 0 bis 3, also ½ x Grundseite x Höhe = ½ x 3 x 6 = 9.",
   },
   {
     id: "math-9",
@@ -614,7 +614,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Die natürliche Exponentialfunktion f(x) = e^x ist die einzige Funktion, die mit ihrer eigenen Ableitung identisch ist: f'(x) = e^x. Diese besondere Eigenschaft macht die Eulersche Zahl e (ca. 2,71828) fundamental fuer die Mathematik und Naturwissenschaften. In der Medizin beschreiben Exponentialfunktionen z.B. den radioaktiven Zerfall, Bakterienwachstum und pharmakokinetische Prozesse.",
+      "Die natürliche Exponentialfunktion f(x) = e^x ist die einzige Funktion, die mit ihrer eigenen Ableitung identisch ist: f'(x) = e^x. Diese besondere Eigenschaft macht die Eulersche Zahl e (ca. 2,71828) fundamental für die Mathematik und Naturwissenschaften. In der Medizin beschreiben Exponentialfunktionen z.B. den radioaktiven Zerfall, Bakterienwachstum und pharmakokinetische Prozesse.",
   },
 ];
 

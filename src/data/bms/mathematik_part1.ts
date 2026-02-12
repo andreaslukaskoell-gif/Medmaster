@@ -26,7 +26,7 @@ export const mathematikQuestionsPart1: Question[] = [
     subject: "mathematik",
     chapter: "algebra",
     topic: "Prozentrechnung",
-    text: "Ein Preis wird um 20 % reduziert und danach um 20 % erhöht. Wie gross ist der Gesamteffekt bezogen auf den Ausgangspreis?",
+    text: "Ein Preis wird um 20 % reduziert und danach um 20 % erhöht. Wie groß ist der Gesamteffekt bezogen auf den Ausgangspreis?",
     options: [
       { id: "a", text: "Keine Änderung (0 %)" },
       { id: "b", text: "-4 % (Verlust)" },
@@ -207,7 +207,7 @@ export const mathematikQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "2^x = 64 = 2⁶ → x = 6. Da die Basen gleich sind, muessen die Exponenten gleich sein.",
+      "2^x = 64 = 2⁶ → x = 6. Da die Basen gleich sind, müssen die Exponenten gleich sein.",
     difficulty: "leicht",
     tags: ["exponentialgleichung", "potenzen", "berechnung"],
   },
@@ -507,7 +507,7 @@ export const mathematikQuestionsPart1: Question[] = [
     subject: "mathematik",
     chapter: "geometrie",
     topic: "Kreis",
-    text: "Ein Kreis hat den Radius r = 7 cm. Berechnen Sie seinen Flaecheninhalt. (π ≈ 22/7)",
+    text: "Ein Kreis hat den Radius r = 7 cm. Berechnen Sie seinen Flächeninhalt. (π ≈ 22/7)",
     options: [
       { id: "a", text: "44 cm²" },
       { id: "b", text: "154 cm²" },
@@ -519,7 +519,7 @@ export const mathematikQuestionsPart1: Question[] = [
     explanation:
       "A = π · r² = (22/7) · 7² = (22/7) · 49 = 22 · 7 = 154 cm².",
     difficulty: "leicht",
-    tags: ["kreis", "flaecheninhalt", "berechnung"],
+    tags: ["kreis", "flächeninhalt", "berechnung"],
   },
   {
     id: "math-28",
@@ -564,7 +564,7 @@ export const mathematikQuestionsPart1: Question[] = [
     subject: "mathematik",
     chapter: "geometrie",
     topic: "Kugel",
-    text: "Berechnen Sie die Oberflaeche einer Kugel mit r = 5 cm. (π ≈ 3,14)",
+    text: "Berechnen Sie die Oberfläche einer Kugel mit r = 5 cm. (π ≈ 3,14)",
     options: [
       { id: "a", text: "ca. 157 cm²" },
       { id: "b", text: "ca. 523,3 cm²" },
@@ -576,14 +576,14 @@ export const mathematikQuestionsPart1: Question[] = [
     explanation:
       "O = 4 · π · r² = 4 · 3,14 · 25 = 4 · 78,5 = 314 cm².",
     difficulty: "mittel",
-    tags: ["kugel", "oberflaeche", "berechnung"],
+    tags: ["kugel", "oberfläche", "berechnung"],
   },
   {
     id: "math-31",
     subject: "mathematik",
     chapter: "geometrie",
     topic: "Ähnlichkeit",
-    text: "Zwei ähnliche Dreiecke haben Seitenverhältnis 1:3. Wie verhalten sich ihre Flaecheninhalte?",
+    text: "Zwei ähnliche Dreiecke haben Seitenverhältnis 1:3. Wie verhalten sich ihre Flächeninhalte?",
     options: [
       { id: "a", text: "1:3" },
       { id: "b", text: "1:6" },
@@ -593,9 +593,9 @@ export const mathematikQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Bei ähnlichen Figuren gilt: Flaechenverhältnis = (Seitenverhältnis)². Also (1:3)² = 1:9. Die Flaeche skaliert quadratisch mit dem linearen Massstab.",
+      "Bei ähnlichen Figuren gilt: Flächenverhältnis = (Seitenverhältnis)². Also (1:3)² = 1:9. Die Fläche skaliert quadratisch mit dem linearen Massstab.",
     difficulty: "schwer",
-    tags: ["ähnlichkeit", "flaechenverhältnis", "berechnung"],
+    tags: ["ähnlichkeit", "flächenverhältnis", "berechnung"],
   },
   {
     id: "math-32",
@@ -633,7 +633,7 @@ export const mathematikQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "sin(30°) = 1/2 = 0,5. cos(60°) = 1/2 = 0,5. sin(30°) + cos(60°) = 0,5 + 0,5 = 1. (Komplementaerwinkel: sin(α) = cos(90° - α).)",
+      "sin(30°) = 1/2 = 0,5. cos(60°) = 1/2 = 0,5. sin(30°) + cos(60°) = 0,5 + 0,5 = 1. (Komplementärwinkel: sin(α) = cos(90° - α).)",
     difficulty: "leicht",
     tags: ["trigonometrie", "sin-cos", "berechnung"],
   },
@@ -661,7 +661,7 @@ export const mathematikQuestionsPart1: Question[] = [
     subject: "mathematik",
     chapter: "trigonometrie",
     topic: "Trigonometrische Identität",
-    text: "Welchen Wert hat sin²(x) + cos²(x) fuer alle x?",
+    text: "Welchen Wert hat sin²(x) + cos²(x) für alle x?",
     options: [
       { id: "a", text: "0" },
       { id: "b", text: "1" },
@@ -671,7 +671,7 @@ export const mathematikQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Der trigonometrische Pythagoras lautet: sin²(x) + cos²(x) = 1 fuer alle x. Dies folgt direkt aus dem Satz des Pythagoras am Einheitskreis.",
+      "Der trigonometrische Pythagoras lautet: sin²(x) + cos²(x) = 1 für alle x. Dies folgt direkt aus dem Satz des Pythagoras am Einheitskreis.",
     difficulty: "mittel",
     tags: ["trigonometrischer-pythagoras", "identität", "berechnung"],
   },

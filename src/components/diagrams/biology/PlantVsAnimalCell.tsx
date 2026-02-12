@@ -21,7 +21,7 @@ export default function PlantVsAnimalCell() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Pflanzenzelle vs. Tierzelle</h4>
-      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen fuer Details.</p>
+      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen für Details.</p>
 
       <svg viewBox="0 0 500 320" className="w-full max-w-xl mx-auto">
         {/* Background */}

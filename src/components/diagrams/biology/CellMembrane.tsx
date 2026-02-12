@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 const parts = [
-  { id: "phospholipid", label: "Phospholipid", detail: "Amphiphiles Molekuel: hydrophiler Kopf (Phosphatgruppe) und zwei hydrophobe Fettsäureketten." },
-  { id: "integral", label: "Integrales Protein", detail: "Durchspannt die gesamte Membran. Funktion: Kanaele, Transporter, Rezeptoren." },
-  { id: "peripheral", label: "Peripheres Protein", detail: "An der Membranoberflaeche angelagert. Funktion: Signaltransduktion, Strukturgebung." },
+  { id: "phospholipid", label: "Phospholipid", detail: "Amphiphiles Molekül: hydrophiler Kopf (Phosphatgruppe) und zwei hydrophobe Fettsäureketten." },
+  { id: "integral", label: "Integrales Protein", detail: "Durchspannt die gesamte Membran. Funktion: Kanäle, Transporter, Rezeptoren." },
+  { id: "peripheral", label: "Peripheres Protein", detail: "An der Membranoberfläche angelagert. Funktion: Signaltransduktion, Strukturgebung." },
   { id: "cholesterol", label: "Cholesterin", detail: "Reguliert die Membranfluidität. Verhindert zu starkes Erstarren oder Verflüssigen." },
-  { id: "glycoprotein", label: "Glykoprotein", detail: "Protein mit Zuckerketten. Wichtig fuer Zellerkennung und Immunantwort (Glykokalyx)." },
+  { id: "glycoprotein", label: "Glykoprotein", detail: "Protein mit Zuckerketten. Wichtig für Zellerkennung und Immunantwort (Glykokalyx)." },
   { id: "glycolipid", label: "Glykolipid", detail: "Lipid mit Zuckerketten. Teil der Glykokalyx auf der Außenseite." },
 ];
 
@@ -36,13 +36,13 @@ export default function CellMembrane() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Zellmembran — Flüssig-Mosaik-Modell</h4>
-      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Bestandteile fuer Details.</p>
+      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Bestandteile für Details.</p>
 
       <svg viewBox="0 0 500 310" className="w-full max-w-xl mx-auto">
         {/* Extrazellular label */}
-        <text x="250" y="18" textAnchor="middle" fontSize="10" fill="#0d9488" fontWeight="bold">Extrazellulaerer Raum</text>
+        <text x="250" y="18" textAnchor="middle" fontSize="10" fill="#0d9488" fontWeight="bold">Extrazellulärer Raum</text>
         {/* Intrazellular label */}
-        <text x="250" y="300" textAnchor="middle" fontSize="10" fill="#0d9488" fontWeight="bold">Intrazellulaerer Raum (Zytoplasma)</text>
+        <text x="250" y="300" textAnchor="middle" fontSize="10" fill="#0d9488" fontWeight="bold">Intrazellulärer Raum (Zytoplasma)</text>
 
         {/* Hydrophilic / Hydrophobic labels */}
         <text x="470" y="98" textAnchor="end" fontSize="7" fill="#14b8a6">hydrophil</text>

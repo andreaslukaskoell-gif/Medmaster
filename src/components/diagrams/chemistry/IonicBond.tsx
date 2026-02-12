@@ -65,7 +65,7 @@ export default function IonicBond() {
 
           {/* Transfer arrow */}
           <path d="M140,110 C180,80 220,80 260,110" fill="none" stroke="#0d9488" strokeWidth="2" markerEnd="url(#arrowTransfer)" />
-          <text x="200" y="82" textAnchor="middle" fontSize="9" fill="#0d9488" fontWeight="bold">e\u207B Uebertragung</text>
+          <text x="200" y="82" textAnchor="middle" fontSize="9" fill="#0d9488" fontWeight="bold">e\u207B Übertragung</text>
 
           {/* Cl Atom */}
           <circle cx="310" cy="120" r="40" fill="url(#clGrad)" stroke="#16a34a" strokeWidth="1.5" />
@@ -140,15 +140,15 @@ export default function IonicBond() {
           )}
 
           {/* Labels */}
-          <text x="240" y="302" textAnchor="middle" fontSize="8" fill="#6b7280">Regelmaessige Anordnung: Jedes Na\u207A ist von 6 Cl\u207B umgeben und umgekehrt</text>
+          <text x="240" y="302" textAnchor="middle" fontSize="8" fill="#6b7280">Regelmäßige Anordnung: Jedes Na\u207A ist von 6 Cl\u207B umgeben und umgekehrt</text>
         </svg>
       )}
 
       <div className="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-3">
         <p className="text-xs text-gray-700 dark:text-gray-300">
           {step === "transfer"
-            ? "Natrium (1 Valenzelektron) gibt sein aeusseres Elektron an Chlor (7 Valenzelektronen) ab. Beide erreichen Edelgaskonfiguration."
-            : "Im NaCl-Kristall ordnen sich die Ionen alternierend an. Die Koordinationszahl betraegt 6 (jedes Ion hat 6 Nachbarn)."}
+            ? "Natrium (1 Valenzelektron) gibt sein äußeres Elektron an Chlor (7 Valenzelektronen) ab. Beide erreichen Edelgaskonfiguration."
+            : "Im NaCl-Kristall ordnen sich die Ionen alternierend an. Die Koordinationszahl beträgt 6 (jedes Ion hat 6 Nachbarn)."}
         </p>
       </div>
     </div>

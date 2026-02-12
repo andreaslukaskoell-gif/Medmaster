@@ -29,7 +29,7 @@ export default function FunctionalGroups() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Funktionelle Gruppen</h4>
-      <p className="text-xs text-muted">Klicke auf eine Gruppe fuer Details.</p>
+      <p className="text-xs text-muted">Klicke auf eine Gruppe für Details.</p>
       <svg viewBox="0 0 450 280" className="w-full max-w-lg mx-auto">
         <text x="225" y="22" textAnchor="middle" fontSize="12" fill="#0f766e" fontWeight="bold">Funktionelle Gruppen der Organischen Chemie</text>
 

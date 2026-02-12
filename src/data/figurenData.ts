@@ -50,7 +50,7 @@ export const figurenAufgaben: FZAufgabe[] = [
       { id: "e", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
     ],
     correctOptionId: "a",
-    explanation: "Zwei rechtwinklige Dreiecke gleicher Groesse ergeben zusammengesetzt ein Quadrat (Option A).",
+    explanation: "Zwei rechtwinklige Dreiecke gleicher Größe ergeben zusammengesetzt ein Quadrat (Option A).",
   },
 
   // 2 - Zwei Rechtecke bilden ein grosses Quadrat
@@ -69,7 +69,7 @@ export const figurenAufgaben: FZAufgabe[] = [
       { id: "e", paths: ["M 30 30 L 170 30 L 140 170 L 60 170 Z"], fill: "#64748b" },
     ],
     correctOptionId: "b",
-    explanation: "Zwei gleich grosse Rechtecke uebereinander ergeben ein Quadrat (Option B).",
+    explanation: "Zwei gleich große Rechtecke übereinander ergeben ein Quadrat (Option B).",
   },
 
   // 3 - Dreieck + Trapez = Rechteck
@@ -91,7 +91,7 @@ export const figurenAufgaben: FZAufgabe[] = [
     explanation: "Das Dreieck passt in die Aussparung des Trapezes und bildet zusammen ein Rechteck (Option C).",
   },
 
-  // 4 - Zwei Haelften eines Kreises
+  // 4 - Zwei Hälften eines Kreises
   {
     id: "fz-4",
     difficulty: "leicht",
@@ -107,7 +107,7 @@ export const figurenAufgaben: FZAufgabe[] = [
       { id: "e", paths: ["M 30 30 L 170 30 L 140 170 L 60 170 Z"], fill: "#64748b" },
     ],
     correctOptionId: "d",
-    explanation: "Zwei Halbkreise bilden zusammen einen vollstaendigen Kreis (Option D).",
+    explanation: "Zwei Halbkreise bilden zusammen einen vollständigen Kreis (Option D).",
   },
 
   // 5 - Drei Dreiecke bilden ein grosses Dreieck
@@ -166,7 +166,7 @@ export const figurenAufgaben: FZAufgabe[] = [
       { id: "e", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
     ],
     correctOptionId: "d",
-    explanation: "Das Rechteck bildet den Mittelteil, die beiden Dreiecke die schraegen Seiten. Zusammen ergibt sich ein Trapez (Option D).",
+    explanation: "Das Rechteck bildet den Mittelteil, die beiden Dreiecke die schrägen Seiten. Zusammen ergibt sich ein Trapez (Option D).",
   },
 
   // ============ MITTEL (8 Aufgaben, 3-4 Teile) ============
@@ -192,7 +192,7 @@ export const figurenAufgaben: FZAufgabe[] = [
     explanation: "Vier rechtwinklige Dreiecke, die an den Ecken ansetzen, füllen zusammen ein Quadrat (Option C).",
   },
 
-  // 9 - Drei Stuecke = Pfeil/Pentagon
+  // 9 - Drei Stücke = Pfeil/Pentagon
   {
     id: "fz-9",
     difficulty: "mittel",
@@ -212,7 +212,7 @@ export const figurenAufgaben: FZAufgabe[] = [
     explanation: "Das Dreieck bildet die Pfeilspitze oben, die beiden Rechtecke den Schaft. Zusammen ergibt sich ein Pfeil/Pentagon (Option A).",
   },
 
-  // 10 - Drei Teile = Haus (Fuenfeck)
+  // 10 - Drei Teile = Haus (Fünfeck)
   {
     id: "fz-10",
     difficulty: "mittel",
@@ -229,7 +229,7 @@ export const figurenAufgaben: FZAufgabe[] = [
       { id: "e", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
     ],
     correctOptionId: "b",
-    explanation: "Dreieck (Dach) plus zwei Rechtecke (Waende) bilden eine Hausform / ein Fuenfeck (Option B).",
+    explanation: "Dreieck (Dach) plus zwei Rechtecke (Wände) bilden eine Hausform / ein Fünfeck (Option B).",
   },
 
   // 11 - Vier Teile = Kreuz / Plus
@@ -252,7 +252,7 @@ export const figurenAufgaben: FZAufgabe[] = [
       { id: "e", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
     ],
     correctOptionId: "b",
-    explanation: "Vier Rechtecke, die kreuzfoermig angeordnet werden, ergeben ein Plus-/Kreuzzeichen (Option B).",
+    explanation: "Vier Rechtecke, die kreuzförmig angeordnet werden, ergeben ein Plus-/Kreuzzeichen (Option B).",
   },
 
   // 12 - Drei Teile = Sechseck (vereinfacht)
@@ -292,7 +292,7 @@ export const figurenAufgaben: FZAufgabe[] = [
       { id: "e", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
     ],
     correctOptionId: "b",
-    explanation: "Das grosse Rechteck bildet den langen Schenkel, die beiden kleineren den kurzen Schenkel der L-Form (Option B).",
+    explanation: "Das große Rechteck bildet den langen Schenkel, die beiden kleineren den kurzen Schenkel der L-Form (Option B).",
   },
 
   // 14 - Vier Dreiecke = grosser Rhombus
@@ -338,7 +338,7 @@ export const figurenAufgaben: FZAufgabe[] = [
 
   // ============ SCHWER (5 Aufgaben, 4-5 Teile) ============
 
-  // 16 - Fuenf Teile = Stern (vereinfacht als Pfeilstern)
+  // 16 - Fünf Teile = Stern (vereinfacht als Pfeilstern)
   {
     id: "fz-16",
     difficulty: "schwer",
@@ -359,7 +359,7 @@ export const figurenAufgaben: FZAufgabe[] = [
       { id: "e", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
     ],
     correctOptionId: "b",
-    explanation: "Die fuenf Dreiecke und die Raute in der Mitte bilden zusammen einen fuenfzackigen Stern (Option B).",
+    explanation: "Die fünf Dreiecke und die Raute in der Mitte bilden zusammen einen fünfzackigen Stern (Option B).",
   },
 
   // 17 - Vier Teile = Pfeil nach rechts
@@ -383,7 +383,7 @@ export const figurenAufgaben: FZAufgabe[] = [
     explanation: "Zwei Rechtecke bilden den Schaft, das Dreieck die Spitze des nach rechts zeigenden Pfeils (Option A).",
   },
 
-  // 18 - Fuenf Stuecke = Achteck (vereinfacht)
+  // 18 - Fünf Stücke = Achteck (vereinfacht)
   {
     id: "fz-18",
     difficulty: "schwer",
@@ -426,7 +426,7 @@ export const figurenAufgaben: FZAufgabe[] = [
     explanation: "Das Rechteck, die beiden Dreiecke und das kleine Rechteck bilden zusammen ein Parallelogramm (Option B).",
   },
 
-  // 20 - Fuenf Stuecke = Doppelpfeil / Sechseck-Pfeil
+  // 20 - Fünf Stücke = Doppelpfeil / Sechseck-Pfeil
   {
     id: "fz-20",
     difficulty: "schwer",
@@ -445,7 +445,7 @@ export const figurenAufgaben: FZAufgabe[] = [
       { id: "e", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
     ],
     correctOptionId: "d",
-    explanation: "Zwei Rechtecke, zwei Dreiecke (Spitzen links und rechts) und das schmale Verbindungsstueck bilden zusammen ein Sechseck (Option D).",
+    explanation: "Zwei Rechtecke, zwei Dreiecke (Spitzen links und rechts) und das schmale Verbindungsstück bilden zusammen ein Sechseck (Option D).",
   },
 ];
 
@@ -457,35 +457,35 @@ export const figurenStrategyGuide = {
     {
       heading: "Was ist 'Figuren zusammensetzen'?",
       content:
-        "Beim Untertest 'Figuren zusammensetzen' im MedAT werden dir mehrere Puzzleteile gezeigt. Deine Aufgabe ist es herauszufinden, welche der fuenf vorgegebenen Figuren (A bis E) entsteht, wenn man alle Puzzleteile zusammensetzt. Dabei duerfen die Teile verschoben und gedreht, aber NICHT gespiegelt werden. Dieser Untertest prueft dein raeumliches Vorstellungsvermoegen und ist Teil der kognitiven Faehigkeiten (KFF). Du hast insgesamt 20 Aufgaben in 30 Minuten, also etwa 1:30 Minuten pro Aufgabe.",
+        "Beim Untertest 'Figuren zusammensetzen' im MedAT werden dir mehrere Puzzleteile gezeigt. Deine Aufgabe ist es herauszufinden, welche der fünf vorgegebenen Figuren (A bis E) entsteht, wenn man alle Puzzleteile zusammensetzt. Dabei dürfen die Teile verschoben und gedreht, aber NICHT gespiegelt werden. Dieser Untertest prüft dein räumliches Vorstellungsvermögen und ist Teil der kognitiven Fähigkeiten (KFF). Du hast insgesamt 20 Aufgaben in 30 Minuten, also etwa 1:30 Minuten pro Aufgabe.",
     },
     {
       heading: "Tipps & Strategien",
-      content: `1. Umrisse vergleichen: Schaue dir zuerst die aeusseren Konturen der Puzzleteile an. Gibt es gerade Kanten, Boegen oder spitze Ecken? Vergleiche diese mit den Umrissen der Antwortmoeglichkeiten.
+      content: `1. Umrisse vergleichen: Schaue dir zuerst die äußeren Konturen der Puzzleteile an. Gibt es gerade Kanten, Bögen oder spitze Ecken? Vergleiche diese mit den Umrissen der Antwortmöglichkeiten.
 
-2. Flaeche abschaetzen: Schaetze die Gesamtflaeche aller Puzzleteile ab. Die richtige Antwortfigur muss ungefaehr die gleiche Flaeche haben. Damit kannst du oft schon 1-2 Optionen ausschliessen.
+2. Fläche abschätzen: Schätze die Gesamtfläche aller Puzzleteile ab. Die richtige Antwortfigur muss ungefähr die gleiche Fläche haben. Damit kannst du oft schon 1-2 Optionen ausschliessen.
 
-3. Markante Ecken und Kanten suchen: Suche nach auffaelligen Merkmalen wie spitzen Winkeln, langen geraden Kanten oder Rundungen. Diese muessen sich in der Loesungsfigur wiederfinden.
+3. Markante Ecken und Kanten suchen: Suche nach auffälligen Merkmalen wie spitzen Winkeln, langen geraden Kanten oder Rundungen. Diese müssen sich in der Lösungsfigur wiederfinden.
 
-4. Ausschlussmethode: Oft ist es schneller, falsche Antworten auszuschliessen als die richtige direkt zu finden. Wenn ein Puzzleteil nicht in eine Figur passt, kann diese Figur nicht die Loesung sein.
+4. Ausschlussmethode: Oft ist es schneller, falsche Antworten auszuschließen als die richtige direkt zu finden. Wenn ein Puzzleteil nicht in eine Figur passt, kann diese Figur nicht die Lösung sein.
 
-5. Zeitmanagement: Du hast ca. 1:30 pro Aufgabe. Wenn du nach 60 Sekunden keine Loesung findest, triff eine begruendete Vermutung und gehe weiter. Leichtere Aufgaben zuerst loesen!
+5. Zeitmanagement: Du hast ca. 1:30 pro Aufgabe. Wenn du nach 60 Sekunden keine Lösung findest, triff eine begründete Vermutung und gehe weiter. Leichtere Aufgaben zuerst lösen!
 
-6. Systematisch vorgehen: Beginne immer mit dem groessten oder auffaelligsten Puzzleteil. Ueberlege, wo es in jeder Antwortoption platziert werden koennte.
+6. Systematisch vorgehen: Beginne immer mit dem größten oder auffälligsten Puzzleteil. Überlege, wo es in jeder Antwortoption platziert werden könnte.
 
-7. Innere Kanten beachten: Die Kanten, an denen Puzzleteile aneinanderstossen, verschwinden in der fertigen Figur. Nur die aeusseren Kanten bleiben sichtbar.`,
+7. Innere Kanten beachten: Die Kanten, an denen Puzzleteile aneinanderstoßen, verschwinden in der fertigen Figur. Nur die äußeren Kanten bleiben sichtbar.`,
     },
     {
-      heading: "Haeufige Fehler",
-      content: `- Spiegelung uebersehen: Puzzleteile duerfen NICHT gespiegelt werden! Eine gespiegelte Version eines Teils passt nicht. Achte genau darauf, ob ein Teil gedreht oder gespiegelt wurde.
+      heading: "Häufige Fehler",
+      content: `- Spiegelung übersehen: Puzzleteile dürfen NICHT gespiegelt werden! Eine gespiegelte Version eines Teils passt nicht. Achte genau darauf, ob ein Teil gedreht oder gespiegelt wurde.
 
-- Flaechenverhaeltnis ignorieren: Wenn die Puzzleteile zusammen deutlich mehr oder weniger Flaeche haben als eine Antwortoption, kann diese nicht stimmen.
+- Flächenverhältnis ignorieren: Wenn die Puzzleteile zusammen deutlich mehr oder weniger Fläche haben als eine Antwortoption, kann diese nicht stimmen.
 
-- Zu lange an einer Aufgabe haengenbleiben: Bei 1:30 pro Aufgabe darfst du dich nicht festbeissen. Nutze die Ausschlussmethode und rate begruendet, wenn noetig.
+- Zu lange an einer Aufgabe hängenbleiben: Bei 1:30 pro Aufgabe darfst du dich nicht festbeißen. Nutze die Ausschlussmethode und rate begründet, wenn nötig.
 
-- Nur auf die Form achten, nicht auf die Groesse: Achte darauf, dass die Groessenverhaeltnisse stimmen. Ein kleines Dreieck kann nicht ploetzlich einen grossen Teil der Figur ausfuellen.
+- Nur auf die Form achten, nicht auf die Größe: Achte darauf, dass die Größenverhältnisse stimmen. Ein kleines Dreieck kann nicht plötzlich einen grossen Teil der Figur ausfüllen.
 
-- Luecken uebersehen: Alle Teile muessen lueckenlos zusammenpassen. Wenn bei einer Option Luecken bleiben wuerden, ist sie falsch.`,
+- Lücken übersehen: Alle Teile müssen lückenlos zusammenpassen. Wenn bei einer Option Lücken bleiben würden, ist sie falsch.`,
     },
   ],
 };

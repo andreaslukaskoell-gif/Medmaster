@@ -1,37 +1,37 @@
-// === SEK: Soziales Entscheiden und Emotionen erkennen ===
+// === SEK: Sozial-emotionale Kompetenzen ===
 
 export const sekStrategyGuide = {
-  title: "Strategie-Guide: Soziales Entscheiden (SEK)",
+  title: "Strategie-Guide: Sozial-emotionale Kompetenzen (SEK)",
   sections: [
     {
       heading: "Was wird getestet?",
       content:
-        "Der SEK-Teil prüft deine sozial-emotionale Kompetenz: Kannst du Emotionen in Gesichtern und Situationen erkennen? Kannst du angemessen auf emotionale Situationen reagieren? Fuer angehende Aerzt:innen ist Empathie eine Kernkompetenz.",
+        "Der SEK-Teil prüft deine sozial-emotionale Kompetenz: Kannst du Emotionen in Gesichtern und Situationen erkennen? Kannst du angemessen auf emotionale Situationen reagieren? Für angehende Ärzt:innen ist Empathie eine Kernkompetenz.",
     },
     {
       heading: "Emotionen erkennen: Die 7 Basisemotionen",
-      content: `Nach Paul Ekman gibt es 7 universelle Basisemotionen, die kulturuebergreifend an der Mimik erkennbar sind:
+      content: `Nach Paul Ekman gibt es 7 universelle Basisemotionen, die kulturübergreifend an der Mimik erkennbar sind:
 
-1. FREUDE: Laecheln, Kraehenfuesse um die Augen (echtes Laecheln = Duchenne-Laecheln), gehobene Wangen
+1. FREUDE: Lächeln, Krähenfüße um die Augen (echtes Lächeln = Duchenne-Lächeln), gehobene Wangen
 2. TRAUER: Herabgezogene Mundwinkel, zusammengezogene Augenbrauen (innerer Teil gehoben), hängende obere Augenlider
 3. ANGST: Weit aufgerissene Augen, angehobene Augenbrauen (zusammengezogen), leicht geöffneter Mund
 4. WUT: Zusammengezogene/gesenkte Augenbrauen, verengte Augen, zusammengepresste Lippen oder offener Mund
-5. EKEL: Gerueumpfte Nase, angehobene Oberlippe, zusammengezogene Augenbrauen
-6. UEBERRASCHUNG: Hochgezogene Augenbrauen, weit geöffnete Augen, offener Mund (rund)
-7. VERACHTUNG: Einseitiges Laecheln (ein Mundwinkel angehoben), asymmetrischer Gesichtsausdruck`,
+5. EKEL: Gerümpfte Nase, angehobene Oberlippe, zusammengezogene Augenbrauen
+6. ÜBERRASCHUNG: Hochgezogene Augenbrauen, weit geöffnete Augen, offener Mund (rund)
+7. VERACHTUNG: Einseitiges Lächeln (ein Mundwinkel angehoben), asymmetrischer Gesichtsausdruck`,
     },
     {
       heading: "Strategie zum Erkennen",
-      content: `1. Schau zuerst auf die AUGENPARTIE - sie verraet am meisten:
+      content: `1. Schau zuerst auf die AUGENPARTIE - sie verrät am meisten:
    - Brauen zusammengezogen = negative Emotion (Wut, Trauer)
    - Brauen angehoben = Überraschung oder Angst
-   - Kraehenfuesse = echte Freude
+   - Krähenfüße = echte Freude
 
 2. Dann auf den MUND:
-   - Laecheln = Freude oder Verachtung (asymmetrisch!)
+   - Lächeln = Freude oder Verachtung (asymmetrisch!)
    - Herabgezogen = Trauer
    - Zusammengepresst = Wut
-   - Gerueumpfte Nase = Ekel
+   - Gerümpfte Nase = Ekel
 
 3. KONTEXT nutzen: Im MedAT werden auch Situationsbeschreibungen gegeben. Frage dich: Welche Emotion wäre in dieser Situation am naheliegendsten?
 
@@ -47,15 +47,15 @@ export const sekStrategyGuide = {
    - Gut: 'Ich verstehe, dass Sie sich Sorgen machen'
    - Schlecht: 'Das ist doch nicht so schlimm'
 
-2. PROFESSIONELL bleiben: Als Arzt/Aerztin sachlich UND mitfuehlend
+2. PROFESSIONELL bleiben: Als Arzt/Ärztin sachlich UND mitfühlend
    - Nicht zu emotional (mitleiden), nicht zu kalt (abweisend)
    - Balance zwischen Nähe und professioneller Distanz
 
-3. LOEESUNGSORIENTIERT handeln: Nach dem Anerkennen der Emotion einen nächsten Schritt anbieten
+3. LÖSUNGSORIENTIERT handeln: Nach dem Anerkennen der Emotion einen nächsten Schritt anbieten
 
-4. NICHT WERTEN: Keine Vorwuerfe, keine Schuldzuweisungen
-   - Gut: 'Erzählen Sie mir mehr darueber'
-   - Schlecht: 'Das haetten Sie früher sagen muessen'
+4. NICHT WERTEN: Keine Vorwürfe, keine Schuldzuweisungen
+   - Gut: 'Erzählen Sie mir mehr darüber'
+   - Schlecht: 'Das hätten Sie früher sagen müssen'
 
 TIPP: Im Zweifel wähle die Antwort, die am meisten Empathie zeigt, ohne dabei unprofessionell zu sein.`,
     },
@@ -88,7 +88,7 @@ export const emotionQuestions: EmotionQuestion[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Feuchte Augen, abgewandter Blick und zitternde Unterlippe sind typische Anzeichen fuer Trauer, gemischt mit Angst vor der Diagnose. Die Reaktion ist introvertiert (abwenden), nicht extrovertiert (wie bei Wut).",
+      "Feuchte Augen, abgewandter Blick und zitternde Unterlippe sind typische Anzeichen für Trauer, gemischt mit Angst vor der Diagnose. Die Reaktion ist introvertiert (abwenden), nicht extrovertiert (wie bei Wut).",
   },
   {
     id: "sek-2",
@@ -98,17 +98,17 @@ export const emotionQuestions: EmotionQuestion[] = [
     options: [
       { id: "a", text: "Freude" },
       { id: "b", text: "Trauer" },
-      { id: "c", text: "Wut / Aerger" },
+      { id: "c", text: "Wut / Ärger" },
       { id: "d", text: "Angst" },
     ],
     correctOptionId: "c",
     explanation:
-      "Zusammengepresste Lippen, verengte Augen und laute, abgehackte Stimme sind klassische Merkmale von Wut/Aerger. Die Situation (langes Warten) unterstützt diese Interpretation.",
+      "Zusammengepresste Lippen, verengte Augen und laute, abgehackte Stimme sind klassische Merkmale von Wut/Ärger. Die Situation (langes Warten) unterstützt diese Interpretation.",
   },
   {
     id: "sek-6",
     situation:
-      "Ein junger Medizinstudent erhält seine Prüfungsergebnisse. Seine Haende zittern, die Augen sind weit aufgerissen, der Mund leicht geöffnet, und er schaut immer wieder auf das Blatt Papier.",
+      "Ein junger Medizinstudent erhält seine Prüfungsergebnisse. Seine Hände zittern, die Augen sind weit aufgerissen, der Mund leicht geöffnet, und er schaut immer wieder auf das Blatt Papier.",
     question: "Welche Emotion zeigt der Student am deutlichsten?",
     options: [
       { id: "a", text: "Freude" },
@@ -118,12 +118,12 @@ export const emotionQuestions: EmotionQuestion[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Weit aufgerissene Augen, geöffneter Mund und das wiederholte Hinschauen sind nach Ekman klassische Zeichen fuer Überraschung. Anders als bei Angst sind die Augenbrauen nur hochgezogen, nicht zusammengezogen. Das Zittern der Haende zeigt die Intensität der unerwarteten Nachricht.",
+      "Weit aufgerissene Augen, geöffneter Mund und das wiederholte Hinschauen sind nach Ekman klassische Zeichen für Überraschung. Anders als bei Angst sind die Augenbrauen nur hochgezogen, nicht zusammengezogen. Das Zittern der Hände zeigt die Intensität der unerwarteten Nachricht.",
   },
   {
     id: "sek-7",
     situation:
-      "Ein aelterer Patient betrachtet das Krankenhausessen, das man ihm gebracht hat. Er ruempft die Nase, schiebt den Teller von sich weg und seine Oberlippe ist deutlich angehoben.",
+      "Ein älterer Patient betrachtet das Krankenhausessen, das man ihm gebracht hat. Er rümpft die Nase, schiebt den Teller von sich weg und seine Oberlippe ist deutlich angehoben.",
     question: "Welche Emotion zeigt der Patient am deutlichsten?",
     options: [
       { id: "a", text: "Wut" },
@@ -133,12 +133,12 @@ export const emotionQuestions: EmotionQuestion[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Gerueumpfte Nase und angehobene Oberlippe sind nach Ekman die Leitmerkmale fuer Ekel. Das Wegschieben des Tellers verstärkt diese Interpretation. Wut würde sich durch zusammengepresste Lippen und verengte Augen äußern, nicht durch Nasenruempfen.",
+      "Gerümpfte Nase und angehobene Oberlippe sind nach Ekman die Leitmerkmale für Ekel. Das Wegschieben des Tellers verstärkt diese Interpretation. Wut würde sich durch zusammengepresste Lippen und verengte Augen äußern, nicht durch Nasenrümpfen.",
   },
   {
     id: "sek-8",
     situation:
-      "Eine Krankenschwester teilt einer Patientin mit, dass ihre Familie zu Besuch kommt. Die Mundwinkel der Patientin gehen nach oben, um ihre Augen bilden sich Kraehenfuesse, und ihre Körperhaltung wird sichtbar entspannter.",
+      "Eine Krankenschwester teilt einer Patientin mit, dass ihre Familie zu Besuch kommt. Die Mundwinkel der Patientin gehen nach oben, um ihre Augen bilden sich Krähenfüße, und ihre Körperhaltung wird sichtbar entspannter.",
     question: "Welche Emotion zeigt die Patientin am deutlichsten?",
     options: [
       { id: "a", text: "Freude" },
@@ -148,7 +148,7 @@ export const emotionQuestions: EmotionQuestion[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Die Kombination aus angehobenen Mundwinkeln und Kraehenfuessen um die Augen beschreibt das sogenannte Duchenne-Laecheln - nach Ekman der zuverlaessigste Indikator fuer echte Freude. Erleichterung würde sich eher durch Ausatmen und Schultersenken zeigen, Überraschung durch einen offenen Mund.",
+      "Die Kombination aus angehobenen Mundwinkeln und Krähenfüßen um die Augen beschreibt das sogenannte Duchenne-Lächeln - nach Ekman der zuverlässigste Indikator für echte Freude. Erleichterung würde sich eher durch Ausatmen und Schultersenken zeigen, Überraschung durch einen offenen Mund.",
   },
   {
     id: "sek-9",
@@ -163,7 +163,7 @@ export const emotionQuestions: EmotionQuestion[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Ein asymmetrisch angehobener Mundwinkel mit leichter Augenverengung ist nach Ekman das eindeutige Merkmal fuer Verachtung. Verachtung ist die einzige der sieben Basisemotionen, die sich einseitig im Gesicht zeigt. Wut würde sich symmetrisch und intensiver äußern, Ekel durch Nasenruempfen.",
+      "Ein asymmetrisch angehobener Mundwinkel mit leichter Augenverengung ist nach Ekman das eindeutige Merkmal für Verachtung. Verachtung ist die einzige der sieben Basisemotionen, die sich einseitig im Gesicht zeigt. Wut würde sich symmetrisch und intensiver äußern, Ekel durch Nasenrümpfen.",
   },
   {
     id: "sek-10",
@@ -178,7 +178,7 @@ export const emotionQuestions: EmotionQuestion[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Weit aufgerissene Augen in Kombination mit zusammengezogenen Augenbrauen sind nach Ekman das entscheidende Merkmal fuer Angst. Der Unterschied zu Überraschung liegt genau hier: Bei Angst ziehen sich die Brauen zusammen, bei Überraschung gehen sie nur nach oben. Klammern und körperliche Anspannung bestätigen die Angstreaktion.",
+      "Weit aufgerissene Augen in Kombination mit zusammengezogenen Augenbrauen sind nach Ekman das entscheidende Merkmal für Angst. Der Unterschied zu Überraschung liegt genau hier: Bei Angst ziehen sich die Brauen zusammen, bei Überraschung gehen sie nur nach oben. Klammern und körperliche Anspannung bestätigen die Angstreaktion.",
   },
   {
     id: "sek-11",
@@ -188,12 +188,12 @@ export const emotionQuestions: EmotionQuestion[] = [
     options: [
       { id: "a", text: "Trauer" },
       { id: "b", text: "Angst" },
-      { id: "c", text: "Erschoepfung" },
+      { id: "c", text: "Erschöpfung" },
       { id: "d", text: "Resignation" },
     ],
     correctOptionId: "a",
     explanation:
-      "Herabgezogene Mundwinkel, angehobene innere Augenbrauen und hängende obere Augenlider bilden nach Ekman das klassische Trauer-Muster. Erschoepfung koennte ähnlich wirken, zeigt aber keine angehobenen inneren Brauen. Resignation wäre eher durch Ausdruckslosigkeit gekennzeichnet. Der situative Kontext - Verlust des Ehepartners - bestätigt eindeutig Trauer.",
+      "Herabgezogene Mundwinkel, angehobene innere Augenbrauen und hängende obere Augenlider bilden nach Ekman das klassische Trauer-Muster. Erschöpfung könnte ähnlich wirken, zeigt aber keine angehobenen inneren Brauen. Resignation wäre eher durch Ausdruckslosigkeit gekennzeichnet. Der situative Kontext - Verlust des Ehepartners - bestätigt eindeutig Trauer.",
   },
 
   // =============================================
@@ -202,13 +202,13 @@ export const emotionQuestions: EmotionQuestion[] = [
   {
     id: "sek-3",
     situation:
-      "Du bist Assistenzarzt/-aerztin. Eine Patientin bricht in Traenen aus, nachdem du ihr mitgeteilt hast, dass die Operation verschoben werden muss.",
+      "Du bist Assistenzarzt/-ärztin. Eine Patientin bricht in Tränen aus, nachdem du ihr mitgeteilt hast, dass die Operation verschoben werden muss.",
     question: "Welche Reaktion ist am angemessensten?",
     options: [
       { id: "a", text: "Schnell das Thema wechseln, um sie abzulenken." },
       {
         id: "b",
-        text: "Sagen: 'Ich verstehe, dass Sie enttäuscht sind. Moechten Sie darüber sprechen, was Ihnen Sorgen macht?'",
+        text: "Sagen: 'Ich verstehe, dass Sie enttäuscht sind. Möchten Sie darüber sprechen, was Ihnen Sorgen macht?'",
       },
       {
         id: "c",
@@ -221,7 +221,7 @@ export const emotionQuestions: EmotionQuestion[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Option B zeigt Empathie (Gefühle anerkennen), bleibt professionell und bietet Raum fuer ein Gespraech. Option A ignoriert die Emotion, Option C wertet ab, Option D wäre unprofessionell.",
+      "Option B zeigt Empathie (Gefühle anerkennen), bleibt professionell und bietet Raum für ein Gespräch. Option A ignoriert die Emotion, Option C wertet ab, Option D wäre unprofessionell.",
   },
   {
     id: "sek-4",
@@ -231,7 +231,7 @@ export const emotionQuestions: EmotionQuestion[] = [
     options: [
       {
         id: "a",
-        text: "Ihn ignorieren - er braucht wahrscheinlich Zeit fuer sich.",
+        text: "Ihn ignorieren - er braucht wahrscheinlich Zeit für sich.",
       },
       {
         id: "b",
@@ -239,7 +239,7 @@ export const emotionQuestions: EmotionQuestion[] = [
       },
       {
         id: "c",
-        text: "Sich zu ihm setzen und fragen: 'Wie geht es dir? Moechtest du darüber reden?'",
+        text: "Sich zu ihm setzen und fragen: 'Wie geht es dir? Möchtest du darüber reden?'",
       },
       {
         id: "d",
@@ -253,16 +253,16 @@ export const emotionQuestions: EmotionQuestion[] = [
   {
     id: "sek-5",
     situation:
-      "Die Mutter eines 5-jährigen Kindes in der Notaufnahme schreit dich an: 'Warum dauert das so lange?! Meinem Kind geht es schlecht und niemand kuemmert sich!'",
+      "Die Mutter eines 5-jährigen Kindes in der Notaufnahme schreit dich an: 'Warum dauert das so lange?! Meinem Kind geht es schlecht und niemand kümmert sich!'",
     question: "Welche Reaktion ist am angemessensten?",
     options: [
       {
         id: "a",
-        text: "Zurückschreien: 'Hier sind auch andere Patienten, Sie muessen warten wie alle anderen!'",
+        text: "Zurückschreien: 'Hier sind auch andere Patienten, Sie müssen warten wie alle anderen!'",
       },
       {
         id: "b",
-        text: "Ruhig sagen: 'Ich verstehe Ihre Sorge um Ihr Kind. Lassen Sie mich kurz den aktuellen Stand fuer Sie prüfen.'",
+        text: "Ruhig sagen: 'Ich verstehe Ihre Sorge um Ihr Kind. Lassen Sie mich kurz den aktuellen Stand für Sie prüfen.'",
       },
       {
         id: "c",
@@ -280,7 +280,7 @@ export const emotionQuestions: EmotionQuestion[] = [
   {
     id: "sek-12",
     situation:
-      "Du bist ein junger Arzt/eine junge Aerztin. Ein erfahrener Kollege kritisiert deinen Behandlungsplan vor dem gesamten Team während der Visite. Alle schauen dich an.",
+      "Du bist ein junger Arzt/eine junge Ärztin. Ein erfahrener Kollege kritisiert deinen Behandlungsplan vor dem gesamten Team während der Visite. Alle schauen dich an.",
     question: "Welche Reaktion ist am angemessensten?",
     options: [
       {
@@ -289,7 +289,7 @@ export const emotionQuestions: EmotionQuestion[] = [
       },
       {
         id: "b",
-        text: "Sagen: 'Danke fuer den Hinweis. Können wir das nach der Visite besprechen, damit ich Ihre Perspektive besser verstehe?'",
+        text: "Sagen: 'Danke für den Hinweis. Können wir das nach der Visite besprechen, damit ich Ihre Perspektive besser verstehe?'",
       },
       {
         id: "c",
@@ -302,7 +302,7 @@ export const emotionQuestions: EmotionQuestion[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Option B ist professionell und nicht defensiv: Sie zeigt Wertschätzung fuer den Hinweis, verlagert die Diskussion in einen geeigneteren Rahmen und signalisiert Lernbereitschaft. Gegenkritik (A) eskaliert, Schweigen (C) laesst die Sache ungeklaert, und stures Beharren (D) wirkt unkollegial und lernresistent.",
+      "Option B ist professionell und nicht defensiv: Sie zeigt Wertschätzung für den Hinweis, verlagert die Diskussion in einen geeigneteren Rahmen und signalisiert Lernbereitschaft. Gegenkritik (A) eskaliert, Schweigen (C) lässt die Sache ungeklärt, und stures Beharren (D) wirkt unkollegial und lernresistent.",
   },
   {
     id: "sek-13",
@@ -324,12 +324,12 @@ export const emotionQuestions: EmotionQuestion[] = [
       },
       {
         id: "d",
-        text: "Direkt sagen: 'Ja, Ihre Erkrankung ist leider toedlich.'",
+        text: "Direkt sagen: 'Ja, Ihre Erkrankung ist leider tödlich.'",
       },
     ],
     correctOptionId: "b",
     explanation:
-      "Option B ist ehrlich und mitfuehlend zugleich: Sie erkennt die Sorgen des Patienten an und öffnet den Raum fuer ein offenes Gespraech, ohne falsche Hoffnungen zu machen oder brutal direkt zu sein. Option A beschoenigt die Situation und entmündigt den Patienten. Option C weicht aus. Option D ist zwar ehrlich, aber ohne jede Empathie und kann den Patienten ueberwaeltigen.",
+      "Option B ist ehrlich und mitfühlend zugleich: Sie erkennt die Sorgen des Patienten an und öffnet den Raum für ein offenes Gespräch, ohne falsche Hoffnungen zu machen oder brutal direkt zu sein. Option A beschönigt die Situation und entmündigt den Patienten. Option C weicht aus. Option D ist zwar ehrlich, aber ohne jede Empathie und kann den Patienten überwältigen.",
   },
   {
     id: "sek-14",
@@ -343,20 +343,20 @@ export const emotionQuestions: EmotionQuestion[] = [
       },
       {
         id: "b",
-        text: "Sagen: 'Ich respektiere Ihre Überzeugung. Lassen Sie mich Ihnen die medizinischen Risiken erklaeren und gemeinsam nach Alternativen suchen.'",
+        text: "Sagen: 'Ich respektiere Ihre Überzeugung. Lassen Sie mich Ihnen die medizinischen Risiken erklären und gemeinsam nach Alternativen suchen.'",
       },
       {
         id: "c",
-        text: "Sagen: 'Das ist Ihre Entscheidung' und den Patienten ohne weitere Erklaerung unterschreiben lassen.",
+        text: "Sagen: 'Das ist Ihre Entscheidung' und den Patienten ohne weitere Erklärung unterschreiben lassen.",
       },
       {
         id: "d",
-        text: "Versuchen, den Patienten von der Unsinnigkeit seiner religiösen Überzeugung zu ueberzeugen.",
+        text: "Versuchen, den Patienten von der Unsinnigkeit seiner religiösen Überzeugung zu überzeugen.",
       },
     ],
     correctOptionId: "b",
     explanation:
-      "Option B respektiert die Patientenautonomie, erfüllt die aerztliche Aufklaerungspflicht und sucht proaktiv nach Alternativen. Dies vereint Empathie mit Professionalität. Option A verletzt die Patientenautonomie, Option C vernachlaessigt die Aufklaerungspflicht, und Option D ist respektlos gegenüber den Wertvorstellungen des Patienten.",
+      "Option B respektiert die Patientenautonomie, erfüllt die ärztliche Aufklärungspflicht und sucht proaktiv nach Alternativen. Dies vereint Empathie mit Professionalität. Option A verletzt die Patientenautonomie, Option C vernachlässigt die Aufklärungspflicht, und Option D ist respektlos gegenüber den Wertvorstellungen des Patienten.",
   },
   {
     id: "sek-15",
@@ -366,11 +366,11 @@ export const emotionQuestions: EmotionQuestion[] = [
     options: [
       {
         id: "a",
-        text: "Nichts sagen - es ist nicht deine Angelegenheit und du willst keinen Aerger.",
+        text: "Nichts sagen - es ist nicht deine Angelegenheit und du willst keinen Ärger.",
       },
       {
         id: "b",
-        text: "Sagen: 'Ich mache mir Sorgen um dich. Ich habe bemerkt, dass du nach Alkohol riechst. Kann ich dir irgendwie helfen? Fuer die Patientensicherheit muessen wir das ansprechen.'",
+        text: "Sagen: 'Ich mache mir Sorgen um dich. Ich habe bemerkt, dass du nach Alkohol riechst. Kann ich dir irgendwie helfen? Für die Patientensicherheit müssen wir das ansprechen.'",
       },
       {
         id: "c",
@@ -383,12 +383,12 @@ export const emotionQuestions: EmotionQuestion[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Option B vereint Fuersorge mit Verantwortungsbewusstsein: Sie zeigt Empathie fuer den Kollegen, benennt das Problem klar und stellt die Patientensicherheit in den Vordergrund. Wegsehen (A) gefährdet Patienten. Direktes Melden ohne Gespraech (C) ist zwar fuer die Patientensicherheit richtig, vernachlaessigt aber die kollegiale Ebene. Eine anklagende Aussage (D) ist konfrontativ und nicht hilfreich.",
+      "Option B vereint Fürsorge mit Verantwortungsbewusstsein: Sie zeigt Empathie für den Kollegen, benennt das Problem klar und stellt die Patientensicherheit in den Vordergrund. Wegsehen (A) gefährdet Patienten. Direktes Melden ohne Gespräch (C) ist zwar für die Patientensicherheit richtig, vernachlässigt aber die kollegiale Ebene. Eine anklagende Aussage (D) ist konfrontativ und nicht hilfreich.",
   },
   {
     id: "sek-16",
     situation:
-      "Die Eltern eines kranken Kindes sind sich uneinig über die Behandlung. Die Mutter moechte eine Operation, der Vater lehnt diese ab. Beide diskutieren hitzig vor dir im Behandlungszimmer.",
+      "Die Eltern eines kranken Kindes sind sich uneinig über die Behandlung. Die Mutter möchte eine Operation, der Vater lehnt diese ab. Beide diskutieren hitzig vor dir im Behandlungszimmer.",
     question: "Welche Reaktion ist am angemessensten?",
     options: [
       {
@@ -397,11 +397,11 @@ export const emotionQuestions: EmotionQuestion[] = [
       },
       {
         id: "b",
-        text: "Sagen: 'Ich verstehe, dass Sie beide das Beste fuer Ihr Kind wollen. Lassen Sie uns gemeinsam alle Optionen durchgehen, damit Sie eine informierte Entscheidung treffen können.'",
+        text: "Sagen: 'Ich verstehe, dass Sie beide das Beste für Ihr Kind wollen. Lassen Sie uns gemeinsam alle Optionen durchgehen, damit Sie eine informierte Entscheidung treffen können.'",
       },
       {
         id: "c",
-        text: "Die Eltern bitten, den Streit draußen zu klaeren und dann wiederzukommen.",
+        text: "Die Eltern bitten, den Streit draußen zu klären und dann wiederzukommen.",
       },
       {
         id: "d",
@@ -410,6 +410,6 @@ export const emotionQuestions: EmotionQuestion[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Option B bleibt neutral und erkennt die Sorge beider Elternteile an. Statt Partei zu ergreifen, wird eine gemeinsame informierte Entscheidungsfindung angeboten. Dies fördert die Kooperation und respektiert die elterliche Autonomie. Partei ergreifen (A) oder autoritaer auftreten (D) koennte den Konflikt verschärfen. Die Eltern wegzuschicken (C) entwertet ihre Sorgen und verzoegert die Behandlung.",
+      "Option B bleibt neutral und erkennt die Sorge beider Elternteile an. Statt Partei zu ergreifen, wird eine gemeinsame informierte Entscheidungsfindung angeboten. Dies fördert die Kooperation und respektiert die elterliche Autonomie. Partei ergreifen (A) oder autoritär auftreten (D) könnte den Konflikt verschärfen. Die Eltern wegzuschicken (C) entwertet ihre Sorgen und verzögert die Behandlung.",
   },
 ];

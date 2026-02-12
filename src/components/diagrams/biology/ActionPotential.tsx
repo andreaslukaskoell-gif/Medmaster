@@ -2,11 +2,11 @@ import { useState } from "react";
 
 const phases = [
   { id: "resting", label: "Ruhepotential (-70 mV)", detail: "Stabile Spannung von ca. -70 mV. Na⁺/K⁺-ATPase hält Ionengradienten aufrecht: 3 Na⁺ raus, 2 K⁺ rein. K⁺-Leckstroeme dominieren." },
-  { id: "threshold", label: "Schwellenpotential (-55 mV)", detail: "Wird das Schwellenpotential erreicht, öffnen sich spannungsgesteuerte Na⁺-Kanaele. Alles-oder-nichts-Prinzip!" },
-  { id: "depol", label: "Depolarisation (Na⁺-Einstrom)", detail: "Spannungsgesteuerte Na⁺-Kanaele öffnen sich. Massiver Na⁺-Einstrom macht Zellinneres positiv. Positiver Feedback." },
-  { id: "overshoot", label: "Overshoot (+30 mV)", detail: "Membranpotential erreicht ca. +30 mV. Na⁺-Kanaele inaktivieren (Inaktivierungstor schliesst). Umkehrpotential fuer Na⁺." },
-  { id: "repol", label: "Repolarisation (K⁺-Ausstrom)", detail: "Spannungsgesteuerte K⁺-Kanaele öffnen (verzoegert). K⁺ stroemt aus der Zelle. Membranpotential fällt wieder." },
-  { id: "hyper", label: "Hyperpolarisation (-80 mV)", detail: "K⁺-Kanaele schließen langsam → kurzzeitig negativer als Ruhepotential. Refraktaerzeit verhindert sofortige Neuerregung." },
+  { id: "threshold", label: "Schwellenpotential (-55 mV)", detail: "Wird das Schwellenpotential erreicht, öffnen sich spannungsgesteuerte Na⁺-Kanäle. Alles-oder-nichts-Prinzip!" },
+  { id: "depol", label: "Depolarisation (Na⁺-Einstrom)", detail: "Spannungsgesteuerte Na⁺-Kanäle öffnen sich. Massiver Na⁺-Einstrom macht Zellinneres positiv. Positiver Feedback." },
+  { id: "overshoot", label: "Overshoot (+30 mV)", detail: "Membranpotential erreicht ca. +30 mV. Na⁺-Kanäle inaktivieren (Inaktivierungstor schließt). Umkehrpotential für Na⁺." },
+  { id: "repol", label: "Repolarisation (K⁺-Ausstrom)", detail: "Spannungsgesteuerte K⁺-Kanäle öffnen (verzögert). K⁺ strömt aus der Zelle. Membranpotential fällt wieder." },
+  { id: "hyper", label: "Hyperpolarisation (-80 mV)", detail: "K⁺-Kanäle schließen langsam → kurzzeitig negativer als Ruhepotential. Refraktärzeit verhindert sofortige Neuerregung." },
 ];
 
 type Phase = (typeof phases)[number];
@@ -41,7 +41,7 @@ export default function ActionPotential() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Aktionspotential</h4>
-      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Phasen fuer Details.</p>
+      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Phasen für Details.</p>
 
       <svg viewBox="0 0 480 380" className="w-full max-w-xl mx-auto">
         {/* Grid lines */}
@@ -120,10 +120,10 @@ export default function ActionPotential() {
 
         {/* Ion channel annotations */}
         <rect x={msToX(1.2)} y={graphB + 35} width={msToX(2.0) - msToX(1.2)} height="18" rx="4" fill="#fecaca" opacity="0.6" />
-        <text x={(msToX(1.2) + msToX(2.0)) / 2} y={graphB + 47} textAnchor="middle" fontSize="6" fill="#dc2626" fontWeight="bold">Na⁺-Kanaele offen</text>
+        <text x={(msToX(1.2) + msToX(2.0)) / 2} y={graphB + 47} textAnchor="middle" fontSize="6" fill="#dc2626" fontWeight="bold">Na⁺-Kanäle offen</text>
 
         <rect x={msToX(2.0)} y={graphB + 35} width={msToX(4.0) - msToX(2.0)} height="18" rx="4" fill="#ccfbf1" opacity="0.6" />
-        <text x={(msToX(2.0) + msToX(4.0)) / 2} y={graphB + 47} textAnchor="middle" fontSize="6" fill="#0f766e" fontWeight="bold">K⁺-Kanaele offen</text>
+        <text x={(msToX(2.0) + msToX(4.0)) / 2} y={graphB + 47} textAnchor="middle" fontSize="6" fill="#0f766e" fontWeight="bold">K⁺-Kanäle offen</text>
 
         {/* Na/K pump label */}
         <text x={msToX(5)} y={graphB + 47} textAnchor="middle" fontSize="6" fill="#6366f1" fontWeight="bold">Na⁺/K⁺-ATPase</text>

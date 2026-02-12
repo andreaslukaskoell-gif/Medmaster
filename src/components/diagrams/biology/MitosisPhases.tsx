@@ -34,7 +34,7 @@ export default function MitosisPhases() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Mitose — Phasen</h4>
-      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf eine Phase fuer Details.</p>
+      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf eine Phase für Details.</p>
 
       <svg viewBox={`0 0 ${totalW} 220`} className="w-full max-w-2xl mx-auto">
         {phases.map((phase, i) => {

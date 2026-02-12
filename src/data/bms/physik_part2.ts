@@ -26,7 +26,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "mechanik",
     topic: "Energieerhaltung",
-    text: "Eine Achterbahn startet aus der Ruhe in 40 m Höhe. Welche Geschwindigkeit hat der Wagen am tiefsten Punkt der Bahn? (g = 10 m/s², Reibung vernachlaessigt)",
+    text: "Eine Achterbahn startet aus der Ruhe in 40 m Höhe. Welche Geschwindigkeit hat der Wagen am tiefsten Punkt der Bahn? (g = 10 m/s², Reibung vernachlässigt)",
     options: [
       { id: "a", text: "ca. 20 m/s" },
       { id: "b", text: "ca. 28,3 m/s" },
@@ -55,7 +55,7 @@ export const physikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Beim zentralen, elastischen Stoss gleicher Massen tauschen die Körper ihre Geschwindigkeiten vollständig aus. Körper 1 bleibt stehen (v₁' = 0), Körper 2 uebernimmt die gesamte Geschwindigkeit (v₂' = 6 m/s). Dies folgt gleichzeitig aus Impuls- und Energieerhaltung.",
+      "Beim zentralen, elastischen Stoss gleicher Massen tauschen die Körper ihre Geschwindigkeiten vollständig aus. Körper 1 bleibt stehen (v₁' = 0), Körper 2 übernimmt die gesamte Geschwindigkeit (v₂' = 6 m/s). Dies folgt gleichzeitig aus Impuls- und Energieerhaltung.",
     difficulty: "mittel",
     tags: ["elastischer-stoss", "impulserhaltung", "energieerhaltung"],
   },
@@ -102,7 +102,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "mechanik",
     topic: "Schiefe Ebene",
-    text: "Ein Körper (m = 10 kg) befindet sich auf einer reibungsfreien schiefen Ebene mit Neigungswinkel α = 30°. Wie gross ist die Hangabtriebskraft? (g = 10 m/s², sin 30° = 0,5)",
+    text: "Ein Körper (m = 10 kg) befindet sich auf einer reibungsfreien schiefen Ebene mit Neigungswinkel α = 30°. Wie groß ist die Hangabtriebskraft? (g = 10 m/s², sin 30° = 0,5)",
     options: [
       { id: "a", text: "100 N" },
       { id: "b", text: "50 N" },
@@ -121,7 +121,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "mechanik",
     topic: "Reibung",
-    text: "Ein Holzklotz (m = 5 kg) gleitet auf einer Oberflaeche mit der Gleitreibungszahl μG = 0,3. Welche Bremskraft wirkt auf den Klotz? (g = 10 m/s²)",
+    text: "Ein Holzklotz (m = 5 kg) gleitet auf einer Oberfläche mit der Gleitreibungszahl μG = 0,3. Welche Bremskraft wirkt auf den Klotz? (g = 10 m/s²)",
     options: [
       { id: "a", text: "1,5 N" },
       { id: "b", text: "50 N" },
@@ -159,7 +159,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "mechanik",
     topic: "Impuls",
-    text: "Ein Ball (m = 0,2 kg) trifft mit v = 10 m/s auf eine Wand und prallt mit v = -8 m/s zurück. Wie gross ist die Impulsänderung?",
+    text: "Ein Ball (m = 0,2 kg) trifft mit v = 10 m/s auf eine Wand und prallt mit v = -8 m/s zurück. Wie groß ist die Impulsänderung?",
     options: [
       { id: "a", text: "3,6 kg·m/s" },
       { id: "b", text: "0,4 kg·m/s" },
@@ -188,7 +188,7 @@ export const physikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Spannenergie: E = ½ × k × x² = ½ × 200 × (0,15)² = ½ × 200 × 0,0225 = 2,25 J. Die Energie waechst quadratisch mit der Auslenkung.",
+      "Spannenergie: E = ½ × k × x² = ½ × 200 × (0,15)² = ½ × 200 × 0,0225 = 2,25 J. Die Energie wächst quadratisch mit der Auslenkung.",
     difficulty: "mittel",
     tags: ["federkraft", "spannenergie", "hooke", "berechnung"],
   },
@@ -235,7 +235,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "mechanik",
     topic: "Trägheitsmoment",
-    text: "Ein Vollzylinder (m = 4 kg, r = 0,5 m) rotiert um seine Symmetrieachse. Wie gross ist sein Trägheitsmoment? (I = ½mr²)",
+    text: "Ein Vollzylinder (m = 4 kg, r = 0,5 m) rotiert um seine Symmetrieachse. Wie groß ist sein Trägheitsmoment? (I = ½mr²)",
     options: [
       { id: "a", text: "0,25 kg·m²" },
       { id: "b", text: "1,0 kg·m²" },
@@ -245,7 +245,7 @@ export const physikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Trägheitsmoment eines Vollzylinders: I = ½ × m × r² = ½ × 4 × (0,5)² = ½ × 4 × 0,25 = 0,5 kg·m². Das Trägheitsmoment ist das Rotationsaequivalent zur Masse bei der Translation.",
+      "Trägheitsmoment eines Vollzylinders: I = ½ × m × r² = ½ × 4 × (0,5)² = ½ × 4 × 0,25 = 0,5 kg·m². Das Trägheitsmoment ist das Rotationsäquivalent zur Masse bei der Translation.",
     difficulty: "mittel",
     tags: ["trägheitsmoment", "rotation", "berechnung"],
   },
@@ -254,7 +254,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "mechanik",
     topic: "Gravitation",
-    text: "Die Erdbeschleunigung auf der Erdoberflaeche beträgt g = 9,81 m/s². Wie gross ist sie in einer Höhe, die dem Erdradius R entspricht (also bei 2R vom Erdmittelpunkt)?",
+    text: "Die Erdbeschleunigung auf der Erdoberfläche beträgt g = 9,81 m/s². Wie groß ist sie in einer Höhe, die dem Erdradius R entspricht (also bei 2R vom Erdmittelpunkt)?",
     options: [
       { id: "a", text: "4,91 m/s²" },
       { id: "b", text: "9,81 m/s²" },
@@ -273,7 +273,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "mechanik",
     topic: "Dichte und Druck",
-    text: "Ein würfelfoermiger Block (Kantenlänge 0,1 m) aus einem Material mit ρ = 8000 kg/m³ steht auf einem Tisch. Welchen Druck uebt er auf die Unterlage aus? (g = 10 m/s²)",
+    text: "Ein würfelförmiger Block (Kantenlänge 0,1 m) aus einem Material mit ρ = 8000 kg/m³ steht auf einem Tisch. Welchen Druck übt er auf die Unterlage aus? (g = 10 m/s²)",
     options: [
       { id: "a", text: "800 Pa" },
       { id: "b", text: "8000 Pa" },
@@ -332,7 +332,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "elektrizität",
     topic: "Kirchhoffsche Maschenregel",
-    text: "In einer geschlossenen Masche liegen eine Spannungsquelle (U₀ = 12 V) und drei Widerstände in Reihe (R₁ = 2 Ω, R₂ = 4 Ω, R₃ = 6 Ω). Wie gross ist der Strom in der Masche?",
+    text: "In einer geschlossenen Masche liegen eine Spannungsquelle (U₀ = 12 V) und drei Widerstände in Reihe (R₁ = 2 Ω, R₂ = 4 Ω, R₃ = 6 Ω). Wie groß ist der Strom in der Masche?",
     options: [
       { id: "a", text: "2 A" },
       { id: "b", text: "1 A" },
@@ -370,7 +370,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "elektrizität",
     topic: "Magnetische Kraft",
-    text: "Ein gerader Leiter der Länge l = 0,5 m führt einen Strom von I = 4 A und befindet sich senkrecht in einem homogenen Magnetfeld B = 0,3 T. Wie gross ist die Kraft auf den Leiter?",
+    text: "Ein gerader Leiter der Länge l = 0,5 m führt einen Strom von I = 4 A und befindet sich senkrecht in einem homogenen Magnetfeld B = 0,3 T. Wie groß ist die Kraft auf den Leiter?",
     options: [
       { id: "a", text: "0,15 N" },
       { id: "b", text: "6 N" },
@@ -389,7 +389,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "elektrizität",
     topic: "Induktion",
-    text: "Eine Spule mit N = 200 Windungen hat eine Querschnittsflaeche von A = 0,01 m². Das Magnetfeld ändert sich gleichmäßig von 0 auf 0,5 T in 0,1 s. Wie gross ist die induzierte Spannung?",
+    text: "Eine Spule mit N = 200 Windungen hat eine Querschnittsfläche von A = 0,01 m². Das Magnetfeld ändert sich gleichmäßig von 0 auf 0,5 T in 0,1 s. Wie groß ist die induzierte Spannung?",
     options: [
       { id: "a", text: "1 V" },
       { id: "b", text: "10 V" },
@@ -418,7 +418,7 @@ export const physikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "E = ½ × C × U² = ½ × 20 × 10⁻⁶ × 50² = ½ × 20 × 10⁻⁶ × 2500 = 0,025 J = 25 mJ. Die Energie waechst quadratisch mit der Spannung.",
+      "E = ½ × C × U² = ½ × 20 × 10⁻⁶ × 50² = ½ × 20 × 10⁻⁶ × 2500 = 0,025 J = 25 mJ. Die Energie wächst quadratisch mit der Spannung.",
     difficulty: "mittel",
     tags: ["kondensator", "energie", "berechnung"],
   },
@@ -427,7 +427,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "elektrizität",
     topic: "Kondensatorschaltungen",
-    text: "Zwei Kondensatoren C₁ = 10 μF und C₂ = 30 μF sind in Reihe geschaltet. Wie gross ist die Gesamtkapazität?",
+    text: "Zwei Kondensatoren C₁ = 10 μF und C₂ = 30 μF sind in Reihe geschaltet. Wie groß ist die Gesamtkapazität?",
     options: [
       { id: "a", text: "40 μF" },
       { id: "b", text: "20 μF" },
@@ -446,7 +446,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "elektrizität",
     topic: "Wechselstrom",
-    text: "Ein Wechselstrom hat den Scheitelwert I₀ = 10 A. Wie gross ist der Effektivwert?",
+    text: "Ein Wechselstrom hat den Scheitelwert I₀ = 10 A. Wie groß ist der Effektivwert?",
     options: [
       { id: "a", text: "ca. 7,07 A" },
       { id: "b", text: "10 A" },
@@ -456,7 +456,7 @@ export const physikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "I_eff = I₀ / √2 = 10 / √2 ≈ 10 / 1,414 ≈ 7,07 A. Der Effektivwert eines sinusfoermigen Wechselstroms ist der Scheitelwert dividiert durch √2.",
+      "I_eff = I₀ / √2 = 10 / √2 ≈ 10 / 1,414 ≈ 7,07 A. Der Effektivwert eines sinusförmigen Wechselstroms ist der Scheitelwert dividiert durch √2.",
     difficulty: "leicht",
     tags: ["wechselstrom", "effektivwert", "berechnung"],
   },
@@ -465,7 +465,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "elektrizität",
     topic: "Elektrisches Feld",
-    text: "Zwischen zwei parallelen Platten (Abstand d = 2 cm) liegt eine Spannung von U = 1000 V an. Wie gross ist die elektrische Feldstärke?",
+    text: "Zwischen zwei parallelen Platten (Abstand d = 2 cm) liegt eine Spannung von U = 1000 V an. Wie groß ist die elektrische Feldstärke?",
     options: [
       { id: "a", text: "500 V/m" },
       { id: "b", text: "5000 V/m" },
@@ -484,7 +484,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "elektrizität",
     topic: "Spezifischer Widerstand",
-    text: "Ein Kupferdraht (ρ = 1,7 × 10⁻⁸ Ω·m) hat eine Länge von 100 m und einen Querschnitt von 1 mm² = 10⁻⁶ m². Wie gross ist sein Widerstand?",
+    text: "Ein Kupferdraht (ρ = 1,7 × 10⁻⁸ Ω·m) hat eine Länge von 100 m und einen Querschnitt von 1 mm² = 10⁻⁶ m². Wie groß ist sein Widerstand?",
     options: [
       { id: "a", text: "0,17 Ω" },
       { id: "b", text: "17 Ω" },
@@ -503,7 +503,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "elektrizität",
     topic: "Transformator",
-    text: "Ein idealer Transformator hat primärseitig N₁ = 500 Windungen und sekundärseitig N₂ = 50 Windungen. Die Primärspannung beträgt U₁ = 230 V. Wie gross ist die Sekundärspannung?",
+    text: "Ein idealer Transformator hat primärseitig N₁ = 500 Windungen und sekundärseitig N₂ = 50 Windungen. Die Primärspannung beträgt U₁ = 230 V. Wie groß ist die Sekundärspannung?",
     options: [
       { id: "a", text: "2300 V" },
       { id: "b", text: "2,3 V" },
@@ -541,7 +541,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "elektrizität",
     topic: "RC-Schaltung",
-    text: "Ein Kondensator (C = 100 μF) wird über einen Widerstand (R = 10 kΩ) aufgeladen. Wie gross ist die Zeitkonstante τ?",
+    text: "Ein Kondensator (C = 100 μF) wird über einen Widerstand (R = 10 kΩ) aufgeladen. Wie groß ist die Zeitkonstante τ?",
     options: [
       { id: "a", text: "0,01 s" },
       { id: "b", text: "1 s" },
@@ -560,7 +560,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "elektrizität",
     topic: "Elektrische Ladung",
-    text: "Durch einen Leiter fließt ein Strom von I = 2 A fuer t = 5 Minuten. Welche Ladung wird transportiert?",
+    text: "Durch einen Leiter fließt ein Strom von I = 2 A für t = 5 Minuten. Welche Ladung wird transportiert?",
     options: [
       { id: "a", text: "10 C" },
       { id: "b", text: "100 C" },
@@ -581,7 +581,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "optik",
     topic: "Brechung",
-    text: "Licht geht von Wasser (n = 1,33) in Luft (n = 1) ueber. Wie gross ist der Grenzwinkel der Totalreflexion? (sin⁻¹(0,752) ≈ 48,8°)",
+    text: "Licht geht von Wasser (n = 1,33) in Luft (n = 1) ueber. Wie groß ist der Grenzwinkel der Totalreflexion? (sin⁻¹(0,752) ≈ 48,8°)",
     options: [
       { id: "a", text: "ca. 41,2°" },
       { id: "b", text: "ca. 48,8°" },
@@ -619,7 +619,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "optik",
     topic: "Zerstreuungslinse",
-    text: "Eine Zerstreuungslinse hat die Brechkraft D = -4 dpt. Wie gross ist ihre Brennweite?",
+    text: "Eine Zerstreuungslinse hat die Brechkraft D = -4 dpt. Wie groß ist ihre Brennweite?",
     options: [
       { id: "a", text: "-25 cm" },
       { id: "b", text: "25 cm" },
@@ -657,7 +657,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "optik",
     topic: "Interferenz",
-    text: "Bei einem Doppelspaltversuch mit Spaltabstand d = 0,1 mm und Wellenlänge λ = 500 nm beträgt der Abstand zum Schirm L = 2 m. Wie gross ist der Abstand zwischen dem 0. und dem 1. Maximum?",
+    text: "Bei einem Doppelspaltversuch mit Spaltabstand d = 0,1 mm und Wellenlänge λ = 500 nm beträgt der Abstand zum Schirm L = 2 m. Wie groß ist der Abstand zwischen dem 0. und dem 1. Maximum?",
     options: [
       { id: "a", text: "1 mm" },
       { id: "b", text: "5 mm" },
@@ -714,7 +714,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "optik",
     topic: "Linsensystem",
-    text: "Zwei dünne Linsen (f₁ = 20 cm und f₂ = -30 cm) liegen dicht beieinander. Wie gross ist die Gesamtbrennweite des Systems?",
+    text: "Zwei dünne Linsen (f₁ = 20 cm und f₂ = -30 cm) liegen dicht beieinander. Wie groß ist die Gesamtbrennweite des Systems?",
     options: [
       { id: "a", text: "60 cm" },
       { id: "b", text: "-60 cm" },
@@ -724,7 +724,7 @@ export const physikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Fuer dicht beieinanderliegende Linsen: 1/f_ges = 1/f₁ + 1/f₂ = 1/20 + 1/(-30) = 3/60 - 2/60 = 1/60 → f_ges = 60 cm. Das System wirkt als Sammellinse mit großer Brennweite.",
+      "Für dicht beieinanderliegende Linsen: 1/f_ges = 1/f₁ + 1/f₂ = 1/20 + 1/(-30) = 3/60 - 2/60 = 1/60 → f_ges = 60 cm. Das System wirkt als Sammellinse mit großer Brennweite.",
     difficulty: "schwer",
     tags: ["linsensystem", "brennweite", "berechnung"],
   },
@@ -733,7 +733,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "optik",
     topic: "Vergrößerung",
-    text: "Eine Lupe hat die Brennweite f = 5 cm. Wie gross ist die Vergrößerung bei entspanntem Auge (Bezugssehweite s₀ = 25 cm)?",
+    text: "Eine Lupe hat die Brennweite f = 5 cm. Wie groß ist die Vergrößerung bei entspanntem Auge (Bezugssehweite s₀ = 25 cm)?",
     options: [
       { id: "a", text: "3-fach" },
       { id: "b", text: "10-fach" },
@@ -773,7 +773,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "wärmelehre",
     topic: "Ideales Gasgesetz",
-    text: "Ein ideales Gas (V = 10 L, p = 2 atm, T = 300 K) wird isotherm auf V = 5 L komprimiert. Wie gross ist der neue Druck?",
+    text: "Ein ideales Gas (V = 10 L, p = 2 atm, T = 300 K) wird isotherm auf V = 5 L komprimiert. Wie groß ist der neue Druck?",
     options: [
       { id: "a", text: "1 atm" },
       { id: "b", text: "2 atm" },
@@ -811,7 +811,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "wärmelehre",
     topic: "Carnot-Wirkungsgrad",
-    text: "Eine Wärmekraftmaschine arbeitet zwischen T_warm = 600 K und T_kalt = 300 K. Wie gross ist der maximal mögliche (Carnot-)Wirkungsgrad?",
+    text: "Eine Wärmekraftmaschine arbeitet zwischen T_warm = 600 K und T_kalt = 300 K. Wie groß ist der maximal mögliche (Carnot-)Wirkungsgrad?",
     options: [
       { id: "a", text: "50 %" },
       { id: "b", text: "25 %" },
@@ -840,7 +840,7 @@ export const physikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Stefan-Boltzmann-Gesetz: P = σ × A × T⁴. Bei Verdopplung der Temperatur: P_neu = σ × A × (2T)⁴ = σ × A × 16T⁴ = 16P. Die abgestrahlte Leistung waechst mit der vierten Potenz der Temperatur.",
+      "Stefan-Boltzmann-Gesetz: P = σ × A × T⁴. Bei Verdopplung der Temperatur: P_neu = σ × A × (2T)⁴ = σ × A × 16T⁴ = 16P. Die abgestrahlte Leistung wächst mit der vierten Potenz der Temperatur.",
     difficulty: "schwer",
     tags: ["stefan-boltzmann", "wärmestrahlung", "berechnung"],
   },
@@ -886,7 +886,7 @@ export const physikQuestionsPart2: Question[] = [
     id: "phys-87",
     subject: "physik",
     chapter: "wärmelehre",
-    topic: "Phasenuebergaenge",
+    topic: "Phasenuebergänge",
     text: "Wie viel Energie wird benötigt, um 0,1 kg Wasser bei 100°C vollständig zu verdampfen? (Verdampfungswärme L_v = 2260 kJ/kg)",
     options: [
       { id: "a", text: "226 kJ" },
@@ -925,7 +925,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "wärmelehre",
     topic: "Wärmeleitung",
-    text: "Eine Fensterscheibe (Dicke d = 5 mm, Flaeche A = 2 m², λ = 1 W/(m·K)) trennt Innenraum (20°C) von der Außenluft (-10°C). Wie gross ist der Wärmestrom durch die Scheibe?",
+    text: "Eine Fensterscheibe (Dicke d = 5 mm, Fläche A = 2 m², λ = 1 W/(m·K)) trennt Innenraum (20°C) von der Außenluft (-10°C). Wie groß ist der Wärmestrom durch die Scheibe?",
     options: [
       { id: "a", text: "1,2 kW" },
       { id: "b", text: "120 W" },
@@ -965,7 +965,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "wellen",
     topic: "Harmonische Schwingung",
-    text: "Ein Federpendel schwingt mit der Masse m = 0,5 kg und der Federkonstante k = 200 N/m. Wie gross ist die Schwingungsdauer?",
+    text: "Ein Federpendel schwingt mit der Masse m = 0,5 kg und der Federkonstante k = 200 N/m. Wie groß ist die Schwingungsdauer?",
     options: [
       { id: "a", text: "ca. 0,1 s" },
       { id: "b", text: "ca. 0,63 s" },
@@ -988,13 +988,13 @@ export const physikQuestionsPart2: Question[] = [
     options: [
       { id: "a", text: "Resonanz tritt auf, wenn die Erregerfrequenz viel größer als die Eigenfrequenz ist" },
       { id: "b", text: "Bei Resonanz ist die Amplitude am kleinsten" },
-      { id: "c", text: "Resonanz tritt auf, wenn die Erregerfrequenz mit der Eigenfrequenz uebereinstimmt" },
+      { id: "c", text: "Resonanz tritt auf, wenn die Erregerfrequenz mit der Eigenfrequenz übereinstimmt" },
       { id: "d", text: "Resonanz tritt nur bei elektromagnetischen Schwingungen auf" },
       { id: "e", text: "Bei Resonanz steht das System still" },
     ],
     correctOptionId: "c",
     explanation:
-      "Resonanz tritt auf, wenn die Erregerfrequenz gleich oder nahe der Eigenfrequenz des schwingungsfähigen Systems ist. In diesem Fall wird ein Maximum an Energie uebertragen und die Amplitude erreicht ihren größten Wert. Beispiel: Tacoma-Narrows-Brücke.",
+      "Resonanz tritt auf, wenn die Erregerfrequenz gleich oder nahe der Eigenfrequenz des schwingungsfähigen Systems ist. In diesem Fall wird ein Maximum an Energie übertragen und die Amplitude erreicht ihren größten Wert. Beispiel: Tacoma-Narrows-Brücke.",
     difficulty: "leicht",
     tags: ["resonanz", "eigenfrequenz", "schwingung"],
   },
@@ -1041,7 +1041,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "wellen",
     topic: "Mathematisches Pendel",
-    text: "Ein mathematisches Pendel hat die Länge l = 1 m. Wie gross ist seine Schwingungsdauer auf der Erde? (g = 9,81 m/s², π² ≈ 9,87)",
+    text: "Ein mathematisches Pendel hat die Länge l = 1 m. Wie groß ist seine Schwingungsdauer auf der Erde? (g = 9,81 m/s², π² ≈ 9,87)",
     options: [
       { id: "a", text: "ca. 2,0 s" },
       { id: "b", text: "ca. 1,0 s" },
@@ -1062,7 +1062,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "kernphysik",
     topic: "Radioaktiver Zerfall",
-    text: "Jod-131 hat eine Halbwertszeit von 8 Tagen. Ein Patient erhält eine Dosis mit einer Aktivität von 400 MBq. Wie gross ist die Aktivität nach 24 Tagen?",
+    text: "Jod-131 hat eine Halbwertszeit von 8 Tagen. Ein Patient erhält eine Dosis mit einer Aktivität von 400 MBq. Wie groß ist die Aktivität nach 24 Tagen?",
     options: [
       { id: "a", text: "200 MBq" },
       { id: "b", text: "100 MBq" },
@@ -1087,7 +1087,7 @@ export const physikQuestionsPart2: Question[] = [
       { id: "b", text: "Spaltung setzt Energie frei, Fusion verbraucht Energie" },
       { id: "c", text: "Spaltung teilt schwere Kerne, Fusion verschmilzt leichte Kerne – beides setzt Energie frei" },
       { id: "d", text: "Kernspaltung findet nur in der Sonne statt" },
-      { id: "e", text: "Fusion und Spaltung sind verschiedene Namen fuer denselben Prozess" },
+      { id: "e", text: "Fusion und Spaltung sind verschiedene Namen für denselben Prozess" },
     ],
     correctOptionId: "c",
     explanation:
@@ -1110,7 +1110,7 @@ export const physikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Übergaenge auf n = 2 gehören zur Balmer-Serie. Diese Übergaenge liegen im sichtbaren Bereich des Spektrums. Lyman-Serie: Übergaenge auf n = 1 (UV), Paschen-Serie: Übergaenge auf n = 3 (IR). Der Übergang n = 3 → n = 2 erzeugt die rote Hα-Linie bei 656 nm.",
+      "Übergänge auf n = 2 gehören zur Balmer-Serie. Diese Übergänge liegen im sichtbaren Bereich des Spektrums. Lyman-Serie: Übergänge auf n = 1 (UV), Paschen-Serie: Übergänge auf n = 3 (IR). Der Übergang n = 3 → n = 2 erzeugt die rote Hα-Linie bei 656 nm.",
     difficulty: "schwer",
     tags: ["bohr-modell", "balmer-serie", "spektrallinien"],
   },
@@ -1129,7 +1129,7 @@ export const physikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Einsteins Gleichung fuer den Photoeffekt: E_kin,max = E_Photon - W_A = 6,5 eV - 4,0 eV = 2,5 eV. Die Energie des Photons muss größer als die Austrittsarbeit sein, damit Elektronen ausgelöst werden. Die ueberschuessige Energie wird zur kinetischen Energie der Elektronen.",
+      "Einsteins Gleichung für den Photoeffekt: E_kin,max = E_Photon - W_A = 6,5 eV - 4,0 eV = 2,5 eV. Die Energie des Photons muss größer als die Austrittsarbeit sein, damit Elektronen ausgelöst werden. Die ueberschuessige Energie wird zur kinetischen Energie der Elektronen.",
     difficulty: "mittel",
     tags: ["photoeffekt", "einstein", "austrittsarbeit", "berechnung"],
   },
@@ -1148,7 +1148,7 @@ export const physikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Gamma-Strahlung (elektromagnetische Strahlung) hat das größte Durchdringungsvermögen. Alpha-Teilchen (Heliumkerne) werden bereits durch ein Blatt Papier gestoppt, Beta-Teilchen (Elektronen) durch wenige Millimeter Aluminium, während Gamma-Strahlen dicke Bleischichten oder Beton benötigen. Dies ist fuer den Strahlenschutz in der Medizin von großer Bedeutung.",
+      "Gamma-Strahlung (elektromagnetische Strahlung) hat das größte Durchdringungsvermögen. Alpha-Teilchen (Heliumkerne) werden bereits durch ein Blatt Papier gestoppt, Beta-Teilchen (Elektronen) durch wenige Millimeter Aluminium, während Gamma-Strahlen dicke Bleischichten oder Beton benötigen. Dies ist für den Strahlenschutz in der Medizin von großer Bedeutung.",
     difficulty: "leicht",
     tags: ["strahlenarten", "strahlenschutz", "durchdringung"],
   },

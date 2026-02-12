@@ -112,7 +112,7 @@ export default function Dashboard() {
       )}
 
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Willkommen zurueck!</h1>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Willkommen zurück!</h1>
         <p className="text-muted mt-1">Dein MedAT ist in <span className="font-bold text-primary-700 dark:text-primary-400">{days}</span> Tagen. Bleib dran!</p>
       </div>
 

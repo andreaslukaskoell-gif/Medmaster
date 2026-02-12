@@ -14,7 +14,7 @@ export default function EnzymeSubstrate() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Enzym-Substrat-Reaktion</h4>
-      <p className="text-xs text-muted">Schluessel-Schloss-Modell in drei Schritten.</p>
+      <p className="text-xs text-muted">Schlüssel-Schloss-Modell in drei Schritten.</p>
 
       <div className="flex gap-2 mb-2">
         {([1, 2, 3] as Step[]).map((s) => (
@@ -191,14 +191,14 @@ export default function EnzymeSubstrate() {
             {/* Cycle arrow */}
             <path d="M100,195 Q60,230 100,250 Q160,270 200,240" fill="none" stroke="#0d9488" strokeWidth="1.5" strokeDasharray="4 3" markerEnd="url(#arrowE)" />
             <text x="90" y="245" fontSize="7" fill="#0d9488">Enzym bereit</text>
-            <text x="90" y="256" fontSize="7" fill="#0d9488">fuer neues Substrat</text>
+            <text x="90" y="256" fontSize="7" fill="#0d9488">für neues Substrat</text>
           </g>
         )}
       </svg>
 
       <div className="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-3">
         <p className="text-xs text-gray-700 dark:text-gray-300">
-          {step === 1 && "Das Substrat nähert sich dem aktiven Zentrum des Enzyms. Die Form muss genau passen (Schluessel-Schloss-Prinzip)."}
+          {step === 1 && "Das Substrat nähert sich dem aktiven Zentrum des Enzyms. Die Form muss genau passen (Schlüssel-Schloss-Prinzip)."}
           {step === 2 && "Der Enzym-Substrat-Komplex (ES) entsteht. Das Enzym senkt die Aktivierungsenergie und beschleunigt die Reaktion."}
           {step === 3 && "Die Produkte werden freigesetzt. Das Enzym bleibt unverändert und kann erneut katalysieren (Biokatalysator)."}
         </p>

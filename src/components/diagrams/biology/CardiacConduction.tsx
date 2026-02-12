@@ -2,10 +2,10 @@ import { useState } from "react";
 
 const parts = [
   { id: "sa", label: "Sinusknoten (SA-Knoten)", detail: "Primärer Schrittmacher des Herzens. Liegt im rechten Vorhof. Frequenz: ~60-80/min. Gibt den Herzrhythmus vor.", x: 165, y: 100 },
-  { id: "av", label: "AV-Knoten (Atrioventrikularknoten)", detail: "Sekundärer Schrittmacher (~40-60/min). Verzoegert die Erregungsweiterleitung (AV-Delay), damit Vorhoefe vor Ventrikeln kontrahieren.", x: 230, y: 185 },
-  { id: "his", label: "His-Bündel", detail: "Leitet Erregung vom AV-Knoten durch das Herzskelett zu den Ventrikeln. Einzige elektrische Verbindung zwischen Vorhoefe und Ventrikel.", x: 240, y: 220 },
+  { id: "av", label: "AV-Knoten (Atrioventrikularknoten)", detail: "Sekundärer Schrittmacher (~40-60/min). Verzoegert die Erregungsweiterleitung (AV-Delay), damit Vorhöfe vor Ventrikeln kontrahieren.", x: 230, y: 185 },
+  { id: "his", label: "His-Bündel", detail: "Leitet Erregung vom AV-Knoten durch das Herzskelett zu den Ventrikeln. Einzige elektrische Verbindung zwischen Vorhöfe und Ventrikel.", x: 240, y: 220 },
   { id: "tawara", label: "Tawara-Schenkel", detail: "His-Bündel teilt sich in rechten und linken Schenkel. Leiten Erregung an die jeweilige Ventrikelseite.", x: 240, y: 280 },
-  { id: "purkinje", label: "Purkinje-Fasern", detail: "Feinste Auslaufer des Erregungsleitungssystems. Sorgen fuer schnelle, synchrone Kontraktion der Ventrikelmuskulatur von der Herzspitze aus.", x: 240, y: 340 },
+  { id: "purkinje", label: "Purkinje-Fasern", detail: "Feinste Auslaufer des Erregungsleitungssystems. Sorgen für schnelle, synchrone Kontraktion der Ventrikelmuskulatur von der Herzspitze aus.", x: 240, y: 340 },
 ];
 
 type Part = (typeof parts)[number];
@@ -16,7 +16,7 @@ export default function CardiacConduction() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Erregungsleitungssystem des Herzens</h4>
-      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Komponenten fuer Details.</p>
+      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Komponenten für Details.</p>
 
       <svg viewBox="0 0 480 420" className="w-full max-w-xl mx-auto">
         {/* Heart outline */}

@@ -13,7 +13,7 @@ interface BloodGroup {
 const groups: BloodGroup[] = [
   { id: "A", label: "A", antigens: "A", antibodies: "Anti-B", canDonateTo: ["A", "AB"], canReceiveFrom: ["A", "0"], detail: "Antigen A auf Erythrozyten, Anti-B-Antikörper im Plasma. Häufigkeit in Europa: ~42%." },
   { id: "B", label: "B", antigens: "B", antibodies: "Anti-A", canDonateTo: ["B", "AB"], canReceiveFrom: ["B", "0"], detail: "Antigen B auf Erythrozyten, Anti-A-Antikörper im Plasma. Häufigkeit in Europa: ~11%." },
-  { id: "AB", label: "AB", antigens: "A und B", antibodies: "Keine", canDonateTo: ["AB"], canReceiveFrom: ["A", "B", "AB", "0"], detail: "Beide Antigene, keine Antikörper → Universalempfaenger. Häufigkeit: ~4%." },
+  { id: "AB", label: "AB", antigens: "A und B", antibodies: "Keine", canDonateTo: ["AB"], canReceiveFrom: ["A", "B", "AB", "0"], detail: "Beide Antigene, keine Antikörper → Universalempfänger. Häufigkeit: ~4%." },
   { id: "0", label: "0", antigens: "Keine", antibodies: "Anti-A + Anti-B", canDonateTo: ["A", "B", "AB", "0"], canReceiveFrom: ["0"], detail: "Keine Antigene → Universalspender. Beide Antikörper im Plasma. Häufigkeit: ~43%." },
 ];
 
@@ -38,7 +38,7 @@ export default function BloodGroups() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">ABO-Blutgruppensystem</h4>
-      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf eine Blutgruppe fuer Details.</p>
+      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf eine Blutgruppe für Details.</p>
 
       <svg viewBox="0 0 480 320" className="w-full max-w-xl mx-auto">
         {/* Table header */}
@@ -120,11 +120,11 @@ export default function BloodGroups() {
 
         {/* Key rules */}
         <text x="240" y={tableY + headerH + 4 * rowH + 22} textAnchor="middle" fontSize="8" fill="#115e59" fontWeight="bold">Regel: Antikörper im Plasma greifen fremde Antigene an → Agglutination!</text>
-        <text x="240" y={tableY + headerH + 4 * rowH + 38} textAnchor="middle" fontSize="8" fill="#0d9488">0 = Universalspender | AB = Universalempfaenger</text>
+        <text x="240" y={tableY + headerH + 4 * rowH + 38} textAnchor="middle" fontSize="8" fill="#0d9488">0 = Universalspender | AB = Universalempfänger</text>
 
         {/* Rhesus note */}
         <rect x={tableX} y={tableY + headerH + 4 * rowH + 48} width={totalW} height="25" rx="6" fill="#f0fdfa" stroke="#14b8a6" strokeWidth="1" />
-        <text x="240" y={tableY + headerH + 4 * rowH + 64} textAnchor="middle" fontSize="7" fill="#115e59">Zusätzlich: Rhesus-Faktor (Rh+ / Rh-). Rh-Empfaenger darf kein Rh+-Blut erhalten.</text>
+        <text x="240" y={tableY + headerH + 4 * rowH + 64} textAnchor="middle" fontSize="7" fill="#115e59">Zusätzlich: Rhesus-Faktor (Rh+ / Rh-). Rh-Empfänger darf kein Rh+-Blut erhalten.</text>
       </svg>
 
       {activeGroup && (

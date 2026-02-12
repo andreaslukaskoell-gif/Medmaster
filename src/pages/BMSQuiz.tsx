@@ -161,7 +161,7 @@ export default function BMSQuiz({ subject, onBack }: Props) {
                     })}
                   </div>
                   <div className="ml-8 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
-                    <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-1">Erklaerung:</p>
+                    <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-1">Erklärung:</p>
                     <p className="text-xs text-blue-700 dark:text-blue-400">{q.explanation}</p>
                   </div>
                 </CardContent>

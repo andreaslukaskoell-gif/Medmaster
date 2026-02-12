@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 const parts = [
-  { id: "dna", label: "DNA-Doppelstrang", detail: "Matrizenstrang (3'→5') wird abgelesen. Codogener Strang dient als Vorlage fuer die mRNA." },
+  { id: "dna", label: "DNA-Doppelstrang", detail: "Matrizenstrang (3'→5') wird abgelesen. Codogener Strang dient als Vorlage für die mRNA." },
   { id: "rnapol", label: "RNA-Polymerase", detail: "Enzym, das den DNA-Matrizenstrang abliest und eine komplementäre mRNA synthetisiert (5'→3')." },
   { id: "mrna", label: "mRNA", detail: "Messenger-RNA: trägt die genetische Information vom Kern zum Ribosom. Codons aus je 3 Basen." },
   { id: "ribosom", label: "Ribosom", detail: "Ort der Translation. Besteht aus großer und kleiner Untereinheit. Liest mRNA in 5'→3'-Richtung." },
-  { id: "trna", label: "tRNA", detail: "Transfer-RNA: bringt passende Aminosäuren. Anticodon paart sich komplementaer mit mRNA-Codon." },
+  { id: "trna", label: "tRNA", detail: "Transfer-RNA: bringt passende Aminosäuren. Anticodon paart sich komplementär mit mRNA-Codon." },
   { id: "polypeptid", label: "Polypeptidkette", detail: "Wachsende Kette aus Aminosäuren. Peptidbindungen zwischen den Aminosäuren. Wird später zum Protein gefaltet." },
 ];
 
@@ -17,7 +17,7 @@ export default function TranscriptionTranslation() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Transkription &amp; Translation</h4>
-      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen fuer Details.</p>
+      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen für Details.</p>
 
       <svg viewBox="0 0 480 400" className="w-full max-w-xl mx-auto">
         {/* ===== SECTION 1: TRANSKRIPTION ===== */}

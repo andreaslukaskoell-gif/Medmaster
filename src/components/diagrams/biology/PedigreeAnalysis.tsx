@@ -184,7 +184,7 @@ export default function PedigreeAnalysis() {
           <>
             <p className="text-sm font-semibold text-teal-700 dark:text-teal-300">Autosomal-dominanter Erbgang</p>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-1">
-              Ein dominantes Allel (A) reicht fuer die Merkmalsausprägung. Betroffene haben mindestens einen betroffenen Elternteil.
+              Ein dominantes Allel (A) reicht für die Merkmalsausprägung. Betroffene haben mindestens einen betroffenen Elternteil.
               Merkmal ueberspringt keine Generation. Genotyp der Betroffenen: Aa oder AA.
             </p>
           </>
@@ -192,7 +192,7 @@ export default function PedigreeAnalysis() {
           <>
             <p className="text-sm font-semibold text-teal-700 dark:text-teal-300">Autosomal-rezessiver Erbgang</p>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-1">
-              Zwei rezessive Allele (aa) nötig fuer Merkmalsausprägung. Eltern können Träger sein (Aa) ohne selbst betroffen zu sein.
+              Zwei rezessive Allele (aa) nötig für Merkmalsausprägung. Eltern können Träger sein (Aa) ohne selbst betroffen zu sein.
               Merkmal kann Generationen ueberspringen. 25% Wahrscheinlichkeit bei Aa x Aa.
             </p>
           </>

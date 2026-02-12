@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 const parts = [
-  { id: "backbone", label: "Zucker-Phosphat-Rückgrat", detail: "Desoxyribose (Zucker) und Phosphatgruppen bilden das Rückgrat der DNA. Über Phosphodiesterbindungen verknuepft." },
+  { id: "backbone", label: "Zucker-Phosphat-Rückgrat", detail: "Desoxyribose (Zucker) und Phosphatgruppen bilden das Rückgrat der DNA. Über Phosphodiesterbindungen verknüpft." },
   { id: "basepair-at", label: "Basenpaar A-T", detail: "Adenin und Thymin: 2 Wasserstoffbrückenbindungen. Komplementäre Basenpaarung nach Chargaff-Regel." },
   { id: "basepair-gc", label: "Basenpaar G-C", detail: "Guanin und Cytosin: 3 Wasserstoffbrückenbindungen. Stärkere Bindung als A-T." },
-  { id: "ends", label: "5'- und 3'-Ende", detail: "DNA-Straenge verlaufen antiparallel. 5'-Ende: Phosphatgruppe. 3'-Ende: Hydroxylgruppe. Replikation erfolgt 5'→3'." },
-  { id: "major", label: "Große Furche (Major Groove)", detail: "Breitere Furche der Doppelhelix. Wichtig fuer Proteinbindung (Transkriptionsfaktoren)." },
-  { id: "minor", label: "Kleine Furche (Minor Groove)", detail: "Schmalere Furche. Ebenfalls Bindestelle fuer regulatorische Proteine und Medikamente." },
+  { id: "ends", label: "5'- und 3'-Ende", detail: "DNA-Stränge verlaufen antiparallel. 5'-Ende: Phosphatgruppe. 3'-Ende: Hydroxylgruppe. Replikation erfolgt 5'→3'." },
+  { id: "major", label: "Große Furche (Major Groove)", detail: "Breitere Furche der Doppelhelix. Wichtig für Proteinbindung (Transkriptionsfaktoren)." },
+  { id: "minor", label: "Kleine Furche (Minor Groove)", detail: "Schmalere Furche. Ebenfalls Bindestelle für regulatorische Proteine und Medikamente." },
 ];
 
 type PartInfo = (typeof parts)[number];
@@ -17,7 +17,7 @@ export default function DNAHelix() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">DNA-Doppelhelix</h4>
-      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen fuer Details.</p>
+      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen für Details.</p>
 
       <svg viewBox="0 0 460 440" className="w-full max-w-lg mx-auto">
         {/* 5' / 3' labels */}
@@ -126,7 +126,7 @@ export default function DNAHelix() {
 
         {/* Antiparallel label */}
         <rect x="320" y="355" width="130" height="35" rx="6" fill="#f0fdfa" stroke="#14b8a6" strokeWidth="1" />
-        <text x="385" y="370" textAnchor="middle" fontSize="7" fill="#115e59" fontWeight="bold">Antiparallele Straenge</text>
+        <text x="385" y="370" textAnchor="middle" fontSize="7" fill="#115e59" fontWeight="bold">Antiparallele Stränge</text>
         <text x="385" y="382" textAnchor="middle" fontSize="7" fill="#0d9488">5&apos;→3&apos; / 3&apos;→5&apos;</text>
       </svg>
 

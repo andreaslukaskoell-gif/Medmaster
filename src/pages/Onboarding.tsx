@@ -93,7 +93,7 @@ export default function Onboarding() {
           </div>
           <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Willkommen bei MedMaster!</h1>
           <p className="text-muted max-w-md mx-auto">
-            Bevor du loslegst, moechten wir deinen aktuellen Wissensstand einschätzen.
+            Bevor du loslegst, möchten wir deinen aktuellen Wissensstand einschätzen.
             Der Einstufungstest dauert nur wenige Minuten und hilft uns, deinen Lernplan zu personalisieren.
           </p>
         </div>

@@ -15,7 +15,7 @@ import {
   generateMemoryQuestions,
   generateWortflüssigkeitSet,
 } from "@/data/kffGenerators";
-import type { ZahlenfolgeGenerated, AllergyCard, MemoryQuestion, WortfluessigkeitQuestion } from "@/data/kffGenerators";
+import type { ZahlenfolgeGenerated, AllergyCard, MemoryQuestion, WortflüssigkeitQuestion } from "@/data/kffGenerators";
 import { figurenAufgaben, figurenStrategyGuide } from "@/data/figurenData";
 import type { FZAufgabe } from "@/data/figurenData";
 import { useStore } from "@/store/useStore";
@@ -110,7 +110,7 @@ export default function KFF() {
     },
     {
       id: "gedaechtnis" as const,
-      title: "Allergiepaesse merken",
+      title: "Allergiepässe merken",
       desc: "Lerne 8 generierte Allergieausweise und beantworte Fragen dazu.",
       strategyKey: "gedaechtnis" as StrategyKey,
       startView: "gedaechtnis-learn" as KffView,
@@ -121,7 +121,7 @@ export default function KFF() {
     {
       id: "implikationen" as const,
       title: "Implikationen erkennen",
-      desc: "Bestimme ob logische Schluesse gültig sind.",
+      desc: "Bestimme ob logische Schlüsse gültig sind.",
       strategyKey: "implikationen" as StrategyKey,
       startView: "implikationen" as KffView,
       color: "bg-purple-100 dark:bg-purple-900/30",
@@ -140,7 +140,7 @@ export default function KFF() {
     {
       id: "figuren" as const,
       title: "Figuren zusammensetzen",
-      desc: "Welche Figur entsteht aus den Puzzleteilen? Trainiere raeumliches Vorstellungsvermoegen.",
+      desc: "Welche Figur entsteht aus den Puzzleteilen? Trainiere räumliches Vorstellungsvermögen.",
       strategyKey: "figuren" as StrategyKey,
       startView: "figuren-quiz" as KffView,
       color: "bg-rose-100 dark:bg-rose-900/30",
@@ -1057,7 +1057,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
         <Card>
           <CardContent className="p-6">
             <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-              <Puzzle className="w-4 h-4 text-rose-500" /> Puzzleteile ({fzQ.pieces.length} Stuecke)
+              <Puzzle className="w-4 h-4 text-rose-500" /> Puzzleteile ({fzQ.pieces.length} Stücke)
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {fzQ.pieces.map((piece, pi) => (

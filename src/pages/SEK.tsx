@@ -191,7 +191,12 @@ export default function SEK() {
               <h3 className="font-semibold text-gray-900 dark:text-gray-100">Emotionen regulieren</h3>
             </div>
             <p className="text-sm text-muted mb-3">Beste Strategie wählen, um Emotionen angemessen zu regulieren.</p>
-            <Badge variant="info" className="text-xs">Neu seit 2023</Badge>
+            <div className="flex items-center gap-2">
+              <Button size="sm" variant="outline" className="flex-1" onClick={() => { setView("quiz"); setIndex(0); setAnswers({}); setSubmitted(false); }}>
+                <Play className="w-4 h-4 mr-1" /> Üben
+              </Button>
+              <Badge variant="info" className="text-xs">Neu seit 2023</Badge>
+            </div>
           </CardContent>
         </Card>
 

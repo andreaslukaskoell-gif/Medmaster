@@ -52,11 +52,11 @@ export const bmsChapters: Chapter[] = [
     id: "zellbiologie",
     subject: "biologie",
     title: "Zellbiologie",
-    overview: "Die Zellbiologie ist das Fundament der Biologie im MedAT. Du lernst hier den Aufbau von Zellen, die Funktion der Organellen und den Zellzyklus — Themen, die in fast jedem MedAT-Test vorkommen und auch fuer das Verständnis vieler klinischer Zusammenhänge essenziell sind.",
+    overview: "Die Zellbiologie ist das Fundament der Biologie im MedAT. Du lernst hier den Aufbau von Zellen, die Funktion der Organellen und den Zellzyklus — Themen, die in fast jedem MedAT-Test vorkommen und auch für das Verständnis vieler klinischer Zusammenhänge essenziell sind.",
     learningObjectives: [
       "Prokaryoten und Eukaryoten vergleichen und unterscheiden können",
       "Die wichtigsten Zellorganellen und ihre Funktionen benennen",
-      "Den Zellzyklus mit Interphase und Mitose-Phasen erklaeren",
+      "Den Zellzyklus mit Interphase und Mitose-Phasen erklären",
       "Die Endosymbiontentheorie verstehen und begründen",
       "Membrantransport-Mechanismen unterscheiden können",
     ],
@@ -71,12 +71,12 @@ Wichtige Unterschiede:
 - Zellteilung: Prokaryoten durch binäre Fission, Eukaryoten durch Mitose/Meiose
 - Endosymbiontentheorie: Mitochondrien und Chloroplasten stammen von aufgenommenen Prokaryoten ab (eigene 70S-Ribosomen, Doppelmembran, eigene DNA)`,
         diagram: "plant-vs-animal-cell",
-        merke: "Mitochondrien und Chloroplasten haben eigene 70S-Ribosomen und Doppelmembran — Belege fuer die Endosymbiontentheorie!",
+        merke: "Mitochondrien und Chloroplasten haben eigene 70S-Ribosomen und Doppelmembran — Belege für die Endosymbiontentheorie!",
         klinik: "Antibiotika wie Chloramphenicol hemmen bakterielle 70S-Ribosomen, nicht die menschlichen 80S-Ribosomen — so wirken sie selektiv toxisch gegen Bakterien.",
       },
       {
         heading: "Zellorganellen und ihre Funktionen",
-        content: `Mitochondrien: Kraftwerke der Zelle, ATP-Produktion durch oxidative Phosphorylierung. Doppelmembran mit Cristae (Oberflaechenvergrößerung). Innere Membran: Elektronentransportkette und ATP-Synthase.
+        content: `Mitochondrien: Kraftwerke der Zelle, ATP-Produktion durch oxidative Phosphorylierung. Doppelmembran mit Cristae (Oberflächenvergrößerung). Innere Membran: Elektronentransportkette und ATP-Synthase.
 
 Endoplasmatisches Retikulum (ER):
 - Raues ER: mit Ribosomen besetzt, Proteinsynthese und -modifikation
@@ -98,8 +98,8 @@ Peroxisomen: Abbau langkettiger Fettsäuren, Entgiftung (H2O2-Abbau durch Katala
 Bestandteile:
 - Phospholipide: hydrophiler Kopf, hydrophobe Schwanzgruppe
 - Cholesterin: reguliert Membranfluidität
-- Integrale Proteine: durchspannen die Membran (Kanaele, Carrier)
-- Periphere Proteine: an der Oberflaeche angelagert
+- Integrale Proteine: durchspannen die Membran (Kanäle, Carrier)
+- Periphere Proteine: an der Oberfläche angelagert
 - Glykokalix: Zuckerketten an der Außenseite (Zell-Zell-Erkennung)
 
 Passiver Transport (ohne Energie):
@@ -112,7 +112,7 @@ Aktiver Transport (mit ATP):
 - Sekundär aktiv: nutzt Ionengradienten (z.B. Na+/Glucose-Symport)`,
         diagram: "cell-membrane",
         merke: "Na+/K+-ATPase: 3 Na+ raus, 2 K+ rein pro ATP — erzeugt das Ruhemembranpotential!",
-        klinik: "Mukoviszidose (Cystische Fibrose) entsteht durch einen defekten Chlorid-Kanal (CFTR) — dies zeigt, wie wichtig Membrantransportproteine fuer die Gesundheit sind.",
+        klinik: "Mukoviszidose (Cystische Fibrose) entsteht durch einen defekten Chlorid-Kanal (CFTR) — dies zeigt, wie wichtig Membrantransportproteine für die Gesundheit sind.",
       },
       {
         heading: "Zellteilung: Mitose und Zellzyklus",
@@ -125,14 +125,14 @@ Interphase:
 
 Mitose (PMAT):
 1. Prophase: Chromatin kondensiert zu Chromosomen, Spindelapparat bildet sich
-2. Metaphase: Chromosomen ordnen sich in der Aequatorialebene an
+2. Metaphase: Chromosomen ordnen sich in der Äquatorialebene an
 3. Anaphase: Schwesterchromatiden werden zu den Polen gezogen
 4. Telophase: Kernhüllen bilden sich neu, Chromosomen dekondensieren
 
-Zytokinese: Teilung des Cytoplasmas (bei Tierzellen durch Einschnuerung, bei Pflanzenzellen durch Zellplatte).
+Zytokinese: Teilung des Cytoplasmas (bei Tierzellen durch Einschnürung, bei Pflanzenzellen durch Zellplatte).
 
 Kontrollpunkte des Zellzyklus:
-- G1/S-Kontrollpunkt (Restriktionspunkt): Ist die Zelle gross genug? DNA unbeschädigt?
+- G1/S-Kontrollpunkt (Restriktionspunkt): Ist die Zelle groß genug? DNA unbeschädigt?
 - G2/M-Kontrollpunkt: Ist die DNA-Replikation vollständig?
 - Spindel-Kontrollpunkt (Metaphase): Sind alle Chromosomen korrekt am Spindelapparat befestigt?`,
         diagram: "mitosis",
@@ -154,12 +154,12 @@ Kontrollpunkte des Zellzyklus:
     id: "genetik",
     subject: "biologie",
     title: "Genetik",
-    overview: "Genetik ist einer der am häufigsten geprüften Bereiche im MedAT-BMS. Von der DNA-Struktur über Proteinbiosynthese bis zu den Mendel'schen Regeln — ein solides Verständnis der Genetik ist fuer den Test unentbehrlich.",
+    overview: "Genetik ist einer der am häufigsten geprüften Bereiche im MedAT-BMS. Von der DNA-Struktur über Proteinbiosynthese bis zu den Mendel'schen Regeln — ein solides Verständnis der Genetik ist für den Test unentbehrlich.",
     learningObjectives: [
-      "DNA-Struktur und semikonservative Replikation erklaeren",
+      "DNA-Struktur und semikonservative Replikation erklären",
       "Transkription und Translation im Detail beschreiben",
       "Die drei Mendel'schen Regeln anwenden können",
-      "Meiose und ihre Bedeutung fuer genetische Vielfalt verstehen",
+      "Meiose und ihre Bedeutung für genetische Vielfalt verstehen",
       "Verschiedene Mutationstypen unterscheiden",
     ],
     sections: [
@@ -167,7 +167,7 @@ Kontrollpunkte des Zellzyklus:
         heading: "DNA-Struktur und Replikation",
         content: `Die DNA ist ein Doppelstrang aus Nukleotiden (Doppelhelix, Watson & Crick 1953). Jedes Nukleotid besteht aus: Phosphatgruppe, Desoxyribose (Zucker), stickstoffhaltige Base.
 
-Basenpaarung (komplementaer):
+Basenpaarung (komplementär):
 - Adenin (A) -- Thymin (T): 2 Wasserstoffbrücken
 - Guanin (G) -- Cytosin (C): 3 Wasserstoffbrücken (stärker!)
 
@@ -178,10 +178,10 @@ DNA-Replikation (semikonservativ):
 4. Leitstrang: kontinuierlich, Folgestrang: diskontinuierlich (Okazaki-Fragmente)
 5. DNA-Ligase verbindet Fragmente
 
-Chargaff-Regeln: A=T und G=C (mengenmaeessig gleich viel im Gesamtgenom).`,
+Chargaff-Regeln: A=T und G=C (mengenmäßig gleich viel im Gesamtgenom).`,
         diagram: "dna-helix",
         merke: "A-T hat 2 H-Brücken, G-C hat 3 H-Brücken. DNA-reiche Regionen mit viel G-C sind daher thermisch stabiler (höhere Schmelztemperatur).",
-        klinik: "Die Polymerase-Kettenreaktion (PCR) nutzt die DNA-Replikation in vitro — essenziell fuer genetische Diagnostik, Forensik und Forschung.",
+        klinik: "Die Polymerase-Kettenreaktion (PCR) nutzt die DNA-Replikation in vitro — essenziell für genetische Diagnostik, Forensik und Forschung.",
       },
       {
         heading: "Proteinbiosynthese",
@@ -190,16 +190,16 @@ Chargaff-Regeln: A=T und G=C (mengenmaeessig gleich viel im Gesamtgenom).`,
 1. Transkription (im Zellkern):
 - RNA-Polymerase liest den Matrizenstrang (3'->5') ab
 - Synthetisiert mRNA in 5'->3'-Richtung
-- mRNA-Processing bei Eukaryoten: 5'-Cap, 3'-Poly-A-Schwanz, Spleissen (Entfernung von Introns, Exons bleiben)
+- mRNA-Processing bei Eukaryoten: 5'-Cap, 3'-Poly-A-Schwanz, Spleißen (Entfernung von Introns, Exons bleiben)
 
 2. Translation (am Ribosom im Cytoplasma):
 - Initiation: Ribosom bindet an mRNA, Start-Codon AUG (Methionin)
-- Elongation: tRNA bringt Aminosäuren, Peptidbindung wird geknuepft
+- Elongation: tRNA bringt Aminosäuren, Peptidbindung wird geknüpft
 - Termination: Stopp-Codon (UAA, UAG, UGA) - kein passendes tRNA
 
-Genetischer Code: 64 Codons fuer 20 Aminosäuren -> degeneriert (redundant), universell, kommafrei, nicht ueberlappend.`,
+Genetischer Code: 64 Codons für 20 Aminosäuren -> degeneriert (redundant), universell, kommafrei, nicht überlappend.`,
         diagram: "transcription-translation",
-        merke: "Introns = IN den Kern (werden rausgespleisst), Exons = EXprimiert (bleiben in der mRNA).",
+        merke: "Introns = IN den Kern (werden rausgespleißt), Exons = EXprimiert (bleiben in der mRNA).",
         klinik: "Viele Antibiotika wirken, indem sie die bakterielle Translation hemmen: Tetracyclin blockiert die tRNA-Bindung, Erythromycin hemmt die Translokation.",
       },
       {
@@ -230,28 +230,28 @@ Quellen genetischer Vielfalt:
 
 1. Uniformitätsregel: Kreuzt man zwei reinerbige (homozygote) Eltern, sind alle F1-Nachkommen gleich (uniform).
 
-2. Spaltungsregel: In der F2-Generation spalten sich Merkmale im Verhältnis 3:1 (phaenotypisch) bzw. 1:2:1 (genotypisch) bei dominant-rezessivem Erbgang.
+2. Spaltungsregel: In der F2-Generation spalten sich Merkmale im Verhältnis 3:1 (phänotypisch) bzw. 1:2:1 (genotypisch) bei dominant-rezessivem Erbgang.
 
 3. Unabhängigkeitsregel: Verschiedene Gene werden unabhängig voneinander vererbt (gilt nur bei Genen auf verschiedenen Chromosomen - keine Kopplung).
 
 Wichtige Begriffe:
 - Genotyp: genetische Ausstattung (z.B. Aa)
-- Phaenotyp: sichtbare Merkmalsausprägung
-- Dominant (A): ueberdeckt rezessives Allel
+- Phänotyp: sichtbare Merkmalsausprägung
+- Dominant (A): überdeckt rezessives Allel
 - Rezessiv (a): nur bei Homozygotie (aa) sichtbar
 - Kodominanz: beide Allele prägen sich aus (z.B. AB0-Blutgruppen: A und B sind kodominant)
-- Intermedianzer Erbgang: Mischform (z.B. rosa Blume aus rot x weiß)`,
+- Intermediärer Erbgang: Mischform (z.B. rosa Blume aus rot x weiß)`,
         diagram: "pedigree-analysis",
         merke: "Bei autosomal-rezessiver Vererbung können gesunde Eltern (Aa x Aa) ein krankes Kind (aa) mit 25% Wahrscheinlichkeit bekommen. Bei X-chromosomal-rezessiv sind v.a. Männer betroffen!",
-        klinik: "Viele genetische Erkrankungen folgen Mendel'schen Regeln: Mukoviszidose und Sichelzellananaemie sind autosomal-rezessiv, Huntington ist autosomal-dominant.",
+        klinik: "Viele genetische Erkrankungen folgen Mendel'schen Regeln: Mukoviszidose und Sichelzellanämie sind autosomal-rezessiv, Huntington ist autosomal-dominant.",
       },
     ],
     summary: [
-      "DNA: Doppelhelix mit komplementaerer Basenpaarung (A-T: 2 H-Brücken, G-C: 3 H-Brücken)",
+      "DNA: Doppelhelix mit komplementärer Basenpaarung (A-T: 2 H-Brücken, G-C: 3 H-Brücken)",
       "Replikation ist semikonservativ, DNA-Polymerase arbeitet 5'→3'",
       "Transkription im Kern (mRNA), Translation am Ribosom (Protein)",
       "Genetischer Code: 64 Codons, Start=AUG, Stopp=UAA/UAG/UGA",
-      "Meiose: 2 Teilungen → 4 haploide Zellen, Crossing-Over sorgt fuer Rekombination",
+      "Meiose: 2 Teilungen → 4 haploide Zellen, Crossing-Over sorgt für Rekombination",
       "Mendel: Uniformität (F1), Spaltung 3:1 (F2), Unabhängigkeit",
     ],
     selfTestIds: ["bio-16", "bio-18", "bio-20", "bio-22", "bio-25"],
@@ -263,7 +263,7 @@ Wichtige Begriffe:
     overview: "Humanbiologie umfasst das Herz-Kreislauf-System, Nervensystem und Immunsystem — drei Kernthemen, die im MedAT regelmäßig abgefragt werden. Verstehe die Zusammenhänge zwischen Organfunktion und klinischer Relevanz.",
     learningObjectives: [
       "Den Aufbau des Herzens und den Blutfluss beschreiben können",
-      "Die Erregungsleitung im Herzen erklaeren",
+      "Die Erregungsleitung im Herzen erklären",
       "Aufbau und Funktion eines Neurons verstehen",
       "Angeborene und adaptive Immunantwort unterscheiden",
       "Antikörperklassen und ihre Funktionen kennen",
@@ -271,18 +271,18 @@ Wichtige Begriffe:
     sections: [
       {
         heading: "Herz-Kreislauf-System",
-        content: `Das Herz ist ein muskulaeres Hohlorgan mit vier Kammern:
+        content: `Das Herz ist ein muskuläres Hohlorgan mit vier Kammern:
 - Rechter Vorhof (Atrium) -> Rechte Herzkammer (Ventrikel) -> Lungenkreislauf
 - Linker Vorhof -> Linke Herzkammer -> Körperkreislauf
 
 Blutfluss: Hohlvenen -> rechtes Atrium -> Trikuspidalklappe -> rechter Ventrikel -> Pulmonalklappe -> Lungenarterien -> Lunge (Gasaustausch) -> Lungenvenen -> linkes Atrium -> Mitralklappe -> linker Ventrikel -> Aortenklappe -> Aorta -> Körper
 
-Erregungsleitung: Sinusknoten (Schrittmacher, ~70/min) -> AV-Knoten (Verzoegerung) -> His-Bündel -> Tawara-Schenkel -> Purkinje-Fasern
+Erregungsleitung: Sinusknoten (Schrittmacher, ~70/min) -> AV-Knoten (Verzögerung) -> His-Bündel -> Tawara-Schenkel -> Purkinje-Fasern
 
 Wichtig: Arterien führen Blut VOM Herzen weg, Venen führen Blut ZUM Herzen. Lungenarterien führen sauerstoffarmes Blut (Ausnahme!).`,
         diagram: "heart-anatomy",
         merke: "Arterien = AB vom Herzen (egal ob sauerstoffreich oder -arm!). Lungenarterien führen sauerstoffarmes, Lungenvenen führen sauerstoffreiches Blut.",
-        klinik: "Bei einem AV-Block ist die Erregungsueberleitung am AV-Knoten gestört — im EKG sichtbar als verlängerte PQ-Zeit oder ausfallende QRS-Komplexe.",
+        klinik: "Bei einem AV-Block ist die Erregungsüberleitung am AV-Knoten gestört — im EKG sichtbar als verlängerte PQ-Zeit oder ausfallende QRS-Komplexe.",
       },
       {
         heading: "Nervensystem",
@@ -290,7 +290,7 @@ Wichtig: Arterien führen Blut VOM Herzen weg, Venen führen Blut ZUM Herzen. Lu
 Peripheres Nervensystem (PNS): Hirnnerven und Spinalnerven
 
 Neuron (Nervenzelle):
-- Dendrit: empfaengt Signale
+- Dendrit: empfängt Signale
 - Soma (Zellkörper): Verarbeitung
 - Axon: leitet Aktionspotential weiter
 - Synapse: Signalübergang zur nächsten Zelle
@@ -299,16 +299,16 @@ Aktionspotential: Ruhepotential (-70mV) -> Depolarisation (Na+-Einstrom) -> Over
 
 Synaptische Übertragung: Aktionspotential -> Ca2+-Einstrom -> Vesikelfusion -> Neurotransmitterfreisetzung (z.B. Acetylcholin, Dopamin, Serotonin) -> Bindung an Rezeptoren -> Wirkung an Postsynapse
 
-Saltatorische Erregungsleitung: Bei myelinisierten Axonen springt das AP von Ranvier'schem Schnuerring zu Schnuerring — deutlich schneller als kontinuierliche Leitung.`,
+Saltatorische Erregungsleitung: Bei myelinisierten Axonen springt das AP von Ranvier'schem Schnürring zu Schnürring — deutlich schneller als kontinuierliche Leitung.`,
         diagram: "action-potential",
         merke: "Ruhepotential ≈ -70mV (K+-Gleichgewichtspotential). Depolarisation durch Na+-Einstrom, Repolarisation durch K+-Ausstrom. 'Alles-oder-nichts-Prinzip'!",
-        klinik: "Multiple Sklerose zerstört die Myelinscheiden — die saltatorische Erregungsleitung ist gestört, was zu Laeshmungen und Sensibilitätsstörungen führt.",
+        klinik: "Multiple Sklerose zerstört die Myelinscheiden — die saltatorische Erregungsleitung ist gestört, was zu Lähmungen und Sensibilitätsstörungen führt.",
       },
       {
         heading: "Synapse und Neurotransmitter",
         content: `Chemische Synapse (häufigster Typ):
 1. Aktionspotential erreicht präsynaptische Endigung
-2. Spannungsabhängige Ca2+-Kanaele öffnen sich
+2. Spannungsabhängige Ca2+-Kanäle öffnen sich
 3. Ca2+-Einstrom löst Vesikelfusion mit präsynaptischer Membran aus
 4. Neurotransmitter werden in den synaptischen Spalt freigesetzt
 5. Bindung an Rezeptoren der Postsynapse
@@ -330,15 +330,15 @@ Wichtige Neurotransmitter:
         heading: "Immunsystem",
         content: `Unspezifische (angeborene) Abwehr:
 - Physikalische Barrieren: Haut, Schleimhäute, Magensäure
-- Zellulaer: Makrophagen, Granulozyten, NK-Zellen (Phagozytose)
+- Zellulär: Makrophagen, Granulozyten, NK-Zellen (Phagozytose)
 - Humoral: Komplementsystem, Lysozym, Interferone
 
 Spezifische (adaptive) Abwehr:
-- Zellulaer: T-Lymphozyten (T-Helferzellen CD4+, zytotoxische T-Zellen CD8+)
+- Zellulär: T-Lymphozyten (T-Helferzellen CD4+, zytotoxische T-Zellen CD8+)
 - Humoral: B-Lymphozyten -> Plasmazellen -> Antikörper (Immunglobuline)
 
 Antikörper-Klassen:
-- IgG: häufigster Ak, plazentagaengig, Sekundärantwort
+- IgG: häufigster Ak, plazentagängig, Sekundärantwort
 - IgM: Erstantwort, größter Ak (Pentamer)
 - IgA: Schleimhautschutz (Speichel, Muttermilch)
 - IgE: Allergien, Parasitenabwehr
@@ -346,7 +346,7 @@ Antikörper-Klassen:
 
 Impfung: Aktiv (abgeschwächte/tote Erreger -> eigene Ak-Bildung) vs. Passiv (fertige Antikörper, sofortiger aber kurzer Schutz).`,
         diagram: "immune-response",
-        merke: "Antikörper-Reihenfolge nach Größe: IgM > IgA > IgG > IgE > IgD. IgM = 'iMMediate' (Erstantwort), IgG = 'lonG-lasting' (Sekundärantwort, plazentagaengig).",
+        merke: "Antikörper-Reihenfolge nach Größe: IgM > IgA > IgG > IgE > IgD. IgM = 'iMMediate' (Erstantwort), IgG = 'lonG-lasting' (Sekundärantwort, plazentagängig).",
         klinik: "Typ-I-Allergie (Soforttyp, z.B. Heuschnupfen): IgE-vermittelt. Mastzellen werden durch IgE-Quervernetzung aktiviert und setzen Histamin frei.",
       },
     ],
@@ -356,7 +356,7 @@ Impfung: Aktiv (abgeschwächte/tote Erreger -> eigene Ak-Bildung) vs. Passiv (fe
       "Aktionspotential: Ruhe (-70mV) → Depolarisation (Na+) → Repolarisation (K+)",
       "Saltatorische Leitung an myelinisierten Axonen ist viel schneller",
       "Angeborene Immunantwort ist schnell aber unspezifisch, adaptive ist langsamer aber spezifisch",
-      "IgM = Erstantwort, IgG = Sekundärantwort (häufigster, plazentagaengig)",
+      "IgM = Erstantwort, IgG = Sekundärantwort (häufigster, plazentagängig)",
     ],
     selfTestIds: ["bio-31", "bio-33", "bio-35", "bio-37", "bio-40"],
   },
@@ -372,7 +372,7 @@ Impfung: Aktiv (abgeschwächte/tote Erreger -> eigene Ak-Bildung) vs. Passiv (fe
     learningObjectives: [
       "Den Aufbau eines Atoms beschreiben (Protonen, Neutronen, Elektronen)",
       "Elektronenkonfigurationen aufstellen können",
-      "Periodische Trends erklaeren (Atomradius, EN, Ionisierungsenergie)",
+      "Periodische Trends erklären (Atomradius, EN, Ionisierungsenergie)",
       "Radioaktive Zerfallsarten und Halbwertszeit verstehen",
     ],
     sections: [
@@ -398,7 +398,7 @@ Elektronenkonfiguration:
 - Pauli-Prinzip: Max. 2 Elektronen pro Orbital mit antiparallelem Spin`,
         diagram: "atomic-orbitals",
         merke: "Aufbaureihenfolge: 1s 2s 2p 3s 3p 4s 3d 4p 5s 4d 5p 6s 4f 5d 6p. Merke: 4s wird VOR 3d besetzt, aber 3d hat niedrigere Energie wenn besetzt!",
-        klinik: "Radioaktive Isotope in der Medizin: Iod-131 fuer Schilddrüsendiagnostik, Technetium-99m als häufigster Tracer in der Nuklearmedizin.",
+        klinik: "Radioaktive Isotope in der Medizin: Iod-131 für Schilddrüsendiagnostik, Technetium-99m als häufigster Tracer in der Nuklearmedizin.",
       },
       {
         heading: "Periodensystem der Elemente",
@@ -420,7 +420,7 @@ Wichtige Gruppen:
 - Gruppe 17: Halogene (7 Valenzelektronen, reaktiv)
 - Gruppe 18: Edelgase (volle Außenschale, stabil/inert)`,
         diagram: "periodic-table",
-        merke: "Alle Trends gehen 'nach rechts oben' (ausser Atomradius und Metallcharakter): Elektronegativität, Ionisierungsenergie steigen von links unten nach rechts oben.",
+        merke: "Alle Trends gehen 'nach rechts oben' (außer Atomradius und Metallcharakter): Elektronegativität, Ionisierungsenergie steigen von links unten nach rechts oben.",
       },
       {
         heading: "Radioaktivität und Kernreaktionen",
@@ -437,7 +437,7 @@ Beta-minus-Zerfall (b-): Neutron -> Proton + Elektron + Antineutrino
 Gamma-Strahlung (g): Elektromagnetische Strahlung bei Kernübergang
 - Keine Änderung von Massen- oder Ordnungszahl
 
-Halbwertszeit (t1/2): Zeit, in der die Haelfte der Kerne zerfallen ist
+Halbwertszeit (t1/2): Zeit, in der die Hälfte der Kerne zerfallen ist
 - N(t) = N0 x (1/2)^(t/t1/2)
 - C-14: t1/2 = 5730 Jahre (Altersbestimmung)`,
         merke: "Alpha: -4 Masse, -2 OZ. Beta-minus: gleiche Masse, +1 OZ. Gamma: keine Änderung (nur Energieabgabe).",
@@ -457,12 +457,12 @@ Halbwertszeit (t1/2): Zeit, in der die Haelfte der Kerne zerfallen ist
     id: "bindungen",
     subject: "chemie",
     title: "Chemische Bindungen",
-    overview: "Chemische Bindungen bestimmen die Eigenschaften aller Stoffe. Von der Ionenbindung im Kochsalz bis zu den Wasserstoffbrücken im Wasser — dieses Kapitel erklaert, warum Materie so zusammenhält, wie sie es tut.",
+    overview: "Chemische Bindungen bestimmen die Eigenschaften aller Stoffe. Von der Ionenbindung im Kochsalz bis zu den Wasserstoffbrücken im Wasser — dieses Kapitel erklärt, warum Materie so zusammenhält, wie sie es tut.",
     learningObjectives: [
       "Die drei Hauptbindungstypen (Ionen-, Atom-, Metallbindung) unterscheiden",
       "Polare und unpolare kovalente Bindungen erkennen",
-      "Das VSEPR-Modell zur Bestimmung der Molekuelgeometrie anwenden",
-      "Zwischenmolekulare Kraefte in der richtigen Stärkereihenfolge einordnen",
+      "Das VSEPR-Modell zur Bestimmung der Molekülgeometrie anwenden",
+      "Zwischenmolekulare Kräfte in der richtigen Stärkereihenfolge einordnen",
     ],
     sections: [
       {
@@ -474,17 +474,17 @@ Halbwertszeit (t1/2): Zeit, in der die Haelfte der Kerne zerfallen ist
 - Elektrostatische Anziehung bildet Ionengitter (Kristallstruktur)
 
 Eigenschaften von Ionenverbindungen:
-- Hoher Schmelz- und Siedepunkt (starke elektrostatische Kraefte)
-- Sproede (Verschiebung führt zu Abstossung gleichnamiger Ionen)
+- Hoher Schmelz- und Siedepunkt (starke elektrostatische Kräfte)
+- Spröde (Verschiebung führt zu Abstoßung gleichnamiger Ionen)
 - Leiten Strom in Lösung oder Schmelze (frei bewegliche Ionen)
 - Oft wasserlöslich (Hydratation der Ionen)
 
 Gitterenergie: Energie, die frei wird, wenn Ionen aus der Gasphase ein Gitter bilden. Je kleiner die Ionen und je höher die Ladung, desto größer die Gitterenergie.
 
-Beispiel NaCl: Na -> Na+ + e-; Cl + e- -> Cl-; Na+Cl- bildet kubisch-flaechenzentriertes Gitter.`,
+Beispiel NaCl: Na -> Na+ + e-; Cl + e- -> Cl-; Na+Cl- bildet kubisch-flächenzentriertes Gitter.`,
         diagram: "ionic-bond",
         merke: "Ionenverbindungen leiten NUR als Lösung oder Schmelze Strom (frei bewegliche Ionen nötig). Als Feststoff: Isolator!",
-        klinik: "Elektrolyte im Blut (Na+, K+, Ca2+, Cl-) sind gelöste Ionen und essenziell fuer Nervenleitung, Muskelkontraktion und Säure-Basen-Haushalt.",
+        klinik: "Elektrolyte im Blut (Na+, K+, Ca2+, Cl-) sind gelöste Ionen und essenziell für Nervenleitung, Muskelkontraktion und Säure-Basen-Haushalt.",
       },
       {
         heading: "Kovalente Bindung (Atombindung)",
@@ -499,7 +499,7 @@ Polare vs. unpolare Bindung:
 - Unpolar: gleiche EN (z.B. H2, O2, N2)
 - Polar: unterschiedliche EN (z.B. H-Cl, H-O). Elektronenpaar ist zum elektronegativeren Atom verschoben -> Dipolmoment
 
-VSEPR-Modell (Elektronenpaarabstossung): Bestimmt die räumliche Struktur
+VSEPR-Modell (Elektronenpaarabstoßung): Bestimmt die räumliche Struktur
 - 2 Elektronenpaare: linear (180°) - z.B. CO2
 - 3 Elektronenpaare: trigonal planar (120°) - z.B. BF3
 - 4 Elektronenpaare: tetraedrisch (109,5°) - z.B. CH4
@@ -508,25 +508,25 @@ VSEPR-Modell (Elektronenpaarabstossung): Bestimmt die räumliche Struktur
         merke: "Sigma-Bindungen erlauben freie Rotation, Pi-Bindungen nicht! Deshalb gibt es bei Doppelbindungen cis/trans-Isomerie.",
       },
       {
-        heading: "Zwischenmolekulare Kraefte",
-        content: `Van-der-Waals-Kraefte (London-Dispersionskraefte):
+        heading: "Zwischenmolekulare Kräfte",
+        content: `Van-der-Waals-Kräfte (London-Dispersionskräfte):
 - Schwache, temporäre Dipole durch Elektronenverschiebung
-- In allen Molekuelen vorhanden
-- Stärke nimmt mit Molekuelgröße/Oberflaeche zu
+- In allen Molekülen vorhanden
+- Stärke nimmt mit Molekülgröße/Oberfläche zu
 
 Dipol-Dipol-Wechselwirkungen:
-- Zwischen permanenten Dipolen (polaren Molekuelen)
-- Stärker als Van-der-Waals-Kraefte
-- Beispiel: HCl-Molekuele
+- Zwischen permanenten Dipolen (polaren Molekülen)
+- Stärker als Van-der-Waals-Kräfte
+- Beispiel: HCl-Moleküle
 
 Wasserstoffbrückenbindungen:
 - Spezialfall: H gebunden an F, O oder N
-- Stärkste zwischenmolekulare Kraft (ausser Ionenbindung)
-- Erklaert die anomalen Eigenschaften des Wassers:
+- Stärkste zwischenmolekulare Kraft (außer Ionenbindung)
+- Erklärt die anomalen Eigenschaften des Wassers:
   * Hoher Siedepunkt (100°C statt erwartet -80°C)
   * Dichteanomalie (Eis schwimmt, max. Dichte bei 4°C)
   * Hohe Wärmekapazität
-  * Oberflaechenspannung`,
+  * Oberflächenspannung`,
         merke: "Stärke: Ionenbindung > H-Brücken > Dipol-Dipol > Van-der-Waals. H-Brücken nur bei F-H, O-H, N-H (FON-Regel!).",
         klinik: "Wasserstoffbrücken stabilisieren die DNA-Doppelhelix und die Sekundärstruktur von Proteinen (Alpha-Helix, Beta-Faltblatt) — Grundlage aller biologischen Strukturen.",
       },
@@ -534,8 +534,8 @@ Wasserstoffbrückenbindungen:
     summary: [
       "Ionenbindung: Metall + Nichtmetall, EN-Diff > 1,7, bildet Kristallgitter",
       "Kovalente Bindung: geteilte Elektronenpaare, polar wenn EN-Differenz vorhanden",
-      "VSEPR: Molekuelform hängt von Anzahl Bindungs- und freien Elektronenpaaren ab",
-      "H-Brücken erklaeren die Anomalien des Wassers (hoher Siedepunkt, Dichteanomalie)",
+      "VSEPR: Molekülform hängt von Anzahl Bindungs- und freien Elektronenpaaren ab",
+      "H-Brücken erklären die Anomalien des Wassers (hoher Siedepunkt, Dichteanomalie)",
       "Stärkereihenfolge: Ionenbindung > H-Brücken > Dipol-Dipol > Van-der-Waals",
     ],
     selfTestIds: ["chem-13", "chem-15", "chem-18", "chem-20", "chem-22"],
@@ -546,7 +546,7 @@ Wasserstoffbrückenbindungen:
     title: "Säuren, Basen und Redox",
     overview: "Säure-Base-Reaktionen und Redoxreaktionen gehören zu den am häufigsten geprüften Chemie-Themen im MedAT. pH-Berechnungen, Puffersysteme und Oxidationszahlen sind absolute Pflicht.",
     learningObjectives: [
-      "Säuren und Basen nach Broented-Lowry definieren",
+      "Säuren und Basen nach Brønsted-Lowry definieren",
       "pH-Werte berechnen und die pH-Skala interpretieren",
       "Die Henderson-Hasselbalch-Gleichung anwenden",
       "Oxidationszahlen bestimmen und Redoxgleichungen aufstellen",
@@ -558,7 +558,7 @@ Wasserstoffbrückenbindungen:
 - Säure: gibt H+-Ionen in wässriger Lösung ab
 - Base: gibt OH--Ionen in wässriger Lösung ab
 
-Broented-Lowry-Definition (allgemeiner):
+Brønsted-Lowry-Definition (allgemeiner):
 - Säure: Protonendonator (gibt H+ ab)
 - Base: Protonenakzeptor (nimmt H+ auf)
 - Konjugiertes Säure-Base-Paar: HCl/Cl-, NH3/NH4+
@@ -596,7 +596,7 @@ Biologisch wichtige Puffer:
 - Phosphatpuffer: H2PO4- / HPO4(2-)
 - Proteinpuffer: Aminosäuren als Zwitterionen`,
         merke: "Henderson-Hasselbalch: pH = pKs + log([A-]/[HA]). Wenn [A-] = [HA], dann pH = pKs — dort ist die Pufferkapazität maximal!",
-        klinik: "Der Bicarbonatpuffer (CO2/HCO3-) ist der wichtigste Blutpuffer. Hyperventilation blaest CO2 ab → pH steigt (respiratorische Alkalose). Bei Diabetes kann Ketosäureproduktion den Puffer erschoepfen → metabolische Azidose.",
+        klinik: "Der Bicarbonatpuffer (CO2/HCO3-) ist der wichtigste Blutpuffer. Hyperventilation bläst CO2 ab → pH steigt (respiratorische Alkalose). Bei Diabetes kann Ketosäureproduktion den Puffer erschöpfen → metabolische Azidose.",
       },
       {
         heading: "Redoxreaktionen",
@@ -611,8 +611,8 @@ Merkspruch: "OIL RIG" - Oxidation Is Loss, Reduction Is Gain
 Oxidationszahlen bestimmen:
 - Elemente: 0
 - Einatomige Ionen: gleich der Ladung
-- H in Verbindungen: +1 (ausser Metallhydride: -1)
-- O in Verbindungen: -2 (ausser Peroxide: -1)
+- H in Verbindungen: +1 (außer Metallhydride: -1)
+- O in Verbindungen: -2 (außer Peroxide: -1)
 - Summe aller OZ = Gesamtladung
 
 Beispiel: 2 Mg + O2 -> 2 MgO
@@ -624,7 +624,7 @@ Beispiel: 2 Mg + O2 -> 2 MgO
       },
     ],
     summary: [
-      "Säure = Protonendonator, Base = Protonenakzeptor (Broented-Lowry)",
+      "Säure = Protonendonator, Base = Protonenakzeptor (Brønsted-Lowry)",
       "pH = -log[H+]; jede pH-Stufe = Faktor 10",
       "Henderson-Hasselbalch: pH = pKs + log([A-]/[HA])",
       "Bicarbonatpuffer ist der wichtigste Blutpuffer",
@@ -643,15 +643,15 @@ Beispiel: 2 Mg + O2 -> 2 MgO
     title: "Mechanik",
     overview: "Mechanik ist der umfangreichste Physik-Bereich im MedAT. Newton'sche Gesetze, Energieerhaltung und Impuls werden regelmäßig abgefragt. Besonders Berechnungsaufgaben sind typisch — Formeln sicher beherrschen!",
     learningObjectives: [
-      "Gleichfoermige und beschleunigte Bewegung berechnen",
+      "Gleichförmige und beschleunigte Bewegung berechnen",
       "Die drei Newton'schen Gesetze anwenden",
-      "Energieerhaltung und Impulserhaltung bei Stoessen anwenden",
+      "Energieerhaltung und Impulserhaltung bei Stößen anwenden",
       "Arbeit, Leistung und Energie berechnen",
     ],
     sections: [
       {
-        heading: "Kinematik: Gleichfoermige und beschleunigte Bewegung",
-        content: `Gleichfoermige Bewegung (v = konstant):
+        heading: "Kinematik: Gleichförmige und beschleunigte Bewegung",
+        content: `Gleichförmige Bewegung (v = konstant):
 - Weg-Zeit-Gesetz: s = v x t
 - v-t-Diagramm: horizontale Linie
 - s-t-Diagramm: Gerade durch Ursprung
@@ -666,15 +666,15 @@ Freier Fall (a = g ≈ 9,81 m/s² ≈ 10 m/s²):
 - s(t) = 1/2 x g x t²
 - v = sqrt(2 x g x h) (Aufprallgeschwindigkeit)
 
-Horizontaler Wurf: Überlagerung von gleichfoermiger Bewegung (horizontal) und freiem Fall (vertikal).
+Horizontaler Wurf: Überlagerung von gleichförmiger Bewegung (horizontal) und freiem Fall (vertikal).
 
 Senkrechter Wurf nach oben: v(t) = v0 - g x t, maximale Höhe bei v = 0: h_max = v0²/(2g)`,
-        merke: "Freier Fall: Nach 1s: v = 10 m/s, s = 5m. Nach 2s: v = 20 m/s, s = 20m. Die Strecke waechst quadratisch!",
+        merke: "Freier Fall: Nach 1s: v = 10 m/s, s = 5m. Nach 2s: v = 20 m/s, s = 20m. Die Strecke wächst quadratisch!",
       },
       {
-        heading: "Newton'sche Gesetze und Kraefte",
+        heading: "Newton'sche Gesetze und Kräfte",
         content: `1. Newton'sches Gesetz (Trägheitsprinzip):
-Ein Körper bleibt in Ruhe oder bewegt sich geradlinig gleichfoermig, solange keine resultierende Kraft auf ihn wirkt.
+Ein Körper bleibt in Ruhe oder bewegt sich geradlinig gleichförmig, solange keine resultierende Kraft auf ihn wirkt.
 
 2. Newton'sches Gesetz (Aktionsprinzip):
 F = m x a (Kraft = Masse x Beschleunigung)
@@ -683,9 +683,9 @@ F = m x a (Kraft = Masse x Beschleunigung)
 3. Newton'sches Gesetz (Reactio):
 Actio = Reactio. Zu jeder Kraft gibt es eine gleich große, entgegengesetzte Gegenkraft.
 
-Wichtige Kraefte:
+Wichtige Kräfte:
 - Gewichtskraft: F_G = m x g
-- Reibungskraft: F_R = mue x F_N (mue = Reibungskoeffizient)
+- Reibungskraft: F_R = μ x F_N (μ = Reibungskoeffizient)
 - Federkraft: F = k x s (Hooke'sches Gesetz)
 - Zentripetalkraft: F_Z = m x v²/r (Kreisbewegung)
 
@@ -693,7 +693,7 @@ Arbeit: W = F x s x cos(alpha), Einheit: Joule [J]
 Leistung: P = W/t = F x v, Einheit: Watt [W]`,
         diagram: "newton-forces",
         merke: "F = m x a ist die Grundgleichung der Mechanik. Gewicht ist NICHT gleich Masse: Gewichtskraft F_G = m x g hängt von der Gravitation ab!",
-        klinik: "In der Biomechanik wirken Newton'sche Gesetze: Beim Gehen wirkt auf das Kniegelenk das 3-4fache des Körpergewichts — relevant fuer Orthopaedie und Rehabilitation.",
+        klinik: "In der Biomechanik wirken Newton'sche Gesetze: Beim Gehen wirkt auf das Kniegelenk das 3-4fache des Körpergewichts — relevant für Orthopädie und Rehabilitation.",
       },
       {
         heading: "Energie und Impuls",
@@ -710,9 +710,9 @@ mgh = 1/2 mv² -> v = sqrt(2gh)
 Impuls: p = m x v [kg x m/s]
 - Impulserhaltung: p_vorher = p_nachher (in abgeschlossenem System)
 
-Stoesse:
-- Elastischer Stoss: Impuls UND kinetische Energie erhalten
-- Inelastischer Stoss: nur Impuls erhalten
+Stöße:
+- Elastischer Stoß: Impuls UND kinetische Energie erhalten
+- Inelastischer Stoß: nur Impuls erhalten
 - Perfekt inelastisch: Körper verschmelzen, maximaler Energieverlust`,
         merke: "Bei Energieerhaltung: mgh = ½mv² → v = sqrt(2gh). Geschwindigkeit am Boden ist unabhängig von der Masse!",
       },
@@ -721,7 +721,7 @@ Stoesse:
       "Gleichmäßig beschleunigt: s = ½at², v = at, v² = 2as",
       "F = m x a (Newton 2), F_G = mg, F_R = µ x F_N",
       "E_kin = ½mv², E_pot = mgh, Energieerhaltung: E_ges = const",
-      "Impuls p = mv ist bei Stoessen erhalten, kin. Energie nur bei elastischen Stoessen",
+      "Impuls p = mv ist bei Stößen erhalten, kin. Energie nur bei elastischen Stößen",
       "Arbeit W = F x s x cos(α), Leistung P = W/t",
     ],
     selfTestIds: ["phys-1", "phys-3", "phys-5", "phys-8", "phys-10"],
@@ -762,20 +762,20 @@ Elektrische Energie: E = P x t = U x I x t, Einheit Joule [J]
       {
         heading: "Reihen- und Parallelschaltung",
         content: `Reihenschaltung:
-- Strom ist ueberall gleich: I_ges = I_1 = I_2
+- Strom ist überall gleich: I_ges = I_1 = I_2
 - Spannungen addieren sich: U_ges = U_1 + U_2
 - Widerstände addieren sich: R_ges = R_1 + R_2
 - Spannungsteiler: U_1/U_2 = R_1/R_2
 
 Parallelschaltung:
-- Spannung ist ueberall gleich: U_ges = U_1 = U_2
-- Stroeme addieren sich: I_ges = I_1 + I_2
+- Spannung ist überall gleich: U_ges = U_1 = U_2
+- Ströme addieren sich: I_ges = I_1 + I_2
 - Widerstände: 1/R_ges = 1/R_1 + 1/R_2
 - R_ges ist KLEINER als der kleinste Einzelwiderstand
 - Stromteiler: I_1/I_2 = R_2/R_1
 
 Kirchhoff'sche Regeln:
-1. Knotenregel: Summe aller Stroeme an einem Knoten = 0
+1. Knotenregel: Summe aller Ströme an einem Knoten = 0
 2. Maschenregel: Summe aller Spannungen in einer Masche = 0`,
         diagram: "circuit",
         merke: "Reihe: gleicher Strom, Widerstände addieren. Parallel: gleiche Spannung, 1/R addieren. Der Gesamtwiderstand parallel ist immer KLEINER als der kleinste Einzelwiderstand!",
@@ -791,7 +791,7 @@ Kirchhoff'sche Regeln:
 
 Magnetisches Feld B:
 - Einheit Tesla [T]
-- Feldlinien: von Nord nach Sued (außerhalb des Magneten)
+- Feldlinien: von Nord nach Süd (außerhalb des Magneten)
 - Stromdurchflossener Leiter erzeugt Magnetfeld (Rechte-Hand-Regel)
 
 Lorentzkraft: F = q x v x B x sin(alpha)
@@ -808,7 +808,7 @@ Elektromagnetische Induktion (Faraday):
     summary: [
       "Ohm: U = R x I, Leistung P = U x I = I²R = U²/R",
       "Reihenschaltung: gleicher Strom, R addieren. Parallel: gleiche Spannung, 1/R addieren",
-      "Kirchhoff: Knotenregel (Stroeme) und Maschenregel (Spannungen)",
+      "Kirchhoff: Knotenregel (Ströme) und Maschenregel (Spannungen)",
       "Lorentzkraft F = qvB sin(α) steht senkrecht auf v und B",
       "Induktion: Änderung des Magnetflusses erzeugt Spannung",
     ],
@@ -818,24 +818,24 @@ Elektromagnetische Induktion (Faraday):
     id: "optik",
     subject: "physik",
     title: "Optik und Wellen",
-    overview: "Optik umfasst Reflexion, Brechung und Linsen — Themen die im MedAT regelmäßig vorkommen, besonders in Verbindung mit dem Auge. Wellen und das elektromagnetische Spektrum ergaenzen dieses Kapitel.",
+    overview: "Optik umfasst Reflexion, Brechung und Linsen — Themen die im MedAT regelmäßig vorkommen, besonders in Verbindung mit dem Auge. Wellen und das elektromagnetische Spektrum ergänzen dieses Kapitel.",
     learningObjectives: [
       "Reflexionsgesetz und Brechungsgesetz anwenden",
       "Linsengleichung und Vergrößerung berechnen",
-      "Totalreflexion und deren Anwendungen erklaeren",
+      "Totalreflexion und deren Anwendungen erklären",
       "Das elektromagnetische Spektrum kennen",
     ],
     sections: [
       {
         heading: "Reflexion und Brechung",
         content: `Reflexionsgesetz: Einfallswinkel = Ausfallswinkel (alpha = beta)
-- Gemessen zum Lot (Senkrechte auf die Oberflaeche)
+- Gemessen zum Lot (Senkrechte auf die Oberfläche)
 
 Brechungsgesetz (Snellius): n1 x sin(alpha) = n2 x sin(beta)
 - n = Brechungsindex (Vakuum: 1, Wasser: 1,33, Glas: ~1,5)
 - Licht wird zum Lot hin gebrochen, wenn es in ein optisch dichteres Medium eintritt
 
-Totalreflexion: Wenn Licht von dichterem zu dünnerem Medium uebergeht und der Einfallswinkel den Grenzwinkel ueberschreitet.
+Totalreflexion: Wenn Licht von dichterem zu dünnerem Medium übergeht und der Einfallswinkel den Grenzwinkel überschreitet.
 - sin(alpha_grenz) = n2/n1
 - Anwendung: Glasfaserkabel, Lichtleiter
 
@@ -847,7 +847,7 @@ Dispersion: Brechungsindex ist wellenlängenabhängig
       {
         heading: "Linsen und optische Instrumente",
         content: `Sammellinse (konvex): bündelt paralleles Licht im Brennpunkt F
-Zerstreuungslinse (konkav): streut Licht, als kaeme es vom virtuellen Brennpunkt
+Zerstreuungslinse (konkav): streut Licht, als käme es vom virtuellen Brennpunkt
 
 Linsengleichung (dünne Linse): 1/f = 1/g + 1/b
 - f = Brennweite, g = Gegenstandsweite, b = Bildweite
@@ -857,14 +857,14 @@ Vergrößerung: V = B/G = b/g (Bildgröße/Gegenstandsgröße)
 
 Auge:
 - Hornhaut + Linse brechen Licht auf Netzhaut (Retina)
-- Akkommodation: Linse ändert Kruemmung (Nah/Fernsicht)
+- Akkommodation: Linse ändert Krümmung (Nah/Fernsicht)
 - Kurzsichtigkeit: Augapfel zu lang -> Zerstreuungslinse
 - Weitsichtigkeit: Augapfel zu kurz -> Sammellinse
 
 Optische Instrumente: Lupe (Vergrößerung V = 25cm/f), Mikroskop (zwei Sammellinsen), Fernrohr.`,
         diagram: "lens-imaging",
         merke: "1/f = 1/g + 1/b. Kurzsichtig = zu lang → Zerstreuungslinse (negative Dioptrien). Weitsichtig = zu kurz → Sammellinse (positive Dioptrien).",
-        klinik: "Laserchirurgie (LASIK) korrigiert die Hornhautkruemmung und damit die Brechkraft des Auges — so werden Fehlsichtigkeiten ohne Brille korrigiert.",
+        klinik: "Laserchirurgie (LASIK) korrigiert die Hornhautkrümmung und damit die Brechkraft des Auges — so werden Fehlsichtigkeiten ohne Brille korrigiert.",
       },
       {
         heading: "Wellen und elektromagnetisches Spektrum",
@@ -874,7 +874,7 @@ Optische Instrumente: Lupe (Vergrößerung V = 25cm/f), Mikroskop (zwei Sammelli
 - Sichtbares Licht: ca. 380nm (violett) bis 780nm (rot)
 
 Elektromagnetisches Spektrum (steigende Wellenlänge):
-Gamma -> Roentgen -> UV -> Sichtbar -> Infrarot -> Mikrowellen -> Radiowellen
+Gamma -> Röntgen -> UV -> Sichtbar -> Infrarot -> Mikrowellen -> Radiowellen
 
 Interferenz: Überlagerung von Wellen
 - Konstruktiv: Wellenberge treffen aufeinander (Verstärkung)
@@ -889,14 +889,14 @@ Welle-Teilchen-Dualismus:
 - h = 6,63 x 10^-34 Js (Planck'sches Wirkungsquantum)`,
         diagram: "em-spectrum",
         merke: "Hohe Frequenz = kurze Wellenlänge = hohe Energie (Gamma). Niedrige Frequenz = lange Wellenlänge = niedrige Energie (Radio). E = h x f.",
-        klinik: "Roentgenstrahlung durchdringt Weichgewebe, wird aber von Knochen absorbiert — Basis der Roentgendiagnostik. UV-Strahlung kann DNA-Schäden verursachen (Hautkrebs).",
+        klinik: "Röntgenstrahlung durchdringt Weichgewebe, wird aber von Knochen absorbiert — Basis der Röntgendiagnostik. UV-Strahlung kann DNA-Schäden verursachen (Hautkrebs).",
       },
     ],
     summary: [
       "Reflexion: Einfallswinkel = Ausfallswinkel",
       "Brechung: n1 sin(α) = n2 sin(β), Totalreflexion nur von dicht nach dünn",
       "Linsengleichung: 1/f = 1/g + 1/b, Brechkraft D = 1/f [dpt]",
-      "EM-Spektrum: Gamma → Roentgen → UV → Sichtbar → IR → Mikrowellen → Radio",
+      "EM-Spektrum: Gamma → Röntgen → UV → Sichtbar → IR → Mikrowellen → Radio",
       "E = hf: Photonenenergie proportional zur Frequenz",
     ],
     selfTestIds: ["phys-21", "phys-24", "phys-27", "phys-30", "phys-33"],
@@ -909,7 +909,7 @@ Welle-Teilchen-Dualismus:
     id: "algebra",
     subject: "mathematik",
     title: "Algebra",
-    overview: "Algebra bildet die Basis fuer alle Berechnungen im MedAT. Quadratische Gleichungen, Logarithmen und Prozentrechnung sind typische Aufgabentypen. Sichere Formelkenntnisse sparen wertvolle Prüfungszeit.",
+    overview: "Algebra bildet die Basis für alle Berechnungen im MedAT. Quadratische Gleichungen, Logarithmen und Prozentrechnung sind typische Aufgabentypen. Sichere Formelkenntnisse sparen wertvolle Prüfungszeit.",
     learningObjectives: [
       "Quadratische Gleichungen mit der Lösungsformel lösen",
       "Potenz-, Wurzel- und Logarithmengesetze sicher anwenden",
@@ -985,7 +985,7 @@ Dreisatz:
 
 Mischungsrechnung: Gewichteter Durchschnitt
 m1*c1 + m2*c2 = (m1+m2) * c_mix`,
-        merke: "Zinseszins: K_n = K_0 x (1 + p/100)^n. Gleiche Formel wie Bakterienwachstum und radioaktiver Zerfall — nur mit (1-p/100) fuer Zerfall!",
+        merke: "Zinseszins: K_n = K_0 x (1 + p/100)^n. Gleiche Formel wie Bakterienwachstum und radioaktiver Zerfall — nur mit (1-p/100) für Zerfall!",
         klinik: "Prozentrechnung in der Medizin: Dosierungsberechnungen, Verdünnungsreihen, Sensitivität/Spezifität von Tests — alles basiert auf sicherem Umgang mit Prozenten.",
       },
     ],
@@ -1002,18 +1002,18 @@ m1*c1 + m2*c2 = (m1+m2) * c_mix`,
     id: "geometrie",
     subject: "mathematik",
     title: "Geometrie und Trigonometrie",
-    overview: "Geometrie und Trigonometrie umfassen Flaechen- und Volumenberechnungen sowie Winkelfunktionen. Diese Themen werden im MedAT oft mit physikalischen Anwendungen kombiniert.",
+    overview: "Geometrie und Trigonometrie umfassen Flächen- und Volumenberechnungen sowie Winkelfunktionen. Diese Themen werden im MedAT oft mit physikalischen Anwendungen kombiniert.",
     learningObjectives: [
-      "Flaechen und Umfaenge von Grundfiguren berechnen",
-      "Volumen und Oberflaechen von Körpern berechnen",
+      "Flächen und Umfänge von Grundfiguren berechnen",
+      "Volumen und Oberflächen von Körpern berechnen",
       "Sinus, Kosinus und Tangens im rechtwinkligen Dreieck anwenden",
-      "Sinus- und Kosinussatz fuer allgemeine Dreiecke nutzen",
+      "Sinus- und Kosinussatz für allgemeine Dreiecke nutzen",
     ],
     sections: [
       {
-        heading: "Flaechen und Umfaenge",
+        heading: "Flächen und Umfänge",
         content: `Dreieck:
-- Flaeche: A = 1/2 x g x h (Grundseite x Höhe)
+- Fläche: A = 1/2 x g x h (Grundseite x Höhe)
 - Satz des Pythagoras (rechtwinkliges Dreieck): a² + b² = c²
 - Winkelsumme: alpha + beta + gamma = 180°
 
@@ -1024,39 +1024,39 @@ Viereck:
 - Trapez: A = 1/2 x (a+c) x h
 
 Kreis:
-- Flaeche: A = pi x r²
+- Fläche: A = pi x r²
 - Umfang: U = 2 x pi x r = pi x d
 - Kreissektor: A = alpha/360 x pi x r²
 - Kreisbogen: b = alpha/360 x 2 x pi x r
 
-Zusammengesetzte Flaechen: in Teilflaechen zerlegen, einzeln berechnen, addieren/subtrahieren.`,
+Zusammengesetzte Flächen: in Teilflächen zerlegen, einzeln berechnen, addieren/subtrahieren.`,
         merke: "Pythagoras: a² + b² = c² (c ist die Hypotenuse = längste Seite, gegenüber dem rechten Winkel). Funktioniert NUR bei rechtwinkligen Dreiecken!",
       },
       {
         heading: "Körper und Volumen",
         content: `Quader:
 - Volumen: V = a x b x c
-- Oberflaeche: O = 2(ab + ac + bc)
+- Oberfläche: O = 2(ab + ac + bc)
 
 Würfel:
 - V = a³, O = 6a²
 
 Zylinder:
 - V = pi x r² x h
-- Mantelflaeche: M = 2 x pi x r x h
-- Oberflaeche: O = 2 x pi x r x (r + h)
+- Mantelfläche: M = 2 x pi x r x h
+- Oberfläche: O = 2 x pi x r x (r + h)
 
 Kegel:
 - V = 1/3 x pi x r² x h
 - Mantellinie: s = sqrt(r² + h²)
-- Mantelflaeche: M = pi x r x s
+- Mantelfläche: M = pi x r x s
 
 Kugel:
 - V = 4/3 x pi x r³
-- Oberflaeche: O = 4 x pi x r²
+- Oberfläche: O = 4 x pi x r²
 
 Pyramide:
-- V = 1/3 x A_Grundflaeche x h`,
+- V = 1/3 x A_Grundfläche x h`,
         merke: "Spitze Körper (Kegel, Pyramide) haben Faktor 1/3 im Volumen gegenüber dem 'vollen' Körper (Zylinder, Prisma). Kugel: V = 4/3πr³, O = 4πr².",
       },
       {
@@ -1075,7 +1075,7 @@ Einheitskreis: sin² + cos² = 1
 Sinussatz: a/sin(A) = b/sin(B) = c/sin(C)
 Kosinussatz: c² = a² + b² - 2ab x cos(C)
 
-Bogenmass: alpha(rad) = alpha(°) x pi/180
+Bogenmaß: alpha(rad) = alpha(°) x pi/180
 - 360° = 2*pi rad, 180° = pi rad, 90° = pi/2 rad`,
         diagram: "unit-circle",
         merke: "SOH-CAH-TOA: Sin = Opposite/Hypotenuse, Cos = Adjacent/Hypotenuse, Tan = Opposite/Adjacent. sin²(α) + cos²(α) = 1 gilt IMMER!",
@@ -1086,7 +1086,7 @@ Bogenmass: alpha(rad) = alpha(°) x pi/180
       "Kreis: A = πr², U = 2πr, Kugel: V = 4/3πr³",
       "Spitze Körper: Faktor 1/3 (Kegel, Pyramide)",
       "sin = Gegenkathete/Hypotenuse, cos = Ankathete/Hypotenuse",
-      "Einheitskreis: sin² + cos² = 1, Kosinussatz fuer allgemeine Dreiecke",
+      "Einheitskreis: sin² + cos² = 1, Kosinussatz für allgemeine Dreiecke",
     ],
     selfTestIds: ["math-13", "math-15", "math-18", "math-20", "math-22"],
   },
@@ -1099,7 +1099,7 @@ Bogenmass: alpha(rad) = alpha(°) x pi/180
       "Verschiedene Funktionstypen erkennen und ihre Eigenschaften beschreiben",
       "Ableitungsregeln sicher anwenden (Potenz-, Produkt-, Ketten-, Quotientenregel)",
       "Extremstellen und Wendepunkte berechnen",
-      "Grundintegrale bestimmen und Flaechen berechnen",
+      "Grundintegrale bestimmen und Flächen berechnen",
     ],
     sections: [
       {
@@ -1153,7 +1153,7 @@ Anwendungen:
       },
       {
         heading: "Integralrechnung (Grundlagen)",
-        content: `Das bestimmte Integral berechnet die Flaeche zwischen Kurve und x-Achse:
+        content: `Das bestimmte Integral berechnet die Fläche zwischen Kurve und x-Achse:
 Integral von a bis b über f(x)dx = F(b) - F(a)
 
 F(x) ist die Stammfunktion (Aufleitung) von f(x): F'(x) = f(x)
@@ -1169,9 +1169,9 @@ Rechenregeln:
 - Integral [c x f(x)] dx = c x Integral f(x) dx
 - Integral [f(x) + g(x)] dx = Integral f(x) dx + Integral g(x) dx
 
-Flaeche zwischen Kurve und x-Achse:
+Fläche zwischen Kurve und x-Achse:
 - Wenn f(x) < 0: Integral ist negativ -> Betrag nehmen
-- Flaeche zwischen zwei Kurven: Integral |f(x) - g(x)| dx`,
+- Fläche zwischen zwei Kurven: Integral |f(x) - g(x)| dx`,
         merke: "Integration ist die Umkehrung der Ableitung. Stammfunktion von x^n ist x^(n+1)/(n+1). ACHTUNG: Bei x^(-1) = 1/x ist die Stammfunktion ln|x|!",
       },
     ],
@@ -1180,7 +1180,7 @@ Flaeche zwischen Kurve und x-Achse:
       "Potenzregel: (x^n)' = nx^(n-1), Kettenregel: [f(g(x))]' = f'(g(x))·g'(x)",
       "(e^x)' = e^x, (ln x)' = 1/x, (sin x)' = cos x, (cos x)' = -sin x",
       "Extremstellen: f'(x) = 0, Minimum f''> 0, Maximum f'' < 0",
-      "Stammfunktion: x^n → x^(n+1)/(n+1), Flaeche = F(b) - F(a)",
+      "Stammfunktion: x^n → x^(n+1)/(n+1), Fläche = F(b) - F(a)",
     ],
     selfTestIds: ["math-25", "math-28", "math-30", "math-33", "math-35"],
   },

@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 const parts = [
-  { id: "presynaptic", label: "Präsynaptische Endigung", detail: "Verdicktes Axonende (Bouton). Enthält synaptische Vesikel mit Neurotransmittern und Mitochondrien fuer Energieversorgung." },
+  { id: "presynaptic", label: "Präsynaptische Endigung", detail: "Verdicktes Axonende (Bouton). Enthält synaptische Vesikel mit Neurotransmittern und Mitochondrien für Energieversorgung." },
   { id: "vesicle", label: "Synaptische Vesikel", detail: "Membranumhüllte Blaeschen mit Neurotransmittern (z.B. Acetylcholin, Glutamat, GABA). Werden bei Erregung freigesetzt." },
-  { id: "calcium", label: "Ca²⁺-Einstrom", detail: "Aktionspotential öffnet spannungsgesteuerte Ca²⁺-Kanaele. Ca²⁺-Einstrom löst Vesikelfusion und Exozytose aus." },
+  { id: "calcium", label: "Ca²⁺-Einstrom", detail: "Aktionspotential öffnet spannungsgesteuerte Ca²⁺-Kanäle. Ca²⁺-Einstrom löst Vesikelfusion und Exozytose aus." },
   { id: "fusion", label: "Vesikelfusion (Exozytose)", detail: "Ca²⁺ bewirkt Verschmelzung der Vesikel mit der präsynaptischen Membran. SNARE-Proteine vermitteln die Fusion." },
   { id: "cleft", label: "Synaptischer Spalt", detail: "Ca. 20-40 nm breit. Neurotransmitter diffundieren durch den Spalt zur postsynaptischen Membran." },
-  { id: "receptor", label: "Postsynaptische Rezeptoren", detail: "Ionotrope Rezeptoren: ligandengesteuerte Ionenkanaele (schnell). Metabotrope Rezeptoren: G-Protein-gekoppelt (langsam)." },
-  { id: "postsynaptic", label: "Postsynaptische Membran", detail: "Enthält Rezeptoren und Ionenkanaele. EPSP (erregend) oder IPSP (hemmend) je nach Neurotransmitter und Rezeptortyp." },
+  { id: "receptor", label: "Postsynaptische Rezeptoren", detail: "Ionotrope Rezeptoren: ligandengesteuerte Ionenkanäle (schnell). Metabotrope Rezeptoren: G-Protein-gekoppelt (langsam)." },
+  { id: "postsynaptic", label: "Postsynaptische Membran", detail: "Enthält Rezeptoren und Ionenkanäle. EPSP (erregend) oder IPSP (hemmend) je nach Neurotransmitter und Rezeptortyp." },
   { id: "reuptake", label: "Wiederaufnahme / Abbau", detail: "Neurotransmitter werden enzymatisch abgebaut (z.B. AChE) oder durch Transporter in die Praesynapse zurückaufgenommen (Reuptake)." },
 ];
 
@@ -19,7 +19,7 @@ export default function Synapse() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Synapse — Signalübertragung</h4>
-      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen fuer Details.</p>
+      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen für Details.</p>
 
       <svg viewBox="0 0 460 420" className="w-full max-w-xl mx-auto">
         {/* ===== PRESYNAPTIC TERMINAL ===== */}
@@ -70,7 +70,7 @@ export default function Synapse() {
               <polygon points={`${x - 3},204 ${x},196 ${x + 3},204`} fill="#eab308" />
             </g>
           ))}
-          <text x="330" y="175" textAnchor="middle" fontSize="7" fill="#d97706" fontWeight="bold">Ca²⁺-Kanaele</text>
+          <text x="330" y="175" textAnchor="middle" fontSize="7" fill="#d97706" fontWeight="bold">Ca²⁺-Kanäle</text>
         </g>
 
         {/* Vesicle fusion */}

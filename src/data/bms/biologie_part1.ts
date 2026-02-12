@@ -7,7 +7,7 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "zellbiologie",
     topic: "Organellen",
-    text: "Welche Funktion uebernimmt das glatte endoplasmatische Retikulum (sER) hauptsaechlich in der Zelle?",
+    text: "Welche Funktion übernimmt das glatte endoplasmatische Retikulum (sER) hauptsächlich in der Zelle?",
     options: [
       { id: "a", text: "Proteinbiosynthese" },
       { id: "b", text: "DNA-Replikation" },
@@ -17,7 +17,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Das glatte endoplasmatische Retikulum (sER) ist vor allem fuer die Lipidsynthese, den Kohlenhydratstoffwechsel sowie die Entgiftung von Fremdstoffen zuständig. Im Gegensatz zum rauen ER trägt es keine Ribosomen und ist daher nicht an der Proteinbiosynthese beteiligt. In Leberzellen ist das sER besonders stark ausgeprägt, da dort viele Entgiftungsreaktionen ablaufen.",
+      "Das glatte endoplasmatische Retikulum (sER) ist vor allem für die Lipidsynthese, den Kohlenhydratstoffwechsel sowie die Entgiftung von Fremdstoffen zuständig. Im Gegensatz zum rauen ER trägt es keine Ribosomen und ist daher nicht an der Proteinbiosynthese beteiligt. In Leberzellen ist das sER besonders stark ausgeprägt, da dort viele Entgiftungsreaktionen ablaufen.",
     difficulty: "leicht",
     tags: ["zellbiologie", "organellen", "endoplasmatisches-retikulum"],
   },
@@ -64,7 +64,7 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "zellbiologie",
     topic: "ATP",
-    text: "Wie viele Molekuele ATP werden netto in der Glykolyse pro Molekuel Glucose gewonnen?",
+    text: "Wie viele Moleküle ATP werden netto in der Glykolyse pro Molekül Glucose gewonnen?",
     options: [
       { id: "a", text: "2 ATP" },
       { id: "b", text: "1 ATP" },
@@ -74,7 +74,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "In der Glykolyse werden brutto 4 ATP gewonnen, jedoch muessen 2 ATP in der Vorbereitungsphase investiert werden (Phosphorylierung von Glucose und Fructose-6-phosphat). Die Nettobilanz beträgt somit 2 ATP pro Molekuel Glucose. Zusätzlich werden 2 NADH gebildet, die in der Atmungskette weitere ATP liefern können.",
+      "In der Glykolyse werden brutto 4 ATP gewonnen, jedoch müssen 2 ATP in der Vorbereitungsphase investiert werden (Phosphorylierung von Glucose und Fructose-6-phosphat). Die Nettobilanz beträgt somit 2 ATP pro Molekül Glucose. Zusätzlich werden 2 NADH gebildet, die in der Atmungskette weitere ATP liefern können.",
     difficulty: "leicht",
     tags: ["zellbiologie", "ATP", "glykolyse", "energiestoffwechsel"],
   },
@@ -86,14 +86,14 @@ export const biologieQuestionsPart1: Question[] = [
     text: "Welche Aussage über Mitochondrien ist FALSCH?",
     options: [
       { id: "a", text: "Sie besitzen eine Doppelmembran." },
-      { id: "b", text: "Sie enthalten eigene ringfoermige DNA." },
+      { id: "b", text: "Sie enthalten eigene ringförmige DNA." },
       { id: "c", text: "Sie können sich durch Teilung vermehren." },
       { id: "d", text: "Der Citratzyklus läuft in der Mitochondrienmatrix ab." },
       { id: "e", text: "Die oxidative Phosphorylierung findet an der äußeren Mitochondrienmembran statt." },
     ],
     correctOptionId: "e",
     explanation:
-      "Die oxidative Phosphorylierung findet an der inneren Mitochondrienmembran statt, nicht an der äußeren. Die innere Membran ist stark gefaltet (Cristae) und enthält die Komplexe der Atmungskette sowie die ATP-Synthase. Alle anderen Aussagen sind korrekt: Mitochondrien haben eine Doppelmembran, eigene ringfoermige DNA (mtDNA), können sich teilen und beherbergen den Citratzyklus in ihrer Matrix.",
+      "Die oxidative Phosphorylierung findet an der inneren Mitochondrienmembran statt, nicht an der äußeren. Die innere Membran ist stark gefaltet (Cristae) und enthält die Komplexe der Atmungskette sowie die ATP-Synthase. Alle anderen Aussagen sind korrekt: Mitochondrien haben eine Doppelmembran, eigene ringförmige DNA (mtDNA), können sich teilen und beherbergen den Citratzyklus in ihrer Matrix.",
     difficulty: "schwer",
     tags: ["zellbiologie", "organellen", "mitochondrien"],
   },
@@ -121,7 +121,7 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "zellbiologie",
     topic: "Organellen",
-    text: "Welches Organell ist hauptsaechlich fuer den Abbau von zellulaerem Material durch Autophagie verantwortlich?",
+    text: "Welches Organell ist hauptsächlich für den Abbau von zellulärem Material durch Autophagie verantwortlich?",
     options: [
       { id: "a", text: "Peroxisom" },
       { id: "b", text: "Lysosom" },
@@ -131,7 +131,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Lysosomen sind membranumhüllte Organellen, die hydrolytische Enzyme (saure Hydrolasen) enthalten und fuer den intrazellullaeren Abbau von Makromolekuelen und Organellen zuständig sind. Bei der Autophagie werden beschädigte Organellen oder ueberflüssige Zellbestandteile in Autophagosomen eingeschlossen, die dann mit Lysosomen fusionieren, sodass der Inhalt abgebaut werden kann.",
+      "Lysosomen sind membranumhüllte Organellen, die hydrolytische Enzyme (saure Hydrolasen) enthalten und für den intrazellulären Abbau von Makromolekuelen und Organellen zuständig sind. Bei der Autophagie werden beschädigte Organellen oder ueberflüssige Zellbestandteile in Autophagosomen eingeschlossen, die dann mit Lysosomen fusionieren, sodass der Inhalt abgebaut werden kann.",
     difficulty: "leicht",
     tags: ["zellbiologie", "organellen", "lysosomen", "autophagie"],
   },
@@ -197,7 +197,7 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "zellbiologie",
     topic: "Zellteilung",
-    text: "Welches Ereignis ist charakteristisch fuer die Anaphase I der Meiose und unterscheidet sie von der Anaphase der Mitose?",
+    text: "Welches Ereignis ist charakteristisch für die Anaphase I der Meiose und unterscheidet sie von der Anaphase der Mitose?",
     options: [
       { id: "a", text: "Homologe Chromosomenpaare werden getrennt, die Zentromere bleiben intakt." },
       { id: "b", text: "Die Zentromere teilen sich und die Schwesterchromatiden werden getrennt." },
@@ -221,12 +221,12 @@ export const biologieQuestionsPart1: Question[] = [
       { id: "a", text: "Synthese von Steroidhormonen" },
       { id: "b", text: "Abbau von Fettsäuren durch Beta-Oxidation" },
       { id: "c", text: "Speicherung von genetischer Information" },
-      { id: "d", text: "Modifikation, Sortierung und Verpackung von Proteinen fuer den Export" },
+      { id: "d", text: "Modifikation, Sortierung und Verpackung von Proteinen für den Export" },
       { id: "e", text: "Energiegewinnung durch oxidative Phosphorylierung" },
     ],
     correctOptionId: "d",
     explanation:
-      "Der Golgi-Apparat (Dictyosom) ist fuer die posttranslationale Modifikation (z.B. Glykosylierung), Sortierung und Verpackung von Proteinen in Transportvesikel zuständig. Proteine, die am rauen ER synthetisiert wurden, gelangen über Transportvesikel zum cis-Golgi, durchlaufen die Zisternen und werden am trans-Golgi in Vesikel verpackt, die an die Zellmembran, Lysosomen oder den Extrazellularraum adressiert werden.",
+      "Der Golgi-Apparat (Dictyosom) ist für die posttranslationale Modifikation (z.B. Glykosylierung), Sortierung und Verpackung von Proteinen in Transportvesikel zuständig. Proteine, die am rauen ER synthetisiert wurden, gelangen über Transportvesikel zum cis-Golgi, durchlaufen die Zisternen und werden am trans-Golgi in Vesikel verpackt, die an die Zellmembran, Lysosomen oder den Extrazellularraum adressiert werden.",
     difficulty: "mittel",
     tags: ["zellbiologie", "organellen", "golgi-apparat"],
   },
@@ -260,7 +260,7 @@ export const biologieQuestionsPart1: Question[] = [
       { id: "b", text: "Citratzyklus" },
       { id: "c", text: "Translation an membrangebundenen Ribosomen" },
       { id: "d", text: "Abbau von Wasserstoffperoxid (H2O2) durch Katalase" },
-      { id: "e", text: "Phospholipidsynthese fuer die Kernmembran" },
+      { id: "e", text: "Phospholipidsynthese für die Kernmembran" },
     ],
     correctOptionId: "d",
     explanation:
@@ -294,7 +294,7 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "genetik",
     topic: "Mendel",
-    text: "Zwei heterozygote Eltern (Aa) werden gekreuzt. Wie gross ist die Wahrscheinlichkeit, dass ein Nachkomme homozygot dominant ist?",
+    text: "Zwei heterozygote Eltern (Aa) werden gekreuzt. Wie groß ist die Wahrscheinlichkeit, dass ein Nachkomme homozygot dominant ist?",
     options: [
       { id: "a", text: "25 %" },
       { id: "b", text: "50 %" },
@@ -304,7 +304,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Bei einer Kreuzung Aa x Aa ergibt sich nach dem Mendel'schen Spaltungsgesetz (2. Mendel'sche Regel) ein Genotypenverhältnis von 1 AA : 2 Aa : 1 aa. Somit ist die Wahrscheinlichkeit fuer den homozygot dominanten Genotyp (AA) 1/4 = 25 %. Das Phaenotypenverhältnis beträgt 3:1 (dominant : rezessiv).",
+      "Bei einer Kreuzung Aa x Aa ergibt sich nach dem Mendel'schen Spaltungsgesetz (2. Mendel'sche Regel) ein Genotypenverhältnis von 1 AA : 2 Aa : 1 aa. Somit ist die Wahrscheinlichkeit für den homozygot dominanten Genotyp (AA) 1/4 = 25 %. Das Phänotypenverhältnis beträgt 3:1 (dominant : rezessiv).",
     difficulty: "leicht",
     tags: ["genetik", "mendel", "spaltungsgesetz", "monohybrid"],
   },
@@ -332,7 +332,7 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "genetik",
     topic: "Transkription",
-    text: "Welches Enzym katalysiert die Transkription bei Eukaryoten fuer mRNA-kodierende Gene?",
+    text: "Welches Enzym katalysiert die Transkription bei Eukaryoten für mRNA-kodierende Gene?",
     options: [
       { id: "a", text: "RNA-Polymerase I" },
       { id: "b", text: "DNA-Polymerase III" },
@@ -342,7 +342,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Bei Eukaryoten ist die RNA-Polymerase II fuer die Transkription von proteincodierenden Genen zu praeMessenger-RNA (pre-mRNA) verantwortlich. RNA-Polymerase I transkribiert ribosomale RNA (rRNA, ausser 5S), und RNA-Polymerase III synthetisiert tRNA, 5S-rRNA und andere kleine RNA-Molekuele. Die DNA-Polymerase III ist ein prokaryotisches Enzym der DNA-Replikation.",
+      "Bei Eukaryoten ist die RNA-Polymerase II für die Transkription von proteincodierenden Genen zu prä-Messenger-RNA (pre-mRNA) verantwortlich. RNA-Polymerase I transkribiert ribosomale RNA (rRNA, außer 5S), und RNA-Polymerase III synthetisiert tRNA, 5S-rRNA und andere kleine RNA-Moleküle. Die DNA-Polymerase III ist ein prokaryotisches Enzym der DNA-Replikation.",
     difficulty: "mittel",
     tags: ["genetik", "transkription", "RNA-polymerase"],
   },
@@ -361,7 +361,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Die Aminoacyl-tRNA bindet während der Elongationsphase der Translation zuerst an die A-Stelle (Aminoacyl-Stelle) des Ribosoms. Dort wird das Anticodon der tRNA mit dem Codon der mRNA abgeglichen. Anschließend wird die Peptidbindung geknuepft, die wachsende Peptidkette auf die neue tRNA uebertragen und das Ribosom transloziert, wodurch die tRNA von der A-Stelle zur P-Stelle und von der P-Stelle zur E-Stelle rückt.",
+      "Die Aminoacyl-tRNA bindet während der Elongationsphase der Translation zuerst an die A-Stelle (Aminoacyl-Stelle) des Ribosoms. Dort wird das Anticodon der tRNA mit dem Codon der mRNA abgeglichen. Anschließend wird die Peptidbindung geknüpft, die wachsende Peptidkette auf die neue tRNA übertragen und das Ribosom transloziert, wodurch die tRNA von der A-Stelle zur P-Stelle und von der P-Stelle zur E-Stelle rückt.",
     difficulty: "mittel",
     tags: ["genetik", "translation", "ribosom"],
   },
@@ -380,7 +380,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Eine Missense-Mutation ist eine Punktmutation (Basenaustausch), bei der ein Codon so verändert wird, dass es fuer eine andere Aminosäure codiert. Ein bekanntes Beispiel ist die Sichelzellanämie, bei der eine Missense-Mutation im Beta-Globin-Gen Glutaminsäure durch Valin ersetzt. Eine stille Mutation verändert die Aminosäure nicht, eine Nonsense-Mutation erzeugt ein Stoppcodon, und Frameshift-Mutationen verschieben das gesamte Leseraster.",
+      "Eine Missense-Mutation ist eine Punktmutation (Basenaustausch), bei der ein Codon so verändert wird, dass es für eine andere Aminosäure codiert. Ein bekanntes Beispiel ist die Sichelzellanämie, bei der eine Missense-Mutation im Beta-Globin-Gen Glutaminsäure durch Valin ersetzt. Eine stille Mutation verändert die Aminosäure nicht, eine Nonsense-Mutation erzeugt ein Stoppcodon, und Frameshift-Mutationen verschieben das gesamte Leseraster.",
     difficulty: "mittel",
     tags: ["genetik", "mutationen", "missense"],
   },
@@ -427,7 +427,7 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "genetik",
     topic: "Mendel",
-    text: "Bei einem dihybriden Erbgang (AaBb x AaBb) mit unabhängiger Vererbung beträgt das Phaenotypenverhältnis in der F2-Generation:",
+    text: "Bei einem dihybriden Erbgang (AaBb x AaBb) mit unabhängiger Vererbung beträgt das Phänotypenverhältnis in der F2-Generation:",
     options: [
       { id: "a", text: "1:1:1:1" },
       { id: "b", text: "3:1" },
@@ -437,7 +437,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Bei einem dihybriden Erbgang mit zwei unabhängig voneinander vererbten Merkmalen ergibt sich in der F2-Generation nach der 3. Mendel'schen Regel (Unabhängigkeitsregel) ein Phaenotypenverhältnis von 9:3:3:1. Dabei zeigen 9/16 beide dominante Merkmale, je 3/16 ein dominantes und ein rezessives Merkmal, und 1/16 beide rezessiven Merkmale.",
+      "Bei einem dihybriden Erbgang mit zwei unabhängig voneinander vererbten Merkmalen ergibt sich in der F2-Generation nach der 3. Mendel'schen Regel (Unabhängigkeitsregel) ein Phänotypenverhältnis von 9:3:3:1. Dabei zeigen 9/16 beide dominante Merkmale, je 3/16 ein dominantes und ein rezessives Merkmal, und 1/16 beide rezessiven Merkmale.",
     difficulty: "leicht",
     tags: ["genetik", "mendel", "dihybrid", "unabhängigkeitsregel"],
   },
@@ -465,7 +465,7 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "genetik",
     topic: "Translation",
-    text: "Welches Startcodon wird bei der Translation verwendet und fuer welche Aminosäure codiert es?",
+    text: "Welches Startcodon wird bei der Translation verwendet und für welche Aminosäure codiert es?",
     options: [
       { id: "a", text: "UAG - Tryptophan" },
       { id: "b", text: "GUG - Valin" },
@@ -475,7 +475,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Das universelle Startcodon ist AUG, das fuer die Aminosäure Methionin codiert. Bei Eukaryoten wird die Initiation der Translation durch Erkennung des AUG-Codons eingeleitet, wobei die Initiator-tRNA (Met-tRNA) an die P-Stelle des Ribosoms bindet. UAG und UGA sind Stoppcodons (zusammen mit UAA). Bei Prokaryoten wird das Startcodon manchmal auch als fMet (Formylmethionin) translatiert.",
+      "Das universelle Startcodon ist AUG, das für die Aminosäure Methionin codiert. Bei Eukaryoten wird die Initiation der Translation durch Erkennung des AUG-Codons eingeleitet, wobei die Initiator-tRNA (Met-tRNA) an die P-Stelle des Ribosoms bindet. UAG und UGA sind Stoppcodons (zusammen mit UAA). Bei Prokaryoten wird das Startcodon manchmal auch als fMet (Formylmethionin) translatiert.",
     difficulty: "leicht",
     tags: ["genetik", "translation", "startcodon", "methionin"],
   },
@@ -513,7 +513,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Die Helikase entwindet die DNA-Doppelhelix, indem sie die Wasserstoffbrückenbindungen zwischen den komplementaeren Basen aufbricht. Sie bewegt sich entlang der DNA und öffnet die Replikationsgabel. Einzelstrangbindeproteine (SSB) stabilisieren die Einzelstraenge. Die Topoisomerase löst die Überspiralisierung vor der Replikationsgabel, die DNA-Polymerase synthetisiert den neuen Strang, die Primase setzt RNA-Primer, und die Ligase verbindet Okazaki-Fragmente.",
+      "Die Helikase entwindet die DNA-Doppelhelix, indem sie die Wasserstoffbrückenbindungen zwischen den komplementären Basen aufbricht. Sie bewegt sich entlang der DNA und öffnet die Replikationsgabel. Einzelstrangbindeproteine (SSB) stabilisieren die Einzelstraenge. Die Topoisomerase löst die Überspiralisierung vor der Replikationsgabel, die DNA-Polymerase synthetisiert den neuen Strang, die Primase setzt RNA-Primer, und die Ligase verbindet Okazaki-Fragmente.",
     difficulty: "mittel",
     tags: ["genetik", "DNA", "replikation", "helikase"],
   },
@@ -532,7 +532,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Eine Konduktorin ist heterozygot (X^H X^h) fuer das rezessive Allel auf dem X-Chromosom. Soehne erhalten ihr einziges X-Chromosom von der Mutter. Mit einer Wahrscheinlichkeit von 50 % erhält ein Sohn das X-Chromosom mit dem defekten Allel (X^h Y) und ist betroffen, da das Y-Chromosom kein kompensierendes Allel trägt. Die anderen 50 % erhalten das normale X-Chromosom (X^H Y) und sind gesund.",
+      "Eine Konduktorin ist heterozygot (X^H X^h) für das rezessive Allel auf dem X-Chromosom. Söhne erhalten ihr einziges X-Chromosom von der Mutter. Mit einer Wahrscheinlichkeit von 50 % erhält ein Sohn das X-Chromosom mit dem defekten Allel (X^h Y) und ist betroffen, da das Y-Chromosom kein kompensierendes Allel trägt. Die anderen 50 % erhalten das normale X-Chromosom (X^H Y) und sind gesund.",
     difficulty: "mittel",
     tags: ["genetik", "mendel", "x-chromosomal", "hämophilie"],
   },
@@ -541,10 +541,10 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "genetik",
     topic: "Transkription",
-    text: "Welcher Strang der DNA dient als Matrize (Template) fuer die RNA-Polymerase bei der Transkription?",
+    text: "Welcher Strang der DNA dient als Matrize (Template) für die RNA-Polymerase bei der Transkription?",
     options: [
       { id: "a", text: "Der codierende Strang (Sense-Strang)" },
-      { id: "b", text: "Beide Straenge gleichzeitig" },
+      { id: "b", text: "Beide Stränge gleichzeitig" },
       { id: "c", text: "Der nicht-codierende Strang (Antisense-Strang / Template-Strang)" },
       { id: "d", text: "Keiner der beiden, die RNA wird de novo synthetisiert" },
       { id: "e", text: "Der Leitstrang (Leading Strand)" },
@@ -570,7 +570,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "UGG codiert fuer die Aminosäure Tryptophan und ist KEIN Stoppcodon. Die drei Stoppcodons sind: UAA (Ochre), UAG (Amber) und UGA (Opal). Sie werden nicht von tRNA-Molekuelen erkannt, sondern von Release-Faktoren (eRF1 bei Eukaryoten, RF1/RF2 bei Prokaryoten), die die Freisetzung der fertigen Polypeptidkette und die Dissoziation des Ribosoms auslösen.",
+      "UGG codiert für die Aminosäure Tryptophan und ist KEIN Stoppcodon. Die drei Stoppcodons sind: UAA (Ochre), UAG (Amber) und UGA (Opal). Sie werden nicht von tRNA-Molekülen erkannt, sondern von Release-Faktoren (eRF1 bei Eukaryoten, RF1/RF2 bei Prokaryoten), die die Freisetzung der fertigen Polypeptidkette und die Dissoziation des Ribosoms auslösen.",
     difficulty: "schwer",
     tags: ["genetik", "translation", "stoppcodon"],
   },
@@ -602,13 +602,13 @@ export const biologieQuestionsPart1: Question[] = [
     options: [
       { id: "a", text: "Es findet zwischen Schwesterchromatiden statt." },
       { id: "b", text: "Es führt zu einer Reduktion der genetischen Vielfalt." },
-      { id: "c", text: "Es tritt ausschliesslich bei der Mitose auf." },
+      { id: "c", text: "Es tritt ausschließlich bei der Mitose auf." },
       { id: "d", text: "Es führt immer zu letalen Mutationen." },
       { id: "e", text: "Es findet zwischen nicht-schwesterlichen Chromatiden homologer Chromosomen statt." },
     ],
     correctOptionId: "e",
     explanation:
-      "Crossing-over findet zwischen nicht-schwesterlichen Chromatiden homologer Chromosomen statt, also zwischen einem vaeterlichen und einem mütterlichen Chromatid. Dabei werden reziprok Segmente ausgetauscht, was zu neuen Allelkombinationen auf den betroffenen Chromatiden führt (intrachromosomale Rekombination). Dies erhöhrt die genetische Vielfalt und findet in der Prophase I der Meiose statt, nicht bei der Mitose.",
+      "Crossing-over findet zwischen nicht-schwesterlichen Chromatiden homologer Chromosomen statt, also zwischen einem väterlichen und einem mütterlichen Chromatid. Dabei werden reziprok Segmente ausgetauscht, was zu neuen Allelkombinationen auf den betroffenen Chromatiden führt (intrachromosomale Rekombination). Dies erhöht die genetische Vielfalt und findet in der Prophase I der Meiose statt, nicht bei der Mitose.",
     difficulty: "mittel",
     tags: ["genetik", "crossing-over", "rekombination"],
   },
@@ -627,7 +627,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Die DNA-Polymerase synthetisiert den neuen Strang ausschliesslich in 5'-nach-3'-Richtung, indem sie Desoxynukleosidtriphosphate (dNTPs) an das freie 3'-OH-Ende des wachsenden Stranges anfuegt. Da die DNA-Straenge antiparallel verlaufen, wird der Leitstrang (Leading Strand) kontinuierlich und der Folgestrang (Lagging Strand) diskontinuierlich in Form von Okazaki-Fragmenten synthetisiert.",
+      "Die DNA-Polymerase synthetisiert den neuen Strang ausschließlich in 5'-nach-3'-Richtung, indem sie Desoxynukleosidtriphosphate (dNTPs) an das freie 3'-OH-Ende des wachsenden Stranges anfügt. Da die DNA-Stränge antiparallel verlaufen, wird der Leitstrang (Leading Strand) kontinuierlich und der Folgestrang (Lagging Strand) diskontinuierlich in Form von Okazaki-Fragmenten synthetisiert.",
     difficulty: "mittel",
     tags: ["genetik", "DNA", "replikation", "DNA-polymerase"],
   },
@@ -636,7 +636,7 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "genetik",
     topic: "Mendel",
-    text: "Welcher Genotyp liegt vor, wenn bei einer Rückkreuzung (Testkreuzung) mit einem homozygot rezessiven Individuum alle Nachkommen den dominanten Phaenotyp zeigen?",
+    text: "Welcher Genotyp liegt vor, wenn bei einer Rückkreuzung (Testkreuzung) mit einem homozygot rezessiven Individuum alle Nachkommen den dominanten Phänotyp zeigen?",
     options: [
       { id: "a", text: "Das getestete Individuum ist heterozygot (Aa)." },
       { id: "b", text: "Das getestete Individuum ist homozygot rezessiv (aa)." },
@@ -646,7 +646,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Bei einer Testkreuzung (Rückkreuzung) wird ein Individuum mit unbekanntem Genotyp mit einem homozygot rezessiven Individuum (aa) gekreuzt. Wenn alle Nachkommen den dominanten Phaenotyp zeigen, muss das getestete Individuum homozygot dominant (AA) sein, da AA x aa = 100 % Aa (alle phaenotypisch dominant). Wäre es heterozygot (Aa), würde man ein Verhältnis von 1:1 (Aa : aa) erwarten.",
+      "Bei einer Testkreuzung (Rückkreuzung) wird ein Individuum mit unbekanntem Genotyp mit einem homozygot rezessiven Individuum (aa) gekreuzt. Wenn alle Nachkommen den dominanten Phänotyp zeigen, muss das getestete Individuum homozygot dominant (AA) sein, da AA x aa = 100 % Aa (alle phänotypisch dominant). Wäre es heterozygot (Aa), würde man ein Verhältnis von 1:1 (Aa : aa) erwarten.",
     difficulty: "schwer",
     tags: ["genetik", "mendel", "testkreuzung", "rückkreuzung"],
   },
@@ -716,7 +716,7 @@ export const biologieQuestionsPart1: Question[] = [
     topic: "Erregungsleitung",
     text: "Wo befindet sich der primäre Schrittmacher des Herzens?",
     options: [
-      { id: "a", text: "AV-Knoten (Atrioventrikulaerknoten)" },
+      { id: "a", text: "AV-Knoten (Atrioventrikulärknoten)" },
       { id: "b", text: "Sinusknoten (SA-Knoten)" },
       { id: "c", text: "His-Bündel" },
       { id: "d", text: "Tawara-Schenkel" },
@@ -724,7 +724,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Der Sinusknoten (Sinoatrialknoten, SA-Knoten) ist der primäre Schrittmacher des Herzens. Er liegt in der Wand des rechten Vorhofs nahe der Mündung der Vena cava superior und generiert Aktionspotentiale mit einer Frequenz von 60-80/min. Die Erregung breitet sich von dort über die Vorhoefe zum AV-Knoten aus. Bei Ausfall des Sinusknotens kann der AV-Knoten als sekundärer Schrittmacher (40-60/min) einspringen.",
+      "Der Sinusknoten (Sinoatrialknoten, SA-Knoten) ist der primäre Schrittmacher des Herzens. Er liegt in der Wand des rechten Vorhofs nahe der Mündung der Vena cava superior und generiert Aktionspotentiale mit einer Frequenz von 60-80/min. Die Erregung breitet sich von dort über die Vorhöfe zum AV-Knoten aus. Bei Ausfall des Sinusknotens kann der AV-Knoten als sekundärer Schrittmacher (40-60/min) einspringen.",
     difficulty: "leicht",
     tags: ["herz-kreislauf", "erregungsleitung", "sinusknoten"],
   },
@@ -743,7 +743,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Das Endokard ist die innerste Schicht des Herzens und kleidet die Herzhöhlen sowie die Herzklappen aus. Es besteht aus Endothel und einer Bindegewebsschicht. Das Myokard ist die mittlere, muskuläre Schicht, die fuer die Kontraktion verantwortlich ist. Das Epikard (viszerales Perikard) bildet die äußere Schicht des Herzens, und das Perikard ist der Herzbeutel, der das Herz umgibt.",
+      "Das Endokard ist die innerste Schicht des Herzens und kleidet die Herzhöhlen sowie die Herzklappen aus. Es besteht aus Endothel und einer Bindegewebsschicht. Das Myokard ist die mittlere, muskuläre Schicht, die für die Kontraktion verantwortlich ist. Das Epikard (viszerales Perikard) bildet die äußere Schicht des Herzens, und das Perikard ist der Herzbeutel, der das Herz umgibt.",
     difficulty: "mittel",
     tags: ["herz-kreislauf", "herzaufbau", "endokard", "wandschichten"],
   },
@@ -781,7 +781,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Die korrekte Reihenfolge der Erregungsausbreitung im Herzen ist: Sinusknoten (primärer Schrittmacher) -> Vorhofmuskulatur -> AV-Knoten (Verzoegerung der Überleitung) -> His-Bündel -> Tawara-Schenkel (rechter und linker Schenkel) -> Purkinje-Fasern -> Ventrikelmuskulatur. Die Verzoegerung am AV-Knoten ist wichtig, damit die Vorhoefe vor den Kammern kontrahieren und das Blut vollständig in die Kammern gepumpt wird.",
+      "Die korrekte Reihenfolge der Erregungsausbreitung im Herzen ist: Sinusknoten (primärer Schrittmacher) -> Vorhofmuskulatur -> AV-Knoten (Verzögerung der Überleitung) -> His-Bündel -> Tawara-Schenkel (rechter und linker Schenkel) -> Purkinje-Fasern -> Ventrikelmuskulatur. Die Verzögerung am AV-Knoten ist wichtig, damit die Vorhöfe vor den Kammern kontrahieren und das Blut vollständig in die Kammern gepumpt wird.",
     difficulty: "mittel",
     tags: ["herz-kreislauf", "erregungsleitung", "erregungsausbreitung"],
   },
@@ -834,11 +834,11 @@ export const biologieQuestionsPart1: Question[] = [
       { id: "b", text: "60-80 Schlaege pro Minute" },
       { id: "c", text: "40-60 Schlaege pro Minute" },
       { id: "d", text: "20-40 Schlaege pro Minute" },
-      { id: "e", text: "10-20 Schlaege pro Minute" },
+      { id: "e", text: "10-20 Schläge pro Minute" },
     ],
     correctOptionId: "c",
     explanation:
-      "Der AV-Knoten hat als sekundärer Schrittmacher eine Eigenfrequenz von ca. 40-60 Schlaegen pro Minute. Der Sinusknoten als primärer Schrittmacher schlaegt mit 60-80/min. Die tertiären Schrittmacher (His-Bündel, Tawara-Schenkel, Purkinje-Fasern) haben Eigenfrequenzen von ca. 20-40/min. Dieses hierarchische System wird als Erregungsleitungssystem oder Schrittmacherhierarchie bezeichnet.",
+      "Der AV-Knoten hat als sekundärer Schrittmacher eine Eigenfrequenz von ca. 40-60 Schlägen pro Minute. Der Sinusknoten als primärer Schrittmacher schlägt mit 60-80/min. Die tertiären Schrittmacher (His-Bündel, Tawara-Schenkel, Purkinje-Fasern) haben Eigenfrequenzen von ca. 20-40/min. Dieses hierarchische System wird als Erregungsleitungssystem oder Schrittmacherhierarchie bezeichnet.",
     difficulty: "schwer",
     tags: ["herz-kreislauf", "erregungsleitung", "AV-knoten", "schrittmacher"],
   },
@@ -868,11 +868,11 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "nervensystem",
     topic: "Neuron",
-    text: "Welcher Teil des Neurons ist fuer die Weiterleitung des Aktionspotentials vom Zellkörper weg verantwortlich?",
+    text: "Welcher Teil des Neurons ist für die Weiterleitung des Aktionspotentials vom Zellkörper weg verantwortlich?",
     options: [
       { id: "a", text: "Dendriten" },
       { id: "b", text: "Soma (Zellkörper)" },
-      { id: "c", text: "Ranvier-Schnuerring" },
+      { id: "c", text: "Ranvier-Schnürring" },
       { id: "d", text: "Axon" },
       { id: "e", text: "Synaptischer Spalt" },
     ],
@@ -887,7 +887,7 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "nervensystem",
     topic: "Synapse",
-    text: "Welcher Neurotransmitter wird an der motorischen Endplatte (neuromuskuaeren Synapse) freigesetzt?",
+    text: "Welcher Neurotransmitter wird an der motorischen Endplatte (neuromuskulären Synapse) freigesetzt?",
     options: [
       { id: "a", text: "Dopamin" },
       { id: "b", text: "Serotonin" },
@@ -906,26 +906,26 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "nervensystem",
     topic: "Aktionspotential",
-    text: "Welche Ionenkanaele öffnen sich zuerst bei der Depolarisation während eines Aktionspotentials?",
+    text: "Welche Ionenkanäle öffnen sich zuerst bei der Depolarisation während eines Aktionspotentials?",
     options: [
-      { id: "a", text: "Spannungsgesteuerte Natriumkanaele" },
-      { id: "b", text: "Spannungsgesteuerte Kaliumkanaele" },
-      { id: "c", text: "Ligandengesteuerte Chloridkanaele" },
-      { id: "d", text: "Spannungsgesteuerte Calciumkanaele" },
-      { id: "e", text: "Mechanisch gesteuerte Ionenkanaele" },
+      { id: "a", text: "Spannungsgesteuerte Natriumkanäle" },
+      { id: "b", text: "Spannungsgesteuerte Kaliumkanäle" },
+      { id: "c", text: "Ligandengesteuerte Chloridkanäle" },
+      { id: "d", text: "Spannungsgesteuerte Calciumkanäle" },
+      { id: "e", text: "Mechanisch gesteuerte Ionenkanäle" },
     ],
     correctOptionId: "a",
     explanation:
-      "Bei Erreichen des Schwellenpotentials (ca. -55 mV) öffnen sich zuerst die spannungsgesteuerten Natriumkanaele. Na+-Ionen stroemen aufgrund ihres elektrochemischen Gradienten in die Zelle, was zu einer raschen Depolarisation bis ca. +30 mV führt (aufsteigender Ast des Aktionspotentials). Anschließend inaktivieren die Na+-Kanaele und die spannungsgesteuerten Kaliumkanaele öffnen sich verzoegert, was zur Repolarisation führt.",
+      "Bei Erreichen des Schwellenpotentials (ca. -55 mV) öffnen sich zuerst die spannungsgesteuerten Natriumkanäle. Na+-Ionen stroemen aufgrund ihres elektrochemischen Gradienten in die Zelle, was zu einer raschen Depolarisation bis ca. +30 mV führt (aufsteigender Ast des Aktionspotentials). Anschließend inaktivieren die Na+-Kanäle und die spannungsgesteuerten Kaliumkanäle öffnen sich verzögert, was zur Repolarisation führt.",
     difficulty: "mittel",
-    tags: ["nervensystem", "aktionspotential", "natriumkanaele", "depolarisation"],
+    tags: ["nervensystem", "aktionspotential", "natriumkanäle", "depolarisation"],
   },
   {
     id: "bio-49",
     subject: "biologie",
     chapter: "nervensystem",
     topic: "Synapse",
-    text: "Was versteht man unter der Refraktaerzeit eines Neurons?",
+    text: "Was versteht man unter der Refraktärzeit eines Neurons?",
     options: [
       { id: "a", text: "Die Zeit, in der ein Neurotransmitter im synaptischen Spalt verweilt" },
       { id: "b", text: "Die Dauer der Signalweiterleitung entlang des Axons" },
@@ -935,9 +935,9 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Die Refraktaerzeit ist die Zeitspanne nach einem Aktionspotential, in der die Nervenzelle nicht oder nur erschwert erneut erregt werden kann. Man unterscheidet die absolute Refraktaerzeit (Na+-Kanaele sind inaktiviert, kein neues AP möglich, unabhängig von der Reizstärke) und die relative Refraktaerzeit (erhöhtes Schwellenpotential, ein neues AP ist nur durch ueberschwellige Reize auslösenosbar). Die Refraktaerzeit begrenzt die maximale Feuerrate und sichert die unidirektionale Erregungsleitung.",
+      "Die Refraktärzeit ist die Zeitspanne nach einem Aktionspotential, in der die Nervenzelle nicht oder nur erschwert erneut erregt werden kann. Man unterscheidet die absolute Refraktärzeit (Na+-Kanäle sind inaktiviert, kein neues AP möglich, unabhängig von der Reizstärke) und die relative Refraktärzeit (erhöhtes Schwellenpotential, ein neues AP ist nur durch überschwellige Reize auslösbar). Die Refraktärzeit begrenzt die maximale Feuerrate und sichert die unidirektionale Erregungsleitung.",
     difficulty: "schwer",
-    tags: ["nervensystem", "aktionspotential", "refraktaerzeit"],
+    tags: ["nervensystem", "aktionspotential", "refraktärzeit"],
   },
   {
     id: "bio-50",
@@ -947,14 +947,14 @@ export const biologieQuestionsPart1: Question[] = [
     text: "Warum ist die saltatorische Erregungsleitung schneller als die kontinuierliche Erregungsleitung?",
     options: [
       { id: "a", text: "Weil die Myelinscheide elektrisch leitfähig ist" },
-      { id: "b", text: "Weil das Aktionspotential nur an den Ranvier-Schnuerringen regeneriert wird und dazwischen springt" },
-      { id: "c", text: "Weil mehr Natriumkanaele insgesamt vorhanden sind" },
+      { id: "b", text: "Weil das Aktionspotential nur an den Ranvier-Schnürringen regeneriert wird und dazwischen springt" },
+      { id: "c", text: "Weil mehr Natriumkanäle insgesamt vorhanden sind" },
       { id: "d", text: "Weil die Natriumkonzentration im Axon höher ist" },
       { id: "e", text: "Weil myelinisierte Axone dünner sind als unmyelinisierte" },
     ],
     correctOptionId: "b",
     explanation:
-      "Bei der saltatorischen Erregungsleitung in myelinisierten Nervenfasern wirkt die Myelinscheide als elektrischer Isolator. Das Aktionspotential kann nur an den Ranvier-Schnuerringen (Unterbrechungen der Myelinscheide) regeneriert werden, wo die spannungsgesteuerten Ionenkanaele konzentriert sind. Das Signal 'springt' daher von Schnuerring zu Schnuerring (lat. saltare = springen), was die Leitungsgeschwindigkeit auf bis zu 120 m/s erhöhen kann, verglichen mit ca. 1-2 m/s bei unmyelinisierten Fasern.",
+      "Bei der saltatorischen Erregungsleitung in myelinisierten Nervenfasern wirkt die Myelinscheide als elektrischer Isolator. Das Aktionspotential kann nur an den Ranvier-Schnürringen (Unterbrechungen der Myelinscheide) regeneriert werden, wo die spannungsgesteuerten Ionenkanäle konzentriert sind. Das Signal 'springt' daher von Schnürring zu Schnürring (lat. saltare = springen), was die Leitungsgeschwindigkeit auf bis zu 120 m/s erhöhen kann, verglichen mit ca. 1-2 m/s bei unmyelinisierten Fasern.",
     difficulty: "schwer",
     tags: ["nervensystem", "aktionspotential", "saltatorisch", "myelinscheide"],
   },

@@ -2,8 +2,8 @@ import { useState } from "react";
 
 const forces = [
   { id: "fg", label: "Gravitationskraft (Fg)", color: "#ef4444", detail: "Fg = m \u00D7 g. Wirkt stets senkrecht nach unten zum Erdmittelpunkt. g = 9,81 m/s\u00B2." },
-  { id: "fn", label: "Normalkraft (FN)", color: "#3b82f6", detail: "FN = Fg \u00D7 cos(\u03B1). Steht senkrecht auf der Oberflaeche. Gegenkraft zur Hangabtriebskraft-Komponente." },
-  { id: "fr", label: "Reibungskraft (FR)", color: "#f59e0b", detail: "FR = \u03BC \u00D7 FN. Wirkt entgegen der Bewegungsrichtung entlang der Oberflaeche." },
+  { id: "fn", label: "Normalkraft (FN)", color: "#3b82f6", detail: "FN = Fg \u00D7 cos(\u03B1). Steht senkrecht auf der Oberfläche. Gegenkraft zur Hangabtriebskraft-Komponente." },
+  { id: "fr", label: "Reibungskraft (FR)", color: "#f59e0b", detail: "FR = \u03BC \u00D7 FN. Wirkt entgegen der Bewegungsrichtung entlang der Oberfläche." },
   { id: "fh", label: "Hangabtriebskraft (FH)", color: "#22c55e", detail: "FH = Fg \u00D7 sin(\u03B1). Kompenente der Gewichtskraft parallel zur schiefen Ebene." },
 ];
 
@@ -13,8 +13,8 @@ export default function NewtonForces() {
 
   return (
     <div className="space-y-3">
-      <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Kraefte an der Schiefen Ebene</h4>
-      <p className="text-xs text-muted">Klicke auf eine Kraft fuer Details.</p>
+      <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Kräfte an der Schiefen Ebene</h4>
+      <p className="text-xs text-muted">Klicke auf eine Kraft für Details.</p>
       <svg viewBox="0 0 480 320" className="w-full max-w-lg mx-auto">
         <defs>
           <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">

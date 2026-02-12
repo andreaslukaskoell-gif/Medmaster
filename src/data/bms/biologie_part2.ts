@@ -29,22 +29,22 @@ export const biologieQuestionsPart2: Question[] = [
     options: [
       { id: "a", text: "Sie erkennen Antigene, die über MHC-II präsentiert werden." },
       { id: "b", text: "Sie differenzieren sich im Knochenmark zu Effektorzellen." },
-      { id: "c", text: "Sie sind ausschliesslich fuer die humorale Immunantwort zuständig." },
+      { id: "c", text: "Sie sind ausschließlich für die humorale Immunantwort zuständig." },
       { id: "d", text: "Sie setzen Perforin und Granzyme frei, um Zielzellen abzutöten." },
       { id: "e", text: "Sie produzieren große Mengen an Antikörpern." },
     ],
     correctOptionId: "d",
     explanation:
-      "Zytotoxische T-Zellen (CD8+) erkennen Antigene über MHC-I (nicht MHC-II) und töten infizierte Zellen durch Freisetzung von Perforin (bildet Poren in der Zielzellmembran) und Granzymen (lösen Apoptose aus). Sie sind Teil der zellulaeren, nicht der humoralen Immunantwort. Antikörperproduktion ist Aufgabe der B-Zellen/Plasmazellen.",
+      "Zytotoxische T-Zellen (CD8+) erkennen Antigene über MHC-I (nicht MHC-II) und töten infizierte Zellen durch Freisetzung von Perforin (bildet Poren in der Zielzellmembran) und Granzymen (lösen Apoptose aus). Sie sind Teil der zellulären, nicht der humoralen Immunantwort. Antikörperproduktion ist Aufgabe der B-Zellen/Plasmazellen.",
     difficulty: "leicht",
-    tags: ["t-zellen", "cd8", "zytotoxisch", "zellulaere-immunantwort"],
+    tags: ["t-zellen", "cd8", "zytotoxisch", "zelluläre-immunantwort"],
   },
   {
     id: "bio-53",
     subject: "biologie",
     chapter: "immunsystem",
-    topic: "MHC-Molekuele",
-    text: "Auf welchen Zellen werden MHC-Klasse-II-Molekuele konstitutiv exprimiert?",
+    topic: "MHC-Moleküle",
+    text: "Auf welchen Zellen werden MHC-Klasse-II-Moleküle konstitutiv exprimiert?",
     options: [
       { id: "a", text: "Erythrozyten" },
       { id: "b", text: "Thrombozyten" },
@@ -54,7 +54,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "MHC-Klasse-II-Molekuele werden konstitutiv nur auf professionellen antigenpräsentierende Zellen (APCs) exprimiert: dendritische Zellen, Makrophagen und B-Zellen. MHC-Klasse-I-Molekuele hingegen finden sich auf nahezu allen kernhaltigen Körperzellen. Erythrozyten und Thrombozyten besitzen keinen Zellkern und exprimieren kein MHC.",
+      "MHC-Klasse-II-Moleküle werden konstitutiv nur auf professionellen antigenpräsentierende Zellen (APCs) exprimiert: dendritische Zellen, Makrophagen und B-Zellen. MHC-Klasse-I-Moleküle hingegen finden sich auf nahezu allen kernhaltigen Körperzellen. Erythrozyten und Thrombozyten besitzen keinen Zellkern und exprimieren kein MHC.",
     difficulty: "mittel",
     tags: ["mhc", "antigenpräsentation", "apc"],
   },
@@ -73,7 +73,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Bei einer Lebendimpfung werden attenuierte (abgeschwächte), aber noch vermehrungsfähige Erreger verwendet. Beispiele sind die Impfungen gegen Masern, Mumps und Roeteln (MMR). Totimpfstoffe enthalten abgetötete Erreger. Toxoidimpfstoffe enthalten inaktivierte Toxine. Passive Immunisierung erfolgt durch Gabe fertiger Antikörper.",
+      "Bei einer Lebendimpfung werden attenuierte (abgeschwächte), aber noch vermehrungsfähige Erreger verwendet. Beispiele sind die Impfungen gegen Masern, Mumps und Röteln (MMR). Totimpfstoffe enthalten abgetötete Erreger. Toxoidimpfstoffe enthalten inaktivierte Toxine. Passive Immunisierung erfolgt durch Gabe fertiger Antikörper.",
     difficulty: "leicht",
     tags: ["impfung", "lebendimpfstoff", "attenuierung"],
   },
@@ -82,7 +82,7 @@ export const biologieQuestionsPart2: Question[] = [
     subject: "biologie",
     chapter: "immunsystem",
     topic: "Antikörperstruktur",
-    text: "Wie viele Antigenbindungsstellen besitzt ein einzelnes IgG-Molekuel?",
+    text: "Wie viele Antigenbindungsstellen besitzt ein einzelnes IgG-Molekül?",
     options: [
       { id: "a", text: "1" },
       { id: "b", text: "4" },
@@ -92,7 +92,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Ein IgG-Molekuel ist ein Monomer mit zwei identischen Antigenbindungsstellen (bivalent). Jede Bindungsstelle wird durch die variable Region einer schweren und einer leichten Kette gebildet. IgM als Pentamer besitzt theoretisch 10 Bindungsstellen. IgA als Dimer hat 4 Bindungsstellen.",
+      "Ein IgG-Molekül ist ein Monomer mit zwei identischen Antigenbindungsstellen (bivalent). Jede Bindungsstelle wird durch die variable Region einer schweren und einer leichten Kette gebildet. IgM als Pentamer besitzt theoretisch 10 Bindungsstellen. IgA als Dimer hat 4 Bindungsstellen.",
     difficulty: "leicht",
     tags: ["antikörper", "igg", "antigenbindung"],
   },
@@ -103,7 +103,7 @@ export const biologieQuestionsPart2: Question[] = [
     topic: "Komplementsystem",
     text: "Welche Funktion hat der Membranangriffskomplex (MAC) des Komplementsystems?",
     options: [
-      { id: "a", text: "Opsonisierung von Bakterien fuer die Phagozytose" },
+      { id: "a", text: "Opsonisierung von Bakterien für die Phagozytose" },
       { id: "b", text: "Bildung einer Pore in der Zielzellmembran, die zur Lyse führt" },
       { id: "c", text: "Chemotaxis von Neutrophilen zum Infektionsort" },
       { id: "d", text: "Aktivierung von T-Helferzellen" },
@@ -149,7 +149,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Sekretorisches IgA (sIgA) liegt als Dimer vor und ist die vorherrschende Immunglobulinklasse auf Schleimhautoberflaechen. Es wird durch Epithelzellen mittels des Poly-Ig-Rezeptors transportiert und schützt Schleimhäute vor Pathogenen. IgG ist der häufigste Antikörper im Blutserum.",
+      "Sekretorisches IgA (sIgA) liegt als Dimer vor und ist die vorherrschende Immunglobulinklasse auf Schleimhautoberflächen. Es wird durch Epithelzellen mittels des Poly-Ig-Rezeptors transportiert und schützt Schleimhäute vor Pathogenen. IgG ist der häufigste Antikörper im Blutserum.",
     difficulty: "mittel",
     tags: ["iga", "schleimhaut", "sekretorisch", "mukosale-immunität"],
   },
@@ -187,7 +187,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Natürliche Killerzellen (NK-Zellen) gehören zur angeborenen Immunität und können virusinfizierte Zellen und Tumorzellen ohne vorherige Antigenpräsentation oder Sensibilisierung erkennen und abtoten. Sie erkennen das Fehlen von MHC-I auf der Zelloberflaeche ('missing self'). Neutrophile sind vor allem fuer die Phagozytose von Bakterien zuständig.",
+      "Natürliche Killerzellen (NK-Zellen) gehören zur angeborenen Immunität und können virusinfizierte Zellen und Tumorzellen ohne vorherige Antigenpräsentation oder Sensibilisierung erkennen und abtoten. Sie erkennen das Fehlen von MHC-I auf der Zelloberfläche ('missing self'). Neutrophile sind vor allem für die Phagozytose von Bakterien zuständig.",
     difficulty: "leicht",
     tags: ["nk-zellen", "angeborene-immunität", "virusabwehr"],
   },
@@ -198,7 +198,7 @@ export const biologieQuestionsPart2: Question[] = [
     topic: "Thymus und T-Zell-Reifung",
     text: "Was geschieht bei der negativen Selektion von T-Zellen im Thymus?",
     options: [
-      { id: "a", text: "T-Zellen, die MHC-Molekuele nicht erkennen können, werden eliminiert." },
+      { id: "a", text: "T-Zellen, die MHC-Moleküle nicht erkennen können, werden eliminiert." },
       { id: "b", text: "T-Zellen, die körpereigene Antigene zu stark erkennen, werden durch Apoptose eliminiert." },
       { id: "c", text: "T-Zellen erhalten ihren CD4- oder CD8-Korezeptor." },
       { id: "d", text: "T-Zellen werden mit spezifischen Antikörpern ausgestattet." },
@@ -206,7 +206,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Bei der negativen Selektion im Thymus werden T-Zellen eliminiert, deren T-Zell-Rezeptor körpereigene Peptid-MHC-Komplexe zu stark bindet. Dies dient der zentralen Toleranz und verhindert Autoimmunreaktionen. Die positive Selektion (Erkennung von MHC) findet vorher statt. Das AIRE-Protein sorgt dafuer, dass gewebespezifische Antigene im Thymus exprimiert werden.",
+      "Bei der negativen Selektion im Thymus werden T-Zellen eliminiert, deren T-Zell-Rezeptor körpereigene Peptid-MHC-Komplexe zu stark bindet. Dies dient der zentralen Toleranz und verhindert Autoimmunreaktionen. Die positive Selektion (Erkennung von MHC) findet vorher statt. Das AIRE-Protein sorgt dafür, dass gewebespezifische Antigene im Thymus exprimiert werden.",
     difficulty: "mittel",
     tags: ["thymus", "negative-selektion", "zentrale-toleranz", "t-zell-reifung"],
   },
@@ -225,7 +225,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Die Klassenwechsel-Rekombination (Class Switch Recombination, CSR) ermöglicht den Wechsel der konstanten Region der schweren Kette, sodass die B-Zelle statt IgM z.B. IgG, IgA oder IgE produziert. Die Antigenbindungsspezifität bleibt dabei erhalten. Somatische Hypermutation erhoet die Affinität der Antikörper. V(D)J-Rekombination erzeugt die initiale Antikörpervielfalt.",
+      "Die Klassenwechsel-Rekombination (Class Switch Recombination, CSR) ermöglicht den Wechsel der konstanten Region der schweren Kette, sodass die B-Zelle statt IgM z.B. IgG, IgA oder IgE produziert. Die Antigenbindungsspezifität bleibt dabei erhalten. Somatische Hypermutation erhöht die Affinität der Antikörper. V(D)J-Rekombination erzeugt die initiale Antikörpervielfalt.",
     difficulty: "schwer",
     tags: ["class-switch", "b-zellen", "immunglobuline", "rekombination"],
   },
@@ -234,7 +234,7 @@ export const biologieQuestionsPart2: Question[] = [
     subject: "biologie",
     chapter: "immunsystem",
     topic: "Allergie und IgE",
-    text: "Welche Zellen werden bei einer Typ-I-Allergie durch kreuzvernetztes IgE auf ihrer Oberflaeche primär zur Degranulation angeregt?",
+    text: "Welche Zellen werden bei einer Typ-I-Allergie durch kreuzvernetztes IgE auf ihrer Oberfläche primär zur Degranulation angeregt?",
     options: [
       { id: "a", text: "Neutrophile Granulozyten" },
       { id: "b", text: "Makrophagen" },
@@ -244,7 +244,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Bei der Typ-I-Allergie (Soforttyp) binden IgE-Antikörper über ihren Fc-Teil an Fc-epsilon-Rezeptoren auf Mastzellen und basophilen Granulozyten. Bei erneutem Allergenkontakt wird das oberflaechengebundene IgE kreuzvernetzt, was zur Degranulation führt. Dabei werden Histamin, Leukotriene und andere Mediatoren freigesetzt, die die allergische Reaktion auslösen.",
+      "Bei der Typ-I-Allergie (Soforttyp) binden IgE-Antikörper über ihren Fc-Teil an Fc-epsilon-Rezeptoren auf Mastzellen und basophilen Granulozyten. Bei erneutem Allergenkontakt wird das oberflächengebundene IgE kreuzvernetzt, was zur Degranulation führt. Dabei werden Histamin, Leukotriene und andere Mediatoren freigesetzt, die die allergische Reaktion auslösen.",
     difficulty: "mittel",
     tags: ["allergie", "typ-i", "ige", "mastzellen", "degranulation"],
   },
@@ -252,20 +252,20 @@ export const biologieQuestionsPart2: Question[] = [
     id: "bio-64",
     subject: "biologie",
     chapter: "immunsystem",
-    topic: "Gedaechtniszellen",
+    topic: "Gedächtniszellen",
     text: "Warum verläuft eine Sekundärimmunantort (bei erneutem Kontakt mit dem gleichen Antigen) schneller und stärker als die Primärimmunantort?",
     options: [
       { id: "a", text: "Weil das angeborene Immunsystem bei Zweitkontakt effizienter arbeitet." },
-      { id: "b", text: "Weil Gedaechtniszellen (Memory-Zellen) aus der Primärimmunantort schneller aktiviert werden und in größerer Zahl vorliegen als naive Lymphozyten." },
-      { id: "c", text: "Weil die MHC-Molekuele bei Zweitkontakt verändert sind." },
+      { id: "b", text: "Weil Gedächtniszellen (Memory-Zellen) aus der Primärimmunantort schneller aktiviert werden und in größerer Zahl vorliegen als naive Lymphozyten." },
+      { id: "c", text: "Weil die MHC-Moleküle bei Zweitkontakt verändert sind." },
       { id: "d", text: "Weil das Komplementsystem beim Zweitkontakt stärker aktiviert wird." },
       { id: "e", text: "Weil die Antikörper aus der Erstinfektion im Blut verbleiben und sofort wirken." },
     ],
     correctOptionId: "b",
     explanation:
-      "Nach der Primärimmunantort entstehen langlebige Gedaechtnis-B-Zellen und Gedaechtnis-T-Zellen. Diese sind bereits antigenspezifisch, liegen in größerer Zahl vor als naive Lymphozyten und benötigen weniger kostimulatorische Signale zur Aktivierung. Daher ist die Sekundärimmunantort schneller, stärker und länger anhaltend. Es werden vor allem IgG-Antikörper mit höherer Affinität gebildet.",
+      "Nach der Primärimmunantort entstehen langlebige Gedächtnis-B-Zellen und Gedächtnis-T-Zellen. Diese sind bereits antigenspezifisch, liegen in größerer Zahl vor als naive Lymphozyten und benötigen weniger kostimulatorische Signale zur Aktivierung. Daher ist die Sekundärimmunantort schneller, stärker und länger anhaltend. Es werden vor allem IgG-Antikörper mit höherer Affinität gebildet.",
     difficulty: "mittel",
-    tags: ["gedaechtniszellen", "sekundärantwort", "immunologisches-gedaechtnis"],
+    tags: ["gedächtniszellen", "sekundärantwort", "immunologisches-gedächtnis"],
   },
   {
     id: "bio-65",
@@ -274,15 +274,15 @@ export const biologieQuestionsPart2: Question[] = [
     topic: "MHC und Transplantation",
     text: "Warum ist die HLA-Kompatibilität (MHC-Kompatibilität) bei Organtransplantationen entscheidend?",
     options: [
-      { id: "a", text: "Weil HLA-Molekuele die Blutgruppe bestimmen." },
-      { id: "b", text: "Weil inkompatible HLA-Molekuele auf dem Transplantat vom Immunsystem des Empfaengers als fremd erkannt werden und eine Abstossungsreaktion auslösen." },
-      { id: "c", text: "Weil HLA-Molekuele fuer die Blutgerinnung notwendig sind." },
+      { id: "a", text: "Weil HLA-Moleküle die Blutgruppe bestimmen." },
+      { id: "b", text: "Weil inkompatible HLA-Moleküle auf dem Transplantat vom Immunsystem des Empfängers als fremd erkannt werden und eine Abstoßungsreaktion auslösen." },
+      { id: "c", text: "Weil HLA-Moleküle für die Blutgerinnung notwendig sind." },
       { id: "d", text: "Weil nur bei HLA-Übereinstimmung eine chirurgische Verbindung der Gewebe möglich ist." },
-      { id: "e", text: "Weil HLA-Molekuele die Wundheilung regulieren." },
+      { id: "e", text: "Weil HLA-Moleküle die Wundheilung regulieren." },
     ],
     correctOptionId: "b",
     explanation:
-      "HLA-Molekuele (Human Leukocyte Antigen, das menschliche MHC-System) sind hochpolymorphe Oberflaechenproteine. T-Zellen des Empfaengers erkennen fremde HLA-Molekuele auf dem Transplantat und lösen eine Immunreaktion aus (Transplantatabstossung). Je besser die HLA-Übereinstimmung, desto geringer das Abstossungsrisiko. HLA hat nichts mit Blutgruppen (ABO-System) oder Blutgerinnung zu tun.",
+      "HLA-Moleküle (Human Leukocyte Antigen, das menschliche MHC-System) sind hochpolymorphe Oberflächenproteine. T-Zellen des Empfängers erkennen fremde HLA-Moleküle auf dem Transplantat und lösen eine Immunreaktion aus (Transplantatabstoßung). Je besser die HLA-Übereinstimmung, desto geringer das Abstoßungsrisiko. HLA hat nichts mit Blutgruppen (ABO-System) oder Blutgerinnung zu tun.",
     difficulty: "mittel",
     tags: ["hla", "mhc", "transplantation", "abstossung"],
   },
@@ -312,7 +312,7 @@ export const biologieQuestionsPart2: Question[] = [
     subject: "biologie",
     chapter: "endokrinologie",
     topic: "Nebenniere",
-    text: "In welcher Schicht der Nebennierenrinde wird Cortisol (ein Glucocorticoid) hauptsaechlich produziert?",
+    text: "In welcher Schicht der Nebennierenrinde wird Cortisol (ein Glucocorticoid) hauptsächlich produziert?",
     options: [
       { id: "a", text: "Zona glomerulosa" },
       { id: "b", text: "Zona fasciculata" },
@@ -379,7 +379,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Insulin ist das einzige blutzuckersenkende Hormon. Es fördert die Glukoseaufnahme in Muskel- und Fettzellen (über GLUT4-Transporter), stimuliert die Glykogensynthese und hemmt die Glukoneogenese sowie die Glykogenolyse. Ausserdem fördert es die Lipogenese und hemmt die Lipolyse. Glukagon wirkt als Gegenspieler und erhöht den Blutzucker.",
+      "Insulin ist das einzige blutzuckersenkende Hormon. Es fördert die Glukoseaufnahme in Muskel- und Fettzellen (über GLUT4-Transporter), stimuliert die Glykogensynthese und hemmt die Glukoneogenese sowie die Glykogenolyse. Außerdem fördert es die Lipogenese und hemmt die Lipolyse. Glukagon wirkt als Gegenspieler und erhöht den Blutzucker.",
     difficulty: "leicht",
     tags: ["insulin", "blutzucker", "glykogensynthese", "glut4"],
   },
@@ -431,12 +431,12 @@ export const biologieQuestionsPart2: Question[] = [
       { id: "a", text: "Bindung an membranständige Rezeptoren und Aktivierung einer Tyrosinkinase" },
       { id: "b", text: "Bindung an membranständige G-Protein-gekoppelte Rezeptoren" },
       { id: "c", text: "Diffusion durch die Zellmembran und Bindung an intrazelluläre Rezeptoren, die als Transkriptionsfaktoren im Zellkern wirken" },
-      { id: "d", text: "Bindung an Ionenkanaele in der Zellmembran" },
+      { id: "d", text: "Bindung an Ionenkanäle in der Zellmembran" },
       { id: "e", text: "Endozytose durch spezifische Membranrezeptoren" },
     ],
     correctOptionId: "c",
     explanation:
-      "Steroidhormone (z.B. Cortisol, Aldosteron, Sexualhormone) sind lipophil und können die Zellmembran durch Diffusion durchqueren. Im Zytoplasma oder Zellkern binden sie an intrazelluläre Rezeptoren. Der Hormon-Rezeptor-Komplex wirkt als Transkriptionsfaktor und reguliert die Genexpression. Die Wirkung tritt daher verzoegert ein (Stunden), hält aber länger an als die Wirkung von Peptidhormonen.",
+      "Steroidhormone (z.B. Cortisol, Aldosteron, Sexualhormone) sind lipophil und können die Zellmembran durch Diffusion durchqueren. Im Zytoplasma oder Zellkern binden sie an intrazelluläre Rezeptoren. Der Hormon-Rezeptor-Komplex wirkt als Transkriptionsfaktor und reguliert die Genexpression. Die Wirkung tritt daher verzögert ein (Stunden), hält aber länger an als die Wirkung von Peptidhormonen.",
     difficulty: "mittel",
     tags: ["steroidhormone", "transkriptionsfaktor", "intrazellulare-rezeptoren", "genexpression"],
   },
@@ -455,7 +455,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "ADH (Antidiuretisches Hormon, auch Vasopressin genannt) wird in den Nuclei supraopticus und paraventricularis des Hypothalamus produziert und über Axone zur Neurohypophyse transportiert, wo es gespeichert und bei Bedarf freigesetzt wird. ADH fördert den Einbau von Aquaporin-2-Kanaelen in die Sammelrohre der Niere und erhöht damit die Wasserrückresorption. Ein Mangel führt zu Diabetes insipidus.",
+      "ADH (Antidiuretisches Hormon, auch Vasopressin genannt) wird in den Nuclei supraopticus und paraventricularis des Hypothalamus produziert und über Axone zur Neurohypophyse transportiert, wo es gespeichert und bei Bedarf freigesetzt wird. ADH fördert den Einbau von Aquaporin-2-Kanälen in die Sammelrohre der Niere und erhöht damit die Wasserrückresorption. Ein Mangel führt zu Diabetes insipidus.",
     difficulty: "mittel",
     tags: ["adh", "vasopressin", "neurohypophyse", "wasserhaushalt"],
   },
@@ -474,7 +474,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Bei Jodmangel kann die Schilddrüse nicht ausreichend T3 und T4 produzieren. Durch die fehlende negative Rückkopplung steigt TSH an, was zu einer kompensatorischen Vergrößerung der Schilddrüse (Struma/Kropf) führt. Morbus Basedow ist eine Autoimmunerkrankung mit stimulierenden Antikörpern gegen den TSH-Rezeptor. Hashimoto-Thyreoiditis ist eine autoimmune Schilddrüsenentzuendung.",
+      "Bei Jodmangel kann die Schilddrüse nicht ausreichend T3 und T4 produzieren. Durch die fehlende negative Rückkopplung steigt TSH an, was zu einer kompensatorischen Vergrößerung der Schilddrüse (Struma/Kropf) führt. Morbus Basedow ist eine Autoimmunerkrankung mit stimulierenden Antikörpern gegen den TSH-Rezeptor. Hashimoto-Thyreoiditis ist eine autoimmune Schilddrüsenentzündung.",
     difficulty: "leicht",
     tags: ["jodmangel", "struma", "schilddrüse", "tsh"],
   },
@@ -514,7 +514,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Die Belegzellen (Parietalzellen) der Magenschleimhaut produzieren Salzsäure (HCl) über die H+/K+-ATPase (Protonenpumpe) sowie den Intrinsic Factor (fuer die Vitamin-B12-Aufnahme). Hauptzellen produzieren Pepsinogen (inaktive Vorstufe von Pepsin). Nebenzellen produzieren Schleim und Bicarbonat zum Schutz der Magenschleimhaut. G-Zellen produzieren Gastrin.",
+      "Die Belegzellen (Parietalzellen) der Magenschleimhaut produzieren Salzsäure (HCl) über die H+/K+-ATPase (Protonenpumpe) sowie den Intrinsic Factor (für die Vitamin-B12-Aufnahme). Hauptzellen produzieren Pepsinogen (inaktive Vorstufe von Pepsin). Nebenzellen produzieren Schleim und Bicarbonat zum Schutz der Magenschleimhaut. G-Zellen produzieren Gastrin.",
     difficulty: "mittel",
     tags: ["belegzellen", "hcl", "magen", "parietalzellen"],
   },
@@ -526,14 +526,14 @@ export const biologieQuestionsPart2: Question[] = [
     text: "Welche Funktion haben Gallensäuren bei der Verdauung?",
     options: [
       { id: "a", text: "Sie spalten Proteine in Aminosäuren." },
-      { id: "b", text: "Sie emulgieren Fette und vergrößern so deren Oberflaeche fuer die Lipase." },
+      { id: "b", text: "Sie emulgieren Fette und vergrößern so deren Oberfläche für die Lipase." },
       { id: "c", text: "Sie neutralisieren die Magensäure im Duodenum." },
       { id: "d", text: "Sie aktivieren Trypsinogen zu Trypsin." },
       { id: "e", text: "Sie transportieren Glukose in die Enterozyten." },
     ],
     correctOptionId: "b",
     explanation:
-      "Gallensäuren sind amphipathische Molekuele, die in der Leber aus Cholesterin synthetisiert und in der Gallenblase gespeichert werden. Im Duodenum emulgieren sie Nahrungsfette, d.h. sie zerlegen große Fetttropfen in kleine Mizellen. Dies vergrößert die Oberflaeche fuer die Pankreaslipase erheblich. Gallensäuren werden im terminalen Ileum grossteils rückresorbiert (enterohepatischer Kreislauf).",
+      "Gallensäuren sind amphipathische Moleküle, die in der Leber aus Cholesterin synthetisiert und in der Gallenblase gespeichert werden. Im Duodenum emulgieren sie Nahrungsfette, d.h. sie zerlegen große Fetttropfen in kleine Mizellen. Dies vergrößert die Oberfläche für die Pankreaslipase erheblich. Gallensäuren werden im terminalen Ileum großteils rückresorbiert (enterohepatischer Kreislauf).",
     difficulty: "mittel",
     tags: ["gallensäuren", "fettverdauung", "emulgierung", "leber"],
   },
@@ -571,7 +571,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Das Jejunum ist der Hauptresorptionsort fuer die meisten Nährstoffe (Aminosäuren, Monosaccharide, Fettsäuren, Vitamine). Es besitzt die größte Resorptionsoberflaeche durch Kerckring-Falten, Zotten und Mikrovilli. Das Duodenum ist primär Ort der Verdauung (Einmündung von Galle und Pankreassekret). Das terminale Ileum resorbiert speziell Vitamin B12 und Gallensäuren.",
+      "Das Jejunum ist der Hauptresorptionsort für die meisten Nährstoffe (Aminosäuren, Monosaccharide, Fettsäuren, Vitamine). Es besitzt die größte Resorptionsoberfläche durch Kerckring-Falten, Zotten und Mikrovilli. Das Duodenum ist primär Ort der Verdauung (Einmündung von Galle und Pankreassekret). Das terminale Ileum resorbiert speziell Vitamin B12 und Gallensäuren.",
     difficulty: "mittel",
     tags: ["resorption", "jejunum", "dünndarm", "nährstoffe"],
   },
@@ -590,7 +590,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Der Dickdarm resorbiert Wasser und Elektrolyte (besonders Natrium) und dickt den Darminhalt zum Stuhl ein. Ausserdem findet im Colon bakterielle Fermentation unverdaulicher Nahrungsbestandteile (z.B. Ballaststoffe) statt, wobei kurzkettige Fettsäuren (Butyrat, Propionat, Acetat) entstehen. Die enzymatische Verdauung und Nährstoffresorption findet hauptsaechlich im Dünndarm statt.",
+      "Der Dickdarm resorbiert Wasser und Elektrolyte (besonders Natrium) und dickt den Darminhalt zum Stuhl ein. Außerdem findet im Colon bakterielle Fermentation unverdaulicher Nahrungsbestandteile (z.B. Ballaststoffe) statt, wobei kurzkettige Fettsäuren (Butyrat, Propionat, Acetat) entstehen. Die enzymatische Verdauung und Nährstoffresorption findet hauptsächlich im Dünndarm statt.",
     difficulty: "leicht",
     tags: ["dickdarm", "colon", "wasserresorption", "fermentation"],
   },
@@ -655,20 +655,20 @@ export const biologieQuestionsPart2: Question[] = [
     id: "bio-85",
     subject: "biologie",
     chapter: "verdauung",
-    topic: "Oberflaechenvergrößerung",
-    text: "Durch welche drei anatomischen Strukturen wird die Resorptionsoberflaeche des Dünndarms maximal vergrößert?",
+    topic: "Oberflächenvergrößerung",
+    text: "Durch welche drei anatomischen Strukturen wird die Resorptionsoberfläche des Dünndarms maximal vergrößert?",
     options: [
       { id: "a", text: "Haustra, Taenien und Appendices epiploicae" },
       { id: "b", text: "Kerckring-Falten (Plicae circulares), Zotten (Villi) und Mikrovilli" },
       { id: "c", text: "Rugae, Krypten und Peyer-Plaques" },
       { id: "d", text: "Plicae semilunares, Haustra und Becherzellen" },
-      { id: "e", text: "Brunner-Drüsen, Lieberkhuehn-Krypten und Paneth-Zellen" },
+      { id: "e", text: "Brunner-Drüsen, Lieberkühn-Krypten und Paneth-Zellen" },
     ],
     correctOptionId: "b",
     explanation:
-      "Die Resorptionsoberflaeche des Dünndarms wird durch drei Ebenen vergrößert: 1) Kerckring-Falten (Plicae circulares) - makroskopische Schleimhautfalten, 2) Zotten (Villi intestinales) - fingerfoermige Ausstuelungen der Schleimhaut, 3) Mikrovilli - submikroskopische Ausstuelungen der apikalen Enterozytenmembran (Buerstensaum). Insgesamt ergibt sich eine Oberflaeche von ca. 200 m².",
+      "Die Resorptionsoberfläche des Dünndarms wird durch drei Ebenen vergrößert: 1) Kerckring-Falten (Plicae circulares) - makroskopische Schleimhautfalten, 2) Zotten (Villi intestinales) - fingerförmige Ausstülpungen der Schleimhaut, 3) Mikrovilli - submikroskopische Ausstülpungen der apikalen Enterozytenmembran (Bürstensaum). Insgesamt ergibt sich eine Oberfläche von ca. 200 m².",
     difficulty: "leicht",
-    tags: ["oberflaechenvergrößerung", "zotten", "mikrovilli", "kerckring"],
+    tags: ["oberflächenvergrößerung", "zotten", "mikrovilli", "kerckring"],
   },
 
   // ===== NIERE/HARN (5 Fragen: bio-86 bis bio-90) =====
@@ -696,7 +696,7 @@ export const biologieQuestionsPart2: Question[] = [
     subject: "biologie",
     chapter: "niere",
     topic: "Glomeruläre Filtration",
-    text: "Welche Kraft ist primär fuer die glomeruläre Filtration verantwortlich?",
+    text: "Welche Kraft ist primär für die glomeruläre Filtration verantwortlich?",
     options: [
       { id: "a", text: "Der osmotische Druck im Tubuluslumen" },
       { id: "b", text: "Aktiver Transport durch die Podozyten" },
@@ -715,7 +715,7 @@ export const biologieQuestionsPart2: Question[] = [
     subject: "biologie",
     chapter: "niere",
     topic: "Harnkonzentrierung",
-    text: "Welcher Mechanismus ist fuer die Erzeugung des hyperosmolaren Milieus im Nierenmark verantwortlich, das die Harnkonzentrierung ermöglicht?",
+    text: "Welcher Mechanismus ist für die Erzeugung des hyperosmolaren Milieus im Nierenmark verantwortlich, das die Harnkonzentrierung ermöglicht?",
     options: [
       { id: "a", text: "Aktive Sekretion von Harnstoff im Sammelrohr" },
       { id: "b", text: "Das Gegenstromsystem (Gegenstrommultiplikation) der Henle-Schleife" },
@@ -725,7 +725,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Die Gegenstrommultiplikation in der Henle-Schleife erzeugt einen osmotischen Gradienten im Nierenmark (von ca. 300 mosmol/l im Cortex bis ca. 1200 mosmol/l in der Papillenspitze). Der absteigende Schenkel ist wasserdurchlaessig, der aufsteigende Schenkel resorbiert aktiv NaCl (über den Na-K-2Cl-Cotransporter), ist aber wasserundurchlaessig. ADH reguliert dann die Wasserpermeabilität der Sammelrohre und bestimmt, wie konzentriert der Endharn wird.",
+      "Die Gegenstrommultiplikation in der Henle-Schleife erzeugt einen osmotischen Gradienten im Nierenmark (von ca. 300 mosmol/l im Cortex bis ca. 1200 mosmol/l in der Papillenspitze). Der absteigende Schenkel ist wasserdurchlässig, der aufsteigende Schenkel resorbiert aktiv NaCl (über den Na-K-2Cl-Cotransporter), ist aber wasserundurchlässig. ADH reguliert dann die Wasserpermeabilität der Sammelrohre und bestimmt, wie konzentriert der Endharn wird.",
     difficulty: "schwer",
     tags: ["gegenstrommultiplikation", "henle-schleife", "harnkonzentrierung", "nierenmark"],
   },
@@ -744,7 +744,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Im proximalen Tubulus werden ca. 65-70% des filtrierten Wassers und Natriums rückresorbiert. Ausserdem werden hier nahezu 100% der Glukose und Aminosäuren (durch sekundär aktiven Transport mit Natrium), sowie Bicarbonat, Phosphat und Harnsäure resorbiert. Insgesamt werden ca. 99% des Primärharns (ca. 180 l/Tag) rückresorbiert, sodass nur ca. 1-2 l Endharn pro Tag ausgeschieden werden.",
+      "Im proximalen Tubulus werden ca. 65-70% des filtrierten Wassers und Natriums rückresorbiert. Außerdem werden hier nahezu 100% der Glukose und Aminosäuren (durch sekundär aktiven Transport mit Natrium), sowie Bicarbonat, Phosphat und Harnsäure resorbiert. Insgesamt werden ca. 99% des Primärharns (ca. 180 l/Tag) rückresorbiert, sodass nur ca. 1-2 l Endharn pro Tag ausgeschieden werden.",
     difficulty: "schwer",
     tags: ["proximaler-tubulus", "rückresorption", "primärharn", "natrium"],
   },
@@ -759,11 +759,11 @@ export const biologieQuestionsPart2: Question[] = [
       { id: "b", text: "Steigerung der Kaliumrückresorption im Sammelrohr" },
       { id: "c", text: "Förderung der Natriumrückresorption und Kaliumsekretion im distalen Tubulus und Sammelrohr" },
       { id: "d", text: "Hemmung der ADH-Freisetzung" },
-      { id: "e", text: "Steigerung der glomerulaeren Filtrationsrate" },
+      { id: "e", text: "Steigerung der glomerulären Filtrationsrate" },
     ],
     correctOptionId: "c",
     explanation:
-      "Aldosteron ist ein Mineralocorticoid aus der Zona glomerulosa der Nebennierenrinde. Es wirkt hauptsaechlich auf die Hauptzellen des distalen Tubulus und Sammelrohrs, wo es die Expression von ENaC (epithelialen Natriumkanaelen) und der Na+/K+-ATPase steigert. Dadurch wird Natrium (und sekundär Wasser) rückresorbiert und Kalium sezerniert. Das RAAS wird bei Blutdruckabfall oder Volumenmangel aktiviert.",
+      "Aldosteron ist ein Mineralocorticoid aus der Zona glomerulosa der Nebennierenrinde. Es wirkt hauptsächlich auf die Hauptzellen des distalen Tubulus und Sammelrohrs, wo es die Expression von ENaC (epithelialen Natriumkanälen) und der Na+/K+-ATPase steigert. Dadurch wird Natrium (und sekundär Wasser) rückresorbiert und Kalium sezerniert. Das RAAS wird bei Blutdruckabfall oder Volumenmangel aktiviert.",
     difficulty: "schwer",
     tags: ["aldosteron", "raas", "natrium", "kalium", "sammelrohr"],
   },
@@ -784,7 +784,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Der Gasaustausch in den Alveolen erfolgt passiv durch Diffusion entlang des Partialdruckgradienten gemaess dem Fick'schen Diffusionsgesetz. Sauerstoff diffundiert von den Alveolen (pO2 ca. 100 mmHg) ins Kapillarblut (pO2 ca. 40 mmHg). CO2 diffundiert umgekehrt vom Blut (pCO2 ca. 46 mmHg) in die Alveolen (pCO2 ca. 40 mmHg). Die dünne Blut-Luft-Schranke (ca. 0,5 Mikrometer) erleichtert die Diffusion.",
+      "Der Gasaustausch in den Alveolen erfolgt passiv durch Diffusion entlang des Partialdruckgradienten gemäß dem Fick'schen Diffusionsgesetz. Sauerstoff diffundiert von den Alveolen (pO2 ca. 100 mmHg) ins Kapillarblut (pO2 ca. 40 mmHg). CO2 diffundiert umgekehrt vom Blut (pCO2 ca. 46 mmHg) in die Alveolen (pCO2 ca. 40 mmHg). Die dünne Blut-Luft-Schranke (ca. 0,5 Mikrometer) erleichtert die Diffusion.",
     difficulty: "mittel",
     tags: ["gasaustausch", "diffusion", "alveolen", "partialdruck"],
   },
@@ -835,15 +835,15 @@ export const biologieQuestionsPart2: Question[] = [
     options: [
       { id: "a", text: "Transport von Sauerstoff ins Blut" },
       { id: "b", text: "Abwehr von Pathogenen durch antimikrobielle Peptide" },
-      { id: "c", text: "Herabsetzung der Oberflaechenspannung, wodurch ein Kollabieren der Alveolen (Atelektase) verhindert wird" },
+      { id: "c", text: "Herabsetzung der Oberflächenspannung, wodurch ein Kollabieren der Alveolen (Atelektase) verhindert wird" },
       { id: "d", text: "Erwärmung der eingeatmeten Luft" },
       { id: "e", text: "Befeuchtung der Bronchialschleimhaut" },
     ],
     correctOptionId: "c",
     explanation:
-      "Surfactant (Surface Active Agent) wird von Pneumozyten Typ II produziert und besteht hauptsaechlich aus Dipalmitoylphosphatidylcholin (DPPC). Es setzt die Oberflaechenspannung in den Alveolen herab und verhindert so deren Kollaps am Ende der Exspiration. Ein Surfactant-Mangel (z.B. bei Frühgeborenen) führt zum Atemnotsyndrom (IRDS). Surfactant wird ab der 24.-28. Schwangerschaftswoche gebildet.",
+      "Surfactant (Surface Active Agent) wird von Pneumozyten Typ II produziert und besteht hauptsächlich aus Dipalmitoylphosphatidylcholin (DPPC). Es setzt die Oberflächenspannung in den Alveolen herab und verhindert so deren Kollaps am Ende der Exspiration. Ein Surfactant-Mangel (z.B. bei Frühgeborenen) führt zum Atemnotsyndrom (IRDS). Surfactant wird ab der 24.-28. Schwangerschaftswoche gebildet.",
     difficulty: "leicht",
-    tags: ["surfactant", "alveolen", "oberflaechenspannung", "pneumozyten"],
+    tags: ["surfactant", "alveolen", "oberflächenspannung", "pneumozyten"],
   },
   {
     id: "bio-95",
@@ -873,7 +873,7 @@ export const biologieQuestionsPart2: Question[] = [
     topic: "Gametogenese",
     text: "In welcher Phase der Meiose befindet sich die Oozyte zum Zeitpunkt der Ovulation?",
     options: [
-      { id: "a", text: "Prophase I (Diktyotaen)" },
+      { id: "a", text: "Prophase I (Diktyotän)" },
       { id: "b", text: "Anaphase I" },
       { id: "c", text: "Metaphase II" },
       { id: "d", text: "Telophase II" },
@@ -881,7 +881,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Zum Zeitpunkt der Ovulation befindet sich die Eizelle in der Metaphase II der Meiose. Die erste Reifeteilung wird kurz vor der Ovulation abgeschlossen (Bildung des ersten Polkörperchens). Die zweite Reifeteilung wird in der Metaphase II arretiert und erst bei der Befruchtung durch das Spermium abgeschlossen (Bildung des zweiten Polkörperchens). Primäre Oozyten sind seit der Embryonalentwicklung im Diktyotaen (Prophase I) arretiert.",
+      "Zum Zeitpunkt der Ovulation befindet sich die Eizelle in der Metaphase II der Meiose. Die erste Reifeteilung wird kurz vor der Ovulation abgeschlossen (Bildung des ersten Polkörperchens). Die zweite Reifeteilung wird in der Metaphase II arretiert und erst bei der Befruchtung durch das Spermium abgeschlossen (Bildung des zweiten Polkörperchens). Primäre Oozyten sind seit der Embryonalentwicklung im Diktyotän (Prophase I) arretiert.",
     difficulty: "schwer",
     tags: ["meiose", "oogenese", "ovulation", "metaphase"],
   },
@@ -938,7 +938,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Die Spermatogenese dauert beim Menschen ca. 64-72 Tage (etwa 74 Tage inklusive Nebenhodenpassage fuer die endgültige Reifung). Sie beginnt mit der mitotischen Teilung der Spermatogonien, gefolgt von zwei meiotischen Teilungen (Spermatozyten I und II) und der Spermiogenese (Differenzierung der runden Spermatiden zu reifen Spermien). Im Gegensatz zur Oogenese läuft die Spermatogenese ab der Pubertät kontinuierlich ab.",
+      "Die Spermatogenese dauert beim Menschen ca. 64-72 Tage (etwa 74 Tage inklusive Nebenhodenpassage für die endgültige Reifung). Sie beginnt mit der mitotischen Teilung der Spermatogonien, gefolgt von zwei meiotischen Teilungen (Spermatozyten I und II) und der Spermiogenese (Differenzierung der runden Spermatiden zu reifen Spermien). Im Gegensatz zur Oogenese läuft die Spermatogenese ab der Pubertät kontinuierlich ab.",
     difficulty: "schwer",
     tags: ["spermatogenese", "spermien", "meiose", "dauer"],
   },
@@ -957,7 +957,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "In der Lutealphase (zweite Zyklushaelfte, nach der Ovulation) produziert das Corpus luteum (Gelbkörper) hauptsaechlich Progesteron. Progesteron transformiert das durch Östrogen aufgebaute Endometrium in ein sekretorisches Endometrium, das fuer die Einnistung einer befruchteten Eizelle vorbereitet ist. Bleibt die Befruchtung aus, bildet sich das Corpus luteum zurück, der Progesteronspiegel sinkt, und die Menstruation setzt ein.",
+      "In der Lutealphase (zweite Zyklushälfte, nach der Ovulation) produziert das Corpus luteum (Gelbkörper) hauptsächlich Progesteron. Progesteron transformiert das durch Östrogen aufgebaute Endometrium in ein sekretorisches Endometrium, das für die Einnistung einer befruchteten Eizelle vorbereitet ist. Bleibt die Befruchtung aus, bildet sich das Corpus luteum zurück, der Progesteronspiegel sinkt, und die Menstruation setzt ein.",
     difficulty: "leicht",
     tags: ["progesteron", "lutealphase", "corpus-luteum", "endometrium"],
   },

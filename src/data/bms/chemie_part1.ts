@@ -35,7 +35,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Die erste Ionisierungsenergie nimmt innerhalb einer Periode tendenziell zu, da die Kernladungszahl steigt, während die Elektronen in der gleichen Schale hinzukommen. Die Abschirmung nimmt nur geringfuegig zu. Kleine Unregelmäßigkeiten treten z.B. beim Übergang von der s- zur p-Unterschale (z.B. Be -> B) und bei der Halbbesetzung der p-Orbitale (z.B. N -> O) auf.",
+      "Die erste Ionisierungsenergie nimmt innerhalb einer Periode tendenziell zu, da die Kernladungszahl steigt, während die Elektronen in der gleichen Schale hinzukommen. Die Abschirmung nimmt nur geringfügig zu. Kleine Unregelmäßigkeiten treten z.B. beim Übergang von der s- zur p-Unterschale (z.B. Be -> B) und bei der Halbbesetzung der p-Orbitale (z.B. N -> O) auf.",
     difficulty: "leicht",
     tags: ["Ionisierungsenergie", "Periodensystem", "Trends"],
   },
@@ -54,7 +54,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Nach dem Bohr'schen Atommodell (1913) bewegen sich Elektronen auf diskreten, stationaeren Bahnen (Energieniveaus) um den Kern, ohne Energie abzustrahlen. Energieänderungen treten nur bei Übergaengen zwischen diesen Bahnen auf. Antwort (b) beschreibt das Orbitalmodell, (d) das Thomson-Modell und (e) ebenfalls das Thomson'sche Rosinenkuchen-Modell.",
+      "Nach dem Bohr'schen Atommodell (1913) bewegen sich Elektronen auf diskreten, stationären Bahnen (Energieniveaus) um den Kern, ohne Energie abzustrahlen. Energieänderungen treten nur bei Übergängen zwischen diesen Bahnen auf. Antwort (b) beschreibt das Orbitalmodell, (d) das Thomson-Modell und (e) ebenfalls das Thomson'sche Rosinenkuchen-Modell.",
     difficulty: "leicht",
     tags: ["Atommodelle", "Bohr", "Quantisierung"],
   },
@@ -63,7 +63,7 @@ export const chemieQuestionsPart1: Question[] = [
     subject: "chemie",
     chapter: "atombau",
     topic: "Isotope",
-    text: "Natürlich vorkommendes Chlor besteht aus 75,77 % Cl-35 (Masse: 34,969 u) und 24,23 % Cl-37 (Masse: 36,966 u). Wie gross ist die mittlere Atommasse von Chlor?",
+    text: "Natürlich vorkommendes Chlor besteht aus 75,77 % Cl-35 (Masse: 34,969 u) und 24,23 % Cl-37 (Masse: 36,966 u). Wie groß ist die mittlere Atommasse von Chlor?",
     options: [
       { id: "a", text: "35,00 u" },
       { id: "b", text: "35,45 u" },
@@ -73,7 +73,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Die mittlere Atommasse berechnet sich als gewichtetes Mittel: M = 0,7577 x 34,969 u + 0,2423 x 36,966 u = 26,496 u + 8,958 u = 35,453 u, gerundet 35,45 u. Dies entspricht dem im Periodensystem angegebenen Wert fuer Chlor.",
+      "Die mittlere Atommasse berechnet sich als gewichtetes Mittel: M = 0,7577 x 34,969 u + 0,2423 x 36,966 u = 26,496 u + 8,958 u = 35,453 u, gerundet 35,45 u. Dies entspricht dem im Periodensystem angegebenen Wert für Chlor.",
     difficulty: "mittel",
     tags: ["Isotope", "Atommasse", "Berechnung"],
   },
@@ -82,7 +82,7 @@ export const chemieQuestionsPart1: Question[] = [
     subject: "chemie",
     chapter: "atombau",
     topic: "Quantenzahlen",
-    text: "Welche Kombination von Quantenzahlen (n, l, ml, ms) ist fuer ein Elektron NICHT erlaubt?",
+    text: "Welche Kombination von Quantenzahlen (n, l, ml, ms) ist für ein Elektron NICHT erlaubt?",
     options: [
       { id: "a", text: "n=3, l=2, ml=-1, ms=+1/2" },
       { id: "b", text: "n=2, l=1, ml=0, ms=-1/2" },
@@ -92,7 +92,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Die Nebenquantenzahl l kann Werte von 0 bis (n-1) annehmen. Fuer n=2 ist l maximal 1. Der Wert l=2 ist fuer n=2 nicht möglich. Die uebrigen Kombinationen sind alle gültig: (a) 3d-Orbital, (b) 2p-Orbital, (c) 4f-Orbital, (e) 1s-Orbital.",
+      "Die Nebenquantenzahl l kann Werte von 0 bis (n-1) annehmen. Für n=2 ist l maximal 1. Der Wert l=2 ist für n=2 nicht möglich. Die übrigen Kombinationen sind alle gültig: (a) 3d-Orbital, (b) 2p-Orbital, (c) 4f-Orbital, (e) 1s-Orbital.",
     difficulty: "mittel",
     tags: ["Quantenzahlen", "Orbitale", "Auswahlregeln"],
   },
@@ -111,7 +111,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Fluor hat mit 3,98 (nach Pauling) die höchste Elektronegativität aller Elemente. Die Elektronegativität nimmt im Periodensystem von links nach rechts zu und von oben nach unten ab. Edelgase wie Neon haben zwar eine hohe Kernladung, aber da sie keine Bindungen eingehen, wird ihnen ueblicherweise kein EN-Wert zugewiesen.",
+      "Fluor hat mit 3,98 (nach Pauling) die höchste Elektronegativität aller Elemente. Die Elektronegativität nimmt im Periodensystem von links nach rechts zu und von oben nach unten ab. Edelgase wie Neon haben zwar eine hohe Kernladung, aber da sie keine Bindungen eingehen, wird ihnen üblicherweise kein EN-Wert zugewiesen.",
     difficulty: "leicht",
     tags: ["Elektronegativität", "Periodensystem", "Fluor"],
   },
@@ -160,7 +160,7 @@ export const chemieQuestionsPart1: Question[] = [
     topic: "Atommodelle",
     text: "Welches Experiment führte zur Entdeckung des Atomkerns?",
     options: [
-      { id: "a", text: "Millikan-Versuch (Oeltroepfchenversuch)" },
+      { id: "a", text: "Millikan-Versuch (Öltröpfchenversuch)" },
       { id: "b", text: "Franck-Hertz-Versuch" },
       { id: "c", text: "Rutherford'scher Streuversuch mit Alpha-Teilchen" },
       { id: "d", text: "Photoelektrischer Effekt" },
@@ -168,7 +168,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Ernest Rutherford führte 1911 den beruehmen Streuversuch durch, bei dem Alpha-Teilchen auf eine dünne Goldfolie geschossen wurden. Die meisten Teilchen gingen ungehindert hindurch, einige wurden stark abgelenkt und wenige sogar zurückgestreut. Dies bewies, dass die positive Ladung und fast die gesamte Masse im Atom in einem winzigen Kern konzentriert sind.",
+      "Ernest Rutherford führte 1911 den berühmten Streuversuch durch, bei dem Alpha-Teilchen auf eine dünne Goldfolie geschossen wurden. Die meisten Teilchen gingen ungehindert hindurch, einige wurden stark abgelenkt und wenige sogar zurückgestreut. Dies bewies, dass die positive Ladung und fast die gesamte Masse im Atom in einem winzigen Kern konzentriert sind.",
     difficulty: "leicht",
     tags: ["Rutherford", "Streuversuch", "Atomkern"],
   },
@@ -206,7 +206,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Die maximale Elektronenzahl pro Schale berechnet sich nach der Formel 2n². Fuer n=3 ergibt sich: 2 x 3² = 2 x 9 = 18 Elektronen. Diese verteilen sich auf die Unterschalen 3s (2), 3p (6) und 3d (10).",
+      "Die maximale Elektronenzahl pro Schale berechnet sich nach der Formel 2n². Für n=3 ergibt sich: 2 x 3² = 2 x 9 = 18 Elektronen. Diese verteilen sich auf die Unterschalen 3s (2), 3p (6) und 3d (10).",
     difficulty: "leicht",
     tags: ["Elektronenkonfiguration", "Schalen", "Besetzung"],
   },
@@ -236,7 +236,7 @@ export const chemieQuestionsPart1: Question[] = [
     subject: "chemie",
     chapter: "bindungen",
     topic: "Ionenbindung",
-    text: "Welche Eigenschaft ist typisch fuer Ionenverbindungen?",
+    text: "Welche Eigenschaft ist typisch für Ionenverbindungen?",
     options: [
       { id: "a", text: "Hohe Schmelzpunkte und elektrische Leitfähigkeit in Lösung oder Schmelze" },
       { id: "b", text: "Elektrische Leitfähigkeit im festen Zustand" },
@@ -246,7 +246,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Ionenverbindungen bilden Ionengitter mit starken elektrostatischen Anziehungskraeften, was zu hohen Schmelzpunkten führt. Im festen Zustand sind die Ionen fixiert und können keinen Strom leiten. Erst in Lösung oder Schmelze sind die Ionen frei beweglich und leiten den elektrischen Strom. Ionenkristalle sind sproede (nicht verformbar) und löslich in polaren Lösungsmitteln wie Wasser.",
+      "Ionenverbindungen bilden Ionengitter mit starken elektrostatischen Anziehungskräften, was zu hohen Schmelzpunkten führt. Im festen Zustand sind die Ionen fixiert und können keinen Strom leiten. Erst in Lösung oder Schmelze sind die Ionen frei beweglich und leiten den elektrischen Strom. Ionenkristalle sind spröde (nicht verformbar) und löslich in polaren Lösungsmitteln wie Wasser.",
     difficulty: "leicht",
     tags: ["Ionenbindung", "Eigenschaften", "Leitfähigkeit"],
   },
@@ -255,7 +255,7 @@ export const chemieQuestionsPart1: Question[] = [
     subject: "chemie",
     chapter: "bindungen",
     topic: "Kovalente Bindung",
-    text: "Wie viele Bindungen und freie Elektronenpaare hat der Stickstoff im Ammoniak-Molekuel (NH3)?",
+    text: "Wie viele Bindungen und freie Elektronenpaare hat der Stickstoff im Ammoniak-Molekül (NH3)?",
     options: [
       { id: "a", text: "4 Bindungen, 0 freie Elektronenpaare" },
       { id: "b", text: "3 Bindungen, 1 freies Elektronenpaar" },
@@ -265,7 +265,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Stickstoff hat 5 Valenzelektronen. Im NH3 bildet er 3 kovalente Bindungen zu den 3 Wasserstoffatomen (3 x 2 = 6 Elektronen in Bindungen, davon 3 von N). Es verbleibt ein freies Elektronenpaar am Stickstoff. Das ergibt nach VSEPR eine tetraedrische Elektronenanordnung, aber eine trigonal-pyramidale Molekuelgeometrie.",
+      "Stickstoff hat 5 Valenzelektronen. Im NH3 bildet er 3 kovalente Bindungen zu den 3 Wasserstoffatomen (3 x 2 = 6 Elektronen in Bindungen, davon 3 von N). Es verbleibt ein freies Elektronenpaar am Stickstoff. Das ergibt nach VSEPR eine tetraedrische Elektronenanordnung, aber eine trigonal-pyramidale Molekülgeometrie.",
     difficulty: "leicht",
     tags: ["Kovalente Bindung", "VSEPR", "Ammoniak"],
   },
@@ -278,13 +278,13 @@ export const chemieQuestionsPart1: Question[] = [
     options: [
       { id: "a", text: "Gerichtete kovalente Bindungen zwischen Metallatomen" },
       { id: "b", text: "Elektrostatische Anziehung zwischen Kationen und Anionen" },
-      { id: "c", text: "Van-der-Waals-Kraefte zwischen neutralen Metallatomen" },
+      { id: "c", text: "Van-der-Waals-Kräfte zwischen neutralen Metallatomen" },
       { id: "d", text: "Ein Gitter aus Metallkationen, umgeben von einem delokalisierten Elektronengas" },
       { id: "e", text: "Wasserstoffbrückenbindungen zwischen den Metallatomen" },
     ],
     correctOptionId: "d",
     explanation:
-      "Die Metallbindung wird durch das Elektronengasmodell beschrieben: Die Metallatome geben ihre Valenzelektronen ab und bilden ein Gitter aus positiv geladenen Atomruempfen (Kationen). Die abgegebenen Elektronen sind delokalisiert und bilden ein 'Elektronengas', das den gesamten Metallkörper durchdringt. Dieses Modell erklaert die elektrische und thermische Leitfähigkeit sowie die Verformbarkeit von Metallen.",
+      "Die Metallbindung wird durch das Elektronengasmodell beschrieben: Die Metallatome geben ihre Valenzelektronen ab und bilden ein Gitter aus positiv geladenen Atomrümpfen (Kationen). Die abgegebenen Elektronen sind delokalisiert und bilden ein 'Elektronengas', das den gesamten Metallkörper durchdringt. Dieses Modell erklärt die elektrische und thermische Leitfähigkeit sowie die Verformbarkeit von Metallen.",
     difficulty: "leicht",
     tags: ["Metallbindung", "Elektronengas", "Modell"],
   },
@@ -292,8 +292,8 @@ export const chemieQuestionsPart1: Question[] = [
     id: "chem-16",
     subject: "chemie",
     chapter: "bindungen",
-    topic: "Van-der-Waals-Kraefte",
-    text: "Welche der folgenden Substanzen hat aufgrund von Wasserstoffbrückenbindungen einen ungewoehnlich hohen Siedepunkt?",
+    topic: "Van-der-Waals-Kräfte",
+    text: "Welche der folgenden Substanzen hat aufgrund von Wasserstoffbrückenbindungen einen ungewöhnlich hohen Siedepunkt?",
     options: [
       { id: "a", text: "CH4 (Methan)" },
       { id: "b", text: "H2S (Schwefelwasserstoff)" },
@@ -303,16 +303,16 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Fluorwasserstoff (HF) bildet starke Wasserstoffbrückenbindungen, da Fluor eine sehr hohe Elektronegativität hat und sehr klein ist. Dies führt zu einem ungewoehnlich hohen Siedepunkt im Vergleich zu den anderen Wasserstoffverbindungen der Halogene. Methan, H2S, PH3 und SiH4 bilden keine relevanten Wasserstoffbrückenbindungen, da C, S, P und Si nicht elektronegativ genug sind (Ausnahme: H2S hat sehr schwache H-Brücken).",
+      "Fluorwasserstoff (HF) bildet starke Wasserstoffbrückenbindungen, da Fluor eine sehr hohe Elektronegativität hat und sehr klein ist. Dies führt zu einem ungewöhnlich hohen Siedepunkt im Vergleich zu den anderen Wasserstoffverbindungen der Halogene. Methan, H2S, PH3 und SiH4 bilden keine relevanten Wasserstoffbrückenbindungen, da C, S, P und Si nicht elektronegativ genug sind (Ausnahme: H2S hat sehr schwache H-Brücken).",
     difficulty: "mittel",
-    tags: ["Wasserstoffbrückenbindung", "Siedepunkt", "Intermolekulare Kraefte"],
+    tags: ["Wasserstoffbrückenbindung", "Siedepunkt", "Intermolekulare Kräfte"],
   },
   {
     id: "chem-17",
     subject: "chemie",
     chapter: "bindungen",
     topic: "Kovalente Bindung",
-    text: "Welche Molekuelgeometrie hat das Wasser-Molekuel (H2O) nach dem VSEPR-Modell?",
+    text: "Welche Molekülgeometrie hat das Wasser-Molekül (H2O) nach dem VSEPR-Modell?",
     options: [
       { id: "a", text: "Linear" },
       { id: "b", text: "Trigonal-planar" },
@@ -322,9 +322,9 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Sauerstoff im Wasser hat 4 Elektronenpaare: 2 Bindungspaare (zu den H-Atomen) und 2 freie Elektronenpaare. Die Elektronenanordnung ist tetraedrisch, aber da nur die Bindungspaare die Molekuelgeometrie bestimmen, ist die Form gewinkelt. Der Bindungswinkel beträgt ca. 104,5°, etwas kleiner als der Tetraederwinkel von 109,5°, da die freien Elektronenpaare mehr Raum beanspruchen.",
+      "Sauerstoff im Wasser hat 4 Elektronenpaare: 2 Bindungspaare (zu den H-Atomen) und 2 freie Elektronenpaare. Die Elektronenanordnung ist tetraedrisch, aber da nur die Bindungspaare die Molekülgeometrie bestimmen, ist die Form gewinkelt. Der Bindungswinkel beträgt ca. 104,5°, etwas kleiner als der Tetraederwinkel von 109,5°, da die freien Elektronenpaare mehr Raum beanspruchen.",
     difficulty: "leicht",
-    tags: ["VSEPR", "Wasser", "Molekuelgeometrie"],
+    tags: ["VSEPR", "Wasser", "Molekülgeometrie"],
   },
   {
     id: "chem-18",
@@ -360,7 +360,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Im Ethen (C2H4) sind die Kohlenstoffatome durch eine Doppelbindung verbunden. Jeder Kohlenstoff bildet 3 Sigma-Bindungen (2 zu H, 1 zu C) und 1 Pi-Bindung. Fuer 3 Sigma-Bindungen benötigt man sp2-Hybridorbitale. Das verbleibende p-Orbital steht senkrecht zur Ebene und bildet die Pi-Bindung. Die sp2-Hybridisierung führt zu einer trigonal-planaren Anordnung mit Bindungswinkeln von 120°.",
+      "Im Ethen (C2H4) sind die Kohlenstoffatome durch eine Doppelbindung verbunden. Jeder Kohlenstoff bildet 3 Sigma-Bindungen (2 zu H, 1 zu C) und 1 Pi-Bindung. Für 3 Sigma-Bindungen benötigt man sp2-Hybridorbitale. Das verbleibende p-Orbital steht senkrecht zur Ebene und bildet die Pi-Bindung. Die sp2-Hybridisierung führt zu einer trigonal-planaren Anordnung mit Bindungswinkeln von 120°.",
     difficulty: "mittel",
     tags: ["Hybridisierung", "Ethen", "Doppelbindung"],
   },
@@ -368,10 +368,10 @@ export const chemieQuestionsPart1: Question[] = [
     id: "chem-20",
     subject: "chemie",
     chapter: "bindungen",
-    topic: "Van-der-Waals-Kraefte",
+    topic: "Van-der-Waals-Kräfte",
     text: "Warum steigt der Siedepunkt in der Reihe He < Ne < Ar < Kr < Xe an?",
     options: [
-      { id: "a", text: "Die London-Dispersionskraefte nehmen mit steigender Elektronenzahl und Polarisierbarkeit zu." },
+      { id: "a", text: "Die London-Dispersionskräfte nehmen mit steigender Elektronenzahl und Polarisierbarkeit zu." },
       { id: "b", text: "Die Elektronegativität nimmt zu." },
       { id: "c", text: "Die Ionisierungsenergie nimmt ab." },
       { id: "d", text: "Es bilden sich zunehmend stärkere Wasserstoffbrückenbindungen." },
@@ -379,9 +379,9 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Edelgase sind unpolar und können weder Ionen- noch kovalente Bindungen eingehen. Die einzigen intermolekularen Kraefte sind London-Dispersionskraefte (temporäre Dipole). Mit steigender Elektronenzahl nimmt die Polarisierbarkeit der Elektronenhülle zu, was zu stärkeren temporaeren Dipol-Wechselwirkungen führt. Daher steigt der Siedepunkt von He (-269°C) bis Xe (-108°C) an.",
+      "Edelgase sind unpolar und können weder Ionen- noch kovalente Bindungen eingehen. Die einzigen intermolekularen Kräfte sind London-Dispersionskräfte (temporäre Dipole). Mit steigender Elektronenzahl nimmt die Polarisierbarkeit der Elektronenhülle zu, was zu stärkeren temporären Dipol-Wechselwirkungen führt. Daher steigt der Siedepunkt von He (-269°C) bis Xe (-108°C) an.",
     difficulty: "mittel",
-    tags: ["London-Dispersionskraefte", "Edelgase", "Siedepunkt"],
+    tags: ["London-Dispersionskräfte", "Edelgase", "Siedepunkt"],
   },
 
   // ===== STOECHIOMETRIE (chem-21 bis chem-32) =====
@@ -400,7 +400,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Die Stoffmenge berechnet sich mit n = m / M. Also n = 270 g / 18 g/mol = 15 mol. In 270 g Wasser sind demnach 15 mol H2O enthalten, was 15 x 6,022 x 10^23 = ca. 9,03 x 10^24 Wassermolekuele entspricht.",
+      "Die Stoffmenge berechnet sich mit n = m / M. Also n = 270 g / 18 g/mol = 15 mol. In 270 g Wasser sind demnach 15 mol H2O enthalten, was 15 x 6,022 x 10^23 = ca. 9,03 x 10^24 Wassermoleküle entspricht.",
     difficulty: "leicht",
     tags: ["Mol", "Stoffmenge", "Berechnung"],
   },
@@ -419,7 +419,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Eine 0,9%ige (m/V) Lösung enthält 0,9 g NaCl pro 100 mL Lösung. Fuer 500 mL benötigt man: 0,9 g/100 mL x 500 mL = 4,5 g NaCl. Die physiologische Kochsalzlösung (0,9%) ist isotonisch zum Blutplasma.",
+      "Eine 0,9%ige (m/V) Lösung enthält 0,9 g NaCl pro 100 mL Lösung. Für 500 mL benötigt man: 0,9 g/100 mL x 500 mL = 4,5 g NaCl. Die physiologische Kochsalzlösung (0,9%) ist isotonisch zum Blutplasma.",
     difficulty: "leicht",
     tags: ["Konzentration", "Massenanteil", "NaCl"],
   },
@@ -428,7 +428,7 @@ export const chemieQuestionsPart1: Question[] = [
     subject: "chemie",
     chapter: "stoichiometrie",
     topic: "Reaktionsgleichungen",
-    text: "Wie lautet die korrekt ausgeglichene Reaktionsgleichung fuer die Verbrennung von Propan (C3H8)?",
+    text: "Wie lautet die korrekt ausgeglichene Reaktionsgleichung für die Verbrennung von Propan (C3H8)?",
     options: [
       { id: "a", text: "C3H8 + 5 O2 -> 3 CO2 + 4 H2O" },
       { id: "b", text: "C3H8 + 3 O2 -> 3 CO2 + 4 H2O" },
@@ -466,7 +466,7 @@ export const chemieQuestionsPart1: Question[] = [
     subject: "chemie",
     chapter: "stoichiometrie",
     topic: "Mol-Berechnung",
-    text: "Bei der Reaktion 2 Al + 3 Cl2 -> 2 AlCl3 reagieren 5,4 g Aluminium (M = 27 g/mol) mit ueberschuessigem Chlor. Welche Masse an AlCl3 (M = 133,5 g/mol) entsteht?",
+    text: "Bei der Reaktion 2 Al + 3 Cl2 -> 2 AlCl3 reagieren 5,4 g Aluminium (M = 27 g/mol) mit überschüssigem Chlor. Welche Masse an AlCl3 (M = 133,5 g/mol) entsteht?",
     options: [
       { id: "a", text: "13,35 g" },
       { id: "b", text: "40,05 g" },
@@ -523,7 +523,7 @@ export const chemieQuestionsPart1: Question[] = [
     subject: "chemie",
     chapter: "stoichiometrie",
     topic: "Mol-Berechnung",
-    text: "Wie viele Molekuele sind in 11,2 L Stickstoffgas (N2) bei STP (0°C, 1 atm) enthalten?",
+    text: "Wie viele Moleküle sind in 11,2 L Stickstoffgas (N2) bei STP (0°C, 1 atm) enthalten?",
     options: [
       { id: "a", text: "6,022 x 10^23" },
       { id: "b", text: "1,204 x 10^24" },
@@ -533,7 +533,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Bei STP nimmt 1 mol Gas 22,4 L ein. 11,2 L entsprechen: n = 11,2 L / 22,4 L/mol = 0,5 mol. Die Anzahl der Molekuele ist: N = 0,5 mol x 6,022 x 10^23 mol^-1 = 3,011 x 10^23 Molekuele. Achtung: Es wird nach Molekuelen gefragt, nicht nach Atomen (das wäre doppelt so viel).",
+      "Bei STP nimmt 1 mol Gas 22,4 L ein. 11,2 L entsprechen: n = 11,2 L / 22,4 L/mol = 0,5 mol. Die Anzahl der Moleküle ist: N = 0,5 mol x 6,022 x 10^23 mol^-1 = 3,011 x 10^23 Moleküle. Achtung: Es wird nach Molekülen gefragt, nicht nach Atomen (das wäre doppelt so viel).",
     difficulty: "mittel",
     tags: ["Avogadro", "Molares Volumen", "Berechnung"],
   },
@@ -547,7 +547,7 @@ export const chemieQuestionsPart1: Question[] = [
       { id: "a", text: "Stickstoff, da er eine höhere Masse hat." },
       { id: "b", text: "Wasserstoff, da weniger Gramm vorhanden sind." },
       { id: "c", text: "Stickstoff, da er im Unterschuss vorliegt." },
-      { id: "d", text: "Wasserstoff, da nicht genuegend Mol fuer den vollständigen Umsatz vorhanden sind." },
+      { id: "d", text: "Wasserstoff, da nicht genügend Mol für den vollständigen Umsatz vorhanden sind." },
       { id: "e", text: "Keiner, da die Stoffe im exakten stöchimetrischen Verhältnis vorliegen." },
     ],
     correctOptionId: "e",
@@ -561,7 +561,7 @@ export const chemieQuestionsPart1: Question[] = [
     subject: "chemie",
     chapter: "stoichiometrie",
     topic: "Konzentrationen",
-    text: "Wie viel Milliliter einer 2 mol/L HCl-Lösung muessen mit Wasser verdünnt werden, um 500 mL einer 0,1 mol/L Lösung zu erhalten?",
+    text: "Wie viel Milliliter einer 2 mol/L HCl-Lösung müssen mit Wasser verdünnt werden, um 500 mL einer 0,1 mol/L Lösung zu erhalten?",
     options: [
       { id: "a", text: "10 mL" },
       { id: "b", text: "50 mL" },
@@ -609,7 +609,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "n(Glucose) = 180 g / 180 g/mol = 1 mol. Laut Gleichung benötigt 1 mol Glucose 6 mol O2. n(O2) = 6 mol. m(O2) = 6 mol x 32 g/mol = 192 g. Fuer die vollständige Verbrennung von 180 g Glucose werden 192 g Sauerstoff benötigt.",
+      "n(Glucose) = 180 g / 180 g/mol = 1 mol. Laut Gleichung benötigt 1 mol Glucose 6 mol O2. n(O2) = 6 mol. m(O2) = 6 mol x 32 g/mol = 192 g. Für die vollständige Verbrennung von 180 g Glucose werden 192 g Sauerstoff benötigt.",
     difficulty: "mittel",
     tags: ["Stöchiometrie", "Verbrennung", "Glucose"],
   },
@@ -668,7 +668,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Ein Puffersystem besteht aus einer schwachen Säure und ihrer konjugierten Base (oder einer schwachen Base und ihrer konjugierten Säure). Essigsäure (schwache Säure) und Natriumacetat (Salz der konjugierten Base Acetat) bilden einen klassischen Puffer. HCl ist eine starke Säure und eignet sich nicht fuer Puffer. NaCl und KCl sind neutrale Salze ohne Pufferwirkung.",
+      "Ein Puffersystem besteht aus einer schwachen Säure und ihrer konjugierten Base (oder einer schwachen Base und ihrer konjugierten Säure). Essigsäure (schwache Säure) und Natriumacetat (Salz der konjugierten Base Acetat) bilden einen klassischen Puffer. HCl ist eine starke Säure und eignet sich nicht für Puffer. NaCl und KCl sind neutrale Salze ohne Pufferwirkung.",
     difficulty: "leicht",
     tags: ["Puffer", "Schwache Säure", "Acetat"],
   },
@@ -706,7 +706,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Fuer eine schwache Säure gilt: [H+] = Wurzel(Ks x c0) = Wurzel(1,8 x 10^-5 x 0,1) = Wurzel(1,8 x 10^-6) = 1,34 x 10^-3 mol/L. pH = -log(1,34 x 10^-3) = 2,87. Diese Näherungsformel gilt, wenn der Dissoziationsgrad klein ist (c0 >> [H+]), was hier erfüllt ist.",
+      "Für eine schwache Säure gilt: [H+] = Wurzel(Ks x c0) = Wurzel(1,8 x 10^-5 x 0,1) = Wurzel(1,8 x 10^-6) = 1,34 x 10^-3 mol/L. pH = -log(1,34 x 10^-3) = 2,87. Diese Näherungsformel gilt, wenn der Dissoziationsgrad klein ist (c0 >> [H+]), was hier erfüllt ist.",
     difficulty: "schwer",
     tags: ["Schwache Säure", "pH-Berechnung", "Dissoziation"],
   },
@@ -753,19 +753,19 @@ export const chemieQuestionsPart1: Question[] = [
     subject: "chemie",
     chapter: "säuren-basen",
     topic: "Säuren-Basen-Definition",
-    text: "Welche Aussage entspricht der Broensted-Definition einer Base?",
+    text: "Welche Aussage entspricht der Brønsted-Definition einer Base?",
     options: [
       { id: "a", text: "Eine Base ist ein Protonenakzeptor." },
       { id: "b", text: "Eine Base ist ein Elektronenpaarakzeptor." },
       { id: "c", text: "Eine Base ist ein Protonendonator." },
-      { id: "d", text: "Eine Base erhoet die OH--Konzentration in Wasser (Arrhenius)." },
+      { id: "d", text: "Eine Base erhöht die OH--Konzentration in Wasser (Arrhenius)." },
       { id: "e", text: "Eine Base ist ein Oxidationsmittel." },
     ],
     correctOptionId: "a",
     explanation:
-      "Nach Broested-Lowry ist eine Base ein Protonenakzeptor, also ein Teilchen, das ein Proton (H+) aufnehmen kann. Antwort (a) beschreibt eine Säure nach Broested. Antwort (b) beschreibt eine Lewis-Säure. Antwort (d) ist die Arrhenius-Definition einer Base, die enger gefasst ist als die Broested-Definition.",
+      "Nach Brønsted-Lowry ist eine Base ein Protonenakzeptor, also ein Teilchen, das ein Proton (H+) aufnehmen kann. Antwort (a) beschreibt eine Säure nach Brønsted. Antwort (b) beschreibt eine Lewis-Säure. Antwort (d) ist die Arrhenius-Definition einer Base, die enger gefasst ist als die Brønsted-Definition.",
     difficulty: "leicht",
-    tags: ["Broested", "Definition", "Protonenakzeptor"],
+    tags: ["Brønsted", "Definition", "Protonenakzeptor"],
   },
   {
     id: "chem-41",
@@ -877,7 +877,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Ein Puffer wirkt am besten im Bereich pKs +/- 1, also von pH 5,8 bis 7,8. In diesem Bereich liegt das Verhältnis [A-]/[HA] zwischen 0,1 und 10 (log 0,1 = -1, log 10 = +1). Außerhalb dieses Bereichs ist eine Komponente so stark verbraucht, dass die Pufferwirkung nachlasst. Die maximale Pufferkapazität liegt bei pH = pKs (hier 6,8).",
+      "Ein Puffer wirkt am besten im Bereich pKs +/- 1, also von pH 5,8 bis 7,8. In diesem Bereich liegt das Verhältnis [A-]/[HA] zwischen 0,1 und 10 (log 0,1 = -1, log 10 = +1). Außerhalb dieses Bereichs ist eine Komponente so stark verbraucht, dass die Pufferwirkung nachlässt. Die maximale Pufferkapazität liegt bei pH = pKs (hier 6,8).",
     difficulty: "mittel",
     tags: ["Pufferbereich", "pKs", "Pufferkapazität"],
   },
@@ -917,7 +917,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Im MnO4- hat Sauerstoff die Oxidationszahl -2. Die Summe aller Oxidationszahlen muss der Ionenladung (-1) entsprechen. x + 4(-2) = -1, also x - 8 = -1, x = +7. Mangan hat im Permanganat die Oxidationszahl +7, die höchste mögliche Oxidationszahl fuer Mn (entspricht der Abgabe aller 7 Valenzelektronen).",
+      "Im MnO4- hat Sauerstoff die Oxidationszahl -2. Die Summe aller Oxidationszahlen muss der Ionenladung (-1) entsprechen. x + 4(-2) = -1, also x - 8 = -1, x = +7. Mangan hat im Permanganat die Oxidationszahl +7, die höchste mögliche Oxidationszahl für Mn (entspricht der Abgabe aller 7 Valenzelektronen).",
     difficulty: "mittel",
     tags: ["Oxidationszahl", "Permanganat", "Berechnung"],
   },
@@ -945,7 +945,7 @@ export const chemieQuestionsPart1: Question[] = [
     subject: "chemie",
     chapter: "redox",
     topic: "Galvanische Zelle",
-    text: "In einer galvanischen Zelle mit Zink (E° = -0,76 V) und Kupfer (E° = +0,34 V) Elektroden: Was ist die Anode und wie gross ist die Zellspannung?",
+    text: "In einer galvanischen Zelle mit Zink (E° = -0,76 V) und Kupfer (E° = +0,34 V) Elektroden: Was ist die Anode und wie groß ist die Zellspannung?",
     options: [
       { id: "a", text: "Anode: Cu, Spannung: 0,42 V" },
       { id: "b", text: "Anode: Zn, Spannung: 0,42 V" },
@@ -989,11 +989,11 @@ export const chemieQuestionsPart1: Question[] = [
       { id: "b", text: "+4" },
       { id: "c", text: "+6" },
       { id: "d", text: "-2" },
-      { id: "e", text: "+2 (durchschnittlich, tatsaechlich +5 und -1)" },
+      { id: "e", text: "+2 (durchschnittlich, tatsächlich +5 und -1)" },
     ],
     correctOptionId: "a",
     explanation:
-      "In Na2S2O3: Na hat +1, O hat -2. Die Summe muss 0 ergeben: 2(+1) + 2x + 3(-2) = 0, also 2 + 2x - 6 = 0, 2x = 4, x = +2. Die formale durchschnittliche Oxidationszahl von Schwefel beträgt +2. Tatsaechlich hat Thiosulfat eine Struktur ähnlich wie Sulfat, wobei ein O durch S ersetzt ist, was zu unterschiedlichen lokalen Oxidationszahlen führt, aber die formale Berechnung ergibt +2.",
+      "In Na2S2O3: Na hat +1, O hat -2. Die Summe muss 0 ergeben: 2(+1) + 2x + 3(-2) = 0, also 2 + 2x - 6 = 0, 2x = 4, x = +2. Die formale durchschnittliche Oxidationszahl von Schwefel beträgt +2. Tatsächlich hat Thiosulfat eine Struktur ähnlich wie Sulfat, wobei ein O durch S ersetzt ist, was zu unterschiedlichen lokalen Oxidationszahlen führt, aber die formale Berechnung ergibt +2.",
     difficulty: "schwer",
     tags: ["Oxidationszahl", "Thiosulfat", "Berechnung"],
   },
@@ -1061,12 +1061,12 @@ export const chemieQuestionsPart1: Question[] = [
     subject: "chemie",
     chapter: "organische-chemie",
     topic: "Funktionelle Gruppen",
-    text: "Welche funktionelle Gruppe ist charakteristisch fuer Aldehyde?",
+    text: "Welche funktionelle Gruppe ist charakteristisch für Aldehyde?",
     options: [
       { id: "a", text: "-COOH (Carboxylgruppe)" },
       { id: "b", text: "-CHO (Aldehydgruppe/Formylgruppe)" },
       { id: "c", text: "-OH (Hydroxylgruppe)" },
-      { id: "d", text: "-CO- (Ketogruppe/Carbonylgruppe im Molekuelinneren)" },
+      { id: "d", text: "-CO- (Ketogruppe/Carbonylgruppe im Molekülinneren)" },
       { id: "e", text: "-NH2 (Aminogruppe)" },
     ],
     correctOptionId: "b",
@@ -1080,7 +1080,7 @@ export const chemieQuestionsPart1: Question[] = [
     subject: "chemie",
     chapter: "organische-chemie",
     topic: "Nomenklatur",
-    text: "Wie lautet der IUPAC-Name fuer die Verbindung CH3-CH(CH3)-CH2-CH3?",
+    text: "Wie lautet der IUPAC-Name für die Verbindung CH3-CH(CH3)-CH2-CH3?",
     options: [
       { id: "a", text: "2-Methylbutan" },
       { id: "b", text: "3-Methylbutan" },
@@ -1128,7 +1128,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Die Verbindung CH2=CH-CH2-CH3 hat 4 Kohlenstoffatome (But-) und eine Doppelbindung (-en). Die Kette wird so nummeriert, dass die Doppelbindung die niedrigste Position erhält. Die Doppelbindung liegt zwischen C1 und C2: 1-Buten (oder But-1-en). 2-Buten haette die Doppelbindung zwischen C2 und C3 (CH3-CH=CH-CH3). 1-Butin haette eine Dreifachbindung.",
+      "Die Verbindung CH2=CH-CH2-CH3 hat 4 Kohlenstoffatome (But-) und eine Doppelbindung (-en). Die Kette wird so nummeriert, dass die Doppelbindung die niedrigste Position erhält. Die Doppelbindung liegt zwischen C1 und C2: 1-Buten (oder But-1-en). 2-Buten hätte die Doppelbindung zwischen C2 und C3 (CH3-CH=CH-CH3). 1-Butin hätte eine Dreifachbindung.",
     difficulty: "mittel",
     tags: ["IUPAC-Nomenklatur", "Alken", "Doppelbindung"],
   },
@@ -1147,7 +1147,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Die Oxidationsreihe der organischen Chemie lautet: Alkan (niedrigste Oxidationsstufe) -> Alkohol -> Aldehyd (bzw. Keton) -> Carbonsäure (höchste Oxidationsstufe fuer ein C-Atom mit einer O-Einheit). Jeder Schritt ist eine Oxidation (Abgabe von Elektronen/Wasserstoff bzw. Aufnahme von Sauerstoff). Beispiel: Methan -> Methanol -> Formaldehyd -> Ameisensäure -> CO2.",
+      "Die Oxidationsreihe der organischen Chemie lautet: Alkan (niedrigste Oxidationsstufe) -> Alkohol -> Aldehyd (bzw. Keton) -> Carbonsäure (höchste Oxidationsstufe für ein C-Atom mit einer O-Einheit). Jeder Schritt ist eine Oxidation (Abgabe von Elektronen/Wasserstoff bzw. Aufnahme von Sauerstoff). Beispiel: Methan -> Methanol -> Formaldehyd -> Ameisensäure -> CO2.",
     difficulty: "schwer",
     tags: ["Oxidationsreihe", "Funktionelle Gruppen", "Oxidationsstufe"],
   },

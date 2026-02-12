@@ -55,14 +55,14 @@ export default function MenstrualCycle() {
     if (day <= 5) return "Menstruation: Endometrium wird abgestossen. Östrogen und Progesteron niedrig.";
     if (day <= 13) return "Follikelphase: FSH stimuliert Follikelreifung. Östrogen steigt → Endometriumaufbau.";
     if (day === 14) return "Ovulation: LH-Peak löst Eisprung aus! Reife Eizelle wird freigesetzt.";
-    if (day <= 28) return "Lutealphase: Gelbkörper produziert Progesteron. Endometrium wird fuer Einnistung vorbereitet.";
+    if (day <= 28) return "Lutealphase: Gelbkörper produziert Progesteron. Endometrium wird für Einnistung vorbereitet.";
     return "";
   };
 
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Menstruationszyklus — Hormonspiegel</h4>
-      <p className="text-xs text-gray-600 dark:text-gray-400">Fahre über den Graphen fuer Tagesdetails.</p>
+      <p className="text-xs text-gray-600 dark:text-gray-400">Fahre über den Graphen für Tagesdetails.</p>
 
       <svg viewBox="0 0 480 340" className="w-full max-w-xl mx-auto">
         {/* Phase backgrounds */}

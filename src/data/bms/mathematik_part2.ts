@@ -38,7 +38,7 @@ export const mathematikQuestionsPart2: Question[] = [
     explanation:
       "Diskriminante: D = b² - 4ac = 4 - 20 = -16 < 0. Da die Diskriminante negativ ist, gibt es keine reellen Lösungen. Es existieren nur zwei konjugiert komplexe Lösungen.",
     difficulty: "mittel",
-    tags: ["quadratische-gleichungen", "diskriminante", "loesbarkeit"],
+    tags: ["quadratische-gleichungen", "diskriminante", "lösbarkeit"],
   },
   {
     id: "math-43",
@@ -83,7 +83,7 @@ export const mathematikQuestionsPart2: Question[] = [
     subject: "mathematik",
     chapter: "algebra",
     topic: "Logarithmen",
-    text: "Welcher Ausdruck ist aequivalent zu log(a²·b) - log(a·b²)?",
+    text: "Welcher Ausdruck ist äquivalent zu log(a²·b) - log(a·b²)?",
     options: [
       { id: "a", text: "log(a·b)" },
       { id: "b", text: "log(a/b)" },
@@ -216,7 +216,7 @@ export const mathematikQuestionsPart2: Question[] = [
     subject: "mathematik",
     chapter: "algebra",
     topic: "Quadratische Gleichungen",
-    text: "Fuer welchen Wert von k hat die Gleichung x² - 6x + k = 0 genau eine (doppelte) Lösung?",
+    text: "Für welchen Wert von k hat die Gleichung x² - 6x + k = 0 genau eine (doppelte) Lösung?",
     options: [
       { id: "a", text: "k = 6" },
       { id: "b", text: "k = 3" },
@@ -237,7 +237,7 @@ export const mathematikQuestionsPart2: Question[] = [
     subject: "mathematik",
     chapter: "zehnerpotenzen",
     topic: "SI-Einheiten",
-    text: "Welche SI-Basiseinheit wird fuer die Stoffmenge verwendet?",
+    text: "Welche SI-Basiseinheit wird für die Stoffmenge verwendet?",
     options: [
       { id: "a", text: "Kilogramm (kg)" },
       { id: "b", text: "Candela (cd)" },
@@ -313,7 +313,7 @@ export const mathematikQuestionsPart2: Question[] = [
     subject: "mathematik",
     chapter: "zehnerpotenzen",
     topic: "SI-Einheiten",
-    text: "Welches SI-Präfix steht fuer den Faktor 10⁻⁹?",
+    text: "Welches SI-Präfix steht für den Faktor 10⁻⁹?",
     options: [
       { id: "a", text: "Mikro (μ)" },
       { id: "b", text: "Piko (p)" },
@@ -458,7 +458,7 @@ export const mathematikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "x³ - 8 = (x - 2)(x² + 2x + 4). Dies folgt aus der dritten binomischen Formel fuer Kuben: a³ - b³ = (a - b)(a² + ab + b²) mit a = x, b = 2. Probe: (x - 2)(x² + 2x + 4) = x³ + 2x² + 4x - 2x² - 4x - 8 = x³ - 8 ✓.",
+      "x³ - 8 = (x - 2)(x² + 2x + 4). Dies folgt aus der dritten binomischen Formel für Kuben: a³ - b³ = (a - b)(a² + ab + b²) mit a = x, b = 2. Probe: (x - 2)(x² + 2x + 4) = x³ + 2x² + 4x - 2x² - 4x - 8 = x³ - 8 ✓.",
     difficulty: "schwer",
     tags: ["polynomdivision", "faktorisierung", "berechnung"],
   },
@@ -477,7 +477,7 @@ export const mathematikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "lim(x→∞) (1 + 1/x)^x = e ≈ 2,71828... Dies ist die Definition der Eulerschen Zahl e. Dieser Grenzwert ist fundamental fuer die Exponential- und Logarithmusfunktion.",
+      "lim(x→∞) (1 + 1/x)^x = e ≈ 2,71828... Dies ist die Definition der Eulerschen Zahl e. Dieser Grenzwert ist fundamental für die Exponential- und Logarithmusfunktion.",
     difficulty: "schwer",
     tags: ["grenzwert", "eulersche-zahl", "definition"],
   },
@@ -496,7 +496,7 @@ export const mathematikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "f(0) = e⁰ = 1. f'(x) = -2x·e^(-x²). f'(0) = 0. f''(x) = (-2 + 4x²)·e^(-x²), also f''(0) = -2 < 0 → Maximum bei x = 0. Der Funktionswert f(x) ist fuer alle x positiv und strebt gegen 0 fuer |x| → ∞.",
+      "f(0) = e⁰ = 1. f'(x) = -2x·e^(-x²). f'(0) = 0. f''(x) = (-2 + 4x²)·e^(-x²), also f''(0) = -2 < 0 → Maximum bei x = 0. Der Funktionswert f(x) ist für alle x positiv und strebt gegen 0 für |x| → ∞.",
     difficulty: "schwer",
     tags: ["exponentialfunktion", "extremstellen", "analyse"],
   },
@@ -506,8 +506,8 @@ export const mathematikQuestionsPart2: Question[] = [
     id: "math-67",
     subject: "mathematik",
     chapter: "geometrie",
-    topic: "Flaechenberechnung",
-    text: "Ein Trapez hat die parallelen Seiten a = 12 cm und c = 8 cm sowie die Höhe h = 5 cm. Wie gross ist die Flaeche?",
+    topic: "Flächenberechnung",
+    text: "Ein Trapez hat die parallelen Seiten a = 12 cm und c = 8 cm sowie die Höhe h = 5 cm. Wie groß ist die Fläche?",
     options: [
       { id: "a", text: "60 cm²" },
       { id: "b", text: "40 cm²" },
@@ -517,9 +517,9 @@ export const mathematikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Flaechenformel Trapez: A = (a + c)/2 · h = (12 + 8)/2 · 5 = 20/2 · 5 = 10 · 5 = 50 cm².",
+      "Flächenformel Trapez: A = (a + c)/2 · h = (12 + 8)/2 · 5 = 20/2 · 5 = 10 · 5 = 50 cm².",
     difficulty: "leicht",
-    tags: ["trapez", "flaecheninhalt", "berechnung"],
+    tags: ["trapez", "flächeninhalt", "berechnung"],
   },
   {
     id: "math-68",
@@ -574,7 +574,7 @@ export const mathematikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Bei ähnlichen Körpern skaliert das Volumen mit der dritten Potenz des Längenverhältnisses: V-Verhältnis = (1:2)³ = 1:8. Flaechen skalieren quadratisch, Volumina kubisch.",
+      "Bei ähnlichen Körpern skaliert das Volumen mit der dritten Potenz des Längenverhältnisses: V-Verhältnis = (1:2)³ = 1:8. Flächen skalieren quadratisch, Volumina kubisch.",
     difficulty: "mittel",
     tags: ["ähnlichkeit", "volumenverhältnis", "skalierung"],
   },
@@ -583,7 +583,7 @@ export const mathematikQuestionsPart2: Question[] = [
     subject: "mathematik",
     chapter: "geometrie",
     topic: "Kreisberechnungen",
-    text: "Ein Kreissektor hat den Radius r = 10 cm und den Zentriwinkel α = 72°. Wie gross ist die Flaeche des Sektors? (π ≈ 3,14)",
+    text: "Ein Kreissektor hat den Radius r = 10 cm und den Zentriwinkel α = 72°. Wie groß ist die Fläche des Sektors? (π ≈ 3,14)",
     options: [
       { id: "a", text: "ca. 31,4 cm²" },
       { id: "b", text: "ca. 62,8 cm²" },
@@ -593,9 +593,9 @@ export const mathematikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Kreissektorflaeche: A = (α/360°)·π·r² = (72/360)·3,14·100 = 0,2·314 = 62,8 cm². Der Sektor entspricht 72/360 = 1/5 des Vollkreises.",
+      "Kreissektorfläche: A = (α/360°)·π·r² = (72/360)·3,14·100 = 0,2·314 = 62,8 cm². Der Sektor entspricht 72/360 = 1/5 des Vollkreises.",
     difficulty: "mittel",
-    tags: ["kreissektor", "flaecheninhalt", "berechnung"],
+    tags: ["kreissektor", "flächeninhalt", "berechnung"],
   },
 
   // ── Trigonometrie (5 Fragen: math-72 bis math-76) ──────────────────
@@ -633,7 +633,7 @@ export const mathematikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Das Additionstheorem fuer Sinus lautet: sin(α + β) = sin(α)·cos(β) + cos(α)·sin(β). Antwort (d) wäre cos(α + β) und (e) wäre sin(α - β).",
+      "Das Additionstheorem für Sinus lautet: sin(α + β) = sin(α)·cos(β) + cos(α)·sin(β). Antwort (d) wäre cos(α + β) und (e) wäre sin(α - β).",
     difficulty: "mittel",
     tags: ["additionstheoreme", "sinus", "formel"],
   },
@@ -701,7 +701,7 @@ export const mathematikQuestionsPart2: Question[] = [
     subject: "mathematik",
     chapter: "vektorrechnung",
     topic: "Skalarprodukt",
-    text: "Fuer welchen Wert von t stehen die Vektoren a⃗ = (2, t, -1) und b⃗ = (3, 1, 4) senkrecht aufeinander?",
+    text: "Für welchen Wert von t stehen die Vektoren a⃗ = (2, t, -1) und b⃗ = (3, 1, 4) senkrecht aufeinander?",
     options: [
       { id: "a", text: "t = 2" },
       { id: "b", text: "t = -2" },

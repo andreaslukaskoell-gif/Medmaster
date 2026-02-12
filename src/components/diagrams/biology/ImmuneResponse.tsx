@@ -1,15 +1,15 @@
 import { useState } from "react";
 
 const parts = [
-  { id: "innate", label: "Angeborene Immunantwort", detail: "Schnell (Minuten–Stunden), unspezifisch, kein immunologisches Gedaechtnis. Erste Verteidigungslinie nach den Barrieren." },
-  { id: "adaptive", label: "Adaptive Immunantwort", detail: "Langsamer (Tage), hoch spezifisch, bildet Gedaechtniszellen. Vermittelt durch T- und B-Lymphozyten." },
+  { id: "innate", label: "Angeborene Immunantwort", detail: "Schnell (Minuten–Stunden), unspezifisch, kein immunologisches Gedächtnis. Erste Verteidigungslinie nach den Barrieren." },
+  { id: "adaptive", label: "Adaptive Immunantwort", detail: "Langsamer (Tage), hoch spezifisch, bildet Gedächtniszellen. Vermittelt durch T- und B-Lymphozyten." },
   { id: "makro", label: "Makrophagen", detail: "Fresszellen (Phagozytose). Präsentieren Antigene auf MHC-II → aktivieren T-Helferzellen. Zytokinproduktion." },
   { id: "nk", label: "NK-Zellen", detail: "Natürliche Killerzellen. Erkennen und töten virusinfizierte Zellen und Tumorzellen. Kein Antigenrezeptor nötig." },
   { id: "komplement", label: "Komplementsystem", detail: "Kaskade aus ~30 Plasmaproteinen. Opsonierung, MAC (Membranattacke-Komplex), Chemotaxis, Entzuendung." },
   { id: "dendritisch", label: "Dendritische Zellen", detail: "Professionelle antigenpräsentierende Zellen (APC). Bilden Brücke zwischen angeborenem und adaptivem Immunsystem." },
   { id: "tcell", label: "T-Zellen", detail: "T-Helferzellen (CD4+): koordinieren Immunantwort. Zytotoxische T-Zellen (CD8+): töten infizierte Zellen direkt." },
   { id: "bcell", label: "B-Zellen → Antikörper", detail: "Erkennen Antigene mit B-Zell-Rezeptor. Differenzieren zu Plasmazellen → produzieren Antikörper (IgG, IgM, IgA, IgE, IgD)." },
-  { id: "memory", label: "Gedaechtniszellen", detail: "Langlebige B- und T-Gedaechtniszellen. Bei erneutem Kontakt: schnellere und stärkere Immunantwort (sekundäre Antwort)." },
+  { id: "memory", label: "Gedächtniszellen", detail: "Langlebige B- und T-Gedächtniszellen. Bei erneutem Kontakt: schnellere und stärkere Immunantwort (sekundäre Antwort)." },
 ];
 
 type Part = (typeof parts)[number];
@@ -20,7 +20,7 @@ export default function ImmuneResponse() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Immunantwort — Angeboren vs. Adaptiv</h4>
-      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Zelltypen fuer Details.</p>
+      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Zelltypen für Details.</p>
 
       <svg viewBox="0 0 480 420" className="w-full max-w-xl mx-auto">
         {/* Pathogen at top */}
@@ -157,7 +157,7 @@ export default function ImmuneResponse() {
         {/* Memory cells */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[8])} onMouseLeave={() => setActive(null)}>
           <rect x="295" y="330" width="120" height="35" rx="8" fill={active?.id === "memory" ? "#ccfbf1" : "#f0fdfa"} stroke="#0d9488" strokeWidth="1.5" />
-          <text x="355" y="346" textAnchor="middle" fontSize="7" fill="#115e59" fontWeight="bold">Gedaechtniszellen</text>
+          <text x="355" y="346" textAnchor="middle" fontSize="7" fill="#115e59" fontWeight="bold">Gedächtniszellen</text>
           <text x="355" y="358" textAnchor="middle" fontSize="6" fill="#0d9488">(T- und B-Memory)</text>
         </g>
 
@@ -172,7 +172,7 @@ export default function ImmuneResponse() {
 
         {/* Labels: timing */}
         <rect x="20" y="380" width="440" height="30" rx="6" fill="#f0fdfa" stroke="#14b8a6" strokeWidth="1" />
-        <text x="240" y="398" textAnchor="middle" fontSize="8" fill="#115e59" fontWeight="bold">Angeboren: schnell, unspezifisch → Adaptiv: langsam, spezifisch, Gedaechtnis</text>
+        <text x="240" y="398" textAnchor="middle" fontSize="8" fill="#115e59" fontWeight="bold">Angeboren: schnell, unspezifisch → Adaptiv: langsam, spezifisch, Gedächtnis</text>
       </svg>
 
       {active && (
