@@ -78,7 +78,7 @@ Die Polarität einer kovalenten Bindung hängt von der Elektronegativitätsdiffe
         question: 'Warum ist CO₂ trotz polarer C=O-Bindungen ein unpolares Molekül?',
         answer: 'CO₂ ist linear aufgebaut. Die beiden C=O-Bindungsdipole zeigen in entgegengesetzte Richtungen und heben sich gegenseitig auf. Das Gesamtdipolmoment ist daher null.'
       },
-      klinischerBezug: 'Die Polarität von Molekülen bestimmt ihre Löslichkeit und damit ihre Verteilung im Körper (Pharmakologie: „Similia similibus solvuntur" – Ähnliches löst sich in Ähnlichem). Polare Arzneistoffe verteilen sich bevorzugt im wässrigen Kompartiment (Blutplasma), während unpolare Substanzen die Zellmembran leichter durchdringen und sich im Fettgewebe anreichern.',
+      klinischerBezug: 'Die Polarität von Molekülen bestimmt ihre Löslichkeit und damit ihre Verteilung im Körper (Pharmakologie: „Similia similibus solvuntur“ – Ähnliches löst sich in Ähnlichem). Polare Arzneistoffe verteilen sich bevorzugt im wässrigen Kompartiment (Blutplasma), während unpolare Substanzen die Zellmembran leichter durchdringen und sich im Fettgewebe anreichern.',
       selfTest: [
         {
           question: 'Aus wie vielen Elektronenpaaren besteht eine Dreifachbindung?',

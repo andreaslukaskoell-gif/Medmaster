@@ -188,7 +188,7 @@ export default function Notes() {
         chapterId,
         content,
         chapterTitle: chapter?.title || chapterId,
-        subject: chapter?.subject || "Sonstige",
+        subject: (chapter && 'subject' in chapter ? chapter.subject : undefined) || "Sonstige",
       };
     })
     .filter(

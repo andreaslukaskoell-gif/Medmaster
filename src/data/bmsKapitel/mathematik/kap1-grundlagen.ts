@@ -169,23 +169,49 @@ Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. 
     {
       id: 'math-kap1-4',
       title: 'Prozent- & Zinsrechnung',
-      content: `Die Prozentrechnung beschreibt Anteile bezogen auf den Grundwert 100. Die drei Grundgrößen sind: der Grundwert G (das Ganze, 100 %), der Prozentsatz p (in %) und der Prozentwert W (der Anteil). Die fundamentale Beziehung lautet: W = G · p/100. Durch Umstellen erhält man: G = W · 100/p und p = W/G · 100. Beispiel: 15 % von 240 ergibt W = 240 · 15/100 = 36. Umgekehrt: Wenn 36 von 240 gesucht ist, berechnet man p = 36/240 · 100 = 15 %. Promille (‰) funktioniert analog, aber bezogen auf 1000: W = G · p/1000. Im MedAT werden häufig Aufgaben gestellt, bei denen zwischen diesen Größen umgerechnet werden muss.
-
-Prozentuale Veränderungen spielen eine zentrale Rolle bei Wachstums- und Abnahmeprozessen. Die prozentuale Zunahme berechnet sich als: p = (Neuwert - Altwert)/Altwert · 100. Eine Steigerung um p % bedeutet Multiplikation mit dem Wachstumsfaktor q = 1 + p/100. Eine Abnahme um p % entspricht dem Faktor q = 1 - p/100. Achtung: Eine Steigerung um 20 % und eine anschließende Senkung um 20 % ergeben nicht den Ausgangswert! Beispiel: 100 → +20 % → 120 → -20 % → 96. Der Fehler liegt darin, dass die 20 % beim zweiten Mal auf eine größere Basis (120) bezogen werden. Mehrmalige prozentuale Änderungen werden durch Multiplikation der Wachstumsfaktoren berechnet.
-
-Die Zinsrechnung ist eine Anwendung der Prozentrechnung auf Kapitalverzinsung. Bei einfacher Verzinsung gilt: K_n = K₀ · (1 + n · p/100), wobei K₀ das Anfangskapital, p der Jahreszinssatz und n die Anzahl der Jahre ist. Bei Zinseszins werden die Zinsen jährlich dem Kapital zugeschlagen und mitverzinst: K_n = K₀ · (1 + p/100)ⁿ. Der Unterschied zur einfachen Verzinsung wird bei längerer Laufzeit dramatisch. Beispiel: 1000 € bei 5 % ergeben nach 20 Jahren mit einfacher Verzinsung 2000 €, mit Zinseszins hingegen 1000 · 1,05²⁰ ≈ 2653,30 €. Für unterjährige Verzinsung (m-mal pro Jahr) gilt: K_n = K₀ · (1 + p/(100·m))^(m·n). Die Zinseszinsformel ist mathematisch identisch mit dem exponentiellen Wachstum und findet in der Medizin Anwendung bei Modellen für Bakterienwachstum oder Pharmakokinetik.`,
+      content: `Die Prozentrechnung beschreibt Anteile bezogen auf den Grundwert 100. Die drei Grundgroessen sind: der Grundwert G (das Ganze, 100 %), der Prozentsatz p (in %) und der Prozentwert W (der Anteil). Die fundamentale Beziehung lautet: W = G · p/100. Durch Umstellen erhaelt man: G = W · 100/p und p = W/G · 100. Beispiel: 15 % von 240 ergibt W = 240 · 15/100 = 36. Umgekehrt: Wenn 36 von 240 gesucht ist, berechnet man p = 36/240 · 100 = 15 %. Promille funktioniert analog, aber bezogen auf 1000: W = G · p/1000. Prozentuale Veraenderungen spielen eine zentrale Rolle bei Wachstums- und Abnahmeprozessen. Der Wachstumsfaktor q = 1 + p/100 beschreibt Zunahme, q = 1 - p/100 Abnahme. Bei Zinseszins gilt: K_n = K_0 · (1 + p/100)^n. Die Zinseszinsformel ist mathematisch identisch mit dem exponentiellen Wachstum.`,
+      lernziele: [
+        'Grundwert, Prozentwert und Prozentsatz berechnen koennen',
+        'Prozentuale Veraenderungen und Wachstumsfaktoren anwenden koennen',
+        'Die Zinseszinsformel verstehen und anwenden koennen'
+      ],
+      sections: [
+        {
+          heading: 'Grundwert, Prozentwert, Prozentsatz',
+          text: `Die Prozentrechnung beschreibt Anteile bezogen auf den Grundwert 100. Die drei Grundgroessen sind: der Grundwert G (das Ganze, 100 %), der Prozentsatz p (in %) und der Prozentwert W (der Anteil). Die fundamentale Beziehung lautet: W = G · p/100. Durch Umstellen erhaelt man: G = W · 100/p und p = W/G · 100. Beispiel: 15 % von 240 ergibt W = 240 · 15/100 = 36. Umgekehrt: Wenn 36 von 240 gesucht ist, berechnet man p = 36/240 · 100 = 15 %. Promille funktioniert analog, aber bezogen auf 1000: W = G · p/1000. Im MedAT werden haeufig Aufgaben gestellt, bei denen zwischen diesen Groessen umgerechnet werden muss.`,
+          merksatz: 'Prozentrechnung: W = G · p/100. Wachstumsfaktor: q = 1 + p/100 (Zunahme) bzw. q = 1 - p/100 (Abnahme). Achtung: Aufeinanderfolgende Aenderungen multiplizieren, nicht addieren!'
+        },
+        {
+          heading: 'Prozentuale Veraenderungen',
+          text: `Prozentuale Veraenderungen spielen eine zentrale Rolle bei Wachstums- und Abnahmeprozessen. Die prozentuale Zunahme berechnet sich als: p = (Neuwert - Altwert)/Altwert · 100. Eine Steigerung um p % bedeutet Multiplikation mit dem Wachstumsfaktor q = 1 + p/100. Eine Abnahme um p % entspricht dem Faktor q = 1 - p/100. Achtung: Eine Steigerung um 20 % und eine anschliessende Senkung um 20 % ergeben nicht den Ausgangswert! Beispiel: 100 -> +20 % -> 120 -> -20 % -> 96. Der Fehler liegt darin, dass die 20 % beim zweiten Mal auf eine groessere Basis (120) bezogen werden. Mehrmalige prozentuale Aenderungen werden durch Multiplikation der Wachstumsfaktoren berechnet.`
+        },
+        {
+          heading: 'Zinsrechnung und exponentielles Wachstum',
+          text: `Die Zinsrechnung ist eine Anwendung der Prozentrechnung auf Kapitalverzinsung. Bei einfacher Verzinsung gilt: K_n = K_0 · (1 + n · p/100), wobei K_0 das Anfangskapital, p der Jahreszinssatz und n die Anzahl der Jahre ist. Bei Zinseszins werden die Zinsen jaehrlich dem Kapital zugeschlagen und mitverzinst: K_n = K_0 · (1 + p/100)^n. Der Unterschied zur einfachen Verzinsung wird bei laengerer Laufzeit dramatisch. Beispiel: 1000 Euro bei 5 % ergeben nach 20 Jahren mit einfacher Verzinsung 2000 Euro, mit Zinseszins hingegen 1000 · 1,05^20 ~ 2653,30 Euro. Fuer unterjaehrige Verzinsung (m-mal pro Jahr) gilt: K_n = K_0 · (1 + p/(100·m))^(m·n). Die Zinseszinsformel ist mathematisch identisch mit dem exponentiellen Wachstum und findet in der Medizin Anwendung bei Modellen fuer Bakterienwachstum oder Pharmakokinetik.`,
+          table: {
+            headers: ['Groesse', 'Formel', 'Beispiel'],
+            rows: [
+              ['Prozentwert W', 'W = G · p/100', '15 % von 240: W = 240 · 15/100 = 36'],
+              ['Grundwert G', 'G = W · 100/p', 'W = 36, p = 15: G = 36 · 100/15 = 240'],
+              ['Prozentsatz p', 'p = W/G · 100', '36 von 240: p = 36/240 · 100 = 15 %'],
+              ['Wachstumsfaktor q', 'q = 1 + p/100 (Zunahme), q = 1 - p/100 (Abnahme)', '+20 %: q = 1,20; -20 %: q = 0,80'],
+              ['Zinseszins K_n', 'K_n = K_0 · (1 + p/100)^n', '1000 Euro, 5 %, 20 J.: 1000 · 1,05^20 ~ 2653,30 Euro']
+            ]
+          }
+        }
+      ],
       merksaetze: [
-        'Prozentrechnung: W = G · p/100. Wachstumsfaktor: q = 1 + p/100 (Zunahme) bzw. q = 1 - p/100 (Abnahme). Achtung: Aufeinanderfolgende Änderungen multiplizieren, nicht addieren!',
-        'Zinseszinsformel: K_n = K₀ · (1 + p/100)ⁿ. Dies ist identisch mit exponentiellem Wachstum und gilt analog für Populationswachstum oder radioaktiven Zerfall.'
+        'Prozentrechnung: W = G · p/100. Wachstumsfaktor: q = 1 + p/100 (Zunahme) bzw. q = 1 - p/100 (Abnahme). Achtung: Aufeinanderfolgende Aenderungen multiplizieren, nicht addieren!',
+        'Zinseszinsformel: K_n = K_0 · (1 + p/100)^n. Dies ist identisch mit exponentiellem Wachstum und gilt analog fuer Populationswachstum oder radioaktiven Zerfall.'
       ],
       altfrage: {
-        question: 'Ein Medikament wird um 30 % reduziert und kostet nun 49 €. Was war der Originalpreis?',
-        answer: 'G · 0,70 = 49 €, also G = 49/0,70 = 70 €. Der Originalpreis betrug 70 €.'
+        question: 'Ein Medikament wird um 30 % reduziert und kostet nun 49 Euro. Was war der Originalpreis?',
+        answer: 'G · 0,70 = 49 Euro, also G = 49/0,70 = 70 Euro. Der Originalpreis betrug 70 Euro.'
       },
-      klinischerBezug: 'In der klinischen Forschung werden Therapieergebnisse oft als prozentuale Risikoreduktion angegeben. Die Unterscheidung zwischen absoluter Risikoreduktion (ARR) und relativer Risikoreduktion (RRR) ist medizinisch essenziell. Auch Verdünnungsreihen und Konzentrationsberechnungen beruhen auf Prozentrechnung.',
+      klinischerBezug: 'In der klinischen Forschung werden Therapieergebnisse oft als prozentuale Risikoreduktion angegeben. Die Unterscheidung zwischen absoluter Risikoreduktion (ARR) und relativer Risikoreduktion (RRR) ist medizinisch essenziell. Auch Verduennungsreihen und Konzentrationsberechnungen beruhen auf Prozentrechnung.',
       selfTest: [
         {
-          question: 'Ein Preis steigt um 25 % und wird danach um 20 % gesenkt. Wie verändert sich der Originalpreis?',
+          question: 'Ein Preis steigt um 25 % und wird danach um 20 % gesenkt. Wie veraendert sich der Originalpreis?',
           options: [
             'Er bleibt gleich',
             'Er steigt um 5 %',
@@ -193,18 +219,18 @@ Die Zinsrechnung ist eine Anwendung der Prozentrechnung auf Kapitalverzinsung. B
             'Er sinkt um 5 %'
           ],
           correctIndex: 2,
-          explanation: 'Faktor: 1,25 · 0,80 = 1,00. Der Preis bleibt tatsächlich gleich. 25 % Steigerung gefolgt von 20 % Senkung ergibt exakt den Ausgangswert.'
+          explanation: 'Faktor: 1,25 · 0,80 = 1,00. Der Preis bleibt tatsaechlich gleich. 25 % Steigerung gefolgt von 20 % Senkung ergibt exakt den Ausgangswert.'
         },
         {
-          question: 'Wie viel Kapital hat man nach 3 Jahren bei 1000 € Startkapital und 4 % Zinseszins?',
+          question: 'Wie viel Kapital hat man nach 3 Jahren bei 1000 Euro Startkapital und 4 % Zinseszins?',
           options: [
-            '1120,00 €',
-            '1124,86 €',
-            '1121,60 €',
-            '1160,00 €'
+            '1120,00 Euro',
+            '1124,86 Euro',
+            '1121,60 Euro',
+            '1160,00 Euro'
           ],
           correctIndex: 1,
-          explanation: 'K₃ = 1000 · 1,04³ = 1000 · 1,124864 = 1124,86 €. Einfache Verzinsung hätte nur 1120 € ergeben.'
+          explanation: 'K_3 = 1000 · 1,04^3 = 1000 · 1,124864 = 1124,86 Euro. Einfache Verzinsung haette nur 1120 Euro ergeben.'
         },
         {
           question: '72 von 800 Probanden zeigen eine Nebenwirkung. Wie viel Prozent sind das?',

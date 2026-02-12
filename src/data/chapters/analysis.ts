@@ -229,8 +229,8 @@ Exponent wird zum Faktor, dann Exponent um 1 verringern.
 <strong>Extremstellen (Maxima und Minima):</strong>
 1. <strong>Notwendige Bedingung:</strong> f'(x) = 0 setzen → Kandidaten für Extremstellen.
 2. <strong>Hinreichende Bedingung:</strong> Zweite Ableitung auswerten:
-   • f''(x) > 0 → <strong>Minimum</strong> (Linkskrümmung, „Tal")
-   • f''(x) < 0 → <strong>Maximum</strong> (Rechtskrümmung, „Berg")
+   • f''(x) > 0 → <strong>Minimum</strong> (Linkskrümmung, „Tal“)
+   • f''(x) < 0 → <strong>Maximum</strong> (Rechtskrümmung, „Berg“)
    • f''(x) = 0 → keine Aussage, weitere Untersuchung nötig (z. B. Vorzeichenwechsel von f')
 
 <strong>Wendepunkte (Krümmungswechsel):</strong>
@@ -241,8 +241,8 @@ Exponent wird zum Faktor, dann Exponent um 1 verringern.
 <strong>Monotonie und Krümmung:</strong>
 • f'(x) > 0 → f ist streng monoton steigend
 • f'(x) < 0 → f ist streng monoton fallend
-• f''(x) > 0 → f ist linksgekrümmt (konvex, „Tal")
-• f''(x) < 0 → f ist rechtsgekrümmt (konkav, „Berg")`,
+• f''(x) > 0 → f ist linksgekrümmt (konvex, „Tal“)
+• f''(x) < 0 → f ist rechtsgekrümmt (konkav, „Berg“)`,
       merke:
         "Extremstellen: <strong>f'(x) = 0</strong> setzen. Minimum wenn f''(x) > 0, Maximum wenn f''(x) < 0. <strong>(eˣ)' = eˣ</strong> — die einzige Funktion, die ihre eigene Ableitung ist!",
       altfrage:

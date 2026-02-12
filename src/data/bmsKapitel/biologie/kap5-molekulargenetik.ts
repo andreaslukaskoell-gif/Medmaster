@@ -19,7 +19,7 @@ Die Grundbausteine der DNA sind die Nukleotide. Jedes Nukleotid besteht aus drei
 
 Die beiden Stränge werden durch Wasserstoffbrückenbindungen zwischen komplementären Basenpaaren zusammengehalten: Adenin paart sich mit Thymin über zwei Wasserstoffbrückenbindungen (A=T, 2 H-Brücken), und Guanin paart sich mit Cytosin über drei Wasserstoffbrückenbindungen (G≡C, 3 H-Brücken). Daraus folgt, dass GC-reiche DNA-Abschnitte stabiler sind und einen höheren Schmelzpunkt haben als AT-reiche Regionen. Diese spezifische Basenpaarung ist die Grundlage der Chargaff-Regeln (Erwin Chargaff, 1949): In jedem DNA-Molekül gilt [A] = [T] und [G] = [C], bzw. die Summe der Purine ist gleich der Summe der Pyrimidine ([A]+[G] = [T]+[C]). Die Chargaff-Regeln gelten für doppelsträngige DNA, nicht jedoch für einzelsträngige DNA oder RNA. Ein menschliches Genom enthält ca. 3,2 Milliarden Basenpaare (bp), verteilt auf 23 Chromosomenpaare. Die DNA liegt in eukaryotischen Zellen nicht frei vor, sondern ist um Histonproteine (H2A, H2B, H3, H4 als Oktamer) gewickelt und bildet Nukleosomen, die weitere Verdichtungsstufen durchlaufen (Solenoidstruktur, Schleifen, Chromatinfaser) bis hin zum kondensierten Metaphase-Chromosom.`,
       merksaetze: [
-        'Basenpaarung: A=T mit 2 H-Brücken, G≡C mit 3 H-Brücken → GC-reiche DNA ist stabiler (höherer Schmelzpunkt). Merke: „German Cars have 3 (G≡C = 3)".',
+        'Basenpaarung: A=T mit 2 H-Brücken, G≡C mit 3 H-Brücken → GC-reiche DNA ist stabiler (höherer Schmelzpunkt). Merke: „German Cars have 3 (G≡C = 3)“.',
         'Chargaff-Regeln: [A]=[T] und [G]=[C] sowie [Purine]=[Pyrimidine]. Gilt nur für doppelsträngige DNA.'
       ],
       altfrage: {
@@ -134,7 +134,7 @@ Die Transkription verläuft in drei Phasen: Initiation, Elongation und Terminati
 
 Bei Eukaryoten unterliegt die primäre mRNA (prä-mRNA) einem umfangreichen Prozess der RNA-Reifung (mRNA-Processing), bevor sie aus dem Zellkern ins Zytoplasma exportiert werden kann. Drei Hauptmodifikationen finden statt: (1) Das 5'-Capping: Ein 7-Methylguanosin-Cap wird an das 5'-Ende der mRNA angefügt. Es schützt vor Abbau durch Exonukleasen, erleichtert den Export aus dem Zellkern und ist wichtig für die Translationsinitiation (Erkennung durch das Ribosom). (2) Die 3'-Polyadenylierung: Ein Poly-A-Schwanz aus ca. 100–250 Adeninnukleotiden wird am 3'-Ende angefügt. Er erhöht die Stabilität der mRNA, schützt vor Abbau und spielt eine Rolle beim Export und bei der Translation. (3) Das Spleißen (Splicing): Introns (nicht-kodierende Abschnitte) werden aus der prä-mRNA entfernt, und die Exons (kodierende Abschnitte) werden zusammengefügt. Dieser Prozess wird vom Spleißosom katalysiert, einem großen Ribonukleoprotein-Komplex aus snRNPs (small nuclear ribonucleoproteins). Alternatives Spleißen ermöglicht es, aus einem Gen mehrere verschiedene mRNAs und damit verschiedene Proteine zu generieren — dies erklärt, warum der Mensch trotz nur ca. 20.000–25.000 Genen über 100.000 verschiedene Proteine bilden kann.`,
       merksaetze: [
-        'mRNA-Processing bei Eukaryoten: 5\'-Cap (7-Methylguanosin) + 3\'-Poly-A-Schwanz + Spleißen (Introns raus, Exons zusammen). Merke: „EXons werden EXportiert, INtrons bleiben IN (im Kern)."',
+        'mRNA-Processing bei Eukaryoten: 5\'-Cap (7-Methylguanosin) + 3\'-Poly-A-Schwanz + Spleißen (Introns raus, Exons zusammen). Merke: „EXons werden EXportiert, INtrons bleiben IN (im Kern).“',
         'Drei eukaryotische RNA-Polymerasen: Pol I → rRNA, Pol II → mRNA (die Wichtigste!), Pol III → tRNA und 5S-rRNA.'
       ],
       altfrage: {
@@ -174,7 +174,7 @@ Bei Eukaryoten unterliegt die primäre mRNA (prä-mRNA) einem umfangreichen Proz
             'Der Poly-A-Schwanz'
           ],
           correctIndex: 1,
-          explanation: 'Beim Spleißen werden die Introns (nicht-kodierende Sequenzen) durch das Spleißosom herausgeschnitten, und die Exons (kodierende Sequenzen) werden zusammengefügt. Merke: „EXons werden EXportiert, INtrons bleiben IN."'
+          explanation: 'Beim Spleißen werden die Introns (nicht-kodierende Sequenzen) durch das Spleißosom herausgeschnitten, und die Exons (kodierende Sequenzen) werden zusammengefügt. Merke: „EXons werden EXportiert, INtrons bleiben IN.“'
         }
       ]
     },

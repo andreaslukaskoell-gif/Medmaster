@@ -68,7 +68,7 @@ Das modernere Orbitalmodell ersetzt die festen Bahnen durch <strong>Aufenthaltsw
 Elektronen besetzen die Orbitale in aufsteigender Energie: 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p → 7s → 5f → 6d → 7p. Wichtig: Das 4s-Orbital wird vor dem 3d-Orbital besetzt, weil es eine niedrigere Energie hat.
 
 <strong>Hund'sche Regel</strong>
-Orbitale gleicher Energie (z. B. die drei p-Orbitale) werden zuerst einzeln mit parallelem Spin besetzt, bevor eine Doppelbesetzung stattfindet. Merkspruch: „Busse werden erst einzeln besetzt, bevor sich jemand dazusetzt."
+Orbitale gleicher Energie (z. B. die drei p-Orbitale) werden zuerst einzeln mit parallelem Spin besetzt, bevor eine Doppelbesetzung stattfindet. Merkspruch: „Busse werden erst einzeln besetzt, bevor sich jemand dazusetzt.“
 
 <strong>Pauli-Prinzip</strong>
 In einem Orbital befinden sich maximal 2 Elektronen — und diese müssen entgegengesetzten Spin besitzen (antiparallel: ↑↓). Kein Elektron darf mit einem anderen in allen vier Quantenzahlen übereinstimmen.

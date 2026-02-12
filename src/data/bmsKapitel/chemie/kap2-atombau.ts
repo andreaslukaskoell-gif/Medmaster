@@ -15,6 +15,41 @@ export const chemKap2: Kapitel = {
 Ernest Rutherford führte 1911 den berühmten Streuversuch durch, bei dem Alpha-Teilchen auf eine dünne Goldfolie geschossen wurden. Die Beobachtung, dass die meisten Alpha-Teilchen die Folie ungehindert durchdrangen, einige jedoch stark abgelenkt wurden und manche sogar zurückgeworfen wurden, führte zu einem revolutionären Schluss: Die gesamte positive Ladung und fast die gesamte Masse des Atoms sind in einem winzigen Kern konzentriert, der nur etwa 10⁻¹⁵ m Durchmesser hat, während das Atom selbst einen Durchmesser von etwa 10⁻¹⁰ m besitzt. Die Elektronen umkreisen diesen Kern in großem Abstand. Dieses Kern-Hülle-Modell hatte jedoch ein Problem: Nach der klassischen Elektrodynamik müssten kreisende Elektronen ständig Energie abstrahlen und letztlich in den Kern stürzen.
 
 Niels Bohr löste dieses Problem 1913 mit seinem Postulat, dass Elektronen nur auf bestimmten stabilen Bahnen (Schalen) um den Kern kreisen, ohne Energie abzustrahlen. Energieabgabe oder -aufnahme erfolgt nur beim Übergang zwischen diesen Bahnen in Form von Photonen mit der Energie ΔE = h·f. Bohrs Modell erklärte das Linienspektrum des Wasserstoffs exakt, versagte jedoch bei Mehrelektronensystemen. Das heute gültige Orbitalmodell (quantenmechanisches Modell) wurde in den 1920er-Jahren von Schrödinger, Heisenberg und Dirac entwickelt. Es beschreibt Elektronen nicht als Teilchen auf festen Bahnen, sondern als Wellenfunktionen (Orbitale), die die Aufenthaltswahrscheinlichkeit des Elektrons im Raum angeben. Ein Orbital ist der Raumbereich, in dem sich ein Elektron mit einer Wahrscheinlichkeit von etwa 90 % aufhält.`,
+      lernziele: [
+        'Die historische Entwicklung der Atommodelle beschreiben können',
+        'Die Ergebnisse des Rutherford-Streuversuchs erklären können',
+        'Den Unterschied zwischen Bohrschen Bahnen und Orbitalen verstehen'
+      ],
+      sections: [
+        {
+          heading: 'Von Dalton bis Thomson',
+          text: `Das erste wissenschaftliche Atommodell wurde von John Dalton Anfang des 19. Jahrhunderts formuliert. Dalton stellte sich Atome als unteilbare, massive Kugeln vor, die sich je nach Element in Masse und Größe unterscheiden. Sein Modell erklärte das Gesetz der konstanten Proportionen und das Gesetz der multiplen Proportionen, konnte jedoch elektrische Phänomene nicht beschreiben.
+
+1897 entdeckte J. J. Thomson das Elektron durch Kathodenstrahlexperimente und entwickelte das sogenannte Rosinenkuchenmodell (Plumpudding-Modell). In diesem Modell sind negativ geladene Elektronen gleichmäßig in eine positiv geladene Masse eingebettet, sodass das Atom insgesamt elektrisch neutral ist.`
+        },
+        {
+          heading: 'Rutherfords Streuversuch',
+          text: `Ernest Rutherford führte 1911 den berühmten Streuversuch durch, bei dem Alpha-Teilchen auf eine dünne Goldfolie geschossen wurden. Die Beobachtung, dass die meisten Alpha-Teilchen die Folie ungehindert durchdrangen, einige jedoch stark abgelenkt wurden und manche sogar zurückgeworfen wurden, führte zu einem revolutionären Schluss: Die gesamte positive Ladung und fast die gesamte Masse des Atoms sind in einem winzigen Kern konzentriert, der nur etwa 10⁻¹⁵ m Durchmesser hat, während das Atom selbst einen Durchmesser von etwa 10⁻¹⁰ m besitzt.
+
+Die Elektronen umkreisen diesen Kern in großem Abstand. Dieses Kern-Hülle-Modell hatte jedoch ein Problem: Nach der klassischen Elektrodynamik müssten kreisende Elektronen ständig Energie abstrahlen und letztlich in den Kern stürzen.`,
+          merksatz: 'Die Entwicklung der Atommodelle: Dalton (massive Kugel) → Thomson (Rosinenkuchen) → Rutherford (Kern-Hülle) → Bohr (Schalen mit quantisierten Bahnen) → Orbitalmodell (Aufenthaltswahrscheinlichkeit).'
+        },
+        {
+          heading: 'Bohrsches Modell und Quantenmechanik',
+          text: `Niels Bohr löste dieses Problem 1913 mit seinem Postulat, dass Elektronen nur auf bestimmten stabilen Bahnen (Schalen) um den Kern kreisen, ohne Energie abzustrahlen. Energieabgabe oder -aufnahme erfolgt nur beim Übergang zwischen diesen Bahnen in Form von Photonen mit der Energie ΔE = h·f. Bohrs Modell erklärte das Linienspektrum des Wasserstoffs exakt, versagte jedoch bei Mehrelektronensystemen.
+
+Das heute gültige Orbitalmodell (quantenmechanisches Modell) wurde in den 1920er-Jahren von Schrödinger, Heisenberg und Dirac entwickelt. Es beschreibt Elektronen nicht als Teilchen auf festen Bahnen, sondern als Wellenfunktionen (Orbitale), die die Aufenthaltswahrscheinlichkeit des Elektrons im Raum angeben. Ein Orbital ist der Raumbereich, in dem sich ein Elektron mit einer Wahrscheinlichkeit von etwa 90 % aufhält.`,
+          table: {
+            headers: ['Modell', 'Entwickler', 'Kernidee', 'Limitation'],
+            rows: [
+              ['Massivkugel-Modell', 'John Dalton (ca. 1803)', 'Atome sind unteilbare, massive Kugeln unterschiedlicher Masse', 'Kann elektrische Phänomene nicht erklären'],
+              ['Rosinenkuchenmodell', 'J. J. Thomson (1897)', 'Elektronen sind in eine positive Masse eingebettet', 'Kann die Konzentration positiver Ladung im Kern nicht erklären'],
+              ['Kern-Hülle-Modell', 'Ernest Rutherford (1911)', 'Positive Ladung und Masse im winzigen Kern konzentriert, Elektronen in der Hülle', 'Kreisende Elektronen müssten Energie abstrahlen und in den Kern stürzen'],
+              ['Schalenmodell', 'Niels Bohr (1913)', 'Elektronen auf stabilen, quantisierten Bahnen; Energieaustausch nur bei Übergängen', 'Versagt bei Mehrelektronensystemen']
+            ]
+          }
+        }
+      ],
       merksaetze: [
         'Die Entwicklung der Atommodelle: Dalton (massive Kugel) → Thomson (Rosinenkuchen) → Rutherford (Kern-Hülle) → Bohr (Schalen mit quantisierten Bahnen) → Orbitalmodell (Aufenthaltswahrscheinlichkeit).',
         'Im Orbitalmodell beschreiben Wellenfunktionen die Aufenthaltswahrscheinlichkeit der Elektronen. Ein Orbital ist kein fester Weg, sondern ein Wahrscheinlichkeitsraum (ca. 90 %).'

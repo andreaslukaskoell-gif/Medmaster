@@ -6,8 +6,8 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { useStore } from "@/store/useStore";
 import { MerksatzBox } from "@/components/chapter/MerksatzBox";
 import { SelbstTest } from "@/components/chapter/SelbstTest";
-import DiagramSVG from "@/components/diagrams/DiagramSVG";
-import type { Kapitel, Unterkapitel } from "@/data/bmsKapitel/types";
+import { SubchapterContent } from "@/components/chapter/SubchapterContent";
+import type { Kapitel } from "@/data/bmsKapitel/types";
 
 interface Props {
   kapitel: Kapitel;
@@ -21,6 +21,20 @@ const subjectLabels: Record<string, string> = {
   chemie: "Chemie",
   physik: "Physik",
   mathematik: "Mathematik",
+};
+
+const subjectProgressColors: Record<string, string> = {
+  biologie: "bg-emerald-500",
+  chemie: "bg-red-500",
+  physik: "bg-blue-500",
+  mathematik: "bg-violet-500",
+};
+
+const subjectTextColors: Record<string, string> = {
+  biologie: "text-emerald-700 dark:text-emerald-400",
+  chemie: "text-red-700 dark:text-red-400",
+  physik: "text-blue-700 dark:text-blue-400",
+  mathematik: "text-violet-700 dark:text-violet-400",
 };
 
 export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, onNavigate }: Props) {
@@ -103,7 +117,7 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
         </div>
         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
           <div
-            className="bg-primary-600 h-2 rounded-full transition-all"
+            className={`${subjectProgressColors[kapitel.subject] || "bg-primary-600"} h-2 rounded-full transition-all`}
             style={{ width: `${(completedCount / total) * 100}%` }}
           />
         </div>
@@ -111,7 +125,7 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
 
       {/* Chapter number + title */}
       <div>
-        <p className="text-sm text-primary-700 dark:text-primary-400 font-medium">
+        <p className={`text-sm font-medium ${subjectTextColors[kapitel.subject] || "text-primary-700 dark:text-primary-400"}`}>
           {kapitel.title} — {unterkapitelIndex + 1}/{total}
         </p>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mt-1">
@@ -141,18 +155,9 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
       {/* Main content */}
       <Card>
         <CardContent className="p-6">
-          <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
-            {uk.content}
-          </div>
+          <SubchapterContent uk={uk} subject={kapitel.subject} />
         </CardContent>
       </Card>
-
-      {/* Diagram */}
-      {uk.diagram && (
-        <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-          <DiagramSVG type={uk.diagram} />
-        </div>
-      )}
 
       {/* Merksätze */}
       {uk.merksaetze.map((merksatz, i) => (

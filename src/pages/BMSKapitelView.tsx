@@ -20,6 +20,13 @@ const subjectLabels: Record<string, string> = {
   mathematik: "Mathematik",
 };
 
+const subjectColors: Record<string, { progress: string; text: string; badge: string; border: string }> = {
+  biologie: { progress: "bg-emerald-500", text: "text-emerald-700 dark:text-emerald-400", badge: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400", border: "border-l-emerald-500" },
+  chemie: { progress: "bg-red-500", text: "text-red-700 dark:text-red-400", badge: "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400", border: "border-l-red-500" },
+  physik: { progress: "bg-blue-500", text: "text-blue-700 dark:text-blue-400", badge: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400", border: "border-l-blue-500" },
+  mathematik: { progress: "bg-violet-500", text: "text-violet-700 dark:text-violet-400", badge: "bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-400", border: "border-l-violet-500" },
+};
+
 export default function BMSKapitelView({ kapitel, onBack }: Props) {
   const [activeUKIndex, setActiveUKIndex] = useState<number | null>(null);
   const { completedChapters } = useStore();
@@ -62,7 +69,7 @@ export default function BMSKapitelView({ kapitel, onBack }: Props) {
       <div className="flex items-start gap-4">
         <div className="text-4xl">{kapitel.icon}</div>
         <div className="flex-1">
-          <p className="text-sm text-primary-700 dark:text-primary-400 font-medium">
+          <p className={`text-sm font-medium ${subjectColors[kapitel.subject]?.text || "text-primary-700 dark:text-primary-400"}`}>
             {subjectLabels[kapitel.subject]}
           </p>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
@@ -88,13 +95,13 @@ export default function BMSKapitelView({ kapitel, onBack }: Props) {
       <div className="space-y-2">
         <div className="flex justify-between text-sm">
           <span className="text-muted">Fortschritt</span>
-          <span className="font-medium text-primary-700 dark:text-primary-400">
+          <span className={`font-medium ${subjectColors[kapitel.subject]?.text || "text-primary-700 dark:text-primary-400"}`}>
             {completedUK}/{totalUK} Unterkapitel
           </span>
         </div>
         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
           <div
-            className="bg-primary-600 h-3 rounded-full transition-all"
+            className={`${subjectColors[kapitel.subject]?.progress || "bg-primary-600"} h-3 rounded-full transition-all`}
             style={{ width: `${totalUK > 0 ? (completedUK / totalUK) * 100 : 0}%` }}
           />
         </div>
@@ -122,7 +129,7 @@ export default function BMSKapitelView({ kapitel, onBack }: Props) {
           return (
             <Card
               key={uk.id}
-              className="hover:shadow-md transition-shadow cursor-pointer"
+              className={`hover:shadow-md transition-shadow cursor-pointer border-l-4 ${subjectColors[kapitel.subject]?.border || ""}`}
               onClick={() => setActiveUKIndex(index)}
             >
               <CardContent className="p-4 flex items-center gap-3">

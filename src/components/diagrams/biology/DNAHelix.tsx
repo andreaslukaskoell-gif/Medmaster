@@ -19,36 +19,49 @@ export default function DNAHelix() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">DNA-Doppelhelix</h4>
       <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen für Details.</p>
 
-      <svg viewBox="0 0 460 440" className="w-full max-w-lg mx-auto">
-        {/* 5' / 3' labels */}
-        <text x="110" y="28" textAnchor="middle" fontSize="10" fill="#0d9488" fontWeight="bold">5&apos;</text>
-        <text x="240" y="28" textAnchor="middle" fontSize="10" fill="#0f766e" fontWeight="bold">3&apos;</text>
-
-        <text x="110" y="410" textAnchor="middle" fontSize="10" fill="#0d9488" fontWeight="bold">3&apos;</text>
-        <text x="240" y="410" textAnchor="middle" fontSize="10" fill="#0f766e" fontWeight="bold">5&apos;</text>
-
-        {/* Direction arrows */}
+      <svg viewBox="0 0 620 470" className="w-full max-w-2xl mx-auto">
+        {/* ---- 5' / 3' end labels (top) ---- */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[3])} onMouseLeave={() => setActive(null)}>
-          <line x1="95" y1="32" x2="95" y2="400" stroke="#0d9488" strokeWidth="1" strokeDasharray="4 3" opacity="0.5" />
-          <polygon points="91,400 95,408 99,400" fill="#0d9488" opacity="0.5" />
-          <line x1="255" y1="400" x2="255" y2="32" stroke="#0f766e" strokeWidth="1" strokeDasharray="4 3" opacity="0.5" />
-          <polygon points="251,32 255,24 259,32" fill="#0f766e" opacity="0.5" />
+          {/* Left strand top: 5' */}
+          <line x1="210" y1="42" x2="160" y2="22" stroke="#94a3b8" strokeWidth="1" />
+          <text x="155" y="27" textAnchor="end" fontSize="14" fontWeight="600" fill="#1f2937" stroke="white" strokeWidth="4" paintOrder="stroke">5&apos;</text>
+          {/* Right strand top: 3' */}
+          <line x1="340" y1="42" x2="390" y2="22" stroke="#94a3b8" strokeWidth="1" />
+          <text x="395" y="27" textAnchor="start" fontSize="14" fontWeight="600" fill="#1f2937" stroke="white" strokeWidth="4" paintOrder="stroke">3&apos;</text>
         </g>
 
-        {/* Draw helix rungs and backbone */}
+        {/* ---- 5' / 3' end labels (bottom) ---- */}
+        <g className="cursor-pointer" onMouseEnter={() => setActive(parts[3])} onMouseLeave={() => setActive(null)}>
+          {/* Left strand bottom: 3' */}
+          <line x1="210" y1="410" x2="160" y2="435" stroke="#94a3b8" strokeWidth="1" />
+          <text x="155" y="440" textAnchor="end" fontSize="14" fontWeight="600" fill="#1f2937" stroke="white" strokeWidth="4" paintOrder="stroke">3&apos;</text>
+          {/* Right strand bottom: 5' */}
+          <line x1="340" y1="410" x2="390" y2="435" stroke="#94a3b8" strokeWidth="1" />
+          <text x="395" y="440" textAnchor="start" fontSize="14" fontWeight="600" fill="#1f2937" stroke="white" strokeWidth="4" paintOrder="stroke">5&apos;</text>
+        </g>
+
+        {/* ---- Direction arrows (antiparallel) ---- */}
+        <g className="cursor-pointer" onMouseEnter={() => setActive(parts[3])} onMouseLeave={() => setActive(null)}>
+          <line x1="195" y1="52" x2="195" y2="405" stroke="#0d9488" strokeWidth="1" strokeDasharray="4 3" opacity="0.5" />
+          <polygon points="191,405 195,413 199,405" fill="#0d9488" opacity="0.5" />
+          <line x1="355" y1="405" x2="355" y2="52" stroke="#0f766e" strokeWidth="1" strokeDasharray="4 3" opacity="0.5" />
+          <polygon points="351,52 355,44 359,52" fill="#0f766e" opacity="0.5" />
+        </g>
+
+        {/* ---- Draw helix rungs and backbone ---- */}
         {Array.from({ length: 12 }, (_, i) => {
-          const y = 50 + i * 30;
+          const y = 60 + i * 30;
           const phase = i * 0.55;
           const sinVal = Math.sin(phase);
           const amplitude = 50;
-          const centerX = 175;
+          const centerX = 275;
 
           const leftX = centerX - amplitude + sinVal * amplitude * 0.3;
           const rightX = centerX + amplitude + sinVal * amplitude * 0.3;
 
           const isAT = i % 3 !== 0;
           const basePair = isAT ? parts[1] : parts[2];
-          const baseLabel = isAT ? "A — T" : "G ≡ C";
+          const baseLabel = isAT ? "A — T" : "G \u2261 C";
           const bondCount = isAT ? 2 : 3;
           const baseColor = isAT ? "#14b8a6" : "#0f766e";
 
@@ -60,7 +73,7 @@ export default function DNAHelix() {
                 {i < 11 && (
                   <line
                     x1={leftX} y1={y + 6}
-                    x2={175 - amplitude + Math.sin((i + 1) * 0.55) * amplitude * 0.3}
+                    x2={275 - amplitude + Math.sin((i + 1) * 0.55) * amplitude * 0.3}
                     y2={y + 24}
                     stroke="#0d9488" strokeWidth="2.5"
                   />
@@ -73,7 +86,7 @@ export default function DNAHelix() {
                 {i < 11 && (
                   <line
                     x1={rightX} y1={y + 6}
-                    x2={175 + amplitude + Math.sin((i + 1) * 0.55) * amplitude * 0.3}
+                    x2={275 + amplitude + Math.sin((i + 1) * 0.55) * amplitude * 0.3}
                     y2={y + 24}
                     stroke="#0f766e" strokeWidth="2.5"
                   />
@@ -94,40 +107,44 @@ export default function DNAHelix() {
                     </g>
                   );
                 })}
-                {/* Base label */}
-                <text x={(leftX + rightX) / 2} y={y + 4} textAnchor="middle" fontSize="7" fill={baseColor} fontWeight="bold">{baseLabel}</text>
+                {/* Base label on rung */}
+                <text x={(leftX + rightX) / 2} y={y + 4} textAnchor="middle" fontSize="8" fill={baseColor} fontWeight="bold" stroke="white" strokeWidth="3" paintOrder="stroke">{baseLabel}</text>
               </g>
             </g>
           );
         })}
 
-        {/* Major groove label */}
+        {/* ---- Major groove label (outside right) ---- */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[4])} onMouseLeave={() => setActive(null)}>
-          <path d="M280,100 Q310,140 280,180" fill="none" stroke="#99f6e4" strokeWidth="2" />
-          <text x="320" y="145" fontSize="8" fill="#0d9488" fontWeight="bold">Große Furche</text>
+          <path d="M380,110 Q410,150 380,190" fill="none" stroke="#99f6e4" strokeWidth="2" />
+          <line x1="410" y1="150" x2="460" y2="150" stroke="#94a3b8" strokeWidth="1" />
+          <text x="465" y="155" textAnchor="start" fontSize="14" fontWeight="600" fill="#1f2937" stroke="white" strokeWidth="4" paintOrder="stroke">Gro\u00dfe Furche</text>
         </g>
 
-        {/* Minor groove label */}
+        {/* ---- Minor groove label (outside right) ---- */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[5])} onMouseLeave={() => setActive(null)}>
-          <path d="M280,200 Q300,225 280,250" fill="none" stroke="#ccfbf1" strokeWidth="2" />
-          <text x="320" y="230" fontSize="8" fill="#14b8a6" fontWeight="bold">Kleine Furche</text>
+          <path d="M380,210 Q400,240 380,270" fill="none" stroke="#ccfbf1" strokeWidth="2" />
+          <line x1="400" y1="240" x2="460" y2="240" stroke="#94a3b8" strokeWidth="1" />
+          <text x="465" y="245" textAnchor="start" fontSize="14" fontWeight="600" fill="#1f2937" stroke="white" strokeWidth="4" paintOrder="stroke">Kleine Furche</text>
         </g>
 
-        {/* Backbone label */}
-        <line x1="55" y1="140" x2="100" y2="140" stroke="#115e59" strokeWidth="0.8" />
-        <text x="50" y="130" textAnchor="end" fontSize="7" fill="#115e59" fontWeight="bold">Zucker-Phosphat-</text>
-        <text x="50" y="140" textAnchor="end" fontSize="7" fill="#115e59" fontWeight="bold">Rückgrat</text>
+        {/* ---- Backbone label (outside left) ---- */}
+        <g className="cursor-pointer" onMouseEnter={() => setActive(parts[0])} onMouseLeave={() => setActive(null)}>
+          <line x1="210" y1="150" x2="120" y2="130" stroke="#94a3b8" strokeWidth="1" />
+          <text x="115" y="125" textAnchor="end" fontSize="13" fill="#1f2937" stroke="white" strokeWidth="4" paintOrder="stroke">Zucker-Phosphat-</text>
+          <text x="115" y="142" textAnchor="end" fontSize="13" fill="#1f2937" stroke="white" strokeWidth="4" paintOrder="stroke">R\u00fcckgrat</text>
+        </g>
 
-        {/* H-bond count legend */}
-        <rect x="320" y="280" width="130" height="60" rx="6" fill="#f0fdfa" stroke="#14b8a6" strokeWidth="1" />
-        <text x="385" y="296" textAnchor="middle" fontSize="8" fill="#115e59" fontWeight="bold">H-Brücken</text>
-        <text x="385" y="312" textAnchor="middle" fontSize="7" fill="#14b8a6">A — T: 2 Bindungen</text>
-        <text x="385" y="328" textAnchor="middle" fontSize="7" fill="#0f766e">G ≡ C: 3 Bindungen</text>
+        {/* ---- H-bond count legend (outside right, lower) ---- */}
+        <rect x="440" y="300" width="165" height="75" rx="6" fill="#f0fdfa" stroke="#14b8a6" strokeWidth="1" />
+        <text x="522" y="322" textAnchor="middle" fontSize="14" fontWeight="600" fill="#1f2937" stroke="white" strokeWidth="4" paintOrder="stroke">H-Br\u00fccken</text>
+        <text x="522" y="342" textAnchor="middle" fontSize="13" fill="#1f2937" stroke="white" strokeWidth="4" paintOrder="stroke">A — T: 2 Bindungen</text>
+        <text x="522" y="362" textAnchor="middle" fontSize="13" fill="#1f2937" stroke="white" strokeWidth="4" paintOrder="stroke">G \u2261 C: 3 Bindungen</text>
 
-        {/* Antiparallel label */}
-        <rect x="320" y="355" width="130" height="35" rx="6" fill="#f0fdfa" stroke="#14b8a6" strokeWidth="1" />
-        <text x="385" y="370" textAnchor="middle" fontSize="7" fill="#115e59" fontWeight="bold">Antiparallele Stränge</text>
-        <text x="385" y="382" textAnchor="middle" fontSize="7" fill="#0d9488">5&apos;→3&apos; / 3&apos;→5&apos;</text>
+        {/* ---- Antiparallel info box (outside right, bottom) ---- */}
+        <rect x="440" y="390" width="165" height="50" rx="6" fill="#f0fdfa" stroke="#14b8a6" strokeWidth="1" />
+        <text x="522" y="412" textAnchor="middle" fontSize="14" fontWeight="600" fill="#1f2937" stroke="white" strokeWidth="4" paintOrder="stroke">Antiparallele Str\u00e4nge</text>
+        <text x="522" y="430" textAnchor="middle" fontSize="13" fill="#1f2937" stroke="white" strokeWidth="4" paintOrder="stroke">5&apos;\u21923&apos; / 3&apos;\u21925&apos;</text>
       </svg>
 
       {active && (

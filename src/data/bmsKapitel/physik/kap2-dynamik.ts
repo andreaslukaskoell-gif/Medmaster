@@ -11,11 +11,39 @@ export const physKap2: Kapitel = {
       id: 'phys-kap2-1',
       title: 'Newtonsche Gesetze',
       diagram: 'newton-forces',
+      lernziele: [
+        'Die drei Newtonschen Gesetze formulieren und anwenden können',
+        'Kraft, Masse und Beschleunigung rechnerisch verknüpfen können',
+        'Das Wechselwirkungsprinzip an Beispielen erklären können',
+      ],
       content: `Die drei Newtonschen Gesetze bilden das Fundament der klassischen Mechanik und beschreiben den Zusammenhang zwischen Kräften und Bewegungen. Das erste Newtonsche Gesetz (Trägheitsprinzip) besagt: Ein Körper verharrt im Zustand der Ruhe oder der gleichförmigen geradlinigen Bewegung, solange keine äußere Kraft auf ihn einwirkt. Dieses Gesetz definiert gleichzeitig den Begriff des Inertialsystems — eines Bezugssystems, in dem das Trägheitsprinzip gilt. Im Alltag begegnet uns die Trägheit beispielsweise, wenn Passagiere in einem plötzlich bremsenden Bus nach vorne fallen oder wenn ein Tischtuch unter Geschirr weggezogen wird, ohne dass die Gegenstände kippen.
 
 Das zweite Newtonsche Gesetz (Aktionsprinzip) ist das zentrale Gesetz der Dynamik: F = m · a. Die auf einen Körper wirkende resultierende Kraft F ist gleich dem Produkt aus seiner Masse m und seiner Beschleunigung a. Dieses Gesetz verknüpft die Kinematik (Beschreibung der Bewegung) mit der Dynamik (Ursache der Bewegung). Die Einheit der Kraft ist das Newton: 1 N = 1 kg · m/s². Wirken mehrere Kräfte auf einen Körper, so bestimmt die vektorielle Summe aller Kräfte (die Resultierende) die Beschleunigung. Ist die Resultierende null, befindet sich der Körper im Kräftegleichgewicht — er ruht oder bewegt sich gleichförmig geradlinig (Zusammenhang mit dem ersten Gesetz).
 
 Das dritte Newtonsche Gesetz (Wechselwirkungsprinzip, Actio = Reactio) besagt: Übt ein Körper A eine Kraft auf Körper B aus (Actio), so übt Körper B eine gleich große, aber entgegengesetzte Kraft auf Körper A aus (Reactio). Wichtig ist, dass diese beiden Kräfte an verschiedenen Körpern angreifen und sich daher nicht gegenseitig aufheben. Beispielsweise drückt ein Buch auf den Tisch (Gewichtskraft), und der Tisch drückt mit gleicher Kraft zurück (Normalkraft). Beim Gehen drückt der Fuß nach hinten auf den Boden, und die Reibungskraft des Bodens treibt den Körper nach vorne. Das Wechselwirkungsprinzip erklärt auch, warum eine Rakete im Vakuum fliegen kann: Die ausgestoßenen Gase erfahren eine Kraft nach hinten, und die Rakete eine gleichgroße Kraft nach vorne.`,
+      sections: [
+        {
+          heading: 'Erstes Newtonsches Gesetz (Trägheitsprinzip)',
+          text: `Das erste Newtonsche Gesetz besagt: Ein Körper verharrt im Zustand der Ruhe oder der gleichförmigen geradlinigen Bewegung, solange keine äußere Kraft auf ihn einwirkt. Dieses Gesetz definiert gleichzeitig den Begriff des Inertialsystems — eines Bezugssystems, in dem das Trägheitsprinzip gilt. Im Alltag begegnet uns die Trägheit beispielsweise, wenn Passagiere in einem plötzlich bremsenden Bus nach vorne fallen oder wenn ein Tischtuch unter Geschirr weggezogen wird, ohne dass die Gegenstände kippen.`,
+        },
+        {
+          heading: 'Zweites Newtonsches Gesetz (F = m·a)',
+          text: `Das zweite Newtonsche Gesetz ist das zentrale Gesetz der Dynamik: F = m · a. Die auf einen Körper wirkende resultierende Kraft F ist gleich dem Produkt aus seiner Masse m und seiner Beschleunigung a. Dieses Gesetz verknüpft die Kinematik (Beschreibung der Bewegung) mit der Dynamik (Ursache der Bewegung). Die Einheit der Kraft ist das Newton: 1 N = 1 kg · m/s². Wirken mehrere Kräfte auf einen Körper, so bestimmt die vektorielle Summe aller Kräfte (die Resultierende) die Beschleunigung. Ist die Resultierende null, befindet sich der Körper im Kräftegleichgewicht — er ruht oder bewegt sich gleichförmig geradlinig.`,
+          merksatz: 'Die Einheit der Kraft ist das Newton: 1 N = 1 kg·m/s². Kräftegleichgewicht herrscht, wenn die Resultierende aller Kräfte null ist.',
+          table: {
+            headers: ['Gesetz', 'Formel', 'Bedeutung'],
+            rows: [
+              ['1. Newton (Trägheit)', 'F = 0 → a = 0', 'Ohne Kraft keine Änderung des Bewegungszustands'],
+              ['2. Newton (Aktionsprinzip)', 'F = m·a', 'Kraft bewirkt Beschleunigung proportional zur Masse'],
+              ['3. Newton (Wechselwirkung)', 'F_AB = -F_BA', 'Kräfte treten immer paarweise auf, gleich groß und entgegengesetzt'],
+            ],
+          },
+        },
+        {
+          heading: 'Drittes Newtonsches Gesetz (Actio = Reactio)',
+          text: `Das dritte Newtonsche Gesetz (Wechselwirkungsprinzip) besagt: Übt ein Körper A eine Kraft auf Körper B aus (Actio), so übt Körper B eine gleich große, aber entgegengesetzte Kraft auf Körper A aus (Reactio). Wichtig ist, dass diese beiden Kräfte an verschiedenen Körpern angreifen und sich daher nicht gegenseitig aufheben. Beispielsweise drückt ein Buch auf den Tisch (Gewichtskraft), und der Tisch drückt mit gleicher Kraft zurück (Normalkraft). Beim Gehen drückt der Fuß nach hinten auf den Boden, und die Reibungskraft des Bodens treibt den Körper nach vorne. Das Wechselwirkungsprinzip erklärt auch, warum eine Rakete im Vakuum fliegen kann: Die ausgestoßenen Gase erfahren eine Kraft nach hinten, und die Rakete eine gleichgroße Kraft nach vorne.`,
+        },
+      ],
       merksaetze: [
         '1. Newton: Trägheitsprinzip — ohne Kraft keine Änderung des Bewegungszustands. 2. Newton: F = m·a — Kraft bewirkt Beschleunigung. 3. Newton: Actio = Reactio — Kräfte treten immer paarweise auf.',
         'Die Einheit der Kraft ist das Newton: 1 N = 1 kg·m/s². Kräftegleichgewicht herrscht, wenn die Resultierende aller Kräfte null ist.',

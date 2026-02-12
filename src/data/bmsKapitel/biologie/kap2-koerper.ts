@@ -13,7 +13,7 @@ export const bioKap2: Kapitel = {
       title: 'Herz',
       content: `Das menschliche Herz ist ein muskuläres Hohlorgan von etwa faustgroßer Dimension, das im Mediastinum des Brustkorbs leicht links der Mittellinie liegt. Es wiegt beim Erwachsenen zwischen 250 und 350 Gramm und besteht aus vier Kammern: dem rechten Vorhof (Atrium dextrum), der rechten Kammer (Ventriculus dexter), dem linken Vorhof (Atrium sinistrum) und der linken Kammer (Ventriculus sinister). Die Herzwand ist dreischichtig aufgebaut: das Endokard (innere Auskleidung), das Myokard (Herzmuskelschicht) und das Epikard (äußere Schicht). Das Herz wird vom Perikard (Herzbeutel) umgeben, das eine schützende und reibungsmindernde Funktion erfüllt. Die linke Kammer besitzt eine deutlich dickere Muskelwand als die rechte Kammer, da sie das Blut in den großen Körperkreislauf pumpen muss und somit gegen einen höheren Widerstand arbeitet.
 
-Die vier Herzklappen sorgen als Ventile dafür, dass das Blut nur in eine Richtung fließt. Man unterscheidet zwei Segelklappen (Atrioventrikularklappen) und zwei Taschenklappen (Semilunarklappen). Die Merkregel „Tri-Mi-Pu-Ao" beschreibt die Anordnung im Blutfluss: Die Trikuspidalklappe liegt zwischen rechtem Vorhof und rechter Kammer und besitzt drei Segel. Die Mitralklappe (Bikuspidalklappe) trennt den linken Vorhof von der linken Kammer und besitzt zwei Segel. Die Pulmonalklappe befindet sich am Übergang von der rechten Kammer zum Truncus pulmonalis, und die Aortenklappe am Übergang der linken Kammer in die Aorta. Die Segelklappen werden durch Sehnenfäden (Chordae tendineae) an den Papillarmuskeln fixiert, um ein Zurückschlagen der Klappen zu verhindern. Die Taschenklappen hingegen besitzen keine Sehnenfäden und schließen passiv durch den Rückstrom des Blutes.
+Die vier Herzklappen sorgen als Ventile dafür, dass das Blut nur in eine Richtung fließt. Man unterscheidet zwei Segelklappen (Atrioventrikularklappen) und zwei Taschenklappen (Semilunarklappen). Die Merkregel „Tri-Mi-Pu-Ao“ beschreibt die Anordnung im Blutfluss: Die Trikuspidalklappe liegt zwischen rechtem Vorhof und rechter Kammer und besitzt drei Segel. Die Mitralklappe (Bikuspidalklappe) trennt den linken Vorhof von der linken Kammer und besitzt zwei Segel. Die Pulmonalklappe befindet sich am Übergang von der rechten Kammer zum Truncus pulmonalis, und die Aortenklappe am Übergang der linken Kammer in die Aorta. Die Segelklappen werden durch Sehnenfäden (Chordae tendineae) an den Papillarmuskeln fixiert, um ein Zurückschlagen der Klappen zu verhindern. Die Taschenklappen hingegen besitzen keine Sehnenfäden und schließen passiv durch den Rückstrom des Blutes.
 
 Der Blutfluss durch das Herz folgt einem festgelegten Weg: Sauerstoffarmes Blut gelangt über die obere und untere Hohlvene (Vena cava superior und inferior) in den rechten Vorhof, passiert die Trikuspidalklappe und fließt in die rechte Kammer. Von dort wird es durch die Pulmonalklappe in den Lungenkreislauf gepumpt. In der Lunge wird das Blut mit Sauerstoff angereichert und fließt über die vier Lungenvenen zurück in den linken Vorhof. Durch die Mitralklappe gelangt es in die linke Kammer, die es schließlich durch die Aortenklappe in die Aorta und damit in den großen Kreislauf auswirft. Das Herzzeitvolumen (Cardiac Output) beträgt in Ruhe etwa 5 Liter pro Minute und ergibt sich aus dem Schlagvolumen (ca. 70 mL) multipliziert mit der Herzfrequenz (ca. 70/min). Die Koronararterien (Arteria coronaria dextra und sinistra) versorgen das Herz selbst mit Blut und entspringen direkt oberhalb der Aortenklappe aus der Aorta.`,
       diagram: 'heart-anatomy',
@@ -66,14 +66,14 @@ Der Blutfluss durch das Herz folgt einem festgelegten Weg: Sauerstoffarmes Blut 
     {
       id: 'bio-kap2-2',
       title: 'Erregungsleitungssystem',
-      content: `Das Erregungsleitungssystem des Herzens besteht aus spezialisierten Herzmuskelzellen, die in der Lage sind, elektrische Impulse zu erzeugen und weiterzuleiten. Im Gegensatz zur regulären Skelettmuskulatur kann das Herz eigenständig Erregungen generieren – diese Eigenschaft wird als Autorhythmie oder Autonomie bezeichnet. Der primäre Taktgeber ist der Sinusknoten (Nodus sinuatrialis), der im rechten Vorhof nahe der Einmündung der oberen Hohlvene liegt. Er erzeugt in Ruhe eine Frequenz von etwa 60–80 Impulsen pro Minute (typischerweise 70/min) und wird daher als „natürlicher Schrittmacher" des Herzens bezeichnet. Der Sinusknoten wird stark durch das vegetative Nervensystem moduliert: Der Sympathikus erhöht die Frequenz (positiv chronotrop), der Parasympathikus (Nervus vagus) senkt sie (negativ chronotrop).
+      content: `Das Erregungsleitungssystem des Herzens besteht aus spezialisierten Herzmuskelzellen, die in der Lage sind, elektrische Impulse zu erzeugen und weiterzuleiten. Im Gegensatz zur regulären Skelettmuskulatur kann das Herz eigenständig Erregungen generieren – diese Eigenschaft wird als Autorhythmie oder Autonomie bezeichnet. Der primäre Taktgeber ist der Sinusknoten (Nodus sinuatrialis), der im rechten Vorhof nahe der Einmündung der oberen Hohlvene liegt. Er erzeugt in Ruhe eine Frequenz von etwa 60–80 Impulsen pro Minute (typischerweise 70/min) und wird daher als „natürlicher Schrittmacher“ des Herzens bezeichnet. Der Sinusknoten wird stark durch das vegetative Nervensystem moduliert: Der Sympathikus erhöht die Frequenz (positiv chronotrop), der Parasympathikus (Nervus vagus) senkt sie (negativ chronotrop).
 
 Die Erregung breitet sich vom Sinusknoten über die Vorhofmuskulatur zum Atrioventrikularknoten (AV-Knoten) aus, der an der Grenze zwischen Vorhöfen und Kammern im Vorhofseptum nahe der Trikuspidalklappe liegt. Der AV-Knoten hat eine entscheidende Filterfunktion: Er verzögert die Erregungsleitung um etwa 0,1 Sekunden (AV-Verzögerung), damit die Vorhöfe ihr Blut vollständig in die Kammern entleeren können, bevor die Kammerkontraktion einsetzt. Die Eigenfrequenz des AV-Knotens beträgt nur 40–50/min – er dient als sekundärer Schrittmacher, falls der Sinusknoten ausfällt. Vom AV-Knoten setzt sich die Erregung über das His-Bündel (Fasciculus atrioventricularis) fort, das die einzige elektrische Verbindung zwischen Vorhof- und Kammermuskulatur darstellt und das Herzskelett durchdringt.
 
 Das His-Bündel teilt sich im Kammerseptum in den rechten und linken Tawara-Schenkel auf, die an den Innenwänden der jeweiligen Kammer entlanglaufen. Der linke Tawara-Schenkel teilt sich weiter in einen vorderen und einen hinteren Faszikel. Die Tawara-Schenkel enden in den Purkinje-Fasern, einem weit verzweigten Netzwerk, das die Erregung schnell und gleichmäßig auf die gesamte Kammermuskulatur überträgt. Die Eigenfrequenz der Purkinje-Fasern liegt bei nur 25–40/min (tertiärer Schrittmacher). Die Erregungsleitung erfolgt von endokardial nach epikardial, also von innen nach außen. Diese hierarchische Anordnung der Schrittmacherzentren gewährleistet, dass das Herz auch bei Ausfall höherer Zentren weiter schlagen kann, allerdings mit zunehmend niedrigerer Frequenz.`,
       diagram: 'cardiac-conduction',
       merksaetze: [
-        'Hierarchie der Schrittmacher: Sinusknoten (60–80/min) → AV-Knoten (40–50/min) → Purkinje-Fasern (25–40/min). Merke: „SAP" – Sinus, AV, Purkinje – die Frequenz sinkt stufenweise.',
+        'Hierarchie der Schrittmacher: Sinusknoten (60–80/min) → AV-Knoten (40–50/min) → Purkinje-Fasern (25–40/min). Merke: „SAP“ – Sinus, AV, Purkinje – die Frequenz sinkt stufenweise.',
         'AV-Verzögerung = ca. 0,1 s – damit die Vorhöfe sich vollständig entleeren können, bevor die Kammern kontrahieren.'
       ],
       altfrage: {
@@ -128,7 +128,7 @@ Arterien und Venen unterscheiden sich grundlegend in ihrem Aufbau und ihrer Funk
 Die Kapillaren sind die dünnsten Gefäße des Kreislaufsystems mit einem Durchmesser von nur 5–10 µm und einer Wand aus einer einzigen Endothelzellschicht. Hier findet der eigentliche Stoff- und Gasaustausch statt – Sauerstoff und Nährstoffe diffundieren ins Gewebe, während Kohlendioxid und Stoffwechselprodukte aufgenommen werden. Der Blutdruck wird als systolischer und diastolischer Wert angegeben: Der Normalwert liegt bei 120/80 mmHg. Der systolische Wert entspricht dem Druck während der Kammerkontraktion, der diastolische Wert dem Druck während der Erschlaffungsphase. Der mittlere arterielle Druck (MAD) berechnet sich näherungsweise als: MAD ≈ diastolischer Druck + ⅓ × (systolischer Druck − diastolischer Druck). Ein wichtiges Konzept ist der totale periphere Widerstand (TPR), der maßgeblich in den Arteriolen reguliert wird und zusammen mit dem Herzzeitvolumen den Blutdruck bestimmt: Blutdruck = HZV × TPR.`,
       diagram: 'blutkreislauf',
       merksaetze: [
-        'Merke: Arterien = vom Herzen weg (A wie „ab"), Venen = zum Herzen hin. Ausnahme: Lungenvenen führen sauerstoffreiches Blut, Lungenarterien führen sauerstoffarmes Blut!',
+        'Merke: Arterien = vom Herzen weg (A wie „ab“), Venen = zum Herzen hin. Ausnahme: Lungenvenen führen sauerstoffreiches Blut, Lungenarterien führen sauerstoffarmes Blut!',
         'Blutdruck = Herzzeitvolumen × totaler peripherer Widerstand. Normwert: 120/80 mmHg. Der Windkesseleffekt der Aorta glättet die pulsatile Strömung.'
       ],
       altfrage: {
@@ -180,11 +180,11 @@ Die Kapillaren sind die dünnsten Gefäße des Kreislaufsystems mit einem Durchm
 
 Die Erythrozyten (rote Blutkörperchen) machen den Großteil der zellulären Bestandteile aus – ein Mikroliter Blut enthält etwa 4,5–5,5 Millionen Erythrozyten. Sie sind bikonkave Scheiben ohne Zellkern und ohne Mitochondrien, was ihre Oberfläche maximiert und den Gasaustausch optimiert. Ihre Hauptaufgabe ist der Sauerstofftransport mittels Hämoglobin (Hb), einem eisenhaltigen Protein, das pro Molekül vier Sauerstoffmoleküle binden kann. Die Lebensdauer der Erythrozyten beträgt etwa 120 Tage, danach werden sie vor allem in der Milz abgebaut (Hämolyse). Der Hämoglobinabbau liefert Bilirubin, das in der Leber konjugiert und über die Galle ausgeschieden wird. Die Bildung neuer Erythrozyten (Erythropoese) findet im roten Knochenmark statt und wird durch das Hormon Erythropoetin (EPO) aus der Niere stimuliert, insbesondere bei Sauerstoffmangel (Hypoxie).
 
-Die Leukozyten (weiße Blutkörperchen, 4.000–10.000/µL) sind die Zellen des Immunsystems und lassen sich in Granulozyten (neutrophile, eosinophile, basophile), Monozyten und Lymphozyten unterteilen. Neutrophile Granulozyten (60–70 %) sind die häufigsten Leukozyten und die „erste Verteidigungslinie" gegen bakterielle Infektionen durch Phagozytose. Eosinophile (2–4 %) sind besonders bei Parasitenabwehr und allergischen Reaktionen aktiv, basophile Granulozyten (<1 %) setzen Histamin und Heparin frei. Monozyten differenzieren im Gewebe zu Makrophagen und dendritischen Zellen. Lymphozyten umfassen T-Zellen (zelluläre Immunantwort), B-Zellen (Antikörperproduktion) und NK-Zellen (natürliche Killerzellen). Die Thrombozyten (Blutplättchen, 150.000–400.000/µL) sind kernlose Zellfragmente aus Megakaryozyten und spielen eine zentrale Rolle bei der Blutstillung (Hämostase). Sie lagern sich an verletzte Gefäßwände an (Adhäsion), aktivieren sich gegenseitig (Aggregation) und bilden zusammen mit dem Gerinnungssystem einen stabilen Thrombus.`,
+Die Leukozyten (weiße Blutkörperchen, 4.000–10.000/µL) sind die Zellen des Immunsystems und lassen sich in Granulozyten (neutrophile, eosinophile, basophile), Monozyten und Lymphozyten unterteilen. Neutrophile Granulozyten (60–70 %) sind die häufigsten Leukozyten und die „erste Verteidigungslinie“ gegen bakterielle Infektionen durch Phagozytose. Eosinophile (2–4 %) sind besonders bei Parasitenabwehr und allergischen Reaktionen aktiv, basophile Granulozyten (<1 %) setzen Histamin und Heparin frei. Monozyten differenzieren im Gewebe zu Makrophagen und dendritischen Zellen. Lymphozyten umfassen T-Zellen (zelluläre Immunantwort), B-Zellen (Antikörperproduktion) und NK-Zellen (natürliche Killerzellen). Die Thrombozyten (Blutplättchen, 150.000–400.000/µL) sind kernlose Zellfragmente aus Megakaryozyten und spielen eine zentrale Rolle bei der Blutstillung (Hämostase). Sie lagern sich an verletzte Gefäßwände an (Adhäsion), aktivieren sich gegenseitig (Aggregation) und bilden zusammen mit dem Gerinnungssystem einen stabilen Thrombus.`,
       diagram: 'blutbestandteile',
       merksaetze: [
         'Erythrozyten: 120 Tage Lebensdauer, bikonkav, kernlos, Hämoglobin bindet 4× O₂, Abbau in der Milz, Bildung im Knochenmark durch EPO.',
-        'Leukozyten-Reihenfolge nach Häufigkeit: „Never Let Monkeys Eat Bananas" – Neutrophile (60–70 %) > Lymphozyten (20–30 %) > Monozyten (3–8 %) > Eosinophile (2–4 %) > Basophile (<1 %).'
+        'Leukozyten-Reihenfolge nach Häufigkeit: „Never Let Monkeys Eat Bananas“ – Neutrophile (60–70 %) > Lymphozyten (20–30 %) > Monozyten (3–8 %) > Eosinophile (2–4 %) > Basophile (<1 %).'
       ],
       altfrage: {
         question: 'Wie lange beträgt die durchschnittliche Lebensdauer eines Erythrozyten?',
@@ -349,7 +349,7 @@ Der Dünndarm (Duodenum, Jejunum, Ileum) ist mit 3–5 Metern Länge der Hauptor
       diagram: 'verdauungssystem',
       merksaetze: [
         'Enzymzuordnung: Mund = Amylase (Stärke), Magen = Pepsin (Proteine), Dünndarm = Trypsin/Chymotrypsin (Proteine) + Lipase (Fette) + Amylase (Stärke). Die Kohlenhydratverdauung beginnt im Mund!',
-        'Belegzellen = HCl + Intrinsic Factor. Hauptzellen = Pepsinogen. Nebenzellen = Schleim. Merke: „BHN – Belegzellen Hauptzellen Nebenzellen – Säure Enzyme Schutz".'
+        'Belegzellen = HCl + Intrinsic Factor. Hauptzellen = Pepsinogen. Nebenzellen = Schleim. Merke: „BHN – Belegzellen Hauptzellen Nebenzellen – Säure Enzyme Schutz“.'
       ],
       altfrage: {
         question: 'Wo beginnt die Verdauung von Kohlenhydraten?',
@@ -398,12 +398,12 @@ Der Dünndarm (Duodenum, Jejunum, Ileum) ist mit 3–5 Metern Länge der Hauptor
       title: 'Nervensystem Grundlagen',
       content: `Das Nervensystem ist das zentrale Steuerungs- und Kommunikationssystem des Körpers. Es wird anatomisch in das Zentralnervensystem (ZNS) und das periphere Nervensystem (PNS) unterteilt. Das ZNS besteht aus Gehirn (Encephalon) und Rückenmark (Medulla spinalis) und ist von Knochen (Schädel und Wirbelsäule), Hirnhäuten (Meningen: Dura mater, Arachnoidea, Pia mater) und Liquor cerebrospinalis (ca. 150 mL) umgeben und geschützt. Das Gehirn umfasst das Großhirn (Cerebrum, höhere kognitive Funktionen), das Zwischenhirn (Diencephalon mit Thalamus und Hypothalamus), das Kleinhirn (Cerebellum, Koordination und Gleichgewicht), das Mittelhirn (Mesencephalon) und den Hirnstamm (Pons und Medulla oblongata, lebenswichtige Funktionen wie Atmung und Kreislaufregulation). Das PNS umfasst alle Nerven außerhalb des ZNS: 12 Hirnnervenpaare und 31 Spinalnervenpaare, die Informationen zwischen ZNS und Peripherie übertragen.
 
-Funktionell unterscheidet man das somatische und das vegetative (autonome) Nervensystem. Das somatische Nervensystem steuert die willkürliche Motorik der Skelettmuskulatur und leitet bewusste Sinneswahrnehmungen (Sensorik) weiter. Es ist für die bewusste Interaktion mit der Umwelt zuständig. Das vegetative Nervensystem (VNS) hingegen reguliert unbewusst die Funktion der inneren Organe, der glatten Muskulatur, des Herzmuskels und der Drüsen. Es arbeitet weitgehend autonom und wird in drei Anteile unterteilt: Sympathikus, Parasympathikus und das enterische Nervensystem (Darmnervensystem mit ca. 100 Millionen Neuronen, auch „Bauchhirn" genannt). Der Sympathikus und Parasympathikus wirken in den meisten Organen als Gegenspieler (Antagonisten), wobei der Sympathikus eher „fight or flight" (Stressreaktion) und der Parasympathikus „rest and digest" (Ruhe und Verdauung) vermittelt.
+Funktionell unterscheidet man das somatische und das vegetative (autonome) Nervensystem. Das somatische Nervensystem steuert die willkürliche Motorik der Skelettmuskulatur und leitet bewusste Sinneswahrnehmungen (Sensorik) weiter. Es ist für die bewusste Interaktion mit der Umwelt zuständig. Das vegetative Nervensystem (VNS) hingegen reguliert unbewusst die Funktion der inneren Organe, der glatten Muskulatur, des Herzmuskels und der Drüsen. Es arbeitet weitgehend autonom und wird in drei Anteile unterteilt: Sympathikus, Parasympathikus und das enterische Nervensystem (Darmnervensystem mit ca. 100 Millionen Neuronen, auch „Bauchhirn“ genannt). Der Sympathikus und Parasympathikus wirken in den meisten Organen als Gegenspieler (Antagonisten), wobei der Sympathikus eher „fight or flight“ (Stressreaktion) und der Parasympathikus „rest and digest“ (Ruhe und Verdauung) vermittelt.
 
 Der Sympathikus hat seinen Ursprung im thorakolumbalen Rückenmark (Th1–L2) und verwendet als Neurotransmitter präganglionär Acetylcholin und postganglionär Noradrenalin (Ausnahme: Schweißdrüsen → Acetylcholin). Seine Wirkungen umfassen: Pupillenerweiterung (Mydriasis), Bronchodilatation, Herzfrequenzsteigerung (positiv chronotrop), Blutdruckerhöhung, Hemmung der Magen-Darm-Motilität und Glykogenolyse in der Leber. Der Parasympathikus hat seinen Ursprung im Hirnstamm (Hirnnerven III, VII, IX, X – besonders der Nervus vagus) und im sakralen Rückenmark (S2–S4). Er verwendet sowohl prä- als auch postganglionär Acetylcholin. Seine Wirkungen sind: Pupillenverengung (Miosis), Bronchokonstriktion, Herzfrequenzsenkung (negativ chronotrop), Förderung der Magen-Darm-Motilität und Sekretion, Anregung der Blasenentleerung. Das enterische Nervensystem kann weitgehend unabhängig vom ZNS die Darmmotilität und Sekretion steuern.`,
       diagram: 'nervensystem-uebersicht',
       merksaetze: [
-        'Sympathikus = „fight or flight": Herz schneller, Bronchien weit, Pupillen weit, Verdauung gehemmt. Parasympathikus = „rest and digest": Herz langsamer, Bronchien eng, Pupillen eng, Verdauung aktiv.',
+        'Sympathikus = „fight or flight“: Herz schneller, Bronchien weit, Pupillen weit, Verdauung gehemmt. Parasympathikus = „rest and digest“: Herz langsamer, Bronchien eng, Pupillen eng, Verdauung aktiv.',
         'Sympathikus: thorakolumbal (Th1–L2), postganglionär Noradrenalin. Parasympathikus: kraniosakral (Hirnstamm + S2–S4), immer Acetylcholin.'
       ],
       altfrage: {
@@ -498,7 +498,7 @@ Ein Aktionspotential wird ausgelöst, wenn das Membranpotential den Schwellenwer
             'Weiterleitung über chemische Synapsen'
           ],
           correctIndex: 1,
-          explanation: 'Bei der saltatorischen Erregungsleitung „springt" das Aktionspotential von Ranvier-Schnürring zu Schnürring, da nur dort Ionenkanäle vorhanden sind. Dies ist deutlich schneller als die kontinuierliche Leitung in unmyelinisierten Fasern.'
+          explanation: 'Bei der saltatorischen Erregungsleitung „springt“ das Aktionspotential von Ranvier-Schnürring zu Schnürring, da nur dort Ionenkanäle vorhanden sind. Dies ist deutlich schneller als die kontinuierliche Leitung in unmyelinisierten Fasern.'
         }
       ]
     },
@@ -569,7 +569,7 @@ Die hormonelle Regulation der Nierenfunktion erfolgt hauptsächlich durch zwei H
       diagram: 'nephron',
       merksaetze: [
         'GFR = 120 mL/min → 180 L Primärharn/Tag → 99 % Rückresorption → 1–2 L Endharn. Jede Niere hat ca. 1 Mio. Nephrone.',
-        'ADH = Wasser rückresorbieren (Aquaporin-2 im Sammelrohr). Aldosteron = Na⁺ rückresorbieren + K⁺ sezernieren (distaler Tubulus). Merke: „ADH = Antidiuretisch = Hält Wasser zurück".'
+        'ADH = Wasser rückresorbieren (Aquaporin-2 im Sammelrohr). Aldosteron = Na⁺ rückresorbieren + K⁺ sezernieren (distaler Tubulus). Merke: „ADH = Antidiuretisch = Hält Wasser zurück“.'
       ],
       altfrage: {
         question: 'Wie viel Primärharn produzieren die Nieren pro Tag?',
@@ -624,7 +624,7 @@ Die Nebenniere besteht aus Rinde und Mark mit unterschiedlichen Funktionen. Die 
       diagram: 'hormonsystem',
       merksaetze: [
         'Negative Rückkopplung: Hoher Hormonspiegel → hemmt übergeordnete Ebene (Hypothalamus/Hypophyse). Schilddrüsenachse: Hypothalamus (TRH) → Hypophyse (TSH) → Schilddrüse (T₃/T₄) → hemmt TRH + TSH.',
-        'Insulin senkt Blutzucker (B-Zellen), Glukagon erhöht Blutzucker (A-Zellen). Nebennierenrinde: „GFR" – Glomerulosa (Aldosteron) → Fasciculata (Cortisol) → Reticularis (Androgene).'
+        'Insulin senkt Blutzucker (B-Zellen), Glukagon erhöht Blutzucker (A-Zellen). Nebennierenrinde: „GFR“ – Glomerulosa (Aldosteron) → Fasciculata (Cortisol) → Reticularis (Androgene).'
       ],
       altfrage: {
         question: 'Wie reguliert die Hypothalamus-Hypophysen-Schilddrüsen-Achse den T₃/T₄-Spiegel?',
@@ -652,7 +652,7 @@ Die Nebenniere besteht aus Rinde und Mark mit unterschiedlichen Funktionen. Die 
             'Adrenalin'
           ],
           correctIndex: 1,
-          explanation: 'Die Zona fasciculata der Nebennierenrinde produziert Glucocorticoide, hauptsächlich Cortisol. Merkhilfe: „GFR" von außen nach innen – Glomerulosa (Aldosteron), Fasciculata (Cortisol), Reticularis (Androgene).'
+          explanation: 'Die Zona fasciculata der Nebennierenrinde produziert Glucocorticoide, hauptsächlich Cortisol. Merkhilfe: „GFR“ von außen nach innen – Glomerulosa (Aldosteron), Fasciculata (Cortisol), Reticularis (Androgene).'
         },
         {
           question: 'Welches Prinzip reguliert die meisten Hormonachsen?',

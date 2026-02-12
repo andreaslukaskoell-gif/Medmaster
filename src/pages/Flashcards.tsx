@@ -38,11 +38,11 @@ export default function FlashcardsPage() {
     mathe: "Mathematik",
   };
 
-  const categoryColors: Record<string, string> = {
-    bio: "bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400",
-    chemie: "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400",
-    physik: "bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-400",
-    mathe: "bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-400",
+  const categoryColors: Record<string, { badge: string; stripe: string }> = {
+    bio: { badge: "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400", stripe: "bg-emerald-500" },
+    chemie: { badge: "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400", stripe: "bg-red-500" },
+    physik: { badge: "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400", stripe: "bg-blue-500" },
+    mathe: { badge: "bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400", stripe: "bg-violet-500" },
   };
 
   return (
@@ -92,12 +92,13 @@ export default function FlashcardsPage() {
             {categoryDecks.map((deck) => (
               <Card
                 key={deck.id}
-                className="hover:shadow-md transition-shadow cursor-pointer"
+                className="hover:shadow-md transition-all duration-200 cursor-pointer overflow-hidden"
                 onClick={() => { setActiveDeck(deck.id); setView("study"); }}
               >
+                <div className={`h-1.5 ${categoryColors[category]?.stripe || "bg-gray-400"}`} />
                 <CardContent className="p-4">
                   <div className="flex items-center justify-between mb-2">
-                    <Badge className={categoryColors[category]}>{categoryLabels[category]}</Badge>
+                    <Badge className={categoryColors[category]?.badge}>{categoryLabels[category]}</Badge>
                     <span className="text-xs text-muted">{deck.count} Karten</span>
                   </div>
                   <h3 className="font-semibold text-gray-900 dark:text-gray-100">{deck.label}</h3>
@@ -211,26 +212,26 @@ function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flas
       </div>
 
       <div
-        className="perspective-1000 cursor-pointer select-none"
+        className="[perspective:1000px] cursor-pointer select-none"
         onClick={() => setFlipped((f) => !f)}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        <div className={`relative transition-transform duration-500 preserve-3d ${flipped ? "rotate-y-180" : ""}`} style={{ minHeight: "280px" }}>
+        <div className={`relative [transition:transform_0.5s_ease-in-out] [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""}`} style={{ minHeight: "320px" }}>
           {/* Front */}
-          <Card className={`absolute inset-0 backface-hidden ${flipped ? "invisible" : ""}`}>
-            <CardContent className="p-8 flex flex-col items-center justify-center min-h-[280px]">
-              <Badge className="mb-4">{card.topic}</Badge>
-              <p className="text-lg font-medium text-gray-900 dark:text-gray-100 text-center">{card.front}</p>
-              <p className="text-xs text-muted mt-6">Tippe zum Umdrehen</p>
+          <Card className="absolute inset-0 [backface-visibility:hidden] shadow-lg">
+            <CardContent className="p-10 flex flex-col items-center justify-center min-h-[320px]">
+              <Badge className="mb-5">{card.topic}</Badge>
+              <p className="text-xl font-semibold text-gray-900 dark:text-gray-100 text-center leading-relaxed">{card.front}</p>
+              <p className="text-xs text-muted mt-8">Tippe zum Umdrehen</p>
             </CardContent>
           </Card>
 
           {/* Back */}
-          <Card className={`absolute inset-0 ${!flipped ? "invisible" : ""}`}>
-            <CardContent className="p-8 flex flex-col items-center justify-center min-h-[280px]">
-              <Badge variant="success" className="mb-4">Antwort</Badge>
-              <p className="text-sm text-gray-700 dark:text-gray-300 text-center whitespace-pre-line leading-relaxed">{card.back}</p>
+          <Card className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] shadow-lg">
+            <CardContent className="p-10 flex flex-col items-center justify-center min-h-[320px]">
+              <Badge variant="success" className="mb-5">Antwort</Badge>
+              <p className="text-base text-gray-700 dark:text-gray-300 text-center whitespace-pre-line leading-relaxed">{card.back}</p>
             </CardContent>
           </Card>
         </div>
@@ -256,9 +257,11 @@ function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flas
         </button>
       </div>
 
-      <p className="text-center text-[10px] text-muted">
-        Leertaste: Umdrehen · → / J: Gewusst · ← / K: Nicht gewusst · Swipe: Links/Rechts
-      </p>
+      <div className="flex justify-center gap-3 text-[11px] text-muted">
+        <span className="flex items-center gap-1"><kbd className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-[10px] font-mono">Space</kbd> Umdrehen</span>
+        <span className="flex items-center gap-1"><kbd className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-[10px] font-mono">&rarr;</kbd> Gewusst</span>
+        <span className="flex items-center gap-1"><kbd className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-[10px] font-mono">&larr;</kbd> Nicht gewusst</span>
+      </div>
     </div>
   );
 }

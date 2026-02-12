@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export interface BreadcrumbItem {
   label: string;
   href?: string;
+  onClick?: () => void;
 }
 
 export function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
@@ -13,7 +14,7 @@ export function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
         <span key={i} className="flex items-center gap-1.5">
           {i > 0 && <ChevronRight className="w-3.5 h-3.5" />}
           {item.href ? (
-            <Link to={item.href} className="hover:text-primary-700 transition-colors">
+            <Link to={item.href} onClick={item.onClick} className="hover:text-primary-700 transition-colors">
               {item.label}
             </Link>
           ) : (

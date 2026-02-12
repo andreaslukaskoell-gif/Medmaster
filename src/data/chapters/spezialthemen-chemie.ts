@@ -100,7 +100,7 @@ export const spezialthemenChemieChapter: Chapter = {
         "• K = 1: Edukte und Produkte liegen in vergleichbaren Konzentrationen vor.\n" +
         "• K ist temperaturabhängig! Bei einer bestimmten Temperatur ist K konstant.\n\n" +
         "**Le Chatelier — Prinzip des kleinsten Zwangs:**\n" +
-        "Wenn auf ein System im Gleichgewicht ein äußerer Zwang ausgeübt wird (Änderung von Konzentration, Druck oder Temperatur), verschiebt sich das Gleichgewicht so, dass es dem Zwang entgegenwirkt. Das System „weicht dem Zwang aus".\n\n" +
+        "Wenn auf ein System im Gleichgewicht ein äußerer Zwang ausgeübt wird (Änderung von Konzentration, Druck oder Temperatur), verschiebt sich das Gleichgewicht so, dass es dem Zwang entgegenwirkt. Das System „weicht dem Zwang aus“.\n\n" +
         "1) Konzentrationsänderung:\n" +
         "• Zugabe eines Edukts → Gleichgewicht verschiebt sich zu den Produkten (um das zugegebene Edukt zu verbrauchen).\n" +
         "• Zugabe eines Produkts → Gleichgewicht verschiebt sich zu den Edukten.\n" +
@@ -143,7 +143,7 @@ export const spezialthemenChemieChapter: Chapter = {
         "• +6: In Schwefeltrioxid (SO₃), Schwefelsäure (H₂SO₄) und Sulfaten (SO₄²⁻). Höchste Oxidationsstufe.\n\n" +
         "**Schwefelsäure H₂SO₄ — die wichtigste Schwefelverbindung:**\n" +
         "Schwefelsäure ist die weltweit meistproduzierte Chemikalie (ca. 260 Millionen Tonnen pro Jahr). Sie ist eine starke zweiprotonige (diprotische) Säure: Die erste Protolysestufe ist vollständig (H₂SO₄ → H⁺ + HSO₄⁻, starke Säure), die zweite Protolysestufe nur teilweise (HSO₄⁻ ⇌ H⁺ + SO₄²⁻, mittelstarke Säure, pKₛ₂ ≈ 1,9).\n" +
-        "Eigenschaften: Stark hygroskopisch (wasseranziehend, wird daher als Trocknungsmittel verwendet), stark exotherme Reaktion beim Mischen mit Wasser (IMMER Säure ins Wasser geben, nie umgekehrt! — Merke: „Erst das Wasser, dann die Säure, sonst geschieht das Ungeheure"). Konzentrierte H₂SO₄ wirkt oxidierend und verkohlend auf organische Stoffe.\n" +
+        "Eigenschaften: Stark hygroskopisch (wasseranziehend, wird daher als Trocknungsmittel verwendet), stark exotherme Reaktion beim Mischen mit Wasser (IMMER Säure ins Wasser geben, nie umgekehrt! — Merke: „Erst das Wasser, dann die Säure, sonst geschieht das Ungeheure“). Konzentrierte H₂SO₄ wirkt oxidierend und verkohlend auf organische Stoffe.\n" +
         "Herstellung: Kontaktverfahren (S → SO₂ → SO₃ → H₂SO₄). Verwendung: Düngemittelproduktion, Metallverarbeitung, Batteriesäure (Bleiakkumulator), chemische Synthesen.\n\n" +
         "**Sulfate (SO₄²⁻):**\n" +
         "Salze der Schwefelsäure. Viele Sulfate sind gut wasserlöslich (z.B. Na₂SO₄, CuSO₄). Schwerlöslich sind BaSO₄ (Bariumsulfat — Röntgenkontrastmittel!) und PbSO₄. Gips (CaSO₄ · 2 H₂O) ist ein wichtiges Baumaterial und wird in der Medizin für Gipsverbände verwendet.\n\n" +

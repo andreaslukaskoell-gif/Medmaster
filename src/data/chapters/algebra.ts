@@ -177,7 +177,7 @@ Für obiges Beispiel: p = -5, q = 6 → x = 5/2 ± √(25/4 - 6) = 5/2 ± 1/2
 Für die Lösungen x₁, x₂ einer quadratischen Gleichung x² + px + q = 0 gilt:
 • x₁ + x₂ = -p (= -b/a in der allgemeinen Form)
 • x₁ · x₂ = q (= c/a in der allgemeinen Form)
-Das ermöglicht schnelles Lösen durch „geschicktes Raten": Welche zwei Zahlen haben die Summe -p und das Produkt q?
+Das ermöglicht schnelles Lösen durch „geschicktes Raten“: Welche zwei Zahlen haben die Summe -p und das Produkt q?
 
 <strong>Ungleichungen</strong>
 Die Rechenregeln sind wie bei Gleichungen, mit einer wichtigen Ausnahme:
@@ -376,20 +376,20 @@ Ist 4536 durch 4 teilbar? Letzte zwei Ziffern: 36, und 36/4 = 9 → <strong>Ja</
 • <strong>UND (Konjunktion, ∧):</strong> A ∧ B ist wahr, wenn <strong>beide</strong> Aussagen wahr sind.
 • <strong>ODER (Disjunktion, ∨):</strong> A ∨ B ist wahr, wenn <strong>mindestens eine</strong> Aussage wahr ist (inklusives Oder).
 • <strong>NICHT (Negation, ¬):</strong> ¬A kehrt den Wahrheitswert um.
-• <strong>Implikation (→):</strong> A → B bedeutet „Wenn A, dann B."
+• <strong>Implikation (→):</strong> A → B bedeutet „Wenn A, dann B.“
   A → B ist <strong>nur dann falsch</strong>, wenn A wahr und B falsch ist.
   Alle anderen Kombinationen ergeben wahr — insbesondere: Aus einer falschen Aussage folgt alles (ex falso quodlibet).
 
 <strong>Kontraposition</strong>
 Die logische Äquivalenz A → B ⟺ ¬B → ¬A ist die <strong>Kontraposition</strong>.
-• Beispiel: „Wenn es regnet, ist die Straße nass" ⟺ „Wenn die Straße nicht nass ist, regnet es nicht."
+• Beispiel: „Wenn es regnet, ist die Straße nass“ ⟺ „Wenn die Straße nicht nass ist, regnet es nicht.“
 • Die Kontraposition ist die Basis vieler indirekter Beweise und kommt im KFF-Teil vor.
 
 <strong>Notwendige vs. hinreichende Bedingung</strong>
 • A ist <strong>hinreichend</strong> für B, wenn A → B gilt (A allein reicht aus, um B zu garantieren).
-  Beispiel: „Regen" ist hinreichend für „Straße nass" — aber nicht notwendig (Sprinkler!).
+  Beispiel: „Regen“ ist hinreichend für „Straße nass“ — aber nicht notwendig (Sprinkler!).
 • A ist <strong>notwendig</strong> für B, wenn B → A gilt (ohne A kann B nicht eintreten).
-  Beispiel: „Sauerstoff" ist notwendig für „Feuer" — aber nicht hinreichend (man braucht auch Brennstoff und Zündtemperatur).
+  Beispiel: „Sauerstoff“ ist notwendig für „Feuer“ — aber nicht hinreichend (man braucht auch Brennstoff und Zündtemperatur).
 
 <strong>Wahrheitstafel der Implikation</strong>
 A wahr, B wahr → A → B <strong>wahr</strong>
@@ -398,8 +398,8 @@ A falsch, B wahr → A → B <strong>wahr</strong>
 A falsch, B falsch → A → B <strong>wahr</strong>
 
 <strong>Quantoren</strong>
-• <strong>Allquantor ∀:</strong> „Für alle" — ∀x: P(x) bedeutet „Für jedes x gilt P(x)."
-• <strong>Existenzquantor ∃:</strong> „Es gibt (mindestens ein)" — ∃x: P(x) bedeutet „Es gibt ein x, für das P(x) gilt."
+• <strong>Allquantor ∀:</strong> „Für alle“ — ∀x: P(x) bedeutet „Für jedes x gilt P(x).“
+• <strong>Existenzquantor ∃:</strong> „Es gibt (mindestens ein)“ — ∃x: P(x) bedeutet „Es gibt ein x, für das P(x) gilt.“
 • Negation: ¬(∀x: P(x)) ⟺ ∃x: ¬P(x) und ¬(∃x: P(x)) ⟺ ∀x: ¬P(x)`,
       merke:
         "Kontraposition: <strong>A → B</strong> ist logisch äquivalent zu <strong>¬B → ¬A</strong>. Das ist die Basis vieler mathematischer Beweise und auch relevant für den KFF-Implikationstest!",

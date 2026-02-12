@@ -21,10 +21,10 @@ import BMSKapitelView from "./BMSKapitelView";
 import BMSQuiz from "./BMSQuiz";
 
 const subjects = [
-  { id: "biologie", label: "Biologie", icon: Dna, color: "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400" },
-  { id: "chemie", label: "Chemie", icon: Atom, color: "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400" },
-  { id: "physik", label: "Physik", icon: Zap, color: "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400" },
-  { id: "mathematik", label: "Mathematik", icon: Calculator, color: "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400" },
+  { id: "biologie", label: "Biologie", icon: Dna, color: "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400", active: "bg-emerald-600 hover:bg-emerald-700", progress: "bg-emerald-500", border: "border-l-emerald-500" },
+  { id: "chemie", label: "Chemie", icon: Atom, color: "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400", active: "bg-red-600 hover:bg-red-700", progress: "bg-red-500", border: "border-l-red-500" },
+  { id: "physik", label: "Physik", icon: Zap, color: "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400", active: "bg-blue-600 hover:bg-blue-700", progress: "bg-blue-500", border: "border-l-blue-500" },
+  { id: "mathematik", label: "Mathematik", icon: Calculator, color: "bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400", active: "bg-violet-600 hover:bg-violet-700", progress: "bg-violet-500", border: "border-l-violet-500" },
 ] as const;
 
 export default function BMS() {
@@ -86,7 +86,7 @@ export default function BMS() {
               onClick={() => setActiveSubject(s.id)}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
                 activeSubject === s.id
-                  ? "bg-primary-700 text-white"
+                  ? `${s.active} text-white`
                   : "bg-white dark:bg-gray-900 border border-border dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
               }`}
             >
@@ -111,7 +111,7 @@ export default function BMS() {
           </div>
           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
             <div
-              className="bg-primary-600 h-2 rounded-full transition-all"
+              className={`${subjects.find((s) => s.id === activeSubject)?.progress || "bg-primary-600"} h-2 rounded-full transition-all`}
               style={{ width: `${(subjectCompletedUK / subjectUK) * 100}%` }}
             />
           </div>
@@ -133,7 +133,7 @@ export default function BMS() {
           return (
             <Card
               key={kap.id}
-              className="hover:shadow-md transition-shadow cursor-pointer"
+              className={`hover:shadow-md transition-shadow cursor-pointer border-l-4 ${subjects.find((s) => s.id === activeSubject)?.border || ""}`}
               onClick={() => setActiveKapitel(kap)}
             >
               <CardContent className="p-4">
@@ -158,7 +158,7 @@ export default function BMS() {
                     {ukDone > 0 && !isCompleted && (
                       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mt-2">
                         <div
-                          className="bg-primary-500 h-1.5 rounded-full transition-all"
+                          className={`${subjects.find((s) => s.id === activeSubject)?.progress || "bg-primary-500"} h-1.5 rounded-full transition-all`}
                           style={{ width: `${progress}%` }}
                         />
                       </div>

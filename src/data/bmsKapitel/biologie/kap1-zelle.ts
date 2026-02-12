@@ -11,11 +11,44 @@ export const bioKap1: Kapitel = {
     {
       id: 'bio-kap1-uk1',
       title: 'Prokaryoten vs. Eukaryoten',
-      content: `Alle lebenden Organismen lassen sich in zwei fundamentale Zelltypen einteilen: Prokaryoten und Eukaryoten. Der entscheidende Unterschied liegt im Vorhandensein eines membranumhüllten Zellkerns. Prokaryoten (griechisch: „vor dem Kern") besitzen keinen echten Zellkern; ihre DNA liegt frei im Cytoplasma in einem Bereich, der als Nukleoid bezeichnet wird. Typische Vertreter sind Bakterien und Archaeen. Prokaryotische Zellen sind mit 0,1–10 µm deutlich kleiner als eukaryotische Zellen, die einen Durchmesser von 10–100 µm aufweisen. Die geringere Größe der Prokaryoten ermöglicht ein günstigeres Oberfläche-zu-Volumen-Verhältnis, was einen effizienteren Stoffaustausch erlaubt.
+      content: `Alle lebenden Organismen lassen sich in zwei fundamentale Zelltypen einteilen: Prokaryoten und Eukaryoten. Der entscheidende Unterschied liegt im Vorhandensein eines membranumhüllten Zellkerns. Prokaryoten (griechisch: „vor dem Kern“) besitzen keinen echten Zellkern; ihre DNA liegt frei im Cytoplasma in einem Bereich, der als Nukleoid bezeichnet wird. Typische Vertreter sind Bakterien und Archaeen. Prokaryotische Zellen sind mit 0,1–10 µm deutlich kleiner als eukaryotische Zellen, die einen Durchmesser von 10–100 µm aufweisen. Die geringere Größe der Prokaryoten ermöglicht ein günstigeres Oberfläche-zu-Volumen-Verhältnis, was einen effizienteren Stoffaustausch erlaubt.
 
 Ein weiterer zentraler Unterschied betrifft die Ribosomen und die Genomorganisation. Prokaryoten besitzen 70S-Ribosomen (bestehend aus einer 30S- und einer 50S-Untereinheit), während Eukaryoten größere 80S-Ribosomen (40S + 60S) im Cytoplasma aufweisen. Die prokaryotische DNA ist typischerweise ein einzelnes, zirkuläres Chromosom ohne Histone, häufig ergänzt durch kleine zirkuläre DNA-Moleküle, sogenannte Plasmide, die zusätzliche Gene tragen können (z. B. Antibiotikaresistenzen). Eukaryotische DNA hingegen ist linear organisiert, um Histonproteine gewickelt und in mehrere Chromosomen aufgeteilt, die im Zellkern lokalisiert sind. Diese Verpackung ermöglicht die Regulation der Genexpression durch epigenetische Modifikationen.
 
 Prokaryoten fehlen membranumschlossene Organellen wie Mitochondrien, endoplasmatisches Retikulum oder Golgi-Apparat. Dennoch sind sie metabolisch äußerst vielseitig: Manche Prokaryoten können Photosynthese betreiben (Cyanobakterien), Stickstoff fixieren oder unter extremen Bedingungen leben (Archaeen in heißen Quellen oder Salzseen). Die Zellteilung erfolgt bei Prokaryoten durch binäre Fission (Zweiteilung) – ein deutlich schnellerer Prozess als die mitotische Teilung eukaryotischer Zellen. Die Generationszeit von Escherichia coli beträgt unter optimalen Bedingungen nur etwa 20 Minuten. Eukaryotische Zellen hingegen verfügen über ein komplexes Zytoskelett, das aus Mikrofilamenten, Intermediärfilamenten und Mikrotubuli besteht und für Zellform, Bewegung und intrazelluläre Transportprozesse verantwortlich ist.`,
+      lernziele: [
+        'Die beiden fundamentalen Zelltypen (Prokaryoten und Eukaryoten) benennen und anhand des Zellkerns unterscheiden koennen',
+        'Die Unterschiede in Genomorganisation, Ribosomen und Zellkompartimentierung erklaeren koennen',
+        'Die Zellteilung bei Prokaryoten (binaere Fission) und Eukaryoten (Mitose) vergleichen koennen',
+        'Die metabolische Vielseitigkeit der Prokaryoten mit Beispielen beschreiben koennen'
+      ],
+      sections: [
+        {
+          heading: 'Grundlegender Unterschied',
+          text: 'Alle lebenden Organismen lassen sich in zwei fundamentale Zelltypen einteilen: Prokaryoten und Eukaryoten. Der entscheidende Unterschied liegt im Vorhandensein eines membranumhuellten Zellkerns. Prokaryoten (griechisch: "vor dem Kern") besitzen keinen echten Zellkern; ihre DNA liegt frei im Cytoplasma in einem Bereich, der als Nukleoid bezeichnet wird. Typische Vertreter sind Bakterien und Archaeen.\n\nProkaryotische Zellen sind mit 0,1-10 um deutlich kleiner als eukaryotische Zellen, die einen Durchmesser von 10-100 um aufweisen. Die geringere Groesse der Prokaryoten ermoeglicht ein guenstigeres Oberflaeche-zu-Volumen-Verhaeltnis, was einen effizienteren Stoffaustausch erlaubt. Eukaryoten besitzen membranumschlossene Kompartimente (Organellen), die eine raeumliche Trennung verschiedener Stoffwechselwege ermoeglichen.',
+          table: {
+            headers: ['Merkmal', 'Prokaryoten', 'Eukaryoten'],
+            rows: [
+              ['Zellkern', 'Kein echter Kern (Nukleoid)', 'Membranumhuellter Zellkern'],
+              ['Groesse', '0,1-10 um', '10-100 um'],
+              ['Ribosomen', '70S (30S + 50S)', '80S (40S + 60S)'],
+              ['DNA', 'Zirkulaer, ohne Histone', 'Linear, mit Histonen'],
+              ['Organellen', 'Keine membranumhuellten Organellen', 'Mitochondrien, ER, Golgi etc.'],
+              ['Zellteilung', 'Binaere Fission', 'Mitose / Meiose']
+            ]
+          }
+        },
+        {
+          heading: 'Genomorganisation und Ribosomen',
+          text: 'Ein weiterer zentraler Unterschied betrifft die Ribosomen und die Genomorganisation. Prokaryoten besitzen 70S-Ribosomen (bestehend aus einer 30S- und einer 50S-Untereinheit), waehrend Eukaryoten groessere 80S-Ribosomen (40S + 60S) im Cytoplasma aufweisen.\n\nDie prokaryotische DNA ist typischerweise ein einzelnes, zirkulaeres Chromosom ohne Histone, haeufig ergaenzt durch kleine zirkulaere DNA-Molekuele, sogenannte Plasmide, die zusaetzliche Gene tragen koennen (z. B. Antibiotikaresistenzen). Eukaryotische DNA hingegen ist linear organisiert, um Histonproteine gewickelt und in mehrere Chromosomen aufgeteilt, die im Zellkern lokalisiert sind. Diese Verpackung ermoeglicht die Regulation der Genexpression durch epigenetische Modifikationen.',
+          merksatz: '70S = Prokaryoten (siebzig -> "sie sind primitiver"), 80S = Eukaryoten (achtzig -> "acht Buchstaben in Eukaryot")'
+        },
+        {
+          heading: 'Zellteilung und Stoffwechsel',
+          text: 'Prokaryoten fehlen membranumschlossene Organellen wie Mitochondrien, endoplasmatisches Retikulum oder Golgi-Apparat. Dennoch sind sie metabolisch aeusserst vielseitig: Manche Prokaryoten koennen Photosynthese betreiben (Cyanobakterien), Stickstoff fixieren oder unter extremen Bedingungen leben (Archaeen in heissen Quellen oder Salzseen).\n\nDie Zellteilung erfolgt bei Prokaryoten durch binaere Fission (Zweiteilung) - ein deutlich schnellerer Prozess als die mitotische Teilung eukaryotischer Zellen. Die Generationszeit von Escherichia coli betraegt unter optimalen Bedingungen nur etwa 20 Minuten. Eukaryotische Zellen hingegen verfuegen ueber ein komplexes Zytoskelett, das aus Mikrofilamenten, Intermediaerfilamenten und Mikrotubuli besteht und fuer Zellform, Bewegung und intrazellulaere Transportprozesse verantwortlich ist.',
+          merksatz: 'Prokaryoten: kein Kern, keine membranumhuellten Organellen, zirkulaere DNA, Plasmide, binaere Fission'
+        }
+      ],
       diagram: 'prokaryote-vs-eukaryote',
       merksaetze: [
         '70S = Prokaryoten (siebzig → „sie sind primitiver"), 80S = Eukaryoten (achtzig → „acht Buchstaben in Eukaryot")',
@@ -68,9 +101,49 @@ Prokaryoten fehlen membranumschlossene Organellen wie Mitochondrien, endoplasmat
       title: 'Aufbau der Tierzelle',
       content: `Die Tierzelle ist eine eukaryotische Zelle mit einer typischen Größe von 10–30 µm, die von einer Zellmembran (Plasmamembran) umgeben ist, jedoch im Gegensatz zur Pflanzenzelle keine Zellwand besitzt. Im Zentrum befindet sich der Zellkern (Nukleus), der von einer Doppelmembran (Kernhülle) mit Kernporen umgeben ist. Im Inneren enthält er das Chromatin (DNA + Histone) und den Nukleolus, der für die Synthese ribosomaler RNA (rRNA) zuständig ist. Der Zellkern ist die Steuerzentrale der Zelle: Hier finden DNA-Replikation, Transkription und RNA-Prozessierung statt. Die Kernporen regulieren den Austausch von Makromolekülen zwischen Kern und Cytoplasma und ermöglichen den Export von mRNA und den Import von Proteinen.
 
-Im Cytoplasma der Tierzelle befinden sich zahlreiche membranumhüllte Organellen. Die Mitochondrien – die „Kraftwerke der Zelle" – produzieren ATP durch oxidative Phosphorylierung und besitzen eine eigene DNA sowie 70S-Ribosomen. Das endoplasmatische Retikulum (ER) existiert in zwei Formen: Das raue ER (mit Ribosomen besetzt) synthetisiert Membranproteine und sekretorische Proteine, während das glatte ER Lipide synthetisiert, Calciumionen speichert und an der Entgiftung beteiligt ist. Der Golgi-Apparat, bestehend aus gestapelten Zisternen, modifiziert, sortiert und verpackt Proteine für den Transport. Lysosomen enthalten hydrolytische Enzyme zur intrazellulären Verdauung bei saurem pH (ca. 4,5–5,0). Peroxisomen bauen Fettsäuren und toxische Substanzen wie Wasserstoffperoxid ab.
+Im Cytoplasma der Tierzelle befinden sich zahlreiche membranumhüllte Organellen. Die Mitochondrien – die „Kraftwerke der Zelle“ – produzieren ATP durch oxidative Phosphorylierung und besitzen eine eigene DNA sowie 70S-Ribosomen. Das endoplasmatische Retikulum (ER) existiert in zwei Formen: Das raue ER (mit Ribosomen besetzt) synthetisiert Membranproteine und sekretorische Proteine, während das glatte ER Lipide synthetisiert, Calciumionen speichert und an der Entgiftung beteiligt ist. Der Golgi-Apparat, bestehend aus gestapelten Zisternen, modifiziert, sortiert und verpackt Proteine für den Transport. Lysosomen enthalten hydrolytische Enzyme zur intrazellulären Verdauung bei saurem pH (ca. 4,5–5,0). Peroxisomen bauen Fettsäuren und toxische Substanzen wie Wasserstoffperoxid ab.
 
 Weitere wichtige Strukturen der Tierzelle umfassen das Zytoskelett und spezifische Organellen. Das Zytoskelett besteht aus Mikrofilamenten (Aktin, 7 nm), Intermediärfilamenten (10 nm) und Mikrotubuli (Tubulin, 25 nm) und ist für Zellform, mechanische Stabilität und intrazelluläre Transportprozesse verantwortlich. Das Zentrosom mit seinen zwei Zentriolen dient als Mikrotubuli-Organisationszentrum (MTOC) und spielt eine zentrale Rolle bei der Zellteilung, indem es den Spindelapparat organisiert. Freie Ribosomen im Cytoplasma synthetisieren Proteine für den intrazellulären Gebrauch. Tierzellen besitzen zudem häufig Zilien und Flagellen für Bewegung sowie verschiedene Zell-Zell-Verbindungen wie Desmosomen (mechanische Verbindung), Tight Junctions (Abdichtung) und Gap Junctions (Kommunikation).`,
+      lernziele: [
+        'Den grundlegenden Aufbau einer Tierzelle mit ihren Organellen beschreiben koennen',
+        'Die Funktion des Zellkerns einschliesslich Chromatin, Nukleolus und Kernporen erklaeren koennen',
+        'Die Aufgaben von Mitochondrien, ER und Golgi-Apparat in der Zelle erlaeutern koennen',
+        'Die Bestandteile des Zytoskeletts und die verschiedenen Zell-Zell-Verbindungen benennen koennen',
+        'Die Rolle von Lysosomen und Peroxisomen in der intrazellulaeren Verdauung verstehen'
+      ],
+      sections: [
+        {
+          heading: 'Zellkern und Erbinformation',
+          text: 'Die Tierzelle ist eine eukaryotische Zelle mit einer typischen Groesse von 10-30 um, die von einer Zellmembran (Plasmamembran) umgeben ist, jedoch im Gegensatz zur Pflanzenzelle keine Zellwand besitzt. Im Zentrum befindet sich der Zellkern (Nukleus), der von einer Doppelmembran (Kernhuelle) mit Kernporen umgeben ist.\n\nIm Inneren enthaelt er das Chromatin (DNA + Histone) und den Nukleolus, der fuer die Synthese ribosomaler RNA (rRNA) zustaendig ist. Der Zellkern ist die Steuerzentrale der Zelle: Hier finden DNA-Replikation, Transkription und RNA-Prozessierung statt. Die Kernporen regulieren den Austausch von Makromolekuelen zwischen Kern und Cytoplasma und ermoeglichen den Export von mRNA und den Import von Proteinen.'
+        },
+        {
+          heading: 'Energieversorgung und Synthese',
+          text: 'Im Cytoplasma der Tierzelle befinden sich zahlreiche membranumhuellte Organellen. Die Mitochondrien - die "Kraftwerke der Zelle" - produzieren ATP durch oxidative Phosphorylierung und besitzen eine eigene DNA sowie 70S-Ribosomen.\n\nDas endoplasmatische Retikulum (ER) existiert in zwei Formen: Das raue ER (mit Ribosomen besetzt) synthetisiert Membranproteine und sekretorische Proteine, waehrend das glatte ER Lipide synthetisiert, Calciumionen speichert und an der Entgiftung beteiligt ist. Der Golgi-Apparat, bestehend aus gestapelten Zisternen, modifiziert, sortiert und verpackt Proteine fuer den Transport.',
+          merksatz: 'Kern Regiert, ER Produziert, Golgi Verpackt, Lysosomen Verdauen, Mitochondrien Liefern Energie',
+          table: {
+            headers: ['Organelle', 'Funktion'],
+            rows: [
+              ['Zellkern (Nukleus)', 'DNA-Speicherung, Transkription, RNA-Prozessierung'],
+              ['Mitochondrien', 'ATP-Produktion durch oxidative Phosphorylierung'],
+              ['Raues ER', 'Synthese von Membran- und sekretorischen Proteinen'],
+              ['Glattes ER', 'Lipidsynthese, Calciumspeicherung, Entgiftung'],
+              ['Golgi-Apparat', 'Proteinmodifikation, Sortierung und Verpackung'],
+              ['Lysosomen', 'Intrazellulaere Verdauung bei saurem pH'],
+              ['Peroxisomen', 'Abbau von Fettsaeuren und toxischen Substanzen'],
+              ['Zentrosom', 'Mikrotubuli-Organisationszentrum, Spindelapparat']
+            ]
+          }
+        },
+        {
+          heading: 'Verdauung und Recycling',
+          text: 'Lysosomen enthalten hydrolytische Enzyme zur intrazellulaeren Verdauung bei saurem pH (ca. 4,5-5,0). Sie bauen aufgenommenes Material sowie beschaedigte zelleigene Strukturen ab.\n\nPeroxisomen bauen Fettsaeuren und toxische Substanzen wie Wasserstoffperoxid ab. Beide Organellen sind essenziell fuer die zellulaere Homoeostase und das Recycling von Makromolekuelen.'
+        },
+        {
+          heading: 'Zytoskelett und Zellkontakte',
+          text: 'Weitere wichtige Strukturen der Tierzelle umfassen das Zytoskelett und spezifische Organellen. Das Zytoskelett besteht aus Mikrofilamenten (Aktin, 7 nm), Intermediaerfilamenten (10 nm) und Mikrotubuli (Tubulin, 25 nm) und ist fuer Zellform, mechanische Stabilitaet und intrazellulaere Transportprozesse verantwortlich.\n\nDas Zentrosom mit seinen zwei Zentriolen dient als Mikrotubuli-Organisationszentrum (MTOC) und spielt eine zentrale Rolle bei der Zellteilung, indem es den Spindelapparat organisiert. Freie Ribosomen im Cytoplasma synthetisieren Proteine fuer den intrazellulaeren Gebrauch. Tierzellen besitzen zudem haeufig Zilien und Flagellen fuer Bewegung sowie verschiedene Zell-Zell-Verbindungen wie Desmosomen (mechanische Verbindung), Tight Junctions (Abdichtung) und Gap Junctions (Kommunikation).',
+          merksatz: 'Tierzelle hat KEIN: Zellwand, Chloroplasten, grosse Zentralvakuole - dafuer hat sie Zentriolen und Lysosomen'
+        }
+      ],
       diagram: 'animal-cell',
       merksaetze: [
         'Eselsbrücke für Organellen: „Kern Regiert, ER Produziert, Golgi Verpackt, Lysosomen Verdauen, Mitochondrien Liefern Energie"',
@@ -128,7 +201,7 @@ Chloroplasten sind die Organellen der Photosynthese und kommen ausschließlich i
 Tierzellen besitzen im Gegensatz zu Pflanzenzellen Zentriolen im Zentrosom, die für die Organisation des Spindelapparats während der Mitose wichtig sind. Pflanzenzellen bilden den Spindelapparat ohne Zentriolen mithilfe anderer Mikrotubuli-Organisationszentren. Lysosomen als Verdauungsorganellen sind vorwiegend in Tierzellen zu finden, während Pflanzenzellen ähnliche Funktionen über die lytische Vakuole erfüllen. Bei der Cytokinese unterscheiden sich beide Zelltypen ebenfalls: Tierzellen schnüren sich durch einen kontraktilen Ring aus Aktinfilamenten ein (Furchung), Pflanzenzellen bilden von innen nach außen eine Zellplatte (Phragmoplast), die zur neuen Zellwand wird. Auch die Energiespeicherung unterscheidet sich: Pflanzenzellen speichern Glucose als Stärke, Tierzellen als Glykogen.`,
       diagram: 'plant-vs-animal-cell',
       merksaetze: [
-        'Pflanzenzelle hat 3 „Extra-Cs": Cell wall (Zellwand), Chloroplasten, Central vakuole',
+        'Pflanzenzelle hat 3 „Extra-Cs“: Cell wall (Zellwand), Chloroplasten, Central vakuole',
         'Tierzelle hat Zentriolen und Lysosomen, aber keine Zellwand – dafür ist sie flexibel und beweglich'
       ],
       altfrage: {
@@ -183,7 +256,7 @@ Mitochondrien besitzen eine glatte äußere Membran und eine stark gefaltete inn
 Die Endosymbiontentheorie, aufgestellt von Lynn Margulis (1967), erklärt, warum Mitochondrien und Chloroplasten eine Doppelmembran und eigene DNA besitzen. Laut dieser Theorie waren die Vorläufer der Mitochondrien aerobe Proteobakterien, die von einer frühen eukaryotischen Zelle durch Phagozytose aufgenommen wurden. Die äußere Membran entspricht der Phagosomenmembran der Wirtszelle, die innere Membran der ursprünglichen Bakterienmembran. Über Millionen von Jahren wurden viele Gene der Endosymbionten in den Wirtszellkern transferiert (endosymbiontischer Gentransfer), sodass die meisten mitochondrialen Proteine heute im Zellkern kodiert und nach Translation im Cytoplasma in die Mitochondrien importiert werden. Die Belege für die Endosymbiontentheorie umfassen: eigene zirkuläre DNA, 70S-Ribosomen, Doppelmembran, eigene Proteinsynthese, Vermehrung durch Teilung und ähnliche Größe wie Bakterien.`,
       diagram: 'double-membrane-organelles',
       merksaetze: [
-        'Doppelmembran-Organellen: „KeMiCh" – Kern, Mitochondrien, Chloroplasten – alle drei haben eigene DNA (außer: Kern hat die Haupt-DNA)',
+        'Doppelmembran-Organellen: „KeMiCh“ – Kern, Mitochondrien, Chloroplasten – alle drei haben eigene DNA (außer: Kern hat die Haupt-DNA)',
         'Endosymbiontentheorie-Belege: Eigene zirkuläre DNA, 70S-Ribosomen, Doppelmembran, Teilung durch Abschnürung'
       ],
       altfrage: {
@@ -238,8 +311,8 @@ Der Golgi-Apparat besteht aus 4–8 gestapelten, membranumhüllten Zisternen mit
 Lysosomen sind Einzelmembran-Organellen mit saurem Milieu (pH 4,5–5,0), das durch V-Typ-ATPasen (Protonenpumpen) aufrechterhalten wird. Sie enthalten über 50 verschiedene hydrolytische Enzyme (saure Hydrolasen), die Proteine, Lipide, Kohlenhydrate und Nukleinsäuren abbauen. Lysosomen sind an drei Hauptprozessen beteiligt: Heterophagie (Abbau von aufgenommenem Material nach Endozytose oder Phagozytose), Autophagie (Abbau eigener beschädigter Organellen) und Autophagozytose. Endosomen sind Zwischenstationen im endozytotischen Weg: Frühe Endosomen sortieren aufgenommenes Material, späte Endosomen reifen zu Lysosomen heran oder fusionieren mit ihnen. Der gesamte Vesikeltransport wird durch Coat-Proteine (COPI, COPII, Clathrin), SNARE-Proteine (für Vesikelfusion) und Rab-GTPasen (für Zielerkennung) reguliert.`,
       diagram: 'endomembrane-system',
       merksaetze: [
-        'Sekretorischer Weg: rER → Golgi (cis→trans) → Zellmembran/Lysosom – Merke: „ER Golft zur Membran"',
-        'Golgi: cis = Empfang (zum ER hin), trans = Versand (zur Membran hin) – „cis kommt, trans geht"'
+        'Sekretorischer Weg: rER → Golgi (cis→trans) → Zellmembran/Lysosom – Merke: „ER Golft zur Membran“',
+        'Golgi: cis = Empfang (zum ER hin), trans = Versand (zur Membran hin) – „cis kommt, trans geht“'
       ],
       altfrage: {
         question: 'Wie gelangen Enzyme zu den Lysosomen?',
@@ -290,11 +363,11 @@ Lysosomen sind Einzelmembran-Organellen mit saurem Milieu (pH 4,5–5,0), das du
 
 Die Membranproteine werden in zwei Kategorien unterteilt: Integrale (transmembrane) Proteine durchspannen die gesamte Lipiddoppelschicht und besitzen hydrophobe Bereiche (oft α-Helices), die in der Membran verankert sind, sowie hydrophile Bereiche, die auf beiden Seiten der Membran herausragen. Sie dienen als Ionenkanäle, Transporter, Rezeptoren und Enzyme. Periphere Proteine sind nur locker an der Membranoberfläche assoziiert – entweder durch elektrostatische Wechselwirkungen mit Lipidköpfen oder durch Bindung an integrale Proteine. Sie fungieren häufig als Signalmoleküle oder Strukturproteine (z. B. Spektrin auf der Innenseite der Erythrozytenmembran). Die Glykokalix – eine Kohlenhydratschicht auf der Außenseite der Membran, bestehend aus Glykoproteinen und Glykolipiden – spielt eine zentrale Rolle bei der Zell-Zell-Erkennung, dem Schutz vor mechanischer Schädigung und der Immunerkennung (z. B. Blutgruppenantigene).
 
-Cholesterol ist ein essentieller Bestandteil tierischer Zellmembranen und macht etwa 20–25 % der Membranlipide aus. Es reguliert die Membranfluidität: Bei hohen Temperaturen verringert Cholesterol die Fluidität, indem es die Beweglichkeit der Phospholipide einschränkt; bei niedrigen Temperaturen verhindert es die Kristallisation der Membran und hält sie fluid. Cholesterol wirkt somit als „Fluiditätspuffer". Die laterale Mobilität der Membrankomponenten ist ein wesentliches Merkmal des Flüssig-Mosaik-Modells: Phospholipide können sich innerhalb einer Schicht lateral bewegen (ca. 10⁷ Mal pro Sekunde), der Wechsel zwischen den Schichten (Flip-Flop) ist hingegen sehr selten und erfordert Flippasen. Lipid Rafts sind cholesterolreiche Mikrodomänen der Membran, die bestimmte Proteine konzentrieren und an Signaltransduktion und Endozytose beteiligt sind.`,
+Cholesterol ist ein essentieller Bestandteil tierischer Zellmembranen und macht etwa 20–25 % der Membranlipide aus. Es reguliert die Membranfluidität: Bei hohen Temperaturen verringert Cholesterol die Fluidität, indem es die Beweglichkeit der Phospholipide einschränkt; bei niedrigen Temperaturen verhindert es die Kristallisation der Membran und hält sie fluid. Cholesterol wirkt somit als „Fluiditätspuffer“. Die laterale Mobilität der Membrankomponenten ist ein wesentliches Merkmal des Flüssig-Mosaik-Modells: Phospholipide können sich innerhalb einer Schicht lateral bewegen (ca. 10⁷ Mal pro Sekunde), der Wechsel zwischen den Schichten (Flip-Flop) ist hingegen sehr selten und erfordert Flippasen. Lipid Rafts sind cholesterolreiche Mikrodomänen der Membran, die bestimmte Proteine konzentrieren und an Signaltransduktion und Endozytose beteiligt sind.`,
       diagram: 'cell-membrane',
       merksaetze: [
-        'Flüssig-Mosaik-Modell: Phospholipid-Doppelschicht = „Flüssig" (bewegliche Lipide), Proteine = „Mosaik" (eingebettete Steine)',
-        'Cholesterol = „Fluiditätspuffer": hält die Membran bei Hitze fest und bei Kälte fluid'
+        'Flüssig-Mosaik-Modell: Phospholipid-Doppelschicht = „Flüssig“ (bewegliche Lipide), Proteine = „Mosaik“ (eingebettete Steine)',
+        'Cholesterol = „Fluiditätspuffer“: hält die Membran bei Hitze fest und bei Kälte fluid'
       ],
       altfrage: {
         question: 'Was beschreibt das Flüssig-Mosaik-Modell nach Singer und Nicolson (1972)?',
@@ -348,7 +421,7 @@ Osmose ist die Diffusion von Wasser durch eine semipermeable Membran vom Ort nie
 Aktiver Transport erfolgt gegen den Konzentrationsgradienten und erfordert Energie. Beim primär aktiven Transport wird ATP direkt hydrolysiert – das wichtigste Beispiel ist die Na⁺/K⁺-ATPase, die pro ATP-Molekül 3 Na⁺ nach außen und 2 K⁺ nach innen pumpt und damit das Ruhepotential der Zelle aufrechterhält. Weitere Beispiele sind die Ca²⁺-ATPase und die H⁺/K⁺-ATPase der Belegzellen im Magen. Beim sekundär aktiven Transport wird die durch primär aktiven Transport aufgebaute Ionengradiente genutzt: Symporter transportieren zwei Stoffe in gleicher Richtung (z. B. Na⁺/Glucose-Symporter SGLT1 im Darm), Antiporter in entgegengesetzter Richtung (z. B. Na⁺/H⁺-Antiporter). Endozytose und Exozytose sind vesikuläre Transportmechanismen für große Moleküle und Partikel. Die Endozytose umfasst Phagozytose (Zellfressen), Pinozytose (Zelltrinken) und rezeptorvermittelte Endozytose (z. B. LDL-Aufnahme über Clathrin-coated Pits). Bei der Exozytose verschmelzen intrazelluläre Vesikel mit der Zellmembran und entlassen ihren Inhalt nach außen.`,
       diagram: 'membrane-transport',
       merksaetze: [
-        'Na⁺/K⁺-ATPase: „3 Natrium raus, 2 Kalium rein" → elektrogen (netto +1 Ladung nach außen)',
+        'Na⁺/K⁺-ATPase: „3 Natrium raus, 2 Kalium rein“ → elektrogen (netto +1 Ladung nach außen)',
         'Passiv = mit dem Gradienten (kein ATP), Aktiv = gegen den Gradienten (ATP nötig), Vesikulär = Endo-/Exozytose für Großes'
       ],
       altfrage: {
@@ -400,11 +473,11 @@ Aktiver Transport erfolgt gegen den Konzentrationsgradienten und erfordert Energ
 
 In der S-Phase wird die gesamte DNA der Zelle semikonservativ repliziert: Jedes Chromosom besteht danach aus zwei identischen Schwesterchromatiden, die am Zentromer verbunden sind. Der DNA-Gehalt verdoppelt sich von 2n/2C auf 2n/4C (bei diploiden Zellen). Gleichzeitig werden die Zentrosomen dupliziert. Die Replikation beginnt an multiplen Replikationsursprüngen (Origins of Replication) und verläuft bidirektional. In der G2-Phase bereitet sich die Zelle auf die Mitose vor: Es werden Proteine synthetisiert, die für den Aufbau des Spindelapparats nötig sind (z. B. Tubulin), und die Zelle wächst weiter. Am Ende der G2-Phase wird das Chromatin zu kondensieren beginnen.
 
-Der Zellzyklus wird an mehreren Kontrollpunkten (Checkpoints) streng reguliert. Der G1/S-Checkpoint (Restriktionspunkt) entscheidet, ob die Zelle in die S-Phase eintritt und sich zur Teilung verpflichtet – hier wird geprüft, ob die Zelle groß genug ist, ob ausreichend Nährstoffe vorhanden sind und ob die DNA intakt ist. Der G2/M-Checkpoint überprüft vor Eintritt in die Mitose, ob die DNA-Replikation vollständig und fehlerfrei abgeschlossen wurde. Der Spindel-Checkpoint (Metaphase-Checkpoint) kontrolliert während der Mitose, ob alle Chromosomen korrekt am Spindelapparat angeheftet sind. Die Regulation erfolgt durch Cycline und Cyclin-abhängige Kinasen (CDKs): Cycline werden phasenspezifisch synthetisiert und abgebaut, aktivieren CDKs und treiben den Zellzyklus voran. Das Tumorsuppressorprotein p53 – der „Wächter des Genoms" – spielt eine zentrale Rolle: Bei DNA-Schäden stoppt p53 den Zellzyklus am G1/S-Checkpoint und initiiert entweder die DNA-Reparatur oder bei irreparablen Schäden die Apoptose.`,
+Der Zellzyklus wird an mehreren Kontrollpunkten (Checkpoints) streng reguliert. Der G1/S-Checkpoint (Restriktionspunkt) entscheidet, ob die Zelle in die S-Phase eintritt und sich zur Teilung verpflichtet – hier wird geprüft, ob die Zelle groß genug ist, ob ausreichend Nährstoffe vorhanden sind und ob die DNA intakt ist. Der G2/M-Checkpoint überprüft vor Eintritt in die Mitose, ob die DNA-Replikation vollständig und fehlerfrei abgeschlossen wurde. Der Spindel-Checkpoint (Metaphase-Checkpoint) kontrolliert während der Mitose, ob alle Chromosomen korrekt am Spindelapparat angeheftet sind. Die Regulation erfolgt durch Cycline und Cyclin-abhängige Kinasen (CDKs): Cycline werden phasenspezifisch synthetisiert und abgebaut, aktivieren CDKs und treiben den Zellzyklus voran. Das Tumorsuppressorprotein p53 – der „Wächter des Genoms“ – spielt eine zentrale Rolle: Bei DNA-Schäden stoppt p53 den Zellzyklus am G1/S-Checkpoint und initiiert entweder die DNA-Reparatur oder bei irreparablen Schäden die Apoptose.`,
       diagram: 'cell-cycle',
       merksaetze: [
-        'Interphase: G1 (Wachstum) → S (DNA-Synthese) → G2 (Vorbereitung) → M (Mitose) – „Geh Schlafen, Gib Mir Ruhe"',
-        'p53 = „Wächter des Genoms": Stoppt den Zellzyklus bei DNA-Schäden oder leitet Apoptose ein'
+        'Interphase: G1 (Wachstum) → S (DNA-Synthese) → G2 (Vorbereitung) → M (Mitose) – „Geh Schlafen, Gib Mir Ruhe“',
+        'p53 = „Wächter des Genoms“: Stoppt den Zellzyklus bei DNA-Schäden oder leitet Apoptose ein'
       ],
       altfrage: {
         question: 'In welcher Phase des Zellzyklus wird die DNA repliziert?',
@@ -458,7 +531,7 @@ In der Metaphase ordnen sich alle Chromosomen in der Äquatorialebene der Zelle 
 In der Telophase erreichen die Chromosomen die Zellpole, dekondensieren wieder zu Chromatin, die Kernhülle bildet sich um jeden Chromosomensatz neu, und der Nukleolus erscheint wieder. Der Spindelapparat wird abgebaut. Die Mitose endet mit der Cytokinese – der Teilung des Cytoplasmas. In Tierzellen wird ein kontraktiler Ring aus Aktin und Myosin unter der Zellmembran gebildet, der sich zusammenzieht und eine Teilungsfurche erzeugt, bis die Zelle in zwei Tochterzellen getrennt ist. In Pflanzenzellen bilden Golgi-Vesikel in der Zellmitte die Zellplatte, die sich nach außen ausdehnt und zur neuen Zellwand wird. Jede Tochterzelle erhält einen vollständigen diploiden Chromosomensatz (2n/2C) und ist genetisch identisch mit der Mutterzelle. Die Mitose dient dem Wachstum, der Gewebereparatur und der ungeschlechtlichen Fortpflanzung.`,
       diagram: 'mitosis',
       merksaetze: [
-        'PMAT: Prophase – Metaphase – Anaphase – Telophase → „Pauls Mutter Aß Torte"',
+        'PMAT: Prophase – Metaphase – Anaphase – Telophase → „Pauls Mutter Aß Torte“',
         'Mitose = äquational (2n → 2n, identische Tochterzellen), Meiose = reduktional (2n → 1n)'
       ],
       altfrage: {
@@ -565,10 +638,10 @@ Die Meiose unterscheidet sich grundlegend von der Mitose in mehreren Aspekten: D
 
 Stammzellen sind undifferenzierte Zellen mit zwei Schlüsseleigenschaften: der Fähigkeit zur Selbsterneuerung (sie können sich teilen und dabei ihren Stammzellcharakter beibehalten) und dem Differenzierungspotenzial (sie können sich in spezialisierte Zelltypen entwickeln). Man unterscheidet nach ihrem Potenzial: Totipotente Stammzellen können sich in alle Zelltypen des Organismus einschließlich der extraembryonalen Gewebe (z. B. Plazenta) entwickeln – nur die Zygote und die Blastomeren bis zum 8-Zell-Stadium sind totipotent. Pluripotente Stammzellen (z. B. embryonale Stammzellen aus der inneren Zellmasse der Blastozyste) können sich in alle Zelltypen der drei Keimblätter (Ektoderm, Mesoderm, Endoderm) differenzieren, aber nicht in extraembryonales Gewebe. Multipotente Stammzellen (z. B. hämatopoetische Stammzellen im Knochenmark) können sich nur noch in Zelltypen eines bestimmten Gewebes entwickeln. Unipotente Stammzellen (z. B. Basalzellen der Epidermis) können nur einen Zelltyp hervorbringen.
 
-Apoptose – der programmierte Zelltod – ist ein kontrollierter, energieabhängiger Prozess, der für die Homöostase des Gewebes essentiell ist und sich grundlegend von der Nekrose (unkontrollierter Zelltod durch Schädigung) unterscheidet. Bei der Apoptose schrumpft die Zelle, das Chromatin kondensiert (Pyknose), die DNA wird durch Endonukleasen in Fragmente geschnitten, die Zelle zerfällt in apoptotische Körperchen (Apoptotic Bodies), die von Phagozyten aufgenommen werden – ohne Entzündungsreaktion. Es gibt zwei Hauptwege: den intrinsischen (mitochondrialen) Weg, ausgelöst durch DNA-Schäden oder oxidativen Stress, bei dem Cytochrom c aus den Mitochondrien freigesetzt wird und über das Apoptosom die Caspase-9 aktiviert; und den extrinsischen (Rezeptor-vermittelten) Weg, bei dem extrazelluläre Todessignale (z. B. Fas-Ligand, TNF) über Todesrezeptoren die Caspase-8 aktivieren. Beide Wege münden in die Aktivierung von Effektor-Caspasen (v. a. Caspase-3), die die Zelle kontrolliert abbauen. Das Protein Bcl-2 wirkt antiapoptotisch, Bax und Bak proapoptotisch. Shinya Yamanaka erhielt 2012 den Nobelpreis für die Entdeckung, dass differenzierte Zellen durch die Einführung bestimmter Transkriptionsfaktoren (Oct4, Sox2, Klf4, c-Myc – „Yamanaka-Faktoren") zu induzierten pluripotenten Stammzellen (iPSCs) reprogrammiert werden können.`,
+Apoptose – der programmierte Zelltod – ist ein kontrollierter, energieabhängiger Prozess, der für die Homöostase des Gewebes essentiell ist und sich grundlegend von der Nekrose (unkontrollierter Zelltod durch Schädigung) unterscheidet. Bei der Apoptose schrumpft die Zelle, das Chromatin kondensiert (Pyknose), die DNA wird durch Endonukleasen in Fragmente geschnitten, die Zelle zerfällt in apoptotische Körperchen (Apoptotic Bodies), die von Phagozyten aufgenommen werden – ohne Entzündungsreaktion. Es gibt zwei Hauptwege: den intrinsischen (mitochondrialen) Weg, ausgelöst durch DNA-Schäden oder oxidativen Stress, bei dem Cytochrom c aus den Mitochondrien freigesetzt wird und über das Apoptosom die Caspase-9 aktiviert; und den extrinsischen (Rezeptor-vermittelten) Weg, bei dem extrazelluläre Todessignale (z. B. Fas-Ligand, TNF) über Todesrezeptoren die Caspase-8 aktivieren. Beide Wege münden in die Aktivierung von Effektor-Caspasen (v. a. Caspase-3), die die Zelle kontrolliert abbauen. Das Protein Bcl-2 wirkt antiapoptotisch, Bax und Bak proapoptotisch. Shinya Yamanaka erhielt 2012 den Nobelpreis für die Entdeckung, dass differenzierte Zellen durch die Einführung bestimmter Transkriptionsfaktoren (Oct4, Sox2, Klf4, c-Myc – „Yamanaka-Faktoren“) zu induzierten pluripotenten Stammzellen (iPSCs) reprogrammiert werden können.`,
       diagram: 'stem-cells',
       merksaetze: [
-        'Stammzellpotenzial: Totipotent (alles) → Pluripotent (drei Keimblätter) → Multipotent (ein Gewebe) → Unipotent (ein Zelltyp) – „Total, Pluri, Multi, Uni = abnehmendes Potenzial"',
+        'Stammzellpotenzial: Totipotent (alles) → Pluripotent (drei Keimblätter) → Multipotent (ein Gewebe) → Unipotent (ein Zelltyp) – „Total, Pluri, Multi, Uni = abnehmendes Potenzial“',
         'Apoptose vs. Nekrose: Apoptose = kontrolliert, sauber, keine Entzündung; Nekrose = unkontrolliert, chaotisch, Entzündung'
       ],
       altfrage: {

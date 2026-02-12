@@ -5,10 +5,22 @@ export interface SelfTestQuestion {
   explanation: string;
 }
 
+export interface ContentSection {
+  heading: string;
+  text: string;
+  merksatz?: string;
+  table?: {
+    headers: string[];
+    rows: string[][];
+  };
+}
+
 export interface Unterkapitel {
   id: string;
   title: string;
   content: string;
+  lernziele?: string[];
+  sections?: ContentSection[];
   diagram?: string;
   merksaetze: string[];
   altfrage?: {

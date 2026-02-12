@@ -204,7 +204,7 @@ Die **Strahlentherapie** (Radiotherapie) nutzt ionisierende Strahlung zur Behand
             'Die Nervenleitgeschwindigkeit'
           ],
           correctIndex: 2,
-          explanation: '¹⁸F-FDG (Fluordeoxyglucose) ist ein radioaktiv markiertes Glucoseanalogon, das von Zellen mit hohem Glucosestoffwechsel vermehrt aufgenommen wird. Tumorzellen zeigen typischerweise einen erhöhten Glucosestoffwechsel (Warburg-Effekt) und erscheinen daher im PET-Bild als „heiße" Areale.'
+          explanation: '¹⁸F-FDG (Fluordeoxyglucose) ist ein radioaktiv markiertes Glucoseanalogon, das von Zellen mit hohem Glucosestoffwechsel vermehrt aufgenommen wird. Tumorzellen zeigen typischerweise einen erhöhten Glucosestoffwechsel (Warburg-Effekt) und erscheinen daher im PET-Bild als „heiße“ Areale.'
         },
         {
           question: 'Warum wird die Strahlentherapie in viele kleine Fraktionen aufgeteilt?',
