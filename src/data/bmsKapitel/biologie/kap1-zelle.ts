@@ -1,4 +1,4 @@
-import { Kapitel } from '../types';
+import type { Kapitel } from '../types';
 
 export const bioKap1: Kapitel = {
   id: 'bio-kap1',
