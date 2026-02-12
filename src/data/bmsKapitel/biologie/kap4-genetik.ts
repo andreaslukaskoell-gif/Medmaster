@@ -132,22 +132,7 @@ Neben der vollständigen Dominanz existieren weitere Formen der Allelinteraktion
 Bei autosomal-rezessiven (AR) Erbgängen müssen beide Allele die Mutation tragen, damit die Erkrankung phänotypisch auftritt. Heterozygote Träger (Aa) sind gesund, können das mutierte Allel aber an ihre Kinder weitergeben. AR-Erkrankungen treten gehäuft in konsanguinen (blutsverwandten) Familien auf, da dort die Wahrscheinlichkeit höher ist, dass beide Eltern dasselbe rezessive Allel tragen. Die Erkrankung kann Generationen überspringen und taucht oft „unerwartet" in Familien auf. Bekannte Beispiele sind Mukoviszidose (häufigste AR-Erkrankung bei Europäern mit einer Trägerfrequenz von ca. 1:25), Phenylketonurie (PKU) und Sichelzellanämie. Wenn beide Eltern Träger sind (Aa × Aa), beträgt das Risiko für ein betroffenes Kind 25 %.
 
 X-chromosomale Erbgänge zeigen ein charakteristisches geschlechtsspezifisches Vererbungsmuster. Bei X-chromosomal-rezessiven Erkrankungen sind vorwiegend Männer betroffen, da sie nur ein X-Chromosom besitzen (hemizygot, X^a Y) und kein zweites X-Chromosom zum Ausgleich haben. Frauen können Konduktorinnen (Überträgerinnen, X^A X^a) sein und sind in der Regel phänotypisch gesund. Ein betroffener Vater kann die Krankheit nicht an seine Söhne weitergeben (er gibt ihnen das Y-Chromosom), aber alle seine Töchter werden Konduktorinnen. Klassische Beispiele sind Hämophilie A und B sowie Rot-Grün-Blindheit. Stammbäume (Pedigrees) sind das wichtigste Werkzeug zur Analyse von Erbgängen: Kreise symbolisieren Frauen, Quadrate Männer, ausgefüllte Symbole betroffene Personen, und halb ausgefüllte Symbole Überträger.`,
-      diagram: `Stammbaum-Symbole und typische Erbgangmuster:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Symbole:  □ = Mann   ○ = Frau   ■/● = betroffen
-          ◐/◑ = Überträger/in    ─── = Paarung
-
-Autosomal-dominant:     Autosomal-rezessiv:
-  ■───○                   ◐───◑
- ┌┴──┐                  ┌─┴──┐
- ■   ○                  ●  □  ◐
-(50% betroffen)        (25% betroffen)
-
-X-chromosomal-rezessiv:
-  □───◑
- ┌┴──┐
- ■   ○/◑
-(50% Söhne betroffen, 50% Töchter Konduktorinnen)`,
+      diagram: 'pedigree-analysis',
       merksaetze: [
         'Autosomal-dominant: Jede Generation betroffen, kein Geschlechtsunterschied, kein Überspringen. Autosomal-rezessiv: Überspringt Generationen, Konsanguinität erhöht das Risiko.',
         'X-chromosomal-rezessiv: Vorwiegend Männer betroffen (hemizygot), Mütter sind Konduktorinnen, keine Vater-Sohn-Übertragung möglich.'

@@ -10,6 +10,7 @@ export const physKap2: Kapitel = {
     {
       id: 'phys-kap2-1',
       title: 'Newtonsche Gesetze',
+      diagram: 'newton-forces',
       content: `Die drei Newtonschen Gesetze bilden das Fundament der klassischen Mechanik und beschreiben den Zusammenhang zwischen Kräften und Bewegungen. Das erste Newtonsche Gesetz (Trägheitsprinzip) besagt: Ein Körper verharrt im Zustand der Ruhe oder der gleichförmigen geradlinigen Bewegung, solange keine äußere Kraft auf ihn einwirkt. Dieses Gesetz definiert gleichzeitig den Begriff des Inertialsystems — eines Bezugssystems, in dem das Trägheitsprinzip gilt. Im Alltag begegnet uns die Trägheit beispielsweise, wenn Passagiere in einem plötzlich bremsenden Bus nach vorne fallen oder wenn ein Tischtuch unter Geschirr weggezogen wird, ohne dass die Gegenstände kippen.
 
 Das zweite Newtonsche Gesetz (Aktionsprinzip) ist das zentrale Gesetz der Dynamik: F = m · a. Die auf einen Körper wirkende resultierende Kraft F ist gleich dem Produkt aus seiner Masse m und seiner Beschleunigung a. Dieses Gesetz verknüpft die Kinematik (Beschreibung der Bewegung) mit der Dynamik (Ursache der Bewegung). Die Einheit der Kraft ist das Newton: 1 N = 1 kg · m/s². Wirken mehrere Kräfte auf einen Körper, so bestimmt die vektorielle Summe aller Kräfte (die Resultierende) die Beschleunigung. Ist die Resultierende null, befindet sich der Körper im Kräftegleichgewicht — er ruht oder bewegt sich gleichförmig geradlinig (Zusammenhang mit dem ersten Gesetz).

@@ -116,6 +116,7 @@ In Textaufgaben werden häufig zusammengesetzte Körper betrachtet, deren Volume
     {
       id: 'math-kap6-3',
       title: 'Vektoren Grundlagen',
+      diagram: 'vector-addition',
       content: `Ein Vektor beschreibt eine gerichtete Größe mit Betrag und Richtung. Im zweidimensionalen Raum wird ein Vektor als a⃗ = (a₁, a₂) und im dreidimensionalen als a⃗ = (a₁, a₂, a₃) geschrieben. Der Ortsvektor eines Punktes P(x|y|z) ist der Vektor vom Ursprung zum Punkt: OP⃗ = (x, y, z). Der Verbindungsvektor von Punkt A zu Punkt B ist AB⃗ = OB⃗ - OA⃗ = (b₁ - a₁, b₂ - a₂, b₃ - a₃). Vektoren sind gleich, wenn sie in allen Komponenten übereinstimmen. Der Nullvektor 0⃗ = (0, 0, 0) hat den Betrag 0 und keine definierte Richtung. Der Gegenvektor von a⃗ ist -a⃗ = (-a₁, -a₂, -a₃).
 
 Die Vektoraddition erfolgt komponentenweise: a⃗ + b⃗ = (a₁ + b₁, a₂ + b₂, a₃ + b₃). Geometrisch entspricht dies der Parallelogrammregel oder der Hintereinanderausführung (Spitze-an-Schwanz-Methode). Die Subtraktion ist: a⃗ - b⃗ = a⃗ + (-b⃗). Die Skalarmultiplikation multipliziert einen Vektor mit einer reellen Zahl: r · a⃗ = (r·a₁, r·a₂, r·a₃). Für r > 0 behält der Vektor seine Richtung, für r < 0 kehrt sie sich um, und |r| gibt den Streckungsfaktor an. Zwei Vektoren sind parallel (kollinear), wenn einer ein skalares Vielfaches des anderen ist: a⃗ = r · b⃗ für ein r ∈ ℝ. Beispiel: a⃗ = (2, 4, -6) und b⃗ = (1, 2, -3) sind parallel mit r = 2.

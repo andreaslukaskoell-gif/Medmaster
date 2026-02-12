@@ -63,6 +63,7 @@ Die **Lewis-Theorie** ist die umfassendste Definition: Eine Lewis-Säure ist ein
     {
       id: 'chem-kap8-2',
       title: 'pH-Wert & Berechnungen',
+      diagram: 'ph-scale',
       content: `Der **pH-Wert** ist ein Maß für die Konzentration der Hydronium-Ionen (H₃O⁺ bzw. vereinfacht H⁺) in einer wässrigen Lösung und wird als negativer dekadischer Logarithmus definiert: **pH = -log₁₀[H⁺]**. Analog ist der pOH-Wert definiert als pOH = -log₁₀[OH⁻]. In reinem Wasser bei 25 °C beträgt die Konzentration sowohl von H⁺ als auch von OH⁻ jeweils 10⁻⁷ mol/L, was einem pH von 7 (neutral) entspricht. Die pH-Skala reicht in der Praxis von 0 bis 14: Werte unter 7 sind sauer, Werte über 7 basisch. Wichtig ist das logarithmische Verhalten — eine pH-Änderung um 1 Einheit entspricht einer 10-fachen Änderung der H⁺-Konzentration.
 
 Das **Ionenprodukt des Wassers** lautet Kw = [H⁺] · [OH⁻] = 10⁻¹⁴ mol²/L² (bei 25 °C). Daraus folgt die fundamentale Beziehung: **pH + pOH = 14** (bei 25 °C). Für die Berechnung des pH-Werts muss man zwischen starken und schwachen Säuren bzw. Basen unterscheiden. **Starke Säuren** (z. B. HCl, HNO₃, H₂SO₄) dissoziieren vollständig: Für 0,01 mol/L HCl gilt [H⁺] = 0,01 mol/L → pH = -log(0,01) = 2. **Schwache Säuren** (z. B. Essigsäure, CH₃COOH) dissoziieren nur teilweise, und man benötigt die Säuredissoziationskonstante Ks (oder pKs): pH = ½ · (pKs - log c₀) für schwache Säuren. Je kleiner der pKs-Wert, desto stärker die Säure.

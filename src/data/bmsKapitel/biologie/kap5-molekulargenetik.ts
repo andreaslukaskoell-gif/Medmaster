@@ -75,21 +75,7 @@ Die beiden Stränge werden durch Wasserstoffbrückenbindungen zwischen komplemen
 Der Replikationsprozess erfordert das koordinierte Zusammenspiel zahlreicher Enzyme und Proteine. Die Helikase öffnet die Doppelhelix, indem sie die Wasserstoffbrücken zwischen den Basenpaaren unter ATP-Verbrauch löst und die Stränge entwirrt. Topoisomerase (Gyrase bei Prokaryoten) löst die dabei entstehende Überspiralisierung (Supercoiling) vor der Replikationsgabel. Einzelstrang-bindende Proteine (SSB-Proteine) stabilisieren die getrennten Einzelstränge und verhindern deren Rückfaltung. Da die DNA-Polymerase III (bei Prokaryoten) bzw. DNA-Polymerase δ und ε (bei Eukaryoten) nur an ein vorhandenes 3'-OH-Ende anbauen kann und ausschließlich in 5'→3'-Richtung synthetisiert, benötigt sie einen Startpunkt: Die Primase (eine RNA-Polymerase) synthetisiert kurze RNA-Primer (ca. 10 Nukleotide), die dieses 3'-OH-Ende bereitstellen.
 
 Aufgrund der antiparallelen Struktur der DNA und der ausschließlichen 5'→3'-Syntheserichtung der DNA-Polymerase verläuft die Replikation an den beiden Strängen unterschiedlich. Der Leitstrang (Leading Strand) wird kontinuierlich in 5'→3'-Richtung synthetisiert, da er in Richtung der Replikationsgabel verläuft und nur einen einzigen Primer benötigt. Der Folgestrang (Lagging Strand) wird dagegen diskontinuierlich synthetisiert: In kurzen Abschnitten (Okazaki-Fragmente, ca. 1000–2000 Nukleotide bei Prokaryoten, 100–200 bei Eukaryoten) entgegen der Gabelrichtung, wobei jedes Fragment einen eigenen RNA-Primer benötigt. Nach der Synthese entfernt die DNA-Polymerase I (bei Prokaryoten) bzw. RNase H und DNA-Polymerase (bei Eukaryoten) die RNA-Primer und ersetzt sie durch DNA. Schließlich verbindet die DNA-Ligase die Okazaki-Fragmente durch Knüpfen von Phosphodiesterbindungen zu einem durchgehenden Strang. Die DNA-Polymerase besitzt zudem eine 3'→5'-Exonuklease-Aktivität (Proofreading), die falsch eingebaute Nukleotide sofort erkennt und entfernt — dies reduziert die Fehlerrate auf etwa 1 Fehler pro 10⁹ Basenpaare.`,
-      diagram: `Schema der Replikationsgabel:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-         Replikationsrichtung →
-
-    3'─────────────────────────── 5'  (Parentalstrang)
-              ╲  Helikase
-               ╲───────────────────→  5'→3' Leitstrang
-                 Replikations-        (kontinuierlich)
-                 gabel
-               ╱───  ───  ───  ───→  Folgestrang
-              ╱  ←Okazaki-Fragmente   (diskontinuierlich)
-    5'─────────────────────────── 3'  (Parentalstrang)
-
-    ═══ = RNA-Primer    ─── = neue DNA
-    DNA-Ligase verbindet Okazaki-Fragmente`,
+      diagram: 'dna-helix',
       merksaetze: [
         'Semikonservativ: Jedes neue DNA-Molekül enthält einen alten und einen neuen Strang (Meselson-Stahl-Experiment, 1958).',
         'Leitstrang: Kontinuierliche Synthese (5\'→3\' Richtung Gabel, ein Primer). Folgestrang: Diskontinuierlich über Okazaki-Fragmente (je ein eigener Primer), verbunden durch DNA-Ligase.'
@@ -204,21 +190,7 @@ Bei Eukaryoten unterliegt die primäre mRNA (prä-mRNA) einem umfangreichen Proz
 Der genetische Code ist die Zuordnungsvorschrift zwischen der Nukleotidsequenz der mRNA und der Aminosäuresequenz des Proteins. Jeweils drei aufeinanderfolgende Nukleotide (Triplett) bilden ein Codon, das für eine bestimmte Aminosäure kodiert. Mit vier verschiedenen Basen ergeben sich 4³ = 64 mögliche Codons. Da es nur 20 kanonische Aminosäuren gibt, ist der genetische Code degeneriert (redundant): Mehrere Codons können für dieselbe Aminosäure kodieren, wobei sich die synonymen Codons meist nur in der dritten Position (Wobble-Position) unterscheiden. Das Startcodon AUG kodiert für Methionin und markiert den Beginn der Translation. Die drei Stoppcodons UAA, UAG und UGA kodieren für keine Aminosäure, sondern signalisieren das Ende der Translation. Der genetische Code ist (nahezu) universell — er gilt für fast alle Lebewesen von Bakterien bis zum Menschen, mit wenigen Ausnahmen (z. B. mitochondrialer Code).
 
 Die Translation verläuft in drei Phasen. Bei der Initiation bindet die kleine ribosomale Untereinheit an die mRNA (bei Prokaryoten über die Shine-Dalgarno-Sequenz, bei Eukaryoten über das 5'-Cap) und sucht das Startcodon AUG. Die Initiator-tRNA (beladen mit Methionin bzw. fMet bei Prokaryoten) bindet an das AUG, dann assoziiert die große Untereinheit. In der Elongationsphase wird die Peptidkette schrittweise verlängert: Eine mit der passenden Aminosäure beladene Aminoacyl-tRNA bindet mit ihrem Anticodon an das Codon in der A-Stelle (Codon-Anticodon-Paarung). Die Peptidyltransferase-Aktivität der großen ribosomalen Untereinheit (ein Ribozym — die katalytische Funktion wird von der rRNA ausgeübt, nicht von Proteinen!) katalysiert die Knüpfung einer Peptidbindung zwischen der wachsenden Kette und der neuen Aminosäure. Anschließend transloziert das Ribosom um ein Codon in 5'→3'-Richtung (unter GTP-Verbrauch), die entladene tRNA gelangt zur E-Stelle und wird freigesetzt. Bei der Termination erreicht ein Stoppcodon (UAA, UAG oder UGA) die A-Stelle. Da keine tRNA ein Anticodon für Stoppcodons besitzt, binden stattdessen Release-Faktoren (Terminationsfaktoren), die die Hydrolyse der Peptidbindung zwischen Polypeptid und tRNA katalysieren. Das fertige Polypeptid wird freigesetzt, und die ribosomalen Untereinheiten dissoziieren.`,
-      diagram: `Schema der Translation am Ribosom:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                    Aminosäure
-                       │
-    ┌─────────────────────────────────┐
-    │         Ribosom (80S)           │
-    │   E-Stelle  P-Stelle  A-Stelle  │
-    │    [tRNA]   [tRNA─AA] [tRNA─AA] │
-    │      ↑         │         ↑      │
-    └──────┼─────────┼─────────┼──────┘
-   5'══AUG║GCU║UAC║GAA║UUU║UAA══3'  mRNA
-         Start              Stop
-         (Met)              codon
-
-   Peptidkette wächst: Met─Ala─Tyr─Glu─Phe─STOP`,
+      diagram: 'transcription-translation',
       merksaetze: [
         'Genetischer Code: 64 Codons für 20 Aminosäuren → degeneriert (redundant). AUG = Start (Methionin), UAA/UAG/UGA = Stopp. Code ist (nahezu) universell.',
         'Drei ribosomale Bindungsstellen: A-Stelle (Aminoacyl-tRNA kommt an), P-Stelle (Peptidyl-tRNA mit wachsender Kette), E-Stelle (Exit, entladene tRNA geht).'

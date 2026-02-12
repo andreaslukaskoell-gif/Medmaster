@@ -132,18 +132,7 @@ Der Uterus (Gebärmutter) ist ein birnenförmiges, muskuläres Hohlorgan, das si
 Die Follikelphase (Tag 1–14 bei einem 28-Tage-Zyklus) beginnt mit der Menstruation. Unter FSH-Einfluss reifen mehrere Follikel im Ovar heran, wobei in der Regel nur ein dominanter Follikel zum Graaf-Follikel heranwächst. Die Granulosazellen des heranreifenden Follikels produzieren zunehmend Östradiol (wichtigstes Östrogen). Steigende Östrogenspiegel hemmen zunächst über negativen Feedback die FSH-Sekretion (unterdrücken damit die konkurrierenden Follikel), lösen aber ab einer Schwellenkonzentration einen positiven Feedback-Mechanismus auf die LH-Ausschüttung aus. Dieser LH-Peak (ca. Tag 13) ist das zentrale Signal für die Ovulation: Etwa 24–36 Stunden nach dem LH-Peak platzt der reife Graaf-Follikel und gibt die sekundäre Oozyte (mit Polkörperchen und Corona radiata) in die Bauchhöhle frei, wo sie von den Fimbrien des Eileiters aufgefangen wird.
 
 Nach der Ovulation beginnt die Lutealphase (Tag 15–28). Der kollabierte Follikel wandelt sich unter LH-Einfluss zum Gelbkörper (Corpus luteum) um, der große Mengen Progesteron und etwas Östrogen sezerniert. Progesteron bewirkt die sekretorische Umwandlung des Endometriums: Die Drüsen werden geschlängelt, das Stroma ödematös, und Glykogen wird eingelagert — optimale Bedingungen für die Implantation einer Blastozyste. Gleichzeitig hemmt Progesteron über negativen Feedback die GnRH-Pulsatilität und damit die LH/FSH-Sekretion. Erfolgt keine Befruchtung, degeneriert der Gelbkörper nach ca. 12–14 Tagen zum Corpus albicans. Der daraus resultierende Abfall von Progesteron und Östrogen führt zur Vasokonstriktion der Spiralarterien im Endometrium, was die ischämische Abstoßung der Funktionalis und damit die Menstruationsblutung auslöst. Gleichzeitig fällt der negative Feedback weg, FSH steigt wieder an, und ein neuer Zyklus beginnt.`,
-      diagram: `Hormonverlauf im Menstruationszyklus (28-Tage-Schema):
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Tag:    1───────7──────14──────21──────28
-        │ Follikelphase │  Lutealphase  │
-FSH:    ██▓▒░░░░░░░░░░░░░░░░░░░░░░░░██▓
-LH:     ░░░░░░░░░░░░██████░░░░░░░░░░░░░
-                     ↑ LH-Peak (Tag ~13)
-Östrogen:░░▒▓██████████▓▒░░▒▓██▓▒░░░░░
-Progesteron:░░░░░░░░░░░░░░▒▓████████▓▒░
-                            ↑ Corpus luteum
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Ovulation: Tag ~14 (24–36 h nach LH-Peak)`,
+      diagram: 'menstrual-cycle',
       merksaetze: [
         'Merke zum positiven Feedback: Östrogen hemmt zunächst FSH/LH (negativer Feedback), löst aber ab einer Schwellenkonzentration den LH-Peak aus (positiver Feedback) → Ovulation.',
         'Die Lutealphase ist mit ca. 14 Tagen relativ konstant — die Zykluslänge variiert hauptsächlich durch Unterschiede in der Follikelphase.'

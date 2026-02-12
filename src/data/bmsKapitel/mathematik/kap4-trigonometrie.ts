@@ -10,6 +10,7 @@ export const mathKap4: Kapitel = {
     {
       id: 'math-kap4-1',
       title: 'Winkelfunktionen',
+      diagram: 'unit-circle',
       content: `Die trigonometrischen Funktionen Sinus, Kosinus und Tangens beschreiben Verhältnisse von Seitenlängen im rechtwinkligen Dreieck. Für einen Winkel α in einem rechtwinkligen Dreieck gilt: sin(α) = Gegenkathete/Hypotenuse, cos(α) = Ankathete/Hypotenuse, und tan(α) = Gegenkathete/Ankathete = sin(α)/cos(α). Diese Definitionen gelten zunächst nur für Winkel zwischen 0° und 90°. Die Merkregel „GAGA-HAHA" hilft beim Einprägen: Gegenkathete über Hypotenuse (sin), Ankathete über Hypotenuse (cos). Alternativ kann man sich „SoH-CaH-ToA" merken: Sine = Opposite/Hypotenuse, Cosine = Adjacent/Hypotenuse, Tangent = Opposite/Adjacent.
 
 Der Einheitskreis (Radius r = 1 mit Mittelpunkt im Ursprung) erweitert die Definition auf alle Winkel. Ein Punkt P auf dem Einheitskreis hat die Koordinaten P(cos(α)|sin(α)), wobei α der Winkel gegen den Uhrzeigersinn von der positiven x-Achse gemessen wird. Damit gilt für jeden Winkel α: sin²(α) + cos²(α) = 1 (trigonometrischer Pythagoras). Diese fundamentale Identität ist die wichtigste trigonometrische Beziehung. Der Einheitskreis zeigt auch die Vorzeichen der Funktionen in den vier Quadranten: Im 1. Quadrant (0°-90°) sind sin, cos und tan alle positiv. Im 2. Quadrant (90°-180°) ist nur sin positiv. Im 3. Quadrant (180°-270°) ist nur tan positiv. Im 4. Quadrant (270°-360°) ist nur cos positiv. Die Merkregel lautet: „All Students Take Calculus" (Alle, Sinus, Tangens, Cosinus).

@@ -10,6 +10,7 @@ export const mathKap3: Kapitel = {
     {
       id: 'math-kap3-1',
       title: 'Lineare Funktionen',
+      diagram: 'coordinate-system',
       content: `Eine lineare Funktion hat die allgemeine Form f(x) = kx + d (in Österreich übliche Notation; in Deutschland oft y = mx + b). Der Parameter k ist die Steigung der Geraden und gibt an, um wie viel sich der Funktionswert ändert, wenn x um 1 zunimmt. Geometrisch beschreibt k das Steigungsdreieck: k = Δy/Δx = (y₂ - y₁)/(x₂ - x₁). Ist k > 0, steigt die Gerade; ist k < 0, fällt sie; ist k = 0, verläuft sie horizontal. Der Parameter d ist der y-Achsenabschnitt, also der Funktionswert an der Stelle x = 0. Die Nullstelle der linearen Funktion ergibt sich aus kx + d = 0 zu x₀ = -d/k (für k ≠ 0).
 
 Zwei Geraden sind genau dann parallel, wenn sie dieselbe Steigung haben (k₁ = k₂). Zwei Geraden stehen senkrecht (orthogonal) aufeinander, wenn das Produkt ihrer Steigungen -1 ergibt: k₁ · k₂ = -1, also k₂ = -1/k₁. Der Schnittpunkt zweier Geraden wird berechnet, indem man die Funktionsgleichungen gleichsetzt: k₁x + d₁ = k₂x + d₂ → x = (d₂ - d₁)/(k₁ - k₂). Um die Gleichung einer Geraden aufzustellen, benötigt man entweder zwei Punkte (daraus berechnet man k, dann d) oder einen Punkt und die Steigung (Punkt-Steigungs-Form: y - y₁ = k(x - x₁)). Beispiel: Gerade durch P(2|5) und Q(4|11): k = (11 - 5)/(4 - 2) = 3. Einsetzen: 5 = 3·2 + d → d = -1. Also: f(x) = 3x - 1.

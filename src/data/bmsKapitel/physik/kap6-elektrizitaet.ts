@@ -59,6 +59,7 @@ Der Kondensator ist ein Bauelement zur Speicherung elektrischer Energie. Ein Pla
     {
       id: 'phys-kap6-2',
       title: 'Stromkreise',
+      diagram: 'circuit',
       content: `Der elektrische Strom I ist die gerichtete Bewegung elektrischer Ladungsträger und wird als Ladung pro Zeit definiert: I = Q/t. Seine SI-Einheit ist das Ampere (A): 1 A = 1 C/s. Die konventionelle Stromrichtung verläuft von Plus nach Minus (technische Stromrichtung), während die Elektronen tatsächlich von Minus nach Plus fließen (physikalische Stromrichtung). Die elektrische Spannung U ist die Potenzialdifferenz zwischen zwei Punkten und beschreibt die Energie pro Ladungseinheit: U = W/Q. Ihre Einheit ist das Volt: 1 V = 1 J/C. Die Spannung ist die treibende Kraft für den Strom — ohne Spannung fließt kein Strom.
 
 Das Ohmsche Gesetz beschreibt den Zusammenhang zwischen Spannung, Strom und Widerstand: U = R · I. Der elektrische Widerstand R wird in Ohm (Ω) gemessen: 1 Ω = 1 V/A. Der Widerstand eines Leiters hängt von seiner Geometrie und dem Material ab: R = ρ · l/A, wobei ρ der spezifische Widerstand, l die Länge und A die Querschnittsfläche des Leiters ist. Materialien mit niedrigem ρ (Metalle) sind gute Leiter, Materialien mit hohem ρ (Kunststoffe, Keramik) sind Isolatoren. Bei der Reihenschaltung von Widerständen addieren sich die Einzelwiderstände: Rges = R₁ + R₂ + R₃. Der Strom ist überall gleich, die Spannung teilt sich auf. Bei der Parallelschaltung addieren sich die Leitwerte: 1/Rges = 1/R₁ + 1/R₂ + 1/R₃. Die Spannung ist überall gleich, der Strom teilt sich auf.
