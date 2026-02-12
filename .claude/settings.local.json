@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc:*)",
+      "Bash(npx vite build:*)",
+      "Bash(timeout 5 npx vite:*)",
+      "Bash(npm run build:*)",
+      "Bash(open:*)",
+      "Bash(ls:*)",
+      "Bash(npm install @supabase/supabase-js)",
+      "Bash(/Users/Luki/medmaster/src/data/bms/biologie.ts << 'STUB'\nimport type { Question } from \"./index\";\nexport const biologieQuestions: Question[] = [];\nSTUB)",
+      "Bash(__NEW_LINE_cd7914d0e0d42533__ cat)",
+      "Bash(/Users/Luki/medmaster/src/data/bms/chemie.ts << 'STUB'\nimport type { Question } from \"./index\";\nexport const chemieQuestions: Question[] = [];\nSTUB)",
+      "Bash(/Users/Luki/medmaster/src/data/bms/physik.ts << 'STUB'\nimport type { Question } from \"./index\";\nexport const physikQuestions: Question[] = [];\nSTUB)",
+      "Bash(/Users/Luki/medmaster/src/data/bms/mathematik.ts << 'STUB'\nimport type { Question } from \"./index\";\nexport const mathematikQuestions: Question[] = [];\nSTUB)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(node fix-umlaute.mjs:*)",
+      "Bash(npx vite:*)"
+    ]
+  }
+}

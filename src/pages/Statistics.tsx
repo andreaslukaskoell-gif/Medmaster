@@ -1,0 +1,221 @@
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell,
+  LineChart,
+  Line,
+} from "recharts";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Heatmap } from "@/components/ui/heatmap";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { useStore } from "@/store/useStore";
+import { generateMockActivityData } from "@/lib/utils";
+
+const COLORS = ["#0f766e", "#14b8a6", "#2dd4bf", "#5eead4", "#99f6e4"];
+
+export default function Statistics() {
+  const { quizResults, xp, streak, completedChapters, activityLog } = useStore();
+  const mockActivity = generateMockActivityData();
+  const activityData = Object.keys(activityLog).length > 0 ? activityLog : mockActivity;
+
+  const totalQuizzes = quizResults.length;
+  const totalCorrect = quizResults.reduce((sum, r) => sum + r.score, 0);
+  const totalQuestions = quizResults.reduce((sum, r) => sum + r.total, 0);
+  const avgPct = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+
+  const byType = quizResults.reduce<Record<string, { correct: number; total: number; count: number }>>((acc, r) => {
+    const key = r.type.toUpperCase();
+    if (!acc[key]) acc[key] = { correct: 0, total: 0, count: 0 };
+    acc[key].correct += r.score;
+    acc[key].total += r.total;
+    acc[key].count += 1;
+    return acc;
+  }, {});
+
+  const barData = Object.entries(byType).map(([name, d]) => ({
+    name,
+    Prozent: Math.round((d.correct / d.total) * 100),
+    Quizze: d.count,
+  }));
+
+  const pieData = Object.entries(byType).map(([name, d]) => ({
+    name,
+    value: d.count,
+  }));
+
+  const timelineData = quizResults.slice(-10).map((r, i) => ({
+    name: `#${i + 1}`,
+    Prozent: Math.round((r.score / r.total) * 100),
+  }));
+
+  return (
+    <div className="max-w-7xl mx-auto space-y-6">
+      <Breadcrumb items={[{ label: "Dashboard", href: "/" }, { label: "Statistik" }]} />
+
+      <div>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Statistik</h1>
+        <p className="text-muted mt-1">Dein Lernfortschritt im Überblick.</p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <Card>
+          <CardContent className="p-4 text-center">
+            <p className="text-3xl font-bold text-primary-700">{xp}</p>
+            <p className="text-xs text-muted">Gesamt-XP</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4 text-center">
+            <p className="text-3xl font-bold text-orange-600">{streak}</p>
+            <p className="text-xs text-muted">Tage-Streak</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4 text-center">
+            <p className="text-3xl font-bold text-blue-600">{totalQuizzes}</p>
+            <p className="text-xs text-muted">Quizze absolviert</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4 text-center">
+            <p className="text-3xl font-bold text-green-600">{avgPct}%</p>
+            <p className="text-xs text-muted">Durchschnitt</p>
+          </CardContent>
+        </Card>
+      </div>
+
+      {totalQuizzes === 0 ? (
+        <Card>
+          <CardContent className="p-12 text-center">
+            <p className="text-muted">
+              Noch keine Quizze absolviert. Starte mit dem Lernen, um hier deine
+              Statistiken zu sehen!
+            </p>
+          </CardContent>
+        </Card>
+      ) : (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <Card>
+            <CardHeader>
+              <CardTitle>Leistung nach Modul</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart data={barData}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis domain={[0, 100]} />
+                  <Tooltip />
+                  <Bar dataKey="Prozent" fill="#0f766e" radius={[4, 4, 0, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Quizverteilung</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ResponsiveContainer width="100%" height={300}>
+                <PieChart>
+                  <Pie
+                    data={pieData}
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={60}
+                    outerRadius={100}
+                    paddingAngle={5}
+                    dataKey="value"
+                    label={({ name, value }) => `${name}: ${value}`}
+                  >
+                    {pieData.map((_, i) => (
+                      <Cell key={i} fill={COLORS[i % COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                </PieChart>
+              </ResponsiveContainer>
+            </CardContent>
+          </Card>
+
+          <Card className="lg:col-span-2">
+            <CardHeader>
+              <CardTitle>Leistungsverlauf (letzte 10 Quizze)</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ResponsiveContainer width="100%" height={300}>
+                <LineChart data={timelineData}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis domain={[0, 100]} />
+                  <Tooltip />
+                  <Line
+                    type="monotone"
+                    dataKey="Prozent"
+                    stroke="#0f766e"
+                    strokeWidth={2}
+                    dot={{ fill: "#0f766e", r: 4 }}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </CardContent>
+          </Card>
+
+          <Card className="lg:col-span-2">
+            <CardHeader>
+              <CardTitle>Detaillierte Ergebnisse</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-border">
+                      <th className="text-left py-2 px-3 text-muted font-medium">Datum</th>
+                      <th className="text-left py-2 px-3 text-muted font-medium">Typ</th>
+                      <th className="text-left py-2 px-3 text-muted font-medium">Thema</th>
+                      <th className="text-right py-2 px-3 text-muted font-medium">Ergebnis</th>
+                      <th className="text-right py-2 px-3 text-muted font-medium">Prozent</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {quizResults
+                      .slice()
+                      .reverse()
+                      .map((r) => (
+                        <tr key={r.id} className="border-b border-gray-50">
+                          <td className="py-2 px-3">{r.date}</td>
+                          <td className="py-2 px-3 uppercase font-medium">{r.type}</td>
+                          <td className="py-2 px-3">{r.subject || "-"}</td>
+                          <td className="py-2 px-3 text-right">{r.score}/{r.total}</td>
+                          <td className="py-2 px-3 text-right font-bold text-primary-700">
+                            {Math.round((r.score / r.total) * 100)}%
+                          </td>
+                        </tr>
+                      ))}
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      )}
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Lernaktivität</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Heatmap data={activityData} />
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
