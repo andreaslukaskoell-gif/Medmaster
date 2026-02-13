@@ -76,22 +76,26 @@ const PERMISSIONS: Record<Tier, TierPermissions> = {
   },
 };
 
+// In development mode, grant full access (pro tier) regardless of actual tier
+const effectiveTier = (tier: Tier): Tier =>
+  import.meta.env.DEV ? "pro" : tier;
+
 export function getPermissions(tier: Tier): TierPermissions {
-  return PERMISSIONS[tier];
+  return PERMISSIONS[effectiveTier(tier)];
 }
 
 export function canAccess(tier: Tier, feature: keyof TierPermissions): boolean | number | "unlimited" {
-  return PERMISSIONS[tier][feature];
+  return PERMISSIONS[effectiveTier(tier)][feature];
 }
 
 export function getLimit(tier: Tier, feature: keyof TierPermissions): number | null {
-  const val = PERMISSIONS[tier][feature];
+  const val = PERMISSIONS[effectiveTier(tier)][feature];
   if (val === "unlimited" || val === true) return null;
   if (val === false) return 0;
   return val as number;
 }
 
 export function isFeatureLocked(tier: Tier, feature: keyof TierPermissions): boolean {
-  const val = PERMISSIONS[tier][feature];
+  const val = PERMISSIONS[effectiveTier(tier)][feature];
   return val === false || val === 0;
 }

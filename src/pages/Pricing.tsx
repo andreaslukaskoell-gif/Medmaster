@@ -6,56 +6,56 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 
 const plans = [
   {
-    name: "Gratis",
+    name: "Starter",
     price: "0",
     period: "für immer",
     description: "Perfekt zum Reinschnuppern",
     highlighted: false,
     features: [
       { text: "BMS-Theorie: alle Kapitel lesbar", included: true },
-      { text: "5 Übungsfragen pro Fach", included: true },
+      { text: "50 BMS-Fragen", included: true },
       { text: "Strategie-Guides (KFF, TV, SEK)", included: true },
       { text: "Basis-Statistiken", included: true },
-      { text: "Einstufungstest", included: true },
-      { text: "Testsimulation", included: false },
-      { text: "Erweiterte Fragendatenbank (500+)", included: false },
-      { text: "Detaillierte Leistungsanalyse", included: false },
-      { text: "Personalisierter Lernplan", included: false },
+      { text: "1 Simulationstest", included: true },
+      { text: "KI-adaptives Lernsystem", included: false },
+      { text: "Alle 1.000+ BMS-Fragen", included: false },
+      { text: "Schwachstellen-Trainer", included: false },
+      { text: "KI-Tutor Chat", included: false },
     ],
   },
   {
     name: "Premium",
-    price: "14,99",
+    price: "12,90",
     period: "pro Monat",
     description: "Für ernsthaftes MedAT-Training",
     highlighted: true,
     features: [
-      { text: "Alles aus Gratis", included: true },
-      { text: "Erweiterte Fragendatenbank (500+)", included: true },
-      { text: "Testsimulationen (unbegrenzt)", included: true },
+      { text: "Alles aus Starter", included: true },
+      { text: "Alle 1.000+ BMS-Fragen", included: true },
+      { text: "KI-adaptives Lernsystem", included: true },
+      { text: "Unbegrenzte Simulationen", included: true },
+      { text: "Stichwortlisten-Tracking", included: true },
+      { text: "Schwachstellen-Trainer", included: true },
       { text: "Spaced Repetition System", included: true },
       { text: "Detaillierte Leistungsanalyse", included: true },
-      { text: "Personalisierter Lernplan", included: true },
-      { text: "Community-Vergleich & Rangliste", included: true },
-      { text: "Lernaktivitäts-Heatmap", included: true },
-      { text: "Offline-Modus (App)", included: false },
+      { text: "KI-Tutor Chat", included: false },
     ],
   },
   {
-    name: "Ultimate",
-    price: "24,99",
+    name: "Pro",
+    price: "19,90",
     period: "pro Monat",
     description: "Maximum Vorbereitung",
     highlighted: false,
     features: [
       { text: "Alles aus Premium", included: true },
-      { text: "1000+ Übungsfragen mit Erklärungen", included: true },
-      { text: "Offline-Modus (App)", included: true },
-      { text: "Frühzugang zu neuen Inhalten", included: true },
-      { text: "Druckbare Zusammenfassungen (PDF)", included: true },
+      { text: "KI-Tutor Chat", included: true },
+      { text: "Prüfungstag-Prognose", included: true },
+      { text: "Personalisierter Lernplan", included: true },
       { text: "Erweiterte Fehleranalyse", included: true },
-      { text: "Lerngruppen-Feature", included: true },
       { text: "Prioritäts-Support per E-Mail", included: true },
+      { text: "Frühzugang zu neuen Inhalten", included: true },
+      { text: "Lerngruppen-Feature", included: true },
       { text: "Geld-zurück-Garantie (30 Tage)", included: true },
     ],
   },
@@ -88,7 +88,7 @@ export default function Pricing() {
 
               <div className="mb-6">
                 <span className="text-4xl font-bold text-gray-900 dark:text-gray-100">
-                  {plan.price === "0" ? "Gratis" : `${plan.price} EUR`}
+                  {plan.price === "0" ? "Gratis" : `€${plan.price}`}
                 </span>
                 {plan.price !== "0" && <span className="text-sm text-muted ml-1">/ {plan.period}</span>}
               </div>
