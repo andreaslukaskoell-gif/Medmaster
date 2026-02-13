@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { tvStrategyGuide, tvTexts } from "@/data/tvData";
 import { tvTextSets } from "@/data/tvTextsExpanded";
 import { tvTextSets2 } from "@/data/tvTextsExpanded2";
@@ -287,6 +288,7 @@ export default function TV() {
             </Button>
           )}
         </div>
+        <FloatingQuestionCounter current={totalQuestionsAnswered} total={allSetQuestions.length} />
       </div>
     );
   }

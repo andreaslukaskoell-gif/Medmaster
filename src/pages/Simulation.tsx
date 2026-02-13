@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { allBmsQuestions as newBmsQuestions, getQuestionsBySubject as getNewQuestions } from "@/data/bms/index";
 import { bmsQuestions as legacyQuestions, getQuestionsBySubject as getLegacyQuestions } from "@/data/bmsQuestions";
 import { tvTexts } from "@/data/tvData";
@@ -1705,6 +1706,8 @@ export default function Simulation() {
           </button>
         ))}
       </div>
+
+      <FloatingQuestionCounter current={index + 1} total={sectionQuestions.length} />
     </div>
   );
 }

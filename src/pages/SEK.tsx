@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
+import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { sekStrategyGuide } from "@/data/sekData";
 import {
   emotionenErkennenTasks,
@@ -292,6 +294,7 @@ function EmotionenErkennenQuiz({ tasks, onBack }: { tasks: EmotionenErkennenTask
           : <Button onClick={handleSubmit} disabled={!allQuestionsAnswered}><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
         }
       </div>
+      <FloatingQuestionCounter current={index + 1} total={questions.length} />
     </div>
   );
 }
@@ -421,6 +424,7 @@ function EmotionenRegulierenQuiz({ tasks, onBack }: { tasks: EmotionenRegulieren
           : <Button onClick={handleSubmit} disabled={!allAnswered}><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
         }
       </div>
+      <FloatingQuestionCounter current={index + 1} total={questions.length} />
     </div>
   );
 }
@@ -580,6 +584,7 @@ function SozialesEntscheidenQuiz({ tasks, onBack }: { tasks: SozialesEntscheiden
           : <Button onClick={handleSubmit} disabled={!allQuestionsRanked}><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
         }
       </div>
+      <FloatingQuestionCounter current={index + 1} total={questions.length} />
     </div>
   );
 }

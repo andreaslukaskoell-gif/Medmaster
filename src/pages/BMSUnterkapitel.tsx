@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, ChevronLeft, Bookmark, StickyNote } from "lucide
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { StickyBackButton } from "@/components/ui/StickyBackButton";
 import { useStore } from "@/store/useStore";
 import { MerksatzBox } from "@/components/chapter/MerksatzBox";
 import { SelbstTest } from "@/components/chapter/SelbstTest";
@@ -77,6 +78,7 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
 
   return (
     <div className="max-w-3xl mx-auto space-y-6 pb-12">
+      <StickyBackButton onClick={onBack} />
       <Breadcrumb items={[
         { label: "Dashboard", href: "/" },
         { label: "BMS", href: "#" },

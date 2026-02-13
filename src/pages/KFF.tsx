@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
+import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import {
   kffStrategyGuide,
 } from "@/data/kffData";
@@ -371,6 +373,18 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   const q = questions[index];
   const allAnswered = questions.every((q) => answers[q.id] !== undefined);
 
+  useKeyboardShortcuts({
+    disabled: phase !== "quiz",
+    maxOptions: q?.options.length ?? 4,
+    onSelectOption: (idx) => { if (q && idx < q.options.length) setAnswers((p) => ({ ...p, [q.id]: idx })); },
+    onConfirm: () => {
+      if (index < questions.length - 1) setIndex((i) => i + 1);
+      else if (allAnswered) handleSubmit();
+    },
+    onNext: () => { if (index < questions.length - 1) setIndex((i) => i + 1); },
+    onPrev: () => { if (index > 0) setIndex((i) => i - 1); },
+  });
+
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
@@ -391,6 +405,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
             <button key={oi} onClick={() => setAnswers((p) => ({ ...p, [q.id]: oi }))}
               className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer text-left ${answers[q.id] === oi ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"}`}>
               <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>{opt}
+              <kbd className="float-right text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded text-muted">{oi + 1}</kbd>
             </button>
           ))}
         </div>
@@ -402,6 +417,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
           : <Button onClick={handleSubmit} disabled={!allAnswered}><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
         }
       </div>
+      <FloatingQuestionCounter current={index + 1} total={questions.length} />
     </div>
   );
 }
@@ -664,6 +680,18 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
 
   const q = questions[index];
 
+  useKeyboardShortcuts({
+    disabled: phase !== "quiz",
+    maxOptions: q?.options.length ?? 5,
+    onSelectOption: (idx) => { if (q && idx < q.options.length) setAnswers((p) => ({ ...p, [q.id]: idx })); },
+    onConfirm: () => {
+      if (index < questions.length - 1) setIndex((i) => i + 1);
+      else if (allAnswered) handleSubmit();
+    },
+    onNext: () => { if (index < questions.length - 1) setIndex((i) => i + 1); },
+    onPrev: () => { if (index > 0) setIndex((i) => i - 1); },
+  });
+
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
@@ -689,6 +717,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
                 answers[q.id] === oi ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
               }`}>
               <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>{opt}
+              <kbd className="float-right text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded text-muted">{oi + 1}</kbd>
             </button>
           ))}
         </div>
@@ -700,6 +729,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
           : <Button onClick={handleSubmit} disabled={!allAnswered}><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
         }
       </div>
+      <FloatingQuestionCounter current={index + 1} total={questions.length} />
     </div>
   );
 }
@@ -833,6 +863,18 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
   const q = questions[index];
   const allAnswered = questions.every((q) => answers[q.id] !== undefined);
 
+  useKeyboardShortcuts({
+    disabled: phase !== "quiz",
+    maxOptions: q?.options.length ?? 5,
+    onSelectOption: (idx) => { if (q && idx < q.options.length) setAnswers((p) => ({ ...p, [q.id]: q.options[idx] })); },
+    onConfirm: () => {
+      if (index < questions.length - 1) setIndex((i) => i + 1);
+      else if (allAnswered) handleSubmit();
+    },
+    onNext: () => { if (index < questions.length - 1) setIndex((i) => i + 1); },
+    onPrev: () => { if (index > 0) setIndex((i) => i - 1); },
+  });
+
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
@@ -849,7 +891,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
         <p className="text-sm text-muted mb-4">Mit welchem Buchstaben beginnt dieses Wort?</p>
         <p className="text-3xl font-mono font-bold tracking-[0.3em] text-gray-900 dark:text-gray-100 mb-8">{q.scrambled}</p>
         <div className="flex justify-center gap-3 flex-wrap">
-          {q.options.map((letter) => (
+          {q.options.map((letter, li) => (
             <button key={letter} onClick={() => setAnswers((p) => ({ ...p, [q.id]: letter }))}
               className={`w-14 h-14 rounded-xl border-2 text-xl font-bold transition-all cursor-pointer ${
                 answers[q.id] === letter
@@ -857,6 +899,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
                   : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:scale-105"
               }`}>
               {letter}
+              <span className="block text-[9px] text-muted font-mono">{li + 1}</span>
             </button>
           ))}
         </div>
@@ -868,6 +911,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
           : <Button onClick={handleSubmit} disabled={!allAnswered}><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
         }
       </div>
+      <FloatingQuestionCounter current={index + 1} total={questions.length} label="Wort" />
     </div>
   );
 }
@@ -1170,6 +1214,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
           : <Button onClick={handleFzSubmit} disabled={!fzAllAnswered}><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
         }
       </div>
+      <FloatingQuestionCounter current={index + 1} total={questions.length} label="Aufgabe" />
     </div>
   );
 }

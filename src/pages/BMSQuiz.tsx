@@ -1,9 +1,11 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { ArrowLeft, ArrowRight, CheckCircle2, XCircle, Send, Flag, SkipForward } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Confetti } from "@/components/ui/confetti";
+import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
+import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { allBmsQuestions, getQuestionsBySubject as getNewQuestions } from "@/data/bms/index";
 import { bmsQuestions as legacyQuestions, getQuestionsBySubject as getLegacyQuestions } from "@/data/bmsQuestions";
 import { useStore } from "@/store/useStore";
@@ -70,35 +72,27 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
   const isFlagged = currentQuestion ? flaggedQuestions.includes(currentQuestion.id) : false;
 
   // Keyboard shortcuts
-  useEffect(() => {
-    if (submitted) return;
-    const handler = (e: KeyboardEvent) => {
-      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
-      const key = e.key.toLowerCase();
-      if (key >= "1" && key <= "5") {
-        const optionIds = ["a", "b", "c", "d", "e"];
-        const idx = parseInt(key) - 1;
-        if (idx < currentQuestion.options.length) {
-          setAnswers((prev) => ({ ...prev, [currentQuestion.id]: optionIds[idx] }));
-        }
+  useKeyboardShortcuts({
+    disabled: submitted,
+    maxOptions: currentQuestion?.options.length ?? 5,
+    onSelectOption: (idx) => {
+      const optionIds = ["a", "b", "c", "d", "e"];
+      if (currentQuestion && idx < currentQuestion.options.length) {
+        setAnswers((prev) => ({ ...prev, [currentQuestion.id]: optionIds[idx] }));
       }
-      if (key === "enter" && answers[currentQuestion.id]) {
+    },
+    onConfirm: () => {
+      if (currentQuestion && answers[currentQuestion.id]) {
         if (currentIndex < questions.length - 1) {
           setCurrentIndex((i) => i + 1);
         } else if (allAnswered) {
           handleSubmit();
         }
       }
-      if (key === "f") toggleFlagQuestion(currentQuestion.id);
-      if (key === "s" && currentIndex < questions.length - 1) {
-        setCurrentIndex((i) => i + 1);
-      }
-      if (key === "arrowleft" && currentIndex > 0) setCurrentIndex((i) => i - 1);
-      if (key === "arrowright" && currentIndex < questions.length - 1) setCurrentIndex((i) => i + 1);
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [currentIndex, answers, submitted, allAnswered, currentQuestion]);
+    },
+    onNext: () => { if (currentIndex < questions.length - 1) setCurrentIndex((i) => i + 1); },
+    onPrev: () => { if (currentIndex > 0) setCurrentIndex((i) => i - 1); },
+  });
 
   const handleSelect = (optionId: string) => {
     if (submitted) return;
@@ -355,6 +349,8 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
           Tastatur: 1-5 Antwort · Enter Weiter · F Markieren · S Überspringen
         </p>
       </div>
+
+      <FloatingQuestionCounter current={currentIndex + 1} total={questions.length} />
     </div>
   );
 }
