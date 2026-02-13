@@ -9,7 +9,8 @@ import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { allBmsQuestions, getQuestionsBySubject as getNewQuestions } from "@/data/bms/index";
 import { bmsQuestions as legacyQuestions, getQuestionsBySubject as getLegacyQuestions } from "@/data/bmsQuestions";
 import { useStore } from "@/store/useStore";
-import { getStrategieTipp } from "@/data/questions/index";
+import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
+import { getStrategieTipp, getDirectStichwortId } from "@/data/questions/index";
 
 // Use new expanded questions if available, fall back to legacy
 function getQuestionsBySubject(subject: string) {
@@ -67,6 +68,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
   const [submitted, setSubmitted] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const { addXP, checkStreak, saveQuizResult, logActivity, flaggedQuestions, toggleFlagQuestion, updateSpacedRepetition } = useStore();
+  const { recordAnswer } = useAdaptiveStore();
 
   const currentQuestion = questions[currentIndex];
   const allAnswered = questions.every((q) => answers[q.id]);
@@ -119,9 +121,12 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
       })),
     });
 
-    // Update spaced repetition for each question
+    // Update spaced repetition and adaptive store for each question
     questions.forEach((q) => {
-      updateSpacedRepetition(q.id, answers[q.id] === q.correctOptionId);
+      const correct = answers[q.id] === q.correctOptionId;
+      updateSpacedRepetition(q.id, correct);
+      const swId = getDirectStichwortId(q.id) || getStichwortForQuestion(q.id);
+      if (swId) recordAnswer(swId, correct, 30);
     });
 
     addXP(score * 10);

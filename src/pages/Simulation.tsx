@@ -23,6 +23,8 @@ import { Badge } from "@/components/ui/badge";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { allBmsQuestions as newBmsQuestions, getQuestionsBySubject as getNewQuestions } from "@/data/bms/index";
+import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
+import { getDirectStichwortId } from "@/data/questions/index";
 import { bmsQuestions as legacyQuestions, getQuestionsBySubject as getLegacyQuestions } from "@/data/bmsQuestions";
 import { tvTexts } from "@/data/tvData";
 import {
@@ -542,6 +544,7 @@ export default function Simulation() {
   const [simVariant, setSimVariant] = useState<number | undefined>(undefined);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
+  const { recordAnswer: recordAdaptive } = useAdaptiveStore();
 
   // Track which TV text content to show
   const tvTextMap = useMemo(() => {
@@ -692,12 +695,18 @@ export default function Simulation() {
       answers: allAnswerEntries,
     });
 
+    // Record BMS answers in adaptive store
+    allAnswerEntries.forEach((entry) => {
+      const swId = getDirectStichwortId(entry.questionId) || getStichwortForQuestion(entry.questionId);
+      if (swId) recordAdaptive(swId, entry.correct, 30);
+    });
+
     addXP(totalScore * 15);
     checkStreak();
     logActivity(totalQuestions);
     setMode("result");
     setIndex(0);
-  }, [answers, allSectionQuestions, sections, currentSectionIdx, timeLeft, simType, recordSectionTime, saveQuizResult, addXP, checkStreak, logActivity]);
+  }, [answers, allSectionQuestions, sections, currentSectionIdx, timeLeft, simType, recordSectionTime, saveQuizResult, addXP, checkStreak, logActivity, recordAdaptive]);
 
   const loadNextSectionAt = useCallback((idx: number) => {
     if (idx >= sections.length) {

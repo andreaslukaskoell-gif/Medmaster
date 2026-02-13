@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import {
   BookOpen,
   Atom,
@@ -13,6 +14,7 @@ import {
   BarChart3,
   Target,
   Filter,
+  Play,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -27,6 +29,7 @@ import {
   type Stichwort,
 } from "@/data/stichwortliste";
 import { useStore } from "@/store/useStore";
+import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { getQuestionSubject } from "@/lib/bmsLookup";
 import { allBmsQuestions } from "@/data/bms";
 
@@ -89,6 +92,7 @@ export default function StichwortlistePage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [priorityFilter, setPriorityFilter] = useState<string>("alle");
   const { quizResults } = useStore();
+  const { profile: adaptiveProfile } = useAdaptiveStore();
 
   const filteredStichworte = useMemo(() => {
     let list =
@@ -328,15 +332,32 @@ export default function StichwortlistePage() {
                             </p>
                           </div>
 
-                          <div className="flex items-center gap-3 shrink-0">
+                          <div className="flex items-center gap-2 shrink-0">
                             {st.questionCount > 0 && (
-                              <span className="text-xs text-muted">
+                              <span className="text-xs text-muted hidden sm:inline">
                                 {st.questionCount} Fragen
                               </span>
                             )}
+                            {(() => {
+                              const as = adaptiveProfile.stichwortStats[sw.id];
+                              if (as && as.totalAttempts >= 3) {
+                                return (
+                                  <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
+                                    as.confidence === "sicher"
+                                      ? "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300"
+                                      : as.confidence === "unsicher"
+                                        ? "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300"
+                                        : "bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400"
+                                  }`}>
+                                    {as.confidence === "sicher" ? "Sicher" : as.confidence === "unsicher" ? "Unsicher" : "?"}
+                                  </span>
+                                );
+                              }
+                              return null;
+                            })()}
                             {st.status === "gelernt" && (
                               <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">
-                                <CheckCircle2 className="w-3 h-3" /> Gelernt
+                                <CheckCircle2 className="w-3 h-3" /> {st.successRate}%
                               </span>
                             )}
                             {st.status === "in-bearbeitung" && (
@@ -357,8 +378,16 @@ export default function StichwortlistePage() {
                             )}
                             {st.status === "nicht-begonnen" && (
                               <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
-                                Noch nicht geübt
+                                Offen
                               </span>
+                            )}
+                            {st.questionCount > 0 && (
+                              <Link
+                                to={`/schwachstellen?stichwort=${sw.id}`}
+                                className="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400 hover:bg-primary-200 dark:hover:bg-primary-900/50 transition-colors"
+                              >
+                                <Play className="w-3 h-3" /> Üben
+                              </Link>
                             )}
                           </div>
                         </div>

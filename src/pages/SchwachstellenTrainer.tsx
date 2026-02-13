@@ -1,4 +1,5 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import {
   Target, Flame, ArrowLeft, ArrowRight, CheckCircle2, XCircle,
   Send, Lightbulb, Zap, Trophy, RotateCcw, Play,
@@ -60,6 +61,7 @@ export default function SchwachstellenTrainer() {
   const [showResult, setShowResult] = useState(false);
   const [showTipp, setShowTipp] = useState<string | null>(null);
 
+  const [searchParams, setSearchParams] = useSearchParams();
   const adaptive = useAdaptiveStore();
   const { saveQuizResult, addXP, checkStreak, logActivity, updateSpacedRepetition } = useStore();
 
@@ -72,6 +74,24 @@ export default function SchwachstellenTrainer() {
   const dailyQuestions = useMemo(() => {
     return adaptive.getAdaptiveQuestions(15);
   }, []);
+
+  // Auto-start focused quiz from URL param ?stichwort=bio-1-01
+  useEffect(() => {
+    const sw = searchParams.get("stichwort");
+    if (sw && mode === "overview") {
+      const qs = getQuestionsForStichwort(sw, 10);
+      if (qs.length > 0) {
+        setFocusStichwortId(sw);
+        setQuizQuestions(qs);
+        setCurrentIndex(0);
+        setAnswers({});
+        setShowResult(false);
+        setShowTipp(null);
+        setMode("focused");
+        setSearchParams({}, { replace: true });
+      }
+    }
+  }, [searchParams]);
 
   // ============================================================
   // Start Quiz
