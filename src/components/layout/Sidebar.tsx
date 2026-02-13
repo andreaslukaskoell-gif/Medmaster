@@ -9,20 +9,20 @@ import { useStore } from "@/store/useStore";
 import { alleKapitel } from "@/data/bmsKapitel";
 
 const navItems = [
-  { to: "/", icon: LayoutDashboard, label: "Dashboard" },
-  { to: "/bms", icon: BookOpen, label: "BMS" },
-  { to: "/kff", icon: Brain, label: "KFF" },
-  { to: "/tv", icon: FileText, label: "TV" },
-  { to: "/sek", icon: Heart, label: "SEK" },
-  { to: "/simulation", icon: Timer, label: "Simulation" },
-  { to: "/lernplan", icon: CalendarDays, label: "Lernplan" },
-  { to: "/analyse", icon: Radar, label: "Analyse" },
-  { to: "/community", icon: Users, label: "Community" },
-  { to: "/statistik", icon: BarChart3, label: "Statistik" },
-  { to: "/notizen", icon: StickyNote, label: "Notizen" },
-  { to: "/karteikarten", icon: Layers, label: "Karteikarten" },
-  { to: "/duell", icon: Swords, label: "Duell" },
-  { to: "/preise", icon: CreditCard, label: "Preise" },
+  { to: "/", icon: LayoutDashboard, label: "Dashboard", iconColor: "" },
+  { to: "/bms", icon: BookOpen, label: "BMS", iconColor: "text-emerald-400" },
+  { to: "/kff", icon: Brain, label: "KFF", iconColor: "text-amber-400" },
+  { to: "/tv", icon: FileText, label: "TV", iconColor: "text-indigo-400" },
+  { to: "/sek", icon: Heart, label: "SEK", iconColor: "text-rose-400" },
+  { to: "/simulation", icon: Timer, label: "Simulation", iconColor: "text-orange-400" },
+  { to: "/lernplan", icon: CalendarDays, label: "Lernplan", iconColor: "" },
+  { to: "/analyse", icon: Radar, label: "Analyse", iconColor: "" },
+  { to: "/community", icon: Users, label: "Community", iconColor: "" },
+  { to: "/statistik", icon: BarChart3, label: "Statistik", iconColor: "" },
+  { to: "/notizen", icon: StickyNote, label: "Notizen", iconColor: "" },
+  { to: "/karteikarten", icon: Layers, label: "Karteikarten", iconColor: "text-blue-400" },
+  { to: "/duell", icon: Swords, label: "Duell", iconColor: "" },
+  { to: "/preise", icon: CreditCard, label: "Preise", iconColor: "" },
 ];
 
 interface SidebarProps {
@@ -89,23 +89,27 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                 )
               }
             >
-              <span className="flex items-center gap-3">
-                <item.icon className="w-4.5 h-4.5 shrink-0" />
-                {item.label}
-              </span>
-              {item.to === "/bms" && (
-                <span className="flex items-center gap-1.5">
-                  {bmsProgress > 0 && (
-                    <span className="text-primary-300 text-[10px] font-medium">
-                      {bmsProgress}%
+              {({ isActive }) => (
+                <>
+                  <span className="flex items-center gap-3">
+                    <item.icon className={cn("w-4.5 h-4.5 shrink-0", !isActive && item.iconColor)} />
+                    {item.label}
+                  </span>
+                  {item.to === "/bms" && (
+                    <span className="flex items-center gap-1.5">
+                      {bmsProgress > 0 && (
+                        <span className="text-primary-300 text-[10px] font-medium">
+                          {bmsProgress}%
+                        </span>
+                      )}
+                      {dueCount > 0 && (
+                        <span className="bg-orange-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                          {dueCount}
+                        </span>
+                      )}
                     </span>
                   )}
-                  {dueCount > 0 && (
-                    <span className="bg-orange-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
-                      {dueCount}
-                    </span>
-                  )}
-                </span>
+                </>
               )}
             </NavLink>
           ))}

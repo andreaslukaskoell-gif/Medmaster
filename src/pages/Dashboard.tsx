@@ -26,27 +26,30 @@ const modules = [
     icon: BookOpen,
     label: "BMS",
     desc: "Basiskenntnistest Medizinische Studien",
-    color: "bg-blue-500",
-    bgLight: "bg-blue-50 dark:bg-blue-900/20",
-    textColor: "text-blue-700 dark:text-blue-400",
+    color: "bg-emerald-500",
+    bgLight: "bg-emerald-50 dark:bg-emerald-900/20",
+    textColor: "text-emerald-700 dark:text-emerald-400",
+    borderColor: "border-l-emerald-500",
   },
   {
     to: "/kff",
     icon: Brain,
     label: "KFF",
     desc: "Kognitive Fähigkeiten & Fertigkeiten",
-    color: "bg-purple-500",
-    bgLight: "bg-purple-50 dark:bg-purple-900/20",
-    textColor: "text-purple-700 dark:text-purple-400",
+    color: "bg-amber-500",
+    bgLight: "bg-amber-50 dark:bg-amber-900/20",
+    textColor: "text-amber-700 dark:text-amber-400",
+    borderColor: "border-l-amber-500",
   },
   {
     to: "/tv",
     icon: FileText,
     label: "TV",
     desc: "Textverständnis",
-    color: "bg-green-500",
-    bgLight: "bg-green-50 dark:bg-green-900/20",
-    textColor: "text-green-700 dark:text-green-400",
+    color: "bg-indigo-500",
+    bgLight: "bg-indigo-50 dark:bg-indigo-900/20",
+    textColor: "text-indigo-700 dark:text-indigo-400",
+    borderColor: "border-l-indigo-500",
   },
   {
     to: "/sek",
@@ -56,6 +59,7 @@ const modules = [
     color: "bg-rose-500",
     bgLight: "bg-rose-50 dark:bg-rose-900/20",
     textColor: "text-rose-700 dark:text-rose-400",
+    borderColor: "border-l-rose-500",
   },
   {
     to: "/simulation",
@@ -65,6 +69,7 @@ const modules = [
     color: "bg-orange-500",
     bgLight: "bg-orange-50 dark:bg-orange-900/20",
     textColor: "text-orange-700 dark:text-orange-400",
+    borderColor: "border-l-orange-500",
   },
 ];
 
@@ -249,7 +254,7 @@ export default function Dashboard() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {modules.map((m) => (
             <Link key={m.to} to={m.to}>
-              <Card className="hover:shadow-lg transition-all hover:-translate-y-0.5 cursor-pointer h-full">
+              <Card className={`hover:shadow-lg transition-all hover:-translate-y-0.5 cursor-pointer h-full border-l-4 ${m.borderColor}`}>
                 <CardContent className="p-5">
                   <div className={`w-12 h-12 ${m.bgLight} rounded-xl flex items-center justify-center mb-3`}>
                     <m.icon className={`w-6 h-6 ${m.textColor}`} />
