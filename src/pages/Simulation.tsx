@@ -67,6 +67,25 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+// Seeded shuffle for deterministic simulation variants
+function seededRandom(seed: number): () => number {
+  let s = seed;
+  return () => {
+    s = (s * 1664525 + 1013904223) & 0xffffffff;
+    return (s >>> 0) / 0xffffffff;
+  };
+}
+
+function seededShuffle<T>(arr: T[], seed: number): T[] {
+  const a = [...arr];
+  const rng = seededRandom(seed);
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 // ============================================================
 // TYPES
 // ============================================================
@@ -203,19 +222,21 @@ const BMS_KURZTEST_OPTIONS = [
 // QUESTION GENERATORS
 // ============================================================
 
-function generateBmsQuestions(section: SimSection): UnifiedQuestion[] {
+function generateBmsQuestions(section: SimSection, variant?: number): UnifiedQuestion[] {
   const subjectMap: Record<string, string> = {
     bio: "biologie", chem: "chemie", phys: "physik", math: "mathematik",
     "bio-kurz": "biologie", "chem-kurz": "chemie", "phys-kurz": "physik", "math-kurz": "mathematik",
     "mix-kurz": "all",
   };
   const subject = subjectMap[section.id] || "all";
-  let pool = subject === "all" ? shuffle(bmsQuestions) : shuffle(getQuestionsBySubject(subject));
-  pool = pool.slice(0, section.questionCount);
-  return pool.map((q) => ({
+  const rawPool = subject === "all" ? bmsQuestions : getQuestionsBySubject(subject);
+  const pool = variant != null
+    ? seededShuffle(rawPool, variant * 10000 + section.questionCount + section.id.charCodeAt(0))
+    : shuffle(rawPool);
+  return pool.slice(0, section.questionCount).map((q) => ({
     id: q.id,
     sectionId: section.id,
-    sectionType: "bms",
+    sectionType: "bms" as SectionType,
     text: q.text,
     options: q.options,
     correctOptionId: q.correctOptionId,
@@ -354,10 +375,10 @@ function generateSekQuestions(section: SimSection): UnifiedQuestion[] {
   }));
 }
 
-function generateQuestionsForSection(section: SimSection): { questions: UnifiedQuestion[]; cards?: AllergyCard[] } {
+function generateQuestionsForSection(section: SimSection, variant?: number): { questions: UnifiedQuestion[]; cards?: AllergyCard[] } {
   switch (section.sectionType) {
     case "bms":
-      return { questions: generateBmsQuestions(section) };
+      return { questions: generateBmsQuestions(section, variant) };
     case "tv":
       return { questions: generateTvQuestions(section) };
     case "kff-zahlenfolgen":
@@ -517,6 +538,7 @@ export default function Simulation() {
   const [learnTimeLeft, setLearnTimeLeft] = useState(0);
   const [sectionTimeData, setSectionTimeData] = useState<SectionTimeData[]>([]);
   const [sectionStartTime, setSectionStartTime] = useState(0);
+  const [simVariant, setSimVariant] = useState<number | undefined>(undefined);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
 
@@ -537,8 +559,9 @@ export default function Simulation() {
   // SIMULATION START
   // ============================================================
 
-  const startSimulation = useCallback((type: "full" | "bms" | "tv" | "kff" | "sek" | "kurz", sectionId?: string) => {
+  const startSimulation = useCallback((type: "full" | "bms" | "tv" | "kff" | "sek" | "kurz", sectionId?: string, variant?: number) => {
     setSimType(type);
+    setSimVariant(variant);
 
     let secs: SimSection[];
 
@@ -574,7 +597,7 @@ export default function Simulation() {
     let cardsForGedaechtnis: AllergyCard[] = [];
 
     for (const sec of secs) {
-      const result = generateQuestionsForSection(sec);
+      const result = generateQuestionsForSection(sec, variant);
       questionMap.set(sec.id, result.questions);
       if (result.cards) cardsForGedaechtnis = result.cards;
     }
@@ -864,18 +887,24 @@ export default function Simulation() {
               </div>
             </div>
 
-            <div className="flex items-center justify-between bg-orange-50 dark:bg-orange-900/10 rounded-lg p-3">
-              <div>
-                <p className="text-sm font-medium text-orange-800 dark:text-orange-300">
-                  Gesamt: {totalFullQuestions} Fragen
-                </p>
-                <p className="text-xs text-orange-600 dark:text-orange-400">
-                  ~{totalFullMinutes} Minuten inkl. Pausen
-                </p>
+            <div className="bg-orange-50 dark:bg-orange-900/10 rounded-lg p-3 space-y-3">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-medium text-orange-800 dark:text-orange-300">
+                    Gesamt: {totalFullQuestions} Fragen
+                  </p>
+                  <p className="text-xs text-orange-600 dark:text-orange-400">
+                    ~{totalFullMinutes} Minuten inkl. Pausen
+                  </p>
+                </div>
               </div>
-              <Button size="lg" onClick={() => startSimulation("full")}>
-                <Play className="w-5 h-5 mr-2" /> Starten
-              </Button>
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+                {[1, 2, 3, 4, 5].map((v) => (
+                  <Button key={v} variant={v === 1 ? "primary" : "outline"} onClick={() => startSimulation("full", undefined, v)}>
+                    <Play className="w-4 h-4 mr-1" /> Simulation {v}
+                  </Button>
+                ))}
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -1292,7 +1321,7 @@ export default function Simulation() {
 
         <div className="flex justify-center gap-3 pb-8">
           <Button variant="outline" onClick={() => setMode("select")}>Zurück zur Auswahl</Button>
-          <Button onClick={() => startSimulation(simType)}>Neue Simulation</Button>
+          <Button onClick={() => startSimulation(simType, undefined, simVariant)}>Neue Simulation</Button>
         </div>
       </div>
     );
