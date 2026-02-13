@@ -447,6 +447,78 @@ export default function Lernplan() {
             </CardContent>
           </Card>
 
+          {/* Tagesansicht */}
+          <Card className="border-2 border-primary-200 dark:border-primary-800">
+            <CardHeader className="pb-2">
+              <CardTitle className="flex items-center gap-2 text-base">
+                <CalendarDays className="w-4 h-4 text-primary-600" />
+                Heutiger Lernplan
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {(() => {
+                const dailyMinutes = Math.round((plan.weeklyPlan.reduce((s, p) => s + p.minutesPerWeek, 0)) / 7);
+                const today = new Date().toISOString().split("T")[0];
+                const { quizResults: qr } = useStore.getState();
+                const todayResults = qr.filter((r) => r.timestamp?.startsWith(today));
+                const questionsToday = todayResults.reduce((s, r) => s + r.total, 0);
+                const estMinutesSpent = Math.round(questionsToday * 1.5); // ~1.5 min per question estimate
+                const dailyProgress = Math.min(100, Math.round((estMinutesSpent / dailyMinutes) * 100));
+
+                const todayTasks = plan.weeklyPlan.map((item) => {
+                  const mc = moduleConfig[item.module];
+                  const dailyMins = Math.round(item.minutesPerWeek / 7);
+                  const todayModuleResults = todayResults.filter((r) => r.type.toUpperCase() === item.module);
+                  const todayModuleQuestions = todayModuleResults.reduce((s, r) => s + r.total, 0);
+                  const moduleMinsDone = Math.round(todayModuleQuestions * 1.5);
+                  return {
+                    module: item.module,
+                    label: mc.label,
+                    icon: mc.icon,
+                    bg: mc.bg,
+                    text: mc.text,
+                    targetMinutes: dailyMins,
+                    doneMinutes: moduleMinsDone,
+                    done: moduleMinsDone >= dailyMins,
+                    link: `/${item.module.toLowerCase()}`,
+                  };
+                });
+
+                return (
+                  <>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-700 dark:text-gray-300">
+                        ca. {dailyMinutes} Minuten heute geplant
+                      </span>
+                      <span className="text-sm font-bold text-primary-700 dark:text-primary-400">{dailyProgress}%</span>
+                    </div>
+                    <Progress value={dailyProgress} className={dailyProgress >= 100 ? "[&>div]:bg-emerald-500" : ""} />
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                      {todayTasks.map((task) => (
+                        <Link key={task.module} to={task.link}>
+                          <div className={`p-3 rounded-lg border ${task.done ? "border-emerald-300 dark:border-emerald-700 bg-emerald-50 dark:bg-emerald-900/20" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"} transition-colors cursor-pointer`}>
+                            <div className="flex items-center gap-2 mb-1">
+                              <task.icon className={`w-4 h-4 ${task.done ? "text-emerald-600" : task.text}`} />
+                              <span className="text-sm font-medium text-gray-900 dark:text-gray-100">{task.label}</span>
+                            </div>
+                            <div className="flex items-center justify-between text-xs">
+                              <span className="text-muted">{task.targetMinutes} min</span>
+                              {task.done ? (
+                                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                              ) : (
+                                <span className="text-muted">{task.doneMinutes}/{task.targetMinutes}</span>
+                              )}
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </>
+                );
+              })()}
+            </CardContent>
+          </Card>
+
           {/* Stichwort Coverage */}
           <Card>
             <CardContent className="p-4">

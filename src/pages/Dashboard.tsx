@@ -446,6 +446,63 @@ export default function Dashboard() {
         );
       })()}
 
+      {/* Tagesziel */}
+      {(() => {
+        const today = new Date().toISOString().split("T")[0];
+        const todayResults = quizResults.filter((r) => r.timestamp?.startsWith(today));
+        const questionsToday = todayResults.reduce((s, r) => s + r.total, 0);
+        const correctToday = todayResults.reduce((s, r) => s + r.score, 0);
+        const dailyGoal = 30; // Target: 30 questions per day
+        const goalProgress = Math.min(100, Math.round((questionsToday / dailyGoal) * 100));
+
+        const todayModules: Record<string, number> = {};
+        todayResults.forEach((r) => {
+          const key = r.type.toUpperCase();
+          todayModules[key] = (todayModules[key] || 0) + r.total;
+        });
+
+        const store = useAdaptiveStore.getState();
+        const rec = store.getRecommendation();
+        const focusTopics = rec.focusTopics.slice(0, 3);
+
+        return (
+          <Card className={`border-l-4 ${goalProgress >= 100 ? "border-l-emerald-500 bg-emerald-50/50 dark:bg-emerald-900/10" : "border-l-blue-500"}`}>
+            <CardContent className="p-4">
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <Target className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                    Tagesziel
+                    {goalProgress >= 100 && <span className="ml-2 text-emerald-600 dark:text-emerald-400">Geschafft!</span>}
+                  </h3>
+                </div>
+                <span className="text-xs text-muted">{questionsToday}/{dailyGoal} Fragen</span>
+              </div>
+
+              <Progress value={goalProgress} className={goalProgress >= 100 ? "[&>div]:bg-emerald-500" : ""} />
+
+              <div className="mt-3 flex items-center justify-between">
+                <div className="flex gap-3 text-xs text-muted">
+                  {Object.entries(todayModules).map(([mod, count]) => (
+                    <span key={mod}>{mod}: {count}</span>
+                  ))}
+                  {questionsToday > 0 && (
+                    <span className="text-emerald-600 dark:text-emerald-400">
+                      {Math.round((correctToday / questionsToday) * 100)}% richtig
+                    </span>
+                  )}
+                </div>
+                {focusTopics.length > 0 && questionsToday < dailyGoal && (
+                  <div className="text-xs text-muted">
+                    Fokus: {focusTopics.map((t) => t.thema).join(", ")}
+                  </div>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+        );
+      })()}
+
       <div>
         <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Lernmodule</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
