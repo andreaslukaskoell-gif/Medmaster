@@ -269,8 +269,15 @@ function generateTvQuestions(section: SimSection): UnifiedQuestion[] {
   return questions.slice(0, section.questionCount);
 }
 
+function mixDifficulties<T>(gen: (n: number, d: "leicht" | "mittel" | "schwer") => T[], count: number): T[] {
+  const p = Math.ceil(count / 3);
+  const all = [...gen(p, "leicht"), ...gen(p, "mittel"), ...gen(p, "schwer")].slice(0, count);
+  for (let i = all.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [all[i], all[j]] = [all[j], all[i]]; }
+  return all;
+}
+
 function generateZahlenfolgenQuestions(section: SimSection): UnifiedQuestion[] {
-  const set = generateZahlenfolgenSet(section.questionCount, "mittel");
+  const set = mixDifficulties(generateZahlenfolgenSet, section.questionCount);
   return set.map((q) => ({
     id: q.id,
     sectionId: section.id,
@@ -301,7 +308,7 @@ function generateGedaechtnisQuestions(section: SimSection): { cards: AllergyCard
 }
 
 function generateImplikationenQuestions(section: SimSection): UnifiedQuestion[] {
-  const set = generateSyllogismSet(section.questionCount, "mittel");
+  const set = mixDifficulties(generateSyllogismSet, section.questionCount);
   return set.map((q) => ({
     id: q.id,
     sectionId: section.id,
@@ -315,7 +322,7 @@ function generateImplikationenQuestions(section: SimSection): UnifiedQuestion[] 
 }
 
 function generateWortflüssigkeitQuestions(section: SimSection): UnifiedQuestion[] {
-  const set = generateWortflüssigkeitSet(section.questionCount, "mittel");
+  const set = mixDifficulties(generateWortflüssigkeitSet, section.questionCount);
   return set.map((q) => ({
     id: q.id,
     sectionId: section.id,

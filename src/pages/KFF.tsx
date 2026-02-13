@@ -24,12 +24,10 @@ import { useStore } from "@/store/useStore";
 type KffView =
   | "overview"
   | "strategy"
-  | "zahlenfolgen-setup"
   | "zahlenfolgen"
   | "gedaechtnis-learn"
   | "gedaechtnis-quiz"
   | "implikationen"
-  | "wortflüssigkeit-setup"
   | "wortflüssigkeit"
   | "figuren-strategy"
   | "figuren-quiz";
@@ -90,12 +88,10 @@ export default function KFF() {
     );
   }
 
-  if (view === "zahlenfolgen-setup") return <ZahlenfolgenSetup onStart={(d, c) => setView("zahlenfolgen")} onBack={() => setView("overview")} />;
   if (view === "zahlenfolgen") return <ZahlenfolgenQuiz onBack={() => setView("overview")} />;
   if (view === "gedaechtnis-learn") return <GedaechtnisLearn onStart={() => setView("gedaechtnis-quiz")} onBack={() => setView("overview")} />;
   if (view === "gedaechtnis-quiz") return <GedaechtnisQuiz onBack={() => setView("overview")} />;
   if (view === "implikationen") return <ImplikationenQuiz onBack={() => setView("overview")} />;
-  if (view === "wortflüssigkeit-setup") return <WortflüssigkeitSetup onBack={() => setView("overview")} />;
   if (view === "wortflüssigkeit") return <WortflüssigkeitQuiz onBack={() => setView("overview")} />;
 
   const modules = [
@@ -104,7 +100,7 @@ export default function KFF() {
       title: "Zahlenfolgen",
       desc: "Erkenne das Muster und finde die nächste Zahl. Unendlich viele generierte Aufgaben!",
       strategyKey: "zahlenfolgen" as StrategyKey,
-      startView: "zahlenfolgen-setup" as KffView,
+      startView: "zahlenfolgen" as KffView,
       color: "bg-blue-100 dark:bg-blue-900/30",
       textColor: "text-blue-600 dark:text-blue-400",
       badge: "Generiert",
@@ -134,7 +130,7 @@ export default function KFF() {
       title: "Wortflüssigkeit",
       desc: "Erkenne das Wort aus den vertauschten Buchstaben. Mit welchem Buchstaben beginnt es?",
       strategyKey: "wortflüssigkeit" as StrategyKey,
-      startView: "wortflüssigkeit-setup" as KffView,
+      startView: "wortflüssigkeit" as KffView,
       color: "bg-orange-100 dark:bg-orange-900/30",
       textColor: "text-orange-600 dark:text-orange-400",
       badge: "Generiert",
@@ -199,65 +195,31 @@ export default function KFF() {
 }
 
 // ==========================================
-// ZAHLENFOLGEN - with difficulty + generator
+// Helpers
 // ==========================================
 
-function ZahlenfolgenSetup({ onStart, onBack }: { onStart: (difficulty: string, count: number) => void; onBack: () => void }) {
-  const [difficulty, setDifficulty] = useState<"leicht" | "mittel" | "schwer">("mittel");
-  const [count, setCount] = useState(10);
-
-  return (
-    <div className="max-w-2xl mx-auto space-y-6">
-      <Button variant="ghost" size="sm" onClick={onBack}>
-        <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
-      </Button>
-      <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Zahlenfolgen</h1>
-
-      <Card>
-        <CardContent className="p-6 space-y-6">
-          <div>
-            <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">Schwierigkeit</label>
-            <div className="flex gap-3">
-              {(["leicht", "mittel", "schwer"] as const).map((d) => (
-                <button key={d} onClick={() => setDifficulty(d)}
-                  className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer capitalize ${
-                    difficulty === d
-                      ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                      : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
-                  }`}>
-                  {d}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">Anzahl Fragen</label>
-            <div className="flex gap-3">
-              {[5, 10, 15, 20].map((c) => (
-                <button key={c} onClick={() => setCount(c)}
-                  className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
-                    count === c
-                      ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                      : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
-                  }`}>
-                  {c}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <Button className="w-full" size="lg" onClick={() => onStart(difficulty, count)}>
-            <Shuffle className="w-5 h-5 mr-2" /> {count} Fragen generieren
-          </Button>
-        </CardContent>
-      </Card>
-    </div>
-  );
+function shuffleMixed<T>(
+  generator: (count: number, diff: "leicht" | "mittel" | "schwer") => T[],
+  totalCount: number,
+): T[] {
+  const perDiff = Math.ceil(totalCount / 3);
+  const all = [
+    ...generator(perDiff, "leicht"),
+    ...generator(perDiff, "mittel"),
+    ...generator(perDiff, "schwer"),
+  ].slice(0, totalCount);
+  for (let i = all.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [all[i], all[j]] = [all[j], all[i]];
+  }
+  return all;
 }
 
+// ==========================================
+// ZAHLENFOLGEN
+// ==========================================
+
 function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
-  const [difficulty, setDifficulty] = useState<"leicht" | "mittel" | "schwer">("mittel");
   const [questionCount, setQuestionCount] = useState(10);
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [questions, setQuestions] = useState<ZahlenfolgeGenerated[]>([]);
@@ -266,7 +228,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
   const startQuiz = () => {
-    const generated = generateZahlenfolgenSet(questionCount, difficulty);
+    const generated = shuffleMixed(generateZahlenfolgenSet, questionCount);
     setQuestions(generated);
     setIndex(0);
     setAnswers({});
@@ -276,7 +238,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   const handleSubmit = () => {
     const score = questions.filter((q) => answers[q.id] === q.correctOption).length;
     saveQuizResult({
-      id: `kff-zf-${Date.now()}`, type: "kff", subject: `Zahlenfolgen (${difficulty})`, score, total: questions.length,
+      id: `kff-zf-${Date.now()}`, type: "kff", subject: "Zahlenfolgen", score, total: questions.length,
       date: new Date().toLocaleDateString("de-AT"),
       answers: questions.map((q) => ({ questionId: q.id, selectedAnswer: q.options[answers[q.id]] ?? "", correct: answers[q.id] === q.correctOption })),
     });
@@ -295,21 +257,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Zahlenfolgen</h1>
         <Card>
           <CardContent className="p-6 space-y-6">
-            <div>
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">Schwierigkeit</label>
-              <div className="flex gap-3">
-                {(["leicht", "mittel", "schwer"] as const).map((d) => (
-                  <button key={d} onClick={() => setDifficulty(d)}
-                    className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer capitalize ${
-                      difficulty === d
-                        ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                        : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
-                    }`}>
-                    {d}
-                  </button>
-                ))}
-              </div>
-            </div>
+            <p className="text-sm text-muted">Schwierigkeit wird automatisch gemischt (leicht, mittel, schwer).</p>
             <div>
               <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">Anzahl Fragen</label>
               <div className="flex gap-3">
@@ -389,10 +337,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen</Button>
-        <div className="flex items-center gap-2">
-          <Badge variant="info">{difficulty}</Badge>
-          <span className="text-sm text-muted">Frage {index + 1} von {questions.length}</span>
-        </div>
+        <span className="text-sm text-muted">Frage {index + 1} von {questions.length}</span>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
         <div className="bg-primary-600 h-2 rounded-full transition-all" style={{ width: `${((index + 1) / questions.length) * 100}%` }} />
@@ -575,7 +520,6 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
 
 function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
-  const [difficulty, setDifficulty] = useState<"leicht" | "mittel" | "schwer">("mittel");
   const [questionCount, setQuestionCount] = useState(10);
   const [questions, setQuestions] = useState<SyllogismQuestion[]>([]);
   const [index, setIndex] = useState(0);
@@ -583,7 +527,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
   const startQuiz = () => {
-    setQuestions(generateSyllogismSet(questionCount, difficulty));
+    setQuestions(shuffleMixed(generateSyllogismSet, questionCount));
     setIndex(0);
     setAnswers({});
     setPhase("quiz");
@@ -594,7 +538,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
   const handleSubmit = () => {
     const score = questions.filter((q) => answers[q.id] === q.correctOption).length;
     saveQuizResult({
-      id: `kff-imp-${Date.now()}`, type: "kff", subject: `Implikationen (${difficulty})`, score, total: questions.length,
+      id: `kff-imp-${Date.now()}`, type: "kff", subject: "Implikationen", score, total: questions.length,
       date: new Date().toLocaleDateString("de-AT"),
       answers: questions.map((q) => ({ questionId: q.id, selectedAnswer: q.options[answers[q.id]] || "", correct: answers[q.id] === q.correctOption })),
     });
@@ -611,17 +555,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Implikationen erkennen</h1>
         <p className="text-sm text-muted">Kategorische Syllogismen: Zwei Prämissen mit "Alle" / "Einige" / "Kein" — welche Schlussfolgerung ist korrekt?</p>
         <Card><CardContent className="p-6 space-y-6">
-          <div>
-            <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">Schwierigkeit</label>
-            <div className="flex gap-3">
-              {(["leicht", "mittel", "schwer"] as const).map((d) => (
-                <button key={d} onClick={() => setDifficulty(d)}
-                  className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer capitalize ${
-                    difficulty === d ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
-                  }`}>{d}</button>
-              ))}
-            </div>
-          </div>
+          <p className="text-sm text-muted">Schwierigkeit wird automatisch gemischt (leicht, mittel, schwer).</p>
           <div>
             <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">Anzahl Fragen</label>
             <div className="flex gap-3">
@@ -696,10 +630,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen</Button>
-        <div className="flex items-center gap-2">
-          <Badge variant="info">{difficulty}</Badge>
-          <span className="text-sm text-muted">Frage {index + 1} von {questions.length}</span>
-        </div>
+        <span className="text-sm text-muted">Frage {index + 1} von {questions.length}</span>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
         <div className="bg-primary-600 h-2 rounded-full transition-all" style={{ width: `${((index + 1) / questions.length) * 100}%` }} />
@@ -738,12 +669,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
 // WORTFLUESSIGKEIT - new module
 // ==========================================
 
-function WortflüssigkeitSetup({ onBack }: { onBack: () => void }) {
-  return <WortflüssigkeitQuiz onBack={onBack} />;
-}
-
 function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
-  const [difficulty, setDifficulty] = useState<"leicht" | "mittel" | "schwer">("mittel");
   const [questionCount, setQuestionCount] = useState(10);
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [questions, setQuestions] = useState<WortflüssigkeitQuestion[]>([]);
@@ -752,7 +678,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
   const startQuiz = () => {
-    const generated = generateWortflüssigkeitSet(questionCount, difficulty);
+    const generated = shuffleMixed(generateWortflüssigkeitSet, questionCount);
     setQuestions(generated);
     setIndex(0);
     setAnswers({});
@@ -762,7 +688,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
   const handleSubmit = () => {
     const score = questions.filter((q) => answers[q.id] === q.correctWord[0]).length;
     saveQuizResult({
-      id: `kff-wf-${Date.now()}`, type: "kff", subject: `Wortflüssigkeit (${difficulty})`, score, total: questions.length,
+      id: `kff-wf-${Date.now()}`, type: "kff", subject: "Wortflüssigkeit", score, total: questions.length,
       date: new Date().toLocaleDateString("de-AT"),
       answers: questions.map((q) => ({ questionId: q.id, selectedAnswer: answers[q.id] || "", correct: answers[q.id] === q.correctWord[0] })),
     });
@@ -782,26 +708,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
         <p className="text-sm text-muted">Die Buchstaben eines Wortes wurden vertauscht. Finde heraus, mit welchem Buchstaben das Wort beginnt!</p>
         <Card>
           <CardContent className="p-6 space-y-6">
-            <div>
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">Schwierigkeit</label>
-              <div className="flex gap-3">
-                {(["leicht", "mittel", "schwer"] as const).map((d) => (
-                  <button key={d} onClick={() => setDifficulty(d)}
-                    className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer capitalize ${
-                      difficulty === d
-                        ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                        : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
-                    }`}>
-                    {d}
-                  </button>
-                ))}
-              </div>
-              <p className="text-xs text-muted mt-2">
-                {difficulty === "leicht" ? "Kurze, einfache Wörter (4-7 Buchstaben)" :
-                 difficulty === "mittel" ? "Zusammengesetzte Wörter (8-12 Buchstaben)" :
-                 "Lange, komplexe Wörter (13+ Buchstaben)"}
-              </p>
-            </div>
+            <p className="text-sm text-muted">Schwierigkeit wird automatisch gemischt (kurze bis lange Wörter).</p>
             <div>
               <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">Anzahl Fragen</label>
               <div className="flex gap-3">
@@ -879,10 +786,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen</Button>
-        <div className="flex items-center gap-2">
-          <Badge variant="info">{difficulty}</Badge>
-          <span className="text-sm text-muted">Wort {index + 1} von {questions.length}</span>
-        </div>
+        <span className="text-sm text-muted">Wort {index + 1} von {questions.length}</span>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
         <div className="bg-primary-600 h-2 rounded-full transition-all" style={{ width: `${((index + 1) / questions.length) * 100}%` }} />
@@ -921,7 +825,6 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
 // ==========================================
 
 function FigurenQuiz({ onBack }: { onBack: () => void }) {
-  const [difficulty, setDifficulty] = useState<"leicht" | "mittel" | "schwer" | "alle">("alle");
   const [questionCount, setQuestionCount] = useState(10);
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [questions, setQuestions] = useState<FZAufgabe[]>([]);
@@ -932,10 +835,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
   const startQuiz = () => {
-    let pool = [...figurenAufgaben];
-    if (difficulty !== "alle") {
-      pool = pool.filter((q) => q.difficulty === difficulty);
-    }
+    const pool = [...figurenAufgaben];
     // Shuffle
     for (let i = pool.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -974,7 +874,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
     saveQuizResult({
       id: `kff-fz-${Date.now()}`,
       type: "kff",
-      subject: `Figuren zusammensetzen${difficulty !== "alle" ? ` (${difficulty})` : ""}`,
+      subject: "Figuren zusammensetzen",
       score,
       total: questions.length,
       date: new Date().toLocaleDateString("de-AT"),
@@ -988,7 +888,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
     checkStreak();
     setPhase("result");
     setIndex(0);
-  }, [questions, answers, difficulty, saveQuizResult, addXP, checkStreak]);
+  }, [questions, answers, saveQuizResult, addXP, checkStreak]);
 
   const goToNext = () => {
     if (index < questions.length - 1) {
@@ -1013,27 +913,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
         <p className="text-sm text-muted">Finde heraus, welche Figur aus den gezeigten Puzzleteilen entsteht. Du hast 1:30 Minuten pro Aufgabe.</p>
         <Card>
           <CardContent className="p-6 space-y-6">
-            <div>
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">Schwierigkeit</label>
-              <div className="flex gap-3 flex-wrap">
-                {(["alle", "leicht", "mittel", "schwer"] as const).map((d) => (
-                  <button key={d} onClick={() => setDifficulty(d)}
-                    className={`flex-1 min-w-[70px] px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer capitalize ${
-                      difficulty === d
-                        ? "border-rose-500 bg-rose-50 dark:bg-rose-900/20 text-rose-800 dark:text-rose-300"
-                        : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
-                    }`}>
-                    {d === "alle" ? "Alle" : d}
-                  </button>
-                ))}
-              </div>
-              <p className="text-xs text-muted mt-2">
-                {difficulty === "alle" ? "Gemischte Schwierigkeit (2-5 Puzzleteile)" :
-                 difficulty === "leicht" ? "Einfache Figuren (2-3 Puzzleteile)" :
-                 difficulty === "mittel" ? "Mittlere Figuren (3-4 Puzzleteile)" :
-                 "Komplexe Figuren (4-5 Puzzleteile)"}
-              </p>
-            </div>
+            <p className="text-sm text-muted">Gemischte Schwierigkeit (2-5 Puzzleteile). Die Schwierigkeit wird automatisch angepasst.</p>
             <div>
               <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">Anzahl Aufgaben</label>
               <div className="flex gap-3">
@@ -1140,7 +1020,6 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen</Button>
         <div className="flex items-center gap-3">
-          <Badge variant="info">{fzQ.difficulty}</Badge>
           <span className="text-sm text-muted">Aufgabe {index + 1} von {questions.length}</span>
           <div className={`flex items-center gap-1 font-mono text-sm font-semibold ${timerColor}`}>
             <Timer className="w-4 h-4" />
