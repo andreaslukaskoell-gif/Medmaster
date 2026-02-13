@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { supabase, isSupabaseConfigured } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase";
 import type { User, Session } from "@supabase/supabase-js";
 
 interface Profile {
@@ -23,11 +23,6 @@ export function useAuth() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!isSupabaseConfigured || !supabase) {
-      setLoading(false);
-      return;
-    }
-
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
       setUser(session?.user ?? null);
@@ -46,14 +41,12 @@ export function useAuth() {
   }, []);
 
   async function fetchProfile(userId: string) {
-    if (!supabase) return;
     const { data } = await supabase.from("profiles").select("*").eq("id", userId).single();
     if (data) setProfile(data as Profile);
     setLoading(false);
   }
 
   async function signUp(email: string, password: string, username: string) {
-    if (!supabase) return { error: { message: "Supabase nicht konfiguriert" } };
     const { error } = await supabase.auth.signUp({
       email,
       password,
@@ -63,19 +56,16 @@ export function useAuth() {
   }
 
   async function signIn(email: string, password: string) {
-    if (!supabase) return { error: { message: "Supabase nicht konfiguriert" } };
     const { error } = await supabase.auth.signInWithPassword({ email, password });
     return { error };
   }
 
   async function signInWithGoogle() {
-    if (!supabase) return { error: { message: "Supabase nicht konfiguriert" } };
     const { error } = await supabase.auth.signInWithOAuth({ provider: "google" });
     return { error };
   }
 
   async function signOut() {
-    if (!supabase) return;
     await supabase.auth.signOut();
     setUser(null);
     setProfile(null);
@@ -83,7 +73,6 @@ export function useAuth() {
   }
 
   async function resetPassword(email: string) {
-    if (!supabase) return { error: { message: "Supabase nicht konfiguriert" } };
     const { error } = await supabase.auth.resetPasswordForEmail(email);
     return { error };
   }
