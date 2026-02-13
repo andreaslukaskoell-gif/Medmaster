@@ -1,4 +1,5 @@
 import { expandedDecks, expandedDeckLabels } from "./flashcards_expanded";
+import { expandedDecks2, expandedDeckLabels2 } from "./flashcards_expanded2";
 
 export interface Flashcard {
   id: string;
@@ -89,6 +90,7 @@ const baseDecks: Record<string, Flashcard[]> = {
 export const flashcardDecks: Record<string, Flashcard[]> = {
   ...baseDecks,
   ...expandedDecks,
+  ...expandedDecks2,
 };
 
 export function getAllFlashcards(): Flashcard[] {
@@ -116,6 +118,7 @@ export function getDeckNames(): { id: string; label: string; count: number; cate
     "mathe-geometrie": "Mathe: Geometrie",
     "mathe-analysis": "Mathe: Analysis",
     ...expandedDeckLabels,
+    ...expandedDeckLabels2,
   };
   return Object.entries(flashcardDecks).map(([id, cards]) => {
     const parts = id.split("-");

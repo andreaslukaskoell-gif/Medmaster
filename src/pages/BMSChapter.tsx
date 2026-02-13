@@ -134,11 +134,18 @@ export default function BMSChapter({ chapter, onBack }: Props) {
 
       {/* Sections with diagrams, merke, altfrage, klinik, vergleichsTabelle */}
       <div className="space-y-6">
-        {chapter.sections.map((section, i) => (
+        {chapter.sections.map((section, i) => {
+          const borderColor = {
+            biologie: "border-emerald-500",
+            chemie: "border-red-500",
+            physik: "border-blue-500",
+            mathematik: "border-violet-500",
+          }[chapter.subject] || "border-primary-500";
+          return (
           <Card key={i}>
             <CardContent className="p-6 space-y-4">
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">{section.heading}</h2>
-              <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">{section.content}</div>
+              <h2 className={`text-lg font-semibold text-gray-900 dark:text-gray-100 border-l-4 ${borderColor} pl-4`}>{section.heading}</h2>
+              <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line" dangerouslySetInnerHTML={{ __html: section.content }} />
 
               {section.vergleichsTabelle && (
                 <VergleichsTabelle
@@ -166,7 +173,8 @@ export default function BMSChapter({ chapter, onBack }: Props) {
               )}
             </CardContent>
           </Card>
-        ))}
+          );
+        })}
       </div>
 
       {/* Key Facts */}

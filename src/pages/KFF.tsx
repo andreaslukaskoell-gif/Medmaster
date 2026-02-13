@@ -272,11 +272,11 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   };
 
   const handleSubmit = () => {
-    const score = questions.filter((q) => answers[q.id] === q.correctAnswer).length;
+    const score = questions.filter((q) => answers[q.id] === q.correctOption).length;
     saveQuizResult({
       id: `kff-zf-${Date.now()}`, type: "kff", subject: `Zahlenfolgen (${difficulty})`, score, total: questions.length,
       date: new Date().toLocaleDateString("de-AT"),
-      answers: questions.map((q) => ({ questionId: q.id, selectedAnswer: String(answers[q.id] ?? ""), correct: answers[q.id] === q.correctAnswer })),
+      answers: questions.map((q) => ({ questionId: q.id, selectedAnswer: q.options[answers[q.id]] ?? "", correct: answers[q.id] === q.correctOption })),
     });
     addXP(score * 10);
     checkStreak();
@@ -333,7 +333,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   }
 
   if (phase === "result") {
-    const score = questions.filter((q) => answers[q.id] === q.correctAnswer).length;
+    const score = questions.filter((q) => answers[q.id] === q.correctOption).length;
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
@@ -343,17 +343,17 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
           <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{score * 10} XP</p>
         </CardContent></Card>
         {questions.map((q, i) => {
-          const correct = answers[q.id] === q.correctAnswer;
+          const correct = answers[q.id] === q.correctOption;
           return (
             <Card key={q.id} className={`border-l-4 ${correct ? "border-l-green-500" : "border-l-red-500"}`}>
               <CardContent className="p-5">
                 <div className="flex items-center gap-2 mb-2">
                   {correct ? <CheckCircle2 className="w-5 h-5 text-green-500" /> : <XCircle className="w-5 h-5 text-red-500" />}
-                  <span className="font-medium">{i + 1}. {q.sequence.join(", ")}, ?</span>
+                  <span className="font-medium">{i + 1}. {q.sequence.join(", ")}, ?, ?</span>
                   <Badge variant="info" className="text-[10px]">{q.difficulty}</Badge>
                 </div>
-                {!correct && <p className="text-sm text-red-600 dark:text-red-400 ml-7">Deine Antwort: {answers[q.id]}</p>}
-                <p className="text-sm text-green-700 dark:text-green-400 ml-7">Richtige Antwort: {q.correctAnswer}</p>
+                {!correct && answers[q.id] !== undefined && <p className="text-sm text-red-600 dark:text-red-400 ml-7">Deine Antwort: {q.options[answers[q.id]]}</p>}
+                <p className="text-sm text-green-700 dark:text-green-400 ml-7">Richtige Antwort: {q.correctPair[0]}, {q.correctPair[1]}</p>
                 <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg"><p className="text-xs text-blue-700 dark:text-blue-400">{q.explanation}</p></div>
               </CardContent>
             </Card>
@@ -384,12 +384,13 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
         <div className="bg-primary-600 h-2 rounded-full transition-all" style={{ width: `${((index + 1) / questions.length) * 100}%` }} />
       </div>
       <Card><CardContent className="p-6">
-        <p className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-6">{q.sequence.join(", ")}, <span className="text-primary-700 dark:text-primary-400">?</span></p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          {q.options.map((opt) => (
-            <button key={opt} onClick={() => setAnswers((p) => ({ ...p, [q.id]: opt }))}
-              className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${answers[q.id] === opt ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"}`}>
-              {opt}
+        <p className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">{q.sequence.join(", ")}, <span className="text-primary-700 dark:text-primary-400">?, ?</span></p>
+        <p className="text-sm text-muted mb-6">Welche zwei Zahlen folgen als nächstes?</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {q.options.map((opt, oi) => (
+            <button key={oi} onClick={() => setAnswers((p) => ({ ...p, [q.id]: oi }))}
+              className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer text-left ${answers[q.id] === oi ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"}`}>
+              <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>{opt}
             </button>
           ))}
         </div>

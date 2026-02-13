@@ -114,8 +114,9 @@ interface UnifiedQuestion {
   tvExplanation?: string;
   // KFF Zahlenfolgen
   sequence?: number[];
-  numOptions?: number[];
-  correctNumber?: number;
+  numOptions?: string[];
+  correctOption?: number;
+  correctPair?: [number, number];
   zfExplanation?: string;
   // KFF Gedaechtnis
   memText?: string;
@@ -251,7 +252,8 @@ function generateZahlenfolgenQuestions(section: SimSection): UnifiedQuestion[] {
     sectionType: "kff-zahlenfolgen",
     sequence: q.sequence,
     numOptions: q.options,
-    correctNumber: q.correctAnswer,
+    correctOption: q.correctOption,
+    correctPair: q.correctPair,
     zfExplanation: q.explanation,
   }));
 }
@@ -391,7 +393,7 @@ function isQuestionCorrect(q: UnifiedQuestion, answer: string): boolean {
     case "tv":
       return (answer === "ableitbar") === q.isDerivable;
     case "kff-zahlenfolgen":
-      return answer === String(q.correctNumber);
+      return answer === String(q.correctOption);
     case "kff-gedaechtnis":
       return answer === q.memCorrect;
     case "kff-implikationen":
@@ -415,7 +417,7 @@ function getCorrectAnswerDisplay(q: UnifiedQuestion): string {
     case "tv":
       return q.isDerivable ? "Ableitbar" : "Nicht ableitbar";
     case "kff-zahlenfolgen":
-      return String(q.correctNumber);
+      return q.correctPair ? `${q.correctPair[0]}, ${q.correctPair[1]}` : "";
     case "kff-gedaechtnis":
       return q.memCorrect || "";
     case "kff-implikationen":
@@ -1388,20 +1390,21 @@ export default function Simulation() {
               {n}{i < (q.sequence?.length || 0) - 1 ? "," : ""}
             </span>
           ))}
-          <span className="text-2xl font-mono font-bold text-primary-600 dark:text-primary-400">?</span>
+          <span className="text-2xl font-mono font-bold text-primary-600 dark:text-primary-400">?, ?</span>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {q.numOptions?.map((opt) => (
+        <p className="text-sm text-muted mb-4">Welche zwei Zahlen folgen als nächstes?</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {q.numOptions?.map((opt, oi) => (
             <button
-              key={opt}
-              onClick={() => setAnswers((p) => ({ ...p, [q.id]: String(opt) }))}
-              className={`px-4 py-3 rounded-lg border text-sm font-mono font-bold transition-colors cursor-pointer text-center ${
-                answers[q.id] === String(opt)
+              key={oi}
+              onClick={() => setAnswers((p) => ({ ...p, [q.id]: String(oi) }))}
+              className={`px-4 py-3 rounded-lg border text-sm font-mono font-bold transition-colors cursor-pointer text-left ${
+                answers[q.id] === String(oi)
                   ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
                   : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
               }`}
             >
-              {opt}
+              <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>{opt}
             </button>
           ))}
         </div>

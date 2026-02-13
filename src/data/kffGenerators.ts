@@ -7,9 +7,10 @@
 
 export interface ZahlenfolgeGenerated {
   id: string;
-  sequence: number[];
-  correctAnswer: number;
-  options: number[];
+  sequence: number[];          // GENAU 7 Zahlen
+  correctPair: [number, number]; // Die nächsten 2 Zahlen (8. und 9.)
+  options: string[];           // 5 Optionen als Zahlenpaare z.B. "256, 512"
+  correctOption: number;       // Index 0-4
   explanation: string;
   difficulty: "leicht" | "mittel" | "schwer";
 }
@@ -27,100 +28,94 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-function generateArithmetic(): { seq: number[]; answer: number; explanation: string } {
+function generateArithmetic(): { seq: number[]; answer: [number, number]; explanation: string } {
   const start = randInt(1, 30);
   const diff = randInt(2, 12);
-  const len = randInt(5, 7);
   const seq: number[] = [];
-  for (let i = 0; i < len; i++) seq.push(start + diff * i);
+  for (let i = 0; i < 7; i++) seq.push(start + diff * i);
   return {
     seq,
-    answer: start + diff * len,
+    answer: [start + diff * 7, start + diff * 8],
     explanation: `Arithmetische Folge mit Differenz +${diff}. Jedes Element ist um ${diff} größer als das vorherige.`,
   };
 }
 
-function generateGeometric(): { seq: number[]; answer: number; explanation: string } {
+function generateGeometric(): { seq: number[]; answer: [number, number]; explanation: string } {
   const start = randInt(1, 5);
-  const ratio = randInt(2, 4);
-  const len = randInt(4, 6);
+  const ratio = randInt(2, 3);
   const seq: number[] = [];
-  for (let i = 0; i < len; i++) seq.push(start * Math.pow(ratio, i));
+  for (let i = 0; i < 7; i++) seq.push(start * Math.pow(ratio, i));
   return {
     seq,
-    answer: start * Math.pow(ratio, len),
+    answer: [start * Math.pow(ratio, 7), start * Math.pow(ratio, 8)],
     explanation: `Geometrische Folge mit Faktor x${ratio}. Jedes Element wird mit ${ratio} multipliziert.`,
   };
 }
 
-function generateAlternating(): { seq: number[]; answer: number; explanation: string } {
+function generateAlternating(): { seq: number[]; answer: [number, number]; explanation: string } {
   const a = randInt(2, 8);
   const b = randInt(2, 8);
-  const len = 7;
-  const seq: number[] = [];
-  for (let i = 0; i < len; i++) seq.push(i % 2 === 0 ? seq.length === 0 ? a : seq[seq.length - 1] + a : seq[seq.length - 1] + b);
-  // Actually let's make it cleaner: alternating +a, +b
   const start = randInt(1, 10);
-  const seq2: number[] = [start];
-  for (let i = 1; i < len; i++) {
-    seq2.push(seq2[i - 1] + (i % 2 === 1 ? a : b));
+  const seq: number[] = [start];
+  for (let i = 1; i < 7; i++) {
+    seq.push(seq[i - 1] + (i % 2 === 1 ? a : b));
   }
-  const answer = seq2[len - 1] + (len % 2 === 1 ? a : b);
+  const a8 = seq[6] + (7 % 2 === 1 ? a : b);
+  const a9 = a8 + (8 % 2 === 1 ? a : b);
   return {
-    seq: seq2,
-    answer,
+    seq,
+    answer: [a8, a9],
     explanation: `Wechselnde Differenzen: abwechselnd +${a} und +${b}.`,
   };
 }
 
-function generateSquare(): { seq: number[]; answer: number; explanation: string } {
+function generateSquare(): { seq: number[]; answer: [number, number]; explanation: string } {
   const offset = randInt(0, 5);
-  const len = randInt(5, 7);
   const seq: number[] = [];
-  for (let i = 1; i <= len; i++) seq.push(i * i + offset);
+  for (let i = 1; i <= 7; i++) seq.push(i * i + offset);
   return {
     seq,
-    answer: (len + 1) * (len + 1) + offset,
+    answer: [8 * 8 + offset, 9 * 9 + offset],
     explanation: offset === 0
-      ? `Quadratzahlen: 1², 2², 3², ... Das nächste Glied ist ${len + 1}² = ${(len + 1) * (len + 1)}.`
-      : `Quadratzahlen + ${offset}: n² + ${offset}. Das nächste Glied ist ${len + 1}² + ${offset} = ${(len + 1) * (len + 1) + offset}.`,
+      ? `Quadratzahlen: 1², 2², 3², ... Die nächsten Glieder sind 8² = 64 und 9² = 81.`
+      : `Quadratzahlen + ${offset}: n² + ${offset}. Die nächsten Glieder sind 8² + ${offset} = ${64 + offset} und 9² + ${offset} = ${81 + offset}.`,
   };
 }
 
-function generateFibonacciLike(): { seq: number[]; answer: number; explanation: string } {
+function generateFibonacciLike(): { seq: number[]; answer: [number, number]; explanation: string } {
   const a = randInt(1, 5);
   const b = randInt(1, 5);
   const seq = [a, b];
   for (let i = 2; i < 7; i++) seq.push(seq[i - 1] + seq[i - 2]);
-  const answer = seq[seq.length - 1] + seq[seq.length - 2];
+  const a8 = seq[6] + seq[5];
+  const a9 = a8 + seq[6];
   return {
     seq,
-    answer,
-    explanation: `Fibonacci-artige Folge: Jedes Element ist die Summe der beiden vorherigen. ${seq[seq.length - 2]} + ${seq[seq.length - 1]} = ${answer}.`,
+    answer: [a8, a9],
+    explanation: `Fibonacci-artige Folge: Jedes Element ist die Summe der beiden vorherigen. ${seq[5]} + ${seq[6]} = ${a8}, ${seq[6]} + ${a8} = ${a9}.`,
   };
 }
 
-function generateDifference(): { seq: number[]; answer: number; explanation: string } {
+function generateDifference(): { seq: number[]; answer: [number, number]; explanation: string } {
   const start = randInt(1, 10);
   const diffStart = randInt(1, 5);
   const diffDiff = randInt(1, 3);
-  const len = 6;
   const seq: number[] = [start];
   let currentDiff = diffStart;
-  for (let i = 1; i < len; i++) {
+  for (let i = 1; i < 7; i++) {
     seq.push(seq[i - 1] + currentDiff);
     currentDiff += diffDiff;
   }
-  const answer = seq[len - 1] + currentDiff;
+  const a8 = seq[6] + currentDiff;
+  const a9 = a8 + currentDiff + diffDiff;
   return {
     seq,
-    answer,
+    answer: [a8, a9],
     explanation: `Die Differenzen zwischen aufeinanderfolgenden Gliedern steigen um jeweils +${diffDiff}: ${diffStart}, ${diffStart + diffDiff}, ${diffStart + 2 * diffDiff}...`,
   };
 }
 
-function generatePrime(): { seq: number[]; answer: number; explanation: string } {
-  // Generate a list of primes using a simple sieve
+function generatePrime(): { seq: number[]; answer: [number, number]; explanation: string } {
   const isPrime = (n: number): boolean => {
     if (n < 2) return false;
     if (n === 2) return true;
@@ -132,74 +127,59 @@ function generatePrime(): { seq: number[]; answer: number; explanation: string }
   };
   const primes: number[] = [];
   let num = 2;
-  while (primes.length < 10) {
+  while (primes.length < 12) {
     if (isPrime(num)) primes.push(num);
     num++;
   }
-  // Pick a random starting index so it's not always 2,3,5...
   const startIdx = randInt(0, 3);
-  const len = randInt(5, 7);
-  const seq = primes.slice(startIdx, startIdx + len);
-  const answer = primes[startIdx + len];
+  const seq = primes.slice(startIdx, startIdx + 7);
   return {
     seq,
-    answer,
-    explanation: `Primzahlenfolge: Jede Zahl ist nur durch 1 und sich selbst teilbar. Die nächste Primzahl nach ${seq[seq.length - 1]} ist ${answer}.`,
+    answer: [primes[startIdx + 7], primes[startIdx + 8]],
+    explanation: `Primzahlenfolge: Jede Zahl ist nur durch 1 und sich selbst teilbar. Die nächsten Primzahlen sind ${primes[startIdx + 7]} und ${primes[startIdx + 8]}.`,
   };
 }
 
-function generateTriangular(): { seq: number[]; answer: number; explanation: string } {
-  // Triangular numbers: T(n) = n*(n+1)/2 → 1, 3, 6, 10, 15, 21, 28, ...
+function generateTriangular(): { seq: number[]; answer: [number, number]; explanation: string } {
   const offset = randInt(0, 3);
-  const len = randInt(5, 7);
   const seq: number[] = [];
-  for (let i = 1; i <= len; i++) {
+  for (let i = 1; i <= 7; i++) {
     seq.push((i * (i + 1)) / 2 + offset);
   }
-  const nextN = len + 1;
-  const answer = (nextN * (nextN + 1)) / 2 + offset;
+  const a8 = (8 * 9) / 2 + offset;
+  const a9 = (9 * 10) / 2 + offset;
   return {
     seq,
-    answer,
+    answer: [a8, a9],
     explanation: offset === 0
-      ? `Dreieckszahlen: T(n) = n·(n+1)/2. Das nächste Glied ist T(${nextN}) = ${nextN}·${nextN + 1}/2 = ${answer}.`
-      : `Dreieckszahlen + ${offset}: T(n) = n·(n+1)/2 + ${offset}. Das nächste Glied ist ${nextN}·${nextN + 1}/2 + ${offset} = ${answer}.`,
+      ? `Dreieckszahlen: T(n) = n·(n+1)/2. Die nächsten Glieder sind T(8) = ${a8} und T(9) = ${a9}.`
+      : `Dreieckszahlen + ${offset}: T(n) = n·(n+1)/2 + ${offset}. Die nächsten Glieder sind ${a8} und ${a9}.`,
   };
 }
 
-function generatePower(): { seq: number[]; answer: number; explanation: string } {
-  const base = randInt(2, 5);
+function generatePower(): { seq: number[]; answer: [number, number]; explanation: string } {
+  const base = randInt(2, 3);
   const startExp = randInt(1, 2);
-  const len = randInt(5, 7);
   const seq: number[] = [];
-  for (let i = 0; i < len; i++) {
+  for (let i = 0; i < 7; i++) {
     seq.push(Math.pow(base, startExp + i));
   }
-  const answer = Math.pow(base, startExp + len);
   return {
     seq,
-    answer,
-    explanation: `Potenzfolge mit Basis ${base}: ${base}^${startExp}, ${base}^${startExp + 1}, ${base}^${startExp + 2}, ... Das nächste Glied ist ${base}^${startExp + len} = ${answer}.`,
+    answer: [Math.pow(base, startExp + 7), Math.pow(base, startExp + 8)],
+    explanation: `Potenzfolge mit Basis ${base}: ${base}^${startExp}, ${base}^${startExp + 1}, ... Die nächsten Glieder sind ${base}^${startExp + 7} = ${Math.pow(base, startExp + 7)} und ${base}^${startExp + 8} = ${Math.pow(base, startExp + 8)}.`,
   };
 }
 
-function generateNested(): { seq: number[]; answer: number; explanation: string } {
-  // Two interleaved sequences at odd/even positions
-  // Sequence A at positions 1, 3, 5, ... and Sequence B at positions 2, 4, 6, ...
+function generateNested(): { seq: number[]; answer: [number, number]; explanation: string } {
   const startA = randInt(1, 10);
   const diffA = randInt(2, 7);
   const startB = randInt(1, 10);
   const diffB = randInt(2, 7);
-  // Ensure the two subsequences are distinguishable
-  while (startA === startB && diffA === diffB) {
-    // Regenerate is unnecessary since randInt is random; just adjust
-    break;
-  }
-  const len = 8; // even length so both subsequences are balanced
   const seq: number[] = [];
   let aIdx = 0;
   let bIdx = 0;
-  for (let i = 0; i < len; i++) {
+  for (let i = 0; i < 7; i++) {
     if (i % 2 === 0) {
       seq.push(startA + diffA * aIdx);
       aIdx++;
@@ -208,80 +188,76 @@ function generateNested(): { seq: number[]; answer: number; explanation: string 
       bIdx++;
     }
   }
-  // Next element is at position len (0-indexed), which is even → belongs to sequence A
-  const answer = startA + diffA * aIdx;
+  // Position 7 (0-indexed) is odd → belongs to sequence B
+  const a8 = startB + diffB * bIdx;
+  // Position 8 is even → belongs to sequence A
+  const a9 = startA + diffA * aIdx;
   return {
     seq,
-    answer,
-    explanation: `Verschachtelte Folge: An ungeraden Positionen (1., 3., 5., ...): ${startA}, ${startA + diffA}, ${startA + 2 * diffA}, ... (Differenz +${diffA}). An geraden Positionen (2., 4., 6., ...): ${startB}, ${startB + diffB}, ${startB + 2 * diffB}, ... (Differenz +${diffB}). Das nächste Glied gehört zur ersten Teilfolge: ${seq[seq.length - 2]} + ${diffA} = ${answer}.`,
+    answer: [a8, a9],
+    explanation: `Verschachtelte Folge: Ungerade Positionen (1., 3., 5., 7.): +${diffA}. Gerade Positionen (2., 4., 6.): +${diffB}. Die nächsten Glieder sind ${a8} und ${a9}.`,
   };
 }
 
-function generateCombined(): { seq: number[]; answer: number; explanation: string } {
-  // Alternating two operations: e.g. +a then *b, or *a then +b
+function generateCombined(): { seq: number[]; answer: [number, number]; explanation: string } {
   const variant = randInt(0, 1);
   const start = randInt(1, 5);
-  const len = 7;
   const seq: number[] = [start];
 
   if (variant === 0) {
-    // Pattern: +a, then *b, repeating
     const a = randInt(1, 6);
     const b = randInt(2, 3);
-    for (let i = 1; i < len; i++) {
-      if (i % 2 === 1) {
-        seq.push(seq[i - 1] + a);
-      } else {
-        seq.push(seq[i - 1] * b);
-      }
+    for (let i = 1; i < 7; i++) {
+      seq.push(i % 2 === 1 ? seq[i - 1] + a : seq[i - 1] * b);
     }
-    const nextOp = len % 2 === 1 ? "add" : "mul";
-    const answer = nextOp === "add" ? seq[len - 1] + a : seq[len - 1] * b;
+    const a8 = 7 % 2 === 1 ? seq[6] + a : seq[6] * b;
+    const a9 = 8 % 2 === 1 ? a8 + a : a8 * b;
     return {
       seq,
-      answer,
-      explanation: `Kombinierte Folge: Abwechselnd +${a} und ×${b}. ${nextOp === "add" ? `${seq[len - 1]} + ${a} = ${answer}` : `${seq[len - 1]} × ${b} = ${answer}`}.`,
+      answer: [a8, a9],
+      explanation: `Kombinierte Folge: Abwechselnd +${a} und ×${b}. Die nächsten Glieder sind ${a8} und ${a9}.`,
     };
   } else {
-    // Pattern: *a, then +b, repeating
     const a = randInt(2, 3);
     const b = randInt(1, 6);
-    for (let i = 1; i < len; i++) {
-      if (i % 2 === 1) {
-        seq.push(seq[i - 1] * a);
-      } else {
-        seq.push(seq[i - 1] + b);
-      }
+    for (let i = 1; i < 7; i++) {
+      seq.push(i % 2 === 1 ? seq[i - 1] * a : seq[i - 1] + b);
     }
-    const nextOp = len % 2 === 1 ? "mul" : "add";
-    const answer = nextOp === "mul" ? seq[len - 1] * a : seq[len - 1] + b;
+    const a8 = 7 % 2 === 1 ? seq[6] * a : seq[6] + b;
+    const a9 = 8 % 2 === 1 ? a8 * a : a8 + b;
     return {
       seq,
-      answer,
-      explanation: `Kombinierte Folge: Abwechselnd ×${a} und +${b}. ${nextOp === "mul" ? `${seq[len - 1]} × ${a} = ${answer}` : `${seq[len - 1]} + ${b} = ${answer}`}.`,
+      answer: [a8, a9],
+      explanation: `Kombinierte Folge: Abwechselnd ×${a} und +${b}. Die nächsten Glieder sind ${a8} und ${a9}.`,
     };
   }
 }
 
-function generateDistractors(correct: number, count: number): number[] {
-  const distractors = new Set<number>();
-  const offsets = [-2, -1, 1, 2, -3, 3, -5, 5, -10, 10];
-  for (const off of shuffle(offsets)) {
+function generatePairDistractors(correct: [number, number], count: number): string[] {
+  const distractors = new Set<string>();
+  const correctStr = `${correct[0]}, ${correct[1]}`;
+  const offsets = [
+    [-2, -1], [1, 2], [-3, 0], [0, 3], [-1, 1], [2, -2], [-5, -3], [3, 5], [1, -1], [-2, 2],
+    [correct[1] - correct[0], 0], [0, correct[1] - correct[0]],
+  ];
+  for (const [o1, o2] of shuffle(offsets)) {
     if (distractors.size >= count) break;
-    const d = correct + off;
-    if (d !== correct && d > 0) distractors.add(d);
+    const d = `${correct[0] + o1}, ${correct[1] + o2}`;
+    if (d !== correctStr && correct[0] + o1 > 0 && correct[1] + o2 > 0) {
+      distractors.add(d);
+    }
   }
-  // Fill remaining if needed
   let i = 1;
   while (distractors.size < count) {
-    if (correct + i * 7 !== correct) distractors.add(correct + i * 7);
+    const d = `${correct[0] + i * 3}, ${correct[1] + i * 5}`;
+    if (d !== correctStr) distractors.add(d);
     i++;
   }
   return [...distractors].slice(0, count);
 }
 
 export function generateZahlenfolge(difficulty: "leicht" | "mittel" | "schwer"): ZahlenfolgeGenerated {
-  let result: { seq: number[]; answer: number; explanation: string };
+  let result: { seq: number[]; answer: [number, number]; explanation: string };
 
   if (difficulty === "leicht") {
     result = Math.random() > 0.5 ? generateArithmetic() : generateGeometric();
@@ -293,14 +269,17 @@ export function generateZahlenfolge(difficulty: "leicht" | "mittel" | "schwer"):
     result = generators[randInt(0, generators.length - 1)]();
   }
 
-  const distractors = generateDistractors(result.answer, 4);
-  const options = shuffle([result.answer, ...distractors]);
+  const correctStr = `${result.answer[0]}, ${result.answer[1]}`;
+  const distractorStrs = generatePairDistractors(result.answer, 4);
+  const allOptions = shuffle([correctStr, ...distractorStrs]);
+  const correctIdx = allOptions.indexOf(correctStr);
 
   return {
     id: `zf-gen-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
     sequence: result.seq,
-    correctAnswer: result.answer,
-    options,
+    correctPair: result.answer,
+    options: allOptions,
+    correctOption: correctIdx,
     explanation: result.explanation,
     difficulty,
   };
