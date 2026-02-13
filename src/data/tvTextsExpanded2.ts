@@ -573,7 +573,7 @@ const set7: TVTextSet = {
         "auf die Allelfrequenzen haben. In großen Populationen hingegen gleichen sich die " +
         "zufälligen Schwankungen statistisch weitgehend aus. Zwei besondere Szenarien " +
         "veranschaulichen die Wirkung der genetischen Drift. Der sogenannte Gründereffekt " +
-        "tritt auf, wenn eine kleine Gruppe von Individün eine neue Population gründet, " +
+        "tritt auf, wenn eine kleine Gruppe von Individuen eine neue Population gründet, " +
         "beispielsweise bei der Besiedlung einer Insel. Die genetische Zusammensetzung dieser " +
         "Gründerpopulation entspricht nicht der der Ursprungspopulation, da nur eine zufällige " +
         "Stichprobe der Allele mitgenommen wird. Dies kann dazu führen, dass seltene Allele " +
@@ -581,7 +581,7 @@ const set7: TVTextSet = {
         "Häufigkeit bestimmter Erbkrankheiten in isolierten Bevölkerungsgruppen wie den Amish " +
         "in Nordamerika, die auf eine kleine Gründergruppe zurückgehen. Der Flaschenhalseffekt " +
         "beschreibt eine drastische Reduktion der Populationsgröße durch ein Katastrophenereignis " +
-        "wie eine Seuche, eine Naturkatastrophe oder Bejagung. Die überlebenden Individün " +
+        "wie eine Seuche, eine Naturkatastrophe oder Bejagung. Die überlebenden Individuen " +
         "repräsentieren nur einen Bruchteil der ursprünglichen genetischen Vielfalt, und selbst " +
         "wenn die Population sich zahlenmäßig erholt, bleibt die genetische Diversität " +
         "langfristig verringert. Ein klassisches Beispiel sind die Geparden, deren extrem " +
@@ -1010,7 +1010,7 @@ const set8: TVTextSet = {
         "mathematisch beschreibbaren Kurve, die zur Todeszeitberechnung herangezogen wird. " +
         "Die forensische Genetik hat die Rechtsmedizin seit den 1980er-Jahren grundlegend " +
         "verändert. Der genetische Fingerabdruck, der auf der Analyse sogenannter Short Tandem " +
-        "Repeats beruht, kurze sich wiederholende DNA-Sequenzen, die zwischen Individün " +
+        "Repeats beruht, kurze sich wiederholende DNA-Sequenzen, die zwischen Individuen " +
         "variieren, ermöglicht eine nahezu eindeutige Identifizierung von Personen. Mit modernen " +
         "Methoden der DNA-Analyse können selbst kleinste Spuren wie einzelne Hautzellen oder " +
         "Haare ausgewertet werden. Die forensische Medizin steht dabei im Spannungsfeld " +
@@ -1038,13 +1038,13 @@ const set8: TVTextSet = {
           options: [
             "Auf der Analyse der gesamten Genomsequenz eines Individuums.",
             "Auf der Untersuchung von Chromosomenaberrationen in weißen Blutkörperchen.",
-            "Auf der Analyse von Short Tandem Repeats, kurzen sich wiederholenden DNA-Sequenzen, die zwischen Individün variieren.",
+            "Auf der Analyse von Short Tandem Repeats, kurzen sich wiederholenden DNA-Sequenzen, die zwischen Individuen variieren.",
             "Auf der Bestimmung der Blutgruppe und des Rhesusfaktors.",
             "Auf dem Vergleich mitochondrialer DNA-Sequenzen verschiedener Personen.",
           ],
           correctOption: 2,
           explanation:
-            "Der Text erklärt, dass der genetische Fingerabdruck auf der Analyse sogenannter Short Tandem Repeats beruht, kurze sich wiederholende DNA-Sequenzen, die zwischen Individün variieren.",
+            "Der Text erklärt, dass der genetische Fingerabdruck auf der Analyse sogenannter Short Tandem Repeats beruht, kurze sich wiederholende DNA-Sequenzen, die zwischen Individuen variieren.",
         },
       ],
     },

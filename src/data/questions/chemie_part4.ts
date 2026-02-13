@@ -694,7 +694,7 @@ export const fragenPart4 = [
     ],
     korrekteAntwort: 1,
     erklärung: 'Aromaten gehen bevorzugt elektrophile Substitutionsreaktionen ein (nicht Addition!), um das stabile aromatische System zu erhalten. Beispiele: Nitrierung, Sulfonierung, Halogenierung (mit Katalysator), Friedel-Crafts-Alkylierung.',
-    strategieTipp: 'Aromaten bewahren ihre Aromatizität! Daher Substitution statt Addition. Die elektrophile aromatische Substitution ist der wichtigste Reaktionstyp. Erstsubstitünten dirigieren weitere Substitutionen (ortho/meta/para).'
+    strategieTipp: 'Aromaten bewahren ihre Aromatizität! Daher Substitution statt Addition. Die elektrophile aromatische Substitution ist der wichtigste Reaktionstyp. Erstsubstituenten dirigieren weitere Substitutionen (ortho/meta/para).'
   },
   {
     id: 'ch-q-192',
@@ -762,7 +762,7 @@ export const fragenPart4 = [
     ],
     korrekteAntwort: 2,
     erklärung: 'Bei der Dreifachbindung in Ethin (H-C≡C-H) sind die C-Atome sp-hybridisiert. Ein s- und ein p-Orbital bilden zwei sp-Hybridorbitale (linear, 180°). Die beiden übrigen p-Orbitale bilden zwei π-Bindungen.',
-    strategieTipp: 'Hybridisierung: sp³ = Einfachbindung (Teträder, 109,5°), sp² = Doppelbindung (trigonal, 120°), sp = Dreifachbindung (linear, 180°). Die Geometrie folgt aus der Hybridisierung.'
+    strategieTipp: 'Hybridisierung: sp³ = Einfachbindung (Tetraeder, 109,5°), sp² = Doppelbindung (trigonal, 120°), sp = Dreifachbindung (linear, 180°). Die Geometrie folgt aus der Hybridisierung.'
   },
   {
     id: 'ch-q-196',

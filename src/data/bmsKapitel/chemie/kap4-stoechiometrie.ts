@@ -66,14 +66,14 @@ Das molare Volumen Vm gibt das Volumen an, das ein Mol eines idealen Gases unter
     {
       id: 'chem-kap4-uk2',
       title: 'Reaktionsgleichungen ausgleichen',
-      content: `Eine chemische Reaktionsgleichung beschreibt den Ablauf einer chemischen Reaktion in symbolischer Form. Auf der linken Seite stehen die Edukte (Ausgangsstoffe), auf der rechten Seite die Produkte, verbunden durch einen Reaktionspfeil (→). Das fundamentale Prinzip hinter jeder Reaktionsgleichung ist das Gesetz der Massenerhaltung (Lavoisier, 1789): Bei einer chemischen Reaktion geht keine Masse verloren und keine Masse kommt hinzu; die Gesamtmasse der Edukte ist gleich der Gesamtmasse der Produkte. Auf atomarer Ebene bedeutet dies, dass die Anzahl der Atome jedes Elements auf beiden Seiten der Gleichung identisch sein muss. Eine noch nicht ausgeglichene Gleichung heißt Reaktionsschema; erst durch das Anpassen der stöchiometrischen Köffizienten wird sie zur ausgeglichenen Reaktionsgleichung.
+      content: `Eine chemische Reaktionsgleichung beschreibt den Ablauf einer chemischen Reaktion in symbolischer Form. Auf der linken Seite stehen die Edukte (Ausgangsstoffe), auf der rechten Seite die Produkte, verbunden durch einen Reaktionspfeil (→). Das fundamentale Prinzip hinter jeder Reaktionsgleichung ist das Gesetz der Massenerhaltung (Lavoisier, 1789): Bei einer chemischen Reaktion geht keine Masse verloren und keine Masse kommt hinzu; die Gesamtmasse der Edukte ist gleich der Gesamtmasse der Produkte. Auf atomarer Ebene bedeutet dies, dass die Anzahl der Atome jedes Elements auf beiden Seiten der Gleichung identisch sein muss. Eine noch nicht ausgeglichene Gleichung heißt Reaktionsschema; erst durch das Anpassen der stöchiometrischen Koeffizienten wird sie zur ausgeglichenen Reaktionsgleichung.
 
-Das Ausgleichen (Bilanzieren) einer Reaktionsgleichung erfolgt durch das systematische Anpassen der Köffizienten vor den Summenformeln der beteiligten Stoffe. Die Summenformeln selbst dürfen dabei niemals verändert werden, da sie die Identität der Stoffe widerspiegeln. Ein bewährtes Vorgehen ist: (1) Die Gleichung zunächst aufschreiben mit den korrekten Summenformeln. (2) Die Atome elementweise zählen. (3) Mit dem Element beginnen, das in den wenigsten Verbindungen vorkommt (oft Metalle oder komplexere Gruppen). (4) Köffizienten anpassen, bis jedes Element auf beiden Seiten gleich häufig vorkommt. (5) Kontrolle durch Nachzählen aller Atome. Als Beispiel: Die Verbrennung von Methan CH₄ + O₂ → CO₂ + H₂O wird zu CH₄ + 2 O₂ → CO₂ + 2 H₂O (C: 1=1, H: 4=4, O: 4=4).
+Das Ausgleichen (Bilanzieren) einer Reaktionsgleichung erfolgt durch das systematische Anpassen der Koeffizienten vor den Summenformeln der beteiligten Stoffe. Die Summenformeln selbst dürfen dabei niemals verändert werden, da sie die Identität der Stoffe widerspiegeln. Ein bewährtes Vorgehen ist: (1) Die Gleichung zunächst aufschreiben mit den korrekten Summenformeln. (2) Die Atome elementweise zählen. (3) Mit dem Element beginnen, das in den wenigsten Verbindungen vorkommt (oft Metalle oder komplexere Gruppen). (4) Koeffizienten anpassen, bis jedes Element auf beiden Seiten gleich häufig vorkommt. (5) Kontrolle durch Nachzählen aller Atome. Als Beispiel: Die Verbrennung von Methan CH₄ + O₂ → CO₂ + H₂O wird zu CH₄ + 2 O₂ → CO₂ + 2 H₂O (C: 1=1, H: 4=4, O: 4=4).
 
-Aus den stöchiometrischen Köffizienten lassen sich die Stoffmengenverhältnisse (Molverhältnisse) der Reaktionsteilnehmer direkt ablesen. In der ausgeglichenen Gleichung 2 H₂ + O₂ → 2 H₂O bedeutet der Köffizient, dass 2 Mol Wasserstoff mit 1 Mol Sauerstoff zu 2 Mol Wasser reagieren. Diese Verhältnisse sind die Grundlage für stöchiometrische Berechnungen, bei denen man bestimmt, wie viel Produkt aus einer gegebenen Menge Edukt entsteht oder wie viel eines Edukts benötigt wird. Bei Reaktionen mit zwei oder mehr Edukten bestimmt der limitierende Reaktand (das Edukt, das zürst verbraucht wird) die maximale Produktmenge. Das im Überschuss vorhandene Edukt bleibt teilweise unreagiert zurück. Die Ausbeute einer Reaktion ist das Verhältnis der tatsächlich erhaltenen Produktmenge zur theoretisch berechneten Produktmenge, angegeben in Prozent.`,
+Aus den stöchiometrischen Koeffizienten lassen sich die Stoffmengenverhältnisse (Molverhältnisse) der Reaktionsteilnehmer direkt ablesen. In der ausgeglichenen Gleichung 2 H₂ + O₂ → 2 H₂O bedeutet der Koeffizient, dass 2 Mol Wasserstoff mit 1 Mol Sauerstoff zu 2 Mol Wasser reagieren. Diese Verhältnisse sind die Grundlage für stöchiometrische Berechnungen, bei denen man bestimmt, wie viel Produkt aus einer gegebenen Menge Edukt entsteht oder wie viel eines Edukts benötigt wird. Bei Reaktionen mit zwei oder mehr Edukten bestimmt der limitierende Reaktand (das Edukt, das zürst verbraucht wird) die maximale Produktmenge. Das im Überschuss vorhandene Edukt bleibt teilweise unreagiert zurück. Die Ausbeute einer Reaktion ist das Verhältnis der tatsächlich erhaltenen Produktmenge zur theoretisch berechneten Produktmenge, angegeben in Prozent.`,
       merksätze: [
-        'Gesetz der Massenerhaltung: Die Anzahl der Atome jedes Elements muss auf beiden Seiten der Reaktionsgleichung gleich sein. Köffizienten werden angepasst, Summenformeln nie verändert.',
-        'Die stöchiometrischen Köffizienten geben die Molverhältnisse an. Der limitierende Reaktand bestimmt die maximale Produktmenge.'
+        'Gesetz der Massenerhaltung: Die Anzahl der Atome jedes Elements muss auf beiden Seiten der Reaktionsgleichung gleich sein. Koeffizienten werden angepasst, Summenformeln nie verändert.',
+        'Die stöchiometrischen Koeffizienten geben die Molverhältnisse an. Der limitierende Reaktand bestimmt die maximale Produktmenge.'
       ],
       altfrage: {
         question: 'Was versteht man unter dem limitierenden Reaktanden?',
@@ -96,14 +96,14 @@ Aus den stöchiometrischen Köffizienten lassen sich die Stoffmengenverhältniss
         {
           question: 'Was darf beim Ausgleichen einer Reaktionsgleichung NICHT verändert werden?',
           options: [
-            'Die Köffizienten vor den Summenformeln',
+            'Die Koeffizienten vor den Summenformeln',
             'Die Summenformeln der beteiligten Stoffe',
             'Die Seite, auf der die Produkte stehen',
             'Die Aggregatzustandsangaben',
             'Die Reihenfolge der Edukte'
           ],
           correctIndex: 1,
-          explanation: 'Die Summenformeln geben die Identität der Stoffe an und dürfen nie verändert werden. Nur die Köffizienten vor den Formeln werden angepasst, um die Atombilanzen auszugleichen.'
+          explanation: 'Die Summenformeln geben die Identität der Stoffe an und dürfen nie verändert werden. Nur die Koeffizienten vor den Formeln werden angepasst, um die Atombilanzen auszugleichen.'
         },
         {
           question: 'Bei der Reaktion 2 H₂ + O₂ → 2 H₂O: Wie viel Mol Wasser entstehen aus 4 Mol H₂ und 1 Mol O₂?',

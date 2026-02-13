@@ -422,7 +422,7 @@ export const fragenPart2 = [
     ],
     korrekteAntwort: 1,
     erklärung: 'Aus der Wellengleichung y = A sin(kx - ωt) liest man ab: k = 10 rad/m, ω = 50 rad/s. Ausbreitungsgeschwindigkeit: v = ω/k = 50/10 = 5 m/s.',
-    strategieTipp: 'Aus y = A sin(kx - ωt) folgt: v = ω/k. Die Köffizienten vor x und t geben k und ω an.'
+    strategieTipp: 'Aus y = A sin(kx - ωt) folgt: v = ω/k. Die Koeffizienten vor x und t geben k und ω an.'
   },
   {
     id: 'ph-q-076',

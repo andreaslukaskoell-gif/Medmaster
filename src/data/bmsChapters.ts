@@ -502,7 +502,7 @@ Polare vs. unpolare Bindung:
 VSEPR-Modell (Elektronenpaarabstoßung): Bestimmt die räumliche Struktur
 - 2 Elektronenpaare: linear (180°) - z.B. CO2
 - 3 Elektronenpaare: trigonal planar (120°) - z.B. BF3
-- 4 Elektronenpaare: teträdrisch (109,5°) - z.B. CH4
+- 4 Elektronenpaare: tetraedrisch (109,5°) - z.B. CH4
 - Bei freien Elektronenpaaren: Abweichung (H2O: gewinkelt 104,5°)`,
         diagram: "covalent-bond",
         merke: "Sigma-Bindungen erlauben freie Rotation, Pi-Bindungen nicht! Deshalb gibt es bei Doppelbindungen cis/trans-Isomerie.",
@@ -685,7 +685,7 @@ Actio = Reactio. Zu jeder Kraft gibt es eine gleich große, entgegengesetzte Geg
 
 Wichtige Kräfte:
 - Gewichtskraft: F_G = m x g
-- Reibungskraft: F_R = μ x F_N (μ = Reibungsköffizient)
+- Reibungskraft: F_R = μ x F_N (μ = Reibungskoeffizient)
 - Federkraft: F = k x s (Hooke'sches Gesetz)
 - Zentripetalkraft: F_Z = m x v²/r (Kreisbewegung)
 

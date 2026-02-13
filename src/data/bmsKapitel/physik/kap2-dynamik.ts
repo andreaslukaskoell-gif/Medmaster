@@ -98,7 +98,7 @@ Das dritte Newtonsche Gesetz (Wechselwirkungsprinzip, Actio = Reactio) besagt: �
       title: 'Kräfte',
       content: `In der Mechanik treten verschiedene Kraftarten auf, die für das Verständnis physikalischer Vorgänge essenziell sind. Die Gewichtskraft FG = m · g ist die Kraft, mit der die Erde einen Körper anzieht. Sie ist proportional zur Masse m und zur Erdbeschleunigung g ≈ 9,81 m/s². Die Gewichtskraft zeigt stets senkrecht nach unten zum Erdmittelpunkt. Die Normalkraft FN ist die Reaktionskraft einer Unterlage auf einen aufliegenden Körper und steht senkrecht auf der Oberfläche. Auf einer waagerechten Fläche ist die Normalkraft betragsmäßig gleich der Gewichtskraft, auf einer schiefen Ebene ist sie jedoch kleiner. Diese Unterscheidung ist für viele Prüfungsaufgaben entscheidend.
 
-Die Reibungskraft FR wirkt der Bewegung entgegen und ist proportional zur Normalkraft: FR = μ · FN, wobei μ der dimensionslose Reibungsköffizient ist. Man unterscheidet Haftreibung (μH, Körper ruht noch) und Gleitreibung (μG, Körper bewegt sich bereits), wobei die Haftreibung in der Regel größer ist als die Gleitreibung. Dies erklärt, warum es mehr Kraft braucht, einen Schrank in Bewegung zu setzen, als ihn in Bewegung zu halten. Die Reibung ist im Alltag meist erwünscht (Gehen, Bremsen, Greifen), kann aber auch unerwünscht sein (Verschleiß, Energieverlust in Maschinen). Die Rollreibung ist deutlich kleiner als die Gleitreibung, weshalb Räder den Transport erheblich erleichtern.
+Die Reibungskraft FR wirkt der Bewegung entgegen und ist proportional zur Normalkraft: FR = μ · FN, wobei μ der dimensionslose Reibungskoeffizient ist. Man unterscheidet Haftreibung (μH, Körper ruht noch) und Gleitreibung (μG, Körper bewegt sich bereits), wobei die Haftreibung in der Regel größer ist als die Gleitreibung. Dies erklärt, warum es mehr Kraft braucht, einen Schrank in Bewegung zu setzen, als ihn in Bewegung zu halten. Die Reibung ist im Alltag meist erwünscht (Gehen, Bremsen, Greifen), kann aber auch unerwünscht sein (Verschleiß, Energieverlust in Maschinen). Die Rollreibung ist deutlich kleiner als die Gleitreibung, weshalb Räder den Transport erheblich erleichtern.
 
 Die Federkraft folgt dem Hookeschen Gesetz: F = k · s (auch F = D · x geschrieben). Dabei ist k (oder D) die Federkonstante in N/m und s (oder x) die Auslenkung aus der Ruhelage. Die Federkraft ist eine rücktreibende Kraft, die proportional zur Ausdehnung oder Stauchung der Feder ist und ihr entgegenwirkt. Das Hookesche Gesetz gilt nur im linearen Bereich — bei zu großer Auslenkung wird die Feder plastisch verformt und kehrt nicht mehr in ihre Ausgangsform zurück. Federn speichern potenzielle Energie (Espann = ½ · k · s²) und spielen in der Medizintechnik eine Rolle, beispielsweise in Blutdruckmessgeräten, Spritzen und orthopädischen Prothesen. Auch Sehnen und Bänder im menschlichen Körper verhalten sich in gewissen Bereichen federartig.`,
       merksätze: [
@@ -119,7 +119,7 @@ Die Federkraft folgt dem Hookeschen Gesetz: F = k · s (auch F = D · x geschrie
           explanation: 'Auf waagerechter Fläche: FN = FG = m·g = 5 · 10 = 50 N.',
         },
         {
-          question: 'Der Reibungsköffizient beträgt μ = 0,4. Wie groß ist die Reibungskraft bei einer Normalkraft von 100 N?',
+          question: 'Der Reibungskoeffizient beträgt μ = 0,4. Wie groß ist die Reibungskraft bei einer Normalkraft von 100 N?',
           options: ['4 N', '40 N', '400 N', '250 N', '0,4 N'],
           correctIndex: 1,
           explanation: 'FR = μ · FN = 0,4 · 100 = 40 N.',
@@ -143,7 +143,7 @@ Die Federkraft folgt dem Hookeschen Gesetz: F = k · s (auch F = D · x geschrie
       title: 'Schiefe Ebene',
       content: `Die schiefe Ebene ist ein klassisches Thema der Mechanik und ein Dauerbrenner in Physikprüfungen. Liegt ein Körper auf einer geneigten Fläche mit dem Neigungswinkel α, so wird die Gewichtskraft FG = m · g in zwei Komponenten zerlegt: die Hangabtriebskraft FH = m · g · sin(α), die den Körper entlang der Ebene nach unten zieht, und die Normalkraft FN = m · g · cos(α), die senkrecht auf der Ebene steht und den Körper gegen die Oberfläche drückt. Diese Kräftezerlegung ist der Schlüssel zur Lösung aller Aufgaben zur schiefen Ebene. Man beachte, dass bei α = 0° (horizontale Ebene) FH = 0 und FN = FG gilt, und bei α = 90° (senkrechte Wand) FH = FG und FN = 0 ist.
 
-Ob der Körper auf der schiefen Ebene ruht oder gleitet, hängt vom Verhältnis zwischen Hangabtriebskraft und Reibungskraft ab. Die maximale Haftreibungskraft beträgt FR,max = μH · FN = μH · m · g · cos(α). Der Körper beginnt zu gleiten, wenn FH > FR,max, also wenn m · g · sin(α) > μH · m · g · cos(α). Durch Kürzen ergibt sich die Bedingung tan(α) > μH. Der Winkel, bei dem der Körper gerade zu gleiten beginnt, heißt Grenzwinkel der Haftreibung: αgrenz = arctan(μH). Diese Beziehung ist bemerkenswert, weil der Grenzwinkel unabhängig von der Masse des Körpers ist — ein schwerer und ein leichter Körper beginnen bei demselben Winkel zu rutschen, sofern der Reibungsköffizient gleich ist.
+Ob der Körper auf der schiefen Ebene ruht oder gleitet, hängt vom Verhältnis zwischen Hangabtriebskraft und Reibungskraft ab. Die maximale Haftreibungskraft beträgt FR,max = μH · FN = μH · m · g · cos(α). Der Körper beginnt zu gleiten, wenn FH > FR,max, also wenn m · g · sin(α) > μH · m · g · cos(α). Durch Kürzen ergibt sich die Bedingung tan(α) > μH. Der Winkel, bei dem der Körper gerade zu gleiten beginnt, heißt Grenzwinkel der Haftreibung: αgrenz = arctan(μH). Diese Beziehung ist bemerkenswert, weil der Grenzwinkel unabhängig von der Masse des Körpers ist — ein schwerer und ein leichter Körper beginnen bei demselben Winkel zu rutschen, sofern der Reibungskoeffizient gleich ist.
 
 Bewegt sich der Körper auf der schiefen Ebene, so bestimmt die Resultierende aus Hangabtriebskraft und Gleitreibungskraft die Beschleunigung. Die Beschleunigung entlang der Ebene beträgt a = g · (sin(α) - μG · cos(α)). Ist diese positiv, beschleunigt der Körper hangabwärts; ist sie null, gleitet er mit konstanter Geschwindigkeit. In der medizinischen Praxis ist das Prinzip der schiefen Ebene beim Lagern von Patienten relevant: Eine Schrägstellung des Bettes ändert die auf den Körper wirkenden Kraftkomponenten, was beispielsweise bei Trendelenburg-Lagerung therapeutisch genutzt wird. Auch die Biomechanik des Gehens auf Steigungen und Gefällen lässt sich mit dem Modell der schiefen Ebene analysieren.`,
       merksätze: [
@@ -185,7 +185,7 @@ Bewegt sich der Körper auf der schiefen Ebene, so bestimmt die Resultierende au
             'Er hängt vom Material der Oberfläche ab',
           ],
           correctIndex: 2,
-          explanation: 'Der Grenzwinkel αgrenz = arctan(μH) hängt nur vom Reibungsköffizienten ab und ist massenunabhängig.',
+          explanation: 'Der Grenzwinkel αgrenz = arctan(μH) hängt nur vom Reibungskoeffizienten ab und ist massenunabhängig.',
         },
       ],
     },

@@ -68,7 +68,7 @@ Beim Lösen von Gleichungen mit Klammern muss zunächst ausmultipliziert werden,
       title: 'Quadratische Gleichungen',
       content: `Quadratische Gleichungen haben die allgemeine Form ax² + bx + c = 0 mit a ≠ 0. Sie besitzen maximal zwei Lösungen, die als Nullstellen der zugehörigen Parabel interpretiert werden können. Die bekannteste Lösungsformel ist die abc-Formel (auch Mitternachtsformel genannt): x₁,₂ = (-b ± √(b² - 4ac)) / (2a). Der Ausdruck D = b² - 4ac unter der Wurzel heißt Diskriminante und bestimmt die Anzahl der Lösungen: D > 0 ergibt zwei verschiedene reelle Lösungen, D = 0 ergibt genau eine (doppelte) Lösung, und D < 0 bedeutet, dass keine reelle Lösung existiert.
 
-Für normierte quadratische Gleichungen der Form x² + px + q = 0 (also a = 1) vereinfacht sich die Formel zur pq-Formel: x₁,₂ = -p/2 ± √((p/2)² - q). Hier ist die Diskriminante D = (p/2)² - q. Beispiel: x² - 6x + 5 = 0. Mit p = -6 und q = 5: x = 3 ± √(9 - 5) = 3 ± 2, also x₁ = 5 und x₂ = 1. Die Probe bestätigt: 25 - 30 + 5 = 0 ✓ und 1 - 6 + 5 = 0 ✓. Der Satz von Vieta liefert einen eleganten Zusammenhang zwischen Lösungen und Köffizienten: Für x² + px + q = 0 gilt x₁ + x₂ = -p und x₁ · x₂ = q. Diese Beziehung ermöglicht schnelles Überprüfen der Ergebnisse.
+Für normierte quadratische Gleichungen der Form x² + px + q = 0 (also a = 1) vereinfacht sich die Formel zur pq-Formel: x₁,₂ = -p/2 ± √((p/2)² - q). Hier ist die Diskriminante D = (p/2)² - q. Beispiel: x² - 6x + 5 = 0. Mit p = -6 und q = 5: x = 3 ± √(9 - 5) = 3 ± 2, also x₁ = 5 und x₂ = 1. Die Probe bestätigt: 25 - 30 + 5 = 0 ✓ und 1 - 6 + 5 = 0 ✓. Der Satz von Vieta liefert einen eleganten Zusammenhang zwischen Lösungen und Koeffizienten: Für x² + px + q = 0 gilt x₁ + x₂ = -p und x₁ · x₂ = q. Diese Beziehung ermöglicht schnelles Überprüfen der Ergebnisse.
 
 In der Praxis sind alternative Lösungsstrategien oft effizienter als die Formeln. Faktorisierung nutzt aus, dass ax² + bx + c = a(x - x₁)(x - x₂): Wenn die Nullstellen ganzzahlig sind, kann man sie durch geschicktes Probieren finden. Beispiel: x² - 5x + 6 = 0. Man sucht zwei Zahlen mit Summe 5 und Produkt 6: Das sind 2 und 3, also (x - 2)(x - 3) = 0. Quadratische Ergänzung ist eine weitere Methode: x² + 6x + 2 = 0 → (x² + 6x + 9) - 9 + 2 = 0 → (x + 3)² = 7 → x = -3 ± √7. Diese Methode ist gleichzeitig die Herleitung der pq-Formel und bildet die Grundlage für die Scheitelpunktform quadratischer Funktionen. Im MedAT ist die pq-Formel das Standardwerkzeug, da die meisten Aufgaben normierte Gleichungen verwenden.`,
       merksätze: [
@@ -156,7 +156,7 @@ Das Gleichsetzungsverfahren ist eine Variante, bei der beide Gleichungen nach de
             'Keine Lösung (widersprüchlich)',
             'Unendlich viele Lösungen',
             'Genau zwei Lösungen',
-            'Das System ist nicht lösbar, da die Köffizienten gleich sind'
+            'Das System ist nicht lösbar, da die Koeffizienten gleich sind'
           ],
           correctIndex: 2,
           explanation: 'Die erste Gleichung ist das Doppelte der zweiten (2·(x + 2y) = 2·3 = 6). Die Geraden sind identisch, es gibt unendlich viele Lösungen.'

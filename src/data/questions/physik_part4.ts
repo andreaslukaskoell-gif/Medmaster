@@ -642,7 +642,7 @@ export const fragenPart4 = [
       'Die Ablenkung der Strahlung durch Magnetfelder'
     ],
     korrekteAntwort: 1,
-    erklärung: 'Absorption beschreibt die Schwächung der Strahlung beim Durchgang durch Materie durch Wechselwirkungen (Ionisation, Streuung, Paarbildung). Die Intensität nimmt exponentiell ab: I = I₀ × e^(-μx), wobei μ der Absorptionsköffizient und x die Dicke des Materials ist.',
+    erklärung: 'Absorption beschreibt die Schwächung der Strahlung beim Durchgang durch Materie durch Wechselwirkungen (Ionisation, Streuung, Paarbildung). Die Intensität nimmt exponentiell ab: I = I₀ × e^(-μx), wobei μ der Absorptionskoeffizient und x die Dicke des Materials ist.',
     strategieTipp: 'Absorptionsgesetz: I = I₀ × e^(-μx). Halbwertsdicke d₁/₂: I = I₀/2. Je dichter/schwerer das Material, desto höher μ. Blei gut für γ.'
   },
   {

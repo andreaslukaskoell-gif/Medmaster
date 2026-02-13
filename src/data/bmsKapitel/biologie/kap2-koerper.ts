@@ -18,7 +18,7 @@ Die vier Herzklappen sorgen als Ventile dafür, dass das Blut nur in eine Richtu
 Der Blutfluss durch das Herz folgt einem festgelegten Weg: Sauerstoffarmes Blut gelangt über die obere und untere Hohlvene (Vena cava superior und inferior) in den rechten Vorhof, passiert die Trikuspidalklappe und fließt in die rechte Kammer. Von dort wird es durch die Pulmonalklappe in den Lungenkreislauf gepumpt. In der Lunge wird das Blut mit Sauerstoff angereichert und fließt über die vier Lungenvenen zurück in den linken Vorhof. Durch die Mitralklappe gelangt es in die linke Kammer, die es schließlich durch die Aortenklappe in die Aorta und damit in den großen Kreislauf auswirft. Das Herzzeitvolumen (Cardiac Output) beträgt in Ruhe etwa 5 Liter pro Minute und ergibt sich aus dem Schlagvolumen (ca. 70 mL) multipliziert mit der Herzfrequenz (ca. 70/min). Die Koronararterien (Arteria coronaria dextra und sinistra) versorgen das Herz selbst mit Blut und entspringen direkt oberhalb der Aortenklappe aus der Aorta.`,
       diagram: 'heart-anatomy',
       merksätze: [
-        'Tri-Mi-Pu-Ao: Trikuspidalklappe → Mitralklappe → Pulmonalklappe → Aortenklappe – die Reihenfolge der Klappen im Blutfluss von rechts nach links.',
+        'Merke: Blutfluss durch die 4 Herzklappen: Trikuspidalklappe (rechts AV) → Pulmonalklappe (rechts Tasche) → Mitralklappe (links AV) → Aortenklappe (links Tasche). Segelklappen = AV-Klappen, Taschenklappen = Semilunarklappen.',
         'Linke Kammer = dickste Wand (pumpt gegen hohen Widerstand in den Körperkreislauf). Herzzeitvolumen = Schlagvolumen × Herzfrequenz ≈ 70 mL × 70/min = ca. 5 L/min.'
       ],
       altfrage: {
@@ -76,7 +76,7 @@ Die Erregung breitet sich vom Sinusknoten über die Vorhofmuskulatur zum Atriove
 Das His-Bündel teilt sich im Kammerseptum in den rechten und linken Tawara-Schenkel auf, die an den Innenwänden der jeweiligen Kammer entlanglaufen. Der linke Tawara-Schenkel teilt sich weiter in einen vorderen und einen hinteren Faszikel. Die Tawara-Schenkel enden in den Purkinje-Fasern, einem weit verzweigten Netzwerk, das die Erregung schnell und gleichmäßig auf die gesamte Kammermuskulatur überträgt. Die Eigenfrequenz der Purkinje-Fasern liegt bei nur 25–40/min (tertiärer Schrittmacher). Die Erregungsleitung erfolgt von endokardial nach epikardial, also von innen nach außen. Diese hierarchische Anordnung der Schrittmacherzentren gewährleistet, dass das Herz auch bei Ausfall höherer Zentren weiter schlagen kann, allerdings mit zunehmend niedrigerer Frequenz.`,
       diagram: 'cardiac-conduction',
       merksätze: [
-        'Hierarchie der Schrittmacher: Sinusknoten (60–80/min) → AV-Knoten (40–50/min) → Purkinje-Fasern (25–40/min). Merke: „SAP“ – Sinus, AV, Purkinje – die Frequenz sinkt stufenweise.',
+        'Merke: Erregungsleitung: Sinusknoten (60-80/min, primärer Schrittmacher) → AV-Knoten (40-50/min, Verzögerung 0,1 s) → His-Bündel → Tawara-Schenkel → Purkinje-Fasern (25-40/min).',
         'AV-Verzögerung = ca. 0,1 s – damit die Vorhöfe sich vollständig entleeren können, bevor die Kammern kontrahieren.'
       ],
       altfrage: {
@@ -243,7 +243,7 @@ Die Leukozyten (weiße Blutkörperchen, 4.000–10.000/µL) sind die Zellen des 
     {
       id: 'bio-kap2-5',
       title: 'Blutgruppen',
-      content: `Das ABO-Blutgruppensystem ist das klinisch wichtigste Blutgruppensystem und wurde 1901 von Karl Landsteiner entdeckt. Es basiert auf der Anwesenheit bestimmter Antigene (Glykoproteine) auf der Oberfläche der Erythrozyten und den korrespondierenden Antikörpern im Blutplasma. Es gibt vier Hauptblutgruppen: A, B, AB und 0. Menschen mit Blutgruppe A haben das Antigen A auf ihren Erythrozyten und Anti-B-Antikörper im Plasma. Blutgruppe B bedeutet Antigen B und Anti-A-Antikörper. Blutgruppe AB besitzt beide Antigene, aber keine Antikörper (Universalempfänger für Erythrozytenkonzentrate). Blutgruppe 0 hat keine Antigene, aber beide Antikörper (Anti-A und Anti-B) – diese Personen gelten als Universalspender für Erythrozytenkonzentrate. Die Vererbung folgt einem kodominanten Muster: Die Allele I^A und I^B sind kodominant züinander und beide dominant über i (Blutgruppe 0).
+      content: `Das ABO-Blutgruppensystem ist das klinisch wichtigste Blutgruppensystem und wurde 1901 von Karl Landsteiner entdeckt. Es basiert auf der Anwesenheit bestimmter Antigene (Glykoproteine) auf der Oberfläche der Erythrozyten und den korrespondierenden Antikörpern im Blutplasma. Es gibt vier Hauptblutgruppen: A, B, AB und 0. Menschen mit Blutgruppe A haben das Antigen A auf ihren Erythrozyten und Anti-B-Antikörper im Plasma. Blutgruppe B bedeutet Antigen B und Anti-A-Antikörper. Blutgruppe AB besitzt beide Antigene, aber keine Antikörper (Universalempfänger für Erythrozytenkonzentrate). Blutgruppe 0 hat keine Antigene, aber beide Antikörper (Anti-A und Anti-B) – diese Personen gelten als Universalspender für Erythrozytenkonzentrate. Die Vererbung folgt einem kodominanten Muster: Die Allele I^A und I^B sind kodominant zueinander und beide dominant über i (Blutgruppe 0).
 
 Das Rhesus-System ist das zweitwichtigste Blutgruppensystem. Das klinisch relevanteste Antigen ist das D-Antigen (Rhesusfaktor D). Menschen, die das D-Antigen auf ihren Erythrozyten tragen, sind Rhesus-positiv (Rh+, ca. 85 % der Bevölkerung); fehlt es, sind sie Rhesus-negativ (Rh−). Im Gegensatz zum ABO-System besitzen Rh-negative Personen keine natürlichen Anti-D-Antikörper – diese bilden sich erst nach Kontakt mit Rh-positivem Blut (Sensibilisierung). Dies ist besonders relevant in der Schwangerschaft: Wenn eine Rh-negative Mutter ein Rh-positives Kind trägt, kann es bei der Geburt zur Sensibilisierung kommen. Bei einer erneuten Schwangerschaft mit einem Rh-positiven Kind können die mütterlichen Anti-D-Antikörper die Plazenta passieren und die fetalen Erythrozyten angreifen (Morbus hämolyticus neonatorum). Zur Prophylaxe wird Rh-negativen Müttern Anti-D-Immunglobulin verabreicht.
 
@@ -367,7 +367,7 @@ Der Dünndarm (Duodenum, Jejunum, Ileum) ist mit 3–5 Metern Länge der Hauptor
       diagram: 'verdauungssystem',
       merksätze: [
         'Enzymzuordnung: Mund = Amylase (Stärke), Magen = Pepsin (Proteine), Dünndarm = Trypsin/Chymotrypsin (Proteine) + Lipase (Fette) + Amylase (Stärke). Die Kohlenhydratverdauung beginnt im Mund!',
-        'Belegzellen = HCl + Intrinsic Factor. Hauptzellen = Pepsinogen. Nebenzellen = Schleim. Merke: „BHN – Belegzellen Hauptzellen Nebenzellen – Säure Enzyme Schutz“.'
+        'Merke: Magenzelltypen: Belegzellen = HCl + Intrinsic Factor (für Vit. B12). Hauptzellen = Pepsinogen (wird durch HCl zu Pepsin aktiviert). Nebenzellen = Schleim (Schleimhautschutz).'
       ],
       altfrage: {
         question: 'Wo beginnt die Verdauung von Kohlenhydraten?',
@@ -657,7 +657,7 @@ Die Nebenniere besteht aus Rinde und Mark mit unterschiedlichen Funktionen. Die 
       diagram: 'hormonsystem',
       merksätze: [
         'Negative Rückkopplung: Hoher Hormonspiegel → hemmt übergeordnete Ebene (Hypothalamus/Hypophyse). Schilddrüsenachse: Hypothalamus (TRH) → Hypophyse (TSH) → Schilddrüse (T₃/T₄) → hemmt TRH + TSH.',
-        'Insulin senkt Blutzucker (B-Zellen), Glukagon erhöht Blutzucker (A-Zellen). Nebennierenrinde: „GFR“ – Glomerulosa (Aldosteron) → Fasciculata (Cortisol) → Reticularis (Androgene).'
+        'Merke: Nebennierenrinde von außen nach innen: „Salz, Zucker, Sex" — Zona glomerulosa (Aldosteron = Salz), Zona fasciculata (Cortisol = Zucker), Zona reticularis (Androgene = Sex). Insulin (B-Zellen) senkt, Glukagon (A-Zellen) erhöht den Blutzucker.'
       ],
       altfrage: {
         question: 'Wie reguliert die Hypothalamus-Hypophysen-Schilddrüsen-Achse den T₃/T₄-Spiegel?',

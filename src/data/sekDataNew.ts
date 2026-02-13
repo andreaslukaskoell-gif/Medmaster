@@ -1493,7 +1493,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
       "Eine 15-jährige Patientin bittet ihre Gynäkologin um die Pille. Sie möchte nicht, dass ihre Eltern davon erfahren. Die Ärztin hält sie für reif genug, die Entscheidung selbst zu treffen.",
     aussagen: [
       {
-        text: "Das Recht auf sexülle Selbstbestimmung und reproduktive Gesundheit gilt auch für Jugendliche, die die nötige Reife mitbringen.",
+        text: "Das Recht auf sexuelle Selbstbestimmung und reproduktive Gesundheit gilt auch für Jugendliche, die die nötige Reife mitbringen.",
         idealRank: 1,
       },
       {

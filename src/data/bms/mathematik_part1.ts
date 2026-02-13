@@ -439,7 +439,7 @@ export const mathematikQuestionsPart1: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Zähler und Nenner durch x² dividieren: lim(x→∞) (3 + 2/x) / (1 - 1/x²) = 3/1 = 3. Bei gleichen höchsten Potenzen ist der Grenzwert der Quotient der Leitköffizienten.",
+      "Zähler und Nenner durch x² dividieren: lim(x→∞) (3 + 2/x) / (1 - 1/x²) = 3/1 = 3. Bei gleichen höchsten Potenzen ist der Grenzwert der Quotient der Leitkoeffizienten.",
     difficulty: "schwer",
     tags: ["grenzwert", "asymptoten", "berechnung"],
   },

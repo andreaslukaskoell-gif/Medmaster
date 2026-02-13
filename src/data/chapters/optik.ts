@@ -288,7 +288,7 @@ Die Fähigkeit des Auges, die Brechkraft der Linse zu verändern und so auf unte
       heading: "Doppler-Effekt & Kernphysik",
       content: `<strong>Doppler-Effekt</strong>
 
-Der Doppler-Effekt beschreibt die Änderung der wahrgenommenen <strong>Frequenz</strong> (und damit der Wellenlänge) einer Welle, wenn sich Quelle und Beobachter relativ züinander bewegen.
+Der Doppler-Effekt beschreibt die Änderung der wahrgenommenen <strong>Frequenz</strong> (und damit der Wellenlänge) einer Welle, wenn sich Quelle und Beobachter relativ zueinander bewegen.
 
 <strong>Quelle nähert sich dem Beobachter:</strong>
 • Die Wellenfronten werden <strong>gestaucht</strong>

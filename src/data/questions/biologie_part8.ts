@@ -91,14 +91,14 @@ export const fragenPart8 = [
     schwierigkeit: 'leicht' as const,
     fragetext: 'Bei der interspezifischen Konkurrenz konkurrieren:',
     optionen: [
-      'Individün derselben Art um Ressourcen',
+      'Individuen derselben Art um Ressourcen',
       'Verschiedene Arten um dieselben begrenzten Ressourcen',
       'Räuber und Beute um Lebensraum',
       'Symbiosepartner um Nährstoffe',
       'Männchen derselben Art um Weibchen'
     ],
     korrekteAntwort: 1,
-    erklärung: 'Interspezifische Konkurrenz findet zwischen verschiedenen Arten statt (inter = zwischen). Intraspezifische Konkurrenz hingegen findet innerhalb einer Art statt. Beide Konkurrenzformen entstehen, wenn begrenzte Ressourcen (Nahrung, Wasser, Licht, Raum) von mehreren Individün benötigt werden.',
+    erklärung: 'Interspezifische Konkurrenz findet zwischen verschiedenen Arten statt (inter = zwischen). Intraspezifische Konkurrenz hingegen findet innerhalb einer Art statt. Beide Konkurrenzformen entstehen, wenn begrenzte Ressourcen (Nahrung, Wasser, Licht, Raum) von mehreren Individuen benötigt werden.',
     strategieTipp: 'Merke die Vorsilben: "intra" = innerhalb (einer Art), "inter" = zwischen (verschiedenen Arten). Diese Unterscheidung ist häufig prüfungsrelevant.'
   },
   {
@@ -177,13 +177,13 @@ export const fragenPart8 = [
     fragetext: 'Eine Population ist definiert als:',
     optionen: [
       'Alle Lebewesen in einem Ökosystem',
-      'Alle Individün verschiedener Arten in einem Gebiet',
-      'Alle Individün einer Art in einem bestimmten Gebiet zu einem bestimmten Zeitpunkt',
+      'Alle Individuen verschiedener Arten in einem Gebiet',
+      'Alle Individuen einer Art in einem bestimmten Gebiet zu einem bestimmten Zeitpunkt',
       'Alle Organismen, die in Symbiose leben',
       'Die gesamte genetische Vielfalt eines Lebensraums'
     ],
     korrekteAntwort: 2,
-    erklärung: 'Eine Population umfasst alle Individün einer Art in einem definierten Raum zu einem definierten Zeitpunkt. Diese Definition ist wichtig für populationsökologische Untersuchungen (Wachstum, Dichte, Altersstruktur). Eine Lebensgemeinschaft (Biozönose) umfasst dagegen alle Arten eines Gebiets.',
+    erklärung: 'Eine Population umfasst alle Individuen einer Art in einem definierten Raum zu einem definierten Zeitpunkt. Diese Definition ist wichtig für populationsökologische Untersuchungen (Wachstum, Dichte, Altersstruktur). Eine Lebensgemeinschaft (Biozönose) umfasst dagegen alle Arten eines Gebiets.',
     strategieTipp: 'Unterscheide: Population = eine Art, Biozönose = alle Arten, Ökosystem = Biozönose + Biotop (unbelebter Lebensraum).'
   },
   {
@@ -230,7 +230,7 @@ export const fragenPart8 = [
       'Die genetische Vielfalt der Population',
       'Die verfügbaren Ressourcen und Umweltbedingungen',
       'Die Anzahl der Prädatoren',
-      'Die Größe der Individün',
+      'Die Größe der Individuen',
       'Ausschließlich die Geburtenrate'
     ],
     korrekteAntwort: 1,
@@ -295,15 +295,15 @@ export const fragenPart8 = [
     schwierigkeit: 'schwer' as const,
     fragetext: 'Das Konkurrenzausschlussprinzip (Gause-Prinzip) besagt:',
     optionen: [
-      'Zwei Arten können niemals im selben Habitat köxistieren',
-      'Arten mit identischer ökologischer Nische können nicht dauerhaft köxistieren',
+      'Zwei Arten können niemals im selben Habitat koexistieren',
+      'Arten mit identischer ökologischer Nische können nicht dauerhaft koexistieren',
       'Konkurrenz führt immer zum Aussterben beider Arten',
       'Nur die größere Art überlebt in Konkurrenzsituationen',
       'Intraspezifische Konkurrenz ist stärker als interspezifische'
     ],
     korrekteAntwort: 1,
-    erklärung: 'Das Gause-Prinzip besagt: Zwei Arten mit identischer ökologischer Nische können auf Dauer nicht köxistieren – die konkurrenzschwächere Art wird verdrängt. In der Natur führt dies zu Nischendifferenzierung (Aufspaltung der Nischen) durch Evolution, sodass Köxistenz möglich wird.',
-    strategieTipp: 'Wichtig für das Verständnis von Biodiversität: Arten müssen sich in mindestens einer Nischendimension unterscheiden, um köxistieren zu können.'
+    erklärung: 'Das Gause-Prinzip besagt: Zwei Arten mit identischer ökologischer Nische können auf Dauer nicht koexistieren – die konkurrenzschwächere Art wird verdrängt. In der Natur führt dies zu Nischendifferenzierung (Aufspaltung der Nischen) durch Evolution, sodass Koexistenz möglich wird.',
+    strategieTipp: 'Wichtig für das Verständnis von Biodiversität: Arten müssen sich in mindestens einer Nischendimension unterscheiden, um koexistieren zu können.'
   },
   {
     id: 'bio-q-369',
@@ -313,7 +313,7 @@ export const fragenPart8 = [
     fragetext: 'Nischendifferenzierung ermöglicht:',
     optionen: [
       'Die vollständige Elimination von Konkurrenz',
-      'Die Köxistenz ähnlicher Arten durch Aufteilung von Ressourcen',
+      'Die Koexistenz ähnlicher Arten durch Aufteilung von Ressourcen',
       'Das unbegrenzte Wachstum aller Arten',
       'Die Fusion verschiedener Arten zu einer Art',
       'Die Vergrößerung der fundamentalen Nische'
@@ -349,7 +349,7 @@ export const fragenPart8 = [
       'In beide Richtungen zwischen den Trophieebenen',
       'Nur in eine Richtung von den Produzenten zu den Konsumenten',
       'Kreisförmig und wird vollständig recycelt',
-      'Ausschließlich von Konsumenten zu Destrünten',
+      'Ausschließlich von Konsumenten zu Destruenten',
       'Unabhängig von den Trophieebenen'
     ],
     korrekteAntwort: 1,
@@ -371,7 +371,7 @@ export const fragenPart8 = [
     ],
     korrekteAntwort: 1,
     erklärung: 'Produzenten (Primärproduzenten) sind autotrophe Organismen – hauptsächlich Pflanzen, Algen und Cyanobakterien – die durch Photosynthese (oder Chemosynthese) anorganische Stoffe (CO₂, H₂O) in organische Verbindungen (Glucose) umwandeln. Sie bilden die Basis aller Nahrungsketten.',
-    strategieTipp: 'Trophieebenen: 1. Produzenten (autotroph), 2. Primärkonsumenten (Herbivoren), 3. Sekundärkonsumenten (Karnivoren), + Destrünten (Zersetzer).'
+    strategieTipp: 'Trophieebenen: 1. Produzenten (autotroph), 2. Primärkonsumenten (Herbivoren), 3. Sekundärkonsumenten (Karnivoren), + Destruenten (Zersetzer).'
   },
   {
     id: 'bio-q-373',
@@ -400,11 +400,11 @@ export const fragenPart8 = [
       'Nur durch Verbrennung fossiler Brennstoffe in die Atmosphäre freigesetzt',
       'Durch Photosynthese fixiert und durch Atmung/Zersetzung wieder freigesetzt',
       'Ausschließlich in den Ozeanen gespeichert',
-      'Nur von Destrünten produziert',
+      'Nur von Destruenten produziert',
       'Permanent aus der Atmosphäre entfernt'
     ],
     korrekteAntwort: 1,
-    erklärung: 'Der Kohlenstoffkreislauf: CO₂ wird durch Photosynthese in organische Verbindungen eingebaut (Fixierung). Durch Zellatmung (alle Organismen), Zersetzung (Destrünten) und Verbrennung wird CO₂ wieder freigesetzt. Langfristige Speicher sind fossile Brennstoffe, Kalkgesteine und Ozeane.',
+    erklärung: 'Der Kohlenstoffkreislauf: CO₂ wird durch Photosynthese in organische Verbindungen eingebaut (Fixierung). Durch Zellatmung (alle Organismen), Zersetzung (Destruenten) und Verbrennung wird CO₂ wieder freigesetzt. Langfristige Speicher sind fossile Brennstoffe, Kalkgesteine und Ozeane.',
     strategieTipp: 'Kohlenstoffkreislauf: Photosynthese entzieht CO₂, Atmung/Zersetzung setzen CO₂ frei. Menschliche Aktivitäten (Verbrennung) stören das Gleichgewicht.'
   },
   {
@@ -435,7 +435,7 @@ export const fragenPart8 = [
       'Artenvielfalt, genetische Vielfalt und Ökosystemvielfalt',
       'Ausschließlich die genetische Variabilität innerhalb einer Art',
       'Nur die Vielfalt großer Säugetiere',
-      'Die Anzahl der Individün einer Population'
+      'Die Anzahl der Individuen einer Population'
     ],
     korrekteAntwort: 1,
     erklärung: 'Biodiversität hat drei Ebenen: 1) Artenvielfalt (Anzahl und Häufigkeit verschiedener Arten), 2) Genetische Vielfalt (Variabilität innerhalb von Arten), 3) Ökosystemvielfalt (Vielfalt der Lebensräume). Alle drei Ebenen sind für funktionsfähige Ökosysteme und deren Resilienz wichtig.',
@@ -758,7 +758,7 @@ export const fragenPart8 = [
       'Dass für ein Gen mehr als zwei Allele in einer Population existieren',
       'Dass ein Organismus mehr als zwei Allele für ein Gen besitzt',
       'Dass Gene auf mehreren Chromosomen liegen',
-      'Dass alle Individün alle Allele tragen'
+      'Dass alle Individuen alle Allele tragen'
     ],
     korrekteAntwort: 1,
     erklärung: 'Multiple Allelie liegt vor, wenn für einen Genort in der Population mehr als zwei Allele existieren (z.B. I^A, I^B, i beim AB0-System). Ein einzelner diploider Organismus kann jedoch maximal zwei verschiedene Allele tragen. Multiple Allelie erhöht die genetische Vielfalt in Populationen.',

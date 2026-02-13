@@ -319,7 +319,7 @@ export const fragenPart5 = [
       '1:1:1:1'
     ],
     korrekteAntwort: 2,
-    erklärung: 'Bei der Kreuzung heterozygoter F1-Individün (Aa × Aa) spaltet die F2-Generation im Phänotyp im Verhältnis 3:1 auf (3 dominant : 1 rezessiv). Im Genotyp ergibt sich 1:2:1 (1 AA : 2 Aa : 1 aa). Dies ist die 2. Mendelsche Regel (Spaltungsregel).',
+    erklärung: 'Bei der Kreuzung heterozygoter F1-Individuen (Aa × Aa) spaltet die F2-Generation im Phänotyp im Verhältnis 3:1 auf (3 dominant : 1 rezessiv). Im Genotyp ergibt sich 1:2:1 (1 AA : 2 Aa : 1 aa). Dies ist die 2. Mendelsche Regel (Spaltungsregel).',
     strategieTipp: '3:1 im Phänotyp, 1:2:1 im Genotyp - klassisches Mendel-Verhältnis.'
   },
   {

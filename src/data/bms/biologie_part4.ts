@@ -671,7 +671,7 @@ export const biologieQuestionsPart4: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "MHC-Gene (HLA beim Menschen) gehören zu den polymorphsten Genen im menschlichen Genom. Jedes MHC-Allel codiert für ein Molekül mit einer leicht anderen Peptid-Bindungsfurche, sodass verschiedene Allele verschiedene Peptide präsentieren können. Dieser Polymorphismus auf Populationsebene stellt sicher, dass nicht alle Individün die gleichen Pathogenpeptide präsentieren - ein Pathogen, das der MHC-Präsentation eines Individuums entkommt, kann von einem anderen Individuum mit anderen MHC-Allelen erkannt werden. MHC-Gene werden kodominant exprimiert und von beiden Eltern vererbt.",
+      "MHC-Gene (HLA beim Menschen) gehören zu den polymorphsten Genen im menschlichen Genom. Jedes MHC-Allel codiert für ein Molekül mit einer leicht anderen Peptid-Bindungsfurche, sodass verschiedene Allele verschiedene Peptide präsentieren können. Dieser Polymorphismus auf Populationsebene stellt sicher, dass nicht alle Individuen die gleichen Pathogenpeptide präsentieren - ein Pathogen, das der MHC-Präsentation eines Individuums entkommt, kann von einem anderen Individuum mit anderen MHC-Allelen erkannt werden. MHC-Gene werden kodominant exprimiert und von beiden Eltern vererbt.",
     difficulty: "schwer",
     tags: ["mhc-polymorphismus", "hla", "peptidbindung", "evolution"],
   },

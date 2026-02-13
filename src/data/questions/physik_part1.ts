@@ -291,9 +291,9 @@ export const fragenPart1 = [
     fach: 'physik' as const,
     schwierigkeit: 'mittel' as const,
     fragetext: 'Die Reibungskraft ist abhängig von:',
-    optionen: ['Der Kontaktfläche zwischen den Körpern', 'Der Normalkraft und dem Reibungsköffizienten', 'Der Geschwindigkeit des Körpers', 'Der Form des Körpers', 'Der Temperatur allein'],
+    optionen: ['Der Kontaktfläche zwischen den Körpern', 'Der Normalkraft und dem Reibungskoeffizienten', 'Der Geschwindigkeit des Körpers', 'Der Form des Körpers', 'Der Temperatur allein'],
     korrekteAntwort: 1,
-    erklärung: 'Reibungskraft F_R = μ × F_N, wobei μ der Reibungsköffizient und F_N die Normalkraft ist. Die Größe der Kontaktfläche spielt keine Rolle!',
+    erklärung: 'Reibungskraft F_R = μ × F_N, wobei μ der Reibungskoeffizient und F_N die Normalkraft ist. Die Größe der Kontaktfläche spielt keine Rolle!',
     strategieTipp: 'Haftreibung (Ruhe) > Gleitreibung (Bewegung). F_R ist unabhängig von der Fläche!'
   },
   {

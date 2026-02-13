@@ -16,7 +16,7 @@ export const fragenPart1 = [
     fach: 'biologie' as const,
     schwierigkeit: 'mittel' as const,
     fragetext: 'Was versteht man unter dem Begriff "Homöostase" im Kontext lebender Systeme?',
-    optionen: ['Die Fähigkeit zur sexüllen Fortpflanzung', 'Die Aufrechterhaltung eines stabilen inneren Milieus trotz äußerer Veränderungen', 'Die Anpassung an verschiedene Lebensräume über Generationen', 'Der Aufbau komplexer Moleküle aus einfachen Bausteinen', 'Die symmetrische Zellteilung'],
+    optionen: ['Die Fähigkeit zur sexuellen Fortpflanzung', 'Die Aufrechterhaltung eines stabilen inneren Milieus trotz äußerer Veränderungen', 'Die Anpassung an verschiedene Lebensräume über Generationen', 'Der Aufbau komplexer Moleküle aus einfachen Bausteinen', 'Die symmetrische Zellteilung'],
     korrekteAntwort: 1,
     erklärung: 'Homöostase bezeichnet die Aufrechterhaltung eines konstanten inneren Milieus trotz schwankender äußerer Bedingungen. Dies ist ein fundamentales Merkmal lebender Systeme und ermöglicht optimale Bedingungen für biochemische Prozesse. Beispiele: Regulation von Körpertemperatur, pH-Wert, Blutzuckerspiegel.',
     strategieTipp: 'Homöostase = "Gleichgewicht halten". Denke an Thermostat-Prinzip: Regelkreise mit Sensoren, Kontrollzentrum und Effektoren.'
@@ -49,9 +49,9 @@ export const fragenPart1 = [
     fach: 'biologie' as const,
     schwierigkeit: 'leicht' as const,
     fragetext: 'Was ist die Grundvoraussetzung für Evolution lebender Systeme?',
-    optionen: ['Sexülle Fortpflanzung', 'Vorhandensein von DNA', 'Variation und Selektion', 'Komplexe Vielzelligkeit', 'Mitochondrien'],
+    optionen: ['Sexuelle Fortpflanzung', 'Vorhandensein von DNA', 'Variation und Selektion', 'Komplexe Vielzelligkeit', 'Mitochondrien'],
     korrekteAntwort: 2,
-    erklärung: 'Evolution erfordert grundsätzlich Variation (Unterschiede zwischen Individün) und Selektion (unterschiedlicher Fortpflanzungserfolg). Diese Prinzipien gelten unabhängig vom genetischen Material (RNA oder DNA), der Fortpflanzungsart oder der Organisationsstufe. Sexülle Fortpflanzung erhöht zwar Variation, ist aber nicht zwingend erforderlich.',
+    erklärung: 'Evolution erfordert grundsätzlich Variation (Unterschiede zwischen Individuen) und Selektion (unterschiedlicher Fortpflanzungserfolg). Diese Prinzipien gelten unabhängig vom genetischen Material (RNA oder DNA), der Fortpflanzungsart oder der Organisationsstufe. Sexuelle Fortpflanzung erhöht zwar Variation, ist aber nicht zwingend erforderlich.',
     strategieTipp: 'Evolution = Variation + Selektion + Vererbung. Diese drei Komponenten müssen immer gegeben sein.'
   },
   {
@@ -107,7 +107,7 @@ export const fragenPart1 = [
     optionen: ['Nur 80S-Ribosomen im Zytoplasma', 'Nur 70S-Ribosomen in Mitochondrien und Chloroplasten', '80S-Ribosomen im Zytoplasma und 70S-Ribosomen in Mitochondrien und Chloroplasten', '70S-Ribosomen im Zytoplasma und 80S-Ribosomen in Organellen', 'Ausschließlich 80S-Ribosomen in allen Kompartimenten'],
     korrekteAntwort: 2,
     erklärung: 'Pflanzenzellen besitzen 80S-Ribosomen im Zytoplasma und am rauen ER (eukaryotischer Typ), sowie 70S-Ribosomen in Mitochondrien und Chloroplasten (prokaryotischer Typ). Dies unterstützt die Endosymbiontentheorie, da Mitochondrien und Chloroplasten von prokaryotischen Vorläufern abstammen.',
-    strategieTipp: '70S = prokaryotisch (Bakterien, Mitochondrien, Chloroplasten). 80S = eukaryotisch (Zytoplasma, ER). S = Svedberg-Einheit (Sedimentationsköffizient).'
+    strategieTipp: '70S = prokaryotisch (Bakterien, Mitochondrien, Chloroplasten). 80S = eukaryotisch (Zytoplasma, ER). S = Svedberg-Einheit (Sedimentationskoeffizient).'
   },
   {
     id: 'bio-q-011',

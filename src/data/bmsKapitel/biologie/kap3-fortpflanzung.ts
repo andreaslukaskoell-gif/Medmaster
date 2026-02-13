@@ -201,7 +201,7 @@ Nach der Verschmelzung der haploiden Vorkerne (Pronuklei) von Spermium und Eizel
 In der dritten Entwicklungswoche findet die Gastrulation statt — ein fundamentaler Prozess, bei dem aus der zweiblättrigen Keimscheibe die drei Keimblätter entstehen: Ektoderm, Mesoderm und Entoderm. Das Ektoderm bildet später Nervensystem, Epidermis und Sinnesorgane. Aus dem Mesoderm entwickeln sich Skelett, Muskulatur, Herz-Kreislauf-System, Nieren und Bindegewebe. Das Entoderm gibt den Epithelien des Gastrointestinaltrakts, der Lunge, der Leber und des Pankreas den Ursprung. Mithilfe der Eselsbrücke „EMS“ (Ektoderm – Mesoderm – Entoderm) lassen sich die Keimblätter gut merken. Ab der 4. Woche beginnt die Organogenese: Durch Neurulation bildet sich aus dem Ektoderm das Neuralrohr (Vorläufer von Gehirn und Rückenmark), das Herz beginnt zu schlagen, und die Somiten (Ursegmente) bilden sich aus dem Mesoderm. Die empfindlichste Phase für teratogene Schädigungen liegt zwischen der 3. und 8. Entwicklungswoche, wenn die Organogenese stattfindet.`,
       merksätze: [
         'Entwicklungsreihenfolge: Zygote → Morula (16 Zellen, Tag 3) → Blastozyste (Tag 4–5, mit Trophoblast und Embryoblast) → Implantation (Tag 6–7) → Gastrulation (3. Woche).',
-        'Drei Keimblätter merken mit „EMS“: Ektoderm (Nerven, Haut), Mesoderm (Muskeln, Skelett, Herz), Entoderm (Darmepithel, Lunge, Leber).'
+        'Merke: Drei Keimblätter — Ektoderm (Nervensystem, Epidermis, Sinnesorgane), Mesoderm (Muskulatur, Skelett, Herz, Nieren, Blut), Entoderm (Darmepithel, Leber, Pankreas, Lunge, Schilddrüse).'
       ],
       altfrage: {
         question: 'Welcher Mechanismus verhindert nach dem Eindringen des ersten Spermiums die Polyspermie?',

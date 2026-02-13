@@ -264,12 +264,12 @@ export const fragenPart2 = [
       'Linear',
       'Gewinkelt',
       'Trigonal planar',
-      'Teträdrisch',
+      'Tetraedrisch',
       'Trigonal pyramidal'
     ],
     korrekteAntwort: 3,
-    erklärung: 'Methan hat eine teträdrische Geometrie mit Bindungswinkeln von 109,5°. Die vier C-H-Bindungen sind räumlich gleichmäßig verteilt, wodurch CH₄ unpolar ist.',
-    strategieTipp: 'VSEPR-Theorie: 4 bindende Elektronenpaare ohne freie Paare → Teträder. Dies ist die optimale räumliche Anordnung zur Minimierung der Abstoßung.'
+    erklärung: 'Methan hat eine tetraedrische Geometrie mit Bindungswinkeln von 109,5°. Die vier C-H-Bindungen sind räumlich gleichmäßig verteilt, wodurch CH₄ unpolar ist.',
+    strategieTipp: 'VSEPR-Theorie: 4 bindende Elektronenpaare ohne freie Paare → Tetraeder. Dies ist die optimale räumliche Anordnung zur Minimierung der Abstoßung.'
   },
   {
     id: 'ch-q-067',
@@ -371,7 +371,7 @@ export const fragenPart2 = [
     ],
     korrekteAntwort: 1,
     erklärung: 'Die Gleichung 2H₂ + O₂ → 2H₂O ist ausgeglichen: Links 4 H und 2 O, rechts ebenfalls 4 H und 2 O. Das Atomzahlgesetz (Massenerhaltung) ist erfüllt.',
-    strategieTipp: 'Beim Ausgleichen: Zähle jede Atomsorte links und rechts. Passe Köffizienten (nie Indizes!) an, bis beide Seiten gleich sind.'
+    strategieTipp: 'Beim Ausgleichen: Zähle jede Atomsorte links und rechts. Passe Koeffizienten (nie Indizes!) an, bis beide Seiten gleich sind.'
   },
   {
     id: 'ch-q-073',
@@ -438,8 +438,8 @@ export const fragenPart2 = [
       'Es gibt 2 Sauerstoffatome'
     ],
     korrekteAntwort: 1,
-    erklärung: 'Die Zahl vor der Formel (Köffizient) gibt die Anzahl der Moleküle an. 2H₂O bedeutet 2 Wassermoleküle, also insgesamt 4 H-Atome und 2 O-Atome.',
-    strategieTipp: 'Unterscheide: Köffizient vor Formel = Anzahl Moleküle; Index nach Symbol = Anzahl Atome im Molekül. H₂O: 2 H pro Molekül; 2H₂O: 2 Moleküle.'
+    erklärung: 'Die Zahl vor der Formel (Koeffizient) gibt die Anzahl der Moleküle an. 2H₂O bedeutet 2 Wassermoleküle, also insgesamt 4 H-Atome und 2 O-Atome.',
+    strategieTipp: 'Unterscheide: Koeffizient vor Formel = Anzahl Moleküle; Index nach Symbol = Anzahl Atome im Molekül. H₂O: 2 H pro Molekül; 2H₂O: 2 Moleküle.'
   },
   {
     id: 'ch-q-077',
@@ -490,7 +490,7 @@ export const fragenPart2 = [
     ],
     korrekteAntwort: 1,
     erklärung: 'Stöchiometrie beschreibt die quantitativen Mengenverhältnisse (Stoffmengen, Massen, Volumina) der an einer Reaktion beteiligten Stoffe basierend auf der ausgeglichenen Reaktionsgleichung.',
-    strategieTipp: 'Stöchiometrie = "Rechnen in der Chemie". Die Köffizienten in der Reaktionsgleichung geben das Molverhältnis an.'
+    strategieTipp: 'Stöchiometrie = "Rechnen in der Chemie". Die Koeffizienten in der Reaktionsgleichung geben das Molverhältnis an.'
   },
   {
     id: 'ch-q-080',
@@ -711,7 +711,7 @@ export const fragenPart2 = [
     ],
     korrekteAntwort: 1,
     erklärung: 'Nach Le Chatelier weicht das System Druckerhöhung aus, indem es zur Seite mit weniger Gasteilchen reagiert. Links 4 mol Gas (1+3), rechts 2 mol → Gleichgewicht nach rechts. K bleibt konstant (temperaturabhängig).',
-    strategieTipp: 'Druckerhöhung: Gleichgewicht zur Seite mit weniger Gasmolekülen. Zähle Köffizienten der gasförmigen Stoffe.'
+    strategieTipp: 'Druckerhöhung: Gleichgewicht zur Seite mit weniger Gasmolekülen. Zähle Koeffizienten der gasförmigen Stoffe.'
   },
   {
     id: 'ch-q-093',

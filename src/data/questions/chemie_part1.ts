@@ -552,7 +552,7 @@ export const fragenPart1 = [
     optionen: [
       'Der Punkt höchster Temperatur',
       'Der Punkt höchsten Drucks',
-      'Der Punkt, an dem alle drei Phasen im Gleichgewicht köxistieren',
+      'Der Punkt, an dem alle drei Phasen im Gleichgewicht koexistieren',
       'Der Punkt des Siedens',
       'Der Punkt des Schmelzens'
     ],

@@ -183,7 +183,7 @@ export const fragenPart2 = [
       '70S-Ribosomen arbeiten ohne mRNA'
     ],
     korrekteAntwort: 0,
-    erklärung: '70S-Ribosomen (50S + 30S Untereinheiten) kommen in Prokaryoten, Mitochondrien und Chloroplasten vor. 80S-Ribosomen (60S + 40S) sind charakteristisch für das Cytoplasma eukaryotischer Zellen. Das "S" steht für Svedberg-Einheit (Sedimentationsköffizient).',
+    erklärung: '70S-Ribosomen (50S + 30S Untereinheiten) kommen in Prokaryoten, Mitochondrien und Chloroplasten vor. 80S-Ribosomen (60S + 40S) sind charakteristisch für das Cytoplasma eukaryotischer Zellen. Das "S" steht für Svedberg-Einheit (Sedimentationskoeffizient).',
     strategieTipp: 'Die kleineren 70S-Ribosomen in Mitochondrien sind ein Hinweis auf die Endosymbiontentheorie. Antibiotika wie Tetracyclin hemmen spezifisch 70S-Ribosomen.'
   },
   {
@@ -302,7 +302,7 @@ export const fragenPart2 = [
       'Aus Intermediärfilamenten'
     ],
     korrekteAntwort: 2,
-    erklärung: 'Zentriolen bestehen aus neun Mikrotubuli-Tripletts, die zylindrisch angeordnet sind (9×3-Struktur). Sie sind etwa 0,2 µm im Durchmesser und 0,4 µm lang. Zwei Zentriolen stehen senkrecht züinander und bilden das Centrosom.',
+    erklärung: 'Zentriolen bestehen aus neun Mikrotubuli-Tripletts, die zylindrisch angeordnet sind (9×3-Struktur). Sie sind etwa 0,2 µm im Durchmesser und 0,4 µm lang. Zwei Zentriolen stehen senkrecht zueinander und bilden das Centrosom.',
     strategieTipp: 'Unterscheide die Strukturen: Zentriolen 9×3 (Tripletts), Kinozilien/Geißeln 9×2+2 (Dupletts plus zentrale Mikrotubuli).'
   },
   {

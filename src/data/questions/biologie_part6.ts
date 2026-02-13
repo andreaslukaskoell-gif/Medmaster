@@ -6,7 +6,7 @@ export const fragenPart6 = [
     schwierigkeit: 'mittel' as const,
     fragetext: 'Welche Aussage zur DNA-Doppelhelix-Struktur nach Watson und Crick ist korrekt?',
     optionen: [
-      'Die beiden Stränge verlaufen parallel züinander',
+      'Die beiden Stränge verlaufen parallel zueinander',
       'Adenin paart sich über drei Wasserstoffbrücken mit Thymin',
       'Die antiparallelen Stränge sind über Wasserstoffbrücken zwischen komplementären Basen verbunden',
       'Die Phosphatgruppen befinden sich im Inneren der Helix',
@@ -687,13 +687,13 @@ export const fragenPart6 = [
     fragetext: 'Was sind STRs (Short Tandem Repeats) und warum werden sie für DNA-Fingerprints verwendet?',
     optionen: [
       'Lange, sich wiederholende DNA-Sequenzen, die bei allen Menschen identisch sind',
-      'Kurze, sich wiederholende DNA-Sequenzen mit hoher Variabilität zwischen Individün',
+      'Kurze, sich wiederholende DNA-Sequenzen mit hoher Variabilität zwischen Individuen',
       'Proteincodierende Gene',
       'Mitochondriale DNA-Abschnitte',
       'RNA-Moleküle'
     ],
     korrekteAntwort: 1,
-    erklärung: 'STRs sind kurze DNA-Sequenzen (2-6 Basenpaare), die sich mehrfach wiederholen. Die Anzahl der Wiederholungen variiert stark zwischen Individün (Polymorphismus), ist aber bei einem Individuum konstant und vererbt. Analyse von 13-20 STR-Loci ergibt hochspezifisches DNA-Profil.',
+    erklärung: 'STRs sind kurze DNA-Sequenzen (2-6 Basenpaare), die sich mehrfach wiederholen. Die Anzahl der Wiederholungen variiert stark zwischen Individuen (Polymorphismus), ist aber bei einem Individuum konstant und vererbt. Analyse von 13-20 STR-Loci ergibt hochspezifisches DNA-Profil.',
     strategieTipp: 'STR = Short Tandem Repeat = kurze tandemartige Wiederholung (z.B. GATCGATCGATC...). Anzahl der Repeats variiert stark = idealer Marker für Identifikation.'
   },
   {

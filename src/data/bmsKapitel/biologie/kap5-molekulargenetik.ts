@@ -19,7 +19,7 @@ Die Grundbausteine der DNA sind die Nukleotide. Jedes Nukleotid besteht aus drei
 
 Die beiden Stränge werden durch Wasserstoffbrückenbindungen zwischen komplementären Basenpaaren zusammengehalten: Adenin paart sich mit Thymin über zwei Wasserstoffbrückenbindungen (A=T, 2 H-Brücken), und Guanin paart sich mit Cytosin über drei Wasserstoffbrückenbindungen (G≡C, 3 H-Brücken). Daraus folgt, dass GC-reiche DNA-Abschnitte stabiler sind und einen höheren Schmelzpunkt haben als AT-reiche Regionen. Diese spezifische Basenpaarung ist die Grundlage der Chargaff-Regeln (Erwin Chargaff, 1949): In jedem DNA-Molekül gilt [A] = [T] und [G] = [C], bzw. die Summe der Purine ist gleich der Summe der Pyrimidine ([A]+[G] = [T]+[C]). Die Chargaff-Regeln gelten für doppelsträngige DNA, nicht jedoch für einzelsträngige DNA oder RNA. Ein menschliches Genom enthält ca. 3,2 Milliarden Basenpaare (bp), verteilt auf 23 Chromosomenpaare. Die DNA liegt in eukaryotischen Zellen nicht frei vor, sondern ist um Histonproteine (H2A, H2B, H3, H4 als Oktamer) gewickelt und bildet Nukleosomen, die weitere Verdichtungsstufen durchlaufen (Solenoidstruktur, Schleifen, Chromatinfaser) bis hin zum kondensierten Metaphase-Chromosom.`,
       merksätze: [
-        'Basenpaarung: A=T mit 2 H-Brücken, G≡C mit 3 H-Brücken → GC-reiche DNA ist stabiler (höherer Schmelzpunkt). Merke: „German Cars have 3 (G≡C = 3)“.',
+        'Merke: Basenpaarung: A=T mit 2 Wasserstoffbrücken, G≡C mit 3 Wasserstoffbrücken. GC-reiche DNA ist stabiler (höherer Schmelzpunkt). Purine (A, G) = 2 Ringe, Pyrimidine (C, T) = 1 Ring.',
         'Chargaff-Regeln: [A]=[T] und [G]=[C] sowie [Purine]=[Pyrimidine]. Gilt nur für doppelsträngige DNA.'
       ],
       altfrage: {

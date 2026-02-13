@@ -466,13 +466,13 @@ export const chemieQuestionsPart3: Question[] = [
     options: [
       { id: "a", text: "Linear" },
       { id: "b", text: "Trigonal-planar" },
-      { id: "c", text: "Teträdrisch" },
+      { id: "c", text: "Tetraedrisch" },
       { id: "d", text: "Trigonal-bipyramidal" },
       { id: "e", text: "Oktädrisch" },
     ],
     correctOptionId: "c",
     explanation:
-      "Nach dem VSEPR-Modell ordnen sich vier Elektronenpaare teträdrisch an, um die Abstoßung zu minimieren. Der Bindungswinkel beträgt 109,5°. Beispiele sind CH4 und CCl4.",
+      "Nach dem VSEPR-Modell ordnen sich vier Elektronenpaare tetraedrisch an, um die Abstoßung zu minimieren. Der Bindungswinkel beträgt 109,5°. Beispiele sind CH4 und CCl4.",
     difficulty: "mittel",
     tags: ["chemische-bindung", "vsepr", "molekülgeometrie"],
   },
@@ -510,7 +510,7 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Bei der sp3-Hybridisierung mischen sich ein s- und drei p-Orbitale zu vier energetisch gleichwertigen Hybridorbitalen mit teträdrischer Anordnung (109,5°). Beispiel: Kohlenstoff in Methan (CH4).",
+      "Bei der sp3-Hybridisierung mischen sich ein s- und drei p-Orbitale zu vier energetisch gleichwertigen Hybridorbitalen mit tetraedrischer Anordnung (109,5°). Beispiel: Kohlenstoff in Methan (CH4).",
     difficulty: "mittel",
     tags: ["chemische-bindung", "hybridisierung", "orbitale"],
   },
@@ -529,7 +529,7 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Nach der Reaktionsgleichung benötigt 1 Mol CH4 genau 2 Mol O2. Für 2 Mol CH4 werden daher 2×2 = 4 Mol O2 benötigt. Die Stöchiometrie ergibt sich direkt aus den Köffizienten der ausgeglichenen Gleichung.",
+      "Nach der Reaktionsgleichung benötigt 1 Mol CH4 genau 2 Mol O2. Für 2 Mol CH4 werden daher 2×2 = 4 Mol O2 benötigt. Die Stöchiometrie ergibt sich direkt aus den Koeffizienten der ausgeglichenen Gleichung.",
     difficulty: "leicht",
     tags: ["stöchiometrie", "verbrennung", "reaktionsgleichung"],
   },
@@ -624,7 +624,7 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Der Bindungswinkel im Wasser beträgt ca. 104,5° und ist kleiner als der Teträderwinkel (109,5°), weil die zwei freien Elektronenpaare am Sauerstoff mehr Raum beanspruchen und die H-O-H-Bindungen zusammendrücken.",
+      "Der Bindungswinkel im Wasser beträgt ca. 104,5° und ist kleiner als der Tetraederwinkel (109,5°), weil die zwei freien Elektronenpaare am Sauerstoff mehr Raum beanspruchen und die H-O-H-Bindungen zusammendrücken.",
     difficulty: "mittel",
     tags: ["chemische-bindung", "molekülgeometrie", "wasser"],
   },
@@ -2118,14 +2118,14 @@ export const chemieQuestionsPart3: Question[] = [
     text: "Was versteht man unter E/Z-Isomerie?",
     options: [
       { id: "a", text: "Isomerie durch verschiedene Kettenlängen" },
-      { id: "b", text: "Isomerie durch unterschiedliche Stellung der Substitünten an einer C=C-Doppelbindung" },
+      { id: "b", text: "Isomerie durch unterschiedliche Stellung der Substituenten an einer C=C-Doppelbindung" },
       { id: "c", text: "Spiegelbildisomerie" },
       { id: "d", text: "Isomerie durch verschiedene funktionelle Gruppen" },
       { id: "e", text: "Isomerie bei Cyclohexan" },
     ],
     correctOptionId: "b",
     explanation:
-      "E/Z-Isomerie (cis/trans) tritt an C=C-Doppelbindungen auf, wenn jedes C-Atom zwei verschiedene Substitünten trägt. Z (zusammen): gleiche Seite, E (entgegen): gegenüberliegende Seite bezüglich der Prioritätsregel.",
+      "E/Z-Isomerie (cis/trans) tritt an C=C-Doppelbindungen auf, wenn jedes C-Atom zwei verschiedene Substituenten trägt. Z (zusammen): gleiche Seite, E (entgegen): gegenüberliegende Seite bezüglich der Prioritätsregel.",
     difficulty: "mittel",
     tags: ["isomerie", "e-z-isomerie", "doppelbindung"],
   },
@@ -2614,7 +2614,7 @@ export const chemieQuestionsPart3: Question[] = [
       { id: "a", text: "Die Aminosäuresequenz" },
       { id: "b", text: "Die lokale Faltung in Helices" },
       { id: "c", text: "Die Gesamtfaltung einer Polypeptidkette" },
-      { id: "d", text: "Die Anordnung mehrerer Untereinheiten (Protomere) züinander" },
+      { id: "d", text: "Die Anordnung mehrerer Untereinheiten (Protomere) zueinander" },
       { id: "e", text: "Die posttranslationale Modifikation" },
     ],
     correctOptionId: "d",
@@ -3065,7 +3065,7 @@ export const chemieQuestionsPart3: Question[] = [
     subject: "chemie",
     chapter: "biochemie",
     topic: "Enzyme",
-    text: "Was beschreibt die Michälis-Menten-Kinetik?",
+    text: "Was beschreibt die Michaelis-Menten-Kinetik?",
     options: [
       { id: "a", text: "Die Temperaturabhängigkeit einer Reaktion" },
       { id: "b", text: "Die Beziehung zwischen Substratkonzentration und Reaktionsgeschwindigkeit bei Enzymkatalyse" },
@@ -3075,7 +3075,7 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Die Michälis-Menten-Gleichung v = Vmax × [S] / (Km + [S]) beschreibt die hyperbolische Beziehung zwischen Substratkonzentration und Reaktionsgeschwindigkeit. Km ist die Substratkonzentration bei halbmaximaler Geschwindigkeit.",
+      "Die Michaelis-Menten-Gleichung v = Vmax × [S] / (Km + [S]) beschreibt die hyperbolische Beziehung zwischen Substratkonzentration und Reaktionsgeschwindigkeit. Km ist die Substratkonzentration bei halbmaximaler Geschwindigkeit.",
     difficulty: "schwer",
     tags: ["enzyme", "michälis-menten", "kinetik"],
   },
@@ -3094,7 +3094,7 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Glycin (Gly, G) ist die einfachste Aminosäure mit einem Wasserstoffatom als Seitenkette (R = H). Es ist die einzige achirale Aminosäure, da das alpha-C-Atom nicht vier verschiedene Substitünten trägt.",
+      "Glycin (Gly, G) ist die einfachste Aminosäure mit einem Wasserstoffatom als Seitenkette (R = H). Es ist die einzige achirale Aminosäure, da das alpha-C-Atom nicht vier verschiedene Substituenten trägt.",
     difficulty: "leicht",
     tags: ["aminosäuren", "glycin", "struktur"],
   },
@@ -3170,7 +3170,7 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "C3H8 + 5O2 → 3CO2 + 4H2O. Aus 1 mol Propan entstehen 3 mol CO2. Bei STP: V = 3 × 22,4 L = 67,2 L. Die Stöchiometrie gibt das Molverhältnis direkt aus den Köffizienten.",
+      "C3H8 + 5O2 → 3CO2 + 4H2O. Aus 1 mol Propan entstehen 3 mol CO2. Bei STP: V = 3 × 22,4 L = 67,2 L. Die Stöchiometrie gibt das Molverhältnis direkt aus den Koeffizienten.",
     difficulty: "mittel",
     tags: ["stöchiometrie", "verbrennung", "gasvolumen"],
   },
@@ -3182,7 +3182,7 @@ export const chemieQuestionsPart3: Question[] = [
     text: "Was ist die Gleichgewichtskonstante Kc?",
     options: [
       { id: "a", text: "Die Geschwindigkeit der Hinreaktion" },
-      { id: "b", text: "Das Verhältnis der Produktkonzentrationen zu den Eduktkonzentrationen im Gleichgewicht, jeweils potenziert mit den stöchiometrischen Köffizienten" },
+      { id: "b", text: "Das Verhältnis der Produktkonzentrationen zu den Eduktkonzentrationen im Gleichgewicht, jeweils potenziert mit den stöchiometrischen Koeffizienten" },
       { id: "c", text: "Die Summe aller Konzentrationen" },
       { id: "d", text: "Der Druck im Gleichgewicht" },
       { id: "e", text: "Die Temperatur im Gleichgewicht" },

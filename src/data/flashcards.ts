@@ -21,7 +21,7 @@ const baseDecks: Record<string, Flashcard[]> = {
     { id: "fc-bio-4", front: "Was besagt die Endosymbiontentheorie?", back: "Mitochondrien und Chloroplasten stammen von aufgenommenen Prokaryoten ab. Belege: eigene 70S-Ribosomen, Doppelmembran, eigene ringförmige DNA.", category: "bio", topic: "Zellbiologie", difficulty: "mittel" },
     { id: "fc-bio-5", front: "Welche Funktion hat der Golgi-Apparat?", back: "Sortierung, Modifikation und Verpackung von Proteinen. Cis-Seite empfängt vom ER, Trans-Seite versendet in Vesikel.", category: "bio", topic: "Zellbiologie", difficulty: "leicht" },
     { id: "fc-bio-6", front: "Was sind Lysosomen?", back: "Membranumhüllte Vesikel mit hydrolytischen Enzymen (pH 4-5). Funktion: intrazelluläre Verdauung, Autophagie.", category: "bio", topic: "Zellbiologie", difficulty: "leicht" },
-    { id: "fc-bio-7", front: "Ribosomen: 70S vs 80S?", back: "70S: Prokaryoten und Organellen (Mito, Chloroplast)\n80S: Eukaryoten (im Cytoplasma)\nS = Svedberg-Einheit (Sedimentationsköffizient)", category: "bio", topic: "Zellbiologie", difficulty: "mittel" },
+    { id: "fc-bio-7", front: "Ribosomen: 70S vs 80S?", back: "70S: Prokaryoten und Organellen (Mito, Chloroplast)\n80S: Eukaryoten (im Cytoplasma)\nS = Svedberg-Einheit (Sedimentationskoeffizient)", category: "bio", topic: "Zellbiologie", difficulty: "mittel" },
     { id: "fc-bio-8", front: "Wie viel ATP liefert die vollständige Oxidation von 1 Glucose?", back: "Ca. 38 ATP (theoretisch), davon:\n- 2 ATP aus Glykolyse\n- 2 ATP aus Citratzyklus\n- 34 ATP aus oxidativer Phosphorylierung", category: "bio", topic: "Zellbiologie", difficulty: "schwer" },
   ],
   "bio-genetik": [
@@ -49,7 +49,7 @@ const baseDecks: Record<string, Flashcard[]> = {
   "chemie-bindungen": [
     { id: "fc-ch-b1", front: "Ionenbindung vs Kovalente Bindung?", back: "Ionenbindung: Metall + Nichtmetall, EN-Diff > 1,7, Elektronenübertragung\nKovalent: Nichtmetall + Nichtmetall, EN-Diff < 1,7, geteilte Elektronenpaare", category: "chemie", topic: "Bindungen", difficulty: "leicht" },
     { id: "fc-ch-b2", front: "Wasserstoffbrückenbindung?", back: "H gebunden an F, O oder N\nStärkste zwischenmolekulare Kraft\nErklärt: hoher Sdp. von H₂O, Dichteanomalie, DNA-Basenpaarung", category: "chemie", topic: "Bindungen", difficulty: "mittel" },
-    { id: "fc-ch-b3", front: "VSEPR: 4 Elektronenpaare = ?", back: "Teträdrisch (109,5°) z.B. CH₄\nMit 1 freien EP: trigonal pyramidal (NH₃)\nMit 2 freien EP: gewinkelt (H₂O, 104,5°)", category: "chemie", topic: "Bindungen", difficulty: "schwer" },
+    { id: "fc-ch-b3", front: "VSEPR: 4 Elektronenpaare = ?", back: "Tetraedrisch (109,5°) z.B. CH₄\nMit 1 freien EP: trigonal pyramidal (NH₃)\nMit 2 freien EP: gewinkelt (H₂O, 104,5°)", category: "chemie", topic: "Bindungen", difficulty: "schwer" },
   ],
   "chemie-säuren-basen": [
     { id: "fc-ch-s1", front: "pH-Wert berechnen?", back: "pH = -log[H⁺]\npOH = 14 - pH\nJede pH-Stufe = Faktor 10 in H⁺-Konzentration\npH 7 = neutral (bei 25°C)", category: "chemie", topic: "Säuren-Basen", difficulty: "leicht" },

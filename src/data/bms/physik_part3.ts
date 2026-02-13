@@ -1515,7 +1515,7 @@ export const physikQuestionsPart3: Question[] = [
       { id: "e", text: "Gravitationsgesetz" },
     ],
     correctOptionId: "b",
-    explanation: "I = I₀ × e^(-µx) (Lambert-Beer / Schwächungsgesetz). µ ist der lineare Schwächungsköffizient, x die Materialdicke.",
+    explanation: "I = I₀ × e^(-µx) (Lambert-Beer / Schwächungsgesetz). µ ist der lineare Schwächungskoeffizient, x die Materialdicke.",
     difficulty: "mittel",
     tags: ["absorption", "schwächung"],
   },

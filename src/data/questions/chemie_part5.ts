@@ -803,7 +803,7 @@ export const fragenPart5 = [
     stichwortId: 'ch-13-01',
     fach: 'chemie' as const,
     schwierigkeit: 'mittel' as const,
-    fragetext: 'Was beschreibt die Michälis-Menten-Konstante Km?',
+    fragetext: 'Was beschreibt die Michaelis-Menten-Konstante Km?',
     optionen: [
       'Die maximale Reaktionsgeschwindigkeit',
       'Die Substratkonzentration bei halber maximaler Geschwindigkeit',

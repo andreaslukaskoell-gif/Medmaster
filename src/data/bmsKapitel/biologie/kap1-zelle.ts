@@ -41,7 +41,7 @@ Prokaryoten fehlen membranumschlossene Organellen wie Mitochondrien, endoplasmat
         {
           heading: 'Genomorganisation und Ribosomen',
           text: 'Ein weiterer zentraler Unterschied betrifft die Ribosomen und die Genomorganisation. Prokaryoten besitzen 70S-Ribosomen (bestehend aus einer 30S- und einer 50S-Untereinheit), während Eukaryoten größere 80S-Ribosomen (40S + 60S) im Cytoplasma aufweisen.\n\nDie prokaryotische DNA ist typischerweise ein einzelnes, zirkuläres Chromosom ohne Histone, häufig ergänzt durch kleine zirkuläre DNA-Moleküle, sogenannte Plasmide, die zusätzliche Gene tragen können (z. B. Antibiotikaresistenzen). Eukaryotische DNA hingegen ist linear organisiert, um Histonproteine gewickelt und in mehrere Chromosomen aufgeteilt, die im Zellkern lokalisiert sind. Diese Verpackung ermöglicht die Regulation der Genexpression durch epigenetische Modifikationen.',
-          merksatz: '70S = Prokaryoten (siebzig -> "sie sind primitiver"), 80S = Eukaryoten (achtzig -> "acht Buchstaben in Eukaryot")'
+          merksatz: 'Merke: Prokaryoten = 70S-Ribosomen, kein Zellkern, zirkuläre DNA. Eukaryoten = 80S-Ribosomen, membranumhüllte Organellen, lineare DNA in Chromosomen.'
         },
         {
           heading: 'Zellteilung und Stoffwechsel',
@@ -51,7 +51,7 @@ Prokaryoten fehlen membranumschlossene Organellen wie Mitochondrien, endoplasmat
       ],
       diagram: 'prokaryote-vs-eukaryote',
       merksätze: [
-        '70S = Prokaryoten (siebzig → „sie sind primitiver"), 80S = Eukaryoten (achtzig → „acht Buchstaben in Eukaryot")',
+        'Merke: Prokaryoten = 70S-Ribosomen, kein Zellkern, zirkuläre DNA. Eukaryoten = 80S-Ribosomen, membranumhüllte Organellen, lineare DNA in Chromosomen.',
         'Prokaryoten: kein Kern, keine membranumhüllten Organellen, zirkuläre DNA, Plasmide, binäre Fission'
       ],
       altfrage: {
@@ -122,7 +122,7 @@ Weitere wichtige Strukturen der Tierzelle umfassen das Zytoskelett und spezifisc
         {
           heading: 'Energieversorgung und Synthese',
           text: 'Im Cytoplasma der Tierzelle befinden sich zahlreiche membranumhüllte Organellen. Die Mitochondrien - die "Kraftwerke der Zelle" - produzieren ATP durch oxidative Phosphorylierung und besitzen eine eigene DNA sowie 70S-Ribosomen.\n\nDas endoplasmatische Retikulum (ER) existiert in zwei Formen: Das raue ER (mit Ribosomen besetzt) synthetisiert Membranproteine und sekretorische Proteine, während das glatte ER Lipide synthetisiert, Calciumionen speichert und an der Entgiftung beteiligt ist. Der Golgi-Apparat, bestehend aus gestapelten Zisternen, modifiziert, sortiert und verpackt Proteine für den Transport.',
-          merksatz: 'Kern Regiert, ER Produziert, Golgi Verpackt, Lysosomen Verdauen, Mitochondrien Liefern Energie',
+          merksatz: 'Merke: Zellkern (DNA-Speicher), raues ER (Proteinsynthese), glattes ER (Lipidsynthese), Golgi (Sortierung/Modifikation), Lysosomen (Verdauung, pH 4-5), Mitochondrien (ATP-Produktion).',
           table: {
             headers: ['Organelle', 'Funktion'],
             rows: [
@@ -149,7 +149,7 @@ Weitere wichtige Strukturen der Tierzelle umfassen das Zytoskelett und spezifisc
       ],
       diagram: 'animal-cell',
       merksätze: [
-        'Eselsbrücke für Organellen: „Kern Regiert, ER Produziert, Golgi Verpackt, Lysosomen Verdauen, Mitochondrien Liefern Energie"',
+        'Merke: Zellkern (DNA-Speicher), raues ER (Proteinsynthese), glattes ER (Lipidsynthese), Golgi (Sortierung/Modifikation), Lysosomen (Verdauung, pH 4-5), Mitochondrien (ATP-Produktion).',
         'Tierzelle hat KEIN: Zellwand, Chloroplasten, große Zentralvakuole – dafür hat sie Zentriolen und Lysosomen'
       ],
       altfrage: {
@@ -207,7 +207,7 @@ Chloroplasten sind die Organellen der Photosynthese und kommen ausschließlich i
 Tierzellen besitzen im Gegensatz zu Pflanzenzellen Zentriolen im Zentrosom, die für die Organisation des Spindelapparats während der Mitose wichtig sind. Pflanzenzellen bilden den Spindelapparat ohne Zentriolen mithilfe anderer Mikrotubuli-Organisationszentren. Lysosomen als Verdauungsorganellen sind vorwiegend in Tierzellen zu finden, während Pflanzenzellen ähnliche Funktionen über die lytische Vakuole erfüllen. Bei der Cytokinese unterscheiden sich beide Zelltypen ebenfalls: Tierzellen schnüren sich durch einen kontraktilen Ring aus Aktinfilamenten ein (Furchung), Pflanzenzellen bilden von innen nach außen eine Zellplatte (Phragmoplast), die zur neuen Zellwand wird. Auch die Energiespeicherung unterscheidet sich: Pflanzenzellen speichern Glucose als Stärke, Tierzellen als Glykogen.`,
       diagram: 'plant-vs-animal-cell',
       merksätze: [
-        'Pflanzenzelle hat 3 „Extra-Cs“: Cell wall (Zellwand), Chloroplasten, Central vakuole',
+        'Merke: Pflanzenzelle hat 3 Extras gegenüber Tierzelle: Zellwand (Cellulose), Chloroplasten (Photosynthese), große Zentralvakuole (Turgor).',
         'Tierzelle hat Zentriolen und Lysosomen, aber keine Zellwand – dafür ist sie flexibel und beweglich'
       ],
       altfrage: {
@@ -265,7 +265,7 @@ Mitochondrien besitzen eine glatte äußere Membran und eine stark gefaltete inn
 Die Endosymbiontentheorie, aufgestellt von Lynn Margulis (1967), erklärt, warum Mitochondrien und Chloroplasten eine Doppelmembran und eigene DNA besitzen. Laut dieser Theorie waren die Vorläufer der Mitochondrien ärobe Proteobakterien, die von einer frühen eukaryotischen Zelle durch Phagozytose aufgenommen wurden. Die äußere Membran entspricht der Phagosomenmembran der Wirtszelle, die innere Membran der ursprünglichen Bakterienmembran. Über Millionen von Jahren wurden viele Gene der Endosymbionten in den Wirtszellkern transferiert (endosymbiontischer Gentransfer), sodass die meisten mitochondrialen Proteine heute im Zellkern kodiert und nach Translation im Cytoplasma in die Mitochondrien importiert werden. Die Belege für die Endosymbiontentheorie umfassen: eigene zirkuläre DNA, 70S-Ribosomen, Doppelmembran, eigene Proteinsynthese, Vermehrung durch Teilung und ähnliche Größe wie Bakterien.`,
       diagram: 'double-membrane-organelles',
       merksätze: [
-        'Doppelmembran-Organellen: „KeMiCh“ – Kern, Mitochondrien, Chloroplasten – alle drei haben eigene DNA (außer: Kern hat die Haupt-DNA)',
+        'Merke: Doppelmembran-Organellen = Kern, Mitochondrien, Chloroplasten. Mitochondrien und Chloroplasten haben eigene zirkuläre DNA und 70S-Ribosomen — Belege für die Endosymbiontentheorie.',
         'Endosymbiontentheorie-Belege: Eigene zirkuläre DNA, 70S-Ribosomen, Doppelmembran, Teilung durch Abschnürung'
       ],
       altfrage: {
@@ -323,8 +323,8 @@ Der Golgi-Apparat besteht aus 4–8 gestapelten, membranumhüllten Zisternen mit
 Lysosomen sind Einzelmembran-Organellen mit saurem Milieu (pH 4,5–5,0), das durch V-Typ-ATPasen (Protonenpumpen) aufrechterhalten wird. Sie enthalten über 50 verschiedene hydrolytische Enzyme (saure Hydrolasen), die Proteine, Lipide, Kohlenhydrate und Nukleinsäuren abbauen. Lysosomen sind an drei Hauptprozessen beteiligt: Heterophagie (Abbau von aufgenommenem Material nach Endozytose oder Phagozytose), Autophagie (Abbau eigener beschädigter Organellen) und Autophagozytose. Endosomen sind Zwischenstationen im endozytotischen Weg: Frühe Endosomen sortieren aufgenommenes Material, späte Endosomen reifen zu Lysosomen heran oder fusionieren mit ihnen. Der gesamte Vesikeltransport wird durch Coat-Proteine (COPI, COPII, Clathrin), SNARE-Proteine (für Vesikelfusion) und Rab-GTPasen (für Zielerkennung) reguliert.`,
       diagram: 'endomembrane-system',
       merksätze: [
-        'Sekretorischer Weg: rER → Golgi (cis→trans) → Zellmembran/Lysosom – Merke: „ER Golft zur Membran“',
-        'Golgi: cis = Empfang (zum ER hin), trans = Versand (zur Membran hin) – „cis kommt, trans geht“'
+        'Merke: Sekretorischer Weg: raues ER → cis-Golgi → medial-Golgi → trans-Golgi → Zellmembran oder Lysosom. Proteine werden schrittweise modifiziert (Glykosylierung, Phosphorylierung).',
+        'Merke: Mannose-6-Phosphat-Tag am trans-Golgi dirigiert Enzyme zu Lysosomen. Ohne dieses Signal → Sekretion nach extrazellulär (Default-Pathway).'
       ],
       altfrage: {
         question: 'Wie gelangen Enzyme zu den Lysosomen?',
@@ -432,7 +432,7 @@ Cholesterol ist ein essentieller Bestandteil tierischer Zellmembranen und macht 
     {
       id: 'bio-kap1-uk7',
       title: 'Membrantransport',
-      content: `Der Transport von Stoffen über die Zellmembran ist essentiell für die Aufrechterhaltung des zellulären Milieus und wird in passiven und aktiven Transport unterteilt. Passiver Transport erfolgt entlang des Konzentrationsgradienten (von hoch nach niedrig) und benötigt keine Energie in Form von ATP. Die einfache Diffusion betrifft kleine, unpolare Moleküle (O₂, CO₂, N₂, Steroidhormone), die direkt durch die Lipiddoppelschicht diffundieren. Die Geschwindigkeit folgt dem Fickschen Diffusionsgesetz und hängt von Konzentrationsgradient, Membranfläche, Membrandicke und dem Diffusionsköffizienten des Stoffes ab. Die erleichterte Diffusion (Facilitated Diffusion) benötigt Kanalproteine oder Carrier-Proteine für Moleküle, die die Membran nicht allein passieren können: Ionenkanäle (z. B. K⁺-Kanäle) ermöglichen den selektiven Durchtritt von Ionen; Carrier-Proteine (z. B. GLUT-Transporter für Glucose) binden den Stoff und ändern ihre Konformation. Beide zeigen Sättigungskinetik (maximale Transportrate Vmax) und Spezifität.
+      content: `Der Transport von Stoffen über die Zellmembran ist essentiell für die Aufrechterhaltung des zellulären Milieus und wird in passiven und aktiven Transport unterteilt. Passiver Transport erfolgt entlang des Konzentrationsgradienten (von hoch nach niedrig) und benötigt keine Energie in Form von ATP. Die einfache Diffusion betrifft kleine, unpolare Moleküle (O₂, CO₂, N₂, Steroidhormone), die direkt durch die Lipiddoppelschicht diffundieren. Die Geschwindigkeit folgt dem Fickschen Diffusionsgesetz und hängt von Konzentrationsgradient, Membranfläche, Membrandicke und dem Diffusionskoeffizienten des Stoffes ab. Die erleichterte Diffusion (Facilitated Diffusion) benötigt Kanalproteine oder Carrier-Proteine für Moleküle, die die Membran nicht allein passieren können: Ionenkanäle (z. B. K⁺-Kanäle) ermöglichen den selektiven Durchtritt von Ionen; Carrier-Proteine (z. B. GLUT-Transporter für Glucose) binden den Stoff und ändern ihre Konformation. Beide zeigen Sättigungskinetik (maximale Transportrate Vmax) und Spezifität.
 
 Osmose ist die Diffusion von Wasser durch eine semipermeable Membran vom Ort niedrigerer Konzentration gelöster Stoffe zum Ort höherer Konzentration gelöster Stoffe. In einer hypotonischen Lösung (weniger gelöste Stoffe außen) nimmt die Zelle Wasser auf und schwillt an – bei Tierzellen droht die Lyse, bei Pflanzenzellen wird der Turgor aufgebaut, die Zellwand verhindert das Platzen. In einer hypertonischen Lösung (mehr gelöste Stoffe außen) verliert die Zelle Wasser – Tierzellen schrumpfen (Krenation), Pflanzenzellen plasmolysieren (die Zellmembran löst sich von der Zellwand). In einer isotonischen Lösung herrscht Gleichgewicht. Der osmotische Druck (π) wird durch die Van-'t-Hoff-Gleichung beschrieben: π = i × c × R × T, wobei i der Van-'t-Hoff-Faktor (Anzahl der Teilchen nach Dissoziation), c die molare Konzentration, R die Gaskonstante und T die absolute Temperatur ist.
 
@@ -497,7 +497,7 @@ In der S-Phase wird die gesamte DNA der Zelle semikonservativ repliziert: Jedes 
 Der Zellzyklus wird an mehreren Kontrollpunkten (Checkpoints) streng reguliert. Der G1/S-Checkpoint (Restriktionspunkt) entscheidet, ob die Zelle in die S-Phase eintritt und sich zur Teilung verpflichtet – hier wird geprüft, ob die Zelle groß genug ist, ob ausreichend Nährstoffe vorhanden sind und ob die DNA intakt ist. Der G2/M-Checkpoint überprüft vor Eintritt in die Mitose, ob die DNA-Replikation vollständig und fehlerfrei abgeschlossen wurde. Der Spindel-Checkpoint (Metaphase-Checkpoint) kontrolliert während der Mitose, ob alle Chromosomen korrekt am Spindelapparat angeheftet sind. Die Regulation erfolgt durch Cycline und Cyclin-abhängige Kinasen (CDKs): Cycline werden phasenspezifisch synthetisiert und abgebaut, aktivieren CDKs und treiben den Zellzyklus voran. Das Tumorsuppressorprotein p53 – der „Wächter des Genoms“ – spielt eine zentrale Rolle: Bei DNA-Schäden stoppt p53 den Zellzyklus am G1/S-Checkpoint und initiiert entweder die DNA-Reparatur oder bei irreparablen Schäden die Apoptose.`,
       diagram: 'cell-cycle',
       merksätze: [
-        'Interphase: G1 (Wachstum) → S (DNA-Synthese) → G2 (Vorbereitung) → M (Mitose) – „Geh Schlafen, Gib Mir Ruhe“',
+        'Merke: Zellzyklus = G1 (Wachstum, Checkpoint) → S (DNA-Replikation) → G2 (Kontrolle) → M (Mitose). G0 = ruhende Zellen (z.B. Neuronen). G1/S-Checkpoint = Restriktionspunkt.',
         'p53 = „Wächter des Genoms“: Stoppt den Zellzyklus bei DNA-Schäden oder leitet Apoptose ein'
       ],
       altfrage: {
@@ -555,7 +555,7 @@ In der Metaphase ordnen sich alle Chromosomen in der Äquatorialebene der Zelle 
 In der Telophase erreichen die Chromosomen die Zellpole, dekondensieren wieder zu Chromatin, die Kernhülle bildet sich um jeden Chromosomensatz neu, und der Nukleolus erscheint wieder. Der Spindelapparat wird abgebaut. Die Mitose endet mit der Cytokinese – der Teilung des Cytoplasmas. In Tierzellen wird ein kontraktiler Ring aus Aktin und Myosin unter der Zellmembran gebildet, der sich zusammenzieht und eine Teilungsfurche erzeugt, bis die Zelle in zwei Tochterzellen getrennt ist. In Pflanzenzellen bilden Golgi-Vesikel in der Zellmitte die Zellplatte, die sich nach außen ausdehnt und zur neuen Zellwand wird. Jede Tochterzelle erhält einen vollständigen diploiden Chromosomensatz (2n/2C) und ist genetisch identisch mit der Mutterzelle. Die Mitose dient dem Wachstum, der Gewebereparatur und der ungeschlechtlichen Fortpflanzung.`,
       diagram: 'mitosis',
       merksätze: [
-        'PMAT: Prophase – Metaphase – Anaphase – Telophase → „Pauls Mutter Aß Torte“',
+        'Mitose-Phasen PMAT: Prophase (Chromosomen kondensieren), Metaphase (Äquatorialplatte), Anaphase (Chromatiden trennen sich), Telophase (Kernhülle bildet sich neu) + Zytokinese.',
         'Mitose = äquational (2n → 2n, identische Tochterzellen), Meiose = reduktional (2n → 1n)'
       ],
       altfrage: {
@@ -586,7 +586,7 @@ In der Telophase erreichen die Chromosomen die Zellpole, dekondensieren wieder z
             'Eine diploide und eine haploide Tochterzelle'
           ],
           correctIndex: 1,
-          explanation: 'Die Mitose erzeugt zwei genetisch identische Tochterzellen mit demselben diploiden Chromosomensatz (2n) wie die Mutterzelle. Genetische Vielfalt entsteht erst durch Meiose und sexülle Fortpflanzung.'
+          explanation: 'Die Mitose erzeugt zwei genetisch identische Tochterzellen mit demselben diploiden Chromosomensatz (2n) wie die Mutterzelle. Genetische Vielfalt entsteht erst durch Meiose und sexuelle Fortpflanzung.'
         },
         {
           question: 'Welches Enzym spaltet die Kohäsin-Proteine in der Anaphase?',

@@ -208,7 +208,7 @@ export const fragenPart2 = [
     stichwortId: 'ma-3-01',
     fach: 'mathematik' as const,
     schwierigkeit: 'schwer' as const,
-    fragetext: 'Ein regelmäßiges Teträder hat eine Kantenlänge von 6 cm. Die Oberfläche besteht aus 4 gleichseitigen Dreiecken. Wie groß ist die gesamte Oberfläche? (Höhe eines gleichseitigen Dreiecks mit Seite a: h ≈ 0,866·a)',
+    fragetext: 'Ein regelmäßiges Tetraeder hat eine Kantenlänge von 6 cm. Die Oberfläche besteht aus 4 gleichseitigen Dreiecken. Wie groß ist die gesamte Oberfläche? (Höhe eines gleichseitigen Dreiecks mit Seite a: h ≈ 0,866·a)',
     optionen: [
       '31,2 cm²',
       '62,4 cm²',
@@ -218,7 +218,7 @@ export const fragenPart2 = [
     ],
     korrekteAntwort: 1,
     erklärung: 'Höhe eines Dreiecks: h = 0,866·6 ≈ 5,2 cm. Fläche eines Dreiecks: A = (1/2)·6·5,2 = 15,6 cm². Gesamtoberfläche: 4·15,6 = 62,4 cm².',
-    strategieTipp: 'Ein Teträder hat 4 gleichseitige Dreiecksflächen. Berechne die Fläche einer Seite und multipliziere mit 4.'
+    strategieTipp: 'Ein Tetraeder hat 4 gleichseitige Dreiecksflächen. Berechne die Fläche einer Seite und multipliziere mit 4.'
   },
   {
     id: 'ma-q-064',

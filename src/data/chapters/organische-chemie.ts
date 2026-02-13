@@ -16,7 +16,7 @@ export const organischeChemieChapter: Chapter = {
     "Alkane, Alkene und Alkine unterscheiden und benennen",
     "Die wichtigsten funktionellen Gruppen erkennen",
     "Kohlenhydrate, Lipide und Proteine als Biomoleküle beschreiben",
-    "Die Michälis-Menten-Kinetik und Enzymhemmung erklären",
+    "Die Michaelis-Menten-Kinetik und Enzymhemmung erklären",
     "Den Ablauf der Zellatmung mit ATP-Bilanz beschreiben",
     "Isomerieformen unterscheiden",
   ],
@@ -29,13 +29,13 @@ export const organischeChemieChapter: Chapter = {
       heading: "Kohlenwasserstoffe",
       content:
         "Kohlenwasserstoffe (KW) bestehen ausschließlich aus Kohlenstoff- und Wasserstoffatomen und bilden das Grundgerüst der organischen Chemie. Kohlenstoff ist vierbindig (4 Bindungen) und kann Einfach-, Doppel- und Dreifachbindungen ausbilden. Man unterscheidet drei Hauptklassen:\n\n" +
-        "<strong>Alkane (gesättigte KW):</strong> Alkane besitzen ausschließlich C–C-Einfachbindungen. Sie haben die allgemeine Summenformel <strong>CₙH₂ₙ₊₂</strong> und tragen die Endung <strong>-an</strong>. Die C-Atome sind sp³-hybridisiert (Teträder-Geometrie, Bindungswinkel 109,5°). Um jede C–C-Einfachbindung ist freie Rotation möglich. Die homologe Reihe der Alkane lautet: Methan (CH₄), Ethan (C₂H₆), Propan (C₃H₈), Butan (C₄H₁₀), Pentan (C₅H₁₂), Hexan (C₆H₁₄), Heptan (C₇H₁₆), Octan (C₈H₁₈), Nonan (C₉H₂₀), Decan (C₁₀H₂₂). Mit steigender Kettenlänge nehmen Siedepunkt und Schmelzpunkt zu (stärkere Van-der-Waals-Kräfte). Alkane sind unpolar, wasserunlöslich (hydrophob) und brennbar.\n\n" +
+        "<strong>Alkane (gesättigte KW):</strong> Alkane besitzen ausschließlich C–C-Einfachbindungen. Sie haben die allgemeine Summenformel <strong>CₙH₂ₙ₊₂</strong> und tragen die Endung <strong>-an</strong>. Die C-Atome sind sp³-hybridisiert (Tetraeder-Geometrie, Bindungswinkel 109,5°). Um jede C–C-Einfachbindung ist freie Rotation möglich. Die homologe Reihe der Alkane lautet: Methan (CH₄), Ethan (C₂H₆), Propan (C₃H₈), Butan (C₄H₁₀), Pentan (C₅H₁₂), Hexan (C₆H₁₄), Heptan (C₇H₁₆), Octan (C₈H₁₈), Nonan (C₉H₂₀), Decan (C₁₀H₂₂). Mit steigender Kettenlänge nehmen Siedepunkt und Schmelzpunkt zu (stärkere Van-der-Waals-Kräfte). Alkane sind unpolar, wasserunlöslich (hydrophob) und brennbar.\n\n" +
         "<strong>Alkene (ungesättigte KW mit Doppelbindung):</strong> Alkene enthalten mindestens eine C=C-Doppelbindung. Ihre allgemeine Summenformel ist <strong>CₙH₂ₙ</strong> und die Endung lautet <strong>-en</strong>. Die C-Atome der Doppelbindung sind sp²-hybridisiert (trigonal-planar, Bindungswinkel 120°). Die Doppelbindung besteht aus einer σ-Bindung und einer π-Bindung. Wichtig: Um eine C=C-Doppelbindung ist <strong>keine freie Rotation</strong> möglich — dies ist die Grundlage der cis/trans-Isomerie (geometrische Isomerie). Das einfachste Alken ist Ethen (Ethylen, C₂H₄). Alkene sind reaktiver als Alkane und gehen typische Additionsreaktionen ein (z.B. Hydrierung: Alken + H₂ → Alkan).\n\n" +
         "<strong>Alkine (ungesättigte KW mit Dreifachbindung):</strong> Alkine enthalten mindestens eine C≡C-Dreifachbindung. Ihre allgemeine Summenformel ist <strong>CₙH₂ₙ₋₂</strong> und die Endung lautet <strong>-in</strong>. Die C-Atome der Dreifachbindung sind sp-hybridisiert (linear, Bindungswinkel 180°). Die Dreifachbindung besteht aus einer σ-Bindung und zwei π-Bindungen. Das einfachste Alkin ist Ethin (Acetylen, C₂H₂).\n\n" +
-        "<strong>IUPAC-Nomenklatur:</strong> Die systematische Benennung organischer Verbindungen folgt den Regeln der IUPAC: (1) Bestimme die längste durchgehende Kohlenstoffkette — diese bildet den Stammnamen. (2) Nummeriere die C-Atome so, dass die Substitünten möglichst niedrige Nummern erhalten. (3) Benenne die Substitünten (Alkylgruppen wie Methyl-, Ethyl-) und gib ihre Position an. (4) Bei mehreren gleichen Substitünten verwende di-, tri-, tetra- etc. (5) Die funktionelle Gruppe mit höchster Priorität bestimmt die Endung.\n\n" +
+        "<strong>IUPAC-Nomenklatur:</strong> Die systematische Benennung organischer Verbindungen folgt den Regeln der IUPAC: (1) Bestimme die längste durchgehende Kohlenstoffkette — diese bildet den Stammnamen. (2) Nummeriere die C-Atome so, dass die Substituenten möglichst niedrige Nummern erhalten. (3) Benenne die Substituenten (Alkylgruppen wie Methyl-, Ethyl-) und gib ihre Position an. (4) Bei mehreren gleichen Substituenten verwende di-, tri-, tetra- etc. (5) Die funktionelle Gruppe mit höchster Priorität bestimmt die Endung.\n\n" +
         "<strong>Isomerie:</strong> Isomere sind Moleküle mit gleicher Summenformel, aber unterschiedlicher Struktur. Man unterscheidet:\n" +
         "• <strong>Strukturisomerie (Konstitutionsisomerie):</strong> Unterschiedliche Verknüpfung der Atome (z.B. n-Butan vs. Isobutan/2-Methylpropan — gleiche Formel C₄H₁₀, aber andere Kettenstruktur).\n" +
-        "• <strong>Stereoisomerie:</strong> Gleiche Verknüpfung, aber unterschiedliche räumliche Anordnung. Unterformen: (a) <strong>cis/trans-Isomerie (E/Z-Isomerie):</strong> Tritt bei Doppelbindungen auf, weil keine freie Rotation möglich ist. cis = gleiche Seite, trans = gegenüberliegende Seite (nach CIP-Regeln: Z = zusammen, E = entgegen). (b) <strong>Enantiomere (Spiegelbildisomerie):</strong> Auftreten bei chiralen Molekülen mit einem asymmetrischen C-Atom (4 verschiedene Substitünten). Enantiomere verhalten sich wie Bild und Spiegelbild, sind aber nicht deckungsgleich. Sie drehen die Ebene des polarisierten Lichts in entgegengesetzte Richtungen (optische Aktivität: R/S- oder D/L-Nomenklatur).",
+        "• <strong>Stereoisomerie:</strong> Gleiche Verknüpfung, aber unterschiedliche räumliche Anordnung. Unterformen: (a) <strong>cis/trans-Isomerie (E/Z-Isomerie):</strong> Tritt bei Doppelbindungen auf, weil keine freie Rotation möglich ist. cis = gleiche Seite, trans = gegenüberliegende Seite (nach CIP-Regeln: Z = zusammen, E = entgegen). (b) <strong>Enantiomere (Spiegelbildisomerie):</strong> Auftreten bei chiralen Molekülen mit einem asymmetrischen C-Atom (4 verschiedene Substituenten). Enantiomere verhalten sich wie Bild und Spiegelbild, sind aber nicht deckungsgleich. Sie drehen die Ebene des polarisierten Lichts in entgegengesetzte Richtungen (optische Aktivität: R/S- oder D/L-Nomenklatur).",
       vergleichsTabelle: {
         headers: ["Typ", "Bindung", "Formel", "Endung", "Beispiel"],
         rows: [
@@ -144,19 +144,19 @@ export const organischeChemieChapter: Chapter = {
         "Enzyme binden ihr Substrat an einer spezifischen Region, dem <strong>aktiven Zentrum</strong>. Zwei Modelle beschreiben diese Wechselwirkung:\n" +
         "• <strong>Schlüssel-Schloss-Prinzip</strong> (Emil Fischer, 1894): Substrat und aktives Zentrum passen genau zusammen wie ein Schlüssel in ein Schloss — starre Komplementarität.\n" +
         "• <strong>Induced-Fit-Modell</strong> (Daniel Koshland, 1958): Das aktive Zentrum passt sich bei Substratbindung an — flexible, induzierte Komplementarität. Dieses Modell beschreibt die Realität besser, da Enzyme dynamische Strukturen sind.\n\n" +
-        "<strong>Michälis-Menten-Kinetik:</strong>\n" +
-        "Die Beziehung zwischen Substratkonzentration [S] und Reaktionsgeschwindigkeit v wird durch die Michälis-Menten-Gleichung beschrieben:\n\n" +
+        "<strong>Michaelis-Menten-Kinetik:</strong>\n" +
+        "Die Beziehung zwischen Substratkonzentration [S] und Reaktionsgeschwindigkeit v wird durch die Michaelis-Menten-Gleichung beschrieben:\n\n" +
         "<strong>v = V<sub>max</sub> · [S] / (K<sub>m</sub> + [S])</strong>\n\n" +
         "Dabei ist:\n" +
         "• <strong>V<sub>max</sub></strong> = maximale Reaktionsgeschwindigkeit (bei Substratsättigung, alle Enzym-Bindungsstellen besetzt)\n" +
-        "• <strong>K<sub>m</sub></strong> (Michälis-Konstante) = diejenige Substratkonzentration, bei der die Reaktionsgeschwindigkeit genau <strong>½V<sub>max</sub></strong> beträgt\n" +
+        "• <strong>K<sub>m</sub></strong> (Michaelis-Konstante) = diejenige Substratkonzentration, bei der die Reaktionsgeschwindigkeit genau <strong>½V<sub>max</sub></strong> beträgt\n" +
         "• K<sub>m</sub> ist ein Maß für die <strong>Affinität</strong> des Enzyms zum Substrat: <strong>kleines K<sub>m</sub> = hohe Affinität</strong> (das Enzym erreicht schon bei niedrigen [S] die Halbmaximale Geschwindigkeit), großes K<sub>m</sub> = niedrige Affinität\n\n" +
-        "Die Michälis-Menten-Kurve hat eine hyperbolische Form: Bei niedrigen [S] steigt v nahezu linear, bei hohen [S] nähert sich v asymptotisch V<sub>max</sub> an (Sättigungskinetik).\n\n" +
+        "Die Michaelis-Menten-Kurve hat eine hyperbolische Form: Bei niedrigen [S] steigt v nahezu linear, bei hohen [S] nähert sich v asymptotisch V<sub>max</sub> an (Sättigungskinetik).\n\n" +
         "<strong>Enzymhemmung (Inhibition):</strong>\n" +
         "Die Enzymaktivität kann durch Inhibitoren herabgesetzt werden. Man unterscheidet zwei Haupttypen:\n\n" +
         "• <strong>Kompetitive Hemmung:</strong> Der Inhibitor ähnelt strukturell dem Substrat und bindet reversibel an das <strong>aktive Zentrum</strong> des Enzyms. Substrat und Inhibitor konkurrieren um dieselbe Bindungsstelle. Auswirkung: <strong>K<sub>m</sub> steigt</strong> (scheinbar geringere Affinität, da höhere [S] nötig für ½V<sub>max</sub>), aber <strong>V<sub>max</sub> bleibt gleich</strong> (bei genügend hoher [S] verdrängt das Substrat den Inhibitor vollständig). Klinisches Beispiel: Methotrexat hemmt kompetitiv die Dihydrofolatreduktase (Krebstherapie).\n\n" +
         "• <strong>Nicht-kompetitive Hemmung:</strong> Der Inhibitor bindet an eine <strong>andere Stelle</strong> als das aktive Zentrum (allosterische Stelle), sowohl am freien Enzym als auch am Enzym-Substrat-Komplex. Die Konformation des Enzyms wird verändert, sodass die katalytische Aktivität sinkt. Auswirkung: <strong>K<sub>m</sub> bleibt gleich</strong> (die Substratbindung wird nicht beeinflusst), aber <strong>V<sub>max</sub> sinkt</strong> (weniger funktionsfähige Enzym-Moleküle). Durch Substratüberschuss <strong>nicht aufhebbar</strong>. Klinisches Beispiel: Schwermetalle (Blei, Quecksilber) hemmen viele Enzyme nicht-kompetitiv.\n\n" +
-        "<strong>Allosterische Regulation:</strong> Viele Enzyme besitzen neben dem aktiven Zentrum weitere Bindungsstellen (allosterische Zentren). Allosterische Aktivatoren erhöhen die Enzymaktivität, allosterische Inhibitoren verringern sie. Allosterische Enzyme zeigen oft eine sigmoide (S-förmige) statt hyperbolische Kinetik und folgen <strong>nicht</strong> der klassischen Michälis-Menten-Gleichung. Beispiel: Phosphofructokinase-1 (Schlüsselenzym der Glykolyse) wird allosterisch durch ATP gehemmt und durch AMP/ADP aktiviert.\n\n" +
+        "<strong>Allosterische Regulation:</strong> Viele Enzyme besitzen neben dem aktiven Zentrum weitere Bindungsstellen (allosterische Zentren). Allosterische Aktivatoren erhöhen die Enzymaktivität, allosterische Inhibitoren verringern sie. Allosterische Enzyme zeigen oft eine sigmoide (S-förmige) statt hyperbolische Kinetik und folgen <strong>nicht</strong> der klassischen Michaelis-Menten-Gleichung. Beispiel: Phosphofructokinase-1 (Schlüsselenzym der Glykolyse) wird allosterisch durch ATP gehemmt und durch AMP/ADP aktiviert.\n\n" +
         "<strong>Cofaktoren und Coenzyme:</strong> Viele Enzyme benötigen zusätzliche nicht-proteinogene Komponenten für ihre Aktivität:\n" +
         "• <strong>Cofaktoren:</strong> Anorganische Ionen (z.B. Mg²⁺, Zn²⁺, Fe²⁺/Fe³⁺)\n" +
         "• <strong>Coenzyme:</strong> Organische Moleküle, oft von Vitaminen abgeleitet (z.B. NAD⁺ von Vitamin B3/Niacin, FAD von Vitamin B2/Riboflavin, Coenzym A von Vitamin B5/Pantothensäure). Coenzyme übertragen Elektronen, funktionelle Gruppen oder Energie.\n" +
@@ -172,7 +172,7 @@ export const organischeChemieChapter: Chapter = {
         ],
       },
       merke:
-        "Michälis-Menten: Km = <strong>Substratkonzentration bei ½Vmax</strong>. Kleines Km = hohe Affinität! Kompetitiv: Inhibitor am aktiven Zentrum → Km↑, Vmax gleich. Nicht-kompetitiv: anderer Ort → Km gleich, Vmax↓.",
+        "Michaelis-Menten: Km = <strong>Substratkonzentration bei ½Vmax</strong>. Kleines Km = hohe Affinität! Kompetitiv: Inhibitor am aktiven Zentrum → Km↑, Vmax gleich. Nicht-kompetitiv: anderer Ort → Km gleich, Vmax↓.",
     },
 
     // ──────────────────────────────────────────────
@@ -245,7 +245,7 @@ export const organischeChemieChapter: Chapter = {
       value: "Stärke = pflanzlich, Glykogen = tierisch (Leber + Muskel)",
     },
     {
-      label: "Km (Michälis-Konstante)",
+      label: "Km (Michaelis-Konstante)",
       value: "[S] bei ½Vmax — kleines Km = hohe Affinität",
     },
     {
@@ -322,10 +322,10 @@ export const organischeChemieChapter: Chapter = {
   ],
 
   summary: [
-    "Kohlenwasserstoffe: Alkane (CₙH₂ₙ₊₂, Einfachbindung, -an), Alkene (CₙH₂ₙ, Doppelbindung, -en, cis/trans-Isomerie), Alkine (CₙH₂ₙ₋₂, Dreifachbindung, -in). IUPAC-Nomenklatur: längste Kette + Substitünten + Nummerierung.",
+    "Kohlenwasserstoffe: Alkane (CₙH₂ₙ₊₂, Einfachbindung, -an), Alkene (CₙH₂ₙ, Doppelbindung, -en, cis/trans-Isomerie), Alkine (CₙH₂ₙ₋₂, Dreifachbindung, -in). IUPAC-Nomenklatur: längste Kette + Substituenten + Nummerierung.",
     "Funktionelle Gruppen bestimmen die Reaktivität: Alkohol (-OH), Aldehyd (-CHO), Keton (>C=O), Carbonsäure (-COOH), Ester (-COO-), Amin (-NH₂), Amid (-CONH₂), Ether (-O-). Oxidationsreihe: Alkohol → Aldehyd → Carbonsäure.",
     "Biomoleküle: Kohlenhydrate (Mono-, Di-, Polysaccharide), Lipide (Triglyceride, Phospholipide, Steroide), Proteine (20 AS, Peptidbindung, 4 Strukturebenen), Nucleinsäuren (DNA/RNA).",
-    "Enzyme sind biologische Katalysatoren mit Substratspezifität (Induced-Fit). Michälis-Menten: v = Vmax·[S]/(Km+[S]). Kompetitive Hemmung: Km↑, Vmax=. Nicht-kompetitive Hemmung: Km=, Vmax↓.",
+    "Enzyme sind biologische Katalysatoren mit Substratspezifität (Induced-Fit). Michaelis-Menten: v = Vmax·[S]/(Km+[S]). Kompetitive Hemmung: Km↑, Vmax=. Nicht-kompetitive Hemmung: Km=, Vmax↓.",
     "Zellatmung: Glykolyse (Cytoplasma, 2 ATP) → PDH → Citratzyklus (Mito-Matrix, 2 ATP) → Atmungskette (innere Mitomembran, ~34 ATP) = ~38 ATP pro Glucose ärob. Anärob: nur 2 ATP (Laktat).",
   ],
 };

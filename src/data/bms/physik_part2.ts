@@ -849,7 +849,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "wärmelehre",
     topic: "Wärmeausdehnung",
-    text: "Ein Stahlstab (Länge l₀ = 2 m, Längenausdehnungsköffizient α = 12 × 10⁻⁶ K⁻¹) wird um ΔT = 50 K erwärmt. Um wie viel verlängert sich der Stab?",
+    text: "Ein Stahlstab (Länge l₀ = 2 m, Längenausdehnungskoeffizient α = 12 × 10⁻⁶ K⁻¹) wird um ΔT = 50 K erwärmt. Um wie viel verlängert sich der Stab?",
     options: [
       { id: "a", text: "0,12 mm" },
       { id: "b", text: "12 mm" },

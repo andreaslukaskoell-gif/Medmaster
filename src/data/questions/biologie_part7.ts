@@ -117,7 +117,7 @@ export const fragenPart7 = [
     fragetext: 'Was versteht man unter Penetranz in der Genetik?',
     optionen: ['Die Stärke der Merkmalsausprägung', 'Die Häufigkeit, mit der ein Genotyp zum entsprechenden Phänotyp führt', 'Die Anzahl der betroffenen Gene', 'Die Geschwindigkeit der Vererbung', 'Die Rückkreuzung mit der Parentalgeneration'],
     korrekteAntwort: 1,
-    erklärung: 'Penetranz gibt den Prozentsatz der Individün mit einem bestimmten Genotyp an, die auch den erwarteten Phänotyp zeigen. Bei vollständiger Penetranz (100 %) zeigen alle Träger des Genotyps das Merkmal. Bei unvollständiger Penetranz entwickeln manche Träger das Merkmal nicht, z.B. bei BRCA1-Mutationen (ca. 70 % Penetranz für Brustkrebs).',
+    erklärung: 'Penetranz gibt den Prozentsatz der Individuen mit einem bestimmten Genotyp an, die auch den erwarteten Phänotyp zeigen. Bei vollständiger Penetranz (100 %) zeigen alle Träger des Genotyps das Merkmal. Bei unvollständiger Penetranz entwickeln manche Träger das Merkmal nicht, z.B. bei BRCA1-Mutationen (ca. 70 % Penetranz für Brustkrebs).',
     strategieTipp: 'Penetranz = Durchdringungsrate. Frage: Wie viele Genträger zeigen tatsächlich das Merkmal? Unterscheiden Sie von Expressivität (wie stark es ausgeprägt ist).'
   },
   {
@@ -126,9 +126,9 @@ export const fragenPart7 = [
     fach: 'biologie' as const,
     schwierigkeit: 'schwer' as const,
     fragetext: 'Was beschreibt der Begriff Expressivität?',
-    optionen: ['Die Häufigkeit einer Mutation in der Population', 'Die Wahrscheinlichkeit, ein Allel zu vererben', 'Die unterschiedliche Ausprägungsstärke eines Merkmals bei verschiedenen Individün mit gleichem Genotyp', 'Die Expression von Proteinen in der Zelle', 'Die Anzahl exprimierter Gene'],
+    optionen: ['Die Häufigkeit einer Mutation in der Population', 'Die Wahrscheinlichkeit, ein Allel zu vererben', 'Die unterschiedliche Ausprägungsstärke eines Merkmals bei verschiedenen Individuen mit gleichem Genotyp', 'Die Expression von Proteinen in der Zelle', 'Die Anzahl exprimierter Gene'],
     korrekteAntwort: 2,
-    erklärung: 'Expressivität bezeichnet die variable Ausprägungsstärke eines Merkmals bei Individün mit identischem krankheitsrelevantem Genotyp. Beispiel: Bei der Neurofibromatose Typ 1 können Betroffene mit derselben Mutation unterschiedlich stark betroffen sein (von Café-au-lait-Flecken bis zu schweren Tumoren). Dies wird durch Umweltfaktoren und andere Gene beeinflusst.',
+    erklärung: 'Expressivität bezeichnet die variable Ausprägungsstärke eines Merkmals bei Individuen mit identischem krankheitsrelevantem Genotyp. Beispiel: Bei der Neurofibromatose Typ 1 können Betroffene mit derselben Mutation unterschiedlich stark betroffen sein (von Café-au-lait-Flecken bis zu schweren Tumoren). Dies wird durch Umweltfaktoren und andere Gene beeinflusst.',
     strategieTipp: 'Expressivität = Ausdrucksstärke. Während Penetranz fragt "ob", fragt Expressivität "wie stark". Variable Expressivität bedeutet unterschiedliche Schweregrade.'
   },
   {
@@ -316,7 +316,7 @@ export const fragenPart7 = [
     optionen: ['Homologie: gleiche Funktion, verschiedener Bauplan; Analogie: gleicher Bauplan, verschiedene Funktion', 'Homologie: gemeinsamer Ursprung; Analogie: konvergente Entwicklung ähnlicher Funktionen', 'Es gibt keinen Unterschied', 'Homologie gilt nur für Pflanzen', 'Analogie ist ein veralteter Begriff'],
     korrekteAntwort: 1,
     erklärung: 'Homologe Organe haben einen gemeinsamen evolutionären Ursprung (z.B. Vordergliedmaßen von Säugetieren: Arm, Flügel, Flosse – unterschiedliche Funktion, gleicher Grundbauplan). Analoge Organe haben ähnliche Funktionen durch konvergente Evolution entwickelt, aber verschiedenen Ursprung (z.B. Vogelflügel und Insektenflügel).',
-    strategieTipp: 'Homolog = gleicher Ursprung (Divergenz). Analog = gleiche Funktion, verschiedener Ursprung (Konvergenz). Beispiel: Fledermaus- und Vogelflügel = homolog zu anderen Säuger-/Vogel-Gliedmaßen, aber analog züinander in der Flugfunktion.'
+    strategieTipp: 'Homolog = gleicher Ursprung (Divergenz). Analog = gleiche Funktion, verschiedener Ursprung (Konvergenz). Beispiel: Fledermaus- und Vogelflügel = homolog zu anderen Säuger-/Vogel-Gliedmaßen, aber analog zueinander in der Flugfunktion.'
   },
   {
     id: 'bio-q-330',
@@ -348,7 +348,7 @@ export const fragenPart7 = [
     fragetext: 'Wer entwickelte die Theorie der natürlichen Selektion?',
     optionen: ['Gregor Mendel', 'Jean-Baptiste Lamarck', 'Charles Darwin', 'Lynn Margulis', 'Louis Pasteur'],
     korrekteAntwort: 2,
-    erklärung: 'Charles Darwin entwickelte 1859 in seinem Werk "On the Origin of Species" die Theorie der Evolution durch natürliche Selektion. Individün mit vorteilhaften Merkmalen haben bessere Überlebens- und Fortpflanzungschancen, sodass sich diese Merkmale in der Population durchsetzen. Alfred Russel Wallace entwickelte unabhängig eine ähnliche Theorie.',
+    erklärung: 'Charles Darwin entwickelte 1859 in seinem Werk "On the Origin of Species" die Theorie der Evolution durch natürliche Selektion. Individuen mit vorteilhaften Merkmalen haben bessere Überlebens- und Fortpflanzungschancen, sodass sich diese Merkmale in der Population durchsetzen. Alfred Russel Wallace entwickelte unabhängig eine ähnliche Theorie.',
     strategieTipp: 'Darwin = natürliche Selektion, "Survival of the Fittest" (Begriff von Herbert Spencer). Lamarck hatte eine frühere, heute widerlegte Theorie (Vererbung erworbener Eigenschaften).'
   },
   {
@@ -359,8 +359,8 @@ export const fragenPart7 = [
     fragetext: 'Was ist der Hauptunterschied zwischen Darwins und Lamarcks Evolutionstheorie?',
     optionen: ['Darwin glaubte an Schöpfung, Lamarck an Evolution', 'Darwin: Selektion vorhandener Variation; Lamarck: Vererbung erworbener Eigenschaften', 'Darwin studierte Pflanzen, Lamarck Tiere', 'Beide Theorien sind identisch', 'Lamarck entwickelte die Genetik'],
     korrekteAntwort: 1,
-    erklärung: 'Lamarck postulierte, dass durch Gebrauch oder Nichtgebrauch erworbene Eigenschaften an die Nachkommen vererbt werden (z.B. Giraffenhals durch Strecken). Darwin erkannte, dass bereits vorhandene Variation durch natürliche Selektion gefiltert wird – Individün mit vorteilhaften zufälligen Variationen überleben besser. Lamarcks Mechanismus ist widerlegt.',
-    strategieTipp: 'Lamarck: "Gebrauch vererbt sich" (falsch). Darwin: "Selektion filtert Variation" (richtig). Beispiel Giraffe: Nicht Strecken führte zu langem Hals, sondern Individün mit längerem Hals überlebten besser.'
+    erklärung: 'Lamarck postulierte, dass durch Gebrauch oder Nichtgebrauch erworbene Eigenschaften an die Nachkommen vererbt werden (z.B. Giraffenhals durch Strecken). Darwin erkannte, dass bereits vorhandene Variation durch natürliche Selektion gefiltert wird – Individuen mit vorteilhaften zufälligen Variationen überleben besser. Lamarcks Mechanismus ist widerlegt.',
+    strategieTipp: 'Lamarck: "Gebrauch vererbt sich" (falsch). Darwin: "Selektion filtert Variation" (richtig). Beispiel Giraffe: Nicht Strecken führte zu langem Hals, sondern Individuen mit längerem Hals überlebten besser.'
   },
   {
     id: 'bio-q-334',
@@ -392,7 +392,7 @@ export const fragenPart7 = [
     fragetext: 'Was bedeutet "Survival of the Fittest" im evolutionären Kontext?',
     optionen: ['Überleben der Stärksten', 'Überleben der am besten Angepassten', 'Überleben der Größten', 'Überleben der Intelligentesten', 'Überleben der Schnellsten'],
     korrekteAntwort: 1,
-    erklärung: '"Fittest" bedeutet nicht "der Stärkste" oder "Fitteste" im sportlichen Sinn, sondern "der am besten Angepasste" (engl. fit = passend). Es überleben und vermehren sich diejenigen Individün am erfolgreichsten, deren Merkmale am besten zu den aktüllen Umweltbedingungen passen. "Fitness" in der Evolutionsbiologie bedeutet Fortpflanzungserfolg.',
+    erklärung: '"Fittest" bedeutet nicht "der Stärkste" oder "Fitteste" im sportlichen Sinn, sondern "der am besten Angepasste" (engl. fit = passend). Es überleben und vermehren sich diejenigen Individuen am erfolgreichsten, deren Merkmale am besten zu den aktüllen Umweltbedingungen passen. "Fitness" in der Evolutionsbiologie bedeutet Fortpflanzungserfolg.',
     strategieTipp: 'Fittest = am besten angepasst, nicht am stärksten. Evolutionäre Fitness = Reproduktionserfolg (Anzahl überlebender Nachkommen).'
   },
   {
@@ -403,8 +403,8 @@ export const fragenPart7 = [
     fragetext: 'Was definiert der biologische Artbegriff?',
     optionen: ['Ähnliches Aussehen', 'Fortpflanzungsfähigkeit und fruchtbare Nachkommen', 'Gleicher Lebensraum', 'Gleiche Größe', 'Gleiches Verhalten'],
     korrekteAntwort: 1,
-    erklärung: 'Nach dem biologischen Artbegriff (Ernst Mayr) gehören Individün zur selben Art, wenn sie sich untereinander fortpflanzen können und fruchtbare Nachkommen zeugen. Eine reproduktive Isolation von anderen Gruppen liegt vor. Beispiel: Pferd und Esel können sich paaren (Maultier), aber Maultiere sind unfruchtbar → verschiedene Arten.',
-    strategieTipp: 'Biologischer Artbegriff: Fortpflanzungsgemeinschaft mit fruchtbaren Nachkommen. Problem: nicht anwendbar auf asexülle Organismen oder Fossilien.'
+    erklärung: 'Nach dem biologischen Artbegriff (Ernst Mayr) gehören Individuen zur selben Art, wenn sie sich untereinander fortpflanzen können und fruchtbare Nachkommen zeugen. Eine reproduktive Isolation von anderen Gruppen liegt vor. Beispiel: Pferd und Esel können sich paaren (Maultier), aber Maultiere sind unfruchtbar → verschiedene Arten.',
+    strategieTipp: 'Biologischer Artbegriff: Fortpflanzungsgemeinschaft mit fruchtbaren Nachkommen. Problem: nicht anwendbar auf asexuelle Organismen oder Fossilien.'
   },
   {
     id: 'bio-q-338',
@@ -425,7 +425,7 @@ export const fragenPart7 = [
     fragetext: 'Was ist sympatrische Artbildung?',
     optionen: ['Artbildung durch Migration', 'Artbildung ohne geografische Trennung im selben Lebensraum', 'Artbildung durch Aussterben', 'Artbildung durch Klimawandel', 'Artbildung nur bei Bakterien'],
     korrekteAntwort: 1,
-    erklärung: 'Sympatrische Artbildung erfolgt ohne räumliche Trennung. Mechanismen können Polyploidie (häufig bei Pflanzen), sexülle Selektion oder ökologische Spezialisierung sein. Beispiel: Buntbarsche in afrikanischen Seen entwickelten durch unterschiedliche Nahrungspräferenzen reproduktive Isolation, obwohl sie im selben See leben. Sympatrische Artbildung ist seltener und umstrittener als allopatrische.',
+    erklärung: 'Sympatrische Artbildung erfolgt ohne räumliche Trennung. Mechanismen können Polyploidie (häufig bei Pflanzen), sexuelle Selektion oder ökologische Spezialisierung sein. Beispiel: Buntbarsche in afrikanischen Seen entwickelten durch unterschiedliche Nahrungspräferenzen reproduktive Isolation, obwohl sie im selben See leben. Sympatrische Artbildung ist seltener und umstrittener als allopatrische.',
     strategieTipp: 'Sympatrisch = ohne Trennung (sym = zusammen). Schwieriger, weil Genfluss weiterhin möglich. Oft durch Polyploidie (Pflanzen) oder starke Selektion.'
   },
   {
@@ -456,7 +456,7 @@ export const fragenPart7 = [
     fach: 'biologie' as const,
     schwierigkeit: 'mittel' as const,
     fragetext: 'Was beschreibt die Gendrift?',
-    optionen: ['Gerichtete Veränderung durch Selektion', 'Zufällige Veränderung von Allelfrequenzen, besonders in kleinen Populationen', 'Migration von Individün', 'Entstehung neuer Mutationen', 'Kreuzung verschiedener Arten'],
+    optionen: ['Gerichtete Veränderung durch Selektion', 'Zufällige Veränderung von Allelfrequenzen, besonders in kleinen Populationen', 'Migration von Individuen', 'Entstehung neuer Mutationen', 'Kreuzung verschiedener Arten'],
     korrekteAntwort: 1,
     erklärung: 'Gendrift bezeichnet zufällige Schwankungen von Allelfrequenzen, die besonders in kleinen Populationen stark wirken. Sie ist nicht adaptiv – auch nachteilige Allele können sich zufällig durchsetzen, vorteilhafte verloren gehen. Beispiele: Gründereffekt (kleine Gründerpopulation auf Insel) und Flaschenhalseffekt (Populationsreduktion durch Katastrophe).',
     strategieTipp: 'Gendrift = Zufall, nicht Anpassung. Stark in kleinen Populationen. Kann zu Fixierung neutraler oder sogar leicht nachteiliger Allele führen.'
@@ -478,9 +478,9 @@ export const fragenPart7 = [
     fach: 'biologie' as const,
     schwierigkeit: 'mittel' as const,
     fragetext: 'Was ist Genfluss?',
-    optionen: ['Die Bewegung von Genen innerhalb eines Chromosoms', 'Die Wanderung von Individün und Austausch von Genen zwischen Populationen', 'Die Replikation von DNA', 'Die Transkription von RNA', 'Die Translation von Proteinen'],
+    optionen: ['Die Bewegung von Genen innerhalb eines Chromosoms', 'Die Wanderung von Individuen und Austausch von Genen zwischen Populationen', 'Die Replikation von DNA', 'Die Transkription von RNA', 'Die Translation von Proteinen'],
     korrekteAntwort: 1,
-    erklärung: 'Genfluss (oder Genenwanderung) bezeichnet den Transfer von Allelen zwischen Populationen durch Migration von Individün. Er erhöht die genetische Variation innerhalb von Populationen und reduziert Unterschiede zwischen Populationen. Genfluss kann adaptiv sein (neue vorteilhafte Allele) oder Anpassung behindern (Einbringen maladaptiver Allele).',
+    erklärung: 'Genfluss (oder Genenwanderung) bezeichnet den Transfer von Allelen zwischen Populationen durch Migration von Individuen. Er erhöht die genetische Variation innerhalb von Populationen und reduziert Unterschiede zwischen Populationen. Genfluss kann adaptiv sein (neue vorteilhafte Allele) oder Anpassung behindern (Einbringen maladaptiver Allele).',
     strategieTipp: 'Genfluss = Migration bringt neue Allele. Homogenisiert Populationen (macht sie genetisch ähnlicher). Gegenteil von Isolation.'
   },
   {
@@ -489,7 +489,7 @@ export const fragenPart7 = [
     fach: 'biologie' as const,
     schwierigkeit: 'mittel' as const,
     fragetext: 'Welche Form der Selektion verschiebt das Merkmalsspektrum in eine Richtung?',
-    optionen: ['Stabilisierende Selektion', 'Gerichtete (direktionale) Selektion', 'Disruptive Selektion', 'Sexülle Selektion', 'Künstliche Selektion'],
+    optionen: ['Stabilisierende Selektion', 'Gerichtete (direktionale) Selektion', 'Disruptive Selektion', 'Sexuelle Selektion', 'Künstliche Selektion'],
     korrekteAntwort: 1,
     erklärung: 'Gerichtete (direktionale) Selektion bevorzugt ein Extrem des Merkmalsspektrums und verschiebt den Mittelwert. Beispiel: Industriemelanismus bei Birkenspannern (dunkle Form wurde in verrußten Wäldern bevorzugt). Im Gegensatz: Stabilisierende Selektion bevorzugt den Mittelwert, disruptive Selektion bevorzugt beide Extreme.',
     strategieTipp: 'Gerichtete Selektion = Verschiebung in eine Richtung. Stabilisierende = Mittelwert bevorzugt. Disruptive = Extreme bevorzugt.'

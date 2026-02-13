@@ -165,13 +165,13 @@ export const biologieQuestionsPart3: Question[] = [
     options: [
       { id: "a", text: "Die Nachkommen der F2-Generation spalten im Verhältnis 9:3:3:1 auf." },
       { id: "b", text: "Gene verschiedener Merkmale werden unabhängig voneinander vererbt." },
-      { id: "c", text: "Kreuzt man zwei reinerbige (homozygote) Individün, die sich in einem Merkmal unterscheiden, sind alle Nachkommen der F1-Generation untereinander gleich (uniform)." },
+      { id: "c", text: "Kreuzt man zwei reinerbige (homozygote) Individuen, die sich in einem Merkmal unterscheiden, sind alle Nachkommen der F1-Generation untereinander gleich (uniform)." },
       { id: "d", text: "Die F1-Generation zeigt immer den rezessiven Phänotyp." },
-      { id: "e", text: "Heterozygote Individün sind immer steril." },
+      { id: "e", text: "Heterozygote Individuen sind immer steril." },
     ],
     correctOptionId: "c",
     explanation:
-      "Die 1. Mendel'sche Regel (Uniformitätsregel) besagt: Kreuzt man zwei homozygote (reinerbige) Elternorganismen, die sich in einem Merkmal unterscheiden, so sind alle Nachkommen der F1-Generation phänotypisch und genotypisch uniform (gleich). Bei dominant-rezessivem Erbgang zeigen alle F1-Individün den dominanten Phänotyp. Bei intermediärem Erbgang zeigen sie einen Mischphänotyp. Die Regel gilt unabhängig von der Kreuzungsrichtung (reziproke Kreuzung).",
+      "Die 1. Mendel'sche Regel (Uniformitätsregel) besagt: Kreuzt man zwei homozygote (reinerbige) Elternorganismen, die sich in einem Merkmal unterscheiden, so sind alle Nachkommen der F1-Generation phänotypisch und genotypisch uniform (gleich). Bei dominant-rezessivem Erbgang zeigen alle F1-Individuen den dominanten Phänotyp. Bei intermediärem Erbgang zeigen sie einen Mischphänotyp. Die Regel gilt unabhängig von der Kreuzungsrichtung (reziproke Kreuzung).",
     difficulty: "leicht",
     tags: ["genetik", "mendel", "uniformitätsregel"],
   },
@@ -285,7 +285,7 @@ export const biologieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Bei Kodominanz werden beide Allele im heterozygoten Zustand gleichwertig und unabhängig voneinander exprimiert, sodass beide Genprodukte im Phänotyp nachweisbar sind. Ein klassisches Beispiel ist das AB0-Blutgruppensystem: Individün mit dem Genotyp I^A I^B exprimieren sowohl A- als auch B-Antigene auf ihren Erythrozyten und haben die Blutgruppe AB. Im Gegensatz dazu zeigt sich bei intermediärem Erbgang ein Mischphänotyp (z.B. rosa bei roter und weißer Blume).",
+      "Bei Kodominanz werden beide Allele im heterozygoten Zustand gleichwertig und unabhängig voneinander exprimiert, sodass beide Genprodukte im Phänotyp nachweisbar sind. Ein klassisches Beispiel ist das AB0-Blutgruppensystem: Individuen mit dem Genotyp I^A I^B exprimieren sowohl A- als auch B-Antigene auf ihren Erythrozyten und haben die Blutgruppe AB. Im Gegensatz dazu zeigt sich bei intermediärem Erbgang ein Mischphänotyp (z.B. rosa bei roter und weißer Blume).",
     difficulty: "mittel",
     tags: ["genetik", "mendel", "kodominanz", "blutgruppen"],
   },
@@ -342,7 +342,7 @@ export const biologieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Die Chorea Huntington ist eine autosomal-dominant vererbte neurodegenerative Erkrankung, die durch eine Expansion des CAG-Trinukleotid-Repeats im Huntingtin-Gen (HTT) auf Chromosom 4 verursacht wird. Gesunde Individün haben weniger als 36 CAG-Repeats, während Betroffene 36 oder mehr Wiederholungen aufweisen. Die Expansion führt zu einem verlängerten Polyglutamin-Trakt im Protein. Typisch für Trinukleotid-Repeat-Erkrankungen ist die Antizipation: In nachfolgenden Generationen kann die Repeat-Zahl weiter zunehmen, was zu einem früheren Krankheitsbeginn führt.",
+      "Die Chorea Huntington ist eine autosomal-dominant vererbte neurodegenerative Erkrankung, die durch eine Expansion des CAG-Trinukleotid-Repeats im Huntingtin-Gen (HTT) auf Chromosom 4 verursacht wird. Gesunde Individuen haben weniger als 36 CAG-Repeats, während Betroffene 36 oder mehr Wiederholungen aufweisen. Die Expansion führt zu einem verlängerten Polyglutamin-Trakt im Protein. Typisch für Trinukleotid-Repeat-Erkrankungen ist die Antizipation: In nachfolgenden Generationen kann die Repeat-Zahl weiter zunehmen, was zu einem früheren Krankheitsbeginn führt.",
     difficulty: "schwer",
     tags: ["genetik", "mutationen", "trinukleotid-repeat", "chorea-huntington"],
   },

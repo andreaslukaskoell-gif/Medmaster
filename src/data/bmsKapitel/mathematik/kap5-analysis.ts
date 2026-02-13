@@ -68,16 +68,16 @@ Im MedAT werden typische Aufgaben zu Folgen gestellt: das Bestimmen des n-ten Gl
       title: 'Grenzwerte & Stetigkeit',
       content: `Der Grenzwert einer Folge (aₙ) beschreibt, welchem Wert sich die Folgenglieder für n → ∞ annähern. Man schreibt lim(n→∞) aₙ = L, wenn sich aₙ beliebig nahe an L bringen lässt, indem n groß genug gewählt wird. Eine Folge, die einen Grenzwert besitzt, heißt konvergent; andernfalls heißt sie divergent. Beispiel: aₙ = 1/n konvergiert gegen 0, denn für großes n wird 1/n beliebig klein. Die Folge aₙ = (-1)ⁿ divergiert, da sie zwischen -1 und 1 springt (sie ist beschränkt, aber nicht konvergent). Die Folge aₙ = n² divergiert gegen unendlich (bestimmte Divergenz).
 
-Grenzwertregeln ermöglichen das systematische Berechnen von Grenzwerten zusammengesetzter Folgen. Wenn lim aₙ = A und lim bₙ = B existieren, gilt: lim(aₙ ± bₙ) = A ± B, lim(aₙ · bₙ) = A · B, lim(aₙ/bₙ) = A/B (falls B ≠ 0), und lim(c · aₙ) = c · A. Für rationale Funktionen von n gilt die Regel des höchsten Grades: lim(n→∞) (3n² + 5n)/(2n² - 1) = 3/2, da man Zähler und Nenner durch n² kürzt und alle Terme mit 1/n gegen 0 gehen. Allgemein: Ist der Zählergrad gleich dem Nennergrad, ist der Grenzwert der Quotient der führenden Köffizienten. Ist der Zählergrad kleiner, ist der Grenzwert 0. Ist der Zählergrad größer, divergiert die Folge.
+Grenzwertregeln ermöglichen das systematische Berechnen von Grenzwerten zusammengesetzter Folgen. Wenn lim aₙ = A und lim bₙ = B existieren, gilt: lim(aₙ ± bₙ) = A ± B, lim(aₙ · bₙ) = A · B, lim(aₙ/bₙ) = A/B (falls B ≠ 0), und lim(c · aₙ) = c · A. Für rationale Funktionen von n gilt die Regel des höchsten Grades: lim(n→∞) (3n² + 5n)/(2n² - 1) = 3/2, da man Zähler und Nenner durch n² kürzt und alle Terme mit 1/n gegen 0 gehen. Allgemein: Ist der Zählergrad gleich dem Nennergrad, ist der Grenzwert der Quotient der führenden Koeffizienten. Ist der Zählergrad kleiner, ist der Grenzwert 0. Ist der Zählergrad größer, divergiert die Folge.
 
 Stetigkeit ist ein Grundkonzept der Analysis: Eine Funktion f ist stetig an der Stelle x₀, wenn lim(x→x₀) f(x) = f(x₀) gilt. Anschaulich bedeutet das: Der Graph hat keinen Sprung oder keine Lücke an dieser Stelle. Polynome, Exponentialfunktionen, Sinus und Kosinus sind überall stetig. Rationale Funktionen sind stetig überall dort, wo der Nenner nicht null ist. Wurzelfunktionen sind stetig auf ihrem Definitionsbereich. Der Zwischenwertsatz besagt: Ist f stetig auf [a, b] und gilt f(a) < 0 und f(b) > 0 (oder umgekehrt), dann gibt es mindestens ein c ∈ (a, b) mit f(c) = 0. Dieser Satz ist nützlich zum Nachweis von Nullstellen. Im MedAT werden einfache Grenzwertberechnungen und das Verständnis von Konvergenz geprüft, während die formale ε-δ-Definition der Stetigkeit normalerweise nicht verlangt wird.`,
       merksätze: [
-        'Grenzwert rationaler Ausdrücke: Zähler- und Nennergrad vergleichen. Gleicher Grad → Quotient der führenden Köffizienten. Zählergrad kleiner → 0. Zählergrad größer → divergent.',
+        'Grenzwert rationaler Ausdrücke: Zähler- und Nennergrad vergleichen. Gleicher Grad → Quotient der führenden Koeffizienten. Zählergrad kleiner → 0. Zählergrad größer → divergent.',
         'Eine Folge konvergiert, wenn sie sich einem festen Wert nähert. Stetigkeit an x₀ bedeutet: lim(x→x₀) f(x) = f(x₀) – der Funktionswert stimmt mit dem Grenzwert überein.'
       ],
       altfrage: {
         question: 'Berechnen Sie: lim(n→∞) (5n³ - 2n)/(3n³ + n²)',
-        answer: 'Kürzen durch n³: lim (5 - 2/n²)/(3 + 1/n) = 5/3. Die führenden Köffizienten sind 5 und 3.'
+        answer: 'Kürzen durch n³: lim (5 - 2/n²)/(3 + 1/n) = 5/3. Die führenden Koeffizienten sind 5 und 3.'
       },
       klinischerBezug: 'In der Pharmakokinetik beschreibt der Grenzwert die Steady-State-Konzentration eines Medikaments bei wiederholter Gabe. Nach vielen Halbwertszeiten nähert sich die Plasmakonzentration einem konstanten Wert an – mathematisch ist dies der Grenzwert einer geometrischen Reihe.',
       selfTest: [
@@ -91,7 +91,7 @@ Stetigkeit ist ein Grundkonzept der Analysis: Eine Funktion f ist stetig an der 
             '-1'
           ],
           correctIndex: 0,
-          explanation: 'Zähler und Nenner haben Grad 1. Quotient der führenden Köffizienten: 2/5.'
+          explanation: 'Zähler und Nenner haben Grad 1. Quotient der führenden Koeffizienten: 2/5.'
         },
         {
           question: 'Welche der folgenden Folgen konvergiert?',

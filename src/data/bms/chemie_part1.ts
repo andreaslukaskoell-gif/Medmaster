@@ -265,7 +265,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Stickstoff hat 5 Valenzelektronen. Im NH3 bildet er 3 kovalente Bindungen zu den 3 Wasserstoffatomen (3 x 2 = 6 Elektronen in Bindungen, davon 3 von N). Es verbleibt ein freies Elektronenpaar am Stickstoff. Das ergibt nach VSEPR eine teträdrische Elektronenanordnung, aber eine trigonal-pyramidale Molekülgeometrie.",
+      "Stickstoff hat 5 Valenzelektronen. Im NH3 bildet er 3 kovalente Bindungen zu den 3 Wasserstoffatomen (3 x 2 = 6 Elektronen in Bindungen, davon 3 von N). Es verbleibt ein freies Elektronenpaar am Stickstoff. Das ergibt nach VSEPR eine tetraedrische Elektronenanordnung, aber eine trigonal-pyramidale Molekülgeometrie.",
     difficulty: "leicht",
     tags: ["Kovalente Bindung", "VSEPR", "Ammoniak"],
   },
@@ -316,13 +316,13 @@ export const chemieQuestionsPart1: Question[] = [
     options: [
       { id: "a", text: "Linear" },
       { id: "b", text: "Trigonal-planar" },
-      { id: "c", text: "Teträdrisch" },
+      { id: "c", text: "Tetraedrisch" },
       { id: "d", text: "Gewinkelt" },
       { id: "e", text: "Trigonal-pyramidal" },
     ],
     correctOptionId: "d",
     explanation:
-      "Sauerstoff im Wasser hat 4 Elektronenpaare: 2 Bindungspaare (zu den H-Atomen) und 2 freie Elektronenpaare. Die Elektronenanordnung ist teträdrisch, aber da nur die Bindungspaare die Molekülgeometrie bestimmen, ist die Form gewinkelt. Der Bindungswinkel beträgt ca. 104,5°, etwas kleiner als der Teträderwinkel von 109,5°, da die freien Elektronenpaare mehr Raum beanspruchen.",
+      "Sauerstoff im Wasser hat 4 Elektronenpaare: 2 Bindungspaare (zu den H-Atomen) und 2 freie Elektronenpaare. Die Elektronenanordnung ist tetraedrisch, aber da nur die Bindungspaare die Molekülgeometrie bestimmen, ist die Form gewinkelt. Der Bindungswinkel beträgt ca. 104,5°, etwas kleiner als der Tetraederwinkel von 109,5°, da die freien Elektronenpaare mehr Raum beanspruchen.",
     difficulty: "leicht",
     tags: ["VSEPR", "Wasser", "Molekülgeometrie"],
   },
@@ -1090,7 +1090,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Die längste Kohlenstoffkette hat 4 C-Atome (Butan). Am zweiten C-Atom befindet sich eine Methylgruppe (CH3) als Substitünt. Nach IUPAC wird die Kette so nummeriert, dass der Substitünt die niedrigste mögliche Nummer erhält: 2-Methylbutan. '3-Methylbutan' wäre falsch nummeriert, 'Isobutan' hat nur 4 C-Atome (C4H10-Isomer), und 'Neopentan' ist 2,2-Dimethylpropan.",
+      "Die längste Kohlenstoffkette hat 4 C-Atome (Butan). Am zweiten C-Atom befindet sich eine Methylgruppe (CH3) als Substituent. Nach IUPAC wird die Kette so nummeriert, dass der Substituent die niedrigste mögliche Nummer erhält: 2-Methylbutan. '3-Methylbutan' wäre falsch nummeriert, 'Isobutan' hat nur 4 C-Atome (C4H10-Isomer), und 'Neopentan' ist 2,2-Dimethylpropan.",
     difficulty: "mittel",
     tags: ["IUPAC-Nomenklatur", "Alkan", "Verzweigung"],
   },

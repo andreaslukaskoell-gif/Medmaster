@@ -203,7 +203,7 @@ Die Gleichgewichtskonstante K hängt mit der freien Enthalpie über die Beziehun
             'Die Stoffmenge der Produkte in Mol'
           ],
           correctIndex: 1,
-          explanation: 'K gibt das Verhältnis der Konzentrationen von Produkten zu Edukten im Gleichgewichtszustand an, jeweils potenziert mit den stöchiometrischen Köffizienten.'
+          explanation: 'K gibt das Verhältnis der Konzentrationen von Produkten zu Edukten im Gleichgewichtszustand an, jeweils potenziert mit den stöchiometrischen Koeffizienten.'
         },
         {
           question: 'Welche Störung verändert den Zahlenwert der Gleichgewichtskonstante K?',

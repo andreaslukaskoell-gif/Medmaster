@@ -115,7 +115,7 @@ export const fragenPart3 = [
       'Diamant ist ein Isolator'
     ],
     korrekteAntwort: 3,
-    erklärung: 'Diamant ist deutlich härter als Graphit, nicht umgekehrt. Diamant besteht aus sp³-hybridisierten C-Atomen in einer sehr stabilen teträdrischen Netzwerkstruktur. Graphit (sp²-hybridisiert) hat Schichtstrukturen und leitet Strom durch delokalisierte Elektronen. Fulleren C₆₀ ist tatsächlich käfigartig. Diamant ist elektrisch isolierend.',
+    erklärung: 'Diamant ist deutlich härter als Graphit, nicht umgekehrt. Diamant besteht aus sp³-hybridisierten C-Atomen in einer sehr stabilen tetraedrischen Netzwerkstruktur. Graphit (sp²-hybridisiert) hat Schichtstrukturen und leitet Strom durch delokalisierte Elektronen. Fulleren C₆₀ ist tatsächlich käfigartig. Diamant ist elektrisch isolierend.',
     strategieTipp: 'Verwechseln Sie nicht die Härte von Diamant (härtester natürlicher Stoff) mit der Schichtstruktur von Graphit (weich).'
   },
   {

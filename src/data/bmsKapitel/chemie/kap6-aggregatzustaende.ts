@@ -70,10 +70,10 @@ Im gasförmigen Zustand bewegen sich die Teilchen frei und weitgehend unabhängi
 
 Die Sublimation beschreibt den direkten Übergang vom festen in den gasförmigen Zustand unter Umgehung der flüssigen Phase. Dies geschieht unterhalb des Tripelpunktes (bei niedrigem Druck). Ein bekanntes Beispiel ist Trockeneis (festes CO₂), das bei Atmosphärendruck bei -78,5 °C direkt sublimiert, da der Tripelpunkt von CO₂ bei 5,18 bar liegt und somit weit über dem normalen Luftdruck. Der umgekehrte Vorgang (gasförmig → fest) wird als Resublimation (oder Deposition) bezeichnet und ist beispielsweise für die Reifbildung verantwortlich. Während eines Phasenübergangs bleibt die Temperatur trotz Energiezufuhr konstant, da die gesamte zugeführte Energie in die Überwindung der zwischenmolekularen Kräfte fließt und nicht in die Erhöhung der kinetischen Energie (Temperatur). Dies zeigt sich in den charakteristischen Plateaus einer Erwärmungskurve (Temperatur-Zeit-Diagramm bei konstanter Heizrate).
 
-Das Phasendiagramm stellt die Stabilitätsbereiche der verschiedenen Aggregatzustände in Abhängigkeit von Druck und Temperatur grafisch dar. Es enthält drei wichtige Punkte und Kurven: Die Dampfdruckkurve trennt den flüssigen vom gasförmigen Bereich und endet am kritischen Punkt, oberhalb dessen keine Unterscheidung zwischen Flüssigkeit und Gas mehr möglich ist (überkritischer Zustand). Die Schmelzkurve trennt den festen vom flüssigen Bereich. Die Sublimationskurve trennt den festen vom gasförmigen Bereich. Am Tripelpunkt, dem Schnittpunkt aller drei Kurven, köxistieren alle drei Aggregatzustände im Gleichgewicht. Für Wasser liegt der Tripelpunkt bei 0,01 °C und 611 Pa (0,006 bar). Eine Besonderheit des Wassers ist die negative Steigung der Schmelzkurve: Da Eis eine geringere Dichte als Wasser hat, führt eine Druckerhöhung zur Erniedrigung des Schmelzpunktes (Dichteanomalie). Bei den meisten anderen Stoffen hat die Schmelzkurve eine positive Steigung.`,
+Das Phasendiagramm stellt die Stabilitätsbereiche der verschiedenen Aggregatzustände in Abhängigkeit von Druck und Temperatur grafisch dar. Es enthält drei wichtige Punkte und Kurven: Die Dampfdruckkurve trennt den flüssigen vom gasförmigen Bereich und endet am kritischen Punkt, oberhalb dessen keine Unterscheidung zwischen Flüssigkeit und Gas mehr möglich ist (überkritischer Zustand). Die Schmelzkurve trennt den festen vom flüssigen Bereich. Die Sublimationskurve trennt den festen vom gasförmigen Bereich. Am Tripelpunkt, dem Schnittpunkt aller drei Kurven, koexistieren alle drei Aggregatzustände im Gleichgewicht. Für Wasser liegt der Tripelpunkt bei 0,01 °C und 611 Pa (0,006 bar). Eine Besonderheit des Wassers ist die negative Steigung der Schmelzkurve: Da Eis eine geringere Dichte als Wasser hat, führt eine Druckerhöhung zur Erniedrigung des Schmelzpunktes (Dichteanomalie). Bei den meisten anderen Stoffen hat die Schmelzkurve eine positive Steigung.`,
       merksätze: [
         'Phasenübergänge: Schmelzen/Erstarren, Verdampfen/Kondensieren, Sublimieren/Resublimieren. Während eines Phasenübergangs bleibt die Temperatur konstant (Energie wird für Überwindung der zwischenmolekularen Kräfte benötigt).',
-        'Tripelpunkt: Köxistenz aller drei Phasen. Kritischer Punkt: oberhalb keine Unterscheidung flüssig/gasförmig. Wasser-Anomalie: Schmelzkurve hat negative Steigung (Eis weniger dicht als Wasser).'
+        'Tripelpunkt: Koexistenz aller drei Phasen. Kritischer Punkt: oberhalb keine Unterscheidung flüssig/gasförmig. Wasser-Anomalie: Schmelzkurve hat negative Steigung (Eis weniger dicht als Wasser).'
       ],
       altfrage: {
         question: 'Warum bleibt die Temperatur während eines Phasenübergangs konstant, obwohl Energie zugeführt wird?',
@@ -97,13 +97,13 @@ Das Phasendiagramm stellt die Stabilitätsbereiche der verschiedenen Aggregatzus
           question: 'Was ist am Tripelpunkt eines Stoffes gegeben?',
           options: [
             'Der Stoff existiert nur als Gas',
-            'Alle drei Aggregatzustände köxistieren im Gleichgewicht',
+            'Alle drei Aggregatzustände koexistieren im Gleichgewicht',
             'Der Stoff hat seine maximale Dichte',
             'Es ist der Punkt, an dem der Stoff zerfällt',
             'Der Stoff erreicht seine maximale Temperatur'
           ],
           correctIndex: 1,
-          explanation: 'Am Tripelpunkt (für Wasser: 0,01 °C, 611 Pa) köxistieren die feste, flüssige und gasförmige Phase im thermodynamischen Gleichgewicht. Es ist der Schnittpunkt der drei Phasengrenzlinien.'
+          explanation: 'Am Tripelpunkt (für Wasser: 0,01 °C, 611 Pa) koexistieren die feste, flüssige und gasförmige Phase im thermodynamischen Gleichgewicht. Es ist der Schnittpunkt der drei Phasengrenzlinien.'
         },
         {
           question: 'Warum hat die Schmelzkurve von Wasser eine negative Steigung?',

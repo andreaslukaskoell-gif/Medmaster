@@ -72,7 +72,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Die Kapazitätsgrenze (Carrying Capacity, K) beschreibt die maximale Anzahl von Individün einer Art, die ein bestimmter Lebensraum mit seinen begrenzten Ressourcen (Nahrung, Raum, Wasser) langfristig tragen kann. Bei Erreichen von K nähert sich die Wachstumsrate der Population Null (logistisches Wachstum).",
+      "Die Kapazitätsgrenze (Carrying Capacity, K) beschreibt die maximale Anzahl von Individuen einer Art, die ein bestimmter Lebensraum mit seinen begrenzten Ressourcen (Nahrung, Raum, Wasser) langfristig tragen kann. Bei Erreichen von K nähert sich die Wachstumsrate der Population Null (logistisches Wachstum).",
   },
   {
     id: "bio-5",
@@ -168,7 +168,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Nach den Mendelschen Regeln ergibt die Kreuzung Aa x Aa folgende Genotypen: 1/4 AA, 2/4 Aa, 1/4 aa. Nur homozygot rezessive Individün (aa) zeigen den betroffenen Phänotyp, also beträgt die Wahrscheinlichkeit 25%. Die Hälfte der Nachkommen (Aa) sind heterozygote Überträger und 25% (AA) sind weder betroffen noch Überträger.",
+      "Nach den Mendelschen Regeln ergibt die Kreuzung Aa x Aa folgende Genotypen: 1/4 AA, 2/4 Aa, 1/4 aa. Nur homozygot rezessive Individuen (aa) zeigen den betroffenen Phänotyp, also beträgt die Wahrscheinlichkeit 25%. Die Hälfte der Nachkommen (Aa) sind heterozygote Überträger und 25% (AA) sind weder betroffen noch Überträger.",
   },
 
   // === CHEMIE ===

@@ -23,7 +23,7 @@ Die **IUPAC-Nomenklatur** folgt systematischen Regeln: (1) Die längste durchgeh
         question: 'Wie lautet der IUPAC-Name einer Verbindung mit 5 C-Atomen in der Hauptkette, einer Methylgruppe an C3 und einer Doppelbindung zwischen C1 und C2?',
         answer: '3-Methylpent-1-en. Hauptkette: Pent (5 C), Doppelbindung an Position 1 (-1-en), Methylgruppe an Position 3 (3-Methyl-).'
       },
-      klinischerBezug: 'Inhalationsanästhetika wie Halothan (CF₃–CHBrCl) und Sevofluran sind halogenierte Kohlenwasserstoffe. Ihre Wirkung beruht auf der Beeinflussung der Lipiddoppelschicht neuronaler Membranen und der Modulation von GABA-Rezeptoren. Die Halogensubstitünten verändern Siedepunkt, Lipophilie und metabolische Stabilität im Vergleich zu den unhalogenierten Stammverbindungen.',
+      klinischerBezug: 'Inhalationsanästhetika wie Halothan (CF₃–CHBrCl) und Sevofluran sind halogenierte Kohlenwasserstoffe. Ihre Wirkung beruht auf der Beeinflussung der Lipiddoppelschicht neuronaler Membranen und der Modulation von GABA-Rezeptoren. Die Halogensubstituenten verändern Siedepunkt, Lipophilie und metabolische Stabilität im Vergleich zu den unhalogenierten Stammverbindungen.',
       selfTest: [
         {
           question: 'Welche allgemeine Summenformel haben Alkene?',
@@ -68,16 +68,16 @@ Die **IUPAC-Nomenklatur** folgt systematischen Regeln: (1) Die längste durchgeh
       title: 'Isomerie',
       content: `**Isomere** sind Moleküle mit gleicher Summenformel, aber unterschiedlicher Struktur oder räumlicher Anordnung. Man unterscheidet grundlegend zwischen **Konstitutionsisomerie** (Strukturisomerie) und **Stereoisomerie**. Konstitutionsisomere haben die gleiche Molekülformel, unterscheiden sich aber in der Reihenfolge der Atombindungen — sie haben also verschiedene Strukturformeln. Beispiele: n-Butan und Isobutan (C₄H₁₀), Ethanol (CH₃CH₂OH) und Dimethylether (CH₃OCH₃) — beide C₂H₆O. Konstitutionsisomere können sich in physikalischen und chemischen Eigenschaften deutlich unterscheiden, da ihre Bindungsstruktur verschieden ist.
 
-**Stereoisomere** haben die gleiche Konstitution (gleiche Bindungsreihenfolge), unterscheiden sich aber in der räumlichen Anordnung der Atome. Zu den Stereoisomeren gehören **cis/trans-Isomere** (geometrische Isomerie) und **Enantiomere/Diastereomere** (optische Isomerie). Cis/trans-Isomerie tritt an C=C-Doppelbindungen auf, da die eingeschränkte Rotation zwei verschiedene räumliche Anordnungen ermöglicht. Bei cis-But-2-en liegen beide Methylgruppen auf derselben Seite der Doppelbindung, bei trans-But-2-en auf gegenüberliegenden Seiten. Nach der Z/E-Nomenklatur (CIP-Regeln) wird die Priorität der Substitünten nach Ordnungszahl bestimmt: Z (zusammen) entspricht oft cis, E (entgegen) oft trans.
+**Stereoisomere** haben die gleiche Konstitution (gleiche Bindungsreihenfolge), unterscheiden sich aber in der räumlichen Anordnung der Atome. Zu den Stereoisomeren gehören **cis/trans-Isomere** (geometrische Isomerie) und **Enantiomere/Diastereomere** (optische Isomerie). Cis/trans-Isomerie tritt an C=C-Doppelbindungen auf, da die eingeschränkte Rotation zwei verschiedene räumliche Anordnungen ermöglicht. Bei cis-But-2-en liegen beide Methylgruppen auf derselben Seite der Doppelbindung, bei trans-But-2-en auf gegenüberliegenden Seiten. Nach der Z/E-Nomenklatur (CIP-Regeln) wird die Priorität der Substituenten nach Ordnungszahl bestimmt: Z (zusammen) entspricht oft cis, E (entgegen) oft trans.
 
-Die **optische Isomerie** (Chiralität) tritt auf, wenn ein Kohlenstoffatom vier verschiedene Substitünten trägt — dieses C-Atom heißt **chirales Zentrum** oder stereogenes Zentrum. Die beiden Enantiomere verhalten sich wie Bild und Spiegelbild und sind nicht zur Deckung zu bringen (wie linke und rechte Hand). Sie haben identische physikalische Eigenschaften (Schmelzpunkt, Siedepunkt), drehen aber die Ebene des polarisierten Lichts in entgegengesetzte Richtungen: (+) für rechtsdrehend, (-) für linksdrehend. Die absolute Konfiguration wird mit R/S nach den CIP-Regeln angegeben: (1) Substitünten nach abnehmender Priorität ordnen (höchste Ordnungszahl = höchste Priorität), (2) niedrigste Priorität nach hinten richten, (3) Richtung 1→2→3 im Uhrzeigersinn = R (rectus), gegen den Uhrzeigersinn = S (sinister). Chiralität ist in der Pharmakologie von enormer Bedeutung, da Enantiomere völlig unterschiedliche biologische Wirkungen haben können.`,
+Die **optische Isomerie** (Chiralität) tritt auf, wenn ein Kohlenstoffatom vier verschiedene Substituenten trägt — dieses C-Atom heißt **chirales Zentrum** oder stereogenes Zentrum. Die beiden Enantiomere verhalten sich wie Bild und Spiegelbild und sind nicht zur Deckung zu bringen (wie linke und rechte Hand). Sie haben identische physikalische Eigenschaften (Schmelzpunkt, Siedepunkt), drehen aber die Ebene des polarisierten Lichts in entgegengesetzte Richtungen: (+) für rechtsdrehend, (-) für linksdrehend. Die absolute Konfiguration wird mit R/S nach den CIP-Regeln angegeben: (1) Substituenten nach abnehmender Priorität ordnen (höchste Ordnungszahl = höchste Priorität), (2) niedrigste Priorität nach hinten richten, (3) Richtung 1→2→3 im Uhrzeigersinn = R (rectus), gegen den Uhrzeigersinn = S (sinister). Chiralität ist in der Pharmakologie von enormer Bedeutung, da Enantiomere völlig unterschiedliche biologische Wirkungen haben können.`,
       merksätze: [
         'Konstitutionsisomere: gleiche Summenformel, verschiedene Bindungsreihenfolge. Stereoisomere: gleiche Konstitution, verschiedene räumliche Anordnung.',
-        'Chiralität: 4 verschiedene Substitünten am C → Enantiomere (Bild/Spiegelbild). R/S nach CIP-Regeln. Enantiomere drehen polarisiertes Licht entgegengesetzt.'
+        'Chiralität: 4 verschiedene Substituenten am C → Enantiomere (Bild/Spiegelbild). R/S nach CIP-Regeln. Enantiomere drehen polarisiertes Licht entgegengesetzt.'
       ],
       altfrage: {
         question: 'Was versteht man unter einem chiralen Zentrum und welche Eigenschaft haben Enantiomere bezüglich polarisierten Lichts?',
-        answer: 'Ein chirales Zentrum ist ein C-Atom mit vier verschiedenen Substitünten. Enantiomere sind nicht-deckungsgleiche Spiegelbildisomere, die die Ebene des polarisierten Lichts um den gleichen Betrag, aber in entgegengesetzte Richtungen drehen (optische Aktivität).'
+        answer: 'Ein chirales Zentrum ist ein C-Atom mit vier verschiedenen Substituenten. Enantiomere sind nicht-deckungsgleiche Spiegelbildisomere, die die Ebene des polarisierten Lichts um den gleichen Betrag, aber in entgegengesetzte Richtungen drehen (optische Aktivität).'
       },
       klinischerBezug: 'Der Contergan-Skandal (Thalidomid, 1960er) zeigte die klinische Relevanz der Chiralität: Das (R)-Enantiomer wirkte sedativ, das (S)-Enantiomer war teratogen (fruchtschädigend). Da sich Enantiomere im Körper ineinander umwandeln können (Racemisierung), war eine Trennung nicht ausreichend. Heute müssen Arzneimittel-Enantiomere getrennt auf Wirksamkeit und Sicherheit geprüft werden.',
       selfTest: [
@@ -97,13 +97,13 @@ Die **optische Isomerie** (Chiralität) tritt auf, wenn ein Kohlenstoffatom vier
           question: 'Wann ist ein Kohlenstoffatom chiral?',
           options: [
             'Wenn es an einer Doppelbindung beteiligt ist.',
-            'Wenn es vier gleiche Substitünten trägt.',
-            'Wenn es vier verschiedene Substitünten trägt.',
+            'Wenn es vier gleiche Substituenten trägt.',
+            'Wenn es vier verschiedene Substituenten trägt.',
             'Wenn es an einem Ring beteiligt ist.',
             'Wenn es sp²-hybridisiert ist.'
           ],
           correctIndex: 2,
-          explanation: 'Ein chirales Zentrum liegt vor, wenn ein C-Atom vier verschiedene Substitünten trägt. Nur dann existieren zwei nicht-deckungsgleiche Spiegelbilder (Enantiomere).'
+          explanation: 'Ein chirales Zentrum liegt vor, wenn ein C-Atom vier verschiedene Substituenten trägt. Nur dann existieren zwei nicht-deckungsgleiche Spiegelbilder (Enantiomere).'
         },
         {
           question: 'Ethanol (CH₃CH₂OH) und Dimethylether (CH₃OCH₃) sind:',
@@ -186,7 +186,7 @@ Die **elektrophile Addition** ist die typische Reaktion der Alkene. Ein Elektrop
 Die **Kondensation** ist eine Reaktion, bei der zwei Moleküle unter Abspaltung eines kleinen Moleküls (meist Wasser) miteinander verknüpft werden. Beispiele sind die Veresterung (Carbonsäure + Alkohol → Ester + H₂O), die Peptidbindungsbildung (Aminosäure + Aminosäure → Dipeptid + H₂O) und die Polykondensation zur Herstellung von Kunststoffen wie Nylon oder PET. Die Umkehrreaktion der Kondensation ist die **Hydrolyse**, bei der ein Molekül unter Wasseranlagerung gespalten wird. In biologischen Systemen katalysieren Enzyme sowohl Kondensations- als auch Hydrolysereaktionen — z. B. spalten Proteasen Peptidbindungen durch Hydrolyse und Ligasen verknüpfen Biomoleküle durch Kondensation. Das Verständnis dieser vier Grundmechanismen ermöglicht es, das Reaktionsverhalten organischer Verbindungen systematisch vorherzusagen.`,
       merksätze: [
         'Sₙ2: ein Schritt, Rückseitenangriff, Inversion (primäre Substrate). Sₙ1: zwei Schritte, Carbokation, Racemat (tertiäre Substrate). Markownikow: H geht an das C mit mehr H-Atomen.',
-        'Kondensation: Verknüpfung unter H₂O-Abspaltung. Hydrolyse: Spaltung unter H₂O-Anlagerung. Beide sind Umkehrreaktionen züinander.'
+        'Kondensation: Verknüpfung unter H₂O-Abspaltung. Hydrolyse: Spaltung unter H₂O-Anlagerung. Beide sind Umkehrreaktionen zueinander.'
       ],
       altfrage: {
         question: 'Welches Hauptprodukt entsteht bei der Addition von HBr an Propen nach der Markownikow-Regel?',
@@ -239,7 +239,7 @@ Die **Kondensation** ist eine Reaktion, bei der zwei Moleküle unter Abspaltung 
 
 Die **Hückel-Regel** definiert die Bedingung für Aromatizität: Ein planares, cyclisches, vollständig konjugiertes Molekül ist aromatisch, wenn es (4n + 2) π-Elektronen besitzt (n = 0, 1, 2, ...). Benzol mit 6 π-Elektronen (n = 1) erfüllt diese Regel. Auch heterocyclische Verbindungen wie Pyridin (C₅H₅N, 6 π-Elektronen), Pyrrol (C₄H₅N, 6 π-Elektronen unter Einbeziehung des freien Elektronenpaars am N) und Furan (C₄H₄O) sind aromatisch. Antiaromatische Systeme mit 4n π-Elektronen (z. B. Cyclobutadien mit 4 π-Elektronen) sind besonders instabil. Die Aromatizität erklärt, warum Benzol trotz seiner Doppelbindungen keine typischen Additionsreaktionen eingeht — es würde dabei die wertvolle Mesomerieenergie verlieren.
 
-Die **elektrophile aromatische Substitution** (SEAr) ist die typische Reaktion der Aromaten. Dabei wird ein H-Atom am Ring durch ein Elektrophil ersetzt, ohne den aromatischen Charakter zu zerstören. Der Mechanismus verläuft in zwei Schritten: (1) Das Elektrophil greift den aromatischen Ring an, bildet einen σ-Komplex (Areniumion, Wheland-Komplex), wobei die Aromatizität vorübergehend aufgehoben ist. (2) Ein Proton wird abgespalten, und die Aromatizität wird wiederhergestellt. Wichtige SEAr-Reaktionen sind: **Nitrierung** (NO₂⁺ als Elektrophil, aus HNO₃/H₂SO₄), **Halogenierung** (Cl⁺ oder Br⁺ mit Lewis-Säure-Katalysator wie FeBr₃), **Friedel-Crafts-Alkylierung** (R⁺ mit AlCl₃) und **Sulfonierung** (SO₃). Substitünten am Ring beeinflussen die Reaktivität und die Orientierung: Elektronendonatoren (+M/-I, z. B. –OH, –NH₂) aktivieren den Ring und dirigieren in ortho/para-Position; Elektronenakzeptoren (–M/+I, z. B. –NO₂, –COOH) desaktivieren den Ring und dirigieren in meta-Position.`,
+Die **elektrophile aromatische Substitution** (SEAr) ist die typische Reaktion der Aromaten. Dabei wird ein H-Atom am Ring durch ein Elektrophil ersetzt, ohne den aromatischen Charakter zu zerstören. Der Mechanismus verläuft in zwei Schritten: (1) Das Elektrophil greift den aromatischen Ring an, bildet einen σ-Komplex (Areniumion, Wheland-Komplex), wobei die Aromatizität vorübergehend aufgehoben ist. (2) Ein Proton wird abgespalten, und die Aromatizität wird wiederhergestellt. Wichtige SEAr-Reaktionen sind: **Nitrierung** (NO₂⁺ als Elektrophil, aus HNO₃/H₂SO₄), **Halogenierung** (Cl⁺ oder Br⁺ mit Lewis-Säure-Katalysator wie FeBr₃), **Friedel-Crafts-Alkylierung** (R⁺ mit AlCl₃) und **Sulfonierung** (SO₃). Substituenten am Ring beeinflussen die Reaktivität und die Orientierung: Elektronendonatoren (+M/-I, z. B. –OH, –NH₂) aktivieren den Ring und dirigieren in ortho/para-Position; Elektronenakzeptoren (–M/+I, z. B. –NO₂, –COOH) desaktivieren den Ring und dirigieren in meta-Position.`,
       merksätze: [
         'Aromatizität nach Hückel: planar, cyclisch, konjugiert, (4n+2) π-Elektronen. Benzol: 6 π-e⁻ → besonders stabil durch Mesomerie (ca. 150 kJ/mol Resonanzenergie).',
         'SEAr: Elektrophil ersetzt H am Ring → Aromatizität bleibt erhalten. Aktivierende Gruppen → ortho/para-Dirigenten; desaktivierende Gruppen → meta-Dirigenten.'
@@ -275,7 +275,7 @@ Die **elektrophile aromatische Substitution** (SEAr) ist die typische Reaktion d
           explanation: 'Benzol reagiert bevorzugt über elektrophile aromatische Substitution (SEAr), bei der ein H-Atom durch ein Elektrophil ersetzt wird. Die Aromatizität bleibt dabei erhalten, während sie bei einer Addition verloren ginge.'
         },
         {
-          question: 'Eine –NH₂-Gruppe am Benzolring dirigiert neue Substitünten in:',
+          question: 'Eine –NH₂-Gruppe am Benzolring dirigiert neue Substituenten in:',
           options: [
             'meta-Position',
             'ortho- und para-Position',
@@ -284,7 +284,7 @@ Die **elektrophile aromatische Substitution** (SEAr) ist die typische Reaktion d
             'Alle Positionen gleichmäßig'
           ],
           correctIndex: 1,
-          explanation: 'Die –NH₂-Gruppe ist ein +M-Substitünt (Elektronendonator), der den Ring aktiviert und in ortho- und para-Position dirigiert, da dort die Elektronendichte besonders erhöht wird.'
+          explanation: 'Die –NH₂-Gruppe ist ein +M-Substituent (Elektronendonator), der den Ring aktiviert und in ortho- und para-Position dirigiert, da dort die Elektronendichte besonders erhöht wird.'
         }
       ]
     }

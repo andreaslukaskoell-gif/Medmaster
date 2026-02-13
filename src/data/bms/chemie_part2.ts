@@ -36,7 +36,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Die längste Kohlenstoffkette hat 5 C-Atome (Pentan). Der Methylsubstitünt befindet sich am C3 (niedrigste Nummerierung). Somit ergibt sich 3-Methylpentan.",
+      "Die längste Kohlenstoffkette hat 5 C-Atome (Pentan). Der Methylsubstituent befindet sich am C3 (niedrigste Nummerierung). Somit ergibt sich 3-Methylpentan.",
     difficulty: "mittel",
     tags: ["nomenklatur", "alkane", "iupac"],
   },
@@ -55,7 +55,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Cis-But-2-en und trans-But-2-en unterscheiden sich in der räumlichen Anordnung der Substitünten um die C=C-Doppelbindung. Dies ist geometrische Isomerie (cis-trans-Isomerie), eine Unterform der Stereoisomerie.",
+      "Cis-But-2-en und trans-But-2-en unterscheiden sich in der räumlichen Anordnung der Substituenten um die C=C-Doppelbindung. Dies ist geometrische Isomerie (cis-trans-Isomerie), eine Unterform der Stereoisomerie.",
     difficulty: "mittel",
     tags: ["isomerie", "alkene", "stereochemie"],
   },
@@ -169,7 +169,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Glycin ist die einzige der 20 proteinogenen Aminosäuren, die kein chirales Zentrum besitzt, da am alpha-C-Atom zwei Wasserstoffatome gebunden sind. Alle anderen proteinogenen Aminosäuren haben vier verschiedene Substitünten am alpha-C und sind somit chiral.",
+      "Glycin ist die einzige der 20 proteinogenen Aminosäuren, die kein chirales Zentrum besitzt, da am alpha-C-Atom zwei Wasserstoffatome gebunden sind. Alle anderen proteinogenen Aminosäuren haben vier verschiedene Substituenten am alpha-C und sind somit chiral.",
     difficulty: "schwer",
     tags: ["chiralität", "aminosäuren", "stereochemie"],
   },
@@ -275,7 +275,7 @@ export const chemieQuestionsPart2: Question[] = [
     subject: "chemie",
     chapter: "biochemie",
     topic: "Enzyme",
-    text: "Was beschreibt die Michälis-Menten-Konstante (Km)?",
+    text: "Was beschreibt die Michaelis-Menten-Konstante (Km)?",
     options: [
       { id: "a", text: "Die maximale Reaktionsgeschwindigkeit" },
       { id: "b", text: "Die Substratkonzentration, bei der die halbe Maximalgeschwindigkeit erreicht wird" },
@@ -285,7 +285,7 @@ export const chemieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Die Michälis-Menten-Konstante Km ist diejenige Substratkonzentration, bei der die Reaktionsgeschwindigkeit die Hälfte der maximalen Geschwindigkeit (Vmax/2) beträgt. Ein niedriger Km-Wert bedeutet eine hohe Affinität des Enzyms zum Substrat.",
+      "Die Michaelis-Menten-Konstante Km ist diejenige Substratkonzentration, bei der die Reaktionsgeschwindigkeit die Hälfte der maximalen Geschwindigkeit (Vmax/2) beträgt. Ein niedriger Km-Wert bedeutet eine hohe Affinität des Enzyms zum Substrat.",
     difficulty: "schwer",
     tags: ["enzyme", "kinetik", "michälis-menten"],
   },
@@ -1126,12 +1126,12 @@ export const chemieQuestionsPart2: Question[] = [
       { id: "a", text: "Linear" },
       { id: "b", text: "Gewinkelt" },
       { id: "c", text: "Trigonal-planar" },
-      { id: "d", text: "Teträdrisch" },
+      { id: "d", text: "Tetraedrisch" },
       { id: "e", text: "Trigonal-pyramidal" },
     ],
     correctOptionId: "d",
     explanation:
-      "Kohlenstoff in CH₄ hat 4 Bindungselektronenpaare und keine freien Elektronenpaare. Gemäß dem VSEPR-Modell ordnen sich die 4 Elektronenpaare teträdrisch an (Bindungswinkel 109,5°), um den Abstand züinander zu maximieren.",
+      "Kohlenstoff in CH₄ hat 4 Bindungselektronenpaare und keine freien Elektronenpaare. Gemäß dem VSEPR-Modell ordnen sich die 4 Elektronenpaare tetraedrisch an (Bindungswinkel 109,5°), um den Abstand zueinander zu maximieren.",
     difficulty: "mittel",
     tags: ["vsepr", "molekülgeometrie", "methan"],
   },

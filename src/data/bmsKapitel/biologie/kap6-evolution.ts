@@ -16,7 +16,7 @@ export const bioKap6: Kapitel = {
       content:
         'Die Evolutionsbiologie beschäftigt sich mit der Frage, wie sich Lebewesen im Laufe der Erdgeschichte verändert haben und welche Mechanismen diesen Veränderungen zugrunde liegen. Bereits im antiken Griechenland gab es Naturphilosophen, die über die Wandelbarkeit der Arten spekulierten, doch erst im 18. und 19. Jahrhundert wurden wissenschaftlich fundierte Theorien formuliert. Die Evolutionstheorie ist heute eines der am besten belegten Konzepte der Biologie und bildet das zentrale Rahmenwerk für das Verständnis der belebten Natur. In der Medizin ist das Verständnis von Evolution essenziell, etwa um die Entstehung von Antibiotikaresistenzen oder die Anpassungsfähigkeit von Pathogenen zu begreifen.\n\n' +
         'Jean-Baptiste de Lamarck (1744–1829) formulierte eine der ersten systematischen Evolutionstheorien. Seine Theorie basierte auf zwei Grundannahmen: dem Gebrauch und Nichtgebrauch von Organen sowie der Vererbung erworbener Eigenschaften. Lamarck postulierte, dass Organe, die häufig gebraucht werden, sich verstärken und weiterentwickeln, während nicht genutzte Organe verkümmern. Das berühmte Beispiel ist die Giraffe, deren Hals sich laut Lamarck durch ständiges Strecken nach Baumkronen verlängert habe. Diese erworbenen Merkmale sollten an die Nachkommen weitergegeben werden. Obwohl Lamarcks Theorie in ihrer ursprünglichen Form widerlegt wurde, erfährt sie durch die moderne Epigenetik eine teilweise Rehabilitation, da epigenetische Modifikationen tatsächlich über Generationen weitergegeben werden können.\n\n' +
-        'Charles Darwin (1809–1882) veröffentlichte 1859 sein epochales Werk „On the Origin of Species“ und begründete damit die Theorie der natürlichen Selektion. Darwins Theorie basiert auf folgenden Beobachtungen: (1) Individün einer Population variieren in ihren Merkmalen (Variation). (2) Mehr Nachkommen werden erzeugt, als überleben können (Überproduktion). (3) Es herrscht ein Kampf ums Dasein (struggle for existence). (4) Individün mit vorteilhaften Merkmalen haben eine höhere Überlebens- und Fortpflanzungswahrscheinlichkeit (survival of the fittest). (5) Diese vorteilhaften Merkmale werden an die Nachkommen vererbt. Darwin konnte den Mechanismus der Vererbung noch nicht erklären — dies gelang erst durch die Wiederentdeckung der Mendelschen Regeln und die moderne Genetik.\n\n' +
+        'Charles Darwin (1809–1882) veröffentlichte 1859 sein epochales Werk „On the Origin of Species“ und begründete damit die Theorie der natürlichen Selektion. Darwins Theorie basiert auf folgenden Beobachtungen: (1) Individuen einer Population variieren in ihren Merkmalen (Variation). (2) Mehr Nachkommen werden erzeugt, als überleben können (Überproduktion). (3) Es herrscht ein Kampf ums Dasein (struggle for existence). (4) Individuen mit vorteilhaften Merkmalen haben eine höhere Überlebens- und Fortpflanzungswahrscheinlichkeit (survival of the fittest). (5) Diese vorteilhaften Merkmale werden an die Nachkommen vererbt. Darwin konnte den Mechanismus der Vererbung noch nicht erklären — dies gelang erst durch die Wiederentdeckung der Mendelschen Regeln und die moderne Genetik.\n\n' +
         'Die Synthetische Evolutionstheorie (auch Moderne Synthese, ab ca. 1930–1950) vereinigt Darwins Selektionstheorie mit der Mendelschen Genetik, der Populationsgenetik und der Mutationsforschung. Wichtige Beiträge leisteten Theodosius Dobzhansky, Ernst Mayr, Julian Huxley und George Gaylord Simpson. Die Synthetische Theorie erklärt Evolution als Veränderung der Allelfrequenzen in einer Population über die Zeit. Sie integriert Mutation und Rekombination als Quellen genetischer Variabilität, Selektion als richtungsgebenden Faktor, sowie Gendrift und Genfluss als weitere Evolutionsfaktoren. Die Population — nicht das Individuum — ist die Einheit der Evolution. Diese Theorie bildet bis heute das Fundament der modernen Evolutionsbiologie.',
       merksätze: [
         'Lamarck: Vererbung erworbener Eigenschaften (widerlegt, aber epigenetische Ansätze). Darwin: Natürliche Selektion — „survival of the fittest“. Synthetische Theorie: Evolution = Veränderung der Allelfrequenzen in Populationen.',
@@ -25,7 +25,7 @@ export const bioKap6: Kapitel = {
       altfrage: {
         question: 'Welche Aussage trifft auf Darwins Evolutionstheorie zu?',
         answer:
-          'Darwin postulierte, dass natürliche Selektion auf Basis vorhandener Variation in Populationen wirkt. Individün mit vorteilhaften Merkmalen haben einen höheren Fortpflanzungserfolg. Im Gegensatz zu Lamarck ging Darwin nicht von der Vererbung erworbener Eigenschaften aus.',
+          'Darwin postulierte, dass natürliche Selektion auf Basis vorhandener Variation in Populationen wirkt. Individuen mit vorteilhaften Merkmalen haben einen höheren Fortpflanzungserfolg. Im Gegensatz zu Lamarck ging Darwin nicht von der Vererbung erworbener Eigenschaften aus.',
       },
       klinischerBezug:
         'Antibiotikaresistenzen bei Bakterien sind ein klassisches Beispiel für natürliche Selektion: In einer Bakterienpopulation überleben zufällig resistente Mutanten die Antibiotikatherapie und vermehren sich. Dies führt zur Selektion resistenter Stämme — ein klinisch hochrelevantes Problem (z. B. MRSA).',
@@ -67,7 +67,7 @@ export const bioKap6: Kapitel = {
           ],
           correctIndex: 1,
           explanation:
-            'Biologische Fitness bezeichnet den relativen Fortpflanzungserfolg eines Individuums — also wie viele überlebensfähige Nachkommen es im Vergleich zu anderen Individün der Population hinterlässt.',
+            'Biologische Fitness bezeichnet den relativen Fortpflanzungserfolg eines Individuums — also wie viele überlebensfähige Nachkommen es im Vergleich zu anderen Individuen der Population hinterlässt.',
         },
       ],
     },
@@ -81,7 +81,7 @@ export const bioKap6: Kapitel = {
       content:
         'Evolution ist definiert als die Veränderung der Allelfrequenzen in einer Population über die Zeit. Diese Veränderungen werden durch verschiedene Evolutionsfaktoren angetrieben, die zusammenwirken und die genetische Zusammensetzung von Populationen beeinflussen. Das Hardy-Weinberg-Gleichgewicht beschreibt den theoretischen Idealzustand, in dem keine Evolution stattfindet: In einer unendlich großen, sich zufällig paarenden Population ohne Mutation, Selektion, Gendrift oder Migration bleiben die Allelfrequenzen konstant. Die Hardy-Weinberg-Gleichung lautet: p² + 2pq + q² = 1, wobei p und q die Frequenzen zweier Allele darstellen. Da die Voraussetzungen in der Natur nie vollständig erfüllt sind, findet immer Evolution statt.\n\n' +
         'Mutation und Rekombination sind die Quellen genetischer Variabilität und stellen das Rohmaterial für die Evolution bereit. Mutationen sind zufällige, ungerichtete Veränderungen der DNA-Sequenz. Sie können durch Replikationsfehler, mutagene Substanzen oder Strahlung entstehen. Genmutationen (Punktmutationen) betreffen einzelne Nukleotide, Chromosomenmutationen verändern die Chromosomenstruktur, und Genommutationen ändern die Chromosomenzahl. Die meisten Mutationen sind neutral oder schädlich, nur wenige sind vorteilhaft — doch genau diese werden durch Selektion begünstigt. Rekombination entsteht durch Crossing-over während der Meiose und durch die zufällige Verteilung der Chromosomen bei der Keimzellbildung. Sie schafft neue Allelkombinationen und erhöht die genetische Vielfalt.\n\n' +
-        'Selektion ist der einzige gerichtete Evolutionsfaktor und wirkt als Filter auf die vorhandene genetische Variabilität. Sie begünstigt Individün mit höherer Fitness und führt zur Anpassung (Adaptation) der Population an ihre Umwelt. Die verschiedenen Selektionsformen (stabilisierend, transformierend, disruptiv) werden in Unterkapitel 6.7 detailliert behandelt. Selektion kann auf verschiedenen Ebenen wirken: Individualselektion, Verwandtenselektion (kin selection) und Gruppenselektion. Sexülle Selektion ist eine Sonderform, bei der Merkmale begünstigt werden, die den Paarungserfolg erhöhen, auch wenn sie das Überleben erschweren (z. B. Pfauenschwanz).\n\n' +
+        'Selektion ist der einzige gerichtete Evolutionsfaktor und wirkt als Filter auf die vorhandene genetische Variabilität. Sie begünstigt Individuen mit höherer Fitness und führt zur Anpassung (Adaptation) der Population an ihre Umwelt. Die verschiedenen Selektionsformen (stabilisierend, transformierend, disruptiv) werden in Unterkapitel 6.7 detailliert behandelt. Selektion kann auf verschiedenen Ebenen wirken: Individualselektion, Verwandtenselektion (kin selection) und Gruppenselektion. Sexuelle Selektion ist eine Sonderform, bei der Merkmale begünstigt werden, die den Paarungserfolg erhöhen, auch wenn sie das Überleben erschweren (z. B. Pfauenschwanz).\n\n' +
         'Gendrift (genetische Drift) beschreibt zufällige Veränderungen der Allelfrequenzen, die besonders in kleinen Populationen wirksam sind. Sie ist ein ungerichteter Evolutionsfaktor und kann zur Fixierung oder zum Verlust von Allelen führen. Zwei wichtige Sonderfälle sind der Flaschenhalseffekt (bottleneck effect), bei dem eine Population durch ein katastrophales Ereignis stark dezimiert wird und die Überlebenden nur einen Teil der genetischen Vielfalt repräsentieren, sowie der Gründereffekt (founder effect), bei dem eine kleine Gruppe eine neue Population gründet und nur einen Ausschnitt des Genpools der Ausgangspopulation mitbringt. Isolation (geographisch, ökologisch, zeitlich, reproduktiv) verhindert den Genfluss zwischen Populationen und ermöglicht deren unabhängige Evolution — ein wesentlicher Schritt bei der Artbildung.',
       merksätze: [
         'Evolutionsfaktoren: Mutation (erzeugt Variation), Rekombination (neue Kombinationen), Selektion (gerichtet), Gendrift (zufällig, kleine Populationen), Genfluss/Migration, Isolation.',
@@ -98,7 +98,7 @@ export const bioKap6: Kapitel = {
         {
           question: 'Was beschreibt der Flaschenhalseffekt?',
           options: [
-            'Die Gründung einer neuen Population durch wenige Individün',
+            'Die Gründung einer neuen Population durch wenige Individuen',
             'Die starke Reduktion einer Population durch ein katastrophales Ereignis',
             'Die gerichtete Selektion auf ein bestimmtes Merkmal',
             'Die Zunahme der Mutationsrate unter Stress',
@@ -132,7 +132,7 @@ export const bioKap6: Kapitel = {
           ],
           correctIndex: 2,
           explanation:
-            'Selektion ist der einzige gerichtete Evolutionsfaktor. Sie begünstigt Individün mit vorteilhaften Merkmalen und führt zur Anpassung der Population an die Umwelt.',
+            'Selektion ist der einzige gerichtete Evolutionsfaktor. Sie begünstigt Individuen mit vorteilhaften Merkmalen und führt zur Anpassung der Population an die Umwelt.',
         },
       ],
     },
@@ -145,7 +145,7 @@ export const bioKap6: Kapitel = {
       title: 'Artbildung',
       content:
         'Die Artbildung (Speziation) ist der Prozess, durch den aus einer bestehenden Art eine oder mehrere neue Arten entstehen. Sie ist das Ergebnis des Zusammenwirkens von Evolutionsfaktoren und Isolationsmechanismen über lange Zeiträume. Die Frage, was eine „Art“ überhaupt ist, wird durch verschiedene Artkonzepte beantwortet, die jeweils unterschiedliche Aspekte betonen und in verschiedenen Kontexten nützlich sind. Die Artbildung ist ein zentrales Thema der Evolutionsbiologie und wurde maßgeblich von Ernst Mayr (1904–2005) erforscht.\n\n' +
-        'Das biologische Artkonzept (Ernst Mayr) definiert eine Art als eine Gruppe von Populationen, deren Mitglieder sich untereinander fortpflanzen können und fruchtbare Nachkommen erzeugen, die aber von anderen solchen Gruppen reproduktiv isoliert sind. Dieses Konzept ist das gebräuchlichste, hat aber Einschränkungen: Es ist nicht auf asexülle Organismen, Fossilien oder Organismen anwendbar, bei denen Hybridisierung vorkommt. Das morphologische Artkonzept definiert Arten anhand gemeinsamer morphologischer Merkmale — es ist praktisch anwendbar, aber ungenau, da es phänotypische Plastizität und kryptische Arten nicht berücksichtigt. Weitere Artkonzepte sind das phylogenetische Artkonzept (kleinste monophyletische Gruppe) und das ökologische Artkonzept (gemeinsame ökologische Nische).\n\n' +
+        'Das biologische Artkonzept (Ernst Mayr) definiert eine Art als eine Gruppe von Populationen, deren Mitglieder sich untereinander fortpflanzen können und fruchtbare Nachkommen erzeugen, die aber von anderen solchen Gruppen reproduktiv isoliert sind. Dieses Konzept ist das gebräuchlichste, hat aber Einschränkungen: Es ist nicht auf asexuelle Organismen, Fossilien oder Organismen anwendbar, bei denen Hybridisierung vorkommt. Das morphologische Artkonzept definiert Arten anhand gemeinsamer morphologischer Merkmale — es ist praktisch anwendbar, aber ungenau, da es phänotypische Plastizität und kryptische Arten nicht berücksichtigt. Weitere Artkonzepte sind das phylogenetische Artkonzept (kleinste monophyletische Gruppe) und das ökologische Artkonzept (gemeinsame ökologische Nische).\n\n' +
         'Die allopatrische Artbildung ist der häufigste Speziationsmechanismus. Sie erfolgt durch geographische Isolation: Eine Population wird durch eine physische Barriere (Gebirge, Ozean, Wüste, Eiszeit) in zwei oder mehr Teilpopulationen getrennt. In den isolierten Teilpopulationen wirken Mutation, Rekombination, Selektion und Gendrift unabhängig voneinander. Im Laufe der Zeit akkumulieren sich genetische Unterschiede, bis die Populationen reproduktiv isoliert sind und sich auch bei erneutem Kontakt nicht mehr erfolgreich kreuzen können. Klassische Beispiele sind die Darwin-Finken auf den Galápagos-Inseln und die Buntbarsche der ostafrikanischen Seen.\n\n' +
         'Die sympatrische Artbildung erfolgt ohne geographische Trennung — innerhalb desselben Verbreitungsgebiets. Sie ist seltener und schwieriger nachzuweisen als die allopatrische Artbildung. Mechanismen können ökologische Nischenaufteilung (z. B. verschiedene Nahrungsquellen oder Habitate), zeitliche Isolation (unterschiedliche Fortpflanzungszeiten) oder chromosomale Veränderungen wie Polyploidie sein. Polyploidie (Vervielfachung des Chromosomensatzes) ist besonders bei Pflanzen ein wichtiger Speziationsmechanismus: Allopolyploide Arten entstehen durch Hybridisierung zwischen verschiedenen Arten mit anschließender Genomverdopplung. Die parapatrische Artbildung ist ein Zwischenmodell, bei dem die Populationen in angrenzenden Gebieten leben und es eine schmale Kontaktzone gibt.',
       merksätze: [
@@ -158,7 +158,7 @@ export const bioKap6: Kapitel = {
           'Die allopatrische Artbildung durch geographische Isolation ist der häufigste Speziationsmechanismus. Eine Population wird durch eine physische Barriere getrennt, und die Teilpopulationen entwickeln sich unabhängig weiter, bis reproduktive Isolation eintritt.',
       },
       klinischerBezug:
-        'Das Artkonzept ist auch in der Mikrobiologie relevant: Bei Bakterien gibt es keine sexülle Fortpflanzung im klassischen Sinne, weshalb das biologische Artkonzept nicht anwendbar ist. Stattdessen werden Bakterienarten anhand von DNA-Sequenzvergleichen (z. B. 16S-rRNA) definiert. Horizontaler Gentransfer zwischen Bakterienarten kann zur Übertragung von Resistenzgenen führen.',
+        'Das Artkonzept ist auch in der Mikrobiologie relevant: Bei Bakterien gibt es keine sexuelle Fortpflanzung im klassischen Sinne, weshalb das biologische Artkonzept nicht anwendbar ist. Stattdessen werden Bakterienarten anhand von DNA-Sequenzvergleichen (z. B. 16S-rRNA) definiert. Horizontaler Gentransfer zwischen Bakterienarten kann zur Übertragung von Resistenzgenen führen.',
       selfTest: [
         {
           question: 'Welches Artkonzept definiert Arten über die Fähigkeit zur Fortpflanzung mit fruchtbaren Nachkommen?',
@@ -404,13 +404,13 @@ export const bioKap6: Kapitel = {
       id: 'bio-kap6-7',
       title: 'Selektion',
       content:
-        'Die natürliche Selektion ist der zentrale gerichtete Evolutionsfaktor und wurde von Charles Darwin als Hauptmechanismus der Evolution beschrieben. Selektion wirkt auf die phänotypische Variation innerhalb einer Population: Individün mit vorteilhaften Merkmalen haben einen höheren Fortpflanzungserfolg (Fitness) und geben ihre Gene häufiger an die nächste Generation weiter. Selektion erzeugt keine neue Variation — sie wirkt als Filter auf die durch Mutation und Rekombination erzeugte Variabilität. Die Wirkungsrichtung der Selektion hängt von den Umweltbedingungen ab und kann sich ändern, wenn sich die Umwelt verändert. Man unterscheidet drei Hauptformen der natürlichen Selektion, die jeweils unterschiedliche Auswirkungen auf die Merkmalsverteilung in einer Population haben.\n\n' +
+        'Die natürliche Selektion ist der zentrale gerichtete Evolutionsfaktor und wurde von Charles Darwin als Hauptmechanismus der Evolution beschrieben. Selektion wirkt auf die phänotypische Variation innerhalb einer Population: Individuen mit vorteilhaften Merkmalen haben einen höheren Fortpflanzungserfolg (Fitness) und geben ihre Gene häufiger an die nächste Generation weiter. Selektion erzeugt keine neue Variation — sie wirkt als Filter auf die durch Mutation und Rekombination erzeugte Variabilität. Die Wirkungsrichtung der Selektion hängt von den Umweltbedingungen ab und kann sich ändern, wenn sich die Umwelt verändert. Man unterscheidet drei Hauptformen der natürlichen Selektion, die jeweils unterschiedliche Auswirkungen auf die Merkmalsverteilung in einer Population haben.\n\n' +
         'Die stabilisierende Selektion bevorzugt den Mittelwert eines Merkmals und wirkt gegen Extremformen. Sie tritt in stabilen Umweltbedingungen auf und führt zu einer Verringerung der Varianz bei gleichbleibendem Mittelwert. Ein klassisches Beispiel ist das Geburtsgewicht beim Menschen: Neugeborene mit einem mittleren Geburtsgewicht (ca. 3000–4000 g) haben die höchste Überlebensrate, während sowohl sehr leichte als auch sehr schwere Neugeborene ein erhöhtes Mortalitätsrisiko aufweisen. Die transformierende (gerichtete) Selektion verschiebt den Mittelwert eines Merkmals in eine Richtung. Sie tritt auf, wenn sich die Umweltbedingungen ändern und ein Extremwert vorteilhaft wird. Beispiele sind die zunehmende Körpergröße in der Evolution der Pferde oder der Industriemelanismus beim Birkenspanner (Biston betularia): In verrußten Industriegebieten wurden dunkle Formen bevorzugt, da sie auf dunkler Rinde besser getarnt waren.\n\n' +
         'Die disruptive (aufspaltende) Selektion bevorzugt beide Extremwerte eines Merkmals und wirkt gegen den Mittelwert. Sie führt zu einer bimodalen Merkmalsverteilung und kann langfristig zur Aufspaltung einer Population in zwei Gruppen beitragen — ein möglicher Mechanismus der sympatrischen Artbildung. Ein Beispiel ist die Schnabelgröße bei afrikanischen Webervögeln: Vögel mit sehr großen oder sehr kleinen Schnäbeln sind erfolgreicher bei der Nahrungsaufnahme als solche mit mittleren Schnäbeln, die weder harte noch weiche Samen effizient knacken können.\n\n' +
-        'Die sexülle Selektion ist eine Sonderform der natürlichen Selektion, die auf den Fortpflanzungserfolg wirkt. Sie wurde ebenfalls von Darwin beschrieben und erklärt die Entstehung von Merkmalen, die zwar den Fortpflanzungserfolg erhöhen, aber das Überleben erschweren können. Man unterscheidet intrasexülle Selektion (Konkurrenz innerhalb eines Geschlechts, meist zwischen Männchen, z. B. Rivalenkämpfe beim Hirsch) und intersexülle Selektion (Partnerwahl, meist durch Weibchen, z. B. die Bevorzugung von Männchen mit prächtigen Merkmalen wie dem Pfauenschwanz). Das Handicap-Prinzip (Amotz Zahavi) besagt, dass nur gesunde, leistungsfähige Männchen es sich leisten können, solche aufwendigen Merkmale zu tragen — das Merkmal ist daher ein ehrliches Signal für genetische Qualität.',
+        'Die sexuelle Selektion ist eine Sonderform der natürlichen Selektion, die auf den Fortpflanzungserfolg wirkt. Sie wurde ebenfalls von Darwin beschrieben und erklärt die Entstehung von Merkmalen, die zwar den Fortpflanzungserfolg erhöhen, aber das Überleben erschweren können. Man unterscheidet intrasexuelle Selektion (Konkurrenz innerhalb eines Geschlechts, meist zwischen Männchen, z. B. Rivalenkämpfe beim Hirsch) und intersexuelle Selektion (Partnerwahl, meist durch Weibchen, z. B. die Bevorzugung von Männchen mit prächtigen Merkmalen wie dem Pfauenschwanz). Das Handicap-Prinzip (Amotz Zahavi) besagt, dass nur gesunde, leistungsfähige Männchen es sich leisten können, solche aufwendigen Merkmale zu tragen — das Merkmal ist daher ein ehrliches Signal für genetische Qualität.',
       merksätze: [
         'Drei Selektionsformen: Stabilisierend (Mittelwert bevorzugt, Varianz sinkt), Transformierend (Mittelwert verschiebt sich), Disruptiv (Extreme bevorzugt, Mittelwert benachteiligt).',
-        'Sexülle Selektion: Intrasexüll = Konkurrenz (Kampf), Intersexüll = Partnerwahl (z. B. Pfauenschwanz). Handicap-Prinzip: Aufwendige Merkmale als ehrliche Signale für Fitness.',
+        'Sexuelle Selektion: Intrasexuell = Konkurrenz (Kampf), Intersexuell = Partnerwahl (z. B. Pfauenschwanz). Handicap-Prinzip: Aufwendige Merkmale als ehrliche Signale für Fitness.',
       ],
       altfrage: {
         question: 'Welche Selektionsform tritt beim Geburtsgewicht des Menschen auf?',
@@ -426,7 +426,7 @@ export const bioKap6: Kapitel = {
             'Stabilisierende Selektion',
             'Transformierende Selektion',
             'Disruptive Selektion',
-            'Sexülle Selektion',
+            'Sexuelle Selektion',
             'Künstliche Selektion durch den Menschen',
           ],
           correctIndex: 2,
@@ -434,7 +434,7 @@ export const bioKap6: Kapitel = {
             'Disruptive (aufspaltende) Selektion bevorzugt beide Extremwerte und wirkt gegen den Mittelwert. Sie kann langfristig zu einer bimodalen Verteilung und zur Aufspaltung einer Population beitragen.',
         },
         {
-          question: 'Was beschreibt die intersexülle Selektion?',
+          question: 'Was beschreibt die intersexuelle Selektion?',
           options: [
             'Rivalenkämpfe zwischen Männchen',
             'Partnerwahl, meist durch Weibchen',
@@ -444,7 +444,7 @@ export const bioKap6: Kapitel = {
           ],
           correctIndex: 1,
           explanation:
-            'Intersexülle Selektion beschreibt die Partnerwahl — meist wählen Weibchen Männchen mit bestimmten Merkmalen aus (z. B. prächtiges Gefieder beim Pfau). Dies erklärt die Entstehung von Schmuckmerkmalen.',
+            'Intersexuelle Selektion beschreibt die Partnerwahl — meist wählen Weibchen Männchen mit bestimmten Merkmalen aus (z. B. prächtiges Gefieder beim Pfau). Dies erklärt die Entstehung von Schmuckmerkmalen.',
         },
         {
           question: 'Was ist ein Beispiel für transformierende (gerichtete) Selektion?',
@@ -463,19 +463,19 @@ export const bioKap6: Kapitel = {
     },
 
     // ──────────────────────────────────────────────
-    // 6.8 Kövolution & Anpassung
+    // 6.8 Koevolution & Anpassung
     // ──────────────────────────────────────────────
     {
       id: 'bio-kap6-8',
-      title: 'Kövolution & Anpassung',
+      title: 'Koevolution & Anpassung',
       content:
-        'Kövolution bezeichnet die wechselseitige evolutionäre Anpassung zweier oder mehrerer Arten aneinander, die in einer engen ökologischen Beziehung stehen. Die Evolution der einen Art beeinflusst die Selektion auf die andere Art und umgekehrt — es entsteht ein „evolutionäres Wettrüsten“. Kövolution kann zwischen Räuber und Beute, Parasit und Wirt, Pflanze und Bestäuber, oder zwischen Symbionten auftreten. Das Konzept der Kövolution wurde maßgeblich durch die Arbeiten von Paul Ehrlich und Peter Raven (1964) geprägt, die die Wechselbeziehungen zwischen Schmetterlingen und ihren Futterpflanzen untersuchten. Die Red-Queen-Hypothese (Leigh Van Valen) beschreibt das kövolutionäre Prinzip: Arten müssen sich ständig weiterentwickeln, nur um gegenüber ihren kövolvierenden Partnern nicht ins Hintertreffen zu geraten — wie die Rote Königin in „Alice hinter den Spiegeln“, die rennen muss, um am selben Ort zu bleiben.\n\n' +
+        'Koevolution bezeichnet die wechselseitige evolutionäre Anpassung zweier oder mehrerer Arten aneinander, die in einer engen ökologischen Beziehung stehen. Die Evolution der einen Art beeinflusst die Selektion auf die andere Art und umgekehrt — es entsteht ein „evolutionäres Wettrüsten“. Koevolution kann zwischen Räuber und Beute, Parasit und Wirt, Pflanze und Bestäuber, oder zwischen Symbionten auftreten. Das Konzept der Koevolution wurde maßgeblich durch die Arbeiten von Paul Ehrlich und Peter Raven (1964) geprägt, die die Wechselbeziehungen zwischen Schmetterlingen und ihren Futterpflanzen untersuchten. Die Red-Queen-Hypothese (Leigh Van Valen) beschreibt das koevolutionäre Prinzip: Arten müssen sich ständig weiterentwickeln, nur um gegenüber ihren koevolvierenden Partnern nicht ins Hintertreffen zu geraten — wie die Rote Königin in „Alice hinter den Spiegeln“, die rennen muss, um am selben Ort zu bleiben.\n\n' +
         'Mimikry und Mimese sind faszinierende Beispiele für evolutionäre Anpassungen, die im Kontext von Räuber-Beute-Beziehungen entstanden sind. Mimikry bezeichnet die Nachahmung von Warnsignalen anderer Arten. Bei der Batesschen Mimikry ahmt eine ungefährliche Art (Nachahmer) die Warntracht einer gefährlichen oder ungenießbaren Art (Vorbild) nach, um von Fressfeinden gemieden zu werden — z. B. ahmt die harmlose Schwebfliege die Warnfärbung der Wespe nach. Bei der Müllerschen Mimikry entwickeln mehrere ungenießbare oder gefährliche Arten ähnliche Warntrachten, was den Lerneffekt bei Fressfeinden verstärkt — z. B. verschiedene giftige Schmetterlingsarten mit ähnlicher Warnfärbung. Mimese (Tarnung, Krypsis) bezeichnet die Nachahmung von Objekten der Umgebung, um von Fressfeinden nicht erkannt zu werden — z. B. Stabschrecken, die Zweigen ähneln, oder Blattschrecken, die Blätter imitieren.\n\n' +
-        'Symbiose beschreibt das enge Zusammenleben verschiedener Arten und umfasst verschiedene Beziehungstypen. Die Mutualismus-Symbiose (Mutualismus) ist eine wechselseitig vorteilhafte Beziehung: Beide Partner profitieren. Beispiele sind die Beziehung zwischen Blütenpflanzen und ihren Bestäubern, zwischen Mykorrhizapilzen und Pflanzenwurzeln, oder die Beziehung zwischen Clownfischen und Seeanemonen. Kövolution hat in vielen Fällen zu einer hohen Spezialisierung geführt — bestimmte Orchideen können nur von einer einzigen Bienenart bestäubt werden. Der Kommensalismus ist eine Beziehung, bei der ein Partner profitiert und der andere weder Vor- noch Nachteil hat (z. B. Epiphyten auf Bäumen).\n\n' +
-        'Parasitismus ist eine Beziehung, bei der ein Partner (der Parasit) auf Kosten des anderen (des Wirts) lebt. Man unterscheidet Ektoparasiten (auf der Körperoberfläche, z. B. Flöhe, Zecken, Läuse) und Endoparasiten (im Körperinneren, z. B. Bandwürmer, Malaria-Erreger Plasmodium). Parasitoide (z. B. Schlupfwespen) töten ihren Wirt im Laufe der Entwicklung. Die Kövolution zwischen Parasit und Wirt führt zu einem ständigen Wettrüsten: Wirte entwickeln Abwehrmechanismen, Parasiten entwickeln Strategien zur Umgehung der Wirtsabwehr. Viele Parasiten haben komplexe Lebenszyklen mit Wirtswechseln und manipulieren sogar das Verhalten ihrer Wirte (z. B. Toxoplasma gondii beeinflusst das Verhalten von Mäusen, sodass diese Katzen — den Endwirt — weniger meiden). Aposematismus (Warnfärbung) und Tarnfärbung (Krypsis) sind wichtige Überlebensstrategien, die durch natürliche Selektion in Räuber-Beute-Beziehungen evolviert sind.',
+        'Symbiose beschreibt das enge Zusammenleben verschiedener Arten und umfasst verschiedene Beziehungstypen. Die Mutualismus-Symbiose (Mutualismus) ist eine wechselseitig vorteilhafte Beziehung: Beide Partner profitieren. Beispiele sind die Beziehung zwischen Blütenpflanzen und ihren Bestäubern, zwischen Mykorrhizapilzen und Pflanzenwurzeln, oder die Beziehung zwischen Clownfischen und Seeanemonen. Koevolution hat in vielen Fällen zu einer hohen Spezialisierung geführt — bestimmte Orchideen können nur von einer einzigen Bienenart bestäubt werden. Der Kommensalismus ist eine Beziehung, bei der ein Partner profitiert und der andere weder Vor- noch Nachteil hat (z. B. Epiphyten auf Bäumen).\n\n' +
+        'Parasitismus ist eine Beziehung, bei der ein Partner (der Parasit) auf Kosten des anderen (des Wirts) lebt. Man unterscheidet Ektoparasiten (auf der Körperoberfläche, z. B. Flöhe, Zecken, Läuse) und Endoparasiten (im Körperinneren, z. B. Bandwürmer, Malaria-Erreger Plasmodium). Parasitoide (z. B. Schlupfwespen) töten ihren Wirt im Laufe der Entwicklung. Die Koevolution zwischen Parasit und Wirt führt zu einem ständigen Wettrüsten: Wirte entwickeln Abwehrmechanismen, Parasiten entwickeln Strategien zur Umgehung der Wirtsabwehr. Viele Parasiten haben komplexe Lebenszyklen mit Wirtswechseln und manipulieren sogar das Verhalten ihrer Wirte (z. B. Toxoplasma gondii beeinflusst das Verhalten von Mäusen, sodass diese Katzen — den Endwirt — weniger meiden). Aposematismus (Warnfärbung) und Tarnfärbung (Krypsis) sind wichtige Überlebensstrategien, die durch natürliche Selektion in Räuber-Beute-Beziehungen evolviert sind.',
       merksätze: [
         'Batessche Mimikry: Harmlose Art ahmt gefährliche Art nach. Müllersche Mimikry: Mehrere gefährliche Arten ähneln sich gegenseitig. Mimese: Tarnung durch Nachahmung von Umgebungsobjekten.',
-        'Kövolution = wechselseitige Anpassung. Red-Queen-Hypothese: Arten müssen sich ständig weiterentwickeln, um im kövolutionären Wettrüsten nicht ins Hintertreffen zu geraten.',
+        'Koevolution = wechselseitige Anpassung. Red-Queen-Hypothese: Arten müssen sich ständig weiterentwickeln, um im koevolutionären Wettrüsten nicht ins Hintertreffen zu geraten.',
       ],
       altfrage: {
         question: 'Was ist der Unterschied zwischen Batesscher und Müllerscher Mimikry?',
@@ -483,7 +483,7 @@ export const bioKap6: Kapitel = {
           'Bei der Batesschen Mimikry ahmt eine ungefährliche Art die Warnfärbung einer gefährlichen Art nach (Täuschung). Bei der Müllerschen Mimikry entwickeln mehrere tatsächlich gefährliche/ungenießbare Arten ähnliche Warntrachten (gegenseitige Verstärkung des Lernsignals).',
       },
       klinischerBezug:
-        'Parasit-Wirt-Kövolution ist medizinisch hochrelevant: Malaria-Erreger (Plasmodium) und der Mensch kövolvieren seit Jahrtausenden. Die Sichelzellanämie (Heterozygotenvorteil) ist eine evolutionäre Antwort auf den Selektionsdruck durch Malaria. Toxoplasma gondii infiziert ca. 30 % der Weltbevölkerung und kann das Verhalten des Wirts beeinflussen — ein Beispiel für Wirtsmanipulation durch Parasiten.',
+        'Parasit-Wirt-Koevolution ist medizinisch hochrelevant: Malaria-Erreger (Plasmodium) und der Mensch koevolvieren seit Jahrtausenden. Die Sichelzellanämie (Heterozygotenvorteil) ist eine evolutionäre Antwort auf den Selektionsdruck durch Malaria. Toxoplasma gondii infiziert ca. 30 % der Weltbevölkerung und kann das Verhalten des Wirts beeinflussen — ein Beispiel für Wirtsmanipulation durch Parasiten.',
       selfTest: [
         {
           question: 'Was ist ein Beispiel für Batessche Mimikry?',
@@ -501,15 +501,15 @@ export const bioKap6: Kapitel = {
         {
           question: 'Was beschreibt die Red-Queen-Hypothese?',
           options: [
-            'Die Überlegenheit der stärksten Individün',
-            'Die Notwendigkeit ständiger Evolution im kövolutionären Wettrüsten',
+            'Die Überlegenheit der stärksten Individuen',
+            'Die Notwendigkeit ständiger Evolution im koevolutionären Wettrüsten',
             'Die Entstehung neuer Arten durch Isolation',
             'Die Vererbung erworbener Eigenschaften',
             'Die Zunahme der Biodiversität nach Massenaussterben',
           ],
           correctIndex: 1,
           explanation:
-            'Die Red-Queen-Hypothese besagt, dass Arten sich ständig weiterentwickeln müssen, um gegenüber ihren kövolvierenden Partnern (Parasiten, Fressfeinden etc.) nicht ins Hintertreffen zu geraten.',
+            'Die Red-Queen-Hypothese besagt, dass Arten sich ständig weiterentwickeln müssen, um gegenüber ihren koevolvierenden Partnern (Parasiten, Fressfeinden etc.) nicht ins Hintertreffen zu geraten.',
         },
         {
           question: 'Was ist der Unterschied zwischen Ekto- und Endoparasiten?',
