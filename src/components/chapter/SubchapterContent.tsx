@@ -3,6 +3,18 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import type { Unterkapitel } from "@/data/bmsKapitel/types";
 import DiagramSVG from "@/components/diagrams/DiagramSVG";
 
+/** Convert **bold** markers and newlines to HTML, escaping raw < > & first */
+function formatText(text: string, escapeHtml = false): string {
+  let t = text;
+  if (escapeHtml) {
+    t = t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+  return t
+    .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')
+    .replace(/\n\n/g, '</p><p class="mt-3">')
+    .replace(/\n/g, '<br/>');
+}
+
 const SUBJECT_COLORS: Record<string, { border: string; text: string; bg: string }> = {
   biologie: { border: "border-emerald-500", text: "text-emerald-700 dark:text-emerald-400", bg: "bg-emerald-50 dark:bg-emerald-900/20" },
   chemie: { border: "border-red-500", text: "text-red-700 dark:text-red-400", bg: "bg-red-50 dark:bg-red-900/20" },
@@ -59,7 +71,7 @@ export function SubchapterContent({ uk, subject }: Props) {
             </h3>
             <div
               className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed space-y-2"
-              dangerouslySetInnerHTML={{ __html: section.text.replace(/\n\n/g, '</p><p class="mt-3">').replace(/\n/g, '<br/>') }}
+              dangerouslySetInnerHTML={{ __html: formatText(section.text) }}
             />
 
             {/* Section merksatz */}
@@ -68,7 +80,7 @@ export function SubchapterContent({ uk, subject }: Props) {
                 <p className="font-semibold text-amber-800 dark:text-amber-300 text-sm flex items-center gap-2 mb-1">
                   Merke
                 </p>
-                <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed" dangerouslySetInnerHTML={{ __html: section.merksatz }} />
+                <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed" dangerouslySetInnerHTML={{ __html: formatText(section.merksatz) }} />
               </div>
             )}
 
@@ -117,9 +129,10 @@ export function SubchapterContent({ uk, subject }: Props) {
   // Fallback: render plain content
   return (
     <div className="space-y-6">
-      <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
-        {uk.content}
-      </div>
+      <div
+        className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed space-y-2"
+        dangerouslySetInnerHTML={{ __html: formatText(uk.content, true) }}
+      />
       {uk.diagram && (
         <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
           <DiagramSVG type={uk.diagram} />

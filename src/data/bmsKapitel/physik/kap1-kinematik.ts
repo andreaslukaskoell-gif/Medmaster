@@ -10,11 +10,19 @@ export const physKap1: Kapitel = {
     {
       id: 'phys-kap1-1',
       title: 'Gleichförmige Bewegung',
-      content: `Die gleichförmige Bewegung ist die einfachste Form der Bewegung in der Physik. Ein Körper bewegt sich gleichförmig, wenn er in gleichen Zeitabschnitten gleiche Wegstrecken zurücklegt. Die Geschwindigkeit v bleibt dabei konstant und berechnet sich aus dem Quotienten von zurückgelegtem Weg s und der dafür benötigten Zeit t: v = s/t. Die SI-Einheit der Geschwindigkeit ist Meter pro Sekunde (m/s). Im Alltag wird häufig Kilometer pro Stunde (km/h) verwendet, wobei die Umrechnung über den Faktor 3,6 erfolgt: 1 m/s = 3,6 km/h. Diese Umrechnung ergibt sich daraus, dass ein Kilometer 1000 Meter entspricht und eine Stunde 3600 Sekunden hat.
+      content: `**v = s/t** — das ist DIE Formel der gleichförmigen Bewegung.
 
-Das Weg-Zeit-Diagramm ist ein fundamentales Werkzeug zur Darstellung von Bewegungen. Bei der gleichförmigen Bewegung ergibt sich im s-t-Diagramm eine Gerade, deren Steigung der Geschwindigkeit entspricht. Je steiler die Gerade, desto größer ist die Geschwindigkeit des Körpers. Ein waagerechter Verlauf im s-t-Diagramm bedeutet Stillstand (v = 0), während eine Gerade mit negativer Steigung eine Bewegung in entgegengesetzter Richtung beschreibt. Im Geschwindigkeit-Zeit-Diagramm (v-t-Diagramm) erscheint die gleichförmige Bewegung als horizontale Linie, und die Fläche unter dieser Linie entspricht dem zurückgelegten Weg. Diese grafische Interpretation ist besonders nützlich, um Bewegungsvorgänge anschaulich zu analysieren.
+Stell dir vor, du fährst auf der Autobahn mit Tempomat. In jeder Sekunde legst du exakt gleich viel Strecke zurück. Das ist gleichförmige Bewegung. Die **Geschwindigkeit** (Weg pro Zeit, v = s/t) bleibt konstant.
 
-In der medizinischen Physik spielt die gleichförmige Bewegung beispielsweise bei der Blutströmung in großen Gefäßen eine Rolle, wenn man von einer vereinfachten, laminaren Strömung ausgeht. Auch die Ausbreitung von Schallwellen im Gewebe kann in erster Näherung als gleichförmige Bewegung beschrieben werden. Für die MedAT-Prüfung ist es essenziell, die Grundformel v = s/t sicher umstellen zu können: s = v · t zur Berechnung des Weges und t = s/v zur Berechnung der Zeit. Ebenso sollte man in der Lage sein, aus einem gegebenen Diagramm die entsprechenden physikalischen Größen abzulesen und zu interpretieren. Die Durchschnittsgeschwindigkeit berechnet sich bei mehreren Teilstrecken als Gesamtweg geteilt durch die Gesamtzeit, nicht als Mittelwert der Einzelgeschwindigkeiten.`,
+**Einheiten:** 1 m/s = 3,6 km/h. Der Faktor 3,6 kommt daher: 1 km = 1000 m, 1 h = 3600 s. Also 1 m/s = (1 m)/(1 s) × (3600 s)/(1000 m) = 3,6 km/h.
+
+**s-t-Diagramm:** Die Kurve ist eine Gerade. Die Steigung ist die Geschwindigkeit. Steiler = schneller. Horizontal = Stillstand (v = 0). Negative Steigung = Bewegung in die andere Richtung.
+
+**v-t-Diagramm:** Die Kurve ist eine horizontale Linie. Die Fläche unter dieser Linie ist der zurückgelegte Weg.
+
+**Durchschnittsgeschwindigkeit:** Bei mehreren Teilstrecken NICHT einfach die Geschwindigkeiten mitteln. Immer Gesamtweg/Gesamtzeit rechnen.
+
+**Formeln umstellen:** v = s/t → s = v·t → t = s/v. Das musst du im Schlaf beherrschen.`,
       merksätze: [
         'Gleichförmige Bewegung: v = s/t = konstant. Im s-t-Diagramm ergibt sich eine Gerade, deren Steigung die Geschwindigkeit ist.',
         'Die Fläche unter dem v-t-Diagramm entspricht dem zurückgelegten Weg. Umrechnung: 1 m/s = 3,6 km/h.',
@@ -24,7 +32,7 @@ In der medizinischen Physik spielt die gleichförmige Bewegung beispielsweise be
         answer: 'v = 90 km/h = 25 m/s. s = v · t = 25 m/s · 20 s = 500 m.',
       },
       klinischerBezug:
-        'Die Blutflussgeschwindigkeit in der Aorta beträgt etwa 0,3–0,5 m/s und kann mit der Doppler-Sonographie gemessen werden. Bei Stenosen erhöht sich die Geschwindigkeit gemäß der Kontinuitätsgleichung — ein Prinzip, das auf der gleichförmigen Bewegung basiert.',
+        'Blutflussgeschwindigkeit in der Aorta: ca. 0,3–0,5 m/s (gemessen mit **Doppler-Sonographie**). Bei einer **Aortenstenose** (Verengung) steigt die Geschwindigkeit lokal auf über 4 m/s — das Blut muss durch die Engstelle schneller strömen (Kontinuitätsgleichung). Typische Symptome: Dyspnoe, Angina pectoris, Synkope.',
       selfTest: [
         {
           question: 'Ein Läufer legt 100 m in 10 s zurück. Wie groß ist seine Durchschnittsgeschwindigkeit in km/h?',
@@ -55,11 +63,24 @@ In der medizinischen Physik spielt die gleichförmige Bewegung beispielsweise be
     {
       id: 'phys-kap1-2',
       title: 'Beschleunigte Bewegung',
-      content: `Die gleichmäßig beschleunigte Bewegung liegt vor, wenn sich die Geschwindigkeit eines Körpers in gleichen Zeitabschnitten um den gleichen Betrag ändert. Die Beschleunigung a ist definiert als Geschwindigkeitsänderung pro Zeiteinheit: a = Δv/Δt. Ihre SI-Einheit ist m/s². Eine positive Beschleunigung bedeutet Schnellerwerden, eine negative Beschleunigung (Verzögerung oder Bremsen) bedeutet Langsamerwerden. Im v-t-Diagramm ergibt sich bei konstanter Beschleunigung eine Gerade, deren Steigung die Beschleunigung ist. Im s-t-Diagramm entsteht eine Parabel, da der Weg quadratisch mit der Zeit zunimmt.
+      content: `**v = a·t** — das ist DIE zentrale Formel der beschleunigten Bewegung aus dem Stand. Merke sie dir JETZT.
 
-Die zentralen Gleichungen der gleichmäßig beschleunigten Bewegung aus dem Stillstand (v₀ = 0) lauten: v = a · t für die Geschwindigkeit zum Zeitpunkt t und s = ½ · a · t² für den zurückgelegten Weg. Durch Elimination der Zeit ergibt sich die zusätzliche Beziehung v² = 2 · a · s, die besonders nützlich ist, wenn die Zeit nicht gegeben ist. Startet der Körper nicht aus der Ruhe, sondern mit einer Anfangsgeschwindigkeit v₀, erweitern sich die Formeln zu: v = v₀ + a · t und s = v₀ · t + ½ · a · t². Diese Gleichungen bilden das vollständige Werkzeug zur Lösung aller Aufgaben zur gleichmäßig beschleunigten Bewegung und sollten für die MedAT-Prüfung sicher beherrscht werden.
+Die **Beschleunigung** (Geschwindigkeitsänderung pro Zeit, a = Δv/Δt) ist konstant. Einheit: m/s². Positiv = schneller werden. Negativ = Bremsen.
 
-Im v-t-Diagramm einer beschleunigten Bewegung entspricht die Fläche unter der Kurve weiterhin dem zurückgelegten Weg. Bei konstanter Beschleunigung aus dem Stillstand ist dies ein Dreieck mit der Fläche ½ · v · t = ½ · a · t², was konsistent mit der Wegformel ist. Im Alltag begegnet uns die beschleunigte Bewegung ständig: beim Anfahren eines Autos, beim Abbremsen eines Zuges oder beim Beschleunigen im freien Fall. In der Medizin ist das Konzept der Beschleunigung relevant für das Verständnis von Traumata bei Unfällen (Dezelerationstrauma) sowie für die Funktionsweise des Vestibularorgans im Innenohr, das Beschleunigungen des Kopfes registriert und dem Gehirn so Informationen über Bewegung und Lage des Körpers liefert.`,
+**Die drei Schlüsselformeln (Start aus Ruhe, v₀ = 0):**
+- v = a·t (Geschwindigkeit)
+- s = ½·a·t² (Weg — quadratisch mit Zeit)
+- v² = 2·a·s (ohne Zeit, direkt Weg-Geschwindigkeit)
+
+**Mit Anfangsgeschwindigkeit v₀:**
+- v = v₀ + a·t
+- s = v₀·t + ½·a·t²
+
+**v-t-Diagramm:** Die Kurve ist eine Gerade. Steigung = Beschleunigung. Fläche unter der Kurve = zurückgelegter Weg.
+
+**s-t-Diagramm:** Die Kurve ist eine Parabel. Der Weg wächst quadratisch mit der Zeit.
+
+**Beispiel:** Auto beschleunigt mit 2 m/s² aus dem Stand. Nach 5 s: v = 2·5 = 10 m/s. Weg: s = ½·2·25 = 25 m.`,
       merksätze: [
         'Gleichmäßig beschleunigte Bewegung: v = a·t und s = ½·a·t². Die Beschleunigung a = Δv/Δt wird in m/s² gemessen.',
         'Im v-t-Diagramm ist die Steigung = Beschleunigung und die Fläche unter der Kurve = zurückgelegter Weg.',
@@ -69,7 +90,7 @@ Im v-t-Diagramm einer beschleunigten Bewegung entspricht die Fläche unter der K
         answer: 'v = a·t = 2 · 5 = 10 m/s = 36 km/h. s = ½·a·t² = ½ · 2 · 25 = 25 m.',
       },
       klinischerBezug:
-        'Bei einem Autounfall erfährt der Körper eine starke negative Beschleunigung (Dezeleration). Die dabei auf Organe wirkenden Kräfte können zu Aortenrupturen oder Hirnkontusionen führen. Die Bogengänge des Innenohrs registrieren Drehbeschleunigungen, die Otolithenorgane lineare Beschleunigungen.',
+        'Bei einem Autounfall mit 50 km/h (≈14 m/s) und plötzlichem Stopp in 0,1 s wirkt eine **Dezeleration** von a = 14/0,1 = 140 m/s² ≈ 14 g auf den Körper. Typische Verletzungen: **Schleudertrauma** (HWS-Distorsion durch ruckartige Überstreckung), **Aortenruptur** (Aorta isthmi — Aufhängungsstelle reißt bei starker Dezeleration), **Hirnkontusion** (Gehirn prallt gegen Schädelinnenseite). Airbag verlängert die Stoßzeit auf ca. 0,03–0,05 s → a sinkt auf ≈3–5 g.',
       selfTest: [
         {
           question: 'Ein Körper beschleunigt aus der Ruhe mit 4 m/s². Welchen Weg legt er in 3 Sekunden zurück?',
@@ -94,11 +115,22 @@ Im v-t-Diagramm einer beschleunigten Bewegung entspricht die Fläche unter der K
     {
       id: 'phys-kap1-3',
       title: 'Freier Fall & Wurf',
-      content: `Der freie Fall ist ein Spezialfall der gleichmäßig beschleunigten Bewegung, bei dem die Erdbeschleunigung g = 9,81 m/s² (gerundet oft 10 m/s²) als konstante Beschleunigung wirkt. Beim freien Fall aus der Ruhe gelten die bekannten Formeln mit a = g: v = g · t für die Fallgeschwindigkeit und h = ½ · g · t² für die Fallhöhe. Der freie Fall ist streng genommen nur im Vakuum realisiert, da der Luftwiderstand bei realen Fallvorgängen eine Rolle spielt. Galileo Galilei widerlegte bereits im 17. Jahrhundert die aristotelische Vorstellung, dass schwere Körper schneller fallen als leichte — im Vakuum fallen alle Körper gleich schnell, unabhängig von ihrer Masse. Die Erdbeschleunigung g variiert leicht mit dem Breitengrad und der Höhe über dem Meeresspiegel.
+      content: `**Freier Fall: v = g·t und h = ½·g·t²** mit **g = 9,81 m/s²** (oft gerundet: 10 m/s²).
 
-Beim senkrechten Wurf nach oben wird ein Körper mit einer Anfangsgeschwindigkeit v₀ senkrecht nach oben geworfen. Die Erdbeschleunigung wirkt als Verzögerung, bis der Körper im höchsten Punkt die Geschwindigkeit null erreicht. Die Steighöhe berechnet sich aus v₀² = 2 · g · hmax zu hmax = v₀²/(2g). Die Steigzeit ergibt sich aus v₀ = g · t zu tsteig = v₀/g. Aufgrund der Symmetrie des Vorgangs (ohne Luftwiderstand) ist die Fallzeit gleich der Steigzeit und die Aufprallgeschwindigkeit gleich der Abwurfgeschwindigkeit. Beim senkrechten Wurf nach unten addiert sich die Anfangsgeschwindigkeit zur Fallgeschwindigkeit.
+Der freie Fall ist beschleunigte Bewegung mit konstanter Erdbeschleunigung. Alle Körper fallen gleich schnell — egal ob Feder oder Stein (im Vakuum). Galilei hat das bewiesen.
 
-Der waagerechte Wurf (horizontaler Wurf) ist eine Überlagerung zweier unabhängiger Bewegungen: einer gleichförmigen Bewegung in horizontaler Richtung (x = v₀ · t) und eines freien Falls in vertikaler Richtung (y = ½ · g · t²). Diese Überlagerung (Superpositionsprinzip) führt zu einer parabelförmigen Bahnkurve. Die Wurfweite und die Aufprallgeschwindigkeit lassen sich aus den beiden Komponenten berechnen. Die resultierende Geschwindigkeit beim Auftreffen ergibt sich aus der vektoriellen Addition der horizontalen und vertikalen Komponente: v = √(vx² + vy²). In der Medizin ist das Verständnis des freien Falls wichtig für die Beurteilung von Sturzverletzungen: Die Aufprallgeschwindigkeit und damit die kinetische Energie steigt mit der Fallhöhe, was die Schwere der Verletzungen bestimmt.`,
+**Wichtig:** g variiert leicht mit Breiten- und Höhengrad, aber für den MedAT gilt g ≈ 10 m/s².
+
+**Senkrechter Wurf nach oben:** Du wirfst einen Ball mit v₀ nach oben. Die Schwerkraft bremst ihn ab (a = -g). Am höchsten Punkt: v = 0.
+- Steighöhe: hmax = v₀²/(2g)
+- Steigzeit: tsteig = v₀/g
+- Symmetrie: Fallzeit = Steigzeit, Aufprallgeschwindigkeit = Abwurfgeschwindigkeit
+
+**Waagerechter Wurf:** Überlagerung zweier unabhängiger Bewegungen:
+- Horizontal: x = v₀·t (gleichförmig)
+- Vertikal: y = ½·g·t² (freier Fall)
+
+Resultierende Bahn: Parabel. Aufprallgeschwindigkeit: v = √(vx² + vy²).`,
       merksätze: [
         'Freier Fall: h = ½·g·t², v = g·t mit g = 9,81 m/s². Alle Körper fallen im Vakuum gleich schnell — unabhängig von der Masse.',
         'Waagerechter Wurf: Überlagerung von gleichförmiger Horizontalbewegung (x = v₀·t) und freiem Fall (y = ½·g·t²). Die Bahn ist eine Parabel.',
@@ -108,7 +140,7 @@ Der waagerechte Wurf (horizontaler Wurf) ist eine Überlagerung zweier unabhäng
         answer: 'v = g·t = 10 · 3 = 30 m/s. h = ½·g·t² = ½ · 10 · 9 = 45 m.',
       },
       klinischerBezug:
-        'Bei Stürzen aus großer Höhe steigt die Aufprallgeschwindigkeit mit v = √(2gh). Ein Sturz aus 5 m Höhe ergibt bereits v ≈ 10 m/s (36 km/h). Die kinetische Energie beim Aufprall bestimmt das Verletzungsmuster: Fersenbein- und Wirbelsäulenfrakturen sind typisch für Stürze aus der Höhe (Dezelerationstrauma).',
+        'Bei Stürzen aus großer Höhe gilt: v = √(2gh). Sturz aus 5 m Höhe → v ≈ 10 m/s (36 km/h). Sturz aus 20 m → v ≈ 20 m/s (72 km/h). Typische Verletzungen: **Kalkaneusfraktur** (Fersenbein — oft beidseitig), **Wirbelsäulenfrakturen** (v.a. Th12/L1-Übergang), **Pilon-tibiale-Fraktur** (distale Tibia). Bei Sturz >6 m: Letalität steigt drastisch. **Dezelerationstrauma** beim Aufprall — Organe prallen gegen Skelett.',
       selfTest: [
         {
           question: 'Wie lange dauert der freie Fall aus 20 m Höhe? (g = 10 m/s²)',

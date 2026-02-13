@@ -16,19 +16,29 @@ export const physKap2: Kapitel = {
         'Kraft, Masse und Beschleunigung rechnerisch verknüpfen können',
         'Das Wechselwirkungsprinzip an Beispielen erklären können',
       ],
-      content: `Die drei Newtonschen Gesetze bilden das Fundament der klassischen Mechanik und beschreiben den Zusammenhang zwischen Kräften und Bewegungen. Das erste Newtonsche Gesetz (Trägheitsprinzip) besagt: Ein Körper verharrt im Zustand der Ruhe oder der gleichförmigen geradlinigen Bewegung, solange keine äußere Kraft auf ihn einwirkt. Dieses Gesetz definiert gleichzeitig den Begriff des Inertialsystems — eines Bezugssystems, in dem das Trägheitsprinzip gilt. Im Alltag begegnet uns die Trägheit beispielsweise, wenn Passagiere in einem plötzlich bremsenden Bus nach vorne fallen oder wenn ein Tischtuch unter Geschirr weggezogen wird, ohne dass die Gegenstände kippen.
+      content: `**F = m·a** — das zweite Newtonsche Gesetz. DIE zentrale Formel der Dynamik. Kraft = Masse × Beschleunigung.
 
-Das zweite Newtonsche Gesetz (Aktionsprinzip) ist das zentrale Gesetz der Dynamik: F = m · a. Die auf einen Körper wirkende resultierende Kraft F ist gleich dem Produkt aus seiner Masse m und seiner Beschleunigung a. Dieses Gesetz verknüpft die Kinematik (Beschreibung der Bewegung) mit der Dynamik (Ursache der Bewegung). Die Einheit der Kraft ist das Newton: 1 N = 1 kg · m/s². Wirken mehrere Kräfte auf einen Körper, so bestimmt die vektorielle Summe aller Kräfte (die Resultierende) die Beschleunigung. Ist die Resultierende null, befindet sich der Körper im Kräftegleichgewicht — er ruht oder bewegt sich gleichförmig geradlinig (Zusammenhang mit dem ersten Gesetz).
+**Die drei Newtonschen Gesetze:**
 
-Das dritte Newtonsche Gesetz (Wechselwirkungsprinzip, Actio = Reactio) besagt: Übt ein Körper A eine Kraft auf Körper B aus (Actio), so übt Körper B eine gleich große, aber entgegengesetzte Kraft auf Körper A aus (Reactio). Wichtig ist, dass diese beiden Kräfte an verschiedenen Körpern angreifen und sich daher nicht gegenseitig aufheben. Beispielsweise drückt ein Buch auf den Tisch (Gewichtskraft), und der Tisch drückt mit gleicher Kraft zurück (Normalkraft). Beim Gehen drückt der Fuß nach hinten auf den Boden, und die Reibungskraft des Bodens treibt den Körper nach vorne. Das Wechselwirkungsprinzip erklärt auch, warum eine Rakete im Vakuum fliegen kann: Die ausgestoßenen Gase erfahren eine Kraft nach hinten, und die Rakete eine gleichgroße Kraft nach vorne.`,
+**1. Newton (Trägheitsprinzip):** Ein Körper bleibt in Ruhe oder bewegt sich gleichförmig geradlinig, solange keine Kraft auf ihn wirkt. Beispiel: Du sitzt im Bus. Der Bus bremst plötzlich. Du fliegst nach vorne — dein Körper will seine Bewegung beibehalten.
+
+**2. Newton (Aktionsprinzip):** F = m·a. Die Kraft bestimmt die Beschleunigung. Mehr Kraft → mehr Beschleunigung. Mehr Masse → weniger Beschleunigung. Einheit der Kraft: 1 Newton = 1 kg·m/s².
+
+**3. Newton (Actio = Reactio):** Jede Kraft hat eine gleich große Gegenkraft. Du drückst auf den Tisch → der Tisch drückt zurück. Wichtig: Die beiden Kräfte greifen an VERSCHIEDENEN Körpern an. Sie heben sich NICHT gegenseitig auf.
+
+**Kräftegleichgewicht:** Wenn die Summe aller Kräfte null ist, ruht der Körper oder bewegt sich gleichförmig. Beispiel: Auto fährt mit konstanter Geschwindigkeit → Antriebskraft = Reibungskraft.`,
       sections: [
         {
           heading: 'Erstes Newtonsches Gesetz (Trägheitsprinzip)',
-          text: `Das erste Newtonsche Gesetz besagt: Ein Körper verharrt im Zustand der Ruhe oder der gleichförmigen geradlinigen Bewegung, solange keine äußere Kraft auf ihn einwirkt. Dieses Gesetz definiert gleichzeitig den Begriff des Inertialsystems — eines Bezugssystems, in dem das Trägheitsprinzip gilt. Im Alltag begegnet uns die Trägheit beispielsweise, wenn Passagiere in einem plötzlich bremsenden Bus nach vorne fallen oder wenn ein Tischtuch unter Geschirr weggezogen wird, ohne dass die Gegenstände kippen.`,
+          text: `Ein Körper bleibt in Ruhe oder bewegt sich gleichförmig geradlinig, solange keine Kraft wirkt. Das definiert das **Inertialsystem** (Bezugssystem, in dem das Trägheitsprinzip gilt).
+
+Beispiele: Passagier fliegt nach vorne, wenn der Bus bremst. Tischtuch wird unter Geschirr weggezogen — Gegenstände bleiben stehen.`,
         },
         {
           heading: 'Zweites Newtonsches Gesetz (F = m·a)',
-          text: `Das zweite Newtonsche Gesetz ist das zentrale Gesetz der Dynamik: F = m · a. Die auf einen Körper wirkende resultierende Kraft F ist gleich dem Produkt aus seiner Masse m und seiner Beschleunigung a. Dieses Gesetz verknüpft die Kinematik (Beschreibung der Bewegung) mit der Dynamik (Ursache der Bewegung). Die Einheit der Kraft ist das Newton: 1 N = 1 kg · m/s². Wirken mehrere Kräfte auf einen Körper, so bestimmt die vektorielle Summe aller Kräfte (die Resultierende) die Beschleunigung. Ist die Resultierende null, befindet sich der Körper im Kräftegleichgewicht — er ruht oder bewegt sich gleichförmig geradlinig.`,
+          text: `F = m·a verknüpft Kraft, Masse und Beschleunigung. Die resultierende Kraft (Summe aller Kräfte) bestimmt die Beschleunigung.
+
+Einheit: 1 N = 1 kg·m/s². Ist die Resultierende null, herrscht Kräftegleichgewicht — der Körper ruht oder bewegt sich gleichförmig.`,
           merksatz: 'Die Einheit der Kraft ist das Newton: 1 N = 1 kg·m/s². Kräftegleichgewicht herrscht, wenn die Resultierende aller Kräfte null ist.',
           table: {
             headers: ['Gesetz', 'Formel', 'Bedeutung'],
@@ -41,7 +51,9 @@ Das dritte Newtonsche Gesetz (Wechselwirkungsprinzip, Actio = Reactio) besagt: �
         },
         {
           heading: 'Drittes Newtonsches Gesetz (Actio = Reactio)',
-          text: `Das dritte Newtonsche Gesetz (Wechselwirkungsprinzip) besagt: Übt ein Körper A eine Kraft auf Körper B aus (Actio), so übt Körper B eine gleich große, aber entgegengesetzte Kraft auf Körper A aus (Reactio). Wichtig ist, dass diese beiden Kräfte an verschiedenen Körpern angreifen und sich daher nicht gegenseitig aufheben. Beispielsweise drückt ein Buch auf den Tisch (Gewichtskraft), und der Tisch drückt mit gleicher Kraft zurück (Normalkraft). Beim Gehen drückt der Fuß nach hinten auf den Boden, und die Reibungskraft des Bodens treibt den Körper nach vorne. Das Wechselwirkungsprinzip erklärt auch, warum eine Rakete im Vakuum fliegen kann: Die ausgestoßenen Gase erfahren eine Kraft nach hinten, und die Rakete eine gleichgroße Kraft nach vorne.`,
+          text: `Körper A drückt auf Körper B (Actio) → Körper B drückt gleich stark zurück auf A (Reactio). Die Kräfte greifen an VERSCHIEDENEN Körpern an — sie heben sich nicht auf.
+
+Beispiele: Buch drückt auf Tisch, Tisch drückt zurück. Beim Gehen drückt der Fuß nach hinten, der Boden treibt dich nach vorne. Rakete stößt Gas nach hinten, Gas treibt Rakete nach vorne.`,
         },
       ],
       merksätze: [
@@ -53,7 +65,7 @@ Das dritte Newtonsche Gesetz (Wechselwirkungsprinzip, Actio = Reactio) besagt: �
         answer: 'F = m·a = 80 kg · 2 m/s² = 160 N.',
       },
       klinischerBezug:
-        'Das Trägheitsprinzip erklärt das Schleudertrauma bei Auffahrunfällen: Der Kopf verharrt aufgrund seiner Trägheit in der Ruheposition, während der Rumpf durch den Aufprall beschleunigt wird. Dies führt zu einer Überstreckung der Halswirbelsäule. Sicherheitsgurte und Kopfstützen sind Anwendungen der Newtonschen Gesetze zur Unfallprävention.',
+        '**Schleudertrauma** (HWS-Distorsion) bei Auffahrunfällen: Der Rumpf wird durch den Aufprall beschleunigt, der Kopf bleibt aufgrund der Trägheit zurück → Überstreckung der HWS. Typische Symptome: Nackenschmerz, Kopfschmerz, Schwindel. Diagnose: Röntgen (zum Frakturausschluss), ggf. MRT. Prävention: **Kopfstützen** (reduzieren Überstreckung), **Sicherheitsgurte** (verteilen Kräfte auf Becken/Schulter statt Hals).',
       selfTest: [
         {
           question: 'Welches Newtonsche Gesetz beschreibt, dass eine 5 kg schwere Masse bei Einwirkung von 10 N eine Beschleunigung von 2 m/s² erfährt?',
@@ -96,11 +108,20 @@ Das dritte Newtonsche Gesetz (Wechselwirkungsprinzip, Actio = Reactio) besagt: �
     {
       id: 'phys-kap2-2',
       title: 'Kräfte',
-      content: `In der Mechanik treten verschiedene Kraftarten auf, die für das Verständnis physikalischer Vorgänge essenziell sind. Die Gewichtskraft FG = m · g ist die Kraft, mit der die Erde einen Körper anzieht. Sie ist proportional zur Masse m und zur Erdbeschleunigung g ≈ 9,81 m/s². Die Gewichtskraft zeigt stets senkrecht nach unten zum Erdmittelpunkt. Die Normalkraft FN ist die Reaktionskraft einer Unterlage auf einen aufliegenden Körper und steht senkrecht auf der Oberfläche. Auf einer waagerechten Fläche ist die Normalkraft betragsmäßig gleich der Gewichtskraft, auf einer schiefen Ebene ist sie jedoch kleiner. Diese Unterscheidung ist für viele Prüfungsaufgaben entscheidend.
+      content: `**Gewichtskraft: FG = m·g**. Die Erde zieht dich nach unten. g ≈ 9,81 m/s². Ein 50 kg schwerer Körper wiegt FG = 50·10 = 500 N (gerundet).
 
-Die Reibungskraft FR wirkt der Bewegung entgegen und ist proportional zur Normalkraft: FR = μ · FN, wobei μ der dimensionslose Reibungskoeffizient ist. Man unterscheidet Haftreibung (μH, Körper ruht noch) und Gleitreibung (μG, Körper bewegt sich bereits), wobei die Haftreibung in der Regel größer ist als die Gleitreibung. Dies erklärt, warum es mehr Kraft braucht, einen Schrank in Bewegung zu setzen, als ihn in Bewegung zu halten. Die Reibung ist im Alltag meist erwünscht (Gehen, Bremsen, Greifen), kann aber auch unerwünscht sein (Verschleiß, Energieverlust in Maschinen). Die Rollreibung ist deutlich kleiner als die Gleitreibung, weshalb Räder den Transport erheblich erleichtern.
+**Normalkraft FN:** Die Unterlage drückt zurück. Steht immer senkrecht auf der Oberfläche. Auf waagerechtem Boden: FN = FG. Auf schiefer Ebene: FN < FG.
 
-Die Federkraft folgt dem Hookeschen Gesetz: F = k · s (auch F = D · x geschrieben). Dabei ist k (oder D) die Federkonstante in N/m und s (oder x) die Auslenkung aus der Ruhelage. Die Federkraft ist eine rücktreibende Kraft, die proportional zur Ausdehnung oder Stauchung der Feder ist und ihr entgegenwirkt. Das Hookesche Gesetz gilt nur im linearen Bereich — bei zu großer Auslenkung wird die Feder plastisch verformt und kehrt nicht mehr in ihre Ausgangsform zurück. Federn speichern potenzielle Energie (Espann = ½ · k · s²) und spielen in der Medizintechnik eine Rolle, beispielsweise in Blutdruckmessgeräten, Spritzen und orthopädischen Prothesen. Auch Sehnen und Bänder im menschlichen Körper verhalten sich in gewissen Bereichen federartig.`,
+**Reibungskraft FR = μ·FN:** Wirkt gegen die Bewegung. μ ist der Reibungskoeffizient (dimensionslos).
+- **Haftreibung** (μH): Körper ruht noch
+- **Gleitreibung** (μG): Körper bewegt sich bereits
+- Immer gilt: μH > μG
+
+Deshalb braucht es mehr Kraft, einen Schrank anzuschieben, als ihn in Bewegung zu halten. **Rollreibung** ist viel kleiner als Gleitreibung — deshalb haben wir Räder erfunden.
+
+**Federkraft (Hooke): F = k·s**. k ist die Federkonstante (N/m), s die Auslenkung. Die Kraft ist proportional zur Dehnung. Beispiel: Feder mit k = 200 N/m, gedehnt um 5 cm → F = 200·0,05 = 10 N.
+
+**Wichtig:** Das Hookesche Gesetz gilt nur im linearen Bereich. Bei zu starker Dehnung wird die Feder plastisch verformt — sie kehrt nicht mehr zurück.`,
       merksätze: [
         'Gewichtskraft: FG = m·g. Reibungskraft: FR = μ·FN. Federkraft (Hooke): F = k·s. Die Haftreibung ist größer als die Gleitreibung (μH > μG).',
         'Die Normalkraft steht immer senkrecht auf der Kontaktfläche. Auf waagerechtem Boden gilt FN = FG = m·g.',
@@ -110,7 +131,7 @@ Die Federkraft folgt dem Hookeschen Gesetz: F = k · s (auch F = D · x geschrie
         answer: 'F = k·s = 200 N/m · 0,05 m = 10 N.',
       },
       klinischerBezug:
-        'Sehnen und Bänder verhalten sich in gewissen Grenzen wie elastische Federn — sie folgen dem Hookeschen Gesetz. Bei Überbelastung (über den linearen Bereich hinaus) kommt es zu plastischer Verformung oder Riss. Die Reibung zwischen Gelenkflächen wird durch Synovialflüssigkeit minimiert, was die Beweglichkeit der Gelenke gewährleistet.',
+        'Sehnen und Bänder verhalten sich wie Federn — sie folgen dem **Hookeschen Gesetz** (im physiologischen Bereich). Bei Überbelastung: **plastische Verformung** (Zerrung) oder **Riss**. Beispiel: **Vorderes Kreuzband** (LCA) reißt bei plötzlicher Rotation + Valgus-Stress (typisch: Fußball, Skifahren). Symptome: Knie gibt nach, Hämarthros, pos. **Lachman-Test**. Die **Synovialflüssigkeit** (Gelenkschmiere) minimiert Reibung zwischen Gelenkflächen — μ ≈ 0,01, niedriger als Eis auf Eis.',
       selfTest: [
         {
           question: 'Ein Körper von 5 kg liegt auf einem Tisch. Wie groß ist die Normalkraft? (g = 10 m/s²)',
@@ -141,11 +162,19 @@ Die Federkraft folgt dem Hookeschen Gesetz: F = k · s (auch F = D · x geschrie
     {
       id: 'phys-kap2-3',
       title: 'Schiefe Ebene',
-      content: `Die schiefe Ebene ist ein klassisches Thema der Mechanik und ein Dauerbrenner in Physikprüfungen. Liegt ein Körper auf einer geneigten Fläche mit dem Neigungswinkel α, so wird die Gewichtskraft FG = m · g in zwei Komponenten zerlegt: die Hangabtriebskraft FH = m · g · sin(α), die den Körper entlang der Ebene nach unten zieht, und die Normalkraft FN = m · g · cos(α), die senkrecht auf der Ebene steht und den Körper gegen die Oberfläche drückt. Diese Kräftezerlegung ist der Schlüssel zur Lösung aller Aufgaben zur schiefen Ebene. Man beachte, dass bei α = 0° (horizontale Ebene) FH = 0 und FN = FG gilt, und bei α = 90° (senkrechte Wand) FH = FG und FN = 0 ist.
+      content: `**Die Schlüsselformeln:**
+- **Hangabtriebskraft:** FH = m·g·sin(α) (zieht den Körper runter)
+- **Normalkraft:** FN = m·g·cos(α) (drückt senkrecht auf die Ebene)
 
-Ob der Körper auf der schiefen Ebene ruht oder gleitet, hängt vom Verhältnis zwischen Hangabtriebskraft und Reibungskraft ab. Die maximale Haftreibungskraft beträgt FR,max = μH · FN = μH · m · g · cos(α). Der Körper beginnt zu gleiten, wenn FH > FR,max, also wenn m · g · sin(α) > μH · m · g · cos(α). Durch Kürzen ergibt sich die Bedingung tan(α) > μH. Der Winkel, bei dem der Körper gerade zu gleiten beginnt, heißt Grenzwinkel der Haftreibung: αgrenz = arctan(μH). Diese Beziehung ist bemerkenswert, weil der Grenzwinkel unabhängig von der Masse des Körpers ist — ein schwerer und ein leichter Körper beginnen bei demselben Winkel zu rutschen, sofern der Reibungskoeffizient gleich ist.
+Stell dir einen Körper auf einer schiefen Rampe vor. Die Gewichtskraft FG = m·g zeigt senkrecht nach unten. Wir zerlegen sie in zwei Komponenten: parallel zur Ebene (Hangabtriebskraft) und senkrecht zur Ebene (Normalkraft).
 
-Bewegt sich der Körper auf der schiefen Ebene, so bestimmt die Resultierende aus Hangabtriebskraft und Gleitreibungskraft die Beschleunigung. Die Beschleunigung entlang der Ebene beträgt a = g · (sin(α) - μG · cos(α)). Ist diese positiv, beschleunigt der Körper hangabwärts; ist sie null, gleitet er mit konstanter Geschwindigkeit. In der medizinischen Praxis ist das Prinzip der schiefen Ebene beim Lagern von Patienten relevant: Eine Schrägstellung des Bettes ändert die auf den Körper wirkenden Kraftkomponenten, was beispielsweise bei Trendelenburg-Lagerung therapeutisch genutzt wird. Auch die Biomechanik des Gehens auf Steigungen und Gefällen lässt sich mit dem Modell der schiefen Ebene analysieren.`,
+**Wann rutscht der Körper?** Wenn FH > FR,max. Die maximale Haftreibung ist FR,max = μH·FN. Also: m·g·sin(α) > μH·m·g·cos(α). Die Masse kürzt sich! Es bleibt: **tan(α) > μH**.
+
+**Grenzwinkel der Haftreibung:** αgrenz = arctan(μH). Unabhängig von der Masse. Ein 1 kg schwerer Stein und ein 100 kg schwerer Stein rutschen bei demselben Winkel.
+
+**Beschleunigung auf der Ebene (wenn er rutscht):** a = g·(sin(α) - μG·cos(α)).
+
+**Beispiel:** α = 30°, m = 10 kg, g = 10 m/s². Dann: FH = 10·10·sin(30°) = 100·0,5 = 50 N. FN = 10·10·cos(30°) = 100·0,866 ≈ 86,6 N.`,
       merksätze: [
         'Schiefe Ebene: Hangabtriebskraft FH = m·g·sin(α), Normalkraft FN = m·g·cos(α). Der Körper gleitet, wenn tan(α) > μH.',
         'Die Beschleunigung auf der schiefen Ebene: a = g·(sin(α) - μ·cos(α)). Der Grenzwinkel der Haftreibung αgrenz = arctan(μH) ist massenunabhängig.',
@@ -155,7 +184,7 @@ Bewegt sich der Körper auf der schiefen Ebene, so bestimmt die Resultierende au
         answer: 'FH = m·g·sin(30°) = 10·10·0,5 = 50 N. FN = m·g·cos(30°) = 10·10·0,866 = 86,6 N.',
       },
       klinischerBezug:
-        'Die Trendelenburg-Lagerung (Kopftieflage) nutzt das Prinzip der schiefen Ebene: Durch Schrägstellung des Bettes wird der venöse Rückstrom zum Herzen erleichtert. Bei der Anti-Trendelenburg-Lagerung (Oberkörperhochlage) reduziert sich der Druck auf das Zwerchfell, was die Atmung erleichtert.',
+        '**Trendelenburg-Lagerung** (Kopftieflage, ca. 15–30°): Der Patient liegt schräg mit dem Kopf tiefer als die Beine. Die Hangabtriebskraft treibt das Blut Richtung Herz → verbessert den venösen Rückstrom. Indikationen: **Schock** (hypovolämisch), **V.-cava-superior-Syndrom**. Kontraindikationen: erhöhter Hirndruck, Lungenödem. **Anti-Trendelenburg-Lagerung** (Oberkörperhochlage): Erleichtert die Atmung (Zwerchfell hat mehr Platz), reduziert Hirndruck. Indikation: ARDS, Hirnödem.',
       selfTest: [
         {
           question: 'Auf einer schiefen Ebene mit α = 30° beträgt die Normalkraft eines 20 kg schweren Körpers (g = 10 m/s²):',
@@ -192,11 +221,19 @@ Bewegt sich der Körper auf der schiefen Ebene, so bestimmt die Resultierende au
     {
       id: 'phys-kap2-4',
       title: 'Kreisbewegung',
-      content: `Die gleichförmige Kreisbewegung beschreibt die Bewegung eines Körpers auf einer kreisförmigen Bahn mit konstantem Geschwindigkeitsbetrag. Obwohl der Betrag der Geschwindigkeit konstant bleibt, ändert sich ihre Richtung ständig — der Körper wird daher permanent beschleunigt. Diese Beschleunigung zeigt immer zum Mittelpunkt des Kreises und heißt Zentripetalbeschleunigung: az = v²/r = ω²·r, wobei v die Bahngeschwindigkeit, r der Radius und ω die Winkelgeschwindigkeit ist. Die Winkelgeschwindigkeit ω = 2π/T = 2π·f beschreibt die Winkeländerung pro Zeiteinheit und wird in rad/s gemessen, wobei T die Umlaufdauer und f die Frequenz ist.
+      content: `**Zentripetalkraft: FZ = m·v²/r = m·ω²·r**. DIE zentrale Formel der Kreisbewegung.
 
-Die Zentripetalkraft ist die Kraft, die den Körper auf der Kreisbahn hält und stets zum Mittelpunkt gerichtet ist: FZ = m · v²/r = m · ω² · r. Sie ist keine eigenständige Kraft, sondern wird von anderen Kräften bereitgestellt — beispielsweise von der Gravitationskraft bei Planetenbewegungen, von der Seilkraft bei einem Karussell, von der Reibungskraft bei einem Auto in der Kurve oder von der Lorentzkraft bei geladenen Teilchen im Magnetfeld. Im nicht-inertialen Bezugssystem des mitrotierenden Beobachters tritt die sogenannte Zentrifugalkraft als Scheinkraft auf, die nach außen gerichtet ist. Sie hat denselben Betrag wie die Zentripetalkraft, ist aber keine reale Kraft, sondern ein Trägheitseffekt.
+Stell dir vor, du schwingst einen Stein an einer Schnur im Kreis. Der Stein will geradeaus fliegen (Trägheit), aber die Schnur zwingt ihn auf die Kreisbahn. Die Schnur übt die **Zentripetalkraft** aus — sie zeigt immer zum Mittelpunkt.
 
-Die Kreisbewegung hat in der Medizin vielfältige Anwendungen. Die Zentrifuge ist ein unentbehrliches Laborgerät, das die Zentrifugalkraft nutzt, um Blutbestandteile (Erythrozyten, Leukozyten, Plasma) voneinander zu trennen. Dabei werden die dichteren Bestandteile nach außen gedrückt, während die weniger dichten Bestandteile weiter innen bleiben. Die Beschleunigung in einer Zentrifuge kann ein Vielfaches der Erdbeschleunigung betragen (z. B. 3000 g). Auch in der Computertomographie (CT) rotiert die Röntgenröhre um den Patienten und führt so eine Kreisbewegung aus. Die Bahngeschwindigkeit berechnet sich aus dem Umfang der Bahn geteilt durch die Umlaufdauer: v = 2π·r/T.`,
+**Zentripetalbeschleunigung:** az = v²/r = ω²·r. Zeigt auch zum Mittelpunkt. Obwohl die Geschwindigkeit konstant bleibt, ändert sich die Richtung ständig → der Körper wird beschleunigt.
+
+**Winkelgeschwindigkeit:** ω = 2π/T = 2π·f. Einheit: rad/s. T ist die Umlaufdauer, f die Frequenz.
+
+**Bahngeschwindigkeit:** v = ω·r = 2π·r/T.
+
+**Zentrifugalkraft:** Scheinkraft im rotierenden Bezugssystem. Du sitzt im Karussell und fühlst dich nach außen gedrückt. Vom inertialen Bezugssystem aus gesehen wirkt nur die Zentripetalkraft nach innen.
+
+**Beispiel:** Körper (2 kg) auf Kreisbahn (r = 2 m) mit v = 4 m/s. Dann: FZ = 2·16/2 = 16 N.`,
       merksätze: [
         'Zentripetalkraft: FZ = m·v²/r = m·ω²·r. Die Zentripetalbeschleunigung zeigt immer zum Kreismittelpunkt.',
         'Winkelgeschwindigkeit: ω = 2π/T = 2π·f. Bahngeschwindigkeit: v = ω·r = 2π·r/T. Die Zentrifugalkraft ist eine Scheinkraft im rotierenden Bezugssystem.',
@@ -206,7 +243,7 @@ Die Kreisbewegung hat in der Medizin vielfältige Anwendungen. Die Zentrifuge is
         answer: 'FZ = m·v²/r = 2·16/2 = 16 N.',
       },
       klinischerBezug:
-        'Die Zentrifuge im Labor nutzt die Zentrifugalkraft zur Trennung von Blutbestandteilen. Bei einer Blutgasanalyse oder einem Differentialblutbild werden die Proben zentrifugiert. Typische Zentrifugen erreichen 3000–15000 g, Ultrazentrifugen bis zu 100000 g für die Trennung von Proteinen und Zellorganellen.',
+        '**Zentrifuge im Labor:** Trennt Blutbestandteile nach Dichte. Bei 3000–5000 U/min (Umdrehungen pro Minute) erreicht die Zentrifuge ca. 1000–3000 g (g = Vielfaches der Erdbeschleunigung). Dichtere Bestandteile (Erythrozyten) sedimentieren nach außen, leichtere (Plasma) bleiben innen. Typische Anwendungen: **Hämatokrit**-Bestimmung, **Blutgasanalyse**, **Differentialblutbild**. **Ultrazentrifugen** (bis 100.000 g) trennen Zellorganellen, Proteine, DNA.',
       selfTest: [
         {
           question: 'Die Zentripetalkraft bei einer Kreisbewegung zeigt:',

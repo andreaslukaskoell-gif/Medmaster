@@ -10,11 +10,23 @@ export const physKap3: Kapitel = {
     {
       id: 'phys-kap3-1',
       title: 'Mechanische Arbeit',
-      content: `Mechanische Arbeit wird verrichtet, wenn eine Kraft F einen Körper entlang eines Weges s verschiebt. Die physikalische Arbeit ist definiert als W = F · s · cos(α), wobei α der Winkel zwischen Kraftrichtung und Wegrichtung ist. Zeigen Kraft und Weg in die gleiche Richtung (α = 0°), so vereinfacht sich die Formel zu W = F · s. Die SI-Einheit der Arbeit ist das Joule: 1 J = 1 N · m = 1 kg · m²/s². Steht die Kraft senkrecht auf dem Weg (α = 90°), wird keine Arbeit verrichtet — beispielsweise leistet die Normalkraft auf einer horizontalen Fläche keine Arbeit, da sie senkrecht zur Bewegungsrichtung wirkt.
+      content: `**W = F·s** — das ist die Grundformel der Arbeit (wenn Kraft und Weg parallel sind).
 
-Es gibt verschiedene Formen der mechanischen Arbeit. Die Hubarbeit WHub = m · g · h wird verrichtet, wenn ein Körper der Masse m um die Höhe h angehoben wird. Dabei wird gegen die Schwerkraft gearbeitet, und die aufgewendete Energie wird als potenzielle Energie gespeichert. Die Reibungsarbeit WReib = FR · s = μ · FN · s wird gegen die Reibungskraft verrichtet und in Wärmeenergie umgewandelt — diese Energie geht dem mechanischen System verloren, weshalb Reibungsarbeit als dissipative (zerstreuende) Arbeit bezeichnet wird. Die Beschleunigungsarbeit WBeschl = ½ · m · v² ist die Arbeit, die nötig ist, um einen Körper aus der Ruhe auf die Geschwindigkeit v zu beschleunigen, und entspricht der kinetischen Energie des Körpers.
+Allgemein: **W = F·s·cos(α)**, wobei α der Winkel zwischen Kraft und Weg ist. Steht die Kraft senkrecht auf dem Weg (α = 90°) → cos(90°) = 0 → W = 0. Keine Arbeit.
 
-Die Spannarbeit WSpann = ½ · k · s² wird beim Dehnen oder Stauchen einer Feder verrichtet und als elastische potenzielle Energie (Spannenergie) gespeichert. Im Kraft-Weg-Diagramm entspricht die verrichtete Arbeit der Fläche unter der Kurve. Bei konstanter Kraft ergibt sich ein Rechteck (W = F · s), bei der Feder ergibt sich ein Dreieck (W = ½ · F · s = ½ · k · s²), da die Kraft linear mit der Auslenkung zunimmt. Dieses Prinzip der Flächenberechnung im F-s-Diagramm ist universell anwendbar und ein wichtiges Werkzeug zur Lösung von Aufgaben, bei denen die Kraft nicht konstant ist. In der Medizin wird das Konzept der Arbeit beispielsweise bei der Berechnung der Herzarbeit verwendet: Das Herz verrichtet bei jeder Kontraktion Arbeit, um das Blut gegen den Gefäßwiderstand zu pumpen.`,
+**Einheit:** 1 Joule = 1 N·m = 1 kg·m²/s².
+
+**Die vier Arbeitsformen:**
+
+**1. Hubarbeit:** WHub = m·g·h. Du hebst einen 10 kg schweren Koffer 2 m hoch → W = 10·10·2 = 200 J. Die Energie wird als potenzielle Energie gespeichert.
+
+**2. Reibungsarbeit:** WReib = FR·s = μ·FN·s. Wird in Wärme umgewandelt. Dissipativ — die Energie geht dem System verloren.
+
+**3. Beschleunigungsarbeit:** WBeschl = ½·m·v². Die Arbeit, um einen Körper auf Geschwindigkeit v zu bringen. Wird als kinetische Energie gespeichert.
+
+**4. Spannarbeit:** WSpann = ½·k·s². Die Arbeit, um eine Feder zu dehnen oder zu stauchen. Wird als elastische Energie gespeichert.
+
+**F-s-Diagramm:** Die Arbeit ist die Fläche unter der Kurve. Konstante Kraft → Rechteck (W = F·s). Feder → Dreieck (W = ½·k·s²).`,
       lernziele: [
         'Die Definition der mechanischen Arbeit (W = F·s·cos α) erklären und anwenden können',
         'Verschiedene Arbeitsformen (Hub-, Reibungs-, Beschleunigungs- und Spannarbeit) unterscheiden und berechnen können',
@@ -23,12 +35,20 @@ Die Spannarbeit WSpann = ½ · k · s² wird beim Dehnen oder Stauchen einer Fed
       sections: [
         {
           heading: 'Definition und Grundformel',
-          text: 'Mechanische Arbeit wird verrichtet, wenn eine Kraft F einen Körper entlang eines Weges s verschiebt. Die physikalische Arbeit ist definiert als W = F · s · cos(α), wobei α der Winkel zwischen Kraftrichtung und Wegrichtung ist. Zeigen Kraft und Weg in die gleiche Richtung (α = 0°), so vereinfacht sich die Formel zu W = F · s.\n\nDie SI-Einheit der Arbeit ist das Joule: 1 J = 1 N · m = 1 kg · m²/s². Steht die Kraft senkrecht auf dem Weg (α = 90°), wird keine Arbeit verrichtet — beispielsweise leistet die Normalkraft auf einer horizontalen Fläche keine Arbeit, da sie senkrecht zur Bewegungsrichtung wirkt.',
+          text: `W = F·s·cos(α). Nur die Kraftkomponente IN Bewegungsrichtung verrichtet Arbeit.
+
+Steht die Kraft senkrecht auf dem Weg → keine Arbeit. Beispiel: Du trägst einen Koffer horizontal durch den Raum. Die Gewichtskraft zeigt nach unten, der Weg ist horizontal → W = 0 (im physikalischen Sinne).`,
           merksatz: 'W = F · s · cos(α). Nur die Kraftkomponente IN Bewegungsrichtung verrichtet Arbeit. Senkrecht zum Weg → keine Arbeit.'
         },
         {
           heading: 'Formen der mechanischen Arbeit',
-          text: 'Die Hubarbeit W<sub>Hub</sub> = m · g · h wird verrichtet, wenn ein Körper der Masse m um die Höhe h angehoben wird. Dabei wird gegen die Schwerkraft gearbeitet, und die aufgewendete Energie wird als potenzielle Energie gespeichert.\n\nDie Reibungsarbeit W<sub>Reib</sub> = μ · F<sub>N</sub> · s wird gegen die Reibungskraft verrichtet und in Wärmeenergie umgewandelt — diese Energie geht dem mechanischen System verloren (dissipative Arbeit). Die Beschleunigungsarbeit W<sub>Beschl</sub> = ½ · m · v² ist die Arbeit, um einen Körper auf die Geschwindigkeit v zu beschleunigen.',
+          text: `**Hubarbeit:** W = m·g·h (gegen die Schwerkraft, wird als Epot gespeichert).
+
+**Reibungsarbeit:** W = μ·FN·s (wird in Wärme umgewandelt, dissipativ).
+
+**Beschleunigungsarbeit:** W = ½·m·v² (wird als Ekin gespeichert).
+
+**Spannarbeit:** W = ½·k·s² (wird als elastische Energie gespeichert).`,
           table: {
             headers: ['Arbeitsform', 'Formel', 'Energieumwandlung'],
             rows: [
@@ -41,7 +61,9 @@ Die Spannarbeit WSpann = ½ · k · s² wird beim Dehnen oder Stauchen einer Fed
         },
         {
           heading: 'Kraft-Weg-Diagramm',
-          text: 'Im Kraft-Weg-Diagramm entspricht die verrichtete Arbeit der Fläche unter der Kurve. Bei konstanter Kraft ergibt sich ein Rechteck (W = F · s), bei der Feder ergibt sich ein Dreieck (W = ½ · F · s = ½ · k · s²), da die Kraft linear mit der Auslenkung zunimmt.\n\nDieses Prinzip der Flächenberechnung im F-s-Diagramm ist universell anwendbar und ein wichtiges Werkzeug zur Lösung von Aufgaben, bei denen die Kraft nicht konstant ist.',
+          text: `Arbeit = Fläche unter der Kurve im F-s-Diagramm.
+
+Konstante Kraft → Rechteck (W = F·s). Feder → Dreieck (W = ½·F·s = ½·k·s²), da die Kraft linear mit s steigt.`,
           merksatz: 'Arbeit = Fläche unter der Kurve im F-s-Diagramm. Konstante Kraft → Rechteck, Feder → Dreieck.'
         }
       ],
@@ -54,7 +76,7 @@ Die Spannarbeit WSpann = ½ · k · s² wird beim Dehnen oder Stauchen einer Fed
         answer: 'WHub = m·g·h = 50 · 10 · 3 = 1500 J = 1,5 kJ.',
       },
       klinischerBezug:
-        'Das Herz leistet pro Schlag etwa 1 J Arbeit (linker Ventrikel) und pumpt dabei ca. 70 ml Blut gegen den mittleren arteriellen Druck. Bei einem Herzzeitvolumen von 5 l/min und einer Herzfrequenz von 70/min ergibt sich eine Herzleistung von etwa 1,2 W. Bei Herzinsuffizienz sinkt diese Pumpleistung.',
+        'Das Herz leistet pro Schlag ca. 1 J **Druckvolumenarbeit** (linker Ventrikel pumpt ca. 70 ml Blut gegen einen mittleren arteriellen Druck von ≈100 mmHg). Bei Herzfrequenz 70/min und Herzzeitvolumen 5 l/min: Herzleistung ≈ 1,2 W. Bei **Herzinsuffizienz** sinkt die Pumpleistung → reduziertes HZV → Symptome: Dyspnoe, Ödeme, Leistungsminderung. Messung: **Echokardiographie** (Ejektionsfraktion), **Rechtsherzkatheter** (direkte Druckmessung).',
       selfTest: [
         {
           question: 'Wie viel Arbeit verrichtet eine Kraft von 50 N auf einem Weg von 4 m, wenn Kraft und Weg parallel sind?',
@@ -79,11 +101,21 @@ Die Spannarbeit WSpann = ½ · k · s² wird beim Dehnen oder Stauchen einer Fed
     {
       id: 'phys-kap3-2',
       title: 'Energie',
-      content: `Energie ist eine der fundamentalsten Größen der Physik. Sie beschreibt die Fähigkeit eines Systems, Arbeit zu verrichten. Die kinetische Energie (Bewegungsenergie) eines Körpers mit Masse m und Geschwindigkeit v beträgt Ekin = ½ · m · v². Sie ist immer positiv und proportional zum Quadrat der Geschwindigkeit — verdoppelt man die Geschwindigkeit, vervierfacht sich die kinetische Energie. Dies hat enorme Auswirkungen auf die Verkehrssicherheit: Der Bremsweg wächst quadratisch mit der Geschwindigkeit. Bei doppelter Geschwindigkeit ist der Bremsweg viermal so lang und die bei einem Aufprall freigesetzte Energie viermal so groß.
+      content: `**Ekin = ½·m·v²** — die kinetische Energie. Proportional zu v². Doppelte Geschwindigkeit = vierfache Energie.
 
-Die potenzielle Energie (Lageenergie) eines Körpers in der Höhe h über einem Bezugsniveau beträgt Epot = m · g · h. Sie wird durch die Position des Körpers im Gravitationsfeld bestimmt und kann in kinetische Energie umgewandelt werden (z. B. beim freien Fall). Das Bezugsniveau für die potenzielle Energie kann frei gewählt werden — nur Differenzen der potenziellen Energie sind physikalisch relevant. Daneben gibt es die elastische potenzielle Energie einer gespannten Feder Espann = ½ · k · s², die beim Loslassen in kinetische Energie umgewandelt werden kann (z. B. beim Abschuss eines Pfeils mit einem Bogen).
+**Epot = m·g·h** — die potenzielle Energie. Hängt von der Höhe ab.
 
-Der Energieerhaltungssatz ist eines der wichtigsten Prinzipien der Physik: In einem abgeschlossenen System bleibt die Gesamtenergie konstant. Energie kann weder erzeugt noch vernichtet, sondern nur von einer Form in eine andere umgewandelt werden. Beim freien Fall wird potenzielle Energie in kinetische Energie umgewandelt: m · g · h = ½ · m · v², woraus sich v = √(2gh) ergibt. Beim Pendel schwingt die Energie ständig zwischen potenzieller und kinetischer Energie hin und her. In realen Systemen geht immer ein Teil der mechanischen Energie durch Reibung in Wärme über — die Gesamtenergie bleibt aber erhalten, wenn man die Wärmeenergie mitberücksichtigt. Der Energieerhaltungssatz ermöglicht elegante Lösungen vieler Aufgaben, ohne den genauen Bewegungsverlauf kennen zu müssen.`,
+**Espann = ½·k·s²** — die elastische Energie einer gespannten Feder.
+
+**Energieerhaltungssatz:** In einem abgeschlossenen System bleibt die Gesamtenergie konstant. Energie kann umgewandelt, aber nicht erzeugt oder vernichtet werden.
+
+**Freier Fall:** Potenzielle Energie wird in kinetische umgewandelt. m·g·h = ½·m·v² → v = √(2gh). Die Masse kürzt sich raus.
+
+**Beispiel:** Ball fällt aus 5 m Höhe. Mit welcher Geschwindigkeit trifft er auf? v = √(2·10·5) = √100 = 10 m/s.
+
+**Pendel:** Die Energie schwingt ständig zwischen Epot (am höchsten Punkt) und Ekin (am tiefsten Punkt) hin und her. Ohne Reibung bleibt die Gesamtenergie konstant.
+
+**Wichtig:** Verdoppelte Geschwindigkeit → vierfache kinetische Energie → vierfacher Bremsweg. Das ist entscheidend für die Verkehrssicherheit.`,
       lernziele: [
         'Die Formeln für kinetische, potenzielle und elastische Energie anwenden können',
         'Den Energieerhaltungssatz erklären und auf Aufgaben anwenden können',
@@ -92,12 +124,16 @@ Der Energieerhaltungssatz ist eines der wichtigsten Prinzipien der Physik: In ei
       sections: [
         {
           heading: 'Kinetische Energie',
-          text: 'Energie beschreibt die Fähigkeit eines Systems, Arbeit zu verrichten. Die kinetische Energie (Bewegungsenergie) eines Körpers mit Masse m und Geschwindigkeit v beträgt E<sub>kin</sub> = ½ · m · v². Sie ist immer positiv und proportional zum Quadrat der Geschwindigkeit.\n\nVerdoppelt man die Geschwindigkeit, vervierfacht sich die kinetische Energie. Dies hat enorme Auswirkungen auf die Verkehrssicherheit: Der Bremsweg wächst quadratisch mit der Geschwindigkeit.',
+          text: `Ekin = ½·m·v². Proportional zu v².
+
+Doppelte Geschwindigkeit → vierfache Energie → vierfacher Bremsweg. Das ist der Grund, warum hohe Geschwindigkeiten so gefährlich sind.`,
           merksatz: 'Doppelte Geschwindigkeit = vierfache kinetische Energie = vierfacher Bremsweg!'
         },
         {
           heading: 'Potenzielle und elastische Energie',
-          text: 'Die potenzielle Energie (Lageenergie) eines Körpers in der Höhe h über einem Bezugsniveau beträgt E<sub>pot</sub> = m · g · h. Sie wird durch die Position im Gravitationsfeld bestimmt und kann in kinetische Energie umgewandelt werden (z. B. beim freien Fall).\n\nDaneben gibt es die elastische potenzielle Energie einer gespannten Feder E<sub>spann</sub> = ½ · k · s², die beim Loslassen in kinetische Energie umgewandelt werden kann.',
+          text: `Epot = m·g·h. Position im Gravitationsfeld bestimmt die Energie.
+
+Espann = ½·k·s². Energie einer gespannten Feder. Wird beim Loslassen in kinetische Energie umgewandelt.`,
           table: {
             headers: ['Energieform', 'Formel', 'Beispiel'],
             rows: [
@@ -109,7 +145,11 @@ Der Energieerhaltungssatz ist eines der wichtigsten Prinzipien der Physik: In ei
         },
         {
           heading: 'Energieerhaltungssatz',
-          text: 'In einem abgeschlossenen System bleibt die Gesamtenergie konstant. Energie kann weder erzeugt noch vernichtet, sondern nur von einer Form in eine andere umgewandelt werden.\n\nBeim freien Fall wird potenzielle in kinetische Energie umgewandelt: m · g · h = ½ · m · v², woraus sich v = √(2gh) ergibt. Beim Pendel schwingt die Energie ständig zwischen potenzieller und kinetischer Energie hin und her. In realen Systemen geht ein Teil durch Reibung in Wärme über.',
+          text: `In einem abgeschlossenen System bleibt die Gesamtenergie konstant.
+
+Freier Fall: m·g·h = ½·m·v² → v = √(2gh). Die Masse spielt keine Rolle.
+
+Pendel: Epot + Ekin = konstant. Am höchsten Punkt: Epot maximal, Ekin = 0. Am tiefsten Punkt: Ekin maximal, Epot minimal.`,
           merksatz: 'Energieerhaltung: E<sub>pot</sub> + E<sub>kin</sub> = konstant (ohne Reibung). Freier Fall: v = √(2gh).'
         }
       ],
@@ -122,7 +162,7 @@ Der Energieerhaltungssatz ist eines der wichtigsten Prinzipien der Physik: In ei
         answer: 'Energieerhaltung: Epot = Ekin → m·g·h = ½·m·v² → v = √(2gh) = √(2·10·5) = √100 = 10 m/s. Die Masse kürzt sich heraus!',
       },
       klinischerBezug:
-        'Der Energieerhaltungssatz gilt auch für den menschlichen Körper: Die mit der Nahrung aufgenommene chemische Energie wird in Wärme, mechanische Arbeit und gespeicherte Energie umgewandelt. Der Grundumsatz eines Erwachsenen beträgt etwa 80 W (≈ 2000 kcal/Tag). Bei einem Herzstillstand liefert ein Defibrillator 200–360 J elektrische Energie, um das Herz zu depolarisieren.',
+        'Der Energieerhaltungssatz gilt auch für den Stoffwechsel: Zugeführte chemische Energie (Nahrung) = Wärme + mechanische Arbeit + gespeicherte Energie. **Grundumsatz** eines Erwachsenen: ca. 80 W (≈2000 kcal/Tag). Bei einem **Herzstillstand** liefert ein **Defibrillator** 200–360 J elektrische Energie, um das Herz zu depolarisieren und den Sinusrhythmus wiederherzustellen. Indikation: **Kammerflimmern**, **pulslose ventrikuläre Tachykardie**.',
       selfTest: [
         {
           question: 'Wie ändert sich die kinetische Energie, wenn die Geschwindigkeit verdreifacht wird?',
@@ -159,11 +199,25 @@ Der Energieerhaltungssatz ist eines der wichtigsten Prinzipien der Physik: In ei
     {
       id: 'phys-kap3-3',
       title: 'Leistung & Wirkungsgrad',
-      content: `Die Leistung P beschreibt, wie schnell Arbeit verrichtet wird, also die Arbeit pro Zeiteinheit: P = W/t. Ihre SI-Einheit ist das Watt: 1 W = 1 J/s. Ein häufig verwendetes Vielfaches ist das Kilowatt (1 kW = 1000 W). Die historische Einheit Pferdestärke (PS) entspricht etwa 736 W. Die Leistung lässt sich auch als Produkt aus Kraft und Geschwindigkeit ausdrücken: P = F · v, was sich leicht aus P = W/t = F·s/t = F·v herleiten lässt. Diese Darstellung ist besonders nützlich bei Aufgaben, in denen die Geschwindigkeit gegeben ist, beispielsweise bei der Berechnung der Antriebsleistung eines Fahrzeugs bei konstanter Geschwindigkeit gegen eine Reibungskraft.
+      content: `**P = W/t = F·v** — die Leistung. Arbeit pro Zeit.
 
-Die Energieeinheit Kilowattstunde (kWh) wird häufig zur Angabe elektrischer Energie verwendet: 1 kWh = 1000 W · 3600 s = 3,6 · 10⁶ J = 3,6 MJ. Diese Einheit ist zwar keine SI-Einheit, aber im Alltag weit verbreitet, insbesondere bei Stromrechnungen. In der Ernährungswissenschaft und Medizin wird die Energieeinheit Kalorie (cal) bzw. Kilokalorie (kcal) verwendet: 1 kcal = 4,186 kJ. Der tägliche Energiebedarf eines Erwachsenen liegt bei etwa 2000–2500 kcal ≈ 8400–10500 kJ. Die Leistung des menschlichen Körpers im Ruhezustand (Grundumsatz) beträgt etwa 80 W und kann bei schwerer körperlicher Arbeit auf über 500 W ansteigen.
+**Einheit:** 1 Watt = 1 J/s. 1 kW = 1000 W. 1 PS ≈ 736 W.
 
-Der Wirkungsgrad η (eta) beschreibt das Verhältnis von Nutzleistung (oder Nutzarbeit) zu zugeführter Leistung (oder zugeführter Arbeit): η = Pnutz/Pzu = Wnutz/Wzu. Er wird oft in Prozent angegeben und liegt immer zwischen 0 und 1 (bzw. 0 % und 100 %). Ein Wirkungsgrad von 100 % ist in der Praxis unerreichbar, da stets Verluste (vor allem durch Reibung und Wärmeabgabe) auftreten. Der Wirkungsgrad eines Ottomotors liegt bei etwa 30–40 %, einer Glühbirne bei nur 5 % (95 % werden als Wärme abgegeben), während ein Elektromotor bis zu 95 % erreichen kann. Werden mehrere Maschinen hintereinandergeschaltet, multiplizieren sich die Einzelwirkungsgrade zum Gesamtwirkungsgrad: ηges = η₁ · η₂ · η₃ · ... Dieses Prinzip zeigt, dass jede zusätzliche Energieumwandlung den Gesamtwirkungsgrad verschlechtert.`,
+**Beispiel:** Motor verrichtet 6000 J Arbeit in 2 min (= 120 s). Leistung: P = 6000/120 = 50 W.
+
+**Alternative Formel:** P = F·v. Nützlich, wenn die Geschwindigkeit gegeben ist. Beispiel: Auto fährt mit konstant 20 m/s gegen eine Reibungskraft von 500 N → P = 500·20 = 10.000 W = 10 kW.
+
+**Energieeinheiten:**
+- 1 kWh = 3,6·10⁶ J = 3,6 MJ (Stromrechnung)
+- 1 kcal = 4,186 kJ (Ernährung)
+- Täglicher Energiebedarf: ca. 2000–2500 kcal ≈ 8400–10.500 kJ
+- Grundumsatz (Ruheleistung): ca. 80 W
+
+**Wirkungsgrad: η = Pnutz/Pzu = Wnutz/Wzu**. Immer ≤ 1 (bzw. ≤ 100 %).
+
+**Beispiel:** Motor hat 40 % Wirkungsgrad und gibt 200 W Nutzleistung ab. Zugeführte Leistung: Pzu = Pnutz/η = 200/0,4 = 500 W.
+
+**Hintereinanderschaltung:** ηges = η₁·η₂·η₃. Zwei Maschinen mit η₁ = 0,8 und η₂ = 0,5 → ηges = 0,8·0,5 = 0,4 = 40 %.`,
       lernziele: [
         'Leistung als Arbeit pro Zeit (P = W/t = F·v) berechnen können',
         'Energieeinheiten (Joule, kWh, kcal) umrechnen können',
@@ -172,12 +226,16 @@ Der Wirkungsgrad η (eta) beschreibt das Verhältnis von Nutzleistung (oder Nutz
       sections: [
         {
           heading: 'Leistung',
-          text: 'Die Leistung P beschreibt, wie schnell Arbeit verrichtet wird: P = W/t. Ihre SI-Einheit ist das Watt: 1 W = 1 J/s. Die Leistung lässt sich auch als Produkt aus Kraft und Geschwindigkeit ausdrücken: P = F · v.\n\nDiese Darstellung ist besonders nützlich bei Aufgaben, in denen die Geschwindigkeit gegeben ist, beispielsweise bei der Berechnung der Antriebsleistung eines Fahrzeugs gegen eine Reibungskraft.',
+          text: `P = W/t = F·v. Arbeit pro Zeit.
+
+Einheit: 1 W = 1 J/s. Die Formel P = F·v ist nützlich bei Aufgaben mit konstanter Geschwindigkeit gegen eine Kraft (z. B. Reibung).`,
           merksatz: 'Leistung: P = W/t = F · v. Einheit: 1 Watt = 1 Joule pro Sekunde. 1 PS ≈ 736 W.'
         },
         {
           heading: 'Energieeinheiten',
-          text: 'Die Kilowattstunde (kWh) ist eine gängige Energieeinheit: 1 kWh = 3,6 · 10⁶ J = 3,6 MJ. In der Ernährungswissenschaft und Medizin wird die Kilokalorie (kcal) verwendet: 1 kcal = 4,186 kJ.\n\nDer tägliche Energiebedarf eines Erwachsenen liegt bei etwa 2000-2500 kcal ≈ 8400-10500 kJ. Die Leistung des menschlichen Körpers im Ruhezustand (Grundumsatz) beträgt etwa 80 W.',
+          text: `1 kWh = 3,6 MJ (Stromrechnungen). 1 kcal = 4,186 kJ (Ernährung).
+
+Grundumsatz: ca. 80 W. Täglicher Bedarf: ca. 2000–2500 kcal.`,
           table: {
             headers: ['Einheit', 'Umrechnung', 'Verwendung'],
             rows: [
@@ -190,7 +248,9 @@ Der Wirkungsgrad η (eta) beschreibt das Verhältnis von Nutzleistung (oder Nutz
         },
         {
           heading: 'Wirkungsgrad',
-          text: 'Der Wirkungsgrad η (eta) beschreibt das Verhältnis von Nutzleistung zu zugeführter Leistung: η = P<sub>nutz</sub>/P<sub>zu</sub>. Er liegt immer zwischen 0 und 1 (bzw. 0 % und 100 %). Ein Wirkungsgrad von 100 % ist in der Praxis unerreichbar.\n\nWerden mehrere Maschinen hintereinandergeschaltet, multiplizieren sich die Einzelwirkungsgrade: η<sub>ges</sub> = η₁ · η₂ · η₃. Jede zusätzliche Energieumwandlung verschlechtert den Gesamtwirkungsgrad.',
+          text: `η = Pnutz/Pzu. Immer ≤ 1. 100 % ist unerreichbar (Verluste durch Reibung, Wärme).
+
+Hintereinanderschaltung: ηges = η₁·η₂·η₃. Jede Umwandlung verschlechtert den Gesamtwirkungsgrad.`,
           merksatz: 'Wirkungsgrad η = P<sub>nutz</sub>/P<sub>zu</sub>, immer ≤ 1. Hintereinanderschaltung: η multiplizieren!'
         }
       ],
@@ -203,7 +263,7 @@ Der Wirkungsgrad η (eta) beschreibt das Verhältnis von Nutzleistung (oder Nutz
         answer: 'W = m·g·h = 25·10·8 = 2000 J. t = W/P = 2000/500 = 4 s.',
       },
       klinischerBezug:
-        'Der Wirkungsgrad des menschlichen Körpers bei mechanischer Arbeit (z. B. Radfahren) beträgt nur etwa 25 % — 75 % der Stoffwechselenergie wird als Wärme abgegeben. Dies erklärt, warum man bei körperlicher Anstrengung schwitzt. Die Herzleistung beträgt etwa 1,2 W in Ruhe und kann bei Belastung auf über 5 W ansteigen.',
+        'Der **Wirkungsgrad des menschlichen Körpers** bei mechanischer Arbeit (z. B. Radfahren) beträgt nur ca. 25 % — 75 % der Stoffwechselenergie wird als Wärme abgegeben. Deshalb schwitzt man bei Anstrengung. Die **Herzleistung** beträgt ca. 1,2 W in Ruhe (Herzzeitvolumen 5 l/min, mittlerer arterieller Druck 100 mmHg). Bei Belastung kann sie auf über 5 W ansteigen. Messung: **Spiroergometrie** (VO₂max, Sauerstoffaufnahme).',
       selfTest: [
         {
           question: 'Eine Maschine verrichtet 6000 J Arbeit in 2 Minuten. Wie groß ist die Leistung?',

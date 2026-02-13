@@ -13,11 +13,15 @@ export const bioKap4: Kapitel = {
     {
       id: 'bio-kap4-uk1',
       title: 'Mendelsche Regeln',
-      content: `Gregor Johann Mendel (1822–1884), ein Augustinermönch aus Brünn, legte mit seinen systematischen Kreuzungsversuchen an Erbsenpflanzen (Pisum sativum) den Grundstein der klassischen Genetik. Er wählte sieben klar unterscheidbare Merkmale (z. B. Blütenfarbe, Samenform, Wuchshöhe) und führte über viele Generationen hinweg kontrollierte Kreuzungen durch. Sein entscheidender methodischer Beitrag war die quantitative Auswertung großer Nachkommenzahlen, wodurch er statistische Gesetzmäßigkeiten erkennen konnte. Mendels Arbeit blieb zu seinen Lebzeiten weitgehend unbeachtet und wurde erst 1900 von de Vries, Correns und Tschermak unabhängig voneinander wiederentdeckt.
+      content: `Gregor Mendel hat die Vererbung entschlüsselt. Sein Trick: Er zählte Erbsen. Tausende. Über viele Generationen. Statt nur zu schauen, ob eine Pflanze groß oder klein ist, rechnete er Verhältnisse aus. Das war 1860 revolutionär.
 
-Die erste Mendelsche Regel (Uniformitätsregel) besagt: Kreuzt man zwei homozygote (reinerbige) Eltern, die sich in einem Merkmal unterscheiden (z. B. AA × aa), so sind alle Nachkommen der F1-Generation phänotypisch und genotypisch uniform — sie sind alle heterozygot (Aa). Der Phänotyp der F1 entspricht dem dominanten Merkmal. Die zweite Mendelsche Regel (Spaltungsregel) beschreibt die F2-Generation: Kreuzt man die heterozygoten F1-Individuen untereinander (Aa × Aa), so spalten sich die Nachkommen im Verhältnis 3:1 (phänotypisch) bzw. 1:2:1 (genotypisch, also AA:Aa:aa) auf. Bei intermediärem Erbgang — wenn keines der Allele vollständig dominant ist — zeigt die F1-Generation einen intermediären Phänotyp, und die F2-Generation spaltet sich phänotypisch 1:2:1 auf (z. B. rote × weiße Blüten → F1 rosa, F2 rot:rosa:weiß = 1:2:1).
+**Uniformitätsregel** (erste Regel): Du kreuzt zwei reinerbige Eltern (AA × aa). Ergebnis: Alle Nachkommen sehen gleich aus (alle Aa). Alle zeigen das dominante Merkmal. Keine Ausnahme in der F1.
 
-Die dritte Mendelsche Regel (Unabhängigkeitsregel oder Regel der freien Kombinierbarkeit) gilt für die Vererbung zweier Merkmale, die auf verschiedenen Chromosomen liegen (keine Kopplung). Kreuzt man dihybride F1-Individuen (AaBb × AaBb), so ergeben sich in der F2-Generation 16 Kombinationsmöglichkeiten mit dem phänotypischen Aufspaltungsverhältnis 9:3:3:1 (A_B_ : A_bb : aaB_ : aabb). Kreuzungsschemata (Punnett-Quadrate) sind ein unverzichtbares Werkzeug, um die möglichen Genotypen und deren Häufigkeiten systematisch zu ermitteln. Es ist wichtig zu beachten, dass die dritte Regel nur gilt, wenn die Gene nicht gekoppelt sind — liegen sie auf demselben Chromosom, werden sie häufiger gemeinsam vererbt (Kopplungsgruppe), es sei denn, Crossing-over trennt sie während der Meiose.`,
+**Spaltungsregel** (zweite Regel): Die uniformen F1-Pflanzen kreuzt du jetzt untereinander (Aa × Aa). Was passiert in F2? Die Merkmale spalten sich auf. Phänotypisch 3:1 (drei dominant, eins rezessiv). Genotypisch 1:2:1 (ein AA, zwei Aa, ein aa). Das rezessive Merkmal taucht wieder auf — es war nur versteckt.
+
+Bei **intermediärem Erbgang** ist keines der Allele vollständig dominant. Die F1 zeigt einen Mischphänotyp (z.B. rosa statt rot oder weiß). In F2 spaltet sich der Phänotyp 1:2:1 auf — du siehst alle drei Varianten.
+
+**Unabhängigkeitsregel** (dritte Regel): Sie gilt nur für zwei Merkmale auf verschiedenen Chromosomen. Kreuzt du dihybride F1-Individuen (AaBb × AaBb), ergeben sich 16 Kombinationen. Phänotypisch spalten sie 9:3:3:1 auf. Wichtig: Diese Regel gilt nicht bei **Kopplung** — wenn Gene auf demselben Chromosom liegen, werden sie meist gemeinsam vererbt (außer Crossing-over trennt sie).`,
       merksätze: [
         'Drei Mendelsche Regeln: 1. Uniformitätsregel (F1 einheitlich), 2. Spaltungsregel (F2 phänotypisch 3:1), 3. Unabhängigkeitsregel (dihybrid F2: 9:3:3:1) — gilt nur bei Genen auf verschiedenen Chromosomen.',
         'Intermediärer Erbgang: Keines der Allele ist vollständig dominant → F1 zeigt Mischphänotyp, F2 spaltet phänotypisch 1:2:1 auf.'
@@ -26,7 +30,7 @@ Die dritte Mendelsche Regel (Unabhängigkeitsregel oder Regel der freien Kombini
         question: 'In welchem Verhältnis spalten sich die Phänotypen der F2-Generation bei einem dihybriden Erbgang mit dominanter Vererbung auf?',
         answer: '9:3:3:1 — Neun Individuen zeigen beide dominante Merkmale, je drei zeigen ein dominantes und ein rezessives Merkmal, und eines zeigt beide rezessive Merkmale.'
       },
-      klinischerBezug: 'Die Mendelschen Regeln sind fundamental für die genetische Beratung. Bei autosomal-rezessiven Erkrankungen wie Mukoviszidose (Cystische Fibrose) sind beide Elternteile häufig heterozygote Träger (Aa × Aa). Nach der Spaltungsregel besteht für jedes Kind eine 25%ige Wahrscheinlichkeit, die Erkrankung zu manifestieren (aa), eine 50%ige Wahrscheinlichkeit, gesunder Träger zu sein (Aa), und eine 25%ige Wahrscheinlichkeit, homozygot gesund zu sein (AA).',
+      klinischerBezug: 'Bei **Mukoviszidose** sind beide Eltern oft gesunde Träger (Aa × Aa). Jedes Kind hat 25% Risiko, krank zu werden (aa), 50% Risiko, gesunder Träger zu sein (Aa), und 25% Chance, kein Allel zu tragen (AA). Diese Spaltungsregel gilt bei jeder Schwangerschaft neu — vorige Kinder ändern die Wahrscheinlichkeit nicht.',
       selfTest: [
         {
           question: 'Wie lautet das genotypische Aufspaltungsverhältnis in der F2-Generation bei einem monohybriden Erbgang mit dominanter Vererbung?',
@@ -73,11 +77,15 @@ Die dritte Mendelsche Regel (Unabhängigkeitsregel oder Regel der freien Kombini
     {
       id: 'bio-kap4-uk2',
       title: 'Dominant & Rezessiv',
-      content: `In der Genetik beschreiben die Begriffe „dominant“ und „rezessiv“ das Verhalten von Allelen bei der Merkmalsausprägung. Allele sind verschiedene Varianten desselben Gens, die an einem bestimmten Genort (Locus) auf homologen Chromosomen liegen. Ein dominantes Allel setzt sich phänotypisch durch, selbst wenn nur ein Exemplar vorhanden ist (heterozygot), während ein rezessives Allel nur dann phänotypisch in Erscheinung tritt, wenn es homozygot vorliegt (beide Allele sind rezessiv). Die Konvention verwendet Großbuchstaben für dominante (A) und Kleinbuchstaben für rezessive Allele (a). Es ist wichtig zu verstehen, dass Dominanz keine Aussage über die Häufigkeit oder den „Wert“ eines Allels macht — es beschreibt lediglich das Verhältnis zweier Allele bei der Merkmalsausprägung.
+      content: `Ein **dominantes Allel** setzt sich durch. Bereits eine Kopie reicht (Aa → dominanter Phänotyp). Ein **rezessives Allel** wird nur sichtbar, wenn zwei Kopien vorliegen (aa). Konvention: Großbuchstaben (A) = dominant, Kleinbuchstaben (a) = rezessiv.
 
-Der Genotyp bezeichnet die genetische Ausstattung eines Individuums an einem bestimmten Locus, also die Kombination der Allele (z. B. AA, Aa, aa). Der Phänotyp ist dagegen das äußerlich sichtbare oder messbare Merkmal, das sich aus dem Genotyp und Umweltfaktoren ergibt. Ein homozygoter Organismus besitzt zwei identische Allele (AA oder aa), ein heterozygoter Organismus besitzt zwei verschiedene Allele (Aa). Bei vollständiger Dominanz haben die Genotypen AA und Aa denselben Phänotyp — nur der Genotyp aa zeigt den rezessiven Phänotyp. Dies erklärt, warum rezessive Merkmale „Generationen überspringen“ können: Heterozygote Träger (Aa) sind phänotypisch unauffällig, können das rezessive Allel aber an ihre Nachkommen weitergeben. Erst wenn zwei Träger aufeinandertreffen, kann ein betroffenes Kind (aa) entstehen.
+**Genotyp** vs. **Phänotyp**: Der Genotyp ist deine genetische Ausstattung (AA, Aa oder aa). Der Phänotyp ist das, was man sieht — das Merkmal. Bei vollständiger Dominanz sehen AA und Aa identisch aus. Nur aa zeigt das rezessive Merkmal.
 
-Neben der vollständigen Dominanz existieren weitere Formen der Allelinteraktion. Bei unvollständiger Dominanz (Intermediarität) zeigt der Heterozygote einen Phänotyp zwischen den beiden homozygoten Formen. Bei Kodominanz werden beide Allele vollständig und gleichzeitig exprimiert, wie bei den Blutgruppen A und B im AB0-System: Ein Individuum mit Genotyp I^A I^B hat die Blutgruppe AB und exprimiert sowohl A- als auch B-Antigene auf der Erythrozytenoberfläche. Eine weitere wichtige Unterscheidung ist die zwischen Penetranz (Anteil der Merkmalsträger mit einem bestimmten Genotyp, die den Phänotyp tatsächlich ausprägen) und Expressivität (Grad der Ausprägung eines Phänotyps bei vorhandener Penetranz). Bei autosomal-dominanten Erkrankungen kann die Penetranz unvollständig sein, sodass nicht alle Träger des mutierten Allels erkranken.`,
+**Homozygot** = zwei identische Allele (AA oder aa). **Heterozygot** = zwei verschiedene Allele (Aa). Heterozygote Träger (Aa) können rezessive Merkmale "versteckt" weitergeben — deshalb überspringen rezessive Erkrankungen Generationen.
+
+Neben vollständiger Dominanz gibt es weitere Formen. Bei **unvollständiger Dominanz** liegt der Phänotyp des Heterozygoten zwischen beiden Homozygoten (Intermediarität). Bei **Kodominanz** werden beide Allele vollständig exprimiert — beide sind gleichzeitig sichtbar. Beispiel: **Blutgruppe AB** (I^A I^B). Die Person trägt sowohl A- als auch B-Antigene auf den roten Blutkörperchen.
+
+**Penetranz** und **Expressivität** beschreiben Abweichungen von der Regel. Penetranz: Wie viele Träger eines Genotyps zeigen überhaupt den Phänotyp? (z.B. 80% Penetranz = 20% bleiben trotz Mutation gesund). Expressivität: Wie stark ist der Phänotyp ausgeprägt? (leicht bis schwer).`,
       merksätze: [
         'Genotyp = genetische Zusammensetzung (AA, Aa, aa); Phänotyp = beobachtbares Merkmal. Bei vollständiger Dominanz haben AA und Aa denselben Phänotyp.',
         'Kodominanz (beide Allele voll exprimiert, z. B. Blutgruppe AB) ≠ Intermediarität (Mischphänotyp zwischen den homozygoten Formen).'
@@ -86,7 +94,7 @@ Neben der vollständigen Dominanz existieren weitere Formen der Allelinteraktion
         question: 'Was ist der Unterschied zwischen Genotyp und Phänotyp?',
         answer: 'Der Genotyp ist die genetische Ausstattung (Allelkombination) an einem bestimmten Locus (z. B. Aa). Der Phänotyp ist das äußerlich beobachtbare Merkmal, das durch den Genotyp und Umwelteinflüsse bestimmt wird.'
       },
-      klinischerBezug: 'Die Sichelzellanämie ist ein klassisches Beispiel für unvollständige Dominanz auf molekularer Ebene. Homozygote Träger (HbS/HbS) haben schwere Anämie mit sichelförmigen Erythrozyten, während heterozygote Träger (HbA/HbS) unter Normalbedingungen weitgehend symptomfrei sind. In Malariagebieten haben Heterozygote jedoch einen Selektionsvorteil (Heterozygotenvorteil), da Plasmodium falciparum sich in HbS-tragenden Erythrozyten schlechter vermehren kann.',
+      klinischerBezug: 'Bei **Sichelzellanämie** (HbS-Mutation) haben Homozygote (HbS/HbS) schwere Anämie mit sichelförmigen Erythrozyten. Heterozygote (HbA/HbS) sind meist symptomfrei — ein Beispiel für unvollständige Dominanz. In Malariagebieten haben HbA/HbS-Träger einen Überlebensvorteil: Der Malaria-Erreger Plasmodium vermehrt sich in HbS-tragenden Zellen schlechter. Deshalb ist die Mutation dort häufiger (balancierte Selektion).',
       selfTest: [
         {
           question: 'Ein Individuum mit dem Genotyp Aa — welche Aussage trifft bei vollständiger Dominanz zu?',
@@ -113,7 +121,7 @@ Neben der vollständigen Dominanz existieren weitere Formen der Allelinteraktion
           explanation: 'Bei Kodominanz werden beide Allele vollständig und gleichzeitig exprimiert. Das klassische Beispiel ist die Blutgruppe AB: Sowohl A- als auch B-Antigene werden auf den Erythrozyten präsentiert.'
         },
         {
-          question: 'Warum können rezessive Merkmale „Generationen überspringen“?',
+          question: 'Warum können rezessive Merkmale „Generationen überspringen"?',
           options: [
             'Weil rezessive Allele instabil sind und spontan mutieren',
             'Weil heterozygote Träger (Aa) phänotypisch unauffällig sind, das Allel aber weitergeben können',
@@ -133,11 +141,15 @@ Neben der vollständigen Dominanz existieren weitere Formen der Allelinteraktion
     {
       id: 'bio-kap4-uk3',
       title: 'Erbgänge',
-      content: `Die Kenntnis der verschiedenen Erbgänge ist fundamental für die Humangenetik und die klinische Medizin. Man unterscheidet grundsätzlich zwischen autosomalen und gonosomalen (geschlechtschromosomalen) Erbgängen. Bei autosomal-dominanten (AD) Erbgängen liegt das betroffene Gen auf einem Autosom, und bereits ein mutiertes Allel reicht aus, um die Erkrankung zu manifestieren. Betroffene haben in der Regel einen betroffenen Elternteil, Männer und Frauen sind gleich häufig betroffen, und es gibt keine Überträger — wer das Allel trägt, ist krank (bei vollständiger Penetranz). Typische Beispiele sind die Huntington-Krankheit (Chorea Huntington), Marfan-Syndrom und familiäre Hypercholesterinämie.
+      content: `Erbgänge folgen Mustern. Du unterscheidest **autosomale** (auf den Chromosomen 1-22) von **gonosomalen** (auf X oder Y) Erbgängen.
 
-Bei autosomal-rezessiven (AR) Erbgängen müssen beide Allele die Mutation tragen, damit die Erkrankung phänotypisch auftritt. Heterozygote Träger (Aa) sind gesund, können das mutierte Allel aber an ihre Kinder weitergeben. AR-Erkrankungen treten gehäuft in konsanguinen (blutsverwandten) Familien auf, da dort die Wahrscheinlichkeit höher ist, dass beide Eltern dasselbe rezessive Allel tragen. Die Erkrankung kann Generationen überspringen und taucht oft „unerwartet“ in Familien auf. Bekannte Beispiele sind Mukoviszidose (häufigste AR-Erkrankung bei Europäern mit einer Trägerfrequenz von ca. 1:25), Phenylketonurie (PKU) und Sichelzellanämie. Wenn beide Eltern Träger sind (Aa × Aa), beträgt das Risiko für ein betroffenes Kind 25 %.
+**Autosomal-dominant** (AD): Ein mutiertes Allel genügt. Betroffene haben meist einen betroffenen Elternteil. Jede Generation zeigt die Erkrankung. Männer und Frauen gleich häufig betroffen. Keine Überträger — wer das Allel hat, ist krank (bei vollständiger Penetranz). Beispiele: **Chorea Huntington**, **Marfan-Syndrom**, familiäre Hypercholesterinämie.
 
-X-chromosomale Erbgänge zeigen ein charakteristisches geschlechtsspezifisches Vererbungsmuster. Bei X-chromosomal-rezessiven Erkrankungen sind vorwiegend Männer betroffen, da sie nur ein X-Chromosom besitzen (hemizygot, X^a Y) und kein zweites X-Chromosom zum Ausgleich haben. Frauen können Konduktorinnen (Überträgerinnen, X^A X^a) sein und sind in der Regel phänotypisch gesund. Ein betroffener Vater kann die Krankheit nicht an seine Söhne weitergeben (er gibt ihnen das Y-Chromosom), aber alle seine Töchter werden Konduktorinnen. Klassische Beispiele sind Hämophilie A und B sowie Rot-Grün-Blindheit. Stammbäume (Pedigrees) sind das wichtigste Werkzeug zur Analyse von Erbgängen: Kreise symbolisieren Frauen, Quadrate Männer, ausgefüllte Symbole betroffene Personen, und halb ausgefüllte Symbole Überträger.`,
+**Autosomal-rezessiv** (AR): Beide Allele müssen mutiert sein (aa). Heterozygote Träger (Aa) sind gesund. Die Erkrankung überspringt Generationen — sie taucht "unerwartet" auf. Risiko steigt bei **Konsanguinität** (Verwandtenehen), weil beide Eltern eher dasselbe seltene Allel tragen. Klassische Beispiele: **Mukoviszidose** (häufigste AR-Erkrankung bei Europäern, Trägerfrequenz ca. 1:25), **Phenylketonurie** (PKU), **Sichelzellanämie**. Bei zwei Trägern (Aa × Aa) hat jedes Kind 25% Risiko, betroffen zu sein.
+
+**X-chromosomal-rezessiv**: Männer sind hemizygot (XY) — sie haben nur ein X-Chromosom. Ein mutiertes Allel auf dem X führt zur Erkrankung (X^a Y). Frauen (XX) sind meist nur Konduktorinnen (X^A X^a) — phänotypisch gesund, aber Überträgerinnen. Ein betroffener Vater kann die Krankheit nicht an Söhne weitergeben (er gibt ihnen das Y), aber alle Töchter werden Konduktorinnen. Klassische Beispiele: **Hämophilie A und B** (Bluterkrankheit), **Rot-Grün-Blindheit**.
+
+**Stammbäume** analysieren: Kreise = Frauen, Quadrate = Männer. Ausgefüllt = betroffen, halbtransparent = Träger. Verbindungen zeigen Eltern-Kind-Beziehungen.`,
       diagram: 'pedigree-analysis',
       merksätze: [
         'Autosomal-dominant: Jede Generation betroffen, kein Geschlechtsunterschied, kein Überspringen. Autosomal-rezessiv: Überspringt Generationen, Konsanguinität erhöht das Risiko.',
@@ -147,7 +159,7 @@ X-chromosomale Erbgänge zeigen ein charakteristisches geschlechtsspezifisches V
         question: 'Warum sind bei X-chromosomal-rezessiven Erkrankungen vorwiegend Männer betroffen?',
         answer: 'Männer sind hemizygot für das X-Chromosom (XY) und besitzen daher nur ein Allel am betreffenden Locus. Ein einziges mutiertes Allel auf dem X-Chromosom führt daher zur Merkmalsausprägung, da kein zweites X-Chromosom mit einem funktionellen Allel zum Ausgleich vorhanden ist.'
       },
-      klinischerBezug: 'Die Hämophilie A (Faktor-VIII-Mangel) ist ein klassisches Beispiel eines X-chromosomal-rezessiven Erbgangs. Historisch bekannt ist sie als „Bluterkrankheit“ der europäischen Königshäuser, da Queen Victoria Konduktorin war und das mutierte Allel über ihre Töchter an zahlreiche Herrscherfamilien weitergab. Betroffene Männer zeigen eine gestörte Blutgerinnung mit spontanen Blutungen in Gelenke und Muskeln.',
+      klinischerBezug: '**Hämophilie A** (Faktor-VIII-Mangel) betrifft fast nur Männer. Queen Victoria war Konduktorin — sie gab die Mutation über ihre Töchter an zahlreiche europäische Königshäuser weiter. Betroffene Männer zeigen spontane Blutungen in Gelenke und Muskeln, weil das Blut nicht gerinnt. Heute wird der fehlende Faktor VIII intravenös substituiert.',
       selfTest: [
         {
           question: 'Welches Merkmal ist typisch für einen autosomal-rezessiven Erbgang?',
@@ -194,11 +206,21 @@ X-chromosomale Erbgänge zeigen ein charakteristisches geschlechtsspezifisches V
     {
       id: 'bio-kap4-uk4',
       title: 'Blutgruppenvererbung',
-      content: `Das AB0-Blutgruppensystem, 1901 von Karl Landsteiner entdeckt, basiert auf Glykoprotein-Antigenen (A- und B-Antigene) auf der Oberfläche der Erythrozyten. Das zugehörige Gen liegt auf Chromosom 9 und besitzt drei Allele: I^A, I^B und i. Die Allele I^A und I^B sind kodominant zueinander — beide werden bei Heterozygotie gleichzeitig exprimiert —, während beide gegenüber dem Allel i dominant sind. Daraus ergeben sich vier Phänotypen (Blutgruppen) und sechs mögliche Genotypen: Blutgruppe A (I^A I^A oder I^A i), Blutgruppe B (I^B I^B oder I^B i), Blutgruppe AB (I^A I^B) und Blutgruppe 0 (ii). Im Serum befinden sich jeweils die Antikörper (Isoagglutinine) gegen die nicht vorhandenen Antigene: Blutgruppe A hat Anti-B, Blutgruppe B hat Anti-A, Blutgruppe AB hat keine Antikörper (Universalempfänger für Erythrozytenkonzentrate), Blutgruppe 0 hat Anti-A und Anti-B.
+      content: `Das **AB0-System** (Karl Landsteiner, 1901) bestimmt deine Blutgruppe. Auf deinen roten Blutkörperchen sitzen Antigene (A und/oder B). Im Plasma schwimmen Antikörper gegen die Antigene, die du nicht hast.
 
-Das Rhesus-System ist das zweitwichtigste Blutgruppensystem. Der entscheidende Faktor ist das D-Antigen (Rhesus-Faktor): Rh-positiv (D vorhanden, ca. 85 % der europäischen Bevölkerung) und Rh-negativ (D fehlend, ca. 15 %). Die Vererbung des Rhesus-Faktors folgt einem autosomal-dominanten Erbgang: DD und Dd sind Rh-positiv, nur dd ist Rh-negativ. Im Gegensatz zum AB0-System gibt es beim Rhesus-System keine natürlich vorkommenden Antikörper — Anti-D-Antikörper entstehen erst nach Sensibilisierung (Kontakt mit Rh-positivem Blut). Die Kreuzprobe (Verträglichkeitsprobe) ist ein unverzichtbarer Sicherheitstest vor jeder Bluttransfusion. Bei der Major-Kreuzprobe werden Spendererythrozyten mit dem Empfängerserum inkubiert, bei der Minor-Kreuzprobe Empfängererythrozyten mit Spenderserum. Eine Agglutination (Verklumpung) zeigt eine Inkompatibilität an.
+Das Gen hat drei Allele: I^A (macht A-Antigene), I^B (macht B-Antigene) und i (macht nichts). I^A und I^B sind **kodominant** zueinander — beide werden exprimiert. Beide sind dominant über i.
 
-Die Rhesus-Inkompatibilität (Morbus hämolyticus neonatorum) ist eine klinisch hochrelevante Komplikation, die auftreten kann, wenn eine Rh-negative Mutter (dd) ein Rh-positives Kind (Dd) austrägt. Bei der ersten Schwangerschaft kommt es in der Regel nicht zu Problemen. Während der Geburt können jedoch fetale Rh-positive Erythrozyten in den mütterlichen Kreislauf gelangen und eine Immunantwort mit Bildung von Anti-D-IgG-Antikörpern auslösen (Sensibilisierung). Bei einer folgenden Schwangerschaft mit einem erneut Rh-positiven Kind können diese IgG-Antikörper die Plazenta passieren und die fetalen Erythrozyten zerstören (Hämolyse), was zu Anämie, Hydrops fetalis und im schlimmsten Fall zum intrauterinen Fruchttod führen kann. Durch die prophylaktische Gabe von Anti-D-Immunglobulin an die Mutter (in der 28.–30. SSW und innerhalb von 72 Stunden nach der Geburt) wird die Sensibilisierung verhindert, da die Anti-D-Antikörper die eingedrungenen fetalen Erythrozyten eliminieren, bevor das mütterliche Immunsystem aktiviert wird.`,
+Sechs Genotypen → vier Blutgruppen:
+- Blutgruppe A: I^A I^A oder I^A i (A-Antigen, Anti-B im Serum)
+- Blutgruppe B: I^B I^B oder I^B i (B-Antigen, Anti-A im Serum)
+- Blutgruppe AB: I^A I^B (beide Antigene, keine Antikörper — **Universalempfänger** für Erythrozyten)
+- Blutgruppe 0: ii (keine Antigene, Anti-A und Anti-B — **Universalspender** für Erythrozyten)
+
+Das **Rhesus-System** (D-Antigen): Rh-positiv (D vorhanden, ca. 85% in Europa) oder Rh-negativ (D fehlt, ca. 15%). Vererbung autosomal-dominant: DD und Dd = Rh-positiv, nur dd = Rh-negativ. Wichtig: **Anti-D-Antikörper entstehen nicht natürlich** — nur nach Kontakt mit Rh-positivem Blut (Sensibilisierung).
+
+**Rhesus-Inkompatibilität** (Morbus haemolyticus neonatorum): Rh-negative Mutter (dd) + Rh-positives Kind (Dd). Bei der Geburt gelangen fetale Rh-positive Erythrozyten in den mütterlichen Kreislauf. Die Mutter bildet Anti-D-IgG-Antikörper (Sensibilisierung). Bei der nächsten Schwangerschaft mit Rh-positivem Kind passieren diese IgG-Antikörper die Plazenta und zerstören fetale Erythrozyten (Hämolyse). Folgen: Anämie, Hydrops fetalis, intrauteriner Fruchttod.
+
+Prophylaxe: **Anti-D-Immunglobulin** (28.-30. SSW und innerhalb 72h nach Geburt). Die passiven Antikörper eliminieren fetale Erythrozyten, bevor das mütterliche Immunsystem reagiert — Sensibilisierung wird verhindert.`,
       merksätze: [
         'AB0-Genetik: I^A und I^B kodominant zueinander, beide dominant über i. Sechs Genotypen → vier Phänotypen. Blutgruppe 0 (ii) = Universalspender für Erythrozyten.',
         'Rhesus-Inkompatibilität: Rh-negative Mutter + Rh-positives Kind → Sensibilisierung bei 1. Geburt → Gefahr ab 2. Schwangerschaft. Prophylaxe: Anti-D-Immunglobulin.'
@@ -207,7 +229,7 @@ Die Rhesus-Inkompatibilität (Morbus hämolyticus neonatorum) ist eine klinisch 
         question: 'Welche Blutgruppe hat ein Mensch mit dem Genotyp I^A I^B und welche Antikörper befinden sich in seinem Serum?',
         answer: 'Blutgruppe AB — da I^A und I^B kodominant sind, werden beide Antigene auf den Erythrozyten exprimiert. Im Serum befinden sich keine Isoagglutinine (weder Anti-A noch Anti-B), weshalb Personen mit Blutgruppe AB als Universalempfänger für Erythrozytenkonzentrate gelten.'
       },
-      klinischerBezug: 'Bei einer hämolytischen Transfusionsreaktion werden inkompatible Spendererythrozyten durch die Antikörper des Empfängers agglutiniert und lysiert. Eine AB0-inkompatible Transfusion kann innerhalb von Minuten zu Fieber, Schüttelfrost, Flankenschmerzen, Hämoglobinurie und im schlimmsten Fall zu Nierenversagen, DIC (disseminierte intravasale Gerinnung) und Tod führen. Deshalb ist der Bedside-Test (AB0-Identitätstest am Bett des Patienten) unmittelbar vor jeder Transfusion gesetzlich vorgeschrieben.',
+      klinischerBezug: 'Eine **AB0-inkompatible Transfusion** ist lebensbedrohlich. Die Antikörper des Empfängers zerstören die Spender-Erythrozyten sofort (Hämolyse). Innerhalb von Minuten: Fieber, Schüttelfrost, Flankenschmerzen, rotes Hämoglobin im Urin. Im schlimmsten Fall: Nierenversagen, DIC (disseminierte intravasale Gerinnung), Tod. Deshalb ist der **Bedside-Test** (AB0-Identitätstest am Patientenbett) vor jeder Transfusion gesetzlich vorgeschrieben — letzte Sicherheitskontrolle.',
       selfTest: [
         {
           question: 'Welchen Genotyp kann ein Kind haben, wenn die Mutter Blutgruppe A (I^A i) und der Vater Blutgruppe B (I^B i) hat?',
@@ -254,11 +276,17 @@ Die Rhesus-Inkompatibilität (Morbus hämolyticus neonatorum) ist eine klinisch 
     {
       id: 'bio-kap4-uk5',
       title: 'Humangenetik',
-      content: `Die Humangenetik befasst sich mit der genetischen Ausstattung des Menschen, deren Variationen und den daraus resultierenden Erkrankungen. Der menschliche Karyotyp umfasst 46 Chromosomen: 22 Paare Autosomen (nummeriert 1–22 nach abnehmender Größe) und ein Paar Geschlechtschromosomen (Gonosomen; XX bei Frauen, XY bei Männern). Ein Karyogramm ist die standardisierte Darstellung aller Chromosomen einer Zelle, geordnet nach Größe und Zentromerlage. Zur Erstellung wird eine Zellkultur (typischerweise Lymphozyten aus einer Blutprobe) angelegt, die Zellen werden in der Metaphase der Mitose arretiert (durch Colchicin, das die Spindelbildung hemmt), fixiert, gefärbt (z. B. Giemsa-Bänderung, GTG-Banding) und fotografiert. Die Bänderungsmuster ermöglichen die eindeutige Identifikation jedes Chromosoms.
+      content: `Der Mensch hat 46 Chromosomen: 22 Autosomenpaare (Chromosomen 1-22, nach Größe sortiert) und ein Gonosomenpaar (XX bei Frauen, XY bei Männern).
 
-Chromosomenaberrationen (numerische oder strukturelle Veränderungen) sind eine wichtige Ursache für genetische Erkrankungen und Fehlgeburten. Numerische Aberrationen entstehen meist durch Non-Disjunction (Nichttrennung homologer Chromosomen in der Meiose I oder der Schwesterchromatiden in der Meiose II). Die häufigste lebensfähige Trisomie ist die Trisomie 21 (Down-Syndrom) mit einem zusätzlichen Chromosom 21 (Karyotyp: 47,XX,+21 oder 47,XY,+21). Klinische Merkmale umfassen eine geistige Entwicklungsverzögerung, typische Fazies (flaches Gesicht, Epikanthus, Brushfield-Spots), Herzfehler (ca. 40–50 %, häufig AV-Kanal), Duodenalatresie und ein erhöhtes Leukämierisiko. Die Inzidenz steigt mit dem mütterlichen Alter deutlich an (ab 35 Jahren signifikant), da die Eizellen jahrzehntelang in der Meiose I arretiert waren und die Spindelfasern mit zunehmendem Alter fehleranfälliger werden.
+Ein **Karyogramm** zeigt alle Chromosomen einer Zelle. So wird es gemacht: Lymphozyten aus Blut werden kultiviert. In der Metaphase (Mitose) werden sie mit **Colchicin** gestoppt (hemmt Spindelbildung). Die Chromosomen werden fixiert, gefärbt (z.B. Giemsa-Bänderung) und fotografiert. Jedes Chromosom hat ein charakteristisches Bandenmuster — wie ein Strichcode.
 
-Gonosomale Chromosomenstörungen betreffen die Geschlechtschromosomen. Das Turner-Syndrom (45,X0) ist die einzige lebensfähige Monosomie beim Menschen. Betroffene sind phänotypisch weiblich und zeigen Kleinwuchs, Gonadendysgenesie (Streifengonaden) mit primärer Amenorrhoe und Infertilität, Pterygium colli (Flügelfell am Hals) und häufig Herzfehler (v. a. bikuspide Aortenklappe, Aortenisthmusstenose). Die Inzidenz beträgt ca. 1:2500 weibliche Neugeborene. Das Klinefelter-Syndrom (47,XXY) betrifft phänotypisch männliche Individuen und ist mit einer Inzidenz von ca. 1:600 männliche Neugeborene die häufigste gonosomale Aberration. Klinische Merkmale sind Hochwuchs, Gynäkomastie, kleine feste Hoden, Hypogonadismus, Infertilität (Azoospermie) und ein leicht erhöhtes Risiko für Lernschwierigkeiten. Weitere gonosomale Anomalien umfassen das Triple-X-Syndrom (47,XXX) und das XYY-Syndrom (47,XYY), die oft klinisch mild verlaufen.`,
+**Chromosomenaberrationen** entstehen meist durch **Non-Disjunction** (Nichttrennung in der Meiose). Homologe Chromosomen oder Schwesterchromatiden trennen sich nicht korrekt. Resultat: eine Zelle bekommt zu viele, die andere zu wenige Chromosomen.
+
+**Trisomie 21** (Down-Syndrom): Häufigste lebensfähige Trisomie. Karyotyp: 47,XX,+21 oder 47,XY,+21. Klinische Merkmale: geistige Entwicklungsverzögerung, typisches Gesicht (flach, Epikanthus, Brushfield-Spots in der Iris), **Herzfehler** (40-50%, oft AV-Kanal), Duodenalatresie, erhöhtes Leukämierisiko. Wichtigster Risikofaktor: **mütterliches Alter**. Ab 35 Jahren steigt das Risiko stark — die Eizellen waren jahrzehntelang in Meiose I arretiert, die Spindelfunktion lässt nach.
+
+**Turner-Syndrom** (45,X0): Einzige lebensfähige Monosomie beim Menschen. Inzidenz: ca. 1:2500 weibliche Neugeborene. Phänotypisch weiblich. Klinische Merkmale: Kleinwuchs, **Streifengonaden** (keine funktionsfähigen Eierstöcke) → primäre Amenorrhoe, Infertilität, Pterygium colli (Flügelfell am Hals), Herzfehler (bikuspide Aortenklappe, Aortenisthmusstenose).
+
+**Klinefelter-Syndrom** (47,XXY): Häufigste gonosomale Aberration (1:600 männliche Neugeborene). Phänotypisch männlich. Klinische Merkmale: Hochwuchs, kleine feste Hoden, **Hypogonadismus**, Gynäkomastie, **Infertilität** (Azoospermie), leicht erhöhtes Risiko für Lernschwierigkeiten.`,
       merksätze: [
         'Trisomie 21 (Down-Syndrom): Häufigste lebensfähige Trisomie, Risiko steigt mit mütterlichem Alter, typische Befunde: Herzfehler, Facies, Entwicklungsverzögerung.',
         'Turner (45,X0): Einzige lebensfähige Monosomie, weiblich, Kleinwuchs, Streifengonaden. Klinefelter (47,XXY): Männlich, Hochwuchs, Hypogonadismus, Infertilität.'
@@ -267,7 +295,7 @@ Gonosomale Chromosomenstörungen betreffen die Geschlechtschromosomen. Das Turne
         question: 'Wie entsteht die Trisomie 21 und welcher Risikofaktor ist am bedeutsamsten?',
         answer: 'Die Trisomie 21 entsteht durch Non-Disjunction (Nichttrennung) des Chromosoms 21 in der Meiose (meist Meiose I der Mutter). Der wichtigste Risikofaktor ist das erhöhte mütterliche Alter, da die Eizellen jahrzehntelang in der Prophase I arretiert sind und die Spindelfunktion mit dem Alter abnimmt.'
       },
-      klinischerBezug: 'Die Pränataldiagnostik ermöglicht die frühzeitige Erkennung von Chromosomenstörungen. Nicht-invasive Methoden umfassen das Ersttrimester-Screening (Nackentransparenzmessung + Biochemie) und den NIPT (nicht-invasiver Pränataltest, Analyse zellfreier fetaler DNA im mütterlichen Blut). Invasive Methoden wie die Chorionzottenbiopsie (10.–12. SSW) oder die Amniozentese (15.–18. SSW) ermöglichen eine Karyotypisierung des Fetus, tragen jedoch ein geringes Fehlgeburtsrisiko (ca. 0,5–1 %).',
+      klinischerBezug: '**Ersttrimester-Screening** (Nackentransparenzmessung + Biochemie) erkennt Risikoschwangerschaften. **NIPT** (nicht-invasiver Pränataltest) analysiert zellfreie fetale DNA im mütterlichen Blut — hohe Trefferquote, kein Fehlgeburtsrisiko. Invasive Verfahren (**Chorionzottenbiopsie** 10.-12. SSW oder **Amniozentese** 15.-18. SSW) ermöglichen Karyotypisierung, tragen aber ein Fehlgeburtsrisiko von ca. 0,5-1%.',
       selfTest: [
         {
           question: 'Welcher Karyotyp liegt beim Turner-Syndrom vor?',
@@ -314,11 +342,23 @@ Gonosomale Chromosomenstörungen betreffen die Geschlechtschromosomen. Das Turne
     {
       id: 'bio-kap4-uk6',
       title: 'Mutationen',
-      content: `Mutationen sind dauerhafte Veränderungen der DNA-Sequenz, die spontan (z. B. durch Replikationsfehler) oder induziert (durch Mutagene wie UV-Strahlung, ionisierende Strahlung, chemische Substanzen) auftreten können. Sie sind die Grundlage der genetischen Variabilität und damit der Evolution, können aber auch Ursache von Erbkrankheiten und Krebs sein. Mutationen werden nach dem Ausmaß der betroffenen DNA-Sequenz in drei Kategorien eingeteilt: Genmutationen (Veränderungen einzelner Nukleotide oder weniger Basenpaare), Chromosomenmutationen (strukturelle Veränderungen von Chromosomenabschnitten) und Genommutationen (Veränderungen der Chromosomenzahl).
+      content: `Mutationen sind permanente DNA-Veränderungen. Sie entstehen spontan (Replikationsfehler) oder durch **Mutagene** (UV-Strahlung, ionisierende Strahlung, Chemikalien). Mutationen sind die Basis der Evolution — aber auch Ursache von Erbkrankheiten und Krebs.
 
-Genmutationen (Punktmutationen) betreffen einzelne Basenpaare. Bei einer Substitution wird eine Base durch eine andere ersetzt. Man unterscheidet Transition (Austausch Purin↔Purin oder Pyrimidin↔Pyrimidin, z. B. A→G) und Transversion (Austausch Purin↔Pyrimidin, z. B. A→C). Die Auswirkungen auf das Protein hängen davon ab, wo im Codon die Substitution liegt: Eine stumme (synonyme) Mutation verändert zwar die DNA-Sequenz, aber aufgrund der Degeneriertheit des genetischen Codes nicht die Aminosäure. Eine Missense-Mutation führt zum Einbau einer anderen Aminosäure (z. B. Sichelzellanämie: Glutamat → Valin an Position 6 der β-Globinkette durch A→T-Substitution). Eine Nonsense-Mutation erzeugt ein vorzeitiges Stoppcodon und führt zu einem verkürzten, meist funktionslosen Protein. Insertionen und Deletionen einzelner Nukleotide (nicht in Vielfachen von 3) verursachen eine Leserasterverschiebung (Frameshift-Mutation), die alle nachfolgenden Codons verändert und meist zu einem funktionslosen Protein führt.
+Drei Ebenen:
+1. **Genmutationen** (Punktmutationen) — einzelne Basenpaare betroffen
+2. **Chromosomenmutationen** — strukturelle Veränderungen von Chromosomenabschnitten
+3. **Genommutationen** — Veränderung der Chromosomenzahl
 
-Chromosomenmutationen sind strukturelle Umbauten von Chromosomen und umfassen Deletionen (Verlust eines Chromosomenabschnitts), Duplikationen (Verdopplung), Inversionen (Umkehrung der Reihenfolge eines Abschnitts), Insertionen und Translokationen (Übertragung eines Chromosomenabschnitts auf ein anderes Chromosom). Translokationen können balanciert (kein Materialverlust, Träger oft klinisch unauffällig) oder unbalanciert (mit Materialverlust oder -gewinn, oft klinisch auffällig) sein. Genommutationen betreffen die Gesamtzahl der Chromosomen: Bei der Aneuploidie liegt ein einzelnes Chromosom in veränderter Zahl vor (z. B. Trisomie, Monosomie), bei der Polyploidie ist der gesamte Chromosomensatz vervielfacht (z. B. Triploidie mit 3n = 69 Chromosomen, beim Menschen nicht lebensfähig). Die Philadelphia-Translokation t(9;22) ist ein Beispiel für eine reziproke Translokation, die zur Bildung des BCR-ABL-Fusionsgens führt und ursächlich für die chronische myeloische Leukämie (CML) ist.`,
+**Genmutationen** (Punktmutationen): Bei einer **Substitution** wird eine Base ausgetauscht. Folgen hängen vom genetischen Code ab:
+- **Stumme Mutation**: DNA ändert sich, Aminosäure bleibt gleich (Degeneriertheit des Codes)
+- **Missense-Mutation**: Eine andere Aminosäure wird eingebaut (z.B. **Sichelzellanämie**: Glutamat → Valin an Position 6 der β-Globinkette)
+- **Nonsense-Mutation**: Ein Stoppcodon entsteht vorzeitig. Die Translation bricht ab. Das Protein ist verkürzt und meist funktionslos.
+
+**Frameshift-Mutation** (Leserasterverschiebung): Insertion oder Deletion von Nukleotiden (nicht in Dreiergruppen). Alle nachfolgenden Codons werden falsch abgelesen. Das Protein ist komplett verändert — meist funktionslos.
+
+**Chromosomenmutationen**: Deletionen (Verlust), Duplikationen (Verdopplung), Inversionen (Umkehrung), Translokationen (Übertragung auf anderes Chromosom). Die **Philadelphia-Translokation** t(9;22) erzeugt das BCR-ABL-Fusionsgen — Ursache der chronischen myeloischen Leukämie (CML). Eine konstitutiv aktive Tyrosinkinase treibt unkontrollierte Zellproliferation an.
+
+**Genommutationen**: Aneuploidie (einzelnes Chromosom in veränderter Zahl, z.B. Trisomie, Monosomie) oder Polyploidie (ganzer Chromosomensatz vervielfacht, z.B. Triploidie 3n = 69 — beim Menschen nicht lebensfähig).`,
       merksätze: [
         'Frameshift-Mutation: Insertion oder Deletion von Nukleotiden (nicht in Dreiergruppen) → Leserasterverschiebung → alle nachfolgenden Aminosäuren verändert → meist funktionsloses Protein.',
         'Drei Ebenen der Mutation: Genmutation (einzelne Basenpaare), Chromosomenmutation (Strukturveränderung), Genommutation (Chromosomenzahl verändert).'
@@ -327,7 +367,7 @@ Chromosomenmutationen sind strukturelle Umbauten von Chromosomen und umfassen De
         question: 'Was ist eine Nonsense-Mutation und welche Auswirkung hat sie auf das Protein?',
         answer: 'Eine Nonsense-Mutation ist eine Punktmutation (Substitution), die ein Aminosäure-kodierendes Codon in ein vorzeitiges Stoppcodon (UAA, UAG oder UGA) umwandelt. Dadurch wird die Translation vorzeitig abgebrochen, und es entsteht ein verkürztes, meist funktionsloses Protein.'
       },
-      klinischerBezug: 'Die Mukoviszidose (Cystische Fibrose) wird am häufigsten durch die Mutation ΔF508 verursacht — eine Deletion von drei Nukleotiden, die zum Verlust der Aminosäure Phenylalanin an Position 508 des CFTR-Proteins führt. Diese „in-frame“-Deletion (kein Frameshift, da genau 3 Nukleotide betroffen) führt zu einer Fehlfaltung des Proteins, das im endoplasmatischen Retikulum abgebaut wird, bevor es die Zellmembran erreicht. Der fehlende Chloridkanal verursacht zähes Sekret in Lunge, Pankreas und anderen Organen.',
+      klinischerBezug: '**Mukoviszidose** (Cystische Fibrose) wird am häufigsten durch die **ΔF508-Mutation** verursacht. Drei Nukleotide fehlen → Phenylalanin an Position 508 fehlt. Diese "in-frame"-Deletion (kein Frameshift) führt zur Fehlfaltung des CFTR-Proteins. Es wird im ER abgebaut, bevor es die Zellmembran erreicht. Der fehlende Chloridkanal verursacht zähes Sekret in Lunge, Pankreas und anderen Organen — rezidivierende Infektionen, Pankreasinsuffizienz, Infertilität bei Männern.',
       selfTest: [
         {
           question: 'Welche Art von Genmutation führt zu einer Leserasterverschiebung (Frameshift)?',
@@ -374,11 +414,38 @@ Chromosomenmutationen sind strukturelle Umbauten von Chromosomen und umfassen De
     {
       id: 'bio-kap4-uk7',
       title: 'Populationsgenetik',
-      content: `Die Populationsgenetik untersucht die genetische Zusammensetzung von Populationen und deren Veränderung über die Zeit. Zentrale Konzepte sind die Allelfrequenz (relative Häufigkeit eines bestimmten Allels in einer Population) und die Genotypfrequenz (relative Häufigkeit eines bestimmten Genotyps). Für ein Gen mit zwei Allelen (A und a) wird die Häufigkeit des Allels A als p und die Häufigkeit des Allels a als q bezeichnet. Da es nur diese beiden Allele gibt, gilt: p + q = 1. Die Populationsgenetik ermöglicht es, Vorhersagen über die genetische Struktur zukünftiger Generationen zu treffen und evolutionäre Prozesse mathematisch zu modellieren.
+      content: `Populationsgenetik untersucht Allelfrequenzen in ganzen Populationen. Zentrale Frage: Wie häufig sind bestimmte Allele? Wie verändern sich die Frequenzen über Generationen?
 
-Das Hardy-Weinberg-Gleichgewicht (HWG) ist das fundamentale Modell der Populationsgenetik. Es beschreibt eine idealisierte Population, in der sich die Allel- und Genotypfrequenzen von Generation zu Generation nicht verändern. Unter der Voraussetzung, dass p die Frequenz des Allels A und q die Frequenz des Allels a ist (p + q = 1), gibt das Hardy-Weinberg-Gesetz die erwarteten Genotypfrequenzen an: p² (Frequenz von AA) + 2pq (Frequenz von Aa) + q² (Frequenz von aa) = 1. Damit das HWG gilt, müssen fünf Bedingungen erfüllt sein: (1) unendlich große Population (kein genetischer Drift), (2) keine Mutation, (3) keine Selektion (alle Genotypen gleich fit), (4) keine Migration (kein Genfluss) und (5) Panmixie (zufällige Paarung). In der Realität werden diese Bedingungen nie vollständig erfüllt, aber das HWG dient als wichtiges Referenzmodell: Abweichungen vom Gleichgewicht deuten auf das Wirken evolutionärer Kräfte hin.
+Für ein Gen mit zwei Allelen (A und a):
+- Frequenz von A = p
+- Frequenz von a = q
+- p + q = 1
 
-Beispielrechnung: Wenn die Frequenz einer autosomal-rezessiven Erkrankung in einer Population 1:10.000 beträgt (q² = 0,0001), dann ist q = 0,01, p = 0,99, und die Trägerfrequenz (heterozygote Träger, 2pq) beträgt 2 × 0,99 × 0,01 = 0,0198, also etwa 1:50 — dies zeigt, dass heterozygote Träger wesentlich häufiger sind als betroffene Individuen. Die evolutionären Kräfte, die das HWG stören und damit die genetische Zusammensetzung einer Population verändern, umfassen natürliche Selektion (unterschiedliche Fitness der Genotypen), genetischen Drift (zufällige Schwankungen, besonders in kleinen Populationen), Mutation (als Quelle neuer Allele), Migration/Genfluss (Einwanderung neuer Allele) und nicht-zufällige Paarung (z. B. Inzucht). Der Gründereffekt und der Flaschenhalseffekt sind spezielle Formen des genetischen Drifts, bei denen eine kleine Gründerpopulation bzw. eine drastische Populationsverkleinerung zu einer veränderten Allelzusammensetzung führt.`,
+Das **Hardy-Weinberg-Gleichgewicht** (HWG) ist das Grundmodell. Es beschreibt eine ideale Population, in der sich die Allelfrequenzen nicht verändern. Genotypfrequenzen:
+- p² (Frequenz von AA)
+- 2pq (Frequenz von Aa)
+- q² (Frequenz von aa)
+- Summe: p² + 2pq + q² = 1
+
+Fünf Voraussetzungen für HWG:
+1. Unendlich große Population (kein genetischer Drift)
+2. Keine Mutation
+3. Keine Selektion (alle Genotypen gleich fit)
+4. Keine Migration (kein Genfluss)
+5. Panmixie (zufällige Paarung)
+
+In der Realität sind diese Bedingungen nie erfüllt. Das HWG ist ein Referenzmodell — Abweichungen zeigen, dass evolutionäre Kräfte wirken.
+
+**Praktische Anwendung**: Bei autosomal-rezessiven Erkrankungen ist die Trägerfrequenz (2pq) viel höher als die Krankheitsfrequenz (q²). Beispiel: Wenn q² = 1:10.000 (Krankheitsfrequenz), dann q = 0,01 und p = 0,99. Trägerfrequenz = 2pq = 2 × 0,99 × 0,01 = 0,0198 ≈ 1:50. Für jede erkrankte Person gibt es etwa 200 gesunde Träger.
+
+Evolutionäre Kräfte, die das HWG stören:
+- **Selektion**: Unterschiedliche Fitness der Genotypen
+- **Genetischer Drift**: Zufällige Schwankungen (besonders in kleinen Populationen)
+- **Mutation**: Quelle neuer Allele
+- **Migration**: Ein- oder Auswanderung von Allelen
+- **Nicht-zufällige Paarung**: z.B. Inzucht
+
+**Gründereffekt** und **Flaschenhalseffekt** sind spezielle Formen des Drifts. Eine kleine Gründerpopulation oder eine drastische Populationsverkleinerung führt zu veränderter Allelzusammensetzung.`,
       merksätze: [
         'Hardy-Weinberg-Gleichung: p² + 2pq + q² = 1 (mit p + q = 1). Die fünf Voraussetzungen: keine Mutation, keine Selektion, keine Migration, Panmixie, große Population.',
         'Praktische Anwendung: Bei autosomal-rezessiven Erkrankungen ist die Trägerfrequenz (2pq) viel größer als die Krankheitsfrequenz (q²). Beispiel: q² = 1:10.000 → Träger ≈ 1:50.'
@@ -387,7 +454,7 @@ Beispielrechnung: Wenn die Frequenz einer autosomal-rezessiven Erkrankung in ein
         question: 'Die Frequenz einer autosomal-rezessiven Erkrankung beträgt 1:2500. Wie hoch ist die Heterozygotenfrequenz (Trägerfrequenz) nach Hardy-Weinberg?',
         answer: 'q² = 1/2500 = 0,0004, also q = 0,02 und p = 0,98. Heterozygotenfrequenz = 2pq = 2 × 0,98 × 0,02 = 0,0392 ≈ 1:25 (ca. 4 %).'
       },
-      klinischerBezug: 'Das Hardy-Weinberg-Gleichgewicht wird in der genetischen Epidemiologie genutzt, um die Häufigkeit von Trägern rezessiver Erkrankungen abzuschätzen. Bei der Mukoviszidose beispielsweise ist in der europäischen Bevölkerung etwa 1:2500 Neugeborene betroffen (q² ≈ 1:2500), woraus sich eine Trägerfrequenz von ca. 1:25 ergibt. Diese Information ist essenziell für die genetische Beratung von Paaren mit Kinderwunsch und für die Planung von Neugeborenen-Screening-Programmen.',
+      klinischerBezug: 'Bei **Mukoviszidose** ist in Europa etwa 1:2500 Neugeborene betroffen (q² ≈ 1:2500). Daraus ergibt sich eine Trägerfrequenz von ca. 1:25. Jeder 25. Europäer trägt das mutierte CFTR-Allel — meist ohne es zu wissen. Diese Information ist essenziell für die genetische Beratung von Paaren mit Kinderwunsch und für Neugeborenen-Screening-Programme.',
       selfTest: [
         {
           question: 'Welche der folgenden Bedingungen muss für das Hardy-Weinberg-Gleichgewicht NICHT erfüllt sein?',
@@ -434,11 +501,19 @@ Beispielrechnung: Wenn die Frequenz einer autosomal-rezessiven Erkrankung in ein
     {
       id: 'bio-kap4-uk8',
       title: 'Epigenetik',
-      content: `Die Epigenetik beschäftigt sich mit vererbbaren Veränderungen der Genexpression, die nicht auf Veränderungen der DNA-Sequenz selbst beruhen, sondern auf chemischen Modifikationen der DNA oder der Histone. Diese epigenetischen Markierungen können die Zugänglichkeit der DNA für die Transkriptionsmaschinerie regulieren und somit Gene „an-“ oder „abschalten“, ohne dass die Nukleotidsequenz verändert wird. Epigenetische Modifikationen sind dynamisch und reversibel, können aber dennoch bei Zellteilungen und — in bestimmten Fällen — sogar über Generationen hinweg weitergegeben werden (transgenerationelle Vererbung). Jede Zelle eines Organismus enthält die gleiche DNA, doch durch unterschiedliche epigenetische Muster exprimieren verschiedene Zelltypen unterschiedliche Gene — dies erklärt, warum eine Leberzelle andere Proteine produziert als eine Nervenzelle.
+      content: `Epigenetik regelt Genexpression ohne die DNA-Sequenz zu verändern. Chemische Markierungen auf DNA oder Histonen schalten Gene an oder aus. Diese Markierungen sind reversibel, aber dennoch über Zellteilungen hinweg stabil — manchmal sogar über Generationen (transgenerationelle Vererbung).
 
-Die DNA-Methylierung ist der am besten erforschte epigenetische Mechanismus. Dabei werden Methylgruppen (-CH₃) durch DNA-Methyltransferasen (DNMTs) an Cytosinbasen in CpG-Dinukleotiden angefügt, wobei 5-Methylcytosin entsteht. CpG-Inseln sind CpG-reiche Regionen, die häufig in Promotorbereichen von Genen liegen. Hypermethylierung eines Promotors führt in der Regel zur Stilllegung (Silencing) des zugehörigen Gens, da die Transkriptionsfaktoren nicht mehr binden können oder methylbindende Proteine rekrutiert werden, die wiederum Repressorkomplexe anziehen. Hypomethylierung eines Promotors ermöglicht hingegen die Genexpression. Die zweite wichtige Klasse epigenetischer Modifikationen betrifft die Histone — die Proteine, um die die DNA im Nukleosom gewickelt ist. Histonmodifikationen umfassen Acetylierung, Methylierung, Phosphorylierung und Ubiquitinierung, hauptsächlich an den N-terminalen „Histonschwänzen“. Histonacetylierung (durch Histonacetyltransferasen, HATs) lockert die Chromatinstruktur (Euchromatin) und fördert die Transkription, während Histondeacetylierung (durch Histondeacetylasen, HDACs) zu einer verdichteten Chromatinstruktur (Heterochromatin) und Transkriptionsrepression führt.
+Jede Zelle im Körper hat die gleiche DNA. Trotzdem produziert eine Leberzelle andere Proteine als eine Nervenzelle. Epigenetik erklärt, wie.
 
-Ein besonders faszinierendes epigenetisches Phänomen ist das genomische Imprinting (genomische Prägung). Dabei werden bestimmte Gene in Abhängigkeit von ihrer elterlichen Herkunft unterschiedlich exprimiert: Entweder wird nur das väterliche oder nur das mütterliche Allel exprimiert, während das andere durch DNA-Methylierung stillgelegt ist. Dieses Muster wird während der Gametogenese in den Keimzellen etabliert und nach der Befruchtung aufrechterhalten. Ein klinisch wichtiges Beispiel ist die Region auf Chromosom 15q11-13: Fehlt die väterlich exprimierte Genregion (Deletion oder uniparentale Disomie), resultiert das Prader-Willi-Syndrom (Hypotonie, Adipositas, Hypogonadismus, kognitive Einschränkung); fehlt die mütterlich exprimierte Genregion, entsteht das Angelman-Syndrom (schwere Entwicklungsverzögerung, Ataxie, Lachanfälle, Krampfanfälle). Ein weiteres wichtiges epigenetisches Phänomen ist die X-Inaktivierung (Lyon-Hypothese): In jeder weiblichen Zelle wird eines der beiden X-Chromosomen zufällig inaktiviert und zum Barr-Körperchen kondensiert, um eine Dosiskompensation zu erreichen.`,
+**DNA-Methylierung**: Enzyme (DNA-Methyltransferasen, DNMTs) hängen Methylgruppen (-CH₃) an Cytosin-Basen in **CpG-Dinukleotiden**. CpG-Inseln sind CpG-reiche Regionen in Promotoren. **Hypermethylierung** eines Promotors = Gensilencing. Transkriptionsfaktoren können nicht mehr binden. **Hypomethylierung** = Gen wird aktiviert.
+
+**Histonmodifikationen**: DNA wickelt sich um Histone (Nukleosom). Modifikationen an den "Histonschwänzen" (N-Termini) ändern die Chromatinstruktur. **Histonacetylierung** (durch HATs) lockert das Chromatin → Euchromatin → aktive Transkription. **Histondeacetylierung** (durch HDACs) verdichtet das Chromatin → Heterochromatin → Genrepression.
+
+**Genomisches Imprinting** (genomische Prägung): Bestimmte Gene werden nur vom Vater oder nur von der Mutter exprimiert — das andere Allel ist durch Methylierung stillgelegt. Dieses Muster wird in den Keimzellen etabliert und nach Befruchtung beibehalten.
+
+Beispiel: Chromosom 15q11-13. Fehlt die väterlich exprimierte Region → **Prader-Willi-Syndrom** (Hypotonie, Adipositas, Hypogonadismus, kognitive Einschränkung). Fehlt die mütterlich exprimierte Region → **Angelman-Syndrom** (schwere Entwicklungsverzögerung, Ataxie, Lachanfälle, Krampfanfälle). Gleiche Deletion — verschiedene Krankheiten, je nachdem, von wem sie stammt.
+
+**X-Inaktivierung** (Lyon-Hypothese): In weiblichen Zellen (XX) wird eines der beiden X-Chromosomen zufällig inaktiviert und zum **Barr-Körperchen** kondensiert. Dosiskompensation — Frauen und Männer haben gleich viel X-chromosomale Genprodukte.`,
       merksätze: [
         'DNA-Methylierung an CpG-Inseln im Promotor → Gensilencing. Histonacetylierung → offenes Chromatin (Euchromatin) → aktive Transkription. Histondeacetylierung → verdichtetes Chromatin (Heterochromatin) → Repression.',
         'Genomisches Imprinting: Elternspezifische Genexpression. Gleiche Deletion auf Chromosom 15q11-13 führt zu Prader-Willi (väterliche Deletion) oder Angelman-Syndrom (mütterliche Deletion).'
@@ -447,7 +522,7 @@ Ein besonders faszinierendes epigenetisches Phänomen ist das genomische Imprint
         question: 'Was ist genomisches Imprinting und wie unterscheidet es sich von der klassischen Mendelschen Vererbung?',
         answer: 'Beim genomischen Imprinting wird nur eines der beiden Allele exprimiert, abhängig von der elterlichen Herkunft (paternales oder maternales Allel). Dies widerspricht der klassischen Mendelschen Genetik, bei der beide Allele gleichwertig zur Merkmalsausprägung beitragen. Die Stilllegung erfolgt durch DNA-Methylierung und wird in der Gametogenese etabliert.'
       },
-      klinischerBezug: 'In der Onkologie spielt die Epigenetik eine zentrale Rolle. Tumorsuppressorgene können durch Promotor-Hypermethylierung stillgelegt werden, was zur Krebsentstehung beitragen kann (z. B. Methylierung des RB1-Gens beim Retinoblastom oder des BRCA1-Gens bei Brustkrebs). Da epigenetische Veränderungen — im Gegensatz zu Mutationen — reversibel sind, bieten sie therapeutische Ansatzpunkte: DNMT-Inhibitoren (z. B. Azacitidin, Decitabin) und HDAC-Inhibitoren werden bereits in der Behandlung hämatologischer Neoplasien eingesetzt.',
+      klinischerBezug: 'Tumorsuppressorgene können durch **Promotor-Hypermethylierung** stillgelegt werden — ein häufiger Mechanismus bei Krebs. Beispiel: Methylierung des **RB1-Gens** beim Retinoblastom oder **BRCA1** bei Brustkrebs. Vorteil: Epigenetische Veränderungen sind reversibel (anders als Mutationen). **DNMT-Inhibitoren** (z.B. Azacitidin, Decitabin) und **HDAC-Inhibitoren** werden bereits in der Therapie hämatologischer Neoplasien eingesetzt — sie reaktivieren stillgelegte Gene.',
       selfTest: [
         {
           question: 'Welche Auswirkung hat die Hypermethylierung eines Genpromotors typischerweise?',

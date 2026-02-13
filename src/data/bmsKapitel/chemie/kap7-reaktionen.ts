@@ -10,11 +10,15 @@ export const chemKap7: Kapitel = {
     {
       id: 'chem-kap7-1',
       title: 'Reaktionstypen',
-      content: `Chemische Reaktionen lassen sich in mehrere grundlegende Typen einteilen, die jeweils charakteristische Merkmale aufweisen. Bei der **Synthese** (Aufbaureaktion) verbinden sich zwei oder mehr Ausgangsstoffe zu einem neuen, komplexeren Produkt. Ein klassisches Beispiel ist die Bildung von Wasser aus Wasserstoff und Sauerstoff: 2 H₂ + O₂ → 2 H₂O. Synthesereaktionen spielen in der Natur und in der Industrie eine zentrale Rolle, etwa bei der Herstellung von Ammoniak im Haber-Bosch-Verfahren (N₂ + 3 H₂ → 2 NH₃). Die Umkehrung der Synthese ist die **Analyse** (Zersetzungsreaktion), bei der ein komplexer Stoff in einfachere Bestandteile zerlegt wird. Ein Beispiel ist die thermische Zersetzung von Calciumcarbonat: CaCO₃ → CaO + CO₂.
+      content: `Chemische Reaktionen lassen sich in grundlegende Typen einteilen.
 
-Die **Umsetzungsreaktion** (auch Austausch- oder Doppeltauschreaktion genannt) beschreibt Reaktionen, bei denen die Bestandteile zweier Verbindungen untereinander ausgetauscht werden. Ein typisches Beispiel ist die Fällung von Bariumsulfat: BaCl₂ + Na₂SO₄ → BaSO₄↓ + 2 NaCl. Diese Reaktion ist auch in der analytischen Chemie von großer Bedeutung, da Bariumsulfat als schwerlöslicher Niederschlag ausfällt und zum Nachweis von Sulfat-Ionen verwendet wird. Umsetzungsreaktionen laufen oft in wässriger Lösung ab und werden durch die Löslichkeitsregeln der beteiligten Salze gesteuert.
+**Synthese** (Aufbaureaktion): Zwei oder mehr Stoffe verbinden sich zu einem komplexeren Produkt. Beispiel: 2 H₂ + O₂ → 2 H₂O. Im **Haber-Bosch-Verfahren** entsteht Ammoniak: N₂ + 3 H₂ → 2 NH₃.
 
-**Verbrennungen** sind eine besondere Form der Oxidationsreaktion, bei der ein Stoff mit Sauerstoff unter Freisetzung von Energie (Wärme und Licht) reagiert. Man unterscheidet die vollständige Verbrennung, bei der organische Stoffe zu CO₂ und H₂O oxidiert werden, von der unvollständigen Verbrennung, bei der auch CO oder Ruß (elementarer Kohlenstoff) entstehen können. Die vollständige Verbrennung von Methan lautet: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Im menschlichen Körper laufen analoge Oxidationsprozesse kontrolliert in der Zellatmung ab, wobei Glucose schrittweise oxidiert und die freiwerdende Energie in Form von ATP gespeichert wird.`,
+**Analyse** (Zersetzung): Ein komplexer Stoff zerfällt in einfachere Bestandteile. Beispiel: Thermische Zersetzung von Calciumcarbonat: CaCO₃ → CaO + CO₂.
+
+**Umsetzung** (Doppeltausch): Die Bestandteile zweier Verbindungen tauschen untereinander aus. Beispiel: Fällung von Bariumsulfat: BaCl₂ + Na₂SO₄ → BaSO₄↓ + 2 NaCl. BaSO₄ ist schwerlöslich und fällt als Niederschlag aus. Diese Reaktion wird zum Nachweis von Sulfat-Ionen verwendet.
+
+**Verbrennung**: Oxidationsreaktion mit Sauerstoff unter Freisetzung von Energie (Wärme und Licht). Bei **vollständiger Verbrennung** entstehen CO₂ und H₂O. Bei **unvollständiger Verbrennung** entstehen auch CO oder Ruß (elementarer Kohlenstoff). Vollständige Verbrennung von Methan: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Im Körper läuft die Zellatmung analog ab: Glucose wird schrittweise oxidiert, die Energie wird als ATP gespeichert.`,
       merksätze: [
         'Synthese = Aufbau (A + B → AB), Analyse = Zerlegung (AB → A + B), Umsetzung = Partnertausch (AB + CD → AD + CB).',
         'Verbrennungen sind exotherme Oxidationsreaktionen mit Sauerstoff — vollständig entstehen CO₂ + H₂O, unvollständig auch CO oder Ruß.'
@@ -23,7 +27,7 @@ Die **Umsetzungsreaktion** (auch Austausch- oder Doppeltauschreaktion genannt) b
         question: 'Welche Reaktionsart liegt vor, wenn Calciumcarbonat beim Erhitzen in Calciumoxid und Kohlenstoffdioxid zerfällt?',
         answer: 'Es handelt sich um eine Analyse (Zersetzungsreaktion), da ein komplexer Stoff in einfachere Bestandteile zerlegt wird: CaCO₃ → CaO + CO₂.'
       },
-      klinischerBezug: 'Bei einer Kohlenmonoxid-Vergiftung (CO) bindet CO mit ca. 200-fach höherer Affinität als O₂ an Hämoglobin und blockiert so den Sauerstofftransport. CO entsteht bei unvollständiger Verbrennung — daher die Gefahr bei defekten Gasthermen oder Bränden in geschlossenen Räumen.',
+      klinischerBezug: 'Bei einer **Kohlenmonoxid-Vergiftung** (CO) bindet CO mit etwa 200-fach höherer Affinität als O₂ an Hämoglobin. Es entsteht **Carboxyhämoglobin** (COHb), das keinen Sauerstoff transportieren kann. Der Sauerstofftransport wird blockiert. CO entsteht bei unvollständiger Verbrennung. Gefahrenquellen: defekte Gasthermen, Brände in geschlossenen Räumen, Autoabgase in Garagen. Symptome: Kopfschmerz, Schwindel, Übelkeit, Bewusstlosigkeit. Therapie: Hochdosis-Sauerstoff (100 % O₂), evtl. hyperbare Sauerstofftherapie. Prävention: CO-Melder.',
       selfTest: [
         {
           question: 'Welche Reaktionsgleichung beschreibt eine Synthese?',
@@ -66,11 +70,17 @@ Die **Umsetzungsreaktion** (auch Austausch- oder Doppeltauschreaktion genannt) b
     {
       id: 'chem-kap7-2',
       title: 'Energetik',
-      content: `Jede chemische Reaktion ist mit einer Energieänderung verbunden. Bei **exothermen Reaktionen** wird Energie an die Umgebung abgegeben — die Enthalpie der Produkte ist geringer als die der Edukte, sodass ΔH < 0 gilt. Typische Beispiele sind Verbrennungen und Neutralisationsreaktionen. Bei **endothermen Reaktionen** wird hingegen Energie aus der Umgebung aufgenommen (ΔH > 0), wie etwa bei der thermischen Zersetzung von Kalkstein oder der Fotosynthese. Die Reaktionsenthalpie ΔH gibt die bei konstantem Druck umgesetzte Wärmemenge an und wird in kJ/mol angegeben. Nach dem Satz von Hess ist die Gesamtenthalpieänderung einer Reaktion unabhängig vom Reaktionsweg — sie hängt nur vom Anfangs- und Endzustand ab.
+      content: `Jede chemische Reaktion ist mit einer Energieänderung verbunden.
 
-Die **Aktivierungsenergie** (Eₐ) ist die Mindestenergie, die aufgebracht werden muss, damit eine Reaktion abläuft. Selbst exotherme Reaktionen benötigen eine anfängliche Energiezufuhr, um den sogenannten Übergangszustand zu erreichen. Ein Streichholz muss beispielsweise erst gerieben werden (Reibungsenergie als Aktivierungsenergie), bevor die exotherme Verbrennung selbständig weiterläuft. In einem Energiediagramm bildet die Aktivierungsenergie den „Hügel“ zwischen Edukten und Produkten. Je höher Eₐ, desto langsamer verläuft die Reaktion bei gegebener Temperatur, da weniger Moleküle die notwendige kinetische Energie besitzen.
+**Exotherme Reaktionen** geben Energie an die Umgebung ab. ΔH < 0 (negativ). Die Enthalpie der Produkte ist geringer als die der Edukte. Beispiele: Verbrennungen, Neutralisationen.
 
-**Katalysatoren** beschleunigen chemische Reaktionen, indem sie die Aktivierungsenergie herabsetzen, ohne selbst verbraucht zu werden. Sie bieten einen alternativen Reaktionsweg mit niedrigerer Energiebarriere. Man unterscheidet homogene Katalysatoren (gleiche Phase wie die Reaktanden, z. B. Säurekatalyse in Lösung) und heterogene Katalysatoren (andere Phase, z. B. Platinoberfläche im Autoabgaskatalysator). In der Biochemie übernehmen Enzyme die Rolle von Katalysatoren — sie können Reaktionen um den Faktor 10⁶ bis 10¹² beschleunigen. Wichtig: Ein Katalysator verändert nicht die Gleichgewichtslage einer Reaktion, sondern beschleunigt lediglich die Einstellung des Gleichgewichts, indem er sowohl Hin- als auch Rückreaktion gleichermaßen beschleunigt.`,
+**Endotherme Reaktionen** nehmen Energie aus der Umgebung auf. ΔH > 0 (positiv). Beispiele: thermische Zersetzung von Kalkstein, Fotosynthese.
+
+Die **Reaktionsenthalpie** ΔH gibt die bei konstantem Druck umgesetzte Wärmemenge an (Einheit: kJ/mol). Nach dem **Satz von Hess** ist die Gesamtenthalpieänderung wegunabhängig. Sie hängt nur vom Anfangs- und Endzustand ab.
+
+Die **Aktivierungsenergie** (Eₐ) ist die Mindestenergie, die zum Start einer Reaktion nötig ist. Selbst exotherme Reaktionen benötigen eine anfängliche Energiezufuhr, um den **Übergangszustand** zu erreichen. Beispiel: Ein Streichholz muss gerieben werden (Reibungsenergie als Aktivierungsenergie), bevor die exotherme Verbrennung selbständig weiterläuft. Im Energiediagramm bildet Eₐ den „Hügel" zwischen Edukten und Produkten. Je höher Eₐ, desto langsamer die Reaktion bei gegebener Temperatur.
+
+**Katalysatoren** beschleunigen Reaktionen, indem sie die Aktivierungsenergie senken. Sie werden selbst nicht verbraucht. Sie bieten einen alternativen Reaktionsweg mit niedrigerer Energiebarriere. **Homogene Katalysatoren**: gleiche Phase wie die Reaktanden (z. B. Säurekatalyse in Lösung). **Heterogene Katalysatoren**: andere Phase (z. B. Platinoberfläche im Autoabgaskatalysator). In der Biochemie sind **Enzyme** Katalysatoren. Sie beschleunigen Reaktionen um den Faktor 10⁶ bis 10¹². Wichtig: Ein Katalysator verändert nicht die Gleichgewichtslage. Er beschleunigt nur die Einstellung des Gleichgewichts (Hin- und Rückreaktion gleichermaßen).`,
       merksätze: [
         'Exotherm: ΔH < 0 (Energie wird frei) — Endotherm: ΔH > 0 (Energie wird aufgenommen). Satz von Hess: ΔH ist wegunabhängig!',
         'Katalysatoren senken die Aktivierungsenergie, verschieben aber NICHT das Gleichgewicht — sie beschleunigen nur die Gleichgewichtseinstellung.'
@@ -79,7 +89,7 @@ Die **Aktivierungsenergie** (Eₐ) ist die Mindestenergie, die aufgebracht werde
         question: 'Wie wirkt ein Katalysator auf die Aktivierungsenergie und die Gleichgewichtslage einer Reaktion?',
         answer: 'Ein Katalysator senkt die Aktivierungsenergie und beschleunigt so die Reaktion, verändert aber nicht die thermodynamische Gleichgewichtslage (ΔG bleibt gleich). Er beschleunigt Hin- und Rückreaktion gleichermaßen.'
       },
-      klinischerBezug: 'Der menschliche Körper nutzt Enzyme als biologische Katalysatoren. Ohne Enzyme würden lebenswichtige Reaktionen wie die Glucoseoxidation extrem langsam ablaufen. Enzymdefekte können zu Stoffwechselerkrankungen führen — z. B. führt ein Mangel an Phenylalanin-Hydroxylase zur Phenylketonurie (PKU), bei der sich Phenylalanin toxisch im Körper anreichert.',
+      klinischerBezug: 'Der Körper nutzt **Enzyme** als biologische Katalysatoren. Ohne Enzyme würden lebenswichtige Reaktionen extrem langsam ablaufen. Die **Glucoseoxidation** (C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O) würde ohne Enzyme Tage dauern. Enzymdefekte führen zu Stoffwechselerkrankungen. Beispiel: **Phenylketonurie** (PKU) – Mangel an **Phenylalanin-Hydroxylase**. Phenylalanin kann nicht zu Tyrosin abgebaut werden. Es reichert sich toxisch im Blut an und schädigt das sich entwickelnde Gehirn. Unbehandelt droht geistige Behinderung. Neugeborenen-Screening erkennt PKU. Therapie: phenylalaninarme Diät (lebenslang). Ein weiteres Beispiel: **Laktoseintoleranz** – Mangel an Laktase, dem Enzym zum Abbau von Laktose.',
       selfTest: [
         {
           question: 'Welche Aussage zu exothermen Reaktionen ist richtig?',
@@ -122,11 +132,19 @@ Die **Aktivierungsenergie** (Eₐ) ist die Mindestenergie, die aufgebracht werde
     {
       id: 'chem-kap7-3',
       title: 'Reaktionskinetik',
-      content: `Die **Reaktionskinetik** befasst sich mit der Geschwindigkeit chemischer Reaktionen. Die Reaktionsgeschwindigkeit v beschreibt die Konzentrationsänderung eines Stoffes pro Zeiteinheit: v = -Δ[Edukt]/Δt = +Δ[Produkt]/Δt. Sie wird in mol/(L·s) angegeben. Die Geschwindigkeit einer Reaktion hängt von mehreren Faktoren ab und ist nicht mit der thermodynamischen Triebkraft (ΔG) zu verwechseln — eine Reaktion kann thermodynamisch begünstigt, aber kinetisch gehemmt sein (z. B. die Verbrennung von Diamant zu CO₂ bei Raumtemperatur).
+      content: `Die **Reaktionskinetik** befasst sich mit der Geschwindigkeit chemischer Reaktionen. Die **Reaktionsgeschwindigkeit** v beschreibt die Konzentrationsänderung pro Zeiteinheit: v = -Δ[Edukt]/Δt = +Δ[Produkt]/Δt (Einheit: mol/(L·s)). Achtung: Reaktionsgeschwindigkeit ist nicht gleich thermodynamische Triebkraft (ΔG). Eine Reaktion kann thermodynamisch begünstigt, aber kinetisch gehemmt sein (z. B. Verbrennung von Diamant zu CO₂ bei Raumtemperatur).
 
-Mehrere **Einflussfaktoren** bestimmen die Reaktionsgeschwindigkeit: (1) **Temperatur** — eine Temperaturerhöhung erhöht die kinetische Energie der Teilchen, sodass mehr Moleküle die Aktivierungsenergie überschreiten. Die **RGT-Regel** (Reaktionsgeschwindigkeit-Temperatur-Regel, auch van-'t-Hoff-Regel) besagt, dass eine Temperaturerhöhung um 10 °C die Reaktionsgeschwindigkeit ungefähr verdoppelt bis verdreifacht (Faktor 2–3). (2) **Konzentration** — höhere Konzentration bedeutet mehr Teilchen pro Volumen und damit häufigere Zusammenstöße. (3) **Zerteilungsgrad** — fein verteilte Feststoffe bieten eine größere Oberfläche und reagieren schneller (z. B. Eisenpulver vs. Eisenblock). (4) **Katalysatoren** — sie bieten einen alternativen Reaktionsweg mit niedrigerer Aktivierungsenergie.
+**Einflussfaktoren** auf die Reaktionsgeschwindigkeit:
 
-Das **Geschwindigkeitsgesetz** einer Reaktion wird experimentell ermittelt und hat die allgemeine Form v = k · [A]ᵐ · [B]ⁿ, wobei k die Geschwindigkeitskonstante ist und m sowie n die Reaktionsordnungen bezüglich der Edukte A und B darstellen. Die Gesamtreaktionsordnung ergibt sich als m + n. Bei Reaktionen erster Ordnung (v = k · [A]) hängt die Geschwindigkeit linear von der Konzentration eines Edukts ab — ein Beispiel ist der radioaktive Zerfall. Bei Reaktionen zweiter Ordnung (v = k · [A]²) verdoppelt sich die Geschwindigkeit bei Verdopplung der Konzentration auf das Vierfache. Die Geschwindigkeitskonstante k ist stark temperaturabhängig und folgt der Arrhenius-Gleichung: k = A · e^(-Eₐ/RT), wobei A der präexponentielle Faktor, Eₐ die Aktivierungsenergie, R die Gaskonstante und T die absolute Temperatur ist.`,
+1. **Temperatur**: Temperaturerhöhung steigert die kinetische Energie der Teilchen. Mehr Moleküle überschreiten die Aktivierungsenergie. Die **RGT-Regel** (Reaktionsgeschwindigkeit-Temperatur-Regel, auch van-'t-Hoff-Regel): +10 °C ≈ doppelte bis dreifache Reaktionsgeschwindigkeit (Faktor 2–3).
+
+2. **Konzentration**: Höhere Konzentration bedeutet mehr Teilchen pro Volumen. Häufigere Zusammenstöße. Schnellere Reaktion.
+
+3. **Zerteilungsgrad**: Fein verteilte Feststoffe haben eine größere Oberfläche. Sie reagieren schneller (z. B. Eisenpulver vs. Eisenblock).
+
+4. **Katalysatoren**: Sie bieten einen alternativen Reaktionsweg mit niedrigerer Aktivierungsenergie.
+
+Das **Geschwindigkeitsgesetz** wird experimentell ermittelt: v = k · [A]ᵐ · [B]ⁿ. k ist die Geschwindigkeitskonstante, m und n sind die Reaktionsordnungen. Die Gesamtreaktionsordnung ist m + n. Bei **Reaktionen 1. Ordnung** (v = k · [A]) ist die Geschwindigkeit proportional zu [A]. Beispiel: radioaktiver Zerfall. Bei **Reaktionen 2. Ordnung** (v = k · [A]²) verdoppelt sich v bei Verdopplung von [A] auf das Vierfache. Die Geschwindigkeitskonstante k ist temperaturabhängig und folgt der **Arrhenius-Gleichung**: k = A · e^(-Eₐ/RT). A ist der präexponentielle Faktor, Eₐ die Aktivierungsenergie, R die Gaskonstante, T die absolute Temperatur.`,
       merksätze: [
         'RGT-Regel: +10 °C ≈ doppelte bis dreifache Reaktionsgeschwindigkeit. Faktoren: Temperatur, Konzentration, Zerteilungsgrad, Katalysator.',
         'Geschwindigkeitsgesetz v = k · [A]ᵐ · [B]ⁿ — die Exponenten m und n werden experimentell bestimmt, NICHT aus der Reaktionsgleichung abgelesen!'
@@ -135,7 +153,7 @@ Das **Geschwindigkeitsgesetz** einer Reaktion wird experimentell ermittelt und h
         question: 'Um welchen Faktor ändert sich die Reaktionsgeschwindigkeit ungefähr, wenn die Temperatur um 30 °C erhöht wird (RGT-Regel, Faktor 2)?',
         answer: 'Nach der RGT-Regel (Faktor 2 pro 10 °C): 2³ = 8-fache Reaktionsgeschwindigkeit bei einer Temperaturerhöhung um 30 °C.'
       },
-      klinischerBezug: 'Die RGT-Regel erklärt, warum Fieber den Stoffwechsel beschleunigt und warum therapeutische Hypothermie (Kühlung auf ~33 °C) nach einem Herzstillstand eingesetzt wird — die verlangsamten biochemischen Reaktionen reduzieren den Sauerstoffbedarf des Gehirns und begrenzen so Hirnschäden.',
+      klinischerBezug: 'Die RGT-Regel erklärt, warum **Fieber** den Stoffwechsel beschleunigt. Bei 40 °C (statt 37 °C) laufen biochemische Reaktionen etwa 1,3-fach schneller ab. Der Energieverbrauch steigt. Umgekehrt wird **therapeutische Hypothermie** (Kühlung auf ~33 °C) nach einem **Herzstillstand** eingesetzt. Die verlangsamten biochemischen Reaktionen reduzieren den Sauerstoffbedarf des Gehirns. Hirnschäden werden begrenzt. Die Hypothermie wird für 12–24 h aufrechterhalten, dann erfolgt eine langsame Wiedererwärmung. Auch bei Organtransplantationen werden Organe gekühlt gelagert, um den Stoffwechsel zu verlangsamen und Zellschäden zu minimieren.',
       selfTest: [
         {
           question: 'Welcher Faktor beeinflusst die Reaktionsgeschwindigkeit NICHT direkt?',
@@ -178,11 +196,23 @@ Das **Geschwindigkeitsgesetz** einer Reaktion wird experimentell ermittelt und h
     {
       id: 'chem-kap7-4',
       title: 'Chemisches Gleichgewicht',
-      content: `Viele chemische Reaktionen sind **reversibel** — sie laufen sowohl in Hin- als auch in Rückrichtung ab. Das **chemische Gleichgewicht** ist ein dynamischer Zustand, in dem die Geschwindigkeit der Hinreaktion gleich der Geschwindigkeit der Rückreaktion ist (v_hin = v_rück). Makroskopisch scheint keine Veränderung stattzufinden, mikroskopisch reagieren die Stoffe jedoch ständig weiter. Für die allgemeine Reaktion aA + bB ⇌ cC + dD lautet die **Gleichgewichtskonstante**: K = ([C]ᶜ · [D]ᵈ) / ([A]ᵃ · [B]ᵇ). Ein großer K-Wert (K >> 1) bedeutet, dass das Gleichgewicht auf der Produktseite liegt; ein kleiner K-Wert (K << 1) bedeutet, dass die Edukte überwiegen.
+      content: `Viele chemische Reaktionen sind **reversibel**. Sie laufen in Hin- und Rückrichtung ab. Das **chemische Gleichgewicht** ist ein dynamischer Zustand: v_hin = v_rück. Makroskopisch scheint keine Veränderung stattzufinden, mikroskopisch reagieren die Stoffe ständig weiter.
 
-Das **Prinzip von Le Chatelier** (Prinzip des kleinsten Zwangs) beschreibt, wie ein System im Gleichgewicht auf äußere Störungen reagiert: Das Gleichgewicht verschiebt sich stets so, dass die Störung teilweise kompensiert wird. Konkret bedeutet das: (1) **Konzentration** — Zugabe eines Edukts verschiebt das Gleichgewicht nach rechts (zu den Produkten), Entfernung eines Produkts ebenfalls. (2) **Druck** (bei Gasreaktionen) — eine Druckerhöhung verschiebt das Gleichgewicht zur Seite mit weniger Gasteilchen. Beispiel: N₂ + 3 H₂ ⇌ 2 NH₃ — links 4 mol Gas, rechts 2 mol Gas → Druckerhöhung begünstigt die NH₃-Bildung. (3) **Temperatur** — eine Temperaturerhöhung begünstigt die endotherme Richtung, eine Temperaturerniedrigung die exotherme. Wichtig: Die Temperatur ändert den K-Wert, Konzentration und Druck verschieben nur die Gleichgewichtslage bei konstantem K.
+Für aA + bB ⇌ cC + dD gilt die **Gleichgewichtskonstante**: K = ([C]ᶜ · [D]ᵈ) / ([A]ᵃ · [B]ᵇ). K >> 1: Gleichgewicht liegt auf der Produktseite. K << 1: Edukte überwiegen.
 
-Die Gleichgewichtskonstante K hängt mit der freien Enthalpie über die Beziehung ΔG° = -R·T·ln(K) zusammen. Ist ΔG° negativ, ist K > 1 und die Produkte werden bevorzugt gebildet. Ist ΔG° positiv, ist K < 1 und die Edukte überwiegen. Diese Beziehung verknüpft die Thermodynamik direkt mit der Lage des Gleichgewichts. Für das Haber-Bosch-Verfahren zur Ammoniaksynthese folgt daraus: Hoher Druck (verschiebt Gleichgewicht zur Produktseite) und moderate Temperatur (Kompromiss zwischen Gleichgewichtslage und Reaktionsgeschwindigkeit) bei Verwendung eines Eisenkatalysators sind optimale Bedingungen. Der Katalysator beschleunigt die Einstellung des Gleichgewichts, verändert K aber nicht.`,
+Das **Prinzip von Le Chatelier** (Prinzip des kleinsten Zwangs): Das Gleichgewicht verschiebt sich so, dass die Störung teilweise kompensiert wird.
+
+1. **Konzentration**: Zugabe eines Edukts verschiebt das Gleichgewicht nach rechts (zu den Produkten). Entfernung eines Produkts ebenfalls.
+
+2. **Druck** (bei Gasreaktionen): Druckerhöhung verschiebt das Gleichgewicht zur Seite mit weniger Gasteilchen. Beispiel: N₂ + 3 H₂ ⇌ 2 NH₃ (links 4 mol Gas, rechts 2 mol Gas). Druckerhöhung begünstigt NH₃-Bildung.
+
+3. **Temperatur**: Temperaturerhöhung begünstigt die endotherme Richtung. Temperaturerniedrigung begünstigt die exotherme Richtung.
+
+Wichtig: Nur Temperaturänderung verändert den K-Wert. Konzentration und Druck verschieben nur die Gleichgewichtslage bei konstantem K.
+
+Die Gleichgewichtskonstante hängt mit der freien Enthalpie zusammen: ΔG° = -R·T·ln(K). ΔG° negativ → K > 1 (Produkte bevorzugt). ΔG° positiv → K < 1 (Edukte überwiegen).
+
+Beispiel **Haber-Bosch-Verfahren** (Ammoniaksynthese): Hoher Druck (verschiebt Gleichgewicht zur Produktseite) und moderate Temperatur (Kompromiss zwischen Gleichgewichtslage und Reaktionsgeschwindigkeit) bei Verwendung eines Eisenkatalysators sind optimal. Der Katalysator beschleunigt die Gleichgewichtseinstellung, verändert K aber nicht.`,
       merksätze: [
         'Le Chatelier: Das Gleichgewicht weicht einer Störung aus — Konzentrationszugabe → Verbrauch, Druckerhöhung → weniger Teilchen, Temperaturerhöhung → endotherme Richtung.',
         'K = [Produkte]/[Edukte] mit Exponenten. Nur Temperaturänderung verändert K — Konzentration, Druck und Katalysator ändern K nicht!'
@@ -191,7 +221,7 @@ Die Gleichgewichtskonstante K hängt mit der freien Enthalpie über die Beziehun
         question: 'Wie verschiebt sich das Gleichgewicht der Reaktion N₂ + 3 H₂ ⇌ 2 NH₃ (exotherm) bei Druckerhöhung und Temperaturerniedrigung?',
         answer: 'Beides verschiebt das Gleichgewicht nach rechts (zur Produktseite): Druckerhöhung begünstigt die Seite mit weniger Gasteilchen (2 statt 4 mol), Temperaturerniedrigung begünstigt die exotherme Richtung (Hinreaktion).'
       },
-      klinischerBezug: 'Das Kohlensäure-Bicarbonat-Gleichgewicht im Blut (CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻) folgt dem Prinzip von Le Chatelier: Bei verstärkter CO₂-Produktion (z. B. bei Belastung) verschiebt sich das Gleichgewicht nach rechts, der pH sinkt. Die Lunge kompensiert durch vermehrte CO₂-Abatmung und verschiebt das Gleichgewicht zurück nach links.',
+      klinischerBezug: 'Das **Kohlensäure-Bicarbonat-Gleichgewicht** im Blut folgt dem Prinzip von Le Chatelier: CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻. Bei verstärkter CO₂-Produktion (z. B. bei Belastung) verschiebt sich das Gleichgewicht nach rechts, der pH sinkt. Die Lunge kompensiert durch vermehrte CO₂-Abatmung und verschiebt das Gleichgewicht zurück nach links. Bei **Hyperventilation** (übermäßige Atmung) wird zu viel CO₂ abgeatmet, das Gleichgewicht verschiebt sich nach links, der pH steigt (**respiratorische Alkalose**). Symptome: Kribbeln, Schwindel, Tetanie. Bei **Hypoventilation** (unzureichende Atmung) steigt der CO₂-Partialdruck, das Gleichgewicht verschiebt sich nach rechts, der pH sinkt (**respiratorische Azidose**). Beispiel: chronisch obstruktive Lungenerkrankung (COPD).',
       selfTest: [
         {
           question: 'Was beschreibt die Gleichgewichtskonstante K?',

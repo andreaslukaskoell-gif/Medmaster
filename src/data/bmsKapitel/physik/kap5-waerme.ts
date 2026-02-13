@@ -10,11 +10,13 @@ export const physKap5: Kapitel = {
     {
       id: 'phys-kap5-1',
       title: 'Temperatur & Wärme',
-      content: `Die Temperatur ist ein Maß für die mittlere kinetische Energie der Teilchen eines Stoffes. Je schneller sich die Atome und Moleküle bewegen, desto höher ist die Temperatur. In der Physik wird die Temperatur in Kelvin (K) gemessen — der SI-Einheit der Temperatur. Der absolute Nullpunkt bei 0 K = -273,15 °C ist die tiefstmögliche Temperatur, bei der die Teilchenbewegung ihr Minimum erreicht (Quantenmechanisch: Nullpunktsenergie). Die Umrechnung zwischen Celsius und Kelvin ist einfach: T(K) = T(°C) + 273,15. Die Fahrenheit-Skala wird vor allem in den USA verwendet und spielt für die MedAT-Prüfung eine untergeordnete Rolle.
+      content: `**Temperatur** ist die mittlere kinetische Energie der Teilchen. Schneller bewegte Atome = höhere Temperatur. Die SI-Einheit ist Kelvin (K). Umrechnung: T(K) = T(°C) + 273,15. Der **absolute Nullpunkt** bei 0 K = -273,15 °C ist die tiefstmögliche Temperatur.
 
-Wärme Q ist eine Form der Energieübertragung zwischen Körpern unterschiedlicher Temperatur. Wärme fließt stets vom wärmeren zum kälteren Körper, bis ein thermisches Gleichgewicht erreicht ist. Die Wärmemenge, die nötig ist, um einen Körper zu erwärmen, berechnet sich mit Q = m · c · ΔT, wobei m die Masse, c die spezifische Wärmekapazität und ΔT = T₂ - T₁ die Temperaturänderung ist. Die spezifische Wärmekapazität c gibt an, wie viel Energie benötigt wird, um 1 kg eines Stoffes um 1 K (oder 1 °C) zu erwärmen. Wasser hat mit c = 4186 J/(kg·K) eine besonders hohe spezifische Wärmekapazität — es braucht also viel Energie, um Wasser zu erwärmen, gibt aber auch viel Energie beim Abkühlen ab. Diese Eigenschaft macht Wasser zu einem hervorragenden Wärmespeicher.
+**Wärme Q** ist Energieübertragung zwischen Körpern unterschiedlicher Temperatur. Wärme fließt immer von warm nach kalt. Die Formel: Q = m · c · ΔT. Dabei ist m die Masse, c die **spezifische Wärmekapazität** (wie viel Energie 1 kg eines Stoffes pro Kelvin aufnimmt) und ΔT = T₂ - T₁ die Temperaturänderung.
 
-Die hohe Wärmekapazität des Wassers hat fundamentale Bedeutung für den menschlichen Körper, der zu etwa 60 % aus Wasser besteht. Sie sorgt dafür, dass die Körpertemperatur relativ stabil bleibt und nicht bei jeder Stoffwechselaktivität stark schwankt. Die Wärmekapazität des gesamten Körpers beträgt etwa 3,5 kJ/(kg·K). Bei Mischungsaufgaben gilt: Die vom heißen Körper abgegebene Wärmemenge ist gleich der vom kalten Körper aufgenommenen (Richmannsche Mischungsregel): m₁ · c₁ · (T₁ - Tm) = m₂ · c₂ · (Tm - T₂), wobei Tm die Mischungstemperatur ist. Diese Gleichung wird häufig in Prüfungen abgefragt und sollte sicher umgestellt werden können. Auch die Kalorimetrie — die experimentelle Bestimmung von Wärmemengen — basiert auf diesem Prinzip.`,
+Wasser hat c = 4186 J/(kg·K). Das ist extrem hoch. Wasser braucht also viel Energie zum Erwärmen und gibt viel Energie beim Abkühlen ab. Perfekter Wärmespeicher.
+
+Die hohe Wärmekapazität des Wassers stabilisiert die Körpertemperatur. Der Körper (ca. 60 % Wasser) hat eine Wärmekapazität von etwa 3,5 kJ/(kg·K). Bei Mischungsaufgaben: Die vom heißen Körper abgegebene Wärmemenge = die vom kalten Körper aufgenommene (Richmannsche Mischungsregel): m₁ · c₁ · (T₁ - Tm) = m₂ · c₂ · (Tm - T₂). Tm ist die Mischungstemperatur.`,
       merksätze: [
         'Wärmemenge: Q = m·c·ΔT. Die spezifische Wärmekapazität von Wasser beträgt c = 4186 J/(kg·K) — die höchste aller gewöhnlichen Flüssigkeiten.',
         'Temperaturskalen: T(K) = T(°C) + 273,15. Der absolute Nullpunkt liegt bei 0 K = -273,15 °C. Wärme fließt immer von warm nach kalt.',
@@ -24,7 +26,7 @@ Die hohe Wärmekapazität des Wassers hat fundamentale Bedeutung für den mensch
         answer: 'Q = m·c·ΔT = 2 · 4200 · (80-20) = 2 · 4200 · 60 = 504000 J = 504 kJ.',
       },
       klinischerBezug:
-        'Die hohe Wärmekapazität des Wassers stabilisiert die Körpertemperatur. Fieber (z. B. 39 °C statt 37 °C) erfordert eine beachtliche Energiemenge: Für einen 70 kg schweren Körper: Q = 70 · 3500 · 2 ≈ 490 kJ. Therapeutische Hypothermie nach Herzstillstand (Kühlung auf 33 °C) nutzt dieses Prinzip zur Neuroprotektion.',
+        'Bei **Fieber** (39 °C statt 37 °C) wird viel Energie benötigt: 70 kg Körper: Q = 70 · 3500 · 2 ≈ 490 kJ. Die **therapeutische Hypothermie** nach Herzstillstand (Kühlung auf 33 °C) nutzt die hohe Wärmekapazität zur Neuroprotektion. Der **Defibrillator** gibt elektrische Energie von 200–360 J ab. Die hohe Wärmekapazität verhindert abrupte Temperaturschwankungen.',
       selfTest: [
         {
           question: 'Welche Temperatur entspricht 0 °C in Kelvin?',
@@ -55,11 +57,17 @@ Die hohe Wärmekapazität des Wassers hat fundamentale Bedeutung für den mensch
     {
       id: 'phys-kap5-2',
       title: 'Aggregatzustandsänderungen',
-      content: `Stoffe können in drei Aggregatzuständen vorliegen: fest, flüssig und gasförmig. Der Übergang zwischen diesen Zuständen erfordert die Zufuhr oder Abgabe von Energie, ohne dass sich dabei die Temperatur ändert. Beim Schmelzen (fest → flüssig) muss die Schmelzwärme Qs = m · qs zugeführt werden, wobei qs die spezifische Schmelzwärme ist. Für Wasser beträgt qs = 334 kJ/kg. Beim Erstarren (flüssig → fest) wird dieselbe Energiemenge wieder frei. Während des gesamten Schmelz- bzw. Erstarrungsvorgangs bleibt die Temperatur konstant bei der Schmelztemperatur (für Wasser: 0 °C bei Normaldruck). Die zugeführte Energie wird verwendet, um die regelmäßige Kristallstruktur aufzubrechen, nicht um die Temperatur zu erhöhen.
+      content: `Stoffe liegen in drei Zuständen vor: fest, flüssig, gasförmig. Der Übergang erfordert Energie. Die Temperatur bleibt dabei konstant.
 
-Beim Verdampfen (flüssig → gasförmig) muss die Verdampfungswärme Qv = m · qv zugeführt werden. Für Wasser beträgt qv = 2257 kJ/kg — deutlich mehr als die Schmelzwärme, da beim Verdampfen alle intermolekularen Bindungen überwunden werden müssen. Beim Kondensieren (gasförmig → flüssig) wird diese Energie wieder freigesetzt. Der Siedepunkt ist druckabhängig: Bei niedrigerem Druck (z. B. auf einem hohen Berg) siedet Wasser bei niedrigerer Temperatur, bei höherem Druck bei höherer Temperatur (Schnellkochtopf-Prinzip). Die Sublimation bezeichnet den direkten Übergang von fest zu gasförmig (z. B. Trockeneis), die Resublimation den umgekehrten Vorgang (z. B. Reifbildung).
+**Schmelzen** (fest → flüssig): Erfordert die **Schmelzwärme** Qs = m · qs. Für Wasser: qs = 334 kJ/kg. Während des Schmelzens bleibt T konstant bei 0 °C (Normaldruck). Die Energie bricht die Kristallstruktur auf, erhöht aber nicht die Temperatur. **Erstarren** (flüssig → fest) setzt dieselbe Energie wieder frei.
 
-Das Phasendiagramm stellt die Aggregatzustände eines Stoffes in Abhängigkeit von Druck und Temperatur dar. Die Grenzkurven trennen die Bereiche der drei Phasen voneinander. Am Tripelpunkt koexistieren alle drei Phasen gleichzeitig (für Wasser bei 0,01 °C und 611 Pa). Oberhalb des kritischen Punktes gibt es keinen Unterschied mehr zwischen flüssiger und gasförmiger Phase — man spricht vom überkritischen Zustand. Die anomale Dichteeigenschaft des Wassers (maximale Dichte bei 4 °C) ist biologisch von immenser Bedeutung: Eis schwimmt auf Wasser, wodurch Seen von oben zufrieren und das Leben darunter geschützt wird. In der Medizin spielt die Verdampfungswärme eine große Rolle beim Schwitzen: Jeder Liter verdunsteter Schweiß entzieht dem Körper etwa 2257 kJ Wärme und ist damit der effektivste Mechanismus der Thermoregulation.`,
+**Verdampfen** (flüssig → gasförmig): Erfordert die **Verdampfungswärme** Qv = m · qv. Für Wasser: qv = 2257 kJ/kg. Deutlich mehr als Schmelzwärme. Beim Verdampfen müssen alle intermolekularen Bindungen überwunden werden. **Kondensieren** (gasförmig → flüssig) setzt die Energie wieder frei.
+
+Der Siedepunkt ist druckabhängig. Niedriger Druck → niedrigerer Siedepunkt (z. B. am Berg). Höherer Druck → höherer Siedepunkt (Schnellkochtopf). **Sublimation**: direkter Übergang fest → gasförmig (Trockeneis). **Resublimation**: gasförmig → fest (Reifbildung).
+
+Das **Phasendiagramm** zeigt die Aggregatzustände in Abhängigkeit von Druck und Temperatur. Am **Tripelpunkt** koexistieren alle drei Phasen (Wasser: 0,01 °C und 611 Pa). Oberhalb des kritischen Punkts: überkritischer Zustand (keine Unterscheidung flüssig/gasförmig).
+
+Die **Anomalie des Wassers**: Maximale Dichte bei 4 °C. Deshalb schwimmt Eis auf Wasser. Seen frieren von oben zu. Leben im Wasser wird geschützt.`,
       merksätze: [
         'Schmelzwärme: Qs = m·qs (für Wasser: qs = 334 kJ/kg). Verdampfungswärme: Qv = m·qv (für Wasser: qv = 2257 kJ/kg). Während des Phasenübergangs bleibt T konstant.',
         'Tripelpunkt: Alle drei Phasen koexistieren. Der Siedepunkt ist druckabhängig. Wasser hat seine maximale Dichte bei 4 °C (Anomalie des Wassers).',
@@ -69,7 +77,7 @@ Das Phasendiagramm stellt die Aggregatzustände eines Stoffes in Abhängigkeit v
         answer: 'Qs = m · qs = 0,5 · 334 = 167 kJ. Die Temperatur bleibt während des gesamten Schmelzvorgangs bei 0 °C.',
       },
       klinischerBezug:
-        'Das Schwitzen ist der effektivste Mechanismus der Thermoregulation. Die Verdunstung von 1 Liter Schweiß entzieht dem Körper ca. 2257 kJ Wärme. Bei Hitzschlag versagt dieser Mechanismus. Kältepackungen (Cold Packs) nutzen die Schmelzwärme von Eis bzw. die endotherme Lösung von Salzen zur lokalen Kühlung bei Sportverletzungen.',
+        '**Schwitzen** ist der effektivste Kühlmechanismus. 1 Liter verdunsteter Schweiß entzieht dem Körper 2257 kJ Wärme. Bei **Hitzschlag** versagt dieser Mechanismus. **Kältepackungen** (Cold Packs) nutzen die Schmelzwärme von Eis (334 kJ/kg) oder endotherme Salz-Lösungsvorgänge zur lokalen Kühlung bei Sportverletzungen.',
       selfTest: [
         {
           question: 'Während des Schmelzens eines Stoffes:',
@@ -112,11 +120,13 @@ Das Phasendiagramm stellt die Aggregatzustände eines Stoffes in Abhängigkeit v
     {
       id: 'phys-kap5-3',
       title: 'Wärmeübertragung',
-      content: `Wärme kann auf drei grundlegende Arten übertragen werden: durch Wärmeleitung, Konvektion und Wärmestrahlung. Die Wärmeleitung (Konduktion) erfolgt durch direkte Übertragung kinetischer Energie zwischen benachbarten Teilchen ohne Materietransport. Gute Wärmeleiter sind Metalle (besonders Silber, Kupfer, Aluminium), schlechte Wärmeleiter (Isolatoren) sind Gase, Kunststoffe, Holz und Luft. Der Wärmestrom durch Leitung wird durch das Fouriersche Gesetz beschrieben: Q̇ = λ · A · ΔT/d, wobei λ die Wärmeleitfähigkeit des Materials (in W/(m·K)), A die Querschnittsfläche, ΔT die Temperaturdifferenz und d die Dicke des Materials ist. Luft hat eine sehr geringe Wärmeleitfähigkeit, weshalb ruhende Luftschichten hervorragend isolieren — das Prinzip hinter Doppelverglasung und Daunenjacken.
+      content: `Wärme wird auf drei Arten übertragen: Leitung, Konvektion, Strahlung.
 
-Die Konvektion ist Wärmeübertragung durch Strömung eines Fluids (Flüssigkeit oder Gas). Man unterscheidet natürliche (freie) Konvektion, die durch Dichteunterschiede aufgrund von Temperaturunterschieden angetrieben wird (warme Luft steigt auf, kalte sinkt ab), und erzwungene Konvektion, bei der die Strömung durch äußere Einflüsse wie Pumpen oder Ventilatoren erzeugt wird. Konvektion ist deutlich effizienter als Wärmeleitung allein, weshalb Heizungen in Räumen die Luft umwälzen und Warmwasserheizungen das Prinzip der Konvektion nutzen. In der Meteorologie treibt Konvektion Wind- und Wettersysteme an.
+**Wärmeleitung** (Konduktion): Direkte Übertragung kinetischer Energie zwischen Teilchen. Kein Materietransport. Gute Leiter: Metalle (Silber, Kupfer, Aluminium). Schlechte Leiter (Isolatoren): Gase, Kunststoffe, Holz, Luft. Fouriersches Gesetz: Q̇ = λ · A · ΔT/d. λ ist die **Wärmeleitfähigkeit** in W/(m·K), A die Querschnittsfläche, ΔT die Temperaturdifferenz, d die Dicke. Luft hat sehr geringe Wärmeleitfähigkeit. Deshalb isolieren Doppelverglasung und Daunenjacken so gut.
 
-Die Wärmestrahlung (Infrarotstrahlung) ist die einzige Form der Wärmeübertragung, die kein Medium benötigt — sie erfolgt durch elektromagnetische Strahlung und funktioniert auch im Vakuum (so erreicht uns die Sonnenwärme durch den leeren Weltraum). Das Stefan-Boltzmann-Gesetz beschreibt die abgestrahlte Leistung eines Körpers: P = ε · σ · A · T⁴, wobei ε der Emissionsgrad (0 ≤ ε ≤ 1, für einen schwarzen Strahler ε = 1), σ = 5,67 · 10⁻⁸ W/(m²·K⁴) die Stefan-Boltzmann-Konstante, A die Oberfläche und T die absolute Temperatur in Kelvin ist. Bemerkenswert ist die T⁴-Abhängigkeit: Eine Verdopplung der Temperatur führt zu einer 16-fachen Strahlung. In der Medizin nutzt die Thermographie die Infrarotstrahlung des Körpers zur Temperaturmessung und Diagnostik (z. B. Erkennung von Entzündungen oder Durchblutungsstörungen).`,
+**Konvektion**: Wärmeübertragung durch Strömung eines Fluids. **Natürliche Konvektion**: Dichteunterschiede durch Temperatur (warme Luft steigt, kalte sinkt). **Erzwungene Konvektion**: Pumpen oder Ventilatoren erzeugen die Strömung. Konvektion ist viel effizienter als reine Leitung. Heizungen nutzen Konvektion.
+
+**Wärmestrahlung** (Infrarot): Einzige Form ohne Medium. Elektromagnetische Strahlung. Funktioniert im Vakuum (Sonnenwärme durch Weltraum). Stefan-Boltzmann-Gesetz: P = ε · σ · A · T⁴. ε ist der Emissionsgrad (0 ≤ ε ≤ 1, schwarzer Strahler: ε = 1), σ = 5,67 · 10⁻⁸ W/(m²·K⁴) die Stefan-Boltzmann-Konstante, A die Oberfläche, T die absolute Temperatur. Wichtig: T⁴-Abhängigkeit. Verdopplung von T → 16-fache Strahlung.`,
       merksätze: [
         'Drei Arten der Wärmeübertragung: Leitung (Teilchenkontakt), Konvektion (Strömung), Strahlung (elektromagnetisch — auch im Vakuum).',
         'Stefan-Boltzmann-Gesetz: P = ε·σ·A·T⁴. Die Strahlungsleistung steigt mit der vierten Potenz der Temperatur. Luft ist ein schlechter Wärmeleiter → guter Isolator.',
@@ -126,7 +136,7 @@ Die Wärmestrahlung (Infrarotstrahlung) ist die einzige Form der Wärmeübertrag
         answer: 'Daunen schließen viele kleine Luftkammern ein. Luft ist ein schlechter Wärmeleiter (λ ≈ 0,025 W/(m·K)), und die eingeschlossene Luft kann nicht konvektieren. Dadurch wird sowohl Wärmeleitung als auch Konvektion minimiert.',
       },
       klinischerBezug:
-        'Der menschliche Körper verliert Wärme durch alle drei Mechanismen: Wärmeleitung (Kontakt mit kalten Oberflächen), Konvektion (Luftströmung an der Haut, Windchill-Effekt), Strahlung (Infrarotemission der Hautoberfläche, ca. 60 % des Gesamtwärmeverlusts in Ruhe). Die Infrarot-Thermographie nutzt die Wärmestrahlung zur Diagnostik von Durchblutungsstörungen und Entzündungen.',
+        'Der Körper verliert Wärme durch alle drei Mechanismen: **Wärmeleitung** (Kontakt mit kalten Oberflächen), **Konvektion** (Luftströmung an der Haut, Windchill-Effekt — bei Wind kühlt der Körper schneller ab), **Strahlung** (Infrarotemission der Haut, ca. 60 % des Gesamtwärmeverlusts in Ruhe). Die **Infrarot-Thermographie** misst die Wärmestrahlung (28–32 °C Hauttemperatur) und erkennt Durchblutungsstörungen und Entzündungen.',
       selfTest: [
         {
           question: 'Welche Form der Wärmeübertragung funktioniert auch im Vakuum?',
@@ -163,11 +173,13 @@ Die Wärmestrahlung (Infrarotstrahlung) ist die einzige Form der Wärmeübertrag
     {
       id: 'phys-kap5-4',
       title: 'Hauptsätze der Thermodynamik',
-      content: `Die Hauptsätze der Thermodynamik sind fundamentale Naturgesetze, die die Grundregeln für alle Energieumwandlungen beschreiben. Der nullte Hauptsatz definiert den Begriff des thermischen Gleichgewichts: Wenn zwei Systeme jeweils im thermischen Gleichgewicht mit einem dritten System stehen, dann stehen sie auch untereinander im thermischen Gleichgewicht. Dieser scheinbar triviale Satz ist die physikalische Grundlage der Temperaturmessung — ein Thermometer zeigt die Temperatur korrekt an, weil es sich im thermischen Gleichgewicht mit dem zu messenden Körper befindet. Ohne den nullten Hauptsatz wäre der Temperaturbegriff nicht wohldefiniert.
+      content: `Die Hauptsätze der Thermodynamik sind fundamentale Naturgesetze für alle Energieumwandlungen.
 
-Der erste Hauptsatz der Thermodynamik ist die Formulierung des Energieerhaltungssatzes für thermische Systeme: ΔU = Q + W (Vorzeichenkonvention: Q > 0 bei zugeführter Wärme, W > 0 bei am System verrichteter Arbeit). Die innere Energie U eines Systems kann sich nur durch Wärmezufuhr Q oder Arbeit W ändern. Ein Perpetuum mobile erster Art — eine Maschine, die Energie aus dem Nichts erzeugt — ist nach diesem Hauptsatz unmöglich. Die innere Energie eines idealen Gases hängt nur von der Temperatur ab: U = n · Cv · T (mit Cv als molare Wärmekapazität bei konstantem Volumen). Bei adiabatischen Prozessen (Q = 0) ändert sich die innere Energie nur durch Arbeit: ΔU = W. Bei isothermen Prozessen (ΔT = 0, also ΔU = 0) wird die zugeführte Wärme vollständig in Arbeit umgewandelt: Q = -W.
+**0. Hauptsatz**: Thermisches Gleichgewicht ist transitiv. Wenn System A und B je im Gleichgewicht mit C sind, dann sind A und B auch untereinander im Gleichgewicht. Das ist die Grundlage der Temperaturmessung. Ein Thermometer zeigt die Temperatur korrekt, weil es im Gleichgewicht mit dem Messobjekt ist.
 
-Der zweite Hauptsatz der Thermodynamik beschreibt die Richtung natürlicher Prozesse und führt die Entropie S als zentrale Größe ein. Er besagt in einer Formulierung: Wärme fließt nie spontan von einem kälteren zu einem wärmeren Körper (Clausius). In einer anderen Formulierung: Es ist unmöglich, eine periodisch arbeitende Maschine zu konstruieren, die ausschließlich Wärme in Arbeit umwandelt (Kelvin-Planck) — ein Perpetuum mobile zweiter Art ist unmöglich. Die Entropie ist ein Maß für die Unordnung eines Systems: ΔS ≥ Q/T. In einem abgeschlossenen System kann die Entropie nur zunehmen oder gleich bleiben — sie nimmt bei irreversiblen (natürlichen) Prozessen zu. Der zweite Hauptsatz erklärt, warum ein Ei sich nicht von selbst zusammensetzt, warum Wärme nicht spontan bergauf fließt und warum kein Motor einen Wirkungsgrad von 100 % erreichen kann. Der maximale Wirkungsgrad einer Wärmekraftmaschine wird durch den Carnot-Wirkungsgrad beschränkt: ηCarnot = 1 - Tkalt/Twarm.`,
+**1. Hauptsatz**: Energieerhaltung für thermische Systeme. ΔU = Q + W. Die innere Energie U ändert sich nur durch Wärmezufuhr Q oder Arbeit W. Vorzeichenkonvention: Q > 0 bei zugeführter Wärme, W > 0 bei am System verrichteter Arbeit. Ein **Perpetuum mobile 1. Art** (Energie aus dem Nichts) ist unmöglich. Die innere Energie eines idealen Gases hängt nur von T ab: U = n · Cv · T. Bei adiabatischen Prozessen (Q = 0): ΔU = W. Bei isothermen Prozessen (ΔT = 0, ΔU = 0): Q = -W.
+
+**2. Hauptsatz**: Beschreibt die Richtung natürlicher Prozesse. Einführung der **Entropie S** als zentraler Größe. Wärme fließt nie spontan von kalt nach warm (Clausius). Es ist unmöglich, periodisch Wärme vollständig in Arbeit umzuwandeln (Kelvin-Planck). Ein **Perpetuum mobile 2. Art** ist unmöglich. Die Entropie ist ein Maß für Unordnung: ΔS ≥ Q/T. In einem abgeschlossenen System nimmt die Entropie nur zu oder bleibt gleich. Bei irreversiblen (natürlichen) Prozessen steigt sie. Der maximale Wirkungsgrad einer Wärmekraftmaschine: ηCarnot = 1 - Tkalt/Twarm. Kein Motor erreicht 100 % Wirkungsgrad.`,
       merksätze: [
         '0. Hauptsatz: Thermisches Gleichgewicht ist transitiv → Grundlage der Temperaturmessung. 1. Hauptsatz: ΔU = Q + W → Energieerhaltung, kein Perpetuum mobile 1. Art.',
         '2. Hauptsatz: Die Entropie eines abgeschlossenen Systems nimmt nie ab (ΔS ≥ 0). Wärme fließt spontan nur von warm nach kalt. Kein Perpetuum mobile 2. Art. Carnot: ηmax = 1 - Tkalt/Twarm.',
@@ -177,7 +189,7 @@ Der zweite Hauptsatz der Thermodynamik beschreibt die Richtung natürlicher Proz
         answer: 'ηCarnot = 1 - Tkalt/Twarm = 1 - 300/600 = 1 - 0,5 = 0,5 = 50 %. Kein realer Motor kann diesen Wert überschreiten.',
       },
       klinischerBezug:
-        'Der menschliche Körper unterliegt den Hauptsätzen der Thermodynamik. Die Stoffwechselenergie (1. Hauptsatz) wird in Arbeit und Wärme umgewandelt. Die Körpertemperatur von 37 °C wird aufrechterhalten, indem ständig Wärme an die kältere Umgebung abgegeben wird (2. Hauptsatz). Die Entropie der aufgenommenen Nahrung ist geringer als die der Ausscheidungsprodukte — der Körper erhöht die Entropie der Umgebung, um seine eigene niedrige Entropie aufrechtzürhalten.',
+        'Der Körper unterliegt den Hauptsätzen der Thermodynamik. Die **Stoffwechselenergie** (1. Hauptsatz) wird in Arbeit und Wärme umgewandelt. Die **Körpertemperatur von 37 °C** wird aufrechterhalten, indem ständig Wärme an die kältere Umgebung abgegeben wird (2. Hauptsatz). Die Entropie der aufgenommenen Nahrung ist geringer als die der Ausscheidungsprodukte — der Körper erhöht die Entropie der Umgebung, um seine eigene niedrige Entropie aufrechtzuerhalten. Der **Grundumsatz** (ca. 7000 kJ/Tag bei 70 kg) entspricht der minimalen Energieumwandlung zur Aufrechterhaltung der Körperfunktionen.',
       selfTest: [
         {
           question: 'Der erste Hauptsatz der Thermodynamik besagt:',

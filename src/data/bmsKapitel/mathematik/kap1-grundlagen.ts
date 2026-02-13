@@ -10,11 +10,23 @@ export const mathKap1: Kapitel = {
     {
       id: 'math-kap1-1',
       title: 'Zahlensysteme',
-      content: `Die Mathematik baut auf verschiedenen Zahlensystemen auf, die hierarchisch aufeinander aufbauen. Die natürlichen Zahlen ℕ = {1, 2, 3, ...} bilden die Grundlage und beschreiben Anzahlen. In manchen Konventionen wird die Null miteinbezogen: ℕ₀ = {0, 1, 2, 3, ...}. Die ganzen Zahlen ℤ = {..., -2, -1, 0, 1, 2, ...} erweitern die natürlichen Zahlen um negative Zahlen und die Null. Damit wird die Subtraktion uneingeschränkt möglich: Jede Differenz zweier natürlicher Zahlen ergibt eine ganze Zahl. Die rationalen Zahlen ℚ umfassen alle Brüche p/q mit p ∈ ℤ und q ∈ ℤ \\ {0}. Jede rationale Zahl lässt sich als endlicher oder periodischer Dezimalbruch darstellen. Beispielsweise ist 1/3 = 0,333... periodisch, während 1/4 = 0,25 endlich ist.
+      content: `**Natürliche Zahlen** ℕ = {1, 2, 3, ...} sind Zahlen zum Zählen. Manchmal wird die Null dazugezählt: ℕ₀ = {0, 1, 2, 3, ...}. Das ist die Basis.
 
-Die reellen Zahlen ℝ schließen zusätzlich die irrationalen Zahlen ein, also Zahlen, die sich nicht als Bruch ganzer Zahlen ausdrücken lassen. Bekannte Beispiele sind √2, π und die Eulersche Zahl e. Irrationale Zahlen besitzen eine unendliche, nicht-periodische Dezimaldarstellung. Die Inklusionskette lautet: ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ. Im MedAT ist ein sicheres Verständnis dieser Zahlmengen wichtig, da Aufgaben häufig prüfen, ob eine bestimmte Zahl zu einer gegebenen Menge gehört. Zum Beispiel gehört √4 = 2 zu ℕ, während √3 irrational und somit nur Element von ℝ ist. Die Unterscheidung zwischen rationalen und irrationalen Zahlen ist ein häufiger Prüfungsgegenstand.
+**Ganze Zahlen** ℤ = {..., -2, -1, 0, 1, 2, ...} erweitern ℕ um negative Zahlen. Der Trick dabei: Jetzt kannst du immer subtrahieren, ohne dass das Ergebnis "ungültig" wird.
 
-Primzahlen sind natürliche Zahlen größer als 1, die nur durch 1 und sich selbst teilbar sind. Die ersten Primzahlen lauten: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Die Zahl 2 ist die einzige gerade Primzahl. Der Fundamentalsatz der Arithmetik besagt, dass jede natürliche Zahl größer als 1 eindeutig als Produkt von Primzahlen darstellbar ist (Primfaktorzerlegung). Beispiel: 60 = 2² · 3 · 5. Teilbarkeitsregeln erleichtern das Rechnen: Eine Zahl ist durch 2 teilbar, wenn ihre letzte Ziffer gerade ist; durch 3, wenn ihre Quersumme durch 3 teilbar ist; durch 5, wenn sie auf 0 oder 5 endet; durch 9, wenn ihre Quersumme durch 9 teilbar ist; durch 4, wenn die letzten beiden Ziffern durch 4 teilbar sind. Das kleinste gemeinsame Vielfache (kgV) und der größte gemeinsame Teiler (ggT) lassen sich mithilfe der Primfaktorzerlegung bestimmen: Der ggT enthält alle gemeinsamen Primfaktoren mit der jeweils kleinsten Potenz, das kgV alle vorkommenden Primfaktoren mit der jeweils größten Potenz.`,
+**Rationale Zahlen** ℚ sind alle Brüche p/q mit p ∈ ℤ und q ∈ ℤ \\ {0}. Jede rationale Zahl wird entweder als endlicher Dezimalbruch geschrieben (z. B. 1/4 = 0,25) oder als periodischer (z. B. 1/3 = 0,333...).
+
+**Reelle Zahlen** ℝ enthalten zusätzlich die **irrationalen Zahlen** (Zahlen, die sich nicht als Bruch schreiben lassen). Beispiele: √2, π, e. Irrationale Zahlen haben unendlich viele Nachkommastellen ohne Periode.
+
+Die Inklusionskette: ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ. Im MedAT wird oft gefragt, zu welcher Menge eine Zahl gehört. √4 = 2 gehört zu ℕ, √3 ist irrational und gehört nur zu ℝ.
+
+**Primzahlen** sind natürliche Zahlen größer als 1, die nur durch 1 und sich selbst teilbar sind: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Die 2 ist die einzige gerade Primzahl.
+
+Der **Fundamentalsatz der Arithmetik**: Jede Zahl größer als 1 lässt sich eindeutig als Produkt von Primzahlen schreiben. Beispiel: 60 = 2² · 3 · 5.
+
+**Teilbarkeitsregeln**: Durch 2 teilbar → letzte Ziffer gerade. Durch 3 teilbar → Quersumme durch 3 teilbar. Durch 5 teilbar → endet auf 0 oder 5. Durch 9 teilbar → Quersumme durch 9 teilbar. Durch 4 teilbar → letzten zwei Ziffern durch 4 teilbar.
+
+**ggT** (größter gemeinsamer Teiler) und **kgV** (kleinstes gemeinsames Vielfaches) berechnest du mit der Primfaktorzerlegung: ggT nimmt alle gemeinsamen Primfaktoren mit kleinster Potenz, kgV nimmt alle vorkommenden Primfaktoren mit größter Potenz.`,
       merksätze: [
         'Die Zahlmengen bilden die Kette ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ. Jede rationale Zahl hat eine endliche oder periodische Dezimaldarstellung, irrationale Zahlen haben eine unendliche nicht-periodische.',
         'Teilbarkeitsregeln: durch 2 → letzte Ziffer gerade; durch 3 → Quersumme durch 3 teilbar; durch 9 → Quersumme durch 9 teilbar; durch 5 → endet auf 0 oder 5.'
@@ -23,7 +35,7 @@ Primzahlen sind natürliche Zahlen größer als 1, die nur durch 1 und sich selb
         question: 'Welche der folgenden Zahlen ist irrational? (a) 0,75 (b) √9 (c) √7 (d) 22/7',
         answer: '(c) √7 ist irrational. 0,75 = 3/4 ∈ ℚ, √9 = 3 ∈ ℕ, 22/7 ∈ ℚ. Nur √7 lässt sich nicht als Bruch ganzer Zahlen darstellen.'
       },
-      klinischerBezug: 'In der Pharmakologie werden Dosierungen oft als rationale Zahlen angegeben (z. B. 0,25 mg). Die sichere Zuordnung zu Zahlmengen hilft bei der Überprüfung, ob eine berechnete Dosis plausibel ist.',
+      klinischerBezug: 'Der **Blutdruck** wird als Bruch angegeben (z. B. 120/80 mmHg). Die **Blutzucker**-Normalwerte liegen bei 70-100 mg/dl nüchtern. Das sind rationale Zahlen. In der Pharmakokinetik ist die **Halbwertszeit** oft irrational (z. B. t₁/₂ = 4,3 h kann genau sein oder gerundet).',
       selfTest: [
         {
           question: 'Welche Aussage über die Zahl √16 ist korrekt?',
@@ -66,11 +78,19 @@ Primzahlen sind natürliche Zahlen größer als 1, die nur durch 1 und sich selb
     {
       id: 'math-kap1-2',
       title: 'Bruchrechnung',
-      content: `Die Bruchrechnung ist ein zentrales Thema der Arithmetik und im MedAT unverzichtbar. Ein Bruch a/b besteht aus dem Zähler a und dem Nenner b (b ≠ 0). Brüche werden erweitert, indem Zähler und Nenner mit derselben Zahl multipliziert werden: a/b = (a·n)/(b·n). Beim Kürzen wird durch einen gemeinsamen Teiler dividiert: (a·n)/(b·n) = a/b. Ein Bruch ist vollständig gekürzt, wenn ggT(a, b) = 1. Beispiel: 12/18 lässt sich durch 6 kürzen zu 2/3. Das Erweitern ist besonders wichtig, um Brüche gleichnamig zu machen, also auf denselben Nenner zu bringen.
+      content: `Ein **Bruch** a/b besteht aus Zähler a und Nenner b (b ≠ 0). **Erweitern**: Zähler und Nenner mit derselben Zahl multiplizieren: a/b = (a·n)/(b·n). **Kürzen**: Durch gemeinsamen Teiler dividieren: (a·n)/(b·n) = a/b. Ein Bruch ist vollständig gekürzt, wenn ggT(a, b) = 1. Beispiel: 12/18 kürzen mit 6 ergibt 2/3.
 
-Für die Addition und Subtraktion von Brüchen müssen die Nenner gleich sein. Man bestimmt das kgV der Nenner als Hauptnenner und erweitert entsprechend: a/b + c/d = (a·d + c·b)/(b·d). Effizienter ist es, den Hauptnenner als kgV(b, d) zu wählen. Beispiel: 2/3 + 3/4. Der Hauptnenner ist kgV(3, 4) = 12. Also: 8/12 + 9/12 = 17/12. Die Multiplikation zweier Brüche erfolgt durch Zähler-mal-Zähler und Nenner-mal-Nenner: (a/b) · (c/d) = (a·c)/(b·d). Die Division durch einen Bruch entspricht der Multiplikation mit dem Kehrwert: (a/b) ÷ (c/d) = (a/b) · (d/c) = (a·d)/(b·c). Es empfiehlt sich, vor dem Multiplizieren kreuzweise zu kürzen, um kleinere Zahlen zu erhalten.
+**Addition/Subtraktion**: Brüche müssen gleichnamig sein. Hauptnenner = kgV der Nenner. Dann erweitern und addieren: a/b + c/d = (a·d + c·b)/(b·d). Beispiel: 2/3 + 3/4. Hauptnenner = kgV(3, 4) = 12. Also: 8/12 + 9/12 = 17/12.
 
-Doppelbrüche sind Brüche, deren Zähler oder Nenner selbst ein Bruch ist. Zur Vereinfachung wird der Doppelbruch als Division aufgefasst: (a/b)/(c/d) = (a/b) · (d/c). Gemischte Zahlen wie 2 3/4 können in unechte Brüche umgewandelt werden: 2 3/4 = (2·4 + 3)/4 = 11/4. Umgekehrt wird ein unechter Bruch durch Division mit Rest in eine gemischte Zahl umgeformt: 17/5 = 3 2/5 (denn 17 = 3·5 + 2). Beim Vergleich von Brüchen hilft das Gleichnamigmachen: Der Bruch mit dem größeren Zähler (bei gleichem Nenner) ist der größere. Alternativ kann man die Kreuzregel nutzen: a/b < c/d genau dann, wenn a·d < b·c (für positive Nenner). Diese Rechenfertigkeiten sind im MedAT essenziell, da viele Aufgaben darauf abzielen, effizient mit Brüchen zu rechnen.`,
+**Multiplikation**: Zähler mal Zähler, Nenner mal Nenner: (a/b) · (c/d) = (a·c)/(b·d). Vor dem Multiplizieren kreuzweise kürzen spart Arbeit.
+
+**Division**: Mit dem Kehrwert multiplizieren: (a/b) ÷ (c/d) = (a/b) · (d/c) = (a·d)/(b·c).
+
+**Doppelbrüche**: (a/b)/(c/d) = (a/b) · (d/c). Einfach als Division interpretieren.
+
+**Gemischte Zahlen** wie 2 3/4 werden zu unechten Brüchen: 2 3/4 = (2·4 + 3)/4 = 11/4. Umgekehrt: 17/5 = 3 2/5 (denn 17 = 3·5 + 2).
+
+**Brüche vergleichen**: Gleichnamig machen, dann größerer Zähler = größerer Bruch. Oder Kreuzregel: a/b < c/d genau dann, wenn a·d < b·c (für positive Nenner).`,
       merksätze: [
         'Addition: Brüche gleichnamig machen, dann Zähler addieren. Multiplikation: Zähler mal Zähler, Nenner mal Nenner. Division: Mit dem Kehrwert multiplizieren.',
         'Doppelbrüche werden als Division interpretiert: (a/b)/(c/d) = (a·d)/(b·c). Vor dem Multiplizieren immer kreuzweise kürzen!'
@@ -79,7 +99,7 @@ Doppelbrüche sind Brüche, deren Zähler oder Nenner selbst ein Bruch ist. Zur 
         question: 'Berechnen Sie: (3/4 + 2/3) · 6/5',
         answer: '3/4 + 2/3 = 9/12 + 8/12 = 17/12. Dann: (17/12) · (6/5) = (17·6)/(12·5) = 102/60 = 17/10 = 1,7.'
       },
-      klinischerBezug: 'Bruchrechnung ist in der Medizin allgegenwärtig: Verdünnungsreihen in der Mikrobiologie (z. B. 1:10.000), Dosisanpassungen nach Körpergewicht und Umrechnung von Konzentrationsangaben (mg/ml, %, ppm) erfordern sicheres Bruchrechnen.',
+      klinischerBezug: '**Verdünnungsreihen** in der Mikrobiologie: 1:10.000 bedeutet 1/10.000. **Infusionsraten** berechnen: Wenn 500 ml in 6 Stunden laufen sollen, sind das 500/6 ml/h ≈ 83,3 ml/h. **Medikamentendosen** nach Körpergewicht: 5 mg/kg bei 70 kg = 5 · 70 = 350 mg. Oft wird mit 3/4, 1/2, 1/4 der Dosis gearbeitet.',
       selfTest: [
         {
           question: 'Was ergibt 5/6 - 3/8?',
@@ -122,11 +142,25 @@ Doppelbrüche sind Brüche, deren Zähler oder Nenner selbst ein Bruch ist. Zur 
     {
       id: 'math-kap1-3',
       title: 'Potenzen & Wurzeln',
-      content: `Potenzen sind eine Kurzschreibweise für wiederholte Multiplikation: aⁿ = a · a · ... · a (n Faktoren), wobei a die Basis und n der Exponent ist. Für die Rechnung mit Potenzen gelten fundamentale Gesetze: aᵐ · aⁿ = aᵐ⁺ⁿ (gleiche Basis, Exponenten addieren), aᵐ / aⁿ = aᵐ⁻ⁿ (gleiche Basis, Exponenten subtrahieren), (aᵐ)ⁿ = aᵐ·ⁿ (Potenz einer Potenz, Exponenten multiplizieren), (a · b)ⁿ = aⁿ · bⁿ (Produkt potenzieren), und (a/b)ⁿ = aⁿ/bⁿ (Quotient potenzieren). Besondere Exponenten: a⁰ = 1 für a ≠ 0, und a⁻ⁿ = 1/aⁿ. Diese Regeln ermöglichen das systematische Vereinfachen komplexer Potenzausdrücke.
+      content: `**Potenzen**: aⁿ = a · a · ... · a (n Faktoren). a ist die Basis, n der Exponent.
 
-Wurzeln sind die Umkehroperation des Potenzierens: ⁿ√a = a^(1/n). Die Quadratwurzel √a = a^(1/2) ist der häufigste Spezialfall. Aus der Potenzschreibweise leiten sich die Wurzelgesetze ab: ⁿ√a · ⁿ√b = ⁿ√(a·b), ⁿ√a / ⁿ√b = ⁿ√(a/b), und ᵐ√(ⁿ√a) = ᵐ·ⁿ√a. Rationale Exponenten verbinden Potenzen und Wurzeln: a^(m/n) = ⁿ√(aᵐ). Beispiel: 8^(2/3) = ³√(8²) = ³√64 = 4. Alternativ: 8^(2/3) = (³√8)² = 2² = 4. Beim Vereinfachen von Wurzeln zieht man quadratische Faktoren heraus: √72 = √(36 · 2) = 6√2. Das Rationalmachen des Nenners beseitigt Wurzeln im Nenner: 1/√3 = √3/3.
+**Potenzgesetze**: aᵐ · aⁿ = aᵐ⁺ⁿ (gleiche Basis → Exponenten addieren). aᵐ / aⁿ = aᵐ⁻ⁿ (gleiche Basis → Exponenten subtrahieren). (aᵐ)ⁿ = aᵐ·ⁿ (Potenz einer Potenz → Exponenten multiplizieren). (a · b)ⁿ = aⁿ · bⁿ. (a/b)ⁿ = aⁿ/bⁿ.
 
-Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. Sie ermöglichen die kompakte Darstellung sehr großer oder sehr kleiner Zahlen in wissenschaftlicher Notation: a · 10ⁿ mit 1 ≤ a < 10. Beispiel: 0,000042 = 4,2 · 10⁻⁵ und 3.500.000 = 3,5 · 10⁶. Die Multiplikation in wissenschaftlicher Notation erfolgt durch Multiplikation der Mantissen und Addition der Exponenten: (3 · 10⁴) · (2 · 10⁻²) = 6 · 10². Bei der Division werden die Exponenten subtrahiert. SI-Vorsilben wie Milli (10⁻³), Mikro (10⁻⁶), Nano (10⁻⁹), Kilo (10³) und Mega (10⁶) basieren direkt auf Zehnerpotenzen und sind im medizinischen Alltag unverzichtbar für Konzentrationsangaben, Dosierungen und Laborwerte.`,
+**Besondere Exponenten**: a⁰ = 1 (für a ≠ 0). a⁻ⁿ = 1/aⁿ.
+
+**Wurzeln**: ⁿ√a = a^(1/n). Die **Quadratwurzel** √a = a^(1/2) ist der häufigste Fall.
+
+**Wurzelgesetze**: ⁿ√a · ⁿ√b = ⁿ√(a·b). ⁿ√a / ⁿ√b = ⁿ√(a/b). ᵐ√(ⁿ√a) = ᵐ·ⁿ√a.
+
+**Rationale Exponenten**: a^(m/n) = ⁿ√(aᵐ). Beispiel: 8^(2/3) = ³√(8²) = ³√64 = 4. Alternativ: 8^(2/3) = (³√8)² = 2² = 4.
+
+**Wurzeln vereinfachen**: Quadratische Faktoren herausziehen. √72 = √(36 · 2) = 6√2.
+
+**Rationalmachen**: Wurzel im Nenner beseitigen. 1/√3 = √3/3.
+
+**Zehnerpotenzen** (wissenschaftliche Notation): a · 10ⁿ mit 1 ≤ a < 10. Beispiel: 0,000042 = 4,2 · 10⁻⁵ und 3.500.000 = 3,5 · 10⁶. Multiplikation: (3 · 10⁴) · (2 · 10⁻²) = 6 · 10². Division: Exponenten subtrahieren.
+
+**SI-Vorsilben**: Milli (10⁻³), Mikro (10⁻⁶), Nano (10⁻⁹), Kilo (10³), Mega (10⁶).`,
       merksätze: [
         'Potenzgesetze merken: Gleiche Basis → Exponenten addieren/subtrahieren. Potenz einer Potenz → Exponenten multiplizieren. a⁰ = 1 und a⁻ⁿ = 1/aⁿ.',
         'Rationale Exponenten verbinden Potenzen und Wurzeln: a^(m/n) = ⁿ√(aᵐ). Wissenschaftliche Notation: a · 10ⁿ mit 1 ≤ a < 10.'
@@ -135,7 +169,7 @@ Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. 
         question: 'Vereinfachen Sie: (2³ · 4²) / 2⁵',
         answer: '4² = (2²)² = 2⁴. Also: (2³ · 2⁴) / 2⁵ = 2⁷ / 2⁵ = 2² = 4.'
       },
-      klinischerBezug: 'Zehnerpotenzen begegnen Medizinern täglich: Laborwerte wie Erythrozytenzahl (ca. 5 · 10¹² /L), Medikamentendosen im Mikrogramm-Bereich (10⁻⁶ g) und pH-Wert-Berechnungen (H⁺-Konzentration = 10⁻ᵖᴴ mol/L) erfordern sicheres Rechnen mit Potenzen.',
+      klinischerBezug: '**Erythrozytenzahl**: ca. 5 · 10¹² /L. **Medikamentendosen**: Atropin 0,5 mg = 5 · 10⁻⁴ g = 500 μg (Mikro = 10⁻⁶). **pH-Wert**: [H⁺] = 10⁻ᵖᴴ mol/L. Bei pH 7,4 (Blut) ist [H⁺] = 10⁻⁷·⁴ mol/L ≈ 40 nmol/L. **Halbwertszeit**: Nach n Halbwertszeiten bleibt die Konzentration c₀ · (1/2)ⁿ = c₀ · 2⁻ⁿ.',
       selfTest: [
         {
           question: 'Was ergibt 27^(2/3)?',
@@ -178,7 +212,15 @@ Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. 
     {
       id: 'math-kap1-4',
       title: 'Prozent- & Zinsrechnung',
-      content: `Die Prozentrechnung beschreibt Anteile bezogen auf den Grundwert 100. Die drei Grundgrößen sind: der Grundwert G (das Ganze, 100 %), der Prozentsatz p (in %) und der Prozentwert W (der Anteil). Die fundamentale Beziehung lautet: W = G · p/100. Durch Umstellen erhält man: G = W · 100/p und p = W/G · 100. Beispiel: 15 % von 240 ergibt W = 240 · 15/100 = 36. Umgekehrt: Wenn 36 von 240 gesucht ist, berechnet man p = 36/240 · 100 = 15 %. Promille funktioniert analog, aber bezogen auf 1000: W = G · p/1000. Prozentuale Veränderungen spielen eine zentrale Rolle bei Wachstums- und Abnahmeprozessen. Der Wachstumsfaktor q = 1 + p/100 beschreibt Zunahme, q = 1 - p/100 Abnahme. Bei Zinseszins gilt: K_n = K_0 · (1 + p/100)^n. Die Zinseszinsformel ist mathematisch identisch mit dem exponentiellen Wachstum.`,
+      content: `**Prozentrechnung**: W = G · p/100. W ist der **Prozentwert**, G der **Grundwert**, p der **Prozentsatz**. Durch Umstellen: G = W · 100/p und p = W/G · 100. Beispiel: 15 % von 240 = 240 · 15/100 = 36.
+
+**Promille**: Bezogen auf 1000. W = G · p/1000.
+
+**Wachstumsfaktor**: q = 1 + p/100 (Zunahme). q = 1 - p/100 (Abnahme). Beispiel: +20 % entspricht q = 1,20. -20 % entspricht q = 0,80.
+
+Der Trick dabei: Aufeinanderfolgende Änderungen werden multipliziert, nicht addiert. 100 → +20 % → 120 → -20 % → 96 (nicht 100!). Grund: Die 20 % bei der zweiten Änderung beziehen sich auf 120, nicht auf 100.
+
+**Prozentuale Veränderung**: p = (Neuwert - Altwert)/Altwert · 100.`,
       lernziele: [
         'Grundwert, Prozentwert und Prozentsatz berechnen können',
         'Prozentuale Veränderungen und Wachstumsfaktoren anwenden können',
@@ -187,16 +229,24 @@ Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. 
       sections: [
         {
           heading: 'Grundwert, Prozentwert, Prozentsatz',
-          text: `Die Prozentrechnung beschreibt Anteile bezogen auf den Grundwert 100. Die drei Grundgrößen sind: der Grundwert G (das Ganze, 100 %), der Prozentsatz p (in %) und der Prozentwert W (der Anteil). Die fundamentale Beziehung lautet: W = G · p/100. Durch Umstellen erhält man: G = W · 100/p und p = W/G · 100. Beispiel: 15 % von 240 ergibt W = 240 · 15/100 = 36. Umgekehrt: Wenn 36 von 240 gesucht ist, berechnet man p = 36/240 · 100 = 15 %. Promille funktioniert analog, aber bezogen auf 1000: W = G · p/1000. Im MedAT werden häufig Aufgaben gestellt, bei denen zwischen diesen Größen umgerechnet werden muss.`,
+          text: `Die drei Grundgrößen: **Grundwert** G (das Ganze, 100 %), **Prozentsatz** p (in %), **Prozentwert** W (der Anteil). Die Formel: W = G · p/100. Durch Umstellen: G = W · 100/p und p = W/G · 100. Beispiel: 36 von 240 sind p = 36/240 · 100 = 15 %.`,
           merksatz: 'Prozentrechnung: W = G · p/100. Wachstumsfaktor: q = 1 + p/100 (Zunahme) bzw. q = 1 - p/100 (Abnahme). Achtung: Aufeinanderfolgende Änderungen multiplizieren, nicht addieren!'
         },
         {
           heading: 'Prozentuale Veränderungen',
-          text: `Prozentuale Veränderungen spielen eine zentrale Rolle bei Wachstums- und Abnahmeprozessen. Die prozentuale Zunahme berechnet sich als: p = (Neuwert - Altwert)/Altwert · 100. Eine Steigerung um p % bedeutet Multiplikation mit dem Wachstumsfaktor q = 1 + p/100. Eine Abnahme um p % entspricht dem Faktor q = 1 - p/100. Achtung: Eine Steigerung um 20 % und eine anschließende Senkung um 20 % ergeben nicht den Ausgangswert! Beispiel: 100 -> +20 % -> 120 -> -20 % -> 96. Der Fehler liegt darin, dass die 20 % beim zweiten Mal auf eine größere Basis (120) bezogen werden. Mehrmalige prozentuale Änderungen werden durch Multiplikation der Wachstumsfaktoren berechnet.`
+          text: `Prozentuale Zunahme: p = (Neuwert - Altwert)/Altwert · 100. Eine Steigerung um p % bedeutet Multiplikation mit q = 1 + p/100. Eine Abnahme um p % entspricht q = 1 - p/100.
+
+Achtung: +20 % und dann -20 % ergibt nicht den Ausgangswert. Beispiel: 100 → +20 % → 120 → -20 % → 96. Der Fehler: Die 20 % beim zweiten Mal beziehen sich auf 120, nicht auf 100.`
         },
         {
           heading: 'Zinsrechnung und exponentielles Wachstum',
-          text: `Die Zinsrechnung ist eine Anwendung der Prozentrechnung auf Kapitalverzinsung. Bei einfacher Verzinsung gilt: K_n = K_0 · (1 + n · p/100), wobei K_0 das Anfangskapital, p der Jahreszinssatz und n die Anzahl der Jahre ist. Bei Zinseszins werden die Zinsen jährlich dem Kapital zugeschlagen und mitverzinst: K_n = K_0 · (1 + p/100)^n. Der Unterschied zur einfachen Verzinsung wird bei längerer Laufzeit dramatisch. Beispiel: 1000 Euro bei 5 % ergeben nach 20 Jahren mit einfacher Verzinsung 2000 Euro, mit Zinseszins hingegen 1000 · 1,05^20 ~ 2653,30 Euro. Für unterjährige Verzinsung (m-mal pro Jahr) gilt: K_n = K_0 · (1 + p/(100·m))^(m·n). Die Zinseszinsformel ist mathematisch identisch mit dem exponentiellen Wachstum und findet in der Medizin Anwendung bei Modellen für Bakterienwachstum oder Pharmakokinetik.`,
+          text: `**Einfache Verzinsung**: K_n = K_0 · (1 + n · p/100). K_0 ist das Anfangskapital, p der Jahreszinssatz, n die Anzahl der Jahre.
+
+**Zinseszins**: K_n = K_0 · (1 + p/100)^n. Die Zinsen werden jährlich dem Kapital zugeschlagen und mitverzinst. Beispiel: 1000 Euro bei 5 % ergeben nach 20 Jahren mit Zinseszins 1000 · 1,05^20 ≈ 2653,30 Euro (einfache Verzinsung: nur 2000 Euro).
+
+**Unterjährige Verzinsung** (m-mal pro Jahr): K_n = K_0 · (1 + p/(100·m))^(m·n).
+
+Die Zinseszinsformel ist mathematisch identisch mit exponentiellem Wachstum.`,
           table: {
             headers: ['Größe', 'Formel', 'Beispiel'],
             rows: [
@@ -217,7 +267,7 @@ Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. 
         question: 'Ein Medikament wird um 30 % reduziert und kostet nun 49 Euro. Was war der Originalpreis?',
         answer: 'G · 0,70 = 49 Euro, also G = 49/0,70 = 70 Euro. Der Originalpreis betrug 70 Euro.'
       },
-      klinischerBezug: 'In der klinischen Forschung werden Therapieergebnisse oft als prozentuale Risikoreduktion angegeben. Die Unterscheidung zwischen absoluter Risikoreduktion (ARR) und relativer Risikoreduktion (RRR) ist medizinisch essenziell. Auch Verdünnungsreihen und Konzentrationsberechnungen beruhen auf Prozentrechnung.',
+      klinischerBezug: '**Absolute Risikoreduktion (ARR)** vs. **relative Risikoreduktion (RRR)**: ARR = Risiko₁ - Risiko₂ (in Prozentpunkten). RRR = (Risiko₁ - Risiko₂)/Risiko₁ · 100 %. Beispiel: Risiko sinkt von 4 % auf 2 %. ARR = 2 Prozentpunkte. RRR = 50 %. Die RRR klingt dramatischer, ist aber irreführend ohne absolute Zahlen. **Number Needed to Treat (NNT)** = 1/ARR = 1/0,02 = 50.',
       selfTest: [
         {
           question: 'Ein Preis steigt um 25 % und wird danach um 20 % gesenkt. Wie verändert sich der Originalpreis?',

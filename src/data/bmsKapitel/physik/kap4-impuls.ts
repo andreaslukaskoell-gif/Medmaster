@@ -10,11 +10,21 @@ export const physKap4: Kapitel = {
     {
       id: 'phys-kap4-1',
       title: 'Impuls',
-      content: `Der Impuls p ist eine vektorielle Größe, die als Produkt aus Masse und Geschwindigkeit definiert ist: p = m · v. Seine SI-Einheit ist kg·m/s (= N·s). Der Impuls beschreibt den Bewegungszustand eines Körpers umfassender als die Geschwindigkeit allein, da er auch die Masse berücksichtigt. Ein schwerer Lastwagen hat bei gleicher Geschwindigkeit einen viel größeren Impuls als ein Fahrrad. Das zweite Newtonsche Gesetz lässt sich in seiner allgemeineren Form als F = Δp/Δt ausdrücken: Die auf einen Körper wirkende Kraft entspricht der zeitlichen Änderung seines Impulses. Ist die Masse konstant, reduziert sich dies zu F = m · a. Der Kraftstoß (Impulsänderung) F · Δt = Δp ist besonders nützlich bei der Analyse von Stoßvorgängen, bei denen große Kräfte über kurze Zeitintervalle wirken.
+      content: `**p = m·v** — der Impuls. Masse × Geschwindigkeit. Einheit: kg·m/s (= N·s).
 
-Der Impulserhaltungssatz ist eines der fundamentalsten Prinzipien der Physik: In einem abgeschlossenen System (ohne äußere Kräfte) bleibt der Gesamtimpuls konstant. Dies gilt für alle Stoßvorgänge: m₁·v₁ + m₂·v₂ = m₁·v₁' + m₂·v₂', wobei die gestrichenen Größen die Geschwindigkeiten nach dem Stoß bezeichnen. Man unterscheidet zwei Idealfälle: Beim elastischen (vollkommen elastischen) Stoß bleiben sowohl Impuls als auch kinetische Energie erhalten — die Körper prallen ohne Energieverlust voneinander ab. Ein gutes Beispiel sind Billardkugeln. Beim unelastischen (plastischen) Stoß bleiben die Körper nach dem Stoß aneinander haften und bewegen sich mit einer gemeinsamen Geschwindigkeit weiter. Hier bleibt zwar der Impuls erhalten, aber ein Teil der kinetischen Energie wird in Verformungsarbeit und Wärme umgewandelt.
+Der **Impuls** (Bewegungsgröße) beschreibt den Bewegungszustand eines Körpers umfassender als die Geschwindigkeit allein. Ein schwerer LKW hat bei gleicher Geschwindigkeit viel mehr Impuls als ein Fahrrad.
 
-Beim vollkommen unelastischen Stoß verschmelzen die Körper: m₁·v₁ + m₂·v₂ = (m₁ + m₂)·v', woraus sich die gemeinsame Geschwindigkeit v' = (m₁·v₁ + m₂·v₂)/(m₁ + m₂) ergibt. Der Energieverlust beim unelastischen Stoß lässt sich als Differenz der kinetischen Energien vor und nach dem Stoß berechnen. In der Medizin ist der Impulserhaltungssatz relevant für die Biomechanik von Verletzungen: Bei einem Autounfall bestimmt der Impuls des aufprallenden Fahrzeugs die auf den Insassen wirkenden Kräfte. Airbags und Knautschzonen verlängern die Stoßzeit Δt, wodurch bei gleichem Impulsübertrag die maximale Kraft F = Δp/Δt reduziert wird — ein lebensrettendes Prinzip der Fahrzeugsicherheit. Auch der Rückstoß einer Waffe oder einer Rakete lässt sich mit dem Impulserhaltungssatz erklären.`,
+**Kraftstoß:** F·Δt = Δp. Die Kraft multipliziert mit der Zeit ergibt die Impulsänderung. Das ist der Schlüssel zum Verständnis von Stößen.
+
+**Impulserhaltungssatz:** In einem abgeschlossenen System (keine äußeren Kräfte) bleibt der Gesamtimpuls konstant. m₁·v₁ + m₂·v₂ = m₁·v₁' + m₂·v₂' (vor dem Stoß = nach dem Stoß).
+
+**Elastischer Stoß:** Impuls UND kinetische Energie bleiben erhalten. Beispiel: Billardkugeln.
+
+**Unelastischer Stoß:** Nur Impuls bleibt erhalten. Kinetische Energie geht teilweise in Verformung/Wärme über.
+
+**Vollkommen unelastischer Stoß:** Die Körper bleiben aneinander haften. m₁·v₁ + m₂·v₂ = (m₁ + m₂)·v'. Beispiel: Auto (1000 kg, 20 m/s) trifft stehendes Auto (1000 kg, 0 m/s) → v' = (1000·20 + 1000·0)/2000 = 10 m/s.
+
+**Wichtig:** F = Δp/Δt (allgemeine Form des 2. Newton). Je größer Δt, desto kleiner F bei gleichem Impulsübertrag. Das ist das Prinzip von Airbags.`,
       merksätze: [
         'Impuls: p = m·v. Impulserhaltungssatz: In einem abgeschlossenen System gilt p_vorher = p_nachher. Kraftstoß: F·Δt = Δp.',
         'Elastischer Stoß: Impuls und kinetische Energie erhalten. Unelastischer Stoß: Nur Impuls erhalten, kinetische Energie geht teilweise in Verformung/Wärme über.',
@@ -24,7 +34,7 @@ Beim vollkommen unelastischen Stoß verschmelzen die Körper: m₁·v₁ + m₂�
         answer: 'v\' = (m₁·v₁ + m₂·v₂)/(m₁ + m₂) = (1000·20 + 1000·0)/2000 = 10 m/s. Die Hälfte der kinetischen Energie geht verloren.',
       },
       klinischerBezug:
-        'Airbags und Knautschzonen nutzen das Prinzip F = Δp/Δt: Durch Verlängerung der Stoßzeit Δt wird die auf den Körper wirkende Kraft bei gleichem Impulsübertrag deutlich reduziert. Ohne Airbag: Kopf trifft Lenkrad in ≈ 1 ms → extrem hohe Kraft. Mit Airbag: Verzögerung über ≈ 100 ms → Kraft um Faktor 100 reduziert.',
+        '**Airbags und Knautschzonen** nutzen F = Δp/Δt: Durch Verlängerung der Stoßzeit Δt wird die Kraft bei gleichem Impulsübertrag drastisch reduziert. Ohne Airbag: Kopf trifft Lenkrad in ≈1 ms → F ≈ 50 kN. Mit Airbag: Verzögerung über ≈100 ms → F ≈ 500 N (Faktor 100 weniger). Typische Verletzungen ohne Airbag: **Schädel-Hirn-Trauma**, **Gesichtsfrakturen** (Mittelgesicht, Mandibula), **Thoraxtrauma**. Der Airbag reduziert die Letalität um ca. 30 %.',
       selfTest: [
         {
           question: 'Wie groß ist der Impuls eines 70 kg schweren Läufers bei 5 m/s?',
@@ -61,11 +71,21 @@ Beim vollkommen unelastischen Stoß verschmelzen die Körper: m₁·v₁ + m₂�
     {
       id: 'phys-kap4-2',
       title: 'Drehmoment & Hebel',
-      content: `Das Drehmoment M beschreibt die Drehwirkung einer Kraft und ist definiert als Produkt aus Kraft und Hebelarm: M = F · r, wobei r der senkrechte Abstand der Wirklinie der Kraft von der Drehachse ist (Hebelarm). Die SI-Einheit des Drehmoments ist Newtonmeter (N·m). Man beachte, dass trotz gleicher Einheit Drehmoment und Arbeit verschiedene physikalische Größen sind. Das Drehmoment ist eine vektorielle Größe — seine Richtung steht senkrecht auf der Ebene, die von Kraft und Hebelarm aufgespannt wird. Ein größerer Hebelarm ermöglicht bei gleicher Kraft ein größeres Drehmoment, was erklärt, warum ein langer Schraubenschlüssel das Lösen einer Schraube erleichtert.
+      content: `**M = F·r** — das Drehmoment. Kraft × Hebelarm. Einheit: N·m.
 
-Das Hebelgesetz (Momentengleichgewicht) besagt, dass sich ein Hebel im Gleichgewicht befindet, wenn die Summe aller linksdrehenden Drehmomente gleich der Summe aller rechtsdrehenden Drehmomente ist: F₁ · r₁ = F₂ · r₂. Man unterscheidet den einseitigen Hebel (Drehpunkt am Ende, beide Kräfte auf derselben Seite — z. B. Schubkarre, Flaschenöffner) und den zweiseitigen Hebel (Drehpunkt zwischen den Kräften — z. B. Wippe, Zange, Schere). Der Hebel ist eine der sechs einfachen Maschinen und ermöglicht es, mit kleiner Kraft große Lasten zu bewegen, allerdings muss dafür der längere Weg zurückgelegt werden (goldene Regel der Mechanik: Was man an Kraft spart, muss man an Weg zusetzen — die Arbeit bleibt gleich).
+Der **Hebelarm** r ist der senkrechte Abstand der Wirklinie der Kraft von der Drehachse. Je größer r, desto größer die Drehwirkung. Deshalb ist ein langer Schraubenschlüssel effektiver als ein kurzer.
 
-In der Medizin und Biomechanik sind Hebelprinzipien allgegenwärtig. Der menschliche Bewegungsapparat funktioniert als System von Hebeln: Die Knochen sind die Hebelarme, die Gelenke die Drehpunkte (Hypomochlien) und die Muskeln erzeugen die Kräfte. Beispielsweise wirkt der Unterarm als einseitiger Hebel mit dem Ellbogengelenk als Drehpunkt: Der Bizeps setzt nahe am Drehpunkt an (kurzer Kraftarm, ca. 5 cm), während die Last am Handgelenk wirkt (langer Lastarm, ca. 35 cm). Dies bedeutet, dass der Bizeps etwa die siebenfache Kraft der gehaltenen Last aufbringen muss — ein mechanischer Nachteil, der aber durch einen Geschwindigkeitsvorteil kompensiert wird (kleine Muskelverkürzung → große Bewegung der Hand). Auch die Wirbelsäule kann als Hebel modelliert werden, was die hohen Belastungen der Bandscheiben beim Heben schwerer Lasten mit vorgebeugtem Oberkörper erklärt.`,
+**Hebelgesetz (Gleichgewicht):** F₁·r₁ = F₂·r₂. Die Summe der linksdrehenden Drehmomente = Summe der rechtsdrehenden Drehmomente.
+
+**Zweiseitiger Hebel:** Drehpunkt zwischen den Kräften. Beispiel: Wippe, Zange, Schere.
+
+**Einseitiger Hebel:** Drehpunkt am Ende. Beide Kräfte auf derselben Seite. Beispiel: Schubkarre, Flaschenöffner, Unterarm.
+
+**Goldene Regel der Mechanik:** Was du an Kraft sparst, musst du an Weg zusetzen. Die Arbeit bleibt gleich.
+
+**Beispiel:** Auf einer Wippe sitzt ein Kind (30 kg) 2 m vom Drehpunkt. Wo muss ein Erwachsener (60 kg) sitzen? F₁·r₁ = F₂·r₂ → 30·10·2 = 60·10·r₂ → r₂ = 1 m.
+
+**Biomechanik:** Der Unterarm ist ein einseitiger Hebel. Ellbogengelenk = Drehpunkt. Bizeps greift ca. 5 cm vom Drehpunkt an (Kraftarm), Last wirkt ca. 35 cm entfernt (Lastarm). Verhältnis: 35/5 = 7. Der Bizeps muss die 7-fache Kraft der Last aufbringen.`,
       merksätze: [
         'Drehmoment: M = F·r (Kraft × Hebelarm). Einheit: N·m. Je größer der Hebelarm, desto größer die Drehwirkung bei gleicher Kraft.',
         'Hebelgesetz (Gleichgewicht): F₁·r₁ = F₂·r₂. Goldene Regel der Mechanik: Was an Kraft gespart wird, muss an Weg zugesetzt werden.',
@@ -75,7 +95,7 @@ In der Medizin und Biomechanik sind Hebelprinzipien allgegenwärtig. Der menschl
         answer: 'F₁·r₁ = F₂·r₂ → 30·10·2 = 60·10·r₂ → r₂ = 600/600 = 1 m.',
       },
       klinischerBezug:
-        'Der Unterarm ist ein einseitiger Hebel: Der Bizeps greift ca. 5 cm vom Ellbogengelenk an, die Last wirkt ca. 35 cm entfernt. Um 10 kg zu halten (≈ 100 N), muss der Bizeps F = 100·35/5 = 700 N aufbringen. Beim Heben mit gebeugtem Rücken kann die Belastung der Bandscheibe L5/S1 das 10-fache des gehobenen Gewichts betragen — ein häufiger Grund für Bandscheibenvorfälle.',
+        'Der **Unterarm als Hebel:** Ellbogengelenk = Drehpunkt (Hypomochlion). Bizeps greift ca. 5 cm vom Gelenk an, Last wirkt ca. 35 cm entfernt. Um 10 kg (≈100 N) zu halten, muss der Bizeps F = 100·35/5 = 700 N aufbringen. Beim **Heben mit gebeugtem Rücken** (z. B. Kiste vom Boden) kann die Belastung der Bandscheibe L5/S1 das 10-fache des gehobenen Gewichts betragen → häufiger Grund für **Bandscheibenvorfälle**. Richtige Technik: Rücken gerade, aus den Beinen heben (verkürzt Lastarm).',
       selfTest: [
         {
           question: 'Welches Drehmoment erzeugt eine Kraft von 20 N bei einem Hebelarm von 0,5 m?',

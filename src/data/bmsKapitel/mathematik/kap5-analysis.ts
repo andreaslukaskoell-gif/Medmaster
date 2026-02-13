@@ -10,11 +10,35 @@ export const mathKap5: Kapitel = {
     {
       id: 'math-kap5-1',
       title: 'Folgen & Reihen',
-      content: `Eine Folge ist eine geordnete Abfolge von Zahlen (aₙ), die durch eine Bildungsvorschrift oder rekursiv definiert ist. Arithmetische Folgen haben eine konstante Differenz d zwischen aufeinanderfolgenden Gliedern: aₙ = a₁ + (n - 1) · d. Beispiel: 3, 7, 11, 15, ... mit a₁ = 3 und d = 4. Das n-te Glied ist aₙ = 3 + (n - 1) · 4 = 4n - 1. Die Summe der ersten n Glieder einer arithmetischen Folge (arithmetische Reihe) berechnet sich mit der Gaußschen Summenformel: Sₙ = n/2 · (a₁ + aₙ) = n/2 · (2a₁ + (n - 1)d). Diese Formel geht auf den jungen Gauß zurück, der erkannte, dass die Summe 1 + 2 + ... + 100 = 100/2 · (1 + 100) = 5050 beträgt.
+      content: `Eine **Folge** (aₙ) ist eine geordnete Abfolge von Zahlen.
 
-Geometrische Folgen haben einen konstanten Quotienten q zwischen aufeinanderfolgenden Gliedern: aₙ = a₁ · q^(n-1). Beispiel: 2, 6, 18, 54, ... mit a₁ = 2 und q = 3. Das n-te Glied ist aₙ = 2 · 3^(n-1). Die Summe der ersten n Glieder einer geometrischen Folge (geometrische Reihe) lautet: Sₙ = a₁ · (qⁿ - 1)/(q - 1) für q ≠ 1. Für |q| < 1 konvergiert die unendliche geometrische Reihe: S∞ = a₁/(1 - q). Beispiel: 1 + 1/2 + 1/4 + 1/8 + ... = 1/(1 - 1/2) = 2. Für |q| ≥ 1 divergiert die Reihe (außer für den trivialen Fall q = 1 mit allen Gliedern gleich). Diese Konvergenzaussage ist für das Verständnis von Grenzwerten fundamental.
+**Arithmetische Folge**: Konstante Differenz d zwischen aufeinanderfolgenden Gliedern.
+aₙ = a₁ + (n-1)·d
 
-Im MedAT werden typische Aufgaben zu Folgen gestellt: das Bestimmen des n-ten Glieds, das Berechnen von Teilsummen und das Erkennen, ob eine Folge arithmetisch oder geometrisch ist. Entscheidend ist die Unterscheidung: Bei einer arithmetischen Folge ist die Differenz aₙ₊₁ - aₙ = d konstant, bei einer geometrischen Folge ist der Quotient aₙ₊₁/aₙ = q konstant. Eine Folge wie 1, 4, 9, 16, 25, ... ist weder arithmetisch noch geometrisch (es sind die Quadratzahlen). Textaufgaben können Folgen verbergen: „Ein Sparer legt jeden Monat 200 € auf ein Konto ohne Zinsen“ beschreibt eine arithmetische Folge der Kontostände mit d = 200. „Ein Bakterium teilt sich alle 20 Minuten“ beschreibt eine geometrische Folge mit q = 2. Die Fähigkeit, reale Situationen in Folgenmodelle zu übersetzen, wird im MedAT geprüft.`,
+Beispiel: 3, 7, 11, 15, ... hat a₁ = 3, d = 4 → aₙ = 4n - 1
+
+**Summe** (Gaußsche Formel): Sₙ = n/2 · (a₁ + aₙ) = n/2 · (2a₁ + (n-1)d)
+Beispiel: 1 + 2 + ... + 100 = 100/2 · (1 + 100) = 5050
+
+**Geometrische Folge**: Konstanter Quotient q zwischen aufeinanderfolgenden Gliedern.
+aₙ = a₁ · q^(n-1)
+
+Beispiel: 2, 6, 18, 54, ... hat a₁ = 2, q = 3 → aₙ = 2 · 3^(n-1)
+
+**Summe**: Sₙ = a₁ · (qⁿ - 1)/(q - 1) für q ≠ 1
+
+**Unendliche geometrische Reihe** konvergiert nur für |q| < 1:
+S∞ = a₁/(1 - q)
+
+Beispiel: 1 + 1/2 + 1/4 + 1/8 + ... = 1/(1 - 1/2) = 2
+
+Für |q| ≥ 1 divergiert die Reihe.
+
+**Unterscheidung**:
+Arithmetisch: Differenz aₙ₊₁ - aₙ = d konstant
+Geometrisch: Quotient aₙ₊₁/aₙ = q konstant
+
+Textaufgaben: "Jeden Monat 200 € sparen" → arithmetisch mit d = 200. "Bakterium teilt sich alle 20 Minuten" → geometrisch mit q = 2.`,
       merksätze: [
         'Arithmetische Folge: aₙ = a₁ + (n-1)·d, Summe: Sₙ = n/2·(a₁ + aₙ). Geometrische Folge: aₙ = a₁·q^(n-1), Summe: Sₙ = a₁·(qⁿ - 1)/(q - 1).',
         'Unendliche geometrische Reihe konvergiert nur für |q| < 1: S∞ = a₁/(1 - q). Für |q| ≥ 1 divergiert sie.'
@@ -23,7 +47,7 @@ Im MedAT werden typische Aufgaben zu Folgen gestellt: das Bestimmen des n-ten Gl
         question: 'Berechnen Sie die Summe der ersten 20 Glieder der arithmetischen Folge 5, 8, 11, 14, ...',
         answer: 'a₁ = 5, d = 3. a₂₀ = 5 + 19 · 3 = 62. S₂₀ = 20/2 · (5 + 62) = 10 · 67 = 670.'
       },
-      klinischerBezug: 'Geometrische Folgen modellieren das Bakterienwachstum in der exponentiellen Phase: Aus einem Bakterium entstehen nach n Teilungszyklen 2ⁿ Bakterien. Auch Verdünnungsreihen in der Mikrobiologie (1:10, 1:100, 1:1000, ...) sind geometrische Folgen mit q = 1/10.',
+      klinischerBezug: 'Bakterienwachstum in der exponentiellen Phase folgt einer geometrischen Folge: Aus einem Bakterium entstehen nach n Teilungen 2ⁿ Bakterien. **Verdünnungsreihen** in der Mikrobiologie (1:10, 1:100, 1:1000) sind geometrische Folgen mit q = 0,1. Auch die **Antibiotika-Konzentration** nach wiederholter Gabe konvergiert gegen einen Steady-State (unendliche geometrische Reihe).',
       selfTest: [
         {
           question: 'Welches ist das 8. Glied der geometrischen Folge 3, 6, 12, 24, ...?',
@@ -66,11 +90,36 @@ Im MedAT werden typische Aufgaben zu Folgen gestellt: das Bestimmen des n-ten Gl
     {
       id: 'math-kap5-2',
       title: 'Grenzwerte & Stetigkeit',
-      content: `Der Grenzwert einer Folge (aₙ) beschreibt, welchem Wert sich die Folgenglieder für n → ∞ annähern. Man schreibt lim(n→∞) aₙ = L, wenn sich aₙ beliebig nahe an L bringen lässt, indem n groß genug gewählt wird. Eine Folge, die einen Grenzwert besitzt, heißt konvergent; andernfalls heißt sie divergent. Beispiel: aₙ = 1/n konvergiert gegen 0, denn für großes n wird 1/n beliebig klein. Die Folge aₙ = (-1)ⁿ divergiert, da sie zwischen -1 und 1 springt (sie ist beschränkt, aber nicht konvergent). Die Folge aₙ = n² divergiert gegen unendlich (bestimmte Divergenz).
+      content: `**Grenzwert einer Folge**: lim(n→∞) aₙ = L bedeutet: Die Folgenglieder nähern sich beliebig nahe an L an.
 
-Grenzwertregeln ermöglichen das systematische Berechnen von Grenzwerten zusammengesetzter Folgen. Wenn lim aₙ = A und lim bₙ = B existieren, gilt: lim(aₙ ± bₙ) = A ± B, lim(aₙ · bₙ) = A · B, lim(aₙ/bₙ) = A/B (falls B ≠ 0), und lim(c · aₙ) = c · A. Für rationale Funktionen von n gilt die Regel des höchsten Grades: lim(n→∞) (3n² + 5n)/(2n² - 1) = 3/2, da man Zähler und Nenner durch n² kürzt und alle Terme mit 1/n gegen 0 gehen. Allgemein: Ist der Zählergrad gleich dem Nennergrad, ist der Grenzwert der Quotient der führenden Koeffizienten. Ist der Zählergrad kleiner, ist der Grenzwert 0. Ist der Zählergrad größer, divergiert die Folge.
+**Konvergent**: Folge hat einen Grenzwert.
+**Divergent**: Folge hat keinen Grenzwert.
 
-Stetigkeit ist ein Grundkonzept der Analysis: Eine Funktion f ist stetig an der Stelle x₀, wenn lim(x→x₀) f(x) = f(x₀) gilt. Anschaulich bedeutet das: Der Graph hat keinen Sprung oder keine Lücke an dieser Stelle. Polynome, Exponentialfunktionen, Sinus und Kosinus sind überall stetig. Rationale Funktionen sind stetig überall dort, wo der Nenner nicht null ist. Wurzelfunktionen sind stetig auf ihrem Definitionsbereich. Der Zwischenwertsatz besagt: Ist f stetig auf [a, b] und gilt f(a) < 0 und f(b) > 0 (oder umgekehrt), dann gibt es mindestens ein c ∈ (a, b) mit f(c) = 0. Dieser Satz ist nützlich zum Nachweis von Nullstellen. Im MedAT werden einfache Grenzwertberechnungen und das Verständnis von Konvergenz geprüft, während die formale ε-δ-Definition der Stetigkeit normalerweise nicht verlangt wird.`,
+Beispiele:
+• aₙ = 1/n → 0 (konvergent)
+• aₙ = (-1)ⁿ springt zwischen -1 und 1 (divergent)
+• aₙ = n² → ∞ (bestimmt divergent)
+
+**Grenzwertregeln** (wenn lim aₙ = A und lim bₙ = B):
+lim(aₙ ± bₙ) = A ± B
+lim(aₙ · bₙ) = A · B
+lim(aₙ/bₙ) = A/B (falls B ≠ 0)
+
+**Rationale Funktionen** – Regel des höchsten Grades:
+lim(n→∞) (3n² + 5n)/(2n² - 1) = 3/2 (Zähler und Nenner durch n² kürzen)
+
+Einfach gesagt:
+• Gleicher Grad: Quotient der führenden Koeffizienten
+• Zählergrad < Nennergrad: Grenzwert = 0
+• Zählergrad > Nennergrad: divergent (→ ±∞)
+
+**Stetigkeit**: Eine Funktion f ist stetig an x₀, wenn lim(x→x₀) f(x) = f(x₀).
+Anschaulich: Der Graph hat keinen Sprung oder keine Lücke.
+
+Stetig überall: Polynome, eˣ, sin(x), cos(x)
+Stetig außer Nullstellen des Nenners: Rationale Funktionen
+
+**Zwischenwertsatz**: Ist f stetig auf [a,b] mit f(a) < 0 und f(b) > 0, dann gibt es mindestens ein c ∈ (a,b) mit f(c) = 0. Nützlich zum Nachweis von Nullstellen.`,
       merksätze: [
         'Grenzwert rationaler Ausdrücke: Zähler- und Nennergrad vergleichen. Gleicher Grad → Quotient der führenden Koeffizienten. Zählergrad kleiner → 0. Zählergrad größer → divergent.',
         'Eine Folge konvergiert, wenn sie sich einem festen Wert nähert. Stetigkeit an x₀ bedeutet: lim(x→x₀) f(x) = f(x₀) – der Funktionswert stimmt mit dem Grenzwert überein.'
@@ -79,7 +128,7 @@ Stetigkeit ist ein Grundkonzept der Analysis: Eine Funktion f ist stetig an der 
         question: 'Berechnen Sie: lim(n→∞) (5n³ - 2n)/(3n³ + n²)',
         answer: 'Kürzen durch n³: lim (5 - 2/n²)/(3 + 1/n) = 5/3. Die führenden Koeffizienten sind 5 und 3.'
       },
-      klinischerBezug: 'In der Pharmakokinetik beschreibt der Grenzwert die Steady-State-Konzentration eines Medikaments bei wiederholter Gabe. Nach vielen Halbwertszeiten nähert sich die Plasmakonzentration einem konstanten Wert an – mathematisch ist dies der Grenzwert einer geometrischen Reihe.',
+      klinischerBezug: 'Die **Pharmakokinetik** beschreibt Wirkstoffkonzentrationen mit Exponentialfunktionen: c(t) = c₀ · e^(-kt). Die **Halbwertszeit** t₁/₂ = ln(2)/k bestimmt das Dosierungsintervall. Bei wiederholter Gabe nähert sich die Plasmakonzentration einem **Steady-State** an – mathematisch der Grenzwert einer geometrischen Reihe.',
       selfTest: [
         {
           question: 'Was ist lim(n→∞) (2n + 3)/(5n - 1)?',
@@ -122,11 +171,46 @@ Stetigkeit ist ein Grundkonzept der Analysis: Eine Funktion f ist stetig an der 
     {
       id: 'math-kap5-3',
       title: 'Differentialrechnung',
-      content: `Die Ableitung f'(x) einer Funktion f(x) beschreibt die momentane Änderungsrate, also die Steigung der Tangente an den Graphen im Punkt (x|f(x)). Sie ist definiert als Grenzwert des Differenzenquotienten: f'(x) = lim(h→0) (f(x+h) - f(x))/h. Anschaulich gibt die Ableitung an, wie schnell sich die Funktion an einer bestimmten Stelle ändert. Ist f'(x₀) > 0, steigt f an der Stelle x₀; ist f'(x₀) < 0, fällt f; ist f'(x₀) = 0, liegt ein möglicher Extremwert oder Wendepunkt vor. Die Ableitung der wichtigsten Grundfunktionen lautet: (xⁿ)' = n·x^(n-1) (Potenzregel), (eˣ)' = eˣ, (ln(x))' = 1/x, (sin(x))' = cos(x), (cos(x))' = -sin(x). Konstanten verschwinden: (c)' = 0.
+      content: `Die **Ableitung** f'(x) (gibt die Steigung der Tangente an den Graphen an jedem Punkt an).
 
-Die Ableitungsregeln ermöglichen die Berechnung von Ableitungen zusammengesetzter Funktionen. Faktorregel: (c·f)' = c·f'. Summenregel: (f + g)' = f' + g'. Produktregel: (f·g)' = f'·g + f·g'. Quotientenregel: (f/g)' = (f'·g - f·g')/g². Kettenregel (für verkettete Funktionen f(g(x))): [f(g(x))]' = f'(g(x)) · g'(x) – äußere Ableitung mal innere Ableitung. Beispiel: f(x) = (3x² + 1)⁵. Kettenregel: f'(x) = 5(3x² + 1)⁴ · 6x = 30x(3x² + 1)⁴. Die Kettenregel ist die am häufigsten benötigte Regel und sollte sicher beherrscht werden. Beispiel für die Quotientenregel: f(x) = x²/(x + 1). f'(x) = (2x(x + 1) - x² · 1)/(x + 1)² = (x² + 2x)/(x + 1)².
+Definition: f'(x) = lim(h→0) (f(x+h) - f(x))/h
 
-Extremwerte und Kurvendiskussion sind zentrale Anwendungen der Differentialrechnung. Eine notwendige Bedingung für einen Extremwert an der Stelle x₀ ist f'(x₀) = 0. Zur Klassifikation dient die zweite Ableitung: f''(x₀) > 0 bedeutet Minimum (Linkskrümmung), f''(x₀) < 0 bedeutet Maximum (Rechtskrümmung), f''(x₀) = 0 ist unentschieden (Wendepunkt möglich). Wendepunkte liegen dort, wo f''(x) = 0 und f'''(x) ≠ 0 gilt (Krümmungswechsel). Die vollständige Kurvendiskussion umfasst: Definitionsbereich, Symmetrie, Nullstellen, Extremwerte, Wendepunkte und Verhalten für x → ±∞. Im MedAT wird besonders häufig gefragt, die Ableitung zu berechnen und Extremwerte zu bestimmen. Typische Aufgaben verlangen auch die Bestimmung der Tangentengleichung an einem gegebenen Punkt: t(x) = f'(x₀) · (x - x₀) + f(x₀).`,
+Einfach gesagt: Die Ableitung beschreibt, wie schnell sich f an einer Stelle ändert.
+f'(x₀) > 0: f steigt
+f'(x₀) < 0: f fällt
+f'(x₀) = 0: möglicher Extremwert oder Wendepunkt
+
+**Grundfunktionen**:
+(xⁿ)' = n·x^(n-1)
+(eˣ)' = eˣ
+(ln x)' = 1/x
+(sin x)' = cos x
+(cos x)' = -sin x
+(c)' = 0
+
+**Ableitungsregeln**:
+Faktorregel: (c·f)' = c·f'
+Summenregel: (f + g)' = f' + g'
+Produktregel: (f·g)' = f'·g + f·g'
+Quotientenregel: (f/g)' = (f'·g - f·g')/g²
+**Kettenregel** (äußere mal innere Ableitung): [f(g(x))]' = f'(g(x)) · g'(x)
+
+Beispiel Kettenregel: f(x) = (3x² + 1)⁵
+f'(x) = 5(3x² + 1)⁴ · 6x = 30x(3x² + 1)⁴
+
+Beispiel Quotientenregel: f(x) = x²/(x+1)
+f'(x) = (2x(x+1) - x²·1)/(x+1)² = (x² + 2x)/(x+1)²
+
+**Extremwerte**:
+Notwendige Bedingung: f'(x₀) = 0
+Klassifikation mit zweiter Ableitung:
+• f''(x₀) > 0 → Minimum (Linkskrümmung)
+• f''(x₀) < 0 → Maximum (Rechtskrümmung)
+• f''(x₀) = 0 → unentschieden
+
+**Wendepunkte**: f''(x) = 0 und f'''(x) ≠ 0 (Krümmungswechsel)
+
+**Tangentengleichung** an Punkt x₀: t(x) = f'(x₀)·(x - x₀) + f(x₀)`,
       merksätze: [
         'Wichtigste Ableitungen: (xⁿ)\' = n·x^(n-1), (eˣ)\' = eˣ, (ln x)\' = 1/x, (sin x)\' = cos x, (cos x)\' = -sin x.',
         'Extremwerte: f\'(x₀) = 0 (notwendig). f\'\'(x₀) > 0 → Minimum, f\'\'(x₀) < 0 → Maximum. Kettenregel: äußere Ableitung · innere Ableitung.'
@@ -135,7 +219,7 @@ Extremwerte und Kurvendiskussion sind zentrale Anwendungen der Differentialrechn
         question: 'Bestimmen Sie die Extremwerte von f(x) = x³ - 3x + 2.',
         answer: 'f\'(x) = 3x² - 3 = 0 → x² = 1 → x₁ = 1, x₂ = -1. f\'\'(x) = 6x. f\'\'(1) = 6 > 0 → Minimum bei (1|0). f\'\'(-1) = -6 < 0 → Maximum bei (-1|4).'
       },
-      klinischerBezug: 'Die Differentialrechnung ist in der Pharmakokinetik essenziell: Die Änderungsrate der Plasmakonzentration dc/dt beschreibt, wie schnell ein Medikament aufgenommen oder eliminiert wird. Die maximale Plasmakonzentration (cₘₐₓ) entspricht einem Extremwert der Konzentrations-Zeit-Kurve, bei dem dc/dt = 0 gilt.',
+      klinischerBezug: 'Die **Pharmakokinetik** nutzt die Ableitung dc/dt zur Beschreibung der Änderungsrate der Plasmakonzentration. Die maximale Konzentration **cₘₐₓ** entspricht einem Extremwert, wo dc/dt = 0 gilt. Die **Clearance** ist die Geschwindigkeit, mit der ein Medikament eliminiert wird – mathematisch die negative Steigung der Konzentrationskurve.',
       selfTest: [
         {
           question: 'Was ist die Ableitung von f(x) = 3x⁴ - 2x² + 7x - 5?',
@@ -178,11 +262,41 @@ Extremwerte und Kurvendiskussion sind zentrale Anwendungen der Differentialrechn
     {
       id: 'math-kap5-4',
       title: 'Integralrechnung',
-      content: `Die Integralrechnung ist die Umkehroperation der Differentialrechnung. Die Stammfunktion (oder das unbestimmte Integral) F(x) einer Funktion f(x) ist eine Funktion, deren Ableitung f(x) ergibt: F'(x) = f(x). Man schreibt: ∫f(x)dx = F(x) + C, wobei C die Integrationskonstante ist (da jede Konstante bei der Ableitung verschwindet). Die wichtigsten Stammfunktionen sind: ∫xⁿ dx = x^(n+1)/(n+1) + C (für n ≠ -1), ∫1/x dx = ln|x| + C, ∫eˣ dx = eˣ + C, ∫sin(x) dx = -cos(x) + C, ∫cos(x) dx = sin(x) + C. Die Linearität des Integrals besagt: ∫(c·f + g)dx = c·∫f dx + ∫g dx.
+      content: `Die **Stammfunktion** F(x) (ist die Umkehrung der Ableitung: F'(x) = f(x)).
 
-Das bestimmte Integral ∫ₐᵇ f(x)dx berechnet die vorzeichenbehaftete Fläche zwischen dem Graphen von f und der x-Achse im Intervall [a, b]. Der Hauptsatz der Differential- und Integralrechnung verbindet Ableitung und Integral: ∫ₐᵇ f(x)dx = F(b) - F(a) = [F(x)]ₐᵇ. Man berechnet also die Stammfunktion F, wertet sie an den Grenzen aus und bildet die Differenz. Beispiel: ∫₁³ (2x + 1)dx = [x² + x]₁³ = (9 + 3) - (1 + 1) = 12 - 2 = 10. Flächen unterhalb der x-Achse liefern negative Beiträge. Für die tatsächliche Fläche zwischen Graph und x-Achse muss man daher Bereiche getrennt berechnen und Beträge bilden: A = |∫ₐᶜ f(x)dx| + |∫ᶜᵇ f(x)dx|, wobei c eine Nullstelle im Intervall (a, b) ist.
+Schreibweise: ∫f(x)dx = F(x) + C (C = Integrationskonstante)
 
-Für die Berechnung komplizierterer Integrale stehen Integrationsregeln zur Verfügung. Die Substitutionsregel ist das Gegenstück zur Kettenregel: ∫f(g(x))·g'(x)dx = F(g(x)) + C. Beispiel: ∫2x·e^(x²)dx. Substitution u = x², du = 2x dx → ∫eᵘ du = eᵘ + C = e^(x²) + C. Die partielle Integration entspricht der Umkehr der Produktregel: ∫u·v' dx = u·v - ∫u'·v dx. Sie wird angewendet, wenn der Integrand ein Produkt ist, z. B. ∫x·eˣ dx = x·eˣ - ∫eˣ dx = x·eˣ - eˣ + C = eˣ(x - 1) + C. Die Fläche zwischen zwei Kurven f(x) und g(x) im Intervall [a, b] berechnet sich als A = ∫ₐᵇ |f(x) - g(x)|dx. Im MedAT werden grundlegende Stammfunktionen und einfache bestimmte Integrale geprüft, während Substitution und partielle Integration seltener vorkommen.`,
+**Grundfunktionen**:
+∫xⁿ dx = x^(n+1)/(n+1) + C (für n ≠ -1)
+∫1/x dx = ln|x| + C
+∫eˣ dx = eˣ + C
+∫sin(x) dx = -cos(x) + C
+∫cos(x) dx = sin(x) + C
+
+Linearität: ∫(c·f + g)dx = c·∫f dx + ∫g dx
+
+**Bestimmtes Integral** ∫ₐᵇ f(x)dx (berechnet die vorzeichenbehaftete Fläche zwischen Graph und x-Achse).
+
+**Hauptsatz**: ∫ₐᵇ f(x)dx = F(b) - F(a) = [F(x)]ₐᵇ
+
+So geht's: Stammfunktion F berechnen, an den Grenzen auswerten, Differenz bilden.
+
+Beispiel: ∫₁³ (2x + 1)dx = [x² + x]₁³ = (9 + 3) - (1 + 1) = 12 - 2 = 10
+
+Wichtig: Flächen unterhalb der x-Achse sind negativ. Für die tatsächliche Fläche Beträge bilden.
+
+**Integrationsregeln**:
+
+Substitutionsregel (Umkehr der Kettenregel): ∫f(g(x))·g'(x)dx = F(g(x)) + C
+
+Beispiel: ∫2x·e^(x²)dx
+Substitution u = x², du = 2x dx → ∫eᵘ du = eᵘ + C = e^(x²) + C
+
+Partielle Integration (Umkehr der Produktregel): ∫u·v' dx = u·v - ∫u'·v dx
+
+Beispiel: ∫x·eˣ dx = x·eˣ - ∫eˣ dx = x·eˣ - eˣ + C = eˣ(x - 1) + C
+
+**Fläche zwischen zwei Kurven**: A = ∫ₐᵇ |f(x) - g(x)|dx`,
       merksätze: [
         'Wichtigste Stammfunktionen: ∫xⁿ dx = x^(n+1)/(n+1) + C (n ≠ -1), ∫1/x dx = ln|x| + C, ∫eˣ dx = eˣ + C.',
         'Hauptsatz: ∫ₐᵇ f(x)dx = F(b) - F(a). Flächen unterhalb der x-Achse sind negativ – für die geometrische Fläche Betrag bilden!'
@@ -191,7 +305,7 @@ Für die Berechnung komplizierterer Integrale stehen Integrationsregeln zur Verf
         question: 'Berechnen Sie die Fläche unter f(x) = x² zwischen x = 0 und x = 3.',
         answer: '∫₀³ x² dx = [x³/3]₀³ = 27/3 - 0 = 9 Flächeneinheiten.'
       },
-      klinischerBezug: 'In der Pharmakokinetik ist die AUC (Area Under the Curve) das bestimmte Integral der Plasmakonzentration über die Zeit: AUC = ∫₀^∞ c(t)dt. Die AUC ist ein Maß für die Gesamtexposition gegenüber einem Medikament und wird zur Beurteilung der Bioverfügbarkeit verwendet.',
+      klinischerBezug: 'Die **AUC** (Area Under the Curve, Fläche unter der Kurve) ist das bestimmte Integral der Plasmakonzentration über die Zeit: AUC = ∫₀^∞ c(t)dt. Die AUC ist ein Maß für die **Gesamtexposition** gegenüber einem Medikament und wird zur Beurteilung der Bioverfügbarkeit verwendet. Bei oraler vs. intravenöser Gabe vergleicht man die AUC-Werte.',
       selfTest: [
         {
           question: 'Was ist die Stammfunktion von f(x) = 4x³ - 6x + 2?',

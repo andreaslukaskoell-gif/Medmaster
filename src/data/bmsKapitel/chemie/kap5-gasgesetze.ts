@@ -10,11 +10,15 @@ export const chemKap5: Kapitel = {
     {
       id: 'chem-kap5-uk1',
       title: 'Ideale Gasgleichung',
-      content: `Die ideale Gasgleichung pV = nRT ist eine der fundamentalsten Gleichungen der Chemie und Physik. Sie verknüpft die vier Zustandsgrößen eines idealen Gases: den Druck p (in Pascal, Pa), das Volumen V (in Kubikmeter, m³ oder Liter, L), die Stoffmenge n (in Mol) und die absolute Temperatur T (in Kelvin, K). Die universelle Gaskonstante R hat den Wert 8,314 J/(mol·K) oder äquivalent 0,08314 L·bar/(mol·K). Ein ideales Gas ist ein Modellgas, bei dem die Gasteilchen als massepunktartig (ohne Eigenvolumen) angenommen werden und keine Wechselwirkungen (Anziehung oder Abstoßung) zwischen ihnen auftreten. Reale Gase verhalten sich unter Normalbedingungen bei nicht zu hohen Drücken und nicht zu niedrigen Temperaturen annähernd ideal.
+      content: `Die **ideale Gasgleichung** lautet pV = nRT. Sie verknüpft Druck p, Volumen V, Stoffmenge n und Temperatur T eines Gases. Die **Gaskonstante** R beträgt 8,314 J/(mol·K).
 
-Die ideale Gasgleichung lässt sich aus dem Avogadro-Gesetz und den empirischen Gasgesetzen herleiten. Das Avogadro-Gesetz (1811) besagt, dass gleiche Volumina verschiedener idealer Gase bei gleichem Druck und gleicher Temperatur die gleiche Anzahl von Teilchen enthalten. Bei Standardbedingungen (STP: T = 273,15 K, p = 101,325 kPa) nimmt 1 Mol jedes idealen Gases ein Volumen von 22,414 L ein. Aus der idealen Gasgleichung folgt: V = nRT/p, wobei bei konstantem T und p das Volumen direkt proportional zur Stoffmenge n ist (V ∝ n). Setzt man die Standardbedingungen ein, erhält man: V = (1 mol × 8,314 J/(mol·K) × 273,15 K) / 101325 Pa = 0,022414 m³ = 22,414 L, was das molare Volumen bestätigt.
+Ein **ideales Gas** ist ein Modell. Die Teilchen haben kein Eigenvolumen. Zwischen ihnen wirken keine Kräfte. Reale Gase verhalten sich bei niedrigen Drücken und hohen Temperaturen annähernd ideal.
 
-Für praktische Berechnungen kann die ideale Gasgleichung in verschiedenen Formen verwendet werden. Kennt man die Masse m eines Gases und seine molare Masse M, kann man die Stoffmenge n = m/M einsetzen und erhält pV = (m/M)RT, woraus sich die molare Masse aus experimentellen Daten bestimmen lässt: M = mRT/(pV). Die Gasdichte ρ ergibt sich als ρ = m/V = pM/(RT), wobei die Dichte eines idealen Gases also proportional zum Druck und zur molaren Masse und umgekehrt proportional zur Temperatur ist. Für Gemische idealer Gase gilt das Dalton-Gesetz (siehe nächstes Unterkapitel), und der Gesamtdruck ist die Summe der Partialdrücke. Die ideale Gasgleichung versagt bei sehr hohen Drücken und sehr niedrigen Temperaturen, wo das Eigenvolumen der Teilchen und die intermolekularen Kräfte nicht mehr vernachlässigbar sind. In solchen Fällen verwendet man die Van-der-Waals-Gleichung als Korrektur: (p + a/V²)(V - b) = nRT, wobei a die Anziehungskräfte und b das Eigenvolumen der Teilchen berücksichtigt.`,
+Das **Avogadro-Gesetz** besagt: Gleiche Volumina verschiedener Gase enthalten bei gleichem p und T die gleiche Teilchenzahl. Bei Standardbedingungen (STP: 0 °C, 1 atm) nimmt 1 Mol jedes idealen Gases 22,4 L ein. Aus pV = nRT folgt bei konstantem p und T: V ∝ n. Das Volumen ist proportional zur Stoffmenge.
+
+Für Berechnungen gilt: n = m/M (Masse durch molare Masse). Daraus folgt pV = (m/M)RT. Die molare Masse lässt sich bestimmen: M = mRT/(pV). Die **Gasdichte** berechnet sich: ρ = m/V = pM/(RT). Die Dichte ist proportional zu p und M, umgekehrt proportional zu T.
+
+Bei sehr hohen Drücken und niedrigen Temperaturen versagt die ideale Gasgleichung. Dann verwendet man die **Van-der-Waals-Gleichung**: (p + a/V²)(V - b) = nRT. Der Parameter a korrigiert für Anziehungskräfte, b für das Eigenvolumen der Teilchen.`,
       merksätze: [
         'Ideale Gasgleichung: pV = nRT (R = 8,314 J/(mol·K)). Ideales Gas: keine Wechselwirkungen, kein Eigenvolumen. Avogadro-Gesetz: Bei gleichem p und T enthalten gleiche Volumina gleich viele Teilchen.',
         'Aus pV = nRT folgt: M = mRT/(pV), ρ = pM/(RT). Bei STP (0 °C, 1 atm) beträgt das molare Volumen 22,4 L/mol.'
@@ -23,7 +27,7 @@ Für praktische Berechnungen kann die ideale Gasgleichung in verschiedenen Forme
         question: 'Was besagt das Avogadro-Gesetz?',
         answer: 'Das Avogadro-Gesetz besagt, dass gleiche Volumina verschiedener idealer Gase bei gleichem Druck und gleicher Temperatur die gleiche Anzahl von Teilchen (Molekülen) enthalten. Bei STP nimmt 1 Mol jedes idealen Gases 22,414 L ein.'
       },
-      klinischerBezug: 'Die ideale Gasgleichung ist grundlegend für die Lungenfunktionsdiagnostik und Beatmungsmedizin. Bei der Spirometrie werden Gasvolumina gemessen, die auf BTPS-Bedingungen (Body Temperature, Pressure, Saturated: 37 °C, Umgebungsdruck, wasserdampfgesättigt) umgerechnet werden. Anästhesisten nutzen die Gasgesetze zur Berechnung von Narkosegaskonzentrationen und zur Einstellung von Beatmungsgeräten.',
+      klinischerBezug: 'Bei der **Spirometrie** werden Lungenvolumina gemessen und auf BTPS-Bedingungen umgerechnet (Body Temperature, Pressure, Saturated: 37 °C, Umgebungsdruck, wasserdampfgesättigt). Anästhesisten nutzen pV = nRT zur Berechnung von Narkosegaskonzentrationen. Bei der **Beatmung** muss das Gasvolumen an Körpertemperatur und Luftdruck angepasst werden. Die ideale Gasgleichung ist die Grundlage aller volumetrischen Berechnungen in der Lungenfunktionsdiagnostik.',
       selfTest: [
         {
           question: 'Welches Volumen nimmt 0,5 Mol eines idealen Gases bei STP (0 °C, 1 atm) ein?',
@@ -66,11 +70,17 @@ Für praktische Berechnungen kann die ideale Gasgleichung in verschiedenen Forme
     {
       id: 'chem-kap5-uk2',
       title: 'Spezielle Gasgesetze',
-      content: `Die speziellen Gasgesetze beschreiben das Verhalten idealer Gase, wenn jeweils eine oder mehrere Zustandsgrößen konstant gehalten werden. Sie sind historisch vor der allgemeinen idealen Gasgleichung entdeckt worden und lassen sich alle als Spezialfälle von pV = nRT ableiten. Das Gesetz von Boyle-Mariotte (1662/1676) beschreibt den Zusammenhang zwischen Druck und Volumen bei konstanter Temperatur und Stoffmenge (isothermer Prozess): p × V = const., oder p₁V₁ = p₂V₂. Druck und Volumen sind also umgekehrt proportional: Wird das Volumen halbiert, verdoppelt sich der Druck. In einem p-V-Diagramm stellt eine Isotherme eine Hyperbel dar. Dieses Gesetz erklärt beispielsweise, warum die Luft in einer Fahrradpumpe komprimiert wird, wenn man den Kolben hineindrückt.
+      content: `Die speziellen Gasgesetze sind Spezialfälle von pV = nRT. Sie gelten, wenn bestimmte Zustandsgrößen konstant gehalten werden.
 
-Das Gesetz von Gay-Lussac (auch Charles'sches Gesetz, 1787/1802) beschreibt den Zusammenhang zwischen Volumen und Temperatur bei konstantem Druck (isobarer Prozess): V/T = const., oder V₁/T₁ = V₂/T₂. Das Volumen ist direkt proportional zur absoluten Temperatur in Kelvin. Wird die Temperatur verdoppelt (in Kelvin!), verdoppelt sich auch das Volumen. Daraus ergibt sich auch der absolute Nullpunkt: Extrapoliert man die lineare V-T-Beziehung auf V = 0, erhält man T = 0 K = -273,15 °C (in der Praxis erreicht kein Gas diesen Punkt, da es vorher kondensiert). Das Gesetz von Amontons (oft ebenfalls Gay-Lussac zugeschrieben) beschreibt den Zusammenhang zwischen Druck und Temperatur bei konstantem Volumen (isochorer Prozess): p/T = const., oder p₁/T₁ = p₂/T₂. Der Druck ist direkt proportional zur absoluten Temperatur. Dieses Gesetz erklärt, warum der Reifendruck bei Kälte sinkt.
+**Boyle-Mariotte** (T konstant): Bei konstanter Temperatur sind Druck und Volumen umgekehrt proportional. p₁V₁ = p₂V₂. Halbiert man das Volumen, verdoppelt sich der Druck. Beispiel: Fahrradpumpe. Im p-V-Diagramm ergibt sich eine Hyperbel.
 
-Das Daltonsche Gesetz der Partialdrücke (1801) ist besonders für die Medizin relevant. Es besagt, dass der Gesamtdruck eines idealen Gasgemisches gleich der Summe der Partialdrücke aller Einzelgase ist: p_gesamt = p₁ + p₂ + p₃ + ... Der Partialdruck pᵢ eines Gases ist der Druck, den dieses Gas ausüben würde, wenn es das gesamte Volumen allein einnähme. Er berechnet sich als pᵢ = xᵢ × p_gesamt, wobei xᵢ der Molenbruch (Stoffmengenanteil) des Gases ist. Für die Atmosphäre auf Meereshöhe (p_gesamt ≈ 101,3 kPa) ergibt sich beispielsweise: pO₂ = 0,21 × 101,3 kPa ≈ 21,3 kPa und pN₂ = 0,78 × 101,3 kPa ≈ 79 kPa. Der Partialdruck des Wasserdampfes in der Atemluft muss bei Berechnungen des alveolären Sauerstoffpartialdrucks berücksichtigt werden: pₐO₂ = FiO₂ × (p_atm - pH₂O) - paCO₂/RQ, wobei pH₂O bei 37 °C etwa 6,3 kPa beträgt.`,
+**Gay-Lussac** (p konstant): Bei konstantem Druck sind Volumen und Temperatur direkt proportional. V₁/T₁ = V₂/T₂. Achtung: T muss in Kelvin angegeben werden. Verdoppelt man T, verdoppelt sich V. Extrapoliert man V auf null, erhält man den absoluten Nullpunkt bei -273,15 °C.
+
+**Amontons** (V konstant): Bei konstantem Volumen sind Druck und Temperatur direkt proportional. p₁/T₁ = p₂/T₂. Verdoppelt man T, verdoppelt sich p. Beispiel: Reifendruck sinkt bei Kälte.
+
+**Dalton-Gesetz**: Der Gesamtdruck eines Gasgemisches ist die Summe der Partialdrücke. p_gesamt = p₁ + p₂ + p₃ + ... Der **Partialdruck** pᵢ berechnet sich: pᵢ = xᵢ × p_gesamt. xᵢ ist der **Molenbruch** (Stoffmengenanteil).
+
+Beispiel Atmosphäre (Meereshöhe, p = 101,3 kPa): pO₂ = 0,21 × 101,3 kPa ≈ 21,3 kPa. pN₂ = 0,78 × 101,3 kPa ≈ 79 kPa.`,
       merksätze: [
         'Boyle-Mariotte (T = const.): p₁V₁ = p₂V₂ (p und V umgekehrt proportional). Gay-Lussac (p = const.): V₁/T₁ = V₂/T₂ (V und T direkt proportional). Amontons (V = const.): p₁/T₁ = p₂/T₂.',
         'Dalton-Gesetz: p_gesamt = Σpᵢ. Partialdruck: pᵢ = xᵢ × p_gesamt. Der Molenbruch xᵢ gibt den Stoffmengenanteil des Gases im Gemisch an.'
@@ -79,7 +89,7 @@ Das Daltonsche Gesetz der Partialdrücke (1801) ist besonders für die Medizin r
         question: 'Was besagt das Gesetz von Boyle-Mariotte?',
         answer: 'Bei konstanter Temperatur und Stoffmenge sind Druck und Volumen eines idealen Gases umgekehrt proportional: p₁V₁ = p₂V₂. Wird das Volumen halbiert, verdoppelt sich der Druck und umgekehrt.'
       },
-      klinischerBezug: 'Das Daltonsche Gesetz ist fundamental für die Respirationsphysiologie. Der alveoläre Sauerstoffpartialdruck (pₐO₂ ≈ 13,3 kPa) bestimmt den Sauerstoffübertritt ins Blut. In großer Höhe sinkt der Luftdruck und damit der pO₂, was zur Höhenkrankheit führen kann. Bei der Sauerstofftherapie wird die inspiratorische O₂-Fraktion (FiO₂) erhöht, um den pO₂ zu steigern. Auch die Tauchmedizin basiert auf dem Boyle-Mariotte-Gesetz: Beim Auftauchen dehnt sich die Luft in den Lungen aus, was bei zu schnellem Aufstieg zu einem Barotrauma führen kann.',
+      klinischerBezug: 'Der **alveoläre Sauerstoffpartialdruck** (pₐO₂) beträgt etwa 13,3 kPa (100 mmHg) und treibt die O₂-Diffusion ins Blut an. In großer Höhe sinkt der Luftdruck, damit sinkt pO₂ trotz unveränderter O₂-Konzentration (21 %). Ab 2500 m droht **Höhenkrankheit** (Kopfschmerz, Übelkeit). Bei der **Sauerstofftherapie** wird FiO₂ erhöht, um pO₂ zu steigern. In der **Tauchmedizin** gilt Boyle-Mariotte: Beim Auftauchen dehnt sich die Luft in den Lungen aus. Zu schnelles Auftauchen ohne Ausatmen führt zu **Barotrauma** (Lungenriss). Bei 10 m Tiefe (2 bar) hat die Luft das halbe Volumen wie an der Oberfläche.',
       selfTest: [
         {
           question: 'Ein ideales Gas hat bei 1 bar ein Volumen von 10 L. Wie groß ist das Volumen bei 2 bar (gleiche Temperatur)?',
