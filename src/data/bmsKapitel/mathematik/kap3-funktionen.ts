@@ -32,7 +32,8 @@ Lineare Funktionen modellieren proportionale und direkt-lineare Zusammenhänge i
             'k = 1/2',
             'k = 2',
             'k = 4',
-            'k = 8'
+            'k = 8',
+            'k = -2'
           ],
           correctIndex: 1,
           explanation: 'k = (y₂ - y₁)/(x₂ - x₁) = (11 - 3)/(5 - 1) = 8/4 = 2.'
@@ -43,7 +44,8 @@ Lineare Funktionen modellieren proportionale und direkt-lineare Zusammenhänge i
             'x = -3',
             'x = 9',
             'x = 3',
-            'x = -9'
+            'x = -9',
+            'x = 1/3'
           ],
           correctIndex: 2,
           explanation: 'Nullstelle: -3x + 9 = 0 → -3x = -9 → x = 3. Alternativ: x₀ = -d/k = -9/(-3) = 3.'
@@ -54,7 +56,8 @@ Lineare Funktionen modellieren proportionale und direkt-lineare Zusammenhänge i
             '(2|5)',
             '(3|7)',
             '(2|7)',
-            '(1|3)'
+            '(1|3)',
+            '(4|9)'
           ],
           correctIndex: 0,
           explanation: '2x + 1 = -x + 7 → 3x = 6 → x = 2. y = 2·2 + 1 = 5. Schnittpunkt: (2|5).'
@@ -85,7 +88,8 @@ Die faktorisierte Form f(x) = a(x - x₁)(x - x₂) nutzt die Nullstellen x₁ u
             'S(2|-5)',
             'S(-2|-5)',
             'S(-2|5)',
-            'S(2|5)'
+            'S(2|5)',
+            'S(0|-5)'
           ],
           correctIndex: 1,
           explanation: 'Die Scheitelpunktform f(x) = a(x - xₛ)² + yₛ ergibt hier: xₛ = -2 und yₛ = -5, also S(-2|-5).'
@@ -96,7 +100,8 @@ Die faktorisierte Form f(x) = a(x - x₁)(x - x₂) nutzt die Nullstellen x₁ u
             'Zwei Nullstellen',
             'Eine doppelte Nullstelle',
             'Keine reelle Nullstelle',
-            'Unendlich viele'
+            'Unendlich viele',
+            'Genau drei Nullstellen'
           ],
           correctIndex: 2,
           explanation: 'D = b² - 4ac = 16 - 40 = -24 < 0. Da die Diskriminante negativ ist, gibt es keine reelle Nullstelle.'
@@ -107,7 +112,8 @@ Die faktorisierte Form f(x) = a(x - x₁)(x - x₂) nutzt die Nullstellen x₁ u
             'W = [12, ∞)',
             'W = (-∞, 12]',
             'W = (-∞, 1]',
-            'W = ℝ'
+            'W = ℝ',
+            'W = [0, 12]'
           ],
           correctIndex: 1,
           explanation: 'Da a = -3 < 0, ist die Parabel nach unten geöffnet. Das Maximum liegt bei yₛ = 12. Wertebereich: (-∞, 12].'
@@ -138,7 +144,8 @@ In der Medizin sind Exponential- und Logarithmusfunktionen allgegenwärtig. Der 
             'e⁵',
             '5e',
             '5',
-            '1'
+            '1',
+            'e/5'
           ],
           correctIndex: 2,
           explanation: 'ln(eⁿ) = n, da ln die Umkehrfunktion von eˣ ist. Also: ln(e⁵) = 5.'
@@ -149,7 +156,8 @@ In der Medizin sind Exponential- und Logarithmusfunktionen allgegenwärtig. Der 
             'log₁₀(495)',
             'log₁₀(100) = 2',
             'log₁₀(2500)',
-            'log₁₀(505)'
+            'log₁₀(505)',
+            'log₁₀(50) = 1,7'
           ],
           correctIndex: 1,
           explanation: 'log(a) - log(b) = log(a/b). Also: log₁₀(500/5) = log₁₀(100) = 2, da 10² = 100.'
@@ -160,7 +168,8 @@ In der Medizin sind Exponential- und Logarithmusfunktionen allgegenwärtig. Der 
             '3200',
             '6400',
             '1600',
-            '12800'
+            '12800',
+            '800'
           ],
           correctIndex: 1,
           explanation: '3 Stunden = 6 Verdopplungen (6 × 30 min). N = 100 · 2⁶ = 100 · 64 = 6400.'
@@ -191,7 +200,8 @@ Für den MedAT ist es wichtig, Definitions- und Wertebereiche sicher bestimmen z
             'D = [3, ∞)',
             'D = (-∞, -3] ∪ [3, ∞)',
             'D = [-3, 3]',
-            'D = ℝ'
+            'D = ℝ',
+            'D = (0, ∞)'
           ],
           correctIndex: 1,
           explanation: 'x² - 9 ≥ 0 → x² ≥ 9 → |x| ≥ 3 → x ≤ -3 oder x ≥ 3. Also D = (-∞, -3] ∪ [3, ∞).'
@@ -202,7 +212,8 @@ Für den MedAT ist es wichtig, Definitions- und Wertebereiche sicher bestimmen z
             'Punktsymmetrisch zum Ursprung',
             'Achsensymmetrisch zur y-Achse',
             'Keine Symmetrie',
-            'Achsensymmetrisch zur x-Achse'
+            'Achsensymmetrisch zur x-Achse',
+            'Symmetrisch zur Geraden y = x'
           ],
           correctIndex: 1,
           explanation: 'f(-x) = (-x)⁴ - 2(-x)² = x⁴ - 2x² = f(x). Da f(-x) = f(x), ist der Graph achsensymmetrisch zur y-Achse.'
@@ -213,7 +224,8 @@ Für den MedAT ist es wichtig, Definitions- und Wertebereiche sicher bestimmen z
             'Verschiebung um 2 nach links und 3 nach oben',
             'Verschiebung um 2 nach rechts und 3 nach oben',
             'Verschiebung um 2 nach rechts und 3 nach unten',
-            'Verschiebung um 3 nach rechts und 2 nach oben'
+            'Verschiebung um 3 nach rechts und 2 nach oben',
+            'Streckung um Faktor 2 und Verschiebung um 3 nach oben'
           ],
           correctIndex: 1,
           explanation: 'f(x - 2) verschiebt den Graphen um 2 nach rechts, und + 3 verschiebt ihn um 3 nach oben.'

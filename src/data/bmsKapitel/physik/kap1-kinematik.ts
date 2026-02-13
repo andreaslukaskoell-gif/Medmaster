@@ -28,13 +28,13 @@ In der medizinischen Physik spielt die gleichförmige Bewegung beispielsweise be
       selfTest: [
         {
           question: 'Ein Läufer legt 100 m in 10 s zurück. Wie groß ist seine Durchschnittsgeschwindigkeit in km/h?',
-          options: ['10 km/h', '36 km/h', '100 km/h', '3,6 km/h'],
+          options: ['10 km/h', '36 km/h', '100 km/h', '3,6 km/h', '72 km/h'],
           correctIndex: 1,
           explanation: 'v = s/t = 100 m / 10 s = 10 m/s. Umrechnung: 10 m/s × 3,6 = 36 km/h.',
         },
         {
           question: 'Im s-t-Diagramm einer gleichförmigen Bewegung entspricht die Steigung der Geraden:',
-          options: ['der Beschleunigung', 'der Geschwindigkeit', 'dem zurückgelegten Weg', 'der kinetischen Energie'],
+          options: ['der Beschleunigung', 'der Geschwindigkeit', 'dem zurückgelegten Weg', 'der kinetischen Energie', 'der Leistung des Körpers'],
           correctIndex: 1,
           explanation: 'Die Steigung im s-t-Diagramm ist Δs/Δt, was der Definition der Geschwindigkeit v = s/t entspricht.',
         },
@@ -45,6 +45,7 @@ In der medizinischen Physik spielt die gleichförmige Bewegung beispielsweise be
             'eine Parabel',
             'eine horizontale Linie',
             'eine abfallende Gerade',
+            'eine Sinuskurve',
           ],
           correctIndex: 2,
           explanation: 'Bei konstanter Geschwindigkeit bleibt v über die Zeit unverändert, was im v-t-Diagramm einer horizontalen Linie entspricht.',
@@ -72,19 +73,19 @@ Im v-t-Diagramm einer beschleunigten Bewegung entspricht die Fläche unter der K
       selfTest: [
         {
           question: 'Ein Körper beschleunigt aus der Ruhe mit 4 m/s². Welchen Weg legt er in 3 Sekunden zurück?',
-          options: ['12 m', '18 m', '36 m', '6 m'],
+          options: ['12 m', '18 m', '36 m', '6 m', '24 m'],
           correctIndex: 1,
           explanation: 's = ½ · a · t² = ½ · 4 · 9 = 18 m.',
         },
         {
           question: 'Die Steigung im v-t-Diagramm entspricht:',
-          options: ['der Geschwindigkeit', 'dem Weg', 'der Beschleunigung', 'der Leistung'],
+          options: ['der Geschwindigkeit', 'dem Weg', 'der Beschleunigung', 'der Leistung', 'dem Impuls'],
           correctIndex: 2,
           explanation: 'Die Steigung im v-t-Diagramm ist Δv/Δt, was der Definition der Beschleunigung entspricht.',
         },
         {
           question: 'Ein Auto bremst von 30 m/s auf 0 m/s in 6 s. Wie groß ist die Verzögerung?',
-          options: ['5 m/s²', '-5 m/s²', '180 m/s²', '-180 m/s²'],
+          options: ['5 m/s²', '-5 m/s²', '180 m/s²', '-180 m/s²', '-30 m/s²'],
           correctIndex: 1,
           explanation: 'a = Δv/Δt = (0 - 30)/6 = -5 m/s². Das Minuszeichen zeigt die Verzögerung an.',
         },
@@ -111,13 +112,13 @@ Der waagerechte Wurf (horizontaler Wurf) ist eine Überlagerung zweier unabhäng
       selfTest: [
         {
           question: 'Wie lange dauert der freie Fall aus 20 m Höhe? (g = 10 m/s²)',
-          options: ['1 s', '2 s', '4 s', '√2 s'],
+          options: ['1 s', '2 s', '4 s', '√2 s', '3 s'],
           correctIndex: 1,
           explanation: 'h = ½·g·t² → t² = 2h/g = 2·20/10 = 4 → t = 2 s.',
         },
         {
           question: 'Ein Ball wird senkrecht nach oben mit 20 m/s geworfen. Welche maximale Höhe erreicht er? (g = 10 m/s²)',
-          options: ['10 m', '20 m', '40 m', '200 m'],
+          options: ['10 m', '20 m', '40 m', '200 m', '5 m'],
           correctIndex: 1,
           explanation: 'hmax = v₀²/(2g) = 400/20 = 20 m.',
         },
@@ -128,6 +129,7 @@ Der waagerechte Wurf (horizontaler Wurf) ist eine Überlagerung zweier unabhäng
             'konstant (v₀)',
             'null',
             'abhängig von der Masse',
+            'proportional zur Fallhöhe',
           ],
           correctIndex: 1,
           explanation: 'Beim waagerechten Wurf wirkt keine horizontale Kraft (Luftwiderstand vernachlässigt), daher bleibt die horizontale Geschwindigkeit konstant bei v₀.',

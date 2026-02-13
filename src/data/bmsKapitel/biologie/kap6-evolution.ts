@@ -37,6 +37,7 @@ export const bioKap6: Kapitel = {
             'Vererbung erworbener Eigenschaften',
             'Variation innerhalb von Populationen',
             'Überproduktion von Nachkommen',
+            'Kampf ums Dasein (struggle for existence)',
           ],
           correctIndex: 1,
           explanation:
@@ -49,6 +50,7 @@ export const bioKap6: Kapitel = {
             'Die Vereinigung von Darwins Selektionstheorie mit Genetik und Populationsgenetik',
             'Die Vererbung erworbener Eigenschaften auf molekularer Ebene',
             'Die Entstehung von Arten durch göttliche Schöpfung',
+            'Die Erklärung von Evolution ausschließlich durch Gendrift und Mutation',
           ],
           correctIndex: 1,
           explanation:
@@ -61,6 +63,7 @@ export const bioKap6: Kapitel = {
             'Fortpflanzungserfolg eines Individuums',
             'Anpassung an extreme Umweltbedingungen',
             'Fähigkeit zur Nahrungsbeschaffung',
+            'Resistenz gegenüber Krankheitserregern',
           ],
           correctIndex: 1,
           explanation:
@@ -99,6 +102,7 @@ export const bioKap6: Kapitel = {
             'Die starke Reduktion einer Population durch ein katastrophales Ereignis',
             'Die gerichtete Selektion auf ein bestimmtes Merkmal',
             'Die Zunahme der Mutationsrate unter Stress',
+            'Die allmähliche Vergrößerung einer Population durch Einwanderung',
           ],
           correctIndex: 1,
           explanation:
@@ -111,6 +115,7 @@ export const bioKap6: Kapitel = {
             'Starke natürliche Selektion',
             'Zufällige Paarung (Panmixie)',
             'Kleine Populationsgröße',
+            'Geographische Isolation der Population',
           ],
           correctIndex: 2,
           explanation:
@@ -123,6 +128,7 @@ export const bioKap6: Kapitel = {
             'Mutation',
             'Selektion',
             'Rekombination',
+            'Genfluss',
           ],
           correctIndex: 2,
           explanation:
@@ -161,6 +167,7 @@ export const bioKap6: Kapitel = {
             'Ökologisches Artkonzept',
             'Biologisches Artkonzept',
             'Phylogenetisches Artkonzept',
+            'Genetisches Artkonzept',
           ],
           correctIndex: 2,
           explanation:
@@ -173,6 +180,7 @@ export const bioKap6: Kapitel = {
             'Darwin-Finken auf den Galápagos-Inseln',
             'Nischenaufteilung im selben Habitat',
             'Zeitliche Isolation durch unterschiedliche Blühzeiten',
+            'Entstehung von Antibiotikaresistenzen bei Bakterien',
           ],
           correctIndex: 1,
           explanation:
@@ -185,6 +193,7 @@ export const bioKap6: Kapitel = {
             'Geographische Isolation',
             'Polyploidie',
             'Natürliche Selektion',
+            'Horizontaler Gentransfer',
           ],
           correctIndex: 2,
           explanation:
@@ -223,6 +232,7 @@ export const bioKap6: Kapitel = {
             'Die Steißbeinwirbel',
             'Das Großhirn',
             'Die Lunge',
+            'Der Blinddarm als Ganzes',
           ],
           correctIndex: 1,
           explanation:
@@ -235,6 +245,7 @@ export const bioKap6: Kapitel = {
             'Homologe Organe haben gleichen Bauplan, analoge gleiche Funktion',
             'Beide haben gleichen Bauplan und gleiche Funktion',
             'Beide haben verschiedenen Bauplan und verschiedene Funktion',
+            'Homologe Organe entstehen durch konvergente Evolution, analoge durch Divergenz',
           ],
           correctIndex: 1,
           explanation:
@@ -247,6 +258,7 @@ export const bioKap6: Kapitel = {
             'Eine Übergangsform zwischen Reptilien und Vögeln',
             'Ein ausgestorbener Säugetier-Vorfahre',
             'Ein Rudiment bei modernen Vögeln',
+            'Ein Beispiel für konvergente Evolution bei Flugsauriern',
           ],
           correctIndex: 1,
           explanation:
@@ -285,6 +297,7 @@ export const bioKap6: Kapitel = {
             'Ein gemeinsamer Vorfahre und alle seine Nachkommen',
             'Eine Gruppe von Arten mit gleicher ökologischer Nische',
             'Arten, die in derselben geographischen Region leben',
+            'Eine Gruppe von Arten, die durch konvergente Evolution ähnliche Merkmale entwickelt haben',
           ],
           correctIndex: 1,
           explanation:
@@ -297,6 +310,7 @@ export const bioKap6: Kapitel = {
             'Auf der annähernd konstanten Rate von DNA-Sequenzveränderungen',
             'Auf der gleichmäßigen Entstehung neuer Arten',
             'Auf der konstanten Mutationsrate durch UV-Strahlung',
+            'Auf der gleichmäßigen Abnahme der Chromosomenzahl im Laufe der Evolution',
           ],
           correctIndex: 1,
           explanation:
@@ -309,6 +323,7 @@ export const bioKap6: Kapitel = {
             'Die Synthetische Evolutionstheorie',
             'Die Endosymbiontentheorie',
             'Die Panspermietheorie',
+            'Die Hypothese der spontanen Biogenese',
           ],
           correctIndex: 2,
           explanation:
@@ -347,10 +362,11 @@ export const bioKap6: Kapitel = {
             'Ca. 3,2 Mio. Jahre alt, Australopithecus afarensis',
             'Ca. 300.000 Jahre alt, Homo sapiens',
             'Ca. 7 Mio. Jahre alt, Sahelanthropus tchadensis',
+            'Ca. 500.000 Jahre alt, Homo heidelbergensis',
           ],
           correctIndex: 1,
           explanation:
-            '„Lucy“ ist ein ca. 3,2 Millionen Jahre altes Fossil der Art Australopithecus afarensis, das 1974 in Äthiopien gefunden wurde. Lucy war bereits ein aufrechtgehender Zweibeiner.',
+            '„Lucy" ist ein ca. 3,2 Millionen Jahre altes Fossil der Art Australopithecus afarensis, das 1974 in Äthiopien gefunden wurde. Lucy war bereits ein aufrechtgehender Zweibeiner.',
         },
         {
           question: 'Welche anatomische Anpassung an den aufrechten Gang ist korrekt?',
@@ -359,6 +375,7 @@ export const bioKap6: Kapitel = {
             'Foramen magnum nach hinten verlagert',
             'S-förmige Wirbelsäule mit Lordosen und Kyphosen',
             'Opponierbare Großzehe für besseren Griff',
+            'Verlängerte Arme im Verhältnis zu den Beinen',
           ],
           correctIndex: 2,
           explanation:
@@ -371,6 +388,7 @@ export const bioKap6: Kapitel = {
             'Homo sapiens entstand in Afrika und breitete sich von dort aus',
             'Alle Menschenaffen stammen aus Südamerika',
             'Die menschliche Evolution fand ausschließlich in Europa statt',
+            'Homo sapiens entstand in Asien und wanderte nach Afrika zurück',
           ],
           correctIndex: 1,
           explanation:
@@ -409,6 +427,7 @@ export const bioKap6: Kapitel = {
             'Transformierende Selektion',
             'Disruptive Selektion',
             'Sexuelle Selektion',
+            'Künstliche Selektion durch den Menschen',
           ],
           correctIndex: 2,
           explanation:
@@ -421,6 +440,7 @@ export const bioKap6: Kapitel = {
             'Partnerwahl, meist durch Weibchen',
             'Konkurrenz um Nahrungsressourcen',
             'Selektion durch Fressfeinde',
+            'Selektion auf Farbmorphen in verschiedenen Habitaten',
           ],
           correctIndex: 1,
           explanation:
@@ -433,6 +453,7 @@ export const bioKap6: Kapitel = {
             'Industriemelanismus beim Birkenspanner',
             'Schnabelgrößen-Verteilung bei Webervögeln',
             'Pfauenschwanz als Schmuckmerkmal',
+            'Zunahme der Laktosetoleranz in europäischen Populationen',
           ],
           correctIndex: 1,
           explanation:
@@ -471,6 +492,7 @@ export const bioKap6: Kapitel = {
             'Eine harmlose Schwebfliege mit wespenähnlicher Färbung',
             'Eine Stabschrecke, die einem Zweig ähnelt',
             'Ein Chamäleon, das seine Farbe ändert',
+            'Ein Korallennatter-Muster bei einer nicht verwandten Schlangenart',
           ],
           correctIndex: 1,
           explanation:
@@ -483,6 +505,7 @@ export const bioKap6: Kapitel = {
             'Die Notwendigkeit ständiger Evolution im koevolutionären Wettrüsten',
             'Die Entstehung neuer Arten durch Isolation',
             'Die Vererbung erworbener Eigenschaften',
+            'Die Zunahme der Biodiversität nach Massenaussterben',
           ],
           correctIndex: 1,
           explanation:
@@ -495,6 +518,7 @@ export const bioKap6: Kapitel = {
             'Ektoparasiten sind immer Bakterien, Endoparasiten immer Viren',
             'Ektoparasiten leben auf der Körperoberfläche, Endoparasiten im Körperinneren',
             'Es gibt keinen Unterschied, die Begriffe sind synonym',
+            'Ektoparasiten befallen nur Wirbeltiere, Endoparasiten nur Wirbellose',
           ],
           correctIndex: 2,
           explanation:

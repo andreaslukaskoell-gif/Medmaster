@@ -34,7 +34,8 @@ Die beiden Stränge werden durch Wasserstoffbrückenbindungen zwischen komplemen
             '1 Wasserstoffbrücke',
             '2 Wasserstoffbrücken',
             '3 Wasserstoffbrücken',
-            '4 Wasserstoffbrücken'
+            '4 Wasserstoffbrücken',
+            '5 Wasserstoffbrücken bei methylierten Basen'
           ],
           correctIndex: 2,
           explanation: 'Guanin und Cytosin bilden drei Wasserstoffbrückenbindungen (G≡C), während Adenin und Thymin nur zwei Wasserstoffbrücken bilden (A=T). Deshalb sind GC-reiche Regionen stabiler.'
@@ -45,7 +46,8 @@ Die beiden Stränge werden durch Wasserstoffbrückenbindungen zwischen komplemen
             '30 %',
             '20 %',
             '40 %',
-            '10 %'
+            '10 %',
+            '25 %'
           ],
           correctIndex: 1,
           explanation: 'Nach den Chargaff-Regeln gilt [A]=[T]=30 %, also [A]+[T]=60 %. Da die Gesamtmenge 100 % beträgt, verbleiben 40 % für [G]+[C]. Da [G]=[C], ergibt sich [G]=20 %.'
@@ -56,7 +58,8 @@ Die beiden Stränge werden durch Wasserstoffbrückenbindungen zwischen komplemen
             'Beide Stränge verlaufen in 5\'→3\'-Richtung',
             'Ein Strang verläuft in 5\'→3\'-Richtung, der andere in 3\'→5\'-Richtung',
             'Die Richtung wird durch die Basensequenz bestimmt',
-            'Beide Stränge verlaufen in 3\'→5\'-Richtung'
+            'Beide Stränge verlaufen in 3\'→5\'-Richtung',
+            'Die Stränge wechseln abwechselnd zwischen 5\'→3\'- und 3\'→5\'-Richtung'
           ],
           correctIndex: 1,
           explanation: 'Die beiden DNA-Stränge der Doppelhelix verlaufen antiparallel: Wenn der eine Strang in 5\'→3\'-Richtung gelesen wird, verläuft der komplementäre Strang in 3\'→5\'-Richtung. Diese Antiparallelität ist wichtig für die Replikation und Transkription.'
@@ -92,7 +95,8 @@ Aufgrund der antiparallelen Struktur der DNA und der ausschließlichen 5'→3'-S
             'Sie öffnet die Doppelhelix durch Spaltung der Wasserstoffbrücken',
             'Sie synthetisiert kurze RNA-Primer, die als Startpunkt für die DNA-Polymerase dienen',
             'Sie verbindet die Okazaki-Fragmente miteinander',
-            'Sie entfernt falsch eingebaute Nukleotide (Proofreading)'
+            'Sie entfernt falsch eingebaute Nukleotide (Proofreading)',
+            'Sie löst die Überspiralisierung der DNA vor der Replikationsgabel'
           ],
           correctIndex: 1,
           explanation: 'Die Primase ist eine RNA-Polymerase, die kurze RNA-Primer synthetisiert. Diese Primer liefern das freie 3\'-OH-Ende, das die DNA-Polymerase zum Start der DNA-Synthese benötigt. Ohne Primer kann die DNA-Polymerase nicht beginnen.'
@@ -103,7 +107,8 @@ Aufgrund der antiparallelen Struktur der DNA und der ausschließlichen 5'→3'-S
             'Kurze DNA-Abschnitte, die auf dem Folgestrang diskontinuierlich synthetisiert werden',
             'RNA-Primer, die nach der Replikation entfernt werden',
             'Fehlerhafte DNA-Abschnitte, die durch Proofreading entfernt werden',
-            'Verdichtete Chromatinabschnitte während der Mitose'
+            'Verdichtete Chromatinabschnitte während der Mitose',
+            'Einzelsträngige DNA-Schleifen am Leitstrang'
           ],
           correctIndex: 0,
           explanation: 'Okazaki-Fragmente sind kurze DNA-Stücke (100–2000 Nukleotide), die auf dem Folgestrang (Lagging Strand) diskontinuierlich in 5\'→3\'-Richtung synthetisiert werden. Sie werden anschließend durch die DNA-Ligase zu einem durchgehenden Strang verbunden.'
@@ -114,7 +119,8 @@ Aufgrund der antiparallelen Struktur der DNA und der ausschließlichen 5'→3'-S
             'Helikase',
             'DNA-Polymerase III',
             'DNA-Ligase',
-            'Topoisomerase'
+            'Topoisomerase',
+            'Primase'
           ],
           correctIndex: 2,
           explanation: 'Die DNA-Ligase katalysiert die Bildung von Phosphodiesterbindungen zwischen dem 3\'-OH-Ende eines Okazaki-Fragments und dem 5\'-Phosphat-Ende des nächsten Fragments und verbindet sie so zu einem durchgehenden Strang.'
@@ -149,7 +155,8 @@ Bei Eukaryoten unterliegt die primäre mRNA (prä-mRNA) einem umfangreichen Proz
             'RNA-Polymerase I',
             'RNA-Polymerase II',
             'RNA-Polymerase III',
-            'DNA-Polymerase δ'
+            'DNA-Polymerase δ',
+            'Reverse Transkriptase'
           ],
           correctIndex: 1,
           explanation: 'Die RNA-Polymerase II ist für die Transkription proteinkodierender Gene (mRNA) bei Eukaryoten verantwortlich. RNA-Pol I synthetisiert rRNA, RNA-Pol III tRNA und 5S-rRNA.'
@@ -160,7 +167,8 @@ Bei Eukaryoten unterliegt die primäre mRNA (prä-mRNA) einem umfangreichen Proz
             'Entfernung der Introns',
             'Schutz vor Exonukleasen, Erleichterung des Kernexports und Translationsinitiation',
             'Anheftung des Poly-A-Schwanzes',
-            'Bindung der tRNA an die mRNA'
+            'Bindung der tRNA an die mRNA',
+            'Aktivierung der Ribosomen für die Elongation'
           ],
           correctIndex: 1,
           explanation: 'Das 5\'-Cap (7-Methylguanosin) schützt die mRNA vor Abbau durch 5\'-Exonukleasen, erleichtert den Export aus dem Zellkern und wird bei der Translationsinitiation vom Ribosom erkannt (Cap-abhängige Translation).'
@@ -171,7 +179,8 @@ Bei Eukaryoten unterliegt die primäre mRNA (prä-mRNA) einem umfangreichen Proz
             'Die Exons (kodierende Abschnitte)',
             'Die Introns (nicht-kodierende Abschnitte)',
             'Das 5\'-Cap',
-            'Der Poly-A-Schwanz'
+            'Der Poly-A-Schwanz',
+            'Die Promotorsequenz'
           ],
           correctIndex: 1,
           explanation: 'Beim Spleißen werden die Introns (nicht-kodierende Sequenzen) durch das Spleißosom herausgeschnitten, und die Exons (kodierende Sequenzen) werden zusammengefügt. Merke: „EXons werden EXportiert, INtrons bleiben IN.“'
@@ -207,7 +216,8 @@ Die Translation verläuft in drei Phasen. Bei der Initiation bindet die kleine r
             'UAG — Tyrosin',
             'AUG — Methionin',
             'UGA — Tryptophan',
-            'GCA — Alanin'
+            'GCA — Alanin',
+            'UAA — Glutamin'
           ],
           correctIndex: 1,
           explanation: 'AUG ist das universelle Startcodon und kodiert für die Aminosäure Methionin (bzw. Formylmethionin bei Prokaryoten). Es markiert den Beginn der Translationsablesung.'
@@ -218,7 +228,8 @@ Die Translation verläuft in drei Phasen. Bei der Initiation bindet die kleine r
             'Sie ist ein Protein in der kleinen ribosomalen Untereinheit',
             'Sie ist eine katalytische Aktivität der rRNA in der großen ribosomalen Untereinheit (Ribozym)',
             'Sie spaltet die Peptidbindung bei der Termination',
-            'Sie belädt die tRNA mit Aminosäuren'
+            'Sie belädt die tRNA mit Aminosäuren',
+            'Sie ist ein Enzym in der Kernmembran, das die mRNA-Reifung katalysiert'
           ],
           correctIndex: 1,
           explanation: 'Die Peptidyltransferase-Aktivität wird von der rRNA der großen ribosomalen Untereinheit katalysiert — sie ist somit ein Ribozym (katalytische RNA). Sie katalysiert die Bildung der Peptidbindung zwischen der wachsenden Polypeptidkette und der neuen Aminosäure.'
@@ -229,7 +240,8 @@ Die Translation verläuft in drei Phasen. Bei der Initiation bindet die kleine r
             'Eine spezielle tRNA mit der Aminosäure Stopp bindet',
             'Release-Faktoren binden, das Polypeptid wird freigesetzt und die ribosomalen Untereinheiten dissoziieren',
             'Die Translation wird pausiert, bis ein neues Startcodon gefunden wird',
-            'Die mRNA wird gespleißt'
+            'Die mRNA wird gespleißt',
+            'Die Aminoacyl-tRNA-Synthetase bindet und fügt eine terminale Aminosäure hinzu'
           ],
           correctIndex: 1,
           explanation: 'Stoppcodons (UAA, UAG, UGA) werden nicht von tRNAs erkannt, sondern von Release-Faktoren (Terminationsfaktoren). Diese lösen die Hydrolyse der Bindung zwischen Polypeptid und tRNA aus, das fertige Protein wird freigesetzt, und die ribosomalen Untereinheiten trennen sich.'
@@ -264,7 +276,8 @@ Die eukaryotische Genregulation ist wesentlich komplexer und vielschichtiger. Au
             'Maximale Expression der Strukturgene',
             'Der Repressor blockiert den Operator, keine Transkription der Strukturgene',
             'Die RNA-Polymerase bindet, aber die Translation wird gehemmt',
-            'Das Operon wird durch DNA-Methylierung stillgelegt'
+            'Das Operon wird durch DNA-Methylierung stillgelegt',
+            'Der CAP-cAMP-Komplex aktiviert die Transkription ohne Repressorbeteiligung'
           ],
           correctIndex: 1,
           explanation: 'Ohne Laktose bleibt der Lac-Repressor am Operator gebunden und blockiert die Transkription — unabhängig davon, ob Glukose vorhanden ist oder nicht. Die Strukturgene lacZ, lacY und lacA werden nicht transkribiert.'
@@ -275,7 +288,8 @@ Die eukaryotische Genregulation ist wesentlich komplexer und vielschichtiger. Au
             'Sequenzen, die die Transkription benachbarter Gene hemmen',
             'Regulatorische DNA-Sequenzen, die die Transkription verstärken und weit vom Promotor entfernt liegen können',
             'RNA-Moleküle, die die mRNA-Stabilität erhöhen',
-            'Enzyme, die die Histonacetylierung katalysieren'
+            'Enzyme, die die Histonacetylierung katalysieren',
+            'Abschnitte der mRNA, die nach dem Spleißen als Aktivatoren wirken'
           ],
           correctIndex: 1,
           explanation: 'Enhancer sind cis-regulatorische DNA-Sequenzen, an die spezifische Transkriptionsfaktoren (Aktivatoren) binden. Sie können die Transkription eines Gens deutlich verstärken und liegen oft Hunderte bis Tausende Basenpaare vom Promotor entfernt. Die Wechselwirkung wird durch DNA-Schleifen und den Mediatorkomplex vermittelt.'
@@ -286,7 +300,8 @@ Die eukaryotische Genregulation ist wesentlich komplexer und vielschichtiger. Au
             'miRNAs binden an den Promotor und aktivieren die Transkription',
             'miRNAs binden komplementär an die Ziel-mRNA und bewirken deren Abbau oder Translationshemmung über den RISC-Komplex',
             'miRNAs ersetzen beschädigte mRNA-Abschnitte',
-            'miRNAs methylieren die DNA an CpG-Inseln'
+            'miRNAs methylieren die DNA an CpG-Inseln',
+            'miRNAs dienen als Primer für die DNA-Replikation in der S-Phase'
           ],
           correctIndex: 1,
           explanation: 'MicroRNAs (ca. 21–23 Nukleotide) binden komplementär an die 3\'-UTR der Ziel-mRNA. Der RISC-Komplex (RNA-induced silencing complex) vermittelt dann entweder den Abbau der mRNA oder die Hemmung ihrer Translation — ein wichtiger Mechanismus der posttranskriptionellen Genregulation.'

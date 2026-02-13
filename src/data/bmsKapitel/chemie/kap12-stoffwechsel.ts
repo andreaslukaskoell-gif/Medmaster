@@ -31,7 +31,8 @@ Unter aeroben Bedingungen wird Pyruvat durch die **Pyruvat-Dehydrogenase** zu Ac
             '4 ATP',
             '2 ATP',
             '36 ATP',
-            '0 ATP'
+            '0 ATP',
+            '6 ATP'
           ],
           correctIndex: 1,
           explanation: 'In der Glykolyse werden 2 ATP investiert und 4 ATP durch Substratkettenphosphorylierung gewonnen. Die Nettobilanz beträgt daher 2 ATP pro Glucose. Zusätzlich entstehen 2 NADH + H⁺.'
@@ -42,7 +43,8 @@ Unter aeroben Bedingungen wird Pyruvat durch die **Pyruvat-Dehydrogenase** zu Ac
             'Im Cytoplasma',
             'An der äußeren Mitochondrienmembran',
             'In der mitochondrialen Matrix',
-            'An der inneren Mitochondrienmembran'
+            'An der inneren Mitochondrienmembran',
+            'Im endoplasmatischen Retikulum'
           ],
           correctIndex: 2,
           explanation: 'Der Citratzyklus läuft in der mitochondrialen Matrix ab. Die Glykolyse findet im Cytoplasma statt, die Atmungskette an der inneren Mitochondrienmembran.'
@@ -53,7 +55,8 @@ Unter aeroben Bedingungen wird Pyruvat durch die **Pyruvat-Dehydrogenase** zu Ac
             'Es wird zu Acetyl-CoA oxidiert.',
             'Es wird zu Ethanol und CO₂ vergoren.',
             'Es wird zu Lactat reduziert.',
-            'Es wird direkt in den Citratzyklus eingeschleust.'
+            'Es wird direkt in den Citratzyklus eingeschleust.',
+            'Es wird zu Oxalacetat carboxyliert.'
           ],
           correctIndex: 2,
           explanation: 'Bei Sauerstoffmangel wird Pyruvat im menschlichen Muskel durch die Lactatdehydrogenase zu Lactat reduziert (Milchsäuregärung). Dabei wird NADH zu NAD⁺ reoxidiert, sodass die Glykolyse weiterlaufen kann. Die alkoholische Gärung (Ethanol + CO₂) kommt bei Hefen vor, nicht beim Menschen.'
@@ -84,7 +87,8 @@ Die **Dunkelreaktion** (Calvin-Zyklus) findet im **Stroma** des Chloroplasten st
             'In den Thylakoidmembranen',
             'Im Stroma',
             'Im Intermembranraum',
-            'In der äußeren Chloroplastenmembran'
+            'In der äußeren Chloroplastenmembran',
+            'In der mitochondrialen Matrix'
           ],
           correctIndex: 1,
           explanation: 'Der Calvin-Zyklus (Dunkelreaktion) findet im Stroma des Chloroplasten statt. Die Lichtreaktion findet dagegen an den Thylakoidmembranen statt.'
@@ -95,7 +99,8 @@ Die **Dunkelreaktion** (Calvin-Zyklus) findet im **Stroma** des Chloroplasten st
             'ATP-Synthase',
             'Chlorophyll',
             'RuBisCO',
-            'Pyruvatkinase'
+            'Pyruvatkinase',
+            'Phosphofructokinase'
           ],
           correctIndex: 2,
           explanation: 'RuBisCO (Ribulose-1,5-bisphosphat-Carboxylase/Oxygenase) katalysiert die Fixierung von CO₂ an Ribulose-1,5-bisphosphat. Es ist das häufigste Enzym der Erde und das Schlüsselenzym des Calvin-Zyklus.'
@@ -106,7 +111,8 @@ Die **Dunkelreaktion** (Calvin-Zyklus) findet im **Stroma** des Chloroplasten st
             'Aus dem CO₂',
             'Aus der Glucose',
             'Aus dem Wasser (Fotolyse)',
-            'Aus der Luft'
+            'Aus der Luft',
+            'Aus dem NADPH'
           ],
           correctIndex: 2,
           explanation: 'Der freigesetzte Sauerstoff stammt aus der Fotolyse des Wassers im Fotosystem II: 2 H₂O → O₂ + 4 H⁺ + 4 e⁻. Isotopenexperimente mit ¹⁸O-markiertem Wasser haben dies eindeutig bewiesen.'
@@ -137,7 +143,8 @@ Die **Dunkelreaktion** (Calvin-Zyklus) findet im **Stroma** des Chloroplasten st
             'Platin (Pt)',
             'Eisenoxid (Fe₂O₃)',
             'Vanadiumpentoxid (V₂O₅)',
-            'Nickel (Ni)'
+            'Nickel (Ni)',
+            'Manganoxid (MnO₂)'
           ],
           correctIndex: 2,
           explanation: 'Beim Kontaktverfahren wird V₂O₅ (Vanadiumpentoxid) als Katalysator für die Oxidation von SO₂ zu SO₃ eingesetzt: 2 SO₂ + O₂ → 2 SO₃. Anschließend reagiert SO₃ mit Wasser zu H₂SO₄.'
@@ -148,7 +155,8 @@ Die **Dunkelreaktion** (Calvin-Zyklus) findet im **Stroma** des Chloroplasten st
             'BaSO₄ enthält kein Barium.',
             'BaSO₄ wird im Magen neutralisiert.',
             'BaSO₄ ist in Wasser nahezu unlöslich und setzt daher keine Ba²⁺-Ionen frei.',
-            'BaSO₄ wird sofort über die Niere ausgeschieden.'
+            'BaSO₄ wird sofort über die Niere ausgeschieden.',
+            'BaSO₄ wird durch die Magensäure zu ungiftigem BaCl₂ umgewandelt.'
           ],
           correctIndex: 2,
           explanation: 'BaSO₄ hat ein extrem niedriges Löslichkeitsprodukt (Ksp ≈ 10⁻¹⁰), sodass praktisch keine freien Ba²⁺-Ionen in Lösung gehen. Es passiert den Magen-Darm-Trakt unresorbiert und wird ausgeschieden.'
@@ -159,7 +167,8 @@ Die **Dunkelreaktion** (Calvin-Zyklus) findet im **Stroma** des Chloroplasten st
             'Saurer Regen entsteht durch CO₂ in der Atmosphäre.',
             'Saurer Regen entsteht durch Reaktion von SO₂/SO₃ und NOₓ mit Regenwasser zu H₂SO₄ bzw. HNO₃.',
             'Saurer Regen hat einen pH-Wert über 7.',
-            'Saurer Regen ist ausschließlich ein natürliches Phänomen.'
+            'Saurer Regen ist ausschließlich ein natürliches Phänomen.',
+            'Saurer Regen entsteht durch die Reaktion von Ozon mit Regenwasser.'
           ],
           correctIndex: 1,
           explanation: 'Saurer Regen entsteht hauptsächlich durch SO₂ und NOₓ aus der Verbrennung fossiler Brennstoffe. In der Atmosphäre werden diese zu H₂SO₄ und HNO₃ umgewandelt, die den pH-Wert des Regens unter den natürlichen Wert von ca. 5,6 (durch CO₂) senken.'

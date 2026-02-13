@@ -31,7 +31,8 @@ Für praktische Berechnungen kann die ideale Gasgleichung in verschiedenen Forme
             '44,8 L',
             '11,2 L',
             '22,4 L',
-            '5,6 L'
+            '5,6 L',
+            '16,8 L'
           ],
           correctIndex: 1,
           explanation: 'V = n × Vm = 0,5 mol × 22,4 L/mol = 11,2 L. Bei STP beträgt das molare Volumen eines idealen Gases 22,4 L/mol.'
@@ -42,7 +43,8 @@ Für praktische Berechnungen kann die ideale Gasgleichung in verschiedenen Forme
             'Die Teilchen haben kein Eigenvolumen',
             'Zwischen den Teilchen gibt es keine Anziehungskräfte',
             'Die Teilchen bewegen sich geradlinig und gleichförmig zwischen den Stößen',
-            'Die Teilchen üben starke Anziehungskräfte aufeinander aus'
+            'Die Teilchen üben starke Anziehungskräfte aufeinander aus',
+            'Die Stöße zwischen den Teilchen sind vollkommen elastisch'
           ],
           correctIndex: 3,
           explanation: 'Im Modell des idealen Gases werden keine Wechselwirkungen (Anziehungskräfte) zwischen den Teilchen angenommen. Die Teilchen werden als Massenpunkte ohne Eigenvolumen betrachtet, die nur elastisch stoßen.'
@@ -53,7 +55,8 @@ Für praktische Berechnungen kann die ideale Gasgleichung in verschiedenen Forme
             'Es halbiert sich',
             'Es bleibt gleich',
             'Es verdoppelt sich',
-            'Es vervierfacht sich'
+            'Es vervierfacht sich',
+            'Es nimmt um den Faktor 1,5 zu'
           ],
           correctIndex: 2,
           explanation: 'Aus pV = nRT folgt bei konstantem p und T: V ∝ n (Avogadro-Gesetz). Verdoppelt man die Stoffmenge, verdoppelt sich auch das Volumen.'
@@ -84,7 +87,8 @@ Das Daltonsche Gesetz der Partialdrücke (1801) ist besonders für die Medizin r
             '20 L',
             '5 L',
             '10 L',
-            '2,5 L'
+            '2,5 L',
+            '7,5 L'
           ],
           correctIndex: 1,
           explanation: 'Nach Boyle-Mariotte: p₁V₁ = p₂V₂ → 1 bar × 10 L = 2 bar × V₂ → V₂ = 5 L. Bei Verdopplung des Drucks halbiert sich das Volumen.'
@@ -95,7 +99,8 @@ Das Daltonsche Gesetz der Partialdrücke (1801) ist besonders für die Medizin r
             '78,0 kPa',
             '21,3 kPa',
             '50,6 kPa',
-            '10,1 kPa'
+            '10,1 kPa',
+            '42,5 kPa'
           ],
           correctIndex: 1,
           explanation: 'pO₂ = xO₂ × p_gesamt = 0,21 × 101,3 kPa ≈ 21,3 kPa. Der Partialdruck berechnet sich aus dem Molenbruch und dem Gesamtdruck.'
@@ -106,7 +111,8 @@ Das Daltonsche Gesetz der Partialdrücke (1801) ist besonders für die Medizin r
             '3 L',
             '6 L',
             '12 L',
-            '24 L'
+            '24 L',
+            '9 L'
           ],
           correctIndex: 2,
           explanation: 'Nach Gay-Lussac: V₁/T₁ = V₂/T₂ → 6 L / 300 K = V₂ / 600 K → V₂ = 12 L. Verdopplung der Temperatur (in Kelvin) bei konstantem Druck verdoppelt das Volumen.'

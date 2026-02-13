@@ -31,7 +31,8 @@ Die **Umsetzungsreaktion** (auch Austausch- oder Doppeltauschreaktion genannt) b
             '2 H₂ + O₂ → 2 H₂O',
             'CaCO₃ → CaO + CO₂',
             'BaCl₂ + Na₂SO₄ → BaSO₄ + 2 NaCl',
-            'CH₄ + 2 O₂ → CO₂ + 2 H₂O'
+            'CH₄ + 2 O₂ → CO₂ + 2 H₂O',
+            'NaCl → Na⁺ + Cl⁻'
           ],
           correctIndex: 0,
           explanation: 'Bei der Synthese verbinden sich einfache Stoffe (H₂ und O₂) zu einem komplexeren Produkt (H₂O). Die zweite Gleichung ist eine Analyse, die dritte eine Umsetzung, die vierte eine Verbrennung.'
@@ -42,7 +43,8 @@ Die **Umsetzungsreaktion** (auch Austausch- oder Doppeltauschreaktion genannt) b
             'CO und H₂',
             'CO₂ und H₂O',
             'C und H₂O',
-            'CO und H₂O'
+            'CO und H₂O',
+            'CO₂ und H₂'
           ],
           correctIndex: 1,
           explanation: 'Bei vollständiger Verbrennung werden Kohlenwasserstoffe komplett zu CO₂ und H₂O oxidiert. Nur bei unvollständiger Verbrennung (Sauerstoffmangel) entstehen CO oder Ruß.'
@@ -53,7 +55,8 @@ Die **Umsetzungsreaktion** (auch Austausch- oder Doppeltauschreaktion genannt) b
             'Es verbinden sich zwei Elemente zu einer Verbindung.',
             'Ein Stoff wird in seine Bestandteile zerlegt.',
             'Zwei Verbindungen tauschen ihre Bestandteile aus.',
-            'Ein Stoff reagiert mit Sauerstoff.'
+            'Ein Stoff reagiert mit Sauerstoff.',
+            'Ein Stoff wird durch Wasser zersetzt.'
           ],
           correctIndex: 2,
           explanation: 'Bei einer Umsetzungsreaktion (Doppeltauschreaktion) tauschen zwei Verbindungen ihre Bestandteile aus: AB + CD → AD + CB. Die anderen Optionen beschreiben Synthese, Analyse bzw. Verbrennung.'
@@ -84,7 +87,8 @@ Die **Aktivierungsenergie** (Eₐ) ist die Mindestenergie, die aufgebracht werde
             'ΔH > 0, es wird Energie aufgenommen.',
             'ΔH < 0, es wird Energie an die Umgebung abgegeben.',
             'Die Produkte haben mehr Enthalpie als die Edukte.',
-            'Exotherme Reaktionen benötigen keine Aktivierungsenergie.'
+            'Exotherme Reaktionen benötigen keine Aktivierungsenergie.',
+            'Die Entropie nimmt bei exothermen Reaktionen immer ab.'
           ],
           correctIndex: 1,
           explanation: 'Bei exothermen Reaktionen ist ΔH negativ, da die Produkte energieärmer sind als die Edukte. Die Differenz wird als Wärme freigesetzt. Auch exotherme Reaktionen benötigen eine Aktivierungsenergie.'
@@ -95,7 +99,8 @@ Die **Aktivierungsenergie** (Eₐ) ist die Mindestenergie, die aufgebracht werde
             'Die Reaktionsgeschwindigkeit ist proportional zur Temperatur.',
             'Die Gesamtenthalpieänderung ist unabhängig vom Reaktionsweg.',
             'Katalysatoren erhöhen die Gleichgewichtskonstante.',
-            'Endotherme Reaktionen laufen nicht freiwillig ab.'
+            'Endotherme Reaktionen laufen nicht freiwillig ab.',
+            'Die Reaktionsenthalpie hängt vom verwendeten Katalysator ab.'
           ],
           correctIndex: 1,
           explanation: 'Der Satz von Hess (Hessscher Wärmesatz) besagt, dass die Enthalpieänderung einer Reaktion nur vom Anfangs- und Endzustand abhängt, nicht vom Weg dorthin. So kann man ΔH aus Teilreaktionen berechnen.'
@@ -106,7 +111,8 @@ Die **Aktivierungsenergie** (Eₐ) ist die Mindestenergie, die aufgebracht werde
             'Sie senken die Aktivierungsenergie.',
             'Sie werden bei der Reaktion nicht verbraucht.',
             'Sie verschieben das chemische Gleichgewicht zugunsten der Produkte.',
-            'Enzyme sind biologische Katalysatoren.'
+            'Enzyme sind biologische Katalysatoren.',
+            'Sie erhöhen die Aktivierungsenergie der Rückreaktion.'
           ],
           correctIndex: 2,
           explanation: 'Katalysatoren verschieben das Gleichgewicht NICHT. Sie beschleunigen nur die Einstellung des Gleichgewichts, indem sie Hin- und Rückreaktion gleichermaßen beschleunigen. Die Gleichgewichtskonstante K bleibt unverändert.'
@@ -137,7 +143,8 @@ Das **Geschwindigkeitsgesetz** einer Reaktion wird experimentell ermittelt und h
             'Temperatur',
             'Konzentration der Edukte',
             'Gleichgewichtskonstante K',
-            'Anwesenheit eines Katalysators'
+            'Anwesenheit eines Katalysators',
+            'Zerteilungsgrad der Edukte'
           ],
           correctIndex: 2,
           explanation: 'Die Gleichgewichtskonstante K beschreibt die Lage des Gleichgewichts, nicht die Geschwindigkeit. Temperatur, Konzentration und Katalysatoren beeinflussen direkt die Reaktionsgeschwindigkeit.'
@@ -148,7 +155,8 @@ Das **Geschwindigkeitsgesetz** einer Reaktion wird experimentell ermittelt und h
             'v wird 3-mal so groß',
             'v wird 6-mal so groß',
             'v wird 9-mal so groß',
-            'v bleibt gleich'
+            'v bleibt gleich',
+            'v wird 27-mal so groß'
           ],
           correctIndex: 2,
           explanation: 'Bei v = k·[A]² führt eine Verdreifachung von [A] zu v = k·(3[A])² = 9·k·[A]². Die Geschwindigkeit wird also 9-mal so groß.'
@@ -159,7 +167,8 @@ Das **Geschwindigkeitsgesetz** einer Reaktion wird experimentell ermittelt und h
             'Den Zusammenhang zwischen Gleichgewichtskonstante und Temperatur',
             'Die Abhängigkeit der Geschwindigkeitskonstante k von der Temperatur',
             'Die Beziehung zwischen Enthalpie und Entropie',
-            'Die Konzentrationsabhängigkeit der Reaktionsgeschwindigkeit'
+            'Die Konzentrationsabhängigkeit der Reaktionsgeschwindigkeit',
+            'Die Druckabhängigkeit des chemischen Gleichgewichts'
           ],
           correctIndex: 1,
           explanation: 'Die Arrhenius-Gleichung k = A · e^(-Eₐ/RT) beschreibt, wie die Geschwindigkeitskonstante k mit der Temperatur T zusammenhängt. Sie zeigt, dass höhere Temperaturen zu größerem k und damit schnelleren Reaktionen führen.'
@@ -190,7 +199,8 @@ Die Gleichgewichtskonstante K hängt mit der freien Enthalpie über die Beziehun
             'Die Geschwindigkeit der Hinreaktion',
             'Das Verhältnis der Produkt- zu Eduktkonzentrationen im Gleichgewicht',
             'Die Aktivierungsenergie der Reaktion',
-            'Die Enthalpieänderung der Reaktion'
+            'Die Enthalpieänderung der Reaktion',
+            'Die Stoffmenge der Produkte in Mol'
           ],
           correctIndex: 1,
           explanation: 'K gibt das Verhältnis der Konzentrationen von Produkten zu Edukten im Gleichgewichtszustand an, jeweils potenziert mit den stöchiometrischen Koeffizienten.'
@@ -201,7 +211,8 @@ Die Gleichgewichtskonstante K hängt mit der freien Enthalpie über die Beziehun
             'Zugabe eines Edukts',
             'Druckerhöhung',
             'Temperaturänderung',
-            'Zugabe eines Katalysators'
+            'Zugabe eines Katalysators',
+            'Volumenänderung des Reaktionsgefäßes'
           ],
           correctIndex: 2,
           explanation: 'Nur eine Temperaturänderung verändert den Zahlenwert von K (gemäß ΔG° = -RT·ln K). Konzentrations- und Druckänderungen verschieben die Gleichgewichtslage, aber K bleibt gleich. Katalysatoren ändern K ebenfalls nicht.'
@@ -212,7 +223,8 @@ Die Gleichgewichtskonstante K hängt mit der freien Enthalpie über die Beziehun
             'Das Gleichgewicht verschiebt sich nach rechts (zu B).',
             'Das Gleichgewicht verschiebt sich nach links (zu A).',
             'Es hat keinen Einfluss, da gleich viele Mol vorliegen.',
-            'Die Reaktion stoppt vollständig.'
+            'Die Reaktion stoppt vollständig.',
+            'Der Wert der Gleichgewichtskonstante K verdoppelt sich.'
           ],
           correctIndex: 1,
           explanation: 'Links: 1 mol Gas (A), rechts: 2 mol Gas (2 B). Druckerhöhung begünstigt die Seite mit weniger Gasteilchen → Gleichgewicht verschiebt sich nach links zu A.'

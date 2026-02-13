@@ -20,6 +20,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Golgi-Apparat" },
       { id: "c", text: "Mitochondrium" },
       { id: "d", text: "Lysosom" },
+      { id: "e", text: "Peroxisom" },
     ],
     correctOptionId: "c",
     explanation:
@@ -35,6 +36,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Erhöht die genetische Variabilität durch Rekombination" },
       { id: "c", text: "Reparatur von DNA-Schäden" },
       { id: "d", text: "Verkürzung der Chromosomen" },
+      { id: "e", text: "Trennung der Schwesterchromatiden" },
     ],
     correctOptionId: "b",
     explanation:
@@ -50,6 +52,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Insulin" },
       { id: "c", text: "Somatostatin" },
       { id: "d", text: "Adrenalin" },
+      { id: "e", text: "Cortisol" },
     ],
     correctOptionId: "b",
     explanation:
@@ -65,6 +68,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Oekologische Nische" },
       { id: "c", text: "Kapazitätsgrenze (Carrying Capacity)" },
       { id: "d", text: "Minimumgesetz" },
+      { id: "e", text: "Populationsdichte" },
     ],
     correctOptionId: "c",
     explanation:
@@ -80,6 +84,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Erleichterte Diffusion" },
       { id: "c", text: "Aktiver Transport" },
       { id: "d", text: "Passive Diffusion" },
+      { id: "e", text: "Endozytose" },
     ],
     correctOptionId: "c",
     explanation:
@@ -95,6 +100,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Beide Allele werden im heterozygoten Zustand gleichermaßen exprimiert" },
       { id: "c", text: "Die Merkmale vermischen sich zu einem Zwischenphänotyp" },
       { id: "d", text: "Nur das mütterliche Allel wird exprimiert" },
+      { id: "e", text: "Ein Allel wird nur unter bestimmten Umweltbedingungen exprimiert" },
     ],
     correctOptionId: "b",
     explanation:
@@ -110,6 +116,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "His-Bündel" },
       { id: "c", text: "Sinusknoten (SA-Knoten)" },
       { id: "d", text: "Purkinje-Fasern" },
+      { id: "e", text: "Tawara-Schenkel" },
     ],
     correctOptionId: "c",
     explanation:
@@ -125,6 +132,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Zellmembran" },
       { id: "c", text: "Membranumhüllter Zellkern" },
       { id: "d", text: "DNA" },
+      { id: "e", text: "Zellwand" },
     ],
     correctOptionId: "c",
     explanation:
@@ -140,6 +148,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Beide Partner profitieren voneinander" },
       { id: "c", text: "Ein Partner profitiert, der andere bleibt unbeeinflusst" },
       { id: "d", text: "Beide Partner werden geschädigt" },
+      { id: "e", text: "Beide Partner konkurrieren um dieselbe Ressource" },
     ],
     correctOptionId: "b",
     explanation:
@@ -155,6 +164,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "25%" },
       { id: "c", text: "50%" },
       { id: "d", text: "75%" },
+      { id: "e", text: "100%" },
     ],
     correctOptionId: "b",
     explanation:
@@ -172,6 +182,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "18" },
       { id: "c", text: "32" },
       { id: "d", text: "2" },
+      { id: "e", text: "10" },
     ],
     correctOptionId: "b",
     explanation:
@@ -187,6 +198,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Ionenbindung" },
       { id: "c", text: "Metallische Bindung" },
       { id: "d", text: "Van-der-Waals-Bindung" },
+      { id: "e", text: "Wasserstoffbrückenbindung" },
     ],
     correctOptionId: "b",
     explanation:
@@ -202,6 +214,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "pH = 2" },
       { id: "c", text: "pH = 3" },
       { id: "d", text: "pH = 4" },
+      { id: "e", text: "pH = 7" },
     ],
     correctOptionId: "c",
     explanation:
@@ -217,6 +230,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "-OH (Hydroxylgruppe)" },
       { id: "c", text: "-CHO (Aldehydgruppe/Formylgruppe)" },
       { id: "d", text: "-CO- (Ketogruppe)" },
+      { id: "e", text: "-NH2 (Aminogruppe)" },
     ],
     correctOptionId: "c",
     explanation:
@@ -232,6 +246,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Ar-Atom (neutral)" },
       { id: "c", text: "Chlorid-Ion (Cl-)" },
       { id: "d", text: "Kalium-Ion (K+)" },
+      { id: "e", text: "Sulfid-Ion (S²-)" },
     ],
     correctOptionId: "c",
     explanation:
@@ -247,6 +262,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Kohlensäure-Bicarbonat-Puffer (H2CO3/HCO3-)" },
       { id: "c", text: "Proteinatpuffer" },
       { id: "d", text: "Ammoniak-Puffer (NH3/NH4+)" },
+      { id: "e", text: "Acetatpuffer (CH3COOH/CH3COO-)" },
     ],
     correctOptionId: "b",
     explanation:
@@ -262,6 +278,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Aminogruppe (-NH2) und Carboxylgruppe (-COOH)" },
       { id: "c", text: "Aminogruppe (-NH2) und Aldehydgruppe (-CHO)" },
       { id: "d", text: "Thiolgruppe (-SH) und Aminogruppe (-NH2)" },
+      { id: "e", text: "Phosphatgruppe (-PO4) und Carboxylgruppe (-COOH)" },
     ],
     correctOptionId: "b",
     explanation:
@@ -277,6 +294,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Nur innerhalb von Wassermolekuelen" },
       { id: "c", text: "Zwischen einem an ein elektronegatives Atom (N, O, F) gebundenen Wasserstoff und einem weiteren elektronegativen Atom" },
       { id: "d", text: "Ausschliesslich zwischen Metallatomen und Wasserstoff" },
+      { id: "e", text: "Zwischen Wasserstoff und Kohlenstoff in organischen Molekülen" },
     ],
     correctOptionId: "c",
     explanation:
@@ -292,6 +310,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Anzahl der Elektronen" },
       { id: "c", text: "Anzahl der Neutronen" },
       { id: "d", text: "Kernladungszahl" },
+      { id: "e", text: "Elektronegativität" },
     ],
     correctOptionId: "c",
     explanation:
@@ -307,6 +326,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "-1" },
       { id: "c", text: "-2" },
       { id: "d", text: "0" },
+      { id: "e", text: "-4" },
     ],
     correctOptionId: "c",
     explanation:
@@ -324,6 +344,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "20 m/s" },
       { id: "c", text: "40 m/s" },
       { id: "d", text: "200 m/s" },
+      { id: "e", text: "14,1 m/s" },
     ],
     correctOptionId: "b",
     explanation:
@@ -339,6 +360,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "2,3 A" },
       { id: "c", text: "23 A" },
       { id: "d", text: "23.000 A" },
+      { id: "e", text: "0,023 A" },
     ],
     correctOptionId: "b",
     explanation:
@@ -354,6 +376,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Beugung" },
       { id: "c", text: "Dispersion" },
       { id: "d", text: "Interferenz" },
+      { id: "e", text: "Polarisation" },
     ],
     correctOptionId: "c",
     explanation:
@@ -369,6 +392,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Kinetische Energie" },
       { id: "c", text: "Keine - beide bleiben erhalten" },
       { id: "d", text: "Beide gehen verloren" },
+      { id: "e", text: "Nur die potenzielle Energie bleibt erhalten" },
     ],
     correctOptionId: "c",
     explanation:
@@ -384,6 +408,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Es bleibt gleich" },
       { id: "c", text: "Es verdoppelt sich" },
       { id: "d", text: "Es vervierfacht sich" },
+      { id: "e", text: "Es verdreifacht sich" },
     ],
     correctOptionId: "c",
     explanation:
@@ -399,6 +424,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Kraft ist gleich Masse mal Beschleunigung (F = m x a)" },
       { id: "c", text: "Jede Kraft erzeugt eine gleich große, entgegengesetzt gerichtete Gegenkraft (actio = reactio)" },
       { id: "d", text: "Die Gravitationskraft ist proportional zum Quadrat des Abstands" },
+      { id: "e", text: "Die Beschleunigung ist umgekehrt proportional zur Geschwindigkeit" },
     ],
     correctOptionId: "c",
     explanation:
@@ -414,6 +440,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Der Gesamtwiderstand ist die Summe der Einzelwiderstände (Rges = R1 + R2 + ...)" },
       { id: "c", text: "Der Gesamtwiderstand entspricht dem kleinsten Einzelwiderstand" },
       { id: "d", text: "Der Gesamtwiderstand ist das Produkt der Einzelwiderstände" },
+      { id: "e", text: "Der Gesamtwiderstand ist der Mittelwert der Einzelwiderstände" },
     ],
     correctOptionId: "b",
     explanation:
@@ -429,6 +456,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Wenn Licht senkrecht auf eine Grenzfläche trifft" },
       { id: "c", text: "Wenn Licht von einem optisch dichteren in ein optisch dünneres Medium uebergeht und der Einfallswinkel den Grenzwinkel ueberschreitet" },
       { id: "d", text: "Wenn Licht auf eine verspiegelte Oberfläche trifft" },
+      { id: "e", text: "Wenn Licht durch ein Medium mit gleichmäßig abnehmendem Brechungsindex verläuft" },
     ],
     correctOptionId: "c",
     explanation:
@@ -444,6 +472,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Aluminium (0,90 kJ/(kg*K))" },
       { id: "c", text: "Ethanol (2,44 kJ/(kg*K))" },
       { id: "d", text: "Wasser (4,18 kJ/(kg*K))" },
+      { id: "e", text: "Kupfer (0,38 kJ/(kg*K))" },
     ],
     correctOptionId: "d",
     explanation:
@@ -459,6 +488,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "54 J" },
       { id: "c", text: "200 J" },
       { id: "d", text: "800 J" },
+      { id: "e", text: "100 J" },
     ],
     correctOptionId: "c",
     explanation:
@@ -476,6 +506,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "{-2, -3}" },
       { id: "c", text: "{1, 6}" },
       { id: "d", text: "{-1, 6}" },
+      { id: "e", text: "{-2, 3}" },
     ],
     correctOptionId: "a",
     explanation:
@@ -491,6 +522,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "3/45 = 1/15" },
       { id: "c", text: "6/90 = 1/15" },
       { id: "d", text: "1/10" },
+      { id: "e", text: "3/10" },
     ],
     correctOptionId: "c",
     explanation:
@@ -506,6 +538,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "78,5 cm²" },
       { id: "c", text: "157 cm²" },
       { id: "d", text: "25 cm²" },
+      { id: "e", text: "50 cm²" },
     ],
     correctOptionId: "b",
     explanation:
@@ -521,6 +554,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "2^2 = 4" },
       { id: "c", text: "2^12 = 4096" },
       { id: "d", text: "2^8 = 256" },
+      { id: "e", text: "2^6 = 64" },
     ],
     correctOptionId: "a",
     explanation:
@@ -536,6 +570,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "f'(x) = 9x² - 2x + 5" },
       { id: "c", text: "f'(x) = 3x² - 4x + 5" },
       { id: "d", text: "f'(x) = 9x³ - 4x² + 5x" },
+      { id: "e", text: "f'(x) = 6x² - 4x + 5" },
     ],
     correctOptionId: "a",
     explanation:
@@ -551,6 +586,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "Innerhalb von einer Standardabweichung um den Mittelwert" },
       { id: "c", text: "Innerhalb von drei Standardabweichungen um den Mittelwert" },
       { id: "d", text: "Zwischen dem Minimum und dem Mittelwert" },
+      { id: "e", text: "Innerhalb von einer halben Standardabweichung um den Mittelwert" },
     ],
     correctOptionId: "b",
     explanation:
@@ -566,6 +602,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "5 cm" },
       { id: "c", text: "7 cm" },
       { id: "d", text: "12 cm" },
+      { id: "e", text: "4,5 cm" },
     ],
     correctOptionId: "b",
     explanation:
@@ -581,6 +618,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "9" },
       { id: "c", text: "12" },
       { id: "d", text: "3" },
+      { id: "e", text: "18" },
     ],
     correctOptionId: "b",
     explanation:
@@ -596,6 +634,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "5" },
       { id: "c", text: "6" },
       { id: "d", text: "8" },
+      { id: "e", text: "7" },
     ],
     correctOptionId: "c",
     explanation:
@@ -611,6 +650,7 @@ export const bmsQuestions: Question[] = [
       { id: "b", text: "f'(x) = e^x" },
       { id: "c", text: "f'(x) = 1/x" },
       { id: "d", text: "f'(x) = e^(x+1)" },
+      { id: "e", text: "f'(x) = e^(x-1)" },
     ],
     correctOptionId: "b",
     explanation:

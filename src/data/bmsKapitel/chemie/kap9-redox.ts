@@ -31,7 +31,8 @@ Ein anschauliches Beispiel für eine Redox-Reaktion ist die Reaktion von Zink mi
             '+II',
             '+IV',
             '+VI',
-            '-II'
+            '-II',
+            '+VIII'
           ],
           correctIndex: 2,
           explanation: 'H = +I (×2 = +II), O = -II (×4 = -VIII). Für die neutrale Verbindung gilt: +II + x + (-VIII) = 0, also x = +VI. Schwefel hat die Oxidationszahl +VI.'
@@ -42,7 +43,8 @@ Ein anschauliches Beispiel für eine Redox-Reaktion ist die Reaktion von Zink mi
             'CuSO₄',
             'Cu',
             'Fe',
-            'FeSO₄'
+            'FeSO₄',
+            'SO₄²⁻'
           ],
           correctIndex: 2,
           explanation: 'Eisen (Fe) gibt Elektronen ab (OZ: 0 → +II), wird also oxidiert. Das Reduktionsmittel ist der Stoff, der selbst oxidiert wird und dabei den anderen (Cu²⁺) reduziert.'
@@ -53,7 +55,8 @@ Ein anschauliches Beispiel für eine Redox-Reaktion ist die Reaktion von Zink mi
             'Oxidation und Reduktion treten immer gemeinsam auf.',
             'Bei der Oxidation sinkt die Oxidationszahl.',
             'Das Oxidationsmittel wird selbst reduziert.',
-            'Unedle Metalle sind starke Reduktionsmittel.'
+            'Unedle Metalle sind starke Reduktionsmittel.',
+            'Das Reduktionsmittel nimmt Elektronen auf.'
           ],
           correctIndex: 1,
           explanation: 'Bei der Oxidation STEIGT die Oxidationszahl (Elektronenabgabe), sie sinkt nicht. Die anderen Aussagen sind korrekt: Oxidation und Reduktion sind immer gekoppelt, das Oxidationsmittel wird reduziert, und unedle Metalle geben leicht Elektronen ab.'
@@ -84,7 +87,8 @@ Im dritten Schritt werden die beiden **Teilgleichungen zusammengeführt**, wobei
             '1 Elektron',
             '2 Elektronen',
             '3 Elektronen',
-            '6 Elektronen'
+            '6 Elektronen',
+            '4 Elektronen'
           ],
           correctIndex: 2,
           explanation: 'Eisen geht von OZ 0 auf +III → die OZ steigt um 3. Da jede OZ-Erhöhung um 1 einer Elektronenabgabe entspricht, werden 3 Elektronen abgegeben: Fe → Fe³⁺ + 3 e⁻.'
@@ -95,7 +99,8 @@ Im dritten Schritt werden die beiden **Teilgleichungen zusammengeführt**, wobei
             'O₂-Molekülen',
             'OH⁻-Ionen',
             'H₂O-Molekülen',
-            'O²⁻-Ionen'
+            'O²⁻-Ionen',
+            'H₂O₂-Molekülen'
           ],
           correctIndex: 2,
           explanation: 'In saurer Lösung werden fehlende Sauerstoffatome mit H₂O ausgeglichen (auf der sauerstoffarmen Seite) und dann die Wasserstoffatome mit H⁺ ausgeglichen. In basischer Lösung verwendet man OH⁻.'
@@ -106,7 +111,8 @@ Im dritten Schritt werden die beiden **Teilgleichungen zusammengeführt**, wobei
             'Die Anzahl der Atome',
             'Die Anzahl der übertragenen Elektronen',
             'Die Temperatur',
-            'Die Konzentration der Lösungen'
+            'Die Konzentration der Lösungen',
+            'Die Oxidationszahlen aller beteiligten Elemente'
           ],
           correctIndex: 1,
           explanation: 'Die Elektronenzahl in der Oxidations-Teilgleichung muss gleich der Elektronenzahl in der Reduktions-Teilgleichung sein, damit sich die Elektronen beim Addieren aufheben. Dazu werden die Teilgleichungen mit passenden Faktoren multipliziert.'
@@ -137,7 +143,8 @@ Die **Elektrolyse** ist der umgekehrte Prozess: Elektrische Energie wird zugefü
             'An der Kathode (Pluspol)',
             'An der Anode (Minuspol)',
             'In der Salzbrücke',
-            'An der Kathode (Minuspol)'
+            'An der Kathode (Minuspol)',
+            'An beiden Elektroden gleichzeitig'
           ],
           correctIndex: 1,
           explanation: 'In einer galvanischen Zelle ist die Anode der Minuspol, an dem die Oxidation (Elektronenabgabe) stattfindet. Die Kathode ist der Pluspol (Reduktion). Merke: AN-OX (Anode-Oxidation).'
@@ -148,7 +155,8 @@ Die **Elektrolyse** ist der umgekehrte Prozess: Elektrische Energie wird zugefü
             'Sie transportiert Elektronen zwischen den Halbzellen.',
             'Sie schließt den inneren Stromkreis durch Ionentransport.',
             'Sie erhöht die Zellspannung.',
-            'Sie verhindert jeglichen Stofftransport.'
+            'Sie verhindert jeglichen Stofftransport.',
+            'Sie speichert die freigesetzte Energie als Wärme.'
           ],
           correctIndex: 1,
           explanation: 'Die Salzbrücke ermöglicht den Ionentransport zwischen den Halbzellen und hält so die Elektroneutralität aufrecht. Elektronen fließen nur durch den äußeren Leiter, nicht durch die Salzbrücke.'
@@ -159,7 +167,8 @@ Die **Elektrolyse** ist der umgekehrte Prozess: Elektrische Energie wird zugefü
             'Sauerstoff (O₂)',
             'Wasserstoff (H₂)',
             'Chlor (Cl₂)',
-            'Ozon (O₃)'
+            'Ozon (O₃)',
+            'Wasserdampf (H₂O(g))'
           ],
           correctIndex: 1,
           explanation: 'An der Kathode findet die Reduktion statt: 2 H₂O + 2 e⁻ → H₂ + 2 OH⁻. Wasserstoff wird abgeschieden. Sauerstoff entsteht an der Anode durch Oxidation.'
@@ -190,7 +199,8 @@ Die **Elektrolyse** ist der umgekehrte Prozess: Elektrische Energie wird zugefü
             'Aluminium ist edler als Eisen und korrodiert nicht.',
             'Aluminium bildet eine dichte Al₂O₃-Passivierungsschicht.',
             'Aluminium reagiert nicht mit Sauerstoff.',
-            'Aluminium ist ein Nichtmetall.'
+            'Aluminium ist ein Nichtmetall.',
+            'Aluminium hat ein höheres Standardpotential als Eisen.'
           ],
           correctIndex: 1,
           explanation: 'Aluminium ist sogar unedler als Eisen, korrodiert also leichter. Es bildet jedoch eine extrem dünne, dichte Al₂O₃-Schicht, die das darunterliegende Metall vor weiterem Angriff schützt. Rost (Fe₂O₃·nH₂O) ist dagegen porös und bietet keinen Schutz.'
@@ -201,7 +211,8 @@ Die **Elektrolyse** ist der umgekehrte Prozess: Elektrische Energie wird zugefü
             'Wasserstoff (H₂)',
             'Sauerstoff (O₂)',
             'Wasser (H₂O)',
-            'Wasserstoffperoxid (H₂O₂)'
+            'Wasserstoffperoxid (H₂O₂)',
+            'Hydroxid-Ionen (OH⁻)'
           ],
           correctIndex: 2,
           explanation: 'An der Kathode wird O₂ reduziert: O₂ + 4 H⁺ + 4 e⁻ → 2 H₂O. Wasser ist das einzige Produkt einer Wasserstoff-Brennstoffzelle — daher gilt sie als besonders umweltfreundlich.'
@@ -212,7 +223,8 @@ Die **Elektrolyse** ist der umgekehrte Prozess: Elektrische Energie wird zugefü
             'Kupfer (E° = +0,34 V)',
             'Silber (E° = +0,80 V)',
             'Magnesium (E° = -2,37 V)',
-            'Gold (E° = +1,50 V)'
+            'Gold (E° = +1,50 V)',
+            'Zinn (E° = -0,14 V)'
           ],
           correctIndex: 2,
           explanation: 'Eine Opferanode muss unedler sein als das zu schützende Metall, also ein negativeres Standardpotential haben. Nur Magnesium (E° = -2,37 V) ist unedler als Eisen (E° = -0,44 V). Cu, Ag und Au sind edler.'

@@ -31,7 +31,8 @@ Primzahlen sind natürliche Zahlen größer als 1, die nur durch 1 und sich selb
             '√16 ist irrational',
             '√16 ∈ ℕ',
             '√16 ∈ ℤ, aber √16 ∉ ℕ',
-            '√16 ∈ ℚ, aber √16 ∉ ℤ'
+            '√16 ∈ ℚ, aber √16 ∉ ℤ',
+            '√16 ist nicht definiert'
           ],
           correctIndex: 1,
           explanation: '√16 = 4, und 4 ist eine natürliche Zahl. Damit gilt √16 ∈ ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ.'
@@ -42,7 +43,8 @@ Primzahlen sind natürliche Zahlen größer als 1, die nur durch 1 und sich selb
             'Die letzte Ziffer muss 9 sein',
             'Die Quersumme muss durch 9 teilbar sein',
             'Die Zahl muss ungerade sein',
-            'Die letzten zwei Ziffern müssen durch 9 teilbar sein'
+            'Die letzten zwei Ziffern müssen durch 9 teilbar sein',
+            'Die Zahl muss durch 3 und durch 6 teilbar sein'
           ],
           correctIndex: 1,
           explanation: 'Eine Zahl ist genau dann durch 9 teilbar, wenn ihre Quersumme durch 9 teilbar ist. Beispiel: 729 → 7 + 2 + 9 = 18, und 18 ist durch 9 teilbar.'
@@ -53,7 +55,8 @@ Primzahlen sind natürliche Zahlen größer als 1, die nur durch 1 und sich selb
             '2 · 42',
             '2² · 3 · 7',
             '4 · 21',
-            '2 · 3 · 14'
+            '2 · 3 · 14',
+            '2³ · 3 · 7'
           ],
           correctIndex: 1,
           explanation: '84 = 2 · 42 = 2 · 2 · 21 = 2 · 2 · 3 · 7 = 2² · 3 · 7. Nur diese Darstellung besteht ausschließlich aus Primfaktoren.'
@@ -84,7 +87,8 @@ Doppelbrüche sind Brüche, deren Zähler oder Nenner selbst ein Bruch ist. Zur 
             '11/24',
             '2/2',
             '1/4',
-            '7/24'
+            '7/24',
+            '1/3'
           ],
           correctIndex: 0,
           explanation: 'Hauptnenner ist kgV(6, 8) = 24. 5/6 = 20/24, 3/8 = 9/24. 20/24 - 9/24 = 11/24.'
@@ -95,7 +99,8 @@ Doppelbrüche sind Brüche, deren Zähler oder Nenner selbst ein Bruch ist. Zur 
             '8/27',
             '3/2',
             '6/4',
-            '2/3'
+            '2/3',
+            '9/8'
           ],
           correctIndex: 1,
           explanation: '(2/3)/(4/9) = (2/3) · (9/4) = 18/12 = 3/2.'
@@ -106,7 +111,8 @@ Doppelbrüche sind Brüche, deren Zähler oder Nenner selbst ein Bruch ist. Zur 
             '3 4/6',
             '3 5/6',
             '4 1/6',
-            '3 2/6'
+            '3 2/6',
+            '4 5/6'
           ],
           correctIndex: 1,
           explanation: '23 ÷ 6 = 3 Rest 5. Also 23/6 = 3 5/6.'
@@ -137,7 +143,8 @@ Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. 
             '3',
             '9',
             '18',
-            '81'
+            '81',
+            '27'
           ],
           correctIndex: 1,
           explanation: '27^(2/3) = (³√27)² = 3² = 9. Man zieht erst die dritte Wurzel und quadriert dann.'
@@ -148,7 +155,8 @@ Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. 
             '√68',
             '8√2',
             '4√17',
-            '6√2'
+            '6√2',
+            '5√2 + 3√2 ist nicht vereinfachbar'
           ],
           correctIndex: 1,
           explanation: '√50 = √(25·2) = 5√2, √18 = √(9·2) = 3√2. Summe: 5√2 + 3√2 = 8√2.'
@@ -159,7 +167,8 @@ Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. 
             '37 · 10⁻⁵',
             '3,7 · 10⁻⁴',
             '3,7 · 10⁻³',
-            '0,37 · 10⁻³'
+            '0,37 · 10⁻³',
+            '3,7 · 10⁻⁵'
           ],
           correctIndex: 1,
           explanation: '0,00037 = 3,7 · 10⁻⁴. Die Mantisse muss zwischen 1 und 10 liegen (1 ≤ a < 10).'
@@ -216,7 +225,8 @@ Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. 
             'Er bleibt gleich',
             'Er steigt um 5 %',
             'Er bleibt gleich (1,25 · 0,80 = 1,00)',
-            'Er sinkt um 5 %'
+            'Er sinkt um 5 %',
+            'Er steigt um 2,5 %'
           ],
           correctIndex: 2,
           explanation: 'Faktor: 1,25 · 0,80 = 1,00. Der Preis bleibt tatsaechlich gleich. 25 % Steigerung gefolgt von 20 % Senkung ergibt exakt den Ausgangswert.'
@@ -227,7 +237,8 @@ Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. 
             '1120,00 Euro',
             '1124,86 Euro',
             '1121,60 Euro',
-            '1160,00 Euro'
+            '1160,00 Euro',
+            '1140,00 Euro'
           ],
           correctIndex: 1,
           explanation: 'K_3 = 1000 · 1,04^3 = 1000 · 1,124864 = 1124,86 Euro. Einfache Verzinsung haette nur 1120 Euro ergeben.'
@@ -238,7 +249,8 @@ Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. 
             '8,5 %',
             '7,2 %',
             '9 %',
-            '9,6 %'
+            '9,6 %',
+            '11,1 %'
           ],
           correctIndex: 2,
           explanation: 'p = 72/800 · 100 = 9 %. Man teilt den Prozentwert durch den Grundwert und multipliziert mit 100.'

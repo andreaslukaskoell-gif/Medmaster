@@ -31,7 +31,8 @@ Im gasförmigen Zustand bewegen sich die Teilchen frei und weitgehend unabhängi
             'Flüssigkeiten haben ein definiertes Volumen, Gase nicht',
             'Flüssigkeiten sind nicht komprimierbar, Gase schon',
             'Beide Antworten A und B sind korrekt',
-            'Es gibt keinen Unterschied auf molekularer Ebene'
+            'Es gibt keinen Unterschied auf molekularer Ebene',
+            'Flüssigkeiten haben eine höhere kinetische Energie als Gase'
           ],
           correctIndex: 2,
           explanation: 'Flüssigkeiten haben ein definiertes Volumen (Teilchen werden durch zwischenmolekulare Kräfte zusammengehalten) und sind nahezu inkompressibel. Gase füllen jeden verfügbaren Raum und sind leicht komprimierbar.'
@@ -42,7 +43,8 @@ Im gasförmigen Zustand bewegen sich die Teilchen frei und weitgehend unabhängi
             'Ein Feststoff mit regelmäßiger Gitterstruktur',
             'Ein Feststoff ohne periodische Fernordnung, der über einen Temperaturbereich erweicht',
             'Ein Feststoff, der bei 0 °C schmilzt',
-            'Ein Feststoff, der nur aus Metallen besteht'
+            'Ein Feststoff, der nur aus Metallen besteht',
+            'Ein Feststoff mit besonders hoher Gitterenergie'
           ],
           correctIndex: 1,
           explanation: 'Amorphe Feststoffe besitzen keine regelmäßige, periodische Gitterstruktur (nur Nahordnung). Sie erweichen beim Erwärmen über einen Temperaturbereich statt bei einem scharfen Schmelzpunkt. Beispiel: Glas.'
@@ -53,7 +55,8 @@ Im gasförmigen Zustand bewegen sich die Teilchen frei und weitgehend unabhängi
             'Dem Druck',
             'Dem Volumen',
             'Der absoluten Temperatur (in Kelvin)',
-            'Der molaren Masse'
+            'Der molaren Masse',
+            'Der Teilchendichte im Gefäß'
           ],
           correctIndex: 2,
           explanation: 'E_kin = 3/2 × k_B × T. Die mittlere kinetische Energie der Teilchen hängt nur von der absoluten Temperatur ab, nicht von der Teilchenmasse oder anderen Größen.'
@@ -84,7 +87,8 @@ Das Phasendiagramm stellt die Stabilitätsbereiche der verschiedenen Aggregatzus
             'Verdampfen',
             'Kondensation',
             'Sublimation',
-            'Schmelzen'
+            'Schmelzen',
+            'Resublimation'
           ],
           correctIndex: 2,
           explanation: 'Die Sublimation ist der direkte Übergang vom festen in den gasförmigen Zustand unter Umgehung der flüssigen Phase. Sie findet unterhalb des Tripelpunktes statt (z. B. Trockeneis).'
@@ -95,7 +99,8 @@ Das Phasendiagramm stellt die Stabilitätsbereiche der verschiedenen Aggregatzus
             'Der Stoff existiert nur als Gas',
             'Alle drei Aggregatzustände koexistieren im Gleichgewicht',
             'Der Stoff hat seine maximale Dichte',
-            'Es ist der Punkt, an dem der Stoff zerfällt'
+            'Es ist der Punkt, an dem der Stoff zerfällt',
+            'Der Stoff erreicht seine maximale Temperatur'
           ],
           correctIndex: 1,
           explanation: 'Am Tripelpunkt (für Wasser: 0,01 °C, 611 Pa) koexistieren die feste, flüssige und gasförmige Phase im thermodynamischen Gleichgewicht. Es ist der Schnittpunkt der drei Phasengrenzlinien.'
@@ -106,7 +111,8 @@ Das Phasendiagramm stellt die Stabilitätsbereiche der verschiedenen Aggregatzus
             'Weil Wasser beim Gefrieren Wärme aufnimmt',
             'Weil Eis eine geringere Dichte als flüssiges Wasser hat (Dichteanomalie)',
             'Weil Wasser keine Wasserstoffbrücken bildet',
-            'Weil der Tripelpunkt bei hohem Druck liegt'
+            'Weil der Tripelpunkt bei hohem Druck liegt',
+            'Weil die Schmelzwärme von Wasser negativ ist'
           ],
           correctIndex: 1,
           explanation: 'Eis hat eine offene hexagonale Kristallstruktur und ist weniger dicht als Wasser. Druckerhöhung begünstigt die dichtere flüssige Phase, sodass der Schmelzpunkt bei steigendem Druck sinkt (negative Steigung der Schmelzkurve).'
@@ -137,7 +143,8 @@ Kolligative Eigenschaften sind physikalische Eigenschaften einer Lösung, die nu
             'Weil NaCl eine zu hohe molare Masse hat',
             'Weil Wasser als polares Lösungsmittel die Ionen hydratisieren kann, Benzol als unpolares Lösungsmittel nicht',
             'Weil Benzol eine höhere Dichte hat als Wasser',
-            'Weil NaCl nur bei hohen Temperaturen löslich ist'
+            'Weil NaCl nur bei hohen Temperaturen löslich ist',
+            'Weil die Gitterenergie von NaCl in Benzol größer ist'
           ],
           correctIndex: 1,
           explanation: 'Ähnliches löst sich in Ähnlichem: Das ionische NaCl löst sich in polarem Wasser, weil die Hydratationsenergie der Ionen die Gitterenergie kompensiert. Unpolares Benzol kann keine Hydrathüllen bilden.'
@@ -148,7 +155,8 @@ Kolligative Eigenschaften sind physikalische Eigenschaften einer Lösung, die nu
             'Er steigt',
             'Er bleibt gleich',
             'Er sinkt (Gefrierpunktserniedrigung)',
-            'Er hängt von der Art des Salzes ab, nicht von der Konzentration'
+            'Er hängt von der Art des Salzes ab, nicht von der Konzentration',
+            'Er schwankt periodisch je nach Salzkonzentration'
           ],
           correctIndex: 2,
           explanation: 'Das Lösen von Salz in Wasser führt zu einer Gefrierpunktserniedrigung (kolligative Eigenschaft). Je mehr Teilchen gelöst sind, desto stärker sinkt der Gefrierpunkt. Deshalb wird Streusalz gegen Eis verwendet.'
@@ -159,7 +167,8 @@ Kolligative Eigenschaften sind physikalische Eigenschaften einer Lösung, die nu
             'Sie schrumpfen',
             'Sie bleiben unverändert',
             'Sie schwellen an und können platzen (Hämolyse)',
-            'Sie verklumpen'
+            'Sie verklumpen',
+            'Sie geben Wasser an die Umgebung ab'
           ],
           correctIndex: 2,
           explanation: 'In hypotoner Lösung (niedrigere Osmolarität als das Zellinnere) strömt Wasser osmotisch in die Erythrozyten ein. Sie schwellen an und können platzen (osmotische Hämolyse). Deshalb müssen Infusionen isoton sein.'

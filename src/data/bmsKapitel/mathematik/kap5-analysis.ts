@@ -31,7 +31,8 @@ Im MedAT werden typische Aufgaben zu Folgen gestellt: das Bestimmen des n-ten Gl
             '192',
             '384',
             '768',
-            '96'
+            '96',
+            '256'
           ],
           correctIndex: 1,
           explanation: 'a₁ = 3, q = 2. a₈ = 3 · 2⁷ = 3 · 128 = 384.'
@@ -42,7 +43,8 @@ Im MedAT werden typische Aufgaben zu Folgen gestellt: das Bestimmen des n-ten Gl
             '3/2',
             '2',
             '3',
-            'Die Reihe divergiert'
+            'Die Reihe divergiert',
+            '1'
           ],
           correctIndex: 0,
           explanation: 'Geometrische Reihe mit a₁ = 1 und q = 1/3. Da |q| < 1: S∞ = 1/(1 - 1/3) = 1/(2/3) = 3/2.'
@@ -53,7 +55,8 @@ Im MedAT werden typische Aufgaben zu Folgen gestellt: das Bestimmen des n-ten Gl
             'Arithmetisch mit d = 3',
             'Geometrisch mit q = 2,5',
             'Weder noch (Differenzen: 3, 5, 7, 9, ...)',
-            'Arithmetisch mit d = 8'
+            'Arithmetisch mit d = 8',
+            'Geometrisch mit q = 2'
           ],
           correctIndex: 2,
           explanation: 'Die Differenzen sind 3, 5, 7, 9, ... – nicht konstant, also nicht arithmetisch. Die Quotienten 5/2, 10/5, 17/10 sind nicht gleich, also nicht geometrisch. Es handelt sich um aₙ = n² + 1.'
@@ -84,7 +87,8 @@ Stetigkeit ist ein Grundkonzept der Analysis: Eine Funktion f ist stetig an der 
             '2/5',
             '3',
             '0',
-            '∞'
+            '∞',
+            '-1'
           ],
           correctIndex: 0,
           explanation: 'Zähler und Nenner haben Grad 1. Quotient der führenden Koeffizienten: 2/5.'
@@ -95,7 +99,8 @@ Stetigkeit ist ein Grundkonzept der Analysis: Eine Funktion f ist stetig an der 
             'aₙ = n²',
             'aₙ = (-1)ⁿ',
             'aₙ = (3n + 1)/(n + 2)',
-            'aₙ = sin(nπ/2)'
+            'aₙ = sin(nπ/2)',
+            'aₙ = 1/n + (-1)ⁿ'
           ],
           correctIndex: 2,
           explanation: 'aₙ = (3n + 1)/(n + 2) → 3 für n → ∞. Die anderen Folgen divergieren: n² → ∞, (-1)ⁿ springt, sin(nπ/2) nimmt abwechselnd die Werte 1, 0, -1, 0 an.'
@@ -106,7 +111,8 @@ Stetigkeit ist ein Grundkonzept der Analysis: Eine Funktion f ist stetig an der 
             '1',
             '5',
             '0',
-            '∞'
+            '∞',
+            '5'
           ],
           correctIndex: 2,
           explanation: 'Zählergrad (1) ist kleiner als Nennergrad (2), daher ist der Grenzwert 0.'
@@ -137,7 +143,8 @@ Extremwerte und Kurvendiskussion sind zentrale Anwendungen der Differentialrechn
             'f\'(x) = 12x³ - 4x + 7',
             'f\'(x) = 12x³ - 2x + 7',
             'f\'(x) = 3x³ - 2x + 7',
-            'f\'(x) = 12x⁴ - 4x² + 7'
+            'f\'(x) = 12x⁴ - 4x² + 7',
+            'f\'(x) = 12x³ - 4x + 7 - 5'
           ],
           correctIndex: 0,
           explanation: 'Potenzregel gliedweise: (3x⁴)\' = 12x³, (-2x²)\' = -4x, (7x)\' = 7, (-5)\' = 0. Also f\'(x) = 12x³ - 4x + 7.'
@@ -148,7 +155,8 @@ Extremwerte und Kurvendiskussion sind zentrale Anwendungen der Differentialrechn
             'f\'(x) = e^(2x+1)',
             'f\'(x) = 2e^(2x+1)',
             'f\'(x) = (2x+1)·e^(2x)',
-            'f\'(x) = 2xe^(2x+1)'
+            'f\'(x) = 2xe^(2x+1)',
+            'f\'(x) = e^(2x+1)/(2x+1)'
           ],
           correctIndex: 1,
           explanation: 'Kettenregel: äußere Ableitung e^(2x+1) mal innere Ableitung (2x+1)\' = 2. Also f\'(x) = 2·e^(2x+1).'
@@ -159,7 +167,8 @@ Extremwerte und Kurvendiskussion sind zentrale Anwendungen der Differentialrechn
             'f hat ein Maximum bei x = 2',
             'f hat ein Minimum bei x = 2 mit f(2) = -1',
             'f hat ein Minimum bei x = 4',
-            'f hat kein Extremum'
+            'f hat kein Extremum',
+            'f hat ein Maximum bei x = 2 mit f(2) = 3'
           ],
           correctIndex: 1,
           explanation: 'f\'(x) = 2x - 4 = 0 → x = 2. f\'\'(x) = 2 > 0 → Minimum. f(2) = 4 - 8 + 3 = -1.'
@@ -190,7 +199,8 @@ Für die Berechnung komplizierterer Integrale stehen Integrationsregeln zur Verf
             'F(x) = 12x² - 6',
             'F(x) = x⁴ - 3x² + 2x + C',
             'F(x) = x⁴ - 6x² + 2x + C',
-            'F(x) = 4x⁴ - 3x² + 2x + C'
+            'F(x) = 4x⁴ - 3x² + 2x + C',
+            'F(x) = x⁴ - 3x² + 2x'
           ],
           correctIndex: 1,
           explanation: '∫4x³ dx = x⁴, ∫(-6x) dx = -3x², ∫2 dx = 2x. Also F(x) = x⁴ - 3x² + 2x + C.'
@@ -201,7 +211,8 @@ Für die Berechnung komplizierterer Integrale stehen Integrationsregeln zur Verf
             '28/3',
             '8',
             '14/3',
-            '10'
+            '10',
+            '16/3'
           ],
           correctIndex: 0,
           explanation: '2√x = 2x^(1/2). Stammfunktion: 2 · x^(3/2)/(3/2) = 4x^(3/2)/3. [4x^(3/2)/3]₁⁴ = 4·8/3 - 4·1/3 = 32/3 - 4/3 = 28/3.'
@@ -212,7 +223,8 @@ Für die Berechnung komplizierterer Integrale stehen Integrationsregeln zur Verf
             '0',
             '1',
             '2',
-            '-2'
+            '-2',
+            'π'
           ],
           correctIndex: 2,
           explanation: '∫sin(x) dx = -cos(x). [-cos(x)]₀^π = -cos(π) - (-cos(0)) = -(-1) + 1 = 1 + 1 = 2.'

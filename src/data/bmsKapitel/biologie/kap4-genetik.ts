@@ -34,7 +34,8 @@ Die dritte Mendelsche Regel (Unabhängigkeitsregel oder Regel der freien Kombini
             '3:1',
             '1:2:1',
             '9:3:3:1',
-            '1:1'
+            '1:1',
+            '2:1'
           ],
           correctIndex: 1,
           explanation: 'Das genotypische Verhältnis der F2 ist 1 AA : 2 Aa : 1 aa = 1:2:1. Das phänotypische Verhältnis ist 3:1 (drei dominant : ein rezessiv), da AA und Aa den gleichen Phänotyp zeigen.'
@@ -45,7 +46,8 @@ Die dritte Mendelsche Regel (Unabhängigkeitsregel oder Regel der freien Kombini
             'Die betrachteten Gene müssen auf demselben Chromosom liegen',
             'Die betrachteten Gene müssen auf verschiedenen Chromosomen liegen (keine Kopplung)',
             'Es muss ein intermediärer Erbgang vorliegen',
-            'Beide Eltern müssen heterozygot sein'
+            'Beide Eltern müssen heterozygot sein',
+            'Die Gene müssen X-chromosomal vererbt werden'
           ],
           correctIndex: 1,
           explanation: 'Die Unabhängigkeitsregel gilt nur, wenn die betrachteten Gene auf verschiedenen Chromosomen liegen und somit unabhängig voneinander segregieren. Bei gekoppelten Genen (gleiches Chromosom) werden die Merkmale häufiger gemeinsam vererbt.'
@@ -56,7 +58,8 @@ Die dritte Mendelsche Regel (Unabhängigkeitsregel oder Regel der freien Kombini
             'Ein Allel ist vollständig dominant über das andere',
             'Beide Allele werden gleichzeitig exprimiert (wie bei Blutgruppen)',
             'Keines der Allele ist vollständig dominant — Heterozygote zeigen einen Mischphänotyp',
-            'Das Merkmal wird nur an männliche Nachkommen vererbt'
+            'Das Merkmal wird nur an männliche Nachkommen vererbt',
+            'Ein Allel wird erst nach Umwelteinfluss exprimiert'
           ],
           correctIndex: 2,
           explanation: 'Beim intermediären Erbgang zeigen heterozygote Individuen einen Phänotyp, der zwischen den homozygoten Formen liegt (z. B. rote × weiße Blüten → rosa in F1). Die F2 spaltet phänotypisch 1:2:1 auf.'
@@ -91,7 +94,8 @@ Neben der vollständigen Dominanz existieren weitere Formen der Allelinteraktion
             'Der Phänotyp entspricht dem rezessiven Merkmal',
             'Der Phänotyp ist intermediär zwischen dominant und rezessiv',
             'Der Phänotyp entspricht dem dominanten Merkmal',
-            'Beide Merkmale werden gleichzeitig exprimiert'
+            'Beide Merkmale werden gleichzeitig exprimiert',
+            'Der Phänotyp variiert je nach Umweltbedingungen'
           ],
           correctIndex: 2,
           explanation: 'Bei vollständiger Dominanz setzt sich das dominante Allel A phänotypisch durch. Ein heterozygoter Organismus (Aa) zeigt daher denselben Phänotyp wie ein homozygoter dominanter Organismus (AA).'
@@ -102,7 +106,8 @@ Neben der vollständigen Dominanz existieren weitere Formen der Allelinteraktion
             'Keines der Allele setzt sich durch, der Phänotyp ist intermediär',
             'Beide Allele werden gleichzeitig und vollständig exprimiert',
             'Ein Allel dominiert über das andere',
-            'Das rezessive Allel setzt sich unter bestimmten Umweltbedingungen durch'
+            'Das rezessive Allel setzt sich unter bestimmten Umweltbedingungen durch',
+            'Die Allele hemmen sich gegenseitig und keines wird exprimiert'
           ],
           correctIndex: 1,
           explanation: 'Bei Kodominanz werden beide Allele vollständig und gleichzeitig exprimiert. Das klassische Beispiel ist die Blutgruppe AB: Sowohl A- als auch B-Antigene werden auf den Erythrozyten präsentiert.'
@@ -113,10 +118,11 @@ Neben der vollständigen Dominanz existieren weitere Formen der Allelinteraktion
             'Weil rezessive Allele instabil sind und spontan mutieren',
             'Weil heterozygote Träger (Aa) phänotypisch unauffällig sind, das Allel aber weitergeben können',
             'Weil rezessive Allele nur auf dem X-Chromosom liegen',
-            'Weil rezessive Allele erst durch Umweltfaktoren aktiviert werden müssen'
+            'Weil rezessive Allele erst durch Umweltfaktoren aktiviert werden müssen',
+            'Weil rezessive Allele durch epigenetische Prägung temporär stillgelegt werden'
           ],
           correctIndex: 1,
-          explanation: 'Heterozygote Träger (Aa) zeigen bei vollständiger Dominanz den dominanten Phänotyp, tragen aber das rezessive Allel „verdeckt“ und können es an die nächste Generation weitergeben. Treffen zwei Träger aufeinander, kann ein homozygoter Nachkomme (aa) mit rezessivem Phänotyp entstehen.'
+          explanation: 'Heterozygote Träger (Aa) zeigen bei vollständiger Dominanz den dominanten Phänotyp, tragen aber das rezessive Allel „verdeckt" und können es an die nächste Generation weitergeben. Treffen zwei Träger aufeinander, kann ein homozygoter Nachkomme (aa) mit rezessivem Phänotyp entstehen.'
         }
       ]
     },
@@ -149,7 +155,8 @@ X-chromosomale Erbgänge zeigen ein charakteristisches geschlechtsspezifisches V
             'Betroffene in jeder Generation',
             'Nur Männer sind betroffen',
             'Die Erkrankung kann Generationen überspringen',
-            'Es gibt keine Überträger'
+            'Es gibt keine Überträger',
+            'Die Erkrankung tritt häufiger bei Männern auf'
           ],
           correctIndex: 2,
           explanation: 'Bei autosomal-rezessiven Erbgängen können heterozygote Träger (Aa) klinisch gesund sein. Die Erkrankung tritt erst auf, wenn ein Kind von beiden Eltern das rezessive Allel erbt (aa), was dazu führen kann, dass Generationen scheinbar übersprungen werden.'
@@ -160,7 +167,8 @@ X-chromosomale Erbgänge zeigen ein charakteristisches geschlechtsspezifisches V
             'Ja, mit einer Wahrscheinlichkeit von 50 %',
             'Ja, mit einer Wahrscheinlichkeit von 100 %',
             'Nein, da der Vater dem Sohn das Y-Chromosom vererbt',
-            'Nur wenn die Mutter ebenfalls Trägerin ist'
+            'Nur wenn die Mutter ebenfalls Trägerin ist',
+            'Ja, aber nur bei autosomal-dominanter Vererbung'
           ],
           correctIndex: 2,
           explanation: 'Der Vater gibt seinen Söhnen das Y-Chromosom und seinen Töchtern das X-Chromosom. Daher kann ein betroffener Vater (X^a Y) die Erkrankung nicht direkt an Söhne weitergeben, aber alle seine Töchter werden Konduktorinnen (X^A X^a).'
@@ -171,7 +179,8 @@ X-chromosomale Erbgänge zeigen ein charakteristisches geschlechtsspezifisches V
             '0 %',
             '25 %',
             '50 %',
-            '75 %'
+            '75 %',
+            '100 %'
           ],
           correctIndex: 1,
           explanation: 'Bei Aa × Aa ergibt sich: 1/4 AA (gesund), 2/4 Aa (gesunde Träger), 1/4 aa (betroffen). Das Risiko für ein betroffenes Kind beträgt somit 25 % pro Schwangerschaft.'
@@ -206,7 +215,8 @@ Die Rhesus-Inkompatibilität (Morbus haemolyticus neonatorum) ist eine klinisch 
             'Nur I^A I^B (Blutgruppe AB)',
             'I^A I^B, I^A i, I^B i oder ii (Blutgruppen AB, A, B oder 0)',
             'Nur I^A i oder I^B i (Blutgruppe A oder B)',
-            'Nur ii (Blutgruppe 0)'
+            'Nur ii (Blutgruppe 0)',
+            'Nur I^A I^A oder I^B I^B (Blutgruppe A oder B, homozygot)'
           ],
           correctIndex: 1,
           explanation: 'Die Kreuzung I^A i × I^B i ergibt vier mögliche Genotypen: I^A I^B (AB), I^A i (A), I^B i (B) und ii (0) — jeweils mit 25 % Wahrscheinlichkeit. Alle vier Blutgruppen sind möglich.'
@@ -217,7 +227,8 @@ Die Rhesus-Inkompatibilität (Morbus haemolyticus neonatorum) ist eine klinisch 
             'Weil die Plazenta in der ersten Schwangerschaft undurchlässig für Antikörper ist',
             'Weil die Sensibilisierung (Anti-D-Bildung) erst bei der Geburt des ersten Kindes stattfindet und die IgG-Antikörper erst bei einer Folgeschwangerschaft die Plazenta passieren',
             'Weil das erste Kind immer Rh-negativ ist',
-            'Weil Anti-D-Antikörper erst nach dem 30. Lebensjahr gebildet werden können'
+            'Weil Anti-D-Antikörper erst nach dem 30. Lebensjahr gebildet werden können',
+            'Weil die mütterliche IgM-Antwort in der ersten Schwangerschaft die Plazenta nicht passiert'
           ],
           correctIndex: 1,
           explanation: 'Die Sensibilisierung der Mutter erfolgt typischerweise bei der ersten Geburt durch Übertritt fetaler Rh-positiver Erythrozyten in den mütterlichen Kreislauf. Die dann gebildeten Anti-D-IgG-Antikörper können bei einer Folgeschwangerschaft die Plazenta passieren und die fetalen Erythrozyten eines erneut Rh-positiven Kindes angreifen.'
@@ -228,7 +239,8 @@ Die Rhesus-Inkompatibilität (Morbus haemolyticus neonatorum) ist eine klinisch 
             'Blutgruppe AB — weil sie keine Antikörper im Serum hat',
             'Blutgruppe A — weil das A-Antigen am häufigsten ist',
             'Blutgruppe 0 — weil die Erythrozyten weder A- noch B-Antigene tragen',
-            'Blutgruppe B — weil Anti-A seltener vorkommt'
+            'Blutgruppe B — weil Anti-A seltener vorkommt',
+            'Blutgruppe 0 — weil sie die meisten Antikörper im Serum hat'
           ],
           correctIndex: 2,
           explanation: 'Blutgruppe 0 (Genotyp ii) hat weder A- noch B-Antigene auf den Erythrozyten, sodass die Erythrozyten von keinem Anti-A oder Anti-B des Empfängers angegriffen werden. Blutgruppe AB ist hingegen Universalempfänger.'
@@ -263,7 +275,8 @@ Gonosomale Chromosomenstörungen betreffen die Geschlechtschromosomen. Das Turne
             '47,XXY',
             '47,XX,+21',
             '45,X0',
-            '47,XXX'
+            '47,XXX',
+            '46,XY'
           ],
           correctIndex: 2,
           explanation: 'Das Turner-Syndrom hat den Karyotyp 45,X0 (Monosomie X) — es fehlt ein Geschlechtschromosom. Es ist die einzige lebensfähige Monosomie beim Menschen. Betroffene sind phänotypisch weiblich.'
@@ -274,7 +287,8 @@ Gonosomale Chromosomenstörungen betreffen die Geschlechtschromosomen. Das Turne
             'Kleinwuchs, Streifengonaden, Pterygium colli',
             'Hochwuchs, kleine feste Hoden, Gynäkomastie, Infertilität',
             'Geistige Retardierung, Herzfehler, Epikanthus',
-            'Normaler Phänotyp ohne klinische Auffälligkeiten'
+            'Normaler Phänotyp ohne klinische Auffälligkeiten',
+            'Herzfehler, Duodenalatresie und Brushfield-Spots'
           ],
           correctIndex: 1,
           explanation: 'Das Klinefelter-Syndrom (47,XXY) zeigt Hochwuchs, kleine feste Hoden, Gynäkomastie (Brustentwicklung beim Mann), Hypogonadismus und Infertilität (Azoospermie). Kleinwuchs und Streifengonaden gehören zum Turner-Syndrom.'
@@ -285,7 +299,8 @@ Gonosomale Chromosomenstörungen betreffen die Geschlechtschromosomen. Das Turne
             'Crossing-over in der Meiose',
             'Deletion eines Chromosomenabschnitts',
             'Non-Disjunction (Nichttrennung) in der Meiose',
-            'Translokation zwischen zwei Chromosomen'
+            'Translokation zwischen zwei Chromosomen',
+            'Polyploidisierung durch fehlgeschlagene Zytokinese'
           ],
           correctIndex: 2,
           explanation: 'Non-Disjunction ist die fehlerhafte Nichttrennung homologer Chromosomen (Meiose I) oder Schwesterchromatiden (Meiose II), was zu Zellen mit zu vielen oder zu wenigen Chromosomen führt (Aneuploidie). Dies ist die häufigste Ursache für Trisomien und Monosomien.'
@@ -320,7 +335,8 @@ Chromosomenmutationen sind strukturelle Umbauten von Chromosomen und umfassen De
             'Substitution einer einzelnen Base',
             'Insertion oder Deletion von Nukleotiden, die nicht ein Vielfaches von 3 sind',
             'Deletion eines gesamten Chromosomenabschnitts',
-            'Inversion eines DNA-Abschnitts'
+            'Inversion eines DNA-Abschnitts',
+            'Austausch einer Purinbase gegen eine Pyrimidinbase'
           ],
           correctIndex: 1,
           explanation: 'Insertionen oder Deletionen einzelner Nukleotide (oder einer Anzahl, die nicht durch 3 teilbar ist) verschieben das Leseraster ab der Mutationsstelle. Alle nachfolgenden Codons werden falsch abgelesen, was meist zu einem funktionslosen Protein führt.'
@@ -331,7 +347,8 @@ Chromosomenmutationen sind strukturelle Umbauten von Chromosomen und umfassen De
             'Transition: Purin↔Purin oder Pyrimidin↔Pyrimidin; Transversion: Purin↔Pyrimidin',
             'Transition: Insertion einer Base; Transversion: Deletion einer Base',
             'Transition: stumme Mutation; Transversion: Missense-Mutation',
-            'Transition betrifft die DNA, Transversion betrifft die RNA'
+            'Transition betrifft die DNA, Transversion betrifft die RNA',
+            'Transition betrifft Exons, Transversion betrifft Introns'
           ],
           correctIndex: 0,
           explanation: 'Eine Transition ist der Austausch einer Purinbase gegen eine andere Purinbase (A↔G) oder einer Pyrimidinbase gegen eine andere (C↔T). Eine Transversion ist der Austausch einer Purin- gegen eine Pyrimidinbase oder umgekehrt (z. B. A↔C oder G↔T). Transitionen sind häufiger als Transversionen.'
@@ -342,7 +359,8 @@ Chromosomenmutationen sind strukturelle Umbauten von Chromosomen und umfassen De
             'Trisomie 21 (Down-Syndrom)',
             'Sichelzellanämie',
             'Chronische myeloische Leukämie (CML)',
-            'Mukoviszidose'
+            'Mukoviszidose',
+            'Burkitt-Lymphom'
           ],
           correctIndex: 2,
           explanation: 'Die Philadelphia-Translokation ist eine reziproke Translokation zwischen Chromosom 9 und 22, die das BCR-ABL-Fusionsgen erzeugt. Dieses Gen kodiert für eine konstitutiv aktive Tyrosinkinase, die zur unkontrollierten Zellproliferation bei der CML führt.'
@@ -377,7 +395,8 @@ Beispielrechnung: Wenn die Frequenz einer autosomal-rezessiven Erkrankung in ein
             'Keine Selektion',
             'Panmixie (zufällige Paarung)',
             'Diploider Organismus',
-            'Keine Migration'
+            'Keine Migration',
+            'Keine Mutation'
           ],
           correctIndex: 2,
           explanation: 'Die fünf Voraussetzungen des HWG sind: keine Mutation, keine Selektion, keine Migration, Panmixie und unendlich große Population (kein Drift). Ob der Organismus diploid ist, gehört zwar zur Grundannahme des Modells, ist aber keine der fünf klassischen Voraussetzungen, die im MedAT abgefragt werden.'
@@ -388,7 +407,8 @@ Beispielrechnung: Wenn die Frequenz einer autosomal-rezessiven Erkrankung in ein
             'q = 0,04',
             'q = 0,2',
             'q = 0,4',
-            'q = 0,02'
+            'q = 0,02',
+            'q = 0,08'
           ],
           correctIndex: 1,
           explanation: 'q² = 0,04, also q = √0,04 = 0,2. Die Frequenz des Allels a beträgt 0,2 (= 20 %), und p = 1 - 0,2 = 0,8 (= 80 %).'
@@ -399,7 +419,8 @@ Beispielrechnung: Wenn die Frequenz einer autosomal-rezessiven Erkrankung in ein
             'Eine Zunahme der Populationsgröße durch Immigration',
             'Eine drastische Verkleinerung der Population, die zu veränderter Allelzusammensetzung führt',
             'Die Anreicherung vorteilhafter Allele durch natürliche Selektion',
-            'Die Entstehung neuer Allele durch Mutation'
+            'Die Entstehung neuer Allele durch Mutation',
+            'Die Zunahme der Homozygotie durch Panmixie'
           ],
           correctIndex: 1,
           explanation: 'Der Flaschenhalseffekt ist eine Form des genetischen Drifts, bei der eine Population durch ein Ereignis (z. B. Naturkatastrophe, Seuche) drastisch verkleinert wird. Die überlebende Restpopulation hat eine veränderte Allelzusammensetzung, die nicht repräsentativ für die Ausgangspopulation ist.'
@@ -434,7 +455,8 @@ Ein besonders faszinierendes epigenetisches Phänomen ist das genomische Imprint
             'Verstärkte Genexpression',
             'Stilllegung (Silencing) des Gens',
             'Frameshift-Mutation',
-            'Chromosomendeletion'
+            'Chromosomendeletion',
+            'Verstärkte Histonacetylierung'
           ],
           correctIndex: 1,
           explanation: 'Hypermethylierung von CpG-Inseln im Promotorbereich verhindert die Bindung von Transkriptionsfaktoren und/oder rekrutiert methylbindende Proteine mit Repressorfunktion — das Gen wird stillgelegt (Gensilencing).'
@@ -445,7 +467,8 @@ Ein besonders faszinierendes epigenetisches Phänomen ist das genomische Imprint
             'Beide X-Chromosomen werden in weiblichen Zellen aktiv gehalten',
             'Das Y-Chromosom wird in männlichen Zellen inaktiviert',
             'Eines der beiden X-Chromosomen wird in jeder weiblichen Zelle zufällig inaktiviert (Barr-Körperchen)',
-            'Beide X-Chromosomen werden deletiert'
+            'Beide X-Chromosomen werden deletiert',
+            'Das X-Chromosom wird durch DNA-Methylierung vollständig abgebaut'
           ],
           correctIndex: 2,
           explanation: 'In jeder weiblichen Zelle (XX) wird eines der beiden X-Chromosomen zufällig und dauerhaft inaktiviert und zum Barr-Körperchen (Heterochromatin) kondensiert. Dies dient der Dosiskompensation, sodass Frauen und Männer die gleiche Menge an X-chromosomalen Genprodukten haben.'
@@ -456,7 +479,8 @@ Ein besonders faszinierendes epigenetisches Phänomen ist das genomische Imprint
             'Angelman-Syndrom',
             'Prader-Willi-Syndrom',
             'Turner-Syndrom',
-            'Down-Syndrom'
+            'Down-Syndrom',
+            'Klinefelter-Syndrom'
           ],
           correctIndex: 1,
           explanation: 'Das Prader-Willi-Syndrom entsteht durch den Verlust der väterlich exprimierten Gene auf 15q11-13 (z. B. durch Deletion des väterlichen Allels oder maternale uniparentale Disomie). Der Verlust der mütterlich exprimierten Region führt zum Angelman-Syndrom.'

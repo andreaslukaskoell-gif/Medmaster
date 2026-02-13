@@ -66,7 +66,8 @@ Das heute gültige Orbitalmodell (quantenmechanisches Modell) wurde in den 1920e
             'Dalton-Modell',
             'Bohr-Modell',
             'Rutherford-Modell',
-            'Orbitalmodell (quantenmechanisches Modell)'
+            'Orbitalmodell (quantenmechanisches Modell)',
+            'Thomson-Modell (Rosinenkuchenmodell)'
           ],
           correctIndex: 3,
           explanation: 'Das Orbitalmodell beschreibt Elektronen nicht als Teilchen auf festen Bahnen, sondern als Wellenfunktionen (Orbitale), die die Aufenthaltswahrscheinlichkeit im Raum angeben.'
@@ -77,7 +78,8 @@ Das heute gültige Orbitalmodell (quantenmechanisches Modell) wurde in den 1920e
             'Atome sind unteilbar',
             'Elektronen bewegen sich auf festen Bahnen',
             'Die positive Ladung und Masse sind in einem winzigen Kern konzentriert',
-            'Elektronen sind negativ geladen'
+            'Elektronen sind negativ geladen',
+            'Atome bestehen hauptsächlich aus Neutronen'
           ],
           correctIndex: 2,
           explanation: 'Die starke Ablenkung und teilweise Reflexion von Alpha-Teilchen an einer Goldfolie bewies, dass Atome einen winzigen, massereichen, positiv geladenen Kern besitzen.'
@@ -88,7 +90,8 @@ Das heute gültige Orbitalmodell (quantenmechanisches Modell) wurde in den 1920e
             'Es konnte die Masse des Atoms nicht erklären',
             'Kreisende Elektronen müssten nach klassischer Physik Energie abstrahlen und in den Kern stürzen',
             'Es konnte keine negativen Ladungen erklären',
-            'Es sagte eine zu große Atomgröße voraus'
+            'Es sagte eine zu große Atomgröße voraus',
+            'Es konnte die Existenz von Neutronen nicht erklären'
           ],
           correctIndex: 1,
           explanation: 'Nach der klassischen Elektrodynamik strahlen beschleunigte Ladungen (kreisende Elektronen) ständig Energie ab. Bohr postulierte stabile Bahnen ohne Energieabstrahlung und löste damit das Problem.'
@@ -120,7 +123,8 @@ Die Hundsche Regel (Regel der maximalen Multiplizität) besagt, dass energetisch
             '1s² 2s² 2p⁶',
             '1s² 2s² 2p⁴',
             '1s² 2s² 2p² 3s²',
-            '1s² 2p⁶'
+            '1s² 2p⁶',
+            '1s² 2s² 2p³ 3s¹'
           ],
           correctIndex: 1,
           explanation: 'Sauerstoff hat 8 Elektronen. Nach dem Aufbauprinzip: 1s² (2) → 2s² (4) → 2p⁴ (8). Die verbleibenden 4 Elektronen werden auf die 2p-Orbitale verteilt.'
@@ -131,7 +135,8 @@ Die Hundsche Regel (Regel der maximalen Multiplizität) besagt, dass energetisch
             '8',
             '18',
             '32',
-            '2'
+            '2',
+            '12'
           ],
           correctIndex: 1,
           explanation: 'Die maximale Elektronenzahl pro Schale beträgt 2n². Für n = 3: 2 × 3² = 18 Elektronen (verteilt auf 3s, 3p und 3d).'
@@ -142,7 +147,8 @@ Die Hundsche Regel (Regel der maximalen Multiplizität) besagt, dass energetisch
             'Orbitale werden in Reihenfolge steigender Energie besetzt',
             'Jedes Orbital kann maximal zwei Elektronen aufnehmen',
             'Energetisch gleichwertige Orbitale werden erst einfach und mit parallelem Spin besetzt',
-            'Elektronen können nicht gleichzeitig in allen vier Quantenzahlen übereinstimmen'
+            'Elektronen können nicht gleichzeitig in allen vier Quantenzahlen übereinstimmen',
+            'Die Elektronenspins in einem Orbital müssen immer parallel sein'
           ],
           correctIndex: 2,
           explanation: 'Die Hundsche Regel besagt, dass energetisch gleichwertige Orbitale (z. B. die drei p-Orbitale) zunächst einfach besetzt werden, bevor eine Doppelbesetzung erfolgt, und zwar mit parallelem Spin.'
@@ -173,7 +179,8 @@ Radioaktive Isotope (Radionuklide) besitzen instabile Kerne, die unter Aussendun
             '6',
             '8',
             '14',
-            '12'
+            '12',
+            '7'
           ],
           correctIndex: 1,
           explanation: 'Kohlenstoff hat die Ordnungszahl Z = 6 (6 Protonen). Bei ¹⁴C ist die Massenzahl A = 14. Die Neutronenzahl ist N = A - Z = 14 - 6 = 8.'
@@ -184,7 +191,8 @@ Radioaktive Isotope (Radionuklide) besitzen instabile Kerne, die unter Aussendun
             'Ein Element mit Z-1 und A-1',
             'Ein Element mit Z-2 und A-4 plus ein Helium-4-Kern',
             'Ein Element mit Z+1 und gleichem A',
-            'Ein Element mit Z+2 und A+4'
+            'Ein Element mit Z+2 und A+4',
+            'Ein Element mit Z-1 und A-2 plus ein Deuteriumkern'
           ],
           correctIndex: 1,
           explanation: 'Beim α-Zerfall wird ein Helium-4-Kern (2p + 2n) emittiert. Die Ordnungszahl sinkt um 2 (Z: 88→86, Radon) und die Massenzahl um 4 (A: 226→222).'
@@ -195,7 +203,8 @@ Radioaktive Isotope (Radionuklide) besitzen instabile Kerne, die unter Aussendun
             'Weil Chloratome ihre Masse ständig ändern',
             'Weil es ein Messfehler ist',
             'Weil es ein gewichteter Mittelwert der natürlich vorkommenden Isotope ³⁵Cl und ³⁷Cl ist',
-            'Weil Chlor 35,45 Neutronen hat'
+            'Weil Chlor 35,45 Neutronen hat',
+            'Weil die Bindungsenergie der Nukleonen den Massenwert verändert'
           ],
           correctIndex: 2,
           explanation: 'Die relative Atommasse ist der gewichtete Mittelwert aller natürlich vorkommenden Isotope. Chlor besteht zu 75,77 % aus ³⁵Cl und zu 24,23 % aus ³⁷Cl, was einen Mittelwert von 35,45 u ergibt.'

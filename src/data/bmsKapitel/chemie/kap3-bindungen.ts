@@ -32,7 +32,8 @@ Ionenverbindungen bilden im festen Zustand regelmäßige Kristallgitter, in dene
             'ΔEN > 0,5',
             'ΔEN > 1,0',
             'ΔEN > 1,7',
-            'ΔEN > 2,5'
+            'ΔEN > 2,5',
+            'ΔEN > 0,1'
           ],
           correctIndex: 2,
           explanation: 'Ab einer Elektronegativitätsdifferenz von etwa 1,7 wird die Bindung als ionisch eingestuft. Darunter liegt eine polare kovalente Bindung vor.'
@@ -43,7 +44,8 @@ Ionenverbindungen bilden im festen Zustand regelmäßige Kristallgitter, in dene
             '4',
             '6',
             '8',
-            '12'
+            '12',
+            '2'
           ],
           correctIndex: 1,
           explanation: 'Im NaCl-Gitter ist jedes Na⁺-Ion oktaedrisch von 6 Cl⁻-Ionen umgeben (und umgekehrt). Die Koordinationszahl beträgt daher 6.'
@@ -54,7 +56,8 @@ Ionenverbindungen bilden im festen Zustand regelmäßige Kristallgitter, in dene
             'Weil die Ionen sehr leicht sind',
             'Weil die Elektronenwolken starr sind',
             'Weil bei Verschiebung der Gitterschichten gleichnamig geladene Ionen aufeinandertreffen und sich abstoßen',
-            'Weil die Gitterenergie sehr niedrig ist'
+            'Weil die Gitterenergie sehr niedrig ist',
+            'Weil die Ionen im Kristall keine geordnete Struktur haben'
           ],
           correctIndex: 2,
           explanation: 'Wenn durch mechanische Belastung Gitterschichten gegeneinander verschoben werden, treffen gleichnamig geladene Ionen aufeinander. Die resultierende Abstoßung führt zum Bruch des Kristalls.'
@@ -86,7 +89,8 @@ Die Polarität einer kovalenten Bindung hängt von der Elektronegativitätsdiffe
             'Einem σ-Elektronenpaar',
             'Drei σ-Elektronenpaaren',
             'Einem σ- und zwei π-Elektronenpaaren',
-            'Zwei σ- und einem π-Elektronenpaar'
+            'Zwei σ- und einem π-Elektronenpaar',
+            'Drei π-Elektronenpaaren ohne σ-Anteil'
           ],
           correctIndex: 2,
           explanation: 'Eine Dreifachbindung besteht aus einer σ-Bindung (Kopf-an-Kopf-Überlappung der Orbitale) und zwei π-Bindungen (seitliche Überlappung), also insgesamt drei bindenden Elektronenpaaren.'
@@ -97,7 +101,8 @@ Die Polarität einer kovalenten Bindung hängt von der Elektronegativitätsdiffe
             'Verschiedene Isomere eines Moleküls',
             'Verschiedene Lewis-Formeln, die die tatsächliche Elektronenverteilung eines Moleküls zusammen beschreiben',
             'Strukturen von Molekülen bei verschiedenen Temperaturen',
-            'Zerfallsprodukte eines instabilen Moleküls'
+            'Zerfallsprodukte eines instabilen Moleküls',
+            'Konformere, die durch Rotation um Einfachbindungen entstehen'
           ],
           correctIndex: 1,
           explanation: 'Mesomere Grenzstrukturen (Resonanzstrukturen) sind verschiedene Lewis-Formeln desselben Moleküls, die jeweils eine mögliche Elektronenverteilung zeigen. Die reale Struktur ist ein Hybrid aller Grenzstrukturen.'
@@ -108,7 +113,8 @@ Die Polarität einer kovalenten Bindung hängt von der Elektronegativitätsdiffe
             'CO₂',
             'CH₄',
             'H₂O',
-            'CCl₄'
+            'CCl₄',
+            'BF₃'
           ],
           correctIndex: 2,
           explanation: 'H₂O ist gewinkelt (104,5°), weshalb sich die polaren O-H-Bindungsdipole nicht aufheben. CO₂ (linear), CH₄ und CCl₄ (tetraedrisch) sind symmetrisch, sodass sich die Bindungsdipole kompensieren.'
@@ -139,7 +145,8 @@ Eine weitere wichtige Eigenschaft der Metalle ist ihre Verformbarkeit (Duktilit�
             'Elektronen werden zwischen zwei Atomen geteilt',
             'Elektronen werden von einem Atom zum anderen übertragen',
             'Valenzelektronen sind delokalisiert und bewegen sich frei durch das gesamte Metallgitter',
-            'Elektronen sind fest an einzelne Atome gebunden'
+            'Elektronen sind fest an einzelne Atome gebunden',
+            'Elektronen werden nur zwischen benachbarten Atompaaren geteilt'
           ],
           correctIndex: 2,
           explanation: 'Im Elektronengasmodell geben alle Metallatome ihre Valenzelektronen ab, die ein frei bewegliches Elektronengas bilden. Dieses umgibt die positiv geladenen Atomrümpfe und hält das Gitter zusammen.'
@@ -150,7 +157,8 @@ Eine weitere wichtige Eigenschaft der Metalle ist ihre Verformbarkeit (Duktilit�
             'Weil Elektronen bei hoher Temperatur den Festkörper verlassen',
             'Weil die Gitterschwingungen der Atomrümpfe zunehmen und die Elektronenbewegung behindern',
             'Weil das Elektronengas bei Hitze fest wird',
-            'Weil die Valenzelektronen an die Atomrümpfe gebunden werden'
+            'Weil die Valenzelektronen an die Atomrümpfe gebunden werden',
+            'Weil die Metallionen bei Erwärmung ihre Ladung verlieren'
           ],
           correctIndex: 1,
           explanation: 'Bei steigender Temperatur schwingen die Metallkationen stärker um ihre Gitterplätze. Diese Schwingungen behindern die gerichtete Bewegung der Elektronen und erhöhen den elektrischen Widerstand.'
@@ -161,7 +169,8 @@ Eine weitere wichtige Eigenschaft der Metalle ist ihre Verformbarkeit (Duktilit�
             'Metalle haben höhere Schmelzpunkte',
             'Metalle leiten im festen Zustand elektrischen Strom',
             'Metalle sind in Wasser löslich',
-            'Metalle bilden keine Kristallgitter'
+            'Metalle bilden keine Kristallgitter',
+            'Metalle sind immer diamagnetisch'
           ],
           correctIndex: 1,
           explanation: 'Metalle leiten bereits im festen Zustand elektrischen Strom durch ihr delokalisiertes Elektronengas. Ionenkristalle leiten erst in Lösung oder Schmelze, da die Ionen im Festkörper nicht frei beweglich sind.'
@@ -192,7 +201,8 @@ Die stärkste Form der zwischenmolekularen Kräfte ist die Wasserstoffbrückenbi
             'Ein H-Atom muss an ein Metallatom gebunden sein',
             'Ein H-Atom muss an F, O oder N gebunden sein und mit einem freien Elektronenpaar eines weiteren elektronegativen Atoms wechselwirken',
             'Zwei Wasserstoffatome müssen direkt aneinander gebunden sein',
-            'Ein H-Atom muss an Kohlenstoff gebunden sein'
+            'Ein H-Atom muss an Kohlenstoff gebunden sein',
+            'Zwei polare Moleküle müssen in der Gasphase vorliegen'
           ],
           correctIndex: 1,
           explanation: 'Wasserstoffbrücken entstehen, wenn H an ein stark elektronegatives Atom (F, O, N) kovalent gebunden ist und mit einem freien Elektronenpaar eines anderen elektronegativen Atoms wechselwirkt.'
@@ -203,7 +213,8 @@ Die stärkste Form der zwischenmolekularen Kräfte ist die Wasserstoffbrückenbi
             'n-Pentan hat eine größere molare Masse',
             'n-Pentan ist polarer',
             'n-Pentan hat eine größere Moleküloberfläche und damit stärkere Van-der-Waals-Kräfte',
-            'n-Pentan bildet Wasserstoffbrücken'
+            'n-Pentan bildet Wasserstoffbrücken',
+            'n-Pentan hat stärkere Dipol-Dipol-Wechselwirkungen'
           ],
           correctIndex: 2,
           explanation: 'Beide Isomere haben dieselbe Summenformel und Masse. Das langgestreckte n-Pentan hat jedoch eine größere Kontaktfläche als das kompakte Neopentan, was zu stärkeren Van-der-Waals-Kräften und einem höheren Siedepunkt führt.'
@@ -214,7 +225,8 @@ Die stärkste Form der zwischenmolekularen Kräfte ist die Wasserstoffbrückenbi
             'Van-der-Waals-Kräfte',
             'Dipol-Dipol-Wechselwirkungen',
             'Wasserstoffbrückenbindungen',
-            'Metallische Bindung'
+            'Metallische Bindung',
+            'Kovalente Bindungen zwischen den Wassermolekülen'
           ],
           correctIndex: 2,
           explanation: 'Im Eis bilden die Wasserstoffbrücken ein offenes, hexagonales Kristallgitter, das mehr Volumen einnimmt als die weniger geordnete Flüssigkeit. Daher hat Eis eine geringere Dichte als flüssiges Wasser.'
@@ -245,7 +257,8 @@ Die Hybridisierung ist ein mathematisches Konzept, das erklärt, wie die Atomorb
             'Tetraedrisch',
             'Trigonal-planar',
             'Trigonal-pyramidal',
-            'Gewinkelt'
+            'Gewinkelt',
+            'Linear'
           ],
           correctIndex: 2,
           explanation: 'NH₃ hat 4 Elektronendomänen am Stickstoff (3 bindende + 1 freies Paar). Die Elektronengeometrie ist tetraedrisch, aber die Molekülgeometrie (nur Atompositionen) ist trigonal-pyramidal.'
@@ -256,7 +269,8 @@ Die Hybridisierung ist ein mathematisches Konzept, das erklärt, wie die Atomorb
             'sp',
             'sp²',
             'sp³',
-            'sp³d'
+            'sp³d',
+            'sp³d²'
           ],
           correctIndex: 1,
           explanation: 'Ein C-Atom in Ethen bildet 3 σ-Bindungen (2× C-H + 1× C-C) und 1 π-Bindung. Das ergibt 3 σ-Domänen → sp²-Hybridisierung mit trigonal-planarer Geometrie (120°).'
@@ -267,7 +281,8 @@ Die Hybridisierung ist ein mathematisches Konzept, das erklärt, wie die Atomorb
             '1',
             '2',
             '3',
-            '4'
+            '4',
+            '5'
           ],
           correctIndex: 1,
           explanation: 'Bei zwei Elektronendomänen am Zentralatom ordnen sich diese linear an (180° Winkel), um die gegenseitige Abstoßung zu minimieren. Beispiel: CO₂ mit zwei Doppelbindungen als jeweils eine Domäne.'

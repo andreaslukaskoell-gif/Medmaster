@@ -36,6 +36,7 @@ export const bioKap7: Kapitel = {
             'Nur der unbelebte Lebensraum mit seinen Umweltfaktoren',
             'Die funktionelle Einheit aus Biotop und Biozönose',
             'Ein anderes Wort für Biosphäre',
+            'Die Gesamtheit aller Nahrungsketten in einem Gebiet',
           ],
           correctIndex: 2,
           explanation:
@@ -48,6 +49,7 @@ export const bioKap7: Kapitel = {
             'Zwei Arten können nicht dauerhaft dieselbe ökologische Nische besetzen',
             'Konkurrenz führt immer zum Aussterben beider Arten',
             'Nur die größere Art überlebt bei Konkurrenz',
+            'Konkurrenz tritt nur zwischen verschiedenen Arten auf, nie innerhalb einer Art',
           ],
           correctIndex: 1,
           explanation:
@@ -60,6 +62,7 @@ export const bioKap7: Kapitel = {
             'Die Realnische beschreibt das theoretische Maximum',
             'Die Fundamentalnische wird durch Konkurrenz zur Realnische eingeschränkt',
             'Beide Begriffe sind synonym',
+            'Die Realnische wird ausschließlich durch abiotische Faktoren bestimmt',
           ],
           correctIndex: 2,
           explanation:
@@ -97,6 +100,7 @@ export const bioKap7: Kapitel = {
             'Einen breiten Toleranzbereich für einen Umweltfaktor',
             'Eine besonders hohe Spezialisierung',
             'Ein Vorkommen ausschließlich in tropischen Gebieten',
+            'Eine besonders hohe Empfindlichkeit gegenüber pH-Wert-Änderungen',
           ],
           correctIndex: 1,
           explanation:
@@ -109,6 +113,7 @@ export const bioKap7: Kapitel = {
             'Eine Temperaturerhöhung um 10 °C verdoppelt bis verdreifacht die Reaktionsgeschwindigkeit',
             'Jede Population verdoppelt sich in 10 Generationen',
             'Die Mutationsrate steigt um 10 % pro Generation',
+            'Pro 10 °C Temperaturerhöhung halbiert sich die Enzymaktivität',
           ],
           correctIndex: 1,
           explanation:
@@ -121,6 +126,7 @@ export const bioKap7: Kapitel = {
             'Alle Faktoren müssen gleichzeitig im Minimum sein',
             'Der knappste Faktor relativ zum Bedarf begrenzt das Wachstum',
             'Das Gesetz gilt nur für Pflanzen, nicht für Tiere',
+            'Alle Faktoren wirken gemeinsam additiv auf das Wachstum',
           ],
           correctIndex: 2,
           explanation:
@@ -159,6 +165,7 @@ export const bioKap7: Kapitel = {
             'Das Räuber-Maximum folgt zeitversetzt auf das Beute-Maximum',
             'Die Beutepopulation folgt dem Räubermaximum',
             'Beide Populationen wachsen gleichzeitig exponentiell',
+            'Die Räuberpopulation erreicht ihr Minimum vor der Beutepopulation',
           ],
           correctIndex: 1,
           explanation:
@@ -171,6 +178,7 @@ export const bioKap7: Kapitel = {
             'Der Räuber erholt sich schneller',
             'Die Beute erholt sich schneller als der Räuber',
             'Beide sterben aus',
+            'Der Räuber verdoppelt seine Population, während die Beute konstant bleibt',
           ],
           correctIndex: 2,
           explanation:
@@ -183,6 +191,7 @@ export const bioKap7: Kapitel = {
             'Mykorrhiza zwischen Pilz und Pflanzenwurzel',
             'Löwe jagt Zebra',
             'Kuckuck legt Eier in fremde Nester',
+            'Flechte als Verbindung von Alge und Pilz',
           ],
           correctIndex: 1,
           explanation:
@@ -220,6 +229,7 @@ export const bioKap7: Kapitel = {
             'Logistisches Wachstum',
             'Lineares Wachstum',
             'Negatives Wachstum',
+            'Hyperbolisches Wachstum',
           ],
           correctIndex: 1,
           explanation:
@@ -232,6 +242,7 @@ export const bioKap7: Kapitel = {
             'Lange Lebensdauer und späte Geschlechtsreife',
             'Viele Nachkommen mit hoher Sterblichkeitsrate',
             'Leben nahe der Kapazitätsgrenze in stabilen Ökosystemen',
+            'Hohe genetische Diversität innerhalb der Population',
           ],
           correctIndex: 2,
           explanation:
@@ -244,6 +255,7 @@ export const bioKap7: Kapitel = {
             'Die maximale Populationsgröße, die ein Lebensraum dauerhaft tragen kann',
             'Die minimale überlebensfähige Populationsgröße',
             'Die Geschwindigkeit des Populationswachstums',
+            'Die Anzahl der Trophieebenen in einem Nahrungsnetz',
           ],
           correctIndex: 1,
           explanation:
@@ -281,6 +293,7 @@ export const bioKap7: Kapitel = {
             'Denitrifikation durch anaerobe Bakterien',
             'Stickstofffixierung durch Rhizobium und Cyanobakterien',
             'Ammonifikation durch Destruenten',
+            'Assimilation durch Pflanzenwurzeln in Form von N₂',
           ],
           correctIndex: 2,
           explanation:
@@ -293,6 +306,7 @@ export const bioKap7: Kapitel = {
             'Verbrennung fossiler Brennstoffe und Freisetzung von CO₂',
             'Zunahme der Denitrifikation',
             'Abholzung von Nadelwäldern',
+            'Anstieg der Methanproduktion durch Vulkanismus',
           ],
           correctIndex: 1,
           explanation:
@@ -305,6 +319,7 @@ export const bioKap7: Kapitel = {
             'Die Oxidation von NH₄⁺ zu NO₃⁻',
             'Die Umwandlung von NO₃⁻ zurück in N₂ durch anaerobe Bakterien',
             'Die Aufnahme von Nitrat durch Pflanzen',
+            'Die Oxidation von Ammonium zu Nitrit durch Nitrosomonas',
           ],
           correctIndex: 2,
           explanation:
@@ -342,6 +357,7 @@ export const bioKap7: Kapitel = {
             'Ca. 90 %',
             'Ca. 10 %',
             'Ca. 1 %',
+            'Ca. 25 %',
           ],
           correctIndex: 2,
           explanation:
@@ -354,6 +370,7 @@ export const bioKap7: Kapitel = {
             'Die Nahrungskette beschreibt nur Pflanzen, das Nahrungsnetz nur Tiere',
             'Die Nahrungskette ist linear, das Nahrungsnetz umfasst alle verflochtenen Nahrungsketten',
             'Das Nahrungsnetz hat nur 2 Trophieebenen',
+            'Die Nahrungskette beginnt immer mit Konsumenten, das Nahrungsnetz mit Produzenten',
           ],
           correctIndex: 2,
           explanation:
@@ -366,6 +383,7 @@ export const bioKap7: Kapitel = {
             'Die Bruttoprimärproduktion abzüglich der Eigenatmung der Produzenten',
             'Die Energiemenge, die Destruenten freisetzen',
             'Die Energieaufnahme der Konsumenten',
+            'Die Gesamtbiomasse aller Trophieebenen eines Ökosystems',
           ],
           correctIndex: 1,
           explanation:
@@ -403,6 +421,7 @@ export const bioKap7: Kapitel = {
             'Die durchlichtete Zone, in der Produktion überwiegt',
             'Die Uferzone mit Wasserpflanzen',
             'Die Sprungschicht mit raschem Temperaturabfall',
+            'Die Zone mit der höchsten Destruentenaktivität',
           ],
           correctIndex: 1,
           explanation:
@@ -415,6 +434,7 @@ export const bioKap7: Kapitel = {
             'Eine instabile Übergangsgesellschaft',
             'Der stabile Endzustand der Sukzession unter gegebenen Klimabedingungen',
             'Eine künstlich angelegte Pflanzengemeinschaft',
+            'Die artenreichste Phase der Sukzession vor dem Endzustand',
           ],
           correctIndex: 2,
           explanation:
@@ -427,6 +447,7 @@ export const bioKap7: Kapitel = {
             'Primärsukzession beginnt auf unbesiedeltem Substrat, Sekundärsukzession auf vorhandenem Boden',
             'Sekundärsukzession findet nur in Wäldern statt',
             'Es gibt keinen Unterschied',
+            'Sekundärsukzession beginnt immer mit Flechten als Pionierorganismen',
           ],
           correctIndex: 1,
           explanation:
@@ -465,6 +486,7 @@ export const bioKap7: Kapitel = {
             'Stickstoff (N₂)',
             'Kohlendioxid (CO₂)',
             'Sauerstoff (O₂)',
+            'Methan (CH₄)',
           ],
           correctIndex: 2,
           explanation:
@@ -477,6 +499,7 @@ export const bioKap7: Kapitel = {
             'FCKW, die Chlorradikale freisetzen und katalytisch Ozon abbauen',
             'Natürliche UV-Strahlung',
             'Vulkanausbrüche',
+            'Übermäßiger Einsatz von Stickstoffdüngern in der Landwirtschaft',
           ],
           correctIndex: 1,
           explanation:
@@ -489,6 +512,7 @@ export const bioKap7: Kapitel = {
             'Genetische Vielfalt, Artenvielfalt, Ökosystemvielfalt',
             'Wasser, Land, Luft',
             'Produzenten, Konsumenten, Destruenten',
+            'Morphologische Vielfalt, Verhaltensvielfalt, Stoffwechselvielfalt',
           ],
           correctIndex: 1,
           explanation:

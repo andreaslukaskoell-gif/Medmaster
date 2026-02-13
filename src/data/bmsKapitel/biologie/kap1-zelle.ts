@@ -66,7 +66,8 @@ Prokaryoten fehlen membranumschlossene Organellen wie Mitochondrien, endoplasmat
             'Lineare DNA mit Histonen',
             'Zirkuläre DNA ohne Histone im Nukleoid',
             '80S-Ribosomen im Cytoplasma',
-            'Membranumhüllter Zellkern'
+            'Membranumhüllter Zellkern',
+            'Vermehrung ausschließlich durch Meiose'
           ],
           correctIndex: 1,
           explanation: 'Prokaryoten besitzen zirkuläre DNA ohne Histone, die im Nukleoid (kein echter Kern) liegt. Lineare DNA mit Histonen und ein membranumhüllter Zellkern sind Merkmale von Eukaryoten.'
@@ -77,7 +78,8 @@ Prokaryoten fehlen membranumschlossene Organellen wie Mitochondrien, endoplasmat
             'Prokaryoten sind 10–100 µm, Eukaryoten 0,1–10 µm',
             'Beide Zelltypen sind gleich groß (ca. 50 µm)',
             'Prokaryoten sind 0,1–10 µm, Eukaryoten 10–100 µm',
-            'Prokaryoten sind stets größer als Eukaryoten'
+            'Prokaryoten sind stets größer als Eukaryoten',
+            'Prokaryoten sind 1–5 mm, Eukaryoten 0,1–1 mm'
           ],
           correctIndex: 2,
           explanation: 'Prokaryotische Zellen sind mit 0,1–10 µm deutlich kleiner als eukaryotische Zellen (10–100 µm). Das günstigere Oberfläche-zu-Volumen-Verhältnis ermöglicht effizienteren Stoffaustausch.'
@@ -88,7 +90,8 @@ Prokaryoten fehlen membranumschlossene Organellen wie Mitochondrien, endoplasmat
             'Durch Mitose mit Spindelapparat',
             'Durch Meiose mit Crossing-over',
             'Durch binäre Fission (Zweiteilung)',
-            'Durch Knospung mit asymmetrischer Teilung'
+            'Durch Knospung mit asymmetrischer Teilung',
+            'Durch Endozytose der eigenen Zellmembran'
           ],
           correctIndex: 2,
           explanation: 'Prokaryoten teilen sich durch binäre Fission – einen schnellen Prozess ohne Mitosespindel. Die DNA wird repliziert, die Zelle verlängert sich und schnürt sich in der Mitte durch.'
@@ -161,7 +164,8 @@ Weitere wichtige Strukturen der Tierzelle umfassen das Zytoskelett und spezifisc
             'Im glatten endoplasmatischen Retikulum',
             'Im Nukleolus innerhalb des Zellkerns',
             'An den freien Ribosomen im Cytoplasma',
-            'Im Golgi-Apparat'
+            'Im Golgi-Apparat',
+            'In den Peroxisomen'
           ],
           correctIndex: 1,
           explanation: 'Der Nukleolus ist eine Struktur innerhalb des Zellkerns, die auf die Synthese und Assemblierung von ribosomaler RNA (rRNA) spezialisiert ist. Die rRNA wird dort transkribiert und mit ribosomalen Proteinen zu ribosomalen Untereinheiten zusammengebaut.'
@@ -172,7 +176,8 @@ Weitere wichtige Strukturen der Tierzelle umfassen das Zytoskelett und spezifisc
             'Der Golgi-Apparat',
             'Das raue ER',
             'Das Zentrosom mit den Zentriolen',
-            'Die Lysosomen'
+            'Die Lysosomen',
+            'Die Mitochondrien'
           ],
           correctIndex: 2,
           explanation: 'Das Zentrosom, das zwei Zentriolen enthält, ist das Mikrotubuli-Organisationszentrum (MTOC). Während der Mitose wandern die duplizierten Zentrosomen zu den Zellpolen und organisieren den Spindelapparat aus Mikrotubuli.'
@@ -183,7 +188,8 @@ Weitere wichtige Strukturen der Tierzelle umfassen das Zytoskelett und spezifisc
             'Proteinbiosynthese für die Sekretion',
             'Lipidsynthese, Entgiftung und Calciumspeicherung',
             'Modifikation und Sortierung von Proteinen',
-            'Intrazelluläre Verdauung bei saurem pH'
+            'Intrazelluläre Verdauung bei saurem pH',
+            'DNA-Replikation und Chromosomenkondensation'
           ],
           correctIndex: 1,
           explanation: 'Das glatte ER (ohne Ribosomen) ist für die Lipidsynthese, die Entgiftung (besonders in Leberzellen) und die Calciumspeicherung (besonders im sarkoplasmatischen Retikulum der Muskelzellen) verantwortlich.'
@@ -216,7 +222,8 @@ Tierzellen besitzen im Gegensatz zu Pflanzenzellen Zentriolen im Zentrosom, die 
             'Mitochondrien',
             'Zellwand aus Cellulose',
             'Zellmembran',
-            'Endoplasmatisches Retikulum'
+            'Endoplasmatisches Retikulum',
+            'Ribosomen'
           ],
           correctIndex: 1,
           explanation: 'Tierzellen besitzen keine Zellwand aus Cellulose. Diese ist ein exklusives Merkmal der Pflanzenzelle und verleiht ihr Formstabilität. Tierzellen haben nur die flexible Zellmembran.'
@@ -227,7 +234,8 @@ Tierzellen besitzen im Gegensatz zu Pflanzenzellen Zentriolen im Zentrosom, die 
             'Beide bilden einen kontraktilen Ring',
             'Pflanzenzellen bilden eine Zellplatte, Tierzellen eine Teilungsfurche',
             'Tierzellen bilden eine Zellplatte, Pflanzenzellen eine Teilungsfurche',
-            'Beide bilden eine Zellplatte von innen nach außen'
+            'Beide bilden eine Zellplatte von innen nach außen',
+            'Pflanzenzellen nutzen Lysosomen zur Zelltrennung'
           ],
           correctIndex: 1,
           explanation: 'Bei Pflanzenzellen entsteht eine Zellplatte (Phragmoplast) von innen nach außen, die zur neuen Zellwand wird. Tierzellen schnüren sich durch einen kontraktilen Ring aus Aktinfilamenten ein (Teilungsfurche).'
@@ -238,7 +246,8 @@ Tierzellen besitzen im Gegensatz zu Pflanzenzellen Zentriolen im Zentrosom, die 
             'ATP-Produktion durch oxidative Phosphorylierung',
             'Proteinsynthese für die Sekretion',
             'Speicherung von Wasser und Erzeugung des Turgors',
-            'Organisation des Spindelapparats'
+            'Organisation des Spindelapparats',
+            'Synthese von Chlorophyll für die Photosynthese'
           ],
           correctIndex: 2,
           explanation: 'Die Zentralvakuole speichert Wasser, Ionen und Stoffwechselprodukte. Durch osmotischen Druck erzeugt sie den Turgor, der die Pflanzenzelle prall hält und der Pflanze Stabilität verleiht. Sie kann bis zu 90 % des Zellvolumens einnehmen.'
@@ -271,7 +280,8 @@ Die Endosymbiontentheorie, aufgestellt von Lynn Margulis (1967), erklärt, warum
             'Lysosomen, Peroxisomen, Vakuolen',
             'Zellkern, Mitochondrien, Chloroplasten',
             'ER, Golgi-Apparat, Zellkern',
-            'Ribosomen, Zentriolen, Mitochondrien'
+            'Ribosomen, Zentriolen, Mitochondrien',
+            'Golgi-Apparat, Lysosomen, Peroxisomen'
           ],
           correctIndex: 1,
           explanation: 'Zellkern, Mitochondrien und Chloroplasten besitzen eine Doppelmembran. Bei Mitochondrien und Chloroplasten wird dies durch die Endosymbiontentheorie erklärt. ER und Golgi haben eine Einzelmembran; Ribosomen und Zentriolen sind nicht membranumhüllt.'
@@ -282,7 +292,8 @@ Die Endosymbiontentheorie, aufgestellt von Lynn Margulis (1967), erklärt, warum
             'In der Matrix der Mitochondrien',
             'An der äußeren Mitochondrienmembran',
             'An der inneren Mitochondrienmembran (Cristae)',
-            'Im Intermembranraum der Mitochondrien'
+            'Im Intermembranraum der Mitochondrien',
+            'An der Membran des endoplasmatischen Retikulums'
           ],
           correctIndex: 2,
           explanation: 'Die Komplexe der Atmungskette (I–IV) und die ATP-Synthase (V) sitzen in der inneren Mitochondrienmembran (Cristae). Die Cristae vergrößern die Oberfläche für diese Prozesse. Der Citratzyklus läuft hingegen in der Matrix ab.'
@@ -293,7 +304,8 @@ Die Endosymbiontentheorie, aufgestellt von Lynn Margulis (1967), erklärt, warum
             'Mitochondrien besitzen eigene zirkuläre DNA',
             'Mitochondrien haben 70S-Ribosomen',
             'Mitochondrien werden von einer Doppelmembran umgeben',
-            'Mitochondrien besitzen 80S-Ribosomen wie das Cytoplasma'
+            'Mitochondrien besitzen 80S-Ribosomen wie das Cytoplasma',
+            'Mitochondrien können sich durch binäre Fission teilen'
           ],
           correctIndex: 3,
           explanation: 'Mitochondrien besitzen 70S-Ribosomen (wie Prokaryoten), NICHT 80S-Ribosomen. Gerade das Vorhandensein von 70S-Ribosomen, eigener zirkulärer DNA und einer Doppelmembran stützt die Endosymbiontentheorie.'
@@ -326,7 +338,8 @@ Lysosomen sind Einzelmembran-Organellen mit saurem Milieu (pH 4,5–5,0), das du
             'Lipidsynthese und Entgiftung',
             'Synthese von Membranproteinen und sekretorischen Proteinen',
             'Glykosylierung und Sortierung von Proteinen',
-            'Abbau beschädigter Organellen'
+            'Abbau beschädigter Organellen',
+            'Speicherung von Glykogen und Lipiden'
           ],
           correctIndex: 1,
           explanation: 'Das raue ER ist mit Ribosomen besetzt und synthetisiert Proteine, die für die Zellmembran, die Sekretion oder Lysosomen bestimmt sind. Lipidsynthese und Entgiftung sind Aufgaben des glatten ER.'
@@ -337,7 +350,8 @@ Lysosomen sind Einzelmembran-Organellen mit saurem Milieu (pH 4,5–5,0), das du
             'Golgi → rER → Lysosom → Zellmembran',
             'rER → Golgi (cis→trans) → Zellmembran/Lysosom',
             'Zellmembran → Golgi → rER → Lysosom',
-            'sER → Golgi → rER → Zellmembran'
+            'sER → Golgi → rER → Zellmembran',
+            'rER → Peroxisomen → Golgi → Zellmembran'
           ],
           correctIndex: 1,
           explanation: 'Der sekretorische Weg verläuft: Synthese am rER → Transport zum Golgi (Eintritt an der cis-Seite, Austritt an der trans-Seite) → Sortierung in Vesikel → Transport zur Zellmembran oder zu Lysosomen.'
@@ -348,7 +362,8 @@ Lysosomen sind Einzelmembran-Organellen mit saurem Milieu (pH 4,5–5,0), das du
             'Ubiquitin',
             'Mannose-6-Phosphat (M6P)',
             'Signalsequenz (Signalpeptid)',
-            'KDEL-Sequenz'
+            'KDEL-Sequenz',
+            'Phosphatidylserin-Markierung'
           ],
           correctIndex: 1,
           explanation: 'Mannose-6-Phosphat (M6P) ist der spezifische Tag für lysosomale Enzyme. Er wird im Golgi angeheftet und von M6P-Rezeptoren erkannt, die den Transport in Richtung Lysosomen vermitteln. KDEL ist ein ER-Retentionssignal.'
@@ -381,7 +396,8 @@ Cholesterol ist ein essentieller Bestandteil tierischer Zellmembranen und macht 
             'Es bildet Ionenkanäle in der Membran',
             'Es reguliert die Membranfluidität als Fluiditätspuffer',
             'Es ist Teil der Glykokalix auf der Außenseite',
-            'Es dient als Rezeptor für Signalmoleküle'
+            'Es dient als Rezeptor für Signalmoleküle',
+            'Es katalysiert den Flip-Flop von Phospholipiden'
           ],
           correctIndex: 1,
           explanation: 'Cholesterol wirkt als Fluiditätspuffer: Bei hohen Temperaturen verringert es die Fluidität, bei niedrigen Temperaturen verhindert es die Kristallisation. Es stabilisiert die Membranstruktur, ohne selbst als Kanal oder Rezeptor zu fungieren.'
@@ -392,7 +408,8 @@ Cholesterol ist ein essentieller Bestandteil tierischer Zellmembranen und macht 
             'Periphere Proteine durchspannen die gesamte Lipiddoppelschicht',
             'Integrale Proteine sind nur locker an der Membranoberfläche assoziiert',
             'Integrale Proteine durchspannen die Membran und dienen als Kanäle/Rezeptoren',
-            'Periphere Proteine besitzen hydrophobe Transmembrandomänen'
+            'Periphere Proteine besitzen hydrophobe Transmembrandomänen',
+            'Alle Membranproteine sind kovalent an Phospholipide gebunden'
           ],
           correctIndex: 2,
           explanation: 'Integrale (transmembrane) Proteine durchspannen die gesamte Lipiddoppelschicht mit hydrophoben Transmembrandomänen. Sie fungieren als Kanäle, Transporter und Rezeptoren. Periphere Proteine sind nur an der Oberfläche assoziiert.'
@@ -403,7 +420,8 @@ Cholesterol ist ein essentieller Bestandteil tierischer Zellmembranen und macht 
             'Die Lipiddoppelschicht der Membran',
             'Eine Kohlenhydratschicht auf der Außenseite der Membran',
             'Ein Netzwerk aus Cholesterol im Membraninneren',
-            'Die Verankerungsstruktur für periphere Proteine'
+            'Die Verankerungsstruktur für periphere Proteine',
+            'Ein Netzwerk aus Aktinfilamenten unter der Membran'
           ],
           correctIndex: 1,
           explanation: 'Die Glykokalix besteht aus Kohlenhydratketten von Glykoproteinen und Glykolipiden auf der Membranaußenseite. Sie dient der Zell-Zell-Erkennung, dem Schutz und der Immunerkennung (z. B. Blutgruppenantigene).'
@@ -436,7 +454,8 @@ Aktiver Transport erfolgt gegen den Konzentrationsgradienten und erfordert Energ
             'Die Zelle schrumpft (Krenation)',
             'Die Zelle nimmt Wasser auf und kann lysieren',
             'Es findet kein Netto-Wassertransport statt',
-            'Die Zelle plasmolysiert'
+            'Die Zelle plasmolysiert',
+            'Die Zelle beginnt aktiv Ionen nach außen zu transportieren'
           ],
           correctIndex: 1,
           explanation: 'In einer hypotonischen Lösung ist die Konzentration gelöster Stoffe außen niedriger als innen. Wasser strömt per Osmose in die Zelle, sie schwillt an und kann platzen (Lyse). Pflanzenzellen sind durch ihre Zellwand geschützt.'
@@ -447,7 +466,8 @@ Aktiver Transport erfolgt gegen den Konzentrationsgradienten und erfordert Energ
             'Die Na⁺/K⁺-ATPase',
             'Der Na⁺/Glucose-Symporter (SGLT1)',
             'Die einfache Diffusion von O₂',
-            'Die erleichterte Diffusion über GLUT-Transporter'
+            'Die erleichterte Diffusion über GLUT-Transporter',
+            'Die Ca²⁺-ATPase im sarkoplasmatischen Retikulum'
           ],
           correctIndex: 1,
           explanation: 'Der Na⁺/Glucose-Symporter (SGLT1) nutzt den durch die Na⁺/K⁺-ATPase aufgebauten Na⁺-Gradienten, um Glucose gegen ihren Konzentrationsgradienten in die Zelle zu transportieren. Die Na⁺/K⁺-ATPase selbst ist primär aktiver Transport.'
@@ -458,7 +478,8 @@ Aktiver Transport erfolgt gegen den Konzentrationsgradienten und erfordert Energ
             'Glucose und Aminosäuren',
             'Na⁺- und K⁺-Ionen',
             'Kleine, unpolare Moleküle wie O₂ und CO₂',
-            'Proteine und Polysaccharide'
+            'Proteine und Polysaccharide',
+            'Wasser durch Aquaporine'
           ],
           correctIndex: 2,
           explanation: 'Nur kleine, unpolare Moleküle (O₂, CO₂, N₂, Steroidhormone) können direkt durch die hydrophobe Lipiddoppelschicht diffundieren. Ionen, polare Moleküle und Makromoleküle benötigen Transporter oder vesikulären Transport.'
@@ -491,7 +512,8 @@ Der Zellzyklus wird an mehreren Kontrollpunkten (Checkpoints) streng reguliert. 
             'Die DNA wird repliziert',
             'Die Zelle befindet sich in einem Ruhezustand und teilt sich nicht',
             'Die Mitose findet statt',
-            'Die Chromosomen kondensieren'
+            'Die Chromosomen kondensieren',
+            'Die Zentrosomen werden dupliziert'
           ],
           correctIndex: 1,
           explanation: 'In der G0-Phase befinden sich Zellen in einem Ruhezustand außerhalb des aktiven Zellzyklus. Dies betrifft ausdifferenzierte Zellen wie Nervenzellen und Muskelzellen. Manche Zellen können bei Bedarf wieder in den Zyklus eintreten (z. B. Hepatozyten).'
@@ -502,7 +524,8 @@ Der Zellzyklus wird an mehreren Kontrollpunkten (Checkpoints) streng reguliert. 
             'Ob alle Chromosomen am Spindelapparat angeheftet sind',
             'Ob die DNA-Replikation vollständig abgeschlossen ist',
             'Ob die Zelle groß genug ist und die DNA intakt ist',
-            'Ob die Cytokinese korrekt stattgefunden hat'
+            'Ob die Cytokinese korrekt stattgefunden hat',
+            'Ob die Mitochondrien vollständig repliziert wurden'
           ],
           correctIndex: 2,
           explanation: 'Am G1/S-Checkpoint (Restriktionspunkt) wird geprüft, ob die Zelle groß genug ist, ausreichend Nährstoffe vorhanden sind und die DNA intakt ist. Erst dann wird die DNA-Replikation in der S-Phase eingeleitet.'
@@ -513,7 +536,8 @@ Der Zellzyklus wird an mehreren Kontrollpunkten (Checkpoints) streng reguliert. 
             '1n/1C',
             '2n/2C',
             '2n/4C',
-            '4n/4C'
+            '4n/4C',
+            '2n/8C'
           ],
           correctIndex: 2,
           explanation: 'Nach der S-Phase hat die Zelle ihre DNA repliziert: Der Chromosomensatz ist weiterhin diploid (2n), aber jedes Chromosom besteht aus zwei Schwesterchromatiden, sodass der DNA-Gehalt 4C beträgt (2n/4C).'
@@ -546,7 +570,8 @@ In der Telophase erreichen die Chromosomen die Zellpole, dekondensieren wieder z
             'Prophase',
             'Metaphase',
             'Anaphase',
-            'Telophase'
+            'Telophase',
+            'Prometaphase'
           ],
           correctIndex: 1,
           explanation: 'In der Metaphase reihen sich alle Chromosomen an der Metaphaseplatte (Äquatorialebene) auf. Jedes Chromosom ist bipolar mit dem Spindelapparat verbunden. Der Spindel-Checkpoint überprüft die korrekte Anheftung.'
@@ -557,7 +582,8 @@ In der Telophase erreichen die Chromosomen die Zellpole, dekondensieren wieder z
             'Vier haploide Tochterzellen',
             'Zwei genetisch identische diploide Tochterzellen',
             'Zwei genetisch verschiedene diploide Tochterzellen',
-            'Vier genetisch verschiedene haploide Tochterzellen'
+            'Vier genetisch verschiedene haploide Tochterzellen',
+            'Eine diploide und eine haploide Tochterzelle'
           ],
           correctIndex: 1,
           explanation: 'Die Mitose erzeugt zwei genetisch identische Tochterzellen mit demselben diploiden Chromosomensatz (2n) wie die Mutterzelle. Genetische Vielfalt entsteht erst durch Meiose und sexuelle Fortpflanzung.'
@@ -568,7 +594,8 @@ In der Telophase erreichen die Chromosomen die Zellpole, dekondensieren wieder z
             'Topoisomerase',
             'Helicase',
             'Separase',
-            'Ligase'
+            'Ligase',
+            'Telomerase'
           ],
           correctIndex: 2,
           explanation: 'Separase wird durch den APC/C (Anaphase-Promoting Complex) aktiviert, wenn der Spindel-Checkpoint passiert ist. Separase spaltet Kohäsin und ermöglicht so die Trennung der Schwesterchromatiden.'
@@ -601,7 +628,8 @@ Die Meiose unterscheidet sich grundlegend von der Mitose in mehreren Aspekten: D
             'Die Schwesterchromatiden',
             'Die homologen Chromosomen',
             'Die Zentromere',
-            'Die Spindelfasern'
+            'Die Spindelfasern',
+            'Die Nukleosomen'
           ],
           correctIndex: 1,
           explanation: 'In der Anaphase I werden die homologen Chromosomen (nicht die Schwesterchromatiden!) getrennt. Dies ist die Reduktionsteilung: Der Chromosomensatz wird von diploid (2n) auf haploid (1n) reduziert. Die Schwesterchromatiden werden erst in der Anaphase II getrennt.'
@@ -612,7 +640,8 @@ Die Meiose unterscheidet sich grundlegend von der Mitose in mehreren Aspekten: D
             '23',
             '46',
             'Ca. 8,4 Millionen (2²³)',
-            'Ca. 70 Billionen (2⁴⁶)'
+            'Ca. 70 Billionen (2⁴⁶)',
+            'Ca. 1.000 (2¹⁰)'
           ],
           correctIndex: 2,
           explanation: 'Mit 23 Chromosomenpaaren gibt es 2²³ ≈ 8,4 Millionen mögliche Kombinationen durch unabhängige Assortierung in der Metaphase I. Zusammen mit Crossing-over ist die tatsächliche genetische Vielfalt praktisch unbegrenzt.'
@@ -623,7 +652,8 @@ Die Meiose unterscheidet sich grundlegend von der Mitose in mehreren Aspekten: D
             'Der normale Austausch von DNA beim Crossing-over',
             'Das Ausbleiben der Chromosomentrennung in der Meiose',
             'Die Verdopplung der DNA in der S-Phase',
-            'Die Kondensation der Chromosomen in der Prophase'
+            'Die Kondensation der Chromosomen in der Prophase',
+            'Die Verschmelzung zweier haploider Zellen zur Zygote'
           ],
           correctIndex: 1,
           explanation: 'Non-Disjunction bezeichnet das fehlerhafte Ausbleiben der Chromosomentrennung in Meiose I (homologe Chromosomen) oder Meiose II (Schwesterchromatiden). Es führt zu Aneuploidie – z. B. Trisomie 21 (Down-Syndrom).'
@@ -656,7 +686,8 @@ Apoptose – der programmierte Zelltod – ist ein kontrollierter, energieabhän
             'Hämatopoetische Stammzellen im Knochenmark',
             'Die Zygote und Blastomeren bis zum 8-Zell-Stadium',
             'Embryonale Stammzellen der inneren Zellmasse',
-            'Mesenchymale Stammzellen im Bindegewebe'
+            'Mesenchymale Stammzellen im Bindegewebe',
+            'Neuronale Stammzellen im Hippocampus'
           ],
           correctIndex: 1,
           explanation: 'Nur die Zygote und die Blastomeren bis zum 8-Zell-Stadium sind totipotent – sie können alle Zelltypen einschließlich extraembryonaler Gewebe (Plazenta) bilden. Embryonale Stammzellen der inneren Zellmasse sind pluripotent.'
@@ -667,7 +698,8 @@ Apoptose – der programmierte Zelltod – ist ein kontrollierter, energieabhän
             'Zellschwellung und Membranruptur',
             'Freisetzung von Zellinhalt und Entzündungsreaktion',
             'Kontrollierter Abbau ohne Entzündung, Bildung apoptotischer Körperchen',
-            'Zufälliger Zelltod durch externe Schädigung'
+            'Zufälliger Zelltod durch externe Schädigung',
+            'Zellteilung durch asymmetrische Mitose ohne Spindelapparat'
           ],
           correctIndex: 2,
           explanation: 'Apoptose ist ein kontrollierter, energieabhängiger Prozess: Die Zelle schrumpft, das Chromatin kondensiert, die Zelle zerfällt in apoptotische Körperchen, die phagozytiert werden – ohne Entzündungsreaktion. Nekrose ist unkontrolliert mit Zellschwellung und Entzündung.'
@@ -678,7 +710,8 @@ Apoptose – der programmierte Zelltod – ist ein kontrollierter, energieabhän
             'p53, Rb, APC, BRCA1',
             'Oct4, Sox2, Klf4, c-Myc (Yamanaka-Faktoren)',
             'Cyclin D, CDK4, E2F, Rb',
-            'Fas, TNF, Caspase-8, Caspase-3'
+            'Fas, TNF, Caspase-8, Caspase-3',
+            'Wnt, Hedgehog, Notch, BMP'
           ],
           correctIndex: 1,
           explanation: 'Shinya Yamanaka (Nobelpreis 2012) entdeckte, dass die vier Transkriptionsfaktoren Oct4, Sox2, Klf4 und c-Myc differenzierte Zellen zu induzierten pluripotenten Stammzellen (iPSCs) reprogrammieren können.'

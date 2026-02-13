@@ -31,7 +31,8 @@ export const chemKap11: Kapitel = {
             'α-1,4-glykosidisch',
             'β-1,4-glykosidisch',
             'α-1,6-glykosidisch',
-            'β-1,6-glykosidisch'
+            'β-1,6-glykosidisch',
+            'α-1,2-glykosidisch'
           ],
           correctIndex: 1,
           explanation: 'Cellulose enthält β-1,4-glykosidische Bindungen zwischen den Glucose-Einheiten. Stärke und Glykogen enthalten dagegen α-1,4-glykosidische Bindungen. Dieser Unterschied erklärt, warum der Mensch Stärke, aber nicht Cellulose verdauen kann.'
@@ -42,7 +43,8 @@ export const chemKap11: Kapitel = {
             'Maltose',
             'Lactose',
             'Saccharose',
-            'Cellobiose'
+            'Cellobiose',
+            'Glucose'
           ],
           correctIndex: 2,
           explanation: 'Saccharose (Glucose + Fructose) ist nicht reduzierend, da beide anomeren C-Atome an der α,β-1,2-glykosidischen Bindung beteiligt sind und somit kein freies anomeres C-Atom für die Ringöffnung verfügbar ist.'
@@ -53,7 +55,8 @@ export const chemKap11: Kapitel = {
             'Glykogen enthält Fructose statt Glucose.',
             'Glykogen ist stärker verzweigt und bietet mehr Angriffspunkte für Enzyme.',
             'Glykogen hat β-glykosidische Bindungen.',
-            'Glykogen ist wasserlöslicher als Stärke.'
+            'Glykogen ist wasserlöslicher als Stärke.',
+            'Glykogen wird ausschließlich in der Niere gespeichert.'
           ],
           correctIndex: 1,
           explanation: 'Glykogen ist stärker verzweigt als Amylopektin (α-1,6-Verzweigung alle 8–12 statt alle 25 Einheiten). Die vielen nicht-reduzierenden Enden ermöglichen den gleichzeitigen Abbau durch viele Glykogen-Phosphorylase-Enzyme → schnellere Glucosefreisetzung.'
@@ -84,7 +87,8 @@ export const chemKap11: Kapitel = {
             'Glycerin + 3 Aminosäuren',
             'Glycerin + 3 Fettsäuren',
             'Glycerin + 2 Fettsäuren + 1 Phosphatgruppe',
-            'Sphingosin + 1 Fettsäure + 1 Zuckerrest'
+            'Sphingosin + 1 Fettsäure + 1 Zuckerrest',
+            'Glycerin + 2 Fettsäuren + 1 Aminosäure'
           ],
           correctIndex: 1,
           explanation: 'Triglyceride (Triacylglycerine) sind Ester aus einem Molekül Glycerin und drei Fettsäuren. Option C beschreibt ein Phospholipid, Option D ein Glykolipid.'
@@ -95,7 +99,8 @@ export const chemKap11: Kapitel = {
             'Sie sind vollständig hydrophob.',
             'Sie sind vollständig hydrophil.',
             'Sie sind amphiphil (hydrophiler Kopf und hydrophobe Schwänze).',
-            'Sie haben einen besonders hohen Schmelzpunkt.'
+            'Sie haben einen besonders hohen Schmelzpunkt.',
+            'Sie enthalten ausschließlich gesättigte Fettsäuren.'
           ],
           correctIndex: 2,
           explanation: 'Phospholipide sind amphiphil: Der polare Kopf (Phosphatgruppe + Kopfgruppe) ist hydrophil, die beiden Fettsäureketten sind hydrophob. In Wasser bilden sie spontan Doppelschichten, in denen die hydrophoben Schwänze nach innen und die hydrophilen Köpfe nach außen zeigen.'
@@ -106,7 +111,8 @@ export const chemKap11: Kapitel = {
             'Testosteron',
             'Cortisol',
             'Cholesterin',
-            'Progesteron'
+            'Progesteron',
+            'Arachidonsäure'
           ],
           correctIndex: 2,
           explanation: 'Cholesterin ist die Ausgangssubstanz für die Synthese aller Steroidhormone (Cortisol, Aldosteron, Testosteron, Östrogen, Progesteron), Gallensäuren und Vitamin D. Testosteron, Cortisol und Progesteron sind selbst Produkte der Cholesterinumwandlung.'
@@ -137,7 +143,8 @@ Die **Proteinstruktur** wird auf vier Ebenen beschrieben: (1) **Primärstruktur*
             'Sie ist frei drehbar und flexibel.',
             'Sie hat partiellen Doppelbindungscharakter und ist planar.',
             'Sie wird durch Disulfidbrücken stabilisiert.',
-            'Sie verbindet die Seitenketten der Aminosäuren.'
+            'Sie verbindet die Seitenketten der Aminosäuren.',
+            'Sie entsteht durch Oxidation zweier Aminogruppen.'
           ],
           correctIndex: 1,
           explanation: 'Die Peptidbindung (–CO–NH–) hat durch Mesomerie einen partiellen Doppelbindungscharakter, der sie planar und nicht frei drehbar macht. Sie verbindet das Rückgrat der Aminosäuren (nicht die Seitenketten) und ist keine Disulfidbrücke.'
@@ -148,7 +155,8 @@ Die **Proteinstruktur** wird auf vier Ebenen beschrieben: (1) **Primärstruktur*
             'Sekundärstruktur',
             'Tertiärstruktur',
             'Quartärstruktur',
-            'Primärstruktur'
+            'Primärstruktur',
+            'Alle Strukturebenen werden gleichmäßig zerstört'
           ],
           correctIndex: 3,
           explanation: 'Die Denaturierung zerstört die räumliche Faltung (Sekundär- bis Quartärstruktur), nicht aber die Primärstruktur (Aminosäuresequenz), da die kovalenten Peptidbindungen erhalten bleiben.'
@@ -159,7 +167,8 @@ Die **Proteinstruktur** wird auf vier Ebenen beschrieben: (1) **Primärstruktur*
             '1 (Monomer)',
             '2 (Dimer)',
             '4 (Tetramer: 2α + 2β)',
-            '6 (Hexamer)'
+            '6 (Hexamer)',
+            '8 (Oktamer: 4α + 4β)'
           ],
           correctIndex: 2,
           explanation: 'Hämoglobin ist ein Tetramer aus 2 α- und 2 β-Untereinheiten (Quartärstruktur). Jede Untereinheit trägt eine Häm-Gruppe mit einem Fe²⁺-Ion, das O₂ binden kann.'
@@ -191,7 +200,8 @@ Die **Michaelis-Menten-Kinetik** beschreibt die Geschwindigkeit enzymkatalysiert
             'Die maximale Reaktionsgeschwindigkeit',
             'Die Substratkonzentration bei halbmaximaler Geschwindigkeit (Vmax/2)',
             'Die Anzahl der aktiven Zentren',
-            'Die Aktivierungsenergie der Reaktion'
+            'Die Aktivierungsenergie der Reaktion',
+            'Die Konzentration des Enzyms im Gleichgewicht'
           ],
           correctIndex: 1,
           explanation: 'Km ist die Substratkonzentration, bei der die Reaktionsgeschwindigkeit genau die Hälfte der Maximalgeschwindigkeit beträgt (v = Vmax/2). Ein kleiner Km bedeutet hohe Substrataffinität.'
@@ -202,7 +212,8 @@ Die **Michaelis-Menten-Kinetik** beschreibt die Geschwindigkeit enzymkatalysiert
             'sinkt Km und Vmax bleibt gleich.',
             'steigt Km und Vmax sinkt.',
             'steigt Km und Vmax bleibt gleich.',
-            'bleiben Km und Vmax gleich.'
+            'bleiben Km und Vmax gleich.',
+            'sinkt Km und Vmax sinkt ebenfalls.'
           ],
           correctIndex: 2,
           explanation: 'Der kompetitive Inhibitor konkurriert mit dem Substrat um das aktive Zentrum. Dadurch scheint die Affinität zu sinken (Km steigt), aber bei ausreichend hoher [S] kann der Inhibitor verdrängt werden → Vmax bleibt gleich.'
@@ -213,7 +224,8 @@ Die **Michaelis-Menten-Kinetik** beschreibt die Geschwindigkeit enzymkatalysiert
             'Beim Induced-Fit gibt es kein aktives Zentrum.',
             'Beim Schlüssel-Schloss-Modell ändert das Enzym seine Form.',
             'Beim Induced-Fit passt sich das aktive Zentrum flexibel an das Substrat an.',
-            'Das Induced-Fit-Modell beschreibt nur allosterische Enzyme.'
+            'Das Induced-Fit-Modell beschreibt nur allosterische Enzyme.',
+            'Im Schlüssel-Schloss-Modell verändert das Substrat seine Struktur.'
           ],
           correctIndex: 2,
           explanation: 'Im Induced-Fit-Modell (Koshland) ist das aktive Zentrum nicht starr, sondern passt sich bei der Substratbindung flexibel an. Im Schlüssel-Schloss-Modell (Fischer) wird eine starre Komplementarität angenommen, was die Realität weniger gut beschreibt.'

@@ -31,7 +31,8 @@ Beim Lösen von Gleichungen mit Klammern muss zunächst ausmultipliziert werden,
             '4x² - 9',
             '4x² + 9',
             '4x² - 12x + 9',
-            '4x² - 6x + 9'
+            '4x² - 6x + 9',
+            '2x² - 12x + 9'
           ],
           correctIndex: 2,
           explanation: 'Zweite binomische Formel: (2x - 3)² = (2x)² - 2·(2x)·3 + 3² = 4x² - 12x + 9.'
@@ -42,7 +43,8 @@ Beim Lösen von Gleichungen mit Klammern muss zunächst ausmultipliziert werden,
             'x = 2',
             'x = 2 und x = -6',
             'x = -2 und x = 6',
-            'x = 6'
+            'x = 6',
+            'x = -2 und x = 2'
           ],
           correctIndex: 1,
           explanation: 'Fall 1: 3x + 6 = 12 → 3x = 6 → x = 2. Fall 2: 3x + 6 = -12 → 3x = -18 → x = -6. Beide Lösungen sind gültig.'
@@ -53,7 +55,8 @@ Beim Lösen von Gleichungen mit Klammern muss zunächst ausmultipliziert werden,
             'x = 3',
             'x = -3',
             'x = 1',
-            'x = 0'
+            'x = 0',
+            'x = -1'
           ],
           correctIndex: 0,
           explanation: 'Kreuzweise multiplizieren: 4(x-1) = 2(x+1) → 4x - 4 = 2x + 2 → 2x = 6 → x = 3. Probe: 4/4 = 1 und 2/2 = 1 ✓.'
@@ -84,7 +87,8 @@ In der Praxis sind alternative Lösungsstrategien oft effizienter als die Formel
             'D = -4',
             'D = 0',
             'D = 4',
-            'D = 36'
+            'D = 36',
+            'D = 1'
           ],
           correctIndex: 0,
           explanation: 'D = (p/2)² - q = (4/2)² - 5 = 4 - 5 = -4. Da D < 0, hat die Gleichung keine reelle Lösung.'
@@ -95,7 +99,8 @@ In der Praxis sind alternative Lösungsstrategien oft effizienter als die Formel
             'x₁ = 3, x₂ = -5',
             'x₁ = 5, x₂ = -3',
             'x₁ = 5, x₂ = 3',
-            'x₁ = -5, x₂ = -3'
+            'x₁ = -5, x₂ = -3',
+            'x₁ = 15, x₂ = -1'
           ],
           correctIndex: 1,
           explanation: 'pq-Formel: x = 1 ± √(1 + 15) = 1 ± 4. Also x₁ = 5 und x₂ = -3. Vieta: 5 + (-3) = 2 = -(-2) ✓ und 5 · (-3) = -15 ✓.'
@@ -106,7 +111,8 @@ In der Praxis sind alternative Lösungsstrategien oft effizienter als die Formel
             'x² - 5x - 14 = 0',
             'x² + 5x - 14 = 0',
             'x² - 5x + 14 = 0',
-            'x² - 9x + 14 = 0'
+            'x² - 9x + 14 = 0',
+            'x² + 5x + 14 = 0'
           ],
           correctIndex: 0,
           explanation: 'Nach Vieta: p = -(x₁ + x₂) = -(7 + (-2)) = -5 und q = x₁ · x₂ = 7 · (-2) = -14. Also: x² - 5x - 14 = 0.'
@@ -137,7 +143,8 @@ Das Gleichsetzungsverfahren ist eine Variante, bei der beide Gleichungen nach de
             'x = 5, y = 5',
             'x = 4, y = 6',
             'x = 3, y = 7',
-            'x = 6, y = 4'
+            'x = 6, y = 4',
+            'x = 5, y = 0'
           ],
           correctIndex: 0,
           explanation: 'Aus Gl. 1: y = 10 - x. In Gl. 2: 2x - (10 - x) = 5 → 3x - 10 = 5 → 3x = 15 → x = 5, y = 5.'
@@ -148,7 +155,8 @@ Das Gleichsetzungsverfahren ist eine Variante, bei der beide Gleichungen nach de
             'Genau eine Lösung',
             'Keine Lösung (widersprüchlich)',
             'Unendlich viele Lösungen',
-            'Genau zwei Lösungen'
+            'Genau zwei Lösungen',
+            'Das System ist nicht lösbar, da die Koeffizienten gleich sind'
           ],
           correctIndex: 2,
           explanation: 'Die erste Gleichung ist das Doppelte der zweiten (2·(x + 2y) = 2·3 = 6). Die Geraden sind identisch, es gibt unendlich viele Lösungen.'
@@ -159,7 +167,8 @@ Das Gleichsetzungsverfahren ist eine Variante, bei der beide Gleichungen nach de
             'A: 100 ml, B: 100 ml',
             'A: 140 ml, B: 60 ml',
             'A: 120 ml, B: 80 ml',
-            'A: 80 ml, B: 120 ml'
+            'A: 80 ml, B: 120 ml',
+            'A: 160 ml, B: 40 ml'
           ],
           correctIndex: 2,
           explanation: 'System: x + y = 200 und 0,10x + 0,30y = 0,18 · 200 = 36. Aus Gl. 1: x = 200 - y. Einsetzen: 20 - 0,10y + 0,30y = 36 → 0,20y = 16 → y = 80, x = 120.'
@@ -190,7 +199,8 @@ Betragsungleichungen erfordern eine systematische Fallunterscheidung. Die wichti
             'x ≥ 3',
             'x ≤ 3',
             'x ≤ -3',
-            'x ≥ -3'
+            'x ≥ -3',
+            'x > 0'
           ],
           correctIndex: 1,
           explanation: '-3x + 9 ≥ 0 → -3x ≥ -9 → x ≤ 3 (Zeichen dreht sich wegen Division durch -3).'
@@ -201,7 +211,8 @@ Betragsungleichungen erfordern eine systematische Fallunterscheidung. Die wichti
             'x ≤ -3 oder x ≥ 3',
             '-3 ≤ x ≤ 3',
             'x ≤ 3',
-            '-9 ≤ x ≤ 9'
+            '-9 ≤ x ≤ 9',
+            'x ≥ 0'
           ],
           correctIndex: 1,
           explanation: 'x² - 9 = (x-3)(x+3) ≤ 0. Nullstellen: x = ±3. Parabel nach oben geöffnet → zwischen den Nullstellen negativ: -3 ≤ x ≤ 3.'
@@ -212,7 +223,8 @@ Betragsungleichungen erfordern eine systematische Fallunterscheidung. Die wichti
             '2 < x < 6',
             'x > 6',
             'x < 2 oder x > 6',
-            'x < -2 oder x > 6'
+            'x < -2 oder x > 6',
+            '4 < x < 6'
           ],
           correctIndex: 2,
           explanation: '|x - 4| > 2 bedeutet: x - 4 > 2 oder x - 4 < -2, also x > 6 oder x < 2.'

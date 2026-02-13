@@ -31,7 +31,8 @@ Das molare Volumen Vm gibt das Volumen an, das ein Mol eines idealen Gases unter
             '6,022 × 10²³',
             '1,204 × 10²⁴',
             '3,011 × 10²³',
-            '1,806 × 10²⁴'
+            '1,806 × 10²⁴',
+            '9,033 × 10²³'
           ],
           correctIndex: 1,
           explanation: 'n = m/M = 36,04 g / 18,02 g/mol = 2 mol. Teilchenzahl N = n × Nₐ = 2 × 6,022 × 10²³ = 1,204 × 10²⁴ Moleküle.'
@@ -42,7 +43,8 @@ Das molare Volumen Vm gibt das Volumen an, das ein Mol eines idealen Gases unter
             '152 g/mol',
             '180 g/mol',
             '160 g/mol',
-            '196 g/mol'
+            '196 g/mol',
+            '144 g/mol'
           ],
           correctIndex: 1,
           explanation: 'M(C₆H₁₂O₆) = 6 × 12 + 12 × 1 + 6 × 16 = 72 + 12 + 96 = 180 g/mol.'
@@ -53,7 +55,8 @@ Das molare Volumen Vm gibt das Volumen an, das ein Mol eines idealen Gases unter
             '11,2 L',
             '22,4 L',
             '44,8 L',
-            '67,2 L'
+            '67,2 L',
+            '33,6 L'
           ],
           correctIndex: 2,
           explanation: 'V = n × Vm = 2 mol × 22,4 L/mol = 44,8 L. Das molare Volumen bei STP beträgt 22,4 L/mol.'
@@ -84,7 +87,8 @@ Aus den stöchiometrischen Koeffizienten lassen sich die Stoffmengenverhältniss
             'C₂H₅OH + O₂ → CO₂ + H₂O',
             'C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O',
             'C₂H₅OH + 2 O₂ → 2 CO₂ + 2 H₂O',
-            '2 C₂H₅OH + 3 O₂ → 4 CO₂ + 6 H₂O'
+            '2 C₂H₅OH + 3 O₂ → 4 CO₂ + 6 H₂O',
+            'C₂H₅OH + 2 O₂ → 2 CO + 3 H₂O'
           ],
           correctIndex: 1,
           explanation: 'C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O. Kontrolle: C: 2=2, H: 6=6, O: 1+6=4+3=7. Die Gleichung ist ausgeglichen.'
@@ -95,7 +99,8 @@ Aus den stöchiometrischen Koeffizienten lassen sich die Stoffmengenverhältniss
             'Die Koeffizienten vor den Summenformeln',
             'Die Summenformeln der beteiligten Stoffe',
             'Die Seite, auf der die Produkte stehen',
-            'Die Aggregatzustandsangaben'
+            'Die Aggregatzustandsangaben',
+            'Die Reihenfolge der Edukte'
           ],
           correctIndex: 1,
           explanation: 'Die Summenformeln geben die Identität der Stoffe an und dürfen nie verändert werden. Nur die Koeffizienten vor den Formeln werden angepasst, um die Atombilanzen auszugleichen.'
@@ -106,7 +111,8 @@ Aus den stöchiometrischen Koeffizienten lassen sich die Stoffmengenverhältniss
             '4 Mol',
             '2 Mol',
             '3 Mol',
-            '1 Mol'
+            '1 Mol',
+            '5 Mol'
           ],
           correctIndex: 1,
           explanation: 'O₂ ist der limitierende Reaktand: 1 Mol O₂ reagiert mit 2 Mol H₂ zu 2 Mol H₂O. Die übrigen 2 Mol H₂ bleiben unreagiert. Die maximale Produktmenge wird durch den limitierenden Reaktanden bestimmt.'
@@ -137,7 +143,8 @@ Die Umrechnung zwischen den verschiedenen Konzentrationsangaben erfordert die Ke
             '29,22 g',
             '14,61 g',
             '58,44 g',
-            '7,31 g'
+            '7,31 g',
+            '23,38 g'
           ],
           correctIndex: 1,
           explanation: 'm = c × V × M = 0,5 mol/L × 0,5 L × 58,44 g/mol = 14,61 g NaCl.'
@@ -148,7 +155,8 @@ Die Umrechnung zwischen den verschiedenen Konzentrationsangaben erfordert die Ke
             'Die Stoffmenge pro Volumen',
             'Die Masse des gelösten Stoffes pro Gesamtmasse der Lösung',
             'Die Anzahl der Teilchen pro Liter',
-            'Die Dichte der Lösung'
+            'Die Dichte der Lösung',
+            'Das Volumen des gelösten Stoffes pro Gesamtvolumen'
           ],
           correctIndex: 1,
           explanation: 'Der Massenanteil w = m(gelöster Stoff) / m(Lösung) gibt an, welcher Massenanteil der Lösung auf den gelösten Stoff entfällt. Bei Angabe in Prozent spricht man von Massenprozent.'
@@ -159,7 +167,8 @@ Die Umrechnung zwischen den verschiedenen Konzentrationsangaben erfordert die Ke
             '0,2 M',
             '0,4 M',
             '1,0 M',
-            '0,8 M'
+            '0,8 M',
+            '0,5 M'
           ],
           correctIndex: 1,
           explanation: 'Verdünnungsgesetz: c₁ × V₁ = c₂ × V₂. Also: 2 M × 100 mL = c₂ × 500 mL → c₂ = 200/500 = 0,4 M.'

@@ -37,6 +37,7 @@ export const bioKap8: Kapitel = {
             'Lysozym',
             'Amylase',
             'Lipase',
+            'Kollagenase',
           ],
           correctIndex: 1,
           explanation:
@@ -49,6 +50,7 @@ export const bioKap8: Kapitel = {
             'Chemotaxis von Immunzellen',
             'Direkte Lyse von Bakterien durch Porenbildung in der Membran',
             'Produktion von Antikörpern',
+            'Hemmung der bakteriellen Proteinbiosynthese',
           ],
           correctIndex: 2,
           explanation:
@@ -61,6 +63,7 @@ export const bioKap8: Kapitel = {
             'T-Helferzellen',
             'Natürliche Killerzellen (NK-Zellen)',
             'Plasmazellen',
+            'Dendritische Zellen',
           ],
           correctIndex: 2,
           explanation:
@@ -100,6 +103,7 @@ export const bioKap8: Kapitel = {
             'Zytotoxische T-Zellen (CD8⁺)',
             'Regulatorische T-Zellen',
             'B-Zellen',
+            'Makrophagen',
           ],
           correctIndex: 1,
           explanation:
@@ -112,6 +116,7 @@ export const bioKap8: Kapitel = {
             'Nur Gedächtnis-B-Zellen',
             'Plasmazellen und Gedächtnis-B-Zellen',
             'Makrophagen und dendritische Zellen',
+            'Regulatorische T-Zellen und Effektorzellen',
           ],
           correctIndex: 2,
           explanation:
@@ -124,6 +129,7 @@ export const bioKap8: Kapitel = {
             'Die Aktivierung und Vermehrung der B-/T-Zelle, die das passende Antigen erkennt',
             'Die Auswahl der stärksten Immunzelle durch Konkurrenz',
             'Die negative Selektion im Knochenmark',
+            'Die zufällige Produktion aller Antikörperklassen gleichzeitig',
           ],
           correctIndex: 1,
           explanation:
@@ -161,6 +167,7 @@ export const bioKap8: Kapitel = {
             'IgA',
             'IgM',
             'IgE',
+            'IgD',
           ],
           correctIndex: 2,
           explanation:
@@ -173,6 +180,7 @@ export const bioKap8: Kapitel = {
             'IgG',
             'IgM',
             'IgE',
+            'IgD',
           ],
           correctIndex: 3,
           explanation:
@@ -185,6 +193,7 @@ export const bioKap8: Kapitel = {
             'Aktive Immunisierung löst eigene Immunantwort aus, passive verabreicht fertige Antikörper',
             'Beide sind identisch in ihrer Wirkung',
             'Passive Immunisierung bietet dauerhaften Schutz, aktive nur temporären',
+            'Aktive Immunisierung wirkt nur gegen Viren, passive nur gegen Bakterien',
           ],
           correctIndex: 1,
           explanation:
@@ -223,6 +232,7 @@ export const bioKap8: Kapitel = {
             'Typ II (zytotoxischer Typ)',
             'Typ III (Immunkomplextyp)',
             'Typ IV (Spättyp)',
+            'Typ V (stimulierender Typ)',
           ],
           correctIndex: 3,
           explanation:
@@ -235,6 +245,7 @@ export const bioKap8: Kapitel = {
             'CD8⁺-T-Killerzellen',
             'CD4⁺-T-Helferzellen',
             'Natürliche Killerzellen',
+            'Neutrophile Granulozyten',
           ],
           correctIndex: 2,
           explanation:
@@ -247,6 +258,7 @@ export const bioKap8: Kapitel = {
             'Diabetes mellitus Typ 1',
             'Rheumatoide Arthritis',
             'Heuschnupfen',
+            'Multiple Sklerose als systemische Autoimmunerkrankung',
           ],
           correctIndex: 1,
           explanation:

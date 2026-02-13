@@ -32,7 +32,8 @@ Die 18 Gruppen des PSE werden in Hauptgruppen und Nebengruppen unterteilt. Die a
             'Die Anzahl der Valenzelektronen',
             'Die Hauptquantenzahl der äußersten besetzten Schale',
             'Die Gesamtzahl der Elektronen',
-            'Die Anzahl der Neutronen'
+            'Die Anzahl der Neutronen',
+            'Die Anzahl der Elektronenschalen minus eins'
           ],
           correctIndex: 1,
           explanation: 'Die Periodennummer entspricht der Hauptquantenzahl n der äußersten besetzten Elektronenschale. Ein Element in der 3. Periode hat seine Valenzelektronen auf der Schale n = 3.'
@@ -43,7 +44,8 @@ Die 18 Gruppen des PSE werden in Hauptgruppen und Nebengruppen unterteilt. Die a
             's-Block-Elemente',
             'p-Block-Elemente',
             'd-Block-Elemente (Übergangsmetalle)',
-            'Edelgase'
+            'Edelgase',
+            'f-Block-Elemente (Lanthanoide)'
           ],
           correctIndex: 2,
           explanation: 'Die Nebengruppen (Gruppen 3–12) umfassen die d-Block-Elemente, auch Übergangsmetalle genannt. Bei ihnen werden die d-Orbitale aufgefüllt.'
@@ -54,7 +56,8 @@ Die 18 Gruppen des PSE werden in Hauptgruppen und Nebengruppen unterteilt. Die a
             '2',
             '8',
             '18',
-            '32'
+            '32',
+            '10'
           ],
           correctIndex: 1,
           explanation: 'Die zweite Periode enthält 8 Elemente (Li bis Ne). Die erste Schale (n = 1) ist bereits voll, und es werden die 2s- und 2p-Orbitale befüllt, was maximal 8 Elektronen ergibt.'
@@ -85,7 +88,8 @@ Die Ionisierungsenergie (IE) ist die Energie, die benötigt wird, um ein Elektro
             'Chlor',
             'Sauerstoff',
             'Fluor',
-            'Stickstoff'
+            'Stickstoff',
+            'Brom'
           ],
           correctIndex: 2,
           explanation: 'Fluor hat mit 4,0 die höchste Elektronegativität aller Elemente nach der Pauling-Skala. Es steht oben rechts im PSE (Periode 2, Gruppe 17) und vereint hohe Kernladungszahl bei kleinem Atomradius.'
@@ -96,7 +100,8 @@ Die Ionisierungsenergie (IE) ist die Energie, die benötigt wird, um ein Elektro
             'Sie steigt an',
             'Sie bleibt gleich',
             'Sie nimmt ab',
-            'Sie verdoppelt sich pro Periode'
+            'Sie verdoppelt sich pro Periode',
+            'Sie hängt nur von der Elektronegativität ab'
           ],
           correctIndex: 2,
           explanation: 'Die Ionisierungsenergie nimmt innerhalb einer Gruppe von oben nach unten ab, da die Valenzelektronen weiter vom Kern entfernt und durch innere Schalen besser abgeschirmt sind.'
@@ -107,7 +112,8 @@ Die Ionisierungsenergie (IE) ist die Energie, die benötigt wird, um ein Elektro
             'Weil es weniger Protonen hat',
             'Weil es ein Elektron verloren hat und die verbleibenden Elektronen stärker vom Kern angezogen werden',
             'Weil es ein zusätzliches Neutron aufgenommen hat',
-            'Weil die Kernladungszahl abnimmt'
+            'Weil die Kernladungszahl abnimmt',
+            'Weil die Elektronenschalen beim Ionisieren zusammenfallen'
           ],
           correctIndex: 1,
           explanation: 'Na⁺ hat ein Elektron weniger als Na. Die gleiche Kernladung wirkt nun auf weniger Elektronen, wodurch die Elektronenhülle stärker zusammengezogen wird und der Ionenradius kleiner ist.'
@@ -138,7 +144,8 @@ Die Halogene (Gruppe 17: F, Cl, Br, I, At) besitzen sieben Valenzelektronen und 
             '+2',
             '+1',
             '-1',
-            '0'
+            '0',
+            '+3'
           ],
           correctIndex: 1,
           explanation: 'Alkalimetalle haben ein Valenzelektron, das sie leicht abgeben, um die Edelgaskonfiguration zu erreichen. Sie bilden daher stets einfach positiv geladene Ionen (Me⁺, Oxidationsstufe +1).'
@@ -149,7 +156,8 @@ Die Halogene (Gruppe 17: F, Cl, Br, I, At) besitzen sieben Valenzelektronen und 
             'Chlor',
             'Brom',
             'Iod',
-            'Fluor'
+            'Fluor',
+            'Astat'
           ],
           correctIndex: 3,
           explanation: 'Fluor ist das elektronegativste und reaktivste aller Elemente. Es hat die stärkste Tendenz, ein Elektron aufzunehmen, und ist damit das stärkste Oxidationsmittel unter den Halogenen.'
@@ -160,7 +168,8 @@ Die Halogene (Gruppe 17: F, Cl, Br, I, At) besitzen sieben Valenzelektronen und 
             'Magnesium',
             'Barium',
             'Calcium',
-            'Strontium'
+            'Strontium',
+            'Beryllium'
           ],
           correctIndex: 2,
           explanation: 'Calcium ist als Hydroxylapatit Ca₅(PO₄)₃OH der Hauptbestandteil von Knochen und Zähnen. Etwa 99 % des körpereigenen Calciums sind dort gespeichert.'

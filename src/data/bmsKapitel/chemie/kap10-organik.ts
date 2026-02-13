@@ -31,7 +31,8 @@ Die **IUPAC-Nomenklatur** folgt systematischen Regeln: (1) Die längste durchgeh
             'CₙH₂ₙ₊₂',
             'CₙH₂ₙ',
             'CₙH₂ₙ₋₂',
-            'CₙHₙ'
+            'CₙHₙ',
+            'CₙH₂ₙ₊₁'
           ],
           correctIndex: 1,
           explanation: 'Alkene haben die allgemeine Formel CₙH₂ₙ. CₙH₂ₙ₊₂ gilt für Alkane, CₙH₂ₙ₋₂ für Alkine. Jede Doppelbindung reduziert die Anzahl der H-Atome um 2.'
@@ -42,7 +43,8 @@ Die **IUPAC-Nomenklatur** folgt systematischen Regeln: (1) Die längste durchgeh
             'Alkene haben mehr C–H-Bindungen.',
             'Die π-Elektronen der Doppelbindung sind leicht angreifbar.',
             'Alkene sind stärker polar.',
-            'Alkene haben eine höhere molare Masse.'
+            'Alkene haben eine höhere molare Masse.',
+            'Alkene besitzen mehr freie Elektronenpaare am Kohlenstoff.'
           ],
           correctIndex: 1,
           explanation: 'Die π-Bindung in der Doppelbindung hat eine geringere Bindungsenergie als eine σ-Bindung und die Elektronendichte liegt oberhalb und unterhalb der Bindungsebene, was sie für elektrophile Angriffe zugänglich macht.'
@@ -53,7 +55,8 @@ Die **IUPAC-Nomenklatur** folgt systematischen Regeln: (1) Die längste durchgeh
             'Propan',
             '2-Methylpropan',
             'Butan',
-            'Methylpropan'
+            'Methylpropan',
+            'Dimethylethan'
           ],
           correctIndex: 1,
           explanation: 'Die längste Kette hat 3 C-Atome (Propan). An C2 sitzt eine Methylgruppe. Der korrekte IUPAC-Name ist 2-Methylpropan (auch bekannt als Isobutan).'
@@ -84,7 +87,8 @@ Die **optische Isomerie** (Chiralität) tritt auf, wenn ein Kohlenstoffatom vier
             'Konstitutionsisomerie',
             'Enantiomerie',
             'cis/trans-Isomerie (geometrische Isomerie)',
-            'Tautomerie'
+            'Tautomerie',
+            'Diastereomerie durch chirale Zentren'
           ],
           correctIndex: 2,
           explanation: 'Cis- und trans-But-2-en haben die gleiche Konstitution, unterscheiden sich aber in der räumlichen Anordnung an der C=C-Doppelbindung. Es handelt sich um cis/trans-Isomerie (eine Form der Stereoisomerie).'
@@ -95,7 +99,8 @@ Die **optische Isomerie** (Chiralität) tritt auf, wenn ein Kohlenstoffatom vier
             'Wenn es an einer Doppelbindung beteiligt ist.',
             'Wenn es vier gleiche Substituenten trägt.',
             'Wenn es vier verschiedene Substituenten trägt.',
-            'Wenn es an einem Ring beteiligt ist.'
+            'Wenn es an einem Ring beteiligt ist.',
+            'Wenn es sp²-hybridisiert ist.'
           ],
           correctIndex: 2,
           explanation: 'Ein chirales Zentrum liegt vor, wenn ein C-Atom vier verschiedene Substituenten trägt. Nur dann existieren zwei nicht-deckungsgleiche Spiegelbilder (Enantiomere).'
@@ -106,7 +111,8 @@ Die **optische Isomerie** (Chiralität) tritt auf, wenn ein Kohlenstoffatom vier
             'Enantiomere',
             'cis/trans-Isomere',
             'Konstitutionsisomere',
-            'Identische Verbindungen'
+            'Identische Verbindungen',
+            'Stereoisomere'
           ],
           correctIndex: 2,
           explanation: 'Beide haben die Summenformel C₂H₆O, unterscheiden sich aber in der Verknüpfung der Atome (–OH vs. –O–). Sie sind Konstitutionsisomere (Strukturisomere) mit völlig verschiedenen Eigenschaften.'
@@ -138,7 +144,8 @@ Die **optische Isomerie** (Chiralität) tritt auf, wenn ein Kohlenstoffatom vier
             '–OH (Hydroxylgruppe)',
             '–CHO (Aldehydgruppe, endständige Carbonylgruppe)',
             '–COOH (Carboxylgruppe)',
-            '–NH₂ (Aminogruppe)'
+            '–NH₂ (Aminogruppe)',
+            '–CO–R (Ketogruppe)'
           ],
           correctIndex: 1,
           explanation: 'Aldehyde tragen die Aldehydgruppe (–CHO), eine Carbonylgruppe (C=O) am Ende der Kohlenstoffkette. Im Gegensatz dazu sitzt die Carbonylgruppe bei Ketonen innerhalb der Kette.'
@@ -149,7 +156,8 @@ Die **optische Isomerie** (Chiralität) tritt auf, wenn ein Kohlenstoffatom vier
             'Ein Aldehyd',
             'Eine Carbonsäure',
             'Ein Keton',
-            'Ein Ester'
+            'Ein Ester',
+            'Ein Ether'
           ],
           correctIndex: 2,
           explanation: 'Sekundäre Alkohole (R₂CHOH) werden zu Ketonen (R₂C=O) oxidiert. Nur primäre Alkohole werden über Aldehyde zu Carbonsäuren oxidiert. Tertiäre Alkohole sind unter normalen Bedingungen nicht direkt oxidierbar.'
@@ -160,7 +168,8 @@ Die **optische Isomerie** (Chiralität) tritt auf, wenn ein Kohlenstoffatom vier
             'Alkohol + Alkohol → Ether + H₂O',
             'Carbonsäure + Alkohol → Ester + H₂O',
             'Amin + Carbonsäure → Amid + CO₂',
-            'Aldehyd + H₂ → Alkohol'
+            'Aldehyd + H₂ → Alkohol',
+            'Carbonsäure + Amin → Amid + H₂O'
           ],
           correctIndex: 1,
           explanation: 'Bei der Veresterung (Fischer-Veresterung) reagiert eine Carbonsäure mit einem Alkohol unter Abspaltung von Wasser zu einem Ester: R–COOH + R\'–OH ⇌ R–COO–R\' + H₂O.'
@@ -191,7 +200,8 @@ Die **Kondensation** ist eine Reaktion, bei der zwei Moleküle unter Abspaltung 
             'Bildung eines Carbokations als Zwischenstufe',
             'Konzertierter Mechanismus mit Walden-Umkehr (Inversion)',
             'Bevorzugung an tertiären C-Atomen',
-            'Entstehung eines Racemats'
+            'Entstehung eines Racemats',
+            'Bevorzugung in polaren, protischen Lösungsmitteln'
           ],
           correctIndex: 1,
           explanation: 'Der Sₙ2-Mechanismus verläuft in einem Schritt (konzertiert): Das Nukleophil greift von der Rückseite an, während die Abgangsgruppe gleichzeitig abgeht. Es kommt zur Inversion der Konfiguration (Walden-Umkehr). Primäre Substrate und starke Nukleophile begünstigen Sₙ2.'
@@ -202,7 +212,8 @@ Die **Kondensation** ist eine Reaktion, bei der zwei Moleküle unter Abspaltung 
             'H addiert sich an das C-Atom mit den wenigsten H-Atomen.',
             'H addiert sich an das C-Atom mit den meisten H-Atomen.',
             'Die Regel gilt nur für Substitutionsreaktionen.',
-            'Es entsteht immer das Anti-Markownikow-Produkt.'
+            'Es entsteht immer das Anti-Markownikow-Produkt.',
+            'Das Halogen geht an das C-Atom mit den meisten H-Atomen.'
           ],
           correctIndex: 1,
           explanation: 'Nach Markownikow addiert sich bei der elektrophilen Addition von HX an ein unsymmetrisches Alken das H-Atom an das C-Atom mit den meisten H-Atomen (der Wasserstoff geht dorthin, wo bereits mehr Wasserstoff ist). Dies führt zum stabileren Carbokation.'
@@ -213,7 +224,8 @@ Die **Kondensation** ist eine Reaktion, bei der zwei Moleküle unter Abspaltung 
             'Elektrophile Addition',
             'Nukleophile Substitution',
             'Kondensation',
-            'Eliminierung'
+            'Eliminierung',
+            'Radikalische Substitution'
           ],
           correctIndex: 2,
           explanation: 'Bei der Peptidbindungsbildung reagieren zwei Aminosäuren unter Abspaltung von Wasser (Kondensation): –COOH + H₂N– → –CO–NH– + H₂O. Die Umkehrung (Hydrolyse) spaltet Peptidbindungen.'
@@ -244,7 +256,8 @@ Die **elektrophile aromatische Substitution** (SEAr) ist die typische Reaktion d
             '3',
             '4',
             '6',
-            '8'
+            '8',
+            '12'
           ],
           correctIndex: 2,
           explanation: 'Benzol hat 6 π-Elektronen (3 Doppelbindungen × 2 Elektronen). Dies erfüllt die Hückel-Regel (4n+2 mit n=1: 4·1+2=6) und erklärt die Aromatizität.'
@@ -255,7 +268,8 @@ Die **elektrophile aromatische Substitution** (SEAr) ist die typische Reaktion d
             'Elektrophile Addition',
             'Elektrophile aromatische Substitution',
             'Nukleophile Addition',
-            'Radikalische Eliminierung'
+            'Radikalische Eliminierung',
+            'Nukleophile Substitution am Ring'
           ],
           correctIndex: 1,
           explanation: 'Benzol reagiert bevorzugt über elektrophile aromatische Substitution (SEAr), bei der ein H-Atom durch ein Elektrophil ersetzt wird. Die Aromatizität bleibt dabei erhalten, während sie bei einer Addition verloren ginge.'
@@ -266,7 +280,8 @@ Die **elektrophile aromatische Substitution** (SEAr) ist die typische Reaktion d
             'meta-Position',
             'ortho- und para-Position',
             'Nur ortho-Position',
-            'Nur para-Position'
+            'Nur para-Position',
+            'Alle Positionen gleichmäßig'
           ],
           correctIndex: 1,
           explanation: 'Die –NH₂-Gruppe ist ein +M-Substituent (Elektronendonator), der den Ring aktiviert und in ortho- und para-Position dirigiert, da dort die Elektronendichte besonders erhöht wird.'

@@ -31,7 +31,8 @@ Der Kreis ist definiert als die Menge aller Punkte mit gleichem Abstand r (Radiu
             '42 cm²',
             '84 cm²',
             '19 cm²',
-            '38 cm²'
+            '38 cm²',
+            '168 cm²'
           ],
           correctIndex: 1,
           explanation: 'A = g · h = 12 · 7 = 84 cm².'
@@ -42,7 +43,8 @@ Der Kreis ist definiert als die Menge aller Punkte mit gleichem Abstand r (Radiu
             '4π cm ≈ 12,57 cm',
             '2π cm ≈ 6,28 cm',
             '20π cm ≈ 62,83 cm',
-            '8π cm ≈ 25,13 cm'
+            '8π cm ≈ 25,13 cm',
+            '10π cm ≈ 31,42 cm'
           ],
           correctIndex: 0,
           explanation: 'b = 2πr · α/360° = 2π · 10 · 72/360 = 20π · 1/5 = 4π ≈ 12,57 cm.'
@@ -53,7 +55,8 @@ Der Kreis ist definiert als die Menge aller Punkte mit gleichem Abstand r (Radiu
             '5 cm',
             '5√2 ≈ 7,07 cm',
             '10√2 ≈ 14,14 cm',
-            '10/√2 ≈ 7,07 cm'
+            '10/√2 ≈ 7,07 cm',
+            '10/2 = 5 cm'
           ],
           correctIndex: 1,
           explanation: 'd = a√2, also a = d/√2 = 10/√2 = 10√2/2 = 5√2 ≈ 7,07 cm. (Antworten B und D sind gleich; B ist die vereinfachte Form.)'
@@ -84,7 +87,8 @@ In Textaufgaben werden häufig zusammengesetzte Körper betrachtet, deren Volume
             '300π cm³',
             '100π cm³',
             '60π cm³',
-            '25π cm³'
+            '25π cm³',
+            '150π cm³'
           ],
           correctIndex: 1,
           explanation: 'V = (1/3)πr²h = (1/3)π · 25 · 12 = (1/3) · 300π = 100π ≈ 314,2 cm³.'
@@ -95,7 +99,8 @@ In Textaufgaben werden häufig zusammengesetzte Körper betrachtet, deren Volume
             'h = 5 cm',
             'h = 50 cm',
             'h = 5/π cm',
-            'h = 0,5 cm'
+            'h = 0,5 cm',
+            'h = 15,9 cm'
           ],
           correctIndex: 0,
           explanation: 'V = πr²h → h = V/(πr²) = 500π/(π · 100) = 500/100 = 5 cm.'
@@ -106,7 +111,8 @@ In Textaufgaben werden häufig zusammengesetzte Körper betrachtet, deren Volume
             '3 Liter',
             '30 Liter',
             '300 Liter',
-            '3000 Liter'
+            '3000 Liter',
+            '0,3 Liter'
           ],
           correctIndex: 1,
           explanation: 'V = 20 · 30 · 50 = 30.000 cm³ = 30.000 ml = 30 Liter (da 1000 cm³ = 1 Liter).'
@@ -138,7 +144,8 @@ Der Betrag (die Länge) eines Vektors berechnet sich als: |a⃗| = √(a₁² + 
             '(7, 2, 10)',
             '(7, 2, 14)',
             '(9, 6, 6)',
-            '(7, -2, 14)'
+            '(7, -2, 14)',
+            '(5, 4, 10)'
           ],
           correctIndex: 0,
           explanation: '3·(2, -1, 4) = (6, -3, 12). Addition: (6+1, -3+5, 12+(-2)) = (7, 2, 10).'
@@ -149,7 +156,8 @@ Der Betrag (die Länge) eines Vektors berechnet sich als: |a⃗| = √(a₁² + 
             '√5',
             '3',
             '√9 = 3',
-            '5'
+            '5',
+            '√7'
           ],
           correctIndex: 1,
           explanation: '|a⃗| = √(1² + (-2)² + 2²) = √(1 + 4 + 4) = √9 = 3.'
@@ -160,7 +168,8 @@ Der Betrag (die Länge) eines Vektors berechnet sich als: |a⃗| = √(a₁² + 
             'M(4|6)',
             'M(3|5)',
             'M(8|12)',
-            'M(4|12)'
+            'M(4|12)',
+            'M(2|4)'
           ],
           correctIndex: 0,
           explanation: 'M = ((2+6)/2, (8+4)/2) = (4, 6).'
@@ -191,7 +200,8 @@ Für den MedAT werden typischerweise Aufgaben gestellt, die das Berechnen des Sk
             'Ja, denn a⃗ · b⃗ = 0',
             'Nein, denn a⃗ · b⃗ = 2',
             'Ja, denn a⃗ · b⃗ = -4',
-            'Nein, denn a⃗ · b⃗ = 4'
+            'Nein, denn a⃗ · b⃗ = 4',
+            'Ja, denn |a⃗| = |b⃗|'
           ],
           correctIndex: 0,
           explanation: 'a⃗ · b⃗ = 2·1 + (-3)·2 + 1·4 = 2 - 6 + 4 = 0. Da das Skalarprodukt null ist, stehen die Vektoren senkrecht aufeinander.'
@@ -202,7 +212,8 @@ Für den MedAT werden typischerweise Aufgaben gestellt, die das Berechnen des Sk
             '30°',
             '45°',
             '60°',
-            '90°'
+            '90°',
+            '135°'
           ],
           correctIndex: 1,
           explanation: 'a⃗ · b⃗ = 1. |a⃗| = 1, |b⃗| = √2. cos(φ) = 1/√2 → φ = 45°.'
@@ -213,7 +224,8 @@ Für den MedAT werden typischerweise Aufgaben gestellt, die das Berechnen des Sk
             '5',
             '7',
             '25',
-            '-7'
+            '-7',
+            '√25 = 5'
           ],
           correctIndex: 2,
           explanation: 'a⃗ · a⃗ = 9 + 16 + 0 = 25 = |a⃗|² = (√(9+16))² = 5² = 25.'
@@ -244,7 +256,8 @@ Die Dimensionsanalyse ist eine Methode zur Überprüfung physikalischer Gleichun
             '25 cm³',
             '250 cm³',
             '2500 cm³',
-            '25000 cm³'
+            '25000 cm³',
+            '500 cm³'
           ],
           correctIndex: 2,
           explanation: '1 Liter = 1 dm³ = 1000 cm³. Also: 2,5 L = 2500 cm³.'
@@ -255,7 +268,8 @@ Die Dimensionsanalyse ist eine Methode zur Überprüfung physikalischer Gleichun
             '15 ml/h',
             '1 ml/h',
             '0,25 ml/h',
-            '60 ml/h'
+            '60 ml/h',
+            '30 ml/h'
           ],
           correctIndex: 0,
           explanation: 'Rate = 0,5 mg/min ÷ 2 mg/ml = 0,25 ml/min. Pro Stunde: 0,25 · 60 = 15 ml/h.'
@@ -266,7 +280,8 @@ Die Dimensionsanalyse ist eine Methode zur Überprüfung physikalischer Gleichun
             '1 km² = 1000 m²',
             '1 km² = 100.000 m²',
             '1 km² = 1.000.000 m²',
-            '1 km² = 10.000 m²'
+            '1 km² = 10.000 m²',
+            '1 km² = 100 m²'
           ],
           correctIndex: 2,
           explanation: '1 km = 1000 m, also 1 km² = (1000)² m² = 1.000.000 m² = 10⁶ m². Bei Flächen quadriert sich der Umrechnungsfaktor!'

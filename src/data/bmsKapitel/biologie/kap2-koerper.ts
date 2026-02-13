@@ -33,7 +33,8 @@ Der Blutfluss durch das Herz folgt einem festgelegten Weg: Sauerstoffarmes Blut 
             'Eins',
             'Zwei',
             'Drei',
-            'Vier'
+            'Vier',
+            'Fünf'
           ],
           correctIndex: 1,
           explanation: 'Die Mitralklappe (Bikuspidalklappe) hat zwei Segel. Die Trikuspidalklappe hat dagegen drei Segel – daher der Name (tri = drei).'
@@ -44,7 +45,8 @@ Der Blutfluss durch das Herz folgt einem festgelegten Weg: Sauerstoffarmes Blut 
             'Ca. 1 L/min',
             'Ca. 3 L/min',
             'Ca. 5 L/min',
-            'Ca. 10 L/min'
+            'Ca. 10 L/min',
+            'Ca. 15 L/min'
           ],
           correctIndex: 2,
           explanation: 'Das Herzzeitvolumen in Ruhe beträgt ca. 5 L/min (Schlagvolumen 70 mL × Herzfrequenz 70/min). Unter Belastung kann es auf bis zu 25 L/min ansteigen.'
@@ -55,7 +57,8 @@ Der Blutfluss durch das Herz folgt einem festgelegten Weg: Sauerstoffarmes Blut 
             'In die Aorta',
             'In die obere Hohlvene',
             'In den Truncus pulmonalis (Lungenkreislauf)',
-            'In die linke Kammer'
+            'In die linke Kammer',
+            'In die Koronararterien'
           ],
           correctIndex: 2,
           explanation: 'Die rechte Kammer pumpt sauerstoffarmes Blut durch die Pulmonalklappe in den Truncus pulmonalis und damit in den Lungenkreislauf, wo der Gasaustausch stattfindet.'
@@ -88,7 +91,8 @@ Das His-Bündel teilt sich im Kammerseptum in den rechten und linken Tawara-Sche
             'Im linken Vorhof an der Einmündung der Lungenvenen',
             'Im rechten Vorhof nahe der Einmündung der Vena cava superior',
             'Im Kammerseptum unterhalb der Aortenklappe',
-            'An der Herzspitze im linken Ventrikel'
+            'An der Herzspitze im linken Ventrikel',
+            'Im His-Bündel zwischen den Tawara-Schenkeln'
           ],
           correctIndex: 1,
           explanation: 'Der Sinusknoten liegt im rechten Vorhof nahe der Einmündung der oberen Hohlvene (Vena cava superior). Er ist der primäre Schrittmacher des Herzens.'
@@ -99,7 +103,8 @@ Das His-Bündel teilt sich im Kammerseptum in den rechten und linken Tawara-Sche
             'Sie beschleunigt die Herzfrequenz bei Belastung',
             'Sie ermöglicht die vollständige Entleerung der Vorhöfe vor der Kammerkontraktion',
             'Sie verhindert Vorhofflimmern',
-            'Sie leitet die Erregung direkt an die Purkinje-Fasern weiter'
+            'Sie leitet die Erregung direkt an die Purkinje-Fasern weiter',
+            'Sie synchronisiert die Kontraktion beider Vorhöfe'
           ],
           correctIndex: 1,
           explanation: 'Die AV-Verzögerung von ca. 0,1 Sekunden stellt sicher, dass die Vorhöfe ihr Blut vollständig in die Kammern entleeren können, bevor die Kammerkontraktion (Systole) beginnt.'
@@ -110,7 +115,8 @@ Das His-Bündel teilt sich im Kammerseptum in den rechten und linken Tawara-Sche
             '60–80/min',
             '40–50/min',
             '25–40/min',
-            '100–120/min'
+            '100–120/min',
+            '10–15/min'
           ],
           correctIndex: 2,
           explanation: 'Die Purkinje-Fasern haben eine Eigenfrequenz von nur 25–40/min und dienen als tertiärer Schrittmacher. Dies zeigt die hierarchische Abnahme der Frequenz: Sinusknoten > AV-Knoten > Purkinje-Fasern.'
@@ -143,7 +149,8 @@ Die Kapillaren sind die dünnsten Gefäße des Kreislaufsystems mit einem Durchm
             'In den Kapillaren',
             'In den Arteriolen',
             'In den großen Venen',
-            'In der Aorta'
+            'In der Aorta',
+            'In den Lungenvenen'
           ],
           correctIndex: 1,
           explanation: 'Die Arteriolen sind die Widerstandsgefäße des Kreislaufsystems. Durch Vasokonstriktion und Vasodilatation regulieren sie den totalen peripheren Widerstand und damit den Blutdruck.'
@@ -154,7 +161,8 @@ Die Kapillaren sind die dünnsten Gefäße des Kreislaufsystems mit einem Durchm
             'Lungenarterien führen sauerstoffreiches Blut',
             'Lungenvenen führen sauerstoffarmes Blut',
             'Lungenarterien führen sauerstoffarmes Blut zur Lunge',
-            'Der Lungenkreislauf beginnt im linken Vorhof'
+            'Der Lungenkreislauf beginnt im linken Vorhof',
+            'Lungenarterien und Lungenvenen führen beide gemischtes Blut'
           ],
           correctIndex: 2,
           explanation: 'Die Lungenarterien führen sauerstoffarmes Blut von der rechten Herzkammer zur Lunge. Die Lungenvenen führen das sauerstoffangereicherte Blut zurück zum linken Vorhof.'
@@ -165,7 +173,8 @@ Die Kapillaren sind die dünnsten Gefäße des Kreislaufsystems mit einem Durchm
             'Die Venenklappen verhindern den Rückfluss des Blutes',
             'Die elastischen herznahen Arterien glätten den pulsatilen Blutfluss',
             'Die Kapillaren ermöglichen den Gasaustausch',
-            'Die Muskelpumpe unterstützt den venösen Rücktransport'
+            'Die Muskelpumpe unterstützt den venösen Rücktransport',
+            'Die Kapillaren filtern das Blutplasma in das Interstitium'
           ],
           correctIndex: 1,
           explanation: 'Der Windkesseleffekt beschreibt die Eigenschaft der elastischen herznahen Arterien (v. a. Aorta), sich während der Systole zu dehnen und in der Diastole zurückzufedern, wodurch ein kontinuierlicher Blutfluss entsteht.'
@@ -198,7 +207,8 @@ Die Leukozyten (weiße Blutkörperchen, 4.000–10.000/µL) sind die Zellen des 
             'Ca. 25 %',
             'Ca. 45 %',
             'Ca. 55 %',
-            'Ca. 75 %'
+            'Ca. 75 %',
+            'Ca. 90 %'
           ],
           correctIndex: 2,
           explanation: 'Das Blutplasma macht etwa 55 % des Blutvolumens aus, die zellulären Bestandteile (Hämatokrit) etwa 45 %. Der Hämatokrit gibt den prozentualen Anteil der Erythrozyten am Gesamtblutvolumen an.'
@@ -209,7 +219,8 @@ Die Leukozyten (weiße Blutkörperchen, 4.000–10.000/µL) sind die Zellen des 
             'Insulin',
             'Erythropoetin (EPO)',
             'Thrombopoietin',
-            'Aldosteron'
+            'Aldosteron',
+            'Cortisol'
           ],
           correctIndex: 1,
           explanation: 'Erythropoetin (EPO) wird hauptsächlich in der Niere produziert und stimuliert die Erythropoese im Knochenmark, insbesondere bei Sauerstoffmangel (Hypoxie).'
@@ -220,7 +231,8 @@ Die Leukozyten (weiße Blutkörperchen, 4.000–10.000/µL) sind die Zellen des 
             'Lymphozyten',
             'Eosinophile Granulozyten',
             'Neutrophile Granulozyten',
-            'Monozyten'
+            'Monozyten',
+            'Basophile Granulozyten'
           ],
           correctIndex: 2,
           explanation: 'Neutrophile Granulozyten machen 60–70 % aller Leukozyten aus und sind die erste Verteidigungslinie gegen bakterielle Infektionen durch Phagozytose.'
@@ -253,7 +265,8 @@ Vor jeder Bluttransfusion müssen die Blutgruppe des Empfängers und des Spender
             'Anti-A',
             'Anti-B',
             'Anti-A und Anti-B',
-            'Keine Antikörper'
+            'Keine Antikörper',
+            'Anti-D'
           ],
           correctIndex: 1,
           explanation: 'Blutgruppe A hat Antigen A auf den Erythrozyten und Anti-B-Antikörper im Plasma. Die Regel: Man hat Antikörper gegen die Antigene, die man NICHT besitzt.'
@@ -264,7 +277,8 @@ Vor jeder Bluttransfusion müssen die Blutgruppe des Empfängers und des Spender
             'Rh-positive Mütter bilden immer Antikörper gegen das Kind',
             'Rh-negative Mütter können nach Sensibilisierung Anti-D bilden, die das Rh-positive Kind schädigen',
             'Der Rhesusfaktor bestimmt die Blutgruppe des Kindes',
-            'Rh-negative Kinder sind immer gefährdet'
+            'Rh-negative Kinder sind immer gefährdet',
+            'Der Rhesusfaktor wird nur über das X-Chromosom vererbt'
           ],
           correctIndex: 1,
           explanation: 'Wenn eine Rh-negative Mutter nach der ersten Schwangerschaft mit einem Rh-positiven Kind sensibilisiert wird, können Anti-D-Antikörper in einer Folgeschwangerschaft die fetalen Erythrozyten angreifen (Morbus haemolyticus neonatorum).'
@@ -275,7 +289,8 @@ Vor jeder Bluttransfusion müssen die Blutgruppe des Empfängers und des Spender
             'Spenderserum gegen Empfängererythrozyten',
             'Empfängerserum gegen Spendererythrozyten',
             'Spender-DNA gegen Empfänger-DNA',
-            'Beide Blutproben werden gemischt und die Gerinnung gemessen'
+            'Beide Blutproben werden gemischt und die Gerinnung gemessen',
+            'Empfängerplasma gegen Spenderplasma'
           ],
           correctIndex: 1,
           explanation: 'Bei der Major-Kreuzprobe wird das Empfängerserum (enthält die Antikörper des Patienten) mit den Spendererythrozyten gemischt. Kommt es zur Agglutination, ist die Transfusion inkompatibel.'
@@ -308,7 +323,8 @@ Der Gasaustausch in den Alveolen erfolgt durch Diffusion entlang von Partialdruc
             'Ca. 30 Millionen',
             'Ca. 300 Millionen',
             'Ca. 3 Milliarden',
-            'Ca. 30 Milliarden'
+            'Ca. 30 Milliarden',
+            'Ca. 3 Millionen'
           ],
           correctIndex: 1,
           explanation: 'Die Lunge enthält etwa 300 Millionen Alveolen mit einer Gesamtoberfläche von ca. 80–120 m², was den effizienten Gasaustausch ermöglicht.'
@@ -319,7 +335,8 @@ Der Gasaustausch in den Alveolen erfolgt durch Diffusion entlang von Partialdruc
             'Typ-I-Pneumozyten',
             'Typ-II-Pneumozyten',
             'Alveolarmakrophagen',
-            'Clara-Zellen'
+            'Clara-Zellen',
+            'Becherzellen der Bronchien'
           ],
           correctIndex: 1,
           explanation: 'Typ-II-Pneumozyten produzieren das Surfactant. Typ-I-Pneumozyten sind flache Zellen, die 95 % der Alveolaroberfläche bedecken und für den Gasaustausch zuständig sind.'
@@ -330,7 +347,8 @@ Der Gasaustausch in den Alveolen erfolgt durch Diffusion entlang von Partialdruc
             'Ca. 150 mL',
             'Ca. 500 mL',
             'Ca. 1.200 mL',
-            'Ca. 3.000 mL'
+            'Ca. 3.000 mL',
+            'Ca. 2.000 mL'
           ],
           correctIndex: 1,
           explanation: 'Das Atemzugvolumen beträgt in Ruhe ca. 500 mL. Davon gelangen ca. 350 mL in die Alveolen (Alveolarventilation), ca. 150 mL verbleiben im anatomischen Totraum.'
@@ -363,7 +381,8 @@ Der Dünndarm (Duodenum, Jejunum, Ileum) ist mit 3–5 Metern Länge der Hauptor
             'Hauptzellen',
             'Nebenzellen',
             'Belegzellen (Parietalzellen)',
-            'G-Zellen'
+            'G-Zellen',
+            'Enterochromaffine Zellen'
           ],
           correctIndex: 2,
           explanation: 'Die Belegzellen (Parietalzellen) produzieren sowohl die Salzsäure (HCl) als auch den Intrinsic Factor. Die Hauptzellen bilden Pepsinogen, die Nebenzellen schützenden Schleim.'
@@ -374,7 +393,8 @@ Der Dünndarm (Duodenum, Jejunum, Ileum) ist mit 3–5 Metern Länge der Hauptor
             'Amylase',
             'Pepsin',
             'Trypsin',
-            'Pankreaslipase'
+            'Pankreaslipase',
+            'Laktase'
           ],
           correctIndex: 3,
           explanation: 'Die Pankreaslipase spaltet Fette (Triglyceride) in Fettsäuren und Monoglyceride. Die Gallensäuren emulgieren die Fette zuvor und bilden Mizellen, die die Resorption ermöglichen.'
@@ -385,7 +405,8 @@ Der Dünndarm (Duodenum, Jejunum, Ileum) ist mit 3–5 Metern Länge der Hauptor
             'Durch Haustra und Taenien',
             'Durch Kerckring-Falten, Zotten und Mikrovilli',
             'Durch Krypten und Becherzellen',
-            'Durch Peyer-Plaques und Lymphfollikel'
+            'Durch Peyer-Plaques und Lymphfollikel',
+            'Durch Taenien und Appendices epiploicae'
           ],
           correctIndex: 1,
           explanation: 'Die Oberfläche des Dünndarms wird durch drei Strukturebenen vergrößert: Kerckring-Falten (makroskopisch), Zotten/Villi (mikroskopisch) und Mikrovilli (Bürstensaum). Dies ergibt eine Gesamtfläche von ca. 200 m².'
@@ -418,7 +439,8 @@ Der Sympathikus hat seinen Ursprung im thorakolumbalen Rückenmark (Th1–L2) un
             'Senkung der Herzfrequenz',
             'Steigerung der Herzfrequenz und Kontraktionskraft',
             'Keine Wirkung auf das Herz',
-            'Verengung der Koronargefäße'
+            'Verengung der Koronargefäße',
+            'Verlängerung der AV-Überleitungszeit'
           ],
           correctIndex: 1,
           explanation: 'Der Sympathikus wirkt am Herzen positiv chronotrop (frequenzsteigernd), positiv inotrop (kontraktionskraftsteigernd) und positiv dromotrop (überleitungsbeschleunigend) über Noradrenalin an β₁-Rezeptoren.'
@@ -429,7 +451,8 @@ Der Sympathikus hat seinen Ursprung im thorakolumbalen Rückenmark (Th1–L2) un
             'N. facialis (VII)',
             'N. trigeminus (V)',
             'N. vagus (X)',
-            'N. hypoglossus (XII)'
+            'N. hypoglossus (XII)',
+            'N. accessorius (XI)'
           ],
           correctIndex: 2,
           explanation: 'Der Nervus vagus (X. Hirnnerv) ist der wichtigste parasympathische Nerv. Er innerviert Herz, Lunge und den Großteil des Gastrointestinaltrakts und ist für ca. 75 % der parasympathischen Innervation verantwortlich.'
@@ -440,7 +463,8 @@ Der Sympathikus hat seinen Ursprung im thorakolumbalen Rückenmark (Th1–L2) un
             'Hirnnerven und Spinalnerven',
             'Gehirn und Rückenmark',
             'Sympathikus und Parasympathikus',
-            'Ganglien und periphere Nerven'
+            'Ganglien und periphere Nerven',
+            'Hypothalamus und Nebennierenmark'
           ],
           correctIndex: 1,
           explanation: 'Das Zentralnervensystem (ZNS) besteht aus Gehirn (Encephalon) und Rückenmark (Medulla spinalis). Alle Nervenstrukturen außerhalb des ZNS gehören zum peripheren Nervensystem (PNS).'
@@ -473,7 +497,8 @@ Ein Aktionspotential wird ausgelöst, wenn das Membranpotential den Schwellenwer
             'Ca. −30 mV',
             'Ca. −55 mV',
             'Ca. −70 mV',
-            'Ca. −90 mV'
+            'Ca. −90 mV',
+            'Ca. +30 mV'
           ],
           correctIndex: 2,
           explanation: 'Das Ruhemembranpotential beträgt ca. −70 mV. Es wird hauptsächlich durch den K⁺-Ausstrom durch Leckkanäle bestimmt und liegt nahe dem Kalium-Gleichgewichtspotential (−90 mV).'
@@ -484,7 +509,8 @@ Ein Aktionspotential wird ausgelöst, wenn das Membranpotential den Schwellenwer
             '2 Na⁺',
             '3 Na⁺',
             '4 Na⁺',
-            '5 Na⁺'
+            '5 Na⁺',
+            '1 Na⁺'
           ],
           correctIndex: 1,
           explanation: 'Die Na⁺/K⁺-ATPase pumpt pro ATP-Verbrauch 3 Na⁺ nach außen und 2 K⁺ nach innen. Da netto eine positive Ladung nach außen transportiert wird, ist die Pumpe elektrogen.'
@@ -495,10 +521,11 @@ Ein Aktionspotential wird ausgelöst, wenn das Membranpotential den Schwellenwer
             'Kontinuierliche Weiterleitung entlang des gesamten Axons',
             'Springende Erregungsleitung von Schnürring zu Schnürring',
             'Rückwärtige Erregungsleitung vom Axon zum Soma',
-            'Weiterleitung über chemische Synapsen'
+            'Weiterleitung über chemische Synapsen',
+            'Erregungsleitung durch Gap Junctions zwischen Neuronen'
           ],
           correctIndex: 1,
-          explanation: 'Bei der saltatorischen Erregungsleitung „springt“ das Aktionspotential von Ranvier-Schnürring zu Schnürring, da nur dort Ionenkanäle vorhanden sind. Dies ist deutlich schneller als die kontinuierliche Leitung in unmyelinisierten Fasern.'
+          explanation: 'Bei der saltatorischen Erregungsleitung „springt" das Aktionspotential von Ranvier-Schnürring zu Schnürring, da nur dort Ionenkanäle vorhanden sind. Dies ist deutlich schneller als die kontinuierliche Leitung in unmyelinisierten Fasern.'
         }
       ]
     },
@@ -528,7 +555,8 @@ Man unterscheidet erregende (exzitatorische) und hemmende (inhibitorische) Synap
             'Noradrenalin',
             'Dopamin',
             'Acetylcholin',
-            'GABA'
+            'GABA',
+            'Glutamat'
           ],
           correctIndex: 2,
           explanation: 'Acetylcholin (ACh) ist der Neurotransmitter an der motorischen Endplatte. Es bindet an nikotinische Acetylcholinrezeptoren auf der Muskelfaser und löst eine Depolarisation und damit eine Muskelkontraktion aus.'
@@ -539,7 +567,8 @@ Man unterscheidet erregende (exzitatorische) und hemmende (inhibitorische) Synap
             'Glutamat',
             'GABA (γ-Aminobuttersäure)',
             'Serotonin',
-            'Dopamin'
+            'Dopamin',
+            'Endorphine'
           ],
           correctIndex: 1,
           explanation: 'GABA (γ-Aminobuttersäure) ist der wichtigste inhibitorische Neurotransmitter im ZNS. Er erzeugt IPSPs durch Öffnung von Chloridkanälen, was zur Hyperpolarisation führt. Glutamat ist dagegen der wichtigste exzitatorische Neurotransmitter.'
@@ -550,7 +579,8 @@ Man unterscheidet erregende (exzitatorische) und hemmende (inhibitorische) Synap
             'Die Neurotransmitterfreisetzung wird verstärkt',
             'Die Neurotransmitterfreisetzung wird verhindert',
             'Das Ruhepotential wird positiver',
-            'Die Myelinscheide wird abgebaut'
+            'Die Myelinscheide wird abgebaut',
+            'Die postsynaptischen Rezeptoren werden desensibilisiert'
           ],
           correctIndex: 1,
           explanation: 'Ohne Ca²⁺-Einstrom können die synaptischen Vesikel nicht mit der präsynaptischen Membran fusionieren (keine Exozytose). Es werden keine Neurotransmitter freigesetzt und die synaptische Übertragung ist blockiert.'
@@ -583,7 +613,8 @@ Die hormonelle Regulation der Nierenfunktion erfolgt hauptsächlich durch zwei H
             'Aldosteron',
             'ADH (Vasopressin)',
             'Erythropoetin',
-            'Renin'
+            'Renin',
+            'Parathormon'
           ],
           correctIndex: 1,
           explanation: 'ADH (Antidiuretisches Hormon / Vasopressin) bewirkt den Einbau von Aquaporin-2-Wasserkanälen in die Sammelrohre, wodurch mehr Wasser rückresorbiert wird und der Urin konzentrierter wird.'
@@ -594,7 +625,8 @@ Die hormonelle Regulation der Nierenfunktion erfolgt hauptsächlich durch zwei H
             'Ca. 12 mL/min',
             'Ca. 60 mL/min',
             'Ca. 120 mL/min',
-            'Ca. 500 mL/min'
+            'Ca. 500 mL/min',
+            'Ca. 30 mL/min'
           ],
           correctIndex: 2,
           explanation: 'Die GFR beträgt beim Gesunden ca. 120 mL/min. Das entspricht etwa 180 Litern Primärharn pro Tag, von denen 99 % rückresorbiert werden.'
@@ -605,7 +637,8 @@ Die hormonelle Regulation der Nierenfunktion erfolgt hauptsächlich durch zwei H
             'Hemmung der Natriumrückresorption',
             'Steigerung der Na⁺-Rückresorption und K⁺-Sekretion',
             'Hemmung der Wasserrückresorption',
-            'Steigerung der GFR'
+            'Steigerung der GFR',
+            'Förderung der Calciumrückresorption im proximalen Tubulus'
           ],
           correctIndex: 1,
           explanation: 'Aldosteron steigert im distalen Tubulus und Sammelrohr die Rückresorption von Na⁺ (und damit Wasser) und fördert die Sekretion von K⁺. Es wird durch das RAAS reguliert und erhöht den Blutdruck.'
@@ -638,7 +671,8 @@ Die Nebenniere besteht aus Rinde und Mark mit unterschiedlichen Funktionen. Die 
             'Glukagon',
             'Cortisol',
             'Insulin',
-            'Adrenalin'
+            'Adrenalin',
+            'Somatostatin'
           ],
           correctIndex: 2,
           explanation: 'Insulin wird von den B-Zellen der Langerhans-Inseln des Pankreas produziert und senkt den Blutzucker durch Förderung der Glukoseaufnahme in die Zellen, Glykogensynthese und Lipogenese. Glukagon, Cortisol und Adrenalin erhöhen dagegen den Blutzucker.'
@@ -649,10 +683,11 @@ Die Nebenniere besteht aus Rinde und Mark mit unterschiedlichen Funktionen. Die 
             'Aldosteron',
             'Cortisol',
             'Androgene (DHEA)',
-            'Adrenalin'
+            'Adrenalin',
+            'Thyroxin (T₄)'
           ],
           correctIndex: 1,
-          explanation: 'Die Zona fasciculata der Nebennierenrinde produziert Glucocorticoide, hauptsächlich Cortisol. Merkhilfe: „GFR“ von außen nach innen – Glomerulosa (Aldosteron), Fasciculata (Cortisol), Reticularis (Androgene).'
+          explanation: 'Die Zona fasciculata der Nebennierenrinde produziert Glucocorticoide, hauptsächlich Cortisol. Merkhilfe: „GFR" von außen nach innen – Glomerulosa (Aldosteron), Fasciculata (Cortisol), Reticularis (Androgene).'
         },
         {
           question: 'Welches Prinzip reguliert die meisten Hormonachsen?',
@@ -660,7 +695,8 @@ Die Nebenniere besteht aus Rinde und Mark mit unterschiedlichen Funktionen. Die 
             'Positive Rückkopplung',
             'Negative Rückkopplung (Feedback)',
             'Feed-forward-Mechanismus',
-            'Allosterische Regulation'
+            'Allosterische Regulation',
+            'Parakrine Signalweiterleitung'
           ],
           correctIndex: 1,
           explanation: 'Die meisten Hormonachsen werden durch negative Rückkopplung reguliert: Ein hoher Hormonspiegel hemmt die übergeordneten Regulationsebenen (Hypothalamus und Hypophyse), sodass der Hormonspiegel in einem engen physiologischen Bereich gehalten wird.'
@@ -693,7 +729,8 @@ Der molekulare Mechanismus der Muskelkontraktion läuft wie folgt ab: Ein Aktion
             'Na⁺',
             'K⁺',
             'Ca²⁺',
-            'Mg²⁺'
+            'Mg²⁺',
+            'Cl⁻'
           ],
           correctIndex: 2,
           explanation: 'Calcium (Ca²⁺) wird aus dem sarkoplasmatischen Retikulum freigesetzt und bindet an Troponin C, was die Myosinbindungsstellen auf dem Aktin freilegt und die Querbrückenbildung ermöglicht.'
@@ -704,7 +741,8 @@ Der molekulare Mechanismus der Muskelkontraktion läuft wie folgt ab: Ein Aktion
             'Aktin- und Myosinfilamente werden kürzer',
             'Aktin- und Myosinfilamente gleiten ineinander, ohne sich zu verkürzen',
             'Nur die Myosinfilamente kontrahieren',
-            'Die Z-Scheiben lösen sich auf'
+            'Die Z-Scheiben lösen sich auf',
+            'Titin-Filamente ziehen die Sarkomere passiv zusammen'
           ],
           correctIndex: 1,
           explanation: 'Bei der Gleitfilamenttheorie gleiten die Aktin- und Myosinfilamente ineinander (die Überlappung nimmt zu), aber die einzelnen Filamente selbst werden nicht kürzer. Dadurch verkürzt sich das Sarkomer insgesamt.'
@@ -715,7 +753,8 @@ Der molekulare Mechanismus der Muskelkontraktion läuft wie folgt ab: Ein Aktion
             'ATP aktiviert Troponin',
             'ATP wird für die Ca²⁺-Freisetzung benötigt',
             'ATP löst die Bindung des Myosinkopfes vom Aktin (Querbrücke)',
-            'ATP hemmt die Na⁺/K⁺-ATPase'
+            'ATP hemmt die Na⁺/K⁺-ATPase',
+            'ATP phosphoryliert die Aktinfilamente'
           ],
           correctIndex: 2,
           explanation: 'ATP ist nötig, um die Querbrücke zwischen Myosinkopf und Aktin zu lösen. Ohne ATP bleibt der Myosinkopf fest am Aktin gebunden – dies erklärt die Totenstarre (Rigor mortis) nach dem Tod.'
@@ -748,7 +787,8 @@ Die Hautsinne umfassen Tastsinn (Mechanorezeption), Temperatursinn (Thermorezept
             'Der Ziliarmuskel entspannt sich und die Linse wird flach',
             'Der Ziliarmuskel kontrahiert sich und die Linse wird kugeliger',
             'Die Iris verengt sich und die Pupille wird kleiner',
-            'Die Retina verschiebt sich nach vorne'
+            'Die Retina verschiebt sich nach vorne',
+            'Die Cornea verändert ihre Krümmung aktiv'
           ],
           correctIndex: 1,
           explanation: 'Bei der Nahakkommodation kontrahiert sich der Ziliarmuskel, die Zonulafasern entspannen sich und die Linse nimmt durch ihre Eigenelastizität eine kugelige Form an (stärkere Brechkraft). Bei Fernsicht ist es umgekehrt.'
@@ -759,7 +799,8 @@ Die Hautsinne umfassen Tastsinn (Mechanorezeption), Temperatursinn (Thermorezept
             'Hammer (Malleus)',
             'Amboss (Incus)',
             'Steigbügel (Stapes)',
-            'Trommelfell'
+            'Trommelfell',
+            'Rundes Fenster'
           ],
           correctIndex: 2,
           explanation: 'Der Steigbügel (Stapes) ist das kleinste Knöchelchen und direkt mit dem ovalen Fenster verbunden. Die Kette lautet: Trommelfell → Hammer → Amboss → Steigbügel → ovales Fenster → Cochlea.'
@@ -770,7 +811,8 @@ Die Hautsinne umfassen Tastsinn (Mechanorezeption), Temperatursinn (Thermorezept
             'An der Schneckenspitze (Helicotrema)',
             'An der Schneckenbasis (nahe dem ovalen Fenster)',
             'Gleichmäßig über die gesamte Basilarmembran',
-            'Im Vestibularorgan'
+            'Im Vestibularorgan',
+            'Im mittleren Abschnitt der Basilarmembran'
           ],
           correctIndex: 1,
           explanation: 'Hohe Frequenzen werden an der Schneckenbasis wahrgenommen, wo die Basilarmembran schmal und steif ist. Tiefe Frequenzen werden an der Schneckenspitze (Helicotrema) wahrgenommen, wo die Membran breit und flexibel ist (Tonotopie).'

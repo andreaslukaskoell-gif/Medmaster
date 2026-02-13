@@ -28,7 +28,7 @@ Beim vollkommen unelastischen Stoß verschmelzen die Körper: m₁·v₁ + m₂�
       selfTest: [
         {
           question: 'Wie groß ist der Impuls eines 70 kg schweren Läufers bei 5 m/s?',
-          options: ['14 kg·m/s', '350 kg·m/s', '350 N', '70 J'],
+          options: ['14 kg·m/s', '350 kg·m/s', '350 N', '70 J', '1225 kg·m/s'],
           correctIndex: 1,
           explanation: 'p = m·v = 70 kg · 5 m/s = 350 kg·m/s.',
         },
@@ -39,6 +39,7 @@ Beim vollkommen unelastischen Stoß verschmelzen die Körper: m₁·v₁ + m₂�
             'Nur die kinetische Energie bleibt erhalten',
             'Nur der Impuls bleibt erhalten',
             'Weder Impuls noch Energie bleiben erhalten',
+            'Die Gesamtmasse des Systems nimmt ab',
           ],
           correctIndex: 2,
           explanation: 'Beim vollkommen unelastischen Stoß bleiben die Körper aneinander haften. Der Impuls bleibt erhalten, aber ein Teil der kinetischen Energie wird in Verformungsenergie und Wärme umgewandelt.',
@@ -50,6 +51,7 @@ Beim vollkommen unelastischen Stoß verschmelzen die Körper: m₁·v₁ + m₂�
             'Er verlängert die Stoßzeit und reduziert so die Kraft',
             'Er erhöht die Masse des Fahrers',
             'Er absorbiert die gesamte kinetische Energie',
+            'Er verringert die Geschwindigkeit des Fahrzeugs vor dem Aufprall',
           ],
           correctIndex: 1,
           explanation: 'F = Δp/Δt: Bei gleichem Impulsübertrag Δp führt eine größere Stoßzeit Δt zu einer kleineren Kraft F. Der Airbag verlängert Δt erheblich.',
@@ -77,13 +79,13 @@ In der Medizin und Biomechanik sind Hebelprinzipien allgegenwärtig. Der menschl
       selfTest: [
         {
           question: 'Welches Drehmoment erzeugt eine Kraft von 20 N bei einem Hebelarm von 0,5 m?',
-          options: ['40 N·m', '10 N·m', '20 N·m', '100 N·m'],
+          options: ['40 N·m', '10 N·m', '20 N·m', '100 N·m', '5 N·m'],
           correctIndex: 1,
           explanation: 'M = F·r = 20 N · 0,5 m = 10 N·m.',
         },
         {
           question: 'Auf einem zweiseitigen Hebel wirkt links eine Kraft von 100 N bei 3 m Hebelarm. Welche Kraft braucht man rechts bei 6 m Hebelarm für Gleichgewicht?',
-          options: ['200 N', '50 N', '300 N', '600 N'],
+          options: ['200 N', '50 N', '300 N', '600 N', '150 N'],
           correctIndex: 1,
           explanation: 'F₁·r₁ = F₂·r₂ → 100·3 = F₂·6 → F₂ = 300/6 = 50 N.',
         },
@@ -94,6 +96,7 @@ In der Medizin und Biomechanik sind Hebelprinzipien allgegenwärtig. Der menschl
             'Der Kraftarm (Ansatz des Bizeps) ist viel kürzer als der Lastarm',
             'Das Ellbogengelenk absorbiert Kraft',
             'Die Schwerkraft wirkt doppelt',
+            'Die Reibung im Gelenk erhöht den Kraftbedarf',
           ],
           correctIndex: 1,
           explanation: 'Der Bizeps setzt nahe am Drehpunkt (Ellbogengelenk) an — sein Hebelarm ist viel kürzer als der Lastarm. Nach dem Hebelgesetz muss er daher eine entsprechend größere Kraft aufbringen.',

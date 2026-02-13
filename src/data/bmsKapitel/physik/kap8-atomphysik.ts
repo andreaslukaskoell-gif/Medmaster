@@ -31,7 +31,8 @@ Das **Zerfallsgesetz** beschreibt die Abnahme der Anzahl radioaktiver Kerne mit 
             '2 Elektronen und 2 Neutronen',
             '2 Protonen und 2 Neutronen (Helium-4-Kern)',
             '1 Proton und 1 Neutron',
-            '4 Neutronen'
+            '4 Neutronen',
+            '2 Protonen und 2 Elektronen'
           ],
           correctIndex: 1,
           explanation: 'Ein α-Teilchen ist ein Helium-4-Kern und besteht aus 2 Protonen und 2 Neutronen. Beim α-Zerfall nimmt die Massenzahl des Mutterkerns um 4 und die Kernladungszahl um 2 ab.'
@@ -42,7 +43,8 @@ Das **Zerfallsgesetz** beschreibt die Abnahme der Anzahl radioaktiver Kerne mit 
             '2 Halbwertszeiten',
             '3 Halbwertszeiten',
             '4 Halbwertszeiten',
-            '8 Halbwertszeiten'
+            '8 Halbwertszeiten',
+            '6 Halbwertszeiten'
           ],
           correctIndex: 1,
           explanation: '(½)ⁿ = 1/8 → n = 3. Nach 3 Halbwertszeiten ist die Aktivität auf (½)³ = 1/8 des Anfangswerts gesunken: 100 % → 50 % → 25 % → 12,5 %.'
@@ -53,7 +55,8 @@ Das **Zerfallsgesetz** beschreibt die Abnahme der Anzahl radioaktiver Kerne mit 
             'α-Strahlung',
             'β-Strahlung',
             'γ-Strahlung',
-            'Röntgenstrahlung'
+            'Röntgenstrahlung',
+            'Neutronenstrahlung'
           ],
           correctIndex: 0,
           explanation: 'α-Strahlung hat die geringste Reichweite (wenige cm in Luft, Abschirmung durch Papier), dafür aber die höchste Ionisierungsdichte. β-Strahlung wird durch Aluminium, γ-Strahlung erst durch Blei oder Beton wirksam abgeschirmt.'
@@ -84,7 +87,8 @@ Die **Kernfusion** (Verschmelzung) ist die Vereinigung leichter Kerne zu einem s
             'Energie und Masse sind voneinander unabhängig.',
             'Masse kann in Energie umgewandelt werden und umgekehrt.',
             'Die Lichtgeschwindigkeit hängt von der Masse ab.',
-            'Energie ist immer gleich der doppelten Masse.'
+            'Energie ist immer gleich der doppelten Masse.',
+            'Die Masse eines Körpers nimmt mit der Temperatur ab.'
           ],
           correctIndex: 1,
           explanation: 'Einsteins Masse-Energie-Äquivalenz E = mc² besagt, dass Masse und Energie äquivalent sind und ineinander umgewandelt werden können. Bei Kernreaktionen wird der Massendefekt Δm in Energie ΔE = Δm·c² umgewandelt.'
@@ -95,7 +99,8 @@ Die **Kernfusion** (Verschmelzung) ist die Vereinigung leichter Kerne zu einem s
             'Ein schnelles Proton',
             'Ein langsames (thermisches) Neutron',
             'γ-Strahlung',
-            'Ein α-Teilchen'
+            'Ein α-Teilchen',
+            'Ein hochenergetisches Elektron'
           ],
           correctIndex: 1,
           explanation: 'Die Spaltung von ²³⁵U wird durch den Einfang eines langsamen (thermischen) Neutrons ausgelöst. Die freigesetzten schnellen Neutronen müssen durch einen Moderator (z. B. Wasser) abgebremst werden, um weitere Spaltungen effizient auslösen zu können.'
@@ -106,7 +111,8 @@ Die **Kernfusion** (Verschmelzung) ist die Vereinigung leichter Kerne zu einem s
             'Wasserstoff (¹H)',
             'Uran (²³⁸U)',
             'Eisen (⁵⁶Fe)',
-            'Helium (⁴He)'
+            'Helium (⁴He)',
+            'Kohlenstoff (¹²C)'
           ],
           correctIndex: 2,
           explanation: '⁵⁶Fe hat die höchste Bindungsenergie pro Nukleon (ca. 8,8 MeV). Kerne leichter als Eisen gewinnen Energie durch Fusion, Kerne schwerer als Eisen durch Spaltung — beides strebt in Richtung des Eisen-Maximums.'
@@ -137,7 +143,8 @@ Die drei Grundprinzipien des Strahlenschutzes sind: (1) **Abstand**: Die Dosisle
             'Gray (Gy)',
             'Becquerel (Bq)',
             'Sievert (Sv)',
-            'Coulomb (C)'
+            'Coulomb (C)',
+            'Joule (J)'
           ],
           correctIndex: 2,
           explanation: 'Die Äquivalentdosis in Sievert (Sv) berücksichtigt die unterschiedliche biologische Wirksamkeit verschiedener Strahlungsarten (H = D·wR). Gray (Gy) ist die Einheit der Energiedosis ohne biologische Gewichtung, Becquerel (Bq) misst die Aktivität.'
@@ -148,7 +155,8 @@ Die drei Grundprinzipien des Strahlenschutzes sind: (1) **Abstand**: Die Dosisle
             'α-Strahlung hat die größte Reichweite.',
             'α-Strahlung durchdringt den gesamten Körper.',
             'α-Strahlung hat eine sehr hohe Ionisierungsdichte und schädigt das umliegende Gewebe massiv.',
-            'α-Strahlung ist elektromagnetisch und hat hohe Energie.'
+            'α-Strahlung ist elektromagnetisch und hat hohe Energie.',
+            'α-Strahlung wird vom Magnetfeld des Körpers absorbiert.'
           ],
           correctIndex: 2,
           explanation: 'α-Teilchen haben zwar eine geringe Reichweite (werden extern durch Haut abgeschirmt), aber eine sehr hohe Ionisierungsdichte (wR = 20). Bei Inkorporation (Einatmen, Verschlucken) geben sie ihre gesamte Energie auf kleinstem Raum ab und verursachen massive lokale DNA-Schäden.'
@@ -159,7 +167,8 @@ Die drei Grundprinzipien des Strahlenschutzes sind: (1) **Abstand**: Die Dosisle
             'Sie sinkt auf 1/3',
             'Sie sinkt auf 1/6',
             'Sie sinkt auf 1/9',
-            'Sie bleibt gleich'
+            'Sie bleibt gleich',
+            'Sie sinkt auf 1/27'
           ],
           correctIndex: 2,
           explanation: 'Nach dem Abstandsquadratgesetz (I ∝ 1/r²) sinkt die Dosisleistung mit dem Quadrat des Abstands. Bei Verdreifachung des Abstands: I = I₀/3² = I₀/9, also auf ein Neuntel.'
@@ -190,7 +199,8 @@ Die **Strahlentherapie** (Radiotherapie) nutzt ionisierende Strahlung zur Behand
             'Konventionelles Röntgen',
             'Computertomographie (CT)',
             'Magnetresonanztomographie (MRT)',
-            'Positronen-Emissions-Tomographie (PET)'
+            'Positronen-Emissions-Tomographie (PET)',
+            'Szintigraphie'
           ],
           correctIndex: 2,
           explanation: 'Die MRT nutzt starke Magnetfelder und Hochfrequenzpulse (Radiowellen), keine ionisierende Strahlung. Röntgen und CT verwenden Röntgenstrahlen, PET verwendet radioaktive Tracer (Positronenstrahler).'
@@ -201,7 +211,8 @@ Die **Strahlentherapie** (Radiotherapie) nutzt ionisierende Strahlung zur Behand
             'Die Knochendichte',
             'Die Blutflussgeschwindigkeit',
             'Der Glucosestoffwechsel der Gewebe',
-            'Die Nervenleitgeschwindigkeit'
+            'Die Nervenleitgeschwindigkeit',
+            'Die Sauerstoffsättigung im Blut'
           ],
           correctIndex: 2,
           explanation: '¹⁸F-FDG (Fluordeoxyglucose) ist ein radioaktiv markiertes Glucoseanalogon, das von Zellen mit hohem Glucosestoffwechsel vermehrt aufgenommen wird. Tumorzellen zeigen typischerweise einen erhöhten Glucosestoffwechsel (Warburg-Effekt) und erscheinen daher im PET-Bild als „heiße“ Areale.'
@@ -212,7 +223,8 @@ Die **Strahlentherapie** (Radiotherapie) nutzt ionisierende Strahlung zur Behand
             'Weil die Geräte nicht genug Strahlung auf einmal erzeugen können.',
             'Weil sich gesundes Gewebe zwischen den Sitzungen besser erholen kann als Tumorgewebe.',
             'Weil Tumorzellen nur zu bestimmten Uhrzeiten strahlenempfindlich sind.',
-            'Weil die Strahlung im Körper gespeichert werden muss.'
+            'Weil die Strahlung im Körper gespeichert werden muss.',
+            'Weil die Halbwertszeit der verwendeten Isotope zu kurz ist.'
           ],
           correctIndex: 1,
           explanation: 'Die Fraktionierung nutzt den Unterschied in der DNA-Reparaturkapazität: Gesunde Zellen können DNA-Schäden zwischen den Fraktionen besser reparieren als Tumorzellen, deren Reparaturmechanismen häufig defekt sind. Dadurch wird die Tumorzerstörung maximiert und die Nebenwirkungen auf gesundes Gewebe minimiert.'

@@ -32,7 +32,8 @@ Die wichtigsten Funktionswerte sollten auswendig gelernt werden: sin(0°) = 0, s
             '√3',
             '2',
             '1',
-            '3/2'
+            '3/2',
+            '1/2'
           ],
           correctIndex: 2,
           explanation: 'Der trigonometrische Pythagoras besagt: sin²(α) + cos²(α) = 1 für jeden Winkel α. Auch konkret: (√3/2)² + (1/2)² = 3/4 + 1/4 = 1.'
@@ -43,7 +44,8 @@ Die wichtigsten Funktionswerte sollten auswendig gelernt werden: sin(0°) = 0, s
             '60°',
             '90°',
             '120°',
-            '150°'
+            '150°',
+            '135°'
           ],
           correctIndex: 2,
           explanation: 'α(°) = α(rad) · 180/π = (2π/3) · 180/π = 360/3 = 120°.'
@@ -54,7 +56,8 @@ Die wichtigsten Funktionswerte sollten auswendig gelernt werden: sin(0°) = 0, s
             '√3/2',
             '-√3/2',
             '1/2',
-            '-1/2'
+            '-1/2',
+            '√2/2'
           ],
           correctIndex: 1,
           explanation: 'cos(150°) = cos(180° - 30°) = -cos(30°) = -√3/2. Im 2. Quadrant ist der Kosinus negativ.'
@@ -85,7 +88,8 @@ Die Flächenberechnung eines Dreiecks kann auf mehrere Arten erfolgen. Die Grund
             'b = 4',
             'b = 16',
             'b = 6,25',
-            'b = 12,5'
+            'b = 12,5',
+            'b = 8'
           ],
           correctIndex: 1,
           explanation: 'Sinussatz: a/sin(α) = b/sin(β) → b = a · sin(β)/sin(α) = 10 · 0,8/0,5 = 16.'
@@ -96,7 +100,8 @@ Die Flächenberechnung eines Dreiecks kann auf mehrere Arten erfolgen. Die Grund
             'c ≈ 6,24',
             'c ≈ 4,36',
             'c ≈ 8,54',
-            'c ≈ 7,00'
+            'c ≈ 7,00',
+            'c ≈ 5,00'
           ],
           correctIndex: 0,
           explanation: 'c² = a² + b² - 2ab·cos(γ) = 25 + 49 - 2·5·7·cos(60°) = 74 - 70·0,5 = 74 - 35 = 39. c = √39 ≈ 6,24.'
@@ -107,7 +112,8 @@ Die Flächenberechnung eines Dreiecks kann auf mehrere Arten erfolgen. Die Grund
             'A = 54',
             'A = 27',
             'A = 108',
-            'A = 46,8'
+            'A = 46,8',
+            'A = 36'
           ],
           correctIndex: 1,
           explanation: 'A = (1/2)·a·b·sin(γ) = (1/2)·12·9·sin(30°) = (1/2)·12·9·0,5 = 27.'
@@ -138,7 +144,8 @@ Komplexere trigonometrische Gleichungen werden durch Substitution oder unter Ver
             'Eine Lösung',
             'Zwei Lösungen',
             'Drei Lösungen',
-            'Keine Lösung'
+            'Keine Lösung',
+            'Vier Lösungen'
           ],
           correctIndex: 1,
           explanation: 'sin(x) = 0,5 hat die Lösungen x₁ = 30° und x₂ = 180° - 30° = 150° im Intervall [0°, 360°).'
@@ -149,7 +156,8 @@ Komplexere trigonometrische Gleichungen werden durch Substitution oder unter Ver
             '30°',
             '45°',
             '60°',
-            '90°'
+            '90°',
+            '0°'
           ],
           correctIndex: 1,
           explanation: 'tan(45°) = 1, also ist arctan(1) = 45°.'
@@ -160,7 +168,8 @@ Komplexere trigonometrische Gleichungen werden durch Substitution oder unter Ver
             'x = 60° und x = 300°',
             'x = 120° und x = 240°',
             'x = 150° und x = 210°',
-            'x = 90° und x = 270°'
+            'x = 90° und x = 270°',
+            'x = 60° und x = 120°'
           ],
           correctIndex: 1,
           explanation: '2cos(x) = -1 → cos(x) = -1/2. arccos(-1/2) = 120°. Zweite Lösung: 360° - 120° = 240°.'

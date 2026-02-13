@@ -31,7 +31,8 @@ Die **Lewis-Theorie** ist die umfassendste Definition: Eine Lewis-Säure ist ein
             'Sie gibt Protonen ab.',
             'Sie nimmt Protonen auf.',
             'Sie gibt OH⁻-Ionen in Lösung ab.',
-            'Sie akzeptiert Elektronenpaare.'
+            'Sie akzeptiert Elektronenpaare.',
+            'Sie reagiert exotherm mit Wasser.'
           ],
           correctIndex: 1,
           explanation: 'Eine Brønsted-Base ist ein Protonenakzeptor — sie nimmt H⁺-Ionen auf. Option A beschreibt eine Brønsted-Säure, C eine Arrhenius-Base, D eine Lewis-Säure.'
@@ -42,7 +43,8 @@ Die **Lewis-Theorie** ist die umfassendste Definition: Eine Lewis-Säure ist ein
             'HCO₃⁻ / CO₃²⁻',
             'H₂CO₃ / HCO₃⁻',
             'HCO₃⁻ / H₂CO₃',
-            'CO₃²⁻ / HCO₃⁻'
+            'CO₃²⁻ / HCO₃⁻',
+            'H₃O⁺ / HCO₃⁻'
           ],
           correctIndex: 1,
           explanation: 'Wenn HCO₃⁻ als Base ein Proton aufnimmt, entsteht H₂CO₃ als konjugierte Säure. Das Paar ist H₂CO₃ (konjugierte Säure) / HCO₃⁻ (Base).'
@@ -53,7 +55,8 @@ Die **Lewis-Theorie** ist die umfassendste Definition: Eine Lewis-Säure ist ein
             'HCl',
             'H₂SO₄',
             'BF₃',
-            'H₃O⁺'
+            'H₃O⁺',
+            'AlCl₃'
           ],
           correctIndex: 2,
           explanation: 'BF₃ hat ein leeres p-Orbital am Bor und kann Elektronenpaare aufnehmen (Lewis-Säure), gibt aber kein Proton ab (keine Brønsted-Säure). HCl, H₂SO₄ und H₃O⁺ sind sowohl Lewis- als auch Brønsted-Säuren.'
@@ -85,7 +88,8 @@ Für die Berechnung des pH-Werts von **starken Basen** geht man ähnlich vor: F�
             'pH = 2',
             'pH = 10',
             'pH = 12',
-            'pH = 14'
+            'pH = 14',
+            'pH = 7'
           ],
           correctIndex: 2,
           explanation: 'NaOH ist eine starke Base: [OH⁻] = 0,01 = 10⁻² mol/L → pOH = 2 → pH = 14 - 2 = 12.'
@@ -96,7 +100,8 @@ Für die Berechnung des pH-Werts von **starken Basen** geht man ähnlich vor: F�
             'Faktor 2',
             'Faktor 20',
             'Faktor 100',
-            'Faktor 1000'
+            'Faktor 1000',
+            'Faktor 10'
           ],
           correctIndex: 2,
           explanation: 'Die pH-Skala ist logarithmisch. Zwischen pH 3 und pH 5 liegen 2 Einheiten, also 10² = 100-fache Konzentrationsänderung. pH 3: [H⁺] = 10⁻³, pH 5: [H⁺] = 10⁻⁵ → Faktor 100.'
@@ -107,7 +112,8 @@ Für die Berechnung des pH-Werts von **starken Basen** geht man ähnlich vor: F�
             'Kw = [H⁺] + [OH⁻] = 10⁻¹⁴',
             'Kw = [H⁺] · [OH⁻] = 10⁻⁷',
             'Kw = [H⁺] · [OH⁻] = 10⁻¹⁴ (bei 25 °C)',
-            'Kw ist unabhängig von der Temperatur'
+            'Kw ist unabhängig von der Temperatur',
+            'Kw = [H⁺]² · [OH⁻] = 10⁻¹⁴'
           ],
           correctIndex: 2,
           explanation: 'Das Ionenprodukt des Wassers ist Kw = [H⁺] · [OH⁻] = 10⁻¹⁴ mol²/L² bei 25 °C. Es ist ein Produkt (nicht Summe), und der Wert ist temperaturabhängig (steigt mit zunehmender Temperatur).'
@@ -138,7 +144,8 @@ Bei einer **Titration** wird eine Säure (oder Base) schrittweise mit einer Base
             'pH = 3,75',
             'pH = 4,75',
             'pH = 5,75',
-            'pH = 6,75'
+            'pH = 6,75',
+            'pH = 4,25'
           ],
           correctIndex: 2,
           explanation: 'Henderson-Hasselbalch: pH = 4,75 + log(0,2/0,02) = 4,75 + log(10) = 4,75 + 1 = 5,75.'
@@ -149,7 +156,8 @@ Bei einer **Titration** wird eine Säure (oder Base) schrittweise mit einer Base
             'Bei pH = 7 (neutral)',
             'Bei pH < 7 (im sauren Bereich)',
             'Bei pH > 7 (im basischen Bereich)',
-            'Bei pH = pKs'
+            'Bei pH = pKs',
+            'Bei pH = 14 - pKs'
           ],
           correctIndex: 2,
           explanation: 'Am Äquivalenzpunkt liegt nur die konjugierte Base (Acetat) vor, die schwach basisch reagiert. Daher ist der pH > 7. pH = pKs gilt am Halbäquivalenzpunkt, nicht am Äquivalenzpunkt.'
@@ -160,7 +168,8 @@ Bei einer **Titration** wird eine Säure (oder Base) schrittweise mit einer Base
             'Ammonium-Puffer (NH₃/NH₄⁺)',
             'Phosphatpuffer (H₂PO₄⁻/HPO₄²⁻)',
             'Kohlensäure-Bicarbonat-Puffer (H₂CO₃/HCO₃⁻)',
-            'Acetatpuffer (CH₃COOH/CH₃COO⁻)'
+            'Acetatpuffer (CH₃COOH/CH₃COO⁻)',
+            'Citratpuffer (Citronensäure/Citrat)'
           ],
           correctIndex: 2,
           explanation: 'Das Kohlensäure-Bicarbonat-System (H₂CO₃/HCO₃⁻) ist der wichtigste Blutpuffer. Als offenes System wird es durch Lunge (CO₂) und Niere (HCO₃⁻) reguliert und hat eine sehr hohe Pufferkapazität.'

@@ -34,7 +34,8 @@ Die hormonelle Regulation der männlichen Fortpflanzungsfunktion erfolgt über d
             'Spermatogonien',
             'Primäre Spermatozyten',
             'Spermatiden',
-            'Sertoli-Zellen'
+            'Sertoli-Zellen',
+            'Leydig-Zellen'
           ],
           correctIndex: 1,
           explanation: 'Die primären Spermatozyten (2n) durchlaufen die Meiose I und bilden die haploiden sekundären Spermatozyten (1n). Spermatogonien teilen sich mitotisch zu primären Spermatozyten.'
@@ -45,7 +46,8 @@ Die hormonelle Regulation der männlichen Fortpflanzungsfunktion erfolgt über d
             'Produktion von Testosteron',
             'Ernährung und Schutz der reifenden Keimzellen sowie Bildung der Blut-Hoden-Schranke',
             'Produktion von GnRH',
-            'Bildung des Akrosoms der Spermien'
+            'Bildung des Akrosoms der Spermien',
+            'Sekretion von LH und FSH'
           ],
           correctIndex: 1,
           explanation: 'Sertoli-Zellen ernähren und schützen die sich entwickelnden Keimzellen, bilden die Blut-Hoden-Schranke und produzieren Inhibin B. Testosteron wird von Leydig-Zellen produziert.'
@@ -56,7 +58,8 @@ Die hormonelle Regulation der männlichen Fortpflanzungsfunktion erfolgt über d
             'Östrogen',
             'Progesteron',
             'Inhibin B',
-            'GnRH'
+            'GnRH',
+            'Testosteron'
           ],
           correctIndex: 2,
           explanation: 'Inhibin B wird von den Sertoli-Zellen produziert und hemmt selektiv die FSH-Sekretion der Adenohypophyse im Sinne eines negativen Feedbacks.'
@@ -91,7 +94,8 @@ Der Uterus (Gebärmutter) ist ein birnenförmiges, muskuläres Hohlorgan, das si
             'Ca. 400–500',
             'Ca. 50.000',
             'Ca. 1–2 Millionen',
-            'Ca. 10 Millionen'
+            'Ca. 10 Millionen',
+            'Ca. 100.000'
           ],
           correctIndex: 2,
           explanation: 'Bei Geburt sind ca. 1–2 Millionen Primärfollikel vorhanden. Durch Atresie sinkt die Zahl bis zur Pubertät auf ca. 300.000–400.000. Nur ca. 400–500 Eizellen ovulieren im Laufe des Lebens.'
@@ -102,7 +106,8 @@ Der Uterus (Gebärmutter) ist ein birnenförmiges, muskuläres Hohlorgan, das si
             'Noch vor der Geburt',
             'In der Pubertät',
             'Bei der Ovulation',
-            'Erst bei der Befruchtung durch ein Spermium'
+            'Erst bei der Befruchtung durch ein Spermium',
+            'Während der Follikelreifung im Ovar'
           ],
           correctIndex: 3,
           explanation: 'Die Meiose II wird erst durch das Eindringen des Spermiums in die sekundäre Oozyte vollendet. Vorher arretiert die Eizelle in der Metaphase II.'
@@ -113,7 +118,8 @@ Der Uterus (Gebärmutter) ist ein birnenförmiges, muskuläres Hohlorgan, das si
             'Im Uterus (Cavum uteri)',
             'In der Ampulla des Eileiters',
             'Im Ovar',
-            'In der Cervix uteri'
+            'In der Cervix uteri',
+            'Im Isthmus des Eileiters'
           ],
           correctIndex: 1,
           explanation: 'Die Befruchtung findet normalerweise in der Ampulla (erweiterter Teil) des Eileiters statt. Die befruchtete Eizelle wandert dann in den Uterus zur Implantation.'
@@ -149,7 +155,8 @@ Nach der Ovulation beginnt die Lutealphase (Tag 15–28). Der kollabierte Follik
             'FSH',
             'LH',
             'Östradiol',
-            'Progesteron'
+            'Progesteron',
+            'Testosteron'
           ],
           correctIndex: 3,
           explanation: 'Progesteron aus dem Corpus luteum bewirkt die sekretorische Transformation des Endometriums mit Drüsenschlängelung, Glykogeneinlagerung und Stromaödem — optimale Voraussetzungen für eine Implantation.'
@@ -160,7 +167,8 @@ Nach der Ovulation beginnt die Lutealphase (Tag 15–28). Der kollabierte Follik
             'Ca. 5 Tage',
             'Ca. 7 Tage',
             'Ca. 14 Tage',
-            'Ca. 21 Tage'
+            'Ca. 21 Tage',
+            'Ca. 10 Tage'
           ],
           correctIndex: 2,
           explanation: 'Die Lutealphase ist mit ca. 14 Tagen relativ konstant. Variationen der Zykluslänge entstehen hauptsächlich durch Unterschiede in der Follikelphase.'
@@ -171,7 +179,8 @@ Nach der Ovulation beginnt die Lutealphase (Tag 15–28). Der kollabierte Follik
             'Er wird zum Corpus luteum graviditatis',
             'Er degeneriert zum Corpus albicans',
             'Er bildet sich zum Graaf-Follikel zurück',
-            'Er persistiert bis zur nächsten Ovulation'
+            'Er persistiert bis zur nächsten Ovulation',
+            'Er wird durch FSH in einen neuen Follikel umgewandelt'
           ],
           correctIndex: 1,
           explanation: 'Ohne Befruchtung (und damit ohne HCG-Stimulation) degeneriert der Gelbkörper nach ca. 12–14 Tagen zum narbigen Corpus albicans. Der Progesteronabfall löst die Menstruation aus.'
@@ -206,7 +215,8 @@ In der dritten Entwicklungswoche findet die Gastrulation statt — ein fundament
             'Ein 8-Zell-Stadium mit inneren und äußeren Blastomeren',
             'Eine Hohlkugel mit Trophoblast (äußere Zellschicht) und Embryoblast (innere Zellmasse)',
             'Ein kompaktes Zellstadium mit Ektoderm und Entoderm',
-            'Ein Follikelstadium mit Granulosazellen und Thekazellen'
+            'Ein Follikelstadium mit Granulosazellen und Thekazellen',
+            'Ein Zellstadium mit Synzytiotrophoblast und Zytotrophoblast'
           ],
           correctIndex: 1,
           explanation: 'Die Blastozyste entsteht am Tag 4–5 und besteht aus dem Trophoblasten (äußere Schicht, bildet Plazentaanteile) und dem Embryoblasten (innere Zellmasse, bildet den Embryo).'
@@ -217,7 +227,8 @@ In der dritten Entwicklungswoche findet die Gastrulation statt — ein fundament
             'Mesoderm',
             'Entoderm',
             'Ektoderm',
-            'Trophoblast'
+            'Trophoblast',
+            'Endoderm'
           ],
           correctIndex: 2,
           explanation: 'Das Nervensystem (Gehirn und Rückenmark) entwickelt sich aus dem Ektoderm durch den Prozess der Neurulation (Bildung des Neuralrohrs). Das Ektoderm bildet auch Epidermis und Sinnesorgane.'
@@ -228,7 +239,8 @@ In der dritten Entwicklungswoche findet die Gastrulation statt — ein fundament
             'Tag 1–2 nach Befruchtung',
             'Tag 3–4 nach Befruchtung',
             'Tag 6–7 nach Befruchtung',
-            'Tag 14 nach Befruchtung'
+            'Tag 14 nach Befruchtung',
+            'Tag 10–12 nach Befruchtung'
           ],
           correctIndex: 2,
           explanation: 'Die Implantation (Nidation) der Blastozyste in das sekretorisch umgewandelte Endometrium erfolgt am 6.–7. Tag nach der Befruchtung.'
@@ -263,7 +275,8 @@ Die Geburt (Partus) wird durch ein komplexes Zusammenspiel hormoneller und mecha
             'Progesteron aus dem Corpus luteum',
             'Östradiol aus den Ovarien',
             'HCG aus dem Synzytiotrophoblasten',
-            'Oxytocin aus der Neurohypophyse'
+            'Oxytocin aus der Neurohypophyse',
+            'HPL aus der reifen Plazenta'
           ],
           correctIndex: 2,
           explanation: 'HCG (humanes Choriongonadotropin) wird vom Synzytiotrophoblasten der sich einnistenden Blastozyste produziert und ist im Urin und Blut der Schwangeren nachweisbar — es bildet die Grundlage des Schwangerschaftstests.'
@@ -274,7 +287,8 @@ Die Geburt (Partus) wird durch ein komplexes Zusammenspiel hormoneller und mecha
             '4.–6. Woche',
             '10.–12. Woche',
             '20.–22. Woche',
-            '36.–38. Woche'
+            '36.–38. Woche',
+            '6.–8. Woche'
           ],
           correctIndex: 1,
           explanation: 'Der HCG-Spiegel erreicht sein Maximum in der 10.–12. SSW und fällt danach ab, da die Plazenta ab diesem Zeitpunkt selbst ausreichend Progesteron produzieren kann.'
@@ -285,7 +299,8 @@ Die Geburt (Partus) wird durch ein komplexes Zusammenspiel hormoneller und mecha
             'Hemmung der Uteruskontraktionen und Förderung der Zervixreifung',
             'Stimulation der Myometriumkontraktionen (Wehen), Uterusinvolution und Milchejektionsreflex',
             'Produktion von Surfactant in der fetalen Lunge',
-            'Aufrechterhaltung des Corpus luteum graviditatis'
+            'Aufrechterhaltung des Corpus luteum graviditatis',
+            'Förderung der Zervixreifung durch Prostaglandinsynthese'
           ],
           correctIndex: 1,
           explanation: 'Oxytocin stimuliert die Kontraktionen des Myometriums (Wehen), fördert postpartal die Uterusrückbildung (Involution) und löst den Milchejektionsreflex beim Stillen aus. Es stärkt zudem die Mutter-Kind-Bindung.'
