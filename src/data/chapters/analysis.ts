@@ -299,7 +299,7 @@ Der <strong>Hauptsatz der Differential- und Integralrechnung</strong> besagt:
 • Ableitung der Stammfunktion gibt die Ausgangsfunktion: (∫f(x)dx)' = f(x)
 • Integration der Ableitung gibt die Ausgangsfunktion (bis auf Konstante): ∫f'(x)dx = f(x) + C
 
-Ableitung und Integration sind also <strong>zueinander inverse Operationen</strong>.`,
+Ableitung und Integration sind also <strong>züinander inverse Operationen</strong>.`,
       merke:
         "Integration ist die <strong>Umkehrung</strong> der Ableitung. Stammfunktion von xⁿ ist <strong>xⁿ⁺¹/(n+1)</strong>. ACHTUNG: Bei x⁻¹ = 1/x ist die Stammfunktion <strong>ln|x|</strong> (nicht x⁰/0!).",
     },

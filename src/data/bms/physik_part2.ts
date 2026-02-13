@@ -7,7 +7,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "mechanik",
     topic: "Newtons drittes Gesetz",
-    text: "Ein Astronaut (m = 80 kg) stoesst sich im Weltraum von einer Raumstation (m = 20000 kg) ab und erreicht dabei eine Geschwindigkeit von 1 m/s. Welche Geschwindigkeit erhält die Raumstation?",
+    text: "Ein Astronaut (m = 80 kg) stösst sich im Weltraum von einer Raumstation (m = 20000 kg) ab und erreicht dabei eine Geschwindigkeit von 1 m/s. Welche Geschwindigkeit erhält die Raumstation?",
     options: [
       { id: "a", text: "1 m/s in Gegenrichtung" },
       { id: "b", text: "0,04 m/s in gleicher Richtung" },
@@ -44,8 +44,8 @@ export const physikQuestionsPart2: Question[] = [
     id: "phys-43",
     subject: "physik",
     chapter: "mechanik",
-    topic: "Elastischer Stoss",
-    text: "Zwei Körper gleicher Masse stossen zentral und vollkommen elastisch zusammen. Körper 1 hat v₁ = 6 m/s, Körper 2 ruht. Welche Geschwindigkeiten haben sie nach dem Stoss?",
+    topic: "Elastischer Stoß",
+    text: "Zwei Körper gleicher Masse stoßen zentral und vollkommen elastisch zusammen. Körper 1 hat v₁ = 6 m/s, Körper 2 ruht. Welche Geschwindigkeiten haben sie nach dem Stoß?",
     options: [
       { id: "a", text: "v₁' = 3 m/s, v₂' = 3 m/s" },
       { id: "b", text: "v₁' = 6 m/s, v₂' = 0 m/s" },
@@ -55,9 +55,9 @@ export const physikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Beim zentralen, elastischen Stoss gleicher Massen tauschen die Körper ihre Geschwindigkeiten vollständig aus. Körper 1 bleibt stehen (v₁' = 0), Körper 2 übernimmt die gesamte Geschwindigkeit (v₂' = 6 m/s). Dies folgt gleichzeitig aus Impuls- und Energieerhaltung.",
+      "Beim zentralen, elastischen Stoß gleicher Massen tauschen die Körper ihre Geschwindigkeiten vollständig aus. Körper 1 bleibt stehen (v₁' = 0), Körper 2 übernimmt die gesamte Geschwindigkeit (v₂' = 6 m/s). Dies folgt gleichzeitig aus Impuls- und Energieerhaltung.",
     difficulty: "mittel",
-    tags: ["elastischer-stoss", "impulserhaltung", "energieerhaltung"],
+    tags: ["elastischer-stoß", "impulserhaltung", "energieerhaltung"],
   },
   {
     id: "phys-44",
@@ -323,7 +323,7 @@ export const physikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Kirchhoffsche Knotenregel: Die Summe aller Stroeme in einem Knoten ist Null. I₁ + I₂ + I₃ = 0 → 3 + 5 + I₃ = 0 → I₃ = -8 A. Es fließen 8 A aus dem Knoten heraus.",
+      "Kirchhoffsche Knotenregel: Die Summe aller Ströme in einem Knoten ist Null. I₁ + I₂ + I₃ = 0 → 3 + 5 + I₃ = 0 → I₃ = -8 A. Es fließen 8 A aus dem Knoten heraus.",
     difficulty: "leicht",
     tags: ["kirchhoff", "knotenregel", "strom", "berechnung"],
   },
@@ -513,7 +513,7 @@ export const physikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Transformatorgleichung: U₁/U₂ = N₁/N₂ → U₂ = U₁ × N₂/N₁ = 230 × 50/500 = 230 × 0,1 = 23 V. Es handelt sich um einen Abwaertstransformator.",
+      "Transformatorgleichung: U₁/U₂ = N₁/N₂ → U₂ = U₁ × N₂/N₁ = 230 × 50/500 = 230 × 0,1 = 23 V. Es handelt sich um einen Abwärtstransformator.",
     difficulty: "mittel",
     tags: ["transformator", "windungszahl", "berechnung"],
   },
@@ -591,7 +591,7 @@ export const physikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "sin(αc) = n₂/n₁ = 1/1,33 = 0,752 → αc = sin⁻¹(0,752) ≈ 48,8°. Totalreflexion tritt auf, wenn Licht vom optisch dichteren ins optisch dünnere Medium geht und der Einfallswinkel den Grenzwinkel uebersteigt.",
+      "sin(αc) = n₂/n₁ = 1/1,33 = 0,752 → αc = sin⁻¹(0,752) ≈ 48,8°. Totalreflexion tritt auf, wenn Licht vom optisch dichteren ins optisch dünnere Medium geht und der Einfallswinkel den Grenzwinkel übersteigt.",
     difficulty: "mittel",
     tags: ["totalreflexion", "brechung", "grenzwinkel", "berechnung"],
   },
@@ -638,7 +638,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "optik",
     topic: "Hohlspiegel",
-    text: "Ein Hohlspiegel hat den Kruemmungsradius r = 40 cm. In welcher Entfernung vom Spiegel muss ein Gegenstand stehen, damit ein gleich großes, reelles Bild entsteht?",
+    text: "Ein Hohlspiegel hat den Krümmungsradius r = 40 cm. In welcher Entfernung vom Spiegel muss ein Gegenstand stehen, damit ein gleich großes, reelles Bild entsteht?",
     options: [
       { id: "a", text: "20 cm" },
       { id: "b", text: "40 cm" },
@@ -699,7 +699,7 @@ export const physikQuestionsPart2: Question[] = [
     options: [
       { id: "a", text: "Rot" },
       { id: "b", text: "Gelb" },
-      { id: "c", text: "Gruen" },
+      { id: "c", text: "Grün" },
       { id: "d", text: "Blau" },
       { id: "e", text: "Violett" },
     ],
@@ -755,16 +755,16 @@ export const physikQuestionsPart2: Question[] = [
     text: "Ein ebener Spiegel erzeugt ein Bild eines Gegenstandes, der 3 m vor dem Spiegel steht. Welche Eigenschaften hat dieses Bild?",
     options: [
       { id: "a", text: "Reell, aufrecht, gleichgross, 3 m hinter dem Spiegel" },
-      { id: "b", text: "Virtuell, umgekehrt, verkleinert, 3 m hinter dem Spiegel" },
+      { id: "b", text: "Virtüll, umgekehrt, verkleinert, 3 m hinter dem Spiegel" },
       { id: "c", text: "Reell, umgekehrt, gleichgross, 3 m vor dem Spiegel" },
-      { id: "d", text: "Virtuell, aufrecht, gleichgross, 3 m hinter dem Spiegel" },
-      { id: "e", text: "Virtuell, aufrecht, vergrößert, 6 m hinter dem Spiegel" },
+      { id: "d", text: "Virtüll, aufrecht, gleichgross, 3 m hinter dem Spiegel" },
+      { id: "e", text: "Virtüll, aufrecht, vergrößert, 6 m hinter dem Spiegel" },
     ],
     correctOptionId: "d",
     explanation:
-      "Ein ebener Spiegel erzeugt stets ein virtuelles, aufrechtes und gleichgroßes Bild. Der Bildabstand hinter dem Spiegel entspricht dem Gegenstandsabstand vor dem Spiegel (hier 3 m). Das Bild ist seitenvertauscht.",
+      "Ein ebener Spiegel erzeugt stets ein virtülles, aufrechtes und gleichgroßes Bild. Der Bildabstand hinter dem Spiegel entspricht dem Gegenstandsabstand vor dem Spiegel (hier 3 m). Das Bild ist seitenvertauscht.",
     difficulty: "leicht",
-    tags: ["ebener-spiegel", "virtuelles-bild", "reflexion"],
+    tags: ["ebener-spiegel", "virtülles-bild", "reflexion"],
   },
 
   // ── wärmelehre (10 Fragen: phys-81 bis phys-90) ───────────────────
@@ -849,7 +849,7 @@ export const physikQuestionsPart2: Question[] = [
     subject: "physik",
     chapter: "wärmelehre",
     topic: "Wärmeausdehnung",
-    text: "Ein Stahlstab (Länge l₀ = 2 m, Längenausdehnungskoeffizient α = 12 × 10⁻⁶ K⁻¹) wird um ΔT = 50 K erwärmt. Um wie viel verlängert sich der Stab?",
+    text: "Ein Stahlstab (Länge l₀ = 2 m, Längenausdehnungsköffizient α = 12 × 10⁻⁶ K⁻¹) wird um ΔT = 50 K erwärmt. Um wie viel verlängert sich der Stab?",
     options: [
       { id: "a", text: "0,12 mm" },
       { id: "b", text: "12 mm" },
@@ -886,7 +886,7 @@ export const physikQuestionsPart2: Question[] = [
     id: "phys-87",
     subject: "physik",
     chapter: "wärmelehre",
-    topic: "Phasenuebergänge",
+    topic: "Phasenübergänge",
     text: "Wie viel Energie wird benötigt, um 0,1 kg Wasser bei 100°C vollständig zu verdampfen? (Verdampfungswärme L_v = 2260 kJ/kg)",
     options: [
       { id: "a", text: "226 kJ" },
@@ -1118,7 +1118,7 @@ export const physikQuestionsPart2: Question[] = [
     id: "phys-99",
     subject: "physik",
     chapter: "kernphysik",
-    topic: "Photoelektrischer Effekt",
+    topic: "Photölektrischer Effekt",
     text: "Die Austrittsarbeit eines Metalls beträgt W_A = 4,0 eV. Welche maximale kinetische Energie haben die ausgelösten Elektronen bei Bestrahlung mit Photonen der Energie E = 6,5 eV?",
     options: [
       { id: "a", text: "6,5 eV" },
@@ -1129,9 +1129,9 @@ export const physikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Einsteins Gleichung für den Photoeffekt: E_kin,max = E_Photon - W_A = 6,5 eV - 4,0 eV = 2,5 eV. Die Energie des Photons muss größer als die Austrittsarbeit sein, damit Elektronen ausgelöst werden. Die ueberschuessige Energie wird zur kinetischen Energie der Elektronen.",
+      "Einsteins Gleichung für den Photöffekt: E_kin,max = E_Photon - W_A = 6,5 eV - 4,0 eV = 2,5 eV. Die Energie des Photons muss größer als die Austrittsarbeit sein, damit Elektronen ausgelöst werden. Die überschüssige Energie wird zur kinetischen Energie der Elektronen.",
     difficulty: "mittel",
-    tags: ["photoeffekt", "einstein", "austrittsarbeit", "berechnung"],
+    tags: ["photöffekt", "einstein", "austrittsarbeit", "berechnung"],
   },
   {
     id: "phys-100",

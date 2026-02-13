@@ -45,7 +45,7 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "zellbiologie",
     topic: "Zellteilung",
-    text: "In welcher Phase der Mitose ordnen sich die Chromosomen in der Aequatorialebene der Zelle an?",
+    text: "In welcher Phase der Mitose ordnen sich die Chromosomen in der Äquatorialebene der Zelle an?",
     options: [
       { id: "a", text: "Prophase" },
       { id: "b", text: "Prometaphase" },
@@ -55,7 +55,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "In der Metaphase ordnen sich die Chromosomen in der Aequatorialebene (Metaphasenplatte) der Zelle an. Die Spindelfasern sind an den Kinetochoren der Chromosomen befestigt, und jedes Chromosom ist mit beiden Polen verbunden. Erst wenn alle Chromosomen korrekt angeordnet sind, wird der Übergang zur Anaphase eingeleitet.",
+      "In der Metaphase ordnen sich die Chromosomen in der Äquatorialebene (Metaphasenplatte) der Zelle an. Die Spindelfasern sind an den Kinetochoren der Chromosomen befestigt, und jedes Chromosom ist mit beiden Polen verbunden. Erst wenn alle Chromosomen korrekt angeordnet sind, wird der Übergang zur Anaphase eingeleitet.",
     difficulty: "leicht",
     tags: ["zellbiologie", "zellteilung", "mitose"],
   },
@@ -131,7 +131,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Lysosomen sind membranumhüllte Organellen, die hydrolytische Enzyme (saure Hydrolasen) enthalten und für den intrazellulären Abbau von Makromolekuelen und Organellen zuständig sind. Bei der Autophagie werden beschädigte Organellen oder ueberflüssige Zellbestandteile in Autophagosomen eingeschlossen, die dann mit Lysosomen fusionieren, sodass der Inhalt abgebaut werden kann.",
+      "Lysosomen sind membranumhüllte Organellen, die hydrolytische Enzyme (saure Hydrolasen) enthalten und für den intrazellulären Abbau von Makromolekülen und Organellen zuständig sind. Bei der Autophagie werden beschädigte Organellen oder überflüssige Zellbestandteile in Autophagosomen eingeschlossen, die dann mit Lysosomen fusionieren, sodass der Inhalt abgebaut werden kann.",
     difficulty: "leicht",
     tags: ["zellbiologie", "organellen", "lysosomen", "autophagie"],
   },
@@ -150,7 +150,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Am G2/M-Kontrollpunkt wird überprüft, ob die DNA vollständig repliziert wurde und ob DNA-Schäden vorliegen. Nur wenn die Replikation abgeschlossen ist und keine Schäden detektiert werden, wird der Eintritt in die Mitose freigegeben. Der G1/S-Kontrollpunkt prüft hingegen Zellgröße und Wachstumsfaktoren. Der Spindelkontrollpunkt in der Metaphase ueberwacht die korrekte Anheftung der Chromosomen an die Spindelfasern.",
+      "Am G2/M-Kontrollpunkt wird überprüft, ob die DNA vollständig repliziert wurde und ob DNA-Schäden vorliegen. Nur wenn die Replikation abgeschlossen ist und keine Schäden detektiert werden, wird der Eintritt in die Mitose freigegeben. Der G1/S-Kontrollpunkt prüft hingegen Zellgröße und Wachstumsfaktoren. Der Spindelkontrollpunkt in der Metaphase überwacht die korrekte Anheftung der Chromosomen an die Spindelfasern.",
     difficulty: "schwer",
     tags: ["zellbiologie", "zellteilung", "zellzyklus", "kontrollpunkte"],
   },
@@ -323,7 +323,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "In der RNA wird Thymin durch Uracil ersetzt. Uracil paart sich wie Thymin über zwei Wasserstoffbrückenbindungen mit Adenin. Weitere Unterschiede zwischen DNA und RNA: RNA enthält Ribose statt Desoxyribose als Zuckerkomponente und liegt meist einzelstraengig vor, während DNA doppelstraengig ist.",
+      "In der RNA wird Thymin durch Uracil ersetzt. Uracil paart sich wie Thymin über zwei Wasserstoffbrückenbindungen mit Adenin. Weitere Unterschiede zwischen DNA und RNA: RNA enthält Ribose statt Desoxyribose als Zuckerkomponente und liegt meist einzelsträngig vor, während DNA doppelsträngig ist.",
     difficulty: "leicht",
     tags: ["genetik", "DNA", "RNA", "basen"],
   },
@@ -351,7 +351,7 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "genetik",
     topic: "Translation",
-    text: "An welcher Stelle des Ribosoms bindet die Aminoacyl-tRNA während der Translation zuerst?",
+    text: "An welcher Stelle des Ribosoms bindet die Aminoacyl-tRNA während der Translation zürst?",
     options: [
       { id: "a", text: "A-Stelle (Aminoacyl-Stelle)" },
       { id: "b", text: "P-Stelle (Peptidyl-Stelle)" },
@@ -361,7 +361,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Die Aminoacyl-tRNA bindet während der Elongationsphase der Translation zuerst an die A-Stelle (Aminoacyl-Stelle) des Ribosoms. Dort wird das Anticodon der tRNA mit dem Codon der mRNA abgeglichen. Anschließend wird die Peptidbindung geknüpft, die wachsende Peptidkette auf die neue tRNA übertragen und das Ribosom transloziert, wodurch die tRNA von der A-Stelle zur P-Stelle und von der P-Stelle zur E-Stelle rückt.",
+      "Die Aminoacyl-tRNA bindet während der Elongationsphase der Translation zürst an die A-Stelle (Aminoacyl-Stelle) des Ribosoms. Dort wird das Anticodon der tRNA mit dem Codon der mRNA abgeglichen. Anschließend wird die Peptidbindung geknüpft, die wachsende Peptidkette auf die neue tRNA übertragen und das Ribosom transloziert, wodurch die tRNA von der A-Stelle zur P-Stelle und von der P-Stelle zur E-Stelle rückt.",
     difficulty: "mittel",
     tags: ["genetik", "translation", "ribosom"],
   },
@@ -393,13 +393,13 @@ export const biologieQuestionsPart1: Question[] = [
     options: [
       { id: "a", text: "Prophase II" },
       { id: "b", text: "Metaphase I" },
-      { id: "c", text: "Prophase I (Pachytaen)" },
+      { id: "c", text: "Prophase I (Pachytän)" },
       { id: "d", text: "Anaphase I" },
       { id: "e", text: "Interphase" },
     ],
     correctOptionId: "c",
     explanation:
-      "Crossing-over findet in der Prophase I der Meiose statt, genauer im Pachytaen-Stadium. Dabei lagern sich die homologen Chromosomen im Synaptonemalkomplex eng aneinander (Bivalente/Tetraden), und es kommt zu einem reziproken Austausch von Chromatidensegmenten zwischen nicht-schwesterlichen Chromatiden. Dies führt zu intrachromosomaler Rekombination und erhöhter genetischer Vielfalt.",
+      "Crossing-over findet in der Prophase I der Meiose statt, genauer im Pachytän-Stadium. Dabei lagern sich die homologen Chromosomen im Synaptonemalkomplex eng aneinander (Bivalente/Tetraden), und es kommt zu einem reziproken Austausch von Chromatidensegmenten zwischen nicht-schwesterlichen Chromatiden. Dies führt zu intrachromosomaler Rekombination und erhöhter genetischer Vielfalt.",
     difficulty: "mittel",
     tags: ["genetik", "crossing-over", "meiose", "rekombination"],
   },
@@ -418,7 +418,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Zwischen Guanin und Cytosin bestehen 3 Wasserstoffbrückenbindungen, während zwischen Adenin und Thymin (bzw. Uracil in der RNA) nur 2 Wasserstoffbrückenbindungen bestehen. Deshalb ist DNA mit höherem GC-Gehalt thermisch stabiler und hat einen höheren Schmelzpunkt (Tm). Die Chargaff-Regeln besagen, dass in doppelstraengiger DNA die Menge an G gleich der Menge an C ist und A gleich T.",
+      "Zwischen Guanin und Cytosin bestehen 3 Wasserstoffbrückenbindungen, während zwischen Adenin und Thymin (bzw. Uracil in der RNA) nur 2 Wasserstoffbrückenbindungen bestehen. Deshalb ist DNA mit höherem GC-Gehalt thermisch stabiler und hat einen höheren Schmelzpunkt (Tm). Die Chargaff-Regeln besagen, dass in doppelsträngiger DNA die Menge an G gleich der Menge an C ist und A gleich T.",
     difficulty: "mittel",
     tags: ["genetik", "DNA", "wasserstoffbrücken", "basenpaarung"],
   },
@@ -513,7 +513,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Die Helikase entwindet die DNA-Doppelhelix, indem sie die Wasserstoffbrückenbindungen zwischen den komplementären Basen aufbricht. Sie bewegt sich entlang der DNA und öffnet die Replikationsgabel. Einzelstrangbindeproteine (SSB) stabilisieren die Einzelstraenge. Die Topoisomerase löst die Überspiralisierung vor der Replikationsgabel, die DNA-Polymerase synthetisiert den neuen Strang, die Primase setzt RNA-Primer, und die Ligase verbindet Okazaki-Fragmente.",
+      "Die Helikase entwindet die DNA-Doppelhelix, indem sie die Wasserstoffbrückenbindungen zwischen den komplementären Basen aufbricht. Sie bewegt sich entlang der DNA und öffnet die Replikationsgabel. Einzelstrangbindeproteine (SSB) stabilisieren die Einzelstränge. Die Topoisomerase löst die Überspiralisierung vor der Replikationsgabel, die DNA-Polymerase synthetisiert den neuen Strang, die Primase setzt RNA-Primer, und die Ligase verbindet Okazaki-Fragmente.",
     difficulty: "mittel",
     tags: ["genetik", "DNA", "replikation", "helikase"],
   },
@@ -800,7 +800,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "Während der Ventrikelsystole (Kammerkontraktion) steigt der Druck in den Kammern an. Zunächst schließen sich die Segelklappen (Mitral- und Trikuspidalklappe), was den 1. Herzton erzeugt (isovolumetrische Anspannungsphase). Wenn der Druck in den Kammern den Druck in Aorta bzw. Truncus pulmonalis uebersteigt, öffnen sich die Taschenklappen (Aorten- und Pulmonalklappe), und das Blut wird ausgeworfen (Austreibungsphase).",
+      "Während der Ventrikelsystole (Kammerkontraktion) steigt der Druck in den Kammern an. Zunächst schließen sich die Segelklappen (Mitral- und Trikuspidalklappe), was den 1. Herzton erzeugt (isovolumetrische Anspannungsphase). Wenn der Druck in den Kammern den Druck in Aorta bzw. Truncus pulmonalis übersteigt, öffnen sich die Taschenklappen (Aorten- und Pulmonalklappe), und das Blut wird ausgeworfen (Austreibungsphase).",
     difficulty: "mittel",
     tags: ["herz-kreislauf", "blutkreislauf", "herzzyklus", "systole"],
   },
@@ -830,10 +830,10 @@ export const biologieQuestionsPart1: Question[] = [
     topic: "Erregungsleitung",
     text: "Welche Eigenfrequenz hat der AV-Knoten als sekundärer Schrittmacher, wenn der Sinusknoten ausfällt?",
     options: [
-      { id: "a", text: "100-120 Schlaege pro Minute" },
-      { id: "b", text: "60-80 Schlaege pro Minute" },
-      { id: "c", text: "40-60 Schlaege pro Minute" },
-      { id: "d", text: "20-40 Schlaege pro Minute" },
+      { id: "a", text: "100-120 Schläge pro Minute" },
+      { id: "b", text: "60-80 Schläge pro Minute" },
+      { id: "c", text: "40-60 Schläge pro Minute" },
+      { id: "d", text: "20-40 Schläge pro Minute" },
       { id: "e", text: "10-20 Schläge pro Minute" },
     ],
     correctOptionId: "c",
@@ -878,7 +878,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Das Axon (Neurit) ist der lange Fortsatz des Neurons, der das Aktionspotential vom Zellkörper (Soma) weg zur Synapse leitet. Am Axonhuegel entsteht das Aktionspotential, wenn das Schwellenpotential ueberschritten wird. Das Axon kann myelinisiert sein (von Schwann-Zellen im PNS oder Oligodendrozyten im ZNS), was die saltatorische Erregungsleitung ermöglicht. Dendriten empfangen Signale und leiten sie zum Zellkörper.",
+      "Das Axon (Neurit) ist der lange Fortsatz des Neurons, der das Aktionspotential vom Zellkörper (Soma) weg zur Synapse leitet. Am Axonhügel entsteht das Aktionspotential, wenn das Schwellenpotential überschritten wird. Das Axon kann myelinisiert sein (von Schwann-Zellen im PNS oder Oligodendrozyten im ZNS), was die saltatorische Erregungsleitung ermöglicht. Dendriten empfangen Signale und leiten sie zum Zellkörper.",
     difficulty: "leicht",
     tags: ["nervensystem", "neuron", "axon"],
   },
@@ -897,7 +897,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "e",
     explanation:
-      "An der motorischen Endplatte (neuromuskuläre Synapse) wird Acetylcholin (ACh) als Neurotransmitter freigesetzt. Es bindet an nikotinische Acetylcholinrezeptoren auf der Muskelfaser, was zur Depolarisation und letztlich zur Muskelkontraktion führt. Acetylcholin wird durch die Acetylcholinesterase im synaptischen Spalt schnell abgebaut. Curare blockiert diese Rezeptoren und führt zu Muskellaefhmung.",
+      "An der motorischen Endplatte (neuromuskuläre Synapse) wird Acetylcholin (ACh) als Neurotransmitter freigesetzt. Es bindet an nikotinische Acetylcholinrezeptoren auf der Muskelfaser, was zur Depolarisation und letztlich zur Muskelkontraktion führt. Acetylcholin wird durch die Acetylcholinesterase im synaptischen Spalt schnell abgebaut. Curare blockiert diese Rezeptoren und führt zu Muskelläfhmung.",
     difficulty: "leicht",
     tags: ["nervensystem", "synapse", "acetylcholin", "motorische-endplatte"],
   },
@@ -906,7 +906,7 @@ export const biologieQuestionsPart1: Question[] = [
     subject: "biologie",
     chapter: "nervensystem",
     topic: "Aktionspotential",
-    text: "Welche Ionenkanäle öffnen sich zuerst bei der Depolarisation während eines Aktionspotentials?",
+    text: "Welche Ionenkanäle öffnen sich zürst bei der Depolarisation während eines Aktionspotentials?",
     options: [
       { id: "a", text: "Spannungsgesteuerte Natriumkanäle" },
       { id: "b", text: "Spannungsgesteuerte Kaliumkanäle" },
@@ -916,7 +916,7 @@ export const biologieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Bei Erreichen des Schwellenpotentials (ca. -55 mV) öffnen sich zuerst die spannungsgesteuerten Natriumkanäle. Na+-Ionen stroemen aufgrund ihres elektrochemischen Gradienten in die Zelle, was zu einer raschen Depolarisation bis ca. +30 mV führt (aufsteigender Ast des Aktionspotentials). Anschließend inaktivieren die Na+-Kanäle und die spannungsgesteuerten Kaliumkanäle öffnen sich verzögert, was zur Repolarisation führt.",
+      "Bei Erreichen des Schwellenpotentials (ca. -55 mV) öffnen sich zürst die spannungsgesteuerten Natriumkanäle. Na+-Ionen strömen aufgrund ihres elektrochemischen Gradienten in die Zelle, was zu einer raschen Depolarisation bis ca. +30 mV führt (aufsteigender Ast des Aktionspotentials). Anschließend inaktivieren die Na+-Kanäle und die spannungsgesteuerten Kaliumkanäle öffnen sich verzögert, was zur Repolarisation führt.",
     difficulty: "mittel",
     tags: ["nervensystem", "aktionspotential", "natriumkanäle", "depolarisation"],
   },

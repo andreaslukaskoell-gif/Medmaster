@@ -13,7 +13,7 @@ export const fragenPart5 = [
       'Sie ist unabhängig von Calcium-Ionen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei der Akrosomreaktion werden hydrolytische Enzyme aus dem Akrosom des Spermiums freigesetzt, die die Zona pellucida der Eizelle enzymatisch durchdringen. Dies ermöglicht dem Spermium, die Eizellmembran zu erreichen. Die Reaktion ist calcium-abhängig und findet vor der Kernverschmelzung statt.',
+    erklärung: 'Bei der Akrosomreaktion werden hydrolytische Enzyme aus dem Akrosom des Spermiums freigesetzt, die die Zona pellucida der Eizelle enzymatisch durchdringen. Dies ermöglicht dem Spermium, die Eizellmembran zu erreichen. Die Reaktion ist calcium-abhängig und findet vor der Kernverschmelzung statt.',
     strategieTipp: 'Die Akrosomreaktion ist ein früher Schritt der Befruchtung - sie muss vor der Verschmelzung stattfinden, nicht danach.'
   },
   {
@@ -30,7 +30,7 @@ export const fragenPart5 = [
       'Blastomere'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Zygote ist die befruchtete Eizelle, die unmittelbar nach der Verschmelzung von Spermium und Eizelle entsteht. Sie ist diploid (2n) und stellt den Beginn der Embryonalentwicklung dar. Die Morula entsteht erst nach mehreren Zellteilungen.',
+    erklärung: 'Die Zygote ist die befruchtete Eizelle, die unmittelbar nach der Verschmelzung von Spermium und Eizelle entsteht. Sie ist diploid (2n) und stellt den Beginn der Embryonalentwicklung dar. Die Morula entsteht erst nach mehreren Zellteilungen.',
     strategieTipp: 'Merke die Reihenfolge: Zygote → Furchung → Morula → Blastozyste.'
   },
   {
@@ -47,7 +47,7 @@ export const fragenPart5 = [
       'Abnahme der Zellgröße'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Während der Furchung teilt sich die Zygote durch mitotische Teilungen in immer kleinere Zellen (Blastomere), aber die Gesamtgröße des Embryos bleibt konstant oder nimmt sogar leicht ab. Es findet also eine Zunahme der Zellzahl bei gleichzeitiger Abnahme der einzelnen Zellgröße statt, aber keine Größenzunahme des Gesamtembryos.',
+    erklärung: 'Während der Furchung teilt sich die Zygote durch mitotische Teilungen in immer kleinere Zellen (Blastomere), aber die Gesamtgröße des Embryos bleibt konstant oder nimmt sogar leicht ab. Es findet also eine Zunahme der Zellzahl bei gleichzeitiger Abnahme der einzelnen Zellgröße statt, aber keine Größenzunahme des Gesamtembryos.',
     strategieTipp: 'Furchung = Teilung ohne Wachstum - ein charakteristisches Merkmal der frühen Embryonalentwicklung.'
   },
   {
@@ -64,7 +64,7 @@ export const fragenPart5 = [
       'Während der Gastrulation'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Implantation (Einnistung) erfolgt etwa 6-7 Tage nach der Befruchtung, wenn der Embryo das Blastozysten-Stadium erreicht hat. Die Blastozyste besteht aus einer äußeren Zellschicht (Trophoblast) und einer inneren Zellmasse (Embryoblast) und nistet sich in das Endometrium ein.',
+    erklärung: 'Die Implantation (Einnistung) erfolgt etwa 6-7 Tage nach der Befruchtung, wenn der Embryo das Blastozysten-Stadium erreicht hat. Die Blastozyste besteht aus einer äußeren Zellschicht (Trophoblast) und einer inneren Zellmasse (Embryoblast) und nistet sich in das Endometrium ein.',
     strategieTipp: 'Die Blastozyste wandert zunächst durch den Eileiter, bevor sie in der Gebärmutter implantiert.'
   },
   {
@@ -81,7 +81,7 @@ export const fragenPart5 = [
       'Lunge und Schilddrüse'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Aus dem Ektoderm (äußeres Keimblatt) entwickeln sich das Nervensystem (Gehirn, Rückenmark), die Epidermis der Haut, Sinnesorgane, Zahnschmelz und Teile der Hypophyse. Es ist das Keimblatt, das die äußere Begrenzung und die neuronalen Strukturen bildet.',
+    erklärung: 'Aus dem Ektoderm (äußeres Keimblatt) entwickeln sich das Nervensystem (Gehirn, Rückenmark), die Epidermis der Haut, Sinnesorgane, Zahnschmelz und Teile der Hypophyse. Es ist das Keimblatt, das die äußere Begrenzung und die neuronalen Strukturen bildet.',
     strategieTipp: 'Ektoderm = außen → Haut und Nervensystem (das sich aus der Neuralplatte bildet).'
   },
   {
@@ -98,7 +98,7 @@ export const fragenPart5 = [
       'Fünf'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Bei der Gastrulation entstehen drei Keimblätter: Ektoderm (außen), Mesoderm (mitte) und Endoderm (innen). Diese drei Keimblätter sind die Grundlage für alle späteren Gewebe und Organe des Körpers.',
+    erklärung: 'Bei der Gastrulation entstehen drei Keimblätter: Ektoderm (außen), Mesoderm (mitte) und Endoderm (innen). Diese drei Keimblätter sind die Grundlage für alle späteren Gewebe und Organe des Körpers.',
     strategieTipp: 'Menschen sind Triploblastern - wir haben drei Keimblätter (im Gegensatz zu manchen niederen Tieren mit zwei).'
   },
   {
@@ -115,7 +115,7 @@ export const fragenPart5 = [
       'Das Blut und die Blutgefäße sind mesodermalen Ursprungs'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Epidermis der Haut stammt aus dem Ektoderm, nicht aus dem Mesoderm. Aus dem Mesoderm entwickeln sich: Herz-Kreislauf-System, Skelettmuskulatur, glatte Muskulatur, Bindegewebe, Knochen, Knorpel, Blut, Nieren und Keimdrüsen. Nur die Dermis (Lederhaut) ist mesodermalen Ursprungs.',
+    erklärung: 'Die Epidermis der Haut stammt aus dem Ektoderm, nicht aus dem Mesoderm. Aus dem Mesoderm entwickeln sich: Herz-Kreislauf-System, Skelettmuskulatur, glatte Muskulatur, Bindegewebe, Knochen, Knorpel, Blut, Nieren und Keimdrüsen. Nur die Dermis (Lederhaut) ist mesodermalen Ursprungs.',
     strategieTipp: 'Haut besteht aus zwei Schichten: Epidermis (Ektoderm) und Dermis (Mesoderm).'
   },
   {
@@ -132,7 +132,7 @@ export const fragenPart5 = [
       'Die Ausbildung der Sinnesorgane'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Neurulation ist der Prozess, bei dem sich aus dem dorsalen Ektoderm zunächst die Neuralplatte bildet, die sich dann zur Neuralrinne einstülpt und schließlich zum Neuralrohr schließt. Aus diesem Neuralrohr entstehen später Gehirn und Rückenmark.',
+    erklärung: 'Die Neurulation ist der Prozess, bei dem sich aus dem dorsalen Ektoderm zunächst die Neuralplatte bildet, die sich dann zur Neuralrinne einstülpt und schließlich zum Neuralrohr schließt. Aus diesem Neuralrohr entstehen später Gehirn und Rückenmark.',
     strategieTipp: 'Neurulation = Bildung des Nervensystems aus Ektoderm, nicht aus Mesoderm.'
   },
   {
@@ -149,7 +149,7 @@ export const fragenPart5 = [
       'Mesoderm und Endoderm'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Lunge entwickelt sich aus dem Endoderm (inneres Keimblatt). Aus dem Endoderm entstehen die epithelialen Auskleidungen von Verdauungstrakt, Atemwegen, Lunge, Leber, Pankreas, Schilddrüse und Harnblase.',
+    erklärung: 'Die Lunge entwickelt sich aus dem Endoderm (inneres Keimblatt). Aus dem Endoderm entstehen die epithelialen Auskleidungen von Verdauungstrakt, Atemwegen, Lunge, Leber, Pankreas, Schilddrüse und Harnblase.',
     strategieTipp: 'Endoderm = innen → alle inneren Auskleidungen (Verdauung, Atmung).'
   },
   {
@@ -166,7 +166,7 @@ export const fragenPart5 = [
       'Bis zur Geburt'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Embryonalperiode dauert von der Befruchtung bis zum Ende der 8. Woche. In dieser Zeit findet die Organogenese statt - die Bildung aller wichtigen Organanlagen. Nach der 8. Woche spricht man von der Fetalperiode.',
+    erklärung: 'Die Embryonalperiode dauert von der Befruchtung bis zum Ende der 8. Woche. In dieser Zeit findet die Organogenese statt - die Bildung aller wichtigen Organanlagen. Nach der 8. Woche spricht man von der Fetalperiode.',
     strategieTipp: 'Embryo bis Woche 8, danach Fetus - wichtige Grenze für Organbildung.'
   },
   {
@@ -183,7 +183,7 @@ export const fragenPart5 = [
       'Neurulation'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Fetalperiode (ab 9. Woche bis zur Geburt) ist durch Wachstum und Reifung der bereits in der Embryonalperiode angelegten Organe gekennzeichnet. Die Organogenese ist in der Embryonalperiode weitgehend abgeschlossen.',
+    erklärung: 'Die Fetalperiode (ab 9. Woche bis zur Geburt) ist durch Wachstum und Reifung der bereits in der Embryonalperiode angelegten Organe gekennzeichnet. Die Organogenese ist in der Embryonalperiode weitgehend abgeschlossen.',
     strategieTipp: 'Embryonalperiode = Organbildung, Fetalperiode = Wachstum und Reifung.'
   },
   {
@@ -200,7 +200,7 @@ export const fragenPart5 = [
       'In dieser Phase ist die Fehlgeburtsrate am niedrigsten'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die 3. bis 8. Woche ist die Hauptphase der Organogenese. In dieser Zeit sind Embryonen besonders empfindlich gegenüber Teratogenen (schädigenden Substanzen), da sich die Organanlagen bilden. Störungen können zu schweren Fehlbildungen führen.',
+    erklärung: 'Die 3. bis 8. Woche ist die Hauptphase der Organogenese. In dieser Zeit sind Embryonen besonders empfindlich gegenüber Teratogenen (schädigenden Substanzen), da sich die Organanlagen bilden. Störungen können zu schweren Fehlbildungen führen.',
     strategieTipp: 'Organbildungsphase = kritische Phase für Schadstoffe, Medikamente, Infektionen.'
   },
   {
@@ -217,7 +217,7 @@ export const fragenPart5 = [
       'Ab der 16. Woche'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Ab der 9. Schwangerschaftswoche (bzw. ab Ende der 8. Woche) wird der Embryo als Fetus bezeichnet. Zu diesem Zeitpunkt sind alle Organanlagen vorhanden, auch wenn sie noch nicht vollständig ausgereift sind.',
+    erklärung: 'Ab der 9. Schwangerschaftswoche (bzw. ab Ende der 8. Woche) wird der Embryo als Fetus bezeichnet. Zu diesem Zeitpunkt sind alle Organanlagen vorhanden, auch wenn sie noch nicht vollständig ausgereift sind.',
     strategieTipp: 'Woche 1-8: Embryo; ab Woche 9: Fetus.'
   },
   {
@@ -234,7 +234,7 @@ export const fragenPart5 = [
       'Ausscheidung fetaler Stoffwechselprodukte'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Mütterliches und fetales Blut mischen sich in der Plazenta NICHT direkt. Der Stoffaustausch erfolgt über die Plazentaschranke durch Diffusion, osmotische Prozesse und aktiven Transport. Die Trennung der Blutkreisläufe ist wichtig für die Immuntoleranz und Vermeidung von Blutgruppenunverträglichkeiten.',
+    erklärung: 'Mütterliches und fetales Blut mischen sich in der Plazenta NICHT direkt. Der Stoffaustausch erfolgt über die Plazentaschranke durch Diffusion, osmotische Prozesse und aktiven Transport. Die Trennung der Blutkreisläufe ist wichtig für die Immuntoleranz und Vermeidung von Blutgruppenunverträglichkeiten.',
     strategieTipp: 'Plazenta = Austauschplatte, aber keine Durchmischung der Blutkreisläufe!'
   },
   {
@@ -251,7 +251,7 @@ export const fragenPart5 = [
       'Dottersack'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Nabelschnur (Funiculus umbilicalis) verbindet den Fetus mit der Plazenta. Sie enthält zwei Nabelarterien (führen sauerstoffarmes Blut vom Fetus zur Plazenta) und eine Nabelvene (führt sauerstoffreiches Blut zur Plazenta zum Fetus).',
+    erklärung: 'Die Nabelschnur (Funiculus umbilicalis) verbindet den Fetus mit der Plazenta. Sie enthält zwei Nabelarterien (führen sauerstoffarmes Blut vom Fetus zur Plazenta) und eine Nabelvene (führt sauerstoffreiches Blut zur Plazenta zum Fetus).',
     strategieTipp: 'Nabelschnur = Versorgungsleitung zwischen Fetus und Plazenta.'
   },
   {
@@ -268,7 +268,7 @@ export const fragenPart5 = [
       'Alkohol'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'IgM-Antikörper sind zu groß, um die Plazentaschranke zu passieren. IgG-Antikörper können hingegen über aktiven Transport übertragen werden (Nestschutz). Sauerstoff, Glukose und leider auch schädliche Substanzen wie Alkohol, Nikotin und viele Medikamente können die Plazenta passieren.',
+    erklärung: 'IgM-Antikörper sind zu groß, um die Plazentaschranke zu passieren. IgG-Antikörper können hingegen über aktiven Transport übertragen werden (Nestschutz). Sauerstoff, Glukose und leider auch schädliche Substanzen wie Alkohol, Nikotin und viele Medikamente können die Plazenta passieren.',
     strategieTipp: 'IgG = klein, passiert Plazenta (Nestschutz); IgM = groß, passiert nicht.'
   },
   {
@@ -285,7 +285,7 @@ export const fragenPart5 = [
       'Decidua'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Das Amnion ist die innerste Eihaut, die direkt den Fetus umgibt und die mit Fruchtwasser (Amnionflüssigkeit) gefüllte Amnionhöhle bildet. Das Fruchtwasser schützt den Fetus vor mechanischen Einwirkungen und ermöglicht Bewegungen.',
+    erklärung: 'Das Amnion ist die innerste Eihaut, die direkt den Fetus umgibt und die mit Fruchtwasser (Amnionflüssigkeit) gefüllte Amnionhöhle bildet. Das Fruchtwasser schützt den Fetus vor mechanischen Einwirkungen und ermöglicht Bewegungen.',
     strategieTipp: 'Amnion = innen, direkt um Fetus; Chorion = außen, beteiligt an Plazentabildung.'
   },
   {
@@ -302,7 +302,7 @@ export const fragenPart5 = [
       'Es gibt intermediäre Vererbung'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die 1. Mendelsche Regel (Uniformitätsregel) besagt, dass bei der Kreuzung zweier homozygoter Eltern, die sich in einem Merkmal unterscheiden, alle Nachkommen der F1-Generation uniform (gleich) sind. Sie sind heterozygot und zeigen bei dominant-rezessiver Vererbung alle den dominanten Phänotyp.',
+    erklärung: 'Die 1. Mendelsche Regel (Uniformitätsregel) besagt, dass bei der Kreuzung zweier homozygoter Eltern, die sich in einem Merkmal unterscheiden, alle Nachkommen der F1-Generation uniform (gleich) sind. Sie sind heterozygot und zeigen bei dominant-rezessiver Vererbung alle den dominanten Phänotyp.',
     strategieTipp: 'F1 = erste Filialgeneration = immer uniform bei reinerbigen Eltern.'
   },
   {
@@ -319,7 +319,7 @@ export const fragenPart5 = [
       '1:1:1:1'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Bei der Kreuzung heterozygoter F1-Individuen (Aa × Aa) spaltet die F2-Generation im Phänotyp im Verhältnis 3:1 auf (3 dominant : 1 rezessiv). Im Genotyp ergibt sich 1:2:1 (1 AA : 2 Aa : 1 aa). Dies ist die 2. Mendelsche Regel (Spaltungsregel).',
+    erklärung: 'Bei der Kreuzung heterozygoter F1-Individün (Aa × Aa) spaltet die F2-Generation im Phänotyp im Verhältnis 3:1 auf (3 dominant : 1 rezessiv). Im Genotyp ergibt sich 1:2:1 (1 AA : 2 Aa : 1 aa). Dies ist die 2. Mendelsche Regel (Spaltungsregel).',
     strategieTipp: '3:1 im Phänotyp, 1:2:1 im Genotyp - klassisches Mendel-Verhältnis.'
   },
   {
@@ -336,7 +336,7 @@ export const fragenPart5 = [
       '27:9:9:9:3:3:3:1'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Bei einer Dihybridkreuzung mit zwei unabhängig vererbten Merkmalen ergibt sich in der F2-Generation ein Phänotyp-Verhältnis von 9:3:3:1. Dies folgt aus der 3. Mendelschen Regel (Unabhängigkeitsregel). 9 zeigen beide dominanten Merkmale, je 3 zeigen nur eines der dominanten Merkmale, und 1 zeigt beide rezessiven Merkmale.',
+    erklärung: 'Bei einer Dihybridkreuzung mit zwei unabhängig vererbten Merkmalen ergibt sich in der F2-Generation ein Phänotyp-Verhältnis von 9:3:3:1. Dies folgt aus der 3. Mendelschen Regel (Unabhängigkeitsregel). 9 zeigen beide dominanten Merkmale, je 3 zeigen nur eines der dominanten Merkmale, und 1 zeigt beide rezessiven Merkmale.',
     strategieTipp: 'Dihybrid = zwei Merkmale → 9:3:3:1 im Phänotyp bei unabhängiger Vererbung.'
   },
   {
@@ -353,7 +353,7 @@ export const fragenPart5 = [
       'Die Merkmale werden geschlechtsgebunden vererbt'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei intermediärer Vererbung zeigen Heterozygote einen Phänotyp, der zwischen den beiden homozygoten Eltern liegt. Es gibt keine vollständige Dominanz. Beispiel: Kreuzung von roten und weißen Wunderblumen ergibt rosa Nachkommen. Im Genotyp spaltet F2 1:2:1 auf, im Phänotyp ebenfalls 1:2:1.',
+    erklärung: 'Bei intermediärer Vererbung zeigen Heterozygote einen Phänotyp, der zwischen den beiden homozygoten Eltern liegt. Es gibt keine vollständige Dominanz. Beispiel: Kreuzung von roten und weißen Wunderblumen ergibt rosa Nachkommen. Im Genotyp spaltet F2 1:2:1 auf, im Phänotyp ebenfalls 1:2:1.',
     strategieTipp: 'Intermediär = Mischphänotyp, nicht Kodominanz (wo beide Merkmale sichtbar sind).'
   },
   {
@@ -370,7 +370,7 @@ export const fragenPart5 = [
       'Augenfarbe beim Menschen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Im AB0-Blutgruppensystem sind die Allele A und B kodominant. Heterozygote mit beiden Allelen (IAIB) haben Blutgruppe AB, bei der beide Antigene exprimiert werden. Dies unterscheidet sich von intermediärer Vererbung, wo ein Mischphänotyp entsteht.',
+    erklärung: 'Im AB0-Blutgruppensystem sind die Allele A und B kodominant. Heterozygote mit beiden Allelen (IAIB) haben Blutgruppe AB, bei der beide Antigene exprimiert werden. Dies unterscheidet sich von intermediärer Vererbung, wo ein Mischphänotyp entsteht.',
     strategieTipp: 'Kodominanz = beide Merkmale gleichzeitig sichtbar (AB-Blutgruppe ist das Lehrbuchbeispiel).'
   },
   {
@@ -387,7 +387,7 @@ export const fragenPart5 = [
       'Das Allel liegt auf dem dominanten Chromosom'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Ein dominantes Allel setzt sich im heterozygoten Zustand phänotypisch durch. Wenn ein Individuum ein dominantes (A) und ein rezessives (a) Allel hat (Aa), zeigt es den dominanten Phänotyp. Das rezessive Allel wird maskiert.',
+    erklärung: 'Ein dominantes Allel setzt sich im heterozygoten Zustand phänotypisch durch. Wenn ein Individuum ein dominantes (A) und ein rezessives (a) Allel hat (Aa), zeigt es den dominanten Phänotyp. Das rezessive Allel wird maskiert.',
     strategieTipp: 'Dominant = setzt sich durch, auch wenn nur ein Allel vorhanden ist.'
   },
   {
@@ -404,7 +404,7 @@ export const fragenPart5 = [
       'aa × aa'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Bei der Kreuzung eines heterozygoten Individuums (Aa) mit einem homozygot rezessiven (aa) ergibt sich ein 1:1 Verhältnis im Phänotyp und Genotyp (50% Aa mit dominantem Phänotyp, 50% aa mit rezessivem Phänotyp). Dies wird als Rückkreuzung oder Testkreuzung bezeichnet.',
+    erklärung: 'Bei der Kreuzung eines heterozygoten Individuums (Aa) mit einem homozygot rezessiven (aa) ergibt sich ein 1:1 Verhältnis im Phänotyp und Genotyp (50% Aa mit dominantem Phänotyp, 50% aa mit rezessivem Phänotyp). Dies wird als Rückkreuzung oder Testkreuzung bezeichnet.',
     strategieTipp: 'Testkreuzung (Aa × aa) = 1:1 Verhältnis, um Heterozygotie zu testen.'
   },
   {
@@ -421,7 +421,7 @@ export const fragenPart5 = [
       'Gene liegen immer auf homologen Chromosomen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Genkopplung bedeutet, dass Gene, die auf demselben Chromosom liegen, tendenziell gemeinsam vererbt werden. Dies widerspricht der 3. Mendelschen Regel (Unabhängigkeitsregel), die nur für Gene auf verschiedenen Chromosomen gilt. Die Kopplung kann durch Crossing-over aufgebrochen werden.',
+    erklärung: 'Genkopplung bedeutet, dass Gene, die auf demselben Chromosom liegen, tendenziell gemeinsam vererbt werden. Dies widerspricht der 3. Mendelschen Regel (Unabhängigkeitsregel), die nur für Gene auf verschiedenen Chromosomen gilt. Die Kopplung kann durch Crossing-over aufgebrochen werden.',
     strategieTipp: 'Gekoppelte Gene = auf demselben Chromosom → nicht unabhängig vererbt.'
   },
   {
@@ -438,7 +438,7 @@ export const fragenPart5 = [
       'Translokationsrate'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Rekombinationsfrequenz gibt an, wie häufig ein Crossing-over zwischen zwei Genloci stattfindet. Sie wird in Prozent oder als Kartierungseinheit (1 cM = 1% Rekombination) angegeben. Je weiter zwei Gene auf einem Chromosom voneinander entfernt sind, desto höher ist die Rekombinationsfrequenz.',
+    erklärung: 'Die Rekombinationsfrequenz gibt an, wie häufig ein Crossing-over zwischen zwei Genloci stattfindet. Sie wird in Prozent oder als Kartierungseinheit (1 cM = 1% Rekombination) angegeben. Je weiter zwei Gene auf einem Chromosom voneinander entfernt sind, desto höher ist die Rekombinationsfrequenz.',
     strategieTipp: 'Rekombinationsfrequenz ist proportional zum Abstand zwischen Genen auf dem Chromosom.'
   },
   {
@@ -455,7 +455,7 @@ export const fragenPart5 = [
       'Während der Befruchtung'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Crossing-over findet während der Prophase I der Meiose statt, wenn homologe Chromosomen gepaart vorliegen (Tetradenstadium). An den Chiasmata werden Chromosomensegmente zwischen nicht-schwesterlichen Chromatiden ausgetauscht, was zu neuen Allel-Kombinationen führt.',
+    erklärung: 'Crossing-over findet während der Prophase I der Meiose statt, wenn homologe Chromosomen gepaart vorliegen (Tetradenstadium). An den Chiasmata werden Chromosomensegmente zwischen nicht-schwesterlichen Chromatiden ausgetauscht, was zu neuen Allel-Kombinationen führt.',
     strategieTipp: 'Crossing-over = Meiose I, Prophase I, wenn Chromosomen noch gepaart sind.'
   },
   {
@@ -472,7 +472,7 @@ export const fragenPart5 = [
       'Gene, die gemeinsam mutieren'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Eine Kopplungsgruppe umfasst alle Gene, die auf einem Chromosom liegen und somit gekoppelt vererbt werden. Die Anzahl der Kopplungsgruppen entspricht der haploiden Chromosomenzahl (beim Menschen: 23 Kopplungsgruppen).',
+    erklärung: 'Eine Kopplungsgruppe umfasst alle Gene, die auf einem Chromosom liegen und somit gekoppelt vererbt werden. Die Anzahl der Kopplungsgruppen entspricht der haploiden Chromosomenzahl (beim Menschen: 23 Kopplungsgruppen).',
     strategieTipp: 'Eine Kopplungsgruppe = ein Chromosom; Mensch hat 23 Kopplungsgruppen.'
   },
   {
@@ -489,7 +489,7 @@ export const fragenPart5 = [
       'Die Gene liegen auf verschiedenen Chromosomen'
     ],
     korrekteAntwort: 1,
-    erklaerung: '20% Rekombinationsfrequenz bedeutet, dass die Gene 20 Kartierungseinheiten (centiMorgan, cM) voneinander entfernt liegen. Je größer der Abstand zwischen zwei Genen, desto wahrscheinlicher findet zwischen ihnen ein Crossing-over statt. 1 cM entspricht 1% Rekombinationsfrequenz.',
+    erklärung: '20% Rekombinationsfrequenz bedeutet, dass die Gene 20 Kartierungseinheiten (centiMorgan, cM) voneinander entfernt liegen. Je größer der Abstand zwischen zwei Genen, desto wahrscheinlicher findet zwischen ihnen ein Crossing-over statt. 1 cM entspricht 1% Rekombinationsfrequenz.',
     strategieTipp: 'Rekombinationsfrequenz in % = Abstand in Kartierungseinheiten (cM).'
   },
   {
@@ -506,7 +506,7 @@ export const fragenPart5 = [
       'Vererbung erfolgt nur über das Y-Chromosom'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Die mitochondriale Vererbung ist maternal (mütterlich), da Mitochondrien fast ausschließlich über die Eizelle vererbt werden. Spermien enthalten zwar auch Mitochondrien, diese werden aber in der Regel nach der Befruchtung abgebaut. Mitochondriale DNA folgt nicht den Mendelschen Regeln.',
+    erklärung: 'Die mitochondriale Vererbung ist maternal (mütterlich), da Mitochondrien fast ausschließlich über die Eizelle vererbt werden. Spermien enthalten zwar auch Mitochondrien, diese werden aber in der Regel nach der Befruchtung abgebaut. Mitochondriale DNA folgt nicht den Mendelschen Regeln.',
     strategieTipp: 'Mitochondrien = von der Mutter, da Eizelle viel Zytoplasma hat, Spermium kaum.'
   },
   {
@@ -523,7 +523,7 @@ export const fragenPart5 = [
       'In Lysosomen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Nichtchromosomale (extranukleäre) Vererbung betrifft DNA in Mitochondrien und Chloroplasten (bei Pflanzen). Diese Organellen besitzen eigene, ringförmige DNA, die unabhängig von der Kern-DNA vererbt wird.',
+    erklärung: 'Nichtchromosomale (extranukleäre) Vererbung betrifft DNA in Mitochondrien und Chloroplasten (bei Pflanzen). Diese Organellen besitzen eigene, ringförmige DNA, die unabhängig von der Kern-DNA vererbt wird.',
     strategieTipp: 'Extranukleäre DNA = Mitochondrien und Chloroplasten (beide waren ursprünglich Bakterien).'
   },
   {
@@ -540,7 +540,7 @@ export const fragenPart5 = [
       'Nur die Töchter können die Mutation weitergeben'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Da mitochondriale Vererbung ausschließlich maternal erfolgt, kann ein erkrankter Vater die mitochondriale Mutation nicht an seine Kinder weitergeben. Nur erkrankte Mütter können die Mutation an alle ihre Kinder (Söhne und Töchter) weitergeben.',
+    erklärung: 'Da mitochondriale Vererbung ausschließlich maternal erfolgt, kann ein erkrankter Vater die mitochondriale Mutation nicht an seine Kinder weitergeben. Nur erkrankte Mütter können die Mutation an alle ihre Kinder (Söhne und Töchter) weitergeben.',
     strategieTipp: 'Mitochondriale Vererbung: Väter vererben NICHT, nur Mütter an ALLE Kinder.'
   },
   {
@@ -557,7 +557,7 @@ export const fragenPart5 = [
       '92'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Eine diploide (2n) menschliche Körperzelle hat 46 Chromosomen: 22 Autosomenpaare (44 Chromosomen) und 2 Geschlechtschromosomen (XX oder XY). Keimzellen (Gameten) sind haploid und haben nur 23 Chromosomen.',
+    erklärung: 'Eine diploide (2n) menschliche Körperzelle hat 46 Chromosomen: 22 Autosomenpaare (44 Chromosomen) und 2 Geschlechtschromosomen (XX oder XY). Keimzellen (Gameten) sind haploid und haben nur 23 Chromosomen.',
     strategieTipp: '46 = 23 Paare = 22 Autosomenpaare + 1 Gonosomenpaar.'
   },
   {
@@ -574,7 +574,7 @@ export const fragenPart5 = [
       'Künstlich hergestellte Chromosomen'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Autosomen sind alle Chromosomen außer den Geschlechtschromosomen (Gonosomen). Der Mensch hat 22 Autosomenpaare (Chromosomen 1-22) und ein Gonosomenpaar (XX oder XY). Autosomen liegen bei beiden Geschlechtern in gleicher Anzahl vor.',
+    erklärung: 'Autosomen sind alle Chromosomen außer den Geschlechtschromosomen (Gonosomen). Der Mensch hat 22 Autosomenpaare (Chromosomen 1-22) und ein Gonosomenpaar (XX oder XY). Autosomen liegen bei beiden Geschlechtern in gleicher Anzahl vor.',
     strategieTipp: 'Autosomen = Körperchromosomen = nicht die Geschlechtschromosomen.'
   },
   {
@@ -591,7 +591,7 @@ export const fragenPart5 = [
       'Chromatin bei Mutationen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Heterochromatin ist dicht gepacktes, stark kondensiertes Chromatin, das transkriptionell inaktiv ist. Es erscheint unter dem Mikroskop dunkel. Im Gegensatz dazu ist Euchromatin locker gepackt und transkriptionell aktiv (erscheint hell).',
+    erklärung: 'Heterochromatin ist dicht gepacktes, stark kondensiertes Chromatin, das transkriptionell inaktiv ist. Es erscheint unter dem Mikroskop dunkel. Im Gegensatz dazu ist Euchromatin locker gepackt und transkriptionell aktiv (erscheint hell).',
     strategieTipp: 'Hetero = anders/dunkel = inaktiv; Eu = gut/hell = aktiv.'
   },
   {
@@ -608,7 +608,7 @@ export const fragenPart5 = [
       'Die mitochondriale DNA'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Ein Karyogramm ist eine geordnete Darstellung aller Chromosomen einer Zelle, sortiert nach Größe und Zentromerposition. Es wird zur Diagnose von Chromosomenanomalien (z.B. Trisomien, Deletionen) verwendet. Die Chromosomen werden in der Metaphase fotografiert und nach standardisierten Kriterien angeordnet.',
+    erklärung: 'Ein Karyogramm ist eine geordnete Darstellung aller Chromosomen einer Zelle, sortiert nach Größe und Zentromerposition. Es wird zur Diagnose von Chromosomenanomalien (z.B. Trisomien, Deletionen) verwendet. Die Chromosomen werden in der Metaphase fotografiert und nach standardisierten Kriterien angeordnet.',
     strategieTipp: 'Karyogramm = Chromosomen-Portrait, sortiert nach Größe, zur Diagnostik.'
   },
   {
@@ -625,7 +625,7 @@ export const fragenPart5 = [
       'Fusion zweier Chromosomen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Eine Genmutation ist eine Veränderung der DNA-Sequenz innerhalb eines Gens. Sie kann durch Substitution (Austausch), Deletion (Verlust) oder Insertion (Einfügung) von Nukleotiden entstehen. Genmutationen sind die kleinste Form von Mutationen.',
+    erklärung: 'Eine Genmutation ist eine Veränderung der DNA-Sequenz innerhalb eines Gens. Sie kann durch Substitution (Austausch), Deletion (Verlust) oder Insertion (Einfügung) von Nukleotiden entstehen. Genmutationen sind die kleinste Form von Mutationen.',
     strategieTipp: 'Genmutation = kleinste Ebene = DNA-Sequenz in einem Gen verändert.'
   },
   {
@@ -642,7 +642,7 @@ export const fragenPart5 = [
       'Mutation im Intron'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Eine Frameshift-Mutation entsteht durch Deletion oder Insertion von Nukleotiden, deren Anzahl nicht durch 3 teilbar ist. Dies verschiebt das Leseraster (Reading Frame) für die Translation, sodass alle nachfolgenden Codons falsch abgelesen werden. Die Folge ist meist ein komplett verändertes, nicht-funktionales Protein.',
+    erklärung: 'Eine Frameshift-Mutation entsteht durch Deletion oder Insertion von Nukleotiden, deren Anzahl nicht durch 3 teilbar ist. Dies verschiebt das Leseraster (Reading Frame) für die Translation, sodass alle nachfolgenden Codons falsch abgelesen werden. Die Folge ist meist ein komplett verändertes, nicht-funktionales Protein.',
     strategieTipp: 'Frameshift = Leseraster verschoben → alle folgenden Aminosäuren falsch.'
   },
   {
@@ -659,7 +659,7 @@ export const fragenPart5 = [
       'Polyploidie'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Trisomie 21 (Down-Syndrom) ist eine Aneuploidie - eine numerische Chromosomenanomalie, bei der ein Chromosom zusätzlich vorhanden ist (47 statt 46 Chromosomen). Sie entsteht meist durch Non-Disjunction (Nicht-Trennung) während der Meiose. Polyploidie wäre die Vervielfachung des gesamten Chromosomensatzes.',
+    erklärung: 'Trisomie 21 (Down-Syndrom) ist eine Aneuploidie - eine numerische Chromosomenanomalie, bei der ein Chromosom zusätzlich vorhanden ist (47 statt 46 Chromosomen). Sie entsteht meist durch Non-Disjunction (Nicht-Trennung) während der Meiose. Polyploidie wäre die Vervielfachung des gesamten Chromosomensatzes.',
     strategieTipp: 'Aneuploidie = einzelne Chromosomen zu viel/wenig; Polyploidie = ganzer Satz vervielfacht.'
   },
   {
@@ -676,7 +676,7 @@ export const fragenPart5 = [
       'Zellen mit genetischen Defekten'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Mutagene sind physikalische oder chemische Faktoren, die Mutationen auslösen können. Beispiele: UV-Strahlung, ionisierende Strahlung (Röntgen, radioaktive Strahlung), chemische Substanzen wie Benzpyren (im Zigarettenrauch), Aflatoxine, oder bestimmte Viren.',
+    erklärung: 'Mutagene sind physikalische oder chemische Faktoren, die Mutationen auslösen können. Beispiele: UV-Strahlung, ionisierende Strahlung (Röntgen, radioaktive Strahlung), chemische Substanzen wie Benzpyren (im Zigarettenrauch), Aflatoxine, oder bestimmte Viren.',
     strategieTipp: 'Mutagene = Mutationsauslöser (Strahlung, Chemikalien, manche Viren).'
   },
   {
@@ -693,7 +693,7 @@ export const fragenPart5 = [
       'Verlust eines Chromosomenabschnitts'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Eine Translokation ist eine Chromosomenmutation, bei der ein Chromosomenabschnitt auf ein anderes, nicht-homologes Chromosom übertragen wird. Beispiel: Philadelphia-Chromosom bei chronischer myeloischer Leukämie (Translokation zwischen Chromosom 9 und 22). Translokationen können balanciert (keine Informationsverlust) oder unbalanciert sein.',
+    erklärung: 'Eine Translokation ist eine Chromosomenmutation, bei der ein Chromosomenabschnitt auf ein anderes, nicht-homologes Chromosom übertragen wird. Beispiel: Philadelphia-Chromosom bei chronischer myeloischer Leukämie (Translokation zwischen Chromosom 9 und 22). Translokationen können balanciert (keine Informationsverlust) oder unbalanciert sein.',
     strategieTipp: 'Translokation = Trans = hinüber = Stück wandert zu anderem Chromosom.'
   },
   {
@@ -707,10 +707,10 @@ export const fragenPart5 = [
       'Austausch, Deletion oder Insertion eines einzelnen Nukleotids',
       'Mutation, die nur einen Phänotyp verändert',
       'Mutation in einem Mitochondrium',
-      'Mutation, die punktuell repariert werden kann'
+      'Mutation, die punktüll repariert werden kann'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Eine Punktmutation ist der Austausch, die Deletion oder Insertion eines einzelnen Nukleotids (oder sehr weniger Nukleotide). Sie ist die häufigste Form der Genmutation. Punktmutationen können stumm (keine Änderung der Aminosäure), missense (andere Aminosäure) oder nonsense (Stopcodon) sein.',
+    erklärung: 'Eine Punktmutation ist der Austausch, die Deletion oder Insertion eines einzelnen Nukleotids (oder sehr weniger Nukleotide). Sie ist die häufigste Form der Genmutation. Punktmutationen können stumm (keine Änderung der Aminosäure), missense (andere Aminosäure) oder nonsense (Stopcodon) sein.',
     strategieTipp: 'Punktmutation = kleinstmögliche Mutation = einzelnes Nukleotid betroffen.'
   },
   {
@@ -727,7 +727,7 @@ export const fragenPart5 = [
       'XXY'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Menschliche Männer haben das Geschlechtschromosomenpaar XY, Frauen haben XX. Das Y-Chromosom enthält das SRY-Gen (Sex-determining Region Y), das die männliche Geschlechtsentwicklung initiiert. XXY ist eine Chromosomenanomalie (Klinefelter-Syndrom).',
+    erklärung: 'Menschliche Männer haben das Geschlechtschromosomenpaar XY, Frauen haben XX. Das Y-Chromosom enthält das SRY-Gen (Sex-determining Region Y), das die männliche Geschlechtsentwicklung initiiert. XXY ist eine Chromosomenanomalie (Klinefelter-Syndrom).',
     strategieTipp: 'XX = weiblich, XY = männlich beim Menschen (bei Vögeln umgekehrt!).'
   },
   {
@@ -744,7 +744,7 @@ export const fragenPart5 = [
       'Ein Geschlechtschromosom bei Insekten'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Ein Barr-Körperchen ist ein inaktiviertes X-Chromosom bei weiblichen Säugetieren. Da Frauen zwei X-Chromosomen haben, wird eines zufällig in jeder Zelle inaktiviert (X-Inaktivierung), um eine Gendosis-Kompensation zu erreichen. Das inaktivierte X-Chromosom erscheint als dunkler Punkt am Kernrand.',
+    erklärung: 'Ein Barr-Körperchen ist ein inaktiviertes X-Chromosom bei weiblichen Säugetieren. Da Frauen zwei X-Chromosomen haben, wird eines zufällig in jeder Zelle inaktiviert (X-Inaktivierung), um eine Gendosis-Kompensation zu erreichen. Das inaktivierte X-Chromosom erscheint als dunkler Punkt am Kernrand.',
     strategieTipp: 'Barr-Körperchen = stillgelegtes X bei Frauen, um Dosis auszugleichen.'
   },
   {
@@ -761,7 +761,7 @@ export const fragenPart5 = [
       'Nur Söhne können das Allel weitergeben'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Ein farbenblinder Vater (XrY) gibt sein X-Chromosom mit dem rezessiven Allel an alle Töchter weiter (die von der Mutter ein X mit dem dominanten Allel erhalten und somit XRXr sind = Konduktorinnen). Söhne erhalten vom Vater das Y-Chromosom und sind daher nicht betroffen (erhalten X von der Mutter).',
+    erklärung: 'Ein farbenblinder Vater (XrY) gibt sein X-Chromosom mit dem rezessiven Allel an alle Töchter weiter (die von der Mutter ein X mit dem dominanten Allel erhalten und somit XRXr sind = Konduktorinnen). Söhne erhalten vom Vater das Y-Chromosom und sind daher nicht betroffen (erhalten X von der Mutter).',
     strategieTipp: 'X-chromosomal rezessiv: betroffener Vater → alle Töchter Trägerinnen, kein Sohn betroffen.'
   },
   {
@@ -778,7 +778,7 @@ export const fragenPart5 = [
       'Es bestimmt die Blutgruppe'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Das SRY-Gen (Sex-determining Region Y) liegt auf dem Y-Chromosom und codiert für den Testis-determining Factor (TDF). Es initiiert in der Embryonalentwicklung die Differenzierung der Gonaden zu Hoden. Ohne funktionales SRY-Gen entwickeln sich die Gonaden zu Ovarien (weibliche Entwicklung als Standard).',
+    erklärung: 'Das SRY-Gen (Sex-determining Region Y) liegt auf dem Y-Chromosom und codiert für den Testis-determining Factor (TDF). Es initiiert in der Embryonalentwicklung die Differenzierung der Gonaden zu Hoden. Ohne funktionales SRY-Gen entwickeln sich die Gonaden zu Ovarien (weibliche Entwicklung als Standard).',
     strategieTipp: 'SRY auf Y-Chromosom = Schalter für männliche Entwicklung.'
   },
   {
@@ -795,7 +795,7 @@ export const fragenPart5 = [
       'Dies ist nicht möglich'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Durch die zufällige X-Inaktivierung (Lyon-Hypothese) kann eine heterozygote Frau mosaikartige Symptome zeigen, wenn in vielen Zellen zufällig das X-Chromosom mit dem normalen Allel inaktiviert wurde. Beispiel: Manche Konduktorinnen der Hämophilie A zeigen leichte Blutungsneigung.',
+    erklärung: 'Durch die zufällige X-Inaktivierung (Lyon-Hypothese) kann eine heterozygote Frau mosaikartige Symptome zeigen, wenn in vielen Zellen zufällig das X-Chromosom mit dem normalen Allel inaktiviert wurde. Beispiel: Manche Konduktorinnen der Hämophilie A zeigen leichte Blutungsneigung.',
     strategieTipp: 'X-Inaktivierung ist zufällig → heterozygote Frauen können mosaikartige Symptome haben.'
   },
   {
@@ -812,7 +812,7 @@ export const fragenPart5 = [
       'Gene, die nur in Tumorzellen vorkommen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Onkogene sind mutierte oder überexprimierte Gene, die das Zellwachstum und die Zellteilung fördern. Sie entstehen aus normalen Proto-Onkogenen durch Mutationen. Beispiele: mutiertes RAS-Gen, überexprimiertes MYC-Gen. Onkogene wirken dominant - eine Mutation in einem Allel reicht aus.',
+    erklärung: 'Onkogene sind mutierte oder überexprimierte Gene, die das Zellwachstum und die Zellteilung fördern. Sie entstehen aus normalen Proto-Onkogenen durch Mutationen. Beispiele: mutiertes RAS-Gen, überexprimiertes MYC-Gen. Onkogene wirken dominant - eine Mutation in einem Allel reicht aus.',
     strategieTipp: 'Onkogene = Gaspedal für Zellteilung (mutiert → unkontrolliertes Wachstum).'
   },
   {
@@ -829,7 +829,7 @@ export const fragenPart5 = [
       'Es aktiviert Onkogene'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'p53 ist ein Tumorsuppressorprotein, das als "Wächter des Genoms" fungiert. Bei DNA-Schäden stoppt es den Zellzyklus (G1/S-Checkpoint), um Reparatur zu ermöglichen, oder leitet bei irreparablen Schäden die Apoptose ein. Mutationen in p53 finden sich in über 50% aller Tumore.',
+    erklärung: 'p53 ist ein Tumorsuppressorprotein, das als "Wächter des Genoms" fungiert. Bei DNA-Schäden stoppt es den Zellzyklus (G1/S-Checkpoint), um Reparatur zu ermöglichen, oder leitet bei irreparablen Schäden die Apoptose ein. Mutationen in p53 finden sich in über 50% aller Tumore.',
     strategieTipp: 'p53 = Wächter des Genoms = stoppt Zellzyklus oder leitet Zelltod ein.'
   },
   {
@@ -846,7 +846,7 @@ export const fragenPart5 = [
       'Krebs ist immer erblich'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Das Mehrstufenmodell (Multi-Hit-Modell) besagt, dass Krebs durch die schrittweise Akkumulation mehrerer Mutationen in verschiedenen Genen entsteht. Typischerweise sind 4-7 Mutationen nötig, die sowohl Onkogene aktivieren als auch Tumorsuppressorgene inaktivieren. Dies erklärt, warum Krebsrisiko mit dem Alter steigt.',
+    erklärung: 'Das Mehrstufenmodell (Multi-Hit-Modell) besagt, dass Krebs durch die schrittweise Akkumulation mehrerer Mutationen in verschiedenen Genen entsteht. Typischerweise sind 4-7 Mutationen nötig, die sowohl Onkogene aktivieren als auch Tumorsuppressorgene inaktivieren. Dies erklärt, warum Krebsrisiko mit dem Alter steigt.',
     strategieTipp: 'Krebsentstehung = mehrere Mutationen über Zeit (nicht eine einzige Mutation).'
   }
 ];

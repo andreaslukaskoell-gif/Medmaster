@@ -16,7 +16,7 @@ export const chemKap3: Kapitel = {
 Das klassische Beispiel für eine Ionenverbindung ist Natriumchlorid (NaCl). Natrium (Elektronenkonfiguration [Ne] 3s¹) gibt sein einziges Valenzelektron ab und bildet Na⁺ ([Ne]-Konfiguration). Chlor ([Ne] 3s² 3p⁵) nimmt dieses Elektron auf und bildet Cl⁻ ([Ar]-Konfiguration). Die dabei freiwerdende Energie lässt sich über den Born-Haber-Kreisprozess berechnen, der die Sublimationsenergie, Ionisierungsenergie, Dissoziationsenergie, Elektronenaffinität und Gitterenergie zusammenfasst. Die Gitterenergie ist die Energie, die beim Aufbau eines Ionengitters aus einzelnen gasförmigen Ionen frei wird. Sie ist umso größer, je kleiner die Ionenradien und je höher die Ladungen der Ionen sind (Coulomb-Gesetz: E ∝ q₁·q₂/r).
 
 Ionenverbindungen bilden im festen Zustand regelmäßige Kristallgitter, in denen jedes Ion von mehreren entgegengesetzt geladenen Ionen umgeben ist. Beim NaCl-Gitter ist jedes Na⁺-Ion von sechs Cl⁻-Ionen umgeben und umgekehrt (Koordinationszahl 6). Ionenverbindungen haben charakteristische Eigenschaften: hohe Schmelz- und Siedepunkte (NaCl: Smp. 801 °C), Härte bei gleichzeitiger Sprödigkeit (bei Verschiebung der Gitterschichten stoßen gleichnamige Ladungen aufeinander), elektrische Leitfähigkeit nur in gelöstem oder geschmolzenem Zustand (frei bewegliche Ionen), und gute Löslichkeit in polaren Lösungsmitteln wie Wasser. Im festen Zustand sind die Ionen an ihren Gitterplätzen fixiert und können sich nicht frei bewegen, weshalb feste Ionenverbindungen Nichtleiter (Isolatoren) sind.`,
-      merksaetze: [
+      merksätze: [
         'Ionenbindung = Elektronenübertragung von Metall zu Nichtmetall (ΔEN > 1,7). Die Gitterenergie steigt mit zunehmender Ionenladung und abnehmendem Ionenradius.',
         'Ionenverbindungen: hohe Schmelzpunkte, spröde, leiten nur in Lösung/Schmelze elektrischen Strom, löslich in polaren Lösungsmitteln.'
       ],
@@ -48,7 +48,7 @@ Ionenverbindungen bilden im festen Zustand regelmäßige Kristallgitter, in dene
             '2'
           ],
           correctIndex: 1,
-          explanation: 'Im NaCl-Gitter ist jedes Na⁺-Ion oktaedrisch von 6 Cl⁻-Ionen umgeben (und umgekehrt). Die Koordinationszahl beträgt daher 6.'
+          explanation: 'Im NaCl-Gitter ist jedes Na⁺-Ion oktädrisch von 6 Cl⁻-Ionen umgeben (und umgekehrt). Die Koordinationszahl beträgt daher 6.'
         },
         {
           question: 'Warum sind Ionenkristalle spröde?',
@@ -73,7 +73,7 @@ Ionenverbindungen bilden im festen Zustand regelmäßige Kristallgitter, in dene
 Die Lewis-Schreibweise (Elektronenstrichformel) ist ein wichtiges Werkzeug zur Darstellung kovalenter Bindungen. Dabei werden bindende Elektronenpaare als Striche zwischen den Atomen und freie (nichtbindende) Elektronenpaare als Punktepaare oder Striche an den Atomen dargestellt. Zur Erstellung einer Lewis-Formel zählt man zunächst die Gesamtzahl der Valenzelektronen, ordnet die Atome an (das Atom mit der niedrigsten EN kommt meist in die Mitte), verbindet sie mit Einfachbindungen und verteilt die restlichen Elektronen als freie Elektronenpaare, sodass jedes Atom die Oktettregel erfüllt. Reichen die Elektronen nicht aus, werden Mehrfachbindungen eingeführt. Bei manchen Molekülen ist eine einzige Lewis-Formel nicht ausreichend, um die tatsächliche Elektronenverteilung zu beschreiben; man verwendet dann mesomere Grenzstrukturen (Resonanzstrukturen), die durch einen Doppelpfeil verbunden werden.
 
 Die Polarität einer kovalenten Bindung hängt von der Elektronegativitätsdifferenz der Bindungspartner ab. Bei ΔEN = 0 liegt eine unpolare kovalente Bindung vor (z. B. H-H, Cl-Cl). Bei 0 < ΔEN < 1,7 entsteht eine polare kovalente Bindung, bei der die Elektronendichte zum elektronegativeren Atom verschoben ist. Dies erzeugt partielle Ladungen (δ+ und δ-) und ein Dipolmoment. Beispiele sind die O-H-Bindung in Wasser (ΔEN = 1,4) und die C-O-Bindung. Das Dipolmoment μ eines Moleküls ist das Produkt aus dem Ladungsbetrag und dem Ladungsabstand (μ = q × d). Ob ein Molekül insgesamt ein Dipolmolekül ist, hängt nicht nur von den Bindungspolaritäten ab, sondern auch von der Molekülgeometrie: Bei symmetrischen Molekülen wie CO₂ (linear) heben sich die Bindungsdipole gegenseitig auf, sodass kein Gesamtdipolmoment resultiert, obwohl die einzelnen C=O-Bindungen polar sind.`,
-      merksaetze: [
+      merksätze: [
         'Kovalente Bindung = gemeinsame Elektronenpaare zwischen Nichtmetallen. Einfachbindung (1 σ), Doppelbindung (1 σ + 1 π), Dreifachbindung (1 σ + 2 π).',
         'Polare Bindung bei 0 < ΔEN < 1,7 (partielle Ladungen δ+/δ-). Ob ein Molekül ein Dipol ist, hängt zusätzlich von der Geometrie ab (symmetrische Moleküle können trotz polarer Bindungen apolar sein).'
       ],
@@ -117,7 +117,7 @@ Die Polarität einer kovalenten Bindung hängt von der Elektronegativitätsdiffe
             'BF₃'
           ],
           correctIndex: 2,
-          explanation: 'H₂O ist gewinkelt (104,5°), weshalb sich die polaren O-H-Bindungsdipole nicht aufheben. CO₂ (linear), CH₄ und CCl₄ (tetraedrisch) sind symmetrisch, sodass sich die Bindungsdipole kompensieren.'
+          explanation: 'H₂O ist gewinkelt (104,5°), weshalb sich die polaren O-H-Bindungsdipole nicht aufheben. CO₂ (linear), CH₄ und CCl₄ (teträdrisch) sind symmetrisch, sodass sich die Bindungsdipole kompensieren.'
         }
       ]
     },
@@ -129,7 +129,7 @@ Die Polarität einer kovalenten Bindung hängt von der Elektronegativitätsdiffe
 Die freie Beweglichkeit der Elektronen im Metallgitter erklärt die hohe elektrische Leitfähigkeit der Metalle. Wird eine Spannung angelegt, fließen die delokalisierten Elektronen als elektrischer Strom durch das Metall. Die elektrische Leitfähigkeit nimmt mit steigender Temperatur ab, da die zunehmenden Gitterschwingungen der Metallkationen die Elektronenbewegung behindern. Ebenso erklärt das Elektronengasmodell die hohe Wärmeleitfähigkeit, da die frei beweglichen Elektronen kinetische Energie effizient transportieren können. Der metallische Glanz entsteht dadurch, dass die delokalisierten Elektronen Photonen aller Wellenlängen absorbieren und sofort wieder emittieren, was zu einer Reflexion des Lichts führt.
 
 Eine weitere wichtige Eigenschaft der Metalle ist ihre Verformbarkeit (Duktilität und Malleabilität). Im Gegensatz zu Ionenkristallen, die beim Verschieben von Gitterschichten spröde brechen, können Metallgitter verformt werden, ohne dass die Bindung zerstört wird. Dies liegt daran, dass das delokalisierte Elektronengas die Bindung unabhängig von der genauen Position der Atomrümpfe aufrechterhalten kann. Gitterschichten können gegeneinander gleiten, wobei die metallische Bindung erhalten bleibt. Die Stärke der metallischen Bindung hängt von der Anzahl der Valenzelektronen und der Größe der Atomrümpfe ab. Übergangsmetalle mit vielen Valenzelektronen (z. B. Wolfram mit hoher Schmelztemperatur von 3422 °C) bilden besonders starke metallische Bindungen. Legierungen entstehen durch Einlagerung anderer Metallatome in das Gitter, was die mechanischen Eigenschaften gezielt verändern kann (z. B. Stahl als Legierung von Eisen und Kohlenstoff).`,
-      merksaetze: [
+      merksätze: [
         'Metallische Bindung: Positive Atomrümpfe im Gitter, umgeben von einem delokalisierten Elektronengas. Die Stärke hängt von der Valenzelektronenanzahl und dem Atomrumpfradius ab.',
         'Metalleigenschaften: hohe elektrische und thermische Leitfähigkeit, metallischer Glanz, Duktilität (Verformbarkeit). Die Leitfähigkeit sinkt bei steigender Temperatur.'
       ],
@@ -185,7 +185,7 @@ Eine weitere wichtige Eigenschaft der Metalle ist ihre Verformbarkeit (Duktilit�
 Dipol-Dipol-Wechselwirkungen treten zwischen polaren Molekülen auf, die ein permanentes Dipolmoment besitzen. Die partielle positive Ladung (δ+) eines Moleküls richtet sich bevorzugt zur partiellen negativen Ladung (δ-) eines Nachbarmoleküls aus. Diese Kräfte sind stärker als reine Van-der-Waals-Kräfte und erklären, warum polare Moleküle höhere Siedepunkte haben als unpolare Moleküle ähnlicher Größe. Ein Spezialfall der Dipol-Dipol-Wechselwirkung ist die Ion-Dipol-Wechselwirkung, die zwischen einem Ion und einem polaren Molekül auftritt und die Grundlage für die Hydratation von Ionen in wässriger Lösung bildet. Außerdem gibt es die Debye-Kräfte (Keesom-Kräfte), bei denen ein permanenter Dipol in einem unpolaren Nachbarmolekül einen Dipol induziert.
 
 Die stärkste Form der zwischenmolekularen Kräfte ist die Wasserstoffbrückenbindung. Sie tritt auf, wenn ein Wasserstoffatom, das kovalent an ein stark elektronegatives Atom (F, O oder N) gebunden ist, eine Wechselwirkung mit einem freien Elektronenpaar eines anderen elektronegativen Atoms eingeht. Die Wasserstoffbrückenbindung hat eine typische Stärke von 10–40 kJ/mol und ist damit etwa zehnmal stärker als typische Van-der-Waals-Kräfte, aber deutlich schwächer als kovalente Bindungen (200–400 kJ/mol). Wasserstoffbrücken erklären die anomal hohen Schmelz- und Siedepunkte von Wasser (Sdp. 100 °C), Fluorwasserstoff und Ammoniak im Vergleich zu den schwereren Homologen. Sie sind auch für die Dichteanomalie des Wassers verantwortlich: Eis hat eine geringere Dichte als flüssiges Wasser, da die Wasserstoffbrücken im Eis ein offenes, hexagonales Kristallgitter erzwingen, das mehr Volumen einnimmt als die weniger geordnete Flüssigkeit.`,
-      merksaetze: [
+      merksätze: [
         'Stärke der zwischenmolekularen Kräfte: Van-der-Waals (London) < Dipol-Dipol < Wasserstoffbrücken. Alle sind schwächer als kovalente/ionische Bindungen.',
         'Wasserstoffbrücken: Voraussetzung ist ein H-Atom gebunden an F, O oder N und ein freies Elektronenpaar am Akzeptor. Sie erklären die hohen Siedepunkte von H₂O, HF und NH₃.'
       ],
@@ -236,32 +236,32 @@ Die stärkste Form der zwischenmolekularen Kräfte ist die Wasserstoffbrückenbi
     {
       id: 'chem-kap3-uk5',
       title: 'Molekülgeometrie',
-      content: `Die räumliche Anordnung der Atome in einem Molekül wird durch das VSEPR-Modell (Valence Shell Electron Pair Repulsion, Elektronenpaarabstoßungsmodell) vorhergesagt. Das Grundprinzip besagt, dass sich die Elektronenpaare (sowohl bindende als auch freie) um ein Zentralatom so anordnen, dass ihre gegenseitige Abstoßung minimiert wird. Dabei werden zunächst die Elektronenpaare des Zentralatoms gezählt: bindende Elektronenpaare (auch Mehrfachbindungen zählen als eine Elektronendomäne) und freie Elektronenpaare. Die Anzahl der Elektronendomänen bestimmt die Elektronengeometrie, während die Anordnung nur der Atome (ohne freie Elektronenpaare) die Molekülgeometrie ergibt. Bei zwei Domänen ist die Anordnung linear (180°), bei drei trigonal-planar (120°), bei vier tetraedrisch (109,5°), bei fünf trigonal-bipyramidal und bei sechs oktaedrisch.
+      content: `Die räumliche Anordnung der Atome in einem Molekül wird durch das VSEPR-Modell (Valence Shell Electron Pair Repulsion, Elektronenpaarabstoßungsmodell) vorhergesagt. Das Grundprinzip besagt, dass sich die Elektronenpaare (sowohl bindende als auch freie) um ein Zentralatom so anordnen, dass ihre gegenseitige Abstoßung minimiert wird. Dabei werden zunächst die Elektronenpaare des Zentralatoms gezählt: bindende Elektronenpaare (auch Mehrfachbindungen zählen als eine Elektronendomäne) und freie Elektronenpaare. Die Anzahl der Elektronendomänen bestimmt die Elektronengeometrie, während die Anordnung nur der Atome (ohne freie Elektronenpaare) die Molekülgeometrie ergibt. Bei zwei Domänen ist die Anordnung linear (180°), bei drei trigonal-planar (120°), bei vier teträdrisch (109,5°), bei fünf trigonal-bipyramidal und bei sechs oktädrisch.
 
-Freie Elektronenpaare nehmen mehr Raum ein als bindende Paare, da sie nur von einem Kern angezogen werden und sich daher stärker ausbreiten. Dies führt zu Abweichungen von den idealen Bindungswinkeln. Wasser (H₂O) hat vier Elektronendomänen am Sauerstoff (zwei bindende, zwei freie), die eine tetraedrische Elektronengeometrie ergeben. Da aber nur zwei Domänen Bindungen zu Wasserstoffatomen sind, ist die Molekülgeometrie gewinkelt mit einem Bindungswinkel von 104,5° statt der idealen 109,5°. Ammoniak (NH₃) hat ebenfalls vier Elektronendomänen (drei bindende, ein freies Paar), was zu einer trigonal-pyramidalen Molekülgeometrie mit einem Winkel von 107° führt. Methan (CH₄) hingegen hat vier bindende Domänen ohne freie Paare und zeigt die ideale tetraedrische Geometrie mit 109,5°.
+Freie Elektronenpaare nehmen mehr Raum ein als bindende Paare, da sie nur von einem Kern angezogen werden und sich daher stärker ausbreiten. Dies führt zu Abweichungen von den idealen Bindungswinkeln. Wasser (H₂O) hat vier Elektronendomänen am Sauerstoff (zwei bindende, zwei freie), die eine teträdrische Elektronengeometrie ergeben. Da aber nur zwei Domänen Bindungen zu Wasserstoffatomen sind, ist die Molekülgeometrie gewinkelt mit einem Bindungswinkel von 104,5° statt der idealen 109,5°. Ammoniak (NH₃) hat ebenfalls vier Elektronendomänen (drei bindende, ein freies Paar), was zu einer trigonal-pyramidalen Molekülgeometrie mit einem Winkel von 107° führt. Methan (CH₄) hingegen hat vier bindende Domänen ohne freie Paare und zeigt die ideale teträdrische Geometrie mit 109,5°.
 
-Die Hybridisierung ist ein mathematisches Konzept, das erklärt, wie die Atomorbitale eines Zentralatoms sich zu gleichwertigen Hybridorbitalen mischen, um die beobachtete Molekülgeometrie zu ermöglichen. Bei der sp³-Hybridisierung verschmelzen ein s- und drei p-Orbitale zu vier gleichwertigen sp³-Hybridorbitalen, die tetraedrisch ausgerichtet sind (Winkel 109,5°). Beispiel: Methan (CH₄). Bei der sp²-Hybridisierung entstehen aus einem s- und zwei p-Orbitalen drei trigonal-planare sp²-Hybridorbitale (120°), wobei das verbleibende p-Orbital senkrecht zur Ebene steht und für π-Bindungen zur Verfügung steht. Beispiel: Ethen (C₂H₄). Bei der sp-Hybridisierung mischen sich ein s- und ein p-Orbital zu zwei linearen sp-Hybridorbitalen (180°), während zwei p-Orbitale für π-Bindungen verfügbar bleiben. Beispiel: Ethin (C₂H₂). Die Hybridisierung korreliert direkt mit der Anzahl der σ-Bindungen und freien Elektronenpaare am Zentralatom: 4 → sp³, 3 → sp², 2 → sp.`,
-      merksaetze: [
-        'VSEPR: Elektronendomänen ordnen sich so an, dass die Abstoßung minimal ist. 2 Domänen → linear (180°), 3 → trigonal-planar (120°), 4 → tetraedrisch (109,5°). Freie Elektronenpaare verkleinern den Bindungswinkel.',
-        'Hybridisierung: sp³ = tetraedrisch (4 σ-Bindungen/freie Paare), sp² = trigonal-planar (3 σ + 1 freies p für π), sp = linear (2 σ + 2 freie p für π).'
+Die Hybridisierung ist ein mathematisches Konzept, das erklärt, wie die Atomorbitale eines Zentralatoms sich zu gleichwertigen Hybridorbitalen mischen, um die beobachtete Molekülgeometrie zu ermöglichen. Bei der sp³-Hybridisierung verschmelzen ein s- und drei p-Orbitale zu vier gleichwertigen sp³-Hybridorbitalen, die teträdrisch ausgerichtet sind (Winkel 109,5°). Beispiel: Methan (CH₄). Bei der sp²-Hybridisierung entstehen aus einem s- und zwei p-Orbitalen drei trigonal-planare sp²-Hybridorbitale (120°), wobei das verbleibende p-Orbital senkrecht zur Ebene steht und für π-Bindungen zur Verfügung steht. Beispiel: Ethen (C₂H₄). Bei der sp-Hybridisierung mischen sich ein s- und ein p-Orbital zu zwei linearen sp-Hybridorbitalen (180°), während zwei p-Orbitale für π-Bindungen verfügbar bleiben. Beispiel: Ethin (C₂H₂). Die Hybridisierung korreliert direkt mit der Anzahl der σ-Bindungen und freien Elektronenpaare am Zentralatom: 4 → sp³, 3 → sp², 2 → sp.`,
+      merksätze: [
+        'VSEPR: Elektronendomänen ordnen sich so an, dass die Abstoßung minimal ist. 2 Domänen → linear (180°), 3 → trigonal-planar (120°), 4 → teträdrisch (109,5°). Freie Elektronenpaare verkleinern den Bindungswinkel.',
+        'Hybridisierung: sp³ = teträdrisch (4 σ-Bindungen/freie Paare), sp² = trigonal-planar (3 σ + 1 freies p für π), sp = linear (2 σ + 2 freie p für π).'
       ],
       altfrage: {
-        question: 'Warum ist der Bindungswinkel in Wasser (104,5°) kleiner als der ideale Tetraederwinkel (109,5°)?',
+        question: 'Warum ist der Bindungswinkel in Wasser (104,5°) kleiner als der ideale Teträderwinkel (109,5°)?',
         answer: 'Wasser hat am Sauerstoff zwei bindende und zwei freie Elektronenpaare. Die freien Paare beanspruchen mehr Raum als die bindenden Paare und drücken die O-H-Bindungen enger zusammen, wodurch der Winkel von 109,5° auf 104,5° abnimmt.'
       },
-      klinischerBezug: 'Die Molekülgeometrie bestimmt die biologische Aktivität von Wirkstoffen. Die Wirkung von Enzyminhibitoren und Rezeptorliganden beruht auf der räumlichen Passgenauigkeit (Schlüssel-Schloss-Prinzip). Schon kleine Änderungen der Bindungswinkel oder der räumlichen Anordnung können darüber entscheiden, ob ein Molekül als Agonist oder Antagonist wirkt. Die tetraedrische Geometrie des sp³-hybridisierten Kohlenstoffs ist für die Chiralität organischer Moleküle und damit für die Stereoselektivität von Arzneistoffen verantwortlich.',
+      klinischerBezug: 'Die Molekülgeometrie bestimmt die biologische Aktivität von Wirkstoffen. Die Wirkung von Enzyminhibitoren und Rezeptorliganden beruht auf der räumlichen Passgenauigkeit (Schlüssel-Schloss-Prinzip). Schon kleine Änderungen der Bindungswinkel oder der räumlichen Anordnung können darüber entscheiden, ob ein Molekül als Agonist oder Antagonist wirkt. Die teträdrische Geometrie des sp³-hybridisierten Kohlenstoffs ist für die Chiralität organischer Moleküle und damit für die Stereoselektivität von Arzneistoffen verantwortlich.',
       selfTest: [
         {
           question: 'Welche Molekülgeometrie hat Ammoniak (NH₃)?',
           options: [
-            'Tetraedrisch',
+            'Teträdrisch',
             'Trigonal-planar',
             'Trigonal-pyramidal',
             'Gewinkelt',
             'Linear'
           ],
           correctIndex: 2,
-          explanation: 'NH₃ hat 4 Elektronendomänen am Stickstoff (3 bindende + 1 freies Paar). Die Elektronengeometrie ist tetraedrisch, aber die Molekülgeometrie (nur Atompositionen) ist trigonal-pyramidal.'
+          explanation: 'NH₃ hat 4 Elektronendomänen am Stickstoff (3 bindende + 1 freies Paar). Die Elektronengeometrie ist teträdrisch, aber die Molekülgeometrie (nur Atompositionen) ist trigonal-pyramidal.'
         },
         {
           question: 'Welche Hybridisierung liegt bei einem Kohlenstoffatom mit einer Doppelbindung vor (z. B. in Ethen)?',

@@ -439,7 +439,7 @@ export const mathematikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "lim(x→0) sin(x)/x = 1 ist einer der wichtigsten Standardgrenzwerte der Analysis. Er kann mittels Einschnuerungssatz (Sandwichtheorem) oder L'Hopital (cos(0)/1 = 1) bewiesen werden.",
+      "lim(x→0) sin(x)/x = 1 ist einer der wichtigsten Standardgrenzwerte der Analysis. Er kann mittels Einschnürungssatz (Sandwichtheorem) oder L'Hopital (cos(0)/1 = 1) bewiesen werden.",
     difficulty: "mittel",
     tags: ["grenzwert", "standardgrenzwert", "sinx-durch-x"],
   },
@@ -583,7 +583,7 @@ export const mathematikQuestionsPart2: Question[] = [
     subject: "mathematik",
     chapter: "geometrie",
     topic: "Kreisberechnungen",
-    text: "Ein Kreissektor hat den Radius r = 10 cm und den Zentriwinkel α = 72°. Wie groß ist die Fläche des Sektors? (π ≈ 3,14)",
+    text: "Ein Kreißektor hat den Radius r = 10 cm und den Zentriwinkel α = 72°. Wie groß ist die Fläche des Sektors? (π ≈ 3,14)",
     options: [
       { id: "a", text: "ca. 31,4 cm²" },
       { id: "b", text: "ca. 62,8 cm²" },
@@ -593,9 +593,9 @@ export const mathematikQuestionsPart2: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Kreissektorfläche: A = (α/360°)·π·r² = (72/360)·3,14·100 = 0,2·314 = 62,8 cm². Der Sektor entspricht 72/360 = 1/5 des Vollkreises.",
+      "Kreißektorfläche: A = (α/360°)·π·r² = (72/360)·3,14·100 = 0,2·314 = 62,8 cm². Der Sektor entspricht 72/360 = 1/5 des Vollkreises.",
     difficulty: "mittel",
-    tags: ["kreissektor", "flächeninhalt", "berechnung"],
+    tags: ["kreißektor", "flächeninhalt", "berechnung"],
   },
 
   // ── Trigonometrie (5 Fragen: math-72 bis math-76) ──────────────────

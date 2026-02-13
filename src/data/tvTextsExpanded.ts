@@ -1,5 +1,5 @@
 // =============================================================================
-// tvTextsExpanded.ts - MedAT Textverstaendnis (TV) Expanded Data
+// tvTextsExpanded.ts - MedAT Textverständnis (TV) Expanded Data
 // 5 Sets x 5 Texte x 12 Fragen pro Set = 60 Fragen insgesamt
 // =============================================================================
 
@@ -43,7 +43,7 @@ const set1: TVTextSet = {
         "die für die Reparatur von Gewebe und die Stärkung des Immunsystems verantwortlich sind. " +
         "Der REM-Schlaf hingegen spielt eine zentrale Rolle bei der Verarbeitung von Erinnerungen " +
         "und dem Lernen. Studien zeigen, dass Erwachsene im Durchschnitt sieben bis neun Stunden " +
-        "Schlaf pro Nacht benötigen, wobei der individuelle Bedarf variieren kann. Chronischer " +
+        "Schlaf pro Nacht benötigen, wobei der individülle Bedarf variieren kann. Chronischer " +
         "Schlafmangel wird mit einem erhöhten Risiko für Herz-Kreislauf-Erkrankungen, Diabetes, " +
         "Adipositas und psychische Störungen in Verbindung gebracht. Auch die kognitive " +
         "Leistungsfähigkeit leidet: Konzentration, Reaktionszeit und Entscheidungsfähigkeit nehmen " +
@@ -168,7 +168,7 @@ const set1: TVTextSet = {
         "zurückgelassen wurden. Das Wiener Kaffeehaus zeichnet sich durch eine besondere " +
         "Atmosphäre aus: Marmortische, Thonet-Stühle, Zeitungsständer mit internationaler " +
         "Presse und die Tradition, stundenlang bei einer einzigen Tasse Kaffee verweilen zu " +
-        "dürfen. Historisch war das Kaffeehaus ein Treffpunkt für Intellektuelle, Künstler und " +
+        "dürfen. Historisch war das Kaffeehaus ein Treffpunkt für Intellektülle, Künstler und " +
         "Schriftsteller. Persönlichkeiten wie Sigmund Freud, Arthur Schnitzler und Stefan Zweig " +
         "waren regelmäßige Gäste. Zum Kaffee wird traditionell ein Glas Wasser serviert, das " +
         "unaufgefordert nachgefüllt wird. Die bekanntesten Kaffeespezialitäten sind der " +
@@ -215,7 +215,7 @@ const set1: TVTextSet = {
         "das ursprünglich vom US-Militär entwickelt wurde und seit den 1990er-Jahren auch zivil " +
         "genutzt werden kann. Es besteht aus mindestens 24 Satelliten, die die Erde in einer Höhe " +
         "von etwa 20.200 Kilometern umkreisen. Jeder Satellit sendet kontinuierlich Signale aus, " +
-        "die seine genaue Position und die aktuelle Uhrzeit enthalten. Ein GPS-Empfänger auf der " +
+        "die seine genaue Position und die aktülle Uhrzeit enthalten. Ein GPS-Empfänger auf der " +
         "Erde empfängt diese Signale und berechnet anhand der Laufzeit der Signale den Abstand zu " +
         "jedem Satelliten. Um eine dreidimensionale Position \u2013 also Längengrad, Breitengrad und " +
         "Höhe \u2013 zu bestimmen, benötigt der Empfänger Signale von mindestens vier Satelliten. " +
@@ -245,14 +245,14 @@ const set1: TVTextSet = {
           question: "Welche Angaben sind laut Text in den Signalen der GPS-Satelliten enthalten?",
           options: [
             "Die Windgeschwindigkeit und Temperatur in der Atmosphäre",
-            "Die genaue Position des Satelliten und die aktuelle Uhrzeit",
+            "Die genaue Position des Satelliten und die aktülle Uhrzeit",
             "Die Position des Empfängers und die geschätzte Entfernung",
             "Die Umlaufgeschwindigkeit des Satelliten und seine Höhe",
             "Die Koordinaten des nächsten Satelliten in der Umlaufbahn",
           ],
           correctOption: 1,
           explanation:
-            "Im Text heißt es: \u201EJeder Satellit sendet kontinuierlich Signale aus, die seine genaue Position und die aktuelle Uhrzeit enthalten.\u201C",
+            "Im Text heißt es: \u201EJeder Satellit sendet kontinuierlich Signale aus, die seine genaue Position und die aktülle Uhrzeit enthalten.\u201C",
         },
       ],
     },
@@ -983,10 +983,10 @@ const set4: TVTextSet = {
         "hervorbringt. Bentham formulierte das \u201EPrinzip der Nützlichkeit\u201C und versuchte, Glück " +
         "quantitativ zu messen \u2013 anhand von Kriterien wie Intensität, Dauer, Gewissheit und " +
         "Nähe eines Vergnügens. Mill modifizierte diesen Ansatz, indem er zwischen höheren und " +
-        "niederen Freuden unterschied: Intellektuelle und moralische Freuden seien qualitativ " +
+        "niederen Freuden unterschied: Intellektülle und moralische Freuden seien qualitativ " +
         "wertvoller als rein körperliche. Der Utilitarismus hatte großen Einfluss auf " +
         "Gesetzgebung und Sozialpolitik, da er eine rationale Grundlage für die Bewertung " +
-        "politischer Maßnahmen bietet. Kritiker wenden jedoch ein, dass die Theorie individuelle " +
+        "politischer Maßnahmen bietet. Kritiker wenden jedoch ein, dass die Theorie individülle " +
         "Rechte zugunsten des Gesamtwohls opfern könnte: Wenn die Folter eines Einzelnen das " +
         "Leid vieler verhindert, wäre sie nach streng utilitaristischer Logik gerechtfertigt. " +
         "Zudem sei es praktisch unmöglich, alle Konsequenzen einer Handlung vorherzusehen und " +
@@ -999,14 +999,14 @@ const set4: TVTextSet = {
           question: "Worin unterschied sich Mills Ansatz laut Text von dem Benthams?",
           options: [
             "Mill lehnte das Prinzip der Nützlichkeit vollständig ab",
-            "Mill unterschied zwischen höheren und niederen Freuden und bewertete intellektuelle Freuden als qualitativ wertvoller",
+            "Mill unterschied zwischen höheren und niederen Freuden und bewertete intellektülle Freuden als qualitativ wertvoller",
             "Mill forderte, Glück ausschließlich anhand der Dauer zu messen",
             "Mill wandte sich gegen jede Form der quantitativen Messung von Glück",
             "Mill beschränkte den Utilitarismus auf ökonomische Fragestellungen",
           ],
           correctOption: 1,
           explanation:
-            "Der Text erklärt: \u201EMill modifizierte diesen Ansatz, indem er zwischen höheren und niederen Freuden unterschied: Intellektuelle und moralische Freuden seien qualitativ wertvoller als rein körperliche.\u201C",
+            "Der Text erklärt: \u201EMill modifizierte diesen Ansatz, indem er zwischen höheren und niederen Freuden unterschied: Intellektülle und moralische Freuden seien qualitativ wertvoller als rein körperliche.\u201C",
         },
         {
           id: "tv4-t2-q2",
@@ -1016,7 +1016,7 @@ const set4: TVTextSet = {
             "Indem er nicht einzelne Handlungen, sondern allgemeine Handlungsregeln nach ihrem Nutzen bewertet",
             "Indem er nur die Folgen für die handelnde Person berücksichtigt",
             "Indem er Glück rein quantitativ anhand von Benthams Kriterien misst",
-            "Indem er individuelle Rechte über das Gemeinwohl stellt",
+            "Indem er individülle Rechte über das Gemeinwohl stellt",
           ],
           correctOption: 1,
           explanation:
@@ -1037,9 +1037,9 @@ const set4: TVTextSet = {
         "abschließend geklärt, doch eine führende Hypothese erklärt Déjà-vus als eine Art " +
         "Gedächtnisfehler: Normalerweise wird eine neue Erfahrung zunächst wahrgenommen und " +
         "dann als Erinnerung gespeichert. Bei einem Déjà-vu könnte es zu einer Fehlfunktion " +
-        "kommen, bei der das Gehirn eine aktuelle Wahrnehmung fälschlicherweise als " +
+        "kommen, bei der das Gehirn eine aktülle Wahrnehmung fälschlicherweise als " +
         "Erinnerung einstuft. Eine andere Theorie besagt, dass Déjà-vus auftreten, wenn " +
-        "die aktuelle Umgebung einer früheren ähnelt, die nicht mehr bewusst erinnert wird. " +
+        "die aktülle Umgebung einer früheren ähnelt, die nicht mehr bewusst erinnert wird. " +
         "Das Gehirn erkennt die Ähnlichkeit unbewusst, ohne die konkrete Quelle benennen zu " +
         "können. Bemerkenswert ist, dass Déjà-vus bei Epilepsiepatienten mit Temporallappenepilepsie " +
         "deutlich häufiger auftreten und dort sogar als Vorboten eines epileptischen " +
@@ -1065,14 +1065,14 @@ const set4: TVTextSet = {
           question: "Welche führende Hypothese zur Erklärung von Déjà-vus wird im Text vorgestellt?",
           options: [
             "Déjà-vus sind Erinnerungen an Erlebnisse aus einem früheren Leben",
-            "Déjà-vus entstehen durch einen Gedächtnisfehler, bei dem das Gehirn eine aktuelle Wahrnehmung fälschlicherweise als Erinnerung einstuft",
+            "Déjà-vus entstehen durch einen Gedächtnisfehler, bei dem das Gehirn eine aktülle Wahrnehmung fälschlicherweise als Erinnerung einstuft",
             "Déjà-vus werden durch einen kurzzeitigen Sauerstoffmangel im Gehirn verursacht",
             "Déjà-vus sind immer Vorboten epileptischer Anfälle",
             "Déjà-vus entstehen durch den Konsum bestimmter Nahrungsmittel",
           ],
           correctOption: 1,
           explanation:
-            "Im Text wird erklärt: \u201Ebei der das Gehirn eine aktuelle Wahrnehmung fälschlicherweise als Erinnerung einstuft\u201C.",
+            "Im Text wird erklärt: \u201Ebei der das Gehirn eine aktülle Wahrnehmung fälschlicherweise als Erinnerung einstuft\u201C.",
         },
       ],
     },
@@ -1410,7 +1410,7 @@ const set5: TVTextSet = {
         "medizinischen Behandlung deren Wirksamkeit beeinflussen kann \u2013 ein Forschungsfeld, " +
         "das als Chronopharmakologie bezeichnet wird. So wirken bestimmte Blutdruckmedikamente " +
         "effektiver, wenn sie abends statt morgens eingenommen werden, weil der Blutdruck einem " +
-        "zirkadianen Muster folgt. Auch die individuelle Veranlagung zum Chronotyp \u2013 ob jemand " +
+        "zirkadianen Muster folgt. Auch die individülle Veranlagung zum Chronotyp \u2013 ob jemand " +
         "eine \u201ELerche\u201C (Frühtyp) oder eine \u201EEule\u201C (Spättyp) ist \u2013 wird maßgeblich durch " +
         "genetische Faktoren bestimmt. Gesellschaftlich sind Spättypen oft benachteiligt, da " +
         "Schul- und Arbeitszeiten typischerweise frühe Anfangszeiten vorsehen. Studien zeigen, " +

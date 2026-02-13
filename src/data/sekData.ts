@@ -22,7 +22,7 @@ export const sekStrategyGuide = {
     },
     {
       heading: "Strategie zum Erkennen",
-      content: `1. Schau zuerst auf die AUGENPARTIE - sie verrät am meisten:
+      content: `1. Schau zürst auf die AUGENPARTIE - sie verrät am meisten:
    - Brauen zusammengezogen = negative Emotion (Wut, Trauer)
    - Brauen angehoben = Überraschung oder Angst
    - Krähenfüße = echte Freude
@@ -262,7 +262,7 @@ export const emotionQuestions: EmotionQuestion[] = [
       },
       {
         id: "b",
-        text: "Ruhig sagen: 'Ich verstehe Ihre Sorge um Ihr Kind. Lassen Sie mich kurz den aktuellen Stand für Sie prüfen.'",
+        text: "Ruhig sagen: 'Ich verstehe Ihre Sorge um Ihr Kind. Lassen Sie mich kurz den aktüllen Stand für Sie prüfen.'",
       },
       {
         id: "c",
@@ -339,7 +339,7 @@ export const emotionQuestions: EmotionQuestion[] = [
     options: [
       {
         id: "a",
-        text: "Die Transfusion trotzdem anordnen, da die medizinische Notwendigkeit ueberwiegt.",
+        text: "Die Transfusion trotzdem anordnen, da die medizinische Notwendigkeit überwiegt.",
       },
       {
         id: "b",

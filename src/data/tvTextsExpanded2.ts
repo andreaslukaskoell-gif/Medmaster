@@ -1,7 +1,7 @@
 import type { TVTextSet } from "./tvTextsExpanded";
 
 // =============================================================================
-// tvTextsExpanded2.ts - MedAT Textverstaendnis (TV) Expanded Data – Part 2
+// tvTextsExpanded2.ts - MedAT Textverständnis (TV) Expanded Data – Part 2
 // 5 Sets (6-10) x 5 Texte x 12 Fragen pro Set = 60 Fragen insgesamt
 // =============================================================================
 
@@ -102,7 +102,7 @@ const set6: TVTextSet = {
         "Adulte Stammzellen hingegen finden sich in verschiedenen Geweben des erwachsenen " +
         "Organismus, beispielsweise im Knochenmark, in der Haut oder im Darm. Sie sind in der " +
         "Regel multipotent, das heißt, sie können sich nur in eine begrenzte Anzahl von Zelltypen " +
-        "entwickeln. Hämatopoetische Stammzellen im Knochenmark etwa können alle Zelltypen des " +
+        "entwickeln. Hämatopötische Stammzellen im Knochenmark etwa können alle Zelltypen des " +
         "Blutes hervorbringen, jedoch keine Nervenzellen oder Muskelzellen bilden. Ein " +
         "Durchbruch gelang im Jahr 2006, als der japanische Forscher Shinya Yamanaka zeigte, dass " +
         "sich bereits ausdifferenzierte Körperzellen durch die Einführung bestimmter Gene in einen " +
@@ -111,7 +111,7 @@ const set6: TVTextSet = {
         "regenerative Medizin, da sie ethische Bedenken umgehen, die mit der Verwendung " +
         "embryonaler Stammzellen verbunden sind. In der klinischen Praxis werden Stammzellen " +
         "bereits seit Jahrzehnten bei Knochenmarktransplantationen eingesetzt, etwa zur Behandlung " +
-        "von Leukämie und anderen Erkrankungen des blutbildenden Systems. Aktuelle " +
+        "von Leukämie und anderen Erkrankungen des blutbildenden Systems. Aktülle " +
         "Forschungsprojekte untersuchen darüber hinaus den Einsatz von Stammzellen bei " +
         "neurodegenerativen Erkrankungen wie Parkinson und Alzheimer, bei Herzinfarkten sowie bei " +
         "Rückenmarksverletzungen. Trotz vielversprechender Ergebnisse in Tierversuchen stehen " +
@@ -506,7 +506,7 @@ const set7: TVTextSet = {
         "Wasserdampf, Kohlendioxid und Schwefeldioxid. Besonders das Schwefeldioxid spielt " +
         "eine bedeutende klimatische Rolle. In der Stratosphäre, der Atmosphärenschicht zwischen " +
         "etwa 10 und 50 Kilometern Höhe, reagiert Schwefeldioxid mit Wasser und bildet feine " +
-        "Schwefelsäuretröpfchen, sogenannte Sulfataerosole. Diese winzigen Partikel reflektieren " +
+        "Schwefelsäuretröpfchen, sogenannte Sulfatärosole. Diese winzigen Partikel reflektieren " +
         "einen Teil der einfallenden Sonnenstrahlung zurück in den Weltraum und verringern so " +
         "die Menge an Energie, die die Erdoberfläche erreicht. Dieser Kühlungseffekt kann bei " +
         "besonders starken Eruptionen über mehrere Jahre anhalten. Ein historisch gut " +
@@ -522,7 +522,7 @@ const set7: TVTextSet = {
         "langfristig zum Treibhauseffekt beitragen, wobei die jährlichen vulkanischen " +
         "CO2-Emissionen im Vergleich zu den anthropogenen Emissionen gering sind – sie " +
         "machen weniger als ein Prozent der menschengemachten CO2-Emissionen aus. " +
-        "Vulkanausbrüche beeinflussen auch die Ozonschicht, da Sulfataerosole chemische " +
+        "Vulkanausbrüche beeinflussen auch die Ozonschicht, da Sulfatärosole chemische " +
         "Reaktionen beschleunigen können, die zum Abbau von Ozon führen. Nach dem Pinatubo-" +
         "Ausbruch wurde ein messbarer Rückgang der Ozonkonzentration in der Stratosphäre " +
         "beobachtet, der die ultraviolette Strahlung auf der Erdoberfläche vorübergehend erhöhte.",
@@ -532,14 +532,14 @@ const set7: TVTextSet = {
           question: "Wie kommt es laut dem Text nach starken Vulkanausbrüchen zu einem globalen Kühlungseffekt?",
           options: [
             "Vulkanische Asche bedeckt die Erdoberfläche und reflektiert Sonnenstrahlung.",
-            "Schwefeldioxid bildet in der Stratosphäre Sulfataerosole, die Sonnenstrahlung ins Weltall zurückreflektieren.",
+            "Schwefeldioxid bildet in der Stratosphäre Sulfatärosole, die Sonnenstrahlung ins Weltall zurückreflektieren.",
             "Vulkanisches CO2 absorbiert Wärme in der Atmosphäre und strahlt sie in den Weltraum ab.",
             "Die freigesetzten Wasserdampfmengen bilden dichte Wolkendecken, die die Erde dauerhaft beschatten.",
             "Die Lava kühlt große Meeresflächen ab und senkt so die globale Temperatur.",
           ],
           correctOption: 1,
           explanation:
-            "Der Text erklärt, dass Schwefeldioxid in der Stratosphäre mit Wasser zu Sulfataerosolen reagiert, die Sonnenstrahlung zurück in den Weltraum reflektieren und so die Erdoberfläche kühlen.",
+            "Der Text erklärt, dass Schwefeldioxid in der Stratosphäre mit Wasser zu Sulfatärosolen reagiert, die Sonnenstrahlung zurück in den Weltraum reflektieren und so die Erdoberfläche kühlen.",
         },
         {
           id: "tv7-3-q2",
@@ -573,7 +573,7 @@ const set7: TVTextSet = {
         "auf die Allelfrequenzen haben. In großen Populationen hingegen gleichen sich die " +
         "zufälligen Schwankungen statistisch weitgehend aus. Zwei besondere Szenarien " +
         "veranschaulichen die Wirkung der genetischen Drift. Der sogenannte Gründereffekt " +
-        "tritt auf, wenn eine kleine Gruppe von Individuen eine neue Population gründet, " +
+        "tritt auf, wenn eine kleine Gruppe von Individün eine neue Population gründet, " +
         "beispielsweise bei der Besiedlung einer Insel. Die genetische Zusammensetzung dieser " +
         "Gründerpopulation entspricht nicht der der Ursprungspopulation, da nur eine zufällige " +
         "Stichprobe der Allele mitgenommen wird. Dies kann dazu führen, dass seltene Allele " +
@@ -581,7 +581,7 @@ const set7: TVTextSet = {
         "Häufigkeit bestimmter Erbkrankheiten in isolierten Bevölkerungsgruppen wie den Amish " +
         "in Nordamerika, die auf eine kleine Gründergruppe zurückgehen. Der Flaschenhalseffekt " +
         "beschreibt eine drastische Reduktion der Populationsgröße durch ein Katastrophenereignis " +
-        "wie eine Seuche, eine Naturkatastrophe oder Bejagung. Die überlebenden Individuen " +
+        "wie eine Seuche, eine Naturkatastrophe oder Bejagung. Die überlebenden Individün " +
         "repräsentieren nur einen Bruchteil der ursprünglichen genetischen Vielfalt, und selbst " +
         "wenn die Population sich zahlenmäßig erholt, bleibt die genetische Diversität " +
         "langfristig verringert. Ein klassisches Beispiel sind die Geparden, deren extrem " +
@@ -861,7 +861,7 @@ const set8: TVTextSet = {
         "genutzt, um eine komplementäre RNA zu erzeugen, die sogenannte Guide-RNA. Diese führt " +
         "das Cas9-Enzym gezielt zu der passenden Stelle im viralen Genom, wo Cas9 die DNA " +
         "durchschneidet und den Phagen damit unschädlich macht. Die Biochemikerinnen Jennifer " +
-        "Doudna und Emmanuelle Charpentier erkannten das Potenzial dieses Systems und zeigten " +
+        "Doudna und Emmanülle Charpentier erkannten das Potenzial dieses Systems und zeigten " +
         "2012, dass es sich zu einem universellen Werkzeug für die Genombearbeitung umfunktionieren " +
         "lässt. Indem man eine synthetische Guide-RNA entwirft, die zu einer beliebigen Zielsequenz " +
         "komplementär ist, kann Cas9 die DNA an genau dieser Stelle schneiden. Die Zelle repariert " +
@@ -911,13 +911,13 @@ const set8: TVTextSet = {
     },
     {
       id: "tv8-4",
-      title: "Bioethik in der modernen Medizin",
+      title: "Biöthik in der modernen Medizin",
       content:
-        "Die Bioethik ist ein interdisziplinäres Fachgebiet, das sich mit den moralischen " +
+        "Die Biöthik ist ein interdisziplinäres Fachgebiet, das sich mit den moralischen " +
         "Fragen befasst, die durch Fortschritte in den Biowissenschaften und der Medizin " +
         "aufgeworfen werden. Ihre Ursprünge als eigenständige Disziplin lassen sich auf die " +
-        "1970er-Jahre zurückführen, als der amerikanische Onkologe Van Rensselaer Potter den " +
-        "Begriff Bioethics prägte, um die Notwendigkeit einer Brücke zwischen biologischem " +
+        "1970er-Jahre zurückführen, als der amerikanische Onkologe Van Rensselär Potter den " +
+        "Begriff Biöthics prägte, um die Notwendigkeit einer Brücke zwischen biologischem " +
         "Wissen und menschlichen Wertvorstellungen zu betonen. Vier grundlegende Prinzipien, " +
         "die von Tom Beauchamp und James Childress in ihrem Werk Principles of Biomedical " +
         "Ethics formuliert wurden, bilden das Fundament der modernen biomedizinischen Ethik: " +
@@ -938,7 +938,7 @@ const set8: TVTextSet = {
         "wird, und passiver Sterbehilfe, bei der lebensverlängernde Maßnahmen unterlassen " +
         "werden. Die rechtliche und ethische Bewertung dieser Praktiken variiert erheblich " +
         "zwischen verschiedenen Ländern und Kulturen. Neue Technologien wie die Genomedierung " +
-        "und die künstliche Intelligenz in der Diagnostik stellen die Bioethik vor zusätzliche " +
+        "und die künstliche Intelligenz in der Diagnostik stellen die Biöthik vor zusätzliche " +
         "Herausforderungen, da sie Fragen nach genetischer Diskriminierung, Datenschutz und " +
         "der Verantwortung bei algorithmischen Fehlentscheidungen aufwerfen.",
       questions: [
@@ -1010,7 +1010,7 @@ const set8: TVTextSet = {
         "mathematisch beschreibbaren Kurve, die zur Todeszeitberechnung herangezogen wird. " +
         "Die forensische Genetik hat die Rechtsmedizin seit den 1980er-Jahren grundlegend " +
         "verändert. Der genetische Fingerabdruck, der auf der Analyse sogenannter Short Tandem " +
-        "Repeats beruht, kurze sich wiederholende DNA-Sequenzen, die zwischen Individuen " +
+        "Repeats beruht, kurze sich wiederholende DNA-Sequenzen, die zwischen Individün " +
         "variieren, ermöglicht eine nahezu eindeutige Identifizierung von Personen. Mit modernen " +
         "Methoden der DNA-Analyse können selbst kleinste Spuren wie einzelne Hautzellen oder " +
         "Haare ausgewertet werden. Die forensische Medizin steht dabei im Spannungsfeld " +
@@ -1038,13 +1038,13 @@ const set8: TVTextSet = {
           options: [
             "Auf der Analyse der gesamten Genomsequenz eines Individuums.",
             "Auf der Untersuchung von Chromosomenaberrationen in weißen Blutkörperchen.",
-            "Auf der Analyse von Short Tandem Repeats, kurzen sich wiederholenden DNA-Sequenzen, die zwischen Individuen variieren.",
+            "Auf der Analyse von Short Tandem Repeats, kurzen sich wiederholenden DNA-Sequenzen, die zwischen Individün variieren.",
             "Auf der Bestimmung der Blutgruppe und des Rhesusfaktors.",
             "Auf dem Vergleich mitochondrialer DNA-Sequenzen verschiedener Personen.",
           ],
           correctOption: 2,
           explanation:
-            "Der Text erklärt, dass der genetische Fingerabdruck auf der Analyse sogenannter Short Tandem Repeats beruht, kurze sich wiederholende DNA-Sequenzen, die zwischen Individuen variieren.",
+            "Der Text erklärt, dass der genetische Fingerabdruck auf der Analyse sogenannter Short Tandem Repeats beruht, kurze sich wiederholende DNA-Sequenzen, die zwischen Individün variieren.",
         },
       ],
     },
@@ -1073,7 +1073,7 @@ const set9: TVTextSet = {
         "Feuchtkugeltemperatur über 35 Grad Celsius liegt, versagt diese Thermoregulation, und " +
         "es droht ein tödlicher Hitzschlag. Indirekt beeinflusst der Klimawandel die Gesundheit " +
         "über die Veränderung von Ökosystemen. Die Ausbreitung von Krankheitsüberträgern wie " +
-        "der Tigermücke Aedes albopictus in bisher gemäßigte Breiten erhöht das Risiko für " +
+        "der Tigermücke Ädes albopictus in bisher gemäßigte Breiten erhöht das Risiko für " +
         "Tropenkrankheiten wie Dengue-Fieber und Chikungunya in Regionen, die bislang davon " +
         "verschont waren. In Europa wurden bereits autochthone, also lokal übertragene Fälle " +
         "von Dengue-Fieber dokumentiert. Die Landwirtschaft leidet unter häufigeren Dürren " +
@@ -1130,7 +1130,7 @@ const set9: TVTextSet = {
         "wurde. Die sozialen und wirtschaftlichen Folgen waren immens: Der Arbeitskräftemangel " +
         "führte zu einer Aufwertung der Arbeit und trug langfristig zum Niedergang des feudalen " +
         "Systems bei. Die Spanische Grippe von 1918 bis 1919, verursacht durch einen " +
-        "H1N1-Influenzavirus, infizierte schätzungsweise ein Drittel der damaligen " +
+        "H1N1-Inflünzavirus, infizierte schätzungsweise ein Drittel der damaligen " +
         "Weltbevölkerung und forderte zwischen 50 und 100 Millionen Todesopfer. Bemerkenswert " +
         "war, dass die höchste Sterblichkeit bei jungen Erwachsenen zwischen 20 und 40 Jahren " +
         "lag, was auf eine überschießende Immunantwort, den sogenannten Zytokinsturm, " +
@@ -1608,7 +1608,7 @@ const set10: TVTextSet = {
         "Die häufigste Schlafstörung ist die Insomnie, die chronische Ein- oder Durchschlaf- " +
         "störung, die etwa zehn Prozent der Erwachsenen betrifft. Bei der Diagnostik kommt " +
         "der Polysomnographie eine zentrale Rolle zu, einem Verfahren, bei dem während des " +
-        "Schlafs gleichzeitig die Hirnströme mittels Elektroenzephalographie, die " +
+        "Schlafs gleichzeitig die Hirnströme mittels Elektrönzephalographie, die " +
         "Augenbewegungen, die Muskelspannung, die Herzfrequenz, die Atmung und der " +
         "Sauerstoffgehalt im Blut aufgezeichnet werden. Diese umfassende Messung ermöglicht " +
         "die Unterscheidung der verschiedenen Schlafstadien und die Identifizierung " +
@@ -1676,17 +1676,17 @@ const set10: TVTextSet = {
     },
     {
       id: "tv10-5",
-      title: "Neuroethik – Moralische Fragen der Hirnforschung",
+      title: "Neuröthik – Moralische Fragen der Hirnforschung",
       content:
-        "Die Neuroethik ist ein relativ junges Fachgebiet, das sich mit den ethischen, " +
+        "Die Neuröthik ist ein relativ junges Fachgebiet, das sich mit den ethischen, " +
         "rechtlichen und gesellschaftlichen Implikationen der Neurowissenschaften befasst. " +
         "Der Begriff wurde Anfang der 2000er-Jahre geprägt und hat seither an Bedeutung " +
         "gewonnen, da die technologischen Möglichkeiten zur Untersuchung und Beeinflussung " +
-        "des Gehirns rasant zugenommen haben. Die Neuroethik lässt sich in zwei Hauptbereiche " +
+        "des Gehirns rasant zugenommen haben. Die Neuröthik lässt sich in zwei Hauptbereiche " +
         "unterteilen: die Ethik der Neurowissenschaft, die sich mit den moralischen Fragen " +
         "der neurowissenschaftlichen Praxis befasst, und die Neurowissenschaft der Ethik, die " +
         "untersucht, wie das Gehirn moralische Urteile bildet. Ein zentrales Thema der " +
-        "Neuroethik ist das sogenannte Neuroenhancement, also der Einsatz von Medikamenten " +
+        "Neuröthik ist das sogenannte Neurönhancement, also der Einsatz von Medikamenten " +
         "oder Technologien zur Steigerung kognitiver Fähigkeiten bei gesunden Menschen. " +
         "Substanzen wie Methylphenidat, das zur Behandlung von ADHS zugelassen ist, und " +
         "Modafinil, ein Wachheitsförderer, werden von Studierenden und Berufstätigen " +
@@ -1711,17 +1711,17 @@ const set10: TVTextSet = {
       questions: [
         {
           id: "tv10-5-q1",
-          question: "Welches ethische Problem des Neuroenhancements beschreibt der Text?",
+          question: "Welches ethische Problem des Neurönhancements beschreibt der Text?",
           options: [
             "Dass kognitive Enhancer bei Gesunden besser wirken als bei Kranken.",
-            "Dass Neuroenhancement zu einer Sucht führen kann, die schwerer zu behandeln ist als andere Abhängigkeiten.",
+            "Dass Neurönhancement zu einer Sucht führen kann, die schwerer zu behandeln ist als andere Abhängigkeiten.",
             "Dass ein Fairness-Problem entsteht, weil Druck auf andere ausgeübt wird, ebenfalls zu solchen Mitteln zu greifen.",
             "Dass die Herstellung dieser Substanzen umweltschädlich ist.",
-            "Dass Neuroenhancement die Kreativität der Anwender dauerhaft verringert.",
+            "Dass Neurönhancement die Kreativität der Anwender dauerhaft verringert.",
           ],
           correctOption: 2,
           explanation:
-            "Der Text beschreibt, dass Neuroenhancement Fragen der Fairness aufwirft, da ein Druck entsteht, ebenfalls zu kognitiven Enhancern zu greifen, um wettbewerbsfähig zu bleiben.",
+            "Der Text beschreibt, dass Neurönhancement Fragen der Fairness aufwirft, da ein Druck entsteht, ebenfalls zu kognitiven Enhancern zu greifen, um wettbewerbsfähig zu bleiben.",
         },
         {
           id: "tv10-5-q2",

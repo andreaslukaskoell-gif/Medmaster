@@ -1,7 +1,7 @@
 import type { Chapter } from "./types";
 
 export const elektrizitaetChapter: Chapter = {
-  id: "elektrizitaet",
+  id: "elektrizität",
   subject: "physik",
   title: "Elektrizität & Magnetismus",
   subtitle: "Stromkreise, Ohm'sches Gesetz, Magnetfeld & Induktion",
@@ -118,7 +118,7 @@ export const elektrizitaetChapter: Chapter = {
         "**Magnetische Feldlinien:**\n" +
         "Feldlinien veranschaulichen das Magnetfeld. Sie verlaufen außerhalb des Magneten von Nord nach Süd und innerhalb des Magneten von Süd nach Nord (geschlossene Schleifen). Die Feldliniendichte gibt die Feldstärke an: Eng beieinanderliegende Linien bedeuten ein starkes Feld. Es gibt keine magnetischen Monopole — magnetische Feldlinien sind immer geschlossen (im Gegensatz zu elektrischen Feldlinien, die an Ladungen beginnen und enden).\n\n" +
         "**Magnetfeld eines stromdurchflossenen Leiters:**\n" +
-        "Ein elektrischer Strom erzeugt stets ein Magnetfeld in seiner Umgebung (Oersted-Experiment, 1820). Die Richtung des Magnetfelds wird durch die Rechte-Hand-Regel bestimmt: Zeigt der Daumen der rechten Hand in die technische Stromrichtung, so umgreifen die Finger den Leiter in Richtung der Feldlinien (konzentrisches Kreisfeld um den Leiter). Eine Spule (viele Windungen) erzeugt ein nahezu homogenes Feld in ihrem Inneren — ähnlich einem Stabmagneten.\n\n" +
+        "Ein elektrischer Strom erzeugt stets ein Magnetfeld in seiner Umgebung (Örsted-Experiment, 1820). Die Richtung des Magnetfelds wird durch die Rechte-Hand-Regel bestimmt: Zeigt der Daumen der rechten Hand in die technische Stromrichtung, so umgreifen die Finger den Leiter in Richtung der Feldlinien (konzentrisches Kreisfeld um den Leiter). Eine Spule (viele Windungen) erzeugt ein nahezu homogenes Feld in ihrem Inneren — ähnlich einem Stabmagneten.\n\n" +
         "**Lorentzkraft F [Newton, N]:**\n" +
         "Die Lorentzkraft ist die Kraft, die ein Magnetfeld auf einen bewegten Ladungsträger ausübt. Sie wird durch folgende Formel beschrieben:\n\n" +
         "<strong>F = q · v · B · sin(α)</strong>\n\n" +
@@ -144,7 +144,7 @@ export const elektrizitaetChapter: Chapter = {
     {
       heading: "Elektromagnetische Induktion",
       content:
-        "Die elektromagnetische Induktion, entdeckt von Michael Faraday (1831) und unabhängig von Joseph Henry, beschreibt die Erzeugung einer elektrischen Spannung durch Änderung des magnetischen Flusses. Sie ist die Grundlage für Generatoren, Transformatoren und zahlreiche medizinische Geräte.\n\n" +
+        "Die elektromagnetische Induktion, entdeckt von Michäl Faraday (1831) und unabhängig von Joseph Henry, beschreibt die Erzeugung einer elektrischen Spannung durch Änderung des magnetischen Flusses. Sie ist die Grundlage für Generatoren, Transformatoren und zahlreiche medizinische Geräte.\n\n" +
         "**Magnetischer Fluss Φ [Weber, Wb]:**\n" +
         "Der magnetische Fluss gibt an, wie viel Magnetfeld durch eine Fläche hindurchtritt: Φ = B · A · cos(α), wobei B die Flussdichte, A die Fläche und α der Winkel zwischen Feldlinien und Flächennormale ist. Einheit: 1 Wb = 1 V·s = 1 T·m².\n\n" +
         "**Faraday'sches Induktionsgesetz:**\n" +

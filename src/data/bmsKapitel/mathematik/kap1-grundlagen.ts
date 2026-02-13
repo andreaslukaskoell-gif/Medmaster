@@ -15,7 +15,7 @@ export const mathKap1: Kapitel = {
 Die reellen Zahlen ℝ schließen zusätzlich die irrationalen Zahlen ein, also Zahlen, die sich nicht als Bruch ganzer Zahlen ausdrücken lassen. Bekannte Beispiele sind √2, π und die Eulersche Zahl e. Irrationale Zahlen besitzen eine unendliche, nicht-periodische Dezimaldarstellung. Die Inklusionskette lautet: ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ. Im MedAT ist ein sicheres Verständnis dieser Zahlmengen wichtig, da Aufgaben häufig prüfen, ob eine bestimmte Zahl zu einer gegebenen Menge gehört. Zum Beispiel gehört √4 = 2 zu ℕ, während √3 irrational und somit nur Element von ℝ ist. Die Unterscheidung zwischen rationalen und irrationalen Zahlen ist ein häufiger Prüfungsgegenstand.
 
 Primzahlen sind natürliche Zahlen größer als 1, die nur durch 1 und sich selbst teilbar sind. Die ersten Primzahlen lauten: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Die Zahl 2 ist die einzige gerade Primzahl. Der Fundamentalsatz der Arithmetik besagt, dass jede natürliche Zahl größer als 1 eindeutig als Produkt von Primzahlen darstellbar ist (Primfaktorzerlegung). Beispiel: 60 = 2² · 3 · 5. Teilbarkeitsregeln erleichtern das Rechnen: Eine Zahl ist durch 2 teilbar, wenn ihre letzte Ziffer gerade ist; durch 3, wenn ihre Quersumme durch 3 teilbar ist; durch 5, wenn sie auf 0 oder 5 endet; durch 9, wenn ihre Quersumme durch 9 teilbar ist; durch 4, wenn die letzten beiden Ziffern durch 4 teilbar sind. Das kleinste gemeinsame Vielfache (kgV) und der größte gemeinsame Teiler (ggT) lassen sich mithilfe der Primfaktorzerlegung bestimmen: Der ggT enthält alle gemeinsamen Primfaktoren mit der jeweils kleinsten Potenz, das kgV alle vorkommenden Primfaktoren mit der jeweils größten Potenz.`,
-      merksaetze: [
+      merksätze: [
         'Die Zahlmengen bilden die Kette ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ. Jede rationale Zahl hat eine endliche oder periodische Dezimaldarstellung, irrationale Zahlen haben eine unendliche nicht-periodische.',
         'Teilbarkeitsregeln: durch 2 → letzte Ziffer gerade; durch 3 → Quersumme durch 3 teilbar; durch 9 → Quersumme durch 9 teilbar; durch 5 → endet auf 0 oder 5.'
       ],
@@ -71,7 +71,7 @@ Primzahlen sind natürliche Zahlen größer als 1, die nur durch 1 und sich selb
 Für die Addition und Subtraktion von Brüchen müssen die Nenner gleich sein. Man bestimmt das kgV der Nenner als Hauptnenner und erweitert entsprechend: a/b + c/d = (a·d + c·b)/(b·d). Effizienter ist es, den Hauptnenner als kgV(b, d) zu wählen. Beispiel: 2/3 + 3/4. Der Hauptnenner ist kgV(3, 4) = 12. Also: 8/12 + 9/12 = 17/12. Die Multiplikation zweier Brüche erfolgt durch Zähler-mal-Zähler und Nenner-mal-Nenner: (a/b) · (c/d) = (a·c)/(b·d). Die Division durch einen Bruch entspricht der Multiplikation mit dem Kehrwert: (a/b) ÷ (c/d) = (a/b) · (d/c) = (a·d)/(b·c). Es empfiehlt sich, vor dem Multiplizieren kreuzweise zu kürzen, um kleinere Zahlen zu erhalten.
 
 Doppelbrüche sind Brüche, deren Zähler oder Nenner selbst ein Bruch ist. Zur Vereinfachung wird der Doppelbruch als Division aufgefasst: (a/b)/(c/d) = (a/b) · (d/c). Gemischte Zahlen wie 2 3/4 können in unechte Brüche umgewandelt werden: 2 3/4 = (2·4 + 3)/4 = 11/4. Umgekehrt wird ein unechter Bruch durch Division mit Rest in eine gemischte Zahl umgeformt: 17/5 = 3 2/5 (denn 17 = 3·5 + 2). Beim Vergleich von Brüchen hilft das Gleichnamigmachen: Der Bruch mit dem größeren Zähler (bei gleichem Nenner) ist der größere. Alternativ kann man die Kreuzregel nutzen: a/b < c/d genau dann, wenn a·d < b·c (für positive Nenner). Diese Rechenfertigkeiten sind im MedAT essenziell, da viele Aufgaben darauf abzielen, effizient mit Brüchen zu rechnen.`,
-      merksaetze: [
+      merksätze: [
         'Addition: Brüche gleichnamig machen, dann Zähler addieren. Multiplikation: Zähler mal Zähler, Nenner mal Nenner. Division: Mit dem Kehrwert multiplizieren.',
         'Doppelbrüche werden als Division interpretiert: (a/b)/(c/d) = (a·d)/(b·c). Vor dem Multiplizieren immer kreuzweise kürzen!'
       ],
@@ -127,7 +127,7 @@ Doppelbrüche sind Brüche, deren Zähler oder Nenner selbst ein Bruch ist. Zur 
 Wurzeln sind die Umkehroperation des Potenzierens: ⁿ√a = a^(1/n). Die Quadratwurzel √a = a^(1/2) ist der häufigste Spezialfall. Aus der Potenzschreibweise leiten sich die Wurzelgesetze ab: ⁿ√a · ⁿ√b = ⁿ√(a·b), ⁿ√a / ⁿ√b = ⁿ√(a/b), und ᵐ√(ⁿ√a) = ᵐ·ⁿ√a. Rationale Exponenten verbinden Potenzen und Wurzeln: a^(m/n) = ⁿ√(aᵐ). Beispiel: 8^(2/3) = ³√(8²) = ³√64 = 4. Alternativ: 8^(2/3) = (³√8)² = 2² = 4. Beim Vereinfachen von Wurzeln zieht man quadratische Faktoren heraus: √72 = √(36 · 2) = 6√2. Das Rationalmachen des Nenners beseitigt Wurzeln im Nenner: 1/√3 = √3/3.
 
 Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. Sie ermöglichen die kompakte Darstellung sehr großer oder sehr kleiner Zahlen in wissenschaftlicher Notation: a · 10ⁿ mit 1 ≤ a < 10. Beispiel: 0,000042 = 4,2 · 10⁻⁵ und 3.500.000 = 3,5 · 10⁶. Die Multiplikation in wissenschaftlicher Notation erfolgt durch Multiplikation der Mantissen und Addition der Exponenten: (3 · 10⁴) · (2 · 10⁻²) = 6 · 10². Bei der Division werden die Exponenten subtrahiert. SI-Vorsilben wie Milli (10⁻³), Mikro (10⁻⁶), Nano (10⁻⁹), Kilo (10³) und Mega (10⁶) basieren direkt auf Zehnerpotenzen und sind im medizinischen Alltag unverzichtbar für Konzentrationsangaben, Dosierungen und Laborwerte.`,
-      merksaetze: [
+      merksätze: [
         'Potenzgesetze merken: Gleiche Basis → Exponenten addieren/subtrahieren. Potenz einer Potenz → Exponenten multiplizieren. a⁰ = 1 und a⁻ⁿ = 1/aⁿ.',
         'Rationale Exponenten verbinden Potenzen und Wurzeln: a^(m/n) = ⁿ√(aᵐ). Wissenschaftliche Notation: a · 10ⁿ mit 1 ≤ a < 10.'
       ],
@@ -178,27 +178,27 @@ Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. 
     {
       id: 'math-kap1-4',
       title: 'Prozent- & Zinsrechnung',
-      content: `Die Prozentrechnung beschreibt Anteile bezogen auf den Grundwert 100. Die drei Grundgroessen sind: der Grundwert G (das Ganze, 100 %), der Prozentsatz p (in %) und der Prozentwert W (der Anteil). Die fundamentale Beziehung lautet: W = G · p/100. Durch Umstellen erhaelt man: G = W · 100/p und p = W/G · 100. Beispiel: 15 % von 240 ergibt W = 240 · 15/100 = 36. Umgekehrt: Wenn 36 von 240 gesucht ist, berechnet man p = 36/240 · 100 = 15 %. Promille funktioniert analog, aber bezogen auf 1000: W = G · p/1000. Prozentuale Veraenderungen spielen eine zentrale Rolle bei Wachstums- und Abnahmeprozessen. Der Wachstumsfaktor q = 1 + p/100 beschreibt Zunahme, q = 1 - p/100 Abnahme. Bei Zinseszins gilt: K_n = K_0 · (1 + p/100)^n. Die Zinseszinsformel ist mathematisch identisch mit dem exponentiellen Wachstum.`,
+      content: `Die Prozentrechnung beschreibt Anteile bezogen auf den Grundwert 100. Die drei Grundgrößen sind: der Grundwert G (das Ganze, 100 %), der Prozentsatz p (in %) und der Prozentwert W (der Anteil). Die fundamentale Beziehung lautet: W = G · p/100. Durch Umstellen erhält man: G = W · 100/p und p = W/G · 100. Beispiel: 15 % von 240 ergibt W = 240 · 15/100 = 36. Umgekehrt: Wenn 36 von 240 gesucht ist, berechnet man p = 36/240 · 100 = 15 %. Promille funktioniert analog, aber bezogen auf 1000: W = G · p/1000. Prozentuale Veränderungen spielen eine zentrale Rolle bei Wachstums- und Abnahmeprozessen. Der Wachstumsfaktor q = 1 + p/100 beschreibt Zunahme, q = 1 - p/100 Abnahme. Bei Zinseszins gilt: K_n = K_0 · (1 + p/100)^n. Die Zinseszinsformel ist mathematisch identisch mit dem exponentiellen Wachstum.`,
       lernziele: [
-        'Grundwert, Prozentwert und Prozentsatz berechnen koennen',
-        'Prozentuale Veraenderungen und Wachstumsfaktoren anwenden koennen',
-        'Die Zinseszinsformel verstehen und anwenden koennen'
+        'Grundwert, Prozentwert und Prozentsatz berechnen können',
+        'Prozentuale Veränderungen und Wachstumsfaktoren anwenden können',
+        'Die Zinseszinsformel verstehen und anwenden können'
       ],
       sections: [
         {
           heading: 'Grundwert, Prozentwert, Prozentsatz',
-          text: `Die Prozentrechnung beschreibt Anteile bezogen auf den Grundwert 100. Die drei Grundgroessen sind: der Grundwert G (das Ganze, 100 %), der Prozentsatz p (in %) und der Prozentwert W (der Anteil). Die fundamentale Beziehung lautet: W = G · p/100. Durch Umstellen erhaelt man: G = W · 100/p und p = W/G · 100. Beispiel: 15 % von 240 ergibt W = 240 · 15/100 = 36. Umgekehrt: Wenn 36 von 240 gesucht ist, berechnet man p = 36/240 · 100 = 15 %. Promille funktioniert analog, aber bezogen auf 1000: W = G · p/1000. Im MedAT werden haeufig Aufgaben gestellt, bei denen zwischen diesen Groessen umgerechnet werden muss.`,
-          merksatz: 'Prozentrechnung: W = G · p/100. Wachstumsfaktor: q = 1 + p/100 (Zunahme) bzw. q = 1 - p/100 (Abnahme). Achtung: Aufeinanderfolgende Aenderungen multiplizieren, nicht addieren!'
+          text: `Die Prozentrechnung beschreibt Anteile bezogen auf den Grundwert 100. Die drei Grundgrößen sind: der Grundwert G (das Ganze, 100 %), der Prozentsatz p (in %) und der Prozentwert W (der Anteil). Die fundamentale Beziehung lautet: W = G · p/100. Durch Umstellen erhält man: G = W · 100/p und p = W/G · 100. Beispiel: 15 % von 240 ergibt W = 240 · 15/100 = 36. Umgekehrt: Wenn 36 von 240 gesucht ist, berechnet man p = 36/240 · 100 = 15 %. Promille funktioniert analog, aber bezogen auf 1000: W = G · p/1000. Im MedAT werden häufig Aufgaben gestellt, bei denen zwischen diesen Größen umgerechnet werden muss.`,
+          merksatz: 'Prozentrechnung: W = G · p/100. Wachstumsfaktor: q = 1 + p/100 (Zunahme) bzw. q = 1 - p/100 (Abnahme). Achtung: Aufeinanderfolgende Änderungen multiplizieren, nicht addieren!'
         },
         {
-          heading: 'Prozentuale Veraenderungen',
-          text: `Prozentuale Veraenderungen spielen eine zentrale Rolle bei Wachstums- und Abnahmeprozessen. Die prozentuale Zunahme berechnet sich als: p = (Neuwert - Altwert)/Altwert · 100. Eine Steigerung um p % bedeutet Multiplikation mit dem Wachstumsfaktor q = 1 + p/100. Eine Abnahme um p % entspricht dem Faktor q = 1 - p/100. Achtung: Eine Steigerung um 20 % und eine anschliessende Senkung um 20 % ergeben nicht den Ausgangswert! Beispiel: 100 -> +20 % -> 120 -> -20 % -> 96. Der Fehler liegt darin, dass die 20 % beim zweiten Mal auf eine groessere Basis (120) bezogen werden. Mehrmalige prozentuale Aenderungen werden durch Multiplikation der Wachstumsfaktoren berechnet.`
+          heading: 'Prozentuale Veränderungen',
+          text: `Prozentuale Veränderungen spielen eine zentrale Rolle bei Wachstums- und Abnahmeprozessen. Die prozentuale Zunahme berechnet sich als: p = (Neuwert - Altwert)/Altwert · 100. Eine Steigerung um p % bedeutet Multiplikation mit dem Wachstumsfaktor q = 1 + p/100. Eine Abnahme um p % entspricht dem Faktor q = 1 - p/100. Achtung: Eine Steigerung um 20 % und eine anschließende Senkung um 20 % ergeben nicht den Ausgangswert! Beispiel: 100 -> +20 % -> 120 -> -20 % -> 96. Der Fehler liegt darin, dass die 20 % beim zweiten Mal auf eine größere Basis (120) bezogen werden. Mehrmalige prozentuale Änderungen werden durch Multiplikation der Wachstumsfaktoren berechnet.`
         },
         {
           heading: 'Zinsrechnung und exponentielles Wachstum',
-          text: `Die Zinsrechnung ist eine Anwendung der Prozentrechnung auf Kapitalverzinsung. Bei einfacher Verzinsung gilt: K_n = K_0 · (1 + n · p/100), wobei K_0 das Anfangskapital, p der Jahreszinssatz und n die Anzahl der Jahre ist. Bei Zinseszins werden die Zinsen jaehrlich dem Kapital zugeschlagen und mitverzinst: K_n = K_0 · (1 + p/100)^n. Der Unterschied zur einfachen Verzinsung wird bei laengerer Laufzeit dramatisch. Beispiel: 1000 Euro bei 5 % ergeben nach 20 Jahren mit einfacher Verzinsung 2000 Euro, mit Zinseszins hingegen 1000 · 1,05^20 ~ 2653,30 Euro. Fuer unterjaehrige Verzinsung (m-mal pro Jahr) gilt: K_n = K_0 · (1 + p/(100·m))^(m·n). Die Zinseszinsformel ist mathematisch identisch mit dem exponentiellen Wachstum und findet in der Medizin Anwendung bei Modellen fuer Bakterienwachstum oder Pharmakokinetik.`,
+          text: `Die Zinsrechnung ist eine Anwendung der Prozentrechnung auf Kapitalverzinsung. Bei einfacher Verzinsung gilt: K_n = K_0 · (1 + n · p/100), wobei K_0 das Anfangskapital, p der Jahreszinssatz und n die Anzahl der Jahre ist. Bei Zinseszins werden die Zinsen jährlich dem Kapital zugeschlagen und mitverzinst: K_n = K_0 · (1 + p/100)^n. Der Unterschied zur einfachen Verzinsung wird bei längerer Laufzeit dramatisch. Beispiel: 1000 Euro bei 5 % ergeben nach 20 Jahren mit einfacher Verzinsung 2000 Euro, mit Zinseszins hingegen 1000 · 1,05^20 ~ 2653,30 Euro. Für unterjährige Verzinsung (m-mal pro Jahr) gilt: K_n = K_0 · (1 + p/(100·m))^(m·n). Die Zinseszinsformel ist mathematisch identisch mit dem exponentiellen Wachstum und findet in der Medizin Anwendung bei Modellen für Bakterienwachstum oder Pharmakokinetik.`,
           table: {
-            headers: ['Groesse', 'Formel', 'Beispiel'],
+            headers: ['Größe', 'Formel', 'Beispiel'],
             rows: [
               ['Prozentwert W', 'W = G · p/100', '15 % von 240: W = 240 · 15/100 = 36'],
               ['Grundwert G', 'G = W · 100/p', 'W = 36, p = 15: G = 36 · 100/15 = 240'],
@@ -209,18 +209,18 @@ Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. 
           }
         }
       ],
-      merksaetze: [
-        'Prozentrechnung: W = G · p/100. Wachstumsfaktor: q = 1 + p/100 (Zunahme) bzw. q = 1 - p/100 (Abnahme). Achtung: Aufeinanderfolgende Aenderungen multiplizieren, nicht addieren!',
-        'Zinseszinsformel: K_n = K_0 · (1 + p/100)^n. Dies ist identisch mit exponentiellem Wachstum und gilt analog fuer Populationswachstum oder radioaktiven Zerfall.'
+      merksätze: [
+        'Prozentrechnung: W = G · p/100. Wachstumsfaktor: q = 1 + p/100 (Zunahme) bzw. q = 1 - p/100 (Abnahme). Achtung: Aufeinanderfolgende Änderungen multiplizieren, nicht addieren!',
+        'Zinseszinsformel: K_n = K_0 · (1 + p/100)^n. Dies ist identisch mit exponentiellem Wachstum und gilt analog für Populationswachstum oder radioaktiven Zerfall.'
       ],
       altfrage: {
         question: 'Ein Medikament wird um 30 % reduziert und kostet nun 49 Euro. Was war der Originalpreis?',
         answer: 'G · 0,70 = 49 Euro, also G = 49/0,70 = 70 Euro. Der Originalpreis betrug 70 Euro.'
       },
-      klinischerBezug: 'In der klinischen Forschung werden Therapieergebnisse oft als prozentuale Risikoreduktion angegeben. Die Unterscheidung zwischen absoluter Risikoreduktion (ARR) und relativer Risikoreduktion (RRR) ist medizinisch essenziell. Auch Verduennungsreihen und Konzentrationsberechnungen beruhen auf Prozentrechnung.',
+      klinischerBezug: 'In der klinischen Forschung werden Therapieergebnisse oft als prozentuale Risikoreduktion angegeben. Die Unterscheidung zwischen absoluter Risikoreduktion (ARR) und relativer Risikoreduktion (RRR) ist medizinisch essenziell. Auch Verdünnungsreihen und Konzentrationsberechnungen beruhen auf Prozentrechnung.',
       selfTest: [
         {
-          question: 'Ein Preis steigt um 25 % und wird danach um 20 % gesenkt. Wie veraendert sich der Originalpreis?',
+          question: 'Ein Preis steigt um 25 % und wird danach um 20 % gesenkt. Wie verändert sich der Originalpreis?',
           options: [
             'Er bleibt gleich',
             'Er steigt um 5 %',
@@ -229,7 +229,7 @@ Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. 
             'Er steigt um 2,5 %'
           ],
           correctIndex: 2,
-          explanation: 'Faktor: 1,25 · 0,80 = 1,00. Der Preis bleibt tatsaechlich gleich. 25 % Steigerung gefolgt von 20 % Senkung ergibt exakt den Ausgangswert.'
+          explanation: 'Faktor: 1,25 · 0,80 = 1,00. Der Preis bleibt tatsächlich gleich. 25 % Steigerung gefolgt von 20 % Senkung ergibt exakt den Ausgangswert.'
         },
         {
           question: 'Wie viel Kapital hat man nach 3 Jahren bei 1000 Euro Startkapital und 4 % Zinseszins?',
@@ -241,7 +241,7 @@ Zehnerpotenzen sind in den Naturwissenschaften und der Medizin allgegenwärtig. 
             '1140,00 Euro'
           ],
           correctIndex: 1,
-          explanation: 'K_3 = 1000 · 1,04^3 = 1000 · 1,124864 = 1124,86 Euro. Einfache Verzinsung haette nur 1120 Euro ergeben.'
+          explanation: 'K_3 = 1000 · 1,04^3 = 1000 · 1,124864 = 1124,86 Euro. Einfache Verzinsung hätte nur 1120 Euro ergeben.'
         },
         {
           question: '72 von 800 Probanden zeigen eine Nebenwirkung. Wie viel Prozent sind das?',

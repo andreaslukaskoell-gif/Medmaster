@@ -54,7 +54,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "a",
     explanation: "m₁v₁ = (m₁+m₂)v → v = 2×3 / (2+4) = 1 m/s.",
     difficulty: "mittel",
-    tags: ["impuls", "unelastischer-stoss"],
+    tags: ["impuls", "unelastischer-stoß"],
   },
   {
     id: "phys-104",
@@ -306,7 +306,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "c",
     explanation: "Beim zentralen elastischen Stoß gleicher Massen tauschen die Körper ihre Geschwindigkeiten. m₁ bleibt stehen (v₁ = 0).",
     difficulty: "mittel",
-    tags: ["stoss", "elastisch"],
+    tags: ["stoß", "elastisch"],
   },
   {
     id: "phys-118",
@@ -361,7 +361,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "a",
     explanation: "Q = m·c·ΔT = 2 × 4200 × 50 = 420.000 J = 420 kJ.",
     difficulty: "leicht",
-    tags: ["waerme", "waermekapazitaet"],
+    tags: ["wärme", "wärmekapazität"],
   },
   {
     id: "phys-121",
@@ -379,7 +379,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "b",
     explanation: "Kupfer (λ ≈ 400 W/(m·K)) ist ein ausgezeichneter Wärmeleiter dank seiner frei beweglichen Elektronen.",
     difficulty: "leicht",
-    tags: ["waermeleitung", "materialien"],
+    tags: ["wärmeleitung", "materialien"],
   },
   {
     id: "phys-122",
@@ -415,7 +415,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "a",
     explanation: "Q = m × L = 0,5 × 334 = 167 kJ. Die Temperatur bleibt während des Schmelzens konstant.",
     difficulty: "leicht",
-    tags: ["phasenuebergang", "schmelzwaerme"],
+    tags: ["phasenübergang", "schmelzwärme"],
   },
   {
     id: "phys-124",
@@ -505,7 +505,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "a",
     explanation: "T_m = (m₁T₁ + m₂T₂)/(m₁+m₂) = (200×80 + 300×20)/500 = 22000/500 = 44 °C.",
     difficulty: "mittel",
-    tags: ["mischung", "waerme"],
+    tags: ["mischung", "wärme"],
   },
   {
     id: "phys-129",
@@ -541,7 +541,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "b",
     explanation: "Q = m × L_v = 0,2 × 2260 = 452 kJ.",
     difficulty: "leicht",
-    tags: ["verdampfung", "phasenuebergang"],
+    tags: ["verdampfung", "phasenübergang"],
   },
   {
     id: "phys-131",
@@ -559,7 +559,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "a",
     explanation: "ΔL = α × L₀ × ΔT = 24×10⁻⁶ × 2 × 50 = 2,4×10⁻³ m = 2,4 mm.",
     difficulty: "mittel",
-    tags: ["waermeausdehnung", "laengenausdehnung"],
+    tags: ["wärmeausdehnung", "längenausdehnung"],
   },
   {
     id: "phys-132",
@@ -597,11 +597,11 @@ export const physikQuestionsPart3: Question[] = [
     difficulty: "mittel",
     tags: ["zweiter-hauptsatz", "entropie"],
   },
-  // ── elektrizitaet (18 Fragen: phys-134 bis phys-151) ─────────────────
+  // ── elektrizität (18 Fragen: phys-134 bis phys-151) ─────────────────
   {
     id: "phys-134",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Coulomb-Gesetz",
     text: "Zwei Ladungen (q₁ = q₂ = 2×10⁻⁶ C) befinden sich im Abstand von 0,1 m. Wie groß ist die Kraft? (k = 9×10⁹ N·m²/C²)",
     options: [
@@ -619,7 +619,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-135",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Ohmsches Gesetz",
     text: "An einem Widerstand von 50 Ω liegt eine Spannung von 230 V an. Wie groß ist der Strom?",
     options: [
@@ -637,7 +637,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-136",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Reihenschaltung",
     text: "Drei Widerstände (10 Ω, 20 Ω, 30 Ω) sind in Reihe geschaltet. Wie groß ist der Gesamtwiderstand?",
     options: [
@@ -655,7 +655,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-137",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Parallelschaltung",
     text: "Zwei Widerstände (6 Ω und 3 Ω) sind parallel geschaltet. Wie groß ist der Gesamtwiderstand?",
     options: [
@@ -673,7 +673,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-138",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Elektrische Leistung",
     text: "Ein Gerät nimmt bei 230 V einen Strom von 2 A auf. Welche Leistung wird verbraucht?",
     options: [
@@ -691,7 +691,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-139",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Kirchhoffsche Knotenregel",
     text: "An einem Knoten fließen Ströme von 3 A und 5 A zu. Wie groß ist der abfließende Strom?",
     options: [
@@ -709,7 +709,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-140",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Kondensator",
     text: "Ein Kondensator (C = 10 µF) wird auf 100 V aufgeladen. Welche Energie ist gespeichert?",
     options: [
@@ -727,7 +727,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-141",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Magnetische Kraft",
     text: "Ein Leiter (l = 0,5 m, I = 4 A) befindet sich senkrecht in einem Magnetfeld (B = 0,2 T). Wie groß ist die Kraft?",
     options: [
@@ -745,7 +745,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-142",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Elektrisches Feld",
     text: "Zwischen zwei Platten (Abstand 2 cm) liegt eine Spannung von 1000 V. Wie groß ist die elektrische Feldstärke?",
     options: [
@@ -763,7 +763,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-143",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Widerstand und Temperatur",
     text: "Was passiert mit dem elektrischen Widerstand eines Metalls, wenn die Temperatur steigt?",
     options: [
@@ -781,7 +781,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-144",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Induktion",
     text: "Welche Spannung wird in einer Spule (N = 100 Windungen) induziert, wenn sich der magnetische Fluss um 0,02 Wb in 0,1 s ändert?",
     options: [
@@ -799,7 +799,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-145",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Elektrische Energie",
     text: "Ein Heizgerät (2000 W) läuft 3 Stunden. Wie viel Energie verbraucht es in kWh?",
     options: [
@@ -817,7 +817,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-146",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Transformator",
     text: "Ein Trafo hat 500 Windungen primär und 50 sekundär. Die Primärspannung beträgt 230 V. Wie groß ist die Sekundärspannung?",
     options: [
@@ -835,7 +835,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-147",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Kirchhoffsche Maschenregel",
     text: "In einer Masche liegen eine Batterie (12 V) und zwei Widerstände (R₁ = 4 Ω, R₂ = 2 Ω) in Reihe. Welche Spannung fällt an R₁ ab?",
     options: [
@@ -853,7 +853,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-148",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Ladung",
     text: "Durch einen Leiter fließt 5 Minuten lang ein Strom von 2 A. Welche Ladung wird transportiert?",
     options: [
@@ -871,7 +871,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-149",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Wechselstrom",
     text: "Die Netzspannung hat einen Effektivwert von 230 V. Wie groß ist der Spitzenwert (Amplitude)?",
     options: [
@@ -889,7 +889,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-150",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Spezifischer Widerstand",
     text: "Ein Kupferdraht (ρ = 1,7×10⁻⁸ Ω·m, l = 100 m, A = 1 mm²). Wie groß ist sein Widerstand?",
     options: [
@@ -907,7 +907,7 @@ export const physikQuestionsPart3: Question[] = [
   {
     id: "phys-151",
     subject: "physik",
-    chapter: "elektrizitaet",
+    chapter: "elektrizität",
     topic: "Lorentzkraft auf Ladung",
     text: "Ein Proton (q = 1,6×10⁻¹⁹ C) bewegt sich mit 10⁶ m/s senkrecht durch ein Magnetfeld (B = 0,5 T). Wie groß ist die Kraft?",
     options: [
@@ -993,7 +993,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "b",
     explanation: "V = b/g = 15/30 = 0,5. Das Bild ist halb so groß wie der Gegenstand und umgekehrt.",
     difficulty: "mittel",
-    tags: ["vergroesserung", "linse"],
+    tags: ["vergrößerung", "linse"],
   },
   {
     id: "phys-156",
@@ -1119,7 +1119,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "b",
     explanation: "V = s₀/f = 25/5 = 5-fach (Bezugssehweite s₀ = 25 cm).",
     difficulty: "mittel",
-    tags: ["lupe", "vergroesserung"],
+    tags: ["lupe", "vergrößerung"],
   },
   {
     id: "phys-163",
@@ -1355,7 +1355,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "c",
     explanation: "Alpha-Teilchen = ⁴₂He-Kern. Massenzahl sinkt um 4, Ordnungszahl um 2.",
     difficulty: "leicht",
-    tags: ["alpha-zerfall", "radioaktivitaet"],
+    tags: ["alpha-zerfall", "radioaktivität"],
   },
   {
     id: "phys-176",
@@ -1373,7 +1373,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "b",
     explanation: "β⁻-Zerfall: n → p + e⁻ + ν̄ₑ. Die Ordnungszahl steigt um 1, die Massenzahl bleibt gleich.",
     difficulty: "mittel",
-    tags: ["beta-zerfall", "radioaktivitaet"],
+    tags: ["beta-zerfall", "radioaktivität"],
   },
   {
     id: "phys-177",
@@ -1391,13 +1391,13 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "b",
     explanation: "Schnelle Elektronen werden an der Anode abgebremst und geben ihre Energie als Röntgenphotonen (Bremsstrahlung) ab.",
     difficulty: "mittel",
-    tags: ["roentgen", "bremsstrahlung"],
+    tags: ["röntgen", "bremsstrahlung"],
   },
   {
     id: "phys-178",
     subject: "physik",
     chapter: "atomphysik",
-    topic: "Photoelektrischer Effekt",
+    topic: "Photölektrischer Effekt",
     text: "Licht der Frequenz f trifft auf eine Metalloberfläche (Austrittsarbeit W₀). Was ist die maximale kinetische Energie der Elektronen?",
     options: [
       { id: "a", text: "E = hf" },
@@ -1409,7 +1409,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "c",
     explanation: "Einstein: E_kin,max = hf - W₀. Nur der Energieüberschuss über die Austrittsarbeit wird zur kinetischen Energie.",
     difficulty: "mittel",
-    tags: ["photoeffekt", "einstein"],
+    tags: ["photöffekt", "einstein"],
   },
   {
     id: "phys-179",
@@ -1463,7 +1463,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "c",
     explanation: "A = A₀ × (1/2)ⁿ = 800 × (1/2)³ = 800/8 = 100 Bq.",
     difficulty: "leicht",
-    tags: ["aktivitaet", "halbwertszeit"],
+    tags: ["aktivität", "halbwertszeit"],
   },
   {
     id: "phys-182",
@@ -1481,7 +1481,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "b",
     explanation: "Ein Elektron schlägt ein inneres Schalenelektron heraus; ein Elektron höherer Schale fällt nach und emittiert ein Photon mit charakteristischer Energie.",
     difficulty: "mittel",
-    tags: ["roentgen", "charakteristisch"],
+    tags: ["röntgen", "charakteristisch"],
   },
   {
     id: "phys-183",
@@ -1515,7 +1515,7 @@ export const physikQuestionsPart3: Question[] = [
       { id: "e", text: "Gravitationsgesetz" },
     ],
     correctOptionId: "b",
-    explanation: "I = I₀ × e^(-µx) (Lambert-Beer / Schwächungsgesetz). µ ist der lineare Schwächungskoeffizient, x die Materialdicke.",
+    explanation: "I = I₀ × e^(-µx) (Lambert-Beer / Schwächungsgesetz). µ ist der lineare Schwächungsköffizient, x die Materialdicke.",
     difficulty: "mittel",
     tags: ["absorption", "schwächung"],
   },
@@ -1608,7 +1608,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "c",
     explanation: "A₁v₁ = A₂v₂ → v₂ = A₁v₁/A₂ = 4 × 2 / 1 = 8 m/s.",
     difficulty: "leicht",
-    tags: ["kontinuitaet", "stroemung"],
+    tags: ["kontinuität", "strömung"],
   },
   {
     id: "phys-190",
@@ -1626,7 +1626,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "d",
     explanation: "Hagen-Poiseuille: Q ∝ r⁴. Bei r/2: Q_neu = (r/2)⁴/r⁴ = 1/16 × Q.",
     difficulty: "mittel",
-    tags: ["hagen-poiseuille", "viskositaet"],
+    tags: ["hagen-poiseuille", "viskosität"],
   },
   {
     id: "phys-191",
@@ -1680,7 +1680,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "b",
     explanation: "An der Oberfläche wirken die Kohäsionskräfte nur nach innen und seitlich, was eine Zugspannung erzeugt (Oberflächenspannung).",
     difficulty: "leicht",
-    tags: ["oberflaechenspannung", "kohaesion"],
+    tags: ["oberflächenspannung", "kohäsion"],
   },
   {
     id: "phys-194",
@@ -1716,7 +1716,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "b",
     explanation: "Re = ρvd/η. Bei Re > ~2300 geht die Strömung von laminar zu turbulent über.",
     difficulty: "mittel",
-    tags: ["reynolds", "stroemung"],
+    tags: ["reynolds", "strömung"],
   },
   {
     id: "phys-196",
@@ -1752,7 +1752,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "b",
     explanation: "Wasser benetzt Glas (Kontaktwinkel < 90°), daher steigt es in der Kapillare durch Adhäsionskräfte nach oben.",
     difficulty: "leicht",
-    tags: ["kapillaritaet", "adhaesion"],
+    tags: ["kapillarität", "adhäsion"],
   },
   {
     id: "phys-198",
@@ -1788,7 +1788,7 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "c",
     explanation: "Kontinuität: A × v = const. Da A_Kapillaren >> A_Aorta, ist v_Kapillaren << v_Aorta. Das ermöglicht den Stoffaustausch.",
     difficulty: "mittel",
-    tags: ["blutstroemung", "kontinuitaet"],
+    tags: ["blutströmung", "kontinuität"],
   },
   {
     id: "phys-200",
@@ -1806,6 +1806,6 @@ export const physikQuestionsPart3: Question[] = [
     correctOptionId: "c",
     explanation: "In hypotoner Lösung ist die Konzentration außen niedriger. Wasser strömt osmotisch in die Zelle, sie schwillt an und kann lysieren (Hämolyse).",
     difficulty: "mittel",
-    tags: ["osmose", "haemolyse"],
+    tags: ["osmose", "hämolyse"],
   },
 ];

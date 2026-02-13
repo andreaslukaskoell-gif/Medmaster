@@ -50,7 +50,7 @@ export const biologieQuestionsPart2: Question[] = [
       { id: "b", text: "Thrombozyten" },
       { id: "c", text: "Alle kernhaltigen Körperzellen" },
       { id: "d", text: "Professionelle antigenpräsentierende Zellen wie dendritische Zellen, Makrophagen und B-Zellen" },
-      { id: "e", text: "Ausschliesslich Hepatozyten" },
+      { id: "e", text: "Ausschließlich Hepatozyten" },
     ],
     correctOptionId: "d",
     explanation:
@@ -412,7 +412,7 @@ export const biologieQuestionsPart2: Question[] = [
       { id: "a", text: "Calcitonin" },
       { id: "b", text: "Aldosteron" },
       { id: "c", text: "Parathormon (PTH)" },
-      { id: "d", text: "Erythropoetin" },
+      { id: "d", text: "Erythropötin" },
       { id: "e", text: "ADH (Antidiuretisches Hormon)" },
     ],
     correctOptionId: "c",
@@ -542,7 +542,7 @@ export const biologieQuestionsPart2: Question[] = [
     subject: "biologie",
     chapter: "verdauung",
     topic: "Pankreas",
-    text: "Welches Enzym des Duodenums aktiviert das Pankreas-Proenzym Trypsinogen zu Trypsin?",
+    text: "Welches Enzym des Duodenums aktiviert das Pankreas-Prönzym Trypsinogen zu Trypsin?",
     options: [
       { id: "a", text: "Pepsin" },
       { id: "b", text: "Chymotrypsin" },
@@ -552,9 +552,9 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Enterokinase (Enteropeptidase) ist ein Enzym der Duodenalschleimhaut, das Trypsinogen durch limitierte Proteolyse zu aktivem Trypsin umwandelt. Trypsin aktiviert dann autokatalytisch weiteres Trypsinogen sowie andere Pankreas-Proenzyme (Chymotrypsinogen, Proelastase, Procarboxypeptidase). Diese Kaskade stellt sicher, dass die Enzyme erst im Darmlumen aktiv werden.",
+      "Enterokinase (Enteropeptidase) ist ein Enzym der Duodenalschleimhaut, das Trypsinogen durch limitierte Proteolyse zu aktivem Trypsin umwandelt. Trypsin aktiviert dann autokatalytisch weiteres Trypsinogen sowie andere Pankreas-Prönzyme (Chymotrypsinogen, Prölastase, Procarboxypeptidase). Diese Kaskade stellt sicher, dass die Enzyme erst im Darmlumen aktiv werden.",
     difficulty: "schwer",
-    tags: ["enterokinase", "trypsinogen", "pankreas", "proenzyme"],
+    tags: ["enterokinase", "trypsinogen", "pankreas", "prönzyme"],
   },
   {
     id: "bio-80",
@@ -565,7 +565,7 @@ export const biologieQuestionsPart2: Question[] = [
     options: [
       { id: "a", text: "Duodenum" },
       { id: "b", text: "Terminales Ileum" },
-      { id: "c", text: "Caecum" },
+      { id: "c", text: "Cäcum" },
       { id: "d", text: "Colon ascendens" },
       { id: "e", text: "Jejunum" },
     ],
@@ -658,7 +658,7 @@ export const biologieQuestionsPart2: Question[] = [
     topic: "Oberflächenvergrößerung",
     text: "Durch welche drei anatomischen Strukturen wird die Resorptionsoberfläche des Dünndarms maximal vergrößert?",
     options: [
-      { id: "a", text: "Haustra, Taenien und Appendices epiploicae" },
+      { id: "a", text: "Haustra, Tänien und Appendices epiploicae" },
       { id: "b", text: "Kerckring-Falten (Plicae circulares), Zotten (Villi) und Mikrovilli" },
       { id: "c", text: "Rugae, Krypten und Peyer-Plaques" },
       { id: "d", text: "Plicae semilunares, Haustra und Becherzellen" },
@@ -909,7 +909,7 @@ export const biologieQuestionsPart2: Question[] = [
     subject: "biologie",
     chapter: "fortpflanzung",
     topic: "Embryogenese",
-    text: "Wie wird das frühe Entwicklungsstadium bezeichnet, in dem der Embryo aus einer soliden Zellkugel (Morula) eine Höhle (Blastozoel) ausbildet?",
+    text: "Wie wird das frühe Entwicklungsstadium bezeichnet, in dem der Embryo aus einer soliden Zellkugel (Morula) eine Höhle (Blastozöl) ausbildet?",
     options: [
       { id: "a", text: "Gastrula" },
       { id: "b", text: "Neurula" },
@@ -919,7 +919,7 @@ export const biologieQuestionsPart2: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Die Blastozyste (beim Menschen) bzw. Blastula (allgemein) entsteht aus der Morula, wenn sich im Inneren ein flüssigkeitsgefüllter Hohlraum (Blastozoel) bildet. Die Blastozyste besteht aus dem Trophoblasten (äußere Zellschicht, wird zur Plazenta) und der inneren Zellmasse (Embryoblast, wird zum Embryo). Die Einnistung (Implantation) erfolgt ca. am 6.-7. Tag nach der Befruchtung im Blastozystenstadium.",
+      "Die Blastozyste (beim Menschen) bzw. Blastula (allgemein) entsteht aus der Morula, wenn sich im Inneren ein flüssigkeitsgefüllter Hohlraum (Blastozöl) bildet. Die Blastozyste besteht aus dem Trophoblasten (äußere Zellschicht, wird zur Plazenta) und der inneren Zellmasse (Embryoblast, wird zum Embryo). Die Einnistung (Implantation) erfolgt ca. am 6.-7. Tag nach der Befruchtung im Blastozystenstadium.",
     difficulty: "mittel",
     tags: ["blastozyste", "embryogenese", "morula", "implantation"],
   },
@@ -951,7 +951,7 @@ export const biologieQuestionsPart2: Question[] = [
     options: [
       { id: "a", text: "FSH" },
       { id: "b", text: "LH" },
-      { id: "c", text: "Östrogen (Oestradiol)" },
+      { id: "c", text: "Östrogen (Östradiol)" },
       { id: "d", text: "Progesteron" },
       { id: "e", text: "Testosteron" },
     ],

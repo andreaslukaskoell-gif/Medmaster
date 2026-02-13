@@ -24,7 +24,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Mitochondrien sind die 'Kraftwerke der Zelle'. In der inneren Mitochondrienmembran findet die Elektronentransportkette statt, die den Protonengradienten aufbaut, welcher die ATP-Synthase antreibt (oxidative Phosphorylierung). Pro Glucosemolekuel entstehen hier ca. 34 der insgesamt 38 ATP.",
+      "Mitochondrien sind die 'Kraftwerke der Zelle'. In der inneren Mitochondrienmembran findet die Elektronentransportkette statt, die den Protonengradienten aufbaut, welcher die ATP-Synthase antreibt (oxidative Phosphorylierung). Pro Glucosemolekül entstehen hier ca. 34 der insgesamt 38 ATP.",
   },
   {
     id: "bio-2",
@@ -65,14 +65,14 @@ export const bmsQuestions: Question[] = [
     text: "Welcher Begriff beschreibt die maximale Populationsgröße, die ein Lebensraum dauerhaft ernähren kann?",
     options: [
       { id: "a", text: "Biotische Kapazität" },
-      { id: "b", text: "Oekologische Nische" },
+      { id: "b", text: "Ökologische Nische" },
       { id: "c", text: "Kapazitätsgrenze (Carrying Capacity)" },
       { id: "d", text: "Minimumgesetz" },
       { id: "e", text: "Populationsdichte" },
     ],
     correctOptionId: "c",
     explanation:
-      "Die Kapazitätsgrenze (Carrying Capacity, K) beschreibt die maximale Anzahl von Individuen einer Art, die ein bestimmter Lebensraum mit seinen begrenzten Ressourcen (Nahrung, Raum, Wasser) langfristig tragen kann. Bei Erreichen von K nähert sich die Wachstumsrate der Population Null (logistisches Wachstum).",
+      "Die Kapazitätsgrenze (Carrying Capacity, K) beschreibt die maximale Anzahl von Individün einer Art, die ein bestimmter Lebensraum mit seinen begrenzten Ressourcen (Nahrung, Raum, Wasser) langfristig tragen kann. Bei Erreichen von K nähert sich die Wachstumsrate der Population Null (logistisches Wachstum).",
   },
   {
     id: "bio-5",
@@ -168,7 +168,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Nach den Mendelschen Regeln ergibt die Kreuzung Aa x Aa folgende Genotypen: 1/4 AA, 2/4 Aa, 1/4 aa. Nur homozygot rezessive Individuen (aa) zeigen den betroffenen Phänotyp, also beträgt die Wahrscheinlichkeit 25%. Die Hälfte der Nachkommen (Aa) sind heterozygote Überträger und 25% (AA) sind weder betroffen noch Überträger.",
+      "Nach den Mendelschen Regeln ergibt die Kreuzung Aa x Aa folgende Genotypen: 1/4 AA, 2/4 Aa, 1/4 aa. Nur homozygot rezessive Individün (aa) zeigen den betroffenen Phänotyp, also beträgt die Wahrscheinlichkeit 25%. Die Hälfte der Nachkommen (Aa) sind heterozygote Überträger und 25% (AA) sind weder betroffen noch Überträger.",
   },
 
   // === CHEMIE ===
@@ -202,7 +202,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Bei der Ionenbindung ist die Elektronegativitätsdifferenz so groß (>1.7), dass ein vollständiger Elektronenuebertrag stattfindet. Das elektronegativere Atom wird zum Anion, das weniger elektronegative zum Kation. Die elektrostatische Anziehung zwischen den entgegengesetzt geladenen Ionen bildet die Ionenbindung (z.B. NaCl).",
+      "Bei der Ionenbindung ist die Elektronegativitätsdifferenz so groß (>1.7), dass ein vollständiger Elektronenübertrag stattfindet. Das elektronegativere Atom wird zum Anion, das weniger elektronegative zum Kation. Die elektrostatische Anziehung zwischen den entgegengesetzt geladenen Ionen bildet die Ionenbindung (z.B. NaCl).",
   },
   {
     id: "chem-3",
@@ -266,7 +266,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Der Kohlensäure-Bicarbonat-Puffer (H2CO3/HCO3-) ist das wichtigste Puffersystem im Blut und hält den pH-Wert im physiologischen Bereich von 7,35-7,45. Sein Vorteil liegt in der offenen Systemcharakteristik: Überschuessiges CO2 kann über die Lunge abgeatmet und HCO3- über die Niere reguliert werden. Die Henderson-Hasselbalch-Gleichung beschreibt das Gleichgewicht dieses Systems.",
+      "Der Kohlensäure-Bicarbonat-Puffer (H2CO3/HCO3-) ist das wichtigste Puffersystem im Blut und hält den pH-Wert im physiologischen Bereich von 7,35-7,45. Sein Vorteil liegt in der offenen Systemcharakteristik: Überschüssiges CO2 kann über die Lunge abgeatmet und HCO3- über die Niere reguliert werden. Die Henderson-Hasselbalch-Gleichung beschreibt das Gleichgewicht dieses Systems.",
   },
   {
     id: "chem-7",
@@ -291,9 +291,9 @@ export const bmsQuestions: Question[] = [
     text: "Unter welchen Bedingungen treten Wasserstoffbrückenbindungen auf?",
     options: [
       { id: "a", text: "Zwischen zwei beliebigen Wasserstoffatomen" },
-      { id: "b", text: "Nur innerhalb von Wassermolekuelen" },
+      { id: "b", text: "Nur innerhalb von Wassermolekülen" },
       { id: "c", text: "Zwischen einem an ein elektronegatives Atom (N, O, F) gebundenen Wasserstoff und einem weiteren elektronegativen Atom" },
-      { id: "d", text: "Ausschliesslich zwischen Metallatomen und Wasserstoff" },
+      { id: "d", text: "Ausschließlich zwischen Metallatomen und Wasserstoff" },
       { id: "e", text: "Zwischen Wasserstoff und Kohlenstoff in organischen Molekülen" },
     ],
     correctOptionId: "c",
@@ -320,7 +320,7 @@ export const bmsQuestions: Question[] = [
     id: "chem-10",
     subject: "chemie",
     chapter: "säuren-basen",
-    text: "Welche Oxidationszahl hat Sauerstoff im Wassermolekuel (H2O)?",
+    text: "Welche Oxidationszahl hat Sauerstoff im Wassermolekül (H2O)?",
     options: [
       { id: "a", text: "+2" },
       { id: "b", text: "-1" },
@@ -330,7 +330,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Im Wassermolekuel hat Sauerstoff die Oxidationszahl -2, da er als elektronegativeres Atom die Bindungselektronen formal zu sich zieht. Wasserstoff hat jeweils die Oxidationszahl +1. Die Summe aller Oxidationszahlen im neutralen Molekül ergibt Null: 2 x (+1) + 1 x (-2) = 0. Die Oxidationszahl -2 ist der häufigste Wert für Sauerstoff in den meisten Verbindungen, mit Ausnahmen wie Peroxiden (-1) und OF2 (+2).",
+      "Im Wassermolekül hat Sauerstoff die Oxidationszahl -2, da er als elektronegativeres Atom die Bindungselektronen formal zu sich zieht. Wasserstoff hat jeweils die Oxidationszahl +1. Die Summe aller Oxidationszahlen im neutralen Molekül ergibt Null: 2 x (+1) + 1 x (-2) = 0. Die Oxidationszahl -2 ist der häufigste Wert für Sauerstoff in den meisten Verbindungen, mit Ausnahmen wie Peroxiden (-1) und OF2 (+2).",
   },
 
   // === PHYSIK ===
@@ -386,7 +386,7 @@ export const bmsQuestions: Question[] = [
     id: "phys-4",
     subject: "physik",
     chapter: "mechanik",
-    text: "Welche physikalische Größe bleibt bei einem perfekt elastischen Stoss NICHT erhalten?",
+    text: "Welche physikalische Größe bleibt bei einem perfekt elastischen Stoß NICHT erhalten?",
     options: [
       { id: "a", text: "Impuls" },
       { id: "b", text: "Kinetische Energie" },
@@ -396,7 +396,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Beim perfekt elastischen Stoss bleiben sowohl der Gesamtimpuls als auch die gesamte kinetische Energie erhalten. Dies unterscheidet ihn vom inelastischen Stoss, bei dem zwar der Impuls, nicht aber die kinetische Energie erhalten bleibt (ein Teil wird in Wärme, Verformung etc. umgewandelt).",
+      "Beim perfekt elastischen Stoß bleiben sowohl der Gesamtimpuls als auch die gesamte kinetische Energie erhalten. Dies unterscheidet ihn vom inelastischen Stoß, bei dem zwar der Impuls, nicht aber die kinetische Energie erhalten bleibt (ein Teil wird in Wärme, Verformung etc. umgewandelt).",
   },
   {
     id: "phys-5",
@@ -452,9 +452,9 @@ export const bmsQuestions: Question[] = [
     chapter: "optik",
     text: "Unter welchen Bedingungen tritt Totalreflexion auf?",
     options: [
-      { id: "a", text: "Wenn Licht von einem optisch dünneren in ein optisch dichteres Medium uebergeht" },
+      { id: "a", text: "Wenn Licht von einem optisch dünneren in ein optisch dichteres Medium übergeht" },
       { id: "b", text: "Wenn Licht senkrecht auf eine Grenzfläche trifft" },
-      { id: "c", text: "Wenn Licht von einem optisch dichteren in ein optisch dünneres Medium uebergeht und der Einfallswinkel den Grenzwinkel ueberschreitet" },
+      { id: "c", text: "Wenn Licht von einem optisch dichteren in ein optisch dünneres Medium übergeht und der Einfallswinkel den Grenzwinkel überschreitet" },
       { id: "d", text: "Wenn Licht auf eine verspiegelte Oberfläche trifft" },
       { id: "e", text: "Wenn Licht durch ein Medium mit gleichmäßig abnehmendem Brechungsindex verläuft" },
     ],
@@ -466,7 +466,7 @@ export const bmsQuestions: Question[] = [
     id: "phys-9",
     subject: "physik",
     chapter: "thermodynamik",
-    text: "Welcher gaengige Stoff hat die höchste spezifische Wärmekapazität?",
+    text: "Welcher gängige Stoff hat die höchste spezifische Wärmekapazität?",
     options: [
       { id: "a", text: "Eisen (0,45 kJ/(kg*K))" },
       { id: "b", text: "Aluminium (0,90 kJ/(kg*K))" },
@@ -476,7 +476,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Wasser hat mit 4,18 kJ/(kg*K) eine außergewöhnlich hohe spezifische Wärmekapazität. Das bedeutet, es wird viel Energie benötigt, um Wasser zu erwärmen, und es gibt beim Abkühlen entsprechend viel Energie ab. Diese Eigenschaft beruht auf den starken Wasserstoffbrückenbindungen zwischen den Wassermolekuelen und ist entscheidend für die Klimaregulation der Erde sowie die Thermoregulation des menschlichen Körpers.",
+      "Wasser hat mit 4,18 kJ/(kg*K) eine außergewöhnlich hohe spezifische Wärmekapazität. Das bedeutet, es wird viel Energie benötigt, um Wasser zu erwärmen, und es gibt beim Abkühlen entsprechend viel Energie ab. Diese Eigenschaft beruht auf den starken Wasserstoffbrückenbindungen zwischen den Wassermolekülen und ist entscheidend für die Klimaregulation der Erde sowie die Thermoregulation des menschlichen Körpers.",
   },
   {
     id: "phys-10",
@@ -606,7 +606,7 @@ export const bmsQuestions: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Nach dem Satz des Pythagoras gilt: c² = a² + b² = 3² + 4² = 9 + 16 = 25. Also c = sqrt(25) = 5 cm. Das Dreieck mit den Seitenlängen 3, 4 und 5 ist das bekannteste pythagoraeische Tripel. Weitere Tripel sind z.B. (5, 12, 13) und (8, 15, 17).",
+      "Nach dem Satz des Pythagoras gilt: c² = a² + b² = 3² + 4² = 9 + 16 = 25. Also c = sqrt(25) = 5 cm. Das Dreieck mit den Seitenlängen 3, 4 und 5 ist das bekannteste pythagoräische Tripel. Weitere Tripel sind z.B. (5, 12, 13) und (8, 15, 17).",
   },
   {
     id: "math-8",

@@ -162,7 +162,7 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
       </Card>
 
       {/* Merksätze */}
-      {uk.merksaetze.map((merksatz, i) => (
+      {uk.merksätze.map((merksatz, i) => (
         <MerksatzBox key={i} text={merksatz} type="merke" />
       ))}
 

@@ -65,7 +65,7 @@ Statt eine Multiplikation direkt auszuführen, kann man sie in einfachere Teilpr
 • Beispiel: (2/3) / (4/5) = 2/3 × 5/4 = 10/12 = <strong>5/6</strong>
 
 <strong>Vorrangregeln (Punkt vor Strich)</strong>
-1. Klammern zuerst
+1. Klammern zürst
 2. Potenzen und Wurzeln
 3. Multiplikation und Division (von links nach rechts)
 4. Addition und Subtraktion (von links nach rechts)`,

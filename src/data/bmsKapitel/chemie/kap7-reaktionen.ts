@@ -15,7 +15,7 @@ export const chemKap7: Kapitel = {
 Die **Umsetzungsreaktion** (auch Austausch- oder Doppeltauschreaktion genannt) beschreibt Reaktionen, bei denen die Bestandteile zweier Verbindungen untereinander ausgetauscht werden. Ein typisches Beispiel ist die Fällung von Bariumsulfat: BaCl₂ + Na₂SO₄ → BaSO₄↓ + 2 NaCl. Diese Reaktion ist auch in der analytischen Chemie von großer Bedeutung, da Bariumsulfat als schwerlöslicher Niederschlag ausfällt und zum Nachweis von Sulfat-Ionen verwendet wird. Umsetzungsreaktionen laufen oft in wässriger Lösung ab und werden durch die Löslichkeitsregeln der beteiligten Salze gesteuert.
 
 **Verbrennungen** sind eine besondere Form der Oxidationsreaktion, bei der ein Stoff mit Sauerstoff unter Freisetzung von Energie (Wärme und Licht) reagiert. Man unterscheidet die vollständige Verbrennung, bei der organische Stoffe zu CO₂ und H₂O oxidiert werden, von der unvollständigen Verbrennung, bei der auch CO oder Ruß (elementarer Kohlenstoff) entstehen können. Die vollständige Verbrennung von Methan lautet: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Im menschlichen Körper laufen analoge Oxidationsprozesse kontrolliert in der Zellatmung ab, wobei Glucose schrittweise oxidiert und die freiwerdende Energie in Form von ATP gespeichert wird.`,
-      merksaetze: [
+      merksätze: [
         'Synthese = Aufbau (A + B → AB), Analyse = Zerlegung (AB → A + B), Umsetzung = Partnertausch (AB + CD → AD + CB).',
         'Verbrennungen sind exotherme Oxidationsreaktionen mit Sauerstoff — vollständig entstehen CO₂ + H₂O, unvollständig auch CO oder Ruß.'
       ],
@@ -71,7 +71,7 @@ Die **Umsetzungsreaktion** (auch Austausch- oder Doppeltauschreaktion genannt) b
 Die **Aktivierungsenergie** (Eₐ) ist die Mindestenergie, die aufgebracht werden muss, damit eine Reaktion abläuft. Selbst exotherme Reaktionen benötigen eine anfängliche Energiezufuhr, um den sogenannten Übergangszustand zu erreichen. Ein Streichholz muss beispielsweise erst gerieben werden (Reibungsenergie als Aktivierungsenergie), bevor die exotherme Verbrennung selbständig weiterläuft. In einem Energiediagramm bildet die Aktivierungsenergie den „Hügel“ zwischen Edukten und Produkten. Je höher Eₐ, desto langsamer verläuft die Reaktion bei gegebener Temperatur, da weniger Moleküle die notwendige kinetische Energie besitzen.
 
 **Katalysatoren** beschleunigen chemische Reaktionen, indem sie die Aktivierungsenergie herabsetzen, ohne selbst verbraucht zu werden. Sie bieten einen alternativen Reaktionsweg mit niedrigerer Energiebarriere. Man unterscheidet homogene Katalysatoren (gleiche Phase wie die Reaktanden, z. B. Säurekatalyse in Lösung) und heterogene Katalysatoren (andere Phase, z. B. Platinoberfläche im Autoabgaskatalysator). In der Biochemie übernehmen Enzyme die Rolle von Katalysatoren — sie können Reaktionen um den Faktor 10⁶ bis 10¹² beschleunigen. Wichtig: Ein Katalysator verändert nicht die Gleichgewichtslage einer Reaktion, sondern beschleunigt lediglich die Einstellung des Gleichgewichts, indem er sowohl Hin- als auch Rückreaktion gleichermaßen beschleunigt.`,
-      merksaetze: [
+      merksätze: [
         'Exotherm: ΔH < 0 (Energie wird frei) — Endotherm: ΔH > 0 (Energie wird aufgenommen). Satz von Hess: ΔH ist wegunabhängig!',
         'Katalysatoren senken die Aktivierungsenergie, verschieben aber NICHT das Gleichgewicht — sie beschleunigen nur die Gleichgewichtseinstellung.'
       ],
@@ -127,7 +127,7 @@ Die **Aktivierungsenergie** (Eₐ) ist die Mindestenergie, die aufgebracht werde
 Mehrere **Einflussfaktoren** bestimmen die Reaktionsgeschwindigkeit: (1) **Temperatur** — eine Temperaturerhöhung erhöht die kinetische Energie der Teilchen, sodass mehr Moleküle die Aktivierungsenergie überschreiten. Die **RGT-Regel** (Reaktionsgeschwindigkeit-Temperatur-Regel, auch van-'t-Hoff-Regel) besagt, dass eine Temperaturerhöhung um 10 °C die Reaktionsgeschwindigkeit ungefähr verdoppelt bis verdreifacht (Faktor 2–3). (2) **Konzentration** — höhere Konzentration bedeutet mehr Teilchen pro Volumen und damit häufigere Zusammenstöße. (3) **Zerteilungsgrad** — fein verteilte Feststoffe bieten eine größere Oberfläche und reagieren schneller (z. B. Eisenpulver vs. Eisenblock). (4) **Katalysatoren** — sie bieten einen alternativen Reaktionsweg mit niedrigerer Aktivierungsenergie.
 
 Das **Geschwindigkeitsgesetz** einer Reaktion wird experimentell ermittelt und hat die allgemeine Form v = k · [A]ᵐ · [B]ⁿ, wobei k die Geschwindigkeitskonstante ist und m sowie n die Reaktionsordnungen bezüglich der Edukte A und B darstellen. Die Gesamtreaktionsordnung ergibt sich als m + n. Bei Reaktionen erster Ordnung (v = k · [A]) hängt die Geschwindigkeit linear von der Konzentration eines Edukts ab — ein Beispiel ist der radioaktive Zerfall. Bei Reaktionen zweiter Ordnung (v = k · [A]²) verdoppelt sich die Geschwindigkeit bei Verdopplung der Konzentration auf das Vierfache. Die Geschwindigkeitskonstante k ist stark temperaturabhängig und folgt der Arrhenius-Gleichung: k = A · e^(-Eₐ/RT), wobei A der präexponentielle Faktor, Eₐ die Aktivierungsenergie, R die Gaskonstante und T die absolute Temperatur ist.`,
-      merksaetze: [
+      merksätze: [
         'RGT-Regel: +10 °C ≈ doppelte bis dreifache Reaktionsgeschwindigkeit. Faktoren: Temperatur, Konzentration, Zerteilungsgrad, Katalysator.',
         'Geschwindigkeitsgesetz v = k · [A]ᵐ · [B]ⁿ — die Exponenten m und n werden experimentell bestimmt, NICHT aus der Reaktionsgleichung abgelesen!'
       ],
@@ -183,7 +183,7 @@ Das **Geschwindigkeitsgesetz** einer Reaktion wird experimentell ermittelt und h
 Das **Prinzip von Le Chatelier** (Prinzip des kleinsten Zwangs) beschreibt, wie ein System im Gleichgewicht auf äußere Störungen reagiert: Das Gleichgewicht verschiebt sich stets so, dass die Störung teilweise kompensiert wird. Konkret bedeutet das: (1) **Konzentration** — Zugabe eines Edukts verschiebt das Gleichgewicht nach rechts (zu den Produkten), Entfernung eines Produkts ebenfalls. (2) **Druck** (bei Gasreaktionen) — eine Druckerhöhung verschiebt das Gleichgewicht zur Seite mit weniger Gasteilchen. Beispiel: N₂ + 3 H₂ ⇌ 2 NH₃ — links 4 mol Gas, rechts 2 mol Gas → Druckerhöhung begünstigt die NH₃-Bildung. (3) **Temperatur** — eine Temperaturerhöhung begünstigt die endotherme Richtung, eine Temperaturerniedrigung die exotherme. Wichtig: Die Temperatur ändert den K-Wert, Konzentration und Druck verschieben nur die Gleichgewichtslage bei konstantem K.
 
 Die Gleichgewichtskonstante K hängt mit der freien Enthalpie über die Beziehung ΔG° = -R·T·ln(K) zusammen. Ist ΔG° negativ, ist K > 1 und die Produkte werden bevorzugt gebildet. Ist ΔG° positiv, ist K < 1 und die Edukte überwiegen. Diese Beziehung verknüpft die Thermodynamik direkt mit der Lage des Gleichgewichts. Für das Haber-Bosch-Verfahren zur Ammoniaksynthese folgt daraus: Hoher Druck (verschiebt Gleichgewicht zur Produktseite) und moderate Temperatur (Kompromiss zwischen Gleichgewichtslage und Reaktionsgeschwindigkeit) bei Verwendung eines Eisenkatalysators sind optimale Bedingungen. Der Katalysator beschleunigt die Einstellung des Gleichgewichts, verändert K aber nicht.`,
-      merksaetze: [
+      merksätze: [
         'Le Chatelier: Das Gleichgewicht weicht einer Störung aus — Konzentrationszugabe → Verbrauch, Druckerhöhung → weniger Teilchen, Temperaturerhöhung → endotherme Richtung.',
         'K = [Produkte]/[Edukte] mit Exponenten. Nur Temperaturänderung verändert K — Konzentration, Druck und Katalysator ändern K nicht!'
       ],
@@ -203,7 +203,7 @@ Die Gleichgewichtskonstante K hängt mit der freien Enthalpie über die Beziehun
             'Die Stoffmenge der Produkte in Mol'
           ],
           correctIndex: 1,
-          explanation: 'K gibt das Verhältnis der Konzentrationen von Produkten zu Edukten im Gleichgewichtszustand an, jeweils potenziert mit den stöchiometrischen Koeffizienten.'
+          explanation: 'K gibt das Verhältnis der Konzentrationen von Produkten zu Edukten im Gleichgewichtszustand an, jeweils potenziert mit den stöchiometrischen Köffizienten.'
         },
         {
           question: 'Welche Störung verändert den Zahlenwert der Gleichgewichtskonstante K?',

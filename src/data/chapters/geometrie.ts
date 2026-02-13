@@ -43,7 +43,7 @@ export const geometrieChapter: Chapter = {
         "<strong>Kreis:</strong>\n" +
         "• Fläche: A = π · r² (mit π ≈ 3,14159)\n" +
         "• Umfang: U = 2π · r = π · d\n" +
-        "• Kreissektor (Tortenstück): A_Sektor = (α / 360°) · π · r²\n" +
+        "• Kreißektor (Tortenstück): A_Sektor = (α / 360°) · π · r²\n" +
         "• Kreisbogen: b = (α / 360°) · 2π · r\n" +
         "• Kreisring: A = π · (R² − r²), wobei R der äußere und r der innere Radius ist.\n\n" +
         "Wichtig: Bei Kreisberechnungen immer darauf achten, ob der <strong>Radius r</strong> oder der <strong>Durchmesser d = 2r</strong> gegeben ist — ein sehr häufiger Fehler in der Prüfung!",

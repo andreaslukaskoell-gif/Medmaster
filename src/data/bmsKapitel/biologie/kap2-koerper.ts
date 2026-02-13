@@ -17,7 +17,7 @@ Die vier Herzklappen sorgen als Ventile dafür, dass das Blut nur in eine Richtu
 
 Der Blutfluss durch das Herz folgt einem festgelegten Weg: Sauerstoffarmes Blut gelangt über die obere und untere Hohlvene (Vena cava superior und inferior) in den rechten Vorhof, passiert die Trikuspidalklappe und fließt in die rechte Kammer. Von dort wird es durch die Pulmonalklappe in den Lungenkreislauf gepumpt. In der Lunge wird das Blut mit Sauerstoff angereichert und fließt über die vier Lungenvenen zurück in den linken Vorhof. Durch die Mitralklappe gelangt es in die linke Kammer, die es schließlich durch die Aortenklappe in die Aorta und damit in den großen Kreislauf auswirft. Das Herzzeitvolumen (Cardiac Output) beträgt in Ruhe etwa 5 Liter pro Minute und ergibt sich aus dem Schlagvolumen (ca. 70 mL) multipliziert mit der Herzfrequenz (ca. 70/min). Die Koronararterien (Arteria coronaria dextra und sinistra) versorgen das Herz selbst mit Blut und entspringen direkt oberhalb der Aortenklappe aus der Aorta.`,
       diagram: 'heart-anatomy',
-      merksaetze: [
+      merksätze: [
         'Tri-Mi-Pu-Ao: Trikuspidalklappe → Mitralklappe → Pulmonalklappe → Aortenklappe – die Reihenfolge der Klappen im Blutfluss von rechts nach links.',
         'Linke Kammer = dickste Wand (pumpt gegen hohen Widerstand in den Körperkreislauf). Herzzeitvolumen = Schlagvolumen × Herzfrequenz ≈ 70 mL × 70/min = ca. 5 L/min.'
       ],
@@ -75,7 +75,7 @@ Die Erregung breitet sich vom Sinusknoten über die Vorhofmuskulatur zum Atriove
 
 Das His-Bündel teilt sich im Kammerseptum in den rechten und linken Tawara-Schenkel auf, die an den Innenwänden der jeweiligen Kammer entlanglaufen. Der linke Tawara-Schenkel teilt sich weiter in einen vorderen und einen hinteren Faszikel. Die Tawara-Schenkel enden in den Purkinje-Fasern, einem weit verzweigten Netzwerk, das die Erregung schnell und gleichmäßig auf die gesamte Kammermuskulatur überträgt. Die Eigenfrequenz der Purkinje-Fasern liegt bei nur 25–40/min (tertiärer Schrittmacher). Die Erregungsleitung erfolgt von endokardial nach epikardial, also von innen nach außen. Diese hierarchische Anordnung der Schrittmacherzentren gewährleistet, dass das Herz auch bei Ausfall höherer Zentren weiter schlagen kann, allerdings mit zunehmend niedrigerer Frequenz.`,
       diagram: 'cardiac-conduction',
-      merksaetze: [
+      merksätze: [
         'Hierarchie der Schrittmacher: Sinusknoten (60–80/min) → AV-Knoten (40–50/min) → Purkinje-Fasern (25–40/min). Merke: „SAP“ – Sinus, AV, Purkinje – die Frequenz sinkt stufenweise.',
         'AV-Verzögerung = ca. 0,1 s – damit die Vorhöfe sich vollständig entleeren können, bevor die Kammern kontrahieren.'
       ],
@@ -133,7 +133,7 @@ Arterien und Venen unterscheiden sich grundlegend in ihrem Aufbau und ihrer Funk
 
 Die Kapillaren sind die dünnsten Gefäße des Kreislaufsystems mit einem Durchmesser von nur 5–10 µm und einer Wand aus einer einzigen Endothelzellschicht. Hier findet der eigentliche Stoff- und Gasaustausch statt – Sauerstoff und Nährstoffe diffundieren ins Gewebe, während Kohlendioxid und Stoffwechselprodukte aufgenommen werden. Der Blutdruck wird als systolischer und diastolischer Wert angegeben: Der Normalwert liegt bei 120/80 mmHg. Der systolische Wert entspricht dem Druck während der Kammerkontraktion, der diastolische Wert dem Druck während der Erschlaffungsphase. Der mittlere arterielle Druck (MAD) berechnet sich näherungsweise als: MAD ≈ diastolischer Druck + ⅓ × (systolischer Druck − diastolischer Druck). Ein wichtiges Konzept ist der totale periphere Widerstand (TPR), der maßgeblich in den Arteriolen reguliert wird und zusammen mit dem Herzzeitvolumen den Blutdruck bestimmt: Blutdruck = HZV × TPR.`,
       diagram: 'blutkreislauf',
-      merksaetze: [
+      merksätze: [
         'Merke: Arterien = vom Herzen weg (A wie „ab“), Venen = zum Herzen hin. Ausnahme: Lungenvenen führen sauerstoffreiches Blut, Lungenarterien führen sauerstoffarmes Blut!',
         'Blutdruck = Herzzeitvolumen × totaler peripherer Widerstand. Normwert: 120/80 mmHg. Der Windkesseleffekt der Aorta glättet die pulsatile Strömung.'
       ],
@@ -187,11 +187,11 @@ Die Kapillaren sind die dünnsten Gefäße des Kreislaufsystems mit einem Durchm
       title: 'Blut & Blutbestandteile',
       content: `Blut ist ein flüssiges Gewebe, das etwa 7–8 % des Körpergewichts ausmacht – bei einem Erwachsenen entspricht das einem Blutvolumen von 4–6 Litern. Durch Zentrifugation lässt sich Blut in seine Bestandteile trennen: Etwa 55 % entfallen auf das Blutplasma (flüssiger Anteil) und etwa 45 % auf die zellulären Bestandteile (Hämatokrit). Das Blutplasma besteht zu etwa 90 % aus Wasser und enthält gelöste Proteine (Albumin, Globuline, Fibrinogen), Elektrolyte (Na⁺, K⁺, Ca²⁺, Cl⁻), Nährstoffe, Hormone, Stoffwechselprodukte und gelöste Gase. Albumin ist das häufigste Plasmaprotein und spielt eine zentrale Rolle bei der Aufrechterhaltung des kolloidosmotischen Drucks (onkotischer Druck), der verhindert, dass zu viel Flüssigkeit aus den Kapillaren ins Gewebe austritt. Fibrinogen ist der Vorläufer des Fibrins und essentiell für die Blutgerinnung. Blutplasma ohne Gerinnungsfaktoren wird als Serum bezeichnet.
 
-Die Erythrozyten (rote Blutkörperchen) machen den Großteil der zellulären Bestandteile aus – ein Mikroliter Blut enthält etwa 4,5–5,5 Millionen Erythrozyten. Sie sind bikonkave Scheiben ohne Zellkern und ohne Mitochondrien, was ihre Oberfläche maximiert und den Gasaustausch optimiert. Ihre Hauptaufgabe ist der Sauerstofftransport mittels Hämoglobin (Hb), einem eisenhaltigen Protein, das pro Molekül vier Sauerstoffmoleküle binden kann. Die Lebensdauer der Erythrozyten beträgt etwa 120 Tage, danach werden sie vor allem in der Milz abgebaut (Hämolyse). Der Hämoglobinabbau liefert Bilirubin, das in der Leber konjugiert und über die Galle ausgeschieden wird. Die Bildung neuer Erythrozyten (Erythropoese) findet im roten Knochenmark statt und wird durch das Hormon Erythropoetin (EPO) aus der Niere stimuliert, insbesondere bei Sauerstoffmangel (Hypoxie).
+Die Erythrozyten (rote Blutkörperchen) machen den Großteil der zellulären Bestandteile aus – ein Mikroliter Blut enthält etwa 4,5–5,5 Millionen Erythrozyten. Sie sind bikonkave Scheiben ohne Zellkern und ohne Mitochondrien, was ihre Oberfläche maximiert und den Gasaustausch optimiert. Ihre Hauptaufgabe ist der Sauerstofftransport mittels Hämoglobin (Hb), einem eisenhaltigen Protein, das pro Molekül vier Sauerstoffmoleküle binden kann. Die Lebensdauer der Erythrozyten beträgt etwa 120 Tage, danach werden sie vor allem in der Milz abgebaut (Hämolyse). Der Hämoglobinabbau liefert Bilirubin, das in der Leber konjugiert und über die Galle ausgeschieden wird. Die Bildung neuer Erythrozyten (Erythropöse) findet im roten Knochenmark statt und wird durch das Hormon Erythropötin (EPO) aus der Niere stimuliert, insbesondere bei Sauerstoffmangel (Hypoxie).
 
 Die Leukozyten (weiße Blutkörperchen, 4.000–10.000/µL) sind die Zellen des Immunsystems und lassen sich in Granulozyten (neutrophile, eosinophile, basophile), Monozyten und Lymphozyten unterteilen. Neutrophile Granulozyten (60–70 %) sind die häufigsten Leukozyten und die „erste Verteidigungslinie“ gegen bakterielle Infektionen durch Phagozytose. Eosinophile (2–4 %) sind besonders bei Parasitenabwehr und allergischen Reaktionen aktiv, basophile Granulozyten (<1 %) setzen Histamin und Heparin frei. Monozyten differenzieren im Gewebe zu Makrophagen und dendritischen Zellen. Lymphozyten umfassen T-Zellen (zelluläre Immunantwort), B-Zellen (Antikörperproduktion) und NK-Zellen (natürliche Killerzellen). Die Thrombozyten (Blutplättchen, 150.000–400.000/µL) sind kernlose Zellfragmente aus Megakaryozyten und spielen eine zentrale Rolle bei der Blutstillung (Hämostase). Sie lagern sich an verletzte Gefäßwände an (Adhäsion), aktivieren sich gegenseitig (Aggregation) und bilden zusammen mit dem Gerinnungssystem einen stabilen Thrombus.`,
       diagram: 'blutbestandteile',
-      merksaetze: [
+      merksätze: [
         'Erythrozyten: 120 Tage Lebensdauer, bikonkav, kernlos, Hämoglobin bindet 4× O₂, Abbau in der Milz, Bildung im Knochenmark durch EPO.',
         'Leukozyten-Reihenfolge nach Häufigkeit: „Never Let Monkeys Eat Bananas“ – Neutrophile (60–70 %) > Lymphozyten (20–30 %) > Monozyten (3–8 %) > Eosinophile (2–4 %) > Basophile (<1 %).'
       ],
@@ -214,16 +214,16 @@ Die Leukozyten (weiße Blutkörperchen, 4.000–10.000/µL) sind die Zellen des 
           explanation: 'Das Blutplasma macht etwa 55 % des Blutvolumens aus, die zellulären Bestandteile (Hämatokrit) etwa 45 %. Der Hämatokrit gibt den prozentualen Anteil der Erythrozyten am Gesamtblutvolumen an.'
         },
         {
-          question: 'Welches Hormon stimuliert die Erythropoese?',
+          question: 'Welches Hormon stimuliert die Erythropöse?',
           options: [
             'Insulin',
-            'Erythropoetin (EPO)',
+            'Erythropötin (EPO)',
             'Thrombopoietin',
             'Aldosteron',
             'Cortisol'
           ],
           correctIndex: 1,
-          explanation: 'Erythropoetin (EPO) wird hauptsächlich in der Niere produziert und stimuliert die Erythropoese im Knochenmark, insbesondere bei Sauerstoffmangel (Hypoxie).'
+          explanation: 'Erythropötin (EPO) wird hauptsächlich in der Niere produziert und stimuliert die Erythropöse im Knochenmark, insbesondere bei Sauerstoffmangel (Hypoxie).'
         },
         {
           question: 'Welche Leukozyten sind am häufigsten im Blut vertreten?',
@@ -243,13 +243,13 @@ Die Leukozyten (weiße Blutkörperchen, 4.000–10.000/µL) sind die Zellen des 
     {
       id: 'bio-kap2-5',
       title: 'Blutgruppen',
-      content: `Das ABO-Blutgruppensystem ist das klinisch wichtigste Blutgruppensystem und wurde 1901 von Karl Landsteiner entdeckt. Es basiert auf der Anwesenheit bestimmter Antigene (Glykoproteine) auf der Oberfläche der Erythrozyten und den korrespondierenden Antikörpern im Blutplasma. Es gibt vier Hauptblutgruppen: A, B, AB und 0. Menschen mit Blutgruppe A haben das Antigen A auf ihren Erythrozyten und Anti-B-Antikörper im Plasma. Blutgruppe B bedeutet Antigen B und Anti-A-Antikörper. Blutgruppe AB besitzt beide Antigene, aber keine Antikörper (Universalempfänger für Erythrozytenkonzentrate). Blutgruppe 0 hat keine Antigene, aber beide Antikörper (Anti-A und Anti-B) – diese Personen gelten als Universalspender für Erythrozytenkonzentrate. Die Vererbung folgt einem kodominanten Muster: Die Allele I^A und I^B sind kodominant zueinander und beide dominant über i (Blutgruppe 0).
+      content: `Das ABO-Blutgruppensystem ist das klinisch wichtigste Blutgruppensystem und wurde 1901 von Karl Landsteiner entdeckt. Es basiert auf der Anwesenheit bestimmter Antigene (Glykoproteine) auf der Oberfläche der Erythrozyten und den korrespondierenden Antikörpern im Blutplasma. Es gibt vier Hauptblutgruppen: A, B, AB und 0. Menschen mit Blutgruppe A haben das Antigen A auf ihren Erythrozyten und Anti-B-Antikörper im Plasma. Blutgruppe B bedeutet Antigen B und Anti-A-Antikörper. Blutgruppe AB besitzt beide Antigene, aber keine Antikörper (Universalempfänger für Erythrozytenkonzentrate). Blutgruppe 0 hat keine Antigene, aber beide Antikörper (Anti-A und Anti-B) – diese Personen gelten als Universalspender für Erythrozytenkonzentrate. Die Vererbung folgt einem kodominanten Muster: Die Allele I^A und I^B sind kodominant züinander und beide dominant über i (Blutgruppe 0).
 
-Das Rhesus-System ist das zweitwichtigste Blutgruppensystem. Das klinisch relevanteste Antigen ist das D-Antigen (Rhesusfaktor D). Menschen, die das D-Antigen auf ihren Erythrozyten tragen, sind Rhesus-positiv (Rh+, ca. 85 % der Bevölkerung); fehlt es, sind sie Rhesus-negativ (Rh−). Im Gegensatz zum ABO-System besitzen Rh-negative Personen keine natürlichen Anti-D-Antikörper – diese bilden sich erst nach Kontakt mit Rh-positivem Blut (Sensibilisierung). Dies ist besonders relevant in der Schwangerschaft: Wenn eine Rh-negative Mutter ein Rh-positives Kind trägt, kann es bei der Geburt zur Sensibilisierung kommen. Bei einer erneuten Schwangerschaft mit einem Rh-positiven Kind können die mütterlichen Anti-D-Antikörper die Plazenta passieren und die fetalen Erythrozyten angreifen (Morbus haemolyticus neonatorum). Zur Prophylaxe wird Rh-negativen Müttern Anti-D-Immunglobulin verabreicht.
+Das Rhesus-System ist das zweitwichtigste Blutgruppensystem. Das klinisch relevanteste Antigen ist das D-Antigen (Rhesusfaktor D). Menschen, die das D-Antigen auf ihren Erythrozyten tragen, sind Rhesus-positiv (Rh+, ca. 85 % der Bevölkerung); fehlt es, sind sie Rhesus-negativ (Rh−). Im Gegensatz zum ABO-System besitzen Rh-negative Personen keine natürlichen Anti-D-Antikörper – diese bilden sich erst nach Kontakt mit Rh-positivem Blut (Sensibilisierung). Dies ist besonders relevant in der Schwangerschaft: Wenn eine Rh-negative Mutter ein Rh-positives Kind trägt, kann es bei der Geburt zur Sensibilisierung kommen. Bei einer erneuten Schwangerschaft mit einem Rh-positiven Kind können die mütterlichen Anti-D-Antikörper die Plazenta passieren und die fetalen Erythrozyten angreifen (Morbus hämolyticus neonatorum). Zur Prophylaxe wird Rh-negativen Müttern Anti-D-Immunglobulin verabreicht.
 
 Vor jeder Bluttransfusion müssen die Blutgruppe des Empfängers und des Spenders bestimmt und eine Kreuzprobe (Verträglichkeitsprobe) durchgeführt werden. Bei der Kreuzprobe wird das Empfängerserum (enthält Antikörper) mit den Spendererythrozyten (enthalten Antigene) gemischt (Major-Kreuzprobe) und umgekehrt (Minor-Kreuzprobe). Tritt eine Agglutination (Verklumpung) auf, ist die Transfusion inkompatibel. Bei einer Fehltransfusion können die Antikörper des Empfängers die Spendererythrozyten angreifen und eine hämolytische Transfusionsreaktion auslösen – eine lebensbedrohliche Komplikation mit massiver Hämolyse, Nierenversagen und disseminierter intravasaler Gerinnung (DIC). Neben ABO und Rhesus gibt es weitere Blutgruppensysteme wie Kell, Duffy und Kidd, die klinisch ebenfalls relevant sein können.`,
       diagram: 'blood-groups',
-      merksaetze: [
+      merksätze: [
         'ABO-Regel: Jede Blutgruppe hat Antikörper gegen die Antigene, die sie NICHT besitzt. AB = kein Antikörper (Universalempfänger), 0 = kein Antigen (Universalspender für Erythrozytenkonzentrate).',
         'Rhesus: Rh− hat KEINE natürlichen Antikörper – Sensibilisierung erst nach Kontakt. Klinisch wichtig: Rh-negative Mutter + Rh-positives Kind → Anti-D-Prophylaxe!'
       ],
@@ -281,7 +281,7 @@ Vor jeder Bluttransfusion müssen die Blutgruppe des Empfängers und des Spender
             'Der Rhesusfaktor wird nur über das X-Chromosom vererbt'
           ],
           correctIndex: 1,
-          explanation: 'Wenn eine Rh-negative Mutter nach der ersten Schwangerschaft mit einem Rh-positiven Kind sensibilisiert wird, können Anti-D-Antikörper in einer Folgeschwangerschaft die fetalen Erythrozyten angreifen (Morbus haemolyticus neonatorum).'
+          explanation: 'Wenn eine Rh-negative Mutter nach der ersten Schwangerschaft mit einem Rh-positiven Kind sensibilisiert wird, können Anti-D-Antikörper in einer Folgeschwangerschaft die fetalen Erythrozyten angreifen (Morbus hämolyticus neonatorum).'
         },
         {
           question: 'Was wird bei der Major-Kreuzprobe geprüft?',
@@ -307,7 +307,7 @@ Die Bronchien verzweigen sich weiter in Lappen-, Segment- und Subsegmentbronchie
 
 Der Gasaustausch in den Alveolen erfolgt durch Diffusion entlang von Partialdruckgradienten über die alveolokapilläre Membran (Blut-Luft-Schranke), die nur etwa 0,2–0,5 µm dünn ist. Sauerstoff diffundiert aus der Alveolarluft (pO₂ ≈ 100 mmHg) ins Blut (pO₂ ≈ 40 mmHg), während CO₂ in umgekehrter Richtung diffundiert. Die Atemvolumina werden mit der Spirometrie gemessen: Das Atemzugvolumen (Tidalvolumen) beträgt in Ruhe ca. 500 mL, das inspiratorische Reservevolumen ca. 3.000 mL, das exspiratorische Reservevolumen ca. 1.100 mL und das Residualvolumen ca. 1.200 mL. Die Vitalkapazität (maximales Volumen, das nach maximaler Einatmung ausgeatmet werden kann) ergibt sich aus Atemzugvolumen + inspiratorisches + exspiratorisches Reservevolumen ≈ 4.600 mL. Die Totalkapazität umfasst zusätzlich das Residualvolumen. Die Atemfrequenz eines Erwachsenen liegt in Ruhe bei 12–20 Atemzügen pro Minute, das Atemminutenvolumen (Atemzugvolumen × Atemfrequenz) bei etwa 6–8 L/min.`,
       diagram: 'atmungssystem',
-      merksaetze: [
+      merksätze: [
         'Rechter Hauptbronchus: kürzer, weiter, steiler → Fremdkörper gelangen häufiger nach rechts. 300 Mio. Alveolen ≈ 100 m² Gasaustauschfläche.',
         'Surfactant (Typ-II-Pneumozyten) senkt die Oberflächenspannung → verhindert Alveolarkollaps. Atemzugvolumen = 500 mL, Vitalkapazität ≈ 4.600 mL.'
       ],
@@ -365,7 +365,7 @@ Der Magen hat ein Fassungsvermögen von 1,5–2 Litern und dient als Reservoir, 
 
 Der Dünndarm (Duodenum, Jejunum, Ileum) ist mit 3–5 Metern Länge der Hauptort der Verdauung und Resorption. Seine Oberfläche wird durch Kerckring-Falten, Zotten (Villi) und Mikrovilli um das 600-Fache vergrößert (ca. 200 m²). Im Dünndarm wirken die Pankreasenzyme: Trypsin und Chymotrypsin (Proteinverdauung), Pankreaslipase (Fettverdauung) und Pankreasamylase (Stärkeverdauung). Die Gallensäuren der Leber emulgieren die Fette und bilden Mizellen, die die Fettresorption ermöglichen. Die Leber ist das zentrale Stoffwechselorgan: Sie synthetisiert Plasmaproteine, speichert Glykogen, bildet Harnstoff (Ammoniakentgiftung), produziert Galle und metabolisiert Medikamente (First-Pass-Effekt). Das Pankreas hat neben der exokrinen Funktion (Verdauungsenzyme) auch eine endokrine Funktion: Die Langerhans-Inseln produzieren Insulin (B-Zellen) und Glukagon (A-Zellen). Der Dickdarm (Colon) resorbiert Wasser und Elektrolyte, beherbergt die Darmflora (Mikrobiom) und formt den Stuhl. Im Rektum wird der Stuhl gespeichert und über den Analkanal ausgeschieden.`,
       diagram: 'verdauungssystem',
-      merksaetze: [
+      merksätze: [
         'Enzymzuordnung: Mund = Amylase (Stärke), Magen = Pepsin (Proteine), Dünndarm = Trypsin/Chymotrypsin (Proteine) + Lipase (Fette) + Amylase (Stärke). Die Kohlenhydratverdauung beginnt im Mund!',
         'Belegzellen = HCl + Intrinsic Factor. Hauptzellen = Pepsinogen. Nebenzellen = Schleim. Merke: „BHN – Belegzellen Hauptzellen Nebenzellen – Säure Enzyme Schutz“.'
       ],
@@ -402,11 +402,11 @@ Der Dünndarm (Duodenum, Jejunum, Ileum) ist mit 3–5 Metern Länge der Hauptor
         {
           question: 'Wie wird die Resorptionsfläche im Dünndarm vergrößert?',
           options: [
-            'Durch Haustra und Taenien',
+            'Durch Haustra und Tänien',
             'Durch Kerckring-Falten, Zotten und Mikrovilli',
             'Durch Krypten und Becherzellen',
             'Durch Peyer-Plaques und Lymphfollikel',
-            'Durch Taenien und Appendices epiploicae'
+            'Durch Tänien und Appendices epiploicae'
           ],
           correctIndex: 1,
           explanation: 'Die Oberfläche des Dünndarms wird durch drei Strukturebenen vergrößert: Kerckring-Falten (makroskopisch), Zotten/Villi (mikroskopisch) und Mikrovilli (Bürstensaum). Dies ergibt eine Gesamtfläche von ca. 200 m².'
@@ -422,8 +422,8 @@ Der Dünndarm (Duodenum, Jejunum, Ileum) ist mit 3–5 Metern Länge der Hauptor
 Funktionell unterscheidet man das somatische und das vegetative (autonome) Nervensystem. Das somatische Nervensystem steuert die willkürliche Motorik der Skelettmuskulatur und leitet bewusste Sinneswahrnehmungen (Sensorik) weiter. Es ist für die bewusste Interaktion mit der Umwelt zuständig. Das vegetative Nervensystem (VNS) hingegen reguliert unbewusst die Funktion der inneren Organe, der glatten Muskulatur, des Herzmuskels und der Drüsen. Es arbeitet weitgehend autonom und wird in drei Anteile unterteilt: Sympathikus, Parasympathikus und das enterische Nervensystem (Darmnervensystem mit ca. 100 Millionen Neuronen, auch „Bauchhirn“ genannt). Der Sympathikus und Parasympathikus wirken in den meisten Organen als Gegenspieler (Antagonisten), wobei der Sympathikus eher „fight or flight“ (Stressreaktion) und der Parasympathikus „rest and digest“ (Ruhe und Verdauung) vermittelt.
 
 Der Sympathikus hat seinen Ursprung im thorakolumbalen Rückenmark (Th1–L2) und verwendet als Neurotransmitter präganglionär Acetylcholin und postganglionär Noradrenalin (Ausnahme: Schweißdrüsen → Acetylcholin). Seine Wirkungen umfassen: Pupillenerweiterung (Mydriasis), Bronchodilatation, Herzfrequenzsteigerung (positiv chronotrop), Blutdruckerhöhung, Hemmung der Magen-Darm-Motilität und Glykogenolyse in der Leber. Der Parasympathikus hat seinen Ursprung im Hirnstamm (Hirnnerven III, VII, IX, X – besonders der Nervus vagus) und im sakralen Rückenmark (S2–S4). Er verwendet sowohl prä- als auch postganglionär Acetylcholin. Seine Wirkungen sind: Pupillenverengung (Miosis), Bronchokonstriktion, Herzfrequenzsenkung (negativ chronotrop), Förderung der Magen-Darm-Motilität und Sekretion, Anregung der Blasenentleerung. Das enterische Nervensystem kann weitgehend unabhängig vom ZNS die Darmmotilität und Sekretion steuern.`,
-      diagram: 'nervensystem-uebersicht',
-      merksaetze: [
+      diagram: 'nervensystem-übersicht',
+      merksätze: [
         'Sympathikus = „fight or flight“: Herz schneller, Bronchien weit, Pupillen weit, Verdauung gehemmt. Parasympathikus = „rest and digest“: Herz langsamer, Bronchien eng, Pupillen eng, Verdauung aktiv.',
         'Sympathikus: thorakolumbal (Th1–L2), postganglionär Noradrenalin. Parasympathikus: kraniosakral (Hirnstamm + S2–S4), immer Acetylcholin.'
       ],
@@ -481,7 +481,7 @@ Im Ruhezustand hat ein Neuron ein Ruhemembranpotential von etwa −70 mV (Innens
 
 Ein Aktionspotential wird ausgelöst, wenn das Membranpotential den Schwellenwert von ca. −55 mV erreicht. Es folgt dem Alles-oder-Nichts-Prinzip: Entweder wird die Schwelle erreicht und ein vollständiges Aktionspotential ausgelöst, oder es passiert nichts. In der Depolarisationsphase öffnen sich spannungsgesteuerte Natriumkanäle schnell, Na⁺ strömt in die Zelle und das Potential steigt auf etwa +30 mV (Overshoot). Die Natriumkanäle inaktivieren sich nach ca. 1 ms automatisch. In der Repolarisationsphase öffnen sich verzögert spannungsgesteuerte Kaliumkanäle, K⁺ strömt aus der Zelle und das Potential kehrt zum Ruhewert zurück. Es folgt oft eine kurze Hyperpolarisation (Nachpotential, ca. −80 mV), da die Kaliumkanäle verzögert schließen. Während der absoluten Refraktärzeit (während des Aktionspotentials) ist kein neues Aktionspotential auslösbar, während der relativen Refraktärzeit ist ein stärkerer Reiz nötig. Dies garantiert die unidirektionale Weiterleitung des Signals entlang des Axons.`,
       diagram: 'action-potential',
-      merksaetze: [
+      merksätze: [
         'Ruhepotential = −70 mV (K⁺-Ausstrom dominiert). Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein. Schwellenwert ≈ −55 mV → Alles-oder-Nichts-Prinzip.',
         'Aktionspotential-Phasen: Depolarisation (Na⁺ rein, +30 mV) → Repolarisation (K⁺ raus) → Hyperpolarisation (−80 mV) → Ruhepotential (−70 mV).'
       ],
@@ -539,7 +539,7 @@ Die synaptische Übertragung an chemischen Synapsen läuft in mehreren Schritten
 
 Man unterscheidet erregende (exzitatorische) und hemmende (inhibitorische) Synapsen. Erregende Synapsen erzeugen ein EPSP (exzitatorisches postsynaptisches Potential), das die postsynaptische Membran depolarisiert und die Wahrscheinlichkeit eines Aktionspotentials erhöht. Hemmende Synapsen erzeugen ein IPSP (inhibitorisches postsynaptisches Potential), das die Membran hyperpolarisiert und ein Aktionspotential unwahrscheinlicher macht. Am Axonhügel werden alle eingehenden EPSPs und IPSPs räumlich und zeitlich summiert (Integration). Wichtige Neurotransmitter sind: Acetylcholin (neuromuskuläre Endplatte, Parasympathikus), Noradrenalin und Adrenalin (Sympathikus, Aufmerksamkeit), Dopamin (Belohnung, Motorik), Serotonin (Stimmung, Schlaf), GABA (wichtigster hemmender Neurotransmitter im ZNS), Glutamat (wichtigster erregender Neurotransmitter im ZNS) und Endorphine (körpereigene Schmerzhemmung). Die Balance zwischen erregenden und hemmenden Neurotransmittern ist entscheidend für die normale Gehirnfunktion.`,
       diagram: 'synapse',
-      merksaetze: [
+      merksätze: [
         'Calcium (Ca²⁺) ist der Schlüssel zur Neurotransmitterfreisetzung: Kein Ca²⁺-Einstrom → keine Exozytose → keine synaptische Übertragung.',
         'Glutamat = wichtigster erregender Neurotransmitter (EPSP). GABA = wichtigster hemmender Neurotransmitter (IPSP). Acetylcholin = neuromuskuläre Endplatte + Parasympathikus.'
       ],
@@ -591,13 +591,13 @@ Man unterscheidet erregende (exzitatorische) und hemmende (inhibitorische) Synap
     {
       id: 'bio-kap2-11',
       title: 'Niere & Homöostase',
-      content: `Die Nieren sind paarige, bohnenförmige Organe im Retroperitonealraum, die etwa 11 cm lang und 150 g schwer sind. Sie erfüllen zentrale Aufgaben der Homöostase: Filtration des Blutes und Bildung des Urins, Regulation des Wasser- und Elektrolythaushalts, Regulation des Säure-Basen-Haushalts, Ausscheidung harnpflichtiger Substanzen (Harnstoff, Kreatinin, Harnsäure), Blutdruckregulation (Renin-Angiotensin-Aldosteron-System) und endokrine Funktionen (Erythropoetin-Produktion, Aktivierung von Vitamin D). Die Niere ist in Rinde (Cortex) und Mark (Medulla) gegliedert. Die Nierenrinde enthält die Glomeruli und die proximalen/distalen Tubuli, das Nierenmark enthält die Henle-Schleifen und Sammelrohre. Die funktionelle Grundeinheit der Niere ist das Nephron – jede Niere besitzt etwa 1 Million Nephrone.
+      content: `Die Nieren sind paarige, bohnenförmige Organe im Retroperitonealraum, die etwa 11 cm lang und 150 g schwer sind. Sie erfüllen zentrale Aufgaben der Homöostase: Filtration des Blutes und Bildung des Urins, Regulation des Wasser- und Elektrolythaushalts, Regulation des Säure-Basen-Haushalts, Ausscheidung harnpflichtiger Substanzen (Harnstoff, Kreatinin, Harnsäure), Blutdruckregulation (Renin-Angiotensin-Aldosteron-System) und endokrine Funktionen (Erythropötin-Produktion, Aktivierung von Vitamin D). Die Niere ist in Rinde (Cortex) und Mark (Medulla) gegliedert. Die Nierenrinde enthält die Glomeruli und die proximalen/distalen Tubuli, das Nierenmark enthält die Henle-Schleifen und Sammelrohre. Die funktionelle Grundeinheit der Niere ist das Nephron – jede Niere besitzt etwa 1 Million Nephrone.
 
 Ein Nephron besteht aus dem Nierenkörperchen (Glomerulus mit Bowman-Kapsel) und dem Tubulussystem (proximaler Tubulus, Henle-Schleife, distaler Tubulus, Sammelrohr). Im Glomerulus wird das Blut filtriert: Durch den Filtrationsdruck werden Wasser und kleine gelöste Stoffe (Glukose, Aminosäuren, Elektrolyte, Harnstoff) aus dem Blut in die Bowman-Kapsel gedrückt, während Blutzellen und große Proteine zurückgehalten werden. Die glomeruläre Filtrationsrate (GFR) beträgt beim Gesunden etwa 120 mL/min bzw. ca. 180 Liter Primärharn pro Tag. Davon werden jedoch 99 % rückresorbiert – es entstehen nur 1–2 Liter Endharn (Urin) pro Tag. Im proximalen Tubulus werden ca. 65 % des Natriums, Wassers, Glukose und Aminosäuren rückresorbiert. In der Henle-Schleife wird durch das Gegenstromprinzip ein osmotischer Gradient im Nierenmark aufgebaut, der für die Harnkonzentrierung entscheidend ist. Der distale Tubulus und das Sammelrohr dienen der Feinregulation unter hormoneller Kontrolle.
 
 Die hormonelle Regulation der Nierenfunktion erfolgt hauptsächlich durch zwei Hormone: ADH (Antidiuretisches Hormon, Vasopressin) wird im Hypothalamus produziert und im Hypophysenhinterlappen gespeichert. Bei erhöhter Plasmaosmolalität oder Volumenmangel wird ADH freigesetzt und bewirkt den Einbau von Aquaporin-2-Wasserkanälen in die Sammelrohre, wodurch mehr Wasser rückresorbiert wird und ein konzentrierter Urin entsteht. Bei ADH-Mangel (Diabetes insipidus) werden bis zu 20 Liter verdünnter Urin pro Tag ausgeschieden. Aldosteron wird in der Nebennierenrinde (Zona glomerulosa) produziert und durch das Renin-Angiotensin-Aldosteron-System (RAAS) reguliert. Es steigert die Na⁺-Rückresorption und K⁺-Sekretion im distalen Tubulus und Sammelrohr. Da Wasser dem Natrium osmotisch folgt, führt Aldosteron auch zu einer vermehrten Wasserretention und damit zu einer Blutdruckerhöhung. Das RAAS wird aktiviert, wenn die Niere einen verminderten Blutdruck oder Volumenmangel registriert.`,
       diagram: 'nephron',
-      merksaetze: [
+      merksätze: [
         'GFR = 120 mL/min → 180 L Primärharn/Tag → 99 % Rückresorption → 1–2 L Endharn. Jede Niere hat ca. 1 Mio. Nephrone.',
         'ADH = Wasser rückresorbieren (Aquaporin-2 im Sammelrohr). Aldosteron = Na⁺ rückresorbieren + K⁺ sezernieren (distaler Tubulus). Merke: „ADH = Antidiuretisch = Hält Wasser zurück“.'
       ],
@@ -605,14 +605,14 @@ Die hormonelle Regulation der Nierenfunktion erfolgt hauptsächlich durch zwei H
         question: 'Wie viel Primärharn produzieren die Nieren pro Tag?',
         answer: 'Die Nieren filtrieren täglich etwa 180 Liter Primärharn (GFR ≈ 120 mL/min × 60 min × 24 h). Durch Rückresorption von ca. 99 % entstehen nur 1–2 Liter Endharn (Urin). Der Großteil der Rückresorption findet im proximalen Tubulus statt.'
       },
-      klinischerBezug: 'Bei chronischer Niereninsuffizienz (CKD) sinkt die GFR fortschreitend ab, harnpflichtige Substanzen akkumulieren im Blut (Urämie) und die Niere kann ihre regulatorischen Funktionen nicht mehr ausüben. Es kommt zu Ödemen, Hyperkaliämie, metabolischer Azidose und renaler Anämie (Erythropoetin-Mangel). Im Endstadium ist eine Dialyse oder Nierentransplantation notwendig. ACE-Hemmer blockieren das RAAS und werden zur Therapie von Bluthochdruck und Herzinsuffizienz eingesetzt.',
+      klinischerBezug: 'Bei chronischer Niereninsuffizienz (CKD) sinkt die GFR fortschreitend ab, harnpflichtige Substanzen akkumulieren im Blut (Urämie) und die Niere kann ihre regulatorischen Funktionen nicht mehr ausüben. Es kommt zu Ödemen, Hyperkaliämie, metabolischer Azidose und renaler Anämie (Erythropötin-Mangel). Im Endstadium ist eine Dialyse oder Nierentransplantation notwendig. ACE-Hemmer blockieren das RAAS und werden zur Therapie von Bluthochdruck und Herzinsuffizienz eingesetzt.',
       selfTest: [
         {
           question: 'Welches Hormon fördert den Einbau von Wasserkanälen im Sammelrohr?',
           options: [
             'Aldosteron',
             'ADH (Vasopressin)',
-            'Erythropoetin',
+            'Erythropötin',
             'Renin',
             'Parathormon'
           ],
@@ -655,7 +655,7 @@ Die Hypothalamus-Hypophysen-Achse funktioniert nach dem Prinzip der negativen R�
 
 Die Nebenniere besteht aus Rinde und Mark mit unterschiedlichen Funktionen. Die Nebennierenrinde produziert in drei Zonen verschiedene Steroide: Zona glomerulosa → Mineralocorticoide (Aldosteron, Wasser-/Salzhaushalt), Zona fasciculata → Glucocorticoide (Cortisol, Stresshormon, Entzündungshemmung, Blutzuckererhöhung), Zona reticularis → Androgene (DHEA, Sexualhormone). Die Cortisolsekretion wird über die HPA-Achse (Hypothalamus → CRH → Hypophyse → ACTH → Nebenniere → Cortisol) reguliert und zeigt einen zirkadianen Rhythmus mit einem Maximum am Morgen. Das Nebennierenmark produziert Katecholamine (Adrenalin 80 %, Noradrenalin 20 %) und ist funktionell Teil des Sympathikus. Weitere wichtige endokrine Organe sind die Nebenschilddrüsen (Parathormon – Calciumhaushalt), die Epiphyse (Melatonin – Schlaf-Wach-Rhythmus) und die Gonaden (Östrogen, Progesteron, Testosteron – Geschlechtsentwicklung und Reproduktion).`,
       diagram: 'hormonsystem',
-      merksaetze: [
+      merksätze: [
         'Negative Rückkopplung: Hoher Hormonspiegel → hemmt übergeordnete Ebene (Hypothalamus/Hypophyse). Schilddrüsenachse: Hypothalamus (TRH) → Hypophyse (TSH) → Schilddrüse (T₃/T₄) → hemmt TRH + TSH.',
         'Insulin senkt Blutzucker (B-Zellen), Glukagon erhöht Blutzucker (A-Zellen). Nebennierenrinde: „GFR“ – Glomerulosa (Aldosteron) → Fasciculata (Cortisol) → Reticularis (Androgene).'
       ],
@@ -713,7 +713,7 @@ Die Skelettmuskulatur macht etwa 40 % des Körpergewichts aus und ermöglicht di
 
 Der molekulare Mechanismus der Muskelkontraktion läuft wie folgt ab: Ein Aktionspotential erreicht die neuromuskuläre Endplatte, Acetylcholin wird freigesetzt und löst ein Aktionspotential in der Muskelfaser aus. Dieses breitet sich über die T-Tubuli ins Innere aus und bewirkt die Freisetzung von Ca²⁺ aus dem sarkoplasmatischen Retikulum. Ca²⁺ bindet an Troponin C auf dem Aktinfilament, was eine Konformationsänderung bewirkt und die Myosinbindungsstellen auf dem Aktin freilegt (Tropomyosin wird verschoben). Die Myosinköpfe binden an Aktin (Querbrückenbildung), kippen unter ATP-Verbrauch (Kraftschlag) und ziehen die Aktinfilamente zur Sarkomermitte – das Sarkomer verkürzt sich. ATP wird benötigt sowohl für den Kraftschlag als auch für das Lösen der Querbrücke (ohne ATP bleibt der Myosinkopf am Aktin gebunden – dies erklärt die Totenstarre/Rigor mortis). Die Erschlaffung erfolgt, wenn Ca²⁺ aktiv in das sarkoplasmatische Retikulum zurückgepumpt wird (SERCA-Pumpe), Troponin seine ursprüngliche Konformation einnimmt und die Myosinbindungsstellen wieder blockiert werden.`,
       diagram: 'sarkomer',
-      merksaetze: [
+      merksätze: [
         'Gleitfilamenttheorie: Aktin und Myosin gleiten ineinander → Sarkomer verkürzt sich, Filamente selbst werden NICHT kürzer. ATP wird für Kraftschlag UND Lösen der Querbrücke benötigt.',
         'Kontraktionsauslöser: Ca²⁺ aus dem sarkoplasmatischen Retikulum bindet an Troponin C → Tropomyosin verschiebt sich → Myosinbindungsstellen auf Aktin werden frei → Querbrückenbildung.'
       ],
@@ -771,7 +771,7 @@ Das Ohr dient dem Hören und dem Gleichgewichtssinn. Es gliedert sich in Außeno
 
 Die Hautsinne umfassen Tastsinn (Mechanorezeption), Temperatursinn (Thermorezeption), Schmerzempfindung (Nozizeption) und Drucksinn. In der Haut befinden sich verschiedene spezialisierte Rezeptoren: Meissner-Körperchen (Berührung, in haarlosen Hautarealen wie Fingerkuppen), Pacini-Körperchen (Druck und Vibration, in der tiefen Dermis), Ruffini-Körperchen (Dehnung, langsam adaptierend), Merkel-Zellen (feiner Druck und Textur) sowie freie Nervenendigungen (Schmerz und Temperatur). Thermorezeptoren werden in Kälterezeptoren (Krause-Endkolben, reagieren auf Abkühlung) und Wärmerezeptoren (Ruffini-Körperchen) unterteilt. Nozizeptoren (Schmerzrezeptoren) sind freie Nervenendigungen, die auf gewebeschädigende Reize reagieren – sie sind polymodal, d. h. sie können auf mechanische, thermische und chemische Reize ansprechen. Die Schmerzweiterleitung erfolgt über schnelle Aδ-Fasern (myelinisiert, scharfer Erstschmerz) und langsame C-Fasern (unmyelinisiert, dumpfer Zweitschmerz). Die Gate-Control-Theorie erklärt, warum Reiben einer schmerzenden Stelle den Schmerz lindert: Berührungsafferenzen (Aβ-Fasern) können die Schmerzweiterleitung im Rückenmark hemmen.`,
       diagram: 'sinnesorgane',
-      merksaetze: [
+      merksätze: [
         'Auge: Stäbchen (120 Mio., Schwarz-Weiß, Dämmerung) vs. Zapfen (6 Mio., Farbe, Tageslicht). Akkommodation: Ziliarmuskel kontrahiert → Linse kugeliger → Nahsicht.',
         'Ohr: Schall → Trommelfell → Gehörknöchelchen (Hammer–Amboss–Steigbügel) → ovales Fenster → Cochlea → Haarzellen (Corti-Organ) → N. vestibulocochlearis → Gehirn.'
       ],

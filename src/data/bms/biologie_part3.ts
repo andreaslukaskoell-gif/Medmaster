@@ -165,13 +165,13 @@ export const biologieQuestionsPart3: Question[] = [
     options: [
       { id: "a", text: "Die Nachkommen der F2-Generation spalten im Verhältnis 9:3:3:1 auf." },
       { id: "b", text: "Gene verschiedener Merkmale werden unabhängig voneinander vererbt." },
-      { id: "c", text: "Kreuzt man zwei reinerbige (homozygote) Individuen, die sich in einem Merkmal unterscheiden, sind alle Nachkommen der F1-Generation untereinander gleich (uniform)." },
+      { id: "c", text: "Kreuzt man zwei reinerbige (homozygote) Individün, die sich in einem Merkmal unterscheiden, sind alle Nachkommen der F1-Generation untereinander gleich (uniform)." },
       { id: "d", text: "Die F1-Generation zeigt immer den rezessiven Phänotyp." },
-      { id: "e", text: "Heterozygote Individuen sind immer steril." },
+      { id: "e", text: "Heterozygote Individün sind immer steril." },
     ],
     correctOptionId: "c",
     explanation:
-      "Die 1. Mendel'sche Regel (Uniformitätsregel) besagt: Kreuzt man zwei homozygote (reinerbige) Elternorganismen, die sich in einem Merkmal unterscheiden, so sind alle Nachkommen der F1-Generation phänotypisch und genotypisch uniform (gleich). Bei dominant-rezessivem Erbgang zeigen alle F1-Individuen den dominanten Phänotyp. Bei intermediärem Erbgang zeigen sie einen Mischphänotyp. Die Regel gilt unabhängig von der Kreuzungsrichtung (reziproke Kreuzung).",
+      "Die 1. Mendel'sche Regel (Uniformitätsregel) besagt: Kreuzt man zwei homozygote (reinerbige) Elternorganismen, die sich in einem Merkmal unterscheiden, so sind alle Nachkommen der F1-Generation phänotypisch und genotypisch uniform (gleich). Bei dominant-rezessivem Erbgang zeigen alle F1-Individün den dominanten Phänotyp. Bei intermediärem Erbgang zeigen sie einen Mischphänotyp. Die Regel gilt unabhängig von der Kreuzungsrichtung (reziproke Kreuzung).",
     difficulty: "leicht",
     tags: ["genetik", "mendel", "uniformitätsregel"],
   },
@@ -285,7 +285,7 @@ export const biologieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Bei Kodominanz werden beide Allele im heterozygoten Zustand gleichwertig und unabhängig voneinander exprimiert, sodass beide Genprodukte im Phänotyp nachweisbar sind. Ein klassisches Beispiel ist das AB0-Blutgruppensystem: Individuen mit dem Genotyp I^A I^B exprimieren sowohl A- als auch B-Antigene auf ihren Erythrozyten und haben die Blutgruppe AB. Im Gegensatz dazu zeigt sich bei intermediärem Erbgang ein Mischphänotyp (z.B. rosa bei roter und weißer Blume).",
+      "Bei Kodominanz werden beide Allele im heterozygoten Zustand gleichwertig und unabhängig voneinander exprimiert, sodass beide Genprodukte im Phänotyp nachweisbar sind. Ein klassisches Beispiel ist das AB0-Blutgruppensystem: Individün mit dem Genotyp I^A I^B exprimieren sowohl A- als auch B-Antigene auf ihren Erythrozyten und haben die Blutgruppe AB. Im Gegensatz dazu zeigt sich bei intermediärem Erbgang ein Mischphänotyp (z.B. rosa bei roter und weißer Blume).",
     difficulty: "mittel",
     tags: ["genetik", "mendel", "kodominanz", "blutgruppen"],
   },
@@ -342,7 +342,7 @@ export const biologieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Die Chorea Huntington ist eine autosomal-dominant vererbte neurodegenerative Erkrankung, die durch eine Expansion des CAG-Trinukleotid-Repeats im Huntingtin-Gen (HTT) auf Chromosom 4 verursacht wird. Gesunde Individuen haben weniger als 36 CAG-Repeats, während Betroffene 36 oder mehr Wiederholungen aufweisen. Die Expansion führt zu einem verlängerten Polyglutamin-Trakt im Protein. Typisch für Trinukleotid-Repeat-Erkrankungen ist die Antizipation: In nachfolgenden Generationen kann die Repeat-Zahl weiter zunehmen, was zu einem früheren Krankheitsbeginn führt.",
+      "Die Chorea Huntington ist eine autosomal-dominant vererbte neurodegenerative Erkrankung, die durch eine Expansion des CAG-Trinukleotid-Repeats im Huntingtin-Gen (HTT) auf Chromosom 4 verursacht wird. Gesunde Individün haben weniger als 36 CAG-Repeats, während Betroffene 36 oder mehr Wiederholungen aufweisen. Die Expansion führt zu einem verlängerten Polyglutamin-Trakt im Protein. Typisch für Trinukleotid-Repeat-Erkrankungen ist die Antizipation: In nachfolgenden Generationen kann die Repeat-Zahl weiter zunehmen, was zu einem früheren Krankheitsbeginn führt.",
     difficulty: "schwer",
     tags: ["genetik", "mutationen", "trinukleotid-repeat", "chorea-huntington"],
   },
@@ -669,7 +669,7 @@ export const biologieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Ein EPSP (exzitatorisches postsynaptisches Potential) ist eine lokale Depolarisation der postsynaptischen Membran, die durch erregendende Neurotransmitter (z.B. Glutamat) verursacht wird. EPSPs erleichtern die Auslösung eines Aktionspotentials, indem sie das Membranpotential näher an das Schwellenpotential bringen. Einzelne EPSPs sind meist unterschwellig; erst durch räumliche oder zeitliche Summation mehrerer EPSPs kann das Schwellenpotential am Axonhuegel erreicht werden. Das Gegenstück ist das IPSP (inhibitorisches postsynaptisches Potential), das eine Hyperpolarisation bewirkt.",
+      "Ein EPSP (exzitatorisches postsynaptisches Potential) ist eine lokale Depolarisation der postsynaptischen Membran, die durch erregendende Neurotransmitter (z.B. Glutamat) verursacht wird. EPSPs erleichtern die Auslösung eines Aktionspotentials, indem sie das Membranpotential näher an das Schwellenpotential bringen. Einzelne EPSPs sind meist unterschwellig; erst durch räumliche oder zeitliche Summation mehrerer EPSPs kann das Schwellenpotential am Axonhügel erreicht werden. Das Gegenstück ist das IPSP (inhibitorisches postsynaptisches Potential), das eine Hyperpolarisation bewirkt.",
     difficulty: "mittel",
     tags: ["nervensystem", "synapse", "EPSP", "postsynaptisch"],
   },
@@ -898,7 +898,7 @@ export const biologieQuestionsPart3: Question[] = [
       { id: "a", text: "Magen" },
       { id: "b", text: "Dickdarm (Kolon)" },
       { id: "c", text: "Dünndarm (insbesondere Jejunum und Ileum)" },
-      { id: "d", text: "Speiseröhre (Oesophagus)" },
+      { id: "d", text: "Speiseröhre (Ösophagus)" },
       { id: "e", text: "Mundhöhle" },
     ],
     correctOptionId: "c",
@@ -941,7 +941,7 @@ export const biologieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Die Gallenflüssigkeit enthält Gallensäuren (Gallensalze), die als Emulgatoren wirken. Sie zerteilen große Fetttroepfchen in viele kleine Tröpfchen (Emulgierung/Mizellenbildung) und vergrößern dadurch die Oberfläche, an der die Pankreaslipase angreifen kann. Gallensäuren spalten Fette nicht selbst enzymatisch, sondern ermöglichen erst die effektive Wirkung der Lipase. Zusätzlich bilden Gallensäuren gemischte Mizellen, die die Resorption der Spaltprodukte (Monoglyceride, Fettsäuren) im Dünndarm erleichtern. Die Galle wird in der Leber produziert und in der Gallenblase gespeichert.",
+      "Die Gallenflüssigkeit enthält Gallensäuren (Gallensalze), die als Emulgatoren wirken. Sie zerteilen große Fetttröpfchen in viele kleine Tröpfchen (Emulgierung/Mizellenbildung) und vergrößern dadurch die Oberfläche, an der die Pankreaslipase angreifen kann. Gallensäuren spalten Fette nicht selbst enzymatisch, sondern ermöglichen erst die effektive Wirkung der Lipase. Zusätzlich bilden Gallensäuren gemischte Mizellen, die die Resorption der Spaltprodukte (Monoglyceride, Fettsäuren) im Dünndarm erleichtern. Die Galle wird in der Leber produziert und in der Gallenblase gespeichert.",
     difficulty: "mittel",
     tags: ["verdauung", "enzyme", "galle", "fettverdauung", "emulgierung"],
   },

@@ -13,7 +13,7 @@ export const fragenPart1 = [
       'Neutronen und Elektronen'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Der Atomkern besteht aus Protonen (positiv geladen) und Neutronen (elektrisch neutral). Die Elektronen befinden sich in der Elektronenhülle außerhalb des Kerns.',
+    erklärung: 'Der Atomkern besteht aus Protonen (positiv geladen) und Neutronen (elektrisch neutral). Die Elektronen befinden sich in der Elektronenhülle außerhalb des Kerns.',
     strategieTipp: 'Merke: Kern = Protonen + Neutronen, Hülle = Elektronen. Die Massenzahl gibt die Summe von Protonen und Neutronen an.'
   },
   {
@@ -30,7 +30,7 @@ export const fragenPart1 = [
       'Die relative Atommasse'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Ordnungszahl (Kernladungszahl) entspricht der Anzahl der Protonen im Atomkern. Sie definiert das chemische Element eindeutig. In einem neutralen Atom entspricht sie auch der Elektronenzahl.',
+    erklärung: 'Die Ordnungszahl (Kernladungszahl) entspricht der Anzahl der Protonen im Atomkern. Sie definiert das chemische Element eindeutig. In einem neutralen Atom entspricht sie auch der Elektronenzahl.',
     strategieTipp: 'Ordnungszahl = Protonenzahl. Diese Zahl steht im Periodensystem links oben beim Element und ist charakteristisch für jedes Element.'
   },
   {
@@ -47,7 +47,7 @@ export const fragenPart1 = [
       '6 Protonen und 14 Neutronen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Kohlenstoff hat die Ordnungszahl 6, also immer 6 Protonen. Die Zahl 14 ist die Massenzahl (Protonen + Neutronen). Daher: 14 - 6 = 8 Neutronen. C-14 ist ein radioaktives Isotop des Kohlenstoffs.',
+    erklärung: 'Kohlenstoff hat die Ordnungszahl 6, also immer 6 Protonen. Die Zahl 14 ist die Massenzahl (Protonen + Neutronen). Daher: 14 - 6 = 8 Neutronen. C-14 ist ein radioaktives Isotop des Kohlenstoffs.',
     strategieTipp: 'Massenzahl - Ordnungszahl = Neutronenzahl. Die Ordnungszahl bleibt bei Isotopen gleich, die Neutronenzahl variiert.'
   },
   {
@@ -64,7 +64,7 @@ export const fragenPart1 = [
       'Den chemischen Eigenschaften'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Isotope sind Atome desselben Elements (gleiche Protonenzahl) mit unterschiedlicher Neutronenzahl. Sie haben daher unterschiedliche Massenzahlen, aber identische chemische Eigenschaften.',
+    erklärung: 'Isotope sind Atome desselben Elements (gleiche Protonenzahl) mit unterschiedlicher Neutronenzahl. Sie haben daher unterschiedliche Massenzahlen, aber identische chemische Eigenschaften.',
     strategieTipp: 'Iso-tope = gleicher Ort im Periodensystem. Gleiche Protonen, verschiedene Neutronen. Beispiel: C-12, C-13, C-14.'
   },
   {
@@ -81,7 +81,7 @@ export const fragenPart1 = [
       '11 Protonen, 23 Neutronen, 10 Elektronen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Natrium (Na) hat die Ordnungszahl 11 (11 Protonen). Massenzahl 23 bedeutet 23 - 11 = 12 Neutronen. Das + zeigt, dass ein Elektron fehlt: 11 - 1 = 10 Elektronen.',
+    erklärung: 'Natrium (Na) hat die Ordnungszahl 11 (11 Protonen). Massenzahl 23 bedeutet 23 - 11 = 12 Neutronen. Das + zeigt, dass ein Elektron fehlt: 11 - 1 = 10 Elektronen.',
     strategieTipp: 'Bei Kationen (positiv): Elektronenzahl = Protonenzahl - Ladung. Bei Anionen (negativ): Elektronenzahl = Protonenzahl + Ladung.'
   },
   {
@@ -98,7 +98,7 @@ export const fragenPart1 = [
       'Gleichmäßig verteilt über das ganze Atom'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Fast die gesamte Masse eines Atoms (>99,9%) befindet sich im winzigen Atomkern, der aus Protonen und Neutronen besteht. Elektronen haben eine vernachlässigbar kleine Masse.',
+    erklärung: 'Fast die gesamte Masse eines Atoms (>99,9%) befindet sich im winzigen Atomkern, der aus Protonen und Neutronen besteht. Elektronen haben eine vernachlässigbar kleine Masse.',
     strategieTipp: 'Kern = fast gesamte Masse, aber nur etwa 1/100.000 des Atomdurchmessers. Die Hülle bestimmt das Volumen, der Kern die Masse.'
   },
   {
@@ -115,7 +115,7 @@ export const fragenPart1 = [
       'Nuklide unterscheiden sich nur in der Elektronenzahl'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Ein Nuklid ist eine Atomsorte mit festgelegter Protonen- und Neutronenzahl. Es gibt stabile und instabile (radioaktive) Nuklide. Jedes Isotop ist ein eigenes Nuklid.',
+    erklärung: 'Ein Nuklid ist eine Atomsorte mit festgelegter Protonen- und Neutronenzahl. Es gibt stabile und instabile (radioaktive) Nuklide. Jedes Isotop ist ein eigenes Nuklid.',
     strategieTipp: 'Nuklid = eindeutig definierte Atomsorte. Wird durch Massenzahl und Ordnungszahl charakterisiert, z.B. ¹⁴C oder ²³⁵U.'
   },
   {
@@ -132,7 +132,7 @@ export const fragenPart1 = [
       '10 Protonen, 6 Neutronen, 10 Elektronen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Sauerstoff hat Ordnungszahl 8 (8 Protonen). Massenzahl 16: 16 - 8 = 8 Neutronen. Zweifach negativ bedeutet 2 zusätzliche Elektronen: 8 + 2 = 10 Elektronen.',
+    erklärung: 'Sauerstoff hat Ordnungszahl 8 (8 Protonen). Massenzahl 16: 16 - 8 = 8 Neutronen. Zweifach negativ bedeutet 2 zusätzliche Elektronen: 8 + 2 = 10 Elektronen.',
     strategieTipp: 'Die Ladung ändert nur die Elektronenzahl, nicht Protonen oder Neutronen. Negative Ladung = mehr Elektronen, positive = weniger.'
   },
   {
@@ -149,7 +149,7 @@ export const fragenPart1 = [
       'Der Differenz von Neutronen und Protonen'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Die Massenzahl (Nukleonenzahl) ist die Summe der Nukleonen (Protonen + Neutronen) im Atomkern. Sie wird als hochgestellte Zahl links vom Elementsymbol geschrieben.',
+    erklärung: 'Die Massenzahl (Nukleonenzahl) ist die Summe der Nukleonen (Protonen + Neutronen) im Atomkern. Sie wird als hochgestellte Zahl links vom Elementsymbol geschrieben.',
     strategieTipp: 'Massenzahl A = Protonenzahl Z + Neutronenzahl N. Beispiel: ¹²C hat 6 Protonen und 6 Neutronen (6+6=12).'
   },
   {
@@ -166,7 +166,7 @@ export const fragenPart1 = [
       '37,0'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Relative Atommasse = gewichtetes Mittel: (0,75 × 35) + (0,25 × 37) = 26,25 + 9,25 = 35,5. Dies erklärt, warum die Atommasse im Periodensystem oft keine ganze Zahl ist.',
+    erklärung: 'Relative Atommasse = gewichtetes Mittel: (0,75 × 35) + (0,25 × 37) = 26,25 + 9,25 = 35,5. Dies erklärt, warum die Atommasse im Periodensystem oft keine ganze Zahl ist.',
     strategieTipp: 'Bei Isotopengemischen: Multipliziere jede Massenzahl mit ihrem Anteil und addiere. Die meisten Elemente sind Gemische.'
   },
   {
@@ -183,7 +183,7 @@ export const fragenPart1 = [
       'Die Energie eines Photons nicht messbar ist'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Unschärferelation (Δx · Δp ≥ h/4π) besagt, dass je genauer der Ort bekannt ist, desto ungenauer ist der Impuls und umgekehrt. Dies ist eine fundamentale Eigenschaft der Quantenmechanik.',
+    erklärung: 'Die Unschärferelation (Δx · Δp ≥ h/4π) besagt, dass je genauer der Ort bekannt ist, desto ungenauer ist der Impuls und umgekehrt. Dies ist eine fundamentale Eigenschaft der Quantenmechanik.',
     strategieTipp: 'Unschärfe ist keine Messungenauigkeit, sondern eine grundlegende Naturgesetzmäßigkeit. Wichtig für das Verständnis von Orbitalen statt festen Bahnen.'
   },
   {
@@ -200,7 +200,7 @@ export const fragenPart1 = [
       'Ihre elektrische Ladung'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Elektromagnetische Strahlung wird durch Wellenlänge λ und Frequenz ν beschrieben. Diese sind über c = λ · ν verknüpft (c = Lichtgeschwindigkeit). Elektromagnetische Wellen haben keine Masse oder Ladung.',
+    erklärung: 'Elektromagnetische Strahlung wird durch Wellenlänge λ und Frequenz ν beschrieben. Diese sind über c = λ · ν verknüpft (c = Lichtgeschwindigkeit). Elektromagnetische Wellen haben keine Masse oder Ladung.',
     strategieTipp: 'Merke: c = λν. Kurze Wellenlänge bedeutet hohe Frequenz und umgekehrt. Energie eines Photons: E = hν.'
   },
   {
@@ -217,8 +217,8 @@ export const fragenPart1 = [
       'Wellen und Teilchen völlig unterschiedliche Phänomene sind'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Der Welle-Teilchen-Dualismus ist ein Grundprinzip der Quantenmechanik: Alle Objekte zeigen je nach Experiment Wellen- oder Teilchencharakter. Dies gilt für Photonen, Elektronen und sogar größere Objekte (de Broglie).',
-    strategieTipp: 'Licht zeigt Teilchencharakter (Photoeffekt), Elektronen zeigen Wellencharakter (Beugung). Beide Aspekte sind komplementär, nicht widersprüchlich.'
+    erklärung: 'Der Welle-Teilchen-Dualismus ist ein Grundprinzip der Quantenmechanik: Alle Objekte zeigen je nach Experiment Wellen- oder Teilchencharakter. Dies gilt für Photonen, Elektronen und sogar größere Objekte (de Broglie).',
+    strategieTipp: 'Licht zeigt Teilchencharakter (Photöffekt), Elektronen zeigen Wellencharakter (Beugung). Beide Aspekte sind komplementär, nicht widersprüchlich.'
   },
   {
     id: 'ch-q-014',
@@ -234,7 +234,7 @@ export const fragenPart1 = [
       '880 nm (Infrarot)'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'E = h·c/λ, also λ = h·c/E = (6,6 × 10⁻³⁴ × 3,0 × 10⁸) / (3,0 × 10⁻¹⁹) = 6,6 × 10⁻⁷ m = 660 nm. Dies entspricht rotem Licht.',
+    erklärung: 'E = h·c/λ, also λ = h·c/E = (6,6 × 10⁻³⁴ × 3,0 × 10⁸) / (3,0 × 10⁻¹⁹) = 6,6 × 10⁻⁷ m = 660 nm. Dies entspricht rotem Licht.',
     strategieTipp: 'Formel E = hν = hc/λ umstellen. Höhere Energie bedeutet kürzere Wellenlänge. Sichtbares Licht: 400-700 nm.'
   },
   {
@@ -251,7 +251,7 @@ export const fragenPart1 = [
       '1-10 μm'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Das für das menschliche Auge sichtbare Licht liegt im Bereich von etwa 380-780 nm (Nanometer). Violett bei 400 nm, Rot bei 700 nm. Außerhalb liegen UV (<400 nm) und Infrarot (>700 nm).',
+    erklärung: 'Das für das menschliche Auge sichtbare Licht liegt im Bereich von etwa 380-780 nm (Nanometer). Violett bei 400 nm, Rot bei 700 nm. Außerhalb liegen UV (<400 nm) und Infrarot (>700 nm).',
     strategieTipp: 'Merke: Sichtbar ≈ 400-700 nm. ROY G BIV (Rot-Orange-Gelb-Grün-Blau-Indigo-Violett) von langen zu kurzen Wellenlängen.'
   },
   {
@@ -268,7 +268,7 @@ export const fragenPart1 = [
       'Nur bei radioaktiven Prozessen vorhanden'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Photonen sind die Quanten (kleinste Energiepakete) elektromagnetischer Strahlung. Sie haben keine Ruhemasse, keine elektrische Ladung und bewegen sich mit Lichtgeschwindigkeit. Ihre Energie ist E = hν.',
+    erklärung: 'Photonen sind die Quanten (kleinste Energiepakete) elektromagnetischer Strahlung. Sie haben keine Ruhemasse, keine elektrische Ladung und bewegen sich mit Lichtgeschwindigkeit. Ihre Energie ist E = hν.',
     strategieTipp: 'Photon = Lichtteilchen. Masselose Energieträger. Verschiedene Energien entsprechen verschiedenen Farben/Frequenzen.'
   },
   {
@@ -285,7 +285,7 @@ export const fragenPart1 = [
       'Sichtbares Licht < UV < Infrarot < Radiowellen < Röntgenstrahlung'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Energie nimmt mit der Frequenz zu (E = hν), also mit abnehmender Wellenlänge. Von niedrig zu hoch: Radiowellen (niedrigste Frequenz) → Mikrowellen → Infrarot → sichtbar → UV → Röntgen → Gammastrahlung (höchste Frequenz).',
+    erklärung: 'Energie nimmt mit der Frequenz zu (E = hν), also mit abnehmender Wellenlänge. Von niedrig zu hoch: Radiowellen (niedrigste Frequenz) → Mikrowellen → Infrarot → sichtbar → UV → Röntgen → Gammastrahlung (höchste Frequenz).',
     strategieTipp: 'Je kürzer die Wellenlänge, desto höher die Energie. Radio hat längste Wellen, Gamma kürzeste. E ∝ ν ∝ 1/λ.'
   },
   {
@@ -302,7 +302,7 @@ export const fragenPart1 = [
       'E = kT'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Energie eines Photons wird durch die Planck-Einstein-Beziehung E = hν beschrieben, wobei h das Plancksche Wirkungsquantum und ν die Frequenz ist. Alternativ: E = hc/λ.',
+    erklärung: 'Die Energie eines Photons wird durch die Planck-Einstein-Beziehung E = hν beschrieben, wobei h das Plancksche Wirkungsquantum und ν die Frequenz ist. Alternativ: E = hc/λ.',
     strategieTipp: 'Planck-Gleichung E = hν ist fundamental für Quantenmechanik. h = 6,626 × 10⁻³⁴ J·s. Höhere Frequenz = höhere Energie.'
   },
   {
@@ -319,7 +319,7 @@ export const fragenPart1 = [
       'Die Konstanz des Volumens'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Das Boyle-Mariotte-Gesetz besagt: p · V = const (bei T = const). Druck und Volumen sind indirekt proportional. Verdoppelt man den Druck, halbiert sich das Volumen.',
+    erklärung: 'Das Boyle-Mariotte-Gesetz besagt: p · V = const (bei T = const). Druck und Volumen sind indirekt proportional. Verdoppelt man den Druck, halbiert sich das Volumen.',
     strategieTipp: 'Merke: p↑ → V↓ bei konstanter Temperatur. Mathematisch: p₁V₁ = p₂V₂. Anwendung: Luftpumpe, Spritze.'
   },
   {
@@ -336,7 +336,7 @@ export const fragenPart1 = [
       'Die Stoffmenge ändert sich mit der Temperatur'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Gay-Lussac: p/T = const (bei V = const). Der Druck eines Gases ist direkt proportional zur absoluten Temperatur in Kelvin. Verdoppelt man T, verdoppelt sich p.',
+    erklärung: 'Gay-Lussac: p/T = const (bei V = const). Der Druck eines Gases ist direkt proportional zur absoluten Temperatur in Kelvin. Verdoppelt man T, verdoppelt sich p.',
     strategieTipp: 'T↑ → p↑ bei konstantem Volumen. Wichtig: Temperatur muss in Kelvin sein! Anwendung: Druckkochtopf, Autoreifen im Sommer.'
   },
   {
@@ -353,7 +353,7 @@ export const fragenPart1 = [
       '4,0 L'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Bei konstantem Druck gilt V₁/T₁ = V₂/T₂. T₁ = 300 K, T₂ = 400 K. V₂ = V₁ · T₂/T₁ = 2,0 · (400/300) = 2,0 · 1,333 = 2,67 L.',
+    erklärung: 'Bei konstantem Druck gilt V₁/T₁ = V₂/T₂. T₁ = 300 K, T₂ = 400 K. V₂ = V₁ · T₂/T₁ = 2,0 · (400/300) = 2,0 · 1,333 = 2,67 L.',
     strategieTipp: 'Immer in Kelvin rechnen! T(K) = T(°C) + 273. Bei konstantem p: V ∝ T. Charles-Gesetz: V₁/T₁ = V₂/T₂.'
   },
   {
@@ -370,7 +370,7 @@ export const fragenPart1 = [
       'Pascal'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die absolute Temperaturskala verwendet Kelvin (K) als Einheit. Der absolute Nullpunkt (0 K = -273,15°C) ist die tiefstmögliche Temperatur. T(K) = T(°C) + 273,15.',
+    erklärung: 'Die absolute Temperaturskala verwendet Kelvin (K) als Einheit. Der absolute Nullpunkt (0 K = -273,15°C) ist die tiefstmögliche Temperatur. T(K) = T(°C) + 273,15.',
     strategieTipp: 'Kelvin ist die SI-Einheit für Temperatur. Keine negativen Werte möglich. Wichtig für Gasgesetze, da diese absolute Temperaturen erfordern.'
   },
   {
@@ -387,7 +387,7 @@ export const fragenPart1 = [
       '6,4 bar'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Kombinierte Gasgleichung: p₁V₁/T₁ = p₂V₂/T₂. T₁ = 293 K, T₂ = 353 K. p₂ = p₁ · (V₁/V₂) · (T₂/T₁) = 2,0 · (3,0/1,5) · (353/293) = 2,0 · 2 · 1,205 = 4,82 bar.',
+    erklärung: 'Kombinierte Gasgleichung: p₁V₁/T₁ = p₂V₂/T₂. T₁ = 293 K, T₂ = 353 K. p₂ = p₁ · (V₁/V₂) · (T₂/T₁) = 2,0 · (3,0/1,5) · (353/293) = 2,0 · 2 · 1,205 = 4,82 bar.',
     strategieTipp: 'Alle drei Gasgesetze kombiniert: (p₁V₁)/T₁ = (p₂V₂)/T₂. Nach der gesuchten Größe umstellen. Immer Kelvin verwenden!'
   },
   {
@@ -404,7 +404,7 @@ export const fragenPart1 = [
       'V = nR/pT'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die ideale Gasgleichung ist pV = nRT, wobei p = Druck, V = Volumen, n = Stoffmenge in mol, R = universelle Gaskonstante (8,314 J/(mol·K)), T = absolute Temperatur in Kelvin.',
+    erklärung: 'Die ideale Gasgleichung ist pV = nRT, wobei p = Druck, V = Volumen, n = Stoffmenge in mol, R = universelle Gaskonstante (8,314 J/(mol·K)), T = absolute Temperatur in Kelvin.',
     strategieTipp: 'pV = nRT vereint alle Gasgesetze. R = 8,314 J/(mol·K) = 0,0821 L·atm/(mol·K). Gilt gut für reale Gase bei hoher T und niedrigem p.'
   },
   {
@@ -421,7 +421,7 @@ export const fragenPart1 = [
       '2,01 mol'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'pV = nRT → n = pV/(RT) = (2,0 · 10)/(0,083 · 298) = 20/24,73 = 0,81 mol. T = 25°C = 298 K.',
+    erklärung: 'pV = nRT → n = pV/(RT) = (2,0 · 10)/(0,083 · 298) = 20/24,73 = 0,81 mol. T = 25°C = 298 K.',
     strategieTipp: 'Nach n umstellen: n = pV/(RT). Einheiten beachten! Hier: p in bar, V in L, R = 0,083 L·bar/(mol·K), T in K.'
   },
   {
@@ -438,7 +438,7 @@ export const fragenPart1 = [
       '44,8 L/mol'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Das molare Volumen Vm bei Normalbedingungen (273 K, 1,013 bar) beträgt 22,4 L/mol. Dies folgt aus pV = nRT für n = 1 mol. Bei exakt 1 bar und 0°C sind es etwa 22,7 L/mol.',
+    erklärung: 'Das molare Volumen Vm bei Normalbedingungen (273 K, 1,013 bar) beträgt 22,4 L/mol. Dies folgt aus pV = nRT für n = 1 mol. Bei exakt 1 bar und 0°C sind es etwa 22,7 L/mol.',
     strategieTipp: 'Merke: 22,4 L/mol bei STP (Standard Temperature and Pressure). Wichtig für stöchiometrische Berechnungen mit Gasen. 1 mol = 22,4 L.'
   },
   {
@@ -455,7 +455,7 @@ export const fragenPart1 = [
       '-473°C'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Der absolute Nullpunkt liegt bei -273,15°C bzw. 0 K. Dies ist die theoretisch tiefstmögliche Temperatur, bei der alle thermische Bewegung zum Stillstand kommt.',
+    erklärung: 'Der absolute Nullpunkt liegt bei -273,15°C bzw. 0 K. Dies ist die theoretisch tiefstmögliche Temperatur, bei der alle thermische Bewegung zum Stillstand kommt.',
     strategieTipp: 'Absolute Null = 0 K = -273°C (gerundet). Bei dieser Temperatur hätte ein ideales Gas theoretisch Volumen null (praktisch nicht erreichbar).'
   },
   {
@@ -472,7 +472,7 @@ export const fragenPart1 = [
       '8:1'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Bei gleichem p, V, T haben beide Behälter gleiche Stoffmenge n (pV = nRT). m = n · M, daher m(He)/m(O₂) = M(He)/M(O₂) = 4/32 = 1/8.',
+    erklärung: 'Bei gleichem p, V, T haben beide Behälter gleiche Stoffmenge n (pV = nRT). m = n · M, daher m(He)/m(O₂) = M(He)/M(O₂) = 4/32 = 1/8.',
     strategieTipp: 'Bei gleichen Bedingungen: gleiche Stoffmenge. Masse = n · Molmasse. Leichtere Gase haben weniger Masse bei gleicher Stoffmenge.'
   },
   {
@@ -489,7 +489,7 @@ export const fragenPart1 = [
       'Kondensiert, verdampft, geschmolzen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die drei klassischen Aggregatzustände der Materie sind fest (s), flüssig (l) und gasförmig (g). Sie unterscheiden sich in der Anordnung und Beweglichkeit der Teilchen.',
+    erklärung: 'Die drei klassischen Aggregatzustände der Materie sind fest (s), flüssig (l) und gasförmig (g). Sie unterscheiden sich in der Anordnung und Beweglichkeit der Teilchen.',
     strategieTipp: 'Fest: geordnet, wenig Bewegung. Flüssig: ungeordnet, beweglich. Gasförmig: sehr ungeordnet, sehr beweglich. Plasma ist ein vierter Zustand.'
   },
   {
@@ -506,7 +506,7 @@ export const fragenPart1 = [
       'Resublimieren'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Schmelzen ist der Übergang vom festen in den flüssigen Aggregatzustand. Die Temperatur, bei der dies bei einem bestimmten Druck geschieht, ist die Schmelztemperatur.',
+    erklärung: 'Schmelzen ist der Übergang vom festen in den flüssigen Aggregatzustand. Die Temperatur, bei der dies bei einem bestimmten Druck geschieht, ist die Schmelztemperatur.',
     strategieTipp: 'Schmelzen = fest → flüssig. Erstarren = flüssig → fest (Umkehrung). Beispiel: Eis schmilzt zu Wasser bei 0°C (1 bar).'
   },
   {
@@ -523,7 +523,7 @@ export const fragenPart1 = [
       'Erstarren'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Sublimation ist der direkte Phasenübergang von fest zu gasförmig. Beispiele: Trockeneis (CO₂), Iod, Naphthalin. Die Umkehrung heißt Resublimation oder Deposition.',
+    erklärung: 'Sublimation ist der direkte Phasenübergang von fest zu gasförmig. Beispiele: Trockeneis (CO₂), Iod, Naphthalin. Die Umkehrung heißt Resublimation oder Deposition.',
     strategieTipp: 'Sublimieren: fest → gasförmig direkt. Beispiel: Trockeneis bei Normaldruck. Resublimieren: gasförmig → fest. Raureif ist resublimierter Wasserdampf.'
   },
   {
@@ -540,7 +540,7 @@ export const fragenPart1 = [
       'Flüssig zu fest'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Verdampfen (oder Sieden bei Siedetemperatur) ist der Übergang von flüssig zu gasförmig. Die Umkehrung heißt Kondensieren. Beispiel: Wasser siedet bei 100°C (1 bar).',
+    erklärung: 'Verdampfen (oder Sieden bei Siedetemperatur) ist der Übergang von flüssig zu gasförmig. Die Umkehrung heißt Kondensieren. Beispiel: Wasser siedet bei 100°C (1 bar).',
     strategieTipp: 'Verdampfen = flüssig → Gas. Kondensieren = Gas → flüssig. Verdunsten ist Verdampfen unterhalb der Siedetemperatur an der Oberfläche.'
   },
   {
@@ -552,12 +552,12 @@ export const fragenPart1 = [
     optionen: [
       'Der Punkt höchster Temperatur',
       'Der Punkt höchsten Drucks',
-      'Der Punkt, an dem alle drei Phasen im Gleichgewicht koexistieren',
+      'Der Punkt, an dem alle drei Phasen im Gleichgewicht köxistieren',
       'Der Punkt des Siedens',
       'Der Punkt des Schmelzens'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Der Tripelpunkt ist der einzige Punkt im p-T-Diagramm, an dem alle drei Phasen (fest, flüssig, gasförmig) gleichzeitig im Gleichgewicht existieren. Für Wasser: 0,01°C und 611 Pa.',
+    erklärung: 'Der Tripelpunkt ist der einzige Punkt im p-T-Diagramm, an dem alle drei Phasen (fest, flüssig, gasförmig) gleichzeitig im Gleichgewicht existieren. Für Wasser: 0,01°C und 611 Pa.',
     strategieTipp: 'Tripelpunkt = drei Phasen gleichzeitig. Einziger Punkt mit festem p und T. Für H₂O: 273,16 K (0,01°C) und 611 Pa.'
   },
   {
@@ -574,7 +574,7 @@ export const fragenPart1 = [
       'Den Sublimationspunkt'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der kritische Punkt (kritische Temperatur Tc und kritischer Druck pc) ist das Ende der Dampfdruckkurve. Oberhalb von Tc kann ein Gas nicht mehr durch Druckerhöhung verflüssigt werden; es entsteht ein überkritischer Zustand.',
+    erklärung: 'Der kritische Punkt (kritische Temperatur Tc und kritischer Druck pc) ist das Ende der Dampfdruckkurve. Oberhalb von Tc kann ein Gas nicht mehr durch Druckerhöhung verflüssigt werden; es entsteht ein überkritischer Zustand.',
     strategieTipp: 'Oberhalb kritischer Temperatur: keine Verflüssigung möglich, nur überkritische Fluide. Für CO₂: 31°C/73 bar. Wichtig für überkritische Extraktion.'
   },
   {
@@ -591,7 +591,7 @@ export const fragenPart1 = [
       'Ändern ihre Stoffmenge'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die meisten Stoffe dehnen sich beim Schmelzen aus (Volumen nimmt zu), da die geordnete Kristallstruktur aufbricht. Ausnahme: Wasser (Eis schwimmt), Bismut, Gallium.',
+    erklärung: 'Die meisten Stoffe dehnen sich beim Schmelzen aus (Volumen nimmt zu), da die geordnete Kristallstruktur aufbricht. Ausnahme: Wasser (Eis schwimmt), Bismut, Gallium.',
     strategieTipp: 'Normal: fest → flüssig, Dichte nimmt ab. Anomalie des Wassers: Eis hat geringere Dichte als Wasser, daher schwimmt es.'
   },
   {
@@ -608,7 +608,7 @@ export const fragenPart1 = [
       'Sie existiert nicht'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Schmelzkurve von Wasser hat eine negative Steigung (einzigartig). Höherer Druck senkt den Schmelzpunkt. Grund: Eis hat geringere Dichte als Wasser. Bei den meisten Stoffen ist die Steigung positiv.',
+    erklärung: 'Die Schmelzkurve von Wasser hat eine negative Steigung (einzigartig). Höherer Druck senkt den Schmelzpunkt. Grund: Eis hat geringere Dichte als Wasser. Bei den meisten Stoffen ist die Steigung positiv.',
     strategieTipp: 'Wasser-Anomalie: Druckerhöhung erleichtert Schmelzen (Schlittschuhlaufen). Bei normalen Stoffen: Druck erhöht Schmelzpunkt.'
   },
   {
@@ -625,7 +625,7 @@ export const fragenPart1 = [
       'Flüssig → fest'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Kondensieren ist der Übergang von gasförmig zu flüssig. Es ist die Umkehrung des Verdampfens. Beispiel: Wasserdampf kondensiert zu Wassertropfen an kalten Oberflächen.',
+    erklärung: 'Kondensieren ist der Übergang von gasförmig zu flüssig. Es ist die Umkehrung des Verdampfens. Beispiel: Wasserdampf kondensiert zu Wassertropfen an kalten Oberflächen.',
     strategieTipp: 'Kondensieren = Gas → flüssig. Exothermer Prozess (Energie wird frei). Beispiele: Tau, Beschlagene Fenster, Wolkenbildung.'
   },
   {
@@ -642,7 +642,7 @@ export const fragenPart1 = [
       'Nur der Stoffmenge'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Siedetemperatur hängt vom Druck ab (niedriger Druck → niedrigere Siedetemperatur) und von der chemischen Natur des Stoffes (zwischenmolekulare Kräfte). Wasser siedet bei 1 bar bei 100°C, bei 0,5 bar bereits bei 82°C.',
+    erklärung: 'Die Siedetemperatur hängt vom Druck ab (niedriger Druck → niedrigere Siedetemperatur) und von der chemischen Natur des Stoffes (zwischenmolekulare Kräfte). Wasser siedet bei 1 bar bei 100°C, bei 0,5 bar bereits bei 82°C.',
     strategieTipp: 'Niedriger Druck → niedrigerer Siedepunkt. Auf Bergen (niedriger Luftdruck) kocht Wasser unter 100°C. Im Dampfkochtopf (höher Druck) über 100°C.'
   },
   {
@@ -659,7 +659,7 @@ export const fragenPart1 = [
       'Atomradius'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Das moderne Periodensystem ist nach aufsteigender Ordnungszahl (Kernladungszahl = Protonenzahl) geordnet. Mendelejew ordnete ursprünglich nach Atommasse, aber die Ordnungszahl ist das korrekte Ordnungsprinzip.',
+    erklärung: 'Das moderne Periodensystem ist nach aufsteigender Ordnungszahl (Kernladungszahl = Protonenzahl) geordnet. Mendelejew ordnete ursprünglich nach Atommasse, aber die Ordnungszahl ist das korrekte Ordnungsprinzip.',
     strategieTipp: 'Ordnungszahl bestimmt Position. Von links nach rechts: Ordnungszahl steigt. Elemente mit ähnlichen Eigenschaften stehen untereinander (Gruppen).'
   },
   {
@@ -676,7 +676,7 @@ export const fragenPart1 = [
       'Die gleiche Ordnungszahl'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Elemente einer Gruppe (vertikale Spalten) haben die gleiche Anzahl von Valenzelektronen (Elektronen in der äußersten Schale). Dies verleiht ihnen ähnliche chemische Eigenschaften.',
+    erklärung: 'Elemente einer Gruppe (vertikale Spalten) haben die gleiche Anzahl von Valenzelektronen (Elektronen in der äußersten Schale). Dies verleiht ihnen ähnliche chemische Eigenschaften.',
     strategieTipp: 'Gruppe = Spalte = gleiche Valenzelektronen = ähnliche Eigenschaften. Beispiel: Gruppe 1 (Alkalimetalle) haben alle 1 Valenzelektron.'
   },
   {
@@ -693,7 +693,7 @@ export const fragenPart1 = [
       'Die gleiche Ionisierungsenergie'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Elemente einer Periode (horizontale Zeilen) haben die gleiche Anzahl von besetzten Elektronenschalen. Von links nach rechts nimmt die Zahl der Valenzelektronen zu.',
+    erklärung: 'Elemente einer Periode (horizontale Zeilen) haben die gleiche Anzahl von besetzten Elektronenschalen. Von links nach rechts nimmt die Zahl der Valenzelektronen zu.',
     strategieTipp: 'Periode = Zeile = Anzahl der Schalen. Periode 2 (Li-Ne): 2 Schalen. Periode 3 (Na-Ar): 3 Schalen.'
   },
   {
@@ -710,7 +710,7 @@ export const fragenPart1 = [
       'Sie zeigt keinen systematischen Trend'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Elektronegativität nimmt von links nach rechts zu (mehr Protonen, stärkere Anziehung) und von unten nach oben zu (kleinerer Radius). Fluor ist am elektronegativsten, Francium am wenigsten.',
+    erklärung: 'Die Elektronegativität nimmt von links nach rechts zu (mehr Protonen, stärkere Anziehung) und von unten nach oben zu (kleinerer Radius). Fluor ist am elektronegativsten, Francium am wenigsten.',
     strategieTipp: 'Elektronegativität steigt nach rechts oben. F (Fluor) ist am elektronegativsten (4,0). Wichtig für Polarität von Bindungen.'
   },
   {
@@ -727,7 +727,7 @@ export const fragenPart1 = [
       'Ist bei Alkalimetallen besonders hoch'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Die erste Ionisierungsenergie nimmt in einer Periode generell von links nach rechts zu (stärkere Kernladung) und in einer Gruppe von oben nach unten ab (größerer Abstand). Edelgase haben höchste, Alkalimetalle niedrigste Werte.',
+    erklärung: 'Die erste Ionisierungsenergie nimmt in einer Periode generell von links nach rechts zu (stärkere Kernladung) und in einer Gruppe von oben nach unten ab (größerer Abstand). Edelgase haben höchste, Alkalimetalle niedrigste Werte.',
     strategieTipp: 'Ionisierungsenergie = Energie zum Entfernen eines Elektrons. Steigt nach rechts (stärkere Bindung) und nach oben (näher am Kern). He hat höchste.'
   },
   {
@@ -744,7 +744,7 @@ export const fragenPart1 = [
       'Von den Metallen zu den Nichtmetallen'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Der Atomradius nimmt in einer Periode von links nach rechts ab (mehr Protonen ziehen Elektronen stärker an) und in einer Gruppe von oben nach unten zu (mehr Schalen).',
+    erklärung: 'Der Atomradius nimmt in einer Periode von links nach rechts ab (mehr Protonen ziehen Elektronen stärker an) und in einer Gruppe von oben nach unten zu (mehr Schalen).',
     strategieTipp: 'Radius: klein nach rechts oben, groß nach links unten. Cs ist größtes Atom, He kleinstes. Mehr Protonen bei gleicher Schale = kleinerer Radius.'
   },
   {
@@ -761,7 +761,7 @@ export const fragenPart1 = [
       '18'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Das Periodensystem hat 8 Hauptgruppen (manchmal als Gruppen 1, 2, 13-18 bezeichnet). Dazu kommen 10 Nebengruppen (Übergangsmetalle). Insgesamt gibt es 18 Gruppen.',
+    erklärung: 'Das Periodensystem hat 8 Hauptgruppen (manchmal als Gruppen 1, 2, 13-18 bezeichnet). Dazu kommen 10 Nebengruppen (Übergangsmetalle). Insgesamt gibt es 18 Gruppen.',
     strategieTipp: 'Hauptgruppen: 1-2 und 13-18 (alte Zählung: I-VIII). Nebengruppen: 3-12. Hauptgruppen zeigen deutlichste periodische Trends.'
   },
   {
@@ -778,7 +778,7 @@ export const fragenPart1 = [
       'Die zweite Schale kann maximal 18 Elektronen aufnehmen'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die maximale Elektronenzahl in der n-ten Hauptschale beträgt 2n². Also: 1. Schale (n=1): 2 Elektronen, 2. Schale (n=2): 8 Elektronen, 3. Schale (n=3): 18 Elektronen.',
+    erklärung: 'Die maximale Elektronenzahl in der n-ten Hauptschale beträgt 2n². Also: 1. Schale (n=1): 2 Elektronen, 2. Schale (n=2): 8 Elektronen, 3. Schale (n=3): 18 Elektronen.',
     strategieTipp: 'Formel 2n²: Schale 1→2e⁻, Schale 2→8e⁻, Schale 3→18e⁻, Schale 4→32e⁻. Wichtig für Elektronenkonfiguration und Periodenaufbau.'
   },
   {
@@ -795,7 +795,7 @@ export const fragenPart1 = [
       'Schwefel (S)'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Gruppe 15 (alte Zählung: Hauptgruppe 5) enthält N, P, As, Sb, Bi. Die 3. Periode umfasst Na bis Ar. Der Schnittpunkt ist Phosphor (P) mit 3 Schalen und 5 Valenzelektronen.',
+    erklärung: 'Gruppe 15 (alte Zählung: Hauptgruppe 5) enthält N, P, As, Sb, Bi. Die 3. Periode umfasst Na bis Ar. Der Schnittpunkt ist Phosphor (P) mit 3 Schalen und 5 Valenzelektronen.',
     strategieTipp: 'Periode = Anzahl Schalen, Gruppe = Valenzelektronen. P: 3. Periode, Gruppe 15, Konfiguration [Ne]3s²3p³, 5 Valenzelektronen.'
   },
   {
@@ -812,7 +812,7 @@ export const fragenPart1 = [
       'Cl > Br > I > At'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Innerhalb einer Gruppe nimmt die Ionisierungsenergie von oben nach unten ab (größerer Radius, schwächere Bindung). Li > Na > K > Rb ist korrekt. In Perioden steigt sie generell nach rechts.',
+    erklärung: 'Innerhalb einer Gruppe nimmt die Ionisierungsenergie von oben nach unten ab (größerer Radius, schwächere Bindung). Li > Na > K > Rb ist korrekt. In Perioden steigt sie generell nach rechts.',
     strategieTipp: 'Ionisierungsenergie: In Gruppe von oben nach unten abnehmend. In Periode von links nach rechts zunehmend (mit Ausnahmen bei voll- und halbbesetzten Orbitalen).'
   },
   {
@@ -829,7 +829,7 @@ export const fragenPart1 = [
       'Den Nebengruppen'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Die Edelgase stehen in Gruppe 18 (alte Zählung: VIII. Hauptgruppe). Sie haben vollständig gefüllte äußere Schalen (außer He: 2, sonst 8 Valenzelektronen) und sind sehr reaktionsträge.',
+    erklärung: 'Die Edelgase stehen in Gruppe 18 (alte Zählung: VIII. Hauptgruppe). Sie haben vollständig gefüllte äußere Schalen (außer He: 2, sonst 8 Valenzelektronen) und sind sehr reaktionsträge.',
     strategieTipp: 'Edelgase (He, Ne, Ar, Kr, Xe, Rn): Gruppe 18, äußerste Schale voll besetzt, daher sehr stabil und reaktionsträge. Oktettregel.'
   },
   {
@@ -846,7 +846,7 @@ export const fragenPart1 = [
       'Metallcharakter und Elektronegativität nehmen beide nach rechts zu'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Elektronegativität und Ionisierungsenergie zeigen den gleichen Trend: beide nehmen nach rechts und nach oben zu. Beide korrelieren mit der Fähigkeit, Elektronen anzuziehen bzw. festzuhalten.',
+    erklärung: 'Elektronegativität und Ionisierungsenergie zeigen den gleichen Trend: beide nehmen nach rechts und nach oben zu. Beide korrelieren mit der Fähigkeit, Elektronen anzuziehen bzw. festzuhalten.',
     strategieTipp: 'Gleiche Richtung: EN und IE steigen nach rechts oben. Gegenläufig: Atomradius sinkt nach rechts oben. Metallcharakter sinkt nach rechts.'
   }
 ];

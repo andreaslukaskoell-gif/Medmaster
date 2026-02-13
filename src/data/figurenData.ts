@@ -53,7 +53,7 @@ export const figurenAufgaben: FZAufgabe[] = [
     explanation: "Zwei rechtwinklige Dreiecke gleicher Größe ergeben zusammengesetzt ein Quadrat (Option A).",
   },
 
-  // 2 - Zwei Rechtecke bilden ein grosses Quadrat
+  // 2 - Zwei Rechtecke bilden ein großes Quadrat
   {
     id: "fz-2",
     difficulty: "leicht",
@@ -110,7 +110,7 @@ export const figurenAufgaben: FZAufgabe[] = [
     explanation: "Zwei Halbkreise bilden zusammen einen vollständigen Kreis (Option D).",
   },
 
-  // 5 - Drei Dreiecke bilden ein grosses Dreieck
+  // 5 - Drei Dreiecke bilden ein großes Dreieck
   {
     id: "fz-5",
     difficulty: "leicht",
@@ -127,7 +127,7 @@ export const figurenAufgaben: FZAufgabe[] = [
       { id: "e", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
     ],
     correctOptionId: "b",
-    explanation: "Drei kleine Dreiecke (zwei aufrecht, eines umgekehrt in der Mitte) bilden ein grosses Dreieck (Option B).",
+    explanation: "Drei kleine Dreiecke (zwei aufrecht, eines umgekehrt in der Mitte) bilden ein großes Dreieck (Option B).",
   },
 
   // 6 - Zwei Dreiecke = Raute/Rhombus
@@ -295,7 +295,7 @@ export const figurenAufgaben: FZAufgabe[] = [
     explanation: "Das große Rechteck bildet den langen Schenkel, die beiden kleineren den kurzen Schenkel der L-Form (Option B).",
   },
 
-  // 14 - Vier Dreiecke = grosser Rhombus
+  // 14 - Vier Dreiecke = großer Rhombus
   {
     id: "fz-14",
     difficulty: "mittel",
@@ -552,7 +552,7 @@ export const figurenAufgaben: FZAufgabe[] = [
     explanation: "Die beiden Rechtecke bilden den breiten Mittelteil, die Dreiecke die seitlichen Spitzen. Zusammen entsteht ein Sechseck (Option C).",
   },
 
-  // 26 - Drei Dreiecke + Quadrat = grosses Dreieck
+  // 26 - Drei Dreiecke + Quadrat = großes Dreieck
   {
     id: "fz-26",
     difficulty: "mittel",
@@ -570,7 +570,7 @@ export const figurenAufgaben: FZAufgabe[] = [
       { id: "e", paths: ["M 30 30 L 170 30 L 140 170 L 60 170 Z"], fill: "#64748b" },
     ],
     correctOptionId: "a",
-    explanation: "Drei Dreiecke und ein Quadrat füllen zusammen ein grosses Dreieck aus (Option A).",
+    explanation: "Drei Dreiecke und ein Quadrat füllen zusammen ein großes Dreieck aus (Option A).",
   },
 
   // 27 - Vier Teile = U-Form
@@ -677,15 +677,15 @@ export const figurenStrategyGuide = {
     },
     {
       heading: "Tipps & Strategien",
-      content: `1. Umrisse vergleichen: Schaue dir zuerst die äußeren Konturen der Puzzleteile an. Gibt es gerade Kanten, Bögen oder spitze Ecken? Vergleiche diese mit den Umrissen der Antwortmöglichkeiten.
+      content: `1. Umrisse vergleichen: Schaue dir zürst die äußeren Konturen der Puzzleteile an. Gibt es gerade Kanten, Bögen oder spitze Ecken? Vergleiche diese mit den Umrissen der Antwortmöglichkeiten.
 
-2. Fläche abschätzen: Schätze die Gesamtfläche aller Puzzleteile ab. Die richtige Antwortfigur muss ungefähr die gleiche Fläche haben. Damit kannst du oft schon 1-2 Optionen ausschliessen.
+2. Fläche abschätzen: Schätze die Gesamtfläche aller Puzzleteile ab. Die richtige Antwortfigur muss ungefähr die gleiche Fläche haben. Damit kannst du oft schon 1-2 Optionen ausschließen.
 
 3. Markante Ecken und Kanten suchen: Suche nach auffälligen Merkmalen wie spitzen Winkeln, langen geraden Kanten oder Rundungen. Diese müssen sich in der Lösungsfigur wiederfinden.
 
 4. Ausschlussmethode: Oft ist es schneller, falsche Antworten auszuschließen als die richtige direkt zu finden. Wenn ein Puzzleteil nicht in eine Figur passt, kann diese Figur nicht die Lösung sein.
 
-5. Zeitmanagement: Du hast ca. 1:30 pro Aufgabe. Wenn du nach 60 Sekunden keine Lösung findest, triff eine begründete Vermutung und gehe weiter. Leichtere Aufgaben zuerst lösen!
+5. Zeitmanagement: Du hast ca. 1:30 pro Aufgabe. Wenn du nach 60 Sekunden keine Lösung findest, triff eine begründete Vermutung und gehe weiter. Leichtere Aufgaben zürst lösen!
 
 6. Systematisch vorgehen: Beginne immer mit dem größten oder auffälligsten Puzzleteil. Überlege, wo es in jeder Antwortoption platziert werden könnte.
 
@@ -699,7 +699,7 @@ export const figurenStrategyGuide = {
 
 - Zu lange an einer Aufgabe hängenbleiben: Bei 1:30 pro Aufgabe darfst du dich nicht festbeißen. Nutze die Ausschlussmethode und rate begründet, wenn nötig.
 
-- Nur auf die Form achten, nicht auf die Größe: Achte darauf, dass die Größenverhältnisse stimmen. Ein kleines Dreieck kann nicht plötzlich einen grossen Teil der Figur ausfüllen.
+- Nur auf die Form achten, nicht auf die Größe: Achte darauf, dass die Größenverhältnisse stimmen. Ein kleines Dreieck kann nicht plötzlich einen großen Teil der Figur ausfüllen.
 
 - Lücken übersehen: Alle Teile müssen lückenlos zusammenpassen. Wenn bei einer Option Lücken bleiben würden, ist sie falsch.`,
     },

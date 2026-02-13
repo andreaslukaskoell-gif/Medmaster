@@ -13,7 +13,7 @@ export const fragenPart4 = [
       'Protonen, Neutronen und Elektronen im Kern'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der Atomkern besteht aus positiv geladenen Protonen und ungeladenen Neutronen (zusammen Nukleonen genannt). Die negativ geladenen Elektronen befinden sich in der Atomhülle und bewegen sich in Orbitalen um den Kern.',
+    erklärung: 'Der Atomkern besteht aus positiv geladenen Protonen und ungeladenen Neutronen (zusammen Nukleonen genannt). Die negativ geladenen Elektronen befinden sich in der Atomhülle und bewegen sich in Orbitalen um den Kern.',
     strategieTipp: 'Merken Sie sich: Kern = Protonen + Neutronen, Hülle = Elektronen. Die Massenzahl A gibt die Summe der Nukleonen an.'
   },
   {
@@ -30,7 +30,7 @@ export const fragenPart4 = [
       'Die relative Atommasse des Elements'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Ordnungszahl Z gibt die Anzahl der Protonen im Atomkern an. Sie bestimmt die chemischen Eigenschaften des Elements und seine Position im Periodensystem. Bei neutralen Atomen entspricht Z auch der Anzahl der Elektronen.',
+    erklärung: 'Die Ordnungszahl Z gibt die Anzahl der Protonen im Atomkern an. Sie bestimmt die chemischen Eigenschaften des Elements und seine Position im Periodensystem. Bei neutralen Atomen entspricht Z auch der Anzahl der Elektronen.',
     strategieTipp: 'Z = Protonenzahl = Position im Periodensystem. Merkhilfe: Z wie Zahl der Protonen.'
   },
   {
@@ -47,7 +47,7 @@ export const fragenPart4 = [
       'Atome mit gleicher Elektronenkonfiguration aber unterschiedlicher Masse'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Isotope sind Atome desselben Elements (gleiche Protonenzahl Z), die sich in der Anzahl der Neutronen unterscheiden. Beispiel: ¹²C und ¹⁴C sind beide Kohlenstoff-Isotope mit 6 Protonen, aber 6 bzw. 8 Neutronen.',
+    erklärung: 'Isotope sind Atome desselben Elements (gleiche Protonenzahl Z), die sich in der Anzahl der Neutronen unterscheiden. Beispiel: ¹²C und ¹⁴C sind beide Kohlenstoff-Isotope mit 6 Protonen, aber 6 bzw. 8 Neutronen.',
     strategieTipp: 'Isotope = gleiches Element (gleiche Ordnungszahl), unterschiedliche Massenzahl A. Viele Isotope sind radioaktiv.'
   },
   {
@@ -64,7 +64,7 @@ export const fragenPart4 = [
       'n = 4'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Hauptquantenzahl n nimmt ganzzahlige Werte ab 1 an. n = 1 bezeichnet die K-Schale (erste Schale), n = 2 die L-Schale, n = 3 die M-Schale usw. Die Hauptquantenzahl bestimmt die Energie und den mittleren Abstand der Elektronen vom Kern.',
+    erklärung: 'Die Hauptquantenzahl n nimmt ganzzahlige Werte ab 1 an. n = 1 bezeichnet die K-Schale (erste Schale), n = 2 die L-Schale, n = 3 die M-Schale usw. Die Hauptquantenzahl bestimmt die Energie und den mittleren Abstand der Elektronen vom Kern.',
     strategieTipp: 'n beginnt bei 1 (nicht bei 0). K-L-M-N-Schalen entsprechen n = 1-2-3-4. Maximale Elektronenzahl pro Schale: 2n².'
   },
   {
@@ -81,7 +81,7 @@ export const fragenPart4 = [
       '10 Elektronen'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Die maximale Elektronenzahl pro Schale berechnet sich nach 2n². Für die L-Schale (n = 2) gilt: 2 × 2² = 8 Elektronen. Diese verteilen sich auf das 2s-Orbital (2 e⁻) und drei 2p-Orbitale (6 e⁻).',
+    erklärung: 'Die maximale Elektronenzahl pro Schale berechnet sich nach 2n². Für die L-Schale (n = 2) gilt: 2 × 2² = 8 Elektronen. Diese verteilen sich auf das 2s-Orbital (2 e⁻) und drei 2p-Orbitale (6 e⁻).',
     strategieTipp: 'Formel 2n² merken: K-Schale (n=1) → 2, L-Schale (n=2) → 8, M-Schale (n=3) → 18.'
   },
   {
@@ -98,7 +98,7 @@ export const fragenPart4 = [
       's-Orbitale haben die Nebenquantenzahl l = 1'
     ],
     korrekteAntwort: 2,
-    erklaerung: 's-Orbitale sind kugelsymmetrisch (nicht hantelförmig wie p-Orbitale) und können maximal 2 Elektronen mit entgegengesetztem Spin aufnehmen. Sie existieren in jeder Schale (1s, 2s, 3s...) und haben die Nebenquantenzahl l = 0.',
+    erklärung: 's-Orbitale sind kugelsymmetrisch (nicht hantelförmig wie p-Orbitale) und können maximal 2 Elektronen mit entgegengesetztem Spin aufnehmen. Sie existieren in jeder Schale (1s, 2s, 3s...) und haben die Nebenquantenzahl l = 0.',
     strategieTipp: 's = sphärisch (kugelförmig), max. 2 e⁻. p = hantelförmig, max. 6 e⁻. d = komplexer, max. 10 e⁻.'
   },
   {
@@ -115,7 +115,7 @@ export const fragenPart4 = [
       'n = 2, l = 2'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Für d-Orbitale gilt l = 2. Die Hauptquantenzahl n muss mindestens l + 1 sein, also n ≥ 3 für d-Orbitale. Daher ist 3d mit n = 3 und l = 2 korrekt. Die Nebenquantenzahl l kann Werte von 0 bis n-1 annehmen.',
+    erklärung: 'Für d-Orbitale gilt l = 2. Die Hauptquantenzahl n muss mindestens l + 1 sein, also n ≥ 3 für d-Orbitale. Daher ist 3d mit n = 3 und l = 2 korrekt. Die Nebenquantenzahl l kann Werte von 0 bis n-1 annehmen.',
     strategieTipp: 'Orbitaltypen: s (l=0), p (l=1), d (l=2), f (l=3). Für n = 3 sind s, p und d möglich. Merkhilfe: "Spinne Pudding dort fort".'
   },
   {
@@ -125,14 +125,14 @@ export const fragenPart4 = [
     schwierigkeit: 'leicht' as const,
     fragetext: 'Was besagt das Pauli-Prinzip für Elektronen in Atomen?',
     optionen: [
-      'Elektronen besetzen zuerst die energieärmsten Orbitale',
+      'Elektronen besetzen zürst die energieärmsten Orbitale',
       'Keine zwei Elektronen können in allen Quantenzahlen übereinstimmen',
       'Elektronen in einem Orbital haben parallele Spins',
-      'Orbitale werden zuerst einfach, dann doppelt besetzt',
+      'Orbitale werden zürst einfach, dann doppelt besetzt',
       'Die Elektronenzahl entspricht der Protonenzahl'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Das Pauli-Ausschlussprinzip besagt, dass sich keine zwei Elektronen in einem Atom in allen vier Quantenzahlen (n, l, ml, ms) gleichen dürfen. Daher können in einem Orbital maximal zwei Elektronen mit entgegengesetztem Spin sein.',
+    erklärung: 'Das Pauli-Ausschlussprinzip besagt, dass sich keine zwei Elektronen in einem Atom in allen vier Quantenzahlen (n, l, ml, ms) gleichen dürfen. Daher können in einem Orbital maximal zwei Elektronen mit entgegengesetztem Spin sein.',
     strategieTipp: 'Pauli-Prinzip ermöglicht nur 2 Elektronen pro Orbital (mit gegensätzlichem Spin). Wichtig für die Elektronenkonfiguration.'
   },
   {
@@ -149,7 +149,7 @@ export const fragenPart4 = [
       'Die Van-der-Waals-Kraft'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Die starke Wechselwirkung (starke Kernkraft) ist die stärkste der vier Grundkräfte und wirkt nur auf sehr kurze Distanzen (ca. 10⁻¹⁵ m). Sie bindet Quarks zu Nukleonen und Nukleonen untereinander im Kern, wobei sie die elektrische Abstoßung der Protonen überwindet.',
+    erklärung: 'Die starke Wechselwirkung (starke Kernkraft) ist die stärkste der vier Grundkräfte und wirkt nur auf sehr kurze Distanzen (ca. 10⁻¹⁵ m). Sie bindet Quarks zu Nukleonen und Nukleonen untereinander im Kern, wobei sie die elektrische Abstoßung der Protonen überwindet.',
     strategieTipp: 'Vier Grundkräfte: stark > elektromagnetisch > schwach > Gravitation. Starke Kraft = Kernkraft, hält Kern zusammen.'
   },
   {
@@ -166,7 +166,7 @@ export const fragenPart4 = [
       'Etwa 10⁻³⁵ m (Planck-Länge)'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die starke Wechselwirkung hat eine sehr kurze Reichweite von etwa 10⁻¹⁵ m, was der Größenordnung des Atomkerns entspricht. Außerhalb dieser Distanz nimmt sie extrem schnell ab. Dies erklärt, warum sie zwar die stärkste Kraft ist, aber nur im Kernbereich wirkt.',
+    erklärung: 'Die starke Wechselwirkung hat eine sehr kurze Reichweite von etwa 10⁻¹⁵ m, was der Größenordnung des Atomkerns entspricht. Außerhalb dieser Distanz nimmt sie extrem schnell ab. Dies erklärt, warum sie zwar die stärkste Kraft ist, aber nur im Kernbereich wirkt.',
     strategieTipp: 'Starke Kraft: sehr kurze Reichweite (~Kerngröße), aber enorm stark. Schwache Kraft: noch kürzere Reichweite (~10⁻¹⁸ m).'
   },
   {
@@ -183,7 +183,7 @@ export const fragenPart4 = [
       'Sie ist stärker als die elektromagnetische Kraft'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die schwache Wechselwirkung ist verantwortlich für Beta-Zerfälle, bei denen sich Neutronen in Protonen umwandeln (oder umgekehrt). Sie wirkt auf Quarks und Leptonen und ist deutlich schwächer als die starke und elektromagnetische Kraft, aber stärker als die Gravitation.',
+    erklärung: 'Die schwache Wechselwirkung ist verantwortlich für Beta-Zerfälle, bei denen sich Neutronen in Protonen umwandeln (oder umgekehrt). Sie wirkt auf Quarks und Leptonen und ist deutlich schwächer als die starke und elektromagnetische Kraft, aber stärker als die Gravitation.',
     strategieTipp: 'Schwache Kraft ermöglicht Umwandlung von Teilchen (β-Zerfall). Beteiligt an Neutrinoprozessen und Kernfusion in der Sonne.'
   },
   {
@@ -200,7 +200,7 @@ export const fragenPart4 = [
       'Weil schwere Kerne keine Neutronen enthalten'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die starke Kernkraft wirkt nur auf kurze Distanzen zwischen benachbarten Nukleonen. Die elektrische Abstoßung zwischen Protonen wirkt dagegen über größere Entfernungen. In großen Kernen summiert sich die Abstoßung aller Protonen, während die Kernkraft nur lokal wirkt, was zu Instabilität führt.',
+    erklärung: 'Die starke Kernkraft wirkt nur auf kurze Distanzen zwischen benachbarten Nukleonen. Die elektrische Abstoßung zwischen Protonen wirkt dagegen über größere Entfernungen. In großen Kernen summiert sich die Abstoßung aller Protonen, während die Kernkraft nur lokal wirkt, was zu Instabilität führt.',
     strategieTipp: 'Große Kerne: Coulomb-Abstoßung dominiert über Kernkraft → Instabilität. Deshalb brauchen schwere Kerne mehr Neutronen als Protonen.'
   },
   {
@@ -217,7 +217,7 @@ export const fragenPart4 = [
       'Das Photon'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Das Positron ist das Antiteilchen des Elektrons. Es hat dieselbe Masse wie ein Elektron, aber positive Ladung. Bei der Begegnung von Elektron und Positron kommt es zur Paarvernichtung (Annihilation), wobei Energie in Form von Gammastrahlung freigesetzt wird.',
+    erklärung: 'Das Positron ist das Antiteilchen des Elektrons. Es hat dieselbe Masse wie ein Elektron, aber positive Ladung. Bei der Begegnung von Elektron und Positron kommt es zur Paarvernichtung (Annihilation), wobei Energie in Form von Gammastrahlung freigesetzt wird.',
     strategieTipp: 'Antiteilchen haben entgegengesetzte Ladung, gleiche Masse. Elektron ↔ Positron, Proton ↔ Antiproton. Annihilation: E = 2mc².'
   },
   {
@@ -234,7 +234,7 @@ export const fragenPart4 = [
       'Die Ionisation der Elektronenhülle'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei der Kernspaltung (Fission) wird ein schwerer Atomkern (z.B. ²³⁵U) durch Neutronenbeschuss in zwei oder mehr leichtere Kerne gespalten. Dabei werden 2-3 Neutronen und viel Energie freigesetzt. Dies ist das Prinzip von Kernkraftwerken und Atombomben.',
+    erklärung: 'Bei der Kernspaltung (Fission) wird ein schwerer Atomkern (z.B. ²³⁵U) durch Neutronenbeschuss in zwei oder mehr leichtere Kerne gespalten. Dabei werden 2-3 Neutronen und viel Energie freigesetzt. Dies ist das Prinzip von Kernkraftwerken und Atombomben.',
     strategieTipp: 'Kernspaltung = schwer → leicht + Neutronen + Energie. Kernfusion = leicht → schwer + Energie. Bindungsenergie-Kurve erklärt beides.'
   },
   {
@@ -251,7 +251,7 @@ export const fragenPart4 = [
       '¹²C (Kohlenstoff-12)'
     ],
     korrekteAntwort: 1,
-    erklaerung: '²³⁵U ist das einzige in der Natur vorkommende spaltbare Isotop und wird in Kernreaktoren verwendet. Es macht nur 0,7% des natürlichen Urans aus (99,3% ist ²³⁸U). Thermische Neutronen können ²³⁵U effektiv spalten, während ²³⁸U nur durch schnelle Neutronen spaltbar ist.',
+    erklärung: '²³⁵U ist das einzige in der Natur vorkommende spaltbare Isotop und wird in Kernreaktoren verwendet. Es macht nur 0,7% des natürlichen Urans aus (99,3% ist ²³⁸U). Thermische Neutronen können ²³⁵U effektiv spalten, während ²³⁸U nur durch schnelle Neutronen spaltbar ist.',
     strategieTipp: '²³⁵U = spaltbar mit thermischen Neutronen, selten in Natur. Anreicherung nötig für Reaktoren. ²³⁸U = häufig, aber nicht direkt spaltbar.'
   },
   {
@@ -268,7 +268,7 @@ export const fragenPart4 = [
       'Sie wandeln radioaktive Abfälle um'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Moderatoren (z.B. Wasser, Graphit, schweres Wasser) bremsen die bei der Spaltung entstehenden schnellen Neutronen durch elastische Stöße ab. Langsame (thermische) Neutronen haben eine viel höhere Wahrscheinlichkeit, weitere ²³⁵U-Kerne zu spalten, was die Kettenreaktion aufrechterhält.',
+    erklärung: 'Moderatoren (z.B. Wasser, Graphit, schweres Wasser) bremsen die bei der Spaltung entstehenden schnellen Neutronen durch elastische Stöße ab. Langsame (thermische) Neutronen haben eine viel höhere Wahrscheinlichkeit, weitere ²³⁵U-Kerne zu spalten, was die Kettenreaktion aufrechterhält.',
     strategieTipp: 'Moderator = Neutronenbremse. Steuerstäbe = Neutronenabsorber. Beides kontrolliert Kettenreaktion. Leichte Kerne (H, D, C) sind gute Moderatoren.'
   },
   {
@@ -285,7 +285,7 @@ export const fragenPart4 = [
       'Die Masse der Spaltprodukte nach einer Reaktion'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die kritische Masse ist die minimale Menge spaltbaren Materials, bei der im Durchschnitt mindestens ein freigesetztes Neutron eine weitere Spaltung auslöst. Unterhalb der kritischen Masse entweichen zu viele Neutronen nach außen, und die Kettenreaktion erlischt.',
+    erklärung: 'Die kritische Masse ist die minimale Menge spaltbaren Materials, bei der im Durchschnitt mindestens ein freigesetztes Neutron eine weitere Spaltung auslöst. Unterhalb der kritischen Masse entweichen zu viele Neutronen nach außen, und die Kettenreaktion erlischt.',
     strategieTipp: 'Kritische Masse hängt von Form, Dichte und Anreicherungsgrad ab. Kugel hat kleinste kritische Masse. Bei Bomben wird Material komprimiert.'
   },
   {
@@ -302,7 +302,7 @@ export const fragenPart4 = [
       'Die Umwandlung von Materie in Antimaterie'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei der Kernfusion verschmelzen leichte Atomkerne (z.B. Wasserstoff-Isotope) zu schwereren Kernen unter Freisetzung enormer Energie. Dies ist der Energieproduktionsprozess in Sternen wie der Sonne. Fusion erfordert extrem hohe Temperaturen (Millionen Grad).',
+    erklärung: 'Bei der Kernfusion verschmelzen leichte Atomkerne (z.B. Wasserstoff-Isotope) zu schwereren Kernen unter Freisetzung enormer Energie. Dies ist der Energieproduktionsprozess in Sternen wie der Sonne. Fusion erfordert extrem hohe Temperaturen (Millionen Grad).',
     strategieTipp: 'Fusion = leichte Kerne verschmelzen. Sonne: 4 ¹H → ⁴He + Energie. Vorteil: viel Energie, keine langlebigen Abfälle. Problem: schwer zu kontrollieren.'
   },
   {
@@ -319,7 +319,7 @@ export const fragenPart4 = [
       'Die Umwandlung von Neutronen zu Protonen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'In der Sonne läuft hauptsächlich die Proton-Proton-Kette ab: Vier Protonen (¹H) verschmelzen über mehrere Schritte zu einem Heliumkern (⁴He), wobei Positronen, Neutrinos und Gammastrahlung entstehen. Diese Reaktion erzeugt die Energie der Sonne.',
+    erklärung: 'In der Sonne läuft hauptsächlich die Proton-Proton-Kette ab: Vier Protonen (¹H) verschmelzen über mehrere Schritte zu einem Heliumkern (⁴He), wobei Positronen, Neutrinos und Gammastrahlung entstehen. Diese Reaktion erzeugt die Energie der Sonne.',
     strategieTipp: 'Sonne: pp-Kette (H → He). Schwerere Sterne: CNO-Zyklus. Endstadium massereicher Sterne: Fusion bis Fe, dann Kollaps.'
   },
   {
@@ -336,7 +336,7 @@ export const fragenPart4 = [
       'Weil Fusion nur im Vakuum stattfinden kann'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Damit positiv geladene Kerne fusionieren können, müssen sie die elektrische Abstoßung (Coulomb-Barriere) überwinden. Dies erfordert Temperaturen von mehreren Millionen Grad Celsius und hohen Druck. Die technische Herausforderung liegt im Einschluss des heißen Plasmas.',
+    erklärung: 'Damit positiv geladene Kerne fusionieren können, müssen sie die elektrische Abstoßung (Coulomb-Barriere) überwinden. Dies erfordert Temperaturen von mehreren Millionen Grad Celsius und hohen Druck. Die technische Herausforderung liegt im Einschluss des heißen Plasmas.',
     strategieTipp: 'Fusionsprobleme: Coulomb-Abstoßung, Plasma-Einschluss (magnetisch oder Trägheit), Materialbelastung. ITER-Projekt arbeitet an Lösung.'
   },
   {
@@ -353,7 +353,7 @@ export const fragenPart4 = [
       'Wasserstoff-1 und Wasserstoff-2'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die D-T-Reaktion (Deuterium + Tritium → Helium-4 + Neutron) hat bei erreichbaren Temperaturen den höchsten Wirkungsquerschnitt. Deuterium ist in Meerwasser reichlich vorhanden, Tritium wird im Reaktor aus Lithium erbrütet. Diese Reaktion setzt 17,6 MeV pro Fusion frei.',
+    erklärung: 'Die D-T-Reaktion (Deuterium + Tritium → Helium-4 + Neutron) hat bei erreichbaren Temperaturen den höchsten Wirkungsquerschnitt. Deuterium ist in Meerwasser reichlich vorhanden, Tritium wird im Reaktor aus Lithium erbrütet. Diese Reaktion setzt 17,6 MeV pro Fusion frei.',
     strategieTipp: 'D-T-Fusion: niedrigste Zündtemperatur (~100 Mio. K), höchster Energiegewinn. D-D-Fusion: schwieriger, aber Tritium-frei.'
   },
   {
@@ -370,7 +370,7 @@ export const fragenPart4 = [
       'Weil kinetische Energie der Teilchen zunimmt'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Die Bindungsenergie pro Nukleon ist bei mittelschweren Kernen (um Eisen) am höchsten. Bei Fusion leichter Kerne und Spaltung schwerer Kerne entstehen stabilere Produkte mit höherer Bindungsenergie. Der Massendefekt wird nach Einsteins E = mc² in Energie umgewandelt.',
+    erklärung: 'Die Bindungsenergie pro Nukleon ist bei mittelschweren Kernen (um Eisen) am höchsten. Bei Fusion leichter Kerne und Spaltung schwerer Kerne entstehen stabilere Produkte mit höherer Bindungsenergie. Der Massendefekt wird nach Einsteins E = mc² in Energie umgewandelt.',
     strategieTipp: 'Bindungsenergie-Kurve: Maximum bei Fe. Links davon: Fusion gibt Energie. Rechts davon: Spaltung gibt Energie. Massendefekt → Energie.'
   },
   {
@@ -387,7 +387,7 @@ export const fragenPart4 = [
       'Die Erwärmung radioaktiver Materialien'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Radioaktivität ist die spontane Umwandlung (Zerfall) instabiler Atomkerne unter Emission ionisierender Strahlung (Alpha-, Beta- oder Gammastrahlung). Dieser Prozess kann nicht durch äußere Bedingungen (Temperatur, Druck, chemische Bindung) beeinflusst werden.',
+    erklärung: 'Radioaktivität ist die spontane Umwandlung (Zerfall) instabiler Atomkerne unter Emission ionisierender Strahlung (Alpha-, Beta- oder Gammastrahlung). Dieser Prozess kann nicht durch äußere Bedingungen (Temperatur, Druck, chemische Bindung) beeinflusst werden.',
     strategieTipp: 'Radioaktivität = Kernprozess, spontan, stochastisch, exponentielle Abnahme. Unabhängig von chemischen/physikalischen Bedingungen.'
   },
   {
@@ -404,7 +404,7 @@ export const fragenPart4 = [
       'Ein Positron'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Ein Alpha-Teilchen besteht aus 2 Protonen und 2 Neutronen, ist also identisch mit einem Helium-4-Kern. Es trägt eine zweifach positive Ladung und hat eine relativ große Masse. Alpha-Strahlung hat geringe Durchdringungsfähigkeit (bereits durch Papier stoppbar).',
+    erklärung: 'Ein Alpha-Teilchen besteht aus 2 Protonen und 2 Neutronen, ist also identisch mit einem Helium-4-Kern. Es trägt eine zweifach positive Ladung und hat eine relativ große Masse. Alpha-Strahlung hat geringe Durchdringungsfähigkeit (bereits durch Papier stoppbar).',
     strategieTipp: 'α = ⁴He-Kern (2p + 2n), hohe Ionisierung, geringe Reichweite. β = Elektron/Positron, mittlere Werte. γ = Photon, hohe Durchdringung.'
   },
   {
@@ -421,7 +421,7 @@ export const fragenPart4 = [
       'Ordnungszahl Z und Massenzahl A bleiben unverändert'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Beim Alpha-Zerfall emittiert der Kern ein Alpha-Teilchen (⁴He). Dadurch verringert sich die Ordnungszahl um 2 (zwei Protonen weniger) und die Massenzahl um 4 (zwei Protonen und zwei Neutronen weniger). Beispiel: ²³⁸U → ²³⁴Th + ⁴He.',
+    erklärung: 'Beim Alpha-Zerfall emittiert der Kern ein Alpha-Teilchen (⁴He). Dadurch verringert sich die Ordnungszahl um 2 (zwei Protonen weniger) und die Massenzahl um 4 (zwei Protonen und zwei Neutronen weniger). Beispiel: ²³⁸U → ²³⁴Th + ⁴He.',
     strategieTipp: 'α-Zerfall: Z-2, A-4. β⁻-Zerfall: Z+1, A gleich. β⁺-Zerfall: Z-1, A gleich. γ-Zerfall: Z und A unverändert.'
   },
   {
@@ -438,7 +438,7 @@ export const fragenPart4 = [
       'Eine Emission von Photonen'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Bei der Beta-minus-Strahlung wandelt sich ein Neutron im Kern in ein Proton um, wobei ein Elektron (β⁻) und ein Antineutrino emittiert werden. Die Ordnungszahl steigt um 1, die Massenzahl bleibt gleich. Beispiel: ¹⁴C → ¹⁴N + e⁻ + ν̄ₑ.',
+    erklärung: 'Bei der Beta-minus-Strahlung wandelt sich ein Neutron im Kern in ein Proton um, wobei ein Elektron (β⁻) und ein Antineutrino emittiert werden. Die Ordnungszahl steigt um 1, die Massenzahl bleibt gleich. Beispiel: ¹⁴C → ¹⁴N + e⁻ + ν̄ₑ.',
     strategieTipp: 'β⁻: Neutron → Proton + Elektron + Antineutrino. β⁺: Proton → Neutron + Positron + Neutrino. Schwache Wechselwirkung.'
   },
   {
@@ -455,7 +455,7 @@ export const fragenPart4 = [
       'Sie verändert die Ordnungszahl des Kerns'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Gamma-Strahlung ist hochenergetische elektromagnetische Strahlung (Photonen), die bei Übergängen zwischen angeregten Zuständen des Atomkerns entsteht. Sie verändert weder Ordnungszahl noch Massenzahl und hat die höchste Durchdringungsfähigkeit aller radioaktiven Strahlungsarten.',
+    erklärung: 'Gamma-Strahlung ist hochenergetische elektromagnetische Strahlung (Photonen), die bei Übergängen zwischen angeregten Zuständen des Atomkerns entsteht. Sie verändert weder Ordnungszahl noch Massenzahl und hat die höchste Durchdringungsfähigkeit aller radioaktiven Strahlungsarten.',
     strategieTipp: 'γ-Strahlung: Photonen, sehr hohe Energie (MeV), neutral, hohe Durchdringung (Blei nötig). Oft nach α- oder β-Zerfall.'
   },
   {
@@ -472,7 +472,7 @@ export const fragenPart4 = [
       'Neutronenstrahlung'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Alpha-Strahlung hat aufgrund ihrer hohen Masse und Ladung die geringste Reichweite (wenige Zentimeter in Luft, gestoppt durch Papier). Beta-Strahlung erreicht einige Meter in Luft, Gamma-Strahlung hat die höchste Reichweite und benötigt dicke Blei- oder Betonschichten zur Abschirmung.',
+    erklärung: 'Alpha-Strahlung hat aufgrund ihrer hohen Masse und Ladung die geringste Reichweite (wenige Zentimeter in Luft, gestoppt durch Papier). Beta-Strahlung erreicht einige Meter in Luft, Gamma-Strahlung hat die höchste Reichweite und benötigt dicke Blei- oder Betonschichten zur Abschirmung.',
     strategieTipp: 'Reichweite in Luft: α < β < γ. Abschirmung: α (Papier), β (Aluminium), γ (Blei/Beton). Umgekehrt zur Ionisierungsfähigkeit.'
   },
   {
@@ -489,7 +489,7 @@ export const fragenPart4 = [
       'Um Gammastrahlung zu erzeugen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Experimente zeigten, dass die Beta-Teilchen ein kontinuierliches Energiespektrum haben statt einer festen Energie. Pauli postulierte das Neutrino (bzw. Antineutrino), um die Energie- und Impulserhaltung zu erklären. Das Neutrino trägt die fehlende Energie und den Impuls.',
+    erklärung: 'Experimente zeigten, dass die Beta-Teilchen ein kontinuierliches Energiespektrum haben statt einer festen Energie. Pauli postulierte das Neutrino (bzw. Antineutrino), um die Energie- und Impulserhaltung zu erklären. Das Neutrino trägt die fehlende Energie und den Impuls.',
     strategieTipp: 'Neutrino-Postulat löste Energieerhaltungsproblem. Neutrinos: neutral, massearm, schwach wechselwirkend, schwer nachweisbar.'
   },
   {
@@ -506,7 +506,7 @@ export const fragenPart4 = [
       'Die chemische Reaktivität des Materials'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Aktivität A gibt die Anzahl der Kernzerfälle pro Zeiteinheit an. Die SI-Einheit ist das Becquerel (Bq): 1 Bq = 1 Zerfall/s. Eine ältere Einheit ist das Curie (Ci): 1 Ci = 3,7 × 10¹⁰ Bq. Die Aktivität nimmt exponentiell mit der Zeit ab.',
+    erklärung: 'Die Aktivität A gibt die Anzahl der Kernzerfälle pro Zeiteinheit an. Die SI-Einheit ist das Becquerel (Bq): 1 Bq = 1 Zerfall/s. Eine ältere Einheit ist das Curie (Ci): 1 Ci = 3,7 × 10¹⁰ Bq. Die Aktivität nimmt exponentiell mit der Zeit ab.',
     strategieTipp: 'Aktivität A = λN (λ = Zerfallskonstante, N = Atomzahl). Einheit: Becquerel (Bq) oder Curie (Ci). Nimmt exponentiell ab.'
   },
   {
@@ -523,7 +523,7 @@ export const fragenPart4 = [
       'Die Zeit bis zur halben Temperatur der Probe'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Halbwertszeit T₁/₂ ist die Zeit, nach der die Hälfte der ursprünglich vorhandenen radioaktiven Atomkerne zerfallen ist. Nach 2 × T₁/₂ sind noch 25% übrig, nach 3 × T₁/₂ noch 12,5% usw. Die Halbwertszeit ist charakteristisch für jedes Isotop.',
+    erklärung: 'Die Halbwertszeit T₁/₂ ist die Zeit, nach der die Hälfte der ursprünglich vorhandenen radioaktiven Atomkerne zerfallen ist. Nach 2 × T₁/₂ sind noch 25% übrig, nach 3 × T₁/₂ noch 12,5% usw. Die Halbwertszeit ist charakteristisch für jedes Isotop.',
     strategieTipp: 'Nach n Halbwertszeiten: N = N₀ × (1/2)ⁿ. T₁/₂ = ln(2)/λ ≈ 0,693/λ. Reicht von Bruchteilen von Sekunden bis Milliarden Jahren.'
   },
   {
@@ -540,7 +540,7 @@ export const fragenPart4 = [
       '120 g'
     ],
     korrekteAntwort: 3,
-    erklaerung: '24 Tage entsprechen 3 Halbwertszeiten (24/8 = 3). Nach n Halbwertszeiten gilt: N = N₀ × (1/2)ⁿ. Also: 10 g = N₀ × (1/2)³ = N₀ × 1/8. Daraus folgt: N₀ = 10 g × 8 = 80 g.',
+    erklärung: '24 Tage entsprechen 3 Halbwertszeiten (24/8 = 3). Nach n Halbwertszeiten gilt: N = N₀ × (1/2)ⁿ. Also: 10 g = N₀ × (1/2)³ = N₀ × 1/8. Daraus folgt: N₀ = 10 g × 8 = 80 g.',
     strategieTipp: 'Anzahl Halbwertszeiten: n = t/T₁/₂. Dann: N = N₀ × (1/2)ⁿ oder N₀ = N × 2ⁿ. Bei 3 Halbwertszeiten: Faktor 8.'
   },
   {
@@ -557,7 +557,7 @@ export const fragenPart4 = [
       '8 Stunden'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'A = A₀ × (1/2)ⁿ. Hier: 100 = 800 × (1/2)ⁿ → (1/2)ⁿ = 1/8 = (1/2)³, also n = 3 Halbwertszeiten in 12 Stunden. Daraus: T₁/₂ = 12 h / 3 = 4 Stunden. Alternativ: 800 → 400 → 200 → 100 in jeweils 4 Stunden.',
+    erklärung: 'A = A₀ × (1/2)ⁿ. Hier: 100 = 800 × (1/2)ⁿ → (1/2)ⁿ = 1/8 = (1/2)³, also n = 3 Halbwertszeiten in 12 Stunden. Daraus: T₁/₂ = 12 h / 3 = 4 Stunden. Alternativ: 800 → 400 → 200 → 100 in jeweils 4 Stunden.',
     strategieTipp: 'Bei Aktivitätsabnahme: Faktor berechnen (A₀/A), dann n aus 2ⁿ = Faktor. T₁/₂ = t/n. Oder logarithmisch: T₁/₂ = t × ln(2)/ln(A₀/A).'
   },
   {
@@ -574,7 +574,7 @@ export const fragenPart4 = [
       'Plutonium-239'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Radiokarbonmethode (C-14-Methode) nutzt ¹⁴C mit einer Halbwertszeit von 5.730 Jahren. ¹⁴C entsteht durch kosmische Strahlung in der Atmosphäre und wird von lebenden Organismen aufgenommen. Nach dem Tod stoppt die Aufnahme, und der ¹⁴C-Gehalt nimmt durch Zerfall ab.',
+    erklärung: 'Die Radiokarbonmethode (C-14-Methode) nutzt ¹⁴C mit einer Halbwertszeit von 5.730 Jahren. ¹⁴C entsteht durch kosmische Strahlung in der Atmosphäre und wird von lebenden Organismen aufgenommen. Nach dem Tod stoppt die Aufnahme, und der ¹⁴C-Gehalt nimmt durch Zerfall ab.',
     strategieTipp: 'C-14-Datierung: organische Materialien bis ~50.000 Jahre. U-238/Pb-206: geologische Zeitskalen (Milliarden Jahre). K-Ar: Vulkangesteine.'
   },
   {
@@ -591,7 +591,7 @@ export const fragenPart4 = [
       '8.595 Jahre'
     ],
     korrekteAntwort: 2,
-    erklaerung: '12,5% = 1/8 des Originals. 1/8 = (1/2)³, also sind 3 Halbwertszeiten vergangen. T₁/₂ = 17.190 Jahre / 3 = 5.730 Jahre. Dies ist die tatsächliche Halbwertszeit von Kohlenstoff-14.',
+    erklärung: '12,5% = 1/8 des Originals. 1/8 = (1/2)³, also sind 3 Halbwertszeiten vergangen. T₁/₂ = 17.190 Jahre / 3 = 5.730 Jahre. Dies ist die tatsächliche Halbwertszeit von Kohlenstoff-14.',
     strategieTipp: 'Prozent → Bruch → Potenz von 1/2. Beispiel: 25% = 1/4 = (1/2)² → 2 Halbwertszeiten. 12,5% = 1/8 = (1/2)³ → 3 Halbwertszeiten.'
   },
   {
@@ -608,7 +608,7 @@ export const fragenPart4 = [
       'Strahlung, die magnetische Felder bildet'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Ionisierende Strahlung hat genug Energie, um Elektronen aus Atomen oder Molekülen zu entfernen und damit Ionen zu erzeugen. Dazu gehören Alpha-, Beta-, Gamma-Strahlung, Röntgenstrahlung und hochenergetische UV-Strahlung. Sie kann biologisches Gewebe schädigen.',
+    erklärung: 'Ionisierende Strahlung hat genug Energie, um Elektronen aus Atomen oder Molekülen zu entfernen und damit Ionen zu erzeugen. Dazu gehören Alpha-, Beta-, Gamma-Strahlung, Röntgenstrahlung und hochenergetische UV-Strahlung. Sie kann biologisches Gewebe schädigen.',
     strategieTipp: 'Ionisierend: Energie > ~10 eV (UV-C, Röntgen, γ, α, β). Nicht-ionisierend: sichtbares Licht, IR, Mikrowellen, Radio. DNA-Schäden möglich.'
   },
   {
@@ -625,7 +625,7 @@ export const fragenPart4 = [
       'UV-Strahlung'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Alpha-Strahlung hat die höchste Ionisierungsdichte aufgrund ihrer hohen Masse und zweifachen Ladung. Sie erzeugt viele Ionenpaare auf kurzer Strecke, was sie bei innerer Kontamination sehr gefährlich macht, aber gleichzeitig leicht abschirmbar (geringe Reichweite).',
+    erklärung: 'Alpha-Strahlung hat die höchste Ionisierungsdichte aufgrund ihrer hohen Masse und zweifachen Ladung. Sie erzeugt viele Ionenpaare auf kurzer Strecke, was sie bei innerer Kontamination sehr gefährlich macht, aber gleichzeitig leicht abschirmbar (geringe Reichweite).',
     strategieTipp: 'Ionisierung: α > β > γ. Durchdringung: γ > β > α. Beide Eigenschaften sind umgekehrt proportional. α außen harmlos, innen gefährlich.'
   },
   {
@@ -642,7 +642,7 @@ export const fragenPart4 = [
       'Die Ablenkung der Strahlung durch Magnetfelder'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Absorption beschreibt die Schwächung der Strahlung beim Durchgang durch Materie durch Wechselwirkungen (Ionisation, Streuung, Paarbildung). Die Intensität nimmt exponentiell ab: I = I₀ × e^(-μx), wobei μ der Absorptionskoeffizient und x die Dicke des Materials ist.',
+    erklärung: 'Absorption beschreibt die Schwächung der Strahlung beim Durchgang durch Materie durch Wechselwirkungen (Ionisation, Streuung, Paarbildung). Die Intensität nimmt exponentiell ab: I = I₀ × e^(-μx), wobei μ der Absorptionsköffizient und x die Dicke des Materials ist.',
     strategieTipp: 'Absorptionsgesetz: I = I₀ × e^(-μx). Halbwertsdicke d₁/₂: I = I₀/2. Je dichter/schwerer das Material, desto höher μ. Blei gut für γ.'
   },
   {
@@ -659,7 +659,7 @@ export const fragenPart4 = [
       '20 cm'
     ],
     korrekteAntwort: 2,
-    erklaerung: '25% = 1/4 und 6,25% = 1/16 = (1/4)². Die erste Schicht (5 cm) reduziert auf 1/4, eine zweite identische Schicht (weitere 5 cm) reduziert nochmal auf 1/4 davon, also insgesamt auf 1/16. Gesamtdicke: 10 cm. Alternativ: 5 cm ist die Halbwertsdicke für Faktor 4 = 2², also 2 Halbwertsdicken. Für 16 = 2⁴ braucht man 4 Halbwertsdicken.',
+    erklärung: '25% = 1/4 und 6,25% = 1/16 = (1/4)². Die erste Schicht (5 cm) reduziert auf 1/4, eine zweite identische Schicht (weitere 5 cm) reduziert nochmal auf 1/4 davon, also insgesamt auf 1/16. Gesamtdicke: 10 cm. Alternativ: 5 cm ist die Halbwertsdicke für Faktor 4 = 2², also 2 Halbwertsdicken. Für 16 = 2⁴ braucht man 4 Halbwertsdicken.',
     strategieTipp: 'Absorption ist multiplikativ. Jede Schicht gleicher Dicke multipliziert mit gleichem Faktor. Bei exponentiellem Zerfall: doppelte Dicke → Faktor².'
   },
   {
@@ -676,7 +676,7 @@ export const fragenPart4 = [
       'Sie ist nur nachts nachweisbar'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die primäre kosmische Strahlung besteht zu ~90% aus Protonen, ~9% aus Heliumkernen und ~1% aus schwereren Kernen. Sie stammt von Supernovae, aktiven Galaxienkernen und anderen hochenergetischen kosmischen Quellen. In der Atmosphäre erzeugt sie Teilchenschauer (sekundäre kosmische Strahlung).',
+    erklärung: 'Die primäre kosmische Strahlung besteht zu ~90% aus Protonen, ~9% aus Heliumkernen und ~1% aus schwereren Kernen. Sie stammt von Supernovae, aktiven Galaxienkernen und anderen hochenergetischen kosmischen Quellen. In der Atmosphäre erzeugt sie Teilchenschauer (sekundäre kosmische Strahlung).',
     strategieTipp: 'Primäre kosmische Strahlung: hauptsächlich Protonen, sehr hohe Energie. Sekundäre: Myonen, Neutronen, Pionen aus Atmosphärenkollisionen. Erdmagnetfeld bietet Schutz.'
   },
   {
@@ -693,7 +693,7 @@ export const fragenPart4 = [
       'Durch vulkanische Aktivität'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Kosmische Strahlung erzeugt in der oberen Atmosphäre Neutronen, die mit Stickstoff-14 reagieren: ¹⁴N + n → ¹⁴C + p. Das entstehende ¹⁴C oxidiert zu CO₂ und wird in den Kohlenstoffkreislauf eingebaut. Dies ermöglicht die Radiokarbondatierung.',
+    erklärung: 'Kosmische Strahlung erzeugt in der oberen Atmosphäre Neutronen, die mit Stickstoff-14 reagieren: ¹⁴N + n → ¹⁴C + p. Das entstehende ¹⁴C oxidiert zu CO₂ und wird in den Kohlenstoffkreislauf eingebaut. Dies ermöglicht die Radiokarbondatierung.',
     strategieTipp: '¹⁴C-Produktion: kosmische Strahlung + ¹⁴N → ¹⁴C + Proton. Gleichgewicht zwischen Produktion und Zerfall in Atmosphäre. Variation durch Sonnenaktivität.'
   },
   {
@@ -710,7 +710,7 @@ export const fragenPart4 = [
       'Die Reihenfolge der Entdeckung radioaktiver Elemente'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Eine Zerfallsreihe ist eine Kette aufeinanderfolgender radioaktiver Zerfälle. Beispiel: Die Uran-Radium-Reihe beginnt bei ²³⁸U und endet nach vielen Alpha- und Beta-Zerfällen beim stabilen ²⁰⁶Pb. Es gibt vier natürliche Zerfallsreihen (Uran-238, Uran-235, Thorium-232, Neptunium-237).',
+    erklärung: 'Eine Zerfallsreihe ist eine Kette aufeinanderfolgender radioaktiver Zerfälle. Beispiel: Die Uran-Radium-Reihe beginnt bei ²³⁸U und endet nach vielen Alpha- und Beta-Zerfällen beim stabilen ²⁰⁶Pb. Es gibt vier natürliche Zerfallsreihen (Uran-238, Uran-235, Thorium-232, Neptunium-237).',
     strategieTipp: 'Natürliche Zerfallsreihen: ²³⁸U → ²⁰⁶Pb, ²³⁵U → ²⁰⁷Pb, ²³²Th → ²⁰⁸Pb. Alle enden bei stabilem Blei. Radon in der Kette gefährlich.'
   },
   {
@@ -727,7 +727,7 @@ export const fragenPart4 = [
       '12 Alpha-Zerfälle'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Massenzahl verringert sich von 238 auf 206, also um 32. Jeder Alpha-Zerfall verringert A um 4. Daher: 32/4 = 8 Alpha-Zerfälle. Die Ordnungszahl sinkt dabei von 92 auf 82, also um 10. Da 8 Alpha-Zerfälle Z um 16 senken, müssen 6 Beta-Zerfälle erfolgen (erhöhen Z um 6), um netto -10 zu erreichen.',
+    erklärung: 'Die Massenzahl verringert sich von 238 auf 206, also um 32. Jeder Alpha-Zerfall verringert A um 4. Daher: 32/4 = 8 Alpha-Zerfälle. Die Ordnungszahl sinkt dabei von 92 auf 82, also um 10. Da 8 Alpha-Zerfälle Z um 16 senken, müssen 6 Beta-Zerfälle erfolgen (erhöhen Z um 6), um netto -10 zu erreichen.',
     strategieTipp: 'Massendifferenz ÷ 4 = Anzahl α-Zerfälle. Dann Ordnungszahl prüfen: α senkt Z um 2, β⁻ erhöht Z um 1. Bilanz muss stimmen.'
   },
   {
@@ -744,7 +744,7 @@ export const fragenPart4 = [
       'Stickstoff'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Radon-222 ist ein radioaktives Edelgas, das in der Uran-238-Zerfallsreihe entsteht. Als Gas kann es aus dem Boden in Gebäude eindringen und sich anreichern. Es ist ein Alpha-Strahler mit einer Halbwertszeit von 3,8 Tagen und die zweithäufigste Ursache für Lungenkrebs nach Rauchen.',
+    erklärung: 'Radon-222 ist ein radioaktives Edelgas, das in der Uran-238-Zerfallsreihe entsteht. Als Gas kann es aus dem Boden in Gebäude eindringen und sich anreichern. Es ist ein Alpha-Strahler mit einer Halbwertszeit von 3,8 Tagen und die zweithäufigste Ursache für Lungenkrebs nach Rauchen.',
     strategieTipp: 'Radon: farbloses, geruchloses Gas, α-Strahler. Gefahr bei Inhalation (innere Bestrahlung). Kellerräume lüften. Zerfallsprodukte lagern sich in Lunge ab.'
   },
   {
@@ -761,7 +761,7 @@ export const fragenPart4 = [
       'Der Fehler bei der Massenbestimmung'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der Massendefekt Δm ist die Differenz zwischen der Summe der Massen freier Protonen und Neutronen und der tatsächlichen Kernmasse. Diese "fehlende" Masse wurde bei der Kernbildung in Bindungsenergie umgewandelt: E_B = Δm × c². Je größer der Massendefekt, desto stabiler der Kern.',
+    erklärung: 'Der Massendefekt Δm ist die Differenz zwischen der Summe der Massen freier Protonen und Neutronen und der tatsächlichen Kernmasse. Diese "fehlende" Masse wurde bei der Kernbildung in Bindungsenergie umgewandelt: E_B = Δm × c². Je größer der Massendefekt, desto stabiler der Kern.',
     strategieTipp: 'Massendefekt → Bindungsenergie (E = mc²). Eisen-56 hat höchste Bindungsenergie pro Nukleon. Erkllärt Energie aus Fusion und Spaltung.'
   },
   {
@@ -778,7 +778,7 @@ export const fragenPart4 = [
       '0,100 u'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Summe der Einzelmassen: 2 × 1,007 u + 2 × 1,009 u = 2,014 u + 2,018 u = 4,032 u. Massendefekt: Δm = 4,032 u - 4,0015 u ≈ 0,030 u. Diese Masse entspricht der Bindungsenergie des Heliumkerns von etwa 28 MeV.',
+    erklärung: 'Summe der Einzelmassen: 2 × 1,007 u + 2 × 1,009 u = 2,014 u + 2,018 u = 4,032 u. Massendefekt: Δm = 4,032 u - 4,0015 u ≈ 0,030 u. Diese Masse entspricht der Bindungsenergie des Heliumkerns von etwa 28 MeV.',
     strategieTipp: 'Δm = (Z × m_p + N × m_n) - m_Kern. 1 u ≈ 931,5 MeV/c². Helium-4 ist besonders stark gebunden (Alpha-Teilchen).'
   },
   {
@@ -792,10 +792,10 @@ export const fragenPart4 = [
       'Gray (Gy)',
       'Curie (Ci)',
       'Sievert (Sv)',
-      'Roentgen (R)'
+      'Röntgen (R)'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Gray (Gy) ist die SI-Einheit der Energiedosis: 1 Gy = 1 J/kg absorbierte Energie. Die Äquivalentdosis (biologische Wirkung) wird in Sievert (Sv) gemessen. Becquerel (Bq) ist die Einheit der Aktivität. Eine alte Einheit der Energiedosis ist Rad (1 Gy = 100 rad).',
+    erklärung: 'Gray (Gy) ist die SI-Einheit der Energiedosis: 1 Gy = 1 J/kg absorbierte Energie. Die Äquivalentdosis (biologische Wirkung) wird in Sievert (Sv) gemessen. Becquerel (Bq) ist die Einheit der Aktivität. Eine alte Einheit der Energiedosis ist Rad (1 Gy = 100 rad).',
     strategieTipp: 'Aktivität: Becquerel (Bq). Energiedosis: Gray (Gy). Äquivalentdosis: Sievert (Sv) = Gy × Bewertungsfaktor. α hat höchsten Faktor.'
   },
   {
@@ -812,7 +812,7 @@ export const fragenPart4 = [
       'Weil sie durch Magnetfelder nicht ablenkbar ist'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Alpha-Teilchen haben eine sehr hohe Ionisierungsdichte, geben also ihre Energie auf sehr kurzer Strecke ab. Bei äußerer Bestrahlung werden sie von der Haut gestoppt (harmlos). Im Körper deponieren sie ihre gesamte Energie im Gewebe und verursachen schwere lokale Schäden (z.B. Lungenkrebs durch Radon).',
+    erklärung: 'Alpha-Teilchen haben eine sehr hohe Ionisierungsdichte, geben also ihre Energie auf sehr kurzer Strecke ab. Bei äußerer Bestrahlung werden sie von der Haut gestoppt (harmlos). Im Körper deponieren sie ihre gesamte Energie im Gewebe und verursachen schwere lokale Schäden (z.B. Lungenkrebs durch Radon).',
     strategieTipp: 'α-Strahler: außen harmlos (Haut stoppt), innen sehr gefährlich (hohe lokale Dosis). β und γ: auch extern gefährlich. ALARA-Prinzip beachten.'
   },
   {
@@ -829,7 +829,7 @@ export const fragenPart4 = [
       'Alpha, Beta, Gamma'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die drei A\'s des Strahlenschutzes: 1) Abstand: Intensität nimmt mit 1/r² ab. 2) Abschirmung: Geeignete Materialien zwischen Quelle und Person. 3) Aufenthaltsdauer: Exposition minimieren. Diese Prinzipien reduzieren die Strahlendosis effektiv.',
+    erklärung: 'Die drei A\'s des Strahlenschutzes: 1) Abstand: Intensität nimmt mit 1/r² ab. 2) Abschirmung: Geeignete Materialien zwischen Quelle und Person. 3) Aufenthaltsdauer: Exposition minimieren. Diese Prinzipien reduzieren die Strahlendosis effektiv.',
     strategieTipp: '3 A: Abstand (1/r²-Gesetz), Abschirmung (Material je nach Strahlungsart), Aufenthaltsdauer (Zeit minimieren). ALARA: As Low As Reasonably Achievable.'
   },
   {
@@ -846,7 +846,7 @@ export const fragenPart4 = [
       '1600 Bq'
     ],
     korrekteAntwort: 1,
-    erklaerung: '32 Tage entsprechen 4 Halbwertszeiten (32/8 = 4). Nach jeder Halbwertszeit halbiert sich die Aktivität: 3200 → 1600 → 800 → 400 → 200 Bq. Oder: A = A₀ × (1/2)ⁿ = 3200 × (1/2)⁴ = 3200 × 1/16 = 200 Bq.',
+    erklärung: '32 Tage entsprechen 4 Halbwertszeiten (32/8 = 4). Nach jeder Halbwertszeit halbiert sich die Aktivität: 3200 → 1600 → 800 → 400 → 200 Bq. Oder: A = A₀ × (1/2)ⁿ = 3200 × (1/2)⁴ = 3200 × 1/16 = 200 Bq.',
     strategieTipp: 'Jod-131: wichtig in Nuklearmedizin (Schilddrüsentherapie) und nach Reaktorunfällen. Kurze Halbwertszeit → schneller Zerfall, aber akute Gefahr.'
   }
 ];

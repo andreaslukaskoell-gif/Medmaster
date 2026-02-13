@@ -114,7 +114,7 @@ export const genetikChapter: Chapter = {
     {
       heading: "Genetischer Code",
       content:
-        "Der genetische Code ist die Zuordnung von mRNA-Codons zu Aminosäuren. Er wurde in den 1960er Jahren u.a. durch Nirenberg, Matthaei und Khorana entschlüsselt.\n\n" +
+        "Der genetische Code ist die Zuordnung von mRNA-Codons zu Aminosäuren. Er wurde in den 1960er Jahren u.a. durch Nirenberg, Matthäi und Khorana entschlüsselt.\n\n" +
         "**Grundprinzip:** Vier verschiedene Basen (A, U, G, C) werden in Dreiergruppen (Codons) gelesen. Es gibt 4³ = 64 mögliche Codons. Davon codieren 61 für die 20 proteinogenen Aminosäuren, und 3 sind Stoppcodons (UAA, UAG, UGA).\n\n" +
         "**Eigenschaften des genetischen Codes:**\n\n" +
         "1) Universell: Der genetische Code ist bei nahezu allen Lebewesen identisch — von Bakterien bis zum Menschen. Ausnahmen: Mitochondrien und einige einzellige Organismen haben leicht abgewandelte Codes.\n\n" +
@@ -145,7 +145,7 @@ export const genetikChapter: Chapter = {
         "• Kodominanz: Beide Allele exprimieren sich gleich stark (z.B. Blutgruppe AB: Iᴬ und Iᴮ)\n" +
         "• Intermediärer Erbgang: Heterozygote zeigen einen Mischphänotyp (z.B. rote × weiße Blüten → rosa)\n\n" +
         "**1. Uniformitätsregel (Uniformity Rule):**\n" +
-        "Kreuzt man zwei homozygote (reinerbige) Eltern, die sich in einem Merkmal unterscheiden (P: AA × aa), so sind alle Nachkommen der F1-Generation uniform (gleich) in Genotyp (Aa) und Phänotyp. Bei dominant-rezessivem Erbgang zeigen alle F1-Individuen den dominanten Phänotyp. Bei intermediärem Erbgang zeigen alle F1 eine Zwischenform.\n\n" +
+        "Kreuzt man zwei homozygote (reinerbige) Eltern, die sich in einem Merkmal unterscheiden (P: AA × aa), so sind alle Nachkommen der F1-Generation uniform (gleich) in Genotyp (Aa) und Phänotyp. Bei dominant-rezessivem Erbgang zeigen alle F1-Individün den dominanten Phänotyp. Bei intermediärem Erbgang zeigen alle F1 eine Zwischenform.\n\n" +
         "**2. Spaltungsregel (Segregation Rule):**\n" +
         "Kreuzt man die F1-Hybriden untereinander (Aa × Aa), so spalten sich die Merkmale in der F2-Generation in einem bestimmten Verhältnis auf:\n" +
         "• Genotypisches Spaltungsverhältnis: 1 AA : 2 Aa : 1 aa\n" +
@@ -168,7 +168,7 @@ export const genetikChapter: Chapter = {
         "**Autosomal-dominanter Erbgang:**\n" +
         "Das krankmachende Allel (A) liegt auf einem Autosom und ist dominant. Bereits ein mutiertes Allel reicht für die Erkrankung: Genotyp Aa oder AA → krank, aa → gesund. Merkmale: Die Erkrankung tritt in jeder Generation auf (keine Generation wird übersprungen). Jedes betroffene Kind hat mindestens einen betroffenen Elternteil. Männer und Frauen sind gleich häufig betroffen. Beispiele: Chorea Huntington, Marfan-Syndrom, familiäre Hypercholesterinämie.\n\n" +
         "**Autosomal-rezessiver Erbgang:**\n" +
-        "Das krankmachende Allel (a) liegt auf einem Autosom und ist rezessiv. Nur homozygote Individuen (aa) sind erkrankt. Heterozygote (Aa) sind phänotypisch gesund, aber Konduktoren (Anlageträger). Merkmale: Die Erkrankung überspringt häufig Generationen. Betroffene Kinder können gesunde Eltern haben (wenn beide Konduktoren sind). Konsanguinität (Verwandtenehe) erhöht das Risiko. Männer und Frauen sind gleich häufig betroffen. Beispiele: Mukoviszidose (Cystische Fibrose), Sichelzellanämie, Phenylketonurie (PKU), Albinismus.\n\n" +
+        "Das krankmachende Allel (a) liegt auf einem Autosom und ist rezessiv. Nur homozygote Individün (aa) sind erkrankt. Heterozygote (Aa) sind phänotypisch gesund, aber Konduktoren (Anlageträger). Merkmale: Die Erkrankung überspringt häufig Generationen. Betroffene Kinder können gesunde Eltern haben (wenn beide Konduktoren sind). Konsanguinität (Verwandtenehe) erhöht das Risiko. Männer und Frauen sind gleich häufig betroffen. Beispiele: Mukoviszidose (Cystische Fibrose), Sichelzellanämie, Phenylketonurie (PKU), Albinismus.\n\n" +
         "**X-chromosomal-rezessiver Erbgang:**\n" +
         "Das krankmachende Allel liegt auf dem X-Chromosom und ist rezessiv. Männer sind deutlich häufiger betroffen, da sie nur ein X-Chromosom besitzen (hemizygot: XᵃY → krank). Frauen erkranken nur bei Homozygotie (XᵃXᵃ → selten). Heterozygote Frauen (XᴬXᵃ) sind Konduktorinnen (klinisch gesund, aber Überträgerinnen). Merkmale: Vorwiegend Männer betroffen. Keine Vater-zu-Sohn-Übertragung (Vater gibt Y-Chromosom an Söhne). Betroffene Söhne erhalten das mutierte X von der Mutter (Konduktorin). Beispiele: Hämophilie A und B (Bluterkrankheit), Rot-Grün-Blindheit (Protanopie/Deuteranopie), Muskeldystrophie Duchenne, G6PD-Mangel (Favismus).\n\n" +
         "**X-chromosomal-dominanter Erbgang:**\n" +
@@ -258,7 +258,7 @@ export const genetikChapter: Chapter = {
       content:
         "Das Blutgruppensystem ist ein klassisches Beispiel für Kodominanz und hat große klinische Bedeutung bei Bluttransfusionen und in der Schwangerschaftsmedizin.\n\n" +
         "**ABO-System (Karl Landsteiner, 1901):**\n" +
-        "Das ABO-System wird durch ein Gen auf Chromosom 9 bestimmt, das drei Allele besitzt: Iᴬ, Iᴮ und i. Iᴬ und Iᴮ sind kodominant zueinander (beide werden im heterozygoten Zustand exprimiert → Blutgruppe AB). Das Allel i ist rezessiv gegenüber Iᴬ und Iᴮ.\n\n" +
+        "Das ABO-System wird durch ein Gen auf Chromosom 9 bestimmt, das drei Allele besitzt: Iᴬ, Iᴮ und i. Iᴬ und Iᴮ sind kodominant züinander (beide werden im heterozygoten Zustand exprimiert → Blutgruppe AB). Das Allel i ist rezessiv gegenüber Iᴬ und Iᴮ.\n\n" +
         "Die Allele codieren für Enzyme (Glykosyltransferasen), die bestimmte Zuckerreste an eine Grundstruktur (H-Antigen) auf der Oberfläche der Erythrozyten anfügen:\n" +
         "• Iᴬ → N-Acetylgalactosamin wird angehängt → Antigen A\n" +
         "• Iᴮ → Galactose wird angehängt → Antigen B\n" +
@@ -273,7 +273,7 @@ export const genetikChapter: Chapter = {
         "Das wichtigste Rhesus-Antigen ist das D-Antigen (Rh-Faktor). Der Erbgang ist autosomal-dominant:\n" +
         "• Rh-positiv (Rh+): Genotyp DD oder Dd → D-Antigen auf Erythrozyten vorhanden (~85% der Europäer)\n" +
         "• Rh-negativ (Rh⁻): Genotyp dd → kein D-Antigen (~15% der Europäer)\n\n" +
-        "Im Gegensatz zum ABO-System bilden Rh⁻-Personen Anti-D-Antikörper (IgG) erst nach Sensibilisierung (Kontakt mit Rh⁺-Blut durch Transfusion oder Schwangerschaft). Diese irregulären Antikörper sind plazentagängig (IgG!) und können bei einer nachfolgenden Schwangerschaft mit einem Rh⁺-Fetus den Morbus haemolyticus neonatorum verursachen.",
+        "Im Gegensatz zum ABO-System bilden Rh⁻-Personen Anti-D-Antikörper (IgG) erst nach Sensibilisierung (Kontakt mit Rh⁺-Blut durch Transfusion oder Schwangerschaft). Diese irregulären Antikörper sind plazentagängig (IgG!) und können bei einer nachfolgenden Schwangerschaft mit einem Rh⁺-Fetus den Morbus hämolyticus neonatorum verursachen.",
       vergleichsTabelle: {
         headers: ["Blutgruppe", "Genotyp", "Antigene", "Antikörper"],
         rows: [
@@ -286,7 +286,7 @@ export const genetikChapter: Chapter = {
       merke:
         "Universalspender: <strong>Blutgruppe 0</strong> (keine Antigene auf Erythrozyten). Universalempfänger: <strong>Blutgruppe AB</strong> (keine Antikörper im Plasma). ABO = kodominanter Erbgang!",
       klinik:
-        "Rhesus-Inkompatibilität: Rh⁻ Mutter + Rh⁺ Kind → Mutter bildet Anti-D-Antikörper → Gefahr für 2. Schwangerschaft (Morbus haemolyticus neonatorum). Prävention: Anti-D-Prophylaxe.",
+        "Rhesus-Inkompatibilität: Rh⁻ Mutter + Rh⁺ Kind → Mutter bildet Anti-D-Antikörper → Gefahr für 2. Schwangerschaft (Morbus hämolyticus neonatorum). Prävention: Anti-D-Prophylaxe.",
     },
   ],
 

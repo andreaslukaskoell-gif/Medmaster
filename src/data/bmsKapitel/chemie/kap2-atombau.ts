@@ -50,7 +50,7 @@ Das heute gültige Orbitalmodell (quantenmechanisches Modell) wurde in den 1920e
           }
         }
       ],
-      merksaetze: [
+      merksätze: [
         'Die Entwicklung der Atommodelle: Dalton (massive Kugel) → Thomson (Rosinenkuchen) → Rutherford (Kern-Hülle) → Bohr (Schalen mit quantisierten Bahnen) → Orbitalmodell (Aufenthaltswahrscheinlichkeit).',
         'Im Orbitalmodell beschreiben Wellenfunktionen die Aufenthaltswahrscheinlichkeit der Elektronen. Ein Orbital ist kein fester Weg, sondern ein Wahrscheinlichkeitsraum (ca. 90 %).'
       ],
@@ -107,7 +107,7 @@ Das heute gültige Orbitalmodell (quantenmechanisches Modell) wurde in den 1920e
 Das Pauli-Prinzip (Pauli-Verbot) besagt, dass keine zwei Elektronen in einem Atom in allen vier Quantenzahlen übereinstimmen dürfen. Da ein Orbital durch drei Quantenzahlen (n, l, mₗ) definiert wird, kann jedes Orbital maximal zwei Elektronen mit entgegengesetztem Spin (mₛ = +½ und mₛ = -½) aufnehmen. Daraus ergibt sich die maximale Besetzung der Unterschalen: s-Orbitale (l = 0) haben eine Orientierung (mₗ = 0), also maximal 2 Elektronen; p-Orbitale (l = 1) haben drei Orientierungen (mₗ = -1, 0, +1), also maximal 6 Elektronen; d-Orbitale (l = 2) haben fünf Orientierungen, also maximal 10 Elektronen; f-Orbitale (l = 3) haben sieben Orientierungen, also maximal 14 Elektronen. Die maximale Elektronenzahl pro Schale beträgt somit 2n².
 
 Die Hundsche Regel (Regel der maximalen Multiplizität) besagt, dass energetisch gleichwertige Orbitale (z. B. die drei p-Orbitale) zunächst einfach besetzt werden, bevor eine Doppelbesetzung erfolgt, und zwar mit parallelem Spin. Dies führt zu einer energetisch günstigeren Konfiguration, da sich Elektronen mit gleichem Spin gegenseitig besser ausweichen (Austauschwechselwirkung). Als Beispiel hat Stickstoff (Z = 7) die Konfiguration 1s² 2s² 2p³, wobei jedes der drei 2p-Orbitale einfach besetzt ist. Besonders stabile Elektronenkonfigurationen ergeben sich bei halbgefüllten und vollständig gefüllten Unterschalen. Dies erklärt die Ausnahmen bei Chrom (Cr: [Ar] 3d⁵ 4s¹ statt [Ar] 3d⁴ 4s²) und Kupfer (Cu: [Ar] 3d¹⁰ 4s¹ statt [Ar] 3d⁹ 4s²), wo die besondere Stabilität der halbgefüllten bzw. vollgefüllten d-Unterschale die reguläre Besetzungsreihenfolge überwiegt.`,
-      merksaetze: [
+      merksätze: [
         'Aufbauprinzip: Orbitale werden in der Reihenfolge steigender Energie besetzt (1s, 2s, 2p, 3s, 3p, 4s, 3d, ...). Pauli: max. 2 Elektronen pro Orbital mit entgegengesetztem Spin. Hund: Gleichwertige Orbitale werden erst einfach besetzt.',
         'Maximale Elektronenzahl: s = 2, p = 6, d = 10, f = 14. Pro Schale n maximal 2n² Elektronen. Halbgefüllte und vollgefüllte Unterschalen sind besonders stabil.'
       ],
@@ -163,7 +163,7 @@ Die Hundsche Regel (Regel der maximalen Multiplizität) besagt, dass energetisch
 Die relative Atommasse eines Elements, wie sie im PSE angegeben ist, stellt den gewichteten Mittelwert der Atommassen aller natürlich vorkommenden Isotope dar. So beträgt die relative Atommasse von Chlor 35,45 u, was den Mittelwert aus ³⁵Cl (75,77 %) und ³⁷Cl (24,23 %) widerspiegelt. Die atomare Masseneinheit u (unified atomic mass unit) ist als ein Zwölftel der Masse eines ¹²C-Atoms definiert und beträgt 1,66054 × 10⁻²⁷ kg. Isotope unterscheiden sich zwar nicht in ihren chemischen Eigenschaften, können aber physikalische Unterschiede aufweisen, wie unterschiedliche Diffusionsgeschwindigkeiten oder Schwingungsfrequenzen (Isotopeneffekt). Diese Unterschiede werden in der Analytik genutzt, beispielsweise in der Massenspektrometrie.
 
 Radioaktive Isotope (Radionuklide) besitzen instabile Kerne, die unter Aussendung von Strahlung zerfallen. Es gibt drei Hauptarten des radioaktiven Zerfalls: Beim Alpha-Zerfall (α) wird ein Helium-4-Kern (2 Protonen + 2 Neutronen) emittiert, wobei die Ordnungszahl um 2 und die Massenzahl um 4 sinkt. Beim Beta-minus-Zerfall (β⁻) wird ein Neutron in ein Proton umgewandelt, wobei ein Elektron und ein Antineutrino emittiert werden; die Ordnungszahl steigt um 1. Beim Gamma-Zerfall (γ) wird überschüssige Energie als elektromagnetische Strahlung abgegeben, ohne dass sich Ordnungszahl oder Massenzahl ändern. Die Halbwertszeit t₁/₂ ist die Zeit, in der die Hälfte der radioaktiven Atome zerfallen ist. Sie ist für jedes Radionuklid charakteristisch und reicht von Bruchteilen einer Sekunde bis zu Milliarden von Jahren (z. B. ²³⁸U: t₁/₂ ≈ 4,5 × 10⁹ Jahre).`,
-      merksaetze: [
+      merksätze: [
         'Isotope sind Atome desselben Elements (gleiche Protonenzahl Z) mit unterschiedlicher Neutronenzahl N. Sie haben gleiche chemische, aber unterschiedliche physikalische Eigenschaften (Masse, Stabilität).',
         'Radioaktiver Zerfall: α-Zerfall (A-4, Z-2), β⁻-Zerfall (A gleich, Z+1), γ-Zerfall (keine Änderung von A und Z, nur Energieabgabe). Die Halbwertszeit t₁/₂ ist die Zeit, in der die Hälfte der Kerne zerfällt.'
       ],

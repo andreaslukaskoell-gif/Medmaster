@@ -29,7 +29,7 @@ export const chemieQuestionsPart1: Question[] = [
     options: [
       { id: "a", text: "Sie nimmt stetig ab." },
       { id: "b", text: "Sie bleibt konstant." },
-      { id: "c", text: "Sie nimmt zuerst zu, dann ab der Mitte der Periode ab." },
+      { id: "c", text: "Sie nimmt zürst zu, dann ab der Mitte der Periode ab." },
       { id: "d", text: "Sie nimmt tendenziell zu, mit kleinen Unregelmäßigkeiten." },
       { id: "e", text: "Sie verändert sich nur bei den Hauptgruppenelementen." },
     ],
@@ -130,7 +130,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Eisen hat die Konfiguration [Ar] 3d6 4s2 im Grundzustand. Bei der Ionisierung werden zuerst die 4s-Elektronen entfernt (da sie die höchste Hauptquantenzahl haben), dann die 3d-Elektronen. Fe3+ verliert also 2 Elektronen aus 4s und 1 aus 3d: [Ar] 3d5. Die halbbesetzte d-Schale verleiht dem Fe3+-Ion zusätzliche Stabilität.",
+      "Eisen hat die Konfiguration [Ar] 3d6 4s2 im Grundzustand. Bei der Ionisierung werden zürst die 4s-Elektronen entfernt (da sie die höchste Hauptquantenzahl haben), dann die 3d-Elektronen. Fe3+ verliert also 2 Elektronen aus 4s und 1 aus 3d: [Ar] 3d5. Die halbbesetzte d-Schale verleiht dem Fe3+-Ion zusätzliche Stabilität.",
     difficulty: "mittel",
     tags: ["Elektronenkonfiguration", "Ionen", "Übergangsmetalle"],
   },
@@ -144,7 +144,7 @@ export const chemieQuestionsPart1: Question[] = [
       { id: "a", text: "Er nimmt ab, da die Kernladung zunimmt." },
       { id: "b", text: "Er nimmt zu, da neue Elektronenschalen hinzukommen." },
       { id: "c", text: "Er bleibt nahezu konstant." },
-      { id: "d", text: "Er nimmt zuerst zu, dann wieder ab." },
+      { id: "d", text: "Er nimmt zürst zu, dann wieder ab." },
       { id: "e", text: "Er verändert sich nur bei den Nichtmetallen." },
     ],
     correctOptionId: "b",
@@ -163,7 +163,7 @@ export const chemieQuestionsPart1: Question[] = [
       { id: "a", text: "Millikan-Versuch (Öltröpfchenversuch)" },
       { id: "b", text: "Franck-Hertz-Versuch" },
       { id: "c", text: "Rutherford'scher Streuversuch mit Alpha-Teilchen" },
-      { id: "d", text: "Photoelektrischer Effekt" },
+      { id: "d", text: "Photölektrischer Effekt" },
       { id: "e", text: "Stern-Gerlach-Versuch" },
     ],
     correctOptionId: "c",
@@ -225,9 +225,9 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Alle genannten Ionen sind isoelektronisch (10 Elektronen, Neon-Konfiguration). Bei isoelektronischen Teilchen bestimmt die Kernladungszahl den Radius: Je höher die Kernladung, desto stärker werden die Elektronen angezogen und desto kleiner ist der Ionenradius. Al3+ hat mit Z=13 die höchste Kernladungszahl und daher den kleinsten Radius.",
+      "Alle genannten Ionen sind isölektronisch (10 Elektronen, Neon-Konfiguration). Bei isölektronischen Teilchen bestimmt die Kernladungszahl den Radius: Je höher die Kernladung, desto stärker werden die Elektronen angezogen und desto kleiner ist der Ionenradius. Al3+ hat mit Z=13 die höchste Kernladungszahl und daher den kleinsten Radius.",
     difficulty: "mittel",
-    tags: ["Ionenradius", "isoelektronisch", "Periodensystem"],
+    tags: ["Ionenradius", "isölektronisch", "Periodensystem"],
   },
 
   // ===== BINDUNGEN (chem-13 bis chem-20) =====
@@ -265,7 +265,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Stickstoff hat 5 Valenzelektronen. Im NH3 bildet er 3 kovalente Bindungen zu den 3 Wasserstoffatomen (3 x 2 = 6 Elektronen in Bindungen, davon 3 von N). Es verbleibt ein freies Elektronenpaar am Stickstoff. Das ergibt nach VSEPR eine tetraedrische Elektronenanordnung, aber eine trigonal-pyramidale Molekülgeometrie.",
+      "Stickstoff hat 5 Valenzelektronen. Im NH3 bildet er 3 kovalente Bindungen zu den 3 Wasserstoffatomen (3 x 2 = 6 Elektronen in Bindungen, davon 3 von N). Es verbleibt ein freies Elektronenpaar am Stickstoff. Das ergibt nach VSEPR eine teträdrische Elektronenanordnung, aber eine trigonal-pyramidale Molekülgeometrie.",
     difficulty: "leicht",
     tags: ["Kovalente Bindung", "VSEPR", "Ammoniak"],
   },
@@ -316,13 +316,13 @@ export const chemieQuestionsPart1: Question[] = [
     options: [
       { id: "a", text: "Linear" },
       { id: "b", text: "Trigonal-planar" },
-      { id: "c", text: "Tetraedrisch" },
+      { id: "c", text: "Teträdrisch" },
       { id: "d", text: "Gewinkelt" },
       { id: "e", text: "Trigonal-pyramidal" },
     ],
     correctOptionId: "d",
     explanation:
-      "Sauerstoff im Wasser hat 4 Elektronenpaare: 2 Bindungspaare (zu den H-Atomen) und 2 freie Elektronenpaare. Die Elektronenanordnung ist tetraedrisch, aber da nur die Bindungspaare die Molekülgeometrie bestimmen, ist die Form gewinkelt. Der Bindungswinkel beträgt ca. 104,5°, etwas kleiner als der Tetraederwinkel von 109,5°, da die freien Elektronenpaare mehr Raum beanspruchen.",
+      "Sauerstoff im Wasser hat 4 Elektronenpaare: 2 Bindungspaare (zu den H-Atomen) und 2 freie Elektronenpaare. Die Elektronenanordnung ist teträdrisch, aber da nur die Bindungspaare die Molekülgeometrie bestimmen, ist die Form gewinkelt. Der Bindungswinkel beträgt ca. 104,5°, etwas kleiner als der Teträderwinkel von 109,5°, da die freien Elektronenpaare mehr Raum beanspruchen.",
     difficulty: "leicht",
     tags: ["VSEPR", "Wasser", "Molekülgeometrie"],
   },
@@ -495,7 +495,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Zuerst berechnen wir die Stoffmenge: n = m/M = 4 g / 40 g/mol = 0,1 mol. Die Molarität ist c = n/V = 0,1 mol / 0,5 L = 0,2 mol/L. Die Lösung hat also eine Konzentration von 0,2 M.",
+      "Zürst berechnen wir die Stoffmenge: n = m/M = 4 g / 40 g/mol = 0,1 mol. Die Molarität ist c = n/V = 0,1 mol / 0,5 L = 0,2 mol/L. Die Lösung hat also eine Konzentration von 0,2 M.",
     difficulty: "leicht",
     tags: ["Molarität", "Konzentration", "Berechnung"],
   },
@@ -1090,7 +1090,7 @@ export const chemieQuestionsPart1: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Die längste Kohlenstoffkette hat 4 C-Atome (Butan). Am zweiten C-Atom befindet sich eine Methylgruppe (CH3) als Substituent. Nach IUPAC wird die Kette so nummeriert, dass der Substituent die niedrigste mögliche Nummer erhält: 2-Methylbutan. '3-Methylbutan' wäre falsch nummeriert, 'Isobutan' hat nur 4 C-Atome (C4H10-Isomer), und 'Neopentan' ist 2,2-Dimethylpropan.",
+      "Die längste Kohlenstoffkette hat 4 C-Atome (Butan). Am zweiten C-Atom befindet sich eine Methylgruppe (CH3) als Substitünt. Nach IUPAC wird die Kette so nummeriert, dass der Substitünt die niedrigste mögliche Nummer erhält: 2-Methylbutan. '3-Methylbutan' wäre falsch nummeriert, 'Isobutan' hat nur 4 C-Atome (C4H10-Isomer), und 'Neopentan' ist 2,2-Dimethylpropan.",
     difficulty: "mittel",
     tags: ["IUPAC-Nomenklatur", "Alkan", "Verzweigung"],
   },

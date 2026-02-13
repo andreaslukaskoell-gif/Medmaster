@@ -7,7 +7,7 @@ export const fragenPart1 = [
     fragetext: 'Welche der folgenden Größen ist eine SI-Basisgröße?',
     optionen: ['Kraft', 'Energie', 'Masse', 'Geschwindigkeit', 'Druck'],
     korrekteAntwort: 2,
-    erklaerung: 'Die Masse (mit der Einheit Kilogramm) ist eine der sieben SI-Basisgrößen. Kraft, Energie, Geschwindigkeit und Druck sind abgeleitete Größen.',
+    erklärung: 'Die Masse (mit der Einheit Kilogramm) ist eine der sieben SI-Basisgrößen. Kraft, Energie, Geschwindigkeit und Druck sind abgeleitete Größen.',
     strategieTipp: 'Die sieben SI-Basisgrößen sind: Länge (m), Masse (kg), Zeit (s), Stromstärke (A), Temperatur (K), Stoffmenge (mol) und Lichtstärke (cd).'
   },
   {
@@ -18,7 +18,7 @@ export const fragenPart1 = [
     fragetext: 'Wie viele Meter entsprechen 2,5 km?',
     optionen: ['25 m', '250 m', '2500 m', '25000 m', '0,25 m'],
     korrekteAntwort: 2,
-    erklaerung: '1 km = 1000 m, daher 2,5 km = 2,5 × 1000 m = 2500 m.',
+    erklärung: '1 km = 1000 m, daher 2,5 km = 2,5 × 1000 m = 2500 m.',
     strategieTipp: 'Bei Einheitenumrechnungen mit Präfixen: k (kilo) bedeutet ×1000, d (dezi) ÷10, c (zenti) ÷100, m (milli) ÷1000.'
   },
   {
@@ -29,7 +29,7 @@ export const fragenPart1 = [
     fragetext: 'Welches Präfix steht für den Faktor 10⁻⁶?',
     optionen: ['nano (n)', 'mikro (μ)', 'milli (m)', 'piko (p)', 'zenti (c)'],
     korrekteAntwort: 1,
-    erklaerung: 'Mikro (μ) steht für 10⁻⁶. Nano (n) = 10⁻⁹, milli (m) = 10⁻³, piko (p) = 10⁻¹², zenti (c) = 10⁻².',
+    erklärung: 'Mikro (μ) steht für 10⁻⁶. Nano (n) = 10⁻⁹, milli (m) = 10⁻³, piko (p) = 10⁻¹², zenti (c) = 10⁻².',
     strategieTipp: 'Merke die wichtigsten Präfixe: M (Mega 10⁶), k (kilo 10³), m (milli 10⁻³), μ (mikro 10⁻⁶), n (nano 10⁻⁹).'
   },
   {
@@ -40,7 +40,7 @@ export const fragenPart1 = [
     fragetext: 'Welche Einheit hat die physikalische Größe "Kraft"?',
     optionen: ['Joule (J)', 'Watt (W)', 'Newton (N)', 'Pascal (Pa)', 'Coulomb (C)'],
     korrekteAntwort: 2,
-    erklaerung: 'Die Kraft wird in Newton (N) gemessen. 1 N = 1 kg·m/s². Joule ist die Einheit der Energie, Watt der Leistung, Pascal des Drucks und Coulomb der elektrischen Ladung.',
+    erklärung: 'Die Kraft wird in Newton (N) gemessen. 1 N = 1 kg·m/s². Joule ist die Einheit der Energie, Watt der Leistung, Pascal des Drucks und Coulomb der elektrischen Ladung.',
     strategieTipp: 'Abgeleitete Einheiten können aus Basiseinheiten hergeleitet werden: N = kg·m/s², J = N·m, W = J/s, Pa = N/m².'
   },
   {
@@ -51,7 +51,7 @@ export const fragenPart1 = [
     fragetext: 'Wie viele Milligramm (mg) entsprechen 0,003 kg?',
     optionen: ['3 mg', '30 mg', '300 mg', '3000 mg', '30000 mg'],
     korrekteAntwort: 3,
-    erklaerung: '0,003 kg = 3 g (da 1 kg = 1000 g). 3 g = 3000 mg (da 1 g = 1000 mg).',
+    erklärung: '0,003 kg = 3 g (da 1 kg = 1000 g). 3 g = 3000 mg (da 1 g = 1000 mg).',
     strategieTipp: 'Bei mehrfacher Umrechnung schrittweise vorgehen: kg → g (×1000) → mg (×1000), also insgesamt ×1.000.000.'
   },
   {
@@ -62,7 +62,7 @@ export const fragenPart1 = [
     fragetext: 'Die Einheit "Pascal" (Pa) für Druck lässt sich als SI-Basiseinheiten ausdrücken als:',
     optionen: ['kg/(m·s²)', 'kg·m/s²', 'kg·m²/s²', 'kg·s²/m', 'kg·m/s'],
     korrekteAntwort: 0,
-    erklaerung: 'Druck = Kraft/Fläche. Kraft in SI-Basiseinheiten: kg·m/s². Fläche: m². Daher Pa = (kg·m/s²)/m² = kg/(m·s²).',
+    erklärung: 'Druck = Kraft/Fläche. Kraft in SI-Basiseinheiten: kg·m/s². Fläche: m². Daher Pa = (kg·m/s²)/m² = kg/(m·s²).',
     strategieTipp: 'Bei komplexen Einheiten die Definition nutzen und schrittweise auflösen: Druck = F/A, F = ma.'
   },
   {
@@ -73,7 +73,7 @@ export const fragenPart1 = [
     fragetext: 'Welche Aussage über SI-Einheiten ist korrekt?',
     optionen: ['Das Kelvin ist die Einheit der Wärme', 'Das Ampere misst die elektrische Spannung', 'Das Mol ist eine Basisgröße für die Stoffmenge', 'Das Candela misst die Lichtgeschwindigkeit', 'Das Newton ist eine SI-Basiseinheit'],
     korrekteAntwort: 2,
-    erklaerung: 'Das Mol (mol) ist die SI-Basiseinheit der Stoffmenge. Kelvin misst Temperatur (nicht Wärme), Ampere misst Stromstärke (nicht Spannung), Candela misst Lichtstärke (nicht -geschwindigkeit), Newton ist eine abgeleitete Einheit.',
+    erklärung: 'Das Mol (mol) ist die SI-Basiseinheit der Stoffmenge. Kelvin misst Temperatur (nicht Wärme), Ampere misst Stromstärke (nicht Spannung), Candela misst Lichtstärke (nicht -geschwindigkeit), Newton ist eine abgeleitete Einheit.',
     strategieTipp: 'Unterscheide Basiseinheiten (7 Stück) von abgeleiteten Einheiten. Basis: m, kg, s, A, K, mol, cd.'
   },
   {
@@ -84,7 +84,7 @@ export const fragenPart1 = [
     fragetext: 'Wie viele Nanometer (nm) sind 5 μm?',
     optionen: ['0,5 nm', '50 nm', '500 nm', '5000 nm', '50000 nm'],
     korrekteAntwort: 3,
-    erklaerung: '1 μm = 10⁻⁶ m und 1 nm = 10⁻⁹ m. Daher 1 μm = 1000 nm. 5 μm = 5000 nm.',
+    erklärung: '1 μm = 10⁻⁶ m und 1 nm = 10⁻⁹ m. Daher 1 μm = 1000 nm. 5 μm = 5000 nm.',
     strategieTipp: 'μm zu nm: Da μ (10⁻⁶) größer als n (10⁻⁹) ist, multipliziere mit 1000.'
   },
   {
@@ -95,7 +95,7 @@ export const fragenPart1 = [
     fragetext: 'Eine Leistung von 1 Watt (W) entspricht in SI-Basiseinheiten:',
     optionen: ['kg·m²/s³', 'kg·m/s³', 'kg·m²/s²', 'kg/s³', 'kg·m³/s²'],
     korrekteAntwort: 0,
-    erklaerung: 'Leistung = Arbeit/Zeit = Energie/Zeit. Energie in SI: kg·m²/s². Daher W = (kg·m²/s²)/s = kg·m²/s³.',
+    erklärung: 'Leistung = Arbeit/Zeit = Energie/Zeit. Energie in SI: kg·m²/s². Daher W = (kg·m²/s²)/s = kg·m²/s³.',
     strategieTipp: 'Leistung = Energie/Zeit. Energie = Kraft × Weg = (kg·m/s²)·m = kg·m²/s².'
   },
   {
@@ -106,7 +106,7 @@ export const fragenPart1 = [
     fragetext: 'Welche Größe ist keine Vektorgröße?',
     optionen: ['Geschwindigkeit', 'Beschleunigung', 'Kraft', 'Energie', 'Impuls'],
     korrekteAntwort: 3,
-    erklaerung: 'Energie ist eine skalare Größe (hat nur einen Betrag, keine Richtung). Geschwindigkeit, Beschleunigung, Kraft und Impuls sind Vektorgrößen (haben Betrag und Richtung).',
+    erklärung: 'Energie ist eine skalare Größe (hat nur einen Betrag, keine Richtung). Geschwindigkeit, Beschleunigung, Kraft und Impuls sind Vektorgrößen (haben Betrag und Richtung).',
     strategieTipp: 'Vektorgrößen haben Richtung und Betrag. Skalare Größen nur einen Betrag (z.B. Masse, Zeit, Energie, Temperatur).'
   },
   {
@@ -117,7 +117,7 @@ export const fragenPart1 = [
     fragetext: 'Das erste Newton\'sche Gesetz (Trägheitsgesetz) besagt:',
     optionen: ['Kraft = Masse × Beschleunigung', 'Actio = Reactio', 'Ein Körper bleibt in Ruhe oder gleichförmiger Bewegung, wenn keine Kraft wirkt', 'Die Beschleunigung ist proportional zur Kraft', 'Impuls ist immer erhalten'],
     korrekteAntwort: 2,
-    erklaerung: 'Das Trägheitsgesetz besagt, dass ein Körper ohne äußere Krafteinwirkung in seinem Bewegungszustand verharrt (Ruhe oder gleichförmige geradlinige Bewegung).',
+    erklärung: 'Das Trägheitsgesetz besagt, dass ein Körper ohne äußere Krafteinwirkung in seinem Bewegungszustand verharrt (Ruhe oder gleichförmige geradlinige Bewegung).',
     strategieTipp: 'Die drei Newton\'schen Gesetze: 1. Trägheit, 2. F=ma, 3. Actio=Reactio.'
   },
   {
@@ -128,7 +128,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Körper der Masse 5 kg erfährt eine Beschleunigung von 2 m/s². Welche Kraft wirkt auf ihn?',
     optionen: ['2,5 N', '7 N', '10 N', '15 N', '20 N'],
     korrekteAntwort: 2,
-    erklaerung: 'Nach dem zweiten Newton\'schen Gesetz: F = m × a = 5 kg × 2 m/s² = 10 N.',
+    erklärung: 'Nach dem zweiten Newton\'schen Gesetz: F = m × a = 5 kg × 2 m/s² = 10 N.',
     strategieTipp: 'F = m × a ist die wichtigste Formel der Mechanik. Achte auf die Einheiten: kg·m/s² = N.'
   },
   {
@@ -139,7 +139,7 @@ export const fragenPart1 = [
     fragetext: 'Das dritte Newton\'sche Gesetz (Wechselwirkungsgesetz) besagt:',
     optionen: ['Kraft ist proportional zur Beschleunigung', 'Energie bleibt erhalten', 'Zu jeder Kraft gibt es eine gleich große, entgegengesetzte Gegenkraft', 'Die Summe aller Kräfte ist null', 'Impuls ist proportional zur Geschwindigkeit'],
     korrekteAntwort: 2,
-    erklaerung: 'Actio = Reactio: Übt ein Körper A auf Körper B eine Kraft aus, so wirkt gleichzeitig eine gleich große, aber entgegengerichtete Kraft von B auf A.',
+    erklärung: 'Actio = Reactio: Übt ein Körper A auf Körper B eine Kraft aus, so wirkt gleichzeitig eine gleich große, aber entgegengerichtete Kraft von B auf A.',
     strategieTipp: 'Die Gegenkraft greift immer am anderen Körper an, nicht am selben!'
   },
   {
@@ -150,7 +150,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Auto (m = 1000 kg) bremst von 20 m/s auf 0 m/s ab. Welche Impulsänderung erfährt es?',
     optionen: ['-10000 kg·m/s', '-20000 kg·m/s', '-30000 kg·m/s', '-5000 kg·m/s', '20000 kg·m/s'],
     korrekteAntwort: 1,
-    erklaerung: 'Impuls p = m × v. Anfangsimpuls: 1000 kg × 20 m/s = 20000 kg·m/s. Endimpuls: 0. Änderung: Δp = 0 - 20000 = -20000 kg·m/s.',
+    erklärung: 'Impuls p = m × v. Anfangsimpuls: 1000 kg × 20 m/s = 20000 kg·m/s. Endimpuls: 0. Änderung: Δp = 0 - 20000 = -20000 kg·m/s.',
     strategieTipp: 'Impulsänderung Δp = m × Δv. Das negative Vorzeichen zeigt die Richtung entgegen der Bewegung.'
   },
   {
@@ -161,7 +161,7 @@ export const fragenPart1 = [
     fragetext: 'Zwei Kugeln (m₁ = 2 kg, v₁ = 3 m/s und m₂ = 3 kg, v₂ = -1 m/s) stoßen elastisch zusammen. Der Gesamtimpuls vor dem Stoß beträgt:',
     optionen: ['3 kg·m/s', '5 kg·m/s', '6 kg·m/s', '9 kg·m/s', '11 kg·m/s'],
     korrekteAntwort: 0,
-    erklaerung: 'Gesamtimpuls p_ges = m₁v₁ + m₂v₂ = 2×3 + 3×(-1) = 6 - 3 = 3 kg·m/s. Der Impuls ist auch nach dem Stoß erhalten.',
+    erklärung: 'Gesamtimpuls p_ges = m₁v₁ + m₂v₂ = 2×3 + 3×(-1) = 6 - 3 = 3 kg·m/s. Der Impuls ist auch nach dem Stoß erhalten.',
     strategieTipp: 'Bei Impulserhaltung alle Impulse vektoriell addieren. Negative Geschwindigkeit = entgegengesetzte Richtung.'
   },
   {
@@ -172,7 +172,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Körper wird mit konstanter Kraft 10 m weit geschoben. Welche Größe beschreibt die übertragene Energie?',
     optionen: ['Leistung', 'Impuls', 'Arbeit', 'Beschleunigung', 'Drehmoment'],
     korrekteAntwort: 2,
-    erklaerung: 'Arbeit W = F × s beschreibt die durch eine Kraft über eine Strecke übertragene Energie. Einheit: Joule (J) = N·m.',
+    erklärung: 'Arbeit W = F × s beschreibt die durch eine Kraft über eine Strecke übertragene Energie. Einheit: Joule (J) = N·m.',
     strategieTipp: 'Arbeit ist Kraft × Weg. Bei schräger Kraft zählt nur die Komponente in Bewegungsrichtung: W = F·s·cos(α).'
   },
   {
@@ -183,7 +183,7 @@ export const fragenPart1 = [
     fragetext: 'Welche Energieform hat ein bewegter Körper aufgrund seiner Geschwindigkeit?',
     optionen: ['Potentielle Energie', 'Kinetische Energie', 'Thermische Energie', 'Chemische Energie', 'Elektrische Energie'],
     korrekteAntwort: 1,
-    erklaerung: 'Kinetische Energie (Bewegungsenergie) E_kin = ½mv² ist die Energie, die ein Körper aufgrund seiner Bewegung besitzt.',
+    erklärung: 'Kinetische Energie (Bewegungsenergie) E_kin = ½mv² ist die Energie, die ein Körper aufgrund seiner Bewegung besitzt.',
     strategieTipp: 'Kinetisch = Bewegung, Potentiell = Lage/Position. Beide sind mechanische Energieformen.'
   },
   {
@@ -194,8 +194,8 @@ export const fragenPart1 = [
     fragetext: 'Ein Körper (m = 4 kg) bewegt sich mit v = 5 m/s. Seine kinetische Energie beträgt:',
     optionen: ['10 J', '20 J', '40 J', '50 J', '100 J'],
     korrekteAntwort: 3,
-    erklaerung: 'E_kin = ½mv² = ½ × 4 kg × (5 m/s)² = ½ × 4 × 25 = 50 J.',
-    strategieTipp: 'Bei E_kin = ½mv² die Geschwindigkeit zuerst quadrieren, dann mit m multiplizieren und halbieren.'
+    erklärung: 'E_kin = ½mv² = ½ × 4 kg × (5 m/s)² = ½ × 4 × 25 = 50 J.',
+    strategieTipp: 'Bei E_kin = ½mv² die Geschwindigkeit zürst quadrieren, dann mit m multiplizieren und halbieren.'
   },
   {
     id: 'ph-q-019',
@@ -205,7 +205,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Ball (m = 0,2 kg) wird aus 5 m Höhe fallengelassen. Mit welcher Geschwindigkeit trifft er auf dem Boden auf? (g = 10 m/s², Luftwiderstand vernachlässigt)',
     optionen: ['5 m/s', '10 m/s', '15 m/s', '20 m/s', '25 m/s'],
     korrekteAntwort: 1,
-    erklaerung: 'Energieerhaltung: E_pot = E_kin → mgh = ½mv² → gh = ½v² → v = √(2gh) = √(2×10×5) = √100 = 10 m/s.',
+    erklärung: 'Energieerhaltung: E_pot = E_kin → mgh = ½mv² → gh = ½v² → v = √(2gh) = √(2×10×5) = √100 = 10 m/s.',
     strategieTipp: 'Bei freiem Fall: v = √(2gh). Die Masse kürzt sich bei Energieerhaltung heraus!'
   },
   {
@@ -216,7 +216,7 @@ export const fragenPart1 = [
     fragetext: 'Welche Aussage über die mechanische Energie ist korrekt?',
     optionen: ['Sie kann aus dem Nichts entstehen', 'Sie geht bei Reibung vollständig verloren', 'Sie bleibt in einem abgeschlossenen System erhalten', 'Sie ist immer gleich der kinetischen Energie', 'Sie kann nicht in andere Energieformen umgewandelt werden'],
     korrekteAntwort: 2,
-    erklaerung: 'Der Energieerhaltungssatz besagt, dass in einem abgeschlossenen System die Gesamtenergie konstant bleibt. Energie kann nur umgewandelt, nicht erzeugt oder vernichtet werden.',
+    erklärung: 'Der Energieerhaltungssatz besagt, dass in einem abgeschlossenen System die Gesamtenergie konstant bleibt. Energie kann nur umgewandelt, nicht erzeugt oder vernichtet werden.',
     strategieTipp: 'Bei Reibung wird mechanische Energie in Wärme umgewandelt, geht aber nicht "verloren".'
   },
   {
@@ -227,7 +227,7 @@ export const fragenPart1 = [
     fragetext: 'Die potentielle Energie eines Körpers im Gravitationsfeld der Erde hängt ab von:',
     optionen: ['Masse und Geschwindigkeit', 'Masse und Höhe', 'Höhe und Geschwindigkeit', 'Kraft und Zeit', 'Impuls und Weg'],
     korrekteAntwort: 1,
-    erklaerung: 'Die potentielle Energie im Gravitationsfeld: E_pot = mgh, hängt also von Masse m und Höhe h ab (g ist konstant).',
+    erklärung: 'Die potentielle Energie im Gravitationsfeld: E_pot = mgh, hängt also von Masse m und Höhe h ab (g ist konstant).',
     strategieTipp: 'Potentielle Energie = Lageenergie. Je höher und schwerer, desto mehr Energie.'
   },
   {
@@ -238,7 +238,7 @@ export const fragenPart1 = [
     fragetext: 'Eine Kraft von 20 N schiebt einen Körper 5 m weit. Die verrichtete Arbeit beträgt:',
     optionen: ['4 J', '25 J', '100 J', '400 J', '500 J'],
     korrekteAntwort: 2,
-    erklaerung: 'Arbeit W = F × s = 20 N × 5 m = 100 J (bei Kraft in Bewegungsrichtung).',
+    erklärung: 'Arbeit W = F × s = 20 N × 5 m = 100 J (bei Kraft in Bewegungsrichtung).',
     strategieTipp: 'Arbeit = Kraft mal Weg. Nur wenn Kraft und Weg in gleicher Richtung sind.'
   },
   {
@@ -249,7 +249,7 @@ export const fragenPart1 = [
     fragetext: 'Eine Maschine verrichtet in 10 Sekunden eine Arbeit von 500 J. Ihre Leistung beträgt:',
     optionen: ['5 W', '50 W', '500 W', '5000 W', '10 W'],
     korrekteAntwort: 1,
-    erklaerung: 'Leistung P = Arbeit/Zeit = W/t = 500 J / 10 s = 50 W. Leistung ist Arbeit pro Zeiteinheit.',
+    erklärung: 'Leistung P = Arbeit/Zeit = W/t = 500 J / 10 s = 50 W. Leistung ist Arbeit pro Zeiteinheit.',
     strategieTipp: 'P = W/t oder P = F×v. 1 Watt = 1 Joule pro Sekunde.'
   },
   {
@@ -260,7 +260,7 @@ export const fragenPart1 = [
     fragetext: 'Die Gravitationskraft zwischen zwei Massen ist:',
     optionen: ['Direkt proportional zum Quadrat ihres Abstands', 'Unabhängig von ihren Massen', 'Immer abstoßend', 'Direkt proportional zu beiden Massen', 'Nur auf der Erde wirksam'],
     korrekteAntwort: 3,
-    erklaerung: 'Nach dem Gravitationsgesetz F = G(m₁m₂)/r² ist die Kraft proportional zu beiden Massen und umgekehrt proportional zum Quadrat des Abstands.',
+    erklärung: 'Nach dem Gravitationsgesetz F = G(m₁m₂)/r² ist die Kraft proportional zu beiden Massen und umgekehrt proportional zum Quadrat des Abstands.',
     strategieTipp: 'Gravitation ist immer anziehend, wirkt universell und nimmt mit r² ab.'
   },
   {
@@ -271,7 +271,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Körper (m = 10 kg) wird auf dem Mond 2 m hochgehoben. Die Gewichtskraft dort beträgt 16 N. Welche Arbeit wird verrichtet?',
     optionen: ['8 J', '16 J', '20 J', '32 J', '160 J'],
     korrekteAntwort: 3,
-    erklaerung: 'Hubarbeit W = F × h = 16 N × 2 m = 32 J. Alternativ: W = mgh, wobei g_Mond ≈ 1,6 m/s².',
+    erklärung: 'Hubarbeit W = F × h = 16 N × 2 m = 32 J. Alternativ: W = mgh, wobei g_Mond ≈ 1,6 m/s².',
     strategieTipp: 'Hubarbeit gegen die Gewichtskraft: W = Fgh = mgh. Auf anderen Himmelskörpern ändert sich g!'
   },
   {
@@ -282,7 +282,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Körper gleitet eine schiefe Ebene (30° Neigung, 4 m lang) reibungsfrei hinunter. Welche Höhe überwindet er?',
     optionen: ['1 m', '2 m', '3 m', '3,46 m', '4 m'],
     korrekteAntwort: 1,
-    erklaerung: 'Die Höhe h = l × sin(α) = 4 m × sin(30°) = 4 m × 0,5 = 2 m.',
+    erklärung: 'Die Höhe h = l × sin(α) = 4 m × sin(30°) = 4 m × 0,5 = 2 m.',
     strategieTipp: 'Bei schiefer Ebene: Höhe = Länge × sin(Winkel), Grundfläche = Länge × cos(Winkel).'
   },
   {
@@ -291,9 +291,9 @@ export const fragenPart1 = [
     fach: 'physik' as const,
     schwierigkeit: 'mittel' as const,
     fragetext: 'Die Reibungskraft ist abhängig von:',
-    optionen: ['Der Kontaktfläche zwischen den Körpern', 'Der Normalkraft und dem Reibungskoeffizienten', 'Der Geschwindigkeit des Körpers', 'Der Form des Körpers', 'Der Temperatur allein'],
+    optionen: ['Der Kontaktfläche zwischen den Körpern', 'Der Normalkraft und dem Reibungsköffizienten', 'Der Geschwindigkeit des Körpers', 'Der Form des Körpers', 'Der Temperatur allein'],
     korrekteAntwort: 1,
-    erklaerung: 'Reibungskraft F_R = μ × F_N, wobei μ der Reibungskoeffizient und F_N die Normalkraft ist. Die Größe der Kontaktfläche spielt keine Rolle!',
+    erklärung: 'Reibungskraft F_R = μ × F_N, wobei μ der Reibungsköffizient und F_N die Normalkraft ist. Die Größe der Kontaktfläche spielt keine Rolle!',
     strategieTipp: 'Haftreibung (Ruhe) > Gleitreibung (Bewegung). F_R ist unabhängig von der Fläche!'
   },
   {
@@ -304,7 +304,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Körper liegt auf einer horizontalen Fläche. Die Normalkraft entspricht:',
     optionen: ['Der Reibungskraft', 'Der Gewichtskraft', 'Der Beschleunigung', 'Der Trägheit', 'Der halben Gewichtskraft'],
     korrekteAntwort: 1,
-    erklaerung: 'Auf einer horizontalen Fläche ist die Normalkraft F_N gleich der Gewichtskraft F_G = mg, da keine vertikale Beschleunigung auftritt.',
+    erklärung: 'Auf einer horizontalen Fläche ist die Normalkraft F_N gleich der Gewichtskraft F_G = mg, da keine vertikale Beschleunigung auftritt.',
     strategieTipp: 'Normalkraft = Kraft senkrecht zur Oberfläche. Bei schiefer Ebene: F_N = mg×cos(α).'
   },
   {
@@ -315,7 +315,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Körper (m = 5 kg) wird mit konstanter Kraft 3 m hoch und 4 m horizontal bewegt. Die Gesamtarbeit gegen die Schwerkraft beträgt (g = 10 m/s²):',
     optionen: ['40 J', '50 J', '70 J', '150 J', '350 J'],
     korrekteAntwort: 3,
-    erklaerung: 'Arbeit gegen Schwerkraft W = mgh = 5 kg × 10 m/s² × 3 m = 150 J. Die horizontale Bewegung erfordert keine Arbeit gegen die Schwerkraft.',
+    erklärung: 'Arbeit gegen Schwerkraft W = mgh = 5 kg × 10 m/s² × 3 m = 150 J. Die horizontale Bewegung erfordert keine Arbeit gegen die Schwerkraft.',
     strategieTipp: 'Gravitationsarbeit hängt nur von der Höhendifferenz ab, nicht vom Weg!'
   },
   {
@@ -326,7 +326,7 @@ export const fragenPart1 = [
     fragetext: 'Die Dichte eines Stoffes ist definiert als:',
     optionen: ['Masse pro Volumen', 'Volumen pro Masse', 'Gewicht pro Fläche', 'Masse pro Länge', 'Kraft pro Fläche'],
     korrekteAntwort: 0,
-    erklaerung: 'Dichte ρ = m/V (Masse pro Volumen). Einheit: kg/m³ oder g/cm³.',
+    erklärung: 'Dichte ρ = m/V (Masse pro Volumen). Einheit: kg/m³ oder g/cm³.',
     strategieTipp: 'Dichte beschreibt, wie viel Masse in einem bestimmten Volumen steckt. Wasser: 1 g/cm³ = 1000 kg/m³.'
   },
   {
@@ -337,7 +337,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Würfel (Kantenlänge 10 cm) aus einem Material der Dichte 2 g/cm³ hat welche Masse?',
     optionen: ['200 g', '500 g', '1000 g', '2000 g', '5000 g'],
     korrekteAntwort: 3,
-    erklaerung: 'Volumen V = (10 cm)³ = 1000 cm³. Masse m = ρ × V = 2 g/cm³ × 1000 cm³ = 2000 g = 2 kg.',
+    erklärung: 'Volumen V = (10 cm)³ = 1000 cm³. Masse m = ρ × V = 2 g/cm³ × 1000 cm³ = 2000 g = 2 kg.',
     strategieTipp: 'ρ = m/V umstellen zu m = ρV. Bei Würfel: V = a³.'
   },
   {
@@ -348,7 +348,7 @@ export const fragenPart1 = [
     fragetext: 'Der Druck in einer Flüssigkeit wird gemessen in:',
     optionen: ['Newton (N)', 'Joule (J)', 'Pascal (Pa)', 'Watt (W)', 'Kilogramm (kg)'],
     korrekteAntwort: 2,
-    erklaerung: 'Druck wird in Pascal (Pa) gemessen. 1 Pa = 1 N/m². Auch gebräuchlich: bar (1 bar = 10⁵ Pa).',
+    erklärung: 'Druck wird in Pascal (Pa) gemessen. 1 Pa = 1 N/m². Auch gebräuchlich: bar (1 bar = 10⁵ Pa).',
     strategieTipp: 'Druck = Kraft pro Fläche: p = F/A. In Flüssigkeiten: p = ρgh (Schweredruck).'
   },
   {
@@ -359,7 +359,7 @@ export const fragenPart1 = [
     fragetext: 'In einer Wassertiefe von 10 m beträgt der Schweredruck etwa (ρ_Wasser = 1000 kg/m³, g = 10 m/s²):',
     optionen: ['1000 Pa', '10000 Pa', '100000 Pa', '1000000 Pa', '500 Pa'],
     korrekteAntwort: 2,
-    erklaerung: 'Schweredruck p = ρgh = 1000 kg/m³ × 10 m/s² × 10 m = 100000 Pa = 100 kPa = 1 bar.',
+    erklärung: 'Schweredruck p = ρgh = 1000 kg/m³ × 10 m/s² × 10 m = 100000 Pa = 100 kPa = 1 bar.',
     strategieTipp: 'Pro 10 m Wassertiefe steigt der Druck um ca. 1 bar (= Atmosphärendruck).'
   },
   {
@@ -370,7 +370,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Körper (V = 2 dm³, m = 3 kg) wird in Wasser (ρ = 1 kg/dm³) getaucht. Die resultierende Kraft beträgt (g = 10 m/s²):',
     optionen: ['10 N aufwärts', '10 N abwärts', '30 N abwärts', '20 N aufwärts', '50 N abwärts'],
     korrekteAntwort: 1,
-    erklaerung: 'Gewichtskraft: F_G = mg = 3 kg × 10 m/s² = 30 N (abwärts). Auftriebskraft: F_A = ρVg = 1 kg/dm³ × 2 dm³ × 10 m/s² = 20 N (aufwärts). Resultierende: 30 - 20 = 10 N abwärts.',
+    erklärung: 'Gewichtskraft: F_G = mg = 3 kg × 10 m/s² = 30 N (abwärts). Auftriebskraft: F_A = ρVg = 1 kg/dm³ × 2 dm³ × 10 m/s² = 20 N (aufwärts). Resultierende: 30 - 20 = 10 N abwärts.',
     strategieTipp: 'Auftrieb F_A = ρ_Flüssigkeit × V_Körper × g. Körper sinkt wenn F_G > F_A.'
   },
   {
@@ -381,7 +381,7 @@ export const fragenPart1 = [
     fragetext: 'Das Archimedische Prinzip besagt, dass die Auftriebskraft gleich ist:',
     optionen: ['Der Masse des Körpers', 'Der Gewichtskraft des Körpers', 'Der Gewichtskraft der verdrängten Flüssigkeit', 'Dem Volumen des Körpers', 'Der Dichte der Flüssigkeit'],
     korrekteAntwort: 2,
-    erklaerung: 'Der Auftrieb entspricht der Gewichtskraft der verdrängten Flüssigkeitsmenge: F_A = ρ_Flüssigkeit × V_verdrängt × g.',
+    erklärung: 'Der Auftrieb entspricht der Gewichtskraft der verdrängten Flüssigkeitsmenge: F_A = ρ_Flüssigkeit × V_verdrängt × g.',
     strategieTipp: 'Ein Körper schwimmt, wenn seine mittlere Dichte kleiner als die der Flüssigkeit ist.'
   },
   {
@@ -392,7 +392,7 @@ export const fragenPart1 = [
     fragetext: 'Nach der Bernoulli-Gleichung gilt für eine ideale strömende Flüssigkeit:',
     optionen: ['Höhere Geschwindigkeit führt zu höherem Druck', 'Druck ist unabhängig von der Geschwindigkeit', 'Höhere Geschwindigkeit führt zu niedrigerem Druck', 'Nur die Höhe bestimmt den Druck', 'Die Temperatur ist entscheidend'],
     korrekteAntwort: 2,
-    erklaerung: 'Die Bernoulli-Gleichung: p + ½ρv² + ρgh = const. Bei höherer Geschwindigkeit v sinkt der statische Druck p (bei konstanter Höhe).',
+    erklärung: 'Die Bernoulli-Gleichung: p + ½ρv² + ρgh = const. Bei höherer Geschwindigkeit v sinkt der statische Druck p (bei konstanter Höhe).',
     strategieTipp: 'Bernoulli: Druck + Geschwindigkeitsdruck + Höhendruck = konstant. Erklärt z.B. Auftrieb an Tragflächen.'
   },
   {
@@ -403,7 +403,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Rohr verjüngt sich von 10 cm² auf 5 cm² Querschnittsfläche. Die Strömungsgeschwindigkeit im engen Teil beträgt 4 m/s. Die Geschwindigkeit im weiten Teil ist:',
     optionen: ['1 m/s', '2 m/s', '4 m/s', '6 m/s', '8 m/s'],
     korrekteAntwort: 1,
-    erklaerung: 'Kontinuitätsgleichung: A₁v₁ = A₂v₂. Also v₁ = A₂v₂/A₁ = (5 cm² × 4 m/s) / 10 cm² = 2 m/s.',
+    erklärung: 'Kontinuitätsgleichung: A₁v₁ = A₂v₂. Also v₁ = A₂v₂/A₁ = (5 cm² × 4 m/s) / 10 cm² = 2 m/s.',
     strategieTipp: 'Volumenstrom ist konstant: A×v = const. Kleinere Fläche → höhere Geschwindigkeit.'
   },
   {
@@ -414,7 +414,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Drehmoment entsteht durch:',
     optionen: ['Eine Kraft parallel zur Drehachse', 'Eine Masse auf der Drehachse', 'Eine Kraft senkrecht zum Hebelarm', 'Eine Geschwindigkeit', 'Einen Impuls'],
     korrekteAntwort: 2,
-    erklaerung: 'Drehmoment M = F × r × sin(α), maximal wenn F senkrecht zum Hebelarm r steht. Einheit: Nm.',
+    erklärung: 'Drehmoment M = F × r × sin(α), maximal wenn F senkrecht zum Hebelarm r steht. Einheit: Nm.',
     strategieTipp: 'Drehmoment = Kraft × Hebelarm. Je länger der Hebel, desto größer das Drehmoment.'
   },
   {
@@ -425,7 +425,7 @@ export const fragenPart1 = [
     fragetext: 'Bei einem Hebel im Gleichgewicht gilt:',
     optionen: ['Beide Kräfte sind gleich groß', 'Beide Hebelarme sind gleich lang', 'Kraft × Hebelarm ist auf beiden Seiten gleich', 'Die Massen sind gleich', 'Die Geschwindigkeiten sind gleich'],
     korrekteAntwort: 2,
-    erklaerung: 'Hebelgesetz: F₁ × r₁ = F₂ × r₂. Die Drehmomente auf beiden Seiten müssen gleich sein.',
+    erklärung: 'Hebelgesetz: F₁ × r₁ = F₂ × r₂. Die Drehmomente auf beiden Seiten müssen gleich sein.',
     strategieTipp: 'Mit einem langen Hebel kann man mit kleiner Kraft eine große Kraft erzeugen (Kraftwandler).'
   },
   {
@@ -436,7 +436,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Rad (Radius 0,5 m) wird mit einer Kraft von 20 N tangential beschleunigt. Das Drehmoment beträgt:',
     optionen: ['5 Nm', '10 Nm', '20 Nm', '40 Nm', '100 Nm'],
     korrekteAntwort: 1,
-    erklaerung: 'Drehmoment M = F × r = 20 N × 0,5 m = 10 Nm (bei tangentialer Kraft ist sin(α) = 1).',
+    erklärung: 'Drehmoment M = F × r = 20 N × 0,5 m = 10 Nm (bei tangentialer Kraft ist sin(α) = 1).',
     strategieTipp: 'Bei tangentialer Kraft (90° zum Radius) gilt einfach M = F×r.'
   },
   {
@@ -447,7 +447,7 @@ export const fragenPart1 = [
     fragetext: 'Die Rotationsenergie eines starren Körpers ist gegeben durch:',
     optionen: ['½mv²', '½Iω²', 'mgh', 'Iω', '½mr²'],
     korrekteAntwort: 1,
-    erklaerung: 'Rotationsenergie E_rot = ½Iω², wobei I das Trägheitsmoment und ω die Winkelgeschwindigkeit ist (Analogie zu E_kin = ½mv²).',
+    erklärung: 'Rotationsenergie E_rot = ½Iω², wobei I das Trägheitsmoment und ω die Winkelgeschwindigkeit ist (Analogie zu E_kin = ½mv²).',
     strategieTipp: 'Rotation analog zu Translation: E_rot = ½Iω² (statt ½mv²), M = Iα (statt F = ma).'
   },
   {
@@ -458,7 +458,7 @@ export const fragenPart1 = [
     fragetext: 'Der Drehimpuls L = I × ω ist erhalten, wenn:',
     optionen: ['Eine äußere Kraft wirkt', 'Ein äußeres Drehmoment wirkt', 'Kein äußeres Drehmoment wirkt', 'Die Geschwindigkeit konstant ist', 'Die Masse sich ändert'],
     korrekteAntwort: 2,
-    erklaerung: 'Der Drehimpulserhaltungssatz gilt, wenn kein äußeres Drehmoment wirkt (analog zur Impulserhaltung ohne äußere Kraft).',
+    erklärung: 'Der Drehimpulserhaltungssatz gilt, wenn kein äußeres Drehmoment wirkt (analog zur Impulserhaltung ohne äußere Kraft).',
     strategieTipp: 'Pirouetteneffekt: Arme einziehen → I kleiner → ω größer (L = Iω = const).'
   },
   {
@@ -469,7 +469,7 @@ export const fragenPart1 = [
     fragetext: 'Welche Aussage über den Impuls ist korrekt?',
     optionen: ['Impuls hat die Einheit Joule', 'Impuls ist eine skalare Größe', 'Impuls = Masse × Geschwindigkeit', 'Impuls = Kraft × Zeit', 'Beide C und D sind korrekt'],
     korrekteAntwort: 4,
-    erklaerung: 'Impuls p = m × v (Einheit: kg·m/s). Auch gilt: Δp = F × Δt (Impulsänderung = Kraft × Zeit). Impuls ist eine Vektorgröße.',
+    erklärung: 'Impuls p = m × v (Einheit: kg·m/s). Auch gilt: Δp = F × Δt (Impulsänderung = Kraft × Zeit). Impuls ist eine Vektorgröße.',
     strategieTipp: 'F × Δt nennt man "Kraftstoß". Je länger eine Kraft wirkt, desto größer die Impulsänderung.'
   },
   {
@@ -480,7 +480,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Ball (m = 0,1 kg) prallt mit v = 10 m/s gegen eine Wand und wird mit v = 8 m/s zurückgeworfen. Die Impulsänderung beträgt (Richtung zur Wand positiv):',
     optionen: ['-0,2 kg·m/s', '-1,8 kg·m/s', '-18 kg·m/s', '0,2 kg·m/s', '1,8 kg·m/s'],
     korrekteAntwort: 1,
-    erklaerung: 'p_vorher = 0,1 × 10 = 1 kg·m/s. p_nachher = 0,1 × (-8) = -0,8 kg·m/s. Δp = -0,8 - 1 = -1,8 kg·m/s.',
+    erklärung: 'p_vorher = 0,1 × 10 = 1 kg·m/s. p_nachher = 0,1 × (-8) = -0,8 kg·m/s. Δp = -0,8 - 1 = -1,8 kg·m/s.',
     strategieTipp: 'Bei Richtungsänderung Vorzeichen beachten! Zurückprallen bedeutet negatives Vorzeichen.'
   },
   {
@@ -491,7 +491,7 @@ export const fragenPart1 = [
     fragetext: 'Ein hydraulisches System hat Kolbenflächen von 10 cm² und 100 cm². Welche Kraft F₂ entsteht am großen Kolben, wenn F₁ = 50 N am kleinen wirkt?',
     optionen: ['5 N', '50 N', '500 N', '5000 N', '100 N'],
     korrekteAntwort: 2,
-    erklaerung: 'Pascal: p₁ = p₂ → F₁/A₁ = F₂/A₂ → F₂ = F₁ × (A₂/A₁) = 50 N × (100/10) = 500 N.',
+    erklärung: 'Pascal: p₁ = p₂ → F₁/A₁ = F₂/A₂ → F₂ = F₁ × (A₂/A₁) = 50 N × (100/10) = 500 N.',
     strategieTipp: 'Hydraulik verstärkt Kraft im Verhältnis der Flächen. Aber: Der Weg verkleinert sich entsprechend!'
   },
   {
@@ -502,7 +502,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Körper (m = 2 kg) rotiert an einem Seil (r = 1 m) mit v = 3 m/s. Die Zentripetalkraft beträgt:',
     optionen: ['6 N', '9 N', '18 N', '27 N', '36 N'],
     korrekteAntwort: 2,
-    erklaerung: 'Zentripetalkraft F_z = mv²/r = 2 kg × (3 m/s)² / 1 m = 2 × 9 / 1 = 18 N.',
+    erklärung: 'Zentripetalkraft F_z = mv²/r = 2 kg × (3 m/s)² / 1 m = 2 × 9 / 1 = 18 N.',
     strategieTipp: 'Zentripetalkraft F_z = mv²/r zeigt immer zum Drehzentrum. Auch: F_z = mω²r.'
   },
   {
@@ -513,7 +513,7 @@ export const fragenPart1 = [
     fragetext: 'Bei welchem Stoß bleibt sowohl Impuls als auch kinetische Energie erhalten?',
     optionen: ['Plastischer Stoß', 'Inelastischer Stoß', 'Elastischer Stoß', 'Teilelastischer Stoß', 'Bei keinem Stoß'],
     korrekteAntwort: 2,
-    erklaerung: 'Nur beim ideal elastischen Stoß bleiben Impuls und kinetische Energie erhalten. Bei inelastischen Stößen geht kinetische Energie (in Wärme/Verformung) verloren.',
+    erklärung: 'Nur beim ideal elastischen Stoß bleiben Impuls und kinetische Energie erhalten. Bei inelastischen Stößen geht kinetische Energie (in Wärme/Verformung) verloren.',
     strategieTipp: 'Impuls bleibt immer erhalten (wenn keine äußeren Kräfte). Energie nur bei elastischen Stößen.'
   },
   {
@@ -524,7 +524,7 @@ export const fragenPart1 = [
     fragetext: 'Die Einheit der Leistung "Watt" entspricht:',
     optionen: ['Joule', 'Joule pro Sekunde', 'Newton mal Meter', 'Kilogramm mal Meter pro Sekunde', 'Pascal mal Kubikmeter'],
     korrekteAntwort: 1,
-    erklaerung: '1 Watt = 1 Joule/Sekunde = 1 J/s. Leistung ist Energie pro Zeit.',
+    erklärung: '1 Watt = 1 Joule/Sekunde = 1 J/s. Leistung ist Energie pro Zeit.',
     strategieTipp: 'Leistung = Energieumsatz pro Zeit. Auch: P = F×v (Kraft mal Geschwindigkeit).'
   },
   {
@@ -535,7 +535,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Motor leistet konstant 1000 W. Welche Energie setzt er in 5 Minuten um?',
     optionen: ['5000 J', '50000 J', '300000 J', '500000 J', '1000000 J'],
     korrekteAntwort: 2,
-    erklaerung: 'W = P × t = 1000 W × 300 s = 300000 J = 300 kJ. (5 Minuten = 300 Sekunden)',
+    erklärung: 'W = P × t = 1000 W × 300 s = 300000 J = 300 kJ. (5 Minuten = 300 Sekunden)',
     strategieTipp: 'Zeit in Sekunden umrechnen! W = P×t, mit P in Watt und t in Sekunden ergibt Joule.'
   },
   {
@@ -546,7 +546,7 @@ export const fragenPart1 = [
     fragetext: 'Ein Pendel schwingt zwischen zwei Umkehrpunkten in 20 cm Höhe. Am tiefsten Punkt (h=0) beträgt die Geschwindigkeit bei vernachlässigbarer Reibung (g = 10 m/s²):',
     optionen: ['1 m/s', '2 m/s', '4 m/s', '10 m/s', '20 m/s'],
     korrekteAntwort: 1,
-    erklaerung: 'Energieerhaltung: mgh = ½mv² → v = √(2gh) = √(2 × 10 m/s² × 0,2 m) = √4 = 2 m/s.',
+    erklärung: 'Energieerhaltung: mgh = ½mv² → v = √(2gh) = √(2 × 10 m/s² × 0,2 m) = √4 = 2 m/s.',
     strategieTipp: 'Bei Pendeln: Höchste potentielle Energie oben (v=0), höchste kinetische Energie unten (h=0).'
   }
 ];

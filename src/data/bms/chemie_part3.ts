@@ -122,7 +122,7 @@ export const chemieQuestionsPart3: Question[] = [
     topic: "Atommodell",
     text: "Was besagt das Pauli-Ausschlussprinzip?",
     options: [
-      { id: "a", text: "Elektronen besetzen zuerst niedrigere Orbitale." },
+      { id: "a", text: "Elektronen besetzen zürst niedrigere Orbitale." },
       { id: "b", text: "Keine zwei Elektronen dürfen in allen vier Quantenzahlen übereinstimmen." },
       { id: "c", text: "Entartete Orbitale werden einfach besetzt." },
       { id: "d", text: "Die Gesamtenergie ist immer minimal." },
@@ -217,7 +217,7 @@ export const chemieQuestionsPart3: Question[] = [
     topic: "Atommodell",
     text: "Welche Aussage zur Hundschen Regel ist korrekt?",
     options: [
-      { id: "a", text: "Elektronen füllen zuerst höchste Energieniveaus." },
+      { id: "a", text: "Elektronen füllen zürst höchste Energieniveaus." },
       { id: "b", text: "Entartete Orbitale werden vollständig besetzt." },
       { id: "c", text: "Entartete Orbitale werden einfach besetzt, mit parallelem Spin." },
       { id: "d", text: "Jedes Orbital fasst drei Elektronen." },
@@ -225,7 +225,7 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Die Hundsche Regel besagt, dass entartete Orbitale zuerst einfach mit parallelem Spin besetzt werden. Dies minimiert die Elektron-Elektron-Abstoßung und maximiert die Stabilität.",
+      "Die Hundsche Regel besagt, dass entartete Orbitale zürst einfach mit parallelem Spin besetzt werden. Dies minimiert die Elektron-Elektron-Abstoßung und maximiert die Stabilität.",
     difficulty: "mittel",
     tags: ["atommodell", "hundsche-regel", "elektronenkonfiguration"],
   },
@@ -339,7 +339,7 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Cl- hat ein zusätzliches Elektron und erreicht die Edelgaskonfiguration von Argon: [Ne] 3s2 3p6. Es ist isoelektronisch zu Argon mit 18 Elektronen.",
+      "Cl- hat ein zusätzliches Elektron und erreicht die Edelgaskonfiguration von Argon: [Ne] 3s2 3p6. Es ist isölektronisch zu Argon mit 18 Elektronen.",
     difficulty: "mittel",
     tags: ["elektronenkonfiguration", "ionen", "periodensystem"],
   },
@@ -466,13 +466,13 @@ export const chemieQuestionsPart3: Question[] = [
     options: [
       { id: "a", text: "Linear" },
       { id: "b", text: "Trigonal-planar" },
-      { id: "c", text: "Tetraedrisch" },
+      { id: "c", text: "Teträdrisch" },
       { id: "d", text: "Trigonal-bipyramidal" },
-      { id: "e", text: "Oktaedrisch" },
+      { id: "e", text: "Oktädrisch" },
     ],
     correctOptionId: "c",
     explanation:
-      "Nach dem VSEPR-Modell ordnen sich vier Elektronenpaare tetraedrisch an, um die Abstoßung zu minimieren. Der Bindungswinkel beträgt 109,5°. Beispiele sind CH4 und CCl4.",
+      "Nach dem VSEPR-Modell ordnen sich vier Elektronenpaare teträdrisch an, um die Abstoßung zu minimieren. Der Bindungswinkel beträgt 109,5°. Beispiele sind CH4 und CCl4.",
     difficulty: "mittel",
     tags: ["chemische-bindung", "vsepr", "molekülgeometrie"],
   },
@@ -510,7 +510,7 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Bei der sp3-Hybridisierung mischen sich ein s- und drei p-Orbitale zu vier energetisch gleichwertigen Hybridorbitalen mit tetraedrischer Anordnung (109,5°). Beispiel: Kohlenstoff in Methan (CH4).",
+      "Bei der sp3-Hybridisierung mischen sich ein s- und drei p-Orbitale zu vier energetisch gleichwertigen Hybridorbitalen mit teträdrischer Anordnung (109,5°). Beispiel: Kohlenstoff in Methan (CH4).",
     difficulty: "mittel",
     tags: ["chemische-bindung", "hybridisierung", "orbitale"],
   },
@@ -529,7 +529,7 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Nach der Reaktionsgleichung benötigt 1 Mol CH4 genau 2 Mol O2. Für 2 Mol CH4 werden daher 2×2 = 4 Mol O2 benötigt. Die Stöchiometrie ergibt sich direkt aus den Koeffizienten der ausgeglichenen Gleichung.",
+      "Nach der Reaktionsgleichung benötigt 1 Mol CH4 genau 2 Mol O2. Für 2 Mol CH4 werden daher 2×2 = 4 Mol O2 benötigt. Die Stöchiometrie ergibt sich direkt aus den Köffizienten der ausgeglichenen Gleichung.",
     difficulty: "leicht",
     tags: ["stöchiometrie", "verbrennung", "reaktionsgleichung"],
   },
@@ -599,13 +599,13 @@ export const chemieQuestionsPart3: Question[] = [
     options: [
       { id: "a", text: "Das Reagenz mit der größten molaren Masse" },
       { id: "b", text: "Das Reagenz, das im Überschuss vorliegt" },
-      { id: "c", text: "Das Reagenz, das zuerst vollständig verbraucht wird und die Produktmenge begrenzt" },
+      { id: "c", text: "Das Reagenz, das zürst vollständig verbraucht wird und die Produktmenge begrenzt" },
       { id: "d", text: "Das teuerste Reagenz in einer Reaktion" },
       { id: "e", text: "Das Reagenz mit der höchsten Reaktivität" },
     ],
     correctOptionId: "c",
     explanation:
-      "Das limitierende Reagenz ist der Reaktant, der zuerst vollständig verbraucht wird und somit die maximale Menge an Produkt bestimmt. Alle anderen Reagenzien liegen im Überschuss vor.",
+      "Das limitierende Reagenz ist der Reaktant, der zürst vollständig verbraucht wird und somit die maximale Menge an Produkt bestimmt. Alle anderen Reagenzien liegen im Überschuss vor.",
     difficulty: "mittel",
     tags: ["stöchiometrie", "limitierendes-reagenz", "reaktionsgleichung"],
   },
@@ -624,7 +624,7 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Der Bindungswinkel im Wasser beträgt ca. 104,5° und ist kleiner als der Tetraederwinkel (109,5°), weil die zwei freien Elektronenpaare am Sauerstoff mehr Raum beanspruchen und die H-O-H-Bindungen zusammendrücken.",
+      "Der Bindungswinkel im Wasser beträgt ca. 104,5° und ist kleiner als der Teträderwinkel (109,5°), weil die zwei freien Elektronenpaare am Sauerstoff mehr Raum beanspruchen und die H-O-H-Bindungen zusammendrücken.",
     difficulty: "mittel",
     tags: ["chemische-bindung", "molekülgeometrie", "wasser"],
   },
@@ -2118,14 +2118,14 @@ export const chemieQuestionsPart3: Question[] = [
     text: "Was versteht man unter E/Z-Isomerie?",
     options: [
       { id: "a", text: "Isomerie durch verschiedene Kettenlängen" },
-      { id: "b", text: "Isomerie durch unterschiedliche Stellung der Substituenten an einer C=C-Doppelbindung" },
+      { id: "b", text: "Isomerie durch unterschiedliche Stellung der Substitünten an einer C=C-Doppelbindung" },
       { id: "c", text: "Spiegelbildisomerie" },
       { id: "d", text: "Isomerie durch verschiedene funktionelle Gruppen" },
       { id: "e", text: "Isomerie bei Cyclohexan" },
     ],
     correctOptionId: "b",
     explanation:
-      "E/Z-Isomerie (cis/trans) tritt an C=C-Doppelbindungen auf, wenn jedes C-Atom zwei verschiedene Substituenten trägt. Z (zusammen): gleiche Seite, E (entgegen): gegenüberliegende Seite bezüglich der Prioritätsregel.",
+      "E/Z-Isomerie (cis/trans) tritt an C=C-Doppelbindungen auf, wenn jedes C-Atom zwei verschiedene Substitünten trägt. Z (zusammen): gleiche Seite, E (entgegen): gegenüberliegende Seite bezüglich der Prioritätsregel.",
     difficulty: "mittel",
     tags: ["isomerie", "e-z-isomerie", "doppelbindung"],
   },
@@ -2305,7 +2305,7 @@ export const chemieQuestionsPart3: Question[] = [
     subject: "chemie",
     chapter: "biochemie",
     topic: "Aminosäuren",
-    text: "Was ist der isoelektrische Punkt (pI) einer Aminosäure?",
+    text: "Was ist der isölektrische Punkt (pI) einer Aminosäure?",
     options: [
       { id: "a", text: "Der pH-Wert, bei dem die Aminosäure vollständig protoniert ist" },
       { id: "b", text: "Der pH-Wert, bei dem die Nettoladung der Aminosäure null ist (Zwitterion)" },
@@ -2315,9 +2315,9 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Am isoelektrischen Punkt (pI) liegt die Aminosäure als Zwitterion mit Nettoladung null vor. Der pI berechnet sich als Mittelwert der beiden relevanten pKs-Werte. Am pI wandert die Aminosäure im elektrischen Feld nicht.",
+      "Am isölektrischen Punkt (pI) liegt die Aminosäure als Zwitterion mit Nettoladung null vor. Der pI berechnet sich als Mittelwert der beiden relevanten pKs-Werte. Am pI wandert die Aminosäure im elektrischen Feld nicht.",
     difficulty: "mittel",
-    tags: ["aminosäuren", "isoelektrischer-punkt", "zwitterion"],
+    tags: ["aminosäuren", "isölektrischer-punkt", "zwitterion"],
   },
   {
     id: "chem-3-123",
@@ -2614,7 +2614,7 @@ export const chemieQuestionsPart3: Question[] = [
       { id: "a", text: "Die Aminosäuresequenz" },
       { id: "b", text: "Die lokale Faltung in Helices" },
       { id: "c", text: "Die Gesamtfaltung einer Polypeptidkette" },
-      { id: "d", text: "Die Anordnung mehrerer Untereinheiten (Protomere) zueinander" },
+      { id: "d", text: "Die Anordnung mehrerer Untereinheiten (Protomere) züinander" },
       { id: "e", text: "Die posttranslationale Modifikation" },
     ],
     correctOptionId: "d",
@@ -2733,7 +2733,7 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "In [Fe(CN)6]4- ist Fe2+ von 6 Cyanid-Liganden (CN-) umgeben, die Koordinationszahl ist daher 6. Die geometrische Anordnung ist oktaedrisch. Dieser Komplex wird als Hexacyanoferrat(II) bezeichnet.",
+      "In [Fe(CN)6]4- ist Fe2+ von 6 Cyanid-Liganden (CN-) umgeben, die Koordinationszahl ist daher 6. Die geometrische Anordnung ist oktädrisch. Dieser Komplex wird als Hexacyanoferrat(II) bezeichnet.",
     difficulty: "mittel",
     tags: ["komplexchemie", "koordinationszahl", "eisen"],
   },
@@ -3065,7 +3065,7 @@ export const chemieQuestionsPart3: Question[] = [
     subject: "chemie",
     chapter: "biochemie",
     topic: "Enzyme",
-    text: "Was beschreibt die Michaelis-Menten-Kinetik?",
+    text: "Was beschreibt die Michälis-Menten-Kinetik?",
     options: [
       { id: "a", text: "Die Temperaturabhängigkeit einer Reaktion" },
       { id: "b", text: "Die Beziehung zwischen Substratkonzentration und Reaktionsgeschwindigkeit bei Enzymkatalyse" },
@@ -3075,9 +3075,9 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "Die Michaelis-Menten-Gleichung v = Vmax × [S] / (Km + [S]) beschreibt die hyperbolische Beziehung zwischen Substratkonzentration und Reaktionsgeschwindigkeit. Km ist die Substratkonzentration bei halbmaximaler Geschwindigkeit.",
+      "Die Michälis-Menten-Gleichung v = Vmax × [S] / (Km + [S]) beschreibt die hyperbolische Beziehung zwischen Substratkonzentration und Reaktionsgeschwindigkeit. Km ist die Substratkonzentration bei halbmaximaler Geschwindigkeit.",
     difficulty: "schwer",
-    tags: ["enzyme", "michaelis-menten", "kinetik"],
+    tags: ["enzyme", "michälis-menten", "kinetik"],
   },
   {
     id: "chem-3-163",
@@ -3094,7 +3094,7 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Glycin (Gly, G) ist die einfachste Aminosäure mit einem Wasserstoffatom als Seitenkette (R = H). Es ist die einzige achirale Aminosäure, da das alpha-C-Atom nicht vier verschiedene Substituenten trägt.",
+      "Glycin (Gly, G) ist die einfachste Aminosäure mit einem Wasserstoffatom als Seitenkette (R = H). Es ist die einzige achirale Aminosäure, da das alpha-C-Atom nicht vier verschiedene Substitünten trägt.",
     difficulty: "leicht",
     tags: ["aminosäuren", "glycin", "struktur"],
   },
@@ -3170,7 +3170,7 @@ export const chemieQuestionsPart3: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "C3H8 + 5O2 → 3CO2 + 4H2O. Aus 1 mol Propan entstehen 3 mol CO2. Bei STP: V = 3 × 22,4 L = 67,2 L. Die Stöchiometrie gibt das Molverhältnis direkt aus den Koeffizienten.",
+      "C3H8 + 5O2 → 3CO2 + 4H2O. Aus 1 mol Propan entstehen 3 mol CO2. Bei STP: V = 3 × 22,4 L = 67,2 L. Die Stöchiometrie gibt das Molverhältnis direkt aus den Köffizienten.",
     difficulty: "mittel",
     tags: ["stöchiometrie", "verbrennung", "gasvolumen"],
   },
@@ -3182,7 +3182,7 @@ export const chemieQuestionsPart3: Question[] = [
     text: "Was ist die Gleichgewichtskonstante Kc?",
     options: [
       { id: "a", text: "Die Geschwindigkeit der Hinreaktion" },
-      { id: "b", text: "Das Verhältnis der Produktkonzentrationen zu den Eduktkonzentrationen im Gleichgewicht, jeweils potenziert mit den stöchiometrischen Koeffizienten" },
+      { id: "b", text: "Das Verhältnis der Produktkonzentrationen zu den Eduktkonzentrationen im Gleichgewicht, jeweils potenziert mit den stöchiometrischen Köffizienten" },
       { id: "c", text: "Die Summe aller Konzentrationen" },
       { id: "d", text: "Der Druck im Gleichgewicht" },
       { id: "e", text: "Die Temperatur im Gleichgewicht" },
@@ -3431,12 +3431,12 @@ export const chemieQuestionsPart3: Question[] = [
       { id: "a", text: "Diamantstruktur" },
       { id: "b", text: "Wurtzit-Struktur" },
       { id: "c", text: "Natriumchlorid-Struktur (kubisch-flächenzentriert)" },
-      { id: "d", text: "Caesiumchlorid-Struktur" },
+      { id: "d", text: "Cäsiumchlorid-Struktur" },
       { id: "e", text: "Zinkblende-Struktur" },
     ],
     correctOptionId: "c",
     explanation:
-      "NaCl kristallisiert in der nach ihm benannten Natriumchlorid-Struktur: Jedes Na+ ist oktaedrisch von 6 Cl- umgeben und umgekehrt. Die Koordinationszahl beider Ionen ist 6. Die Struktur ist kubisch-flächenzentriert.",
+      "NaCl kristallisiert in der nach ihm benannten Natriumchlorid-Struktur: Jedes Na+ ist oktädrisch von 6 Cl- umgeben und umgekehrt. Die Koordinationszahl beider Ionen ist 6. Die Struktur ist kubisch-flächenzentriert.",
     difficulty: "schwer",
     tags: ["kristallstruktur", "natriumchlorid", "ionengitter"],
   },
@@ -3495,7 +3495,7 @@ export const chemieQuestionsPart3: Question[] = [
     explanation:
       "Coenzyme sind niedermolekulare organische Moleküle (oft Vitaminderivate), die für die katalytische Aktivität eines Enzyms notwendig sind. Beispiele: NAD+, FAD, Coenzym A. Sie übertragen funktionelle Gruppen oder Elektronen.",
     difficulty: "mittel",
-    tags: ["enzyme", "coenzym", "vitamine"],
+    tags: ["enzyme", "cönzym", "vitamine"],
   },
   {
     id: "chem-3-185",

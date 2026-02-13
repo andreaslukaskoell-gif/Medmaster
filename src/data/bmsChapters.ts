@@ -63,7 +63,7 @@ export const bmsChapters: Chapter[] = [
     sections: [
       {
         heading: "Zelltypen: Prokaryoten vs. Eukaryoten",
-        content: `Prokaryoten (Bakterien, Archaeen) besitzen keinen membranumschlossenen Zellkern. Ihre DNA liegt frei im Cytoplasma als Nukleoid vor. Eukaryoten (Tiere, Pflanzen, Pilze) haben einen echten Zellkern mit Doppelmembran (Kernhülle) und membranumschlossene Organellen.
+        content: `Prokaryoten (Bakterien, Archäen) besitzen keinen membranumschlossenen Zellkern. Ihre DNA liegt frei im Cytoplasma als Nukleoid vor. Eukaryoten (Tiere, Pflanzen, Pilze) haben einen echten Zellkern mit Doppelmembran (Kernhülle) und membranumschlossene Organellen.
 
 Wichtige Unterschiede:
 - Größe: Prokaryoten 1-10 um, Eukaryoten 10-100 um
@@ -323,7 +323,7 @@ Wichtige Neurotransmitter:
 - GABA: wichtigster hemmender NT im Gehirn
 - Glutamat: wichtigster erregender NT im Gehirn`,
         diagram: "synapse",
-        merke: "Erregend: Glutamat, Acetylcholin. Hemmend: GABA, Glycin. Merke: GABA = 'Goes Away, Blocks Activity'.",
+        merke: "Erregend: Glutamat, Acetylcholin. Hemmend: GABA, Glycin. Merke: GABA = 'Gös Away, Blocks Activity'.",
         klinik: "Parkinson entsteht durch Dopaminmangel in der Substantia nigra. Depressionen werden mit Serotonin-Wiederaufnahme-Hemmern (SSRI) behandelt.",
       },
       {
@@ -502,7 +502,7 @@ Polare vs. unpolare Bindung:
 VSEPR-Modell (Elektronenpaarabstoßung): Bestimmt die räumliche Struktur
 - 2 Elektronenpaare: linear (180°) - z.B. CO2
 - 3 Elektronenpaare: trigonal planar (120°) - z.B. BF3
-- 4 Elektronenpaare: tetraedrisch (109,5°) - z.B. CH4
+- 4 Elektronenpaare: teträdrisch (109,5°) - z.B. CH4
 - Bei freien Elektronenpaaren: Abweichung (H2O: gewinkelt 104,5°)`,
         diagram: "covalent-bond",
         merke: "Sigma-Bindungen erlauben freie Rotation, Pi-Bindungen nicht! Deshalb gibt es bei Doppelbindungen cis/trans-Isomerie.",
@@ -685,7 +685,7 @@ Actio = Reactio. Zu jeder Kraft gibt es eine gleich große, entgegengesetzte Geg
 
 Wichtige Kräfte:
 - Gewichtskraft: F_G = m x g
-- Reibungskraft: F_R = μ x F_N (μ = Reibungskoeffizient)
+- Reibungskraft: F_R = μ x F_N (μ = Reibungsköffizient)
 - Federkraft: F = k x s (Hooke'sches Gesetz)
 - Zentripetalkraft: F_Z = m x v²/r (Kreisbewegung)
 
@@ -847,7 +847,7 @@ Dispersion: Brechungsindex ist wellenlängenabhängig
       {
         heading: "Linsen und optische Instrumente",
         content: `Sammellinse (konvex): bündelt paralleles Licht im Brennpunkt F
-Zerstreuungslinse (konkav): streut Licht, als käme es vom virtuellen Brennpunkt
+Zerstreuungslinse (konkav): streut Licht, als käme es vom virtüllen Brennpunkt
 
 Linsengleichung (dünne Linse): 1/f = 1/g + 1/b
 - f = Brennweite, g = Gegenstandsweite, b = Bildweite
@@ -885,7 +885,7 @@ Beugung: Wellen breiten sich um Hindernisse aus
 
 Welle-Teilchen-Dualismus:
 - Licht zeigt Wellen- UND Teilcheneigenschaften
-- Photoelektrischer Effekt (Einstein): E = h x f (Photonenergie)
+- Photölektrischer Effekt (Einstein): E = h x f (Photonenergie)
 - h = 6,63 x 10^-34 Js (Planck'sches Wirkungsquantum)`,
         diagram: "em-spectrum",
         merke: "Hohe Frequenz = kurze Wellenlänge = hohe Energie (Gamma). Niedrige Frequenz = lange Wellenlänge = niedrige Energie (Radio). E = h x f.",
@@ -1026,7 +1026,7 @@ Viereck:
 Kreis:
 - Fläche: A = pi x r²
 - Umfang: U = 2 x pi x r = pi x d
-- Kreissektor: A = alpha/360 x pi x r²
+- Kreißektor: A = alpha/360 x pi x r²
 - Kreisbogen: b = alpha/360 x 2 x pi x r
 
 Zusammengesetzte Flächen: in Teilflächen zerlegen, einzeln berechnen, addieren/subtrahieren.`,

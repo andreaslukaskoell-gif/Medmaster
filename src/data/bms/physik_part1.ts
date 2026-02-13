@@ -102,7 +102,7 @@ export const physikQuestionsPart1: Question[] = [
     subject: "physik",
     chapter: "mechanik",
     topic: "Impuls",
-    text: "Zwei Körper (m₁ = 3 kg, v₁ = 4 m/s und m₂ = 1 kg, v₂ = 0 m/s) stossen vollkommen unelastisch zusammen. Welche Geschwindigkeit haben sie nach dem Stoss?",
+    text: "Zwei Körper (m₁ = 3 kg, v₁ = 4 m/s und m₂ = 1 kg, v₂ = 0 m/s) stoßen vollkommen unelastisch zusammen. Welche Geschwindigkeit haben sie nach dem Stoß?",
     options: [
       { id: "a", text: "1 m/s" },
       { id: "b", text: "2 m/s" },
@@ -114,7 +114,7 @@ export const physikQuestionsPart1: Question[] = [
     explanation:
       "Impulserhaltung: m₁v₁ + m₂v₂ = (m₁ + m₂) × v'. 3×4 + 1×0 = (3+1) × v' → 12 = 4v' → v' = 3 m/s.",
     difficulty: "schwer",
-    tags: ["impulserhaltung", "stoss", "berechnung"],
+    tags: ["impulserhaltung", "stoß", "berechnung"],
   },
   {
     id: "phys-7",

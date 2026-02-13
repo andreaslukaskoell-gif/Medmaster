@@ -189,13 +189,13 @@ Anwendungen:
 <strong>Sammellinse (Konvexlinse)</strong>
 • In der Mitte dicker als am Rand
 • Bündelt parallel einfallendes Licht in einem Punkt — dem <strong>Brennpunkt F</strong>
-• Erzeugt (je nach Gegenstandsweite) <strong>reelle oder virtuelle Bilder</strong>
+• Erzeugt (je nach Gegenstandsweite) <strong>reelle oder virtülle Bilder</strong>
 • Verwendung: Lupe, Brille bei Weitsichtigkeit, Kamera, Projektor
 
 <strong>Zerstreuungslinse (Konkavlinse)</strong>
 • In der Mitte dünner als am Rand
-• Streut parallel einfallendes Licht — die Verlängerungen der gebrochenen Strahlen treffen sich im <strong>virtuellen Brennpunkt F</strong> (auf der Einfallsseite)
-• Erzeugt immer ein <strong>virtuelles, aufrechtes, verkleinertes Bild</strong>
+• Streut parallel einfallendes Licht — die Verlängerungen der gebrochenen Strahlen treffen sich im <strong>virtüllen Brennpunkt F</strong> (auf der Einfallsseite)
+• Erzeugt immer ein <strong>virtülles, aufrechtes, verkleinertes Bild</strong>
 • Verwendung: Brille bei Kurzsichtigkeit, Türspion
 
 <strong>Linsengleichung (Dünne Linsen)</strong>
@@ -212,7 +212,7 @@ Vorzeichenkonvention:
 • Sammellinse: f > 0 (positiv)
 • Zerstreuungslinse: f < 0 (negativ)
 • Reelles Bild: b > 0
-• Virtuelles Bild: b < 0
+• Virtülles Bild: b < 0
 
 <strong>Brechkraft D</strong>
 <strong>D = 1/f</strong> [Einheit: Dioptrie, dpt]
@@ -235,7 +235,7 @@ Beispiel: Eine Linse mit f = 0,5 m hat eine Brechkraft von D = 1/0,5 = 2 dpt.
 • g = 2f → reelles Bild in gleicher Größe, umgekehrt (bei b = 2f)
 • f < g < 2f → reelles, vergrößertes, umgekehrtes Bild (b > 2f)
 • g = f → kein Bild (parallele Strahlen, Bild im Unendlichen)
-• g < f → virtuelles, vergrößertes, aufrechtes Bild (Lupe!)
+• g < f → virtülles, vergrößertes, aufrechtes Bild (Lupe!)
 
 <strong>Lupe</strong>
 Die Lupe ist eine Sammellinse, bei der der Gegenstand innerhalb der Brennweite liegt (g < f). Die Vergrößerung der Lupe berechnet sich als:
@@ -288,7 +288,7 @@ Die Fähigkeit des Auges, die Brechkraft der Linse zu verändern und so auf unte
       heading: "Doppler-Effekt & Kernphysik",
       content: `<strong>Doppler-Effekt</strong>
 
-Der Doppler-Effekt beschreibt die Änderung der wahrgenommenen <strong>Frequenz</strong> (und damit der Wellenlänge) einer Welle, wenn sich Quelle und Beobachter relativ zueinander bewegen.
+Der Doppler-Effekt beschreibt die Änderung der wahrgenommenen <strong>Frequenz</strong> (und damit der Wellenlänge) einer Welle, wenn sich Quelle und Beobachter relativ züinander bewegen.
 
 <strong>Quelle nähert sich dem Beobachter:</strong>
 • Die Wellenfronten werden <strong>gestaucht</strong>

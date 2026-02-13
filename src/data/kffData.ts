@@ -7,7 +7,7 @@ export const kffStrategyGuide = {
       {
         heading: "Grundprinzip",
         content:
-          "Bei Zahlenfolgen musst du das Muster erkennen, das die Zahlen verbindet. Berechne immer zuerst die Differenzen zwischen aufeinanderfolgenden Zahlen. Wenn die Differenzen konstant sind, handelt es sich um eine arithmetische Folge.",
+          "Bei Zahlenfolgen musst du das Muster erkennen, das die Zahlen verbindet. Berechne immer zürst die Differenzen zwischen aufeinanderfolgenden Zahlen. Wenn die Differenzen konstant sind, handelt es sich um eine arithmetische Folge.",
       },
       {
         heading: "Schritt-für-Schritt Vorgehen",
@@ -31,7 +31,7 @@ export const kffStrategyGuide = {
       },
     ],
   },
-  gedaechtnis: {
+  gedächtnis: {
     title: "Strategie-Guide: Allergiepässe merken",
     sections: [
       {
@@ -55,7 +55,7 @@ export const kffStrategyGuide = {
 - Nutze emotionale und absurde Bilder (je verrückter, desto besser merkbar)
 - Wiederhole in der Lernzeit mindestens 3x alle Ausweise
 - Nutze die letzten 2 Minuten zum Wiederholen, nicht zum Neulernen
-- Konzentriere dich auf die schwierigsten Ausweise zuerst
+- Konzentriere dich auf die schwierigsten Ausweise zürst
 - Bilde Geschichten: 'Frau Müller (A+) niest im Eingang wegen Pollen, während sie eine Banane isst'`,
       },
     ],
@@ -792,11 +792,11 @@ export const implikationQuestions: ImplikationQuestion[] = [
   // === NEW QUESTIONS: CONTRAPOSITION (A -> B is equivalent to not-B -> not-A — VALID) ===
   {
     id: "imp-38",
-    premise: "Wenn eine Zelle keine Mitochondrien besitzt, kann sie keine aerobe Zellatmung durchführen.",
-    conclusion: "Eine Zelle führt aerobe Zellatmung durch. Also besitzt sie Mitochondrien.",
+    premise: "Wenn eine Zelle keine Mitochondrien besitzt, kann sie keine ärobe Zellatmung durchführen.",
+    conclusion: "Eine Zelle führt ärobe Zellatmung durch. Also besitzt sie Mitochondrien.",
     isValid: true,
     explanation:
-      "Gültige Kontraposition: Die Prämisse lautet: nicht-A (keine Mitochondrien) -> nicht-B (keine aerobe Zellatmung). Die Kontraposition ist: B (aerobe Zellatmung) -> A (Mitochondrien vorhanden). Die Kontraposition einer wahren Implikation ist immer gültig.",
+      "Gültige Kontraposition: Die Prämisse lautet: nicht-A (keine Mitochondrien) -> nicht-B (keine ärobe Zellatmung). Die Kontraposition ist: B (ärobe Zellatmung) -> A (Mitochondrien vorhanden). Die Kontraposition einer wahren Implikation ist immer gültig.",
     type: "contraposition",
   },
   {

@@ -7,7 +7,7 @@ export const fragenPart3 = [
     fragetext: 'Berechnen Sie den Wert von sin(30°) + cos(60°).',
     optionen: ['0,5', '1', '1,5', '2', '0,75'],
     korrekteAntwort: 1,
-    erklaerung: 'sin(30°) = 0,5 und cos(60°) = 0,5, daher ist die Summe 0,5 + 0,5 = 1.',
+    erklärung: 'sin(30°) = 0,5 und cos(60°) = 0,5, daher ist die Summe 0,5 + 0,5 = 1.',
     strategieTipp: 'Merken Sie sich die Werte für die speziellen Winkel 30°, 45°, 60° und 90°. Diese kommen häufig vor.'
   },
   {
@@ -18,7 +18,7 @@ export const fragenPart3 = [
     fragetext: 'Welche der folgenden Funktionen ist eine Potenzfunktion?',
     optionen: ['f(x) = 2^x', 'f(x) = x^3', 'f(x) = e^x', 'f(x) = log(x)', 'f(x) = sin(x)'],
     korrekteAntwort: 1,
-    erklaerung: 'Eine Potenzfunktion hat die Form f(x) = x^n, wobei n eine reelle Zahl ist. Nur f(x) = x^3 entspricht dieser Form.',
+    erklärung: 'Eine Potenzfunktion hat die Form f(x) = x^n, wobei n eine reelle Zahl ist. Nur f(x) = x^3 entspricht dieser Form.',
     strategieTipp: 'Unterscheiden Sie zwischen Potenzfunktionen (x^n) und Exponentialfunktionen (a^x). Bei Potenzfunktionen ist die Variable die Basis.'
   },
   {
@@ -29,8 +29,8 @@ export const fragenPart3 = [
     fragetext: 'Bestimmen Sie die Ableitung von f(x) = 3x^4 - 2x^2 + 5x - 7 an der Stelle x = 2.',
     optionen: ['87', '92', '77', '82', '97'],
     korrekteAntwort: 0,
-    erklaerung: 'f\'(x) = 12x^3 - 4x + 5. Einsetzen von x = 2: f\'(2) = 12(8) - 4(2) + 5 = 96 - 8 + 5 = 87.',
-    strategieTipp: 'Leiten Sie zuerst ab, dann setzen Sie den Wert ein. Nutzen Sie die Potenzregel: (x^n)\' = n·x^(n-1).'
+    erklärung: 'f\'(x) = 12x^3 - 4x + 5. Einsetzen von x = 2: f\'(2) = 12(8) - 4(2) + 5 = 96 - 8 + 5 = 87.',
+    strategieTipp: 'Leiten Sie zürst ab, dann setzen Sie den Wert ein. Nutzen Sie die Potenzregel: (x^n)\' = n·x^(n-1).'
   },
   {
     id: 'ma-q-104',
@@ -40,7 +40,7 @@ export const fragenPart3 = [
     fragetext: 'Berechnen Sie ln(e^5).',
     optionen: ['e^5', '5e', '1', '5', 'e'],
     korrekteAntwort: 3,
-    erklaerung: 'Der natürliche Logarithmus ln ist die Umkehrfunktion der e-Funktion. Daher gilt ln(e^5) = 5.',
+    erklärung: 'Der natürliche Logarithmus ln ist die Umkehrfunktion der e-Funktion. Daher gilt ln(e^5) = 5.',
     strategieTipp: 'ln(e^x) = x ist eine wichtige Grundregel. Logarithmus und Exponentialfunktion heben sich gegenseitig auf.'
   },
   {
@@ -51,7 +51,7 @@ export const fragenPart3 = [
     fragetext: 'Eine Funktion f(x) = ax^2 + bx + c hat einen Extremwert bei x = 3 und f(3) = 5. Außerdem gilt f(0) = 2. Welchen Wert hat a?',
     optionen: ['-1/3', '1/3', '-1/6', '1/6', '-1/2'],
     korrekteAntwort: 0,
-    erklaerung: 'f\'(x) = 2ax + b = 0 bei x = 3, also b = -6a. f(0) = c = 2. f(3) = 9a + 3b + 2 = 5, also 9a - 18a = 3, daher -9a = 3 und a = -1/3.',
+    erklärung: 'f\'(x) = 2ax + b = 0 bei x = 3, also b = -6a. f(0) = c = 2. f(3) = 9a + 3b + 2 = 5, also 9a - 18a = 3, daher -9a = 3 und a = -1/3.',
     strategieTipp: 'Bei Extremwerten ist die erste Ableitung null. Nutzen Sie alle gegebenen Bedingungen als Gleichungssystem.'
   },
   {
@@ -62,7 +62,7 @@ export const fragenPart3 = [
     fragetext: 'Welcher Wert ergibt sich für cos(0°)?',
     optionen: ['0', '1', '-1', '0,5', '√2/2'],
     korrekteAntwort: 1,
-    erklaerung: 'Der Kosinus von 0° entspricht 1. Am Einheitskreis liegt der Punkt bei (1, 0).',
+    erklärung: 'Der Kosinus von 0° entspricht 1. Am Einheitskreis liegt der Punkt bei (1, 0).',
     strategieTipp: 'Wichtige Werte: cos(0°) = 1, sin(0°) = 0, cos(90°) = 0, sin(90°) = 1.'
   },
   {
@@ -73,7 +73,7 @@ export const fragenPart3 = [
     fragetext: 'Berechnen Sie das bestimmte Integral ∫₀² (3x^2) dx.',
     optionen: ['6', '8', '12', '4', '10'],
     korrekteAntwort: 1,
-    erklaerung: 'Die Stammfunktion ist x^3. Berechnung: [x^3]₀² = 2^3 - 0^3 = 8 - 0 = 8.',
+    erklärung: 'Die Stammfunktion ist x^3. Berechnung: [x^3]₀² = 2^3 - 0^3 = 8 - 0 = 8.',
     strategieTipp: 'Beim Integrieren erhöhen Sie den Exponenten um 1 und teilen durch den neuen Exponenten. Dann Grenzen einsetzen.'
   },
   {
@@ -84,7 +84,7 @@ export const fragenPart3 = [
     fragetext: 'Bestimmen Sie die zweite Ableitung von f(x) = e^(2x) an der Stelle x = 1.',
     optionen: ['2e^2', '4e^2', '2e', '4e', 'e^2'],
     korrekteAntwort: 1,
-    erklaerung: 'f\'(x) = 2e^(2x) nach der Kettenregel. f\'\'(x) = 4e^(2x). Einsetzen: f\'\'(1) = 4e^2.',
+    erklärung: 'f\'(x) = 2e^(2x) nach der Kettenregel. f\'\'(x) = 4e^(2x). Einsetzen: f\'\'(1) = 4e^2.',
     strategieTipp: 'Bei der e-Funktion mit innerem Term: Ableitung des äußeren mal Ableitung des inneren (Kettenregel).'
   },
   {
@@ -95,7 +95,7 @@ export const fragenPart3 = [
     fragetext: 'Eine Geradenfunktion f(x) = mx + b verläuft durch die Punkte (2, 5) und (4, 11). Welchen Wert hat m?',
     optionen: ['2', '3', '4', '5', '6'],
     korrekteAntwort: 1,
-    erklaerung: 'Die Steigung m = (y₂ - y₁)/(x₂ - x₁) = (11 - 5)/(4 - 2) = 6/2 = 3.',
+    erklärung: 'Die Steigung m = (y₂ - y₁)/(x₂ - x₁) = (11 - 5)/(4 - 2) = 6/2 = 3.',
     strategieTipp: 'Die Steigung ist die Differenz der y-Werte geteilt durch die Differenz der x-Werte.'
   },
   {
@@ -106,7 +106,7 @@ export const fragenPart3 = [
     fragetext: 'Was ist log₁₀(100)?',
     optionen: ['1', '2', '10', '100', '0'],
     korrekteAntwort: 1,
-    erklaerung: 'log₁₀(100) fragt: 10 hoch wieviel gibt 100? Da 10^2 = 100, ist die Antwort 2.',
+    erklärung: 'log₁₀(100) fragt: 10 hoch wieviel gibt 100? Da 10^2 = 100, ist die Antwort 2.',
     strategieTipp: 'Der Logarithmus ist die Umkehrfunktion der Exponentialfunktion. log_a(a^x) = x.'
   },
   {
@@ -117,7 +117,7 @@ export const fragenPart3 = [
     fragetext: 'Für welchen x-Wert hat die Funktion f(x) = x^3 - 6x^2 + 9x + 1 eine waagerechte Tangente?',
     optionen: ['x = 1 oder x = 3', 'x = 0 oder x = 3', 'x = 2 oder x = 4', 'x = 1 oder x = 5', 'x = 0 oder x = 2'],
     korrekteAntwort: 0,
-    erklaerung: 'Waagerechte Tangente bedeutet f\'(x) = 0. f\'(x) = 3x^2 - 12x + 9 = 3(x^2 - 4x + 3) = 3(x-1)(x-3) = 0, also x = 1 oder x = 3.',
+    erklärung: 'Waagerechte Tangente bedeutet f\'(x) = 0. f\'(x) = 3x^2 - 12x + 9 = 3(x^2 - 4x + 3) = 3(x-1)(x-3) = 0, also x = 1 oder x = 3.',
     strategieTipp: 'Waagerechte Tangenten liegen bei Extremstellen vor. Setzen Sie die erste Ableitung gleich null.'
   },
   {
@@ -128,7 +128,7 @@ export const fragenPart3 = [
     fragetext: 'Berechnen Sie sin(45°) · cos(45°).',
     optionen: ['0,25', '0,5', '0,75', '1', '0,35'],
     korrekteAntwort: 1,
-    erklaerung: 'sin(45°) = cos(45°) = √2/2 ≈ 0,707. Das Produkt ist (√2/2)² = 2/4 = 0,5.',
+    erklärung: 'sin(45°) = cos(45°) = √2/2 ≈ 0,707. Das Produkt ist (√2/2)² = 2/4 = 0,5.',
     strategieTipp: 'Bei 45° sind Sinus und Kosinus gleich. Nutzen Sie die Formel sin(2α) = 2sin(α)cos(α) zur Kontrolle.'
   },
   {
@@ -139,7 +139,7 @@ export const fragenPart3 = [
     fragetext: 'Welche Aussage über die Funktion f(x) = x^4 ist korrekt?',
     optionen: ['Sie ist linear', 'Sie hat einen Tiefpunkt bei x = 0', 'Sie ist eine Exponentialfunktion', 'Sie verläuft durch (1, 4)', 'Sie ist streng monoton fallend'],
     korrekteAntwort: 1,
-    erklaerung: 'f\'(x) = 4x^3 = 0 bei x = 0. f\'\'(x) = 12x^2, f\'\'(0) = 0, aber Test: für x < 0 ist f fallend, für x > 0 steigend, also Minimum bei x = 0.',
+    erklärung: 'f\'(x) = 4x^3 = 0 bei x = 0. f\'\'(x) = 12x^2, f\'\'(0) = 0, aber Test: für x < 0 ist f fallend, für x > 0 steigend, also Minimum bei x = 0.',
     strategieTipp: 'Potenzfunktionen mit geradem Exponenten haben die Form einer Parabel (U-förmig).'
   },
   {
@@ -150,7 +150,7 @@ export const fragenPart3 = [
     fragetext: 'Vereinfachen Sie: ln(e^3) + ln(e^2).',
     optionen: ['5', 'e^5', '6', 'ln(5)', 'e^6'],
     korrekteAntwort: 0,
-    erklaerung: 'ln(e^3) = 3 und ln(e^2) = 2. Die Summe ist 3 + 2 = 5. Alternativ: ln(e^3) + ln(e^2) = ln(e^3 · e^2) = ln(e^5) = 5.',
+    erklärung: 'ln(e^3) = 3 und ln(e^2) = 2. Die Summe ist 3 + 2 = 5. Alternativ: ln(e^3) + ln(e^2) = ln(e^3 · e^2) = ln(e^5) = 5.',
     strategieTipp: 'Logarithmenregeln: ln(a) + ln(b) = ln(a·b) und ln(e^x) = x.'
   },
   {
@@ -161,7 +161,7 @@ export const fragenPart3 = [
     fragetext: 'Die Funktion f(x) = ax^3 + bx hat an der Stelle x = 2 den Funktionswert 24 und die Steigung 18. Bestimmen Sie a.',
     optionen: ['1', '2', '3', '1,5', '2,5'],
     korrekteAntwort: 3,
-    erklaerung: 'f\'(x) = 3ax^2 + b. f\'(2) = 12a + b = 18. f(2) = 8a + 2b = 24. Aus der ersten: b = 18 - 12a. Einsetzen: 8a + 2(18-12a) = 24, also 8a + 36 - 24a = 24, daher -16a = -12 und a = 1,5.',
+    erklärung: 'f\'(x) = 3ax^2 + b. f\'(2) = 12a + b = 18. f(2) = 8a + 2b = 24. Aus der ersten: b = 18 - 12a. Einsetzen: 8a + 2(18-12a) = 24, also 8a + 36 - 24a = 24, daher -16a = -12 und a = 1,5.',
     strategieTipp: 'Nutzen Sie beide Bedingungen (Funktionswert und Ableitungswert) als Gleichungssystem.'
   },
   {
@@ -172,7 +172,7 @@ export const fragenPart3 = [
     fragetext: 'Berechnen Sie ∫ (6x + 3) dx.',
     optionen: ['6x^2 + 3x + C', '3x^2 + 3x + C', '6x^2 + C', '3x^2 + C', '12x + C'],
     korrekteAntwort: 1,
-    erklaerung: 'Das Integral von 6x ist 3x^2 (Exponent erhöhen und teilen) und das Integral von 3 ist 3x. Ergebnis: 3x^2 + 3x + C.',
+    erklärung: 'Das Integral von 6x ist 3x^2 (Exponent erhöhen und teilen) und das Integral von 3 ist 3x. Ergebnis: 3x^2 + 3x + C.',
     strategieTipp: 'Integrieren Sie jeden Term einzeln. Die Konstante C nicht vergessen bei unbestimmten Integralen.'
   },
   {
@@ -183,7 +183,7 @@ export const fragenPart3 = [
     fragetext: 'Was ergibt e^0?',
     optionen: ['0', '1', 'e', '∞', 'nicht definiert'],
     korrekteAntwort: 1,
-    erklaerung: 'Jede Zahl (außer 0) hoch 0 ergibt 1. Daher ist e^0 = 1.',
+    erklärung: 'Jede Zahl (außer 0) hoch 0 ergibt 1. Daher ist e^0 = 1.',
     strategieTipp: 'Merken Sie sich: a^0 = 1 für alle a ≠ 0. Dies gilt auch für die Eulersche Zahl e.'
   },
   {
@@ -194,7 +194,7 @@ export const fragenPart3 = [
     fragetext: 'Bestimmen Sie den Flächeninhalt zwischen der Funktion f(x) = x^2 und der x-Achse im Intervall [0, 3].',
     optionen: ['6', '9', '12', '27', '18'],
     korrekteAntwort: 1,
-    erklaerung: 'A = ∫₀³ x^2 dx = [x^3/3]₀³ = 27/3 - 0 = 9.',
+    erklärung: 'A = ∫₀³ x^2 dx = [x^3/3]₀³ = 27/3 - 0 = 9.',
     strategieTipp: 'Der Flächeninhalt unter einer Kurve ist das bestimmte Integral. Stammfunktion bilden und Grenzen einsetzen.'
   },
   {
@@ -205,7 +205,7 @@ export const fragenPart3 = [
     fragetext: 'Eine Gerade verläuft parallel zur Geraden y = 4x - 2 und geht durch den Punkt (1, 7). Wie lautet die Funktionsgleichung?',
     optionen: ['y = 4x + 3', 'y = 4x - 3', 'y = 4x + 7', 'y = 4x - 7', 'y = 4x + 1'],
     korrekteAntwort: 0,
-    erklaerung: 'Parallele Geraden haben dieselbe Steigung m = 4. y = 4x + b. Einsetzen von (1, 7): 7 = 4(1) + b, also b = 3. Gleichung: y = 4x + 3.',
+    erklärung: 'Parallele Geraden haben dieselbe Steigung m = 4. y = 4x + b. Einsetzen von (1, 7): 7 = 4(1) + b, also b = 3. Gleichung: y = 4x + 3.',
     strategieTipp: 'Parallele Geraden haben gleiche Steigung. Bestimmen Sie b durch Einsetzen des gegebenen Punktes.'
   },
   {
@@ -216,7 +216,7 @@ export const fragenPart3 = [
     fragetext: 'Welche der folgenden Funktionen ist eine Exponentialfunktion?',
     optionen: ['f(x) = x^2', 'f(x) = 2^x', 'f(x) = 2x', 'f(x) = log(x)', 'f(x) = √x'],
     korrekteAntwort: 1,
-    erklaerung: 'Eine Exponentialfunktion hat die Form f(x) = a^x, wobei a > 0 und a ≠ 1. Nur f(x) = 2^x erfüllt diese Bedingung.',
+    erklärung: 'Eine Exponentialfunktion hat die Form f(x) = a^x, wobei a > 0 und a ≠ 1. Nur f(x) = 2^x erfüllt diese Bedingung.',
     strategieTipp: 'Bei Exponentialfunktionen steht die Variable im Exponenten, nicht in der Basis.'
   },
   {
@@ -227,7 +227,7 @@ export const fragenPart3 = [
     fragetext: 'Berechnen Sie tan(45°).',
     optionen: ['0', '0,5', '1', '√2', '2'],
     korrekteAntwort: 2,
-    erklaerung: 'tan(45°) = sin(45°)/cos(45°) = (√2/2)/(√2/2) = 1.',
+    erklärung: 'tan(45°) = sin(45°)/cos(45°) = (√2/2)/(√2/2) = 1.',
     strategieTipp: 'Bei 45° sind Sinus und Kosinus gleich, daher ist der Tangens (Quotient) gleich 1.'
   },
   {
@@ -238,7 +238,7 @@ export const fragenPart3 = [
     fragetext: 'Die Funktion f(x) = x^4 - 8x^2 + 5 hat wie viele lokale Extremstellen?',
     optionen: ['0', '1', '2', '3', '4'],
     korrekteAntwort: 2,
-    erklaerung: 'f\'(x) = 4x^3 - 16x = 4x(x^2 - 4) = 4x(x-2)(x+2) = 0 für x = 0, x = 2, x = -2. f\'\'(x) = 12x^2 - 16. f\'\'(0) = -16 < 0 (Maximum), f\'\'(2) = 32 > 0 (Minimum), f\'\'(-2) = 32 > 0 (Minimum). Insgesamt 3 Extremstellen.',
+    erklärung: 'f\'(x) = 4x^3 - 16x = 4x(x^2 - 4) = 4x(x-2)(x+2) = 0 für x = 0, x = 2, x = -2. f\'\'(x) = 12x^2 - 16. f\'\'(0) = -16 < 0 (Maximum), f\'\'(2) = 32 > 0 (Minimum), f\'\'(-2) = 32 > 0 (Minimum). Insgesamt 3 Extremstellen.',
     strategieTipp: 'Bestimmen Sie alle Nullstellen der ersten Ableitung und prüfen Sie diese mit der zweiten Ableitung.'
   },
   {
@@ -249,7 +249,7 @@ export const fragenPart3 = [
     fragetext: 'Berechnen Sie log₂(32).',
     optionen: ['4', '5', '6', '16', '32'],
     korrekteAntwort: 1,
-    erklaerung: 'log₂(32) fragt: 2 hoch wieviel gibt 32? Da 2^5 = 32, ist die Antwort 5.',
+    erklärung: 'log₂(32) fragt: 2 hoch wieviel gibt 32? Da 2^5 = 32, ist die Antwort 5.',
     strategieTipp: 'Überlegen Sie: 2^? = 32. Potenzen von 2 sollten Sie kennen: 2, 4, 8, 16, 32, 64, 128, ...'
   },
   {
@@ -260,7 +260,7 @@ export const fragenPart3 = [
     fragetext: 'Was ist die Ableitung von f(x) = 7?',
     optionen: ['7', '0', '7x', '1', 'x'],
     korrekteAntwort: 1,
-    erklaerung: 'Die Ableitung einer Konstanten ist immer 0, da eine Konstante keine Änderungsrate hat.',
+    erklärung: 'Die Ableitung einer Konstanten ist immer 0, da eine Konstante keine Änderungsrate hat.',
     strategieTipp: 'Konstanten verschwinden beim Ableiten. Die Ableitung jeder Zahl ohne x ist 0.'
   },
   {
@@ -271,7 +271,7 @@ export const fragenPart3 = [
     fragetext: 'Bestimmen Sie die Nullstellen der Funktion f(x) = e^x - 3.',
     optionen: ['x = ln(3)', 'x = 3', 'x = e^3', 'x = log(3)', 'x = 1/3'],
     korrekteAntwort: 0,
-    erklaerung: 'e^x - 3 = 0, also e^x = 3. Logarithmieren: x = ln(3).',
+    erklärung: 'e^x - 3 = 0, also e^x = 3. Logarithmieren: x = ln(3).',
     strategieTipp: 'Bei Gleichungen mit e^x: Isolieren Sie e^x und wenden Sie den natürlichen Logarithmus ln an.'
   },
   {
@@ -282,7 +282,7 @@ export const fragenPart3 = [
     fragetext: 'Berechnen Sie den Betrag des Vektors v = (3, 4).',
     optionen: ['5', '7', '12', '√7', '√12'],
     korrekteAntwort: 0,
-    erklaerung: 'Der Betrag ist |v| = √(3² + 4²) = √(9 + 16) = √25 = 5.',
+    erklärung: 'Der Betrag ist |v| = √(3² + 4²) = √(9 + 16) = √25 = 5.',
     strategieTipp: 'Der Betrag eines Vektors ist die Wurzel aus der Summe der quadrierten Komponenten (Satz des Pythagoras).'
   },
   {
@@ -293,7 +293,7 @@ export const fragenPart3 = [
     fragetext: 'Gegeben sind die Vektoren a = (2, 3) und b = (4, -1). Berechnen Sie a + b.',
     optionen: ['(6, 2)', '(2, 4)', '(6, 4)', '(8, 3)', '(2, 2)'],
     korrekteAntwort: 0,
-    erklaerung: 'Vektoren werden komponentenweise addiert: a + b = (2+4, 3+(-1)) = (6, 2).',
+    erklärung: 'Vektoren werden komponentenweise addiert: a + b = (2+4, 3+(-1)) = (6, 2).',
     strategieTipp: 'Bei Vektoraddition addieren Sie jede Komponente einzeln: (x₁, y₁) + (x₂, y₂) = (x₁+x₂, y₁+y₂).'
   },
   {
@@ -304,7 +304,7 @@ export const fragenPart3 = [
     fragetext: 'Berechnen Sie das Skalarprodukt der Vektoren a = (3, -2, 1) und b = (1, 4, -2).',
     optionen: ['-7', '7', '-3', '3', '5'],
     korrekteAntwort: 0,
-    erklaerung: 'a · b = 3(1) + (-2)(4) + 1(-2) = 3 - 8 - 2 = -7.',
+    erklärung: 'a · b = 3(1) + (-2)(4) + 1(-2) = 3 - 8 - 2 = -7.',
     strategieTipp: 'Beim Skalarprodukt multiplizieren Sie entsprechende Komponenten und addieren die Ergebnisse.'
   },
   {
@@ -315,7 +315,7 @@ export const fragenPart3 = [
     fragetext: 'Welcher Vektor ist der Einheitsvektor in Richtung von v = (6, 8)?',
     optionen: ['(0,6; 0,8)', '(3, 4)', '(1, 1)', '(0,8; 0,6)', '(6, 8)'],
     korrekteAntwort: 0,
-    erklaerung: 'Betrag: |v| = √(36 + 64) = 10. Einheitsvektor: v/|v| = (6/10, 8/10) = (0,6; 0,8).',
+    erklärung: 'Betrag: |v| = √(36 + 64) = 10. Einheitsvektor: v/|v| = (6/10, 8/10) = (0,6; 0,8).',
     strategieTipp: 'Einheitsvektor = Vektor geteilt durch seinen Betrag. Das Ergebnis hat immer Betrag 1.'
   },
   {
@@ -326,7 +326,7 @@ export const fragenPart3 = [
     fragetext: 'Subtrahieren Sie: a = (5, 7) minus b = (2, 3).',
     optionen: ['(3, 4)', '(7, 10)', '(3, 10)', '(7, 4)', '(-3, -4)'],
     korrekteAntwort: 0,
-    erklaerung: 'a - b = (5-2, 7-3) = (3, 4).',
+    erklärung: 'a - b = (5-2, 7-3) = (3, 4).',
     strategieTipp: 'Vektorsubtraktion erfolgt komponentenweise: (x₁, y₁) - (x₂, y₂) = (x₁-x₂, y₁-y₂).'
   },
   {
@@ -337,7 +337,7 @@ export const fragenPart3 = [
     fragetext: 'Zwei Vektoren a = (4, 3) und b = (x, 5) sind orthogonal (stehen senkrecht aufeinander). Bestimmen Sie x.',
     optionen: ['-15/4', '15/4', '-4/15', '4/15', '-20/3'],
     korrekteAntwort: 0,
-    erklaerung: 'Orthogonale Vektoren haben Skalarprodukt 0: a · b = 4x + 3(5) = 4x + 15 = 0, also x = -15/4.',
+    erklärung: 'Orthogonale Vektoren haben Skalarprodukt 0: a · b = 4x + 3(5) = 4x + 15 = 0, also x = -15/4.',
     strategieTipp: 'Zwei Vektoren sind orthogonal, wenn ihr Skalarprodukt null ist.'
   },
   {
@@ -348,7 +348,7 @@ export const fragenPart3 = [
     fragetext: 'Berechnen Sie den Betrag des Vektors v = (1, -2, 2).',
     optionen: ['3', '√5', '√9', '5', '9'],
     korrekteAntwort: 0,
-    erklaerung: '|v| = √(1² + (-2)² + 2²) = √(1 + 4 + 4) = √9 = 3.',
+    erklärung: '|v| = √(1² + (-2)² + 2²) = √(1 + 4 + 4) = √9 = 3.',
     strategieTipp: 'Bei 3D-Vektoren gilt dieselbe Formel: Wurzel aus der Summe der quadrierten Komponenten.'
   },
   {
@@ -359,7 +359,7 @@ export const fragenPart3 = [
     fragetext: 'Welcher der folgenden Vektoren ist ein Normalvektor zur Geraden mit Richtungsvektor (3, 2)?',
     optionen: ['(-2, 3)', '(2, 3)', '(3, 2)', '(6, 4)', '(1, 1)'],
     korrekteAntwort: 0,
-    erklaerung: 'Ein Normalvektor steht senkrecht zum Richtungsvektor. Skalarprodukt: (-2)(3) + 3(2) = -6 + 6 = 0, also orthogonal.',
+    erklärung: 'Ein Normalvektor steht senkrecht zum Richtungsvektor. Skalarprodukt: (-2)(3) + 3(2) = -6 + 6 = 0, also orthogonal.',
     strategieTipp: 'Für einen 2D-Vektor (a, b) ist (-b, a) ein Normalvektor. Tauschen Sie die Komponenten und ändern Sie ein Vorzeichen.'
   },
   {
@@ -370,7 +370,7 @@ export const fragenPart3 = [
     fragetext: 'Berechnen Sie 3 · v für v = (2, -1, 4).',
     optionen: ['(6, -3, 12)', '(5, 2, 7)', '(6, 3, 12)', '(2, -1, 12)', '(6, -1, 12)'],
     korrekteAntwort: 0,
-    erklaerung: 'Skalarmultiplikation: 3 · (2, -1, 4) = (3·2, 3·(-1), 3·4) = (6, -3, 12).',
+    erklärung: 'Skalarmultiplikation: 3 · (2, -1, 4) = (3·2, 3·(-1), 3·4) = (6, -3, 12).',
     strategieTipp: 'Bei Multiplikation mit einem Skalar multiplizieren Sie jede Komponente mit dem Skalar.'
   },
   {
@@ -381,7 +381,7 @@ export const fragenPart3 = [
     fragetext: 'Berechnen Sie das Kreuzprodukt a × b für a = (1, 0, 0) und b = (0, 1, 0).',
     optionen: ['(0, 0, 1)', '(1, 1, 0)', '(0, 1, 1)', '(1, 0, 1)', '(0, 0, 0)'],
     korrekteAntwort: 0,
-    erklaerung: 'a × b = (a₂b₃-a₃b₂, a₃b₁-a₁b₃, a₁b₂-a₂b₁) = (0·0-0·1, 0·0-1·0, 1·1-0·0) = (0, 0, 1).',
+    erklärung: 'a × b = (a₂b₃-a₃b₂, a₃b₁-a₁b₃, a₁b₂-a₂b₁) = (0·0-0·1, 0·0-1·0, 1·1-0·0) = (0, 0, 1).',
     strategieTipp: 'Das Kreuzprodukt zweier Vektoren ergibt einen Vektor senkrecht zu beiden. Nutzen Sie die Determinantenformel.'
   },
   {
@@ -392,7 +392,7 @@ export const fragenPart3 = [
     fragetext: 'Welcher Winkel (in Grad) liegt zwischen den Vektoren a = (1, 0) und b = (1, 1)?',
     optionen: ['30°', '45°', '60°', '90°', '0°'],
     korrekteAntwort: 1,
-    erklaerung: 'cos(α) = (a·b)/(|a||b|) = 1/(1·√2) = 1/√2, also α = 45°.',
+    erklärung: 'cos(α) = (a·b)/(|a||b|) = 1/(1·√2) = 1/√2, also α = 45°.',
     strategieTipp: 'Nutzen Sie die Formel cos(α) = (a·b)/(|a||b|) für den Winkel zwischen zwei Vektoren.'
   },
   {
@@ -403,7 +403,7 @@ export const fragenPart3 = [
     fragetext: 'Was ergibt das Skalarprodukt von v = (2, 3) mit sich selbst?',
     optionen: ['5', '13', '6', '9', '4'],
     korrekteAntwort: 1,
-    erklaerung: 'v · v = 2² + 3² = 4 + 9 = 13. Dies entspricht auch |v|².',
+    erklärung: 'v · v = 2² + 3² = 4 + 9 = 13. Dies entspricht auch |v|².',
     strategieTipp: 'Das Skalarprodukt eines Vektors mit sich selbst ist das Quadrat seines Betrags.'
   },
   {
@@ -414,7 +414,7 @@ export const fragenPart3 = [
     fragetext: 'Ein Vektor v hat den Betrag 10 und bildet mit der x-Achse einen Winkel von 60°. Welche y-Komponente hat v?',
     optionen: ['5√3', '5', '10√3', '√3', '15'],
     korrekteAntwort: 0,
-    erklaerung: 'v = (|v|cos(60°), |v|sin(60°)) = (10·0,5, 10·√3/2) = (5, 5√3). Die y-Komponente ist 5√3 ≈ 8,66.',
+    erklärung: 'v = (|v|cos(60°), |v|sin(60°)) = (10·0,5, 10·√3/2) = (5, 5√3). Die y-Komponente ist 5√3 ≈ 8,66.',
     strategieTipp: 'Bei Polarkoordinaten: x = r·cos(α), y = r·sin(α), wobei r der Betrag und α der Winkel ist.'
   },
   {
@@ -425,7 +425,7 @@ export const fragenPart3 = [
     fragetext: 'Gegeben sind a = (3, 4, 0) und b = (0, 0, 5). Berechnen Sie |a + b|.',
     optionen: ['5', '√50', '12', '√34', '√41'],
     korrekteAntwort: 1,
-    erklaerung: 'a + b = (3, 4, 5). |a + b| = √(9 + 16 + 25) = √50 = 5√2 ≈ 7,07.',
+    erklärung: 'a + b = (3, 4, 5). |a + b| = √(9 + 16 + 25) = √50 = 5√2 ≈ 7,07.',
     strategieTipp: 'Erst Vektoren addieren, dann den Betrag des Ergebnisvektors berechnen.'
   },
   {
@@ -436,7 +436,7 @@ export const fragenPart3 = [
     fragetext: 'Welcher Vektor ist parallel zu v = (4, 6)?',
     optionen: ['(2, 3)', '(4, -6)', '(-4, 6)', '(3, 2)', '(6, 4)'],
     korrekteAntwort: 0,
-    erklaerung: 'Parallele Vektoren sind Vielfache voneinander. (2, 3) = 0,5 · (4, 6), also parallel.',
+    erklärung: 'Parallele Vektoren sind Vielfache voneinander. (2, 3) = 0,5 · (4, 6), also parallel.',
     strategieTipp: 'Zwei Vektoren sind parallel, wenn einer ein Vielfaches des anderen ist: v₂ = k · v₁.'
   },
   {
@@ -447,7 +447,7 @@ export const fragenPart3 = [
     fragetext: 'Berechnen Sie den Betrag des Kreuzprodukts von a = (2, 0, 0) und b = (0, 3, 0).',
     optionen: ['6', '5', '√13', '0', '1'],
     korrekteAntwort: 0,
-    erklaerung: 'a × b = (0, 0, 6). |a × b| = 6. Alternativ: |a × b| = |a||b|sin(90°) = 2·3·1 = 6.',
+    erklärung: 'a × b = (0, 0, 6). |a × b| = 6. Alternativ: |a × b| = |a||b|sin(90°) = 2·3·1 = 6.',
     strategieTipp: 'Der Betrag des Kreuzprodukts ist |a||b|sin(α). Bei orthogonalen Vektoren (α=90°) ist es einfach |a||b|.'
   },
   {
@@ -458,7 +458,7 @@ export const fragenPart3 = [
     fragetext: 'Welcher der folgenden Vektoren ist ein Einheitsvektor?',
     optionen: ['(0,6; 0,8)', '(1, 1)', '(0,5; 0,5)', '(3, 4)', '(1, 0, 1)'],
     korrekteAntwort: 0,
-    erklaerung: 'Ein Einheitsvektor hat Betrag 1. |(0,6; 0,8)| = √(0,36 + 0,64) = √1 = 1. Andere haben Betrag ≠ 1.',
+    erklärung: 'Ein Einheitsvektor hat Betrag 1. |(0,6; 0,8)| = √(0,36 + 0,64) = √1 = 1. Andere haben Betrag ≠ 1.',
     strategieTipp: 'Prüfen Sie den Betrag: Ein Einheitsvektor hat immer Betrag 1.'
   },
   {
@@ -469,7 +469,7 @@ export const fragenPart3 = [
     fragetext: 'Was ist der Nullvektor in 2D?',
     optionen: ['(0, 0)', '(1, 1)', '(0, 1)', '(1, 0)', 'nicht definiert'],
     korrekteAntwort: 0,
-    erklaerung: 'Der Nullvektor hat alle Komponenten gleich null: (0, 0) in 2D bzw. (0, 0, 0) in 3D.',
+    erklärung: 'Der Nullvektor hat alle Komponenten gleich null: (0, 0) in 2D bzw. (0, 0, 0) in 3D.',
     strategieTipp: 'Der Nullvektor ist das neutrale Element der Vektoraddition und hat Betrag 0.'
   },
   {
@@ -480,7 +480,7 @@ export const fragenPart3 = [
     fragetext: 'Gegeben ist v = (6, -8). Berechnen Sie -0,5 · v.',
     optionen: ['(-3, 4)', '(3, -4)', '(-3, -4)', '(3, 4)', '(-6, 8)'],
     korrekteAntwort: 0,
-    erklaerung: '-0,5 · (6, -8) = (-0,5·6, -0,5·(-8)) = (-3, 4).',
+    erklärung: '-0,5 · (6, -8) = (-0,5·6, -0,5·(-8)) = (-3, 4).',
     strategieTipp: 'Multiplizieren Sie jede Komponente mit dem Skalar. Achten Sie auf Vorzeichen.'
   },
   {
@@ -491,7 +491,7 @@ export const fragenPart3 = [
     fragetext: 'Die Vektoren a = (2, 1, -1) und b = (1, x, 2) schließen einen rechten Winkel ein. Bestimmen Sie x.',
     optionen: ['0', '1', '-1', '2', '-2'],
     korrekteAntwort: 0,
-    erklaerung: 'Rechter Winkel bedeutet a · b = 0: 2(1) + 1(x) + (-1)(2) = 2 + x - 2 = x = 0.',
+    erklärung: 'Rechter Winkel bedeutet a · b = 0: 2(1) + 1(x) + (-1)(2) = 2 + x - 2 = x = 0.',
     strategieTipp: 'Rechter Winkel bedeutet Skalarprodukt = 0. Setzen Sie die Gleichung auf und lösen Sie nach der Unbekannten.'
   },
   {
@@ -502,7 +502,7 @@ export const fragenPart3 = [
     fragetext: 'Berechnen Sie den Abstand zwischen den Punkten A(1, 2) und B(4, 6).',
     optionen: ['5', '7', '√7', '√25', '3'],
     korrekteAntwort: 0,
-    erklaerung: 'Abstand = |AB| = √((4-1)² + (6-2)²) = √(9 + 16) = √25 = 5.',
+    erklärung: 'Abstand = |AB| = √((4-1)² + (6-2)²) = √(9 + 16) = √25 = 5.',
     strategieTipp: 'Der Abstand zweier Punkte ist der Betrag des Differenzvektors.'
   },
   {
@@ -513,7 +513,7 @@ export const fragenPart3 = [
     fragetext: 'Welche Aussage über das Kreuzprodukt ist korrekt?',
     optionen: ['Es ist nur in 2D definiert', 'Das Ergebnis ist ein Skalar', 'Es ist nur in 3D definiert', 'Es ist kommutativ', 'Es ergibt immer den Nullvektor'],
     korrekteAntwort: 2,
-    erklaerung: 'Das Kreuzprodukt ist nur für 3D-Vektoren definiert und ergibt einen Vektor senkrecht zu beiden Ausgangsvektoren.',
+    erklärung: 'Das Kreuzprodukt ist nur für 3D-Vektoren definiert und ergibt einen Vektor senkrecht zu beiden Ausgangsvektoren.',
     strategieTipp: 'Kreuzprodukt: nur 3D, Ergebnis ist Vektor. Skalarprodukt: beliebige Dimension, Ergebnis ist Zahl.'
   },
   {
@@ -524,7 +524,7 @@ export const fragenPart3 = [
     fragetext: 'Drei Punkte A(1, 2), B(3, 4) und C(x, 6) liegen auf einer Geraden. Bestimmen Sie x.',
     optionen: ['5', '4', '6', '7', '3'],
     korrekteAntwort: 0,
-    erklaerung: 'Vektoren AB = (2, 2) und AC = (x-1, 4) müssen parallel sein: (x-1)/2 = 4/2, also x-1 = 4 und x = 5.',
+    erklärung: 'Vektoren AB = (2, 2) und AC = (x-1, 4) müssen parallel sein: (x-1)/2 = 4/2, also x-1 = 4 und x = 5.',
     strategieTipp: 'Punkte liegen auf einer Geraden, wenn die Verbindungsvektoren parallel sind (kollinear).'
   },
   {
@@ -535,7 +535,7 @@ export const fragenPart3 = [
     fragetext: 'Ein Vektor v = (a, b) hat Betrag 13 und die x-Komponente ist 5. Welche Werte kann b annehmen?',
     optionen: ['±12', '±8', '±13', '±5', '±√194'],
     korrekteAntwort: 0,
-    erklaerung: '|v| = √(5² + b²) = 13, also 25 + b² = 169, daher b² = 144 und b = ±12.',
+    erklärung: '|v| = √(5² + b²) = 13, also 25 + b² = 169, daher b² = 144 und b = ±12.',
     strategieTipp: 'Nutzen Sie die Betragsformel und lösen Sie nach der unbekannten Komponente auf.'
   },
   {
@@ -546,7 +546,7 @@ export const fragenPart3 = [
     fragetext: 'Was ist die geometrische Bedeutung des Skalarprodukts zweier Vektoren?',
     optionen: ['Die Summe der Vektoren', 'Die Projektion eines Vektors auf den anderen (mal Länge)', 'Der Winkel zwischen den Vektoren', 'Die Fläche des Parallelogramms', 'Der Betrag der Summe'],
     korrekteAntwort: 1,
-    erklaerung: 'a · b = |a||b|cos(α) beschreibt, wie stark die Vektoren in dieselbe Richtung zeigen. Es ist die Projektion mal Betrag.',
+    erklärung: 'a · b = |a||b|cos(α) beschreibt, wie stark die Vektoren in dieselbe Richtung zeigen. Es ist die Projektion mal Betrag.',
     strategieTipp: 'Das Skalarprodukt misst die "Übereinstimmung" der Richtungen. Bei orthogonalen Vektoren ist es 0.'
   }
 ];

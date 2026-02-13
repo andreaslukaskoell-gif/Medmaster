@@ -13,7 +13,7 @@ export const fragenPart2 = [
       'Lysosomen fusionieren niemals mit anderen Vesikeln'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Lysosomen sind membranumschlossene Organellen mit saurem Milieu (pH ~5). Sie enthalten hydrolytische Enzyme (saure Hydrolasen), die bei diesem niedrigen pH-Wert optimal arbeiten und Makromoleküle abbauen können.',
+    erklärung: 'Lysosomen sind membranumschlossene Organellen mit saurem Milieu (pH ~5). Sie enthalten hydrolytische Enzyme (saure Hydrolasen), die bei diesem niedrigen pH-Wert optimal arbeiten und Makromoleküle abbauen können.',
     strategieTipp: 'Das charakteristische Merkmal von Lysosomen ist das saure Milieu. Die Protonenpumpen in der Lysosomenmembran halten aktiv den niedrigen pH-Wert aufrecht.'
   },
   {
@@ -30,7 +30,7 @@ export const fragenPart2 = [
       'Replikation der mitochondrialen DNA'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Autophagie ist ein Selbstverdauungsprozess, bei dem defekte oder nicht mehr benötigte Zellorganellen in Autophagosomen eingeschlossen und nach Fusion mit Lysosomen abgebaut werden. Die Abbauprodukte werden recycelt.',
+    erklärung: 'Autophagie ist ein Selbstverdauungsprozess, bei dem defekte oder nicht mehr benötigte Zellorganellen in Autophagosomen eingeschlossen und nach Fusion mit Lysosomen abgebaut werden. Die Abbauprodukte werden recycelt.',
     strategieTipp: 'Auto- bedeutet "selbst", Phagie bedeutet "fressen". Autophagie ist also die "Selbstverdauung" der Zelle zur Qualitätskontrolle und Nährstoffgewinnung.'
   },
   {
@@ -47,7 +47,7 @@ export const fragenPart2 = [
       'Spaltung des Golgi-Apparats'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Endosomen sind Vesikel, die durch Endozytose entstehen. Sie nehmen extrazelluläres Material auf und transportieren es im Zellinneren. Frühe Endosomen reifen zu späten Endosomen, die dann mit Lysosomen fusionieren können.',
+    erklärung: 'Endosomen sind Vesikel, die durch Endozytose entstehen. Sie nehmen extrazelluläres Material auf und transportieren es im Zellinneren. Frühe Endosomen reifen zu späten Endosomen, die dann mit Lysosomen fusionieren können.',
     strategieTipp: 'Endosomen sind der erste Schritt nach der Aufnahme von Material von außen (Endozytose). Sie sortieren das Material für weiteren Transport oder Abbau.'
   },
   {
@@ -64,7 +64,7 @@ export const fragenPart2 = [
       'Sie werden in Mitochondrien zur Energiegewinnung verwendet'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Bei der Phagozytose werden große Partikel (z.B. Bakterien) von der Zelle aufgenommen und in Phagosomen eingeschlossen. Diese fusionieren mit Lysosomen zu Phagolysosomen, wo die Partikel durch lysosomale Enzyme abgebaut werden.',
+    erklärung: 'Bei der Phagozytose werden große Partikel (z.B. Bakterien) von der Zelle aufgenommen und in Phagosomen eingeschlossen. Diese fusionieren mit Lysosomen zu Phagolysosomen, wo die Partikel durch lysosomale Enzyme abgebaut werden.',
     strategieTipp: 'Phagozytose ist das "Zellfressen". Immunzellen wie Makrophagen nutzen diesen Prozess, um Krankheitserreger aufzunehmen und mit Hilfe von Lysosomen zu zerstören.'
   },
   {
@@ -81,7 +81,7 @@ export const fragenPart2 = [
       'Verbesserter Lipidtransport zum Golgi-Apparat'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Defekte lysosomale Enzyme führen zu lysosomalen Speicherkrankheiten. Nicht abgebautes Material akkumuliert in den Lysosomen, da die hydrolytischen Enzyme fehlen oder nicht funktionsfähig sind. Beispiele: Morbus Gaucher, Tay-Sachs-Krankheit.',
+    erklärung: 'Defekte lysosomale Enzyme führen zu lysosomalen Speicherkrankheiten. Nicht abgebautes Material akkumuliert in den Lysosomen, da die hydrolytischen Enzyme fehlen oder nicht funktionsfähig sind. Beispiele: Morbus Gaucher, Tay-Sachs-Krankheit.',
     strategieTipp: 'Wenn Abbauenzyme fehlen, sammelt sich das Substrat an. Dieses Prinzip gilt für alle Stoffwechseldefekte und ist prüfungsrelevant.'
   },
   {
@@ -98,7 +98,7 @@ export const fragenPart2 = [
       'Hexokinase'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Katalase ist das charakteristische Enzym der Peroxisomen. Sie katalysiert die Reaktion 2 H₂O₂ → 2 H₂O + O₂ und schützt so die Zelle vor dem toxischen Wasserstoffperoxid, das bei oxidativen Prozessen entsteht.',
+    erklärung: 'Katalase ist das charakteristische Enzym der Peroxisomen. Sie katalysiert die Reaktion 2 H₂O₂ → 2 H₂O + O₂ und schützt so die Zelle vor dem toxischen Wasserstoffperoxid, das bei oxidativen Prozessen entsteht.',
     strategieTipp: 'Peroxisomen enthalten viele Oxidasen, die H₂O₂ produzieren. Die Katalase baut dieses sofort ab – deshalb der Name "Peroxi-som" (Peroxid-Körper).'
   },
   {
@@ -115,7 +115,7 @@ export const fragenPart2 = [
       'Ausschließlich mehrfach ungesättigte Fettsäuren'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Peroxisomen sind spezialisiert auf den Abbau sehr langkettiger Fettsäuren (>C22), die von Mitochondrien nicht effizient abgebaut werden können. Die β-Oxidation in Peroxisomen verkürzt diese, sodass Mitochondrien den weiteren Abbau übernehmen können.',
+    erklärung: 'Peroxisomen sind spezialisiert auf den Abbau sehr langkettiger Fettsäuren (>C22), die von Mitochondrien nicht effizient abgebaut werden können. Die β-Oxidation in Peroxisomen verkürzt diese, sodass Mitochondrien den weiteren Abbau übernehmen können.',
     strategieTipp: 'Arbeitsteilung: Peroxisomen bauen sehr lange Fettsäuren vor, Mitochondrien übernehmen dann die normale β-Oxidation kürzerer Fettsäuren.'
   },
   {
@@ -132,7 +132,7 @@ export const fragenPart2 = [
       'ATP-Synthese durch Atmungskette'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Peroxisomen führen oxidative Reaktionen durch, bei denen H₂O₂ entsteht und sofort durch Katalase abgebaut wird. Sie sind wichtig für Fettsäureabbau, Cholesterinsynthese und Entgiftung von toxischen Substanzen.',
+    erklärung: 'Peroxisomen führen oxidative Reaktionen durch, bei denen H₂O₂ entsteht und sofort durch Katalase abgebaut wird. Sie sind wichtig für Fettsäureabbau, Cholesterinsynthese und Entgiftung von toxischen Substanzen.',
     strategieTipp: 'Peroxisomen sind die "Entgiftungszentren" der Zelle, besonders in Leber und Niere stark vertreten.'
   },
   {
@@ -149,7 +149,7 @@ export const fragenPart2 = [
       'H₂O₂ verhindert die Proteinfaltung im ER'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Wasserstoffperoxid ist ein reaktives Sauerstoffspezies (ROS), das Proteine, Lipide und DNA oxidativ schädigen kann. Die Katalase der Peroxisomen spaltet H₂O₂ sofort in harmlose Produkte (H₂O + O₂), um Zellschäden zu verhindern.',
+    erklärung: 'Wasserstoffperoxid ist ein reaktives Sauerstoffspezies (ROS), das Proteine, Lipide und DNA oxidativ schädigen kann. Die Katalase der Peroxisomen spaltet H₂O₂ sofort in harmlose Produkte (H₂O + O₂), um Zellschäden zu verhindern.',
     strategieTipp: 'ROS (reaktive Sauerstoffspezies) sind generell zellschädigend. Zellen haben verschiedene Schutzmechanismen, z.B. Katalase, Superoxiddismutase, Glutathion.'
   },
   {
@@ -166,7 +166,7 @@ export const fragenPart2 = [
       'In den Peroxisomen'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Ribosomen sind die Orte der Translation (Proteinbiosynthese). Sie können frei im Cytoplasma oder gebunden am rauen endoplasmatischen Retikulum vorkommen und übersetzen mRNA in Aminosäuresequenzen.',
+    erklärung: 'Ribosomen sind die Orte der Translation (Proteinbiosynthese). Sie können frei im Cytoplasma oder gebunden am rauen endoplasmatischen Retikulum vorkommen und übersetzen mRNA in Aminosäuresequenzen.',
     strategieTipp: 'Ribosomen sind die "Proteinfabriken" der Zelle. Sie lesen die mRNA ab und verknüpfen Aminosäuren zu Proteinen.'
   },
   {
@@ -183,7 +183,7 @@ export const fragenPart2 = [
       '70S-Ribosomen arbeiten ohne mRNA'
     ],
     korrekteAntwort: 0,
-    erklaerung: '70S-Ribosomen (50S + 30S Untereinheiten) kommen in Prokaryoten, Mitochondrien und Chloroplasten vor. 80S-Ribosomen (60S + 40S) sind charakteristisch für das Cytoplasma eukaryotischer Zellen. Das "S" steht für Svedberg-Einheit (Sedimentationskoeffizient).',
+    erklärung: '70S-Ribosomen (50S + 30S Untereinheiten) kommen in Prokaryoten, Mitochondrien und Chloroplasten vor. 80S-Ribosomen (60S + 40S) sind charakteristisch für das Cytoplasma eukaryotischer Zellen. Das "S" steht für Svedberg-Einheit (Sedimentationsköffizient).',
     strategieTipp: 'Die kleineren 70S-Ribosomen in Mitochondrien sind ein Hinweis auf die Endosymbiontentheorie. Antibiotika wie Tetracyclin hemmen spezifisch 70S-Ribosomen.'
   },
   {
@@ -200,7 +200,7 @@ export const fragenPart2 = [
       'Aus Phospholipiden und Cholesterin'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Ribosomen bestehen aus ribosomaler RNA (rRNA) und zahlreichen ribosomalen Proteinen. Die rRNA hat katalytische Funktion (Ribozym) und bildet die Peptidbindung zwischen Aminosäuren. Ribosomen haben zwei Untereinheiten (große und kleine).',
+    erklärung: 'Ribosomen bestehen aus ribosomaler RNA (rRNA) und zahlreichen ribosomalen Proteinen. Die rRNA hat katalytische Funktion (Ribozym) und bildet die Peptidbindung zwischen Aminosäuren. Ribosomen haben zwei Untereinheiten (große und kleine).',
     strategieTipp: 'rRNA ist nicht nur strukturell, sondern auch katalytisch aktiv – ein wichtiges Beispiel für RNA-Enzyme (Ribozyme).'
   },
   {
@@ -217,7 +217,7 @@ export const fragenPart2 = [
       'Für den Golgi-Apparat'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Freie Ribosomen synthetisieren Proteine, die im Cytoplasma verbleiben oder in Zellkern, Mitochondrien oder Peroxisomen transportiert werden. Proteine für ER, Golgi, Lysosomen oder Export werden an membrangebundenen Ribosomen des rauen ER synthetisiert.',
+    erklärung: 'Freie Ribosomen synthetisieren Proteine, die im Cytoplasma verbleiben oder in Zellkern, Mitochondrien oder Peroxisomen transportiert werden. Proteine für ER, Golgi, Lysosomen oder Export werden an membrangebundenen Ribosomen des rauen ER synthetisiert.',
     strategieTipp: 'Faustregel: Freie Ribosomen → cytosolische Proteine. ER-gebundene Ribosomen → Membran- und Exportproteine.'
   },
   {
@@ -234,7 +234,7 @@ export const fragenPart2 = [
       'Sie pumpen Ionen durch Membranen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Ribosomale Proteine stabilisieren die dreidimensionale Struktur der rRNA und unterstützen die Funktion des Ribosoms bei der Translation. Die eigentliche Katalyse der Peptidbindung übernimmt aber die rRNA (Ribozym).',
+    erklärung: 'Ribosomale Proteine stabilisieren die dreidimensionale Struktur der rRNA und unterstützen die Funktion des Ribosoms bei der Translation. Die eigentliche Katalyse der Peptidbindung übernimmt aber die rRNA (Ribozym).',
     strategieTipp: 'Ribosomen sind RNA-Protein-Komplexe, bei denen die RNA die Hauptarbeit leistet und Proteine unterstützend wirken.'
   },
   {
@@ -251,7 +251,7 @@ export const fragenPart2 = [
       'Speicherung von Proteinen in Vesikeln'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Proteasomen sind zylinderförmige Proteinkomplexe, die ubiquitinierte Proteine abbauen. Das Ubiquitin-Proteasom-System ist der Hauptweg für den gezielten Abbau fehlgefalteter, beschädigter oder nicht mehr benötigter Proteine im Cytoplasma.',
+    erklärung: 'Proteasomen sind zylinderförmige Proteinkomplexe, die ubiquitinierte Proteine abbauen. Das Ubiquitin-Proteasom-System ist der Hauptweg für den gezielten Abbau fehlgefalteter, beschädigter oder nicht mehr benötigter Proteine im Cytoplasma.',
     strategieTipp: 'Ubiquitin ist das "Müllmarker-Molekül" der Zelle. Proteine mit Ubiquitin-Kette werden zum Proteasom transportiert und dort abgebaut.'
   },
   {
@@ -268,7 +268,7 @@ export const fragenPart2 = [
       'Ubiquitin repariert beschädigte DNA'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Ubiquitin ist ein kleines Protein (76 Aminosäuren), das kovalent an Zielproteine gebunden wird (Ubiquitinierung). Diese Markierung signalisiert den Abbau durch das 26S-Proteasom. Multiple Ubiquitin-Moleküle bilden eine Poly-Ubiquitin-Kette.',
+    erklärung: 'Ubiquitin ist ein kleines Protein (76 Aminosäuren), das kovalent an Zielproteine gebunden wird (Ubiquitinierung). Diese Markierung signalisiert den Abbau durch das 26S-Proteasom. Multiple Ubiquitin-Moleküle bilden eine Poly-Ubiquitin-Kette.',
     strategieTipp: 'Das Ubiquitin-Proteasom-System ist hochspezifisch und reguliert viele zelluläre Prozesse wie Zellzyklus, Signaltransduktion und Qualitätskontrolle.'
   },
   {
@@ -285,7 +285,7 @@ export const fragenPart2 = [
       'In Lysosomen, Proteinabbau'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Zentriolen sind paarweise im Centrosom lokalisiert und organisieren die Mikrotubuli. Bei der Zellteilung bilden sie die Pole des Spindelapparats, der die Chromosomen auf die Tochterzellen verteilt. Zentriolen haben eine charakteristische 9×3-Struktur (9 Tripletts).',
+    erklärung: 'Zentriolen sind paarweise im Centrosom lokalisiert und organisieren die Mikrotubuli. Bei der Zellteilung bilden sie die Pole des Spindelapparats, der die Chromosomen auf die Tochterzellen verteilt. Zentriolen haben eine charakteristische 9×3-Struktur (9 Tripletts).',
     strategieTipp: 'Centrosom = Mikrotubuli-Organisationszentrum (MTOC). Zentriolen sind die Kernstrukturen des Centrosoms und essentiell für korrekte Zellteilung.'
   },
   {
@@ -302,7 +302,7 @@ export const fragenPart2 = [
       'Aus Intermediärfilamenten'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Zentriolen bestehen aus neun Mikrotubuli-Tripletts, die zylindrisch angeordnet sind (9×3-Struktur). Sie sind etwa 0,2 µm im Durchmesser und 0,4 µm lang. Zwei Zentriolen stehen senkrecht zueinander und bilden das Centrosom.',
+    erklärung: 'Zentriolen bestehen aus neun Mikrotubuli-Tripletts, die zylindrisch angeordnet sind (9×3-Struktur). Sie sind etwa 0,2 µm im Durchmesser und 0,4 µm lang. Zwei Zentriolen stehen senkrecht züinander und bilden das Centrosom.',
     strategieTipp: 'Unterscheide die Strukturen: Zentriolen 9×3 (Tripletts), Kinozilien/Geißeln 9×2+2 (Dupletts plus zentrale Mikrotubuli).'
   },
   {
@@ -319,7 +319,7 @@ export const fragenPart2 = [
       'Mitochondrien, Chloroplasten und Zellkern'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Das Zytoskelett besteht aus drei Typen von Proteinfilamenten: Mikrofilamente (Aktin, ~7 nm), Intermediärfilamente (~10 nm) und Mikrotubuli (Tubulin, ~25 nm). Sie geben der Zelle Form, ermöglichen Bewegung und organisieren Zellorganellen.',
+    erklärung: 'Das Zytoskelett besteht aus drei Typen von Proteinfilamenten: Mikrofilamente (Aktin, ~7 nm), Intermediärfilamente (~10 nm) und Mikrotubuli (Tubulin, ~25 nm). Sie geben der Zelle Form, ermöglichen Bewegung und organisieren Zellorganellen.',
     strategieTipp: 'Merke die Größenordnung: Mikrofilamente (dünn) < Intermediärfilamente (mittel) < Mikrotubuli (dick). Alle drei haben unterschiedliche Funktionen.'
   },
   {
@@ -336,7 +336,7 @@ export const fragenPart2 = [
       'Myosin'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Mikrofilamente (auch Aktinfilamente genannt) bestehen aus polymerisiertem Aktin. Sie sind etwa 7 nm dick und spielen eine zentrale Rolle bei Zellbewegung, Muskelkontraktion (zusammen mit Myosin) und Aufrechterhaltung der Zellform.',
+    erklärung: 'Mikrofilamente (auch Aktinfilamente genannt) bestehen aus polymerisiertem Aktin. Sie sind etwa 7 nm dick und spielen eine zentrale Rolle bei Zellbewegung, Muskelkontraktion (zusammen mit Myosin) und Aufrechterhaltung der Zellform.',
     strategieTipp: 'Aktin ist eines der häufigsten Proteine in eukaryotischen Zellen. Es kann zwischen G-Aktin (globulär, monomer) und F-Aktin (filamentös, polymer) wechseln.'
   },
   {
@@ -353,7 +353,7 @@ export const fragenPart2 = [
       'Vimentin'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Myosin ist ein Motorprotein, das ATP-abhängig entlang von Aktinfilamenten gleitet. In Muskelzellen bildet Myosin mit Aktin das kontraktile System. Myosin-Köpfe binden an Aktin und führen unter ATP-Verbrauch Konformationsänderungen durch.',
+    erklärung: 'Myosin ist ein Motorprotein, das ATP-abhängig entlang von Aktinfilamenten gleitet. In Muskelzellen bildet Myosin mit Aktin das kontraktile System. Myosin-Köpfe binden an Aktin und führen unter ATP-Verbrauch Konformationsänderungen durch.',
     strategieTipp: 'Motorproteine auf Aktin: Myosin. Motorproteine auf Mikrotubuli: Kinesin (Plus-Ende) und Dynein (Minus-Ende). Wichtig für Transportprozesse!'
   },
   {
@@ -370,7 +370,7 @@ export const fragenPart2 = [
       'Myosin und Aktin'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Mikrotubuli sind hohle Röhren aus α- und β-Tubulin-Heterodimeren. 13 Protofilamente bilden einen Mikrotubulus mit ~25 nm Durchmesser. Sie sind dynamisch und können schnell polymerisieren oder depolymerisieren.',
+    erklärung: 'Mikrotubuli sind hohle Röhren aus α- und β-Tubulin-Heterodimeren. 13 Protofilamente bilden einen Mikrotubulus mit ~25 nm Durchmesser. Sie sind dynamisch und können schnell polymerisieren oder depolymerisieren.',
     strategieTipp: 'Mikrotubuli haben ein Plus-Ende (schnelles Wachstum) und ein Minus-Ende (langsames Wachstum). Sie sind die "Autobahnen" für intrazellulären Transport.'
   },
   {
@@ -387,7 +387,7 @@ export const fragenPart2 = [
       'Beide bewegen sich in beide Richtungen gleichzeitig'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Kinesin transportiert Fracht vom Zellzentrum zur Peripherie (Plus-Ende der Mikrotubuli). Dynein bewegt sich in entgegengesetzter Richtung zum Minus-Ende (Richtung Centrosom). Beide nutzen ATP als Energiequelle für den gerichteten Transport.',
+    erklärung: 'Kinesin transportiert Fracht vom Zellzentrum zur Peripherie (Plus-Ende der Mikrotubuli). Dynein bewegt sich in entgegengesetzter Richtung zum Minus-Ende (Richtung Centrosom). Beide nutzen ATP als Energiequelle für den gerichteten Transport.',
     strategieTipp: 'Eselsbrücke: Kinesin = "kommt raus" (Plus-Ende, Peripherie), Dynein = "drinnen" (Minus-Ende, Zellzentrum). Beide sind essentiell für Vesikeltransport.'
   },
   {
@@ -404,7 +404,7 @@ export const fragenPart2 = [
       'Fokale Adhäsionen'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Tight Junctions (Zonulae occludentes) sind dichte Verbindungen zwischen Epithelzellen, die den Raum zwischen den Zellen abdichten. Sie verhindern den unkontrollierten Durchtritt von Molekülen zwischen den Zellen (parazellulärer Transport) und trennen apikale von basolateraler Membran.',
+    erklärung: 'Tight Junctions (Zonulae occludentes) sind dichte Verbindungen zwischen Epithelzellen, die den Raum zwischen den Zellen abdichten. Sie verhindern den unkontrollierten Durchtritt von Molekülen zwischen den Zellen (parazellulärer Transport) und trennen apikale von basolateraler Membran.',
     strategieTipp: 'Tight Junctions sind besonders wichtig in Barriere-Epithelien wie Darmepithel oder Blut-Hirn-Schranke, wo selektive Durchlässigkeit essentiell ist.'
   },
   {
@@ -421,7 +421,7 @@ export const fragenPart2 = [
       'Energieübertragung zwischen Zellen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Desmosomen (Maculae adherentes) sind punktförmige Haftkontakte, die mechanische Stabilität zwischen Zellen gewährleisten. Sie verbinden die Intermediärfilamente benachbarter Zellen und sind besonders wichtig in mechanisch beanspruchten Geweben wie Haut und Herzmuskel.',
+    erklärung: 'Desmosomen (Maculae adherentes) sind punktförmige Haftkontakte, die mechanische Stabilität zwischen Zellen gewährleisten. Sie verbinden die Intermediärfilamente benachbarter Zellen und sind besonders wichtig in mechanisch beanspruchten Geweben wie Haut und Herzmuskel.',
     strategieTipp: 'Desmo- bedeutet "Bindung". Desmosomen halten Zellen wie Nieten zusammen, besonders in Geweben, die Zugkräften ausgesetzt sind.'
   },
   {
@@ -438,7 +438,7 @@ export const fragenPart2 = [
       'Abdichtung gegen Pathogene'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Gap Junctions (Nexus) sind Kanäle aus Connexin-Proteinen, die das Cytoplasma benachbarter Zellen direkt verbinden. Sie erlauben den Austausch von Ionen, Metaboliten und kleinen Molekülen (<1000 Da) und ermöglichen so elektrische und metabolische Kopplung.',
+    erklärung: 'Gap Junctions (Nexus) sind Kanäle aus Connexin-Proteinen, die das Cytoplasma benachbarter Zellen direkt verbinden. Sie erlauben den Austausch von Ionen, Metaboliten und kleinen Molekülen (<1000 Da) und ermöglichen so elektrische und metabolische Kopplung.',
     strategieTipp: 'Gap Junctions sind essentiell für koordinierte Aktivität in Herzmuskel (elektrische Erregungsweiterleitung) und glatten Muskelzellen.'
   },
   {
@@ -455,7 +455,7 @@ export const fragenPart2 = [
       'Ausschließlich in Nervenzellen vorkommen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Hemidesmosomen sind "halbe Desmosomen", die Epithelzellen mit der darunterliegenden Basallamina (extrazelluläre Matrix) verbinden. Sie nutzen Integrine statt Cadherine und verankern die Zelle am Bindegewebe. Wichtig für die Stabilität von Epithelien.',
+    erklärung: 'Hemidesmosomen sind "halbe Desmosomen", die Epithelzellen mit der darunterliegenden Basallamina (extrazelluläre Matrix) verbinden. Sie nutzen Integrine statt Cadherine und verankern die Zelle am Bindegewebe. Wichtig für die Stabilität von Epithelien.',
     strategieTipp: 'Hemi- bedeutet "halb". Während Desmosomen Zell-Zell-Kontakte sind, verbinden Hemidesmosomen Zelle-Matrix. Defekte führen zu Hautblasenbildung (z.B. epidermolysis bullosa).'
   },
   {
@@ -472,7 +472,7 @@ export const fragenPart2 = [
       'Synapsen'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Gap Junctions in Glanzstreifen des Herzmuskels ermöglichen die schnelle Weiterleitung elektrischer Erregung zwischen Herzmuskelzellen. Dies ist essentiell für die synchrone Kontraktion des Herzens als funktionelles Syncytium.',
+    erklärung: 'Gap Junctions in Glanzstreifen des Herzmuskels ermöglichen die schnelle Weiterleitung elektrischer Erregung zwischen Herzmuskelzellen. Dies ist essentiell für die synchrone Kontraktion des Herzens als funktionelles Syncytium.',
     strategieTipp: 'Das Herz arbeitet als elektrische Einheit dank Gap Junctions. Störungen können zu Arrhythmien führen.'
   },
   {
@@ -489,7 +489,7 @@ export const fragenPart2 = [
       'Keine Mikrotubuli'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Kinozilien (bewegliche Zilien) und Geißeln haben eine 9×2+2-Struktur: 9 periphere Mikrotubuli-Dupletts umgeben 2 zentrale Mikrotubuli. Diese Struktur ist essentiell für die Beweglichkeit. Dynein-Arme zwischen den Dupletts erzeugen die Schlagbewegung.',
+    erklärung: 'Kinozilien (bewegliche Zilien) und Geißeln haben eine 9×2+2-Struktur: 9 periphere Mikrotubuli-Dupletts umgeben 2 zentrale Mikrotubuli. Diese Struktur ist essentiell für die Beweglichkeit. Dynein-Arme zwischen den Dupletts erzeugen die Schlagbewegung.',
     strategieTipp: 'Unterscheide: Kinozilien/Geißeln = 9×2+2 (beweglich), Zentriolen = 9×3 (organisieren Spindelapparat), primäre Zilien = 9×2+0 (sensorisch, unbeweglich).'
   },
   {
@@ -506,7 +506,7 @@ export const fragenPart2 = [
       'Im Knorpelgewebe'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Kinozilien finden sich im respiratorischen Epithel der Atemwege, wo sie durch koordinierte Schlagbewegung Schleim und Partikel Richtung Rachen transportieren (mukoziliäre Clearance). Auch in Eileiter und Ependym des ZNS vorhanden.',
+    erklärung: 'Kinozilien finden sich im respiratorischen Epithel der Atemwege, wo sie durch koordinierte Schlagbewegung Schleim und Partikel Richtung Rachen transportieren (mukoziliäre Clearance). Auch in Eileiter und Ependym des ZNS vorhanden.',
     strategieTipp: 'Bei Kartagener-Syndrom (primäre ziliäre Dyskinesie) sind Zilien dysfunktional → chronische Atemwegsinfekte, Bronchiektasen, oft Situs inversus.'
   },
   {
@@ -523,7 +523,7 @@ export const fragenPart2 = [
       'Mikrovilli haben eine Membran aus Chitin'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Mikrovilli sind fingerförmige Ausstülpungen der Zellmembran mit einem Kern aus Aktin-Filamenten (nicht Mikrotubuli). Sie sind unbeweglich und vergrößern die Zelloberfläche, z.B. im Dünndarmepithel für verbesserte Absorption (Bürstensaum).',
+    erklärung: 'Mikrovilli sind fingerförmige Ausstülpungen der Zellmembran mit einem Kern aus Aktin-Filamenten (nicht Mikrotubuli). Sie sind unbeweglich und vergrößern die Zelloberfläche, z.B. im Dünndarmepithel für verbesserte Absorption (Bürstensaum).',
     strategieTipp: 'Mikrovilli = Oberflächenvergrößerung (Absorption). Kinozilien = Bewegung (Transport). Unterschiedliche Struktur und Funktion!'
   },
   {
@@ -540,7 +540,7 @@ export const fragenPart2 = [
       'Na⁺/K⁺-ATPase'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Diffusion ist der passive Transport von Molekülen entlang des Konzentrationsgefälles (von hoher zu niedriger Konzentration) ohne Energieverbrauch. Sie erfolgt aufgrund der thermischen Bewegung der Teilchen bis zum Konzentrationsausgleich.',
+    erklärung: 'Diffusion ist der passive Transport von Molekülen entlang des Konzentrationsgefälles (von hoher zu niedriger Konzentration) ohne Energieverbrauch. Sie erfolgt aufgrund der thermischen Bewegung der Teilchen bis zum Konzentrationsausgleich.',
     strategieTipp: 'Passive Prozesse (Diffusion, Osmose) benötigen keine Energie, laufen aber nur bergab (entlang des Gradienten). Aktive Prozesse benötigen ATP und können gegen den Gradienten arbeiten.'
   },
   {
@@ -557,7 +557,7 @@ export const fragenPart2 = [
       'Lipide'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Osmose ist die Diffusion von Wasser durch eine semipermeable Membran von einer Lösung mit niedriger Solutkonzentration (hypoton) zu einer mit hoher Solutkonzentration (hyperton), um die Konzentrationen auszugleichen.',
+    erklärung: 'Osmose ist die Diffusion von Wasser durch eine semipermeable Membran von einer Lösung mit niedriger Solutkonzentration (hypoton) zu einer mit hoher Solutkonzentration (hyperton), um die Konzentrationen auszugleichen.',
     strategieTipp: 'Wasser wandert immer dorthin, wo mehr gelöste Teilchen sind. In hypertonem Medium schrumpfen Zellen, in hypotonem Medium schwellen sie an.'
   },
   {
@@ -574,7 +574,7 @@ export const fragenPart2 = [
       'Erleichterte Diffusion'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Na⁺/K⁺-ATPase ist ein primär aktiver Transporter, der unter direktem ATP-Verbrauch 3 Na⁺-Ionen aus der Zelle und 2 K⁺-Ionen in die Zelle pumpt, gegen deren Konzentrationsgradient. Sie erzeugt das Membranpotential und ist essentiell für zelluläre Funktionen.',
+    erklärung: 'Die Na⁺/K⁺-ATPase ist ein primär aktiver Transporter, der unter direktem ATP-Verbrauch 3 Na⁺-Ionen aus der Zelle und 2 K⁺-Ionen in die Zelle pumpt, gegen deren Konzentrationsgradient. Sie erzeugt das Membranpotential und ist essentiell für zelluläre Funktionen.',
     strategieTipp: 'Primär aktiv = nutzt direkt ATP. Sekundär aktiv = nutzt Gradienten, die von primär aktiven Transportern erzeugt wurden (z.B. Na⁺-Glucose-Symport).'
   },
   {
@@ -591,7 +591,7 @@ export const fragenPart2 = [
       'Nur durch Diffusion gearbeitet'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Sekundär aktiver Transport nutzt Ionengradienten (z.B. Na⁺-Gradient), die durch primär aktive Transporter (z.B. Na⁺/K⁺-ATPase) aufgebaut wurden, um andere Stoffe gegen deren Gradienten zu transportieren. Beispiel: Na⁺-Glucose-Symport im Darm.',
+    erklärung: 'Sekundär aktiver Transport nutzt Ionengradienten (z.B. Na⁺-Gradient), die durch primär aktive Transporter (z.B. Na⁺/K⁺-ATPase) aufgebaut wurden, um andere Stoffe gegen deren Gradienten zu transportieren. Beispiel: Na⁺-Glucose-Symport im Darm.',
     strategieTipp: 'Der Na⁺-Gradient ist die "Währung" für viele sekundär aktive Transporter. Die Na⁺/K⁺-ATPase lädt diese "Batterie" auf.'
   },
   {
@@ -608,7 +608,7 @@ export const fragenPart2 = [
       'DNA-Replikation im Zellkern'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei der Endozytose stülpt sich die Plasmamembran ein und schnürt Vesikel ab, die extrazelluläres Material in die Zelle aufnehmen. Formen: Phagozytose (Feststoffe), Pinozytose (Flüssigkeit), rezeptorvermittelte Endozytose (spezifische Moleküle).',
+    erklärung: 'Bei der Endozytose stülpt sich die Plasmamembran ein und schnürt Vesikel ab, die extrazelluläres Material in die Zelle aufnehmen. Formen: Phagozytose (Feststoffe), Pinozytose (Flüssigkeit), rezeptorvermittelte Endozytose (spezifische Moleküle).',
     strategieTipp: 'Endo- = hinein, Exo- = hinaus. Endozytose nimmt auf, Exozytose gibt ab. Beide sind energieabhängige Prozesse.'
   },
   {
@@ -625,7 +625,7 @@ export const fragenPart2 = [
       'DNA-Synthese'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei der Exozytose fusionieren intrazelluläre Vesikel mit der Plasmamembran und geben ihren Inhalt nach außen ab. Wichtig für Sekretion von Hormonen, Neurotransmittern, Verdauungsenzymen und Insertion von Membranproteinen.',
+    erklärung: 'Bei der Exozytose fusionieren intrazelluläre Vesikel mit der Plasmamembran und geben ihren Inhalt nach außen ab. Wichtig für Sekretion von Hormonen, Neurotransmittern, Verdauungsenzymen und Insertion von Membranproteinen.',
     strategieTipp: 'Exozytose ist essentiell für Signalübertragung (Synapse) und Sekretion. Insulin-freisetzende β-Zellen nutzen z.B. regulierte Exozytose.'
   },
   {
@@ -642,7 +642,7 @@ export const fragenPart2 = [
       'Die Proteinsynthese wird gesteigert'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Hemmung der Na⁺/K⁺-ATPase führt zur Störung der Ionengradienten: Na⁺ steigt intrazellulär an, K⁺ sinkt. Das Membranpotential depolarisiert und bricht zusammen. Sekundär aktive Transporter versagen, die Zelle schwillt osmotisch an und kann sterben.',
+    erklärung: 'Hemmung der Na⁺/K⁺-ATPase führt zur Störung der Ionengradienten: Na⁺ steigt intrazellulär an, K⁺ sinkt. Das Membranpotential depolarisiert und bricht zusammen. Sekundär aktive Transporter versagen, die Zelle schwillt osmotisch an und kann sterben.',
     strategieTipp: 'Die Na⁺/K⁺-ATPase ist lebenswichtig. Sie verbraucht ~30% der zellulären ATP-Produktion und ist Ziel von Giften wie Herzglykosiden (Digoxin, Ouabain).'
   },
   {
@@ -659,7 +659,7 @@ export const fragenPart2 = [
       'Nur G0-Phase'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der Zellzyklus umfasst die Interphase (G1-, S-, G2-Phase) und die M-Phase (Mitose). G1: Zellwachstum, S: DNA-Replikation, G2: Vorbereitung auf Teilung, M: Kernteilung. Ruhende Zellen sind in G0-Phase.',
+    erklärung: 'Der Zellzyklus umfasst die Interphase (G1-, S-, G2-Phase) und die M-Phase (Mitose). G1: Zellwachstum, S: DNA-Replikation, G2: Vorbereitung auf Teilung, M: Kernteilung. Ruhende Zellen sind in G0-Phase.',
     strategieTipp: 'Interphase ist die längste Phase (~90% des Zellzyklus). Die Zelle verbringt die meiste Zeit mit Wachstum und DNA-Verdopplung, nicht mit Teilung.'
   },
   {
@@ -676,7 +676,7 @@ export const fragenPart2 = [
       'G0-Phase'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die DNA-Replikation erfolgt in der S-Phase (Synthese-Phase). Dabei wird das Genom vollständig verdoppelt, sodass jedes Chromosom aus zwei identischen Schwesterchromatiden besteht, die am Centromer verbunden sind.',
+    erklärung: 'Die DNA-Replikation erfolgt in der S-Phase (Synthese-Phase). Dabei wird das Genom vollständig verdoppelt, sodass jedes Chromosom aus zwei identischen Schwesterchromatiden besteht, die am Centromer verbunden sind.',
     strategieTipp: 'S = Synthese (von DNA). Nach der S-Phase hat die Zelle 4n DNA-Gehalt (diploid, aber verdoppelt), vor der S-Phase 2n.'
   },
   {
@@ -693,7 +693,7 @@ export const fragenPart2 = [
       'Interphase'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'In der Metaphase ordnen sich die Chromosomen (bestehend aus zwei Schwesterchromatiden) in der Äquatorialebene an. Die Kinetochoren sind mit Spindelfasern verbunden. Der Metaphase-Checkpoint prüft, ob alle Chromosomen korrekt angeheftet sind.',
+    erklärung: 'In der Metaphase ordnen sich die Chromosomen (bestehend aus zwei Schwesterchromatiden) in der Äquatorialebene an. Die Kinetochoren sind mit Spindelfasern verbunden. Der Metaphase-Checkpoint prüft, ob alle Chromosomen korrekt angeheftet sind.',
     strategieTipp: 'Mitose-Reihenfolge: Prophase (Kondensation) → Metaphase (Äquatorialebene) → Anaphase (Trennung) → Telophase (Dekondensation). PMAT als Merkspruch.'
   },
   {
@@ -710,7 +710,7 @@ export const fragenPart2 = [
       'Meiose I hat keine Spindelfasern'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'In Meiose I werden homologe Chromosomen getrennt (Reduktionsteilung), wodurch der Chromosomensatz von diploid (2n) auf haploid (n) reduziert wird. In Mitose werden Schwesterchromatiden getrennt, Chromosomensatz bleibt gleich. Meiose I ist Teil der Gametenbildung.',
+    erklärung: 'In Meiose I werden homologe Chromosomen getrennt (Reduktionsteilung), wodurch der Chromosomensatz von diploid (2n) auf haploid (n) reduziert wird. In Mitose werden Schwesterchromatiden getrennt, Chromosomensatz bleibt gleich. Meiose I ist Teil der Gametenbildung.',
     strategieTipp: 'Meiose I = Reduktionsteilung (2n → n), Meiose II = ähnlich wie Mitose (n → n). Crossing-over in Prophase I erzeugt genetische Variabilität.'
   },
   {
@@ -727,7 +727,7 @@ export const fragenPart2 = [
       'Aktivierung von Wachstumsfaktoren'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'p53 ist der "Wächter des Genoms". Bei DNA-Schäden aktiviert p53 Zellzyklus-Arrest (G1-Checkpoint), DNA-Reparaturgene oder Apoptose. Mutationen in p53 (häufigste Mutation in Tumoren) führen zu unkontrollierter Teilung beschädigter Zellen.',
+    erklärung: 'p53 ist der "Wächter des Genoms". Bei DNA-Schäden aktiviert p53 Zellzyklus-Arrest (G1-Checkpoint), DNA-Reparaturgene oder Apoptose. Mutationen in p53 (häufigste Mutation in Tumoren) führen zu unkontrollierter Teilung beschädigter Zellen.',
     strategieTipp: 'p53-Defekt → Kontrollverlust → Krebs. Über 50% aller Tumoren haben p53-Mutationen. p53 ist eines der wichtigsten Tumorsuppressorgene.'
   },
   {
@@ -744,7 +744,7 @@ export const fragenPart2 = [
       'Ionentransport'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Cycline sind regulatorische Proteine, deren Konzentration im Zellzyklus schwankt. Sie aktivieren CDKs (cyclin-dependent kinases), die Zellzyklus-Übergänge kontrollieren (z.B. G1/S, G2/M). Der Cyclin-CDK-Komplex phosphoryliert Zielproteine und treibt den Zellzyklus voran.',
+    erklärung: 'Cycline sind regulatorische Proteine, deren Konzentration im Zellzyklus schwankt. Sie aktivieren CDKs (cyclin-dependent kinases), die Zellzyklus-Übergänge kontrollieren (z.B. G1/S, G2/M). Der Cyclin-CDK-Komplex phosphoryliert Zielproteine und treibt den Zellzyklus voran.',
     strategieTipp: 'Cyclin-Level steigen und fallen periodisch. CDKs sind konstant vorhanden, aber nur aktiv, wenn Cyclin bindet. Kontrollierte Degradation von Cyclinen stoppt Zellzyklus-Progression.'
   },
   {
@@ -761,7 +761,7 @@ export const fragenPart2 = [
       'Chromosomen ordnen sich in der Äquatorialebene'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'In der Anaphase werden die Schwesterchromatiden am Centromer getrennt und durch Verkürzung der Spindelfasern zu entgegengesetzten Zellpolen gezogen. Jeder Pol erhält einen vollständigen Chromosomensatz.',
+    erklärung: 'In der Anaphase werden die Schwesterchromatiden am Centromer getrennt und durch Verkürzung der Spindelfasern zu entgegengesetzten Zellpolen gezogen. Jeder Pol erhält einen vollständigen Chromosomensatz.',
     strategieTipp: 'Anaphase = Auseinanderziehen. Die Spindelfasern verkürzen sich aktiv durch Depolymerisation von Mikrotubuli und ziehen die Chromatiden auseinander.'
   },
   {
@@ -778,7 +778,7 @@ export const fragenPart2 = [
       'Endozytose von Bakterien'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Apoptose ist der programmierte Zelltod, ein aktiver, energieabhängiger Prozess, bei dem Zellen kontrolliert absterben ohne Entzündungsreaktion auszulösen. Wichtig für Entwicklung (z.B. Finger-Trennung im Embryo) und Entfernung geschädigter/alter Zellen.',
+    erklärung: 'Apoptose ist der programmierte Zelltod, ein aktiver, energieabhängiger Prozess, bei dem Zellen kontrolliert absterben ohne Entzündungsreaktion auszulösen. Wichtig für Entwicklung (z.B. Finger-Trennung im Embryo) und Entfernung geschädigter/alter Zellen.',
     strategieTipp: 'Apoptose ist "Zellselbstmord" – geordnet und sauber. Nekrose ist "Zellmord" – chaotisch mit Entzündung. Beide sind fundamental verschieden.'
   },
   {
@@ -795,7 +795,7 @@ export const fragenPart2 = [
       'Katalase'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Caspasen sind Cysteinproteasen, die in einer Kaskade aktiviert werden und zelluläre Proteine spalten, was zur Apoptose führt. Initiatorcaspasen (Caspase-8, -9) starten die Kaskade, Effektorcaspasen (Caspase-3, -6, -7) führen die Zelldemontage durch.',
+    erklärung: 'Caspasen sind Cysteinproteasen, die in einer Kaskade aktiviert werden und zelluläre Proteine spalten, was zur Apoptose führt. Initiatorcaspasen (Caspase-8, -9) starten die Kaskade, Effektorcaspasen (Caspase-3, -6, -7) führen die Zelldemontage durch.',
     strategieTipp: 'Caspasen-Kaskade ist wie eine Lawine: Einmal gestartet, verstärkt sie sich selbst. Apoptose ist irreversibel, sobald Effektorcaspasen aktiv sind.'
   },
   {
@@ -812,7 +812,7 @@ export const fragenPart2 = [
       'Beide sind identisch'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Apoptose ist programmiert, energieabhängig, Zelle schrumpft, DNA wird fragmentiert, keine Entzündung. Nekrose ist pathologisch durch Schädigung, Zelle schwillt an, Membran platzt, Zellinhalt löst Entzündung aus. Apoptose ist "sauber", Nekrose "schmutzig".',
+    erklärung: 'Apoptose ist programmiert, energieabhängig, Zelle schrumpft, DNA wird fragmentiert, keine Entzündung. Nekrose ist pathologisch durch Schädigung, Zelle schwillt an, Membran platzt, Zellinhalt löst Entzündung aus. Apoptose ist "sauber", Nekrose "schmutzig".',
     strategieTipp: 'Apoptose = physiologisch, geordnet, Membran intakt (apoptotische Körperchen werden phagozytiert). Nekrose = pathologisch, chaotisch, Membranruptur.'
   },
   {
@@ -829,7 +829,7 @@ export const fragenPart2 = [
       'DNA-Replikation'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Apoptose ist essentiell für Morphogenese: Trennung der Finger/Zehen (Abbau der Schwimmhäute), Formung des Nervensystems (Entfernung überzähliger Neuronen), Entwicklung des Immunsystems (Deletion autoreaktiver T-Zellen). Defekte Apoptose führt zu Fehlbildungen.',
+    erklärung: 'Apoptose ist essentiell für Morphogenese: Trennung der Finger/Zehen (Abbau der Schwimmhäute), Formung des Nervensystems (Entfernung überzähliger Neuronen), Entwicklung des Immunsystems (Deletion autoreaktiver T-Zellen). Defekte Apoptose führt zu Fehlbildungen.',
     strategieTipp: 'Entwicklung ist nicht nur Wachstum, sondern auch gezielter Abbau. Etwa 50% aller Neuronen sterben während der Entwicklung durch Apoptose.'
   },
   {
@@ -846,7 +846,7 @@ export const fragenPart2 = [
       'Keine Auswirkungen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Defekte Apoptose führt zur Akkumulation beschädigter, potentiell maligner Zellen → erhöhtes Krebsrisiko. Beispiel: Überexpression von anti-apoptotischen Proteinen (z.B. Bcl-2) in Lymphomen. Auch Autoimmunerkrankungen möglich durch fehlende Deletion autoreaktiver Lymphozyten.',
+    erklärung: 'Defekte Apoptose führt zur Akkumulation beschädigter, potentiell maligner Zellen → erhöhtes Krebsrisiko. Beispiel: Überexpression von anti-apoptotischen Proteinen (z.B. Bcl-2) in Lymphomen. Auch Autoimmunerkrankungen möglich durch fehlende Deletion autoreaktiver Lymphozyten.',
     strategieTipp: 'Balance ist wichtig: Zu viel Apoptose → Degeneration (Neurodegeneration), zu wenig Apoptose → Krebs oder Autoimmunität. p53 aktiviert Apoptose bei DNA-Schäden.'
   }
 ];

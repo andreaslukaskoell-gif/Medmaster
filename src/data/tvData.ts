@@ -269,7 +269,7 @@ Besonders faszinierend ist die Frage der transgenerationalen Epigenetik: Können
   {
     id: "tv-5",
     title: "Mikrobiom und Gesundheit",
-    content: `Der menschliche Körper beherbergt Billionen von Mikroorganismen, die in ihrer Gesamtheit als Mikrobiom bezeichnet werden. Die größte Ansammlung findet sich im Darm, wo schätzungsweise 100 Billionen Bakterien aus über 1.000 verschiedenen Arten leben. Das Gewicht der Darmmikroben beträgt insgesamt etwa 1,5 bis 2 Kilogramm. Die Zusammensetzung des Mikrobioms ist individuell so einzigartig wie ein Fingerabdruck und wird durch Geburtsmodus, Ernährung, Medikamenteneinnahme und Umweltfaktoren geformt.
+    content: `Der menschliche Körper beherbergt Billionen von Mikroorganismen, die in ihrer Gesamtheit als Mikrobiom bezeichnet werden. Die größte Ansammlung findet sich im Darm, wo schätzungsweise 100 Billionen Bakterien aus über 1.000 verschiedenen Arten leben. Das Gewicht der Darmmikroben beträgt insgesamt etwa 1,5 bis 2 Kilogramm. Die Zusammensetzung des Mikrobioms ist individüll so einzigartig wie ein Fingerabdruck und wird durch Geburtsmodus, Ernährung, Medikamenteneinnahme und Umweltfaktoren geformt.
 
 Eine der spannendsten Entdeckungen der letzten Jahre ist die sogenannte Darm-Hirn-Achse. Darmbakterien kommunizieren über verschiedene Wege mit dem Gehirn: über den Vagusnerv, über Immunbotenstoffe und über Stoffwechselprodukte wie kurzkettige Fettsäuren. Tierstudien haben gezeigt, dass keimfreie Mäuse ein verändertes Angst- und Stressverhalten aufweisen. Beim Menschen gibt es zunehmend Hinweise, dass die Zusammensetzung des Darmmikrobioms mit psychischen Erkrankungen wie Depressionen und Angststörungen in Zusammenhang steht, wobei die genauen Mechanismen noch erforscht werden.
 

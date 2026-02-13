@@ -41,7 +41,7 @@ export interface StichwortFrage {
   fragetext: string;
   optionen: string[];
   korrekteAntwort: number; // 0-based index
-  erklaerung: string;
+  erklärung: string;
   strategieTipp: string;
 }
 
@@ -97,7 +97,7 @@ export function convertToQuestion(frage: StichwortFrage): Question {
       text,
     })),
     correctOptionId: optionLetters[frage.korrekteAntwort],
-    explanation: frage.erklaerung,
+    explanation: frage.erklärung,
     difficulty: frage.schwierigkeit,
     tags: sw?.linkedQuestionTags ?? [],
   };

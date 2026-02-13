@@ -111,7 +111,7 @@ export default function StichwortlistePage() {
     }
 
     if (priorityFilter !== "alle") {
-      list = list.filter((s) => s.prioritaet === priorityFilter);
+      list = list.filter((s) => s.priorität === priorityFilter);
     }
 
     return list;
@@ -321,7 +321,7 @@ export default function StichwortlistePage() {
                                   <Sparkles className="w-3 h-3" /> NEU 2026
                                 </span>
                               )}
-                              {sw.prioritaet === "hoch" && (
+                              {sw.priorität === "hoch" && (
                                 <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-orange-100 text-orange-800 dark:bg-orange-900/40 dark:text-orange-300">
                                   PRÜFUNGSRELEVANT
                                 </span>

@@ -13,7 +13,7 @@ export const fragenPart5 = [
       'Alle Monosaccharide haben die allgemeine Formel Cₙ(H₂O)ₙ₊₁'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'D-Glucose (Aldose) und D-Fructose (Ketose) sind beide Hexosen mit der Summenformel C₆H₁₂O₆ und somit Konstitutionsisomere. Glucose ist eine Aldose (keine Ketose), Ribose ist eine Pentose (C₅H₁₀O₅), und in Lösung liegt Glucose überwiegend ringförmig vor (Pyranoseform).',
+    erklärung: 'D-Glucose (Aldose) und D-Fructose (Ketose) sind beide Hexosen mit der Summenformel C₆H₁₂O₆ und somit Konstitutionsisomere. Glucose ist eine Aldose (keine Ketose), Ribose ist eine Pentose (C₅H₁₀O₅), und in Lösung liegt Glucose überwiegend ringförmig vor (Pyranoseform).',
     strategieTipp: 'Merke: Glucose = Aldohexose, Fructose = Ketohexose, beide C₆H₁₂O₆. Die Ringform dominiert in wässriger Lösung (>99%).'
   },
   {
@@ -30,7 +30,7 @@ export const fragenPart5 = [
       'Ein Aminozucker'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Zwei Monosaccharide verbinden sich unter Wasserabspaltung (Kondensation) zu einem Disaccharid. Die Bindung zwischen den beiden Zuckermolekülen wird glykosidische Bindung genannt (z.B. α-1,4-glykosidisch bei Maltose).',
+    erklärung: 'Zwei Monosaccharide verbinden sich unter Wasserabspaltung (Kondensation) zu einem Disaccharid. Die Bindung zwischen den beiden Zuckermolekülen wird glykosidische Bindung genannt (z.B. α-1,4-glykosidisch bei Maltose).',
     strategieTipp: 'Glykosidische Bindung = Bindungstyp zwischen Zuckern. 2 Monosaccharide = Disaccharid, viele = Polysaccharid.'
   },
   {
@@ -47,7 +47,7 @@ export const fragenPart5 = [
       'Die OH-Gruppe am C2 steht immer in trans-Position zur OH-Gruppe am C1'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei α-D-Glucose in der Haworth-Projektion zeigt die anomere OH-Gruppe am C1 nach unten (auf der gleichen Seite wie der Sauerstoff im Ring). Bei β-D-Glucose zeigt sie nach oben. Glucose bildet einen Sechsring (Pyranose), und die CH₂OH-Gruppe zeigt nach oben.',
+    erklärung: 'Bei α-D-Glucose in der Haworth-Projektion zeigt die anomere OH-Gruppe am C1 nach unten (auf der gleichen Seite wie der Sauerstoff im Ring). Bei β-D-Glucose zeigt sie nach oben. Glucose bildet einen Sechsring (Pyranose), und die CH₂OH-Gruppe zeigt nach oben.',
     strategieTipp: 'α = OH unten, β = OH oben (am anomeren C1). Glucose = Pyranose (6-Ring), Fructose = Furanose (5-Ring) in Saccharose.'
   },
   {
@@ -64,7 +64,7 @@ export const fragenPart5 = [
       'Trehalose'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Maltose (Malzzucker) besteht aus zwei α-D-Glucosemolekülen, die α-1,4-glykosidisch verknüpft sind. Cellobiose hat β-1,4-Bindung, Saccharose besteht aus Glucose und Fructose, Lactose aus Galactose und Glucose, Trehalose hat α-1,1-Bindung.',
+    erklärung: 'Maltose (Malzzucker) besteht aus zwei α-D-Glucosemolekülen, die α-1,4-glykosidisch verknüpft sind. Cellobiose hat β-1,4-Bindung, Saccharose besteht aus Glucose und Fructose, Lactose aus Galactose und Glucose, Trehalose hat α-1,1-Bindung.',
     strategieTipp: 'Maltose = 2 Glucose α-1,4. Cellobiose = 2 Glucose β-1,4. Bindungstyp und Monomere bestimmen das Disaccharid.'
   },
   {
@@ -81,7 +81,7 @@ export const fragenPart5 = [
       'Transportmolekül für Glucose'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Cellulose ist ein β-1,4-verknüpftes Glucosepolymer und das Hauptstrukturpolysaccharid pflanzlicher Zellwände. Die β-Konfiguration ermöglicht parallele Anordnung und Wasserstoffbrücken zwischen den Ketten, was extreme Festigkeit verleiht. Energiespeicher ist Stärke.',
+    erklärung: 'Cellulose ist ein β-1,4-verknüpftes Glucosepolymer und das Hauptstrukturpolysaccharid pflanzlicher Zellwände. Die β-Konfiguration ermöglicht parallele Anordnung und Wasserstoffbrücken zwischen den Ketten, was extreme Festigkeit verleiht. Energiespeicher ist Stärke.',
     strategieTipp: 'Cellulose = Struktur (β-Bindung, unverdaulich für Menschen). Stärke = Energie (α-Bindung, verdaulich).'
   },
   {
@@ -98,7 +98,7 @@ export const fragenPart5 = [
       'Cellulose enthält keine Glucose'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der menschliche Verdauungstrakt produziert keine Cellulase-Enzyme, die β-1,4-glykosidische Bindungen spalten können. Wir haben nur Amylase für α-1,4-Bindungen (Stärke). Wiederkäuer haben Bakterien im Pansen, die Cellulase produzieren.',
+    erklärung: 'Der menschliche Verdauungstrakt produziert keine Cellulase-Enzyme, die β-1,4-glykosidische Bindungen spalten können. Wir haben nur Amylase für α-1,4-Bindungen (Stärke). Wiederkäür haben Bakterien im Pansen, die Cellulase produzieren.',
     strategieTipp: 'β-Bindung (Cellulose) = nicht verdaubar für Menschen. α-Bindung (Stärke, Glykogen) = verdaubar durch Amylase.'
   },
   {
@@ -115,7 +115,7 @@ export const fragenPart5 = [
       'Amylose bildet Doppelhelices, Amylopektin nicht'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Amylose ist ein unverzweigtes α-1,4-verknüpftes Glucosepolymer (Helix-Struktur), während Amylopektin zusätzlich α-1,6-glykosidische Verzweigungen aufweist (alle 20-25 Glucoseeinheiten). Beide sind Bestandteile der Stärke und bestehen aus Glucose.',
+    erklärung: 'Amylose ist ein unverzweigtes α-1,4-verknüpftes Glucosepolymer (Helix-Struktur), während Amylopektin zusätzlich α-1,6-glykosidische Verzweigungen aufweist (alle 20-25 Glucoseeinheiten). Beide sind Bestandteile der Stärke und bestehen aus Glucose.',
     strategieTipp: 'Stärke = Amylose (unverzweigt, ~20%) + Amylopektin (verzweigt, ~80%). Glykogen ähnelt Amylopektin, aber stärker verzweigt.'
   },
   {
@@ -132,7 +132,7 @@ export const fragenPart5 = [
       'Lugolsche Lösung'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Fehling-Reagenz (Cu²⁺-Ionen in alkalischer Lösung) wird durch reduzierende Zucker zu Cu₂O (roter Niederschlag) reduziert. Glucose, Fructose, Maltose sind reduzierend (freie Aldehydgruppe). Saccharose ist nicht reduzierend. Lugolsche Lösung weist Stärke nach (blau-violette Färbung).',
+    erklärung: 'Fehling-Reagenz (Cu²⁺-Ionen in alkalischer Lösung) wird durch reduzierende Zucker zu Cu₂O (roter Niederschlag) reduziert. Glucose, Fructose, Maltose sind reduzierend (freie Aldehydgruppe). Saccharose ist nicht reduzierend. Lugolsche Lösung weist Stärke nach (blau-violette Färbung).',
     strategieTipp: 'Fehling = reduzierende Zucker (rot). Lugol = Stärke (blau). Biuret = Proteine (violett). Ninhydrin = Aminosäuren (violett).'
   },
   {
@@ -149,7 +149,7 @@ export const fragenPart5 = [
       'Immunabwehr (Antikörper)'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Proteine haben vielfältige Funktionen: Enzyme (Katalyse), Strukturproteine (Kollagen, Keratin), Transportproteine (Hämoglobin), Antikörper (Immunsystem), Hormone, Motorproteine. Langfristige Energiespeicherung erfolgt durch Fette und Kohlenhydrate (Glykogen, Stärke), nicht durch Proteine.',
+    erklärung: 'Proteine haben vielfältige Funktionen: Enzyme (Katalyse), Strukturproteine (Kollagen, Keratin), Transportproteine (Hämoglobin), Antikörper (Immunsystem), Hormone, Motorproteine. Langfristige Energiespeicherung erfolgt durch Fette und Kohlenhydrate (Glykogen, Stärke), nicht durch Proteine.',
     strategieTipp: 'Hauptfunktionen der Proteine: Struktur, Katalyse, Transport, Signalübertragung, Bewegung, Abwehr. Energie ist sekundär.'
   },
   {
@@ -166,7 +166,7 @@ export const fragenPart5 = [
       '20'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Es gibt 9 essentielle Aminosäuren beim erwachsenen Menschen: Histidin, Isoleucin, Leucin, Lysin, Methionin, Phenylalanin, Threonin, Tryptophan und Valin. Diese müssen mit der Nahrung aufgenommen werden, da der Körper sie nicht selbst synthetisieren kann.',
+    erklärung: 'Es gibt 9 essentielle Aminosäuren beim erwachsenen Menschen: Histidin, Isoleucin, Leucin, Lysin, Methionin, Phenylalanin, Threonin, Tryptophan und Valin. Diese müssen mit der Nahrung aufgenommen werden, da der Körper sie nicht selbst synthetisieren kann.',
     strategieTipp: 'Merksatz: "PVT TIM HaLl" (Phenylalanin, Valin, Threonin, Tryptophan, Isoleucin, Methionin, Histidin, Leucin, Lysin) = 9 essentielle AS.'
   },
   {
@@ -183,8 +183,8 @@ export const fragenPart5 = [
       'Threonin'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Cystein besitzt eine Thiolgruppe (-SH) in der Seitenkette, die mit einer anderen Cystein-SH-Gruppe unter Oxidation eine Disulfidbrücke (-S-S-) bilden kann. Diese Disulfidbrücken stabilisieren die Tertiär- und Quartärstruktur von Proteinen. Methionin enthält Schwefel, aber als Thioether.',
-    strategieTipp: 'Cystein = -SH (kann Disulfidbrücken bilden). Methionin = -S-CH₃ (Thioether). Serin/Threonin = -OH (Alkohol).'
+    erklärung: 'Cystein besitzt eine Thiolgruppe (-SH) in der Seitenkette, die mit einer anderen Cystein-SH-Gruppe unter Oxidation eine Disulfidbrücke (-S-S-) bilden kann. Diese Disulfidbrücken stabilisieren die Tertiär- und Quartärstruktur von Proteinen. Methionin enthält Schwefel, aber als Thiöther.',
+    strategieTipp: 'Cystein = -SH (kann Disulfidbrücken bilden). Methionin = -S-CH₃ (Thiöther). Serin/Threonin = -OH (Alkohol).'
   },
   {
     id: 'ch-q-212',
@@ -200,7 +200,7 @@ export const fragenPart5 = [
       'Eine ionische Bindung zwischen sauren und basischen Aminosäuren'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Peptidbindung ist eine Amidbindung (-CO-NH-), die durch Kondensationsreaktion zwischen der Carboxylgruppe (-COOH) einer Aminosäure und der Aminogruppe (-NH₂) einer anderen entsteht. Dabei wird ein Wassermolekül abgespalten. Diese Bindung ist planar und partiell doppelbindungscharakter.',
+    erklärung: 'Die Peptidbindung ist eine Amidbindung (-CO-NH-), die durch Kondensationsreaktion zwischen der Carboxylgruppe (-COOH) einer Aminosäure und der Aminogruppe (-NH₂) einer anderen entsteht. Dabei wird ein Wassermolekül abgespalten. Diese Bindung ist planar und partiell doppelbindungscharakter.',
     strategieTipp: 'Peptidbindung = Amidbindung = -CO-NH-. Entsteht durch Kondensation (Wasserabspaltung) zwischen COOH und NH₂.'
   },
   {
@@ -217,7 +217,7 @@ export const fragenPart5 = [
       'Konformation'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Die Primärstruktur ist die lineare Aminosäuresequenz eines Proteins, festgelegt durch Peptidbindungen. Die Sekundärstruktur beschreibt lokale räumliche Anordnungen (α-Helix, β-Faltblatt), die Tertiärstruktur die gesamte 3D-Faltung, die Quartärstruktur die Anordnung mehrerer Untereinheiten.',
+    erklärung: 'Die Primärstruktur ist die lineare Aminosäuresequenz eines Proteins, festgelegt durch Peptidbindungen. Die Sekundärstruktur beschreibt lokale räumliche Anordnungen (α-Helix, β-Faltblatt), die Tertiärstruktur die gesamte 3D-Faltung, die Quartärstruktur die Anordnung mehrerer Untereinheiten.',
     strategieTipp: '1° = Sequenz (welche AS), 2° = lokale Faltung (Helix/Blatt), 3° = gesamte 3D-Form, 4° = mehrere Ketten.'
   },
   {
@@ -234,7 +234,7 @@ export const fragenPart5 = [
       'Disulfidbrücke'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die α-Helix wird durch Wasserstoffbrücken zwischen der C=O-Gruppe der Aminosäure n und der N-H-Gruppe der Aminosäure n+4 stabilisiert. Diese intramolekularen H-Brücken verlaufen parallel zur Helixachse. Das β-Faltblatt wird durch intermolekulare H-Brücken zwischen benachbarten Strängen stabilisiert.',
+    erklärung: 'Die α-Helix wird durch Wasserstoffbrücken zwischen der C=O-Gruppe der Aminosäure n und der N-H-Gruppe der Aminosäure n+4 stabilisiert. Diese intramolekularen H-Brücken verlaufen parallel zur Helixachse. Das β-Faltblatt wird durch intermolekulare H-Brücken zwischen benachbarten Strängen stabilisiert.',
     strategieTipp: 'α-Helix = H-Brücken innerhalb einer Kette (i zu i+4). β-Faltblatt = H-Brücken zwischen verschiedenen Strängen.'
   },
   {
@@ -251,7 +251,7 @@ export const fragenPart5 = [
       'Ionische Wechselwirkungen (Salzbrücken)'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Peptidbindungen definieren die Primärstruktur (kovalente Bindungen zwischen Aminosäuren), nicht die Tertiärstruktur. Die 3D-Faltung wird stabilisiert durch: Disulfidbrücken (kovalent), hydrophobe Effekte, Wasserstoffbrücken, ionische Wechselwirkungen und Van-der-Waals-Kräfte zwischen Seitenketten.',
+    erklärung: 'Peptidbindungen definieren die Primärstruktur (kovalente Bindungen zwischen Aminosäuren), nicht die Tertiärstruktur. Die 3D-Faltung wird stabilisiert durch: Disulfidbrücken (kovalent), hydrophobe Effekte, Wasserstoffbrücken, ionische Wechselwirkungen und Van-der-Waals-Kräfte zwischen Seitenketten.',
     strategieTipp: 'Primärstruktur = Peptidbindungen (kovalent). Tertiärstruktur = Wechselwirkungen der Seitenketten (meist nicht-kovalent, außer -S-S-).'
   },
   {
@@ -268,7 +268,7 @@ export const fragenPart5 = [
       'Bildung von Quartärstrukturen'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Denaturierung ist der Verlust der nativen Sekundär-, Tertiär- und Quartärstruktur eines Proteins durch äußere Einflüsse (Hitze, pH-Änderung, organische Lösungsmittel). Die Primärstruktur bleibt erhalten, aber das Protein verliert meist seine biologische Funktion. Beispiel: Eiklar beim Kochen.',
+    erklärung: 'Denaturierung ist der Verlust der nativen Sekundär-, Tertiär- und Quartärstruktur eines Proteins durch äußere Einflüsse (Hitze, pH-Änderung, organische Lösungsmittel). Die Primärstruktur bleibt erhalten, aber das Protein verliert meist seine biologische Funktion. Beispiel: Eiklar beim Kochen.',
     strategieTipp: 'Denaturierung = Strukturverlust (2°/3°/4°), Primärstruktur bleibt. Ursachen: Hitze, pH, Chemikalien. Oft irreversibel.'
   },
   {
@@ -285,7 +285,7 @@ export const fragenPart5 = [
       'Silberspiegel-Probe'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Biuret-Reaktion weist Peptidbindungen nach. In alkalischer Lösung bildet Cu²⁺ mit mindestens zwei Peptidbindungen einen violetten Komplex. Die Reaktion ist nach Biuret (H₂N-CO-NH-CO-NH₂) benannt, das ebenfalls positiv reagiert.',
+    erklärung: 'Die Biuret-Reaktion weist Peptidbindungen nach. In alkalischer Lösung bildet Cu²⁺ mit mindestens zwei Peptidbindungen einen violetten Komplex. Die Reaktion ist nach Biuret (H₂N-CO-NH-CO-NH₂) benannt, das ebenfalls positiv reagiert.',
     strategieTipp: 'Biuret = Protein-Nachweis (violett). Benötigt mindestens 2 Peptidbindungen. Funktioniert nicht bei einzelnen Aminosäuren.'
   },
   {
@@ -302,7 +302,7 @@ export const fragenPart5 = [
       'Leucin'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Glycin (NH₂-CH₂-COOH) ist die einzige achirale proteinogene Aminosäure, da das α-C-Atom zwei Wasserstoffatome trägt und somit kein Stereozentrum ist. Alle anderen 19 proteinogenen Aminosäuren sind chiral und liegen in L-Konfiguration vor.',
+    erklärung: 'Glycin (NH₂-CH₂-COOH) ist die einzige achirale proteinogene Aminosäure, da das α-C-Atom zwei Wasserstoffatome trägt und somit kein Stereozentrum ist. Alle anderen 19 proteinogenen Aminosäuren sind chiral und liegen in L-Konfiguration vor.',
     strategieTipp: 'Glycin = kleinste AS, achiral (R = H). Alle anderen proteinogenen AS = chiral, L-Form. Glycin hat keine Seitenkette außer H.'
   },
   {
@@ -314,13 +314,13 @@ export const fragenPart5 = [
     optionen: [
       'Bei pH 1 (stark sauer)',
       'Bei pH 14 (stark basisch)',
-      'Am isoelektrischen Punkt',
+      'Am isölektrischen Punkt',
       'Nur in organischen Lösungsmitteln',
       'Zwitterionen bilden sich nicht bei Aminosäuren'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Am isoelektrischen Punkt (pI) liegt die Aminosäure überwiegend als Zwitterion vor: Die Aminogruppe ist protoniert (-NH₃⁺), die Carboxylgruppe deprotoniert (-COO⁻). Die Nettoladung ist null. Bei niedrigem pH überwiegt die Kationform (+1), bei hohem pH die Anionform (-1).',
-    strategieTipp: 'Isoelektrischer Punkt = Zwitterion (±0). pH < pI = Kation (+). pH > pI = Anion (-). Wichtig für Elektrophorese.'
+    erklärung: 'Am isölektrischen Punkt (pI) liegt die Aminosäure überwiegend als Zwitterion vor: Die Aminogruppe ist protoniert (-NH₃⁺), die Carboxylgruppe deprotoniert (-COO⁻). Die Nettoladung ist null. Bei niedrigem pH überwiegt die Kationform (+1), bei hohem pH die Anionform (-1).',
+    strategieTipp: 'Isölektrischer Punkt = Zwitterion (±0). pH < pI = Kation (+). pH > pI = Anion (-). Wichtig für Elektrophorese.'
   },
   {
     id: 'ch-q-220',
@@ -336,7 +336,7 @@ export const fragenPart5 = [
       'Sie enthalten immer Phosphat-Gruppen'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Fette (Triacylglycerine, Triglyceride) entstehen durch Veresterung der drei OH-Gruppen des Glycerins mit drei Fettsäuren unter Wasserabspaltung. Sie sind hydrophob (wasserunlöslich) und dienen als Energiespeicher. Phospholipide enthalten Phosphat, Fette nicht.',
+    erklärung: 'Fette (Triacylglycerine, Triglyceride) entstehen durch Veresterung der drei OH-Gruppen des Glycerins mit drei Fettsäuren unter Wasserabspaltung. Sie sind hydrophob (wasserunlöslich) und dienen als Energiespeicher. Phospholipide enthalten Phosphat, Fette nicht.',
     strategieTipp: 'Fett = Glycerin + 3 Fettsäuren (Ester). Phospholipid = Glycerin + 2 Fettsäuren + Phosphat. Fette sind hydrophob.'
   },
   {
@@ -353,7 +353,7 @@ export const fragenPart5 = [
       'Keine Fettsäuren enthalten Doppelbindungen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Ungesättigte Fettsäuren enthalten eine (einfach ungesättigt) oder mehrere (mehrfach ungesättigt) C=C-Doppelbindungen. Gesättigte Fettsäuren haben nur Einfachbindungen. Die Doppelbindungen liegen meist in cis-Konfiguration vor und verursachen Knicke in der Kohlenstoffkette.',
+    erklärung: 'Ungesättigte Fettsäuren enthalten eine (einfach ungesättigt) oder mehrere (mehrfach ungesättigt) C=C-Doppelbindungen. Gesättigte Fettsäuren haben nur Einfachbindungen. Die Doppelbindungen liegen meist in cis-Konfiguration vor und verursachen Knicke in der Kohlenstoffkette.',
     strategieTipp: 'Gesättigt = nur C-C (z.B. Palmitinsäure). Ungesättigt = C=C (z.B. Ölsäure). Cis-Doppelbindung = Knick = niedriger Schmelzpunkt.'
   },
   {
@@ -370,7 +370,7 @@ export const fragenPart5 = [
       'Sie enthalten weniger Kohlenstoffatome'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Cis-Doppelbindungen in ungesättigten Fettsäuren erzeugen Knicke in der Kohlenstoffkette, wodurch die Moleküle sich nicht so dicht aneinander lagern können. Dies reduziert Van-der-Waals-Wechselwirkungen und senkt den Schmelzpunkt. Deshalb sind ungesättigte Fette bei Raumtemperatur flüssig (Öle).',
+    erklärung: 'Cis-Doppelbindungen in ungesättigten Fettsäuren erzeugen Knicke in der Kohlenstoffkette, wodurch die Moleküle sich nicht so dicht aneinander lagern können. Dies reduziert Van-der-Waals-Wechselwirkungen und senkt den Schmelzpunkt. Deshalb sind ungesättigte Fette bei Raumtemperatur flüssig (Öle).',
     strategieTipp: 'Cis-Doppelbindung = Knick = lockere Packung = niedriger Schmelzpunkt = flüssig (Öl). Gesättigt = gerade = fest (Fett).'
   },
   {
@@ -387,7 +387,7 @@ export const fragenPart5 = [
       'Dreifach ungesättigte Aminosäuren'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Omega-3-Fettsäuren sind ungesättigte Fettsäuren, bei denen die erste Doppelbindung am dritten Kohlenstoffatom vom Methyl-Ende (ω-Ende) der Kette liegt. Beispiele: α-Linolensäure (ALA), Eicosapentaensäure (EPA), Docosahexaensäure (DHA). Sie sind essentiell.',
+    erklärung: 'Omega-3-Fettsäuren sind ungesättigte Fettsäuren, bei denen die erste Doppelbindung am dritten Kohlenstoffatom vom Methyl-Ende (ω-Ende) der Kette liegt. Beispiele: α-Linolensäure (ALA), Eicosapentänsäure (EPA), Docosahexänsäure (DHA). Sie sind essentiell.',
     strategieTipp: 'Omega-3 = erste C=C am 3. C vom CH₃-Ende. Omega-6 = am 6. C. Zählung vom Methyl-Ende (ω), nicht vom COOH-Ende.'
   },
   {
@@ -404,7 +404,7 @@ export const fragenPart5 = [
       'Fettsäuren'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Phospholipide sind amphipathische Moleküle mit hydrophilem Kopf (Phosphat + polarer Rest) und hydrophoben Schwänzen (2 Fettsäuren). In wässriger Umgebung bilden sie spontan Doppelschichten (Lipid-Bilayer), die Grundstruktur aller biologischen Membranen.',
+    erklärung: 'Phospholipide sind amphipathische Moleküle mit hydrophilem Kopf (Phosphat + polarer Rest) und hydrophoben Schwänzen (2 Fettsäuren). In wässriger Umgebung bilden sie spontan Doppelschichten (Lipid-Bilayer), die Grundstruktur aller biologischen Membranen.',
     strategieTipp: 'Membran = Phospholipid-Doppelschicht. Amphipathisch = hydrophiler Kopf + hydrophobe Schwänze. Ermöglicht Kompartimentierung.'
   },
   {
@@ -421,7 +421,7 @@ export const fragenPart5 = [
       'Es wird zu Aminosäuren abgebaut'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei der Verseifung (Hydrolyse) werden Fette mit starker Lauge (NaOH, KOH) in Glycerin und Fettsäuresalze (Seifen) gespalten. Die Esterbindungen werden durch OH⁻ angegriffen. Beispiel: Fett + 3 NaOH → Glycerin + 3 Natriumsalze der Fettsäuren.',
+    erklärung: 'Bei der Verseifung (Hydrolyse) werden Fette mit starker Lauge (NaOH, KOH) in Glycerin und Fettsäuresalze (Seifen) gespalten. Die Esterbindungen werden durch OH⁻ angegriffen. Beispiel: Fett + 3 NaOH → Glycerin + 3 Natriumsalze der Fettsäuren.',
     strategieTipp: 'Verseifung = Fett + Base → Glycerin + Seife. Umkehrung der Veresterung. Seife = Salz einer Fettsäure.'
   },
   {
@@ -438,7 +438,7 @@ export const fragenPart5 = [
       'Phospholipid mit zwei Fettsäureketten'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Cholesterin gehört zu den Steroiden und besitzt das charakteristische Steroid-Grundgerüst aus vier kondensierten Ringen (drei Sechsringe, ein Fünfring = Cyclopentanoperhydrophenanthren). Es ist wichtiger Membranbestandteil und Ausgangsstoff für Steroidhormone und Gallensäuren.',
+    erklärung: 'Cholesterin gehört zu den Steroiden und besitzt das charakteristische Steroid-Grundgerüst aus vier kondensierten Ringen (drei Sechsringe, ein Fünfring = Cyclopentanoperhydrophenanthren). Es ist wichtiger Membranbestandteil und Ausgangsstoff für Steroidhormone und Gallensäuren.',
     strategieTipp: 'Steroide = 4-Ring-Struktur (3×6er + 1×5er). Cholesterin, Testosteron, Cortisol, Vitamin D gehören zu Steroiden.'
   },
   {
@@ -455,7 +455,7 @@ export const fragenPart5 = [
       'Vorstufe für Gallensäuren'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Cholesterin ist wichtig für Membranfluidität, Vorstufe von Steroidhormonen (Cortisol, Testosteron, Östrogen), Vitamin D und Gallensäuren. Hauptenergiespeicher in Fettzellen sind Triacylglycerine (Fette), nicht Cholesterin. Cholesterin liefert keine signifikante Energie.',
+    erklärung: 'Cholesterin ist wichtig für Membranfluidität, Vorstufe von Steroidhormonen (Cortisol, Testosteron, Östrogen), Vitamin D und Gallensäuren. Hauptenergiespeicher in Fettzellen sind Triacylglycerine (Fette), nicht Cholesterin. Cholesterin liefert keine signifikante Energie.',
     strategieTipp: 'Cholesterin = Membrankomponente, Hormon-/Vitamin-Vorstufe. Energiespeicher = Fette (Triacylglycerine). Nicht verwechseln!'
   },
   {
@@ -472,7 +472,7 @@ export const fragenPart5 = [
       'Cytosin'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'RNA enthält die Base Uracil anstelle von Thymin. Beide sind Pyrimidinbasen und paaren mit Adenin, aber Uracil fehlt die Methylgruppe am C5, die Thymin besitzt. DNA: A, T, G, C. RNA: A, U, G, C. Der Zucker unterscheidet sich ebenfalls (Ribose vs. Desoxyribose).',
+    erklärung: 'RNA enthält die Base Uracil anstelle von Thymin. Beide sind Pyrimidinbasen und paaren mit Adenin, aber Uracil fehlt die Methylgruppe am C5, die Thymin besitzt. DNA: A, T, G, C. RNA: A, U, G, C. Der Zucker unterscheidet sich ebenfalls (Ribose vs. Desoxyribose).',
     strategieTipp: 'DNA = Thymin (T). RNA = Uracil (U). Beide paaren mit Adenin. RNA hat Ribose, DNA Desoxyribose (fehlt OH am C2).'
   },
   {
@@ -489,7 +489,7 @@ export const fragenPart5 = [
       'Zucker + Fettsäure'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Ein Nukleotid besteht aus drei Komponenten: einer stickstoffhaltigen Base (Purin oder Pyrimidin), einem Pentosezucker (Ribose oder Desoxyribose) und mindestens einer Phosphatgruppe. Base + Zucker ohne Phosphat = Nukleosid.',
+    erklärung: 'Ein Nukleotid besteht aus drei Komponenten: einer stickstoffhaltigen Base (Purin oder Pyrimidin), einem Pentosezucker (Ribose oder Desoxyribose) und mindestens einer Phosphatgruppe. Base + Zucker ohne Phosphat = Nukleosid.',
     strategieTipp: 'Nukleotid = Base + Zucker + Phosphat. Nukleosid = Base + Zucker (ohne Phosphat). Nukleoside sind Vorstufen.'
   },
   {
@@ -506,7 +506,7 @@ export const fragenPart5 = [
       'Guanin und Thymin'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Purine (Adenin und Guanin) bestehen aus einem Doppelringsystem (9 Atome). Pyrimidine (Cytosin, Thymin, Uracil) haben einen Einzelring (6 Atome). In der DNA paaren Purine mit Pyrimidinen: A-T (2 H-Brücken), G-C (3 H-Brücken).',
+    erklärung: 'Purine (Adenin und Guanin) bestehen aus einem Doppelringsystem (9 Atome). Pyrimidine (Cytosin, Thymin, Uracil) haben einen Einzelring (6 Atome). In der DNA paaren Purine mit Pyrimidinen: A-T (2 H-Brücken), G-C (3 H-Brücken).',
     strategieTipp: 'Purine = 2 Ringe = Adenin (A) + Guanin (G). Pyrimidine = 1 Ring = Cytosin (C), Thymin (T), Uracil (U). "Pure As Gold".'
   },
   {
@@ -523,7 +523,7 @@ export const fragenPart5 = [
       'Disulfidbrücke'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Nukleotide werden durch Phosphodiesterbindungen zwischen der 3\'-OH-Gruppe eines Zuckers und der 5\'-Phosphatgruppe des nächsten Nukleotids verknüpft. Dies bildet das Zucker-Phosphat-Rückgrat der DNA/RNA. Wasserstoffbrücken verbinden komplementäre Basen zwischen zwei Strängen.',
+    erklärung: 'Nukleotide werden durch Phosphodiesterbindungen zwischen der 3\'-OH-Gruppe eines Zuckers und der 5\'-Phosphatgruppe des nächsten Nukleotids verknüpft. Dies bildet das Zucker-Phosphat-Rückgrat der DNA/RNA. Wasserstoffbrücken verbinden komplementäre Basen zwischen zwei Strängen.',
     strategieTipp: 'Phosphodiesterbindung = innerhalb eines Strangs (3\'-5\'-Verknüpfung). H-Brücken = zwischen Strängen (A-T, G-C).'
   },
   {
@@ -540,7 +540,7 @@ export const fragenPart5 = [
       '5'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Guanin und Cytosin bilden drei Wasserstoffbrücken (G≡C), Adenin und Thymin nur zwei (A=T). Die zusätzliche H-Brücke macht GC-Paare stabiler als AT-Paare. DNA-Bereiche mit hohem GC-Gehalt haben höhere Schmelztemperaturen.',
+    erklärung: 'Guanin und Cytosin bilden drei Wasserstoffbrücken (G≡C), Adenin und Thymin nur zwei (A=T). Die zusätzliche H-Brücke macht GC-Paare stabiler als AT-Paare. DNA-Bereiche mit hohem GC-Gehalt haben höhere Schmelztemperaturen.',
     strategieTipp: 'G≡C = 3 H-Brücken (stabil). A=T = 2 H-Brücken. Hoher GC-Gehalt = höherer Schmelzpunkt (Tm) der DNA.'
   },
   {
@@ -557,7 +557,7 @@ export const fragenPart5 = [
       'Random Coil'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'DNA bildet eine Doppelhelix (Watson-Crick-Modell): zwei antiparallele Stränge winden sich umeinander, wobei komplementäre Basen im Inneren durch Wasserstoffbrücken paaren (A-T, G-C). Das Zucker-Phosphat-Rückgrat ist außen. RNA ist meist einzelsträngig.',
+    erklärung: 'DNA bildet eine Doppelhelix (Watson-Crick-Modell): zwei antiparallele Stränge winden sich umeinander, wobei komplementäre Basen im Inneren durch Wasserstoffbrücken paaren (A-T, G-C). Das Zucker-Phosphat-Rückgrat ist außen. RNA ist meist einzelsträngig.',
     strategieTipp: 'DNA = Doppelhelix, antiparallel (5\'→3\' und 3\'→5\'). RNA = meist Einzelstrang. Komplementarität: A-T, G-C.'
   },
   {
@@ -574,7 +574,7 @@ export const fragenPart5 = [
       'Es gibt keine Wasserstoffbrücken'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Antiparallel bedeutet, dass die beiden DNA-Stränge in entgegengesetzter Richtung verlaufen: Ein Strang hat 5\'→3\'-Orientierung, der komplementäre Strang 3\'→5\'. Dies ist wichtig für Replikation und Transkription, da DNA-Polymerasen nur in 5\'→3\'-Richtung synthetisieren.',
+    erklärung: 'Antiparallel bedeutet, dass die beiden DNA-Stränge in entgegengesetzter Richtung verlaufen: Ein Strang hat 5\'→3\'-Orientierung, der komplementäre Strang 3\'→5\'. Dies ist wichtig für Replikation und Transkription, da DNA-Polymerasen nur in 5\'→3\'-Richtung synthetisieren.',
     strategieTipp: 'Antiparallel = entgegengesetzte Orientierung (↑5\'→3\' und ↓3\'→5\'). Wichtig für Replikation: nur 5\'→3\'-Synthese möglich.'
   },
   {
@@ -591,7 +591,7 @@ export const fragenPart5 = [
       'Strukturelle Komponente der Ribosomen'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Messenger-RNA (mRNA) überträgt die genetische Information von der DNA im Zellkern zu den Ribosomen im Cytoplasma, wo sie als Matrize für die Proteinbiosynthese (Translation) dient. tRNA transportiert Aminosäuren, rRNA ist Ribosom-Bestandteil.',
+    erklärung: 'Messenger-RNA (mRNA) überträgt die genetische Information von der DNA im Zellkern zu den Ribosomen im Cytoplasma, wo sie als Matrize für die Proteinbiosynthese (Translation) dient. tRNA transportiert Aminosäuren, rRNA ist Ribosom-Bestandteil.',
     strategieTipp: 'mRNA = Bote (DNA→Ribosom). tRNA = Transporter (bringt AS). rRNA = ribosomale Struktur + Katalyse. Drei RNA-Typen merken!'
   },
   {
@@ -608,7 +608,7 @@ export const fragenPart5 = [
       'Eine Mutation in der DNA'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Ein Codon ist eine Sequenz aus drei aufeinanderfolgenden Nukleotiden (Triplett) auf der mRNA, die für eine bestimmte Aminosäure oder ein Stoppsignal codiert. Es gibt 64 mögliche Codons (4³), die für 20 Aminosäuren codieren (genetischer Code ist degeneriert).',
+    erklärung: 'Ein Codon ist eine Sequenz aus drei aufeinanderfolgenden Nukleotiden (Triplett) auf der mRNA, die für eine bestimmte Aminosäure oder ein Stoppsignal codiert. Es gibt 64 mögliche Codons (4³), die für 20 Aminosäuren codieren (genetischer Code ist degeneriert).',
     strategieTipp: 'Codon = 3 Basen auf mRNA = codiert 1 Aminosäure. 64 Codons, 20 AS = Degeneration. Start: AUG, Stop: UAA, UAG, UGA.'
   },
   {
@@ -625,7 +625,7 @@ export const fragenPart5 = [
       'Folsäure'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Vitamin D ist eines der vier fettlöslichen Vitamine (A, D, E, K). Diese werden in Fettgewebe und Leber gespeichert und können überdosiert werden. Wasserlösliche Vitamine (B-Komplex, C) werden nicht signifikant gespeichert und im Überschuss über Urin ausgeschieden.',
+    erklärung: 'Vitamin D ist eines der vier fettlöslichen Vitamine (A, D, E, K). Diese werden in Fettgewebe und Leber gespeichert und können überdosiert werden. Wasserlösliche Vitamine (B-Komplex, C) werden nicht signifikant gespeichert und im Überschuss über Urin ausgeschieden.',
     strategieTipp: 'Fettlöslich = A, D, E, K (Speicherung möglich, Überdosierung). Wasserlöslich = B, C (keine Speicherung, Überschuss ausgeschieden).'
   },
   {
@@ -642,7 +642,7 @@ export const fragenPart5 = [
       'Membranschutz durch Lipidperoxidation'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Vitamin C ist ein starkes Antioxidans (Reduktionsmittel) und essentieller Cofaktor für Enzyme der Kollagensynthese (Hydroxylierung von Prolin und Lysin). Mangel führt zu Skorbut (defektes Kollagen). Vitamin K = Blutgerinnung, A = Sehen, D = Calcium, E = Membranen.',
+    erklärung: 'Vitamin C ist ein starkes Antioxidans (Reduktionsmittel) und essentieller Cofaktor für Enzyme der Kollagensynthese (Hydroxylierung von Prolin und Lysin). Mangel führt zu Skorbut (defektes Kollagen). Vitamin K = Blutgerinnung, A = Sehen, D = Calcium, E = Membranen.',
     strategieTipp: 'Vitamin C = Antioxidans + Kollagen. Mangel = Skorbut. Wasserlöslich, hohe Dosen meist unbedenklich (Ausscheidung).'
   },
   {
@@ -659,7 +659,7 @@ export const fragenPart5 = [
       'Vitamin B12'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Vitamin D₃ (Cholecalciferol) wird in der Haut aus 7-Dehydrocholesterol (Provitamin D₃) durch UV-B-Strahlung gebildet. Es wird dann in Leber und Niere zum aktiven Hormon Calcitriol hydroxyliert, das den Calcium- und Phosphatstoffwechsel reguliert.',
+    erklärung: 'Vitamin D₃ (Cholecalciferol) wird in der Haut aus 7-Dehydrocholesterol (Provitamin D₃) durch UV-B-Strahlung gebildet. Es wird dann in Leber und Niere zum aktiven Hormon Calcitriol hydroxyliert, das den Calcium- und Phosphatstoffwechsel reguliert.',
     strategieTipp: 'Vitamin D = Sonnenvitamin (UV-B in Haut). Streng genommen ein Hormon. Reguliert Ca²⁺-Aufnahme. Mangel = Rachitis/Osteomalazie.'
   },
   {
@@ -676,7 +676,7 @@ export const fragenPart5 = [
       'Vitamin B1'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Vitamin K ist essentiell für die γ-Carboxylierung von Glutamatresten in Gerinnungsfaktoren (II, VII, IX, X) und Protein C/S. Mangel führt zu erhöhter Blutungsneigung. Neugeborene erhalten prophylaktisch Vitamin K. Warfarin (Antikoagulans) hemmt Vitamin-K-Reduktase.',
+    erklärung: 'Vitamin K ist essentiell für die γ-Carboxylierung von Glutamatresten in Gerinnungsfaktoren (II, VII, IX, X) und Protein C/S. Mangel führt zu erhöhter Blutungsneigung. Neugeborene erhalten prophylaktisch Vitamin K. Warfarin (Antikoagulans) hemmt Vitamin-K-Reduktase.',
     strategieTipp: 'Vitamin K = Koagulation (Gerinnung). K für "Koagulation". Fettlöslich. Antagonist = Warfarin (Blutverdünner).'
   },
   {
@@ -693,7 +693,7 @@ export const fragenPart5 = [
       'Sie sind alle wasserlöslich'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Vitamine sind organische Verbindungen, die der Organismus für lebenswichtige Funktionen benötigt, aber nicht selbst (oder nicht ausreichend) synthetisieren kann. Sie müssen mit der Nahrung aufgenommen werden. Sie liefern keine Energie, sind strukturell vielfältig und in geringen Mengen wirksam.',
+    erklärung: 'Vitamine sind organische Verbindungen, die der Organismus für lebenswichtige Funktionen benötigt, aber nicht selbst (oder nicht ausreichend) synthetisieren kann. Sie müssen mit der Nahrung aufgenommen werden. Sie liefern keine Energie, sind strukturell vielfältig und in geringen Mengen wirksam.',
     strategieTipp: 'Vitamine = essentiell (Zufuhr nötig), keine Energie, geringe Mengen, vielfältige Strukturen. Fehlen = Mangelkrankheiten.'
   },
   {
@@ -710,7 +710,7 @@ export const fragenPart5 = [
       'Hormone'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Enzyme sind biologische Katalysatoren, die chemische Reaktionen beschleunigen, ohne dabei selbst verbraucht zu werden. Die meisten Enzyme sind Proteine (einige sind katalytisch aktive RNA-Moleküle = Ribozyme). Sie senken die Aktivierungsenergie und sind hochspezifisch.',
+    erklärung: 'Enzyme sind biologische Katalysatoren, die chemische Reaktionen beschleunigen, ohne dabei selbst verbraucht zu werden. Die meisten Enzyme sind Proteine (einige sind katalytisch aktive RNA-Moleküle = Ribozyme). Sie senken die Aktivierungsenergie und sind hochspezifisch.',
     strategieTipp: 'Enzyme = Bio-Katalysatoren, meist Proteine. Senken Aktivierungsenergie, nicht verbraucht, hochspezifisch, wiederverwendbar.'
   },
   {
@@ -727,7 +727,7 @@ export const fragenPart5 = [
       'Es ändert die Gibbs-Energie der Reaktion'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Enzyme senken die Aktivierungsenergie einer Reaktion, wodurch diese schneller abläuft. Sie verändern weder das thermodynamische Gleichgewicht noch die Gibbs-Energie (ΔG) der Reaktion. Das Enzym liegt nach der Reaktion unverändert vor und kann erneut wirken.',
+    erklärung: 'Enzyme senken die Aktivierungsenergie einer Reaktion, wodurch diese schneller abläuft. Sie verändern weder das thermodynamische Gleichgewicht noch die Gibbs-Energie (ΔG) der Reaktion. Das Enzym liegt nach der Reaktion unverändert vor und kann erneut wirken.',
     strategieTipp: 'Enzym senkt Ea (Aktivierungsenergie) → schnellere Reaktion. Gleichgewicht und ΔG unverändert. Katalysator = nicht verbraucht.'
   },
   {
@@ -740,11 +740,11 @@ export const fragenPart5 = [
       'Der Bereich, wo Cofaktoren gebunden werden',
       'Die dreidimensionale Tasche, in der das Substrat bindet und die Reaktion katalysiert wird',
       'Die Primärstruktur des Enzyms',
-      'Der Bereich, der beim Erhitzen zuerst denaturiert',
+      'Der Bereich, der beim Erhitzen zürst denaturiert',
       'Die regulatorische Bindungsstelle'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Das aktive Zentrum ist eine dreidimensionale Region des Enzyms, meist eine Tasche oder Spalte, in der das Substrat bindet und die katalytische Reaktion stattfindet. Es wird durch die Tertiärstruktur geformt und enthält katalytisch wichtige Aminosäurereste. Es ist hochspezifisch für das Substrat.',
+    erklärung: 'Das aktive Zentrum ist eine dreidimensionale Region des Enzyms, meist eine Tasche oder Spalte, in der das Substrat bindet und die katalytische Reaktion stattfindet. Es wird durch die Tertiärstruktur geformt und enthält katalytisch wichtige Aminosäurereste. Es ist hochspezifisch für das Substrat.',
     strategieTipp: 'Aktives Zentrum = Substratbindung + Katalyse. 3D-Struktur wichtig. Spezifität durch "Schlüssel-Schloss" oder "Induced Fit".'
   },
   {
@@ -761,7 +761,7 @@ export const fragenPart5 = [
       'Das Enzym bindet nur an denaturierte Substrate'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Das Induced-Fit-Modell (Koshland) besagt, dass das Enzym seine Konformation bei Substratbindung ändert, wodurch das aktive Zentrum optimal um das Substrat geformt wird. Dies erklärt die hohe Spezifität besser als das starre Schlüssel-Schloss-Modell (Fischer).',
+    erklärung: 'Das Induced-Fit-Modell (Koshland) besagt, dass das Enzym seine Konformation bei Substratbindung ändert, wodurch das aktive Zentrum optimal um das Substrat geformt wird. Dies erklärt die hohe Spezifität besser als das starre Schlüssel-Schloss-Modell (Fischer).',
     strategieTipp: 'Schlüssel-Schloss = starre Passung (veraltet). Induced Fit = flexible Anpassung (modern). Konformationsänderung optimiert Katalyse.'
   },
   {
@@ -778,8 +778,8 @@ export const fragenPart5 = [
       'Eine Aminosäure im aktiven Zentrum'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Cofaktoren sind nicht-proteinartige Komponenten, die manche Enzyme für ihre Aktivität benötigen. Sie können anorganisch (Metallionen wie Zn²⁺, Mg²⁺, Fe²⁺) oder organisch sein (Coenzyme wie NAD⁺, FAD, Coenzym A). Enzym ohne Cofaktor = Apoenzym, mit Cofaktor = Holoenzym.',
-    strategieTipp: 'Cofaktor = Nicht-Protein-Helfer. Metallionen oder Coenzyme. Apoenzym (inaktiv) + Cofaktor = Holoenzym (aktiv).'
+    erklärung: 'Cofaktoren sind nicht-proteinartige Komponenten, die manche Enzyme für ihre Aktivität benötigen. Sie können anorganisch (Metallionen wie Zn²⁺, Mg²⁺, Fe²⁺) oder organisch sein (Coenzyme wie NAD⁺, FAD, Coenzym A). Enzym ohne Cofaktor = Apönzym, mit Cofaktor = Holönzym.',
+    strategieTipp: 'Cofaktor = Nicht-Protein-Helfer. Metallionen oder Coenzyme. Apönzym (inaktiv) + Cofaktor = Holönzym (aktiv).'
   },
   {
     id: 'ch-q-247',
@@ -795,7 +795,7 @@ export const fragenPart5 = [
       'Zwei Enzyme konkurrieren um das gleiche Substrat'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Bei kompetitiver Hemmung bindet der Inhibitor reversibel an das aktive Zentrum und konkurriert mit dem Substrat um die Bindung. Die Hemmung kann durch Erhöhung der Substratkonzentration überwunden werden. Km steigt, Vmax bleibt gleich.',
+    erklärung: 'Bei kompetitiver Hemmung bindet der Inhibitor reversibel an das aktive Zentrum und konkurriert mit dem Substrat um die Bindung. Die Hemmung kann durch Erhöhung der Substratkonzentration überwunden werden. Km steigt, Vmax bleibt gleich.',
     strategieTipp: 'Kompetitiv = Inhibitor am aktiven Zentrum, konkurriert mit Substrat. Überwindbar durch mehr Substrat. Km↑, Vmax gleich.'
   },
   {
@@ -803,7 +803,7 @@ export const fragenPart5 = [
     stichwortId: 'ch-13-01',
     fach: 'chemie' as const,
     schwierigkeit: 'mittel' as const,
-    fragetext: 'Was beschreibt die Michaelis-Menten-Konstante Km?',
+    fragetext: 'Was beschreibt die Michälis-Menten-Konstante Km?',
     optionen: [
       'Die maximale Reaktionsgeschwindigkeit',
       'Die Substratkonzentration bei halber maximaler Geschwindigkeit',
@@ -812,7 +812,7 @@ export const fragenPart5 = [
       'Die Hemmkonstante'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Km ist die Substratkonzentration, bei der die Reaktionsgeschwindigkeit die Hälfte von Vmax erreicht. Ein niedriger Km-Wert bedeutet hohe Affinität des Enzyms zum Substrat (wenig Substrat für halbmaximale Aktivität nötig), ein hoher Km-Wert niedrige Affinität.',
+    erklärung: 'Km ist die Substratkonzentration, bei der die Reaktionsgeschwindigkeit die Hälfte von Vmax erreicht. Ein niedriger Km-Wert bedeutet hohe Affinität des Enzyms zum Substrat (wenig Substrat für halbmaximale Aktivität nötig), ein hoher Km-Wert niedrige Affinität.',
     strategieTipp: 'Km = [S] bei v = Vmax/2. Kleiner Km = hohe Affinität. Großer Km = niedrige Affinität. Enzymcharakteristikum.'
   },
   {
@@ -829,8 +829,8 @@ export const fragenPart5 = [
       'Inhibitoren'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Enzymaktivität wird beeinflusst durch: Temperatur (Optimum, dann Denaturierung), pH-Wert (Optimum, protonierung), Substrat- und Enzymkonzentration, Cofaktoren, Inhibitoren und Produktkonzentration (Produkthemmung). Vergangene Produktkonzentrationen haben keinen direkten Einfluss auf die aktuelle Reaktion.',
-    strategieTipp: 'Enzymaktivität: T, pH, [S], [E], Cofaktoren, Inhibitoren, aktuelle [P]. Jedes Enzym hat T- und pH-Optimum.'
+    erklärung: 'Enzymaktivität wird beeinflusst durch: Temperatur (Optimum, dann Denaturierung), pH-Wert (Optimum, protonierung), Substrat- und Enzymkonzentration, Cofaktoren, Inhibitoren und Produktkonzentration (Produkthemmung). Vergangene Produktkonzentrationen haben keinen direkten Einfluss auf die aktülle Reaktion.',
+    strategieTipp: 'Enzymaktivität: T, pH, [S], [E], Cofaktoren, Inhibitoren, aktülle [P]. Jedes Enzym hat T- und pH-Optimum.'
   },
   {
     id: 'ch-q-250',
@@ -846,7 +846,7 @@ export const fragenPart5 = [
       'Kompetitive Hemmung'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei allosterischer Regulation bindet ein Effektor (Aktivator oder Inhibitor) an eine allosterische Stelle (nicht aktives Zentrum), was eine Konformationsänderung auslöst und die Aktivität des aktiven Zentrums beeinflusst. Dies ist wichtig für Feedbackhemmung und metabolische Kontrolle.',
+    erklärung: 'Bei allosterischer Regulation bindet ein Effektor (Aktivator oder Inhibitor) an eine allosterische Stelle (nicht aktives Zentrum), was eine Konformationsänderung auslöst und die Aktivität des aktiven Zentrums beeinflusst. Dies ist wichtig für Feedbackhemmung und metabolische Kontrolle.',
     strategieTipp: 'Allosterisch = Bindung außerhalb aktiven Zentrums → Konformationsänderung → Aktivitätsänderung. Wichtig für Stoffwechselregulation.'
   }
 ];

@@ -292,7 +292,7 @@ export const mathematikQuestionsPart3: Question[] = [
     subject: "mathematik",
     chapter: "algebra",
     topic: "Lineare Gleichungssysteme",
-    text: "Ein Gleichungssystem hat die erweiterte Koeffizientenmatrix: [1 2 | 5; 3 6 | 15]. Wie viele Lösungen hat das System?",
+    text: "Ein Gleichungssystem hat die erweiterte Köffizientenmatrix: [1 2 | 5; 3 6 | 15]. Wie viele Lösungen hat das System?",
     options: [
       { id: "a", text: "Keine Lösung" },
       { id: "b", text: "Genau eine Lösung" },
@@ -406,7 +406,7 @@ export const mathematikQuestionsPart3: Question[] = [
     subject: "mathematik",
     chapter: "algebra",
     topic: "Binomischer Lehrsatz",
-    text: "Wie lautet der Koeffizient von x³ in der Entwicklung von (2 + x)⁵?",
+    text: "Wie lautet der Köffizient von x³ in der Entwicklung von (2 + x)⁵?",
     options: [
       { id: "a", text: "40" },
       { id: "b", text: "80" },
@@ -416,9 +416,9 @@ export const mathematikQuestionsPart3: Question[] = [
     ],
     correctOptionId: "a",
     explanation:
-      "Binomischer Lehrsatz: C(5,3)·2²·x³ = 10·4·x³ = 40x³. Der Koeffizient ist 40.",
+      "Binomischer Lehrsatz: C(5,3)·2²·x³ = 10·4·x³ = 40x³. Der Köffizient ist 40.",
     difficulty: "schwer",
-    tags: ["binomischer-lehrsatz", "binomialkoeffizient"],
+    tags: ["binomischer-lehrsatz", "binomialköffizient"],
   },
   {
     id: "math-103",
@@ -1504,7 +1504,7 @@ export const mathematikQuestionsPart3: Question[] = [
     explanation:
       "C(10,3) = 10!/(3!·7!) = (10·9·8)/(3·2·1) = 720/6 = 120.",
     difficulty: "leicht",
-    tags: ["kombinatorik", "binomialkoeffizient"],
+    tags: ["kombinatorik", "binomialköffizient"],
   },
   {
     id: "math-160",
@@ -1656,7 +1656,7 @@ export const mathematikQuestionsPart3: Question[] = [
     explanation:
       "C(12,4) = 12!/(4!·8!) = (12·11·10·9)/(4·3·2·1) = 11880/24 = 495.",
     difficulty: "mittel",
-    tags: ["kombinatorik", "binomialkoeffizient"],
+    tags: ["kombinatorik", "binomialköffizient"],
   },
   {
     id: "math-168",

@@ -13,7 +13,7 @@ export const fragenPart3 = [
       'Aktiver Transport von Ionen gegen Konzentrationsgradienten'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Das einschichtige Plattenepithel in den Alveolen ist sehr dünn (0,1-0,5 µm) und ermöglicht dadurch einen schnellen Gasaustausch zwischen Luft und Blut. Die geringe Diffusionsstrecke ist für die effiziente Sauerstoffaufnahme und CO₂-Abgabe essentiell.',
+    erklärung: 'Das einschichtige Plattenepithel in den Alveolen ist sehr dünn (0,1-0,5 µm) und ermöglicht dadurch einen schnellen Gasaustausch zwischen Luft und Blut. Die geringe Diffusionsstrecke ist für die effiziente Sauerstoffaufnahme und CO₂-Abgabe essentiell.',
     strategieTipp: 'Struktur folgt Funktion: Dünne Epithelien → Stoffaustausch, mehrschichtige → Schutz, hohe Epithelien → Sekretion/Absorption.'
   },
   {
@@ -30,7 +30,7 @@ export const fragenPart3 = [
       'Gallenblase'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Atemwege (Trachea, Bronchien) sind mit mehrreihigem Flimmerepithel ausgekleidet. Die Flimmerhärchen (Zilien) transportieren Schleim mit Fremdpartikeln in Richtung Rachen (mukoziliäre Clearance). Becherzellen produzieren den Schleim.',
+    erklärung: 'Die Atemwege (Trachea, Bronchien) sind mit mehrreihigem Flimmerepithel ausgekleidet. Die Flimmerhärchen (Zilien) transportieren Schleim mit Fremdpartikeln in Richtung Rachen (mukoziliäre Clearance). Becherzellen produzieren den Schleim.',
     strategieTipp: 'Flimmerepithel findet sich in Atemwegen und Eileitern – immer dort, wo gerichteter Transport notwendig ist.'
   },
   {
@@ -47,7 +47,7 @@ export const fragenPart3 = [
       'Bildung von Interzellularsubstanz'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Übergangsepithel (Urothel) besteht aus mehreren Zellschichten, die sich bei Dehnung der Harnblase verschieben und abflachen können. Bei leerer Blase erscheint es mehrschichtig und dick, bei gefüllter Blase nur 2-3 Zelllagen dick.',
+    erklärung: 'Übergangsepithel (Urothel) besteht aus mehreren Zellschichten, die sich bei Dehnung der Harnblase verschieben und abflachen können. Bei leerer Blase erscheint es mehrschichtig und dick, bei gefüllter Blase nur 2-3 Zelllagen dick.',
     strategieTipp: 'Übergangsepithel = flexible Barriere für dehnbare Hohlorgane (Harnwege). Der Name "Übergangsepithel" bezieht sich auf die wechselnde Schichtdicke.'
   },
   {
@@ -64,7 +64,7 @@ export const fragenPart3 = [
       'Holokrine Sekretion erfolgt durch Exozytose ohne Zellverlust'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Bei apokriner Sekretion (z.B. Milchdrüse, Duftdrüsen) wird das Sekret zusammen mit Teilen des apikalen Zytoplasmas und der Zellmembran abgeschnürt. Endokrine Drüsen haben keine Ausführungsgänge, holokrine Sekretion bedeutet kompletten Zelluntergang (Talgdrüsen).',
+    erklärung: 'Bei apokriner Sekretion (z.B. Milchdrüse, Duftdrüsen) wird das Sekret zusammen mit Teilen des apikalen Zytoplasmas und der Zellmembran abgeschnürt. Endokrine Drüsen haben keine Ausführungsgänge, holokrine Sekretion bedeutet kompletten Zelluntergang (Talgdrüsen).',
     strategieTipp: 'Sekretionstypen: merokrin (Exozytose, häufigster Typ), apokrin (mit Zytoplasma), holokrin (ganze Zelle wird Sekret).'
   },
   {
@@ -81,7 +81,7 @@ export const fragenPart3 = [
       'Einschichtiges Plattenepithel'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der Dünndarm ist mit einschichtigem Zylinderepithel ausgekleidet, dessen Zellen einen Bürstensaum (Mikrovilli) tragen. Diese Oberflächenvergrößerung ermöglicht eine effiziente Nährstoffaufnahme (Resorption).',
+    erklärung: 'Der Dünndarm ist mit einschichtigem Zylinderepithel ausgekleidet, dessen Zellen einen Bürstensaum (Mikrovilli) tragen. Diese Oberflächenvergrößerung ermöglicht eine effiziente Nährstoffaufnahme (Resorption).',
     strategieTipp: 'Zylinderepithel mit Mikrovilli = typisch für Resorption und Sekretion (Darm, Nierentubuli). Die hohen Zellen bieten Raum für viele Transportproteine.'
   },
   {
@@ -98,7 +98,7 @@ export const fragenPart3 = [
       'Fibrinogen'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die organische Knochenmatrix (Osteoid) besteht zu etwa 90% aus Kollagen Typ I. Diese Kollagenfasern werden mit Calciumphosphat (Hydroxylapatit) mineralisiert, was dem Knochen seine Härte und Zugfestigkeit verleiht.',
+    erklärung: 'Die organische Knochenmatrix (Osteoid) besteht zu etwa 90% aus Kollagen Typ I. Diese Kollagenfasern werden mit Calciumphosphat (Hydroxylapatit) mineralisiert, was dem Knochen seine Härte und Zugfestigkeit verleiht.',
     strategieTipp: 'Kollagen Typ I = häufigster Kollagentyp im Körper, findet sich in Knochen, Sehnen, Bändern, Dermis. Gibt Zugfestigkeit.'
   },
   {
@@ -115,7 +115,7 @@ export const fragenPart3 = [
       'Epiphysenknorpel'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Elastischer Knorpel enthält neben Kollagen auch viele Elastinfasern, die ihm hohe Flexibilität und Elastizität verleihen. Er findet sich in der Ohrmuschel, im äußeren Gehörgang und in der Epiglottis.',
+    erklärung: 'Elastischer Knorpel enthält neben Kollagen auch viele Elastinfasern, die ihm hohe Flexibilität und Elastizität verleihen. Er findet sich in der Ohrmuschel, im äußeren Gehörgang und in der Epiglottis.',
     strategieTipp: 'Drei Knorpeltypen: hyalin (häufigster, Gelenke), elastisch (flexibel, Ohr), Faserknorpel (sehr fest, Bandscheiben).'
   },
   {
@@ -132,7 +132,7 @@ export const fragenPart3 = [
       'Fibroblasten'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Osteoklasten sind mehrkernige Riesenzellen, die durch Sekretion von Säuren und Enzymen Knochenmatrix abbauen (Knochenresorption). Sie arbeiten mit Osteoblasten (Knochenaufbau) im ständigen Knochenumbau (Remodeling) zusammen.',
+    erklärung: 'Osteoklasten sind mehrkernige Riesenzellen, die durch Sekretion von Säuren und Enzymen Knochenmatrix abbauen (Knochenresorption). Sie arbeiten mit Osteoblasten (Knochenaufbau) im ständigen Knochenumbau (Remodeling) zusammen.',
     strategieTipp: 'Osteoblasten = bauen auf (b wie build), Osteoklasten = klauen/klauen ab. Osteozyten = reife Knochenzellen in Lakunen.'
   },
   {
@@ -149,7 +149,7 @@ export const fragenPart3 = [
       'Die Lipolyse wird durch Insulin aktiviert'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Braunes Fettgewebe enthält zahlreiche Mitochondrien (daher die braune Farbe) und viele kleine Lipidtropfen. Es produziert durch nicht-zitternde Thermogenese (Uncoupling-Protein UCP1) Wärme. Weißes Fettgewebe speichert Energie in einem großen Lipidtropfen, der den Zellkern an den Rand drückt.',
+    erklärung: 'Braunes Fettgewebe enthält zahlreiche Mitochondrien (daher die braune Farbe) und viele kleine Lipidtropfen. Es produziert durch nicht-zitternde Thermogenese (Uncoupling-Protein UCP1) Wärme. Weißes Fettgewebe speichert Energie in einem großen Lipidtropfen, der den Zellkern an den Rand drückt.',
     strategieTipp: 'Weißes Fett = Energiespeicher (ein großer Tropfen), braunes Fett = Wärmeproduktion (viele Mitochondrien). Insulin hemmt Lipolyse, Adrenalin aktiviert sie.'
   },
   {
@@ -166,7 +166,7 @@ export const fragenPart3 = [
       'Den höheren Anteil an elastischen Fasern'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Lockeres Bindegewebe hat viel Grundsubstanz, viele Zellen (Fibroblasten, Mastzellen, Makrophagen) und locker angeordnete Kollagenfasern. Straffes Bindegewebe (z.B. Sehnen) hat dicht gepackte, parallel ausgerichtete Kollagenfasern und weniger Zellen – optimiert für Zugbelastung.',
+    erklärung: 'Lockeres Bindegewebe hat viel Grundsubstanz, viele Zellen (Fibroblasten, Mastzellen, Makrophagen) und locker angeordnete Kollagenfasern. Straffes Bindegewebe (z.B. Sehnen) hat dicht gepackte, parallel ausgerichtete Kollagenfasern und weniger Zellen – optimiert für Zugbelastung.',
     strategieTipp: 'Locker = viel Grundsubstanz, viele Zellen, wenig Fasern. Straff = viele parallel angeordnete Kollagenfasern, wenig Zellen.'
   },
   {
@@ -183,7 +183,7 @@ export const fragenPart3 = [
       'Augenmuskulatur'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die glatte Muskulatur (z.B. in Blutgefäßen, Darm, Bronchien) wird vom vegetativen Nervensystem gesteuert und ist nicht willkürlich kontrollierbar. Skelettmuskulatur, einschließlich Zunge, Zwerchfell und Augenmuskeln, unterliegt der willkürlichen Kontrolle (somatisches Nervensystem).',
+    erklärung: 'Die glatte Muskulatur (z.B. in Blutgefäßen, Darm, Bronchien) wird vom vegetativen Nervensystem gesteuert und ist nicht willkürlich kontrollierbar. Skelettmuskulatur, einschließlich Zunge, Zwerchfell und Augenmuskeln, unterliegt der willkürlichen Kontrolle (somatisches Nervensystem).',
     strategieTipp: 'Glatte Muskulatur = unwillkürlich, vegetativ gesteuert. Quergestreifte Skelettmuskulatur = willkürlich. Herzmuskulatur = quergestreift, aber unwillkürlich.'
   },
   {
@@ -200,7 +200,7 @@ export const fragenPart3 = [
       'Motorische Endplatte'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Das Sarkomer ist die kleinste funktionelle Einheit der Muskelkontraktion. Es liegt zwischen zwei Z-Scheiben und enthält Aktin- (dünne) und Myosin-Filamente (dicke), die bei der Kontraktion aneinander vorbeigleiten (Gleitfilamenttheorie).',
+    erklärung: 'Das Sarkomer ist die kleinste funktionelle Einheit der Muskelkontraktion. Es liegt zwischen zwei Z-Scheiben und enthält Aktin- (dünne) und Myosin-Filamente (dicke), die bei der Kontraktion aneinander vorbeigleiten (Gleitfilamenttheorie).',
     strategieTipp: 'Hierarchie: Muskel → Muskelfaserbündel → Muskelfaser → Myofibrille → Sarkomer (zwischen zwei Z-Scheiben).'
   },
   {
@@ -217,7 +217,7 @@ export const fragenPart3 = [
       'Kalziumionen zerstören die Querbrücken zwischen Aktin und Myosin'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Bei der Kontraktion bleiben die Filamente gleich lang. Die Myosinköpfe binden ATP-abhängig an Aktin, kippen (Kraftschlag) und ziehen die Aktinfilamente zur Sarkomermitte (M-Linie). Dies verkürzt das Sarkomer. Ca²⁺ ermöglicht die Bindung durch Freilegung der Bindungsstellen am Aktin.',
+    erklärung: 'Bei der Kontraktion bleiben die Filamente gleich lang. Die Myosinköpfe binden ATP-abhängig an Aktin, kippen (Kraftschlag) und ziehen die Aktinfilamente zur Sarkomermitte (M-Linie). Dies verkürzt das Sarkomer. Ca²⁺ ermöglicht die Bindung durch Freilegung der Bindungsstellen am Aktin.',
     strategieTipp: 'Gleitfilamenttheorie: Filamente gleiten, verkürzen sich nicht. Myosinköpfe = molekulare Motoren. ATP nötig für Lösung der Querbrücken, Ca²⁺ für Bindung.'
   },
   {
@@ -234,7 +234,7 @@ export const fragenPart3 = [
       'Aktin-Filamente'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'T-Tubuli (transversale Tubuli) sind Einstülpungen der Zellmembran, die das Aktionspotential ins Faserinnere leiten. An den Triaden (T-Tubulus + 2 Zisternen des SR) wird die elektrische Erregung in Ca²⁺-Freisetzung umgewandelt (elektromechanische Kopplung).',
+    erklärung: 'T-Tubuli (transversale Tubuli) sind Einstülpungen der Zellmembran, die das Aktionspotential ins Faserinnere leiten. An den Triaden (T-Tubulus + 2 Zisternen des SR) wird die elektrische Erregung in Ca²⁺-Freisetzung umgewandelt (elektromechanische Kopplung).',
     strategieTipp: 'T-Tubuli = Erregungsleitung in die Tiefe der Muskelfaser. Sarkoplasmatisches Retikulum = Ca²⁺-Speicher.'
   },
   {
@@ -251,7 +251,7 @@ export const fragenPart3 = [
       'Herzmuskelzellen sind mehrkernig'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Herzmuskelzellen (Kardiomyozyten) sind über Glanzstreifen (Disci intercalares) verbunden, die Gap Junctions und Desmosomen enthalten. Die Gap Junctions ermöglichen schnelle elektrische Kopplung, sodass das Herz als funktionelles Synzytium kontrahiert. Kardiomyozyten sind einkernig, quergestreift und unwillkürlich.',
+    erklärung: 'Herzmuskelzellen (Kardiomyozyten) sind über Glanzstreifen (Disci intercalares) verbunden, die Gap Junctions und Desmosomen enthalten. Die Gap Junctions ermöglichen schnelle elektrische Kopplung, sodass das Herz als funktionelles Synzytium kontrahiert. Kardiomyozyten sind einkernig, quergestreift und unwillkürlich.',
     strategieTipp: 'Herzmuskel: quergestreift wie Skelettmuskel, aber einkernig, unwillkürlich, mit Glanzstreifen, eigene Automatie (Schrittmacherzellen).'
   },
   {
@@ -268,7 +268,7 @@ export const fragenPart3 = [
       'Hohes Vorkommen von Myofibrillen mit Z-Scheiben'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Glatte Muskelzellen sind spindelförmig, einkernig und besitzen keine Sarkomere (daher keine Querstreifung). Sie haben Aktin und Myosin, aber anders organisiert. Sie ermüden langsam, können tonisch kontrahiert bleiben und werden vegetativ gesteuert.',
+    erklärung: 'Glatte Muskelzellen sind spindelförmig, einkernig und besitzen keine Sarkomere (daher keine Querstreifung). Sie haben Aktin und Myosin, aber anders organisiert. Sie ermüden langsam, können tonisch kontrahiert bleiben und werden vegetativ gesteuert.',
     strategieTipp: 'Glatte Muskulatur: keine Querstreifung, langsam, tonische Kontraktion möglich, in Hohlorganen (Darm, Gefäße, Bronchien).'
   },
   {
@@ -285,7 +285,7 @@ export const fragenPart3 = [
       'Skelettmuskelfasern besitzen keine Mitochondrien'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Skelettmuskelfasern sind mehrkernige Synzytien, die während der Embryonalentwicklung durch Fusion von Myoblasten entstehen. Sie sind quergestreift, benötigen zur Kontraktion einen Nervenimpuls und enthalten viele Mitochondrien für die Energiebereitstellung.',
+    erklärung: 'Skelettmuskelfasern sind mehrkernige Synzytien, die während der Embryonalentwicklung durch Fusion von Myoblasten entstehen. Sie sind quergestreift, benötigen zur Kontraktion einen Nervenimpuls und enthalten viele Mitochondrien für die Energiebereitstellung.',
     strategieTipp: 'Skelettmuskelfaser = mehrkernige Riesenzelle (bis zu mehreren cm lang). Kerne liegen unter dem Sarkolemm (Zellmembran).'
   },
   {
@@ -302,7 +302,7 @@ export const fragenPart3 = [
       'Nissl-Schollen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Das Axon ist ein langer Fortsatz des Neurons, der Aktionspotentiale vom Zellkörper (Soma) zu anderen Zellen (Neuronen, Muskel, Drüsen) leitet. Dendriten empfangen Signale und leiten sie zum Soma. Es gibt pro Neuron nur ein Axon, aber viele Dendriten.',
+    erklärung: 'Das Axon ist ein langer Fortsatz des Neurons, der Aktionspotentiale vom Zellkörper (Soma) zu anderen Zellen (Neuronen, Muskel, Drüsen) leitet. Dendriten empfangen Signale und leiten sie zum Soma. Es gibt pro Neuron nur ein Axon, aber viele Dendriten.',
     strategieTipp: 'Dendriten = empfangen (viele Äste), Axon = senden (ein Fortsatz). Informationsfluss: Dendrit → Soma → Axonhügel → Axon → Synapse.'
   },
   {
@@ -319,7 +319,7 @@ export const fragenPart3 = [
       'Ependymzellen'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Schwann-Zellen umhüllen im PNS Axone mit Myelin. Eine Schwann-Zelle myelinisiert ein Axonsegment (Internodium). Im ZNS übernehmen Oligodendrozyten diese Aufgabe, wobei ein Oligodendrozyt mehrere Axone myelinisieren kann.',
+    erklärung: 'Schwann-Zellen umhüllen im PNS Axone mit Myelin. Eine Schwann-Zelle myelinisiert ein Axonsegment (Internodium). Im ZNS übernehmen Oligodendrozyten diese Aufgabe, wobei ein Oligodendrozyt mehrere Axone myelinisieren kann.',
     strategieTipp: 'Myelinbildung: PNS = Schwann-Zellen (eine Zelle pro Segment), ZNS = Oligodendrozyten (eine Zelle für mehrere Axone).'
   },
   {
@@ -336,7 +336,7 @@ export const fragenPart3 = [
       'Übertragung elektrischer Signale zwischen Neuronen'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Astrozyten sind sternförmige Gliazellen mit vielfältigen Funktionen: Sie bilden mit ihren Fortsätzen die Blut-Hirn-Schranke, versorgen Neurone mit Nährstoffen, regulieren die Ionenkonzentration im extrazellulären Raum und sind an der Narbenbildung beteiligt.',
+    erklärung: 'Astrozyten sind sternförmige Gliazellen mit vielfältigen Funktionen: Sie bilden mit ihren Fortsätzen die Blut-Hirn-Schranke, versorgen Neurone mit Nährstoffen, regulieren die Ionenkonzentration im extrazellulären Raum und sind an der Narbenbildung beteiligt.',
     strategieTipp: 'Gliazellen-Funktionen: Astrozyten = Stoffwechsel/Blut-Hirn-Schranke, Oligodendrozyten/Schwann = Myelin, Mikroglia = Immunabwehr, Ependym = Liquor.'
   },
   {
@@ -353,7 +353,7 @@ export const fragenPart3 = [
       'Die Refraktärzeit verkürzt sich'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Myelin isoliert das Axon elektrisch und ermöglicht saltatorische Erregungsleitung (Springen von Ranvier-Schnürring zu Schnürring). Ohne Myelin muss sich das Aktionspotential kontinuierlich ausbreiten (wie bei unmyelinisierten Fasern), was deutlich langsamer ist und zu neurologischen Ausfällen führt.',
+    erklärung: 'Myelin isoliert das Axon elektrisch und ermöglicht saltatorische Erregungsleitung (Springen von Ranvier-Schnürring zu Schnürring). Ohne Myelin muss sich das Aktionspotential kontinuierlich ausbreiten (wie bei unmyelinisierten Fasern), was deutlich langsamer ist und zu neurologischen Ausfällen führt.',
     strategieTipp: 'Myelin = Isolierung → schnelle saltatorische Leitung. Demyelinisierung → langsame Leitung, neurologische Symptome (MS, Guillain-Barré).'
   },
   {
@@ -370,7 +370,7 @@ export const fragenPart3 = [
       'Neurone'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Mikroglia sind die residenten Immunzellen des ZNS. Sie stammen von Monozyten ab und fungieren als Makrophagen: Sie phagozytieren Erreger, Zelltrümmer und apoptotische Zellen. Bei Verletzungen oder Entzündungen werden sie aktiviert.',
+    erklärung: 'Mikroglia sind die residenten Immunzellen des ZNS. Sie stammen von Monozyten ab und fungieren als Makrophagen: Sie phagozytieren Erreger, Zelltrümmer und apoptotische Zellen. Bei Verletzungen oder Entzündungen werden sie aktiviert.',
     strategieTipp: 'Mikroglia = Immunzellen des Gehirns (meso dermalen Ursprungs, nicht ektodermale wie andere Gliazellen). Aktivierung bei Infektion, Trauma, Neurodegeneration.'
   },
   {
@@ -387,7 +387,7 @@ export const fragenPart3 = [
       'Alle Axone im Nervensystem sind myelinisiert'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'An den Ranvier-Schnürringen (unmyelinisierte Lücken zwischen Myelinsegmenten) befinden sich viele spannungsgesteuerte Natriumkanäle, die eine schnelle Regeneration des Aktionspotentials ermöglichen. Myelin reduziert die Membrankapazität und besteht aus Lipiden (ca. 80%) und Proteinen.',
+    erklärung: 'An den Ranvier-Schnürringen (unmyelinisierte Lücken zwischen Myelinsegmenten) befinden sich viele spannungsgesteuerte Natriumkanäle, die eine schnelle Regeneration des Aktionspotentials ermöglichen. Myelin reduziert die Membrankapazität und besteht aus Lipiden (ca. 80%) und Proteinen.',
     strategieTipp: 'Saltatorische Leitung: Myelin isoliert → Stromfluss unter Myelin → Regeneration des AP an Schnürringen (viele Na⁺-Kanäle). Bis zu 100 m/s schnell.'
   },
   {
@@ -404,7 +404,7 @@ export const fragenPart3 = [
       'Gliazellen haben alle die gleiche Funktion'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Gliazellen (Neuroglia) sind zahlreicher als Neurone und haben vielfältige Unterstützungsfunktionen: Myelinbildung, Stoffwechselversorgung, Immunabwehr, strukturelle Stützung. Sie generieren keine Aktionspotentiale und bilden keine chemischen Synapsen.',
+    erklärung: 'Gliazellen (Neuroglia) sind zahlreicher als Neurone und haben vielfältige Unterstützungsfunktionen: Myelinbildung, Stoffwechselversorgung, Immunabwehr, strukturelle Stützung. Sie generieren keine Aktionspotentiale und bilden keine chemischen Synapsen.',
     strategieTipp: 'Glia = Stütz- und Versorgungsgewebe des Nervensystems. Etwa 10× mehr Gliazellen als Neurone. Verschiedene Typen mit spezifischen Funktionen.'
   },
   {
@@ -421,7 +421,7 @@ export const fragenPart3 = [
       'Alle myelinisierten Nerven'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Das ZNS besteht aus Gehirn (Cerebrum, Cerebellum, Hirnstamm) und Rückenmark. Das periphere Nervensystem (PNS) umfasst alle Nerven außerhalb von Gehirn und Rückenmark: Hirnnerven, Spinalnerven und das vegetative Nervensystem.',
+    erklärung: 'Das ZNS besteht aus Gehirn (Cerebrum, Cerebellum, Hirnstamm) und Rückenmark. Das periphere Nervensystem (PNS) umfasst alle Nerven außerhalb von Gehirn und Rückenmark: Hirnnerven, Spinalnerven und das vegetative Nervensystem.',
     strategieTipp: 'ZNS = Gehirn + Rückenmark (in Schädel/Wirbelsäule). PNS = alles andere (Nerven, Ganglien). Merke: 12 Hirnnervenpaare, 31 Spinalnervenpaare.'
   },
   {
@@ -438,7 +438,7 @@ export const fragenPart3 = [
       'Hemmung der Schweißsekretion'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der Sympathikus bereitet den Körper auf "Kampf oder Flucht" vor: Er steigert Herzfrequenz und Kontraktionskraft, verengt Hautgefäße (Zentralisierung), erweitert Muskelgefäße und erhöht den Blutdruck. Neurotransmitter: Noradrenalin.',
+    erklärung: 'Der Sympathikus bereitet den Körper auf "Kampf oder Flucht" vor: Er steigert Herzfrequenz und Kontraktionskraft, verengt Hautgefäße (Zentralisierung), erweitert Muskelgefäße und erhöht den Blutdruck. Neurotransmitter: Noradrenalin.',
     strategieTipp: 'Sympathikus = Aktivierung, Stress (fight or flight). Parasympathikus = Erholung, Verdauung (rest and digest). Meist antagonistische Wirkung.'
   },
   {
@@ -455,7 +455,7 @@ export const fragenPart3 = [
       'GABA'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Der Parasympathikus verwendet Acetylcholin sowohl prä- als auch postganglionär (cholinerges System). Der Sympathikus nutzt Acetylcholin präganglionär und Noradrenalin postganglionär (bis auf Schweißdrüsen: dort auch ACh).',
+    erklärung: 'Der Parasympathikus verwendet Acetylcholin sowohl prä- als auch postganglionär (cholinerges System). Der Sympathikus nutzt Acetylcholin präganglionär und Noradrenalin postganglionär (bis auf Schweißdrüsen: dort auch ACh).',
     strategieTipp: 'Parasympathikus: immer Acetylcholin. Sympathikus: präganglionär ACh, postganglionär meist Noradrenalin (Ausnahme: Schweißdrüsen, Nebennierenmark).'
   },
   {
@@ -472,7 +472,7 @@ export const fragenPart3 = [
       'Gleichzeitige Erregung aller Neurone in einem Nervenbündel'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei myelinisierten Axonen "springt" das Aktionspotential von Ranvier-Schnürring zu Schnürring (saltatorische Leitung, von lat. saltare = springen). Dies ist deutlich schneller (bis 120 m/s) und energieeffizienter als kontinuierliche Leitung bei unmyelinisierten Fasern (ca. 1 m/s).',
+    erklärung: 'Bei myelinisierten Axonen "springt" das Aktionspotential von Ranvier-Schnürring zu Schnürring (saltatorische Leitung, von lat. saltare = springen). Dies ist deutlich schneller (bis 120 m/s) und energieeffizienter als kontinuierliche Leitung bei unmyelinisierten Fasern (ca. 1 m/s).',
     strategieTipp: 'Saltatorisch = sprungweise an Schnürringen. Myelin isoliert → Strom fließt schnell unter Myelin → Verstärkung an Schnürringen. Schneller + energiesparender.'
   },
   {
@@ -489,7 +489,7 @@ export const fragenPart3 = [
       'Corpus callosum'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Der Hypothalamus ist das übergeordnete Steuerzentrum für das vegetative Nervensystem. Er reguliert Körpertemperatur, Hunger, Durst, Schlaf-Wach-Rhythmus und steuert die Hypophyse. Er verbindet Nervensystem und Hormonsystem.',
+    erklärung: 'Der Hypothalamus ist das übergeordnete Steuerzentrum für das vegetative Nervensystem. Er reguliert Körpertemperatur, Hunger, Durst, Schlaf-Wach-Rhythmus und steuert die Hypophyse. Er verbindet Nervensystem und Hormonsystem.',
     strategieTipp: 'Hypothalamus = Homeostase-Zentrale. Regelt vegetative Funktionen und endokrines System. Verbindung: Nervensystem ↔ Hormonsystem.'
   },
   {
@@ -506,7 +506,7 @@ export const fragenPart3 = [
       'Rezeptor → Sympathikus → Parasympathikus → Effektor'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der Patellarsehnenreflex ist ein monosynaptischer Reflex: Muskelspindel (Rezeptor) → sensorisches Neuron → Synapse im Rückenmark → motorisches Neuron → Skelettmuskel (Effektor). Das Gehirn ist nicht beteiligt, daher sehr schnelle Reaktion.',
+    erklärung: 'Der Patellarsehnenreflex ist ein monosynaptischer Reflex: Muskelspindel (Rezeptor) → sensorisches Neuron → Synapse im Rückenmark → motorisches Neuron → Skelettmuskel (Effektor). Das Gehirn ist nicht beteiligt, daher sehr schnelle Reaktion.',
     strategieTipp: 'Reflexbogen: afferente Bahn (sensorisch) → ZNS (Rückenmark/Hirnstamm) → efferente Bahn (motorisch). Eigen-/Fremdreflex, mono-/polysynaptisch.'
   },
   {
@@ -523,7 +523,7 @@ export const fragenPart3 = [
       'ATP wird zur nächsten Zelle transportiert'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Bei chemischen Synapsen führt das präsynaptische Aktionspotential zum Ca²⁺-Einstrom, der die Fusion von Vesikeln mit der Membran auslöst. Neurotransmitter werden in den synaptischen Spalt freigesetzt und binden an Rezeptoren der postsynaptischen Membran.',
+    erklärung: 'Bei chemischen Synapsen führt das präsynaptische Aktionspotential zum Ca²⁺-Einstrom, der die Fusion von Vesikeln mit der Membran auslöst. Neurotransmitter werden in den synaptischen Spalt freigesetzt und binden an Rezeptoren der postsynaptischen Membran.',
     strategieTipp: 'Chemische Synapse: AP → Ca²⁺-Einstrom → Vesikel-Fusion → Transmitter-Freisetzung → Rezeptor-Bindung → EPSP/IPSP. Elektrische Synapse: Gap Junctions.'
   },
   {
@@ -540,7 +540,7 @@ export const fragenPart3 = [
       'Müller-Zellen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Zapfen sind für das Farbensehen und Sehen bei Tageslicht verantwortlich. Es gibt drei Zapfentypen mit unterschiedlicher Farbempfindlichkeit (Rot, Grün, Blau). Stäbchen sind sehr lichtempfindlich und für das Dämmerungssehen zuständig, können aber keine Farben unterscheiden.',
+    erklärung: 'Zapfen sind für das Farbensehen und Sehen bei Tageslicht verantwortlich. Es gibt drei Zapfentypen mit unterschiedlicher Farbempfindlichkeit (Rot, Grün, Blau). Stäbchen sind sehr lichtempfindlich und für das Dämmerungssehen zuständig, können aber keine Farben unterscheiden.',
     strategieTipp: 'Zapfen = Farbe, Tag, hohe Sehschärfe (Fovea centralis). Stäbchen = Schwarz-Weiß, Dämmerung, hohe Lichtempfindlichkeit (Peripherie). Ca. 120 Mio Stäbchen, 6 Mio Zapfen.'
   },
   {
@@ -557,7 +557,7 @@ export const fragenPart3 = [
       'Bogengänge'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Das Corti-Organ liegt auf der Basilarmembran in der Schnecke (Cochlea). Es enthält Haarsinneszellen, deren Stereozilien durch Schwingungen der Basilarmembran ausgelenkt werden. Dies öffnet Ionenkanäle und erzeugt Rezeptorpotentiale, die an den Hörnerv weitergeleitet werden.',
+    erklärung: 'Das Corti-Organ liegt auf der Basilarmembran in der Schnecke (Cochlea). Es enthält Haarsinneszellen, deren Stereozilien durch Schwingungen der Basilarmembran ausgelenkt werden. Dies öffnet Ionenkanäle und erzeugt Rezeptorpotentiale, die an den Hörnerv weitergeleitet werden.',
     strategieTipp: 'Hörvorgang: Schallwelle → Trommelfell → Gehörknöchelchen → ovales Fenster → Perilymphe → Basilarmembran → Haarzellen → Hörnerv. Corti-Organ = eigentlicher Rezeptor.'
   },
   {
@@ -574,7 +574,7 @@ export const fragenPart3 = [
       'Stratum basale'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Dermis (Lederhaut) ist die mittlere Hautschicht aus Bindegewebe. Sie enthält Blutgefäße, Lymphgefäße, Nervenendigungen, Haarfollikel, Talg- und Schweißdrüsen. Die Epidermis ist gefäßfrei, die Subcutis enthält hauptsächlich Fettgewebe.',
+    erklärung: 'Die Dermis (Lederhaut) ist die mittlere Hautschicht aus Bindegewebe. Sie enthält Blutgefäße, Lymphgefäße, Nervenendigungen, Haarfollikel, Talg- und Schweißdrüsen. Die Epidermis ist gefäßfrei, die Subcutis enthält hauptsächlich Fettgewebe.',
     strategieTipp: 'Hautschichten von außen nach innen: Epidermis (mehrschichtiges Plattenepithel, gefäßfrei) → Dermis (Bindegewebe, Gefäße/Nerven) → Subcutis (Fettgewebe).'
   },
   {
@@ -591,7 +591,7 @@ export const fragenPart3 = [
       'Ruffini-Körperchen'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Vater-Pacini-Lamellenkörperchen sind tief in der Dermis/Subcutis gelegene Mechanorezeptoren, die auf schnelle Vibrationen (40-800 Hz) und Druckveränderungen reagieren. Sie adaptieren schnell (phasische Rezeptoren). Meissner-Körperchen reagieren auf Berührung und leichte Vibration.',
+    erklärung: 'Vater-Pacini-Lamellenkörperchen sind tief in der Dermis/Subcutis gelegene Mechanorezeptoren, die auf schnelle Vibrationen (40-800 Hz) und Druckveränderungen reagieren. Sie adaptieren schnell (phasische Rezeptoren). Meissner-Körperchen reagieren auf Berührung und leichte Vibration.',
     strategieTipp: 'Mechanorezeptoren: Merkel = Druck (langsam adaptierend), Meissner = Berührung, Pacini = Vibration (schnell adaptierend), Ruffini = Dehnung. Thermorezeptoren: Kalt/Warm. Nozizeptoren: Schmerz.'
   },
   {
@@ -608,7 +608,7 @@ export const fragenPart3 = [
       'Stratum lucidum'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Das Stratum corneum (Hornschicht) ist die äußerste Epidermisschicht. Sie besteht aus flachen, kernlosen, verhornten Zellen (Korneozyten), die mit Keratin und Lipiden gefüllt sind. Diese Schicht bildet die Hautbarriere und wird ständig erneuert.',
+    erklärung: 'Das Stratum corneum (Hornschicht) ist die äußerste Epidermisschicht. Sie besteht aus flachen, kernlosen, verhornten Zellen (Korneozyten), die mit Keratin und Lipiden gefüllt sind. Diese Schicht bildet die Hautbarriere und wird ständig erneuert.',
     strategieTipp: 'Epidermisschichten von basal nach apikal: Basale (Teilung) → Spinosum → Granulosum (Keratohyalin) → Lucidum (nur Handflächen/Fußsohlen) → Corneum (Hornschicht). Erneuerung ca. 28 Tage.'
   },
   {
@@ -625,7 +625,7 @@ export const fragenPart3 = [
       'Epiphyse'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Hypophyse (Hirnanhangdrüse) wird als "Hauptdrüse" bezeichnet. Ihr Vorderlappen (Adenohypophyse) produziert glandotrope Hormone (ACTH, TSH, FSH, LH), die andere endokrine Drüsen steuern. Sie wird selbst vom Hypothalamus über Releasing-/Inhibiting-Hormone reguliert.',
+    erklärung: 'Die Hypophyse (Hirnanhangdrüse) wird als "Hauptdrüse" bezeichnet. Ihr Vorderlappen (Adenohypophyse) produziert glandotrope Hormone (ACTH, TSH, FSH, LH), die andere endokrine Drüsen steuern. Sie wird selbst vom Hypothalamus über Releasing-/Inhibiting-Hormone reguliert.',
     strategieTipp: 'Hypothalamus-Hypophysen-Achse: Hypothalamus (Releasing-Hormone) → Hypophyse (glandotrope Hormone) → Zieldrüsen (Effektorhormone) → Wirkung. Negativer Feedback!'
   },
   {
@@ -642,7 +642,7 @@ export const fragenPart3 = [
       'Adrenalin'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Insulin wird von den β-Zellen der Langerhans-Inseln gebildet und senkt den Blutzuckerspiegel durch Förderung der Glukoseaufnahme in Zellen, Glykogensynthese und Lipogenese. Glukagon aus α-Zellen wirkt antagonistisch (erhöht Blutzucker).',
+    erklärung: 'Insulin wird von den β-Zellen der Langerhans-Inseln gebildet und senkt den Blutzuckerspiegel durch Förderung der Glukoseaufnahme in Zellen, Glykogensynthese und Lipogenese. Glukagon aus α-Zellen wirkt antagonistisch (erhöht Blutzucker).',
     strategieTipp: 'Pankreas endokrin: α-Zellen = Glukagon (↑ Blutzucker), β-Zellen = Insulin (↓ Blutzucker), δ-Zellen = Somatostatin (hemmt α und β). Diabetes: Insulinmangel oder -resistenz.'
   },
   {
@@ -659,7 +659,7 @@ export const fragenPart3 = [
       'Unabhängige Produktion ohne Regulation'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Schilddrüsenhormone T3 und T4 werden über negativen Feedback reguliert: Hypothalamus (TRH) → Hypophyse (TSH) → Schilddrüse (T3/T4). Hohe T3/T4-Spiegel hemmen TRH- und TSH-Freisetzung. T3/T4 regulieren Stoffwechselrate, Wachstum und Entwicklung.',
+    erklärung: 'Die Schilddrüsenhormone T3 und T4 werden über negativen Feedback reguliert: Hypothalamus (TRH) → Hypophyse (TSH) → Schilddrüse (T3/T4). Hohe T3/T4-Spiegel hemmen TRH- und TSH-Freisetzung. T3/T4 regulieren Stoffwechselrate, Wachstum und Entwicklung.',
     strategieTipp: 'Schilddrüsenachse: TRH (Hypothalamus) → TSH (Hypophyse) → T3/T4 (Schilddrüse) ⊣ TRH/TSH. T3 ist biologisch aktiver als T4. Jod essentiell für Synthese.'
   },
   {
@@ -676,7 +676,7 @@ export const fragenPart3 = [
       'Thyroxin'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Aldosteron ist ein Mineralocorticoid aus der Nebennierenrinde (Zona glomerulosa). Es fördert die Na⁺-Rückresorption und K⁺-Ausscheidung in der Niere, erhöht dadurch das Blutvolumen und den Blutdruck. Regulation durch Renin-Angiotensin-Aldosteron-System (RAAS).',
+    erklärung: 'Aldosteron ist ein Mineralocorticoid aus der Nebennierenrinde (Zona glomerulosa). Es fördert die Na⁺-Rückresorption und K⁺-Ausscheidung in der Niere, erhöht dadurch das Blutvolumen und den Blutdruck. Regulation durch Renin-Angiotensin-Aldosteron-System (RAAS).',
     strategieTipp: 'Nebennierenrinde (3 Zonen): Glomerulosa = Mineralokortikoide (Aldosteron), Fasciculata = Glukokortikoide (Cortisol), Reticularis = Androgene. Mark = Adrenalin/Noradrenalin.'
   },
   {
@@ -693,7 +693,7 @@ export const fragenPart3 = [
       'Cortisol senkt den Blutdruck'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Cortisol ist ein Glukokortikoid aus der Zona fasciculata der Nebennierenrinde. Es erhöht den Blutzuckerspiegel (Glukoneogenese, Glykogenolyse), wirkt immunsuppressiv und anti-inflammatorisch. Regulation: CRH (Hypothalamus) → ACTH (Hypophyse) → Cortisol. Langzeit-Stress erhöht Cortisolspiegel.',
+    erklärung: 'Cortisol ist ein Glukokortikoid aus der Zona fasciculata der Nebennierenrinde. Es erhöht den Blutzuckerspiegel (Glukoneogenese, Glykogenolyse), wirkt immunsuppressiv und anti-inflammatorisch. Regulation: CRH (Hypothalamus) → ACTH (Hypophyse) → Cortisol. Langzeit-Stress erhöht Cortisolspiegel.',
     strategieTipp: 'Cortisol = Stresshormon. Wirkung: ↑ Blutzucker (katabol), ↓ Immunsystem, ↑ Blutdruck. Therapeutisch: Entzündungshemmung. Cushing-Syndrom = Cortisol-Überschuss.'
   },
   {
@@ -710,7 +710,7 @@ export const fragenPart3 = [
       'Oxytocin'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Adrenalin (Epinephrin) wird im Nebennierenmark produziert und bei Stress ausgeschüttet. Es erhöht Herzfrequenz, Blutdruck, Blutzucker, erweitert Bronchien und Pupillen – typische "Kampf-oder-Flucht"-Reaktion. Chemisch ein Katecholamin (wie Noradrenalin, Dopamin).',
+    erklärung: 'Adrenalin (Epinephrin) wird im Nebennierenmark produziert und bei Stress ausgeschüttet. Es erhöht Herzfrequenz, Blutdruck, Blutzucker, erweitert Bronchien und Pupillen – typische "Kampf-oder-Flucht"-Reaktion. Chemisch ein Katecholamin (wie Noradrenalin, Dopamin).',
     strategieTipp: 'Adrenalin = schnelle Stressantwort (Sekunden). Cortisol = langsame, anhaltende Stressantwort (Minuten-Stunden). Beide aus Nebenniere, aber unterschiedliche Bereiche.'
   },
   {
@@ -727,7 +727,7 @@ export const fragenPart3 = [
       'Positive Rückkopplung verstärkt die Hormonwirkung'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Beim negativen Feedback hemmt ein hoher Hormonspiegel die eigene weitere Produktion. Beispiel: Hohe T3/T4-Spiegel hemmen TSH-Ausschüttung. Dies stabilisiert Hormonspiegel (Homöostase). Positives Feedback (selten) verstärkt die Ausschüttung, z.B. Oxytocin bei der Geburt.',
+    erklärung: 'Beim negativen Feedback hemmt ein hoher Hormonspiegel die eigene weitere Produktion. Beispiel: Hohe T3/T4-Spiegel hemmen TSH-Ausschüttung. Dies stabilisiert Hormonspiegel (Homöostase). Positives Feedback (selten) verstärkt die Ausschüttung, z.B. Oxytocin bei der Geburt.',
     strategieTipp: 'Negatives Feedback = Hauptregulationsprinzip (Stabilisierung). Positives Feedback = selten, verstärkt Prozess bis zum Abschluss (Geburt, Ovulation, Blutgerinnung).'
   },
   {
@@ -744,7 +744,7 @@ export const fragenPart3 = [
       'Vena-cava-Klappe'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Mitralklappe (Bikuspidalklappe) ist eine Segelklappe zwischen linkem Vorhof und linker Kammer. Sie öffnet sich bei der Ventrikelfüllung (Diastole) und schließt bei der Kontraktion (Systole), um Rückfluss zu verhindern. Die Trikuspidalklappe liegt auf der rechten Herzseite.',
+    erklärung: 'Die Mitralklappe (Bikuspidalklappe) ist eine Segelklappe zwischen linkem Vorhof und linker Kammer. Sie öffnet sich bei der Ventrikelfüllung (Diastole) und schließt bei der Kontraktion (Systole), um Rückfluss zu verhindern. Die Trikuspidalklappe liegt auf der rechten Herzseite.',
     strategieTipp: 'Herzklappen: Segelklappen (AV-Klappen) = Trikuspidal (rechts), Mitral (links). Taschenklappen (Semilunarklappen) = Pulmonal, Aorta. Verhindert Rückfluss.'
   },
   {
@@ -761,7 +761,7 @@ export const fragenPart3 = [
       'Linker Ventrikel'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Der Sinusknoten (SA-Knoten) im rechten Vorhof ist der primäre Schrittmacher des Herzens. Er generiert spontan Aktionspotentiale (60-100/min). Die Erregung breitet sich über Vorhöfe → AV-Knoten → His-Bündel → Tawara-Schenkel → Purkinje-Fasern → Ventrikel aus.',
+    erklärung: 'Der Sinusknoten (SA-Knoten) im rechten Vorhof ist der primäre Schrittmacher des Herzens. Er generiert spontan Aktionspotentiale (60-100/min). Die Erregung breitet sich über Vorhöfe → AV-Knoten → His-Bündel → Tawara-Schenkel → Purkinje-Fasern → Ventrikel aus.',
     strategieTipp: 'Erregungsleitung: SA-Knoten (Schrittmacher) → Vorhöfe → AV-Knoten (Verzögerung) → His-Bündel → Kammerschenkel → Purkinje-Fasern → Ventrikel. EKG: P-QRS-T.'
   },
   {
@@ -778,7 +778,7 @@ export const fragenPart3 = [
       'Beide Kreisläufe verlaufen unabhängig voneinander'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Großer Kreislauf (Systemkreislauf): Linker Ventrikel → Aorta → Körper → Vena cava → rechter Vorhof. Kleiner Kreislauf (Lungenkreislauf): Rechter Ventrikel → A. pulmonalis → Lunge (Gasaustausch) → V. pulmonalis → linker Vorhof. Hintereinandergeschaltet, nicht parallel.',
+    erklärung: 'Großer Kreislauf (Systemkreislauf): Linker Ventrikel → Aorta → Körper → Vena cava → rechter Vorhof. Kleiner Kreislauf (Lungenkreislauf): Rechter Ventrikel → A. pulmonalis → Lunge (Gasaustausch) → V. pulmonalis → linker Vorhof. Hintereinandergeschaltet, nicht parallel.',
     strategieTipp: 'Kleiner Kreislauf: rechts → Lunge → links (Oxygenierung). Großer Kreislauf: links → Körper → rechts (O₂-Versorgung). Hintereinander = gleiche Blutmenge/Zeit.'
   },
   {
@@ -795,7 +795,7 @@ export const fragenPart3 = [
       'Veränderung des Blutvolumens durch die Niere'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Barorezeptoren (Pressorezeptoren) in der Aortenbogen und Karotissinus registrieren Blutdruckänderungen und senden Signale an das Kreislaufzentrum im Hirnstamm. Bei Blutdruckanstieg wird Sympathikus gehemmt und Parasympathikus aktiviert → Herzfrequenz sinkt, Gefäße erweitern sich. Sehr schnelle Regulation (Sekunden).',
+    erklärung: 'Barorezeptoren (Pressorezeptoren) in der Aortenbogen und Karotissinus registrieren Blutdruckänderungen und senden Signale an das Kreislaufzentrum im Hirnstamm. Bei Blutdruckanstieg wird Sympathikus gehemmt und Parasympathikus aktiviert → Herzfrequenz sinkt, Gefäße erweitern sich. Sehr schnelle Regulation (Sekunden).',
     strategieTipp: 'Blutdruckregulation: kurzfristig = Baroreflex (Sekunden), mittelfristig = Stresshormone (Minuten), langfristig = Niere/RAAS (Stunden-Tage).'
   },
   {
@@ -812,7 +812,7 @@ export const fragenPart3 = [
       'Venen'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Kapillaren sind die kleinsten Blutgefäße (5-10 µm Durchmesser) mit einer Wand aus einschichtigem Endothel. Dies ermöglicht effektiven Austausch von O₂, CO₂, Nährstoffen und Abfallprodukten zwischen Blut und Gewebe. Die Gesamtoberfläche aller Kapillaren beträgt ca. 500-700 m².',
+    erklärung: 'Kapillaren sind die kleinsten Blutgefäße (5-10 µm Durchmesser) mit einer Wand aus einschichtigem Endothel. Dies ermöglicht effektiven Austausch von O₂, CO₂, Nährstoffen und Abfallprodukten zwischen Blut und Gewebe. Die Gesamtoberfläche aller Kapillaren beträgt ca. 500-700 m².',
     strategieTipp: 'Gefäßtypen: Arterien = dick, elastisch, hoher Druck. Arteriolen = Widerstandsgefäße, regulieren Durchblutung. Kapillaren = Austausch. Venolen/Venen = Blutreservoir, niedriger Druck.'
   },
   {
@@ -829,7 +829,7 @@ export const fragenPart3 = [
       'Venen haben keine elastischen Fasern'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der größte Druckabfall im Kreislauf erfolgt in den Arteriolen (Widerstandsgefäße) und Kapillaren aufgrund ihres hohen Strömungswiderstands (kleine Durchmesser). Daher ist in Venen der Druck niedrig (5-15 mmHg vs. 120/80 mmHg in Arterien). Venenklappen und Muskelpumpe unterstützen den Rücktransport zum Herzen.',
+    erklärung: 'Der größte Druckabfall im Kreislauf erfolgt in den Arteriolen (Widerstandsgefäße) und Kapillaren aufgrund ihres hohen Strömungswiderstands (kleine Durchmesser). Daher ist in Venen der Druck niedrig (5-15 mmHg vs. 120/80 mmHg in Arterien). Venenklappen und Muskelpumpe unterstützen den Rücktransport zum Herzen.',
     strategieTipp: 'Blutdruck: Aorta ~120/80 mmHg → Arteriolen/Kapillaren (größter Druckabfall, Widerstand) → Venen ~5-15 mmHg. Venöser Rückfluss: Klappen, Muskelpumpe, Atmung.'
   },
   {
@@ -846,7 +846,7 @@ export const fragenPart3 = [
       'Kapillarwände'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Venenklappen sind taschenförmige Ausstülpungen der Intima, die nur den Blutfluss zum Herzen zulassen. Bei Rückfluss füllen sich die Taschen und verschließen das Lumen. Besonders wichtig in den Beinvenen gegen die Schwerkraft. Klappeninsuffizienz führt zu Krampfadern (Varizen).',
+    erklärung: 'Venenklappen sind taschenförmige Ausstülpungen der Intima, die nur den Blutfluss zum Herzen zulassen. Bei Rückfluss füllen sich die Taschen und verschließen das Lumen. Besonders wichtig in den Beinvenen gegen die Schwerkraft. Klappeninsuffizienz führt zu Krampfadern (Varizen).',
     strategieTipp: 'Venöser Rückfluss zum Herzen: Venenklappen (verhindern Rückfluss) + Muskelpumpe (Wade = "peripheres Herz") + Atemdruckschwankungen. Bei Insuffizienz → Varizen.'
   }
 ];

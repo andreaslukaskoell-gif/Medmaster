@@ -394,7 +394,7 @@ export const biologieQuestionsPart4: Question[] = [
     text: "Welcher Bereich der Großhirnrinde ist primär für die Sprachproduktion (motorische Sprache) zuständig?",
     options: [
       { id: "a", text: "Wernicke-Areal (hinterer Teil des Gyrus temporalis superior)" },
-      { id: "b", text: "Primärer visueller Cortex (Area striata)" },
+      { id: "b", text: "Primärer visüller Cortex (Area striata)" },
       { id: "c", text: "Primärer somatosensorischer Cortex (Gyrus postcentralis)" },
       { id: "d", text: "Broca-Areal (Gyrus frontalis inferior)" },
       { id: "e", text: "Präfrontaler Cortex" },
@@ -547,7 +547,7 @@ export const biologieQuestionsPart4: Question[] = [
     topic: "Sexualhormone",
     text: "Welches Hormon wird primär vom Corpus luteum (Gelbkörper) in der zweiten Hälfte des Menstruationszyklus produziert?",
     options: [
-      { id: "a", text: "Oestradiol" },
+      { id: "a", text: "Östradiol" },
       { id: "b", text: "Testosteron" },
       { id: "c", text: "FSH" },
       { id: "d", text: "Progesteron" },
@@ -555,7 +555,7 @@ export const biologieQuestionsPart4: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Das Corpus luteum (Gelbkörper) entsteht nach der Ovulation aus dem gesprungenen Follikel und produziert primär Progesteron sowie etwas Oestradiol. Progesteron bereitet das Endometrium auf die Implantation vor, erhöht die Basalkörpertemperatur und hemmt über negative Rückkopplung die GnRH/LH-Sekretion. Bei ausbleibender Befruchtung degeneriert das Corpus luteum nach ca. 12-14 Tagen (Luteolyse), der Progesteronspiegel fällt, und die Menstruation wird ausgelöst. Bei Eintritt einer Schwangerschaft hält hCG das Corpus luteum aufrecht.",
+      "Das Corpus luteum (Gelbkörper) entsteht nach der Ovulation aus dem gesprungenen Follikel und produziert primär Progesteron sowie etwas Östradiol. Progesteron bereitet das Endometrium auf die Implantation vor, erhöht die Basalkörpertemperatur und hemmt über negative Rückkopplung die GnRH/LH-Sekretion. Bei ausbleibender Befruchtung degeneriert das Corpus luteum nach ca. 12-14 Tagen (Luteolyse), der Progesteronspiegel fällt, und die Menstruation wird ausgelöst. Bei Eintritt einer Schwangerschaft hält hCG das Corpus luteum aufrecht.",
     difficulty: "leicht",
     tags: ["corpus-luteum", "progesteron", "lutealphase", "menstruationszyklus"],
   },
@@ -671,7 +671,7 @@ export const biologieQuestionsPart4: Question[] = [
     ],
     correctOptionId: "b",
     explanation:
-      "MHC-Gene (HLA beim Menschen) gehören zu den polymorphsten Genen im menschlichen Genom. Jedes MHC-Allel codiert für ein Molekül mit einer leicht anderen Peptid-Bindungsfurche, sodass verschiedene Allele verschiedene Peptide präsentieren können. Dieser Polymorphismus auf Populationsebene stellt sicher, dass nicht alle Individuen die gleichen Pathogenpeptide präsentieren - ein Pathogen, das der MHC-Präsentation eines Individuums entkommt, kann von einem anderen Individuum mit anderen MHC-Allelen erkannt werden. MHC-Gene werden kodominant exprimiert und von beiden Eltern vererbt.",
+      "MHC-Gene (HLA beim Menschen) gehören zu den polymorphsten Genen im menschlichen Genom. Jedes MHC-Allel codiert für ein Molekül mit einer leicht anderen Peptid-Bindungsfurche, sodass verschiedene Allele verschiedene Peptide präsentieren können. Dieser Polymorphismus auf Populationsebene stellt sicher, dass nicht alle Individün die gleichen Pathogenpeptide präsentieren - ein Pathogen, das der MHC-Präsentation eines Individuums entkommt, kann von einem anderen Individuum mit anderen MHC-Allelen erkannt werden. MHC-Gene werden kodominant exprimiert und von beiden Eltern vererbt.",
     difficulty: "schwer",
     tags: ["mhc-polymorphismus", "hla", "peptidbindung", "evolution"],
   },
@@ -726,7 +726,7 @@ export const biologieQuestionsPart4: Question[] = [
       { id: "b", text: "ANP (Atriales natriuretisches Peptid)" },
       { id: "c", text: "ADH (Antidiuretisches Hormon, Vasopressin)" },
       { id: "d", text: "Renin" },
-      { id: "e", text: "Erythropoetin" },
+      { id: "e", text: "Erythropötin" },
     ],
     correctOptionId: "c",
     explanation:
@@ -760,7 +760,7 @@ export const biologieQuestionsPart4: Question[] = [
     topic: "Elektrolythaushalt",
     text: "Welche Funktion hat das juxtaglomeruläre Apparates (JGA) in der Niere?",
     options: [
-      { id: "a", text: "Produktion von Erythropoetin zur Stimulation der Erythropoese" },
+      { id: "a", text: "Produktion von Erythropötin zur Stimulation der Erythropöse" },
       { id: "b", text: "Filtration des Blutes zur Bildung des Primärharns" },
       { id: "c", text: "Synthese von Vitamin D3 (Cholecalciferol)" },
       { id: "d", text: "Er dient als Sensor für den Natriumchloridgehalt im distalen Tubulus und den Perfusionsdruck und reguliert die Reninfreisetzung" },
@@ -933,10 +933,10 @@ export const biologieQuestionsPart4: Question[] = [
     subject: "biologie",
     chapter: "fortpflanzung",
     topic: "Plazenta",
-    text: "Welches Hormon produziert der Synzytiotrophoblast der Plazenta früh in der Schwangerschaft, um den Gelbkörper aufrechtzuerhalten?",
+    text: "Welches Hormon produziert der Synzytiotrophoblast der Plazenta früh in der Schwangerschaft, um den Gelbkörper aufrechtzürhalten?",
     options: [
       { id: "a", text: "Progesteron" },
-      { id: "b", text: "Oestradiol" },
+      { id: "b", text: "Östradiol" },
       { id: "c", text: "FSH" },
       { id: "d", text: "Humanes Choriongonadotropin (hCG)" },
       { id: "e", text: "Oxytocin" },

@@ -13,7 +13,7 @@ export const fragenPart2 = [
       'Die Frequenz beträgt 0,25 Hz.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Frequenz f ist der Kehrwert der Periodendauer T: f = 1/T = 1/(2 s) = 0,5 Hz. Eine Frequenz von 0,5 Hz bedeutet, dass das Pendel eine halbe Schwingung pro Sekunde ausführt.',
+    erklärung: 'Die Frequenz f ist der Kehrwert der Periodendauer T: f = 1/T = 1/(2 s) = 0,5 Hz. Eine Frequenz von 0,5 Hz bedeutet, dass das Pendel eine halbe Schwingung pro Sekunde ausführt.',
     strategieTipp: 'Merke die Grundformel: f = 1/T. Frequenz und Periodendauer sind reziproke Größen.'
   },
   {
@@ -30,7 +30,7 @@ export const fragenPart2 = [
       '10 cm/s'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die maximale Geschwindigkeit bei harmonischer Schwingung ist v_max = ω × A = 10 rad/s × 5 cm = 50 cm/s. Diese Geschwindigkeit wird beim Durchgang durch die Ruhelage erreicht.',
+    erklärung: 'Die maximale Geschwindigkeit bei harmonischer Schwingung ist v_max = ω × A = 10 rad/s × 5 cm = 50 cm/s. Diese Geschwindigkeit wird beim Durchgang durch die Ruhelage erreicht.',
     strategieTipp: 'Bei harmonischen Schwingungen gilt: v_max = ω × A. Die maximale Geschwindigkeit tritt auf, wenn die Auslenkung null ist.'
   },
   {
@@ -47,7 +47,7 @@ export const fragenPart2 = [
       'Sie wird achtmal so groß.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Periodendauer eines Fadenpendels ist T = 2π√(l/g). Da T proportional zur Wurzel der Länge ist, führt eine Vervierfachung der Länge zu einer Verdopplung der Periodendauer: √4 = 2.',
+    erklärung: 'Die Periodendauer eines Fadenpendels ist T = 2π√(l/g). Da T proportional zur Wurzel der Länge ist, führt eine Vervierfachung der Länge zu einer Verdopplung der Periodendauer: √4 = 2.',
     strategieTipp: 'Beachte die Wurzelbeziehung: T ∝ √l. Bei Vervierfachung der Länge nimmt die Periodendauer um den Faktor √4 = 2 zu.'
   },
   {
@@ -64,7 +64,7 @@ export const fragenPart2 = [
       'T ≈ 0,28 s'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Für ein Federpendel gilt T = 2π√(m/D) = 2π√(0,2 kg / 50 N/m) = 2π√0,004 s² = 2π × 0,0632 s ≈ 0,40 s.',
+    erklärung: 'Für ein Federpendel gilt T = 2π√(m/D) = 2π√(0,2 kg / 50 N/m) = 2π√0,004 s² = 2π × 0,0632 s ≈ 0,40 s.',
     strategieTipp: 'Wandle Gramm in Kilogramm um! Formel: T = 2π√(m/D). Rechne sorgfältig mit der Wurzel.'
   },
   {
@@ -81,7 +81,7 @@ export const fragenPart2 = [
       'Die Schwingung wird schneller.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei gedämpften Schwingungen wird mechanische Energie durch Reibungskräfte in Wärme umgewandelt. Dies führt zu einer kontinuierlichen Abnahme der Amplitude, während die Frequenz nahezu konstant bleibt.',
+    erklärung: 'Bei gedämpften Schwingungen wird mechanische Energie durch Reibungskräfte in Wärme umgewandelt. Dies führt zu einer kontinuierlichen Abnahme der Amplitude, während die Frequenz nahezu konstant bleibt.',
     strategieTipp: 'Dämpfung bedeutet Energieverlust durch Reibung, was sich in abnehmender Amplitude zeigt.'
   },
   {
@@ -98,7 +98,7 @@ export const fragenPart2 = [
       '1020 Hz'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Mit der Wellengleichung v = f × λ ergibt sich: f = v/λ = 340 m/s / 0,68 m = 500 Hz. Dies entspricht einem hörbaren Ton.',
+    erklärung: 'Mit der Wellengleichung v = f × λ ergibt sich: f = v/λ = 340 m/s / 0,68 m = 500 Hz. Dies entspricht einem hörbaren Ton.',
     strategieTipp: 'Die fundamentale Wellengleichung v = f × λ gilt für alle Wellentypen. Stelle nach der gesuchten Größe um.'
   },
   {
@@ -115,7 +115,7 @@ export const fragenPart2 = [
       'Transversalwellen sind immer gedämpft.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei Transversalwellen (z.B. Licht, Seilwellen) schwingen die Teilchen senkrecht zur Ausbreitungsrichtung der Welle. Im Gegensatz dazu schwingen bei Longitudinalwellen (z.B. Schall) die Teilchen parallel zur Ausbreitungsrichtung.',
+    erklärung: 'Bei Transversalwellen (z.B. Licht, Seilwellen) schwingen die Teilchen senkrecht zur Ausbreitungsrichtung der Welle. Im Gegensatz dazu schwingen bei Longitudinalwellen (z.B. Schall) die Teilchen parallel zur Ausbreitungsrichtung.',
     strategieTipp: 'Trans-versal = quer, quer zur Ausbreitungsrichtung. Beispiel: Seilwelle.'
   },
   {
@@ -132,7 +132,7 @@ export const fragenPart2 = [
       'Reflexion'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Ein Gangunterschied von λ/2 entspricht einem Phasenunterschied von π (180°). Die Wellen sind gegenphasig und löschen sich aus (destruktive Interferenz). Dies ist ein klassisches Interferenzmuster.',
+    erklärung: 'Ein Gangunterschied von λ/2 entspricht einem Phasenunterschied von π (180°). Die Wellen sind gegenphasig und löschen sich aus (destruktive Interferenz). Dies ist ein klassisches Interferenzmuster.',
     strategieTipp: 'Gangunterschied λ/2, 3λ/2, 5λ/2... führt zu destruktiver Interferenz. Gangunterschied 0, λ, 2λ... führt zu konstruktiver Interferenz.'
   },
   {
@@ -149,7 +149,7 @@ export const fragenPart2 = [
       '10 mm'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der Streifenabstand beim Doppelspalt ist Δy = λ × L / d = (600 × 10⁻⁹ m × 2 m) / (0,3 × 10⁻³ m) = 1200 × 10⁻⁹ m / (0,3 × 10⁻³ m) = 4 × 10⁻³ m = 4 mm.',
+    erklärung: 'Der Streifenabstand beim Doppelspalt ist Δy = λ × L / d = (600 × 10⁻⁹ m × 2 m) / (0,3 × 10⁻³ m) = 1200 × 10⁻⁹ m / (0,3 × 10⁻³ m) = 4 × 10⁻³ m = 4 mm.',
     strategieTipp: 'Doppelspalt-Formel: Δy = λL/d. Achte auf konsistente Einheiten (nm → m, mm → m).'
   },
   {
@@ -166,7 +166,7 @@ export const fragenPart2 = [
       'Die Dämpfung von Wellen durch Absorption'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Beugung beschreibt das Phänomen, dass Wellen Hindernisse umgehen und sich in Bereiche ausbreiten, die nach den Gesetzen der geometrischen Optik im Schatten liegen sollten. Dies ist besonders ausgeprägt, wenn die Hindernisabmessungen in der Größenordnung der Wellenlänge liegen.',
+    erklärung: 'Beugung beschreibt das Phänomen, dass Wellen Hindernisse umgehen und sich in Bereiche ausbreiten, die nach den Gesetzen der geometrischen Optik im Schatten liegen sollten. Dies ist besonders ausgeprägt, wenn die Hindernisabmessungen in der Größenordnung der Wellenlänge liegen.',
     strategieTipp: 'Beugung = Ablenkung von Wellen an Kanten und Hindernissen. Je kleiner das Hindernis im Verhältnis zur Wellenlänge, desto stärker die Beugung.'
   },
   {
@@ -183,7 +183,7 @@ export const fragenPart2 = [
       'Polarisation ist nur bei Schallwellen möglich.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Polarisation ist eine Eigenschaft von Transversalwellen wie Licht. Ein Polarisationsfilter lässt nur Schwingungen in einer bestimmten Ebene durch. Nach dem Filter ist das Licht linear polarisiert, d.h. die elektrischen Feldvektoren schwingen nur noch in einer Ebene.',
+    erklärung: 'Polarisation ist eine Eigenschaft von Transversalwellen wie Licht. Ein Polarisationsfilter lässt nur Schwingungen in einer bestimmten Ebene durch. Nach dem Filter ist das Licht linear polarisiert, d.h. die elektrischen Feldvektoren schwingen nur noch in einer Ebene.',
     strategieTipp: 'Nur Transversalwellen können polarisiert werden. Longitudinalwellen wie Schall nicht.'
   },
   {
@@ -200,7 +200,7 @@ export const fragenPart2 = [
       '75%'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Der erste Filter lässt 50% der Intensität durch (unpolarisiertes Licht). Der zweite Filter folgt dem Gesetz von Malus: I = I₀ × cos²(60°) = I₀ × 0,25. Gesamtintensität: 0,5 × 0,25 = 0,125 = 12,5%.',
+    erklärung: 'Der erste Filter lässt 50% der Intensität durch (unpolarisiertes Licht). Der zweite Filter folgt dem Gesetz von Malus: I = I₀ × cos²(60°) = I₀ × 0,25. Gesamtintensität: 0,5 × 0,25 = 0,125 = 12,5%.',
     strategieTipp: 'Gesetz von Malus: I = I₀ × cos²(α). Bei unpolarisiertem Licht wird zunächst die Hälfte durchgelassen.'
   },
   {
@@ -217,7 +217,7 @@ export const fragenPart2 = [
       '200 cm'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Bei der Grundschwingung (1. Harmonische) einer beidseitig eingespannten Saite gilt: L = λ/2, also λ = 2L = 2 × 80 cm = 160 cm. Die Saite bildet genau einen halben Wellenberg aus.',
+    erklärung: 'Bei der Grundschwingung (1. Harmonische) einer beidseitig eingespannten Saite gilt: L = λ/2, also λ = 2L = 2 × 80 cm = 160 cm. Die Saite bildet genau einen halben Wellenberg aus.',
     strategieTipp: 'Grundschwingung einer Saite: L = λ/2, daher λ = 2L. Die Saitenlänge entspricht einer halben Wellenlänge.'
   },
   {
@@ -234,7 +234,7 @@ export const fragenPart2 = [
       '5'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die n-te Harmonische hat n-1 Knoten zwischen den Enden. Bei der 3. Harmonischen sind dies 3-1 = 2 Knoten. Die Saite schwingt in drei Segmenten, getrennt durch zwei innere Knoten.',
+    erklärung: 'Die n-te Harmonische hat n-1 Knoten zwischen den Enden. Bei der 3. Harmonischen sind dies 3-1 = 2 Knoten. Die Saite schwingt in drei Segmenten, getrennt durch zwei innere Knoten.',
     strategieTipp: 'Anzahl innerer Knoten = Nummer der Harmonischen minus 1. Die 3. Harmonische hat 2 innere Knoten.'
   },
   {
@@ -251,7 +251,7 @@ export const fragenPart2 = [
       '15 rad/s'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei harmonischer Schwingung gilt v_max = ω × A. Umgestellt: ω = v_max / A = 40 cm/s / 8 cm = 5 rad/s. Die Kreisfrequenz beschreibt, wie schnell die Phase der Schwingung fortschreitet.',
+    erklärung: 'Bei harmonischer Schwingung gilt v_max = ω × A. Umgestellt: ω = v_max / A = 40 cm/s / 8 cm = 5 rad/s. Die Kreisfrequenz beschreibt, wie schnell die Phase der Schwingung fortschreitet.',
     strategieTipp: 'Aus v_max = ω × A folgt ω = v_max / A. Die Kreisfrequenz verbindet Amplitude und maximale Geschwindigkeit.'
   },
   {
@@ -268,7 +268,7 @@ export const fragenPart2 = [
       'Die Phase bleibt unverändert.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei der Reflexion bleiben Frequenz und Wellenlänge erhalten (da das Medium gleich bleibt). Die Phase kann sich um π ändern (Phasensprung bei Reflexion an festem Ende), aber die Frequenz ist eine intrinsische Eigenschaft der Welle, die sich nicht ändert.',
+    erklärung: 'Bei der Reflexion bleiben Frequenz und Wellenlänge erhalten (da das Medium gleich bleibt). Die Phase kann sich um π ändern (Phasensprung bei Reflexion an festem Ende), aber die Frequenz ist eine intrinsische Eigenschaft der Welle, die sich nicht ändert.',
     strategieTipp: 'Reflexion: Frequenz und Wellenlänge bleiben im gleichen Medium erhalten. An festem Ende tritt ein Phasensprung von π auf.'
   },
   {
@@ -285,7 +285,7 @@ export const fragenPart2 = [
       '50 cm'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Mit v = f × λ ergibt sich: λ = v / f = 340 m/s / 1700 Hz = 0,2 m = 20 cm. Diese Wellenlänge liegt im Bereich hörbarer Töne.',
+    erklärung: 'Mit v = f × λ ergibt sich: λ = v / f = 340 m/s / 1700 Hz = 0,2 m = 20 cm. Diese Wellenlänge liegt im Bereich hörbarer Töne.',
     strategieTipp: 'Wellengleichung umstellen: λ = v / f. Schallgeschwindigkeit in Luft ≈ 340 m/s ist eine wichtige Konstante.'
   },
   {
@@ -302,7 +302,7 @@ export const fragenPart2 = [
       'Bei x = ±8,66 cm'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Kinetische und potentielle Energie sind gleich, wenn E_kin = E_pot = E_gesamt/2. Da E_pot = (1/2)Dx² und E_gesamt = (1/2)DA², folgt: (1/2)Dx² = (1/4)DA², also x² = A²/2, x = A/√2 = 10 cm/√2 ≈ 7,07 cm.',
+    erklärung: 'Kinetische und potentielle Energie sind gleich, wenn E_kin = E_pot = E_gesamt/2. Da E_pot = (1/2)Dx² und E_gesamt = (1/2)DA², folgt: (1/2)Dx² = (1/4)DA², also x² = A²/2, x = A/√2 = 10 cm/√2 ≈ 7,07 cm.',
     strategieTipp: 'Bei x = A/√2 sind kinetische und potentielle Energie gleich groß. Dies ist eine wichtige Position bei harmonischen Schwingungen.'
   },
   {
@@ -319,7 +319,7 @@ export const fragenPart2 = [
       'ω = πT'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Kreisfrequenz ist definiert als ω = 2π/T = 2πf. Sie gibt an, welchen Winkel (in Radiant) pro Zeiteinheit durchlaufen wird. Eine volle Schwingung entspricht 2π Radiant.',
+    erklärung: 'Die Kreisfrequenz ist definiert als ω = 2π/T = 2πf. Sie gibt an, welchen Winkel (in Radiant) pro Zeiteinheit durchlaufen wird. Eine volle Schwingung entspricht 2π Radiant.',
     strategieTipp: 'Merke: ω = 2πf = 2π/T. Die Kreisfrequenz ist die Winkelgeschwindigkeit der entsprechenden Kreisbewegung.'
   },
   {
@@ -336,7 +336,7 @@ export const fragenPart2 = [
       'Sie oszilliert zwischen zwei Werten.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei gedämpften Schwingungen wird mechanische Energie durch Reibungskräfte (z.B. Luftwiderstand, innere Reibung) kontinuierlich in Wärmeenergie umgewandelt. Dies führt zur Abnahme der Amplitude.',
+    erklärung: 'Bei gedämpften Schwingungen wird mechanische Energie durch Reibungskräfte (z.B. Luftwiderstand, innere Reibung) kontinuierlich in Wärmeenergie umgewandelt. Dies führt zur Abnahme der Amplitude.',
     strategieTipp: 'Dämpfung bedeutet Energieverlust durch Reibung. Die mechanische Energie wird in Wärme dissipiert.'
   },
   {
@@ -353,7 +353,7 @@ export const fragenPart2 = [
       'A/2'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei einem Phasenunterschied von π/2 addieren sich die Amplituden vektoriell: A_res = √(A² + A²) = A√2. Dies entspricht einer teilweise konstruktiven Interferenz.',
+    erklärung: 'Bei einem Phasenunterschied von π/2 addieren sich die Amplituden vektoriell: A_res = √(A² + A²) = A√2. Dies entspricht einer teilweise konstruktiven Interferenz.',
     strategieTipp: 'Phasenunterschied π/2 (90°): vektorielle Addition der Amplituden. Nutze den Satz des Pythagoras: A_res = √(A₁² + A₂²).'
   },
   {
@@ -370,7 +370,7 @@ export const fragenPart2 = [
       '166,7 Hz'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Wellengeschwindigkeit: v = √(F/μ) = √(80 N / 0,002 kg/m) = √40000 m²/s² = 200 m/s. Grundschwingung: f₁ = v/(2L) = 200 m/s / (2 × 1,2 m) = 200/2,4 Hz ≈ 83,3 Hz.',
+    erklärung: 'Wellengeschwindigkeit: v = √(F/μ) = √(80 N / 0,002 kg/m) = √40000 m²/s² = 200 m/s. Grundschwingung: f₁ = v/(2L) = 200 m/s / (2 × 1,2 m) = 200/2,4 Hz ≈ 83,3 Hz.',
     strategieTipp: 'Zweistufig rechnen: (1) Wellengeschwindigkeit v = √(F/μ), (2) Grundfrequenz f₁ = v/(2L). Achte auf Einheiten (g → kg).'
   },
   {
@@ -387,7 +387,7 @@ export const fragenPart2 = [
       'Transversalwellen haben keine Frequenz.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Longitudinalwellen (z.B. Schall): Schwingung parallel zur Ausbreitung. Transversalwellen (z.B. Licht, Seilwelle): Schwingung senkrecht zur Ausbreitung. Dies ist der fundamentale Unterschied zwischen beiden Wellentypen.',
+    erklärung: 'Longitudinalwellen (z.B. Schall): Schwingung parallel zur Ausbreitung. Transversalwellen (z.B. Licht, Seilwelle): Schwingung senkrecht zur Ausbreitung. Dies ist der fundamentale Unterschied zwischen beiden Wellentypen.',
     strategieTipp: 'Longitudinal = längs, parallel zur Ausbreitung. Transversal = quer, senkrecht zur Ausbreitung.'
   },
   {
@@ -404,7 +404,7 @@ export const fragenPart2 = [
       '2,45 s'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'T = 2π√(l/g), also T ∝ 1/√g. Wenn g um den Faktor 6 kleiner wird, nimmt T um den Faktor √6 ≈ 2,45 zu: T_Mond = 2 s × √6 ≈ 4,9 s.',
+    erklärung: 'T = 2π√(l/g), also T ∝ 1/√g. Wenn g um den Faktor 6 kleiner wird, nimmt T um den Faktor √6 ≈ 2,45 zu: T_Mond = 2 s × √6 ≈ 4,9 s.',
     strategieTipp: 'T ∝ 1/√g. Kleinere Gravitation führt zu längerer Periodendauer. Faktor: √(g_Erde/g_Mond) = √6.'
   },
   {
@@ -421,8 +421,8 @@ export const fragenPart2 = [
       '0,5 m/s'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Aus der Wellengleichung y = A sin(kx - ωt) liest man ab: k = 10 rad/m, ω = 50 rad/s. Ausbreitungsgeschwindigkeit: v = ω/k = 50/10 = 5 m/s.',
-    strategieTipp: 'Aus y = A sin(kx - ωt) folgt: v = ω/k. Die Koeffizienten vor x und t geben k und ω an.'
+    erklärung: 'Aus der Wellengleichung y = A sin(kx - ωt) liest man ab: k = 10 rad/m, ω = 50 rad/s. Ausbreitungsgeschwindigkeit: v = ω/k = 50/10 = 5 m/s.',
+    strategieTipp: 'Aus y = A sin(kx - ωt) folgt: v = ω/k. Die Köffizienten vor x und t geben k und ω an.'
   },
   {
     id: 'ph-q-076',
@@ -438,7 +438,7 @@ export const fragenPart2 = [
       '-27°C'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Umrechnung zwischen Kelvin und Celsius erfolgt mit T(°C) = T(K) - 273,15. Also: T = 300 K - 273 K = 27°C. Der Nullpunkt der Kelvin-Skala liegt bei -273,15°C (absoluter Nullpunkt).',
+    erklärung: 'Die Umrechnung zwischen Kelvin und Celsius erfolgt mit T(°C) = T(K) - 273,15. Also: T = 300 K - 273 K = 27°C. Der Nullpunkt der Kelvin-Skala liegt bei -273,15°C (absoluter Nullpunkt).',
     strategieTipp: 'Merke: T(°C) = T(K) - 273. Raumtemperatur liegt bei etwa 300 K = 27°C.'
   },
   {
@@ -455,7 +455,7 @@ export const fragenPart2 = [
       'Die mechanische Arbeit am System'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die innere Energie U ist die Gesamtenergie aller Teilchen im System. Sie umfasst kinetische Energie (Translation, Rotation, Vibration) und potentielle Energie (Wechselwirkungen zwischen Teilchen). Bei idealen Gasen besteht sie nur aus kinetischer Energie.',
+    erklärung: 'Die innere Energie U ist die Gesamtenergie aller Teilchen im System. Sie umfasst kinetische Energie (Translation, Rotation, Vibration) und potentielle Energie (Wechselwirkungen zwischen Teilchen). Bei idealen Gasen besteht sie nur aus kinetischer Energie.',
     strategieTipp: 'Innere Energie = alle mikroskopischen Energieformen. Sie ist eine Zustandsgröße und hängt von Temperatur, Druck und Volumen ab.'
   },
   {
@@ -472,7 +472,7 @@ export const fragenPart2 = [
       'Es gibt keinen Unterschied.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Beim Übergang fest → flüssig → gasförmig muss Energie zugeführt werden (Schmelz- und Verdampfungswärme), um die Bindungen zu lösen. Bei gleicher Temperatur hat der gasförmige Zustand die höchste innere Energie, da die potentielle Energie der Teilchen am größten ist (schwache Bindungen).',
+    erklärung: 'Beim Übergang fest → flüssig → gasförmig muss Energie zugeführt werden (Schmelz- und Verdampfungswärme), um die Bindungen zu lösen. Bei gleicher Temperatur hat der gasförmige Zustand die höchste innere Energie, da die potentielle Energie der Teilchen am größten ist (schwache Bindungen).',
     strategieTipp: 'Reihenfolge der inneren Energie: fest < flüssig < gasförmig (bei gleicher Temperatur). Phasenübergänge erfordern Energiezufuhr.'
   },
   {
@@ -489,7 +489,7 @@ export const fragenPart2 = [
       'Die Zellmembran wird undurchlässig.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'In einer hypertonischen Lösung (höhere Konzentration außen) ist der osmotische Druck außerhalb größer. Wasser diffundiert aus der Zelle heraus in Richtung höherer Konzentration, die Zelle schrumpft (Plasmolyse bei Pflanzenzellen).',
+    erklärung: 'In einer hypertonischen Lösung (höhere Konzentration außen) ist der osmotische Druck außerhalb größer. Wasser diffundiert aus der Zelle heraus in Richtung höherer Konzentration, die Zelle schrumpft (Plasmolyse bei Pflanzenzellen).',
     strategieTipp: 'Hypertonisch = höhere Konzentration außen → Wasser fließt raus. Hypotonisch = niedrigere Konzentration außen → Wasser fließt rein.'
   },
   {
@@ -506,7 +506,7 @@ export const fragenPart2 = [
       '50 mol/m³'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Van\'t Hoff-Gleichung: π = cRT, also c = π/(RT) = 2,5 × 10⁵ Pa / (8,314 J/(mol×K) × 300 K) = 2,5 × 10⁵ / 2494,2 mol/m³ ≈ 100 mol/m³ = 0,1 mol/L.',
+    erklärung: 'Van\'t Hoff-Gleichung: π = cRT, also c = π/(RT) = 2,5 × 10⁵ Pa / (8,314 J/(mol×K) × 300 K) = 2,5 × 10⁵ / 2494,2 mol/m³ ≈ 100 mol/m³ = 0,1 mol/L.',
     strategieTipp: 'Osmotischer Druck: π = cRT (van\'t Hoff). Achte auf T in Kelvin (27°C = 300 K). Ergebnis in mol/m³, nicht mol/L.'
   },
   {
@@ -523,7 +523,7 @@ export const fragenPart2 = [
       'Der absolute Nullpunkt kann erreicht werden.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der 1. Hauptsatz ist der Energieerhaltungssatz der Thermodynamik: ΔU = Q + W, wobei Q die zugeführte Wärme und W die am System verrichtete Arbeit ist. Energie wird nicht erzeugt oder vernichtet, sondern nur umgewandelt.',
+    erklärung: 'Der 1. Hauptsatz ist der Energieerhaltungssatz der Thermodynamik: ΔU = Q + W, wobei Q die zugeführte Wärme und W die am System verrichtete Arbeit ist. Energie wird nicht erzeugt oder vernichtet, sondern nur umgewandelt.',
     strategieTipp: 'Merke: ΔU = Q + W. Vorzeichenkonvention: Q > 0 wenn Wärme zugeführt wird, W > 0 wenn am System Arbeit verrichtet wird.'
   },
   {
@@ -540,7 +540,7 @@ export const fragenPart2 = [
       'Der Druck bleibt konstant.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei isothermer Zustandsänderung (T = const) bleibt beim idealen Gas die innere Energie konstant (ΔU = 0). Nach dem 1. Hauptsatz gilt dann: Q = -W. Die zugeführte Wärme wird vollständig in Arbeit umgewandelt.',
+    erklärung: 'Bei isothermer Zustandsänderung (T = const) bleibt beim idealen Gas die innere Energie konstant (ΔU = 0). Nach dem 1. Hauptsatz gilt dann: Q = -W. Die zugeführte Wärme wird vollständig in Arbeit umgewandelt.',
     strategieTipp: 'Isotherm: T = const → ΔU = 0 (ideales Gas) → Q = -W. Die gesamte zugeführte Wärme wird in Volumenarbeit umgewandelt.'
   },
   {
@@ -557,7 +557,7 @@ export const fragenPart2 = [
       '7500 J'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei isobarer Expansion: W = -p × ΔV = -10⁵ Pa × (0,05 m³ - 0,02 m³) = -10⁵ Pa × 0,03 m³ = -3000 J. Das negative Vorzeichen bedeutet, dass das Gas Arbeit verrichtet (an der Umgebung). Die vom Gas verrichtete Arbeit beträgt 3000 J.',
+    erklärung: 'Bei isobarer Expansion: W = -p × ΔV = -10⁵ Pa × (0,05 m³ - 0,02 m³) = -10⁵ Pa × 0,03 m³ = -3000 J. Das negative Vorzeichen bedeutet, dass das Gas Arbeit verrichtet (an der Umgebung). Die vom Gas verrichtete Arbeit beträgt 3000 J.',
     strategieTipp: 'Isobare Arbeit: W = -p × ΔV. Negatives Vorzeichen: Gas leistet Arbeit. Positives ΔV: Expansion.'
   },
   {
@@ -574,7 +574,7 @@ export const fragenPart2 = [
       'Die Diffusionsgeschwindigkeit'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Das ideale Gasgesetz lautet pV = nRT und verknüpft die Zustandsgrößen Druck (p), Volumen (V), Stoffmenge (n) und Temperatur (T). R ist die universelle Gaskonstante (8,314 J/(mol×K)).',
+    erklärung: 'Das ideale Gasgesetz lautet pV = nRT und verknüpft die Zustandsgrößen Druck (p), Volumen (V), Stoffmenge (n) und Temperatur (T). R ist die universelle Gaskonstante (8,314 J/(mol×K)).',
     strategieTipp: 'Merke: pV = nRT. Diese Gleichung gilt gut für verdünnte Gase bei nicht zu tiefen Temperaturen.'
   },
   {
@@ -591,7 +591,7 @@ export const fragenPart2 = [
       '0,8 bar'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei isochorer Zustandsänderung (V = const) gilt: p₁/T₁ = p₂/T₂. Mit T₁ = 293 K und T₂ = 353 K: p₂ = p₁ × T₂/T₁ = 1 bar × 353/293 ≈ 1,20 bar.',
+    erklärung: 'Bei isochorer Zustandsänderung (V = const) gilt: p₁/T₁ = p₂/T₂. Mit T₁ = 293 K und T₂ = 353 K: p₂ = p₁ × T₂/T₁ = 1 bar × 353/293 ≈ 1,20 bar.',
     strategieTipp: 'Isochor: p/T = const. Achte auf absolute Temperatur in Kelvin! T(K) = T(°C) + 273.'
   },
   {
@@ -608,7 +608,7 @@ export const fragenPart2 = [
       '33%'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der Carnot-Wirkungsgrad ist η = 1 - T₂/T₁ = 1 - 300 K/600 K = 1 - 0,5 = 0,5 = 50%. Dies ist der maximal mögliche Wirkungsgrad für eine Wärmekraftmaschine zwischen diesen Temperaturen.',
+    erklärung: 'Der Carnot-Wirkungsgrad ist η = 1 - T₂/T₁ = 1 - 300 K/600 K = 1 - 0,5 = 0,5 = 50%. Dies ist der maximal mögliche Wirkungsgrad für eine Wärmekraftmaschine zwischen diesen Temperaturen.',
     strategieTipp: 'Carnot-Wirkungsgrad: η = 1 - T_kalt/T_warm. Absolute Temperaturen verwenden! Dies ist der theoretische Maximalwirkungsgrad.'
   },
   {
@@ -625,7 +625,7 @@ export const fragenPart2 = [
       'Wasser hat keine Oberflächenspannung.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Dichteanomalie des Wassers bedeutet, dass Wasser seine größte Dichte bei 4°C hat (nicht bei 0°C). Beim weiteren Abkühlen zu Eis dehnt es sich aus, weshalb Eis auf Wasser schwimmt. Dies ist lebenswichtig für aquatische Ökosysteme.',
+    erklärung: 'Die Dichteanomalie des Wassers bedeutet, dass Wasser seine größte Dichte bei 4°C hat (nicht bei 0°C). Beim weiteren Abkühlen zu Eis dehnt es sich aus, weshalb Eis auf Wasser schwimmt. Dies ist lebenswichtig für aquatische Ökosysteme.',
     strategieTipp: 'Anomalie des Wassers: maximale Dichte bei 4°C. Deshalb schwimmt Eis und Gewässer frieren von oben nach unten.'
   },
   {
@@ -642,7 +642,7 @@ export const fragenPart2 = [
       '168 kJ'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Wärmemenge berechnet sich mit Q = m × c × ΔT = 2 kg × 4200 J/(kg×K) × (80°C - 20°C) = 2 × 4200 × 60 J = 504000 J = 504 kJ.',
+    erklärung: 'Die Wärmemenge berechnet sich mit Q = m × c × ΔT = 2 kg × 4200 J/(kg×K) × (80°C - 20°C) = 2 × 4200 × 60 J = 504000 J = 504 kJ.',
     strategieTipp: 'Formel Q = mcΔT. Spezifische Wärmekapazität von Wasser (4200 J/(kg×K)) sollte man kennen.'
   },
   {
@@ -659,7 +659,7 @@ export const fragenPart2 = [
       '52,5°C'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Wärmebilanz: m₁c(T_m - T₁) + m₂c(T_m - T₂) = 0. Da c gleich ist: m₁(T_m - 80) + m₂(T_m - 20) = 0. Also: 500(T_m - 80) + 300(T_m - 20) = 0 → 800T_m = 46000 → T_m = 57,5°C.',
+    erklärung: 'Wärmebilanz: m₁c(T_m - T₁) + m₂c(T_m - T₂) = 0. Da c gleich ist: m₁(T_m - 80) + m₂(T_m - 20) = 0. Also: 500(T_m - 80) + 300(T_m - 20) = 0 → 800T_m = 46000 → T_m = 57,5°C.',
     strategieTipp: 'Mischtemperatur: Wärmeabgabe = Wärmeaufnahme. Bei gleichem Stoff kürzt sich c heraus, rechne mit Massen als Gewichtung.'
   },
   {
@@ -676,7 +676,7 @@ export const fragenPart2 = [
       'Die Wärmeleitfähigkeit des Stoffes'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die spezifische Wärmekapazität c gibt an, wie viel Energie benötigt wird, um 1 kg eines Stoffes um 1 K (oder 1°C) zu erwärmen. Einheit: J/(kg×K). Sie ist eine stoffspezifische Konstante.',
+    erklärung: 'Die spezifische Wärmekapazität c gibt an, wie viel Energie benötigt wird, um 1 kg eines Stoffes um 1 K (oder 1°C) zu erwärmen. Einheit: J/(kg×K). Sie ist eine stoffspezifische Konstante.',
     strategieTipp: 'Spezifische Wärmekapazität c: Energiebedarf pro kg und Kelvin. Wasser hat mit 4200 J/(kg×K) einen sehr hohen Wert.'
   },
   {
@@ -693,7 +693,7 @@ export const fragenPart2 = [
       'Die innere Energie bleibt konstant.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Adiabatisch bedeutet Q = 0 (keine Wärmeaustausch). Bei Kompression wird Arbeit am Gas verrichtet (W > 0), daher steigt nach dem 1. Hauptsatz die innere Energie und damit die Temperatur: ΔU = W > 0.',
+    erklärung: 'Adiabatisch bedeutet Q = 0 (keine Wärmeaustausch). Bei Kompression wird Arbeit am Gas verrichtet (W > 0), daher steigt nach dem 1. Hauptsatz die innere Energie und damit die Temperatur: ΔU = W > 0.',
     strategieTipp: 'Adiabatisch: Q = 0. Bei Kompression: W > 0 → ΔU > 0 → T steigt. Bei Expansion: T sinkt.'
   },
   {
@@ -710,7 +710,7 @@ export const fragenPart2 = [
       'Der absolute Nullpunkt kann erreicht werden.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der 2. Hauptsatz besagt u.a., dass Wärme nicht spontan von einem kälteren zu einem wärmeren Körper fließt. Äquivalent: Die Entropie eines abgeschlossenen Systems nimmt nie ab. Es gibt keine 100% effizienten Wärmekraftmaschinen.',
+    erklärung: 'Der 2. Hauptsatz besagt u.a., dass Wärme nicht spontan von einem kälteren zu einem wärmeren Körper fließt. Äquivalent: Die Entropie eines abgeschlossenen Systems nimmt nie ab. Es gibt keine 100% effizienten Wärmekraftmaschinen.',
     strategieTipp: '2. Hauptsatz: Entropie nimmt zu, Wärme fließt von warm nach kalt, kein Perpetuum mobile möglich.'
   },
   {
@@ -727,7 +727,7 @@ export const fragenPart2 = [
       '3 bar'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei isothermer Zustandsänderung gilt das Boyle-Mariotte-Gesetz: p₁V₁ = p₂V₂. Also: p₂ = p₁ × V₁/V₂ = 2 bar × 5 L / 15 L = 10/15 bar ≈ 0,67 bar.',
+    erklärung: 'Bei isothermer Zustandsänderung gilt das Boyle-Mariotte-Gesetz: p₁V₁ = p₂V₂. Also: p₂ = p₁ × V₁/V₂ = 2 bar × 5 L / 15 L = 10/15 bar ≈ 0,67 bar.',
     strategieTipp: 'Isotherm: pV = const (Boyle-Mariotte). Bei Verdreifachung des Volumens sinkt der Druck auf ein Drittel.'
   },
   {
@@ -744,7 +744,7 @@ export const fragenPart2 = [
       'Es kommt auf den Stoff an.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Im gasförmigen Zustand bewegen sich die Teilchen frei und schnell im gesamten verfügbaren Raum. In Flüssigkeiten sind sie beweglich, aber durch Kohäsionskräfte aneinander gebunden. In Festkörpern können sie nur um feste Plätze schwingen.',
+    erklärung: 'Im gasförmigen Zustand bewegen sich die Teilchen frei und schnell im gesamten verfügbaren Raum. In Flüssigkeiten sind sie beweglich, aber durch Kohäsionskräfte aneinander gebunden. In Festkörpern können sie nur um feste Plätze schwingen.',
     strategieTipp: 'Teilchenbeweglichkeit: gasförmig > flüssig > fest. Dies erklärt die unterschiedlichen makroskopischen Eigenschaften.'
   },
   {
@@ -761,7 +761,7 @@ export const fragenPart2 = [
       '12,5 L'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Aus pV = nRT folgt: V = nRT/p = (3 mol × 8,314 J/(mol×K) × 300 K) / (2 × 10⁵ Pa) = 7482,6 J / (2 × 10⁵ Pa) = 0,0374 m³ = 37,4 L.',
+    erklärung: 'Aus pV = nRT folgt: V = nRT/p = (3 mol × 8,314 J/(mol×K) × 300 K) / (2 × 10⁵ Pa) = 7482,6 J / (2 × 10⁵ Pa) = 0,0374 m³ = 37,4 L.',
     strategieTipp: 'Ideales Gasgesetz umstellen: V = nRT/p. Achte auf Einheiten: 1 J = 1 Pa×m³, 1 m³ = 1000 L.'
   },
   {
@@ -778,7 +778,7 @@ export const fragenPart2 = [
       '1600 J'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Nach dem 1. Hauptsatz gilt für einen Kreisprozess: W = Q_zu - Q_ab = 1000 J - 600 J = 400 J. Die Differenz zwischen aufgenommener und abgegebener Wärme wird in mechanische Arbeit umgewandelt.',
+    erklärung: 'Nach dem 1. Hauptsatz gilt für einen Kreisprozess: W = Q_zu - Q_ab = 1000 J - 600 J = 400 J. Die Differenz zwischen aufgenommener und abgegebener Wärme wird in mechanische Arbeit umgewandelt.',
     strategieTipp: 'Wärmekraftmaschine: W = Q_heiß - Q_kalt. Die verrichtete Arbeit ist die Differenz der Wärmen.'
   },
   {
@@ -795,7 +795,7 @@ export const fragenPart2 = [
       'Weil der Druck oben kleiner ist.'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Aufgrund der Dichteanomalie hat Wasser bei 4°C seine maximale Dichte und sinkt nach unten. Kälteres Wasser (0-4°C) ist leichter und bleibt oben, wo es zu Eis gefriert. Das dichtere 4°C-Wasser am Grund verhindert das Durchfrieren und ermöglicht aquatisches Leben im Winter.',
+    erklärung: 'Aufgrund der Dichteanomalie hat Wasser bei 4°C seine maximale Dichte und sinkt nach unten. Kälteres Wasser (0-4°C) ist leichter und bleibt oben, wo es zu Eis gefriert. Das dichtere 4°C-Wasser am Grund verhindert das Durchfrieren und ermöglicht aquatisches Leben im Winter.',
     strategieTipp: 'Dichteanomalie → 4°C-Wasser sinkt ab → Eisbildung oben → Leben am Grund möglich. Ohne diese Anomalie würden Gewässer von unten nach oben zufrieren.'
   },
   {
@@ -812,7 +812,7 @@ export const fragenPart2 = [
       'kJ/mol'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die spezifische Wärmekapazität c hat die Einheit J/(kg×K) oder äquivalent J/(kg×°C). Sie gibt die Energiemenge an, die pro Kilogramm und pro Kelvin Temperaturänderung benötigt wird.',
+    erklärung: 'Die spezifische Wärmekapazität c hat die Einheit J/(kg×K) oder äquivalent J/(kg×°C). Sie gibt die Energiemenge an, die pro Kilogramm und pro Kelvin Temperaturänderung benötigt wird.',
     strategieTipp: 'Einheit der spezifischen Wärmekapazität: J/(kg×K). Aus Q = mcΔT folgt: c = Q/(mΔT).'
   },
   {
@@ -829,7 +829,7 @@ export const fragenPart2 = [
       'Isentrop'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Isochor bedeutet V = konstant. Bei diesem Prozess wird keine Volumenarbeit verrichtet (W = 0), und die gesamte zugeführte Wärme erhöht die innere Energie: ΔU = Q.',
+    erklärung: 'Isochor bedeutet V = konstant. Bei diesem Prozess wird keine Volumenarbeit verrichtet (W = 0), und die gesamte zugeführte Wärme erhöht die innere Energie: ΔU = Q.',
     strategieTipp: 'Merke die Prozesse: isobar (p const), isochor (V const), isotherm (T const), adiabatisch (Q = 0).'
   },
   {
@@ -846,7 +846,7 @@ export const fragenPart2 = [
       'Durch Reibung der Moleküle'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei adiabatischer Kompression wird die gesamte Kompressionsarbeit in innere Energie (Temperaturerhöhung) umgewandelt. Die Temperatur steigt auf etwa 900 K (ca. 600°C), was ausreicht, um den eingespritzten Diesel selbst zu entzünden. Deshalb benötigen Dieselmotoren keine Zündkerzen.',
+    erklärung: 'Bei adiabatischer Kompression wird die gesamte Kompressionsarbeit in innere Energie (Temperaturerhöhung) umgewandelt. Die Temperatur steigt auf etwa 900 K (ca. 600°C), was ausreicht, um den eingespritzten Diesel selbst zu entzünden. Deshalb benötigen Dieselmotoren keine Zündkerzen.',
     strategieTipp: 'Dieselprinzip: adiabatische Kompression → T steigt stark → Selbstzündung. Im Gegensatz zum Ottomotor keine Fremdzündung nötig.'
   }
 ];

@@ -80,7 +80,7 @@ export const mechanikChapter: Chapter = {
         "Übt ein Körper A eine Kraft auf Körper B aus (actio), so übt Körper B eine gleich große, aber entgegengesetzt gerichtete Kraft auf Körper A aus (reactio). Beide Kräfte greifen an verschiedenen Körpern an!\n\n" +
         "<strong>Wichtige Kräfte:</strong>\n\n" +
         "• <strong>Gewichtskraft:</strong> F_G = m · g (mit g ≈ 9,81 m/s² auf der Erdoberfläche). Wichtig: Gewicht ≠ Masse! Die Masse ist überall gleich, die Gewichtskraft hängt von g ab (auf dem Mond: g ≈ 1,6 m/s²).\n\n" +
-        "• <strong>Reibungskraft:</strong> F_R = μ · F_N, wobei μ der Reibungskoeffizient und F_N die Normalkraft ist. Haftreibung (μ_H) > Gleitreibung (μ_G) > Rollreibung (μ_R). Reibung ist unabhängig von der Auflagefläche und der Geschwindigkeit (vereinfacht).\n\n" +
+        "• <strong>Reibungskraft:</strong> F_R = μ · F_N, wobei μ der Reibungsköffizient und F_N die Normalkraft ist. Haftreibung (μ_H) > Gleitreibung (μ_G) > Rollreibung (μ_R). Reibung ist unabhängig von der Auflagefläche und der Geschwindigkeit (vereinfacht).\n\n" +
         "• <strong>Federkraft (Hooke'sches Gesetz):</strong> F = k · x, wobei k die Federkonstante [N/m] und x die Auslenkung aus der Ruhelage ist. Die Kraft ist proportional zur Auslenkung (lineares Verhalten im elastischen Bereich).\n\n" +
         "• <strong>Zentripetalkraft:</strong> F_Z = m · v² / r = m · ω² · r. Diese Kraft zeigt zum Mittelpunkt der Kreisbahn und hält den Körper auf der Bahn. Sie ist keine eigene Kraftart, sondern wird von anderen Kräften bereitgestellt (Gravitation, Seilkraft, Reibung etc.).\n\n" +
         "<strong>Schiefe Ebene:</strong>\n" +

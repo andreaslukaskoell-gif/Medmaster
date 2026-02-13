@@ -22,7 +22,7 @@ export interface Unterkapitel {
   lernziele?: string[];
   sections?: ContentSection[];
   diagram?: string;
-  merksaetze: string[];
+  merksätze: string[];
   altfrage?: {
     question: string;
     answer: string;

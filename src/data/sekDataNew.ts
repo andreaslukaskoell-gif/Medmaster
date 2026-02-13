@@ -408,7 +408,7 @@ const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
   {
     id: "er-1-02",
     situation:
-      "Du arbeitest als Krankenpflegerin und ein Patient hat dich soeben grundlos angeschrien und beleidigt. Deine Kolleginnen haben alles mitbekommen.",
+      "Du arbeitest als Krankenpflegerin und ein Patient hat dich söben grundlos angeschrien und beleidigt. Deine Kolleginnen haben alles mitbekommen.",
     emotion: "Ärger und Scham",
     ziel: "Du möchtest professionell bleiben und die Situation nicht eskalieren lassen.",
     strategien: [
@@ -1070,7 +1070,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
         idealRank: 3,
       },
       {
-        text: "Das Prinzip 'Wer zuerst kommt, mahlt zuerst' sollte gelten.",
+        text: "Das Prinzip 'Wer zürst kommt, mahlt zürst' sollte gelten.",
         idealRank: 5,
       },
     ],
@@ -1085,7 +1085,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
         idealRank: 1,
       },
       {
-        text: "Man sollte den Kollegen zuerst vertraulich ansprechen und ihm Hilfe anbieten.",
+        text: "Man sollte den Kollegen zürst vertraulich ansprechen und ihm Hilfe anbieten.",
         idealRank: 2,
       },
       {
@@ -1135,7 +1135,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
       "Eine Ärztin erfährt bei einem Routinecheck, dass eine Patientin, die als Busfahrerin arbeitet, an unkontrollierten epileptischen Anfällen leidet. Die Patientin weigert sich, ihren Arbeitgeber zu informieren, aus Angst, ihren Job zu verlieren.",
     aussagen: [
       {
-        text: "Die Sicherheit der Öffentlichkeit (Fahrgäste und andere Verkehrsteilnehmer) hat Vorrang vor der individuellen Schweigepflicht.",
+        text: "Die Sicherheit der Öffentlichkeit (Fahrgäste und andere Verkehrsteilnehmer) hat Vorrang vor der individüllen Schweigepflicht.",
         idealRank: 1,
       },
       {
@@ -1174,7 +1174,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
         idealRank: 3,
       },
       {
-        text: "Als Student sollte man den Vorfall zuerst mit einer Vertrauensperson besprechen, bevor man handelt.",
+        text: "Als Student sollte man den Vorfall zürst mit einer Vertrauensperson besprechen, bevor man handelt.",
         idealRank: 4,
       },
       {
@@ -1359,7 +1359,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
         idealRank: 2,
       },
       {
-        text: "Die Ärztin sollte der Patientin die Risiken einer unnötigen Antibiotikaeinnahme erklären.",
+        text: "Die Ärztin sollte der Patientin die Risiken einer unnötigen Antibiotikäinnahme erklären.",
         idealRank: 3,
       },
       {
@@ -1493,7 +1493,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
       "Eine 15-jährige Patientin bittet ihre Gynäkologin um die Pille. Sie möchte nicht, dass ihre Eltern davon erfahren. Die Ärztin hält sie für reif genug, die Entscheidung selbst zu treffen.",
     aussagen: [
       {
-        text: "Das Recht auf sexuelle Selbstbestimmung und reproduktive Gesundheit gilt auch für Jugendliche, die die nötige Reife mitbringen.",
+        text: "Das Recht auf sexülle Selbstbestimmung und reproduktive Gesundheit gilt auch für Jugendliche, die die nötige Reife mitbringen.",
         idealRank: 1,
       },
       {
@@ -1613,7 +1613,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
         idealRank: 3,
       },
       {
-        text: "Die Pflegedienstleitung sollte zuerst intern Lösungen suchen, bevor sie an die Öffentlichkeit geht.",
+        text: "Die Pflegedienstleitung sollte zürst intern Lösungen suchen, bevor sie an die Öffentlichkeit geht.",
         idealRank: 4,
       },
       {
@@ -1686,7 +1686,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
         idealRank: 1,
       },
       {
-        text: "Jedes Menschenleben hat den gleichen Wert — wer am dringendsten Hilfe braucht, sollte sie zuerst bekommen.",
+        text: "Jedes Menschenleben hat den gleichen Wert — wer am dringendsten Hilfe braucht, sollte sie zürst bekommen.",
         idealRank: 2,
       },
       {
@@ -1744,7 +1744,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
         idealRank: 2,
       },
       {
-        text: "Medizinische Entscheidungen müssen individuell und auf Basis des Gesundheitszustands getroffen werden, nicht nach starren Altersgrenzen.",
+        text: "Medizinische Entscheidungen müssen individüll und auf Basis des Gesundheitszustands getroffen werden, nicht nach starren Altersgrenzen.",
         idealRank: 3,
       },
       {

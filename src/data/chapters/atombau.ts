@@ -68,7 +68,7 @@ Das modernere Orbitalmodell ersetzt die festen Bahnen durch <strong>Aufenthaltsw
 Elektronen besetzen die Orbitale in aufsteigender Energie: 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p → 7s → 5f → 6d → 7p. Wichtig: Das 4s-Orbital wird vor dem 3d-Orbital besetzt, weil es eine niedrigere Energie hat.
 
 <strong>Hund'sche Regel</strong>
-Orbitale gleicher Energie (z. B. die drei p-Orbitale) werden zuerst einzeln mit parallelem Spin besetzt, bevor eine Doppelbesetzung stattfindet. Merkspruch: „Busse werden erst einzeln besetzt, bevor sich jemand dazusetzt.“
+Orbitale gleicher Energie (z. B. die drei p-Orbitale) werden zürst einzeln mit parallelem Spin besetzt, bevor eine Doppelbesetzung stattfindet. Merkspruch: „Busse werden erst einzeln besetzt, bevor sich jemand dazusetzt.“
 
 <strong>Pauli-Prinzip</strong>
 In einem Orbital befinden sich maximal 2 Elektronen — und diese müssen entgegengesetzten Spin besitzen (antiparallel: ↑↓). Kein Elektron darf mit einem anderen in allen vier Quantenzahlen übereinstimmen.
@@ -175,7 +175,7 @@ Zusammengefasst: EN, IE und Nichtmetallcharakter steigen nach rechts oben; Atomr
 Das VSEPR-Modell sagt die räumliche Struktur von Molekülen vorher. Elektronenpaare (bindend und frei) stoßen sich gegenseitig ab und ordnen sich so an, dass der Abstand maximal ist:
 • 2 Elektronenpaare → <strong>linear</strong>, Winkel 180° (z. B. CO₂, BeCl₂)
 • 3 Elektronenpaare → <strong>trigonal-planar</strong>, Winkel 120° (z. B. BF₃)
-• 4 Elektronenpaare → <strong>tetraedrisch</strong>, Winkel 109,5° (z. B. CH₄)
+• 4 Elektronenpaare → <strong>teträdrisch</strong>, Winkel 109,5° (z. B. CH₄)
 • 4 EP, davon 1 freies → <strong>trigonal-pyramidal</strong>, Winkel ~107° (z. B. NH₃)
 • 4 EP, davon 2 freie → <strong>gewinkelt</strong>, Winkel ~104,5° (z. B. H₂O)
 Freie Elektronenpaare beanspruchen mehr Raum als bindende und drücken die Bindungswinkel zusammen.`,
@@ -310,10 +310,10 @@ Chemische Gleichungen müssen ausgeglichen sein — auf beiden Seiten muss die g
 Beispiel: Verbrennung von Methan
 CH₄ + 2 O₂ → CO₂ + 2 H₂O
 
-Vorgehen: 1. Gleichung aufstellen → 2. Atome zählen → 3. Koeffizienten anpassen → 4. Kontrolle.
+Vorgehen: 1. Gleichung aufstellen → 2. Atome zählen → 3. Köffizienten anpassen → 4. Kontrolle.
 
 <strong>Limitierender Reaktand</strong>
-In einer Reaktion wird in der Regel nicht von jedem Edukt die exakte stöchiometrische Menge eingesetzt. Der Reaktand, der zuerst vollständig verbraucht wird, heißt <strong>limitierender Reaktand</strong> — er bestimmt die maximale Produktmenge. Der andere liegt im Überschuss vor.
+In einer Reaktion wird in der Regel nicht von jedem Edukt die exakte stöchiometrische Menge eingesetzt. Der Reaktand, der zürst vollständig verbraucht wird, heißt <strong>limitierender Reaktand</strong> — er bestimmt die maximale Produktmenge. Der andere liegt im Überschuss vor.
 
 Beispiel: Für 2 H₂ + O₂ → 2 H₂O benötigt man H₂ und O₂ im Verhältnis 2:1. Hat man 3 mol H₂ und 1 mol O₂, ist O₂ der limitierende Reaktand (verbraucht 2 mol H₂), und 1 mol H₂ bleibt übrig.
 

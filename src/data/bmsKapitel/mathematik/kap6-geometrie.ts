@@ -14,10 +14,10 @@ export const mathKap6: Kapitel = {
 
 Vierecke bilden eine vielfältige Klasse von Figuren. Die Winkelsumme in jedem Viereck beträgt 360°. Das Quadrat hat vier gleiche Seiten und vier rechte Winkel: Umfang U = 4a, Fläche A = a², Diagonale d = a√2. Das Rechteck hat gegenüberliegende Seiten gleich und vier rechte Winkel: U = 2(a + b), A = a · b, d = √(a² + b²). Das Parallelogramm hat gegenüberliegende Seiten parallel und gleich lang: A = g · h (wobei h die Höhe auf die Grundseite g ist). Das Trapez hat ein Paar paralleler Seiten: A = (a + c)/2 · h (Mittelwert der parallelen Seiten mal Höhe). Die Raute (Rhombus) hat vier gleiche Seiten: A = (d₁ · d₂)/2 (Produkt der Diagonalen geteilt durch 2). Die Inklusionshierarchie lautet: Quadrat ⊂ Raute ⊂ Parallelogramm ⊂ Trapez.
 
-Der Kreis ist definiert als die Menge aller Punkte mit gleichem Abstand r (Radius) vom Mittelpunkt. Der Umfang beträgt U = 2πr = πd (mit Durchmesser d = 2r), die Fläche A = πr². Ein Kreissektor (Kreisausschnitt) mit Zentriwinkel α hat den Bogen b = 2πr · α/360° und die Fläche A_Sektor = πr² · α/360°. Ein Kreissegment ist die Fläche zwischen Sehne und Bogen. Die Kreisgleichung im kartesischen Koordinatensystem lautet (x - m₁)² + (y - m₂)² = r² mit Mittelpunkt M(m₁|m₂). Für den MedAT ist es wichtig, die Formeln für Umfang und Fläche der grundlegenden Figuren sicher zu beherrschen und in Textaufgaben anwenden zu können. Auch zusammengesetzte Figuren kommen vor: Deren Fläche wird durch Addition oder Subtraktion der Teilflächen berechnet.`,
-      merksaetze: [
+Der Kreis ist definiert als die Menge aller Punkte mit gleichem Abstand r (Radius) vom Mittelpunkt. Der Umfang beträgt U = 2πr = πd (mit Durchmesser d = 2r), die Fläche A = πr². Ein Kreißektor (Kreisausschnitt) mit Zentriwinkel α hat den Bogen b = 2πr · α/360° und die Fläche A_Sektor = πr² · α/360°. Ein Kreißegment ist die Fläche zwischen Sehne und Bogen. Die Kreisgleichung im kartesischen Koordinatensystem lautet (x - m₁)² + (y - m₂)² = r² mit Mittelpunkt M(m₁|m₂). Für den MedAT ist es wichtig, die Formeln für Umfang und Fläche der grundlegenden Figuren sicher zu beherrschen und in Textaufgaben anwenden zu können. Auch zusammengesetzte Figuren kommen vor: Deren Fläche wird durch Addition oder Subtraktion der Teilflächen berechnet.`,
+      merksätze: [
         'Pythagoras: a² + b² = c² (nur im rechtwinkligen Dreieck!). Dreiecksfläche: A = (1/2)·g·h. Winkelsumme: Dreieck 180°, Viereck 360°.',
-        'Kreis: U = 2πr, A = πr². Kreissektor: Bogen b = 2πr·α/360°, Fläche = πr²·α/360°. Kreisgleichung: (x-m₁)² + (y-m₂)² = r².'
+        'Kreis: U = 2πr, A = πr². Kreißektor: Bogen b = 2πr·α/360°, Fläche = πr²·α/360°. Kreisgleichung: (x-m₁)² + (y-m₂)² = r².'
       ],
       altfrage: {
         question: 'Ein rechtwinkliges Dreieck hat die Katheten a = 6 cm und b = 8 cm. Berechnen Sie die Hypotenuse und die Fläche.',
@@ -38,7 +38,7 @@ Der Kreis ist definiert als die Menge aller Punkte mit gleichem Abstand r (Radiu
           explanation: 'A = g · h = 12 · 7 = 84 cm².'
         },
         {
-          question: 'Wie lang ist der Bogen eines Kreissektors mit r = 10 cm und α = 72°?',
+          question: 'Wie lang ist der Bogen eines Kreißektors mit r = 10 cm und α = 72°?',
           options: [
             '4π cm ≈ 12,57 cm',
             '2π cm ≈ 6,28 cm',
@@ -71,7 +71,7 @@ Der Kreis ist definiert als die Menge aller Punkte mit gleichem Abstand r (Radiu
 Die Kugel mit Radius r hat das Volumen V = (4/3)πr³ und die Oberfläche O = 4πr². Der Kegel mit Grundkreisradius r, Höhe h und Mantellinie s = √(r² + h²) hat V = (1/3)πr²h und O = πr² + πrs = πr(r + s). Die Pyramide mit quadratischer Grundfläche a² und Höhe h hat V = (1/3)a²h. Allgemein gilt für alle Spitzkörper (Kegel, Pyramide): V = (1/3) · Grundfläche · Höhe. Dies ist ein wichtiger Zusammenhang: Das Volumen eines Spitzkörpers ist genau ein Drittel des Volumens des zugehörigen Prismas (Zylinder bei kreisförmiger Grundfläche, Quader bei rechteckiger). Zur Oberfläche der Pyramide addiert man die Grundfläche und die Mantelfläche (Summe der Dreiecksflächen der Seitenflächen).
 
 In Textaufgaben werden häufig zusammengesetzte Körper betrachtet, deren Volumen durch Addition oder Subtraktion berechnet wird. Beispiel: Ein Eisbecher (Halbkugel oben, Kegel unten) mit r = 3 cm und Kegelhöhe h = 8 cm hat das Gesamtvolumen V = (2/3)πr³ + (1/3)πr²h = (2/3)π·27 + (1/3)π·9·8 = 18π + 24π = 42π ≈ 131,9 cm³. Auch Hohlkörper kommen vor: Das Volumen eines Rohres (Hohlzylinder) ist V = πh(R² - r²), wobei R der Außenradius und r der Innenradius ist. Die Einheitsumrechnung ist essenziell: 1 m³ = 1000 dm³ = 1000 Liter, 1 dm³ = 1 Liter, 1 cm³ = 1 ml. Im MedAT sollten alle Volumen- und Oberflächenformeln der Standardkörper auswendig beherrscht werden, da sie schnell abgefragt werden können.`,
-      merksaetze: [
+      merksätze: [
         'Spitzkörper-Regel: V = (1/3) · Grundfläche · Höhe (gilt für Kegel und Pyramide). Kugel: V = (4/3)πr³, O = 4πr². Zylinder: V = πr²h.',
         'Einheiten: 1 dm³ = 1 Liter, 1 cm³ = 1 ml, 1 m³ = 1000 Liter. Bei Oberflächen immer prüfen: Mantelfläche allein oder Gesamtoberfläche gefragt?'
       ],
@@ -128,7 +128,7 @@ In Textaufgaben werden häufig zusammengesetzte Körper betrachtet, deren Volume
 Die Vektoraddition erfolgt komponentenweise: a⃗ + b⃗ = (a₁ + b₁, a₂ + b₂, a₃ + b₃). Geometrisch entspricht dies der Parallelogrammregel oder der Hintereinanderausführung (Spitze-an-Schwanz-Methode). Die Subtraktion ist: a⃗ - b⃗ = a⃗ + (-b⃗). Die Skalarmultiplikation multipliziert einen Vektor mit einer reellen Zahl: r · a⃗ = (r·a₁, r·a₂, r·a₃). Für r > 0 behält der Vektor seine Richtung, für r < 0 kehrt sie sich um, und |r| gibt den Streckungsfaktor an. Zwei Vektoren sind parallel (kollinear), wenn einer ein skalares Vielfaches des anderen ist: a⃗ = r · b⃗ für ein r ∈ ℝ. Beispiel: a⃗ = (2, 4, -6) und b⃗ = (1, 2, -3) sind parallel mit r = 2.
 
 Der Betrag (die Länge) eines Vektors berechnet sich als: |a⃗| = √(a₁² + a₂² + a₃²). Beispiel: |a⃗| = |(3, 4)| = √(9 + 16) = 5. Der Einheitsvektor in Richtung von a⃗ ist e⃗_a = a⃗/|a⃗| und hat den Betrag 1. Der Abstand zwischen zwei Punkten A und B ist |AB⃗| = √((b₁-a₁)² + (b₂-a₂)² + (b₃-a₃)²). Der Mittelpunkt M der Strecke AB hat den Ortsvektor OM⃗ = (OA⃗ + OB⃗)/2 = ((a₁+b₁)/2, (a₂+b₂)/2, (a₃+b₃)/2). Linearkombinationen spielen eine zentrale Rolle: Der Vektor c⃗ = r·a⃗ + s·b⃗ ist eine Linearkombination von a⃗ und b⃗. Im MedAT werden grundlegende Vektoroperationen und Abstandsberechnungen geprüft. Das sichere Rechnen mit Komponenten ist die Grundlage für alle weiterführenden Vektoraufgaben.`,
-      merksaetze: [
+      merksätze: [
         'Vektoroperationen sind komponentenweise: Addition (a₁+b₁, ...), Skalarmultiplikation (r·a₁, ...). Betrag: |a⃗| = √(a₁² + a₂² + a₃²). Einheitsvektor: e⃗ = a⃗/|a⃗|.',
         'Verbindungsvektor: AB⃗ = OB⃗ - OA⃗ (Spitze minus Anfang). Mittelpunkt: M = (A + B)/2. Parallelität: a⃗ = r · b⃗.'
       ],
@@ -184,7 +184,7 @@ Der Betrag (die Länge) eines Vektors berechnet sich als: |a⃗| = √(a₁² + 
 Zwei Vektoren stehen senkrecht (orthogonal) aufeinander, wenn ihr Skalarprodukt null ist: a⃗ · b⃗ = 0 ⟺ a⃗ ⊥ b⃗. Dies ist ein schneller und eleganter Test auf Rechtwinkligkeit. Beispiel: a⃗ = (3, 1) und b⃗ = (-1, 3). a⃗ · b⃗ = -3 + 3 = 0, also stehen die Vektoren senkrecht aufeinander. Die Projektion eines Vektors a⃗ auf einen Vektor b⃗ berechnet sich als: proj_b⃗(a⃗) = (a⃗ · b⃗)/(b⃗ · b⃗) · b⃗. Die Länge der Projektion ist |a⃗ · b⃗|/|b⃗|. Das Skalarprodukt hat folgende Eigenschaften: Kommutativität (a⃗ · b⃗ = b⃗ · a⃗), Distributivität (a⃗ · (b⃗ + c⃗) = a⃗ · b⃗ + a⃗ · c⃗), und Verträglichkeit mit Skalarmultiplikation ((r·a⃗) · b⃗ = r · (a⃗ · b⃗)).
 
 Für den MedAT werden typischerweise Aufgaben gestellt, die das Berechnen des Skalarprodukts, das Überprüfen der Orthogonalität und das Bestimmen des Winkels zwischen Vektoren verlangen. Ein wichtiger Spezialfall ist a⃗ · a⃗ = |a⃗|², also das Skalarprodukt eines Vektors mit sich selbst ergibt das Quadrat seines Betrags. Das Kreuzprodukt (Vektorprodukt) a⃗ × b⃗ liefert hingegen einen Vektor, der senkrecht auf a⃗ und b⃗ steht: a⃗ × b⃗ = (a₂b₃ - a₃b₂, a₃b₁ - a₁b₃, a₁b₂ - a₂b₁). Sein Betrag |a⃗ × b⃗| = |a⃗| · |b⃗| · sin(φ) entspricht der Fläche des von a⃗ und b⃗ aufgespannten Parallelogramms. Das Kreuzprodukt wird im MedAT seltener geprüft, aber das Wissen um seine Existenz und geometrische Bedeutung kann bei Verständnisfragen hilfreich sein.`,
-      merksaetze: [
+      merksätze: [
         'Skalarprodukt: a⃗ · b⃗ = a₁b₁ + a₂b₂ + a₃b₃ = |a⃗|·|b⃗|·cos(φ). Orthogonalität: a⃗ ⊥ b⃗ ⟺ a⃗ · b⃗ = 0.',
         'Winkelformel: cos(φ) = (a⃗ · b⃗)/(|a⃗|·|b⃗|). Spezialfall: a⃗ · a⃗ = |a⃗|². Das Skalarprodukt ist kommutativ und distributiv.'
       ],
@@ -240,7 +240,7 @@ Für den MedAT werden typischerweise Aufgaben gestellt, die das Berechnen des Sk
 SI-Vorsilben ermöglichen die kompakte Darstellung von Vielfachen und Teilen der Einheiten. Die wichtigsten Vorsilben sind: Tera (T, 10¹²), Giga (G, 10⁹), Mega (M, 10⁶), Kilo (k, 10³), Hekto (h, 10²), Deka (da, 10¹), Dezi (d, 10⁻¹), Zenti (c, 10⁻²), Milli (m, 10⁻³), Mikro (μ, 10⁻⁶), Nano (n, 10⁻⁹), Piko (p, 10⁻¹²). Umrechnungen erfolgen durch Multiplikation mit der entsprechenden Zehnerpotenz. Beispiel: 3,5 km = 3,5 · 10³ m = 3500 m. Und 250 μg = 250 · 10⁻⁶ g = 0,00025 g = 0,25 mg. Bei der Umrechnung von Flächeneinheiten quadriert sich der Faktor: 1 m² = 10⁴ cm² (da 1 m = 100 cm, also 1 m² = (100)² cm²). Bei Volumeneinheiten wird kubiert: 1 m³ = 10⁶ cm³. Diese häufigen Fehlerquellen müssen im MedAT beachtet werden.
 
 Die Dimensionsanalyse ist eine Methode zur Überprüfung physikalischer Gleichungen. Jede physikalische Gleichung muss dimensionshomogen sein: Auf beiden Seiten müssen die gleichen Einheiten stehen. Dies ermöglicht das Erkennen fehlerhafter Formeln. Beispiel: Geschwindigkeit = Strecke/Zeit hat die Dimension [m/s]. Wenn eine berechnete Geschwindigkeit die Einheit m/s² hätte, wäre die Formel offensichtlich falsch. In der Medizin ist die Dimensionsanalyse bei Dosisberechnungen essenziell: Wenn eine Infusion in mg/min gegeben werden soll und die Konzentration in mg/ml vorliegt, ergibt die Division den Volumenstrom in ml/min – die Einheiten müssen sich konsistent kürzen. Weitere wichtige Umrechnungen: Temperatur: T(K) = T(°C) + 273,15; Druck: 1 atm = 101.325 Pa ≈ 1013 hPa = 760 mmHg; Energie: 1 cal ≈ 4,184 J; Volumen: 1 L = 1 dm³ = 10⁻³ m³. Im MedAT werden Einheitenumrechnungen und Dimensionsanalyse regelmäßig geprüft, insbesondere im Kontext medizinischer Berechnungen.`,
-      merksaetze: [
+      merksätze: [
         'SI-Basiseinheiten: m, kg, s, A, K, mol, cd. Wichtige Vorsilben: Kilo (10³), Milli (10⁻³), Mikro (10⁻⁶), Nano (10⁻⁹). Bei Flächen quadriert, bei Volumen kubiert sich der Umrechnungsfaktor!',
         'Dimensionsanalyse: Beide Seiten einer Gleichung müssen die gleichen Einheiten haben. Einheiten kürzen sich wie Brüche – diese Methode hilft, Fehler in Dosisberechnungen zu vermeiden.'
       ],

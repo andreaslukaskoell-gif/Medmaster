@@ -94,7 +94,7 @@ export const spezialthemenChemieChapter: Chapter = {
         "**Gleichgewichtskonstante K:**\n" +
         "Für eine allgemeine reversible Reaktion aA + bB ⇌ cC + dD lautet die Gleichgewichtskonstante:\n" +
         "K = [C]ᶜ · [D]ᵈ / ([A]ᵃ · [B]ᵇ)\n" +
-        "Die eckigen Klammern bezeichnen die Konzentrationen im Gleichgewicht, die Exponenten sind die stöchiometrischen Koeffizienten. Reine Feststoffe und reine Flüssigkeiten werden NICHT in den Ausdruck aufgenommen (ihre Aktivität ist per Definition 1).\n\n" +
+        "Die eckigen Klammern bezeichnen die Konzentrationen im Gleichgewicht, die Exponenten sind die stöchiometrischen Köffizienten. Reine Feststoffe und reine Flüssigkeiten werden NICHT in den Ausdruck aufgenommen (ihre Aktivität ist per Definition 1).\n\n" +
         "• K > 1: Das Gleichgewicht liegt auf der Produktseite → die Hinreaktion ist bevorzugt.\n" +
         "• K < 1: Das Gleichgewicht liegt auf der Eduktseite → die Rückreaktion ist bevorzugt.\n" +
         "• K = 1: Edukte und Produkte liegen in vergleichbaren Konzentrationen vor.\n" +

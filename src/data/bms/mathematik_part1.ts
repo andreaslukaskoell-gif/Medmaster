@@ -439,7 +439,7 @@ export const mathematikQuestionsPart1: Question[] = [
     ],
     correctOptionId: "d",
     explanation:
-      "Zähler und Nenner durch x² dividieren: lim(x→∞) (3 + 2/x) / (1 - 1/x²) = 3/1 = 3. Bei gleichen höchsten Potenzen ist der Grenzwert der Quotient der Leitkoeffizienten.",
+      "Zähler und Nenner durch x² dividieren: lim(x→∞) (3 + 2/x) / (1 - 1/x²) = 3/1 = 3. Bei gleichen höchsten Potenzen ist der Grenzwert der Quotient der Leitköffizienten.",
     difficulty: "schwer",
     tags: ["grenzwert", "asymptoten", "berechnung"],
   },
@@ -593,7 +593,7 @@ export const mathematikQuestionsPart1: Question[] = [
     ],
     correctOptionId: "c",
     explanation:
-      "Bei ähnlichen Figuren gilt: Flächenverhältnis = (Seitenverhältnis)². Also (1:3)² = 1:9. Die Fläche skaliert quadratisch mit dem linearen Massstab.",
+      "Bei ähnlichen Figuren gilt: Flächenverhältnis = (Seitenverhältnis)². Also (1:3)² = 1:9. Die Fläche skaliert quadratisch mit dem linearen Maßstab.",
     difficulty: "schwer",
     tags: ["ähnlichkeit", "flächenverhältnis", "berechnung"],
   },

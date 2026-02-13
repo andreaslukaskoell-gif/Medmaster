@@ -13,7 +13,7 @@ export const fragenPart3 = [
       '0,17 Ω'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der Widerstand berechnet sich nach R = ρ·l/A. Mit ρ = 0,017 Ω·mm²/m, l = 2 m und A = 1 mm² ergibt sich: R = 0,017 · 2 / 1 = 0,034 Ω.',
+    erklärung: 'Der Widerstand berechnet sich nach R = ρ·l/A. Mit ρ = 0,017 Ω·mm²/m, l = 2 m und A = 1 mm² ergibt sich: R = 0,017 · 2 / 1 = 0,034 Ω.',
     strategieTipp: 'Bei Widerstandsberechnungen die Formel R = ρ·l/A verwenden und auf konsistente Einheiten achten.'
   },
   {
@@ -30,7 +30,7 @@ export const fragenPart3 = [
       'Die Kraft bleibt gleich'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Nach dem Coulomb-Gesetz F = k·q₁·q₂/r² ist die Kraft umgekehrt proportional zum Quadrat des Abstands. Bei Verdopplung des Abstands wird die Kraft auf 1/4 reduziert.',
+    erklärung: 'Nach dem Coulomb-Gesetz F = k·q₁·q₂/r² ist die Kraft umgekehrt proportional zum Quadrat des Abstands. Bei Verdopplung des Abstands wird die Kraft auf 1/4 reduziert.',
     strategieTipp: 'Das 1/r²-Gesetz gilt für viele physikalische Phänomene (Coulomb-Kraft, Gravitation, Lichtintensität).'
   },
   {
@@ -47,7 +47,7 @@ export const fragenPart3 = [
       '13,8 A'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die elektrische Leistung ist P = U·I. Umgestellt nach I ergibt sich: I = P/U = 60 W / 230 V ≈ 0,26 A.',
+    erklärung: 'Die elektrische Leistung ist P = U·I. Umgestellt nach I ergibt sich: I = P/U = 60 W / 230 V ≈ 0,26 A.',
     strategieTipp: 'Die Formel P = U·I ist zentral für Berechnungen in der Elektrizitätslehre. Alle drei Größen können aus den anderen beiden berechnet werden.'
   },
   {
@@ -64,7 +64,7 @@ export const fragenPart3 = [
       '1,83 Ω'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Bei Parallelschaltung gilt: 1/R_ges = 1/R₁ + 1/R₂ + 1/R₃ = 1/10 + 1/20 + 1/30 = 0,1 + 0,05 + 0,0333 = 0,1833. Also R_ges = 1/0,1833 ≈ 5,45 Ω.',
+    erklärung: 'Bei Parallelschaltung gilt: 1/R_ges = 1/R₁ + 1/R₂ + 1/R₃ = 1/10 + 1/20 + 1/30 = 0,1 + 0,05 + 0,0333 = 0,1833. Also R_ges = 1/0,1833 ≈ 5,45 Ω.',
     strategieTipp: 'Bei Parallelschaltungen ist der Gesamtwiderstand immer kleiner als der kleinste Einzelwiderstand. Kehrwerte addieren und dann wieder invertieren.'
   },
   {
@@ -81,7 +81,7 @@ export const fragenPart3 = [
       'Den Zusammenhang zwischen Frequenz und Wellenlänge'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Das Ohmsche Gesetz besagt: U = R·I, also dass die Spannung proportional zur Stromstärke ist, wobei der Widerstand die Proportionalitätskonstante darstellt.',
+    erklärung: 'Das Ohmsche Gesetz besagt: U = R·I, also dass die Spannung proportional zur Stromstärke ist, wobei der Widerstand die Proportionalitätskonstante darstellt.',
     strategieTipp: 'Das Ohmsche Gesetz ist eine der wichtigsten Grundgleichungen der Elektrotechnik und gilt für ohmsche Widerstände.'
   },
   {
@@ -98,7 +98,7 @@ export const fragenPart3 = [
       'In kreisförmigen Bahnen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Das elektrische Feld zeigt per Definition von + nach -. Elektronen sind negativ geladen und bewegen sich daher entgegen der Feldrichtung, also zur positiven Ladung hin.',
+    erklärung: 'Das elektrische Feld zeigt per Definition von + nach -. Elektronen sind negativ geladen und bewegen sich daher entgegen der Feldrichtung, also zur positiven Ladung hin.',
     strategieTipp: 'Feldlinien zeigen immer die Kraftrichtung auf eine positive Probeladung. Negative Ladungen bewegen sich entgegengesetzt.'
   },
   {
@@ -115,7 +115,7 @@ export const fragenPart3 = [
       '1200 mC'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Ladung auf einem Kondensator berechnet sich nach Q = C·U. Mit C = 100 μF = 100·10⁻⁶ F und U = 12 V: Q = 100·10⁻⁶ · 12 = 1,2·10⁻³ C = 1,2 mC.',
+    erklärung: 'Die Ladung auf einem Kondensator berechnet sich nach Q = C·U. Mit C = 100 μF = 100·10⁻⁶ F und U = 12 V: Q = 100·10⁻⁶ · 12 = 1,2·10⁻³ C = 1,2 mC.',
     strategieTipp: 'Bei Kondensatorberechnungen auf die Einheitenpräfixe achten: μF = 10⁻⁶ F, mC = 10⁻³ C.'
   },
   {
@@ -132,7 +132,7 @@ export const fragenPart3 = [
       'Die magnetische Feldstärke ist konstant'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Knotenregel besagt, dass an einem Verzweigungspunkt die Summe der zufließenden Ströme gleich der Summe der abfließenden Ströme ist. Dies folgt aus der Ladungserhaltung.',
+    erklärung: 'Die Knotenregel besagt, dass an einem Verzweigungspunkt die Summe der zufließenden Ströme gleich der Summe der abfließenden Ströme ist. Dies folgt aus der Ladungserhaltung.',
     strategieTipp: 'Knotenregel bezieht sich auf Ströme an Verzweigungen, Maschenregel auf Spannungen in geschlossenen Schleifen.'
   },
   {
@@ -149,7 +149,7 @@ export const fragenPart3 = [
       'Coulomb (C)'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die elektrische Spannung wird in Volt (V) gemessen. 1 Volt = 1 Joule pro Coulomb (1 V = 1 J/C).',
+    erklärung: 'Die elektrische Spannung wird in Volt (V) gemessen. 1 Volt = 1 Joule pro Coulomb (1 V = 1 J/C).',
     strategieTipp: 'Grundeinheiten der Elektrizität merken: Spannung in V, Stromstärke in A, Widerstand in Ω, Ladung in C.'
   },
   {
@@ -166,7 +166,7 @@ export const fragenPart3 = [
       '280 W'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Leistung berechnet sich nach P = U²/R. Mit U = 230 V und R = 50 Ω: P = 230² / 50 = 52900 / 50 = 1058 W ≈ 1,06 kW.',
+    erklärung: 'Die Leistung berechnet sich nach P = U²/R. Mit U = 230 V und R = 50 Ω: P = 230² / 50 = 52900 / 50 = 1058 W ≈ 1,06 kW.',
     strategieTipp: 'Für die Leistung gibt es mehrere Formeln: P = U·I, P = I²·R, P = U²/R. Je nach gegebenen Größen die passende wählen.'
   },
   {
@@ -183,7 +183,7 @@ export const fragenPart3 = [
       '200 V'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Bei Reihenschaltung ist der Strom überall gleich. R_ges = 40 + 60 = 100 Ω. I = U/R_ges = 200/100 = 2 A. U₁ = I·R₁ = 2·40 = 80 V.',
+    erklärung: 'Bei Reihenschaltung ist der Strom überall gleich. R_ges = 40 + 60 = 100 Ω. I = U/R_ges = 200/100 = 2 A. U₁ = I·R₁ = 2·40 = 80 V.',
     strategieTipp: 'Bei Reihenschaltung teilen sich die Widerstände die Gesamtspannung proportional zu ihren Werten auf.'
   },
   {
@@ -200,7 +200,7 @@ export const fragenPart3 = [
       'Ein Material, das elektrische Energie speichert'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Ein elektrischer Leiter ist ein Material, das elektrische Ladungen (meist Elektronen) gut transportieren kann. Metalle sind typische Leiter.',
+    erklärung: 'Ein elektrischer Leiter ist ein Material, das elektrische Ladungen (meist Elektronen) gut transportieren kann. Metalle sind typische Leiter.',
     strategieTipp: 'Leiter haben viele frei bewegliche Ladungsträger, Isolatoren fast keine.'
   },
   {
@@ -217,7 +217,7 @@ export const fragenPart3 = [
       'Es gibt kein Magnetfeld'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Nach der Rechte-Hand-Regel verlaufen die Magnetfeldlinien in konzentrischen Kreisen um einen stromdurchflossenen geraden Leiter.',
+    erklärung: 'Nach der Rechte-Hand-Regel verlaufen die Magnetfeldlinien in konzentrischen Kreisen um einen stromdurchflossenen geraden Leiter.',
     strategieTipp: 'Rechte-Hand-Regel: Daumen in Stromrichtung, gekrümmte Finger zeigen die Magnetfeldrichtung.'
   },
   {
@@ -234,7 +234,7 @@ export const fragenPart3 = [
       '10 V'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Selbstinduktionsspannung berechnet sich nach U = -L·ΔI/Δt. Mit L = 50 mH = 0,05 H, ΔI = 2 A und Δt = 0,1 s: U = 0,05 · 2 / 0,1 = 1,0 V.',
+    erklärung: 'Die Selbstinduktionsspannung berechnet sich nach U = -L·ΔI/Δt. Mit L = 50 mH = 0,05 H, ΔI = 2 A und Δt = 0,1 s: U = 0,05 · 2 / 0,1 = 1,0 V.',
     strategieTipp: 'Die Induktionsspannung ist proportional zur Änderungsrate des Stroms. Einheit der Induktivität: Henry (H).'
   },
   {
@@ -251,7 +251,7 @@ export const fragenPart3 = [
       '650 V'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der Effektivwert von Wechselstrom berechnet sich als U_eff = U_max / √2. Mit U_max = 325 V: U_eff = 325 / 1,414 ≈ 230 V (Haushaltsspannung).',
+    erklärung: 'Der Effektivwert von Wechselstrom berechnet sich als U_eff = U_max / √2. Mit U_max = 325 V: U_eff = 325 / 1,414 ≈ 230 V (Haushaltsspannung).',
     strategieTipp: 'Faktor √2 ≈ 1,414 zwischen Scheitelwert und Effektivwert bei sinusförmigem Wechselstrom merken.'
   },
   {
@@ -268,7 +268,7 @@ export const fragenPart3 = [
       'Schallwellen in Metallen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Elektromagnetische Wellen bestehen aus gekoppelten elektrischen und magnetischen Feldern, die senkrecht zueinander und zur Ausbreitungsrichtung schwingen.',
+    erklärung: 'Elektromagnetische Wellen bestehen aus gekoppelten elektrischen und magnetischen Feldern, die senkrecht züinander und zur Ausbreitungsrichtung schwingen.',
     strategieTipp: 'EM-Wellen benötigen kein Medium und breiten sich im Vakuum mit Lichtgeschwindigkeit aus.'
   },
   {
@@ -285,7 +285,7 @@ export const fragenPart3 = [
       '2000 nm'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Mit c = λ·f folgt λ = c/f. Mit c = 3·10⁸ m/s und f = 600·10¹² Hz: λ = 3·10⁸ / 600·10¹² = 5·10⁻⁷ m = 500 nm (grünes Licht).',
+    erklärung: 'Mit c = λ·f folgt λ = c/f. Mit c = 3·10⁸ m/s und f = 600·10¹² Hz: λ = 3·10⁸ / 600·10¹² = 5·10⁻⁷ m = 500 nm (grünes Licht).',
     strategieTipp: 'Beziehung c = λ·f gilt für alle EM-Wellen. Im sichtbaren Bereich: 400-700 nm.'
   },
   {
@@ -302,7 +302,7 @@ export const fragenPart3 = [
       'Gammastrahlung'
     ],
     korrekteAntwort: 4,
-    erklaerung: 'Gammastrahlung hat die kürzeste Wellenlänge (< 10 pm) und damit die höchste Frequenz und Energie im EM-Spektrum.',
+    erklärung: 'Gammastrahlung hat die kürzeste Wellenlänge (< 10 pm) und damit die höchste Frequenz und Energie im EM-Spektrum.',
     strategieTipp: 'Reihenfolge nach abnehmender Wellenlänge: Radio, Mikrowellen, IR, sichtbar, UV, Röntgen, Gamma.'
   },
   {
@@ -319,7 +319,7 @@ export const fragenPart3 = [
       '15,9 MHz'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Resonanzfrequenz ist f = 1/(2π√(LC)). Mit L = 100·10⁻⁶ H und C = 10·10⁻⁹ F: f = 1/(2π√(10⁻⁴·10⁻⁸)) = 1/(2π·10⁻⁶) ≈ 159 kHz.',
+    erklärung: 'Die Resonanzfrequenz ist f = 1/(2π√(LC)). Mit L = 100·10⁻⁶ H und C = 10·10⁻⁹ F: f = 1/(2π√(10⁻⁴·10⁻⁸)) = 1/(2π·10⁻⁶) ≈ 159 kHz.',
     strategieTipp: 'Formel für Schwingkreis: f = 1/(2π√(LC)). Auf Einheitenpräfixe achten: n = 10⁻⁹, μ = 10⁻⁶.'
   },
   {
@@ -336,7 +336,7 @@ export const fragenPart3 = [
       'Nur auf Elektronen, nicht auf Protonen'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Lorentzkraft F = q·v×B wirkt auf bewegte Ladungen in einem Magnetfeld. Sie steht senkrecht zur Bewegungsrichtung und zum Magnetfeld.',
+    erklärung: 'Die Lorentzkraft F = q·v×B wirkt auf bewegte Ladungen in einem Magnetfeld. Sie steht senkrecht zur Bewegungsrichtung und zum Magnetfeld.',
     strategieTipp: 'Lorentzkraft ist die Grundlage für viele Anwendungen wie Elektromotoren und Massenspektrometer.'
   },
   {
@@ -353,7 +353,7 @@ export const fragenPart3 = [
       '115 V'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Für Transformatoren gilt U₂/U₁ = n₂/n₁. Mit n₁/n₂ = 10/1 und U₁ = 230 V: U₂ = 230 V / 10 = 23 V.',
+    erklärung: 'Für Transformatoren gilt U₂/U₁ = n₂/n₁. Mit n₁/n₂ = 10/1 und U₁ = 230 V: U₂ = 230 V / 10 = 23 V.',
     strategieTipp: 'Transformatoren wandeln Spannungen proportional zum Windungsverhältnis. Mehr Windungen bedeuten höhere Spannung.'
   },
   {
@@ -370,7 +370,7 @@ export const fragenPart3 = [
       'Positive Ladungen sind schwerer als negative'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Gleichnamige Ladungen (beide positiv oder beide negativ) stoßen sich ab, ungleichnamige ziehen sich an. Dies ist ein fundamentales Prinzip der Elektrostatik.',
+    erklärung: 'Gleichnamige Ladungen (beide positiv oder beide negativ) stoßen sich ab, ungleichnamige ziehen sich an. Dies ist ein fundamentales Prinzip der Elektrostatik.',
     strategieTipp: 'Grundregel der Elektrostatik: Gleiche Ladungen abstoßend, ungleiche anziehend.'
   },
   {
@@ -387,7 +387,7 @@ export const fragenPart3 = [
       '177 nF'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'C = ε₀·ε_r·A/d. Mit A = 100 cm² = 0,01 m², d = 0,002 m, ε_r = 4: C = 8,85·10⁻¹²·4·0,01/0,002 = 177·10⁻¹² F = 177 pF.',
+    erklärung: 'C = ε₀·ε_r·A/d. Mit A = 100 cm² = 0,01 m², d = 0,002 m, ε_r = 4: C = 8,85·10⁻¹²·4·0,01/0,002 = 177·10⁻¹² F = 177 pF.',
     strategieTipp: 'Bei Kondensatoren: Kapazität proportional zur Fläche und zur Dielektrizitätskonstante, umgekehrt proportional zum Abstand.'
   },
   {
@@ -404,7 +404,7 @@ export const fragenPart3 = [
       '0,00158 J'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Die Energie im Kondensator ist E = ½·C·U². Mit C = 220·10⁻⁶ F und U = 12 V: E = 0,5·220·10⁻⁶·144 = 0,0158 J.',
+    erklärung: 'Die Energie im Kondensator ist E = ½·C·U². Mit C = 220·10⁻⁶ F und U = 12 V: E = 0,5·220·10⁻⁶·144 = 0,0158 J.',
     strategieTipp: 'Kondensatorenergie: E = ½CU² oder E = ½QU. Der Faktor ½ kommt von der linearen Spannungsänderung beim Laden.'
   },
   {
@@ -421,7 +421,7 @@ export const fragenPart3 = [
       'Die magnetische Flussdichte ist konstant'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die Maschenregel besagt, dass in einer geschlossenen Schleife die Summe aller Spannungen null ist. Dies folgt aus der Energieerhaltung.',
+    erklärung: 'Die Maschenregel besagt, dass in einer geschlossenen Schleife die Summe aller Spannungen null ist. Dies folgt aus der Energieerhaltung.',
     strategieTipp: 'Maschenregel: Spannungen in Schleifen, Knotenregel: Ströme an Verzweigungen. Beides folgt aus Erhaltungssätzen.'
   },
   {
@@ -438,7 +438,7 @@ export const fragenPart3 = [
       'Reflexionswinkel ist immer 90°'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Das Reflexionsgesetz besagt: Einfallswinkel = Reflexionswinkel. Beide Winkel werden zur Normalen (Lot) gemessen.',
+    erklärung: 'Das Reflexionsgesetz besagt: Einfallswinkel = Reflexionswinkel. Beide Winkel werden zur Normalen (Lot) gemessen.',
     strategieTipp: 'Reflexionsgesetz ist fundamental in der geometrischen Optik. Beide Winkel zur Normalen, nicht zur Oberfläche.'
   },
   {
@@ -455,7 +455,7 @@ export const fragenPart3 = [
       '60°'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Nach dem Snellius-Gesetz: n₁·sin(α) = n₂·sin(β). Mit n₁ = 1, α = 60°, n₂ = 1,5: sin(β) = 1·sin(60°)/1,5 = 0,866/1,5 = 0,577, also β ≈ 35°.',
+    erklärung: 'Nach dem Snellius-Gesetz: n₁·sin(α) = n₂·sin(β). Mit n₁ = 1, α = 60°, n₂ = 1,5: sin(β) = 1·sin(60°)/1,5 = 0,866/1,5 = 0,577, also β ≈ 35°.',
     strategieTipp: 'Bei Übergang in optisch dichteres Medium wird der Strahl zum Lot hin gebrochen (kleinerer Winkel).'
   },
   {
@@ -472,7 +472,7 @@ export const fragenPart3 = [
       'Totalreflexion kann hier nicht auftreten'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der Grenzwinkel ist sin(α_g) = n₂/n₁ = 1,0/1,33 = 0,752. Also α_g = arcsin(0,752) ≈ 48,6°. Totalreflexion tritt bei Winkeln > 48,6° auf.',
+    erklärung: 'Der Grenzwinkel ist sin(α_g) = n₂/n₁ = 1,0/1,33 = 0,752. Also α_g = arcsin(0,752) ≈ 48,6°. Totalreflexion tritt bei Winkeln > 48,6° auf.',
     strategieTipp: 'Totalreflexion nur beim Übergang von optisch dichterem zu dünnerem Medium möglich. Grenzwinkel: sin(α_g) = n₂/n₁.'
   },
   {
@@ -489,7 +489,7 @@ export const fragenPart3 = [
       'Eine Linse ohne optische Wirkung'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Eine konvexe (bikonvexe) Linse ist in der Mitte dicker als am Rand und sammelt parallel einfallende Lichtstrahlen im Brennpunkt (Sammellinse).',
+    erklärung: 'Eine konvexe (bikonvexe) Linse ist in der Mitte dicker als am Rand und sammelt parallel einfallende Lichtstrahlen im Brennpunkt (Sammellinse).',
     strategieTipp: 'Konvex = Sammellinse (positiv), konkav = Zerstreuungslinse (negativ). Konvex ist in der Mitte dicker.'
   },
   {
@@ -506,8 +506,8 @@ export const fragenPart3 = [
       '10 cm vor der Linse'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Mit der Linsengleichung 1/f = 1/g + 1/b, wobei f = 20 cm, g = 30 cm: 1/20 = 1/30 + 1/b → 1/b = 1/20 - 1/30 = 1/60 → b = 60 cm.',
-    strategieTipp: 'Linsengleichung: 1/f = 1/g + 1/b. Positive b bedeutet reelles Bild hinter der Linse, negative b virtuelles Bild vor der Linse.'
+    erklärung: 'Mit der Linsengleichung 1/f = 1/g + 1/b, wobei f = 20 cm, g = 30 cm: 1/20 = 1/30 + 1/b → 1/b = 1/20 - 1/30 = 1/60 → b = 60 cm.',
+    strategieTipp: 'Linsengleichung: 1/f = 1/g + 1/b. Positive b bedeutet reelles Bild hinter der Linse, negative b virtülles Bild vor der Linse.'
   },
   {
     id: 'ph-q-131',
@@ -523,7 +523,7 @@ export const fragenPart3 = [
       '0,006 mm'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Der Streifenabstand ist Δy = λ·L/d. Mit λ = 600·10⁻⁹ m, L = 2 m, d = 0,2·10⁻³ m: Δy = 600·10⁻⁹·2/0,2·10⁻³ = 6·10⁻³ m = 6 mm.',
+    erklärung: 'Der Streifenabstand ist Δy = λ·L/d. Mit λ = 600·10⁻⁹ m, L = 2 m, d = 0,2·10⁻³ m: Δy = 600·10⁻⁹·2/0,2·10⁻³ = 6·10⁻³ m = 6 mm.',
     strategieTipp: 'Doppelspalt-Interferenz: Δy = λL/d. Größere Wellenlänge oder kleinerer Spaltabstand ergeben größere Abstände.'
   },
   {
@@ -540,8 +540,8 @@ export const fragenPart3 = [
       'Elektronen sind reine Teilchen ohne Welleneigenschaften'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Der Welle-Teilchen-Dualismus besagt, dass Licht (und Materie) sowohl Wellen- als auch Teilcheneigenschaften zeigt, je nach Experiment (z.B. Interferenz vs. Photoeffekt).',
-    strategieTipp: 'Welleneigenschaften: Interferenz, Beugung. Teilcheneigenschaften: Photoeffekt, Compton-Effekt.'
+    erklärung: 'Der Welle-Teilchen-Dualismus besagt, dass Licht (und Materie) sowohl Wellen- als auch Teilcheneigenschaften zeigt, je nach Experiment (z.B. Interferenz vs. Photöffekt).',
+    strategieTipp: 'Welleneigenschaften: Interferenz, Beugung. Teilcheneigenschaften: Photöffekt, Compton-Effekt.'
   },
   {
     id: 'ph-q-133',
@@ -557,7 +557,7 @@ export const fragenPart3 = [
       'Die Polarisation von Licht'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Dispersion ist die wellenlängenabhängige Brechung, die weißes Licht in seine Spektralfarben aufspaltet (z.B. im Prisma oder Regenbogen).',
+    erklärung: 'Dispersion ist die wellenlängenabhängige Brechung, die weißes Licht in seine Spektralfarben aufspaltet (z.B. im Prisma oder Regenbogen).',
     strategieTipp: 'Dispersion entsteht, weil der Brechungsindex vom Material wellenlängenabhängig ist. Blaues Licht wird stärker gebrochen als rotes.'
   },
   {
@@ -574,7 +574,7 @@ export const fragenPart3 = [
       '100-fach'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Gesamtvergrößerung eines Mikroskops ist das Produkt aus Objektiv- und Okularvergrößerung: 40 × 10 = 400-fach.',
+    erklärung: 'Die Gesamtvergrößerung eines Mikroskops ist das Produkt aus Objektiv- und Okularvergrößerung: 40 × 10 = 400-fach.',
     strategieTipp: 'Bei mehrstufigen optischen Systemen werden Vergrößerungen multipliziert.'
   },
   {
@@ -591,7 +591,7 @@ export const fragenPart3 = [
       '0,6 mm'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Die Brechkraft D in Dioptrien ist D = 1/f (mit f in Metern). Mit D = 60 dpt: f = 1/60 m = 0,0167 m = 1,67 cm.',
+    erklärung: 'Die Brechkraft D in Dioptrien ist D = 1/f (mit f in Metern). Mit D = 60 dpt: f = 1/60 m = 0,0167 m = 1,67 cm.',
     strategieTipp: 'Dioptrie ist die Einheit der Brechkraft: 1 dpt = 1 m⁻¹. Hohe Dioptrienwerte bedeuten kurze Brennweiten.'
   },
   {
@@ -608,7 +608,7 @@ export const fragenPart3 = [
       'Farbenblindheit'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei Kurzsichtigkeit (Myopie) ist der Augapfel zu lang, sodass das Bild vor der Netzhaut entsteht. Ferne Objekte erscheinen unscharf. Korrektur durch Zerstreuungslinse.',
+    erklärung: 'Bei Kurzsichtigkeit (Myopie) ist der Augapfel zu lang, sodass das Bild vor der Netzhaut entsteht. Ferne Objekte erscheinen unscharf. Korrektur durch Zerstreuungslinse.',
     strategieTipp: 'Kurzsichtig = zu langer Augapfel, Zerstreuungslinse hilft. Weitsichtig = zu kurzer Augapfel, Sammellinse hilft.'
   },
   {
@@ -625,7 +625,7 @@ export const fragenPart3 = [
       'Rot'
     ],
     korrekteAntwort: 4,
-    erklaerung: 'Rot hat mit etwa 700 nm die längste Wellenlänge im sichtbaren Spektrum, Violett mit etwa 400 nm die kürzeste.',
+    erklärung: 'Rot hat mit etwa 700 nm die längste Wellenlänge im sichtbaren Spektrum, Violett mit etwa 400 nm die kürzeste.',
     strategieTipp: 'Spektralfarben von kurz nach lang: Violett, Blau, Grün, Gelb, Orange, Rot (merke: VIBGYOR).'
   },
   {
@@ -642,7 +642,7 @@ export const fragenPart3 = [
       '1000-fach'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Die Vergrößerung eines Teleskops ist V = f_Objektiv / f_Okular = 1000 mm / 25 mm = 40-fach.',
+    erklärung: 'Die Vergrößerung eines Teleskops ist V = f_Objektiv / f_Okular = 1000 mm / 25 mm = 40-fach.',
     strategieTipp: 'Teleskopvergrößerung: Division der Brennweiten. Längere Objektivbrennweite oder kürzere Okularbrennweite erhöht die Vergrößerung.'
   },
   {
@@ -659,7 +659,7 @@ export const fragenPart3 = [
       '50 mm'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Für das erste Minimum gilt: sin(α) = λ/b. Für kleine Winkel: x = λ·L/b = 500·10⁻⁹·1/(0,1·10⁻³) = 5·10⁻³ m = 5 mm = 0,5 cm.',
+    erklärung: 'Für das erste Minimum gilt: sin(α) = λ/b. Für kleine Winkel: x = λ·L/b = 500·10⁻⁹·1/(0,1·10⁻³) = 5·10⁻³ m = 5 mm = 0,5 cm.',
     strategieTipp: 'Einzelspalt-Beugung: Position der Minima bei b·sin(α) = n·λ. Kleinwinkelnäherung: sin(α) ≈ tan(α) = x/L.'
   },
   {
@@ -676,7 +676,7 @@ export const fragenPart3 = [
       'Die Beugung von Licht'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Absorption ist die Umwandlung von Lichtenergie in andere Energieformen (meist Wärme). Dabei wird die Intensität des durchgehenden Lichts reduziert.',
+    erklärung: 'Absorption ist die Umwandlung von Lichtenergie in andere Energieformen (meist Wärme). Dabei wird die Intensität des durchgehenden Lichts reduziert.',
     strategieTipp: 'Absorption ist wellenlängenabhängig und bestimmt die Farbe von Objekten (absorbierte Farben werden nicht reflektiert).'
   },
   {
@@ -693,7 +693,7 @@ export const fragenPart3 = [
       'Periskop'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Ein Teleskop (Fernrohr) verwendet ein Objektivlinsensystem und ein Okular, um weit entfernte Objekte zu vergrößern.',
+    erklärung: 'Ein Teleskop (Fernrohr) verwendet ein Objektivlinsensystem und ein Okular, um weit entfernte Objekte zu vergrößern.',
     strategieTipp: 'Teleskop für ferne Objekte, Mikroskop für nahe kleine Objekte. Beide verwenden Objektiv + Okular.'
   },
   {
@@ -710,7 +710,7 @@ export const fragenPart3 = [
       'In verschiedene Wellenlängen aufgespalten'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Bei Totalreflexion wird das Licht vollständig an der Grenzfläche reflektiert, ohne dass Energie durch Transmission verloren geht. Dies ermöglicht Datenübertragung über große Distanzen.',
+    erklärung: 'Bei Totalreflexion wird das Licht vollständig an der Grenzfläche reflektiert, ohne dass Energie durch Transmission verloren geht. Dies ermöglicht Datenübertragung über große Distanzen.',
     strategieTipp: 'Totalreflexion ist die Grundlage für Glasfasertechnologie. Erfordert Übergang von optisch dichterem zu dünnerem Medium.'
   },
   {
@@ -727,7 +727,7 @@ export const fragenPart3 = [
       'Der Strahl tritt nicht aus (Totalreflexion)'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Bei senkrechtem Einfall auf die erste Fläche trifft der Strahl die zweite unter 60° (Innenwinkel). Mit Snellius: 1,5·sin(60°) = 1·sin(α) → sin(α) = 1,5·0,866 = 1,299. Da > 1, liegt der Grenzfall vor. Korrektur: Strahl trifft unter 30° auf zweite Fläche (90°-60°). 1,5·sin(30°) = sin(α) → α = arcsin(0,75) ≈ 48,6°. Differenz zur Normalen: etwa 38,9° zur Prismenfläche.',
+    erklärung: 'Bei senkrechtem Einfall auf die erste Fläche trifft der Strahl die zweite unter 60° (Innenwinkel). Mit Snellius: 1,5·sin(60°) = 1·sin(α) → sin(α) = 1,5·0,866 = 1,299. Da > 1, liegt der Grenzfall vor. Korrektur: Strahl trifft unter 30° auf zweite Fläche (90°-60°). 1,5·sin(30°) = sin(α) → α = arcsin(0,75) ≈ 48,6°. Differenz zur Normalen: etwa 38,9° zur Prismenfläche.',
     strategieTipp: 'Bei Prismen mehrfache Brechung beachten. Gesamtablenkung hängt vom brechenden Winkel und Brechungsindex ab.'
   },
   {
@@ -744,7 +744,7 @@ export const fragenPart3 = [
       'Interferenz tritt nur bei mechanischen Wellen auf'
     ],
     korrekteAntwort: 3,
-    erklaerung: 'Interferenz ist ein charakteristisches Wellenphänomen. Bei konstruktiver Interferenz verstärken sich Wellen (gleiche Phase), bei destruktiver löschen sie sich aus (Gegenphase).',
+    erklärung: 'Interferenz ist ein charakteristisches Wellenphänomen. Bei konstruktiver Interferenz verstärken sich Wellen (gleiche Phase), bei destruktiver löschen sie sich aus (Gegenphase).',
     strategieTipp: 'Interferenz ist ein Beweis für Wellennatur. Bedingung: Kohärente Quellen (feste Phasenbeziehung).'
   },
   {
@@ -752,7 +752,7 @@ export const fragenPart3 = [
     stichwortId: 'ph-6-01',
     fach: 'physik' as const,
     schwierigkeit: 'leicht' as const,
-    fragetext: 'Was ist ein virtuelles Bild?',
+    fragetext: 'Was ist ein virtülles Bild?',
     optionen: [
       'Ein Bild, das auf einem Schirm aufgefangen werden kann',
       'Ein Bild, das nur durch Verlängerung der Lichtstrahlen entsteht',
@@ -761,8 +761,8 @@ export const fragenPart3 = [
       'Ein Bild, das keine optische Bedeutung hat'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Ein virtuelles Bild entsteht durch die gedachte Verlängerung von Lichtstrahlen. Es kann nicht auf einem Schirm aufgefangen werden (z.B. Spiegelbild, Lupenbild).',
-    strategieTipp: 'Reelles Bild: Lichtstrahlen vereinigen sich tatsächlich. Virtuelles Bild: nur Verlängerungen schneiden sich.'
+    erklärung: 'Ein virtülles Bild entsteht durch die gedachte Verlängerung von Lichtstrahlen. Es kann nicht auf einem Schirm aufgefangen werden (z.B. Spiegelbild, Lupenbild).',
+    strategieTipp: 'Reelles Bild: Lichtstrahlen vereinigen sich tatsächlich. Virtülles Bild: nur Verlängerungen schneiden sich.'
   },
   {
     id: 'ph-q-146',
@@ -778,15 +778,15 @@ export const fragenPart3 = [
       '30 cm vor der Linse'
     ],
     korrekteAntwort: 0,
-    erklaerung: 'Mit 1/f = 1/g + 1/b und f = -15 cm, g = 30 cm: 1/(-15) = 1/30 + 1/b → 1/b = -1/15 - 1/30 = -3/30 = -1/10 → b = -10 cm. Negativ bedeutet vor der Linse (virtuell).',
-    strategieTipp: 'Zerstreuungslinsen haben negative Brennweite und erzeugen immer virtuelle, verkleinerte, aufrechte Bilder.'
+    erklärung: 'Mit 1/f = 1/g + 1/b und f = -15 cm, g = 30 cm: 1/(-15) = 1/30 + 1/b → 1/b = -1/15 - 1/30 = -3/30 = -1/10 → b = -10 cm. Negativ bedeutet vor der Linse (virtüll).',
+    strategieTipp: 'Zerstreuungslinsen haben negative Brennweite und erzeugen immer virtülle, verkleinerte, aufrechte Bilder.'
   },
   {
     id: 'ph-q-147',
     stichwortId: 'ph-6-01',
     fach: 'physik' as const,
     schwierigkeit: 'schwer' as const,
-    fragetext: 'Beim Photoeffekt werden Elektronen aus einer Metalloberfläche herausgelöst. Was ist die minimale Energie eines Photons, um ein Elektron aus Cäsium (Austrittsarbeit 2,1 eV) zu lösen?',
+    fragetext: 'Beim Photöffekt werden Elektronen aus einer Metalloberfläche herausgelöst. Was ist die minimale Energie eines Photons, um ein Elektron aus Cäsium (Austrittsarbeit 2,1 eV) zu lösen?',
     optionen: [
       '1,6·10⁻¹⁹ J',
       '2,1·10⁻¹⁹ J',
@@ -795,8 +795,8 @@ export const fragenPart3 = [
       '6,63·10⁻¹⁹ J'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Die minimale Energie entspricht der Austrittsarbeit. 1 eV = 1,6·10⁻¹⁹ J, also E = 2,1 eV · 1,6·10⁻¹⁹ J/eV = 3,36·10⁻¹⁹ J.',
-    strategieTipp: 'Photoeffekt: E_Photon = W_Austritt + E_kin. Umrechnung: 1 eV = 1,6·10⁻¹⁹ J.'
+    erklärung: 'Die minimale Energie entspricht der Austrittsarbeit. 1 eV = 1,6·10⁻¹⁹ J, also E = 2,1 eV · 1,6·10⁻¹⁹ J/eV = 3,36·10⁻¹⁹ J.',
+    strategieTipp: 'Photöffekt: E_Photon = W_Austritt + E_kin. Umrechnung: 1 eV = 1,6·10⁻¹⁹ J.'
   },
   {
     id: 'ph-q-148',
@@ -812,7 +812,7 @@ export const fragenPart3 = [
       'Streuung an Eiskristallen'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Ein Regenbogen entsteht durch Brechung beim Eintritt in den Tropfen (mit Dispersion), Reflexion an der Rückseite und erneute Brechung beim Austritt. Die Dispersion trennt die Farben.',
+    erklärung: 'Ein Regenbogen entsteht durch Brechung beim Eintritt in den Tropfen (mit Dispersion), Reflexion an der Rückseite und erneute Brechung beim Austritt. Die Dispersion trennt die Farben.',
     strategieTipp: 'Regenbogen: Kombination mehrerer optischer Phänomene. Rot außen (weniger stark gebrochen), Violett innen.'
   },
   {
@@ -829,8 +829,8 @@ export const fragenPart3 = [
       'Es entsteht kein Bild'
     ],
     korrekteAntwort: 2,
-    erklaerung: 'Ein ebener Spiegel erzeugt ein virtuelles Bild in gleicher Größe wie das Objekt, das seitenvertauscht (spiegelverkehrt) und gleich weit hinter dem Spiegel erscheint.',
-    strategieTipp: 'Ebener Spiegel: 1:1 Abbildung, virtuell, aufrecht, seitenvertauscht, Bildweite = Gegenstandsweite.'
+    erklärung: 'Ein ebener Spiegel erzeugt ein virtülles Bild in gleicher Größe wie das Objekt, das seitenvertauscht (spiegelverkehrt) und gleich weit hinter dem Spiegel erscheint.',
+    strategieTipp: 'Ebener Spiegel: 1:1 Abbildung, virtüll, aufrecht, seitenvertauscht, Bildweite = Gegenstandsweite.'
   },
   {
     id: 'ph-q-150',
@@ -846,7 +846,7 @@ export const fragenPart3 = [
       'Nachtblindheit'
     ],
     korrekteAntwort: 1,
-    erklaerung: 'Positive Dioptrienwerte (+2,5 dpt) bedeuten eine Sammellinse. Diese wird zur Korrektur von Weitsichtigkeit (Hyperopie) verwendet, bei der das Auge zu schwach bricht.',
+    erklärung: 'Positive Dioptrienwerte (+2,5 dpt) bedeuten eine Sammellinse. Diese wird zur Korrektur von Weitsichtigkeit (Hyperopie) verwendet, bei der das Auge zu schwach bricht.',
     strategieTipp: 'Positive Brechkraft (Sammellinse) für Weitsichtigkeit, negative Brechkraft (Zerstreuungslinse) für Kurzsichtigkeit.'
   }
 ];
