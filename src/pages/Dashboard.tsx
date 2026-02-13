@@ -12,11 +12,15 @@ import {
   Flame,
   Layers,
   ArrowRight,
+  Zap,
+  AlertTriangle,
+  CheckCircle2,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Heatmap } from "@/components/ui/heatmap";
 import { useStore } from "@/store/useStore";
+import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { daysUntilMedAT, generateMockActivityData } from "@/lib/utils";
 import { getQuestionSubject } from "@/lib/bmsLookup";
 
@@ -244,6 +248,110 @@ export default function Dashboard() {
                   </Card>
                 </Link>
               )}
+            </div>
+          </div>
+        );
+      })()}
+
+      {/* Adaptiver Lernplan */}
+      {(() => {
+        const readiness = useAdaptiveStore.getState().getMedATReadiness();
+        const weakTopics = useAdaptiveStore.getState().getWeakestTopics(3);
+        const strongTopics = useAdaptiveStore.getState().getStrongestTopics(3);
+        const { totalQuestionsAnswered, dailyChallengeStreak } = useAdaptiveStore.getState().profile;
+
+        const fachColorMap: Record<string, string> = {
+          biologie: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400",
+          chemie: "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400",
+          physik: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400",
+          mathematik: "bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-400",
+        };
+
+        if (totalQuestionsAnswered === 0 && quizResults.length === 0) return null;
+
+        return (
+          <div>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">Dein adaptiver Lernplan</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+              {/* MedAT Readiness */}
+              <Card className="border-l-4 border-l-primary-500">
+                <CardContent className="p-4">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="relative flex items-center justify-center">
+                      <ProgressRing value={readiness} size={56} stroke={5} />
+                      <span className="absolute text-sm font-bold text-primary-700 dark:text-primary-400">{readiness}%</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">MedAT-Bereitschaft</p>
+                      <p className="text-xs text-muted">{totalQuestionsAnswered} Fragen beantwortet</p>
+                    </div>
+                  </div>
+                  {dailyChallengeStreak > 0 && (
+                    <div className="flex items-center gap-1.5 text-xs text-orange-600 dark:text-orange-400">
+                      <Flame className="w-3.5 h-3.5" />
+                      <span>{dailyChallengeStreak} Tage Daily Challenge Streak</span>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+
+              {/* Weak Topics */}
+              {weakTopics.length > 0 && (
+                <Card className="border-l-4 border-l-orange-400">
+                  <CardContent className="p-4">
+                    <div className="flex items-center gap-2 mb-3">
+                      <AlertTriangle className="w-4 h-4 text-orange-500" />
+                      <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">Fokus-Themen</p>
+                    </div>
+                    <div className="space-y-2">
+                      {weakTopics.map((t) => (
+                        <div key={t.stichwortId} className="flex items-center justify-between">
+                          <div className="flex items-center gap-2 min-w-0">
+                            <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded ${fachColorMap[t.fach] || ""}`}>
+                              {t.fach.slice(0, 3).toUpperCase()}
+                            </span>
+                            <span className="text-xs text-gray-700 dark:text-gray-300 truncate">{t.thema}</span>
+                          </div>
+                          <span className="text-xs font-medium text-orange-600 dark:text-orange-400 shrink-0">{t.rate}%</span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
+
+              {/* Strong Topics */}
+              {strongTopics.length > 0 && (
+                <Card className="border-l-4 border-l-emerald-400">
+                  <CardContent className="p-4">
+                    <div className="flex items-center gap-2 mb-3">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                      <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">Starke Themen</p>
+                    </div>
+                    <div className="space-y-2">
+                      {strongTopics.map((t) => (
+                        <div key={t.stichwortId} className="flex items-center justify-between">
+                          <div className="flex items-center gap-2 min-w-0">
+                            <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded ${fachColorMap[t.fach] || ""}`}>
+                              {t.fach.slice(0, 3).toUpperCase()}
+                            </span>
+                            <span className="text-xs text-gray-700 dark:text-gray-300 truncate">{t.thema}</span>
+                          </div>
+                          <span className="text-xs font-medium text-emerald-600 dark:text-emerald-400 shrink-0">{t.rate}%</span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
+            </div>
+            <div className="mt-3">
+              <Link to="/bms">
+                <button className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors cursor-pointer">
+                  <Zap className="w-4 h-4" />
+                  Adaptives Training starten
+                </button>
+              </Link>
             </div>
           </div>
         );
