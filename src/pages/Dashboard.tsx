@@ -345,11 +345,17 @@ export default function Dashboard() {
                 </Card>
               )}
             </div>
-            <div className="mt-3">
-              <Link to="/bms">
-                <button className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors cursor-pointer">
+            <div className="mt-3 flex gap-2">
+              <Link to="/schwachstellen">
+                <button className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors cursor-pointer">
+                  <Target className="w-4 h-4" />
+                  Schwachstellen-Trainer
+                </button>
+              </Link>
+              <Link to="/schwachstellen">
+                <button className="inline-flex items-center gap-2 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors cursor-pointer">
                   <Zap className="w-4 h-4" />
-                  Adaptives Training starten
+                  Daily Challenge
                 </button>
               </Link>
             </div>
