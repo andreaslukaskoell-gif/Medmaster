@@ -8,6 +8,11 @@ export function AuthGuard({ children }: { children: React.ReactNode }) {
   const { isAuthenticated, loading } = useAuth();
   const location = useLocation();
 
+  // In development mode, skip auth entirely
+  if (import.meta.env.DEV) {
+    return <>{children}</>;
+  }
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
