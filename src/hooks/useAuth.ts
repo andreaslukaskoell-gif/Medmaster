@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
+import { startAutoSync, stopAutoSync, pushStatsToSupabase } from "@/lib/syncService";
 import type { User, Session } from "@supabase/supabase-js";
 
 interface Profile {
@@ -26,18 +27,31 @@ export function useAuth() {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
       setUser(session?.user ?? null);
-      if (session?.user) fetchProfile(session.user.id);
-      else setLoading(false);
+      if (session?.user) {
+        fetchProfile(session.user.id);
+        startAutoSync(session.user.id);
+      } else {
+        setLoading(false);
+      }
     });
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
       setUser(session?.user ?? null);
-      if (session?.user) fetchProfile(session.user.id);
-      else { setProfile(null); setLoading(false); }
+      if (session?.user) {
+        fetchProfile(session.user.id);
+        startAutoSync(session.user.id);
+      } else {
+        stopAutoSync();
+        setProfile(null);
+        setLoading(false);
+      }
     });
 
-    return () => subscription.unsubscribe();
+    return () => {
+      subscription.unsubscribe();
+      stopAutoSync();
+    };
   }, []);
 
   async function fetchProfile(userId: string) {
@@ -66,6 +80,11 @@ export function useAuth() {
   }
 
   async function signOut() {
+    // Push final stats before signing out
+    if (user) {
+      await pushStatsToSupabase(user.id);
+    }
+    stopAutoSync();
     await supabase.auth.signOut();
     setUser(null);
     setProfile(null);
