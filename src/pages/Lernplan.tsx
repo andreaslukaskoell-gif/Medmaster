@@ -1,85 +1,209 @@
-import { useState } from "react";
-import { CalendarDays, Clock, BookOpen, Brain, FileText, Heart, CheckCircle2 } from "lucide-react";
+import { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
+import {
+  CalendarDays, Clock, BookOpen, Brain, FileText, Heart,
+  CheckCircle2, Target, TrendingUp, Zap, AlertTriangle,
+  ArrowRight, Flame,
+} from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { useStore } from "@/store/useStore";
+import { useAdaptiveStore } from "@/store/adaptiveLearning";
+import { alleStichworteListe } from "@/data/stichwortliste";
 import { daysUntilMedAT } from "@/lib/utils";
 
-const moduleIcons: Record<string, typeof BookOpen> = {
-  BMS: BookOpen,
-  KFF: Brain,
-  TV: FileText,
-  SEK: Heart,
+// ============================================================
+// Constants
+// ============================================================
+
+const moduleConfig: Record<string, {
+  icon: typeof BookOpen; label: string; bg: string; text: string;
+  baseWeight: number; description: string;
+}> = {
+  BMS: { icon: BookOpen, label: "BMS", bg: "bg-emerald-100 dark:bg-emerald-900/30", text: "text-emerald-700 dark:text-emerald-400", baseWeight: 0.40, description: "Basiskenntnistest Medizinische Studien" },
+  KFF: { icon: Brain, label: "KFF", bg: "bg-amber-100 dark:bg-amber-900/30", text: "text-amber-700 dark:text-amber-400", baseWeight: 0.25, description: "Kognitive Fähigkeiten & Fertigkeiten" },
+  TV: { icon: FileText, label: "TV", bg: "bg-indigo-100 dark:bg-indigo-900/30", text: "text-indigo-700 dark:text-indigo-400", baseWeight: 0.20, description: "Textverständnis" },
+  SEK: { icon: Heart, label: "SEK", bg: "bg-rose-100 dark:bg-rose-900/30", text: "text-rose-700 dark:text-rose-400", baseWeight: 0.15, description: "Sozial-emotionale Kompetenzen" },
 };
 
-const moduleColors: Record<string, string> = {
-  BMS: "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400",
-  KFF: "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400",
-  TV: "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400",
-  SEK: "bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-400",
+const phaseConfig = {
+  einstieg: { label: "Einstieg", badge: "info" as const, desc: "Grundlagen aufbauen, Überblick gewinnen" },
+  vertiefung: { label: "Vertiefung", badge: "warning" as const, desc: "Schwächen gezielt trainieren, Wissen festigen" },
+  pruefung: { label: "Prüfungsphase", badge: "danger" as const, desc: "Simulationen, Zeitmanagement, letzte Wiederholung" },
 };
 
-function generateWeeklyPlan(hoursPerWeek: number, weeksLeft: number) {
-  const modules = ["BMS", "KFF", "TV", "SEK"];
-  const weights = { BMS: 0.4, KFF: 0.25, TV: 0.2, SEK: 0.15 };
+const bmsSubjectWeights: Record<string, number> = {
+  biologie: 0.43,
+  chemie: 0.26,
+  physik: 0.19,
+  mathematik: 0.12,
+};
+
+// ============================================================
+// Adaptive Plan Generator
+// ============================================================
+
+function generateAdaptivePlan(
+  hoursPerWeek: number,
+  weeksLeft: number,
+  readiness: number,
+  fachReadiness: Record<string, number>,
+  weakTopics: { stichwortId: string; thema: string; fach: string; rate: number }[],
+  phase: string,
+) {
   const minutesPerWeek = hoursPerWeek * 60;
 
+  // Adjust BMS weight based on readiness — if BMS is weak, allocate more time
+  const avgBmsReadiness = Object.entries(fachReadiness).reduce(
+    (sum, [fach, r]) => sum + r * (bmsSubjectWeights[fach] || 0), 0
+  );
+  const bmsBoost = avgBmsReadiness < 50 ? 0.10 : avgBmsReadiness < 70 ? 0.05 : 0;
+
+  const adjustedWeights = {
+    BMS: moduleConfig.BMS.baseWeight + bmsBoost,
+    KFF: moduleConfig.KFF.baseWeight - bmsBoost * 0.4,
+    TV: moduleConfig.TV.baseWeight - bmsBoost * 0.35,
+    SEK: moduleConfig.SEK.baseWeight - bmsBoost * 0.25,
+  };
+
+  // Determine phases
+  const autoPhase = weeksLeft > 12 ? "einstieg" : weeksLeft > 4 ? "vertiefung" : "pruefung";
+  const activePhase = phase || autoPhase;
+
   const phases = [
-    { name: "Grundlagen", weeks: Math.ceil(weeksLeft * 0.3), focus: "Theorie lesen, Grundkonzepte verstehen" },
-    { name: "Vertiefung", weeks: Math.ceil(weeksLeft * 0.4), focus: "Übungsfragen, Schwächen bearbeiten" },
-    { name: "Prüfungsphase", weeks: Math.max(1, weeksLeft - Math.ceil(weeksLeft * 0.7)), focus: "Simulationen, Wiederholung, Zeitmanagement" },
+    { name: "Grundlagen", weeks: Math.ceil(weeksLeft * 0.3), phase: "einstieg" as const },
+    { name: "Vertiefung", weeks: Math.ceil(weeksLeft * 0.4), phase: "vertiefung" as const },
+    { name: "Prüfungsphase", weeks: Math.max(1, weeksLeft - Math.ceil(weeksLeft * 0.7)), phase: "pruefung" as const },
   ];
 
-  const weeklyPlan = modules.map((mod) => {
-    const w = weights[mod as keyof typeof weights];
-    const mins = Math.round(minutesPerWeek * w);
+  // Generate tasks per module
+  const weeklyPlan = Object.entries(adjustedWeights).map(([mod, weight]) => {
+    const mins = Math.round(minutesPerWeek * weight);
     return {
       module: mod,
       minutesPerWeek: mins,
-      tasks: getModuleTasks(mod, mins),
+      weight: Math.round(weight * 100),
+      tasks: getAdaptiveTasks(mod, mins, activePhase, fachReadiness, weakTopics),
     };
   });
 
-  return { weeklyPlan, phases, weeksLeft };
+  // BMS sub-breakdown
+  const bmsMinutes = weeklyPlan.find((p) => p.module === "BMS")!.minutesPerWeek;
+  const bmsBreakdown = Object.entries(bmsSubjectWeights).map(([fach, weight]) => {
+    const r = fachReadiness[fach] || 0;
+    // Allocate more time to weaker subjects
+    const adjustedW = weight * (r < 50 ? 1.4 : r < 70 ? 1.1 : 0.8);
+    return { fach, weight: adjustedW, readiness: r };
+  });
+  const bmsTotal = bmsBreakdown.reduce((s, b) => s + b.weight, 0);
+  const bmsSubPlan = bmsBreakdown.map((b) => ({
+    fach: b.fach,
+    label: b.fach.charAt(0).toUpperCase() + b.fach.slice(1),
+    minutes: Math.round(bmsMinutes * (b.weight / bmsTotal)),
+    readiness: b.readiness,
+  }));
+
+  return { weeklyPlan, phases, activePhase, bmsSubPlan, adjustedWeights };
 }
 
-function getModuleTasks(module: string, minutes: number): string[] {
-  switch (module) {
-    case "BMS":
+function getAdaptiveTasks(
+  module: string,
+  minutes: number,
+  phase: string,
+  fachReadiness: Record<string, number>,
+  weakTopics: { stichwortId: string; thema: string; fach: string; rate: number }[],
+): string[] {
+  const bmsWeak = weakTopics.filter((t) => ["biologie", "chemie", "physik", "mathematik"].includes(t.fach));
+
+  if (module === "BMS") {
+    if (phase === "einstieg") {
       return [
-        `${Math.round(minutes * 0.4)} Min: Theorie-Kapitel lesen`,
-        `${Math.round(minutes * 0.4)} Min: Übungsfragen (${Math.round(minutes / 5)} Fragen)`,
-        `${Math.round(minutes * 0.2)} Min: Wiederholung (Spaced Repetition)`,
+        `${Math.round(minutes * 0.4)} Min: Stichwortliste durcharbeiten`,
+        `${Math.round(minutes * 0.35)} Min: Übungsfragen (~${Math.round(minutes / 4)} Fragen)`,
+        `${Math.round(minutes * 0.25)} Min: Erklärungen & Strategie-Tipps lesen`,
       ];
-    case "KFF":
+    } else if (phase === "vertiefung") {
+      const weakStr = bmsWeak.length > 0
+        ? bmsWeak.slice(0, 3).map((t) => t.thema).join(", ")
+        : "alle Themen";
       return [
-        `${Math.round(minutes * 0.3)} Min: Zahlenfolgen üben`,
-        `${Math.round(minutes * 0.35)} Min: Implikationen trainieren`,
-        `${Math.round(minutes * 0.35)} Min: Allergiepässe merken`,
+        `${Math.round(minutes * 0.2)} Min: Schwachstellen-Trainer (${weakStr})`,
+        `${Math.round(minutes * 0.4)} Min: Übungsfragen (~${Math.round(minutes / 3)} Fragen)`,
+        `${Math.round(minutes * 0.25)} Min: Spaced Repetition Wiederholung`,
+        `${Math.round(minutes * 0.15)} Min: Strategie-Tipps für schwache Themen`,
       ];
-    case "TV":
+    } else {
       return [
-        `${Math.round(minutes * 0.3)} Min: Strategie wiederholen`,
-        `${Math.round(minutes * 0.7)} Min: Übungstexte bearbeiten`,
+        `${Math.round(minutes * 0.15)} Min: Schwachstellen schnell wiederholen`,
+        `${Math.round(minutes * 0.5)} Min: BMS-Simulation unter Zeitdruck`,
+        `${Math.round(minutes * 0.2)} Min: Falsch beantwortete Fragen analysieren`,
+        `${Math.round(minutes * 0.15)} Min: Letzte Wiederholung Schlüsselthemen`,
       ];
-    case "SEK":
-      return [
-        `${Math.round(minutes * 0.4)} Min: Basisemotionen lernen`,
-        `${Math.round(minutes * 0.6)} Min: Situationsquiz üben`,
-      ];
-    default:
-      return [];
+    }
   }
+
+  if (module === "KFF") {
+    if (phase === "pruefung") {
+      return [
+        `${Math.round(minutes * 0.4)} Min: Zahlenfolgen unter Zeitdruck`,
+        `${Math.round(minutes * 0.3)} Min: Implikationen-Training`,
+        `${Math.round(minutes * 0.3)} Min: KFF-Simulation komplett`,
+      ];
+    }
+    return [
+      `${Math.round(minutes * 0.3)} Min: Zahlenfolgen üben`,
+      `${Math.round(minutes * 0.35)} Min: Implikationen trainieren`,
+      `${Math.round(minutes * 0.35)} Min: Allergiepässe merken`,
+    ];
+  }
+
+  if (module === "TV") {
+    if (phase === "pruefung") {
+      return [
+        `${Math.round(minutes * 0.3)} Min: Lese-Strategie-Check`,
+        `${Math.round(minutes * 0.7)} Min: Übungstexte unter Zeitdruck`,
+      ];
+    }
+    return [
+      `${Math.round(minutes * 0.3)} Min: Strategie wiederholen`,
+      `${Math.round(minutes * 0.7)} Min: Übungstexte bearbeiten`,
+    ];
+  }
+
+  // SEK
+  return [
+    `${Math.round(minutes * 0.4)} Min: Basisemotionen lernen`,
+    `${Math.round(minutes * 0.6)} Min: Situationsquiz üben`,
+  ];
 }
+
+// ============================================================
+// Component
+// ============================================================
 
 export default function Lernplan() {
   const { lernplanConfig, setLernplanConfig } = useStore();
+  const adaptive = useAdaptiveStore();
   const [hoursPerWeek, setHoursPerWeek] = useState(lernplanConfig?.hoursPerWeek || 10);
+
   const days = daysUntilMedAT();
   const weeksLeft = Math.max(1, Math.floor(days / 7));
+  const readiness = adaptive.getMedATReadiness();
+  const weakTopics = adaptive.getWeakestTopics(5);
+  const strongTopics = adaptive.getStrongestTopics(3);
+  const { profile } = adaptive;
+
+  const fachReadiness = useMemo(() => ({
+    biologie: adaptive.getFachReadiness("biologie"),
+    chemie: adaptive.getFachReadiness("chemie"),
+    physik: adaptive.getFachReadiness("physik"),
+    mathematik: adaptive.getFachReadiness("mathematik"),
+  }), [adaptive]);
+
+  const totalPracticed = Object.keys(profile.stichwortStats).length;
 
   const handleGenerate = () => {
     setLernplanConfig({
@@ -89,23 +213,95 @@ export default function Lernplan() {
     });
   };
 
-  const plan = lernplanConfig ? generateWeeklyPlan(lernplanConfig.hoursPerWeek, weeksLeft) : null;
+  const plan = lernplanConfig
+    ? generateAdaptivePlan(lernplanConfig.hoursPerWeek, weeksLeft, readiness, fachReadiness, weakTopics, profile.learningPhase)
+    : null;
+
+  // Predicted readiness at exam (simple linear projection)
+  const predictedReadiness = Math.min(100, readiness + Math.round(weeksLeft * 1.5));
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
       <Breadcrumb items={[{ label: "Dashboard", href: "/" }, { label: "Lernplan" }]} />
 
-      <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Lernplan-Generator</h1>
-        <p className="text-muted mt-1">
-          Noch <span className="font-bold text-primary-700">{days} Tage</span> ({weeksLeft} Wochen) bis zum MedAT.
-        </p>
+      <div className="flex items-center gap-3">
+        <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center">
+          <CalendarDays className="w-5 h-5 text-primary-600" />
+        </div>
+        <div>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Adaptiver Lernplan</h1>
+          <p className="text-sm text-muted">
+            Noch <span className="font-bold text-primary-700">{days} Tage</span> ({weeksLeft} Wochen) bis zum MedAT
+          </p>
+        </div>
       </div>
 
+      {/* Status Overview */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <Card>
+          <CardContent className="p-4 text-center">
+            <div className="text-2xl font-bold text-primary-700 dark:text-primary-400">{readiness}%</div>
+            <p className="text-xs text-muted">Aktuelle Readiness</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4 text-center">
+            <div className="flex items-center justify-center gap-1">
+              <TrendingUp className="w-4 h-4 text-green-500" />
+              <span className="text-2xl font-bold text-green-600 dark:text-green-400">{predictedReadiness}%</span>
+            </div>
+            <p className="text-xs text-muted">Prognose am Prüfungstag</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4 text-center">
+            <div className="flex items-center justify-center gap-1">
+              <Flame className="w-4 h-4 text-orange-500" />
+              <span className="text-2xl font-bold text-orange-600 dark:text-orange-400">{profile.dailyChallengeStreak}</span>
+            </div>
+            <p className="text-xs text-muted">Tages-Streak</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4 text-center">
+            <Badge variant={phaseConfig[profile.learningPhase]?.badge || "info"} className="mb-1">
+              {phaseConfig[profile.learningPhase]?.label || profile.learningPhase}
+            </Badge>
+            <p className="text-xs text-muted">{phaseConfig[profile.learningPhase]?.desc}</p>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Focus Topics */}
+      {weakTopics.length > 0 && (
+        <Card className="border-l-4 border-l-red-500">
+          <CardHeader className="pb-2">
+            <CardTitle className="flex items-center gap-2 text-base">
+              <AlertTriangle className="w-4 h-4 text-red-500" />
+              Diese Woche Fokus auf:
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pb-4">
+            <div className="flex flex-wrap gap-2">
+              {weakTopics.map((t) => (
+                <div key={t.stichwortId} className="flex items-center gap-2 bg-red-50 dark:bg-red-900/20 px-3 py-1.5 rounded-lg">
+                  <span className="text-sm font-medium text-red-800 dark:text-red-300">{t.thema}</span>
+                  <Badge variant="danger">{t.rate}%</Badge>
+                </div>
+              ))}
+            </div>
+            <Link to="/schwachstellen" className="inline-flex items-center gap-1 text-xs text-red-600 dark:text-red-400 mt-3 hover:underline">
+              Zum Schwachstellen-Trainer <ArrowRight className="w-3 h-3" />
+            </Link>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Config */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <CalendarDays className="w-5 h-5 text-primary-700" />
+            <Clock className="w-5 h-5 text-primary-700" />
             Lernplan konfigurieren
           </CardTitle>
         </CardHeader>
@@ -126,44 +322,48 @@ export default function Lernplan() {
               <span className="text-lg font-bold text-primary-700 w-20 text-right">{hoursPerWeek}h/Woche</span>
             </div>
             <p className="text-xs text-muted mt-1">
-              Das sind ca. {Math.round((hoursPerWeek / 7) * 60)} Minuten pro Tag.
+              Ca. {Math.round((hoursPerWeek / 7) * 60)} Minuten pro Tag
             </p>
           </div>
           <Button onClick={handleGenerate}>
-            <CalendarDays className="w-4 h-4 mr-2" />
-            {lernplanConfig ? "Lernplan aktualisieren" : "Lernplan generieren"}
+            <Zap className="w-4 h-4 mr-2" />
+            {lernplanConfig ? "Lernplan aktualisieren" : "Adaptiven Lernplan generieren"}
           </Button>
         </CardContent>
       </Card>
 
       {plan && (
         <>
+          {/* Phases */}
           <div>
             <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">Lernphasen</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {plan.phases.map((phase, i) => (
-                <Card key={i}>
-                  <CardContent className="p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Badge variant={i === 0 ? "info" : i === 1 ? "warning" : "danger"}>
-                        Phase {i + 1}
-                      </Badge>
-                      <span className="text-xs text-muted">{phase.weeks} Wochen</span>
-                    </div>
-                    <h3 className="font-semibold text-gray-900 dark:text-gray-100">{phase.name}</h3>
-                    <p className="text-xs text-muted mt-1">{phase.focus}</p>
-                  </CardContent>
-                </Card>
-              ))}
+              {plan.phases.map((phase, i) => {
+                const pc = phaseConfig[phase.phase];
+                const isActive = plan.activePhase === phase.phase;
+                return (
+                  <Card key={i} className={isActive ? "ring-2 ring-primary-500" : ""}>
+                    <CardContent className="p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Badge variant={pc.badge}>{pc.label}</Badge>
+                        <span className="text-xs text-muted">{phase.weeks} Wochen</span>
+                        {isActive && <Badge variant="success">Aktuell</Badge>}
+                      </div>
+                      <p className="text-xs text-muted">{pc.desc}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
 
+          {/* Weekly Plan */}
           <div>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">Wochenplan</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">Adaptiver Wochenplan</h2>
             <div className="space-y-4">
               {plan.weeklyPlan.map((item) => {
-                const Icon = moduleIcons[item.module] || BookOpen;
-                const colorClass = moduleColors[item.module] || "";
+                const mc = moduleConfig[item.module];
+                const Icon = mc.icon;
                 const hours = Math.floor(item.minutesPerWeek / 60);
                 const mins = item.minutesPerWeek % 60;
                 return (
@@ -171,20 +371,17 @@ export default function Lernplan() {
                     <CardContent className="p-4">
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-3">
-                          <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${colorClass}`}>
-                            <Icon className="w-5 h-5" />
+                          <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${mc.bg}`}>
+                            <Icon className={`w-5 h-5 ${mc.text}`} />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-gray-900 dark:text-gray-100">{item.module}</h3>
+                            <h3 className="font-semibold text-gray-900 dark:text-gray-100">{mc.label}</h3>
                             <p className="text-xs text-muted">
-                              {hours > 0 ? `${hours}h ` : ""}{mins > 0 ? `${mins}min` : ""} pro Woche
+                              {hours > 0 ? `${hours}h ` : ""}{mins > 0 ? `${mins}min` : ""} / Woche ({item.weight}%)
                             </p>
                           </div>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4 text-muted" />
-                          <span className="text-sm font-bold text-primary-700">{item.minutesPerWeek} min</span>
-                        </div>
+                        <span className="text-sm font-bold text-primary-700">{item.minutesPerWeek} min</span>
                       </div>
                       <div className="space-y-1.5">
                         {item.tasks.map((task, i) => (
@@ -201,25 +398,69 @@ export default function Lernplan() {
             </div>
           </div>
 
+          {/* BMS Sub-Breakdown */}
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="flex items-center gap-2 text-base">
+                <Target className="w-4 h-4 text-emerald-600" />
+                BMS-Zeitverteilung (adaptiv)
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <p className="text-xs text-muted mb-2">
+                Schwächere Fächer erhalten automatisch mehr Lernzeit.
+              </p>
+              {plan.bmsSubPlan.map((sub) => (
+                <div key={sub.fach} className="flex items-center gap-3">
+                  <span className="text-sm font-medium w-24 text-gray-700 dark:text-gray-300">{sub.label}</span>
+                  <div className="flex-1">
+                    <Progress value={sub.readiness} />
+                  </div>
+                  <span className="text-xs text-muted w-12 text-right">{sub.readiness}%</span>
+                  <span className="text-xs font-medium text-primary-700 w-16 text-right">{sub.minutes} min</span>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          {/* Time Distribution */}
           <Card>
             <CardContent className="p-4">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Zeitverteilung</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Gesamtverteilung</h3>
               <div className="space-y-2">
-                {plan.weeklyPlan.map((item) => (
-                  <div key={item.module} className="flex items-center gap-3">
-                    <span className="text-sm font-medium w-12 text-gray-700 dark:text-gray-300">{item.module}</span>
-                    <div className="flex-1">
-                      <Progress
-                        value={item.minutesPerWeek}
-                        max={Math.max(...plan.weeklyPlan.map((p) => p.minutesPerWeek))}
-                      />
+                {plan.weeklyPlan.map((item) => {
+                  const mc = moduleConfig[item.module];
+                  return (
+                    <div key={item.module} className="flex items-center gap-3">
+                      <span className={`text-sm font-medium w-12 ${mc.text}`}>{mc.label}</span>
+                      <div className="flex-1">
+                        <Progress
+                          value={item.minutesPerWeek}
+                          max={Math.max(...plan.weeklyPlan.map((p) => p.minutesPerWeek))}
+                        />
+                      </div>
+                      <span className="text-xs text-muted w-12 text-right">{item.weight}%</span>
                     </div>
-                    <span className="text-xs text-muted w-16 text-right">
-                      {Math.round((item.minutesPerWeek / (lernplanConfig!.hoursPerWeek * 60)) * 100)}%
-                    </span>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
+            </CardContent>
+          </Card>
+
+          {/* Stichwort Coverage */}
+          <Card>
+            <CardContent className="p-4">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="font-semibold text-gray-900 dark:text-gray-100">Stichwort-Fortschritt</h3>
+                <span className="text-sm text-muted">
+                  {totalPracticed} / {alleStichworteListe.length} geübt
+                </span>
+              </div>
+              <Progress value={(totalPracticed / alleStichworteListe.length) * 100} className="mb-2" />
+              <p className="text-xs text-muted">
+                {profile.totalQuestionsAnswered} Fragen beantwortet insgesamt
+                ({profile.totalCorrect > 0 ? Math.round((profile.totalCorrect / profile.totalQuestionsAnswered) * 100) : 0}% richtig)
+              </p>
             </CardContent>
           </Card>
         </>
