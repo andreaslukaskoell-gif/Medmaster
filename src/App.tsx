@@ -59,8 +59,11 @@ export default function App() {
             }
           >
             <Route path="/" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Navigate to="/" replace />} />
             <Route path="/onboarding" element={<OnboardingGuard />} />
             <Route path="/bms" element={<BMS />} />
+            <Route path="/bms/:fach" element={<BMS />} />
+            <Route path="/bms/:fach/:kapitel" element={<BMS />} />
             <Route path="/kff" element={<KFF />} />
             <Route path="/tv" element={<TV />} />
             <Route path="/sek" element={<SEK />} />
