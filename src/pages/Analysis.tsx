@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { Link } from "react-router-dom";
 import {
   RadarChart,
   Radar,
@@ -7,14 +8,21 @@ import {
   PolarRadiusAxis,
   ResponsiveContainer,
   Tooltip,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
 } from "recharts";
-import { AlertTriangle, TrendingUp, TrendingDown, Target, Lightbulb } from "lucide-react";
+import { AlertTriangle, TrendingUp, TrendingDown, Target, Lightbulb, Calendar, Zap } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { useStore } from "@/store/useStore";
+import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { getQuestionSubject } from "@/lib/bmsLookup";
+import { daysUntilMedAT } from "@/lib/utils";
 
 interface SubjectData {
   name: string;
@@ -277,6 +285,137 @@ export default function Analysis() {
               </CardContent>
             </Card>
           )}
+
+          {/* Prüfungstag-Prognose */}
+          {(() => {
+            const store = useAdaptiveStore.getState();
+            const readiness = store.getMedATReadiness();
+            const days = daysUntilMedAT();
+            const { totalQuestionsAnswered, totalCorrect } = store.profile;
+
+            if (totalQuestionsAnswered < 10) return null;
+
+            const faecher = [
+              { id: "biologie", label: "Biologie", color: "#10b981" },
+              { id: "chemie", label: "Chemie", color: "#ef4444" },
+              { id: "physik", label: "Physik", color: "#3b82f6" },
+              { id: "mathematik", label: "Mathematik", color: "#8b5cf6" },
+            ];
+
+            const fachData = faecher.map((f) => ({
+              name: f.label,
+              readiness: Math.round(store.getFachReadiness(f.id)),
+              fill: f.color,
+            }));
+
+            // Simple linear projection: if current rate continues
+            const globalRate = totalCorrect / totalQuestionsAnswered;
+            const projectedReadiness = Math.min(100, Math.round(readiness + (days * 0.15 * globalRate)));
+
+            // Weak topics that need most attention
+            const weakTopics = store.getWeakestTopics(5);
+
+            return (
+              <Card className="border-2 border-primary-200 dark:border-primary-800">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Calendar className="w-5 h-5 text-primary-600" />
+                    Prüfungstag-Prognose
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div className="bg-primary-50 dark:bg-primary-900/20 rounded-lg p-4 text-center">
+                      <p className="text-3xl font-bold text-primary-700 dark:text-primary-400">{readiness}%</p>
+                      <p className="text-xs text-muted mt-1">Aktuelle Bereitschaft</p>
+                    </div>
+                    <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-4 text-center">
+                      <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">{projectedReadiness}%</p>
+                      <p className="text-xs text-muted mt-1">Prognose am Prüfungstag</p>
+                    </div>
+                    <div className="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-4 text-center">
+                      <p className="text-3xl font-bold text-orange-700 dark:text-orange-400">{days}</p>
+                      <p className="text-xs text-muted mt-1">Tage bis MedAT</p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2">Bereitschaft nach Fach</p>
+                    <ResponsiveContainer width="100%" height={180}>
+                      <BarChart data={fachData} layout="vertical">
+                        <CartesianGrid strokeDasharray="3 3" horizontal={false} />
+                        <XAxis type="number" domain={[0, 100]} tick={{ fontSize: 11 }} />
+                        <YAxis type="category" dataKey="name" tick={{ fontSize: 12 }} width={90} />
+                        <Tooltip formatter={(v) => [`${v}%`, "Bereitschaft"]} />
+                        <Bar dataKey="readiness" radius={[0, 4, 4, 0]} barSize={20} />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </div>
+
+                  {weakTopics.length > 0 && (
+                    <div>
+                      <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2">Prioritäre Themen zum Verbessern</p>
+                      <div className="space-y-1.5">
+                        {weakTopics.map((t) => (
+                          <Link key={t.stichwortId} to={`/schwachstellen?stichwort=${t.stichwortId}`} className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                            <div className="flex items-center gap-2 min-w-0">
+                              <Zap className="w-3.5 h-3.5 text-orange-500 shrink-0" />
+                              <span className="text-sm text-gray-700 dark:text-gray-300 truncate">{t.thema}</span>
+                              <span className="text-[10px] text-muted">({t.fach})</span>
+                            </div>
+                            <Badge variant={t.rate < 30 ? "danger" : "warning"} className="text-xs shrink-0">{t.rate}%</Badge>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            );
+          })()}
+
+          {/* Lern-Trend der letzten 7 Tage */}
+          {(() => {
+            const last7Days = [];
+            for (let i = 6; i >= 0; i--) {
+              const d = new Date();
+              d.setDate(d.getDate() - i);
+              const dateStr = d.toLocaleDateString("de-AT", { weekday: "short", day: "numeric" });
+              const isoDate = d.toISOString().split("T")[0];
+              const dayResults = quizResults.filter((r) => r.timestamp?.startsWith(isoDate));
+              const total = dayResults.reduce((s, r) => s + r.total, 0);
+              const correct = dayResults.reduce((s, r) => s + r.score, 0);
+              last7Days.push({
+                tag: dateStr,
+                fragen: total,
+                richtig: correct,
+                quote: total > 0 ? Math.round((correct / total) * 100) : 0,
+              });
+            }
+
+            const hasAnyActivity = last7Days.some((d) => d.fragen > 0);
+            if (!hasAnyActivity) return null;
+
+            return (
+              <Card>
+                <CardHeader>
+                  <CardTitle>Lern-Trend (letzte 7 Tage)</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ResponsiveContainer width="100%" height={200}>
+                    <BarChart data={last7Days}>
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="tag" tick={{ fontSize: 11 }} />
+                      <YAxis tick={{ fontSize: 11 }} />
+                      <Tooltip />
+                      <Bar dataKey="fragen" name="Fragen" fill="#94a3b8" radius={[4, 4, 0, 0]} />
+                      <Bar dataKey="richtig" name="Richtig" fill="#10b981" radius={[4, 4, 0, 0]} />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </CardContent>
+              </Card>
+            );
+          })()}
 
           <Card>
             <CardHeader>
