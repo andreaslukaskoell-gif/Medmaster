@@ -9,6 +9,7 @@ import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { allBmsQuestions, getQuestionsBySubject as getNewQuestions } from "@/data/bms/index";
 import { bmsQuestions as legacyQuestions, getQuestionsBySubject as getLegacyQuestions } from "@/data/bmsQuestions";
 import { useStore } from "@/store/useStore";
+import { getStrategieTipp } from "@/data/questions/index";
 
 // Use new expanded questions if available, fall back to legacy
 function getQuestionsBySubject(subject: string) {
@@ -229,6 +230,12 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
                     <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-1">Erklärung:</p>
                     <p className="text-xs text-blue-700 dark:text-blue-400">{q.explanation}</p>
                   </div>
+                  {getStrategieTipp(q.id) && (
+                    <div className="ml-8 mt-2 bg-amber-50 dark:bg-amber-900/20 p-3 rounded-lg">
+                      <p className="text-xs font-semibold text-amber-800 dark:text-amber-300 mb-1">Strategie-Tipp:</p>
+                      <p className="text-xs text-amber-700 dark:text-amber-400">{getStrategieTipp(q.id)}</p>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             );

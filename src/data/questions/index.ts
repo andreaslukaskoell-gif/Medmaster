@@ -130,3 +130,12 @@ export function getStichwortFragenByFach(fach: string): StichwortFrage[] {
 export function getStichwortFragenByStichwort(stichwortId: string): StichwortFrage[] {
   return alleStichwortFragen.filter((f) => f.stichwortId === stichwortId);
 }
+
+// StrategieTipp lookup by question ID
+const strategieTippMap = new Map<string, string>(
+  alleStichwortFragen.map((f) => [f.id, f.strategieTipp])
+);
+
+export function getStrategieTipp(questionId: string): string | undefined {
+  return strategieTippMap.get(questionId);
+}

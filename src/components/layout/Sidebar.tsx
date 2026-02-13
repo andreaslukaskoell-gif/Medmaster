@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import {
   LayoutDashboard, BookOpen, Brain, FileText, Heart, Timer,
   BarChart3, CreditCard, GraduationCap, CalendarDays, Radar,
-  Users, StickyNote, Layers, Swords, ListChecks, X,
+  Users, StickyNote, Layers, Swords, ListChecks, Target, X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useStore } from "@/store/useStore";
@@ -12,6 +12,7 @@ const navItems = [
   { to: "/", icon: LayoutDashboard, label: "Dashboard", iconColor: "" },
   { to: "/bms", icon: BookOpen, label: "BMS", iconColor: "text-emerald-400" },
   { to: "/stichwortliste", icon: ListChecks, label: "Stichwortliste", iconColor: "text-emerald-400" },
+  { to: "/schwachstellen", icon: Target, label: "Schwachstellen", iconColor: "text-red-400" },
   { to: "/kff", icon: Brain, label: "KFF", iconColor: "text-amber-400" },
   { to: "/tv", icon: FileText, label: "TV", iconColor: "text-indigo-400" },
   { to: "/sek", icon: Heart, label: "SEK", iconColor: "text-rose-400" },

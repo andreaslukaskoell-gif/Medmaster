@@ -17,6 +17,7 @@ import Notes from "./pages/Notes";
 import Flashcards from "./pages/Flashcards";
 import Duel from "./pages/Duel";
 import StichwortlistePage from "./pages/StichwortlistePage";
+import SchwachstellenTrainer from "./pages/SchwachstellenTrainer";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
@@ -50,6 +51,7 @@ export default function App() {
           <Route path="/karteikarten" element={<Flashcards />} />
           <Route path="/duell" element={<Duel />} />
           <Route path="/stichwortliste" element={<StichwortlistePage />} />
+          <Route path="/schwachstellen" element={<SchwachstellenTrainer />} />
           <Route path="/preise" element={<Pricing />} />
         </Route>
       </Routes>
