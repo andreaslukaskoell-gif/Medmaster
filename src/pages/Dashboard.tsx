@@ -15,6 +15,9 @@ import {
   Zap,
   AlertTriangle,
   CheckCircle2,
+  Trophy,
+  Swords,
+  Award,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -253,12 +256,13 @@ export default function Dashboard() {
         );
       })()}
 
-      {/* Adaptiver Lernplan */}
+      {/* Prüfungs-Readiness */}
       {(() => {
-        const readiness = useAdaptiveStore.getState().getMedATReadiness();
-        const weakTopics = useAdaptiveStore.getState().getWeakestTopics(3);
-        const strongTopics = useAdaptiveStore.getState().getStrongestTopics(3);
-        const { totalQuestionsAnswered, dailyChallengeStreak } = useAdaptiveStore.getState().profile;
+        const store = useAdaptiveStore.getState();
+        const readiness = store.getMedATReadiness();
+        const weakTopics = store.getWeakestTopics(3);
+        const strongTopics = store.getStrongestTopics(3);
+        const { totalQuestionsAnswered, totalCorrect, dailyChallengeStreak } = store.profile;
 
         const fachColorMap: Record<string, string> = {
           biologie: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400",
@@ -267,98 +271,177 @@ export default function Dashboard() {
           mathematik: "bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-400",
         };
 
+        const faecher = [
+          { id: "biologie", label: "Biologie", color: "bg-emerald-500", bg: "bg-emerald-100 dark:bg-emerald-900/30" },
+          { id: "chemie", label: "Chemie", color: "bg-red-500", bg: "bg-red-100 dark:bg-red-900/30" },
+          { id: "physik", label: "Physik", color: "bg-blue-500", bg: "bg-blue-100 dark:bg-blue-900/30" },
+          { id: "mathematik", label: "Mathematik", color: "bg-violet-500", bg: "bg-violet-100 dark:bg-violet-900/30" },
+        ];
+
+        // Milestones
+        const milestones = [
+          { id: "first-quiz", label: "Erstes Quiz", icon: Star, check: totalQuizzes >= 1 },
+          { id: "100-fragen", label: "100 Fragen", icon: BookOpen, check: totalQuestionsAnswered >= 100 },
+          { id: "500-fragen", label: "500 Fragen", icon: Brain, check: totalQuestionsAnswered >= 500 },
+          { id: "1000-fragen", label: "1.000 Fragen", icon: Trophy, check: totalQuestionsAnswered >= 1000 },
+          { id: "streak-7", label: "7-Tage-Streak", icon: Flame, check: streak >= 7 || dailyChallengeStreak >= 7 },
+          { id: "readiness-50", label: "50% Bereitschaft", icon: Target, check: readiness >= 50 },
+          { id: "readiness-80", label: "80% Bereitschaft", icon: Award, check: readiness >= 80 },
+          { id: "duell-held", label: "Duell-Held", icon: Swords, check: quizResults.filter((r) => r.subject === "Duell").length >= 10 },
+        ];
+        const unlockedCount = milestones.filter((m) => m.check).length;
+
         if (totalQuestionsAnswered === 0 && quizResults.length === 0) return null;
 
         return (
-          <div>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">Dein adaptiver Lernplan</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-              {/* MedAT Readiness */}
-              <Card className="border-l-4 border-l-primary-500">
-                <CardContent className="p-4">
-                  <div className="flex items-center gap-3 mb-3">
+          <div className="space-y-4">
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Prüfungs-Readiness</h2>
+
+            {/* Main readiness + fach breakdown */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <Card>
+                <CardContent className="p-5">
+                  <div className="flex items-center gap-4 mb-4">
                     <div className="relative flex items-center justify-center">
-                      <ProgressRing value={readiness} size={56} stroke={5} />
-                      <span className="absolute text-sm font-bold text-primary-700 dark:text-primary-400">{readiness}%</span>
+                      <ProgressRing value={readiness} size={72} stroke={6} />
+                      <span className="absolute text-lg font-bold text-primary-700 dark:text-primary-400">{readiness}%</span>
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">MedAT-Bereitschaft</p>
-                      <p className="text-xs text-muted">{totalQuestionsAnswered} Fragen beantwortet</p>
+                      <p className="text-base font-bold text-gray-900 dark:text-gray-100">MedAT-Bereitschaft</p>
+                      <p className="text-xs text-muted">{totalQuestionsAnswered} Fragen, {totalCorrect} richtig</p>
+                      {dailyChallengeStreak > 0 && (
+                        <div className="flex items-center gap-1 text-xs text-orange-600 dark:text-orange-400 mt-1">
+                          <Flame className="w-3 h-3" />
+                          <span>{dailyChallengeStreak} Tage Streak</span>
+                        </div>
+                      )}
                     </div>
                   </div>
-                  {dailyChallengeStreak > 0 && (
-                    <div className="flex items-center gap-1.5 text-xs text-orange-600 dark:text-orange-400">
-                      <Flame className="w-3.5 h-3.5" />
-                      <span>{dailyChallengeStreak} Tage Daily Challenge Streak</span>
-                    </div>
-                  )}
+
+                  {/* Per-Fach bars */}
+                  <div className="space-y-2.5">
+                    {faecher.map((f) => {
+                      const fachReady = store.getFachReadiness(f.id);
+                      return (
+                        <div key={f.id}>
+                          <div className="flex items-center justify-between mb-1">
+                            <span className="text-xs font-medium text-gray-700 dark:text-gray-300">{f.label}</span>
+                            <span className="text-xs font-bold text-gray-600 dark:text-gray-400">{Math.round(fachReady)}%</span>
+                          </div>
+                          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                            <div className={`${f.color} h-2 rounded-full transition-all duration-500`} style={{ width: `${Math.min(100, fachReady)}%` }} />
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </CardContent>
               </Card>
 
-              {/* Weak Topics */}
-              {weakTopics.length > 0 && (
-                <Card className="border-l-4 border-l-orange-400">
-                  <CardContent className="p-4">
-                    <div className="flex items-center gap-2 mb-3">
-                      <AlertTriangle className="w-4 h-4 text-orange-500" />
-                      <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">Fokus-Themen</p>
-                    </div>
-                    <div className="space-y-2">
-                      {weakTopics.map((t) => (
-                        <div key={t.stichwortId} className="flex items-center justify-between">
-                          <div className="flex items-center gap-2 min-w-0">
-                            <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded ${fachColorMap[t.fach] || ""}`}>
-                              {t.fach.slice(0, 3).toUpperCase()}
-                            </span>
-                            <span className="text-xs text-gray-700 dark:text-gray-300 truncate">{t.thema}</span>
-                          </div>
-                          <span className="text-xs font-medium text-orange-600 dark:text-orange-400 shrink-0">{t.rate}%</span>
+              {/* Weak + Strong + Quick Actions */}
+              <div className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {weakTopics.length > 0 && (
+                    <Card className="border-l-4 border-l-orange-400">
+                      <CardContent className="p-4">
+                        <div className="flex items-center gap-2 mb-2">
+                          <AlertTriangle className="w-4 h-4 text-orange-500" />
+                          <p className="text-xs font-semibold text-gray-900 dark:text-gray-100">Fokus-Themen</p>
                         </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              )}
+                        <div className="space-y-1.5">
+                          {weakTopics.map((t) => (
+                            <div key={t.stichwortId} className="flex items-center justify-between">
+                              <div className="flex items-center gap-1.5 min-w-0">
+                                <span className={`text-[9px] font-medium px-1 py-0.5 rounded ${fachColorMap[t.fach] || ""}`}>
+                                  {t.fach.slice(0, 3).toUpperCase()}
+                                </span>
+                                <span className="text-[11px] text-gray-700 dark:text-gray-300 truncate">{t.thema}</span>
+                              </div>
+                              <span className="text-[11px] font-medium text-orange-600 dark:text-orange-400 shrink-0">{t.rate}%</span>
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )}
+                  {strongTopics.length > 0 && (
+                    <Card className="border-l-4 border-l-emerald-400">
+                      <CardContent className="p-4">
+                        <div className="flex items-center gap-2 mb-2">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                          <p className="text-xs font-semibold text-gray-900 dark:text-gray-100">Starke Themen</p>
+                        </div>
+                        <div className="space-y-1.5">
+                          {strongTopics.map((t) => (
+                            <div key={t.stichwortId} className="flex items-center justify-between">
+                              <div className="flex items-center gap-1.5 min-w-0">
+                                <span className={`text-[9px] font-medium px-1 py-0.5 rounded ${fachColorMap[t.fach] || ""}`}>
+                                  {t.fach.slice(0, 3).toUpperCase()}
+                                </span>
+                                <span className="text-[11px] text-gray-700 dark:text-gray-300 truncate">{t.thema}</span>
+                              </div>
+                              <span className="text-[11px] font-medium text-emerald-600 dark:text-emerald-400 shrink-0">{t.rate}%</span>
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )}
+                </div>
 
-              {/* Strong Topics */}
-              {strongTopics.length > 0 && (
-                <Card className="border-l-4 border-l-emerald-400">
-                  <CardContent className="p-4">
-                    <div className="flex items-center gap-2 mb-3">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                      <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">Starke Themen</p>
-                    </div>
-                    <div className="space-y-2">
-                      {strongTopics.map((t) => (
-                        <div key={t.stichwortId} className="flex items-center justify-between">
-                          <div className="flex items-center gap-2 min-w-0">
-                            <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded ${fachColorMap[t.fach] || ""}`}>
-                              {t.fach.slice(0, 3).toUpperCase()}
-                            </span>
-                            <span className="text-xs text-gray-700 dark:text-gray-300 truncate">{t.thema}</span>
-                          </div>
-                          <span className="text-xs font-medium text-emerald-600 dark:text-emerald-400 shrink-0">{t.rate}%</span>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              )}
+                <div className="flex gap-2 flex-wrap">
+                  <Link to="/schwachstellen">
+                    <button className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors cursor-pointer">
+                      <Target className="w-4 h-4" />
+                      Schwachstellen-Trainer
+                    </button>
+                  </Link>
+                  <Link to="/schwachstellen">
+                    <button className="inline-flex items-center gap-2 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors cursor-pointer">
+                      <Zap className="w-4 h-4" />
+                      Daily Challenge
+                    </button>
+                  </Link>
+                  <Link to="/duell">
+                    <button className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition-colors cursor-pointer">
+                      <Swords className="w-4 h-4" />
+                      Duell
+                    </button>
+                  </Link>
+                </div>
+              </div>
             </div>
-            <div className="mt-3 flex gap-2">
-              <Link to="/schwachstellen">
-                <button className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors cursor-pointer">
-                  <Target className="w-4 h-4" />
-                  Schwachstellen-Trainer
-                </button>
-              </Link>
-              <Link to="/schwachstellen">
-                <button className="inline-flex items-center gap-2 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors cursor-pointer">
-                  <Zap className="w-4 h-4" />
-                  Daily Challenge
-                </button>
-              </Link>
-            </div>
+
+            {/* Milestones */}
+            <Card>
+              <CardContent className="p-4">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <Trophy className="w-4 h-4 text-yellow-500" />
+                    <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">Meilensteine</p>
+                  </div>
+                  <span className="text-xs text-muted">{unlockedCount}/{milestones.length} erreicht</span>
+                </div>
+                <div className="grid grid-cols-4 sm:grid-cols-8 gap-2">
+                  {milestones.map((m) => (
+                    <div
+                      key={m.id}
+                      className={`flex flex-col items-center gap-1 p-2 rounded-lg transition-colors ${
+                        m.check
+                          ? "bg-yellow-50 dark:bg-yellow-900/20"
+                          : "bg-gray-50 dark:bg-gray-800/50 opacity-40"
+                      }`}
+                      title={m.label}
+                    >
+                      <m.icon className={`w-5 h-5 ${m.check ? "text-yellow-500" : "text-gray-400 dark:text-gray-600"}`} />
+                      <span className={`text-[9px] text-center leading-tight ${m.check ? "text-yellow-700 dark:text-yellow-400 font-medium" : "text-gray-400 dark:text-gray-600"}`}>
+                        {m.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         );
       })()}
