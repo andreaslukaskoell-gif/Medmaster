@@ -2,10 +2,11 @@ import { NavLink } from "react-router-dom";
 import {
   LayoutDashboard, BookOpen, Brain, FileText, Heart, Timer,
   BarChart3, CreditCard, GraduationCap, CalendarDays, Radar,
-  Users, StickyNote, Layers, Swords, ListChecks, Target, X,
+  Users, StickyNote, Layers, Swords, ListChecks, Target, X, LogOut,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useStore } from "@/store/useStore";
+import { useAuth } from "@/hooks/useAuth";
 import { alleKapitel } from "@/data/bmsKapitel";
 
 const navItems = [
@@ -33,6 +34,8 @@ interface SidebarProps {
 }
 
 export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
+  const { user, signOut } = useAuth();
+
   const dueCount = useStore((s) => {
     const today = new Date().toISOString().split("T")[0];
     return Object.values(s.spacedRepetition).filter((item) => item.nextDue <= today).length;
@@ -117,7 +120,16 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
           ))}
         </nav>
 
-        <div className="p-3 border-t border-primary-800 dark:border-gray-800">
+        <div className="p-3 border-t border-primary-800 dark:border-gray-800 space-y-2">
+          {user && (
+            <button
+              onClick={signOut}
+              className="flex items-center gap-3 w-full px-3 py-2 rounded-lg text-sm font-medium text-primary-200 hover:bg-primary-800 dark:hover:bg-gray-800 hover:text-white transition-colors cursor-pointer"
+            >
+              <LogOut className="w-4.5 h-4.5 shrink-0" />
+              Abmelden
+            </button>
+          )}
           <div className="text-[10px] text-primary-400 text-center">MedMaster v2.0</div>
         </div>
       </aside>

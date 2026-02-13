@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AppShell } from "./components/layout/AppShell";
+import { AuthGuard } from "./components/AuthGuard";
 import { useStore } from "./store/useStore";
 
 // Lazy-loaded pages — each becomes its own chunk
@@ -44,12 +45,21 @@ export default function App() {
     <BrowserRouter>
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
-          <Route path="/onboarding" element={<OnboardingGuard />} />
+          {/* Public routes */}
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-          <Route element={<AppShell />}>
+
+          {/* Protected routes */}
+          <Route
+            element={
+              <AuthGuard>
+                <AppShell />
+              </AuthGuard>
+            }
+          >
             <Route path="/" element={<Dashboard />} />
+            <Route path="/onboarding" element={<OnboardingGuard />} />
             <Route path="/bms" element={<BMS />} />
             <Route path="/kff" element={<KFF />} />
             <Route path="/tv" element={<TV />} />
