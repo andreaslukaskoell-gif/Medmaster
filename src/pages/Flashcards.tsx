@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArrowLeft, RotateCcw, ThumbsUp, ThumbsDown, Layers, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, RotateCcw, Layers, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -115,7 +115,7 @@ export default function FlashcardsPage() {
 function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flashcard[]; onBack: () => void }) {
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
-  const [results, setResults] = useState<Record<number, boolean>>({});
+  const [results, setResults] = useState<Record<number, "again" | "hard" | "good" | "easy">>({});
   const [finished, setFinished] = useState(false);
   const { addXP, checkStreak, updateSpacedRepetition } = useStore();
 
@@ -124,17 +124,6 @@ function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flas
 
   const card = cards[index];
   const total = cards.length;
-  const answered = Object.keys(results).length;
-
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === " " || e.key === "Enter") { e.preventDefault(); setFlipped((f) => !f); }
-      if (e.key === "ArrowRight" || e.key === "j") handleKnown();
-      if (e.key === "ArrowLeft" || e.key === "k") handleUnknown();
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [index, flipped]);
 
   const advance = () => {
     if (index < total - 1) {
@@ -145,34 +134,44 @@ function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flas
     }
   };
 
-  const handleKnown = () => {
+  const handleRate = (rating: "again" | "hard" | "good" | "easy") => {
     if (!flipped) { setFlipped(true); return; }
-    setResults((r) => ({ ...r, [index]: true }));
-    updateSpacedRepetition(card.id, true);
+    setResults((r) => ({ ...r, [index]: rating }));
+    updateSpacedRepetition(card.id, rating !== "again");
     advance();
   };
 
-  const handleUnknown = () => {
-    if (!flipped) { setFlipped(true); return; }
-    setResults((r) => ({ ...r, [index]: false }));
-    updateSpacedRepetition(card.id, false);
-    advance();
-  };
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === " " || e.key === "Enter") { e.preventDefault(); setFlipped((f) => !f); }
+      if (flipped) {
+        if (e.key === "1") handleRate("again");
+        if (e.key === "2") handleRate("hard");
+        if (e.key === "3") handleRate("good");
+        if (e.key === "4") handleRate("easy");
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [index, flipped]);
 
   const handleTouchStart = (e: React.TouchEvent) => setTouchStartX(e.touches[0].clientX);
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (touchStartX === null) return;
     const diff = e.changedTouches[0].clientX - touchStartX;
     if (Math.abs(diff) > 80) {
-      if (diff > 0) handleKnown();
-      else handleUnknown();
+      if (diff > 0) handleRate("good");
+      else handleRate("again");
     }
     setTouchStartX(null);
   };
 
   if (finished) {
-    const correct = Object.values(results).filter(Boolean).length;
+    const ratings = Object.values(results);
+    const correct = ratings.filter((r) => r !== "again").length;
     const pct = Math.round((correct / total) * 100);
+    const ratingCounts = { again: 0, hard: 0, good: 0, easy: 0 };
+    ratings.forEach((r) => ratingCounts[r]++);
     addXP(correct * 5);
     checkStreak();
 
@@ -185,6 +184,12 @@ function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flas
           <CardContent className="p-8 text-center space-y-4">
             <div className="text-5xl font-bold text-primary-700 dark:text-primary-400">{pct}%</div>
             <p className="text-lg text-muted">{correct} von {total} gewusst</p>
+            <div className="flex justify-center gap-4 text-sm">
+              {ratingCounts.again > 0 && <span className="text-red-600">Nochmal: {ratingCounts.again}</span>}
+              {ratingCounts.hard > 0 && <span className="text-orange-600">Schwer: {ratingCounts.hard}</span>}
+              {ratingCounts.good > 0 && <span className="text-blue-600">Gut: {ratingCounts.good}</span>}
+              {ratingCounts.easy > 0 && <span className="text-green-600">Leicht: {ratingCounts.easy}</span>}
+            </div>
             <p className="text-sm text-green-600 dark:text-green-400">+{correct * 5} XP</p>
             <div className="flex gap-3 justify-center pt-4">
               <Button variant="outline" onClick={onBack}>Zurück zu Stapeln</Button>
@@ -237,16 +242,54 @@ function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flas
         </div>
       </div>
 
-      <div className="flex gap-3 justify-center">
-        <Button variant="outline" size="lg" className="flex-1 max-w-[200px] border-red-300 text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20" onClick={handleUnknown}>
-          <ThumbsDown className="w-5 h-5 mr-2" />
-          Nicht gewusst
-        </Button>
-        <Button size="lg" className="flex-1 max-w-[200px] bg-green-600 hover:bg-green-700 text-white" onClick={handleKnown}>
-          <ThumbsUp className="w-5 h-5 mr-2" />
-          Gewusst
-        </Button>
-      </div>
+      {flipped ? (
+        <div className="grid grid-cols-4 gap-2">
+          <Button
+            variant="outline"
+            className="border-red-300 text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20"
+            onClick={() => handleRate("again")}
+          >
+            <span className="flex flex-col items-center gap-0.5">
+              <span className="text-sm font-medium">Nochmal</span>
+              <kbd className="text-[9px] text-muted font-mono">1</kbd>
+            </span>
+          </Button>
+          <Button
+            variant="outline"
+            className="border-orange-300 text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-900/20"
+            onClick={() => handleRate("hard")}
+          >
+            <span className="flex flex-col items-center gap-0.5">
+              <span className="text-sm font-medium">Schwer</span>
+              <kbd className="text-[9px] text-muted font-mono">2</kbd>
+            </span>
+          </Button>
+          <Button
+            variant="outline"
+            className="border-blue-300 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20"
+            onClick={() => handleRate("good")}
+          >
+            <span className="flex flex-col items-center gap-0.5">
+              <span className="text-sm font-medium">Gut</span>
+              <kbd className="text-[9px] text-muted font-mono">3</kbd>
+            </span>
+          </Button>
+          <Button
+            variant="outline"
+            className="border-green-300 text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20"
+            onClick={() => handleRate("easy")}
+          >
+            <span className="flex flex-col items-center gap-0.5">
+              <span className="text-sm font-medium">Leicht</span>
+              <kbd className="text-[9px] text-muted font-mono">4</kbd>
+            </span>
+          </Button>
+        </div>
+      ) : (
+        <div className="flex justify-center">
+          <p className="text-sm text-muted">Tippe auf die Karte oder drücke <kbd className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-[10px] font-mono">Space</kbd> zum Umdrehen</p>
+        </div>
+      )}
 
       <div className="flex justify-center gap-4">
         <button onClick={() => { if (index > 0) { setIndex((i) => i - 1); setFlipped(false); } }} disabled={index === 0} className="p-2 text-muted hover:text-gray-700 dark:hover:text-gray-300 disabled:opacity-30 cursor-pointer">
@@ -255,12 +298,6 @@ function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flas
         <button onClick={() => { if (index < total - 1) { setIndex((i) => i + 1); setFlipped(false); } }} disabled={index >= total - 1} className="p-2 text-muted hover:text-gray-700 dark:hover:text-gray-300 disabled:opacity-30 cursor-pointer">
           <ChevronRight className="w-5 h-5" />
         </button>
-      </div>
-
-      <div className="flex justify-center gap-3 text-[11px] text-muted">
-        <span className="flex items-center gap-1"><kbd className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-[10px] font-mono">Space</kbd> Umdrehen</span>
-        <span className="flex items-center gap-1"><kbd className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-[10px] font-mono">&rarr;</kbd> Gewusst</span>
-        <span className="flex items-center gap-1"><kbd className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-[10px] font-mono">&larr;</kbd> Nicht gewusst</span>
       </div>
     </div>
   );

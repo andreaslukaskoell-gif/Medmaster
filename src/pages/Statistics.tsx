@@ -17,6 +17,8 @@ import { Heatmap } from "@/components/ui/heatmap";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { useStore } from "@/store/useStore";
 import { generateMockActivityData } from "@/lib/utils";
+import { getQuestionSubject } from "@/lib/bmsLookup";
+import { Progress } from "@/components/ui/progress";
 
 const COLORS = ["#0f766e", "#14b8a6", "#2dd4bf", "#5eead4", "#99f6e4"];
 
@@ -207,6 +209,55 @@ export default function Statistics() {
           </Card>
         </div>
       )}
+
+      {/* BMS per-subject breakdown */}
+      {(() => {
+        const bmsResults = quizResults.filter((r) => r.type === "bms");
+        if (bmsResults.length === 0) return null;
+        const bySubject: Record<string, { correct: number; total: number }> = {};
+        bmsResults.forEach((r) => {
+          r.answers.forEach((a) => {
+            const subj = getQuestionSubject(a.questionId) || r.subject || "unbekannt";
+            if (!bySubject[subj]) bySubject[subj] = { correct: 0, total: 0 };
+            bySubject[subj].total += 1;
+            if (a.correct) bySubject[subj].correct += 1;
+          });
+        });
+        const subjectMeta: Record<string, { label: string; color: string }> = {
+          biologie: { label: "Biologie", color: "[&>div]:bg-emerald-500" },
+          chemie: { label: "Chemie", color: "[&>div]:bg-red-500" },
+          physik: { label: "Physik", color: "[&>div]:bg-blue-500" },
+          mathematik: { label: "Mathematik", color: "[&>div]:bg-violet-500" },
+        };
+        const entries = Object.entries(bySubject)
+          .filter(([key]) => key in subjectMeta)
+          .sort(([, a], [, b]) => (b.total > 0 ? b.correct / b.total : 0) - (a.total > 0 ? a.correct / a.total : 0));
+        if (entries.length === 0) return null;
+        return (
+          <Card>
+            <CardHeader>
+              <CardTitle>BMS nach Fach</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {entries.map(([subj, data]) => {
+                  const meta = subjectMeta[subj];
+                  const pct = Math.round((data.correct / data.total) * 100);
+                  return (
+                    <div key={subj}>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{meta?.label || subj}</span>
+                        <span className="text-xs text-muted">{data.correct}/{data.total} richtig ({pct}%)</span>
+                      </div>
+                      <Progress value={pct} className={meta?.color || ""} />
+                    </div>
+                  );
+                })}
+              </div>
+            </CardContent>
+          </Card>
+        );
+      })()}
 
       <Card>
         <CardHeader>

@@ -14,6 +14,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { useStore } from "@/store/useStore";
+import { getQuestionSubject } from "@/lib/bmsLookup";
 
 interface SubjectData {
   name: string;
@@ -29,7 +30,7 @@ export default function Analysis() {
     const data: Record<string, { correct: number; total: number }> = {};
     quizResults.forEach((r) => {
       r.answers.forEach((a) => {
-        const key = r.subject || r.type;
+        const key = (r.type === "bms" ? getQuestionSubject(a.questionId) : null) || r.subject || r.type;
         if (!data[key]) data[key] = { correct: 0, total: 0 };
         data[key].total += 1;
         if (a.correct) data[key].correct += 1;

@@ -1,3 +1,5 @@
+import { expandedDecks, expandedDeckLabels } from "./flashcards_expanded";
+
 export interface Flashcard {
   id: string;
   front: string;
@@ -8,7 +10,7 @@ export interface Flashcard {
 }
 
 // Auto-generated flashcards from chapter key facts
-export const flashcardDecks: Record<string, Flashcard[]> = {
+const baseDecks: Record<string, Flashcard[]> = {
   "bio-zellbiologie": [
     { id: "fc-bio-1", front: "Welche Organelle ist das Kraftwerk der Zelle?", back: "Mitochondrium — Produktion von ATP durch oxidative Phosphorylierung. Doppelmembran mit Cristae.", category: "bio", topic: "Zellbiologie", difficulty: "leicht" },
     { id: "fc-bio-2", front: "Was ist der Unterschied zwischen rauem und glattem ER?", back: "Raues ER: mit Ribosomen besetzt → Proteinsynthese.\nGlattes ER: ohne Ribosomen → Lipidsynthese, Calciumspeicher, Entgiftung.", category: "bio", topic: "Zellbiologie", difficulty: "leicht" },
@@ -83,6 +85,12 @@ export const flashcardDecks: Record<string, Flashcard[]> = {
   ],
 };
 
+// Merge base decks with expanded decks
+export const flashcardDecks: Record<string, Flashcard[]> = {
+  ...baseDecks,
+  ...expandedDecks,
+};
+
 export function getAllFlashcards(): Flashcard[] {
   return Object.values(flashcardDecks).flat();
 }
@@ -94,24 +102,25 @@ export function getFlashcardsByCategory(category: string): Flashcard[] {
 }
 
 export function getDeckNames(): { id: string; label: string; count: number; category: string }[] {
+  const labels: Record<string, string> = {
+    "bio-zellbiologie": "Biologie: Zellbiologie",
+    "bio-genetik": "Biologie: Genetik",
+    "bio-humanbiologie": "Biologie: Humanbiologie",
+    "chemie-atombau": "Chemie: Atombau & PSE",
+    "chemie-bindungen": "Chemie: Bindungen",
+    "chemie-säuren-basen": "Chemie: Säuren & Basen",
+    "physik-mechanik": "Physik: Mechanik",
+    "physik-elektrizität": "Physik: Elektrizität",
+    "physik-optik": "Physik: Optik",
+    "mathe-algebra": "Mathe: Algebra",
+    "mathe-geometrie": "Mathe: Geometrie",
+    "mathe-analysis": "Mathe: Analysis",
+    ...expandedDeckLabels,
+  };
   return Object.entries(flashcardDecks).map(([id, cards]) => {
     const parts = id.split("-");
     const category = parts[0];
     const topic = parts.slice(1).join("-");
-    const labels: Record<string, string> = {
-      "bio-zellbiologie": "Biologie: Zellbiologie",
-      "bio-genetik": "Biologie: Genetik",
-      "bio-humanbiologie": "Biologie: Humanbiologie",
-      "chemie-atombau": "Chemie: Atombau & PSE",
-      "chemie-bindungen": "Chemie: Bindungen",
-      "chemie-säuren-basen": "Chemie: Säuren & Basen",
-      "physik-mechanik": "Physik: Mechanik",
-      "physik-elektrizität": "Physik: Elektrizität",
-      "physik-optik": "Physik: Optik",
-      "mathe-algebra": "Mathe: Algebra",
-      "mathe-geometrie": "Mathe: Geometrie",
-      "mathe-analysis": "Mathe: Analysis",
-    };
     return { id, label: labels[id] || topic, count: cards.length, category };
   });
 }

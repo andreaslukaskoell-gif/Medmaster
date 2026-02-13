@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useStore } from "@/store/useStore";
+import { alleKapitel } from "@/data/bmsKapitel";
 
 const navItems = [
   { to: "/", icon: LayoutDashboard, label: "Dashboard" },
@@ -33,6 +34,16 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
   const dueCount = useStore((s) => {
     const today = new Date().toISOString().split("T")[0];
     return Object.values(s.spacedRepetition).filter((item) => item.nextDue <= today).length;
+  });
+
+  const bmsProgress = useStore((s) => {
+    const totalUK = alleKapitel.reduce((sum, k) => sum + k.unterkapitel.length, 0);
+    if (totalUK === 0) return 0;
+    const completedUK = alleKapitel.reduce(
+      (sum, k) => sum + k.unterkapitel.filter((u) => s.completedChapters.includes(u.id)).length,
+      0
+    );
+    return Math.round((completedUK / totalUK) * 100);
   });
 
   return (
@@ -82,9 +93,18 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                 <item.icon className="w-4.5 h-4.5 shrink-0" />
                 {item.label}
               </span>
-              {item.to === "/bms" && dueCount > 0 && (
-                <span className="bg-orange-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
-                  {dueCount}
+              {item.to === "/bms" && (
+                <span className="flex items-center gap-1.5">
+                  {bmsProgress > 0 && (
+                    <span className="text-primary-300 text-[10px] font-medium">
+                      {bmsProgress}%
+                    </span>
+                  )}
+                  {dueCount > 0 && (
+                    <span className="bg-orange-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                      {dueCount}
+                    </span>
+                  )}
                 </span>
               )}
             </NavLink>

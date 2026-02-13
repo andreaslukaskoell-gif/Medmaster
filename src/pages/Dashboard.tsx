@@ -10,12 +10,15 @@ import {
   Timer,
   Star,
   Flame,
+  Layers,
+  ArrowRight,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Heatmap } from "@/components/ui/heatmap";
 import { useStore } from "@/store/useStore";
 import { daysUntilMedAT, generateMockActivityData } from "@/lib/utils";
+import { getQuestionSubject } from "@/lib/bmsLookup";
 
 const modules = [
   {
@@ -164,6 +167,82 @@ export default function Dashboard() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Weiter lernen section */}
+      {(() => {
+        const dueCount = Object.values(useStore.getState().spacedRepetition).filter(
+          (item) => item.nextDue <= new Date().toISOString().split("T")[0]
+        ).length;
+
+        const bmsResults = quizResults.filter((r) => r.type === "bms");
+        let weakestSubject: { name: string; pct: number } | null = null;
+        if (bmsResults.length > 0) {
+          const bySubject: Record<string, { correct: number; total: number }> = {};
+          bmsResults.forEach((r) => {
+            r.answers.forEach((a) => {
+              const subj = getQuestionSubject(a.questionId) || r.subject || "";
+              if (!subj || subj === "gemischt") return;
+              if (!bySubject[subj]) bySubject[subj] = { correct: 0, total: 0 };
+              bySubject[subj].total += 1;
+              if (a.correct) bySubject[subj].correct += 1;
+            });
+          });
+          const entries = Object.entries(bySubject).filter(([, d]) => d.total >= 3);
+          if (entries.length > 0) {
+            const sorted = entries.sort(([, a], [, b]) => (a.correct / a.total) - (b.correct / b.total));
+            const [name, data] = sorted[0];
+            weakestSubject = { name: name.charAt(0).toUpperCase() + name.slice(1), pct: Math.round((data.correct / data.total) * 100) };
+          }
+        }
+
+        if (!weakestSubject && dueCount === 0) return null;
+
+        return (
+          <div>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">Weiter lernen</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {weakestSubject && (
+                <Link to="/bms">
+                  <Card className="hover:shadow-md transition-shadow cursor-pointer border-l-4 border-l-orange-400">
+                    <CardContent className="p-4 flex items-center gap-3">
+                      <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center shrink-0">
+                        <Target className="w-5 h-5 text-orange-600 dark:text-orange-400" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                          {weakestSubject.name} verbessern
+                        </p>
+                        <p className="text-xs text-muted">
+                          Dein schwächstes Fach ({weakestSubject.pct}%) — Quiz starten
+                        </p>
+                      </div>
+                      <ArrowRight className="w-4 h-4 text-muted shrink-0" />
+                    </CardContent>
+                  </Card>
+                </Link>
+              )}
+              {dueCount > 0 && (
+                <Link to="/karteikarten">
+                  <Card className="hover:shadow-md transition-shadow cursor-pointer border-l-4 border-l-primary-400">
+                    <CardContent className="p-4 flex items-center gap-3">
+                      <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center shrink-0">
+                        <Layers className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                          {dueCount} Karteikarte{dueCount !== 1 ? "n" : ""} fällig
+                        </p>
+                        <p className="text-xs text-muted">Wiederholung starten</p>
+                      </div>
+                      <ArrowRight className="w-4 h-4 text-muted shrink-0" />
+                    </CardContent>
+                  </Card>
+                </Link>
+              )}
+            </div>
+          </div>
+        );
+      })()}
 
       <div>
         <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Lernmodule</h2>

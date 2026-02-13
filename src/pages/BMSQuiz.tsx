@@ -15,13 +15,50 @@ function getQuestionsBySubject(subject: string) {
   return getLegacyQuestions(subject);
 }
 
+const subjectColors: Record<string, { bg: string; text: string; label: string }> = {
+  biologie: { bg: "bg-emerald-100 dark:bg-emerald-900/30", text: "text-emerald-700 dark:text-emerald-400", label: "Biologie" },
+  chemie: { bg: "bg-red-100 dark:bg-red-900/30", text: "text-red-700 dark:text-red-400", label: "Chemie" },
+  physik: { bg: "bg-blue-100 dark:bg-blue-900/30", text: "text-blue-700 dark:text-blue-400", label: "Physik" },
+  mathematik: { bg: "bg-violet-100 dark:bg-violet-900/30", text: "text-violet-700 dark:text-violet-400", label: "Mathematik" },
+};
+
+function shuffleArray<T>(arr: T[]): T[] {
+  const shuffled = [...arr];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+function getMixedQuestions(count: number) {
+  const subjects = ["biologie", "chemie", "physik", "mathematik"];
+  const perSubject = Math.floor(count / subjects.length);
+  const remainder = count % subjects.length;
+  const selected: typeof allBmsQuestions = [];
+
+  subjects.forEach((subj, idx) => {
+    const subjectQs = shuffleArray(allBmsQuestions.filter((q) => q.subject === subj));
+    const take = perSubject + (idx < remainder ? 1 : 0);
+    selected.push(...subjectQs.slice(0, take));
+  });
+
+  return shuffleArray(selected);
+}
+
 interface Props {
   subject: string;
   onBack: () => void;
+  questionCount?: number;
 }
 
-export default function BMSQuiz({ subject, onBack }: Props) {
-  const questions = useMemo(() => getQuestionsBySubject(subject), [subject]);
+export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
+  const questions = useMemo(() => {
+    if (subject === "gemischt" && questionCount) {
+      return getMixedQuestions(questionCount);
+    }
+    return getQuestionsBySubject(subject);
+  }, [subject, questionCount]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
@@ -122,6 +159,40 @@ export default function BMSQuiz({ subject, onBack }: Props) {
             {pct >= 90 && <p className="text-sm text-yellow-600 font-bold mt-1">Hervorragend!</p>}
           </CardContent>
         </Card>
+
+        {subject === "gemischt" && (() => {
+          const bySubject: Record<string, { correct: number; total: number }> = {};
+          questions.forEach((q) => {
+            const s = q.subject;
+            if (!bySubject[s]) bySubject[s] = { correct: 0, total: 0 };
+            bySubject[s].total += 1;
+            if (answers[q.id] === q.correctOptionId) bySubject[s].correct += 1;
+          });
+          return (
+            <Card>
+              <CardContent className="p-5">
+                <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-3">Ergebnis nach Fach</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {Object.entries(bySubject).map(([subj, data]) => {
+                    const c = subjectColors[subj];
+                    const subjPct = Math.round((data.correct / data.total) * 100);
+                    return (
+                      <div key={subj} className={`${c?.bg || ""} rounded-lg p-3`}>
+                        <div className="flex items-center justify-between mb-1">
+                          <span className={`text-sm font-medium ${c?.text || ""}`}>{c?.label || subj}</span>
+                          <Badge variant={subjPct >= 70 ? "success" : subjPct >= 50 ? "warning" : "danger"}>
+                            {subjPct}%
+                          </Badge>
+                        </div>
+                        <p className="text-xs text-muted">{data.correct}/{data.total} richtig</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </CardContent>
+            </Card>
+          );
+        })()}
 
         <div className="space-y-4">
           {questions.map((q, i) => {
