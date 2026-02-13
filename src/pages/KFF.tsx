@@ -452,6 +452,18 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
     setIndex(0);
   };
 
+  useKeyboardShortcuts({
+    disabled: submitted,
+    maxOptions: q?.options.length ?? 5,
+    onSelectOption: (idx) => { if (q && idx < q.options.length) setAnswers((p) => ({ ...p, [q.id]: q.options[idx] })); },
+    onConfirm: () => {
+      if (index < questions.length - 1) setIndex((i) => i + 1);
+      else if (allAnswered) handleSubmit();
+    },
+    onNext: () => { if (index < questions.length - 1) setIndex((i) => i + 1); },
+    onPrev: () => { if (index > 0) setIndex((i) => i - 1); },
+  });
+
   if (submitted) {
     const score = questions.filter((q) => answers[q.id] === q.correctAnswer).length;
     return (
@@ -510,6 +522,7 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
           : <Button onClick={handleSubmit} disabled={!allAnswered}><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
         }
       </div>
+      <FloatingQuestionCounter current={index + 1} total={questions.length} />
     </div>
   );
 }

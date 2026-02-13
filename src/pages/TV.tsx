@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
+import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { tvStrategyGuide, tvTexts } from "@/data/tvData";
 import { tvTextSets } from "@/data/tvTextsExpanded";
 import { tvTextSets2 } from "@/data/tvTextsExpanded2";
@@ -75,6 +76,13 @@ export default function TV() {
     checkStreak();
     setView("set-results");
   };
+
+  // Keyboard navigation for set-quiz (arrow keys for text navigation)
+  useKeyboardShortcuts({
+    disabled: view !== "set-quiz",
+    onNext: () => { if (view === "set-quiz" && textIndex < currentSet.texts.length - 1) setTextIndex((i) => i + 1); },
+    onPrev: () => { if (view === "set-quiz" && textIndex > 0) setTextIndex((i) => i - 1); },
+  });
 
   // ===== STRATEGY =====
   if (view === "strategy") {

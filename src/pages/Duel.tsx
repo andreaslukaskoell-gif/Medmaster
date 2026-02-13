@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
+import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { useStore } from "@/store/useStore";
 import type { Question } from "@/data/bms/index";
 import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
@@ -193,6 +195,17 @@ export default function Duel() {
       return { ...prev, playerAnswers: newAnswers, playerTime: newTimes };
     });
   };
+
+  // Keyboard shortcuts (1-5 to answer)
+  const playingQ = duel?.phase === "playing" ? duel.questions[duel.currentIndex] : null;
+  const alreadyAnswered = playingQ ? !!duel?.playerAnswers[playingQ.id] : true;
+  useKeyboardShortcuts({
+    disabled: !playingQ || alreadyAnswered,
+    maxOptions: playingQ?.options.length ?? 5,
+    onSelectOption: (idx) => {
+      if (playingQ && idx < playingQ.options.length) handleAnswer(playingQ.options[idx].id);
+    },
+  });
 
   // ── Lobby ──────────────────────────────────────────────
   if (!duel || duel.phase === "lobby") {
@@ -479,6 +492,7 @@ export default function Duel() {
           </div>
         </CardContent>
       </Card>
+      <FloatingQuestionCounter current={duel.currentIndex + 1} total={duel.questions.length} />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
 import {
   Target, Flame, ArrowLeft, ArrowRight, CheckCircle2, XCircle,
@@ -10,6 +10,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
+import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { useStore } from "@/store/useStore";
 import { allBmsQuestions } from "@/data/bms/index";
@@ -171,6 +173,22 @@ export default function SchwachstellenTrainer() {
     setMode("overview");
   }
 
+  // Keyboard shortcuts for quiz
+  const quizActive = (mode === "focused" || mode === "daily") && quizQuestions.length > 0;
+  const currentQ = quizActive ? quizQuestions[currentIndex] : null;
+  useKeyboardShortcuts({
+    disabled: !quizActive || showResult,
+    maxOptions: currentQ?.options.length ?? 5,
+    onSelectOption: (idx) => {
+      if (currentQ && idx < currentQ.options.length) handleSelect(currentQ.options[idx].id);
+    },
+    onConfirm: () => {
+      if (showResult) handleNext();
+      else if (answers[quizQuestions[currentIndex]?.id]) handleCheck();
+    },
+    onNext: () => { if (showResult) handleNext(); },
+  });
+
   // ============================================================
   // Quiz View
   // ============================================================
@@ -313,6 +331,7 @@ export default function SchwachstellenTrainer() {
             onClose={() => setAiTutorQ(null)}
           />
         )}
+        <FloatingQuestionCounter current={currentIndex + 1} total={quizQuestions.length} />
       </div>
     );
   }
