@@ -78,7 +78,7 @@ export default function PeriodicTable() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Periodensystem der Elemente</h4>
       <p className="text-xs text-muted">Klicke auf ein Element für Details.</p>
       <svg viewBox="0 0 460 180" className="w-full max-w-2xl mx-auto">
-        <text x="230" y="16" textAnchor="middle" fontSize="11" fill="#0f766e" fontWeight="bold">Periodensystem (1-36)</text>
+        <text x="230" y="16" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Periodensystem (1-36)</text>
 
         {elements.map((el) => {
           const x = OFFSET_X + (el.col - 1) * CELL_W;
@@ -107,7 +107,7 @@ export default function PeriodicTable() {
               <text x={x + (CELL_W - 2) / 2} y={y + 5} textAnchor="middle" fontSize="4" fill={isActive ? "#fff" : gc.text}>
                 {el.number}
               </text>
-              <text x={x + (CELL_W - 2) / 2} y={y + 16} textAnchor="middle" fontSize="8" fontWeight="bold" fill={isActive ? "#fff" : gc.text}>
+              <text x={x + (CELL_W - 2) / 2} y={y + 16} textAnchor="middle" fontSize="13" fontWeight="bold" fill={isActive ? "#fff" : gc.text}>
                 {el.symbol}
               </text>
               <text x={x + (CELL_W - 2) / 2} y={y + 23} textAnchor="middle" fontSize="3.5" fill={isActive ? "#fff" : gc.text} opacity="0.8">

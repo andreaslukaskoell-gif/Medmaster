@@ -108,7 +108,7 @@ export default function DNAHelix() {
                   );
                 })}
                 {/* Base label on rung */}
-                <text x={(leftX + rightX) / 2} y={y + 4} textAnchor="middle" fontSize="8" fill={baseColor} fontWeight="bold" stroke="white" strokeWidth="3" paintOrder="stroke">{baseLabel}</text>
+                <text x={(leftX + rightX) / 2} y={y + 4} textAnchor="middle" fontSize="13" fill={baseColor} fontWeight="bold" stroke="white" strokeWidth="3" paintOrder="stroke">{baseLabel}</text>
               </g>
             </g>
           );

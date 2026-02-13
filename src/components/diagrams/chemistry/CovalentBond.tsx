@@ -22,10 +22,10 @@ export default function CovalentBond() {
           </marker>
         </defs>
 
-        <text x="210" y="22" textAnchor="middle" fontSize="12" fill="#0f766e" fontWeight="bold">H\u2082O — Kovalente Bindung</text>
+        <text x="210" y="22" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">H\u2082O — Kovalente Bindung</text>
 
         {/* Lewis Structure section */}
-        <text x="130" y="50" textAnchor="middle" fontSize="10" fill="#0f766e" fontWeight="bold">Lewis-Struktur</text>
+        <text x="130" y="50" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Lewis-Struktur</text>
 
         {/* O atom center */}
         <circle cx="130" cy="110" r="28" fill="url(#oGrad)" stroke="#dc2626" strokeWidth="2" />
@@ -57,10 +57,10 @@ export default function CovalentBond() {
 
         {/* Bond angle */}
         <path d="M92,138 Q130,155 168,138" fill="none" stroke="#0d9488" strokeWidth="1.5" strokeDasharray="3 2" />
-        <text x="130" y="162" textAnchor="middle" fontSize="10" fill="#0d9488" fontWeight="bold">104,5\u00B0</text>
+        <text x="130" y="162" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">104,5\u00B0</text>
 
         {/* 3D model section */}
-        <text x="330" y="50" textAnchor="middle" fontSize="10" fill="#0f766e" fontWeight="bold">Raumstruktur</text>
+        <text x="330" y="50" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Raumstruktur</text>
 
         {/* 3D-ish water molecule */}
         <circle cx="330" cy="110" r="32" fill="url(#oGrad)" stroke="#dc2626" strokeWidth="2" opacity="0.9" />
@@ -77,34 +77,34 @@ export default function CovalentBond() {
         <line x1="355" y1="132" x2="379" y2="153" stroke="#374151" strokeWidth="3" />
 
         {/* Partial charges */}
-        <text x="330" y="82" textAnchor="middle" fontSize="12" fill="#dc2626" fontWeight="bold">\u03B4\u2013</text>
-        <text x="250" y="172" textAnchor="middle" fontSize="11" fill="#2563eb" fontWeight="bold">\u03B4+</text>
-        <text x="410" y="172" textAnchor="middle" fontSize="11" fill="#2563eb" fontWeight="bold">\u03B4+</text>
+        <text x="330" y="82" textAnchor="middle" fontSize="13" fill="#dc2626" fontWeight="bold">\u03B4\u2013</text>
+        <text x="250" y="172" textAnchor="middle" fontSize="13" fill="#2563eb" fontWeight="bold">\u03B4+</text>
+        <text x="410" y="172" textAnchor="middle" fontSize="13" fill="#2563eb" fontWeight="bold">\u03B4+</text>
 
         {/* Angle arc */}
         <path d="M296,140 Q330,160 364,140" fill="none" stroke="#0d9488" strokeWidth="1.5" strokeDasharray="3 2" />
-        <text x="330" y="165" textAnchor="middle" fontSize="9" fill="#0d9488" fontWeight="bold">104,5\u00B0</text>
+        <text x="330" y="165" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">104,5\u00B0</text>
 
         {/* Dipole arrow */}
         {showDipole && (
           <g>
             <line x1="330" y1="200" x2="330" y2="240" stroke="#0d9488" strokeWidth="2.5" markerEnd="url(#dipoleArrow)" />
-            <text x="330" y="204" textAnchor="middle" fontSize="8" fill="#0d9488">+</text>
+            <text x="330" y="204" textAnchor="middle" fontSize="13" fill="#0d9488">+</text>
             <line x1="325" y1="198" x2="335" y2="198" stroke="#0d9488" strokeWidth="1.5" />
-            <text x="355" y="225" fontSize="9" fill="#0d9488" fontWeight="bold">Dipolmoment</text>
+            <text x="355" y="225" fontSize="13" fill="#0d9488" fontWeight="bold">Dipolmoment</text>
             <text x="355" y="236" fontSize="7" fill="#6b7280">\u03BC = 1,85 D</text>
           </g>
         )}
 
         {/* Explanation section */}
         <rect x="20" y="210" rx="6" width="220" height="120" fill="#f0fdfa" stroke="#99f6e4" strokeWidth="1" />
-        <text x="130" y="228" textAnchor="middle" fontSize="9" fill="#0f766e" fontWeight="bold">Zusammenfassung</text>
-        <text x="30" y="244" fontSize="8" fill="#374151">Bindungstyp: Kovalent (polar)</text>
-        <text x="30" y="258" fontSize="8" fill="#374151">Bindungswinkel: 104,5\u00B0</text>
-        <text x="30" y="272" fontSize="8" fill="#374151">Geometrie: Gewinkelt</text>
-        <text x="30" y="286" fontSize="8" fill="#374151">Freie e\u207B-Paare am O: 2</text>
-        <text x="30" y="300" fontSize="8" fill="#374151">Bindende e\u207B-Paare: 2</text>
-        <text x="30" y="314" fontSize="8" fill="#374151">\u0394EN (O\u2013H): 1,4 → Polar</text>
+        <text x="130" y="228" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Zusammenfassung</text>
+        <text x="30" y="244" fontSize="13" fill="#374151">Bindungstyp: Kovalent (polar)</text>
+        <text x="30" y="258" fontSize="13" fill="#374151">Bindungswinkel: 104,5\u00B0</text>
+        <text x="30" y="272" fontSize="13" fill="#374151">Geometrie: Gewinkelt</text>
+        <text x="30" y="286" fontSize="13" fill="#374151">Freie e\u207B-Paare am O: 2</text>
+        <text x="30" y="300" fontSize="13" fill="#374151">Bindende e\u207B-Paare: 2</text>
+        <text x="30" y="314" fontSize="13" fill="#374151">\u0394EN (O\u2013H): 1,4 → Polar</text>
       </svg>
 
       <div className="flex gap-2">

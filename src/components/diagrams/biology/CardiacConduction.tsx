@@ -32,10 +32,10 @@ export default function CardiacConduction() {
         <path d="M110,190 Q175,210 240,195 Q305,210 370,190" fill="none" stroke="#0d9488" strokeWidth="1.5" opacity="0.4" />
 
         {/* Chamber labels (subtle) */}
-        <text x="175" y="140" textAnchor="middle" fontSize="8" fill="#0d9488" opacity="0.5">RA</text>
-        <text x="305" y="140" textAnchor="middle" fontSize="8" fill="#0d9488" opacity="0.5">LA</text>
-        <text x="180" y="280" textAnchor="middle" fontSize="8" fill="#0d9488" opacity="0.5">RV</text>
-        <text x="300" y="280" textAnchor="middle" fontSize="8" fill="#0d9488" opacity="0.5">LV</text>
+        <text x="175" y="140" textAnchor="middle" fontSize="13" fill="#0d9488" opacity="0.5">RA</text>
+        <text x="305" y="140" textAnchor="middle" fontSize="13" fill="#0d9488" opacity="0.5">LA</text>
+        <text x="180" y="280" textAnchor="middle" fontSize="13" fill="#0d9488" opacity="0.5">RV</text>
+        <text x="300" y="280" textAnchor="middle" fontSize="13" fill="#0d9488" opacity="0.5">LV</text>
 
         {/* ===== CONDUCTION PATHWAYS (yellow/gold) ===== */}
 
@@ -96,34 +96,34 @@ export default function CardiacConduction() {
         {/* Labels with lines */}
         {/* SA label */}
         <line x1="152" y1="92" x2="80" y2="75" stroke="#d97706" strokeWidth="0.8" />
-        <text x="75" y="72" textAnchor="end" fontSize="8" fill="#d97706" fontWeight="bold">Sinusknoten</text>
+        <text x="75" y="72" textAnchor="end" fontSize="13" fill="#d97706" fontWeight="bold">Sinusknoten</text>
         <text x="75" y="83" textAnchor="end" fontSize="7" fill="#92400e">~60-80/min</text>
 
         {/* AV label */}
         <line x1="248" y1="188" x2="395" y2="170" stroke="#d97706" strokeWidth="0.8" />
-        <text x="400" y="167" fontSize="8" fill="#d97706" fontWeight="bold">AV-Knoten</text>
+        <text x="400" y="167" fontSize="13" fill="#d97706" fontWeight="bold">AV-Knoten</text>
         <text x="400" y="178" fontSize="7" fill="#92400e">~40-60/min</text>
 
         {/* His label */}
         <line x1="256" y1="225" x2="395" y2="215" stroke="#d97706" strokeWidth="0.8" />
-        <text x="400" y="212" fontSize="8" fill="#d97706" fontWeight="bold">His-Bündel</text>
+        <text x="400" y="212" fontSize="13" fill="#d97706" fontWeight="bold">His-Bündel</text>
 
         {/* Tawara label */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[3])} onMouseLeave={() => setActive(null)}>
           <line x1="180" y1="300" x2="75" y2="290" stroke="#d97706" strokeWidth="0.8" />
-          <text x="70" y="287" textAnchor="end" fontSize="8" fill="#d97706" fontWeight="bold">Tawara-Schenkel</text>
+          <text x="70" y="287" textAnchor="end" fontSize="13" fill="#d97706" fontWeight="bold">Tawara-Schenkel</text>
           <text x="70" y="298" textAnchor="end" fontSize="7" fill="#92400e">(re. + li. Schenkel)</text>
         </g>
 
         {/* Purkinje label */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[4])} onMouseLeave={() => setActive(null)}>
           <line x1="325" y1="360" x2="400" y2="360" stroke="#d97706" strokeWidth="0.8" />
-          <text x="405" y="357" fontSize="8" fill="#d97706" fontWeight="bold">Purkinje-Fasern</text>
+          <text x="405" y="357" fontSize="13" fill="#d97706" fontWeight="bold">Purkinje-Fasern</text>
           <text x="405" y="368" fontSize="7" fill="#92400e">~20-40/min</text>
         </g>
 
         {/* Sequence arrows */}
-        <text x="240" y="415" textAnchor="middle" fontSize="8" fill="#0d9488" fontWeight="bold">SA → AV → His → Tawara → Purkinje</text>
+        <text x="240" y="415" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">SA → AV → His → Tawara → Purkinje</text>
       </svg>
 
       {active && (

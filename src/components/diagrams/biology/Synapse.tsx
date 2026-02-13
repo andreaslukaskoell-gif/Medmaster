@@ -25,7 +25,7 @@ export default function Synapse() {
         {/* ===== PRESYNAPTIC TERMINAL ===== */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[0])} onMouseLeave={() => setActive(null)}>
           <path d="M60,30 Q60,10 230,10 Q400,10 400,30 L400,200 Q400,220 230,220 Q60,220 60,200 Z" fill="#f0fdfa" stroke="#0d9488" strokeWidth="2.5" />
-          <text x="230" y="30" textAnchor="middle" fontSize="9" fill="#0d9488" fontWeight="bold">Präsynaptische Endigung</text>
+          <text x="230" y="30" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Präsynaptische Endigung</text>
         </g>
 
         {/* Axon coming in */}
@@ -86,7 +86,7 @@ export default function Synapse() {
         {/* ===== SYNAPTIC CLEFT ===== */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[4])} onMouseLeave={() => setActive(null)}>
           <rect x="60" y="225" width="340" height="55" fill="#f0fdfa" opacity="0.3" />
-          <text x="230" y="256" textAnchor="middle" fontSize="9" fill="#115e59" fontWeight="bold">Synaptischer Spalt (~20 nm)</text>
+          <text x="230" y="256" textAnchor="middle" fontSize="13" fill="#115e59" fontWeight="bold">Synaptischer Spalt (~20 nm)</text>
         </g>
 
         {/* Released neurotransmitters */}
@@ -108,7 +108,7 @@ export default function Synapse() {
         {/* ===== POSTSYNAPTIC MEMBRANE ===== */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[6])} onMouseLeave={() => setActive(null)}>
           <rect x="60" y="280" width="340" height="30" rx="4" fill="#ccfbf1" stroke="#0f766e" strokeWidth="2" />
-          <text x="230" y="298" textAnchor="middle" fontSize="8" fill="#0f766e" fontWeight="bold">Postsynaptische Membran</text>
+          <text x="230" y="298" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Postsynaptische Membran</text>
         </g>
 
         {/* Receptors */}
@@ -127,7 +127,7 @@ export default function Synapse() {
 
         {/* Postsynaptic cell */}
         <rect x="60" y="310" width="340" height="40" rx="8" fill="#f0fdfa" opacity="0.5" stroke="#0f766e" strokeWidth="1" strokeDasharray="4 3" />
-        <text x="230" y="334" textAnchor="middle" fontSize="8" fill="#0f766e">Postsynaptische Zelle (Dendrit)</text>
+        <text x="230" y="334" textAnchor="middle" fontSize="13" fill="#0f766e">Postsynaptische Zelle (Dendrit)</text>
 
         {/* EPSP/IPSP label */}
         <text x="230" y="365" textAnchor="middle" fontSize="7" fill="#115e59">→ EPSP (erregend) oder IPSP (hemmend)</text>

@@ -43,7 +43,7 @@ export default function LensImaging() {
             </marker>
           </defs>
 
-          <text x="240" y="22" textAnchor="middle" fontSize="12" fill="#0f766e" fontWeight="bold">Sammellinse (Konvexlinse)</text>
+          <text x="240" y="22" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Sammellinse (Konvexlinse)</text>
 
           {/* Optical axis */}
           <line x1="20" y1="150" x2="460" y2="150" stroke="#d1d5db" strokeWidth="1" strokeDasharray="4 3" />
@@ -58,10 +58,10 @@ export default function LensImaging() {
 
           {/* Focal points */}
           <circle cx="155" cy="150" r="4" fill="#f59e0b" stroke="#d97706" strokeWidth="1" />
-          <text x="155" y="168" textAnchor="middle" fontSize="8" fill="#f59e0b" fontWeight="bold">F</text>
+          <text x="155" y="168" textAnchor="middle" fontSize="13" fill="#f59e0b" fontWeight="bold">F</text>
 
           <circle cx="305" cy="150" r="4" fill="#f59e0b" stroke="#d97706" strokeWidth="1" />
-          <text x="305" y="168" textAnchor="middle" fontSize="8" fill="#f59e0b" fontWeight="bold">F&apos;</text>
+          <text x="305" y="168" textAnchor="middle" fontSize="13" fill="#f59e0b" fontWeight="bold">F&apos;</text>
 
           {/* 2F points */}
           <circle cx="80" cy="150" r="3" fill="#d97706" opacity="0.5" />
@@ -72,7 +72,7 @@ export default function LensImaging() {
           {/* Object (Gegenstand) */}
           <line x1="100" y1="150" x2="100" y2="85" stroke="#0f766e" strokeWidth="2.5" />
           <polygon points="100,85 94,95 106,95" fill="#0f766e" />
-          <text x="100" y="78" textAnchor="middle" fontSize="9" fill="#0f766e" fontWeight="bold">G</text>
+          <text x="100" y="78" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">G</text>
 
           {/* Ray 1: Parallel ray -> through F' */}
           <line x1="100" y1="85" x2="230" y2="85" stroke="#ef4444" strokeWidth="1.5" markerEnd="url(#arrowRayC)" />
@@ -88,7 +88,7 @@ export default function LensImaging() {
           {/* Image (Bild) - inverted */}
           <line x1="365" y1="150" x2="365" y2="190" stroke="#ef4444" strokeWidth="2.5" />
           <polygon points="365,190 359,180 371,180" fill="#ef4444" />
-          <text x="365" y="202" textAnchor="middle" fontSize="9" fill="#ef4444" fontWeight="bold">B</text>
+          <text x="365" y="202" textAnchor="middle" fontSize="13" fill="#ef4444" fontWeight="bold">B</text>
           <text x="365" y="214" textAnchor="middle" fontSize="7" fill="#6b7280">(reell, umgekehrt)</text>
 
           {/* Legend */}
@@ -100,7 +100,7 @@ export default function LensImaging() {
           <text x="275" y="263" fontSize="7" fill="#22c55e">Mittelpunktstrahl</text>
 
           {/* Formula */}
-          <text x="240" y="285" textAnchor="middle" fontSize="8" fill="#0f766e">Linsengleichung: 1/f = 1/g + 1/b</text>
+          <text x="240" y="285" textAnchor="middle" fontSize="13" fill="#0f766e">Linsengleichung: 1/f = 1/g + 1/b</text>
         </svg>
       ) : (
         <svg viewBox="0 0 480 300" className="w-full max-w-lg mx-auto">
@@ -116,7 +116,7 @@ export default function LensImaging() {
             </marker>
           </defs>
 
-          <text x="240" y="22" textAnchor="middle" fontSize="12" fill="#0f766e" fontWeight="bold">Zerstreuungslinse (Konkavlinse)</text>
+          <text x="240" y="22" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Zerstreuungslinse (Konkavlinse)</text>
 
           {/* Optical axis */}
           <line x1="20" y1="150" x2="460" y2="150" stroke="#d1d5db" strokeWidth="1" strokeDasharray="4 3" />
@@ -131,15 +131,15 @@ export default function LensImaging() {
 
           {/* Focal points (virtual on same side for diverging) */}
           <circle cx="170" cy="150" r="4" fill="#f59e0b" stroke="#d97706" strokeWidth="1" />
-          <text x="170" y="168" textAnchor="middle" fontSize="8" fill="#f59e0b" fontWeight="bold">F</text>
+          <text x="170" y="168" textAnchor="middle" fontSize="13" fill="#f59e0b" fontWeight="bold">F</text>
 
           <circle cx="310" cy="150" r="4" fill="#f59e0b" stroke="#d97706" strokeWidth="1" />
-          <text x="310" y="168" textAnchor="middle" fontSize="8" fill="#f59e0b" fontWeight="bold">F&apos;</text>
+          <text x="310" y="168" textAnchor="middle" fontSize="13" fill="#f59e0b" fontWeight="bold">F&apos;</text>
 
           {/* Object */}
           <line x1="100" y1="150" x2="100" y2="85" stroke="#0f766e" strokeWidth="2.5" />
           <polygon points="100,85 94,95 106,95" fill="#0f766e" />
-          <text x="100" y="78" textAnchor="middle" fontSize="9" fill="#0f766e" fontWeight="bold">G</text>
+          <text x="100" y="78" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">G</text>
 
           {/* Ray 1: Parallel ray -> diverges, appears from F on same side */}
           <line x1="100" y1="85" x2="240" y2="85" stroke="#ef4444" strokeWidth="1.5" markerEnd="url(#arrowRayD)" />
@@ -161,7 +161,7 @@ export default function LensImaging() {
           {/* Virtual image (aufrecht, verkleinert) */}
           <line x1="170" y1="150" x2="170" y2="115" stroke="#ef4444" strokeWidth="2" strokeDasharray="4 3" />
           <polygon points="170,115 164,125 176,125" fill="#ef4444" opacity="0.7" />
-          <text x="170" y="108" textAnchor="middle" fontSize="9" fill="#ef4444" fontWeight="bold">B</text>
+          <text x="170" y="108" textAnchor="middle" fontSize="13" fill="#ef4444" fontWeight="bold">B</text>
           <text x="170" y="185" textAnchor="middle" fontSize="7" fill="#6b7280">(virtuell, aufrecht,</text>
           <text x="170" y="196" textAnchor="middle" fontSize="7" fill="#6b7280">verkleinert)</text>
 
@@ -176,7 +176,7 @@ export default function LensImaging() {
           <text x="375" y="263" fontSize="7" fill="#6b7280">Virtuelle Verlängerung</text>
 
           {/* Formula */}
-          <text x="240" y="285" textAnchor="middle" fontSize="8" fill="#0f766e">f &lt; 0 bei Zerstreuungslinse | 1/f = 1/g + 1/b</text>
+          <text x="240" y="285" textAnchor="middle" fontSize="13" fill="#0f766e">f &lt; 0 bei Zerstreuungslinse | 1/f = 1/g + 1/b</text>
         </svg>
       )}
 

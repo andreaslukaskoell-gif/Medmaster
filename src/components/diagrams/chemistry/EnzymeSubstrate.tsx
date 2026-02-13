@@ -51,7 +51,7 @@ export default function EnzymeSubstrate() {
         </defs>
 
         {/* Step indicator */}
-        <text x="230" y="22" textAnchor="middle" fontSize="11" fill="#0f766e" fontWeight="bold">
+        <text x="230" y="22" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">
           Schritt {step}: {stepLabels[step]}
         </text>
 
@@ -68,7 +68,7 @@ export default function EnzymeSubstrate() {
 
             {/* Active site label */}
             <path d="M180,178 L180,210" stroke="#115e59" strokeWidth="1" strokeDasharray="3 2" />
-            <text x="180" y="224" textAnchor="middle" fontSize="8" fill="#115e59" fontWeight="bold">Aktives Zentrum</text>
+            <text x="180" y="224" textAnchor="middle" fontSize="13" fill="#115e59" fontWeight="bold">Aktives Zentrum</text>
 
             {/* Substrate approaching */}
             <path
@@ -79,7 +79,7 @@ export default function EnzymeSubstrate() {
             />
             {/* Substrate key shape */}
             <rect x="290" y="138" width="15" height="22" rx="2" fill="url(#substrateGrad)" stroke="#c2410c" strokeWidth="2" />
-            <text x="335" y="150" textAnchor="middle" fontSize="12" fontWeight="bold" fill="#fff">Substrat</text>
+            <text x="335" y="150" textAnchor="middle" fontSize="13" fontWeight="bold" fill="#fff">Substrat</text>
 
             {/* Approach arrow */}
             <path d="M285,145 L250,155" stroke="#0d9488" strokeWidth="2" markerEnd="url(#arrowE)" />
@@ -88,11 +88,11 @@ export default function EnzymeSubstrate() {
                 <path d="M0,0 L8,3 L0,6" fill="#0d9488" />
               </marker>
             </defs>
-            <text x="265" y="140" textAnchor="middle" fontSize="8" fill="#0d9488">Annäherung</text>
+            <text x="265" y="140" textAnchor="middle" fontSize="13" fill="#0d9488">Annäherung</text>
 
             {/* Specificity note */}
             <rect x="300" y="200" width="145" height="50" rx="6" fill="#f0fdfa" stroke="#99f6e4" strokeWidth="1" />
-            <text x="372" y="218" textAnchor="middle" fontSize="8" fill="#0f766e" fontWeight="bold">Substratspezifität</text>
+            <text x="372" y="218" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Substratspezifität</text>
             <text x="372" y="232" textAnchor="middle" fontSize="7" fill="#6b7280">Nur passendes Substrat</text>
             <text x="372" y="243" textAnchor="middle" fontSize="7" fill="#6b7280">bindet an das Enzym</text>
           </g>
@@ -117,10 +117,10 @@ export default function EnzymeSubstrate() {
               strokeWidth="2"
             />
             <rect x="208" y="134" width="13" height="18" rx="2" fill="url(#substrateGrad)" stroke="#c2410c" strokeWidth="2" />
-            <text x="245" y="145" textAnchor="middle" fontSize="9" fontWeight="bold" fill="#fff">S</text>
+            <text x="245" y="145" textAnchor="middle" fontSize="13" fontWeight="bold" fill="#fff">S</text>
 
             {/* Label */}
-            <text x="240" y="178" textAnchor="middle" fontSize="10" fill="#115e59" fontWeight="bold">Enzym-Substrat-Komplex (ES)</text>
+            <text x="240" y="178" textAnchor="middle" fontSize="13" fill="#115e59" fontWeight="bold">Enzym-Substrat-Komplex (ES)</text>
 
             {/* Catalysis indicators */}
             {[0, 1, 2, 3, 4, 5].map((i) => (
@@ -133,11 +133,11 @@ export default function EnzymeSubstrate() {
                 opacity="0.8"
               />
             ))}
-            <text x="200" y="200" textAnchor="middle" fontSize="8" fill="#6b7280">Bindungen werden gespalten</text>
+            <text x="200" y="200" textAnchor="middle" fontSize="13" fill="#6b7280">Bindungen werden gespalten</text>
 
             {/* Info box */}
             <rect x="80" y="215" width="240" height="45" rx="6" fill="#f0fdfa" stroke="#99f6e4" strokeWidth="1" />
-            <text x="200" y="232" textAnchor="middle" fontSize="8" fill="#0f766e" fontWeight="bold">Übergangszustand</text>
+            <text x="200" y="232" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Übergangszustand</text>
             <text x="200" y="246" textAnchor="middle" fontSize="7" fill="#6b7280">Aktivierungsenergie wird herabgesetzt (Katalyse)</text>
           </g>
         )}
@@ -156,7 +156,7 @@ export default function EnzymeSubstrate() {
 
             {/* Active site label */}
             <path d="M170,178 L170,198" stroke="#115e59" strokeWidth="1" strokeDasharray="3 2" />
-            <text x="170" y="210" textAnchor="middle" fontSize="8" fill="#115e59">Aktives Zentrum frei</text>
+            <text x="170" y="210" textAnchor="middle" fontSize="13" fill="#115e59">Aktives Zentrum frei</text>
 
             {/* Product 1 */}
             <path
@@ -165,7 +165,7 @@ export default function EnzymeSubstrate() {
               stroke="#b45309"
               strokeWidth="2"
             />
-            <text x="310" y="110" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#fff">P1</text>
+            <text x="310" y="110" textAnchor="middle" fontSize="13" fontWeight="bold" fill="#fff">P1</text>
 
             {/* Product 2 */}
             <path
@@ -174,7 +174,7 @@ export default function EnzymeSubstrate() {
               stroke="#c2410c"
               strokeWidth="2"
             />
-            <text x="385" y="148" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#fff">P2</text>
+            <text x="385" y="148" textAnchor="middle" fontSize="13" fontWeight="bold" fill="#fff">P2</text>
 
             {/* Release arrows */}
             <path d="M260,100 L270,95" stroke="#0d9488" strokeWidth="2" markerEnd="url(#arrowE)" />
@@ -186,7 +186,7 @@ export default function EnzymeSubstrate() {
             </defs>
 
             {/* Labels */}
-            <text x="345" y="70" textAnchor="middle" fontSize="10" fill="#b45309" fontWeight="bold">Produkte</text>
+            <text x="345" y="70" textAnchor="middle" fontSize="13" fill="#b45309" fontWeight="bold">Produkte</text>
 
             {/* Cycle arrow */}
             <path d="M100,195 Q60,230 100,250 Q160,270 200,240" fill="none" stroke="#0d9488" strokeWidth="1.5" strokeDasharray="4 3" markerEnd="url(#arrowE)" />

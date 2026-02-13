@@ -20,11 +20,11 @@ export default function MeiosisOverview() {
 
       <svg viewBox="0 0 480 420" className="w-full max-w-xl mx-auto">
         {/* Title labels */}
-        <text x="240" y="16" textAnchor="middle" fontSize="11" fill="#0d9488" fontWeight="bold">Meiose I (Reduktionstellung)</text>
+        <text x="240" y="16" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Meiose I (Reduktionstellung)</text>
 
         {/* ===== Starting cell (2n) ===== */}
         <ellipse cx="240" cy="55" rx="50" ry="30" fill="#f0fdfa" stroke="#0d9488" strokeWidth="2" />
-        <text x="240" y="50" textAnchor="middle" fontSize="8" fill="#115e59" fontWeight="bold">2n = 4</text>
+        <text x="240" y="50" textAnchor="middle" fontSize="13" fill="#115e59" fontWeight="bold">2n = 4</text>
         <text x="240" y="62" textAnchor="middle" fontSize="7" fill="#0f766e">Diploid</text>
 
         {/* Homologous pairs in starting cell */}
@@ -40,7 +40,7 @@ export default function MeiosisOverview() {
         {/* Prophase I box - crossing over */}
         <g className="cursor-pointer" onClick={() => setActive("prophase1")} onMouseEnter={() => setActive("prophase1")} onMouseLeave={() => setActive(null)}>
           <rect x="170" y="116" width="140" height="48" rx="8" fill={active === "prophase1" ? "#ccfbf1" : "#f0fdfa"} stroke="#0d9488" strokeWidth="1.5" />
-          <text x="240" y="132" textAnchor="middle" fontSize="8" fill="#115e59" fontWeight="bold">Prophase I</text>
+          <text x="240" y="132" textAnchor="middle" fontSize="13" fill="#115e59" fontWeight="bold">Prophase I</text>
           {/* Crossing over illustration */}
           <path d="M200,140 Q215,138 225,148 Q235,158 250,155" stroke="#0f766e" strokeWidth="2.5" fill="none" strokeLinecap="round" />
           <path d="M200,155 Q215,158 225,148 Q235,138 250,140" stroke="#14b8a6" strokeWidth="2.5" fill="none" strokeLinecap="round" />
@@ -54,7 +54,7 @@ export default function MeiosisOverview() {
         {/* Anaphase I - homologs separate */}
         <g className="cursor-pointer" onClick={() => setActive("anaphase1")} onMouseEnter={() => setActive("anaphase1")} onMouseLeave={() => setActive(null)}>
           <rect x="170" y="195" width="140" height="40" rx="8" fill={active === "anaphase1" ? "#ccfbf1" : "#f0fdfa"} stroke="#0d9488" strokeWidth="1.5" />
-          <text x="240" y="210" textAnchor="middle" fontSize="8" fill="#115e59" fontWeight="bold">Anaphase I</text>
+          <text x="240" y="210" textAnchor="middle" fontSize="13" fill="#115e59" fontWeight="bold">Anaphase I</text>
           <text x="240" y="224" textAnchor="middle" fontSize="7" fill="#0f766e">Homologe trennen sich</text>
         </g>
 
@@ -66,7 +66,7 @@ export default function MeiosisOverview() {
         <polygon points="336,266 340,274 344,266" fill="#0d9488" />
 
         {/* Meiosis II label */}
-        <text x="240" y="268" textAnchor="middle" fontSize="10" fill="#0d9488" fontWeight="bold">Meiose II</text>
+        <text x="240" y="268" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Meiose II</text>
 
         {/* Two intermediate cells */}
         <g className="cursor-pointer" onClick={() => setActive("division1")} onMouseEnter={() => setActive("division1")} onMouseLeave={() => setActive(null)}>
@@ -115,7 +115,7 @@ export default function MeiosisOverview() {
         ))}
 
         {/* Result label */}
-        <text x="240" y="416" textAnchor="middle" fontSize="9" fill="#115e59" fontWeight="bold">4 haploide Zellen (Gameten)</text>
+        <text x="240" y="416" textAnchor="middle" fontSize="13" fill="#115e59" fontWeight="bold">4 haploide Zellen (Gameten)</text>
       </svg>
 
       {activeStage && (

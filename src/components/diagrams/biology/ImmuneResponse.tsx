@@ -51,7 +51,7 @@ export default function ImmuneResponse() {
         {/* ===== LEFT: ANGEBOREN ===== */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[0])} onMouseLeave={() => setActive(null)}>
           <rect x="20" y="100" width="220" height="30" rx="8" fill={active?.id === "innate" ? "#ccfbf1" : "#f0fdfa"} stroke="#0d9488" strokeWidth="2" />
-          <text x="130" y="119" textAnchor="middle" fontSize="10" fill="#0d9488" fontWeight="bold">Angeboren (unspezifisch)</text>
+          <text x="130" y="119" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Angeboren (unspezifisch)</text>
         </g>
 
         {/* Timeline label */}
@@ -87,7 +87,7 @@ export default function ImmuneResponse() {
           <text x="200" y="192" textAnchor="middle" fontSize="6" fill="#0f766e" fontWeight="bold">Komplement-</text>
           <text x="200" y="202" textAnchor="middle" fontSize="6" fill="#0f766e" fontWeight="bold">system</text>
           {/* cascade arrows */}
-          <text x="200" y="212" textAnchor="middle" fontSize="8" fill="#0f766e">C3→C5→MAC</text>
+          <text x="200" y="212" textAnchor="middle" fontSize="13" fill="#0f766e">C3→C5→MAC</text>
         </g>
 
         {/* ===== BRIDGE: DENDRITIC CELLS ===== */}
@@ -120,7 +120,7 @@ export default function ImmuneResponse() {
         {/* ===== RIGHT: ADAPTIV ===== */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[1])} onMouseLeave={() => setActive(null)}>
           <rect x="260" y="100" width="200" height="30" rx="8" fill={active?.id === "adaptive" ? "#ccfbf1" : "#f0fdfa"} stroke="#0d9488" strokeWidth="2" />
-          <text x="360" y="119" textAnchor="middle" fontSize="10" fill="#0d9488" fontWeight="bold">Adaptiv (spezifisch)</text>
+          <text x="360" y="119" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Adaptiv (spezifisch)</text>
         </g>
 
         {/* Timeline label */}
@@ -172,7 +172,7 @@ export default function ImmuneResponse() {
 
         {/* Labels: timing */}
         <rect x="20" y="380" width="440" height="30" rx="6" fill="#f0fdfa" stroke="#14b8a6" strokeWidth="1" />
-        <text x="240" y="398" textAnchor="middle" fontSize="8" fill="#115e59" fontWeight="bold">Angeboren: schnell, unspezifisch → Adaptiv: langsam, spezifisch, Gedächtnis</text>
+        <text x="240" y="398" textAnchor="middle" fontSize="13" fill="#115e59" fontWeight="bold">Angeboren: schnell, unspezifisch → Adaptiv: langsam, spezifisch, Gedächtnis</text>
       </svg>
 
       {active && (

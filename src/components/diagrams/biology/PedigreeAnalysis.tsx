@@ -80,9 +80,9 @@ export default function PedigreeAnalysis() {
 
       <svg viewBox="0 0 500 340" className="w-full max-w-xl mx-auto">
         {/* Generation labels */}
-        <text x="15" y="64" fontSize="10" fill="#0d9488" fontWeight="bold">I</text>
-        <text x="15" y="164" fontSize="10" fill="#0d9488" fontWeight="bold">II</text>
-        <text x="15" y="264" fontSize="10" fill="#0d9488" fontWeight="bold">III</text>
+        <text x="15" y="64" fontSize="13" fill="#0d9488" fontWeight="bold">I</text>
+        <text x="15" y="164" fontSize="13" fill="#0d9488" fontWeight="bold">II</text>
+        <text x="15" y="264" fontSize="13" fill="#0d9488" fontWeight="bold">III</text>
 
         {/* Mating lines Gen I */}
         <line x1={100 + r} y1="60" x2={200 - r} y2="60" stroke={strokeColor} strokeWidth="1.5" />
@@ -143,7 +143,7 @@ export default function PedigreeAnalysis() {
                 <circle cx={p.x} cy={p.y} r={r} fill={fill} stroke={strokeColor} strokeWidth="2" />
               )}
               {/* Genotype */}
-              <text x={p.x} y={p.y + 4} textAnchor="middle" fontSize="9" fill={textColor} fontWeight="bold">
+              <text x={p.x} y={p.y + 4} textAnchor="middle" fontSize="13" fill={textColor} fontWeight="bold">
                 {getGenotype(p)}
               </text>
               {/* Label */}

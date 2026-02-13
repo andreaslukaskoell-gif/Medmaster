@@ -27,7 +27,8 @@
       "Bash(lsof:*)",
       "Bash(python3:*)",
       "Bash(git status:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(bc:*)"
     ]
   }
 }

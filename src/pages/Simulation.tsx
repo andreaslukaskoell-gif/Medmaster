@@ -24,12 +24,12 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { allBmsQuestions as newBmsQuestions, getQuestionsBySubject as getNewQuestions } from "@/data/bms/index";
 import { bmsQuestions as legacyQuestions, getQuestionsBySubject as getLegacyQuestions } from "@/data/bmsQuestions";
 import { tvTexts } from "@/data/tvData";
-import { implikationQuestions } from "@/data/kffData";
 import {
   generateZahlenfolgenSet,
   generateAllergyCards,
   generateMemoryQuestions,
   generateWortflüssigkeitSet,
+  generateSyllogismSet,
 } from "@/data/kffGenerators";
 import type { AllergyCard, MemoryQuestion, ZahlenfolgeGenerated, WortflüssigkeitQuestion } from "@/data/kffGenerators";
 import { figurenAufgaben } from "@/data/figurenData";
@@ -122,10 +122,11 @@ interface UnifiedQuestion {
   memText?: string;
   memOptions?: string[];
   memCorrect?: string;
-  // KFF Implikationen
-  premise?: string;
-  conclusion?: string;
-  isValid?: boolean;
+  // KFF Implikationen (Syllogismen)
+  premise1?: string;
+  premise2?: string;
+  sylOptions?: string[];
+  sylCorrectOption?: number;
   impExplanation?: string;
   // KFF Wortfluessigkeit
   scrambled?: string;
@@ -276,14 +277,15 @@ function generateGedaechtnisQuestions(section: SimSection): { cards: AllergyCard
 }
 
 function generateImplikationenQuestions(section: SimSection): UnifiedQuestion[] {
-  const pool = shuffle([...implikationQuestions]).slice(0, section.questionCount);
-  return pool.map((q) => ({
+  const set = generateSyllogismSet(section.questionCount, "mittel");
+  return set.map((q) => ({
     id: q.id,
     sectionId: section.id,
-    sectionType: "kff-implikationen",
-    premise: q.premise,
-    conclusion: q.conclusion,
-    isValid: q.isValid,
+    sectionType: "kff-implikationen" as SectionType,
+    premise1: q.premise1,
+    premise2: q.premise2,
+    sylOptions: q.options,
+    sylCorrectOption: q.correctOption,
     impExplanation: q.explanation,
   }));
 }
@@ -397,7 +399,7 @@ function isQuestionCorrect(q: UnifiedQuestion, answer: string): boolean {
     case "kff-gedaechtnis":
       return answer === q.memCorrect;
     case "kff-implikationen":
-      return (answer === "gültig") === q.isValid;
+      return answer === String(q.sylCorrectOption);
     case "kff-wortfluessigkeit":
       return answer === q.correctLetter;
     case "kff-figuren":
@@ -421,7 +423,7 @@ function getCorrectAnswerDisplay(q: UnifiedQuestion): string {
     case "kff-gedaechtnis":
       return q.memCorrect || "";
     case "kff-implikationen":
-      return q.isValid ? "Gültig" : "Ungültig";
+      return q.sylOptions?.[q.sylCorrectOption ?? 0] || "";
     case "kff-wortfluessigkeit":
       return `${q.correctLetter} (${q.correctWord})`;
     case "kff-figuren":
@@ -474,7 +476,7 @@ function getQuestionDisplayText(q: UnifiedQuestion): string {
     case "kff-gedaechtnis":
       return q.memText || "";
     case "kff-implikationen":
-      return `${q.premise} ${q.conclusion}`;
+      return `${q.premise1} / ${q.premise2}`;
     case "kff-wortfluessigkeit":
       return `Buchstabensalat: ${q.scrambled}`;
     case "kff-figuren":
@@ -1440,38 +1442,28 @@ export default function Simulation() {
       <CardContent className="p-6">
         <div className="space-y-4 mb-6">
           <div>
-            <p className="text-xs text-muted uppercase tracking-wider mb-1">Prämisse</p>
-            <p className="text-base font-medium text-gray-900 dark:text-gray-100">{q.premise}</p>
+            <p className="text-xs text-muted uppercase tracking-wider mb-1">Prämisse 1</p>
+            <p className="text-base font-medium text-gray-900 dark:text-gray-100 border-l-4 border-purple-400 pl-3">{q.premise1}</p>
           </div>
           <div>
-            <p className="text-xs text-muted uppercase tracking-wider mb-1">Schlussfolgerung</p>
-            <p className="text-base font-medium text-gray-900 dark:text-gray-100">{q.conclusion}</p>
+            <p className="text-xs text-muted uppercase tracking-wider mb-1">Prämisse 2</p>
+            <p className="text-base font-medium text-gray-900 dark:text-gray-100 border-l-4 border-purple-400 pl-3">{q.premise2}</p>
           </div>
         </div>
-        <p className="text-sm text-muted mb-3">Ist diese Schlussfolgerung logisch gültig?</p>
-        <div className="grid grid-cols-2 gap-3">
-          <button
-            onClick={() => setAnswers((p) => ({ ...p, [q.id]: "gültig" }))}
-            className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
-              answers[q.id] === "gültig"
-                ? "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300"
-                : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
-            }`}
-          >
-            <CheckCircle2 className="w-4 h-4 inline mr-2" />
-            Gültig
-          </button>
-          <button
-            onClick={() => setAnswers((p) => ({ ...p, [q.id]: "ungültig" }))}
-            className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
-              answers[q.id] === "ungültig"
-                ? "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300"
-                : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
-            }`}
-          >
-            <XCircle className="w-4 h-4 inline mr-2" />
-            Ungültig
-          </button>
+        <p className="text-sm text-muted mb-3">Welche Schlussfolgerung ist korrekt?</p>
+        <div className="space-y-2">
+          {q.sylOptions?.map((opt, oi) => (
+            <button key={oi}
+              onClick={() => setAnswers((p) => ({ ...p, [q.id]: String(oi) }))}
+              className={`w-full text-left px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
+                answers[q.id] === String(oi)
+                  ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                  : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+              }`}
+            >
+              <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>{opt}
+            </button>
+          ))}
         </div>
       </CardContent>
     </Card>

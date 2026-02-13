@@ -102,10 +102,10 @@ export default function MenstrualCycle() {
         <line x1={gL - 5} y1={gB} x2={gR + 5} y2={gB} stroke="#115e59" strokeWidth="1.5" />
 
         {/* Y-axis label */}
-        <text x="15" y={(gT + gB) / 2} textAnchor="middle" fontSize="8" fill="#0d9488" fontWeight="bold" transform={`rotate(-90, 15, ${(gT + gB) / 2})`}>Hormonspiegel</text>
+        <text x="15" y={(gT + gB) / 2} textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold" transform={`rotate(-90, 15, ${(gT + gB) / 2})`}>Hormonspiegel</text>
 
         {/* X-axis label */}
-        <text x={(gL + gR) / 2} y={gB + 26} textAnchor="middle" fontSize="9" fill="#0d9488" fontWeight="bold">Tage des Zyklus</text>
+        <text x={(gL + gR) / 2} y={gB + 26} textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Tage des Zyklus</text>
 
         {/* Hormone curves */}
         {hormones.map((h) => (
@@ -114,7 +114,7 @@ export default function MenstrualCycle() {
 
         {/* Ovulation marker */}
         <line x1={dayToX(14)} y1={gT} x2={dayToX(14)} y2={gB} stroke="#eab308" strokeWidth="1.5" strokeDasharray="5 3" />
-        <text x={dayToX(14)} y={gT - 5} textAnchor="middle" fontSize="8" fill="#eab308" fontWeight="bold">Ovulation</text>
+        <text x={dayToX(14)} y={gT - 5} textAnchor="middle" fontSize="13" fill="#eab308" fontWeight="bold">Ovulation</text>
 
         {/* LH peak label */}
         <text x={dayToX(14) + 5} y={valToY(0.95) + 4} fontSize="7" fill="#16a34a" fontWeight="bold">LH-Peak</text>
@@ -145,7 +145,7 @@ export default function MenstrualCycle() {
         {hormones.map((h, i) => (
           <g key={`legend-${h.name}`} transform={`translate(${gL + i * 100}, 310)`}>
             <line x1="0" y1="0" x2="20" y2="0" stroke={h.color} strokeWidth="3" strokeLinecap="round" />
-            <text x="25" y="4" fontSize="8" fill={h.color} fontWeight="bold">{h.name}</text>
+            <text x="25" y="4" fontSize="13" fill={h.color} fontWeight="bold">{h.name}</text>
           </g>
         ))}
       </svg>

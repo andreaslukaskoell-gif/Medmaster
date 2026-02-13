@@ -54,7 +54,7 @@ export default function UnitCircle() {
       </div>
 
       <svg viewBox="0 0 430 380" className="w-full max-w-lg mx-auto">
-        <text x="215" y="20" textAnchor="middle" fontSize="11" fill="#0f766e" fontWeight="bold">Einheitskreis (r = 1)</text>
+        <text x="215" y="20" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Einheitskreis (r = 1)</text>
 
         {/* Grid */}
         <line x1={CX - R - 30} y1={CY} x2={CX + R + 40} y2={CY} stroke="#374151" strokeWidth="1.5" />
@@ -62,8 +62,8 @@ export default function UnitCircle() {
         {/* Axis arrows */}
         <polygon points={`${CX + R + 40},${CY - 4} ${CX + R + 40},${CY + 4} ${CX + R + 48},${CY}`} fill="#374151" />
         <polygon points={`${CX - 4},${CY - R - 30} ${CX + 4},${CY - R - 30} ${CX},${CY - R - 38}`} fill="#374151" />
-        <text x={CX + R + 50} y={CY + 4} fontSize="10" fill="#374151" fontWeight="bold">x</text>
-        <text x={CX + 8} y={CY - R - 32} fontSize="10" fill="#374151" fontWeight="bold">y</text>
+        <text x={CX + R + 50} y={CY + 4} fontSize="13" fill="#374151" fontWeight="bold">x</text>
+        <text x={CX + 8} y={CY - R - 32} fontSize="13" fill="#374151" fontWeight="bold">y</text>
 
         {/* Axis labels */}
         <text x={CX + R + 5} y={CY + 14} fontSize="7" fill="#6b7280">1</text>
@@ -87,7 +87,7 @@ export default function UnitCircle() {
           x={CX + 35 * Math.cos(rad / 2)}
           y={CY - 35 * Math.sin(rad / 2) + 3}
           textAnchor="middle"
-          fontSize="9"
+          fontSize="13"
           fill="#0f766e"
           fontWeight="bold"
         >
@@ -102,11 +102,11 @@ export default function UnitCircle() {
 
         {/* cos line (horizontal projection) */}
         <line x1={CX} y1={CY} x2={cosX} y2={CY} stroke="#3b82f6" strokeWidth="3" opacity="0.8" />
-        <text x={(CX + cosX) / 2} y={CY + 16} textAnchor="middle" fontSize="9" fill="#3b82f6" fontWeight="bold">cos</text>
+        <text x={(CX + cosX) / 2} y={CY + 16} textAnchor="middle" fontSize="13" fill="#3b82f6" fontWeight="bold">cos</text>
 
         {/* sin line (vertical projection) */}
         <line x1={px} y1={CY} x2={px} y2={py} stroke="#ef4444" strokeWidth="3" opacity="0.8" />
-        <text x={px + 15} y={(CY + py) / 2 + 3} fontSize="9" fill="#ef4444" fontWeight="bold">sin</text>
+        <text x={px + 15} y={(CY + py) / 2 + 3} fontSize="13" fill="#ef4444" fontWeight="bold">sin</text>
 
         {/* Dashed projection lines */}
         <line x1={px} y1={py} x2={px} y2={CY} stroke="#d1d5db" strokeWidth="1" strokeDasharray="3 2" />
@@ -116,7 +116,7 @@ export default function UnitCircle() {
         {activeDeg !== 90 && activeDeg !== 0 && (
           <>
             <line x1={CX + R} y1={CY} x2={CX + R} y2={CY - tanLen} stroke="#f59e0b" strokeWidth="3" opacity="0.8" />
-            <text x={CX + R + 15} y={CY - tanLen / 2 + 3} fontSize="9" fill="#f59e0b" fontWeight="bold">tan</text>
+            <text x={CX + R + 15} y={CY - tanLen / 2 + 3} fontSize="13" fill="#f59e0b" fontWeight="bold">tan</text>
             {/* Extended radius to tangent */}
             <line x1={CX} y1={CY} x2={CX + R} y2={CY - tanLen} stroke="#115e59" strokeWidth="1" strokeDasharray="4 3" />
           </>
@@ -165,11 +165,11 @@ export default function UnitCircle() {
         {/* Legend */}
         <rect x="20" y="330" width="390" height="40" rx="6" fill="#f0fdfa" stroke="#99f6e4" strokeWidth="1" />
         <line x1="30" y1="350" x2="50" y2="350" stroke="#3b82f6" strokeWidth="3" />
-        <text x="55" y="353" fontSize="8" fill="#3b82f6">cos \u03B1 = x-Koordinate</text>
+        <text x="55" y="353" fontSize="13" fill="#3b82f6">cos \u03B1 = x-Koordinate</text>
         <line x1="175" y1="350" x2="195" y2="350" stroke="#ef4444" strokeWidth="3" />
-        <text x="200" y="353" fontSize="8" fill="#ef4444">sin \u03B1 = y-Koordinate</text>
+        <text x="200" y="353" fontSize="13" fill="#ef4444">sin \u03B1 = y-Koordinate</text>
         <line x1="310" y1="350" x2="330" y2="350" stroke="#f59e0b" strokeWidth="3" />
-        <text x="335" y="353" fontSize="8" fill="#f59e0b">tan \u03B1 = sin/cos</text>
+        <text x="335" y="353" fontSize="13" fill="#f59e0b">tan \u03B1 = sin/cos</text>
       </svg>
 
       {activeAngle && (

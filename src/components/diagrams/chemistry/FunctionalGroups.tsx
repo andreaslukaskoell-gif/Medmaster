@@ -31,7 +31,7 @@ export default function FunctionalGroups() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Funktionelle Gruppen</h4>
       <p className="text-xs text-muted">Klicke auf eine Gruppe für Details.</p>
       <svg viewBox="0 0 450 280" className="w-full max-w-lg mx-auto">
-        <text x="225" y="22" textAnchor="middle" fontSize="12" fill="#0f766e" fontWeight="bold">Funktionelle Gruppen der Organischen Chemie</text>
+        <text x="225" y="22" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Funktionelle Gruppen der Organischen Chemie</text>
 
         {groups.map((g, i) => {
           const col = i % 3;
@@ -62,10 +62,10 @@ export default function FunctionalGroups() {
 
               {/* Structure circle */}
               <circle cx={x + 65} cy={y + 28} r="20" fill={isActive ? "#ccfbf1" : "#f0fdfa"} stroke="#14b8a6" strokeWidth="1.5" />
-              <text x={x + 65} y={y + 32} textAnchor="middle" fontSize="11" fill="#0f766e" fontWeight="bold">{g.formula}</text>
+              <text x={x + 65} y={y + 32} textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">{g.formula}</text>
 
               {/* Name */}
-              <text x={x + 65} y={y + 60} textAnchor="middle" fontSize="8" fill="#0f766e" fontWeight="bold">{g.name}</text>
+              <text x={x + 65} y={y + 60} textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">{g.name}</text>
 
               {/* Found in */}
               <rect x={x + 5} y={y + 68} width={COL_W - 20} height="18" rx="3" fill="#f0fdfa" stroke="#99f6e4" strokeWidth="0.5" />
@@ -75,9 +75,9 @@ export default function FunctionalGroups() {
               {g.id === "hydroxyl" && (
                 <g>
                   <line x1={x + 52} y1={y + 28} x2={x + 60} y2={y + 28} stroke="#374151" strokeWidth="1.5" />
-                  <text x={x + 67} y={y + 22} fontSize="9" fill="#dc2626" fontWeight="bold">O</text>
+                  <text x={x + 67} y={y + 22} fontSize="13" fill="#dc2626" fontWeight="bold">O</text>
                   <line x1={x + 72} y1={y + 26} x2={x + 78} y2={y + 26} stroke="#374151" strokeWidth="1.5" />
-                  <text x={x + 80} y={y + 30} fontSize="8" fill="#374151">H</text>
+                  <text x={x + 80} y={y + 30} fontSize="13" fill="#374151">H</text>
                 </g>
               )}
             </g>

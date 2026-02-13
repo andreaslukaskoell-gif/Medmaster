@@ -26,14 +26,14 @@ export default function Nephron() {
         {/* Cortex / Medulla zones */}
         <rect x="10" y="10" width="460" height="160" rx="0" fill="#f0fdfa" opacity="0.3" />
         <rect x="10" y="170" width="460" height="240" rx="0" fill="#ccfbf1" opacity="0.2" />
-        <text x="460" y="28" textAnchor="end" fontSize="8" fill="#0d9488" fontWeight="bold">Rinde (Cortex)</text>
-        <text x="460" y="188" textAnchor="end" fontSize="8" fill="#0d9488" fontWeight="bold">Mark (Medulla)</text>
+        <text x="460" y="28" textAnchor="end" fontSize="13" fill="#0d9488" fontWeight="bold">Rinde (Cortex)</text>
+        <text x="460" y="188" textAnchor="end" fontSize="13" fill="#0d9488" fontWeight="bold">Mark (Medulla)</text>
         <line x1="10" y1="170" x2="470" y2="170" stroke="#0d9488" strokeWidth="1" strokeDasharray="6 3" opacity="0.5" />
 
         {/* ===== BOWMAN'S CAPSULE + GLOMERULUS ===== */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[0])} onMouseLeave={() => setActive(null)}>
           <ellipse cx="120" cy="80" rx="45" ry="40" fill="#ccfbf1" stroke="#0d9488" strokeWidth="2" />
-          <text x="120" y="38" textAnchor="middle" fontSize="8" fill="#0d9488" fontWeight="bold">Bowman-Kapsel</text>
+          <text x="120" y="38" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Bowman-Kapsel</text>
         </g>
 
         {/* Glomerulus */}
@@ -69,7 +69,7 @@ export default function Nephron() {
           {[180, 200, 220, 240, 260, 280, 300, 320].map((x) => (
             <line key={`mv-${x}`} x1={x} y1={80 + (x - 180) * 0.08} x2={x} y2={74 + (x - 180) * 0.08} stroke="#14b8a6" strokeWidth="1" />
           ))}
-          <text x="260" y="72" textAnchor="middle" fontSize="8" fill="#115e59" fontWeight="bold">Proximaler Tubulus</text>
+          <text x="260" y="72" textAnchor="middle" fontSize="13" fill="#115e59" fontWeight="bold">Proximaler Tubulus</text>
         </g>
 
         {/* Reabsorption arrows (proximal) */}
@@ -96,7 +96,7 @@ export default function Nephron() {
           <text x="355" y="252" fontSize="6" fill="#0d9488">(H₂O permeabel)</text>
           <text x="205" y="250" textAnchor="end" fontSize="7" fill="#0f766e">aufsteigend</text>
           <text x="205" y="262" textAnchor="end" fontSize="6" fill="#0f766e">(H₂O impermeabel)</text>
-          <text x="290" y="405" textAnchor="middle" fontSize="8" fill="#115e59" fontWeight="bold">Henle-Schleife</text>
+          <text x="290" y="405" textAnchor="middle" fontSize="13" fill="#115e59" fontWeight="bold">Henle-Schleife</text>
         </g>
 
         {/* Water arrows descending */}
@@ -120,7 +120,7 @@ export default function Nephron() {
         {/* ===== DISTAL TUBULUS ===== */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[4])} onMouseLeave={() => setActive(null)}>
           <path d="M210,145 Q190,135 170,140 Q140,148 120,140 Q100,132 85,140" fill="none" stroke="#0f766e" strokeWidth="4" strokeLinecap="round" />
-          <text x="150" y="155" textAnchor="middle" fontSize="8" fill="#115e59" fontWeight="bold">Distaler Tubulus</text>
+          <text x="150" y="155" textAnchor="middle" fontSize="13" fill="#115e59" fontWeight="bold">Distaler Tubulus</text>
         </g>
 
         {/* Secretion arrows (distal) */}
@@ -137,7 +137,7 @@ export default function Nephron() {
         {/* ===== SAMMELROHR ===== */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[5])} onMouseLeave={() => setActive(null)}>
           <path d="M85,140 Q75,160 70,200 Q65,280 60,360 Q58,390 55,410" fill="none" stroke="#115e59" strokeWidth="5" strokeLinecap="round" />
-          <text x="40" y="300" textAnchor="end" fontSize="8" fill="#115e59" fontWeight="bold" transform="rotate(-90, 40, 300)">Sammelrohr</text>
+          <text x="40" y="300" textAnchor="end" fontSize="13" fill="#115e59" fontWeight="bold" transform="rotate(-90, 40, 300)">Sammelrohr</text>
         </g>
 
         {/* ADH water arrows */}

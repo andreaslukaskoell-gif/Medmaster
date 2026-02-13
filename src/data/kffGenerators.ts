@@ -701,3 +701,110 @@ export function generateWortflüssigkeitSet(count: number, difficulty: "leicht" 
 
   return questions;
 }
+
+// --- IMPLIKATIONEN-GENERATOR (Kategorische Syllogismen) ---
+
+export interface SyllogismQuestion {
+  id: string;
+  premise1: string;
+  premise2: string;
+  options: string[];
+  correctOption: number;
+  explanation: string;
+  difficulty: "leicht" | "mittel" | "schwer";
+}
+
+const BEGRIFFE_TRIPEL = [
+  ["Seen", "Gewässer", "Flüsse"],
+  ["Metalle", "Elemente", "Leiter"],
+  ["Säugetiere", "Tiere", "Warmblüter"],
+  ["Planeten", "Himmelskörper", "Monde"],
+  ["Quadrate", "Rechtecke", "Parallelogramme"],
+  ["Rosen", "Blumen", "Pflanzen"],
+  ["Ärzte", "Akademiker", "Mediziner"],
+  ["Katzen", "Haustiere", "Raubtiere"],
+  ["Birken", "Bäume", "Laubgehölze"],
+  ["Romane", "Bücher", "Druckwerke"],
+  ["Tulpen", "Blumen", "Gartengewächse"],
+  ["Geigen", "Instrumente", "Streichinstrumente"],
+  ["Äpfel", "Früchte", "Kernobst"],
+  ["Adler", "Vögel", "Greifvögel"],
+  ["Diamanten", "Edelsteine", "Mineralien"],
+  ["Schüler", "Lernende", "Jugendliche"],
+  ["Chirurgen", "Ärzte", "Spezialisten"],
+  ["Hunde", "Haustiere", "Säugetiere"],
+  ["Dreiecke", "Polygone", "Flächen"],
+  ["Laptops", "Computer", "Elektrogeräte"],
+  ["Chemiker", "Wissenschaftler", "Forscher"],
+  ["Buchen", "Laubbäume", "Gehölze"],
+  ["Violinen", "Saiteninstrumente", "Musikinstrumente"],
+  ["Forellen", "Fische", "Wirbeltiere"],
+  ["Juristen", "Akademiker", "Berufstätige"],
+];
+
+interface SyllogismMode {
+  p1: (s: string, m: string, p: string) => string;
+  p2: (s: string, m: string, p: string) => string;
+  conclusion: (s: string, m: string, p: string) => string;
+  name: string;
+}
+
+const VALID_MODES: SyllogismMode[] = [
+  { p1: (_s, m, p) => `Alle ${m} sind ${p}`, p2: (s, m) => `Alle ${s} sind ${m}`, conclusion: (s, _m, p) => `Alle ${s} sind ${p}`, name: "Barbara" },
+  { p1: (_s, m, p) => `Kein ${m} ist ein ${p}`, p2: (s, m) => `Alle ${s} sind ${m}`, conclusion: (s, _m, p) => `Kein ${s} ist ein ${p}`, name: "Celarent" },
+  { p1: (_s, m, p) => `Alle ${m} sind ${p}`, p2: (s, m) => `Einige ${s} sind ${m}`, conclusion: (s, _m, p) => `Einige ${s} sind ${p}`, name: "Darii" },
+  { p1: (_s, m, p) => `Kein ${m} ist ein ${p}`, p2: (s, m) => `Einige ${s} sind ${m}`, conclusion: (s, _m, p) => `Einige ${s} sind keine ${p}`, name: "Ferio" },
+  { p1: (_s, m, p) => `Kein ${p} ist ein ${m}`, p2: (s, m) => `Alle ${s} sind ${m}`, conclusion: (s, _m, p) => `Kein ${s} ist ein ${p}`, name: "Cesare" },
+  { p1: (_s, m, p) => `Alle ${p} sind ${m}`, p2: (s, m) => `Kein ${s} ist ein ${m}`, conclusion: (s, _m, p) => `Kein ${s} ist ein ${p}`, name: "Camestres" },
+  { p1: (_s, m, p) => `Alle ${m} sind ${p}`, p2: (s, m) => `Alle ${m} sind ${s}`, conclusion: (s, _m, p) => `Einige ${s} sind ${p}`, name: "Darapti" },
+  { p1: (_s, m, p) => `Einige ${m} sind ${p}`, p2: (s, m) => `Alle ${m} sind ${s}`, conclusion: (s, _m, p) => `Einige ${s} sind ${p}`, name: "Disamis" },
+];
+
+function generateWrongConclusions(s: string, p: string, correctConclusion: string): string[] {
+  const allPossible = [
+    `Alle ${s} sind ${p}`, `Einige ${s} sind ${p}`, `Kein ${s} ist ein ${p}`, `Einige ${s} sind keine ${p}`,
+    `Alle ${p} sind ${s}`, `Einige ${p} sind ${s}`, `Kein ${p} ist ein ${s}`, `Einige ${p} sind keine ${s}`,
+  ];
+  return shuffle(allPossible.filter((c) => c !== correctConclusion));
+}
+
+export function generateSyllogism(difficulty: "leicht" | "mittel" | "schwer"): SyllogismQuestion {
+  const tripel = BEGRIFFE_TRIPEL[randInt(0, BEGRIFFE_TRIPEL.length - 1)];
+  const [s, m, p] = shuffle(tripel);
+  const isNoneCorrect = difficulty === "schwer" ? Math.random() < 0.4 : Math.random() < 0.2;
+  const mode = difficulty === "leicht"
+    ? VALID_MODES[randInt(0, 2)]
+    : VALID_MODES[randInt(0, VALID_MODES.length - 1)];
+
+  const premise1 = mode.p1(s, m, p);
+  const premise2 = mode.p2(s, m, p);
+  const correctConclusion = mode.conclusion(s, m, p);
+  const wrongConclusions = generateWrongConclusions(s, p, correctConclusion).slice(0, 4);
+
+  let options: string[];
+  let correctOption: number;
+
+  if (isNoneCorrect) {
+    options = [...wrongConclusions.slice(0, 4), "Keine der Schlussfolgerungen ist richtig"];
+    correctOption = 4;
+  } else {
+    const insertIdx = randInt(0, 3);
+    const finalWrong = wrongConclusions.slice(0, 4);
+    finalWrong[insertIdx] = correctConclusion;
+    options = [...finalWrong, "Keine der Schlussfolgerungen ist richtig"];
+    correctOption = insertIdx;
+  }
+
+  return {
+    id: `syl-gen-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+    premise1, premise2, options, correctOption,
+    explanation: isNoneCorrect
+      ? `Aus den gegebenen Prämissen lässt sich keine der angegebenen Schlussfolgerungen zwingend ableiten.`
+      : `${mode.name}: Aus "${premise1}" und "${premise2}" folgt: "${correctConclusion}".`,
+    difficulty,
+  };
+}
+
+export function generateSyllogismSet(count: number, difficulty: "leicht" | "mittel" | "schwer"): SyllogismQuestion[] {
+  return Array.from({ length: count }, () => generateSyllogism(difficulty));
+}

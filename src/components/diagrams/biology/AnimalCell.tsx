@@ -99,7 +99,7 @@ export default function AnimalCell() {
 
         {/* Lysosome */}
         <circle cx="350" cy="365" r="19" fill="#fef2f2" stroke="#ef4444" strokeWidth="1.5" />
-        <text x="350" y="369" textAnchor="middle" fontSize="8" fill="#ef4444" fontWeight="bold">pH 4.5</text>
+        <text x="350" y="369" textAnchor="middle" fontSize="13" fill="#ef4444" fontWeight="bold">pH 4.5</text>
 
         {/* Centrosome */}
         <circle cx="330" cy="275" r="13" fill="#ecfeff" stroke="#06b6d4" strokeWidth="1.5" />

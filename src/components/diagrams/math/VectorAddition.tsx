@@ -45,7 +45,7 @@ export default function VectorAddition() {
           </marker>
         </defs>
 
-        <text x="210" y="22" textAnchor="middle" fontSize="11" fill="#0f766e" fontWeight="bold">Vektoraddition — Parallelogrammregel</text>
+        <text x="210" y="22" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Vektoraddition — Parallelogrammregel</text>
 
         {/* Grid */}
         {Array.from({ length: 7 }, (_, i) => (
@@ -62,12 +62,12 @@ export default function VectorAddition() {
         {/* X axis */}
         <line x1={toSvgX(-0.3)} y1={ORIGIN_Y} x2={toSvgX(6.3)} y2={ORIGIN_Y} stroke="#374151" strokeWidth="1.5" />
         <polygon points={`${toSvgX(6.3)},${ORIGIN_Y - 4} ${toSvgX(6.3)},${ORIGIN_Y + 4} ${toSvgX(6.3) + 8},${ORIGIN_Y}`} fill="#374151" />
-        <text x={toSvgX(6.3) + 12} y={ORIGIN_Y + 4} fontSize="10" fill="#374151" fontWeight="bold">x</text>
+        <text x={toSvgX(6.3) + 12} y={ORIGIN_Y + 4} fontSize="13" fill="#374151" fontWeight="bold">x</text>
 
         {/* Y axis */}
         <line x1={ORIGIN_X} y1={toSvgY(-0.3)} x2={ORIGIN_X} y2={toSvgY(6.3)} stroke="#374151" strokeWidth="1.5" />
         <polygon points={`${ORIGIN_X - 4},${toSvgY(6.3)} ${ORIGIN_X + 4},${toSvgY(6.3)} ${ORIGIN_X},${toSvgY(6.3) - 8}`} fill="#374151" />
-        <text x={ORIGIN_X + 8} y={toSvgY(6.3) - 4} fontSize="10" fill="#374151" fontWeight="bold">y</text>
+        <text x={ORIGIN_X + 8} y={toSvgY(6.3) - 4} fontSize="13" fill="#374151" fontWeight="bold">y</text>
 
         {/* Tick marks */}
         {Array.from({ length: 6 }, (_, i) => i + 1).map((v) => (
@@ -113,7 +113,7 @@ export default function VectorAddition() {
         <text
           x={toSvgX(aX / 2) + 5}
           y={toSvgY(aY / 2) + 15}
-          fontSize="12"
+          fontSize="13"
           fill="#3b82f6"
           fontWeight="bold"
         >
@@ -133,7 +133,7 @@ export default function VectorAddition() {
         <text
           x={toSvgX(bX / 2) - 12}
           y={toSvgY(bY / 2) - 2}
-          fontSize="12"
+          fontSize="13"
           fill="#ef4444"
           fontWeight="bold"
         >
@@ -153,7 +153,7 @@ export default function VectorAddition() {
         <text
           x={toSvgX(sumX / 2) - 5}
           y={toSvgY(sumY / 2) - 5}
-          fontSize="12"
+          fontSize="13"
           fill="#0d9488"
           fontWeight="bold"
         >
@@ -167,25 +167,25 @@ export default function VectorAddition() {
         <circle cx={toSvgX(sumX)} cy={toSvgY(sumY)} r="4" fill="#0d9488" />
 
         {/* Coordinate labels */}
-        <text x={toSvgX(aX) + 10} y={toSvgY(aY)} fontSize="8" fill="#3b82f6">({aX}|{aY})</text>
-        <text x={toSvgX(bX) - 30} y={toSvgY(bY)} fontSize="8" fill="#ef4444">({bX}|{bY})</text>
-        <text x={toSvgX(sumX) + 10} y={toSvgY(sumY)} fontSize="8" fill="#0d9488">({sumX}|{sumY})</text>
+        <text x={toSvgX(aX) + 10} y={toSvgY(aY)} fontSize="13" fill="#3b82f6">({aX}|{aY})</text>
+        <text x={toSvgX(bX) - 30} y={toSvgY(bY)} fontSize="13" fill="#ef4444">({bX}|{bY})</text>
+        <text x={toSvgX(sumX) + 10} y={toSvgY(sumY)} fontSize="13" fill="#0d9488">({sumX}|{sumY})</text>
 
         {/* Component notation box */}
         <rect x="250" y="220" width="155" height="110" rx="6" fill="#f0fdfa" stroke="#99f6e4" strokeWidth="1" />
-        <text x="327" y="238" textAnchor="middle" fontSize="9" fill="#0f766e" fontWeight="bold">Komponentendarstellung</text>
+        <text x="327" y="238" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Komponentendarstellung</text>
 
-        <text x="260" y="258" fontSize="9" fill="#3b82f6" fontWeight="bold">a</text>
-        <text x="272" y="258" fontSize="9" fill="#374151">= ({aX}, {aY})</text>
+        <text x="260" y="258" fontSize="13" fill="#3b82f6" fontWeight="bold">a</text>
+        <text x="272" y="258" fontSize="13" fill="#374151">= ({aX}, {aY})</text>
 
-        <text x="260" y="276" fontSize="9" fill="#ef4444" fontWeight="bold">b</text>
-        <text x="272" y="276" fontSize="9" fill="#374151">= ({bX}, {bY})</text>
+        <text x="260" y="276" fontSize="13" fill="#ef4444" fontWeight="bold">b</text>
+        <text x="272" y="276" fontSize="13" fill="#374151">= ({bX}, {bY})</text>
 
         <line x1="260" y1="284" x2="380" y2="284" stroke="#d1d5db" strokeWidth="0.8" />
 
-        <text x="260" y="300" fontSize="9" fill="#0d9488" fontWeight="bold">a + b</text>
-        <text x="292" y="300" fontSize="9" fill="#374151">= ({aX}+{bX}, {aY}+{bY})</text>
-        <text x="292" y="316" fontSize="9" fill="#374151" fontWeight="bold">= ({sumX}, {sumY})</text>
+        <text x="260" y="300" fontSize="13" fill="#0d9488" fontWeight="bold">a + b</text>
+        <text x="292" y="300" fontSize="13" fill="#374151">= ({aX}+{bX}, {aY}+{bY})</text>
+        <text x="292" y="316" fontSize="13" fill="#374151" fontWeight="bold">= ({sumX}, {sumY})</text>
       </svg>
 
       <div className="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-3">

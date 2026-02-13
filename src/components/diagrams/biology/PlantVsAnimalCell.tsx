@@ -28,7 +28,7 @@ export default function PlantVsAnimalCell() {
         <rect x="0" y="0" width="500" height="320" fill="none" />
 
         {/* ===== PLANT CELL (left) ===== */}
-        <text x="125" y="20" textAnchor="middle" fontSize="11" fill="#0d9488" fontWeight="bold">Pflanzenzelle</text>
+        <text x="125" y="20" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Pflanzenzelle</text>
 
         {/* Cell wall */}
         <rect x="18" y="30" width="214" height="260" rx="18" fill="none" stroke="#0f766e" strokeWidth="4" />
@@ -46,7 +46,7 @@ export default function PlantVsAnimalCell() {
           onMouseEnter={() => setActive(plantOnly[2])}
           onMouseLeave={() => setActive(null)}
         />
-        <text x="125" y="178" textAnchor="middle" fontSize="8" fill="#115e59" fontWeight="bold">Vakuole</text>
+        <text x="125" y="178" textAnchor="middle" fontSize="13" fill="#115e59" fontWeight="bold">Vakuole</text>
 
         {/* Chloroplasts */}
         <ellipse cx="70" cy="90" rx="22" ry="12" fill="#bbf7d0" stroke="#16a34a" strokeWidth="1.5"
@@ -106,7 +106,7 @@ export default function PlantVsAnimalCell() {
         />
 
         {/* ===== ANIMAL CELL (right) ===== */}
-        <text x="375" y="20" textAnchor="middle" fontSize="11" fill="#0d9488" fontWeight="bold">Tierzelle</text>
+        <text x="375" y="20" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Tierzelle</text>
 
         {/* Cell membrane */}
         <ellipse cx="375" cy="165" rx="100" ry="125" fill="#f0fdfa" stroke="#14b8a6" strokeWidth="2.5" />

@@ -43,29 +43,29 @@ export default function HeartAnatomy() {
         {/* ===== RIGHT ATRIUM (viewer's left = anatomical right) ===== */}
         <g className="cursor-pointer" onMouseEnter={() => hover(structures[2])} onMouseLeave={() => hover(null)}>
           <rect x="120" y="90" width="110" height="90" rx="8" fill="#dbeafe" opacity="0.5" />
-          <text x="175" y="130" textAnchor="middle" fontSize="9" fill="#1e40af" fontWeight="bold">Rechter</text>
-          <text x="175" y="143" textAnchor="middle" fontSize="9" fill="#1e40af" fontWeight="bold">Vorhof</text>
+          <text x="175" y="130" textAnchor="middle" fontSize="13" fill="#1e40af" fontWeight="bold">Rechter</text>
+          <text x="175" y="143" textAnchor="middle" fontSize="13" fill="#1e40af" fontWeight="bold">Vorhof</text>
         </g>
 
         {/* ===== LEFT ATRIUM (viewer's right = anatomical left) ===== */}
         <g className="cursor-pointer" onMouseEnter={() => hover(structures[3])} onMouseLeave={() => hover(null)}>
           <rect x="250" y="90" width="110" height="90" rx="8" fill="#fecaca" opacity="0.5" />
-          <text x="305" y="130" textAnchor="middle" fontSize="9" fill="#dc2626" fontWeight="bold">Linker</text>
-          <text x="305" y="143" textAnchor="middle" fontSize="9" fill="#dc2626" fontWeight="bold">Vorhof</text>
+          <text x="305" y="130" textAnchor="middle" fontSize="13" fill="#dc2626" fontWeight="bold">Linker</text>
+          <text x="305" y="143" textAnchor="middle" fontSize="13" fill="#dc2626" fontWeight="bold">Vorhof</text>
         </g>
 
         {/* ===== RIGHT VENTRICLE ===== */}
         <g className="cursor-pointer" onMouseEnter={() => hover(structures[0])} onMouseLeave={() => hover(null)}>
           <path d="M115,210 Q130,200 240,210 L240,360 L150,280 Q115,240 115,210" fill="#dbeafe" opacity="0.4" />
-          <text x="180" y="270" textAnchor="middle" fontSize="9" fill="#1e40af" fontWeight="bold">Rechter</text>
-          <text x="180" y="283" textAnchor="middle" fontSize="9" fill="#1e40af" fontWeight="bold">Ventrikel</text>
+          <text x="180" y="270" textAnchor="middle" fontSize="13" fill="#1e40af" fontWeight="bold">Rechter</text>
+          <text x="180" y="283" textAnchor="middle" fontSize="13" fill="#1e40af" fontWeight="bold">Ventrikel</text>
         </g>
 
         {/* ===== LEFT VENTRICLE ===== */}
         <g className="cursor-pointer" onMouseEnter={() => hover(structures[1])} onMouseLeave={() => hover(null)}>
           <path d="M240,210 Q350,200 365,210 Q365,240 330,280 L240,360 Z" fill="#fecaca" opacity="0.4" />
-          <text x="300" y="270" textAnchor="middle" fontSize="9" fill="#dc2626" fontWeight="bold">Linker</text>
-          <text x="300" y="283" textAnchor="middle" fontSize="9" fill="#dc2626" fontWeight="bold">Ventrikel</text>
+          <text x="300" y="270" textAnchor="middle" fontSize="13" fill="#dc2626" fontWeight="bold">Linker</text>
+          <text x="300" y="283" textAnchor="middle" fontSize="13" fill="#dc2626" fontWeight="bold">Ventrikel</text>
         </g>
 
         {/* ===== VALVES ===== */}
@@ -127,7 +127,7 @@ export default function HeartAnatomy() {
           <g className="cursor-pointer" onMouseEnter={() => hover(structures[11])} onMouseLeave={() => hover(null)}>
             <ellipse cx="280" cy="80" rx="10" ry="5" fill="#fbbf24" opacity="0.7" stroke="#d97706" strokeWidth="1" />
           </g>
-          <text x="340" y="8" textAnchor="middle" fontSize="8" fill="#dc2626" fontWeight="bold">Aorta</text>
+          <text x="340" y="8" textAnchor="middle" fontSize="13" fill="#dc2626" fontWeight="bold">Aorta</text>
           <polygon points="396,50 404,50 400,58" fill="#ef4444" />
         </g>
 
@@ -144,11 +144,11 @@ export default function HeartAnatomy() {
         {/* Legend */}
         <rect x="10" y="410" width="460" height="25" rx="6" fill="#f0fdfa" stroke="#14b8a6" strokeWidth="1" />
         <circle cx="50" cy="422" r="6" fill="#93c5fd" stroke="#3b82f6" strokeWidth="1" />
-        <text x="62" y="426" fontSize="8" fill="#115e59">Sauerstoffarmes Blut</text>
+        <text x="62" y="426" fontSize="13" fill="#115e59">Sauerstoffarmes Blut</text>
         <circle cx="230" cy="422" r="6" fill="#fca5a5" stroke="#ef4444" strokeWidth="1" />
-        <text x="242" y="426" fontSize="8" fill="#115e59">Sauerstoffreiches Blut</text>
+        <text x="242" y="426" fontSize="13" fill="#115e59">Sauerstoffreiches Blut</text>
         <ellipse cx="400" cy="422" rx="10" ry="5" fill="#fbbf24" opacity="0.7" stroke="#d97706" strokeWidth="1" />
-        <text x="416" y="426" fontSize="8" fill="#115e59">Klappe</text>
+        <text x="416" y="426" fontSize="13" fill="#115e59">Klappe</text>
       </svg>
 
       {active && (

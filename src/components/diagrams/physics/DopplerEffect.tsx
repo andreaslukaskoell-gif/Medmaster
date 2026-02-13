@@ -10,7 +10,7 @@ export default function DopplerEffect() {
           </marker>
         </defs>
 
-        <text x="240" y="22" textAnchor="middle" fontSize="12" fill="#0f766e" fontWeight="bold">Doppler-Effekt</text>
+        <text x="240" y="22" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Doppler-Effekt</text>
 
         {/* Background */}
         <rect x="20" y="35" width="420" height="200" rx="8" fill="#f9fafb" stroke="#e5e7eb" strokeWidth="1" />
@@ -61,7 +61,7 @@ export default function DopplerEffect() {
 
         {/* Movement direction */}
         <line x1="280" y1="140" x2="320" y2="140" stroke="#0d9488" strokeWidth="2.5" markerEnd="url(#arrowDop)" />
-        <text x="300" y="133" textAnchor="middle" fontSize="8" fill="#0d9488" fontWeight="bold">Bewegungsrichtung</text>
+        <text x="300" y="133" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Bewegungsrichtung</text>
 
         {/* Observer 1 (in front) */}
         <g>
@@ -92,14 +92,14 @@ export default function DopplerEffect() {
 
         {/* Frequency comparison */}
         <rect x="50" y="250" width="170" height="55" rx="6" fill="#f0fdfa" stroke="#99f6e4" strokeWidth="1" />
-        <text x="135" y="268" textAnchor="middle" fontSize="9" fill="#0f766e" fontWeight="bold">Annäherung (A)</text>
-        <text x="60" y="282" fontSize="8" fill="#374151">Höhere Frequenz empfangen</text>
-        <text x="60" y="294" fontSize="8" fill="#374151">Höherer Ton wahrgenommen</text>
+        <text x="135" y="268" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Annäherung (A)</text>
+        <text x="60" y="282" fontSize="13" fill="#374151">Höhere Frequenz empfangen</text>
+        <text x="60" y="294" fontSize="13" fill="#374151">Höherer Ton wahrgenommen</text>
 
         <rect x="240" y="250" width="170" height="55" rx="6" fill="#fef2f2" stroke="#fca5a5" strokeWidth="1" />
-        <text x="325" y="268" textAnchor="middle" fontSize="9" fill="#ef4444" fontWeight="bold">Entfernung (B)</text>
-        <text x="250" y="282" fontSize="8" fill="#374151">Niedrigere Frequenz empfangen</text>
-        <text x="250" y="294" fontSize="8" fill="#374151">Tieferer Ton wahrgenommen</text>
+        <text x="325" y="268" textAnchor="middle" fontSize="13" fill="#ef4444" fontWeight="bold">Entfernung (B)</text>
+        <text x="250" y="282" fontSize="13" fill="#374151">Niedrigere Frequenz empfangen</text>
+        <text x="250" y="294" fontSize="13" fill="#374151">Tieferer Ton wahrgenommen</text>
       </svg>
 
       <div className="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-3">

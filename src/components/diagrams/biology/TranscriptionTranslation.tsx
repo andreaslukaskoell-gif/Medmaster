@@ -22,7 +22,7 @@ export default function TranscriptionTranslation() {
       <svg viewBox="0 0 480 400" className="w-full max-w-xl mx-auto">
         {/* ===== SECTION 1: TRANSKRIPTION ===== */}
         <rect x="10" y="10" width="460" height="165" rx="10" fill="none" stroke="#0d9488" strokeWidth="1.5" strokeDasharray="6 3" />
-        <text x="240" y="30" textAnchor="middle" fontSize="12" fill="#0d9488" fontWeight="bold">Transkription (im Zellkern)</text>
+        <text x="240" y="30" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Transkription (im Zellkern)</text>
 
         {/* DNA double strand */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[0])} onMouseLeave={() => setActive(null)}>
@@ -64,7 +64,7 @@ export default function TranscriptionTranslation() {
           {["A", "U", "G", "C", "A", "G", "U", "A", "C"].map((base, i) => (
             <text key={`mrna-base-${i}`} x={260 + i * 15} y={118 + (i % 2) * 6} fontSize="7" fill="#f97316" fontWeight="bold">{base}</text>
           ))}
-          <text x="330" y="138" textAnchor="middle" fontSize="8" fill="#f97316" fontWeight="bold">mRNA (5&apos;→3&apos;)</text>
+          <text x="330" y="138" textAnchor="middle" fontSize="13" fill="#f97316" fontWeight="bold">mRNA (5&apos;→3&apos;)</text>
         </g>
 
         {/* Direction arrow */}
@@ -79,7 +79,7 @@ export default function TranscriptionTranslation() {
 
         {/* ===== SECTION 2: TRANSLATION ===== */}
         <rect x="10" y="205" width="460" height="185" rx="10" fill="none" stroke="#0d9488" strokeWidth="1.5" strokeDasharray="6 3" />
-        <text x="240" y="225" textAnchor="middle" fontSize="12" fill="#0d9488" fontWeight="bold">Translation (am Ribosom)</text>
+        <text x="240" y="225" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Translation (am Ribosom)</text>
 
         {/* mRNA strand */}
         <g className="cursor-pointer" onMouseEnter={() => setActive(parts[2])} onMouseLeave={() => setActive(null)}>
@@ -104,7 +104,7 @@ export default function TranscriptionTranslation() {
           {/* Small subunit */}
           <ellipse cx="220" cy="315" rx="45" ry="15" fill="#ccfbf1" opacity="0.6" stroke="#0d9488" strokeWidth="1.5" />
           <text x="220" y="318" textAnchor="middle" fontSize="7" fill="#115e59">Kleine UE</text>
-          <text x="220" y="340" textAnchor="middle" fontSize="8" fill="#0d9488" fontWeight="bold">Ribosom</text>
+          <text x="220" y="340" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Ribosom</text>
         </g>
 
         {/* tRNAs */}

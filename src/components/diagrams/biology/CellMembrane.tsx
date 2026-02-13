@@ -40,9 +40,9 @@ export default function CellMembrane() {
 
       <svg viewBox="0 0 500 310" className="w-full max-w-xl mx-auto">
         {/* Extrazellular label */}
-        <text x="250" y="18" textAnchor="middle" fontSize="10" fill="#0d9488" fontWeight="bold">Extrazellulärer Raum</text>
+        <text x="250" y="18" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Extrazellulärer Raum</text>
         {/* Intrazellular label */}
-        <text x="250" y="300" textAnchor="middle" fontSize="10" fill="#0d9488" fontWeight="bold">Intrazellulärer Raum (Zytoplasma)</text>
+        <text x="250" y="300" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Intrazellulärer Raum (Zytoplasma)</text>
 
         {/* Hydrophilic / Hydrophobic labels */}
         <text x="470" y="98" textAnchor="end" fontSize="7" fill="#14b8a6">hydrophil</text>

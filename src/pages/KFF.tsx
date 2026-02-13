@@ -6,16 +6,15 @@ import { Badge } from "@/components/ui/badge";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import {
   kffStrategyGuide,
-  implikationQuestions,
 } from "@/data/kffData";
-import type { ImplikationQuestion } from "@/data/kffData";
 import {
   generateZahlenfolgenSet,
   generateAllergyCards,
   generateMemoryQuestions,
   generateWortflüssigkeitSet,
+  generateSyllogismSet,
 } from "@/data/kffGenerators";
-import type { ZahlenfolgeGenerated, AllergyCard, MemoryQuestion, WortflüssigkeitQuestion } from "@/data/kffGenerators";
+import type { ZahlenfolgeGenerated, AllergyCard, MemoryQuestion, WortflüssigkeitQuestion, SyllogismQuestion } from "@/data/kffGenerators";
 import { figurenAufgaben, figurenStrategyGuide } from "@/data/figurenData";
 import type { FZAufgabe } from "@/data/figurenData";
 import { useStore } from "@/store/useStore";
@@ -121,7 +120,8 @@ export default function KFF() {
     {
       id: "implikationen" as const,
       title: "Implikationen erkennen",
-      desc: "Bestimme ob logische Schlüsse gültig sind.",
+      desc: "Kategorische Syllogismen: Alle/Einige/Kein — finde die korrekte Schlussfolgerung (A-E).",
+      badge: "Generiert",
       strategyKey: "implikationen" as StrategyKey,
       startView: "implikationen" as KffView,
       color: "bg-purple-100 dark:bg-purple-900/30",
@@ -554,33 +554,33 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
 }
 
 // ==========================================
-// IMPLIKATIONEN (kept static)
+// IMPLIKATIONEN (Kategorische Syllogismen)
 // ==========================================
 
 function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
+  const [difficulty, setDifficulty] = useState<"leicht" | "mittel" | "schwer">("mittel");
   const [questionCount, setQuestionCount] = useState(10);
-  const [questions, setQuestions] = useState<ImplikationQuestion[]>([]);
+  const [questions, setQuestions] = useState<SyllogismQuestion[]>([]);
   const [index, setIndex] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, boolean | null>>({});
+  const [answers, setAnswers] = useState<Record<string, number>>({});
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
   const startQuiz = () => {
-    const shuffled = [...implikationQuestions].sort(() => Math.random() - 0.5);
-    setQuestions(shuffled.slice(0, questionCount));
+    setQuestions(generateSyllogismSet(questionCount, difficulty));
     setIndex(0);
     setAnswers({});
     setPhase("quiz");
   };
 
-  const allAnswered = questions.every((q) => answers[q.id] !== undefined && answers[q.id] !== null);
+  const allAnswered = questions.every((q) => answers[q.id] !== undefined);
 
   const handleSubmit = () => {
-    const score = questions.filter((q) => answers[q.id] === q.isValid).length;
+    const score = questions.filter((q) => answers[q.id] === q.correctOption).length;
     saveQuizResult({
-      id: `kff-imp-${Date.now()}`, type: "kff", subject: "Implikationen", score, total: questions.length,
+      id: `kff-imp-${Date.now()}`, type: "kff", subject: `Implikationen (${difficulty})`, score, total: questions.length,
       date: new Date().toLocaleDateString("de-AT"),
-      answers: questions.map((q) => ({ questionId: q.id, selectedAnswer: String(answers[q.id]), correct: answers[q.id] === q.isValid })),
+      answers: questions.map((q) => ({ questionId: q.id, selectedAnswer: q.options[answers[q.id]] || "", correct: answers[q.id] === q.correctOption })),
     });
     addXP(score * 10);
     checkStreak();
@@ -591,39 +591,42 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
   if (phase === "setup") {
     return (
       <div className="max-w-2xl mx-auto space-y-6">
-        <Button variant="ghost" size="sm" onClick={onBack}>
-          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
-        </Button>
+        <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Implikationen erkennen</h1>
-        <Card>
-          <CardContent className="p-6 space-y-6">
-            <div>
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">Anzahl Fragen</label>
-              <div className="flex gap-3">
-                {[10, 15, 20, 30].map((c) => (
-                  <button key={c} onClick={() => setQuestionCount(c)}
-                    className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
-                      questionCount === c
-                        ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                        : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
-                    }`}>
-                    {c}
-                  </button>
-                ))}
-              </div>
-              <p className="text-xs text-muted mt-2">{implikationQuestions.length} Fragen im Pool</p>
+        <p className="text-sm text-muted">Kategorische Syllogismen: Zwei Prämissen mit "Alle" / "Einige" / "Kein" — welche Schlussfolgerung ist korrekt?</p>
+        <Card><CardContent className="p-6 space-y-6">
+          <div>
+            <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">Schwierigkeit</label>
+            <div className="flex gap-3">
+              {(["leicht", "mittel", "schwer"] as const).map((d) => (
+                <button key={d} onClick={() => setDifficulty(d)}
+                  className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer capitalize ${
+                    difficulty === d ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                  }`}>{d}</button>
+              ))}
             </div>
-            <Button className="w-full" size="lg" onClick={startQuiz}>
-              <Shuffle className="w-5 h-5 mr-2" /> {questionCount} Fragen starten
-            </Button>
-          </CardContent>
-        </Card>
+          </div>
+          <div>
+            <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">Anzahl Fragen</label>
+            <div className="flex gap-3">
+              {[10, 15, 20].map((c) => (
+                <button key={c} onClick={() => setQuestionCount(c)}
+                  className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
+                    questionCount === c ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                  }`}>{c}</button>
+              ))}
+            </div>
+          </div>
+          <Button className="w-full" size="lg" onClick={startQuiz}>
+            <Shuffle className="w-5 h-5 mr-2" /> {questionCount} Syllogismen generieren
+          </Button>
+        </CardContent></Card>
       </div>
     );
   }
 
   if (phase === "result") {
-    const score = questions.filter((q) => answers[q.id] === q.isValid).length;
+    const score = questions.filter((q) => answers[q.id] === q.correctOption).length;
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
@@ -633,23 +636,28 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
           <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{score * 10} XP</p>
         </CardContent></Card>
         {questions.map((q, i) => {
-          const correct = answers[q.id] === q.isValid;
+          const correct = answers[q.id] === q.correctOption;
           return (
             <Card key={q.id} className={`border-l-4 ${correct ? "border-l-green-500" : "border-l-red-500"}`}>
               <CardContent className="p-5">
                 <div className="flex items-center gap-2 mb-2">
                   {correct ? <CheckCircle2 className="w-5 h-5 text-green-500" /> : <XCircle className="w-5 h-5 text-red-500" />}
                   <span className="font-medium text-sm">{i + 1}.</span>
+                  <Badge variant="info" className="text-[10px]">{q.difficulty}</Badge>
                 </div>
-                <p className="text-sm text-gray-700 dark:text-gray-300 ml-7 mb-1"><strong>Prämisse:</strong> {q.premise}</p>
-                <p className="text-sm text-gray-700 dark:text-gray-300 ml-7 mb-1"><strong>Schluss:</strong> {q.conclusion}</p>
-                <p className="text-sm ml-7">Richtig: <Badge variant={q.isValid ? "success" : "danger"}>{q.isValid ? "Gültig" : "Ungültig"}</Badge></p>
+                <p className="text-sm text-gray-700 dark:text-gray-300 ml-7 mb-1"><strong>Prämisse 1:</strong> {q.premise1}</p>
+                <p className="text-sm text-gray-700 dark:text-gray-300 ml-7 mb-1"><strong>Prämisse 2:</strong> {q.premise2}</p>
+                {!correct && answers[q.id] !== undefined && <p className="text-sm text-red-600 dark:text-red-400 ml-7">Deine Antwort: {q.options[answers[q.id]]}</p>}
+                <p className="text-sm text-green-700 dark:text-green-400 ml-7">Richtig: {q.options[q.correctOption]}</p>
                 <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg"><p className="text-xs text-blue-700 dark:text-blue-400">{q.explanation}</p></div>
               </CardContent>
             </Card>
           );
         })}
-        <div className="flex justify-center"><Button onClick={onBack}>Zurück</Button></div>
+        <div className="flex justify-center gap-3">
+          <Button variant="outline" onClick={onBack}>Zurück</Button>
+          <Button onClick={() => setPhase("setup")}><Shuffle className="w-4 h-4 mr-1" /> Neue Fragen</Button>
+        </div>
       </div>
     );
   }
@@ -660,26 +668,29 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen</Button>
-        <span className="text-sm text-muted">Frage {index + 1} von {questions.length}</span>
+        <div className="flex items-center gap-2">
+          <Badge variant="info">{difficulty}</Badge>
+          <span className="text-sm text-muted">Frage {index + 1} von {questions.length}</span>
+        </div>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
         <div className="bg-primary-600 h-2 rounded-full transition-all" style={{ width: `${((index + 1) / questions.length) * 100}%` }} />
       </div>
       <Card><CardContent className="p-6">
-        <p className="text-sm text-muted mb-2">Prämisse:</p>
-        <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-4">{q.premise}</p>
-        <p className="text-sm text-muted mb-2">Schlussfolgerung:</p>
-        <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">{q.conclusion}</p>
-        <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">Ist dieser Schluss logisch gültig?</p>
-        <div className="flex gap-3">
-          <button onClick={() => setAnswers((p) => ({ ...p, [q.id]: true }))}
-            className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${answers[q.id] === true ? "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"}`}>
-            Gültig
-          </button>
-          <button onClick={() => setAnswers((p) => ({ ...p, [q.id]: false }))}
-            className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${answers[q.id] === false ? "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"}`}>
-            Ungültig
-          </button>
+        <p className="text-sm text-muted mb-2">Prämisse 1:</p>
+        <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-4 border-l-4 border-purple-400 pl-3">{q.premise1}</p>
+        <p className="text-sm text-muted mb-2">Prämisse 2:</p>
+        <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6 border-l-4 border-purple-400 pl-3">{q.premise2}</p>
+        <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">Welche Schlussfolgerung ist korrekt?</p>
+        <div className="space-y-2">
+          {q.options.map((opt, oi) => (
+            <button key={oi} onClick={() => setAnswers((p) => ({ ...p, [q.id]: oi }))}
+              className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
+                answers[q.id] === oi ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+              }`}>
+              <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>{opt}
+            </button>
+          ))}
         </div>
       </CardContent></Card>
       <div className="flex justify-between">

@@ -33,12 +33,12 @@ export default function PHScale() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">pH-Skala</h4>
       <p className="text-xs text-muted">Klicke auf eine Substanz für Details.</p>
       <svg viewBox="0 0 460 280" className="w-full max-w-lg mx-auto">
-        <text x="230" y="22" textAnchor="middle" fontSize="12" fill="#0f766e" fontWeight="bold">pH-Skala (0 - 14)</text>
+        <text x="230" y="22" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">pH-Skala (0 - 14)</text>
 
         {/* Section labels */}
-        <text x={SCALE_X + SCALE_W * 0.21} y="50" textAnchor="middle" fontSize="10" fill="#ef4444" fontWeight="bold">Sauer</text>
-        <text x={SCALE_X + SCALE_W * 0.5} y="50" textAnchor="middle" fontSize="10" fill="#22c55e" fontWeight="bold">Neutral</text>
-        <text x={SCALE_X + SCALE_W * 0.79} y="50" textAnchor="middle" fontSize="10" fill="#8b5cf6" fontWeight="bold">Basisch</text>
+        <text x={SCALE_X + SCALE_W * 0.21} y="50" textAnchor="middle" fontSize="13" fill="#ef4444" fontWeight="bold">Sauer</text>
+        <text x={SCALE_X + SCALE_W * 0.5} y="50" textAnchor="middle" fontSize="13" fill="#22c55e" fontWeight="bold">Neutral</text>
+        <text x={SCALE_X + SCALE_W * 0.79} y="50" textAnchor="middle" fontSize="13" fill="#8b5cf6" fontWeight="bold">Basisch</text>
 
         {/* Arrows */}
         <line x1={SCALE_X} y1="55" x2={SCALE_X + SCALE_W * 0.42} y2="55" stroke="#ef4444" strokeWidth="1.5" />
@@ -47,8 +47,8 @@ export default function PHScale() {
         <polygon points={`${SCALE_X + SCALE_W},52 ${SCALE_X + SCALE_W},58 ${SCALE_X + SCALE_W + 5},55`} fill="#8b5cf6" />
 
         {/* H+ / OH- labels */}
-        <text x={SCALE_X + 15} y="75" fontSize="8" fill="#ef4444">H\u207A-Konzentration hoch</text>
-        <text x={SCALE_X + SCALE_W - 15} y="75" textAnchor="end" fontSize="8" fill="#8b5cf6">OH\u207B-Konzentration hoch</text>
+        <text x={SCALE_X + 15} y="75" fontSize="13" fill="#ef4444">H\u207A-Konzentration hoch</text>
+        <text x={SCALE_X + SCALE_W - 15} y="75" textAnchor="end" fontSize="13" fill="#8b5cf6">OH\u207B-Konzentration hoch</text>
 
         {/* pH Scale bar */}
         {phColors.map((color, i) => (
@@ -71,7 +71,7 @@ export default function PHScale() {
             x={SCALE_X + i * UNIT_W + UNIT_W / 2}
             y={SCALE_Y + SCALE_H + 14}
             textAnchor="middle"
-            fontSize="8"
+            fontSize="13"
             fill="#374151"
             fontWeight="bold"
           >
@@ -116,8 +116,8 @@ export default function PHScale() {
         })}
 
         {/* Formula */}
-        <text x="230" y="248" textAnchor="middle" fontSize="9" fill="#0f766e" fontWeight="bold">pH = \u2013 log\u2081\u2080 [H\u207A]</text>
-        <text x="230" y="262" textAnchor="middle" fontSize="8" fill="#6b7280">pH + pOH = 14 (bei 25\u00B0C)</text>
+        <text x="230" y="248" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">pH = \u2013 log\u2081\u2080 [H\u207A]</text>
+        <text x="230" y="262" textAnchor="middle" fontSize="13" fill="#6b7280">pH + pOH = 14 (bei 25\u00B0C)</text>
       </svg>
 
       {activeSubstance && (

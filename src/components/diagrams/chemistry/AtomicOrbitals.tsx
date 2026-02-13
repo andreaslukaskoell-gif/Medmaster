@@ -85,8 +85,8 @@ export default function AtomicOrbitals() {
           <ellipse cx="213" cy="92" rx="14" ry="32" fill="url(#pGradNeg)" stroke={active === "px" ? "#115e59" : "#0d9488"} strokeWidth={active === "px" ? 2.5 : 1.5} opacity="0.85" />
           <circle cx="195" cy="92" r="3" fill="#115e59" />
           {/* Phase signs inside lobes – keep white for contrast on coloured fill */}
-          <text x="175" y="85" textAnchor="middle" fontSize="10" fill="#fff" fontWeight="bold" stroke="none">+</text>
-          <text x="215" y="85" textAnchor="middle" fontSize="10" fill="#fff" fontWeight="bold" stroke="none">–</text>
+          <text x="175" y="85" textAnchor="middle" fontSize="13" fill="#fff" fontWeight="bold" stroke="none">+</text>
+          <text x="215" y="85" textAnchor="middle" fontSize="13" fill="#fff" fontWeight="bold" stroke="none">–</text>
           {/* x-axis */}
           <line x1="155" y1="92" x2="235" y2="92" stroke="#6b7280" strokeWidth="0.5" strokeDasharray="2 2" />
           {/* Axis label moved outside orbital, with leader line */}
@@ -172,10 +172,10 @@ export default function AtomicOrbitals() {
           <line x1="270" y1="240" x2="270" y2="230" stroke="#9ca3af" strokeWidth="0.8" />
           <text x="276" y="228" fontSize="13" {...halo}>y</text>
           {/* Phase signs inside lobes – keep white */}
-          <text x="248" y="262" fontSize="10" fill="#fff" fontWeight="bold" stroke="none">+</text>
-          <text x="288" y="262" fontSize="10" fill="#fff" fontWeight="bold" stroke="none">–</text>
-          <text x="248" y="298" fontSize="10" fill="#fff" fontWeight="bold" stroke="none">–</text>
-          <text x="288" y="298" fontSize="10" fill="#fff" fontWeight="bold" stroke="none">+</text>
+          <text x="248" y="262" fontSize="13" fill="#fff" fontWeight="bold" stroke="none">+</text>
+          <text x="288" y="262" fontSize="13" fill="#fff" fontWeight="bold" stroke="none">–</text>
+          <text x="248" y="298" fontSize="13" fill="#fff" fontWeight="bold" stroke="none">–</text>
+          <text x="288" y="298" fontSize="13" fill="#fff" fontWeight="bold" stroke="none">+</text>
           {/* Leader line to labels below */}
           <line x1="270" y1="310" x2="270" y2="332" stroke="#9ca3af" strokeWidth="1" />
           <text x="270" y="348" textAnchor="middle" fontSize="14" fontWeight="600" {...halo}>

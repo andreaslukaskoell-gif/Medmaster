@@ -64,9 +64,9 @@ export default function ActionPotential() {
         <line x1={graphL} y1={graphT - 10} x2={graphL} y2={graphB + 5} stroke="#115e59" strokeWidth="1.5" />
         <line x1={graphL - 5} y1={graphB} x2={graphR + 10} y2={graphB} stroke="#115e59" strokeWidth="1.5" />
         {/* Y-axis label */}
-        <text x="20" y={(graphT + graphB) / 2} textAnchor="middle" fontSize="9" fill="#0d9488" fontWeight="bold" transform={`rotate(-90, 20, ${(graphT + graphB) / 2})`}>Membranpotential (mV)</text>
+        <text x="20" y={(graphT + graphB) / 2} textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold" transform={`rotate(-90, 20, ${(graphT + graphB) / 2})`}>Membranpotential (mV)</text>
         {/* X-axis label */}
-        <text x={(graphL + graphR) / 2} y={graphB + 30} textAnchor="middle" fontSize="9" fill="#0d9488" fontWeight="bold">Zeit (ms)</text>
+        <text x={(graphL + graphR) / 2} y={graphB + 30} textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">Zeit (ms)</text>
 
         {/* Threshold line */}
         <line x1={graphL} y1={mvToY(-55)} x2={graphR} y2={mvToY(-55)} stroke="#f97316" strokeWidth="1" strokeDasharray="6 3" opacity="0.7" />

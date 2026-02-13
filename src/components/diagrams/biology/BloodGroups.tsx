@@ -44,7 +44,7 @@ export default function BloodGroups() {
         {/* Table header */}
         <rect x={tableX} y={tableY} width={totalW} height={headerH} rx="6" fill="#0d9488" />
         {cols.map((col, i) => (
-          <text key={`hdr-${i}`} x={colX(i) + colWidths[i] / 2} y={tableY + 22} textAnchor="middle" fontSize="8" fill="white" fontWeight="bold">{col}</text>
+          <text key={`hdr-${i}`} x={colX(i) + colWidths[i] / 2} y={tableY + 22} textAnchor="middle" fontSize="13" fill="white" fontWeight="bold">{col}</text>
         ))}
 
         {/* Table rows */}
@@ -66,27 +66,27 @@ export default function BloodGroups() {
               {/* Blood group with erythrocyte icon */}
               <g>
                 <circle cx={colX(0) + 20} cy={y + 28} r="15" fill="#fecaca" stroke="#ef4444" strokeWidth="1.5" />
-                <text x={colX(0) + 20} y={y + 32} textAnchor="middle" fontSize="12" fill="#dc2626" fontWeight="bold">{group.label}</text>
-                <text x={colX(0) + 50} y={y + 32} textAnchor="start" fontSize="8" fill="#115e59" fontWeight="bold">{group.label}</text>
+                <text x={colX(0) + 20} y={y + 32} textAnchor="middle" fontSize="13" fill="#dc2626" fontWeight="bold">{group.label}</text>
+                <text x={colX(0) + 50} y={y + 32} textAnchor="start" fontSize="13" fill="#115e59" fontWeight="bold">{group.label}</text>
               </g>
 
               {/* Antigens */}
               <g>
                 {group.antigens === "Keine" ? (
-                  <text x={colX(1) + colWidths[1] / 2} y={y + 30} textAnchor="middle" fontSize="8" fill="#6b7280">—</text>
+                  <text x={colX(1) + colWidths[1] / 2} y={y + 30} textAnchor="middle" fontSize="13" fill="#6b7280">—</text>
                 ) : (
                   <>
                     {group.antigens.includes("A") && (
                       <rect x={colX(1) + 10} y={y + 15} width="26" height="20" rx="4" fill="#dbeafe" stroke="#3b82f6" strokeWidth="1" />
                     )}
                     {group.antigens.includes("A") && (
-                      <text x={colX(1) + 23} y={y + 30} textAnchor="middle" fontSize="9" fill="#1e40af" fontWeight="bold">A</text>
+                      <text x={colX(1) + 23} y={y + 30} textAnchor="middle" fontSize="13" fill="#1e40af" fontWeight="bold">A</text>
                     )}
                     {group.antigens.includes("B") && (
                       <rect x={colX(1) + (group.antigens.includes("A") ? 42 : 10)} y={y + 15} width="26" height="20" rx="4" fill="#fce7f3" stroke="#ec4899" strokeWidth="1" />
                     )}
                     {group.antigens.includes("B") && (
-                      <text x={colX(1) + (group.antigens.includes("A") ? 55 : 23)} y={y + 30} textAnchor="middle" fontSize="9" fill="#be185d" fontWeight="bold">B</text>
+                      <text x={colX(1) + (group.antigens.includes("A") ? 55 : 23)} y={y + 30} textAnchor="middle" fontSize="13" fill="#be185d" fontWeight="bold">B</text>
                     )}
                   </>
                 )}
@@ -95,17 +95,17 @@ export default function BloodGroups() {
               {/* Antibodies */}
               <g>
                 {group.antibodies === "Keine" ? (
-                  <text x={colX(2) + colWidths[2] / 2} y={y + 30} textAnchor="middle" fontSize="8" fill="#6b7280">—</text>
+                  <text x={colX(2) + colWidths[2] / 2} y={y + 30} textAnchor="middle" fontSize="13" fill="#6b7280">—</text>
                 ) : (
-                  <text x={colX(2) + colWidths[2] / 2} y={y + 30} textAnchor="middle" fontSize="8" fill="#115e59" fontWeight="bold">{group.antibodies}</text>
+                  <text x={colX(2) + colWidths[2] / 2} y={y + 30} textAnchor="middle" fontSize="13" fill="#115e59" fontWeight="bold">{group.antibodies}</text>
                 )}
               </g>
 
               {/* Can donate to */}
-              <text x={colX(3) + colWidths[3] / 2} y={y + 30} textAnchor="middle" fontSize="8" fill="#0f766e" fontWeight="bold">{group.canDonateTo.join(", ")}</text>
+              <text x={colX(3) + colWidths[3] / 2} y={y + 30} textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">{group.canDonateTo.join(", ")}</text>
 
               {/* Can receive from */}
-              <text x={colX(4) + colWidths[4] / 2} y={y + 30} textAnchor="middle" fontSize="8" fill="#0d9488" fontWeight="bold">{group.canReceiveFrom.join(", ")}</text>
+              <text x={colX(4) + colWidths[4] / 2} y={y + 30} textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">{group.canReceiveFrom.join(", ")}</text>
             </g>
           );
         })}
@@ -119,8 +119,8 @@ export default function BloodGroups() {
         ))}
 
         {/* Key rules */}
-        <text x="240" y={tableY + headerH + 4 * rowH + 22} textAnchor="middle" fontSize="8" fill="#115e59" fontWeight="bold">Regel: Antikörper im Plasma greifen fremde Antigene an → Agglutination!</text>
-        <text x="240" y={tableY + headerH + 4 * rowH + 38} textAnchor="middle" fontSize="8" fill="#0d9488">0 = Universalspender | AB = Universalempfänger</text>
+        <text x="240" y={tableY + headerH + 4 * rowH + 22} textAnchor="middle" fontSize="13" fill="#115e59" fontWeight="bold">Regel: Antikörper im Plasma greifen fremde Antigene an → Agglutination!</text>
+        <text x="240" y={tableY + headerH + 4 * rowH + 38} textAnchor="middle" fontSize="13" fill="#0d9488">0 = Universalspender | AB = Universalempfänger</text>
 
         {/* Rhesus note */}
         <rect x={tableX} y={tableY + headerH + 4 * rowH + 48} width={totalW} height="25" rx="6" fill="#f0fdfa" stroke="#14b8a6" strokeWidth="1" />

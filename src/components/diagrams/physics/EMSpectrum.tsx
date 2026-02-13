@@ -52,11 +52,11 @@ export default function EMSpectrum() {
           </linearGradient>
         </defs>
 
-        <text x="230" y="22" textAnchor="middle" fontSize="12" fill="#0f766e" fontWeight="bold">Elektromagnetisches Spektrum</text>
+        <text x="230" y="22" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Elektromagnetisches Spektrum</text>
 
         {/* Energy / Frequency arrows */}
-        <text x="30" y="50" fontSize="8" fill="#7c3aed" fontWeight="bold">Hohe Energie</text>
-        <text x="370" y="50" fontSize="8" fill="#eab308" fontWeight="bold">Niedrige Energie</text>
+        <text x="30" y="50" fontSize="13" fill="#7c3aed" fontWeight="bold">Hohe Energie</text>
+        <text x="370" y="50" fontSize="13" fill="#eab308" fontWeight="bold">Niedrige Energie</text>
         <line x1="100" y1="47" x2="365" y2="47" stroke="#6b7280" strokeWidth="1" />
         <polygon points="100,44 100,50 93,47" fill="#6b7280" />
         <polygon points="365,44 365,50 372,47" fill="#6b7280" />
@@ -112,7 +112,7 @@ export default function EMSpectrum() {
         })}
 
         {/* Visible light expanded view */}
-        <text x="230" y="190" textAnchor="middle" fontSize="9" fill="#0f766e" fontWeight="bold">Sichtbares Licht (380 - 780 nm)</text>
+        <text x="230" y="190" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Sichtbares Licht (380 - 780 nm)</text>
 
         {/* Rainbow bar */}
         <defs>
@@ -157,7 +157,7 @@ export default function EMSpectrum() {
 
         {/* Wave equation */}
         <rect x="120" y="252" width="220" height="35" rx="6" fill="#f0fdfa" stroke="#99f6e4" strokeWidth="1" />
-        <text x="230" y="268" textAnchor="middle" fontSize="9" fill="#0f766e" fontWeight="bold">c = \u03BB \u00D7 f</text>
+        <text x="230" y="268" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">c = \u03BB \u00D7 f</text>
         <text x="230" y="280" textAnchor="middle" fontSize="7" fill="#6b7280">Lichtgeschwindigkeit c = 3 \u00D7 10\u2078 m/s</text>
       </svg>
 
