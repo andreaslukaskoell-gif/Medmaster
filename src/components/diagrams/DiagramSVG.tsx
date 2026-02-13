@@ -16,6 +16,20 @@ const ImmuneResponse = lazy(() => import("./biology/ImmuneResponse"));
 const MenstrualCycle = lazy(() => import("./biology/MenstrualCycle"));
 const BloodGroups = lazy(() => import("./biology/BloodGroups"));
 const PedigreeAnalysis = lazy(() => import("./biology/PedigreeAnalysis"));
+const CellCycle = lazy(() => import("./biology/CellCycle"));
+const MembraneTransport = lazy(() => import("./biology/MembraneTransport"));
+const BloodCirculation = lazy(() => import("./biology/BloodCirculation"));
+const RespiratorySystem = lazy(() => import("./biology/RespiratorySystem"));
+const DigestiveSystem = lazy(() => import("./biology/DigestiveSystem"));
+const NervousSystem = lazy(() => import("./biology/NervousSystem"));
+const HormoneSystem = lazy(() => import("./biology/HormoneSystem"));
+const SenseOrgans = lazy(() => import("./biology/SenseOrgans"));
+const ProkaryoteVsEukaryote = lazy(() => import("./biology/ProkaryoteVsEukaryote"));
+const EndomembraneSystem = lazy(() => import("./biology/EndomembraneSystem"));
+const Sarcomere = lazy(() => import("./biology/Sarcomere"));
+const BloodComponents = lazy(() => import("./biology/BloodComponents"));
+const DoubleMembraneOrganelles = lazy(() => import("./biology/DoubleMembraneOrganelles"));
+const StemCells = lazy(() => import("./biology/StemCells"));
 
 const PeriodicTable = lazy(() => import("./chemistry/PeriodicTable"));
 const AtomicOrbitals = lazy(() => import("./chemistry/AtomicOrbitals"));
@@ -53,6 +67,20 @@ const DIAGRAM_MAP: Record<string, React.LazyExoticComponent<React.ComponentType>
   "menstrual-cycle": MenstrualCycle,
   "blood-groups": BloodGroups,
   "pedigree-analysis": PedigreeAnalysis,
+  "cell-cycle": CellCycle,
+  "membrane-transport": MembraneTransport,
+  "blutkreislauf": BloodCirculation,
+  "atmungssystem": RespiratorySystem,
+  "verdauungssystem": DigestiveSystem,
+  "nervensystem-übersicht": NervousSystem,
+  "hormonsystem": HormoneSystem,
+  "sinnesorgane": SenseOrgans,
+  "prokaryote-vs-eukaryote": ProkaryoteVsEukaryote,
+  "endomembrane-system": EndomembraneSystem,
+  "sarkomer": Sarcomere,
+  "blutbestandteile": BloodComponents,
+  "double-membrane-organelles": DoubleMembraneOrganelles,
+  "stem-cells": StemCells,
   "periodic-table": PeriodicTable,
   "atomic-orbitals": AtomicOrbitals,
   "ionic-bond": IonicBond,
