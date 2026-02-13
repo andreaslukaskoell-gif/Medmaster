@@ -4,6 +4,7 @@ import {
   Target, Flame, ArrowLeft, ArrowRight, CheckCircle2, XCircle,
   Send, Lightbulb, Zap, Trophy, RotateCcw, Play,
 } from "lucide-react";
+import { AiTutorChat, AiTutorButton } from "@/components/AiTutorChat";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -60,6 +61,7 @@ export default function SchwachstellenTrainer() {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [showResult, setShowResult] = useState(false);
   const [showTipp, setShowTipp] = useState<string | null>(null);
+  const [aiTutorQ, setAiTutorQ] = useState<{ question: typeof allBmsQuestions[0]; userAnswer: string } | null>(null);
 
   const [searchParams, setSearchParams] = useSearchParams();
   const adaptive = useAdaptiveStore();
@@ -281,6 +283,9 @@ export default function SchwachstellenTrainer() {
                 </CardContent>
               </Card>
             )}
+            {!isCorrect && (
+              <AiTutorButton onClick={() => setAiTutorQ({ question: q, userAnswer: userAnswer || "" })} />
+            )}
           </div>
         )}
 
@@ -300,6 +305,14 @@ export default function SchwachstellenTrainer() {
             </Button>
           )}
         </div>
+
+        {aiTutorQ && (
+          <AiTutorChat
+            question={aiTutorQ.question}
+            userAnswer={aiTutorQ.userAnswer}
+            onClose={() => setAiTutorQ(null)}
+          />
+        )}
       </div>
     );
   }

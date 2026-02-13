@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { ArrowLeft, ArrowRight, CheckCircle2, XCircle, Send, Flag, SkipForward } from "lucide-react";
+import { AiTutorChat, AiTutorButton } from "@/components/AiTutorChat";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -67,6 +68,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
+  const [aiTutorQ, setAiTutorQ] = useState<{ question: typeof questions[0]; userAnswer: string } | null>(null);
   const { addXP, checkStreak, saveQuizResult, logActivity, flaggedQuestions, toggleFlagQuestion, updateSpacedRepetition } = useStore();
   const { recordAnswer } = useAdaptiveStore();
 
@@ -241,6 +243,11 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
                       <p className="text-xs text-amber-700 dark:text-amber-400">{getStrategieTipp(q.id)}</p>
                     </div>
                   )}
+                  {!isCorrect && (
+                    <div className="ml-8">
+                      <AiTutorButton onClick={() => setAiTutorQ({ question: q, userAnswer })} />
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             );
@@ -250,6 +257,14 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
         <div className="flex justify-center pt-4">
           <Button onClick={onBack}>Zurück zu BMS</Button>
         </div>
+
+        {aiTutorQ && (
+          <AiTutorChat
+            question={aiTutorQ.question}
+            userAnswer={aiTutorQ.userAnswer}
+            onClose={() => setAiTutorQ(null)}
+          />
+        )}
       </div>
     );
   }

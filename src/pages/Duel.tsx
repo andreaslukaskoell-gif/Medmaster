@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { ArrowLeft, Swords, Play, Trophy, User, Bot, Clock, Zap, Target, Lightbulb } from "lucide-react";
+import { AiTutorChat, AiTutorButton } from "@/components/AiTutorChat";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -53,6 +54,7 @@ export default function Duel() {
   const [duel, setDuel] = useState<DuelState | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [showExplanation, setShowExplanation] = useState<string | null>(null);
+  const [aiTutorQ, setAiTutorQ] = useState<{ question: Question; userAnswer: string } | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval>>(null);
   const { addXP, checkStreak, saveQuizResult } = useStore();
   const { recordAnswer, getWeakestTopics, getAdaptiveQuestions, getMedATReadiness } = useAdaptiveStore();
@@ -359,6 +361,9 @@ export default function Duel() {
                             <p className="text-amber-700 dark:text-amber-400 text-xs">{tipp}</p>
                           </div>
                         )}
+                        {!playerCorrect && (
+                          <AiTutorButton onClick={() => setAiTutorQ({ question: q, userAnswer: duel.playerAnswers[q.id] || "" })} />
+                        )}
                       </div>
                     )}
                   </div>
@@ -374,6 +379,14 @@ export default function Duel() {
             </div>
           </CardContent>
         </Card>
+
+        {aiTutorQ && (
+          <AiTutorChat
+            question={aiTutorQ.question}
+            userAnswer={aiTutorQ.userAnswer}
+            onClose={() => setAiTutorQ(null)}
+          />
+        )}
       </div>
     );
   }
