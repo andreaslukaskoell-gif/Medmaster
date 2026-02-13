@@ -1,4 +1,6 @@
-// === Figuren zusammensetzen (FZ) - Puzzle Pieces Module ===
+// MedAT-authentic Figuren zusammensetzen
+// 30 Aufgaben, 8 Optionen (A-H), 13 offizielle Lösungsfiguren
+// Schwarze Teile (white fill, #1a1a1a stroke) auf weißem Hintergrund
 
 export interface FZPiece {
   path: string;
@@ -6,7 +8,7 @@ export interface FZPiece {
 }
 
 export interface FZOption {
-  id: string; // "a" through "e"
+  id: string;
   paths: string[];
   fill: string;
 }
@@ -20,688 +22,705 @@ export interface FZAufgabe {
   explanation: string;
 }
 
-// ---- Helper: teal shades for puzzle pieces ----
-const TEAL_SHADES = [
-  "#0d9488", // teal-600
-  "#14b8a6", // teal-500
-  "#2dd4bf", // teal-400
-  "#5eead4", // teal-300
-  "#99f6e4", // teal-200
-];
-
-// ---- 30 Aufgaben: 10 leicht (2-3 Teile), 12 mittel (3-4 Teile), 8 schwer (4-5 Teile) ----
-
 export const figurenAufgaben: FZAufgabe[] = [
-  // ============ LEICHT (7 Aufgaben, 2-3 Teile) ============
-
-  // 1 - Zwei Dreiecke bilden ein Quadrat
   {
     id: "fz-1",
-    difficulty: "leicht",
     pieces: [
-      { path: "M 10 10 L 110 10 L 10 110 Z", fill: TEAL_SHADES[0] },
-      { path: "M 20 20 L 120 120 L 120 20 Z", fill: TEAL_SHADES[1] },
+      { path: "M 60 55 L 94.6 75 A 40 40 0 0 1 25.4 75 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 40 20.4 A 40 40 0 0 1 100 55 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 49.6 93.6 A 40 40 0 0 1 31.7 26.7 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 30 30 L 170 30 L 140 170 L 60 170 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "b", paths: ["M 180 100 A 80 80 0 1 1 20 100 A 80 80 0 1 1 180 100 Z"], fill: "none" },
+      { id: "c", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "f", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
     ],
-    correctOptionId: "a",
-    explanation: "Zwei rechtwinklige Dreiecke gleicher Größe ergeben zusammengesetzt ein Quadrat (Option A).",
+    correctOptionId: "b",
+    difficulty: "leicht",
+    explanation: "Die Teile ergeben zusammengesetzt einen Vollkreis.",
   },
-
-  // 2 - Zwei Rechtecke bilden ein großes Quadrat
   {
     id: "fz-2",
-    difficulty: "leicht",
     pieces: [
-      { path: "M 10 10 L 110 10 L 110 60 L 10 60 Z", fill: TEAL_SHADES[0] },
-      { path: "M 20 20 L 120 20 L 120 70 L 20 70 Z", fill: TEAL_SHADES[1] },
+      { path: "M 60 55 L 40 20.4 A 40 40 0 0 1 80 20.4 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 60 95 A 40 40 0 0 1 25.4 75 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 80 20.4 A 40 40 0 0 1 100 55 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 30 30 L 170 30 L 140 170 L 60 170 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 20 130 A 80 80 0 0 0 180 130 Z"], fill: "none" },
+      { id: "b", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+      { id: "c", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
+      { id: "f", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "g", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
+      { id: "h", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
     ],
-    correctOptionId: "b",
-    explanation: "Zwei gleich große Rechtecke übereinander ergeben ein Quadrat (Option B).",
+    correctOptionId: "a",
+    difficulty: "leicht",
+    explanation: "Die Teile ergeben zusammengesetzt einen Halbkreis.",
   },
-
-  // 3 - Dreieck + Trapez = Rechteck
   {
     id: "fz-3",
-    difficulty: "leicht",
     pieces: [
-      { path: "M 10 80 L 60 10 L 110 80 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 20 L 30 70 L 90 70 L 110 20 Z", fill: TEAL_SHADES[1] },
+      { path: "M 60 5.5 L 109.5 55 L 60 55 Z", fill: "#ffffff" },
+      { path: "M 47.2 102.8 L 14.7 46.5 L 60 55 Z", fill: "#ffffff" },
+      { path: "M 90 20 L 90 90 L 25 90 L 60 55 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 30 30 L 170 30 L 170 130 L 30 130 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 30 30 L 170 30 L 140 170 L 60 170 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "b", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
+      { id: "c", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "f", paths: ["M 180 100 A 80 80 0 1 1 20 100 A 80 80 0 1 1 180 100 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "h", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
     ],
-    correctOptionId: "c",
-    explanation: "Das Dreieck passt in die Aussparung des Trapezes und bildet zusammen ein Rechteck (Option C).",
+    correctOptionId: "h",
+    difficulty: "leicht",
+    explanation: "Die Teile ergeben zusammengesetzt ein Quadrat.",
   },
-
-  // 4 - Zwei Hälften eines Kreises
   {
     id: "fz-4",
-    difficulty: "leicht",
     pieces: [
-      { path: "M 100 30 A 70 70 0 0 1 100 170 Z", fill: TEAL_SHADES[0] },
-      { path: "M 100 30 A 70 70 0 0 0 100 170 Z", fill: TEAL_SHADES[1] },
+      { path: "M 60 55 L 94.6 35 L 60 95 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 25.4 35 L 94.6 35 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 60 95 L 25.4 35 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 30 30 L 170 30 L 140 170 L 60 170 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "c", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "f", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "h", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
     ],
-    correctOptionId: "d",
-    explanation: "Zwei Halbkreise bilden zusammen einen vollständigen Kreis (Option D).",
+    correctOptionId: "g",
+    difficulty: "leicht",
+    explanation: "Die Teile ergeben zusammengesetzt ein gleichseitiges Dreieck.",
   },
-
-  // 5 - Drei Dreiecke bilden ein großes Dreieck
   {
     id: "fz-5",
-    difficulty: "leicht",
     pieces: [
-      { path: "M 10 80 L 50 10 L 90 80 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 50 80 L 90 10 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 80 L 50 10 L 90 80 Z", fill: TEAL_SHADES[2] },
+      { path: "M 30 80 L 77.6 107.5 A 55 55 0 0 1 57.5 127.6 Z", fill: "#ffffff" },
+      { path: "M 30 80 L -17.6 107.5 A 55 55 0 0 1 -25 80 Z", fill: "#ffffff" },
+      { path: "M 30 80 L 83.1 65.8 A 55 55 0 0 1 83.1 94.2 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 30 30 L 170 30 L 140 170 L 60 170 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
+      { id: "b", paths: ["M 180 100 A 80 80 0 1 1 20 100 A 80 80 0 1 1 180 100 Z"], fill: "none" },
+      { id: "c", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "e", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "f", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
+      { id: "g", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
     ],
-    correctOptionId: "b",
-    explanation: "Drei kleine Dreiecke (zwei aufrecht, eines umgekehrt in der Mitte) bilden ein großes Dreieck (Option B).",
+    correctOptionId: "f",
+    difficulty: "leicht",
+    explanation: "Die Teile ergeben zusammengesetzt einen Viertelkreis.",
   },
-
-  // 6 - Zwei Dreiecke = Raute/Rhombus
   {
     id: "fz-6",
-    difficulty: "leicht",
     pieces: [
-      { path: "M 10 50 L 60 10 L 110 50 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 60 50 L 110 10 Z", fill: TEAL_SHADES[1] },
+      { path: "M 60 55 L 83.5 22.6 L 99.7 59.2 L 76.2 91.5 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 21.4 65.3 L 31.7 26.7 L 70.3 16.4 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 100 55 L 80 89.6 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 20 55 L 40 20.4 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 30 30 L 170 30 L 140 170 L 60 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "c", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "f", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+      { id: "g", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "h", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
     ],
-    correctOptionId: "c",
-    explanation: "Zwei gleichschenklige Dreiecke mit gemeinsamer Basis ergeben eine Raute (Option C).",
+    correctOptionId: "e",
+    difficulty: "mittel",
+    explanation: "Die Teile ergeben zusammengesetzt ein regelmäßiges Sechseck (Hexagon).",
   },
-
-  // 7 - Drei Teile = Trapez
   {
     id: "fz-7",
-    difficulty: "leicht",
     pieces: [
-      { path: "M 10 10 L 60 10 L 60 80 L 10 80 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 50 10 L 10 80 Z", fill: TEAL_SHADES[1] },
-      { path: "M 50 10 L 90 10 L 90 80 Z", fill: TEAL_SHADES[2] },
+      { path: "M 60 55 L 60 95 A 40 40 0 0 1 23 70.3 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 35.6 23.3 A 40 40 0 0 1 80 20.4 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 100 55 A 40 40 0 0 1 75.3 92 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 20.3 49.8 A 40 40 0 0 1 49.6 16.4 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 30 L 170 30 L 140 170 L 60 170 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "b", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
+      { id: "c", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "f", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
+      { id: "h", paths: ["M 20 130 A 80 80 0 0 0 180 130 Z"], fill: "none" },
     ],
     correctOptionId: "d",
-    explanation: "Das Rechteck bildet den Mittelteil, die beiden Dreiecke die schrägen Seiten. Zusammen ergibt sich ein Trapez (Option D).",
+    difficulty: "mittel",
+    explanation: "Die Teile ergeben zusammengesetzt einen Dreiviertelkreis.",
   },
-
-  // ============ MITTEL (8 Aufgaben, 3-4 Teile) ============
-
-  // 8 - Vier Dreiecke = Quadrat
   {
     id: "fz-8",
-    difficulty: "mittel",
     pieces: [
-      { path: "M 10 10 L 60 10 L 10 60 Z", fill: TEAL_SHADES[0] },
-      { path: "M 60 10 L 110 10 L 110 60 Z", fill: TEAL_SHADES[1] },
-      { path: "M 110 60 L 110 110 L 60 110 Z", fill: TEAL_SHADES[2] },
-      { path: "M 10 60 L 60 110 L 10 110 Z", fill: TEAL_SHADES[3] },
+      { path: "M 60 55 L 80 20.4 L 99.1 63.3 L 64.2 94.8 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 27.6 78.5 L 27.6 31.5 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 83.5 22.6 L 98 67.4 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 68.3 94.1 L 25.4 75 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 30 30 L 170 30 L 140 170 L 60 170 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "c", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "f", paths: ["M 20 130 A 80 80 0 0 0 180 130 Z"], fill: "none" },
+      { id: "g", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
     ],
     correctOptionId: "c",
-    explanation: "Vier rechtwinklige Dreiecke, die an den Ecken ansetzen, füllen zusammen ein Quadrat (Option C).",
+    difficulty: "mittel",
+    explanation: "Die Teile ergeben zusammengesetzt ein regelmäßiges Fünfeck (Pentagon).",
   },
-
-  // 9 - Drei Stücke = Pfeil/Pentagon
   {
     id: "fz-9",
-    difficulty: "mittel",
     pieces: [
-      { path: "M 10 60 L 60 10 L 110 60 Z", fill: TEAL_SHADES[0] },
-      { path: "M 30 10 L 70 10 L 70 70 L 30 70 Z", fill: TEAL_SHADES[1] },
-      { path: "M 30 10 L 70 10 L 70 50 L 30 50 Z", fill: TEAL_SHADES[2] },
+      { path: "M 60 55 L 72.6 10.8 L 104.6 66.2 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 48.8 99.6 L 24.4 37.4 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 77.6 19.4 L 109.6 74.9 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 53.6 108 L 14 54.3 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 100 20 L 160 60 L 160 140 L 40 140 L 40 60 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "b", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "c", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "d", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
+      { id: "f", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
     ],
-    correctOptionId: "a",
-    explanation: "Das Dreieck bildet die Pfeilspitze oben, die beiden Rechtecke den Schaft. Zusammen ergibt sich ein Pfeil/Pentagon (Option A).",
+    correctOptionId: "b",
+    difficulty: "mittel",
+    explanation: "Die Teile ergeben zusammengesetzt ein Parallelogramm.",
   },
-
-  // 10 - Drei Teile = Haus (Fünfeck)
   {
     id: "fz-10",
-    difficulty: "mittel",
     pieces: [
-      { path: "M 10 60 L 60 10 L 110 60 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 60 10 L 60 70 L 10 70 Z", fill: TEAL_SHADES[1] },
-      { path: "M 60 10 L 110 10 L 110 70 L 60 70 Z", fill: TEAL_SHADES[2] },
+      { path: "M 60 55 L 88.3 26.7 L 88.3 83.3 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 31.7 83.3 L 31.7 26.7 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 88.3 26.7 L 88.3 83.3 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 31.7 83.3 L 31.7 26.7 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 100 20 L 170 80 L 170 170 L 30 170 L 30 80 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "c", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "f", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
+      { id: "h", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
     ],
-    correctOptionId: "b",
-    explanation: "Dreieck (Dach) plus zwei Rechtecke (Wände) bilden eine Hausform / ein Fünfeck (Option B).",
+    correctOptionId: "a",
+    difficulty: "mittel",
+    explanation: "Die Teile ergeben zusammengesetzt eine Raute.",
   },
-
-  // 11 - Vier Teile = Kreuz / Plus
   {
     id: "fz-11",
-    difficulty: "mittel",
     pieces: [
-      { path: "M 10 10 L 50 10 L 50 40 L 10 40 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 50 10 L 50 40 L 10 40 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 10 L 40 10 L 40 50 L 10 50 Z", fill: TEAL_SHADES[2] },
-      { path: "M 10 10 L 40 10 L 40 50 L 10 50 Z", fill: TEAL_SHADES[3] },
+      { path: "M 60 55 L 75.3 18 L 97 39.7 L 97 70.3 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 60 95 L 31.7 83.3 L 20 55 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 44.7 18 L 75.3 18 L 97 39.7 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 88.3 83.3 L 60 95 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 21.3 65.4 L 25.4 35 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: [
-        "M 70 30 L 130 30 L 130 70 L 170 70 L 170 130 L 130 130 L 130 170 L 70 170 L 70 130 L 30 130 L 30 70 L 70 70 Z"
-      ], fill: "#64748b" },
-      { id: "c", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+      { id: "c", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "f", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+      { id: "g", paths: ["M 20 130 A 80 80 0 0 0 180 130 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
     ],
-    correctOptionId: "b",
-    explanation: "Vier Rechtecke, die kreuzförmig angeordnet werden, ergeben ein Plus-/Kreuzzeichen (Option B).",
+    correctOptionId: "h",
+    difficulty: "schwer",
+    explanation: "Die Teile ergeben zusammengesetzt ein regelmäßiges Achteck (Oktagon).",
   },
-
-  // 12 - Drei Teile = Sechseck (vereinfacht)
   {
     id: "fz-12",
-    difficulty: "mittel",
     pieces: [
-      { path: "M 10 40 L 50 10 L 90 40 L 50 70 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 50 40 L 10 70 Z", fill: TEAL_SHADES[1] },
-      { path: "M 50 10 L 90 40 L 50 70 Z", fill: TEAL_SHADES[2] },
+      { path: "M 60 55 L 77.4 19 L 99 46.1 L 91.3 79.9 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 60 95 L 28.8 80 L 21 46 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 60.1 15 L 91.3 30.1 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 91.3 79.9 L 60 95 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 21 63.9 L 28.7 30.1 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 60 30 L 140 30 L 175 100 L 140 170 L 60 170 L 25 100 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "b", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "c", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+      { id: "e", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
+      { id: "f", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "h", paths: ["M 20 130 A 80 80 0 0 0 180 130 Z"], fill: "none" },
     ],
-    correctOptionId: "c",
-    explanation: "Die Raute in der Mitte und die beiden Dreiecke links und rechts bilden zusammen ein Sechseck (Option C).",
+    correctOptionId: "g",
+    difficulty: "schwer",
+    explanation: "Die Teile ergeben zusammengesetzt ein regelmäßiges Siebeneck (Heptagon).",
   },
-
-  // 13 - Drei Teile = L-Form
   {
     id: "fz-13",
-    difficulty: "mittel",
     pieces: [
-      { path: "M 10 10 L 50 10 L 50 90 L 10 90 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 60 10 L 60 40 L 10 40 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 10 L 40 10 L 40 40 L 10 40 Z", fill: TEAL_SHADES[2] },
+      { path: "M 60 55 L 61.6 15.4 L 79.4 28.3 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 91.4 65.2 L 84.6 86.1 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 38 88 L 20 22 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 79 6.8 L 104.4 84.7 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 45.4 106.4 L 22.8 41.2 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 30 30 L 90 30 L 90 100 L 170 100 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "c", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+      { id: "e", paths: ["M 20 130 A 80 80 0 0 0 180 130 Z"], fill: "none" },
+      { id: "f", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
     ],
-    correctOptionId: "b",
-    explanation: "Das große Rechteck bildet den langen Schenkel, die beiden kleineren den kurzen Schenkel der L-Form (Option B).",
+    correctOptionId: "f",
+    difficulty: "schwer",
+    explanation: "Die Teile ergeben zusammengesetzt ein Trapez.",
   },
-
-  // 14 - Vier Dreiecke = großer Rhombus
   {
     id: "fz-14",
-    difficulty: "mittel",
     pieces: [
-      { path: "M 10 50 L 60 10 L 60 50 Z", fill: TEAL_SHADES[0] },
-      { path: "M 60 10 L 110 50 L 60 50 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 50 L 60 50 L 60 90 Z", fill: TEAL_SHADES[2] },
-      { path: "M 60 50 L 110 50 L 60 90 Z", fill: TEAL_SHADES[3] },
+      { path: "M 60 55 L 98.6 65.4 A 40 40 0 0 1 70.4 93.6 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 40 89.6 A 40 40 0 0 1 20 55 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 31.7 26.7 A 40 40 0 0 1 70.4 16.4 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 94.6 35 A 40 40 0 0 1 94.6 75 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 70.4 93.6 A 40 40 0 0 1 31.7 83.3 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 25.4 35 A 40 40 0 0 1 60 15 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 30 30 L 170 30 L 140 170 L 60 170 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
+      { id: "c", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "e", paths: ["M 180 100 A 80 80 0 1 1 20 100 A 80 80 0 1 1 180 100 Z"], fill: "none" },
+      { id: "f", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+      { id: "g", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
     ],
-    correctOptionId: "d",
-    explanation: "Vier kleine Dreiecke, die jeweils eine Ecke des Rhombus bilden, ergeben zusammen einen Rhombus / eine Raute (Option D).",
+    correctOptionId: "e",
+    difficulty: "schwer",
+    explanation: "Die Teile ergeben zusammengesetzt einen Vollkreis.",
   },
-
-  // 15 - Drei Teile = T-Form
   {
     id: "fz-15",
-    difficulty: "mittel",
     pieces: [
-      { path: "M 10 10 L 110 10 L 110 40 L 10 40 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 40 10 L 40 60 L 10 60 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 10 L 40 10 L 40 60 L 10 60 Z", fill: TEAL_SHADES[2] },
+      { path: "M 60 55 L 80 20.4 L 100 55 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 80 89.6 L 40 89.6 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 20 55 L 40 20.4 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 80 20.4 L 100 55 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 80 89.6 L 40 89.6 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 20 55 L 40 20.4 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 70 L 120 70 L 120 170 L 80 170 L 80 70 L 30 70 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "b", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
+      { id: "c", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "f", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
     ],
-    correctOptionId: "a",
-    explanation: "Das breite Rechteck bildet den Querbalken, die beiden schmalen Rechtecke den senkrechten Balken der T-Form (Option A).",
+    correctOptionId: "d",
+    difficulty: "schwer",
+    explanation: "Die Teile ergeben zusammengesetzt ein regelmäßiges Sechseck (Hexagon).",
   },
-
-  // ============ SCHWER (5 Aufgaben, 4-5 Teile) ============
-
-  // 16 - Fünf Teile = Stern (vereinfacht als Pfeilstern)
   {
     id: "fz-16",
-    difficulty: "schwer",
     pieces: [
-      { path: "M 30 10 L 60 60 L 0 60 Z", fill: TEAL_SHADES[0] },
-      { path: "M 80 30 L 110 80 L 50 80 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 50 L 60 20 L 60 80 Z", fill: TEAL_SHADES[2] },
-      { path: "M 60 20 L 110 50 L 60 80 Z", fill: TEAL_SHADES[3] },
-      { path: "M 30 60 L 60 30 L 90 60 L 60 90 Z", fill: TEAL_SHADES[4] },
+      { path: "M 60 55 L 60 15 A 40 40 0 0 1 94.6 35 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 49.6 93.6 A 40 40 0 0 1 21.4 65.4 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 60 15 A 40 40 0 0 1 94.6 35 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: [
-        "M 100 20 L 120 75 L 180 80 L 135 120 L 150 180 L 100 145 L 50 180 L 65 120 L 20 80 L 80 75 Z"
-      ], fill: "#64748b" },
-      { id: "c", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "b", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "c", paths: ["M 180 100 A 80 80 0 1 1 20 100 A 80 80 0 1 1 180 100 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "f", paths: ["M 20 130 A 80 80 0 0 0 180 130 Z"], fill: "none" },
+      { id: "g", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
     ],
-    correctOptionId: "b",
-    explanation: "Die fünf Dreiecke und die Raute in der Mitte bilden zusammen einen fünfzackigen Stern (Option B).",
+    correctOptionId: "f",
+    difficulty: "leicht",
+    explanation: "Die Teile ergeben zusammengesetzt einen Halbkreis.",
   },
-
-  // 17 - Vier Teile = Pfeil nach rechts
   {
     id: "fz-17",
-    difficulty: "schwer",
     pieces: [
-      { path: "M 10 10 L 70 10 L 70 40 L 10 40 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 70 10 L 70 40 L 10 40 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 50 L 50 10 L 90 50 Z", fill: TEAL_SHADES[2] },
-      { path: "M 10 10 L 50 50 L 10 90 Z", fill: TEAL_SHADES[3] },
+      { path: "M 83.5 22.6 L 92.4 78.5 L 60 55 Z", fill: "#ffffff" },
+      { path: "M 27.6 78.5 L 36.5 22.6 L 60 55 Z", fill: "#ffffff" },
+      { path: "M 100 55 L 60 95 L 20 55 L 60 55 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 70 L 120 70 L 120 30 L 180 100 L 120 170 L 120 130 L 30 130 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 60 30 L 140 30 L 175 100 L 140 170 L 60 170 L 25 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "c", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+      { id: "f", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
+      { id: "g", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "h", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
     ],
-    correctOptionId: "a",
-    explanation: "Zwei Rechtecke bilden den Schaft, das Dreieck die Spitze des nach rechts zeigenden Pfeils (Option A).",
+    correctOptionId: "c",
+    difficulty: "leicht",
+    explanation: "Die Teile ergeben zusammengesetzt eine Raute.",
   },
-
-  // 18 - Fünf Stücke = Achteck (vereinfacht)
   {
     id: "fz-18",
-    difficulty: "schwer",
     pieces: [
-      { path: "M 10 10 L 60 10 L 60 50 L 10 50 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 40 10 L 10 40 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 10 L 40 10 L 10 40 Z", fill: TEAL_SHADES[2] },
-      { path: "M 10 10 L 40 10 L 10 40 Z", fill: TEAL_SHADES[3] },
-      { path: "M 10 10 L 40 10 L 10 40 Z", fill: TEAL_SHADES[4] },
+      { path: "M 60 55 L 49.6 93.6 A 40 40 0 0 1 21.4 44.6 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 49.6 93.6 A 40 40 0 0 1 21.4 44.6 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 88.3 83.3 A 40 40 0 0 1 31.7 83.3 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 70 30 L 130 30 L 170 70 L 170 130 L 130 170 L 70 170 L 30 130 L 30 70 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "b", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+      { id: "c", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "d", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "e", paths: ["M 20 130 A 80 80 0 0 0 180 130 Z"], fill: "none" },
+      { id: "f", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
     ],
-    correctOptionId: "c",
-    explanation: "Das Rechteck bildet den Kern, die vier Dreiecke schneiden die Ecken ab und formen ein Achteck (Option C).",
+    correctOptionId: "h",
+    difficulty: "leicht",
+    explanation: "Die Teile ergeben zusammengesetzt einen Dreiviertelkreis.",
   },
-
-  // 19 - Vier Teile = Parallelogramm
   {
     id: "fz-19",
-    difficulty: "schwer",
     pieces: [
-      { path: "M 10 10 L 70 10 L 70 60 L 10 60 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 60 L 50 10 L 50 60 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 10 L 50 10 L 10 60 Z", fill: TEAL_SHADES[2] },
-      { path: "M 10 10 L 50 10 L 50 60 L 10 60 Z", fill: TEAL_SHADES[3] },
+      { path: "M 107.8 42.2 L 72.8 102.8 L 60 55 Z", fill: "#ffffff" },
+      { path: "M 12.2 67.8 L 44.7 11.5 L 60 55 Z", fill: "#ffffff" },
+      { path: "M 86 93 L 18.4 74.9 L 35.3 12.1 L 60 55 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 60 30 L 180 30 L 140 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "c", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "d", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "e", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+      { id: "f", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
     ],
-    correctOptionId: "b",
-    explanation: "Das Rechteck, die beiden Dreiecke und das kleine Rechteck bilden zusammen ein Parallelogramm (Option B).",
+    correctOptionId: "e",
+    difficulty: "leicht",
+    explanation: "Die Teile ergeben zusammengesetzt ein Quadrat.",
   },
-
-  // 20 - Fünf Stücke = Doppelpfeil / Sechseck-Pfeil
   {
     id: "fz-20",
-    difficulty: "schwer",
     pieces: [
-      { path: "M 10 10 L 50 10 L 50 50 L 10 50 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 50 10 L 50 50 L 10 50 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 40 L 40 10 L 70 40 Z", fill: TEAL_SHADES[2] },
-      { path: "M 10 10 L 40 40 L 70 10 Z", fill: TEAL_SHADES[3] },
-      { path: "M 10 10 L 30 10 L 30 50 L 10 50 Z", fill: TEAL_SHADES[4] },
+      { path: "M 60 55 L 100 55 L 40 89.6 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 40 20.4 L 100 55 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 40 89.6 L 40 20.4 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 60 30 L 140 30 L 175 100 L 140 170 L 60 170 L 25 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "c", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+      { id: "f", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
     ],
-    correctOptionId: "d",
-    explanation: "Zwei Rechtecke, zwei Dreiecke (Spitzen links und rechts) und das schmale Verbindungsstück bilden zusammen ein Sechseck (Option D).",
+    correctOptionId: "b",
+    difficulty: "leicht",
+    explanation: "Die Teile ergeben zusammengesetzt ein gleichseitiges Dreieck.",
   },
-
-  // ============ NEUE AUFGABEN (fz-21 bis fz-30) ============
-
-  // ============ LEICHT - 3 neue (21-23) ============
-
-  // 21 - Zwei Halbkreise bilden eine Ellipse
   {
     id: "fz-21",
-    difficulty: "leicht",
     pieces: [
-      { path: "M 100 30 A 70 50 0 0 1 100 170 Z", fill: TEAL_SHADES[0] },
-      { path: "M 100 30 A 70 50 0 0 0 100 170 Z", fill: TEAL_SHADES[1] },
+      { path: "M 60 55 L 94.6 35 L 98.7 65.4 L 80 89.6 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 40 89.6 L 21.3 65.4 L 25.4 35 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 60 15 L 88.3 26.7 L 100 55 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 80 89.6 L 49.6 93.7 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 21.3 65.4 L 25.4 35 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 100 A 70 50 0 1 1 170 100 A 70 50 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "c", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "f", paths: ["M 20 130 A 80 80 0 0 0 180 130 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
+      { id: "h", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
     ],
-    correctOptionId: "d",
-    explanation: "Zwei Halbellipsen (links und rechts) ergeben zusammengesetzt eine vollständige Ellipse (Option D). Option C ist ein Kreis, keine Ellipse.",
+    correctOptionId: "g",
+    difficulty: "mittel",
+    explanation: "Die Teile ergeben zusammengesetzt ein regelmäßiges Achteck (Oktagon).",
   },
-
-  // 22 - Rechteck + Dreieck = Hausform
   {
     id: "fz-22",
-    difficulty: "leicht",
     pieces: [
-      { path: "M 10 10 L 90 10 L 90 70 L 10 70 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 70 L 50 10 L 90 70 Z", fill: TEAL_SHADES[1] },
+      { path: "M 60 55 L 88.3 26.7 L 95.6 73.1 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 41.9 90.6 L 20.5 48.7 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 66.3 15.5 L 99.5 48.7 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 66.3 94.5 L 24.4 73.1 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 29.6 29 L 75.3 18 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 100 20 L 170 80 L 170 170 L 30 170 L 30 80 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-    ],
-    correctOptionId: "a",
-    explanation: "Das Rechteck bildet den unteren Teil (Wand) und das Dreieck das Dach. Zusammen ergibt sich eine Hausform / ein Fünfeck (Option A).",
-  },
-
-  // 23 - Zwei L-Formen bilden ein Rechteck
-  {
-    id: "fz-23",
-    difficulty: "leicht",
-    pieces: [
-      { path: "M 10 10 L 60 10 L 60 30 L 30 30 L 30 60 L 10 60 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 30 10 L 30 40 L 60 40 L 60 60 L 10 60 Z", fill: TEAL_SHADES[1] },
-    ],
-    options: [
-      { id: "a", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 30 40 L 170 40 L 170 160 L 30 160 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 30 30 L 170 30 L 140 170 L 60 170 Z"], fill: "#64748b" },
-    ],
-    correctOptionId: "c",
-    explanation: "Zwei L-förmige Teile greifen ineinander und ergeben zusammen ein Rechteck (Option C).",
-  },
-
-  // ============ MITTEL - 4 neue (24-27) ============
-
-  // 24 - Drei Teile bilden einen Pfeil nach oben
-  {
-    id: "fz-24",
-    difficulty: "mittel",
-    pieces: [
-      { path: "M 50 10 L 100 60 L 0 60 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 40 10 L 40 70 L 10 70 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 10 L 40 10 L 40 70 L 10 70 Z", fill: TEAL_SHADES[2] },
-    ],
-    options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 100 20 L 160 80 L 130 80 L 130 180 L 70 180 L 70 80 L 40 80 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 60 30 L 140 30 L 175 100 L 140 170 L 60 170 L 25 100 Z"], fill: "#64748b" },
-    ],
-    correctOptionId: "b",
-    explanation: "Das Dreieck bildet die Pfeilspitze, die beiden Rechtecke den Schaft. Zusammen ergibt sich ein nach oben zeigender Pfeil (Option B).",
-  },
-
-  // 25 - Vier Teile = unregelmässiges Sechseck
-  {
-    id: "fz-25",
-    difficulty: "mittel",
-    pieces: [
-      { path: "M 10 10 L 60 10 L 60 50 L 10 50 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 60 10 L 60 50 L 10 50 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 50 L 40 10 L 40 50 Z", fill: TEAL_SHADES[2] },
-      { path: "M 10 10 L 40 10 L 10 50 Z", fill: TEAL_SHADES[3] },
-    ],
-    options: [
-      { id: "a", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 60 30 L 140 30 L 175 100 L 140 170 L 60 170 L 25 100 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-    ],
-    correctOptionId: "c",
-    explanation: "Die beiden Rechtecke bilden den breiten Mittelteil, die Dreiecke die seitlichen Spitzen. Zusammen entsteht ein Sechseck (Option C).",
-  },
-
-  // 26 - Drei Dreiecke + Quadrat = großes Dreieck
-  {
-    id: "fz-26",
-    difficulty: "mittel",
-    pieces: [
-      { path: "M 10 60 L 40 10 L 70 60 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 40 60 L 70 10 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 10 L 60 10 L 60 60 L 10 60 Z", fill: TEAL_SHADES[2] },
-      { path: "M 10 60 L 35 10 L 60 60 Z", fill: TEAL_SHADES[3] },
-    ],
-    options: [
-      { id: "a", paths: ["M 100 20 L 185 180 L 15 180 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 30 30 L 170 30 L 140 170 L 60 170 Z"], fill: "#64748b" },
-    ],
-    correctOptionId: "a",
-    explanation: "Drei Dreiecke und ein Quadrat füllen zusammen ein großes Dreieck aus (Option A).",
-  },
-
-  // 27 - Vier Teile = U-Form
-  {
-    id: "fz-27",
-    difficulty: "mittel",
-    pieces: [
-      { path: "M 10 10 L 30 10 L 30 80 L 10 80 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 30 10 L 30 80 L 10 80 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 10 L 80 10 L 80 30 L 10 30 Z", fill: TEAL_SHADES[2] },
-      { path: "M 10 10 L 30 10 L 30 40 L 10 40 Z", fill: TEAL_SHADES[3] },
-    ],
-    options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 30 30 L 170 30 L 170 70 L 120 70 L 120 170 L 80 170 L 80 70 L 30 70 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 30 L 70 30 L 70 130 L 130 130 L 130 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "c", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "f", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
     ],
     correctOptionId: "d",
-    explanation: "Die zwei langen Rechtecke bilden die Seitenschenkel, das breite Rechteck den Boden und das kleine Rechteck verlängert einen Schenkel. Zusammen ergibt sich eine U-Form (Option D).",
+    difficulty: "mittel",
+    explanation: "Die Teile ergeben zusammengesetzt ein regelmäßiges Fünfeck (Pentagon).",
   },
-
-  // ============ SCHWER - 3 neue (28-30) ============
-
-  // 28 - Fünf Teile = Stern / Fünfeck-Stern
   {
-    id: "fz-28",
-    difficulty: "schwer",
+    id: "fz-23",
     pieces: [
-      { path: "M 30 10 L 60 50 L 0 50 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 50 30 L 10 50 Z", fill: TEAL_SHADES[1] },
-      { path: "M 50 10 L 90 30 L 50 50 Z", fill: TEAL_SHADES[2] },
-      { path: "M 10 30 L 40 70 L 0 60 Z", fill: TEAL_SHADES[3] },
-      { path: "M 60 30 L 90 60 L 50 70 Z", fill: TEAL_SHADES[4] },
+      { path: "M 60 55 L 92.4 78.5 A 40 40 0 0 1 47.6 93 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 20 55 A 40 40 0 0 1 47.6 17 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 92.4 31.5 A 40 40 0 0 1 92.4 78.5 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 47.6 93 A 40 40 0 0 1 20 55 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 47.6 17 A 40 40 0 0 1 92.4 31.5 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "c", paths: [
-        "M 100 15 L 118 72 L 178 72 L 130 110 L 148 168 L 100 135 L 52 168 L 70 110 L 22 72 L 82 72 Z"
-      ], fill: "#64748b" },
-      { id: "d", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-    ],
-    correctOptionId: "c",
-    explanation: "Die fünf dreieckigen Teile bilden zusammen die fünf Zacken eines Sterns (Option C).",
-  },
-
-  // 29 - Vier Teile = unregelmässiges Achteck / abgerundetes Quadrat
-  {
-    id: "fz-29",
-    difficulty: "schwer",
-    pieces: [
-      { path: "M 10 10 L 70 10 L 70 60 L 10 60 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 70 10 L 70 60 L 10 60 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 10 L 40 10 L 10 30 Z", fill: TEAL_SHADES[2] },
-      { path: "M 10 10 L 40 10 L 10 30 Z", fill: TEAL_SHADES[3] },
-      { path: "M 10 10 L 40 10 L 10 30 Z", fill: TEAL_SHADES[4] },
-    ],
-    options: [
-      { id: "a", paths: ["M 70 30 L 130 30 L 170 70 L 170 130 L 130 170 L 70 170 L 30 130 L 30 70 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 100 30 L 170 100 L 100 170 L 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 180 100 A 80 80 0 1 1 20 100 A 80 80 0 1 1 180 100 Z"], fill: "none" },
+      { id: "b", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "c", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "d", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "f", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
     ],
     correctOptionId: "a",
-    explanation: "Die beiden Rechtecke bilden den Kern, die drei kleinen Dreiecke schneiden Ecken ab und formen ein Achteck (Option A).",
+    difficulty: "mittel",
+    explanation: "Die Teile ergeben zusammengesetzt einen Vollkreis.",
   },
-
-  // 30 - Fünf Teile = Pfeil-Doppelspitze (links und rechts)
   {
-    id: "fz-30",
-    difficulty: "schwer",
+    id: "fz-24",
     pieces: [
-      { path: "M 10 10 L 70 10 L 70 40 L 10 40 Z", fill: TEAL_SHADES[0] },
-      { path: "M 10 10 L 70 10 L 70 40 L 10 40 Z", fill: TEAL_SHADES[1] },
-      { path: "M 10 40 L 40 10 L 70 40 Z", fill: TEAL_SHADES[2] },
-      { path: "M 10 10 L 40 40 L 70 10 Z", fill: TEAL_SHADES[3] },
-      { path: "M 10 10 L 40 10 L 40 50 L 10 50 Z", fill: TEAL_SHADES[4] },
+      { path: "M 60 55 L 57.4 15.4 L 95.6 37.4 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 77.6 90.6 L 11.4 73.1 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 41.9 6.4 L 112.9 47.4 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 67.6 107.9 L 20.4 57.6 Z", fill: "#ffffff" },
     ],
     options: [
-      { id: "a", paths: ["M 30 30 L 170 30 L 170 170 L 30 170 Z"], fill: "#64748b" },
-      { id: "b", paths: ["M 20 100 L 60 50 L 60 75 L 140 75 L 140 50 L 180 100 L 140 150 L 140 125 L 60 125 L 60 150 Z"], fill: "#64748b" },
-      { id: "c", paths: ["M 100 20 L 180 170 L 20 170 Z"], fill: "#64748b" },
-      { id: "d", paths: ["M 30 100 A 70 70 0 1 1 170 100 A 70 70 0 1 1 30 100 Z"], fill: "#64748b" },
-      { id: "e", paths: ["M 60 30 L 140 30 L 175 100 L 140 170 L 60 170 L 25 100 Z"], fill: "#64748b" },
+      { id: "a", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "c", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "f", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "g", paths: ["M 20 130 A 80 80 0 0 0 180 130 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+    ],
+    correctOptionId: "f",
+    difficulty: "mittel",
+    explanation: "Die Teile ergeben zusammengesetzt ein Trapez.",
+  },
+  {
+    id: "fz-25",
+    pieces: [
+      { path: "M 60 55 L 88.3 26.7 L 98.6 65.3 L 70.3 93.6 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 40 89.6 L 20 55 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 60 15 L 94.6 35 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 80 89.6 L 40 89.6 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 21.4 65.3 L 31.7 26.7 Z", fill: "#ffffff" },
+    ],
+    options: [
+      { id: "a", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "b", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "c", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "d", paths: ["M 20 130 A 80 80 0 0 0 180 130 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "f", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
+      { id: "h", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+    ],
+    correctOptionId: "c",
+    difficulty: "mittel",
+    explanation: "Die Teile ergeben zusammengesetzt ein regelmäßiges Sechseck (Hexagon).",
+  },
+  {
+    id: "fz-26",
+    pieces: [
+      { path: "M 60 55 L 68.9 16 L 96.1 37.7 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 100 55 L 84.9 86.3 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 68.9 94 L 35.1 86.3 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 42.6 19 L 77.4 19 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 99 46.2 L 91.3 79.9 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 60 95 L 28.8 80 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 21 46.1 L 42.6 19 Z", fill: "#ffffff" },
+    ],
+    options: [
+      { id: "a", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "b", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+      { id: "c", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "f", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "g", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+    ],
+    correctOptionId: "h",
+    difficulty: "schwer",
+    explanation: "Die Teile ergeben zusammengesetzt ein regelmäßiges Siebeneck (Heptagon).",
+  },
+  {
+    id: "fz-27",
+    pieces: [
+      { path: "M 60 55 L 75.3 92 A 40 40 0 0 1 44.7 92 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 23 70.3 A 40 40 0 0 1 23 39.7 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 44.7 18 A 40 40 0 0 1 75.3 18 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 97 39.7 A 40 40 0 0 1 97 70.3 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 75.3 92 A 40 40 0 0 1 44.7 92 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 23 70.3 A 40 40 0 0 1 23 39.7 Z", fill: "#ffffff" },
+    ],
+    options: [
+      { id: "a", paths: ["M 65 50 L 135 50 L 175 150 L 25 150 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "c", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "f", paths: ["M 180 100 A 80 80 0 1 1 20 100 A 80 80 0 1 1 180 100 Z"], fill: "none" },
+      { id: "g", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+    ],
+    correctOptionId: "e",
+    difficulty: "schwer",
+    explanation: "Die Teile ergeben zusammengesetzt einen Dreiviertelkreis.",
+  },
+  {
+    id: "fz-28",
+    pieces: [
+      { path: "M 60 55 L 67.8 15.8 L 93.3 32.8 L 99.2 62.8 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 75.3 92 L 44.7 92 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 23 70.3 L 23 39.7 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 44.7 18 L 75.3 18 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 97 39.7 L 97 70.3 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 75.3 92 L 44.7 92 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 23 70.3 L 23 39.7 Z", fill: "#ffffff" },
+    ],
+    options: [
+      { id: "a", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 20 L 156.6 43.4 L 180 100 L 156.6 156.6 L 100 180 L 43.4 156.6 L 20 100 L 43.4 43.4 Z"], fill: "none" },
+      { id: "c", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "e", paths: ["M 180 100 A 80 80 0 1 1 20 100 A 80 80 0 1 1 180 100 Z"], fill: "none" },
+      { id: "f", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "g", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+      { id: "h", paths: ["M 40 160 L 40 30 A 130 130 0 0 1 170 160 Z"], fill: "none" },
     ],
     correctOptionId: "b",
-    explanation: "Die zwei Rechtecke bilden den Schaft, die zwei Dreiecke die Spitzen links und rechts, das kleine Rechteck verbindet die Mitte. Zusammen entsteht ein Doppelpfeil (Option B).",
+    difficulty: "schwer",
+    explanation: "Die Teile ergeben zusammengesetzt ein regelmäßiges Achteck (Oktagon).",
+  },
+  {
+    id: "fz-29",
+    pieces: [
+      { path: "M 60 55 L 45.5 11.4 L 74.3 25.3 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 85.8 34.4 L 105.8 59.4 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 85.1 93.5 L 54 81.3 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 35.7 66.7 L 25.9 34.8 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 54.5 15.7 L 83.3 29.6 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 94.4 57.4 L 101.5 88.6 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 59.6 108.4 L 14.2 59.4 Z", fill: "#ffffff" },
+    ],
+    options: [
+      { id: "a", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 20 L 175 100 L 100 180 L 25 100 Z"], fill: "none" },
+      { id: "c", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "e", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+      { id: "f", paths: ["M 180 100 A 80 80 0 1 1 20 100 A 80 80 0 1 1 180 100 Z"], fill: "none" },
+      { id: "g", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "h", paths: ["M 20 130 A 80 80 0 0 0 180 130 Z"], fill: "none" },
+    ],
+    correctOptionId: "g",
+    difficulty: "schwer",
+    explanation: "Die Teile ergeben zusammengesetzt ein Parallelogramm.",
+  },
+  {
+    id: "fz-30",
+    pieces: [
+      { path: "M 60 55 L 72.4 17 L 86.2 36 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 79 81.2 L 60.1 95 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 20 55.1 L 47.7 16.9 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 98.1 42.7 L 83.6 87.4 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 20.5 61.3 L 41.9 19.4 Z", fill: "#ffffff" },
+      { path: "M 60 55 L 95.6 36.9 L 88.3 83.3 Z", fill: "#ffffff" },
+    ],
+    options: [
+      { id: "a", paths: ["M 100 25 L 173.6 152.5 L 26.4 152.5 Z"], fill: "none" },
+      { id: "b", paths: ["M 100 100 L 156.6 156.6 A 80 80 0 1 0 156.6 43.4 Z"], fill: "none" },
+      { id: "c", paths: ["M 35 35 L 165 35 L 165 165 L 35 165 Z"], fill: "none" },
+      { id: "d", paths: ["M 100 23 L 178 79.7 L 148.2 171.3 L 51.8 171.3 L 22 79.7 Z"], fill: "none" },
+      { id: "e", paths: ["M 100 18 L 171 59 L 171 141 L 100 182 L 29 141 L 29 59 Z"], fill: "none" },
+      { id: "f", paths: ["M 55 50 L 175 50 L 145 150 L 25 150 Z"], fill: "none" },
+      { id: "g", paths: ["M 20 130 A 80 80 0 0 0 180 130 Z"], fill: "none" },
+      { id: "h", paths: ["M 100 18 L 164.1 48.9 L 179.9 118.2 L 135.6 173.9 L 64.4 173.9 L 20.1 118.2 L 35.9 48.9 Z"], fill: "none" },
+    ],
+    correctOptionId: "d",
+    difficulty: "schwer",
+    explanation: "Die Teile ergeben zusammengesetzt ein regelmäßiges Fünfeck (Pentagon).",
   },
 ];
 
-// ---- Strategie-Guide ----
-
 export const figurenStrategyGuide = {
-  title: "Strategie-Guide: Figuren zusammensetzen",
+  title: "Figuren zusammensetzen \u2013 Strategie",
   sections: [
     {
-      heading: "Was ist 'Figuren zusammensetzen'?",
-      content:
-        "Beim Untertest 'Figuren zusammensetzen' im MedAT werden dir mehrere Puzzleteile gezeigt. Deine Aufgabe ist es herauszufinden, welche der fünf vorgegebenen Figuren (A bis E) entsteht, wenn man alle Puzzleteile zusammensetzt. Dabei dürfen die Teile verschoben und gedreht, aber NICHT gespiegelt werden. Dieser Untertest prüft dein räumliches Vorstellungsvermögen und ist Teil der kognitiven Fähigkeiten (KFF). Du hast insgesamt 20 Aufgaben in 30 Minuten, also etwa 1:30 Minuten pro Aufgabe.",
+      heading: "Grundprinzip",
+      content: "Dir werden schwarze Puzzleteile gezeigt. Du musst erkennen, welche der 8 vorgegebenen Figuren (A\u2013H) entsteht, wenn man alle Teile richtig zusammensetzt.\n\nWICHTIG: Teile nur drehen, nie spiegeln oder skalieren! Jedes Teil beh\u00e4lt seine Gr\u00f6\u00dfe und Orientierung (nur Rotation erlaubt)."
     },
     {
-      heading: "Tipps & Strategien",
-      content: `1. Umrisse vergleichen: Schaue dir zürst die äußeren Konturen der Puzzleteile an. Gibt es gerade Kanten, Bögen oder spitze Ecken? Vergleiche diese mit den Umrissen der Antwortmöglichkeiten.
-
-2. Fläche abschätzen: Schätze die Gesamtfläche aller Puzzleteile ab. Die richtige Antwortfigur muss ungefähr die gleiche Fläche haben. Damit kannst du oft schon 1-2 Optionen ausschließen.
-
-3. Markante Ecken und Kanten suchen: Suche nach auffälligen Merkmalen wie spitzen Winkeln, langen geraden Kanten oder Rundungen. Diese müssen sich in der Lösungsfigur wiederfinden.
-
-4. Ausschlussmethode: Oft ist es schneller, falsche Antworten auszuschließen als die richtige direkt zu finden. Wenn ein Puzzleteil nicht in eine Figur passt, kann diese Figur nicht die Lösung sein.
-
-5. Zeitmanagement: Du hast ca. 1:30 pro Aufgabe. Wenn du nach 60 Sekunden keine Lösung findest, triff eine begründete Vermutung und gehe weiter. Leichtere Aufgaben zürst lösen!
-
-6. Systematisch vorgehen: Beginne immer mit dem größten oder auffälligsten Puzzleteil. Überlege, wo es in jeder Antwortoption platziert werden könnte.
-
-7. Innere Kanten beachten: Die Kanten, an denen Puzzleteile aneinanderstoßen, verschwinden in der fertigen Figur. Nur die äußeren Kanten bleiben sichtbar.`,
+      heading: "13 offizielle L\u00f6sungsfiguren",
+      content: "13 offizielle L\u00f6sungsfiguren: 8 Polygone + 4 Kreisformen + Raute\n\n8 Polygone:\n\u2022 Dreieck (3 Ecken, 60\u00b0)\n\u2022 Quadrat (4 Ecken, 90\u00b0)\n\u2022 Parallelogramm (4 Ecken, Seiten paarweise parallel)\n\u2022 Trapez (4 Ecken, ein Paar parallele Seiten)\n\u2022 F\u00fcnfeck (5 Ecken, 108\u00b0)\n\u2022 Sechseck (6 Ecken, 120\u00b0)\n\u2022 Siebeneck (7 Ecken, ~128.6\u00b0)\n\u2022 Achteck (8 Ecken, 135\u00b0)\n\n4 Kreisformen:\n\u2022 Viertelkreis (90\u00b0-Kreisausschnitt)\n\u2022 Halbkreis (180\u00b0-Kreisausschnitt)\n\u2022 Dreiviertelkreis (270\u00b0-Kreisausschnitt)\n\u2022 Vollkreis (360\u00b0)\n\nSonderform:\n\u2022 Raute (4 gleich lange Seiten, keine 90\u00b0)"
     },
     {
-      heading: "Häufige Fehler",
-      content: `- Spiegelung übersehen: Puzzleteile dürfen NICHT gespiegelt werden! Eine gespiegelte Version eines Teils passt nicht. Achte genau darauf, ob ein Teil gedreht oder gespiegelt wurde.
-
-- Flächenverhältnis ignorieren: Wenn die Puzzleteile zusammen deutlich mehr oder weniger Fläche haben als eine Antwortoption, kann diese nicht stimmen.
-
-- Zu lange an einer Aufgabe hängenbleiben: Bei 1:30 pro Aufgabe darfst du dich nicht festbeißen. Nutze die Ausschlussmethode und rate begründet, wenn nötig.
-
-- Nur auf die Form achten, nicht auf die Größe: Achte darauf, dass die Größenverhältnisse stimmen. Ein kleines Dreieck kann nicht plötzlich einen großen Teil der Figur ausfüllen.
-
-- Lücken übersehen: Alle Teile müssen lückenlos zusammenpassen. Wenn bei einer Option Lücken bleiben würden, ist sie falsch.`,
+      heading: "Schritt-f\u00fcr-Schritt-Strategie",
+      content: "Schritt 1: RUNDUNGEN PR\u00dcFEN\nHaben die Teile gekr\u00fcmmte Kanten? \u2192 Kreisform (Viertel-/Halb-/Dreiviertel-/Vollkreis).\nNur gerade Kanten? \u2192 Polygon oder Raute.\n\nSchritt 2: WINKEL ANALYSIEREN\n90\u00b0-Winkel \u2192 Quadrat, Trapez oder Viertelkreis\n120\u00b0-Winkel \u2192 Sechseck\n60\u00b0-Winkel \u2192 Dreieck\nStumpfe Winkel ohne 90\u00b0 \u2192 F\u00fcnfeck, Siebeneck, Achteck, Parallelogramm, Raute\n\nSchritt 3: GR\u00d6SSTES TEIL ALS BASIS\nNimm das gr\u00f6\u00dfte Puzzleteil als Ausgangspunkt. Lege die kleineren Teile mental daran an. Pr\u00fcfe, ob die Au\u00dfenkanten zusammenpassen."
     },
+    {
+      heading: "Typische Fallen",
+      content: "\u2022 Raute vs. Quadrat: Beide haben 4 gleich lange Seiten, aber die Raute hat KEINE rechten Winkel.\n\u2022 Parallelogramm vs. Trapez: Beim Parallelogramm sind BEIDE Seitenpaare parallel, beim Trapez nur EINES.\n\u2022 Sechseck vs. Achteck: Genau z\u00e4hlen! Regelm\u00e4\u00dfige Polygone sehen sich \u00e4hnlich.\n\u2022 Dreiviertelkreis vs. Vollkreis: Achte auf den fehlenden Sektor.\n\u2022 F\u00fcnfeck vs. Sechseck: 5 vs. 6 Ecken \u2014 die Innenwinkel unterscheiden sich deutlich (108\u00b0 vs. 120\u00b0)."
+    },
+    {
+      heading: "Zeitmanagement",
+      content: "80 Sekunden pro Aufgabe \u2014 schnell Kategorie erkennen!\n\n0\u201310 Sek: Rundungen? \u2192 Kreisform oder Polygon?\n10\u201325 Sek: Winkel und Kanten analysieren, 3\u20134 Optionen ausschlie\u00dfen\n25\u201360 Sek: Gr\u00f6\u00dfstes Teil als Basis, Rest mental anlegen\n60\u201380 Sek: Beste Option w\u00e4hlen, bei Unsicherheit markieren und weitergehen\n\nNicht zu lange gr\u00fcbeln! Lieber z\u00fcgig die beste Vermutung abgeben und zur n\u00e4chsten Aufgabe."
+    }
   ],
 };

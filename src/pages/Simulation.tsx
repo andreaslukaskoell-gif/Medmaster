@@ -1557,14 +1557,14 @@ export default function Simulation() {
             <div className="flex flex-wrap gap-3 justify-center">
               {aufgabe.pieces.map((piece, i) => (
                 <svg key={i} viewBox="0 0 120 120" className="w-20 h-20">
-                  <path d={piece.path} fill={piece.fill} stroke="#333" strokeWidth="1" />
+                  <path d={piece.path} fill={piece.fill} stroke="#1a1a1a" strokeWidth="2" />
                 </svg>
               ))}
             </div>
           </div>
 
           {/* Options */}
-          <div className="grid grid-cols-3 md:grid-cols-5 gap-3">
+          <div className="grid grid-cols-4 gap-2">
             {aufgabe.options.map((opt) => (
               <button
                 key={opt.id}
@@ -1577,7 +1577,7 @@ export default function Simulation() {
               >
                 <svg viewBox="0 0 200 200" className="w-full h-auto">
                   {opt.paths.map((p, i) => (
-                    <path key={i} d={p} fill={opt.fill} stroke="#333" strokeWidth="1" />
+                    <path key={i} d={p} fill="none" stroke="#6b7280" strokeWidth="2" />
                   ))}
                 </svg>
                 <p className="text-xs text-center font-bold text-gray-700 dark:text-gray-300 mt-1">{opt.id.toUpperCase()}</p>

@@ -28,7 +28,9 @@
       "Bash(python3:*)",
       "Bash(git status:*)",
       "Bash(find:*)",
-      "Bash(bc:*)"
+      "Bash(bc:*)",
+      "Bash(npm install:*)",
+      "Bash(sudo npm install:*)"
     ]
   }
 }

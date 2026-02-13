@@ -980,7 +980,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                     <div className="flex gap-1 flex-wrap">
                       {q.pieces.map((piece, pi) => (
                         <svg key={pi} viewBox="0 0 120 120" className="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded">
-                          <path d={piece.path} fill={piece.fill} stroke={piece.fill} strokeWidth="1" opacity="0.9" />
+                          <path d={piece.path} fill={piece.fill} stroke="#1a1a1a" strokeWidth="1.5" />
                         </svg>
                       ))}
                     </div>
@@ -1055,8 +1055,8 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {fzQ.pieces.map((piece, pi) => (
                 <div key={pi} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-2 border border-gray-200 dark:border-gray-700 flex items-center justify-center aspect-square">
-                  <svg viewBox="0 0 120 90" className="w-full h-full max-w-[100px] max-h-[100px]">
-                    <path d={piece.path} fill={piece.fill} stroke={piece.fill} strokeWidth="1.5" opacity="0.9" />
+                  <svg viewBox="0 0 120 120" className="w-full h-full max-w-[100px] max-h-[100px]">
+                    <path d={piece.path} fill={piece.fill} stroke="#1a1a1a" strokeWidth="2" />
                   </svg>
                 </div>
               ))}
@@ -1068,7 +1068,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
         <Card>
           <CardContent className="p-6">
             <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-4">Welche Figur entsteht?</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div className="grid grid-cols-4 gap-2">
               {fzQ.options.map((opt) => {
                 const selected = answers[fzQ.id] === opt.id;
                 return (
