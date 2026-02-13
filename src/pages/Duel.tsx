@@ -1,13 +1,15 @@
 import { useState, useEffect, useRef } from "react";
-import { ArrowLeft, Swords, Play, Trophy, User, Bot, Clock, Zap } from "lucide-react";
+import { ArrowLeft, Swords, Play, Trophy, User, Bot, Clock, Zap, Target, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { useStore } from "@/store/useStore";
 import type { Question } from "@/data/bms/index";
+import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
+import { getDirectStichwortId, getStrategieTipp } from "@/data/questions/index";
 
-// We import dynamically to avoid circular deps
+// Dynamic import to keep data out of initial bundle
 let allBmsQuestionsCache: Question[] | null = null;
 async function getQuestions(): Promise<Question[]> {
   if (allBmsQuestionsCache) return allBmsQuestionsCache;
@@ -16,15 +18,14 @@ async function getQuestions(): Promise<Question[]> {
   return allBmsQuestionsCache!;
 }
 
-// Fallback with old questions if new ones not ready
-import { bmsQuestions as legacyQuestions } from "@/data/bmsQuestions";
-
 const OPPONENT_NAMES = [
   "MedGenie_2026", "BioNerd99", "ChemieKönig", "PhysikFuchs",
   "StudyHero_AT", "BrainMaster", "MedAT_Pro", "WissenBlitz",
   "LernTiger", "QuizChamp", "Medizin_Star", "FlashBrain",
   "TopStudentin", "NeuroNinja", "ZellMeister", "FormelHeld",
 ];
+
+type DuelMode = "random" | "adaptive" | "schwachstellen";
 
 interface DuelState {
   questions: Question[];
@@ -33,10 +34,10 @@ interface DuelState {
   opponentAnswers: Record<string, { answer: string; time: number }>;
   playerTime: Record<string, number>;
   opponentName: string;
-  opponentAvatar: string;
   timeLeft: number;
-  phase: "lobby" | "playing" | "waiting" | "result";
-  opponentDifficulty: number; // 0.5-0.85 correct rate
+  phase: "lobby" | "playing" | "result";
+  opponentDifficulty: number;
+  mode: DuelMode;
 }
 
 function shuffleArray<T>(arr: T[]): T[] {
@@ -51,20 +52,50 @@ function shuffleArray<T>(arr: T[]): T[] {
 export default function Duel() {
   const [duel, setDuel] = useState<DuelState | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
+  const [showExplanation, setShowExplanation] = useState<string | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval>>(null);
   const { addXP, checkStreak, saveQuizResult } = useStore();
+  const { recordAnswer, getWeakestTopics, getAdaptiveQuestions, getMedATReadiness } = useAdaptiveStore();
 
   useEffect(() => {
-    getQuestions().then((q) => setQuestions(q)).catch(() => {
-      // Fallback to legacy questions
-      setQuestions(legacyQuestions.map((q) => ({ ...q, difficulty: "mittel" as const, tags: [] })));
-    });
+    getQuestions().then((q) => setQuestions(q));
   }, []);
 
-  const startDuel = () => {
-    const selected = shuffleArray(questions.length > 0 ? questions : legacyQuestions.map((q) => ({ ...q, difficulty: "mittel" as const, tags: [] }))).slice(0, 5);
+  const selectQuestions = (mode: DuelMode): Question[] => {
+    if (mode === "adaptive") {
+      // Use adaptive store to pick questions biased toward weaknesses
+      const adaptive = getAdaptiveQuestions(5);
+      if (adaptive.length >= 5) return adaptive;
+      // Fallback: pad with random
+      const remaining = shuffleArray(questions.filter((q) => !adaptive.some((a) => a.id === q.id)));
+      return [...adaptive, ...remaining.slice(0, 5 - adaptive.length)];
+    }
+
+    if (mode === "schwachstellen") {
+      // Only from weakest topics
+      const weakTopics = getWeakestTopics(10);
+      const weakIds = new Set(weakTopics.map((t) => t.stichwortId));
+      const weakQuestions = questions.filter((q) => {
+        const swId = getDirectStichwortId(q.id) || getStichwortForQuestion(q.id);
+        return swId && weakIds.has(swId);
+      });
+      if (weakQuestions.length >= 5) return shuffleArray(weakQuestions).slice(0, 5);
+      // Fallback to adaptive if not enough weak questions
+      return shuffleArray(questions).slice(0, 5);
+    }
+
+    // Random mode
+    return shuffleArray(questions).slice(0, 5);
+  };
+
+  const startDuel = (mode: DuelMode = "random") => {
+    const selected = selectQuestions(mode);
     const opponent = OPPONENT_NAMES[Math.floor(Math.random() * OPPONENT_NAMES.length)];
-    const difficulty = 0.5 + Math.random() * 0.35; // 50-85% correct
+    // Adaptive difficulty: match player's level
+    const readiness = getMedATReadiness();
+    const baseDifficulty = Math.max(0.4, Math.min(0.85, readiness / 100));
+    const jitter = (Math.random() - 0.5) * 0.2;
+    const difficulty = Math.max(0.35, Math.min(0.9, baseDifficulty + jitter));
 
     setDuel({
       questions: selected,
@@ -73,11 +104,12 @@ export default function Duel() {
       opponentAnswers: {},
       playerTime: {},
       opponentName: opponent,
-      opponentAvatar: `${opponent[0]}${opponent[1]}`,
       timeLeft: 30,
       phase: "playing",
       opponentDifficulty: difficulty,
+      mode,
     });
+    setShowExplanation(null);
   };
 
   useEffect(() => {
@@ -87,7 +119,6 @@ export default function Duel() {
       setDuel((prev) => {
         if (!prev || prev.phase !== "playing") return prev;
         if (prev.timeLeft <= 1) {
-          // Time's up, move to next or result
           const nextIndex = prev.currentIndex + 1;
           if (nextIndex >= prev.questions.length) {
             return { ...prev, timeLeft: 0, phase: "result" };
@@ -107,7 +138,7 @@ export default function Duel() {
     const q = duel.questions[duel.currentIndex];
     if (duel.opponentAnswers[q.id]) return;
 
-    const delay = 3000 + Math.random() * 15000; // 3-18 seconds
+    const delay = 3000 + Math.random() * 15000;
     const timeout = setTimeout(() => {
       setDuel((prev) => {
         if (!prev) return prev;
@@ -135,13 +166,17 @@ export default function Duel() {
     if (duel.playerAnswers[q.id]) return;
 
     const timeSpent = 30 - duel.timeLeft;
+    const correct = optionId === q.correctOptionId;
+
+    // Record to adaptive store
+    const swId = getDirectStichwortId(q.id) || getStichwortForQuestion(q.id);
+    if (swId) recordAnswer(swId, correct, timeSpent);
 
     setDuel((prev) => {
       if (!prev) return prev;
       const newAnswers = { ...prev.playerAnswers, [q.id]: optionId };
       const newTimes = { ...prev.playerTime, [q.id]: timeSpent };
 
-      // Auto advance after short delay
       setTimeout(() => {
         setDuel((p) => {
           if (!p) return p;
@@ -151,13 +186,17 @@ export default function Duel() {
           }
           return { ...p, currentIndex: nextIndex, timeLeft: 30 };
         });
-      }, 800);
+      }, 1200);
 
       return { ...prev, playerAnswers: newAnswers, playerTime: newTimes };
     });
   };
 
+  // ── Lobby ──────────────────────────────────────────────
   if (!duel || duel.phase === "lobby") {
+    const weakTopics = getWeakestTopics(3);
+    const readiness = getMedATReadiness();
+
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <Breadcrumb items={[{ label: "Dashboard", href: "/" }, { label: "Duell" }]} />
@@ -174,7 +213,7 @@ export default function Duel() {
             </div>
             <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">BMS-Duell</h2>
             <p className="text-muted max-w-md mx-auto">
-              5 zufällige Fragen, 30 Sekunden pro Frage. Wer antwortet schneller und richtiger?
+              5 Fragen, 30 Sekunden pro Frage. Der KI-Gegner passt sich deinem Niveau an.
             </p>
             <div className="flex gap-4 justify-center text-sm">
               <div className="bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-lg">
@@ -186,26 +225,50 @@ export default function Duel() {
                 <p className="text-xs text-muted">pro Frage</p>
               </div>
               <div className="bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-lg">
-                <p className="font-semibold text-gray-900 dark:text-gray-100">1v1</p>
-                <p className="text-xs text-muted">vs KI</p>
+                <p className="font-semibold text-gray-900 dark:text-gray-100">{Math.round(readiness)}%</p>
+                <p className="text-xs text-muted">Bereitschaft</p>
               </div>
             </div>
-            <Button size="lg" onClick={startDuel} disabled={questions.length === 0}>
-              <Play className="w-5 h-5 mr-2" /> Duell starten
-            </Button>
+
+            <div className="grid gap-3 max-w-md mx-auto">
+              <Button size="lg" onClick={() => startDuel("random")} disabled={questions.length === 0}>
+                <Play className="w-5 h-5 mr-2" /> Zufälliges Duell
+              </Button>
+              <Button size="lg" variant="outline" onClick={() => startDuel("adaptive")} disabled={questions.length === 0}>
+                <Target className="w-5 h-5 mr-2" /> Adaptives Duell
+              </Button>
+              {weakTopics.length > 0 && (
+                <Button size="lg" variant="outline" className="border-red-300 text-red-700 dark:border-red-700 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20" onClick={() => startDuel("schwachstellen")} disabled={questions.length === 0}>
+                  <Zap className="w-5 h-5 mr-2" /> Schwachstellen-Duell
+                </Button>
+              )}
+            </div>
+
+            {weakTopics.length > 0 && (
+              <div className="text-xs text-muted space-y-1">
+                <p className="font-medium">Deine Schwachstellen:</p>
+                {weakTopics.map((t) => (
+                  <span key={t.stichwortId} className="inline-block bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 px-2 py-0.5 rounded mr-1">
+                    {t.thema} ({Math.round(t.rate * 100)}%)
+                  </span>
+                ))}
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>
     );
   }
 
+  // ── Results ────────────────────────────────────────────
   if (duel.phase === "result") {
     const playerScore = duel.questions.filter((q) => duel.playerAnswers[q.id] === q.correctOptionId).length;
     const opponentScore = duel.questions.filter((q) => duel.opponentAnswers[q.id]?.answer === q.correctOptionId).length;
     const playerWon = playerScore > opponentScore;
     const draw = playerScore === opponentScore;
 
-    const xpGain = playerWon ? playerScore * 20 : playerScore * 10;
+    const modeBonus = duel.mode === "schwachstellen" ? 1.5 : duel.mode === "adaptive" ? 1.2 : 1;
+    const xpGain = Math.round((playerWon ? playerScore * 20 : playerScore * 10) * modeBonus);
     addXP(xpGain);
     checkStreak();
 
@@ -235,6 +298,12 @@ export default function Duel() {
               {playerWon ? "Du hast gewonnen!" : draw ? "Unentschieden!" : "Knapp verloren!"}
             </h2>
 
+            {duel.mode !== "random" && (
+              <Badge variant={duel.mode === "schwachstellen" ? "danger" : "info"} className="text-xs">
+                {duel.mode === "schwachstellen" ? "Schwachstellen-Duell" : "Adaptives Duell"}
+              </Badge>
+            )}
+
             <div className="flex items-center justify-center gap-8">
               <div className="text-center">
                 <div className="w-14 h-14 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center mx-auto mb-2">
@@ -253,20 +322,45 @@ export default function Duel() {
               </div>
             </div>
 
-            <p className="text-sm text-green-600 dark:text-green-400">+{xpGain} XP</p>
+            <p className="text-sm text-green-600 dark:text-green-400">
+              +{xpGain} XP {modeBonus > 1 && <span className="text-xs">({modeBonus}x Bonus)</span>}
+            </p>
 
             <div className="space-y-3 text-left">
               {duel.questions.map((q, i) => {
                 const playerCorrect = duel.playerAnswers[q.id] === q.correctOptionId;
                 const opponentCorrect = duel.opponentAnswers[q.id]?.answer === q.correctOptionId;
+                const tipp = getStrategieTipp(q.id);
+                const isExpanded = showExplanation === q.id;
+
                 return (
-                  <div key={q.id} className="flex items-center gap-3 py-2 border-b border-gray-100 dark:border-gray-800 last:border-0">
-                    <span className="text-xs text-muted w-5">{i + 1}.</span>
-                    <div className="flex-1 text-sm text-gray-700 dark:text-gray-300 truncate">{q.text}</div>
-                    <div className="flex gap-2 shrink-0">
-                      <Badge variant={playerCorrect ? "success" : "danger"} className="text-[10px]">Du</Badge>
-                      <Badge variant={opponentCorrect ? "success" : "danger"} className="text-[10px]">KI</Badge>
-                    </div>
+                  <div key={q.id} className="border-b border-gray-100 dark:border-gray-800 last:border-0 pb-2">
+                    <button
+                      onClick={() => setShowExplanation(isExpanded ? null : q.id)}
+                      className="flex items-center gap-3 py-2 w-full text-left hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded px-1 -mx-1 cursor-pointer"
+                    >
+                      <span className="text-xs text-muted w-5">{i + 1}.</span>
+                      <div className="flex-1 text-sm text-gray-700 dark:text-gray-300 truncate">{q.text}</div>
+                      <div className="flex gap-2 shrink-0">
+                        <Badge variant={playerCorrect ? "success" : "danger"} className="text-[10px]">Du</Badge>
+                        <Badge variant={opponentCorrect ? "success" : "danger"} className="text-[10px]">KI</Badge>
+                      </div>
+                    </button>
+
+                    {isExpanded && (
+                      <div className="ml-8 mt-1 space-y-2 text-sm">
+                        <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3">
+                          <p className="font-medium text-green-800 dark:text-green-300 mb-1">Richtige Antwort: {q.correctOptionId.toUpperCase()}) {q.options.find((o) => o.id === q.correctOptionId)?.text}</p>
+                          <p className="text-green-700 dark:text-green-400 text-xs">{q.explanation}</p>
+                        </div>
+                        {tipp && (
+                          <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-3 flex gap-2">
+                            <Lightbulb className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                            <p className="text-amber-700 dark:text-amber-400 text-xs">{tipp}</p>
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </div>
                 );
               })}
@@ -274,7 +368,7 @@ export default function Duel() {
 
             <div className="flex gap-3 justify-center pt-4">
               <Button variant="outline" onClick={() => setDuel(null)}>Zurück</Button>
-              <Button onClick={startDuel}>
+              <Button onClick={() => startDuel(duel.mode)}>
                 <Swords className="w-4 h-4 mr-1" /> Neues Duell
               </Button>
             </div>
@@ -284,7 +378,7 @@ export default function Duel() {
     );
   }
 
-  // Playing phase
+  // ── Playing phase ──────────────────────────────────────
   const q = duel.questions[duel.currentIndex];
   const answered = !!duel.playerAnswers[q.id];
   const opponentAnswered = !!duel.opponentAnswers[q.id];
@@ -314,7 +408,14 @@ export default function Duel() {
         </div>
       </div>
 
-      {/* Score display */}
+      {duel.mode !== "random" && (
+        <div className="flex justify-center">
+          <Badge variant={duel.mode === "schwachstellen" ? "danger" : "info"} className="text-[10px]">
+            {duel.mode === "schwachstellen" ? "Schwachstellen" : "Adaptiv"}
+          </Badge>
+        </div>
+      )}
+
       <div className="flex justify-center gap-8">
         <span className="text-xl font-bold text-primary-700 dark:text-primary-400">
           {duel.questions.filter((q) => duel.playerAnswers[q.id] === q.correctOptionId).length}
@@ -343,7 +444,9 @@ export default function Duel() {
                     ? opt.id === q.correctOptionId
                       ? "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300"
                       : "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300"
-                    : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                    : answered && opt.id === q.correctOptionId
+                      ? "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300"
+                      : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
                 } ${answered ? "pointer-events-none" : ""}`}
               >
                 <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>
@@ -352,7 +455,6 @@ export default function Duel() {
             ))}
           </div>
 
-          {/* Opponent status */}
           <div className="mt-4 flex items-center justify-end gap-2">
             {opponentAnswered ? (
               <Badge variant="info" className="text-xs">
