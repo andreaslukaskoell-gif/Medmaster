@@ -16,12 +16,14 @@ import { biologieQuestions } from "./biologie";
 import { chemieQuestions } from "./chemie";
 import { physikQuestions } from "./physik";
 import { mathematikQuestions } from "./mathematik";
+import { alleStichwortFragenConverted } from "../questions/index";
 
 export const allBmsQuestions: Question[] = [
   ...biologieQuestions,
   ...chemieQuestions,
   ...physikQuestions,
   ...mathematikQuestions,
+  ...alleStichwortFragenConverted,
 ];
 
 export function getQuestionsBySubject(subject: string): Question[] {

@@ -2,6 +2,7 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { alleStichworteListe, type Stichwort } from "@/data/stichwortliste";
 import { allBmsQuestions, type Question } from "@/data/bms";
+import { getDirectStichwortId } from "@/data/questions/index";
 
 // ============================================================
 // Types
@@ -64,6 +65,11 @@ interface AdaptiveState {
 // ============================================================
 
 function questionToStichwortId(q: Question): string | null {
+  // Fast path: direct mapping for new Stichwort-Fragen
+  const direct = getDirectStichwortId(q.id);
+  if (direct) return direct;
+
+  // Fallback: tag matching for legacy questions
   for (const sw of alleStichworteListe) {
     if (sw.fach !== q.subject) continue;
     if (sw.linkedQuestionTags?.some((tag) => q.tags?.includes(tag))) {
