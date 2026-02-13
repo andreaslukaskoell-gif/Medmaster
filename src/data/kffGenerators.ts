@@ -714,63 +714,70 @@ export interface SyllogismQuestion {
   difficulty: "leicht" | "mittel" | "schwer";
 }
 
-const BEGRIFFE_TRIPEL = [
-  ["Seen", "Gewässer", "Flüsse"],
-  ["Metalle", "Elemente", "Leiter"],
-  ["Säugetiere", "Tiere", "Warmblüter"],
-  ["Planeten", "Himmelskörper", "Monde"],
-  ["Quadrate", "Rechtecke", "Parallelogramme"],
-  ["Rosen", "Blumen", "Pflanzen"],
-  ["Ärzte", "Akademiker", "Mediziner"],
-  ["Katzen", "Haustiere", "Raubtiere"],
-  ["Birken", "Bäume", "Laubgehölze"],
-  ["Romane", "Bücher", "Druckwerke"],
-  ["Tulpen", "Blumen", "Gartengewächse"],
-  ["Geigen", "Instrumente", "Streichinstrumente"],
-  ["Äpfel", "Früchte", "Kernobst"],
-  ["Adler", "Vögel", "Greifvögel"],
-  ["Diamanten", "Edelsteine", "Mineralien"],
-  ["Schüler", "Lernende", "Jugendliche"],
-  ["Chirurgen", "Ärzte", "Spezialisten"],
-  ["Hunde", "Haustiere", "Säugetiere"],
-  ["Dreiecke", "Polygone", "Flächen"],
-  ["Laptops", "Computer", "Elektrogeräte"],
-  ["Chemiker", "Wissenschaftler", "Forscher"],
-  ["Buchen", "Laubbäume", "Gehölze"],
-  ["Violinen", "Saiteninstrumente", "Musikinstrumente"],
-  ["Forellen", "Fische", "Wirbeltiere"],
-  ["Juristen", "Akademiker", "Berufstätige"],
+// Each term has singular and plural forms for grammatically correct German
+interface Begriff {
+  s: string; // Singular: "See", "Metall"
+  p: string; // Plural: "Seen", "Metalle"
+}
+
+const BEGRIFFE_TRIPEL: [Begriff, Begriff, Begriff][] = [
+  [{ s: "See", p: "Seen" }, { s: "Gewässer", p: "Gewässer" }, { s: "Fluss", p: "Flüsse" }],
+  [{ s: "Metall", p: "Metalle" }, { s: "Element", p: "Elemente" }, { s: "Leiter", p: "Leiter" }],
+  [{ s: "Säugetier", p: "Säugetiere" }, { s: "Tier", p: "Tiere" }, { s: "Warmblüter", p: "Warmblüter" }],
+  [{ s: "Planet", p: "Planeten" }, { s: "Himmelskörper", p: "Himmelskörper" }, { s: "Mond", p: "Monde" }],
+  [{ s: "Quadrat", p: "Quadrate" }, { s: "Rechteck", p: "Rechtecke" }, { s: "Parallelogramm", p: "Parallelogramme" }],
+  [{ s: "Rose", p: "Rosen" }, { s: "Blume", p: "Blumen" }, { s: "Pflanze", p: "Pflanzen" }],
+  [{ s: "Arzt", p: "Ärzte" }, { s: "Akademiker", p: "Akademiker" }, { s: "Mediziner", p: "Mediziner" }],
+  [{ s: "Katze", p: "Katzen" }, { s: "Haustier", p: "Haustiere" }, { s: "Raubtier", p: "Raubtiere" }],
+  [{ s: "Birke", p: "Birken" }, { s: "Baum", p: "Bäume" }, { s: "Laubgehölz", p: "Laubgehölze" }],
+  [{ s: "Roman", p: "Romane" }, { s: "Buch", p: "Bücher" }, { s: "Druckwerk", p: "Druckwerke" }],
+  [{ s: "Tulpe", p: "Tulpen" }, { s: "Blume", p: "Blumen" }, { s: "Gartengewächs", p: "Gartengewächse" }],
+  [{ s: "Geige", p: "Geigen" }, { s: "Instrument", p: "Instrumente" }, { s: "Streichinstrument", p: "Streichinstrumente" }],
+  [{ s: "Apfel", p: "Äpfel" }, { s: "Frucht", p: "Früchte" }, { s: "Kernobst", p: "Kernobst" }],
+  [{ s: "Adler", p: "Adler" }, { s: "Vogel", p: "Vögel" }, { s: "Greifvogel", p: "Greifvögel" }],
+  [{ s: "Diamant", p: "Diamanten" }, { s: "Edelstein", p: "Edelsteine" }, { s: "Mineral", p: "Mineralien" }],
+  [{ s: "Schüler", p: "Schüler" }, { s: "Lernender", p: "Lernende" }, { s: "Jugendlicher", p: "Jugendliche" }],
+  [{ s: "Chirurg", p: "Chirurgen" }, { s: "Arzt", p: "Ärzte" }, { s: "Spezialist", p: "Spezialisten" }],
+  [{ s: "Hund", p: "Hunde" }, { s: "Haustier", p: "Haustiere" }, { s: "Säugetier", p: "Säugetiere" }],
+  [{ s: "Dreieck", p: "Dreiecke" }, { s: "Polygon", p: "Polygone" }, { s: "Fläche", p: "Flächen" }],
+  [{ s: "Laptop", p: "Laptops" }, { s: "Computer", p: "Computer" }, { s: "Elektrogerät", p: "Elektrogeräte" }],
+  [{ s: "Chemiker", p: "Chemiker" }, { s: "Wissenschaftler", p: "Wissenschaftler" }, { s: "Forscher", p: "Forscher" }],
+  [{ s: "Buche", p: "Buchen" }, { s: "Laubbaum", p: "Laubbäume" }, { s: "Gehölz", p: "Gehölze" }],
+  [{ s: "Violine", p: "Violinen" }, { s: "Saiteninstrument", p: "Saiteninstrumente" }, { s: "Musikinstrument", p: "Musikinstrumente" }],
+  [{ s: "Forelle", p: "Forellen" }, { s: "Fisch", p: "Fische" }, { s: "Wirbeltier", p: "Wirbeltiere" }],
+  [{ s: "Jurist", p: "Juristen" }, { s: "Akademiker", p: "Akademiker" }, { s: "Berufstätiger", p: "Berufstätige" }],
 ];
 
 interface SyllogismMode {
-  p1: (s: string, m: string, p: string) => string;
-  p2: (s: string, m: string, p: string) => string;
-  conclusion: (s: string, m: string, p: string) => string;
+  p1: (s: Begriff, m: Begriff, p: Begriff) => string;
+  p2: (s: Begriff, m: Begriff, p: Begriff) => string;
+  conclusion: (s: Begriff, m: Begriff, p: Begriff) => string;
   name: string;
 }
 
+// "Alle X sind Y" → plural, "Kein X ist ein Y" → singular, "Einige X sind Y" → plural
 const VALID_MODES: SyllogismMode[] = [
-  { p1: (_s, m, p) => `Alle ${m} sind ${p}`, p2: (s, m) => `Alle ${s} sind ${m}`, conclusion: (s, _m, p) => `Alle ${s} sind ${p}`, name: "Barbara" },
-  { p1: (_s, m, p) => `Kein ${m} ist ein ${p}`, p2: (s, m) => `Alle ${s} sind ${m}`, conclusion: (s, _m, p) => `Kein ${s} ist ein ${p}`, name: "Celarent" },
-  { p1: (_s, m, p) => `Alle ${m} sind ${p}`, p2: (s, m) => `Einige ${s} sind ${m}`, conclusion: (s, _m, p) => `Einige ${s} sind ${p}`, name: "Darii" },
-  { p1: (_s, m, p) => `Kein ${m} ist ein ${p}`, p2: (s, m) => `Einige ${s} sind ${m}`, conclusion: (s, _m, p) => `Einige ${s} sind keine ${p}`, name: "Ferio" },
-  { p1: (_s, m, p) => `Kein ${p} ist ein ${m}`, p2: (s, m) => `Alle ${s} sind ${m}`, conclusion: (s, _m, p) => `Kein ${s} ist ein ${p}`, name: "Cesare" },
-  { p1: (_s, m, p) => `Alle ${p} sind ${m}`, p2: (s, m) => `Kein ${s} ist ein ${m}`, conclusion: (s, _m, p) => `Kein ${s} ist ein ${p}`, name: "Camestres" },
-  { p1: (_s, m, p) => `Alle ${m} sind ${p}`, p2: (s, m) => `Alle ${m} sind ${s}`, conclusion: (s, _m, p) => `Einige ${s} sind ${p}`, name: "Darapti" },
-  { p1: (_s, m, p) => `Einige ${m} sind ${p}`, p2: (s, m) => `Alle ${m} sind ${s}`, conclusion: (s, _m, p) => `Einige ${s} sind ${p}`, name: "Disamis" },
+  { p1: (_s, m, p) => `Alle ${m.p} sind ${p.p}`, p2: (s, m) => `Alle ${s.p} sind ${m.p}`, conclusion: (s, _m, p) => `Alle ${s.p} sind ${p.p}`, name: "Barbara" },
+  { p1: (_s, m, p) => `Kein ${m.s} ist ein ${p.s}`, p2: (s, m) => `Alle ${s.p} sind ${m.p}`, conclusion: (s, _m, p) => `Kein ${s.s} ist ein ${p.s}`, name: "Celarent" },
+  { p1: (_s, m, p) => `Alle ${m.p} sind ${p.p}`, p2: (s, m) => `Einige ${s.p} sind ${m.p}`, conclusion: (s, _m, p) => `Einige ${s.p} sind ${p.p}`, name: "Darii" },
+  { p1: (_s, m, p) => `Kein ${m.s} ist ein ${p.s}`, p2: (s, m) => `Einige ${s.p} sind ${m.p}`, conclusion: (s, _m, p) => `Einige ${s.p} sind keine ${p.p}`, name: "Ferio" },
+  { p1: (_s, m, p) => `Kein ${p.s} ist ein ${m.s}`, p2: (s, m) => `Alle ${s.p} sind ${m.p}`, conclusion: (s, _m, p) => `Kein ${s.s} ist ein ${p.s}`, name: "Cesare" },
+  { p1: (_s, m, p) => `Alle ${p.p} sind ${m.p}`, p2: (s, m) => `Kein ${s.s} ist ein ${m.s}`, conclusion: (s, _m, p) => `Kein ${s.s} ist ein ${p.s}`, name: "Camestres" },
+  { p1: (_s, m, p) => `Alle ${m.p} sind ${p.p}`, p2: (s, m) => `Alle ${m.p} sind ${s.p}`, conclusion: (s, _m, p) => `Einige ${s.p} sind ${p.p}`, name: "Darapti" },
+  { p1: (_s, m, p) => `Einige ${m.p} sind ${p.p}`, p2: (s, m) => `Alle ${m.p} sind ${s.p}`, conclusion: (s, _m, p) => `Einige ${s.p} sind ${p.p}`, name: "Disamis" },
 ];
 
-function generateWrongConclusions(s: string, p: string, correctConclusion: string): string[] {
+function generateWrongConclusions(s: Begriff, p: Begriff, correctConclusion: string): string[] {
   const allPossible = [
-    `Alle ${s} sind ${p}`, `Einige ${s} sind ${p}`, `Kein ${s} ist ein ${p}`, `Einige ${s} sind keine ${p}`,
-    `Alle ${p} sind ${s}`, `Einige ${p} sind ${s}`, `Kein ${p} ist ein ${s}`, `Einige ${p} sind keine ${s}`,
+    `Alle ${s.p} sind ${p.p}`, `Einige ${s.p} sind ${p.p}`, `Kein ${s.s} ist ein ${p.s}`, `Einige ${s.p} sind keine ${p.p}`,
+    `Alle ${p.p} sind ${s.p}`, `Einige ${p.p} sind ${s.p}`, `Kein ${p.s} ist ein ${s.s}`, `Einige ${p.p} sind keine ${s.p}`,
   ];
   return shuffle(allPossible.filter((c) => c !== correctConclusion));
 }
 
 export function generateSyllogism(difficulty: "leicht" | "mittel" | "schwer"): SyllogismQuestion {
   const tripel = BEGRIFFE_TRIPEL[randInt(0, BEGRIFFE_TRIPEL.length - 1)];
-  const [s, m, p] = shuffle(tripel);
+  const [s, m, p] = shuffle([...tripel]);
   const isNoneCorrect = difficulty === "schwer" ? Math.random() < 0.4 : Math.random() < 0.2;
   const mode = difficulty === "leicht"
     ? VALID_MODES[randInt(0, 2)]
