@@ -17,8 +17,8 @@ import {
   generateSyllogismSet,
 } from "@/data/kffGenerators";
 import type { ZahlenfolgeGenerated, AllergyCard, MemoryQuestion, WortflüssigkeitQuestion, SyllogismQuestion } from "@/data/kffGenerators";
-import { figurenAufgaben, figurenStrategyGuide } from "@/data/figurenData";
-import type { FZAufgabe } from "@/data/figurenData";
+import { figurenAufgaben, figurenStrategyGuide } from "@/data/figurenGenerator";
+import type { FZAufgabe } from "@/data/figurenGenerator";
 import { useStore } from "@/store/useStore";
 
 type KffView =

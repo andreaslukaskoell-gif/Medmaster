@@ -35,8 +35,8 @@ import {
   generateSyllogismSet,
 } from "@/data/kffGenerators";
 import type { AllergyCard, MemoryQuestion, ZahlenfolgeGenerated, WortflüssigkeitQuestion } from "@/data/kffGenerators";
-import { figurenAufgaben } from "@/data/figurenData";
-import type { FZAufgabe } from "@/data/figurenData";
+import { figurenAufgaben } from "@/data/figurenGenerator";
+import type { FZAufgabe } from "@/data/figurenGenerator";
 import { emotionQuestions } from "@/data/sekData";
 import type { EmotionQuestion } from "@/data/sekData";
 import type { TVText } from "@/data/tvData";
