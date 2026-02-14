@@ -17,8 +17,8 @@ import {
   generateSyllogismSet,
 } from "@/data/kffGenerators";
 import type { ZahlenfolgeGenerated, AllergyCard, MemoryQuestion, WortflüssigkeitQuestion, SyllogismQuestion } from "@/data/kffGenerators";
-import { figurenAufgaben, figurenStrategyGuide } from "@/data/figurenGenerator";
-import type { FZAufgabe } from "@/data/figurenGenerator";
+import { figurenAufgaben, figurenStrategyGuide } from "@/data/figurenData";
+import type { FZAufgabe } from "@/data/figurenData";
 import { useStore } from "@/store/useStore";
 
 type KffView =
@@ -979,8 +979,8 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                     <p className="text-xs text-muted mb-1">Puzzleteile:</p>
                     <div className="flex gap-1 flex-wrap">
                       {q.pieces.map((piece, pi) => (
-                        <svg key={pi} viewBox="0 0 120 120" className="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded">
-                          <path d={piece.path} fill={piece.fill} stroke="#1a1a1a" strokeWidth="1.5" />
+                        <svg key={pi} viewBox="0 0 200 200" className="w-10 h-10 bg-white dark:bg-gray-900 rounded">
+                          <path d={piece.path} fill={piece.fill} />
                         </svg>
                       ))}
                     </div>
@@ -988,21 +988,29 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                   {correctOpt && (
                     <div>
                       <p className="text-xs text-green-600 dark:text-green-400 mb-1">Richtig ({correctOpt.id.toUpperCase()}):</p>
-                      <svg viewBox="0 0 200 200" className="w-12 h-12 bg-green-50 dark:bg-green-900/20 rounded border border-green-300 dark:border-green-700">
-                        {correctOpt.paths.map((p, pi) => (
-                          <path key={pi} d={p} fill="none" stroke="#22c55e" strokeWidth="3" />
-                        ))}
-                      </svg>
+                      {correctOpt.text ? (
+                        <span className="text-xs text-green-600 dark:text-green-400 font-medium">{correctOpt.text}</span>
+                      ) : (
+                        <svg viewBox="0 0 200 200" className="w-12 h-12 bg-green-50 dark:bg-green-900/20 rounded border border-green-300 dark:border-green-700">
+                          {correctOpt.paths.map((p, pi) => (
+                            <path key={pi} d={p} fill="#22c55e" />
+                          ))}
+                        </svg>
+                      )}
                     </div>
                   )}
                   {!correct && selectedOpt && (
                     <div>
                       <p className="text-xs text-red-600 dark:text-red-400 mb-1">Deine Antwort ({selectedOpt.id.toUpperCase()}):</p>
-                      <svg viewBox="0 0 200 200" className="w-12 h-12 bg-red-50 dark:bg-red-900/20 rounded border border-red-300 dark:border-red-700">
-                        {selectedOpt.paths.map((p, pi) => (
-                          <path key={pi} d={p} fill="none" stroke="#ef4444" strokeWidth="3" />
-                        ))}
-                      </svg>
+                      {selectedOpt.text ? (
+                        <span className="text-xs text-red-600 dark:text-red-400 font-medium">{selectedOpt.text}</span>
+                      ) : (
+                        <svg viewBox="0 0 200 200" className="w-12 h-12 bg-red-50 dark:bg-red-900/20 rounded border border-red-300 dark:border-red-700">
+                          {selectedOpt.paths.map((p, pi) => (
+                            <path key={pi} d={p} fill="#ef4444" />
+                          ))}
+                        </svg>
+                      )}
                     </div>
                   )}
                 </div>
@@ -1054,9 +1062,9 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {fzQ.pieces.map((piece, pi) => (
-                <div key={pi} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-2 border border-gray-200 dark:border-gray-700 flex items-center justify-center aspect-square">
-                  <svg viewBox="0 0 120 120" className="w-full h-full max-w-[100px] max-h-[100px]">
-                    <path d={piece.path} fill={piece.fill} stroke="#1a1a1a" strokeWidth="2" />
+                <div key={pi} className="bg-white dark:bg-gray-900 rounded-xl p-2 border border-gray-200 dark:border-gray-700 flex items-center justify-center aspect-square">
+                  <svg viewBox="0 0 200 200" className="w-full h-full max-w-[100px] max-h-[100px]">
+                    <path d={piece.path} fill={piece.fill} />
                   </svg>
                 </div>
               ))}
@@ -1068,16 +1076,18 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
         <Card>
           <CardContent className="p-6">
             <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-4">Welche Figur entsteht?</h3>
-            <div className="grid grid-cols-4 gap-2">
+            <div className="grid grid-cols-2 gap-2">
               {fzQ.options.map((opt) => {
                 const selected = answers[fzQ.id] === opt.id;
                 return (
                   <button
                     key={opt.id}
                     onClick={() => setAnswers((p) => ({ ...p, [fzQ.id]: opt.id }))}
-                    className={`relative p-3 rounded-xl border-2 transition-all cursor-pointer flex flex-col items-center gap-2 aspect-square ${
+                    className={`relative p-3 rounded-xl border-2 transition-all cursor-pointer flex flex-col items-center gap-2 ${
+                      opt.text ? "col-span-2" : "aspect-square"
+                    } ${
                       selected
-                        ? "border-rose-500 bg-rose-50 dark:bg-rose-900/20 shadow-md scale-[1.02]"
+                        ? "border-rose-500 bg-rose-50 dark:bg-rose-900/20 shadow-md"
                         : "border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-600"
                     }`}
                   >
@@ -1086,11 +1096,15 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                     }`}>
                       {opt.id.toUpperCase()}
                     </span>
-                    <svg viewBox="0 0 200 200" className="w-full h-full max-w-[80px] max-h-[80px] mt-2">
-                      {opt.paths.map((p, pi) => (
-                        <path key={pi} d={p} fill="none" stroke={selected ? "#e11d48" : "#64748b"} strokeWidth="3" />
-                      ))}
-                    </svg>
+                    {opt.text ? (
+                      <span className="text-sm text-gray-500 dark:text-gray-400 py-2">{opt.text}</span>
+                    ) : (
+                      <svg viewBox="0 0 200 200" className="w-full h-full max-w-[80px] max-h-[80px] mt-2">
+                        {opt.paths.map((p, pi) => (
+                          <path key={pi} d={p} fill="#6b7280" />
+                        ))}
+                      </svg>
+                    )}
                   </button>
                 );
               })}

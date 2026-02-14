@@ -35,8 +35,8 @@ import {
   generateSyllogismSet,
 } from "@/data/kffGenerators";
 import type { AllergyCard, MemoryQuestion, ZahlenfolgeGenerated, WortflüssigkeitQuestion } from "@/data/kffGenerators";
-import { figurenAufgaben } from "@/data/figurenGenerator";
-import type { FZAufgabe } from "@/data/figurenGenerator";
+import { figurenAufgaben } from "@/data/figurenData";
+import type { FZAufgabe } from "@/data/figurenData";
 import { emotionQuestions } from "@/data/sekData";
 import type { EmotionQuestion } from "@/data/sekData";
 import type { TVText } from "@/data/tvData";
@@ -1552,34 +1552,40 @@ export default function Simulation() {
           <p className="text-sm text-muted mb-4">Welche Figur entsteht, wenn man alle Teile zusammensetzt?</p>
 
           {/* Puzzle pieces */}
-          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 mb-6">
+          <div className="bg-white dark:bg-gray-900 rounded-lg p-4 mb-6">
             <p className="text-xs text-muted mb-2">Puzzleteile:</p>
             <div className="flex flex-wrap gap-3 justify-center">
               {aufgabe.pieces.map((piece, i) => (
-                <svg key={i} viewBox="0 0 120 120" className="w-20 h-20">
-                  <path d={piece.path} fill={piece.fill} stroke="#1a1a1a" strokeWidth="2" />
+                <svg key={i} viewBox="0 0 200 200" className="w-20 h-20">
+                  <path d={piece.path} fill={piece.fill} />
                 </svg>
               ))}
             </div>
           </div>
 
           {/* Options */}
-          <div className="grid grid-cols-4 gap-2">
+          <div className="grid grid-cols-2 gap-2">
             {aufgabe.options.map((opt) => (
               <button
                 key={opt.id}
                 onClick={() => setAnswers((p) => ({ ...p, [q.id]: opt.id }))}
-                className={`p-2 rounded-lg border transition-colors cursor-pointer ${
+                className={`p-2 rounded-lg border-2 transition-colors cursor-pointer ${
+                  opt.text ? "col-span-2" : ""
+                } ${
                   answers[q.id] === opt.id
                     ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20"
                     : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
                 }`}
               >
-                <svg viewBox="0 0 200 200" className="w-full h-auto">
-                  {opt.paths.map((p, i) => (
-                    <path key={i} d={p} fill="none" stroke="#6b7280" strokeWidth="2" />
-                  ))}
-                </svg>
+                {opt.text ? (
+                  <p className="text-sm text-gray-500 dark:text-gray-400 py-2 text-center">{opt.text}</p>
+                ) : (
+                  <svg viewBox="0 0 200 200" className="w-full h-auto">
+                    {opt.paths.map((p, i) => (
+                      <path key={i} d={p} fill="#6b7280" />
+                    ))}
+                  </svg>
+                )}
                 <p className="text-xs text-center font-bold text-gray-700 dark:text-gray-300 mt-1">{opt.id.toUpperCase()}</p>
               </button>
             ))}
