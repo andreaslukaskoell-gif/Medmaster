@@ -17,8 +17,8 @@ import {
   generateSyllogismSet,
 } from "@/data/kffGenerators";
 import type { ZahlenfolgeGenerated, AllergyCard, MemoryQuestion, WortflüssigkeitQuestion, SyllogismQuestion } from "@/data/kffGenerators";
-import { figurenAufgaben, figurenStrategyGuide } from "@/data/figurenData";
-import type { FZAufgabe } from "@/data/figurenData";
+import { figurenAufgaben, figurenStrategyGuide } from "@/data/figurenGenerator";
+import type { FZAufgabe } from "@/data/figurenGenerator";
 import { useStore } from "@/store/useStore";
 
 type KffView =
@@ -926,7 +926,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
         <p className="text-sm text-muted">Finde heraus, welche Figur aus den gezeigten Puzzleteilen entsteht. Du hast 1:30 Minuten pro Aufgabe.</p>
         <Card>
           <CardContent className="p-6 space-y-6">
-            <p className="text-sm text-muted">Gemischte Schwierigkeit (2-5 Puzzleteile). Die Schwierigkeit wird automatisch angepasst.</p>
+            <p className="text-sm text-muted">Gemischte Schwierigkeit (3-7 Puzzleteile). Die Schwierigkeit wird automatisch angepasst.</p>
             <div>
               <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">Anzahl Aufgaben</label>
               <div className="flex gap-3">
