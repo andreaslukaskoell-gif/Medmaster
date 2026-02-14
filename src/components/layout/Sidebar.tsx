@@ -3,6 +3,7 @@ import {
   LayoutDashboard, BookOpen, Brain, FileText, Heart, Timer,
   BarChart3, CreditCard, GraduationCap, CalendarDays, Radar,
   Users, StickyNote, Layers, Swords, ListChecks, Target, X, LogOut,
+  MessageCircle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useStore } from "@/store/useStore";
@@ -18,6 +19,7 @@ const navItems = [
   { to: "/tv", icon: FileText, label: "TV", iconColor: "text-indigo-400" },
   { to: "/sek", icon: Heart, label: "SEK", iconColor: "text-rose-400" },
   { to: "/simulation", icon: Timer, label: "Simulation", iconColor: "text-orange-400" },
+  { to: "/ai-tutor", icon: MessageCircle, label: "AI-Tutor", iconColor: "text-purple-400" },
   { to: "/lernplan", icon: CalendarDays, label: "Lernplan", iconColor: "" },
   { to: "/analyse", icon: Radar, label: "Analyse", iconColor: "" },
   { to: "/community", icon: Users, label: "Community", iconColor: "" },

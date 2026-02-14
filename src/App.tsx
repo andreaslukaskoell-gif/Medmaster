@@ -15,6 +15,7 @@ const Simulation = lazy(() => import("./pages/Simulation"));
 const Statistics = lazy(() => import("./pages/Statistics"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const Lernplan = lazy(() => import("./pages/Lernplan"));
+const AITutor = lazy(() => import("./pages/AITutor"));
 const Analysis = lazy(() => import("./pages/Analysis"));
 const Community = lazy(() => import("./pages/Community"));
 const Notes = lazy(() => import("./pages/Notes"));
@@ -68,6 +69,7 @@ export default function App() {
             <Route path="/tv" element={<TV />} />
             <Route path="/sek" element={<SEK />} />
             <Route path="/simulation" element={<Simulation />} />
+            <Route path="/ai-tutor" element={<AITutor />} />
             <Route path="/lernplan" element={<Lernplan />} />
             <Route path="/analyse" element={<Analysis />} />
             <Route path="/community" element={<Community />} />
