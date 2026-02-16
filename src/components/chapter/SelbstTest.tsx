@@ -195,7 +195,6 @@ export function MerksatzBox({ text, type = "merke" }: MerksatzBoxProps) {
 }
 
 // src/components/chapter/SelbstTest.tsx
-import { Button } from "@/components/ui/button";
 
 interface SelbstTestQuestion {
   question: string;
