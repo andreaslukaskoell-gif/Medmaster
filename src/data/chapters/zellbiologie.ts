@@ -171,23 +171,268 @@ export const zellbiologieChapter: Chapter = {
     // ──────────────────────────────────────────────
     {
       heading: "Zellmembran & Membrantransport",
-      content:
-        "<strong>Aufbau der Zellmembran — Flüssig-Mosaik-Modell (Singer & Nicolson, 1972):</strong>\n\n" +
-        "Die Zellmembran besteht aus einer <strong>Phospholipid-Doppelschicht</strong> mit eingelagerten Proteinen. Die Phospholipide sind <strong>amphiphil</strong>: ihre hydrophilen Köpfe zeigen nach außen (zum Wasser), die hydrophoben Fettsäureschwänze zeigen nach innen. Die Membran ist kein starres Gebilde, sondern verhält sich wie eine <strong>zweidimensionale Flüssigkeit</strong> — Lipide und Proteine können lateral diffundieren.\n\n" +
-        "• <strong>Cholesterin</strong> (bei Tierzellen): reguliert die Membranfluidität — bei hohen Temperaturen verringert es die Fluidität, bei niedrigen erhöht es sie (Pufferfunktion).\n" +
-        "• <strong>Integrale (transmembrane) Proteine:</strong> durchspannen die gesamte Membran (Kanäle, Carrier, Rezeptoren).\n" +
-        "• <strong>Periphere Proteine:</strong> sind an der Membranoberfläche angelagert (innen oder außen).\n" +
-        "• <strong>Glykokalix:</strong> Kohlenhydratketten auf der extrazellulären Seite (Glykoproteine, Glykolipide) — wichtig für Zell-Zell-Erkennung, Immunabwehr (AB0-Blutgruppen) und Schutzfunktion.\n\n" +
-        "<strong>Passiver Transport (ohne Energieverbrauch, entlang des Konzentrationsgradienten):</strong>\n\n" +
-        "• <strong>Einfache Diffusion:</strong> Kleine, unpolare Moleküle (O₂, CO₂, N₂) und kleine, ungeladene polare Moleküle (H₂O, Ethanol) diffundieren direkt durch die Lipiddoppelschicht.\n" +
-        "• <strong>Osmose:</strong> Diffusion von <strong>Wasser</strong> durch eine semipermeable Membran vom Ort niedrigerer zum Ort höherer Stoffkonzentration (bzw. von hohem zu niedrigem Wasserpotential). Osmotische Konzepte: <strong>hypoton</strong> (Zelle schwillt an), <strong>isoton</strong> (Gleichgewicht), <strong>hyperton</strong> (Zelle schrumpft/Plasmolyse).\n" +
-        "• <strong>Erleichterte Diffusion:</strong> Transport durch <strong>Kanalproteine</strong> (Ionenkanäle: spezifisch, schnell, regulierbar) oder <strong>Carrierproteine</strong> (Konformationsänderung, langsamer, sättigbar). Beispiel: <strong>GLUT-Transporter</strong> für Glucose. Kein ATP-Verbrauch!\n\n" +
-        "<strong>Aktiver Transport (mit Energieverbrauch, gegen den Konzentrationsgradienten):</strong>\n\n" +
-        "• <strong>Primär aktiver Transport:</strong> Direkte ATP-Hydrolyse treibt den Transport an. Wichtigstes Beispiel: <strong>Na⁺/K⁺-ATPase</strong> — pumpt pro ATP-Molekül <strong>3 Na⁺-Ionen nach außen</strong> und <strong>2 K⁺-Ionen nach innen</strong>. Dies erzeugt und erhält das Membranpotential (ca. −70 mV). Weitere Beispiele: Ca²⁺-ATPase, H⁺/K⁺-ATPase (Belegzellen des Magens).\n" +
-        "• <strong>Sekundär aktiver Transport:</strong> Nutzt den durch primär aktiven Transport aufgebauten Ionengradienten (meist Na⁺). <strong>Symport</strong> (gleiche Richtung): Na⁺/Glucose-Cotransporter (SGLT1 im Dünndarm). <strong>Antiport</strong> (entgegengesetzte Richtung): Na⁺/H⁺-Austauscher.\n\n" +
-        "<strong>Vesikulärer Transport (Endo- und Exozytose):</strong>\n\n" +
-        "• <strong>Endozytose</strong> (Aufnahme): <strong>Phagozytose</strong> (Aufnahme großer Partikel, z. B. Makrophagen fressen Bakterien), <strong>Pinozytose</strong> (Aufnahme von Flüssigkeit und gelösten Stoffen), <strong>Rezeptorvermittelte Endozytose</strong> (spezifische Aufnahme über Clathrin-beschichtete Vesikel, z. B. LDL-Aufnahme).\n" +
-        "• <strong>Exozytose</strong> (Ausschleusung): Vesikel fusionieren mit der Zellmembran und entlassen ihren Inhalt nach außen (z. B. Neurotransmitter-Freisetzung, Hormonsekretion).",
+      content: `# Zellmembran und Membrantransport
+
+## 1. Rolle der Zellmembran im Organismus
+
+Die Zellmembran bildet die äußere Begrenzung jeder tierischen Zelle und trennt den intrazellulären Raum, der mit Zytosol gefüllt ist, vom extrazellulären Raum. Diese Abgrenzung ist Voraussetzung dafür, dass in der Zelle kontrollierte biochemische Reaktionen ablaufen können. Gleichzeitig ermöglicht die Membran einen gezielten Austausch von Stoffen und Informationen mit der Umgebung.
+
+Die Zellmembran ist keine starre Hülle, sondern ein hochdynamisches System. Ihre Bausteine sind ständig in Bewegung, wodurch sie sich an unterschiedliche Bedingungen anpassen kann. Dieses Prinzip erklärt viele ihrer biologischen Funktionen, etwa die Aufnahme von Nährstoffen, die Abgabe von Stoffwechselprodukten oder die Reaktion auf Signale.
+
+**Merksatz:** Die Zellmembran trennt Innen- und Außenraum der Zelle, ermöglicht aber gleichzeitig einen kontrollierten Stoff- und Informationsaustausch.
+
+## 2. Grundbausteine der Membran
+
+### 2.1 Phospholipide und ihre Eigenschaften
+
+Das zentrale Strukturelement der Zellmembran ist die Phospholipid-Doppelschicht. Ein Phospholipid besteht aus zwei klar unterscheidbaren Anteilen: einem wasserliebenden, polaren Kopf (mit einer Phosphatgruppe) und zwei wasserabweisenden, unpolaren Fettsäureschwänzen. Solche Moleküle bezeichnet man als amphiphil, da sie sowohl hydrophile als auch hydrophobe Eigenschaften besitzen.
+
+In wässriger Umgebung ordnen sich viele Phospholipide selbstständig so an, dass die hydrophilen Köpfe nach außen zum Wasser zeigen, während die hydrophoben Schwänze nach innen gerichtet sind. Dadurch entsteht eine stabile Doppelschicht, die für viele wasserlösliche Stoffe eine Barriere darstellt.
+
+Zur Einordnung der Begriffe:
+
+* **polar** bedeutet wasserfreundlich (hydrophil) und fettabweisend (lipophob)
+* **apolar** bedeutet wasserabweisend (hydrophob) und fettfreundlich (lipophil)
+
+**Merksatz:** Phospholipide sind amphiphil und ordnen sich in Wasser selbstständig zu einer Doppelschicht an.
+
+### 2.2 Mizellen und Liposomen
+
+Amphiphile Lipide können sich in wässriger Umgebung nicht nur zu Doppelschichten, sondern auch zu anderen Strukturen zusammenlagern. Dabei entstehen unter anderem Mizellen und Liposomen.
+
+Mizellen sind kugelförmige Anordnungen, bei denen die hydrophilen Köpfe nach außen und die hydrophoben Schwänze nach innen zeigen. Sie bestehen aus einer einfachen Lipidschicht. Liposomen hingegen sind ebenfalls kugelförmig, besitzen jedoch eine Lipiddoppelschicht und schließen in ihrem Inneren ein wässriges Volumen ein. Solche Strukturen werden in der Biologie und Medizin unter anderem als Modellsysteme für Membranen oder als Transportvehikel für Wirkstoffe genutzt.
+
+**Merksatz:** Mizellen bestehen aus einer einfachen Lipidschicht, Liposomen aus einer Doppelschicht mit wässrigem Innenraum.
+
+### 2.3 Membranproteine: peripher, integral und transmembran
+
+In die Lipiddoppelschicht der Zellmembran sind zahlreiche Proteine eingebaut. Diese Proteine bestimmen einen Großteil der Funktionen der Membran.
+
+Man unterscheidet:
+
+* **Periphere Membranproteine**, die der Membran nur anliegen und meist an die polaren Kopfgruppen der Lipide oder an andere Proteine gebunden sind. Sie können sich auf der Innen- oder Außenseite der Membran befinden.
+* **Integrale Membranproteine**, die in die Lipidschicht eingebettet sind.
+* **Transmembranproteine**, die die Membran vollständig durchspannen und sowohl zur Innen- als auch zur Außenseite Kontakt haben.
+
+Einige Transmembranproteine bilden Poren, durch die Ionen oder kleine Moleküle passieren können. Solche Proteine bezeichnet man als Kanalproteine. Andere wirken als Transporter, Enzyme oder Rezeptoren.
+
+**Merksatz:** Transmembranproteine durchspannen die Membran und können als Kanäle, Transporter oder Rezeptoren fungieren.
+
+## 3. Das Flüssig-Mosaik-Modell
+
+Alle Bausteine der Zellmembran – Lipide und viele Proteine – sind innerhalb der Membranebene beweglich. Sie können sich seitlich gegeneinander verschieben, rotieren oder ihre Form verändern. Diese Eigenschaft beschreibt das sogenannte Flüssig-Mosaik-Modell. Der Begriff „flüssig“ bezieht sich auf die Beweglichkeit der Bestandteile, während „Mosaik“ verdeutlicht, dass viele unterschiedliche Proteine in die Lipidschicht eingelagert sind.
+
+Die Beweglichkeit der Membran ist entscheidend für zahlreiche Prozesse, etwa für die Funktion von Rezeptoren, die Bildung von Vesikeln oder die Anpassung der Membran an mechanische Belastungen.
+
+**Merksatz:** Das Flüssig-Mosaik-Modell beschreibt die Zellmembran als bewegliche Lipidschicht mit eingelagerten, ebenfalls beweglichen Proteinen.
+
+## 4. Bewegungsarten von Lipiden in der Membran
+
+Lipidmoleküle können sich auf verschiedene Weise innerhalb der Membran bewegen:
+
+* **Laterale Diffusion:** Austausch des Platzes mit benachbarten Lipiden innerhalb derselben Membranschicht; diese Bewegung ist sehr häufig.
+* **Rotation:** Drehung des Moleküls um seine eigene Achse.
+* **Flexion:** Beweglichkeit der Fettsäureketten.
+* **Flip-Flop (transversale Diffusion):** Seitenwechsel eines Lipidmoleküls von einer Membranschicht in die andere; diese Bewegung ist selten und tritt vor allem an Orten auf, an denen Membranen neu gebildet werden.
+
+**Merksatz:** Die häufigste Bewegung von Lipiden ist die laterale Diffusion, während Flip-Flop nur selten vorkommt.
+
+## 5. Membranfluidität und die Rolle des Cholesterins
+
+Die Fluidität der Zellmembran beschreibt, wie beweglich ihre Bestandteile sind. Sie hängt von mehreren Faktoren ab. Eine steigende Temperatur erhöht im Allgemeinen die Beweglichkeit der Membran, während eine sinkende Temperatur sie starrer macht. Auch die Zusammensetzung der Fettsäuren ist wichtig: Ungesättigte Fettsäuren erhöhen die Fluidität, da sie ein dichtes Packen der Lipide verhindern.
+
+Eine besondere Bedeutung kommt dem Cholesterin zu. Cholesterin besitzt einerseits starre Ringstrukturen, die zur Stabilisierung der Membran beitragen, und andererseits flexible Bereiche, die die Beweglichkeit beeinflussen. Seine Wirkung ist temperaturabhängig: Bei niedrigen Temperaturen verhindert es ein zu starkes Erstarren der Membran, bei hohen Temperaturen bremst es eine übermäßige Verflüssigung. Insgesamt trägt Cholesterin dazu bei, die Fluidität der Membran in einem funktionell günstigen Bereich zu halten.
+
+Die Fluidität der Membran nimmt allgemein zu bei:
+
+* steigender Temperatur
+* steigendem Anteil ungesättigter Fettsäuren
+* sinkendem Cholesteringehalt (bei konstanter Temperatur)
+
+**Merksatz:** Cholesterin wirkt als „Puffer“ der Membranfluidität und stabilisiert die Membran bei Temperaturänderungen.
+
+## 6. Selektive Permeabilität der Zellmembran
+
+Die Zellmembran ist selektiv permeabel, das heißt, sie lässt manche Stoffe leicht passieren, während andere zurückgehalten werden. Frei durch die Membran diffundieren können vor allem:
+
+* kleine, unpolare Moleküle wie O₂, CO₂ oder N₂
+* sehr kleine Moleküle wie Harnstoff oder Ammoniak
+* kleine, ungeladene, polare Moleküle wie Wasser oder Ethanol
+
+Nicht frei durchlässig sind dagegen:
+
+* größere polare Moleküle wie Glukose oder Saccharose
+* Ionen wie H⁺, Na⁺, K⁺, Ca²⁺, Cl⁻
+* Proteine und Nukleinsäuren
+
+Für diese Stoffe sind spezielle Transportmechanismen notwendig.
+
+**Merksatz:** Ionen und größere polare Moleküle benötigen Transportproteine, da sie die Lipiddoppelschicht nicht frei passieren können.
+
+## 7. Passiver Transport
+
+Beim passiven Transport bewegen sich Stoffe ohne Energieverbrauch entlang eines Konzentrations- oder elektrochemischen Gradienten.
+
+### 7.1 Diffusion, erleichterte Diffusion und Osmose
+
+Unter Diffusion versteht man die Bewegung von Teilchen vom Ort hoher Konzentration zum Ort niedriger Konzentration. Die Geschwindigkeit dieser Bewegung wird unter anderem durch das Fick’sche Diffusionsgesetz beschrieben.
+
+Bei der erleichterten Diffusion erfolgt der Transport ebenfalls entlang des Gradienten, jedoch mithilfe spezifischer Transportproteine, sogenannter Carrier oder Kanäle.
+
+Die Osmose bezeichnet die Diffusion des Lösungsmittels, meist Wasser, durch eine semipermeable Membran.
+
+**Merksatz:** Passiver Transport erfolgt immer entlang eines Gradienten und benötigt keine Energie in Form von ATP.
+
+### 7.2 Carrier und Ionenkanäle
+
+Geladene Teilchen können die Membran nicht frei durchdringen und sind daher auf Membranproteine angewiesen. Dabei unterscheidet man zwei Haupttypen:
+
+**Carrier** sind flexible Proteine, die ihr Substrat spezifisch binden und durch eine Konformationsänderung auf die andere Seite der Membran transportieren. Ihre Transportgeschwindigkeit ist begrenzt und zeigt eine Sättigung, da nur eine bestimmte Anzahl von Substratmolekülen gleichzeitig gebunden werden kann. Die Affinität zwischen Substrat und Carrier lässt sich durch die Michaelis-Menten-Kinetik beschreiben.
+
+**Ionenkanäle** sind Transmembranproteine, die eine wassergefüllte Pore bilden. Durch diese können Ionen sehr schnell entlang ihres elektrochemischen Gradienten strömen. Die Öffnung der Kanäle kann spannungsabhängig, ligandengesteuert oder mechanisch reguliert sein.
+
+Carrier lassen sich weiter einteilen in:
+
+* **Uniporter:** transportieren ein Molekül
+* **Symporter:** transportieren mehrere Moleküle in die gleiche Richtung
+* **Antiporter:** transportieren mehrere Moleküle in entgegengesetzte Richtungen
+
+**Merksatz:** Carrier sind spezifisch und sättigbar, Ionenkanäle ermöglichen einen besonders schnellen Transport.
+
+## 8. Aktiver Transport
+
+Von aktivem Transport spricht man, wenn Stoffe gegen ihren Konzentrations- oder elektrochemischen Gradienten bewegt werden. Dafür ist Energie notwendig.
+
+Man unterscheidet:
+
+* **Primär aktiven Transport:** ATP wird direkt verbraucht.
+* **Sekundär aktiven Transport:** Ein unter ATP-Verbrauch aufgebauter Ionengradient wird genutzt, um andere Stoffe mitzutransportieren.
+
+**Merksatz:** Aktiver Transport bewegt Stoffe gegen den Gradienten und benötigt Energie.
+
+### 8.1 Ionenpumpen und die Natrium-Kalium-ATPase
+
+Ionenpumpen sind Membranproteine, die direkt ATP verbrauchen, um Ionen zu transportieren. Die wichtigste Pumpe in tierischen Zellen ist die Natrium-Kalium-ATPase. Sie transportiert unter Verbrauch eines ATP-Moleküls drei Natrium-Ionen aus der Zelle heraus und zwei Kalium-Ionen in die Zelle hinein.
+
+Der Ablauf ist vereinfacht:
+Zunächst bindet ATP an die Pumpe auf der Innenseite der Membran. Nach Abspaltung von ADP wird das Protein phosphoryliert und bindet drei Natrium-Ionen. Durch eine Konformationsänderung werden diese nach außen abgegeben. Anschließend binden zwei Kalium-Ionen von außen, das Phosphat wird abgespalten, und die Kalium-Ionen werden ins Zellinnere freigesetzt.
+
+Weitere wichtige Ionenpumpen sind:
+
+* H⁺-ATPasen (z. B. in Mitochondrien)
+* H⁺/K⁺-ATPasen (im Magenepithel zur Magensäurebildung)
+* Ca²⁺-ATPasen (in Zellmembranen)
+
+**Merksatz:** Die Na⁺/K⁺-ATPase hält die Ionengradienten der Zelle aufrecht und ist essenziell für die Erregbarkeit von Zellen.
+
+### 8.2 ABC-Transporter und Co-Transport
+
+ABC-Transporter (ATP-binding cassette Transporter) sind eine große Gruppe von Membranproteinen, die unter direktem ATP-Verbrauch sehr unterschiedliche Substrate wie Ionen, Zucker, Peptide, Proteine oder auch Medikamente transportieren. Sie kommen unter anderem in Leber, Darm und der Blut-Hirn-Schranke vor.
+
+Beim Co-Transport wird ein zuvor aufgebauter Ionengradient genutzt, um ein anderes Molekül mitzunehmen. Ein klassisches Beispiel ist der Natrium-Glukose-Symporter: Der Rückstrom von Natrium in die Zelle entlang seines Gradienten ermöglicht den gleichzeitigen Transport von Glukose gegen deren Konzentrationsgradienten. Man spricht hier von sekundär aktivem Transport.
+
+**Merksatz:** Sekundär aktiver Transport nutzt die Energie eines Ionengradienten, nicht ATP direkt.
+
+## 9. Vesikulärer Transport
+
+Neben dem Transport durch Membranproteine können Stoffe auch in Vesikeln transportiert werden. Bei der Endozytose werden Stoffe in die Zelle aufgenommen, bei der Exozytose werden Stoffe aus der Zelle abgegeben. Dieser Mechanismus ist vor allem für größere Moleküle oder Partikel wichtig.
+
+**Merksatz:** Endozytose und Exozytose ermöglichen den Transport größerer Stoffmengen in Vesikeln.
+
+## 10. Funktionen der Zellmembran
+
+Die Zellmembran erfüllt mehrere zentrale Aufgaben:
+
+* **Kompartimentierung:** Trennung von intra- und extrazellulärem Raum.
+* **Stofftransport:** Kontrolle darüber, welche Stoffe die Zelle betreten oder verlassen.
+* **Signalübertragung:** Aufnahme und Weiterleitung von Signalen über Rezeptoren.
+* **Stabilität:** Verankerung des Zytoskeletts und elastische Anpassung der Zellform.
+
+**Merksatz:** Die Zellmembran ist nicht nur eine Barriere, sondern ein zentrales Funktionsorgan der Zelle.
+
+## 11. Die Glykokalyx
+
+An der Außenseite der Zellmembran befindet sich eine mehrere Nanometer dicke Schicht aus Kohlenhydratketten, die an Lipide und Proteine gebunden sind. Diese Schicht nennt man Glykokalyx. Sie besteht unter anderem aus Glykoproteinen, Glykolipiden, Glykosphingolipiden und Proteoglykanen.
+
+Der Aufbau der Glykokalyx ist zellspezifisch. In der Entwicklung erkennen sich gleichartig differenzierte Zellen an ihrem charakteristischen Zuckermuster und schließen sich zu Geweben zusammen. Außerdem verleiht die Glykokalyx den Zellen wichtige Antigen- und Blutgruppeneigenschaften und spielt damit eine zentrale Rolle für Immunreaktionen. Gleichzeitig können manche Krankheitserreger diese Zuckerstrukturen nutzen, um an Zellen zu binden.
+
+Zu den wichtigen Zuckern der Glykokalyx zählen unter anderem:
+Glukose, Galaktose, Fruktose, N-Acetyl-Glukosamin, N-Acetyl-Galaktosamin und N-Acetyl-Neuraminsäure.
+
+**Merksatz:** Die Glykokalyx ist entscheidend für Zellerkennung, Gewebebildung und immunologische Eigenschaften.
+
+# Übungsfragen (MC, 5 Optionen)
+
+1. Welche Aussage zur Zellmembran trifft zu?
+   A) Sie ist ein starres, unbewegliches Gebilde.
+   B) Sie besteht aus einer einfachen Lipidschicht.
+   C) Sie trennt intra- und extrazellulären Raum und ermöglicht kontrollierten Austausch.
+   D) Sie ist frei durchlässig für alle Ionen.
+   E) Sie enthält keine Proteine.
+
+2. Was bedeutet „amphiphil“ im Zusammenhang mit Phospholipiden?
+   A) Vollständig wasserlöslich
+   B) Vollständig fettlöslich
+   C) Besitzt einen hydrophilen und einen hydrophoben Anteil
+   D) Besteht aus drei Fettsäuren
+   E) Ist elektrisch geladen
+
+3. Welche Bewegung von Lipiden kommt in der Membran am häufigsten vor?
+   A) Flip-Flop
+   B) Laterale Diffusion
+   C) Vesikelbildung
+   D) Transmembraner Transport
+   E) Exozytose
+
+4. Wie wirkt Cholesterin auf die Membranfluidität?
+   A) Es macht die Membran immer starrer.
+   B) Es macht die Membran immer flüssiger.
+   C) Es puffert die Fluidität abhängig von der Temperatur.
+   D) Es hat keinen Einfluss.
+   E) Es zerstört die Lipiddoppelschicht.
+
+5. Welche Stoffe können die Zellmembran am ehesten frei passieren?
+   A) Na⁺
+   B) Glukose
+   C) O₂
+   D) Proteine
+   E) Nukleinsäuren
+
+6. Was unterscheidet Carrier von Ionenkanälen korrekt?
+   A) Carrier sind schneller als Kanäle.
+   B) Kanäle sind immer ATP-abhängig.
+   C) Carrier zeigen Sättigungskinetik, Kanäle nicht in gleicher Weise.
+   D) Kanäle transportieren nur ungeladene Moleküle.
+   E) Carrier bilden starre Poren.
+
+7. Was kennzeichnet primär aktiven Transport?
+   A) Er erfolgt entlang des Gradienten.
+   B) Er nutzt ATP direkt.
+   C) Er benötigt keine Proteine.
+   D) Er ist identisch mit Diffusion.
+   E) Er transportiert nur Wasser.
+
+8. Welche Aussage zur Natrium-Kalium-ATPase ist korrekt?
+   A) Sie transportiert 2 Na⁺ nach außen und 3 K⁺ nach innen.
+   B) Sie arbeitet ohne ATP.
+   C) Sie erhält Ionengradienten aufrecht, die für Erregbarkeit wichtig sind.
+   D) Sie ist ein Ionenkanal.
+   E) Sie ist ein sekundär aktiver Transporter.
+
+9. Was beschreibt einen Symporter?
+   A) Transport eines Stoffes in eine Richtung
+   B) Transport zweier Stoffe in entgegengesetzte Richtungen
+   C) Transport mehrerer Stoffe in die gleiche Richtung
+   D) Transport nur unter direktem ATP-Verbrauch
+   E) Transport ausschließlich durch Poren
+
+10. Welche Aussage zur Glykokalyx ist richtig?
+    A) Sie liegt an der Innenseite der Membran.
+    B) Sie ist bei allen Zellen gleich aufgebaut.
+    C) Sie spielt eine Rolle bei Zellerkennung und Immunreaktionen.
+    D) Sie besteht nur aus Lipiden.
+    E) Sie verhindert jede Zell-Zell-Interaktion.
+`,
 
       diagram: "cell-membrane",
 
