@@ -195,7 +195,6 @@ export function MerksatzBox({ text, type = "merke" }: MerksatzBoxProps) {
 }
 
 // src/components/chapter/SelbstTest.tsx
-import { useState } from "react";
 import { CheckCircle2, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -311,4 +310,3 @@ export function SelbstTest({ questions }: SelbstTestProps) {
     </div>
   );
 }
-
