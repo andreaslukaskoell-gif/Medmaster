@@ -35,12 +35,17 @@ export async function migrateBMSChaptersToSupabase(): Promise<MigrationResult> {
     skipped: [],
   };
 
+  const client = supabase;
+  if (!client) {
+    result.success = false;
+    result.errors.push('Supabase nicht konfiguriert');
+    return result;
+  }
+
   try {
     console.log('🚀 [migrateBMS] Starting migration from localStorage to Supabase...');
 
-    // 1. Lade alle Kapitel aus localStorage
     const chapters = loadAllChapters();
-    
     if (chapters.length === 0) {
       console.warn('⚠️ [migrateBMS] No chapters found in localStorage');
       result.errors.push('Keine Kapitel in localStorage gefunden');
@@ -50,8 +55,7 @@ export async function migrateBMSChaptersToSupabase(): Promise<MigrationResult> {
 
     console.log(`📚 [migrateBMS] Found ${chapters.length} chapters to migrate`);
 
-    // 2. Prüfe, ob User eingeloggt ist (für Admin-Check)
-    const { data: { user } } = await supabase.auth.getUser();
+    const { data: { user } } = await client.auth.getUser();
     if (!user) {
       const errorMsg = 'Nicht eingeloggt. Bitte zuerst einloggen.';
       console.error('❌ [migrateBMS]', errorMsg);
@@ -79,7 +83,7 @@ export async function migrateBMSChaptersToSupabase(): Promise<MigrationResult> {
         };
 
         // Upsert Kapitel (insert or update)
-        const { error: chapterError } = await supabase
+        const { error: chapterError } = await client
           .from('bms_chapters')
           .upsert(chapterData, {
             onConflict: 'id',
@@ -113,7 +117,7 @@ export async function migrateBMSChaptersToSupabase(): Promise<MigrationResult> {
                 self_test: subchapter.selfTest || [],
               };
 
-              const { error: subError } = await supabase
+              const { error: subError } = await client
                 .from('bms_subchapters')
                 .upsert(subchapterData, {
                   onConflict: 'id',
@@ -176,9 +180,12 @@ export async function checkMigrationStatus(): Promise<{
   needsMigration: boolean;
 }> {
   const localStorageChapters = loadAllChapters();
-  
+  const client = supabase;
+  if (!client) {
+    return { localStorageCount: localStorageChapters.length, supabaseCount: 0, needsMigration: false };
+  }
   try {
-    const { data, error } = await supabase
+    const { data, error } = await client
       .from('bms_chapters')
       .select('id', { count: 'exact' });
 

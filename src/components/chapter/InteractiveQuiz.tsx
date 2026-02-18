@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { QuizQuestion } from "./QuizQuestion";
 import type { SelfTestQuestion } from "@/data/bmsKapitel/types";
 
 interface InteractiveQuizProps {
   questions: SelfTestQuestion[];
+  unterkapitelId?: string;
+  onAnswer?: (questionIndex: number, isCorrect: boolean) => void;
+  onAllComplete?: () => void;
 }
 
 /**
@@ -11,7 +14,7 @@ interface InteractiveQuizProps {
  * Shows immediate feedback per question with explanations
  * FIXED: Now uses reusable QuizQuestion component for consistency
  */
-export function InteractiveQuiz({ questions }: InteractiveQuizProps) {
+export function InteractiveQuiz({ questions, unterkapitelId, onAnswer, onAllComplete }: InteractiveQuizProps) {
   const [questionResults, setQuestionResults] = useState<Record<number, boolean>>({});
 
   const handleAnswerChange = (questionIndex: number, isCorrect: boolean) => {
@@ -19,10 +22,17 @@ export function InteractiveQuiz({ questions }: InteractiveQuizProps) {
       ...prev,
       [questionIndex]: isCorrect,
     }));
+    onAnswer?.(questionIndex, isCorrect);
   };
 
   const totalCorrect = Object.values(questionResults).filter(Boolean).length;
   const totalAnswered = Object.keys(questionResults).length;
+
+  useEffect(() => {
+    if (questions.length > 0 && totalAnswered >= questions.length && onAllComplete) {
+      onAllComplete();
+    }
+  }, [totalAnswered, questions.length, onAllComplete]);
 
   return (
     <div className="space-y-6 mt-8">

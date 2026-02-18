@@ -1,3 +1,4 @@
+import type { SupabaseClient } from "@supabase/supabase-js";
 import { supabase } from "./supabase";
 import { useStore } from "@/store/useStore";
 import type { QuizResult, SpacedItem } from "@/store/useStore";
@@ -7,14 +8,16 @@ import type { QuizResult, SpacedItem } from "@/store/useStore";
 // ============================================================
 
 export async function pullFromSupabase(userId: string): Promise<void> {
+  const client = supabase;
+  if (!client) return;
   try {
     const [profileRes, quizRes, srRes, notesRes, bookmarksRes, activityRes] = await Promise.all([
-      supabase.from("profiles").select("xp, level, streak_days, last_active_date, onboarding_completed").eq("id", userId).single(),
-      supabase.from("quiz_results").select("*").eq("user_id", userId),
-      supabase.from("spaced_repetition").select("*").eq("user_id", userId),
-      supabase.from("user_notes").select("chapter_id, content").eq("user_id", userId),
-      supabase.from("user_bookmarks").select("item_type, item_id").eq("user_id", userId),
-      supabase.from("activity_log").select("*").eq("user_id", userId),
+      client.from("profiles").select("xp, level, streak_days, last_active_date, onboarding_completed").eq("id", userId).single(),
+      client.from("quiz_results").select("*").eq("user_id", userId),
+      client.from("spaced_repetition").select("*").eq("user_id", userId),
+      client.from("user_notes").select("chapter_id, content").eq("user_id", userId),
+      client.from("user_bookmarks").select("item_type, item_id").eq("user_id", userId),
+      client.from("activity_log").select("*").eq("user_id", userId),
     ]);
 
     const state = useStore.getState();
@@ -116,13 +119,14 @@ export async function pullFromSupabase(userId: string): Promise<void> {
 // ============================================================
 
 export async function pushToSupabase(userId: string): Promise<void> {
+  const client = supabase;
+  if (!client) return;
   try {
     const s = useStore.getState();
     const level = Math.floor(s.xp / 100) + 1;
 
     await Promise.all([
-      // Profile
-      supabase.from("profiles").update({
+      client.from("profiles").update({
         xp: s.xp,
         level,
         streak_days: s.streak,
@@ -130,20 +134,11 @@ export async function pushToSupabase(userId: string): Promise<void> {
         onboarding_completed: s.onboardingCompleted,
       }).eq("id", userId),
 
-      // Quiz Results
-      pushQuizResults(userId, s.quizResults),
-
-      // Spaced Repetition
-      pushSpacedRepetition(userId, Object.values(s.spacedRepetition)),
-
-      // Notes
-      pushNotes(userId, s.notes),
-
-      // Bookmarks (full replace)
-      pushBookmarks(userId, s.bookmarks),
-
-      // Activity Log
-      pushActivityLog(userId, s.activityLog),
+      pushQuizResults(client, userId, s.quizResults),
+      pushSpacedRepetition(client, userId, Object.values(s.spacedRepetition)),
+      pushNotes(client, userId, s.notes),
+      pushBookmarks(client, userId, s.bookmarks),
+      pushActivityLog(client, userId, s.activityLog),
     ]);
 
     console.log("[main-sync] Pushed");
@@ -152,7 +147,7 @@ export async function pushToSupabase(userId: string): Promise<void> {
   }
 }
 
-async function pushQuizResults(userId: string, results: QuizResult[]) {
+async function pushQuizResults(client: SupabaseClient, userId: string, results: QuizResult[]) {
   if (results.length === 0) return;
   const rows = results.map((r) => ({
     id: r.id,
@@ -165,12 +160,12 @@ async function pushQuizResults(userId: string, results: QuizResult[]) {
     created_at: r.timestamp || r.date,
   }));
   for (let i = 0; i < rows.length; i += 200) {
-    const { error } = await supabase.from("quiz_results").upsert(rows.slice(i, i + 200), { onConflict: "id" });
+    const { error } = await client.from("quiz_results").upsert(rows.slice(i, i + 200), { onConflict: "id" });
     if (error) throw error;
   }
 }
 
-async function pushSpacedRepetition(userId: string, items: SpacedItem[]) {
+async function pushSpacedRepetition(client: SupabaseClient, userId: string, items: SpacedItem[]) {
   if (items.length === 0) return;
   const rows = items.map((item) => ({
     user_id: userId,
@@ -182,12 +177,12 @@ async function pushSpacedRepetition(userId: string, items: SpacedItem[]) {
     repetitions: item.repetitions,
   }));
   for (let i = 0; i < rows.length; i += 200) {
-    const { error } = await supabase.from("spaced_repetition").upsert(rows.slice(i, i + 200), { onConflict: "user_id,question_id" });
+    const { error } = await client.from("spaced_repetition").upsert(rows.slice(i, i + 200), { onConflict: "user_id,question_id" });
     if (error) throw error;
   }
 }
 
-async function pushNotes(userId: string, notes: Record<string, string>) {
+async function pushNotes(client: SupabaseClient, userId: string, notes: Record<string, string>) {
   const entries = Object.entries(notes);
   if (entries.length === 0) return;
   const rows = entries.map(([chapterId, content]) => ({
@@ -197,25 +192,25 @@ async function pushNotes(userId: string, notes: Record<string, string>) {
     updated_at: new Date().toISOString(),
   }));
   for (let i = 0; i < rows.length; i += 200) {
-    const { error } = await supabase.from("user_notes").upsert(rows.slice(i, i + 200), { onConflict: "user_id,chapter_id" });
+    const { error } = await client.from("user_notes").upsert(rows.slice(i, i + 200), { onConflict: "user_id,chapter_id" });
     if (error) throw error;
   }
 }
 
-async function pushBookmarks(userId: string, bookmarks: { chapters: string[]; questions: string[] }) {
-  await supabase.from("user_bookmarks").delete().eq("user_id", userId);
+async function pushBookmarks(client: SupabaseClient, userId: string, bookmarks: { chapters: string[]; questions: string[] }) {
+  await client.from("user_bookmarks").delete().eq("user_id", userId);
   const rows: { user_id: string; item_type: string; item_id: string }[] = [];
   for (const id of bookmarks.chapters) rows.push({ user_id: userId, item_type: "chapter", item_id: id });
   for (const id of bookmarks.questions) rows.push({ user_id: userId, item_type: "question", item_id: id });
   if (rows.length > 0) {
     for (let i = 0; i < rows.length; i += 200) {
-      const { error } = await supabase.from("user_bookmarks").insert(rows.slice(i, i + 200));
+      const { error } = await client.from("user_bookmarks").insert(rows.slice(i, i + 200));
       if (error) throw error;
     }
   }
 }
 
-async function pushActivityLog(userId: string, log: Record<string, { minutes: number; questions: number }>) {
+async function pushActivityLog(client: SupabaseClient, userId: string, log: Record<string, { minutes: number; questions: number }>) {
   const entries = Object.entries(log);
   if (entries.length === 0) return;
   const rows = entries.map(([date, data]) => ({
@@ -225,7 +220,7 @@ async function pushActivityLog(userId: string, log: Record<string, { minutes: nu
     questions: data.questions,
   }));
   for (let i = 0; i < rows.length; i += 200) {
-    const { error } = await supabase.from("activity_log").upsert(rows.slice(i, i + 200), { onConflict: "user_id,date" });
+    const { error } = await client.from("activity_log").upsert(rows.slice(i, i + 200), { onConflict: "user_id,date" });
     if (error) throw error;
   }
 }

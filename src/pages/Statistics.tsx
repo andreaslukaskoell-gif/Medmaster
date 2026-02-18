@@ -20,7 +20,6 @@ import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { alleStichworteListe, fachConfig } from "@/data/stichwortliste";
-import { generateMockActivityData } from "@/lib/utils";
 import { getQuestionSubject } from "@/lib/bmsLookup";
 import { Progress } from "@/components/ui/progress";
 
@@ -40,12 +39,10 @@ const confidenceLabel: Record<string, { text: string; className: string }> = {
 };
 
 export default function Statistics() {
-  const { quizResults, xp, streak, completedChapters, activityLog } = useStore();
+  const { quizResults, xp, streak, completedChapters } = useStore();
   const adaptive = useAdaptiveStore();
   const { profile } = adaptive;
   const [stichwortFach, setStichwortFach] = useState<string>("biologie");
-  const mockActivity = generateMockActivityData();
-  const activityData = Object.keys(activityLog).length > 0 ? activityLog : mockActivity;
 
   const totalQuizzes = quizResults.length;
   const totalCorrect = quizResults.reduce((sum, r) => sum + r.score, 0);
@@ -391,7 +388,7 @@ export default function Statistics() {
           <CardTitle>Lernaktivität</CardTitle>
         </CardHeader>
         <CardContent>
-          <Heatmap data={activityData} />
+          <Heatmap />
         </CardContent>
       </Card>
     </div>

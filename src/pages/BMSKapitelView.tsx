@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, CheckCircle2, Clock, BookOpen, ChevronRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
+import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import type { Kapitel } from "@/data/bmsKapitel/types";
 import BMSUnterkapitel from "./BMSUnterkapitel";
 
@@ -29,7 +30,17 @@ const subjectColors: Record<string, { progress: string; text: string; badge: str
 
 export default function BMSKapitelView({ kapitel, onBack }: Props) {
   const [activeUKIndex, setActiveUKIndex] = useState<number | null>(null);
-  
+
+  useEffect(() => {
+    const resumeId = useAdaptiveStore.getState().resumeToUnterkapitelId;
+    if (!resumeId || !kapitel?.unterkapitel?.length) return;
+    const idx = kapitel.unterkapitel.findIndex((u) => u?.id === resumeId);
+    if (idx >= 0) {
+      setActiveUKIndex(idx);
+      useAdaptiveStore.getState().setResumeToUnterkapitelId(null);
+    }
+  }, [kapitel?.id, kapitel?.unterkapitel]);
+
   // Safe store access with fallback
   let completedChapters: string[] = [];
   try {

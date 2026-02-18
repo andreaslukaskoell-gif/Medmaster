@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Flame, Star, CalendarClock, Sun, Moon, Search, Menu, X } from "lucide-react";
 import { useStore } from "@/store/useStore";
+import { SyncStatus } from "./SyncStatus";
 import { daysUntilMedAT } from "@/lib/utils";
 import { alleKapitel } from "@/data/bmsKapitel";
 import { bmsQuestions } from "@/data/bmsQuestions";
@@ -98,6 +99,8 @@ export function TopBar({ onMenuToggle }: TopBarProps) {
             <Flame className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-orange-500 shrink-0" />
             <span className="text-xs font-bold text-orange-700 dark:text-orange-400">{streak}</span>
           </div>
+
+          <SyncStatus />
 
           <motion.button
             whileHover={{ scale: 1.05 }}

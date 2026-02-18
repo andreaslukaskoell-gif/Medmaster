@@ -85,8 +85,10 @@ function dbRowToKapitel(row: BMSChapterRow): Kapitel | null {
  * Load all BMS chapters from Supabase
  */
 export async function loadBMSChaptersFromSupabase(): Promise<Kapitel[]> {
+  const client = supabase;
+  if (!client) return [];
   try {
-    const { data, error } = await supabase
+    const { data, error } = await client
       .from('bms_chapters')
       .select('*')
       .order('order_index', { ascending: true });
@@ -104,7 +106,7 @@ export async function loadBMSChaptersFromSupabase(): Promise<Kapitel[]> {
     // Load subchapters for each chapter
     const chaptersWithSubchapters = await Promise.all(
       data.map(async (chapterRow) => {
-        const { data: subchapters, error: subError } = await supabase
+        const { data: subchapters, error: subError } = await client
           .from('bms_subchapters')
           .select('*')
           .eq('chapter_id', chapterRow.id)
@@ -147,8 +149,10 @@ export async function loadBMSChaptersFromSupabase(): Promise<Kapitel[]> {
 export async function loadBMSChaptersBySubject(
   subject: 'biologie' | 'chemie' | 'physik' | 'mathematik'
 ): Promise<Kapitel[]> {
+  const client = supabase;
+  if (!client) return [];
   try {
-    const { data, error } = await supabase
+    const { data, error } = await client
       .from('bms_chapters')
       .select('*')
       .eq('subject', subject)
@@ -166,7 +170,7 @@ export async function loadBMSChaptersBySubject(
     // Load subchapters for each chapter
     const chaptersWithSubchapters = await Promise.all(
       data.map(async (chapterRow) => {
-        const { data: subchapters } = await supabase
+        const { data: subchapters } = await client
           .from('bms_subchapters')
           .select('*')
           .eq('chapter_id', chapterRow.id)
@@ -206,8 +210,10 @@ export async function getUserProgress(
   chapterId?: string,
   subchapterId?: string
 ): Promise<UserProgressRow[]> {
+  const client = supabase;
+  if (!client) return [];
   try {
-    let query = supabase
+    let query = client
       .from('user_progress')
       .select('*')
       .eq('user_id', userId);
@@ -243,8 +249,10 @@ export async function saveUserProgress(
   isCompleted: boolean,
   progressData?: any
 ): Promise<boolean> {
+  const client = supabase;
+  if (!client) return false;
   try {
-    const { error } = await supabase
+    const { error } = await client
       .from('user_progress')
       .upsert(
         {
@@ -276,6 +284,7 @@ export async function saveUserProgress(
  * Get current user ID from Supabase session
  */
 export async function getCurrentUserId(): Promise<string | null> {
+  if (!supabase) return null;
   try {
     const { data: { user } } = await supabase.auth.getUser();
     return user?.id || null;
@@ -290,6 +299,8 @@ export async function getCurrentUserId(): Promise<string | null> {
  * This should be run once to migrate existing chapters
  */
 export async function syncChaptersToSupabase(chapters: Kapitel[]): Promise<boolean> {
+  const client = supabase;
+  if (!client) return false;
   try {
     const currentUser = await getCurrentUserId();
     if (!currentUser) {
@@ -297,8 +308,7 @@ export async function syncChaptersToSupabase(chapters: Kapitel[]): Promise<boole
       return false;
     }
 
-    // Check if user is admin (you can adjust this logic)
-    const { data: profile } = await supabase
+    const { data: profile } = await client
       .from('profiles')
       .select('email')
       .eq('id', currentUser)
@@ -309,10 +319,8 @@ export async function syncChaptersToSupabase(chapters: Kapitel[]): Promise<boole
       return false;
     }
 
-    // Insert/update chapters
     for (const chapter of chapters) {
-      // Insert chapter
-      const { error: chapterError } = await supabase
+      const { error: chapterError } = await client
         .from('bms_chapters')
         .upsert(
           {
@@ -331,9 +339,8 @@ export async function syncChaptersToSupabase(chapters: Kapitel[]): Promise<boole
         continue;
       }
 
-      // Insert subchapters
       for (const subchapter of chapter.unterkapitel) {
-        const { error: subError } = await supabase
+        const { error: subError } = await client
           .from('bms_subchapters')
           .upsert(
             {

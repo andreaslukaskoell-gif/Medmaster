@@ -28,4 +28,18 @@ export function getKapitelById(id: string): Kapitel | undefined {
   return alleKapitel.find((k) => k.id === id);
 }
 
+/**
+ * Findet das Kapitel und den Index des Unterkapitels für "Zuletzt gelerntes Thema fortsetzen".
+ */
+export function findChapterByUnterkapitelId(
+  unterkapitelId: string
+): { kapitel: Kapitel; index: number } | null {
+  for (const k of alleKapitel) {
+    const unterkapitel = k.unterkapitel && Array.isArray(k.unterkapitel) ? k.unterkapitel : [];
+    const index = unterkapitel.findIndex((u) => u && u.id === unterkapitelId);
+    if (index >= 0) return { kapitel: k, index };
+  }
+  return null;
+}
+
 export { biologieKapitel, chemieKapitel, physikKapitel, mathematikKapitel };

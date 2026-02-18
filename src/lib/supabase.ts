@@ -4,7 +4,21 @@ import { createClient, SupabaseClient } from "@supabase/supabase-js";
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL ?? "";
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY ?? "";
 
-export const supabase: SupabaseClient =
+const missing: string[] = [];
+if (!supabaseUrl.trim()) missing.push("VITE_SUPABASE_URL");
+if (!supabaseAnonKey.trim()) missing.push("VITE_SUPABASE_ANON_KEY");
+if (missing.length > 0) {
+  console.error(
+    "[MedMaster] Supabase ist nicht konfiguriert. Bitte in .env setzen:",
+    missing.join(", ")
+  );
+}
+
+export const supabase: SupabaseClient | null =
   supabaseUrl && supabaseAnonKey
     ? createClient(supabaseUrl, supabaseAnonKey)
-    : (null as unknown as SupabaseClient);
+    : null;
+
+export function isSupabaseConfigured(): boolean {
+  return supabase != null;
+}

@@ -1,7 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { CheckCircle2, XCircle, RotateCcw } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import type { SelfTestQuestion } from "@/data/bmsKapitel/types";
+import { Button } from "../ui/button";
+import type { SelfTestQuestion } from "../../data/bmsKapitel/types";
 
 interface QuizQuestionProps {
   question: SelfTestQuestion;
@@ -45,11 +46,15 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
   const hasAnswer = selectedIndex !== null;
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-xl border-2 border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md transition-shadow">
+    <motion.div
+      className="bg-white dark:bg-gray-900 rounded-xl border-2 border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md transition-shadow"
+      animate={isWrong ? { x: [0, -8, 8, -8, 8, 0] } : isCorrect ? { scale: [1, 1.02, 1] } : {}}
+      transition={{ duration: isWrong ? 0.4 : 0.3, ease: "easeOut" }}
+    >
       {/* Question */}
       <div className="mb-4">
         <div className="flex items-start gap-3 mb-3">
-          <span className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 font-bold flex items-center justify-center text-sm">
+          <span className="shrink-0 w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 font-bold flex items-center justify-center text-sm">
             {questionNumber}
           </span>
           <p className="text-base font-semibold text-gray-900 dark:text-gray-100 leading-relaxed flex-1">
@@ -65,10 +70,11 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
             const isWrongSelected = isChecked && isSelected && oi !== correctIndex;
 
             return (
-              <button
+              <motion.button
                 key={oi}
+                type="button"
                 onClick={() => handleSelectAnswer(oi)}
-                disabled={isChecked && !isSelected} // Disable non-selected after check
+                disabled={isChecked && !isSelected}
                 className={`w-full text-left px-4 py-3 rounded-lg border-2 transition-all ${
                   isCorrectOption
                     ? "border-green-500 bg-green-50 dark:bg-green-900/30 text-green-900 dark:text-green-100 font-medium shadow-sm"
@@ -91,7 +97,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                 {isWrongSelected && (
                   <XCircle className="w-5 h-5 text-red-600 dark:text-red-400 float-right mt-0.5" />
                 )}
-              </button>
+              </motion.button>
             );
           })}
         </div>
@@ -121,9 +127,9 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
         >
           <div className="flex items-start gap-3">
             {isCorrect ? (
-              <CheckCircle2 className="w-6 h-6 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-6 h-6 text-green-600 dark:text-green-400 shrink-0 mt-0.5" />
             ) : (
-              <XCircle className="w-6 h-6 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
+              <XCircle className="w-6 h-6 text-red-600 dark:text-red-400 shrink-0 mt-0.5" />
             )}
             <div className="flex-1">
               <p
@@ -151,6 +157,6 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
           </Button>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }

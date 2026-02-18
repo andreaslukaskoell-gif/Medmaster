@@ -1,16 +1,18 @@
-import { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef, useEffect } from "react";
 import { ArrowLeft, ArrowRight, ChevronLeft, Bookmark, StickyNote } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
-import { StickyBackButton } from "@/components/ui/StickyBackButton";
-import { useStore } from "@/store/useStore";
-import { MerksatzBox } from "@/components/chapter/MerksatzBox";
-import { SelbstTest } from "@/components/chapter/SelbstTest";
-import { InteractiveQuiz } from "@/components/chapter/InteractiveQuiz";
-import { SubchapterContent } from "@/components/chapter/SubchapterContent";
-import { extractKontrollfragen } from "@/utils/parseKontrollfragen";
-import type { Kapitel } from "@/data/bmsKapitel/types";
+import { Button } from "../components/ui/button";
+import { Card, CardContent } from "../components/ui/card";
+import { BreadcrumbNav } from "../components/ui/breadcrumb-wrapper";
+import { StickyBackButton } from "../components/ui/StickyBackButton";
+import { useStore } from "../store/useStore";
+import { MerksatzBox } from "../components/chapter/MerksatzBox";
+import { SelbstTest } from "../components/chapter/SelbstTest";
+import { InteractiveQuiz } from "../components/chapter/InteractiveQuiz";
+import { SubchapterContent } from "../components/chapter/SubchapterContent";
+import { extractKontrollfragen } from "../utils/parseKontrollfragen";
+import { updateStichwortProgress } from "../lib/kontrollfragenProgress";
+import { useAdaptiveStore } from "../store/adaptiveLearning";
+import type { Kapitel } from "../data/bmsKapitel/types";
 
 interface Props {
   kapitel: Kapitel;
@@ -41,6 +43,17 @@ const subjectTextColors: Record<string, string> = {
 };
 
 export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, onNavigate }: Props) {
+  const kapitelId = kapitel?.id;
+  const ukFromIndex =
+    kapitel?.unterkapitel && Array.isArray(kapitel.unterkapitel) && unterkapitelIndex >= 0 && unterkapitelIndex < kapitel.unterkapitel.length
+      ? kapitel.unterkapitel[unterkapitelIndex]
+      : null;
+  const ukId = ukFromIndex?.id;
+
+  useEffect(() => {
+    if (kapitelId && ukId) useAdaptiveStore.getState().setLastViewed(kapitelId, ukId);
+  }, [kapitelId, ukId]);
+
   // Defensive checks for chapter and subchapter data
   if (!kapitel || !kapitel.id) {
     return (
@@ -137,6 +150,7 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
   const isBookmarked = bookmarks.chapters.includes(uk.id);
   const isCompleted = completedChapters.includes(uk.id);
   const [selfTestDone, setSelfTestDone] = useState(false);
+  const allCompleteFired = useRef(false);
 
   const total = unterkapitel.length;
   const completedCount = unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length;
@@ -149,12 +163,25 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
       addXP(5);
       checkStreak();
     }
-    // Check if entire chapter is now complete
     const newCompletedCount = completedCount + (isCompleted ? 0 : 1);
     if (newCompletedCount === total) {
       completeChapter(kapitel.id);
       addXP(25);
     }
+  };
+
+  const handleKontrollfragenAnswer = (questionIndex: number, correct: boolean) => {
+    updateStichwortProgress(`${uk.id}-kontroll-${questionIndex}`, correct, 30);
+    addXP(correct ? 10 : 2);
+    checkStreak();
+  };
+
+  const handleAllKontrollfragenComplete = () => {
+    if (allCompleteFired.current) return;
+    allCompleteFired.current = true;
+    handleComplete();
+    setSelfTestDone(true);
+    setTimeout(() => onBack(), 1200);
   };
 
   const handleNext = () => {
@@ -311,25 +338,23 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
 
       {/* Self-Test - Now includes questions extracted from content */}
       {useMemo(() => {
-        // Get questions from selfTest array OR extract from content
         const questionsFromArray = (uk.selfTest && Array.isArray(uk.selfTest) && uk.selfTest.length > 0) ? uk.selfTest : [];
-        
-        // Extract questions from content if they exist as free text
-        // FIXED: Parse Kontrollfragen from content and use them for interactive quiz
         const extractedFromContent = uk.content ? extractKontrollfragen(uk.content).questions : [];
-        
-        // Use extracted questions if available, otherwise use selfTest array
         const allQuestions = extractedFromContent.length > 0 ? extractedFromContent : questionsFromArray;
-        
+
         if (allQuestions.length === 0) return null;
-        
+
+        const kontrollProps = {
+          unterkapitelId: uk.id,
+          onAnswer: handleKontrollfragenAnswer,
+          onAllComplete: handleAllKontrollfragenComplete,
+        };
+
         return (
           <div className={kapitel.id === 'bio-kap1' ? 'mt-8' : ''}>
             {kapitel.id === 'bio-kap1' ? (
-              // Enhanced interactive quiz for "Die Zelle"
-              <InteractiveQuiz questions={allQuestions} />
+              <InteractiveQuiz questions={allQuestions} {...kontrollProps} />
             ) : (
-              // Standard quiz for other chapters
               <>
                 <div className={kapitel.id === 'bio-kap1' ? 'mb-4 pb-3 border-b-2 border-gray-300 dark:border-gray-600' : ''}>
                   <h2 className={`${kapitel.id === 'bio-kap1' ? 'text-2xl font-bold' : 'text-xl font-semibold'} text-gray-900 dark:text-gray-100`}>
@@ -341,12 +366,12 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
                     </p>
                   )}
                 </div>
-                <SelbstTest questions={allQuestions} />
+                <SelbstTest questions={allQuestions} {...kontrollProps} />
               </>
             )}
           </div>
         );
-      }, [uk.selfTest, uk.content, kapitel.id])}
+      }, [uk.selfTest, uk.content, kapitel.id, uk.id])}
 
       {/* Navigation buttons */}
       <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">

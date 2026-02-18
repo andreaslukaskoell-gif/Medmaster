@@ -45,8 +45,15 @@ export interface LearnerProfile {
 
 interface AdaptiveState {
   profile: LearnerProfile;
+  /** Zuletzt besuchtes Unterkapitel (für "Fortsetzen") */
+  lastViewedUnterkapitelId: string | null;
+  lastViewedKapitelId: string | null;
+  /** Nach Klick "Fortsetzen": wird von BMSKapitelView gelesen und dann geleert */
+  resumeToUnterkapitelId: string | null;
 
   // Actions
+  setLastViewed: (kapitelId: string, unterkapitelId: string) => void;
+  setResumeToUnterkapitelId: (id: string | null) => void;
   recordAnswer: (stichwortId: string, correct: boolean, timeSeconds: number) => void;
   getRecommendation: () => DailyRecommendation;
   getAdaptiveQuestions: (count: number, fach?: string) => Question[];
@@ -111,6 +118,14 @@ const defaultFachStat: FachStat = {
 export const useAdaptiveStore = create<AdaptiveState>()(
   persist(
     (set, get) => ({
+      lastViewedUnterkapitelId: null,
+      lastViewedKapitelId: null,
+      resumeToUnterkapitelId: null,
+
+      setLastViewed: (kapitelId, unterkapitelId) =>
+        set({ lastViewedKapitelId: kapitelId, lastViewedUnterkapitelId: unterkapitelId }),
+      setResumeToUnterkapitelId: (id) => set({ resumeToUnterkapitelId: id }),
+
       profile: {
         stichwortStats: {},
         fachStats: {

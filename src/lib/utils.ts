@@ -6,11 +6,37 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+/** MedAT-Stichtag: Erster Freitag im Juli 2026 */
+export function getMedATDate(): Date {
+  const july = new Date(2026, 6, 1); // July 1, 2026
+  let day = july.getDay(); // 0 = Sun, 5 = Fri
+  const daysToFriday = day <= 5 ? 5 - day : 7 - day + 5;
+  return new Date(2026, 6, 1 + daysToFriday);
+}
+
 export function daysUntilMedAT(): number {
-  const medatDate = new Date("2026-07-03");
+  const medatDate = getMedATDate();
   const now = new Date();
+  now.setHours(0, 0, 0, 0);
+  medatDate.setHours(0, 0, 0, 0);
   const diff = medatDate.getTime() - now.getTime();
   return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+}
+
+/** Für Fortschrittsbalken: Zeitraum von Start (1 Jahr vor MedAT) bis Stichtag. progress 0 = Start, 1 = Stichtag. */
+export function getMedATProgress(): { daysLeft: number; totalDays: number; progress: number } {
+  const medat = getMedATDate();
+  const start = new Date(medat);
+  start.setFullYear(start.getFullYear() - 1);
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+  medat.setHours(0, 0, 0, 0);
+  start.setHours(0, 0, 0, 0);
+  const totalDays = Math.ceil((medat.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+  const elapsed = Math.ceil((now.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+  const daysLeft = Math.max(0, Math.ceil((medat.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)));
+  const progress = totalDays > 0 ? Math.min(1, Math.max(0, elapsed / totalDays)) : 0;
+  return { daysLeft, totalDays, progress };
 }
 
 export function timeAgo(dateStr: string): string {
@@ -37,6 +63,30 @@ export function generateMockPercentile(userScore: number): number {
   const d = 0.3989422804014327 * Math.exp(-z * z / 2);
   const p = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.8212560 + t * 1.3302744))));
   return Math.round(z > 0 ? (1 - p) * 100 : p * 100);
+}
+
+/**
+ * Aggregiert Stichwort-Aktivität pro Tag aus stichwort_stats (lastPracticed).
+ * Ein Tag zählt, wenn mindestens ein Stichwort an diesem Tag aktualisiert wurde.
+ * Intensität = Anzahl der bearbeiteten Stichworte an dem Tag.
+ */
+export function getActivityFromStichwortStats(
+  stichwortStats: Record<string, { lastPracticed: string | null }>
+): Record<string, { minutes: number; questions: number }> {
+  const byDay: Record<string, number> = {};
+  for (const stat of Object.values(stichwortStats)) {
+    const dateStr = stat.lastPracticed;
+    if (!dateStr || typeof dateStr !== "string") continue;
+    const day = dateStr.split("T")[0];
+    if (/^\d{4}-\d{2}-\d{2}$/.test(day)) {
+      byDay[day] = (byDay[day] ?? 0) + 1;
+    }
+  }
+  const out: Record<string, { minutes: number; questions: number }> = {};
+  for (const [day, count] of Object.entries(byDay)) {
+    out[day] = { minutes: 0, questions: count };
+  }
+  return out;
 }
 
 export function generateMockActivityData(): Record<string, { minutes: number; questions: number }> {

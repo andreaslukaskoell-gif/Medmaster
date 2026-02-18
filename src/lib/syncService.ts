@@ -1,4 +1,5 @@
 import { supabase } from "./supabase";
+import { useSyncStatus } from "@/stores/syncStatus";
 
 // Avoid circular dependency: useAuth → syncService → adaptiveLearning → data.
 // Load adaptive store only when sync runs (after login).
@@ -7,6 +8,7 @@ type FachStat = import("@/store/adaptiveLearning").FachStat;
 
 /** Row shape from stichwort_stats (Supabase) */
 interface StichwortStatRow {
+  user_id: string;
   stichwort_id: string;
   total_attempts: number;
   correct_attempts: number;
@@ -15,6 +17,22 @@ interface StichwortStatRow {
   confidence: string | null;
   streak: number;
   avg_time_per_question: number | null;
+  status: "offen" | "meister";
+  next_review_at: string;
+  updated_at: string;
+}
+
+/** Vergessenskurve: nächster Wiederholungszeitpunkt ab jetzt (ISO-String). */
+function calculateNextReview(streak: number): string {
+  const now = Date.now();
+  const dayMs = 86400000;
+  let addMs = 0;
+  if (streak >= 4) addMs = 14 * dayMs;
+  else if (streak === 3) addMs = 7 * dayMs;
+  else if (streak === 2) addMs = 3 * dayMs;
+  else if (streak === 1) addMs = 1 * dayMs;
+  // streak 0: +0 Stunden (bleibt fällig)
+  return new Date(now + addMs).toISOString();
 }
 
 /** Row shape from fach_stats (Supabase) */
@@ -31,6 +49,8 @@ interface FachStatRow {
 // ============================================================
 
 export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean; error?: string }> {
+  if (!supabase) return { ok: true };
+  useSyncStatus.getState().setSyncing(true);
   const errors: string[] = [];
   try {
     const { useAdaptiveStore } = await import("@/store/adaptiveLearning");
@@ -70,6 +90,8 @@ export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean
         confidence: stat.confidence,
         streak: stat.streak,
         avg_time_per_question: stat.avgTimePerQuestion,
+        status: stat.streak >= 3 ? "meister" : "offen",
+        next_review_at: calculateNextReview(stat.streak),
         updated_at: new Date().toISOString(),
       })
     );
@@ -119,6 +141,7 @@ export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean
       fachCount: fachRows.length,
       errors: errors.length > 0 ? errors : undefined,
     });
+    useSyncStatus.getState().setLastSynced(new Date().toISOString());
     return {
       ok: true,
       ...(errors.length > 0 && { error: errors.join("; ") }),
@@ -127,6 +150,8 @@ export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean
     const msg = err instanceof Error ? err.message : String(err);
     console.error("[sync] Push failed:", msg);
     return { ok: false, error: msg };
+  } finally {
+    useSyncStatus.getState().setSyncing(false);
   }
 }
 
@@ -135,6 +160,8 @@ export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean
 // ============================================================
 
 export async function pullStatsFromSupabase(userId: string): Promise<{ ok: boolean; error?: string }> {
+  if (!supabase) return { ok: true };
+  useSyncStatus.getState().setSyncing(true);
   try {
     // 1) Fetch profile fields — use maybeSingle() so missing row is not an error
     const { data: profileData, error: profileErr } = await supabase
@@ -276,6 +303,8 @@ export async function pullStatsFromSupabase(userId: string): Promise<{ ok: boole
     const msg = err instanceof Error ? err.message : String(err);
     console.error("[sync] Pull failed:", msg);
     return { ok: false, error: msg };
+  } finally {
+    useSyncStatus.getState().setSyncing(false);
   }
 }
 

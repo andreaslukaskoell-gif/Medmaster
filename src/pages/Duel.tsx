@@ -147,9 +147,12 @@ export default function Duel() {
       setDuel((prev) => {
         if (!prev) return prev;
         const isCorrect = Math.random() < prev.opponentDifficulty;
+        const wrongOptions = q.options.filter((o) => o.id !== q.correctOptionId);
         const answer = isCorrect
           ? q.correctOptionId
-          : q.options.filter((o) => o.id !== q.correctOptionId)[Math.floor(Math.random() * (q.options.length - 1))].id;
+          : wrongOptions.length > 0
+            ? wrongOptions[Math.floor(Math.random() * wrongOptions.length)].id
+            : q.correctOptionId;
 
         return {
           ...prev,

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   BookOpen,
   Brain,
@@ -18,15 +18,23 @@ import {
   Trophy,
   Swords,
   Award,
+  BookMarked,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Heatmap } from "@/components/ui/heatmap";
+import { StatCard } from "@/components/dashboard/StatCard";
+import { DashboardSkeleton } from "@/components/dashboard/DashboardSkeleton";
+import { SyncIndicator } from "@/components/dashboard/SyncIndicator";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { useKFFResultsSWR } from "@/hooks/useKFFResultsSWR";
-import { daysUntilMedAT, generateMockActivityData } from "@/lib/utils";
+import { useDashboardProfile } from "@/hooks/useDashboardProfile";
+import { useDueReview } from "@/hooks/useDueReview";
+import { daysUntilMedAT, getMedATProgress } from "@/lib/utils";
 import { getQuestionSubject } from "@/lib/bmsLookup";
+import { pathForChapter } from "@/lib/bmsRoutes";
+import { findChapterByUnterkapitelId } from "@/data/bmsKapitel";
 
 const modules = [
   {
@@ -81,8 +89,6 @@ const modules = [
   },
 ];
 
-const mockActivity = generateMockActivityData();
-
 function ProgressRing({ value, size = 48, stroke = 4 }: { value: number; size?: number; stroke?: number }) {
   const radius = (size - stroke) / 2;
   const circumference = 2 * Math.PI * radius;
@@ -108,9 +114,24 @@ const subtestLabels: Record<string, string> = {
 };
 
 export default function Dashboard() {
-  const { xp, streak, completedChapters, quizResults, onboardingCompleted, activityLog } = useStore();
+  const navigate = useNavigate();
+  const { xp: storeXp, streak, completedChapters, quizResults, onboardingCompleted, activityLog } =
+    useStore();
+  const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
+  const setResumeToUnterkapitelId = useAdaptiveStore((s) => s.setResumeToUnterkapitelId);
+  const profile = useDashboardProfile();
   const { all: kffResults, isLoading: kffLoading, error: kffError } = useKFFResultsSWR();
+  const { dueTopics, loading: dueLoading } = useDueReview();
   const days = daysUntilMedAT();
+  const medATProgress = getMedATProgress();
+
+  const lastViewedInfo = lastViewedUnterkapitelId ? findChapterByUnterkapitelId(lastViewedUnterkapitelId) : null;
+
+  const handleResumeLastViewed = () => {
+    if (!lastViewedInfo || !lastViewedUnterkapitelId) return;
+    setResumeToUnterkapitelId(lastViewedUnterkapitelId);
+    navigate(pathForChapter(lastViewedInfo.kapitel.subject, lastViewedInfo.kapitel.id));
+  };
   const totalQuizzes = quizResults.length;
   const avgScore =
     totalQuizzes > 0
@@ -119,10 +140,102 @@ export default function Dashboard() {
         )
       : 0;
 
-  const activityData = Object.keys(activityLog).length > 0 ? activityLog : mockActivity;
+  const xp = profile.hasData ? profile.xp : storeXp;
+  const level = profile.hasData ? profile.level : Math.floor(storeXp / 100) + 1;
+  const showWelcome = !profile.loading && !profile.hasData;
 
   return (
-    <div className="max-w-7xl mx-auto space-y-6">
+    <div className="max-w-7xl mx-auto space-y-6 relative">
+      <SyncIndicator />
+
+      {/* MedAT Countdown – prominent oben */}
+      <Card className="border-primary-200 dark:border-primary-800 bg-primary-50/30 dark:bg-primary-900/10">
+        <CardContent className="p-4 sm:p-5">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-xl bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center shrink-0">
+                <Clock className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-muted">Countdown MedAT</p>
+                <p className="text-2xl font-bold text-primary-700 dark:text-primary-400">
+                  Noch {days} Tag{days !== 1 ? "e" : ""} bis zum MedAT
+                </p>
+                <p className="text-xs text-muted">Stichtag: Erster Freitag im Juli 2026</p>
+              </div>
+            </div>
+            <div className="w-full sm:w-64 shrink-0">
+              <div className="flex justify-between text-xs text-muted mb-1">
+                <span>Vorbereitungszeit</span>
+                <span>{Math.round(medATProgress.progress * 100)}%</span>
+              </div>
+              <div className="w-full h-2.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-primary-600 dark:bg-primary-500 rounded-full transition-all duration-500"
+                  style={{ width: `${medATProgress.progress * 100}%` }}
+                />
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {showWelcome && (
+        <Card className="border-primary-200 dark:border-primary-800 bg-primary-50/50 dark:bg-primary-900/10">
+          <CardContent className="p-6 text-center">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">Willkommen bei MedMaster</h2>
+            <p className="text-muted mt-1">
+              Starte mit deinem ersten Quiz oder Stichwortliste – deine XP und dein Level erscheinen hier,
+              sobald du aktiv wirst.
+            </p>
+          </CardContent>
+        </Card>
+      )}
+      {/* Heute wiederholen – Vergessenskurve */}
+      {!dueLoading && dueTopics.length > 0 && (
+        <Card className="border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-900/10">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-base flex items-center gap-2">
+              <AlertTriangle className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+              Heute wiederholen
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pt-0">
+            <p className="text-sm text-muted mb-3">
+              Diese Themen sind laut Vergessenskurve fällig – kurze Wiederholung festigt den Stoff.
+            </p>
+            <ul className="space-y-1.5">
+              {dueTopics.map((t) => (
+                <li key={t.stichwortId} className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                  • {t.name}
+                </li>
+              ))}
+            </ul>
+            <Link to="/bms" className="inline-flex items-center gap-1.5 text-sm font-medium text-primary-600 dark:text-primary-400 mt-3 hover:underline">
+              <BookOpen className="w-4 h-4" />
+              BMS starten
+            </Link>
+          </CardContent>
+        </Card>
+      )}
+
+      {lastViewedUnterkapitelId && lastViewedInfo && (
+        <Card className="border-primary-200 dark:border-primary-800 bg-primary-50/50 dark:bg-primary-900/10 hover:shadow-md transition-shadow cursor-pointer" onClick={handleResumeLastViewed}>
+          <CardContent className="p-4 flex items-center gap-4">
+            <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-xl flex items-center justify-center shrink-0">
+              <BookMarked className="w-6 h-6 text-primary-700 dark:text-primary-400" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="font-semibold text-primary-800 dark:text-primary-300">Zuletzt gelerntes Thema fortsetzen</h3>
+              <p className="text-sm text-primary-600 dark:text-primary-400 truncate">
+                {lastViewedInfo.kapitel.title} → {lastViewedInfo.kapitel.unterkapitel?.[lastViewedInfo.index]?.title ?? "Unterkapitel"}
+              </p>
+            </div>
+            <ArrowRight className="w-5 h-5 text-primary-600 dark:text-primary-400 shrink-0" />
+          </CardContent>
+        </Card>
+      )}
+
       {!onboardingCompleted && (
         <Link to="/onboarding">
           <Card className="border-primary-200 dark:border-primary-800 bg-primary-50 dark:bg-primary-900/20 hover:shadow-md transition-shadow cursor-pointer">
@@ -141,58 +254,58 @@ export default function Dashboard() {
       )}
 
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Willkommen zurück!</h1>
-        <p className="text-muted mt-1">Dein MedAT ist in <span className="font-bold text-primary-700 dark:text-primary-400">{days}</span> Tagen. Bleib dran!</p>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+          {showWelcome ? "Willkommen!" : "Willkommen zurück!"}
+        </h1>
+        <p className="text-muted mt-1">
+          Dein MedAT ist in{" "}
+          <span className="font-bold text-primary-700 dark:text-primary-400">{days}</span> Tagen.
+          Bleib dran!
+        </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <Card>
-          <CardContent className="p-4 flex items-center gap-3">
-            <div className="relative flex items-center justify-center">
-              <ProgressRing value={Math.min(100, (days / 365) * 100)} />
-              <Clock className="w-5 h-5 text-primary-700 dark:text-primary-400 absolute" />
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-primary-700 dark:text-primary-400">{days}</p>
-              <p className="text-xs text-muted">Tage bis MedAT</p>
-            </div>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="p-4 flex items-center gap-3">
-            <div className="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-xl flex items-center justify-center">
-              <TrendingUp className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-yellow-700 dark:text-yellow-400">{xp}</p>
-              <p className="text-xs text-muted">XP</p>
-            </div>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="p-4 flex items-center gap-3">
-            <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center">
-              <Flame className="w-6 h-6 text-orange-600 dark:text-orange-400" />
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-orange-700 dark:text-orange-400">{streak}</p>
-              <p className="text-xs text-muted">Tage-Streak</p>
-            </div>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="p-4 flex items-center gap-3">
-            <div className="relative flex items-center justify-center">
-              <ProgressRing value={avgScore} />
-              <Target className="w-5 h-5 text-primary-700 dark:text-primary-400 absolute" />
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-green-700 dark:text-green-400">{avgScore}%</p>
-              <p className="text-xs text-muted">Durchschnitt</p>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+      {profile.loading ? (
+        <DashboardSkeleton />
+      ) : (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <Card>
+            <CardContent className="p-4 flex items-center gap-3">
+              <div className="relative flex items-center justify-center">
+                <ProgressRing value={Math.min(100, (days / 365) * 100)} />
+                <Clock className="w-5 h-5 text-primary-700 dark:text-primary-400 absolute" />
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-primary-700 dark:text-primary-400">{days}</p>
+                <p className="text-xs text-muted">Tage bis MedAT</p>
+              </div>
+            </CardContent>
+          </Card>
+          <StatCard xp={xp} level={level} />
+          <Card>
+            <CardContent className="p-4 flex items-center gap-3">
+              <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center">
+                <Flame className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-orange-700 dark:text-orange-400">{streak}</p>
+                <p className="text-xs text-muted">Tage-Streak</p>
+              </div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-4 flex items-center gap-3">
+              <div className="relative flex items-center justify-center">
+                <ProgressRing value={avgScore} />
+                <Target className="w-5 h-5 text-primary-700 dark:text-primary-400 absolute" />
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-green-700 dark:text-green-400">{avgScore}%</p>
+                <p className="text-xs text-muted">Durchschnitt</p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      )}
 
       {/* Weiter lernen section */}
       {(() => {
@@ -560,7 +673,16 @@ export default function Dashboard() {
           <CardTitle>Lernaktivitaet</CardTitle>
         </CardHeader>
         <CardContent>
-          <Heatmap data={activityData} />
+          <Heatmap />
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardContent className="py-4">
+          <p className="text-center text-sm text-muted">
+            Noch <span className="font-semibold text-gray-900 dark:text-gray-100">{days}</span> Tage bis zum MedAT 2026
+          </p>
+          <p className="text-center text-xs text-muted mt-0.5">Ziel-Datum: 03. Juli 2026</p>
         </CardContent>
       </Card>
 
