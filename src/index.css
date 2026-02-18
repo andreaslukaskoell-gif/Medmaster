@@ -3,21 +3,22 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-primary-50: #f0fdfa;
-  --color-primary-100: #ccfbf1;
-  --color-primary-200: #99f6e4;
-  --color-primary-300: #5eead4;
-  --color-primary-400: #2dd4bf;
-  --color-primary-500: #14b8a6;
-  --color-primary-600: #0d9488;
-  --color-primary-700: #0f766e;
-  --color-primary-800: #115e59;
-  --color-primary-900: #134e4a;
-  --color-primary-950: #042f2e;
+  /* Medical Modern Blue — #0055ff */
+  --color-primary-50: #f0f5ff;
+  --color-primary-100: #e0ebff;
+  --color-primary-200: #c7dbff;
+  --color-primary-300: #a3c3ff;
+  --color-primary-400: #7aa7ff;
+  --color-primary-500: #528bff;
+  --color-primary-600: #0055ff;
+  --color-primary-700: #0047d9;
+  --color-primary-800: #0039b3;
+  --color-primary-900: #002b8c;
+  --color-primary-950: #001a59;
 
-  --color-surface: #f8fafc;
+  --color-surface: #fafbfc;
   --color-card: #ffffff;
-  --color-border: #e2e8f0;
+  --color-border: #e8ecf1;
   --color-muted: #64748b;
 
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
