@@ -1,5 +1,90 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { persist, createJSONStorage } from "zustand/middleware";
+import { BADGE_DEFINITIONS } from "@/data/badges";
+import { getBadgeProgress } from "@/data/badges";
+import { computeXP } from "@/lib/xp";
+import { useAdaptiveStore } from "@/store/adaptiveLearning";
+
+const STORAGE_KEY = "medmaster-storage";
+
+/** Safe localStorage: bei korrupten Daten oder F5 bleibt initialer Zustand erhalten. */
+function safeStorage() {
+  return {
+    getItem: (name: string): string | null => {
+      try {
+        if (typeof window === "undefined") return null;
+        return window.localStorage.getItem(name);
+      } catch {
+        return null;
+      }
+    },
+    setItem: (name: string, value: string): void => {
+      try {
+        if (typeof window === "undefined") return;
+        window.localStorage.setItem(name, value);
+      } catch {
+        // QuotaExceeded oder Storage disabled
+      }
+    },
+    removeItem: (name: string): void => {
+      try {
+        if (typeof window === "undefined") return;
+        window.localStorage.removeItem(name);
+      } catch {
+        // ignore
+      }
+    },
+  };
+}
+
+/** Sanitized persisted state: verhindert NaN/undefined/korrupte Typen nach Reload. */
+function sanitizePersisted(state: unknown): Partial<AppState> {
+  try {
+    if (state == null || typeof state !== "object") return {};
+  } catch {
+    return {};
+  }
+  const s = state as Record<string, unknown>;
+  try {
+    return {
+    xp: Number.isFinite(s.xp) ? (s.xp as number) : 0,
+    streak: Number.isFinite(s.streak) ? (s.streak as number) : 0,
+    lastActiveDate: typeof s.lastActiveDate === "string" ? s.lastActiveDate : "",
+    darkMode: Boolean(s.darkMode),
+    completedChapters: Array.isArray(s.completedChapters) ? s.completedChapters : [],
+    quizResults: Array.isArray(s.quizResults) ? s.quizResults : [],
+    currentAnswers: s.currentAnswers && typeof s.currentAnswers === "object" ? s.currentAnswers as Record<string, string> : {},
+    spacedRepetition: s.spacedRepetition && typeof s.spacedRepetition === "object" ? s.spacedRepetition as Record<string, SpacedItem> : {},
+    userProgress: s.userProgress && typeof s.userProgress === "object" ? s.userProgress as Record<string, ChapterProgress> : {},
+    onboardingCompleted: Boolean(s.onboardingCompleted),
+    einstufungsResult:
+      s.einstufungsResult != null &&
+      typeof s.einstufungsResult === "object" &&
+      "scores" in s.einstufungsResult &&
+      "recommendations" in s.einstufungsResult &&
+      "level" in s.einstufungsResult &&
+      "completedAt" in s.einstufungsResult
+        ? (s.einstufungsResult as EinstufungsResult)
+        : null,
+    lernplanConfig: s.lernplanConfig && typeof s.lernplanConfig === "object" ? s.lernplanConfig as LernplanConfig | null : null,
+    notes: s.notes && typeof s.notes === "object" ? s.notes as Record<string, string> : {},
+    bookmarks: s.bookmarks && typeof s.bookmarks === "object" ? s.bookmarks as { chapters: string[]; questions: string[] } : { chapters: [], questions: [] },
+    recentActivity: Array.isArray(s.recentActivity) ? s.recentActivity : [],
+    activityLog: s.activityLog && typeof s.activityLog === "object" ? s.activityLog as Record<string, { minutes: number; questions: number }> : {},
+    flaggedQuestions: Array.isArray(s.flaggedQuestions) ? s.flaggedQuestions : [],
+    unlockedFachMilestones: Array.isArray(s.unlockedFachMilestones) ? s.unlockedFachMilestones : [],
+    earnedBadges: Array.isArray(s.earnedBadges) ? s.earnedBadges : [],
+    firstActivityTimeByDay: s.firstActivityTimeByDay && typeof s.firstActivityTimeByDay === "object" ? s.firstActivityTimeByDay as Record<string, string> : {},
+    maxConsecutiveCorrectEver: Number.isFinite(s.maxConsecutiveCorrectEver) ? (s.maxConsecutiveCorrectEver as number) : 0,
+    smartRecoveryCount: Number.isFinite(s.smartRecoveryCount) ? (s.smartRecoveryCount as number) : 0,
+    goalAchievedByDate: s.goalAchievedByDate && typeof s.goalAchievedByDate === "object" ? s.goalAchievedByDate as Record<string, boolean> : {},
+    smartAdjustDismissedUntil: typeof s.smartAdjustDismissedUntil === "string" ? s.smartAdjustDismissedUntil : "",
+    lastActiveAt: typeof s.lastActiveAt === "string" ? s.lastActiveAt : "",
+  };
+  } catch {
+    return {};
+  }
+}
 
 export interface QuizResult {
   id: string;
@@ -19,6 +104,13 @@ export interface SpacedItem {
   interval: number;
   easeFactor: number;
   repetitions: number;
+}
+
+/** Leitner-SRS pro Kapitel: Stufe 1–5, nächste Wiederholung */
+export interface ChapterProgress {
+  lastReviewed: string;
+  successCount: number;
+  nextReviewDate: string;
 }
 
 export interface EinstufungsResult {
@@ -50,6 +142,7 @@ interface AppState {
   quizResults: QuizResult[];
   currentAnswers: Record<string, string>;
   spacedRepetition: Record<string, SpacedItem>;
+  userProgress: Record<string, ChapterProgress>;
   onboardingCompleted: boolean;
   einstufungsResult: EinstufungsResult | null;
   lernplanConfig: LernplanConfig | null;
@@ -58,8 +151,35 @@ interface AppState {
   recentActivity: RecentItem[];
   activityLog: Record<string, { minutes: number; questions: number }>;
   flaggedQuestions: string[];
+  /** Fach-IDs (z. B. "biologie") für die der 50%-Meilenstein bereits freigeschaltet wurde */
+  unlockedFachMilestones: string[];
+  /** XP-Multiplikator (z. B. 1.5 für Premium) – wird von Auth/App gesetzt */
+  xpMultiplier: number;
+  /** Badge-System */
+  earnedBadges: string[];
+  firstActivityTimeByDay: Record<string, string>;
+  maxConsecutiveCorrectEver: number;
+  smartRecoveryCount: number;
+  /** Zeigt Badge-Unlock-Modal (wird von AppShell gelesen und zurückgesetzt) */
+  pendingBadgeId: string | null;
+  /** Tagesziel erreicht pro Datum (YYYY-MM-DD) – für Smart Adjust */
+  goalAchievedByDate: Record<string, boolean>;
+  /** Smart-Adjust-Dialog für 7 Tage unterdrückt bis zu diesem Datum (YYYY-MM-DD) */
+  smartAdjustDismissedUntil: string;
+  /** ISO timestamp der letzten Aktivität (für Streak-Protection) */
+  lastActiveAt: string;
 
   addXP: (amount: number) => void;
+  /** XP aus Basis + Schwierigkeit + Zeit; Fallbacks wenn Daten fehlen. */
+  addXPFromActivity: (params: { baseXP?: number; difficultyMultiplier?: number; timeSeconds?: number }) => void;
+  setXpMultiplier: (multiplier: number) => void;
+  unlockFachMilestone: (fach: string) => void;
+  recordFirstActivityOfDay: () => void;
+  incrementSmartRecoveryCount: () => void;
+  setMaxConsecutiveCorrect: (n: number) => void;
+  /** Prüft alle Badges, vergibt neu verdiente, gibt neu verdientes Badge-ID zurück oder null */
+  checkAndAwardBadges: () => string | null;
+  setPendingBadgeId: (id: string | null) => void;
   checkStreak: () => void;
   toggleDarkMode: () => void;
   completeChapter: (chapterId: string) => void;
@@ -68,6 +188,8 @@ interface AppState {
   saveQuizResult: (result: QuizResult) => void;
   updateSpacedRepetition: (questionId: string, correct: boolean) => void;
   getDueQuestions: () => string[];
+  updateChapterSRS: (chapterId: string, scorePct: number) => void;
+  getDueChapterIds: () => string[];
   completeOnboarding: (result: EinstufungsResult | null) => void;
   setLernplanConfig: (config: LernplanConfig) => void;
   setNote: (chapterId: string, content: string) => void;
@@ -76,6 +198,11 @@ interface AppState {
   addRecentActivity: (item: RecentItem) => void;
   logActivity: (questions: number) => void;
   toggleFlagQuestion: (id: string) => void;
+  setGoalAchievedToday: (date: string, achieved: boolean) => void;
+  /** Smart Adjust für 7 Tage ausblenden; optional hoursPerWeek reduzieren */
+  dismissSmartAdjust: (reducePlan?: boolean) => void;
+  /** true wenn letzte Aktivität gestern war (Streak droht zu verfallen) */
+  getStreakAtRisk: () => boolean;
 }
 
 export const useStore = create<AppState>()(
@@ -89,6 +216,7 @@ export const useStore = create<AppState>()(
       quizResults: [],
       currentAnswers: {},
       spacedRepetition: {},
+      userProgress: {},
       onboardingCompleted: false,
       einstufungsResult: null,
       lernplanConfig: null,
@@ -97,20 +225,131 @@ export const useStore = create<AppState>()(
       recentActivity: [],
       activityLog: {},
       flaggedQuestions: [],
+      unlockedFachMilestones: [],
+      xpMultiplier: 1,
+      earnedBadges: [],
+      firstActivityTimeByDay: {},
+      maxConsecutiveCorrectEver: 0,
+      smartRecoveryCount: 0,
+      pendingBadgeId: null,
+      goalAchievedByDate: {},
+      smartAdjustDismissedUntil: "",
+      lastActiveAt: "",
 
-      addXP: (amount) => set((s) => ({ xp: s.xp + amount })),
+      setPendingBadgeId: (id) => set({ pendingBadgeId: id }),
+
+      setGoalAchievedToday: (date, achieved) =>
+        set((s) => ({
+          goalAchievedByDate: { ...s.goalAchievedByDate, [date]: achieved },
+        })),
+
+      dismissSmartAdjust: (reducePlan) => {
+        const today = new Date().toISOString().split("T")[0];
+        const d = new Date();
+        d.setDate(d.getDate() + 7);
+        const until = d.toISOString().split("T")[0];
+        set({ smartAdjustDismissedUntil: until });
+        if (reducePlan && get().lernplanConfig) {
+          const cfg = get().lernplanConfig!;
+          set({
+            lernplanConfig: {
+              ...cfg,
+              hoursPerWeek: Math.max(1, Math.round(cfg.hoursPerWeek * 0.9 * 10) / 10),
+              generatedAt: new Date().toISOString(),
+            },
+          });
+        }
+      },
+
+      recordFirstActivityOfDay: () => {
+        const today = new Date().toISOString().split("T")[0];
+        set((s) => {
+          if (s.firstActivityTimeByDay[today]) return s;
+          return {
+            firstActivityTimeByDay: { ...s.firstActivityTimeByDay, [today]: new Date().toISOString() },
+          };
+        });
+        const newBadge = get().checkAndAwardBadges();
+        if (newBadge) set({ pendingBadgeId: newBadge });
+      },
+
+      incrementSmartRecoveryCount: () => {
+        set((s) => ({ smartRecoveryCount: s.smartRecoveryCount + 1 }));
+        const newBadge = get().checkAndAwardBadges();
+        if (newBadge) set({ pendingBadgeId: newBadge });
+      },
+
+      setMaxConsecutiveCorrect: (n) => {
+        set((s) => ({ maxConsecutiveCorrectEver: Math.max(s.maxConsecutiveCorrectEver, n) }));
+        if (n >= 20) {
+          const newBadge = get().checkAndAwardBadges();
+          if (newBadge) set({ pendingBadgeId: newBadge });
+        }
+      },
+
+      checkAndAwardBadges: () => {
+        const state = get();
+        const badgeState = {
+          completedChapters: state.completedChapters,
+          maxConsecutiveCorrectEver: state.maxConsecutiveCorrectEver,
+          smartRecoveryCount: state.smartRecoveryCount,
+          firstActivityTimeByDay: state.firstActivityTimeByDay,
+        };
+        for (const badge of BADGE_DEFINITIONS) {
+          if (state.earnedBadges.includes(badge.id)) continue;
+          const { earned } = getBadgeProgress(badge.id, badgeState);
+          if (earned) {
+            set((s) => ({ earnedBadges: [...s.earnedBadges, badge.id] }));
+            return badge.id;
+          }
+        }
+        return null;
+      },
+
+      addXP: (amount) =>
+        set((s) => {
+          const safeAmount = Number.isFinite(amount) ? amount : 0;
+          const mult = Number.isFinite(s.xpMultiplier) ? s.xpMultiplier : 1;
+          return { xp: (s.xp ?? 0) + Math.round(safeAmount * mult) };
+        }),
+
+      addXPFromActivity: (params) => {
+        try {
+          const ad = useAdaptiveStore.getState();
+          const difficulty = params.difficultyMultiplier ?? ad.getDifficultyMultiplier?.() ?? 1;
+          const xp = computeXP({
+            baseXP: params.baseXP ?? 10,
+            difficultyMultiplier: difficulty,
+            timeSeconds: params.timeSeconds,
+          });
+          get().addXP(xp);
+        } catch {
+          get().addXP(params.baseXP ?? 10);
+        }
+      },
+
+      setXpMultiplier: (multiplier) => set({ xpMultiplier: multiplier }),
+
+      unlockFachMilestone: (fach) =>
+        set((s) =>
+          s.unlockedFachMilestones.includes(fach)
+            ? s
+            : { unlockedFachMilestones: [...s.unlockedFachMilestones, fach] }
+        ),
 
       checkStreak: () => {
-        const today = new Date().toISOString().split("T")[0];
+        const now = new Date();
+        const today = now.toISOString().split("T")[0];
         const state = get();
         if (state.lastActiveDate === today) return;
         const yesterday = new Date();
         yesterday.setDate(yesterday.getDate() - 1);
         const yesterdayStr = yesterday.toISOString().split("T")[0];
         if (state.lastActiveDate === yesterdayStr) {
-          set({ streak: state.streak + 1, lastActiveDate: today });
+          set({ streak: (state.streak ?? 0) + 1, lastActiveDate: today, lastActiveAt: now.toISOString() });
+          get().addXP(100);
         } else {
-          set({ streak: 1, lastActiveDate: today });
+          set({ streak: 1, lastActiveDate: today, lastActiveAt: now.toISOString() });
         }
       },
 
@@ -125,12 +364,15 @@ export const useStore = create<AppState>()(
           return { darkMode: newMode };
         }),
 
-      completeChapter: (chapterId) =>
+      completeChapter: (chapterId) => {
         set((s) => ({
           completedChapters: s.completedChapters.includes(chapterId)
             ? s.completedChapters
             : [...s.completedChapters, chapterId],
-        })),
+        }));
+        const newBadge = get().checkAndAwardBadges();
+        if (newBadge) set({ pendingBadgeId: newBadge });
+      },
 
       setAnswer: (questionId, answer) =>
         set((s) => ({
@@ -196,6 +438,46 @@ export const useStore = create<AppState>()(
           .map((item) => item.questionId);
       },
 
+      updateChapterSRS: (chapterId, scorePct) =>
+        set((s) => {
+          const today = new Date().toISOString().split("T")[0];
+          const existing = s.userProgress[chapterId];
+          const currentLevel = existing?.successCount ?? 0;
+          let nextLevel: number;
+          let daysToAdd: number;
+          if (scorePct >= 80) {
+            nextLevel = Math.min(5, currentLevel + 1);
+            const intervalByLevel = [0, 3, 7, 14, 21, 30];
+            daysToAdd = intervalByLevel[nextLevel] ?? 30;
+          } else if (scorePct < 50) {
+            nextLevel = 1;
+            daysToAdd = 1;
+          } else {
+            nextLevel = currentLevel;
+            daysToAdd = currentLevel <= 0 ? 3 : [0, 3, 7, 14, 21, 30][currentLevel] ?? 3;
+          }
+          const nextDate = new Date();
+          nextDate.setDate(nextDate.getDate() + daysToAdd);
+          const nextReviewDate = nextDate.toISOString().split("T")[0];
+          return {
+            userProgress: {
+              ...s.userProgress,
+              [chapterId]: {
+                lastReviewed: today,
+                successCount: nextLevel,
+                nextReviewDate,
+              },
+            },
+          };
+        }),
+
+      getDueChapterIds: () => {
+        const today = new Date().toISOString().split("T")[0];
+        return Object.entries(get().userProgress)
+          .filter(([, p]) => p.nextReviewDate <= today)
+          .map(([id]) => id);
+      },
+
       completeOnboarding: (result) =>
         set({ onboardingCompleted: true, einstufungsResult: result }),
 
@@ -229,11 +511,15 @@ export const useStore = create<AppState>()(
           recentActivity: [item, ...s.recentActivity.filter((r) => r.path !== item.path)].slice(0, 10),
         })),
 
-      logActivity: (questions) =>
+      logActivity: (questions) => {
+        get().recordFirstActivityOfDay();
+        const now = new Date();
+        const today = now.toISOString().split("T")[0];
         set((s) => {
-          const today = new Date().toISOString().split("T")[0];
           const existing = s.activityLog[today] || { minutes: 0, questions: 0 };
           return {
+            lastActiveDate: today,
+            lastActiveAt: now.toISOString(),
             activityLog: {
               ...s.activityLog,
               [today]: {
@@ -242,7 +528,8 @@ export const useStore = create<AppState>()(
               },
             },
           };
-        }),
+        });
+      },
 
       toggleFlagQuestion: (id) =>
         set((s) => ({
@@ -250,16 +537,53 @@ export const useStore = create<AppState>()(
             ? s.flaggedQuestions.filter((q) => q !== id)
             : [...s.flaggedQuestions, id],
         })),
+
+      getStreakAtRisk: () => {
+        const today = new Date().toISOString().split("T")[0];
+        const state = get();
+        if (!state.lastActiveDate) return false;
+        if (state.lastActiveDate === today) return false;
+        const yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1);
+        const yesterdayStr = yesterday.toISOString().split("T")[0];
+        return state.lastActiveDate === yesterdayStr;
+      },
     }),
     {
-      name: "medmaster-storage",
+      name: STORAGE_KEY,
+      partialize: (state) => {
+        const { xpMultiplier: _, pendingBadgeId: __, ...rest } = state;
+        return rest;
+      },
+      storage: createJSONStorage<Partial<AppState>>(() => ({
+        getItem: (name: string): string | null => {
+          const raw = safeStorage().getItem(name);
+          if (raw == null) return null;
+          try {
+            JSON.parse(raw);
+            return raw;
+          } catch {
+            return null;
+          }
+        },
+        setItem: (name: string, value: string) => safeStorage().setItem(name, value),
+        removeItem: (name: string) => safeStorage().removeItem(name),
+      })),
+      merge: (persisted, current) => {
+        const next = { ...current, ...sanitizePersisted(persisted ?? undefined) };
+        return next;
+      },
     }
   )
 );
 
-// Apply dark mode on rehydration
+// Hydration-Check: nach Reload (F5) Dark Mode anwenden; State ist bereits durch merge sanitized
 useStore.persist.onFinishHydration((state) => {
-  if (state.darkMode) {
-    document.documentElement.classList.add("dark");
+  try {
+    if (state?.darkMode) {
+      document.documentElement.classList.add("dark");
+    }
+  } catch {
+    // ignore
   }
 });

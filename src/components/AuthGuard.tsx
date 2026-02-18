@@ -1,10 +1,11 @@
 import { lazy, Suspense } from "react";
+import type { ReactNode } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 
 const LandingPage = lazy(() => import("@/pages/LandingPage"));
 
-export function AuthGuard({ children }: { children: React.ReactNode }) {
+export function AuthGuard({ children }: { children: ReactNode }) {
   const { isAuthenticated, loading } = useAuth();
   const location = useLocation();
 

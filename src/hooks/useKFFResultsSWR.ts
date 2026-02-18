@@ -34,7 +34,6 @@ export function useKFFResultsSWR(): KFFResultsSWRState {
 
   const fetchResults = useCallback(async () => {
     if (!supabase) {
-      console.log("KFF Data:", null, "Error:", "supabase client missing");
       setSingleResults(EMPTY_ROWS);
       setSimulationResults(EMPTY_ROWS);
       setError(null);
@@ -46,7 +45,6 @@ export function useKFFResultsSWR(): KFFResultsSWRState {
         data: { user },
       } = await supabase.auth.getUser();
       if (!user) {
-        console.log("KFF Data:", null, "Error:", "no user");
         setSingleResults(EMPTY_ROWS);
         setSimulationResults(EMPTY_ROWS);
         setIsLoading(false);
@@ -59,8 +57,6 @@ export function useKFFResultsSWR(): KFFResultsSWRState {
         .select("id, user_id, result_type, subtest_type, payload, created_at")
         .eq("user_id", user.id)
         .order("created_at", { ascending: false });
-
-      console.log("KFF Data:", data, "Error:", err);
 
       if (err) {
         setError(err.message);

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { ReactNode } from "react";
 import {
   ChevronLeft,
   ChevronRight,
@@ -26,7 +27,7 @@ function PageIndicator({ current, total }: { current: number; total: number }) {
   );
 }
 
-function Merksatz({ children }: { children: React.ReactNode }) {
+function Merksatz({ children }: { children: ReactNode }) {
   return (
     <div className="bg-indigo-50 dark:bg-indigo-900/20 border-l-4 border-indigo-500 p-4 rounded-r-lg">
       <div className="flex items-start gap-2">

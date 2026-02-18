@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { ReactNode } from "react";
 import { ChevronLeft, ChevronRight, Lightbulb, Clock, BookOpen, Zap } from "lucide-react";
 
 function PageIndicator({ current, total }: { current: number; total: number }) {
@@ -16,7 +17,7 @@ function PageIndicator({ current, total }: { current: number; total: number }) {
   );
 }
 
-function Merksatz({ children }: { children: React.ReactNode }) {
+function Merksatz({ children }: { children: ReactNode }) {
   return (
     <div className="bg-orange-50 dark:bg-orange-900/20 border-l-4 border-orange-500 p-4 rounded-r-lg">
       <div className="flex items-start gap-2">

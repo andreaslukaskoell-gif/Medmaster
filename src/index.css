@@ -1,27 +1,31 @@
+/* Global styles — import only from main.tsx to avoid HMR loops */
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /* Medical Modern Blue — #0055ff */
-  --color-primary-50: #f0f5ff;
-  --color-primary-100: #e0ebff;
-  --color-primary-200: #c7dbff;
-  --color-primary-300: #a3c3ff;
-  --color-primary-400: #7aa7ff;
-  --color-primary-500: #528bff;
-  --color-primary-600: #0055ff;
-  --color-primary-700: #0047d9;
-  --color-primary-800: #0039b3;
-  --color-primary-900: #002b8c;
-  --color-primary-950: #001a59;
+  /* Medical UI: Med-Blue primary (#007AFF) */
+  --color-primary-50: #e6f2ff;
+  --color-primary-100: #cce5ff;
+  --color-primary-200: #99cbff;
+  --color-primary-300: #66b0ff;
+  --color-primary-400: #3396ff;
+  --color-primary-500: #007AFF;
+  --color-primary-600: #0062cc;
+  --color-primary-700: #004999;
+  --color-primary-800: #003166;
+  --color-primary-900: #001833;
+  --color-primary-950: #000c1a;
 
-  --color-surface: #fafbfc;
+  --color-midnight: #1e293b;
+  --color-soft-white: #f8fafc;
+  --color-surface: #f8fafc;
   --color-card: #ffffff;
-  --color-border: #e8ecf1;
+  --color-border: #e2e8f0;
   --color-muted: #64748b;
 
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 html {
@@ -30,9 +34,39 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-surface);
-  color: #0f172a;
+  background-color: var(--color-soft-white);
+  color: var(--color-midnight);
   margin: 0;
+}
+
+/* Glassmorphism cards */
+.card-glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.dark .card-glass,
+body.dark-body .card-glass {
+  background: rgba(30, 41, 59, 0.6);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Button hover: subtle scale + shadow */
+.btn-med:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 14px rgba(0, 122, 255, 0.25);
+}
+.btn-med {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Progress bar fill animation */
+@keyframes progress-bar-enter {
+  from { width: 0; }
+}
+.animate-progress-bar {
+  animation: progress-bar-enter 0.8s ease-out forwards;
 }
 
 .dark body,
@@ -95,6 +129,25 @@ body.dark-body {
   animation: progress-fill 0.5s ease-out;
 }
 
+/* Hot-Streak: goldener Schimmer (5 richtige in Folge) */
+@keyframes hot-streak-glow {
+  0%, 100% { opacity: 0.7; box-shadow: inset 0 0 40px rgba(251, 191, 36, 0.12), 0 0 60px rgba(251, 191, 36, 0.15); }
+  50% { opacity: 1; box-shadow: inset 0 0 80px rgba(251, 191, 36, 0.2), 0 0 100px rgba(251, 191, 36, 0.25); }
+}
+.animate-hot-streak-glow {
+  animation: hot-streak-glow 1.5s ease-in-out infinite;
+}
+
+/* Task-List: durchgestrichener Text (Micro-Checklist) */
+@keyframes strikethrough-scale {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.strikethrough-line {
+  transform-origin: left;
+  animation: strikethrough-scale 0.4s ease-out forwards;
+}
+
 .prose blockquote {
   border-left: 4px solid #10b981; /* grün */
   background: #ecfdf5;
@@ -117,4 +170,85 @@ body.dark-body {
 
 .dark .content h1:has(+ ol) {
   border-top-color: #374151;
+}
+
+/* Premium: Input & Form – definierte Umrandung, Fokus Medical Blue/Cyan */
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+[role="combobox"],
+select {
+  @apply border border-slate-200 dark:border-white/10 rounded-lg;
+}
+input:focus, textarea:focus, [role="combobox"]:focus, select:focus {
+  @apply outline-none ring-2 ring-primary-500/50 border-primary-500 dark:border-primary-400;
+}
+
+/* Typography: Lesbarkeit langer medizinischer Texte */
+.prose, .content {
+  @apply leading-relaxed;
+}
+.prose h1, .prose h2, .prose h3, .prose h4,
+.text-midnight.dark .prose h1, .dark .prose h1, .dark .prose h2, .dark .prose h3, .dark .prose h4 {
+  @apply text-slate-900 dark:text-white font-semibold;
+}
+.prose p, .prose li, .prose td, .prose th {
+  @apply text-slate-700 dark:text-slate-100;
+}
+
+/* Sidebar: schmale Scrollbar im Midnight-Blue Look */
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(71, 85, 105, 0.6) transparent;
+}
+.dark .sidebar-scroll {
+  scrollbar-color: rgba(148, 163, 184, 0.4) transparent;
+}
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: rgba(71, 85, 105, 0.5);
+  border-radius: 3px;
+}
+.dark .sidebar-scroll::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+}
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 85, 105, 0.7);
+}
+.dark .sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Skeleton: Shimmer von Dunkelblau zu hellerem Blau (links nach rechts) */
+@keyframes skeleton-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    #0f172a 0%,
+    #1e293b 25%,
+    #334155 50%,
+    #1e293b 75%,
+    #0f172a 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.8s ease-in-out infinite;
+}
+.dark .skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    #0f172a 0%,
+    #1e3a5f 25%,
+    #2563eb 40%,
+    #1e3a5f 60%,
+    #0f172a 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.8s ease-in-out infinite;
 }

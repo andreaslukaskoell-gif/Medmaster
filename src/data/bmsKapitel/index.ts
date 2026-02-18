@@ -1,4 +1,4 @@
-export type { Kapitel, Unterkapitel, SelfTestQuestion } from './types';
+export type { Kapitel, Unterkapitel, SelfTestQuestion, QuizItem } from './types';
 
 import { biologieKapitel } from './biologie/index';
 import { chemieKapitel } from './chemie/index';

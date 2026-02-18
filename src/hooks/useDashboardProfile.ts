@@ -31,7 +31,6 @@ export function useDashboardProfile(): DashboardProfile {
 
   useEffect(() => {
     if (!userId) {
-      console.log(LOG_PREFIX, "No user — showing welcome state");
       setState((s) => ({ ...s, loading: false, hasData: false }));
       return;
     }
@@ -72,14 +71,6 @@ export function useDashboardProfile(): DashboardProfile {
         const level = Number(data?.level ?? 0) || Math.floor(xp / 100) + 1;
         const streak = Number(data?.streak_days ?? 0);
         const hasData = xp > 0 || streak > 0 || (data != null && data !== undefined);
-
-        console.log(LOG_PREFIX, "Profile from Supabase", {
-          xp,
-          level,
-          streak,
-          hasData,
-          raw: data,
-        });
 
         setState({
           xp,

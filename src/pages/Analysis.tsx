@@ -16,6 +16,8 @@ import {
 } from "recharts";
 import { AlertTriangle, TrendingUp, TrendingDown, Target, Lightbulb, Calendar, Zap } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useIsMounted } from "@/hooks/useIsMounted";
+import { RadarHexagonSkeleton } from "@/components/skeletons/AppSkeletons";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
@@ -32,6 +34,7 @@ interface SubjectData {
 }
 
 export default function Analysis() {
+  const mounted = useIsMounted();
   const { quizResults } = useStore();
 
   const subjectData = useMemo(() => {
@@ -124,7 +127,16 @@ export default function Analysis() {
         <p className="text-muted mt-1">Detaillierte Auswertung deiner Leistung nach Fachgebiet.</p>
       </div>
 
-      {!hasData ? (
+      {!mounted ? (
+        <Card>
+          <CardHeader>
+            <CardTitle>Kompetenzprofil</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <RadarHexagonSkeleton height={350} />
+          </CardContent>
+        </Card>
+      ) : !hasData ? (
         <Card>
           <CardContent className="p-12 text-center">
             <Target className="w-12 h-12 text-muted mx-auto mb-3" />

@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Lock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "./button";
@@ -5,7 +6,7 @@ import { Button } from "./button";
 interface Props {
   feature: string;
   requiredTier?: "standard" | "pro";
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export function Paywall({ feature, requiredTier = "standard", children }: Props) {
@@ -34,7 +35,7 @@ export function Paywall({ feature, requiredTier = "standard", children }: Props)
 
 export function PaywallBanner({ feature, requiredTier = "standard" }: { feature: string; requiredTier?: "standard" | "pro" }) {
   return (
-    <div className="bg-gradient-to-r from-primary-50 to-teal-50 dark:from-primary-900/20 dark:to-teal-900/20 border border-primary-200 dark:border-primary-800 rounded-xl p-4 flex items-center gap-4">
+    <div className="bg-linear-to-r from-primary-50 to-teal-50 dark:from-primary-900/20 dark:to-teal-900/20 border border-primary-200 dark:border-primary-800 rounded-xl p-4 flex items-center gap-4">
       <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center shrink-0">
         <Lock className="w-5 h-5 text-primary-700 dark:text-primary-400" />
       </div>

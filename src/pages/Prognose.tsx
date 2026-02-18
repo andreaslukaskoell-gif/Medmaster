@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { useStore, type QuizResult } from "@/store/useStore";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -23,7 +24,7 @@ import {
 interface SectionScore {
   key: "bms" | "kff" | "tv" | "sek";
   label: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
   pct: number;
   points: number;
   maxPoints: number;
@@ -62,7 +63,7 @@ const SECTION_META: {
   label: string;
   weight: number;
   maxPoints: number;
-  icon: React.ReactNode;
+  icon: ReactNode;
   link: string;
 }[] = [
   { key: "bms", label: "BMS", weight: 0.4, maxPoints: 122.4, icon: <BookOpen className="w-5 h-5" />, link: "/bms" },

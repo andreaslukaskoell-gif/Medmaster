@@ -10,7 +10,30 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    watch: {
+      usePolling: false,
+    },
+  },
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'framer-motion',
+      'zustand',
+      'lucide-react',
+      '@supabase/supabase-js',
+      'recharts',
+      'react-markdown',
+      'remark-gfm',
+      'clsx',
+      'tailwind-merge',
+      'class-variance-authority',
+    ],
+  },
   build: {
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -20,10 +43,16 @@ export default defineConfig({
             'react-dom',
             'react-router-dom',
           ],
-          // Vendor: UI libraries
+          // Vendor: UI (Lucide, Framer Motion, Recharts)
           'vendor-ui': [
-            'recharts',
             'lucide-react',
+            'framer-motion',
+            'recharts',
+          ],
+          // Vendor: Markdown rendering (chapter content)
+          'vendor-content': [
+            'react-markdown',
+            'remark-gfm',
           ],
           // BMS question data (largest data payload)
           'data-bms': [

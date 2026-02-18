@@ -2,6 +2,8 @@ import { useState, useMemo } from "react";
 import { cn } from "@/lib/utils";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 
+const MEDAT_DATE = new Date(2026, 6, 3); // 3.7.26
+
 interface HeatmapProps {
   className?: string;
 }
@@ -37,6 +39,10 @@ const COLORS = [
   "bg-primary-600 dark:bg-primary-500",
 ];
 
+function toDateKey(d: Date): string {
+  return d.toISOString().split("T")[0];
+}
+
 export function Heatmap({ className }: HeatmapProps) {
   const stichwortStats = useAdaptiveStore((s) => s.profile.stichwortStats);
   const activityMap = useMemo(
@@ -49,30 +55,33 @@ export function Heatmap({ className }: HeatmapProps) {
     y: number;
     date: string;
     count: number;
+    isMedAT?: boolean;
   } | null>(null);
 
+  /** Von heute bis 3.7.26 (MedAT), in Wochen zu 7 Tagen gruppiert. Letzte Box = 3.7.26 mit MedAT-Marke. */
   const weeks = useMemo(() => {
-    const result: { date: string; count: number; level: 0 | 1 | 2 | 3; key: string }[][] = [];
-    const now = new Date();
-    const startDate = new Date(now);
-    startDate.setDate(startDate.getDate() - 364);
-    startDate.setDate(startDate.getDate() - startDate.getDay());
-
-    let currentWeek: { date: string; count: number; level: 0 | 1 | 2 | 3; key: string }[] = [];
-    const d = new Date(startDate);
-
-    while (d <= now) {
-      const key = d.toISOString().split("T")[0];
-      const count = activityMap[key] ?? 0;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const medat = new Date(MEDAT_DATE);
+    medat.setHours(0, 0, 0, 0);
+    if (today > medat) {
+      return [[{ date: "03.07.2026", count: 0, level: 0 as 0 | 1 | 2 | 3, key: "2026-07-03", isMedAT: true }]];
+    }
+    const result: { date: string; count: number; level: 0 | 1 | 2 | 3; key: string; isMedAT: boolean }[][] = [];
+    let currentWeek: { date: string; count: number; level: 0 | 1 | 2 | 3; key: string; isMedAT: boolean }[] = [];
+    const d = new Date(today);
+    while (d <= medat) {
+      const key = toDateKey(d);
+      const isMedAT = key === "2026-07-03";
+      const count = d <= today ? (activityMap[key] ?? 0) : 0;
       const level = levelFromCount(count);
-
       currentWeek.push({
         date: d.toLocaleDateString("de-AT", { day: "2-digit", month: "2-digit", year: "numeric" }),
         count,
         level,
         key,
+        isMedAT,
       });
-
       if (currentWeek.length === 7) {
         result.push(currentWeek);
         currentWeek = [];
@@ -86,12 +95,18 @@ export function Heatmap({ className }: HeatmapProps) {
   return (
     <div className={cn("relative", className)}>
       <div className="flex gap-[3px] overflow-x-auto pb-2">
-        {weeks.slice(-52).map((week, wi) => (
+        {weeks.map((week, wi) => (
           <div key={wi} className="flex flex-col gap-[3px]">
             {week.map((day, di) => (
               <div
                 key={di}
-                className={cn("w-3 h-3 rounded-sm cursor-pointer", COLORS[day.level])}
+                className={cn(
+                  "w-3 h-3 rounded-sm cursor-pointer relative",
+                  day.isMedAT
+                    ? "bg-red-500 dark:bg-red-600 ring-2 ring-red-600 dark:ring-red-500 ring-offset-1 dark:ring-offset-slate-900"
+                    : COLORS[day.level]
+                )}
+                title={day.isMedAT ? "MedAT 03.07.2026" : undefined}
                 onMouseEnter={(e) => {
                   const rect = e.currentTarget.getBoundingClientRect();
                   setTooltip({
@@ -99,6 +114,7 @@ export function Heatmap({ className }: HeatmapProps) {
                     y: rect.top - 40,
                     date: day.date,
                     count: day.count,
+                    isMedAT: day.isMedAT,
                   });
                 }}
                 onMouseLeave={() => setTooltip(null)}
@@ -107,12 +123,22 @@ export function Heatmap({ className }: HeatmapProps) {
           </div>
         ))}
       </div>
+      <div className="flex items-center justify-between mt-1 text-xs text-muted">
+        <span>Heute</span>
+        <span className="font-medium text-primary-600 dark:text-primary-400">MedAT 03.07.26</span>
+      </div>
       {tooltip && (
         <div
           className="fixed z-50 bg-gray-900 text-white text-xs px-2 py-1 rounded shadow-lg pointer-events-none"
           style={{ left: tooltip.x, top: tooltip.y }}
         >
-          {tooltip.date}: {tooltip.count} Thema{tooltip.count !== 1 ? "n" : ""} gelernt
+          {tooltip.isMedAT ? (
+            <>MedAT — {tooltip.date}</>
+          ) : (
+            <>
+              {tooltip.date}: {tooltip.count} Thema{tooltip.count !== 1 ? "n" : ""} gelernt
+            </>
+          )}
         </div>
       )}
       <div className="flex items-center gap-2 mt-1 text-xs text-muted">

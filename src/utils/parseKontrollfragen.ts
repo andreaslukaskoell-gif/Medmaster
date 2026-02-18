@@ -21,8 +21,8 @@ export function parseKontrollfragen(text: string): SelfTestQuestion[] {
     return [];
   }
 
-  // Remove the header "## Kontrollfragen" or similar
-  const cleanedText = text.replace(/^#+\s*(Kontrollfragen|Übungsfragen|Selbsttest)[\s\S]*?\n/i, '').trim();
+  // Remove the header "## Kontrollfragen" or similar (inkl. Quiz für ContentStructure)
+  const cleanedText = text.replace(/^#+\s*(Kontrollfragen|Übungsfragen|Selbsttest|Quiz)[\s\S]*?\n/i, '').trim();
   
   if (!cleanedText) {
     return [];
@@ -116,7 +116,7 @@ export function extractKontrollfragen(content: string): {
   }
 
   // Find Kontrollfragen section
-  const regex = /##\s*(Kontrollfragen|Übungsfragen|Selbsttest)[\s\S]*$/i;
+  const regex = /##\s*(Kontrollfragen|Übungsfragen|Selbsttest|Quiz)[\s\S]*$/i;
   const match = content.match(regex);
 
   if (!match || match.index === undefined) {

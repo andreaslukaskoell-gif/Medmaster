@@ -6,6 +6,49 @@ import { useSyncStatus } from "@/stores/syncStatus";
 type StichwortStat = import("@/store/adaptiveLearning").StichwortStat;
 type FachStat = import("@/store/adaptiveLearning").FachStat;
 
+// ============================================================
+// Offline-Queue (localStorage)
+// ============================================================
+
+const OFFLINE_QUEUE_KEY = "medmaster-sync-offline-queue";
+
+export interface OfflineQueueItem {
+  userId: string;
+  queuedAt: string;
+}
+
+function getOfflineQueue(): OfflineQueueItem[] {
+  try {
+    const raw = localStorage.getItem(OFFLINE_QUEUE_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw) as unknown;
+    return Array.isArray(parsed) ? parsed.filter((x): x is OfflineQueueItem => x && typeof x.userId === "string" && typeof x.queuedAt === "string") : [];
+  } catch {
+    return [];
+  }
+}
+
+function setOfflineQueue(items: OfflineQueueItem[]) {
+  try {
+    localStorage.setItem(OFFLINE_QUEUE_KEY, JSON.stringify(items));
+  } catch (e) {
+    console.warn("[sync] Failed to write offline queue:", e);
+  }
+}
+
+function addToOfflineQueue(userId: string) {
+  const queue = getOfflineQueue();
+  const filtered = queue.filter((x) => x.userId !== userId);
+  filtered.push({ userId, queuedAt: new Date().toISOString() });
+  setOfflineQueue(filtered);
+}
+
+function isNetworkError(err: unknown): boolean {
+  const msg = err instanceof Error ? err.message : String(err);
+  const s = msg.toLowerCase();
+  return s.includes("fetch") || s.includes("network") || s.includes("failed to fetch") || s.includes("networkerror");
+}
+
 /** Row shape from stichwort_stats (Supabase) */
 interface StichwortStatRow {
   user_id: string;
@@ -76,6 +119,7 @@ export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean
       const msg = err instanceof Error ? err.message : String(err);
       console.warn("[sync] Push profiles failed (continuing):", msg);
       errors.push(`profiles: ${msg}`);
+      if (isNetworkError(err)) addToOfflineQueue(userId);
     }
 
     // 2) Upsert stichwort_stats (non-blocking: empty table or error = skip)
@@ -104,10 +148,12 @@ export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean
             .upsert(chunk, { onConflict: "user_id,stichwort_id" });
           if (swErr) throw swErr;
         }
+        // Upsert mit Constraint (user_id, stichwort_id) verhindert Duplikate.
       } catch (err: unknown) {
         const msg = err instanceof Error ? err.message : String(err);
         console.warn("[sync] Push stichwort_stats failed (continuing):", msg);
         errors.push(`stichwort_stats: ${msg}`);
+        if (isNetworkError(err)) addToOfflineQueue(userId);
       }
     }
 
@@ -133,6 +179,7 @@ export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean
         const msg = err instanceof Error ? err.message : String(err);
         console.warn("[sync] Push fach_stats failed (continuing):", msg);
         errors.push(`fach_stats: ${msg}`);
+        if (isNetworkError(err)) addToOfflineQueue(userId);
       }
     }
 
@@ -149,6 +196,7 @@ export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err);
     console.error("[sync] Push failed:", msg);
+    if (isNetworkError(err)) addToOfflineQueue(userId);
     return { ok: false, error: msg };
   } finally {
     useSyncStatus.getState().setSyncing(false);
@@ -309,16 +357,50 @@ export async function pullStatsFromSupabase(userId: string): Promise<{ ok: boole
 }
 
 // ============================================================
+// Offline-Queue abarbeiten (bei Wiederherstellung der Verbindung)
+// ============================================================
+
+async function processOfflineQueue(): Promise<boolean> {
+  const queue = getOfflineQueue();
+  if (queue.length === 0) return false;
+  const seen = new Set<string>();
+  let anySuccess = false;
+  const remaining: OfflineQueueItem[] = [];
+  for (const item of queue) {
+    if (seen.has(item.userId)) continue;
+    seen.add(item.userId);
+    const result = await pushStatsToSupabase(item.userId);
+    if (result.ok) {
+      anySuccess = true;
+    } else {
+      remaining.push(item);
+    }
+  }
+  setOfflineQueue(remaining);
+  if (anySuccess) {
+    useSyncStatus.getState().setSyncSuccessMessage("Daten nachsynchronisiert");
+  }
+  return anySuccess;
+}
+
+// ============================================================
 // Auto-sync: call on login and periodically
 // ============================================================
 
 let syncInterval: ReturnType<typeof setInterval> | null = null;
+let onlineHandler: (() => void) | null = null;
 
 export function startAutoSync(userId: string) {
   // Initial pull — fire-and-forget; never block or throw (pull returns { ok }, no throw)
   void pullStatsFromSupabase(userId).catch((err) => {
     console.warn("[sync] Initial pull failed (non-blocking):", err);
   });
+
+  // Offline-Queue bei "online" abarbeiten
+  onlineHandler = () => {
+    void processOfflineQueue();
+  };
+  window.addEventListener("online", onlineHandler);
 
   // Push every 2 minutes
   stopAutoSync();
@@ -336,5 +418,9 @@ export function stopAutoSync() {
   if (syncInterval) {
     clearInterval(syncInterval);
     syncInterval = null;
+  }
+  if (onlineHandler) {
+    window.removeEventListener("online", onlineHandler);
+    onlineHandler = null;
   }
 }

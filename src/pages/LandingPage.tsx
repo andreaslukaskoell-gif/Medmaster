@@ -78,7 +78,7 @@ export default function LandingPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#f0f5ff] via-white to-[#f0f5ff] dark:from-primary-950/40 dark:via-gray-950 dark:to-primary-950/30" />
+        <div className="absolute inset-0 bg-linear-to-br from-[#f0f5ff] via-white to-[#f0f5ff] dark:from-primary-950/40 dark:via-gray-950 dark:to-primary-950/30" />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-20 sm:pb-28 text-center">
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-8 shadow-sm border border-primary-100 dark:border-primary-800/50 bg-white/80 dark:bg-gray-900/80" style={{ color: MEDICAL_BLUE }}>
             <Sparkles className="w-4 h-4" />

@@ -40,7 +40,7 @@ export default function BMSChapter({ chapter, onBack }: Props) {
   const handleComplete = () => {
     if (!isCompleted) {
       completeChapter(chapter.id);
-      addXP(25);
+      addXP(50); // +50 XP pro gelesenes Kapitel
       checkStreak();
     }
   };

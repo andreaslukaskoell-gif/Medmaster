@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
+import { useSearchParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Send, BookOpen, Play, Eye, EyeOff, CheckCircle2, XCircle, Shuffle, BarChart3, Timer, Puzzle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -34,8 +35,18 @@ type KffView =
   | "figuren-quiz";
 type StrategyKey = "zahlenfolgen" | "gedaechtnis" | "implikationen" | "wortflüssigkeit" | "figuren";
 
+const QUICK_START_VIEWS: Record<string, KffView> = {
+  zahlenfolgen: "zahlenfolgen",
+  implikationen: "implikationen",
+  gedaechtnis: "gedaechtnis-quiz",
+  wortfluessigkeit: "wortflüssigkeit",
+};
+
 export default function KFF() {
-  const [view, setView] = useState<KffView>("overview");
+  const [searchParams] = useSearchParams();
+  const startParam = searchParams.get("start");
+  const initialView: KffView = (startParam && QUICK_START_VIEWS[startParam]) ? QUICK_START_VIEWS[startParam] : "overview";
+  const [view, setView] = useState<KffView>(initialView);
   const [strategyKey, setStrategyKey] = useState<StrategyKey>("zahlenfolgen");
   const { user, loading: isLoading } = useAuth();
 

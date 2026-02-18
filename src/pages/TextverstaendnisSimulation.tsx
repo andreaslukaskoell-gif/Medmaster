@@ -186,7 +186,7 @@ export default function TextverstaendnisSimulation() {
         <Card>
           <CardContent className="p-6">
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600">
+              <div className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center bg-linear-to-br from-indigo-500 to-purple-600">
                 <Trophy className="w-8 h-8 text-white" />
               </div>
               <div>

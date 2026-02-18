@@ -3,6 +3,17 @@ export interface SelfTestQuestion {
   options: string[];
   correctIndex: number;
   explanation: string;
+  /** Socratic Feedback: Hinweise, die nacheinander angezeigt werden („Gib mir einen Tipp“). Führen zum Aha-Moment, bevor die Lösung gezeigt wird. */
+  hints?: string[];
+}
+
+/** Optional quiz items for chapter content (same shape as SelfTestQuestion for reuse). */
+export interface QuizItem {
+  question: string;
+  options: string[];
+  correctIndex: number;
+  explanation: string;
+  hints?: string[];
 }
 
 export interface ContentSection {
@@ -29,6 +40,12 @@ export interface Unterkapitel {
   };
   klinischerBezug?: string;
   selfTest: SelfTestQuestion[];
+  /** Optional image URL for this subchapter; render only if present. */
+  imageUrl?: string;
+  /** Optional quiz; render only if present and non-empty. */
+  quiz?: QuizItem[];
+  /** Optional additional notes block; render only if present. */
+  additionalNotes?: string;
 }
 
 export interface Kapitel {

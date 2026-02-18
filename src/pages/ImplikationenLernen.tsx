@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { ReactNode } from "react";
 import { ChevronLeft, ChevronRight, Lightbulb, BookOpen } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -27,7 +28,7 @@ function PageIndicator({ current, total }: { current: number; total: number }) {
   );
 }
 
-function Merksatz({ children }: { children: React.ReactNode }) {
+function Merksatz({ children }: { children: ReactNode }) {
   return (
     <div className="bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500 p-4 rounded-r-lg">
       <div className="flex items-start gap-2">
@@ -38,7 +39,7 @@ function Merksatz({ children }: { children: React.ReactNode }) {
   );
 }
 
-function AussagenBox({ label, description, children }: { label: string; description: string; children: React.ReactNode }) {
+function AussagenBox({ label, description, children }: { label: string; description: string; children: ReactNode }) {
   return (
     <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
       <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">{label}</h4>

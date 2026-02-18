@@ -14,6 +14,8 @@ import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { alleStichworteListe } from "@/data/stichwortliste";
 import { daysUntilMedAT } from "@/lib/utils";
+import { generateAdaptivePlan } from "@/lib/adaptivePlan";
+import { getDailyGoalFromPlan } from "@/lib/dailyGoal";
 
 // ============================================================
 // Constants
@@ -34,151 +36,6 @@ const phaseConfig = {
   vertiefung: { label: "Vertiefung", badge: "warning" as const, desc: "Schwächen gezielt trainieren, Wissen festigen" },
   pruefung: { label: "Prüfungsphase", badge: "danger" as const, desc: "Simulationen, Zeitmanagement, letzte Wiederholung" },
 };
-
-const bmsSubjectWeights: Record<string, number> = {
-  biologie: 0.43,
-  chemie: 0.26,
-  physik: 0.19,
-  mathematik: 0.12,
-};
-
-// ============================================================
-// Adaptive Plan Generator
-// ============================================================
-
-function generateAdaptivePlan(
-  hoursPerWeek: number,
-  weeksLeft: number,
-  readiness: number,
-  fachReadiness: Record<string, number>,
-  weakTopics: { stichwortId: string; thema: string; fach: string; rate: number }[],
-  phase: string,
-) {
-  const minutesPerWeek = hoursPerWeek * 60;
-
-  // Adjust BMS weight based on readiness — if BMS is weak, allocate more time
-  const avgBmsReadiness = Object.entries(fachReadiness).reduce(
-    (sum, [fach, r]) => sum + r * (bmsSubjectWeights[fach] || 0), 0
-  );
-  const bmsBoost = avgBmsReadiness < 50 ? 0.10 : avgBmsReadiness < 70 ? 0.05 : 0;
-
-  const adjustedWeights = {
-    BMS: moduleConfig.BMS.baseWeight + bmsBoost,
-    KFF: moduleConfig.KFF.baseWeight - bmsBoost * 0.4,
-    TV: moduleConfig.TV.baseWeight - bmsBoost * 0.35,
-    SEK: moduleConfig.SEK.baseWeight - bmsBoost * 0.25,
-  };
-
-  // Determine phases
-  const autoPhase = weeksLeft > 12 ? "einstieg" : weeksLeft > 4 ? "vertiefung" : "pruefung";
-  const activePhase = phase || autoPhase;
-
-  const phases = [
-    { name: "Grundlagen", weeks: Math.ceil(weeksLeft * 0.3), phase: "einstieg" as const },
-    { name: "Vertiefung", weeks: Math.ceil(weeksLeft * 0.4), phase: "vertiefung" as const },
-    { name: "Prüfungsphase", weeks: Math.max(1, weeksLeft - Math.ceil(weeksLeft * 0.7)), phase: "pruefung" as const },
-  ];
-
-  // Generate tasks per module
-  const weeklyPlan = Object.entries(adjustedWeights).map(([mod, weight]) => {
-    const mins = Math.round(minutesPerWeek * weight);
-    return {
-      module: mod,
-      minutesPerWeek: mins,
-      weight: Math.round(weight * 100),
-      tasks: getAdaptiveTasks(mod, mins, activePhase, fachReadiness, weakTopics),
-    };
-  });
-
-  // BMS sub-breakdown
-  const bmsMinutes = weeklyPlan.find((p) => p.module === "BMS")!.minutesPerWeek;
-  const bmsBreakdown = Object.entries(bmsSubjectWeights).map(([fach, weight]) => {
-    const r = fachReadiness[fach] || 0;
-    // Allocate more time to weaker subjects
-    const adjustedW = weight * (r < 50 ? 1.4 : r < 70 ? 1.1 : 0.8);
-    return { fach, weight: adjustedW, readiness: r };
-  });
-  const bmsTotal = bmsBreakdown.reduce((s, b) => s + b.weight, 0);
-  const bmsSubPlan = bmsBreakdown.map((b) => ({
-    fach: b.fach,
-    label: b.fach.charAt(0).toUpperCase() + b.fach.slice(1),
-    minutes: Math.round(bmsMinutes * (b.weight / bmsTotal)),
-    readiness: b.readiness,
-  }));
-
-  return { weeklyPlan, phases, activePhase, bmsSubPlan, adjustedWeights };
-}
-
-function getAdaptiveTasks(
-  module: string,
-  minutes: number,
-  phase: string,
-  fachReadiness: Record<string, number>,
-  weakTopics: { stichwortId: string; thema: string; fach: string; rate: number }[],
-): string[] {
-  const bmsWeak = weakTopics.filter((t) => ["biologie", "chemie", "physik", "mathematik"].includes(t.fach));
-
-  if (module === "BMS") {
-    if (phase === "einstieg") {
-      return [
-        `${Math.round(minutes * 0.4)} Min: Stichwortliste durcharbeiten`,
-        `${Math.round(minutes * 0.35)} Min: Übungsfragen (~${Math.round(minutes / 4)} Fragen)`,
-        `${Math.round(minutes * 0.25)} Min: Erklärungen & Strategie-Tipps lesen`,
-      ];
-    } else if (phase === "vertiefung") {
-      const weakStr = bmsWeak.length > 0
-        ? bmsWeak.slice(0, 3).map((t) => t.thema).join(", ")
-        : "alle Themen";
-      return [
-        `${Math.round(minutes * 0.2)} Min: Schwachstellen-Trainer (${weakStr})`,
-        `${Math.round(minutes * 0.4)} Min: Übungsfragen (~${Math.round(minutes / 3)} Fragen)`,
-        `${Math.round(minutes * 0.25)} Min: Spaced Repetition Wiederholung`,
-        `${Math.round(minutes * 0.15)} Min: Strategie-Tipps für schwache Themen`,
-      ];
-    } else {
-      return [
-        `${Math.round(minutes * 0.15)} Min: Schwachstellen schnell wiederholen`,
-        `${Math.round(minutes * 0.5)} Min: BMS-Simulation unter Zeitdruck`,
-        `${Math.round(minutes * 0.2)} Min: Falsch beantwortete Fragen analysieren`,
-        `${Math.round(minutes * 0.15)} Min: Letzte Wiederholung Schlüsselthemen`,
-      ];
-    }
-  }
-
-  if (module === "KFF") {
-    if (phase === "pruefung") {
-      return [
-        `${Math.round(minutes * 0.4)} Min: Zahlenfolgen unter Zeitdruck`,
-        `${Math.round(minutes * 0.3)} Min: Implikationen-Training`,
-        `${Math.round(minutes * 0.3)} Min: KFF-Simulation komplett`,
-      ];
-    }
-    return [
-      `${Math.round(minutes * 0.3)} Min: Zahlenfolgen üben`,
-      `${Math.round(minutes * 0.35)} Min: Implikationen trainieren`,
-      `${Math.round(minutes * 0.35)} Min: Allergiepässe merken`,
-    ];
-  }
-
-  if (module === "TV") {
-    if (phase === "pruefung") {
-      return [
-        `${Math.round(minutes * 0.3)} Min: Lese-Strategie-Check`,
-        `${Math.round(minutes * 0.7)} Min: Übungstexte unter Zeitdruck`,
-      ];
-    }
-    return [
-      `${Math.round(minutes * 0.3)} Min: Strategie wiederholen`,
-      `${Math.round(minutes * 0.7)} Min: Übungstexte bearbeiten`,
-    ];
-  }
-
-  // SEK
-  return [
-    `${Math.round(minutes * 0.4)} Min: Basisemotionen lernen`,
-    `${Math.round(minutes * 0.6)} Min: Situationsquiz üben`,
-  ];
-}
 
 // ============================================================
 // Component
@@ -214,7 +71,14 @@ export default function Lernplan() {
   };
 
   const plan = lernplanConfig
-    ? generateAdaptivePlan(lernplanConfig.hoursPerWeek, weeksLeft, readiness, fachReadiness, weakTopics, profile.learningPhase)
+    ? generateAdaptivePlan({
+        hoursPerWeek: lernplanConfig.hoursPerWeek,
+        weeksLeft,
+        readiness,
+        fachReadiness,
+        weakTopics,
+        phase: profile.learningPhase,
+      })
     : null;
 
   // Predicted readiness at exam (simple linear projection)
@@ -339,7 +203,7 @@ export default function Lernplan() {
             <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">Lernphasen</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {plan.phases.map((phase, i) => {
-                const pc = phaseConfig[phase.phase];
+                const pc = phaseConfig[phase.phase as keyof typeof phaseConfig];
                 const isActive = plan.activePhase === phase.phase;
                 return (
                   <Card key={i} className={isActive ? "ring-2 ring-primary-500" : ""}>
@@ -457,32 +321,10 @@ export default function Lernplan() {
             </CardHeader>
             <CardContent className="space-y-3">
               {(() => {
-                const dailyMinutes = Math.round((plan.weeklyPlan.reduce((s, p) => s + p.minutesPerWeek, 0)) / 7);
                 const today = new Date().toISOString().split("T")[0];
                 const { quizResults: qr } = useStore.getState();
-                const todayResults = qr.filter((r) => r.timestamp?.startsWith(today));
-                const questionsToday = todayResults.reduce((s, r) => s + r.total, 0);
-                const estMinutesSpent = Math.round(questionsToday * 1.5); // ~1.5 min per question estimate
-                const dailyProgress = Math.min(100, Math.round((estMinutesSpent / dailyMinutes) * 100));
-
-                const todayTasks = plan.weeklyPlan.map((item) => {
-                  const mc = moduleConfig[item.module];
-                  const dailyMins = Math.round(item.minutesPerWeek / 7);
-                  const todayModuleResults = todayResults.filter((r) => r.type.toUpperCase() === item.module);
-                  const todayModuleQuestions = todayModuleResults.reduce((s, r) => s + r.total, 0);
-                  const moduleMinsDone = Math.round(todayModuleQuestions * 1.5);
-                  return {
-                    module: item.module,
-                    label: mc.label,
-                    icon: mc.icon,
-                    bg: mc.bg,
-                    text: mc.text,
-                    targetMinutes: dailyMins,
-                    doneMinutes: moduleMinsDone,
-                    done: moduleMinsDone >= dailyMins,
-                    link: `/${item.module.toLowerCase()}`,
-                  };
-                });
+                const dailyState = getDailyGoalFromPlan(plan, qr, today);
+                const { dailyMinutes, primaryProgressPct, todayTasks } = dailyState;
 
                 return (
                   <>
@@ -490,28 +332,32 @@ export default function Lernplan() {
                       <span className="text-sm text-gray-700 dark:text-gray-300">
                         ca. {dailyMinutes} Minuten heute geplant
                       </span>
-                      <span className="text-sm font-bold text-primary-700 dark:text-primary-400">{dailyProgress}%</span>
+                      <span className="text-sm font-bold text-primary-700 dark:text-primary-400">{primaryProgressPct}%</span>
                     </div>
-                    <Progress value={dailyProgress} className={dailyProgress >= 100 ? "[&>div]:bg-emerald-500" : ""} />
+                    <Progress value={primaryProgressPct} className={primaryProgressPct >= 100 ? "[&>div]:bg-emerald-500" : ""} />
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                      {todayTasks.map((task) => (
-                        <Link key={task.module} to={task.link}>
-                          <div className={`p-3 rounded-lg border ${task.done ? "border-emerald-300 dark:border-emerald-700 bg-emerald-50 dark:bg-emerald-900/20" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"} transition-colors cursor-pointer`}>
-                            <div className="flex items-center gap-2 mb-1">
-                              <task.icon className={`w-4 h-4 ${task.done ? "text-emerald-600" : task.text}`} />
-                              <span className="text-sm font-medium text-gray-900 dark:text-gray-100">{task.label}</span>
+                      {todayTasks.map((t) => {
+                        const mc = moduleConfig[t.module];
+                        const link = `/${t.module.toLowerCase()}`;
+                        return (
+                          <Link key={t.module} to={link}>
+                            <div className={`p-3 rounded-lg border ${t.done ? "border-emerald-300 dark:border-emerald-700 bg-emerald-50 dark:bg-emerald-900/20" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"} transition-colors cursor-pointer`}>
+                              <div className="flex items-center gap-2 mb-1">
+                                <mc.icon className={`w-4 h-4 ${t.done ? "text-emerald-600" : mc.text}`} />
+                                <span className="text-sm font-medium text-gray-900 dark:text-gray-100">{mc.label}</span>
+                              </div>
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="text-muted">{t.targetMinutes} min</span>
+                                {t.done ? (
+                                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                                ) : (
+                                  <span className="text-muted">{t.doneMinutes}/{t.targetMinutes}</span>
+                                )}
+                              </div>
                             </div>
-                            <div className="flex items-center justify-between text-xs">
-                              <span className="text-muted">{task.targetMinutes} min</span>
-                              {task.done ? (
-                                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
-                              ) : (
-                                <span className="text-muted">{task.doneMinutes}/{task.targetMinutes}</span>
-                              )}
-                            </div>
-                          </div>
-                        </Link>
-                      ))}
+                          </Link>
+                        );
+                      })}
                     </div>
                   </>
                 );

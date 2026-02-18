@@ -6,7 +6,8 @@ interface InteractiveQuizProps {
   questions: SelfTestQuestion[];
   unterkapitelId?: string;
   onAnswer?: (questionIndex: number, isCorrect: boolean) => void;
-  onAllComplete?: () => void;
+  /** Called when all questions are answered; (correctCount, total) for SRS. */
+  onAllComplete?: (correctCount: number, total: number) => void;
 }
 
 /**
@@ -30,9 +31,9 @@ export function InteractiveQuiz({ questions, unterkapitelId, onAnswer, onAllComp
 
   useEffect(() => {
     if (questions.length > 0 && totalAnswered >= questions.length && onAllComplete) {
-      onAllComplete();
+      onAllComplete(totalCorrect, questions.length);
     }
-  }, [totalAnswered, questions.length, onAllComplete]);
+  }, [totalAnswered, questions.length, totalCorrect, onAllComplete]);
 
   return (
     <div className="space-y-6 mt-8">

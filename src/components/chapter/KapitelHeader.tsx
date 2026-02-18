@@ -20,7 +20,7 @@ export function KapitelHeader({
   frequency = "Häufig geprüft",
 }: KapitelHeaderProps) {
   return (
-    <div className="bg-gradient-to-r from-teal-600 to-teal-800 text-white rounded-2xl p-8 mb-8">
+    <div className="bg-linear-to-r from-teal-600 to-teal-800 text-white rounded-2xl p-8 mb-8">
       <div className="flex items-center gap-3 mb-2">
         <span className="text-3xl">{icon}</span>
         <span className="text-sm bg-white/20 px-3 py-1 rounded-full">

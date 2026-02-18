@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate, useParams, useNavigate } from "react-router-dom";
 import { AppShell } from "@/components/layout/AppShell";
 import { AuthGuard } from "@/components/AuthGuard";
+import { LevelGate } from "@/components/learning/LevelGate";
 import { useStore } from "@/store/useStore";
 
 // Lazy-loaded pages — casing must match filenames exactly (Linux/Vercel is case-sensitive)
@@ -24,12 +25,17 @@ const Duel = lazy(() => import("@/pages/Duel"));
 const StichwortlistePage = lazy(() => import("@/pages/StichwortlistePage"));
 const SchwachstellenTrainer = lazy(() => import("@/pages/SchwachstellenTrainer"));
 const KapitelEditor = lazy(() => import("@/pages/KapitelEditor"));
+const ContentAudit = lazy(() => import("@/pages/ContentAudit"));
+const AdminPreview = lazy(() => import("@/pages/AdminPreview"));
+const AdminDashboard = lazy(() => import("@/pages/AdminDashboard"));
 const LoginPage = lazy(() => import("@/pages/LoginPage"));
 const RegisterPage = lazy(() => import("@/pages/RegisterPage"));
 const ForgotPasswordPage = lazy(() => import("@/pages/ForgotPasswordPage"));
 const WissenCheck = lazy(() => import("@/pages/WissenCheck"));
 const Prognose = lazy(() => import("@/pages/Prognose"));
+const PerformanceOverview = lazy(() => import("@/pages/PerformanceOverview"));
 const BMSQuiz = lazy(() => import("@/pages/BMSQuiz"));
+const SmartRecoveryPage = lazy(() => import("@/pages/SmartRecoveryPage"));
 
 function LoadingSpinner() {
   return (
@@ -80,8 +86,8 @@ export default function App() {
             <Route path="/kff" element={<KFF />} />
             <Route path="/tv" element={<TV />} />
             <Route path="/sek" element={<SEK />} />
-            <Route path="/simulation" element={<Simulation />} />
-            <Route path="/ai-tutor" element={<AITutor />} />
+            <Route path="/simulation" element={<LevelGate requiredLevel={15} featureLabel="Simulationen"><Simulation /></LevelGate>} />
+            <Route path="/ai-tutor" element={<LevelGate requiredLevel={5} featureLabel="AI-Tutor"><AITutor /></LevelGate>} />
             <Route path="/lernplan" element={<Lernplan />} />
             <Route path="/analyse" element={<Analysis />} />
             <Route path="/community" element={<Community />} />
@@ -90,12 +96,17 @@ export default function App() {
             <Route path="/karteikarten" element={<Flashcards />} />
             <Route path="/duell" element={<Duel />} />
             <Route path="/stichwortliste" element={<StichwortlistePage />} />
-            <Route path="/schwachstellen" element={<SchwachstellenTrainer />} />
+            <Route path="/schwachstellen" element={<LevelGate requiredLevel={10} featureLabel="Schwachstellen-Analyse"><SchwachstellenTrainer /></LevelGate>} />
+            <Route path="/schwachstellen/recovery" element={<SmartRecoveryPage />} />
             <Route path="/preise" element={<Pricing />} />
             <Route path="/admin/kapitel-editor" element={<KapitelEditor />} />
+            <Route path="/admin/audit" element={<ContentAudit />} />
+            <Route path="/admin/preview" element={<AdminPreview />} />
+            <Route path="/admin/dashboard" element={<AdminDashboard />} />
             <Route path="/wissencheck" element={<WissenCheck />} />
             <Route path="/wissencheck/:fach" element={<WissenCheck />} />
             <Route path="/prognose" element={<Prognose />} />
+            <Route path="/performance" element={<PerformanceOverview />} />
           </Route>
         </Routes>
       </Suspense>

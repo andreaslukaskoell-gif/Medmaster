@@ -1,13 +1,11 @@
 import { useState } from "react";
-import { Users, Trophy, TrendingUp, Medal, ChevronUp, ChevronDown, Minus } from "lucide-react";
+import { Users, Trophy, TrendingUp } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
-import { generateMockPercentile, generateLeaderboard } from "@/lib/utils";
-
-const leaderboard = generateLeaderboard();
+import { generateMockPercentile } from "@/lib/utils";
+import { Leaderboard } from "@/components/community/Leaderboard";
 
 export default function Community() {
   const { quizResults, xp, streak } = useStore();
@@ -75,7 +73,7 @@ export default function Community() {
             <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center mx-auto mb-2">
               <Users className="w-6 h-6 text-orange-600 dark:text-orange-400" />
             </div>
-            <p className="text-3xl font-bold text-orange-700 dark:text-orange-400">{leaderboard.length}</p>
+            <p className="text-3xl font-bold text-orange-700 dark:text-orange-400">81</p>
             <p className="text-xs text-muted">Aktive Lernende</p>
           </CardContent>
         </Card>
@@ -112,7 +110,7 @@ export default function Community() {
                   </div>
                   <div className="relative h-8 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                     <div
-                      className="absolute inset-y-0 left-0 bg-gradient-to-r from-red-400 via-yellow-400 to-green-400 rounded-full"
+                      className="absolute inset-y-0 left-0 bg-linear-to-r from-red-400 via-yellow-400 to-green-400 rounded-full"
                       style={{ width: "100%" }}
                     />
                     <div
@@ -169,56 +167,9 @@ export default function Community() {
       )}
 
       {activeTab === "leaderboard" && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Medal className="w-5 h-5 text-yellow-500" />
-              Rangliste (XP)
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-2">
-              {leaderboard.map((entry, i) => {
-                const isYou = entry.name === "Du";
-                return (
-                  <div
-                    key={i}
-                    className={`flex items-center gap-3 px-3 py-2.5 rounded-lg ${
-                      isYou
-                        ? "bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800"
-                        : i < 3
-                          ? "bg-yellow-50 dark:bg-yellow-900/10"
-                          : ""
-                    }`}
-                  >
-                    <span
-                      className={`w-8 text-center font-bold text-sm ${
-                        i === 0 ? "text-yellow-500" : i === 1 ? "text-gray-400" : i === 2 ? "text-amber-600" : "text-muted"
-                      }`}
-                    >
-                      {i + 1}
-                    </span>
-                    <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-xs font-bold text-gray-600 dark:text-gray-300">
-                      {entry.name[0]}
-                    </div>
-                    <div className="flex-1">
-                      <p className={`text-sm font-medium ${isYou ? "text-primary-700 dark:text-primary-400" : "text-gray-900 dark:text-gray-100"}`}>
-                        {entry.name}
-                        {isYou && <Badge className="ml-2 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 text-[10px]">Du</Badge>}
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-1 text-sm">
-                      {entry.trend === "up" && <ChevronUp className="w-3.5 h-3.5 text-green-500" />}
-                      {entry.trend === "down" && <ChevronDown className="w-3.5 h-3.5 text-red-500" />}
-                      {entry.trend === "same" && <Minus className="w-3.5 h-3.5 text-muted" />}
-                      <span className="font-bold text-gray-900 dark:text-gray-100">{entry.xp} XP</span>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </CardContent>
-        </Card>
+        <div className="pb-24">
+          <Leaderboard />
+        </div>
       )}
     </div>
   );

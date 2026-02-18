@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { normalizeChapterContent } from "@/utils/normalizeChapterContent";
-import { splitChapterContent } from "@/utils/splitChapterContent";
+import { parseContentStructure } from "@/lib/contentStructure";
 import { QuestionsWidget } from "@/components/QuestionsWidget";
+import { InteractiveQuiz } from "@/components/chapter/InteractiveQuiz";
 
 type Props = {
   rawText: string;
@@ -110,22 +111,27 @@ function formatText(text: string, escapeHtml = false): string {
 }
 
 export function ChapterRenderer({ rawText }: Props) {
-  const normalized = normalizeChapterContent(rawText);
-  const { main, questions } = splitChapterContent(normalized);
+  const normalized = normalizeChapterContent(rawText ?? "");
+  const structured = useMemo(() => parseContentStructure(normalized), [normalized]);
+  const { body, quizMarkdown, questions } = structured;
 
   return (
     <div className="space-y-8">
-      {/* Haupttext */}
+      {/* Haupttext (Body ohne Frontmatter und ohne Quiz-Block) */}
       <div className="content prose prose-lg max-w-none">
         <div
           dangerouslySetInnerHTML={{
-            __html: formatText(main, true),
+            __html: formatText(body, true),
           }}
         />
       </div>
 
-      {/* Kontrollfragen */}
-      {questions && <QuestionsWidget markdown={questions} />}
+      {/* Quiz: strukturierte Fragen in InteractiveQuiz, sonst Fallback Markdown in QuestionsWidget */}
+      {questions.length > 0 ? (
+        <InteractiveQuiz questions={questions} onAnswer={() => {}} onAllComplete={() => {}} />
+      ) : quizMarkdown ? (
+        <QuestionsWidget markdown={quizMarkdown} />
+      ) : null}
     </div>
   );
 }

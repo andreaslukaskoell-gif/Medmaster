@@ -43,17 +43,28 @@ export interface LearnerProfile {
   totalCorrect: number;
 }
 
+const ADAPTIVE_FAST_SEC = 10;
+const ADAPTIVE_SLOW_SEC = 60;
+const ADAPTIVE_STREAK_LEN = 3;
+const MAX_DIFFICULTY_LEVEL = 3;
+
 interface AdaptiveState {
   profile: LearnerProfile;
-  /** Zuletzt besuchtes Unterkapitel (für "Fortsetzen") */
   lastViewedUnterkapitelId: string | null;
   lastViewedKapitelId: string | null;
-  /** Nach Klick "Fortsetzen": wird von BMSKapitelView gelesen und dann geleert */
   resumeToUnterkapitelId: string | null;
+  lastPath: string | null;
 
-  // Actions
+  /** Session: letzte Antworten für adaptive Schwierigkeit (nicht persistiert) */
+  recentAnswers: { correct: boolean; timeSeconds: number }[];
+  /** 1 = leicht, 2 = mittel, 3 = schwer; beeinflusst XP-Multiplikator */
+  difficultyLevel: number;
+  /** true wenn >60s oder falsch → Bridge (einfachere Erklärung) anbieten */
+  offerBridge: boolean;
+
   setLastViewed: (kapitelId: string, unterkapitelId: string) => void;
   setResumeToUnterkapitelId: (id: string | null) => void;
+  setLastPath: (path: string | null) => void;
   recordAnswer: (stichwortId: string, correct: boolean, timeSeconds: number) => void;
   getRecommendation: () => DailyRecommendation;
   getAdaptiveQuestions: (count: number, fach?: string) => Question[];
@@ -65,6 +76,9 @@ interface AdaptiveState {
   setLearningPhase: (phase: LearnerProfile["learningPhase"]) => void;
   setDaysUntilExam: (days: number) => void;
   initializeFromQuizResults: (results: { answers: { questionId: string; correct: boolean }[] }[]) => void;
+  getDifficultyMultiplier: () => number;
+  getShouldOfferBridge: () => boolean;
+  clearOfferBridge: () => void;
 }
 
 // ============================================================
@@ -121,10 +135,22 @@ export const useAdaptiveStore = create<AdaptiveState>()(
       lastViewedUnterkapitelId: null,
       lastViewedKapitelId: null,
       resumeToUnterkapitelId: null,
+      lastPath: null,
+      recentAnswers: [],
+      difficultyLevel: 1,
+      offerBridge: false,
 
       setLastViewed: (kapitelId, unterkapitelId) =>
         set({ lastViewedKapitelId: kapitelId, lastViewedUnterkapitelId: unterkapitelId }),
       setResumeToUnterkapitelId: (id) => set({ resumeToUnterkapitelId: id }),
+      setLastPath: (path) => set({ lastPath: path }),
+
+      getDifficultyMultiplier: () => {
+        const level = get().difficultyLevel ?? 1;
+        return Math.min(MAX_DIFFICULTY_LEVEL, Math.max(1, level)) * 0.4 + 0.6;
+      },
+      getShouldOfferBridge: () => get().offerBridge === true,
+      clearOfferBridge: () => set({ offerBridge: false }),
 
       profile: {
         stichwortStats: {},
@@ -144,6 +170,23 @@ export const useAdaptiveStore = create<AdaptiveState>()(
 
       recordAnswer: (stichwortId, correct, timeSeconds) => {
         set((state) => {
+          const recent = [...(state.recentAnswers ?? [])];
+          recent.push({ correct, timeSeconds });
+          if (recent.length > ADAPTIVE_STREAK_LEN) recent.shift();
+
+          let newDifficulty = state.difficultyLevel ?? 1;
+          let offerBridge = state.offerBridge;
+
+          if (correct && timeSeconds < ADAPTIVE_FAST_SEC) {
+            if (recent.length >= ADAPTIVE_STREAK_LEN && recent.every((r) => r.correct && r.timeSeconds < ADAPTIVE_FAST_SEC)) {
+              newDifficulty = Math.min(MAX_DIFFICULTY_LEVEL, (state.difficultyLevel ?? 1) + 1);
+              recent.length = 0;
+            }
+          } else {
+            if (!correct || timeSeconds > ADAPTIVE_SLOW_SEC) offerBridge = true;
+            recent.length = 0;
+          }
+
           const stats = { ...state.profile.stichwortStats };
           const existing = stats[stichwortId] || {
             totalAttempts: 0,
@@ -210,6 +253,9 @@ export const useAdaptiveStore = create<AdaptiveState>()(
           }
 
           return {
+            recentAnswers: recent,
+            difficultyLevel: newDifficulty,
+            offerBridge,
             profile: {
               ...state.profile,
               stichwortStats: stats,
@@ -404,6 +450,14 @@ export const useAdaptiveStore = create<AdaptiveState>()(
     }),
     {
       name: "medmaster-adaptive",
+      partialize: (state) => ({
+        profile: state.profile,
+        lastViewedUnterkapitelId: state.lastViewedUnterkapitelId,
+        lastViewedKapitelId: state.lastViewedKapitelId,
+        resumeToUnterkapitelId: state.resumeToUnterkapitelId,
+        lastPath: state.lastPath,
+        difficultyLevel: state.difficultyLevel,
+      }),
     }
   )
 );

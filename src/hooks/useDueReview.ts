@@ -30,14 +30,16 @@ export function useDueReview(): {
 
     const now = new Date().toISOString();
 
-    supabase
-      .from("stichwort_stats")
-      .select("stichwort_id, next_review_at")
-      .eq("user_id", user.id)
-      .lte("next_review_at", now)
-      .order("next_review_at", { ascending: true })
-      .limit(10)
-      .then(({ data, error }) => {
+    (async () => {
+      try {
+        const { data, error } = await supabase
+          .from("stichwort_stats")
+          .select("stichwort_id, next_review_at")
+          .eq("user_id", user.id)
+          .lte("next_review_at", now)
+          .order("next_review_at", { ascending: true })
+          .limit(10);
+
         if (error) {
           console.warn("[useDueReview] Fehler:", error.message);
           setDueTopics([]);
@@ -52,13 +54,13 @@ export function useDueReview(): {
           return { stichwortId, name, nextReviewAt: row.next_review_at ?? null };
         });
         setDueTopics(withNames);
-        setLoading(false);
-      })
-      .catch((err) => {
+      } catch (err) {
         console.warn("[useDueReview]", err);
         setDueTopics([]);
+      } finally {
         setLoading(false);
-      });
+      }
+    })();
   }, [user?.id]);
 
   return { dueTopics, loading };

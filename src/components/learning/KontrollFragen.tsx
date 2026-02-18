@@ -1,24 +1,34 @@
-import { useState } from "react";
-import { CheckCircle2, XCircle, ChevronDown, RotateCcw } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import React, { useState, useRef } from "react";
+import { CheckCircle2, XCircle, RotateCcw } from "lucide-react";
+import { Button } from "../ui/button";
 
 interface KontrollFrage {
   question: string;
   options: string[];
   correctIndex: number;
   explanation: string;
+  /** Sokratischer Hinweis bei falscher Antwort (vor Lösung); Fallback wenn fehlt. */
+  hint?: string;
 }
+
+const DEFAULT_HINT = "Überlege: Welcher Begriff in der Frage ist zentral? Was hast du im Kapitel dazu gelernt?";
 
 interface KontrollFragenProps {
   questions: KontrollFrage[];
+  /** (questionIndex, correct, secondTry). secondTry = richtig im zweiten Versuch → 50% XP. */
+  onAnswer?: (questionIndex: number, correct: boolean, secondTry?: boolean) => void;
 }
 
-export function KontrollFragen({ questions }: KontrollFragenProps) {
+export function KontrollFragen({ questions, onAnswer }: KontrollFragenProps) {
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
   const [results, setResults] = useState<boolean[]>([]);
   const [showExplanation, setShowExplanation] = useState(false);
+  const [showHintOnly, setShowHintOnly] = useState(false);
+  const [secondTry, setSecondTry] = useState(false);
+  /** Verhindert XP-Farming: onAnswer nur einmal pro Frage pro Ergebnis. */
+  const answerRecordedRef = useRef<string | null>(null);
 
   const safeQuestions = questions ?? [];
   const total = safeQuestions.length;
@@ -38,36 +48,81 @@ export function KontrollFragen({ questions }: KontrollFragenProps) {
   }
 
   const handleSelect = (optIndex: number) => {
-    if (answered) return;
+    if (answered && !(showHintOnly && secondTry)) return;
     setSelected(optIndex);
-    setAnswered(true);
-    setShowExplanation(false);
     const isCorrect = optIndex === q?.correctIndex;
-    setResults((prev) => [...prev, isCorrect]);
+    if (isCorrect) {
+      const key = `q${current}-correct-${secondTry}`;
+      if (answerRecordedRef.current === key) return;
+      answerRecordedRef.current = key;
+      setAnswered(true);
+      setShowHintOnly(false);
+      setShowExplanation(true);
+      setResults((prev) => [...prev, true]);
+      onAnswer?.(current, true, secondTry);
+      return;
+    }
+    if (showHintOnly && secondTry) {
+      const key = `q${current}-wrong`;
+      if (answerRecordedRef.current === key) return;
+      answerRecordedRef.current = key;
+      setAnswered(true);
+      setShowExplanation(true);
+      setResults((prev) => [...prev, false]);
+      onAnswer?.(current, false);
+      return;
+    }
+    setAnswered(true);
+    setShowHintOnly(true);
+  };
+
+  const handleSecondTry = () => {
+    setAnswered(false);
+    setSelected(null);
+    setSecondTry(true);
+  };
+  const handleShowSolution = () => {
+    const key = `q${current}-wrong`;
+    if (answerRecordedRef.current !== key) {
+      answerRecordedRef.current = key;
+      setResults((prev) => [...prev, false]);
+      onAnswer?.(current, false);
+    }
+    setShowHintOnly(false);
+    setShowExplanation(true);
   };
 
   const handleNext = () => {
+    answerRecordedRef.current = null;
     if (current < total - 1) {
       setCurrent((prev) => prev + 1);
       setSelected(null);
       setAnswered(false);
       setShowExplanation(false);
+      setShowHintOnly(false);
+      setSecondTry(false);
     }
   };
 
   const handleReset = () => {
+    answerRecordedRef.current = null;
     setCurrent(0);
     setSelected(null);
     setAnswered(false);
     setResults([]);
     setShowExplanation(false);
+    setShowHintOnly(false);
+    setSecondTry(false);
   };
+
+  const hint = q?.hint ?? DEFAULT_HINT;
+  const isCorrect = answered && selected === q?.correctIndex;
 
   if (finished) {
     const pct = Math.round((correctCount / total) * 100);
     return (
       <div className="rounded-xl border border-emerald-200 dark:border-emerald-800 bg-white dark:bg-gray-900 shadow-lg overflow-hidden">
-        <div className="bg-gradient-to-r from-emerald-500 to-teal-500 px-6 py-4">
+        <div className="bg-linear-to-r from-emerald-500 to-teal-500 px-6 py-4">
           <h3 className="text-lg font-bold text-white">Kontrollfragen — Ergebnis</h3>
         </div>
         <div className="p-6 space-y-5">
@@ -94,7 +149,7 @@ export function KontrollFragen({ questions }: KontrollFragenProps) {
             </div>
             <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
               <div
-                className="h-3 rounded-full transition-all duration-500 bg-gradient-to-r from-emerald-500 to-teal-500"
+                className="h-3 rounded-full transition-all duration-500 bg-linear-to-r from-emerald-500 to-teal-500"
                 style={{ width: `${pct}%` }}
               />
             </div>
@@ -131,7 +186,7 @@ export function KontrollFragen({ questions }: KontrollFragenProps) {
   return (
     <div className="rounded-xl border border-emerald-200 dark:border-emerald-800 bg-white dark:bg-gray-900 shadow-lg overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-emerald-500 to-teal-500 px-6 py-4">
+      <div className="bg-linear-to-r from-emerald-500 to-teal-500 px-6 py-4">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-bold text-white">Kontrollfragen</h3>
           <span className="text-sm text-emerald-100 font-medium">
@@ -178,15 +233,19 @@ export function KontrollFragen({ questions }: KontrollFragenProps) {
                 : " border-gray-200 dark:border-gray-700 hover:border-emerald-300 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/10 cursor-pointer";
             }
 
+            const allowSecondTry = showHintOnly && secondTry;
+            const isDisabled = answered && !allowSecondTry;
             return (
               <button
                 key={oi}
+                type="button"
                 onClick={() => handleSelect(oi)}
-                disabled={answered}
+                disabled={isDisabled}
+                aria-disabled={isDisabled}
                 className={className}
               >
                 <span
-                  className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ${
+                  className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ${
                     answered && isCorrectOpt
                       ? "bg-emerald-500 text-white"
                       : isWrongSelected
@@ -198,30 +257,35 @@ export function KontrollFragen({ questions }: KontrollFragenProps) {
                 </span>
                 <span className="pt-0.5">{opt}</span>
                 {answered && isCorrectOpt && (
-                  <CheckCircle2 className="w-5 h-5 ml-auto flex-shrink-0 text-emerald-600 dark:text-emerald-400 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 ml-auto shrink-0 text-emerald-600 dark:text-emerald-400 mt-0.5" />
                 )}
                 {isWrongSelected && (
-                  <XCircle className="w-5 h-5 ml-auto flex-shrink-0 text-red-600 dark:text-red-400 mt-0.5" />
+                  <XCircle className="w-5 h-5 ml-auto shrink-0 text-red-600 dark:text-red-400 mt-0.5" />
                 )}
               </button>
             );
           })}
         </div>
 
-        {/* Feedback + Explanation */}
+        {/* Feedback: bei falsch zuerst Sokratischer Hinweis + zweiter Versuch */}
         {answered && (
           <div className="space-y-2">
             <div
               className={`flex items-center gap-2 text-sm font-medium ${
-                selected === q?.correctIndex
+                isCorrect
                   ? "text-emerald-700 dark:text-emerald-400"
                   : "text-red-700 dark:text-red-400"
               }`}
             >
-              {selected === q?.correctIndex ? (
+              {isCorrect ? (
                 <>
                   <CheckCircle2 className="w-5 h-5" />
-                  Richtig!
+                  Richtig!{secondTry && " (Zweiter Versuch: 50% XP)"}
+                </>
+              ) : showHintOnly ? (
+                <>
+                  <XCircle className="w-5 h-5" />
+                  Noch nicht richtig. Nutze den Hinweis oder versuche es erneut.
                 </>
               ) : (
                 <>
@@ -231,32 +295,33 @@ export function KontrollFragen({ questions }: KontrollFragenProps) {
               )}
             </div>
 
-            {/* Collapsible explanation */}
-            <button
-              onClick={() => setShowExplanation((prev) => !prev)}
-              className="flex items-center gap-1.5 text-sm text-emerald-700 dark:text-emerald-400 hover:underline cursor-pointer"
-            >
-              <ChevronDown
-                className={`w-4 h-4 transition-transform duration-300 ${
-                  showExplanation ? "rotate-180" : ""
-                }`}
-              />
-              Lösungsweg {showExplanation ? "ausblenden" : "anzeigen"}
-            </button>
-            <div
-              className={`overflow-hidden transition-all duration-300 ${
-                showExplanation ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-              }`}
-            >
+            {showHintOnly && !showExplanation && (
+              <div className="space-y-2 p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800">
+                <p className="text-sm font-medium text-amber-800 dark:text-amber-200">💡 Sokratischer Hinweis</p>
+                <p className="text-sm text-amber-900 dark:text-amber-100">{hint}</p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <Button type="button" variant="outline" size="sm" onClick={handleSecondTry} className="text-xs">
+                    <RotateCcw className="w-3.5 h-3.5 mr-1" />
+                    Nochmal versuchen (50% XP)
+                  </Button>
+                  <Button type="button" variant="ghost" size="sm" onClick={handleShowSolution} className="text-xs">
+                    Lösung anzeigen
+                  </Button>
+                </div>
+              </div>
+            )}
+
+            {showExplanation && (
               <div className="p-3 rounded-lg bg-emerald-50 dark:bg-emerald-900/15 border border-emerald-200 dark:border-emerald-800 text-sm text-emerald-900 dark:text-emerald-200 leading-relaxed">
+                <p className="font-medium text-emerald-800 dark:text-emerald-300 mb-1">Lösungsweg</p>
                 {q?.explanation ?? ""}
               </div>
-            </div>
+            )}
           </div>
         )}
 
-        {/* Next button */}
-        {answered && (
+        {/* Next button: erst wenn Ergebnis feststeht (richtig oder Lösung angezeigt) */}
+        {answered && (isCorrect || showExplanation) && (
           <Button
             onClick={handleNext}
             className="w-full bg-emerald-600 hover:bg-emerald-700 text-white mt-2"

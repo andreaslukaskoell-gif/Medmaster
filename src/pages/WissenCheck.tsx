@@ -20,6 +20,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { getQuestionsBySubject, type Question } from "@/data/bms/index";
+import { getSequenceQuestionsBySubject } from "@/data/wissencheckSequences";
+import { LogicBuilder } from "@/components/wissencheck/LogicBuilder";
+import { playCorrectAnswerSound } from "@/lib/sounds";
 import { useStore } from "@/store/useStore";
 
 const QUESTION_COUNT = 10;
@@ -97,10 +100,16 @@ export default function WissenCheck() {
   }, [fach]);
 
   const [phase, setPhase] = useState<"intro" | "quiz" | "result">("intro");
+  const [logicMode, setLogicMode] = useState(false);
+  const [logicIndex, setLogicIndex] = useState(0);
+  const [logicCorrect, setLogicCorrect] = useState(0);
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [timeLeft, setTimeLeft] = useState(TIME_LIMIT);
   const [expandedQ, setExpandedQ] = useState<string | null>(null);
+
+  const logicQuestions = useMemo(() => (fach ? getSequenceQuestionsBySubject(fach) : []), [fach]);
+  const hasLogicQuestions = logicQuestions.length > 0;
 
   // Timer
   useEffect(() => {
@@ -137,7 +146,9 @@ export default function WissenCheck() {
 
   const selectAnswer = (optionId: string) => {
     if (answers[questions[current].id]) return; // already answered
-    setAnswers((prev) => ({ ...prev, [questions[current].id]: optionId }));
+    const q = questions[current];
+    setAnswers((prev) => ({ ...prev, [q.id]: optionId }));
+    if (optionId === q.correctOptionId) playCorrectAnswerSound();
   };
 
   const nextQuestion = () => {
@@ -242,16 +253,88 @@ export default function WissenCheck() {
               Beantworte alle Fragen innerhalb des Zeitlimits.
               Nach Ablauf der Zeit wird automatisch abgegeben.
             </div>
-            <div className="flex gap-3 justify-center pt-2">
+            <div className="flex flex-wrap gap-3 justify-center pt-2">
               <Button variant="outline" onClick={() => navigate("/bms")}>
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Zurück
               </Button>
               <Button onClick={() => setPhase("quiz")} className={config.accent + " hover:opacity-90 text-white"}>
                 <Play className="w-4 h-4 mr-2" />
-                Starten
+                Klassischer Check
               </Button>
+              {hasLogicQuestions && (
+                <Button
+                  variant="outline"
+                  onClick={() => { setLogicMode(true); setLogicIndex(0); setLogicCorrect(0); }}
+                  className="border-2 border-dashed"
+                >
+                  Reihenfolge üben (Logic-Builder)
+                </Button>
+              )}
             </div>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  // ── LOGIC-BUILDER (Reihenfolge) ────────────────────────
+  if (logicMode && config && hasLogicQuestions) {
+    const logicDone = logicIndex >= logicQuestions.length;
+    if (logicDone) {
+      return (
+        <div className="max-w-3xl mx-auto space-y-6">
+          <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "BMS", href: "/bms" }, { label: `${config.label} · Logic-Builder` }]} />
+          <Card>
+            <CardContent className="p-6 text-center space-y-4">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">Logic-Builder abgeschlossen</h2>
+              <div className="flex justify-center">
+                <ScoreCircle score={logicCorrect} total={logicQuestions.length} ringClass={config.ring} />
+              </div>
+              <p className="text-sm text-muted">
+                Du hast {logicCorrect} von {logicQuestions.length} Reihenfolgen richtig gelöst.
+              </p>
+              <div className="flex gap-3 justify-center">
+                <Button variant="outline" onClick={() => { setLogicMode(false); setLogicIndex(0); setLogicCorrect(0); }}>
+                  Zurück zum Wissenscheck
+                </Button>
+                <Button onClick={() => { setLogicMode(true); setLogicIndex(0); setLogicCorrect(0); }} className={config.accent + " text-white hover:opacity-90"}>
+                  <RotateCcw className="w-4 h-4 mr-2" />
+                  Nochmal
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      );
+    }
+    const seqQ = logicQuestions[logicIndex];
+    return (
+      <div className="max-w-3xl mx-auto space-y-4">
+        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "BMS", href: "/bms" }, { label: "Wissenscheck", href: `/wissencheck/${fach}` }, { label: "Logic-Builder" }]} />
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <SubjectIcon className={`w-5 h-5 ${config.color}`} />
+            <span className="font-semibold text-gray-900 dark:text-gray-100">{config.label} · Logic-Builder</span>
+          </div>
+          <span className="text-sm text-muted">Reihenfolge {logicIndex + 1} von {logicQuestions.length}</span>
+        </div>
+        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+          <div
+            className={`${config.accent} h-2 rounded-full transition-all`}
+            style={{ width: `${((logicIndex + 1) / logicQuestions.length) * 100}%` }}
+          />
+        </div>
+        <Card>
+          <CardContent className="p-5">
+            <LogicBuilder
+              question={seqQ}
+              accentClass={config.accent}
+              onCorrect={() => {
+                setLogicCorrect((c) => c + 1);
+                setLogicIndex((i) => i + 1);
+              }}
+            />
           </CardContent>
         </Card>
       </div>

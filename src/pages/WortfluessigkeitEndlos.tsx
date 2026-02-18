@@ -34,11 +34,18 @@ export default function WortfluessigkeitEndlos() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userInput, setUserInput] = useState("");
   const [streak, setStreak] = useState(0);
-  const [bestStreak, setBestStreak] = useState(() => {
-    const saved = localStorage.getItem("medmaster-wf-best-streak");
-    return saved ? parseInt(saved, 10) : 0;
-  });
+  const [bestStreak, setBestStreak] = useState(0);
   const [totalCorrect, setTotalCorrect] = useState(0);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || typeof localStorage === "undefined") return;
+    try {
+      const saved = localStorage.getItem("medmaster-wf-best-streak");
+      if (saved) setBestStreak(Math.max(0, parseInt(saved, 10) || 0));
+    } catch {
+      // ignore
+    }
+  }, []);
   const [totalAnswered, setTotalAnswered] = useState(0);
   const [showConfetti, setShowConfetti] = useState(false);
   const [feedback, setFeedback] = useState<"correct" | "wrong" | null>(null);
@@ -94,7 +101,13 @@ export default function WortfluessigkeitEndlos() {
 
       if (newStreak > bestStreak) {
         setBestStreak(newStreak);
-        localStorage.setItem("medmaster-wf-best-streak", String(newStreak));
+        try {
+          if (typeof localStorage !== "undefined") {
+            localStorage.setItem("medmaster-wf-best-streak", String(newStreak));
+          }
+        } catch {
+          // ignore
+        }
       }
 
       // Move to next word
@@ -162,7 +175,7 @@ export default function WortfluessigkeitEndlos() {
     return (
       <Card>
         <CardContent className="p-8 text-center space-y-6">
-          <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto">
+          <div className="w-16 h-16 bg-linear-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto">
             <Flame className="w-8 h-8 text-white" />
           </div>
           <div>
@@ -184,7 +197,7 @@ export default function WortfluessigkeitEndlos() {
           )}
           <button
             onClick={startGame}
-            className="px-8 py-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white rounded-lg font-semibold transition-all cursor-pointer"
+            className="px-8 py-3 bg-linear-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white rounded-lg font-semibold transition-all cursor-pointer"
           >
             Los geht&apos;s!
           </button>
@@ -201,7 +214,7 @@ export default function WortfluessigkeitEndlos() {
         {isNewRecord && <Confetti active={true} />}
         <Card>
           <CardContent className="p-8 text-center space-y-6">
-            <div className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center bg-gradient-to-br from-orange-500 to-red-600">
+            <div className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center bg-linear-to-br from-orange-500 to-red-600">
               <Trophy className="w-8 h-8 text-white" />
             </div>
             <div>
@@ -239,7 +252,7 @@ export default function WortfluessigkeitEndlos() {
 
             <button
               onClick={startGame}
-              className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white rounded-lg font-medium transition-all cursor-pointer mx-auto"
+              className="flex items-center gap-2 px-6 py-3 bg-linear-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white rounded-lg font-medium transition-all cursor-pointer mx-auto"
             >
               <RotateCcw className="w-4 h-4" />
               Nochmal
@@ -335,7 +348,7 @@ export default function WortfluessigkeitEndlos() {
             <button
               onClick={handleSubmit}
               disabled={!userInput.trim()}
-              className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white rounded-lg text-sm font-semibold disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer"
+              className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-linear-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white rounded-lg text-sm font-semibold disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer"
             >
               Best&auml;tigen
               <ChevronRight className="w-4 h-4" />

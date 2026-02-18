@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import type { ComponentType, LazyExoticComponent } from "react";
 
 const AnimalCell = lazy(() => import("./biology/AnimalCell"));
 const PlantVsAnimalCell = lazy(() => import("./biology/PlantVsAnimalCell"));
@@ -50,7 +51,7 @@ const CoordinateSystem = lazy(() => import("./math/CoordinateSystem"));
 const UnitCircle = lazy(() => import("./math/UnitCircle"));
 const VectorAddition = lazy(() => import("./math/VectorAddition"));
 
-const DIAGRAM_MAP: Record<string, React.LazyExoticComponent<React.ComponentType>> = {
+const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   "animal-cell": AnimalCell,
   "plant-vs-animal-cell": PlantVsAnimalCell,
   "cell-membrane": CellMembrane,

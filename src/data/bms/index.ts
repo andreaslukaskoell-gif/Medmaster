@@ -29,3 +29,7 @@ export function getQuestionsByDifficulty(difficulty: "leicht" | "mittel" | "schw
 export function getQuestionsByTags(tags: string[]): Question[] {
   return allBmsQuestions.filter((q) => q.tags.some((t) => tags.includes(t)));
 }
+
+export function getQuestionById(id: string): Question | undefined {
+  return allBmsQuestions.find((q) => q.id === id);
+}

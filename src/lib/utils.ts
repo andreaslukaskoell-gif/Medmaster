@@ -39,6 +39,47 @@ export function getMedATProgress(): { daysLeft: number; totalDays: number; progr
   return { daysLeft, totalDays, progress };
 }
 
+/** Vergessenskurve: Tage bis zur nächsten Wiederholung (für Anzeige im Report). */
+export function getReviewDaysFromStreak(streak: number): number {
+  if (streak >= 4) return 14;
+  if (streak === 3) return 7;
+  if (streak === 2) return 3;
+  if (streak === 1) return 1;
+  return 0;
+}
+
+/**
+ * Nächstes Wiederholungsdatum aus lastPracticed + Vergessenskurve (Streak).
+ * Streak 0: sofort fällig, 1: +1 Tag, 2: +3, 3: +7, 4+: +14.
+ */
+export function getNextReviewDate(
+  lastPracticed: string | null,
+  streak: number
+): string | null {
+  if (!lastPracticed || typeof lastPracticed !== "string") return null;
+  const day = lastPracticed.split("T")[0];
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) return null;
+  const d = new Date(day);
+  const addDays = streak >= 4 ? 14 : streak === 3 ? 7 : streak === 2 ? 3 : streak === 1 ? 1 : 0;
+  d.setDate(d.getDate() + addDays);
+  return d.toISOString().split("T")[0];
+}
+
+/** Fortschritt 01.01.2026 bis 03.07.2026 (fixes Startdatum). */
+export function getMedATProgressFromJan2026(): { daysLeft: number; totalDays: number; progress: number } {
+  const start = new Date(2026, 0, 1);
+  const medat = new Date(2026, 6, 3);
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+  start.setHours(0, 0, 0, 0);
+  medat.setHours(0, 0, 0, 0);
+  const totalDays = Math.ceil((medat.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+  const elapsed = Math.ceil((now.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+  const daysLeft = Math.max(0, Math.ceil((medat.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)));
+  const progress = totalDays > 0 ? Math.min(1, Math.max(0, elapsed / totalDays)) : 0;
+  return { daysLeft, totalDays, progress };
+}
+
 export function timeAgo(dateStr: string): string {
   const date = new Date(dateStr);
   const now = new Date();

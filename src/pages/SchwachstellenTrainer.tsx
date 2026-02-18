@@ -18,6 +18,8 @@ import { allBmsQuestions } from "@/data/bms/index";
 import { alleStichworteListe } from "@/data/stichwortliste";
 import { getStrategieTipp, getDirectStichwortId } from "@/data/questions/index";
 import { getStichwortForQuestion } from "@/store/adaptiveLearning";
+import { playCorrectAnswerSound } from "@/lib/sounds";
+import { SchwachstellenAnalyse } from "@/components/schwachstellen/SchwachstellenAnalyse";
 
 // ============================================================
 // Types & Helpers
@@ -134,7 +136,7 @@ export default function SchwachstellenTrainer() {
     setShowResult(true);
     const q = quizQuestions[currentIndex];
     const correct = answers[q.id] === q.correctOptionId;
-    // Record in adaptive store
+    if (correct) playCorrectAnswerSound();
     const swId = getDirectStichwortId(q.id) || getStichwortForQuestion(q.id);
     if (swId) adaptive.recordAnswer(swId, correct, 30);
     updateSpacedRepetition(q.id, correct);
@@ -356,6 +358,9 @@ export default function SchwachstellenTrainer() {
           <p className="text-sm text-muted">Gezielt schwache Themen trainieren</p>
         </div>
       </div>
+
+      {/* High-End Fehler-Analyse: Treemap + Donut + Handlungsempfehlung */}
+      <SchwachstellenAnalyse />
 
       {/* Readiness & Stats Row */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

@@ -1,0 +1,41 @@
+{
+  "_comment": "Vorlage für BMS-Kapitel-Überarbeitung. Ein Kapitel = ein Eintrag in 'chapters'.",
+  "chapters": [
+    {
+      "id": "bio-die-zelle",
+      "title": "Biologie - Die Zelle",
+      "summary": "Die Zelle ist die kleinste lebensfähige Einheit; Aufbau und Funktion von Zellmembran, Zellkern und Organellen sind prüfungsrelevant.",
+      "sections": [
+        {
+          "subTitle": "Aufbau der eukaryotischen Zelle",
+          "content": "Eukaryotische Zellen besitzen einen **Zellkern** und membranumhüllte Organellen.\n\n| Bestandteil | Funktion |\n|-------------|----------|\n| Zellmembran | Abgrenzung, Stoffaustausch |\n| Zellkern | Erbinformation (DNA) |\n| Mitochondrium | Energie (ATP) |\n| Ribosom | Proteinbiosynthese |\n| Endoplasmatisches Retikulum | Transport, Fettsynthese |\n| Golgi-Apparat | Modifikation, Sortierung |\n\n*Merke:* Ohne Mitochondrien keine ATP-Produktion – zentral für alle energieverbrauchenden Prozesse.",
+          "imageUrl": "/images/die-zelle-eukaryot.svg"
+        },
+        {
+          "subTitle": "Zellmembran und Transport",
+          "content": "Die **Zellmembran** besteht aus einer Phospholipid-Doppelschicht mit eingelagerten Proteinen.\n\n- **Passiver Transport:** Diffusion, Osmose (ohne Energie)\n- **Aktiver Transport:** unter ATP-Verbrauch gegen das Konzentrationsgefälle\n\n> Wichtig für den MedAT: Osmose und Tonizität (hypoton, isoton, hyperton) bei Erythrozyten und Pflanzenzellen.",
+          "imageUrl": ""
+        }
+      ],
+      "quiz": [
+        {
+          "question": "Welches Organell ist primär für die ATP-Synthese zuständig?",
+          "options": [
+            "Ribosom",
+            "Golgi-Apparat",
+            "Mitochondrium",
+            "Zellkern"
+          ],
+          "correctIndex": 2,
+          "explanation": "Mitochondrien sind die Kraftwerke der Zelle und produzieren ATP in der Atmungskette (oxidative Phosphorylierung)."
+        },
+        {
+          "question": "Platzhalter-Frage",
+          "options": ["A", "B", "C", "D"],
+          "correctIndex": 0,
+          "explanation": "Erklärung hier eintragen."
+        }
+      ]
+    }
+  ]
+}

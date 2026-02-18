@@ -164,8 +164,6 @@ export function useAuth() {
   const isPremium = tier === "standard" || tier === "pro";
   const isPro = tier === "pro";
 
-  console.log("Auth State:", { user: !!user, loading });
-
   return {
     user, profile, session, loading,
     isAuthenticated, tier, isPremium, isPro,

@@ -174,7 +174,7 @@ export default function EmotionenRegulierenSimulation() {
       <div className="space-y-6">
         <Card>
           <CardContent className="p-6 text-center space-y-4">
-            <div className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center bg-gradient-to-br from-pink-500 to-rose-600">
+            <div className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center bg-linear-to-br from-pink-500 to-rose-600">
               <Trophy className="w-8 h-8 text-white" />
             </div>
             <div>
