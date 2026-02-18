@@ -5,33 +5,60 @@ import { supabase } from "./supabase";
 type StichwortStat = import("@/store/adaptiveLearning").StichwortStat;
 type FachStat = import("@/store/adaptiveLearning").FachStat;
 
+/** Row shape from stichwort_stats (Supabase) */
+interface StichwortStatRow {
+  stichwort_id: string;
+  total_attempts: number;
+  correct_attempts: number;
+  success_rate: number;
+  last_practiced: string | null;
+  confidence: string | null;
+  streak: number;
+  avg_time_per_question: number | null;
+}
+
+/** Row shape from fach_stats (Supabase) */
+interface FachStatRow {
+  fach: string;
+  overall_success_rate: number;
+  weak_topics: unknown;
+  strong_topics: unknown;
+  recommended_daily_questions: number | null;
+}
+
 // ============================================================
 // Push: localStorage → Supabase
 // ============================================================
 
 export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean; error?: string }> {
+  const errors: string[] = [];
   try {
     const { useAdaptiveStore } = await import("@/store/adaptiveLearning");
     const profile = useAdaptiveStore.getState().profile;
 
-    // 1) Update user profile fields
-    const { error: profileErr } = await supabase
-      .from("profiles")
-      .update({
-        learning_phase: profile.learningPhase,
-        exam_date: profile.daysUntilExam
-          ? new Date(Date.now() + profile.daysUntilExam * 86400000).toISOString().split("T")[0]
-          : null,
-        daily_challenge_streak: profile.dailyChallengeStreak,
-        last_daily_challenge: profile.lastDailyChallenge,
-        total_questions_answered: profile.totalQuestionsAnswered,
-        total_correct: profile.totalCorrect,
-      })
-      .eq("id", userId);
+    // 1) Update user profile fields (non-blocking: log and continue on error)
+    try {
+      const { error: profileErr } = await supabase
+        .from("profiles")
+        .update({
+          learning_phase: profile.learningPhase,
+          exam_date: profile.daysUntilExam
+            ? new Date(Date.now() + profile.daysUntilExam * 86400000).toISOString().split("T")[0]
+            : null,
+          daily_challenge_streak: profile.dailyChallengeStreak,
+          last_daily_challenge: profile.lastDailyChallenge,
+          total_questions_answered: profile.totalQuestionsAnswered,
+          total_correct: profile.totalCorrect,
+        })
+        .eq("id", userId);
+      if (profileErr) throw profileErr;
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.warn("[sync] Push profiles failed (continuing):", msg);
+      errors.push(`profiles: ${msg}`);
+    }
 
-    if (profileErr) throw profileErr;
-
-    // 2) Upsert stichwort_stats
+    // 2) Upsert stichwort_stats (non-blocking: empty table or error = skip)
     const stichwortRows = Object.entries(profile.stichwortStats).map(
       ([stichwortId, stat]: [string, StichwortStat]) => ({
         user_id: userId,
@@ -46,19 +73,23 @@ export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean
         updated_at: new Date().toISOString(),
       })
     );
-
     if (stichwortRows.length > 0) {
-      // Batch in chunks of 200 to avoid payload limits
-      for (let i = 0; i < stichwortRows.length; i += 200) {
-        const chunk = stichwortRows.slice(i, i + 200);
-        const { error: swErr } = await supabase
-          .from("stichwort_stats")
-          .upsert(chunk, { onConflict: "user_id,stichwort_id" });
-        if (swErr) throw swErr;
+      try {
+        for (let i = 0; i < stichwortRows.length; i += 200) {
+          const chunk = stichwortRows.slice(i, i + 200);
+          const { error: swErr } = await supabase
+            .from("stichwort_stats")
+            .upsert(chunk, { onConflict: "user_id,stichwort_id" });
+          if (swErr) throw swErr;
+        }
+      } catch (err: unknown) {
+        const msg = err instanceof Error ? err.message : String(err);
+        console.warn("[sync] Push stichwort_stats failed (continuing):", msg);
+        errors.push(`stichwort_stats: ${msg}`);
       }
     }
 
-    // 3) Upsert fach_stats
+    // 3) Upsert fach_stats (non-blocking)
     const fachRows = Object.entries(profile.fachStats).map(
       ([fach, stat]: [string, FachStat]) => ({
         user_id: userId,
@@ -70,19 +101,28 @@ export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean
         updated_at: new Date().toISOString(),
       })
     );
-
     if (fachRows.length > 0) {
-      const { error: fachErr } = await supabase
-        .from("fach_stats")
-        .upsert(fachRows, { onConflict: "user_id,fach" });
-      if (fachErr) throw fachErr;
+      try {
+        const { error: fachErr } = await supabase
+          .from("fach_stats")
+          .upsert(fachRows, { onConflict: "user_id,fach" });
+        if (fachErr) throw fachErr;
+      } catch (err: unknown) {
+        const msg = err instanceof Error ? err.message : String(err);
+        console.warn("[sync] Push fach_stats failed (continuing):", msg);
+        errors.push(`fach_stats: ${msg}`);
+      }
     }
 
     console.log("[sync] Pushed stats to Supabase:", {
       stichwortCount: stichwortRows.length,
       fachCount: fachRows.length,
+      errors: errors.length > 0 ? errors : undefined,
     });
-    return { ok: true };
+    return {
+      ok: true,
+      ...(errors.length > 0 && { error: errors.join("; ") }),
+    };
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err);
     console.error("[sync] Push failed:", msg);
@@ -96,34 +136,55 @@ export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean
 
 export async function pullStatsFromSupabase(userId: string): Promise<{ ok: boolean; error?: string }> {
   try {
-    // 1) Fetch profile fields
+    // 1) Fetch profile fields — use maybeSingle() so missing row is not an error
     const { data: profileData, error: profileErr } = await supabase
       .from("profiles")
       .select("learning_phase, exam_date, daily_challenge_streak, last_daily_challenge, total_questions_answered, total_correct")
       .eq("id", userId)
-      .single();
+      .maybeSingle();
 
-    if (profileErr) throw profileErr;
+    if (profileErr) {
+      console.warn("[sync] Pull profiles failed, treating as no remote data:", profileErr.message);
+      return { ok: true };
+    }
+    if (!profileData) {
+      console.log("[sync] No profile row yet, keeping local state");
+      return { ok: true };
+    }
 
-    // 2) Fetch stichwort_stats
-    const { data: swData, error: swErr } = await supabase
-      .from("stichwort_stats")
-      .select("*")
-      .eq("user_id", userId);
+    // 2) Fetch stichwort_stats — on error or empty table return empty array
+    let swData: StichwortStatRow[] = [];
+    try {
+      const { data, error: swErr } = await supabase
+        .from("stichwort_stats")
+        .select("*")
+        .eq("user_id", userId);
+      if (swErr) throw swErr;
+      swData = Array.isArray(data) ? (data as StichwortStatRow[]) : [];
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.warn("[sync] Pull stichwort_stats failed, using empty list:", msg);
+      swData = [];
+    }
 
-    if (swErr) throw swErr;
-
-    // 3) Fetch fach_stats
-    const { data: fachData, error: fachErr } = await supabase
-      .from("fach_stats")
-      .select("*")
-      .eq("user_id", userId);
-
-    if (fachErr) throw fachErr;
+    // 3) Fetch fach_stats — on error return empty and continue
+    let fachData: FachStatRow[] = [];
+    try {
+      const { data, error: fachErr } = await supabase
+        .from("fach_stats")
+        .select("*")
+        .eq("user_id", userId);
+      if (fachErr) throw fachErr;
+      fachData = Array.isArray(data) ? (data as FachStatRow[]) : [];
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.warn("[sync] Pull fach_stats failed, using empty list:", msg);
+      fachData = [];
+    }
 
     // Only overwrite local if Supabase actually has data
     const remoteHasData =
-      (profileData?.total_questions_answered ?? 0) > 0 || (swData && swData.length > 0);
+      (profileData?.total_questions_answered ?? 0) > 0 || swData.length > 0;
 
     if (!remoteHasData) {
       console.log("[sync] No remote data found, keeping localStorage");
@@ -147,14 +208,15 @@ export async function pullStatsFromSupabase(userId: string): Promise<{ ok: boole
     const stichwortStats: Record<string, StichwortStat> = {};
     if (swData) {
       for (const row of swData) {
+        const confidence = (row.confidence === "sicher" || row.confidence === "unsicher" ? row.confidence : "unbekannt") as StichwortStat["confidence"];
         stichwortStats[row.stichwort_id] = {
           totalAttempts: row.total_attempts,
           correctAttempts: row.correct_attempts,
           successRate: row.success_rate,
           lastPracticed: row.last_practiced,
-          confidence: row.confidence || "unbekannt",
+          confidence,
           streak: row.streak,
-          avgTimePerQuestion: row.avg_time_per_question,
+          avgTimePerQuestion: row.avg_time_per_question ?? 0,
         };
       }
     }
@@ -224,13 +286,15 @@ export async function pullStatsFromSupabase(userId: string): Promise<{ ok: boole
 let syncInterval: ReturnType<typeof setInterval> | null = null;
 
 export function startAutoSync(userId: string) {
-  // Initial pull
-  pullStatsFromSupabase(userId);
+  // Initial pull — fire-and-forget; never block or throw (pull returns { ok }, no throw)
+  void pullStatsFromSupabase(userId).catch((err) => {
+    console.warn("[sync] Initial pull failed (non-blocking):", err);
+  });
 
   // Push every 2 minutes
   stopAutoSync();
   syncInterval = setInterval(() => {
-    pushStatsToSupabase(userId);
+    void pushStatsToSupabase(userId);
   }, 2 * 60 * 1000);
 
   // Push on page unload
