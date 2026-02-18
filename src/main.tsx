@@ -1,3 +1,4 @@
+// React/ReactDOM must be the first imports — do not reorder (prevents createContext load-order issues)
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
@@ -5,10 +6,13 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import "@/index.css";
 import App from "@/App";
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <ErrorBoundary>
-      <App />
-    </ErrorBoundary>
-  </StrictMode>
-);
+const rootEl = document.getElementById("root");
+if (rootEl) {
+  createRoot(rootEl).render(
+    <StrictMode>
+      <ErrorBoundary>
+        <App />
+      </ErrorBoundary>
+    </StrictMode>
+  );
+}

@@ -16,81 +16,21 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      'framer-motion',
-      'zustand',
-      'lucide-react',
-      '@supabase/supabase-js',
-      'recharts',
-      'react-markdown',
-      'remark-gfm',
-      'clsx',
-      'tailwind-merge',
-      'class-variance-authority',
-    ],
+    include: ['react', 'react-dom'],
   },
   build: {
-    chunkSizeWarningLimit: 1000,
+    outDir: 'dist',
+    sourcemap: false,
+    minify: true, // esbuild (default); use 'terser' + npm i -D terser if preferred
     rollupOptions: {
       output: {
         manualChunks: {
-          // Vendor: React ecosystem
-          'vendor-react': [
-            'react',
-            'react-dom',
-            'react-router-dom',
-          ],
-          // Vendor: UI (Lucide, Framer Motion, Recharts)
-          'vendor-ui': [
-            'lucide-react',
-            'framer-motion',
-            'recharts',
-          ],
-          // Vendor: Markdown rendering (chapter content)
-          'vendor-content': [
-            'react-markdown',
-            'remark-gfm',
-          ],
-          // BMS question data (largest data payload)
-          'data-bms': [
-            './src/data/bms/biologie.ts',
-            './src/data/bms/chemie.ts',
-            './src/data/bms/physik.ts',
-            './src/data/bms/mathematik.ts',
-          ],
-          // Pure stichworte data — no app imports; breaks data-stichwort ↔ data-stichwortliste cycle
-          'data-stichworte-base': [
-            './src/data/stichworteData.ts',
-          ],
-          // Stichwort questions data (imports stichworteData only, not stichwortliste)
-          'data-stichwort': [
-            './src/data/questions/index.ts',
-          ],
-          // TV + SEK + KFF data
-          'data-other': [
-            './src/data/tvTextsExpanded.ts',
-            './src/data/tvTextsExpanded2.ts',
-            './src/data/sekDataNew.ts',
-            './src/data/kffGenerators.ts',
-          ],
-          // Flashcards data
-          'data-flashcards': [
-            './src/data/flashcards.ts',
-            './src/data/flashcards_expanded.ts',
-            './src/data/flashcards_expanded2.ts',
-            './src/data/flashcards_expanded3.ts',
-            './src/data/flashcards_expanded4.ts',
-          ],
-          // Stichwortliste + adaptive store (shared by many pages)
-          'data-stichwortliste': [
-            './src/data/stichwortliste.ts',
-            './src/store/adaptiveLearning.ts',
-          ],
+          'main-vendor': ['react', 'react-dom', 'react-router-dom', 'zustand'],
         },
       },
+    },
+    commonjsOptions: {
+      transformMixedEsModules: true,
     },
   },
 })
