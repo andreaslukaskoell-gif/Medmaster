@@ -1,6 +1,9 @@
 import { supabase } from "./supabase";
-import { useAdaptiveStore } from "@/store/adaptiveLearning";
-import type { StichwortStat, FachStat } from "@/store/adaptiveLearning";
+
+// Avoid circular dependency: useAuth → syncService → adaptiveLearning → data.
+// Load adaptive store only when sync runs (after login).
+type StichwortStat = import("@/store/adaptiveLearning").StichwortStat;
+type FachStat = import("@/store/adaptiveLearning").FachStat;
 
 // ============================================================
 // Push: localStorage → Supabase
@@ -8,6 +11,7 @@ import type { StichwortStat, FachStat } from "@/store/adaptiveLearning";
 
 export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean; error?: string }> {
   try {
+    const { useAdaptiveStore } = await import("@/store/adaptiveLearning");
     const profile = useAdaptiveStore.getState().profile;
 
     // 1) Update user profile fields
@@ -126,6 +130,7 @@ export async function pullStatsFromSupabase(userId: string): Promise<{ ok: boole
       return { ok: true };
     }
 
+    const { useAdaptiveStore } = await import("@/store/adaptiveLearning");
     const localProfile = useAdaptiveStore.getState().profile;
 
     // Merge: take whichever has more questions answered (local or remote)

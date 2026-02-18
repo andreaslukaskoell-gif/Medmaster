@@ -79,15 +79,22 @@ function questionToStichwortId(q: Question): string | null {
   return null;
 }
 
-// Cache the mapping
-const questionStichwortMap = new Map<string, string>();
-for (const q of allBmsQuestions) {
-  const swId = questionToStichwortId(q);
-  if (swId) questionStichwortMap.set(q.id, swId);
+// Lazy-built cache to avoid running heavy loop at module load (breaks circular deps)
+let questionStichwortMap: Map<string, string> | null = null;
+
+function getQuestionStichwortMap(): Map<string, string> {
+  if (questionStichwortMap === null) {
+    questionStichwortMap = new Map<string, string>();
+    for (const q of allBmsQuestions) {
+      const swId = questionToStichwortId(q);
+      if (swId) questionStichwortMap.set(q.id, swId);
+    }
+  }
+  return questionStichwortMap;
 }
 
 export function getStichwortForQuestion(questionId: string): string | null {
-  return questionStichwortMap.get(questionId) ?? null;
+  return getQuestionStichwortMap().get(questionId) ?? null;
 }
 
 // ============================================================
@@ -242,7 +249,7 @@ export const useAdaptiveStore = create<AdaptiveState>()(
         const unseen: Question[] = [];
 
         for (const q of pool) {
-          const swId = questionStichwortMap.get(q.id);
+          const swId = getQuestionStichwortMap().get(q.id);
           if (!swId) {
             unseen.push(q);
             continue;
@@ -372,7 +379,7 @@ export const useAdaptiveStore = create<AdaptiveState>()(
         const { recordAnswer } = get();
         for (const r of results) {
           for (const a of r.answers) {
-            const swId = questionStichwortMap.get(a.questionId);
+            const swId = getQuestionStichwortMap().get(a.questionId);
             if (swId) {
               recordAnswer(swId, a.correct, 30); // Default 30s per question
             }

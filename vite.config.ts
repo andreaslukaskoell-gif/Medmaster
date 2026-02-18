@@ -32,7 +32,11 @@ export default defineConfig({
             './src/data/bms/physik.ts',
             './src/data/bms/mathematik.ts',
           ],
-          // Stichwort questions data
+          // Pure stichworte data — no app imports; breaks data-stichwort ↔ data-stichwortliste cycle
+          'data-stichworte-base': [
+            './src/data/stichworteData.ts',
+          ],
+          // Stichwort questions data (imports stichworteData only, not stichwortliste)
           'data-stichwort': [
             './src/data/questions/index.ts',
           ],

@@ -27,7 +27,7 @@ import { fragenPart3 as phPart3 } from "./physik_part3";
 import { fragenPart4 as phPart4 } from "./physik_part4";
 
 import type { Question } from "../bms/index";
-import { alleStichworteListe } from "../stichwortliste";
+import { alleStichworteListe } from "../stichworteData";
 
 // ============================================================
 // Interface

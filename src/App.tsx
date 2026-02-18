@@ -1,33 +1,33 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { AppShell } from "./components/layout/AppShell";
-import { AuthGuard } from "./components/AuthGuard";
-import { ErrorBoundary } from "./components/ErrorBoundary";
-import { useStore } from "./store/useStore";
+import { AppShell } from "@/components/layout/AppShell";
+import { AuthGuard } from "@/components/AuthGuard";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
+import { useStore } from "@/store/useStore";
 
-// Lazy-loaded pages — each becomes its own chunk
-const Dashboard = lazy(() => import("./pages/Dashboard"));
-const Onboarding = lazy(() => import("./pages/Onboarding"));
-const BMS = lazy(() => import("./pages/BMS"));
-const KFF = lazy(() => import("./pages/KFF"));
-const TV = lazy(() => import("./pages/TV"));
-const SEK = lazy(() => import("./pages/SEK"));
-const Simulation = lazy(() => import("./pages/Simulation"));
-const Statistics = lazy(() => import("./pages/Statistics"));
-const Pricing = lazy(() => import("./pages/Pricing"));
-const Lernplan = lazy(() => import("./pages/Lernplan"));
-const AITutor = lazy(() => import("./pages/AITutor"));
-const Analysis = lazy(() => import("./pages/Analysis"));
-const Community = lazy(() => import("./pages/Community"));
-const Notes = lazy(() => import("./pages/Notes"));
-const Flashcards = lazy(() => import("./pages/Flashcards"));
-const Duel = lazy(() => import("./pages/Duel"));
-const StichwortlistePage = lazy(() => import("./pages/StichwortlistePage"));
-const SchwachstellenTrainer = lazy(() => import("./pages/SchwachstellenTrainer"));
-const KapitelEditor = lazy(() => import("./pages/KapitelEditor"));
-const LoginPage = lazy(() => import("./pages/LoginPage"));
-const RegisterPage = lazy(() => import("./pages/RegisterPage"));
-const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage"));
+// Lazy-loaded pages — casing must match filenames exactly (Linux/Vercel is case-sensitive)
+const Dashboard = lazy(() => import("@/pages/Dashboard"));
+const Onboarding = lazy(() => import("@/pages/Onboarding"));
+const BMS = lazy(() => import("@/pages/BMS"));
+const KFF = lazy(() => import("@/pages/KFF"));
+const TV = lazy(() => import("@/pages/TV"));
+const SEK = lazy(() => import("@/pages/SEK"));
+const Simulation = lazy(() => import("@/pages/Simulation"));
+const Statistics = lazy(() => import("@/pages/Statistics"));
+const Pricing = lazy(() => import("@/pages/Pricing"));
+const Lernplan = lazy(() => import("@/pages/Lernplan"));
+const AITutor = lazy(() => import("@/pages/AITutor"));
+const Analysis = lazy(() => import("@/pages/Analysis"));
+const Community = lazy(() => import("@/pages/Community"));
+const Notes = lazy(() => import("@/pages/Notes"));
+const Flashcards = lazy(() => import("@/pages/Flashcards"));
+const Duel = lazy(() => import("@/pages/Duel"));
+const StichwortlistePage = lazy(() => import("@/pages/StichwortlistePage"));
+const SchwachstellenTrainer = lazy(() => import("@/pages/SchwachstellenTrainer"));
+const KapitelEditor = lazy(() => import("@/pages/KapitelEditor"));
+const LoginPage = lazy(() => import("@/pages/LoginPage"));
+const RegisterPage = lazy(() => import("@/pages/RegisterPage"));
+const ForgotPasswordPage = lazy(() => import("@/pages/ForgotPasswordPage"));
 
 function LoadingSpinner() {
   return (
