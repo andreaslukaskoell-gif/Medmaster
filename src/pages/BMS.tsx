@@ -390,7 +390,7 @@ export default function BMS() {
           { label: subjectData.label }
         ]} />
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 flex-wrap">
           <Button
             variant="ghost"
             size="sm"
@@ -401,6 +401,14 @@ export default function BMS() {
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Zurück zu Fächern
+          </Button>
+          <Button
+            size="sm"
+            onClick={() => navigate(`/bms/quiz/${selectedSubject}`)}
+            className="gap-2"
+          >
+            <Play className="w-4 h-4" />
+            Quiz starten
           </Button>
         </div>
 

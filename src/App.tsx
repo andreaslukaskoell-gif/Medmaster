@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useParams, useNavigate } from "react-router-dom";
 import { AppShell } from "@/components/layout/AppShell";
 import { AuthGuard } from "@/components/AuthGuard";
 import { useStore } from "@/store/useStore";
@@ -27,6 +27,9 @@ const KapitelEditor = lazy(() => import("@/pages/KapitelEditor"));
 const LoginPage = lazy(() => import("@/pages/LoginPage"));
 const RegisterPage = lazy(() => import("@/pages/RegisterPage"));
 const ForgotPasswordPage = lazy(() => import("@/pages/ForgotPasswordPage"));
+const WissenCheck = lazy(() => import("@/pages/WissenCheck"));
+const Prognose = lazy(() => import("@/pages/Prognose"));
+const BMSQuiz = lazy(() => import("@/pages/BMSQuiz"));
 
 function LoadingSpinner() {
   return (
@@ -40,6 +43,13 @@ function OnboardingGuard() {
   const { onboardingCompleted } = useStore();
   if (onboardingCompleted) return <Navigate to="/" replace />;
   return <Onboarding />;
+}
+
+function BMSQuizWrapper() {
+  const { fach } = useParams<{ fach: string }>();
+  const navigate = useNavigate();
+  if (!fach) return <Navigate to="/bms" replace />;
+  return <BMSQuiz subject={fach} onBack={() => navigate("/bms")} />;
 }
 
 export default function App() {
@@ -64,6 +74,7 @@ export default function App() {
             <Route path="/dashboard" element={<Navigate to="/" replace />} />
             <Route path="/onboarding" element={<OnboardingGuard />} />
             <Route path="/bms" element={<BMS />} />
+            <Route path="/bms/quiz/:fach" element={<BMSQuizWrapper />} />
             <Route path="/bms/:fach" element={<BMS />} />
             <Route path="/bms/:fach/:kapitel" element={<BMS />} />
             <Route path="/kff" element={<KFF />} />
@@ -82,6 +93,9 @@ export default function App() {
             <Route path="/schwachstellen" element={<SchwachstellenTrainer />} />
             <Route path="/preise" element={<Pricing />} />
             <Route path="/admin/kapitel-editor" element={<KapitelEditor />} />
+            <Route path="/wissencheck" element={<WissenCheck />} />
+            <Route path="/wissencheck/:fach" element={<WissenCheck />} />
+            <Route path="/prognose" element={<Prognose />} />
           </Route>
         </Routes>
       </Suspense>

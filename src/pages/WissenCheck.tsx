@@ -156,14 +156,51 @@ export default function WissenCheck() {
     setExpandedQ(null);
   };
 
-  if (!fach || !config) {
+  // Subject picker when at /wissencheck (no fach)
+  if (!fach) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6">
+        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "BMS", href: "/bms" }, { label: "Wissenscheck" }]} />
+        <div>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Wissenscheck</h1>
+          <p className="text-muted mt-1">Wähle ein Fach für einen kurzen Quick-Check (10 Fragen, 8 Min).</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {Object.entries(subjectConfig).map(([id, cfg]) => (
+            <Card
+              key={id}
+              className="cursor-pointer hover:shadow-md transition-shadow border-l-4"
+              style={{ borderLeftColor: "var(--tw-gradient-from)" }}
+              onClick={() => navigate(`/wissencheck/${id}`)}
+            >
+              <CardContent className="p-5 flex items-center gap-4">
+                <div className={`w-12 h-12 rounded-xl ${cfg.accent} flex items-center justify-center`}>
+                  <cfg.icon className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-gray-100">{cfg.label}</h3>
+                  <p className="text-xs text-muted">{QUESTION_COUNT} Fragen · 8 Min</p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+        <Button variant="outline" onClick={() => navigate("/bms")}>
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Zurück zu BMS
+        </Button>
+      </div>
+    );
+  }
+
+  if (!config) {
     return (
       <div className="max-w-3xl mx-auto py-10 text-center">
         <AlertTriangle className="w-12 h-12 mx-auto text-yellow-500 mb-4" />
         <p className="text-lg text-gray-700 dark:text-gray-300">Unbekanntes Fach.</p>
-        <Button variant="outline" className="mt-4" onClick={() => navigate("/bms")}>
+        <Button variant="outline" className="mt-4" onClick={() => navigate("/wissencheck")}>
           <ArrowLeft className="w-4 h-4 mr-2" />
-          Zurück zu BMS
+          Fach wählen
         </Button>
       </div>
     );
