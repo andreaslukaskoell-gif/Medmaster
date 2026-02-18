@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Sidebar } from "./Sidebar";
 import { TopBar } from "./TopBar";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 export function AppShell() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,7 +14,9 @@ export function AppShell() {
       <div className="lg:ml-64">
         <TopBar onMenuToggle={() => setMobileOpen(!mobileOpen)} />
         <main className="p-4 lg:p-6 page-transition" key={location.pathname}>
-          <Outlet />
+          <ErrorBoundary>
+            <Outlet />
+          </ErrorBoundary>
         </main>
       </div>
     </div>

@@ -31,7 +31,7 @@ const subtests: SubtestCard[] = [
   {
     id: "implikationen",
     name: "Implikationen erkennen",
-    path: "/app/kff/implikationen",
+    path: "/kff",
     icon: Brain,
     color: "text-purple-600 dark:text-purple-400",
     bgColor: "bg-purple-100 dark:bg-purple-900/30",
@@ -42,7 +42,7 @@ const subtests: SubtestCard[] = [
   {
     id: "zahlenfolgen",
     name: "Zahlenfolgen",
-    path: "/app/kff/zahlenfolgen",
+    path: "/kff",
     icon: Hash,
     color: "text-blue-600 dark:text-blue-400",
     bgColor: "bg-blue-100 dark:bg-blue-900/30",
@@ -53,7 +53,7 @@ const subtests: SubtestCard[] = [
   {
     id: "wortfluessigkeit",
     name: "Wortflüssigkeit",
-    path: "/app/kff/wortfluessigkeit",
+    path: "/kff",
     icon: Type,
     color: "text-orange-600 dark:text-orange-400",
     bgColor: "bg-orange-100 dark:bg-orange-900/30",
@@ -64,7 +64,7 @@ const subtests: SubtestCard[] = [
   {
     id: "merkfaehigkeit",
     name: "Merkfähigkeit",
-    path: "/app/kff/merkfaehigkeit",
+    path: "/kff",
     icon: Database,
     color: "text-green-600 dark:text-green-400",
     bgColor: "bg-green-100 dark:bg-green-900/30",
@@ -75,7 +75,7 @@ const subtests: SubtestCard[] = [
   {
     id: "figuren",
     name: "Figuren zusammensetzen",
-    path: "/app/kff/figuren",
+    path: "/kff",
     icon: Puzzle,
     color: "text-rose-600 dark:text-rose-400",
     bgColor: "bg-rose-100 dark:bg-rose-900/30",
@@ -86,7 +86,7 @@ const subtests: SubtestCard[] = [
   {
     id: "emotionen-regulieren",
     name: "Emotionen regulieren",
-    path: "/app/kff/emotionen-regulieren",
+    path: "/kff",
     icon: Heart,
     color: "text-pink-600 dark:text-pink-400",
     bgColor: "bg-pink-100 dark:bg-pink-900/30",
@@ -97,7 +97,7 @@ const subtests: SubtestCard[] = [
   {
     id: "soziales-entscheiden",
     name: "Soziales Entscheiden",
-    path: "/app/kff/soziales-entscheiden",
+    path: "/kff",
     icon: Users,
     color: "text-teal-600 dark:text-teal-400",
     bgColor: "bg-teal-100 dark:bg-teal-900/30",
@@ -108,7 +108,7 @@ const subtests: SubtestCard[] = [
   {
     id: "emotionen-erkennen",
     name: "Emotionen erkennen",
-    path: "/app/kff/emotionen-erkennen",
+    path: "/kff",
     icon: Eye,
     color: "text-amber-600 dark:text-amber-400",
     bgColor: "bg-amber-100 dark:bg-amber-900/30",
@@ -119,7 +119,7 @@ const subtests: SubtestCard[] = [
   {
     id: "textverstaendnis",
     name: "Textverständnis",
-    path: "/app/kff/textverstaendnis",
+    path: "/kff",
     icon: FileText,
     color: "text-indigo-600 dark:text-indigo-400",
     bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
@@ -143,7 +143,7 @@ export default function KFFAcademy() {
     <div className="max-w-5xl mx-auto space-y-6">
       <BreadcrumbNav
         items={[
-          { label: "Dashboard", href: "/app" },
+          { label: "Dashboard", href: "/" },
           { label: "KFF Academy" },
         ]}
       />

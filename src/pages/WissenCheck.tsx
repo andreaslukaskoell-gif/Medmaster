@@ -161,7 +161,7 @@ export default function WissenCheck() {
       <div className="max-w-3xl mx-auto py-10 text-center">
         <AlertTriangle className="w-12 h-12 mx-auto text-yellow-500 mb-4" />
         <p className="text-lg text-gray-700 dark:text-gray-300">Unbekanntes Fach.</p>
-        <Button variant="outline" className="mt-4" onClick={() => navigate("/app/bms")}>
+        <Button variant="outline" className="mt-4" onClick={() => navigate("/bms")}>
           <ArrowLeft className="w-4 h-4 mr-2" />
           Zurück zu BMS
         </Button>
@@ -175,7 +175,7 @@ export default function WissenCheck() {
   if (phase === "intro") {
     return (
       <div className="max-w-3xl mx-auto space-y-6">
-        <BreadcrumbNav items={[{ label: "Dashboard", href: "/app" }, { label: "BMS", href: "/app/bms" }, { label: `${config.label} Wissenscheck` }]} />
+        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "BMS", href: "/bms" }, { label: `${config.label} Wissenscheck` }]} />
 
         <Card>
           <CardContent className="p-8 text-center space-y-6">
@@ -206,7 +206,7 @@ export default function WissenCheck() {
               Nach Ablauf der Zeit wird automatisch abgegeben.
             </div>
             <div className="flex gap-3 justify-center pt-2">
-              <Button variant="outline" onClick={() => navigate("/app/bms")}>
+              <Button variant="outline" onClick={() => navigate("/bms")}>
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Zurück
               </Button>
@@ -345,7 +345,7 @@ export default function WissenCheck() {
   const pct = Math.round((score / questions.length) * 100);
   return (
     <div className="max-w-3xl mx-auto space-y-6">
-      <BreadcrumbNav items={[{ label: "Dashboard", href: "/app" }, { label: "BMS", href: "/app/bms" }, { label: `${config.label} Wissenscheck` }]} />
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "BMS", href: "/bms" }, { label: `${config.label} Wissenscheck` }]} />
 
       {/* Score Card */}
       <Card>
@@ -365,7 +365,7 @@ export default function WissenCheck() {
             Du hast {score} von {questions.length} Fragen richtig beantwortet.
           </p>
           <div className="flex gap-3 justify-center pt-2">
-            <Button variant="outline" onClick={() => navigate("/app/bms")}>
+            <Button variant="outline" onClick={() => navigate("/bms")}>
               <ArrowLeft className="w-4 h-4 mr-2" />
               Zurück
             </Button>

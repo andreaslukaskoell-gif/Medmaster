@@ -2,7 +2,6 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AppShell } from "@/components/layout/AppShell";
 import { AuthGuard } from "@/components/AuthGuard";
-import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { useStore } from "@/store/useStore";
 
 // Lazy-loaded pages — casing must match filenames exactly (Linux/Vercel is case-sensitive)
@@ -67,7 +66,7 @@ export default function App() {
             <Route path="/bms" element={<BMS />} />
             <Route path="/bms/:fach" element={<BMS />} />
             <Route path="/bms/:fach/:kapitel" element={<BMS />} />
-            <Route path="/kff" element={<ErrorBoundary><KFF /></ErrorBoundary>} />
+            <Route path="/kff" element={<KFF />} />
             <Route path="/tv" element={<TV />} />
             <Route path="/sek" element={<SEK />} />
             <Route path="/simulation" element={<Simulation />} />

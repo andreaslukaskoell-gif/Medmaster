@@ -65,10 +65,10 @@ const SECTION_META: {
   icon: React.ReactNode;
   link: string;
 }[] = [
-  { key: "bms", label: "BMS", weight: 0.4, maxPoints: 122.4, icon: <BookOpen className="w-5 h-5" />, link: "/app/bms" },
-  { key: "kff", label: "KFF", weight: 0.4, maxPoints: 122.4, icon: <Brain className="w-5 h-5" />, link: "/app/kff" },
-  { key: "tv", label: "TV", weight: 0.1, maxPoints: 30.6, icon: <MessageSquare className="w-5 h-5" />, link: "/app/tv" },
-  { key: "sek", label: "SEK", weight: 0.1, maxPoints: 30.6, icon: <Heart className="w-5 h-5" />, link: "/app/sek" },
+  { key: "bms", label: "BMS", weight: 0.4, maxPoints: 122.4, icon: <BookOpen className="w-5 h-5" />, link: "/bms" },
+  { key: "kff", label: "KFF", weight: 0.4, maxPoints: 122.4, icon: <Brain className="w-5 h-5" />, link: "/kff" },
+  { key: "tv", label: "TV", weight: 0.1, maxPoints: 30.6, icon: <MessageSquare className="w-5 h-5" />, link: "/tv" },
+  { key: "sek", label: "SEK", weight: 0.1, maxPoints: 30.6, icon: <Heart className="w-5 h-5" />, link: "/sek" },
 ];
 
 const UNI_CUTOFFS: { name: string; cutoff: number }[] = [
@@ -242,13 +242,13 @@ function EmptyState() {
       </p>
       <div className="flex flex-col sm:flex-row gap-3 justify-center">
         <Link
-          to="/app/bms"
+          to="/bms"
           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-600 text-white hover:bg-primary-700 transition font-medium"
         >
           <BookOpen className="w-4 h-4" /> BMS üben
         </Link>
         <Link
-          to="/app/kff"
+          to="/kff"
           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-primary-300 text-primary-700 hover:bg-primary-50 dark:border-primary-700 dark:text-primary-300 dark:hover:bg-primary-900/20 transition font-medium"
         >
           <Brain className="w-4 h-4" /> KFF üben

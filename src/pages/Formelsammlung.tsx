@@ -158,7 +158,7 @@ export default function Formelsammlung() {
     <div className="max-w-5xl mx-auto space-y-6">
       <BreadcrumbNav
         items={[
-          { label: "Dashboard", href: "/app" },
+          { label: "Dashboard", href: "/" },
           { label: "Formelsammlung" },
         ]}
       />

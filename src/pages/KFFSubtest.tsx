@@ -127,8 +127,8 @@ export default function KFFSubtest() {
       <div className="max-w-5xl mx-auto space-y-6">
         <BreadcrumbNav
           items={[
-            { label: "Dashboard", href: "/app" },
-            { label: "KFF Academy", href: "/app/kff" },
+            { label: "Dashboard", href: "/" },
+            { label: "KFF Academy", href: "/kff" },
             { label: "Nicht gefunden" },
           ]}
         />
