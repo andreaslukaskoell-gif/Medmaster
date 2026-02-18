@@ -3,7 +3,7 @@ import { Users, Trophy, TrendingUp, Medal, ChevronUp, ChevronDown, Minus } from 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
 import { generateMockPercentile, generateLeaderboard } from "@/lib/utils";
 
@@ -44,7 +44,7 @@ export default function Community() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <Breadcrumb items={[{ label: "Dashboard", href: "/" }, { label: "Community" }]} />
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Community" }]} />
 
       <div>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Community</h1>

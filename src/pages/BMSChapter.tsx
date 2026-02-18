@@ -3,7 +3,7 @@ import { ArrowLeft, CheckCircle2, Bookmark, StickyNote, Target, Lightbulb, Steth
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
 import DiagramSVG from "@/components/diagrams/DiagramSVG";
 import { allBmsQuestions } from "@/data/bms/index";

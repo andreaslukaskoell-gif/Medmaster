@@ -24,6 +24,7 @@ import { Progress } from "@/components/ui/progress";
 import { Heatmap } from "@/components/ui/heatmap";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
+import { useKFFResultsSWR } from "@/hooks/useKFFResultsSWR";
 import { daysUntilMedAT, generateMockActivityData } from "@/lib/utils";
 import { getQuestionSubject } from "@/lib/bmsLookup";
 
@@ -94,8 +95,21 @@ function ProgressRing({ value, size = 48, stroke = 4 }: { value: number; size?: 
   );
 }
 
+const subtestLabels: Record<string, string> = {
+  implikationen: "Implikationen",
+  zahlenfolgen: "Zahlenfolgen",
+  wortfluessigkeit: "Wortflüssigkeit",
+  merkfaehigkeit: "Merkfähigkeit",
+  figuren: "Figuren",
+  "emotionen-regulieren": "Emotionen regulieren",
+  "soziales-entscheiden": "Soziales Entscheiden",
+  "emotionen-erkennen": "Emotionen erkennen",
+  textverstaendnis: "Textverständnis",
+};
+
 export default function Dashboard() {
   const { xp, streak, completedChapters, quizResults, onboardingCompleted, activityLog } = useStore();
+  const { all: kffResults, isLoading: kffLoading, error: kffError } = useKFFResultsSWR();
   const days = daysUntilMedAT();
   const totalQuizzes = quizResults.length;
   const avgScore =
@@ -577,6 +591,51 @@ export default function Dashboard() {
                     </span>
                   </div>
                 ))}
+            </div>
+          )}
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>KFF-Übungen & Simulationen</CardTitle>
+        </CardHeader>
+        <CardContent>
+          {kffLoading ? (
+            <p className="text-sm text-muted">Lade KFF-Daten aus Supabase…</p>
+          ) : kffError ? (
+            <p className="text-sm text-red-600 dark:text-red-400">{kffError}</p>
+          ) : (kffResults ?? []).length === 0 ? (
+            <p className="text-sm text-muted">
+              Noch keine KFF-Ergebnisse in der Cloud. Übe KFF-Aufgaben oder starte eine Simulation – sie werden hier angezeigt.
+            </p>
+          ) : (
+            <div className="space-y-3">
+              {(kffResults ?? []).slice(0, 10).map((row, idx) => {
+                const label = subtestLabels[row?.subtest_type ?? ""] ?? row?.subtest_type ?? "";
+                const isSim = row?.result_type === "simulation";
+                const payload = (row?.payload ?? {}) as { score?: number; maxScore?: number; date?: string; correct?: boolean };
+                return (
+                  <div key={row?.id ?? `kff-row-${idx}`} className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-800 last:border-0">
+                    <div>
+                      <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                        {isSim ? `Simulation: ${label}` : label}
+                      </p>
+                      <p className="text-xs text-muted">{row?.created_at ? new Date(row.created_at).toLocaleString() : payload?.date ?? ""}</p>
+                    </div>
+                    {isSim && typeof payload?.score === "number" && typeof payload?.maxScore === "number" && (
+                      <span className="text-sm font-bold text-primary-700 dark:text-primary-400">
+                        {payload.score}/{payload.maxScore}
+                      </span>
+                    )}
+                    {!isSim && (
+                      <span className="text-sm font-bold text-primary-700 dark:text-primary-400">
+                        {payload?.correct ? "✓" : "✗"}
+                      </span>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           )}
         </CardContent>

@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, BookOpen, Play, Send, CheckCircle2, XCircle, Shu
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { sekStrategyGuide } from "@/data/sekData";
@@ -56,7 +56,7 @@ export default function SEK() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <Breadcrumb items={[{ label: "Dashboard", href: "/" }, { label: "SEK" }]} />
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "SEK" }]} />
       <div>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">SEK — Sozial-emotionale Kompetenzen</h1>
         <p className="text-muted mt-1">Trainiere Emotionserkennung, Emotionsregulation und soziales Entscheiden.</p>

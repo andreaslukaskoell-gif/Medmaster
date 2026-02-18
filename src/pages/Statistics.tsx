@@ -16,7 +16,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heatmap } from "@/components/ui/heatmap";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { alleStichworteListe, fachConfig } from "@/data/stichwortliste";
@@ -79,7 +79,7 @@ export default function Statistics() {
 
   return (
     <div className="max-w-7xl mx-auto space-y-6">
-      <Breadcrumb items={[{ label: "Dashboard", href: "/" }, { label: "Statistik" }]} />
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Statistik" }]} />
 
       <div>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Statistik</h1>

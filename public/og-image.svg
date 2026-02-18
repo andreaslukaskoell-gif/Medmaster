@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#4F46E5"/>
+  <rect width="1200" height="630" fill="url(#grad)" opacity="0.5"/>
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1200" y2="630">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <!-- Graduation cap icon -->
+  <path d="M600 220L500 280v20l100 60 100-60v-20L600 220z" fill="white"/>
+  <path d="M500 300v40l100 60 100-60v-40l-100 60-100-60z" fill="white" opacity="0.7"/>
+  <!-- Text -->
+  <text x="600" y="430" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="56" font-weight="800">MedMaster</text>
+  <text x="600" y="480" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="24" opacity="0.8">MedAT 2026 Vorbereitung mit KI-Unterstützung</text>
+</svg>

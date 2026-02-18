@@ -3,7 +3,7 @@ import { ArrowLeft, BookOpen, Play, Send, CheckCircle2, XCircle, ArrowRight, Clo
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { tvStrategyGuide, tvTexts } from "@/data/tvData";
@@ -310,7 +310,7 @@ export default function TV() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <Breadcrumb items={[{ label: "Dashboard", href: "/" }, { label: "TV" }]} />
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "TV" }]} />
       <div>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">TV — Textverständnis</h1>
         <p className="text-muted mt-1">5 Texte lesen, 12 Fragen beantworten — wie im echten MedAT.</p>

@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { alleStichworteListe } from "@/data/stichwortliste";
@@ -222,7 +222,7 @@ export default function Lernplan() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <Breadcrumb items={[{ label: "Dashboard", href: "/" }, { label: "Lernplan" }]} />
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Lernplan" }]} />
 
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center">

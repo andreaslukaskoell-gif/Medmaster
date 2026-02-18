@@ -18,7 +18,7 @@ import { AlertTriangle, TrendingUp, TrendingDown, Target, Lightbulb, Calendar, Z
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { getQuestionSubject } from "@/lib/bmsLookup";
@@ -117,7 +117,7 @@ export default function Analysis() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <Breadcrumb items={[{ label: "Dashboard", href: "/" }, { label: "Analyse" }]} />
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Analyse" }]} />
 
       <div>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Stärken/Schwächen-Analyse</h1>

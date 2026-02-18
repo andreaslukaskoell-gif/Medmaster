@@ -20,7 +20,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { allBmsQuestions as newBmsQuestions, getQuestionsBySubject as getNewQuestions } from "@/data/bms/index";
 import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
@@ -831,7 +831,7 @@ export default function Simulation() {
 
     return (
       <div className="max-w-4xl mx-auto space-y-6">
-        <Breadcrumb items={[{ label: "Dashboard", href: "/" }, { label: "Simulation" }]} />
+        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Simulation" }]} />
         <div>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Testsimulation</h1>
           <p className="text-muted mt-1">Simuliere den MedAT-H unter realistischen Bedingungen.</p>
@@ -1179,7 +1179,7 @@ export default function Simulation() {
 
     return (
       <div className="max-w-3xl mx-auto space-y-6">
-        <Breadcrumb items={[{ label: "Dashboard", href: "/" }, { label: "Simulation", href: "/simulation" }, { label: "Ergebnis" }]} />
+        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Simulation", href: "/simulation" }, { label: "Ergebnis" }]} />
 
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Simulationsergebnis</h1>
 

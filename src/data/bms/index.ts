@@ -12,19 +12,7 @@ export interface Question {
   tags: string[];
 }
 
-import { biologieQuestions } from "./biologie";
-import { chemieQuestions } from "./chemie";
-import { physikQuestions } from "./physik";
-import { mathematikQuestions } from "./mathematik";
-import { alleStichwortFragenConverted } from "../questions/index";
-
-export const allBmsQuestions: Question[] = [
-  ...biologieQuestions,
-  ...chemieQuestions,
-  ...physikQuestions,
-  ...mathematikQuestions,
-  ...alleStichwortFragenConverted,
-];
+export const allBmsQuestions: Question[] = [];
 
 export function getQuestionsBySubject(subject: string): Question[] {
   return allBmsQuestions.filter((q) => q.subject === subject);
@@ -41,5 +29,3 @@ export function getQuestionsByDifficulty(difficulty: "leicht" | "mittel" | "schw
 export function getQuestionsByTags(tags: string[]): Question[] {
   return allBmsQuestions.filter((q) => q.tags.some((t) => tags.includes(t)));
 }
-
-export { biologieQuestions, chemieQuestions, physikQuestions, mathematikQuestions };

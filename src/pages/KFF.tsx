@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, Send, BookOpen, Play, Eye, EyeOff, CheckCircle2,
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import {
@@ -20,6 +20,7 @@ import type { ZahlenfolgeGenerated, AllergyCard, MemoryQuestion, Wortflüssigkei
 import { figurenAufgaben, figurenStrategyGuide } from "@/data/figurenGenerator";
 import type { FZAufgabe } from "@/data/figurenGenerator";
 import { useStore } from "@/store/useStore";
+import { useAuth } from "@/hooks/useAuth";
 
 type KffView =
   | "overview"
@@ -36,6 +37,11 @@ type StrategyKey = "zahlenfolgen" | "gedaechtnis" | "implikationen" | "wortflüs
 export default function KFF() {
   const [view, setView] = useState<KffView>("overview");
   const [strategyKey, setStrategyKey] = useState<StrategyKey>("zahlenfolgen");
+  const { user, loading: isLoading } = useAuth();
+
+  if (isLoading || !user) {
+    return <div className="p-8">Lade KFF-Module...</div>;
+  }
 
   if (view === "figuren-strategy") {
     return (
@@ -150,7 +156,7 @@ export default function KFF() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <Breadcrumb items={[{ label: "Dashboard", href: "/" }, { label: "KFF" }]} />
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "KFF" }]} />
       <div>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">KFF - Kognitive Fähigkeiten</h1>
         <p className="text-muted mt-1">Trainiere Zahlenfolgen, Gedächtnis, logisches Denken und Wortflüssigkeit.</p>
@@ -227,6 +233,10 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
+  const safeQuestions = questions || [];
+  const currentQ = safeQuestions[index];
+  const allAnswered = safeQuestions.every((qu) => answers[qu.id] !== undefined);
+
   const startQuiz = () => {
     const generated = shuffleMixed(generateZahlenfolgenSet, questionCount);
     setQuestions(generated);
@@ -236,17 +246,30 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   };
 
   const handleSubmit = () => {
-    const score = questions.filter((q) => answers[q.id] === q.correctOption).length;
+    const list = questions || [];
+    const score = list.filter((q) => answers[q.id] === q.correctOption).length;
     saveQuizResult({
-      id: `kff-zf-${Date.now()}`, type: "kff", subject: "Zahlenfolgen", score, total: questions.length,
+      id: `kff-zf-${Date.now()}`, type: "kff", subject: "Zahlenfolgen", score, total: list.length,
       date: new Date().toLocaleDateString("de-AT"),
-      answers: questions.map((q) => ({ questionId: q.id, selectedAnswer: q.options[answers[q.id]] ?? "", correct: answers[q.id] === q.correctOption })),
+      answers: list.map((q) => ({ questionId: q.id, selectedAnswer: q.options?.[answers[q.id]] ?? "", correct: answers[q.id] === q.correctOption })),
     });
     addXP(score * 10);
     checkStreak();
     setPhase("result");
     setIndex(0);
   };
+
+  useKeyboardShortcuts({
+    disabled: phase !== "quiz",
+    maxOptions: currentQ?.options?.length ?? 4,
+    onSelectOption: (idx) => { if (currentQ && currentQ.options && idx < currentQ.options.length) setAnswers((p) => ({ ...p, [currentQ.id]: idx })); },
+    onConfirm: () => {
+      if (index < safeQuestions.length - 1) setIndex((i) => i + 1);
+      else if (allAnswered) handleSubmit();
+    },
+    onNext: () => { if (index < safeQuestions.length - 1) setIndex((i) => i + 1); },
+    onPrev: () => { if (index > 0) setIndex((i) => i - 1); },
+  });
 
   if (phase === "setup") {
     return (
@@ -283,16 +306,17 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   }
 
   if (phase === "result") {
-    const score = questions.filter((q) => answers[q.id] === q.correctOption).length;
+    const resultQuestions = questions || [];
+    const score = resultQuestions.filter((q) => answers[q.id] === q.correctOption).length;
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
         <Card><CardContent className="p-6 text-center">
-          <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">{score}/{questions.length}</div>
-          <p className="text-muted mt-1">{Math.round((score / questions.length) * 100)}% richtig</p>
+          <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">{score}/{resultQuestions.length}</div>
+          <p className="text-muted mt-1">{resultQuestions.length ? Math.round((score / resultQuestions.length) * 100) : 0}% richtig</p>
           <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{score * 10} XP</p>
         </CardContent></Card>
-        {questions.map((q, i) => {
+        {resultQuestions.map((q, i) => {
           const correct = answers[q.id] === q.correctOption;
           return (
             <Card key={q.id} className={`border-l-4 ${correct ? "border-l-green-500" : "border-l-red-500"}`}>
@@ -302,8 +326,8 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
                   <span className="font-medium">{i + 1}. {q.sequence.join(", ")}, ?, ?</span>
                   <Badge variant="info" className="text-[10px]">{q.difficulty}</Badge>
                 </div>
-                {!correct && answers[q.id] !== undefined && <p className="text-sm text-red-600 dark:text-red-400 ml-7">Deine Antwort: {q.options[answers[q.id]]}</p>}
-                <p className="text-sm text-green-700 dark:text-green-400 ml-7">Richtige Antwort: {q.correctPair[0]}, {q.correctPair[1]}</p>
+                {!correct && answers[q.id] !== undefined && <p className="text-sm text-red-600 dark:text-red-400 ml-7">Deine Antwort: {q.options?.[answers[q.id]]}</p>}
+                <p className="text-sm text-green-700 dark:text-green-400 ml-7">Richtige Antwort: {q.correctPair?.[0]}, {q.correctPair?.[1]}</p>
                 <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg"><p className="text-xs text-blue-700 dark:text-blue-400">{q.explanation}</p></div>
               </CardContent>
             </Card>
@@ -317,52 +341,57 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
     );
   }
 
-  // Quiz phase
-  const q = questions[index];
-  const allAnswered = questions.every((q) => answers[q.id] !== undefined);
+  if (!safeQuestions.length) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6 p-8">
+        <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
+        <div className="flex flex-col items-center justify-center gap-4 text-muted">
+          <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full" />
+          <p>Fragen werden generiert...</p>
+        </div>
+      </div>
+    );
+  }
+  if (!currentQ) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6 p-8">
+        <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück zum Setup</Button>
+        <p className="text-muted">Frage nicht gefunden.</p>
+      </div>
+    );
+  }
 
-  useKeyboardShortcuts({
-    disabled: phase !== "quiz",
-    maxOptions: q?.options.length ?? 4,
-    onSelectOption: (idx) => { if (q && idx < q.options.length) setAnswers((p) => ({ ...p, [q.id]: idx })); },
-    onConfirm: () => {
-      if (index < questions.length - 1) setIndex((i) => i + 1);
-      else if (allAnswered) handleSubmit();
-    },
-    onNext: () => { if (index < questions.length - 1) setIndex((i) => i + 1); },
-    onPrev: () => { if (index > 0) setIndex((i) => i - 1); },
-  });
-
+  const total = safeQuestions.length;
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen</Button>
-        <span className="text-sm text-muted">Frage {index + 1} von {questions.length}</span>
+        <span className="text-sm text-muted">Frage {index + 1} von {total}</span>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-        <div className="bg-primary-600 h-2 rounded-full transition-all" style={{ width: `${((index + 1) / questions.length) * 100}%` }} />
+        <div className="bg-primary-600 h-2 rounded-full transition-all" style={{ width: total ? `${((index + 1) / total) * 100}%` : "0%" }} />
       </div>
       <Card><CardContent className="p-6">
-        <p className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">{q.sequence.join(", ")}, <span className="text-primary-700 dark:text-primary-400">?, ?</span></p>
+        <p className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">{currentQ.sequence?.join(", ") ?? ""}, <span className="text-primary-700 dark:text-primary-400">?, ?</span></p>
         <p className="text-sm text-muted mb-6">Welche zwei Zahlen folgen als nächstes?</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {q.options.map((opt, oi) => (
-            <button key={oi} onClick={() => setAnswers((p) => ({ ...p, [q.id]: oi }))}
-              className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer text-left ${answers[q.id] === oi ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"}`}>
+          {currentQ.options && Array.isArray(currentQ.options) ? currentQ.options.map((opt, oi) => (
+            <button key={oi} onClick={() => setAnswers((p) => ({ ...p, [currentQ.id]: oi }))}
+              className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer text-left ${answers[currentQ.id] === oi ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"}`}>
               <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>{opt}
               <kbd className="float-right text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded text-muted">{oi + 1}</kbd>
             </button>
-          ))}
+          )) : <p className="text-sm text-muted">Keine Optionen geladen.</p>}
         </div>
       </CardContent></Card>
       <div className="flex justify-between">
         <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
-        {index < questions.length - 1
+        {index < safeQuestions.length - 1
           ? <Button onClick={() => setIndex((i) => i + 1)}>Weiter <ArrowRight className="w-4 h-4 ml-1" /></Button>
           : <Button onClick={handleSubmit} disabled={!allAnswered}><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
         }
       </div>
-      <FloatingQuestionCounter current={index + 1} total={questions.length} />
+      <FloatingQuestionCounter current={index + 1} total={total} />
     </div>
   );
 }
@@ -427,24 +456,15 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
   const [submitted, setSubmitted] = useState(false);
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
-  if (questions.length === 0) {
-    return (
-      <div className="max-w-3xl mx-auto space-y-6">
-        <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
-        <p className="text-muted">Keine Fragen verfügbar. Bitte starte zuerst die Lernphase.</p>
-      </div>
-    );
-  }
-
   const q = questions[index];
-  const allAnswered = questions.every((q) => answers[q.id]);
+  const allAnswered = questions.every((qu) => answers[qu.id]);
 
   const handleSubmit = () => {
-    const score = questions.filter((q) => answers[q.id] === q.correctAnswer).length;
+    const score = questions.filter((qu) => answers[qu.id] === qu.correctAnswer).length;
     saveQuizResult({
       id: `kff-ged-${Date.now()}`, type: "kff", subject: "Gedächtnis", score, total: questions.length,
       date: new Date().toLocaleDateString("de-AT"),
-      answers: questions.map((q) => ({ questionId: q.id, selectedAnswer: answers[q.id] || "", correct: answers[q.id] === q.correctAnswer })),
+      answers: questions.map((qu) => ({ questionId: qu.id, selectedAnswer: answers[qu.id] || "", correct: answers[qu.id] === qu.correctAnswer })),
     });
     addXP(score * 10);
     checkStreak();
@@ -454,8 +474,8 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
 
   useKeyboardShortcuts({
     disabled: submitted,
-    maxOptions: q?.options.length ?? 5,
-    onSelectOption: (idx) => { if (q && idx < q.options.length) setAnswers((p) => ({ ...p, [q.id]: q.options[idx] })); },
+    maxOptions: q?.options?.length ?? 5,
+    onSelectOption: (idx) => { if (q && q.options && idx < q.options.length) setAnswers((p) => ({ ...p, [q.id]: q.options[idx] })); },
     onConfirm: () => {
       if (index < questions.length - 1) setIndex((i) => i + 1);
       else if (allAnswered) handleSubmit();
@@ -463,6 +483,15 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
     onNext: () => { if (index < questions.length - 1) setIndex((i) => i + 1); },
     onPrev: () => { if (index > 0) setIndex((i) => i - 1); },
   });
+
+  if (questions.length === 0) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6">
+        <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
+        <p className="text-muted">Keine Fragen verfügbar. Bitte starte zuerst die Lernphase.</p>
+      </div>
+    );
+  }
 
   if (submitted) {
     const score = questions.filter((q) => answers[q.id] === q.correctAnswer).length;
@@ -494,6 +523,15 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
     );
   }
 
+  if (!q) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6 p-8">
+        <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
+        <p className="text-muted">Frage nicht gefunden.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
@@ -507,7 +545,7 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
         <p className="text-sm text-muted mb-1">Frage {index + 1} von {questions.length}</p>
         <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">{q.text}</p>
         <div className="space-y-3">
-          {q.options.map((opt) => (
+          {q.options?.map((opt) => (
             <button key={opt} onClick={() => setAnswers((p) => ({ ...p, [q.id]: opt }))}
               className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${answers[q.id] === opt ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"}`}>
               {opt}
@@ -539,6 +577,10 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
+  const safeQuestions = questions || [];
+  const currentQ = safeQuestions[index];
+  const allAnswered = safeQuestions.every((qu) => answers[qu.id] !== undefined);
+
   const startQuiz = () => {
     setQuestions(shuffleMixed(generateSyllogismSet, questionCount));
     setIndex(0);
@@ -546,20 +588,30 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
     setPhase("quiz");
   };
 
-  const allAnswered = questions.every((q) => answers[q.id] !== undefined);
-
   const handleSubmit = () => {
-    const score = questions.filter((q) => answers[q.id] === q.correctOption).length;
+    const score = safeQuestions.filter((qu) => answers[qu.id] === qu.correctOption).length;
     saveQuizResult({
-      id: `kff-imp-${Date.now()}`, type: "kff", subject: "Implikationen", score, total: questions.length,
+      id: `kff-imp-${Date.now()}`, type: "kff", subject: "Implikationen", score, total: safeQuestions.length,
       date: new Date().toLocaleDateString("de-AT"),
-      answers: questions.map((q) => ({ questionId: q.id, selectedAnswer: q.options[answers[q.id]] || "", correct: answers[q.id] === q.correctOption })),
+      answers: safeQuestions.map((qu) => ({ questionId: qu.id, selectedAnswer: qu.options?.[answers[qu.id]] || "", correct: answers[qu.id] === qu.correctOption })),
     });
     addXP(score * 10);
     checkStreak();
     setPhase("result");
     setIndex(0);
   };
+
+  useKeyboardShortcuts({
+    disabled: phase !== "quiz",
+    maxOptions: currentQ?.options?.length ?? 5,
+    onSelectOption: (idx) => { if (currentQ && currentQ.options && idx < currentQ.options.length) setAnswers((p) => ({ ...p, [currentQ.id]: idx })); },
+    onConfirm: () => {
+      if (index < safeQuestions.length - 1) setIndex((i) => i + 1);
+      else if (allAnswered) handleSubmit();
+    },
+    onNext: () => { if (index < safeQuestions.length - 1) setIndex((i) => i + 1); },
+    onPrev: () => { if (index > 0) setIndex((i) => i - 1); },
+  });
 
   if (phase === "setup") {
     return (
@@ -589,30 +641,30 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
   }
 
   if (phase === "result") {
-    const score = questions.filter((q) => answers[q.id] === q.correctOption).length;
+    const score = safeQuestions.filter((qu) => answers[qu.id] === qu.correctOption).length;
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
         <Card><CardContent className="p-6 text-center">
-          <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">{score}/{questions.length}</div>
-          <p className="text-muted mt-1">{Math.round((score / questions.length) * 100)}% richtig</p>
+          <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">{score}/{safeQuestions.length}</div>
+          <p className="text-muted mt-1">{safeQuestions.length ? Math.round((score / safeQuestions.length) * 100) : 0}% richtig</p>
           <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{score * 10} XP</p>
         </CardContent></Card>
-        {questions.map((q, i) => {
-          const correct = answers[q.id] === q.correctOption;
+        {safeQuestions.map((qu, i) => {
+          const correct = answers[qu.id] === qu.correctOption;
           return (
-            <Card key={q.id} className={`border-l-4 ${correct ? "border-l-green-500" : "border-l-red-500"}`}>
+            <Card key={qu.id} className={`border-l-4 ${correct ? "border-l-green-500" : "border-l-red-500"}`}>
               <CardContent className="p-5">
                 <div className="flex items-center gap-2 mb-2">
                   {correct ? <CheckCircle2 className="w-5 h-5 text-green-500" /> : <XCircle className="w-5 h-5 text-red-500" />}
                   <span className="font-medium text-sm">{i + 1}.</span>
-                  <Badge variant="info" className="text-[10px]">{q.difficulty}</Badge>
+                  <Badge variant="info" className="text-[10px]">{qu.difficulty}</Badge>
                 </div>
-                <p className="text-sm text-gray-700 dark:text-gray-300 ml-7 mb-1"><strong>Prämisse 1:</strong> {q.premise1}</p>
-                <p className="text-sm text-gray-700 dark:text-gray-300 ml-7 mb-1"><strong>Prämisse 2:</strong> {q.premise2}</p>
-                {!correct && answers[q.id] !== undefined && <p className="text-sm text-red-600 dark:text-red-400 ml-7">Deine Antwort: {q.options[answers[q.id]]}</p>}
-                <p className="text-sm text-green-700 dark:text-green-400 ml-7">Richtig: {q.options[q.correctOption]}</p>
-                <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg"><p className="text-xs text-blue-700 dark:text-blue-400">{q.explanation}</p></div>
+                <p className="text-sm text-gray-700 dark:text-gray-300 ml-7 mb-1"><strong>Prämisse 1:</strong> {qu.premise1}</p>
+                <p className="text-sm text-gray-700 dark:text-gray-300 ml-7 mb-1"><strong>Prämisse 2:</strong> {qu.premise2}</p>
+                {!correct && answers[qu.id] !== undefined && <p className="text-sm text-red-600 dark:text-red-400 ml-7">Deine Antwort: {qu.options?.[answers[qu.id]]}</p>}
+                <p className="text-sm text-green-700 dark:text-green-400 ml-7">Richtig: {qu.options?.[qu.correctOption]}</p>
+                <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg"><p className="text-xs text-blue-700 dark:text-blue-400">{qu.explanation}</p></div>
               </CardContent>
             </Card>
           );
@@ -625,55 +677,64 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
     );
   }
 
-  const q = questions[index];
+  if (!safeQuestions.length) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6">
+        <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
+        <Card><CardContent className="p-6 text-center">
+          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500 mx-auto" />
+          <p className="text-sm text-muted mt-4">Fragen werden generiert...</p>
+        </CardContent></Card>
+      </div>
+    );
+  }
 
-  useKeyboardShortcuts({
-    disabled: phase !== "quiz",
-    maxOptions: q?.options.length ?? 5,
-    onSelectOption: (idx) => { if (q && idx < q.options.length) setAnswers((p) => ({ ...p, [q.id]: idx })); },
-    onConfirm: () => {
-      if (index < questions.length - 1) setIndex((i) => i + 1);
-      else if (allAnswered) handleSubmit();
-    },
-    onNext: () => { if (index < questions.length - 1) setIndex((i) => i + 1); },
-    onPrev: () => { if (index > 0) setIndex((i) => i - 1); },
-  });
+  if (!currentQ) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6">
+        <Button variant="ghost" size="sm" onClick={() => setPhase("setup")}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück zum Setup</Button>
+        <Card><CardContent className="p-6 text-center">
+          <p className="text-sm text-red-600 dark:text-red-400">Fehler: Frage nicht geladen. Bitte neu starten.</p>
+        </CardContent></Card>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen</Button>
-        <span className="text-sm text-muted">Frage {index + 1} von {questions.length}</span>
+        <span className="text-sm text-muted">Frage {index + 1} von {safeQuestions.length}</span>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-        <div className="bg-primary-600 h-2 rounded-full transition-all" style={{ width: `${((index + 1) / questions.length) * 100}%` }} />
+        <div className="bg-primary-600 h-2 rounded-full transition-all" style={{ width: safeQuestions.length ? `${((index + 1) / safeQuestions.length) * 100}%` : "0%" }} />
       </div>
       <Card><CardContent className="p-6">
         <p className="text-sm text-muted mb-2">Prämisse 1:</p>
-        <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-4 border-l-4 border-purple-400 pl-3">{q.premise1}</p>
+        <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-4 border-l-4 border-purple-400 pl-3">{currentQ.premise1 ?? "Fehler beim Laden"}</p>
         <p className="text-sm text-muted mb-2">Prämisse 2:</p>
-        <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6 border-l-4 border-purple-400 pl-3">{q.premise2}</p>
+        <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6 border-l-4 border-purple-400 pl-3">{currentQ.premise2 ?? "Fehler beim Laden"}</p>
         <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">Welche Schlussfolgerung ist korrekt?</p>
         <div className="space-y-2">
-          {q.options.map((opt, oi) => (
-            <button key={oi} onClick={() => setAnswers((p) => ({ ...p, [q.id]: oi }))}
+          {currentQ.options && Array.isArray(currentQ.options) ? currentQ.options.map((opt, oi) => (
+            <button key={oi} onClick={() => setAnswers((p) => ({ ...p, [currentQ.id]: oi }))}
               className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
-                answers[q.id] === oi ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                answers[currentQ.id] === oi ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
               }`}>
               <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>{opt}
               <kbd className="float-right text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded text-muted">{oi + 1}</kbd>
             </button>
-          ))}
+          )) : <p className="text-sm text-red-600 dark:text-red-400">Fehler: Optionen nicht verfügbar</p>}
         </div>
       </CardContent></Card>
       <div className="flex justify-between">
         <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
-        {index < questions.length - 1
+        {index < safeQuestions.length - 1
           ? <Button onClick={() => setIndex((i) => i + 1)}>Weiter <ArrowRight className="w-4 h-4 ml-1" /></Button>
           : <Button onClick={handleSubmit} disabled={!allAnswered}><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
         }
       </div>
-      <FloatingQuestionCounter current={index + 1} total={questions.length} />
+      <FloatingQuestionCounter current={index + 1} total={safeQuestions.length} />
     </div>
   );
 }
@@ -690,6 +751,10 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
+  const safeQuestions = questions || [];
+  const currentQ = safeQuestions[index];
+  const allAnswered = safeQuestions.every((qu) => answers[qu.id] !== undefined);
+
   const startQuiz = () => {
     const generated = shuffleMixed(generateWortflüssigkeitSet, questionCount);
     setQuestions(generated);
@@ -699,17 +764,29 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
   };
 
   const handleSubmit = () => {
-    const score = questions.filter((q) => answers[q.id] === q.correctWord[0]).length;
+    const score = safeQuestions.filter((qu) => answers[qu.id] === qu.correctWord[0]).length;
     saveQuizResult({
-      id: `kff-wf-${Date.now()}`, type: "kff", subject: "Wortflüssigkeit", score, total: questions.length,
+      id: `kff-wf-${Date.now()}`, type: "kff", subject: "Wortflüssigkeit", score, total: safeQuestions.length,
       date: new Date().toLocaleDateString("de-AT"),
-      answers: questions.map((q) => ({ questionId: q.id, selectedAnswer: answers[q.id] || "", correct: answers[q.id] === q.correctWord[0] })),
+      answers: safeQuestions.map((qu) => ({ questionId: qu.id, selectedAnswer: answers[qu.id] || "", correct: answers[qu.id] === qu.correctWord[0] })),
     });
     addXP(score * 10);
     checkStreak();
     setPhase("result");
     setIndex(0);
   };
+
+  useKeyboardShortcuts({
+    disabled: phase !== "quiz",
+    maxOptions: currentQ?.options?.length ?? 5,
+    onSelectOption: (idx) => { if (currentQ && currentQ.options && idx < currentQ.options.length) setAnswers((p) => ({ ...p, [currentQ.id]: currentQ.options[idx] })); },
+    onConfirm: () => {
+      if (index < safeQuestions.length - 1) setIndex((i) => i + 1);
+      else if (allAnswered) handleSubmit();
+    },
+    onNext: () => { if (index < safeQuestions.length - 1) setIndex((i) => i + 1); },
+    onPrev: () => { if (index > 0) setIndex((i) => i - 1); },
+  });
 
   if (phase === "setup") {
     return (
@@ -747,26 +824,26 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
   }
 
   if (phase === "result") {
-    const score = questions.filter((q) => answers[q.id] === q.correctWord[0]).length;
+    const score = safeQuestions.filter((qu) => answers[qu.id] === qu.correctWord[0]).length;
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
         <Card><CardContent className="p-6 text-center">
-          <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">{score}/{questions.length}</div>
-          <p className="text-muted mt-1">{Math.round((score / questions.length) * 100)}% richtig</p>
+          <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">{score}/{safeQuestions.length}</div>
+          <p className="text-muted mt-1">{safeQuestions.length ? Math.round((score / safeQuestions.length) * 100) : 0}% richtig</p>
           <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{score * 10} XP</p>
         </CardContent></Card>
-        {questions.map((q, i) => {
-          const correct = answers[q.id] === q.correctWord[0];
+        {safeQuestions.map((qu, i) => {
+          const correct = answers[qu.id] === qu.correctWord[0];
           return (
-            <Card key={q.id} className={`border-l-4 ${correct ? "border-l-green-500" : "border-l-red-500"}`}>
+            <Card key={qu.id} className={`border-l-4 ${correct ? "border-l-green-500" : "border-l-red-500"}`}>
               <CardContent className="p-5">
                 <div className="flex items-center gap-2 mb-2">
                   {correct ? <CheckCircle2 className="w-5 h-5 text-green-500" /> : <XCircle className="w-5 h-5 text-red-500" />}
-                  <span className="font-mono text-lg tracking-wider">{q.scrambled}</span>
+                  <span className="font-mono text-lg tracking-wider">{qu.scrambled}</span>
                 </div>
-                {!correct && <p className="text-sm text-red-600 dark:text-red-400 ml-7">Dein Buchstabe: {answers[q.id]}</p>}
-                <p className="text-sm text-green-700 dark:text-green-400 ml-7">Lösung: <span className="font-semibold">{q.correctWord}</span> (beginnt mit {q.correctWord[0]})</p>
+                {!correct && <p className="text-sm text-red-600 dark:text-red-400 ml-7">Dein Buchstabe: {answers[qu.id]}</p>}
+                <p className="text-sm text-green-700 dark:text-green-400 ml-7">Lösung: <span className="font-semibold">{qu.correctWord}</span> (beginnt mit {qu.correctWord[0]})</p>
               </CardContent>
             </Card>
           );
@@ -779,39 +856,35 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
     );
   }
 
-  // Quiz phase
-  const q = questions[index];
-  const allAnswered = questions.every((q) => answers[q.id] !== undefined);
-
-  useKeyboardShortcuts({
-    disabled: phase !== "quiz",
-    maxOptions: q?.options.length ?? 5,
-    onSelectOption: (idx) => { if (q && idx < q.options.length) setAnswers((p) => ({ ...p, [q.id]: q.options[idx] })); },
-    onConfirm: () => {
-      if (index < questions.length - 1) setIndex((i) => i + 1);
-      else if (allAnswered) handleSubmit();
-    },
-    onNext: () => { if (index < questions.length - 1) setIndex((i) => i + 1); },
-    onPrev: () => { if (index > 0) setIndex((i) => i - 1); },
-  });
+  if (!safeQuestions.length || !currentQ) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6 p-8">
+        <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
+        <div className="flex flex-col items-center justify-center gap-4 text-muted">
+          <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full" />
+          <p>Wörter werden geladen...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen</Button>
-        <span className="text-sm text-muted">Wort {index + 1} von {questions.length}</span>
+        <span className="text-sm text-muted">Wort {index + 1} von {safeQuestions.length}</span>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-        <div className="bg-primary-600 h-2 rounded-full transition-all" style={{ width: `${((index + 1) / questions.length) * 100}%` }} />
+        <div className="bg-primary-600 h-2 rounded-full transition-all" style={{ width: `${((index + 1) / safeQuestions.length) * 100}%` }} />
       </div>
       <Card><CardContent className="p-6 text-center">
         <p className="text-sm text-muted mb-4">Mit welchem Buchstaben beginnt dieses Wort?</p>
-        <p className="text-3xl font-mono font-bold tracking-[0.3em] text-gray-900 dark:text-gray-100 mb-8">{q.scrambled}</p>
+        <p className="text-3xl font-mono font-bold tracking-[0.3em] text-gray-900 dark:text-gray-100 mb-8">{currentQ.scrambled}</p>
         <div className="flex justify-center gap-3 flex-wrap">
-          {q.options.map((letter, li) => (
-            <button key={letter} onClick={() => setAnswers((p) => ({ ...p, [q.id]: letter }))}
+          {(currentQ.options ?? []).map((letter, li) => (
+            <button key={letter} onClick={() => setAnswers((p) => ({ ...p, [currentQ.id]: letter }))}
               className={`w-14 h-14 rounded-xl border-2 text-xl font-bold transition-all cursor-pointer ${
-                answers[q.id] === letter
+                answers[currentQ.id] === letter
                   ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300 scale-110"
                   : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:scale-105"
               }`}>
@@ -823,12 +896,12 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
       </CardContent></Card>
       <div className="flex justify-between">
         <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
-        {index < questions.length - 1
+        {index < safeQuestions.length - 1
           ? <Button onClick={() => setIndex((i) => i + 1)}>Weiter <ArrowRight className="w-4 h-4 ml-1" /></Button>
           : <Button onClick={handleSubmit} disabled={!allAnswered}><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
         }
       </div>
-      <FloatingQuestionCounter current={index + 1} total={questions.length} label="Wort" />
+      <FloatingQuestionCounter current={index + 1} total={safeQuestions.length} label="Wort" />
     </div>
   );
 }

@@ -8,7 +8,7 @@ import { Confetti } from "@/components/ui/confetti";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { allBmsQuestions, getQuestionsBySubject as getNewQuestions } from "@/data/bms/index";
-import { bmsQuestions as legacyQuestions, getQuestionsBySubject as getLegacyQuestions } from "@/data/bmsQuestions";
+import { bmsQuestions as legacyQuestions, getQuestionsBySubject as getLegacyQuestions, type Question } from "@/data/bmsQuestions";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
 import { getStrategieTipp, getDirectStichwortId } from "@/data/questions/index";
@@ -197,7 +197,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
         })()}
 
         <div className="space-y-4">
-          {questions.map((q, i) => {
+          {questions.map((q: Question, i: number) => {
             const userAnswer = answers[q.id];
             const isCorrect = userAnswer === q.correctOptionId;
             return (
@@ -212,7 +212,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
                     <p className="text-sm font-medium text-gray-900 dark:text-gray-100">{i + 1}. {q.text}</p>
                   </div>
                   <div className="ml-8 space-y-2 mb-3">
-                    {q.options.map((opt) => {
+                    {q.options.map((opt: { id: string; text: string }) => {
                       const isSelected = userAnswer === opt.id;
                       const isCorrectOpt = q.correctOptionId === opt.id;
                       return (

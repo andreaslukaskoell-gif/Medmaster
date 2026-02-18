@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AppShell } from "./components/layout/AppShell";
 import { AuthGuard } from "./components/AuthGuard";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 import { useStore } from "./store/useStore";
 
 // Lazy-loaded pages — each becomes its own chunk
@@ -23,6 +24,7 @@ const Flashcards = lazy(() => import("./pages/Flashcards"));
 const Duel = lazy(() => import("./pages/Duel"));
 const StichwortlistePage = lazy(() => import("./pages/StichwortlistePage"));
 const SchwachstellenTrainer = lazy(() => import("./pages/SchwachstellenTrainer"));
+const KapitelEditor = lazy(() => import("./pages/KapitelEditor"));
 const LoginPage = lazy(() => import("./pages/LoginPage"));
 const RegisterPage = lazy(() => import("./pages/RegisterPage"));
 const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage"));
@@ -65,7 +67,7 @@ export default function App() {
             <Route path="/bms" element={<BMS />} />
             <Route path="/bms/:fach" element={<BMS />} />
             <Route path="/bms/:fach/:kapitel" element={<BMS />} />
-            <Route path="/kff" element={<KFF />} />
+            <Route path="/kff" element={<ErrorBoundary><KFF /></ErrorBoundary>} />
             <Route path="/tv" element={<TV />} />
             <Route path="/sek" element={<SEK />} />
             <Route path="/simulation" element={<Simulation />} />
@@ -80,6 +82,7 @@ export default function App() {
             <Route path="/stichwortliste" element={<StichwortlistePage />} />
             <Route path="/schwachstellen" element={<SchwachstellenTrainer />} />
             <Route path="/preise" element={<Pricing />} />
+            <Route path="/admin/kapitel-editor" element={<KapitelEditor />} />
           </Route>
         </Routes>
       </Suspense>

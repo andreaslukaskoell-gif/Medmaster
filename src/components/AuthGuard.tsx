@@ -8,7 +8,7 @@ export function AuthGuard({ children }: { children: React.ReactNode }) {
   const { isAuthenticated, loading } = useAuth();
   const location = useLocation();
 
-  // In development mode, skip auth entirely
+  // Development: kein Redirect zur Login-Seite, geschützte Seiten (KFF, BMS) direkt erreichbar
   if (import.meta.env.DEV) {
     return <>{children}</>;
   }

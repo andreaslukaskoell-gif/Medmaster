@@ -3,7 +3,7 @@ import { ChevronLeft, CheckCircle2, Clock, BookOpen, ChevronRight, Play } from "
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
 import type { Kapitel } from "@/data/bmsKapitel/types";
 import BMSUnterkapitel from "./BMSUnterkapitel";
@@ -29,10 +29,40 @@ const subjectColors: Record<string, { progress: string; text: string; badge: str
 
 export default function BMSKapitelView({ kapitel, onBack }: Props) {
   const [activeUKIndex, setActiveUKIndex] = useState<number | null>(null);
-  const { completedChapters } = useStore();
+  
+  // Safe store access with fallback
+  let completedChapters: string[] = [];
+  try {
+    const store = useStore();
+    completedChapters = store.completedChapters || [];
+  } catch (e) {
+    console.error('Error accessing store:', e);
+  }
 
-  const completedUK = kapitel.unterkapitel.filter((u) => completedChapters.includes(u.id)).length;
-  const totalUK = kapitel.unterkapitel.length;
+  // Defensive checks for chapter data
+  if (!kapitel || !kapitel.id) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6 p-6">
+        <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
+          <CardContent className="p-6 text-center">
+            <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
+              Ungültiges Kapitel
+            </h3>
+            <p className="text-sm text-red-800 dark:text-red-400 mb-4">
+              Die Kapitel-Daten konnten nicht geladen werden.
+            </p>
+            <Button onClick={onBack}>
+              Zurück zur Übersicht
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  const unterkapitel = (kapitel.unterkapitel && Array.isArray(kapitel.unterkapitel)) ? kapitel.unterkapitel : [];
+  const completedUK = unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length;
+  const totalUK = unterkapitel.length;
   const isKapitelDone = completedChapters.includes(kapitel.id);
 
   if (activeUKIndex !== null) {
@@ -46,17 +76,17 @@ export default function BMSKapitelView({ kapitel, onBack }: Props) {
     );
   }
 
-  // Find first incomplete unterkapitel
-  const firstIncomplete = kapitel.unterkapitel.findIndex(
-    (u) => !completedChapters.includes(u.id)
+  // Find first incomplete unterkapitel (defensive)
+  const firstIncomplete = unterkapitel.findIndex(
+    (u) => u && u.id && !completedChapters.includes(u.id)
   );
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
-      <Breadcrumb items={[
+      <BreadcrumbNav items={[
         { label: "Dashboard", href: "/" },
-        { label: "BMS", href: "#" },
-        { label: subjectLabels[kapitel.subject], href: "#", onClick: onBack },
+        { label: "BMS", href: "/bms" },
+        { label: subjectLabels[kapitel.subject], href: "#" },
         { label: kapitel.title },
       ]} />
 
@@ -124,37 +154,49 @@ export default function BMSKapitelView({ kapitel, onBack }: Props) {
         <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
           Unterkapitel
         </h2>
-        {kapitel.unterkapitel.map((uk, index) => {
-          const isDone = completedChapters.includes(uk.id);
-          return (
-            <Card
-              key={uk.id}
-              className={`hover:shadow-md transition-shadow cursor-pointer border-l-4 ${subjectColors[kapitel.subject]?.border || ""}`}
-              onClick={() => setActiveUKIndex(index)}
-            >
-              <CardContent className="p-4 flex items-center gap-3">
-                {isDone ? (
-                  <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
-                ) : (
-                  <div className="w-5 h-5 rounded-full border-2 border-gray-300 dark:border-gray-600 shrink-0 flex items-center justify-center text-xs text-muted font-medium">
-                    {index + 1}
+        {unterkapitel.length === 0 ? (
+          <Card className={`border-l-4 ${subjectColors[kapitel.subject]?.border || ""}`}>
+            <CardContent className="p-6 text-center">
+              <p className="text-sm text-muted">
+                Noch keine Unterkapitel vorhanden.
+              </p>
+            </CardContent>
+          </Card>
+        ) : (
+          unterkapitel.map((uk, index) => {
+            if (!uk || !uk.id) return null; // Skip invalid subchapters
+            const isDone = completedChapters.includes(uk.id);
+            const selfTestCount = (uk.selfTest && Array.isArray(uk.selfTest)) ? uk.selfTest.length : 0;
+            return (
+              <Card
+                key={uk.id}
+                className={`hover:shadow-md transition-shadow cursor-pointer border-l-4 ${subjectColors[kapitel.subject]?.border || ""}`}
+                onClick={() => setActiveUKIndex(index)}
+              >
+                <CardContent className="p-4 flex items-center gap-3">
+                  {isDone ? (
+                    <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
+                  ) : (
+                    <div className="w-5 h-5 rounded-full border-2 border-gray-300 dark:border-gray-600 shrink-0 flex items-center justify-center text-xs text-muted font-medium">
+                      {index + 1}
+                    </div>
+                  )}
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-medium text-sm ${isDone ? "text-gray-500 dark:text-gray-400" : "text-gray-900 dark:text-gray-100"}`}>
+                      {uk.title || 'Untitled Subchapter'}
+                    </h3>
+                    <p className="text-xs text-muted truncate mt-0.5">
+                      {selfTestCount} Selbsttest-Fragen
+                      {uk.altfrage && " · Altfrage"}
+                      {uk.klinischerBezug && " · Klinischer Bezug"}
+                    </p>
                   </div>
-                )}
-                <div className="flex-1 min-w-0">
-                  <h3 className={`font-medium text-sm ${isDone ? "text-gray-500 dark:text-gray-400" : "text-gray-900 dark:text-gray-100"}`}>
-                    {uk.title}
-                  </h3>
-                  <p className="text-xs text-muted truncate mt-0.5">
-                    {uk.selfTest.length} Selbsttest-Fragen
-                    {uk.altfrage && " · Altfrage"}
-                    {uk.klinischerBezug && " · Klinischer Bezug"}
-                  </p>
-                </div>
-                <ChevronRight className="w-4 h-4 text-muted shrink-0" />
-              </CardContent>
-            </Card>
-          );
-        })}
+                  <ChevronRight className="w-4 h-4 text-muted shrink-0" />
+                </CardContent>
+              </Card>
+            );
+          })
+        )}
       </div>
     </div>
   );

@@ -17,13 +17,27 @@ interface Profile {
   streak_days: number;
 }
 
+const isDev = import.meta.env.DEV;
+
+/** Test-User für lokale Entwicklung ohne echte Anmeldung */
+const DEV_USER = {
+  id: "dev-user",
+  email: "test@medmaster.at",
+} as User;
+
 export function useAuth() {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User | null>(isDev ? DEV_USER : null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [session, setSession] = useState<Session | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!isDev);
 
   useEffect(() => {
+    if (isDev) {
+      setUser(DEV_USER);
+      setLoading(false);
+      return;
+    }
+
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
       setUser(session?.user ?? null);
@@ -33,6 +47,8 @@ export function useAuth() {
       } else {
         setLoading(false);
       }
+    }).catch(() => {
+      setLoading(false);
     });
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
@@ -55,9 +71,12 @@ export function useAuth() {
   }, []);
 
   async function fetchProfile(userId: string) {
-    const { data } = await supabase.from("profiles").select("*").eq("id", userId).single();
-    if (data) setProfile(data as Profile);
-    setLoading(false);
+    try {
+      const { data } = await supabase.from("profiles").select("*").eq("id", userId).single();
+      if (data) setProfile(data as Profile);
+    } finally {
+      setLoading(false);
+    }
   }
 
   async function signUp(email: string, password: string, username: string) {
@@ -100,6 +119,8 @@ export function useAuth() {
   const isAuthenticated = !!user;
   const isPremium = tier === "standard" || tier === "pro";
   const isPro = tier === "pro";
+
+  console.log("Auth State:", { user: !!user, loading });
 
   return {
     user, profile, session, loading,

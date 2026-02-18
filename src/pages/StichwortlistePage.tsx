@@ -20,7 +20,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import {
   alleStichworteListe,
   getStichworteByFach,
@@ -169,7 +169,7 @@ export default function StichwortlistePage() {
 
   return (
     <div className="max-w-7xl mx-auto space-y-6">
-      <Breadcrumb items={[{ label: "BMS", href: "/bms" }, { label: "Stichwortliste" }]} />
+      <BreadcrumbNav items={[{ label: "BMS", href: "/bms" }, { label: "Stichwortliste" }]} />
 
       <div>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">

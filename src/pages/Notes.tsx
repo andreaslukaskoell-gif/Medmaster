@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Search, StickyNote, Trash2, Edit3, Eye, Pencil, Bold, Italic, Code, List, Heading, Quote, Minus, Link } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
 import { alleKapitel } from "@/data/bmsKapitel";
 
@@ -282,9 +282,7 @@ export default function Notes() {
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
-      <Breadcrumb
-        items={[{ label: "Dashboard", href: "/" }, { label: "Notizen" }]}
-      />
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Notizen" }]} />
 
       <div className="flex items-center justify-between">
         <div>

@@ -195,116 +195,70 @@ export function MerksatzBox({ text, type = "merke" }: MerksatzBoxProps) {
 }
 
 // src/components/chapter/SelbstTest.tsx
-
-interface SelbstTestQuestion {
-  question: string;
-  options: string[];
-  correctIndex: number;
-  explanation: string;
-}
+import { QuizQuestion } from "./QuizQuestion";
+import type { SelfTestQuestion } from "@/data/bmsKapitel/types";
 
 interface SelbstTestProps {
-  questions: SelbstTestQuestion[];
+  questions: SelfTestQuestion[];
 }
 
+/**
+ * Interactive self-test component with immediate feedback per question
+ * Uses QuizQuestion component for consistent UX across all chapters
+ * FIXED: Now shows immediate feedback per question instead of batch evaluation
+ */
 export function SelbstTest({ questions }: SelbstTestProps) {
-  const [answers, setAnswers] = useState<Record<number, number>>({});
-  const [submitted, setSubmitted] = useState(false);
+  const [questionResults, setQuestionResults] = useState<Record<number, boolean>>({});
 
-  const score = submitted
-    ? questions.filter((q, i) => answers[i] === q.correctIndex).length
-    : 0;
+  const handleAnswerChange = (questionIndex: number, isCorrect: boolean) => {
+    setQuestionResults((prev) => ({
+      ...prev,
+      [questionIndex]: isCorrect,
+    }));
+  };
+
+  const totalCorrect = Object.values(questionResults).filter(Boolean).length;
+  const totalAnswered = Object.keys(questionResults).length;
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 mt-8 border border-gray-200 dark:border-gray-700">
-      <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 flex items-center gap-2">
-        ✍️ Selbsttest
-      </h3>
-      <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">
-        {questions.length} Fragen zum Überprüfen deines Wissens
-      </p>
-
-      <div className="space-y-6">
-        {questions.map((q, qi) => {
-          const selected = answers[qi];
-          const isCorrect = submitted && selected === q.correctIndex;
-          const isWrong = submitted && selected !== undefined && selected !== q.correctIndex;
-
-          return (
-            <div key={qi} className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-              <p className="font-medium text-gray-900 dark:text-gray-100 text-sm mb-3">
-                {qi + 1}. {q.question}
-              </p>
-              <div className="space-y-2">
-                {q.options.map((opt, oi) => {
-                  const isSelected = selected === oi;
-                  const isCorrectOpt = submitted && oi === q.correctIndex;
-                  const isWrongSelected = submitted && isSelected && oi !== q.correctIndex;
-
-                  return (
-                    <button
-                      key={oi}
-                      onClick={() => !submitted && setAnswers((p) => ({ ...p, [qi]: oi }))}
-                      disabled={submitted}
-                      className={`w-full text-left px-3 py-2 rounded-lg border transition-colors ${
-                        isCorrectOpt
-                          ? "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300 font-medium"
-                          : isWrongSelected
-                          ? "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300 line-through"
-                          : isSelected && !submitted
-                          ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                          : "border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer"
-                      } ${submitted ? "cursor-default" : ""}`}
-                    >
-                      <span className="font-medium mr-2">{String.fromCharCode(65 + oi)})</span>
-                      {opt}
-                    </button>
-                  );
-                })}
-              </div>
-              {submitted && (
-                <div className={`mt-3 p-3 rounded-lg text-sm ${
-                  isCorrect
-                    ? "bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300"
-                    : "bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300"
-                }`}>
-                  <div className="flex items-center gap-1 mb-1">
-                    {isCorrect ? <CheckCircle2 className="w-4 h-4" /> : <XCircle className="w-4 h-4" />}
-                    <span className="font-medium">{isCorrect ? "Richtig!" : "Falsch"}</span>
-                  </div>
-                  <p className="text-xs leading-relaxed">{q.explanation}</p>
-                </div>
-              )}
-            </div>
-          );
-        })}
+    <div className="space-y-6 mt-8">
+      {/* Header */}
+      <div className="pb-4 border-b-2 border-gray-300 dark:border-gray-600">
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
+          📝 Kontrollfragen
+        </h2>
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          Teste dein Wissen mit diesen Fragen. Wähle eine Antwort und klicke auf "Antwort prüfen" für sofortiges Feedback.
+        </p>
+        {totalAnswered > 0 && (
+          <div className="mt-3 text-sm font-medium text-gray-700 dark:text-gray-300">
+            Fortschritt: {totalCorrect} von {totalAnswered} beantworteten Fragen richtig
+          </div>
+        )}
       </div>
 
-      {!submitted ? (
-        <Button
-          className="w-full mt-6"
-          onClick={() => setSubmitted(true)}
-          disabled={Object.keys(answers).length < questions.length}
-        >
-          Auswerten ({Object.keys(answers).length}/{questions.length} beantwortet)
-        </Button>
-      ) : (
-        <div className="mt-6 text-center">
-          <div className="text-2xl font-bold text-primary-700 dark:text-primary-400">
-            {score}/{questions.length} richtig
-          </div>
-          <p className="text-sm text-muted mt-1">
-            {score === questions.length ? "Perfekt! 🎉" : score >= questions.length * 0.6 ? "Gut gemacht! 👍" : "Wiederhole das Kapitel noch einmal."}
-          </p>
-          <Button
-            variant="outline"
-            className="mt-3"
-            onClick={() => { setAnswers({}); setSubmitted(false); }}
-          >
-            Nochmal versuchen
-          </Button>
-        </div>
-      )}
+      {/* Questions */}
+      {questions.map((question, index) => {
+        // Safe fallback for missing data
+        if (!question || !question.question || !question.options || question.options.length === 0) {
+          return (
+            <div key={index} className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
+              <p className="text-sm text-yellow-800 dark:text-yellow-300">
+                ⚠️ Frage {index + 1} hat unvollständige Daten und wird übersprungen.
+              </p>
+            </div>
+          );
+        }
+
+        return (
+          <QuizQuestion
+            key={index}
+            question={question}
+            questionNumber={index + 1}
+            onAnswerChange={(isCorrect) => handleAnswerChange(index, isCorrect)}
+          />
+        );
+      })}
     </div>
   );
 }

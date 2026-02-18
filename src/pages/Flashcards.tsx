@@ -3,7 +3,7 @@ import { ArrowLeft, RotateCcw, Layers, ChevronLeft, ChevronRight } from "lucide-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { getDeckNames, flashcardDecks } from "@/data/flashcards";
 import type { Flashcard } from "@/data/flashcards";
 import { useStore } from "@/store/useStore";
@@ -47,7 +47,7 @@ export default function FlashcardsPage() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <Breadcrumb items={[{ label: "Dashboard", href: "/" }, { label: "Karteikarten" }]} />
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Karteikarten" }]} />
 
       <div>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Karteikarten</h1>

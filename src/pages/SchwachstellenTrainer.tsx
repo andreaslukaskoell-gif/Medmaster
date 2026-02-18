@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
@@ -345,7 +345,7 @@ export default function SchwachstellenTrainer() {
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
-      <Breadcrumb items={[{ label: "Dashboard", href: "/" }, { label: "Schwachstellen-Trainer" }]} />
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Schwachstellen-Trainer" }]} />
 
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 bg-red-100 dark:bg-red-900/30 rounded-xl flex items-center justify-center">

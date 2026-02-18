@@ -2,7 +2,7 @@ import { Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 
 const plans = [
   {
@@ -64,7 +64,7 @@ const plans = [
 export default function Pricing() {
   return (
     <div className="max-w-6xl mx-auto space-y-8">
-      <Breadcrumb items={[{ label: "Dashboard", href: "/" }, { label: "Preise" }]} />
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Preise" }]} />
 
       <div className="text-center">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Wähle deinen Plan</h1>

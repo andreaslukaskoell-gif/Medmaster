@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { ArrowLeft, ArrowRight, ChevronLeft, Bookmark, StickyNote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { StickyBackButton } from "@/components/ui/StickyBackButton";
 import { useStore } from "@/store/useStore";
 import { MerksatzBox } from "@/components/chapter/MerksatzBox";
 import { SelbstTest } from "@/components/chapter/SelbstTest";
+import { InteractiveQuiz } from "@/components/chapter/InteractiveQuiz";
 import { SubchapterContent } from "@/components/chapter/SubchapterContent";
+import { extractKontrollfragen } from "@/utils/parseKontrollfragen";
 import type { Kapitel } from "@/data/bmsKapitel/types";
 
 interface Props {
@@ -39,16 +41,105 @@ const subjectTextColors: Record<string, string> = {
 };
 
 export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, onNavigate }: Props) {
-  const uk = kapitel.unterkapitel[unterkapitelIndex];
-  const { completeChapter, completedChapters, addXP, checkStreak, notes, setNote, bookmarks, toggleBookmarkChapter } = useStore();
+  // Defensive checks for chapter and subchapter data
+  if (!kapitel || !kapitel.id) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6 p-6">
+        <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
+          <CardContent className="p-6 text-center">
+            <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
+              Ungültiges Kapitel
+            </h3>
+            <p className="text-sm text-red-800 dark:text-red-400 mb-4">
+              Die Kapitel-Daten konnten nicht geladen werden.
+            </p>
+            <Button onClick={onBack}>
+              Zurück zur Übersicht
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  const unterkapitel = (kapitel.unterkapitel && Array.isArray(kapitel.unterkapitel)) ? kapitel.unterkapitel : [];
+  
+  // Validate index
+  if (unterkapitelIndex < 0 || unterkapitelIndex >= unterkapitel.length) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6 p-6">
+        <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
+          <CardContent className="p-6 text-center">
+            <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
+              Ungültiges Unterkapitel
+            </h3>
+            <p className="text-sm text-red-800 dark:text-red-400 mb-4">
+              Das angeforderte Unterkapitel konnte nicht gefunden werden.
+            </p>
+            <Button onClick={onBack}>
+              Zurück zur Übersicht
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  const uk = unterkapitel[unterkapitelIndex];
+  
+  // Validate subchapter
+  if (!uk || !uk.id) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6 p-6">
+        <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
+          <CardContent className="p-6 text-center">
+            <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
+              Ungültige Unterkapitel-Daten
+            </h3>
+            <p className="text-sm text-red-800 dark:text-red-400 mb-4">
+              Die Unterkapitel-Daten konnten nicht geladen werden.
+            </p>
+            <Button onClick={onBack}>
+              Zurück zur Übersicht
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  // Safe store access with fallback
+  let completedChapters: string[] = [];
+  let completeChapter: (id: string) => void = () => {};
+  let addXP: (amount: number) => void = () => {};
+  let checkStreak: () => void = () => {};
+  let notes: Record<string, string> = {};
+  let setNote: (id: string, text: string) => void = () => {};
+  let bookmarks: { chapters: string[] } = { chapters: [] };
+  let toggleBookmarkChapter: (id: string) => void = () => {};
+
+  try {
+    const store = useStore();
+    completedChapters = store.completedChapters || [];
+    completeChapter = store.completeChapter || (() => {});
+    addXP = store.addXP || (() => {});
+    checkStreak = store.checkStreak || (() => {});
+    notes = store.notes || {};
+    setNote = store.setNote || (() => {});
+    bookmarks = store.bookmarks || { chapters: [] };
+    toggleBookmarkChapter = store.toggleBookmarkChapter || (() => {});
+  } catch (e) {
+    console.error('Error accessing store:', e);
+  }
+
   const [noteText, setNoteText] = useState(notes[uk.id] || "");
   const [showNotes, setShowNotes] = useState(false);
   const isBookmarked = bookmarks.chapters.includes(uk.id);
   const isCompleted = completedChapters.includes(uk.id);
   const [selfTestDone, setSelfTestDone] = useState(false);
 
-  const total = kapitel.unterkapitel.length;
-  const completedCount = kapitel.unterkapitel.filter((u) => completedChapters.includes(u.id)).length;
+  const total = unterkapitel.length;
+  const completedCount = unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length;
   const isLast = unterkapitelIndex === total - 1;
   const isFirst = unterkapitelIndex === 0;
 
@@ -79,11 +170,11 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
   return (
     <div className="max-w-3xl mx-auto space-y-6 pb-12">
       <StickyBackButton onClick={onBack} />
-      <Breadcrumb items={[
+      <BreadcrumbNav items={[
         { label: "Dashboard", href: "/" },
-        { label: "BMS", href: "#" },
+        { label: "BMS", href: "/bms" },
         { label: subjectLabels[kapitel.subject], href: "#" },
-        { label: kapitel.title, href: "#", onClick: onBack },
+        { label: kapitel.title, href: "#" },
         { label: uk.title },
       ]} />
 
@@ -156,15 +247,42 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
 
       {/* Main content */}
       <Card>
-        <CardContent className="p-6">
-          <SubchapterContent uk={uk} subject={kapitel.subject} />
+        <CardContent className={`${kapitel.id === 'bio-kap1' ? 'p-8' : 'p-6'}`}>
+          <SubchapterContent uk={uk} subject={kapitel.subject} chapterId={kapitel.id} />
         </CardContent>
       </Card>
 
-      {/* Merksätze */}
-      {uk.merksätze.map((merksatz, i) => (
-        <MerksatzBox key={i} text={merksatz} type="merke" />
-      ))}
+      {/* Merksätze - Enhanced for "Die Zelle" */}
+      {(uk.merksätze && Array.isArray(uk.merksätze) && uk.merksätze.length > 0) && (
+        <div className={kapitel.id === 'bio-kap1' ? 'space-y-4 my-8' : 'space-y-4'}>
+          {kapitel.id === 'bio-kap1' && (
+            <div className="mb-2 pb-2 border-b-2 border-gray-300 dark:border-gray-600">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                💡 Prüfungsrelevante Merksätze
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                Diese Kernaussagen solltest du dir merken
+              </p>
+            </div>
+          )}
+          {uk.merksätze.map((merksatz, i) => (
+            <div key={i}>
+              {kapitel.id === 'bio-kap1' ? (
+                // Enhanced MerksatzBox for "Die Zelle"
+                <div className="bg-amber-50 dark:bg-amber-900/30 border-l-4 border-amber-500 shadow-md p-5 rounded-r-lg">
+                  <p className="font-bold text-base text-amber-800 dark:text-amber-300 flex items-center gap-2 mb-2">
+                    <span className="text-xl">💡</span> Merke
+                  </p>
+                  <p className="text-base text-amber-900 dark:text-amber-200 leading-relaxed" dangerouslySetInnerHTML={{ __html: merksatz.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold">$1</strong>') }} />
+                </div>
+              ) : (
+                // Standard MerksatzBox for other chapters
+                <MerksatzBox text={merksatz} type="merke" />
+              )}
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Altfrage */}
       {uk.altfrage && (
@@ -191,10 +309,44 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
         <MerksatzBox text={uk.klinischerBezug} type="klinisch" />
       )}
 
-      {/* Self-Test */}
-      {uk.selfTest.length > 0 && (
-        <SelbstTest questions={uk.selfTest} />
-      )}
+      {/* Self-Test - Now includes questions extracted from content */}
+      {useMemo(() => {
+        // Get questions from selfTest array OR extract from content
+        const questionsFromArray = (uk.selfTest && Array.isArray(uk.selfTest) && uk.selfTest.length > 0) ? uk.selfTest : [];
+        
+        // Extract questions from content if they exist as free text
+        // FIXED: Parse Kontrollfragen from content and use them for interactive quiz
+        const extractedFromContent = uk.content ? extractKontrollfragen(uk.content).questions : [];
+        
+        // Use extracted questions if available, otherwise use selfTest array
+        const allQuestions = extractedFromContent.length > 0 ? extractedFromContent : questionsFromArray;
+        
+        if (allQuestions.length === 0) return null;
+        
+        return (
+          <div className={kapitel.id === 'bio-kap1' ? 'mt-8' : ''}>
+            {kapitel.id === 'bio-kap1' ? (
+              // Enhanced interactive quiz for "Die Zelle"
+              <InteractiveQuiz questions={allQuestions} />
+            ) : (
+              // Standard quiz for other chapters
+              <>
+                <div className={kapitel.id === 'bio-kap1' ? 'mb-4 pb-3 border-b-2 border-gray-300 dark:border-gray-600' : ''}>
+                  <h2 className={`${kapitel.id === 'bio-kap1' ? 'text-2xl font-bold' : 'text-xl font-semibold'} text-gray-900 dark:text-gray-100`}>
+                    {kapitel.id === 'bio-kap1' && '📝 '}Kontrollfragen
+                  </h2>
+                  {kapitel.id === 'bio-kap1' && (
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                      Teste dein Wissen mit diesen Fragen
+                    </p>
+                  )}
+                </div>
+                <SelbstTest questions={allQuestions} />
+              </>
+            )}
+          </div>
+        );
+      }, [uk.selfTest, uk.content, kapitel.id])}
 
       {/* Navigation buttons */}
       <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
