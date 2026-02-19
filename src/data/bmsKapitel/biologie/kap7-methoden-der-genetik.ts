@@ -48,6 +48,8 @@ Die PCR findet vielfältige Anwendung in Forschung, Diagnostik und Forensik:
 - **Genforschung:** Klonierung, Sequenzierung, Mutationsanalyse
 - **Pränatale Diagnostik:** Nachweis genetischer Erkrankungen
 
+> **MerksatzBox type="klinisch":** Im klinischen Alltag begegnet dir PCR ständig: COVID-19-Tests (RT-qPCR), Erregerdiagnostik bei Sepsis (Blutkultur-PCR liefert Ergebnis in 6h statt 2-3 Tagen), Tumordiagnostik (EGFR-Mutation → Therapiewahl bei Lungenkrebs). PCR ist das Arbeitspferd der modernen Labormedizin.
+
 ## Varianten der PCR
 
 Neben der Standard-PCR wurden zahlreiche Varianten entwickelt:
@@ -234,7 +236,9 @@ NGS-Technologien ermöglichen die parallele Sequenzierung von Millionen DNA-Frag
 - **Pränatale Diagnostik:** Nicht-invasive Pränataldiagnostik (NIPT)
 - **Infektiologie:** Erregeridentifikation und Resistenzbestimmung
 - **Forensik:** Identifikation von Personen
-- **Evolutionsforschung:** Vergleich von Genomen verschiedener Spezies`,
+- **Evolutionsforschung:** Vergleich von Genomen verschiedener Spezies
+
+> **MerksatzBox type="klinisch":** DNA-Sequenzierung ist Basis der personalisierten Medizin. Konkret: Bei metastasiertem Kolonkarzinom sequenzieren wir den Tumor auf KRAS-Mutationen – Wildtyp erhält Cetuximab (monoklonaler Antikörper), KRAS-mutiert nicht (Resistenz). Gleiche Diagnose, unterschiedliche Therapie – basierend auf Sequenzierung.`,
       lernziele: [],
       sections: [],
       merksätze: [
@@ -409,6 +413,8 @@ Ein Microarray besteht aus einer festen Oberfläche (meist Glasplättchen), auf 
 ## RNA-Sequenzierung (RNA-Seq)
 
 RNA-Seq ist eine NGS-basierte Methode zur umfassenden Analyse des Transkriptoms (Gesamtheit aller RNA-Moleküle einer Zelle).
+
+> **MerksatzBox type="klinisch":** RNA-Seq revolutioniert die Onkologie: Durch Genexpressionsprofiling können wir Brustkrebs in molekulare Subtypen einteilen (Luminal A, Luminal B, HER2+, Triple-negativ) – jeder Subtyp hat unterschiedliche Prognose und Therapie. Früher nur Histologie, heute Präzisionsmedizin.
 
 ### Vorteile gegenüber Microarrays
 
@@ -651,6 +657,8 @@ Die Restriktionsfragmentlängen-Polymorphismus-Analyse war die erste Methode fü
 - **Opferidentifikation:** Bei Massenkatastrophen, Kriegsverbrechen
 - **Ausschluss Unschuldiger:** Entlastung fälschlich Beschuldigter
 - **Cold Cases:** Wiederaufnahme alter Fälle mit neuen Methoden
+
+> **MerksatzBox type="klinisch":** Genetischer Fingerabdruck ist nicht nur Forensik – in der Transplantationsmedizin nutzen wir STR-Analyse für Chimärismus-Monitoring nach allogener Stammzelltransplantation: Wir prüfen, ob Spender- oder Empfänger-Hämatopoese dominiert. Bei >95% Spender-Chimärismus gilt die Transplantation als erfolgreich.
 
 ### Vaterschaftstests
 

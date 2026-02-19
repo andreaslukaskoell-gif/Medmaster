@@ -60,6 +60,8 @@ Nur ein Teil der Träger manifestiert die Erkrankung phänotypisch.
 - Beispiel: BRCA1-Mutation (ca. 70% Penetranz für Brustkrebs)
 - Beispiel: Polydaktylie (zusätzliche Finger/Zehen, variable Penetranz)
 
+> **MerksatzBox type="klinisch":** In der genetischen Beratung ist Penetranz entscheidend: Eine Patientin mit BRCA1-Mutation fragt: "Bekomme ich Brustkrebs?" Antwort: "Ihr Risiko liegt bei ~70% bis zum 80. Lebensjahr (vs. 12% Normalbevölkerung). Prophylaktische Mastektomie senkt Ihr Risiko auf <5%." – Zahlen statt Angst.
+
 **Faktoren für unvollständige Penetranz:**
 - Genetischer Hintergrund (Modifier-Gene können Ausprägung beeinflussen)
 - Umweltfaktoren (Exposition, Lebensstil, Ernährung)
@@ -276,6 +278,8 @@ Die PND umfasst verschiedene Untersuchungsmethoden während der Schwangerschaft,
 - Geringes Risiko für Fehlgeburten (nicht-invasiv)
 - Gold-Standard für Ersttrimester-Screening seit ~2015
 
+> **MerksatzBox type="klinisch":** NIPT hat die Pränataldiagnostik revolutioniert: Früher invasive Amniozentese bei jeder Risikoschwangerschaft (0,5% Fehlgeburtsrisiko). Heute NIPT-Screening bei allen, nur bei auffälligem Befund Amniozentese zur Bestätigung. Ergebnis: 90% weniger invasive Eingriffe, deutlich weniger iatrogene Fehlgeburten.
+
 ### Invasive Methoden
 
 **1. Chorionzottenbiopsie (CVS, Chorionic Villus Sampling)**
@@ -296,6 +300,8 @@ Die PND umfasst verschiedene Untersuchungsmethoden während der Schwangerschaft,
   - Fortgeschrittenes mütterliches Alter (>35 Jahre)
   - Auffälliger Ultraschall (erhöhte NT, Organfehlbildungen)
   - Positive Familienanamnese für genetische Erkrankungen
+
+> **MerksatzBox type="klinisch":** Praxistipp Amniozentese: Lokale Betäubung nicht nötig (mehr Einstiche = mehr Schmerz). Nadel 20-22G, unter Ultraschall-Sicht, plazentafern punktieren. Erste 2ml verwerfen (maternale Kontamination). Komplikation Blasensprung <1%, Chorioamnionitis selten. Patientinnen 24h Ruhe, bei Blutung/Fruchtwasserabgang sofort Klinik.
 
 **3. Nabelschnurpunktion (Chordozentese)**
 - Ab 18. SSW, fetale Blutentnahme aus Nabelschnur
