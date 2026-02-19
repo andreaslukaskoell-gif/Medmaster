@@ -243,10 +243,12 @@ export default function BMS() {
             // Preserve static fields that Supabase doesn't know about
             sequence: staticChapter.sequence ?? dynamicChapter.sequence,
             sequenceTitle: staticChapter.sequenceTitle ?? dynamicChapter.sequenceTitle,
-            linkedChapters: staticChapter.linkedChapters ?? dynamicChapter.linkedChapters,
+            linkedChapters: staticChapter.linkedChapters ?? dynamicChapter.linkedChapters ?? [],
           };
+        } else {
+          // Keep all Supabase chapters (full content from DB)
+          merged.push(dynamicChapter);
         }
-        // Don't add Supabase chapters that aren't in static BMS data
       }
       return merged;
     } catch (error) {
@@ -265,6 +267,11 @@ export default function BMS() {
     });
   }, [chaptersForSelectedSubject]);
 
+  // Filter for roadmap: only chapters with sequence metadata (BMS learning path)
+  const roadmapChapters = useMemo(() => {
+    return sortedChapters.filter(c => c.sequence !== undefined);
+  }, [sortedChapters]);
+
   // Compute merged chapters for all subjects (only Supabase)
   const safeAlleKapitel = useMemo(() => {
     try {
@@ -281,10 +288,12 @@ export default function BMS() {
             // Preserve static fields that Supabase doesn't know about
             sequence: staticChapter.sequence ?? supabaseChapter.sequence,
             sequenceTitle: staticChapter.sequenceTitle ?? supabaseChapter.sequenceTitle,
-            linkedChapters: staticChapter.linkedChapters ?? supabaseChapter.linkedChapters,
+            linkedChapters: staticChapter.linkedChapters ?? supabaseChapter.linkedChapters ?? [],
           };
+        } else {
+          // Keep all Supabase chapters (full content from DB)
+          merged.push(supabaseChapter);
         }
-        // Don't add Supabase chapters that aren't in static BMS data
       }
       return merged;
     } catch (error) {
@@ -501,9 +510,9 @@ export default function BMS() {
         )}
 
         {/* Visual Learning Roadmap - Phase 4: STRUCT-03 */}
-        {kapitel.length > 0 && (
+        {roadmapChapters.length > 0 && (
           <FachRoadmap
-            chapters={kapitel}
+            chapters={roadmapChapters}
             currentChapterId={undefined}
             onSelectChapter={(chapterId) => {
               const chapter = kapitel.find(c => c.id === chapterId);
@@ -652,10 +661,12 @@ export default function BMS() {
                   // Preserve static fields that Supabase doesn't know about
                   sequence: staticChapter.sequence ?? dynamicChapter.sequence,
                   sequenceTitle: staticChapter.sequenceTitle ?? dynamicChapter.sequenceTitle,
-                  linkedChapters: staticChapter.linkedChapters ?? dynamicChapter.linkedChapters,
+                  linkedChapters: staticChapter.linkedChapters ?? dynamicChapter.linkedChapters ?? [],
                 };
+              } else {
+                // Keep all Supabase chapters (full content from DB)
+                sKapitel.push(dynamicChapter);
               }
-              // Don't add Supabase chapters that aren't in static BMS data
             }
           } catch (error) {
             console.error(`❌ Error loading chapters for ${subject.id}:`, error);
