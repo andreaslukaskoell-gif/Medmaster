@@ -18,6 +18,8 @@ Die Polymerase-Kettenreaktion (PCR) ist eine der wichtigsten molekularbiologisch
 
 Die PCR beruht auf sich wiederholenden Zyklen von drei Temperaturschritten. Jeder Zyklus verdoppelt die Anzahl der DNA-Moleküle, sodass nach n Zyklen theoretisch 2^n Kopien vorliegen. In der Praxis werden typischerweise 25-35 Zyklen durchgeführt.
 
+> **MerksatzBox type="altfragen":** PCR-Grundlagen (Denaturierung 94-95°C, Annealing 50-65°C, Elongation 72°C) gehören zu den häufigsten BMS-Prüfungsthemen. Die drei Schritte und ihre Temperaturen werden regelmäßig abgefragt.
+
 **Die drei Schritte pro Zyklus:**
 
 1. **Denaturierung (94-95°C):** Die Doppelstrang-DNA wird durch Hitze in Einzelstränge getrennt. Die Wasserstoffbrückenbindungen zwischen den komplementären Basen brechen auf.
@@ -188,6 +190,8 @@ Die von Frederick Sanger 1977 entwickelte Methode war lange Zeit der Goldstandar
 ### Prinzip
 
 Die Sanger-Sequenzierung basiert auf dem kontrollierten, zufälligen Abbruch der DNA-Synthese. Sie nutzt modifizierte Nukleotide, die sogenannten Didesoxyribonukleosidtriphosphate (ddNTPs).
+
+> **MerksatzBox type="altfragen":** Der Unterschied zwischen dNTPs und ddNTPs (fehlende 3'-OH-Gruppe führt zum Kettenabbruch) ist ein klassisches Prüfungsthema. Verstehe das Prinzip, nicht nur auswendig lernen.
 
 **Unterschied zu normalen dNTPs:**
 - **dNTPs** haben eine OH-Gruppe am 3'-C-Atom der Ribose → DNA-Synthese kann weiterlaufen
@@ -571,6 +575,8 @@ Der genetische Fingerabdruck basiert auf der Tatsache, dass das menschliche Geno
 ## Short Tandem Repeats (STRs)
 
 STRs sind kurze DNA-Sequenzen (typischerweise 2-6 Basenpaare), die sich mehrfach hintereinander wiederholen.
+
+> **MerksatzBox type="altfragen":** STR-Analyse ist der moderne Standard für genetische Fingerabdrücke (13-20 Loci, Multiplex-PCR). Die ältere RFLP-Methode wird oft als Vergleich abgefragt – kenne die Unterschiede.
 
 ### Eigenschaften von STRs
 

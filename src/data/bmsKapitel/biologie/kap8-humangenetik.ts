@@ -48,6 +48,8 @@ Die Mutation im Hämoglobin-Gen bewirkt:
 
 Penetranz beschreibt die Wahrscheinlichkeit, dass ein Genotyp zum erwarteten Phänotyp führt. Sie wird als Prozentsatz ausgedrückt.
 
+> **MerksatzBox type="altfragen":** Penetranz vs. Expressivität ist ein häufiges Prüfungsthema. Merke: Penetranz = "Tritt auf?" (ja/nein), Expressivität = "Wie stark?" (Schweregrad). Beispiele wie BRCA1 und NF1 werden oft abgefragt.
+
 **Vollständige Penetranz (100%):**
 Alle Träger des krankheitsverursachenden Genotyps zeigen auch die Erkrankung.
 - Beispiel: Huntington-Krankheit (nahezu 100% Penetranz)
@@ -251,6 +253,8 @@ Die PID ist ethisch umstritten, da sie zur "Selektion" von Embryonen führt. Nic
 ## Pränataldiagnostik (PND)
 
 Die PND umfasst verschiedene Untersuchungsmethoden während der Schwangerschaft, um fetale Fehlbildungen oder genetische Erkrankungen zu erkennen.
+
+> **MerksatzBox type="altfragen":** Amniozentese (15-20. SSW) vs. Chorionzottenbiopsie (10-13. SSW) ist ein klassisches Prüfungsthema. Merke die Zeitpunkte, Risiken und was analysiert wird (Fruchtwasser vs. Plazenta).
 
 ### Nicht-invasive Methoden
 
