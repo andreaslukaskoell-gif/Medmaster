@@ -249,7 +249,6 @@ export default function BMS() {
         const staticChap = staticById.get(chapter.id);
         if (staticChap?.sequence !== undefined) {
           // BMS sequenced chapter: static content takes precedence
-          console.log('✓ BMS override:', chapter.id, '→', staticChap.title);
           return {
             ...chapter,
             title: staticChap.title,
@@ -354,7 +353,6 @@ export default function BMS() {
     if (chapterId) {
       const chapter = chaptersForSelectedSubject.find((c) => c.id === chapterId);
       if (chapter) {
-        console.log('📍 Setting activeKapitel from processed chapters:', chapter.id, '→', chapter.title);
         setActiveKapitel(chapter);
       }
     }
