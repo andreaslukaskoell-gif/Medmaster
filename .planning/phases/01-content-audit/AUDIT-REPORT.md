@@ -180,16 +180,112 @@ Mathematik:
 
 **All 100 mapped Stichwort entries have broken linkedChapterId references.**
 
-### Sample Broken Links
+### Detailed Validation Results
+
+**Test performed:** For each Stichwort entry with `linkedChapterId`, executed:
+```javascript
+const kapitel = getKapitelById(linkedChapterId);
+const isValid = kapitel !== undefined;
+const hasUnterkapitel = kapitel?.unterkapitel?.length > 0;
+```
+
+**Results:**
+- **100 linkedChapterId values tested**
+- **0 valid** (Kapitel found via getKapitelById)
+- **100 broken** (Kapitel not found)
+- **0 empty** (Kapitel exists but has empty unterkapitel array)
+
+**Current alleKapitel state:**
+- Total Kapitel in alleKapitel: 1
+- Kapitel IDs in alleKapitel: `bio-kap1`
+- Unterkapitel in bio-kap1: 1 (id: `bio-kap1-uk01`, title: "Zellstruktur")
+
+**Mismatch:** The single existing Kapitel (`bio-kap1`) is not referenced by any Stichwort entry. All Stichwort entries use fine-grained IDs like `bio-zelle-allgemein`, not `bio-kap1`.
+
+### Sample Broken Links by Fach
+
+#### Biologie (75 broken links)
 
 | Stichwort ID | linkedChapterId | Thema | Issue |
 |--------------|-----------------|-------|-------|
 | bio-1-01 | bio-zelle-allgemein | Allgemeine Charakteristika lebender Systeme | Chapter not found |
 | bio-1-02 | bio-zelle-typen | Zelltypen | Chapter not found |
 | bio-1-03 | bio-zelle-membran | Zellmembranen | Chapter not found |
+| bio-1-06 | bio-zelle-mitochondrien | Mitochondrien | Chapter not found |
+| bio-1-17 | bio-zelle-transport | Stofftransport | Chapter not found |
+| bio-2-03 | bio-gewebe-muskel | Muskelgewebe | Chapter not found |
+| bio-3-01 | bio-organ-nerven | Nervensystem | Chapter not found |
+| bio-3-06 | bio-organ-immun | Immunsystem | Chapter not found |
+| bio-5-01 | bio-genetik-mendel | Mendelsche Regeln | Chapter not found |
+| bio-6-01 | bio-molgen-dna | DNA-Aufbau und Replikation | Chapter not found |
+| ... | ... | (65 more) | ... |
+
+#### Chemie (13 broken links)
+
+| Stichwort ID | linkedChapterId | Thema | Issue |
+|--------------|-----------------|-------|-------|
 | ch-1-01 | ch-atombau | Elementarteilchen und Atomaufbau | Chapter not found |
+| ch-3-01 | ch-gasgesetze | Gasgesetze | Chapter not found |
+| ch-5-01 | ch-pse | Periodensystem | Chapter not found |
+| ch-6-01 | ch-bindungen | Bindungstypen | Chapter not found |
+| ch-10-01 | ch-säure-base | Säure-Base-Reaktionen | Chapter not found |
+| ch-11-01 | ch-redox | Redox und Elektrochemie | Chapter not found |
+| ch-12-01 | ch-organik | Organische Verbindungen | Chapter not found |
+| ... | ... | (6 more) | ... |
+
+#### Physik (7 broken links)
+
+| Stichwort ID | linkedChapterId | Thema | Issue |
+|--------------|-----------------|-------|-------|
 | ph-2-01 | ph-mechanik | Mechanik | Chapter not found |
+| ph-3-01 | ph-wellen | Schwingungen und Wellen | Chapter not found |
+| ph-4-01 | ph-wärme | Thermodynamik | Chapter not found |
+| ph-5-01 | ph-elektrizität | Elektrizität und Magnetismus | Chapter not found |
+| ph-6-01 | ph-optik | Optik | Chapter not found |
+| ph-7-01 | ph-atomphysik | Atom- und Kernphysik | Chapter not found |
+| ... | ... | (1 more) | ... |
+
+#### Mathematik (5 broken links)
+
+| Stichwort ID | linkedChapterId | Thema | Issue |
+|--------------|-----------------|-------|-------|
 | ma-2-01 | ma-algebra | Algebra | Chapter not found |
+| ma-3-01 | ma-geometrie | Geometrie | Chapter not found |
+| ma-5-01 | ma-analysis | Funktionen und Analysis | Chapter not found |
+| ma-6-01 | ma-vektoren | Vektorrechnung | Chapter not found |
+| ... | ... | (1 more) | ... |
+
+### Entries Missing linkedChapterId (6 entries)
+
+These Stichwort entries are marked `abgedeckt: true` but have no `linkedChapterId`:
+
+| Stichwort ID | Fach | Thema | abgedeckt | Priorität |
+|--------------|------|-------|-----------|-----------|
+| bio-8-02 | Biologie | Genetische Beratung und Diagnostik | ✅ | mittel |
+| ch-2-01 | Chemie | Quantenmechanik-Grundlagen | ✅ | mittel |
+| ch-9-01 | Chemie | Wichtige Elemente | ✅ | mittel |
+| ph-1-01 | Physik | Größen und Einheiten | ✅ | mittel |
+| ma-1-01 | Mathematik | Zehnerpotenzen | ✅ | mittel |
+| ma-4-01 | Mathematik | Einheiten | ✅ | mittel |
+
+**Issue:** These entries claim to be covered (`abgedeckt: true`) but provide no linkedChapterId to navigate to the content. This is a data integrity issue.
+
+### Validation Summary
+
+**Status of SYNC-01 requirement:**
+> "All 189 Stichwortliste entries have mapped status (linked chapter ID or marked as missing)"
+
+**Current state:**
+- ✅ All entries have status (abgedeckt: true/false)
+- ❌ 100 entries have linkedChapterId but chapter doesn't exist (broken links)
+- ❌ 6 entries marked abgedeckt: true but have no linkedChapterId (integrity issue)
+- ✅ 8 neu2026 entries correctly marked abgedeckt: false with no linkedChapterId
+- ⚠️ Only 106 entries exist (expected 189)
+
+**SYNC-01 status: PARTIALLY FULFILLED**
+- Mapping status exists for all 106 entries
+- Linked chapter IDs exist for 100 entries (but all are broken)
+- Missing entries (83) cannot be validated
 
 **Pattern:** The naming convention in `linkedChapterId` is consistent and logical, but **no matching Kapitel implementations exist**.
 
