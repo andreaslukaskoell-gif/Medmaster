@@ -34,13 +34,13 @@
 
 ### Smart-Function Integration (QuizQuestion + MerksatzBox + Progression)
 
-- [ ] **SMART-01**: Jede Frage nutzt QuizQuestion.tsx mit XP-Vergabe via `useStore.ts`
-- [ ] **SMART-02**: Second-Try-Mechanik ist aktiv (halbe XP bei zweitem Versuch)
+- [x] **SMART-01**: Jede Frage nutzt QuizQuestion.tsx mit XP-Vergabe via `useStore.ts`
+- [x] **SMART-02**: Second-Try-Mechanik ist aktiv (halbe XP bei zweitem Versuch)
 - [x] **SMART-03**: Hints werden angezeigt nach falschem ersten Versuch
 - [ ] **SMART-04**: MerksatzBox-Komponente ist in jedem Kapitel mindestens 2x verwendet (merke/altfragen/klinisch/achtung/tipp)
-- [ ] **SMART-05**: XP-System aus `xp.ts` + `progression.ts` ist konsistent integriert
-- [ ] **SMART-06**: Level-Aufstieg wird nach Quiz-Abschluss angezeigt mit Level-Namen
-- [ ] **SMART-07**: Hot-Streak-Bonus wird nach 3+ korrekten Antworten in Folge vergeben
+- [x] **SMART-05**: XP-System aus `xp.ts` + `progression.ts` ist konsistent integriert
+- [x] **SMART-06**: Level-Aufstieg wird nach Quiz-Abschluss angezeigt mit Level-Namen
+- [x] **SMART-07**: Hot-Streak-Bonus wird nach 3+ korrekten Antworten in Folge vergeben
 
 ### Fortschritts-Tracking (Mastered-Status + Progress-Bars)
 
@@ -129,13 +129,13 @@
 | STRUCT-03 | Phase 4 | Pending |
 | STRUCT-04 | Phase 4 | Pending |
 | STRUCT-05 | Phase 4 | Pending |
-| SMART-01 | Phase 5 | Pending |
-| SMART-02 | Phase 5 | Pending |
+| SMART-01 | Phase 5 | ✅ Complete (05-01) |
+| SMART-02 | Phase 5 | ✅ Complete (05-01) |
 | SMART-03 | Phase 5 | Complete |
 | SMART-04 | Phase 5 | Pending |
-| SMART-05 | Phase 5 | Pending |
-| SMART-06 | Phase 5 | Pending |
-| SMART-07 | Phase 5 | Pending |
+| SMART-05 | Phase 5 | ✅ Complete (05-01) |
+| SMART-06 | Phase 5 | ✅ Complete (05-01) |
+| SMART-07 | Phase 5 | ✅ Complete (05-01) |
 | PROG-01 | Phase 6 | Pending |
 | PROG-02 | Phase 6 | Pending |
 | PROG-03 | Phase 6 | Pending |
