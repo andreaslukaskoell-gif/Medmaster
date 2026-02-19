@@ -229,43 +229,41 @@ export default function BMS() {
   const chaptersForSelectedSubject = useMemo(() => {
     if (!selectedSubject) return [];
     try {
-      const sourceChapters = supabaseChapters.filter((k) => k && k.subject === selectedSubject);
       const staticChapters = (getKapitelBySubject && getKapitelBySubject(selectedSubject)) || [];
+      const sourceChapters = supabaseChapters.filter((k) => k?.subject === selectedSubject);
+
+      // Standard merge: Supabase has precedence
       const merged = [...staticChapters];
       for (const dynamicChapter of sourceChapters) {
-        if (!dynamicChapter || !dynamicChapter.id) continue;
-        const index = merged.findIndex((c) => c && c.id === dynamicChapter.id);
+        if (!dynamicChapter?.id) continue;
+        const index = merged.findIndex((c) => c?.id === dynamicChapter.id);
         if (index >= 0) {
-          const staticChapter = merged[index];
-
-          if (staticChapter.sequence !== undefined) {
-            // BMS learning path chapter: static content takes precedence
-            merged[index] = {
-              ...dynamicChapter,              // Supabase extras (SRS data, completion)
-              title: staticChapter.title,     // Static title ("Methoden der Genetik")
-              unterkapitel: staticChapter.unterkapitel?.length
-                ? staticChapter.unterkapitel  // Static unterkapitel preferred
-                : dynamicChapter.unterkapitel,
-              sequence: staticChapter.sequence,
-              sequenceTitle: staticChapter.sequenceTitle,
-              linkedChapters: staticChapter.linkedChapters ?? [],
-            };
-          } else {
-            // Normal chapter: Supabase takes precedence, add static metadata
-            merged[index] = {
-              ...staticChapter,
-              ...dynamicChapter,
-              sequence: staticChapter.sequence ?? dynamicChapter.sequence,
-              sequenceTitle: staticChapter.sequenceTitle ?? dynamicChapter.sequenceTitle,
-              linkedChapters: staticChapter.linkedChapters ?? dynamicChapter.linkedChapters ?? [],
-            };
-          }
+          merged[index] = { ...merged[index], ...dynamicChapter };
         } else {
-          // Keep all Supabase chapters (full content from DB)
           merged.push(dynamicChapter);
         }
       }
-      return merged;
+
+      // POST-PROCESSING: BMS learning path chapters get their static content back
+      const staticById = new Map(staticChapters.map(c => [c.id, c]));
+      return merged.map(chapter => {
+        const staticChap = staticById.get(chapter.id);
+        if (staticChap?.sequence !== undefined) {
+          // BMS sequenced chapter: static content takes precedence
+          console.log('✓ BMS override:', chapter.id, '→', staticChap.title);
+          return {
+            ...chapter,
+            title: staticChap.title,
+            unterkapitel: staticChap.unterkapitel?.length
+              ? staticChap.unterkapitel
+              : chapter.unterkapitel,
+            sequence: staticChap.sequence,
+            sequenceTitle: staticChap.sequenceTitle,
+            linkedChapters: staticChap.linkedChapters ?? [],
+          };
+        }
+        return chapter; // Normal chapter: keep Supabase content
+      });
     } catch (error) {
       console.error('❌ Error computing chapters for subject:', error);
       return [];
@@ -291,41 +289,38 @@ export default function BMS() {
   const safeAlleKapitel = useMemo(() => {
     try {
       const staticChapters = Array.isArray(alleKapitel) ? alleKapitel : [];
+
+      // Standard merge: Supabase has precedence
       const merged = [...staticChapters];
       for (const supabaseChapter of supabaseChapters) {
-        if (!supabaseChapter || !supabaseChapter.id) continue;
-        const index = merged.findIndex((c) => c && c.id === supabaseChapter.id);
+        if (!supabaseChapter?.id) continue;
+        const index = merged.findIndex((c) => c?.id === supabaseChapter.id);
         if (index >= 0) {
-          const staticChapter = merged[index];
-
-          if (staticChapter.sequence !== undefined) {
-            // BMS learning path chapter: static content takes precedence
-            merged[index] = {
-              ...supabaseChapter,              // Supabase extras (SRS data, completion)
-              title: staticChapter.title,      // Static title ("Methoden der Genetik")
-              unterkapitel: staticChapter.unterkapitel?.length
-                ? staticChapter.unterkapitel   // Static unterkapitel preferred
-                : supabaseChapter.unterkapitel,
-              sequence: staticChapter.sequence,
-              sequenceTitle: staticChapter.sequenceTitle,
-              linkedChapters: staticChapter.linkedChapters ?? [],
-            };
-          } else {
-            // Normal chapter: Supabase takes precedence, add static metadata
-            merged[index] = {
-              ...staticChapter,
-              ...supabaseChapter,
-              sequence: staticChapter.sequence ?? supabaseChapter.sequence,
-              sequenceTitle: staticChapter.sequenceTitle ?? supabaseChapter.sequenceTitle,
-              linkedChapters: staticChapter.linkedChapters ?? supabaseChapter.linkedChapters ?? [],
-            };
-          }
+          merged[index] = { ...merged[index], ...supabaseChapter };
         } else {
-          // Keep all Supabase chapters (full content from DB)
           merged.push(supabaseChapter);
         }
       }
-      return merged;
+
+      // POST-PROCESSING: BMS learning path chapters get their static content back
+      const staticById = new Map(staticChapters.map(c => [c.id, c]));
+      return merged.map(chapter => {
+        const staticChap = staticById.get(chapter.id);
+        if (staticChap?.sequence !== undefined) {
+          // BMS sequenced chapter: static content takes precedence
+          return {
+            ...chapter,
+            title: staticChap.title,
+            unterkapitel: staticChap.unterkapitel?.length
+              ? staticChap.unterkapitel
+              : chapter.unterkapitel,
+            sequence: staticChap.sequence,
+            sequenceTitle: staticChap.sequenceTitle,
+            linkedChapters: staticChap.linkedChapters ?? [],
+          };
+        }
+        return chapter; // Normal chapter: keep Supabase content
+      });
     } catch (error) {
       console.error('❌ Error merging chapters:', error);
       return [];
@@ -678,41 +673,39 @@ export default function BMS() {
           let sKapitel: Kapitel[] = [];
           try {
             const staticChapters = (getKapitelBySubject && getKapitelBySubject(subject.id)) || [];
-            const dynamicChapters = supabaseChapters.filter((k) => k && k.subject === subject.id);
+            const dynamicChapters = supabaseChapters.filter((k) => k?.subject === subject.id);
+
+            // Standard merge: Supabase has precedence
             sKapitel = [...staticChapters];
             for (const dynamicChapter of dynamicChapters) {
-              if (!dynamicChapter || !dynamicChapter.id) continue;
-              const index = sKapitel.findIndex((c) => c && c.id === dynamicChapter.id);
+              if (!dynamicChapter?.id) continue;
+              const index = sKapitel.findIndex((c) => c?.id === dynamicChapter.id);
               if (index >= 0) {
-                const staticChapter = sKapitel[index];
-
-                if (staticChapter.sequence !== undefined) {
-                  // BMS learning path chapter: static content takes precedence
-                  sKapitel[index] = {
-                    ...dynamicChapter,              // Supabase extras (SRS data, completion)
-                    title: staticChapter.title,     // Static title ("Methoden der Genetik")
-                    unterkapitel: staticChapter.unterkapitel?.length
-                      ? staticChapter.unterkapitel  // Static unterkapitel preferred
-                      : dynamicChapter.unterkapitel,
-                    sequence: staticChapter.sequence,
-                    sequenceTitle: staticChapter.sequenceTitle,
-                    linkedChapters: staticChapter.linkedChapters ?? [],
-                  };
-                } else {
-                  // Normal chapter: Supabase takes precedence, add static metadata
-                  sKapitel[index] = {
-                    ...staticChapter,
-                    ...dynamicChapter,
-                    sequence: staticChapter.sequence ?? dynamicChapter.sequence,
-                    sequenceTitle: staticChapter.sequenceTitle ?? dynamicChapter.sequenceTitle,
-                    linkedChapters: staticChapter.linkedChapters ?? dynamicChapter.linkedChapters ?? [],
-                  };
-                }
+                sKapitel[index] = { ...sKapitel[index], ...dynamicChapter };
               } else {
-                // Keep all Supabase chapters (full content from DB)
                 sKapitel.push(dynamicChapter);
               }
             }
+
+            // POST-PROCESSING: BMS learning path chapters get their static content back
+            const staticById = new Map(staticChapters.map(c => [c.id, c]));
+            sKapitel = sKapitel.map(chapter => {
+              const staticChap = staticById.get(chapter.id);
+              if (staticChap?.sequence !== undefined) {
+                // BMS sequenced chapter: static content takes precedence
+                return {
+                  ...chapter,
+                  title: staticChap.title,
+                  unterkapitel: staticChap.unterkapitel?.length
+                    ? staticChap.unterkapitel
+                    : chapter.unterkapitel,
+                  sequence: staticChap.sequence,
+                  sequenceTitle: staticChap.sequenceTitle,
+                  linkedChapters: staticChap.linkedChapters ?? [],
+                };
+              }
+              return chapter; // Normal chapter: keep Supabase content
+            });
           } catch (error) {
             console.error(`❌ Error loading chapters for ${subject.id}:`, error);
             sKapitel = [];
