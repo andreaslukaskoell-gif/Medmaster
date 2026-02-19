@@ -32,10 +32,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Content audit document lists all chapters not in Stichwortliste (candidates for deletion)
   3. Every BMS question uses tags from linkedQuestionTags for trackability
   4. Coverage report shows which Fächer have gaps (neu2026 topics identified)
-**Plans**: TBD
+**Plans**: 3 plans in 2 waves
 
 Plans:
-- [ ] TBD
+- [ ] 01-01-PLAN.md — Map Stichwortliste entries to chapters and identify coverage gaps
+- [ ] 01-02-PLAN.md — Validate premium pattern compliance (MerksatzBox + QuizQuestion)
+- [ ] 01-03-PLAN.md — Consolidate audit findings and create Phase 1 summary
 
 ### Phase 2: Gap Filling
 **Goal**: All 8 missing neu2026 topics have complete content, abgedeckt flags updated
@@ -154,7 +156,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Content Audit | 0/TBD | Not started | - |
+| 1. Content Audit | 0/3 | Ready to execute | - |
 | 2. Gap Filling | 0/TBD | Not started | - |
 | 3. Quality Elevation | 0/TBD | Not started | - |
 | 4. Structure Reorganization | 0/TBD | Not started | - |
