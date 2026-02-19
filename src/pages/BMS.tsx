@@ -217,13 +217,28 @@ export default function BMS() {
 
     if (subjectId) {
       setSelectedSubject(subjectId);
-      const chapter = chapterId ? supabaseChapters.find((c) => c.id === chapterId) : null;
-      setActiveKapitel(chapter ?? null);
+      // Note: activeKapitel will be updated by the next useEffect from chaptersForSelectedSubject
     } else if (fachParam === undefined && kapitelParam === undefined) {
       setSelectedSubject(null);
       setActiveKapitel(null);
     }
   }, [fachParam, kapitelParam, supabaseChapters]);
+
+  // Update activeKapitel from post-processed chapters (after BMS override)
+  useEffect(() => {
+    if (!selectedSubject || chaptersForSelectedSubject.length === 0) return;
+
+    const allChapterIds = chaptersForSelectedSubject.map((c) => c.id);
+    const chapterId = chapterIdFromParams(fachParam, kapitelParam, allChapterIds);
+
+    if (chapterId) {
+      const chapter = chaptersForSelectedSubject.find((c) => c.id === chapterId);
+      if (chapter) {
+        console.log('📍 Setting activeKapitel from processed chapters:', chapter.id, '→', chapter.title);
+        setActiveKapitel(chapter);
+      }
+    }
+  }, [fachParam, kapitelParam, selectedSubject, chaptersForSelectedSubject]);
 
   // Compute merged chapters for selected subject (only Supabase)
   const chaptersForSelectedSubject = useMemo(() => {
