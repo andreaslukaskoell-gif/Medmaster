@@ -236,10 +236,17 @@ export default function BMS() {
         if (!dynamicChapter || !dynamicChapter.id) continue;
         const index = merged.findIndex((c) => c && c.id === dynamicChapter.id);
         if (index >= 0) {
-          merged[index] = dynamicChapter;
-        } else {
-          merged.push(dynamicChapter);
+          // Merge Supabase data but preserve static BMS metadata
+          const staticChapter = merged[index];
+          merged[index] = {
+            ...dynamicChapter,
+            // Preserve static fields that Supabase doesn't know about
+            sequence: staticChapter.sequence ?? dynamicChapter.sequence,
+            sequenceTitle: staticChapter.sequenceTitle ?? dynamicChapter.sequenceTitle,
+            linkedChapters: staticChapter.linkedChapters ?? dynamicChapter.linkedChapters,
+          };
         }
+        // Don't add Supabase chapters that aren't in static BMS data
       }
       return merged;
     } catch (error) {
@@ -267,10 +274,17 @@ export default function BMS() {
         if (!supabaseChapter || !supabaseChapter.id) continue;
         const index = merged.findIndex((c) => c && c.id === supabaseChapter.id);
         if (index >= 0) {
-          merged[index] = supabaseChapter;
-        } else {
-          merged.push(supabaseChapter);
+          // Merge Supabase data but preserve static BMS metadata
+          const staticChapter = merged[index];
+          merged[index] = {
+            ...supabaseChapter,
+            // Preserve static fields that Supabase doesn't know about
+            sequence: staticChapter.sequence ?? supabaseChapter.sequence,
+            sequenceTitle: staticChapter.sequenceTitle ?? supabaseChapter.sequenceTitle,
+            linkedChapters: staticChapter.linkedChapters ?? supabaseChapter.linkedChapters,
+          };
         }
+        // Don't add Supabase chapters that aren't in static BMS data
       }
       return merged;
     } catch (error) {
@@ -605,7 +619,7 @@ export default function BMS() {
   // Main view: 4 subject cards
   // Note: totalUK and completedUK are already computed above (before early returns)
   return (
-    <div className="max-w-6xl mx-auto space-y-6 p-6">
+    <div className="max-w-6xl mx-auto space-y-6 p-6 overflow-hidden">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "BMS" }]} />
 
       <div>
@@ -631,10 +645,17 @@ export default function BMS() {
               if (!dynamicChapter || !dynamicChapter.id) continue;
               const index = sKapitel.findIndex((c) => c && c.id === dynamicChapter.id);
               if (index >= 0) {
-                sKapitel[index] = dynamicChapter;
-              } else {
-                sKapitel.push(dynamicChapter);
+                // Merge Supabase data but preserve static BMS metadata
+                const staticChapter = sKapitel[index];
+                sKapitel[index] = {
+                  ...dynamicChapter,
+                  // Preserve static fields that Supabase doesn't know about
+                  sequence: staticChapter.sequence ?? dynamicChapter.sequence,
+                  sequenceTitle: staticChapter.sequenceTitle ?? dynamicChapter.sequenceTitle,
+                  linkedChapters: staticChapter.linkedChapters ?? dynamicChapter.linkedChapters,
+                };
               }
+              // Don't add Supabase chapters that aren't in static BMS data
             }
           } catch (error) {
             console.error(`❌ Error loading chapters for ${subject.id}:`, error);
