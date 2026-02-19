@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Content Audit** - Sync existing content with Stichwortliste, identify gaps and irrelevant content (completed 2026-02-19)
 - [x] **Phase 2: Gap Filling** - Create missing content for 8 neu2026 topics and sync abgedeckt flags (completed 2026-02-19)
 - [x] **Phase 3: Quality Elevation** - Raise all BMS content to textbook-level with exam markings (completed 2026-02-19)
-- [ ] **Phase 4: Structure Reorganization** - Implement lernlogische Abfolge and premium buckets
+- [x] **Phase 4: Structure Reorganization** - Implement lernlogische Abfolge and premium buckets (completed 2026-02-19)
 - [ ] **Phase 5: Smart Integration** - Ensure QuizQuestion, MerksatzBox, and XP systems work consistently
 - [ ] **Phase 6: Progress Tracking** - Build Mastered status and progress bars at all levels
 - [ ] **Phase 7: UX Polish** - Eliminate glitches, add breadcrumbs, improve navigation flow
@@ -87,8 +87,8 @@ Plans:
 **Plans**: 2 plans in 2 waves
 
 Plans:
-- [ ] 04-01-PLAN.md — Data layer foundation: extend types with sequence/smart-links, create SUBJECT_COLORS, apply sequence to Biologie
-- [ ] 04-02-PLAN.md — UI integration: FachRoadmap component, centralized colors in BMS.tsx, smart-links in chapter views (checkpoint)
+- [x] 04-01-PLAN.md — Data layer foundation: extend types with sequence/smart-links, create SUBJECT_COLORS, apply sequence to Biologie
+- [x] 04-02-PLAN.md — UI integration: FachRoadmap component, centralized colors in BMS.tsx, smart-links in chapter views (checkpoint)
 
 ### Phase 5: Smart Integration
 **Goal**: QuizQuestion, MerksatzBox, and progression systems work seamlessly in every chapter
@@ -162,10 +162,10 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Content Audit | 0/3 | Complete    | 2026-02-19 |
-| 2. Gap Filling | 0/TBD | Not started | - |
-| 3. Quality Elevation | 0/TBD | Not started | - |
-| 4. Structure Reorganization | 0/TBD | Not started | - |
+| 1. Content Audit | 3/3 | Complete    | 2026-02-19 |
+| 2. Gap Filling | 3/3 | Complete    | 2026-02-19 |
+| 3. Quality Elevation | 4/4 | Complete    | 2026-02-19 |
+| 4. Structure Reorganization | 2/2 | Complete    | 2026-02-19 |
 | 5. Smart Integration | 0/TBD | Not started | - |
 | 6. Progress Tracking | 0/TBD | Not started | - |
 | 7. UX Polish | 0/TBD | Not started | - |
