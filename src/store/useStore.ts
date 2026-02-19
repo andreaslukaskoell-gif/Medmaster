@@ -168,6 +168,9 @@ interface AppState {
   smartAdjustDismissedUntil: string;
   /** ISO timestamp der letzten Aktivität (für Streak-Protection) */
   lastActiveAt: string;
+  /** Premium subscription status (true = active subscription or beta access) */
+  isPro: boolean;
+  setIsPro: (value: boolean) => void;
 
   addXP: (amount: number) => void;
   /** XP aus Basis + Schwierigkeit + Zeit; Fallbacks wenn Daten fehlen. */
@@ -235,7 +238,9 @@ export const useStore = create<AppState>()(
       goalAchievedByDate: {},
       smartAdjustDismissedUntil: "",
       lastActiveAt: "",
+      isPro: false,
 
+      setIsPro: (value) => set({ isPro: value }),
       setPendingBadgeId: (id) => set({ pendingBadgeId: id }),
 
       setGoalAchievedToday: (date, achieved) =>
