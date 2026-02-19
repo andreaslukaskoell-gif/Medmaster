@@ -13,7 +13,7 @@ Transform MedMaster from mixed-quality BMS content into a premium-grade learning
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Content Audit** - Sync existing content with Stichwortliste, identify gaps and irrelevant content (completed 2026-02-19)
-- [ ] **Phase 2: Gap Filling** - Create missing content for 8 neu2026 topics and sync abgedeckt flags
+- [x] **Phase 2: Gap Filling** - Create missing content for 8 neu2026 topics and sync abgedeckt flags (completed 2026-02-19)
 - [ ] **Phase 3: Quality Elevation** - Raise all BMS content to textbook-level with exam markings
 - [ ] **Phase 4: Structure Reorganization** - Implement lernlogische Abfolge and premium buckets
 - [ ] **Phase 5: Smart Integration** - Ensure QuizQuestion, MerksatzBox, and XP systems work consistently
@@ -51,9 +51,9 @@ Plans:
 **Plans**: 3 plans in 2 waves
 
 Plans:
-- [ ] 02-01-PLAN.md — Add tags field to SelfTestQuestion interface and create Kapitel 7 (Methoden der Genetik) with 6 Unterkapitel
-- [ ] 02-02-PLAN.md — Create Kapitel 8 (Humangenetik) with 2 Unterkapitel
-- [ ] 02-03-PLAN.md — Update Stichwortliste abgedeckt flags for all 8 neu2026 topics
+- [x] 02-01-PLAN.md — Add tags field to SelfTestQuestion interface and create Kapitel 7 (Methoden der Genetik) with 6 Unterkapitel
+- [x] 02-02-PLAN.md — Create Kapitel 8 (Humangenetik) with 2 Unterkapitel
+- [x] 02-03-PLAN.md — Update Stichwortliste abgedeckt flags for all 8 neu2026 topics
 
 ### Phase 3: Quality Elevation
 **Goal**: All BMS content meets textbook-level standards with exam markings and clinical highlights
