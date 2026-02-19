@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 interface MerksatzBoxProps {
   text: string;
   type?: "merke" | "altfragen" | "klinisch" | "achtung" | "tipp";
@@ -49,11 +51,16 @@ const config = {
 export function MerksatzBox({ text, type = "merke" }: MerksatzBoxProps) {
   const c = config[type];
   return (
-    <div className={`${c.bg} border ${c.border} rounded-xl p-4 my-6`}>
+    <motion.div
+      initial={{ opacity: 0, y: 4 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      className={`relative ${c.bg} backdrop-blur-sm border ${c.border} rounded-xl p-4 my-6 shadow-sm hover:shadow-md transition-shadow`}
+    >
       <p className={`font-bold ${c.title} flex items-center gap-2`}>
         {c.icon} {c.label}
       </p>
       <p className={`${c.body} mt-1 text-sm leading-relaxed`} dangerouslySetInnerHTML={{ __html: text }} />
-    </div>
+    </motion.div>
   );
 }
