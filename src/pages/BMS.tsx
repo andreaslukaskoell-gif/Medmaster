@@ -18,6 +18,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import type { Kapitel } from "@/data/bmsKapitel/types";
+import { SUBJECT_COLORS, getSubjectColors } from '@/data/bmsKapitel/colors';
 import BMSKapitelView from "./BMSKapitelView";
 import { printChapterOverview, listAllChapters } from "@/utils/listChapters";
 import { loadBMSChaptersSWR } from "@/lib/bmsChaptersLoader";
@@ -65,44 +66,32 @@ function useSafeStore() {
 }
 
 const subjects = [
-  { 
-    id: "biologie", 
-    label: "Biologie", 
-    icon: Dna, 
-    color: "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400", 
-    active: "bg-emerald-600 hover:bg-emerald-700", 
-    progress: "bg-emerald-500", 
-    border: "border-l-emerald-500",
+  {
+    id: "biologie" as const,
+    label: "Biologie",
+    icon: Dna,
+    colors: SUBJECT_COLORS.biologie,
     description: "Lebewesen, Zellen, Genetik, Evolution"
   },
-  { 
-    id: "chemie", 
-    label: "Chemie", 
-    icon: Atom, 
-    color: "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400", 
-    active: "bg-red-600 hover:bg-red-700", 
-    progress: "bg-red-500", 
-    border: "border-l-red-500",
+  {
+    id: "chemie" as const,
+    label: "Chemie",
+    icon: Atom,
+    colors: SUBJECT_COLORS.chemie,
     description: "Periodensystem, Bindungen, Reaktionen"
   },
-  { 
-    id: "physik", 
-    label: "Physik", 
-    icon: Zap, 
-    color: "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400", 
-    active: "bg-blue-600 hover:bg-blue-700", 
-    progress: "bg-blue-500", 
-    border: "border-l-blue-500",
+  {
+    id: "physik" as const,
+    label: "Physik",
+    icon: Zap,
+    colors: SUBJECT_COLORS.physik,
     description: "Mechanik, Elektrizität, Wellen, Optik"
   },
-  { 
-    id: "mathematik", 
-    label: "Mathematik", 
-    icon: Calculator, 
-    color: "bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400", 
-    active: "bg-violet-600 hover:bg-violet-700", 
-    progress: "bg-violet-500", 
-    border: "border-l-violet-500",
+  {
+    id: "mathematik" as const,
+    label: "Mathematik",
+    icon: Calculator,
+    colors: SUBJECT_COLORS.mathematik,
     description: "Algebra, Analysis, Geometrie, Trigonometrie"
   },
 ] as const;
@@ -257,6 +246,16 @@ export default function BMS() {
       return [];
     }
   }, [selectedSubject, supabaseChapters]);
+
+  // Sort chapters by sequence number (Phase 4: STRUCT-02)
+  const sortedChapters = useMemo(() => {
+    if (!Array.isArray(chaptersForSelectedSubject)) return [];
+    return [...chaptersForSelectedSubject].sort((a, b) => {
+      const aSeq = a.sequence ?? 999;
+      const bSeq = b.sequence ?? 999;
+      return aSeq - bSeq;
+    });
+  }, [chaptersForSelectedSubject]);
 
   // Compute merged chapters for all subjects (only Supabase)
   const safeAlleKapitel = useMemo(() => {
@@ -414,13 +413,13 @@ export default function BMS() {
       );
     }
 
-    const kapitel = Array.isArray(chaptersForSelectedSubject) ? chaptersForSelectedSubject : [];
+    const kapitel = Array.isArray(sortedChapters) ? sortedChapters : [];
 
     const subjectUK = kapitel.reduce((sum, k) => {
       if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
       return sum + k.unterkapitel.length;
     }, 0);
-    
+
     const subjectCompletedUK = kapitel.reduce((sum, k) => {
       if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
       return sum + (k.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length || 0);
@@ -493,10 +492,10 @@ export default function BMS() {
           </h2>
           
           {kapitel.length === 0 ? (
-            <Card className={`border-l-4 ${subjectData.border}`}>
+            <Card className={`border-l-4 ${subjectData.colors.border}`}>
               <CardContent className="p-8 text-center">
                 <div className="mb-4 flex justify-center">
-                  <div className={`w-16 h-16 rounded-full ${subjectData.color} flex items-center justify-center`}>
+                  <div className={`w-16 h-16 rounded-full ${subjectData.colors.bg} ${subjectData.colors.bgDark} ${subjectData.colors.text} ${subjectData.colors.textDark} flex items-center justify-center`}>
                     <subjectData.icon className="w-8 h-8" />
                   </div>
                 </div>
@@ -535,7 +534,7 @@ export default function BMS() {
               return (
                 <Card
                   key={kap.id}
-                  className={`hover:shadow-md transition-all cursor-pointer border-l-4 ${subjectData.border} ${hasMastery ? "ring-1 ring-amber-400/60 dark:ring-amber-500/50 shadow-amber-500/10" : ""}`}
+                  className={`hover:shadow-md transition-all cursor-pointer border-l-4 ${subjectData.colors.border} ${hasMastery ? "ring-1 ring-amber-400/60 dark:ring-amber-500/50 shadow-amber-500/10" : ""}`}
                   onClick={() => {
                     setActiveKapitel(kap);
                     navigate(pathForChapter(kap.subject, kap.id));
@@ -639,7 +638,7 @@ export default function BMS() {
           return (
             <Card
               key={subject.id}
-              className={`hover:shadow-lg transition-all cursor-pointer border-l-4 ${subject.border} h-full`}
+              className={`hover:shadow-lg transition-all cursor-pointer border-l-4 ${subject.colors.border} h-full`}
               onClick={() => {
                 setSelectedSubject(subject.id);
                 navigate(pathForSubject(subject.id));
@@ -647,7 +646,7 @@ export default function BMS() {
             >
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <div className={`w-16 h-16 rounded-xl ${subject.color} flex items-center justify-center shrink-0`}>
+                  <div className={`w-16 h-16 rounded-xl ${subject.colors.bg} ${subject.colors.bgDark} ${subject.colors.text} ${subject.colors.textDark} flex items-center justify-center shrink-0`}>
                     <subject.icon className="w-8 h-8" />
                   </div>
                   <div className="flex-1 min-w-0">
@@ -673,7 +672,7 @@ export default function BMS() {
                     {sTotal > 0 && (
                       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
                         <div
-                          className={`${subject.progress} h-2 rounded-full transition-all`}
+                          className={`${subject.colors.progress} h-2 rounded-full transition-all`}
                           style={{ width: `${(sDone / sTotal) * 100}%` }}
                         />
                       </div>
