@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, CheckCircle2, Clock, BookOpen, ChevronRight, Play } from "lucide-react";
+import { ChevronLeft, CheckCircle2, Clock, BookOpen, ChevronRight, Play, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,6 +11,8 @@ import { useLocation } from "react-router-dom";
 import { useBreadcrumb } from "@/contexts/BreadcrumbContext";
 import { pathForSubject, pathForChapter } from "@/lib/bmsRoutes";
 import type { Kapitel } from "@/data/bmsKapitel/types";
+import { getSubjectColors } from '@/data/bmsKapitel/colors';
+import { getKapitelById } from '@/data/bmsKapitel';
 import BMSUnterkapitel from "./BMSUnterkapitel";
 import { ChapterSRSBadge } from "@/components/chapter/ChapterSRSBadge";
 
@@ -304,6 +306,41 @@ export default function BMSKapitelView({ kapitel, initialUkIndex, onBack, chapte
           })
         )}
       </div>
+
+      {/* Smart-Links to Related Chapters - Phase 4: STRUCT-05 */}
+      {kapitel.linkedChapters && kapitel.linkedChapters.length > 0 && (() => {
+        const colors = getSubjectColors(kapitel.subject);
+        const linkedKapitelList = kapitel.linkedChapters
+          .map(id => getKapitelById(id))
+          .filter((k): k is Kapitel => k !== undefined);
+
+        if (linkedKapitelList.length === 0) return null;
+
+        return (
+          <div className="space-y-3 mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
+            <h3 className="font-semibold text-midnight dark:text-slate-100 flex items-center gap-2">
+              <ArrowRight className={`w-5 h-5 ${colors.icon}`} />
+              Verwandte Kapitel
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {linkedKapitelList.map(linkedKap => (
+                <button
+                  key={linkedKap.id}
+                  onClick={() => onGoToChapter?.(linkedKap.id, 0)}
+                  className={`text-left p-4 rounded-lg border-l-4 ${colors.border} ${colors.bg} ${colors.bgDark} hover:shadow-md transition-all duration-200`}
+                >
+                  <div className={`font-medium ${colors.text} ${colors.textDark}`}>
+                    {linkedKap.sequenceTitle || linkedKap.title}
+                  </div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                    {linkedKap.subject} • {linkedKap.estimatedTime}
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        );
+      })()}
     </div>
   );
 }
