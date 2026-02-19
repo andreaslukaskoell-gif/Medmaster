@@ -5,12 +5,14 @@ import { getLevelName } from "@/lib/progression";
 
 interface LevelUpOverlayProps {
   level: number | undefined;
+  levelName?: string;
   feature: string | null | undefined;
   onDismiss: () => void;
 }
 
-export function LevelUpOverlay({ level, feature, onDismiss }: LevelUpOverlayProps) {
+export function LevelUpOverlay({ level, levelName, feature, onDismiss }: LevelUpOverlayProps) {
   const visible = level != null && level >= 1;
+  const displayName = levelName || getLevelName(level);
 
   useEffect(() => {
     if (!visible) return;
@@ -84,8 +86,8 @@ export function LevelUpOverlay({ level, feature, onDismiss }: LevelUpOverlayProp
               >
                 Level {level}!
               </h2>
-              <p className="text-amber-800 dark:text-amber-200 font-medium mb-4">
-                {getLevelName(level)}
+              <p className="text-3xl text-amber-800 dark:text-amber-200 font-bold mb-4">
+                {displayName}
               </p>
               {feature && (
                 <motion.div
