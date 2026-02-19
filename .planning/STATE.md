@@ -50,6 +50,9 @@ Recent decisions affecting current work:
 - Legacy markdown pattern blocks premium components (01-02: requires structured data migration in Phase 3)
 - SelfTestQuestion.tags field required for SYNC-05 (01-02: add in Phase 2 architecture work)
 - isPro field planned for freemium tier (01-02: altfragen/klinisch content marked as Pro)
+- [Phase 01]: Data discrepancy identified: 106 actual vs 189 expected Stichwortliste entries (requires verification)
+- [Phase 01]: Architecture mismatch: fine-grained Stichwortliste IDs vs coarse Kapitel IDs (needs resolution)
+- [Phase 01]: Recommended Option C: implement parent Kapitel with fine-grained Unterkapitel matching linkedChapterId values
 
 ### Pending Todos
 
