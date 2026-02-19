@@ -224,22 +224,6 @@ export default function BMS() {
     }
   }, [fachParam, kapitelParam, supabaseChapters]);
 
-  // Update activeKapitel from post-processed chapters (after BMS override)
-  useEffect(() => {
-    if (!selectedSubject || chaptersForSelectedSubject.length === 0) return;
-
-    const allChapterIds = chaptersForSelectedSubject.map((c) => c.id);
-    const chapterId = chapterIdFromParams(fachParam, kapitelParam, allChapterIds);
-
-    if (chapterId) {
-      const chapter = chaptersForSelectedSubject.find((c) => c.id === chapterId);
-      if (chapter) {
-        console.log('📍 Setting activeKapitel from processed chapters:', chapter.id, '→', chapter.title);
-        setActiveKapitel(chapter);
-      }
-    }
-  }, [fachParam, kapitelParam, selectedSubject, chaptersForSelectedSubject]);
-
   // Compute merged chapters for selected subject (only Supabase)
   const chaptersForSelectedSubject = useMemo(() => {
     if (!selectedSubject) return [];
@@ -358,6 +342,23 @@ export default function BMS() {
       return sum + (k.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length || 0);
     }, 0);
   }, [safeAlleKapitel, completedChapters]);
+
+  // Update activeKapitel from post-processed chapters (after BMS override)
+  // MUST come AFTER chaptersForSelectedSubject useMemo to avoid Temporal Dead Zone
+  useEffect(() => {
+    if (!selectedSubject || chaptersForSelectedSubject.length === 0) return;
+
+    const allChapterIds = chaptersForSelectedSubject.map((c) => c.id);
+    const chapterId = chapterIdFromParams(fachParam, kapitelParam, allChapterIds);
+
+    if (chapterId) {
+      const chapter = chaptersForSelectedSubject.find((c) => c.id === chapterId);
+      if (chapter) {
+        console.log('📍 Setting activeKapitel from processed chapters:', chapter.id, '→', chapter.title);
+        setActiveKapitel(chapter);
+      }
+    }
+  }, [fachParam, kapitelParam, selectedSubject, chaptersForSelectedSubject]);
 
   // Error state: nur anzeigen wenn wirklich keine Daten (kein Cache, Supabase leer/Fehler)
   if (error && supabaseChapters.length === 0) {
