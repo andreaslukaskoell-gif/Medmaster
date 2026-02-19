@@ -33,6 +33,7 @@ Progress: [█░░░░░░░░░] 12.5% (1/8 phases complete)
 - Last 5 plans: 01-01 (4 min), 01-02 (4 min), 01-03 (4 min)
 - Trend: Consistent execution velocity
 - Phase 1 complete: 3/3 plans (100%)
+| Phase 02 P01 | 9 | 3 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -51,6 +52,8 @@ Recent decisions affecting current work:
 - [Phase 01]: Data discrepancy identified: 106 actual vs 189 expected Stichwortliste entries (requires verification)
 - [Phase 01]: Architecture mismatch: fine-grained Stichwortliste IDs vs coarse Kapitel IDs (needs resolution)
 - [Phase 01]: Recommended Option C: implement parent Kapitel with fine-grained Unterkapitel matching linkedChapterId values
+- [Phase 02-01]: Added tags and difficulty fields to SelfTestQuestion and QuizItem interfaces for SYNC-05 compliance and adaptive learning
+- [Phase 02-01]: Created Kapitel 7 with 6 Unterkapitel matching Stichwortliste linkedChapterId pattern (bio-7-01 through bio-7-06)
 
 ### Pending Todos
 

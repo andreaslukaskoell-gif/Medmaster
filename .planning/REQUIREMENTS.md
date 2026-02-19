@@ -10,7 +10,7 @@
 ### Content-Synchronisation (Stichwortliste als Source of Truth)
 
 - [x] **SYNC-01**: Jedes Thema aus `stichworteData.ts` (189 Einträge) hat ein zugeordnetes Kapitel in `src/data/bms/`
-- [ ] **SYNC-02**: Alle 8 fehlenden Themen (neu2026, abgedeckt: false) werden mit vollständigem Content erstellt
+- [x] **SYNC-02**: Alle 8 fehlenden Themen (neu2026, abgedeckt: false) werden mit vollständigem Content erstellt
 - [x] **SYNC-03**: Content-Audit pro Fach — irrelevante Inhalte (nicht in Stichwortliste) werden gelöscht
 - [ ] **SYNC-04**: `abgedeckt`-Flag in Stichwortliste wird nach Content-Erstellung auf `true` gesetzt
 - [x] **SYNC-05**: Jede Frage verwendet Tags aus `linkedQuestionTags` der Stichwortliste für Trackbarkeit
@@ -114,7 +114,7 @@
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | SYNC-01 | Phase 1 | Complete |
-| SYNC-02 | Phase 2 | Pending |
+| SYNC-02 | Phase 2 | Complete |
 | SYNC-03 | Phase 1 | Complete |
 | SYNC-04 | Phase 2 | Pending |
 | SYNC-05 | Phase 1 | Complete |
