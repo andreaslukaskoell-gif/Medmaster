@@ -36,7 +36,7 @@
 
 - [ ] **SMART-01**: Jede Frage nutzt QuizQuestion.tsx mit XP-Vergabe via `useStore.ts`
 - [ ] **SMART-02**: Second-Try-Mechanik ist aktiv (halbe XP bei zweitem Versuch)
-- [ ] **SMART-03**: Hints werden angezeigt nach falschem ersten Versuch
+- [x] **SMART-03**: Hints werden angezeigt nach falschem ersten Versuch
 - [ ] **SMART-04**: MerksatzBox-Komponente ist in jedem Kapitel mindestens 2x verwendet (merke/altfragen/klinisch/achtung/tipp)
 - [ ] **SMART-05**: XP-System aus `xp.ts` + `progression.ts` ist konsistent integriert
 - [ ] **SMART-06**: Level-Aufstieg wird nach Quiz-Abschluss angezeigt mit Level-Namen
@@ -131,7 +131,7 @@
 | STRUCT-05 | Phase 4 | Pending |
 | SMART-01 | Phase 5 | Pending |
 | SMART-02 | Phase 5 | Pending |
-| SMART-03 | Phase 5 | Pending |
+| SMART-03 | Phase 5 | Complete |
 | SMART-04 | Phase 5 | Pending |
 | SMART-05 | Phase 5 | Pending |
 | SMART-06 | Phase 5 | Pending |
