@@ -66,10 +66,12 @@ Plans:
   4. Clinical highlights use MerksatzBox type="klinisch" with by-doctors-for-doctors framing
   5. Explanation quality verified as textbook-level (not just correct/incorrect)
   6. Difficulty ratings (leicht/mittel/schwer) correctly assigned and validated
-**Plans**: TBD
+**Plans**: 3 plans in 2 waves
 
 Plans:
-- [ ] TBD
+- [ ] 03-01-PLAN.md — isPro architecture + premium MerksatzBox glassmorphism
+- [ ] 03-02-PLAN.md — Audit Biologie chapters (5-option format, altfragen/klinisch markers, difficulty validation)
+- [ ] 03-03-PLAN.md — Upgrade Kapitel 1 to premium quality with learning bites
 
 ### Phase 4: Structure Reorganization
 **Goal**: BMS content organized in lernlogische Abfolge with premium buckets and smart navigation
