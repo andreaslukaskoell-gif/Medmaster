@@ -826,11 +826,10 @@ Restriktionsenzyme sind bakterielle Enzyme, die DNA an spezifischen Erkennungsse
 - Erzeugen glatte Enden (blunt ends) oder überhängende Enden (sticky ends)
 
 **Beispiel EcoRI:**
-```
+
 5'-GAATTC-3'    →    5'-G     AATTC-3'
 3'-CTTAAG-5'         3'-CTTAA     G-5'
                      (sticky ends)
-```
 
 ### 3. Vektoren als DNA-Träger
 
