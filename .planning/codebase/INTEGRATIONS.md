@@ -4,195 +4,131 @@
 
 ## APIs & External Services
 
-**Supabase:**
-- Comprehensive backend service providing authentication, database, and real-time sync
+**Authentication & Database:**
+- Supabase - Full backend service (auth, database, real-time)
   - SDK/Client: `@supabase/supabase-js` v2.95.3
-  - Configuration: `src/lib/supabase.ts`
+  - Auth methods: Email/password, Google OAuth
+  - Configured in: `src/lib/supabase.ts`
 
 ## Data Storage
 
 **Databases:**
-- Supabase PostgreSQL
-  - Connection: `VITE_SUPABASE_URL` environment variable
-  - Client: `@supabase/supabase-js` v2.95.3
-  - Location: `src/lib/supabase.ts`
-  - Tables used: `profiles` (user profiles with subscription tier, XP, level, streak)
-
-**Local Storage:**
-- Browser localStorage - Client-side persistence
-  - Quiz session data and progress
-  - Offline sync queue (`medmaster-sync-offline-queue`)
-  - Backup indices for chapter optimization
-  - Adaptive learning statistics
-  - Application state (Zustand persist middleware)
-  - Reports and audit data
+- Supabase PostgreSQL (via Supabase platform)
+  - Connection: Environment variable `VITE_SUPABASE_URL`
+  - Client: `@supabase/supabase-js`
+  - Tables:
+    - `profiles` - User profiles with subscription, XP, streak tracking
+    - `bms_chapters` - BMS subject chapters (Biologie, Chemie, Physik, Mathematik)
+    - `bms_subchapters` - Chapter subdivisions with content, learning objectives, self-tests
+    - `stichwort_stats` - Keyword/topic performance metrics (attempts, success rate, confidence)
+    - `fach_stats` - Subject-level statistics (weak/strong topics, recommendations)
+    - `kff_tasks` - KFF (Kognitive Fähigkeiten und Fertigkeiten) exam tasks
 
 **File Storage:**
-- Local filesystem - Static content only
-  - No remote file storage configured
-  - SVG diagrams: `src/components/diagrams/`
-  - Static question data files
+- Local filesystem only - No cloud file storage integrated
+  - Images/diagrams embedded in code: `src/components/diagrams/` (33 SVG files)
 
 **Caching:**
-- Zustand with persist middleware - Application state caching
-- localStorage integration via custom storage wrapper
-- No Redis or external caching service
+- Browser localStorage - Used for offline state and sync queue
+  - Sync status and queue keys in `src/lib/syncService.ts`
+  - Chapter optimizations in `src/utils/chapterOptimizer.ts`
+- No server-side caching (Redis, Memcached, etc.)
 
 ## Authentication & Identity
 
 **Auth Provider:**
-- Supabase Auth
-  - Implementation: Email/password authentication with session management
-  - OAuth: Google OAuth integration available
-  - Configuration: `src/hooks/useAuth.ts`
-  - Environment Variable: `VITE_SUPABASE_ANON_KEY`
+- Supabase Auth (PostgreSQL with JWT)
+  - Implementations in `src/hooks/useAuth.ts`:
+    - Email/password sign-up and sign-in
+    - Google OAuth integration (`signInWithOAuth({ provider: "google" })`)
+    - Password reset
+  - JWT tokens managed by Supabase client
+  - Session stored client-side via Supabase session handler
 
-**User Session Management:**
-- Supabase session tokens (auto-refresh)
-- Development mode: Test user available (DEV_USER) for local development
-- Session persistence across page reloads via Zustand + localStorage
-
-**User Profile Schema:**
-```typescript
-{
-  id: string;
-  username: string;
-  display_name: string | null;
-  avatar_url: string | null;
-  medat_type: string;
-  test_date: string | null;
-  subscription_tier: "starter" | "standard" | "pro";
-  subscription_expires_at: string | null;
-  xp: number;
-  level: number;
-  streak_days: number;
-}
-```
+**User Types:**
+- Development mode: Mock `DEV_USER` for local testing without auth
+- Production: Real Supabase auth with Google OAuth option
 
 ## Monitoring & Observability
 
 **Error Tracking:**
-- None detected - No external error tracking service configured
+- Not detected - No Sentry, Rollbar, or similar integration
 
 **Logs:**
-- Console logging only
-- Development: Full logging via `console.log()` and `console.warn()`
-- Locations: Supabase initialization checks, auth failures, sync errors
-- Example: `src/lib/supabase.ts` - Environment variable validation
-
-**Analytics:**
-- No external analytics service integrated
-- Local tracking via Zustand adaptive learning store
-- Performance metrics calculated client-side: `src/lib/memoryHeatmap.ts`
+- Browser console logging only
+  - Format: Prefixed with `[module-name]` (e.g., `[sync]`, `[useAuth]`)
+  - Debug helpers: `isDev` flag based on `import.meta.env.DEV`
 
 ## CI/CD & Deployment
 
 **Hosting:**
-- Vercel (configured)
-- Configuration: `vercel.json` at project root
-- SPA mode: All routes rewrite to `/index.html` for client-side routing
+- Not specified in codebase - Target is static hosting (Vercel pattern inferred from git history)
 
 **CI Pipeline:**
-- No external CI service detected in codebase
-- Manual deployment script: `npm run shipit` (git add → commit → push)
-
-**Build System:**
-- Vite v7.3.1 with esbuild minification
-- TypeScript pre-compilation: `tsc -b` before Vite build
-
-## Real-Time Synchronization
-
-**Offline Sync Queue:**
-- localStorage-based queue for failed sync operations
-- Location: `src/lib/syncService.ts`
-- Automatic retry on network reconnection
-
-**Sync Services:**
-- `src/lib/sync.ts` - Main synchronization logic
-- `src/lib/syncService.ts` - Background sync with offline fallback
-- Auto-sync interval: Configurable in sync service
-- Triggered on: Login, app focus, periodic intervals
-
-**Data Synced:**
-- Quiz progress and statistics
-- Adaptive learning metrics
-- User performance data
-- Subscription status
-
-## Webhooks & Callbacks
-
-**Incoming Webhooks:**
-- None detected
-
-**Outgoing Webhooks:**
-- None detected
-
-**Supabase Realtime:**
-- Not currently enabled
-- Infrastructure exists but not actively used in current integration
-
-## Payment & Subscription
-
-**Payment Processor:**
-- Stripe (placeholder configuration)
-  - Configuration: `src/lib/stripe.ts`
-  - Status: Configuration only - NOT IMPLEMENTED
-  - Pricing defined for Standard ($14.99/mo) and Pro ($24.99/mo) tiers
-  - TODO: Requires Supabase Edge Function to create checkout sessions
-
-**Subscription Management:**
-- Managed in Supabase `profiles` table
-- Fields: `subscription_tier`, `subscription_expires_at`
-- No active Stripe webhook integration
+- Not detected - No GitHub Actions, CircleCI, or similar config in repo
 
 ## Environment Configuration
 
-**Required Environment Variables:**
+**Required env vars (frontend/Vite):**
 ```
-VITE_SUPABASE_URL=https://your-project.supabase.co
-VITE_SUPABASE_ANON_KEY=your-anon-key
+VITE_SUPABASE_URL        - Supabase project URL
+VITE_SUPABASE_ANON_KEY   - Supabase anonymous API key
 ```
 
-**Optional/Placeholder Variables:**
-- Stripe Price IDs (currently placeholders in `src/lib/stripe.ts`)
+**Optional env vars (scripts/build only):**
+```
+SUPABASE_SERVICE_ROLE_KEY - For database seeding (never exposed to frontend)
+```
 
-**Configuration Sources:**
-- `.env` (tracked, for defaults)
-- `.env.local` (untracked, for local overrides)
-- `.env.example` - Template showing all required variables
+**Secrets location:**
+- `.env` - Development local overrides
+- `.env.local` - Local machine overrides (git-ignored)
+- `.env.example` - Template for required vars
+- `.env.local.example` - Template for local overrides
+- Runtime checks in `src/lib/supabase.ts` validate presence before client creation
 
-**Secrets Location:**
-- `.env.local` - Never committed to git
-- Vercel Environment Settings - Production secrets
-- No secret files or .env directories
+## Webhooks & Callbacks
 
-## Network & Connectivity
+**Incoming:**
+- Not detected - No webhook endpoints in application
 
-**Online/Offline Detection:**
-- Browser online/offline event listeners (implicit in sync logic)
-- Network error detection in sync service
-- Fallback to localStorage when offline
+**Outgoing:**
+- Not detected - No outbound webhooks to external systems
 
-**Error Handling:**
-- Network errors caught and queued for retry
-- localStorage fallback for failed Supabase operations
-- Graceful degradation when Supabase is unconfigured
+## Real-Time Features
 
-## Data Flow Integration
+**Supabase Real-Time:**
+- Auth state change listener in `src/hooks/useAuth.ts`:
+  - `supabase.auth.onAuthStateChange()` - Triggers profile fetch and sync on login/logout
+- Network event listeners in `src/lib/syncService.ts`:
+  - `window.addEventListener("online")` - Resume offline sync queue
+  - Offline queue stored in `localStorage` with key `medmaster-sync-offline-queue`
 
-**Quiz Session Flow:**
-1. User starts quiz → Local session created in Zustand store
-2. Quiz progress → localStorage + Zustand (real-time)
-3. Quiz completion → Sync to Supabase (background or on save)
-4. Offline → Queued in offline sync queue
-5. Network restored → Automatic retry and sync
+## Data Sync Strategy
 
-**Authentication Flow:**
-1. Page load → Check Supabase session
-2. Development mode → Skip auth, use DEV_USER
-3. Logged in → Fetch profile from `profiles` table
-4. Start background sync services
-5. Logout → Clear user data and stop sync services
+**Push (Client → Supabase):**
+- Auto-sync every 2 minutes via `startAutoSync()` in `src/lib/syncService.ts`
+- Push on page unload (beforeunload event)
+- Tables synced:
+  - `profiles` - Learning phase, exam date, streak, answer totals
+  - `stichwort_stats` - Topic performance data (upserted in batches of 200)
+  - `fach_stats` - Subject statistics
+- Offline queue: Retries on network recovery
+
+**Pull (Supabase → Client):**
+- On login via `startAutoSync()`
+- Merges remote data with local (keeps newer dataset)
+- Uses Zustand store (`adaptiveLearning`) as source of truth
+
+## Database Configuration
+
+**Service Role Key Usage:**
+- `src/scripts/seedDatabase.ts` - Initial data load (runs locally, not in frontend)
+  - Seeds `bms_chapters`, `bms_subchapters`, `kff_tasks`
+  - Execution: `SUPABASE_SERVICE_ROLE_KEY=xxx npx tsx src/scripts/seedDatabase.ts`
+
+**Row-Level Security (RLS):**
+- Not detailed in codebase - Assumed configured on Supabase project
 
 ---
 

@@ -4,243 +4,367 @@
 
 ## Pattern Overview
 
-**Overall:** Frontend-driven React SPA with client-side state management (Zustand), lazy-loaded pages, and component-based UI architecture. The app is designed as a progressive learning platform for MedAT exam preparation with modular quiz/learning systems and content-driven hierarchies.
+**Overall:** Client-Side React SPA with Multi-Store State Management + Supabase Backend
 
 **Key Characteristics:**
-- Single-page application with React 19 + React Router v7
-- Zustand-based global state (no Redux/Context sprawl)
-- Lazy-loaded page routes with Suspense boundaries
-- Hierarchical content model: Subjects → Chapters → Subchapters → Content
-- Content stored as TypeScript data files (not database-driven for BMS/TV/SEK)
-- Supabase integration for authentication, user progress sync, and analytics
+- React 19 + TypeScript + Vite build system with hot module replacement
+- Zustand-based state management (multiple independent stores with localStorage persistence)
+- React Router v7 with lazy-loaded pages and Suspense boundaries
+- Tailwind CSS v4 + custom UI component library (shadcn-like primitives)
+- Supabase integration for auth, sync, and analytics
+- Multiple learning modules (BMS, KFF, TV, SEK) with shared data infrastructure
+- Progressive feature unlock system based on XP/level progression
+- Defensive error handling with fallbacks; never crashes entire app
 
 ## Layers
 
-**Presentation Layer:**
-- Purpose: React components rendering UI, handling user interactions
-- Location: `src/components/`
-- Contains: 114 component files across domain-specific subdirectories (chapter, quiz, dashboard, sek, tv, kff, etc.)
-- Depends on: Store (Zustand), Contexts (breadcrumbs), Hooks, Utils
-- Used by: Pages, Layout shells (AppShell)
+**Presentation Layer (Components):**
+- Purpose: Render user interface, handle user interactions, dispatch to stores
+- Location: `src/components/` (114 component files)
+- Contains: Feature-specific components (layout, chapter, quiz, dashboard, diagrams, badges, learning overlays)
+- Depends on: Zustand stores, React Contexts, Hooks, Utilities
+- Used by: Pages layer, AppShell layout
 
 **Page/Route Layer:**
-- Purpose: Full-page components that orchestrate major user journeys
+- Purpose: Route-level orchestrators; handle URL params, compose major user journeys
 - Location: `src/pages/` (70 page files: BMS.tsx, KFF.tsx, TV.tsx, SEK.tsx, Simulation.tsx, Dashboard.tsx, etc.)
-- Depends on: Zustand stores, Components, Lib utilities
+- Depends on: Zustand stores, UI Components, Lib utilities
 - Used by: App.tsx (router entry point)
+- Patterns: One page per major route; complex pages may compose multiple sub-components
 
-**State Management Layer:**
-- Purpose: Persistent global state for user data, progress, preferences
-- Location: `src/store/` (Zustand stores: useStore.ts, adaptiveLearning.ts, quizSessionStore.ts, interleaving.ts)
+**State Management Layer (Stores):**
+- Purpose: Persistent global state for user data, progress, preferences, session state
+- Location: `src/store/` (Zustand stores)
 - Stores:
-  - `useStore.ts`: Primary app state (XP, streak, completed chapters, quiz results, badges, preferences)
-  - `adaptiveLearning.ts`: Learning analytics, per-topic success rates, daily recommendations
-  - `quizSessionStore.ts`: Current quiz session state (hot streaks, reward messages)
-  - `interleaving.ts`: Spaced repetition strategy and interleaving overlays
-- Persisted to localStorage via Zustand persist middleware with sanitization
+  - `useStore.ts` (primary): XP, streak, completed chapters, quiz results, badges, notes, bookmarks, user preferences
+  - `adaptiveLearning.ts`: Per-topic success rates, learning stage, daily recommendations, weakness tracking
+  - `quizSessionStore.ts`: Current quiz session state (hot streaks, reward messages, pending XP)
+  - `interleaving.ts`: Spaced repetition scheduling, interleaving overlay visibility, snooze state
+  - `kffStore.ts`: KFF-specific results and progress
+- Persistence: All stores use Zustand `persist()` middleware → localStorage (with sanitization on load)
+- Used by: All components and pages
 
 **Content/Data Layer:**
-- Purpose: Question data, chapter hierarchies, content structured as TypeScript
+- Purpose: Question pools, chapter definitions, static content; no runtime computation
 - Location: `src/data/`
 - Contains:
-  - `bms/` - Question interfaces and barrel exports (biologie.ts, chemie.ts, physik.ts, mathematik.ts)
-  - `bmsKapitel/` - Chapter/subchapter content (types.ts, index.ts, biologie/, chemie/, physik/, mathematik/)
-  - `kffData.ts` / `kffEmotionenErkennen.ts` / `kffEmotionenRegulieren.ts` / `kffImplikationen.ts` - KFF questions by subtest
-  - `tvTextsExpanded.ts`, `tvTextsExpanded2.ts` - TV reading comprehension data
-  - `sekDataNew.ts` - SEK emotional intelligence tasks
-  - `badges.ts` - Badge definitions and progress logic
-  - `glossary.ts` - Key terms and definitions
-  - `kffGenerators.ts` - Generator functions for KFF procedural content
+  - `bms/`: Question interface + barrel exports (biologie.ts, chemie.ts, physik.ts, mathematik.ts) - currently empty structure
+  - `bmsKapitel/`: Chapter hierarchy (types.ts, index.ts barrel, biologie/, chemie/, physik/, mathematik/ subdirs)
+  - `kff*.ts`: KFF exercises by subtest (emotionen-erkennen, emotionen-regulieren, implikationen, zahlenfolgen, wortfluessigkeit)
+  - `tvTexts*.ts`: TV reading comprehension texts + questions (sets 1-5, 6-10)
+  - `sekData*.ts`: SEK emotional intelligence tasks (Erkennen, Regulieren, Entscheiden)
+  - `badges.ts`: Badge definitions and progress calculation logic
+  - `glossary.ts`: Medical terms and definitions
+  - `kffGenerators.ts`: Generator functions for procedural content
+  - `flashcards*.ts`: Pre-made flashcard sets
+- Depends on: None (pure data exports)
+- Used by: Pages, Components, Services
 
-**Context/Hooks Layer:**
-- Purpose: React Context for UI state (breadcrumbs), custom hooks for data fetching and business logic
-- Location: `src/contexts/` (BreadcrumbContext.tsx) and `src/hooks/` (useAuth.ts, useKFFResults.ts, etc.)
-- useAuth: Supabase authentication, premium status, permission checks
-- useBreadcrumb: Dynamic breadcrumb management across routes
+**Services/Libraries Layer:**
+- Purpose: Business logic, utilities, external integrations; separated by concern
+- Location: `src/lib/`, `src/hooks/`, `src/utils/`
+- Key Modules:
+  - **Authentication**: `src/hooks/useAuth.ts` (Supabase session, premium status, permission checks)
+  - **Sync Service**: `src/lib/sync.ts`, `src/lib/syncService.ts` (orchestrates localStorage ↔ Supabase sync)
+  - **BMS Storage**: `src/lib/bmsStorage.ts` (chapter progress tracking, SRS metadata)
+  - **Routing**: `src/lib/bmsRoutes.ts` (URL slug → chapter ID mapping)
+  - **Progression**: `src/lib/progression.ts` (XP calculations, level determination, feature unlock logic)
+  - **Adaptive Learning**: `src/lib/adaptivePlan.ts` (personalized study plan generation)
+  - **Weak Area Recovery**: `src/lib/smartRecovery.ts` (targeting low-confidence topics)
+  - **Analytics**: `src/lib/leaderboard.ts`, `src/lib/memoryHeatmap.ts`, `src/lib/schwachstellenAnalyse.ts`
+  - **Utilities**: `src/lib/utils.ts` (formatting, date, generic helpers)
+- Depends on: Supabase, Store layer, Data layer
+- Used by: Pages, Components, Stores
 
-**Library/Utilities Layer:**
-- Purpose: Shared business logic, integrations, formatting utilities
-- Location: `src/lib/`
-- Key modules:
-  - `supabase.ts` - Supabase client initialization and configuration
-  - `syncService.ts` - User progress sync to Supabase
-  - `xp.ts` - XP calculation and level progression
-  - `progression.ts` - Feature unlocking logic based on user level
-  - `bmsLookup.ts` - BMS question lookup and filtering
-  - `bmsRoutes.ts` - Route path generation for BMS navigation
-  - `bmsChaptersLoader.ts` - Chapter data loading with error handling
-  - `adaptivePlan.ts` - Adaptive learning plan generation
-  - `smartRecovery.ts` - Weak area recovery recommendations
-  - `learningArea.ts` - Domain classification and spaced repetition calculation
-  - `stripe.ts` - Stripe payment integration
-  - `leaderboard.ts` - User ranking calculations
+**Context Layer:**
+- Purpose: React Context for prop drilling avoidance; non-store global concerns
+- Location: `src/contexts/`, `src/context/`
+- Contains: BreadcrumbContext (dynamic breadcrumb per route)
+- Used by: Layout components (AppShell, Sidebar)
 
 **Layout/Shell Layer:**
-- Purpose: App wrapper with persistent UI chrome (sidebar, topbar, footer)
+- Purpose: App-wide persistent UI chrome; orchestrates page outlet and overlays
 - Location: `src/components/layout/`
 - Components:
-  - `AppShell.tsx` - Main layout with route outlet, level-up overlays, badge unlocks
-  - `Sidebar.tsx` - Navigation drawer (mobile-adaptive)
-  - `TopBar.tsx` - Header with user profile, menu toggle
-  - `BottomTabBar.tsx` - Mobile-only tab navigation
-  - `sidebarLayout.ts` - Tailwind margin sync for sidebar width
+  - `AppShell.tsx`: Main wrapper with route outlet, XP monitor, level-up overlays, badge unlocks, overlay orchestration
+  - `Sidebar.tsx`: Navigation drawer (mobile-adaptive, collapsible, subject/chapter tree)
+  - `TopBar.tsx`: Header with user profile, sync status, menu toggle
+  - `BottomTabBar.tsx`: Mobile-only tab navigation (quick access to main sections)
+  - `sidebarLayout.ts`: Tailwind margin sync constant for layout consistency
+- Used by: App.tsx (wraps all protected routes)
 
 ## Data Flow
 
-**User Authentication Flow:**
-1. User visits `/login` (LoginPage.tsx)
-2. Supabase auth via `useAuth()` hook
-3. Sets `authUser` in global store
-4. App redirects to Onboarding or Dashboard
-5. AuthGuard on protected routes verifies session
+**Application Bootstrap:**
+1. `main.tsx` mounts React app with ErrorBoundary
+2. `App.tsx` sets up BrowserRouter with lazy-loaded route definitions
+3. Public routes: /login, /register, /forgot-password (bypass AppShell)
+4. Protected routes: AuthGuard checks session → redirects to /login if no session
+5. Inside AuthGuard: AppShell wraps Outlet, initializes layout + overlays
+6. Zustand stores hydrate from localStorage (sanitized)
+7. useAuth hook checks Supabase session asynchronously
 
-**Content Learning Flow (BMS):**
-1. User navigates to `/bms` (BMS.tsx page)
-2. Loads chapters from `bmsKapitel/index.ts` via `loadBMSChaptersSWR()`
-3. User selects subject → chapter → subchapter
-4. BMSUnterkapitel.tsx renders content:
-   - Sections with markdown (ContentVisualizer.tsx)
-   - MerksatzBox highlights key facts
-   - SelbstTest interactive quiz
-   - ContentErrorBoundary wraps failures
-5. User progress stored in `useStore.quizResults` and synced to Supabase
-6. Adaptive store updates topic statistics
+**Quiz Question Display (BMS Example):**
+1. User navigates to `/bms/:fach/:kapitel` (BMS.tsx page)
+2. BMS.tsx parses params via `subjectFromSlug()` + `chapterIdFromParams()` (lib/bmsRoutes.ts)
+3. Loads chapter metadata from `src/data/bmsKapitel/[subject]/index.ts` (barrel exports)
+4. User clicks "Quiz starten" → navigates to `/bms/quiz/:fach` (BMSQuiz.tsx)
+5. BMSQuiz loads questions from:
+   - `src/data/bms/[subject].ts` (new format: biologie.ts, chemie.ts, etc.)
+   - Falls back to `src/data/bmsQuestions.ts` (legacy format)
+6. QuizQuestion components render each question
+7. User selects answer → stored in `store.currentAnswers[questionId]`
+8. On submit: Answer validation → score calculation → XP grant → QuizResult stored
+9. Result appended to `store.quizResults[]`
+10. Store change triggers sync to Supabase via `syncService.ts` (if online)
 
-**Quiz/Assessment Flow:**
-1. User starts quiz (BMS, KFF, TV, SEK, or Simulation)
-2. Quiz session initialized in `quizSessionStore`
-3. Questions rendered with QuizQuestion.tsx component
-4. User answers stored in `currentAnswers`
-5. On submit: answer validation → XP grant → hot streak check → result saved
-6. Result persisted to localStorage + Supabase (if syncing enabled)
+**XP & Progression Flow:**
+1. Quiz result XP calculated via `src/lib/xp.ts` → `addXP(points)`
+2. `useStore` updates XP total (Zustand)
+3. localStorage automatically persisted
+4. `AppShell.tsx` watches XP via `useEffect` + `getLevelFromXP()`
+5. If level increased → triggers `setLevelUpState()` → renders LevelUpOverlay
+6. Feature unlock checked via `getFeatureUnlockedAtLevel(currentLevel)` (e.g., Simulation at L15)
+7. XP multiplier applied: `isPremium ? 1.5 : 1` (set in AppShell useEffect)
+8. Badge progress checked → if earned, `setPendingBadgeId()` → BadgeUnlockModal shown
+
+**Spaced Repetition/Interleaving Flow:**
+1. User studies questions → answer recorded in `store.quizResults[]`
+2. `useInterleavingStore` tracks study patterns (area, last study time)
+3. At 60s intervals, `shouldShowInterleavingOverlay()` evaluates user patterns
+4. If gap detected in weak area → `setInterleavingOverlayVisible(true)`
+5. InterleavingOverlay prompts user to review weak topic
+6. User can snooze → `snooze()` records snooze time in store
+7. All data persisted to localStorage, synced to Supabase on interval
 
 **State Persistence & Sync:**
-1. Zustand stores auto-persist via localStorage middleware (safe storage wrapper in useStore.ts)
-2. On user action: state changes automatically serialized
-3. Periodic sync via `syncService.ts` pushes state to Supabase when online
-4. SyncToast component shows sync status (AppShell.tsx)
-5. On page reload: localStorage restored with sanitization (prevents NaN/undefined corruption)
-
-**Progression & Rewards:**
-1. Quiz result XP added to `store.xp`
-2. AppShell monitors XP via useEffect
-3. When `getLevelFromXP()` increases: LevelUpOverlay triggered
-4. Feature unlock logic checks `getFeatureUnlockedAtLevel()`
-5. Badge logic: `getBadgeProgress()` checks completion criteria, stores in `earnedBadges`
-6. BadgeUnlockModal animates earned badges
+1. All Zustand stores configured with `persist()` middleware + `safeStorage()` wrapper
+2. `safeStorage()` handles localStorage quota errors gracefully
+3. On state change: Zustand automatically serializes to localStorage
+4. On page load: `sanitizePersisted()` filters corrupted data (NaN, undefined, wrong types)
+5. `syncService.ts` polls every 60s (when online):
+   - Checks for newer state in Supabase
+   - Pushes local changes to Supabase (quiz results, progress)
+   - Handles offline gracefully (retries on reconnect)
+6. SyncToast component displays sync status in AppShell
 
 ## Key Abstractions
 
-**Question Type (BMS):**
-- Purpose: Structured interface for medical questions
+**Question Interface (BMS):**
+- Purpose: Standardize question format across all BMS subjects
 - Location: `src/data/bms/index.ts`
-- Interface: `{ id, subject, chapter, topic, text, options: [{id,text}], correctOptionId, explanation, wrongExplanations, difficulty, tags }`
-- Used by: All BMS pages and components that render questions
+- Pattern:
+```typescript
+export interface Question {
+  id: string;
+  subject: "biologie" | "chemie" | "physik" | "mathematik";
+  chapter: string;
+  topic?: string;
+  text: string;
+  options: { id: string; text: string }[];  // Always 5 (A-E) for MedAT format
+  correctOptionId: string;
+  explanation: string;
+  wrongExplanations?: Record<string, string>;
+  difficulty: "leicht" | "mittel" | "schwer";
+  tags: string[];
+}
+```
 
-**Kapitel/Unterkapitel (Chapter Content):**
-- Purpose: Hierarchical learning content structure with embedded quiz and explanations
+**Chapter Hierarchy:**
+- Purpose: Organize educational content by subject and learning progression
 - Location: `src/data/bmsKapitel/types.ts`
 - Interfaces:
-  - `Kapitel`: { id, title, subject, unterkapitel[], estimatedTime }
-  - `Unterkapitel`: { id, title, content, sections[], merksätze, selfTest[], quiz[], imageUrl, additionalNotes }
-  - `ContentSection`: { heading, text, merksatz, table }
-- Used by: BMSUnterkapitel.tsx, BMSKapitelView.tsx, ContentVisualizer.tsx
+  - `Kapitel`: { id, title, subject, unterkapitel[], estimatedTime, icon }
+  - `Unterkapitel`: { id, title, content, sections[], merksätze, selfTest[], imageUrl }
+  - `ChapterSection`: { heading, content, diagram?, merke?, klinik?, vergleichsTabelle? }
+- Pattern: Barrel exports aggregate `_part*.ts` files → `index.ts` → consumed by BMS.tsx
 
 **Quiz Result:**
-- Purpose: Capture answered quiz attempt for analytics
+- Purpose: Capture quiz attempt with full answer details for analytics
 - Location: `src/store/useStore.ts`
-- Interface: `{ id, type, subject, score, total, date, answers: [{questionId, selectedAnswer, correct}] }`
-- Persisted in store and synced to Supabase for analytics
+- Interface: `{ id, type, subject, score, total, date, timestamp, answers: [{questionId, selectedAnswer, correct}] }`
+- Persisted in store, synced to Supabase for analytics/recommendations
 
 **Learning Profile (Adaptive):**
 - Purpose: Per-topic success rates and learner stage classification
 - Location: `src/store/adaptiveLearning.ts`
-- Contains: StichwortStat (per-topic), FachStat (per-subject), DailyRecommendation
+- Contains:
+  - `StichwortStat`: { attempts, correct, lastAttempt, confidenceLevel }
+  - `FachStat`: { topicStats map, overallSuccessRate, recommendedNext }
+  - `DailyRecommendation`: { area, priority, reason }
 - Updated on each quiz submit via `updateStats()`
 
 **KFF Content Types:**
-- Purpose: Modular KFF subtest representations (Emotions Recognition, Regulation, etc.)
-- Location: `src/data/kffEmotionen*.ts`, `src/data/kffZahlenfolgen.ts`
-- Pattern: Each subtest has scenario + 4 answer choices (A-D) with clinical explanations
+- Purpose: Modular representations of cognitive/emotional test scenarios
+- Location: `src/data/kffTypes.ts`
+- Types:
+  - `KFFExercise`: { id, type, question, options, correctAnswer, explanation, difficulty, hints }
+  - `SimulationResult`: { id, subtestType, score, maxScore, timeUsed, timeLimit, date, details }
+  - `SubtestProgress`: { correct, total, lastPracticed }
+
+**Route Mapping:**
+- Purpose: Convert URL slugs to database IDs; maintain slug consistency
+- Location: `src/lib/bmsRoutes.ts`
+- Pattern:
+  - URL slug "bio" → database ID "biologie"
+  - URL slug "kap1" + "bio" → database ID "bio-kap1"
+  - `subjectFromSlug()`, `chapterIdFromParams()` normalize params
+
+**Spaced Repetition Entry:**
+- Purpose: Track item review schedule for SRS algorithm
+- Location: `src/store/useStore.ts`
+- Interface: `SpacedItem`: { interval, nextReview, easeFactor, attempts, correct }
 
 ## Entry Points
 
-**App Bootstrap:**
+**Application Bootstrap:**
 - Location: `src/main.tsx`
-- Creates React root, wraps App in StrictMode and ErrorBoundary, mounts to #root
-- Imports global CSS (Tailwind + theme)
+- Triggers: Page load
+- Responsibilities:
+  1. Renders React app with StrictMode
+  2. Wraps in ErrorBoundary for global error catching
+  3. Imports global CSS (Tailwind + theme in `src/index.css`)
+  4. Mounts to `#root` element
 
 **Router Root:**
 - Location: `src/App.tsx`
-- BrowserRouter setup with lazy-loaded page routes
-- Suspense fallback: LoadingSpinner
-- Protected routes wrapped in AuthGuard
-- Layout routes wrapped in AppShell
-- Route structure:
-  - Public: /login, /register, /forgot-password
-  - Protected (under AuthGuard + AppShell):
-    - / (Dashboard)
-    - /bms, /bms/:fach, /bms/:fach/:kapitel, /bms/quiz/:fach
-    - /kff, /tv, /sek, /simulation
-    - /lernplan, /analyse, /statistik, /community
-    - Plus admin routes (/admin/kapitel-editor, /admin/dashboard, etc.)
+- Triggers: After main.tsx bootstrap
+- Responsibilities:
+  1. Sets up BrowserRouter with lazy-loaded routes
+  2. Suspense fallback: LoadingSpinner component
+  3. Public routes bypass AppShell (login, register, forgot-password)
+  4. Protected routes wrapped in AuthGuard → AppShell
+  5. Route structure:
+     - `/login`, `/register`, `/forgot-password` (public)
+     - `/` (Dashboard)
+     - `/bms`, `/bms/:fach`, `/bms/:fach/:kapitel`, `/bms/quiz/:fach`
+     - `/kff`, `/tv`, `/sek`, `/simulation`
+     - `/lernplan`, `/analyse`, `/statistik`, `/community`, `/notizen`, `/karteikarten`, `/duell`
+     - `/admin/*` (admin routes)
 
-**Layout Shell:**
+**AppShell (Layout/Orchestration):**
 - Location: `src/components/layout/AppShell.tsx`
-- Orchestrates: Sidebar, TopBar, BottomTabBar, Outlet (page content), overlays (InterleavingOverlay, LevelUpOverlay, BadgeUnlockModal)
-- Monitors: interleaving schedules, XP level-ups, premium status, keyboard shortcuts (Cmd+K)
+- Triggers: Entering protected routes (after AuthGuard)
+- Responsibilities:
+  1. Renders Sidebar + TopBar + BottomTabBar + Outlet
+  2. Wraps Outlet with ErrorBoundary (ContentErrorBoundary)
+  3. Monitors XP for level-ups → LevelUpOverlay
+  4. Monitors interleaving schedule → InterleavingOverlay
+  5. Displays RewardToasts, BadgeUnlockModal, HotStreakOverlay
+  6. Manages CommandPalette (Cmd+K) state
+  7. Syncs premium status to XP multiplier
+  8. Listens for app focus to trigger sync
+
+**Dashboard Home Page:**
+- Location: `src/pages/Dashboard.tsx`
+- Triggers: `/` route (first page after onboarding)
+- Responsibilities:
+  1. Displays user stats card (XP, level, streak)
+  2. Shows progress cards for each module (BMS, KFF, TV, SEK)
+  3. Quick-start buttons to main features
+  4. Displays sync status + recent activity
+
+**BMS Module Entry:**
+- Location: `src/pages/BMS.tsx`
+- Triggers: `/bms`, `/bms/:fach`, `/bms/:fach/:kapitel`
+- Responsibilities:
+  1. Parses route params via `subjectFromSlug()`, `chapterIdFromParams()`
+  2. Routes to BMSKapitelView (chapter overview) or BMSUnterkapitel (subchapter lesson)
+  3. Loads chapter list from `src/data/bmsKapitel/`
+  4. Renders breadcrumb navigation
+  5. Handles hierarchical navigation (subject → chapter → subchapter)
+
+**Subchapter Lesson Page:**
+- Location: `src/pages/BMSUnterkapitel.tsx`
+- Triggers: User selects subchapter from BMS.tsx
+- Responsibilities:
+  1. Loads and renders chapter content (Kapitel.ts files)
+  2. Composes MerksatzBox, SelbstTest, ChapterRenderer
+  3. Tracks reading progress
+  4. Handles self-test quiz submissions
+  5. Wraps content in ContentErrorBoundary
 
 ## Error Handling
 
-**Strategy:** Defensive with fallbacks; never crash the entire app
+**Strategy:** Layered error boundaries + safe data loading + graceful fallbacks; never crash entire app
 
 **Patterns:**
 
-**Component-Level ErrorBoundary:**
-- `ErrorBoundary.tsx`: Class component at app root catches all unhandled render errors
-- Displays user-friendly error UI with app restart button
-- Logs error details to console for debugging
+1. **Global ErrorBoundary:**
+   - Location: `src/components/ErrorBoundary.tsx` (class component)
+   - Catches: Render errors in entire component tree
+   - Behavior: Shows error UI with app restart button, logs error details
 
-**Content ErrorBoundary:**
-- `ContentErrorBoundary.tsx`: Wraps chapter content rendering
-- If content fails to render, shows fallback without affecting page
-- Used in BMSUnterkapitel.tsx around ChapterRenderer
+2. **Content ErrorBoundary:**
+   - Location: `src/components/ContentErrorBoundary.tsx`
+   - Wraps: Chapter content rendering in BMSUnterkapitel
+   - Behavior: Falls back to "Content failed to load" without affecting page
 
-**Data Loading Fallbacks:**
-- Content load failures in pages return empty arrays or null (e.g., `getKapitelBySubject` returns [] on error)
-- Quiz questions missing render "Question not found" message
-- Supabase unavailable: app continues with localStorage-only state
+3. **Safe Imports (Dynamic Module Loading):**
+   - Location: `src/pages/BMS.tsx`
+   - Pattern: Wraps `import()` calls with try-catch
+   - Fallback: Returns empty array if module fails
+   - Prevents: "Failed to fetch dynamically imported module" crashes
 
-**Try-Catch Patterns:**
-- Safe storage wrapper (safeStorage) catches localStorage quota errors
-- Sanitized persist (sanitizePersisted) filters corrupt data after reload
-- Route helpers (bmsRoutes.ts) validate chapter IDs before creating URLs
+4. **Safe Storage (localStorage):**
+   - Location: `src/store/useStore.ts` → `safeStorage()`
+   - Catches: QuotaExceededError, access denied, SSR context
+   - Behavior: Returns null/undefined gracefully; doesn't throw
+   - Used by: Zustand persist middleware
 
-**Validation:**
-- Chapter validation: `validateChapter()` and `validateUnterkapitel()` in BMSUnterkapitel.tsx
-- Quiz result validation: score <= total, answers array structured correctly
+5. **Sanitize Persisted State:**
+   - Location: `src/store/useStore.ts` → `sanitizePersisted()`
+   - Validates: All fields match expected types
+   - Filters: NaN, undefined, corrupted arrays/objects
+   - Behavior: Returns empty defaults for invalid data
+   - Runs: On every page reload
+
+6. **Data Loading Fallbacks:**
+   - Pattern: Async data loaders wrapped with try-catch
+   - Fallback: Return empty arrays/null instead of throwing
+   - Examples: `getKapitelBySubject()`, `bmsChaptersLoader.ts`
+
+7. **Validation:**
+   - Chapter validation: `validateChapter()` in BMSUnterkapitel
+   - Route validation: `chapterIdFromParams()` checks against allowed IDs
+   - Quiz result validation: Score <= total, answers array structure
+
+8. **Supabase Error Handling (syncService.ts):**
+   - Failures logged, don't crash app
+   - Offline-first: Works without network
+   - Retries on next sync interval (60s)
+   - SyncToast shows status to user
 
 ## Cross-Cutting Concerns
 
 **Logging:**
-- Console.error/warn for exceptions (ErrorBoundary.tsx logs caught errors)
-- No external logging service integrated
-- User-facing errors shown via toasts (SyncToast, RandomRewardToast)
+- Approach: Console methods throughout (console.error, console.log, console.warn)
+- Pattern: Prefixed messages like "❌ Error in getKapitelBySubject:" for debugging
+- Service: No external logging service configured (future phase)
 
 **Validation:**
-- Chapter/subchapter structure validated on load
-- Quiz answers validated before recording
-- BMS content arrays checked for null/undefined before iteration
+- Input validation: Chapter IDs, question IDs checked against allowed values
+- Content validation: Kapitel/Unterkapitel structure validated on load
+- Quiz validation: Answers validated before recording
+- Location: `src/lib/validateChapter.ts`
 
 **Authentication:**
-- Supabase auth via useAuth hook
-- AuthGuard wraps protected routes; redirects to /login if no session
-- Premium status checked via `useAuth().isPremium` for feature unlocking
+- Approach: Supabase auth via `useAuth()` hook
+- Dev Mode: DEV_USER used to skip authentication (`import.meta.env.DEV`)
+- Premium Status: Checked in `useAuth()` → enables 1.5x XP multiplier
+- Session Check: AuthGuard redirects to /login if no session
 
-**Offline Support:**
-- All state persists to localStorage
-- Sync queued when offline, sent when connectivity restored
-- App functions with stale data if Supabase unavailable
+**Offline Capability:**
+- Approach: All state written to localStorage; syncs to Supabase when online
+- Behavior: App remains fully functional without network
+- Sync: Queued when offline, sent when connectivity restored
+- Status: SyncToast component shows sync state
+
+**Performance:**
+- Lazy-loaded pages: Reduce initial bundle via `lazy()` + Suspense
+- Zustand selector hooks: Avoid unnecessary re-renders (subscribe to specific state slices)
+- Code splitting: Vite build generates manualChunks (main-vendor: React, ReactDOM, Router, Zustand)
+- Images: SVG diagrams in React components (not separate files)
 
 ---
 

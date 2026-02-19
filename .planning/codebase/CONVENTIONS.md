@@ -5,226 +5,222 @@
 ## Naming Patterns
 
 **Files:**
-- React components: PascalCase (e.g., `MerksatzBox.tsx`, `QuizQuestion.tsx`, `StatCard.tsx`)
-- Utility functions: camelCase (e.g., `chapterOptimizer.ts`, `bmsStorage.ts`, `optimizeChapterContent.ts`)
-- Store/hook files: camelCase with descriptive names (e.g., `useStore.ts`, `useSyncStatus.ts`, `kffStore.ts`)
-- Page components: PascalCase matching route names (e.g., `BMS.tsx`, `Dashboard.tsx`, `Simulation.tsx`)
-- UI components: PascalCase (e.g., `button.tsx`, `card.tsx` in `src/components/ui/`)
+- Components: PascalCase (e.g., `QuizQuestion.tsx`, `ErrorBoundary.tsx`)
+- Data/logic: camelCase (e.g., `bmsStorage.ts`, `kffStore.ts`, `useKeyboardShortcuts.ts`)
+- Directories: kebab-case (e.g., `bms-kapitel`, `spezialthemen-chemie`)
 
 **Functions:**
-- camelCase for all function names: `saveChapter()`, `getKapitelBySubject()`, `recordQuizAnswer()`
-- Prefix with verb for action functions: `create*`, `load*`, `save*`, `optimize*`, `record*`, `generate*`
-- Prefix with `is` or `get` for query functions: `isAnswered`, `getProgress()`, `hasMoreHints`
-- Async functions explicitly named with async context: `optimizeAllChaptersWithAudit()`, `loadAllChapters()`
+- camelCase for all functions (e.g., `handleSelectAnswer`, `generateSubchapterId`, `removeDuplicateSubchapters`)
+- Prefix patterns:
+  - `use*` for custom React hooks (e.g., `useKeyboardShortcuts`, `useQuizSessionStore`)
+  - `handle*` for event handlers (e.g., `handleSelectAnswer`, `handleSecondTry`)
+  - `load*`, `save*`, `delete*` for storage operations (e.g., `loadAllChapters`, `saveChapter`, `deleteChapter`)
+  - `get*` for retrievers (e.g., `getProgress`, `getWeakSubtests`, `getCompletenessScore`)
+  - `is*`, `has*` for boolean checks (e.g., `isAnswered`, `hasMoreHints`, `isCorrect`)
 
 **Variables:**
-- camelCase for standard variables: `selectedOption`, `isAnswered`, `hintIndex`
-- UPPERCASE_SNAKE_CASE for constants: `STORAGE_KEY`, `BACKUP_INDEX_KEY`, `FALLBACK_HINT`, `ALL_SUBTESTS`
-- Prefix booleans with `is`, `has`, `should`, `can`: `isCorrect`, `hasMoreHints`, `shouldShowInterleavingOverlay`
-- Descriptive names over abbreviations: `correctIndex` not `ci`, `subchapterTitle` not `st`
+- camelCase for all variables and constants
+- SCREAMING_SNAKE_CASE only for true constants (e.g., `STORAGE_KEY`, `STORAGE_VERSION`, `MAX_OPTIONS`)
+- Prefix for state setters not used; use `set` function from state management (Zustand)
 
-**Types:**
-- PascalCase for interfaces and types: `OptimizationAudit`, `KFFState`, `Kapitel`, `Unterkapitel`
-- Props interfaces end with `Props`: `QuizQuestionProps`, `MerksatzBoxProps`, `StatCardProps`
-- Avoid single-letter generics in non-generic contexts; use descriptive names: `Record<string, ChapterProgress>` not `Record<K, V>`
+**Types & Interfaces:**
+- PascalCase for all types, interfaces, and type aliases (e.g., `Question`, `Kapitel`, `KFFState`, `SubtestProgress`, `WeaknessEntry`)
+- Prefix `type` for exported type aliases (e.g., `export type KFFSubtestType = ...`)
+- Generic type parameters: Single uppercase letter (T, K, V) or descriptive name (e.g., `Record<string, unknown>`)
 
 ## Code Style
 
 **Formatting:**
-- Prettier configuration:
-  - 2-space indentation
-  - Semicolons required
-  - Double quotes for strings
-  - 100-character line width
-  - Trailing commas in ES5+ (objects, arrays)
-- File: `.prettierrc`
+- Tool: Prettier v3.4.2
+- Configuration (`/.prettierrc`):
+  - Semi-colons: enabled (`"semi": true`)
+  - Quotes: double quotes (`"singleQuote": false`)
+  - Tab width: 2 spaces (`"tabWidth": 2`)
+  - Trailing commas: ES5 style (`"trailingComma": "es5"`)
+  - Print width: 100 characters (`"printWidth": 100`)
 
 **Linting:**
-- ESLint with TypeScript support
-- ESLint config: `eslint.config.js`
-- Base configs: `@eslint/js`, `typescript-eslint`, `react-hooks`, `react-refresh`
-- No custom overrides detected - uses recommended configs
+- Tool: ESLint v9.39.1
+- Configuration: Flat config (`/eslint.config.js`)
+- Extends:
+  - `@eslint/js` recommended rules
+  - `typescript-eslint` recommended rules
+  - `eslint-plugin-react-hooks` flat recommended
+  - `eslint-plugin-react-refresh` Vite plugin rules
+- Target: ECMAScript 2020, React 19
+- Files: `**/*.{ts,tsx}` (excludes `dist/`)
 
 **TypeScript:**
-- Strict mode enabled: `"strict": true`
 - Target: ES2022
-- JSX: react-jsx
-- No unchecked side-effect imports: `"noUncheckedSideEffectImports": true`
-- No fallthrough cases in switch: `"noFallthroughCasesInSwitch": true`
+- Strict mode: enabled
+- `noFallthroughCasesInSwitch`: enabled
+- `noUncheckedSideEffectImports`: enabled
+- Module resolution: `bundler`
+- JSX: `react-jsx` (automatic runtime)
 
 ## Import Organization
 
-**Order (following codebase pattern):**
-1. React imports: `import { useState } from "react"`
-2. Third-party UI/routing: `import { useNavigate } from "react-router-dom"`
-3. Icon library: `import { Dna, Atom, ... } from "lucide-react"`
-4. Component imports: `import { Card } from "@/components/ui/card"`
-5. Type imports: `import type { Kapitel } from "@/data/bmsKapitel/types"`
-6. Utility imports: `import { getKapitelBySubject } from "@/data/bmsKapitel"`
-7. Hook/store imports: `import { useStore } from "@/store/useStore"`
-8. Local relative imports: typically avoided in favor of `@/` alias
+**Order:**
+1. React and framework imports (e.g., `import React`, `import { useState }`)
+2. Third-party library imports (e.g., `framer-motion`, `lucide-react`, `zustand`)
+3. Absolute path imports using `@/` alias (e.g., `@/components`, `@/data`, `@/lib`)
+4. Relative imports (rare; prefer `@/` alias)
 
 **Path Aliases:**
-- `@/*` maps to `src/*` (configured in `tsconfig.json`)
-- Use alias for all imports: `import { Button } from "@/components/ui/button"`
-- Never use relative paths like `../../utils` - always prefer `@/`
-
-**Naming in imports:**
-- Import specific items: `import { cn } from "@/lib/utils"`
-- Namespace imports for many items: `import * as React from "react"` or explicit multi-line
-- Type-only imports: `import type { Kapitel } from "@/data/bmsKapitel/types"`
-- Optional: rename on import to avoid conflicts: `import { useStore as _useStore } from "@/store/useStore"` (seen in BMS.tsx for safety)
+- `@/*` → `./src/*` (configured in `tsconfig.app.json`)
+- Always use `@/` prefix for imports from `src/` directory
+- Examples:
+  - `import type { Kapitel } from "@/data/bmsKapitel/types"`
+  - `import { supabase } from "@/lib/supabase"`
+  - `import { useKFFStore } from "@/stores/kffStore"`
 
 ## Error Handling
 
-**Patterns observed:**
+**Patterns:**
+- Try-catch blocks for operations that may throw (e.g., `localStorage` operations, file parsing)
+- Always return a safe default on error (never throw from top-level functions)
+- Log errors with context using `console.error` with emoji prefix and descriptive message
+- Example from `src/lib/bmsStorage.ts`:
+  ```typescript
+  try {
+    const existing = loadAllChapters();
+    // ... operation logic
+  } catch (error) {
+    console.error("❌ Error saving chapter to localStorage:", error);
+    throw error; // Only re-throw if caller must handle
+  }
+  ```
+- For storage operations: Always return empty array/object rather than throw
+  - `loadAllChapters()` returns `[]` on error, never `null` or undefined
+  - `loadChaptersRaw()` returns `[]` on error
 
-1. **Try-catch with logging:**
-   ```typescript
-   try {
-     const result = riskyOperation();
-     return result;
-   } catch (err) {
-     console.warn(`⚠️ Operation failed for "${itemName}", Original kept:`, err);
-     return fallbackValue;
-   }
-   ```
-
-2. **Silent failure with fallback:**
-   ```typescript
-   try {
-     window.localStorage.setItem(name, value);
-   } catch {
-     // QuotaExceeded or Storage disabled - silently fail
-   }
-   ```
-
-3. **Error message extraction:**
-   ```typescript
-   const errMsg = err instanceof Error ? err.message : String(err);
-   ```
-
-4. **Type validation before operation:**
-   ```typescript
-   if (!content || typeof content !== 'string') {
-     return content; // Return safely
-   }
-   ```
-
-**Conventions:**
-- Always catch and handle errors, never let them bubble up silently
-- Log warnings with emoji prefixes for visibility: `⚠️`, `❌`, `✅`, `🚀`
-- Provide context in error messages: include resource name, operation attempted
-- Return sensible defaults on error: `[]` for arrays, `{}` for objects, original value for updates
+**Validation:**
+- Type guards with explicit checks (e.g., `!!(ch && typeof ch === "object" && ch.id && ch.title && ch.subject)`)
+- Nullable values checked before use: `value?.property` or `if (value) { ... }`
 
 ## Logging
 
-**Framework:** console (native browser API)
+**Framework:** `console` (native, no logger library)
 
 **Patterns:**
-- Development logging with emoji prefixes for scanning: `console.log('🧪 Testing...')`, `console.log('💾 Backup created')`
-- Warning logs for recoverable errors: `console.warn('⚠️ Error message')`
-- Error logs for critical failures: `console.error('❌ Error message')`
-- Include context: function name, resource being processed, timestamp info
-- Avoid logging sensitive data (no API keys, no auth tokens)
+- Use emoji prefixes for visual categorization:
+  - `✅` success
+  - `❌` error
+  - `⚠️` warning
+  - `🔍` search/scan operations
+  - `📝` updates
+  - `➕` additions
+  - `📖` loading
+  - `🔄` migration/transformation
+  - `🧹` cleanup
+  - `💡` hints/info
+  - `💾` save operations
+  - `📊` statistics
+  - `ℹ️` generic info
+- Location context: Include source function/module in brackets: `[loadAllChapters]`, `[saveSubchapter]`
+- Example: `console.log('✅ [loadAllChapters] Loaded', validChapters.length, 'valid chapters');`
+- Use `console.error` for errors, `console.warn` for warnings, `console.log` for info
 
-**Example from codebase:**
-```typescript
-console.log('🚀 [optimizeAllChaptersWithAudit] Starting comprehensive optimization...');
-console.log(`📚 Found ${chapters.length} chapters...`);
-console.warn(`⚠️ Optimierung fehlgeschlagen für Unterkapitel "${uk.title}", Original beibehalten:`, err);
-```
+**When to Log:**
+- Operation start/completion (with operation details)
+- Data validation failures (with reason)
+- Migration steps and results
+- Cleanup results with counts and IDs
+- Never log sensitive data (user IDs in auth context, full objects with secrets)
 
 ## Comments
 
-**When to comment:**
-- Non-obvious algorithm logic
-- Browser-specific workarounds or quirks
-- Important architectural decisions
-- Warnings about side effects
-- Explain "why", not "what" (code shows what it does)
+**When to Comment:**
+- At the top of files: Module docstring explaining purpose (see `src/lib/bmsStorage.ts` lines 1-7)
+- For complex functions: JSDoc comment block explaining parameters and return value
+- For non-obvious logic: Inline comment explaining "why" not "what"
+- For migration/cleanup logic: Inline comments explaining each step
 
 **JSDoc/TSDoc:**
-- Used for public function/type interfaces
-- Document parameters, return values, and exceptions
-- Example from codebase:
+- Use for all exported functions and interfaces
+- Format:
   ```typescript
   /**
-   * Creates a backup of chapters before optimization.
-   * Backups are NEVER overwritten: each backup gets a unique key with timestamp.
+   * Brief description of what it does
+   *
+   * More details if needed, including context
    */
-  export function createBackup(chapters: Kapitel[]): string {
-  ```
-
-- Interface properties documented inline:
-  ```typescript
-  interface OptimizationAudit {
-    /** True if chapter was skipped due to error */
-    skipped?: boolean;
-    /** Error message when skipped */
-    error?: string;
+  export function saveChapter(chapter: Kapitel): void {
+    // ...
   }
+  ```
+- Include `@param` and `@returns` for critical functions
+- Example from `src/lib/bmsStorage.ts`:
+  ```typescript
+  /**
+   * Generate a unique ID for a subchapter
+   * Format: {chapterId}-uk-{timestamp}-{random}
+   */
+  function generateSubchapterId(chapterId: string): string {
   ```
 
 ## Function Design
 
 **Size:**
-- Keep functions focused (single responsibility)
-- Utility functions typically 10-50 lines
-- React components often 100-250 lines when including JSX
+- Small, single-purpose functions (typically <50 lines, up to 150 for complex operations)
+- Complex storage operations allowed to exceed due to error handling and validation needs
+- Example: `src/lib/bmsStorage.ts` functions 24-28 lines (ID generation), 440-508 lines (duplicate removal with comprehensive logging)
 
 **Parameters:**
-- Use object destructuring for multiple parameters (seen in all component props)
-  ```typescript
-  export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQuestionProps)
-  ```
-- Optional parameters use `?:` syntax: `optional?: string`
-- Provide sensible defaults: `type = "merke"`, `size = "default"`
+- Use explicit parameters, not option objects when <3 params
+- Use object parameter for functions with multiple optional parameters
+- Type parameters explicitly (no `any`)
+- Example: `function saveSubchapter(chapterId: string, subchapter: Unterkapitel, chapterData?: Partial<Kapitel>): void`
 
-**Return values:**
-- Explicit return types on public functions
-- Example: `function createDefaultProgress(): Record<KFFSubtestType, SubtestProgress>`
-- React components implicitly return JSX.Element
+**Return Values:**
+- Always specify return type (no implicit `any`)
+- Use `void` if no return value
+- Return safe defaults on error (e.g., `[]`, `{}`, `null`) rather than throwing
+- Use type narrowing for optional returns: `function loadChapterById(id: string): Kapitel | undefined`
 
 ## Module Design
 
 **Exports:**
-- Named exports for utilities: `export function saveChapter() {}`
-- Named exports for components: `export function MerksatzBox() {}`
-- Default exports for page/route components: `export default function Dashboard() {}`
-- Type exports: `export type OptimizationReport = { ... }`
+- Named exports for functions, types, interfaces (e.g., `export function saveChapter`, `export type KFFSubtestType`)
+- Default exports only for React components (rare; prefer named exports)
+- Mark internal functions without `export` (e.g., `function generateSubchapterId`)
 
 **Barrel Files:**
-- Used for data organization: `src/data/bmsKapitel/biologie.ts` aggregates questions
-- Not used for component exports (prefer named imports from specific files)
-- Example: `/src/data/bmsKapitel/index.ts` would export from subject files
+- Used for re-exporting aggregated data (e.g., `src/data/bms/biologie.ts` exports all biology question parts)
+- Pattern: `export * from "./biologie_part1"` repeated for each part
+- Location: Typically `index.ts` files (e.g., `src/data/bms/biologie.ts`)
 
-**Organization patterns:**
-- One main component per file
-- Colocate related types and interfaces at file top
-- Utility functions in dedicated `utils/` files
-- Stores in `store/` or `stores/` directories
-- Keep related utilities together: `chapterOptimizer.ts`, `optimizeChapterContent.ts`
+**Immutability:**
+- Use spread operator for shallow copies: `{ ...existing[index], ...newData }`
+- Avoid direct mutations: `arr[i] = newValue` is acceptable for local arrays
+- Map/Set operations: Create new Map/Set rather than mutate: `new Map([...existing])`
+- Example: `const filtered = existing.filter((c) => c.id !== chapterId)` rather than `existing.splice(...)`
 
-## Constants and Configuration
+## State Management
 
-**Storage keys:**
-- Descriptive, prefixed format: `STORAGE_KEY`, `BACKUP_INDEX_KEY`, `medmaster-storage`
-- Defined near top of file with comment if behavior is non-obvious
-
-**Configuration objects:**
-- Const objects for variant/state mappings:
+**Pattern:** Zustand stores
+- File location: `src/stores/*.ts`
+- Example: `useKFFStore` in `src/stores/kffStore.ts`
+- Structure:
   ```typescript
-  const config = {
-    merke: { icon: "💡", label: "Merke", bg: "bg-amber-50", ... },
-    altfragen: { icon: "🎯", label: "Altfragen-Klassiker", ... },
-  };
+  interface StoreState {
+    // Data properties
+    progress: Record<...>;
+    // Action methods
+    recordResult: (param) => void;
+  }
+  export const useKFFStore = create<StoreState>()(
+    persist(
+      (set, get) => ({
+        // Initial state + actions
+      }),
+      { name: "storage-key" }
+    )
+  );
   ```
-
-**Tailwind classes:**
-- Use `cn()` utility from `@/lib/utils` to merge class strings
-- Store variant mappings in config objects, not scattered in JSX
-- Apply dynamic classes via template literals in `className` prop
+- Persist middleware: Uses browser localStorage
+- Getters: `get().propertyName`
+- Setters: `set((state) => ({ ...state, updated: newValue }))`
 
 ---
 
