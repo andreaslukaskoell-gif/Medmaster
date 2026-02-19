@@ -3,8 +3,19 @@ export interface SelfTestQuestion {
   options: string[];
   correctIndex: number;
   explanation: string;
-  /** Socratic Feedback: Hinweise, die nacheinander angezeigt werden („Gib mir einen Tipp“). Führen zum Aha-Moment, bevor die Lösung gezeigt wird. */
+  /** Socratic Feedback: Hinweise, die nacheinander angezeigt werden („Gib mir einen Tipp"). Führen zum Aha-Moment, bevor die Lösung gezeigt wird. */
   hints?: string[];
+  /**
+   * Tags from linkedQuestionTags in Stichwortliste entry.
+   * Example: bio-7-01 has linkedQuestionTags: ["pcr", "polymerase-kettenreaktion"]
+   * Enables: getQuestionsByTags(["pcr"]) → all PCR-related questions
+   */
+  tags?: string[];
+  /**
+   * Question difficulty level (1 = easy, 2 = medium, 3 = hard)
+   * Used for adaptive learning and progress tracking
+   */
+  difficulty?: 1 | 2 | 3;
 }
 
 /** Optional quiz items for chapter content (same shape as SelfTestQuestion for reuse). */
@@ -14,6 +25,14 @@ export interface QuizItem {
   correctIndex: number;
   explanation: string;
   hints?: string[];
+  /**
+   * Tags from linkedQuestionTags in Stichwortliste entry.
+   */
+  tags?: string[];
+  /**
+   * Question difficulty level (1 = easy, 2 = medium, 3 = hard)
+   */
+  difficulty?: 1 | 2 | 3;
 }
 
 export interface ContentSection {
