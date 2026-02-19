@@ -42,4 +42,39 @@ export function findChapterByUnterkapitelId(
   return null;
 }
 
+/**
+ * Validates that all chapters in a subject have sequence numbers.
+ * Logs warnings for chapters missing sequence metadata.
+ * (Phase 4: STRUCT-02 quality gate)
+ */
+export function validateChapterSequence() {
+  const subjects = ['biologie', 'chemie', 'physik', 'mathematik'] as const;
+  subjects.forEach(subject => {
+    const chapters = getKapitelBySubject(subject);
+    const missing = chapters.filter(c => c.sequence === undefined);
+    if (missing.length > 0) {
+      console.warn(`⚠️ ${subject} missing sequence: ${missing.map(c => c.id).join(', ')}`);
+    }
+  });
+}
+
+/**
+ * Validates that linkedChapters references point to existing chapters.
+ * Logs warnings for broken smart-links.
+ * (Phase 4: STRUCT-05 quality gate)
+ */
+export function validateSmartLinks() {
+  const allIds = new Set(alleKapitel.map(c => c.id));
+
+  alleKapitel.forEach(chapter => {
+    if (chapter.linkedChapters && chapter.linkedChapters.length > 0) {
+      chapter.linkedChapters.forEach(linkedId => {
+        if (!allIds.has(linkedId)) {
+          console.warn(`❌ Chapter ${chapter.id} links to missing ${linkedId}`);
+        }
+      });
+    }
+  });
+}
+
 export { biologieKapitel, chemieKapitel, physikKapitel, mathematikKapitel };
