@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Content Audit** - Sync existing content with Stichwortliste, identify gaps and irrelevant content (completed 2026-02-19)
 - [x] **Phase 2: Gap Filling** - Create missing content for 8 neu2026 topics and sync abgedeckt flags (completed 2026-02-19)
-- [ ] **Phase 3: Quality Elevation** - Raise all BMS content to textbook-level with exam markings
+- [x] **Phase 3: Quality Elevation** - Raise all BMS content to textbook-level with exam markings (completed 2026-02-19)
 - [ ] **Phase 4: Structure Reorganization** - Implement lernlogische Abfolge and premium buckets
 - [ ] **Phase 5: Smart Integration** - Ensure QuizQuestion, MerksatzBox, and XP systems work consistently
 - [ ] **Phase 6: Progress Tracking** - Build Mastered status and progress bars at all levels
@@ -69,9 +69,9 @@ Plans:
 **Plans**: 3 plans in 2 waves
 
 Plans:
-- [ ] 03-01-PLAN.md — isPro architecture + premium MerksatzBox glassmorphism
-- [ ] 03-02-PLAN.md — Audit Biologie chapters (5-option format, altfragen/klinisch markers, difficulty validation)
-- [ ] 03-03-PLAN.md — Upgrade Kapitel 1 to premium quality with learning bites
+- [x] 03-01-PLAN.md — isPro architecture + premium MerksatzBox glassmorphism
+- [x] 03-02-PLAN.md — Audit Biologie chapters (5-option format, altfragen/klinisch markers, difficulty validation)
+- [x] 03-03-PLAN.md — Upgrade Kapitel 1 to premium quality with learning bites
 
 ### Phase 4: Structure Reorganization
 **Goal**: BMS content organized in lernlogische Abfolge with premium buckets and smart navigation
