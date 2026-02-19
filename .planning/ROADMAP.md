@@ -102,10 +102,13 @@ Plans:
   5. XP system from xp.ts + progression.ts integrated consistently
   6. Level-Aufstieg shows after quiz completion with Level-Namen
   7. Hot-Streak-Bonus triggers after 3+ correct answers in sequence
-**Plans**: TBD
+**Plans**: 4 plans in 3 waves
 
 Plans:
-- [ ] TBD
+- [ ] 05-01-PLAN.md — XP integration with second-try, hot-streak bonuses, and level-up detection
+- [ ] 05-02-PLAN.md — Verify hint display mechanics in QuizQuestion
+- [ ] 05-03-PLAN.md — Audit MerksatzBox usage across all 38 chapters (checkpoint)
+- [ ] 05-04-PLAN.md — Deploy MerksatzBox to deficit chapters (implementation decision)
 
 ### Phase 6: Progress Tracking
 **Goal**: Users can track mastery per chapter, progress per Fach, and overall completion
