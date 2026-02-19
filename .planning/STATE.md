@@ -5,16 +5,18 @@
 See: .planning/PROJECT.md (updated 2026-02-19)
 
 **Core value:** BMS-Inhalte in Lehrbuch-Tiefe mit Altfragen-Markierungen, interaktiv aufbereitet über Quiz und Merksätze, sodass zahlende Nutzer sich besser vorbereiten als mit jedem anderen Tool.
-**Current focus:** Phase 5 - Smart Integration (planning needed)
+**Current focus:** Content generation (Chemie/Physik/Mathematik migration + type diversity)
 
 ## Current Position
 
-Phase: 5 of 8 (Smart Integration)
-Plan: 2 of 4 (XP Award Integration complete)
-Status: In Progress - Phase 5
-Last activity: 2026-02-19 — Completed 05-01-PLAN.md (XP Award Integration)
+Phase: 5 of 8 (Smart Integration) — ✅ COMPLETE
+Plan: 3 of 4 (Plan 04 skipped)
+Status: Phase 5 complete, ready for content generation
+Last activity: 2026-02-19 — Completed Phase 5 (Smart Integration)
 
-Progress: [████░░░░░░] 50% (4/8 phases complete)
+Progress: [█████░░░░░] 62.5% (5/8 phases complete)
+
+**Note:** Chemie, Physik, Mathematik chapters not yet in Supabase. Migration + MerksatzBox audit will happen during content generation phase (next).
 
 ## Performance Metrics
 
@@ -89,6 +91,13 @@ Recent decisions affecting current work:
 - [Phase 04-01]: Gaps in sequence numbers preserved (1, 7, 8) for future expansion of Biologie chapters
 - [Phase 04-01]: Smart-links bidirectional for related chapters (bio-kap7 ↔ bio-kap8)
 - [Phase 04-01]: Validation helpers use console.warn for development feedback without breaking builds
+- [Phase 05]: XP award system fully integrated with second-try (50% penalty), hot-streak (1.25x bonus), and level-up celebrations
+- [Phase 05]: Hint mechanics verified as production-ready (no code changes needed from Phase 3-4 implementation)
+- [Phase 05]: MerksatzBox audit shows 100% compliance for Biologie (12/12 chapters, avg 5.9 boxes per Unterkapitel)
+- [Phase 05]: Scope redefined to Biologie only — Chemie/Physik/Mathematik chapters not yet in Supabase
+- [Phase 05]: Plan 04 (MerksatzBox deployment) skipped — requirement already satisfied for existing chapters
+- [Phase 05]: Type diversity (altfragen/klinisch/tipp) deferred to content generation phase
+- [Phase 05]: **Backlog priority:** Migrate Chemie/Physik/Mathematik chapters to Supabase before content filling can begin
 - [Phase 05]: Verified hint mechanics satisfy SMART-03 without code changes
 - [Phase 05]: FALLBACK_HINT pattern prevents crashes on missing hints
 - [Phase 05-01]: Hot-streak bonus applies multiplicatively on top of second-try penalty (0.5x * 1.25x)
