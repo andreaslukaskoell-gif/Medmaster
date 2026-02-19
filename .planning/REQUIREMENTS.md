@@ -18,11 +18,11 @@
 ### Content-Qualität (Lehrbuch-Niveau + Altfragen)
 
 - [x] **QUAL-01**: Jedes Kapitel folgt dem BMSUnterkapitel.tsx-Pattern (SubchapterContent + QuizQuestion + MerksatzBox)
-- [ ] **QUAL-02**: BMS-Fragen haben 5 Optionen (A-E) gemäß MedAT-Format
-- [ ] **QUAL-03**: Altfragen sind mit MerksatzBox type="altfragen" markiert
+- [x] **QUAL-02**: BMS-Fragen haben 5 Optionen (A-E) gemäß MedAT-Format
+- [x] **QUAL-03**: Altfragen sind mit MerksatzBox type="altfragen" markiert
 - [x] **QUAL-04**: Klinische Highlights verwenden MerksatzBox type="klinisch" ("By doctors for future doctors")
-- [ ] **QUAL-05**: Erklärungen zu Antworten sind auf Lehrbuch-Niveau (nicht nur "richtig/falsch")
-- [ ] **QUAL-06**: Schwierigkeitsgrad (difficulty: "leicht" | "mittel" | "schwer") ist korrekt zugeordnet
+- [x] **QUAL-05**: Erklärungen zu Antworten sind auf Lehrbuch-Niveau (nicht nur "richtig/falsch")
+- [x] **QUAL-06**: Schwierigkeitsgrad (difficulty: "leicht" | "mittel" | "schwer") ist korrekt zugeordnet
 
 ### Struktur & Bucketing (Lernlogische Abfolge)
 
@@ -119,11 +119,11 @@
 | SYNC-04 | Phase 2 | Complete |
 | SYNC-05 | Phase 1 | Complete |
 | QUAL-01 | Phase 3 | Complete |
-| QUAL-02 | Phase 3 | Pending |
-| QUAL-03 | Phase 3 | Pending |
+| QUAL-02 | Phase 3 | Complete |
+| QUAL-03 | Phase 3 | Complete |
 | QUAL-04 | Phase 3 | Complete |
-| QUAL-05 | Phase 3 | Pending |
-| QUAL-06 | Phase 3 | Pending |
+| QUAL-05 | Phase 3 | Complete |
+| QUAL-06 | Phase 3 | Complete |
 | STRUCT-01 | Phase 4 | Pending |
 | STRUCT-02 | Phase 4 | Pending |
 | STRUCT-03 | Phase 4 | Pending |
