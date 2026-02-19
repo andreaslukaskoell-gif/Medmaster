@@ -17,10 +17,10 @@
 
 ### Content-Qualität (Lehrbuch-Niveau + Altfragen)
 
-- [ ] **QUAL-01**: Jedes Kapitel folgt dem BMSUnterkapitel.tsx-Pattern (SubchapterContent + QuizQuestion + MerksatzBox)
+- [x] **QUAL-01**: Jedes Kapitel folgt dem BMSUnterkapitel.tsx-Pattern (SubchapterContent + QuizQuestion + MerksatzBox)
 - [ ] **QUAL-02**: BMS-Fragen haben 5 Optionen (A-E) gemäß MedAT-Format
 - [ ] **QUAL-03**: Altfragen sind mit MerksatzBox type="altfragen" markiert
-- [ ] **QUAL-04**: Klinische Highlights verwenden MerksatzBox type="klinisch" ("By doctors for future doctors")
+- [x] **QUAL-04**: Klinische Highlights verwenden MerksatzBox type="klinisch" ("By doctors for future doctors")
 - [ ] **QUAL-05**: Erklärungen zu Antworten sind auf Lehrbuch-Niveau (nicht nur "richtig/falsch")
 - [ ] **QUAL-06**: Schwierigkeitsgrad (difficulty: "leicht" | "mittel" | "schwer") ist korrekt zugeordnet
 
@@ -118,10 +118,10 @@
 | SYNC-03 | Phase 1 | Complete |
 | SYNC-04 | Phase 2 | Complete |
 | SYNC-05 | Phase 1 | Complete |
-| QUAL-01 | Phase 3 | Pending |
+| QUAL-01 | Phase 3 | Complete |
 | QUAL-02 | Phase 3 | Pending |
 | QUAL-03 | Phase 3 | Pending |
-| QUAL-04 | Phase 3 | Pending |
+| QUAL-04 | Phase 3 | Complete |
 | QUAL-05 | Phase 3 | Pending |
 | QUAL-06 | Phase 3 | Pending |
 | STRUCT-01 | Phase 4 | Pending |
