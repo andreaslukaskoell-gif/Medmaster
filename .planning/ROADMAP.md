@@ -48,10 +48,12 @@ Plans:
   2. Each new topic has 5+ questions with 5 options (A-E) per MedAT format
   3. Stichwortliste abgedeckt flags set to true for newly created content
   4. No Stichwortliste entry remains unmapped or incomplete
-**Plans**: TBD
+**Plans**: 3 plans in 2 waves
 
 Plans:
-- [ ] TBD
+- [ ] 02-01-PLAN.md — Add tags field to SelfTestQuestion interface and create Kapitel 7 (Methoden der Genetik) with 6 Unterkapitel
+- [ ] 02-02-PLAN.md — Create Kapitel 8 (Humangenetik) with 2 Unterkapitel
+- [ ] 02-03-PLAN.md — Update Stichwortliste abgedeckt flags for all 8 neu2026 topics
 
 ### Phase 3: Quality Elevation
 **Goal**: All BMS content meets textbook-level standards with exam markings and clinical highlights
