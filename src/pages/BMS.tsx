@@ -236,15 +236,30 @@ export default function BMS() {
         if (!dynamicChapter || !dynamicChapter.id) continue;
         const index = merged.findIndex((c) => c && c.id === dynamicChapter.id);
         if (index >= 0) {
-          // Merge Supabase data but preserve static BMS metadata
           const staticChapter = merged[index];
-          merged[index] = {
-            ...dynamicChapter,
-            // Preserve static fields that Supabase doesn't know about
-            sequence: staticChapter.sequence ?? dynamicChapter.sequence,
-            sequenceTitle: staticChapter.sequenceTitle ?? dynamicChapter.sequenceTitle,
-            linkedChapters: staticChapter.linkedChapters ?? dynamicChapter.linkedChapters ?? [],
-          };
+
+          if (staticChapter.sequence !== undefined) {
+            // BMS learning path chapter: static content takes precedence
+            merged[index] = {
+              ...dynamicChapter,              // Supabase extras (SRS data, completion)
+              title: staticChapter.title,     // Static title ("Methoden der Genetik")
+              unterkapitel: staticChapter.unterkapitel?.length
+                ? staticChapter.unterkapitel  // Static unterkapitel preferred
+                : dynamicChapter.unterkapitel,
+              sequence: staticChapter.sequence,
+              sequenceTitle: staticChapter.sequenceTitle,
+              linkedChapters: staticChapter.linkedChapters ?? [],
+            };
+          } else {
+            // Normal chapter: Supabase takes precedence, add static metadata
+            merged[index] = {
+              ...staticChapter,
+              ...dynamicChapter,
+              sequence: staticChapter.sequence ?? dynamicChapter.sequence,
+              sequenceTitle: staticChapter.sequenceTitle ?? dynamicChapter.sequenceTitle,
+              linkedChapters: staticChapter.linkedChapters ?? dynamicChapter.linkedChapters ?? [],
+            };
+          }
         } else {
           // Keep all Supabase chapters (full content from DB)
           merged.push(dynamicChapter);
@@ -281,15 +296,30 @@ export default function BMS() {
         if (!supabaseChapter || !supabaseChapter.id) continue;
         const index = merged.findIndex((c) => c && c.id === supabaseChapter.id);
         if (index >= 0) {
-          // Merge Supabase data but preserve static BMS metadata
           const staticChapter = merged[index];
-          merged[index] = {
-            ...supabaseChapter,
-            // Preserve static fields that Supabase doesn't know about
-            sequence: staticChapter.sequence ?? supabaseChapter.sequence,
-            sequenceTitle: staticChapter.sequenceTitle ?? supabaseChapter.sequenceTitle,
-            linkedChapters: staticChapter.linkedChapters ?? supabaseChapter.linkedChapters ?? [],
-          };
+
+          if (staticChapter.sequence !== undefined) {
+            // BMS learning path chapter: static content takes precedence
+            merged[index] = {
+              ...supabaseChapter,              // Supabase extras (SRS data, completion)
+              title: staticChapter.title,      // Static title ("Methoden der Genetik")
+              unterkapitel: staticChapter.unterkapitel?.length
+                ? staticChapter.unterkapitel   // Static unterkapitel preferred
+                : supabaseChapter.unterkapitel,
+              sequence: staticChapter.sequence,
+              sequenceTitle: staticChapter.sequenceTitle,
+              linkedChapters: staticChapter.linkedChapters ?? [],
+            };
+          } else {
+            // Normal chapter: Supabase takes precedence, add static metadata
+            merged[index] = {
+              ...staticChapter,
+              ...supabaseChapter,
+              sequence: staticChapter.sequence ?? supabaseChapter.sequence,
+              sequenceTitle: staticChapter.sequenceTitle ?? supabaseChapter.sequenceTitle,
+              linkedChapters: staticChapter.linkedChapters ?? supabaseChapter.linkedChapters ?? [],
+            };
+          }
         } else {
           // Keep all Supabase chapters (full content from DB)
           merged.push(supabaseChapter);
@@ -654,15 +684,30 @@ export default function BMS() {
               if (!dynamicChapter || !dynamicChapter.id) continue;
               const index = sKapitel.findIndex((c) => c && c.id === dynamicChapter.id);
               if (index >= 0) {
-                // Merge Supabase data but preserve static BMS metadata
                 const staticChapter = sKapitel[index];
-                sKapitel[index] = {
-                  ...dynamicChapter,
-                  // Preserve static fields that Supabase doesn't know about
-                  sequence: staticChapter.sequence ?? dynamicChapter.sequence,
-                  sequenceTitle: staticChapter.sequenceTitle ?? dynamicChapter.sequenceTitle,
-                  linkedChapters: staticChapter.linkedChapters ?? dynamicChapter.linkedChapters ?? [],
-                };
+
+                if (staticChapter.sequence !== undefined) {
+                  // BMS learning path chapter: static content takes precedence
+                  sKapitel[index] = {
+                    ...dynamicChapter,              // Supabase extras (SRS data, completion)
+                    title: staticChapter.title,     // Static title ("Methoden der Genetik")
+                    unterkapitel: staticChapter.unterkapitel?.length
+                      ? staticChapter.unterkapitel  // Static unterkapitel preferred
+                      : dynamicChapter.unterkapitel,
+                    sequence: staticChapter.sequence,
+                    sequenceTitle: staticChapter.sequenceTitle,
+                    linkedChapters: staticChapter.linkedChapters ?? [],
+                  };
+                } else {
+                  // Normal chapter: Supabase takes precedence, add static metadata
+                  sKapitel[index] = {
+                    ...staticChapter,
+                    ...dynamicChapter,
+                    sequence: staticChapter.sequence ?? dynamicChapter.sequence,
+                    sequenceTitle: staticChapter.sequenceTitle ?? dynamicChapter.sequenceTitle,
+                    linkedChapters: staticChapter.linkedChapters ?? dynamicChapter.linkedChapters ?? [],
+                  };
+                }
               } else {
                 // Keep all Supabase chapters (full content from DB)
                 sKapitel.push(dynamicChapter);
