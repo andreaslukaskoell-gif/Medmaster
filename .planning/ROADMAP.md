@@ -84,10 +84,11 @@ Plans:
   3. Each Fach has overview page with chapter roadmap and Fortschrittsanzeige
   4. URL structure /bms/:fach/:kapitel works consistently across all chapters
   5. Smart-Links between chapters function (Querverweise navigable)
-**Plans**: TBD
+**Plans**: 2 plans in 2 waves
 
 Plans:
-- [ ] TBD
+- [ ] 04-01-PLAN.md — Data layer foundation: extend types with sequence/smart-links, create SUBJECT_COLORS, apply sequence to Biologie
+- [ ] 04-02-PLAN.md — UI integration: FachRoadmap component, centralized colors in BMS.tsx, smart-links in chapter views (checkpoint)
 
 ### Phase 5: Smart Integration
 **Goal**: QuizQuestion, MerksatzBox, and progression systems work seamlessly in every chapter
