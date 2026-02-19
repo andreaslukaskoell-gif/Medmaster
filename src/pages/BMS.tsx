@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import type { Kapitel } from "@/data/bmsKapitel/types";
 import { SUBJECT_COLORS, getSubjectColors } from '@/data/bmsKapitel/colors';
+import { FachRoadmap } from '@/components/chapter/FachRoadmap';
 import BMSKapitelView from "./BMSKapitelView";
 import { printChapterOverview, listAllChapters } from "@/utils/listChapters";
 import { loadBMSChaptersSWR } from "@/lib/bmsChaptersLoader";
@@ -483,6 +484,21 @@ export default function BMS() {
               />
             </div>
           </div>
+        )}
+
+        {/* Visual Learning Roadmap - Phase 4: STRUCT-03 */}
+        {kapitel.length > 0 && (
+          <FachRoadmap
+            chapters={kapitel}
+            currentChapterId={undefined}
+            onSelectChapter={(chapterId) => {
+              const chapter = kapitel.find(c => c.id === chapterId);
+              if (chapter) {
+                setActiveKapitel(chapter);
+                navigate(pathForChapter(selectedSubject, chapterId));
+              }
+            }}
+          />
         )}
 
         <div className="space-y-3">
