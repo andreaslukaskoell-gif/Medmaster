@@ -74,4 +74,21 @@ export interface Kapitel {
   icon: string;
   unterkapitel: Unterkapitel[];
   estimatedTime: string;
+  /**
+   * Learning sequence position within the subject (1 = first chapter).
+   * Used for sorting chapters in lernlogische Abfolge (not alphabetically).
+   * Example: Zelle (1) → Gewebe (2) → Organe (3) → ...
+   */
+  sequence?: number;
+  /**
+   * Short title for roadmap display.
+   * Example: "Zelle" instead of "Die Zelle - Struktur und Funktion"
+   */
+  sequenceTitle?: string;
+  /**
+   * Array of chapter IDs for smart-links (related/prerequisite chapters).
+   * Enables cross-chapter navigation for related topics.
+   * Example: ['bio-kap7'] links to Methoden der Genetik
+   */
+  linkedChapters?: string[];
 }
