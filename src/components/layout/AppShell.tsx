@@ -17,7 +17,7 @@ import { BadgeUnlockModal } from "@/components/badges/BadgeUnlockModal";
 import { useQuizSessionStore } from "@/store/quizSessionStore";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
-import { getLevelFromXP, getFeatureUnlockedAtLevel } from "@/lib/progression";
+import { getLevelFromXP, getLevelName, getFeatureUnlockedAtLevel } from "@/lib/progression";
 import { cn } from "@/lib/utils";
 import { SIDEBAR_MAIN_ML } from "./sidebarLayout";
 
@@ -68,6 +68,10 @@ export function AppShell() {
         feature: getFeatureUnlockedAtLevel(currentLevel),
       });
       levelRef.current = currentLevel;
+
+      // Auto-dismiss after 5 seconds
+      const timer = setTimeout(() => setLevelUpState(null), 5000);
+      return () => clearTimeout(timer);
     }
   }, [xp]);
 
@@ -144,6 +148,7 @@ export function AppShell() {
         <RandomRewardToast message={rewardMessage} type={rewardType} onDismiss={clearReward} />
         <LevelUpOverlay
           level={levelUpState?.level}
+          levelName={levelUpState?.level ? getLevelName(levelUpState.level) : undefined}
           feature={levelUpState?.feature}
           onDismiss={() => setLevelUpState(null)}
         />
@@ -152,7 +157,7 @@ export function AppShell() {
         {/* Main area: full width on small screens; from lg reserve space for sidebar (sync: sidebarLayout.ts) */}
         <div className={cn("min-h-screen flex flex-col relative z-50 w-full", SIDEBAR_MAIN_ML)}>
           <TopBar menuButtonRef={menuButtonRef} onMenuToggle={() => setMobileOpen(!mobileOpen)} />
-          <main className="flex-1 p-4 lg:p-6 pb-20 lg:pb-6">
+          <main className="flex-1 pt-14 sm:pt-16 p-4 lg:p-6 pb-20 lg:pb-6">
             <ErrorBoundary>
               <AnimatePresence mode="wait">
                 <motion.div
