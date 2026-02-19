@@ -26,8 +26,8 @@
 
 ### Struktur & Bucketing (Lernlogische Abfolge)
 
-- [ ] **STRUCT-01**: 4 Premium-Buckets (Biologie=emerald, Chemie=red, Physik=blue, Mathematik=violet) sind implementiert
-- [ ] **STRUCT-02**: Biologie-Kapitel in lernlogischer Abfolge: Zelle → Gewebe → Organe → Frühentwicklung → Genetik → Molekulare Genetik → Methoden → Humangenetik → Ökologie
+- [x] **STRUCT-01**: 4 Premium-Buckets (Biologie=emerald, Chemie=red, Physik=blue, Mathematik=violet) sind implementiert
+- [x] **STRUCT-02**: Biologie-Kapitel in lernlogischer Abfolge: Zelle → Gewebe → Organe → Frühentwicklung → Genetik → Molekulare Genetik → Methoden → Humangenetik → Ökologie
 - [ ] **STRUCT-03**: Jedes Fach hat eine Übersichtsseite mit Kapitel-Roadmap und Fortschrittsanzeige
 - [ ] **STRUCT-04**: Kapitel-Navigation nutzt konsistente URL-Struktur (`/bms/:fach/:kapitel`)
 - [ ] **STRUCT-05**: Smart-Links zwischen Kapiteln funktionieren (Querverweise auf verwandte Themen)
@@ -124,8 +124,8 @@
 | QUAL-04 | Phase 3 | Complete |
 | QUAL-05 | Phase 3 | Complete |
 | QUAL-06 | Phase 3 | Complete |
-| STRUCT-01 | Phase 4 | Pending |
-| STRUCT-02 | Phase 4 | Pending |
+| STRUCT-01 | Phase 4 | Complete |
+| STRUCT-02 | Phase 4 | Complete |
 | STRUCT-03 | Phase 4 | Pending |
 | STRUCT-04 | Phase 4 | Pending |
 | STRUCT-05 | Phase 4 | Pending |

@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-19)
 
 **Core value:** BMS-Inhalte in Lehrbuch-Tiefe mit Altfragen-Markierungen, interaktiv aufbereitet über Quiz und Merksätze, sodass zahlende Nutzer sich besser vorbereiten als mit jedem anderen Tool.
-**Current focus:** Phase 3 - Quality Elevation
+**Current focus:** Phase 4 - Structure Reorganization
 
 ## Current Position
 
-Phase: 3 of 8 (Quality Elevation)
-Plan: 4 of 4 (Plan 03-04 complete)
-Status: Phase 3 complete
-Last activity: 2026-02-19 — Completed plan 03-04 (kap1 MerksatzBox extraction)
+Phase: 4 of 8 (Structure Reorganization)
+Plan: 1 of 2 (Plan 04-01 complete)
+Status: Phase 4 in progress
+Last activity: 2026-02-19 — Completed plan 04-01 (Data Layer Foundation)
 
-Progress: [███░░░░░░░] 37.5% (3/8 phases complete)
+Progress: [████░░░░░░] 50% (4/8 phases in progress)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
-- Average duration: 5.4 min
-- Total execution time: 0.90 hours
+- Total plans completed: 11
+- Average duration: 5.2 min
+- Total execution time: 0.95 hours
 
 **By Phase:**
 
@@ -30,13 +30,15 @@ Progress: [███░░░░░░░] 37.5% (3/8 phases complete)
 | 01 | 3 | 12 min | 4 min |
 | 02 | 3 | 7 min | 2.3 min |
 | 03 | 4 | 24 min | 6 min |
+| 04 | 1 | 2.3 min | 2.3 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-03 (< 2 min), 03-01 (3 min), 03-02 (6.5 min), 03-03 (12 min), 03-04 (2.6 min)
-- Trend: Phase 3 plans varied (data extraction faster than content creation)
+- Last 5 plans: 03-01 (3 min), 03-02 (6.5 min), 03-03 (12 min), 03-04 (2.6 min), 04-01 (2.3 min)
+- Trend: Consistent 2-3 min for data layer work, longer for content creation
 - Phase 1 complete: 3/3 plans (100%)
 - Phase 2 complete: 3/3 plans (100%)
 - Phase 3 complete: 4/4 plans (100%)
+- Phase 4 in progress: 1/2 plans (50%)
 
 | Phase | Plan | Duration (s) | Tasks | Files |
 |-------|------|--------------|-------|-------|
@@ -47,6 +49,7 @@ Progress: [███░░░░░░░] 37.5% (3/8 phases complete)
 | 03 | 02 | 390 | 4 | 2 |
 | 03 | 03 | 717 | 2 | 1 |
 | 03 | 04 | 155 | 1 | 1 |
+| 04 | 01 | 139 | 4 | 4 |
 
 ## Accumulated Context
 
@@ -79,6 +82,9 @@ Recent decisions affecting current work:
 - [Phase 03-03]: Learning bite size: 3-4 sentences per section, max 150 words per visual block (Amboss clarity principle)
 - [Phase 03-04]: altfrage uses {question, answer} object format to match BMSUnterkapitel.tsx expectations
 - [Phase 03-04]: Multiple klinischerBezug blocks concatenated with ' | ' separator
+- [Phase 04-01]: Gaps in sequence numbers preserved (1, 7, 8) for future expansion of Biologie chapters
+- [Phase 04-01]: Smart-links bidirectional for related chapters (bio-kap7 ↔ bio-kap8)
+- [Phase 04-01]: Validation helpers use console.warn for development feedback without breaking builds
 
 ### Pending Todos
 
@@ -108,6 +114,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-19T17:04:15Z
-Stopped at: Completed 03-04-PLAN.md - Phase 3 complete (all 4 plans done)
-Resume file: .planning/phases/03-quality-elevation/03-04-SUMMARY.md
+Last session: 2026-02-19T18:03:22Z
+Stopped at: Completed 04-01-PLAN.md
+Resume file: .planning/phases/04-structure-reorganization/04-01-SUMMARY.md
