@@ -283,7 +283,7 @@ NGS-Technologien ermöglichen die parallele Sequenzierung von Millionen DNA-Frag
             'DNA ist negativ geladen und wandert zur Anode.'
           ],
           tags: ['sequenzierung', 'sanger', 'elektrophorese'],
-          difficulty: 2
+          difficulty: 1
         },
         {
           question: 'Was ermöglicht Next-Generation Sequencing (NGS) im Vergleich zur Sanger-Sequenzierung?',
@@ -473,7 +473,7 @@ Epigenetische Modifikationen beeinflussen die Genexpression ohne Änderung der D
             'Überlege: Was sagt die Position eines Gens versus seine Aktivität aus?'
           ],
           tags: ['genomanalyse', 'strukturell', 'funktionell'],
-          difficulty: 2
+          difficulty: 3
         },
         {
           question: 'Welches Prinzip liegt der Microarray-Technologie zugrunde?',
@@ -509,7 +509,7 @@ Epigenetische Modifikationen beeinflussen die Genexpression ohne Änderung der D
             'Sequenzierung ist eine „offene" Methode ohne Vorselektion.'
           ],
           tags: ['genomanalyse', 'rna-seq', 'microarray'],
-          difficulty: 2
+          difficulty: 3
         },
         {
           question: 'Was versteht man unter dem Transkriptom einer Zelle?',
@@ -563,7 +563,7 @@ Epigenetische Modifikationen beeinflussen die Genexpression ohne Änderung der D
             'Dies ist eine strukturelle, nicht sequenz-basierte Variation.'
           ],
           tags: ['genomanalyse', 'cnv', 'strukturelle-variation'],
-          difficulty: 2
+          difficulty: 3
         }
       ]
     },
@@ -810,7 +810,7 @@ Viele Länder unterhalten forensische DNA-Datenbanken:
             'Überlege: Welche Körperflüssigkeit kann zellfrei sein?'
           ],
           tags: ['genetischer-fingerabdruck', 'forensik', 'dna-isolation'],
-          difficulty: 2
+          difficulty: 3
         }
       ]
     },
@@ -1012,7 +1012,7 @@ Nur ein Bruchteil der Zellen nimmt erfolgreich DNA auf. Selektion erfolgt durch:
             'Der Prozess bringt neue genetische Information in die Zelle.'
           ],
           tags: ['gvo', 'gentechnik', 'transformation'],
-          difficulty: 1
+          difficulty: 2
         },
         {
           question: 'Wie werden transformierte Bakterien typischerweise selektiert?',
@@ -1066,7 +1066,7 @@ Nur ein Bruchteil der Zellen nimmt erfolgreich DNA auf. Selektion erfolgt durch:
             'Vitamin-A-Mangel ist ein großes Problem in Ländern, wo Reis Hauptnahrungsmittel ist.'
           ],
           tags: ['gvo', 'gentechnik', 'golden-rice', 'vitamin-a'],
-          difficulty: 2
+          difficulty: 3
         }
       ]
     },
@@ -1331,7 +1331,7 @@ Nach Dolly wurden zahlreiche weitere Tierarten geklont:
             'Wird der Embryo übertragen oder werden Zellen entnommen?'
           ],
           tags: ['klonierung', 'reproduktiv', 'therapeutisch'],
-          difficulty: 2
+          difficulty: 3
         },
         {
           question: 'Was sind induzierte pluripotente Stammzellen (iPSCs)?',
@@ -1349,7 +1349,7 @@ Nach Dolly wurden zahlreiche weitere Tierarten geklont:
             'Diese Methode wurde als ethische Alternative zur therapeutischen Klonierung entwickelt.'
           ],
           tags: ['klonierung', 'ipsc', 'stammzellen'],
-          difficulty: 2
+          difficulty: 3
         },
         {
           question: 'Welche Aussage zur Effizienz des reproduktiven Klonierens ist korrekt?',

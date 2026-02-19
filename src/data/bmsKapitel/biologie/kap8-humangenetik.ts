@@ -166,7 +166,7 @@ Diese Unsicherheit erfordert sensible Kommunikation und realistische Erwartungen
             'Überlege: Kann ein defektes Strukturprotein nur ein Organ betreffen?'
           ],
           tags: ['erbgänge', 'pleiotropie'],
-          difficulty: 2
+          difficulty: 1
         },
         {
           question: 'Worin unterscheiden sich Penetranz und Expressivität?',
@@ -202,7 +202,7 @@ Diese Unsicherheit erfordert sensible Kommunikation und realistische Erwartungen
             'Überlege: Sind Menschen exakt 150 cm, 160 cm, 170 cm groß – oder gibt es alle Zwischenwerte?'
           ],
           tags: ['erbgänge', 'multifaktoriell', 'polygenie'],
-          difficulty: 2
+          difficulty: 1
         },
         {
           question: 'Eine Patientin trägt eine BRCA1-Mutation mit 70% Penetranz für Brustkrebs. Was bedeutet das?',
@@ -405,7 +405,7 @@ Dieses Beispiel zeigt die Bedeutung einer individuellen Risikoabschätzung und n
             'Überlege: Wann beginnt eine Schwangerschaft im medizinischen Sinne?'
           ],
           tags: ['pid', 'pnd', 'pränataldiagnostik'],
-          difficulty: 2
+          difficulty: 1
         },
         {
           question: 'Welche Aussage zum NIPT (Non-Invasive Prenatal Testing) ist korrekt?',
@@ -441,7 +441,7 @@ Dieses Beispiel zeigt die Bedeutung einer individuellen Risikoabschätzung und n
             'Überlege: Was kann man an einem Embryo im 8-Zell-Stadium untersuchen?'
           ],
           tags: ['pid', 'präimplantationsdiagnostik'],
-          difficulty: 2
+          difficulty: 1
         },
         {
           question: 'Warum wird die Chorionzottenbiopsie früher in der Schwangerschaft durchgeführt als die Amniozentese?',
