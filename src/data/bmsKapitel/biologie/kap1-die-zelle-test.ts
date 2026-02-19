@@ -66,7 +66,15 @@ Der Transport von Molekülen durch die Zellmembran erfolgt über verschiedene Me
         'Na⁺/K⁺-ATPase als Beispiel für aktiven Transport erklären'
       ],
       sections: [],
-      merksätze: [],
+      merksätze: [
+        'Omnis cellula e cellula – jede Zelle entsteht aus einer Zelle (Rudolf Virchow, 1855). Dieser Grundsatz schließt spontane Entstehung von Leben aus.',
+        'Lipiddoppelschicht = Barriere für polare Moleküle; Proteine = Tore, Transporter und Signalempfänger. Ohne Proteine wäre die Membran nur eine passive Barriere.'
+      ],
+      klinischerBezug: 'Antibiotika nutzen die Unterschiede zwischen Prokaryoten und Eukaryoten aus: Penicillin hemmt die bakterielle Zellwandsynthese, schadet menschlichen Zellen aber nicht, da diese keine Zellwand besitzen. | Cystische Fibrose (Mukoviszidose) entsteht durch einen defekten Chlorid-Kanal (CFTR-Protein). Der fehlende Chloridtransport führt zu zähem Schleim in Lunge und Pankreas – eine der häufigsten Erbkrankheiten in Europa.',
+      altfrage: {
+        question: 'Wie unterscheiden sich Prokaryoten und Eukaryoten?',
+        answer: 'Die Unterscheidung Prokaryot/Eukaryot wird im MedAT regelmäßig abgefragt – achte besonders auf das Merkmal "Zellkern" als entscheidendes Kriterium. Die Na⁺/K⁺-Pumpe ist ein MedAT-Klassiker: Sie pumpt 3 Natrium-Ionen nach außen und 2 Kalium-Ionen nach innen – unter ATP-Verbrauch. Dies erzeugt das Ruhepotential von Nervenzellen.'
+      },
       selfTest: [
         {
           question: "Was ist der Hauptunterschied zwischen Prokaryoten und Eukaryoten?",
@@ -255,7 +263,16 @@ Peroxisomen sind kleine Organellen, die vor allem am Fettsäureabbau (β-Oxidati
         'Lysosomen und Peroxisomen funktionell abgrenzen'
       ],
       sections: [],
-      merksätze: [],
+      merksätze: [
+        'Zellkern = Speicherort der DNA und Ort der Transkription (DNA → mRNA). Die Translation (mRNA → Protein) findet dagegen im Zytoplasma statt.',
+        'Sekretionsweg: RER → Golgi → Sekretionsvesikel → Exozytose. Dieser Weg gilt für alle sekretierten Proteine (Hormone, Antikörper, Verdauungsenzyme).',
+        'Katalase-Test: Peroxisomen + H₂O₂ → Sauerstoffblasen (nutzt man zur Identifikation bestimmter Bakterien).'
+      ],
+      klinischerBezug: 'Chronischer Alkoholkonsum führt zu einer Vermehrung des glatten ER in Leberzellen (enzymatische Adaptation), was die Alkoholtoleranz erhöht – aber auch andere Medikamente schneller abgebaut werden (z.B. Antibiotika). | Mitochondriale Myopathien entstehen durch Mutationen in der mitochondrialen DNA. Da Mitochondrien maternal vererbt werden (Eizelle bringt alle Mitochondrien ein, Spermium nicht), zeigen diese Erkrankungen ein matrilineares Vererbungsmuster. | Lysosomale Speicherkrankheiten (z.B. Morbus Gaucher, Tay-Sachs) entstehen durch defekte lysosomale Enzyme. Unverdaute Substrate akkumulieren in Lysosomen → Zellschädigung und Organversagen.',
+      altfrage: {
+        question: 'Warum haben Mitochondrien eigene DNA?',
+        answer: 'Mitochondrien haben eigene DNA (mtDNA) – zirkulär wie bei Bakterien. Dies stützt die Endosymbionten-Theorie (Mitochondrien stammen von symbiontischen Bakterien ab). Im MedAT wird oft die maternale Vererbung der mtDNA abgefragt.'
+      },
       selfTest: [
         {
           question: "Welche Organelle ist primär für die ATP-Synthese zuständig?",
@@ -457,7 +474,15 @@ Zilien und Flagellen sind bewegliche Zellfortsätze, die aus Mikrotubuli aufgeba
         'Klinische Relevanz von Zytoskelett-Defekten verstehen'
       ],
       sections: [],
-      merksätze: [],
+      merksätze: [
+        'Mikrotubuli wachsen vom Zentrosom (Mikrotubuli-Organisationszentrum, MTOC) aus. Das Zentrosom enthält zwei Zentriolen und liegt nahe dem Zellkern.',
+        'Kinesin = anterograd (nach vorne/außen), Dynein = retrograd (rückwärts/innen). Merkhilfe: "Dy-back" (Dynein bringt zurück).'
+      ],
+      klinischerBezug: 'Colchicin und Taxol sind Mikrotubuli-Gifte: Colchicin verhindert Polymerisation (nutzt man bei Gicht-Anfällen), Taxol stabilisiert Mikrotubuli übermäßig (Chemotherapeutikum, hemmt Zellteilung von Tumorzellen). | Epidermolysis bullosa: Mutationen in Keratin-Genen führen zu extrem empfindlicher Haut – bereits leichte Reibung verursacht Blasenbildung. Zeigt die Bedeutung von Intermediärfilamenten für Gewebestabilität. | Axonaler Transport in Nervenzellen: Kinesin transportiert Vesikel vom Zellkörper zum Axonende (anterograd), Dynein bringt Signalmoleküle zurück (retrograd). Störungen führen zu neurodegenerativen Erkrankungen (z.B. Amyotrophe Lateralsklerose). | Kartagener-Syndrom (Primäre Ciliäre Dyskinesie): Defekte Dynein-Arme → Zilien unbeweglich. Folgen: chronische Sinusitis, Bronchiektasen, Infertilität (Spermien bewegungslos). Oft verbunden mit Situs inversus (50% der Fälle).',
+      altfrage: {
+        question: 'Was ist die Rolle von Aktin-Myosin im MedAT?',
+        answer: 'Aktin-Myosin-Interaktion ist zentral für Muskelkontraktion. Im MedAT wird oft der Querbrücken-Zyklus oder die Rolle von Ca²⁺ und ATP abgefragt.'
+      },
       selfTest: [
         {
           question: "Welche Zytoskelett-Filamente sind am Aufbau des Spindelapparats während der Mitose beteiligt?",
@@ -675,7 +700,16 @@ Die Meiose ist eine spezielle Form der Zellteilung zur Bildung von Keimzellen (G
         'Mitose von Meiose unterscheiden'
       ],
       sections: [],
-      merksätze: [],
+      merksätze: [
+        'G0-Phase: Viele Zellen (z.B. Nervenzellen, Herzmuskelzellen) treten nach Differenzierung permanent in G0 ein und teilen sich nicht mehr. Andere (z.B. Leberzellen) können bei Bedarf reaktiviert werden.',
+        'Metaphase = "M" wie Mitte. Alle Chromosomen stehen in der Mitte der Zelle aufgereiht.',
+        'Mitose: 1 Teilung, 2 genetisch identische Zellen (2n). Meiose: 2 Teilungen, 4 genetisch verschiedene Zellen (1n).'
+      ],
+      klinischerBezug: 'Zytostatika (Chemotherapeutika) greifen oft in die Mitose ein: Vincristin und Vinblastin hemmen Mikrotubuli-Polymerisation → Spindelapparat kann nicht gebildet werden → Mitose-Blockade → Tumorzellen sterben. Nachteil: Auch gesunde, sich teilende Zellen (Haarfollikel, Darmepithel) sind betroffen. | p53 ist in >50% aller Tumoren mutiert oder inaktiviert. Ohne funktionsfähiges p53 können geschädigte Zellen unkontrolliert weiter teilen → Tumorentstehung. p53-Mutationen sind ein Schlüsselereignis in der Karzinogenese. | Non-Disjunction (Nicht-Trennung von Chromosomen) in der Meiose führt zu Aneuploidie: Trisomie 21 (Down-Syndrom), Trisomie 18 (Edwards-Syndrom), Trisomie 13 (Pätau-Syndrom). Das Risiko steigt mit mütterlichem Alter.',
+      altfrage: {
+        question: 'Was ist wichtig zum DNA-Gehalt im Zellzyklus?',
+        answer: 'DNA-Gehalt der Zelle: G1 = 2c, nach S-Phase = 4c, nach Mitose = 2c (wieder wie in G1). Der Chromosomensatz (2n) ändert sich nicht zwischen G1, S, G2 – nur bei Meiose wird er halbiert.'
+      },
       selfTest: [
         {
           question: "In welcher Phase des Zellzyklus findet die DNA-Replikation statt?",
