@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { QuizQuestion } from "./QuizQuestion";
 import type { SelfTestQuestion } from "@/data/bmsKapitel/types";
+import { useStore } from "@/store/useStore";
+import { useQuizSessionStore } from "@/store/quizSessionStore";
+import { computeXP } from "@/lib/xp";
 
 interface InteractiveQuizProps {
   questions: SelfTestQuestion[];
@@ -18,7 +21,29 @@ interface InteractiveQuizProps {
 export function InteractiveQuiz({ questions, unterkapitelId, onAnswer, onAllComplete }: InteractiveQuizProps) {
   const [questionResults, setQuestionResults] = useState<Record<number, boolean>>({});
 
-  const handleAnswerChange = (questionIndex: number, isCorrect: boolean) => {
+  const handleAnswerChange = (questionIndex: number, isCorrect: boolean, secondTry?: boolean) => {
+    // Award XP with multipliers
+    const question = questions[questionIndex];
+    if (question && isCorrect) {
+      // Calculate base XP with difficulty multiplier
+      const baseXP = computeXP({
+        baseXP: 10,
+        difficultyMultiplier: question.difficulty ?? 1,
+      });
+
+      // Apply second-try penalty (50% XP)
+      let finalXP = secondTry ? Math.round(baseXP * 0.5) : baseXP;
+
+      // Apply hot-streak bonus (125% XP)
+      const hotStreakActive = useQuizSessionStore.getState().hotStreakActive;
+      if (hotStreakActive) {
+        finalXP = Math.round(finalXP * 1.25);
+      }
+
+      // Award XP to user
+      useStore.getState().addXP(finalXP);
+    }
+
     setQuestionResults((prev) => ({
       ...prev,
       [questionIndex]: isCorrect,
@@ -70,7 +95,7 @@ export function InteractiveQuiz({ questions, unterkapitelId, onAnswer, onAllComp
             key={index}
             question={question}
             questionNumber={index + 1}
-            onAnswerChange={(isCorrect) => handleAnswerChange(index, isCorrect)}
+            onAnswerChange={(isCorrect, secondTry) => handleAnswerChange(index, isCorrect, secondTry)}
           />
         );
       })}
