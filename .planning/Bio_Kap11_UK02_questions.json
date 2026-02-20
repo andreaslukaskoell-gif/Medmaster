@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-11-02-q1",
+    "question": "**T-Helferzellen (CD4⁺)** und **zytotoxische T-Zellen (CD8⁺)** haben unterschiedliche Funktionen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "CD4⁺ T-Zellen töten virusinfizierte Zellen (zytotoxisch), CD8⁺ T-Zellen koordinieren (T-Helfer)"
+      },
+      {
+        "id": "B",
+        "text": "CD4⁺ T-Helferzellen: Erkennen MHC-II (nur APC!), koordinieren (TH1: Makrophagen, TH2: B-Zellen). CD8⁺ zytotoxische T-Zellen: Erkennen MHC-I (alle kernhaltigen!), töten virusinfizierte/Tumor"
+      },
+      {
+        "id": "C",
+        "text": "Beide T-Zell-Typen erkennen freie Antigene (wie Antikörper, nicht MHC-präsentiert)"
+      },
+      {
+        "id": "D",
+        "text": "CD8⁺ T-Zellen erkennen nur MHC-II (nicht MHC-I)"
+      },
+      {
+        "id": "E",
+        "text": "T-Zellen sind Teil der angeborenen Immunität (nicht erworbene)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**T-Helferzellen (CD4⁺, TH):** Erkennen Antigene auf **MHC-II** (nur **APC**: Makrophagen, Dendritische Zellen, B-Zellen, nicht alle Zellen!). **Funktion:** **Koordinieren** Immunantwort (Zytokin-Sekretion). **Subtypen:** TH1 (aktiviert **Makrophagen**, intrazelluläre Pathogene), TH2 (aktiviert **B-Zellen**, Antikörper-Produktion), TH17 (Neutrophile, Entzündung). **Zytotoxische T-Zellen (CD8⁺, TC):** Erkennen Antigene auf **MHC-I** (**alle kernhaltigen** Zellen!). **Funktion:** **Töten** virusinfizierte/Tumorzellen (Perforin + Granzyme, Apoptose). **Regel:** MHC-I → CD8⁺ (1×8=8), MHC-II → CD4⁺ (2×4=8). **Wichtig:** T-Zellen = erworbene Immunität (spezifisch!).",
+    "difficulty": "medium",
+    "tags": ["Immunbiologie", "Erworbene Immunität", "T-Zellen", "CD4", "CD8", "TH", "TC"]
+  },
+  {
+    "id": "bio-11-02-q2",
+    "question": "**MHC-I** und **MHC-II** präsentieren Antigene an T-Zellen. Was ist der Unterschied?",
+    "options": [
+      {
+        "id": "A",
+        "text": "MHC-I: Nur auf APC, extrazelluläre Antigene, CD4⁺. MHC-II: Alle Zellen, intrazelluläre Antigene, CD8⁺"
+      },
+      {
+        "id": "B",
+        "text": "MHC-I: Alle kernhaltigen Zellen (außer RBCs!), intrazelluläre Antigene (Virus, Tumor), CD8⁺. MHC-II: Nur APC (Makrophagen, Dendritische, B-Zellen), extrazelluläre Antigene (Phagozytose), CD4⁺"
+      },
+      {
+        "id": "C",
+        "text": "Beide MHC-Typen sind auf allen Zellen exprimiert (kein Unterschied in Expression)"
+      },
+      {
+        "id": "D",
+        "text": "MHC präsentiert Antigene an B-Zellen (nicht T-Zellen)"
+      },
+      {
+        "id": "E",
+        "text": "MHC-I und MHC-II erkennen beide CD4⁺ T-Zellen (kein Unterschied)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**MHC-I (Klasse I):** **Expression:** **ALLE kernhaltigen** Zellen (fast alle Körperzellen, **außer RBCs**!). **Präsentiert:** **INTRAZELLULÄRE** Antigene (z.B. virale Proteine [Virus repliziert in Zelle], Tumor-Antigene). **Erkennung:** **CD8⁺ T-Zellen** (zytotoxisch). **MHC-II (Klasse II):** **Expression:** **NUR APC** (Makrophagen, Dendritische Zellen, B-Zellen, **nicht alle** Zellen!). **Präsentiert:** **EXTRAZELLULÄRE** Antigene (aufgenommen durch Phagozytose/Endozytose). **Erkennung:** **CD4⁺ T-Zellen** (T-Helfer). **Regel:** MHC-I → CD8⁺ (1×8=8), MHC-II → CD4⁺ (2×4=8). **Transplantation:** MHC-Mismatch → Abstoßung (HLA-Typisierung!).",
+    "difficulty": "hard",
+    "tags": ["Immunbiologie", "Erworbene Immunität", "MHC", "MHC-I", "MHC-II", "HLA"]
+  },
+  {
+    "id": "bio-11-02-q3",
+    "question": "**B-Zell-Rezeptoren (BCR)** und **T-Zell-Rezeptoren (TCR)** unterscheiden sich in der Antigen-Erkennung. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "BCR erkennt nur MHC-präsentierte Antigene (wie TCR)"
+      },
+      {
+        "id": "B",
+        "text": "BCR (B-Zell-Rezeptor): Erkennt FREIE Antigene (in Lösung, auf Pathogen-Oberfläche, membran-gebundener Antikörper). TCR (T-Zell-Rezeptor): Erkennt Antigene NUR auf MHC (präsentiert von APC!)"
+      },
+      {
+        "id": "C",
+        "text": "TCR erkennt freie Antigene (nicht MHC-präsentiert)"
+      },
+      {
+        "id": "D",
+        "text": "B-Zellen und T-Zellen haben identische Rezeptoren (kein Unterschied)"
+      },
+      {
+        "id": "E",
+        "text": "BCR ist ein löslicher Antikörper (nicht membran-gebunden)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**B-Zell-Rezeptor (BCR):** **Membran-gebundener Antikörper** (IgM, IgD auf B-Zell-Oberfläche). **Erkennt:** **FREIE** Antigene (in Lösung, auf Pathogen-Oberfläche, z.B. Bakterien-Kapseln, Viren im Blut), **NICHT** MHC-präsentiert! **T-Zell-Rezeptor (TCR):** **Erkennt:** Antigene **NUR** auf **MHC** (präsentiert von APC oder infizierten Zellen), **NICHT** freie Antigene! **Wichtig:** BCR = frei, TCR = MHC-gebunden. Nach Aktivierung: B-Zellen → **Plasmazellen** (produzieren **lösliche Antikörper**, nicht mehr membran-gebunden!). **Differenzierung:** Plasmazellen (Antikörper-Produktion, kurzlebig), Gedächtnis-B-Zellen (langlebig).",
+    "difficulty": "easy",
+    "tags": ["Immunbiologie", "Erworbene Immunität", "BCR", "TCR", "B-Zellen", "T-Zellen"]
+  },
+  {
+    "id": "bio-11-02-q4",
+    "question": "Es gibt **5 Antikörper-Klassen** (Immunglobuline). Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "IgM ist der häufigste Antikörper im Serum (~75%)"
+      },
+      {
+        "id": "B",
+        "text": "IgG (75%, häufigste, Plazenta-gängig [Neugeborenen-Schutz!]). IgM (10%, erste [Primärantwort], Pentamer [größte]). IgA (15%, Schleimhäute [Speichel/Darm/Muttermilch], Dimer). IgE (<0,01%, Allergie, Parasiten)"
+      },
+      {
+        "id": "C",
+        "text": "IgE ist der häufigste Antikörper (>50% im Serum)"
+      },
+      {
+        "id": "D",
+        "text": "IgA ist nicht Plazenta-gängig (nur IgM ist Plazenta-gängig)"
+      },
+      {
+        "id": "E",
+        "text": "IgG ist ein Pentamer (größte Antikörper-Klasse)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**5 Antikörper-Klassen:** (1) **IgG** (~**75%**, **häufigste**, Serum, **Plazenta-gängig** [Neugeborenen-Schutz!], Komplement-Aktivierung, Opsonierung, Monomer). (2) **IgM** (~**10%**, **ERSTE** Antwort [Primärantwort], **Pentamer** [**größte**, 5× IgG], starke Komplement-Aktivierung, **NICHT** Plazenta-gängig). (3) **IgA** (~**15%**, **Schleimhäute** [Speichel, Tränen, Muttermilch, Darm], **Dimer** [sIgA = sekretorisches IgA], verhindert Adhäsion). (4) **IgE** (<**0,01%**, **Allergie** [Mastzellen-Aktivierung], **Parasiten** [Würmer], Monomer). (5) **IgD** (<1%, BCR, Funktion unklar). **Wichtig:** IgG = häufigste + Plazenta-gängig, IgM = erste + größte, IgA = Schleimhäute, IgE = Allergie!",
+    "difficulty": "medium",
+    "tags": ["Immunbiologie", "Erworbene Immunität", "Antikörper", "IgG", "IgM", "IgA", "IgE"]
+  },
+  {
+    "id": "bio-11-02-q5",
+    "question": "**Primärantwort** und **Sekundärantwort** unterscheiden sich in Geschwindigkeit und Stärke. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Primärantwort ist schneller als Sekundärantwort (Stunden vs. Wochen)"
+      },
+      {
+        "id": "B",
+        "text": "Primärantwort (1. Kontakt): 1–2 Wochen Verzögerung, anfangs IgM, niedriger Titer. Sekundärantwort (2. Kontakt): 1–3 Tage (Gedächtniszellen!), IgG, 10–100× höherer Titer. Basis für Impfungen!"
+      },
+      {
+        "id": "C",
+        "text": "Sekundärantwort produziert hauptsächlich IgM (nicht IgG)"
+      },
+      {
+        "id": "D",
+        "text": "Primär- und Sekundärantwort haben gleichen Antikörper-Titer (kein Unterschied)"
+      },
+      {
+        "id": "E",
+        "text": "Gedächtniszellen spielen keine Rolle in der Sekundärantwort"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Primärantwort (1. Kontakt mit Antigen):** **Verzögerung:** ~**1–2 Wochen** (naive B-/T-Zellen müssen aktiviert, vermehrt werden). **Antikörper:** Anfangs **IgM** (später Klassenwechsel zu IgG). **Titer:** **Niedrig**. **Dauer:** Wochen. **Sekundärantwort (2. Kontakt, Booster):** **Verzögerung:** ~**1–3 Tage** (**Gedächtniszellen** reagieren sofort!). **Antikörper:** Hauptsächlich **IgG** (Klassenwechsel bereits erfolgt). **Titer:** **10–100× höher** als Primär! **Dauer:** Monate bis Jahre. **Affinität:** Höher (Affinitätsreifung). **Wichtig:** Sekundärantwort = **schneller, stärker, spezifischer** → **Basis für Impfungen** (Booster-Dosen nutzen Gedächtniszellen!).",
+    "difficulty": "easy",
+    "tags": ["Immunbiologie", "Erworbene Immunität", "Primärantwort", "Sekundärantwort", "Gedächtniszellen", "Impfung"]
+  },
+  {
+    "id": "bio-11-02-q6",
+    "question": "Die **klonale Selektion** erklärt, wie das Immunsystem spezifische Lymphozyten auswählt. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Alle Lymphozyten haben denselben Rezeptor (keine Diversität)"
+      },
+      {
+        "id": "B",
+        "text": "Klonale Selektion: Millionen verschiedene B-/T-Zellen (verschiedene Rezeptoren) existieren VOR Infektion. Antigen selektiert Zellen mit passendem Rezeptor → Expansion (Klon) → Effektorzellen + Gedächtniszellen"
+      },
+      {
+        "id": "C",
+        "text": "Rezeptor-Diversität entsteht erst NACH Antigen-Kontakt (nicht vorher)"
+      },
+      {
+        "id": "D",
+        "text": "Negative Selektion im Thymus entfernt Zellen, die Fremd-Antigene erkennen (nicht Selbst-Antigene)"
+      },
+      {
+        "id": "E",
+        "text": "Klonale Expansion findet nicht statt (Lymphozyten vermehren sich nicht)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Klonale Selektion (Burnet):** **Prinzip:** Jede Lymphozyte (B-/T-Zelle) hat **EINEN** spezifischen Rezeptor (BCR/TCR). **Ablauf:** (1) **Diversität:** **Millionen** verschiedene B-/T-Zellen mit verschiedenen Rezeptoren existieren **VOR** Infektion (durch genetische Rekombination: V(D)J-Rekombination). (2) **Selektion:** Antigen bindet **nur** Zellen mit **passendem** Rezeptor (spezifische Erkennung). (3) **Expansion:** Ausgewählte Zelle vermehrt sich (**klonale Expansion**, identischer Klon). (4) **Differenzierung:** Effektorzellen (Plasmazellen, TC) + Gedächtniszellen. **Negative Selektion (Thymus):** T-Zellen, die **Selbst-Antigene** stark erkennen → **Apoptose** (sterben) → verhindert Autoimmunität. **Wichtig:** Diversität **VOR** Infektion!",
+    "difficulty": "medium",
+    "tags": ["Immunbiologie", "Erworbene Immunität", "Klonale Selektion", "Negative Selektion", "Thymus"]
+  }
+]

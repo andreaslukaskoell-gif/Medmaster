@@ -1,0 +1,147 @@
+[
+  {
+    "id": "q1",
+    "question": "Welches der folgenden ist KEIN Kennzeichen des Lebens?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Stoffwechsel"
+      },
+      {
+        "id": "B",
+        "text": "Fortpflanzung"
+      },
+      {
+        "id": "C",
+        "text": "Kristallwachstum"
+      },
+      {
+        "id": "D",
+        "text": "Reizbarkeit"
+      },
+      {
+        "id": "E",
+        "text": "Evolution"
+      }
+    ],
+    "correct": "C",
+    "explanation": "C ist korrekt: Kristallwachstum ist KEIN Kennzeichen des Lebens. Kristalle wachsen durch physikalische Anlagerung von Molekülen, aber sie haben keinen Stoffwechsel, keine Zellen, keine Fortpflanzung und evolvieren nicht. A, B, D, E sind falsch (alle sind echte Kennzeichen des Lebens). Die 7 Kennzeichen sind: Zellulare Organisation, Stoffwechsel, Wachstum, Fortpflanzung, Reizbarkeit, Bewegung, Evolution.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Was ist der Unterschied zwischen Katabolismus und Anabolismus?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Katabolismus baut auf, Anabolismus baut ab"
+      },
+      {
+        "id": "B",
+        "text": "Katabolismus setzt Energie frei (Abbau), Anabolismus verbraucht Energie (Aufbau)"
+      },
+      {
+        "id": "C",
+        "text": "Katabolismus findet nur in Pflanzen statt, Anabolismus nur in Tieren"
+      },
+      {
+        "id": "D",
+        "text": "Katabolismus produziert ATP, Anabolismus verbraucht ATP nicht"
+      },
+      {
+        "id": "E",
+        "text": "Beide Begriffe sind synonym und austauschbar"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Katabolismus = ABBAU komplexer Moleküle (z.B. Glukose → CO₂ + H₂O) → Energie wird FREIGESETZT (ATP-Produktion). Anabolismus = AUFBAU komplexer Moleküle aus einfachen Bausteinen (z.B. Aminosäuren → Proteine) → Energie wird VERBRAUCHT. A ist falsch (vertauscht). C ist falsch (beide finden in allen Lebewesen statt). D ist falsch (Anabolismus verbraucht ATP). E ist falsch (völlig unterschiedliche Prozesse).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q3",
+    "question": "Bei Körpertemperaturen über 37 °C beginnt der Mensch zu schwitzen. Welches biologische Prinzip wird hier illustriert?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Evolution durch natürliche Selektion"
+      },
+      {
+        "id": "B",
+        "text": "Homöostase durch negativen Regelkreis"
+      },
+      {
+        "id": "C",
+        "text": "Positiver Feedback-Mechanismus"
+      },
+      {
+        "id": "D",
+        "text": "Asexuelle Fortpflanzung"
+      },
+      {
+        "id": "E",
+        "text": "Chemoheterotrophie"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Schwitzen bei Überhitzung ist ein klassisches Beispiel für HOMÖOSTASE (Aufrechterhaltung stabiler innerer Bedingungen) durch NEGATIVEN REGELKREIS. Ablauf: Thermorezeptoren messen 'zu heiß' → Hypothalamus (Regler) aktiviert Schweißdrüsen → Verdunstungskälte senkt Temperatur → Sollwert (37 °C) wird wiederhergestellt → Schwitzen stoppt (negative Rückkopplung). A ist falsch (Evolution betrifft Generationen, nicht Individuen). C ist falsch (positive Rückkopplung würde Abweichung VERSTÄRKEN, nicht korrigieren). D, E sind falsch (völlig andere Konzepte).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Welches Kennzeichen unterscheidet lebende Systeme fundamental von unbelebter Materie?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Bewegung (auch Steine können rollen)"
+      },
+      {
+        "id": "B",
+        "text": "Wachstum (auch Kristalle wachsen)"
+      },
+      {
+        "id": "C",
+        "text": "Evolution (nur Lebewesen können sich über Generationen anpassen)"
+      },
+      {
+        "id": "D",
+        "text": "Komplexität (auch Maschinen sind komplex)"
+      },
+      {
+        "id": "E",
+        "text": "Energieverbrauch (auch Motoren verbrauchen Energie)"
+      }
+    ],
+    "correct": "C",
+    "explanation": "C ist korrekt: EVOLUTION ist das fundamentale Unterscheidungsmerkmal. Nur Lebewesen mit genetischem Material können durch Mutation, Rekombination und natürliche Selektion VERERBBARE Anpassungen entwickeln. Steine, Kristalle, Maschinen können sich physikalisch/chemisch verändern, aber sie evolvieren NICHT (keine Vererbung, keine Selektion). A ist falsch (passive Bewegung ≠ aktive, zelluläre Bewegung). B ist falsch (Kristallwachstum = physikalische Anlagerung, kein zelluläres Wachstum mit Stoffwechsel). D, E sind falsch (Komplexität und Energieverbrauch auch in unbelebten Systemen).",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q5",
+    "question": "Warum ist sexuelle Fortpflanzung trotz höherem Energieaufwand evolutionär vorteilhaft?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Sie produziert mehr Nachkommen als asexuelle Fortpflanzung"
+      },
+      {
+        "id": "B",
+        "text": "Sie erzeugt genetische Vielfalt durch Rekombination, was Anpassung an wechselnde Umwelt ermöglicht"
+      },
+      {
+        "id": "C",
+        "text": "Sie ist schneller als asexuelle Fortpflanzung"
+      },
+      {
+        "id": "D",
+        "text": "Sie erfordert keine Zellteilung"
+      },
+      {
+        "id": "E",
+        "text": "Sie funktioniert ohne DNA"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Der evolutionäre Vorteil sexueller Fortpflanzung ist GENETISCHE VIELFALT durch Rekombination (Crossing-over bei Meiose + zufällige Gameten-Kombination bei Befruchtung). Vielfalt → verschiedene Phänotypen → natürliche Selektion kann wirken → bessere Anpassung an wechselnde Umwelt, Pathogene, Konkurrenz. A ist falsch (asexuelle Fortpflanzung ist zahlenmäßig effizienter - ein Individuum, keine Partnersuche). C ist falsch (asexuell ist schneller). D ist falsch (Meiose IST Zellteilung). E ist falsch (DNA ist essentiell für Vererbung).",
+    "difficulty": "medium"
+  }
+]

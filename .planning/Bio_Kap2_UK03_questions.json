@@ -1,0 +1,176 @@
+[
+  {
+    "id": "q1",
+    "question": "Was sind die Hauptunterschiede zwischen Skelettmuskulatur, Herzmuskulatur und glatter Muskulatur?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Alle drei sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Skelettmuskulatur: mehrkernig (Myofasern), periphere Kerne, willkürlich, Sarkomer. Herzmuskulatur: einkernig (Kardiomyozyten), Glanzstreifen (Desmosomen + Gap Junctions), unwillkürlich, Sarkomer, CICR. Glatte Muskulatur: einkernig (Myozyten), KEIN Sarkomer (Dense Bodies), Ca²⁺-Calmodulin-MLCK, unwillkürlich"
+      },
+      {
+        "id": "C",
+        "text": "Nur Skelettmuskulatur hat Querstreifung"
+      },
+      {
+        "id": "D",
+        "text": "Glatte Muskulatur ist willkürlich"
+      },
+      {
+        "id": "E",
+        "text": "Herzmuskulatur ist mehrkernig"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Die drei Muskeltypen unterscheiden sich in **STRUKTUR, INNERVATION, FUNKTION**. **SKELETTMUSKULATUR (quergestreift):** (1) **MEHRKERNIG** (Myofasern = Synzytium, Fusion von Myoblasten), **periphere Kerne** (unter Sarkolemm). (2) **WILLKÜRLICH** (somatisches Nervensystem, Motoneurone, neuromuskuläre Endplatte). (3) **SARKOMER** (Z-Linie → Z-Linie, A/I-Band, H-Zone, M-Linie). (4) Schnell, kraftvoll, ermüdbar (Typ I/IIa/IIb). (5) Keine Gap Junctions (isolierte Fasern). **HERZMUSKULATUR (quergestreift):** (1) **EINKERNIG** (Kardiomyozyten, verzweigt), **zentraler Kern**. (2) **UNWILLKÜRLICH** (autonom, Schrittmacher: Sinusknoten). (3) **GLANZSTREIFEN** (Disci intercalares): Desmosomen (mechanische Kopplung) + **Gap Junctions** (Connexin 43, elektrische Kopplung → funktionelles Synzytium). (4) **SARKOMER** (wie Skelettmuskulatur). (5) **CICR** (Ca²⁺-induzierte Ca²⁺-Freisetzung): L-Typ-Ca²⁺-Kanal → RyR2 → Ca²⁺ aus SR. (6) Mitochondrien ~40% (unermüdlich, aerobe Atmung). **GLATTE MUSKULATUR (NICHT quergestreift):** (1) **EINKERNIG** (spindelförmige Myozyten, ~200 μm), **zentraler Kern**. (2) **UNWILLKÜRLICH** (autonom, Sympathikus/Parasympathikus). (3) **KEIN SARKOMER** (ungeordnetes Aktin + Myosin, Dense Bodies statt Z-Linien). (4) **Ca²⁺-Calmodulin-MLCK-Mechanismus** (MLC-Phosphorylierung). (5) Langsam, tonisch, unermüdlich. (6) Single-Unit (Gap Junctions, Darm/Uterus) oder Multi-Unit (keine Gap Junctions, Iris/Gefäße). A ist falsch. C ist falsch (Herz auch quergestreift). D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Was passiert mit den verschiedenen Banden des Sarkomers während der Muskelkontraktion?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Alle Banden werden länger"
+      },
+      {
+        "id": "B",
+        "text": "I-Band (nur Aktin) und H-Zone (nur Myosin) verkürzen sich. A-Band (Myosin-Länge) bleibt KONSTANT. Z-Linien kommen näher zusammen (Sarkomer verkürzt ~2.5 → ~1.5 μm). Grund: Aktin gleitet über Myosin (Gleitfilamenttheorie)"
+      },
+      {
+        "id": "C",
+        "text": "A-Band verkürzt sich am meisten"
+      },
+      {
+        "id": "D",
+        "text": "Alle Banden bleiben konstant"
+      },
+      {
+        "id": "E",
+        "text": "Nur H-Zone wird länger"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Während **MUSKELKONTRAKTION** ändert sich die **SARKOMER-LÄNGE** (Z-Linie → Z-Linie), aber NICHT die Filament-Länge (Gleitfilamenttheorie!). **SARKOMER-KOMPONENTEN (Ruhezustand, ~2.5 μm):** (1) **I-BAND (isotrope Band, HELL):** Nur dünne Filamente (Aktin), kein Myosin. (2) **A-BAND (anisotrope Band, DUNKEL):** Dicke Filamente (Myosin) + überlappende dünne Filamente (Aktin). Länge = Myosin-Filament-Länge. (3) **H-ZONE:** Nur Myosin (in Mitte von A-Band), KEINE Überlappung mit Aktin. (4) **M-LINIE:** Verbindung der Myosin-Filamente (in Mitte von H-Zone). (5) **Z-LINIE:** Verankerung von Aktin (α-Actinin). **WÄHREND KONTRAKTION (Power Stroke, Querbrücken-Zyklus):** (1) **Myosin-Köpfe binden Aktin** → Power Stroke → **AKTIN GLEITET ÜBER MYOSIN** (Richtung M-Linie). (2) **I-BAND VERKÜRZT** (weniger Aktin-Bereich ohne Myosin-Überlappung). (3) **H-ZONE VERKÜRZT** (weniger Myosin-Bereich ohne Aktin-Überlappung, verschwindet fast bei maximaler Kontraktion). (4) **A-BAND BLEIBT KONSTANT** (Myosin-Filament-Länge ändert sich NICHT!). (5) **Z-LINIEN kommen näher** (Sarkomer verkürzt ~2.5 → ~1.5 μm). **WICHTIG:** Filamente gleiten, aber dehnen/verkürzen sich NICHT (Gleitfilamenttheorie, 1954: Huxley & Huxley, Hanson & Huxley). A ist falsch. C ist falsch (A-Band konstant!). D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Wie funktioniert die Gleitfilamenttheorie auf molekularer Ebene?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Gleitfilamenttheorie produziert ATP"
+      },
+      {
+        "id": "B",
+        "text": "Ca²⁺ ↑ (aus SR via RyR1, T-Tubuli + DHP-Rezeptor) → Troponin C bindet Ca²⁺ → Tropomyosin verschiebt sich → Myosin bindet Aktin → Power Stroke (Myosin-Kopf kippt, ADP + Pi frei, Aktin gleitet) → ATP bindet Myosin → Querbrücke löst → ATP-Hydrolyse (Myosin re-armt) → Zyklus. Relaxation: SERCA (Ca²⁺ zurück in SR)"
+      },
+      {
+        "id": "C",
+        "text": "Gleitfilamenttheorie ist nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Gleitfilamenttheorie benötigt kein ATP"
+      },
+      {
+        "id": "E",
+        "text": "Gleitfilamenttheorie ist nur in Pflanzen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Die **GLEITFILAMENTTHEORIE** erklärt Muskelkontraktion auf molekularer Ebene (Aktin-Myosin-Querbrücken-Zyklus, ATP-abhängig). **MECHANISMUS:** (1) **RUHEZUSTAND:** **Tropomyosin** blockiert Myosin-Bindungsstelle auf Aktin (via Troponin I). Myosin-Kopf bindet ATP (entspannter Zustand). (2) **ERREGUNG:** Aktionspotential → Sarkolemm → **T-Tubuli** (Einstülpungen) → **DHP-Rezeptor** (L-Typ-Ca²⁺-Kanal, spannungsabhängig) → mechanische Kopplung → **Ryanodin-Rezeptor (RyR1)** (Ca²⁺-Kanal im SR) öffnet → **Ca²⁺ strömt aus SR** (Ca²⁺ ↑ von ~0.1 μM → ~10 μM). (3) **KONTRAKTION:** (a) Ca²⁺ bindet **Troponin C (TnC)** (4 Ca²⁺/TnC). (b) Konformationsänderung → **Troponin I** (TnI) löst sich von Aktin → **Tropomyosin verschiebt sich** (in Aktin-Furche) → Myosin-Bindungsstelle auf Aktin FREI. (c) **Myosin-Kopf bindet Aktin** (Querbrücke, Aktin-Bindungsstelle). (d) **POWER STROKE:** Myosin-Kopf kippt (~45°-Schwenkung) → ADP + Pi (anorganisches Phosphat) freigesetzt → **Aktin-Filament gleitet** Richtung M-Linie (~10 nm pro Schritt). (e) **ATP bindet Myosin-Kopf** → Konformationsänderung → Myosin löst sich von Aktin (Querbrücke getrennt). (f) **ATP-Hydrolyse** (Myosin-ATPase): ATP → ADP + Pi → Myosin-Kopf **RE-ARMT** (gespannt, 90°-Winkel) → bereit für nächsten Zyklus. (4) **RELAXATION:** Aktionspotential endet → **SERCA** (Sarkoplasmatisches Retikulum Ca²⁺-ATPase, ATP-abhängig) pumpt Ca²⁺ zurück in SR → Ca²⁺ ↓ → Troponin C lässt Ca²⁺ los → Tropomyosin blockiert wieder Myosin-Bindungsstelle → Muskel entspannt. **RIGOR MORTIS:** Nach Tod: ATP ↓ → Myosin kann NICHT von Aktin lösen → Muskel steif (Totenstarre). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Was ist die Funktion von Troponin C, Troponin I und Troponin T?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Alle drei sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Troponin C (TnC): Bindet Ca²⁺ (4 Ca²⁺/TnC, Trigger für Kontraktion). Troponin I (TnI): Inhibitorisch, bindet Aktin (hält Tropomyosin in blockierender Position). Troponin T (TnT): Bindet Tropomyosin (verankert Troponin-Komplex auf Aktin-Filament)"
+      },
+      {
+        "id": "C",
+        "text": "Nur Troponin C existiert"
+      },
+      {
+        "id": "D",
+        "text": "Troponin I bindet Ca²⁺"
+      },
+      {
+        "id": "E",
+        "text": "Troponin T ist pro-kontraktil"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Der **TROPONIN-KOMPLEX** (3 Untereinheiten: TnC, TnI, TnT) reguliert die Aktin-Myosin-Interaktion in quergestreifter Muskulatur (Skelett + Herz). **TROPONIN C (TnC):** (1) **Bindet Ca²⁺** (4 Bindungsstellen, 2 regulatorisch [C-terminal, niedrige Affinität], 2 strukturell [N-terminal, hohe Affinität]). (2) **TRIGGER für Kontraktion:** Ca²⁺-Bindung → Konformationsänderung → TnI löst sich von Aktin → Tropomyosin verschiebt sich → Myosin-Bindungsstelle frei. (3) **Herzmuskulatur:** Kardialer TnC (cTnC) hat nur 1 regulatorische Ca²⁺-Bindungsstelle (sensibler). **TROPONIN I (TnI, Inhibitorische Untereinheit):** (1) **Bindet Aktin** (in Ruhezustand, KEIN Ca²⁺). (2) **HÄLT Tropomyosin in blockierender Position** (Myosin-Bindungsstelle auf Aktin blockiert). (3) Ca²⁺-Bindung an TnC → TnI löst sich von Aktin → Tropomyosin verschiebt sich → Kontraktion möglich. (4) **Diagnostischer Marker:** Kardialer TnI (cTnI) ↑ bei Myokardinfarkt (spezifisch für Herzmuskel, sensitivster Marker, steigt 3-6 h nach Infarkt, Peak 12-24 h, normalisiert 7-10 Tage). **TROPONIN T (TnT, Tropomyosin-bindende Untereinheit):** (1) **Bindet Tropomyosin** (verankert Troponin-Komplex auf Aktin-Filament). (2) Stabilisiert Troponin-Tropomyosin-Aktin-Interaktion. (3) **Diagnostischer Marker:** Kardialer TnT (cTnT) ↑ bei Myokardinfarkt (wie cTnI, aber weniger herzspezifisch, kann auch bei Niereninsuffizienz ↑). **ZUSAMMENSPIEL:** Ruhezustand (kein Ca²⁺): TnI bindet Aktin → Tropomyosin blockiert Myosin-Bindungsstelle. Erregung (Ca²⁺ ↑): Ca²⁺ → TnC → TnI löst sich von Aktin → Tropomyosin verschiebt sich (via TnT) → Myosin bindet Aktin → Kontraktion. A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q5",
+    "question": "Was ist der Unterschied zwischen Skelettmuskulatur und Herzmuskulatur bezüglich Ca²⁺-Freisetzung?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide haben identische Mechanismen"
+      },
+      {
+        "id": "B",
+        "text": "Skelettmuskulatur: DHP-Rezeptor (T-Tubuli) → mechanische Kopplung → RyR1 (SR) → Ca²⁺ aus SR (intrazellulär, kein extrazelluläres Ca²⁺ benötigt). Herzmuskulatur: CICR (Ca²⁺-induzierte Ca²⁺-Freisetzung): L-Typ-Ca²⁺-Kanal (DHP) → Ca²⁺ VON AUSSEN → RyR2 (SR) → Ca²⁺ aus SR (Amplifikation)"
+      },
+      {
+        "id": "C",
+        "text": "Nur Skelettmuskulatur hat Ca²⁺-Freisetzung"
+      },
+      {
+        "id": "D",
+        "text": "Herzmuskulatur benötigt kein Ca²⁺"
+      },
+      {
+        "id": "E",
+        "text": "Beide nutzen nur extrazelluläres Ca²⁺"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Skelettmuskulatur und Herzmuskulatur unterscheiden sich im **CA²⁺-FREISETZUNGS-MECHANISMUS** (Elektromechanische Kopplung). **SKELETTMUSKULATUR (mechanische Kopplung):** (1) Aktionspotential → T-Tubuli → **DHP-Rezeptor** (Dihydropyridin-Rezeptor, L-Typ-Ca²⁺-Kanal, spannungsabhängig, in T-Tubuli-Membran). (2) DHP-Rezeptor → **MECHANISCHE KOPPLUNG** (physische Interaktion, KEIN Ca²⁺-Einstrom von außen benötigt!) → **Ryanodin-Rezeptor 1 (RyR1)** (Ca²⁺-Kanal in SR-Membran, terminale Zisternen). (3) RyR1 öffnet → **Ca²⁺ aus SR** in Sarkoplasma (Ca²⁺ ↑↑↑, von ~0.1 μM → ~10 μM). (4) **KEINE extrazelluläre Ca²⁺-Abhängigkeit** (T-Tubuli-Lumen = extrazellulär, aber Ca²⁺-Einstrom NICHT essentiell für Kontraktion). (5) **Triaden:** 1 T-Tubulus + 2 terminale Zisternen (SR) an A-I-Übergängen (2 pro Sarkomer). **HERZMUSKULATUR (Ca²⁺-induzierte Ca²⁺-Freisetzung, CICR):** (1) Aktionspotential → T-Tubuli → **L-Typ-Ca²⁺-Kanal** (DHP-Rezeptor) öffnet → **Ca²⁺ strömt VON AUSSEN** (extrazellulär) in Zelle (~10-20% des benötigten Ca²⁺). (2) Ca²⁺ (extrazellulär) → **Ryanodin-Rezeptor 2 (RyR2)** (in SR-Membran) öffnet → **Ca²⁺ aus SR** freigesetzt (~80-90% des benötigten Ca²⁺, **AMPLIFIKATION**). (3) **Extrazelluläres Ca²⁺ ESSENTIELL** (ohne Ca²⁺-Einstrom von außen: KEINE Kontraktion, im Gegensatz zu Skelettmuskulatur). (4) **Diaden:** 1 T-Tubulus + 1 SR-Zisterne an Z-Linie (1 pro Sarkomer, größere T-Tubuli als Skelettmuskulatur). (5) **Relaxation:** SERCA (Ca²⁺ zurück in SR) + **NCX** (Na⁺/Ca²⁺-Exchanger, 3 Na⁺ rein, 1 Ca²⁺ raus, elektrogen, ~20% Ca²⁺-Efflux). **REGULATION (Herz):** Sympathikus (β1-Rezeptoren → cAMP ↑ → PKA → L-Typ-Ca²⁺-Kanal ↑, SERCA ↑ → Kontraktilität ↑). A ist falsch (unterschiedlich). C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q6",
+    "question": "Wie funktioniert die Kontraktion glatter Muskulatur?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Glatte Muskulatur kontrahiert wie Skelettmuskulatur"
+      },
+      {
+        "id": "B",
+        "text": "Ca²⁺ ↑ (extrazellulär [L-Typ-Ca²⁺-Kanal] + SR [IP₃-Rezeptor, RyR]) → Ca²⁺ bindet Calmodulin → Ca²⁺-Calmodulin aktiviert MLCK (Myosin Light Chain Kinase) → MLCK phosphoryliert MLC (Myosin-Leichtketten) → Myosin-ATPase AKTIV → Myosin bindet Aktin → Kontraktion (langsam, unermüdlich). Relaxation: MLCP (dephosphoryliert MLC), NO → cGMP → MLCP ↑"
+      },
+      {
+        "id": "C",
+        "text": "Glatte Muskulatur hat Troponin"
+      },
+      {
+        "id": "D",
+        "text": "Glatte Muskulatur benötigt kein Ca²⁺"
+      },
+      {
+        "id": "E",
+        "text": "Glatte Muskulatur ist nur in Bakterien"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **GLATTE MUSKULATUR** kontrahiert via **CA²⁺-CALMODULIN-MLCK-MECHANISMUS** (KEIN Troponin, KEIN Sarkomer!). **MECHANISMUS:** (1) **CA²⁺-ANSTIEG:** (a) **Single-Unit** (viszerale glatte Muskulatur, z.B. Darm, Uterus, Blase): Spontane Schrittmacher-Aktivität (Interstitielle Cajal-Zellen), Gap Junctions (Connexin 43) → synchrone Kontraktion (Wellen). (b) **Multi-Unit** (z.B. Iris, Pilomotor-Muskeln, große Gefäße): Neuronale Stimulation (Sympathikus/Parasympathikus), KEINE Gap Junctions (isolierte Zellen). Ca²⁺-Quellen: **Extrazellulär** (L-Typ-Ca²⁺-Kanal, spannungsabhängig) + **SR** (IP₃-Rezeptor [IP₃-vermittelte Ca²⁺-Freisetzung, z.B. M3-Rezeptoren → Gq → PLC → IP₃], RyR [CICR]). (2) **KONTRAKTION:** (a) Ca²⁺ bindet **Calmodulin** (Ca²⁺-bindendes Protein, 4 Ca²⁺/Calmodulin). (b) Ca²⁺-Calmodulin aktiviert **MLCK** (Myosin Light Chain Kinase, Serin/Threonin-Kinase). (c) MLCK phosphoryliert **Myosin-Leichtketten (MLC, regulatorische Leichtketten, 20 kDa)** → Myosin-Kopf-ATPase AKTIV. (d) Myosin bindet Aktin → Querbrücken → Kontraktion (~100× langsamer als Skelettmuskulatur, aber unermüdlich, tonisch). Aktin-Filamente verankert an **Dense Bodies** (α-Actinin, intrazellulär) + Dense Plaques (Plasmamembran, ähnlich Fokaladhäsionen). (3) **RELAXATION:** (a) Ca²⁺ ↓ → Calmodulin inaktiv → MLCK inaktiv. (b) **MLCP** (Myosin Light Chain Phosphatase) dephosphoryliert MLC → Myosin-ATPase INAKTIV → Relaxation. **REGULATION:** (1) **Sympathikus:** α1-Rezeptoren (Gq → IP₃ → Ca²⁺ ↑ → Vasokonstriktion [Gefäße]), β2-Rezeptoren (Gs → cAMP ↑ → PKA → MLCK ↓, Ca²⁺-Kanäle ↓ → Relaxation [Bronchien, Uterus]). (2) **Parasympathikus:** M3-Rezeptoren (Gq → IP₃ → Ca²⁺ ↑ → Kontraktion [Darm, Bronchien, Blase]). (3) **NO (Stickstoffmonoxid):** Endothelzellen → NO → Guanylatcyclase → cGMP ↑ → **MLCP-Aktivierung** → MLC-Dephosphorylierung → Relaxation (**Vasodilatation**, z.B. Nitroglycerin → NO → Vasodilatation → Angina pectoris-Therapie). A ist falsch (unterschiedlich, kein Troponin). C, D, E sind falsch.",
+    "difficulty": "hard"
+  }
+]

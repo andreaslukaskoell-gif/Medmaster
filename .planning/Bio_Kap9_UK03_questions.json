@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-9-03-q1",
+    "question": "Die **taxonomische Hierarchie** ordnet Organismen in Ränge. Welche Reihenfolge ist korrekt (von **groß** nach **klein**)?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Domain → Stamm → Kingdom → Klasse → Ordnung → Familie → Gattung → Art"
+      },
+      {
+        "id": "B",
+        "text": "Domain → Kingdom → Stamm → Klasse → Ordnung → Familie → Gattung → Art"
+      },
+      {
+        "id": "C",
+        "text": "Kingdom → Domain → Stamm → Klasse → Ordnung → Gattung → Familie → Art"
+      },
+      {
+        "id": "D",
+        "text": "Domain → Kingdom → Klasse → Stamm → Ordnung → Familie → Gattung → Art"
+      },
+      {
+        "id": "E",
+        "text": "Gattung → Art → Familie → Ordnung → Klasse → Stamm → Kingdom → Domain"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Taxonomische Hierarchie (Linné):** **Domain** (höchste Ebene) → **Kingdom** → **Stamm** → **Klasse** → **Ordnung** → **Familie** → **Gattung** → **Art** (niedrigste Ebene, spezifischste Gruppe). **Merksatz:** **D**er **K**önig **S**agte **K**eine **O**rdnung **F**ür **G**ewöhnliche **A**rten. **Beispiel Mensch:** Domain Eukarya → Kingdom Animalia → Stamm Chordata → Klasse Mammalia → Ordnung Primata → Familie Hominidae → Gattung *Homo* → Art *sapiens*.",
+    "difficulty": "easy",
+    "tags": ["Evolution", "Systematik", "Taxonomische Hierarchie", "Linné"]
+  },
+  {
+    "id": "bio-9-03-q2",
+    "question": "Die **binominale Nomenklatur** beschreibt die wissenschaftliche Namensgebung von Arten. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Jede Art hat drei Namen: Domain, Gattung, Art (z.B. Eukarya Homo sapiens)"
+      },
+      {
+        "id": "B",
+        "text": "Jede Art hat zwei Namen: Gattung (groß, kursiv) + Art (klein, kursiv), z.B. *Homo sapiens*, *Escherichia coli*"
+      },
+      {
+        "id": "C",
+        "text": "Nur die Gattung wird kursiv geschrieben, die Art nicht (z.B. *Homo* sapiens)"
+      },
+      {
+        "id": "D",
+        "text": "Beide Namen werden klein geschrieben (z.B. *homo sapiens*)"
+      },
+      {
+        "id": "E",
+        "text": "Nach der ersten Nennung muss der vollständige Name immer wiederholt werden (keine Abkürzungen)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Binominale Nomenklatur (Linné):** Jede Art hat **zwei Namen** (lateinisch, **beide kursiv**). **Format:** *Gattung* (groß) + *Art* (klein). **Beispiele:** *Homo sapiens* (Mensch), *Escherichia coli* (E. coli), *Canis lupus* (Wolf). **Regeln:** (1) Gattung GROß, Art klein, (2) **beide kursiv** (handschriftlich unterstreichen), (3) Nach erster Nennung: **Abkürzung möglich** (z.B. *H. sapiens*, *E. coli*). **Wichtig:** Beide Teile kursiv, nicht nur die Gattung!",
+    "difficulty": "easy",
+    "tags": ["Evolution", "Systematik", "Binominale Nomenklatur", "Linné"]
+  },
+  {
+    "id": "bio-9-03-q3",
+    "question": "Das **Drei-Domänen-System** (Woese) unterscheidet **Archaea** von **Bacteria**. Welche Aussage zu **Archaea** ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Archaea sind Eukaryoten mit Zellkern und Organellen (wie Tiere und Pflanzen)"
+      },
+      {
+        "id": "B",
+        "text": "Archaea sind Prokaryoten, aber ohne Peptidoglycan-Zellwand, mit Ether-Lipiden, oft Extremophile (Methanogene, Halophile, Thermophile)"
+      },
+      {
+        "id": "C",
+        "text": "Archaea haben Peptidoglycan-Zellwand wie Bacteria (E. coli)"
+      },
+      {
+        "id": "D",
+        "text": "Archaea und Bacteria sind identisch (keine Unterschiede auf molekularer Ebene)"
+      },
+      {
+        "id": "E",
+        "text": "Archaea leben nur im menschlichen Darm, Bacteria nur in der Umwelt"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Archaea (Woese, 1977):** **Prokaryoten** (kein Zellkern), aber **molekular unterschiedlich** von Bacteria! **Unterschiede:** (1) **KEIN Peptidoglycan** in Zellwand (Bacteria haben Peptidoglycan), (2) **Ether-Lipide** in Membran (Bacteria haben Ester-Lipide), (3) **rRNA-Sequenzen** unterschiedlich. **Lebensraum:** Oft **Extremophile** (extreme Umgebungen): **Methanogene** (produzieren Methan), **Halophile** (Salz-liebend), **Thermophile** (Hitze-liebend, >80°C). **Wichtig:** Archaea genetisch **näher an Eukarya** als an Bacteria!",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Systematik", "Drei-Domänen-System", "Archaea", "Woese"]
+  },
+  {
+    "id": "bio-9-03-q4",
+    "question": "In der **Kladistik** (phylogenetische Systematik) werden Organismen nach Verwandtschaft klassifiziert. Was ist eine **monophyletische Gruppe** (Klade)?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Gemeinsamer Vorfahre + einige (nicht alle) Nachkommen, z.B. 'Reptilien' ohne Vögel (paraphyletisch)"
+      },
+      {
+        "id": "B",
+        "text": "Gemeinsamer Vorfahre + ALLE Nachkommen, z.B. Säugetiere (alle haben Milchdrüsen, Haare)"
+      },
+      {
+        "id": "C",
+        "text": "Kein gemeinsamer Vorfahre, konvergente Evolution, z.B. 'Warmblüter' (Vögel + Säugetiere)"
+      },
+      {
+        "id": "D",
+        "text": "Nur fossile Arten, keine lebenden Organismen"
+      },
+      {
+        "id": "E",
+        "text": "Alle Organismen auf derselben taxonomischen Ebene (z.B. alle Klassen)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Monophyletische Gruppe (Klade):** Gemeinsamer Vorfahre + **ALLE** seine Nachkommen. **Beispiel:** **Säugetiere** (Mammalia): gemeinsamer Vorfahre + alle Nachkommen (Beuteltiere, Plazentatiere, Monotremata) → **Synapomorphie** (gemeinsames abgeleitetes Merkmal): Milchdrüsen, Haare, 3 Gehörknöchelchen. **Paraphyletisch:** Gemeinsamer Vorfahre + **einige** Nachkommen (z.B. 'Reptilien' OHNE Vögel, **veraltet**). **Polyphyletisch:** **Kein** gemeinsamer Vorfahre (z.B. 'Warmblüter': Vögel + Säugetiere, konvergent). **Ziel Kladistik:** Nur **monophyletische Gruppen** verwenden!",
+    "difficulty": "hard",
+    "tags": ["Evolution", "Systematik", "Kladistik", "Monophyletisch", "Paraphyletisch"]
+  },
+  {
+    "id": "bio-9-03-q5",
+    "question": "Die **pentadactyle Extremität** (5-fingrige Gliedmaße) findet sich bei Mensch, Fledermaus, Wal und Pferd mit unterschiedlichen Funktionen. Sind diese Organe **homolog** oder **analog**?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Analog: Unterschiedlicher Grundbauplan, gleiche Funktion (konvergente Evolution, wie Vogel- vs. Insekten-Flügel)"
+      },
+      {
+        "id": "B",
+        "text": "Homolog: Gleicher Grundbauplan (gemeinsamer Vorfahre), unterschiedliche Funktion (Greifen, Fliegen, Schwimmen, Laufen)"
+      },
+      {
+        "id": "C",
+        "text": "Weder homolog noch analog: zufällige Ähnlichkeit ohne evolutionäre Bedeutung"
+      },
+      {
+        "id": "D",
+        "text": "Rudimentäre Organe: funktionslose Relikte (wie Blinddarm)"
+      },
+      {
+        "id": "E",
+        "text": "Vestigiale Organe: verschwinden in der Embryonalentwicklung"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Homologe Organe:** **Gleicher Grundbauplan** (gemeinsamer Vorfahre), **unterschiedliche Funktion** (divergente Evolution). **Pentadactyle Extremität:** Alle haben **gleichen Knochen-Grundbauplan** (Humerus, Radius/Ulna, Carpalia, Metacarpalia, Phalangen), aber **unterschiedliche Funktion**: Mensch (Greifen), Fledermaus (Fliegen), Wal (Schwimmen), Pferd (Laufen). **Analoge Organe:** Unterschiedlicher Grundbauplan, **gleiche Funktion** (z.B. Vogel-Flügel vs. Insekten-Flügel, konvergente Evolution). **Wichtig:** Nur **homologe Merkmale** zeigen Verwandtschaft (gemeinsamer Ursprung)!",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Systematik", "Homologie", "Analogie", "Pentadactyle Extremität"]
+  },
+  {
+    "id": "bio-9-03-q6",
+    "question": "**Molekulare Phylogenie** nutzt DNA/Protein-Sequenzen zur Rekonstruktion von Verwandtschaft. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "DNA-Sequenzen sind ungeeignet für phylogenetische Analysen (nur Morphologie zählt)"
+      },
+      {
+        "id": "B",
+        "text": "Je mehr Unterschiede in DNA-Sequenzen (z.B. Cytochrom c, rRNA), desto kürzer die Trennungszeit vom gemeinsamen Vorfahren"
+      },
+      {
+        "id": "C",
+        "text": "Molekulare Uhr: Mutationen akkumulieren mit konstanter Rate → Zeit seit Trennung berechenbar. 16S rRNA-Vergleich → Entdeckung der Archaea (Woese)"
+      },
+      {
+        "id": "D",
+        "text": "Molekulare Phylogenie funktioniert nur bei Tieren, nicht bei Bakterien oder Pflanzen"
+      },
+      {
+        "id": "E",
+        "text": "DNA-Sequenzen sind bei allen Organismen identisch (kein Informationsgehalt für Phylogenie)"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Molekulare Phylogenie:** DNA/Protein-Sequenzen vergleichen → evolutionäre Distanz berechnen. **Molekulare Uhr:** Mutationen akkumulieren mit **konstanter Rate** → Zeit seit Trennung vom gemeinsamen Vorfahren berechenbar. Je **mehr Unterschiede** (Mutationen), desto **länger** die Trennung (nicht kürzer!). **Beispiel:** 16S rRNA-Vergleich → Entdeckung der **Archaea** (Woese, 1977): genetisch unterschiedlich von Bacteria. **Vorteil:** Objektiv, quantitativ, funktioniert bei **allen Organismen** (Bacteria, Archaea, Eukarya). **Wichtig:** Molekulare Phylogenie **ergänzt** morphologische Analyse!",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Systematik", "Molekulare Phylogenie", "Molekulare Uhr", "rRNA", "Woese"]
+  }
+]

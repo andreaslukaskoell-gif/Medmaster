@@ -1,0 +1,147 @@
+[
+  {
+    "id": "q1",
+    "question": "Welche Hauptfunktion haben Lysosomen und wie ist ihr pH-Wert?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Photosynthese, pH 7"
+      },
+      {
+        "id": "B",
+        "text": "Abbau von Makromolekülen durch saure Hydrolasen, saurer pH ~4.5-5"
+      },
+      {
+        "id": "C",
+        "text": "ATP-Produktion, pH 8"
+      },
+      {
+        "id": "D",
+        "text": "DNA-Replikation, neutraler pH"
+      },
+      {
+        "id": "E",
+        "text": "Proteinsynthese, pH 6"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: LYSOSOMEN sind die \"VERDAUUNGSORGANELLEN\" der Zelle. Hauptfunktion: **ABBAU von Makromolekülen** (Proteine, Lipide, Nukleinsäuren, Kohlenhydrate) durch ca. 50 **SAURE HYDROLASEN** (Enzyme mit pH-Optimum ~5). Der pH im Lysosom ist **SAUER (~4.5-5)**, erzeugt durch **H⁺-ATPase** (Protonenpumpe) in der Lysosomen-Membran. Beispiele saurer Hydrolasen: Cathepsine (Proteasen), β-Glucuronidase (Glykosidase), saure Lipase, DNase/RNase. Lysosomale Membran ist stark glykosyliert (Zuckerschicht) → schützt vor Selbstverdauung. Platzen Lysosomen (z.B. Zelltod) → Zell-Autolyse. A, C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Was ist Makroautophagie und wie läuft sie ab?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Makroautophagie ist ATP-Produktion"
+      },
+      {
+        "id": "B",
+        "text": "Makroautophagie ist der Abbau zelleigener Strukturen: Phagophor umschließt Cargo → Autophagosom (Doppelmembran) → Fusion mit Lysosom → Autolysosom → Abbau"
+      },
+      {
+        "id": "C",
+        "text": "Makroautophagie ist DNA-Replikation"
+      },
+      {
+        "id": "D",
+        "text": "Makroautophagie findet nur in Bakterien statt"
+      },
+      {
+        "id": "E",
+        "text": "Makroautophagie ist Zellteilung"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **MAKROAUTOPHAGIE** (klassische Autophagie) ist der Abbau ZELLEIGENER Strukturen (Proteine, Organellen, Proteinaggregate) zur **Recycling von Bausteinen**. Ablauf: (1) **Phagophor** (Isolationsmembran) bildet sich (Ursprung: ER, Mitochondrien, Golgi), (2) Phagophor umschließt Cargo → **AUTOPHAGOSOM** (DOPPELMEMBRAN! → wichtiges Unterscheidungsmerkmal zu Lysosomen [einfache Membran]), (3) Autophagosom fusioniert mit **Lysosom** → **AUTOLYSOSOM**, (4) Saure Hydrolasen bauen Cargo ab → Aminosäuren, Zucker, Fettsäuren werden recycelt. REGULATION: **mTOR-Kinase** (Nährstoff-Sensor) hemmt Autophagie bei Nährstoffüberschuss. Bei HUNGER: mTOR inaktiv → Autophagie AKTIVIERT. Schlüssel-Proteine: ATG (Autophagy-related genes), LC3 (Marker), p62 (Cargo-Rezeptor). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Wie reguliert mTOR die Autophagie?",
+    "options": [
+      {
+        "id": "A",
+        "text": "mTOR hat keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "mTOR aktiv (Nährstoffe vorhanden) → Autophagie GEHEMMT. mTOR inaktiv (Hunger) → Autophagie AKTIVIERT. Rapamycin hemmt mTOR → induziert Autophagie"
+      },
+      {
+        "id": "C",
+        "text": "mTOR aktiviert immer Autophagie"
+      },
+      {
+        "id": "D",
+        "text": "mTOR ist nur in Bakterien"
+      },
+      {
+        "id": "E",
+        "text": "mTOR repliziert DNA"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **mTOR (mechanistic Target Of Rapamycin)** ist eine zentrale KINASE, die als NÄHRSTOFF-SENSOR fungiert und Autophagie NEGATIV reguliert. Mechanismus: (1) **Nährstoffe VORHANDEN** (Aminosäuren, Glukose, Wachstumsfaktoren) → mTOR AKTIV → mTOR phosphoryliert ULK1-Komplex (Autophagie-Initiator) → Autophagie GEHEMMT (Zelle braucht kein Recycling). (2) **HUNGER/Stress** (Nährstoffmangel) → mTOR INAKTIV → ULK1-Komplex aktiv → Autophagie AKTIVIERT (Zelle braucht Recycling zelleigener Strukturen für Energie). KLINISCH: **Rapamycin** (mTOR-Inhibitor, Immunsuppressivum) → mTOR gehemmt → Autophagie INDUZIERT → therapeutisches Potenzial bei Neurodegeneration (Abbau von Protein-Aggregaten), Krebs, Alterung. A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q4",
+    "question": "Was passiert bei der Tay-Sachs-Krankheit?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Zu viel ATP"
+      },
+      {
+        "id": "B",
+        "text": "Hexosaminidase A-Mangel → GM2-Ganglioside akkumulieren (Nervenzellen) → neurologische Degeneration, kirschroter Fleck in Makula, Tod im Kindesalter"
+      },
+      {
+        "id": "C",
+        "text": "Zu viele Ribosomen"
+      },
+      {
+        "id": "D",
+        "text": "DNA-Reparatur defekt"
+      },
+      {
+        "id": "E",
+        "text": "Zellmembran ist durchlässig"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **TAY-SACHS-KRANKHEIT** ist eine lysosomale Speicherkrankheit (Sphingolipidose). Genetik: **Autosomal-rezessiv**, Defekt im HEXA-Gen (kodiert Hexosaminidase A). Pathophysiologie: (1) **Hexosaminidase A-Mangel** → GM2-Ganglioside (Sphingolipide) können NICHT abgebaut werden. (2) GM2-Ganglioside **akkumulieren in Neuronen** (Nervenzellen) → Zellschwellung, Funktionsstörung. (3) **NEUROLOGISCHE DEGENERATION** ab 6. Lebensmonat: Muskelschwäche, Entwicklungsrückstand, Krampfanfälle, Taubheit, Blindheit. (4) **Kirschroter Fleck in Makula** (Funduskopie) = charakteristischer Befund (Gangliosid-Akkumulation in Retina-Ganglienzellen, Fovea bleibt normal → roter Kontrast). (5) Tod im Kindesalter (3-5 Jahre). Häufigkeit: Ashkenazi-Juden (Carrier-Frequenz 1:30). Diagnostik: Enzym-Aktivität (Hexosaminidase A in Leukozyten ↓). KEINE Therapie. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q5",
+    "question": "Wie funktioniert Phagozytose und was ist der Unterschied zu Endozytose?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Phagozytose = Aufnahme großer Partikel (Bakterien, Zelltrümmer) → Phagosom → Fusion mit Lysosom → Phagolysosom → Abbau. Nur spezialisierte Zellen (Makrophagen, Neutrophile)"
+      },
+      {
+        "id": "C",
+        "text": "Phagozytose ist nur in Pflanzen"
+      },
+      {
+        "id": "D",
+        "text": "Phagozytose ist ATP-Produktion"
+      },
+      {
+        "id": "E",
+        "text": "Phagozytose ist DNA-Synthese"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **PHAGOZYTOSE** (\"Zellfraß\") ist die Aufnahme **GROSSER PARTIKEL** (>0.5 μm: Bakterien, Viren, Zelltrümmer, Apoptose-Körperchen) durch spezialisierte Zellen. Ablauf: (1) Partikel bindet an Rezeptoren (Fc-Rezeptor für Antikörper-opsonierte Bakterien, Komplement-Rezeptor), (2) **Aktin-vermittelte Membran-Ausstülpungen** (Pseudopodien) umschließen Partikel, (3) **PHAGOSOM** bildet sich (einfache Membran), (4) Phagosom fusioniert mit **LYSOSOM** → **PHAGOLYSOSOM**, (5) Saure Hydrolasen + reaktive Sauerstoffspezies (ROS, \"oxidativer Burst\") bauen Partikel ab. NUR SPEZIALISIERTE ZELLEN: **Makrophagen** (Gewebe), **Neutrophile** (Blut), dendritische Zellen. UNTERSCHIED zu Endozytose: Endozytose = kleinere Partikel/Flüssigkeit (Rezeptor-vermittelt, Pinozytose), alle Zellen. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  }
+]

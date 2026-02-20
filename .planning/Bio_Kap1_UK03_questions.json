@@ -1,0 +1,176 @@
+[
+  {
+    "id": "q1",
+    "question": "Was besagt das Flüssig-Mosaik-Modell der Zellmembran?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Die Membran ist eine starre, kristalline Struktur aus Proteinen"
+      },
+      {
+        "id": "B",
+        "text": "Die Membran besteht aus einer Phospholipid-Doppelschicht, in der Proteine lateral beweglich eingebettet sind"
+      },
+      {
+        "id": "C",
+        "text": "Die Membran besteht nur aus Proteinen, keine Lipide"
+      },
+      {
+        "id": "D",
+        "text": "Die Membran ist eine einzelne Lipidschicht"
+      },
+      {
+        "id": "E",
+        "text": "Die Membran ist vollständig durchlässig für alle Moleküle"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Das Flüssig-Mosaik-Modell (Singer & Nicolson, 1972) beschreibt die Membran als PHOSPHOLIPID-DOPPELSCHICHT (amphipathische Lipide: hydrophile Köpfe außen, hydrophobe Schwänze innen) mit eingebetteten MEMBRANPROTEINEN. 'FLÜSSIG' bedeutet: Lipide und Proteine können sich LATERAL (seitwärts) bewegen (laterale Diffusion ~10⁷ Mal/Sekunde). 'MOSAIK' bedeutet: Proteine sind wie Mosaik-Steine in Lipid-Meer eingebettet. A ist falsch (nicht starr, sondern fluid). C, D sind falsch (Lipid-Doppelschicht ist Grundgerüst). E ist falsch (selektiv permeabel, nicht vollständig durchlässig).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Welche Funktion hat Cholesterin in der Zellmembran?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Cholesterin hat keine Funktion in der Membran"
+      },
+      {
+        "id": "B",
+        "text": "Cholesterin macht die Membran vollständig undurchlässig"
+      },
+      {
+        "id": "C",
+        "text": "Cholesterin wirkt als Fluiditäts-Puffer: reduziert Fluidität bei hohen Temperaturen, erhöht sie bei niedrigen Temperaturen"
+      },
+      {
+        "id": "D",
+        "text": "Cholesterin ist nur in Bakterien-Membranen vorhanden"
+      },
+      {
+        "id": "E",
+        "text": "Cholesterin ersetzt Phospholipide komplett"
+      }
+    ],
+    "correct": "C",
+    "explanation": "C ist korrekt: Cholesterin ist ein FLUIDITÄTS-PUFFER. Bei HOHEN Temperaturen: Cholesterin REDUZIERT Fluidität (füllt Lücken zwischen Fettsäure-Ketten → stabilisiert, verhindert zu flüssige Membran). Bei NIEDRIGEN Temperaturen: Cholesterin ERHÖHT Fluidität (stört geordnete Packung → verhindert Erstarrung). Zusätzlich: mechanische Stabilität, Bestandteil von Lipid-Rafts. Cholesterin macht 20-25% der Membran-Lipide aus (NUR in TIERISCHEN Zellen, NICHT in Bakterien oder Pflanzen). A ist falsch (zentrale Funktion). B ist falsch (moduliert Fluidität, macht nicht undurchlässig). D ist falsch (KEINE Bakterien, nur tierische Zellen). E ist falsch (ergänzt Phospholipide, ersetzt sie nicht).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Phosphatidylserin (PS) ist ein Phospholipid, das normalerweise nur in der inneren Membranschicht vorkommt. Was passiert, wenn PS auf die äußere Membranoberfläche gelangt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Nichts, PS kann überall sein"
+      },
+      {
+        "id": "B",
+        "text": "Die Zelle wird hyperaktiv"
+      },
+      {
+        "id": "C",
+        "text": "PS auf der Außenseite ist ein Apoptose-Signal ('Eat-me'-Signal) für Makrophagen - die Zelle wird als sterbend erkannt und phagozytiert"
+      },
+      {
+        "id": "D",
+        "text": "Die Zelle beginnt sich unkontrolliert zu teilen"
+      },
+      {
+        "id": "E",
+        "text": "Die Membran löst sich auf"
+      }
+    ],
+    "correct": "C",
+    "explanation": "C ist korrekt: MEMBRAN-ASYMMETRIE ist funktional wichtig. PS (Phosphatidylserin) ist NORMALERWEISE nur in der INNEREN Schicht. Bei APOPTOSE (programmierter Zelltod) wird PS aktiv nach AUSSEN transportiert (Flip-Flop). PS auf der AUßENSEITE = 'EAT-ME'-SIGNAL für Makrophagen (Phagozyten) → tote/sterbende Zelle wird erkannt und entfernt (Phagozytose), OHNE Entzündungsreaktion auszulösen. GESUNDE Zellen: PS bleibt INNEN (Flippasen halten PS innen, ATP-abhängig). A ist falsch (PS-Verteilung ist streng reguliert). B, D, E sind falsch (keine Hyperaktivität, unkontrollierte Teilung oder Auflösung).",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q4",
+    "question": "Was sind integrale Membranproteine?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Proteine, die lose an der Membranoberfläche anhaften"
+      },
+      {
+        "id": "B",
+        "text": "Proteine, die die gesamte Membran durchspannen und hydrophobe Regionen in der Lipid-Doppelschicht haben"
+      },
+      {
+        "id": "C",
+        "text": "Proteine, die nur im Zytoplasma vorkommen"
+      },
+      {
+        "id": "D",
+        "text": "Proteine, die nur aus Zuckern bestehen"
+      },
+      {
+        "id": "E",
+        "text": "Proteine, die die Membran zerstören"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: INTEGRALE (transmembrane) Proteine DURCHSPANNEN die GESAMTE Membran (beide Lipidschichten). Sie haben HYDROPHOBE Regionen (meist α-Helices), die die Lipid-Doppelschicht durchqueren, und HYDROPHILE Enden, die in wässrige Bereiche (außen/innen) ragen. Beispiele: Ionenkanäle (Na⁺/K⁺-ATPase), Rezeptoren (Insulin-Rezeptor), Transportproteine, Zelladhäsionsmoleküle (Integrine). Sie sind fest verankert und können NICHT ohne Zerstörung der Membran entfernt werden. A beschreibt PERIPHERE Proteine (lagern sich an Oberfläche an, leicht entfernbar). C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q5",
+    "question": "Welche Aussage zur Glykocalyx ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Die Glykocalyx ist eine Protein-Schicht im Zellkern"
+      },
+      {
+        "id": "B",
+        "text": "Die Glykocalyx besteht aus Kohlenhydraten (Glykoproteine und Glykolipide) auf der extrazellulären Membranoberfläche und dient der Zell-Erkennung, dem Schutz und der Zelladhäsion"
+      },
+      {
+        "id": "C",
+        "text": "Die Glykocalyx ist nur in Bakterien vorhanden"
+      },
+      {
+        "id": "D",
+        "text": "Die Glykocalyx macht Zellen unsichtbar für das Immunsystem"
+      },
+      {
+        "id": "E",
+        "text": "Die Glykocalyx besteht aus DNA"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Die GLYKOCALYX ist eine KOHLENHYDRAT-SCHICHT auf der EXTRAZELLULÄREN Membranoberfläche (nicht innen!). Zusammensetzung: GLYKOPROTEINE (Proteine mit Zucker-Ketten) + GLYKOLIPIDE (Lipide mit Zucker-Ketten). Funktionen: (1) ZELL-ZELL-ERKENNUNG (Blutgruppen-Antigene AB0, MHC-Moleküle für Immunerkennung Selbst vs. Fremd), (2) SCHUTZ (mechanisch gegen Abrasion, elektrostatische Abstoßung durch negative Ladung), (3) ZELLADHÄSION (Selektine binden an Glykocalyx → Leukozyten-Adhäsion bei Entzündung). A ist falsch (auf Membran, nicht im Kern). C ist falsch (alle eukaryotischen Zellen haben Glykocalyx). D ist falsch (Glykocalyx macht Zellen SICHTBAR für Immunsystem - MHC!). E ist falsch (Kohlenhydrate, nicht DNA).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q6",
+    "question": "Was ist der Unterschied zwischen lateraler Diffusion und Flip-Flop in der Membran?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide Begriffe bedeuten dasselbe"
+      },
+      {
+        "id": "B",
+        "text": "Laterale Diffusion = seitwärtige Bewegung von Lipiden/Proteinen in der Membranebene (häufig, 10⁷ Mal/Sekunde); Flip-Flop = Wechsel zwischen innerer und äußerer Lipidschicht (sehr selten, energieaufwändig)"
+      },
+      {
+        "id": "C",
+        "text": "Laterale Diffusion ist langsam, Flip-Flop ist schnell"
+      },
+      {
+        "id": "D",
+        "text": "Laterale Diffusion findet nur in toten Zellen statt"
+      },
+      {
+        "id": "E",
+        "text": "Flip-Flop ist der normale Bewegungsmodus"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: LATERALE DIFFUSION = SEITWÄRTIGE Bewegung von Lipiden und Proteinen INNERHALB der gleichen Membranschicht. SEHR HÄUFIG (~10⁷ Mal/Sekunde), spontan, keine Energie nötig → 'Flüssig' im Flüssig-Mosaik-Modell. FLIP-FLOP = Wechsel eines Lipids von der INNEREN zur ÄUSSEREN Schicht (oder umgekehrt). SEHR SELTEN (ohne Enzyme: Stunden bis Tage), ENERGIEAUFWÄNDIG, da hydrophiler Kopf durch hydrophoben Membran-Kern muss. Flippasen/Floppasen (ATP-abhängig) katalysieren Flip-Flop bei Bedarf (z.B. um PS innen zu halten). A ist falsch (völlig unterschiedliche Prozesse). C ist falsch (umgekehrt). D, E sind falsch.",
+    "difficulty": "hard"
+  }
+]

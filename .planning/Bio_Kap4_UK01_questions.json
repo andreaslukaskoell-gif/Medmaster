@@ -1,0 +1,92 @@
+[
+  {
+    "id": "bio-4-01-q01",
+    "question": "Welche Aussage über die Befruchtung ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Die Befruchtung findet im Uterus statt."},
+      {"id": "B", "text": "Die Akrosom-Reaktion setzt Enzyme frei (Akrosin, Hyaluronidase), die die Zona pellucida durchdringen. Die Corticale Reaktion (Zona-Reaktion) modifiziert die Zona pellucida und verhindert Polyspermie (Befruchtung durch mehrere Spermien)."},
+      {"id": "C", "text": "Nach der Fusion mit dem Spermium bleibt die Eizelle in Metaphase II arretiert."},
+      {"id": "D", "text": "Die Meiose II wird erst nach der Implantation abgeschlossen."},
+      {"id": "E", "text": "Polyspermie ist ein normaler Befruchtungsvorgang beim Menschen."}
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Befruchtung** (Eileiter, Ampulle):\n\n**Akrosom-Reaktion:**\n- **Spermium** bindet an **Zona pellucida** (Glykoprotein-Schicht um Eizelle)\n- **Akrosom** (Organell im Spermien-Kopf) fusioniert mit Membran → **Exozytose**\n- **Enzyme freigesetzt:** **Akrosin** + **Hyaluronidase** → durchdringen Zona pellucida\n- Spermium dringt zur Eizell-Membran vor → **Fusion**\n\n**Corticale Reaktion** (Zona-Reaktion, **Polyspermie-Block**):\n- **Trigger:** Spermien-Eizell-Fusion → Ca²⁺-Anstieg in Eizelle (Fertilisation-Ca²⁺-Welle)\n- **Cortical-Granula** (Eizellen-Vesikel) → **Exozytose** → Enzyme modifizieren **Zona pellucida**\n- **ZP2 → ZP2f** (inaktiv) → **verhindert weitere Spermien-Bindung**\n- **Ergebnis:** Nur **1 Spermium** befruchtet Eizelle → **Polyspermie-Verhinderung** (Polyspermie = Triploidie 3n → letal)\n\n**Meiose II-Abschluss:**\n- Sekundäre Oozyte (n, Arrest Metaphase II) → **Befruchtung** → Ca²⁺-Anstieg → Meiose II abgeschlossen\n- **Eizelle** (n) + **2. Polkörperchen** (n, degeneriert)\n- Spermien-Vorkern (n) + Eizell-Vorkern (n) → **Syngamie** → **Zygote** (2n, diploid)\n\n**Falsch (A):** Befruchtung findet im **Eileiter (Ampulle)** statt, nicht im Uterus.\n\n**Falsch (C):** Nach Fusion wird Meiose II **abgeschlossen** (nicht arretiert) → Eizelle (n).\n\n**Falsch (D):** Meiose II wird **unmittelbar nach Befruchtung** (Ca²⁺-Anstieg) abgeschlossen, nicht erst nach Implantation (Tag 6–7).\n\n**Falsch (E):** **Polyspermie** ist **abnormal** und wird durch Corticale Reaktion **verhindert**. Polyspermie → Triploidie (3n) → meist letal.",
+    "difficulty": "medium",
+    "tags": ["früh entwicklung", "befruchtung", "akrosom-reaktion", "polyspermie-block", "zona-pellucida"]
+  },
+  {
+    "id": "bio-4-01-q02",
+    "question": "Welche Aussage über die Furchung ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Furchung ist durch mitotische Zellteilungen mit starkem Zellwachstum gekennzeichnet."},
+      {"id": "B", "text": "Die Morula erreicht den Uterus am Tag 1 nach der Befruchtung."},
+      {"id": "C", "text": "Die Furchung beim Menschen ist holoblastisch (vollständig) und rotational. Es entstehen nacheinander: 2-Zell (Tag 1), 4-Zell (Tag 2), 8-Zell (Tag 3), Morula (16–32 Zellen, Tag 3–4), Blastozyste (Tag 5–6)."},
+      {"id": "D", "text": "Die Blastozyste bildet sich bereits am Tag 2 nach der Befruchtung."},
+      {"id": "E", "text": "Während der Furchung nimmt die Zellgröße kontinuierlich zu."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Furchung** (Cleavage):\n\n**Definition:** **Mitotische Zellteilungen OHNE Wachstum** → Zellzahl ↑, Zellgröße ↓\n\n**Charakteristik (Mensch):**\n- **Holoblastisch** (vollständig): Gesamte Zygote teilt sich\n- **Rotational:** 1. Teilung meridional (vertikal), 2. Teilung: 1 Zelle meridional, 1 äquatorial (horizontal)\n\n**Zeitlicher Ablauf:**\n\n| Tag | Stadium | Zellzahl | Lokalisation |\n|-----|---------|----------|---------------|\n| 0 | Zygote | 1 (2n) | Eileiter (Ampulle) |\n| 1 | 2-Zell | 2 | Eileiter |\n| 2 | 4-Zell | 4 | Eileiter |\n| 3 | 8-Zell | 8 | Eileiter |\n| 3–4 | **Morula** | 16–32 | Eileiter → **Uterus** (Tag 4) |\n| 5–6 | **Blastozyste** | ~100–200 | Uterus |\n\n**Morula** (Tag 3–4):\n- Kompakter Zellhaufen (Maulbeer-Form)\n- **Kompaktierung:** Tight Junctions zwischen Zellen\n- Erreicht Uterus am **Tag 4**\n\n**Blastozyste** (Tag 5–6):\n- **Blastozoel:** Hohlraum (Flüssigkeit)\n- **Embryoblast:** Innere Zellmasse → **Embryo**\n- **Trophoblast:** Äußere Zellschicht → **Plazenta** (hCG-Produktion)\n\n**Falsch (A):** Furchung = Zellteilungen **OHNE Wachstum** (nicht mit starkem Wachstum). Zellgröße ↓ mit jeder Teilung.\n\n**Falsch (B):** Morula erreicht Uterus am **Tag 4** (nicht Tag 1). Tag 1 = 2-Zell-Stadium.\n\n**Falsch (D):** Blastozyste bildet sich **Tag 5–6** (nicht Tag 2). Tag 2 = 4-Zell-Stadium.\n\n**Falsch (E):** Zellgröße **nimmt ab** (nicht zu) während der Furchung, da keine Wachstumsphase zwischen Teilungen.",
+    "difficulty": "easy",
+    "tags": ["frühentwicklung", "furchung", "morula", "blastozyste", "holoblastisch"]
+  },
+  {
+    "id": "bio-4-01-q03",
+    "question": "Welche Aussage über die Blastozyste ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Der Trophoblast entwickelt sich zum Embryo."},
+      {"id": "B", "text": "Der Embryoblast (innere Zellmasse) entwickelt sich zum Embryo und zu extraembryonalen Strukturen. Der Trophoblast (äußere Zellschicht) entwickelt sich zur Plazenta und produziert hCG (humanes Choriongonadotropin). Das Blastozoel ist ein flüssigkeitsgefüllter Hohlraum."},
+      {"id": "C", "text": "Die Blastozyste hat keine Hohlraum-Struktur."},
+      {"id": "D", "text": "hCG wird vom Embryoblast produziert."},
+      {"id": "E", "text": "Die Blastozyste bildet sich vor der Morula."}
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Blastozyste** (Tag 5–6):\n\n**Strukturen:**\n\n1. **Embryoblast** (innere Zellmasse, ICM):\n   - **Entwicklung:** → **Embryo** (alle 3 Keimblätter) + extraembryonale Strukturen (Amnion, Dottersack)\n   - **Differenzierung** (Tag 8): → **Epiblast** (→ 3 Keimblätter + Amnion) + **Hypoblast** (→ Dottersack)\n\n2. **Trophoblast** (äußere Zellschicht, Trophektoderm):\n   - **Entwicklung:** → **Plazenta** (Chorion)\n   - **Funktion:** Invasion ins Endometrium (Implantation), **hCG-Produktion**\n   - **Differenzierung:**\n     - **Synzytiotrophoblast** (äußen): Mehrkernig, invasiv, hCG ↑\n     - **Zytotrophoblast** (innen): Stammzellen\n\n3. **Blastozoel** (Blastocoel):\n   - **Hohlraum**, flüssigkeitsgefüllt\n   - Entsteht durch Flüssigkeitsakkumulation\n\n**hCG-Funktion:**\n- Produziert vom **Trophoblast** (ab Tag 6–7, Implantation)\n- **Erhält Corpus luteum** → Progesteron ↑ → Endometrium erhalten (keine Menstruation)\n- **Nachweisbar:** Blut (Tag 10), Urin (Tag 14) → **Schwangerschaftstest**\n\n**Falsch (A):** **Embryoblast** (nicht Trophoblast) → Embryo. Trophoblast → Plazenta.\n\n**Falsch (C):** Blastozyste hat **Blastozoel** (Hohlraum), charakteristisches Merkmal.\n\n**Falsch (D):** hCG wird vom **Trophoblast** (nicht Embryoblast) produziert.\n\n**Falsch (E):** Blastozyste bildet sich **nach** (nicht vor) Morula. Morula (Tag 3–4) → Blastozyste (Tag 5–6).",
+    "difficulty": "easy",
+    "tags": ["frühentwicklung", "blastozyste", "embryoblast", "trophoblast", "hcg"]
+  },
+  {
+    "id": "bio-4-01-q04",
+    "question": "Welche Aussage über die Implantation ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Die Implantation findet am Tag 1 nach der Befruchtung statt."},
+      {"id": "B", "text": "Die Implantation erfolgt in der Follikelphase des Menstruationszyklus."},
+      {"id": "C", "text": "Die Implantation (Nidation) erfolgt am Tag 6–7 nach Befruchtung (Tag 20–21 des Zyklus, Lutealphase) im Endometrium des Uterus. Der Synzytiotrophoblast dringt ins Endometrium ein, erodiert mütterliche Gefäße und produziert hCG, das das Corpus luteum erhält."},
+      {"id": "D", "text": "Der Embryoblast ist für die Invasion ins Endometrium verantwortlich."},
+      {"id": "E", "text": "Extrauteringravidität ist die normale Implantationslokalisation."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Implantation** (Nidation):\n\n**Zeitpunkt:**\n- **Tag 6–7** nach Befruchtung\n- **Tag 20–21** des Menstruationszyklus\n- **Lutealphase:** Progesteron ↑ (Corpus luteum) → Endometrium sekretorisch (optimal für Implantation)\n\n**Lokalisation:** **Uterus, Endometrium** (posterior-superior, Fundus/Corpus)\n\n**Ablauf:**\n1. **Apposition:** Blastozyste lagert sich an Endometrium an\n2. **Adhäsion:** Feste Bindung (Integrine, Selektine)\n3. **Invasion:** **Synzytiotrophoblast** (äußere Schicht des Trophoblast) dringt ins Endometrium ein:\n   - Proteasen (MMP) → degradieren extrazelluläre Matrix\n   - **Erodiert mütterliche Gefäße** → Blutseen (lakunäres System)\n   - **hCG-Produktion ↑**\n\n**hCG-Funktion:**\n- **Erhält Corpus luteum** → Progesteron ↑ → Endometrium erhalten → **keine Menstruation**\n- Nachweisbar ab Tag 10 (Blut), Tag 14 (Urin) → Schwangerschaftstest\n\n**Klinisch:**\n- **Extrauteringravidität (EUG):** Implantation **außerhalb Uterus** (meist **Eileiter** 95%) → **abnormal**, Ruptur-Gefahr → lebensbedrohlich, Notfall\n\n**Falsch (A):** Implantation am **Tag 6–7** (nicht Tag 1). Tag 1 = 2-Zell-Stadium im Eileiter.\n\n**Falsch (B):** Implantation in **Lutealphase** (nicht Follikelphase). Lutealphase: Progesteron ↑ → Endometrium sekretorisch → optimal.\n\n**Falsch (D):** **Synzytiotrophoblast** (nicht Embryoblast) ist für Invasion verantwortlich. Embryoblast → Embryo.\n\n**Falsch (E):** Extrauteringravidität ist **abnormal** (pathologisch), nicht normale Lokalisation. Normal = Uterus, Endometrium.",
+    "difficulty": "medium",
+    "tags": ["frühentwicklung", "implantation", "nidation", "synzytiotrophoblast", "hcg", "lutealphase"]
+  },
+  {
+    "id": "bio-4-01-q05",
+    "question": "Welche Aussage über hCG (humanes Choriongonadotropin) ist korrekt?",
+    "options": [
+      {"id": "A", "text": "hCG wird vom Corpus luteum produziert."},
+      {"id": "B", "text": "hCG hemmt die Progesteron-Produktion."},
+      {"id": "C", "text": "hCG wird vom Trophoblast (Synzytiotrophoblast) produziert. Es erhält das Corpus luteum, das weiterhin Progesteron produziert, wodurch das Endometrium erhalten bleibt und keine Menstruation eintritt. hCG ist ab Tag 10 (Blut) bzw. Tag 14 (Urin) nachweisbar (Schwangerschaftstest) und erreicht sein Maximum in der 8.–12. SSW."},
+      {"id": "D", "text": "hCG ist in der Schwangerschaft konstant auf niedrigem Niveau."},
+      {"id": "E", "text": "hCG kann erst ab der 20. Schwangerschaftswoche nachgewiesen werden."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **hCG** (humanes Choriongonadotropin):\n\n**Produktion:**\n- **Trophoblast** (speziell **Synzytiotrophoblast** der Blastozyste)\n- Beginn: **Tag 6–7** nach Befruchtung (Implantation)\n- ↑ exponentiell in den ersten Wochen\n\n**Funktion:**\n1. **Erhält Corpus luteum:**\n   - Normalerweise: Corpus luteum degeneriert am Zyklusende (Tag 28) → Progesteron ↓ → Menstruation\n   - Mit hCG: Corpus luteum bleibt erhalten → **Progesteron ↑** (+ Östrogen)\n   - Progesteron → **Endometrium erhalten** → **keine Menstruation** → Schwangerschaft\n\n2. **LH-ähnliche Wirkung:**\n   - hCG bindet an LH-Rezeptoren → stimuliert Corpus luteum\n\n**Zeitverlauf:**\n- **Nachweisbar:**\n  - **Blut:** ~Tag 10 nach Befruchtung (sensitiver)\n  - **Urin:** ~Tag 14 nach Befruchtung → **Schwangerschaftstest** (Anti-hCG-Antikörper)\n- **Maximum:** 8.–12. SSW (Schwangerschaftswoche)\n- **Abfall:** Nach 12. SSW (Plazenta übernimmt Progesteron-Produktion → Corpus luteum nicht mehr essenziell)\n\n**Klinisch:**\n- **Schwangerschaftstest:** Urin-hCG (qualitativ), Serum-hCG (quantitativ)\n- **Blasenmole:** hCG ↑↑↑ (abnormal hoch, Trophoblast-Proliferation)\n- **Extrauteringravidität:** hCG ↑ langsamer als erwartet\n\n**Falsch (A):** hCG wird vom **Trophoblast** (nicht Corpus luteum) produziert. Corpus luteum produziert Progesteron.\n\n**Falsch (B):** hCG **erhält** Corpus luteum → Progesteron ↑ (nicht hemmt).\n\n**Falsch (D):** hCG **steigt exponentiell** in ersten Wochen, Maximum 8.–12. SSW (nicht konstant niedrig).\n\n**Falsch (E):** hCG nachweisbar ab **Tag 10–14** nach Befruchtung (~3–4 Wochen Schwangerschaft), nicht erst ab 20. SSW.",
+    "difficulty": "medium",
+    "tags": ["frühentwicklung", "hcg", "trophoblast", "corpus-luteum", "schwangerschaftstest"]
+  },
+  {
+    "id": "bio-4-01-q06",
+    "question": "Welche Aussage über Meiose während der Befruchtung ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Die Eizelle hat die Meiose bereits vor der Ovulation vollständig abgeschlossen."},
+      {"id": "B", "text": "Die sekundäre Oozyte ist nach Ovulation arretiert in Prophase I."},
+      {"id": "C", "text": "Bei Ovulation wird die sekundäre Oozyte (n, haploid) in Metaphase II arretiert freigesetzt. Die Meiose II wird erst bei Befruchtung abgeschlossen, ausgelöst durch den Ca²⁺-Anstieg. Das Ergebnis ist eine reife Eizelle (n) und das 2. Polkörperchen (n), das degeneriert."},
+      {"id": "D", "text": "Das 2. Polkörperchen fusioniert mit dem Spermium."},
+      {"id": "E", "text": "Die Syngamie findet vor Abschluss der Meiose II statt."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Meiose und Befruchtung:**\n\n**Oogenese-Zeitverlauf:**\n\n1. **Pränatale Entwicklung:**\n   - Primäre Oozyten (2n, diploid) → Meiose I **gestartet**\n   - **Arrest in Prophase I** (bis Pubertät)\n\n2. **Ovulation** (jeden Zyklus ab Pubertät, Tag 14):\n   - **Meiose I abgeschlossen:** Primäre Oozyte (2n) → **sekundäre Oozyte** (n, haploid) + **1. Polkörperchen** (n, degeneriert)\n   - **Sekundäre Oozyte:** **Arrest in Metaphase II**\n   - Freisetzung: Sekundäre Oozyte (n, Metaphase II) → Eileiter\n\n3. **Befruchtung** (Eileiter, Ampulle):\n   - **Spermien-Fusion** → **Ca²⁺-Anstieg** (Fertilisation-Ca²⁺-Welle)\n   - Ca²⁺ → **Meiose II abgeschlossen:** Sekundäre Oozyte (n) → **Eizelle** (n, reif) + **2. Polkörperchen** (n, degeneriert)\n   - **Syngamie:** Spermien-Vorkern (n) + Eizell-Vorkern (n) → **Zygote** (2n, diploid)\n\n**Polkörperchen:**\n- **1. Polkörperchen:** Meiose I (Ovulation)\n- **2. Polkörperchen:** Meiose II (Befruchtung)\n- Beide **degenerieren** (haben kaum Zytoplasma)\n- **Funktion:** Haploidie erreichen (n) ohne Zytoplasma-Verlust (1 große Eizelle + kleine Polkörperchen)\n\n**Falsch (A):** Meiose II wird **erst bei Befruchtung** (nicht vor Ovulation) abgeschlossen. Bei Ovulation: Arrest Metaphase II.\n\n**Falsch (B):** Sekundäre Oozyte arretiert in **Metaphase II** (nicht Prophase I). **Primäre** Oozyte arretiert in Prophase I (Geburt bis Pubertät).\n\n**Falsch (D):** 2. Polkörperchen **degeneriert** (fusioniert nicht mit Spermium). **Eizell-Vorkern** (n) fusioniert mit Spermien-Vorkern (n).\n\n**Falsch (E):** Syngamie findet **nach** Abschluss Meiose II statt (nicht davor). Reihenfolge: Meiose II → Eizelle (n) → Syngamie → Zygote (2n).",
+    "difficulty": "hard",
+    "tags": ["frühentwicklung", "befruchtung", "meiose", "oozyte", "polkörperchen", "syngamie"]
+  }
+]

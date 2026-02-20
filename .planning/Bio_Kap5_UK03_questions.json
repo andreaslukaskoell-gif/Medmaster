@@ -1,0 +1,77 @@
+[
+  {
+    "id": "bio-5-03-q01",
+    "question": "Welche Aussage über Epistase ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Epistase bedeutet, dass ein Gen mehrere Merkmale beeinflusst."},
+      {"id": "B", "text": "Bei Epistase zeigt die F₂-Generation eines dihybriden Erbgangs immer ein 9:3:3:1-Verhältnis."},
+      {"id": "C", "text": "Epistase bedeutet, dass ein Gen (epistatisches Gen) die Wirkung eines anderen Gens (hypostatisches Gen) überdeckt. Beispiel: Bei Mäusen ist cc (Albino) epistatisch über den B-Locus (Fellfarbe). Die Kreuzung BbCc × BbCc ergibt ein 9:3:4-Verhältnis (9 schwarz, 3 braun, 4 weiß), da cc immer weiß ist, unabhängig vom B-Genotyp."},
+      {"id": "D", "text": "Epistatische Gene liegen immer auf demselben Chromosom wie hypostatische Gene."},
+      {"id": "E", "text": "Das epistatische Gen wird immer durch das hypostatische Gen überdeckt."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Epistase:**\n\n**Definition:** Ein Gen (**epistatisches Gen**) **überdeckt** (maskiert) die Wirkung eines anderen Gens (**hypostatisches Gen**)\n\n**Beispiel: Fellfarbe bei Mäusen**\n\n**Gene:**\n- **B-Locus:** B (schwarz, dominant), b (braun, rezessiv)\n- **C-Locus:** C (Farbbildung, dominant), c (keine Farbbildung [Albino], rezessiv)\n\n**Interaktion:**\n- **C_ (C vorhanden):** Farbbildung möglich → **B-Locus** bestimmt Farbe:\n  - B_C_ (B vorhanden, C vorhanden): **Schwarz**\n  - bbC_ (bb, C vorhanden): **Braun**\n- **cc (homozygot rezessiv):** **Keine Farbbildung** → **Weiß (Albino)**, **unabhängig** von B-Locus:\n  - B_cc: Weiß (c epistatisch, überdeckt B)\n  - bbcc: Weiß\n\n**Kreuzung:** BbCc × BbCc (dihybrider Erbgang)\n\n**Erwartetes Mendel-Verhältnis (keine Epistase):** 9:3:3:1\n\n**Tatsächliches Verhältnis (mit Epistase):**\n- **9/16** Schwarz (B_C_)\n- **3/16** Braun (bbC_)\n- **3/16** Weiß (B_cc)\n- **1/16** Weiß (bbcc)\n- **Gesamt:** 9 schwarz : 3 braun : **4 weiß** (3+1)\n- **Verhältnis:** **9:3:4**\n\n**Erklärung:** **cc** ist **epistatisch** über **B/b** (hypostatisch). cc maskiert die Wirkung von B → immer weiß, unabhängig von B-Genotyp.\n\n**Falsch (A):** **Pleiotropie** (nicht Epistase) = ein Gen → mehrere Merkmale. Epistase = Gen-Gen-Interaktion (Überdeckung).\n\n**Falsch (B):** Bei Epistase weicht das Verhältnis von 9:3:3:1 ab (z. B. **9:3:4**). 9:3:3:1 = keine Geninteraktion.\n\n**Falsch (D):** Epistatische + hypostatische Gene können auf **verschiedenen Chromosomen** liegen (wie B und C). Lokalisation ist nicht definierend.\n\n**Falsch (E):** **Epistatisches** Gen überdeckt **hypostatisches** (nicht umgekehrt). Epistatisch = überdeckend, hypostatisch = überdeckt.",
+    "difficulty": "medium",
+    "tags": ["genetik", "epistase", "geninteraktion", "9:3:4", "maus-fellfarbe"]
+  },
+  {
+    "id": "bio-5-03-q02",
+    "question": "Welche Aussage über Polygenie (polygenetische Vererbung) ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Bei Polygenie beeinflusst ein Gen mehrere Merkmale."},
+      {"id": "B", "text": "Polygenetische Merkmale zeigen diskrete Kategorien ohne Zwischenstufen."},
+      {"id": "C", "text": "Polygenie bedeutet, dass mehrere Gene (Polygene) ein Merkmal beeinflussen. Die Allele wirken additiv, was zu einer kontinuierlichen Variation führt (z. B. Hautfarbe, Körpergröße). Bei zwei Genen (AaBb × AaBb) entsteht eine glockenförmige Verteilung mit einem 1:4:6:4:1-Phänotyp-Verhältnis, wobei die Anzahl dominanter Allele die Merkmalsausprägung bestimmt."},
+      {"id": "D", "text": "Polygenetische Vererbung folgt immer einem 9:3:3:1-Verhältnis."},
+      {"id": "E", "text": "Polygenie ist identisch mit Pleiotropie."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Polygenie** (Polygenetische Vererbung):\n\n**Definition:** **Mehrere Gene** (Polygene) beeinflussen **ein Merkmal** → **kontinuierliche Variation** (viele Abstufungen)\n\n**Prinzip:**\n- **Additive Wirkung:** Jedes dominante/großbuchstabige Allel (A, B, C, ...) trägt zur Merkmalsausprägung bei\n- **Anzahl dominanter Allele** bestimmt Intensität des Merkmals\n- **Kontinuierliches Spektrum:** Viele Zwischenstufen (nicht diskrete Kategorien)\n\n**Beispiel: Hautfarbe (vereinfacht, 2 Gene)**\n\n**Kreuzung:** AaBb × AaBb\n\n**Phänotyp-Verteilung:**\n- **AABB** (4 dominante Allele): Dunkelste Hautfarbe (1/16)\n- **AABb, AaBB** (3 dominante Allele): Dunkel (4/16)\n- **AAbb, AaBb, aaBB** (2 dominante Allele): Mittel (6/16)\n- **Aabb, aaBb** (1 dominantes Allel): Hell (4/16)\n- **aabb** (0 dominante Allele): Hellste Hautfarbe (1/16)\n\n**Verhältnis:** **1:4:6:4:1** (glockenförmige Verteilung)\n\n**Realität:** Hautfarbe wird von 3–6+ Genen beeinflusst → noch mehr Abstufungen, noch glattere Glockenform\n\n**Weitere Beispiele:**\n- **Körpergröße:** 100+ Gene + Umweltfaktoren (Ernährung)\n- **Intelligenz:** Viele Gene + Umwelt\n- **Blutdruck**\n\n**Merkmale polygenetischer Vererbung:**\n- **Kontinuierliche Variation** (fließende Übergänge)\n- **Glockenförmige Verteilung** (Normalverteilung)\n- **Umwelteinfluss** (oft erheblich)\n\n**Falsch (A):** **Pleiotropie** (nicht Polygenie) = ein Gen → mehrere Merkmale. **Polygenie** = viele Gene → ein Merkmal.\n\n**Falsch (B):** Polygenetische Merkmale zeigen **kontinuierliche Variation** (viele Zwischenstufen), nicht diskrete Kategorien.\n\n**Falsch (D):** Polygenetische Vererbung → **1:4:6:4:1** (2 Gene) oder glattere Glockenform (mehr Gene), nicht 9:3:3:1. 9:3:3:1 = dihybrider Erbgang ohne Geninteraktion.\n\n**Falsch (E):** Polygenie ≠ Pleiotropie. **Polygenie:** Viele Gene → ein Merkmal. **Pleiotropie:** Ein Gen → viele Merkmale.",
+    "difficulty": "easy",
+    "tags": ["genetik", "polygenie", "kontinuierliche-variation", "1:4:6:4:1", "hautfarbe"]
+  },
+  {
+    "id": "bio-5-03-q03",
+    "question": "Welche Aussage über Pleiotropie ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Pleiotropie bedeutet, dass mehrere Gene ein Merkmal beeinflussen."},
+      {"id": "B", "text": "Bei Pleiotropie zeigen alle Merkmale denselben Phänotyp."},
+      {"id": "C", "text": "Pleiotropie bedeutet, dass ein Gen mehrere Merkmale (phänotypische Effekte) beeinflusst. Beispiel: Sichelzellanämie (HbS-Mutation) führt zu Sichelzellen, Hämolyse (Anämie), Gefäßverschlüssen (Schmerzkrisen, Organschäden) und Malaria-Resistenz bei Heterozygoten (HbA/HbS). Dies ist ein Beispiel für balancing selection (Heterozygoten-Vorteil)."},
+      {"id": "D", "text": "Pleiotropie tritt nur bei X-chromosomaler Vererbung auf."},
+      {"id": "E", "text": "Sichelzellanämie ist ein Beispiel für Polygenie."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Pleiotropie:**\n\n**Definition:** **Ein Gen** beeinflusst **mehrere Merkmale** (phänotypische Effekte)\n\n**Beispiel: Sichelzellanämie (HbS)**\n\n**Gen:** β-Globin-Gen (Hämoglobin)\n- **Mutation:** Glu → Val (Position 6, GAG → GTG) → **HbS** (Sichelzell-Hämoglobin)\n\n**Ein Gen (HbS) → Viele Effekte:**\n\n1. **Erythrozyten:** Sichelform bei Hypoxie (niedrig O₂, desoxygeniert)\n2. **Hämolyse:** Vorzeitiger Erythrozyten-Abbau → **Anämie** (Hb ↓)\n3. **Gefäßverschlüsse:** Sichelzellen blockieren Kapillaren → **Schmerzkrisen** (Knochen, Abdomen), **Organschäden** (Milz-Infarkte, Nierenschäden, Schlaganfall)\n4. **Malaria-Resistenz:** Heterozygote (**HbA/HbS**) → partielle Resistenz gegen *Plasmodium falciparum* (Malaria-Parasit)\n   - **Mechanismus:** Parasit kann in Sichelzellen schlechter überleben\n   - **Balancing Selection:** Heterozygoten-Vorteil in Malaria-Gebieten (Afrika, Mittelmeer) → HbS-Allel bleibt in Population (trotz Nachteil bei Homozygoten)\n\n**Genotyp → Phänotyp:**\n- **HbA/HbA:** Normal, keine Sichelzellen, Malaria-anfällig\n- **HbA/HbS:** Heterozygot (**Sichelzellträger**, Sickle Cell Trait), meist asymptomatisch (leichte Anämie nur bei extremer Hypoxie), **Malaria-Resistenz**\n- **HbS/HbS:** Homozygot, **Sichelzellanämie** (schwer), Schmerzkrisen, Organschäden, frühe Mortalität (ohne Behandlung)\n\n**Weitere Beispiele:**\n- **Marfan-Syndrom:** Fibrillin-1-Mutation → Aortenerweiterung (Dissektions-Risiko), Linsenluxation (Auge), langes Skelett, Arachnodaktylie (Spinnenfinger)\n- **Phenylketonurie (PKU):** Phenylalanin-Hydroxylase-Mangel → Geistige Behinderung (Phenylalanin toxisch fürs ZNS), helle Haut/Haare (Melanin ↓, Tyrosin-Mangel)\n\n**Falsch (A):** **Polygenie** (nicht Pleiotropie) = mehrere Gene → ein Merkmal. **Pleiotropie** = ein Gen → mehrere Merkmale.\n\n**Falsch (B):** Bei Pleiotropie zeigen Merkmale **verschiedene** Phänotypen (z. B. Sichelzellen + Anämie + Schmerzkrisen), nicht denselben.\n\n**Falsch (D):** Pleiotropie kann bei **allen Vererbungstypen** auftreten (autosomal, X-chromosomal), nicht nur X-chromosomal.\n\n**Falsch (E):** Sichelzellanämie = **Pleiotropie** (ein Gen → viele Merkmale), nicht Polygenie (viele Gene → ein Merkmal).",
+    "difficulty": "hard",
+    "tags": ["genetik", "pleiotropie", "sichelzellanämie", "hbs", "malaria-resistenz"]
+  },
+  {
+    "id": "bio-5-03-q04",
+    "question": "Welche Aussage über Komplementierung ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Bei Komplementierung haben beide Eltern denselben genetischen Defekt."},
+      {"id": "B", "text": "Komplementierung führt zu einem 3:1-Phänotyp-Verhältnis in der F₂-Generation."},
+      {"id": "C", "text": "Komplementierung bedeutet, dass zwei rezessive Mutationen in verschiedenen Genen sich gegenseitig kompensieren, sodass die F₁-Generation einen Wildtyp-Phänotyp (normal) zeigt. In der F₂-Generation (F₁ × F₁) ergibt sich ein 9:7-Verhältnis: 9/16 zeigen den Wildtyp-Phänotyp (A_B_), 7/16 den mutanten Phänotyp (A_bb + aaB_ + aabb), da beide funktionale Gene für den normalen Phänotyp erforderlich sind."},
+      {"id": "D", "text": "Komplementierung kann nur bei monohybriden Erbgängen auftreten."},
+      {"id": "E", "text": "Bei Komplementierung sind alle F₁-Nachkommen mutant."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Komplementierung:**\n\n**Definition:** **Zwei rezessive Mutationen** in **verschiedenen Genen** → **komplementieren** sich → **Wildtyp-Phänotyp** (normal) in F₁\n\n**Prinzip:**\n- **Elternteil 1:** Gen A defekt (aa), Gen B funktional (BB) → mutanter Phänotyp (Produkt A fehlt)\n- **Elternteil 2:** Gen A funktional (AA), Gen B defekt (bb) → mutanter Phänotyp (Produkt B fehlt)\n- **F₁:** AaBb → **beide Gene funktional** (A von Elter 2, B von Elter 1) → **Wildtyp-Phänotyp** (normal)\n\n**Beispiel: Blütenfarbe (vereinfacht)**\n\n**Gene:**\n- **Gen A:** Enzym A (Vorstufe → Zwischenprodukt)\n- **Gen B:** Enzym B (Zwischenprodukt → Pigment [Farbe])\n\n**Kreuzung:** aaBB (weiß, Enzym A defekt) × AAbb (weiß, Enzym B defekt)\n- **F₁:** AaBb → **Farbe** (beide Enzyme funktional, Biosynthese-Weg komplett)\n\n**F₁ × F₁:** AaBb × AaBb\n\n**F₂-Phänotyp:**\n- **9/16 A_B_** (beide Enzyme funktional): **Farbe** (Wildtyp)\n- **3/16 A_bb** (Enzym B defekt): Weiß (kein Pigment)\n- **3/16 aaB_** (Enzym A defekt): Weiß (kein Zwischenprodukt)\n- **1/16 aabb** (beide Enzyme defekt): Weiß\n- **Verhältnis:** **9:7** (9 Farbe : 7 weiß)\n\n**Erklärung:** Nur wenn **beide** Enzyme funktional (A_B_) → Biosynthese-Weg vollständig → Pigment → Farbe. Fehlt mindestens eines → kein Pigment → weiß.\n\n**Komplementations-Test:**\n- **Zweck:** Bestimmen, ob zwei Mutationen im **gleichen Gen** (keine Komplementierung) oder in **verschiedenen Genen** (Komplementierung) liegen\n- **F₁ Wildtyp:** Verschiedene Gene (Komplementierung)\n- **F₁ mutant:** Gleiches Gen (keine Komplementierung, beide Allele des gleichen Gens defekt)\n\n**Falsch (A):** Bei Komplementierung haben Eltern **verschiedene** genetische Defekte (Gen A vs. Gen B), nicht denselben.\n\n**Falsch (B):** Komplementierung → **9:7** (nicht 3:1). 3:1 = monohybrider Erbgang (Aa × Aa).\n\n**Falsch (D):** Komplementierung ist typischerweise **dihybrider** Erbgang (2 Gene, AaBb × AaBb), nicht monohybrid.\n\n**Falsch (E):** Bei Komplementierung sind alle **F₁** Nachkommen **Wildtyp** (normal, AaBb), nicht mutant.",
+    "difficulty": "hard",
+    "tags": ["genetik", "komplementierung", "geninteraktion", "9:7", "biosynthese-weg"]
+  },
+  {
+    "id": "bio-5-03-q05",
+    "question": "Welche Aussage über modifizierte Mendel-Verhältnisse ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Ein 9:3:3:1-Verhältnis zeigt immer Geninteraktion an."},
+      {"id": "B", "text": "Ein 9:3:4-Verhältnis entsteht durch Komplementierung."},
+      {"id": "C", "text": "Bei dihybridem Erbgang (AaBb × AaBb) entstehen verschiedene Phänotyp-Verhältnisse je nach Geninteraktion: 9:3:3:1 (keine Interaktion), 9:3:4 (Epistase, z. B. cc epistatisch), 9:7 (Komplementierung, beide Gene erforderlich), 12:3:1 (dominant epistatisch). Abweichungen von 9:3:3:1 zeigen Geninteraktion an."},
+      {"id": "D", "text": "Ein 9:7-Verhältnis zeigt keine Geninteraktion."},
+      {"id": "E", "text": "Alle Geninteraktionen führen zum gleichen Phänotyp-Verhältnis."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Modifizierte Mendel-Verhältnisse:**\n\n**Dihybrider Erbgang:** AaBb × AaBb (2 Gene, je 2 Allele)\n\n**Standard-Mendel (keine Geninteraktion):**\n- **Verhältnis:** **9:3:3:1**\n- **Phänotypen:** 9 A_B_, 3 A_bb, 3 aaB_, 1 aabb\n- **Interpretation:** Gene vererben **unabhängig**, keine Interaktion\n\n**Geninteraktion → Abweichungen von 9:3:3:1:**\n\n1. **Epistase (9:3:4):**\n   - **Beispiel:** Fellfarbe Maus (cc epistatisch über B/b)\n   - **Phänotypen:** 9 schwarz (B_C_), 3 braun (bbC_), 4 weiß (B_cc + bbcc)\n   - **Erklärung:** cc überdeckt B/b → immer weiß\n\n2. **Komplementierung (9:7):**\n   - **Beispiel:** Blütenfarbe (beide Enzyme A + B nötig)\n   - **Phänotypen:** 9 Farbe (A_B_), 7 weiß (A_bb + aaB_ + aabb)\n   - **Erklärung:** Mindestens ein Gen defekt → kein Pigment → weiß\n\n3. **Dominant epistatisch (12:3:1):**\n   - **Beispiel:** Gen A (A_) epistatisch über B/b\n   - **Phänotypen:** 12 (A_B_ + A_bb), 3 (aaB_), 1 (aabb)\n   - **Erklärung:** A_ maskiert B/b → gleicher Phänotyp\n\n4. **Doppelt-rezessiv epistatisch (9:7):**\n   - Wie Komplementierung (beide Gene nötig)\n\n**Regel:** **Abweichung von 9:3:3:1** → **Geninteraktion** (Epistase, Komplementierung, etc.)\n\n**Falsch (A):** **9:3:3:1** zeigt **keine** Geninteraktion (unabhängige Vererbung, 3. Mendel'sche Regel). **Abweichungen** (9:3:4, 9:7, 12:3:1) zeigen Geninteraktion.\n\n**Falsch (B):** **9:3:4** = **Epistase** (nicht Komplementierung). **9:7** = Komplementierung.\n\n**Falsch (D):** **9:7** zeigt **Geninteraktion** (Komplementierung, beide Gene erforderlich für Wildtyp), nicht keine Geninteraktion.\n\n**Falsch (E):** Verschiedene Geninteraktionen → **verschiedene** Verhältnisse (9:3:4, 9:7, 12:3:1), nicht gleich.",
+    "difficulty": "medium",
+    "tags": ["genetik", "geninteraktion", "modifizierte-verhältnisse", "9:3:4", "9:7", "9:3:3:1"]
+  }
+]

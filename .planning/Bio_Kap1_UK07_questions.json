@@ -1,0 +1,118 @@
+[
+  {
+    "id": "q1",
+    "question": "In welchen Zellen kommen Plastiden vor?",
+    "options": [
+      {
+        "id": "A",
+        "text": "In allen Zellen (Pflanzen, Tiere, Pilze, Bakterien)"
+      },
+      {
+        "id": "B",
+        "text": "Nur in Pflanzen- und Algenzellen"
+      },
+      {
+        "id": "C",
+        "text": "Nur in tierischen Zellen"
+      },
+      {
+        "id": "D",
+        "text": "Nur in Bakterien"
+      },
+      {
+        "id": "E",
+        "text": "Nur in Pilzzellen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Plastiden (Chloroplasten, Chromoplasten, Leukoplasten) kommen AUSSCHLIEßLICH in PFLANZEN und ALGEN vor. Sie sind NICHT in tierischen Zellen, Pilzen oder Bakterien vorhanden. Dieser Unterschied ist fundamental: Tiere müssen organische Nährstoffe aufnehmen (chemoheterotroph), Pflanzen produzieren sie selbst via Photosynthese in Chloroplasten (photoautotroph). A ist falsch (nicht in allen). C ist falsch (NICHT in Tierzellen - das ist ein häufiger Fehler). D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Welche Funktion haben Chloroplasten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Proteinabbau"
+      },
+      {
+        "id": "B",
+        "text": "Photosynthese: Lichtenergie → Glukose + O₂"
+      },
+      {
+        "id": "C",
+        "text": "Lipidsynthese"
+      },
+      {
+        "id": "D",
+        "text": "DNA-Replikation"
+      },
+      {
+        "id": "E",
+        "text": "Zellatmung"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: CHLOROPLASTEN sind die PHOTOSYNTHESE-Organellen in Pflanzen. Funktion: Umwandlung von Lichtenergie in chemische Energie (Glukose). Reaktion: 6 CO₂ + 6 H₂O + Licht → C₆H₁₂O₆ + 6 O₂. Ort: LICHTREAKTION in Thylakoiden (Photosysteme I + II, Protonengradient → ATP + NADPH), DUNKELREAKTION (Calvin-Zyklus) im Stroma (CO₂-Fixierung → Glukose). Chlorophyll (grünes Pigment) absorbiert Licht. A ist falsch (Lysosomen/Proteasomen). C ist falsch (glattes ER). D ist falsch (Zellkern). E ist falsch (Mitochondrien).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q3",
+    "question": "Welche Belege unterstützen, dass Chloroplasten von endosymbiotischen Cyanobakterien abstammen?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Chloroplasten haben keine DNA"
+      },
+      {
+        "id": "B",
+        "text": "Chloroplasten haben eine einfache Membran"
+      },
+      {
+        "id": "C",
+        "text": "Chloroplasten haben eigene zirkuläre DNA, 70S-Ribosomen und Doppelmembran"
+      },
+      {
+        "id": "D",
+        "text": "Chloroplasten sind nur in tierischen Zellen"
+      },
+      {
+        "id": "E",
+        "text": "Chloroplasten entstehen durch Mitose"
+      }
+    ],
+    "correct": "C",
+    "explanation": "C ist korrekt: Die ENDOSYMBIONTENTHEORIE besagt, dass Chloroplasten von frei lebenden CYANOBAKTERIEN (Blaugrüne Algen) abstammen. BELEGE: (1) DOPPELMEMBRAN (innere = ursprüngliche Bakterienmembran, äußere = Wirtsmembran), (2) Eigene ZIRKULÄRE DNA (~120-200 kb, keine Histone), (3) 70S-RIBOSOMEN (wie Prokaryoten, nicht 80S wie Eukaryoten-Zytoplasma), (4) ZWEITEILUNG (binäre Fission), (5) Phylogenetische Verwandtschaft zu Cyanobakterien. Analog zu Mitochondrien-Endosymbiose. A ist falsch (haben DNA). B ist falsch (Doppelmembran). D ist falsch (nur Pflanzen/Algen). E ist falsch (Zweiteilung, nicht Mitose).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Was ist der Unterschied zwischen Chromoplasten und Chloroplasten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Chloroplasten = Photosynthese (grün, Chlorophyll), Chromoplasten = Farbpigmente (Carotinoide, orange/rot/gelb, keine Photosynthese)"
+      },
+      {
+        "id": "C",
+        "text": "Chromoplasten sind nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Chloroplasten speichern Stärke, Chromoplasten nicht"
+      },
+      {
+        "id": "E",
+        "text": "Chromoplasten produzieren ATP"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: CHLOROPLASTEN = PHOTOSYNTHESE-Organellen mit CHLOROPHYLL (grünes Pigment) → produzieren Glukose + O₂ aus Licht. CHROMOPLASTEN = FARBPIGMENT-Organellen mit CAROTINOIDEN (β-Carotin = orange, Lycopin = rot, Xanthophylle = gelb) → KEINE Photosynthese, nur Färbung. Funktion von Chromoplasten: Blüten/Früchte färben → Bestäuber/Samenverbreiter anlocken (z.B. Tomaten rot durch Lycopin, Karotten orange durch β-Carotin). Umwandlung: Chloroplasten können zu Chromoplasten werden (z.B. bei Fruchtreifung - grüne Tomate → rote Tomate). A ist falsch (völlig unterschiedlich). C, D, E sind falsch.",
+    "difficulty": "medium"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-5-05-q1",
+    "question": "In einem Stammbaum sind Generation I (Eltern) gesund, Generation II zeigt 2 von 4 Geschwistern betroffen (1 Bruder, 1 Schwester), Generation III ist noch nicht vorhanden. Die Eltern in Generation I sind durch eine Doppellinie (=) verbunden. Welcher Erbgang ist am wahrscheinlichsten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Autosomal-dominant, da beide Geschlechter gleich häufig betroffen sind"
+      },
+      {
+        "id": "B",
+        "text": "Autosomal-rezessiv mit Konsanguinität (Verwandtenehe), da gesunde Eltern betroffene Kinder haben"
+      },
+      {
+        "id": "C",
+        "text": "X-chromosomal rezessiv, da sowohl Männer als auch Frauen betroffen sind"
+      },
+      {
+        "id": "D",
+        "text": "Y-chromosomal (holandrisch), da eine Vater-Sohn-Übertragung vorliegt"
+      },
+      {
+        "id": "E",
+        "text": "X-chromosomal dominant, da mehr Frauen als Männer betroffen sind"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Autosomal-rezessiv mit Konsanguinität**: **Generationensprung** (gesunde Eltern → kranke Kinder) ist typisch für rezessiven Erbgang (Aa × Aa → aa). Die **Doppellinie (=)** kennzeichnet **Konsanguinität** (Verwandtenehe, z.B. Cousin-Cousine) → erhöhtes Risiko für gemeinsame rezessive Allele (IBD). **Beide Geschlechter gleich häufig** betroffen (autosomal, nicht gonosomal). Beispiele: PKU, Mukoviszidose.",
+    "difficulty": "medium",
+    "tags": ["Genetik", "Stammbaumanalyse", "Autosomal-rezessiv", "Konsanguinität", "Generationensprung"]
+  },
+  {
+    "id": "bio-5-05-q2",
+    "question": "Ein Stammbaum zeigt folgendes Muster: Generation I (Großvater betroffen, Großmutter gesund), Generation II (alle 3 Töchter gesund, 2 Söhne gesund), Generation III (1 Enkel betroffen, 2 Enkelinnen gesund). Der betroffene Enkel ist der Sohn einer Tochter aus Generation II. Welcher Erbgang liegt vor?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Autosomal-dominant, da der Großvater betroffen ist und das Merkmal weitervererbt wird"
+      },
+      {
+        "id": "B",
+        "text": "X-chromosomal rezessiv mit diagonal-Übertragung (Großvater → Tochter als Konduktorin → Enkel)"
+      },
+      {
+        "id": "C",
+        "text": "Y-chromosomal, da nur männliche Individuen (Großvater und Enkel) betroffen sind"
+      },
+      {
+        "id": "D",
+        "text": "Autosomal-rezessiv, da ein Generationensprung von Generation I nach Generation III vorliegt"
+      },
+      {
+        "id": "E",
+        "text": "X-chromosomal dominant, da die Töchter des Großvaters alle betroffen sein müssten"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**X-chromosomal rezessiv mit diagonal-Übertragung** (\"Springer-Generation\"): Großvater (X^a Y, betroffen) → Töchter (X^A X^a, Konduktorinnen, gesund) → Enkel (X^a Y, betroffen, 50% Risiko). **Keine Vater-Sohn-Übertragung** (Großvater hat keine betroffenen Söhne → Y-chromosomal ausgeschlossen). Das **diagonale Muster** (Generation I → III, II übersprungen) ist **pathognomonisch** für X-chromosomal rezessiv. Beispiele: Hämophilie A, Duchenne.",
+    "difficulty": "hard",
+    "tags": ["Genetik", "Stammbaumanalyse", "X-chromosomal rezessiv", "Diagonal-Übertragung", "Springer-Generation"]
+  },
+  {
+    "id": "bio-5-05-q3",
+    "question": "Zwei heterozygote Eltern (Aa × Aa) für eine autosomal-rezessive Erkrankung haben bereits 2 gesunde Kinder. Wie hoch ist die Wahrscheinlichkeit, dass das **3. Kind ebenfalls gesund** ist?",
+    "options": [
+      {
+        "id": "A",
+        "text": "100%, da bereits 2 gesunde Kinder geboren wurden und das kranke Allel \"verbraucht\" ist"
+      },
+      {
+        "id": "B",
+        "text": "75% (3/4), da jede Geburt unabhängig ist und P(gesund) = P(AA) + P(Aa) = 3/4"
+      },
+      {
+        "id": "C",
+        "text": "50% (1/2), da die Eltern heterozygot sind und das Risiko bei jedem Kind gleich ist"
+      },
+      {
+        "id": "D",
+        "text": "25% (1/4), da die Wahrscheinlichkeit für aa (krank) bei Aa × Aa immer 1/4 ist"
+      },
+      {
+        "id": "E",
+        "text": "67% (2/3), da bereits 2 gesunde Kinder geboren wurden (bedingte Wahrscheinlichkeit)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Jede Geburt ist unabhängig** (kein Einfluss früherer Kinder). Bei **Aa × Aa** (autosomal-rezessiv): P(AA) = 1/4, P(Aa) = 2/4, P(aa) = 1/4. **P(gesund) = P(AA) + P(Aa) = 1/4 + 2/4 = 3/4 = 75%**. Die vorherigen 2 gesunden Kinder ändern nichts an der Wahrscheinlichkeit für das 3. Kind. **Wichtig:** Genetische Wahrscheinlichkeiten sind **unabhängig** bei jeder Konzeption!",
+    "difficulty": "medium",
+    "tags": ["Genetik", "Wahrscheinlichkeitsberechnung", "Autosomal-rezessiv", "Unabhängige Ereignisse"]
+  },
+  {
+    "id": "bio-5-05-q4",
+    "question": "Ein Stammbaum zeigt: Vater betroffen (Generation I), Mutter gesund. In Generation II sind **alle 3 Töchter betroffen**, aber **beide Söhne gesund**. Welcher Erbgang ist am wahrscheinlichsten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Autosomal-dominant, da das Merkmal von einer Generation zur nächsten weitergegeben wird"
+      },
+      {
+        "id": "B",
+        "text": "X-chromosomal rezessiv, da keine Vater-Sohn-Übertragung stattfindet"
+      },
+      {
+        "id": "C",
+        "text": "X-chromosomal dominant, da der kranke Vater (X^A Y) sein X^A-Chromosom an alle Töchter weitergibt"
+      },
+      {
+        "id": "D",
+        "text": "Y-chromosomal, da der Vater betroffen ist und nur männliche Nachkommen betroffen sein sollten"
+      },
+      {
+        "id": "E",
+        "text": "Autosomal-rezessiv mit Konsanguinität, da Geschwister betroffen sind"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**X-chromosomal dominant**: Das Muster **kranker Vater → 100% Töchter krank, 100% Söhne gesund** ist **pathognomonisch**. Der Vater (X^A Y) gibt sein **X^A-Chromosom an alle Töchter** (→ X^A X^- krank) und sein **Y-Chromosom an alle Söhne** (→ X^- Y gesund). Die gesunde Mutter (X^- X^-) gibt nur X^- weiter. Beispiele: Hypophosphatämische Rachitis (PHEX-Gen), Rett-Syndrom.",
+    "difficulty": "easy",
+    "tags": ["Genetik", "Stammbaumanalyse", "X-chromosomal dominant", "Vater-Tochter-Übertragung"]
+  },
+  {
+    "id": "bio-5-05-q5",
+    "question": "Eltern Aa × Aa (autosomal-rezessiv) haben ein **gesundes** Kind. Wie hoch ist die Wahrscheinlichkeit, dass dieses Kind **Konduktor** (Aa) ist?",
+    "options": [
+      {
+        "id": "A",
+        "text": "25% (1/4), da P(Aa) bei Aa × Aa immer 1/4 ist"
+      },
+      {
+        "id": "B",
+        "text": "50% (1/2), da heterozygote Eltern zu 50% Aa-Nachkommen führen"
+      },
+      {
+        "id": "C",
+        "text": "67% (2/3), da von 3 gesunden Genotypen (AA, Aa, Aa) zwei Aa sind (bedingte Wahrscheinlichkeit)"
+      },
+      {
+        "id": "D",
+        "text": "75% (3/4), da P(gesund) = 3/4 ist und davon alle Aa sein könnten"
+      },
+      {
+        "id": "E",
+        "text": "100%, da gesunde Kinder von Aa × Aa immer heterozygot sind"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Bedingte Wahrscheinlichkeit** (Bayes-Theorem): **Gegeben:** Kind ist gesund (AA oder Aa, nicht aa). Bei **Aa × Aa**: P(AA) = 1/4, P(Aa) = 2/4, P(aa) = 1/4. **P(gesund) = 3/4** (AA oder Aa). **P(Aa | gesund) = P(Aa) / P(gesund) = (2/4) / (3/4) = 2/3 = 67%**. Von den 3 gesunden Genotypen (1× AA, 2× Aa) sind **2 von 3 Konduktoren**. Wichtig für genetische Beratung!",
+    "difficulty": "hard",
+    "tags": ["Genetik", "Wahrscheinlichkeitsberechnung", "Bedingte Wahrscheinlichkeit", "Konduktor", "Bayes-Theorem"]
+  },
+  {
+    "id": "bio-5-05-q6",
+    "question": "In einem Stammbaum sind **alle betroffenen Individuen männlich**, und es findet eine **durchgehende Vater-Sohn-Übertragung** über 3 Generationen statt (I → II → III, nur männliche Linie). Welcher Erbgang liegt vor?",
+    "options": [
+      {
+        "id": "A",
+        "text": "X-chromosomal rezessiv, da nur Männer betroffen sind (hemizygot)"
+      },
+      {
+        "id": "B",
+        "text": "Autosomal-dominant mit geschlechtsbegrenzter Expression (nur Männer zeigen Phänotyp)"
+      },
+      {
+        "id": "C",
+        "text": "Y-chromosomal (holandrisch), da Vater-Sohn-Übertragung (100%) und nur Männer betroffen"
+      },
+      {
+        "id": "D",
+        "text": "Autosomal-rezessiv, da Generationensprünge auftreten können"
+      },
+      {
+        "id": "E",
+        "text": "X-chromosomal dominant, da das Merkmal in jeder Generation auftritt"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Y-chromosomal (holandrisch)**: **Nur Männer betroffen** + **Vater-Sohn-Übertragung (100%)** ist **pathognomonisch**. Der Vater gibt das **Y-Chromosom an alle Söhne** weiter (nicht an Töchter → X vom Vater). **Vertikale Linie** nur durch männliche Linie (I → II → III). **Wichtig:** X-chromosomal rezessiv hat **keine Vater-Sohn-Übertragung** (Vater gibt Y, nicht X an Sohn). Beispiele: Männliche Infertilität (AZF-Deletionen auf Y), Hairy Ears (umstritten).",
+    "difficulty": "medium",
+    "tags": ["Genetik", "Stammbaumanalyse", "Y-chromosomal", "Holandrisch", "Vater-Sohn-Übertragung"]
+  }
+]

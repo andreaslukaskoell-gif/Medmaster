@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-6-03-q1",
+    "question": "Der genetische Code ist **degeneriert**. Was bedeutet dies?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Jedes Codon (3 Basen) codiert für mehrere verschiedene Aminosäuren (1 Codon → viele AS)"
+      },
+      {
+        "id": "B",
+        "text": "Mehrere Codons können für dieselbe Aminosäure codieren (viele Codons → 1 AS, z.B. Leucin hat 6 Codons)"
+      },
+      {
+        "id": "C",
+        "text": "Der genetische Code ist bei verschiedenen Organismen unterschiedlich (nicht universell)"
+      },
+      {
+        "id": "D",
+        "text": "Codons überlappen sich, sodass ein Nukleotid zu mehreren Codons gehört"
+      },
+      {
+        "id": "E",
+        "text": "Es gibt Pausen (Kommas) zwischen Codons, die nicht codierend sind"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Degeneriert (Degeneration):** **Mehrere Codons** → **1 Aminosäure**. Beispiel: **Leucin** wird von **6 Codons** codiert (UUA, UUG, CUU, CUC, CUA, CUG). **Grund:** 64 Codons (4³) → 20 Aminosäuren + 3 Stopp → viele Codons pro AS. **Vorteil:** Mutationen oft \"stille Mutationen\" (gleiche AS trotz Codon-Änderung). Wichtig: **1 Codon → 1 AS** (eindeutig), aber **1 AS → viele Codons** (degeneriert)!",
+    "difficulty": "easy",
+    "tags": ["Molekulare Genetik", "Genetischer Code", "Degeneration", "Codons"]
+  },
+  {
+    "id": "bio-6-03-q2",
+    "question": "Welches der folgenden Codons ist ein **Stopp-Codon** (Nonsense-Codon)?",
+    "options": [
+      {
+        "id": "A",
+        "text": "AUG (codiert Methionin, Start-Codon)"
+      },
+      {
+        "id": "B",
+        "text": "UUU (codiert Phenylalanin)"
+      },
+      {
+        "id": "C",
+        "text": "UAA (Stopp-Codon, keine Aminosäure, Termination)"
+      },
+      {
+        "id": "D",
+        "text": "GCU (codiert Alanin)"
+      },
+      {
+        "id": "E",
+        "text": "CAU (codiert Histidin)"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Stopp-Codons (Nonsense-Codons):** **UAA, UAG, UGA** → **keine Aminosäure**, beenden Translation. **Start-Codon:** **AUG** (Methionin, Met) → Translations-Start (1. Aminosäure). Wichtig: **3 Stopp-Codons** (UAA \"Ochre\", UAG \"Amber\", UGA \"Opal\"), **1 Start-Codon** (AUG). Bei Stopp-Codon: **Release-Faktoren** (RF1/2 Prokaryoten, eRF1 Eukaryoten) binden → Protein freigesetzt.",
+    "difficulty": "easy",
+    "tags": ["Molekulare Genetik", "Genetischer Code", "Stopp-Codon", "Nonsense"]
+  },
+  {
+    "id": "bio-6-03-q3",
+    "question": "Die **Wobble-Hypothese** (Crick, 1966) erklärt, warum **45 tRNAs** ausreichen, um **61 codierende Codons** zu erkennen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Jede tRNA kann nur ein einziges spezifisches Codon erkennen (61 tRNAs für 61 Codons)"
+      },
+      {
+        "id": "B",
+        "text": "Die Wobble-Position (3. Base des Codons, 1. Base des Anticodons) erlaubt Nicht-Watson-Crick-Paarung (z.B. G-U)"
+      },
+      {
+        "id": "C",
+        "text": "Die Wobble-Hypothese besagt, dass Codons überlappen und mehrere Aminosäuren gleichzeitig codieren"
+      },
+      {
+        "id": "D",
+        "text": "Wobble bedeutet, dass tRNAs falsch geladen werden und fehlerhafte Aminosäuren einbauen"
+      },
+      {
+        "id": "E",
+        "text": "Wobble-Paarung findet nur bei Stopp-Codons statt, nicht bei codierenden Codons"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Wobble-Hypothese:** **3. Base des Codons** (5'-Ende der mRNA) paart mit **1. Base des Anticodons** (5'-Ende der tRNA) → **Wobble-Position**. **Nicht-Watson-Crick-Paarung** möglich (z.B. **G-U** statt G-C). **Folge:** **1 tRNA** kann **mehrere Codons** erkennen (v.a. wenn 3. Base unterschiedlich). Beispiel: Codon UUU + UUC (beide Phe) → 1 tRNA-Phe (Anticodon AAG, Wobble G-U möglich). Wichtig: **45 tRNAs** für **61 Codons** (nicht 61 tRNAs!)!",
+    "difficulty": "medium",
+    "tags": ["Molekulare Genetik", "Wobble-Hypothese", "tRNA", "Anticodon", "Crick"]
+  },
+  {
+    "id": "bio-6-03-q4",
+    "question": "**Aminoacyl-tRNA-Synthetase** ist ein Enzym, das tRNA mit der passenden Aminosäure belädt. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Es gibt nur 1 Aminoacyl-tRNA-Synthetase für alle 20 Aminosäuren (universelles Enzym)"
+      },
+      {
+        "id": "B",
+        "text": "Es gibt 20 Aminoacyl-tRNA-Synthetasen (1 pro Aminosäure), jede spezifisch für eine AS und ihre tRNAs"
+      },
+      {
+        "id": "C",
+        "text": "Aminoacyl-tRNA-Synthetase katalysiert die Peptidbindung zwischen Aminosäuren (Peptidyl-Transferase)"
+      },
+      {
+        "id": "D",
+        "text": "Aminoacyl-tRNA-Synthetase entfernt Introns aus pre-mRNA (Splicing-Funktion)"
+      },
+      {
+        "id": "E",
+        "text": "Aminoacyl-tRNA-Synthetase ist eine Untereinheit des Ribosoms (50S/60S)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Aminoacyl-tRNA-Synthetase:** **20 Enzyme** (1 pro Aminosäure), jedes **spezifisch** für 1 AS und ihre tRNAs (kann mehrere tRNAs beladen, da Wobble). **Funktion:** Bindet Aminosäure an CCA-3'-Ende der tRNA (**Aminoacyl-tRNA**, ATP-abhängig). **Fehlerrate:** ~10⁻⁴ (sehr niedrig, Korrektur-Mechanismus). Wichtig: **1 Synthetase pro AS**, aber **mehrere tRNAs pro AS** (Wobble!). **Peptidyl-Transferase** = rRNA-katalysiert (Ribozym), nicht Synthetase!",
+    "difficulty": "medium",
+    "tags": ["Molekulare Genetik", "Aminoacyl-tRNA-Synthetase", "tRNA", "Aminosäure"]
+  },
+  {
+    "id": "bio-6-03-q5",
+    "question": "Bei Prokaryoten bindet das Ribosom an die **Shine-Dalgarno-Sequenz**. Bei Eukaryoten erfolgt die Initiation über die **5'-Capping** und **Kozak-Sequenz**. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Prokaryoten: Shine-Dalgarno (AGGAGGU, ~10 bp vor AUG) erkennt 16S rRNA, Initiator-tRNA ist fMet-tRNA (formyliert)"
+      },
+      {
+        "id": "B",
+        "text": "Eukaryoten: Shine-Dalgarno-Sequenz vor AUG, Initiator-tRNA ist fMet-tRNA (wie Prokaryoten)"
+      },
+      {
+        "id": "C",
+        "text": "Prokaryoten und Eukaryoten verwenden beide die Kozak-Sequenz zur Ribosom-Bindung"
+      },
+      {
+        "id": "D",
+        "text": "Eukaryoten benötigen keine 5'-Capping, da Ribosomen direkt an AUG binden (wie Prokaryoten)"
+      },
+      {
+        "id": "E",
+        "text": "Prokaryoten verwenden Met-tRNA (nicht formyliert), Eukaryoten fMet-tRNA (formyliert)"
+      }
+    ],
+    "correct": "A",
+    "explanation": "**Prokaryoten:** **Shine-Dalgarno-Sequenz** (AGGAGGU, ~10 bp vor AUG) → **16S rRNA** (30S) erkennt → Ribosom bindet. **Initiator-tRNA:** **fMet-tRNA** (N-Formylmethionin, **formyliert**). **Eukaryoten:** **5'-Capping** (m7G) → Ribosom erkennt Kappe, scannt mRNA bis AUG. **Kozak-Sequenz** (GCCRCCAUGG, Konsensus um AUG) → optimale Translation. **Initiator-tRNA:** **Met-tRNA** (**nicht** formyliert). Wichtig: **fMet (Prokaryoten)**, **Met (Eukaryoten)**!",
+    "difficulty": "hard",
+    "tags": ["Molekulare Genetik", "Translation", "Initiation", "Shine-Dalgarno", "Kozak", "fMet"]
+  },
+  {
+    "id": "bio-6-03-q6",
+    "question": "**Tetracyclin** ist ein Antibiotikum, das die bakterielle Proteinbiosynthese hemmt. Welcher Mechanismus liegt zugrunde?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Tetracyclin hemmt DNA-Replikation durch Blockierung der DNA-Polymerase"
+      },
+      {
+        "id": "B",
+        "text": "Tetracyclin bindet an die 30S-Untereinheit (Prokaryoten) und blockiert die A-Site → Aminoacyl-tRNA kann nicht binden"
+      },
+      {
+        "id": "C",
+        "text": "Tetracyclin bindet an die 50S-Untereinheit und hemmt die Peptidyl-Transferase (Peptidbindung ↓)"
+      },
+      {
+        "id": "D",
+        "text": "Tetracyclin hemmt Transkription durch Blockierung der RNA-Polymerase"
+      },
+      {
+        "id": "E",
+        "text": "Tetracyclin bindet an die 80S-Ribosomen (Eukaryoten) und hemmt Translation (keine selektive Toxizität)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Tetracyclin:** Bindet an **30S-Untereinheit** (kleine, prokaryotische Ribosom-Untereinheit) → **blockiert A-Site** → **Aminoacyl-tRNA kann nicht binden** → **Elongation ↓**. **Selektive Toxizität:** Prokaryoten (70S = 30S + 50S), Eukaryoten (80S = 40S + 60S) → Tetracyclin wirkt nur auf 70S! **Andere Antibiotika:** Chloramphenicol (50S, Peptidyl-Transferase ↓), Erythromycin (50S, Translokation ↓), Streptomycin (30S, Codon-Erkennung fehlerhaft). Wichtig: **Mitochondrien = 70S** → Tetracyclin kann mitochondriale Translation hemmen (Nebenwirkung)!",
+    "difficulty": "medium",
+    "tags": ["Molekulare Genetik", "Translation", "Antibiotika", "Tetracyclin", "30S", "A-Site"]
+  }
+]

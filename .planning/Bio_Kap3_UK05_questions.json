@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-3-05-q01",
+    "question": "Welche Aussage über die Zusammensetzung des Blutes und den Hämatokrit ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Der Hämatokrit beschreibt den Volumenanteil aller Blutzellen (Erythrozyten, Leukozyten, Thrombozyten) am Gesamtblutvolumen."
+      },
+      {
+        "id": "B",
+        "text": "Der Hämatokrit beträgt bei Männern ~45% und bei Frauen ~42% und gibt den Volumenanteil der Erythrozyten an. Serum ist Plasma ohne Fibrinogen."
+      },
+      {
+        "id": "C",
+        "text": "Plasma enthält kein Fibrinogen, während Serum Fibrinogen enthält, da es vor der Gerinnung gewonnen wird."
+      },
+      {
+        "id": "D",
+        "text": "Albumin macht ~90% der Plasmaproteine aus und ist hauptsächlich für die Immunabwehr verantwortlich."
+      },
+      {
+        "id": "E",
+        "text": "Ein erhöhter Hämatokrit (>50%) deutet immer auf eine Anämie hin, da zu viele Erythrozyten abgebaut werden."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** Der **Hämatokrit (Hkt)** ist der **Volumenanteil der Erythrozyten** (nicht aller Blutzellen) am Gesamtblutvolumen:\n- **Männer:** ~45% (höher wegen Testosteron → Erythropoese ↑)\n- **Frauen:** ~42% (niedriger wegen Menstruation, weniger Testosteron)\n\n**Serum vs. Plasma:**\n- **Plasma:** Flüssiger Anteil des Blutes **mit Fibrinogen** (Gerinnungsfaktor I). Gewinnung: Blut + Antikoagulans (z. B. Heparin, EDTA) → Zentrifugation.\n- **Serum:** Plasma **ohne Fibrinogen** (und andere Gerinnungsfaktoren). Gewinnung: Blut gerinnen lassen → Zentrifugation → Überstand = Serum.\n\n**Falsch (A):** Hämatokrit misst nur **Erythrozyten**, nicht Leukozyten oder Thrombozyten (diese machen <1% des Volumens aus).\n\n**Falsch (C):** **Umgekehrt!** **Plasma** enthält Fibrinogen, **Serum** nicht (da Fibrinogen → Fibrin bei Gerinnung).\n\n**Falsch (D):** Albumin macht ~60% (nicht 90%) der Plasmaproteine aus. Funktion: **Onkotischer Druck** (hält Wasser im Gefäß), Transport (Hormone, Fettsäuren, Bilirubin). **Immunabwehr** ist Aufgabe der **Globuline** (Antikörper, Immunglobuline).\n\n**Falsch (E):** Hkt ↑ (>50%) deutet auf **Polyglobulie** (zu viele Erythrozyten) oder Dehydratation hin, **nicht** auf Anämie. **Anämie** = Hkt ↓, Hb ↓ (zu wenige Erythrozyten).",
+    "difficulty": "easy",
+    "tags": ["blut", "hämatokrit", "plasma", "serum", "zusammensetzung"]
+  },
+  {
+    "id": "bio-3-05-q02",
+    "question": "Welche Aussage über Hämoglobin und den Sauerstofftransport trifft zu?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Hämoglobin ist ein Monomer mit einer Häm-Gruppe, die Eisen in der Fe³⁺-Form bindet, um Sauerstoff zu transportieren."
+      },
+      {
+        "id": "B",
+        "text": "Der Bohr-Effekt beschreibt, dass ein Anstieg von CO₂, ein Abfall des pH-Werts und eine Temperaturerhöhung die O₂-Bindungskurve nach rechts verschieben und die O₂-Abgabe in metabolisch aktivem Gewebe fördern."
+      },
+      {
+        "id": "C",
+        "text": "Beim Abbau von Hämoglobin entsteht Biliverdin, das direkt über die Niere ausgeschieden wird und dem Urin seine gelbe Farbe verleiht."
+      },
+      {
+        "id": "D",
+        "text": "2,3-BPG (Bisphosphoglycerat) verschiebt die O₂-Bindungskurve nach links und erhöht die Sauerstoffaffinität von Hämoglobin."
+      },
+      {
+        "id": "E",
+        "text": "Erythrozyten haben eine Lebensdauer von ~30 Tagen und werden hauptsächlich in der Leber abgebaut."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** Der **Bohr-Effekt** beschreibt, wie metabolische Parameter die O₂-Affinität von Hämoglobin beeinflussen:\n\n**Rechtverschiebung der O₂-Bindungskurve** (O₂-Affinität ↓, O₂-Abgabe ↑):\n- **CO₂ ↑** (metabolisch aktives Gewebe produziert CO₂)\n- **pH ↓** (Azidose, H⁺ ↑)\n- **Temperatur ↑** (erhöhter Stoffwechsel, Muskelarbeit)\n- **2,3-BPG ↑** (bei chronischer Hypoxie, Höhenanpassung)\n\n**Physiologische Bedeutung:** In metabolisch aktivem Gewebe (Muskel, Hirn) wird mehr O₂ benötigt → lokale Bedingungen (CO₂ ↑, pH ↓, Temp ↑) → O₂-Abgabe ↑.\n\n**Falsch (A):** Hämoglobin ist ein **Tetramer** (nicht Monomer) mit **4 Untereinheiten** (2α, 2β), jede mit **einer Häm-Gruppe** (insgesamt 4 Häm-Gruppen). Eisen muss in der **Fe²⁺-Form** sein (nicht Fe³⁺), um O₂ zu binden. Fe³⁺ = Methämoglobin (kann kein O₂ binden).\n\n**Falsch (C):** Biliverdin entsteht aus Häm-Abbau (in Milz/Leber) → **Bilirubin** (gelb) → Leber (Konjugation) → Galle → Darm → **Sterkobilin** (Stuhlfarbe braun). Ein Teil wird zu **Urobilin** umgewandelt → Niere → **Urinfarbe gelb**. Biliverdin selbst wird **nicht** direkt ausgeschieden.\n\n**Falsch (D):** 2,3-BPG verschiebt die Kurve nach **rechts** (nicht links) → O₂-Affinität ↓ → **O₂-Abgabe ↑**. Linksverschiebung würde O₂-Affinität ↑ bedeuten (z. B. fetales Hb, CO-Vergiftung).\n\n**Falsch (E):** Erythrozyten haben eine Lebensdauer von **~120 Tagen** (nicht 30) und werden hauptsächlich in der **Milz** (nicht Leber) abgebaut (Retikuloendotheliales System, RES).",
+    "difficulty": "medium",
+    "tags": ["blut", "hämoglobin", "bohr-effekt", "sauerstofftransport", "2-3-bpg"]
+  },
+  {
+    "id": "bio-3-05-q03",
+    "question": "Welche Aussage über Leukozyten ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Neutrophile Granulozyten machen 20–40% der Leukozyten aus und sind hauptsächlich für die Produktion von Antikörpern verantwortlich."
+      },
+      {
+        "id": "B",
+        "text": "Lymphozyten machen 50–70% der Leukozyten aus und sind die erste Verteidigungslinie bei bakteriellen Infektionen durch Phagozytose."
+      },
+      {
+        "id": "C",
+        "text": "Neutrophile Granulozyten (50–70%) sind segmentkernige Phagozyten mit Granula, die lysosomale Enzyme und Myeloperoxidase enthalten, und bilden die erste Verteidigungslinie bei bakteriellen Infektionen."
+      },
+      {
+        "id": "D",
+        "text": "Eosinophile Granulozyten sind besonders wichtig bei viralen Infektionen und machen über 10% der Leukozyten aus."
+      },
+      {
+        "id": "E",
+        "text": "Eine Linksverschiebung im Differentialblutbild bedeutet einen Anstieg reifer segmentkerniger Neutrophiler und deutet auf eine chronische Infektion hin."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Neutrophile Granulozyten** sind die häufigsten Leukozyten:\n\n**Anteil:** 50–70% der Leukozyten\n\n**Morphologie:**\n- **Segmentkernig** (3–5 Segmente)\n- **Granula** enthalten lysosomale Enzyme (Proteasen, Elastase) und **Myeloperoxidase** (MPO)\n\n**Funktion:**\n- **Phagozytose** von Bakterien (erste Verteidigungslinie bei akuten bakteriellen Infektionen)\n- **Respiratory Burst:** NADPH-Oxidase → O₂⁻, H₂O₂ (mit MPO → HOCl, stark bakterizid)\n\n**Klinisch:**\n- **Neutropenie** (<1.500/µL) → erhöhtes Infektionsrisiko (Chemotherapie, aplastische Anämie)\n- **Neutrophilie** → bakterielle Infektion, Entzündung\n\n**Falsch (A):** **Lymphozyten** (nicht Neutrophile) machen 20–40% aus und produzieren Antikörper (B-Zellen). Neutrophile machen 50–70% aus und sind Phagozyten.\n\n**Falsch (B):** **Lymphozyten** machen 20–40% (nicht 50–70%) aus. **Neutrophile** (50–70%) sind die erste Verteidigungslinie bei bakteriellen Infektionen durch Phagozytose. Lymphozyten sind für **adaptive Immunität** zuständig (T-Zellen: zellulär, B-Zellen: Antikörper).\n\n**Falsch (D):** **Eosinophile** sind wichtig bei **Parasiten-Abwehr** und **allergischen Reaktionen** (nicht viralen Infektionen) und machen nur **1–5%** (nicht >10%) der Leukozyten aus.\n\n**Falsch (E):** **Linksverschiebung** bedeutet Anstieg **unreifer** Neutrophiler (**Stabkernige**, Metamyelozyten) → deutet auf **akute** (nicht chronische) bakterielle Infektion hin. Rechtsverschiebung = reife segmentkernige Neutrophile ↑.",
+    "difficulty": "medium",
+    "tags": ["blut", "leukozyten", "neutrophile", "granulozyten", "phagozytose"]
+  },
+  {
+    "id": "bio-3-05-q04",
+    "question": "Welche Aussage über die Blutgerinnung (Hämostase) ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Die primäre Hämostase erfolgt durch die Gerinnungskaskade, bei der Fibrinogen zu Fibrin umgewandelt wird."
+      },
+      {
+        "id": "B",
+        "text": "Der von-Willebrand-Faktor (vWF) ist entscheidend für die Thrombozytenadhäsion an Kollagen. Ein vWF-Mangel führt zur häufigsten hereditären Blutungsstörung."
+      },
+      {
+        "id": "C",
+        "text": "Vitamin K ist ein Kofaktor für die Synthese der Gerinnungsfaktoren I, V, VIII und XII in der Leber."
+      },
+      {
+        "id": "D",
+        "text": "Der extrinsische Weg der Gerinnungskaskade beginnt mit Faktor XII und ist langsamer als der intrinsische Weg."
+      },
+      {
+        "id": "E",
+        "text": "Hämophilie A ist durch einen Mangel an Faktor IX gekennzeichnet und führt zu einer Störung des extrinsischen Wegs."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** Der **von-Willebrand-Faktor (vWF)** ist essentiell für die **primäre Hämostase**:\n\n**Funktion:**\n1. **Thrombozytenadhäsion:** Bei Gefäßverletzung wird Kollagen (Subendothel) freigelegt → vWF bindet an Kollagen **und** an Thrombozyten (GPIb-Rezeptor) → Brückenmolekül → Adhäsion\n2. **Stabilisierung von Faktor VIII:** vWF schützt Faktor VIII vor Abbau\n\n**Von-Willebrand-Syndrom (vWS):**\n- **Häufigste hereditäre Blutungsstörung** (~1% der Bevölkerung)\n- vWF ↓ oder dysfunktional → Thrombozytenadhäsion ↓, Faktor VIII ↓\n- **Symptome:** Schleimhautblutungen (Epistaxis, Menorrhagie), verlängerte Blutungszeit\n\n**Falsch (A):** Die **primäre Hämostase** erfolgt durch **Thrombozyten** (Adhäsion → Aktivierung → Aggregation → Thrombozyten-Pfropf). Die **sekundäre Hämostase** ist die Gerinnungskaskade (Fibrinogen → Fibrin).\n\n**Falsch (C):** Vitamin K ist Kofaktor für die Synthese der Faktoren **II, VII, IX, X** (nicht I, V, VIII, XII). Merkhilfe: \"1972\" → II, VII, IX, X. Diese werden in der **Leber** synthetisiert. Vitamin-K-Mangel oder Antagonisten (Marcumar) → Faktoren ↓ → Blutungsneigung.\n\n**Falsch (D):** Der **extrinsische Weg** beginnt mit **Tissue Factor (TF) + Faktor VII** (nicht XII) und ist **schnell** (Sekunden). Der **intrinsische Weg** beginnt mit **Faktor XII** und ist **langsam** (Minuten).\n\n**Falsch (E):** **Hämophilie A** ist durch Mangel an **Faktor VIII** (nicht IX) gekennzeichnet. **Hämophilie B** = Faktor IX-Mangel. Beide stören den **intrinsischen Weg** (nicht extrinsischen). Beide sind X-chromosomal rezessiv.",
+    "difficulty": "medium",
+    "tags": ["blut", "gerinnung", "hämostase", "von-willebrand-faktor", "thrombozyten", "vitamin-k"]
+  },
+  {
+    "id": "bio-3-05-q05",
+    "question": "Welche Aussage über das AB0-Blutgruppensystem ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Blutgruppe A hat Antigen B auf den Erythrozyten und Anti-A-Antikörper im Plasma."
+      },
+      {
+        "id": "B",
+        "text": "Blutgruppe 0 ist der Universalempfänger, da keine Antikörper im Plasma vorhanden sind."
+      },
+      {
+        "id": "C",
+        "text": "Blutgruppe AB hat die Antigene A und B auf den Erythrozyten und keine Antikörper im Plasma, weshalb AB der Universalempfänger ist. Blutgruppe 0 hat keine Antigene und ist der Universalspender."
+      },
+      {
+        "id": "D",
+        "text": "AB0-Antikörper entstehen erst nach vorheriger Sensibilisierung durch Transfusion oder Schwangerschaft."
+      },
+      {
+        "id": "E",
+        "text": "Bei einer inkompatiblen Bluttransfusion (z. B. B-Blut an A-Empfänger) verläuft die Reaktion in der Regel asymptomatisch."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** Das AB0-System basiert auf **Antigenen** (auf Erythrozyten) und **Antikörpern** (im Plasma):\n\n| Blutgruppe | Antigene | Antikörper | Transfusion möglich von |\n|------------|----------|------------|------------------------|\n| **A** | A | Anti-B | A, 0 |\n| **B** | B | Anti-A | B, 0 |\n| **AB** | A + B | Keine | A, B, AB, 0 (**Universalempfänger**) |\n| **0** | Keine | Anti-A + Anti-B | nur 0 (aber **Universalspender**) |\n\n⭐ **Wichtig:**\n- **AB** hat **keine Antikörper** → kann alle Blutgruppen empfangen (Universalempfänger)\n- **0** hat **keine Antigene** → kann an alle Blutgruppen gespendet werden (Universalspender)\n\n**Falsch (A):** Blutgruppe A hat **Antigen A** (nicht B) auf Erythrozyten und **Anti-B** (nicht Anti-A) im Plasma. (A gegen B, B gegen A).\n\n**Falsch (B):** Blutgruppe **AB** (nicht 0) ist der Universalempfänger (keine Antikörper). Blutgruppe 0 hat **Anti-A + Anti-B** im Plasma und ist der **Universalspender** (keine Antigene auf Erythrozyten).\n\n**Falsch (D):** AB0-Antikörper sind **natürlich vorhanden** (ohne vorherige Sensibilisierung) ab dem 6. Lebensmonat. Grund: Kreuzreaktivität mit ähnlichen Antigenen auf Bakterien (intestinale Flora). Im Gegensatz dazu entstehen **Rhesus-Antikörper** erst nach Sensibilisierung.\n\n**Falsch (E):** Bei inkompatiblen Transfusionen (z. B. B-Blut an A-Empfänger → Anti-B bindet B-Antigene) kommt es zu einer **akuten hämolytischen Transfusionsreaktion**:\n- Hämolyse (intravaskulär, IgM-vermittelt)\n- **Symptome:** Fieber, Schüttelfrost, Rückenschmerzen, Dyspnoe, Hypotonie, Schock\n- **Komplikationen:** Nierenversagen (Hb-Zylinder), DIC (Disseminierte intravasale Gerinnung)\n- **Notfall!**",
+    "difficulty": "medium",
+    "tags": ["blut", "blutgruppen", "ab0-system", "transfusion", "antigene", "antikörper"]
+  },
+  {
+    "id": "bio-3-05-q06",
+    "question": "Eine Rh-negative Mutter bringt ein Rh-positives Kind zur Welt. Welche Aussage über die Rhesus-Inkompatibilität und ihre Folgen ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Bereits bei der ersten Schwangerschaft kommt es zu einer schweren hämolytischen Erkrankung des Neugeborenen (Morbus haemolyticus neonatorum)."
+      },
+      {
+        "id": "B",
+        "text": "Bei der ersten Schwangerschaft mit einem Rh+ Kind wird die Rh− Mutter sensibilisiert (bildet Anti-D-IgG), aber das erste Kind ist in der Regel nicht betroffen. Bei einer zweiten Schwangerschaft mit Rh+ Kind können mütterliche Anti-D-Antikörper die Plazenta passieren und zu Hämolyse beim Fetus führen."
+      },
+      {
+        "id": "C",
+        "text": "Rhesus-Antikörper (Anti-D) sind natürlich vorhanden wie AB0-Antikörper und entstehen ohne vorherige Sensibilisierung."
+      },
+      {
+        "id": "D",
+        "text": "Die Anti-D-Prophylaxe (Rhesogam) sollte der Mutter vor der Geburt des ersten Kindes gegeben werden, um die Sensibilisierung zu verhindern."
+      },
+      {
+        "id": "E",
+        "text": "Morbus haemolyticus neonatorum tritt nur bei AB0-Inkompatibilität auf, nicht bei Rhesus-Inkompatibilität."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Rhesus-Inkompatibilität** (Rh− Mutter + Rh+ Fetus):\n\n**1. Schwangerschaft:**\n- Bei Geburt (oder Abort, Amniozentese) → fetale Erythrozyten (Rh+) gelangen ins mütterliche Blut\n- Mutter (Rh−) wird **sensibilisiert** → bildet **Anti-D-Antikörper** (IgG, dauerhaft)\n- **Erstes Kind ist in der Regel NICHT betroffen**, da Sensibilisierung erst bei/nach Geburt erfolgt\n\n**2. Schwangerschaft (und folgende):**\n- Fetus Rh+ → mütterliche **Anti-D (IgG)** passieren Plazenta (IgG ist plazentagängig!)\n- Anti-D bindet fetale Erythrozyten (Rh+) → **Hämolyse**\n- **Morbus haemolyticus neonatorum:**\n  - Anämie (Erythrozyten-Abbau)\n  - Ikterus (Bilirubin ↑ → Kernikterus-Risiko)\n  - Hydrops fetalis (schwere Form: Herzinsuffizienz, Ödeme, intrauteriner Fruchttod)\n\n**Prophylaxe:** Anti-D-Immunglobulin (Rhesogam) bei Rh− Mutter **nach Geburt** eines Rh+ Kindes → bindet fetale Erythrozyten → verhindert mütterliche Sensibilisierung.\n\n**Falsch (A):** Das **erste Kind** ist in der Regel **nicht betroffen**, da die Sensibilisierung erst bei/nach der Geburt erfolgt. **Zweite (und folgende) Schwangerschaften** sind gefährdet.\n\n**Falsch (C):** Rhesus-Antikörper (Anti-D) sind **NICHT natürlich** vorhanden, sondern entstehen erst nach **Sensibilisierung** (Transfusion, Schwangerschaft). Im Gegensatz zu AB0-Antikörpern (IgM, natürlich vorhanden).\n\n**Falsch (D):** Anti-D-Prophylaxe wird **nach der Geburt** (innerhalb 72 Stunden) gegeben, nicht vor. Zusätzlich kann sie bei Risikosituationen während der Schwangerschaft gegeben werden (Amniozentese, Trauma, Abort). Wichtig: **nach Geburt** des ersten Rh+ Kindes, um Sensibilisierung für zukünftige Schwangerschaften zu verhindern.\n\n**Falsch (E):** Morbus haemolyticus neonatorum tritt typischerweise bei **Rhesus-Inkompatibilität** auf (zweite Schwangerschaft). AB0-Inkompatibilität kann auch zu Hämolyse führen, ist aber meist milder (da AB0-Antikörper [IgM] weniger plazentagängig sind, nur IgG passiert gut).",
+    "difficulty": "hard",
+    "tags": ["blut", "rhesus-system", "rhesus-inkompatibilität", "morbus-haemolyticus", "anti-d-prophylaxe", "schwangerschaft"]
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-6-04-q1",
+    "question": "E. coli wächst in einem Medium mit **Laktose** als einziger Kohlenstoffquelle (keine Glukose). Welche Aussage zum **lac-Operon** ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Der Repressor bindet an den Operator → Transkription ist blockiert, Gene sind AUS"
+      },
+      {
+        "id": "B",
+        "text": "Allolaktose (aus Laktose) bindet an den Repressor → Repressor inaktiviert → Gene AN, maximale Transkription (CAP-cAMP vorhanden)"
+      },
+      {
+        "id": "C",
+        "text": "Das lac-Operon ist ein reprimierbares Operon (wie trp-Operon), Laktose wirkt als Corepressor"
+      },
+      {
+        "id": "D",
+        "text": "CAP-cAMP kann nicht binden, da Glukose fehlt → Transkription ist blockiert trotz Laktose"
+      },
+      {
+        "id": "E",
+        "text": "Laktose hemmt die RNA-Polymerase direkt → keine Transkription möglich"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**lac-Operon (induzierbares Operon):** **MIT Laktose:** **Allolaktose** (Induktor, aus Laktose) bindet an **Repressor** → Repressor **inaktiviert** → löst sich von Operator ab → **RNA-Polymerase** kann binden → **Gene AN** (lacZ, lacY, lacA). **Glukose fehlt** → **cAMP ↑** → **CAP-cAMP-Komplex** bindet an Promotor → **maximale Transkription ↑↑** (positive Regulation). **Ohne Laktose:** Repressor aktiv → Gene AUS. Wichtig: **Laktose = Induktor**, **Glukose ↓ = CAP-cAMP ↑**!",
+    "difficulty": "medium",
+    "tags": ["Molekulare Genetik", "Genregulation", "lac-Operon", "Induzierbares Operon", "Allolaktose"]
+  },
+  {
+    "id": "bio-6-04-q2",
+    "question": "Das **trp-Operon** reguliert die Tryptophan-Biosynthese in E. coli. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Tryptophan ist ein Induktor → bindet an Repressor → Repressor inaktiviert → Gene AN (Biosynthese ↑)"
+      },
+      {
+        "id": "B",
+        "text": "Tryptophan ist ein Corepressor → bindet an Repressor → Repressor aktiv → Gene AUS (Feedback-Hemmung)"
+      },
+      {
+        "id": "C",
+        "text": "Ohne Tryptophan bindet der Repressor an den Operator → Gene AUS (keine Biosynthese)"
+      },
+      {
+        "id": "D",
+        "text": "Das trp-Operon ist ein induzierbares Operon (wie lac-Operon), Tryptophan aktiviert Transkription"
+      },
+      {
+        "id": "E",
+        "text": "CAP-cAMP ist erforderlich für trp-Operon-Aktivierung (wie bei lac-Operon)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**trp-Operon (reprimierbares Operon):** **MIT Tryptophan:** **Tryptophan** = **Corepressor** → bindet an **Repressor** (trpR) → **Repressor aktiv** → bindet an Operator → **Gene AUS** (keine Biosynthese nötig, **Feedback-Hemmung**: Produkt hemmt eigene Synthese). **OHNE Tryptophan:** Repressor inaktiv → Gene AN (Biosynthese ↑). **Vergleich:** **lac-Operon** = induzierbares Operon (Substrat → Gene AN), **trp-Operon** = reprimierbares Operon (Produkt → Gene AUS).",
+    "difficulty": "medium",
+    "tags": ["Molekulare Genetik", "Genregulation", "trp-Operon", "Reprimierbares Operon", "Corepressor"]
+  },
+  {
+    "id": "bio-6-04-q3",
+    "question": "Bei Eukaryoten können **Enhancer** (verstärkende Sequenzen) die Transkription erhöhen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Enhancer müssen direkt neben dem Promotor liegen (~10 bp entfernt, wie Pribnow-Box)"
+      },
+      {
+        "id": "B",
+        "text": "Enhancer können weit vom Promotor entfernt sein (bis zu 1 Mio. bp) und wirken durch DNA-Looping"
+      },
+      {
+        "id": "C",
+        "text": "Enhancer sind nur bei Prokaryoten vorhanden (nicht bei Eukaryoten)"
+      },
+      {
+        "id": "D",
+        "text": "Enhancer hemmen die Transkription (wie Silencer), nicht erhöhen"
+      },
+      {
+        "id": "E",
+        "text": "Enhancer codieren für Repressor-Proteine, die an den Operator binden"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Enhancer (Eukaryoten):** **Verstärkende Sequenzen**, an die **Aktivatoren** (Transkriptionsfaktoren) binden → **Transkription ↑**. **Wichtig:** Enhancer können **weit entfernt** vom Promotor sein (bis zu **1 Mio. bp**!) → **DNA-Looping** (Schleifenbildung) bringt Enhancer + Promotor zusammen (**Mediator-Komplex** vermittelt). **Silencer:** Unterdrückende Sequenzen → Transkription ↓ (Repressoren binden). Prokaryoten haben **keine Enhancer** (Operons statt Enhancer/Silencer).",
+    "difficulty": "easy",
+    "tags": ["Molekulare Genetik", "Genregulation", "Enhancer", "Eukaryoten", "DNA-Looping"]
+  },
+  {
+    "id": "bio-6-04-q4",
+    "question": "**DNA-Methylierung** an CpG-Inseln (Cytosin-Guanin-Dinukleotide) ist ein wichtiger epigenetischer Mechanismus. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "DNA-Methylierung (5-Methylcytosin, 5mC) am Promotor führt zu erhöhter Genexpression (Transkription ↑)"
+      },
+      {
+        "id": "B",
+        "text": "DNA-Methylierung am Promotor führt zu Gen-Stilllegung (Transkription ↓), z.B. bei X-Inaktivierung"
+      },
+      {
+        "id": "C",
+        "text": "DNA-Methylierung ist keine vererbbare Modifikation (geht bei Zellteilung verloren)"
+      },
+      {
+        "id": "D",
+        "text": "DNA-Methylierung ändert die DNA-Sequenz (Mutation) und ist irreversibel"
+      },
+      {
+        "id": "E",
+        "text": "DNA-Methylierung findet nur bei Prokaryoten statt (nicht bei Eukaryoten)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**DNA-Methylierung (Epigenetik):** **CpG-Inseln** (Cytosin-Guanin) → Methylierung an Cytosin (**5-Methylcytosin, 5mC**) → **Genexpression ↓** (Promotor-Methylierung → Gen **stillgelegt**). **Beispiele:** **X-Inaktivierung** (inaktiviertes X hypermethyliert, Barr-Körperchen), **Genomic Imprinting** (eltern-spezifisch, z.B. IGF2-Gen: paternal exprimiert, maternal methyliert/stillgelegt). **Wichtig:** **Vererbbar** (bleibt bei Zellteilung erhalten), **keine Sequenz-Änderung** (epigenetisch!), **reversibel** (Demethylasen).",
+    "difficulty": "medium",
+    "tags": ["Molekulare Genetik", "Epigenetik", "DNA-Methylierung", "CpG-Inseln", "Gen-Stilllegung"]
+  },
+  {
+    "id": "bio-6-04-q5",
+    "question": "**Histon-Acetylierung** durch Histon-Acetyltransferasen (HAT) ist ein wichtiger epigenetischer Mechanismus. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Histon-Acetylierung entfernt Acetyl-Gruppen von Lysinen → DNA dichter gepackt (Heterochromatin) → Transkription ↓"
+      },
+      {
+        "id": "B",
+        "text": "Histon-Acetylierung fügt Acetyl-Gruppen an Lysine → DNA lockerer (Euchromatin) → Transkription ↑"
+      },
+      {
+        "id": "C",
+        "text": "Histon-Deacetylasen (HDAC) acetylieren Histone → Transkription ↑"
+      },
+      {
+        "id": "D",
+        "text": "Histon-Acetylierung ist irreversibel und ändert die DNA-Sequenz (Mutation)"
+      },
+      {
+        "id": "E",
+        "text": "Histon-Acetylierung findet nur bei Prokaryoten statt (Prokaryoten haben Histone)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Histon-Acetylierung (HAT):** **Acetyl-Gruppen** (COCH₃) werden an **Lysine** (K) der Histone angefügt → Lysin-NH₃⁺ (positiv) → Lysin-NHCOCH₃ (neutral) → **DNA-Histon-Interaktion ↓** → **DNA lockerer** (**Euchromatin**) → **Transkription ↑**. **Histon-Deacetylasen (HDAC):** **Entfernen** Acetyl-Gruppen → DNA dichter (**Heterochromatin**) → **Transkription ↓**. **Wichtig:** **HAT = Acetylierung = Transkription ↑**, **HDAC = Deacetylierung = Transkription ↓**. Prokaryoten haben **keine Histone** (Nukleoid, nicht Chromatin)!",
+    "difficulty": "medium",
+    "tags": ["Molekulare Genetik", "Epigenetik", "Histon-Acetylierung", "HAT", "HDAC", "Euchromatin"]
+  },
+  {
+    "id": "bio-6-04-q6",
+    "question": "**miRNA** und **siRNA** sind kleine nicht-codierende RNAs, die die Genexpression regulieren. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "miRNA ist exogen (von außen eingebracht), siRNA ist endogen (von Zelle produziert)"
+      },
+      {
+        "id": "B",
+        "text": "miRNA ist endogen (~22 nt), bindet an 3'-UTR (nicht vollständig komplementär) → Translations-Repression/Abbau"
+      },
+      {
+        "id": "C",
+        "text": "siRNA bindet an 5'-Capping der mRNA → verhindert Ribosom-Bindung (Translations-Blockierung)"
+      },
+      {
+        "id": "D",
+        "text": "miRNA und siRNA haben identische Wirkmechanismen und Herkunft (keine Unterschiede)"
+      },
+      {
+        "id": "E",
+        "text": "siRNA wird von Drosha prozessiert (im Kern), miRNA von Dicer (im Cytoplasma)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**miRNA (microRNA):** **Endogen** (von Zelle produziert), **~22 nt**, bindet an **3'-UTR** der Ziel-mRNA (**nicht vollständig komplementär**) → **Translations-Repression** oder **mRNA-Abbau** (RISC, Argonaute). **Biogenese:** pri-miRNA → **Drosha** (Kern) → pre-miRNA → **Dicer** (Cytoplasma) → reife miRNA. **siRNA (small interfering RNA):** **Exogen** (z.B. virale dsRNA) oder künstlich, **~21–23 nt**, bindet an mRNA (**vollständig komplementär**) → **mRNA-Abbau** (RISC). **Wichtig:** **miRNA = endogen**, **siRNA = exogen**, beide via Dicer!",
+    "difficulty": "hard",
+    "tags": ["Molekulare Genetik", "Genregulation", "miRNA", "siRNA", "RNA-Interferenz", "Post-transkriptionell"]
+  }
+]

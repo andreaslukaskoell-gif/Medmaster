@@ -1,0 +1,92 @@
+[
+  {
+    "id": "bio-3-09-q01",
+    "question": "Welche Aussage über die Magensekretion ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Belegzellen produzieren Pepsinogen und Mukus."},
+      {"id": "B", "text": "Hauptzellen produzieren HCl und Intrinsic Factor."},
+      {"id": "C", "text": "Belegzellen produzieren HCl und Intrinsic Factor. HCl aktiviert Pepsinogen zu Pepsin (Protease)."},
+      {"id": "D", "text": "Gastrin hemmt die HCl-Sekretion durch negative Rückkopplung."},
+      {"id": "E", "text": "PPI (Protonenpumpenhemmer) wie Omeprazol aktivieren die H⁺/K⁺-ATPase."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Belegzellen (Parietalzellen)** im Corpus/Fundus produzieren:\n- **HCl** (Magensäure, pH ~1–2) via H⁺/K⁺-ATPase (Protonenpumpe)\n- **Intrinsic Factor (IF)**: Bindet Vitamin B₁₂ → Resorption im Ileum\n\n**HCl-Funktionen:** Denaturierung von Proteinen, Aktivierung Pepsinogen → **Pepsin**, bakterizid.\n\n**Pepsin:** Protease, spaltet Proteine → Peptide.\n\n**Falsch (A):** **Hauptzellen** (nicht Belegzellen) produzieren **Pepsinogen**. **Nebenzellen** produzieren Mukus.\n\n**Falsch (B):** **Belegzellen** (nicht Hauptzellen) produzieren HCl + IF.\n\n**Falsch (D):** **Gastrin** (G-Zellen, Antrum) **stimuliert** HCl-Sekretion (nicht hemmt). **Somatostatin** (D-Zellen) hemmt HCl bei pH <3.\n\n**Falsch (E):** **PPI** (Omeprazol) **hemmen** (nicht aktivieren) die H⁺/K⁺-ATPase → HCl ↓.",
+    "difficulty": "easy",
+    "tags": ["verdauung", "magen", "hcl", "belegzellen", "intrinsic-factor"]
+  },
+  {
+    "id": "bio-3-09-q02",
+    "question": "Welche Aussage über Pankreasenzyme ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Pankreas-Lipase spaltet Proteine, während Trypsin Fette spaltet."},
+      {"id": "B", "text": "Trypsinogen wird durch Enterokinase der Dünndarmmukosa zu Trypsin aktiviert. Trypsin spaltet Proteine und aktiviert weitere Enzyme wie Chymotrypsinogen."},
+      {"id": "C", "text": "Pankreas-Amylase spaltet Proteine zu Aminosäuren."},
+      {"id": "D", "text": "Bikarbonat im Pankreassekret senkt den pH im Duodenum."},
+      {"id": "E", "text": "CCK (Cholezystokinin) hemmt die Enzym-Sekretion des Pankreas."}
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Pankreasenzyme** (exokrine Funktion):\n\n**Trypsinogen** (Proenzym) → **Enterokinase** (Dünndarmmukosa) → **Trypsin** (aktiv)\n- **Trypsin:** Protease, spaltet Proteine → Peptide\n- Trypsin aktiviert weitere Enzyme: Chymotrypsinogen → Chymotrypsin, Procarboxypeptidase → Carboxypeptidase\n\n**Andere Enzyme:**\n- **Pankreas-Amylase:** Stärke → Maltose\n- **Pankreas-Lipase:** Triglyzeride → Fettsäuren + Monoglyzeride (benötigt Gallensalze)\n\n**Falsch (A):** **Umgekehrt!** Lipase spaltet **Fette**, Trypsin spaltet **Proteine**.\n\n**Falsch (C):** Pankreas-Amylase spaltet **Kohlenhydrate** (Stärke → Maltose), nicht Proteine.\n\n**Falsch (D):** Bikarbonat **erhöht** (nicht senkt) den pH im Duodenum (pH ~8) → neutralisiert Magensäure (pH ~2).\n\n**Falsch (E):** **CCK** (I-Zellen, Duodenum) **stimuliert** (nicht hemmt) Enzym-Sekretion. Trigger: Fett/Protein.",
+    "difficulty": "medium",
+    "tags": ["verdauung", "pankreas", "enzyme", "trypsin", "lipase"]
+  },
+  {
+    "id": "bio-3-09-q03",
+    "question": "Welche Aussage über die Nährstoffresorption im Dünndarm ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Glukose wird durch passive Diffusion resorbiert."},
+      {"id": "B", "text": "Glukose wird durch SGLT1 (Na⁺-Glukose-Symport, sekundär-aktiv) resorbiert. Fette werden als Mizellen (mit Gallensalzen) aufgenommen, zu Chylomikronen verpackt und über die Lymphe transportiert."},
+      {"id": "C", "text": "Fette werden direkt als Triglyzeride über die Pfortader zur Leber transportiert."},
+      {"id": "D", "text": "Vitamin B₁₂ wird im Duodenum ohne Intrinsic Factor resorbiert."},
+      {"id": "E", "text": "Laktase-Mangel führt zu verbesserter Laktose-Resorption."}
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Resorption im Dünndarm**:\n\n**Glukose:**\n- **SGLT1** (Na⁺-Glukose-Symport): **Sekundär-aktiv** (nutzt Na⁺-Gradient)\n- **GLUT2** (basolateral): Passive Diffusion ins Blut\n- **Fructose:** GLUT5 (passiv)\n\n**Fette:**\n1. Pankreas-Lipase + **Gallensalze** (Emulgierung) → Fettsäuren + Monoglyzeride\n2. **Mizellen** (mit Gallensalzen) → passive Diffusion ins Enterozyt\n3. Enterozyt: Re-Veresterung → **Chylomikronen** (Triglyzeride + Apolipoprotein B-48)\n4. **Lymphe** (Ductus thoracicus) → Blut (nicht Pfortader!)\n\n**Falsch (A):** Glukose wird **aktiv** (SGLT1, sekundär-aktiv), nicht passiv resorbiert.\n\n**Falsch (C):** Fette gehen über **Lymphe** (nicht Pfortader). Kohlenhydrate/Proteine gehen über Pfortader.\n\n**Falsch (D):** Vitamin B₁₂ wird im **Ileum** (nicht Duodenum) resorbiert und benötigt **Intrinsic Factor** (Magen) → IF-B₁₂-Komplex → Rezeptor-vermittelte Endozytose.\n\n**Falsch (E):** Laktase-Mangel → Laktose **nicht** resorbiert → Dickdarm → Bakterien fermentieren → Diarrhö, Blähungen.",
+    "difficulty": "medium",
+    "tags": ["verdauung", "resorption", "sglt1", "glukose", "fette", "chylomikronen"]
+  },
+  {
+    "id": "bio-3-09-q04",
+    "question": "Welche Aussage über die Leberfunktion ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Die Leber wird nur durch die A. hepatica mit Blut versorgt."},
+      {"id": "B", "text": "Die Leber hat eine doppelte Blutversorgung: A. hepatica (~25%, O₂-reich) und V. portae (~75%, nährstoffreich aus GIT). Sie produziert Gerinnungsfaktoren (II, VII, IX, X sind Vitamin-K-abhängig) und wandelt Ammoniak über den Harnstoffzyklus in Harnstoff um."},
+      {"id": "C", "text": "Bilirubin wird in der Leber oxidiert und direkt über die Niere ausgeschieden."},
+      {"id": "D", "text": "Gilbert-Syndrom ist eine schwere Lebererkrankung mit hoher Mortalität."},
+      {"id": "E", "text": "Albumin wird im Pankreas produziert."}
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Leber-Funktionen**:\n\n**Blutversorgung (doppelt):**\n1. **A. hepatica** (~25%): O₂-reich\n2. **V. portae** (~75%): Nährstoffreich aus GIT (Dünndarm, Dickdarm, Milz, Pankreas, Magen)\n\n**Proteinsynthese:**\n- **Albumin** (wichtigstes Plasmaprotein, onkotischer Druck)\n- **Gerinnungsfaktoren:** I (Fibrinogen), II, V, VII, IX, X, XI, XII\n  - **Vitamin-K-abhängig:** **II, VII, IX, X** (\"1972\")\n\n**Harnstoffzyklus:**\n- **Ammoniak (NH₃)** (toxisch, aus Aminosäure-Abbau) → **Harnstoff** (weniger toxisch) → Niere → Urin\n- **Hepatische Enzephalopathie:** Leberzirrhose → NH₃ ↑ → ZNS-Symptome (Verwirrtheit, Asterixis)\n\n**Falsch (A):** Leber hat **doppelte** Blutversorgung (A. hepatica + V. portae).\n\n**Falsch (C):** Bilirubin wird **glukuronidiert** (nicht oxidiert) → konjugiert (wasserlöslich) → Galle → Darm → Urobilinogen → Sterkobilin (Stuhl) + Urobilin (Urin). **Nicht** direkt über Niere.\n\n**Falsch (D):** **Gilbert-Syndrom:** Milde UGT1A1-Mangel → unkonjugiertes Bilirubin ↑ → **harmlos** (keine Behandlung nötig, bei Stress/Fasten ↑).\n\n**Falsch (E):** **Albumin** wird in der **Leber** (nicht Pankreas) produziert.",
+    "difficulty": "medium",
+    "tags": ["verdauung", "leber", "blutversorgung", "gerinnungsfaktoren", "harnstoffzyklus"]
+  },
+  {
+    "id": "bio-3-09-q05",
+    "question": "Welche Aussage über den Bilirubin-Stoffwechsel ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Konjugiertes Bilirubin ist lipophil und wird an Albumin gebunden transportiert."},
+      {"id": "B", "text": "Hämoglobin wird zu Biliverdin und dann zu unkonjugiertem Bilirubin (lipophil) abgebaut. In der Leber wird es durch Glukuronidierung zu konjugiertem Bilirubin (wasserlöslich). Im Darm wird es zu Urobilinogen umgewandelt, das als Sterkobilin (Stuhl) und Urobilin (Urin) ausgeschieden wird."},
+      {"id": "C", "text": "Posthepatischer Ikterus (Cholestase) führt zu erhöhtem unkonjugierten Bilirubin und dunklem Stuhl."},
+      {"id": "D", "text": "Prähepatischer Ikterus entsteht durch Gallensteine."},
+      {"id": "E", "text": "Sterkobilin färbt den Urin gelb."}
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Bilirubin-Stoffwechsel**:\n\n1. **Hb-Abbau** (Milz, RES) → **Häm** → Biliverdin → **Bilirubin (unkonjugiert, lipophil)**\n2. Bilirubin + **Albumin** (Transport im Blut) → Leber\n3. **Glukuronidierung** (UGT1A1): Bilirubin + Glukuronsäure → **Bilirubin-Diglukuronid (konjugiert, wasserlöslich)**\n4. **Galle** → Darm → Bakterien → **Urobilinogen**\n5. **Sterkobilin** (Stuhl, braun) + **Urobilin** (Urin, gelb)\n\n**Ikterus-Typen:**\n- **Prähepatisch:** Hämolyse → **unkonjugiert ↑**\n- **Hepatisch:** Leberschaden → beide ↑\n- **Posthepatisch:** Cholestase (Gallensteine, Pankreaskopf-Ca) → **konjugiert ↑**, **heller Stuhl** (kein Sterkobilin), **dunkler Urin** (Bilirubin)\n\n**Falsch (A):** **Unkonjugiertes** Bilirubin (nicht konjugiertes) ist lipophil und wird an Albumin gebunden. **Konjugiertes** Bilirubin ist wasserlöslich.\n\n**Falsch (C):** Posthepatischer Ikterus → **konjugiertes** (nicht unkonjugiertes) Bilirubin ↑, **heller** (nicht dunkler) Stuhl (kein Sterkobilin).\n\n**Falsch (D):** Prähepatischer Ikterus = **Hämolyse** (nicht Gallensteine). Gallensteine = **posthepatisch**.\n\n**Falsch (E):** **Urobilin** (nicht Sterkobilin) färbt Urin gelb. **Sterkobilin** färbt Stuhl braun.",
+    "difficulty": "hard",
+    "tags": ["verdauung", "leber", "bilirubin", "ikterus", "stoffwechsel"]
+  },
+  {
+    "id": "bio-3-09-q06",
+    "question": "Welche Aussage über die Dickdarm-Funktion ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Der Dickdarm resorbiert täglich etwa 9 Liter Wasser."},
+      {"id": "B", "text": "Der Dickdarm resorbiert ca. 0,4 L Wasser pro Tag. Die Darmflora fermentiert Ballaststoffe zu kurzkettigen Fettsäuren (Butyrat, Propionat, Acetat) und synthetisiert Vitamin K."},
+      {"id": "C", "text": "Colitis ulcerosa ist eine transmurale Entzündung, die alle GIT-Abschnitte betrifft."},
+      {"id": "D", "text": "Morbus Crohn betrifft nur das Kolon und beginnt kontinuierlich vom Rektum."},
+      {"id": "E", "text": "Die Darmflora besteht aus etwa 10⁶ Bakterien."}
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Dickdarm-Funktionen**:\n\n**Wasser-Resorption:**\n- **Dünndarm:** ~8,5 L/Tag resorbiert (von 9 L total)\n- **Dickdarm:** ~**0,4 L/Tag** resorbiert\n- **Stuhl:** ~0,1–0,2 L/Tag\n\n**Darmflora (Mikrobiom):**\n- ~10¹⁴ Bakterien (Bacteroides, Firmicutes)\n- **Funktionen:**\n  1. **Fermentation** von Ballaststoffen → **kurzkettige Fettsäuren** (SCFA: Butyrat, Propionat, Acetat) → Energiequelle für Kolonozyten\n  2. **Vitamin K-Synthese**\n  3. **Immunmodulation**, Barriere gegen Pathogene\n\n**Falsch (A):** Dickdarm resorbiert ~0,4 L (nicht 9 L). **Dünndarm** resorbiert ~8,5 L.\n\n**Falsch (C):** **Morbus Crohn** (nicht Colitis ulcerosa) ist transmural und kann alle GIT-Abschnitte betreffen (v. a. terminales Ileum). **Colitis ulcerosa:** Nur **Mukosa** (Schleimhaut), nur **Kolon**, kontinuierlich von **Rektum** aufsteigend.\n\n**Falsch (D):** **Colitis ulcerosa** (nicht Morbus Crohn) betrifft nur Kolon und beginnt vom Rektum. **Morbus Crohn:** Alle GIT-Abschnitte, diskontinuierlich (Skip Lesions), transmural.\n\n**Falsch (E):** Darmflora: ~**10¹⁴** Bakterien (nicht 10⁶), 10× mehr als menschliche Zellen.",
+    "difficulty": "medium",
+    "tags": ["verdauung", "dickdarm", "wasser-resorption", "darmflora", "kurzkettige-fettsäuren"]
+  }
+]

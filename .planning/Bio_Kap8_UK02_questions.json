@@ -1,0 +1,152 @@
+[
+  {
+    "id": "bio-8-02-q1",
+    "question": "Ein 25-jähriger Patient hat einen hohen Wuchs (2,05 m), **Arachnodaktylie** (Spinnenfinger), **Linsenluxation** (Ectopia lentis) und eine **Aortenerweiterung** (Durchmesser 52 mm). Welche Diagnose ist am wahrscheinlichsten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Mukoviszidose (Cystic Fibrosis): CFTR-Mutation, zähes Sekret, Pseudomonas-Infektion"
+      },
+      {
+        "id": "B",
+        "text": "Marfan-Syndrom: Autosomal-dominant, FBN1 (Fibrillin-1), Aorten-Aneurysma, Linsenluxation, Arachnodaktylie"
+      },
+      {
+        "id": "C",
+        "text": "Achondroplasie: Autosomal-dominant, FGFR3, disproportionierter Kleinwuchs (~130 cm)"
+      },
+      {
+        "id": "D",
+        "text": "Klinefelter-Syndrom (47,XXY): Hypogonadismus, Infertilität, Gynäkomastie, hoher Wuchs"
+      },
+      {
+        "id": "E",
+        "text": "Trisomie 21 (Down-Syndrom): Faziale Dysmorphie, Herzfehler, geistige Behinderung"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Marfan-Syndrom:** Autosomal-dominant, **FBN1** (Fibrillin-1-Mutation). **Pleiotropie** (1 Gen → viele Organe): (1) **Kardiovaskulär:** **Aortenerweiterung** (Aneurysma, Dissektion-Risiko, Ruptur-Gefahr!), Mitralklappenprolaps; (2) **Ophthalmologisch:** **Linsenluxation** (Ectopia lentis, nach oben); (3) **Skelett:** **Hoher Wuchs**, **Arachnodaktylie** (Spinnenfinger), Trichterbrust, Skoliose. **Therapie:** β-Blocker (Aorta-Wachstum ↓), Aorten-Chirurgie (prophylaktisch bei >50 mm). Wichtig: **Aorten-Dissektion** = lebensbedrohlich!",
+    "difficulty": "medium",
+    "tags": ["Humangenetik", "Erbkrankheiten", "Marfan-Syndrom", "FBN1", "Aortenerweiterung"]
+  },
+  {
+    "id": "bio-8-02-q2",
+    "question": "Ein 8-jähriges Kind hat chronische **Pseudomonas-Infektionen** der Lunge, **Steatorrhö** (Fettstühle) und einen **positiven Schweißtest** (Chlorid 75 mmol/L). Welche Erkrankung ist am wahrscheinlichsten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Phenylketonurie (PKU): PAH-Defekt, Phenylalanin ↑↑, geistige Behinderung (unbehandelt)"
+      },
+      {
+        "id": "B",
+        "text": "Mukoviszidose (Cystic Fibrosis): CFTR-Mutation (ΔF508), zähes Sekret, Chlorid ↑ Schweiß (>60 mmol/L)"
+      },
+      {
+        "id": "C",
+        "text": "Hämophilie A: X-chromosomal rezessiv, Faktor VIII-Mangel, Blutungsneigung"
+      },
+      {
+        "id": "D",
+        "text": "Sichelzellanämie: HBB-Mutation (Glu → Val), Sichelzellen, Hämolyse, Gefäßverschlüsse"
+      },
+      {
+        "id": "E",
+        "text": "Muskeldystrophie Duchenne: DMD-Mutation, progressive Muskelschwäche, CPK ↑↑↑"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Mukoviszidose (Cystic Fibrosis):** Autosomal-rezessiv, **CFTR** (Chlorid-Kanal). Häufigste Mutation: **ΔF508** (In-Frame-Deletion, Phe508 fehlt) → CFTR fehlgefaltet → **Chlorid-Transport ↓** → **zähes Sekret**. **Klinisch:** (1) **Lunge:** Chronische Bronchitis, Bronchiektasen, **Pseudomonas** (häufig!), Ateminsuffizienz; (2) **Pankreas:** Exokrine Insuffizienz → **Maldigestion** (**Steatorrhö** = Fettstühle); (3) **Schweißtest:** **Chlorid >60 mmol/L** (Goldstandard-Diagnostik). Weitere: Mekonium-Ileus (Neugeborene), männliche Infertilität.",
+    "difficulty": "easy",
+    "tags": ["Humangenetik", "Erbkrankheiten", "Mukoviszidose", "CFTR", "ΔF508", "Schweißtest"]
+  },
+  {
+    "id": "bio-8-02-q3",
+    "question": "Ein Neugeborenes hat einen positiven **Guthrie-Test** (Phenylalanin ↑↑). Eine **Phenylalanin-arme Diät** wird sofort eingeleitet. Welche Erkrankung wird dadurch verhindert?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Trisomie 21 (Down-Syndrom): Chromosomenaberration, Diät hat keinen Einfluss auf Chromosomen"
+      },
+      {
+        "id": "B",
+        "text": "Phenylketonurie (PKU): PAH-Defekt, Phenylalanin ↑↑ → Neurotoxizität → geistige Behinderung (verhindert durch Diät)"
+      },
+      {
+        "id": "C",
+        "text": "Galaktosämie: Galaktose-1-Phosphat-Uridyltransferase-Defekt, Galaktose-arme Diät (nicht Phenylalanin)"
+      },
+      {
+        "id": "D",
+        "text": "Mukoviszidose: CFTR-Mutation, Diät hat keinen Einfluss auf Chlorid-Transport"
+      },
+      {
+        "id": "E",
+        "text": "Marfan-Syndrom: FBN1-Mutation, Diät hat keinen Einfluss auf Fibrillin-1"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Phenylketonurie (PKU):** Autosomal-rezessiv, **PAH** (Phenylalanin-Hydroxylase-Defekt). **Phenylalanin → Tyrosin ↓** → **Phenylalanin ↑↑** (Plasma >1.200 μmol/L) → **Neurotoxizität** → **geistige Behinderung** (unbehandelt), Epilepsie, helle Haut/Haare (Melanin ↓), Maus-Geruch. **Diagnostik:** **Neugeborenen-Screening** (Guthrie-Test, 3. Lebenstag). **Therapie:** **Phenylalanin-arme Diät** (lebenslang!) → **normale Entwicklung** (wenn früh begonnen, <2 Wochen). **Wichtig:** Frühe Diät **verhindert** geistige Behinderung!",
+    "difficulty": "easy",
+    "tags": ["Humangenetik", "Erbkrankheiten", "Phenylketonurie", "PKU", "Guthrie-Test", "Diät"]
+  },
+  {
+    "id": "bio-8-02-q4",
+    "question": "Eine Mutter hat **Leber Hereditäre Optikusneuropathie (LHON)** (Sehverlust durch Optikusatrophie). Welche Aussage zur Vererbung ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "LHON ist autosomal-dominant → 50% der Kinder (Söhne + Töchter) betroffen"
+      },
+      {
+        "id": "B",
+        "text": "LHON ist X-chromosomal rezessiv → nur Söhne betroffen (hemizygot), Töchter Konduktorinnen"
+      },
+      {
+        "id": "C",
+        "text": "LHON ist mitochondrial (maternal) vererbt → alle Kinder (Söhne + Töchter) können betroffen sein (nur Mutter → Kinder)"
+      },
+      {
+        "id": "D",
+        "text": "LHON ist autosomal-rezessiv → 25% der Kinder betroffen (nur wenn Vater auch Konduktor)"
+      },
+      {
+        "id": "E",
+        "text": "LHON ist Y-chromosomal (holandrisch) vererbt → nur Söhne betroffen (Vater → Sohn)"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**LHON (Leber Hereditäre Optikusneuropathie):** **Mitochondriale Erkrankung** (Mutation in mitochondrialer DNA, mtDNA). **Vererbung: Maternal** (nur **Mutter → Kinder**, da Eizelle Mitochondrien liefert, **nicht Spermium**). **Alle Kinder** (Söhne + Töchter) können betroffen sein. **Heteroplasmie:** Mischung aus mutierten + normalen Mitochondrien → **variable Penetranz** (nicht alle Kinder gleich schwer betroffen). **Klinisch:** Sehverlust (Optikusatrophie), meist junge Männer (20–30 Jahre). **Wichtig:** **Maternal**, **nicht** autosomal oder gonosomal!",
+    "difficulty": "medium",
+    "tags": ["Humangenetik", "Erbkrankheiten", "Mitochondriale Vererbung", "LHON", "Maternal"]
+  },
+  {
+    "id": "bio-8-02-q5",
+    "question": "Welche der folgenden Erkrankungen ist **autosomal-rezessiv** vererbt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Marfan-Syndrom (FBN1): Aortenerweiterung, Linsenluxation, Arachnodaktylie"
+      },
+      {
+        "id": "B",
+        "text": "Hämophilie A (F8): Faktor VIII-Mangel, Blutungsneigung, X-chromosomal rezessiv"
+      },
+      {
+        "id": "C",
+        "text": "Mukoviszidose (CFTR): ΔF508, zähes Sekret, Chlorid ↑ Schweiß, autosomal-rezessiv"
+      },
+      {
+        "id": "D",
+        "text": "Achondroplasie (FGFR3): Kleinwuchs, autosomal-dominant, 80% Neumutationen"
+      },
+      {
+        "id": "E",
+        "text": "LHON (mitochondrial): Optikusatrophie, maternal vererbt"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Autosomal-rezessiv:** **Mukoviszidose** (CFTR, ΔF508), **Phenylketonurie** (PAH), **Sichelzellanämie** (HbS/HbS, homozygot). **Autosomal-dominant:** Marfan (FBN1), Achondroplasie (FGFR3), Chorea Huntington. **X-chromosomal rezessiv:** Hämophilie A (F8), Muskeldystrophie Duchenne (DMD), Rot-Grün-Blindheit. **Mitochondrial (maternal):** LHON, MELAS. **Wichtig:** **Aa × Aa → 25% krank (aa)**, **50% Konduktoren (Aa)**, **25% gesund (AA)** bei autosomal-rezessiv!",
+    "difficulty": "easy",
+    "tags": ["Humangenetik", "Erbkrankheiten", "Autosomal-rezessiv", "Vererbungsmuster"]
+  }
+]

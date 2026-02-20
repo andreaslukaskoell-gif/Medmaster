@@ -1,0 +1,176 @@
+[
+  {
+    "id": "q1",
+    "question": "Was sind Nissl-Schollen und wo kommen sie vor?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Nissl-Schollen sind nur in Gliazellen"
+      },
+      {
+        "id": "B",
+        "text": "Nissl-Schollen (Nissl-Substanz): Basophile Granula (raues ER + Ribosomen) im Neuron-Soma, Proteinsynthese ↑ (Neurotransmitter-Enzyme, Membranproteine). NICHT im Axonhügel oder Axon (wichtig für Histologie: Soma vs. Axon-Unterscheidung). Auch in proximalen Dendriten"
+      },
+      {
+        "id": "C",
+        "text": "Nissl-Schollen sind nur im Axon"
+      },
+      {
+        "id": "D",
+        "text": "Nissl-Schollen produzieren ATP"
+      },
+      {
+        "id": "E",
+        "text": "Nissl-Schollen sind nur in Schwann-Zellen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **NISSL-SCHOLLEN** (Nissl-Substanz, Nissl-Körperchen) sind charakteristisch für **NEURON-SOMATA** (Zellkörper). **ZUSAMMENSETZUNG:** Basophile Granula (blau-violett in H&E-Färbung, Hämatoxylin bindet RNA) = **RAUES ENDOPLASMATISCHES RETIKULUM (rER) + freie Ribosomen** (hohe Ribosomen-Dichte → intensive Proteinsynthese). **FUNKTION:** Proteinsynthese ↑, besonders: (1) **Neurotransmitter-Synthese-Enzyme** (z.B. Tyrosin-Hydroxylase [Dopamin/Noradrenalin], Tryptophan-Hydroxylase [Serotonin], Cholin-Acetyltransferase [Acetylcholin]). (2) **Membranproteine** (Ionenkanäle, Rezeptoren, Transporter). (3) **Strukturproteine** (Neurofilamente, Tubulin). **LOKALISATION:** (1) **SOMA** (Perikaryon, reichlich vorhanden, gut sichtbar). (2) **Proximale Dendriten** (abnehmend Richtung distal). (3) **NICHT im Axonhügel** (Ursprung des Axons, Übergang Soma → Axon, frei von Nissl-Schollen → histologisches Erkennungsmerkmal). (4) **NICHT im Axon** (gesamtes Axon ist Nissl-frei, da Proteine im Soma synthetisiert werden → axoplasmatischer Transport [anterograd via Kinesin + Mikrotubuli]). **KLINISCH:** **Chromatolyse** (Nissl-Schollen-Auflösung): Nach Axon-Verletzung (z.B. periphere Nervenläsion) → Neuron-Soma schwillt an → Nissl-Schollen fragmentieren/verschwinden → Kern zur Peripherie verdrängt → Neuron versucht Axon-Regeneration (Protein-Synthese ↑ für Axon-Wachstum). **HISTORISCH:** Franz Nissl (1894, Methylenblau-Färbung). A, C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Was ist der Unterschied zwischen Oligodendrozyten und Schwann-Zellen?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Oligodendrozyten (ZNS): 1 Zelle → bis 50 Axone, KEINE Basalmembran, KEINE Regeneration (MS: Demyelinisierung). Schwann-Zellen (PNS): 1 Zelle → 1 Axon (1:1), Basalmembran (Kollagen IV, Laminin), Regeneration möglich (Büngner-Bänder + NGF, ~1 mm/Tag). GBS: Demyelinisierung (aufsteigende Lähmung)"
+      },
+      {
+        "id": "C",
+        "text": "Nur Oligodendrozyten existieren"
+      },
+      {
+        "id": "D",
+        "text": "Schwann-Zellen sind nur im ZNS"
+      },
+      {
+        "id": "E",
+        "text": "Beide haben Basalmembran"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **OLIGODENDROZYTEN** (ZNS) und **SCHWANN-ZELLEN** (PNS) sind beide myelinisierende Gliazellen, unterscheiden sich aber in Struktur, Funktion und Regenerationsfähigkeit. **OLIGODENDROZYTEN (ZNS):** (1) **1 Zelle → bis 50 Axone** (multiple Fortsätze, jeder umhüllt ein Axon-Segment [Internodium]). (2) **KEINE Basalmembran** (im Gegensatz zu PNS). (3) **Kein Cytoplasma in Myelin** (kompakte Myelinscheide). (4) **Internodien:** Myelinsegmente zwischen 2 Ranvier-Schnürringen (~1 mm). (5) **KEINE Regeneration:** ZNS-Axone regenerieren schlecht (Glianarbe [reaktive Astrogliose, GFAP ↑], inhibitorische Moleküle [Nogo-A, MAG, OMgp], fehlende neurotrophe Faktoren). (6) **KLINISCH:** **Multiple Sklerose (MS):** Autoimmun-Demyelinisierung (T-Zellen greifen Oligodendrozyten an) → Plaques (entmyelinisierte Areale, periventrikulär) → Symptome: Optikusneuritis, Paresen, Ataxie, L'Hermitte-Zeichen. MRT: T2-hyperintense Läsionen. Liquor: oligoklonale Banden. **SCHWANN-ZELLEN (PNS):** (1) **1 Zelle → 1 Axon** (1:1-Verhältnis, umhüllt GESAMTES Internodium). (2) **BASALMEMBRAN** (umhüllt Schwann-Zelle + Axon, Kollagen IV, Laminin). (3) **Cytoplasma in Myelin:** Schmidt-Lanterman-Einkerbungen (Zytoplasma-Taschen, Stoffwechsel). (4) **REGENERATION MÖGLICH:** Nach Axon-Verletzung → Schwann-Zellen proliferieren → **Büngner-Bänder** (Leitschienen aus Schwann-Zellen + Basalmembran) + **NGF-Sekretion** (Nerve Growth Factor) → Axon wächst (~1 mm/Tag, Monate-Jahre bis vollständige Reinnervation). (5) **Remak-Fasern:** Schwann-Zellen umhüllen MEHRERE unmyelinisierte Axone (C-Fasern, Schmerz/Temperatur, ~1 m/s). (6) **KLINISCH:** **Guillain-Barré-Syndrom (GBS):** Autoimmun-Demyelinisierung (Anti-Gangliosid-Antikörper [GM1, GD1a] nach Infektion [C. jejuni]) → aufsteigende Lähmung, areflexisch, Liquor: Eiweißerhöhung. Therapie: Plasmapherese, IVIG. A ist falsch. C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Wie funktioniert die saltatorische Erregungsleitung?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Saltatorische Erregungsleitung ist nur in Gliazellen"
+      },
+      {
+        "id": "B",
+        "text": "Aktionspotential entsteht an Ranvier-Schnürring (Na⁺-Kanäle ↑↑↑ [Nav1.6]). Depolarisation breitet sich passiv (elektrotonisch) durch myelinisiertes Internodium (Myelin = Isolation → kein Ionenverlust). Nächster Schnürring wird depolarisiert → Aktionspotential regeneriert (Na⁺-Kanäle öffnen). Springt von Schnürring zu Schnürring → schnell (~120 m/s vs. ~1 m/s unmyelinisiert), energieeffizient (Na⁺/K⁺-ATPase nur an Schnürringen)"
+      },
+      {
+        "id": "C",
+        "text": "Saltatorische Erregungsleitung ist nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Saltatorische Erregungsleitung benötigt kein Myelin"
+      },
+      {
+        "id": "E",
+        "text": "Saltatorische Erregungsleitung ist langsamer als kontinuierliche Leitung"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **SALTATORISCHE ERREGUNGSLEITUNG** (lateinisch \"saltare\" = springen) ist die SCHNELLE Aktionspotential-Weiterleitung in myelinisierten Axonen. **MECHANISMUS:** (1) **Aktionspotential** entsteht an **RANVIER-SCHNÜRRING** (unmyelinisierte Lücke, ~1 μm breit, zwischen 2 Myelinsegmenten [Internodien, ~1 mm]). (2) **Hohe Dichte spannungsgesteuerter Na⁺-Kanäle** an Schnürringen (~1000-2000/μm², **Nav1.6** [TTX-sensitiv], adulte Form) → Aktionspotential-Regeneration (Depolarisation bis +40 mV, Na⁺-Einstrom). (3) **Depolarisation breitet sich PASSIV (elektrotonisch)** durch myelinisiertes Internodium aus: Myelin = **ELEKTRISCHE ISOLATION** (hoher Membranwiderstand, 80% Lipide) → verhindert Ionenverlust (kapazitiver Strom ↓, Na⁺/K⁺-Leckströme minimal) → Depolarisation bleibt erhalten über Distanz (~1 mm). (4) Nächster Ranvier-Schnürring wird **überschwellig depolarisiert** → spannungsgesteuerte Na⁺-Kanäle öffnen → **Aktionspotential REGENERIERT** (volle Amplitude +40 mV wiederhergestellt). (5) **SPRINGT** von Schnürring zu Schnürring (saltatorisch). **VORTEILE:** (1) **SCHNELLER:** ~120 m/s (Aα-Fasern, dickes Myelin, große Axon-Durchmesser [12-20 μm], Propriozeption, α-Motoneurone) vs. ~1 m/s (C-Fasern, unmyelinisiert, dünn [0.2-1.5 μm], Schmerz/Temperatur). Geschwindigkeit ∝ Axon-Durchmesser (myelinisiert). (2) **ENERGIEEFFIZIENT:** Na⁺/K⁺-ATPase nur an Schnürringen (nicht entlang gesamtem Axon) → ATP-Verbrauch ↓. **KLINISCH:** Demyelinisierung (MS, GBS) → **Leitungsblockade** (Aktionspotential verliert Amplitude zwischen Schnürringen, erreicht nächsten Schnürring nicht, Conduction Block) → Paresen, Sensibilitätsstörungen. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Was sind die Funktionen von Astrozyten im ZNS?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Astrozyten haben keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "Astrozyten (häufigste Gliazelle): Blut-Hirn-Schranke (Endfüße umhüllen Kapillaren → Tight Junctions [Claudin-5, Occludin] in Endothelzellen), K⁺-Pufferung (Kir4.1-Kanäle, Gap Junctions [Connexin 43]), Glutamat-Aufnahme (EAAT1/2 → Glutamin → Neuronen, verhindert Exzitotoxizität), Glukose/Laktat-Shuttle (Glykogen → Laktat → Neuronen), Gliotransmitter (ATP, Glutamat). Glianarbe (GFAP ↑, verhindert ZNS-Axon-Regeneration)"
+      },
+      {
+        "id": "C",
+        "text": "Astrozyten sind nur in PNS"
+      },
+      {
+        "id": "D",
+        "text": "Astrozyten myelinisieren Axone"
+      },
+      {
+        "id": "E",
+        "text": "Astrozyten produzieren Liquor"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **ASTROZYTEN** sind die **HÄUFIGSTE GLIAZELLE** im ZNS (~20-40% aller Gliazellen), sternförmig (viele Fortsätze), erfüllen MULTIPLE essenzielle Funktionen. **TYPEN:** (1) **Protoplasmatische Astrozyten** (graue Substanz, viele kurze Fortsätze, um Synapsen). (2) **Fibrilläre Astrozyten** (weiße Substanz, wenige lange Fortsätze, GFAP ↑ [Glial Fibrillary Acidic Protein, Intermediärfilament, diagnostischer Marker für Astrozyten/Glioblastom]). **FUNKTIONEN:** (1) **BLUT-HIRN-SCHRANKE (BHS):** Astrozyten-Endfüße (perivascular end-feet) **umhüllen Kapillaren** (>99% Kapillaroberfläche) → induzieren **Tight Junctions** in Endothelzellen (Claudin-5, Occludin, ZO-1) → BHS (Barriere für Toxine, Bakterien, große polare Moleküle; Nährstoffe [Glukose via GLUT1, Aminosäuren] + O₂ + lipophile Moleküle passieren). (2) **K⁺-PUFFERUNG (räumliche Pufferung):** Neuronen-Aktivität → K⁺ extrazellulär ↑ (Repolarisation) → Astrozyten nehmen K⁺ auf (**Kir4.1-Kanäle**, Inward Rectifier K⁺-Kanäle) → verteilen K⁺ via **Gap Junctions** (Connexin 43, elektrische Kopplung zwischen Astrozyten-Netzwerk) → K⁺-Homöostase (verhindert Hyperexzitabilität). (3) **GLUTAMAT-AUFNAHME:** Astrozyten exprimieren **EAAT1/2** (Excitatory Amino Acid Transporter, Na⁺-abhängig) → Glutamat aus synaptischem Spalt (verhindert **Exzitotoxizität** [NMDA-Rezeptor-Überaktivierung → Ca²⁺-Überladung → Neuronen-Tod]) → **Glutamin-Synthetase** (Glutamat + NH₃ → Glutamin, ATP-abhängig) → Glutamin zu Neuronen (Glutaminase → Glutamat) → **Glutamat-Glutamin-Zyklus**. (4) **GLUKOSE/LAKTAT-SHUTTLE:** Astrozyten speichern **Glykogen** (einzige Gliazelle mit Glykogen!) → Glukose (Glykogenolyse) → **Laktat** (Glykolyse, LDH) → Laktat zu Neuronen (**Monocarboxylat-Transporter MCT1/4**) → Neuronen nutzen Laktat (oxidative Phosphorylierung, Mitochondrien) → Energie (ATP). (5) **GLIOTRANSMITTER:** Astrozyten setzen **ATP, Glutamat, D-Serin** frei (Ca²⁺-abhängig) → modulieren synaptische Transmission (**tripartite Synapse:** Prä-/Postsynapse + Astrozyt). (6) **GLIANARBE (reaktive Astrogliose):** Nach ZNS-Verletzung/Infarkt → Astrozyten proliferieren + hypertrophieren → **GFAP ↑↑** → Glianarbe (Grenzbildung, verhindert Entzündungs-Ausbreitung, ABER verhindert auch Axon-Regeneration [inhibitorische Moleküle: Chondroitinsulfat-Proteoglykane]). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q5",
+    "question": "Was ist Multiple Sklerose und wie manifestiert sie sich?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Multiple Sklerose hat keine Symptome"
+      },
+      {
+        "id": "B",
+        "text": "Multiple Sklerose (MS): Autoimmun-Demyelinisierung im ZNS (T-Zellen greifen Oligodendrozyten an) → Plaques (periventrikulär, Corpus callosum). Symptome: Optikusneuritis (Visusminderung, Schmerzen bei Augenbewegung), Paresen, Ataxie, Sensibilitätsstörungen, L'Hermitte-Zeichen (elektrisierende Empfindung bei Nackenbeugung), Fatigue, Blasen-/Darmstörungen. MRT: T2-hyperintense Läsionen (Dawson-Finger), Liquor: oligoklonale Banden (IgG). Therapie: Immunmodulatoren (Interferon-β, Fingolimod, Natalizumab)"
+      },
+      {
+        "id": "C",
+        "text": "Multiple Sklerose ist nur in PNS"
+      },
+      {
+        "id": "D",
+        "text": "Multiple Sklerose ist eine bakterielle Infektion"
+      },
+      {
+        "id": "E",
+        "text": "Multiple Sklerose ist nur in Schwann-Zellen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **MULTIPLE SKLEROSE (MS)** ist eine chronisch-entzündliche **AUTOIMMUN-DEMYELINISIERUNG im ZNS** (Oligodendrozyten zerstört), häufigste nicht-traumatische neurologische Erkrankung bei jungen Erwachsenen (20-40 Jahre, Frauen > Männer 2:1). **PATHOPHYSIOLOGIE:** (1) **Autoimmunreaktion:** T-Zellen (CD4⁺ Th1/Th17, CD8⁺) greifen Myelin-Antigene an (MBP [Myelin Basic Protein], PLP [Proteolipid-Protein], MOG [Myelin Oligodendrocyte Glycoprotein]). (2) **Demyelinisierung:** Makrophagen/Mikroglia phagozytieren Myelin → Oligodendrozyten sterben → **Plaques** (entmyelinisierte Areale, scharf begrenzt, perivaskulär). (3) **Leitungsblockade:** Exponierte Axone → Aktionspotential-Weiterleitung ↓ (keine saltatorische Leitung) → neurologische Defizite. (4) **Chronisch:** Axon-Degeneration → Atrophie (Hirnsubstanz-Verlust). **SYMPTOME (vielfältig, abhängig von Läsions-Lokalisation):** (1) **VISUSSTÖRUNGEN:** **Optikusneuritis** (häufig Erstsymptom, 50%): Visusminderung (unilateral), Skotom (zentraler Gesichtsfeldausfall), Schmerzen bei Augenbewegung, Farbsinnstörung (Rot-Grün-Schwäche). (2) **MOTORISCHE DEFIZITE:** Paresen (Hemiparese, Paraparese), Spastik (Pyramidenbahnzeichen: Babinski ↑, Eigenreflexe ↑). (3) **SENSIBLE STÖRUNGEN:** Parästhesien (Kribbeln, Taubheit), **L'Hermitte-Zeichen** (elektrisierende Empfindung entlang Wirbelsäule → Arme/Beine bei Nackenbeugung, Hinterstrang-Demyelinisierung). (4) **ATAXIE:** Kleinhirn-Beteiligung (Intentionstremor, Dysmetrie, Nystagmus, skandierende Sprache). (5) **FATIGUE** (chronische Erschöpfung, 80%). (6) **Blasen-/Darmstörungen:** Dranginkontinenz, Harnverhalt, Obstipation. (7) **Kognitive Einbußen:** Gedächtnis, Aufmerksamkeit. (8) **Uhthoff-Phänomen:** Symptome verschlechtern sich bei Wärme (Hitze → Leitungsblockade ↑). **VERLAUFSFORMEN:** (1) **RRMS** (Relapsing-Remitting, 85%): Schübe (Tage-Wochen) → Remission. (2) **SPMS** (Sekundär-progressiv): Nach RRMS → kontinuierliche Verschlechterung. (3) **PPMS** (Primär-progressiv, 10%): Von Beginn an progressiv. **DIAGNOSTIK:** MRT (T2-hyperintense Läsionen, periventrikulär, Corpus callosum, **Dawson-Finger** [senkrecht zu Ventrikeln]), Liquor (oligoklonale Banden [IgG], Zellzahl normal/leicht ↑), evozierte Potentiale (VEP verzögert). **THERAPIE:** Immunmodulatoren (Interferon-β, Glatirameracetat), Fingolimod (S1P-Rezeptor-Modulator), Natalizumab (α4-Integrin-Antikörper, Cave: PML). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q6",
+    "question": "Was ist das Guillain-Barré-Syndrom und wie wird es diagnostiziert?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Guillain-Barré-Syndrom ist nur im ZNS"
+      },
+      {
+        "id": "B",
+        "text": "Guillain-Barré-Syndrom (GBS): Autoimmun-Demyelinisierung im PNS (Schwann-Zellen) nach Infektion (C. jejuni [häufigste Ursache], CMV, EBV) → Anti-Gangliosid-Antikörper (GM1, GD1a, GQ1b) kreuzreagieren mit Myelin (molekulare Mimikry). Symptome: Aufsteigende symmetrische Lähmung (distal → proximal → Atemmuskulatur!), areflexisch, Parästhesien, autonome Dysfunktion. Diagnostik: Liquor (Albumin-zytologische Dissoziation [Protein ↑↑, Zellzahl normal]), Nervenleitgeschwindigkeit ↓. Therapie: Plasmapherese, IVIG"
+      },
+      {
+        "id": "C",
+        "text": "Guillain-Barré-Syndrom ist eine bakterielle Infektion"
+      },
+      {
+        "id": "D",
+        "text": "Guillain-Barré-Syndrom ist nur in Oligodendrozyten"
+      },
+      {
+        "id": "E",
+        "text": "Guillain-Barré-Syndrom ist nur in Kindern"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **GUILLAIN-BARRÉ-SYNDROM (GBS)** ist eine akute **AUTOIMMUN-DEMYELINISIERUNG im PNS** (Schwann-Zellen), häufigste Ursache akuter schlaffer Lähmung (Inzidenz 1-2/100.000/Jahr). **PATHOPHYSIOLOGIE:** (1) **AUSLÖSER:** Infektion (1-3 Wochen vor Symptombeginn): **Campylobacter jejuni** (häufigste Ursache, 30-40%, Diarrhoe), CMV, EBV, Influenza, Mycoplasma pneumoniae, Zika-Virus, selten: Impfungen (Influenza-Impfung, Risiko sehr gering). (2) **MOLEKULARE MIMIKRY:** Bakterielle Ganglioside (Lipopolysaccharide, LPS) ähneln humanen Gangliosiden (Myelin-Bestandteile: GM1, GD1a, GQ1b) → **Antikörper kreuzreagieren** → Schwann-Zellen-Angriff → Demyelinisierung. (3) **Demyelinisierung:** Makrophagen phagozytieren Myelin → Leitungsblockade → Paresen. **SYMPTOME:** (1) **AUFSTEIGENDE SYMMETRISCHE LÄHMUNG:** Distal (Füße, Zehen-Kribbeln/Schwäche) → proximal (Beine, Arme, Rumpf) → **Atemmuskulatur** (Zwerchfell, Interkostalmuskeln → respiratorische Insuffizienz → Beatmung notwendig! [~30% Patienten]). (2) **AREFLEXIE:** Muskeleigenreflexe ↓↓ (frühe Areflexie diagnostisch wichtig). (3) **PARÄSTHESIEN:** Kribbeln, Taubheit (sensible Beteiligung). (4) **AUTONOME DYSFUNKTION:** Tachykardie, Blutdruck-Schwankungen (Hyper-/Hypotonie), Arrhythmien (gefährlich!), Blasen-/Darmstörungen. **VARIANTEN:** (1) **AIDP** (Acute Inflammatory Demyelinating Polyradiculoneuropathy, 90%, Demyelinisierung). (2) **AMAN** (Acute Motor Axonal Neuropathy, Axon-Schädigung, rein motorisch, Anti-GM1, China/Japan). (3) **Miller-Fisher-Syndrom (MFS):** Ophthalmoplegie (Augenmuskellähmung), Ataxie, Areflexie, **Anti-GQ1b** (diagnostisch!). **DIAGNOSTIK:** (1) **LIQUOR:** **Albumin-zytologische Dissoziation** (Protein ↑↑ [>0.45 g/L, oft >1 g/L], Zellzahl normal [<10 Zellen/μL], charakteristisch!). (2) **Neurophysiologie:** Nervenleitgeschwindigkeit ↓ (Demyelinisierung), verlängerte F-Wellen, Leitungsblöcke. (3) **Antikörper:** Anti-GM1 (AMAN), Anti-GQ1b (MFS). **THERAPIE:** (1) **Plasmapherese** (Antikörper entfernen) ODER **IVIG** (intravenöse Immunglobuline, 0.4 g/kg/Tag × 5 Tage, Antikörper neutralisieren) → gleichwertig! (2) **Supportive Therapie:** Beatmung (bei respiratorischer Insuffizienz), Thromboseprophylaxe (Heparin), Schmerztherapie. **PROGNOSE:** 80% vollständige Erholung (Monate-Jahre), 5% sterben (Ateminsuffizienz, Arrhythmien). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  }
+]

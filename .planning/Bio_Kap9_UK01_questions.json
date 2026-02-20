@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-9-01-q1",
+    "question": "Welche der folgenden Aussagen ist eine **Kernaussage** von Darwin's Theorie der natürlichen Selektion?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Alle Individuen einer Population sind genetisch identisch (keine Variation)"
+      },
+      {
+        "id": "B",
+        "text": "Individuen mit vorteilhaften Merkmalen haben höhere Fitness (mehr überlebende Nachkommen) → Allelfrequenz ↑"
+      },
+      {
+        "id": "C",
+        "text": "Nur wenige Nachkommen werden produziert, sodass alle überleben können (keine Selektion)"
+      },
+      {
+        "id": "D",
+        "text": "Merkmale werden nicht vererbt, sondern in jeder Generation neu erworben (Lamarck)"
+      },
+      {
+        "id": "E",
+        "text": "Evolution findet nur durch zufällige genetische Drift statt, nicht durch Selektion"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Darwin's 5 Kernaussagen:** (1) **Variation** (Individuen unterschiedlich), (2) **Vererbung** (Merkmale vererbbar), (3) **Überproduktion** (mehr Nachkommen als überleben), (4) **Unterschiedlicher Reproduktionserfolg** (**Fitness** = vorteilhafte Merkmale → **mehr überlebende Nachkommen**), (5) **Natürliche Selektion** bevorzugt vorteilhafte Merkmale → **Allelfrequenz ↑** über Generationen. **Fitness** = Reproduktionserfolg (nicht Überlebenszeit!). Beispiel: Birkenspanner (dunkle Form nach Industrialisierung).",
+    "difficulty": "easy",
+    "tags": ["Evolution", "Darwin", "Natürliche Selektion", "Fitness"]
+  },
+  {
+    "id": "bio-9-01-q2",
+    "question": "Nach der **Industrialisierung** in England wurden Bäume rußgeschwärzt. Die **dunkle Form** des Birkenspanners (Biston betularia) wurde häufiger, während die helle Form seltener wurde. Welcher Selektionstyp liegt vor?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Stabilisierende Selektion: Mittlere Ausprägung bevorzugt, Extreme benachteiligt"
+      },
+      {
+        "id": "B",
+        "text": "Gerichtete Selektion: Einseitige Verschiebung (dunkle Form bevorzugt, Tarnung auf schwarzen Bäumen)"
+      },
+      {
+        "id": "C",
+        "text": "Disruptive Selektion: Beide Extreme bevorzugt, Mittlere benachteiligt"
+      },
+      {
+        "id": "D",
+        "text": "Sexuelle Selektion: Weibchen wählen dunkle Männchen (Partnerwahl)"
+      },
+      {
+        "id": "E",
+        "text": "Keine Selektion: Farbänderung durch Umweltverschmutzung, nicht durch genetische Veränderung"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Gerichtete Selektion (Directional Selection):** **Einseitige Verschiebung** des Merkmals (ein Extrem bevorzugt). **Birkenspanner (Industriemelanismus):** Vor Industrialisierung: **Helle Form** (Tarnung auf hellen Flechten) → Fitness ↑. Nach Industrialisierung: Bäume **rußgeschwärzt** → **Dunkle Form** (Melanismus) → bessere Tarnung → Fitness ↑ → Frequenz ↑. **Andere Beispiele:** Antibiotika-Resistenz (resistente Bakterien bevorzugt). **Wichtig:** Einseitige Verschiebung, nicht beide Extreme!",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Selektion", "Gerichtete Selektion", "Birkenspanner", "Industriemelanismus"]
+  },
+  {
+    "id": "bio-9-01-q3",
+    "question": "Beim **Pfau** haben Männchen (♂) einen riesigen, bunten Schwanz, der attraktiv für Weibchen (♀) ist, aber einen Überlebens-Nachteil darstellt (auffällig, schwer). Welches evolutionäre Prinzip erklärt dies?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Gerichtete Selektion: Große Schwänze bevorzugt, da sie beim Überleben helfen (Flucht vor Prädatoren)"
+      },
+      {
+        "id": "B",
+        "text": "Sexuelle Selektion: Weibchen wählen Männchen mit prächtigem Schwanz (Handicap-Prinzip: aufwendige Merkmale = gute Gene)"
+      },
+      {
+        "id": "C",
+        "text": "Stabilisierende Selektion: Mittlere Schwanzgröße bevorzugt, Extreme benachteiligt"
+      },
+      {
+        "id": "D",
+        "text": "Genetischer Drift: Zufällige Frequenzänderung in kleiner Population (Gründereffekt)"
+      },
+      {
+        "id": "E",
+        "text": "Mutation: Schwanz-Größe ist durch spontane Mutationen entstanden, nicht durch Selektion"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Sexuelle Selektion:** Selektion durch **Partnerwahl** (nicht Überleben, sondern Reproduktionserfolg). **Pfau:** ♀ wählt ♂ mit **prächtigstem Schwanz** (Rad) → **Runaway-Selektion** (positive Rückkopplung: prächtiger Schwanz → mehr Nachkommen → Gene für Präferenz + Schwanz ↑). **Handicap-Prinzip (Zahavi):** Aufwendige Merkmale (Schwanz) signalisieren **gute Gene** (nur gesunde ♂ können sich \"Luxus\" leisten, trotz Überlebens-Nachteil). **Wichtig:** Sexuelle Selektion ≠ natürliche Selektion (Reproduktion vs. Überleben)!",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Selektion", "Sexuelle Selektion", "Pfau", "Handicap-Prinzip"]
+  },
+  {
+    "id": "bio-9-01-q4",
+    "question": "Die **Pentadactyle Extremität** (5-fingrige Gliedmaße) findet sich bei Mensch (Greifen), Fledermaus (Fliegen), Wal (Schwimmen) und Pferd (Laufen). Welche Art von Organen sind dies?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Analoge Organe: Unterschiedlicher Grundbauplan, gleiche Funktion (konvergente Evolution)"
+      },
+      {
+        "id": "B",
+        "text": "Homologe Organe: Gleicher Grundbauplan (gemeinsamer Vorfahre), unterschiedliche Funktion"
+      },
+      {
+        "id": "C",
+        "text": "Rudimentäre Organe: Funktionslose Relikte von Vorfahren (wie Blinddarm)"
+      },
+      {
+        "id": "D",
+        "text": "Vestigiale Organe: Organe, die in der Embryonalentwicklung verschwinden (wie Kiemenspalten)"
+      },
+      {
+        "id": "E",
+        "text": "Identische Organe: Exakt gleicher Bau und Funktion (keine evolutionäre Bedeutung)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Homologe Organe:** **Gleicher Grundbauplan** (gemeinsamer Vorfahre), aber **unterschiedliche Funktion** (divergente Evolution). **Pentadactyle Extremität:** Alle haben **gleichen Knochen-Grundbauplan** (Humerus, Radius/Ulna, Carpalia, Metacarpalia, Phalangen), aber **unterschiedliche Funktion** (Greifen, Fliegen, Schwimmen, Laufen). **Analoge Organe:** Unterschiedlicher Grundbauplan, gleiche Funktion (z.B. Vogel-Flügel vs. Insekten-Flügel, konvergente Evolution). **Wichtig:** Homolog = gemeinsamer Ursprung, Analog = gleiche Funktion!",
+    "difficulty": "easy",
+    "tags": ["Evolution", "Vergleichende Anatomie", "Homologe Organe", "Pentadactyle Extremität"]
+  },
+  {
+    "id": "bio-9-01-q5",
+    "question": "**Archaeopteryx** (~150 Mio. Jahre) ist ein fossiler Organismus mit Merkmalen von Reptilien und Vögeln. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Archaeopteryx ist ein reiner Vogel ohne Reptilien-Merkmale (vollständig modern)"
+      },
+      {
+        "id": "B",
+        "text": "Archaeopteryx ist eine Übergangsform (Reptilien-Merkmale: Zähne, Klauen, langer Schwanz; Vogel-Merkmale: Federn)"
+      },
+      {
+        "id": "C",
+        "text": "Archaeopteryx ist ein reines Reptil ohne Vogel-Merkmale (keine Federn)"
+      },
+      {
+        "id": "D",
+        "text": "Archaeopteryx ist kein Fossil, sondern ein lebender Organismus (noch heute existierend)"
+      },
+      {
+        "id": "E",
+        "text": "Archaeopteryx beweist, dass Evolution nicht stattgefunden hat (da Mischform nicht möglich)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Archaeopteryx** (~150 Mio. Jahre, Jura): **Übergangsform** (Mosaikform) zwischen Reptilien und Vögeln. **Reptilien-Merkmale:** **Zähne** (Vögel haben keine!), **Klauen** an Flügeln, **langer Schwanz** (Wirbel). **Vogel-Merkmale:** **Federn** (Flugfähigkeit, Thermoregulation). **Weitere Übergangsformen:** Tiktaalik (Fisch → Tetrapoden, ~375 Mio. Jahre, Flossen + Handgelenk-Knochen). **Wichtig:** Übergangsformen belegen **Evolution** (schrittweise Veränderungen, nicht plötzlich)!",
+    "difficulty": "easy",
+    "tags": ["Evolution", "Fossilien", "Archaeopteryx", "Übergangsform", "Paläontologie"]
+  },
+  {
+    "id": "bio-9-01-q6",
+    "question": "Molekulare Vergleiche zeigen, dass Mensch und Schimpanse **~98,8% DNA-Identität** haben. Welches evolutionäre Konzept erklärt dies?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Mensch und Schimpanse haben keinen gemeinsamen Vorfahren (konvergente Evolution)"
+      },
+      {
+        "id": "B",
+        "text": "Mensch und Schimpanse haben einen gemeinsamen Vorfahren (Trennung vor ~6 Mio. Jahren), molekulare Uhr"
+      },
+      {
+        "id": "C",
+        "text": "Mensch und Schimpanse sind identisch (100% DNA-Identität, keine Evolution)"
+      },
+      {
+        "id": "D",
+        "text": "Die 98,8% Identität beweist, dass Evolution falsch ist (zu hohe Ähnlichkeit)"
+      },
+      {
+        "id": "E",
+        "text": "DNA-Vergleiche sind irrelevant für evolutionäre Verwandtschaft (nur Fossilien zählen)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Molekulare Uhr:** Mutationen akkumulieren mit **konstanter Rate** → Zeit seit Trennung vom gemeinsamen Vorfahren berechenbar. **Mensch-Schimpanse:** **~98,8% DNA-Identität** → **Trennung vor ~6 Mio. Jahren** (gemeinsamer Vorfahre). Je mehr Unterschiede (Mutationen), desto länger Trennung. **Beispiel:** Cytochrom c (Protein): Mensch-Schimpanse 0 Unterschiede, Mensch-Frosch ~18 Unterschiede. **Wichtig:** Molekulare Belege **bestätigen** Evolution (gemeinsame Abstammung, universeller genetischer Code)!",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Molekulare Uhr", "DNA-Vergleich", "Mensch-Schimpanse", "Gemeinsamer Vorfahre"]
+  }
+]

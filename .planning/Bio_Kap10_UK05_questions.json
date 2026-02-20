@@ -1,0 +1,152 @@
+[
+  {
+    "id": "bio-10-05-q1",
+    "question": "**Primärsukzession** und **Sekundärsukzession** unterscheiden sich in ihrem Ausgangspunkt. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Primärsukzession: Belebtes Substrat (nach Feuer), schnell (Jahrzehnte). Sekundärsukzession: Unbelebtes Substrat (Vulkan), langsam (Jahrtausende)"
+      },
+      {
+        "id": "B",
+        "text": "Primärsukzession: Unbelebtes Substrat (Vulkangestein, Gletscherrückzug, KEIN Boden!), Pioniere (Flechten, Moose, Bodenbildung!), sehr langsam (Jahrhunderte bis Jahrtausende). Sekundärsukzession: Belebtes Substrat (nach Störung: Feuer, Rodung, Boden vorhanden!), schneller (Jahrzehnte)"
+      },
+      {
+        "id": "C",
+        "text": "Beide Sukzessionstypen sind gleich schnell (kein Unterschied in Dauer)"
+      },
+      {
+        "id": "D",
+        "text": "Sekundärsukzession findet nur im Ozean statt (nicht an Land)"
+      },
+      {
+        "id": "E",
+        "text": "Primärsukzession beginnt immer mit Bäumen (nicht mit Flechten oder Moosen)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Primärsukzession:** **Unbelebtes Substrat** (vorher **keine** Lebensgemeinschaft, **KEIN Boden**!). **Beispiele:** Vulkangestein, Gletscherrückzug, Sanddünen. **Pioniere:** Flechten, Moose, Cyanobakterien (genügsam, **Bodenbildung**!). **Dauer:** **Sehr langsam** (Jahrhunderte bis Jahrtausende, Bodenbildung dauert!). **Sekundärsukzession:** **Belebtes Substrat** (nach Störung: Feuer, Rodung, Sturm, **Boden vorhanden**, Nährstoffe/Samen/Wurzeln!). **Pioniere:** Unkräuter (einjährige Pflanzen, r-Strategen). **Dauer:** **Schneller** (Jahrzehnte bis Jahrhunderte, nicht Jahrtausende). **Wichtig:** Primär = von Null, Sekundär = Neustart mit Boden!",
+    "difficulty": "medium",
+    "tags": ["Ökologie", "Sukzession", "Primärsukzession", "Sekundärsukzession"]
+  },
+  {
+    "id": "bio-10-05-q2",
+    "question": "Die **Klimaxgemeinschaft** ist das Endstadium einer Sukzession. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Klimaxgemeinschaft ist instabil und ändert sich ständig (keine Stabilität)"
+      },
+      {
+        "id": "B",
+        "text": "Klimaxgemeinschaft ist stabile Endgemeinschaft (Gleichgewicht, max. Biomasse, hohe Diversität), Selbsterhaltung (Nachwuchs derselben Arten, z.B. Eichen-Buchen-Wald in Mitteleuropa)"
+      },
+      {
+        "id": "C",
+        "text": "Klimaxgemeinschaft hat minimale Biomasse (weniger als Pionierstadium)"
+      },
+      {
+        "id": "D",
+        "text": "Klimaxgemeinschaft ist das erste Stadium der Sukzession (nicht das letzte)"
+      },
+      {
+        "id": "E",
+        "text": "In Mitteleuropa ist die natürliche Klimaxgemeinschaft eine Wüste (ohne menschlichen Einfluss)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Klimaxgemeinschaft (Klimaxstadium):** **Stabile Endgemeinschaft** am Ende der Sukzession. **Eigenschaften:** (1) **Gleichgewicht** (keine Veränderung mehr, außer durch Störung), (2) **Maximale Biomasse** (höchste Produktivität erreicht), (3) **Hohe Artendiversität** (komplexes Nahrungsnetz), (4) **Selbsterhaltung** (Nachwuchs derselben Arten, z.B. Schattenbaumarten: Eichen/Buchen regenerieren sich selbst unter eigenem Blätterdach). **Mitteleuropa:** **Eichen-Buchen-Wald** (natürliche Klimax ohne menschlichen Einfluss, nicht Wiese!). **Wichtig:** Klimax = **stabil** und **selbsterhaltend**, höchste Komplexität!",
+    "difficulty": "easy",
+    "tags": ["Ökologie", "Sukzession", "Klimaxgemeinschaft", "Eichen-Buchen-Wald"]
+  },
+  {
+    "id": "bio-10-05-q3",
+    "question": "**Biodiversität** (biologische Vielfalt) wird auf drei Ebenen betrachtet. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Biodiversität bezieht sich nur auf Artenzahl (keine anderen Ebenen)"
+      },
+      {
+        "id": "B",
+        "text": "Biodiversität: (1) Genetische Diversität (Vielfalt innerhalb Art, Allele, z.B. Hunderassen), (2) Artendiversität (Artenzahl, Regenwald >10.000, Tundra <100), (3) Ökosystem-Diversität (verschiedene Ökosysteme: Wald, Savanne, Korallen)"
+      },
+      {
+        "id": "C",
+        "text": "Genetische Diversität ist unwichtig für Anpassungsfähigkeit (nur Artenzahl zählt)"
+      },
+      {
+        "id": "D",
+        "text": "Alle Ökosysteme haben dieselbe Artenzahl (keine Unterschiede zwischen Regenwald und Tundra)"
+      },
+      {
+        "id": "E",
+        "text": "Biodiversität ist weltweit gleichmäßig verteilt (keine Hotspots)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Biodiversität (Biologische Vielfalt, 3 Ebenen):** (1) **Genetische Diversität:** Vielfalt **innerhalb einer Art** (Allele, Gene). **Beispiel:** Hunderassen (alle *Canis lupus familiaris*, aber genetisch unterschiedlich). **Bedeutung:** **Anpassungsfähigkeit** (mehr Varianten → höhere Überlebenschance bei Umweltveränderungen). (2) **Artendiversität:** **Anzahl verschiedener Arten** in Gebiet. **Beispiel:** Regenwald >10.000 Arten/ha, Tundra <100 Arten/ha. (3) **Ökosystem-Diversität:** Vielfalt verschiedener **Ökosysteme** (Wald, Savanne, Korallenriff, Wüste). **Hotspots:** Amazonas, Madagaskar, Korallenriffe (extrem hoch). **Wichtig:** Alle 3 Ebenen zusammen = Biodiversität!",
+    "difficulty": "medium",
+    "tags": ["Ökologie", "Biodiversität", "Genetische Diversität", "Artendiversität", "Ökosystem-Diversität"]
+  },
+  {
+    "id": "bio-10-05-q4",
+    "question": "**Biodiversität** liefert wichtige **Ökosystemleistungen** (Ecosystem Services). Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Biodiversität hat keine praktische Bedeutung für Menschen (nur ästhetischer Wert)"
+      },
+      {
+        "id": "B",
+        "text": "Ökosystemleistungen: Bestäubung (Bienen, 80% Nutzpflanzen!), Wasserreinigung (Feuchtgebiete), Klimaregulation (Wälder: CO₂-Speicherung), Bodenbildung (Regenwürmer), Medizin (>50% aus Naturstoffen, z.B. Aspirin, Taxol)"
+      },
+      {
+        "id": "C",
+        "text": "Bestäubung durch Insekten ist unwichtig (Wind-Bestäubung reicht für alle Nutzpflanzen)"
+      },
+      {
+        "id": "D",
+        "text": "Medikamente werden ausschließlich synthetisch hergestellt (keine Naturstoffe)"
+      },
+      {
+        "id": "E",
+        "text": "Wälder haben keinen Einfluss auf das Klima (keine CO₂-Speicherung)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Bedeutung der Biodiversität - Ökosystemleistungen (Ecosystem Services):** (1) **Bestäubung:** Bienen, Insekten → **80% Nutzpflanzen** abhängig (Landwirtschaft!). (2) **Wasserreinigung:** Feuchtgebiete, Wälder (Filter). (3) **Klimaregulation:** Wälder **CO₂-Speicherung** (Photosynthese), Ozeane. (4) **Bodenbildung:** Regenwürmer, Bakterien, Pilze (Mineralisierung). (5) **Ressourcen:** Nahrung, **Medizin** (>**50% Medikamente** aus Naturstoffen, z.B. **Aspirin** [Weidenrinde], **Taxol** [Eibe, Krebs]). (6) **Kulturelle Werte:** Erholung, Tourismus. **Wichtig:** Biodiversität = **essentiell** für menschliches Wohlergehen!",
+    "difficulty": "easy",
+    "tags": ["Ökologie", "Biodiversität", "Ökosystemleistungen", "Bestäubung", "Medizin"]
+  },
+  {
+    "id": "bio-10-05-q5",
+    "question": "Welche der folgenden Faktoren ist die **Hauptursache** für den Verlust der Biodiversität?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Natürliche Sukzession (Klimaxgemeinschaften verdrängen Pionierarten)"
+      },
+      {
+        "id": "B",
+        "text": "Lebensraumzerstörung (HAUPTURSACHE! Entwaldung für Landwirtschaft/Siedlungen, Verstädterung) → Habitatverlust → Arten aussterben"
+      },
+      {
+        "id": "C",
+        "text": "Symbiose zwischen Arten (Mutualismus schadet Biodiversität)"
+      },
+      {
+        "id": "D",
+        "text": "Erhöhte Schutzgebiete (Nationalparks reduzieren Artenzahl)"
+      },
+      {
+        "id": "E",
+        "text": "Zu hohe Niederschläge (Regen zerstört Lebensräume)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Bedrohungen der Biodiversität:** (1) **Lebensraumzerstörung (HAUPTURSACHE!):** **Entwaldung** (Landwirtschaft, Siedlungen, Holzeinschlag), Verstädterung → **Habitatverlust** → Arten aussterben (>80% bedrohter Arten!). (2) **Klimawandel:** Temperatur ↑, Niederschlag verändert → Arten können nicht schnell genug wandern/anpassen, **Korallenbleiche**. (3) **Übernutzung:** Überfischung (90% Großfische weg seit 1950), Wilderei. (4) **Invasive Arten:** Eingeschleppte Arten verdrängen heimische (Nilbarsch Viktoriasee: >200 Buntbarsch-Arten ausgestorben). (5) **Verschmutzung:** Pestizide, Plastikmüll, Eutrophierung. **Wichtig:** Lebensraumzerstörung = **Hauptursache** (nicht Klimawandel, obwohl auch wichtig)!",
+    "difficulty": "medium",
+    "tags": ["Ökologie", "Biodiversität", "Bedrohungen", "Lebensraumzerstörung", "Entwaldung"]
+  }
+]

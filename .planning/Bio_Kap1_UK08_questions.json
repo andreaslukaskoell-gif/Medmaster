@@ -1,0 +1,176 @@
+[
+  {
+    "id": "q1",
+    "question": "Was ist der Hauptunterschied zwischen rauem und glattem ER?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Raues ER hat Ribosomen (Proteinsynthese), glattes ER hat keine Ribosomen (Lipidsynthese, Entgiftung, Ca²⁺-Speicher)"
+      },
+      {
+        "id": "C",
+        "text": "Raues ER produziert ATP, glattes ER nicht"
+      },
+      {
+        "id": "D",
+        "text": "Glattes ER ist nur in Pflanzenzellen"
+      },
+      {
+        "id": "E",
+        "text": "Raues ER hat keine Membranen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: RAUES ER ist mit RIBOSOMEN besetzt (auf zytoplasmatischer Seite) → PROTEINSYNTHESE für sekretorischen Weg (Sekretproteine wie Insulin, Membranproteine, lysosomale Enzyme). GLATTES ER hat KEINE Ribosomen → Funktionen: (1) LIPIDSYNTHESE (Phospholipide, Cholesterin, Steroidhormone), (2) ENTGIFTUNG (Cytochrom P450-System hydroxyliert Medikamente/Toxine), (3) Ca²⁺-SPEICHER (Sarkoplasmatisches Retikulum in Muskelzellen). Sekretorische Zellen (Pankreas) haben viel raues ER, Leber/Gonaden haben viel glattes ER. A ist falsch (völlig unterschiedlich). C ist falsch (ATP-Produktion in Mitochondrien). D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Welche Rolle spielt SRP (Signal Recognition Particle) bei der Proteinsynthese im rauen ER?",
+    "options": [
+      {
+        "id": "A",
+        "text": "SRP hat keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "SRP bindet an die Signalsequenz des entstehenden Proteins, pausiert Translation und dockt den Ribosom-Komplex an die ER-Membran an"
+      },
+      {
+        "id": "C",
+        "text": "SRP zerstört das Protein"
+      },
+      {
+        "id": "D",
+        "text": "SRP produziert mRNA"
+      },
+      {
+        "id": "E",
+        "text": "SRP ist nur in Prokaryoten vorhanden"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **Signal-Hypothese** (Günter Blobel, Nobelpreis 1999): (1) mRNA bindet an freies Ribosom, (2) SIGNALSEQUENZ (hydrophobe Aminosäuren am N-Terminus) wird synthetisiert, (3) **SRP bindet an Signalsequenz** → Translation PAUSIERT, (4) SRP-Ribosom-Komplex dockt an **SRP-Rezeptor** in ER-Membran an, (5) Ribosom bindet an **Translokon** (Proteinkanal), (6) Translation setzt fort, Protein wird CO-TRANSLATIONAL (während Synthese!) ins ER-Lumen eingeschleust, (7) Signal-Peptidase spaltet Signalsequenz ab. SRP = \"molecular zip code\" für ER-Targeting. A, C, D sind falsch. E ist falsch (in Eukaryoten).",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q3",
+    "question": "Welche Funktion hat das Sarkoplasmatische Retikulum (SR) in Muskelzellen?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Proteinsynthese"
+      },
+      {
+        "id": "B",
+        "text": "Ca²⁺-Speicherung und -Freisetzung für Muskelkontraktion/-relaxation"
+      },
+      {
+        "id": "C",
+        "text": "DNA-Replikation"
+      },
+      {
+        "id": "D",
+        "text": "Lipidabbau"
+      },
+      {
+        "id": "E",
+        "text": "Zellkern-Funktionen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Das SARKOPLASMATISCHE RETIKULUM (SR) ist spezialisiertes GLATTES ER in Skelett- und Herzmuskelzellen. Hauptfunktion: **Ca²⁺-SPEICHERUNG** (Konzentration: ~1 mM im SR-Lumen, nur ~100 nM im Zytosol). MUSKELKONTRAKTION: Aktionspotential → Dihydropyridin-Rezeptor (T-Tubuli) → **Ryanodin-Rezeptor (RyR)** im SR öffnet → Ca²⁺ strömt ins Zytosol (10.000-fache Erhöhung!) → Ca²⁺ bindet Troponin C → Aktin-Myosin-Interaktion → Kontraktion. RELAXATION: **SERCA (SR Ca²⁺-ATPase)** pumpt Ca²⁺ zurück ins SR (ATP-abhängig) → Kontraktion stoppt. Defekte: Malignes Hyperthermiесиндром (RyR-Mutation), Brody-Syndrom (SERCA-Defekt). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Was passiert mit falsch gefalteten Proteinen im ER?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Sie werden sofort ins Blut sekretiert"
+      },
+      {
+        "id": "B",
+        "text": "Sie werden durch ER-Qualitätskontrolle erkannt, bei persistierender Fehlfaltung via ERAD (ER-Associated Degradation) ins Zytosol zurücktransportiert, ubiquitiniert und im Proteasom abgebaut"
+      },
+      {
+        "id": "C",
+        "text": "Sie werden im ER gespeichert ohne Abbau"
+      },
+      {
+        "id": "D",
+        "text": "Sie gehen direkt zum Golgi"
+      },
+      {
+        "id": "E",
+        "text": "Sie werden zu Mitochondrien transportiert"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **ER-QUALITÄTSKONTROLLE (ERQC):** (1) CHAPERONE (BiP/GRP78, Calnexin, Calreticulin) prüfen Proteinfaltung. (2) **KORREKT GEFALTET:** Transport zum Golgi via COPII-Vesikel. (3) **FALSCH GEFALTET:** Retention im ER → erneuter Faltungsversuch. (4) **PERSISTIEREND FALSCH GEFALTET:** **ERAD** (ER-Associated Degradation) → Retrotranslokation ins Zytosol (rückwärts durch Translokon) → Ubiquitinierung → Proteasom-Abbau. Akkumulation falsch gefalteter Proteine → ER-STRESS → Unfolded Protein Response (UPR). Beispiel: Mukoviszidose (CFTR-ΔF508-Mutation → ERAD). A ist falsch (niemals sekretiert). C ist falsch (würde ER-Stress verursachen). D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q5",
+    "question": "Welches Enzymsystem im glatten ER ist hauptsächlich für die Entgiftung von Medikamenten und Toxinen verantwortlich?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Lysosomen"
+      },
+      {
+        "id": "B",
+        "text": "Cytochrom-P450-System"
+      },
+      {
+        "id": "C",
+        "text": "Ribosomen"
+      },
+      {
+        "id": "D",
+        "text": "ATP-Synthase"
+      },
+      {
+        "id": "E",
+        "text": "DNA-Polymerase"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Das **CYTOCHROM-P450-SYSTEM** (Monooxygenase-Familie) im GLATTEN ER ist das zentrale ENTGIFTUNGSSYSTEM. Mechanismus: **HYDROXYLIERUNG** von lipophilen Fremdstoffen (Medikamente, Toxine, Alkohol) → hydrophil (wasserlöslich) → renale Ausscheidung. **Phase I-Reaktion:** Hydroxylierung, Oxidation (Cytochrom P450). **Phase II-Reaktion:** Konjugation (Glukuronidierung, Sulfatierung). Beispiele: Paracetamol-Abbau, Alkohol-Oxidation (MEOS), Barbiturate. **ENZYMINDUKTION:** Chronische Exposition (z.B. Alkohol, Johanniskraut) → ↑ Cytochrom P450 → schnellerer Abbau (Toleranz, Wechselwirkungen). Besonders entwickelt in LEBER (höchste Entgiftungskapazität). A ist falsch (Lysosomen = intrazellulärer Abbau, nicht Entgiftung). C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q6",
+    "question": "Warum haben Pankreas-Azinuszellen (Verdauungsenzym-produzierende Zellen) besonders viel raues ER?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Weil sie viel ATP brauchen"
+      },
+      {
+        "id": "B",
+        "text": "Weil sie große Mengen an Sekretproteinen (Verdauungsenzyme wie Trypsin, Amylase) synthetisieren müssen"
+      },
+      {
+        "id": "C",
+        "text": "Weil sie viele Lipide produzieren"
+      },
+      {
+        "id": "D",
+        "text": "Weil sie DNA replizieren"
+      },
+      {
+        "id": "E",
+        "text": "Weil sie Toxine abbauen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: PANKREAS-AZINUSZELLEN produzieren große Mengen an **VERDAUUNGSENZYMEN** (Trypsin, Chymotrypsin, Amylase, Lipase), die SEKRETIERT werden (in Darm über Pankreasgang). Diese Proteine werden am RAUEN ER synthetisiert (Signalsequenz → SRP → ER-Translokation), im ER-Lumen gefaltet, zum Golgi transportiert (COPII-Vesikel), im Golgi modifiziert/sortiert, in Sekretvesikeln verpackt und via EXOZYTOSE sekretiert. Hohe Sekretionsrate → VIEL raues ER nötig (elektronenmikroskopisch: Zytoplasma voller raues ER-Stapel). Analog: PLASMAZELLEN (Antikörper-Produktion) haben ebenfalls massiv raues ER. A ist falsch (ATP = Mitochondrien). C ist falsch (Lipide = glattes ER). D, E sind falsch.",
+    "difficulty": "medium"
+  }
+]

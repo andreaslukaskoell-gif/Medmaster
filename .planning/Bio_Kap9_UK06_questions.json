@@ -1,0 +1,152 @@
+[
+  {
+    "id": "bio-9-06-q1",
+    "question": "Die **Molekulare Uhr** nutzt DNA-Sequenzen, um die Zeit seit der Trennung von einem gemeinsamen Vorfahren zu schätzen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Mutationen akkumulieren mit variabler, unvorhersagbarer Rate (keine Uhr-Funktion möglich)"
+      },
+      {
+        "id": "B",
+        "text": "Mutationen akkumulieren mit konstanter Rate → Zeit seit Trennung berechenbar. Mensch-Schimpanse: ~98,8% identisch → Trennung ~7 Mio. Jahre"
+      },
+      {
+        "id": "C",
+        "text": "Je mehr DNA-Unterschiede, desto kürzer die Trennungszeit (inverse Beziehung)"
+      },
+      {
+        "id": "D",
+        "text": "Die Molekulare Uhr funktioniert nur bei Bakterien, nicht bei Eukaryoten"
+      },
+      {
+        "id": "E",
+        "text": "DNA-Vergleiche sind ungeeignet für phylogenetische Analysen (nur Fossilien zählen)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Molekulare Uhr:** Mutationen akkumulieren mit **konstanter Rate** über Zeit → Anzahl Unterschiede ∝ Zeit seit Trennung. **Kalibrierung:** Fossil-Daten (bekannte Zeitpunkte) → Rate berechnen. **Anwendung:** DNA-Unterschiede messen → Zeit schätzen. **Beispiel:** Mensch-Schimpanse: ~98,8% DNA-Identität (1,2% Unterschiede) → Trennung ~**7 Mio. Jahre**. **Cytochrom c:** Mensch-Schimpanse 0 Unterschiede, Mensch-Maus ~10, Mensch-Frosch ~18 → **je mehr Unterschiede, desto länger Trennung** (nicht kürzer!). **Wichtig:** Konstante Rate ermöglicht Zeitschätzung!",
+    "difficulty": "easy",
+    "tags": ["Evolution", "Molekulare Evolution", "Molekulare Uhr", "DNA-Vergleich"]
+  },
+  {
+    "id": "bio-9-06-q2",
+    "question": "Die **Theorie der neutralen Evolution** (Motoo Kimura, 1968) beschreibt die Rolle der Selektion auf molekularer Ebene. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Alle Mutationen sind vorteilhaft und werden durch natürliche Selektion bevorzugt"
+      },
+      {
+        "id": "B",
+        "text": "Viele Mutationen sind neutral (weder vorteilhaft noch nachteilig) → Genetische Drift (Zufall), nicht Selektion, dominiert auf molekularer Ebene"
+      },
+      {
+        "id": "C",
+        "text": "Kimura's Theorie widerspricht Darwin komplett (natürliche Selektion spielt keine Rolle)"
+      },
+      {
+        "id": "D",
+        "text": "Neutrale Mutationen akkumulieren langsamer als vorteilhafte Mutationen"
+      },
+      {
+        "id": "E",
+        "text": "Nur schädliche Mutationen existieren (keine neutralen Mutationen möglich)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Theorie der neutralen Evolution (Kimura, 1968):** Viele Mutationen sind **neutral** (weder vorteilhaft noch nachteilig für Organismus). **Auf molekularer Ebene:** **Genetische Drift** (Zufall) dominiert, **nicht Selektion**. **Belege:** (1) Synonyme Mutationen (Aminosäure bleibt gleich) häufiger als nicht-synonyme (neutral, keine negative Selektion), (2) Pseudogene (funktionslose Gene) akkumulieren Mutationen schneller (keine Selektion). **Wichtig:** Kimura widerspricht **nicht** Darwin auf **phänotypischer Ebene** (morphologische Merkmale: Selektion wichtig!). Nur auf **DNA-Ebene** spielen neutrale Mutationen große Rolle!",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Molekulare Evolution", "Neutrale Evolution", "Kimura", "Genetische Drift"]
+  },
+  {
+    "id": "bio-9-06-q3",
+    "question": "**Synonyme** und **nicht-synonyme Mutationen** unterscheiden sich in ihrer Auswirkung auf Proteine. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Synonyme Mutation: Codon ändert sich → Aminosäure ändert sich (z.B. UUU [Phe] → UUA [Leu])"
+      },
+      {
+        "id": "B",
+        "text": "Synonyme Mutation: Codon ändert sich, aber Aminosäure bleibt gleich (z.B. UUU → UUC, beide Phe) → neutral, häufiger als nicht-synonyme"
+      },
+      {
+        "id": "C",
+        "text": "Nicht-synonyme Mutationen sind häufiger als synonyme (weil Selektion sie bevorzugt)"
+      },
+      {
+        "id": "D",
+        "text": "Synonyme und nicht-synonyme Mutationen kommen gleich häufig vor (kein Unterschied)"
+      },
+      {
+        "id": "E",
+        "text": "Der genetische Code ist nicht degeneriert (jedes Codon codiert nur eine Aminosäure)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Synonyme Mutation (silent mutation):** **Codon ändert sich**, aber **Aminosäure bleibt gleich** (dank degeneriertem genetischen Code: mehrere Codons für dieselbe AS). **Beispiel:** UUU → UUC (beide codieren **Phenylalanin**). **Selektion:** Meist **neutral** (kein Effekt auf Protein) → **höhere Rate** (weniger negative Selektion). **Nicht-Synonyme Mutation:** Codon ändert sich → **Aminosäure ändert sich** (z.B. UUU [Phe] → UUA [**Leucin**]). **Selektion:** Oft **negativ** (Protein-Funktion beeinträchtigt) → **niedrigere Rate** (schädliche Mutationen entfernt). **Verhältnis:** Synonyme **häufiger** als nicht-synonyme (Beleg für neutrale Evolution!).",
+    "difficulty": "hard",
+    "tags": ["Evolution", "Molekulare Evolution", "Synonyme Mutation", "Nicht-Synonyme Mutation", "Genetischer Code"]
+  },
+  {
+    "id": "bio-9-06-q4",
+    "question": "**Pseudogene** sind funktionslose Kopien von Genen und werden als 'molekulare Fossilien' bezeichnet. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Pseudogene sind hochkonserviert (wenige Mutationen), da sie wichtige Funktionen haben"
+      },
+      {
+        "id": "B",
+        "text": "Pseudogene akkumulieren Mutationen schneller (keine Selektion, da funktionslos). Beispiel: Vitamin-C-Synthese-Gen (GLO) bei Mensch/Primaten inaktiv → gemeinsamer Vorfahre"
+      },
+      {
+        "id": "C",
+        "text": "Pseudogene sind bei allen Organismen identisch (universell konserviert)"
+      },
+      {
+        "id": "D",
+        "text": "Pseudogene entstehen nur durch horizontalen Gentransfer (nicht durch Duplikation)"
+      },
+      {
+        "id": "E",
+        "text": "Pseudogene belegen, dass Evolution nicht stattgefunden hat (Design-Fehler)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Pseudogene:** **Funktionslose** Kopien von Genen (durch Mutationen inaktiviert). **Entstehung:** (1) **Duplikation** (Gen dupliziert → eine Kopie mutiert), (2) **Retrotransposition** (mRNA → DNA → Integration, meist ohne Promotor). **Wichtig:** Pseudogene akkumulieren Mutationen **schneller** (keine negative Selektion, da funktionslos). **Beispiel:** **Vitamin-C-Synthese-Gen (GLO)** bei **Mensch/Primaten** = Pseudogen (inaktiv) → können Vitamin C **nicht** synthetisieren (benötigen aus Nahrung). Andere Säugetiere: funktionsfähig. **Bedeutung:** Pseudogene = **molekulare Fossilien** (belegen **gemeinsame Abstammung** Mensch-Primaten)!",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Molekulare Evolution", "Pseudogene", "Vitamin C", "GLO"]
+  },
+  {
+    "id": "bio-9-06-q5",
+    "question": "**Horizontaler Gentransfer (HGT)** ermöglicht die Übertragung von Genen zwischen nicht-verwandten Organismen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Horizontaler Gentransfer findet nur bei Eukaryoten statt (nicht bei Prokaryoten)"
+      },
+      {
+        "id": "B",
+        "text": "Horizontaler Gentransfer bei Prokaryoten: Transformation (DNA-Aufnahme), Transduktion (Phagen), Konjugation (Plasmide) → Antibiotikaresistenz-Verbreitung"
+      },
+      {
+        "id": "C",
+        "text": "Horizontaler Gentransfer ist identisch mit vertikalem Transfer (Eltern → Nachkommen)"
+      },
+      {
+        "id": "D",
+        "text": "Horizontaler Gentransfer hat keine evolutionäre Bedeutung (nur Laborartefakt)"
+      },
+      {
+        "id": "E",
+        "text": "Antibiotikaresistenz kann nicht durch horizontalen Gentransfer verbreitet werden"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Horizontaler Gentransfer (HGT):** Gene zwischen **nicht-verwandten** Organismen übertragen (nicht Eltern → Nachkommen = **vertikaler Transfer**). **Mechanismen bei Prokaryoten:** (1) **Transformation** (DNA-Aufnahme aus Umgebung), (2) **Transduktion** (Phagen/Viren übertragen DNA), (3) **Konjugation** (direkter DNA-Transfer via Plasmide). **Bedeutung:** **Antibiotikaresistenz** → Plasmide mit Resistenz-Genen → **schnelle Verbreitung** zwischen Bakterien-Arten! **Problem für Phylogenie:** Stammbaum komplexer (nicht nur Verzweigung, sondern Querverbindungen). **Wichtig:** HGT = horizontal (zwischen Arten), vertikal = Eltern → Nachkommen!",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Molekulare Evolution", "Horizontaler Gentransfer", "HGT", "Antibiotikaresistenz"]
+  }
+]

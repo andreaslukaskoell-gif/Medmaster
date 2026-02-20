@@ -1,0 +1,147 @@
+[
+  {
+    "id": "q1",
+    "question": "Aus welchen drei Hauptkomponenten besteht das Zytoskelett?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Nur Mikrofilamente"
+      },
+      {
+        "id": "B",
+        "text": "Mikrofilamente (Aktin, 7 nm), Mikrotubuli (Tubulin, 25 nm), Intermediärfilamente (10 nm)"
+      },
+      {
+        "id": "C",
+        "text": "Nur DNA-Stränge"
+      },
+      {
+        "id": "D",
+        "text": "Nur Ribosomen"
+      },
+      {
+        "id": "E",
+        "text": "Nur Mitochondrien"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Das ZYTOSKELETT besteht aus DREI Haupt-Filament-Typen: (1) **MIKROFILAMENTE (AKTIN-FILAMENTE):** Durchmesser ~7 nm (dünnste). G-Aktin (globulär, Monomer) → F-Aktin (filamentös, Polymer). Funktionen: Zellbewegung (Lamellipodien, Filopodien), Muskelkontraktion (Aktin-Myosin), Zytokinese (kontraktiler Ring). (2) **MIKROTUBULI:** Durchmesser ~25 nm (dickste). 13 Protofilamente aus α-/β-Tubulin-Dimeren. Funktionen: Intrazellulärer Transport (Kinesin/Dynein-Motorproteine), Mitose (Spindelapparat), Zilien/Flagellen (9+2-Struktur). (3) **INTERMEDIÄRFILAMENTE:** Durchmesser ~10 nm (mittlere Größe). Gewebsspezifisch (Keratine, Vimentin, Desmin, GFAP, Neurofilamente, Lamine). Funktion: Mechanische Stabilität, NICHT dynamisch (kein ATP/GTP). A, C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Was sind Motorproteine und welche Richtungen bewegen sie sich?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Motorproteine haben keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "Kinesin (Plus-Ende, Zentrosom → Peripherie, anterograder Transport), Dynein (Minus-Ende, Peripherie → Zentrosom, retrograder Transport), Myosin (Aktin, Muskelkontraktion)"
+      },
+      {
+        "id": "C",
+        "text": "Nur Kinesin existiert"
+      },
+      {
+        "id": "D",
+        "text": "Motorproteine sind nur in Bakterien"
+      },
+      {
+        "id": "E",
+        "text": "Motorproteine produzieren ATP"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **MOTORPROTEINE** sind ATP-abhängige Enzyme, die entlang Zytoskelett-Filamenten \"laufen\" und Cargo transportieren. Drei Haupttypen: (1) **KINESIN:** Bewegt sich zum **PLUS-ENDE** von Mikrotubuli (Minus-Ende am Zentrosom verankert → Kinesin bewegt sich Richtung Zellperipherie). **ANTEROGRADER TRANSPORT** (Zentrosom → Peripherie): Vesikel, Organellen, mRNA. Struktur: 2 schwere Ketten (Motordomänen, ATP-Hydrolyse), 2 leichte Ketten (Cargo-Bindung). 8 nm Schritte. (2) **DYNEIN:** Bewegt sich zum **MINUS-ENDE** (Peripherie → Zentrosum). **RETROGRADER TRANSPORT:** Endosomen, Lysosomen, fehlerhafte Proteine. Axonaler Transport (Neuronen): Synapse → Zellkörper. Auch: Spindelapparat-Positionierung in Mitose. (3) **MYOSIN:** Bewegt sich entlang **AKTIN-Filamenten** (Plus-Ende). Myosin II: Muskelkontraktion (Gleitfilament-Theorie), Zytokinese (kontraktiler Ring). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Was ist dynamische Instabilität von Mikrotubuli?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Mikrotubuli sind statisch"
+      },
+      {
+        "id": "B",
+        "text": "Dynamische Instabilität: GTP-Kappe (β-Tubulin) am Plus-Ende → Wachstum. GTP-Verlust → Katastrophe (schnelle Depolymerisation). Rettung: neue GTP-Tubulin → Wachstum fortsetzt"
+      },
+      {
+        "id": "C",
+        "text": "Mikrotubuli produzieren ATP"
+      },
+      {
+        "id": "D",
+        "text": "Mikrotubuli sind nur in Bakterien"
+      },
+      {
+        "id": "E",
+        "text": "Mikrotubuli sind DNA-Strukturen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **DYNAMISCHE INSTABILITÄT** ist ein Charakteristikum von Mikrotubuli – schneller Wechsel zwischen Wachstums- und Schrumpfungsphasen. Mechanismus: (1) **POLYMERISATION (Wachstum):** β-Tubulin bindet **GTP** → GTP-Tubulin-Dimere (α-/β-Tubulin) lagern sich am **PLUS-ENDE** an. **GTP-KAPPE** entsteht (β-Tubulin mit GTP exponiert). (2) **GTP-HYDROLYSE:** Nach Anlagerung wird GTP zu GDP hydrolysiert → GDP-Tubulin (instabil, gebogene Konformation). (3) **KATASTROPHE:** GTP-Kappe VERLOREN (Hydrolyse schneller als Polymerisation) → GDP-Tubulin exponiert → SCHNELLE DEPOLYMERISATION (Schrumpfung, mehrere μm/Min). (4) **RETTUNG:** Neue GTP-Tubulin binden → GTP-Kappe wiederhergestellt → Wachstum fortsetzt. BIOLOGISCHE BEDEUTUNG: Schnelle Reorganisation des Mikrotubuli-Netzwerks (z.B. Mitose: Spindelapparat-Auf-/Abbau, \"Search-and-Capture\" von Chromosomen). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q4",
+    "question": "Welche Intermediärfilamente sind gewebsspezifisch und wo kommen sie vor?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Alle Intermediärfilamente sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Keratine (Epithelien), Vimentin (Mesenchym), Desmin (Muskel), GFAP (Astrozyten), Neurofilamente (Neuronen), Lamine (Kernlamina)"
+      },
+      {
+        "id": "C",
+        "text": "Intermediärfilamente sind nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Intermediärfilamente produzieren ATP"
+      },
+      {
+        "id": "E",
+        "text": "Intermediärfilamente sind DNA-Strukturen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **INTERMEDIÄRFILAMENTE** sind GEWEBSSPEZIFISCH – verschiedene Typen in verschiedenen Geweben (diagnostisch nützlich!). Haupttypen: (1) **KERATINE (Typ I/II):** **EPITHELZELLEN**. Zytokeratine (z.B. Keratin 8/18 in inneren Epithelien, Keratin 5/14 in Haut), α-Keratin (Haare, Nägel). Pathologie: Zytokeratin-positiv → Karzinome (epithelialer Ursprung). (2) **VIMENTIN (Typ III):** **MESENCHYMALE ZELLEN** (Fibroblasten, Endothelzellen, Leukozyten). Tumor-Marker: Vimentin-positiv → Sarkome (mesenchymaler Ursprung). (3) **DESMIN (Typ III):** **MUSKELZELLEN** (Skelett-, Herz-, glatte Muskulatur). Verbindet Z-Scheiben → mechanische Kopplung. Desminopathie → Kardiomyopathie. (4) **GFAP (Typ III):** **ASTROZYTEN** (ZNS-Gliazellen). GFAP-positiv → Glioblastom, Astrozytom. (5) **NEUROFILAMENTE (Typ IV):** **NEURONEN** (Axone), bestimmen Axon-Durchmesser. Alzheimer: Desorganisation. (6) **LAMINE (Typ V):** **KERNLAMINA** (Zellkern). Progerie (Lamin A-Mutation) → vorzeitiges Altern. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q5",
+    "question": "Wie wirken Colchicin und Taxol auf Mikrotubuli?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide haben keine Wirkung"
+      },
+      {
+        "id": "B",
+        "text": "Colchicin hemmt Tubulin-Polymerisation → Mitose-Arrest. Taxol stabilisiert Mikrotubuli (verhindert Depolymerisation) → Mitose-Arrest"
+      },
+      {
+        "id": "C",
+        "text": "Nur Colchicin existiert"
+      },
+      {
+        "id": "D",
+        "text": "Beide produzieren ATP"
+      },
+      {
+        "id": "E",
+        "text": "Beide sind nur gegen Viren wirksam"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **COLCHICIN** und **TAXOL** sind MIKROTUBULI-INHIBITOREN mit GEGENSÄTZLICHEN Mechanismen, aber beide führen zu Mitose-Arrest. (1) **COLCHICIN:** Bindet **TUBULIN-DIMERE** → HEMMT POLYMERISATION (Tubulin kann nicht in Mikrotubuli eingebaut werden) → Mikrotubuli-Depolymerisation (Abbau) → **Mitose-Arrest** (Spindelapparat kann nicht gebildet werden). Anwendung: **Gicht-Therapie** (hemmt Neutrophilen-Migration, verhindert Inflammation). Toxisch (schmales therapeutisches Fenster). (2) **TAXOL (Paclitaxel):** Bindet **MIKROTUBULI** → **STABILISIERT** (verhindert Depolymerisation, \"einfriert\" Mikrotubuli) → Dynamische Instabilität BLOCKIERT → Mitose-Arrest (Chromosomen können nicht getrennt werden). Anwendung: **CHEMOTHERAPIE** (Brust-/Ovarial-Karzinom, Lungenkrebs). Nebenwirkungen: Neutropenie, periphere Neuropathie. Analog: **Vinblastin/Vincristin** (hemmen Polymerisation, wie Colchicin) → Chemotherapie (Leukämie, Lymphome). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  }
+]

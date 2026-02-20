@@ -1,0 +1,77 @@
+[
+  {
+    "id": "bio-3-11-q01",
+    "question": "Welche Aussage über Osteoblasten und Osteoklasten ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Osteoblasten sind mehrkernige Zellen, die durch Resorption Knochen abbauen."},
+      {"id": "B", "text": "Osteoklasten synthetisieren Kollagen Typ I und mineralisieren die Knochenmatrix."},
+      {"id": "C", "text": "Osteoblasten bauen Knochen auf durch Kollagen-I-Synthese und Mineralisierung (Ca²⁺, PO₄³⁻). Osteoklasten sind mehrkernige Zellen (Monozyten-Ursprung), die durch H⁺ und Proteasen Knochen abbauen."},
+      {"id": "D", "text": "PTH (Parathormon) stimuliert Osteoblasten und hemmt Osteoklasten."},
+      {"id": "E", "text": "Alkalische Phosphatase ist ein Marker für Knochenabbau durch Osteoklasten."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Osteoblasten** (Knochenaufbau):\n- **Synthese** von Kollagen Typ I (organische Matrix)\n- **Mineralisierung** mit Ca²⁺ und PO₄³⁻ (anorganische Matrix)\n- **Alkalische Phosphatase ↑** (Marker für Knochenaufbau)\n- **Regulation:** PTH ↓, Calcitonin ↑, Vitamin D, Östrogen\n\n**Osteoklasten** (Knochenabbau):\n- **Mehrkernig** (Fusion von Monozyten/Makrophagen)\n- **Resorption:** H⁺ (Ansäuerung → Mineralauflösung) + Proteasen (Kollagenabbau)\n- **Regulation:** RANKL (von Osteoblasten) → aktiviert Osteoklasten via RANK-Rezeptor\n\n**Falsch (A):** **Osteoklasten** (nicht Osteoblasten) sind mehrkernig und bauen Knochen ab.\n\n**Falsch (B):** **Osteoblasten** (nicht Osteoklasten) synthetisieren Kollagen I und mineralisieren.\n\n**Falsch (D):** PTH **stimuliert indirekt Osteoklasten** (über RANKL ↑ von Osteoblasten) → Knochenabbau → Ca²⁺ ↑ im Blut.\n\n**Falsch (E):** Alkalische Phosphatase ist Marker für **Knochenaufbau** (Osteoblasten), nicht Abbau.",
+    "difficulty": "easy",
+    "tags": ["skelett", "knochen", "osteoblasten", "osteoklasten", "knochenumbau"]
+  },
+  {
+    "id": "bio-3-11-q02",
+    "question": "Welche Aussage über das RANKL/OPG-System ist korrekt?",
+    "options": [
+      {"id": "A", "text": "RANKL wird von Osteoklasten produziert und aktiviert Osteoblasten zum Knochenaufbau."},
+      {"id": "B", "text": "RANKL (von Osteoblasten) bindet an RANK-Rezeptoren auf Osteoklasten und aktiviert diese zum Knochenabbau. OPG (Osteoprotegerin) ist ein löslicher Rezeptor, der RANKL bindet und hemmt, wodurch Knochenabbau reduziert wird."},
+      {"id": "C", "text": "OPG (Osteoprotegerin) wird von Osteoklasten produziert und fördert RANKL."},
+      {"id": "D", "text": "Denosumab ist ein Anti-OPG-Antikörper zur Osteoporose-Therapie."},
+      {"id": "E", "text": "Die RANKL/OPG-Ratio hat keinen Einfluss auf den Knochenumbau."}
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **RANKL/OPG-System** reguliert Knochenabbau:\n\n**RANKL** (Receptor Activator of NF-κB Ligand):\n- **Produziert von Osteoblasten** (und Stromazellen)\n- Bindet an **RANK-Rezeptor** auf Osteoklasten\n- **Aktiviert Osteoklasten** → Knochenabbau ↑\n\n**OPG** (Osteoprotegerin):\n- **Löslicher Rezeptor**, produziert von Osteoblasten\n- **Bindet RANKL** → verhindert RANKL-RANK-Interaktion\n- **Hemmt Osteoklasten-Aktivierung** → Knochenabbau ↓\n\n**RANKL/OPG-Ratio** bestimmt Knochenumbau:\n- RANKL/OPG ↑ → Knochenabbau ↑ (z. B. Menopause: Östrogen ↓ → RANKL ↑, OPG ↓)\n- RANKL/OPG ↓ → Knochenaufbau ↑\n\n**Therapeutisch:** **Denosumab** = **Anti-RANKL-Antikörper** → blockiert RANKL → Osteoklasten ↓ → Osteoporose-Therapie\n\n**Falsch (A):** RANKL wird von **Osteoblasten** (nicht Osteoklasten) produziert und aktiviert **Osteoklasten** (nicht Osteoblasten).\n\n**Falsch (C):** OPG wird von **Osteoblasten** produziert und **hemmt** (nicht fördert) RANKL.\n\n**Falsch (D):** Denosumab ist **Anti-RANKL** (nicht Anti-OPG).\n\n**Falsch (E):** RANKL/OPG-Ratio ist **zentral** für Knochenumbau-Regulation.",
+    "difficulty": "medium",
+    "tags": ["skelett", "knochen", "rankl", "opg", "osteoklasten", "osteoporose"]
+  },
+  {
+    "id": "bio-3-11-q03",
+    "question": "Welche Aussage über Osteoporose ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Osteoporose entsteht durch Vitamin D-Mangel bei Kindern und führt zu weichen Knochen."},
+      {"id": "B", "text": "Postmenopausale Osteoporose entsteht durch Östrogen-Mangel, der zu erhöhter Osteoklasten-Aktivität führt. Typische Frakturlokalisationen sind Wirbelkörper, Femur und Radius. Therapie umfasst Bisphosphonate und Denosumab (Anti-RANKL-Antikörper)."},
+      {"id": "C", "text": "Bisphosphonate stimulieren Osteoklasten zur Verbesserung des Knochenabbaus."},
+      {"id": "D", "text": "Morbus Paget ist eine Form der Osteoporose mit vermindertem Knochenumbau."},
+      {"id": "E", "text": "Osteoporose betrifft primär junge Männer unter 30 Jahren."}
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Osteoporose** = Knochenmasse ↓ (Osteoblasten < Osteoklasten), Frakturrisiko ↑\n\n**Ursachen:**\n- **Postmenopausal:** Östrogen ↓ → RANKL ↑, OPG ↓ → **Osteoklasten ↑** → Knochenabbau > Aufbau\n- **Alter:** Knochenumbau ↓, Vitamin D/Ca²⁺-Absorption ↓\n- **Weitere:** Vitamin D/Ca²⁺-Mangel, Immobilisation, Kortikosteroide, Rauchen\n\n**Frakturlokalisationen:**\n- **Wirbelkörper** (Kompressionsfrakturen)\n- **Femur** (proximaler Femur, Schenkelhals)\n- **Radius** (distaler Radius, Colles-Fraktur)\n\n**Therapie:**\n- **Bisphosphonate** (z. B. Alendronat): Hemmen Osteoklasten → Knochenabbau ↓\n- **Denosumab:** Anti-RANKL-Antikörper → blockiert RANKL → Osteoklasten ↓\n- **Weitere:** Östrogen (postmenopausal), Vitamin D/Ca²⁺-Supplementation\n\n**Falsch (A):** Beschreibt **Rachitis** (Kinder) bzw. **Osteomalazie** (Erwachsene) = Vitamin D-Mangel → Mineralisierung ↓ → weiche Knochen (nicht Osteoporose).\n\n**Falsch (C):** Bisphosphonate **hemmen** (nicht stimulieren) Osteoklasten.\n\n**Falsch (D):** **Morbus Paget:** **Übermäßiger** (nicht verminderter) Knochenumbau → deformierte, vergrößerte Knochen.\n\n**Falsch (E):** Osteoporose betrifft v. a. **postmenopausale Frauen** und **ältere Erwachsene** (>50 Jahre).",
+    "difficulty": "medium",
+    "tags": ["skelett", "knochen", "osteoporose", "östrogen", "bisphosphonate", "denosumab"]
+  },
+  {
+    "id": "bio-3-11-q04",
+    "question": "Welche Aussage über Knorpeltypen ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Hyaliner Knorpel enthält Kollagen Typ I und ist hauptsächlich in Bandscheiben zu finden."},
+      {"id": "B", "text": "Elastischer Knorpel enthält Kollagen Typ II plus Elastin und ist in Ohrmuschel und Epiglottis lokalisiert. Er ist flexibel durch den Elastin-Anteil."},
+      {"id": "C", "text": "Faserknorpel enthält Kollagen Typ II und ist der häufigste Knorpeltyp im Körper."},
+      {"id": "D", "text": "Knorpelgewebe ist stark vaskularisiert und wird über Blutgefäße ernährt."},
+      {"id": "E", "text": "Arthrose ist eine Entzündung des Gelenkknorpels durch Bakterien."}
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Knorpeltypen:**\n\n| Typ | Kollagen | Lokalisation | Eigenschaften |\n|-----|----------|--------------|---------------|\n| **Hyaliner Knorpel** | **Kollagen II** | Gelenkflächen, Rippen, Trachea, Nasenseptum | Glatt, glänzend, **häufigster Typ** |\n| **Elastischer Knorpel** | **Kollagen II + Elastin** | **Ohrmuschel, Epiglottis** | **Flexibel** (durch Elastin) |\n| **Faserknorpel** | **Kollagen I** | Bandscheiben, Meniskus, Symphyse | **Zugfest** (durch Kollagen I) |\n\n**Knorpel-Eigenschaften:**\n- **Gefäßfrei** (avaskulär) → Ernährung durch **Diffusion** (aus Perichondrium oder Synovia)\n- **Chondrozyten** (Knorpelzellen) in Lakunen\n- **Matrix:** Kollagen + Proteoglykane (Wasser-Bindung, Druckresistenz)\n\n**Klinisch:** **Arthrose** = Gelenkknorpel-**Abbau** (Verschleiß, nicht Entzündung) → Schmerz, Bewegungseinschränkung, Gelenkspaltverschmälerung (Röntgen), Osteophyten (Knochenanbauten)\n\n**Falsch (A):** Hyaliner Knorpel enthält **Kollagen II** (nicht I) und ist in **Gelenken** (nicht Bandscheiben). Bandscheiben = **Faserknorpel** (Kollagen I).\n\n**Falsch (C):** Faserknorpel enthält **Kollagen I** (nicht II). **Häufigster Typ** = **hyaliner Knorpel**.\n\n**Falsch (D):** Knorpel ist **gefäßfrei** (avaskulär) → Ernährung durch Diffusion (nicht Blutgefäße).\n\n**Falsch (E):** Arthrose = **Verschleiß** (degenerativ, nicht bakteriell). Bakterielle Gelenkentzündung = **septische Arthritis**.",
+    "difficulty": "medium",
+    "tags": ["skelett", "knorpel", "hyalin", "elastisch", "faser", "kollagen"]
+  },
+  {
+    "id": "bio-3-11-q05",
+    "question": "Welche Aussage über Gelenke ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Synarthrosen sind echte Gelenke mit Gelenkspalt und hoher Beweglichkeit."},
+      {"id": "B", "text": "Diarthrosen (echte Gelenke) haben einen Gelenkspalt, Gelenkkapsel und Synovia (Gelenkflüssigkeit). Kugelgelenke (z. B. Schulter, Hüfte) erlauben Bewegung in 3 Achsen, Scharniergelenke (z. B. Knie, Ellenbogen) nur in 1 Achse (Flexion/Extension)."},
+      {"id": "C", "text": "Die Synovia (Gelenkflüssigkeit) wird von Chondrozyten produziert."},
+      {"id": "D", "text": "Bänder verbinden Muskel mit Knochen und übertragen Muskelkraft."},
+      {"id": "E", "text": "Das Kniegelenk ist ein Kugelgelenk mit 3 Bewegungsachsen."}
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Gelenktypen:**\n\n**Synarthrose (unecht):**\n- **Kein Gelenkspalt**\n- **Unbeweglich/wenig beweglich**\n- Beispiele: Schädelnähte (fibrös), Symphyse (Faserknorpel)\n\n**Diarthrose (echt):**\n- **Gelenkspalt**, **Gelenkkapsel**, **Synovia**\n- **Frei beweglich**\n- Komponenten: Gelenkknorpel (hyalin), Gelenkkapsel (Kapsel fibrosa + Membrana synovialis), Synovia (Schmierung, Ernährung), Bänder (Stabilität)\n\n**Gelenkformen:**\n- **Kugelgelenk** (Schulter, Hüfte): **3 Achsen**, größte Beweglichkeit\n- **Scharniergelenk** (Knie, Ellenbogen): **1 Achse** (Flexion/Extension)\n- **Sattelgelenk** (Daumen): 2 Achsen\n- **Drehgelenk** (Atlas-Axis): Rotation\n\n**Synovia:** Gelenkflüssigkeit, produziert von **Membrana synovialis** (nicht Chondrozyten), enthält Hyaluronsäure + Proteine → Schmierung + Ernährung des Knorpels\n\n**Falsch (A):** **Diarthrosen** (nicht Synarthrosen) sind echte Gelenke mit Gelenkspalt und hoher Beweglichkeit. Synarthrosen = unecht, kein Gelenkspalt, kaum beweglich.\n\n**Falsch (C):** Synovia wird von **Membrana synovialis** (Gelenkkapsel-Innenschicht) produziert, nicht von Chondrozyten.\n\n**Falsch (D):** **Sehnen** (nicht Bänder) verbinden Muskel mit Knochen. **Bänder** verbinden Knochen mit Knochen (Stabilität).\n\n**Falsch (E):** Knie = **Scharniergelenk** (1 Achse: Flexion/Extension), nicht Kugelgelenk.",
+    "difficulty": "easy",
+    "tags": ["skelett", "gelenke", "diarthrose", "kugelgelenk", "scharniergelenk", "synovia"]
+  }
+]

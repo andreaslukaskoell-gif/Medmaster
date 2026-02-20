@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-11-01-q1",
+    "question": "Die **angeborene Immunität** umfasst mehrere Barrieren als erste Verteidigungslinie. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Chemische Barrieren: Nur Magensäure (pH~2, tötet Bakterien), keine anderen chemischen Faktoren"
+      },
+      {
+        "id": "B",
+        "text": "Barrieren: Physikalisch (Haut, Schleimhäute, Zilien [Atemwege]), Chemisch (Magensäure pH~2, Lysozym [Tränen/Speichel, spaltet Peptidoglycan], Defensine), Biologisch (Normalflora/Mikrobiom, Konkurrenz)"
+      },
+      {
+        "id": "C",
+        "text": "Biologische Barrieren: Pathogene Bakterien schützen vor Infektionen (nicht kommensale)"
+      },
+      {
+        "id": "D",
+        "text": "Lysozym ist ein Hormon (kein Enzym, keine antimikrobielle Wirkung)"
+      },
+      {
+        "id": "E",
+        "text": "Zilien (Flimmerhärchen) transportieren Pathogene tiefer in die Lunge (nicht nach außen)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Barrieren (Erste Verteidigungslinie):** (1) **Physikalisch:** **Haut** (Keratin, mechanische Barriere), **Schleimhäute** (Schleim fängt Pathogene), **Zilien** (Flimmerhärchen, Atemwege, transportieren Schleim + Pathogene **NACH AUßEN**, nicht tiefer!). (2) **Chemisch:** **Magensäure** (pH~2, tötet Bakterien!), **Lysozym** (**Enzym** in Tränen, Speichel, Schweiß, spaltet Bakterien-Zellwand [Peptidoglycan]), **Defensine** (antimikrobielle Peptide). (3) **Biologisch:** **Normalflora/Mikrobiom** (**kommensale** Bakterien auf Haut/Darm, Konkurrenz → Pathogene können nicht ansiedeln). **Wichtig:** Mehrschichtige Verteidigung!",
+    "difficulty": "easy",
+    "tags": ["Immunbiologie", "Angeborene Immunität", "Barrieren", "Lysozym", "Normalflora"]
+  },
+  {
+    "id": "bio-11-01-q2",
+    "question": "**Phagozyten** (Fresszellen) sind zentrale Zellen der angeborenen Immunität. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Makrophagen leben nur Stunden (kurze Lebensdauer wie Neutrophile)"
+      },
+      {
+        "id": "B",
+        "text": "Makrophagen (Gewebe: Lunge-Alveolar, Leber-Kupffer, Monate-Jahre, Antigenpräsentation). Neutrophile (häufigste WBCs ~60%, ERSTE am Infektionsort, Stunden-Tage, sterben → EITER = tote Neutrophile!)"
+      },
+      {
+        "id": "C",
+        "text": "Neutrophile sind die seltensten weißen Blutkörperchen (<5%)"
+      },
+      {
+        "id": "D",
+        "text": "Eiter besteht nur aus lebenden Bakterien (keine toten Zellen)"
+      },
+      {
+        "id": "E",
+        "text": "Dendritische Zellen führen keine Antigenpräsentation durch (nur Phagozytose)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Phagozyten (Fresszellen):** (1) **Makrophagen:** **Gewebemakrophagen** (Lunge: **Alveolarmakrophagen**, Leber: **Kupffer-Zellen**, Gehirn: **Mikroglia**). **Lebensdauer:** **Monate bis Jahre** (nicht Stunden!). **Funktion:** Phagozytose + **Antigenpräsentation** (Brücke zu erworbener Immunität!). (2) **Neutrophile Granulozyten:** **Häufigste** WBCs (~**60%**, nicht selten!). **ERSTE** am Infektionsort (**Chemotaxis**!). **Lebensdauer:** Stunden bis Tage. Sterben nach Phagozytose → **EITER** = **tote Neutrophile** + Gewebereste + Bakterien (gelblich-weiß)! (3) **Dendritische Zellen:** Antigenpräsentation (Verbindung zu T-Zellen). **Wichtig:** Neutrophile = erste Responder!",
+    "difficulty": "medium",
+    "tags": ["Immunbiologie", "Angeborene Immunität", "Phagozyten", "Makrophagen", "Neutrophile", "Eiter"]
+  },
+  {
+    "id": "bio-11-01-q3",
+    "question": "**Natürliche Killerzellen (NK-Zellen)** erkennen und töten virusinfizierte Zellen. Welcher Mechanismus liegt zugrunde?",
+    "options": [
+      {
+        "id": "A",
+        "text": "NK-Zellen erkennen spezifische Antigene (wie T-Zellen, spezifische Immunität)"
+      },
+      {
+        "id": "B",
+        "text": "'Missing Self': Gesunde Zellen haben MHC-I (Selbst-Marker) → kein Angriff. Virusinfizierte/Tumorzellen: MHC-I ↓ (unterdrückt!) → NK-Zelle greift an (Perforin [Poren] + Granzyme [Apoptose])"
+      },
+      {
+        "id": "C",
+        "text": "NK-Zellen greifen nur Zellen mit hohem MHC-I an (nicht niedrig)"
+      },
+      {
+        "id": "D",
+        "text": "NK-Zellen sind Teil der erworbenen Immunität (nicht angeboren)"
+      },
+      {
+        "id": "E",
+        "text": "Perforin induziert Apoptose direkt (nicht Granzyme)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**NK-Zellen (Natürliche Killerzellen):** Teil der **angeborenen** Immunität (unspezifisch, kein Antigen-Rezeptor!). **Funktion:** Töten **virusinfizierte** Zellen + **Tumorzellen**. **Mechanismus:** **'Missing Self'** (Fehlendes Selbst): (1) **Gesunde Zellen:** Haben **MHC-I** (Major Histocompatibility Complex I, Selbst-Marker) → NK-Zelle greift **NICHT** an (inhibitorische Rezeptoren). (2) **Virusinfizierte/Tumorzellen:** **MHC-I ↓** (Virus/Tumor unterdrückt MHC-I, um T-Zellen zu entgehen!) → NK-Zelle greift **AN**. **Tötung:** **Perforin** (bildet **Poren** in Zielzell-Membran) + **Granzyme** (Proteasen, induzieren **Apoptose**) → Zelle stirbt. **Wichtig:** MHC-I niedrig → Angriff!",
+    "difficulty": "medium",
+    "tags": ["Immunbiologie", "Angeborene Immunität", "NK-Zellen", "Missing Self", "MHC-I", "Perforin"]
+  },
+  {
+    "id": "bio-11-01-q4",
+    "question": "**Entzündung (Inflammation)** ist eine lokale Reaktion auf Infektion. Welche sind die **5 Kardinalsymptome**?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Rötung, Blässe, Trockenheit, Kälte, Schmerzlosigkeit"
+      },
+      {
+        "id": "B",
+        "text": "Rötung (Rubor), Wärme (Calor), Schwellung (Tumor), Schmerz (Dolor), Funktionseinschränkung (Functio laesa). Mediatoren: Histamin (Mastzellen), Prostaglandine"
+      },
+      {
+        "id": "C",
+        "text": "Nur Rötung und Schwellung (keine anderen Symptome)"
+      },
+      {
+        "id": "D",
+        "text": "Entzündung verursacht Gefäßverengung (Vasokonstriktion, nicht Vasodilatation)"
+      },
+      {
+        "id": "E",
+        "text": "Histamin wird von Neutrophilen freigesetzt (nicht von Mastzellen)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Entzündung (Inflammation) - 5 Kardinalsymptome:** (1) **Rötung** (Rubor): **Vasodilatation** (Blutgefäße erweitert, nicht verengt!), mehr Blut. (2) **Wärme** (Calor): Mehr Blutfluss. (3) **Schwellung** (Tumor): **Exsudat** (Flüssigkeit + Proteine treten aus Gefäßen, erhöhte Permeabilität). (4) **Schmerz** (Dolor): Gewebeschädigung, Druck auf Nerven. (5) **Funktionseinschränkung** (Functio laesa): Schwellung/Schmerz → Bewegung eingeschränkt. **Mediatoren:** **Histamin** (von **Mastzellen** freigesetzt, nicht Neutrophile!), Prostaglandine → Vasodilatation. **Eiter:** Tote Neutrophile + Gewebereste + Bakterien. **Wichtig:** Entzündung = **lokale** Reaktion (nicht systemisch wie Fieber)!",
+    "difficulty": "easy",
+    "tags": ["Immunbiologie", "Angeborene Immunität", "Entzündung", "Kardinalsymptome", "Histamin", "Mastzellen"]
+  },
+  {
+    "id": "bio-11-01-q5",
+    "question": "Das **Komplementsystem** ist eine Kaskade von Plasmaproteinen mit mehreren Funktionen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Komplementsystem hat nur eine Funktion: Opsonierung (keine anderen Effekte)"
+      },
+      {
+        "id": "B",
+        "text": "Komplementsystem: (1) Opsonierung (C3b markiert Pathogen → Phagozytose ↑), (2) Chemotaxis (C5a lockt Phagozyten), (3) MAC (C5b-C9, Pore → Lyse!), (4) Entzündung (C3a/C5a Anaphylatoxine)"
+      },
+      {
+        "id": "C",
+        "text": "MAC (Membranattackkomplex) besteht nur aus C3b (nicht C5b-C9)"
+      },
+      {
+        "id": "D",
+        "text": "Opsonierung bedeutet, dass Pathogene durch Poren lysiert werden (nicht markiert)"
+      },
+      {
+        "id": "E",
+        "text": "C5a ist ein Opsonin (nicht ein Lockstoff für Chemotaxis)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Komplementsystem:** Kaskade ~30 Plasmaproteinen (C1-C9 + Faktoren). **4 Funktionen:** (1) **Opsonierung:** **C3b** bindet an Pathogen-Oberfläche → **'Markierung'** für Phagozyten (erkennen C3b → Phagozytose ↑), **nicht** Lyse! (2) **Chemotaxis:** **C5a** = Lockstoff für Neutrophile/Makrophagen (nicht Opsonin!). (3) **MAC (Membranattackkomplex):** **C5b-C9** (nicht nur C3b!) bilden **PORE** in Pathogen-Membran → Wasser einströmt → Zelle **platzt (Lyse)**! (4) **Entzündungsförderung:** **C3a, C5a** (Anaphylatoxine) → Histamin-Freisetzung (Mastzellen) → Vasodilatation. **Wichtig:** Komplement = **Verstärker** (hilft Phagozyten + tötet direkt)!",
+    "difficulty": "hard",
+    "tags": ["Immunbiologie", "Angeborene Immunität", "Komplementsystem", "Opsonierung", "MAC", "C3b", "C5a"]
+  },
+  {
+    "id": "bio-11-01-q6",
+    "question": "**PAMPs** und **PRRs** sind zentrale Konzepte der Pathogenerkennung. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "PAMPs (Pathogen-Associated Molecular Patterns) sind Rezeptoren auf Immunzellen (nicht auf Pathogenen)"
+      },
+      {
+        "id": "B",
+        "text": "PAMPs (Pathogen-Muster: LPS, Peptidoglycan, Flagellin, dsRNA) auf Pathogenen. PRRs (Pattern Recognition Receptors: TLR4 erkennt LPS) auf Immunzellen. Unspezifisch (viele Pathogene haben gleiche PAMPs)!"
+      },
+      {
+        "id": "C",
+        "text": "PRRs sind nur auf Bakterien vorhanden (nicht auf Immunzellen)"
+      },
+      {
+        "id": "D",
+        "text": "TLR4 erkennt spezifische Antigene (wie Antikörper, spezifische Immunität)"
+      },
+      {
+        "id": "E",
+        "text": "LPS (Lipopolysaccharid) ist ein PRR (nicht ein PAMP)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**PAMPs (Pathogen-Associated Molecular Patterns):** **Molekulare Muster** auf **Pathogenen** (Bakterien, Viren, Pilze, **NICHT** auf Immunzellen!). **Beispiele:** **LPS** (Lipopolysaccharid, Bakterien-Zellwand), **Peptidoglycan**, **Flagellin**, **dsRNA** (doppelsträngige RNA, Viren). **PRRs (Pattern Recognition Receptors):** **Rezeptoren** auf **Immunzellen** (Makrophagen, Dendritische Zellen, Neutrophile, **NICHT** auf Pathogenen!). **Beispiele:** **TLR** (Toll-like Receptors, z.B. **TLR4 erkennt LPS**, nicht spezifische Antigene!). **Funktion:** Erkennen PAMPs → Phagozytose + Entzündung. **Wichtig:** PAMPs = auf Pathogen, PRRs = auf Immunzelle, **unspezifisch** (viele Pathogene haben gleiche PAMPs)!",
+    "difficulty": "medium",
+    "tags": ["Immunbiologie", "Angeborene Immunität", "PAMPs", "PRRs", "TLR", "LPS"]
+  }
+]

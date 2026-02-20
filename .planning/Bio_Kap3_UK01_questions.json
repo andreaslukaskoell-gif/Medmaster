@@ -1,0 +1,176 @@
+[
+  {
+    "id": "q1",
+    "question": "Was sind die Hauptunterschiede zwischen Sympathikus und Parasympathikus?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Sympathikus (fight-or-flight): Thorakolumbal (T1-L2), Noradrenalin (postganglionär), α/β-Rezeptoren, Herz ↑ (β1), Bronchodilatation (β2), Mydriasis (α1), Peristaltik ↓ (α2). Parasympathikus (rest-and-digest): Kraniosakral (Hirnnerven III/VII/IX/X, S2-S4), Acetylcholin (prä+postganglionär), M2/M3-Rezeptoren, Herz ↓ (M2, Vagus), Bronchokonstriktion (M3), Miosis (M3), Peristaltik ↑ (M3)"
+      },
+      {
+        "id": "C",
+        "text": "Nur Sympathikus existiert"
+      },
+      {
+        "id": "D",
+        "text": "Parasympathikus nutzt Noradrenalin"
+      },
+      {
+        "id": "E",
+        "text": "Beide steigern Herzfrequenz"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **SYMPATHIKUS** und **PARASYMPATHIKUS** sind antagonistische Systeme des autonomen Nervensystems (unwillkürlich, innere Organe). **SYMPATHIKUS (fight-or-flight):** (1) **URSPRUNG:** Thorakolumbal (Seitenhorn, T1-L2). (2) **GANGLIEN:** Grenzstrang (paravertebral, entlang Wirbelsäule) + prävertebral (Ganglion coeliacum, mesentericum superius/inferius). (3) **NEUROTRANSMITTER:** **Noradrenalin** (postganglionär, an Effektor), **Acetylcholin** (präganglionär, im Ganglion, nikotinische Rezeptoren). (4) **REZEPTOREN (Effektor):** **α1** (Gq, Vasokonstriktion, Mydriasis), **α2** (Gi, Peristaltik ↓), **β1** (Gs, Herz: Frequenz ↑, Kontraktilität ↑), **β2** (Gs, Bronchodilatation, Vasodilatation Skelettmuskulatur, Glykogenolyse Leber), **β3** (Gs, Lipolyse Fettgewebe). (5) **EFFEKTE:** Herz ↑ (β1, SA-Knoten), Bronchodilatation (β2, glatte Muskulatur relaxiert), Mydriasis (α1, M. dilatator pupillae), Peristaltik ↓ (α2, β2), Sphinkter-Kontraktion (α1, Blase/Darm), Vasokonstriktion (α1, Haut/Splanchnikus), Glykogenolyse ↑ (β2, Leber → Glukose), Lipolyse ↑ (β3, Fettgewebe → freie Fettsäuren), Adrenalin-Freisetzung (Nebennierenmark, chromaffine Zellen). **PARASYMPATHIKUS (rest-and-digest):** (1) **URSPRUNG:** Kraniosakral (Hirnnerven III [N. oculomotorius, Pupille], VII [N. facialis, Speichel-/Tränendrüsen], IX [N. glossopharyngeus, Parotis], **X [N. vagus, Herz/Lunge/Magen-Darm bis linke Kolonflexur]**, + S2-S4 [Blase, Rektum, Genitalien]). (2) **GANGLIEN:** Organnah oder in Organwand (z.B. Plexus myentericus [Meissner, Auerbach], Ganglion ciliare). (3) **NEUROTRANSMITTER:** **Acetylcholin** (prä- + postganglionär). (4) **REZEPTOREN (Effektor):** **M2** (Gi, Herz: Frequenz ↓, SA-Knoten, K⁺-Kanäle ↑, cAMP ↓), **M3** (Gq, Bronchien: Konstriktion, Speicheldrüsen: Sekretion ↑, Magen-Darm: Peristaltik ↑, Blase: Miktion [Detrusor kontrahiert], Pupille: Miosis [M. sphincter pupillae]). (5) **EFFEKTE:** Herz ↓ (M2, Vagus), Bronchokonstriktion (M3), Miosis (M3, Nahakkommodation), Speichelsekretion ↑ (M3, dünnflüssig), Peristaltik ↑ (M3), Miktion (M3), Insulinsekretion ↑ (M3, Pankreas-β-Zellen). A ist falsch. C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Wie funktioniert die synaptische Transmission an einer chemischen Synapse?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Synapse funktioniert ohne Neurotransmitter"
+      },
+      {
+        "id": "B",
+        "text": "Aktionspotential → Axonterminale → Ca²⁺-Kanäle öffnen (P/Q-Typ, N-Typ) → Ca²⁺ rein → Synaptotagmin (Ca²⁺-Sensor) bindet Ca²⁺ → SNARE-Komplex (Synaptobrevin + Syntaxin + SNAP-25) → Vesikel-Fusion → Neurotransmitter-Freisetzung (Exozytose, Quantal Release) → Rezeptoren (ionotrop [AMPA, NMDA, GABA_A, nikotinisch] oder metabotrop [D1/D2, 5-HT, α/β, M1-M5]) → EPSP (Depolarisation) oder IPSP (Hyperpolarisation)"
+      },
+      {
+        "id": "C",
+        "text": "Synapse ist nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Synapse benötigt kein Ca²⁺"
+      },
+      {
+        "id": "E",
+        "text": "Synapse ist elektrisch"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **CHEMISCHE SYNAPSE** überträgt Signale via Neurotransmitter (häufigster Typ, im Gegensatz zu elektrischer Synapse [Gap Junctions, selten, z.B. Herzmuskel]). **ABLAUF (synaptische Transmission):** (1) **AKTIONSPOTENTIAL** erreicht präsynaptisches **Axonterminale** (Depolarisation). (2) Spannungsgesteuerte **CA²⁺-KANÄLE öffnen** (P/Q-Typ [Ca_v2.1, häufigste in ZNS-Synapsen], N-Typ [Ca_v2.2, PNS], L-Typ [Ca_v1.x, Herz]). (3) **Ca²⁺ strömt ein** (von ~0.1 μM → ~10-100 μM, hochgradig lokalisiert an aktiven Zonen). (4) Ca²⁺ bindet **SYNAPTOTAGMIN** (Ca²⁺-Sensor, Protein in Vesikel-Membran, bindet 5 Ca²⁺). (5) **SNARE-KOMPLEX** (v-SNARE [Vesikel]: **Synaptobrevin/VAMP** + t-SNARE [Plasmamembran]: **Syntaxin** + **SNAP-25**) → Reißverschluss-Mechanismus → Membranen fusionieren. (6) **NEUROTRANSMITTER-FREISETZUNG** (Exozytose, **Quantal Release**: 1 Vesikel = 1 Quantum = ~5000 Moleküle). (7) Neurotransmitter diffundieren durch **synaptischen Spalt** (~20-40 nm, ~0.5 ms). (8) Binden **POSTSYNAPTISCHE REZEPTOREN:** (a) **IONOTROPE REZEPTOREN** (ligandengesteuerte Ionenkanäle, SCHNELL [ms]): **AMPA** (Glutamat → Na⁺/K⁺, Depolarisation), **NMDA** (Glutamat → Na⁺/Ca²⁺, Mg²⁺-Block bei -70 mV), **GABA_A** (GABA → Cl⁻, Hyperpolarisation), **nikotinisch** (Acetylcholin → Na⁺, neuromuskuläre Endplatte). (b) **METABOTROPE REZEPTOREN** (G-Protein-gekoppelt, LANGSAM [Sekunden-Minuten]): **D1/D2** (Dopamin), **5-HT1-7** (Serotonin), **α1/α2, β1/β2** (Noradrenalin), **M1-M5** (Acetylcholin). (9) **POSTSYNAPTISCHES POTENTIAL:** **EPSP** (Exzitatorisches PSP, Depolarisation, Schwelle näher) ODER **IPSP** (Inhibitorisches PSP, Hyperpolarisation, Schwelle ferner). Summation: Temporal (zeitlich) + Spatial (räumlich) → Schwelle (-55 mV) überschritten → Aktionspotential. (10) **NEUROTRANSMITTER-INAKTIVIERUNG:** Wiederaufnahme (SERT, DAT, NET, EAAT, GAT), enzymatischer Abbau (Acetylcholinesterase, MAO, COMT), Diffusion. **KLINISCH:** Botulinustoxin (spaltet SNARE → KEINE Vesikel-Fusion → Muskelparalyse), Tetanospasmin (hemmt GABA/Glycin-Freisetzung → Dauererregung → Krämpfe). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Welche Neurotransmitter sind exzitatorisch und welche inhibitorisch im ZNS?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Alle Neurotransmitter sind exzitatorisch"
+      },
+      {
+        "id": "B",
+        "text": "Exzitatorisch: Glutamat (AMPA [Na⁺], NMDA [Ca²⁺/Na⁺, Mg²⁺-Block], Kainate, ~90% exzitatorische Synapsen, Lernen/LTP). Inhibitorisch: GABA (GABA_A [Cl⁻], GABA_B [K⁺ ↑], ~20% inhibitorische Synapsen, Benzodiazepine verstärken), Glycin (Glycin-Rezeptor [Cl⁻], Rückenmark/Hirnstamm, Strychnin blockiert)"
+      },
+      {
+        "id": "C",
+        "text": "Nur Glutamat existiert"
+      },
+      {
+        "id": "D",
+        "text": "GABA ist exzitatorisch"
+      },
+      {
+        "id": "E",
+        "text": "Glycin ist nur in Bakterien"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Neurotransmitter im ZNS sind entweder **EXZITATORISCH** (Depolarisation, EPSP, Aktionspotential-Wahrscheinlichkeit ↑) oder **INHIBITORISCH** (Hyperpolarisation, IPSP, Aktionspotential-Wahrscheinlichkeit ↓). **EXZITATORISCH: GLUTAMAT** (häufigster exzitatorischer Neurotransmitter, ~90% aller exzitatorischen Synapsen im ZNS). **Rezeptoren:** (1) **AMPA-Rezeptor** (ionotrop, ligandengesteuert): Glutamat → **Na⁺ rein, K⁺ raus** → Depolarisation (schnell, ms) → EPSP. (2) **NMDA-Rezeptor** (ionotrop): Glutamat + **Glycin** (Ko-Agonist, Glycin-Bindungsstelle) → **Na⁺/Ca²⁺ rein** → Depolarisation. **Mg²⁺-Block** (bei Ruhepotential -70 mV blockiert Mg²⁺ Kanal, wird bei Depolarisation [~-40 mV] entfernt) → Koinzidenzdetektor (erfordert Depolarisation [AMPA] + Glutamat [präsynaptisch]). Ca²⁺-Einstrom → **LTP** (Long-Term Potentiation, synaptische Plastizität, Lernen/Gedächtnis). (3) **Kainate-Rezeptor** (ionotrop, Na⁺). (4) **mGluR** (metabotrop, mGluR1-8, G-Protein-gekoppelt). **Wiederaufnahme:** **EAAT1/2** (Excitatory Amino Acid Transporter, Astrozyten) → Glutamin-Synthetase (Glutamat → Glutamin) → Glutamin zu Neuronen (Glutaminase → Glutamat) → Glutamat-Glutamin-Zyklus. **KLINISCH:** Exzitotoxizität (Schlaganfall, Ischämie → Glutamat ↑ → NMDA-Rezeptor-Überaktivierung → Ca²⁺-Überladung → Neuronen-Tod), Memantin (NMDA-Rezeptor-Antagonist, Alzheimer), Ketamin (NMDA-Antagonist, Anästhesie, Antidepressivum). **INHIBITORISCH: GABA (γ-Aminobuttersäure) + GLYCIN.** (1) **GABA** (~20% aller Synapsen im ZNS, Interneurone, Cortex, Basalganglien). **Rezeptoren:** **GABA_A** (ionotrop, ligandengesteuert): GABA → **Cl⁻ rein** → Hyperpolarisation (IPSP). **Benzodiazepine** (Diazepam, Lorazepam) binden allosterische Stelle → verstärken GABA-Wirkung (Anxiolytika, Sedierung, Antikonvulsiva). **Barbiturate** (Phenobarbital) = GABA_A-Agonisten (längere Kanalöffnung). **GABA_B** (metabotrop, Gi): K⁺-Kanäle ↑ → Hyperpolarisation. **Wiederaufnahme:** **GAT** (GABA-Transporter). **Synthese:** Glutamat + Glutamat-Decarboxylase (GAD, Vitamin B6-abhängig) → GABA. (2) **GLYCIN** (häufigster inhibitorischer Neurotransmitter in Rückenmark/Hirnstamm). **Rezeptor:** Glycin-Rezeptor (ionotrop, Cl⁻) → Hyperpolarisation. **STRYCHNIN** (Gift) blockiert Glycin-Rezeptor → KEINE Inhibition → Krämpfe (Tetanus-ähnlich). **KLINISCH:** Epilepsie (GABA ↓ → Exzitations-Inhibitions-Ungleichgewicht → Anfälle, Therapie: Valproat [GABA ↑], Benzodiazepine), Angststörungen (GABA ↓, Benzodiazepine), Tetanus/Strychnin (Glycin-Blockade → Dauererregung). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Was passiert während eines Aktionspotentials auf molekularer Ebene?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Aktionspotential ist nur in Gliazellen"
+      },
+      {
+        "id": "B",
+        "text": "Ruhepotential ~-70 mV (Na⁺/K⁺-ATPase [3 Na⁺ raus, 2 K⁺ rein], K⁺-Leckkanäle). Schwelle ~-55 mV → spannungsgesteuerte Na⁺-Kanäle öffnen (Nav1.x) → Na⁺ rein → Depolarisation (+40 mV, Overshoot) → Na⁺-Kanäle inaktivieren (Inaktivierungstor) + K⁺-Kanäle öffnen (Kv1.x, verzögert) → K⁺ raus → Repolarisation (-70 mV) → Hyperpolarisation (~-80 mV, K⁺-Kanäle offen) → Ruhepotential. Refraktärzeit (absolut [Na⁺ inaktiviert], relativ [Na⁺ erholen, K⁺ offen]). Alles-oder-Nichts-Prinzip"
+      },
+      {
+        "id": "C",
+        "text": "Aktionspotential benötigt kein Na⁺"
+      },
+      {
+        "id": "D",
+        "text": "Aktionspotential ist nur in Pflanzen"
+      },
+      {
+        "id": "E",
+        "text": "Aktionspotential ist graduiert"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **AKTIONSPOTENTIAL** ist eine schnelle, vorübergehende Depolarisation der Membran (alles-oder-nichts-Prinzip), Grundlage der Informationsweiterleitung in Neuronen. **RUHEPOTENTIAL (~-70 mV):** (1) **Na⁺/K⁺-ATPase:** 3 Na⁺ raus, 2 K⁺ rein (ATP-abhängig, elektrogen ~-10 mV). (2) **K⁺-Leckkanäle** (Kir2.1, immer offen): K⁺ strömt aus (Konzentrationsgradient: innen 140 mM, außen 4 mM) → Membran negativ. (3) Nernst-Gleichung: E_K = -90 mV (K⁺-Gleichgewichtspotential), E_Na = +60 mV (Na⁺-Gleichgewichtspotential). (4) Goldman-Gleichung (berücksichtigt Permeabilität aller Ionen) → Ruhepotential ~-70 mV. **AKTIONSPOTENTIAL-ABLAUF:** (1) **SCHWELLENREIZUNG:** Membran depolarisiert (z.B. EPSP, synaptische Transmission) → **Schwellenpotential** (~-55 mV) erreicht. (2) **DEPOLARISATION (Aufstrich):** **Spannungsgesteuerte Na⁺-Kanäle** (Nav1.1-1.9, Aktivierungstor öffnet ab ~-55 mV) → Na⁺ strömt ein (Treibkraft: Konzentrationsgradient [außen 145 mM, innen 12 mM] + elektrischer Gradient [innen negativ]) → Membran depolarisiert SCHNELL (~1 ms) → **Overshoot** (~+40 mV, nahe E_Na = +60 mV). **Alles-oder-Nichts-Prinzip:** Schwelle überschritten → vollständiges AP (~100 mV Amplitude), unterschwellig → kein AP. (3) **REPOLARISATION (Abstrich):** (a) **Na⁺-Kanäle INAKTIVIEREN** (Inaktivierungstor schließt, spannungsabhängig, ~1-2 ms nach Öffnung). (b) **Spannungsgesteuerte K⁺-Kanäle** (Kv1.1-1.9) öffnen (verzögert, ~0.5-1 ms nach Depolarisation). (c) K⁺ strömt aus → Membran repolarisiert (Richtung -70 mV, ~2 ms). (4) **HYPERPOLARISATION (Undershoot):** K⁺-Kanäle bleiben kurz offen → Membran hyperpolarisiert (kurzzeitig < -70 mV, ~-80 mV, ~2-4 ms). (5) **RÜCKKEHR zu Ruhepotential:** K⁺-Kanäle schließen → Ruhepotential -70 mV (Na⁺/K⁺-ATPase restauriert Gradienten langsam, über viele APs). **REFRAKTÄRZEIT:** (1) **ABSOLUT** (~1-2 ms): Na⁺-Kanäle inaktiviert (Inaktivierungstor geschlossen) → KEIN AP auslösbar. (2) **RELATIV** (~3-4 ms): Na⁺-Kanäle erholen sich (einige offen) + K⁺-Kanäle noch offen (Hyperpolarisation) → AP nur bei überschwelligem Reiz auslösbar. **BEDEUTUNG:** Begrenzt AP-Frequenz (~1000 Hz maximal), verhindert Rückwärtspropagation (AP läuft nur vorwärts). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q5",
+    "question": "Was ist ein monosynaptischer Reflex und wie unterscheidet er sich von einem polysynaptischen Reflex?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Monosynaptischer Reflex (Eigenreflex, z.B. Patellarsehnenreflex): Rezeptor (Muskelspindel) → Ia-Faser → DIREKT α-Motoneuron (EINE Synapse) → Effektor (Quadriceps kontrahiert), reziproke Hemmung (Interneuron → Antagonist gehemmt). Polysynaptischer Reflex (Fremdreflex, z.B. Fluchtreflex): Rezeptor (Nozizeptor) → MEHRERE Synapsen (Interneurone [exzitatorisch + inhibitorisch]) → α-Motoneuron → Effektor (Beuger kontrahiert, Strecker gehemmt, gekreuzte Streckreaktion)"
+      },
+      {
+        "id": "C",
+        "text": "Nur monosynaptische Reflexe existieren"
+      },
+      {
+        "id": "D",
+        "text": "Polysynaptische Reflexe haben keine Interneurone"
+      },
+      {
+        "id": "E",
+        "text": "Beide benötigen Bewusstsein"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Reflexbogen-Typen unterscheiden sich in Anzahl der Synapsen (1 vs. mehrere) und Komplexität. **MONOSYNAPTISCHER REFLEX (Eigenreflex, Dehnungsreflex):** **EINE SYNAPSE** zwischen sensorischem Neuron und Motoneuron (einfachster Reflex). **Beispiel: PATELLARSEHNENREFLEX (Kniesehnenreflex):** (1) **STIMULUS:** Schlag auf Patellarsehne (unterhalb Kniescheibe). (2) **REZEPTOR:** **Muskelspindel** (Dehnungsrezeptor im M. quadriceps femoris, intrafusale Muskelfasern mit Ia-Faser-Innervation). Dehnung → Ia-Faser erregt. (3) **AFFERENZ:** **Ia-Faser** (große myelinisierte Faser, ~120 m/s, schnellste) → Hinterwurzel (Spinalganglion) → Rückenmark (L2-L4). (4) **SYNAPSE (EINE!):** Ia-Faser synapsiert **DIREKT** auf **α-Motoneuron** (im Vorderhorn, KEINE Interneurone dazwischen) → monosynaptisch. (5) **EFFERENZ:** α-Motoneuron → Vorderwurzel → N. femoralis → M. quadriceps. (6) **EFFEKTOR:** M. quadriceps **kontrahiert** → Beinstreckung (kick). (7) **GLEICHZEITIG (reziproke Hemmung):** Ia-Faser aktiviert **Interneuron (Ia-Interneuron, inhibitorisch)** → hemmt α-Motoneuron des **Antagonisten** (M. biceps femoris [Beuger]) → Antagonist relaxiert (verhindert Widerstand). **FUNKTION:** Haltungskontrolle (schnelle Korrektur bei Dehnung, propriozeptive Rückkopplung), Muskeltonus-Aufrechterhaltung. **KLINISCH:** Areflexie (fehlende Reflexe): Periphere Nervenschädigung (Ia-Faser, α-Motoneuron), Rückenmarkläsion (Hinterwurzel), Guillain-Barré. Hyperreflexie (gesteigerte Reflexe): Pyramidenbahnläsion (Schlaganfall, MS, obere Motoneurone geschädigt → keine Hemmung → α-Motoneurone überaktiv), Spastik. **POLYSYNAPTISCHER REFLEX (Fremdreflex, Schutzreflex):** **MEHRERE SYNAPSEN** (Interneurone eingeschaltet) → komplexer. **Beispiel: FLUCHTREFLEX (Beugereflex, Schmerzreflex):** (1) **STIMULUS:** Schmerz (Tritt auf Nagel). (2) **REZEPTOR:** **Nozizeptoren** (freie Nervenendigungen, Aδ-Fasern [schneller Schmerz, myelinisiert, ~20 m/s] + C-Fasern [langsamer Schmerz, unmyelinisiert, ~1 m/s]). (3) **AFFERENZ:** Aδ-/C-Faser → Hinterwurzel → Rückenmark (Hinterhorn). (4) **SYNAPSEN (MEHRERE!):** (a) Aδ-Faser → **Interneuron 1 (exzitatorisch)** → α-Motoneuron (Beugemuskulatur). (b) Aδ-Faser → **Interneuron 2 (inhibitorisch)** → α-Motoneuron (Streckmuskulatur) → reziproke Hemmung (Strecker relaxiert). (c) **Gekreuzte Streckreaktion:** Aδ-Faser → **Interneuron 3 (kontralaterales Bein, kommissural)** → α-Motoneuron (Strecker kontralateral) → Gegenbein streckt (stützt Körper, verhindert Umfallen). (5) **EFFEKTOR:** Beugemuskulatur kontrahiert (M. biceps femoris, M. semitendinosus, M. semimembranosus) → Bein wird **hochgezogen** (weg von Schmerzquelle). **FUNKTION:** Schutzreaktion (schnelle Flucht vor Schmerz/Verletzung). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q6",
+    "question": "Welche Neurotransmitter und Rezeptoren sind bei Sympathikus und Parasympathikus beteiligt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide nutzen nur Noradrenalin"
+      },
+      {
+        "id": "B",
+        "text": "Sympathikus: Präganglionär (Acetylcholin → nikotinische Rezeptoren [Ganglion]), Postganglionär (Noradrenalin → α1/α2/β1/β2/β3 [Effektor]), Nebennierenmark (Acetylcholin → Adrenalin-Freisetzung). Parasympathikus: Präganglionär (Acetylcholin → nikotinische Rezeptoren [Ganglion]), Postganglionär (Acetylcholin → muskarinische Rezeptoren [M2: Herz ↓, M3: Bronchien/Darm/Blase/Pupille/Speicheldrüsen])"
+      },
+      {
+        "id": "C",
+        "text": "Sympathikus nutzt nur Acetylcholin"
+      },
+      {
+        "id": "D",
+        "text": "Parasympathikus nutzt Noradrenalin"
+      },
+      {
+        "id": "E",
+        "text": "Beide nutzen Dopamin"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **SYMPATHIKUS** und **PARASYMPATHIKUS** nutzen unterschiedliche Neurotransmitter/Rezeptoren, besonders **POSTGANGLIONÄR** (an Effektor-Organen). **SYMPATHIKUS:** (1) **PRÄGANGLIONÄR** (Seitenhorn T1-L2 → Ganglion): **Acetylcholin** → **nikotinische Rezeptoren** (ionotrop, Na⁺-Kanäle, ligandengesteuert, schnelle Erregung). Ganglien: Grenzstrang (paravertebral, entlang Wirbelsäule) + prävertebral (Ganglion coeliacum, mesentericum). (2) **POSTGANGLIONÄR** (Ganglion → Effektor-Organ): **NORADRENALIN** (Ausnahme: Schweißdrüsen [ekkrines: Acetylcholin → M3], Nebennierenmark). **Rezeptoren (Effektor):** (a) **α1-Rezeptoren** (Gq → IP₃ → Ca²⁺ ↑): **Vasokonstriktion** (glatte Muskulatur Arterien/Venen, Haut/Splanchnikus), **Mydriasis** (M. dilatator pupillae), Sphinkter-Kontraktion (Blase, Darm), Uterus-Kontraktion (schwanger). (b) **α2-Rezeptoren** (Gi → cAMP ↓): Peristaltik ↓ (Darm, präsynaptisch auch negative Rückkopplung [Noradrenalin-Freisetzung ↓]). (c) **β1-Rezeptoren** (Gs → cAMP ↑): **Herz** (Frequenz ↑ [SA-Knoten], Kontraktilität ↑ [Ventrikel], AV-Knoten-Leitung ↑), Renin-Freisetzung ↑ (Niere). (d) **β2-Rezeptoren** (Gs → cAMP ↑): **Bronchodilatation** (glatte Muskulatur Bronchien relaxiert), **Vasodilatation** (Skelettmuskulatur, Herz, Koronararterien), **Glykogenolyse ↑** (Leber → Glukose), Uterus-Relaxation (nicht-schwanger), Tremor (Skelettmuskulatur). (e) **β3-Rezeptoren** (Gs → cAMP ↑): **Lipolyse ↑** (Fettgewebe → freie Fettsäuren), Blasenwand-Relaxation (Detrusor). (3) **NEBENNIERENMARK (chromaffine Zellen):** Präganglionäre sympathische Fasern (Acetylcholin → nikotinische Rezeptoren) → **Adrenalin-Freisetzung** (80%) + Noradrenalin (20%) → systemische Wirkung (verstärkt Sympathikus-Effekte, Adrenalin bindet β1/β2 >> α). **PARASYMPATHIKUS:** (1) **PRÄGANGLIONÄR** (Hirnnerven III/VII/IX/X + S2-S4 → Ganglion): **Acetylcholin** → **nikotinische Rezeptoren** (wie Sympathikus im Ganglion). Ganglien: Organnah (z.B. Ganglion ciliare [Pupille], Ganglion submandibulare [Speicheldrüsen]) oder in Organwand (Plexus myentericus [Meissner, Auerbach]). (2) **POSTGANGLIONÄR** (Ganglion → Effektor-Organ): **ACETYLCHOLIN** → **muskarinische Rezeptoren** (metabotrop, G-Protein-gekoppelt, LANGSAM). **Rezeptoren (Effektor):** (a) **M2-Rezeptoren** (Gi → cAMP ↓, K⁺-Kanäle ↑): **Herz** (Frequenz ↓ [SA-Knoten, Vagus], AV-Knoten-Leitung ↓, Kontraktilität ↓ [Vorhöfe]). (b) **M3-Rezeptoren** (Gq → IP₃ → Ca²⁺ ↑): **Bronchokonstriktion** (glatte Muskulatur Bronchien), **Speichelsekretion ↑** (dünnflüssig, Parotis/Submandibularis/Sublingualis), **Peristaltik ↑** (Magen-Darm, glatte Muskulatur), **Miktion** (Detrusor [Blasenwand] kontrahiert, Sphinkter relaxiert), **Miosis** (M. sphincter pupillae [Pupille verengt], Akkommodation [Ziliarmuskel kontrahiert → Linse gewölbt, Nahsicht]), Tränenfluss ↑, Insulinsekretion ↑ (Pankreas-β-Zellen). **INAKTIVIERUNG:** Acetylcholin → **Acetylcholinesterase** (AChE, in synaptischem Spalt) → Acetat + Cholin (Cholin-Wiederaufnahme → Acetyl-CoA + Cholin → Acetylcholin [via Cholin-Acetyltransferase]). Noradrenalin → **Wiederaufnahme** (NET [Noradrenalin-Transporter]), **MAO** (Monoaminoxidase, Mitochondrien), **COMT** (Catechol-O-Methyltransferase). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  }
+]

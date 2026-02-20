@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-5-04-q1",
+    "question": "Ein Junge leidet an Hämophilie A. Seine Mutter und Großmutter väterlicherseits sind gesund, sein Vater und Großvater mütterlicherseits sind ebenfalls gesund. Welche Aussage zum Erbgang ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Der Junge hat das defekte F8-Gen von seinem Vater geerbt, da Hämophilie A Y-chromosomal vererbt wird"
+      },
+      {
+        "id": "B",
+        "text": "Die Mutter ist Konduktorin (X^A X^a) und hat das defekte Allel mit 50% Wahrscheinlichkeit an den Sohn weitergegeben"
+      },
+      {
+        "id": "C",
+        "text": "Der Junge ist heterozygot für das F8-Gen und zeigt eine inkomplette Dominanz"
+      },
+      {
+        "id": "D",
+        "text": "Beide Eltern müssen homozygot rezessiv (X^a X^a bzw. X^a Y) sein, damit der Sohn erkrankt"
+      },
+      {
+        "id": "E",
+        "text": "Eine Vater-Sohn-Übertragung ist bei Hämophilie A der häufigste Vererbungsweg"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Hämophilie A ist **X-chromosomal rezessiv** vererbt. Der Junge ist **hemizygot** (X^a Y) und hat das defekte F8-Gen auf dem X-Chromosom. Da der **Vater sein Y-Chromosom an den Sohn** gibt (nicht X), muss die **Mutter Konduktorin** (X^A X^a) sein und hat das X^a-Allel mit 50% Wahrscheinlichkeit weitergegeben. Wichtig: **Keine Vater-Sohn-Übertragung** bei X-chromosomalen Merkmalen!",
+    "difficulty": "medium",
+    "tags": ["Genetik", "Geschlechtsgebundene Vererbung", "X-chromosomal rezessiv", "Hämophilie A", "Konduktorin"]
+  },
+  {
+    "id": "bio-5-04-q2",
+    "question": "Bei einer Stammbaumanalyse fällt auf, dass ein kranker Vater **ausschließlich kranke Töchter** hat, während **alle Söhne gesund** sind. Die gesunde Mutter hat sowohl gesunde als auch kranke Kinder. Welcher Erbgang liegt vor?",
+    "options": [
+      {
+        "id": "A",
+        "text": "X-chromosomal rezessiv, da Männer häufiger betroffen sind und keine Vater-Sohn-Übertragung stattfindet"
+      },
+      {
+        "id": "B",
+        "text": "Y-chromosomal (holandrisch), da der Vater das Y-Chromosom an alle Söhne weitergibt"
+      },
+      {
+        "id": "C",
+        "text": "X-chromosomal dominant, da der kranke Vater (X^A Y) sein X^A-Chromosom an alle Töchter weitergibt"
+      },
+      {
+        "id": "D",
+        "text": "Autosomal dominant, da sowohl Töchter als auch Söhne betroffen sein können"
+      },
+      {
+        "id": "E",
+        "text": "Mitochondrial, da die Vererbung über die mütterliche Linie erfolgt"
+      }
+    ],
+    "correct": "C",
+    "explanation": "Das Muster **kranker Vater → 100% kranke Töchter, 100% gesunde Söhne** ist **pathognomonisch für X-chromosomal dominante Vererbung**. Der Vater (X^A Y) gibt sein **X^A-Chromosom an alle Töchter** (→ X^A X^- krank) und sein **Y-Chromosom an alle Söhne** (→ X^- Y gesund). Die gesunde Mutter (X^- X^-) kann nur X^- weitergeben. Beispiel: Hypophosphatämische Rachitis (PHEX-Gen).",
+    "difficulty": "medium",
+    "tags": ["Genetik", "Geschlechtsgebundene Vererbung", "X-chromosomal dominant", "Stammbaumanalyse"]
+  },
+  {
+    "id": "bio-5-04-q3",
+    "question": "Eine Frau ist heterozygot für ein X-chromosomal rezessives Merkmal (z.B. Rot-Grün-Blindheit, X^A X^a). Welche Aussage zur **X-Inaktivierung** (Lyon-Hypothese) ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "In allen Zellen der Frau wird dasselbe X-Chromosom (entweder väterlich oder mütterlich) inaktiviert"
+      },
+      {
+        "id": "B",
+        "text": "Die X-Inaktivierung erfolgt zufällig in jeder Zelle (~Tag 16), sodass ein Mosaik-Muster entsteht (Barr-Körperchen)"
+      },
+      {
+        "id": "C",
+        "text": "Das inaktivierte X-Chromosom wird vollständig abgebaut und ist im Karyotyp nicht mehr sichtbar"
+      },
+      {
+        "id": "D",
+        "text": "Die Frau ist immer symptomatisch, da in 50% der Zellen das defekte X^a-Chromosom aktiv ist"
+      },
+      {
+        "id": "E",
+        "text": "X-Inaktivierung findet nur bei homozygot rezessiven Frauen (X^a X^a) statt, nicht bei Konduktorinnen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**X-Inaktivierung** (Lyon-Hypothese): Bei weiblichen Zellen (XX) wird **1 X-Chromosom zufällig inaktiviert** (~Tag 16, Blastozyste) → **Dosiskompensation**. Das inaktivierte X bildet ein **Barr-Körperchen** (heterochromatisch, am Kernrand). Die Inaktivierung ist **zufällig** (50:50 väterlich/mütterlich) → **Mosaik-Muster** (z.B. Kaliko-Katzen: X^O X^B → Orange + Schwarz, nur ♀). Konduktorinnen sind **meist asymptomatisch**, da das gesunde X kompensiert.",
+    "difficulty": "medium",
+    "tags": ["Genetik", "X-Inaktivierung", "Lyon-Hypothese", "Barr-Körperchen", "Dosiskompensation"]
+  },
+  {
+    "id": "bio-5-04-q4",
+    "question": "Ein 5-jähriger Junge zeigt progressive Muskelschwäche (Beginn ~3 Jahre), Gowers-Zeichen beim Aufstehen und Wadenpseudohypertrophie. Die CPK (Creatinkinase) ist stark erhöht. Die Familienanamnese ergibt, dass ein Bruder der Mutter ebenfalls betroffen war. Welche Diagnose ist am wahrscheinlichsten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Hämophilie A – X-chromosomal rezessive Gerinnungsstörung mit Blutungsneigung"
+      },
+      {
+        "id": "B",
+        "text": "Muskeldystrophie Duchenne – X-chromosomal rezessive Dystrophin-Mutation (DMD-Gen)"
+      },
+      {
+        "id": "C",
+        "text": "Hypophosphatämische Rachitis – X-chromosomal dominante PHEX-Mutation"
+      },
+      {
+        "id": "D",
+        "text": "Trisomie 21 (Down-Syndrom) – numerische Chromosomenaberration mit Muskelhypotonie"
+      },
+      {
+        "id": "E",
+        "text": "Y-chromosomale Myopathie – holandrische Vererbung mit Vater-Sohn-Übertragung"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Muskeldystrophie Duchenne** (DMD): **X-chromosomal rezessive** Dystrophin-Mutation. Klinisch: Progressive Muskelschwäche (Beginn ~3–5 Jahre), **Gowers-Zeichen** (Aufstehen über Hände → Knie → Hüfte), **Wadenpseudohypertrophie** (Fett-/Bindegewebe ersetzt Muskel), **CPK ↑↑↑** (massiv erhöht). Rollstuhl ~12 Jahre, frühe Mortalität (~20–30 Jahre, Herz-/Ateminsuffizienz). Inzidenz: 1:3.500 ♂. Betroffener Bruder der Mutter → Mutter ist Konduktorin.",
+    "difficulty": "hard",
+    "tags": ["Genetik", "Geschlechtsgebundene Vererbung", "Muskeldystrophie Duchenne", "DMD-Gen", "Dystrophin"]
+  },
+  {
+    "id": "bio-5-04-q5",
+    "question": "Welche Aussage zur **Y-chromosomalen Vererbung** (holandrische Vererbung) ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Das SRY-Gen auf dem Y-Chromosom kodiert für Dystrophin und ist essentiell für die Muskelentwicklung"
+      },
+      {
+        "id": "B",
+        "text": "Y-chromosomale Merkmale werden von Vätern auf **alle Söhne** übertragen, während Töchter nicht betroffen sind"
+      },
+      {
+        "id": "C",
+        "text": "Deletionen im AZF-Bereich (Azoospermie-Faktor) des Y-Chromosoms führen zu Rot-Grün-Blindheit"
+      },
+      {
+        "id": "D",
+        "text": "Y-chromosomale Vererbung ist die häufigste Ursache für Hämophilie A und Muskeldystrophie Duchenne"
+      },
+      {
+        "id": "E",
+        "text": "Frauen können ebenfalls Y-chromosomale Merkmale erben, wenn die Mutter Konduktorin ist"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Y-chromosomale Vererbung** (holandrisch): Gene auf **Y-Chromosom** → nur **Männer** betroffen. **Vater-Sohn-Übertragung** (100% der Söhne erben Y vom Vater), **keine Töchter betroffen** (erhalten X vom Vater). **SRY** (Sex-determining Region Y) → Hoden-Entwicklung → männlich. **AZF** (Azoospermie-Faktor) → Spermatogenese (Deletion → Infertilität, Azoospermie/Oligospermie). Beispiel: Männliche Infertilität durch AZF-Deletionen.",
+    "difficulty": "easy",
+    "tags": ["Genetik", "Y-chromosomale Vererbung", "SRY-Gen", "AZF", "Holandrisch"]
+  },
+  {
+    "id": "bio-5-04-q6",
+    "question": "Ein Genetiker untersucht Kaliko-Katzen (Schildpatt-Muster: orange + schwarze Flecken). Er stellt fest, dass **nur weibliche Katzen** dieses Muster zeigen. Welche genetische Erklärung ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Das Schildpatt-Muster ist Y-chromosomal vererbt und tritt nur bei XY-Katzen auf"
+      },
+      {
+        "id": "B",
+        "text": "Weibliche Katzen (X^O X^B) zeigen durch X-Inaktivierung ein Mosaik-Muster (Orange + Schwarz), männliche Katzen sind hemizygot (nur Orange oder Schwarz)"
+      },
+      {
+        "id": "C",
+        "text": "Das Muster entsteht durch Epistase zwischen zwei autosomalen Genen (O-Locus und B-Locus)"
+      },
+      {
+        "id": "D",
+        "text": "Männliche Katzen mit Klinefelter-Syndrom (XXY) können ebenfalls Schildpatt-Muster zeigen, da sie zwei X-Chromosomen haben"
+      },
+      {
+        "id": "E",
+        "text": "Beide Antworten B und D sind korrekt"
+      }
+    ],
+    "correct": "E",
+    "explanation": "**Kaliko-Katzen** (Schildpatt): X-chromosomale Fellfarbe-Gene (X^O = Orange, X^B = Schwarz). **Weibliche Katzen** (X^O X^B) → durch **X-Inaktivierung** (zufällig, Lyon-Hypothese) entsteht **Mosaik-Muster** (einige Zellen X^O aktiv → Orange, andere X^B aktiv → Schwarz). **Männliche Katzen** (X^O Y oder X^B Y) → hemizygot → nur **eine Farbe** (Orange oder Schwarz). **Ausnahme:** XXY-Kater (Klinefelter) können Schildpatt zeigen (2 X-Chromosomen → X-Inaktivierung möglich). Beide B und D sind korrekt!",
+    "difficulty": "hard",
+    "tags": ["Genetik", "X-Inaktivierung", "Mosaik-Muster", "Kaliko-Katzen", "Klinefelter"]
+  }
+]

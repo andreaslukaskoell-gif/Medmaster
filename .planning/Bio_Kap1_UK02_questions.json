@@ -1,0 +1,176 @@
+[
+  {
+    "id": "q1",
+    "question": "Was ist der zentrale strukturelle Unterschied zwischen Prokaryoten und Eukaryoten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Prokaryoten haben keine DNA, Eukaryoten schon"
+      },
+      {
+        "id": "B",
+        "text": "Prokaryoten haben keinen echten Zellkern, Eukaryoten haben einen membranumschlossenen Kern"
+      },
+      {
+        "id": "C",
+        "text": "Prokaryoten sind immer pathogen, Eukaryoten nicht"
+      },
+      {
+        "id": "D",
+        "text": "Prokaryoten können keine Proteine synthetisieren"
+      },
+      {
+        "id": "E",
+        "text": "Prokaryoten haben keine Zellmembran"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Der fundamentale Unterschied ist die KERNSTRUKTUR. Prokaryoten (Bakterien, Archäen) haben KEIN membranumschlossenes Kompartiment für DNA → DNA liegt frei im Nucleoid. Eukaryoten haben einen ECHTEN Kern mit Kernhülle (Doppelmembran) und Kernporen. A ist falsch (Prokaryoten haben DNA, sogar sehr viel - E. coli hat ~4,6 Millionen Basenpaare). C ist falsch (die meisten Bakterien sind NICHT pathogen, viele sind nützlich). D ist falsch (Prokaryoten haben 70S-Ribosomen und synthetisieren Proteine). E ist falsch (alle Zellen haben Zellmembran).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Welche Ribosomen-Größe ist charakteristisch für Prokaryoten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "80S-Ribosomen"
+      },
+      {
+        "id": "B",
+        "text": "70S-Ribosomen"
+      },
+      {
+        "id": "C",
+        "text": "100S-Ribosomen"
+      },
+      {
+        "id": "D",
+        "text": "50S-Ribosomen"
+      },
+      {
+        "id": "E",
+        "text": "Prokaryoten haben keine Ribosomen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Prokaryoten (Bakterien, Archäen) haben **70S-Ribosomen** (bestehend aus 50S + 30S Untereinheiten). Eukaryoten haben größere 80S-Ribosomen (60S + 40S) im Zytoplasma. ABER: Mitochondrien und Chloroplasten in Eukaryoten haben 70S-Ribosomen (Beleg für Endosymbiontentheorie!). A ist falsch (das sind eukaryotische Ribosomen). C, D sind falsch (diese Größen existieren nicht als vollständige Ribosomen). E ist falsch (Prokaryoten synthetisieren Proteine → brauchen Ribosomen). 'S' = Svedberg-Einheit (Sedimentationskoeffizient).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q3",
+    "question": "Welche Aussage zur Bakterien-Zellwand ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Bakterien haben keine Zellwand"
+      },
+      {
+        "id": "B",
+        "text": "Die Zellwand besteht aus Cellulose wie bei Pflanzen"
+      },
+      {
+        "id": "C",
+        "text": "Die Zellwand besteht aus Peptidoglycan (Murein) und unterscheidet sich zwischen Gram-positiven (dick) und Gram-negativen (dünn + äußere Membran) Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Nur Gram-negative Bakterien haben eine Zellwand"
+      },
+      {
+        "id": "E",
+        "text": "Archäen haben dieselbe Peptidoglycan-Wand wie Bakterien"
+      }
+    ],
+    "correct": "C",
+    "explanation": "C ist korrekt: Bakterien-Zellwand besteht aus PEPTIDOGLYCAN (= Murein), einem Polysaccharid mit Peptid-Quervernetzung. GRAM-POSITIV: DICKE Peptidoglycan-Schicht (~30-100 nm), einfache Struktur → färbt sich violett in Gram-Färbung. GRAM-NEGATIV: DÜNNE Peptidoglycan-Schicht + ÄUSSERE MEMBRAN mit Lipopolysacchariden (LPS) → färbt sich rosa. A ist falsch (fast alle Bakterien haben Zellwand, Ausnahme: Mykoplasmen). B ist falsch (Cellulose = Pflanzen, NICHT Bakterien). D ist falsch (BEIDE Typen haben Zellwand). E ist falsch (Archäen haben KEIN Peptidoglycan, verschiedene Wandtypen).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Mitochondrien haben eigene DNA, eigene 70S-Ribosomen und eine Doppelmembran. Welche Theorie erklärt diese Beobachtungen?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Kreationismus"
+      },
+      {
+        "id": "B",
+        "text": "Zelltheorie"
+      },
+      {
+        "id": "C",
+        "text": "Endosymbiontentheorie - Mitochondrien waren ursprünglich frei lebende Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Evolutionstheorie nach Lamarck"
+      },
+      {
+        "id": "E",
+        "text": "Genetischer Code ist universell"
+      }
+    ],
+    "correct": "C",
+    "explanation": "C ist korrekt: Die ENDOSYMBIONTENTHEORIE (Lynn Margulis, 1967) besagt, dass Mitochondrien (und Chloroplasten) ursprünglich FREI LEBENDE PROKARYOTEN waren, die von eukaryotischen Wirtszellen aufgenommen wurden (Endozytose) und eine symbiotische Beziehung eingingen. BELEGE: (1) Eigene zirkuläre DNA (wie Bakterien), (2) 70S-Ribosomen (wie Prokaryoten, NICHT 80S wie Eukaryoten-Zytoplasma), (3) Doppelmembran (innere = ursprüngliche Bakterienmembran, äußere = Wirtsmembran), (4) Teilung durch Zweiteilung, (5) Phylogenie: Mitochondrien-DNA ähnelt Alpha-Proteobakterien. A ist falsch (religiöses Konzept, keine wissenschaftliche Theorie). B ist falsch (erklärt diese spezifischen Merkmale nicht). D, E sind falsch (nicht relevant).",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q5",
+    "question": "Welche der folgenden Strukturen findet man NUR in Prokaryoten, NICHT in Eukaryoten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ribosomen"
+      },
+      {
+        "id": "B",
+        "text": "Zellmembran"
+      },
+      {
+        "id": "C",
+        "text": "DNA"
+      },
+      {
+        "id": "D",
+        "text": "Peptidoglycan-Zellwand (bei Bakterien)"
+      },
+      {
+        "id": "E",
+        "text": "Mitochondrien"
+      }
+    ],
+    "correct": "D",
+    "explanation": "D ist korrekt: PEPTIDOGLYCAN (Murein) ist SPEZIFISCH für Bakterien-Zellwand und kommt in Eukaryoten NICHT vor (Pflanzen haben Cellulose, Pilze haben Chitin, Tiere haben keine Zellwand). Archäen haben ebenfalls KEIN Peptidoglycan (verschiedene Wandtypen). A ist falsch (alle Zellen haben Ribosomen: Prokaryoten 70S, Eukaryoten 80S). B, C sind falsch (alle Zellen haben Membran und DNA). E ist falsch (Mitochondrien sind SPEZIFISCH für Eukaryoten, Prokaryoten haben keine Mitochondrien). Antibiotika wie Penicillin hemmen Peptidoglycan-Synthese → töten Bakterien, aber schädigen menschliche Zellen NICHT (da kein Peptidoglycan).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q6",
+    "question": "Warum haben Eukaryoten-Zellen im Vergleich zu Prokaryoten eine viel komplexere Organell-Struktur?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Weil Eukaryoten intelligenter sind"
+      },
+      {
+        "id": "B",
+        "text": "Weil Eukaryoten viel größer sind und ein tiefes Oberfläche/Volumen-Verhältnis haben - Organellen ermöglichen effizienten Transport und Stoffwechsel-Kompartimentierung"
+      },
+      {
+        "id": "C",
+        "text": "Weil Eukaryoten keine DNA haben"
+      },
+      {
+        "id": "D",
+        "text": "Weil Prokaryoten keine Energie produzieren können"
+      },
+      {
+        "id": "E",
+        "text": "Weil Eukaryoten keine Ribosomen brauchen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Die Komplexität erklärt sich durch die ZELLGRÖSSE. Eukaryoten sind 10-100x größer im Durchmesser (bis zu 1000x größer im VOLUMEN!). Größere Zellen haben TIEFES Oberfläche/Volumen-Verhältnis → Diffusion allein reicht NICHT mehr für effizienten Stoffaustausch. LÖSUNG: Organellen = Kompartimentierung ermöglicht spezialisierte Räume für verschiedene Stoffwechselwege (Mitochondrien für Atmung, ER für Proteinsynthese, Lysosomen für Verdauung), aktiver Transport via Vesikel, Zytoskelett für intrazelluläre Bewegung. Prokaryoten sind klein → hohe Oberfläche/Volumen → Diffusion genügt. A ist falsch (Intelligenz ist kein zelluläres Konzept). C, D, E sind falsch (faktisch falsch).",
+    "difficulty": "hard"
+  }
+]

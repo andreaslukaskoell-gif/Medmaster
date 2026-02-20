@@ -1,0 +1,147 @@
+[
+  {
+    "id": "q1",
+    "question": "Was ist der Hauptunterschied zwischen Apoptose und Nekrose?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Apoptose: programmiert, geordnet, Schrumpfung, Chromatin-Kondensation, PS-Externalisierung, apoptotische Körperchen, KEINE Entzündung. Nekrose: unkontrolliert, passiv, Zellschwellung, Membranruptur, ENTZÜNDUNG (DAMPs)"
+      },
+      {
+        "id": "C",
+        "text": "Nur Apoptose existiert"
+      },
+      {
+        "id": "D",
+        "text": "Nekrose ist programmiert"
+      },
+      {
+        "id": "E",
+        "text": "Beide produzieren ATP"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: APOPTOSE und NEKROSE sind zwei grundverschiedene Zelltod-Formen. **APOPTOSE (programmierter Zelltod):** (1) **Programmiert:** Genetisch reguliert, ATP-abhängig, geordnet. (2) **Morphologie:** Zellschrumpfung (Kondensation), Chromatin-Kondensation (Pyknose), DNA-Fragmentierung (Nukleosomen-Leiter: ~180 bp), Membran-Blebbing, apoptotische Körperchen (membranumschlossen), **PS-Externalisierung** (\"Eat-me\"-Signal für Makrophagen). (3) **KEINE Entzündung:** Membran bleibt intakt → keine Freisetzung intrazellulärer Inhalte. (4) Phagozytose durch Makrophagen (entzündungsfrei). **NEKROSE (unkontrollierter Zelltod):** (1) **Unkontrolliert:** Passiv, KEIN ATP, NICHT programmiert. (2) **Morphologie:** **Zellschwellung** (Onkose, Ionenpumpen-Versagen), Mitochondrien-Schwellung, **Membranruptur** (Zellmembran platzt), Organellen-Auflösung. (3) **ENTZÜNDUNG:** Freisetzung intrazellulärer Inhalte → **DAMPs** (HMGB1, ATP, DNA) → Makrophagen/Neutrophile rekrutiert → Entzündungsreaktion. (4) Auslöser: Trauma, Ischämie, Toxine, Infektion. A, C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Wie funktioniert der intrinsische Apoptose-Weg?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Intrinsischer Weg hat keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "DNA-Schäden → p53 ↑ → BAX/BAK (pro-apoptotisch) → MOMP (Mitochondrien-Permeabilisierung) → Cytochrom c → Apoptosom (Cytochrom c + Apaf-1 + dATP) → Caspase-9 → Caspase-3 (Effector). Bcl-2 (anti-apoptotisch) blockiert BAX/BAK"
+      },
+      {
+        "id": "C",
+        "text": "Intrinsischer Weg ist nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Intrinsischer Weg produziert ATP"
+      },
+      {
+        "id": "E",
+        "text": "Intrinsischer Weg ist Zellteilung"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Der **INTRINSISCHE APOPTOSE-WEG** (mitochondrialer Weg) wird durch intrazelluläre Stress-Signale ausgelöst. Mechanismus: (1) **AUSLÖSER:** DNA-Schäden, oxidativer Stress, Wachstumsfaktor-Entzug, ER-Stress. (2) **p53-AKTIVIERUNG:** DNA-Schäden → p53 ↑ → transkriptionelle Aktivierung von **BAX, PUMA, NOXA** (pro-apoptotische Proteine der Bcl-2-Familie). (3) **Bcl-2-FAMILIE:** Anti-apoptotisch (**Bcl-2, Bcl-xL** blockieren Poren-Bildung) vs. Pro-apoptotisch (**BAX, BAK** bilden Poren, **BID, BIM, PUMA** aktivieren BAX/BAK oder hemmen Bcl-2). (4) **MOMP (Mitochondrial Outer Membrane Permeabilization):** BAX/BAK oligomerisieren → Poren in Mitochondrien-Außenmembran → **CYTOCHROM C** (normalerweise Atmungskette) → Zytosol. (5) **APOPTOSOM:** Cytochrom c + **Apaf-1** + dATP → Apoptosom (Rad-ähnliche Struktur, 7 Apaf-1-Moleküle). (6) **CASPASE-9:** Apoptosom aktiviert Caspase-9 (Initiator-Caspase). (7) **CASPASE-3:** Caspase-9 aktiviert **Caspase-3, -6, -7** (Effector-Caspasen) → DNA-Fragmentierung (CAD), Zytoskelett-Spaltung, Apoptose. REGULATION: IAPs (XIAP) hemmen Caspasen, SMAC/DIABLO (von Mitochondrien freigesetzt) neutralisiert IAPs. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Was ist die Rolle von Bcl-2 bei Apoptose?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Bcl-2 hat keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "Bcl-2 ist ein ANTI-APOPTOTISCHES Protein (verhindert Apoptose). Bcl-2 bindet BAX/BAK → blockiert Poren-Bildung in Mitochondrien → verhindert Cytochrom c-Freisetzung → Apoptose blockiert. Überexpression (z.B. Follikuläres Lymphom, t(14;18)) → Krebs"
+      },
+      {
+        "id": "C",
+        "text": "Bcl-2 ist pro-apoptotisch"
+      },
+      {
+        "id": "D",
+        "text": "Bcl-2 produziert ATP"
+      },
+      {
+        "id": "E",
+        "text": "Bcl-2 ist nur in Bakterien"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **Bcl-2** (B-cell lymphoma 2) ist das PROTOTYPISCHE **ANTI-APOPTOTISCHE** Protein der Bcl-2-Familie → VERHINDERT Apoptose. Mechanismus: (1) Bcl-2 lokalisiert in **Mitochondrien-Außenmembran**. (2) Bindet und **NEUTRALISIERT** pro-apoptotische Proteine (**BAX, BAK**) → BAX/BAK können KEINE Poren bilden. (3) VERHINDERT **MOMP** (Mitochondrial Outer Membrane Permeabilization) → Cytochrom c bleibt in Mitochondrien → KEIN Apoptosom → KEINE Caspase-9-Aktivierung → Apoptose BLOCKIERT. **Bcl-2-FAMILIE:** (1) **Anti-apoptotisch:** Bcl-2, Bcl-xL, Bcl-w, Mcl-1 (verhindern Apoptose). (2) **Pro-apoptotisch (Poren-Bildner):** BAX, BAK (bilden Poren). (3) **Pro-apoptotisch (BH3-only):** BID, BIM, PUMA, NOXA, BAD (aktivieren BAX/BAK oder hemmen Bcl-2). **KLINISCH:** (1) **Follikuläres Lymphom:** **t(14;18)-Translokation** → IgH-Promotor neben Bcl-2-Gen → Bcl-2 ÜBEREXPRESSION → Lymphozyten-Apoptose BLOCKIERT → unkontrollierte Proliferation → Lymphom. (2) **Therapie:** **Venetoclax** (Bcl-2-Inhibitor, BH3-Mimetikum) → bindet Bcl-2 → BAX/BAK freigesetzt → Apoptose induziert → CLL (Chronische Lymphatische Leukämie)-Therapie. A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q4",
+    "question": "Wie funktioniert der extrinsische Apoptose-Weg?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Extrinsischer Weg hat keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "FasL bindet Fas (CD95) → DISC (FADD + Caspase-8) → Caspase-8 (Initiator) aktiviert → Caspase-3 (Effector) aktiviert (Typ I) ODER tBID → Mitochondrien → Amplifikation (Typ II)"
+      },
+      {
+        "id": "C",
+        "text": "Extrinsischer Weg ist nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Extrinsischer Weg produziert ATP"
+      },
+      {
+        "id": "E",
+        "text": "Extrinsischer Weg ist Zellteilung"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Der **EXTRINSISCHE APOPTOSE-WEG** (Todesrezeptor-Weg) wird durch extrazelluläre Todesliganden ausgelöst. Mechanismus: (1) **TODESREZEPTOREN:** **Fas (CD95), TNF-Rezeptor 1, TRAIL-Rezeptor** (DR4, DR5) → TNF-Rezeptor-Superfamilie, haben intrazelluläre **Death Domain (DD)**. (2) **LIGANDEN-BINDUNG:** **FasL** (Fas-Ligand) bindet Fas → Rezeptor-Trimerisierung. TNF-α bindet TNF-Rezeptor 1. (3) **DISC-BILDUNG:** Rezeptor rekrutiert **FADD** (Fas-Associated Death Domain) via DD-DD-Interaktion. FADD rekrutiert **CASPASE-8** (Procaspase-8) via Death Effector Domain (DED) → **DISC (Death-Inducing Signaling Complex)**. (4) **CASPASE-8-AKTIVIERUNG:** Procaspase-8 wird autokatalytisch aktiviert (Proximity-induced activation). (5) **ZWEI WEGE:** (a) **TYP I-ZELLEN:** Caspase-8 aktiviert DIREKT **CASPASE-3** (Effector) → Apoptose (schnell, Mitochondrien-unabhängig). (b) **TYP II-ZELLEN:** Caspase-8 spaltet **BID** → **tBID** (truncated BID) → Mitochondrien → BAX/BAK-Aktivierung → Cytochrom c → Apoptosom → Caspase-9 → Caspase-3 (Amplifikation via Mitochondrien). **KLINISCH:** Fas-Mutationen → ALPS (Autoimmune Lymphoproliferative Syndrome, Lymphozyten-Apoptose ↓, Autoimmunität). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q5",
+    "question": "Was sind Caspasen und welche Typen gibt es?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Caspasen haben keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "Caspasen = Cystein-Proteasen (spalten nach Aspartat-Resten), zentral für Apoptose. Typen: (1) Initiator-Caspasen (Caspase-8 [extrinsisch], Caspase-9 [intrinsisch]), (2) Effector-Caspasen (Caspase-3, -6, -7 → CAD, Lamin, PARP)"
+      },
+      {
+        "id": "C",
+        "text": "Caspasen sind nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Caspasen produzieren ATP"
+      },
+      {
+        "id": "E",
+        "text": "Caspasen replizieren DNA"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **CASPASEN** (Cysteinyl-Aspartate-Specific Proteases) sind die ZENTRALE EXEKUTIV-MASCHINERIE der Apoptose. Eigenschaften: (1) **Cystein-Proteasen:** Spalten Proteine nach **Aspartat**-Resten (hochspezifisch). (2) **Zymogene:** Synthetisiert als inaktive Procaspasen → Aktivierung durch Spaltung. (3) **Kaskade:** Initiator-Caspasen aktivieren Effector-Caspasen → Amplifikation. **TYPEN:** (1) **INITIATOR-CASPASEN:** (a) **Caspase-8:** Extrinsischer Weg (DISC, FADD-rekrutiert). (b) **Caspase-9:** Intrinsischer Weg (Apoptosom, Cytochrom c + Apaf-1 + dATP). (2) **EFFECTOR-CASPASEN:** **Caspase-3, -6, -7** → Exekution der Apoptose. **SUBSTRATE (Caspase-3):** (a) **ICAD** → spalten → **CAD** (Caspase-Activated DNase) aktiv → DNA-Fragmentierung (Nukleosomen-Leiter, ~180 bp). (b) **Lamine:** Kernlamina-Spaltung → Kernhülle-Zerfall. (c) **Aktin, Fodrin:** Zytoskelett-Spaltung → Zellschrumpfung, Blebbing. (d) **PARP (Poly-ADP-Ribose-Polymerase):** DNA-Reparatur-Enzym inaktiviert (89 kDa → 24 + 89 kDa, diagnostischer Marker). REGULATION: **IAPs** (XIAP, cIAP) hemmen Caspasen (binden Caspase-3, -7, -9), **SMAC/DIABLO** neutralisiert IAPs. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  }
+]

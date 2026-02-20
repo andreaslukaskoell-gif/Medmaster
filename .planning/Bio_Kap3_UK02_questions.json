@@ -1,0 +1,147 @@
+[
+  {
+    "id": "q1",
+    "question": "Was ist der Unterschied zwischen Stäbchen und Zapfen in der Retina?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Stäbchen: Skotopisches Sehen (Dämmerung), Rhodopsin (λ_max ~500 nm), ~120 Mio., peripher, hohe Empfindlichkeit (1 Photon), niedrige Auflösung (Konvergenz). Zapfen: Photopisches Sehen (Tageslicht, Farben), 3 Opsine (S-blau ~420 nm, M-grün ~530 nm, L-rot ~560 nm), ~6 Mio., Fovea centralis (~200.000/mm²), niedrige Empfindlichkeit, hohe Auflösung (1:1 Ganglienzelle)"
+      },
+      {
+        "id": "C",
+        "text": "Nur Stäbchen existieren"
+      },
+      {
+        "id": "D",
+        "text": "Zapfen sind nur für Nachtsicht"
+      },
+      {
+        "id": "E",
+        "text": "Stäbchen sind nur in Fovea"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **STÄBCHEN** (Rods) und **ZAPFEN** (Cones) sind die beiden Photorezeptor-Typen in der Retina, spezialisiert für unterschiedliche Lichtbedingungen und Funktionen. **STÄBCHEN:** (1) **ANZAHL:** ~120 Millionen pro Retina. (2) **VERTEILUNG:** **PERIPHER** (außerhalb Fovea centralis, Dichte ↑ ~20° von Fovea, KEINE Stäbchen in Fovea selbst). (3) **FUNKTION:** **SKOTOPISCHES SEHEN** (Dämmerung, Nachtsicht, schwaches Licht). (4) **PHOTOPIGMENT:** **Rhodopsin** (11-cis-Retinal + Opsin, Absorptionsmaximum λ_max ~500 nm [grün-blau]). (5) **EMPFINDLICHKEIT:** **HOCH** (1 Photon kann Reaktion auslösen, Amplifikation via Transducin/PDE-Kaskade). (6) **AUFLÖSUNG:** **NIEDRIG** (viele Stäbchen konvergieren auf 1 Ganglienzelle [Konvergenz ~100:1] → räumliche Summation → hohe Empfindlichkeit, aber geringe Schärfe). (7) **ADAPTATION:** Dunkeladaptation langsam (~30 Min, Rhodopsin-Regeneration). **ZAPFEN:** (1) **ANZAHL:** ~6 Millionen pro Retina. (2) **VERTEILUNG:** **FOVEA CENTRALIS** (Sehgrube, höchste Dichte ~200.000/mm², NUR Zapfen, KEINE Stäbchen), Dichte ↓ peripher. (3) **FUNKTION:** **PHOTOPISCHES SEHEN** (Tageslicht, helles Licht, **FARBENSEHEN**). (4) **PHOTOPIGMENTE (3 TYPEN):** **S-Zapfen** (short, blau, λ_max ~420 nm, ~10%), **M-Zapfen** (medium, grün, λ_max ~530 nm, ~50%), **L-Zapfen** (long, rot, λ_max ~560 nm, ~40%). Farbwahrnehmung via Vergleich der 3 Signale (trichromatische Theorie). (5) **EMPFINDLICHKEIT:** **NIEDRIG** (viele Photonen nötig). (6) **AUFLÖSUNG:** **HOCH** (besonders Fovea: 1 Zapfen → 1 Bipolare Zelle → 1 Ganglienzelle [1:1:1, KEINE Konvergenz] → höchste Sehschärfe). (7) **ADAPTATION:** Helladaptation schnell (~5 Min). **KLINISCH:** Nachtblindheit (Stäbchen-Dysfunktion, Vitamin A-Mangel [Rhodopsin-Synthese ↓], Retinitis pigmentosa [genetisch, Stäbchen sterben]). Farbblindheit (Zapfen-Dysfunktion: Rot-Grün-Schwäche [häufigste, X-chromosomal, M-/L-Opsin-Defekt], Blau-Gelb-Schwäche [selten, S-Opsin], Achromatopsie [keine Farben, alle Zapfen defekt]). A, C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Wie funktioniert die Fototransduktion in Stäbchen?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Fototransduktion benötigt kein Licht"
+      },
+      {
+        "id": "B",
+        "text": "Licht → Photon trifft Rhodopsin → 11-cis-Retinal → all-trans-Retinal (Photoisomerisierung) → Metarhodopsin II (aktiviert) → Transducin (G-Protein, Gt) → Phosphodiesterase (PDE, ~100 pro Transducin) → cGMP → GMP (cGMP ↓↓↓) → cGMP-gesteuerte Na⁺-Kanäle SCHLIESSEN → HYPERPOLARISATION (~-70 mV, von -40 mV) → Ca²⁺-Kanäle schließen → Glutamat-Freisetzung ↓"
+      },
+      {
+        "id": "C",
+        "text": "Fototransduktion ist nur in Zapfen"
+      },
+      {
+        "id": "D",
+        "text": "Fototransduktion führt zu Depolarisation"
+      },
+      {
+        "id": "E",
+        "text": "Fototransduktion ist nur in Bakterien"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **FOTOTRANSDUKTION** ist der Prozess, durch den Photorezeptoren (Stäbchen/Zapfen) Licht in elektrisches Signal umwandeln (ungewöhnlich: Licht → HYPERPOLARISATION, nicht Depolarisation!). **DUNKELHEIT (Ruhezustand, DEPOLARISIERT):** (1) **cGMP hoch** (Guanylatzyklase aktiv, GTP → cGMP). (2) cGMP bindet **cGMP-gesteuerte Na⁺-Kanäle** (CNG-Kanäle, im Außensegment [Membranscheiben]) → Kanäle OFFEN → **Na⁺ strömt ein** → **DEPOLARISATION** (~-40 mV, ungewöhnlich für Rezeptor!). (3) Spannungsgesteuerte Ca²⁺-Kanäle (synaptische Terminale) offen → **Glutamat-Freisetzung** (tonisch, kontinuierlich) → Bipolare Zellen (ON-Bipolare hyperpolarisiert, OFF-Bipolare depolarisiert). **LICHT (Phototransduktion, HYPERPOLARISIERT):** (1) **PHOTON** trifft **Rhodopsin** (11-cis-Retinal + Opsin). (2) **PHOTOISOMERISIERUNG:** **11-cis-Retinal → all-trans-Retinal** (cis-trans-Konformationsänderung, einziger lichtabhängiger Schritt!). (3) Rhodopsin → **Metarhodopsin II** (R*, aktivierte Form, Konformationsänderung des Opsins). (4) Metarhodopsin II aktiviert **Transducin** (G-Protein, Gt, α-Untereinheit dissoziiert, bindet GTP) → **AMPLIFIKATION** (1 R* aktiviert ~100 Transducin). (5) Transducin-α-GTP aktiviert **Phosphodiesterase (PDE)** (cGMP-spezifische PDE, γ-Untereinheit dissoziiert) → **AMPLIFIKATION** (~100 PDE pro Transducin). (6) PDE hydrolysiert **cGMP → GMP** (cGMP-Konzentration ↓↓↓, ~1000-fach in ms). (7) cGMP-gesteuerte Na⁺-Kanäle **SCHLIESSEN** (cGMP löst sich von Kanal) → **Na⁺-Einstrom ↓**. (8) **HYPERPOLARISATION** (~-70 mV, von -40 mV) → K⁺-Kanäle (immer offen) dominieren. (9) Ca²⁺-Kanäle (synaptisch) schließen → **Glutamat-Freisetzung ↓** (Signal! ON-Bipolare depolarisieren, OFF-Bipolare hyperpolarisieren). **AMPLIFIKATION GESAMT:** 1 Photon → ~100.000 cGMP hydrolysiert → ~1 pA Stromänderung → detektierbar! **ADAPTATION/ERHOLUNG:** (1) **Rhodopsin-Kinase** phosphoryliert Metarhodopsin II → **Arrestin** bindet → inaktiviert. (2) All-trans-Retinal → all-trans-Retinol (Retinol-Dehydrogenase) → Pigmentepithel (RPE) → **11-cis-Retinal** (Retinal-Isomerase, Vitamin A-Zyklus) → zurück zu Photorezeptor → Rhodopsin regeneriert. (3) **Recoverin** (Ca²⁺-Sensor): Ca²⁺ ↓ (Hyperpolarisation) → Guanylatzyklase-aktivierendes Protein (GCAP) → Guanylatzyklase ↑ → cGMP-Synthese ↑ → Dunkelzustand wiederhergestellt. **KLINISCH:** Nachtblindheit (Vitamin A-Mangel → Rhodopsin-Synthese ↓, 11-cis-Retinal ↓), Retinitis pigmentosa (genetisch, Rhodopsin-Mutation → Stäbchen sterben → Nachtblindheit, Tunnelblick). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Wie funktioniert die Akkommodation des Auges?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Akkommodation ist nur für Fernsicht"
+      },
+      {
+        "id": "B",
+        "text": "Naheinstellung (Akkommodation): Ziliarmuskel kontrahiert (Parasympathikus, M3, N. oculomotorius [III]) → Ziliarmuskel-Ring verkleinert → Zonulafasern (Zinn-Fasern) entspannen → Linse wölbt sich (elastische Rückstellkraft) → Brechkraft ↑ (~24 dpt maximal, jung). Ferneinstellung: Ziliarmuskel relaxiert → Zonulafasern gespannt → Linse flach (~20 dpt). Nahakkommodationstrias: Akkommodation + Konvergenz + Miosis"
+      },
+      {
+        "id": "C",
+        "text": "Akkommodation benötigt Sympathikus"
+      },
+      {
+        "id": "D",
+        "text": "Akkommodation ist nur in Bakterien"
+      },
+      {
+        "id": "E",
+        "text": "Linse wird flacher bei Nahsicht"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **AKKOMMODATION** ist die Anpassung der Linsen-Brechkraft für Nahsicht (junge Menschen: ~10 cm Nahpunkt, ältere: ~100 cm [Presbyopie]). **FERNEINSTELLUNG (Ruhe, KEINE Akkommodation):** (1) **Ziliarmuskel RELAXIERT** (ringförmiger glatter Muskel im Ziliarkörper, parasympathische Innervation [M3], aber in Ruhe entspannt). (2) **Zonulafasern (Zinn-Fasern) GESPANNT** (Kollagenfasern, Ziliarkörper → Linsenkapsel, radialer Zug). (3) Linse **FLACH** (geringste Brechkraft ~20 dpt, Linse wird gedehnt durch Zonulafasern-Spannung). (4) **Fernpunkt im Unendlichen scharf** (parallele Lichtstrahlen fokussiert auf Retina). **NAHEINSTELLUNG (Akkommodation, aktiver Prozess):** (1) **ZILIARMUSKEL KONTRAHIERT** (Parasympathikus, **M3-Rezeptoren**, **N. oculomotorius [III]**, Edinger-Westphal-Kern → Ganglion ciliare → postganglionäre Fasern → Ziliarmuskel). (2) Ziliarmuskel-Ring (kreisförmig) **VERKLEINERT** sich → Abstand Ziliarmuskel-Linse ↓. (3) **ZONULAFASERN ENTSPANNEN** (Spannung ↓, radialer Zug auf Linse ↓). (4) Linse **WÖLBT SICH** (elastische Rückstellkraft der Linsenkapsel, Linse ist natürlich konvex) → **Brechkraft ↑** (~24 dpt maximal bei Kindern/jungen Erwachsenen, ~22 dpt bei 30-Jährigen, ~20 dpt bei 60-Jährigen [Presbyopie, Altersweitsichtigkeit, Linse verliert Elastizität]). (5) **Nahpunkt scharf** (~10 cm bei Kindern, ~25 cm bei Erwachsenen, ~100 cm bei 60-Jährigen). **NAHAKKOMMODATIONSTRIAS** (3 simultane Reaktionen bei Nahsicht): (1) **AKKOMMODATION** (Ziliarmuskel kontrahiert, Linse wölbt). (2) **KONVERGENZ** (Augen nach innen, M. rectus medialis [N. oculomotorius III], beide Augen fixieren Nahpunkt). (3) **MIOSIS** (Pupille verengt, M. sphincter pupillae [Parasympathikus, M3, N. oculomotorius III] → Tiefenschärfe ↑ [kleinere Pupille → weniger chromatische Aberration]). **KLINISCH:** **Presbyopie** (Altersweitsichtigkeit, ~45 Jahre): Linse verliert Elastizität (Kristalline vernetzen, wasserarm) → Akkommodation ↓ → Nahpunkt ↑ (~100 cm) → Lesebrille nötig (Konvexlinse/Pluslinse, z.B. +2 dpt). **Myopie** (Kurzsichtigkeit): Bulbus zu lang → Fernpunkt vor Retina → Fernsicht unscharf → Korrektur: Konkavlinse (Minuslinse, z.B. -3 dpt). **Hyperopie** (Weitsichtigkeit): Bulbus zu kurz → Nahpunkt hinter Retina → Nahsicht unscharf (Akkommodation kompensiert teilweise) → Korrektur: Konvexlinse (Pluslinse). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Wie funktioniert die Schallübertragung im Ohr?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Schallübertragung benötigt keine Gehörknöchelchen"
+      },
+      {
+        "id": "B",
+        "text": "Schallwellen → Trommelfell schwingt → Gehörknöchelchen (Hammer → Amboss → Steigbügel, Impedanzanpassung ~22-fach [Hebelwirkung + Flächenreduktion: Trommelfell 55 mm² → Oval-Fenster 3.2 mm²]) → Oval-Fenster → Perilymphe (Scala vestibuli) → Wanderwelle auf Basilarmembran (Tonotopie: Basis = hohe Frequenz ~20 kHz, Apex = niedrige Frequenz ~20 Hz) → Stereozilien (Haarzellen) biegen → Tip-Links spannen → K⁺-Kanäle öffnen (Endolymphe K⁺-reich, +80 mV) → Depolarisation → Glutamat → N. cochlearis"
+      },
+      {
+        "id": "C",
+        "text": "Schallwellen werden direkt zu elektrischen Signalen"
+      },
+      {
+        "id": "D",
+        "text": "Basilarmembran ist überall gleich"
+      },
+      {
+        "id": "E",
+        "text": "Endolymphe ist Na⁺-reich"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **SCHALLÜBERTRAGUNG** im Ohr erfolgt in 3 Stufen (Außenohr, Mittelohr, Innenohr), mit **Impedanzanpassung** (Luft → Flüssigkeit) im Mittelohr. **ABLAUF:** (1) **SCHALLWELLEN** (Luftdruckschwankungen) → Ohrmuschel (Schallsammlung) → äußerer Gehörgang (~2.5 cm). (2) **TROMMELFELL** (Membrana tympani) schwingt (Auslenkung ~1 nm bei Hörschwelle!). (3) **GEHÖRKNÖCHELCHEN** (kleinste Knochen, Mittelohr, luftgefüllt): **Hammer** (Malleus, an Trommelfell) → **Amboss** (Incus) → **Steigbügel** (Stapes, Fußplatte an Oval-Fenster). **IMPEDANZANPASSUNG (~22-fach Druckverstärkung):** (a) **Hebelwirkung** (Hammer-Amboss, ~1.3-fach). (b) **Flächenreduktion** (Trommelfell 55 mm² → Oval-Fenster 3.2 mm², ~17-fach Druckerhöhung [Druck = Kraft/Fläche]). Ohne Impedanzanpassung: 99.9% Schallenergie würde reflektiert werden (Luft-Flüssigkeit-Grenze)! (4) **OVAL-FENSTER** (membranbedeckte Öffnung zu Innenohr) → Steigbügel-Fußplatte drückt → **Perilymphe** (Na⁺-reich, wie EZF) in **Scala vestibuli** (oberer Gang in Cochlea) bewegt sich. (5) **WANDERWELLE** auf **BASILARMEMBRAN** (trennt Scala media [Endolymphe, K⁺-reich] von Scala tympani [Perilymphe]). **TONOTOPIE** (Frequenz-Orts-Kodierung): Basilarmembran ist **NICHT uniform** → **Basis** (nahe Oval-Fenster): schmal (~0.1 mm), steif → **hohe Frequenzen** (~20.000 Hz) → **Apex** (Spitze): breit (~0.5 mm), flexibel → **niedrige Frequenzen** (~20 Hz). Wanderwelle erreicht Maximum bei Resonanzfrequenz. (6) **CORTI-ORGAN** (auf Basilarmembran): Basilarmembran bewegt sich → **Stereozilien** (Haarzellen) biegen gegen **Tektorialmembran** (gelartig, darüber). (7) **MECHANO-TRANSDUKTION:** **Tip-Links** (Cadherin 23, verbinden Stereozilien) spannen → **Mechano-sensitive K⁺-Kanäle** (TMC1/2, direkt mechanisch, KEIN Second Messenger!) **ÖFFNEN**. (8) **K⁺ strömt EIN** (Endolymphe ist K⁺-reich [~150 mM] + positiv [+80 mV, Endocochleäres Potential, via Stria vascularis], Treibkraft ~120 mV!) → **DEPOLARISATION** (Haarzelle, von -70 mV → -40 mV). (9) Spannungsgesteuerte **Ca²⁺-Kanäle** (Ca_v1.3) öffnen → Ca²⁺ rein → **Glutamat-Freisetzung** (Synapse, Ribbon-Synapse [spezielle Struktur für schnelle/tonische Freisetzung]). (10) **N. cochlearis** (Spiralganglion-Neuronen, bipolar) → Aktionspotential → Hirnstamm (Nucleus cochlearis) → auditorischer Kortex (Gyrus temporalis superior, Heschl-Querwindungen). (11) **RUNDES FENSTER** (membranbedeckte Öffnung, Scala tympani) wölbt sich aus (Druckausgleich, da Perilymphe inkompressibel). **KLINISCH:** Schwerhörigkeit (Schallleitungsschwerhörigkeit [Mittelohr: Otosklerose, Trommelfell-Perforation] vs. Schallempfindungsschwerhörigkeit [Innenohr: Haarzellen-Schädigung durch Lärm/Alter/Ototoxika: Aminoglykoside, Cisplatin, Furosemid]). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q5",
+    "question": "Welche Hautrezeptoren gibt es und was ist ihre Funktion?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Alle Hautrezeptoren sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Meissner-Körperchen (Dermis-Papillen, Berührung leicht, schnell adaptierend, 10-50 Hz). Pacini-Körperchen (tiefe Dermis, Vibration, schnell adaptierend, 200-300 Hz). Merkel-Zellen (Epidermis basale, Druck statisch, langsam adaptierend, feine Details). Ruffini-Körperchen (Dermis tief, Dehnung, langsam adaptierend). Freie Nervenendigungen (Epidermis/Dermis, Schmerz/Temperatur, Aδ [schnell, scharf], C-Fasern [langsam, brennend], TRPM8 [Kälte ~25°C], TRPV1 [Wärme ~43°C])"
+      },
+      {
+        "id": "C",
+        "text": "Nur Meissner-Körperchen existieren"
+      },
+      {
+        "id": "D",
+        "text": "Pacini-Körperchen sind für Schmerz"
+      },
+      {
+        "id": "E",
+        "text": "Merkel-Zellen sind nur in Dermis"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Die Haut enthält spezialisierte **MECHANOREZEPTOREN** (Berührung, Druck, Vibration, Dehnung), **THERMOREZEPTOREN** (Temperatur) und **NOZIZEPTOREN** (Schmerz), die verschiedene Reize codieren. **MECHANOREZEPTOREN:** (1) **MEISSNER-KÖRPERCHEN** (Corpuscula tactus): **Lokalisation:** Dermis-Papillen (oberflächlich), besonders Fingerbeeren, Lippen, Zunge (hohe Dichte). **Modalität:** **Berührung** (leicht, sanft), **Textur**. **Adaptation:** **SCHNELL** (phasisch, reagiert auf Änderung, nicht auf konstanten Reiz). **Frequenz:** Niedrig (10-50 Hz, dynamisch). **Funktion:** Feine Textur-Diskrimination (z.B. Braille-Lesen). (2) **PACINI-KÖRPERCHEN** (Corpuscula lamellosa): **Lokalisation:** Tiefe Dermis, Subcutis (Fettgewebe), Faszien, Gelenke. **Modalität:** **Vibration** (hochfrequent). **Adaptation:** **SCHNELL** (sehr schnell, phasisch). **Frequenz:** Hoch (200-300 Hz). **Struktur:** Zwiebelschalen-artig (Lamellen, filtern niederfrequente Reize). **Funktion:** Vibration (z.B. Werkzeug-Nutzung), Oberflächentextur bei Bewegung. (3) **MERKEL-ZELLEN** (Merkel-Tastscheiben): **Lokalisation:** **Epidermis** (Stratum basale), besonders Fingerbeeren, Lippen. **Modalität:** **Druck** (statisch, kontinuierlich). **Adaptation:** **LANGSAM** (tonisch, reagiert auf konstanten Reiz). **Frequenz:** Niedrig (0.3-3 Hz, statisch). **Funktion:** **Feine Details** (Kanten, Formen, Buchstaben-Erkennung), höchste räumliche Auflösung (~1 mm). **Neurotransmitter:** Merkel-Zellen setzen Serotonin/Substanz P frei (ungewöhnlich für Nicht-Neuron). (4) **RUFFINI-KÖRPERCHEN** (Corpuscula bulboidea): **Lokalisation:** Dermis (tief), Gelenkkapseln, Sehnen. **Modalität:** **Dehnung** (Hautdehnung, Gelenkstellung). **Adaptation:** **LANGSAM** (tonisch). **Frequenz:** Niedrig (15-400 Hz). **Funktion:** Propriozeption (Gelenkstellung), Hautdehnung (z.B. Greifen). **THERMOREZEPTOREN (freie Nervenendigungen):** (1) **KÄLTEREZEPTOREN:** **TRPM8** (Transient Receptor Potential Melastatin 8, aktiviert bei ~25°C, auch Menthol). **Fasern:** **Aδ-Fasern** (myelinisiert, schnell ~20 m/s, \"kalt\"). (2) **WÄRMEREZEPTOREN:** **TRPV1** (Vanilloid 1, aktiviert bei ~43°C, auch **Capsaicin** [Chili]). **TRPV3/4** (warmere Temperaturen 30-40°C). **Fasern:** **C-Fasern** (unmyelinisiert, langsam ~1 m/s, \"warm/heiß\"). **NOZIZEPTOREN (Schmerzrezeptoren, freie Nervenendigungen):** **KEINE spezialisierten Strukturen** (im Gegensatz zu Mechanorezeptoren). **Lokalisation:** Epidermis, Dermis, Periost, Meningen (überall, NICHT Gehirnparenchym). **Fasern:** (1) **Aδ-Fasern** (myelinisiert, ~20 m/s): **Schneller Schmerz** (scharf, lokalisierbar, \"first pain\"). (2) **C-Fasern** (unmyelinisiert, ~1 m/s): **Langsamer Schmerz** (brennend, dumpf, diffus, \"second pain\"). **Aktivierung:** Mechanisch (Verletzung, hoher Druck), thermisch (Hitze >43°C [TRPV1], Kälte <15°C), **chemisch** (Bradykinin [Entzündung], **Prostaglandine** [PGE₂, Entzündung, NSAID-Target], Substanz P, H⁺ [Azidose], ATP [Zellschädigung], Capsaicin [TRPV1]). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  }
+]

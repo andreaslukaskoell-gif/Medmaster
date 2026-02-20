@@ -1,0 +1,176 @@
+[
+  {
+    "id": "q1",
+    "question": "Wo findet der Citratzyklus (Krebs-Zyklus) statt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Im Zytosol"
+      },
+      {
+        "id": "B",
+        "text": "In der Mitochondrien-Matrix"
+      },
+      {
+        "id": "C",
+        "text": "Im Intermembranraum der Mitochondrien"
+      },
+      {
+        "id": "D",
+        "text": "In der inneren Mitochondrienmembran"
+      },
+      {
+        "id": "E",
+        "text": "Im Zellkern"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Der CITRATZYKLUS (Krebs-Zyklus, Tricarbonsäurezyklus) findet in der MITOCHONDRIEN-MATRIX statt. Acetyl-CoA (aus Pyruvat, Fettsäuren, Aminosäuren) wird oxidiert → 3 NADH + 1 FADH₂ + 1 GTP (= ATP) + 2 CO₂ pro Zyklus. Enzyme des Citratzyklus (Citrat-Synthase, Isocitrat-Dehydrogenase, α-Ketoglutarat-Dehydrogenase, etc.) sind in der Matrix lokalisiert. A ist falsch (Glykolyse im Zytosol). C ist falsch (Intermembranraum = H⁺-Akkumulation, Cytochrom c). D ist falsch (innere Membran = Atmungskette). E ist falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Welche Struktur vergrößert die Oberfläche der inneren Mitochondrienmembran?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Mikrovilli"
+      },
+      {
+        "id": "B",
+        "text": "Cristae (Einstülpungen der inneren Membran)"
+      },
+      {
+        "id": "C",
+        "text": "Porine"
+      },
+      {
+        "id": "D",
+        "text": "Nucleolus"
+      },
+      {
+        "id": "E",
+        "text": "Zellkern"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: CRISTAE sind EINSTÜLPUNGEN (Faltungen) der INNEREN Mitochondrienmembran, die die Oberfläche um das 5-10-fache vergrößern. Dies ermöglicht mehr Platz für Atmungsketten-Komplexe (I-IV) und ATP-Synthasen (Komplex V) → höhere ATP-Produktionskapazität. Gewebe mit hohem Energiebedarf (Herzmuskel, Skelettmuskel) haben Mitochondrien mit besonders vielen, dicht gepackten Cristae. A ist falsch (Mikrovilli = Zellmembran-Ausstülpungen, nicht Mitochondrien). C ist falsch (Porine in äußerer Membran für Permeabilität). D, E sind falsch (andere Zellstrukturen).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q3",
+    "question": "Wie wird ATP in Mitochondrien hauptsächlich synthetisiert?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Durch Substratkettenphosphorylierung im Zytosol"
+      },
+      {
+        "id": "B",
+        "text": "Durch oxidative Phosphorylierung: Atmungskette pumpt H⁺ in Intermembranraum → Protonengradient → ATP-Synthase nutzt Gradienten für ATP-Synthese (chemiosmotische Kopplung)"
+      },
+      {
+        "id": "C",
+        "text": "Durch Photosynthese"
+      },
+      {
+        "id": "D",
+        "text": "Durch Glykolyse"
+      },
+      {
+        "id": "E",
+        "text": "ATP kann in Mitochondrien nicht synthetisiert werden"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Die hauptsächliche ATP-Synthese erfolgt durch OXIDATIVE PHOSPHORYLIERUNG (chemiosmotische Kopplung). Mechanismus: (1) NADH/FADH₂ (aus Citratzyklus, β-Oxidation) → Elektronen auf Atmungsketten-Komplexe (I-IV) → Elektronentransport, (2) Komplexe I, III, IV PUMPEN H⁺ aus Matrix in INTERMEMBRANRAUM → Protonengradient (pH-Unterschied + elektrischer Gradient), (3) H⁺ fließt zurück durch ATP-SYNTHASE (Komplex V) → Konformationsänderung → ADP + Pi → ATP (~3-4 H⁺ pro ATP). Pro Glukose: ~30-32 ATP (vs. nur 2 ATP aus Glykolyse). A ist falsch (nur 2 ATP aus Glykolyse + 2 GTP aus Citratzyklus). C ist falsch (Chloroplasten, nicht Mitochondrien). D ist falsch (Glykolyse = Zytosol, nur 2 ATP). E ist falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q4",
+    "question": "Welche Aussage zur mitochondrialen DNA (mtDNA) ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "mtDNA ist linear und mit Histonen verpackt"
+      },
+      {
+        "id": "B",
+        "text": "mtDNA ist zirkulär (~16,5 kb), kodiert 13 Proteine (Atmungskette) + 22 tRNAs + 2 rRNAs, wird nur maternal vererbt"
+      },
+      {
+        "id": "C",
+        "text": "mtDNA ist identisch mit nukleärer DNA"
+      },
+      {
+        "id": "D",
+        "text": "Mitochondrien haben keine DNA"
+      },
+      {
+        "id": "E",
+        "text": "mtDNA wird vom Vater vererbt"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: mtDNA ist ZIRKULÄR (~16,5 kb beim Menschen), NICHT mit Histonen verpackt (wie Bakterien-DNA!). Kodiert: 13 Proteine (alle für Atmungsketten-Komplexe I, III, IV, V), 22 tRNAs, 2 rRNAs (12S, 16S für 70S-Ribosomen). MATRILINEARE VERERBUNG = nur von der MUTTER vererbt (Eizelle enthält ~100.000 Mitochondrien, Spermium nur ~100 im Schwanz, die bei Befruchtung eliminiert werden). Hohe Mutationsrate (~10x nukleäre DNA) → Mitochondriopathien (LHON, MELAS, MERRF). A ist falsch (zirkulär, keine Histone). C ist falsch (völlig unterschiedlich). D ist falsch (mtDNA vorhanden). E ist falsch (maternal, NICHT paternal).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q5",
+    "question": "Welcher der folgenden Befunde unterstützt die Endosymbiontentheorie für Mitochondrien?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Mitochondrien haben 80S-Ribosomen wie das Zytoplasma"
+      },
+      {
+        "id": "B",
+        "text": "Mitochondrien haben eine einfache Membran"
+      },
+      {
+        "id": "C",
+        "text": "Mitochondrien haben 70S-Ribosomen (wie Prokaryoten) und eigene zirkuläre DNA"
+      },
+      {
+        "id": "D",
+        "text": "Mitochondrien entstehen nur durch Kernteilung"
+      },
+      {
+        "id": "E",
+        "text": "Mitochondrien haben keine DNA"
+      }
+    ],
+    "correct": "C",
+    "explanation": "C ist korrekt: ENDOSYMBIONTENTHEORIE besagt, dass Mitochondrien von frei lebenden α-Proteobakterien abstammen. BELEGE: (1) **70S-RIBOSOMEN** (50S + 30S Untereinheiten) wie PROKARYOTEN (Zytoplasma hat 80S!), (2) Eigene ZIRKULÄRE DNA (wie Bakterien, keine Histone), (3) DOPPELMEMBRAN (innere = ursprüngliche Bakterienmembran, äußere = Wirtsmembran), (4) ZWEITEILUNG (binäre Fission, nicht Mitose), (5) Phylogenetische Verwandtschaft zu α-Proteobakterien, (6) Cardiolipin in innerer Membran (typisch für Bakterien). A ist falsch (70S, nicht 80S!). B ist falsch (Doppelmembran). D ist falsch (unabhängige Teilung). E ist falsch (mtDNA vorhanden).",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q6",
+    "question": "Was ist die Funktion des Protonengradienten (H⁺) im Intermembranraum der Mitochondrien?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Er hat keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "Er treibt die ATP-Synthase an (Protonenmotorische Kraft) - H⁺ fließt zurück in Matrix → ATP-Synthese"
+      },
+      {
+        "id": "C",
+        "text": "Er hemmt die Zellatmung"
+      },
+      {
+        "id": "D",
+        "text": "Er produziert CO₂"
+      },
+      {
+        "id": "E",
+        "text": "Er zerstört die Mitochondrien"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Der PROTONENGRADIENT (H⁺-Gradient) zwischen Intermembranraum (hoch [H⁺], pH ~6,0-6,5) und Matrix (niedrig [H⁺], pH ~7,8) ist die PROTONENMOTORISCHE KRAFT (chemiosmotische Energie). Entstehung: Atmungsketten-Komplexe I, III, IV pumpen H⁺ aus Matrix in Intermembranraum (aktiv, Energie aus Elektronen-Transport). Nutzung: H⁺ fließt zurück durch ATP-SYNTHASE (Komplex V) entlang Gradienten (passiv) → Rotation der F₀-Untereinheit → Konformationsänderung der F₁-Untereinheit → ADP + Pi → ATP (chemiosmotische Kopplung nach Peter Mitchell, Nobelpreis 1978). ~3-4 H⁺ pro ATP. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  }
+]

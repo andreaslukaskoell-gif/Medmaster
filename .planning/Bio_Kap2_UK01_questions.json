@@ -1,0 +1,147 @@
+[
+  {
+    "id": "q1",
+    "question": "Was ist das charakteristische Merkmal von Epithelgewebe bezüglich der Gefäßversorgung?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Epithelgewebe ist stark vaskularisiert"
+      },
+      {
+        "id": "B",
+        "text": "Epithelgewebe ist gefäßfrei (avaskulär) und wird via Diffusion aus dem unterlagernden Bindegewebe ernährt. Es sitzt auf einer Basalmembran (Lamina basalis + Lamina fibroreticularis)"
+      },
+      {
+        "id": "C",
+        "text": "Epithelgewebe hat nur Lymphgefäße"
+      },
+      {
+        "id": "D",
+        "text": "Epithelgewebe produziert eigene Blutgefäße"
+      },
+      {
+        "id": "E",
+        "text": "Epithelgewebe benötigt keine Nährstoffe"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **EPITHELGEWEBE IST GEFÄSSFREI (AVASKULÄR)** → zentrale Eigenschaft! Ernährung erfolgt via **DIFFUSION** aus dem unterlagernden Bindegewebe (Kapillaren dort). Epithelzellen sitzen auf **BASALMEMBRAN** (zweilagig): (1) **Lamina basalis** (epithelialer Ursprung): Kollagen IV, Laminin, Nidogen, Proteoglykane (Heparansulfat). (2) **Lamina fibroreticularis** (Bindegewebe-Ursprung): Kollagen III (retikuläre Fasern), Fibronektin. **VERANKERUNG:** Hemidesmosomen (Epithel) binden via **Integrine** (α6β4) an Laminin und Kollagen IV der Basalmembran → Intermediärfilamente (Keratin) verankert. **WARUM GEFÄSSFREI?** Epithelien bilden dichte Zellverbände (Tight Junctions) → Diffusion aus Bindegewebe ausreichend (kurze Distanz). KLINISCH: Diabetische Nephropathie → Basalmembran-Verdickung (Glomerulopathie). A ist falsch (nicht vaskularisiert). C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Wie unterscheidet sich mehrreihiges Flimmerepithel von mehrschichtigem Epithel?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Mehrreihiges Flimmerepithel (pseudostratifiziert): ALLE Zellen sitzen auf Basalmembran (einschichtig), aber Kerne auf verschiedenen Höhen → sieht mehrschichtig aus. Vorkommen: Trachea/Bronchien (Kinozilien + Becherzellen → mukoziliäre Clearance)"
+      },
+      {
+        "id": "C",
+        "text": "Mehrreihiges Epithel ist nur in Pflanzen"
+      },
+      {
+        "id": "D",
+        "text": "Mehrschichtiges Epithel hat Zilien"
+      },
+      {
+        "id": "E",
+        "text": "Beide haben keine Basalmembran"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **MEHRREIHIGES FLIMMEREPITHEL** (pseudostratifiziertes Epithel) ist eine BESONDERE Form des einschichtigen Epithels. **STRUKTUR:** (1) **ALLE Zellen berühren Basalmembran** (einschichtig), aber **Kerne auf verschiedenen Höhen** (niedrig vs. hoch) → optischer Eindruck: mehrschichtig (daher \"pseudostratifiziert\"). (2) **Zelltypen:** Hochprismatische Zellen (Kinozilien tragend), Basalzellen (Stammzellen, niedriger Kern), **Becherzellen** (Schleim-Sekretion, mukushaltige Granula). **VORKOMMEN:** (1) **Trachea, Bronchien** (Atemwege): **9+2 Kinozilien** (Dynein-Arme) + Schleim → **MUKOZILIÄRE CLEARANCE** (Fremdkörper/Bakterien Richtung Rachen transportiert, ~1 cm/Min). (2) Ductus epididymidis (Stereozilien, unbeweglich). **MEHRSCHICHTIGES EPITHEL:** Mehrere Zelllagen ÜBEREINANDER, NICHT alle Zellen berühren Basalmembran (z.B. Epidermis: basale → spinosum → granulosum → corneum). KLINISCH: Kartagener-Syndrom (Dynein-Defekt) → Zilien immotil → chronische Sinusitis/Bronchiektasen. A ist falsch (unterschiedlich). C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Was ist die Funktion von Tight Junctions in Epithelgewebe?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Tight Junctions produzieren ATP"
+      },
+      {
+        "id": "B",
+        "text": "Tight Junctions bilden Barriere (Zonula occludens), verhindern parazellulären Transport (zwischen Zellen). Proteine: Claudine (Poren, selektiv), Occludin, JAMs. Vorkommen: Darmepithel (Darmbarriere), Blut-Hirn-Schranke, Blasenepithel (Urothel)"
+      },
+      {
+        "id": "C",
+        "text": "Tight Junctions sind nur in Pflanzen"
+      },
+      {
+        "id": "D",
+        "text": "Tight Junctions transportieren Nährstoffe"
+      },
+      {
+        "id": "E",
+        "text": "Tight Junctions replizieren DNA"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **TIGHT JUNCTIONS** (Zonula occludens) sind der OBERSTE Zellkontakt (apikal-lateral) in Epithelzellen → bilden **BARRIERE**. Funktion: (1) **ABDICHTUNG:** Verhindert **parazellulären Transport** (Diffusion zwischen Zellen durch Interzellularspalt). Substanzen müssen DURCH Zelle (transzellulär: Carrier, Kanäle) → selektive Barriere. (2) **ZAUNFUNKTION (Fence):** Verhindert Diffusion von Membranproteinen zwischen apikaler und basaler Membran → Polarität erhalten. **PROTEINE:** (1) **Claudine** (24 Typen): Bilden Poren (ionenselektiv, z.B. Claudin-2 → Na⁺-Durchlässigkeit in Niere). (2) **Occludin:** Abdichtung, Regulierung. (3) **JAMs** (Junctional Adhesion Molecules): Zell-Zell-Adhäsion. Intrazelluläre Verankerung: ZO-Proteine (ZO-1, ZO-2, ZO-3) → Aktin-Zytoskelett. **VORKOMMEN:** Darmepithel (Darmbarriere, Leaky Gut bei CED), Blut-Hirn-Schranke (Endothelzellen), Blasenepithel (Urothel, wasserundurchlässig). KLINISCH: Vibrio cholerae-Toxin → Claudine modifiziert → Ionen-Verlust → Durchfall. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Was ist der Unterschied zwischen exokrinen und endokrinen Drüsen?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Exokrine Drüsen: Sekret in Hohlraum/Oberfläche via Ausführungsgang (Speicheldrüsen, Pankreas-Enzyme, Schweiß-/Talgdrüsen). Endokrine Drüsen: Sekret (Hormone) in Blutbahn, KEIN Ausführungsgang (Schilddrüse [T3/T4], Hypophyse, Inselzellen [Insulin/Glukagon])"
+      },
+      {
+        "id": "C",
+        "text": "Nur exokrine Drüsen existieren"
+      },
+      {
+        "id": "D",
+        "text": "Endokrine Drüsen haben Ausführungsgänge"
+      },
+      {
+        "id": "E",
+        "text": "Beide produzieren nur Schweiß"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **EXOKRINE** und **ENDOKRINE** Drüsen unterscheiden sich im **SEKRETIONSWEG**. **EXOKRINE DRÜSEN:** (1) **Sekret in Hohlraum oder Körperoberfläche** via **AUSFÜHRUNGSGANG** (Ductus). (2) **Beispiele:** Speicheldrüsen (Parotis, Submandibularis → Mundhöhle), Pankreas (exokriner Teil → Verdauungsenzyme in Duodenum), Schweißdrüsen (Haut), Talgdrüsen (Talg in Haarfollikel), Tränendrüsen, Brustdrüsen (Milch). (3) **Sekretionstypen:** Merokrin (Exozytose, Zelle intakt: Speichel, Schweiß), Apokrin (apikale Teile abgeschnürt: Milchdrüse), Holokrin (ganze Zelle wird Sekret: Talgdrüsen). **ENDOKRINE DRÜSEN:** (1) **Sekret (Hormone) direkt in Blutbahn**, KEIN Ausführungsgang → systemische Wirkung. (2) **Beispiele:** Schilddrüse (T3, T4, Calcitonin), Hypophyse (STH, ACTH, TSH, LH, FSH, ADH, Oxytocin), Nebennieren (Cortisol, Aldosteron, Adrenalin), Langerhans-Inseln (Insulin, Glukagon, Somatostatin). **GEMISCHTE DRÜSEN:** Pankreas (exokrin: Enzyme + endokrin: Insulin/Glukagon), Leber (exokrin: Galle + endokrin: IGF-1). A ist falsch (unterschiedlich). C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q5",
+    "question": "Was ist die Besonderheit von Übergangsepithel (Urothel) in der Harnblase?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Urothel hat keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "Urothel ist DEHNBAR: Schichtzahl ändert sich mit Blasenfüllung (leer: 4-7 Schichten kubisch/zylindrisch, gedehnt: 2-3 Schichten flach). Deckzellen (Umbrella Cells) mit Plaques → wasserundurchlässig (Urin-Barriere)"
+      },
+      {
+        "id": "C",
+        "text": "Urothel ist nur in der Lunge"
+      },
+      {
+        "id": "D",
+        "text": "Urothel produziert ATP"
+      },
+      {
+        "id": "E",
+        "text": "Urothel ist verhornt"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **ÜBERGANGSEPITHEL** (Urothel) ist ein SPEZIALISIERTES mehrschichtiges Epithel, das **DEHNBAR** ist (einzigartig!). **VORKOMMEN:** Harnblase, Harnleiter, Nierenbecken (ableitende Harnwege). **STRUKTUR (abhängig von Blasenfüllung):** (1) **LEER (Kontraktion):** 4-7 Zellschichten. Zellen: kubisch, zylindrisch (hochprismatisch). (2) **GEDEHNT (Füllung):** 2-3 Zellschichten (Zellen flach, Plattenepithel-ähnlich). **DECKZELLEN (UMBRELLA CELLS):** (1) Große Zellen (bedecken mehrere Basalzellen), (2) **PLAQUES** (asymmetrische Einheitsmembran, Uroplakin I-IV, ~16 nm dick) → **WASSERUNDURCHLÄSSIG** (verhindert Urin-Rückresorption, Osmolalität Urin >> Blut), (3) Asymmetrische Einheitsmembran (apikale Membran starr). **FUNKTION:** Barriere gegen Urin (hyperton, toxisch: Harnstoff, Ammoniak), Dehnbarkeit (Blasenvolumen 50 mL → 500 mL). KLINISCH: **Blasenkarzinom** (Übergangszellkarzinom, häufig! Risikofaktoren: Rauchen, aromatische Amine [Anilin], Schistosomiasis). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-9-02-q1",
+    "question": "Welche Aussage zum **biologischen Artkonzept** (Mayr) ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Arten sind durch morphologische Ähnlichkeit definiert (Aussehen), nicht durch Fortpflanzung"
+      },
+      {
+        "id": "B",
+        "text": "Arten sind Fortpflanzungsgemeinschaften: Individuen können sich fortpflanzen + fertile Nachkommen zeugen (reproduktive Isolation von anderen Arten)"
+      },
+      {
+        "id": "C",
+        "text": "Alle Hybride (z.B. Maultier: Pferd × Esel) sind fertile Nachkommen und bilden neue Arten"
+      },
+      {
+        "id": "D",
+        "text": "Arten können sich nicht fortpflanzen, da sie zu unterschiedlich sind (keine gemeinsame DNA)"
+      },
+      {
+        "id": "E",
+        "text": "Arten sind statisch und verändern sich nie (keine Evolution)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Biologisches Artkonzept (Mayr):** Arten sind **Fortpflanzungsgemeinschaften** → Individuen können sich **fortpflanzen** + **fertile (fruchtbare) Nachkommen** zeugen. **Reproduktive Isolation:** Keine Fortpflanzung mit anderen Arten → **kein Genfluss**. **Beispiel:** Pferd × Esel = **Maultier** (Hybride, **steril/unfruchtbar**) → **keine Art** (nicht fortpflanzungsfähig). Wichtig: **Fertilität** der Nachkommen ist entscheidend, nicht nur Paarung!",
+    "difficulty": "easy",
+    "tags": ["Evolution", "Artbildung", "Biologisches Artkonzept", "Reproduktive Isolation"]
+  },
+  {
+    "id": "bio-9-02-q2",
+    "question": "**Darwin-Finken** auf den Galápagos-Inseln sind ein klassisches Beispiel für Artbildung. Welcher Mechanismus liegt vor?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Sympatrische Artbildung durch Polyploidie (Chromosomenzahl-Verdopplung)"
+      },
+      {
+        "id": "B",
+        "text": "Allopatrische Artbildung durch geografische Isolation (verschiedene Inseln) + adaptive Radiation (viele freie Nischen)"
+      },
+      {
+        "id": "C",
+        "text": "Künstliche Selektion durch Menschen (Zucht von unterschiedlichen Schnäbeln)"
+      },
+      {
+        "id": "D",
+        "text": "Sympatrische Artbildung durch ökologische Isolation im selben See (wie Buntbarsche)"
+      },
+      {
+        "id": "E",
+        "text": "Keine Artbildung: Darwin-Finken sind alle dieselbe Art (nur phänotypische Variation)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Darwin-Finken (Galápagos):** **Allopatrische Artbildung** (geografische Isolation). **Vorfahren-Art** (Südamerika) → Galápagos-Inseln (geografisch getrennt) → **14 Arten** entstanden (unterschiedliche Inseln/Nischen). **Adaptive Radiation:** Schnelle Artbildung in neuen Lebensräumen (viele **freie Nischen**). **Schnabel-Variation:** Angepasst an Nahrung (Samen, Insekten, Kakteen, Blut). **Allopatrisch** = geografische Barriere, **Sympatrisch** = ohne Barriere (z.B. Polyploidie bei Pflanzen).",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Artbildung", "Allopatrisch", "Darwin-Finken", "Adaptive Radiation"]
+  },
+  {
+    "id": "bio-9-02-q3",
+    "question": "**Polyploidie** ist ein wichtiger Mechanismus der **sympatrischen Artbildung** (ohne geografische Isolation). Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Polyploidie bedeutet, dass Organismen weniger Chromosomen haben als normal (Monosomie)"
+      },
+      {
+        "id": "B",
+        "text": "Allopolyploidie: Hybridisierung zweier Arten (z.B. 2n × 2n → Hybride 2n steril) + Chromosomenverdopplung → 4n (fertil, neue Art!)"
+      },
+      {
+        "id": "C",
+        "text": "Polyploidie findet nur bei Tieren statt, nicht bei Pflanzen"
+      },
+      {
+        "id": "D",
+        "text": "Polyploidie führt immer zu unfruchtbaren Organismen (wie Maultier)"
+      },
+      {
+        "id": "E",
+        "text": "Autopolyploidie entsteht durch geografische Isolation, nicht durch Meiose-Fehler"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Allopolyploidie (sympatrische Artbildung):** **Hybridisierung** zweier Arten (Art A [2n] × Art B [2n]) → Hybride (2n, **steril**, da Chromosomen nicht paaren können). **Chromosomenverdopplung** → **4n** (tetraploid, **fertil**, da Chromosomen nun paaren können!) → **neue Art** (reproduktiv isoliert von Eltern-Arten). **Beispiel:** Weizen (6n = hexaploid, aus 3 Vorfahren-Arten). **Häufig bei Pflanzen** (~30–70%), **selten bei Tieren**. **Autopolyploidie:** Fehler bei Meiose → 4n (innerhalb einer Art).",
+    "difficulty": "hard",
+    "tags": ["Evolution", "Artbildung", "Sympatrisch", "Polyploidie", "Allopolyploidie"]
+  },
+  {
+    "id": "bio-9-02-q4",
+    "question": "Zwei Frosch-Arten leben im selben Teich (sympatrisch), paaren sich aber zu **unterschiedlichen Jahreszeiten** (Art A im Frühling, Art B im Herbst). Welcher Isolationsmechanismus liegt vor?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Geografische Isolation (allopatrisch): Barriere zwischen Populationen"
+      },
+      {
+        "id": "B",
+        "text": "Temporale Isolation (präzygotisch): Unterschiedliche Paarungszeiten → keine Befruchtung"
+      },
+      {
+        "id": "C",
+        "text": "Hybrid-Sterilität (postzygotisch): Hybride unfruchtbar (wie Maultier)"
+      },
+      {
+        "id": "D",
+        "text": "Mechanische Isolation (präzygotisch): Genitalien passen nicht zusammen"
+      },
+      {
+        "id": "E",
+        "text": "Hybrid-Inviabilität (postzygotisch): Hybride sterben früh (nicht lebensfähig)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Temporale Isolation (präzygotisch):** Unterschiedliche **Paarungszeiten** (Frühling vs. Herbst) → **keine Befruchtung** → reproduktive Isolation. **Präzygotisch** = **VOR Befruchtung** (geografisch, ökologisch, **temporal**, ethologisch, mechanisch). **Postzygotisch** = **NACH Befruchtung** (Hybrid-Sterilität [Maultier], Hybrid-Inviabilität [Hybride sterben], Hybrid-Breakdown [F₂ schwach]). **Wichtig:** Präzygotisch **verhindert** Befruchtung, Postzygotisch → Hybride haben **Fitness-Nachteil**!",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Artbildung", "Reproduktive Isolation", "Temporal", "Präzygotisch"]
+  },
+  {
+    "id": "bio-9-02-q5",
+    "question": "Ein **Maultier** (Hybride von Pferd × Esel) ist **unfruchtbar/steril**. Welcher Isolationsmechanismus liegt vor?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Geografische Isolation (präzygotisch): Barriere zwischen Pferd und Esel"
+      },
+      {
+        "id": "B",
+        "text": "Temporale Isolation (präzygotisch): Pferd und Esel paaren sich zu unterschiedlichen Zeiten"
+      },
+      {
+        "id": "C",
+        "text": "Hybrid-Sterilität (postzygotisch): Hybride (Maultier) unfruchtbar → kein Genfluss zwischen Arten"
+      },
+      {
+        "id": "D",
+        "text": "Ethologische Isolation (präzygotisch): Pferd und Esel haben unterschiedliche Balzrituale"
+      },
+      {
+        "id": "E",
+        "text": "Hybrid-Breakdown (postzygotisch): F₂-Generation unfruchtbar/schwach"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Hybrid-Sterilität (postzygotisch):** Hybride (Maultier: Pferd × Esel) sind **unfruchtbar/steril** → **kein Genfluss** zwischen Arten → reproduktive Isolation. **Ursache:** Pferd (64 Chromosomen), Esel (62 Chromosomen) → Maultier (63 Chromosomen, ungerade!) → Meiose nicht möglich (Chromosomen können nicht paaren) → **steril**. **Postzygotisch** = **NACH Befruchtung** (Befruchtung findet statt, aber Hybride haben Fitness-Nachteil: steril, sterben, F₂ schwach). **Wichtig:** Maultier = klassisches Beispiel für postzygotische Isolation!",
+    "difficulty": "easy",
+    "tags": ["Evolution", "Artbildung", "Reproduktive Isolation", "Postzygotisch", "Hybrid-Sterilität", "Maultier"]
+  },
+  {
+    "id": "bio-9-02-q6",
+    "question": "**Adaptive Radiation** beschreibt ein evolutionäres Muster. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Adaptive Radiation ist die langsame, kontinuierliche Evolution über lange Zeiträume (Gradualismus)"
+      },
+      {
+        "id": "B",
+        "text": "Adaptive Radiation ist die schnelle Artbildung in neuen Lebensräumen (viele freie Nischen), z.B. Darwin-Finken, Buntbarsche"
+      },
+      {
+        "id": "C",
+        "text": "Adaptive Radiation beschreibt das Aussterben vieler Arten (Massenaussterben)"
+      },
+      {
+        "id": "D",
+        "text": "Adaptive Radiation findet nur bei Pflanzen statt (Polyploidie), nicht bei Tieren"
+      },
+      {
+        "id": "E",
+        "text": "Adaptive Radiation ist die Konvergenz mehrerer Arten zu einer Art (Arten verschmelzen)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Adaptive Radiation:** **Schnelle Artbildung** aus einer Vorfahren-Art in **neuen Lebensräumen** (viele **freie ökologische Nischen**). **Beispiele:** (1) **Darwin-Finken** (Galápagos, 14 Arten aus 1 Vorfahren-Art, Schnäbel an Nahrung angepasst: Samen, Insekten, Blut), (2) **Buntbarsche** (Viktoriasee, >500 Arten, unterschiedliche Nahrung/Farbe). **Typisch:** Isolation (geografisch/ökologisch) + geringe Konkurrenz + viele Nischen → schnelle Diversifikation. **Wichtig:** Adaptive Radiation = **Diversifikation**, nicht Konvergenz!",
+    "difficulty": "easy",
+    "tags": ["Evolution", "Artbildung", "Adaptive Radiation", "Darwin-Finken", "Buntbarsche"]
+  }
+]

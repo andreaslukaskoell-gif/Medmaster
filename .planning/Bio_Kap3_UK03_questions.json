@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-3-03-q01",
+    "question": "Welche Aussage über die Klassifikation von Hormonen trifft zu?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Peptidhormone wie Insulin wirken über intrazelluläre Rezeptoren und regulieren die Genexpression direkt."
+      },
+      {
+        "id": "B",
+        "text": "Steroidhormone wie Cortisol sind hydrophil und benötigen Membranrezeptoren für ihre Wirkung."
+      },
+      {
+        "id": "C",
+        "text": "Peptidhormone wirken über Membranrezeptoren und Second Messenger wie cAMP, während Steroidhormone die Genexpression direkt beeinflussen."
+      },
+      {
+        "id": "D",
+        "text": "Alle Aminosäurederivate wie T₃/T₄ und Adrenalin wirken ausschließlich über G-Protein-gekoppelte Rezeptoren."
+      },
+      {
+        "id": "E",
+        "text": "Steroidhormone wirken schneller als Peptidhormone, da sie die Zellmembran direkt passieren können."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** Peptidhormone (z. B. Insulin, Glukagon, ACTH) sind **hydrophil** und können die Zellmembran nicht passieren → wirken über **Membranrezeptoren** (G-Protein oder Tyrosinkinase) → **Second Messenger** (cAMP, IP₃, Ca²⁺) → schnelle Wirkung (Minuten). Steroidhormone (z. B. Cortisol, Östrogen, Testosteron) sind **lipophil** → passieren Membran → binden an **intrazelluläre Rezeptoren** im Zellkern → Hormon-Rezeptor-Komplex → DNA-Bindung → **Genexpression** ↑/↓ → langsame Wirkung (Stunden).\n\n**Falsch (A):** Insulin ist ein Peptidhormom und wirkt über **Membranrezeptoren** (Tyrosinkinase), nicht intrazellulär.\n\n**Falsch (B):** Cortisol ist **lipophil**, nicht hydrophil, und wirkt über **intrazelluläre Rezeptoren**, nicht Membranrezeptoren.\n\n**Falsch (D):** T₃/T₄ sind **lipophile** Aminosäurederivate und wirken über **intrazelluläre Rezeptoren** (wie Steroidhormone), nicht über G-Protein-gekoppelte Rezeptoren. Adrenalin ist hydrophil und wirkt über G-Protein-gekoppelte Rezeptoren.\n\n**Falsch (E):** Steroidhormone wirken **langsamer** (Stunden), da Genexpression Zeit benötigt. Peptidhormone wirken **schneller** (Minuten) über Second Messenger.",
+    "difficulty": "easy",
+    "tags": ["hormonsystem", "hormone", "endokrin", "steroidhormone", "peptidhormone", "rezeptoren"]
+  },
+  {
+    "id": "bio-3-03-q02",
+    "question": "Ein Patient mit Hypothyreose zeigt erhöhte TSH-Werte und erniedrigte T₃/T₄-Werte. Welche Aussage über die zugrundeliegende Störung trifft zu?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Es handelt sich um eine sekundäre Hypothyreose, da die Hypophyse überaktiv ist."
+      },
+      {
+        "id": "B",
+        "text": "Es liegt eine primäre Hypothyreose vor, bei der die Schilddrüse selbst geschädigt ist und die negative Rückkopplung wegfällt."
+      },
+      {
+        "id": "C",
+        "text": "Die erhöhten TSH-Werte zeigen eine Hyperthyreose an, die durch Morbus Basedow verursacht wird."
+      },
+      {
+        "id": "D",
+        "text": "Die negative Rückkopplung ist intakt, sodass T₃/T₄ TSH hemmen und die Werte im Normalbereich liegen."
+      },
+      {
+        "id": "E",
+        "text": "Die Ursache ist ein TRH-Mangel im Hypothalamus, der zu kompensatorisch erhöhtem TSH führt."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** Bei **primärer Hypothyreose** ist die **Schilddrüse** selbst geschädigt (z. B. Hashimoto-Thyreoiditis, Jodmangel, chirurgische Entfernung) → T₃/T₄ ↓ → **negative Rückkopplung fällt weg** → Hypothalamus/Hypophyse produzieren kompensatorisch **TRH ↑, TSH ↑**. Typische Laborkonstellation: **TSH ↑, T₃/T₄ ↓**.\n\n**Falsch (A):** Bei **sekundärer Hypothyreose** ist die Hypophyse geschädigt (z. B. Tumor, Hypophysitis) → **TSH ↓** → T₃/T₄ ↓. Die Hypophyse ist **nicht** überaktiv, sondern **unteraktiv**. Konstellation: **TSH ↓, T₃/T₄ ↓**.\n\n**Falsch (C):** Erhöhte TSH-Werte und erniedrigte T₃/T₄-Werte sprechen für **Hypothyreose**, nicht Hyperthyreose. Bei Morbus Basedow (TSH-Rezeptor-Antikörper) → T₃/T₄ ↑, TSH ↓.\n\n**Falsch (D):** Die negative Rückkopplung ist **nicht** intakt, da T₃/T₄ ↓ sind und TSH ↑ ist (keine Hemmung).\n\n**Falsch (E):** TRH-Mangel (tertiäre Hypothyreose, Hypothalamus-Störung) führt zu **TSH ↓** (nicht ↑), da der Stimulus für die Hypophyse fehlt. Konstellation: **TRH ↓, TSH ↓, T₃/T₄ ↓**.",
+    "difficulty": "medium",
+    "tags": ["hormonsystem", "schilddrüse", "hypothyreose", "regelkreise", "tsh", "rückkopplung"]
+  },
+  {
+    "id": "bio-3-03-q03",
+    "question": "Welche Aussage über die Biosynthese und Wirkung von Schilddrüsenhormonen ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "T₄ ist biologisch aktiver als T₃ und wird direkt in den Thyreozyten aus Thyreoglobulin freigesetzt."
+      },
+      {
+        "id": "B",
+        "text": "Thyreoperoxidase (TPO) jodiert Tyrosin-Reste in Thyreoglobulin, wobei die Kopplung von 2×DIT zu T₄ führt."
+      },
+      {
+        "id": "C",
+        "text": "T₃ und T₄ wirken über G-Protein-gekoppelte Rezeptoren an der Zellmembran und aktivieren cAMP als Second Messenger."
+      },
+      {
+        "id": "D",
+        "text": "Bei Jodmangel sinkt TSH, da die Schilddrüse weniger T₃/T₄ produziert und die negative Rückkopplung verstärkt wird."
+      },
+      {
+        "id": "E",
+        "text": "Schilddrüsenhormone hemmen den Grundumsatz und senken die Herzfrequenz durch β-Rezeptor-Downregulation."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** Die **Biosynthese** erfolgt in mehreren Schritten:\n1. Jodid-Aufnahme (NIS)\n2. **Thyreoperoxidase (TPO)** oxidiert Jodid → Jod → **jodiert Tyrosin-Reste** in Thyreoglobulin (TG) → **Monojodtyrosin (MIT)** und **Dijodtyrosin (DIT)**\n3. **Kopplung:** **2×DIT → T₄** (4 Jod-Atome), **MIT + DIT → T₃** (3 Jod-Atome)\n4. TG-Endozytose → Proteolyse → T₃/T₄-Freisetzung.\n\n**Falsch (A):** **T₃** ist 3–5× **potenter** (biologisch aktiver) als T₄. T₄ ist das **Prohormon** und wird peripher durch Dejodierung zu T₃ konvertiert.\n\n**Falsch (C):** T₃/T₄ sind **lipophile** Aminosäurederivate und wirken über **intrazelluläre Rezeptoren** im Zellkern (ähnlich Steroidhormonen) → Genexpression ↑. Sie wirken **nicht** über Membranrezeptoren/cAMP.\n\n**Falsch (D):** Bei **Jodmangel** → T₃/T₄ ↓ → **TSH ↑** (kompensatorisch, negative Rückkopplung fällt weg) → **Struma** (Kropf durch TSH-Stimulation).\n\n**Falsch (E):** Schilddrüsenhormone **steigern** den Grundumsatz (Stoffwechsel ↑, Sauerstoffverbrauch ↑, Wärmeproduktion ↑) und **erhöhen** die Herzfrequenz durch **β-Rezeptor-Upregulation** (nicht Downregulation).",
+    "difficulty": "medium",
+    "tags": ["hormonsystem", "schilddrüse", "t3", "t4", "biosynthese", "thyreoperoxidase"]
+  },
+  {
+    "id": "bio-3-03-q04",
+    "question": "Ein Patient unter chronischer Corticosteroid-Therapie entwickelt ein Cushing-Syndrom. Welche der folgenden Aussagen über Cortisol trifft zu?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Cortisol hemmt die Glukoneogenese in der Leber und senkt den Blutzuckerspiegel."
+      },
+      {
+        "id": "B",
+        "text": "Cortisol steigert die Glukoneogenese, wirkt antiinflammatorisch durch Hemmung der Phospholipase A₂ und erhöht das Osteoporose-Risiko durch Hemmung der Osteoblasten."
+      },
+      {
+        "id": "C",
+        "text": "Cortisol wird im Nebennierenmark durch PNMT aus Noradrenalin synthetisiert."
+      },
+      {
+        "id": "D",
+        "text": "Die negative Rückkopplung von Cortisol führt zu erhöhten CRH- und ACTH-Werten bei chronischer Substitution."
+      },
+      {
+        "id": "E",
+        "text": "Cortisol stimuliert das Immunsystem und fördert Entzündungsreaktionen durch Prostaglandin-Synthese."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** Cortisol hat vielfältige Wirkungen:\n\n**Metabolisch:**\n- **Leber:** **Glukoneogenese ↑** → Blutzucker ↑ (diabetogene Wirkung)\n- **Muskel/Fett:** Proteinkatabolismus ↑, Lipolyse ↑\n\n**Immunsuppressiv/antiinflammatorisch:**\n- **Phospholipase A₂ ↓** → Arachidonsäure ↓ → **Prostaglandine ↓, Leukotriene ↓** → Entzündung ↓\n- Lymphozyten ↓, Zytokine ↓\n\n**Knochen:**\n- **Osteoblasten ↓** → Knochenaufbau ↓ → **Osteoporose-Risiko ↑** (bei chronischer Therapie)\n\n**Klinisch (Cushing-Syndrom):** Stammfettsucht, Vollmondgesicht, Striae, Hyperglykämie, Osteoporose, Immunsuppression.\n\n**Falsch (A):** Cortisol **steigert** die Glukoneogenese (nicht hemmt) und **erhöht** den Blutzucker (diabetogene Wirkung).\n\n**Falsch (C):** Cortisol ist ein **Glukokortikoid** und wird in der **Nebennierenrinde (Zona fasciculata)** aus Cholesterin synthetisiert, **nicht** im Mark. **Adrenalin** (nicht Cortisol) wird im Nebennierenmark durch PNMT aus Noradrenalin synthetisiert.\n\n**Falsch (D):** Bei chronischer Cortisol-Substitution (exogen) → **CRH ↓, ACTH ↓** (negative Rückkopplung intakt). Langfristig kann dies zur **Nebennierenrinden-Atrophie** führen.\n\n**Falsch (E):** Cortisol ist **immunsuppressiv** und **antiinflammatorisch** (hemmt Prostaglandine, nicht fördert). Es wird therapeutisch bei Autoimmunerkrankungen, Allergien und Transplantationen eingesetzt.",
+    "difficulty": "medium",
+    "tags": ["hormonsystem", "nebenniere", "cortisol", "cushing", "glukoneogenese", "antiinflammatorisch"]
+  },
+  {
+    "id": "bio-3-03-q05",
+    "question": "Welche Aussage über die Regulation des Blutzuckerspiegels durch Insulin und Glukagon ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Insulin wird von α-Zellen der Langerhans-Inseln freigesetzt und fördert die Glykogenolyse in der Leber."
+      },
+      {
+        "id": "B",
+        "text": "Glukagon stimuliert die GLUT4-Translokation in Muskel- und Fettzellen, um die Glukoseaufnahme zu erhöhen."
+      },
+      {
+        "id": "C",
+        "text": "Insulin fördert die Translokation von GLUT4-Transportern zur Zellmembran in Muskel- und Fettzellen und steigert die Glykogensynthese in der Leber."
+      },
+      {
+        "id": "D",
+        "text": "Glukagon senkt den Blutzucker durch Hemmung der Glukoneogenese und Aktivierung der Glykogensynthase."
+      },
+      {
+        "id": "E",
+        "text": "Die Insulin-Freisetzung erfolgt unabhängig von ATP-Spiegeln in β-Zellen durch direkte Ca²⁺-Aktivierung."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Insulin** (β-Zellen, 65–80% der Langerhans-Inseln) senkt den Blutzucker durch:\n\n**1. Glukoseaufnahme ↑:**\n- **Skelettmuskel + Fettgewebe:** Insulin → **GLUT4-Translokation** zur Zellmembran → Glukoseaufnahme ↑\n- (Leber hat GLUT2, insulinunabhängig)\n\n**2. Glykogensynthese ↑:**\n- **Leber:** Insulin → **Glykogensynthase ↑** → Glukose → Glykogen (Speicherung)\n- Glukoneogenese ↓\n\n**3. Anabole Wirkungen:**\n- Fettgewebe: Lipogenese ↑, Lipolyse ↓\n- Muskel: Proteinsynthese ↑\n\n**Falsch (A):** Insulin wird von **β-Zellen** (nicht α-Zellen) freigesetzt. α-Zellen produzieren **Glukagon**. Insulin **hemmt** die Glykogenolyse (nicht fördert), Glukagon fördert sie.\n\n**Falsch (B):** **Glukagon** (nicht Insulin) wirkt hauptsächlich auf die **Leber** (nicht Muskel/Fett) und fördert **Glykogenolyse + Glukoneogenese** (nicht GLUT4-Translokation). Glukagon **erhöht** den Blutzucker.\n\n**Falsch (D):** Glukagon **erhöht** den Blutzucker (nicht senkt) durch:\n- **Glykogenolyse ↑** (Glykogenphosphorylase ↑)\n- **Glukoneogenese ↑** (PEPCK ↑, F-1,6-BP ↑)\n- Glykogensynthase wird **gehemmt** (nicht aktiviert).\n\n**Falsch (E):** Insulin-Freisetzung ist **ATP-abhängig**:\n1. Glukose ↑ → GLUT2 → β-Zelle\n2. Glykolyse → **ATP ↑**\n3. **ATP-sensitive K⁺-Kanäle schließen** → Depolarisation\n4. Ca²⁺-Kanäle öffnen → Ca²⁺ ↑ → Exozytose.",
+    "difficulty": "medium",
+    "tags": ["hormonsystem", "pankreas", "insulin", "glukagon", "blutzucker", "glut4"]
+  },
+  {
+    "id": "bio-3-03-q06",
+    "question": "Ein Patient mit Morbus Addison zeigt Hypotonie, Hyperpigmentierung und Hyponatriämie. Welche endokrine Störung liegt zugrunde, und welcher Regelkreis ist betroffen?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Primäre Nebennierenrinden-Insuffizienz mit Cortisol-Mangel und Aldosteron-Mangel; ACTH ist erniedrigt aufgrund intakter negativer Rückkopplung."
+      },
+      {
+        "id": "B",
+        "text": "Sekundäre Nebennierenrinden-Insuffizienz durch Hypophysen-Tumor; ACTH ist erhöht, was zur Hyperpigmentierung führt."
+      },
+      {
+        "id": "C",
+        "text": "Primäre Nebennierenrinden-Insuffizienz mit Cortisol-Mangel und Aldosteron-Mangel; ACTH ist kompensatorisch erhöht und wirkt auf Melanozyten (MSH-Effekt), was die Hyperpigmentierung erklärt."
+      },
+      {
+        "id": "D",
+        "text": "Conn-Syndrom mit Aldosteron-Überschuss, das zur Hyponatriämie und Hypotonie führt."
+      },
+      {
+        "id": "E",
+        "text": "Phäochromozytom im Nebennierenmark mit exzessiver Adrenalin-Freisetzung, die zur Hypotonie führt."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Morbus Addison** = primäre Nebennierenrinden-Insuffizienz (Autoimmun-Zerstörung, Tuberkulose, Blutung)\n\n**Pathophysiologie:**\n- **Nebennierenrinde** zerstört → **Cortisol ↓, Aldosteron ↓**\n- Cortisol ↓ → **negative Rückkopplung fällt weg** → Hypothalamus/Hypophyse: **CRH ↑, ACTH ↑↑** (kompensatorisch)\n- **ACTH** hat strukturelle Ähnlichkeit mit **MSH** (Melanozyten-stimulierendes Hormon) → ACTH ↑↑ → **Melanozyten-Stimulation** → **Hyperpigmentierung** (v. a. Hautfalten, Narben, Schleimhäute)\n\n**Klinik:**\n- **Hypotonie:** Cortisol ↓ (Gefäßtonus ↓), Aldosteron ↓ (Volumen ↓)\n- **Hyponatriämie:** Aldosteron ↓ → Na⁺-Verlust\n- **Hyperkaliämie:** Aldosteron ↓ → K⁺-Retention\n- **Hypoglykämie:** Cortisol ↓ → Glukoneogenese ↓\n- **Hyperpigmentierung:** ACTH ↑↑ → MSH-Effekt\n\n**Falsch (A):** Bei primärer NNR-Insuffizienz ist **ACTH erhöht** (nicht erniedrigt), da die negative Rückkopplung wegfällt. ACTH ↓ wäre bei **sekundärer** Insuffizienz (Hypophysen-Störung).\n\n**Falsch (B):** Bei **sekundärer** NNR-Insuffizienz (Hypophysen-Tumor, -Nekrose) ist **ACTH ↓** (nicht ↑) → Cortisol ↓, aber Aldosteron meist **normal** (RAAS-reguliert). **Keine Hyperpigmentierung**, da ACTH ↓.\n\n**Falsch (D):** **Conn-Syndrom** (Aldosteron-produzierendes Adenom) → Aldosteron ↑ → **Hypernatriämie, Hypertonie** (nicht Hypotonie/Hyponatriämie), Hypokaliämie.\n\n**Falsch (E):** **Phäochromozytom** (Nebennierenmark-Tumor) → Adrenalin/Noradrenalin ↑↑ → **Hypertonie** (nicht Hypotonie), Tachykardie, Hyperglykämie (Glykogenolyse ↑).",
+    "difficulty": "hard",
+    "tags": ["hormonsystem", "nebenniere", "morbus-addison", "acth", "cortisol", "aldosteron", "hyperpigmentierung", "regelkreise"]
+  }
+]

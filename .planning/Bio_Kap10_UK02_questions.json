@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-10-02-q1",
+    "question": "**Exponentielles** und **logistisches Wachstum** beschreiben unterschiedliche Populationsdynamiken. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Exponentiell: S-förmige Kurve, begrenzte Ressourcen, Plateau bei Tragfähigkeit K"
+      },
+      {
+        "id": "B",
+        "text": "Exponentiell: J-förmige Kurve, unbegrenzte Ressourcen, keine Grenze (nur kurzfristig realistisch). Logistisch: S-förmige Kurve, begrenzte Ressourcen, Plateau bei K"
+      },
+      {
+        "id": "C",
+        "text": "Logistisch: J-förmige Kurve, unbegrenzte Ressourcen, Population wächst unendlich"
+      },
+      {
+        "id": "D",
+        "text": "Beide Modelle sind identisch (kein Unterschied)"
+      },
+      {
+        "id": "E",
+        "text": "Exponentielles Wachstum ist realistisch für alle natürlichen Populationen (keine Begrenzung)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Exponentielles Wachstum:** **J-förmige Kurve**, **unbegrenzte Ressourcen**, **keine Grenze** (Wachstum beschleunigt sich). **Realistisch:** Nur **kurzfristig** (z.B. Bakterien in frischem Medium, Invasionsarten in neuen Lebensräumen). **Logistisches Wachstum:** **S-förmige Kurve** (sigmoid), **begrenzte Ressourcen**. **Phasen:** (1) Anfangs exponentiell (viele Ressourcen), (2) Verlangsamung (Ressourcen begrenzt, Konkurrenz ↑), (3) **Plateau** bei **K** (Tragfähigkeit, Geburten = Sterbefälle). **Wichtig:** Exponentiell = **kurzfristig**, Logistisch = **langfristig realistisch** (natürliche Populationen)!",
+    "difficulty": "medium",
+    "tags": ["Ökologie", "Populationsökologie", "Exponentielles Wachstum", "Logistisches Wachstum"]
+  },
+  {
+    "id": "bio-10-02-q2",
+    "question": "Die **Tragfähigkeit (K)** ist ein zentrales Konzept in der Populationsökologie. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Tragfähigkeit = minimale Populationsgröße für Überleben (unter K → Aussterben)"
+      },
+      {
+        "id": "B",
+        "text": "Tragfähigkeit = maximale Populationsgröße, die Umwelt dauerhaft ernähren kann (abhängig von Ressourcen: Nahrung, Wasser, Lebensraum)"
+      },
+      {
+        "id": "C",
+        "text": "Tragfähigkeit kann niemals überschritten werden (absolute Grenze)"
+      },
+      {
+        "id": "D",
+        "text": "Überschreitung der Tragfähigkeit führt immer zu dauerhaftem Wachstum (neue Gleichgewichtsebene)"
+      },
+      {
+        "id": "E",
+        "text": "Tragfähigkeit ist für alle Populationen gleich (universelle Konstante)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Tragfähigkeit (K, Kapazität):** **Maximale Populationsgröße**, die Umwelt **dauerhaft** ernähren kann. **Abhängig von:** Ressourcen (Nahrung, Wasser, Lebensraum, Nährstoffe). **Überschreitung möglich:** Kurzfristig (z.B. gute Bedingungen), führt aber zu **Crash** (Zusammenbruch). **Beispiel:** Rentiere St. Paul Island (Alaska): 25 (1911) → exponentiell → 2.000 (1938, **Überweidung**) → **Crash** auf ~8 (1950, Ressourcen erschöpft). **Logistisches Wachstum:** Plateau bei K (Geburtenrate = Sterberate). **Wichtig:** K ≠ absolut (kann überschritten werden, aber instabil)!",
+    "difficulty": "easy",
+    "tags": ["Ökologie", "Populationsökologie", "Tragfähigkeit", "K", "Carrying Capacity"]
+  },
+  {
+    "id": "bio-10-02-q3",
+    "question": "**r-Strategen** und **K-Strategen** repräsentieren unterschiedliche Lebensstrategien. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "r-Strategen: Wenige Nachkommen, hohe Brutpflege, große Körpergröße, lange Lebensdauer (z.B. Elefanten)"
+      },
+      {
+        "id": "B",
+        "text": "r-Strategen: Viele Nachkommen, geringe Brutpflege, kleine Körpergröße, kurze Lebensdauer (z.B. Bakterien, Insekten, Mäuse). K-Strategen: Wenige Nachkommen, hohe Brutpflege, groß, lang (z.B. Elefanten, Menschen)"
+      },
+      {
+        "id": "C",
+        "text": "K-Strategen: Hohe Reproduktionsrate, viele Nachkommen, leben in instabilen Umgebungen"
+      },
+      {
+        "id": "D",
+        "text": "r-Strategen und K-Strategen sind identisch (kein Unterschied)"
+      },
+      {
+        "id": "E",
+        "text": "r-Strategen leben nahe der Tragfähigkeit K (stabile Populationen)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**r-Strategen (r = Wachstumsrate):** **HOHE Reproduktionsrate**, **VIELE** Nachkommen (1000+), **GERINGE** Brutpflege (keine Fürsorge), **KLEIN**, **KURZE** Lebensdauer, **frühe** Geschlechtsreife. **Umwelt:** Instabil, unvorhersagbar (K selten erreicht). **Beispiele:** Bakterien, Insekten, Mäuse, Löwenzahn (Pioniere!). **K-Strategen (K = Tragfähigkeit):** **NIEDRIGE** Reproduktionsrate, **WENIGE** Nachkommen (1–10), **HOHE** Brutpflege (intensive Fürsorge), **GROß**, **LANGE** Lebensdauer, **späte** Geschlechtsreife. **Umwelt:** Stabil (nahe K). **Beispiele:** Elefanten, Menschen, Wale, Bäume (Spezialisten). **Wichtig:** r = Quantität, K = Qualität!",
+    "difficulty": "hard",
+    "tags": ["Ökologie", "Populationsökologie", "r-Strategen", "K-Strategen", "Lebensstrategien"]
+  },
+  {
+    "id": "bio-10-02-q4",
+    "question": "**Dichteabhängige** und **dichteunabhängige Faktoren** beeinflussen Populationen unterschiedlich. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Dichteabhängige Faktoren: Wetter, Naturkatastrophen (Effekt unabhängig von Populationsdichte)"
+      },
+      {
+        "id": "B",
+        "text": "Dichteabhängige Faktoren: Konkurrenz, Prädation, Krankheiten (Effekt stärker bei hoher Dichte) → Regulation. Dichteunabhängige: Wetter, Katastrophen → Reduktion"
+      },
+      {
+        "id": "C",
+        "text": "Dichteunabhängige Faktoren regulieren Populationsgröße (negative Rückkopplung)"
+      },
+      {
+        "id": "D",
+        "text": "Beide Faktoren haben denselben Effekt (kein Unterschied)"
+      },
+      {
+        "id": "E",
+        "text": "Dichteabhängige Faktoren wirken nur bei niedriger Populationsdichte (nicht bei hoher)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Dichteabhängige Faktoren:** Effekt **STÄRKER** bei **HOHER Populationsdichte**. **Beispiele:** Konkurrenz (Nahrung, Lebensraum), Prädation (mehr Beute → mehr Räuber), Krankheiten/Parasiten (schnellere Ausbreitung bei hoher Dichte). **Wirkung:** **Regulation** (negative Rückkopplung: hohe Dichte → Sterberate ↑ oder Geburtenrate ↓ → Dichte ↓ → Gleichgewicht). **Dichteunabhängige Faktoren:** Effekt **UNABHÄNGIG** von Dichte. **Beispiele:** Wetter (Temperatur, Niederschlag), Naturkatastrophen (Feuer, Überschwemmung, Dürre). **Wirkung:** **Reduktion** (tötet Individuen, aber **keine Regulation**, kein Gleichgewicht). **Wichtig:** Dichteabhängig → Regulation, Dichteunabhängig → Reduktion!",
+    "difficulty": "medium",
+    "tags": ["Ökologie", "Populationsökologie", "Dichteabhängig", "Dichteunabhängig", "Regulation"]
+  },
+  {
+    "id": "bio-10-02-q5",
+    "question": "Die **Altersstruktur** (Alterspyramide) zeigt die Verteilung der Individuen nach Alter. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Wachsende Population: Schmale Basis (wenige Junge), breite Spitze (viele Alte) → Geburtenrate < Sterberate"
+      },
+      {
+        "id": "B",
+        "text": "Wachsende Population: Breite Basis (viele Junge), schmale Spitze (wenige Alte) → Geburtenrate > Sterberate (z.B. Entwicklungsländer)"
+      },
+      {
+        "id": "C",
+        "text": "Schrumpfende Population: Breite Basis (viele Junge) → zukünftiges Wachstum"
+      },
+      {
+        "id": "D",
+        "text": "Altersstruktur hat keinen Einfluss auf zukünftige Populationsentwicklung"
+      },
+      {
+        "id": "E",
+        "text": "Alle Populationen haben dieselbe Altersstruktur (universelle Pyramidenform)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Altersstruktur (Alterspyramide):** Verteilung Individuen nach Alter/Geschlecht. **Typen:** (1) **Wachsende Population** (Expansive Pyramide): **BREITE Basis** (viele Junge), **schmale Spitze** (wenige Alte) → **Geburtenrate > Sterberate** → zukünftiges Wachstum (viele Frauen im gebärfähigen Alter). **Beispiel:** Entwicklungsländer (Nigeria). (2) **Stabile Population:** Gleichmäßig (Geburtenrate ≈ Sterberate, USA). (3) **Schrumpfende Population** (Regressive Pyramide): **SCHMALE Basis** (wenige Junge), breite Mitte/Spitze (viele Alte) → Geburtenrate < Sterberate → Alterung. **Beispiel:** Deutschland, Japan. **Wichtig:** Breite Basis → Wachstum!",
+    "difficulty": "easy",
+    "tags": ["Ökologie", "Populationsökologie", "Altersstruktur", "Alterspyramide"]
+  },
+  {
+    "id": "bio-10-02-q6",
+    "question": "Das **Lotka-Volterra-Modell** beschreibt Räuber-Beute-Beziehungen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Räuber- und Beute-Populationen bleiben konstant (keine Schwankungen)"
+      },
+      {
+        "id": "B",
+        "text": "Beute ↑ → Räuber ↑ → Beute ↓ → Räuber ↓ → Beute ↑ → ... (zyklische Oszillationen, Räuber-Peak NACH Beute-Peak). Beispiel: Luchs + Schneeschuhhase (~10 Jahre Zyklus)"
+      },
+      {
+        "id": "C",
+        "text": "Räuber-Peak kommt VOR Beute-Peak (Räuber nehmen zu, bevor Beute zunimmt)"
+      },
+      {
+        "id": "D",
+        "text": "Räuber und Beute oszillieren unabhängig voneinander (keine Kopplung)"
+      },
+      {
+        "id": "E",
+        "text": "Das Modell beschreibt Konkurrenz zwischen zwei Arten (nicht Räuber-Beute)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Lotka-Volterra-Modell:** **Räuber-Beute-Beziehung** mit **zyklischen Schwankungen**. **Mechanismus:** (1) **Beute ↑** (viel Nahrung, geringer Prädationsdruck) → (2) **Räuber ↑** (mehr Nahrung verfügbar) → (3) **Beute ↓** (hoher Prädationsdruck) → (4) **Räuber ↓** (Nahrungsmangel) → (5) Beute ↑ (geringer Druck) → Zyklus wiederholt sich. **Wichtig:** **Räuber-Peak NACH Beute-Peak** (Verzögerung, da Räuber Zeit brauchen, um zu reagieren/reproduzieren). **Beispiel:** Luchs (Räuber) + Schneeschuhhase (Beute), Kanada: **~10 Jahre Zyklus**. Populationen **oszillieren** um Gleichgewicht (nicht statisch)!",
+    "difficulty": "medium",
+    "tags": ["Ökologie", "Populationsökologie", "Lotka-Volterra", "Räuber-Beute", "Luchs", "Schneeschuhhase"]
+  }
+]

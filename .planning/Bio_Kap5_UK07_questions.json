@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-5-07-q1",
+    "question": "Eine Punktmutation im β-Globin-Gen führt zur Veränderung des Codons GAG (Glutamat) zu GTG (Valin) an Position 6. Welcher Mutationstyp liegt vor, und welche Erkrankung entsteht?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Stille Mutation (Silent Mutation) – keine Proteinveränderung, keine klinische Relevanz"
+      },
+      {
+        "id": "B",
+        "text": "Missense-Mutation – Aminosäure-Austausch (Glu → Val), führt zu Sichelzellanämie (HbS)"
+      },
+      {
+        "id": "C",
+        "text": "Nonsense-Mutation – vorzeitiger Stopp-Codon, verkürztes β-Globin-Protein"
+      },
+      {
+        "id": "D",
+        "text": "Frameshift-Mutation – Leserahmen verschoben, komplett anderes Protein"
+      },
+      {
+        "id": "E",
+        "text": "In-Frame-Deletion – Phenylalanin 508 fehlt, führt zu Mukoviszidose"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Missense-Mutation:** Codon-Änderung → **andere Aminosäure**. GAG (Glu) → GTG (Val) an Position 6 des β-Globins → **HbS (Sichelzell-Hämoglobin)**. Folge: **Sichelzellanämie** (Erythrozyten sichelförmig bei Hypoxie, Hämolyse, Gefäßverschlüsse). Vererbung: Autosomal-kodominant (HbA/HbS Träger meist asymptomatisch, HbS/HbS schwere Anämie). Wichtig: **Einzelne Aminosäure-Änderung** kann massive klinische Folgen haben!",
+    "difficulty": "medium",
+    "tags": ["Genetik", "Mutationen", "Missense-Mutation", "Sichelzellanämie", "HbS"]
+  },
+  {
+    "id": "bio-5-07-q2",
+    "question": "Ein Gen hat die Sequenz **AUG-UCC-GAA-GUU**. Durch Deletion eines einzelnen Nukleotids (C an Position 5) entsteht **AUG-UCG-AAG-UU**. Welcher Mutationstyp liegt vor, und was ist die Folge?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Stille Mutation – gleiche Aminosäuresequenz, keine Proteinveränderung"
+      },
+      {
+        "id": "B",
+        "text": "Missense-Mutation – eine Aminosäure geändert, Protein leicht verändert"
+      },
+      {
+        "id": "C",
+        "text": "Frameshift-Mutation – Leserahmen verschoben, alle nachfolgenden Codons falsch gelesen"
+      },
+      {
+        "id": "D",
+        "text": "In-Frame-Deletion – eine Aminosäure fehlt, Leserahmen erhalten"
+      },
+      {
+        "id": "E",
+        "text": "Nonsense-Mutation – vorzeitiger Stopp-Codon, Translationsabbruch"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Frameshift-Mutation:** Deletion von **1 Nukleotid** (≠ Vielfaches von 3) → **Leserahmen verschoben**. Original: AUG (Met) - UCC (Ser) - GAA (Glu) - GUU (Val). Nach Deletion: AUG (Met) - **UCG (Ser)** - **AAG (Lys)** - ... → alle **nachfolgenden Codons falsch**. Folge: **Komplett anderes Protein** (meist nicht-funktional, oft vorzeitiges Stopp-Codon). Wichtig: **In-Frame** (3n Nukleotide) → Aminosäure fehlt, **Frameshift** (≠ 3n) → komplett falsch!",
+    "difficulty": "hard",
+    "tags": ["Genetik", "Mutationen", "Frameshift-Mutation", "Deletion", "Leserahmen"]
+  },
+  {
+    "id": "bio-5-07-q3",
+    "question": "Die häufigste Mutation bei Mukoviszidose (Cystic Fibrosis) ist **ΔF508** (Deletion von 3 Nukleotiden im CFTR-Gen). Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Frameshift-Mutation – der Leserahmen ist verschoben, das CFTR-Protein ist komplett verändert"
+      },
+      {
+        "id": "B",
+        "text": "In-Frame-Deletion – Phenylalanin an Position 508 fehlt, Leserahmen bleibt erhalten, CFTR fehlgefaltet"
+      },
+      {
+        "id": "C",
+        "text": "Nonsense-Mutation – vorzeitiger Stopp-Codon an Position 508, verkürztes CFTR-Protein"
+      },
+      {
+        "id": "D",
+        "text": "Missense-Mutation – Phenylalanin 508 wird zu Valin ausgetauscht, CFTR funktional verändert"
+      },
+      {
+        "id": "E",
+        "text": "Stille Mutation – keine Proteinveränderung, Mukoviszidose entsteht durch regulatorische Mutation"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**ΔF508 (In-Frame-Deletion):** Deletion von **3 Nukleotiden** (Vielfaches von 3) → **Phenylalanin an Position 508 fehlt**, aber **Leserahmen erhalten**. CFTR-Protein ist **fehlgefaltet** → ER-assoziierte Degradation (Abbau) → Chlorid-Transport ↓ → zähes Sekret (Lunge, Pankreas). Wichtig: **In-Frame** (3n) vs. **Frameshift** (≠ 3n)! Vererbung: Autosomal-rezessiv. ~70% der Mukoviszidose-Fälle haben ΔF508.",
+    "difficulty": "medium",
+    "tags": ["Genetik", "Mutationen", "In-Frame-Deletion", "Mukoviszidose", "CFTR", "ΔF508"]
+  },
+  {
+    "id": "bio-5-07-q4",
+    "question": "UV-Strahlung führt zur Bildung von **Thymin-Dimeren** (benachbarte Thymidine vernetzen sich). Welcher DNA-Reparaturmechanismus behebt diesen Schaden, und welche Erkrankung entsteht bei Defekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Mismatch-Reparatur (MMR) – Defekt führt zu Lynch-Syndrom (Darmkrebs ↑)"
+      },
+      {
+        "id": "B",
+        "text": "Basenexzisionsreparatur (BER) – Defekt führt zu allgemeiner Mutationshäufung"
+      },
+      {
+        "id": "C",
+        "text": "Nukleotidexzisionsreparatur (NER) – Defekt führt zu Xeroderma pigmentosum (Hautkrebs ↑, UV-Sensitivität)"
+      },
+      {
+        "id": "D",
+        "text": "Doppelstrangbruch-Reparatur (NHEJ/HR) – Defekt führt zu BRCA-assoziiertem Brustkrebs"
+      },
+      {
+        "id": "E",
+        "text": "Direkte Reparatur (O6-Methylguanin-DNA-Methyltransferase) – Defekt führt zu Gliomen"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Nukleotidexzisionsreparatur (NER):** Behebt **Thymin-Dimere** (UV-Schäden) und große DNA-Addukte. **Defekt → Xeroderma pigmentosum (XP):** Autosomal-rezessive Erkrankung, **extreme UV-Sensitivität** → **Hautkrebs ↑** (Basalzellkarzinom, Melanom), Photodermatitis, neurologische Störungen. Wichtig: **NER entfernt UV-Schäden**, MMR korrigiert Basenfehlpaarungen (Lynch-Syndrom), BRCA repariert Doppelstrangbrüche (Brustkrebs).",
+    "difficulty": "medium",
+    "tags": ["Genetik", "DNA-Reparatur", "NER", "Thymin-Dimere", "Xeroderma pigmentosum", "UV-Strahlung"]
+  },
+  {
+    "id": "bio-5-07-q5",
+    "question": "Eine Mutation führt zur Veränderung des Codons **CAA** (Glutamin) zu **UAA** (Stopp-Codon). Welcher Mutationstyp liegt vor, und was ist die wahrscheinlichste Folge?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Stille Mutation – gleiche Aminosäure (Glutamin), keine Proteinveränderung"
+      },
+      {
+        "id": "B",
+        "text": "Missense-Mutation – Glutamin wird zu einer anderen Aminosäure ausgetauscht"
+      },
+      {
+        "id": "C",
+        "text": "Nonsense-Mutation – vorzeitiger Translationsabbruch, verkürztes, meist nicht-funktionales Protein"
+      },
+      {
+        "id": "D",
+        "text": "Frameshift-Mutation – Leserahmen verschoben, alle nachfolgenden Codons falsch"
+      },
+      {
+        "id": "E",
+        "text": "In-Frame-Insertion – zusätzliche Aminosäure eingefügt, Protein verlängert"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Nonsense-Mutation:** Codon-Änderung → **Stopp-Codon** (UAA, UAG, UGA). CAA (Glutamin) → UAA (Stopp) → **vorzeitiger Translationsabbruch**. Folge: **Verkürztes Protein** (meist **nicht-funktional**, da C-Terminus fehlt). Klinische Beispiele: ~10–15% der Duchenne-Muskeldystrophie-Fälle (Nonsense-Mutationen im DMD-Gen). Wichtig: **Stopp-Codon** statt Aminosäure → Translation endet vorzeitig!",
+    "difficulty": "easy",
+    "tags": ["Genetik", "Mutationen", "Nonsense-Mutation", "Stopp-Codon", "Translationsabbruch"]
+  },
+  {
+    "id": "bio-5-07-q6",
+    "question": "Ein Patient hat einen Defekt in der **Mismatch-Reparatur (MMR)**. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "MMR behebt Thymin-Dimere nach UV-Strahlung; Defekt führt zu Xeroderma pigmentosum"
+      },
+      {
+        "id": "B",
+        "text": "MMR korrigiert Basenfehlpaarungen (z.B. G-T statt G-C); Defekt führt zu Lynch-Syndrom (Darmkrebs ↑)"
+      },
+      {
+        "id": "C",
+        "text": "MMR repariert Doppelstrangbrüche; Defekt führt zu BRCA-assoziiertem Brustkrebs"
+      },
+      {
+        "id": "D",
+        "text": "MMR entfernt oxidierte Basen (8-Oxoguanin); Defekt führt zu allgemeiner Mutationshäufung"
+      },
+      {
+        "id": "E",
+        "text": "MMR hat keine klinische Relevanz; Defekte sind meist asymptomatisch"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Mismatch-Reparatur (MMR):** Korrigiert **Basenfehlpaarungen** (z.B. G-T statt G-C) nach DNA-Replikation. **Defekt (MLH1, MSH2, MSH6, PMS2) → Lynch-Syndrom (HNPCC, hereditäres nicht-polypöses Kolorektalkarzinom):** Autosomal-dominant, **Darmkrebs ↑** (~80% Lifetime-Risiko), auch Endometrium-, Ovarial-, Magenkarzinom ↑. Mikrosatelliten-Instabilität (MSI-H) ist Biomarker. Wichtig: **MMR** = Mismatch-Reparatur, **NER** = UV-Schäden, **BRCA** = Doppelstrangbrüche!",
+    "difficulty": "medium",
+    "tags": ["Genetik", "DNA-Reparatur", "MMR", "Lynch-Syndrom", "HNPCC", "Darmkrebs"]
+  }
+]

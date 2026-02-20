@@ -1,0 +1,92 @@
+[
+  {
+    "id": "bio-5-02-q01",
+    "question": "Welche Aussage über die Chromosomen-Struktur ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Ein Chromosom besteht aus einem einzelnen DNA-Strang ohne Proteine."},
+      {"id": "B", "text": "Das Zentromer (Centromer) verbindet die beiden Schwester-Chromatiden und dient als Ansatzpunkt für Kinetochor (Spindelfasern). Telomere sind Chromosomenenden mit TTAGGG-Repeats, die vor Abbau schützen und sich bei jeder Teilung verkürzen. Die Chromosomenarme werden als p-Arm (kurz) und q-Arm (lang) bezeichnet."},
+      {"id": "C", "text": "Telomere verlängern sich bei jeder Zellteilung."},
+      {"id": "D", "text": "Der p-Arm ist immer länger als der q-Arm."},
+      {"id": "E", "text": "Das Kinetochor ist ein DNA-Abschnitt auf dem Chromosom."}
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Chromosomen-Struktur:**\n\n**Chromatid vs. Chromosom:**\n- **Chromatid:** 1 DNA-Doppelstrang + Histone (nach Replikation)\n- **Chromosom** (metaphasisch): **2 Schwester-Chromatiden** (identisch), verbunden am Zentromer\n\n**Komponenten:**\n\n1. **Zentromer** (Centromer):\n   - **Verbindet** die 2 Schwester-Chromatiden\n   - Ansatzpunkt für **Kinetochor**\n   - Position definiert Chromosomentyp: metazentrisch (Mitte), submetazentrisch (leicht verschoben), akrozentrisch (sehr nah am Ende)\n\n2. **Kinetochor:**\n   - **Protein-Komplex** am Zentromer\n   - **Spindelfasern** (Mikrotubuli) heften an → Chromatiden-Trennung (Anaphase)\n\n3. **Telomere:**\n   - **Chromosomenenden**\n   - DNA-Sequenz: **TTAGGG-Repeats** (Tandem-Repeats, hunderte Wiederholungen)\n   - **Funktionen:**\n     - **Schutz** vor Abbau durch Exonukleasen\n     - Verhindern Fusion mit anderen Chromosomen\n   - **Verkürzung:** Bei jeder **Zellteilung** (DNA-Polymerase kann Enden nicht vollständig replizieren) → Seneszenz (Alterung, Hayflick-Limit ~50–70 Teilungen)\n   - **Telomerase:** Enzym (in Keimzellen, Stammzellen, Krebszellen) → verlängert Telomere\n\n4. **Chromatid-Arme:**\n   - **p-Arm** (petit, **kurz**)\n   - **q-Arm** (queue, **lang**)\n\n**Falsch (A):** Chromosom = DNA + **Histone** (Proteine) → Chromatin. Nicht nur DNA.\n\n**Falsch (C):** Telomere **verkürzen** sich bei jeder Teilung (nicht verlängern), außer Telomerase aktiv (Keimzellen, Stammzellen, Krebszellen).\n\n**Falsch (D):** **q-Arm** (nicht p-Arm) ist länger. p-Arm = kurz (petit).\n\n**Falsch (E):** Kinetochor = **Protein-Komplex** (nicht DNA-Abschnitt) am Zentromer.",
+    "difficulty": "easy",
+    "tags": ["genetik", "chromosomen", "zentromer", "kinetochor", "telomere", "p-arm", "q-arm"]
+  },
+  {
+    "id": "bio-5-02-q02",
+    "question": "Welche Aussage über den Karyotyp ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Der normale weibliche Karyotyp ist 46,XY."},
+      {"id": "B", "text": "Der normale männliche Karyotyp ist 46,XX."},
+      {"id": "C", "text": "Der normale Karyotyp ist 46,XX (weiblich, 22 Autosomenpaare + XX) oder 46,XY (männlich, 22 Autosomenpaare + XY). Notation: 47,XX,+21 bedeutet Trisomie 21 (Down-Syndrom) bei weiblichem Individuum. Karyotyp-Erstellung erfolgt durch Mitose-Arrest in Metaphase, Chromosomen-Färbung (G-Banding) und Sortierung."},
+      {"id": "D", "text": "Der Karyotyp zeigt nur die Geschlechtschromosomen."},
+      {"id": "E", "text": "Der Karyotyp wird in der Interphase erstellt."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Karyotyp:**\n\n**Definition:** Geordnete Darstellung **aller Chromosomen** einer Zelle (nach Größe, Zentromer-Position, Banding-Muster)\n\n**Normaler Karyotyp (Mensch):**\n- **46 Chromosomen** (23 Paare)\n- **22 Autosomenpaare** (Chromosom 1–22, nicht geschlechtsbestimmend)\n- **1 Gonosomenpaar** (Geschlechtschromosomen):\n  - **46,XX:** Weiblich (2 X-Chromosomen)\n  - **46,XY:** Männlich (1 X + 1 Y-Chromosom)\n\n**Karyotyp-Notation:**\n- **Chromosomenzahl, Gonosomen, Aberration**\n- **47,XX,+21:** 47 Chromosomen, weiblich (XX), zusätzliches Chromosom 21 (Trisomie 21, Down-Syndrom)\n- **47,XXY:** 47 Chromosomen, männlich (Y vorhanden), zusätzliches X (Klinefelter-Syndrom)\n- **45,X:** 45 Chromosomen, weiblich (kein Y), fehlendes X (Turner-Syndrom)\n\n**Karyogramm-Erstellung:**\n1. **Zellkultur:** Lymphozyten (Blut), Fruchtwasser-Zellen (pränatale Diagnostik)\n2. **Mitose-Arrest:** **Metaphase** (Colchicin blockiert Spindel → Chromosomen maximal kondensiert, sichtbar)\n3. **Chromosomen-Färbung:** Giemsa → **G-Banding** (Hell-Dunkel-Muster, charakteristisch für jedes Chromosom)\n4. **Fotografie + Sortierung:** Nach Größe, Zentromer-Position, Banding\n\n**Falsch (A):** 46,XX = **weiblich** (nicht männlich). 46,XY = männlich.\n\n**Falsch (B):** 46,XX = weiblich. 46,XY = **männlich** (nicht 46,XX).\n\n**Falsch (D):** Karyotyp zeigt **alle** Chromosomen (22 Autosomenpaare + 1 Gonosomenpaar), nicht nur Gonosomen.\n\n**Falsch (E):** Karyotyp wird in **Metaphase** erstellt (Mitose-Arrest, Chromosomen maximal kondensiert). Interphase: Chromatin dekondensiert, nicht sichtbar.",
+    "difficulty": "easy",
+    "tags": ["genetik", "karyotyp", "46-xx", "46-xy", "g-banding", "metaphase"]
+  },
+  {
+    "id": "bio-5-02-q03",
+    "question": "Welche Aussage über Trisomie 21 (Down-Syndrom) ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Trisomie 21 ist die seltenste Autosom-Trisomie."},
+      {"id": "B", "text": "Trisomie 21 ist letal und nicht mit dem Leben vereinbar."},
+      {"id": "C", "text": "Trisomie 21 (Down-Syndrom, 47,XX/XY,+21) ist die häufigste Autosom-Trisomie (1:700). Klinische Merkmale umfassen faziale Dysmorphie (Epikanthus, flaches Profil), Herzfehler (AV-Kanal, VSD), Hypotonie und geistige Behinderung (variabel). Die Inzidenz steigt mit dem mütterlichen Alter (40 Jahre: ~1:100)."},
+      {"id": "D", "text": "Trisomie 21 entsteht nur durch Robertsonsche Translokation."},
+      {"id": "E", "text": "Das Risiko für Trisomie 21 ist unabhängig vom mütterlichen Alter."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Trisomie 21** (Down-Syndrom):\n\n**Karyotyp:** **47,XX,+21** (weiblich) oder **47,XY,+21** (männlich) – 3 Kopien von Chromosom 21\n\n**Häufigkeit:**\n- **Häufigste Autosom-Trisomie** (lebensfähig)\n- **Inzidenz:** ~1:700 Geburten (Durchschnitt)\n- **Starke Altersabhängigkeit** (mütterliches Alter):\n  - 20 Jahre: ~1:1.500\n  - 35 Jahre: ~1:350\n  - **40 Jahre: ~1:100**\n  - 45 Jahre: ~1:30\n\n**Klinische Merkmale:**\n\n1. **Faziale Dysmorphie:**\n   - **Epikanthus** (Hautfalte am inneren Augenwinkel)\n   - **Flaches Profil** (flache Nasenwurzel)\n   - **Makroglossie** (große Zunge)\n   - **Brushfield-Spots** (Iris)\n\n2. **Herzfehler** (40–50%):\n   - **AV-Kanal-Defekt** (Atrioventrikulärer Septumdefekt)\n   - **VSD** (Ventrikelseptumdefekt)\n\n3. **Weitere:**\n   - **Hypotonie** (Muskelschwäche)\n   - **Geistige Behinderung** (variabel, IQ 25–70)\n   - **Erhöhtes Leukämie-Risiko** (ALL, AML)\n   - **Frühe Alzheimer-Demenz** (>40 Jahre)\n\n**Ursachen:**\n- **Freie Trisomie 21** (95%): **Nicht-Disjunktion** (Meiose-Fehler, meist maternal, Meiose I)\n- **Translokations-Trisomie** (4%): Robertsonsche Translokation (z. B. 14;21), balancierter Träger-Elternteil\n- **Mosaik-Trisomie** (1%): Mitose-Fehler, nur Teil der Zellen trisomisch → milderer Phänotyp\n\n**Falsch (A):** Trisomie 21 = **häufigste** (nicht seltenste) Autosom-Trisomie.\n\n**Falsch (B):** Trisomie 21 ist **lebensfähig** (nicht letal). Trisomie 18/13 sind häufig letal. Autosom-Monosomie ist letal.\n\n**Falsch (D):** Trisomie 21 entsteht **meist** (95%) durch **Nicht-Disjunktion** (freie Trisomie), nur 4% durch Translokation.\n\n**Falsch (E):** Risiko **steigt stark** mit mütterlichem Alter (40 Jahre: ~1:100 vs. 20 Jahre: ~1:1.500).",
+    "difficulty": "medium",
+    "tags": ["genetik", "trisomie-21", "down-syndrom", "nicht-disjunktion", "mütterliches-alter"]
+  },
+  {
+    "id": "bio-5-02-q04",
+    "question": "Welche Aussage über Gonosomen-Aberrationen ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Klinefelter-Syndrom (47,XXY) ist weiblich."},
+      {"id": "B", "text": "Turner-Syndrom (45,X) ist männlich."},
+      {"id": "C", "text": "Klinefelter-Syndrom (47,XXY) ist männlich (Y vorhanden), klinische Merkmale sind Hypogonadismus (kleine Hoden), Infertilität (Azoospermie), Gynäkomastie und hoher Wuchs. Turner-Syndrom (45,X) ist weiblich, klinische Merkmale sind Kleinwuchs, Pterygium colli (Flügelfell Nacken), Ovarial-Dysgenesie (Streak-Gonaden, Infertilität) und normale Intelligenz."},
+      {"id": "D", "text": "Turner-Syndrom ist fertil mit normaler Ovar-Funktion."},
+      {"id": "E", "text": "Triple-X-Syndrom (47,XXX) ist letal."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Gonosomen-Aberrationen:**\n\n**Klinefelter-Syndrom:**\n- **Karyotyp:** **47,XXY** (häufigste Form), 48,XXXY, 48,XXYY\n- **Phänotyp:** **Männlich** (Y-Chromosom vorhanden → SRY-Gen → Hoden)\n- **Klinische Merkmale:**\n  - **Hypogonadismus:** Kleine Hoden (Testosteron ↓)\n  - **Infertilität:** Azoospermie (keine Spermien)\n  - **Gynäkomastie:** Brustentwicklung\n  - **Hoher Wuchs:** Lange Gliedmaßen\n  - **Kognitive Defizite:** Leicht (variabel, Sprach-/Lernprobleme)\n- **Häufigkeit:** 1:500 männliche Geburten\n\n**Turner-Syndrom:**\n- **Karyotyp:** **45,X** (Monosomie X)\n- **Phänotyp:** **Weiblich** (kein Y-Chromosom)\n- **Klinische Merkmale:**\n  - **Kleinwuchs:** ~140–150 cm (Wachstumshormon-Therapie möglich)\n  - **Pterygium colli:** Flügelfell am Nacken (Lymphödem fetal → Hautfalte)\n  - **Herzfehler:** Aortenisthmusstenose (40%)\n  - **Nierenfehlbildungen:** Hufeisennicre\n  - **Ovarial-Dysgenesie:** **Streak-Gonaden** (Bindegewebe, keine Eizellen) → **Infertilität**, **primäre Amenorrhö** (keine Menstruation), Östrogen ↓\n  - **Intelligenz:** **Normal** (keine geistige Behinderung)\n- **Häufigkeit:** 1:2.500 weibliche Geburten\n\n**Triple-X-Syndrom (47,XXX):**\n- **Phänotyp:** Weiblich\n- **Klinisch:** Meist **unauffällig**, hoher Wuchs, leichte Lern-/Verhaltensprobleme (variabel), Fertilität meist **normal**\n\n**XYY-Syndrom (47,XYY):**\n- **Phänotyp:** Männlich\n- **Klinisch:** Meist **unauffällig**, hoher Wuchs, leichte Lern-/Verhaltensprobleme, Fertilität meist **normal**\n\n**Falsch (A):** Klinefelter (47,XXY) = **männlich** (Y vorhanden), nicht weiblich.\n\n**Falsch (B):** Turner (45,X) = **weiblich** (kein Y), nicht männlich.\n\n**Falsch (D):** Turner = **infertil** (Streak-Gonaden, keine Eizellen), nicht fertil.\n\n**Falsch (E):** Triple-X (47,XXX) = meist **unauffällig** (nicht letal), Fertilität meist normal.",
+    "difficulty": "hard",
+    "tags": ["genetik", "klinefelter", "turner", "gonosomen", "47-xxy", "45-x"]
+  },
+  {
+    "id": "bio-5-02-q05",
+    "question": "Welche Aussage über Deletion-Syndrome ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Cri-du-chat-Syndrom entsteht durch Deletion von Chromosom 21."},
+      {"id": "B", "text": "Williams-Beuren-Syndrom ist eine Duplikation von Chromosom 7."},
+      {"id": "C", "text": "Cri-du-chat-Syndrom (5p-Deletion, kurzer Arm von Chromosom 5) zeigt charakteristischen Katzenschrei (Larynx-Hypoplasie), Mikrozephalie und geistige Behinderung. Williams-Beuren-Syndrom (7q11.23-Deletion, Elastin-Gen) zeigt Elfengesicht, supravalvuläre Aortenstenose und hypersozialen Charakter. DiGeorge-Syndrom (22q11-Deletion, CATCH-22) zeigt Herzfehler, Thymus-Hypoplasie und Hypokalzämie."},
+      {"id": "D", "text": "DiGeorge-Syndrom ist eine Trisomie von Chromosom 22."},
+      {"id": "E", "text": "Deletion-Syndrome sind immer balanciert und klinisch unauffällig."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Deletion-Syndrome:**\n\n**Cri-du-chat-Syndrom** (Katzenschrei-Syndrom):\n- **Deletion:** **5p-** (kurzer Arm [p-Arm] von Chromosom 5)\n- **Klinische Merkmale:**\n  - **Charakteristischer Schrei:** Katzenartig, schrill (Larynx-Hypoplasie)\n  - **Mikrozephalie** (kleiner Kopf)\n  - **Faziale Dysmorphie** (rundes Gesicht, Hypertelorismus [weiter Augenabstand])\n  - **Geistige Behinderung** (schwer)\n- **Häufigkeit:** 1:50.000\n\n**Williams-Beuren-Syndrom:**\n- **Deletion:** **7q11.23** (langer Arm [q-Arm] von Chromosom 7)\n- **Gen:** **Elastin-Gen-Deletion** (ELN) → Gefäß-/Bindegewebs-Störung\n- **Klinische Merkmale:**\n  - **Elfengesicht** (kleine Nase, volle Lippen, breite Stirn)\n  - **Supravalvuläre Aortenstenose** (oberhalb der Aortenklappe, Elastin-Mangel)\n  - **Hyperkalzämie** (infancy)\n  - **Geistige Behinderung** (leicht-mittel)\n  - **Hypersozialer Charakter** (extrem freundlich, vertrauensselig)\n- **Häufigkeit:** 1:10.000\n\n**DiGeorge-Syndrom** (22q11-Deletions-Syndrom, Velocardiofaciales Syndrom):\n- **Deletion:** **22q11** (langer Arm von Chromosom 22)\n- **Merkspruch:** **CATCH-22**:\n  - **C**ardiac defects (Herzfehler: Fallot-Tetralogie, Truncus arteriosus)\n  - **A**bnormal face (faziale Dysmorphie)\n  - **T**hymus-Hypoplasie (T-Zell-Defizienz, Immunschwäche)\n  - **C**left palate (Gaumenspalte)\n  - **H**ypokalzämie (Nebenschilddrüsen-Hypoplasie, PTH ↓)\n  - **22** (Chromosom 22)\n- **Häufigkeit:** 1:4.000\n\n**Falsch (A):** Cri-du-chat = **5p-Deletion** (nicht Chromosom 21). Chromosom 21 → Trisomie 21 (Down-Syndrom).\n\n**Falsch (B):** Williams-Beuren = **Deletion** (nicht Duplikation) von 7q11.23.\n\n**Falsch (D):** DiGeorge = **22q11-Deletion** (nicht Trisomie 22). Trisomie 22 ist meist letal (Fehlgeburt).\n\n**Falsch (E):** Deletion-Syndrome sind **unbalanciert** (Materialverlust) → klinisch **auffällig** (nicht unauffällig). **Balancierte** Translokation/Inversion → meist unauffällig.",
+    "difficulty": "hard",
+    "tags": ["genetik", "deletion", "cri-du-chat", "williams-beuren", "digeorge", "catch-22"]
+  },
+  {
+    "id": "bio-5-02-q06",
+    "question": "Welche Aussage über Nicht-Disjunktion (Non-Disjunction) ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Nicht-Disjunktion tritt nur in der Mitose auf."},
+      {"id": "B", "text": "Nicht-Disjunktion ist die korrekte Verteilung von Chromosomen."},
+      {"id": "C", "text": "Nicht-Disjunktion ist die fehlerhafte Chromosomen-Verteilung während Meiose oder Mitose. In Meiose I trennen sich homologe Chromosomen nicht, in Meiose II trennen sich Schwester-Chromatiden nicht, was zu Gameten mit n+1 oder n-1 führt. Dies verursacht Aneuploidie (Trisomie, Monosomie). Das Risiko steigt mit dem mütterlichen Alter (Hauptrisikofaktor für Trisomie 21)."},
+      {"id": "D", "text": "Das Risiko für Nicht-Disjunktion sinkt mit dem mütterlichen Alter."},
+      {"id": "E", "text": "Nicht-Disjunktion führt immer zu Polyploidie."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Nicht-Disjunktion** (Non-Disjunction):\n\n**Definition:** **Fehlerhafte Chromosomen-Verteilung** während **Meiose** oder **Mitose**\n\n**Meiose-Fehler:**\n\n1. **Meiose I:**\n   - **Homologe Chromosomen** trennen sich **nicht**\n   - Beide homologe Chromosomen wandern in **dieselbe Zelle**\n   - **Resultat:** Gameten mit **n+1** (Trisomie-Risiko) oder **n-1** (Monosomie-Risiko)\n\n2. **Meiose II:**\n   - **Schwester-Chromatiden** trennen sich **nicht**\n   - Beide Chromatiden wandern in dieselbe Zelle\n   - **Resultat:** Gameten mit **n+1** oder **n-1**\n\n**Befruchtung:**\n- **Gamete (n+1)** + normale Gamete (n) → **Zygote (2n+1, Trisomie)**\n- **Gamete (n-1)** + normale Gamete (n) → **Zygote (2n-1, Monosomie)**\n\n**Folge:** **Aneuploidie** (Chromosomenzahl ≠ Vielfaches von 23)\n- **Trisomie:** 2n+1 = 47 (z. B. Trisomie 21, Klinefelter 47,XXY)\n- **Monosomie:** 2n-1 = 45 (z. B. Turner 45,X)\n\n**Risikofaktoren:**\n\n**Mütterliches Alter ↑** = **Hauptrisikofaktor** für Trisomie 21:\n- **Mechanismus:** Meiose I der Eizelle beginnt **pränatal**, arretiert in Prophase I → Ovulation (Dekaden später) → erhöhtes Fehlerrisiko (Kohäsine altern)\n- **Altersabhängigkeit:**\n  - 20 Jahre: ~1:1.500\n  - 35 Jahre: ~1:350\n  - **40 Jahre: ~1:100**\n  - 45 Jahre: ~1:30\n\n**Mitose-Fehler:**\n- Schwester-Chromatiden trennen sich nicht → **Mosaik** (nur Teil der Zellen betroffen, z. B. Mosaik-Trisomie 21, milderer Phänotyp)\n\n**Falsch (A):** Nicht-Disjunktion tritt in **Meiose** (häufiger) **und Mitose** auf, nicht nur Mitose.\n\n**Falsch (B):** Nicht-Disjunktion = **fehlerhafte** (nicht korrekte) Verteilung.\n\n**Falsch (D):** Risiko **steigt** (nicht sinkt) mit mütterlichem Alter (Hauptrisikofaktor für Trisomie 21).\n\n**Falsch (E):** Nicht-Disjunktion → **Aneuploidie** (n+1 oder n-1), nicht Polyploidie (3n, 4n). Polyploidie = Polyspermie (Triploidie) oder Mitose-/Meiose-Fehler (vollständiger Chromosomensatz-Duplikation).",
+    "difficulty": "medium",
+    "tags": ["genetik", "nicht-disjunktion", "aneuploidie", "meiose", "mütterliches-alter"]
+  }
+]

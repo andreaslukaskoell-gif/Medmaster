@@ -1,0 +1,176 @@
+[
+  {
+    "id": "q1",
+    "question": "Was ist der Unterschied zwischen Diffusion und erleicherter Diffusion?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide benötigen ATP"
+      },
+      {
+        "id": "B",
+        "text": "Diffusion: direkt durch Lipid-Doppelschicht (O₂, CO₂, lipophile Moleküle), KEIN ATP. Erleichterte Diffusion: via Transporter (Kanäle, Carrier wie GLUT1), KEIN ATP, entlang Gradient"
+      },
+      {
+        "id": "C",
+        "text": "Nur Diffusion existiert"
+      },
+      {
+        "id": "D",
+        "text": "Erleichterte Diffusion benötigt ATP"
+      },
+      {
+        "id": "E",
+        "text": "Beide sind nur in Bakterien"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Beide sind PASSIVE Transportmechanismen (entlang Konzentrationsgradient, KEIN ATP), unterscheiden sich aber im Mechanismus. **DIFFUSION (einfache Diffusion):** Teilchen bewegen sich DIREKT durch Lipid-Doppelschicht (ohne Proteine). Fick'sches Gesetz: J ∝ (Fläche × ΔC) / Dicke. Was diffundiert? (1) Lipophile Moleküle (O₂, CO₂, Steroidhormone), (2) Kleine ungeladene Moleküle (H₂O [langsam], Ethanol, Harnstoff). NICHT: Ionen, große polare Moleküle (Glukose). **ERLEICHTERTE DIFFUSION:** Transport via TRANSPORTER-PROTEINE (noch immer passiv, entlang Gradient). Zwei Typen: (1) **KANÄLE:** Poren (Ionenkanäle: Na⁺, K⁺, Ca²⁺, Aquaporine für H₂O). (2) **CARRIER:** Binden Substrat, Konformationsänderung (z.B. GLUT1 = Glukose-Transporter in Erythrozyten/Blut-Hirn-Schranke, GLUT4 = Insulin-abhängig in Muskel/Fett). Sättigungskinetik (V_max, Michaelis-Menten). A ist falsch (kein ATP). C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Wie funktioniert die Na⁺/K⁺-ATPase und warum ist sie wichtig?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Na⁺/K⁺-ATPase hat keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "Na⁺/K⁺-ATPase: 3 Na⁺ RAUS, 2 K⁺ REIN (ATP-abhängig, elektrogen ~10 mV). Aufrechterhaltung von Na⁺/K⁺-Gradienten (Ruhepotential, sekundär-aktiver Transport, Zellvolumen). ~30% Zell-ATP-Verbrauch"
+      },
+      {
+        "id": "C",
+        "text": "Na⁺/K⁺-ATPase produziert nur ATP"
+      },
+      {
+        "id": "D",
+        "text": "Na⁺/K⁺-ATPase ist nur in Bakterien"
+      },
+      {
+        "id": "E",
+        "text": "Na⁺/K⁺-ATPase transportiert Glukose"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Die **Na⁺/K⁺-ATPASE** (Natrium-Kalium-Pumpe) ist die WICHTIGSTE primär-aktive Pumpe in tierischen Zellen. Mechanismus: (1) 3 Na⁺ (intrazellulär) binden → ATP hydrolysiert zu ADP + P_i → Phosphorylierung der Pumpe → Konformationsänderung. (2) 3 Na⁺ nach AUSSEN transportiert. (3) 2 K⁺ (extrazellulär) binden → Dephosphorylierung → Konformationsänderung. (4) 2 K⁺ nach INNEN transportiert. **ELEKTROGEN:** 3+ raus, 2+ rein → Netto-Ladungstransfer → trägt ~10 mV zu Ruhepotential bei. **FUNKTIONEN:** (1) **Ionengradienten:** Na⁺ niedrig innen (~12 mM), hoch außen (~145 mM). K⁺ hoch innen (~140 mM), niedrig außen (~4 mM) → Ruhepotential (Neuronen: -70 mV). (2) **Sekundär-aktiver Transport:** Na⁺-Gradient treibt SGLT1 (Glukose), Aminosäure-Symporter, Na⁺/Ca²⁺-Antiporter. (3) **Zellvolumen:** Verhindert Zellschwellung. ~30% des Zell-ATP-Verbrauchs! **INHIBITOREN:** Ouabain, Digoxin (Herzglykoside) → Na⁺ innen ↑ → NCX umgekehrt → Ca²⁺ innen ↑ → Herzkontraktilität ↑ (Herzinsuffizienz-Therapie). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Was ist Osmose und wie berechnet man den osmotischen Druck?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Osmose ist ATP-Produktion"
+      },
+      {
+        "id": "B",
+        "text": "Osmose: H₂O-Diffusion durch semipermeable Membran (von niedriger zu hoher Solut-Konzentration). Osmotischer Druck: π = i × c × R × T (van-'t-Hoff). Tonizität: Isotonisch (0.9% NaCl), Hypotonisch (Zelle schwillt), Hypertonisch (Zelle schrumpft)"
+      },
+      {
+        "id": "C",
+        "text": "Osmose ist nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Osmose repliziert DNA"
+      },
+      {
+        "id": "E",
+        "text": "Osmose ist Proteinsynthese"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **OSMOSE** ist die Diffusion von **WASSER** durch eine SEMIPERMEABLE Membran (durchlässig für H₂O, NICHT für Solute) von niedriger zu hoher Solut-Konzentration (= von hoher zu niedriger H₂O-Konzentration). **OSMOTISCHER DRUCK (van-'t-Hoff'sches Gesetz):** **π = i × c × R × T** → (i) van-'t-Hoff-Faktor (Anzahl Teilchen: NaCl → 2, Glukose → 1), (c) Konzentration (mol/L), (R) Gaskonstante, (T) Temperatur (Kelvin). **TONIZITÄT:** (1) **ISOTONISCH:** Gleiche Osmolarität (0.9% NaCl = physiologische Kochsalzlösung) → KEINE Netto-H₂O-Bewegung → Zelle unverändert. (2) **HYPOTONISCH:** Niedrigere Osmolarität (destilliertes Wasser) → H₂O strömt IN Zelle → Zelle schwillt → kann platzen (**Hämolyse** bei Erythrozyten). (3) **HYPERTONISCH:** Höhere Osmolarität (3% NaCl) → H₂O strömt AUS Zelle → Zelle schrumpft (**Krenierung** bei Erythrozyten, gezackte Form). KLINISCH: Isotone Infusionen (Ringer-Laktat, 0.9% NaCl) vermeiden Hämolyse. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Was ist sekundär-aktiver Transport und wie unterscheidet er sich von primär-aktivem Transport?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Primär-aktiver Transport: direkt ATP-abhängig (Na⁺/K⁺-ATPase). Sekundär-aktiver Transport: nutzt Gradienten (von primär-aktivem Transport erstellt), indirekt ATP-abhängig. Beispiele: SGLT1 (Na⁺-Glukose-Symporter), NCX (Na⁺/Ca²⁺-Antiporter)"
+      },
+      {
+        "id": "C",
+        "text": "Nur primär-aktiver Transport existiert"
+      },
+      {
+        "id": "D",
+        "text": "Sekundär-aktiver Transport ist passiv"
+      },
+      {
+        "id": "E",
+        "text": "Beide sind nur in Bakterien"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Beide sind AKTIVE Transportmechanismen (gegen Konzentrationsgradient), unterscheiden sich aber in ATP-Nutzung. **PRIMÄR-AKTIVER TRANSPORT:** DIREKT ATP-ABHÄNGIG. ATP wird hydrolysiert → Konformationsänderung → Substrat gegen Gradient transportiert. Beispiele: (1) **Na⁺/K⁺-ATPase** (3 Na⁺ raus, 2 K⁺ rein), (2) Ca²⁺-ATPase (SERCA, PMCA), (3) H⁺-ATPase (Lysosomen, Magen-Parietalzellen), (4) ABC-Transporter (MDR1, CFTR). **SEKUNDÄR-AKTIVER TRANSPORT:** INDIREKT ATP-abhängig (nutzt Gradienten, die von primär-aktivem Transport erstellt wurden). Ein Substrat bewegt sich ENTLANG Gradient (passiv) → treibt Transport eines anderen Substrats GEGEN Gradient (aktiv). Zwei Typen: (1) **SYMPORTER (Ko-Transport):** Beide Substrate in GLEICHE Richtung. Beispiel: **SGLT1** (Na⁺-Glukose-Symporter in Dünndarm/Niere) → Na⁺-Gradient (von Na⁺/K⁺-ATPase) treibt Glukose-Resorption GEGEN Gradient. (2) **ANTIPORTER (Austausch):** Substrate in ENTGEGENGESETZTE Richtungen. Beispiel: **NCX** (Na⁺/Ca²⁺-Antiporter, 3 Na⁺ rein, 1 Ca²⁺ raus), **NHE** (Na⁺/H⁺-Antiporter, pH-Regulation). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q5",
+    "question": "Wie funktioniert Rezeptor-vermittelte Endozytose?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Rezeptor-vermittelte Endozytose produziert ATP"
+      },
+      {
+        "id": "B",
+        "text": "Ligand (z.B. LDL, Transferrin) bindet Rezeptor → Clathrin-umhüllte Grübchen (Coated Pits) → Clathrin-Vesikel schnürt ab (Dynamin) → Vesikel fusioniert mit frühen Endosomen"
+      },
+      {
+        "id": "C",
+        "text": "Rezeptor-vermittelte Endozytose ist nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Rezeptor-vermittelte Endozytose repliziert DNA"
+      },
+      {
+        "id": "E",
+        "text": "Rezeptor-vermittelte Endozytose ist Proteinsynthese"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **REZEPTOR-VERMITTELTE ENDOZYTOSE** ist ein SPEZIFISCHER vesikulärer Transportmechanismus für Liganden-Aufnahme. Ablauf: (1) **Ligand** (z.B. LDL, Transferrin, EGF) bindet an **REZEPTOR** in Plasmamembran. (2) Rezeptor-Ligand-Komplexe sammeln sich in **CLATHRIN-UMHÜLLTEN GRÜBCHEN** (Coated Pits) → Adaptorproteine (AP-2) verbinden Rezeptoren mit Clathrin-Mantel. (3) Membran stülpt sich ein → **CLATHRIN-VESIKEL** schnürt ab (**Dynamin** = GTPase, GTP-Hydrolyse → Abschnürung). (4) Clathrin-Mantel wird entfernt (Hsc70-Chaperon) → **nacktes Vesikel**. (5) Vesikel fusioniert mit **FRÜHEN ENDOSOMEN** (pH ~6-6.5). (6) **Sortierung:** Rezeptoren recyceln zur Plasmamembran (Recycling-Endosomen), Liganden → späte Endosomen → Lysosomen (Abbau). **BEISPIELE:** (1) **LDL-Rezeptor:** Cholesterin-Aufnahme (Defekt → Familiäre Hypercholesterinämie, LDL ↑, frühe Atherosklerose). (2) **Transferrin-Rezeptor:** Eisen-Aufnahme (Transferrin bindet Fe³⁺ → Endozytose → saurer pH in Endosom → Fe³⁺ freigesetzt → Transferrin recycelt). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q6",
+    "question": "Was sind SNARE-Proteine und welche Funktion haben sie bei Exozytose?",
+    "options": [
+      {
+        "id": "A",
+        "text": "SNARE-Proteine haben keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "SNARE-Proteine (v-SNARE auf Vesikel, t-SNARE auf Zielmembran) vermitteln Vesikel-Fusion bei Exozytose. Ca²⁺-Anstieg → Synaptotagmin bindet SNARE → Fusion → Neurotransmitter-/Hormon-Freisetzung. Botulinustoxin spaltet SNARE → blockiert Exozytose → Muskelparalyse"
+      },
+      {
+        "id": "C",
+        "text": "SNARE-Proteine sind nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "SNARE-Proteine produzieren ATP"
+      },
+      {
+        "id": "E",
+        "text": "SNARE-Proteine replizieren DNA"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **SNARE-PROTEINE** (Soluble NSF Attachment protein REceptors) sind essentiell für VESIKEL-FUSION bei Exozytose. Mechanismus: (1) **v-SNARE** (vesikular, z.B. Synaptobrevin/VAMP) auf Sekret-Vesikel. (2) **t-SNARE** (target, z.B. Syntaxin, SNAP-25) auf Ziel-Membran (Plasmamembran). (3) v-SNARE + t-SNARE bilden **SNARE-Komplex** (trans-SNARE) → zieht Membranen zusammen (\"Reißverschluss\"). (4) **Ca²⁺-ANSTIEG** (Stimulus, z.B. Aktionspotential) → **Synaptotagmin** (Ca²⁺-Sensor) bindet Ca²⁺ → bindet SNARE-Komplex → **FUSION** ausgelöst → Vesikel verschmilzt mit Plasmamembran → **Inhalt freigesetzt** (Exozytose). (5) Nach Fusion: **NSF** (N-ethylmaleimide-Sensitive Factor) + α-SNAP dissoziieren SNARE-Komplex (ATP-abhängig) → Recycling. **BEISPIELE:** Neurotransmitter-Freisetzung (Synapse), Hormon-Sekretion (Insulin, Adrenalin). **BOTULINUSTOXIN (BoNT):** Neurotoxin (Clostridium botulinum) → **SPALTET SNARE-Proteine** (Synaptobrevin, SNAP-25, Syntaxin, je nach Serotyp) → Exozytose BLOCKIERT → Acetylcholin-Freisetzung ↓ → **MUSKELPARALYSE** (Botulismus, therapeutisch: Botox bei Dystonien, Spastik). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  }
+]

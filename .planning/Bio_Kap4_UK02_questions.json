@@ -1,0 +1,92 @@
+[
+  {
+    "id": "bio-4-02-q01",
+    "question": "Welche Aussage über die Gastrulation ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Die Gastrulation findet in der ersten Woche nach Befruchtung statt."},
+      {"id": "B", "text": "Der Hypoblast bildet alle 3 Keimblätter."},
+      {"id": "C", "text": "Die Gastrulation (Tag 15–21, 3. Woche) ist der Prozess, bei dem Epiblast-Zellen am Primitivstreifen invaginieren und 3 Keimblätter bilden: Endoderm (verdrängt Hypoblast), Mesoderm (mittlere Schicht), Ektoderm (verbleibende Epiblast-Zellen)."},
+      {"id": "D", "text": "Die Blastozyste hat bereits 3 Keimblätter."},
+      {"id": "E", "text": "Der Primitivknoten (Hensen-Knoten) bildet das Endoderm."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Gastrulation** (Tag 15–21, 3. Woche):\n\n**Ausgangspunkt:** **Zweischichtige Keimscheibe** (Tag 8):\n- **Epiblast** (obere Schicht) → **alle 3 Keimblätter**\n- **Hypoblast** (untere Schicht) → Dottersack (extraembryonal, später resorbiert)\n\n**Primitivstreifen (Primitive Streak):**\n- Verdickte Linie auf dorsaler Epiblast-Oberfläche (kaudal)\n- **Invaginationsstelle:** Epiblast-Zellen wandern zur Mittellinie → invaginieren (Einstülpung nach innen)\n\n**Keimblatt-Bildung (Reihenfolge):**\n1. **Endoderm:** Erste invaginierende Epiblast-Zellen → **verdrängen Hypoblast** → definitives Endoderm (untere Schicht)\n2. **Mesoderm:** Folgende invaginierende Epiblast-Zellen → Mesoderm (mittlere Schicht)\n3. **Ektoderm:** Verbleibende Epiblast-Zellen (nicht invaginiert) → Ektoderm (obere Schicht)\n\n**Ergebnis (Tag 21):** **Dreiblättrige Keimscheibe** (Ektoderm, Mesoderm, Endoderm)\n\n**Primitivknoten (Hensen-Knoten):**\n- Kraniales (vorderes) Ende des Primitivstreifens\n- Organisationszentrum\n- Bildet **Notochord** (Chorda dorsalis, Mesoderm) → induziert Neurulation\n\n**Falsch (A):** Gastrulation = **3. Woche** (Tag 15–21), nicht 1. Woche. 1. Woche = Furchung (Morula, Blastozyste).\n\n**Falsch (B):** **Epiblast** (nicht Hypoblast) bildet alle 3 Keimblätter. Hypoblast → Dottersack (extraembryonal).\n\n**Falsch (D):** Blastozyste (Tag 5–6) hat **2 Schichten** (Epiblast + Hypoblast), nicht 3 Keimblätter. 3 Keimblätter erst nach Gastrulation (Tag 21).\n\n**Falsch (E):** Primitivknoten bildet **Notochord** (Mesoderm), nicht Endoderm. Endoderm aus Epiblast-Invagination.",
+    "difficulty": "medium",
+    "tags": ["frühentwicklung", "gastrulation", "primitivstreifen", "keimblätter", "epiblast"]
+  },
+  {
+    "id": "bio-4-02-q02",
+    "question": "Welche Aussage über Ektoderm-Derivate ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Das Ektoderm bildet die Skelettmuskulatur und Knochen."},
+      {"id": "B", "text": "Das Ektoderm bildet Epidermis (Haut, Haare, Nägel), Nervensystem (ZNS [Neuralrohr: Gehirn, Rückenmark] und PNS), Sinnesorgane (Auge, Ohr), Neuralleiste (Melanozyten, periphere Ganglien, Adrenal-Medulla), Zahnschmelz und Adenohypophyse."},
+      {"id": "C", "text": "Die Leber und das Pankreas sind Ektoderm-Derivate."},
+      {"id": "D", "text": "Die Neuralleiste ist ein Mesoderm-Derivat."},
+      {"id": "E", "text": "Das Herz entwickelt sich aus dem Ektoderm."}
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Ektoderm-Derivate** (äußeres Keimblatt):\n\n**Oberflächenstrukturen:**\n- **Epidermis:** Haut (Oberhaut), Haare, Nägel, Schweißdrüsen, Talgdrüsen\n\n**Nervensystem:**\n- **ZNS:** Neuralrohr → Gehirn + Rückenmark\n- **PNS:** Neuralleiste + Plakoden → Spinalnerven, autonome Ganglien\n\n**Sinnesorgane:**\n- **Auge:** Linse, Kornea\n- **Ohr:** Innenohr-Epithel\n- **Riechepithel**\n\n**Neuralleiste** (Ektoderm-Derivat!):\n- Zellen am Rand der Neuralplatte → migrieren\n- **Derivate:**\n  - **Melanozyten** (Pigmentzellen)\n  - **Periphere Ganglien** (Spinalganglien, autonome Ganglien)\n  - **Adrenal-Medulla** (Chromaffin-Zellen: Adrenalin, Noradrenalin)\n  - **Kieferknorpel**, Teile des Gesichtsschädels\n\n**Weitere:**\n- **Zahnschmelz** (Ameloblasten): Härteste Substanz im Körper\n- **Adenohypophyse** (Vorderlappen der Hypophyse, aus Rathke-Tasche)\n\n**Neurulation:**\n- Notochord (Mesoderm) → induziert **Neuralplatte** (Ektoderm, dorsal)\n- Neuralplatte → Neuralrinne → **Neuralrohr** → ZNS\n\n**Falsch (A):** **Mesoderm** (nicht Ektoderm) bildet Skelettmuskulatur + Knochen.\n\n**Falsch (C):** Leber + Pankreas = **Endoderm** (nicht Ektoderm). Endoderm = GIT-assoziierte Drüsen.\n\n**Falsch (D):** **Neuralleiste** ist **Ektoderm**-Derivat (nicht Mesoderm). Entsteht am Rand der Neuralplatte.\n\n**Falsch (E):** Herz = **Mesoderm** (nicht Ektoderm). Mesoderm = Kreislaufsystem (Herz, Blut, Gefäße).",
+    "difficulty": "easy",
+    "tags": ["frühentwicklung", "ektoderm", "neuralleiste", "nervensystem", "epidermis"]
+  },
+  {
+    "id": "bio-4-02-q03",
+    "question": "Welche Aussage über Mesoderm-Derivate ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Das Mesoderm bildet das Epithelauskleidung des Gastrointestinaltrakts."},
+      {"id": "B", "text": "Das Mesoderm bildet das Nervensystem (Gehirn und Rückenmark)."},
+      {"id": "C", "text": "Das Mesoderm bildet Skelett (Knochen, Knorpel), Muskulatur (Skelett-, Herz-, glatte Muskulatur), Kreislaufsystem (Herz, Blut, Gefäße), Urogenitalsystem (Niere, Gonaden), Bindegewebe, Milz und Nebennieren-Rinde."},
+      {"id": "D", "text": "Die Schilddrüse ist ein Mesoderm-Derivat."},
+      {"id": "E", "text": "Das Mesoderm bildet die Epidermis der Haut."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Mesoderm-Derivate** (mittleres Keimblatt):\n\n**Skelett:**\n- Knochen, Knorpel (außer Teile des Schädels → Neuralleiste/Ektoderm)\n\n**Muskulatur (alle 3 Typen):**\n- **Skelettmuskulatur** (quergestreift, willkürlich)\n- **Herzmuskulatur** (quergestreift, unwillkürlich)\n- **Glatte Muskulatur** (unwillkürlich, Gefäße, GIT, Uterus, Bronchien)\n\n**Kreislaufsystem:**\n- **Herz** (Myokard, Endokard, Epikard)\n- **Blutgefäße** (Arterien, Venen, Kapillaren)\n- **Blut** (Erythrozyten, Leukozyten, Thrombozyten)\n- Lymphgefäße\n\n**Urogenitalsystem:**\n- **Niere** (Nephrone)\n- **Gonaden** (Hoden, Ovar) – außer **Keimzellen** (primordiale Keimzellen aus Dottersack)\n- Harnleiter, Genitaltrakt\n\n**Bindegewebe:**\n- Dermis (Lederhaut), Sehnen, Bänder, Faszien\n\n**Weitere:**\n- **Milz** (Blutfilterung, Immunabwehr)\n- **Nebennieren-Rinde** (Kortex: Cortisol, Aldosteron, Androgene) – Adrenal-Medulla → Neuralleiste/Ektoderm!\n- **Seröse Häute** (Peritoneum, Pleura, Perikard)\n\n**Mesoderm-Unterteilung:**\n- **Paraxiales Mesoderm:** Somiten → Wirbel, Rippen, Skelettmuskulatur\n- **Intermediäres Mesoderm:** Urogenitalsystem\n- **Laterales Mesoderm:** Kreislaufsystem, seröse Häute\n\n**Falsch (A):** **Endoderm** (nicht Mesoderm) bildet Epithelauskleidung des GIT. Mesoderm bildet **Muskulatur** des GIT.\n\n**Falsch (B):** **Ektoderm** (nicht Mesoderm) bildet Nervensystem (Neuralrohr → ZNS).\n\n**Falsch (D):** **Schilddrüse** = **Endoderm** (Follikelepithel). Mesoderm bildet Bindegewebe/Gefäße der Schilddrüse.\n\n**Falsch (E):** **Ektoderm** (nicht Mesoderm) bildet Epidermis. Mesoderm bildet **Dermis** (Lederhaut).",
+    "difficulty": "easy",
+    "tags": ["frühentwicklung", "mesoderm", "muskulatur", "skelett", "kreislauf", "urogenital"]
+  },
+  {
+    "id": "bio-4-02-q04",
+    "question": "Welche Aussage über Endoderm-Derivate ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Das Endoderm bildet die glatte Muskulatur des Gastrointestinaltrakts."},
+      {"id": "B", "text": "Das Endoderm bildet die Epithelauskleidung von GIT (Pharynx, Ösophagus, Magen, Darm), Atmungssystem (Trachea, Bronchien, Lunge [Alveolen-Epithel]), sowie assoziierte Drüsen wie Leber, Pankreas, Schilddrüse und Thymus. Muskulatur dieser Organe stammt vom Mesoderm."},
+      {"id": "C", "text": "Das Herz ist ein Endoderm-Derivat."},
+      {"id": "D", "text": "Die Niere entwickelt sich aus dem Endoderm."},
+      {"id": "E", "text": "Die Neuralleiste ist ein Endoderm-Derivat."}
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Endoderm-Derivate** (inneres Keimblatt):\n\n**Epithelauskleidung GIT:**\n- Pharynx, Ösophagus, **Magen**, **Dünndarm**, **Dickdarm**, Rektum\n- **WICHTIG:** Nur **Epithel** (Schleimhaut)! **Muskulatur** → Mesoderm\n\n**Epithelauskleidung Atmungssystem:**\n- **Trachea**, **Bronchien**, **Lunge** (Alveolen-Epithel):\n  - **Typ-I-Pneumozyten** (Gasaustausch, dünn)\n  - **Typ-II-Pneumozyten** (Surfactant-Produktion)\n- **Muskulatur** der Atemwege → Mesoderm\n\n**Assoziierte Drüsen (GIT):**\n- **Leber:** Hepatozyten, Gallenblase\n- **Pankreas:** Endokrin (Langerhans-Inseln: Insulin, Glukagon) + Exokrin (Enzyme)\n\n**Endokrine Organe:**\n- **Schilddrüse:** Follikelepithel (T₃, T₄)\n- **Nebenschilddrüse:** Hauptzellen (PTH)\n- **Thymus:** Epithelretikulum (T-Zell-Reifung)\n\n**Weitere:**\n- **Harnblase:** Epithelauskleidung (Urothel) – Muskulatur → Mesoderm\n- **Tonsilla palatina:** Pharynx-Epithel → Endoderm (Lymphozyten → Mesoderm)\n\n**Prinzip:** Endoderm bildet **nur Epithel-Auskleidungen** (Schleimhaut). **Muskulatur**, **Bindegewebe**, **Blutgefäße** dieser Organe → **Mesoderm**\n\n**Falsch (A):** **Mesoderm** (nicht Endoderm) bildet glatte Muskulatur des GIT. Endoderm = **nur Epithel**.\n\n**Falsch (C):** Herz = **Mesoderm** (nicht Endoderm). Mesoderm = Kreislaufsystem.\n\n**Falsch (D):** Niere = **Mesoderm** (intermediäres Mesoderm), nicht Endoderm. Endoderm = Epithel-Auskleidungen.\n\n**Falsch (E):** Neuralleiste = **Ektoderm** (nicht Endoderm). Entsteht am Rand der Neuralplatte.",
+    "difficulty": "medium",
+    "tags": ["frühentwicklung", "endoderm", "git", "lunge", "leber", "pankreas"]
+  },
+  {
+    "id": "bio-4-02-q05",
+    "question": "Welche Aussage über das Notochord (Chorda dorsalis) ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Das Notochord entwickelt sich aus dem Ektoderm."},
+      {"id": "B", "text": "Das Notochord hemmt die Neurulation."},
+      {"id": "C", "text": "Das Notochord ist ein Mesoderm-Derivat, das vom Primitivknoten (Hensen-Knoten) gebildet wird. Es induziert die Neurulation (Neuralplatte → Neuralrohr → ZNS). Beim Erwachsenen bildet es den Nucleus pulposus (Gallertkern) der Bandscheibe."},
+      {"id": "D", "text": "Das Notochord bildet die Wirbelsäule direkt."},
+      {"id": "E", "text": "Das Notochord ist beim Erwachsenen vollständig verschwunden."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Notochord** (Chorda dorsalis):\n\n**Keimblatt:** **Mesoderm**\n\n**Ursprung:** **Primitivknoten** (Hensen-Knoten, kranial am Primitivstreifen)\n\n**Lage:** Mittellinienstruktur, ventral (unterhalb) des Neuralrohrs, dorsal (oberhalb) des Darms\n\n**Funktion während Embryonalentwicklung:**\n1. **Induktor der Neurulation:**\n   - Notochord → sezerniert Signalmoleküle (Shh, Sonic hedgehog)\n   - Induziert dorsales **Ektoderm** → **Neuralplatte**\n   - Neuralplatte → Neuralrinne → **Neuralrohr** → **ZNS** (Gehirn + Rückenmark)\n\n2. **Achsenskelett:**\n   - Definiert Körperachse (kraniokaudal)\n   - Organisator für Somiten-Bildung (paraxiales Mesoderm → Wirbel)\n\n**Schicksal beim Erwachsenen:**\n- **Verknöchert/degeneriert** größtenteils\n- **Überbleibsel:** **Nucleus pulposus** (Gallertkern der Bandscheibe)\n  - Gelartiger Kern in Discus intervertebralis\n  - Stoßdämpfer-Funktion\n  - **Bandscheibenvorfall:** Nucleus pulposus durchbricht Anulus fibrosus → Nerven-Kompression\n\n**Falsch (A):** Notochord = **Mesoderm** (Primitivknoten), nicht Ektoderm. Ektoderm → Neuralplatte (durch Notochord induziert).\n\n**Falsch (B):** Notochord **induziert** (nicht hemmt) Neurulation. Ohne Notochord → keine Neuralplatte → kein ZNS.\n\n**Falsch (D):** Notochord induziert Wirbelsäulen-Bildung (Somiten → Wirbel), bildet sie aber **nicht direkt**. Wirbel → **Somiten** (paraxiales Mesoderm). Notochord → Nucleus pulposus.\n\n**Falsch (E):** Notochord ist **nicht vollständig verschwunden**. Überbleibsel = **Nucleus pulposus** (Bandscheibe).",
+    "difficulty": "hard",
+    "tags": ["frühentwicklung", "notochord", "neurulation", "mesoderm", "nucleus-pulposus"]
+  },
+  {
+    "id": "bio-4-02-q06",
+    "question": "Welche Aussage über die Neuralleiste ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Die Neuralleiste ist ein Mesoderm-Derivat."},
+      {"id": "B", "text": "Die Neuralleiste bildet das zentrale Nervensystem (Gehirn und Rückenmark)."},
+      {"id": "C", "text": "Die Neuralleiste ist ein Ektoderm-Derivat, das vom Rand der Neuralplatte migriert. Sie bildet periphere Ganglien (Spinalganglien, autonome Ganglien), Melanin-bildende Zellen (Melanozyten), Adrenal-Medulla (Chromaffin-Zellen), Kieferknorpel und Teile des Gesichtsschädels."},
+      {"id": "D", "text": "Die Neuralleiste bildet die Leber und das Pankreas."},
+      {"id": "E", "text": "Die Neuralleiste bildet die Nebennieren-Rinde."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Neuralleiste** (Neural Crest):\n\n**Keimblatt:** **Ektoderm** (spezialisiertes Ektoderm-Derivat)\n\n**Ursprung:**\n- Zellen am **Rand der Neuralplatte** (dorsal)\n- Während **Neurulation:** Neuralplatte faltet sich → Neuralrohr\n- Neuralleisten-Zellen **delaminieren** (lösen sich) → **migrieren** im Embryo\n\n**Derivate (sehr vielfältig):**\n\n1. **Peripheres Nervensystem:**\n   - **Spinalganglien** (Hinterwurzelganglien, sensorische Neurone)\n   - **Autonome Ganglien** (Sympathikus, Parasympathikus)\n   - **Schwann-Zellen** (Myelinisierung peripherer Nerven)\n\n2. **Melanin-bildende Zellen:**\n   - **Melanozyten** (Pigmentzellen in Haut, Haaren)\n\n3. **Endokrine Zellen:**\n   - **Adrenal-Medulla** (Chromaffin-Zellen: Adrenalin, Noradrenalin)\n   - **C-Zellen** der Schilddrüse (Calcitonin)\n\n4. **Skelett/Bindegewebe (kranial):**\n   - **Kieferknorpel**, **Teile des Gesichtsschädels** (Maxilla, Mandibula)\n   - **Zahnpapille** (Dentin)\n\n5. **Weitere:**\n   - **Aorticopulmonales Septum** (Herz-Septierung)\n   - **Pia mater**, **Arachnoidea** (Hirnhäute, zusammen mit Mesoderm)\n\n**Klinisch:**\n- **Neuralrohrdefekte:** Spina bifida (offener Rücken), Anenzephalie (fehlendes Gehirn)\n- **Neurofibroma tose Typ 1:** Neuralleisten-Derivate (Schwann-Zellen) → Tumore\n\n**Falsch (A):** Neuralleiste = **Ektoderm** (nicht Mesoderm). Entsteht am Rand der Neuralplatte.\n\n**Falsch (B):** **Neuralrohr** (nicht Neuralleiste) bildet **ZNS** (Gehirn + Rückenmark). Neuralleiste → **PNS** + weitere Derivate.\n\n**Falsch (D):** Leber + Pankreas = **Endoderm** (nicht Neuralleiste). Endoderm = GIT-assoziierte Drüsen.\n\n**Falsch (E):** **Nebennieren-Rinde** = **Mesoderm** (nicht Neuralleiste). **Nebennieren-Mark (Adrenal-Medulla)** = **Neuralleiste** (Ektoderm).",
+    "difficulty": "hard",
+    "tags": ["frühentwicklung", "neuralleiste", "ektoderm", "melanozyten", "adrenal-medulla", "pns"]
+  }
+]

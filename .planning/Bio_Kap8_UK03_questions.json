@@ -1,0 +1,176 @@
+[
+  {
+    "id": "q1",
+    "question": "Was unterscheidet Penetranz von Expressivität?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Penetranz beschreibt den Schweregrad, Expressivität das Auftreten eines Merkmals"
+      },
+      {
+        "id": "B",
+        "text": "Penetranz ist die Wahrscheinlichkeit des Auftretens (Ja/Nein), Expressivität der Schweregrad (Wie stark?)"
+      },
+      {
+        "id": "C",
+        "text": "Penetranz gilt nur für dominante, Expressivität nur für rezessive Erbgänge"
+      },
+      {
+        "id": "D",
+        "text": "Penetranz bezieht sich auf Gene, Expressivität auf Umweltfaktoren"
+      },
+      {
+        "id": "E",
+        "text": "Beide Begriffe sind synonym und können austauschbar verwendet werden"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Penetranz ist eine Ja/Nein-Frage ('Tritt der Phänotyp auf?') und wird in Prozent angegeben (z.B. 70% der BRCA1-Trägerinnen erkranken). Expressivität beschreibt die Schweregrad-Skala ('Wie stark ist der Phänotyp?'), z.B. leichte vs. schwere Symptome bei NF1. A ist falsch (vertauscht). C ist falsch (beide gelten für alle Erbgänge). D ist falsch (beide sind genetische Konzepte). E ist falsch (völlig unterschiedliche Konzepte).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q2",
+    "question": "Welche Aussage zur multifaktoriellen Vererbung ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Sie folgt klaren Mendelschen Verhältnissen (3:1, 9:3:3:1)"
+      },
+      {
+        "id": "B",
+        "text": "Nur genetische Faktoren spielen eine Rolle, Umwelt ist irrelevant"
+      },
+      {
+        "id": "C",
+        "text": "Merkmale zeigen kontinuierliche Variation mit Normalverteilung (Glockenkurve)"
+      },
+      {
+        "id": "D",
+        "text": "Ein einzelnes Gen bestimmt das Merkmal vollständig"
+      },
+      {
+        "id": "E",
+        "text": "Sie tritt nur bei Erbkrankheiten auf, nicht bei normalen Merkmalen"
+      }
+    ],
+    "correct": "C",
+    "explanation": "C ist korrekt: Multifaktorielle Merkmale (Körpergröße, Hautfarbe, IQ) zeigen kontinuierliche Variation in der Population und folgen einer Normalverteilung (Glockenkurve), da viele Gene mit kleinen additiven Effekten beteiligt sind. A ist falsch (keine Mendelschen Verhältnisse, da viele Gene + Umwelt beteiligt). B ist falsch (Umwelt spielt zentrale Rolle - daher 'multifaktoriell'). D ist falsch (viele Gene beteiligt = Polygenie). E ist falsch (auch normale Merkmale wie Größe sind multifaktoriell).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q3",
+    "question": "Das Marfan-Syndrom wird durch eine Mutation im FBN1-Gen verursacht und betrifft Skelett (Arachnodaktylie), Augen (Linsenluxation) und Herz (Aortendilatation). Welches genetische Konzept wird hier illustriert?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Polygenie - viele Gene bestimmen ein Merkmal"
+      },
+      {
+        "id": "B",
+        "text": "Pleiotropie - ein Gen beeinflusst mehrere Merkmale"
+      },
+      {
+        "id": "C",
+        "text": "Kodominanz - beide Allele werden gleichzeitig exprimiert"
+      },
+      {
+        "id": "D",
+        "text": "Epistase - ein Gen maskiert die Wirkung eines anderen Gens"
+      },
+      {
+        "id": "E",
+        "text": "Multifaktorielle Vererbung - Gene und Umwelt interagieren"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Pleiotropie beschreibt, dass EIN Gen (FBN1) MEHRERE scheinbar unabhängige Merkmale beeinflusst. FBN1 kodiert Fibrillin-1 (Bindegewebsprotein) → Bindegewebe ist in Skelett, Augen, Gefäßen → multiple Organsysteme betroffen. A ist falsch (das Gegenteil - hier ein Gen, nicht viele). C ist falsch (betrifft Allel-Interaktion, nicht Multi-Organ-Effekte). D ist falsch (keine Gen-Maskierung). E ist falsch (monogen, nicht multifaktoriell - FBN1-Mutation allein verursacht Marfan).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Bei der Neurofibromatose Typ 1 (NF1) tragen alle Mutationsträger die gleiche Mutation, zeigen aber stark unterschiedliche Schweregrade: Manche haben nur Café-au-lait-Flecken, andere entwickeln schwere Neurofibrome und Skelettdeformitäten. Welches Konzept erklärt diese Beobachtung am besten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Unvollständige Penetranz - nicht alle Träger zeigen Symptome"
+      },
+      {
+        "id": "B",
+        "text": "Variable Expressivität - unterschiedliche Schweregrade bei allen Betroffenen"
+      },
+      {
+        "id": "C",
+        "text": "Polygenie - mehrere Gene bestimmen den Phänotyp"
+      },
+      {
+        "id": "D",
+        "text": "Kodominanz - beide Allele tragen zum Phänotyp bei"
+      },
+      {
+        "id": "E",
+        "text": "X-Inaktivierung - zufällige Stilllegung eines X-Chromosoms"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Variable Expressivität erklärt unterschiedliche Schweregrade des GLEICHEN Merkmals bei Trägern des GLEICHEN Genotyps. Bei NF1 haben ALLE Träger Symptome (Penetranz ~100%), aber der Schweregrad variiert stark. A ist falsch (Penetranz bei NF1 ist nahezu 100% - alle zeigen Symptome, wenn auch manchmal mild). C ist falsch (NF1 ist monogen, nicht polygen). D ist falsch (autosomal-dominant, nicht kodominant). E ist falsch (NF1 liegt auf Chromosom 17, nicht X-chromosomal).",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q5",
+    "question": "Welches der folgenden Merkmale ist ein Beispiel für Polygenie?",
+    "options": [
+      {
+        "id": "A",
+        "text": "ABO-Blutgruppen (ein Gen, 3 Allele)"
+      },
+      {
+        "id": "B",
+        "text": "Körpergröße (über 700 genetische Varianten beteiligt)"
+      },
+      {
+        "id": "C",
+        "text": "Sichelzellanämie (Mutation im HBB-Gen)"
+      },
+      {
+        "id": "D",
+        "text": "Chorea Huntington (Mutation im HTT-Gen)"
+      },
+      {
+        "id": "E",
+        "text": "Mukoviszidose (Mutation im CFTR-Gen)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Körpergröße ist ein klassisches Beispiel für Polygenie - über 700 genetische Varianten wurden identifiziert, jede trägt nur wenige Millimeter bei, der Gesamteffekt ergibt sich additiv. Die Variation folgt einer Normalverteilung (Glockenkurve). A ist falsch (monogen, nur EIN Gen mit 3 Allelen). C, D, E sind falsch (alle monogene Erbkrankheiten - jeweils nur EIN mutiertes Gen). Diese zeigen diskrete Phänotypen (krank/gesund), keine kontinuierliche Variation.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q6",
+    "question": "Eine Frau trägt eine BRCA1-Mutation. Ihre Mutter (ebenfalls Trägerin) erkrankte mit 35 Jahren an Brustkrebs, ihre Tante (ebenfalls Trägerin) ist mit 70 Jahren noch gesund. Welche beiden Konzepte erklären diese familiäre Situation am besten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Vollständige Penetranz und konstante Expressivität"
+      },
+      {
+        "id": "B",
+        "text": "Unvollständige Penetranz (nicht alle erkranken) und variable Expressivität (unterschiedliches Erkrankungsalter)"
+      },
+      {
+        "id": "C",
+        "text": "Polygenie und Pleiotropie kombiniert"
+      },
+      {
+        "id": "D",
+        "text": "X-chromosomale Vererbung mit Lyon-Hypothese"
+      },
+      {
+        "id": "E",
+        "text": "Genomische Prägung (Imprinting) mit parentaler Präferenz"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: BRCA1-Mutationen zeigen UNVOLLSTÄNDIGE PENETRANZ (~70-80% der Trägerinnen erkranken - die gesunde Tante gehört zu den 20-30% Nicht-Erkrankten) UND VARIABLE EXPRESSIVITÄT (unterschiedliches Erkrankungsalter, Schweregrad). Beide Konzepte wirken zusammen. A ist falsch (Penetranz ist NICHT vollständig, Expressivität NICHT konstant). C ist falsch (BRCA1 ist monogen, nicht polygen; kein pleiotroper Effekt im klassischen Sinn). D ist falsch (BRCA1 liegt auf Chromosom 17, nicht X-chromosomal). E ist falsch (kein Imprinting bei BRCA1).",
+    "difficulty": "hard"
+  }
+]

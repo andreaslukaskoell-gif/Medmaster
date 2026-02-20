@@ -1,0 +1,147 @@
+[
+  {
+    "id": "q1",
+    "question": "Was ist der Unterschied zwischen 70S- und 80S-Ribosomen?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "80S = Eukaryoten-Zytosol (60S + 40S), 70S = Prokaryoten/Mitochondrien/Chloroplasten (50S + 30S)"
+      },
+      {
+        "id": "C",
+        "text": "70S sind nur in Pflanzen"
+      },
+      {
+        "id": "D",
+        "text": "80S produzieren ATP"
+      },
+      {
+        "id": "E",
+        "text": "70S sind größer als 80S"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: RIBOSOMEN unterscheiden sich zwischen Eukaryoten und Prokaryoten: **80S-RIBOSOMEN** (Eukaryoten-Zytosol): (1) Große Untereinheit: **60S** (3 rRNAs: 28S, 5.8S, 5S + ~49 Proteine), (2) Kleine Untereinheit: **40S** (1 rRNA: 18S + ~33 Proteine). **70S-RIBOSOMEN** (Prokaryoten, Mitochondrien, Chloroplasten): (1) Große Untereinheit: **50S** (2 rRNAs: 23S, 5S + ~31 Proteine), (2) Kleine Untereinheit: **30S** (1 rRNA: 16S + ~21 Proteine). WICHTIG: **Mitochondrien und Chloroplasten haben 70S** (wie Bakterien!) → Beleg für ENDOSYMBIONTENTHEORIE. Dieser Unterschied ermöglicht ANTIBIOTIKA-SELEKTIVITÄT: Antibiotika hemmen 70S (Bakterien), nicht 80S (menschliche Zellen). A, C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Welche funktionalen Stellen gibt es im Ribosom und was ist ihre Funktion?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Nur eine Stelle"
+      },
+      {
+        "id": "B",
+        "text": "A-Stelle (Aminoacyl-tRNA bindet), P-Stelle (Peptidyl-tRNA, wachsende Kette), E-Stelle (entladene tRNA verlässt)"
+      },
+      {
+        "id": "C",
+        "text": "Ribosomen haben keine Bindungsstellen"
+      },
+      {
+        "id": "D",
+        "text": "Nur P-Stelle"
+      },
+      {
+        "id": "E",
+        "text": "Ribosomen sind nur in Bakterien"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Ribosomen haben DREI funktionale tRNA-BINDUNGSSTELLEN: (1) **A-STELLE (Aminoacyl):** Hier bindet die AMINOACYL-tRNA (tRNA geladen mit Aminosäure). Codon-Anticodon-Paarung prüft korrekte Aminosäure. (2) **P-STELLE (Peptidyl):** Hier befindet sich die PEPTIDYL-tRNA (tRNA mit wachsender Polypeptidkette). (3) **E-STELLE (Exit):** Hier befindet sich die ENTLADENE tRNA (nach Peptidbindungs-Bildung), bevor sie das Ribosom verlässt. **ABLAUF (Elongation):** Aminoacyl-tRNA → A-Stelle → Peptidyltransferase bildet Peptidbindung (P + A) → Translokation (Ribosom bewegt sich 3 Nukleotide) → P-tRNA → E-Stelle (verlässt), A-tRNA → P-Stelle. Zusätzlich: **PEPTIDYLTRANSFERASE-ZENTRUM** (große Untereinheit) katalysiert Peptidbindung = RIBOZYM (rRNA katalytisch aktiv, keine Proteine!). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Was ist der Unterschied zwischen freien und membrangebundenen Ribosomen?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Freie Ribosomen (Zytosol): zytosolische Proteine. Membrangebundene Ribosomen (raues ER): Sekretproteine, Membranproteine, lysosomale Enzyme (Signalsequenz → SRP → ER)"
+      },
+      {
+        "id": "C",
+        "text": "Freie Ribosomen sind nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Membrangebundene Ribosomen produzieren ATP"
+      },
+      {
+        "id": "E",
+        "text": "Ribosomen sind dauerhaft gebunden"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Ribosomen können FREI im Zytosol vorliegen oder am rauen ER GEBUNDEN sein – abhängig vom Protein, das synthetisiert wird. **FREIE RIBOSOMEN (Zytosol):** Synthese von **ZYTOSOLISCHEN PROTEINEN** (z.B. Enzyme für Glykolyse, Strukturproteine wie Aktin, Transkriptionsfaktoren). Proteine haben KEINE Signalsequenz. **MEMBRANGEBUNDENE RIBOSOMEN (raues ER):** Synthese von **SEKRETPROTEINEN** (Hormone, Antikörper, Verdauungsenzyme), **MEMBRANPROTEINEN** (Rezeptoren, Ionenkanäle), **LYSOSOMALEN ENZYMEN**. Mechanismus: **Signal-Hypothese** (Blobel, Nobelpreis 1999): (1) Signalsequenz (N-Terminus) synthetisiert, (2) **SRP** (Signal Recognition Particle) bindet Signalsequenz → Translation pausiert, (3) SRP-Ribosom-Komplex dockt an ER-Membran (Translokon), (4) Co-translationale Translokation ins ER-Lumen. WICHTIG: Ribosomen sind NICHT dauerhaft gebunden – können zwischen frei/gebunden wechseln. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Wie hemmen Tetracycline die bakterielle Proteinsynthese?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Tetracycline haben keine Wirkung"
+      },
+      {
+        "id": "B",
+        "text": "Tetracycline blockieren die A-Stelle der 30S-Untereinheit (70S-Ribosomen) → Aminoacyl-tRNA kann nicht binden → Translation stoppt (bakteriostatisch)"
+      },
+      {
+        "id": "C",
+        "text": "Tetracycline hemmen die DNA-Replikation"
+      },
+      {
+        "id": "D",
+        "text": "Tetracycline sind nur gegen Viren wirksam"
+      },
+      {
+        "id": "E",
+        "text": "Tetracycline hemmen 80S-Ribosomen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **TETRACYCLINE** (Doxycyclin, Minocyclin) sind Breitspektrum-Antibiotika, die bakterielle Proteinsynthese hemmen. Mechanismus: (1) Binden an **30S-UNTEREINHEIT** der **70S-Ribosomen** (Bakterien). (2) **A-STELLE BLOCKIERT** → Aminoacyl-tRNA (geladen mit Aminosäure) kann NICHT binden. (3) Translation stoppt → BAKTERIOSTATISCH (Wachstumshemmung, keine Abtötung). SELEKTIVITÄT: 70S (Bakterien) ≠ 80S (Mensch) → menschliche Proteinsynthese unbeeinflusst. RESISTENZ: (1) Efflux-Pumpen (tetA-Gene pumpen Tetracyclin aus Zelle), (2) Ribosomen-Schutzproteine (tetM). NEBENWIRKUNGEN: Zahnverfärbung (Kinder), Photodermatitis, Hepatotoxizität. KONTRAINDIKATION: Schwangerschaft, Kinder <8 Jahre (Zahnschmelzschäden). Spektrum: Gram-positive/negative Bakterien, atypische Erreger (Chlamydien, Mykoplasmen, Rickettsien). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q5",
+    "question": "Was sind Polyribosomen (Polysomen)?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ein einzelnes Ribosom"
+      },
+      {
+        "id": "B",
+        "text": "Mehrere Ribosomen übersetzen gleichzeitig eine mRNA → Effizienzsteigerung (elektronenmikroskopisch: 'Perlenketten')"
+      },
+      {
+        "id": "C",
+        "text": "Ribosomen in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "DNA-Replikations-Komplexe"
+      },
+      {
+        "id": "E",
+        "text": "Lysosomen mit Proteinen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **POLYRIBOSOMEN (POLYSOMEN)** sind Komplexe aus MEHREREN Ribosomen, die GLEICHZEITIG eine EINZIGE mRNA übersetzen. Funktion: **EFFIZIENZSTEIGERUNG** – eine mRNA kann mehrere Proteine SIMULTAN produzieren (jedes Ribosom synthetisiert eine Kopie). Aufbau: Mehrere Ribosomen (80S) sind entlang der mRNA verteilt (Abstand: ~80 Nukleotide). **Elektronenmikroskopie:** \"PERLENKETTEN\" – Ribosomen = Perlen, mRNA = Faden. Beispiele: (1) **Freie Polysomen** (Zytosol): Synthese zytosolischer Proteine (z.B. Hämoglobin in Retikulozyten – bis zu 5 Ribosomen pro mRNA). (2) **ER-gebundene Polysomen** (raues ER): Synthese sekretorischer Proteine (z.B. Antikörper in Plasmazellen). VORTEIL: Schnelle Protein-Produktion (mehrere Kopien gleichzeitig). A, C, D, E sind falsch.",
+    "difficulty": "easy"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-5-06-q1",
+    "question": "Eine Population befindet sich im Hardy-Weinberg-Gleichgewicht. Die Frequenz des rezessiven Allels **a** beträgt **q = 0,2**. Wie hoch ist die Frequenz der **heterozygoten Individuen** (Aa)?",
+    "options": [
+      {
+        "id": "A",
+        "text": "4% (0,04), da q² = 0,2² = 0,04"
+      },
+      {
+        "id": "B",
+        "text": "20% (0,2), da die Frequenz von Aa gleich q ist"
+      },
+      {
+        "id": "C",
+        "text": "32% (0,32), da 2pq = 2 × 0,8 × 0,2 = 0,32"
+      },
+      {
+        "id": "D",
+        "text": "64% (0,64), da p² = 0,8² = 0,64"
+      },
+      {
+        "id": "E",
+        "text": "40% (0,4), da 2q = 2 × 0,2 = 0,4"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Hardy-Weinberg-Formel:** p² + 2pq + q² = 1. Gegeben: **q = 0,2** → **p = 1 - q = 0,8**. **Heterozygote Frequenz (2pq):** 2 × 0,8 × 0,2 = **0,32 = 32%**. Wichtig: **2pq** ist die Formel für Heterozygote (Aa), nicht q oder q². Kontrolle: p² (AA) = 0,64, 2pq (Aa) = 0,32, q² (aa) = 0,04 → Summe = 1 ✓",
+    "difficulty": "medium",
+    "tags": ["Genetik", "Hardy-Weinberg-Gleichgewicht", "Genotypfrequenz", "Heterozygote"]
+  },
+  {
+    "id": "bio-5-06-q2",
+    "question": "In einer Population von 100 Individuen gibt es 49 AA, 42 Aa und 9 aa. Wie hoch ist die Frequenz des **Allels a** (q)?",
+    "options": [
+      {
+        "id": "A",
+        "text": "9% (0,09), da 9 von 100 Individuen aa sind"
+      },
+      {
+        "id": "B",
+        "text": "21% (0,21), da die Hälfte der Aa-Individuen a-Allele haben"
+      },
+      {
+        "id": "C",
+        "text": "30% (0,3), da (9 × 2 + 42 × 1) / 200 = 60/200 = 0,3"
+      },
+      {
+        "id": "D",
+        "text": "42% (0,42), da 42 Aa-Individuen vorhanden sind"
+      },
+      {
+        "id": "E",
+        "text": "51% (0,51), da 9 aa + 42 Aa = 51 Individuen a tragen"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Allele zählen:** Gesamt-Allele = 100 Individuen × 2 = 200 Allele. **a-Allele:** (9 aa × 2) + (42 Aa × 1) = 18 + 42 = **60 a-Allele**. **q = 60/200 = 0,3 = 30%**. Alternativ: q² = 9/100 = 0,09 → q = √0,09 = 0,3. Wichtig: **Jedes Individuum hat 2 Allele** (diploid), daher × 2!",
+    "difficulty": "medium",
+    "tags": ["Genetik", "Allelfrequenz", "Hardy-Weinberg", "Berechnung"]
+  },
+  {
+    "id": "bio-5-06-q3",
+    "question": "Mukoviszidose (Cystic Fibrosis) ist autosomal-rezessiv und tritt bei 1 von 2.500 Neugeborenen auf (q² = 1/2.500). Wie hoch ist die **Konduktor-Frequenz** (Träger, Aa) in der Bevölkerung?",
+    "options": [
+      {
+        "id": "A",
+        "text": "1/2.500 (0,04%), da die Konduktor-Frequenz gleich der Erkrankungsfrequenz ist"
+      },
+      {
+        "id": "B",
+        "text": "1/50 (2%), da q = √(1/2.500) = 0,02, p ≈ 0,98, 2pq ≈ 2 × 0,98 × 0,02 ≈ 0,04 = 4%"
+      },
+      {
+        "id": "C",
+        "text": "1/25 (4%), da q = 0,02, p = 0,98, 2pq = 2 × 0,98 × 0,02 = 0,0392 ≈ 4%"
+      },
+      {
+        "id": "D",
+        "text": "1/100 (1%), da die Konduktor-Frequenz immer viel niedriger als die Erkrankungsfrequenz ist"
+      },
+      {
+        "id": "E",
+        "text": "1/10 (10%), da Konduktoren sehr häufig sind bei rezessiven Erkrankungen"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Konduktor-Berechnung:** Gegeben: **q² = 1/2.500 = 0,0004**. **q = √0,0004 = 0,02**. **p = 1 - q = 0,98**. **Konduktor-Frequenz (2pq):** 2 × 0,98 × 0,02 = **0,0392 ≈ 4% = 1/25**. Wichtig: Bei **seltenen rezessiven Erkrankungen** sind **Konduktoren viel häufiger** als Betroffene (4% vs. 0,04%)! Beispiel: ~1 von 25 ist Träger von Mukoviszidose.",
+    "difficulty": "hard",
+    "tags": ["Genetik", "Hardy-Weinberg", "Konduktor-Frequenz", "Mukoviszidose", "Rezessive Erkrankung"]
+  },
+  {
+    "id": "bio-5-06-q4",
+    "question": "Welche der folgenden Bedingungen ist **KEINE** Voraussetzung für das Hardy-Weinberg-Gleichgewicht?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Keine Mutation (keine neuen Allele entstehen)"
+      },
+      {
+        "id": "B",
+        "text": "Zufällige Paarung (Random Mating, keine Präferenz für bestimmte Genotypen)"
+      },
+      {
+        "id": "C",
+        "text": "Dominante Allele sind immer häufiger als rezessive Allele in der Population"
+      },
+      {
+        "id": "D",
+        "text": "Keine Selektion (alle Genotypen haben gleiche Fitness)"
+      },
+      {
+        "id": "E",
+        "text": "Große Population (kein genetischer Drift)"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**HWE-Bedingungen:** (1) Keine Mutation, (2) Zufällige Paarung, (3) **Keine Selektion**, (4) Große Population, (5) Keine Migration. **Aussage C ist falsch:** Dominante Allele müssen **nicht häufiger** sein als rezessive! Die Frequenzen (p, q) können **beliebig** sein (z.B. p = 0,2, q = 0,8), solange die 5 Bedingungen erfüllt sind. HWE beschreibt **stabile Frequenzen**, nicht deren absolute Werte.",
+    "difficulty": "easy",
+    "tags": ["Genetik", "Hardy-Weinberg-Gleichgewicht", "Bedingungen", "Missverständnisse"]
+  },
+  {
+    "id": "bio-5-06-q5",
+    "question": "In Malaria-Gebieten Afrikas hat das **HbS-Allel** (Sichelzell-Allel) eine hohe Frequenz (~10–20%), obwohl homozygote HbS/HbS-Individuen an schwerer Sichelzellanämie leiden. Welches evolutionäre Prinzip erklärt dies am besten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Genetischer Drift – zufällige Frequenzerhöhung in kleinen Populationen"
+      },
+      {
+        "id": "B",
+        "text": "Heterozygoten-Vorteil (Balancing Selection) – HbA/HbS-Individuen haben Malaria-Resistenz (höhere Fitness)"
+      },
+      {
+        "id": "C",
+        "text": "Positive Selektion für HbS/HbS-Homozygote, da Sichelzellanämie Schutz vor Malaria bietet"
+      },
+      {
+        "id": "D",
+        "text": "Migration – Einwanderung von HbS-Trägern aus anderen Regionen"
+      },
+      {
+        "id": "E",
+        "text": "Mutation – hohe Mutationsrate von HbA zu HbS in Malaria-Gebieten"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Heterozygoten-Vorteil (Balancing Selection):** In Malaria-Gebieten: **HbA/HbA** (normal) → Malaria-anfällig (Fitness ↓), **HbA/HbS** (Heterozygot) → **Malaria-Resistenz** (Fitness ↑, Vorteil!), **HbS/HbS** (homozygot) → Sichelzellanämie (Fitness ↓↓). **HbS-Allel bleibt erhalten**, da Heterozygote den höchsten reproduktiven Erfolg haben. Dies erklärt die hohe HbS-Frequenz trotz nachteiliger Homozygotie. Wichtig: **Selektion**, nicht Drift!",
+    "difficulty": "medium",
+    "tags": ["Genetik", "Selektion", "Heterozygoten-Vorteil", "Sichelzellanämie", "Malaria"]
+  },
+  {
+    "id": "bio-5-06-q6",
+    "question": "Eine kleine Insel-Population von Vögeln (50 Individuen) wird durch einen Hurrikan auf 5 Individuen reduziert. Nach Generationen wächst die Population wieder auf 500 Individuen. Welches Phänomen erklärt, warum die neue Population eine **geringere genetische Vielfalt** hat als die ursprüngliche?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Migration (Genfluss) – Einwanderung neuer Individuen verringert die Diversität"
+      },
+      {
+        "id": "B",
+        "text": "Positive Selektion – vorteilhafte Allele werden bevorzugt, andere eliminiert"
+      },
+      {
+        "id": "C",
+        "text": "Flaschenhals-Effekt (Bottleneck Effect) – drastische Populationsreduktion führt zu zufälligem Allelverlust"
+      },
+      {
+        "id": "D",
+        "text": "Assortative Mating – ähnliche Phänotypen paaren sich, was die Diversität erhöht"
+      },
+      {
+        "id": "E",
+        "text": "Mutation – neue Allele entstehen nach dem Hurrikan und erhöhen die Vielfalt"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Flaschenhals-Effekt (Bottleneck Effect):** Die **drastische Reduktion** der Population (50 → 5) führt zu **zufälligem Allelverlust** (genetischer Drift). Die 5 überlebenden Individuen tragen nur einen **Bruchteil der ursprünglichen Allele** → neue Population (500) hat **geringere genetische Vielfalt**. Beispiel: Geparden (sehr geringe Diversität nach Flaschenhals vor ~10.000 Jahren). Wichtig: **Kleine Populationen → Drift**, nicht Selektion!",
+    "difficulty": "medium",
+    "tags": ["Genetik", "Genetischer Drift", "Flaschenhals-Effekt", "Bottleneck", "Genetische Vielfalt"]
+  }
+]

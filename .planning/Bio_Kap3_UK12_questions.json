@@ -1,0 +1,92 @@
+[
+  {
+    "id": "bio-3-12-q01",
+    "question": "Welche Aussage über Sertoli-Zellen und Leydig-Zellen ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Sertoli-Zellen produzieren Testosteron und liegen im Interstitium des Hodens."},
+      {"id": "B", "text": "Leydig-Zellen unterstützen die Spermatogenese und produzieren Inhibin."},
+      {"id": "C", "text": "Sertoli-Zellen (in Tubuli seminiferi) unterstützen die Spermatogenese, bilden die Blut-Hoden-Schranke, produzieren Inhibin (hemmt FSH) und ABP (bindet Testosteron). Leydig-Zellen (im Interstitium) produzieren Testosteron unter LH-Stimulation."},
+      {"id": "D", "text": "FSH stimuliert Leydig-Zellen zur Testosteron-Produktion."},
+      {"id": "E", "text": "ABP (Androgen-Binding-Protein) wird von Leydig-Zellen produziert und hemmt die Spermatogenese."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Hodenzellen:**\n\n**Sertoli-Zellen** (Tubuli seminiferi, somatisch):\n- **Lokalisation:** In den Tubuli seminiferi (Keimepithel)\n- **Funktion:**\n  - **Spermatogenese-Unterstützung:** Ernährung, Phagozytose von degeneriertem Material\n  - **Blut-Hoden-Schranke:** Schützt Keimzellen vor Immunsystem\n  - **Inhibin:** Hemmt FSH (negative Rückkopplung)\n  - **ABP** (Androgen-Binding-Protein): Bindet Testosteron → hohe lokale Konzentration → Spermatogenese ↑\n- **Regulation:** **FSH** → Spermatogenese ↑\n\n**Leydig-Zellen** (Interstitium, endokrin):\n- **Lokalisation:** Im Interstitium (zwischen Tubuli)\n- **Funktion:** **Testosteron-Produktion** (aus Cholesterin)\n- **Regulation:** **LH** → Testosteron ↑\n\n**Testosteron-Wirkung:** Spermatogenese (lokal), sekundäre Geschlechtsmerkmale, negative Rückkopplung (→ GnRH ↓, LH ↓)\n\n**Falsch (A):** **Leydig-Zellen** (nicht Sertoli) produzieren Testosteron und liegen im Interstitium.\n\n**Falsch (B):** **Sertoli-Zellen** (nicht Leydig) unterstützen Spermatogenese und produzieren Inhibin.\n\n**Falsch (D):** **LH** (nicht FSH) stimuliert Leydig-Zellen. **FSH** stimuliert Sertoli-Zellen.\n\n**Falsch (E):** **ABP** wird von **Sertoli-Zellen** produziert und **fördert** (nicht hemmt) Spermatogenese durch Testosteron-Bindung.",
+    "difficulty": "easy",
+    "tags": ["fortpflanzung", "hoden", "sertoli", "leydig", "testosteron", "spermatogenese"]
+  },
+  {
+    "id": "bio-3-12-q02",
+    "question": "Welche Aussage über die Spermatogenese ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Aus einem Spermatogonium (2n) entstehen durch Meiose 2 funktionsfähige Spermien (n)."},
+      {"id": "B", "text": "Die Spermatogenese dauert etwa 28 Tage und findet im Nebenhoden statt."},
+      {"id": "C", "text": "Spermatogonien (2n) durchlaufen Mitose, dann Meiose I (→ sekundäre Spermatozyten, n) und Meiose II (→ 4 Spermatiden, n), die zu 4 funktionsfähigen Spermien reifen. Dauer: ~74 Tage. Lokalisation: Tubuli seminiferi."},
+      {"id": "D", "text": "Spermien erhalten ihre Beweglichkeit erst nach der Befruchtung."},
+      {"id": "E", "text": "Das Akrosom enthält Mitochondrien für die Energieversorgung des Spermiums."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Spermatogenese** (~74 Tage):\n\n1. **Spermatogonien** (2n, diploid, Stammzellen) → **Mitose** → primäre Spermatozyten (2n)\n2. **Meiose I:** Primäre Spermatozyten (2n) → 2 **sekundäre Spermatozyten** (n, haploid)\n3. **Meiose II:** Sekundäre Spermatozyten (n) → **4 Spermatiden** (n)\n4. **Spermiogenese:** Spermatiden → **Spermien** (reif):\n   - **Akrosom** (Kopf): Enzyme (Hyaluronidase, Akrosin) → durchdringt Zona pellucida\n   - **Flagellum** (Schwanz): Beweglichkeit\n   - **Mitochondrien** (Mittelstück): ATP für Bewegung\n\n**Lokalisation:**\n- **Tubuli seminiferi** (Hoden): Spermatogenese (Sertoli-Zellen)\n- **Nebenhoden:** Reifung (Motilität ↑), Speicherung\n\n**Ergebnis:** **4 funktionsfähige Spermien** (n) aus 1 Spermatogonium (2n) – im Gegensatz zu Oogenese (1 Eizelle + 3 Polkörperchen)\n\n**Falsch (A):** Aus 1 Spermatogonium entstehen **4** (nicht 2) funktionsfähige Spermien.\n\n**Falsch (B):** Dauer ~**74 Tage** (nicht 28), Lokalisation **Tubuli seminiferi** (nicht Nebenhoden). Nebenhoden = Reifung/Speicherung.\n\n**Falsch (D):** Spermien erhalten Beweglichkeit während **Reifung im Nebenhoden** (nicht nach Befruchtung).\n\n**Falsch (E):** **Akrosom** enthält **Enzyme** (nicht Mitochondrien). **Mitochondrien** sind im Mittelstück (Energieversorgung).",
+    "difficulty": "medium",
+    "tags": ["fortpflanzung", "spermatogenese", "meiose", "hoden", "spermien"]
+  },
+  {
+    "id": "bio-3-12-q03",
+    "question": "Welche Aussage über die Oogenese ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Aus einer primären Oozyte (2n) entstehen durch Meiose 4 funktionsfähige Eizellen (n)."},
+      {"id": "B", "text": "Die Meiose II wird bei jeder Ovulation abgeschlossen, unabhängig von einer Befruchtung."},
+      {"id": "C", "text": "Primäre Oozyten (2n) werden während der Embryonalentwicklung gebildet und arretieren in Prophase I bis zur Pubertät. Bei Ovulation wird Meiose I abgeschlossen (→ sekundäre Oozyte, n + 1. Polkörperchen). Meiose II wird nur bei Befruchtung abgeschlossen (→ Eizelle, n + 2. Polkörperchen)."},
+      {"id": "D", "text": "Die Oogenese beginnt erst mit der Pubertät und endet mit etwa 40 Jahren."},
+      {"id": "E", "text": "Bei Geburt hat ein weiblicher Säugling etwa 6–7 Millionen primordiale Follikel."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Oogenese:**\n\n**Pränatale Entwicklung:**\n1. **Primordiale Keimzellen** → Oogonien (2n) → Mitose\n2. **Primäre Oozyten** (2n): Meiose I **gestartet**, aber **Arrest in Prophase I** (bis Pubertät)\n3. **~400.000 primordiale Follikel** bei Geburt (vs. 6–7 Mio. im 5. Monat intrauterin, 99% degenerieren)\n\n**Ab Pubertät (jeden Zyklus):**\n1. **Meiose I abgeschlossen:** Primäre Oozyte (2n) → **sekundäre Oozyte** (n, haploid) + **1. Polkörperchen** (n, degeneriert)\n2. **Ovulation** (Tag 14): Sekundäre Oozyte (n) freigesetzt, **Arrest in Metaphase II**\n3. **Meiose II** (nur bei Befruchtung): Sekundäre Oozyte (n) → **Eizelle** (n) + **2. Polkörperchen** (n, degeneriert)\n\n**Ergebnis:** **1 funktionsfähige Eizelle** (n) + **3 Polkörperchen** (degenerieren) – im Gegensatz zu Spermatogenese (4 Spermien)\n\n**Falsch (A):** Aus 1 primären Oozyte entsteht **1** (nicht 4) funktionsfähige Eizelle + 3 Polkörperchen (degenerieren).\n\n**Falsch (B):** Meiose II wird **nur bei Befruchtung** abgeschlossen. Ohne Befruchtung bleibt sekundäre Oozyte in Metaphase II arretiert.\n\n**Falsch (D):** Primäre Oozyten werden **pränatal** (nicht ab Pubertät) gebildet. Menopause (Ende Oogenese) ~50 Jahre (nicht 40).\n\n**Falsch (E):** Bei Geburt ~**400.000** (nicht 6–7 Mio.) primordiale Follikel. 6–7 Mio. im **5. Monat intrauterin**, dann Degeneration.",
+    "difficulty": "hard",
+    "tags": ["fortpflanzung", "oogenese", "meiose", "oozyte", "polkörperchen"]
+  },
+  {
+    "id": "bio-3-12-q04",
+    "question": "Welche Aussage über den Menstruationszyklus ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Die Follikelphase wird durch LH gesteuert und führt zu steigenden Progesteron-Spiegeln."},
+      {"id": "B", "text": "Die Ovulation findet am letzten Tag der Menstruation statt."},
+      {"id": "C", "text": "Die Follikelphase (Tag 6–14) wird durch FSH gesteuert, das Follikelwachstum und Östrogen-Produktion (Granulosa-Zellen) stimuliert. Am Tag 14 führt ein LH-Peak zur Ovulation. In der Lutealphase (Tag 15–28) produziert das Corpus luteum Progesteron, das das Endometrium sekretorisch umbaut."},
+      {"id": "D", "text": "Progesteron ist in der Follikelphase am höchsten."},
+      {"id": "E", "text": "Das Corpus luteum wird durch FSH aufrechterhalten."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Menstruationszyklus** (~28 Tage):\n\n| Phase | Tage | Ovar | Endometrium | Hormone |\n|-------|------|------|-------------|----------|\n| **Menstruation** | 1–5 | Follikel-Degeneration | Abstoßung | Progesteron ↓, Östrogen ↓ |\n| **Follikelphase** | 6–14 | **FSH** → Follikelwachstum → **Östrogen ↑** (Granulosa) | Proliferation (Aufbau) | **FSH**, **Östrogen ↑** |\n| **Ovulation** | 14 | **LH-Peak** → Follikelruptur → Oozyte (n) freigesetzt | (Übergang) | **LH-Peak** |\n| **Lutealphase** | 15–28 | **Corpus luteum** (LH) → **Progesteron ↑** + Östrogen | Sekretion (Drüsen, Glykogen) | **Progesteron ↑** |\n\n**Hormonelle Regulation:**\n- **Follikelphase:** FSH → Follikel → **Östrogen ↑** (Granulosa-Zellen, via Aromatase aus Androgenen der Theka-Zellen)\n- **Ovulation:** Östrogen ↑↑ (hoch, >2 Tage) → **positive Rückkopplung** → **LH-Peak** → Ovulation (~24–36 h später)\n- **Lutealphase:** LH → **Corpus luteum** → **Progesteron ↑** (sekretorisches Endometrium, Vorbereitung auf Implantation)\n- **Ohne Befruchtung:** Corpus luteum degeneriert → Progesteron ↓ → Menstruation\n\n**Falsch (A):** Follikelphase wird durch **FSH** (nicht LH) gesteuert und führt zu **Östrogen ↑** (nicht Progesteron). **Progesteron ↑** in Lutealphase.\n\n**Falsch (B):** Ovulation findet am **Tag 14** (Zyklusmitte) statt, nicht am letzten Tag der Menstruation (Tag 5).\n\n**Falsch (D):** **Progesteron** ist in der **Lutealphase** (nicht Follikelphase) am höchsten.\n\n**Falsch (E):** Corpus luteum wird durch **LH** (nicht FSH) aufrechterhalten. Bei Befruchtung: **hCG** (Trophoblast) erhält Corpus luteum.",
+    "difficulty": "medium",
+    "tags": ["fortpflanzung", "menstruationszyklus", "fsh", "lh", "östrogen", "progesteron"]
+  },
+  {
+    "id": "bio-3-12-q05",
+    "question": "Welche Aussage über den LH-Peak und die Ovulation ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Niedrige Östrogen-Spiegel führen über positive Rückkopplung zum LH-Peak."},
+      {"id": "B", "text": "Der LH-Peak wird durch Progesteron ausgelöst."},
+      {"id": "C", "text": "Hohe Östrogen-Spiegel (>2 Tage) führen über positive Rückkopplung zu einem LH-Peak (und FSH-Peak), der etwa 24–36 Stunden später die Ovulation auslöst. Nach der Ovulation wandelt sich der Follikel zum Corpus luteum um, das Progesteron produziert."},
+      {"id": "D", "text": "Der LH-Peak hemmt die Ovulation und erhält den Follikel."},
+      {"id": "E", "text": "Östrogen hat während des gesamten Zyklus eine positive Rückkopplung auf LH."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **LH-Peak und Ovulation:**\n\n**Östrogen-Rückkopplung (biphasisch):**\n\n1. **Follikelphase (früh/mittel):** Östrogen **niedrig/mittel** → **negative Rückkopplung** → GnRH ↓, FSH ↓, LH ↓\n\n2. **Follikelphase (spät):** Östrogen **hoch** (>200 pg/mL, >2 Tage) → **positive Rückkopplung** → GnRH ↑ → **LH-Peak** + FSH-Peak (Hypophyse)\n\n3. **Ovulation:** **LH-Peak** (Tag 14) → Follikelruptur → Freisetzung der **sekundären Oozyte** (n, Arrest Metaphase II) → ~**24–36 h** nach LH-Peak\n\n4. **Nach Ovulation:** Follikel → **Corpus luteum** (Gelbkörper):\n   - **LH** → Corpus luteum → **Progesteron ↑** + Östrogen\n   - **Progesteron** → negative Rückkopplung → GnRH ↓, LH ↓, FSH ↓\n   - **Progesteron** → Endometrium sekretorisch (Implantations-Vorbereitung)\n\n**Mit Befruchtung:** **hCG** (humanes Choriongonadotropin, Trophoblast) → erhält Corpus luteum → Progesteron ↑ → Schwangerschaft\n\n**Ohne Befruchtung:** Corpus luteum degeneriert (Tag 28) → Progesteron ↓ → Menstruation (Tag 1)\n\n**Falsch (A):** **Hohe** (nicht niedrige) Östrogen-Spiegel führen zu positiver Rückkopplung → LH-Peak. Niedrige Östrogen-Spiegel → negative Rückkopplung.\n\n**Falsch (B):** **Östrogen** (nicht Progesteron) löst LH-Peak aus. Progesteron → negative Rückkopplung (Lutealphase).\n\n**Falsch (D):** LH-Peak **löst Ovulation aus** (nicht hemmt). Follikel rupturiert, wandelt sich zu Corpus luteum um.\n\n**Falsch (E):** Östrogen hat **biphasische** Rückkopplung: niedrig/mittel → negativ, hoch (>2 Tage) → positiv → LH-Peak.",
+    "difficulty": "hard",
+    "tags": ["fortpflanzung", "lh-peak", "ovulation", "östrogen", "positive-rückkopplung"]
+  },
+  {
+    "id": "bio-3-12-q06",
+    "question": "Welche Aussage über das Corpus luteum ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Das Corpus luteum entsteht vor der Ovulation und produziert primär Östrogen."},
+      {"id": "B", "text": "Das Corpus luteum wird durch FSH stimuliert und produziert Testosteron."},
+      {"id": "C", "text": "Das Corpus luteum entsteht nach der Ovulation aus dem rupturierten Follikel. Es wird durch LH stimuliert und produziert Progesteron (und Östrogen), das das Endometrium sekretorisch umbaut. Bei Befruchtung wird es durch hCG (vom Trophoblast) erhalten, andernfalls degeneriert es am Zyklusende."},
+      {"id": "D", "text": "Das Corpus luteum degeneriert sofort nach der Ovulation."},
+      {"id": "E", "text": "hCG wird vom Corpus luteum produziert, um die Schwangerschaft aufrechtzuerhalten."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Corpus luteum** (Gelbkörper):\n\n**Entstehung:** **Nach Ovulation** (Tag 14) aus rupturiertem Follikel (Granulosa-Zellen + Theka-Zellen → luteinisiert)\n\n**Funktion:**\n- **Hormonproduktion:** **Progesteron ↑** (primär) + Östrogen (sekundär)\n- **Stimulation:** **LH** (nicht FSH) → Corpus luteum → Progesteron ↑\n- **Progesteron-Wirkung:**\n  - **Endometrium:** Sekretorischer Umbau (Drüsen, Glykogen) → Implantations-Vorbereitung\n  - **Negative Rückkopplung:** GnRH ↓, LH ↓, FSH ↓\n  - **Basaltemperatur ↑** (~0,5 °C, Lutealphase)\n\n**Schicksal:**\n\n1. **Ohne Befruchtung:**\n   - Corpus luteum degeneriert am **Zyklusende** (Tag 28, ~14 Tage Lebensdauer)\n   - Progesteron ↓ → **Menstruation** (Tag 1)\n\n2. **Mit Befruchtung:**\n   - **hCG** (humanes Choriongonadotropin, **vom Trophoblast** der Blastozyste produziert, ab Tag 6–7 nach Befruchtung)\n   - **hCG** → **erhält Corpus luteum** → Progesteron ↑ → Endometrium erhalten → **Schwangerschaft**\n   - Ab 12. SSW: Plazenta übernimmt Progesteron-Produktion → Corpus luteum nicht mehr essenziell\n\n**Falsch (A):** Corpus luteum entsteht **nach** (nicht vor) Ovulation. Produziert primär **Progesteron** (nicht Östrogen).\n\n**Falsch (B):** Corpus luteum wird durch **LH** (nicht FSH) stimuliert und produziert **Progesteron** (nicht Testosteron). Testosteron → Theka-Zellen (Follikel) → Aromatase → Östrogen.\n\n**Falsch (D):** Corpus luteum degeneriert am **Zyklusende** (Tag 28, ~14 Tage nach Ovulation), nicht sofort.\n\n**Falsch (E):** **hCG** wird vom **Trophoblast** (Blastozyste, nicht Corpus luteum) produziert, um Corpus luteum zu erhalten.",
+    "difficulty": "medium",
+    "tags": ["fortpflanzung", "corpus-luteum", "progesteron", "hcg", "schwangerschaft"]
+  }
+]

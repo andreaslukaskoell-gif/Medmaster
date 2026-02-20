@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-9-04-q1",
+    "question": "**Australopithecus afarensis** ('Lucy', ~3,2 Mio. Jahre) ist ein wichtiger Vorfahre des Menschen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Lucy hatte ein großes Gehirn (~1400 cm³, wie moderner Mensch) und nutzte komplexe Werkzeuge"
+      },
+      {
+        "id": "B",
+        "text": "Lucy hatte aufrechten Gang (Bipedie, Laetoli-Fußabdrücke!), aber kleines Gehirn (~450 cm³, Schimpanse-ähnlich)"
+      },
+      {
+        "id": "C",
+        "text": "Lucy lebte in Europa und nutzte Feuer zum Kochen"
+      },
+      {
+        "id": "D",
+        "text": "Lucy hatte noch keinen aufrechten Gang (vierfüßig wie Schimpansen)"
+      },
+      {
+        "id": "E",
+        "text": "Lucy ist der direkte Vorfahre der Neandertaler (nicht von Homo sapiens)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Australopithecus afarensis** ('Lucy', ~3,2 Mio. Jahre, Ostafrika): **Aufrechter Gang (Bipedie)** war die **ERSTE Hominiden-Anpassung** (nicht großes Gehirn!). **Belege:** Laetoli-Fußabdrücke (Tansania, ~3,6 Mio. Jahre), Beckenknochen. **Gehirn:** **Klein** (~400–550 cm³, Schimpanse-ähnlich). **Werkzeuge:** Keine (erste Werkzeuge: *Homo habilis*, ~2,4 Mio. Jahre). **Lebensraum:** Afrika, Savanne (Bäume → offenes Land). **Wichtig:** Bipedie **vor** Gehirnwachstum (Mosaikevolution)!",
+    "difficulty": "easy",
+    "tags": ["Evolution", "Mensch-Evolution", "Australopithecus", "Lucy", "Bipedie"]
+  },
+  {
+    "id": "bio-9-04-q2",
+    "question": "**Homo habilis** (~2,4–1,4 Mio. Jahre) wird als 'geschickter Mensch' bezeichnet. Welche Innovation zeichnet *Homo habilis* aus?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Erste Feuernutzung zum Kochen (Homo habilis entdeckte Feuer)"
+      },
+      {
+        "id": "B",
+        "text": "Erste Werkzeugnutzung (Oldowan-Kultur: einfache Steinwerkzeuge zum Schneiden), größeres Gehirn (~700 cm³)"
+      },
+      {
+        "id": "C",
+        "text": "Erste Migration aus Afrika nach Europa und Asien (Out-of-Africa)"
+      },
+      {
+        "id": "D",
+        "text": "Erste Kunst (Höhlenmalerei, Skulpturen) und komplexe Sprache"
+      },
+      {
+        "id": "E",
+        "text": "Aufrechter Gang (Bipedie) — Homo habilis war der erste Hominide, der aufrecht ging"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Homo habilis** (~2,4–1,4 Mio. Jahre, Afrika): **Erste Werkzeugnutzung** (Oldowan-Kultur: **einfache Steinwerkzeuge**, Schneiden von Fleisch). **Gehirn:** ~600–800 cm³ (größer als Australopithecus, kleiner als Homo erectus). **Ernährung:** Fleisch + Pflanzen (Allesfresser). **Bedeutung:** Übergang Australopithecus → Homo (größeres Gehirn, Werkzeuge). **Feuer:** *Homo erectus* (~1,5 Mio. Jahre). **Out-of-Africa:** *Homo erectus* (~1,8 Mio. Jahre). **Bipedie:** Australopithecus (~4 Mio. Jahre). **Wichtig:** 'Geschickt' = Werkzeuge, nicht Feuer!",
+    "difficulty": "easy",
+    "tags": ["Evolution", "Mensch-Evolution", "Homo habilis", "Werkzeuge", "Oldowan"]
+  },
+  {
+    "id": "bio-9-04-q3",
+    "question": "**Homo erectus** (~2 Mio.–100.000 Jahre) war der erste global verbreitete Hominide. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Homo erectus hatte ein kleines Gehirn (~500 cm³) und nutzte keine Werkzeuge"
+      },
+      {
+        "id": "B",
+        "text": "Homo erectus nutzte Feuer (~1,5 Mio. Jahre, Kochen/Wärme) und war der erste Hominide, der aus Afrika migrierte (~1,8 Mio. Jahre)"
+      },
+      {
+        "id": "C",
+        "text": "Homo erectus lebte nur in Afrika und migrierte nie nach Asien oder Europa"
+      },
+      {
+        "id": "D",
+        "text": "Homo erectus ist der direkte Vorfahre der Neandertaler, aber nicht von Homo sapiens"
+      },
+      {
+        "id": "E",
+        "text": "Homo erectus hatte noch keinen aufrechten Gang (vierfüßig)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Homo erectus** (~2 Mio.–100.000 Jahre): **Feuernutzung** (~1,5 Mio. Jahre) — **Kochen** (mehr Proteine, weichere Nahrung), Wärme, Schutz. **Erste Out-of-Africa-Migration** (~1,8 Mio. Jahre): Afrika → Asien (Java, Peking), Europa. **Gehirn:** ~900–1100 cm³ (deutlich größer als *Homo habilis*). **Körperbau:** Modern (lange Beine, kurze Arme, **aufrecht**). **Werkzeuge:** Acheuléen-Kultur (Faustkeile, symmetrisch). **Wichtig:** Erster **globaler** Hominide (Afrika + Eurasien), Feuernutzung = Wendepunkt!",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Mensch-Evolution", "Homo erectus", "Feuer", "Out-of-Africa"]
+  },
+  {
+    "id": "bio-9-04-q4",
+    "question": "**Homo neanderthalensis** (Neandertaler, ~400.000–40.000 Jahre) lebte in Europa und dem Nahen Osten. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Neandertaler hatten ein kleineres Gehirn als Homo sapiens (~800 cm³)"
+      },
+      {
+        "id": "B",
+        "text": "Neandertaler haben sich nie mit Homo sapiens gepaart (keine gemeinsamen Nachkommen)"
+      },
+      {
+        "id": "C",
+        "text": "Neandertaler hatten ein größeres Gehirn (~1500 cm³) als moderner Mensch und 1–4% Neandertaler-DNA findet sich in nicht-afrikanischen Menschen (Hybridisierung!)"
+      },
+      {
+        "id": "D",
+        "text": "Neandertaler lebten nur in Afrika und migrierten nie nach Europa"
+      },
+      {
+        "id": "E",
+        "text": "Neandertaler existieren noch heute und leben in abgelegenen Regionen"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Homo neanderthalensis** (~400.000–40.000 Jahre): **Gehirn:** ~1200–1750 cm³ (**größer** als moderner Mensch!). **Körperbau:** Robust, stämmig (Kälte-Anpassung, Eiszeit). **Verbreitung:** Europa, Naher Osten (nicht Afrika!). **Aussterben:** ~40.000 Jahre (Ursachen: Klimawandel, Konkurrenz mit *Homo sapiens*). **DNA-Analysen:** **1–4% Neandertaler-DNA** in **nicht-afrikanischen** modernen Menschen → **Hybridisierung** (Paarung) zwischen Neandertaler + *Homo sapiens*! Afrikaner haben **keine** Neandertaler-DNA (Neandertaler lebten nur in Eurasien). **Wichtig:** Größeres Gehirn ≠ intelligenter!",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Mensch-Evolution", "Neandertaler", "DNA", "Hybridisierung"]
+  },
+  {
+    "id": "bio-9-04-q5",
+    "question": "Die **Out-of-Africa-Hypothese** und die **Multiregionale Hypothese** erklären die Entstehung von *Homo sapiens* unterschiedlich. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Out-of-Africa: Homo sapiens entwickelte sich parallel in Afrika, Europa und Asien (multiregional)"
+      },
+      {
+        "id": "B",
+        "text": "Out-of-Africa: Homo sapiens entstand in Afrika (~300.000 Jahre), migrierte (~70.000 Jahre) und ersetzte andere Hominiden. Belege: Genetische Diversität Afrika > Welt"
+      },
+      {
+        "id": "C",
+        "text": "Multiregionale Hypothese: Homo sapiens entstand nur in Afrika und migrierte nie nach anderen Kontinenten"
+      },
+      {
+        "id": "D",
+        "text": "Beide Hypothesen sind gleich gut durch genetische Daten unterstützt (keine Favorisierung)"
+      },
+      {
+        "id": "E",
+        "text": "Out-of-Africa: Homo sapiens ersetzte alle anderen Hominiden komplett ohne Hybridisierung (0% Neandertaler-DNA)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Out-of-Africa-Hypothese** (**favorisiert**): *Homo sapiens* entstand in **Afrika** (~300.000 Jahre, Äthiopien). **Migration** ~70.000 Jahre (Afrika → Naher Osten, Asien, Europa, Australien, Amerika). **Ersetzte** lokale Hominiden (Neandertaler, *Homo erectus*), aber **geringe Hybridisierung** (1–4% Neandertaler-DNA in Nicht-Afrikanern). **Belege:** Genetische Diversität **Afrika > Rest der Welt** (älteste Populationen), Mitochondriale Eva (~150.000 Jahre, Afrika). **Multiregionale Hypothese** (**widerlegt**): *Homo sapiens* entwickelte sich **parallel** in mehreren Regionen → genetische Daten widersprechen!",
+    "difficulty": "hard",
+    "tags": ["Evolution", "Mensch-Evolution", "Out-of-Africa", "Multiregionale Hypothese", "Homo sapiens"]
+  },
+  {
+    "id": "bio-9-04-q6",
+    "question": "Die **Mosaikevolution** beschreibt, dass verschiedene Merkmale der Mensch-Evolution sich **nicht gleichzeitig** entwickelten. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Gehirnwachstum entwickelte sich zuerst (~4 Mio. Jahre), aufrechter Gang später (~2 Mio. Jahre)"
+      },
+      {
+        "id": "B",
+        "text": "Aufrechter Gang (Bipedie) entwickelte sich zuerst (Australopithecus, ~4 Mio. Jahre), Gehirnwachstum später (Homo, ab ~2 Mio. Jahre)"
+      },
+      {
+        "id": "C",
+        "text": "Alle Merkmale (Bipedie, Gehirn, Werkzeuge, Feuer, Sprache) entwickelten sich gleichzeitig (~2 Mio. Jahre)"
+      },
+      {
+        "id": "D",
+        "text": "Werkzeugnutzung entwickelte sich vor aufrechtem Gang (Australopithecus nutzte Werkzeuge)"
+      },
+      {
+        "id": "E",
+        "text": "Mosaikevolution bedeutet, dass Merkmale sich zufällig entwickelten (keine evolutionäre Reihenfolge)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Mosaikevolution:** Merkmale entwickelten sich **NICHT gleichzeitig** (schrittweise, unterschiedliche Zeitpunkte). **Reihenfolge:** (1) **Aufrechter Gang (Bipedie)** zuerst (Australopithecus, ~4 Mio. Jahre, **ERSTE Hominiden-Anpassung**!), (2) **Gehirnwachstum** später (*Homo habilis*, ab ~2,4 Mio. Jahre, ~700 cm³), (3) **Werkzeuge** (*Homo habilis*, ~2,4 Mio. Jahre), (4) **Feuer** (*Homo erectus*, ~1,5 Mio. Jahre), (5) **Sprache** (*Homo sapiens*, ~300.000 Jahre). **Wichtig:** Bipedie **VOR** Gehirnwachstum (nicht umgekehrt!), Hände frei → Werkzeuge → Fleisch → Gehirnwachstum!",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Mensch-Evolution", "Mosaikevolution", "Bipedie", "Gehirnwachstum"]
+  }
+]

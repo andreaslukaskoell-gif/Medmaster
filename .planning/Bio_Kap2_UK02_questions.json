@@ -1,0 +1,147 @@
+[
+  {
+    "id": "q1",
+    "question": "Was ist der Hauptunterschied zwischen lockerem und straffem Bindegewebe?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Lockeres Bindegewebe: zellreich, wenig Fasern (ungeordnet), Verschiebeschichten (Fibroblasten, Makrophagen, Mastzellen). Straffes Bindegewebe: faserreich (Kollagen I), wenig Zellen, Sehnen/Bänder (parallel) oder Dermis (verflochten), Zugfestigkeit"
+      },
+      {
+        "id": "C",
+        "text": "Nur lockeres Bindegewebe existiert"
+      },
+      {
+        "id": "D",
+        "text": "Straffes Bindegewebe ist nur in Pflanzen"
+      },
+      {
+        "id": "E",
+        "text": "Beide produzieren ATP"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **LOCKERES** und **STRAFFES** Bindegewebe unterscheiden sich in Zell-/Faser-Verhältnis. **LOCKERES BINDEGEWEBE:** (1) **ZELLREICH, WENIG FASERN** (ungeordnet, in alle Richtungen). (2) **Zelltypen:** Fibroblasten (produzieren EZM: Kollagen, Elastin, Proteoglykane), Makrophagen (Phagozytose, von Monozyten), Mastzellen (Histamin-Freisetzung, IgE-vermittelt, Typ-I-Allergie, basophile Granula mit Heparin/Histamin), Plasmazellen (Antikörper-Produktion, Radspeichenkern), Adipozyten. (3) **Vorkommen:** Submucosa (Darm), Lamina propria (Schleimhaut), Verschiebeschichten unter Haut (subkutan). (4) **Funktion:** Verschieblichkeit, Wasserhaushalt, Immunabwehr (Makrophagen/Mastzellen). **STRAFFES BINDEGEWEBE:** (1) **FASERREICH (Kollagen I), WENIG ZELLEN** (hauptsächlich Fibroblasten). (2) **Parallel (geordnet):** Sehnen (Muskel → Knochen, unidirektionaler Zug), Bänder (Knochen → Knochen), Aponeurosen (flächige Sehnen). (3) **Verflochten (ungeordnet):** Lederhaut (Dermis, multidirektionale Kräfte), Organkapsel, Dura mater. (4) **Funktion:** Zugfestigkeit, mechanische Stabilität. A ist falsch. C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Welche Kollagen-Typen kommen wo vor und welche Funktionen haben sie?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Alle Kollagen-Typen sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Kollagen I (Fibrillen): Knochen, Haut, Sehnen (90%, Zugfestigkeit). Kollagen II (Fibrillen): Knorpel (Hyalin, elastisch), Glaskörper (Druckfestigkeit). Kollagen III (Retikulin): Blutgefäße, Leber, Milz, fetal (Netzwerk). Kollagen IV (Netzwerk): Basalmembran (Filtration)"
+      },
+      {
+        "id": "C",
+        "text": "Nur Kollagen I existiert"
+      },
+      {
+        "id": "D",
+        "text": "Kollagen ist nur in Bakterien"
+      },
+      {
+        "id": "E",
+        "text": "Kollagen produziert ATP"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **KOLLAGEN** ist das häufigste Protein im Körper (~30% Gesamtprotein), 28 Typen. Struktur: **TRIPELHELIX** (3 α-Ketten), **Gly-X-Y-Tripeptid** (Gly = Glycin [jede 3. Position, klein genug für enge Helix], X oft Prolin, Y oft **Hydroxyprolin** [Vitamin C-abhängige Hydroxylierung via Prolyl-Hydroxylase]). **KOLLAGEN-TYPEN:** (1) **TYP I (Fibrillen):** Knochen (90% organische Matrix), Haut (Dermis), Sehnen, Bänder, Dentin. Funktion: **ZUGFESTIGKEIT** (stärkste Kollagen-Fibrillen). (2) **TYP II (Fibrillen):** Hyaliner Knorpel, elastischer Knorpel, Glaskörper (Auge), Nucleus pulposus (Bandscheiben). Funktion: **DRUCKFESTIGKEIT** (Knorpel-Hauptkomponente). (3) **TYP III (Retikulin, dünne Fasern):** Blutgefäße (Arterienwand, Media/Adventitia), Leber, Milz, Lymphknoten, fetales Gewebe, Wundheilung (Granulationsgewebe). Funktion: Netzwerk, Elastizität (oft mit Elastin). Silberfärbung (Argentophilie). (4) **TYP IV (Netzwerk, KEIN Fibrillen):** Basalmembran (Lamina basalis). Funktion: **FILTRATION** (Glomerulus), strukturelle Unterstützung. Kein 67 nm-Periodizität. **TYP V:** Fibrillenregulation (mit Typ I), Kornea, Plazenta. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Was ist Skorbut und wie entsteht es?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Skorbut ist eine bakterielle Infektion"
+      },
+      {
+        "id": "B",
+        "text": "Skorbut: Vitamin C-Mangel → Prolyl-/Lysyl-Hydroxylase-Aktivität ↓ → Hydroxyprolin/Hydroxylysin ↓ → Kollagen-Tripelhelix instabil → defekte EZM. Symptome: Zahnfleischbluten, Petechien, schlechte Wundheilung, Zahnausfall, Knochenschmerzen. Historisch: Seeleute (kein Obst/Gemüse)"
+      },
+      {
+        "id": "C",
+        "text": "Skorbut ist nur in Pflanzen"
+      },
+      {
+        "id": "D",
+        "text": "Skorbut produziert ATP"
+      },
+      {
+        "id": "E",
+        "text": "Skorbut ist eine Viruserkrankung"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **SKORBUT** (Scurvy) ist eine Mangelerkrankung durch **VITAMIN C-MANGEL** (Ascorbinsäure), führt zu defekter Kollagen-Synthese. **PATHOPHYSIOLOGIE:** (1) **Vitamin C (Ascorbinsäure) = KOFAKTOR** für **Prolyl-Hydroxylase** und **Lysyl-Hydroxylase** (Dioxygenasen). (2) Diese Enzyme hydroxylieren **Prolin → Hydroxyprolin** und **Lysin → Hydroxylysin** in Pro-α-Ketten (im rER). (3) Hydroxyprolin stabilisiert **Tripelhelix** (zusätzliche H-Brücken). Hydroxylysin ermöglicht Glykosylierung und Quervernetzung. (4) **Vitamin C-Mangel** → Hydroxylierung versagt → **Kollagen-Tripelhelix INSTABIL** → thermolabil (denaturiert bei Körpertemperatur) → defekte EZM → Bindegewebe-/Gefäßwand-Schwäche. **SYMPTOME:** (1) **Zahnfleischbluten** (Gingivitis, schwammiges Zahnfleisch), (2) **Petechien/Ekchymosen** (Hautblutungen, Gefäßwand-Schwäche), (3) **Schlechte Wundheilung** (Kollagen-Synthese ↓), (4) **Zahnausfall** (Zahnhalteapparat zerstört), (5) Knochenschmerzen (subperiostale Blutungen), Anämie (Fe-Resorption ↓). **HISTORISCH:** Seeleute (17.-18. Jh., keine frischen Früchte/Gemüse auf langen Reisen) → James Lind (1747): Zitrusfrüchte heilten Skorbut → Britische Marine: Limetten-Ration (\\\"Limeys\\\"). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Was ist das Marfan-Syndrom und wie manifestiert es sich?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Marfan-Syndrom hat keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "Marfan-Syndrom: Fibrillin-1-Mutation (FBN1-Gen, Chromosom 15) → Elastin-Fasern instabil → Aortenaneurysma/-dissektion (lebensbedrohlich!), Linsenluxation (Ektopia lentis, superonasal), Arachnodaktylie (Spinnenfingrigkeit), Hochwuchs, Skoliose. Therapie: β-Blocker, Losartan, prophylaktische Aorta-OP"
+      },
+      {
+        "id": "C",
+        "text": "Marfan-Syndrom ist nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Marfan-Syndrom produziert ATP"
+      },
+      {
+        "id": "E",
+        "text": "Marfan-Syndrom ist eine Infektion"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **MARFAN-SYNDROM** ist eine autosomal-dominante Bindegewebserkrankung durch **FIBRILLIN-1-MUTATION** (FBN1-Gen, Chromosom 15). **PATHOPHYSIOLOGIE:** (1) **Fibrillin-1** = Glykoprotein in Elastin-Mikrofibrille (Gerüst für Elastin-Ablagerung). (2) Mutation → Fibrillin-1-Aggregation/Degradation → **Elastin-Fasern INSTABIL** → Bindegewebe-Schwäche (besonders elastinreiche Gewebe: Aorta, Augenlinse, Gelenke). (3) **TGF-β-Dysregulation:** Fibrillin-1 bindet normalerweise TGF-β (latent) → Mutation → TGF-β ↑ aktiv → verstärkte Matrixabbau, Inflammation. **SYMPTOME (Trias: Kardiovaskulär, Skelett, Augen):** (1) **KARDIOVASKULÄR (lebensbedrohlich!):** **Aorten-Dilatation** (Aorta ascendens) → **Aneurysma** → **Dissektion** (Einriss Intima → Blut in Media → Ruptur!), Mitralklappenprolaps (MVP, Klappensegel erschlaffen), Aorteninsuffizienz. (2) **SKELETT:** Hochwuchs (lange Extremitäten), **Arachnodaktylie** (Spinnenfingrigkeit, Steinberg-/Walker-Zeichen), Pectus excavatum (Trichterbrust)/carinatum (Kielbrust), Skoliose, Gelenkhypermobilität. (3) **AUGEN:** **Linsenluxation** (Ektopia lentis, typischerweise superonasal [nach oben-innen], bilaterale, Zonulafasern [Fibrillin-1!] schwach), Myopie, Netzhautablösung. **THERAPIE:** β-Blocker (Aorten-Stress ↓, Herzfrequenz/Blutdruck ↓), Losartan (AT1-Rezeptor-Blocker, TGF-β ↓), prophylaktische Aorta-OP (Aortenwurzel-Ersatz bei Dilatation >5 cm). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q5",
+    "question": "Wie wird Knochen durch Osteoblasten, Osteozyten und Osteoklasten reguliert?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Alle Zelltypen sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Osteoblasten (aufbauen): Synthetisieren Osteoid (Kollagen I, Osteokalzin), ALP ↑, werden zu Osteozyten. Osteozyten (Lakunen, Mechanosensoren): Regulieren Remodeling via RANKL/OPG. Osteoklasten (abbauen): Mehrkernig, Howship-Lakunen, Cathepsin K, H⁺-ATPase. Regulation: RANKL (Osteoblasten → Osteoklastenaktivität ↑), OPG (hemmt RANKL)"
+      },
+      {
+        "id": "C",
+        "text": "Nur Osteoblasten existieren"
+      },
+      {
+        "id": "D",
+        "text": "Osteoklasten sind nur in Pflanzen"
+      },
+      {
+        "id": "E",
+        "text": "Alle Zellen produzieren ATP"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **KNOCHEN-REMODELING** ist ein ständiger Prozess (Resorption + Formation), reguliert durch 3 Zelltypen. **OSTEOBLASTEN (KNOCHEN-AUFBAU):** (1) **Ursprung:** Mesenchymale Stammzellen (Osteoprogenitorzellen). (2) **Funktion:** Synthetisieren **OSTEOID** (unmineralisierte organische Matrix: Kollagen I [90%], Osteokalzin [Ca²⁺-bindend, Vitamin K-abhängig], Osteopontin, Osteonectin). (3) **Alkalische Phosphatase (ALP) ↑** (Serum-Marker, spaltet Pyrophosphat → Mineralisation [Hydroxylapatit-Ablagerung] möglich). (4) Werden zu **Osteozyten** (eingemauert in Lakune). **OSTEOZYTEN (RUHEZUSTAND, MECHANOSENSOREN):** (1) In Lakunen (Höhlen), Canaliculi-Fortsätze (Gap Junctions → Netzwerk, Nährstoffaustausch). (2) **Mechanosensoren:** Shear Stress (Flüssigkeitsfluss in Canaliculi, Belastung) → Sclerostin ↓ (Wnt-Inhibitor) → Osteoblasten-Aktivität ↑ (Knochen-Aufbau bei Belastung). (3) Regulieren Osteoblasten/Osteoklasten (RANKL/OPG-Sekretion). **OSTEOKLASTEN (KNOCHEN-ABBAU):** (1) **Ursprung:** Hämatopoetische Stammzellen (Monozyten/Makrophagen-Linie). **Mehrkernig** (Fusion). (2) **Howship-Lakunen** (Resorptionsgrube): H⁺-ATPase (saurer pH ~4.5, löst Hydroxylapatit [Ca₁₀(PO₄)₆(OH)₂]), **Cathepsin K** (Protease, Kollagen-Abbau). (3) **Regulation:** **RANKL** (Receptor Activator of NF-κB Ligand, von Osteoblasten/Osteozyten) bindet RANK (Osteoklasten-Vorläufer) → Osteoklast-Differenzierung/Aktivierung ↑. **Osteoprotegerin (OPG)** (von Osteoblasten) = löslicher Decoy-Rezeptor → bindet RANKL → HEMMT Osteoklastenaktivität. **KLINISCH:** Osteoporose (RANKL/OPG-Ratio ↑, postmenopause [Östrogen ↓ → RANKL ↑, OPG ↓]), Denosumab (RANKL-Antikörper → Osteoklastenaktivität ↓). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  }
+]

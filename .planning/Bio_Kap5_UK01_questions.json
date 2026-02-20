@@ -1,0 +1,92 @@
+[
+  {
+    "id": "bio-5-01-q01",
+    "question": "Welche Aussage über genetische Grundbegriffe ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Der Genotyp ist das sichtbare Merkmal eines Organismus."},
+      {"id": "B", "text": "Ein heterozygoter Organismus hat zwei identische Allele für ein Gen."},
+      {"id": "C", "text": "Der Genotyp ist die genetische Ausstattung (Allel-Kombination), der Phänotyp ist das sichtbare Merkmal. Homozygot bedeutet beide Allele gleich (AA oder aa), heterozygot bedeutet beide Allele unterschiedlich (Aa). Ein dominantes Allel (A) setzt sich auch bei Heterozygoten durch, ein rezessives Allel (a) ist nur bei Homozygoten (aa) sichtbar."},
+      {"id": "D", "text": "Allele sind unterschiedliche Gene auf verschiedenen Chromosomen."},
+      {"id": "E", "text": "Ein rezessives Allel setzt sich auch bei Heterozygoten durch."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Genetische Grundbegriffe:**\n\n**Gen vs. Allel:**\n- **Gen:** DNA-Abschnitt, kodiert für ein Merkmal (z. B. Gen für Blütenfarbe)\n- **Allel:** **Variante** eines Gens (z. B. A [rot], a [weiß])\n\n**Genotyp vs. Phänotyp:**\n- **Genotyp:** **Genetische Ausstattung** (Allel-Kombination, z. B. AA, Aa, aa)\n- **Phänotyp:** **Sichtbares Merkmal** (Ausprägung, z. B. rote Blüte, weiße Blüte)\n\n**Homozygot vs. Heterozygot:**\n- **Homozygot:** Beide Allele **gleich**\n  - **AA** (homozygot dominant)\n  - **aa** (homozygot rezessiv)\n- **Heterozygot:** Beide Allele **unterschiedlich** (**Aa**)\n\n**Dominant vs. Rezessiv:**\n- **Dominant** (Großbuchstabe, A):\n  - Setzt sich durch, auch bei **Heterozygoten** (Aa) sichtbar\n  - **AA** → dominant Phänotyp (z. B. rot)\n  - **Aa** → dominant Phänotyp (z. B. rot)\n- **Rezessiv** (Kleinbuchstabe, a):\n  - Nur bei **Homozygoten** (aa) sichtbar\n  - **aa** → rezessiv Phänotyp (z. B. weiß)\n\n**Falsch (A):** **Phänotyp** (nicht Genotyp) = sichtbares Merkmal. Genotyp = genetische Ausstattung.\n\n**Falsch (B):** **Homozygot** (nicht heterozygot) = zwei identische Allele. Heterozygot = unterschiedliche Allele (Aa).\n\n**Falsch (D):** Allele = **Varianten desselben Gens** (auf homologen Chromosomen), nicht unterschiedliche Gene.\n\n**Falsch (E):** **Dominantes** (nicht rezessives) Allel setzt sich bei Heterozygoten durch. Rezessiv nur sichtbar bei aa.",
+    "difficulty": "easy",
+    "tags": ["genetik", "genotyp", "phänotyp", "allel", "dominant", "rezessiv"]
+  },
+  {
+    "id": "bio-5-01-q02",
+    "question": "Welche Aussage über die 1. Mendel'sche Regel (Uniformitätsregel) ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Bei Kreuzung zweier heterozygoter Eltern (Aa × Aa) ist die F₁-Generation uniform."},
+      {"id": "B", "text": "Bei Kreuzung zweier homozygoter Eltern mit unterschiedlichen Merkmalen (AA × aa) ist die F₁-Generation uniform (100% Aa) und zeigt den dominanten Phänotyp (100% rot, wenn A dominant)."},
+      {"id": "C", "text": "Die F₁-Generation zeigt ein Spaltungsverhältnis von 3:1."},
+      {"id": "D", "text": "Die 1. Mendel'sche Regel beschreibt die Vererbung von zwei Merkmalen gleichzeitig."},
+      {"id": "E", "text": "Bei Kreuzung AA × aa ist die F₁-Generation zu 50% AA und 50% aa."}
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **1. Mendel'sche Regel** (Uniformitätsregel):\n\n**Regel:** Kreuzt man **reinerbige (homozygote)** Eltern mit **unterschiedlichen Merkmalen**, sind alle Nachkommen der **F₁-Generation uniform** (gleich im Genotyp + Phänotyp).\n\n**Beispiel:** Blütenfarbe (A rot dominant, a weiß rezessiv)\n\n**Kreuzung:**\n- **P** (Elterngeneration): **AA** (rot, homozygot dominant) × **aa** (weiß, homozygot rezessiv)\n- **Gameten:** A × a\n- **F₁:** **100% Aa** (heterozygot)\n- **Phänotyp F₁:** **100% rot** (A dominant über a)\n\n**Wichtig:**\n- F₁ ist **uniform** (alle Aa, alle rot)\n- **Kein** Spaltungsverhältnis (das kommt erst in F₂, 2. Mendel'sche Regel)\n\n**Falsch (A):** Heterozygote Eltern (Aa × Aa) → F₁ **nicht uniform** (Spaltung 3:1, 2. Mendel'sche Regel). 1. Regel gilt nur für **homozygote** Eltern.\n\n**Falsch (C):** **3:1-Spaltung** tritt in **F₂** auf (Aa × Aa), nicht F₁. F₁ ist uniform.\n\n**Falsch (D):** 1. Mendel'sche Regel = **monohybrider** Erbgang (1 Merkmal). **2 Merkmale** = 3. Mendel'sche Regel (Unabhängigkeitsregel, dihybrider Erbgang).\n\n**Falsch (E):** AA × aa → F₁ **100% Aa** (nicht 50% AA, 50% aa). Alle F₁ sind heterozygot (Aa).",
+    "difficulty": "easy",
+    "tags": ["genetik", "mendel", "uniformitätsregel", "f1-generation", "homozygot"]
+  },
+  {
+    "id": "bio-5-01-q03",
+    "question": "Welche Aussage über die 2. Mendel'sche Regel (Spaltungsregel) ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Bei Kreuzung zweier F₁-Hybriden (Aa × Aa) ist die F₂-Generation uniform."},
+      {"id": "B", "text": "Bei Kreuzung Aa × Aa beträgt das Phänotyp-Verhältnis in F₂ immer 1:2:1."},
+      {"id": "C", "text": "Bei Kreuzung zweier F₁-Hybriden (Aa × Aa) spaltet sich die F₂-Generation auf. Das Genotyp-Verhältnis ist 1 AA : 2 Aa : 1 aa (1:2:1). Bei dominant-rezessiver Vererbung ist das Phänotyp-Verhältnis 3 dominant : 1 rezessiv (3:1), da AA und Aa beide den dominanten Phänotyp zeigen."},
+      {"id": "D", "text": "Das Genotyp-Verhältnis in F₂ beträgt 3:1."},
+      {"id": "E", "text": "Die 2. Mendel'sche Regel gilt nur für die Vererbung von zwei Merkmalen."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **2. Mendel'sche Regel** (Spaltungsregel):\n\n**Regel:** Kreuzt man **F₁-Hybriden** (Aa × Aa), **spaltet** sich die F₂-Generation in einem bestimmten Verhältnis auf.\n\n**Kreuzung:** Aa × Aa (beide heterozygot)\n\n**Punnett-Quadrat:**\n\n|       | **A** | **a** |\n|-------|-------|-------|\n| **A** | **AA** | **Aa** |\n| **a** | **Aa** | **aa** |\n\n**Ergebnis:**\n\n**Genotyp-Verhältnis:** **1 AA : 2 Aa : 1 aa** (1:2:1)\n- 1/4 AA (homozygot dominant)\n- 2/4 Aa (heterozygot)\n- 1/4 aa (homozygot rezessiv)\n\n**Phänotyp-Verhältnis (dominant-rezessiv):** **3:1**\n- **AA** (1/4) → dominant Phänotyp (z. B. rot)\n- **Aa** (2/4) → dominant Phänotyp (z. B. rot, A dominant)\n- **aa** (1/4) → rezessiv Phänotyp (z. B. weiß)\n- **3 dominant : 1 rezessiv** (3:1)\n\n**WICHTIG:** Phänotyp-Verhältnis **3:1** gilt nur bei **dominant-rezessiver** Vererbung. Bei **intermediärer** Dominanz: Phänotyp = Genotyp (1:2:1).\n\n**Falsch (A):** F₂ ist **nicht uniform**, sondern **spaltet** auf (3:1 Phänotyp). Uniform = F₁ (1. Mendel'sche Regel).\n\n**Falsch (B):** Phänotyp-Verhältnis **3:1** (nicht 1:2:1) bei dominant-rezessiver Vererbung. **1:2:1** = Genotyp-Verhältnis (oder Phänotyp bei intermediär).\n\n**Falsch (D):** **Genotyp-Verhältnis 1:2:1** (nicht 3:1). **3:1** = Phänotyp-Verhältnis.\n\n**Falsch (E):** 2. Mendel'sche Regel = **monohybrider** Erbgang (1 Merkmal). **2 Merkmale** = 3. Mendel'sche Regel.",
+    "difficulty": "medium",
+    "tags": ["genetik", "mendel", "spaltungsregel", "f2-generation", "3:1"]
+  },
+  {
+    "id": "bio-5-01-q04",
+    "question": "Welche Aussage über die 3. Mendel'sche Regel (Unabhängigkeitsregel) ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Die 3. Mendel'sche Regel beschreibt die Vererbung eines einzelnen Merkmals."},
+      {"id": "B", "text": "Bei Kreuzung RrGg × RrGg beträgt das Phänotyp-Verhältnis in F₂ immer 3:1."},
+      {"id": "C", "text": "Gene für verschiedene Merkmale werden unabhängig voneinander vererbt (wenn auf verschiedenen Chromosomen oder weit auseinander). Bei dihybridem Erbgang (RrGg × RrGg) beträgt das F₂-Phänotyp-Verhältnis 9:3:3:1 (9 R_G_, 3 R_gg, 3 rrG_, 1 rrgg), wenn beide Merkmale dominant-rezessiv vererbt werden."},
+      {"id": "D", "text": "Die 3. Mendel'sche Regel gilt nur, wenn die Gene auf demselben Chromosom gekoppelt sind."},
+      {"id": "E", "text": "Das Verhältnis 9:3:3:1 tritt in der F₁-Generation auf."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **3. Mendel'sche Regel** (Unabhängigkeitsregel, Neukombinationsregel):\n\n**Regel:** Gene für **verschiedene Merkmale** werden **unabhängig** voneinander vererbt (wenn auf **verschiedenen Chromosomen** liegen oder weit auseinander auf demselben Chromosom → keine Kopplung).\n\n**Dihybrider Erbgang** (2 Merkmale):\n\n**Beispiel:** Samenform (R rund dominant, r runzelig rezessiv) + Samenfarbe (G gelb dominant, g grün rezessiv)\n\n**Kreuzung:**\n- **P:** RRGG (rund, gelb) × rrgg (runzelig, grün)\n- **F₁:** **100% RrGg** (rund, gelb, uniform)\n\n**F₁ × F₁:** RrGg × RrGg\n\n**Gameten (F₁):** RG, Rg, rG, rg (je 1/4, **unabhängige Verteilung**)\n\n**F₂-Phänotyp-Verhältnis:** **9:3:3:1**\n- **9/16** rund, gelb (R_G_: RRGG, RRGg, RrGG, RrGg)\n- **3/16** rund, grün (R_gg: RRgg, Rrgg)\n- **3/16** runzelig, gelb (rrG_: rrGG, rrGg)\n- **1/16** runzelig, grün (rrgg)\n\n**Voraussetzung:** **Unabhängige Vererbung** (verschiedene Chromosomen oder keine Kopplung). Bei **Kopplung** (Gene auf demselben Chromosom, nah beieinander) → **abweichendes** Verhältnis.\n\n**Falsch (A):** 3. Mendel'sche Regel = **mehrere Merkmale** (dihybrider Erbgang), nicht ein einzelnes Merkmal (das wäre 2. Regel).\n\n**Falsch (B):** **9:3:3:1** (nicht 3:1) bei dihybridem Erbgang. **3:1** = monohybrider Erbgang (1 Merkmal, 2. Mendel'sche Regel).\n\n**Falsch (D):** 3. Mendel'sche Regel gilt bei **unabhängiger** Vererbung (verschiedene Chromosomen oder keine Kopplung). Bei **Kopplung** (Gene nah beieinander auf demselben Chromosom) → abweichendes Verhältnis.\n\n**Falsch (E):** **9:3:3:1** tritt in **F₂** auf (nicht F₁). F₁ ist uniform (100% RrGg).",
+    "difficulty": "hard",
+    "tags": ["genetik", "mendel", "unabhängigkeitsregel", "dihybrider-erbgang", "9:3:3:1"]
+  },
+  {
+    "id": "bio-5-01-q05",
+    "question": "Welche Aussage über Dominanz-Verhältnisse ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Bei intermediärer Dominanz zeigen AA und Aa denselben Phänotyp."},
+      {"id": "B", "text": "Bei Kodominanz zeigt Aa einen Mischphänotyp."},
+      {"id": "C", "text": "Bei intermediärer (unvollständiger) Dominanz zeigt Aa einen Mischphänotyp (z. B. Wunderblume: AA rot, Aa rosa, aa weiß), das F₂-Phänotyp-Verhältnis ist 1:2:1 (= Genotyp). Bei Kodominanz werden beide Allele gleichzeitig exprimiert (z. B. AB0-Blutgruppen: A^A B^B → AB, beide Antigene vorhanden)."},
+      {"id": "D", "text": "Bei dominant-rezessiver Vererbung ist das F₂-Phänotyp-Verhältnis immer 1:2:1."},
+      {"id": "E", "text": "Kodominanz bedeutet, dass ein Allel vollständig dominant über das andere ist."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Dominanz-Verhältnisse:**\n\n**1. Dominant-rezessiv:**\n- **Genotyp → Phänotyp:** AA = Aa ≠ aa\n- **Beispiel:** Blütenfarbe (A rot, a weiß): AA/Aa → rot, aa → weiß\n- **F₂-Verhältnis (Aa × Aa):** Genotyp 1:2:1 (AA:Aa:aa), Phänotyp **3:1** (rot:weiß)\n\n**2. Intermediär** (unvollständige Dominanz):\n- **Heterozygot (Aa):** **Mischphänotyp** (zwischen AA und aa)\n- **Beispiel:** Wunderblume (Mirabilis jalapa):\n  - AA → rot\n  - **Aa → rosa** (Mischung)\n  - aa → weiß\n- **F₂-Verhältnis (Aa × Aa):** Genotyp 1:2:1 (AA:Aa:aa), Phänotyp **1:2:1** (1 rot : 2 rosa : 1 weiß)\n- **WICHTIG:** Phänotyp = Genotyp (1:2:1), nicht 3:1!\n\n**3. Kodominanz:**\n- **Beide Allele gleichzeitig exprimiert** (nicht gemischt!)\n- **Beispiel:** **AB0-Blutgruppen**\n  - Allele: A^A, B^B, 0\n  - A^A dominant über 0, B^B dominant über 0, **A^A + B^B kodominant**\n  - **Genotyp → Phänotyp:**\n    - A^A^A, A^A0 → **A** (A-Antigen)\n    - B^BB^B, B^B0 → **B** (B-Antigen)\n    - **A^AB^B** → **AB** (beide Antigene gleichzeitig exprimiert)\n    - 00 → **0** (keine Antigene)\n- **WICHTIG:** Bei AB sind **beide Allele sichtbar** (A + B Antigene), nicht gemischt!\n\n**Falsch (A):** Bei **intermediär** zeigt Aa **Mischphänotyp** (rosa), nicht gleich wie AA (rot). AA ≠ Aa ≠ aa.\n\n**Falsch (B):** Bei **Kodominanz** werden **beide Allele exprimiert** (z. B. AB: A + B Antigene), nicht gemischt. **Intermediär** = Mischphänotyp.\n\n**Falsch (D):** Bei dominant-rezessiv: F₂-Phänotyp **3:1** (nicht 1:2:1). **1:2:1** = Genotyp oder Phänotyp bei intermediär.\n\n**Falsch (E):** Kodominanz = **beide Allele gleichzeitig exprimiert** (nicht ein Allel dominant über das andere).",
+    "difficulty": "hard",
+    "tags": ["genetik", "dominanz", "intermediär", "kodominanz", "ab0-blutgruppen"]
+  },
+  {
+    "id": "bio-5-01-q06",
+    "question": "Welche Aussage über die Testkreuzung (Rückkreuzung) ist korrekt?",
+    "options": [
+      {"id": "A", "text": "Die Testkreuzung wird mit einem homozygot dominanten Partner (AA) durchgeführt."},
+      {"id": "B", "text": "Die Testkreuzung dient zur Bestimmung des Phänotyps eines Organismus."},
+      {"id": "C", "text": "Die Testkreuzung wird mit einem homozygot rezessiven Partner (aa) durchgeführt, um den Genotyp eines Organismus mit dominantem Phänotyp zu bestimmen. Ergebnis 100% dominant → Genotyp AA, Ergebnis 1:1 (dominant:rezessiv) → Genotyp Aa."},
+      {"id": "D", "text": "Bei Testkreuzung AA × aa ist das Nachkommen-Verhältnis 1:1."},
+      {"id": "E", "text": "Die Testkreuzung ist nur bei intermediärer Dominanz anwendbar."}
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Testkreuzung** (Rückkreuzung):\n\n**Problem:** Individuum mit **dominantem Phänotyp** (z. B. rot) → Genotyp könnte **AA** (homozygot) oder **Aa** (heterozygot) sein?\n\n**Lösung:** Kreuzung mit **homozygot rezessivem** Partner (**aa**)\n\n**Kreuzung 1:** AA × aa\n- **Gameten:** A × a\n- **Nachkommen:** **100% Aa** → **100% dominant Phänotyp** (rot)\n- **Schluss:** Testorganismus war **AA** (homozygot dominant)\n\n**Kreuzung 2:** Aa × aa\n- **Gameten:** A/a × a\n- **Punnett:**\n\n|       | **A** | **a** |\n|-------|-------|-------|\n| **a** | **Aa** | **aa** |\n| **a** | **Aa** | **aa** |\n\n- **Nachkommen:** 50% Aa (dominant, z. B. rot), 50% aa (rezessiv, z. B. weiß) → **1:1**\n- **Schluss:** Testorganismus war **Aa** (heterozygot)\n\n**Prinzip:** Homozygot rezessiver Partner (aa) gibt immer rezessives Allel (a) weiter → wenn Testorganismus heterozygot (Aa), spaltet sich Nachkommenschaft **1:1** auf (50% Aa, 50% aa).\n\n**Falsch (A):** Testkreuzung mit **homozygot rezessivem** (aa), nicht homozygot dominantem (AA). Mit AA würden alle Nachkommen dominant sein (unabhängig vom Genotyp des Testorganismus).\n\n**Falsch (B):** Testkreuzung bestimmt **Genotyp** (AA oder Aa), nicht Phänotyp (Phänotyp ist bereits bekannt: dominant).\n\n**Falsch (D):** AA × aa → **100% Aa** (nicht 1:1). **1:1** nur bei Aa × aa.\n\n**Falsch (E):** Testkreuzung anwendbar bei **dominant-rezessiver** Vererbung (Unterscheidung AA vs. Aa). Bei intermediär wären AA, Aa, aa phänotypisch unterscheidbar (keine Testkreuzung nötig).",
+    "difficulty": "medium",
+    "tags": ["genetik", "testkreuzung", "rückkreuzung", "genotyp-bestimmung", "aa"]
+  }
+]

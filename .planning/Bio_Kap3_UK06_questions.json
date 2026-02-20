@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-3-06-q01",
+    "question": "Welche Aussage über die Unterschiede zwischen angeborener und erworbener Immunität ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Die angeborene Immunität reagiert schnell (Minuten bis Stunden), ist unspezifisch und bildet kein immunologisches Gedächtnis, während die erworbene Immunität langsam reagiert (Tage), hochspezifisch ist und ein Gedächtnis entwickelt."
+      },
+      {
+        "id": "B",
+        "text": "Die erworbene Immunität umfasst physikalische Barrieren wie Haut und Schleimhäute, während die angeborene Immunität aus Antikörpern und T-Zellen besteht."
+      },
+      {
+        "id": "C",
+        "text": "Die angeborene Immunität bildet ein immunologisches Gedächtnis und reagiert bei erneutem Kontakt mit demselben Pathogen schneller."
+      },
+      {
+        "id": "D",
+        "text": "B-Zellen und T-Zellen gehören zur angeborenen Immunität, während Makrophagen und Neutrophile Teil der erworbenen Immunität sind."
+      },
+      {
+        "id": "E",
+        "text": "Die erworbene Immunität kann zwischen \"selbst\" und \"fremd\" nicht unterscheiden, während die angeborene Immunität Selbsttoleranz besitzt."
+      }
+    ],
+    "correct": "A",
+    "explanation": "**Richtig (A):** Die beiden Immunsysteme unterscheiden sich fundamental:\n\n**Angeborene (unspezifische) Immunität:**\n- **Reaktionszeit:** Sofort (~Minuten bis Stunden)\n- **Spezifität:** Unspezifisch (erkennt allgemeine Pathogen-Muster, PAMPs)\n- **Gedächtnis:** **KEIN** Gedächtnis (gleiche Reaktion bei erneutem Kontakt)\n- **Komponenten:** Physikalische Barrieren (Haut, Schleimhäute), Phagozyten (Neutrophile, Makrophagen), NK-Zellen, Komplementsystem, Interferone\n\n**Erworbene (adaptive, spezifische) Immunität:**\n- **Reaktionszeit:** Langsam (~Tage, klonale Expansion benötigt Zeit)\n- **Spezifität:** Hochspezifisch (erkennt spezifische Antigene über TCR/BCR)\n- **Gedächtnis:** **Gedächtnisbildung** (Gedächtnis-T/B-Zellen → schnellere, stärkere Sekundärantwort)\n- **Komponenten:** B-Zellen (Antikörper, humoral), T-Zellen (CD4⁺, CD8⁺, zellulär)\n\n**Falsch (B):** Physikalische Barrieren (Haut, Schleimhäute) gehören zur **angeborenen** Immunität. Antikörper (B-Zellen) und T-Zellen gehören zur **erworbenen** Immunität.\n\n**Falsch (C):** Die **angeborene** Immunität bildet **kein Gedächtnis**. Nur die **erworbene** Immunität bildet Gedächtniszellen (B- und T-Gedächtniszellen) → schnellere Sekundärantwort.\n\n**Falsch (D):** **Umgekehrt!** B- und T-Zellen sind Teil der **erworbenen** Immunität. Makrophagen und Neutrophile (Phagozyten) sind Teil der **angeborenen** Immunität.\n\n**Falsch (E):** Die **erworbene** Immunität kann sehr wohl zwischen \"selbst\" und \"fremd\" unterscheiden (Selbsttoleranz durch zentrale [Thymus, Knochenmark] und periphere Toleranz [Treg]). Autoimmunerkrankungen entstehen, wenn diese Selbsttoleranz versagt.",
+    "difficulty": "easy",
+    "tags": ["immunsystem", "angeborene-immunität", "erworbene-immunität", "gedächtnis"]
+  },
+  {
+    "id": "bio-3-06-q02",
+    "question": "Welche Aussage über NK-Zellen (Natural Killer) und das Komplementsystem ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "NK-Zellen töten Zielzellen, die MHC-I-Moleküle exprimieren, während sie Zellen ohne MHC-I verschonen."
+      },
+      {
+        "id": "B",
+        "text": "NK-Zellen töten virusinfizierte Zellen und Tumorzellen, die kein oder reduziertes MHC-I exprimieren (\"Missing Self\"), durch Freisetzung von Perforin und Granzymen."
+      },
+      {
+        "id": "C",
+        "text": "Das Komplementsystem besteht aus drei Komponenten: C3b führt zur Lyse, C5a zur Opsonierung und C5b-C9 zur Chemotaxis."
+      },
+      {
+        "id": "D",
+        "text": "Der Membran-Angriffs-Komplex (MAC) des Komplementsystems wird aus C1-C3 gebildet und führt zur Phagozytose von Bakterien."
+      },
+      {
+        "id": "E",
+        "text": "NK-Zellen sind Teil der erworbenen Immunität und benötigen eine vorherige Sensibilisierung, um ihre Zielzellen anzugreifen."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **NK-Zellen** (Natural Killer) sind Teil der **angeborenen Immunität** und töten Zielzellen ohne vorherige Sensibilisierung:\n\n**Erkennungsmechanismus (\"Missing Self\"):**\n- **Gesunde Zellen:** Exprimieren **MHC-I** → NK-Zellen erkennen \"Selbst\" → **keine Lyse**\n- **Virusinfizierte Zellen/Tumorzellen:** Unterdrücken oft MHC-I (Immunevasion) → NK-Zellen erkennen **fehlendes MHC-I** → **Aktivierung** → Lyse\n\n**Mechanismus:**\n- **Perforin:** Bildet Poren in Zielzell-Membran\n- **Granzyme:** Proteasen → diffundieren durch Poren → aktivieren Caspasen → **Apoptose**\n\n**Funktion:** Schutz vor Viren (v. a. Herpesviren, CMV), Tumor-Surveillance\n\n**Falsch (A):** **Umgekehrt!** NK-Zellen töten Zellen **ohne MHC-I** (\"Missing Self\") und verschonen Zellen **mit MHC-I**.\n\n**Falsch (C):** Die Funktionen sind **vertauscht**:\n- **C3b:** **Opsonierung** (markiert Pathogene → Phagozytose ↑)\n- **C5a:** **Chemotaxis** (lockt Neutrophile/Makrophagen an)\n- **C5b-C9 (MAC):** **Lyse** (Membran-Angriffs-Komplex → Zellmembran-Perforation → Bakterien-Lyse)\n\n**Falsch (D):** Der **MAC** besteht aus **C5b-C9** (nicht C1-C3) und führt zur **Lyse** (nicht Phagozytose). C3b führt zur Opsonierung → Phagozytose.\n\n**Falsch (E):** NK-Zellen sind Teil der **angeborenen** Immunität (nicht erworbenen) und benötigen **keine vorherige Sensibilisierung** (reagieren sofort).",
+    "difficulty": "medium",
+    "tags": ["immunsystem", "nk-zellen", "komplementsystem", "missing-self", "mac"]
+  },
+  {
+    "id": "bio-3-06-q03",
+    "question": "Welche Aussage über Antikörper (Immunglobuline) ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "IgG ist der erste Antikörper, der bei einer Primärinfektion gebildet wird, und hat eine kurze Halbwertszeit von etwa 3 Tagen."
+      },
+      {
+        "id": "B",
+        "text": "IgM ist ein Pentamer und wird hauptsächlich bei der Primärantwort gebildet. IgG dominiert die Sekundärantwort, hat eine lange Halbwertszeit (~21 Tage) und kann die Plazenta passieren."
+      },
+      {
+        "id": "C",
+        "text": "IgA wird hauptsächlich im Blutserum gefunden und ist für die Opsonierung von Bakterien verantwortlich."
+      },
+      {
+        "id": "D",
+        "text": "IgE ist der häufigste Antikörper im Serum und macht etwa 75% aller Immunglobuline aus."
+      },
+      {
+        "id": "E",
+        "text": "Alle Antikörper-Klassen können die Plazenta passieren und Nestschutz bieten."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **IgM** und **IgG** unterscheiden sich in Struktur, Zeitpunkt und Funktion:\n\n**IgM:**\n- **Struktur:** **Pentamer** (5 Monomere, größter Antikörper)\n- **Zeitpunkt:** **Primärantwort** (erste Infektion, akute Phase)\n- **Funktion:** Starke **Komplement-Aktivierung** (10 Bindungsstellen), Agglutination\n- **Diagnostik:** IgM ↑ → **akute Infektion**\n\n**IgG:**\n- **Struktur:** Monomer\n- **Zeitpunkt:** **Sekundärantwort** (nach IgM, Gedächtnis)\n- **Halbwertszeit:** ~21 Tage (**längste** unter allen Ig)\n- **Funktion:** Opsonierung, Komplement-Aktivierung, Neutralisation, **plazentagängig** (einziger Antikörper!) → **Nestschutz**\n- **Diagnostik:** IgG ↑ → abgelaufene Infektion, Impfung, Immunität\n\n**Falsch (A):** **IgM** (nicht IgG) ist der erste Antikörper bei Primärinfektion. IgG hat eine **lange** Halbwertszeit (~21 Tage, nicht 3 Tage).\n\n**Falsch (C):** **IgA** wird hauptsächlich in **Sekreten** gefunden (Speichel, Tränen, Muttermilch, Darm) als **Dimer** (nicht im Serum). Funktion: **Schleimhautschutz**, Neutralisation (nicht Opsonierung). **IgG** ist für Opsonierung verantwortlich.\n\n**Falsch (D):** **IgG** (nicht IgE) macht ~75% der Serum-Immunglobuline aus. **IgE** macht <1% aus und ist für **Allergie** (Typ-I-Hypersensitivität) und Parasiten-Abwehr zuständig (bindet an Mastzellen/Basophile).\n\n**Falsch (E):** Nur **IgG** kann die Plazenta passieren. IgM, IgA, IgE, IgD können **nicht** die Plazenta passieren. Nestschutz erfolgt durch mütterliches IgG (transplazentar) und IgA (Muttermilch, oral).",
+    "difficulty": "medium",
+    "tags": ["immunsystem", "antikörper", "igm", "igg", "primärantwort", "sekundärantwort"]
+  },
+  {
+    "id": "bio-3-06-q04",
+    "question": "Welche Aussage über T-Zellen und MHC-Moleküle ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "MHC-I-Moleküle werden nur auf Antigen-präsentierenden Zellen (APCs) exprimiert und präsentieren extrazelluläre Antigene an CD8⁺ T-Zellen."
+      },
+      {
+        "id": "B",
+        "text": "CD4⁺ T-Helfer-Zellen erkennen Antigene, die über MHC-I-Moleküle präsentiert werden, und töten anschließend die infizierten Zellen."
+      },
+      {
+        "id": "C",
+        "text": "MHC-I-Moleküle werden auf allen kernhaltigen Zellen exprimiert und präsentieren intrazelluläre Antigene (z. B. Viren) an CD8⁺ zytotoxische T-Zellen. MHC-II-Moleküle auf APCs präsentieren extrazelluläre Antigene an CD4⁺ T-Helfer-Zellen."
+      },
+      {
+        "id": "D",
+        "text": "CD8⁺ zytotoxische T-Zellen koordinieren die Immunantwort durch Freisetzung von Zytokinen wie IL-4 und IFN-γ."
+      },
+      {
+        "id": "E",
+        "text": "Regulatorische T-Zellen (Treg) fördern Autoimmunreaktionen durch Aktivierung autoreaktiver T-Zellen."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** Die **MHC-Präsentation** ist zentral für die T-Zell-Aktivierung:\n\n**MHC-I:**\n- **Exprimiert auf:** **Alle kernhaltigen Zellen** (nicht nur APCs!)\n- **Präsentiert:** **Intrazelluläre Antigene** (Viren, Tumorantigene, eigene Proteine)\n- **Erkannt von:** **CD8⁺ T-Zellen** (zytotoxische T-Zellen, CTL)\n- **Folge:** CD8⁺ töten infizierte/Tumor-Zellen durch Perforin/Granzyme → Apoptose\n\n**MHC-II:**\n- **Exprimiert auf:** **Nur APCs** (Dendritische Zellen, Makrophagen, B-Zellen)\n- **Präsentiert:** **Extrazelluläre Antigene** (Bakterien, Parasiten, phagozytiert)\n- **Erkannt von:** **CD4⁺ T-Zellen** (T-Helfer-Zellen, Th)\n- **Folge:** CD4⁺ koordinieren Immunantwort (Th1 → Makrophagen-Aktivierung, Th2 → B-Zell-Aktivierung)\n\n⭐ **Merkhilfe:** MHC **I** → CD**8**⁺ (intrazellulär, Viren), MHC **II** → CD**4**⁺ (extrazellulär, Bakterien).\n\n**Falsch (A):** MHC-I wird auf **allen kernhaltigen Zellen** (nicht nur APCs) exprimiert und präsentiert **intrazelluläre** (nicht extrazelluläre) Antigene an CD8⁺.\n\n**Falsch (B):** **CD8⁺** (nicht CD4⁺) erkennen MHC-I und töten infizierte Zellen. **CD4⁺** erkennen **MHC-II** (nicht MHC-I) und **koordinieren** (töten nicht selbst).\n\n**Falsch (D):** **CD4⁺ T-Helfer-Zellen** (nicht CD8⁺) koordinieren durch Zytokine (Th1: IFN-γ, Th2: IL-4/IL-5). **CD8⁺** töten Zellen (Perforin/Granzyme).\n\n**Falsch (E):** **Treg** (regulatorische T-Zellen) **supprimieren** die Immunantwort (IL-10, TGF-β) und **verhindern** Autoimmunität (Selbsttoleranz). Sie **fördern keine** Autoimmunreaktionen.",
+    "difficulty": "medium",
+    "tags": ["immunsystem", "t-zellen", "mhc", "cd4", "cd8", "antigenpräsentation"]
+  },
+  {
+    "id": "bio-3-06-q05",
+    "question": "Welche Aussage über Impfungen ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Bei der aktiven Immunisierung werden fertige Antikörper verabreicht, die sofortigen Schutz bieten, aber kein immunologisches Gedächtnis erzeugen."
+      },
+      {
+        "id": "B",
+        "text": "Bei der passiven Immunisierung werden Antigene (z. B. abgeschwächte Erreger) verabreicht, die zur Bildung eigener Antikörper und eines immunologischen Gedächtnisses führen."
+      },
+      {
+        "id": "C",
+        "text": "Aktive Immunisierung (z. B. MMR, Tetanus-Toxoid) führt zur Bildung eigener Antikörper und eines immunologischen Gedächtnisses, während passive Immunisierung (z. B. Tetanus-Immunglobulin) sofortigen, aber kurzfristigen Schutz ohne Gedächtnis bietet."
+      },
+      {
+        "id": "D",
+        "text": "Lebendimpfstoffe (z. B. Masern, Mumps) sind besonders sicher für immunsupprimierte Patienten und werden bevorzugt eingesetzt."
+      },
+      {
+        "id": "E",
+        "text": "Die passive Immunisierung ist die Methode der Wahl für langfristigen Schutz und wird routinemäßig bei Kinderimpfungen eingesetzt."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Aktive** und **passive** Immunisierung unterscheiden sich fundamental:\n\n**Aktive Immunisierung:**\n- **Prinzip:** **Antigen-Gabe** (attenuiert, inaktiviert, Toxoid, mRNA) → Immunsystem bildet **eigene Antikörper + Gedächtniszellen**\n- **Beispiele:**\n  - Lebendimpfstoff: Masern, Mumps, Röteln (MMR), Varizellen\n  - Totimpfstoff: Influenza, Polio (Salk), Hepatitis A\n  - Toxoid: Tetanus, Diphtherie\n  - mRNA: COVID-19\n- **Vorteile:** **Langfristiger Schutz** (Jahre–Jahrzehnte), **Gedächtnis**\n- **Nachteile:** **Langsamer Wirkeintritt** (Wochen), Kontraindikation bei Immunsuppression (Lebendimpfstoff!)\n\n**Passive Immunisierung:**\n- **Prinzip:** Gabe von **fertigen Antikörpern** (Immunglobuline, meist IgG)\n- **Beispiele:**\n  - Tetanus-Immunglobulin (nach Verletzung, kein Impfschutz)\n  - Hepatitis-B-Immunglobulin (Nadelstich)\n  - Anti-D-Immunglobulin (Rhesus-Prophylaxe)\n- **Vorteile:** **Sofortiger Schutz** (Stunden)\n- **Nachteile:** **Kurze Wirkdauer** (~3 Monate, Antikörper werden abgebaut), **kein Gedächtnis**\n\n**Falsch (A):** **Passive** Immunisierung (nicht aktive) verwendet fertige Antikörper. **Aktive** Immunisierung verwendet Antigene.\n\n**Falsch (B):** **Aktive** Immunisierung (nicht passive) verwendet Antigene. **Passive** Immunisierung verwendet fertige Antikörper.\n\n**Falsch (D):** **Lebendimpfstoffe** sind **kontraindiziert** bei Immunsuppression (z. B. HIV, Chemotherapie, Kortikosteroide), da attenuierte Erreger sich vermehren können → Infektion-Risiko. Bei Immunsupprimierten: **Totimpfstoffe** bevorzugt.\n\n**Falsch (E):** **Aktive** Immunisierung (nicht passive) ist die Methode für **langfristigen Schutz** und wird bei Kinderimpfungen eingesetzt (z. B. MMR, DTaP). Passive Immunisierung ist **kurzfristig** und nur für spezielle Situationen (Postexpositionsprophylaxe).",
+    "difficulty": "medium",
+    "tags": ["immunsystem", "impfung", "aktive-immunisierung", "passive-immunisierung", "gedächtnis"]
+  },
+  {
+    "id": "bio-3-06-q06",
+    "question": "Ein Patient entwickelt nach einem Bienenstich eine Anaphylaxie mit Hypotonie, Bronchospasmus und Urtikaria. Welche Aussage über den zugrundeliegenden Mechanismus und die Therapie ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Die Reaktion wird durch IgG-Antikörper vermittelt, die T-Zellen aktivieren und zur Freisetzung von Interferonen führen."
+      },
+      {
+        "id": "B",
+        "text": "Bei der Sensibilisierung bilden Th2-Zellen IgE-Antikörper, die an Mastzellen binden. Bei Re-Exposition vernetzt das Allergen IgE, was zur Degranulation und Histamin-Freisetzung führt. Die Therapie der Wahl bei Anaphylaxie ist Adrenalin i.m. (z. B. EpiPen)."
+      },
+      {
+        "id": "C",
+        "text": "Die Anaphylaxie ist eine Typ-IV-Hypersensitivitätsreaktion, die durch CD8⁺ zytotoxische T-Zellen vermittelt wird."
+      },
+      {
+        "id": "D",
+        "text": "Antihistaminika sind die erste Wahl bei Anaphylaxie und sollten sofort intravenös verabreicht werden."
+      },
+      {
+        "id": "E",
+        "text": "Die Hyposensibilisierung (spezifische Immuntherapie) wird während einer akuten Anaphylaxie durchgeführt, um die Symptome zu lindern."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Anaphylaxie** ist eine **Typ-I-Hypersensitivitätsreaktion** (IgE-vermittelt):\n\n**Mechanismus:**\n\n**1. Sensibilisierung (Erstkontakt):**\n- Allergen (Bienengift, Erdnüsse, Penicillin) → Aufnahme durch APCs\n- **Th2-Zellen** aktiviert → IL-4 → B-Zellen → **IgE-Produktion**\n- **IgE** bindet an **Fc-Rezeptoren** auf Mastzellen/Basophilen (sensibilisiert, bereit zur Degranulation)\n\n**2. Re-Exposition (erneuter Kontakt):**\n- Allergen bindet IgE (Kreuzvernetzung) → **Mastzell-Degranulation**\n- **Sofortige Freisetzung:** **Histamin** (Vasodilatation, Bronchospasmus, erhöhte Gefäßpermeabilität)\n- **Späte Phase:** Leukotriene, Prostaglandine (Entzündung)\n\n**Klinische Manifestation:**\n- **Systemisch:** Hypotonie (Vasodilatation), Tachykardie, Schock\n- **Respiratorisch:** Bronchospasmus (Dyspnoe, Giemen), Larynxödem (Stridor)\n- **Kutan:** Urtikaria (Quaddeln), Angioödem, Flush\n- **Gastrointestinal:** Übelkeit, Erbrechen, Durchfall\n\n**Therapie (Notfall!):**\n1. **Adrenalin (Epinephrin) i.m.** (z. B. EpiPen®, 0,3–0,5 mg)\n   - **β₂-Rezeptoren:** Bronchodilatation\n   - **α₁-Rezeptoren:** Vasokonstriktion → Blutdruck ↑\n   - **β₁-Rezeptoren:** HF ↑, Kontraktilität ↑\n2. **Antihistaminika** (symptomatisch, nicht lebensrettend)\n3. **Glukokortikoide** (verhindern Spätphase)\n4. **O₂**, **Volumen** (i.v. Flüssigkeit)\n5. **β₂-Agonisten** (Salbutamol bei Bronchospasmus)\n\n**Falsch (A):** Die Reaktion wird durch **IgE** (nicht IgG) vermittelt. IgE bindet an Mastzellen → Histamin (nicht Interferone).\n\n**Falsch (C):** Anaphylaxie ist eine **Typ-I-Hypersensitivität** (sofort, IgE-vermittelt), **nicht Typ IV** (verzögert, T-Zell-vermittelt, z. B. Kontaktdermatitis, Tuberkulin-Test).\n\n**Falsch (D):** **Adrenalin i.m.** (nicht Antihistaminika) ist die **erste Wahl** bei Anaphylaxie (lebensrettend). Antihistaminika sind **symptomatisch** (Urtikaria, Juckreiz), aber nicht ausreichend bei schwerer Anaphylaxie.\n\n**Falsch (E):** **Hyposensibilisierung** (spezifische Immuntherapie) ist eine **Langzeit-Prophylaxe** (Monate–Jahre), **nicht** eine Akut-Therapie. Sie wird **zwischen** allergischen Reaktionen durchgeführt, um Toleranz aufzubauen (Allergen-Gabe in steigender Dosis → IgG ↑, Treg ↑, Th2 ↓).",
+    "difficulty": "hard",
+    "tags": ["immunsystem", "allergie", "anaphylaxie", "ige", "mastzellen", "histamin", "adrenalin"]
+  }
+]

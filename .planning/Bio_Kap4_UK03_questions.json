@@ -1,0 +1,186 @@
+[
+  {
+    "id": "bio-4-03-q01",
+    "question": "Welche Aussage über die Neurulation ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Die Neuralplatte entwickelt sich aus dem Mesoderm."
+      },
+      {
+        "id": "B",
+        "text": "Das Neuralrohr schließt vom kaudalen zum kranialen Ende."
+      },
+      {
+        "id": "C",
+        "text": "Die Neurulation (Woche 3–4) beginnt mit der Verdickung des dorsalen Ektoderms zur Neuralplatte (Tag 18), die sich zur Neuralrinne einfaltet und zum Neuralrohr fusioniert (Reißverschluss-Mechanismus, Tag 22–28). Der Neuroporus posterior schließt am Tag 28. Spina bifida entsteht durch unvollständigen Verschluss und kann durch Folsäure-Supplementation verhindert werden."
+      },
+      {
+        "id": "D",
+        "text": "Die Neuralleiste bildet das zentrale Nervensystem."
+      },
+      {
+        "id": "E",
+        "text": "Anenzephalie entsteht durch fehlenden Verschluss des Neuroporus posterior."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Neurulation** (Woche 3–4):\n\n**Ablauf:**\n1. **Tag 18:** **Neuralplatte** – dorsales **Ektoderm** verdickt sich (induziert durch **Notochord**, Mesoderm)\n2. **Tag 20:** **Neuralrinne** – Neuralplatte faltet sich, Ränder erheben sich (Neural folds)\n3. **Tag 22–28:** **Neuralrohr** – Ränder fusionieren (**Reißverschluss-Mechanismus**, beginnt in Mitte, schreitet **kranial + kaudal** fort)\n4. **Tag 25:** **Neuroporus anterior** (kranial) schließt\n5. **Tag 28:** **Neuroporus posterior** (kaudal) schließt\n\n**Neuralrohr-Derivate:**\n- **Kranial:** Gehirn (Prosenzephalon, Mesenzephalon, Rhombenzephalon)\n- **Kaudal:** Rückenmark\n\n**Klinisch:**\n- **Spina bifida** (offener Rücken): **Neuroporus posterior** schließt nicht → Rückenmark/Meningen liegen frei → Lähmung, Inkontinenz\n  - **Prävention:** **Folsäure** (Vitamin B₉, 400 μg/Tag) vor + während Frühschwangerschaft → Neuralrohrdefekt ↓ ~70%\n- **Anenzephalie:** **Neuroporus anterior** schließt nicht → Gehirn fehlt → letal\n\n**Falsch (A):** Neuralplatte = **Ektoderm** (nicht Mesoderm), induziert durch Notochord (Mesoderm).\n\n**Falsch (B):** Neuralrohr schließt von **Mitte** → **kranial + kaudal** gleichzeitig (nicht kaudal → kranial).\n\n**Falsch (D):** **Neuralrohr** (nicht Neuralleiste) bildet ZNS. Neuralleiste → PNS + weitere Derivate.\n\n**Falsch (E):** Anenzephalie = **Neuroporus anterior** (nicht posterior) schließt nicht. Neuroporus posterior → Spina bifida.",
+    "difficulty": "medium",
+    "tags": [
+      "frühentwicklung",
+      "neurulation",
+      "neuralrohr",
+      "spina-bifida",
+      "folsäure"
+    ]
+  },
+  {
+    "id": "bio-4-03-q02",
+    "question": "Welche Aussage über die Herz-Entwicklung ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Der Herzschlauch behält seine lineare Form während der gesamten Entwicklung."
+      },
+      {
+        "id": "B",
+        "text": "Das Foramen ovale verbindet die beiden Ventrikel im fetalen Kreislauf."
+      },
+      {
+        "id": "C",
+        "text": "Der Herzschlauch (linear, Mesoderm-Ursprung) durchläuft am Tag 23 die Herzschleife (Looping), wobei er sich S-förmig biegt. Das Foramen ovale (zwischen Atrien) ermöglicht im fetalen Kreislauf den Shunt vom rechten zum linken Atrium (umgeht Lunge) und schließt nach Geburt. VSD (Ventrikelseptumdefekt) ist der häufigste angeborene Herzfehler."
+      },
+      {
+        "id": "D",
+        "text": "Die Atrien liegen im fertigen Herzen anterior (vorne) der Ventrikel."
+      },
+      {
+        "id": "E",
+        "text": "Das Aorticopulmonale Septum wird vom Mesoderm gebildet."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Herz-Entwicklung:**\n\n**Herzschlauch-Bildung (Woche 3):**\n- **Mesoderm-Ursprung:** Laterales Mesoderm → Herzfelder (paarig) → Fusion → **Herzschlauch** (linear)\n- Struktur: Truncus arteriosus (kranial) → Bulbus cordis → Ventrikel → Atrium → Sinus venosus (kaudal)\n\n**Herzschleife (Looping, Tag 23):**\n- Herzschlauch wächst schneller als Perikard → **S-förmige Biegung**\n- **Bulbus cordis + Ventrikel** → rechts-ventral\n- **Atrium + Sinus venosus** → dorsal-kranial\n- **Ergebnis:** Atrien **posterior** (hinten), Ventrikel **anterior** (vorne) → finale Position\n\n**Septierung (Woche 4–8):**\n- **Atrium:** Septum primum + Septum secundum → **Foramen ovale** (Öffnung, fetal)\n- **Ventrikel:** Septum interventriculare (muskulär + membranös)\n- **Truncus:** Aorticopulmonales Septum (Neuralleisten-Zellen!) → Aorta + Pulmonalarterie\n\n**Fetaler Kreislauf:**\n- **Foramen ovale:** **RA → LA** (umgeht Lunge, nicht oxygeniert nötig)\n- **Ductus arteriosus:** Pulmonalarterie → Aorta\n- **Nach Geburt:** Lungenatmung → Druck ↓ → Foramen ovale schließt (→ Fossa ovalis)\n\n**Klinisch:**\n- **VSD** (Ventrikelseptumdefekt): **Häufigster** angeborener Herzfehler, Shunt links → rechts → Volumenbelastung\n- **ASD** (Vorhofseptumdefekt): Shunt links → rechts\n- **Fallot-Tetralogie:** VSD + Pulmonalstenose + Aorten-Reitstellung + RV-Hypertrophie → Zyanose\n\n**Falsch (A):** Herzschlauch biegt sich **S-förmig** (Looping, Tag 23), nicht linear.\n\n**Falsch (B):** Foramen ovale verbindet **Atrien** (RA → LA), nicht Ventrikel.\n\n**Falsch (D):** Atrien liegen **posterior** (hinten), nicht anterior. Ventrikel anterior.\n\n**Falsch (E):** Aorticopulmonales Septum = **Neuralleisten-Zellen** (Ektoderm), nicht Mesoderm.",
+    "difficulty": "medium",
+    "tags": [
+      "frühentwicklung",
+      "herz",
+      "herzschleife",
+      "foramen-ovale",
+      "vsd"
+    ]
+  },
+  {
+    "id": "bio-4-03-q03",
+    "question": "Welche Aussage über die Gliedmaßen-Entwicklung ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Die Gliedmaßenknospen entwickeln sich aus dem Endoderm."
+      },
+      {
+        "id": "B",
+        "text": "Die Zone polarisierender Aktivität (ZPA) reguliert das proximodistale Wachstum."
+      },
+      {
+        "id": "C",
+        "text": "Die Gliedmaßenknospen (Woche 4–5) bestehen aus Mesoderm (Skelettmuskulatur, Knochen) und Ektoderm (Epidermis). Die Apikale ektodermale Leiste (AER) reguliert das proximodistale Wachstum (Schulter → Hand), die Zone polarisierender Aktivität (ZPA, Shh-Signalweg) reguliert die anteroposterior-Achse (Daumen → kleiner Finger). In Woche 6 erfolgt Apoptose zur Finger-Separation."
+      },
+      {
+        "id": "D",
+        "text": "Syndaktylie entsteht durch übermäßige Apoptose."
+      },
+      {
+        "id": "E",
+        "text": "Phokomelie ist eine normale Entwicklungsvariante."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Gliedmaßen-Entwicklung:**\n\n**Gliedmaßenknospen (Limb Buds):**\n- **Ursprung:** **Mesoderm** (Somiten → Skelettmuskulatur + Knochen) + **Ektoderm** (Epidermis)\n- **Zeitpunkt:** Obere Extremität Woche 4, Untere Extremität Woche 5\n\n**Organisationszentren:**\n\n1. **AER** (Apikale ektodermale Leiste):\n   - **Ektoderm**-Verdickung am distalen Ende\n   - Reguliert **proximodistales Wachstum** (Schulter → Ellenbogen → Handgelenk → Hand)\n   - Sekretion: FGF (Fibroblast Growth Factor)\n\n2. **ZPA** (Zone polarisierender Aktivität):\n   - **Mesoderm**, posterior (hinten)\n   - Reguliert **anteroposterior-Achse** (Daumen [anterior, radial] → kleiner Finger [posterior, ulnar])\n   - **Shh-Signalweg** (Sonic hedgehog)\n   - **Experiment:** ZPA-Transplantation → Spiegelbild-Duplikation (z. B. 2 kleine Finger, kein Daumen)\n\n**Entwicklung:**\n1. **Woche 4–5:** Gliedmaßenknospen entstehen (Paddel-Form)\n2. **Woche 6:** **Apoptose** (programmierter Zelltod) in **Interdigital-Räumen** → Trennung der Finger/Zehen\n3. **Woche 8:** Finger/Zehen vollständig separiert\n\n**Klinisch:**\n- **Phokomelie:** Verkürzung/Fehlen proximaler Gliedmaßen → \"Robbengliedmaßen\" (**Thalidomid**-Embryopathie, 1960er, Sedativum)\n- **Syndaktylie:** Finger/Zehen nicht separiert → **Apoptose-Defekt** (zu wenig, nicht zu viel!)\n- **Polydaktylie:** Zusätzliche Finger/Zehen (ZPA-Überaktivität)\n\n**Falsch (A):** Gliedmaßenknospen = **Mesoderm** + Ektoderm (nicht Endoderm).\n\n**Falsch (B):** **AER** (nicht ZPA) reguliert proximodistal. **ZPA** reguliert anteroposterior.\n\n**Falsch (D):** Syndaktylie = **zu wenig** (nicht übermäßig) Apoptose → Finger nicht getrennt.\n\n**Falsch (E):** Phokomelie = **Fehlbildung** (nicht normal), Thalidomid-Embryopathie.",
+    "difficulty": "hard",
+    "tags": [
+      "frühentwicklung",
+      "gliedmaßen",
+      "aer",
+      "zpa",
+      "apoptose",
+      "phokomelie"
+    ]
+  },
+  {
+    "id": "bio-4-03-q04",
+    "question": "Welche Aussage über die Pharyngealbögen ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Der 1. Pharyngealbogen wird vom N. facialis (CN VII) innerviert."
+      },
+      {
+        "id": "B",
+        "text": "Der 2. Pharyngealbogen bildet die Kaumuskulatur."
+      },
+      {
+        "id": "C",
+        "text": "Der 1. Pharyngealbogen (Mandibularbogen) wird vom N. trigeminus (CN V) innerviert und bildet Maxilla, Mandibula sowie die Kaumuskulatur. Der 2. Pharyngealbogen (Hyoidbogen) wird vom N. facialis (CN VII) innerviert und bildet die mimische Muskulatur. Der 3. Bogen wird vom N. glossopharyngeus (CN IX) innerviert."
+      },
+      {
+        "id": "D",
+        "text": "Pharyngealbögen entwickeln sich aus dem Endoderm."
+      },
+      {
+        "id": "E",
+        "text": "Der 6. Pharyngealbogen bildet den Unterkiefer."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Pharyngealbögen** (Kiemenbögen, Woche 4–5):\n\n**5 Pharyngealbögen** (1, 2, 3, 4, 6; Bogen 5 degeneriert):\n\n| Bogen | Nerv | Skelett | Muskulatur |\n|-------|------|---------|------------|\n| **1** (Mandibularbogen) | **CN V** (Trigeminus) | **Maxilla, Mandibula**, Malleus, Incus | **Kaumuskulatur** (Masseter, Temporalis) |\n| **2** (Hyoidbogen) | **CN VII** (Fazialis) | Stapes, Hyoid (oberer Teil) | **Mimische Muskulatur** (Gesichtsmuskulatur) |\n| **3** | **CN IX** (Glossopharyngeus) | Hyoid (unterer Teil) | Stylopharyngeus |\n| **4** | **CN X** (Vagus, superior) | Schildknorpel (Larynx) | Pharynxmuskulatur |\n| **6** | **CN X** (Vagus, recurrens) | Ringknorpel, Aryknorpel (Larynx) | Intrinsische Kehlkopfmuskulatur |\n\n**Merkspruch:** \"**1** = Trigeminus (**5**) = **Kau**en, **2** = Fazialis (**7**) = **Mimik**\"\n\n**Pharyngealbögen-Komponenten:**\n- **Mesoderm:** Muskulatur, Knochen/Knorpel\n- **Neuralleiste** (Ektoderm): Skelett (kranial)\n- **Endoderm:** Auskleidung der Pharyngealtaschen (Thymus, Nebenschilddrüse)\n- **Ektoderm:** Auskleidung der Pharyngealspalten\n\n**Gesichtsentwicklung:**\n- **Frontonasalfortsatz** + **Mandibularbogen** (1. Pharyngealbogen) → Gesichtsstrukturen\n- **Fusion-Defekt:** **Lippen-Kiefer-Gaumenspalte** (häufigste kraniofaziale Fehlbildung)\n\n**Falsch (A):** 1. Pharyngealbogen = **CN V** (Trigeminus), nicht CN VII. **CN VII** = 2. Pharyngealbogen.\n\n**Falsch (B):** **1. Pharyngealbogen** (nicht 2.) bildet Kaumuskulatur. 2. Pharyngealbogen → mimische Muskulatur.\n\n**Falsch (D):** Pharyngealbögen = **Mesoderm** + Neuralleiste (Ektoderm) + Endoderm/Ektoderm (Auskleidungen). Hauptkomponente: Mesoderm.\n\n**Falsch (E):** 6. Pharyngealbogen bildet **Kehlkopf**-Knorpel (Ringknorpel, Aryknorpel), nicht Unterkiefer. **Unterkiefer** (Mandibula) = 1. Pharyngealbogen.",
+    "difficulty": "medium",
+    "tags": [
+      "frühentwicklung",
+      "pharyngealbögen",
+      "cn-v",
+      "cn-vii",
+      "kaumuskulatur",
+      "mimik"
+    ]
+  },
+  {
+    "id": "bio-4-03-q05",
+    "question": "Welche Aussage über die Geschlechtsdifferenzierung ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Der Müller-Gang entwickelt sich bei männlichen Embryonen zum Nebenhoden."
+      },
+      {
+        "id": "B",
+        "text": "Das SRY-Gen auf dem X-Chromosom induziert die Hoden-Entwicklung."
+      },
+      {
+        "id": "C",
+        "text": "Das SRY-Gen (auf dem Y-Chromosom, XY) induziert Hoden-Entwicklung (Woche 7). Sertoli-Zellen produzieren AMH (Anti-Müller-Hormon), das den Müller-Gang degenerieren lässt. Leydig-Zellen produzieren Testosteron, das den Wolff-Gang zu Nebenhoden, Samenleiter und Samenbläschen entwickelt. Bei XX (kein SRY) entwickeln sich Ovarien, der Müller-Gang bleibt (→ Uterus, Eileiter) und der Wolff-Gang degeneriert."
+      },
+      {
+        "id": "D",
+        "text": "Testosteron fördert die Entwicklung des Müller-Gangs bei männlichen Embryonen."
+      },
+      {
+        "id": "E",
+        "text": "Die Geschlechtsdifferenzierung ist bei Geburt noch nicht abgeschlossen."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Geschlechtsdifferenzierung:**\n\n**Indifferentes Stadium (Woche 1–7):**\n- Beide Geschlechter identisch\n- **Wolff-Gang** + **Müller-Gang** vorhanden (bipotent)\n- Primordi ale Gonaden (können Hoden oder Ovar werden)\n\n**♂ Männlich (XY):**\n\n1. **SRY-Gen** (Sex-determining Region Y, auf **Y-Chromosom**):\n   - Aktiviert **Woche 7**\n   - Induziert **Hoden**-Entwicklung\n\n2. **Sertoli-Zellen** (Hoden):\n   - Produzieren **AMH** (Anti-Müller-Hormon, auch MIF)\n   - AMH → **Müller-Gang degeneriert**\n\n3. **Leydig-Zellen** (Hoden):\n   - Produzieren **Testosteron**\n   - Testosteron → **Wolff-Gang** entwickelt sich:\n     - **Nebenhoden** (Epididymis)\n     - **Samenleiter** (Vas deferens)\n     - **Samenbläschen** (Vesicula seminalis)\n   - **DHT** (Dihydrotestosteron, aus Testosteron via 5α-Reduktase) → äußere Genitalien (Penis, Skrotum)\n\n**♀ Weiblich (XX):**\n\n1. **Kein SRY** → **Ovar**-Entwicklung (Woche 10, später als Hoden)\n\n2. **Kein AMH** → **Müller-Gang** bleibt:\n   - **Eileiter** (Tuba uterina)\n   - **Uterus**\n   - **Obere Vagina** (2/3)\n\n3. **Kein Testosteron** → **Wolff-Gang degeneriert**\n\n**Klinisch:**\n- **Androgenitales Syndrom (AGS):** 21-Hydroxylase-Mangel → Cortisol ↓, Androgene ↑ → XX-Embryo virilisiert\n- **Androgeninsensitivität-Syndrom (AIS):** XY, Testosteron produziert, aber Rezeptor-Defekt → phänotypisch weiblich, Gonaden Hoden (kryptor ch)\n\n**Falsch (A):** **Wolff-Gang** (nicht Müller) → Nebenhoden (männlich). Müller-Gang degeneriert bei ♂ (AMH).\n\n**Falsch (B):** SRY-Gen auf **Y-Chromosom** (nicht X). XX = kein SRY.\n\n**Falsch (D):** Testosteron fördert **Wolff-Gang** (nicht Müller). **AMH** (nicht Testosteron) degeneriert Müller-Gang.\n\n**Falsch (E):** Geschlechtsdifferenzierung ist bei **Geburt abgeschlossen** (äußere + innere Genitalien differenziert). Pubertät = sekundäre Geschlechtsmerkmale.",
+    "difficulty": "hard",
+    "tags": [
+      "frühentwicklung",
+      "geschlechtsdifferenzierung",
+      "sry",
+      "amh",
+      "testosteron",
+      "wolff-gang",
+      "müller-gang"
+    ]
+  }
+]

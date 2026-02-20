@@ -1,0 +1,176 @@
+[
+  {
+    "id": "q1",
+    "question": "Was ist der zentrale Unterschied zwischen Präimplantationsdiagnostik (PID) und Pränataldiagnostik (PND)?",
+    "options": [
+      {
+        "id": "A",
+        "text": "PID erfolgt vor der Einnistung des Embryos, PND während der bestehenden Schwangerschaft"
+      },
+      {
+        "id": "B",
+        "text": "PID ist invasiv, PND ist immer nicht-invasiv"
+      },
+      {
+        "id": "C",
+        "text": "PID kann nur monogene Erbkrankheiten erkennen, PND auch Chromosomenstörungen"
+      },
+      {
+        "id": "D",
+        "text": "PID wird ambulant durchgeführt, PND erfordert immer stationären Aufenthalt"
+      },
+      {
+        "id": "E",
+        "text": "PID ist in Deutschland ohne Einschränkungen erlaubt, PND nur mit Indikation"
+      }
+    ],
+    "correct": "A",
+    "explanation": "A ist korrekt: PID findet VOR der Einnistung statt (Tag 3-5 nach IVF-Befruchtung, Embryo noch außerhalb des Körpers) → nur genetisch unauffällige Embryonen werden transferiert. PND erfolgt während BESTEHENDER Schwangerschaft (ab Woche 10+) → kann zu Schwangerschaftsabbruch führen. B ist falsch (PID ist auch invasiv - Blastomerbiopsie). C ist falsch (beide können Chromosomenstörungen und monogene Krankheiten detektieren). D ist falsch (Amniozentese/CVS sind ambulante Eingriffe). E ist falsch (PID in Deutschland streng reglementiert durch Embryonenschutzgesetz - nur bei schwerwiegenden genetischen Belastungen erlaubt).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q2",
+    "question": "Welche Aussage zum nicht-invasiven Pränataltest (NIPT) ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "NIPT analysiert fötale Zellen aus Fruchtwasser"
+      },
+      {
+        "id": "B",
+        "text": "NIPT nutzt zellfreie fötale DNA (cffDNA) aus dem mütterlichen Blut"
+      },
+      {
+        "id": "C",
+        "text": "NIPT hat ein Fehlgeburtsrisiko von etwa 0,5%"
+      },
+      {
+        "id": "D",
+        "text": "NIPT kann erst ab Schwangerschaftswoche 20 durchgeführt werden"
+      },
+      {
+        "id": "E",
+        "text": "NIPT detektiert ausschließlich Trisomie 21, keine anderen Chromosomenstörungen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: NIPT analysiert zellfreie fötale DNA (cffDNA), die ab Woche 10 im mütterlichen Blut zirkuliert (~10% der gesamten zellfreien DNA stammen vom Fötus). Plazentazellen geben DNA-Fragmente ins Blut ab → Blutentnahme bei der Mutter genügt. A ist falsch (das wäre Amniozentese - invasiv). C ist falsch (NIPT ist NICHT-INVASIV → kein Fehlgeburtsrisiko, das ist der zentrale Vorteil!). D ist falsch (NIPT ab Woche 10 möglich, Amniozentese erst ab Woche 15). E ist falsch (NIPT detektiert auch Trisomie 13, 18 und Geschlechtschromosomen-Aneuploidien).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q3",
+    "question": "Bei einer 38-jährigen Schwangeren zeigt die Nackentransparenzmessung (NT) in Woche 12 einen Wert von 4,2 mm (Norm <2,5 mm). Der Triple-Test zeigt erhöhtes β-hCG und erniedrigtes AFP. Welches Vorgehen ist am sinnvollsten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Sofortige Amniozentese ohne weitere Tests"
+      },
+      {
+        "id": "B",
+        "text": "NIPT zur nicht-invasiven Abklärung, dann ggf. invasive Diagnostik bei positivem Befund"
+      },
+      {
+        "id": "C",
+        "text": "Abwarten bis Woche 20, dann Organultraschall"
+      },
+      {
+        "id": "D",
+        "text": "Sofortiger Schwangerschaftsabbruch aufgrund der eindeutigen Trisomie 21-Diagnose"
+      },
+      {
+        "id": "E",
+        "text": "Chorionzottenbiopsie, da schneller als Amniozentese"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Erhöhte NT (>2,5 mm) + auffälliger Triple-Test → erhöhtes Risiko für Trisomie 21, aber KEINE Diagnose! Sinnvoller Stufenplan: 1. NIPT (nicht-invasiv, kein Fehlgeburtsrisiko, 99% Detektionsrate) → 2. Nur bei positivem NIPT invasive Bestätigungsdiagnostik (Amniozentese mit Karyotypisierung = Goldstandard). A ist falsch (zu aggressiv - invasive Diagnostik nur nach NIPT-Bestätigung sinnvoll). C ist falsch (zu lange Wartezeit, NT + Triple-Test verlangen zeitnahe Abklärung). D ist falsch (ethisch/medizinisch inakzeptabel - Screeningtests sind KEINE Diagnose! Karyotypisierung obligat vor jedem Schwangerschaftsabbruch). E ist falsch (CVS nur bis Woche 14, ab Woche 15 ist Amniozentese Standard; außerdem sollte NIPT vorgeschaltet werden).",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q4",
+    "question": "Welcher Hauptvorteil der Chorionzottenbiopsie (CVS) gegenüber der Amniozentese besteht?",
+    "options": [
+      {
+        "id": "A",
+        "text": "CVS hat kein Fehlgeburtsrisiko, Amniozentese schon"
+      },
+      {
+        "id": "B",
+        "text": "CVS kann früher durchgeführt werden (Woche 11-14 vs. ab Woche 15)"
+      },
+      {
+        "id": "C",
+        "text": "CVS liefert schnellere Ergebnisse (24h vs. 2-3 Wochen)"
+      },
+      {
+        "id": "D",
+        "text": "CVS erkennt mehr Chromosomenstörungen als Amniozentese"
+      },
+      {
+        "id": "E",
+        "text": "CVS ist schmerzfrei, Amniozentese erfordert Vollnarkose"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Der zentrale Vorteil der CVS ist der FRÜHERE Zeitpunkt (Woche 11-14) vs. Amniozentese (ab Woche 15) → bei auffälligem Befund kann früher entschieden werden, weniger psychische Belastung. A ist falsch (BEIDE sind invasiv mit Fehlgeburtsrisiko ~0,5-1%). C ist falsch (beide brauchen Zellkultur für Karyotypisierung → 1-2 Wochen, Schnelltests sind bei beiden möglich). D ist falsch (diagnostische Genauigkeit ist identisch - beide liefern fetale Zellen für Karyotypisierung). E ist falsch (beide ambulant unter Lokalanästhesie/ohne Narkose).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q5",
+    "question": "Ein Paar mit bekannter BRCA1-Mutation möchte mittels PID gesunde Embryonen selektieren. Welche ethische Problematik ist hier am relevantesten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "BRCA1-Mutationen haben unvollständige Penetranz (~70%) - auch 'betroffene' Embryonen könnten gesund bleiben"
+      },
+      {
+        "id": "B",
+        "text": "PID ist technisch nicht möglich für monogene Erbkrankheiten"
+      },
+      {
+        "id": "C",
+        "text": "PID würde zu Mehrlingsgeburten führen"
+      },
+      {
+        "id": "D",
+        "text": "BRCA1-Mutationen sind nicht vererbbar"
+      },
+      {
+        "id": "E",
+        "text": "PID ist bei autosomal-dominanten Erbgängen immer kontraindiziert"
+      }
+    ],
+    "correct": "A",
+    "explanation": "A ist korrekt: Dies ist die zentrale ETHISCHE Problematik bei PID für BRCA1: Unvollständige Penetranz bedeutet, dass ~30% der Mutationsträgerinnen NIE erkranken. Ist es ethisch vertretbar, Embryonen zu verwerfen, die mit 30% Chance gesund bleiben? Zudem: variable Expressivität (unterschiedliches Erkrankungsalter), Präventionsoptionen (Mastektomie, Screening). → Abwägung: Krankheitslast vs. Lebenschance des Embryos. B ist falsch (PID ist technisch für monogene Krankheiten sehr gut möglich - sogar einfacher als Chromosomenstörungen). C ist falsch (Mehrlinge sind IVF-Risiko, nicht PID-spezifisch). D ist falsch (BRCA1 autosomal-dominant vererbt, 50% Weitergabe-Risiko). E ist falsch (PID wird gerade bei schweren autosomal-dominanten Erkrankungen diskutiert, aber ethische Einzelfallprüfung nötig).",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q6",
+    "question": "Welches diagnostische Verfahren hat die höchste Detektionsrate für Trisomie 21?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Nackentransparenzmessung (NT-Screening)"
+      },
+      {
+        "id": "B",
+        "text": "Triple-Test (AFP, β-hCG, uE3)"
+      },
+      {
+        "id": "C",
+        "text": "NIPT (nicht-invasiver Pränataltest)"
+      },
+      {
+        "id": "D",
+        "text": "Organultraschall in Woche 20"
+      },
+      {
+        "id": "E",
+        "text": "Doppler-Sonographie der Nabelschnur"
+      }
+    ],
+    "correct": "C",
+    "explanation": "C ist korrekt: NIPT hat die höchste Detektionsrate für Trisomie 21 unter den nicht-invasiven Verfahren (~99% Sensitivität, ~0,1% Falsch-Positiv-Rate). Basiert auf Sequenzierung zellfreier fötaler DNA aus mütterlichem Blut → direkter Nachweis von Chromosomen-Dosiseffekten. A ist falsch (NT-Screening: ~70-80% Detektionsrate, viele falsch-positive Befunde). B ist falsch (Triple-Test: ~60-70% Detektionsrate, hohe Falsch-Positiv-Rate ~5%). D ist falsch (Organultraschall erkennt Softmarker, aber keine zuverlässige Trisomie-Diagnostik). E ist falsch (Doppler dient Durchblutungsbeurteilung, nicht Chromosomendiagnostik). WICHTIG: Invasive Diagnostik (Amniozentese + Karyotypisierung) ist der Goldstandard zur BESTÄTIGUNG (100% Sensitivität/Spezifität), aber NIPT ist das beste SCREENING-Verfahren.",
+    "difficulty": "medium"
+  }
+]

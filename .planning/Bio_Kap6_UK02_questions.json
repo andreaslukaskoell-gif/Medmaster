@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-6-02-q1",
+    "question": "Welcher der folgenden Unterschiede zwischen **RNA** und **DNA** ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "RNA enthält Thymin (T), DNA enthält Uracil (U) als Pyrimidin-Base"
+      },
+      {
+        "id": "B",
+        "text": "RNA enthält Ribose (mit 2'-OH), DNA enthält Desoxyribose (ohne 2'-OH, nur H)"
+      },
+      {
+        "id": "C",
+        "text": "RNA ist immer doppelsträngig (Doppelhelix), DNA ist einzelsträngig"
+      },
+      {
+        "id": "D",
+        "text": "RNA ist stabiler als DNA, da die 2'-OH-Gruppe vor Hydrolyse schützt"
+      },
+      {
+        "id": "E",
+        "text": "RNA und DNA verwenden beide Thymin (T) als Pyrimidin-Base"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**RNA vs. DNA:** **RNA** = **Ribose** (Zucker mit 2'-OH), **Uracil (U)** statt Thymin, **Einzelstrang**. **DNA** = **Desoxyribose** (ohne 2'-OH, nur H an 2'-Position), **Thymin (T)**, **Doppelstrang**. Die **2'-OH-Gruppe** in RNA macht sie **weniger stabil** (anfällig für Hydrolyse), nicht stabiler! Basenpaarung: A-U (RNA), A-T (DNA), G-C (beide). Wichtig: **U in RNA**, **T in DNA**!",
+    "difficulty": "easy",
+    "tags": ["Molekulare Genetik", "RNA", "DNA", "Unterschiede", "Ribose", "Uracil"]
+  },
+  {
+    "id": "bio-6-02-q2",
+    "question": "RNA-Polymerase synthetisiert RNA während der Transkription. Welche Aussage über RNA-Polymerase ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "RNA-Polymerase benötigt einen RNA-Primer (wie DNA-Polymerase) zum Starten der Synthese"
+      },
+      {
+        "id": "B",
+        "text": "RNA-Polymerase kann de novo (ohne Primer) starten und synthetisiert in 5'→3'-Richtung"
+      },
+      {
+        "id": "C",
+        "text": "RNA-Polymerase synthetisiert in 3'→5'-Richtung, während DNA-Polymerase in 5'→3'-Richtung arbeitet"
+      },
+      {
+        "id": "D",
+        "text": "RNA-Polymerase kann nur Okazaki-Fragmente synthetisieren, nicht kontinuierlich"
+      },
+      {
+        "id": "E",
+        "text": "RNA-Polymerase benötigt Telomerase zur Verlängerung von RNA-Enden"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**RNA-Polymerase:** Kann **de novo** (ohne Primer) starten (Unterschied zu DNA-Polymerase, die Primer benötigt!). **Syntheserichtung: 5'→3'** (wie DNA-Pol). Die DNA-Matrize (**Template Strand**) wird in **3'→5'-Richtung** gelesen → RNA entsteht 5'→3'. **Wichtig:** DNA-Pol benötigt **Primer** (RNA, ~10 nt), RNA-Pol **nicht**! RNA-Pol öffnet DNA-Doppelhelix (Transkriptionsblase) und verlängert RNA kontinuierlich.",
+    "difficulty": "medium",
+    "tags": ["Molekulare Genetik", "RNA-Polymerase", "Transkription", "De novo", "5'-3'-Richtung"]
+  },
+  {
+    "id": "bio-6-02-q3",
+    "question": "Bei der Transkription wird der **Template Strand (Antisense Strand)** als Matrize verwendet. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Der Template Strand verläuft 5'→3' und wird von RNA-Polymerase in derselben Richtung gelesen"
+      },
+      {
+        "id": "B",
+        "text": "Der Template Strand verläuft 3'→5' und wird als Matrize verwendet; die RNA wird 5'→3' synthetisiert"
+      },
+      {
+        "id": "C",
+        "text": "Der Coding Strand (Sense Strand) wird als Matrize verwendet, nicht der Template Strand"
+      },
+      {
+        "id": "D",
+        "text": "Template Strand und Coding Strand haben identische Sequenzen (außer T → U)"
+      },
+      {
+        "id": "E",
+        "text": "Der Template Strand codiert direkt für Proteine, der Coding Strand ist nicht-codierend"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Template Strand (Antisense):** Verläuft **3'→5'**, wird als **DNA-Matrize** verwendet → RNA wird **5'→3'** synthetisiert (komplementär + antiparallel). **Coding Strand (Sense):** Verläuft **5'→3'**, hat **gleiche Sequenz wie mRNA** (außer T → U), wird **nicht** als Matrize verwendet. **Beispiel:** Coding 5'-ATG-TCC-3', Template 3'-TAC-AGG-5', mRNA 5'-AUG-UCC-3' (wie Coding, T → U). Wichtig: **Template = Matrize**, **Coding = wie mRNA**!",
+    "difficulty": "hard",
+    "tags": ["Molekulare Genetik", "Transkription", "Template Strand", "Coding Strand", "Antisense"]
+  },
+  {
+    "id": "bio-6-02-q4",
+    "question": "Bei Eukaryoten bindet der Transkriptionsfaktor **TFIID** an die **TATA-Box** im Promotor. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "TFIID bindet an die -10-Box (Pribnow-Box) und rekrutiert den Sigma-Faktor bei Prokaryoten"
+      },
+      {
+        "id": "B",
+        "text": "TFIID enthält TBP (TATA-Binding Protein) und bindet an die TATA-Box (~25 bp vor Transkriptionsstart)"
+      },
+      {
+        "id": "C",
+        "text": "TFIID ist eine RNA-Polymerase, die mRNA direkt synthetisiert (ohne weitere Faktoren)"
+      },
+      {
+        "id": "D",
+        "text": "TFIID entfernt Introns während der Transkription (Splicing-Funktion)"
+      },
+      {
+        "id": "E",
+        "text": "TFIID fügt die Poly-A-Tail an das 3'-Ende der mRNA an (Polyadenylierung)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**TFIID (Transkriptionsfaktor II D):** Bindet an **TATA-Box** (TATAAA, ~25 bp vor Transkriptionsstart) über **TBP** (TATA-Binding Protein). Weitere TFs (TFIIB, TFIIE, TFIIF, TFIIH) rekrutieren **RNA-Polymerase II** (mRNA-Synthese). **Prokaryoten:** -10-Box (Pribnow-Box, TATAAT), -35-Box, **Sigma-Faktor** (σ) hilft RNA-Pol, Promotor zu erkennen (nicht TFIID!). Wichtig: **TFIID = Eukaryoten**, **Sigma-Faktor = Prokaryoten**!",
+    "difficulty": "medium",
+    "tags": ["Molekulare Genetik", "Transkription", "TFIID", "TATA-Box", "Eukaryoten", "Promotor"]
+  },
+  {
+    "id": "bio-6-02-q5",
+    "question": "Während der **RNA-Prozessierung** bei Eukaryoten werden drei Modifikationen vorgenommen: 5'-Capping, 3'-Polyadenylierung und Splicing. Welche Aussage zur **5'-Capping** ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "5'-Capping fügt ~200 Adenine (Poly-A-Tail) an das 5'-Ende der mRNA an"
+      },
+      {
+        "id": "B",
+        "text": "5'-Capping fügt eine 7-Methylguanosin-Kappe (m7G) an das 5'-Ende an, was Schutz vor Abbau und Ribosom-Erkennung bietet"
+      },
+      {
+        "id": "C",
+        "text": "5'-Capping entfernt Introns aus der pre-mRNA (Splicing-Funktion)"
+      },
+      {
+        "id": "D",
+        "text": "5'-Capping findet nur bei tRNA statt, nicht bei mRNA"
+      },
+      {
+        "id": "E",
+        "text": "5'-Capping ist ein prokaryotischer Prozess, der bei Eukaryoten nicht vorkommt"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**5'-Capping (nur Eukaryoten):** **7-Methylguanosin-Kappe (m7G)** wird an **5'-Ende** der mRNA angefügt (während Transkription). **Funktionen:** (1) **Schutz vor Abbau** (Exonukleasen), (2) **Ribosom-Erkennung** (Translation-Initiation), (3) **Kern-Export** (Transport-Signal). **3'-Polyadenylierung:** ~200 Adenine (Poly-A-Tail) an **3'-Ende** (nicht 5'!). **Splicing:** Entfernt Introns. Wichtig: **Capping = 5'-Ende**, **Poly-A = 3'-Ende**, **nur Eukaryoten**!",
+    "difficulty": "easy",
+    "tags": ["Molekulare Genetik", "RNA-Prozessierung", "5'-Capping", "m7G", "Eukaryoten"]
+  },
+  {
+    "id": "bio-6-02-q6",
+    "question": "**Splicing** bei Eukaryoten entfernt Introns aus der pre-mRNA. Welche Aussage zum Splicing ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Introns sind codierende Sequenzen, Exons sind nicht-codierend; Splicing entfernt Exons"
+      },
+      {
+        "id": "B",
+        "text": "Das Spliceosom (snRNPs: U1, U2, U4, U5, U6) entfernt Introns (GU...AG) und verbindet Exons"
+      },
+      {
+        "id": "C",
+        "text": "Prokaryoten haben Introns und verwenden das Spliceosom zur RNA-Prozessierung"
+      },
+      {
+        "id": "D",
+        "text": "Alternatives Splicing führt immer zu einem einzigen Protein pro Gen (keine Diversität)"
+      },
+      {
+        "id": "E",
+        "text": "Splicing findet während der Translation im Cytoplasma statt, nicht im Zellkern"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Splicing (nur Eukaryoten):** **Spliceosom** (Ribonukleoprotein-Komplex: U1, U2, U4, U5, U6 snRNPs) erkennt **Splice-Stellen** (5'-GU, Branch Point A, 3'-AG) und entfernt **Introns** (nicht-codierend). **Exons** (codierend) werden verbunden → reife mRNA. **Alternatives Splicing:** Verschiedene Exon-Kombinationen → **viele Proteine von 1 Gen** (Proteom-Diversität, Mensch: ~20.000 Gene → >100.000 Proteine). **Prokaryoten:** KEINE Introns, KEIN Splicing! Splicing findet im **Kern** statt, nicht Cytoplasma.",
+    "difficulty": "medium",
+    "tags": ["Molekulare Genetik", "Splicing", "Spliceosom", "Introns", "Exons", "Alternatives Splicing"]
+  }
+]

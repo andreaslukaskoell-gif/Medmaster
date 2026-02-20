@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-10-03-q1",
+    "question": "Der **Kohlenstoffkreislauf** ist zentral für alle Ökosysteme. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Photosynthese (CO₂ → Glucose, nur Produzenten) ↔ Atmung (Glucose → CO₂, alle Organismen). Verbrennung fossiler Brennstoffe → CO₂ ↑ → Klimawandel"
+      },
+      {
+        "id": "B",
+        "text": "Nur Konsumenten führen Atmung durch (setzen CO₂ frei), Produzenten nicht"
+      },
+      {
+        "id": "C",
+        "text": "Kohlenstoff wird wie Energie nicht recycelt (Einbahnstraße)"
+      },
+      {
+        "id": "D",
+        "text": "Destruenten spielen keine Rolle im Kohlenstoffkreislauf (nur Produzenten und Konsumenten)"
+      },
+      {
+        "id": "E",
+        "text": "Verbrennung fossiler Brennstoffe hat keinen Einfluss auf den CO₂-Gehalt der Atmosphäre"
+      }
+    ],
+    "correct": "A",
+    "explanation": "**Kohlenstoffkreislauf:** (1) **Photosynthese** (CO₂ → Glucose, **nur Produzenten**: Pflanzen, Algen, Cyanobakterien): 6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂. (2) **Atmung** (Glucose → CO₂, **ALLE Organismen**: Produzenten, Konsumenten, Destruenten): C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O + Energie. (3) **Verbrennung fossiler Brennstoffe** (Kohle, Öl, Gas) → **CO₂ ↑** → **Klimawandel** (Treibhauseffekt!). **Destruenten:** Mineralisieren tote Biomasse → CO₂ frei. **Wichtig:** Kohlenstoff **RECYCELT** (zyklisch), **NICHT** wie Energie (Einbahnstraße)!",
+    "difficulty": "easy",
+    "tags": ["Ökologie", "Stoffkreisläufe", "Kohlenstoffkreislauf", "Photosynthese", "Atmung"]
+  },
+  {
+    "id": "bio-10-03-q2",
+    "question": "Der **Stickstoffkreislauf** ist komplex und beinhaltet mehrere bakterielle Prozesse. Was ist **Stickstofffixierung**?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Umwandlung von NH₃ (Ammoniak) in NO₃⁻ (Nitrat) durch Nitrosomonas und Nitrobacter (Nitrifikation)"
+      },
+      {
+        "id": "B",
+        "text": "Umwandlung von N₂ (Stickstoffgas, Atmosphäre) in NH₃ (Ammoniak) durch Rhizobium, Azotobacter, Cyanobakterien (Enzym: Nitrogenase). Einziger biologischer Weg, N₂ nutzbar zu machen!"
+      },
+      {
+        "id": "C",
+        "text": "Umwandlung von NO₃⁻ (Nitrat) in N₂ (Stickstoffgas) durch denitrifizierende Bakterien (Denitrifikation)"
+      },
+      {
+        "id": "D",
+        "text": "Umwandlung von organischen N-Verbindungen (Proteine) in NH₃ durch Destruenten (Ammonifikation)"
+      },
+      {
+        "id": "E",
+        "text": "Aufnahme von NO₃⁻ durch Pflanzen zur Protein-Synthese (Assimilation)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Stickstofffixierung (N-Fixierung):** Umwandlung von **N₂** (Stickstoffgas, Atmosphäre, **78%**, aber **biologisch NICHT verfügbar**!) in **NH₃** (Ammoniak, biologisch verfügbar). **Bakterien:** *Rhizobium* (Knöllchenbakterien in Leguminosen-Wurzeln), *Azotobacter*, Cyanobakterien. **Enzym:** **Nitrogenase** (sehr energieaufwendig!). **Reaktion:** N₂ + 3 H₂ → 2 NH₃. **Bedeutung:** **Einziger biologischer Weg**, N₂ nutzbar zu machen (N≡N-Dreifachbindung sehr stabil). **Andere Prozesse:** Nitrifikation (NH₃ → NO₃⁻), Denitrifikation (NO₃⁻ → N₂), Ammonifikation (organisch → NH₃).",
+    "difficulty": "medium",
+    "tags": ["Ökologie", "Stoffkreisläufe", "Stickstoffkreislauf", "Stickstofffixierung", "Nitrogenase"]
+  },
+  {
+    "id": "bio-10-03-q3",
+    "question": "**Leguminosen** (Hülsenfrüchte) haben eine besondere Beziehung zu Bakterien. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Leguminosen (Erbsen, Bohnen, Klee) + Rhizobium (Knöllchenbakterien in Wurzeln) → Bakterien fixieren N₂ → NH₃, Pflanze liefert Zucker (Mutualismus)"
+      },
+      {
+        "id": "B",
+        "text": "Leguminosen haben keine Bakterien in ihren Wurzeln (keine Symbiose)"
+      },
+      {
+        "id": "C",
+        "text": "Rhizobium sind Parasiten, die Leguminosen schädigen (Parasitismus, nicht Mutualismus)"
+      },
+      {
+        "id": "D",
+        "text": "Leguminosen können N₂ selbst fixieren (ohne Bakterien)"
+      },
+      {
+        "id": "E",
+        "text": "Rhizobium leben in Blättern von Leguminosen (nicht in Wurzeln)"
+      }
+    ],
+    "correct": "A",
+    "explanation": "**Leguminosen-Symbiose (Mutualismus):** **Leguminosen** (Hülsenfrüchte: **Erbsen, Bohnen, Klee, Lupinen**) + **Rhizobium** (Knöllchenbakterien) in **Wurzelknöllchen**. **Mechanismus:** (1) **Bakterien fixieren N₂** → NH₃ (Stickstofffixierung, Enzym Nitrogenase), (2) **Pflanze liefert Zucker** (aus Photosynthese). **Mutualismus:** **Beide profitieren** (Pflanze erhält N, Bakterien erhalten Energie). **Vorteil:** Leguminosen wachsen auch in **N-armen** Böden (eigene N-Versorgung!). **Wichtig:** Rhizobium in **Wurzeln** (Knöllchen sichtbar als kleine Verdickungen), **nicht** in Blättern!",
+    "difficulty": "easy",
+    "tags": ["Ökologie", "Stoffkreisläufe", "Stickstoffkreislauf", "Leguminosen", "Rhizobium", "Mutualismus"]
+  },
+  {
+    "id": "bio-10-03-q4",
+    "question": "**Nitrifikation** ist ein zweistufiger bakterieller Prozess im Stickstoffkreislauf. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Nitrifikation: N₂ → NH₃ (Stickstofffixierung durch Rhizobium)"
+      },
+      {
+        "id": "B",
+        "text": "Nitrifikation: NH₃ → NO₂⁻ (Nitrosomonas) → NO₃⁻ (Nitrobacter). Pflanzen nehmen bevorzugt NO₃⁻ auf (Hauptform für Pflanzen)"
+      },
+      {
+        "id": "C",
+        "text": "Nitrifikation: NO₃⁻ → N₂ (Denitrifikation durch denitrifizierende Bakterien)"
+      },
+      {
+        "id": "D",
+        "text": "Nitrifikation: Organische N-Verbindungen → NH₃ (Ammonifikation durch Destruenten)"
+      },
+      {
+        "id": "E",
+        "text": "Pflanzen nehmen bevorzugt NH₃ auf (nicht NO₃⁻)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Nitrifikation (zweistufig, aerob):** (1) **Nitrosomonas:** NH₃ (Ammoniak) → NO₂⁻ (Nitrit), (2) **Nitrobacter:** NO₂⁻ (Nitrit) → NO₃⁻ (Nitrat). **Bedeutung:** Pflanzen nehmen **bevorzugt NO₃⁻** auf (Hauptform, über Wurzeln), **nicht NH₃** (toxisch in hohen Konzentrationen). **Reihenfolge im N-Kreislauf:** N₂ → [Fixierung] → NH₃ → [**Nitrifikation**] → NO₃⁻ → [Assimilation] → Proteine/DNA. **Wichtig:** Nitrifikation ≠ Fixierung (Fixierung: N₂ → NH₃), Nitrifikation ≠ Denitrifikation (Denitrifikation: NO₃⁻ → N₂, rückwärts)!",
+    "difficulty": "medium",
+    "tags": ["Ökologie", "Stoffkreisläufe", "Stickstoffkreislauf", "Nitrifikation", "Nitrosomonas", "Nitrobacter"]
+  },
+  {
+    "id": "bio-10-03-q5",
+    "question": "Der **Phosphorkreislauf** unterscheidet sich von anderen Stoffkreisläufen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Phosphorkreislauf hat ein atmosphärisches Reservoir (gasförmiger Phosphor in Luft, wie N₂ oder CO₂)"
+      },
+      {
+        "id": "B",
+        "text": "Phosphorkreislauf hat KEIN atmosphärisches Reservoir (Hauptreservoir: Gestein). Auswaschung → Ozean (P verloren) → P ist limitierender Faktor (begrenzt Wachstum)"
+      },
+      {
+        "id": "C",
+        "text": "Phosphor ist in unbegrenzten Mengen verfügbar (kein limitierender Faktor)"
+      },
+      {
+        "id": "D",
+        "text": "Pflanzen nehmen Phosphor als P₄ (elementarer Phosphor) aus der Atmosphäre auf"
+      },
+      {
+        "id": "E",
+        "text": "Phosphorkreislauf ist sehr schnell (schneller als Wasserkreislauf)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Phosphorkreislauf (P-Kreislauf):** **KEIN atmosphärisches Reservoir** (gasförmiger Phosphor existiert **nicht** in Natur!). **Hauptreservoir:** **Gestein** (Phosphat-Mineralien, z.B. Apatit). **Prozesse:** (1) **Verwitterung** (Gestein → PO₄³⁻ [Phosphat] in Boden/Wasser, langsam!), (2) Pflanzen nehmen **PO₄³⁻** auf → DNA/RNA/ATP, (3) Nahrungskette, (4) Destruenten mineralisieren → PO₄³⁻ zurück. **Problem:** **Auswaschung** → Flüsse → **Ozeane** (Sedimente) → **P verloren** (nicht zurück!). **Limitierender Faktor:** P begrenzt Pflanzenwachstum (besonders aquatisch). **Kreislauf sehr LANGSAM** (geologische Zeitskala)!",
+    "difficulty": "medium",
+    "tags": ["Ökologie", "Stoffkreisläufe", "Phosphorkreislauf", "Limitierender Faktor", "Phosphat"]
+  },
+  {
+    "id": "bio-10-03-q6",
+    "question": "**Eutrophierung** ist ein ernstes ökologisches Problem in Gewässern. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Eutrophierung: Nährstoffmangel (N, P niedrig) → Algen sterben → klares Wasser"
+      },
+      {
+        "id": "B",
+        "text": "Eutrophierung: Überschuss an Nährstoffen (N, P hoch, z.B. Dünger) → Algen ↑ (Algenblüten) → sterben → Destruenten verbrauchen O₂ → Hypoxie (Sauerstoffmangel) → Fischsterben"
+      },
+      {
+        "id": "C",
+        "text": "Eutrophierung führt zu mehr Sauerstoff im Wasser (Algen produzieren O₂ durch Photosynthese, dauerhaft)"
+      },
+      {
+        "id": "D",
+        "text": "Phosphat-Dünger hat keinen Einfluss auf Gewässer (kein Zusammenhang mit Eutrophierung)"
+      },
+      {
+        "id": "E",
+        "text": "Eutrophierung ist vorteilhaft für Fische (mehr Nahrung durch Algen)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Eutrophierung (Überdüngung):** **Überschuss** an Nährstoffen (**N, P**) in Gewässern (Ursache: Dünger-Abfluss, Abwasser). **Mechanismus:** (1) **Nährstoffe ↑** (N, P) → (2) **Algen/Plankton ↑** (massives Wachstum, **Algenblüten**) → (3) Algen **sterben** → sinken auf Grund → (4) **Destruenten** (Bakterien) **bauen ab** → verbrauchen **O₂** → (5) **Hypoxie** (Sauerstoffmangel im Wasser) → (6) **Fische/Wirbellose sterben** (Erstickung). **Anfangs:** Mehr O₂ (Photosynthese), aber **langfristig:** O₂-Mangel (Zersetzung überwiegt!). **Lösung:** Dünger-Einsatz reduzieren, Kläranlagen verbessern (P entfernen)!",
+    "difficulty": "hard",
+    "tags": ["Ökologie", "Stoffkreisläufe", "Eutrophierung", "Algenblüten", "Hypoxie", "Nährstoffüberschuss"]
+  }
+]

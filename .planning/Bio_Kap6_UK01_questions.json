@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-6-01-q1",
+    "question": "In einem DNA-Doppelstrang beträgt der Anteil von Adenin (A) **30%**. Wie hoch ist der Anteil von Cytosin (C) gemäß den Chargaff-Regeln?",
+    "options": [
+      {
+        "id": "A",
+        "text": "30%, da A = C nach den Chargaff-Regeln"
+      },
+      {
+        "id": "B",
+        "text": "20%, da A = T = 30%, Rest (40%) = G + C, also C = 20%"
+      },
+      {
+        "id": "C",
+        "text": "15%, da der Anteil von Pyrimidinen immer geringer ist als der von Purinen"
+      },
+      {
+        "id": "D",
+        "text": "40%, da C mit G paart und G die häufigste Base ist"
+      },
+      {
+        "id": "E",
+        "text": "70%, da C den Rest der Basen ausmacht (100% - 30% A = 70%)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Chargaff-Regeln:** **A = T** (Adenin paart mit Thymin), **G = C** (Guanin paart mit Cytosin). Wenn **A = 30%** → **T = 30%**. Rest: 100% - 60% = **40%** für G + C. Da **G = C** → **C = 20%, G = 20%**. Wichtig: **A = T**, **G = C**, **A + G = C + T** (Purine = Pyrimidine). G≡C hat 3 H-Brücken (stärker als A-T mit 2 H-Brücken).",
+    "difficulty": "medium",
+    "tags": ["Molekulare Genetik", "DNA-Struktur", "Chargaff-Regeln", "Basenpaarung"]
+  },
+  {
+    "id": "bio-6-01-q2",
+    "question": "Welche Aussage zur **antiparallelen Struktur** der DNA-Doppelhelix ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide DNA-Stränge verlaufen in dieselbe Richtung (5'→3' parallel zueinander)"
+      },
+      {
+        "id": "B",
+        "text": "Ein Strang verläuft 5'→3', der komplementäre Strang 3'→5' (antiparallel)"
+      },
+      {
+        "id": "C",
+        "text": "Die antiparallele Struktur bedeutet, dass Purine mit Pyrimidinen paaren (A-T, G-C)"
+      },
+      {
+        "id": "D",
+        "text": "DNA-Polymerase kann beide Stränge in dieselbe Richtung synthetisieren, da sie parallel sind"
+      },
+      {
+        "id": "E",
+        "text": "Antiparallel bedeutet, dass DNA und RNA in entgegengesetzten Richtungen synthetisiert werden"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Antiparallel:** Die beiden DNA-Stränge verlaufen in **entgegengesetzten Richtungen**. Ein Strang **5'→3'** (5'-Phosphat → 3'-OH), der komplementäre Strang **3'→5'**. Dies ist **entscheidend für die Replikation**, da DNA-Polymerase nur in **5'→3'-Richtung** synthetisieren kann → Leitstrang (kontinuierlich) vs. Folgestrang (diskontinuierlich, Okazaki-Fragmente). Wichtig: **5'-Ende** = Phosphat, **3'-Ende** = OH-Gruppe!",
+    "difficulty": "easy",
+    "tags": ["Molekulare Genetik", "DNA-Struktur", "Antiparallel", "5'-3'-Richtung"]
+  },
+  {
+    "id": "bio-6-01-q3",
+    "question": "Das Meselson-Stahl-Experiment (1958) bewies, dass die DNA-Replikation **semikonservativ** ist. Was bedeutet \"semikonservativ\"?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide Tochterstränge bestehen aus komplett neu synthetisierter DNA (konservativ)"
+      },
+      {
+        "id": "B",
+        "text": "Jeder Tochterstrang enthält einen alten (Matrize) und einen neuen DNA-Strang"
+      },
+      {
+        "id": "C",
+        "text": "Die DNA wird nur teilweise repliziert, der Rest bleibt unverändert (partiell konservativ)"
+      },
+      {
+        "id": "D",
+        "text": "Alte DNA-Stränge werden komplett abgebaut und durch neue ersetzt (dispersiv)"
+      },
+      {
+        "id": "E",
+        "text": "DNA-Replikation findet nur in der S-Phase des Zellzyklus statt (zeitlich konservativ)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Semikonservativ:** Jeder Tochterstrang besteht aus **1 altem (parentalen) Strang** (Matrize) + **1 neu synthetisierten Strang**. **Meselson & Stahl (1958):** N15-schwere DNA → Replikation in N14-Medium → 1. Generation: Hybrid-DNA (1 schwer, 1 leicht) → bewies semikonservative Replikation. Alternativen: **Konservativ** (1 Doppelstrang alt, 1 komplett neu), **Dispersiv** (alte + neue Abschnitte gemischt). Wichtig: **Semikonservativ** ist korrekt!",
+    "difficulty": "medium",
+    "tags": ["Molekulare Genetik", "DNA-Replikation", "Semikonservativ", "Meselson-Stahl"]
+  },
+  {
+    "id": "bio-6-01-q4",
+    "question": "Während der DNA-Replikation wird der **Leitstrang (Leading Strand)** kontinuierlich, der **Folgestrang (Lagging Strand)** diskontinuierlich synthetisiert. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Der Leitstrang wird 3'→5' synthetisiert, der Folgestrang 5'→3'"
+      },
+      {
+        "id": "B",
+        "text": "Der Leitstrang benötigt viele RNA-Primer, der Folgestrang nur einen Primer"
+      },
+      {
+        "id": "C",
+        "text": "Der Leitstrang wird in Richtung der Replikationsgabel synthetisiert (5'→3'), der Folgestrang weg von der Gabel (5'→3', Okazaki-Fragmente)"
+      },
+      {
+        "id": "D",
+        "text": "Beide Stränge werden kontinuierlich synthetisiert, da DNA-Polymerase in beide Richtungen arbeiten kann"
+      },
+      {
+        "id": "E",
+        "text": "Der Folgestrang wird von DNA-Polymerase I synthetisiert, der Leitstrang von DNA-Polymerase III"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Leitstrang (Leading Strand):** **Kontinuierliche Synthese** in **5'→3'-Richtung** (in Richtung der Replikationsgabel), benötigt **1× RNA-Primer**. **Folgestrang (Lagging Strand):** **Diskontinuierliche Synthese** (5'→3' **weg** von der Gabel) → **Okazaki-Fragmente** (~100–200 nt bei Eukaryoten), benötigt **viele Primer** (für jedes Fragment). **DNA-Polymerase kann nur 5'→3'** synthetisieren → Folgestrang = \"rückwärts\" in Fragmenten. DNA-Ligase verbindet Fragmente.",
+    "difficulty": "hard",
+    "tags": ["Molekulare Genetik", "DNA-Replikation", "Leitstrang", "Folgestrang", "Okazaki-Fragmente"]
+  },
+  {
+    "id": "bio-6-01-q5",
+    "question": "DNA-Polymerase hat **3'→5' Exonuklease-Aktivität** (Korrekturlesen, Proofreading). Welche Funktion hat diese Aktivität?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Entfernung von RNA-Primern nach der Synthese (Ersatz durch DNA)"
+      },
+      {
+        "id": "B",
+        "text": "Korrektur von fehlerhaft eingebauten Nukleotiden während der Replikation (Fehlerrate ↓ auf ~10⁻⁹)"
+      },
+      {
+        "id": "C",
+        "text": "Synthese von DNA in 3'→5'-Richtung (zusätzlich zur 5'→3'-Synthese)"
+      },
+      {
+        "id": "D",
+        "text": "Entspannung von Supercoiling (Überdrehung) vor der Replikationsgabel"
+      },
+      {
+        "id": "E",
+        "text": "Verlängerung der Telomere (TTAGGG-Repeats) an Chromosomenenden"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**3'→5' Exonuklease-Aktivität (Proofreading):** DNA-Polymerase **erkennt fehlerhaft eingebaute Nukleotide** und **entfernt** sie (3'→5'-Richtung, rückwärts), dann **korrekt wieder eingefügt** (5'→3'-Synthese). **Fehlerrate:** Ohne Korrektur ~10⁻⁶, **mit Proofreading ~10⁻⁹** (sehr niedrig!). Wichtig: **Synthese 5'→3'**, **Korrektur 3'→5'**. RNA-Primer-Entfernung: DNA-Pol I (Prokaryoten) oder RNase H (Eukaryoten), nicht 3'→5' Exonuklease!",
+    "difficulty": "medium",
+    "tags": ["Molekulare Genetik", "DNA-Polymerase", "Proofreading", "Exonuklease", "Fehlerkorrektur"]
+  },
+  {
+    "id": "bio-6-01-q6",
+    "question": "**Telomerase** ist ein Ribonukleoprotein-Enzym, das Telomere (TTAGGG-Repeats) an Chromosomenenden verlängert. In welchen Zellen ist Telomerase **aktiv**, und welche klinische Bedeutung hat dies?",
+    "options": [
+      {
+        "id": "A",
+        "text": "In allen somatischen Zellen, um DNA-Schäden zu reparieren und Alterung zu verhindern"
+      },
+      {
+        "id": "B",
+        "text": "In Keimbahn-Zellen, Stammzellen und Krebszellen (Immortalisierung); inaktiv in den meisten somatischen Zellen"
+      },
+      {
+        "id": "C",
+        "text": "Nur in Prokaryoten, da Eukaryoten keine Telomere benötigen (zirkuläre Chromosomen)"
+      },
+      {
+        "id": "D",
+        "text": "In allen Zellen während der S-Phase, um DNA-Replikation zu ermöglichen"
+      },
+      {
+        "id": "E",
+        "text": "Telomerase ist nur in Bakterien aktiv, da diese keine DNA-Polymerase I haben"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Telomerase aktiv in:** **Keimbahn-Zellen** (Spermien, Eizellen), **Stammzellen** (hämatopoetische, embryonale), **Krebszellen** (Immortalisierung, ~85–90% der Tumoren). **Inaktiv in:** Meisten somatischen Zellen → **Telomer-Verkürzung** bei jeder Teilung → **Seneszenz** (Hayflick-Limit ~50 Teilungen). **Klinisch:** Krebszellen reaktivieren Telomerase → unbegrenzte Teilung (Immortalisierung) → Therapieziel (Telomerase-Inhibitoren). Wichtig: **Telomerase = Krebs-Marker** (Diagnostik/Therapie)!",
+    "difficulty": "medium",
+    "tags": ["Molekulare Genetik", "Telomerase", "Telomere", "Seneszenz", "Krebs", "Immortalisierung"]
+  }
+]

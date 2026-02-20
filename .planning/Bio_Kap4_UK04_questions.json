@@ -1,0 +1,186 @@
+[
+  {
+    "id": "bio-4-04-q01",
+    "question": "Welche Aussage über die Plazenta-Struktur ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Die Plazenta besteht ausschließlich aus fetalem Gewebe."
+      },
+      {
+        "id": "B",
+        "text": "Maternales und fetales Blut mischen sich in der Plazenta direkt."
+      },
+      {
+        "id": "C",
+        "text": "Die Plazenta besteht aus fetalem Teil (Chorionzotten: Trophoblast + fetale Gefäße) und maternalem Teil (Decidua basalis: umgewandeltes Endometrium). Maternales und fetales Blut mischen sich NICHT, sondern sind durch die Plazentaschranke (3–5 Schichten) getrennt."
+      },
+      {
+        "id": "D",
+        "text": "Die Decidua basalis ist fetalen Ursprungs."
+      },
+      {
+        "id": "E",
+        "text": "Chorionzotten enthalten keine Blutgefäße."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Plazenta-Struktur:**\n\n**Zwei Komponenten:**\n\n1. **Fetaler Teil:**\n   - **Chorionzotten** (Zotten = fingerartige Ausstülpungen)\n   - **Ursprung:** **Trophoblast** (Synzytiotrophoblast + Zytotrophoblast) + Mesoderm\n   - **Inhalt:** **Fetale Kapillaren** (mit fetalem Blut)\n   - **Funktion:** Vergrößern Austauschfläche\n\n2. **Maternaler Teil:**\n   - **Decidua basalis** (umgewandeltes **Endometrium**, maternal)\n   - **Inhalt:** Mütterliche Spiralarterien → **Intervillöser Raum** (Blutseen mit maternalem Blut) → Venen zurück\n\n**Plazentaschranke:**\n- **Trennt** maternales + fetales Blut (3–5 Schichten):\n  1. Synzytiotrophoblast (äußerste Schicht der Chorionzotten)\n  2. Zytotrophoblast\n  3. Bindegewebe (Mesoderm)\n  4. Fetales Endothel (Kapillaren)\n- **WICHTIG:** Maternales + fetales Blut **mischen sich NICHT** → Austausch nur durch Diffusion/aktiven Transport über Plazentaschranke\n\n**Gasaustausch/Nährstofftransport:**\n- Maternales Blut (Intervillöser Raum) ↔ Plazentaschranke ↔ Fetales Blut (Chorionzotten-Kapillaren)\n\n**Falsch (A):** Plazenta = fetal (Chorionzotten) **+ maternal** (Decidua basalis), nicht nur fetal.\n\n**Falsch (B):** Maternales + fetales Blut **mischen sich NICHT** (getrennt durch Plazentaschranke).\n\n**Falsch (D):** Decidua basalis = **maternal** (umgewandeltes Endometrium), nicht fetal. Chorionzotten = fetal.\n\n**Falsch (E):** Chorionzotten enthalten **fetale Kapillaren** (Blutgefäße mit fetalem Blut).",
+    "difficulty": "easy",
+    "tags": [
+      "frühentwicklung",
+      "plazenta",
+      "chorionzotten",
+      "decidua-basalis",
+      "plazentaschranke"
+    ]
+  },
+  {
+    "id": "bio-4-04-q02",
+    "question": "Welche Aussage über die Nabelschnur ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Die Nabelschnur enthält 2 Venen und 1 Arterie."
+      },
+      {
+        "id": "B",
+        "text": "Die Arterien der Nabelschnur transportieren sauerstoffreiches Blut."
+      },
+      {
+        "id": "C",
+        "text": "Die Nabelschnur enthält 2 Arterien (Aa. umbilicales) und 1 Vene (V. umbilicalis). Die Arterien transportieren sauerstoffarmes Blut vom Fetus zur Plazenta, die Vene transportiert sauerstoffreiches Blut von der Plazenta zum Fetus. Dies ist eine Ausnahme zur üblichen Arterie/Vene-Konvention."
+      },
+      {
+        "id": "D",
+        "text": "Die Nabelschnur enthält Knochenmark."
+      },
+      {
+        "id": "E",
+        "text": "Die Vene der Nabelschnur transportiert sauerstoffarmes Blut."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Nabelschnur** (Funiculus umbilicalis):\n\n**Struktur:**\n- **2 Arterien** (Aa. umbilicales)\n- **1 Vene** (V. umbilicalis)\n- **Wharton-Sulze:** Gallertartiges Bindegewebe (Schutz, Kompression-Vermeidung)\n- Länge: ~50–60 cm, Durchmesser: ~1–2 cm\n\n**Blutfluss:**\n\n1. **Arterien** (Aa. umbilicales, 2×):\n   - **Richtung:** Fetus → Plazenta\n   - **Blut:** **O₂-arm** (desoxygeniert), CO₂-reich, Abfallstoffe (Harnstoff)\n   - **Ursprung:** A. iliaca interna (Fetus)\n\n2. **Vene** (V. umbilicalis, 1×):\n   - **Richtung:** Plazenta → Fetus\n   - **Blut:** **O₂-reich** (oxygeniert), nährstoffreich (Glukose, Aminosäuren)\n   - **Ziel:** Leber (Fetus) → Ductus venosus → V. cava inferior\n\n**AUSNAHME zur üblichen Konvention:**\n- **Normal:** Arterien = O₂-reich, Venen = O₂-arm\n- **Nabelschnur:** **Arterien = O₂-arm**, **Vene = O₂-reich** (da Plazenta = \"Lunge\" des Fetus)\n\n**Merkspruch:** \"2 Arterien (A×2) = O₂-arm, 1 Vene (V×1) = O₂-reich\"\n\n**Nach Geburt:**\n- Nabelschnur abgeklemmt → Gefäße obliterieren\n- **Aa. umbilicales** → Ligamenta umbilicalia medialia\n- **V. umbilicalis** → Ligamentum teres hepatis (Rundband der Leber)\n\n**Falsch (A):** 2 **Arterien** + 1 Vene (nicht 2 Venen + 1 Arterie).\n\n**Falsch (B):** Arterien transportieren **O₂-armes** (nicht O₂-reiches) Blut (Fetus → Plazenta).\n\n**Falsch (D):** Nabelschnur enthält Wharton-Sulze (Bindegewebe), nicht Knochenmark.\n\n**Falsch (E):** **Vene** transportiert **O₂-reiches** (nicht O₂-armes) Blut (Plazenta → Fetus).",
+    "difficulty": "easy",
+    "tags": [
+      "frühentwicklung",
+      "nabelschnur",
+      "arterien",
+      "vene",
+      "sauerstoff"
+    ]
+  },
+  {
+    "id": "bio-4-04-q03",
+    "question": "Welche Aussage über Plazenta-Hormone ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "hCG steigt kontinuierlich während der gesamten Schwangerschaft."
+      },
+      {
+        "id": "B",
+        "text": "Das Corpus luteum produziert während der gesamten Schwangerschaft Progesteron."
+      },
+      {
+        "id": "C",
+        "text": "hCG (humanes Choriongonadotropin) erreicht sein Maximum in der 8.–12. SSW und erhält das Corpus luteum in der Frühschwangerschaft. Ab der 12. SSW übernimmt die Plazenta die Progesteron-Produktion (luteoplazentare Shift). hPL (humanes Plazenta-Laktogen) bewirkt einen Glukose-Spareffekt durch erhöhte maternale Insulinresistenz."
+      },
+      {
+        "id": "D",
+        "text": "hPL senkt den maternalen Blutzucker."
+      },
+      {
+        "id": "E",
+        "text": "Die Plazenta produziert kein Östrogen."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Plazenta-Hormone:**\n\n**1. hCG (humanes Choriongonadotropin):**\n- **Produktion:** Synzytiotrophoblast (ab Implantation, Tag 6–7)\n- **Funktion:** Erhält **Corpus luteum** → Progesteron ↑ (Frühschwangerschaft)\n- **Zeitverlauf:**\n  - Exponentieller Anstieg in ersten Wochen\n  - **Maximum:** 8.–12. SSW\n  - Dann **Abfall** (Plazenta übernimmt Progesteron-Produktion)\n- **Diagnostik:** Schwangerschaftstest (Urin/Blut)\n\n**2. Progesteron:**\n- **Früh** (Woche 1–12): **Corpus luteum** (hCG-erhalten)\n- **Spät** (ab Woche 12): **Plazenta** übernimmt → **luteoplazentare Shift**\n- **Funktion:**\n  - **Endometrium-Erhaltung** (keine Menstruation)\n  - **Uterus-Relaxation** (Kontraktion ↓)\n  - **Immunsuppression** (Fetus-Toleranz)\n\n**3. Östrogen (v. a. Östriol, E₃):**\n- **Produktion:** Plazenta (kontinuierlicher Anstieg)\n- **Funktion:** Uterus-Wachstum, Brustdrüsen-Entwicklung\n\n**4. hPL (humanes Plazenta-Laktogen, hCS):**\n- **Produktion:** Plazenta (steigt mit Plazenta-Gewicht)\n- **Funktion:**\n  - **Glukose-Spareffekt** (maternal):\n    - **Lipolyse ↑** (Fettabbau) → Fettsäuren als Energiequelle (maternal)\n    - **Insulinresistenz ↑** (maternal) → **Blutzucker ↑** → mehr Glukose für Fetus\n  - **Brustdrüsen-Vorbereitung** (Laktation)\n- **Klinisch:** Gestationsdiabetes (wenn Insulinresistenz zu stark → Hyperglykämie)\n\n**Falsch (A):** hCG **Maximum 8.–12. SSW**, dann Abfall (nicht kontinuierlicher Anstieg).\n\n**Falsch (B):** Corpus luteum nur **bis 12. SSW** (dann Plazenta übernimmt Progesteron).\n\n**Falsch (D):** hPL **erhöht** (nicht senkt) maternalen Blutzucker (Insulinresistenz ↑ → Glukose für Fetus).\n\n**Falsch (E):** Plazenta produziert **Östrogen** (v. a. Östriol, E₃).",
+    "difficulty": "medium",
+    "tags": [
+      "frühentwicklung",
+      "plazenta",
+      "hcg",
+      "progesteron",
+      "hpl",
+      "luteoplazentare-shift"
+    ]
+  },
+  {
+    "id": "bio-4-04-q04",
+    "question": "Welche Aussage über die Plazentagängigkeit ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Insulin ist plazentagängig und reguliert den fetalen Blutzucker."
+      },
+      {
+        "id": "B",
+        "text": "IgG ist plazentagängig (aktiver Transport) und vermittelt Nestschutz. IgM, IgA und IgE sind NICHT plazentagängig. Ethanol und viele Teratogene (z. B. Thalidomid, Isotretinoin) sind plazentagängig. Heparin ist NICHT plazentagängig."
+      },
+      {
+        "id": "C",
+        "text": "Alle Antikörper (IgG, IgM, IgA, IgE) sind plazentagängig."
+      },
+      {
+        "id": "D",
+        "text": "Ethanol ist nicht plazentagängig und schadet dem Fetus nicht."
+      },
+      {
+        "id": "E",
+        "text": "Heparin ist plazentagängig und kann fetal verwendet werden."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Plazentagängigkeit:**\n\n**PLAZENTAGÄNGIG:**\n\n1. **Gase:** O₂, CO₂ (passiv, Diffusion)\n\n2. **Kleine Moleküle:**\n   - Glukose (erleichterte Diffusion, GLUT1)\n   - Aminosäuren (aktiv)\n   - Wasser, Elektrolyte (Na⁺, K⁺, Ca²⁺, PO₄³⁻)\n   - Harnstoff, Kreatinin (Abfallstoffe)\n\n3. **Lipophile Substanzen:**\n   - Fettlösliche Vitamine (A, D, E, K)\n   - Steroide (Cortisol, Testosteron)\n   - **Ethanol** (alkohol)\n   - **Nikotin**\n   - **Drogen** (Heroin, Kokain, Cannabis)\n\n4. **IgG** (aktiver Transport via Fc-Rezeptor):\n   - **Nestschutz** (passive Immunität für Neugeborenes, ~3–6 Monate)\n   - Schützt vor Infektionen (Masern, Röteln, Diphtherie, etc.)\n\n5. **Teratogene:**\n   - **Alkohol** → Fetales Alkoholsyndrom (FAS)\n   - **Isotretinoin** (Vitamin A-Derivat, Akne-Medikament) → kraniofaziale + kardiale Fehlbildungen\n   - **Thalidomid** → Phokomelie\n   - **Infektionen:** Röteln, Toxoplasmose, CMV (TORCH)\n\n**NICHT PLAZENTAGÄNGIG:**\n\n1. **Große Moleküle:**\n   - **Insulin** (Polypeptid, 51 Aminosäuren, ~6 kDa) → **NICHT** plazentagängig\n   - **Heparin** (Polysaccharid, ~15 kDa, negativ geladen) → **NICHT** plazentagängig (Antikoagulation maternal möglich ohne fetale Wirkung)\n\n2. **Antikörper** (außer IgG):\n   - **IgM, IgA, IgE** (zu groß, >150 kDa)\n   - **IgM beim Fetus:** Eigenproduktion → diagnostisch für intrauterine Infektion (TORCH)\n\n**Falsch (A):** **Insulin** ist **NICHT** plazentagängig (zu groß). Fetus produziert eigenes Insulin.\n\n**Falsch (C):** Nur **IgG** plazentagängig. **IgM, IgA, IgE** NICHT plazentagängig (zu groß).\n\n**Falsch (D):** **Ethanol** ist **plazentagängig** und **schädigt** Fetus (Fetales Alkoholsyndrom, FAS).\n\n**Falsch (E):** **Heparin** ist **NICHT** plazentagängig (zu groß, negativ geladen) → sicher in Schwangerschaft (maternal Antikoagulation ohne fetale Blutung).",
+    "difficulty": "hard",
+    "tags": [
+      "frühentwicklung",
+      "plazenta",
+      "plazentagängigkeit",
+      "igg",
+      "insulin",
+      "heparin",
+      "teratogene"
+    ]
+  },
+  {
+    "id": "bio-4-04-q05",
+    "question": "Welche Aussage über Fruchtwasser ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Fruchtwasser wird während der gesamten Schwangerschaft nur vom Amnion produziert."
+      },
+      {
+        "id": "B",
+        "text": "Oligohydramnion entsteht typischerweise bei Ösophagusatresie."
+      },
+      {
+        "id": "C",
+        "text": "Fruchtwasser wird früh (Woche 8–20) durch Amnion-Sekretion und spät (ab Woche 20) hauptsächlich durch fetalen Urin produziert. Funktionen umfassen Schutz, Bewegungsfreiheit und Lungenreifung. Polyhydramnion (>2 L) tritt z. B. bei Ösophagusatresie auf, Oligohydramnion (<500 mL) bei Nierenagenesie (Potter-Syndrom)."
+      },
+      {
+        "id": "D",
+        "text": "Der Fetus produziert ab der 20. Woche keinen Urin mehr."
+      },
+      {
+        "id": "E",
+        "text": "Fruchtwasser hat keine Funktion für die Lungenentwicklung."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** **Fruchtwasser** (Amnionflüssigkeit):\n\n**Produktion:**\n\n1. **Früh** (Woche 8–20):\n   - **Amnion-Sekretion** (Transsudat aus maternalem Blut)\n   - Menge: ~200 mL (20. SSW)\n\n2. **Spät** (ab Woche 20):\n   - **Fetaler Urin** (**Hauptquelle**, Nieren funktionsfähig)\n   - **Lungensekretion** (geringerer Anteil)\n   - Menge: ~800 mL (28. SSW), **~1 L** (36. SSW)\n\n**Abnahme:**\n- Fetus **schluckt** Fruchtwasser (~500 mL/Tag) → GIT → resorbiert\n- Menge bei Geburt: ~500 mL (40. SSW)\n\n**Funktionen:**\n1. **Schutz:** Stoßdämpfer (mechanisch)\n2. **Temperaturregulation:** Konstante Temperatur\n3. **Bewegungsfreiheit:** Muskel-/Skelettentwicklung (Kontrakturen-Vermeidung)\n4. **Lungenentwicklung:** Fetus \"atmet\" Fruchtwasser ein (Atemexkursionen) → Lungenreifung (Alveolen-Expansion)\n\n**Klinisch:**\n\n**Polyhydramnion** (>2 L):\n- **Ursachen:**\n  - **Ösophagusatresie:** Fetus kann Fruchtwasser **nicht schlucken** → Akkumulation\n  - **Anenzephalie:** Schluckreflex gestört\n  - **Diabetes mellitus** (maternal): Fetale Polyurie (Hyperglykämie → osmotische Diurese)\n  - **Duodenalatresie**\n- **Symptome:** Uterus-Überdehnung, vorzeitige Wehen\n\n**Oligohydramnion** (<500 mL):\n- **Ursachen:**\n  - **Nierenagenesie** (Potter-Syndrom): Fetus produziert **keinen Urin** → kein Fruchtwasser → Lungenhypoplasie, Kontrakturen, faziale Dysmorphie → **letal**\n  - **Vorzeitiger Blasensprung**\n  - **Plazentainsuffizienz** (fetale Wachstumsrestriktion)\n- **Folgen:** Lungenhypoplasie, Kontrakturen (Gelenkversteifung), Gesichtsanomalien\n\n**Falsch (A):** Früh (Amnion-Sekretion) + Spät (**fetaler Urin**, Hauptquelle ab Woche 20).\n\n**Falsch (B):** **Polyhydramnion** (nicht Oligohydramnion) bei Ösophagusatresie (Fetus kann nicht schlucken). **Oligohydramnion** = Nierenagenesie (kein Urin).\n\n**Falsch (D):** Fetus produziert **ab Woche 10–12 Urin** (Metanephros funktionsfähig), wichtigste Quelle ab Woche 20.\n\n**Falsch (E):** Fruchtwasser ist **essenziell** für Lungenentwicklung (Fetus atmet ein → Alveolen-Expansion, Reifung). Oligohydramnion → Lungenhypoplasie.",
+    "difficulty": "medium",
+    "tags": [
+      "frühentwicklung",
+      "fruchtwasser",
+      "amnion",
+      "polyhydramnion",
+      "oligohydramnion",
+      "potter-syndrom"
+    ]
+  }
+]

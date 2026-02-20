@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-8-01-q1",
+    "question": "Eine 38-jährige Schwangere kommt zur genetischen Beratung. Welche Aussage zur **genetischen Beratung** ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Genetische Beratung ist direktiv: Der Genetiker entscheidet, ob die Schwangerschaft fortgesetzt werden soll"
+      },
+      {
+        "id": "B",
+        "text": "Genetische Beratung ist nicht-direktiv: Der Berater informiert über Risiken und Optionen, trifft aber keine Entscheidung für die Patientin"
+      },
+      {
+        "id": "C",
+        "text": "Genetische Beratung ist nur bei familiärer Vorbelastung indiziert, nicht bei Alter >35 Jahre"
+      },
+      {
+        "id": "D",
+        "text": "Genetische Beratung umfasst nur Karyotypisierung, keine Stammbaumanalyse oder Risiko-Berechnung"
+      },
+      {
+        "id": "E",
+        "text": "Genetische Beratung ist nur post-natal möglich, nicht pränatal"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Genetische Beratung ist nicht-direktiv:** Der Berater **informiert** über Risiken (Stammbaumanalyse, Hardy-Weinberg, Trisomie-Risiko), diagnostische Optionen (NIPT, Amnio, CVS) und mögliche Konsequenzen, trifft aber **keine Entscheidung** für die Patientin (Autonomie!). **Indikationen:** Alter >35 Jahre (Trisomie-Risiko ↑), familiäre Vorbelastung, auffälliger Ultraschall, Konsanguinität, wiederholte Fehlgeburten. Wichtig: **Nicht-direktiv** = informieren, **nicht** entscheiden!",
+    "difficulty": "easy",
+    "tags": ["Humangenetik", "Genetische Beratung", "Nicht-direktiv", "Indikationen"]
+  },
+  {
+    "id": "bio-8-01-q2",
+    "question": "Ein Karyotyp wird als **47,XXY** beschrieben. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Turner-Syndrom (45,X): weiblich, Kleinwuchs, Pterygium colli, Ovarial-Dysgenesie"
+      },
+      {
+        "id": "B",
+        "text": "Klinefelter-Syndrom (47,XXY): männlich (Y vorhanden), Hypogonadismus, Infertilität, Gynäkomastie"
+      },
+      {
+        "id": "C",
+        "text": "Trisomie 21 (Down-Syndrom): 47,XX/XY,+21, faziale Dysmorphie, Herzfehler"
+      },
+      {
+        "id": "D",
+        "text": "Triple-X-Syndrom (47,XXX): weiblich, meist unauffällig, hoher Wuchs"
+      },
+      {
+        "id": "E",
+        "text": "XYY-Syndrom: männlich, meist unauffällig, hoher Wuchs"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**47,XXY = Klinefelter-Syndrom:** **Männlich** (Y-Chromosom vorhanden!), häufigste Gonosomen-Aberration bei ♂. Klinisch: **Hypogonadismus** (kleine Hoden), **Infertilität** (Azoospermie), **Gynäkomastie** (Brustentwicklung), hoher Wuchs, leichte kognitive Defizite (variabel). **Wichtig:** **Y vorhanden → männlich** (auch bei XXY, XYY), **kein Y → weiblich** (45,X Turner, 47,XXX). Turner = 45,X (Monosomie X), Trisomie 21 = 47,+21 (nicht XXY!).",
+    "difficulty": "easy",
+    "tags": ["Humangenetik", "Karyotyp", "Klinefelter-Syndrom", "47,XXY", "Gonosomen-Aberration"]
+  },
+  {
+    "id": "bio-8-01-q3",
+    "question": "Im **Ersttrimester-Screening** (11.–14. SSW) wird die **Nackentransparenz (NT)** gemessen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "NT ↑ (>3,5 mm) ist ein normaler Befund und hat keine klinische Relevanz"
+      },
+      {
+        "id": "B",
+        "text": "NT ↑ (>3,5 mm) erhöht das Risiko für Trisomie 21 (Down-Syndrom), Trisomie 18/13 und Herzfehler"
+      },
+      {
+        "id": "C",
+        "text": "NT wird im 2. Trimenon (20.–22. SSW) gemessen, nicht im 1. Trimenon"
+      },
+      {
+        "id": "D",
+        "text": "NT ↓ (sehr niedrig) ist ein Marker für Trisomie 21, nicht NT ↑"
+      },
+      {
+        "id": "E",
+        "text": "NT-Messung ist eine invasive Methode (wie Amniozentese) mit Fehlgeburt-Risiko"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Nackentransparenz (NT):** Flüssigkeitsansammlung im fetalen Nacken, gemessen im **Ersttrimester-Screening (11.–14. SSW)** via **Ultraschall (nicht-invasiv)**. **NT ↑** (>3,5 mm) → erhöhtes Risiko für: (1) **Trisomie 21** (Down-Syndrom), (2) Trisomie 18 (Edwards), Trisomie 13 (Pätau), (3) **Herzfehler**, (4) andere Fehlbildungen. **Weitere Marker:** Nasenbein fehlt (bei Trisomie 21 oft). **Wichtig:** NT = **Screening** (kein Beweis), Bestätigung durch NIPT oder Amnio!",
+    "difficulty": "medium",
+    "tags": ["Humangenetik", "Pränatale Diagnostik", "Nackentransparenz", "NT", "Trisomie-Screening"]
+  },
+  {
+    "id": "bio-8-01-q4",
+    "question": "**NIPT (Non-Invasive Prenatal Testing)** nutzt **cell-free fetal DNA (cffDNA)** im mütterlichen Blut. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "NIPT ist eine invasive Methode (wie Amniozentese) mit ~1% Fehlgeburt-Risiko"
+      },
+      {
+        "id": "B",
+        "text": "NIPT hat eine Sensitivität von ~50% für Trisomie 21 (Down-Syndrom) und ist daher unzuverlässig"
+      },
+      {
+        "id": "C",
+        "text": "NIPT kann Trisomie 21/18/13 und Gonosomen-Aberrationen (XXY, XO) mit >99% Sensitivität erkennen (nicht-invasiv)"
+      },
+      {
+        "id": "D",
+        "text": "NIPT ersetzt Karyotypisierung vollständig und benötigt keine Bestätigung durch invasive Diagnostik"
+      },
+      {
+        "id": "E",
+        "text": "NIPT ist nur ab der 30. SSW möglich, nicht früher"
+      }
+    ],
+    "correct": "C",
+    "explanation": "**NIPT (Non-Invasive Prenatal Testing):** **Cell-free fetal DNA (cffDNA)** im mütterlichen Blut (~10% fetale DNA ab **10. SSW**). **Next-Generation Sequencing (NGS)** → Chromosomenzahl-Anomalien. **Erkennbar:** Trisomie 21/18/13, Gonosomen (XXY, XO, XXX, XYY). **Sensitivität:** **>99% für Trisomie 21** (sehr hoch!). **Vorteil:** **Nicht-invasiv** (kein Fehlgeburt-Risiko). **Nachteil:** Nur **Screening** (kein vollständiger Karyotyp), falsch-positive Ergebnisse → **Bestätigung durch Amnio** (Karyotypisierung)!",
+    "difficulty": "medium",
+    "tags": ["Humangenetik", "Pränatale Diagnostik", "NIPT", "cffDNA", "Trisomie-Screening"]
+  },
+  {
+    "id": "bio-8-01-q5",
+    "question": "Eine Schwangere (20. SSW) soll eine invasive pränatale Diagnostik erhalten. **Amniozentese** und **Chorionzottenbiopsie** sind zwei Optionen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Chorionzottenbiopsie (CVS) wird in 15.–18. SSW durchgeführt, Amniozentese in 11.–14. SSW (CVS später)"
+      },
+      {
+        "id": "B",
+        "text": "Amniozentese wird in 15.–18. SSW durchgeführt (Fruchtwasser), Fehlgeburt-Risiko ~0,5–1%"
+      },
+      {
+        "id": "C",
+        "text": "Chorionzottenbiopsie hat ein niedrigeres Fehlgeburt-Risiko (~0,1%) als Amniozentese (~5%)"
+      },
+      {
+        "id": "D",
+        "text": "Amniozentese und Chorionzottenbiopsie sind nicht-invasive Methoden (kein Fehlgeburt-Risiko)"
+      },
+      {
+        "id": "E",
+        "text": "Chorionzottenbiopsie kann keine Karyotypisierung durchführen, nur Amniozentese"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Amniozentese:** **15.–18. SSW**, Punktion Fruchtblase (transabdominal), **Fruchtwasser** (Amniozyten) entnommen → Karyotypisierung, Molekulargenetik, AFP. **Fehlgeburt-Risiko: ~0,5–1%**. **Chorionzottenbiopsie (CVS):** **11.–14. SSW** (früher!), Punktion Plazenta, **Chorionzotten** (Trophoblast) → Karyotypisierung. **Fehlgeburt-Risiko: ~1–2%** (höher als Amnio!). **Vorteil CVS:** Früher (11. SSW), schnelle Ergebnisse. **Wichtig:** CVS **früher**, Amnio **später** + **niedriger Risiko**!",
+    "difficulty": "hard",
+    "tags": ["Humangenetik", "Pränatale Diagnostik", "Amniozentese", "Chorionzottenbiopsie", "CVS"]
+  },
+  {
+    "id": "bio-8-01-q6",
+    "question": "**Folsäure** (0,4 mg/Tag) wird präkonzeptionell und im 1. Trimenon empfohlen. Welche Erkrankung wird dadurch präventiert?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Trisomie 21 (Down-Syndrom): Folsäure reduziert Nicht-Disjunktion in der Meiose"
+      },
+      {
+        "id": "B",
+        "text": "Neuralrohrdefekte (Spina bifida, Anenzephalie): Folsäure reduziert Risiko um 50–70%"
+      },
+      {
+        "id": "C",
+        "text": "Klinefelter-Syndrom (47,XXY): Folsäure verhindert X-Chromosomen-Nicht-Disjunktion"
+      },
+      {
+        "id": "D",
+        "text": "Sichelzellanämie (HbS/HbS): Folsäure korrigiert die Missense-Mutation im β-Globin-Gen"
+      },
+      {
+        "id": "E",
+        "text": "Mukoviszidose (ΔF508): Folsäure ersetzt die fehlende Phenylalanin-508-Aminosäure"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Folsäure (0,4 mg/Tag):** Empfohlen **präkonzeptionell** + **1. Trimenon** (erste 12 SSW) → **Neuralrohrdefekte ↓ 50–70%**. **Neuralrohrdefekte:** **Spina bifida** (offener Rücken, Wirbelsäulenspalte), **Anenzephalie** (Hirn fehlt, letal). **Neuralrohr** schließt sich **Tag 28** der Embryonalentwicklung → Folsäure-Mangel → Verschluss-Defekt. **Screening:** AFP ↑↑ (Blut + Fruchtwasser), Ultraschall. **Wichtig:** Folsäure **präventiert** Neuralrohrdefekte, **nicht** Trisomien (Chromosomenzahl-Anomalien)!",
+    "difficulty": "easy",
+    "tags": ["Humangenetik", "Pränatale Diagnostik", "Folsäure", "Neuralrohrdefekte", "Spina bifida", "Prävention"]
+  }
+]

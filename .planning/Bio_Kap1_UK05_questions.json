@@ -1,0 +1,176 @@
+[
+  {
+    "id": "q1",
+    "question": "Was ist die Hauptfunktion des Nucleolus?",
+    "options": [
+      {
+        "id": "A",
+        "text": "DNA-Replikation"
+      },
+      {
+        "id": "B",
+        "text": "Synthese von ribosomaler RNA (rRNA) und Assemblierung ribosomaler Untereinheiten"
+      },
+      {
+        "id": "C",
+        "text": "Lipidsynthese"
+      },
+      {
+        "id": "D",
+        "text": "Proteinabbau"
+      },
+      {
+        "id": "E",
+        "text": "ATP-Produktion"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Der NUCLEOLUS (Kernkörperchen) ist die 'Ribosom-Fabrik' der Zelle. Hauptfunktionen: (1) SYNTHESE von rRNA (18S, 5,8S, 28S via RNA-Polymerase I aus rDNA-Clustern), (2) ASSEMBLIERUNG ribosomaler Untereinheiten (40S + 60S) durch Kombination von rRNA mit ~80 ribosomalen Proteinen (aus Zytoplasma importiert), (3) EXPORT der Untereinheiten ins Zytoplasma. Der Nucleolus ist NICHT membranumschlossen und VERSCHWINDET in der Mitose (Chromosomen kondensieren → rDNA-Transkription stoppt). A ist falsch (DNA-Replikation im gesamten Kern, nicht spezifisch Nucleolus). C, D, E sind falsch (andere Orte).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Welche Struktur bildet die Kernhülle?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Einfache Membran mit Poren"
+      },
+      {
+        "id": "B",
+        "text": "Doppelmembran (äußere + innere Membran) mit Kernporen"
+      },
+      {
+        "id": "C",
+        "text": "Nur Proteinschicht ohne Membran"
+      },
+      {
+        "id": "D",
+        "text": "Dreifache Membran"
+      },
+      {
+        "id": "E",
+        "text": "Zellwand aus Cellulose"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Die KERNHÜLLE besteht aus einer DOPPELMEMBRAN (äußere + innere Kernmembran, je ~7 nm dick) mit dazwischenliegendem perinukleären Raum (~10-50 nm). ÄUSSERE MEMBRAN ist kontinuierlich mit dem rauen ER (Ribosomen-besetzt). INNERE MEMBRAN interagiert mit der Kernlamina (Lamin-Netzwerk für Stabilität). KERNPOREN (~3000-4000 pro Kern) durchspannen BEIDE Membranen und ermöglichen selektiven nucleozytoplasmatischen Transport. A ist falsch (nicht einfach, sondern doppelt). C ist falsch (Membran vorhanden, Kernlamina ist zusätzliche Protein-Stabilisierung). D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q3",
+    "question": "Wie werden große Proteine (>40 kDa) mit Nuclear Localization Signal (NLS) in den Zellkern transportiert?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Durch passive Diffusion durch Kernporen"
+      },
+      {
+        "id": "B",
+        "text": "Durch aktiven, rezeptorvermittelten Transport: Importin bindet an NLS, Ran-GTP-abhängige Translokation durch Kernpore"
+      },
+      {
+        "id": "C",
+        "text": "Durch Endozytose"
+      },
+      {
+        "id": "D",
+        "text": "Proteine können nicht in den Kern gelangen"
+      },
+      {
+        "id": "E",
+        "text": "Durch die Zellmembran, nicht durch Kernporen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: AKTIVER KERNIMPORT für große Proteine (>40 kDa): (1) Protein hat NLS (Nuclear Localization Signal = basische Aminosäure-Sequenz, z.B. KKKRK), (2) IMPORTIN-α/β bindet an NLS im Zytoplasma, (3) Komplex transloziert durch KERNPORE (aktiver Transport), (4) Im Kern: Ran-GTP (hoch im Kern dank RanGEF) bindet Importin → Protein wird FREIGESETZT, (5) Importin-Ran-GTP-Komplex exportiert ins Zytoplasma, (6) Ran-GTP → Ran-GDP (via RanGAP) → Importin recycelt. Ran-GTP-GRADIENT (hoch Kern, niedrig Zytoplasma) treibt gerichteten Transport. A ist falsch (passive Diffusion nur <40 kDa). C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q4",
+    "question": "Was ist ein Nucleosom?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Eine Ribosomen-Untereinheit"
+      },
+      {
+        "id": "B",
+        "text": "Die Grundeinheit der Chromatin-Verpackung: 146 Basenpaare DNA + Histon-Oktamer (2× H2A, H2B, H3, H4)"
+      },
+      {
+        "id": "C",
+        "text": "Ein Teil des Nucleolus"
+      },
+      {
+        "id": "D",
+        "text": "Eine Kernpore"
+      },
+      {
+        "id": "E",
+        "text": "Ein Mitochondrium"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Das NUCLEOSOM ist die GRUNDEINHEIT der DNA-VERPACKUNG (Chromatin). Aufbau: 146 Basenpaare DNA wickeln sich 1,65-mal um ein HISTON-OKTAMER (8 Histon-Proteine: je 2 Kopien von H2A, H2B, H3, H4). Plus: Verbindungs-DNA (~20-60 Bp) + Linker-Histon H1 (stabilisiert). Struktur: 'Perlenschnur' (Nucleosomen = Perlen, DNA = Schnur). Weitere Verpackung: Nucleosomen → 30-nm-Faser → Chromatin-Schleifen → kondensiertes Chromosom (10.000-fache Verkürzung!). Histone sind POSITIV geladen (basisch) → binden NEGATIV geladene DNA (Phosphat-Gruppen). A ist falsch (Ribosom ≠ Nucleosom). C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q5",
+    "question": "Wie viele Chromosomen hat eine menschliche somatische Zelle?",
+    "options": [
+      {
+        "id": "A",
+        "text": "23 Chromosomen (haploid)"
+      },
+      {
+        "id": "B",
+        "text": "46 Chromosomen (diploid): 22 Autosomenpaare + 1 Gonosomenpaar (XX oder XY)"
+      },
+      {
+        "id": "C",
+        "text": "48 Chromosomen"
+      },
+      {
+        "id": "D",
+        "text": "92 Chromosomen"
+      },
+      {
+        "id": "E",
+        "text": "Keine Chromosomen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: MENSCHLICHE SOMATISCHE ZELLEN (Körperzellen: Muskel, Haut, Leber, etc.) haben 46 CHROMOSOMEN = DIPLOID (2n). Aufschlüsselung: 22 AUTOSOMENPAARE (Chromosomen 1-22, jeweils maternal + paternal) + 1 GONOSOMENPAAR (Geschlechtschromosomen: XX bei Frauen, XY bei Männern). GAMETEN (Spermien, Eizellen) haben nur 23 CHROMOSOMEN = HAPLOID (n, nach Meiose). Bei Befruchtung: 23 (Spermium) + 23 (Eizelle) = 46 (Zygote). A ist falsch (nur Gameten). C ist falsch (das wären Schimpansen, ~48-49). D ist falsch (wäre 4n = tetraploid, pathologisch). E ist falsch (prokaryotische Bakterien haben Nucleoid, aber Eukaryoten haben Chromosomen).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q6",
+    "question": "Was passiert mit dem Nucleolus während der Mitose?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Er verdoppelt sich"
+      },
+      {
+        "id": "B",
+        "text": "Er verschwindet (Chromosomen kondensieren, rDNA-Transkription stoppt) und reformiert sich in der Telophase"
+      },
+      {
+        "id": "C",
+        "text": "Er bleibt unverändert"
+      },
+      {
+        "id": "D",
+        "text": "Er wandert ins Zytoplasma"
+      },
+      {
+        "id": "E",
+        "text": "Er produziert mehr rRNA als sonst"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: In der MITOSE VERSCHWINDET der Nucleolus während der PROPHASE. Grund: (1) Chromosomen KONDENSIEREN stark (DNA-Verpackung für Zellteilung), (2) rDNA-TRANSKRIPTION wird GESTOPPT (RNA-Polymerase I inaktiv), (3) Nucleolus-Komponenten (rRNA, ribosomale Proteine) dispergieren im Nucleoplasma. Nach der Mitose in TELOPHASE: Chromosomen dekondensieren → rDNA-Gene werden wieder transkriptionsaktiv → Nucleolus REFORMIERT sich an den nucleolären Organisationsregionen (NORs, meist auf Chromosomen 13, 14, 15, 21, 22 beim Menschen). A ist falsch (verschwindet, verdoppelt sich nicht). C ist falsch (ändert sich dramatisch). D, E sind falsch.",
+    "difficulty": "medium"
+  }
+]

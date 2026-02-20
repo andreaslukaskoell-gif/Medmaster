@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-10-01-q1",
+    "question": "Ein **Ökosystem** besteht aus zwei Hauptkomponenten. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ökosystem = nur Biotop (abiotische Umwelt: Licht, Temperatur, Wasser), ohne Organismen"
+      },
+      {
+        "id": "B",
+        "text": "Ökosystem = Biotop (Lebensraum, abiotisch) + Biozönose (Lebensgemeinschaft, biotisch: alle Organismen)"
+      },
+      {
+        "id": "C",
+        "text": "Ökosystem = nur Biozönose (Organismen), ohne abiotische Faktoren"
+      },
+      {
+        "id": "D",
+        "text": "Ökosystem = nur eine einzelne Art in ihrem Lebensraum"
+      },
+      {
+        "id": "E",
+        "text": "Biotop und Biozönose sind identisch (keine Unterscheidung)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Ökosystem = Biotop + Biozönose:** (1) **Biotop** = **Lebensraum** (**abiotische** Umwelt: Licht, Temperatur, Wasser, Boden, pH), z.B. See, Wald, Wiese. (2) **Biozönose** = **Lebensgemeinschaft** (**biotische** Komponente: **alle Organismen** in einem Biotop), z.B. alle Pflanzen, Tiere, Mikroorganismen in einem See. **Ökosystem** = **Funktionseinheit** (Energie- und Stoffflüsse zwischen biotischen und abiotischen Komponenten). **Ebenen:** Individuum → Population → Lebensgemeinschaft → **Ökosystem** → Biosphäre (alle Ökosysteme).",
+    "difficulty": "easy",
+    "tags": ["Ökologie", "Ökosystem", "Biotop", "Biozönose"]
+  },
+  {
+    "id": "bio-10-01-q2",
+    "question": "Die **ökologische Nische** (Hutchinson) beschreibt die Rolle einer Art im Ökosystem. Was ist der Unterschied zwischen **fundamentaler** und **realisierter** Nische?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Fundamentale Nische = tatsächlich genutzter Bereich (mit Konkurrenz), Realisierte Nische = theoretisch möglicher Bereich (ohne Konkurrenz)"
+      },
+      {
+        "id": "B",
+        "text": "Fundamentale Nische = theoretisch möglicher Bereich (ohne Konkurrenz, Räuber), Realisierte Nische = tatsächlich genutzt (mit Konkurrenz) → immer kleiner"
+      },
+      {
+        "id": "C",
+        "text": "Beide sind identisch (kein Unterschied)"
+      },
+      {
+        "id": "D",
+        "text": "Ökologische Nische = nur der physische Lebensraum (z.B. Baum), ohne Nahrung oder Verhalten"
+      },
+      {
+        "id": "E",
+        "text": "Fundamentale Nische ist immer kleiner als realisierte Nische"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Ökologische Nische (Hutchinson):** Gesamtheit **aller** biotischen + abiotischen Faktoren für Überleben (Nahrung, Temperatur, pH, Verhalten, etc.), **nicht nur** Lebensraum! **Fundamentale Nische:** **Theoretisch** möglicher Bereich (**ohne** Konkurrenz, Räuber, Parasiten). **Realisierte Nische:** **Tatsächlich** genutzter Bereich (**mit** Konkurrenz, Räuber) → **immer kleiner** als fundamentale Nische. **Beispiel:** Seepocke *Chthamalus*: fundamentale Nische = gesamte Gezeitenzone, realisierte Nische = nur oberer Bereich (Konkurrenz durch *Balanus* unten). **Wichtig:** Realisierte **kleiner** als fundamentale!",
+    "difficulty": "medium",
+    "tags": ["Ökologie", "Ökologische Nische", "Fundamentale Nische", "Realisierte Nische"]
+  },
+  {
+    "id": "bio-10-01-q3",
+    "question": "Das **Konklusionsausschlussprinzip** (Gause) beschreibt die Koexistenz von Arten mit ähnlichen Nischen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Zwei Arten mit identischer ökologischer Nische können dauerhaft koexistieren (beide überleben)"
+      },
+      {
+        "id": "B",
+        "text": "Zwei Arten mit identischer ökologischer Nische können NICHT koexistieren (eine verdrängt die andere durch Konkurrenz)"
+      },
+      {
+        "id": "C",
+        "text": "Konkurrenz spielt keine Rolle für die Koexistenz von Arten"
+      },
+      {
+        "id": "D",
+        "text": "Arten mit unterschiedlichen Nischen können nicht koexistieren (nur identische Nischen erlauben Koexistenz)"
+      },
+      {
+        "id": "E",
+        "text": "Das Prinzip gilt nur für Pflanzen, nicht für Tiere"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Konklusionsausschlussprinzip (Competitive Exclusion Principle, Gause):** Zwei Arten mit **identischer ökologischer Nische** können **NICHT** dauerhaft koexistieren → eine Art verdrängt die andere (**Konkurrenz**). **Grund:** Ressourcen begrenzt (Nahrung, Lebensraum) → stärkere Art dominiert. **Beispiel:** Seepocken *Chthamalus* vs. *Balanus*: *Balanus* verdrängt *Chthamalus* im unteren Bereich (Konkurrenz). **Koexistenz nur möglich:** Wenn Nischen **unterschiedlich** sind (Nischendifferenzierung, z.B. unterschiedliche Nahrung, Lebensraum, Aktivitätszeit). **Wichtig:** Identische Nische → eine Art gewinnt!",
+    "difficulty": "medium",
+    "tags": ["Ökologie", "Konklusionsausschlussprinzip", "Gause", "Konkurrenz"]
+  },
+  {
+    "id": "bio-10-01-q4",
+    "question": "**Biotische Faktoren** beschreiben Wechselwirkungen zwischen Organismen. Welche Interaktion ist ein **Mutualismus**?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Fuchs frisst Hase (Räuber-Beute, Prädation: +/−)"
+      },
+      {
+        "id": "B",
+        "text": "Biene bestäubt Blüte (Biene erhält Nektar, Blüte wird bestäubt: +/+, beide profitieren)"
+      },
+      {
+        "id": "C",
+        "text": "Bandwurm lebt in Mensch (Parasitismus: +/−, Parasit profitiert, Wirt geschädigt)"
+      },
+      {
+        "id": "D",
+        "text": "Zwei Bäume konkurrieren um Licht (Konkurrenz: −/−, beide Nachteil)"
+      },
+      {
+        "id": "E",
+        "text": "Remora-Fisch heftet sich an Hai (Kommensalismus: +/0, Fisch profitiert, Hai neutral)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Biotische Faktoren (Wechselwirkungen zwischen Organismen):** (1) **Mutualismus (+/+):** **Beide** profitieren. **Beispiele:** Biene + Blüte (Biene erhält Nektar, Blüte wird bestäubt), Flechten (Pilz + Alge, Pilz liefert Wasser/Schutz, Alge liefert Zucker). (2) **Konkurrenz (−/−):** Beide Nachteil (Bäume um Licht). (3) **Prädation (+/−):** Räuber profitiert, Beute stirbt (Fuchs frisst Hase). (4) **Parasitismus (+/−):** Parasit profitiert, Wirt geschädigt (Bandwurm in Mensch). (5) **Kommensalismus (+/0):** Eine profitiert, andere neutral (Remora-Fisch + Hai). **Wichtig:** Mutualismus = beide profitieren (+/+)!",
+    "difficulty": "easy",
+    "tags": ["Ökologie", "Biotische Faktoren", "Mutualismus", "Symbiose"]
+  },
+  {
+    "id": "bio-10-01-q5",
+    "question": "Die **Bergmann-Regel** und **Allen-Regel** beschreiben Anpassungen endothermer Tiere (Warmblüter) an Temperatur. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Bergmann: Körpergröße nimmt ab in kälteren Regionen (kleinerer Körper → weniger Wärmeverlust)"
+      },
+      {
+        "id": "B",
+        "text": "Bergmann: Körpergröße nimmt zu in kälteren Regionen (größerer Körper → kleineres Oberflächen-Volumen-Verhältnis → weniger Wärmeverlust). Allen: Körperanhänge kürzer in kälteren Regionen"
+      },
+      {
+        "id": "C",
+        "text": "Allen: Körperanhänge (Ohren, Schwanz) werden länger in kälteren Regionen (mehr Wärmeabgabe)"
+      },
+      {
+        "id": "D",
+        "text": "Beide Regeln gelten nur für Pflanzen, nicht für Tiere"
+      },
+      {
+        "id": "E",
+        "text": "Beide Regeln gelten nur für ektotherme Tiere (wechselwarm), nicht für endotherme"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Bergmann-Regel:** **Körpergröße ↑** in **kälteren** Regionen (endotherme Tiere). **Grund:** Größer Körper → **kleineres Oberflächen-Volumen-Verhältnis** → **weniger Wärmeverlust** pro Volumen. **Beispiel:** Eisbär (groß, Arktis, ~450 kg) vs. Malaienbär (klein, Tropen, ~50 kg). **Allen-Regel:** **Körperanhänge** (Ohren, Schwanz, Beine) werden **kürzer** in **kälteren** Regionen. **Grund:** Kurze Anhänge → **kleinere Oberfläche** → weniger Wärmeverlust. **Beispiel:** Polarfuchs (kurze Ohren, Arktis) vs. Wüstenfuchs/Fennek (lange Ohren, Sahara, Wärmeabgabe!). **Wichtig:** Beide Regeln = Anpassung an **Kälte** (Wärmeverlust minimieren)!",
+    "difficulty": "medium",
+    "tags": ["Ökologie", "Bergmann-Regel", "Allen-Regel", "Thermoregulation"]
+  },
+  {
+    "id": "bio-10-01-q6",
+    "question": "Die **10%-Regel** (Lindeman) beschreibt den Energiefluss in Ökosystemen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "100% der Energie einer Trophieebene wird an die nächste Ebene weitergegeben (keine Verluste)"
+      },
+      {
+        "id": "B",
+        "text": "Nur ~10% der Energie einer Trophieebene wird an die nächste weitergegeben, ~90% geht als Wärme verloren (Atmung, Bewegung) → max. 4–5 Ebenen"
+      },
+      {
+        "id": "C",
+        "text": "Energie wird wie Stoffe recycelt (zyklischer Kreislauf)"
+      },
+      {
+        "id": "D",
+        "text": "Destruenten (Bakterien, Pilze) produzieren neue Energie durch Photosynthese"
+      },
+      {
+        "id": "E",
+        "text": "Je höher die Trophieebene, desto mehr Energie ist verfügbar (Energie nimmt zu)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**10%-Regel (Lindeman):** Nur ~**10%** der Energie einer Trophieebene wird an **nächste Ebene** weitergegeben. ~**90%** als **Wärme verloren** (Atmung, Bewegung, nicht gefressen). **Beispiel:** Produzenten 10.000 kJ → Primärkonsumenten ~1.000 kJ (10%) → Sekundärkonsumenten ~100 kJ (10%) → Tertiärkonsumenten ~10 kJ (10%). **Konsequenz:** Max. **4–5 Trophieebenen** (Energie zu gering für weitere Ebenen). **Energiefluss = Einbahnstraße** (Sonne → Organismen → **Wärme**, **NICHT zyklisch** wie Stoffe!). **Wichtig:** Destruenten recyceln **Stoffe**, nicht Energie!",
+    "difficulty": "hard",
+    "tags": ["Ökologie", "10%-Regel", "Energiefluss", "Trophieebenen", "Lindeman"]
+  }
+]

@@ -1,0 +1,147 @@
+[
+  {
+    "id": "q1",
+    "question": "Was ist der Unterschied zwischen Zytosol und Zytoplasma?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Zytosol und Zytoplasma sind identische Begriffe"
+      },
+      {
+        "id": "B",
+        "text": "Zytosol ist die flüssige Phase (ohne Organellen), Zytoplasma ist Zytosol + Organellen"
+      },
+      {
+        "id": "C",
+        "text": "Zytoplasma ist nur in Pflanzenzellen, Zytosol nur in Tierzellen"
+      },
+      {
+        "id": "D",
+        "text": "Zytosol enthält den Zellkern, Zytoplasma nicht"
+      },
+      {
+        "id": "E",
+        "text": "Zytosol ist außerhalb der Zelle, Zytoplasma innen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: ZYTOSOL = NUR die FLÜSSIGE PHASE des Zellinneren (wässrige Lösung mit Ionen, Proteinen, Metaboliten), OHNE Organellen. ZYTOPLASMA = GESAMTER Zellinhalt zwischen Zellmembran und Zellkern (Zytosol + alle Organellen wie Mitochondrien, ER, Ribosomen). Merksatz: Zytoplasma enthält Mitochondrien (korrekt), aber Zytosol enthält KEINE Mitochondrien (Organellen sind ausgeschlossen). A ist falsch (nicht identisch). C ist falsch (beide Begriffe in allen Zellen). D ist falsch (Zellkern liegt im Zytoplasma, aber wird oft separat betrachtet). E ist falsch (beide innen).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Wo findet die Glykolyse (Abbau von Glukose zu Pyruvat) statt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "In den Mitochondrien"
+      },
+      {
+        "id": "B",
+        "text": "Im Zellkern"
+      },
+      {
+        "id": "C",
+        "text": "Im Zytosol"
+      },
+      {
+        "id": "D",
+        "text": "Im Endoplasmatischen Retikulum"
+      },
+      {
+        "id": "E",
+        "text": "Im Golgi-Apparat"
+      }
+    ],
+    "correct": "C",
+    "explanation": "C ist korrekt: Die GLYKOLYSE findet KOMPLETT im ZYTOSOL statt (nicht in Mitochondrien!). Glukose wird im Zytosol zu 2 Pyruvat abgebaut → 2 ATP + 2 NADH gewonnen. Glykolyse ist ANAEROB (ohne O₂ möglich). Pyruvat geht DANN in Mitochondrien (für Citratzyklus + Atmungskette bei aerober Atmung) ODER wird im Zytosol zu Laktat umgesetzt (Gärung, wenn kein O₂). A ist falsch (häufiger Fehler! Nur Citratzyklus + Atmungskette in Mitochondrien). B, D, E sind falsch (keine Glykolyse dort).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q3",
+    "question": "Welche Ionenkonzentration ist im Zytosol am höchsten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Natrium (Na⁺) ist im Zytosol höher als außerhalb der Zelle"
+      },
+      {
+        "id": "B",
+        "text": "Kalium (K⁺) ist im Zytosol höher (~140 mM) als außerhalb (~5 mM)"
+      },
+      {
+        "id": "C",
+        "text": "Calcium (Ca²⁺) ist im Zytosol sehr hoch (~1 mM)"
+      },
+      {
+        "id": "D",
+        "text": "Chlorid (Cl⁻) ist im Zytosol am höchsten"
+      },
+      {
+        "id": "E",
+        "text": "Alle Ionen haben gleiche Konzentrationen innen und außen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: KALIUM (K⁺) ist das HAUPTKATION im Zytosol mit ~140 mM (extrazellulär nur ~5 mM). NATRIUM (Na⁺) ist NIEDRIG im Zytosol (~10 mM, extrazellulär ~140 mM). Dieser K⁺/Na⁺-Gradient wird durch die Na⁺/K⁺-ATPase aufrechterhalten (pumpt 3 Na⁺ RAUS, 2 K⁺ REIN, ATP-abhängig) und ist essentiell für Membranpotential, Nervenimpulse, Zellvolumen. A ist falsch (umgekehrt - Na⁺ niedrig innen, hoch außen). C ist falsch (Ca²⁺ ist extrem NIEDRIG im Zytosol ~100 nM = 0,0001 mM, extrazellulär ~1 mM → Ca²⁺ als Signalmolekül). D ist falsch. E ist falsch (Gradienten sind essentiell).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Bei einem Patienten mit Herzinfarkt werden erhöhte Blutwerte für Laktatdehydrogenase (LDH) und Kreatinkinase (CK) gemessen. Was bedeutet das?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Die Enzyme sind normal und zeigen Gesundheit an"
+      },
+      {
+        "id": "B",
+        "text": "Die Enzyme sind aus dem Zytosol geschädigter Herz-/Muskelzellen ins Blut ausgetreten - Marker für Zellnekrose"
+      },
+      {
+        "id": "C",
+        "text": "Der Patient produziert zu viele Enzyme"
+      },
+      {
+        "id": "D",
+        "text": "Die Enzyme sind extrazellulär synthetisiert worden"
+      },
+      {
+        "id": "E",
+        "text": "Die Messung ist ein Fehler, Enzyme können nicht im Blut sein"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: LDH (Laktatdehydrogenase) und CK (Kreatinkinase) sind ZYTOSOLISCHE ENZYME, die normalerweise NUR IM ZELLINNEREN vorkommen. Bei ZELLSCHÄDIGUNG (Nekrose, z.B. Herzinfarkt, Muskelschaden) wird die Zellmembran durchlässig → zytosolische Enzyme treten ins BLUT aus → erhöhte Blutwerte = DIAGNOSTISCHER MARKER für Gewebeschaden. LDH ist relativ unspezifisch (Herz, Leber, Muskel, Erythrozyten), CK ist spezifischer für Herzmuskel (CK-MB) und Skelettmuskel. Weitere Marker: AST, ALT (Leberschaden). A ist falsch (erhöht = pathologisch). C, D sind falsch (Enzyme stammen aus geschädigten Zellen). E ist falsch (Messung ist valide).",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q5",
+    "question": "Welche Funktion haben freie Ribosomen im Zytosol?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Sie synthetisieren Proteine für den Export aus der Zelle"
+      },
+      {
+        "id": "B",
+        "text": "Sie synthetisieren Proteine für das Zytosol selbst, den Zellkern und Mitochondrien"
+      },
+      {
+        "id": "C",
+        "text": "Sie synthetisieren Lipide"
+      },
+      {
+        "id": "D",
+        "text": "Sie bauen Proteine ab"
+      },
+      {
+        "id": "E",
+        "text": "Sie haben keine Funktion"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: FREIE RIBOSOMEN (im Zytosol, nicht am ER gebunden) synthetisieren Proteine, die für das ZYTOSOL selbst (Enzyme wie Glykolyse-Enzyme, Zytoskelett-Proteine), den ZELLKERN (Transkriptionsfaktoren, Histone) und MITOCHONDRIEN/PEROXISOMEN bestimmt sind. GEBUNDENE RIBOSOMEN (am rauen ER) synthetisieren Proteine für den SEKRETORISCHEN WEG (Membran, Export, Lysosomen, ER-Lumen). Die mRNA-Sequenz bestimmt, ob Ribosomen frei bleiben (keine Signalsequenz) oder zum ER wandern (Signalsequenz vorhanden → SRP-Bindung → ER-Translokation). A ist falsch (das machen gebundene Ribosomen). C ist falsch (Lipidsynthese im glatten ER). D ist falsch (Proteasomen bauen ab). E ist falsch.",
+    "difficulty": "medium"
+  }
+]

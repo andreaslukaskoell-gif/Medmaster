@@ -1,0 +1,147 @@
+[
+  {
+    "id": "q1",
+    "question": "Welche Hauptfunktionen hat der Golgi-Apparat?",
+    "options": [
+      {
+        "id": "A",
+        "text": "ATP-Produktion und Zellatmung"
+      },
+      {
+        "id": "B",
+        "text": "Protein- und Lipid-Modifikation (Glykosylierung, Sulfatierung), Sortierung und Verpackung in Vesikel"
+      },
+      {
+        "id": "C",
+        "text": "DNA-Replikation und Transkription"
+      },
+      {
+        "id": "D",
+        "text": "Proteinabbau im Proteasom"
+      },
+      {
+        "id": "E",
+        "text": "Photosynthese"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Der GOLGI-APPARAT ist das zentrale MODIFIKATIONS- und SORTIER-ORGANELL. Hauptfunktionen: (1) MODIFIKATION von Proteinen/Lipiden (N-Glykosylierung fortsetzen, O-Glykosylierung, Sulfatierung, Proteolytische Spaltung wie Proinsulin → Insulin), (2) SORTIERUNG (Trans-Golgi-Network = Sortierstation: M6P → Lysosomen, Default → Plasmamembran, Signal → Sekretgranula), (3) VERPACKUNG in Vesikel (Clathrin, COPI, COPII). Der Golgi ist die \"Post-ER-Station\" des sekretorischen Wegs. A ist falsch (Mitochondrien). C ist falsch (Zellkern). D ist falsch (Proteasomen). E ist falsch (Chloroplasten).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Was ist das Trans-Golgi-Network (TGN) und welche Funktion hat es?",
+    "options": [
+      {
+        "id": "A",
+        "text": "TGN produziert ATP"
+      },
+      {
+        "id": "B",
+        "text": "TGN ist die Hauptsortierstation: sortiert Proteine anhand von Signalen zu ihren Destinationen (Lysosomen via M6P, Plasmamembran, Sekretgranula)"
+      },
+      {
+        "id": "C",
+        "text": "TGN ist nur in Pflanzenzellen"
+      },
+      {
+        "id": "D",
+        "text": "TGN repliziert DNA"
+      },
+      {
+        "id": "E",
+        "text": "TGN baut Proteine ab"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Das **TRANS-GOLGI-NETWORK (TGN)** ist das AUSGANGS-Kompartiment des Golgi-Apparats und die HAUPTSORTIERSTATION der Zelle. Funktion: SORTIERUNG anhand von SORTIER-SIGNALEN: (1) **M6P-Signal (Mannose-6-Phosphat):** Lysosomale Enzyme (saure Hydrolasen) werden erkannt (M6P-Rezeptor) → verpackt in Clathrin-Vesikel → Transport zu Lysosomen. (2) **Default (kein Signal):** Proteine gehen zur Plasmamembran (konstitutive Sekretion, kontinuierlich). (3) **Spezifisches Signal:** Sekretproteine (Hormone, Neurotransmitter) → Sekretgranula → regulierte Sekretion (Stimulus-abhängig). TGN ist das \"Postamt\" der Zelle. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Was ist Mannose-6-Phosphat (M6P) und welche Funktion hat es?",
+    "options": [
+      {
+        "id": "A",
+        "text": "M6P ist ein Lipid in der Zellmembran"
+      },
+      {
+        "id": "B",
+        "text": "M6P ist ein Sortier-Signal für lysosomale Enzyme: wird im Golgi an lysosomale Enzyme angehängt, M6P-Rezeptoren im TGN erkennen es und sortieren Proteine zu Lysosomen"
+      },
+      {
+        "id": "C",
+        "text": "M6P produziert ATP in Mitochondrien"
+      },
+      {
+        "id": "D",
+        "text": "M6P ist ein Neurotransmitter"
+      },
+      {
+        "id": "E",
+        "text": "M6P ist ein DNA-Baustein"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **MANNOSE-6-PHOSPHAT (M6P)** ist ein SORTIER-SIGNAL für LYSOSOMALE ENZYME. Mechanismus: (1) Lysosomale Enzyme (saure Hydrolasen wie Cathepsine, β-Glucuronidase) werden im Golgi durch **GlcNAc-Phosphotransferase** mit M6P markiert (Phosphorylierung an Mannose-Resten). (2) **M6P-Rezeptoren** im TGN (Trans-Golgi-Network) ERKENNEN M6P-markierte Proteine. (3) Proteine werden in **Clathrin-umhüllte Vesikel** verpackt → Transport zu Lysosomen. (4) Im sauren pH der Lysosomen (pH 5) dissoziiert M6P vom Rezeptor → Rezeptor wird recycelt. KLINISCH: Defekt in M6P-Anheftung → **I-Cell-Disease** (lysosomale Enzyme sekretiert, Lysosomen leer). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q4",
+    "question": "Welche Arten von Vesikel-Coats gibt es und was ist ihre Funktion?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Es gibt nur einen Typ von Vesikeln"
+      },
+      {
+        "id": "B",
+        "text": "COPII (ER → Golgi, anterograd), COPI (Golgi → ER, retrograd), Clathrin (zu Lysosomen, Endozytose)"
+      },
+      {
+        "id": "C",
+        "text": "Vesikel haben keine Coats"
+      },
+      {
+        "id": "D",
+        "text": "Alle Vesikel verwenden den gleichen Coat"
+      },
+      {
+        "id": "E",
+        "text": "Vesikel-Coats sind nur in Bakterien vorhanden"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Es gibt drei Haupt-VESIKEL-COAT-TYPEN, die spezifische Transportrouten definieren: (1) **COPII-Vesikel:** ANTEROGRADER Transport (ER → cis-Golgi). COPII-Coat (Sec23/24, Sec13/31) + **Sar1-GTPase** knospen vom ER ab. Transportieren korrekt gefaltete Proteine. (2) **COPI-Vesikel:** RETROGRADER Transport (Golgi → ER, Golgi-interner Recycling). COPI-Coat + **ARF1-GTPase**. Recyceln ER-residente Proteine (KDEL-Sequenz) und Golgi-Enzyme zurück. (3) **CLATHRIN-Vesikel:** Transport zu Lysosomen (M6P-Rezeptor-vermittelt), Endozytose (Rezeptor-vermittelt, z.B. LDL-Rezeptor). Clathrin-Coat bildet polygonale Struktur (Triskelions). SNARE-Proteine (v-SNARE + t-SNARE) vermitteln Fusion. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q5",
+    "question": "Was passiert bei der I-Cell-Disease (Mucolipidose II)?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Zu viel ATP wird produziert"
+      },
+      {
+        "id": "B",
+        "text": "Defekt in M6P-Anheftung → lysosomale Enzyme werden sekretiert (nicht zu Lysosomen), Lysosomen bleiben leer (Inclusion cells), Speicherung im Zytoplasma"
+      },
+      {
+        "id": "C",
+        "text": "Zu viele Mitochondrien"
+      },
+      {
+        "id": "D",
+        "text": "DNA-Replikation ist gestört"
+      },
+      {
+        "id": "E",
+        "text": "Zellmembran ist durchlässig"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **I-CELL-DISEASE (Mucolipidose II):** Genetischer Defekt in **GlcNAc-Phosphotransferase** (Enzym, das M6P an lysosomale Enzyme anhängt). Pathophysiologie: (1) Lysosomale Enzyme bekommen KEIN M6P-Signal. (2) Ohne M6P werden sie vom Golgi NICHT zu Lysosomen sortiert → stattdessen als DEFAULT zur Plasmamembran → SEKRETIERT ins Blut (diagnostisch: erhöhte lysosomale Enzyme im Serum). (3) Lysosomen bleiben LEER (keine sauren Hydrolasen) → können Substrate nicht abbauen → **Speicherung im Zytoplasma** (Inclusion cells = I-Cells). Symptome: Schwere psychomotorische Retardierung, Skelettanomalien (Dysostosis multiplex), Hepatosplenomegalie, früher Tod (Kleinkind). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  }
+]

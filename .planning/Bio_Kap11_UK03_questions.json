@@ -1,0 +1,152 @@
+[
+  {
+    "id": "bio-11-03-q1",
+    "question": "**Aktive** und **passive Immunisierung** unterscheiden sich grundlegend. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Aktive Immunisierung: Fertige Antikörper gegeben, Sofortschutz, Wochen. Passive: Antigen gegeben, Körper produziert Antikörper, Jahre"
+      },
+      {
+        "id": "B",
+        "text": "Aktive Immunisierung: Antigen-Gabe (Impfstoff: Lebend/Tot/Subunit/mRNA), Körper produziert EIGENE Antikörper + Gedächtniszellen, JAHRE Schutz, ~2 WOCHEN Verzögerung. Passive: FERTIGE Antikörper, SOFORTSCHUTZ (Stunden), KURZ (Wochen)"
+      },
+      {
+        "id": "C",
+        "text": "Beide Immunisierungen produzieren Gedächtniszellen (langanhaltender Schutz bei beiden)"
+      },
+      {
+        "id": "D",
+        "text": "Passive Immunisierung hat längere Wirkung (Jahre) als aktive (Wochen)"
+      },
+      {
+        "id": "E",
+        "text": "Tetanus-Immunglobulin ist ein Beispiel für aktive Immunisierung (nicht passive)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Aktive Immunisierung (Vakzination):** **Antigen-Gabe** (abgeschwächte/tote Pathogene, Proteine, z.B. Lebendimpfstoff [MMR], Totimpfstoff [Influenza], Subunit [Hepatitis B], mRNA [COVID-19]). **Körper produziert EIGENE Antikörper + Gedächtniszellen**. **Dauer:** **Jahre bis Jahrzehnte** (langanhaltend!). **Verzögerung:** ~**2 WOCHEN** (Zeit für Immunantwort). **Passive Immunisierung:** **Fertige Antikörper** (von Mensch/Tier, z.B. **Tetanus-Immunglobulin** [nach Verletzung], Rh-Immunglobulin [Schwangerschaft], Schlangengift-Antiserum). **Sofortschutz** (Stunden, **NICHT** Wochen Verzögerung!). **Dauer:** **Wochen** (Antikörper abgebaut, **KEINE** Gedächtniszellen!). **Wichtig:** Aktiv = langfristig + Gedächtnis, Passiv = kurzfristig + sofort!",
+    "difficulty": "easy",
+    "tags": ["Immunbiologie", "Impfungen", "Aktive Immunisierung", "Passive Immunisierung", "Gedächtniszellen"]
+  },
+  {
+    "id": "bio-11-03-q2",
+    "question": "Es gibt verschiedene **Impfstoff-Typen** mit unterschiedlichen Vor- und Nachteilen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "mRNA-Impfstoffe (z.B. COVID-19 Pfizer/Moderna) enthalten lebende Viren (wie Lebendimpfstoffe)"
+      },
+      {
+        "id": "B",
+        "text": "Lebendimpfstoff (attenuiert, z.B. MMR, Varizellen): Starke Immunität (1–2 Dosen), langanhaltend, aber Risiko bei Immunsupprimierten. Totimpfstoff (inaktiviert, z.B. Influenza, Polio Salk): Sicherer (keine Replikation), schwächere Immunität, mehrere Dosen"
+      },
+      {
+        "id": "C",
+        "text": "Totimpfstoffe (inaktiviert) haben stärkere Immunität als Lebendimpfstoffe (nur 1 Dosis nötig)"
+      },
+      {
+        "id": "D",
+        "text": "Subunit-Impfstoffe (z.B. Hepatitis B HBsAg, HPV, Tetanus-Toxoid) enthalten das ganze Pathogen (nicht nur Teile)"
+      },
+      {
+        "id": "E",
+        "text": "Vektorimpfstoffe (z.B. AstraZeneca COVID-19) verwenden mRNA (wie Pfizer/Moderna)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Impfstoff-Typen:** (1) **Lebendimpfstoff (attenuiert):** Abgeschwächte Pathogene (z.B. **MMR** [Masern, Mumps, Röteln], **Varizellen**). **Vorteile:** Starke Immunität (1–2 Dosen), langanhaltend (repliziert in Körper → starke Reaktion). **Nachteile:** **Risiko bei Immunsupprimierten** (kann Krankheit auslösen!). (2) **Totimpfstoff (inaktiviert):** Tote Pathogene (z.B. **Influenza** [injiziert], Polio [Salk], Hepatitis A). **Vorteile:** Sicherer (keine Replikation). **Nachteile:** Schwächere Immunität, **mehrere Dosen** nötig. (3) **Subunit/Proteinimpfstoff:** Nur Teile (z.B. **Hepatitis B** [HBsAg], **HPV**, **Tetanus/Diphtherie** [Toxoid], **NICHT** ganzes Pathogen!). Sehr sicher, spezifisch, aber Adjuvans nötig. (4) **mRNA-Impfstoff:** mRNA (z.B. **COVID-19 Pfizer, Moderna**, **KEINE** lebenden Viren!). Schnelle Produktion. (5) **Vektorimpfstoff:** Virus-Vektor (z.B. **AstraZeneca COVID-19**, Ebola), **NICHT** mRNA!",
+    "difficulty": "medium",
+    "tags": ["Immunbiologie", "Impfungen", "Lebendimpfstoff", "Totimpfstoff", "mRNA", "Subunit"]
+  },
+  {
+    "id": "bio-11-03-q3",
+    "question": "**Allergie (Typ-I-Hypersensitivität)** verläuft in zwei Phasen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Sensibilisierung (1. Kontakt): Allergen → Symptome sofort (Histamin-Freisetzung beim ersten Kontakt)"
+      },
+      {
+        "id": "B",
+        "text": "Sensibilisierung (1. Kontakt): Allergen → TH2 → B-Zellen → IgE produziert → IgE bindet an MASTZELLEN (Fc-Rezeptoren), KEINE Symptome! 2. Kontakt: Allergen + IgE → KREUZVERNETZUNG → Mastzellen DEGRANULIEREN → HISTAMIN → Symptome"
+      },
+      {
+        "id": "C",
+        "text": "Allergische Reaktion (2. Kontakt) wird durch IgG-Antikörper vermittelt (nicht IgE)"
+      },
+      {
+        "id": "D",
+        "text": "Mastzellen degranulieren bereits beim 1. Kontakt (Sensibilisierung), nicht erst beim 2. Kontakt"
+      },
+      {
+        "id": "E",
+        "text": "Histamin wird von B-Zellen freigesetzt (nicht von Mastzellen)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Allergie (Typ-I-Hypersensitivität):** Überreaktion auf harmlose Antigene (Allergene). **Ablauf:** (1) **Sensibilisierung (1. Kontakt):** **Allergen** (Pollen, Hausstaubmilben, Erdnuss) → APC → **TH2-Zellen**. TH2 aktiviert **B-Zellen** → Plasmazellen produzieren **IgE** (nicht IgG!). **IgE bindet** an **Mastzellen/Basophile** (Fc-Rezeptoren). **KEINE Symptome** (nur Vorbereitung!). (2) **Allergische Reaktion (2. Kontakt):** **Allergen** bindet an **IgE** auf Mastzellen → **Kreuzvernetzung** (mehrere IgE verbunden). **Mastzellen degranulieren** (jetzt, **NICHT** beim 1. Kontakt!) → **Histamin**, Leukotriene, Prostaglandine freigesetzt (von **Mastzellen**, nicht B-Zellen!). **Symptome:** Vasodilatation, Bronchospasmus, Juckreiz, Niesen, Tränen. **Wichtig:** 1. Kontakt = Sensibilisierung (symptomlos), 2. Kontakt = Reaktion (Symptome)!",
+    "difficulty": "medium",
+    "tags": ["Immunbiologie", "Allergie", "Typ I Hypersensitivität", "IgE", "Mastzellen", "Sensibilisierung"]
+  },
+  {
+    "id": "bio-11-03-q4",
+    "question": "**Anaphylaktischer Schock** ist eine lebensbedrohliche allergische Reaktion. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Anaphylaktischer Schock ist eine lokale Reaktion (nur Haut/Schleimhäute betroffen, nicht systemisch)"
+      },
+      {
+        "id": "B",
+        "text": "Anaphylaktischer Schock: SYSTEMISCHE Allergie (nicht lokal!). Symptome: Blutdruckabfall (Vasodilatation), Atemprobleme (Bronchospasmus), Kreislaufversagen. Therapie: ADRENALIN (Epinephrin, EPIPEN!) → Vasokonstriktion + Bronchodilatation"
+      },
+      {
+        "id": "C",
+        "text": "Therapie: Antihistaminika sind die erste Wahl (nicht Adrenalin) bei anaphylaktischem Schock"
+      },
+      {
+        "id": "D",
+        "text": "Anaphylaktischer Schock führt zu Blutdruckanstieg (Hypertonie, nicht Hypotonie)"
+      },
+      {
+        "id": "E",
+        "text": "Adrenalin (Epinephrin) verursacht Bronchospasmus (verengt Bronchien, nicht erweitert)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Anaphylaktischer Schock:** **SYSTEMISCHE** Allergie (betrifft ganzen Körper, **NICHT** nur lokal!). **Symptome:** **Blutdruckabfall** (massive Vasodilatation, Hypotonie, **NICHT** Hypertonie!), **Atemprobleme** (Bronchospasmus [Bronchien verengt], Larynxödem), **Kreislaufversagen** (Schock). **Therapie:** **ADRENALIN** (Epinephrin, **EPIPEN!**, intramuskulär). **Wirkung:** **Vasokonstriktion** (Blutdruck ↑) + **Bronchodilatation** (Bronchien erweitern, **NICHT** verengen, Atmung besser!). **Auslöser:** Insektenstiche (Biene, Wespe), Erdnüsse, Antibiotika (Penicillin). **Wichtig:** Antihistaminika = zu langsam (helfen bei leichten Allergien, **NICHT** bei Anaphylaxie!). **Adrenalin = lebensrettend** (erste Wahl!). **LEBENSGEFÄHRLICH** → sofortige Behandlung nötig!",
+    "difficulty": "easy",
+    "tags": ["Immunbiologie", "Allergie", "Anaphylaktischer Schock", "Adrenalin", "EpiPen", "Notfall"]
+  },
+  {
+    "id": "bio-11-03-q5",
+    "question": "Es gibt **4 Typen der Hypersensitivität** (I–IV) mit unterschiedlichen Mechanismen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Typ IV (Verzögert-Typ): IgE-vermittelt, Mastzellen, Minuten (wie Typ I)"
+      },
+      {
+        "id": "B",
+        "text": "Typ I (Sofort-Typ, IgE, Allergie, Minuten). Typ II (Antikörper, IgG/IgM gegen Zell-Oberflächen, Bluttransfusion, Stunden). Typ III (Immunkomplexe, SLE, Stunden-Tage). Typ IV (Verzögert-Typ, T-Zellen, Kontaktdermatitis, 24–72h)"
+      },
+      {
+        "id": "C",
+        "text": "Typ II (Antikörper-vermittelt): Beispiel ist Pollenallergie (nicht Bluttransfusionsreaktion)"
+      },
+      {
+        "id": "D",
+        "text": "Typ III (Immunkomplex-vermittelt) tritt innerhalb von Minuten auf (wie Typ I, nicht Stunden-Tage)"
+      },
+      {
+        "id": "E",
+        "text": "Kontaktdermatitis (z.B. Nickel, Giftefeu) ist Typ I Hypersensitivität (nicht Typ IV)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**4 Hypersensitivitäts-Typen:** (1) **Typ I (Sofort-Typ, IgE-vermittelt):** **Beispiel:** Allergie (Pollen, Erdnuss), Anaphylaxie (nicht Kontaktdermatitis!). **Mechanismus:** IgE + Mastzellen → Histamin. **Zeit:** **Minuten**. (2) **Typ II (Antikörper-vermittelt):** **Beispiel:** **Bluttransfusionsreaktion** (ABO-Inkompatibilität, nicht Pollenallergie!), hämolytische Anämie. **Mechanismus:** IgG/IgM gegen Zell-Oberflächen-Antigene → Komplement → Lyse. **Zeit:** **Stunden**. (3) **Typ III (Immunkomplex-vermittelt):** **Beispiel:** **SLE** (Lupus), Serumkrankheit, rheumatoide Arthritis. **Mechanismus:** Antigen-Antikörper-Komplexe lagern sich ab (Gewebe) → Komplement → Entzündung. **Zeit:** **Stunden bis Tage** (nicht Minuten!). (4) **Typ IV (Verzögert-Typ, T-Zell-vermittelt):** **Beispiel:** **Kontaktdermatitis** (Nickel, Giftefeu), Tuberkulin-Test. **Mechanismus:** TH1-Zellen aktivieren Makrophagen → Entzündung (NICHT IgE!). **Zeit:** **24–72 Stunden**. **Wichtig:** Typ I–III = Antikörper, Typ IV = T-Zellen!",
+    "difficulty": "hard",
+    "tags": ["Immunbiologie", "Hypersensitivität", "Typ I", "Typ II", "Typ III", "Typ IV", "Allergie"]
+  }
+]

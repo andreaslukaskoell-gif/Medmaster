@@ -1,0 +1,147 @@
+[
+  {
+    "id": "q1",
+    "question": "Welche Hauptfunktionen haben Tight Junctions?",
+    "options": [
+      {
+        "id": "A",
+        "text": "ATP-Produktion"
+      },
+      {
+        "id": "B",
+        "text": "Barriere-Funktion (parazelluläre Diffusion blockiert) und Zaun-Funktion (verhindert laterale Diffusion, epitheliale Polarität)"
+      },
+      {
+        "id": "C",
+        "text": "DNA-Replikation"
+      },
+      {
+        "id": "D",
+        "text": "Proteinsynthese"
+      },
+      {
+        "id": "E",
+        "text": "Lipidsynthese"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **TIGHT JUNCTIONS** (Zonulae occludentes) sind gürtelförmige Verbindungen (Zonula = Gürtel) direkt unterhalb der apikalen Oberfläche. Struktur: Claudine/Occludine (Transmembranproteine, binden homophil) + ZO-Proteine (intrazellulär, verknüpft mit Aktin-Zytoskelett). Zwei Hauptfunktionen: (1) **BARRIERE-FUNKTION:** Verschließen interzellulären Raum → Moleküle können NICHT PARAZELLULÄR diffundieren (zwischen Zellen hindurch). Selektiv: Claudine bestimmen Durchlässigkeit. Beispiele: **Blut-Hirn-Schranke** (sehr dicht, ~10.000 Ω·cm², schützt ZNS vor Toxinen), Darm-Epithel (lockerer, kontrollierte Resorption). (2) **ZAUN-FUNKTION (Fence):** Verhindert LATERALE DIFFUSION von Membranproteinen zwischen apikaler und basolateraler Membran → erhält **epitheliale Polarität** (apikale Domäne mit Mikrovilli/Transportern bleibt getrennt von basolateraler). A, C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Was sind Desmosomen und welche Funktion haben sie?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Desmosomen produzieren ATP"
+      },
+      {
+        "id": "B",
+        "text": "Desmosomen (Maculae adherentes): punktförmige Verbindungen mit Desmoglein/Desmocollin (Cadherine, Ca²⁺-abhängig) → Plakophilin/Plakoglobin → Intermediärfilamente (Keratine/Desmin). Mechanische Stabilität gegen Scherkräfte"
+      },
+      {
+        "id": "C",
+        "text": "Desmosomen sind nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Desmosomen replizieren DNA"
+      },
+      {
+        "id": "E",
+        "text": "Desmosomen sind Ribosomen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **DESMOSOMEN** (Maculae adherentes) sind PUNKTFÖRMIGE Verbindungen (Macula = Fleck, wie \"Niete\" zwischen Zellen). Struktur: (1) **Transmembranproteine:** Desmogleine, Desmocolline (gehören zu CADHERINEN, Ca²⁺-ABHÄNGIG). Binden homophil (gleiches Protein in Nachbarzelle) → interzellulär ~30 nm Abstand. (2) **Intrazelluläre Verankerung:** Plakophilin, Plakoglobin → **INTERMEDIÄRFILAMENTE** (Keratine in Epithelien, Desmin in Muskelzellen). (3) Elektronendichte Proteinplatte (Desmoplakin-reich). **FUNKTION:** **MECHANISCHE STABILITÄT** – Widerstand gegen SCHERKRÄFTE (Zugkräfte). Besonders wichtig in mechanisch belasteten Geweben: **HAUT** (Epidermis, viele Desmosomen zwischen Keratinozyten), **HERZMUSKEL** (Glanzstreifen = Intercalated Discs enthalten Desmosomen + Gap Junctions → mechanische + elektrische Kopplung). KLINISCH: Pemphigus vulgaris (Autoantikörper gegen Desmoglein 3 → Akantholyse → Blasenbildung). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Was sind Gap Junctions und wofür sind sie durchlässig?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Gap Junctions sind nur in Pflanzen"
+      },
+      {
+        "id": "B",
+        "text": "Gap Junctions (Nexus): Connexone (6 Connexin-Proteine) bilden Kanal (1.5 nm). Durchlässig für kleine Moleküle (<1000 Da): Ionen (Ca²⁺, K⁺, Na⁺), cAMP, IP₃, Glukose. NICHT durchlässig für Proteine/DNA"
+      },
+      {
+        "id": "C",
+        "text": "Gap Junctions produzieren ATP"
+      },
+      {
+        "id": "D",
+        "text": "Gap Junctions replizieren DNA"
+      },
+      {
+        "id": "E",
+        "text": "Gap Junctions sind Mitochondrien"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **GAP JUNCTIONS** (Nexus) sind KANÄLE zwischen Zellen → direkte ZYTOPLASMATISCHE KOMMUNIKATION. Struktur: **CONNEXON** (Halbkanal) = 6 **CONNEXIN**-Proteine in einer Zellmembran. Zwei Connexone (von Nachbarzellen) lagern sich zusammen → **Gap Junction-Kanal** (~1.5 nm Durchmesser). **DURCHLÄSSIGKEIT:** (1) **Ja (klein, <1000 Da):** Ionen (Ca²⁺, Na⁺, K⁺), second messenger (cAMP, IP₃), Metabolite (Glukose, Aminosäuren). (2) **Nein (groß):** Proteine, Nukleinsäuren. **FUNKTIONEN:** (1) **ELEKTRISCHE KOPPLUNG:** Herzmuskel (Glanzstreifen): Gap Junctions → Aktionspotential breitet sich schnell aus → synchrone Kontraktion. Glatte Muskulatur (Darm-Peristaltik, Uterus-Wehen). (2) **METABOLISCHE KOPPLUNG:** Leber (Hepatozyten), Entwicklung (Embryogenese). REGULATION: Ca²⁺ ↑ (Zelltod) → Gap Junctions SCHLIESSEN (verhindert Schadens-Ausbreitung). KLINISCH: Connexin43-Mutationen → Herzrhythmusstörungen. Connexin32-Mutation → Charcot-Marie-Tooth (periphere Neuropathie). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Was passiert bei Pemphigus vulgaris?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Zu viel ATP wird produziert"
+      },
+      {
+        "id": "B",
+        "text": "Autoantikörper gegen Desmoglein 3 → Desmosomen zerstört → Akantholyse (Keratinozyten lösen sich) → Blasenbildung (Haut, Schleimhaut), Nikolski-Zeichen positiv"
+      },
+      {
+        "id": "C",
+        "text": "DNA-Replikation ist gestört"
+      },
+      {
+        "id": "D",
+        "text": "Zu viele Mitochondrien"
+      },
+      {
+        "id": "E",
+        "text": "Zellmembran ist durchlässig"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **PEMPHIGUS VULGARIS** ist eine AUTOIMMUN-ERKRANKUNG. Pathophysiologie: (1) Autoantikörper (IgG) gegen **DESMOGLEIN 3** (Desmosomales Protein in Haut und Schleimhaut). (2) Antikörper binden Desmoglein → DESMOSOMEN ZERSTÖRT → Zell-Zell-Verbindungen lösen sich. (3) **AKANTHOLYSE:** Keratinozyten (epidermale Zellen) lösen sich voneinander ab → intraepidemale Spalten → **BLASENBILDUNG** (schlaffe Blasen, platzen leicht). (4) **NIKOLSKI-ZEICHEN POSITIV:** Bei tangentialem Druck auf Haut löst sich Epidermis ab (diagnostisch). Symptome: Schmerzhafte Blasen/Erosionen in Mundschleimhaut (oft erste Manifestation), Haut (Gesicht, Rumpf). Histologie: Intraepidemale Spaltbildung, Akantholyse, IgG-Ablagerungen (direkter Immunfluoreszenz-Test). Therapie: Immunsuppression (Kortikosteroide, Rituximab [Anti-CD20]). Ohne Therapie: Lebensbedrohlich (Superinfektion, Flüssigkeitsverlust). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q5",
+    "question": "Was ist der Unterschied zwischen Desmosomen und Adhärens-Junctions?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Desmosomen (Macula, punktförmig): Desmoglein/Desmocollin → Intermediärfilamente (Keratine/Desmin). Adhärens-Junctions (Zonula, Gürtel): E-Cadherin → Aktin (via β-/α-Catenin)"
+      },
+      {
+        "id": "C",
+        "text": "Beide produzieren ATP"
+      },
+      {
+        "id": "D",
+        "text": "Beide sind nur in Bakterien"
+      },
+      {
+        "id": "E",
+        "text": "Beide sind DNA-Strukturen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: DESMOSOMEN und ADHÄRENS-JUNCTIONS sind beide mechanische Zell-Zell-Verbindungen mit Ca²⁺-abhängigen CADHERINEN, aber unterscheiden sich in Struktur und Zytoskelett-Verankerung. **DESMOSOMEN (Maculae adherentes):** (1) **Form:** PUNKTFÖRMIG (Macula = Fleck, wie \"Niete\"). (2) **Transmembranproteine:** Desmogleine, Desmocolline (Cadherine). (3) **Intrazelluläre Verankerung:** Plakophilin/Plakoglobin → **INTERMEDIÄRFILAMENTE** (Keratine in Epithelien, Desmin in Muskel). (4) Funktion: Mechanische Stabilität (Scherkräfte). Haut, Herzmuskel. **ADHÄRENS-JUNCTIONS (Zonulae adherentes):** (1) **Form:** GÜRTELFÖRMIG (Zonula = Gürtel), direkt unterhalb Tight Junctions (apikal). (2) **Transmembranproteine:** **E-CADHERIN** (Epithelien), N-Cadherin (Neuronen). (3) **Intrazelluläre Verankerung:** β-/α-Catenin → **AKTIN-FILAMENTE**. (4) Funktion: Mechanische Stabilität + Signal-Transduktion (β-Catenin → Wnt-Signalweg). KLINISCH: E-Cadherin-Verlust → Krebs-Metastasierung (EMT). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  }
+]

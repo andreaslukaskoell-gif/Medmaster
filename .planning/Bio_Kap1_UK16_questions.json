@@ -1,0 +1,118 @@
+[
+  {
+    "id": "q1",
+    "question": "Was ist die 9+2-Struktur von Kinozilien und Flagellen?",
+    "options": [
+      {
+        "id": "A",
+        "text": "9 Ribosomen + 2 Mitochondrien"
+      },
+      {
+        "id": "B",
+        "text": "9 Mikrotubuli-Dupletts (äußerer Ring) + 2 zentrale Mikrotubuli (Singuletts). Dynein-Arme bewegen Dupletts, Nexin-Brücken verhindern vollständiges Gleiten → Biegung"
+      },
+      {
+        "id": "C",
+        "text": "9 DNA-Stränge + 2 RNA-Stränge"
+      },
+      {
+        "id": "D",
+        "text": "9 Lipide + 2 Proteine"
+      },
+      {
+        "id": "E",
+        "text": "9 Zellkerne + 2 Zellmembranen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Die **9+2-STRUKTUR** (Axonem) ist charakteristisch für BEWEGLICHE Kinozilien und Flagellen. Aufbau: (1) **9 MIKROTUBULI-DUPLETTS** (äußerer Ring): Jedes Duplett besteht aus Tubulus A + Tubulus B. (2) **2 ZENTRALE MIKROTUBULI** (Singuletts). (3) **DYNEIN-ARME:** Motorproteine (ATP-abhängig) an Tubulus A → binden an Tubulus B des Nachbar-Dupletts → ATP-Hydrolyse → Dupletts gleiten relativ zueinander. (4) **NEXIN-BRÜCKEN:** Verbinden Dupletts untereinander (elastische Verbindung) → verhindern vollständiges Auseinandergleiten → Dupletts BIEGEN sich statt zu gleiten → **SCHLAGBEWEGUNG** (Vor-/Rückschlag). (5) Radiale Speichen: Verbinden äußere Dupletts mit zentralen Mikrotubuli (Koordination). **BASALKÖRPERCHEN:** Am Zellbasis (Ursprung), identisch mit Zentriolen (9 Mikrotubuli-TRIPLETTS). UNTERSCHIED zu Primärzilien: Primärzilien haben **9+0-Struktur** (KEINE zentralen Mikrotubuli, unbewegt, Signal-Transduktion). A, C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Was ist der Unterschied zwischen Kinozilien und Mikrovilli?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Kinozilien: 9+2-Struktur (Mikrotubuli), beweglich (Dynein), mukoziliäre Clearance. Mikrovilli: Aktin-basiert, unbewegt, Bürstensaum (Oberflächenvergrößerung, Resorption)"
+      },
+      {
+        "id": "C",
+        "text": "Beide sind nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Kinozilien produzieren ATP"
+      },
+      {
+        "id": "E",
+        "text": "Mikrovilli sind nur in Pflanzen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: KINOZILIEN und MIKROVILLI sind strukturell und funktionell VÖLLIG unterschiedlich. **KINOZILIEN (ZILIEN):** (1) **Struktur:** 9+2-Struktur (9 Mikrotubuli-Dupletts + 2 zentrale Mikrotubuli), MIKROTUBULI-basiert. Dynein-Arme (Motorproteine). Länge: 5-10 μm. (2) **Bewegung:** BEWEGLICH (Dynein-ATP-abhängig), Schlagbewegung (metachrone Wellen). (3) **Funktionen:** Mukoziliäre Clearance (Atemwege: Schleim-Transport), Eileiter (Eizell-Transport), Ependymzellen (CSF-Zirkulation). (4) Basalkörperchen (= Zentriolen). **MIKROVILLI:** (1) **Struktur:** AKTIN-basiert (parallele Aktin-Filament-Bündel, Fimbrin/Villin). KEINE Mikrotubuli! Länge: 1-2 μm. (2) **Bewegung:** UNBEWEGT (kein Dynein, keine aktive Bewegung). (3) **Funktionen:** **OBERFLÄCHENVERGRÖSSERUNG** (~600-fach) → BÜRSTENSAUM (Dünndarm, Niere) → Resorption (Nährstoffe, Wasser). Glykokalyx: Disaccharidasen (Laktase, Sucrase). (4) Terminales Netz (Spectrin, Myosin II) verankert Aktin. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Was ist das Kartagener-Syndrom und was sind seine Hauptsymptome?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Kartagener-Syndrom ist eine Vitaminmangelkrankheit"
+      },
+      {
+        "id": "B",
+        "text": "Kartagener-Syndrom (PCD): Dynein-Defekte → Zilien immobil → Kartagener-Trias: (1) Bronchiektasen, (2) Chronische Sinusitis, (3) Situs inversus (~50%). Infertilität (Spermien-/Eileiter-Zilien defekt)"
+      },
+      {
+        "id": "C",
+        "text": "Kartagener-Syndrom ist nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Kartagener-Syndrom produziert zu viel ATP"
+      },
+      {
+        "id": "E",
+        "text": "Kartagener-Syndrom ist eine DNA-Replikationsstörung"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **KARTAGENER-SYNDROM** ist eine Form der **Primären Ziliären Dyskinesie (PCD)** – genetische Erkrankung mit bewegungsunfähigen Zilien. Genetik: **Autosomal-rezessiv**, Defekte in Dynein-Armen (DNAH5, DNAI1) oder anderen Zilienproteinen. Pathophysiologie: Zilien IMMOBIL oder dyskinetisch → mukoziliäre Clearance ↓ → Schleim-Retention. **KARTAGENER-TRIAS:** (1) **BRONCHIEKTASEN:** Chronische Atemwegs-Infekte (Schleim-Retention) → irreversible Bronchienerweiterungen (Pseudomonas, Haemophilus). (2) **CHRONISCHE SINUSITIS:** Schleim-Retention in Nasennebenhöhlen → rezidivierende Infekte. (3) **SITUS INVERSUS** (~50%): Spiegelverkehrte Organanlage (Herz rechts, Leber links) → embryonale Zilien-Dysfunktion (Links-Rechts-Achse gestört, Hensensche Knoten). **ZUSÄTZLICH:** **Infertilität:** Männer (Spermien-Flagellen defekt → Asthenozoospermie), Frauen (Eileiter-Zilien defekt → Eizell-Transport gestört). Diagnostik: Nasal-NO ↓ (diagnostisch, 77% Sensitivität), Zilien-Biopsie (EM: fehlende Dynein-Arme), Gentest. A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q4",
+    "question": "Welche Funktion haben Mikrovilli im Dünndarm?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Mikrovilli produzieren ATP"
+      },
+      {
+        "id": "B",
+        "text": "Mikrovilli (Bürstensaum) vergrößern die Oberfläche (~600-fach) → optimierte Resorption von Nährstoffen, Wasser, Ionen. Glykokalyx: Disaccharidasen (Laktase, Sucrase)"
+      },
+      {
+        "id": "C",
+        "text": "Mikrovilli replizieren DNA"
+      },
+      {
+        "id": "D",
+        "text": "Mikrovilli sind nur in Bakterien"
+      },
+      {
+        "id": "E",
+        "text": "Mikrovilli transportieren Schleim"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **MIKROVILLI** im DÜNNDARM (Enterozyten) bilden den **BÜRSTENSAUM** (apikale Oberfläche, EM-Aufnahme: wie Bürste). Funktion: **OBERFLÄCHENVERGRÖSSERUNG** → optimierte RESORPTION. Anatomie: Dünndarm-Schleimhaut hat (1) **Kerckring-Falten** (makroskopische Falten) → 3-fache Vergrößerung, (2) **Zotten** (Villi, 0.5-1.5 mm lang) → weitere 10-fache Vergrößerung, (3) **MIKROVILLI** (1-2 μm lang, Millionen pro Zelle) → weitere 20-fache Vergrößerung. **Gesamt: ~600-FACH** Oberflächenvergrößerung (Dünndarm: ~200 m² Oberfläche!). Struktur: Aktin-Filament-Bündel (Fimbrin/Villin) → Terminales Netz (Spectrin, Myosin II). **GLYKOKALYX:** Kohlenhydrat-Schicht auf Mikrovilli (Muzine, Glykoproteine) → Verankerung von **DISACCHARIDASEN** (Laktase, Sucrase, Maltase) → Spaltung von Disacchariden (Laktose, Saccharose) zu Monosacchariden (Glukose, Fructose) → Resorption. KLINISCH: Zöliakie (Zottenatrophie → Mikrovilli-Verlust → Malabsorption). A, C, D, E sind falsch.",
+    "difficulty": "easy"
+  }
+]

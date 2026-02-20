@@ -1,0 +1,152 @@
+[
+  {
+    "id": "bio-10-04-q1",
+    "question": "**Nahrungsketten** und **Nahrungsnetze** beschreiben Ernährungsbeziehungen in Ökosystemen. Was ist der Unterschied?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Nahrungskette = komplex vernetzt (A frisst B, C, D), Nahrungsnetz = linear (A → B → C)"
+      },
+      {
+        "id": "B",
+        "text": "Nahrungskette = linear (A → B → C → D, einfache Abfolge, selten). Nahrungsnetz = komplex vernetzt (viele Ketten verknüpft, realistisch)"
+      },
+      {
+        "id": "C",
+        "text": "Beide sind identisch (kein Unterschied)"
+      },
+      {
+        "id": "D",
+        "text": "Nahrungsnetze existieren nur im Ozean, Nahrungsketten nur an Land"
+      },
+      {
+        "id": "E",
+        "text": "Natürliche Ökosysteme bestehen aus einfachen Nahrungsketten (nicht Netze)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Nahrungskette:** **Linear** (A → B → C → D, einfache Abfolge). **Beispiel:** Gras → Heuschrecke → Maus → Schlange → Adler. **Realität:** **Selten** (zu vereinfacht, Organismen fressen meist **mehrere** Arten). **Nahrungsnetz:** **Komplex** (viele Nahrungsketten miteinander verknüpft). **Realistisch:** Organismen auf mehreren Ebenen (z.B. Fuchs frisst Mäuse UND Hasen UND Früchte = Omnivor, mehrere Trophieebenen). **Wichtig:** Natürliche Ökosysteme = **Nahrungsnetze** (nicht einfache Ketten!), komplexere Netze = **stabiler** (alternative Nahrungsquellen).",
+    "difficulty": "easy",
+    "tags": ["Ökologie", "Nahrungsnetze", "Nahrungskette", "Trophieebenen"]
+  },
+  {
+    "id": "bio-10-04-q2",
+    "question": "**Trophieebenen** (Ernährungsebenen) beschreiben die Position von Organismen in der Nahrungskette. Welche Reihenfolge ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Primärkonsumenten (Pflanzenfresser) → Produzenten (Pflanzen) → Sekundärkonsumenten (Fleischfresser)"
+      },
+      {
+        "id": "B",
+        "text": "Produzenten (Pflanzen, Algen, Photosynthese, Basis) → Primärkonsumenten (Herbivoren: Reh) → Sekundärkonsumenten (Karnivoren: Fuchs) → Tertiärkonsumenten (Spitzenprädatoren: Adler)"
+      },
+      {
+        "id": "C",
+        "text": "Sekundärkonsumenten (Fleischfresser) → Primärkonsumenten (Pflanzenfresser) → Produzenten (Pflanzen)"
+      },
+      {
+        "id": "D",
+        "text": "Destruenten (Bakterien) → Produzenten (Pflanzen) → Konsumenten (Tiere)"
+      },
+      {
+        "id": "E",
+        "text": "Alle Organismen sind auf derselben Trophieebene (keine Hierarchie)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Trophieebenen (Ernährungsebenen, von Basis aufwärts):** (1) **Produzenten** (Trophieebene 1, Autotrophe): **Pflanzen, Algen, Cyanobakterien** (Photosynthese: Sonne → Glucose), **Basis** der Nahrungskette. (2) **Primärkonsumenten** (Trophieebene 2, Herbivoren): **Pflanzenfresser** (Reh, Heuschrecke, Zooplankton), fressen Produzenten. (3) **Sekundärkonsumenten** (Trophieebene 3, Karnivoren): **Fleischfresser** (Fuchs, Schlange), fressen Herbivoren. (4) **Tertiärkonsumenten** (Trophieebene 4, Spitzenprädatoren): **Top-Räuber** (Adler, Hai, Löwe), fressen andere Karnivoren. (5) **Destruenten** (Bakterien, Pilze): Alle Ebenen, Mineralisierung.",
+    "difficulty": "easy",
+    "tags": ["Ökologie", "Trophieebenen", "Produzenten", "Konsumenten"]
+  },
+  {
+    "id": "bio-10-04-q3",
+    "question": "Die **Energiepyramide** und die **10%-Regel** beschreiben den Energiefluss in Ökosystemen. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "100% der Energie einer Trophieebene wird an die nächste Ebene weitergegeben (keine Verluste)"
+      },
+      {
+        "id": "B",
+        "text": "Nur ~10% der Energie pro Trophieebene weitergegeben, ~90% Wärmeverlust (Atmung, Bewegung) → max. 4–5 Ebenen. Energiepyramide IMMER Pyramidenform!"
+      },
+      {
+        "id": "C",
+        "text": "Energiepyramide kann umgekehrt sein (Spitze breiter als Basis)"
+      },
+      {
+        "id": "D",
+        "text": "Spitzenprädatoren haben mehr Energie als Produzenten (Energie akkumuliert nach oben)"
+      },
+      {
+        "id": "E",
+        "text": "Es gibt unbegrenzt viele Trophieebenen (keine Begrenzung durch Energie)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Energiepyramide + 10%-Regel (Lindeman):** Nur ~**10%** der Energie einer Trophieebene wird an **nächste Ebene** weitergegeben. ~**90%** als **Wärme verloren** (Atmung, Bewegung, nicht gefressen). **Beispiel:** Produzenten 10.000 kJ → Primärkonsumenten ~1.000 kJ (10%) → Sekundärkonsumenten ~100 kJ (10%) → Tertiärkonsumenten ~10 kJ (10%). **Konsequenz:** Max. **4–5 Trophieebenen** (Energie zu gering für weitere). Spitzenprädatoren **selten** (wenig Energie). **Wichtig:** Energiepyramide **IMMER** Pyramidenform (Energie kann **nicht** zunehmen, Thermodynamik 2. Hauptsatz)!",
+    "difficulty": "medium",
+    "tags": ["Ökologie", "Energiepyramide", "10%-Regel", "Lindeman", "Energiefluss"]
+  },
+  {
+    "id": "bio-10-04-q4",
+    "question": "Die **Biomassepyramide** zeigt die Gesamtmasse lebender Organismen pro Trophieebene. Welche Aussage ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Biomassepyramide ist IMMER Pyramidenform (breite Basis, schmale Spitze, keine Ausnahmen)"
+      },
+      {
+        "id": "B",
+        "text": "Biomassepyramide ist typisch Pyramidenform (Land: Pflanzen > Herbivoren > Karnivoren), aber kann umgekehrt sein (Ozean: Phytoplankton geringe Biomasse, aber hohe Produktivität)"
+      },
+      {
+        "id": "C",
+        "text": "Im Ozean haben Produzenten (Phytoplankton) immer die höchste Biomasse (wie an Land)"
+      },
+      {
+        "id": "D",
+        "text": "Biomassepyramide und Energiepyramide sind identisch (keine Unterschiede)"
+      },
+      {
+        "id": "E",
+        "text": "Destruenten (Bakterien) haben die höchste Biomasse in allen Ökosystemen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Biomassepyramide:** **Typisch Pyramidenform** (breite Basis, schmale Spitze). **Landökosysteme:** Produzenten (Pflanzen: Bäume, Gras) = **höchste Biomasse**, Konsumenten abnehmend. **AUSNAHME (umgekehrte Pyramide):** **Aquatische Ökosysteme (Ozean):** Produzenten (**Phytoplankton**) = **geringe Biomasse** (kleine Organismen, **schnelle Reproduktion**, zu jedem Zeitpunkt wenige vorhanden), Konsumenten (Zooplankton, Fische) = **höhere Biomasse** (größer, langsame Reproduktion, akkumulieren). **Grund:** Phytoplankton hat **hohe Produktivität** (schnelle Teilung), aber geringe Biomasse. **Wichtig:** Biomassepyramide ≠ **immer** Pyramide, Energiepyramide = **immer** Pyramide!",
+    "difficulty": "medium",
+    "tags": ["Ökologie", "Biomassepyramide", "Phytoplankton", "Umgekehrte Pyramide"]
+  },
+  {
+    "id": "bio-10-04-q5",
+    "question": "**Biomagnifikation** (Biomagnification) beschreibt die Anreicherung von Schadstoffen entlang der Nahrungskette. Was ist ein klassisches Beispiel?",
+    "options": [
+      {
+        "id": "A",
+        "text": "DDT (Insektizid) wird in jeder Trophieebene verdünnt (Konzentration nimmt ab nach oben)"
+      },
+      {
+        "id": "B",
+        "text": "DDT reichert sich entlang Nahrungskette an (jede Ebene höher!). Wasser 0,02 ppm → Adler 10.000 ppm (500.000×). Spitzenprädatoren höchste Konzentration → Eierschalen-Verdünnung → Eier brechen"
+      },
+      {
+        "id": "C",
+        "text": "Biomagnifikation betrifft nur Pflanzen (nicht Tiere)"
+      },
+      {
+        "id": "D",
+        "text": "DDT wird von Destruenten abgebaut (keine Anreicherung in Nahrungskette)"
+      },
+      {
+        "id": "E",
+        "text": "Spitzenprädatoren haben die niedrigste DDT-Konzentration (am Anfang der Kette)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Biomagnifikation (Biomagnification):** **Anreicherung** von Schadstoffen (nicht abbaubar: DDT, PCB, Schwermetalle) **entlang Nahrungskette** (jede Trophieebene **höher**!). **Mechanismus:** Räuber frisst viele kontaminierte Beute → Schadstoffe akkumulieren → höhere Konzentration. **Spitzenprädatoren:** **Höchste Konzentration** (Ende Kette). **DDT-Beispiel:** Wasser 0,02 ppm → Phytoplankton 5 ppm → Zooplankton 10 ppm → Kleine Fische 100 ppm → Große Fische 1.000 ppm → **Adler 10.000 ppm (500.000×)**! **Folgen:** **Eierschalen-Verdünnung** bei Greifvögeln → Eier brechen → Population ↓. DDT-Verbot (1972) → Erholung.",
+    "difficulty": "hard",
+    "tags": ["Ökologie", "Biomagnifikation", "DDT", "Schadstoffanreicherung", "Eierschalen-Verdünnung"]
+  }
+]

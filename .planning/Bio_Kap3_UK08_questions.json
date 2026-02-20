@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-3-08-q01",
+    "question": "Welche Aussage über Surfactant und seine Funktion ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Surfactant wird von Typ-I-Pneumozyten produziert und besteht hauptsächlich aus Proteinen."
+      },
+      {
+        "id": "B",
+        "text": "Surfactant wird von Typ-II-Pneumozyten produziert, besteht zu ~90% aus Phospholipiden (hauptsächlich DPPC) und senkt die Oberflächenspannung in den Alveolen, um einen Kollaps (Atelektase) zu verhindern."
+      },
+      {
+        "id": "C",
+        "text": "Surfactant erhöht die Oberflächenspannung in den Alveolen, um sie zu stabilisieren."
+      },
+      {
+        "id": "D",
+        "text": "Das Respiratory Distress Syndrome (RDS) bei Frühgeborenen wird durch Surfactant-Überschuss verursacht."
+      },
+      {
+        "id": "E",
+        "text": "Surfactant-Mangel führt zu einer erleichterten Inspiration, da die Alveolen leichter zu öffnen sind."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Surfactant** ist essentiell für die Lungenfunktion:\n\n**Produktion:**\n- **Typ-II-Pneumozyten** (~5% der Alveolaroberfläche) produzieren und sezernieren Surfactant\n\n**Zusammensetzung:**\n- ~**90% Phospholipide** (hauptsächlich **Dipalmitoylphosphatidylcholin, DPPC**)\n- ~10% Proteine (Surfactant-Proteine A, B, C, D)\n\n**Funktion:**\n1. **Senkung der Oberflächenspannung** an der Luft-Flüssigkeits-Grenze in Alveolen\n2. **Verhindert Alveolarkollaps (Atelektase):**\n   - Laplace-Gesetz: **P = 2T/r** (Druck = 2 × Oberflächenspannung / Radius)\n   - Ohne Surfactant: Kleine Alveolen (kleiner Radius r) → hoher Druck P → Kollaps\n   - Mit Surfactant: T ↓ → Druck gleicht sich an → Stabilisierung\n3. **Erleichtert Inspiration** (weniger Kraft nötig)\n\n**Klinisch:**\n- **Neonatales RDS (Frühgeborene <28 Wochen):** Surfactant-Mangel (Typ-II-Pneumozyten unreif) → Atelektase → Hypoxie\n- **Therapie:** Surfactant-Gabe (endotracheal), Beatmung\n- **Prophylaxe:** Betamethason/Dexamethason (Mutter antenatal → Lungenreifung ↑)\n\n**Falsch (A):** **Typ-II-Pneumozyten** (nicht Typ-I) produzieren Surfactant. Typ-I-Pneumozyten (~95% der Oberfläche) sind dünn und für **Gasaustausch** zuständig. Surfactant besteht zu ~90% aus **Phospholipiden** (nicht Proteinen).\n\n**Falsch (C):** Surfactant **senkt** (nicht erhöht) die Oberflächenspannung → verhindert Kollaps.\n\n**Falsch (D):** RDS wird durch **Surfactant-Mangel** (nicht Überschuss) verursacht.\n\n**Falsch (E):** Surfactant-Mangel → hohe Oberflächenspannung → **erschwerte Inspiration** (mehr Kraft nötig, Atelektase-Risiko ↑).",
+    "difficulty": "easy",
+    "tags": ["atmung", "surfactant", "alveolen", "typ-ii-pneumozyten", "rds"]
+  },
+  {
+    "id": "bio-3-08-q02",
+    "question": "Welche Aussage über die Atemmechanik ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Die Inspiration in Ruhe ist ein passiver Prozess, der durch elastische Rückstellung der Lunge erfolgt."
+      },
+      {
+        "id": "B",
+        "text": "Die Inspiration in Ruhe ist ein aktiver Prozess, bei dem das Diaphragma und die Mm. intercostales externi kontrahieren, um das Thoraxvolumen zu vergrößern und den intrapulmonalen Druck zu senken."
+      },
+      {
+        "id": "C",
+        "text": "Der intrapleurale Druck ist während der Atmung immer positiv (+5 mmHg in Ruhe)."
+      },
+      {
+        "id": "D",
+        "text": "Bei einem Pneumothorax wird der intrapleurale Druck negativ, was die Lunge zur vollständigen Entfaltung bringt."
+      },
+      {
+        "id": "E",
+        "text": "Die Exspiration in Ruhe ist ein aktiver Prozess, der die Kontraktion der Bauchmuskeln erfordert."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Inspiration in Ruhe** ist **aktiv** (Muskelarbeit erforderlich):\n\n**Mechanismus:**\n1. **Diaphragma** (Zwerchfell, wichtigster Atemmuskel) kontrahiert → senkt sich (~10 cm) → Thoraxvolumen ↑ (vertikal)\n2. **Mm. intercostales externi** (äußere Interkostalmuskeln) kontrahieren → Rippen heben sich → Thoraxvolumen ↑ (anterior-posterior + lateral)\n3. **Lungenvolumen ↑** → **Intrapulmonaler Druck ↓** (~−1 mmHg, subatmosphärisch)\n4. **Druckgradient:** Atmosphärisch (0 mmHg) → Pulmonal (−1 mmHg) → Luft strömt ein\n\n**Exspiration in Ruhe** ist **passiv** (keine Muskelarbeit):\n- Diaphragma + Interkostalmuskeln entspannen → elastische Rückstellung → Thoraxvolumen ↓ → intrapulmonaler Druck ↑ (~+1 mmHg) → Luft strömt aus\n\n**Falsch (A):** Inspiration in Ruhe ist **aktiv** (nicht passiv). **Exspiration** in Ruhe ist passiv (elastische Rückstellung).\n\n**Falsch (C):** Der **intrapleurale Druck** ist **immer negativ** (~−5 mmHg in Ruhe, ~−8 mmHg bei Inspiration). Dies ist essentiell, um die Lunge entfaltet zu halten (negative Traktion). Positiver intrapleuraler Druck → Lungenkollaps.\n\n**Falsch (D):** Bei **Pneumothorax** (Luft im Pleuraspalt) wird der intrapleurale Druck **0 oder positiv** (nicht negativ) → Lunge verliert negative Traktion → **Kollaps** (nicht Entfaltung).\n\n**Falsch (E):** Exspiration in Ruhe ist **passiv**. **Forcierte Exspiration** (aktiv, z. B. bei Husten, Sport) erfordert Bauchmuskeln (M. rectus abdominis, M. obliquus) + Mm. intercostales interni.",
+    "difficulty": "medium",
+    "tags": ["atmung", "atemmechanik", "inspiration", "exspiration", "diaphragma", "intrapleuraler-druck"]
+  },
+  {
+    "id": "bio-3-08-q03",
+    "question": "Welche Aussage über den Gasaustausch in der Lunge ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Der O₂-Partialdruck in den Alveolen beträgt ~40 mmHg, während er im venösen Blut ~100 mmHg beträgt."
+      },
+      {
+        "id": "B",
+        "text": "CO₂ diffundiert langsamer als O₂, da es ein größeres Molekül ist."
+      },
+      {
+        "id": "C",
+        "text": "Der O₂-Gradient zwischen Alveolen (~100 mmHg) und venösem Blut (~40 mmHg) beträgt 60 mmHg. Der CO₂-Gradient beträgt 6 mmHg (46 → 40 mmHg), aber CO₂ diffundiert ~20× schneller als O₂ aufgrund höherer Löslichkeit."
+      },
+      {
+        "id": "D",
+        "text": "Die Blut-Luft-Schranke beträgt etwa 5 mm und begrenzt die Diffusionsgeschwindigkeit erheblich."
+      },
+      {
+        "id": "E",
+        "text": "O₂ und CO₂ werden gleich schnell ausgetauscht, da beide Gase dieselbe Diffusionsrate haben."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** Der **Gasaustausch** in der Lunge erfolgt durch **Diffusion** entlang von Partialdruckgradienten:\n\n**O₂-Diffusion:**\n- **Alveolen:** pO₂ ~**100 mmHg**\n- **Venöses Blut** (aus Gewebe): pO₂ ~**40 mmHg**\n- **Gradient:** 100 − 40 = **60 mmHg** → O₂ diffundiert ins Blut\n- **Arterielles Blut** (nach Gasaustausch): pO₂ ~100 mmHg\n\n**CO₂-Diffusion:**\n- **Venöses Blut:** pCO₂ ~**46 mmHg**\n- **Alveolen:** pCO₂ ~**40 mmHg**\n- **Gradient:** 46 − 40 = **6 mmHg** (viel kleiner als O₂-Gradient!)\n- **Aber:** CO₂ ist ~**20× diffusibler** als O₂ (höhere Löslichkeit in Membranen) → trotz kleinerem Gradienten effizient\n\n**Fick'sches Diffusionsgesetz:** Diffusionsrate ∝ Gradient × Löslichkeit × Oberfläche / Diffusionsstrecke\n\n**Falsch (A):** **Umgekehrt!** Alveolen: pO₂ ~100 mmHg, venöses Blut: pO₂ ~40 mmHg (nicht andersherum).\n\n**Falsch (B):** CO₂ diffundiert **schneller** (nicht langsamer) als O₂ (~20× schneller), obwohl es ein größeres Molekül ist. Grund: **höhere Löslichkeit** in Lipidmembranen.\n\n**Falsch (D):** Die **Blut-Luft-Schranke** beträgt ~**0,5 µm** (nicht 5 mm)! Sie ist extrem dünn:\n1. Alveoläres Epithel (Typ-I-Pneumozyten)\n2. Fusionierte Basalmembran\n3. Kapillar-Endothel\n\n**Falsch (E):** O₂ und CO₂ haben **unterschiedliche Diffusionsraten**. CO₂ diffundiert ~20× schneller (höhere Löslichkeit), kompensiert den kleineren Gradienten.",
+    "difficulty": "medium",
+    "tags": ["atmung", "gasaustausch", "partialdruckgradient", "diffusion", "co2", "o2"]
+  },
+  {
+    "id": "bio-3-08-q04",
+    "question": "Welche Aussage über den Bohr-Effekt und die Hämoglobin-Sauerstoffbindung ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Der Bohr-Effekt beschreibt eine Linksverschiebung der O₂-Bindungskurve bei erhöhtem CO₂, niedrigem pH und erhöhter Temperatur."
+      },
+      {
+        "id": "B",
+        "text": "Der Bohr-Effekt führt dazu, dass in metabolisch aktivem Gewebe (CO₂ ↑, pH ↓, Temp ↑, 2,3-BPG ↑) die O₂-Bindungskurve nach rechts verschoben wird, was die O₂-Affinität von Hämoglobin senkt und die O₂-Abgabe ans Gewebe erhöht."
+      },
+      {
+        "id": "C",
+        "text": "Hämoglobin ist ein Monomer mit einer Häm-Gruppe, das Sauerstoff linear bindet."
+      },
+      {
+        "id": "D",
+        "text": "2,3-BPG verschiebt die O₂-Bindungskurve nach links und erhöht die O₂-Affinität von Hämoglobin."
+      },
+      {
+        "id": "E",
+        "text": "In der Lunge (CO₂ ↓, pH ↑) wird die O₂-Bindungskurve nach rechts verschoben, was die O₂-Aufnahme erschwert."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** Der **Bohr-Effekt** beschreibt, wie metabolische Parameter die O₂-Affinität von Hämoglobin beeinflussen:\n\n**Bedingungen in metabolisch aktivem Gewebe:**\n- **CO₂ ↑** (Stoffwechselprodukt)\n- **pH ↓** (Azidose, H⁺ ↑ aus CO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻)\n- **Temperatur ↑** (Muskelarbeit, Entzündung)\n- **2,3-BPG ↑** (2,3-Bisphosphoglycerat, bei chronischer Hypoxie, Höhenanpassung)\n\n**Effekt:**\n- **Rechtverschiebung** der O₂-Bindungskurve\n- **O₂-Affinität ↓** (Hb bindet O₂ schwächer)\n- **O₂-Abgabe ↑** (mehr O₂ wird ans Gewebe abgegeben)\n\n**Physiologische Bedeutung:** Gewebe mit hohem Stoffwechsel (Muskel, Hirn) brauchen mehr O₂ → lokale Bedingungen (CO₂ ↑, pH ↓, Temp ↑) → Hb gibt mehr O₂ ab.\n\n**In der Lunge (umgekehrt):**\n- CO₂ ↓ (wird abgeatmet), pH ↑, Temp normal\n- **Linksverschiebung** → O₂-Affinität ↑ → **O₂-Aufnahme ↑**\n\n**Falsch (A):** **Rechtverschiebung** (nicht Links) bei CO₂ ↑, pH ↓, Temp ↑. Linksverschiebung wäre bei CO₂ ↓, pH ↑ (Lunge).\n\n**Falsch (C):** Hämoglobin ist ein **Tetramer** (4 Untereinheiten: 2α, 2β), jede mit einer Häm-Gruppe (insgesamt 4). Bindung ist **kooperativ** (sigmoid, nicht linear) → Bindung des 1. O₂ erleichtert Bindung des 2./3./4. O₂.\n\n**Falsch (D):** 2,3-BPG verschiebt die Kurve nach **rechts** (nicht links) → O₂-Affinität ↓ → O₂-Abgabe ↑. Entsteht bei Hypoxie (Höhenanpassung, Anämie) → kompensatorisch.\n\n**Falsch (E):** In der Lunge (CO₂ ↓, pH ↑) → **Linksverschiebung** (nicht rechts) → O₂-Affinität ↑ → **O₂-Aufnahme erleichtert** (nicht erschwert).",
+    "difficulty": "medium",
+    "tags": ["atmung", "bohr-effekt", "hämoglobin", "o2-bindungskurve", "2-3-bpg"]
+  },
+  {
+    "id": "bio-3-08-q05",
+    "question": "Welche Aussage über den CO₂-Transport im Blut ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Der größte Teil des CO₂ wird physikalisch gelöst im Plasma transportiert (ca. 70%)."
+      },
+      {
+        "id": "B",
+        "text": "Ca. 70% des CO₂ werden als Bikarbonat (HCO₃⁻) transportiert, ca. 23% als Carbaminohämoglobin (CO₂ gebunden an Hämoglobin) und ca. 7% gelöst im Plasma."
+      },
+      {
+        "id": "C",
+        "text": "Carboanhydrase katalysiert die Reaktion CO₂ + H₂O → H₂CO₃ in den Alveolen, um CO₂ zu speichern."
+      },
+      {
+        "id": "D",
+        "text": "Der Chlorid-Shift beschreibt den Austausch von Na⁺ gegen Cl⁻ in Erythrozyten."
+      },
+      {
+        "id": "E",
+        "text": "Der Haldane-Effekt besagt, dass oxygeniertes Hämoglobin mehr CO₂ bindet als desoxygeniertes Hämoglobin."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** CO₂-Transport im Blut erfolgt über **3 Mechanismen**:\n\n**1. Bikarbonat (HCO₃⁻) — ~70% (wichtigster Mechanismus):**\n- In Erythrozyten: CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻ (katalysiert durch **Carboanhydrase**)\n- **HCO₃⁻** diffundiert aus Erythrozyten ins Plasma\n- **Chlorid-Shift:** Cl⁻ diffundiert ins Erythrozyt (Cl⁻/HCO₃⁻-Austauscher), um Ladungsausgleich zu wahren\n\n**2. Carbaminohämoglobin — ~23%:**\n- CO₂ bindet direkt an **Aminogruppen der Globin-Ketten** (nicht an Häm-Gruppe!)\n- Formel: Hb-NH₂ + CO₂ ⇌ Hb-NH-COO⁻ + H⁺\n\n**3. Physikalisch gelöst — ~7%:**\n- CO₂ gelöst im Plasma (bestimmt pCO₂)\n\n**Falsch (A):** Nur ~7% (nicht 70%) des CO₂ werden physikalisch gelöst transportiert. ~70% werden als **HCO₃⁻** transportiert.\n\n**Falsch (C):** Carboanhydrase katalysiert die Reaktion **in Erythrozyten** (nicht Alveolen), um CO₂ → HCO₃⁻ umzuwandeln (Transport). In der Lunge läuft die Reaktion **rückwärts** (HCO₃⁻ → CO₂), um CO₂ abzuatmen.\n\n**Falsch (D):** Der **Chlorid-Shift** (Hamburger-Shift) beschreibt den Austausch von **Cl⁻** (ins Erythrozyt) gegen **HCO₃⁻** (aus Erythrozyt), **nicht** Na⁺ gegen Cl⁻. Zweck: Ladungsausgleich.\n\n**Falsch (E):** **Haldane-Effekt:** **Umgekehrt!** **Desoxygeniertes Hb** bindet **mehr CO₂** (und mehr H⁺) als oxygeniertes Hb.\n- **Gewebe:** O₂ ↓ → Hb desaturiert → CO₂-Bindung ↑ (fördert CO₂-Aufnahme)\n- **Lunge:** O₂ ↑ → Hb saturiert → CO₂-Abgabe ↑ (erleichtert CO₂-Elimination)",
+    "difficulty": "hard",
+    "tags": ["atmung", "co2-transport", "bikarbonat", "carbaminohämoglobin", "carboanhydrase", "haldane-effekt"]
+  },
+  {
+    "id": "bio-3-08-q06",
+    "question": "Welche Aussage über die Regulation der Atmung ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Der wichtigste Atemantrieb ist der O₂-Partialdruck, der von zentralen Chemorezeptoren in der Medulla oblongata gemessen wird."
+      },
+      {
+        "id": "B",
+        "text": "Zentrale Chemorezeptoren in der Medulla oblongata messen pCO₂ und pH (indirekt über H⁺ im Liquor). Ein Anstieg von pCO₂ oder ein Abfall des pH führt zu erhöhter Ventilation. Dies ist der wichtigste Atemantrieb."
+      },
+      {
+        "id": "C",
+        "text": "Periphere Chemorezeptoren im Karotis-Körper reagieren nur auf Änderungen des pCO₂, nicht auf pO₂."
+      },
+      {
+        "id": "D",
+        "text": "Der Hering-Breuer-Reflex führt bei Überdehnung der Lunge zu einer Verlängerung der Inspiration."
+      },
+      {
+        "id": "E",
+        "text": "Bei COPD-Patienten mit chronischer Hyperkapnie sollte hochdosierter Sauerstoff (100%) ohne Vorsicht verabreicht werden."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** Die **Atemregulation** erfolgt hauptsächlich über **zentrale Chemorezeptoren**:\n\n**Zentrale Chemorezeptoren (Medulla oblongata, Hirnstamm):**\n- Messen **pCO₂** und **pH** (indirekt über **H⁺-Konzentration im Liquor**)\n- **pCO₂ ↑** (Hyperkapnie) → CO₂ diffundiert in Liquor → H₂CO₃ → **H⁺ ↑** (Azidose) → Atemzentrum stimuliert\n- **Reaktion:** **Atemfrequenz ↑, Atemtiefe ↑** → Ventilation ↑ → CO₂-Elimination ↑ → pCO₂ ↓\n- ⭐ **Wichtigster Atemantrieb:** CO₂/pH (nicht O₂!)\n\n**Periphere Chemorezeptoren (Karotis-Körper, Aortenbogen):**\n- Messen pO₂, pCO₂, pH\n- **pO₂ ↓** (<60 mmHg, schwere Hypoxie) → Atemzentrum stimuliert → Ventilation ↑\n- **Sekundär wichtig** (hypoxischer Atemantrieb)\n\n**Falsch (A):** Der wichtigste Atemantrieb ist **pCO₂/pH** (nicht pO₂). **pO₂** wird von **peripheren** Chemorezeptoren (Karotis-Körper) gemessen, nicht zentralen.\n\n**Falsch (C):** Periphere Chemorezeptoren reagieren auf **pO₂** (wichtigster Stimulus für periphere Rezeptoren), **pCO₂** und **pH**. Sie sind besonders sensitiv für **Hypoxie** (pO₂ <60 mmHg).\n\n**Falsch (D):** Der **Hering-Breuer-Reflex** führt bei Überdehnung der Lunge (Dehnungsrezeptoren) zu einem **Stopp der Inspiration** (nicht Verlängerung) → verhindert Überdehnung → Exspiration beginnt.\n\n**Falsch (E):** Bei **COPD mit chronischer Hyperkapnie** (CO₂-Retention) adaptieren zentrale Chemorezeptoren → **hypoxischer Atemantrieb** (periphere Rezeptoren) wird wichtiger. **Hochdosierter O₂** (>FiO₂ 0,4, >40%) kann:\n- Hypoxischen Atemantrieb eliminieren → **Atemfrequenz ↓**\n- **CO₂-Retention ↑** → CO₂-Narkose (Bewusstseinsstörung)\n- **Vorsicht:** Kontrollierte O₂-Gabe (niedrige FiO₂, z. B. 24–28%, Venturi-Maske), Zielsättigung ~88–92% (nicht >95%).",
+    "difficulty": "hard",
+    "tags": ["atmung", "atemregulation", "chemorezeptoren", "pco2", "po2", "copd", "atemantrieb"]
+  }
+]

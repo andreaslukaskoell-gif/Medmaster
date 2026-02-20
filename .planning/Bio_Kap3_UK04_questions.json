@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bio-3-04-q01",
+    "question": "Welche Aussage über den anatomischen Aufbau des Herzens ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Der rechte Ventrikel hat eine dickere Wand als der linke Ventrikel, da er gegen den hohen Systemwiderstand pumpen muss."
+      },
+      {
+        "id": "B",
+        "text": "Der linke Ventrikel hat eine ~3-mal dickere Wand als der rechte Ventrikel, um gegen den hohen Systemwiderstand (~120 mmHg) zu pumpen."
+      },
+      {
+        "id": "C",
+        "text": "Die Herzwand besteht von innen nach außen aus Myokard, Endokard und Epikard."
+      },
+      {
+        "id": "D",
+        "text": "Das Perikard ist die innerste Schicht des Herzens und sorgt für eine glatte Oberfläche zur Thromboseprophylaxe."
+      },
+      {
+        "id": "E",
+        "text": "Rechter und linker Ventrikel pumpen gegen denselben Widerstand und haben daher gleich dicke Wände."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** Der **linke Ventrikel (LV)** hat eine ~**10–15 mm dicke Wand** (ca. **3× dicker** als der rechte Ventrikel mit ~3–5 mm), da er gegen den **hohen Systemwiderstand** des großen Kreislaufs (~120 mmHg systolisch) pumpen muss. Der rechte Ventrikel pumpt nur gegen den niedrigen Pulmonalwiderstand (~25 mmHg).\n\n**Falsch (A):** Der **linke** Ventrikel (nicht rechte) hat die dickere Wand, da er gegen den Systemwiderstand arbeitet.\n\n**Falsch (C):** Die korrekte Reihenfolge von **innen nach außen** ist: **Endokard** (Endothel, glatte Oberfläche) → **Myokard** (Herzmuskulatur, Kontraktion) → **Epikard** (viszerales Blatt des Perikards, Gleitfläche).\n\n**Falsch (D):** Das **Endokard** (nicht Perikard) ist die innerste Schicht. Das **Perikard** ist der Herzbeutel (Epikard + parietales Blatt mit Perikardhöhle dazwischen).\n\n**Falsch (E):** Die Ventrikel pumpen gegen **unterschiedliche Widerstände**: LV gegen Systemwiderstand (~120 mmHg, hoher Druck), RV gegen Pulmonalwiderstand (~25 mmHg, niedriger Druck) → unterschiedliche Wanddicke.",
+    "difficulty": "easy",
+    "tags": ["herz", "herzaufbau", "ventrikel", "anatomie", "wandschichten"]
+  },
+  {
+    "id": "bio-3-04-q02",
+    "question": "Welche Aussage über die Herzklappen trifft zu?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Die Trikuspidalklappe ist eine Taschenklappe mit 3 Taschen und verhindert den Rückfluss von Blut aus der Pulmonalarterie in den rechten Ventrikel."
+      },
+      {
+        "id": "B",
+        "text": "Die Aortenklappe und Pulmonalklappe sind AV-Klappen und besitzen Sehnenfäden, die an Papillarmuskeln befestigt sind."
+      },
+      {
+        "id": "C",
+        "text": "Die Mitralklappe (Bikuspidalklappe) ist eine AV-Klappe mit 2 Segeln, die durch Sehnenfäden (Chordae tendineae) mit Papillarmuskeln verbunden ist und den Rückfluss bei LV-Systole verhindert."
+      },
+      {
+        "id": "D",
+        "text": "Die Pulmonalklappe öffnet sich durch aktive Kontraktion von Papillarmuskeln während der Ventrikel-Systole."
+      },
+      {
+        "id": "E",
+        "text": "Alle 4 Herzklappen besitzen Sehnenfäden, um einen Prolaps in die Vorhöfe zu verhindern."
+      }
+    ],
+    "correct": "C",
+    "explanation": "**Richtig (C):** Die **Mitralklappe** (Bikuspidalklappe) ist eine **AV-Klappe** (Atrioventrikularklappe) mit **2 Segeln**, die zwischen linkem Vorhof (LA) und linkem Ventrikel (LV) liegt. Sie besitzt **Sehnenfäden (Chordae tendineae)**, die an **Papillarmuskeln** befestigt sind und einen **Prolaps** (Umstülpung in den Vorhof) während der LV-Systole verhindern. Bei LV-Kontraktion schließt sich die Mitralklappe → verhindert Rückfluss in LA.\n\n**Falsch (A):** Die **Trikuspidalklappe** ist eine **AV-Klappe** (nicht Taschenklappe) mit **3 Segeln** (nicht Taschen) und liegt zwischen rechtem Vorhof und rechtem Ventrikel (nicht Pulmonalarterie). Die **Pulmonalklappe** (Taschenklappe) verhindert den Rückfluss aus der Pulmonalarterie.\n\n**Falsch (B):** **Aortenklappe** und **Pulmonalklappe** sind **Taschenklappen** (nicht AV-Klappen) und besitzen **keine Sehnenfäden**. Sie öffnen/schließen passiv durch Druckgradienten. **AV-Klappen** (Trikuspidal, Mitral) haben Sehnenfäden.\n\n**Falsch (D):** Die **Pulmonalklappe** öffnet sich **passiv** durch den Druckgradienten (RV-Druck > Pulmonalarterie-Druck) während der Systole. **Papillarmuskeln** sind nur bei AV-Klappen vorhanden (nicht bei Taschenklappen).\n\n**Falsch (E):** Nur die **AV-Klappen** (Trikuspidal, Mitral) besitzen Sehnenfäden. Die **Taschenklappen** (Pulmonal, Aorta) haben **keine** Sehnenfäden.",
+    "difficulty": "medium",
+    "tags": ["herz", "herzklappen", "mitralklappe", "av-klappen", "taschenklappen", "sehnenfäden"]
+  },
+  {
+    "id": "bio-3-04-q03",
+    "question": "Welche Aussage über die Erregungsleitung im Herzen ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Der AV-Knoten ist der primäre Schrittmacher mit einer Eigenfrequenz von 60–80/min und leitet die Erregung direkt zu den Purkinje-Fasern."
+      },
+      {
+        "id": "B",
+        "text": "Der SA-Knoten ist der primäre Schrittmacher (60–80/min), der AV-Knoten verzögert die Erregung (~100 ms), und die Purkinje-Fasern leiten die Erregung schnell von der Herzspitze zur Basis."
+      },
+      {
+        "id": "C",
+        "text": "Die Erregung wird durch Nervenfasern vom Gehirn zum Herzen übertragen, sodass das Herz ohne Nervenversorgung nicht schlagen kann."
+      },
+      {
+        "id": "D",
+        "text": "Die Tawara-Schenkel verzögern die Erregung, um eine synchrone Kontraktion von Vorhöfen und Kammern zu ermöglichen."
+      },
+      {
+        "id": "E",
+        "text": "Bei einem kompletten AV-Block (III°) übernimmt der SA-Knoten die Kammer-Erregung mit einer Frequenz von 60–80/min, sodass keine Symptome auftreten."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** Die Erregungsleitung verläuft:\n\n1. **SA-Knoten** (Sinusknoten, rechter Vorhof) = **primärer Schrittmacher** mit Eigenfrequenz **60–80/min** → spontane Depolarisation\n2. Vorhöfe kontrahieren (P-Welle)\n3. **AV-Knoten** (atrioventrikulärer Knoten) = **Verzögerung ~100 ms** (einzige elektrische Verbindung zwischen Vorhöfen und Kammern), Eigenfrequenz 40–60/min (Backup)\n4. **His-Bündel** → **Tawara-Schenkel** (re/li) → **Purkinje-Fasern** (schnellste Leitung ~4 m/s) → Erregung von **Herzspitze → Basis** → synchrone Ventrikelkontraktion (QRS-Komplex)\n\nDie Verzögerung im AV-Knoten ermöglicht **vollständige Vorhof-Entleerung**, bevor die Kammern kontrahieren.\n\n**Falsch (A):** Der **SA-Knoten** (nicht AV-Knoten) ist der primäre Schrittmacher (60–80/min). Der AV-Knoten leitet nicht direkt zu Purkinje-Fasern, sondern über His-Bündel → Tawara-Schenkel.\n\n**Falsch (C):** Das Herz besitzt ein **autonomes Erregungssystem** (SA-/AV-Knoten, His, Tawara, Purkinje) und kann **ohne Nervenversorgung** schlagen (Autonomie). Das autonome Nervensystem (Sympathikus/Parasympathikus) **moduliert** nur die Frequenz, ist aber nicht essentiell.\n\n**Falsch (D):** Die **Tawara-Schenkel** leiten die Erregung **schnell** entlang des Septums zur Herzspitze (keine Verzögerung). Die **Verzögerung** erfolgt im **AV-Knoten**, um Vorhof-Entleerung vor Kammer-Kontraktion zu ermöglichen.\n\n**Falsch (E):** Bei **AV-Block III°** (kompletter Block) schlagen Vorhöfe (SA-Knoten, 60–80/min) und Kammern **unabhängig**. Die Kammern werden von einem **Ersatzrhythmus** (AV-Knoten ~40/min oder ventrikulär ~20–40/min) erregt → **Bradykardie**, Symptome (Schwindel, Synkope) → **Schrittmacher-Indikation**.",
+    "difficulty": "medium",
+    "tags": ["herz", "erregungsleitung", "sa-knoten", "av-knoten", "purkinje-fasern", "schrittmacher"]
+  },
+  {
+    "id": "bio-3-04-q04",
+    "question": "Welche Aussage über den kleinen und großen Kreislauf ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Im kleinen Kreislauf führen die Lungenarterien sauerstoffreiches Blut zur Lunge, während die Lungenvenen sauerstoffarmes Blut zum Herzen zurückführen."
+      },
+      {
+        "id": "B",
+        "text": "Der kleine Kreislauf (Lungenkreislauf) verläuft vom rechten Ventrikel über die Lungenarterien (O₂-arm) zur Lunge, wo Gasaustausch stattfindet, und zurück über die Lungenvenen (O₂-reich) zum linken Vorhof. Der Druck ist niedrig (~25/10 mmHg)."
+      },
+      {
+        "id": "C",
+        "text": "Der große Kreislauf beginnt im rechten Ventrikel und pumpt sauerstoffreiches Blut über die Aorta in den Körper."
+      },
+      {
+        "id": "D",
+        "text": "Beide Kreisläufe sind parallel geschaltet, sodass das Blut entweder durch die Lunge oder durch den Körper fließt."
+      },
+      {
+        "id": "E",
+        "text": "Der große Kreislauf hat einen niedrigeren Druck als der kleine Kreislauf, da die Körpergefäße dünner und elastischer sind."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** Der **kleine Kreislauf** (Lungenkreislauf, Pulmonalkreislauf) dient dem **Gasaustausch**:\n\n**Verlauf:**\n- **Rechter Ventrikel** → **Truncus pulmonalis** → **Lungenarterien** (re/li, führen **O₂-armes Blut**!) → **Lungenkapillaren** (Gasaustausch in Alveolen: CO₂ ↓, O₂ ↑) → **Lungenvenen** (führen **O₂-reiches Blut**!) → **Linker Vorhof**\n\n⭐ **Wichtig:** \"Arterie\" = Gefäß vom Herzen **weg**, \"Vene\" = Gefäß zum Herzen **hin** (unabhängig von O₂-Gehalt!). **Lungenarterien** sind die einzigen Arterien mit **O₂-armem Blut**, **Lungenvenen** die einzigen Venen mit **O₂-reichem Blut**.\n\n**Druck:** ~25/10 mmHg (systolisch/diastolisch), niedriger Druck, da Lungenkapillaren dünnwandig (Diffusion).\n\n**Falsch (A):** **Umgekehrt!** Lungenarterien führen **O₂-armes** Blut (vom RV zur Lunge), Lungenvenen führen **O₂-reiches** Blut (von Lunge zum LA).\n\n**Falsch (C):** Der **große Kreislauf** beginnt im **linken Ventrikel** (nicht rechten). Der **rechte Ventrikel** pumpt in den kleinen Kreislauf. Verlauf: **LV** → Aorta → Körper → Venen → **RA**.\n\n**Falsch (D):** Die Kreisläufe sind **in Serie geschaltet** (nicht parallel). Blut fließt **zwingend** durch beide: RV → Lunge (klein) → LA → LV → Körper (groß) → RA → RV. Bei Parallelschaltung würde Blut entweder-oder fließen.\n\n**Falsch (E):** Der **große Kreislauf** hat einen **höheren Druck** (~120/80 mmHg) als der kleine Kreislauf (~25/10 mmHg), da der LV gegen hohen Systemwiderstand pumpt. Körpergefäße sind dickwandig (Aorta ~2 mm Wanddicke).",
+    "difficulty": "medium",
+    "tags": ["herz", "kreislauf", "kleiner-kreislauf", "großer-kreislauf", "lungenarterie", "lungenvene"]
+  },
+  {
+    "id": "bio-3-04-q05",
+    "question": "Welche Aussage über Blutgefäße und ihre Funktionen ist korrekt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Arteriolen sind die Hauptorte des Stoffaustauschs zwischen Blut und Gewebe durch ihre einschichtige Endothelwand."
+      },
+      {
+        "id": "B",
+        "text": "Die Windkesselfunktion der Aorta bedeutet, dass die Aorta in der Systole Blut speichert (elastische Dehnung) und in der Diastole durch elastische Rückstellung Blut kontinuierlich in die Peripherie drückt."
+      },
+      {
+        "id": "C",
+        "text": "Venen haben dickere Wände als Arterien und transportieren sauerstoffreiches Blut zum Herzen zurück."
+      },
+      {
+        "id": "D",
+        "text": "Kapillaren haben drei Wandschichten (Intima, Media, Adventitia) wie Arterien, sind aber kleiner im Durchmesser."
+      },
+      {
+        "id": "E",
+        "text": "Venenklappen sind vor allem in den Armvenen wichtig und öffnen sich aktiv durch Muskelkontraktion."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** Die **Windkesselfunktion der Aorta** nutzt die elastische Wand der Aorta:\n\n**Systole:**\n- Linker Ventrikel kontrahiert → Blut wird in Aorta gepumpt\n- Aorta **dehnt sich** (elastische Wand) → speichert Energie\n\n**Diastole:**\n- Aortenklappe schließt (Rückfluss verhindert)\n- Aorta zieht sich **elastisch zurück** → gespeicherte Energie wird freigesetzt\n- Blut wird **kontinuierlich** in die Peripherie gedrückt\n\n**Ergebnis:** Pulsatiler Fluss (intermittierend) aus dem Herzen wird in **kontinuierlichen Fluss** in der Peripherie umgewandelt.\n\n**Falsch (A):** **Kapillaren** (nicht Arteriolen) sind die Hauptorte des Stoffaustauschs. Kapillaren haben eine **einschichtige Endothelwand + Basalmembran** (Ø ~5–10 µm, dünnwandig, hohe Oberfläche ~600 m²). **Arteriolen** sind **Widerstandsgefäße** (glatte Muskulatur, regulieren peripheren Widerstand, Sympathikus α₁ → Vasokonstriktion).\n\n**Falsch (C):** Venen haben **dünnere Wände** als Arterien (Niederdrucksystem) und transportieren **überwiegend O₂-armes Blut** zum Herzen (Ausnahme: Lungenvenen → O₂-reich). Venen sind **Kapazitätsgefäße** (~70% des Blutvolumens).\n\n**Falsch (D):** Kapillaren haben nur **eine Schicht** (Endothel + Basalmembran), **keine** Media oder Adventitia. Die 3 Schichten (Intima, Media, Adventitia) sind typisch für **Arterien** und **Venen**.\n\n**Falsch (E):** Venenklappen sind besonders wichtig in **Beinvenen** (nicht Armen), da sie gegen die Schwerkraft arbeiten. Klappen öffnen/schließen **passiv** durch Druckunterschiede (nicht aktiv). Die **Muskel-Venen-Pumpe** (Skelettmuskel-Kontraktion komprimiert Venen → Blut nach oben, Klappen verhindern Rückfluss) unterstützt den venösen Rückfluss.",
+    "difficulty": "medium",
+    "tags": ["blutgefäße", "arterien", "venen", "kapillaren", "windkessel", "venenklappen"]
+  },
+  {
+    "id": "bio-3-04-q06",
+    "question": "Ein Patient mit akuter Hypotonie aktiviert den Barorezeptor-Reflex. Welche physiologische Reaktion folgt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Blutdruck sinkt → Barorezeptoren in Aortenbogen und Karotis-Sinus senden mehr Signale → Parasympathikus wird aktiviert → Herzfrequenz sinkt."
+      },
+      {
+        "id": "B",
+        "text": "Blutdruck sinkt → Barorezeptoren senden weniger Signale → Sympathikus wird aktiviert (Noradrenalin → β₁-Rezeptoren am Herzen, α₁-Rezeptoren an Gefäßen) → Herzfrequenz, Kontraktilität und Vasokonstriktion steigen → Blutdruck steigt."
+      },
+      {
+        "id": "C",
+        "text": "Blutdruck sinkt → RAAS wird sofort aktiviert (innerhalb von Sekunden) → Angiotensin II führt zu Vasodilatation und Aldosteron-Freisetzung."
+      },
+      {
+        "id": "D",
+        "text": "Blutdruck sinkt → ANP (atriales natriuretisches Peptid) wird freigesetzt → Natrium-Retention in der Niere → Blutdruck steigt."
+      },
+      {
+        "id": "E",
+        "text": "Barorezeptoren messen den Sauerstoffgehalt des Blutes und aktivieren bei Hypoxie den Sympathikus."
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Richtig (B):** **Barorezeptor-Reflex** (wichtigster kurzfristiger Mechanismus, Sekunden–Minuten):\n\n**Bei Hypotonie (Blutdruck ↓):**\n1. **Barorezeptoren** (Dehnungsrezeptoren in Aortenbogen und Karotis-Sinus) werden **weniger gedehnt** → **weniger Signale** an Medulla oblongata\n2. **Sympathikus ↑** (Aktivierung):\n   - **Herz:** Noradrenalin → **β₁-Rezeptoren** → **Herzfrequenz ↑, Kontraktilität ↑** → HZV ↑\n   - **Gefäße:** Noradrenalin → **α₁-Rezeptoren** → **Vasokonstriktion** → TPR ↑\n3. **Parasympathikus ↓** (Hemmung) → Vagus-Tonus ↓ → HF ↑\n4. **Ergebnis:** Blutdruck ↑ (MAP = HZV × TPR)\n\n**Bei Hypertonie (Blutdruck ↑):** Umgekehrt → Barorezeptoren ↑ → **Parasympathikus ↑** (Vagus → M2-Rezeptor → HF ↓), **Sympathikus ↓** → Blutdruck ↓.\n\n**Falsch (A):** Bei Blutdruck ↓ senden Barorezeptoren **weniger** Signale (nicht mehr), und der **Sympathikus** (nicht Parasympathikus) wird aktiviert → HF ↑ (nicht ↓).\n\n**Falsch (C):** **RAAS** ist ein **langfristiger** Mechanismus (Stunden–Tage), nicht sofort. Angiotensin II führt zu **Vasokonstriktion** (nicht Vasodilatation) und Aldosteron ↑ (Na⁺-Retention → Volumen ↑).\n\n**Falsch (D):** **ANP** wird bei **Volumenüberlastung** (Vorhof-Dehnung ↑) freigesetzt und führt zu **Natrium-Ausscheidung** (nicht Retention) → Blutdruck ↓ (nicht ↑). Bei Hypotonie würde ANP ↓.\n\n**Falsch (E):** **Barorezeptoren** messen **Druck/Dehnung** (nicht O₂-Gehalt). **Chemorezeptoren** (Aortenbogen, Karotis-Körper) messen O₂ ↓, CO₂ ↑, pH ↓ → Sympathikus ↑.",
+    "difficulty": "hard",
+    "tags": ["blutdruck", "barorezeptor-reflex", "sympathikus", "parasympathikus", "regulation", "hypotonie"]
+  }
+]

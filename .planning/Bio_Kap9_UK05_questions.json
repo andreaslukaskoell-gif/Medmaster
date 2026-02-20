@@ -1,0 +1,152 @@
+[
+  {
+    "id": "bio-9-05-q1",
+    "question": "Was beschreibt **Koevolution** am besten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Evolutionäre Veränderung einer einzelnen Art ohne Einfluss auf andere Arten"
+      },
+      {
+        "id": "B",
+        "text": "Wechselseitige evolutionäre Anpassung zweier (oder mehrerer) Arten, z.B. Blüte-Bestäuber, Wirt-Parasit, Räuber-Beute"
+      },
+      {
+        "id": "C",
+        "text": "Konvergente Evolution: Unabhängige Entwicklung ähnlicher Merkmale (z.B. Vogel- vs. Insekten-Flügel)"
+      },
+      {
+        "id": "D",
+        "text": "Aussterben einer Art führt automatisch zum Aussterben aller anderen Arten im Ökosystem"
+      },
+      {
+        "id": "E",
+        "text": "Genetische Drift in kleinen Populationen (Gründereffekt, Flaschenhals)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Koevolution:** **Wechselseitige evolutionäre Anpassung** zweier (oder mehrerer) Arten. **Prinzip:** Evolutionäre Veränderung einer Art → **Selektionsdruck** auf andere Art → **Gegenanpassung** → kontinuierlicher Prozess. **Beispiele:** (1) **Blüte-Bestäuber** (Pflanzen entwickeln Nektar/Farbe → Insekten entwickeln langen Rüssel/UV-Sehen), (2) **Wirt-Parasit** (Wirt entwickelt Abwehr → Parasit entwickelt Umgehung → Wettrüsten), (3) **Räuber-Beute** (Gepard schneller → Gazelle wendiger). **Wichtig:** **Beide** Seiten evolvieren (nicht nur eine)!",
+    "difficulty": "easy",
+    "tags": ["Evolution", "Koevolution", "Wechselseitige Anpassung"]
+  },
+  {
+    "id": "bio-9-05-q2",
+    "question": "**Darwins Orchidee** (*Angraecum sesquipedale*, Madagaskar) ist ein klassisches Beispiel für Blüte-Bestäuber-Koevolution. Was ist besonders an dieser Orchidee?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Die Orchidee hat keinen Nektar und wird durch Wind bestäubt (keine Koevolution)"
+      },
+      {
+        "id": "B",
+        "text": "Die Orchidee hat einen 30 cm langen Nektarsporn → Darwin (1862) sagte Bestäuber mit ~30 cm Rüssel voraus → Schwärmer Xanthopan gefunden (1903)"
+      },
+      {
+        "id": "C",
+        "text": "Die Orchidee wird nur von Kolibris bestäubt (keine Insekten)"
+      },
+      {
+        "id": "D",
+        "text": "Die Orchidee ist giftig und tötet alle Bestäuber (keine Koevolution)"
+      },
+      {
+        "id": "E",
+        "text": "Die Orchidee hat einen 5 cm Nektarsporn und wird von allen Insekten bestäubt (keine Spezialisierung)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Darwins Orchidee** (*Angraecum sesquipedale*, Madagaskar): **Nektarsporn 30 cm lang** (extrem tief!). **Charles Darwin (1862):** Vorhersage eines Bestäubers mit **~30 cm langem Rüssel** (basierend auf Koevolutions-Logik: Pflanze entwickelt tiefen Sporn → Bestäuber muss langen Rüssel entwickeln). **Bestätigung (1903):** Schwärmer *Xanthopan morganii praedicta* entdeckt (Rüssel ~25–30 cm). **Bedeutung:** Klassisches Beispiel für **vorhersagbare Koevolution** (Darwin's Vorhersage 41 Jahre vor Entdeckung!).",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Koevolution", "Darwins Orchidee", "Blüte-Bestäuber"]
+  },
+  {
+    "id": "bio-9-05-q3",
+    "question": "Die **Rote-Königin-Hypothese** (Van Valen, 1973) beschreibt die Koevolution zwischen Wirt und Parasit. Was besagt diese Hypothese?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Wirt entwickelt einmalige Abwehr → Parasit kann nie mehr eindringen (Ende der Koevolution)"
+      },
+      {
+        "id": "B",
+        "text": "Arten müssen kontinuierlich evolvieren, nur um den Status quo zu halten (nicht aussterben) — Wettrüsten ohne dauerhaften Gewinner"
+      },
+      {
+        "id": "C",
+        "text": "Parasiten entwickeln sich nicht weiter, nur Wirte evolvieren (einseitiger Prozess)"
+      },
+      {
+        "id": "D",
+        "text": "Wirt und Parasit entwickeln Symbiose (beide profitieren, kein Konflikt mehr)"
+      },
+      {
+        "id": "E",
+        "text": "Evolution stoppt, wenn Wirt und Parasit perfekt angepasst sind (stabiles Gleichgewicht)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Rote-Königin-Hypothese** (Van Valen, 1973): Arten müssen **kontinuierlich evolvieren**, nur um **Status quo** zu halten (nicht aussterben). **Name:** Lewis Carroll's 'Alice im Wunderland' — 'Hier musst du so schnell rennen, wie du kannst, um am selben Ort zu bleiben'. **Mechanismus:** Wirt entwickelt Abwehr → Parasit entwickelt Umgehung → Wirt entwickelt neue Abwehr → ... **Wettrüsten** ohne dauerhaften Gewinner! **Beispiel:** Kaninchen + Myxomatose-Virus (Australien): Kaninchen entwickelten Resistenz, Virus wurde weniger virulent → beide passten sich an. **Wichtig:** **Kontinuierliche** Evolution (kein Endpunkt)!",
+    "difficulty": "medium",
+    "tags": ["Evolution", "Koevolution", "Rote-Königin-Hypothese", "Wirt-Parasit"]
+  },
+  {
+    "id": "bio-9-05-q4",
+    "question": "**Räuber-Beute-Koevolution** führt zu einem evolutionären Wettrüsten. Welches Beispiel zeigt dies am besten?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Gepard (schnellstes Landtier, ~110 km/h, kurze Sprints) vs. Gazelle (wendig, Zickzack, Ausdauer) — kontinuierliche Anpassung beider Seiten"
+      },
+      {
+        "id": "B",
+        "text": "Pflanze produziert Nektar → Biene bestäubt (Mutualismus, kein Wettrüsten)"
+      },
+      {
+        "id": "C",
+        "text": "Flechten (Pilz + Alge, Symbiose, beide profitieren)"
+      },
+      {
+        "id": "D",
+        "text": "Gepard jagt nur kranke Gazellen (keine evolutionäre Anpassung notwendig)"
+      },
+      {
+        "id": "E",
+        "text": "Räuber und Beute entwickeln sich unabhängig voneinander (keine Koevolution)"
+      }
+    ],
+    "correct": "A",
+    "explanation": "**Räuber-Beute-Koevolution:** Evolutionäres **Wettrüsten** — Räuber wird besser im Angriff → Beute wird besser in Verteidigung → Räuber entwickelt Gegenanpassung → ... **Gepard vs. Gazelle:** **Gepard** = schnellstes Landtier (~110 km/h), aber nur **kurze Sprints** (~30 Sek.). **Gazelle** = wendig, **Zickzack-Lauf**, **Ausdauer** (länger als Gepard). **Koevolution:** Gepard wird schneller → Gazelle wird wendiger/ausdauernder → ... **Weitere Anpassungen:** Tarnung (Tiger-Streifen), Gift (Schlangen), Panzer (Schildkröten), Mimikry. **Wichtig:** Beide Seiten evolvieren (Wettrüsten)!",
+    "difficulty": "easy",
+    "tags": ["Evolution", "Koevolution", "Räuber-Beute", "Gepard", "Gazelle"]
+  },
+  {
+    "id": "bio-9-05-q5",
+    "question": "**Bates'sche Mimikry** und **Müller'sche Mimikry** sind zwei Formen der Täuschung. Was ist der Unterschied?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Bates'sche Mimikry: Beide Arten giftig, ähnliche Warnung. Müller'sche Mimikry: Ungiftige Art imitiert giftige"
+      },
+      {
+        "id": "B",
+        "text": "Bates'sche Mimikry: Ungiftige Art imitiert giftige (z.B. Schwebfliege → Wespe). Müller'sche Mimikry: Beide giftig, ähnliche Warnung (z.B. Monarchfalter + Vizekönigsfalter)"
+      },
+      {
+        "id": "C",
+        "text": "Bates'sche Mimikry: Tarnung in der Umgebung (Kryptik). Müller'sche Mimikry: Warnung durch auffällige Farben"
+      },
+      {
+        "id": "D",
+        "text": "Beide Mimikry-Typen sind identisch (kein Unterschied)"
+      },
+      {
+        "id": "E",
+        "text": "Bates'sche Mimikry: Nur bei Pflanzen. Müller'sche Mimikry: Nur bei Tieren"
+      }
+    ],
+    "correct": "B",
+    "explanation": "**Bates'sche Mimikry:** **UNGIFTIGE** Art (Mimic) imitiert **GIFTIGE** Art (Modell). **Beispiel:** Ungiftige Schwebfliege (Mimic) imitiert giftige Wespe (Modell) → Räuber meiden Schwebfliege (verwechseln mit Wespe). **Vorteil Mimic:** Schutz, obwohl ungiftig. **Müller'sche Mimikry:** **BEIDE** Arten sind **GIFTIG** und sehen ähnlich aus. **Beispiel:** Monarchfalter + Vizekönigsfalter (beide giftig, ähnliche Warnung: schwarz-orange). **Vorteil:** Räuber lernt **schneller** (ein Muster für beide Arten → weniger Todesfälle pro Art). **Wichtig:** Bates = ungiftig imitiert giftig, Müller = beide giftig!",
+    "difficulty": "hard",
+    "tags": ["Evolution", "Koevolution", "Mimikry", "Bates", "Müller"]
+  }
+]

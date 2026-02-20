@@ -1,0 +1,118 @@
+[
+  {
+    "id": "q1",
+    "question": "Was ist die Funktion des Proteasoms?",
+    "options": [
+      {
+        "id": "A",
+        "text": "DNA-Replikation"
+      },
+      {
+        "id": "B",
+        "text": "Abbau ubiquitinierter Proteine zu Peptiden (7-9 Aminosäuren) - Qualitätskontrolle, Zellzyklus-Regulation, p53-Regulation"
+      },
+      {
+        "id": "C",
+        "text": "ATP-Produktion"
+      },
+      {
+        "id": "D",
+        "text": "Lipidsynthese"
+      },
+      {
+        "id": "E",
+        "text": "Photosynthese"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Das **PROTEASOM** (26S) ist der zentrale zytosolische Proteinabbau-Komplex in Eukaryoten. Funktion: ABBAU von **UBIQUITINIERTEN PROTEINEN** zu PEPTIDEN (7-9 Aminosäuren lang). Struktur: 26S = 20S-Kern (4 gestapelte Ringe: α₇β₇β₇α₇, β-Untereinheiten proteolytisch aktiv) + 19S-Regulatorische Partikel (erkennt Ubiquitin-Kette, entfaltet Protein ATP-abhängig, öffnet Eingang). Hauptfunktionen: (1) **QUALITÄTSKONTROLLE:** Abbau falsch gefalteter Proteine (z.B. ERAD – ER-Associated Degradation), oxidativ geschädigter Proteine. (2) **ZELLZYKLUS-REGULATION:** Abbau von Cyclinen (Cyclin B via APC/C, Cyclin E via SCF) nach ihrer Funktion. (3) **p53-REGULATION:** MDM2 (E3-Ligase) ubiquitiniert p53 → Proteasom-Abbau. (4) **ANTIGEN-PROZESSIERUNG:** Peptide auf MHC-I für CD8⁺ T-Zellen. A, C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Wie funktioniert die Ubiquitin-Kaskade?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ubiquitin hat keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "E1 (aktiviert Ubiquitin, ATP-abhängig) → E2 (überträgt Ubiquitin) → E3 (Ubiquitin-Ligase, SPEZIFITÄT, erkennt Substrat-Protein)"
+      },
+      {
+        "id": "C",
+        "text": "Nur E1 ist beteiligt"
+      },
+      {
+        "id": "D",
+        "text": "Ubiquitin ist nur in Bakterien"
+      },
+      {
+        "id": "E",
+        "text": "Ubiquitin produziert ATP"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Die **UBIQUITIN-KASKADE** markiert Proteine für den Proteasom-Abbau. Ablauf: (1) **E1 (Ubiquitin-aktivierendes Enzym):** AKTIVIERT Ubiquitin (76 AS) durch Thioester-Bindung (ATP-abhängig). Nur 2 E1-Enzyme im Menschen (wenig Spezifität). (2) **E2 (Ubiquitin-konjugierendes Enzym):** ÜBERTRÄGT Ubiquitin von E1 auf sich selbst (Thioester). ~40 E2-Enzyme. (3) **E3 (Ubiquitin-Ligase):** ERKENNT SUBSTRAT-PROTEIN (Spezifität!) und katalysiert Ubiquitin-ANHEFTUNG an Lysin-Rest des Substrats. >600 E3-Enzyme (höchste Spezifität). Beispiele: MDM2 (ubiquitiniert p53), APC/C (ubiquitiniert Cyclin B), SCF (ubiquitiniert Cyclin E). (4) **Polyubiquitin-Kette:** Mindestens 4 Ubiquitine (Lys48-verknüpft) → Signal für Proteasom. Lys63-Kette = Signal-Transduktion (kein Abbau). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Was ist die Struktur der Zentriolen und welche Funktion haben sie?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Zentriolen sind DNA-Strukturen"
+      },
+      {
+        "id": "B",
+        "text": "Zentriolen = 9 Mikrotubuli-Tripletts, zwei orthogonal (90°) → Zentrosom (MTOC). Funktion: Spindelapparat-Organisation in Mitose"
+      },
+      {
+        "id": "C",
+        "text": "Zentriolen produzieren ATP"
+      },
+      {
+        "id": "D",
+        "text": "Zentriolen sind nur in Bakterien"
+      },
+      {
+        "id": "E",
+        "text": "Zentriolen sind Ribosomen"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **ZENTRIOLEN** sind zylindrische Strukturen aus **9 MIKROTUBULI-TRIPLETTS** (9 × 3 = 27 Mikrotubuli). Länge ~0.5 μm, Durchmesser ~0.2 μm. **ZENTROSOM:** Zwei Zentriolen stehen ORTHOGONAL (90° zueinander) + perizentrisches Material (PCM, γ-Tubulin) → **MIKROTUBULI-ORGANISATIONSZENTRUM (MTOC)**. Funktionen: (1) **INTERPHASE:** Nukleation von Mikrotubuli (Zytoskelett). (2) **MITOSE:** Organisation des **SPINDELAPPARATS** (Chromosomen-Trennung). **Zentrosom-Duplikation:** S-Phase (Zentriolen verdoppeln) → G2 (Zentrosomen zu Zellpolen) → Mitose (Spindel-Mikrotubuli: Kinetochor-Mikrotubuli binden Chromosomen, Astrale verankern Spindel, Polare überlappen). (3) **PRIMÄRZILIUM:** Mutter-Zentriole kann Zilium bilden (Signal-Rezeption, Hedgehog-Weg). KLINISCH: Zentrosom-Amplifikation in Krebs → multipolare Spindel → Aneuploidie. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Wie reguliert MDM2 p53 und was passiert bei DNA-Schaden?",
+    "options": [
+      {
+        "id": "A",
+        "text": "MDM2 hat keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "Normal: MDM2 (E3-Ligase) ubiquitiniert p53 → Proteasom-Abbau (p53 niedrig). DNA-Schaden: MDM2 gehemmt → p53 akkumuliert → Zellzyklus-Arrest oder Apoptose"
+      },
+      {
+        "id": "C",
+        "text": "MDM2 produziert ATP"
+      },
+      {
+        "id": "D",
+        "text": "p53 ist nur in Bakterien"
+      },
+      {
+        "id": "E",
+        "text": "MDM2 ist ein Ribosom"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **p53** ist ein TUMORSUPPRESSOR-PROTEIN (\"Wächter des Genoms\"), das bei DNA-Schäden Zellzyklus-Arrest oder Apoptose induziert. **MDM2-p53-REGULATION:** (1) **NORMALE BEDINGUNGEN:** **MDM2** (E3-Ubiquitin-Ligase) bindet p53 → UBIQUITINIERT p53 → Proteasom-Abbau → p53-Level NIEDRIG (Zelle kann wachsen). MDM2 wird durch p53 transkriptionell aktiviert (negativer Feedback-Loop). (2) **DNA-SCHADEN** (UV, Röntgen, oxidativer Stress): Kinasen (ATM, ATR, Chk1/2) PHOSPHORYLIEREN p53 → MDM2-Bindung BLOCKIERT → MDM2 kann p53 NICHT ubiquitinieren → p53 AKKUMULIERT. (3) p53 aktiviert Transkription von: (a) **p21** (CDK-Inhibitor) → Zellzyklus-Arrest (G1/S-Checkpoint), (b) **BAX** (pro-apoptotisch) → Apoptose (bei irreparablem Schaden). KLINISCH: p53-Mutationen in >50% aller Krebsarten (Li-Fraumeni-Syndrom: Keimbahn-Mutation). Bortezomib (Proteasom-Inhibitor) → p53-Akkumulation → Apoptose. A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  }
+]

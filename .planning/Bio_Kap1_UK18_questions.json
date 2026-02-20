@@ -1,0 +1,176 @@
+[
+  {
+    "id": "q1",
+    "question": "Was passiert in der S-Phase des Zellzyklus?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Zellteilung (Zytokinese)"
+      },
+      {
+        "id": "B",
+        "text": "DNA-Replikation: Chromosomen werden verdoppelt (2c → 4c). Vor S-Phase: 46 Chromosomen, 2c. Nach S-Phase: 46 Chromosomen, 4c (2 Schwesterchromatiden pro Chromosom)"
+      },
+      {
+        "id": "C",
+        "text": "Proteinabbau"
+      },
+      {
+        "id": "D",
+        "text": "Apoptose"
+      },
+      {
+        "id": "E",
+        "text": "Nur Zellwachstum"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Die **S-PHASE** (Synthese-Phase) ist die Phase der **DNA-REPLIKATION** im Zellzyklus. Ablauf: (1) **VOR S-Phase (G1):** Zelle hat 46 Chromosomen (diploid, 2n), **2c DNA-Gehalt** (jedes Chromosom besteht aus 1 Chromatid). (2) **WÄHREND S-Phase:** DNA wird repliziert → jedes Chromosom wird verdoppelt → 2 SCHWESTERCHROMATIDEN pro Chromosom (verbunden via Centromer/Cohesin-Proteine). (3) **NACH S-Phase (G2):** Zelle hat noch immer 46 Chromosomen (2n, weil Schwesterchromatiden als EIN Chromosom gelten, solange verbunden), aber **4c DNA-Gehalt** (doppelte DNA-Menge). Zusätzlich: Histone-Synthese (neue Histone für replizierte DNA), Replikations-Proteine (DNA-Polymerase, Helicase, Ligase). Dauer: ~8 Stunden. **WICHTIG:** Chromosomen-ANZAHL ändert sich NICHT (46 → 46), aber DNA-GEHALT verdoppelt sich (2c → 4c). Erst in Mitose (Anaphase) trennen sich Schwesterchromatiden → 2 Tochterzellen mit je 46 Chromosomen, 2c. A, C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Was sind die vier Phasen der Mitose und was passiert in jeder Phase?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Es gibt nur eine Phase"
+      },
+      {
+        "id": "B",
+        "text": "Prophase (Chromosomen kondensieren, Spindelapparat, Kernhülle fragmentiert), Metaphase (Äquatorialebene, Checkpoint), Anaphase (Schwesterchromatiden trennen), Telophase (Kernhülle re-formiert, Dekondensation)"
+      },
+      {
+        "id": "C",
+        "text": "Mitose ist nur Zytokinese"
+      },
+      {
+        "id": "D",
+        "text": "Mitose produziert ATP"
+      },
+      {
+        "id": "E",
+        "text": "Mitose ist nur in Bakterien"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **MITOSE** (Kernteilung) besteht aus 4 Hauptphasen: (1) **PROPHASE:** Chromatin **kondensiert** → Chromosomen sichtbar (46 Chromosomen, je 2 Schwesterchromatiden). Zentrosomen wandern zu Zellpolen. **Spindelapparat** beginnt zu bilden (Mikrotubuli). Kinetochore (Protein-Komplexe am Centromer) bilden sich. **Kernhülle fragmentiert** (späte Prophase). (2) **METAPHASE:** Chromosomen **alignieren** in **Äquatorialebene** (Metaphasen-Platte). Kinetochor-Mikrotubuli binden beidseitig an Kinetochore. **METAPHASEN/ANAPHASE-CHECKPOINT:** MAD2 hemmt APC/C, bis ALLE Chromosomen korrekt gebunden. (3) **ANAPHASE:** **APC/C** ubiquitiniert Securin → Separase aktiv → spaltet **Cohesin** → **SCHWESTERCHROMATIDEN TRENNEN** sich → zu Zellpolen (Mikrotubuli-Verkürzung). (4) **TELOPHASE:** Chromosomen **dekondensieren** → Chromatin. **Kernhülle re-formiert** sich um Chromosomen. Spindelapparat zerfällt. **ZYTOKINESE** (nachfolgend): Aktin-Myosin-Ring (kontraktiler Ring) schnürt Zelle ab → 2 Tochterzellen (2n, 2c). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "question": "Was ist der Hauptunterschied zwischen Meiose I und Meiose II?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Meiose I (Reduktionsteilung): Homologe Chromosomen trennen (2n → n), Crossing-over, Independent Assortment. Meiose II (Äquationsteilung): Schwesterchromatiden trennen (wie Mitose, n [2c] → n [c])"
+      },
+      {
+        "id": "C",
+        "text": "Nur Meiose I existiert"
+      },
+      {
+        "id": "D",
+        "text": "Meiose II produziert diploide Zellen"
+      },
+      {
+        "id": "E",
+        "text": "Beide produzieren ATP"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: MEIOSE besteht aus ZWEI aufeinanderfolgenden Teilungen mit unterschiedlichen Mechanismen. **MEIOSE I (REDUKTIONSTEILUNG):** (1) **Ziel:** Diploid (2n, 4c) → HAPLOID (n, 2c). (2) **Prophase I:** HOMOLOGE CHROMOSOMEN paaren (Synapsis) → Bivalente (4 Chromatiden). **CROSSING-OVER** (Pachytän): Rekombination zwischen nichtschwesterlichen Chromatiden → genetische Variabilität. (3) **Metaphase I:** Bivalente alignieren. **INDEPENDENT ASSORTMENT:** Zufällige Orientierung (mütterlich/väterlich) → 2²³ Kombinationen. (4) **Anaphase I:** **HOMOLOGE CHROMOSOMEN TRENNEN** (NICHT Schwesterchromatiden!) → zu Zellpolen. Schwesterchromatiden bleiben verbunden (Cohesin am Centromer intakt). (5) Ergebnis: 2 haploide Zellen (n, 2c – je 23 Chromosomen mit 2 Chromatiden). **MEIOSE II (ÄQUATIONSTEILUNG, wie Mitose):** (1) **Ziel:** Haploid (n, 2c) → Haploid (n, c). (2) **Anaphase II:** **SCHWESTERCHROMATIDEN TRENNEN** (Cohesin-Spaltung). (3) Ergebnis: 4 haploide Gameten (n, c – je 23 Chromosomen mit 1 Chromatid). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Wie reguliert p53 den Zellzyklus bei DNA-Schäden?",
+    "options": [
+      {
+        "id": "A",
+        "text": "p53 hat keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "DNA-Schäden → p53 ↑ (Phosphorylierung via ATM/ATR) → p21 ↑ (CDK-Inhibitor) → Cyclin-CDK gehemmt → G1-Arrest (Reparatur) ODER Apoptose (wenn irreparabel via BAX). MDM2 ubiquitiniert p53 → Proteasom-Abbau (normal)"
+      },
+      {
+        "id": "C",
+        "text": "p53 produziert ATP"
+      },
+      {
+        "id": "D",
+        "text": "p53 ist nur in Bakterien"
+      },
+      {
+        "id": "E",
+        "text": "p53 repliziert DNA"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **p53** ist der wichtigste TUMORSUPPRESSOR (\"Wächter des Genoms\"), reguliert Zellzyklus bei DNA-Schäden. Mechanismus: (1) **NORMALE BEDINGUNGEN:** **MDM2** (E3-Ubiquitin-Ligase) bindet p53 → ubiquitiniert p53 → Proteasom-Abbau → p53-Level NIEDRIG (Zelle kann proliferieren). MDM2 wird durch p53 transkriptionell aktiviert (negativer Feedback-Loop). (2) **DNA-SCHADEN** (UV, Röntgen, oxidativer Stress, Replikationsstress): **ATM/ATR-Kinasen** (DNA-Schaden-Sensoren) PHOSPHORYLIEREN p53 → MDM2-Bindung BLOCKIERT → p53 AKKUMULIERT. (3) **p53-ZIELGENE:** (a) **p21 (WAF1):** CDK-Inhibitor → hemmt Cyclin E-CDK2, Cyclin D-CDK4/6 → **G1-ARREST** (Zelle hat Zeit für DNA-Reparatur). (b) **GADD45, XPC:** DNA-Reparatur-Gene (Nukleotid-Exzisions-Reparatur). (c) **BAX:** Pro-apoptotisches Protein → Mitochondrien-Permeabilisierung → Cytochrom c-Freisetzung → Caspase-Kaskade → **APOPTOSE** (wenn Schaden irreparabel). KLINISCH: p53-Mutationen in >50% aller Krebsarten (Li-Fraumeni-Syndrom: Keimbahn-Mutation → multiple Tumore). A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q5",
+    "question": "Was ist Crossing-over und wann findet es statt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Crossing-over ist ATP-Produktion"
+      },
+      {
+        "id": "B",
+        "text": "Crossing-over: Rekombination zwischen homologen Chromosomen (nichtschwesterliche Chromatiden) → Austausch von DNA-Segmenten → genetische Variabilität. Findet in Prophase I (Meiose I) statt, speziell im Pachytän-Stadium (Chiasmata = Überkreuzungsstellen)"
+      },
+      {
+        "id": "C",
+        "text": "Crossing-over findet in Mitose statt"
+      },
+      {
+        "id": "D",
+        "text": "Crossing-over ist nur in Bakterien"
+      },
+      {
+        "id": "E",
+        "text": "Crossing-over ist Zellteilung"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **CROSSING-OVER** (Rekombination) ist der AUSTAUSCH von DNA-SEGMENTEN zwischen HOMOLOGEN CHROMOSOMEN → genetische Variabilität (neue Allel-Kombinationen, die weder von Mutter noch Vater stammen). **WANN:** **PROPHASE I (Meiose I)**, speziell im **PACHYTÄN-STADIUM**. Ablauf: (1) **LEPTOTÄN:** Chromosomen kondensieren. (2) **ZYGOTÄN:** Homologe Chromosomen paaren (Synapsis) → **Bivalente** (= 2 homologe Chromosomen, 4 Chromatiden = Tetrade). **Synaptonemale Komplex** (Proteinstruktur) hält Homologe zusammen. (3) **PACHYTÄN:** **CROSSING-OVER** → Doppelstrangbrüche in DNA (Spo11-Protein) → Rekombination zwischen **NICHTSCHWESTERLICHEN CHROMATIDEN** (ein mütterliches Chromatid tauscht mit einem väterlichen) → **CHIASMATA** (Überkreuzungsstellen, sichtbar). (4) **DIPLOTÄN:** Synaptonemaler Komplex löst sich, Chiasmata bleiben sichtbar. (5) **DIAKINESE:** Maximale Kondensation. **BEDEUTUNG:** (1) Genetische Variabilität (jedes Gamete einzigartig), (2) Homologe korrekt trennen (Chiasmata halten Homologe zusammen bis Anaphase I). Defekte: Fehlendes Crossing-over → Non-Disjunction → Aneuploidie (z.B. Trisomie 21). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q6",
+    "question": "Was ist der Metaphasen/Anaphase-Checkpoint und wie funktioniert er?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Checkpoint hat keine Funktion"
+      },
+      {
+        "id": "B",
+        "text": "Spindle Assembly Checkpoint (SAC): Prüft, ob alle Chromosomen korrekt an Spindelapparat (Kinetochor-Mikrotubuli) gebunden. MAD2/BubR1 hemmen APC/C, solange Kinetochore NICHT korrekt gebunden. Erst wenn ALLE korrekt → APC/C aktiv → ubiquitiniert Securin → Separase → Cohesin-Spaltung → Anaphase"
+      },
+      {
+        "id": "C",
+        "text": "Checkpoint ist nur in Bakterien"
+      },
+      {
+        "id": "D",
+        "text": "Checkpoint produziert ATP"
+      },
+      {
+        "id": "E",
+        "text": "Checkpoint ist nur in G1-Phase"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: Der **METAPHASEN/ANAPHASE-CHECKPOINT** (Spindle Assembly Checkpoint, SAC) ist der letzte Kontrollpunkt in Mitose, verhindert Chromosomen-Fehlverteilung (Aneuploidie). **FUNKTION:** Prüfung, ob ALLE Chromosomen korrekt an Spindelapparat gebunden (bi-orientiert: jedes Kinetochor bindet Mikrotubuli von EINEM Pol). **MECHANISMUS:** (1) **NICHT korrekt gebunden:** Ungebundene Kinetochore rekrutieren **MAD2** (Mitotic Arrest Deficient) und **BubR1** → MAD2/BubR1 hemmen **APC/C** (Anaphase Promoting Complex/Cyclosome, E3-Ubiquitin-Ligase) → Metaphasen-ARREST (Zelle wartet). (2) **ALLE korrekt gebunden:** MAD2/BubR1 dissoziieren → **APC/C AKTIV** → ubiquitiniert **Securin** → Proteasom-Abbau → **Separase** (Protease) AKTIV → spaltet **COHESIN** (Protein, das Schwesterchromatiden zusammenhält) → SCHWESTERCHROMATIDEN TRENNEN → **ANAPHASE** beginnt. Zusätzlich: APC/C ubiquitiniert Cyclin B → CDK1 inaktiv → Mitose-Austritt. KLINISCH: Defekte in SAC (MAD2-Mutationen) → Chromosomen-Instabilität (CIN) → Aneuploidie → Krebs. A, C, D, E sind falsch.",
+    "difficulty": "hard"
+  }
+]

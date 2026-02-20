@@ -1,0 +1,118 @@
+[
+  {
+    "id": "q1",
+    "question": "Welche Hauptfunktionen haben Peroxisomen?",
+    "options": [
+      {
+        "id": "A",
+        "text": "DNA-Replikation"
+      },
+      {
+        "id": "B",
+        "text": "β-Oxidation sehr langkettiger Fettsäuren (VLCFA), H₂O₂-Detoxifikation durch Katalase, Plasmalogensynthese"
+      },
+      {
+        "id": "C",
+        "text": "Proteinsynthese"
+      },
+      {
+        "id": "D",
+        "text": "Zellatmung"
+      },
+      {
+        "id": "E",
+        "text": "Photosynthese"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: PEROXISOMEN sind kleine Organellen mit OXIDATIVEN Enzymen. Hauptfunktionen: (1) **β-OXIDATION sehr langkettiger Fettsäuren (VLCFA, >C22)** → Verkürzung auf C8-C10 (dann Export zu Mitochondrien für komplette Oxidation). Mitochondrien oxidieren nur C4-C20. Erste Oxidation produziert H₂O₂ (nicht FADH₂). (2) **H₂O₂-DETOXIFIKATION:** Katalase (Hauptenzym) baut H₂O₂ ab (2 H₂O₂ → 2 H₂O + O₂). (3) **PLASMALOGENSYNTHESE** (spezielle Phospholipide, wichtig für Myelin). (4) Aminosäure-Abbau (D-Aminosäure-Oxidase). Peroxisomen besonders zahlreich in Leber, Nieren. A, C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "question": "Was ist die Funktion der Katalase in Peroxisomen?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Katalase synthetisiert ATP"
+      },
+      {
+        "id": "B",
+        "text": "Katalase baut Wasserstoffperoxid (H₂O₂) ab zu H₂O und O₂ (Reaktion: 2 H₂O₂ → 2 H₂O + O₂)"
+      },
+      {
+        "id": "C",
+        "text": "Katalase repliziert DNA"
+      },
+      {
+        "id": "D",
+        "text": "Katalase ist nur in Bakterien"
+      },
+      {
+        "id": "E",
+        "text": "Katalase produziert Proteine"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **KATALASE** ist das HAUPTENZYM in Peroxisomen (oft als kristalliner Kern sichtbar). Funktion: ABBAU von **WASSERSTOFFPEROXID (H₂O₂)** – ein toxisches Nebenprodukt oxidativer Reaktionen. Reaktion: **2 H₂O₂ → 2 H₂O + O₂**. Mechanismus: Katalase hat **HÄM-GRUPPE** als Kofaktor (wie Hämoglobin, Myoglobin, Cytochrom-Oxidase). H₂O₂-QUELLEN: (1) Peroxisomale Oxidasen (β-Oxidation, Aminosäure-Oxidation, Urat-Oxidase), (2) Oxidative Reaktionen im Zytosol. KATALASE ist eines der EFFIZIENTESTEN Enzyme (Turnover-Zahl: 40 Millionen Moleküle H₂O₂/Sekunde!). Ohne Katalase: H₂O₂ akkumuliert → oxidativer Stress → DNA-Schäden, Lipidperoxidation. A, C, D, E sind falsch.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q3",
+    "question": "Was ist der Unterschied zwischen β-Oxidation in Mitochondrien und Peroxisomen?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Beide sind identisch"
+      },
+      {
+        "id": "B",
+        "text": "Mitochondrien: β-Oxidation C4-C20, FADH₂ produziert. Peroxisomen: β-Oxidation VLCFA (>C22), H₂O₂ produziert (dann Katalase-Abbau), Verkürzung auf C8-C10"
+      },
+      {
+        "id": "C",
+        "text": "Nur Mitochondrien oxidieren Fettsäuren"
+      },
+      {
+        "id": "D",
+        "text": "Peroxisomen sind nur in Pflanzen"
+      },
+      {
+        "id": "E",
+        "text": "Beide produzieren ATP direkt"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: β-OXIDATION findet in BEIDEN Organellen statt, aber mit unterschiedlichen SUBSTRATEN und PRODUKTEN: **MITOCHONDRIEN:** (1) Substrate: Kurz- bis mittelkettige Fettsäuren (C4-C20). (2) Erste Oxidation (Acyl-CoA → Enoyl-CoA): Acyl-CoA-Dehydrogenase → **FADH₂** produziert (geht in Atmungskette → ATP). (3) KOMPLETTE Oxidation zu Acetyl-CoA → Citratzyklus. **PEROXISOMEN:** (1) Substrate: **SEHR LANGKETTIGE Fettsäuren (VLCFA, >C22)**. (2) Erste Oxidation: Acyl-CoA-Oxidase → **H₂O₂** produziert (NICHT FADH₂!) → Katalase baut H₂O₂ ab. (3) PARTIELLE Oxidation: Verkürzung auf C8-C10 → Export zu Mitochondrien (komplette Oxidation). KLINISCH: Defekte Peroxisomen (Zellweger, X-ALD) → VLCFA akkumulieren. A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "question": "Was passiert bei der Adrenoleukodystrophie (X-ALD)?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Zu viel ATP wird produziert"
+      },
+      {
+        "id": "B",
+        "text": "Defekt in ABCD1 (VLCFA-Transporter) → VLCFA akkumulieren in ZNS und Nebenniere → Demyelinisierung, Nebenniereninsuffizienz"
+      },
+      {
+        "id": "C",
+        "text": "DNA-Replikation ist gestört"
+      },
+      {
+        "id": "D",
+        "text": "Zu viele Mitochondrien"
+      },
+      {
+        "id": "E",
+        "text": "Zellmembran ist durchlässig"
+      }
+    ],
+    "correct": "B",
+    "explanation": "B ist korrekt: **ADRENOLEUKODYSTROPHIE (X-ALD)** ist eine peroxisomale Erkrankung. Genetik: **X-CHROMOSOMAL-REZESSIV**, Defekt im ABCD1-Gen (kodiert VLCFA-Transporter in Peroxisomen-Membran). Pathophysiologie: (1) ABCD1-Defekt → VLCFA können NICHT in Peroxisomen importiert werden → **VLCFA akkumulieren** im ZNS (weiße Substanz, Myelin) und Nebenniere. (2) **DEMYELINISIERUNG** (Myelin-Abbau) im ZNS → neurologische Symptome: Sehstörungen, Verhaltensstörungen, kognitiver Abbau, Paralyse. (3) **NEBENNIERENINSUFFIZIENZ** (Addison-Krankheit): Hyperpigmentierung (ACTH ↑), Hypotonie, Elektrolytstörungen (Na⁺ ↓, K⁺ ↑). Verlauf: Childhood cerebral ALD (4-8 Jahre, schwerste Form), Adolescent/Adult (milder). Diagnostik: VLCFA ↑ im Serum. Therapie: Stammzelltransplantation (früh), Lorenzo's Oil (Erucasäure/Ölsäure, kompetitive Hemmung der VLCFA-Synthese). A, C, D, E sind falsch.",
+    "difficulty": "medium"
+  }
+]
