@@ -27,6 +27,8 @@ import { subjectFromSlug, chapterIdFromParams, pathForSubject, pathForChapter } 
 import { useBreadcrumb } from "@/contexts/BreadcrumbContext";
 import { migrateBMSChaptersToSupabase, checkMigrationStatus } from "@/scripts/migrateBMS";
 import { ChapterListSkeleton } from "@/components/chapter/ChapterListSkeleton";
+import { MRSWidget } from "@/components/bms/MRSWidget";
+import { useMRS } from "@/hooks/useFragenTrainer";
 
 // Safe imports with fallbacks - prevents "Failed to fetch dynamically imported module" errors
 // Fixed: Use proper ES6 imports with error handling
@@ -116,6 +118,8 @@ export default function BMS() {
   const stichwortStats = useAdaptiveStore((s) => s.profile.stichwortStats);
   const setLastPath = useAdaptiveStore((s) => s.setLastPath);
   const { setBreadcrumbs } = useBreadcrumb();
+  const userId = localStorage.getItem('medmaster-local-uid') ?? null;
+  const { mrs, loading: mrsLoading } = useMRS(userId);
 
   useEffect(() => {
     if (activeKapitel) return;
@@ -681,6 +685,9 @@ export default function BMS() {
           )}
         </p>
       </div>
+
+      {/* MedAT Readiness Score */}
+      <MRSWidget mrs={mrs} loading={mrsLoading} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {subjects.map((subject) => {
