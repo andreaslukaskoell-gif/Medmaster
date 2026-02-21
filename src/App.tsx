@@ -36,6 +36,7 @@ const Prognose = lazy(() => import("@/pages/Prognose"));
 const PerformanceOverview = lazy(() => import("@/pages/PerformanceOverview"));
 const BMSQuiz = lazy(() => import("@/pages/BMSQuiz"));
 const SmartRecoveryPage = lazy(() => import("@/pages/SmartRecoveryPage"));
+const FragenTrainer = lazy(() => import("@/pages/FragenTrainer"));
 
 function LoadingSpinner() {
   return (
@@ -107,6 +108,7 @@ export default function App() {
             <Route path="/wissencheck/:fach" element={<WissenCheck />} />
             <Route path="/prognose" element={<Prognose />} />
             <Route path="/performance" element={<PerformanceOverview />} />
+            <Route path="/fragen-trainer" element={<FragenTrainer />} />
           </Route>
         </Routes>
       </Suspense>

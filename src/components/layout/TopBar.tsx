@@ -59,8 +59,8 @@ export function TopBar({ menuButtonRef, onMenuToggle }: TopBarProps) {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3 }}
         className={cn(
-          "sticky top-0 z-50 flex items-center justify-between gap-3 px-4 sm:px-5 lg:px-6 transition-all duration-300",
-          "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-100/80 dark:border-gray-800/50 shadow-sm",
+          "sticky top-0 z-[100] flex items-center justify-between gap-3 px-4 sm:px-5 lg:px-6 transition-all duration-300",
+          "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-100/80 dark:border-gray-800/50 shadow-sm",
           scrolled ? "h-12 sm:h-12 py-0" : "h-14 sm:h-16 py-0"
         )}
       >

@@ -5,1371 +5,770 @@ export const bioKap7: Kapitel = {
   title: 'Methoden der Genetik',
   subject: 'biologie',
   icon: '🧬',
-  estimatedTime: '120 min',
+  estimatedTime: '75 min',
   unterkapitel: [
     {
       id: 'bio-7-01',
-      title: 'PCR (Polymerase-Kettenreaktion)',
-      content: `# PCR (Polymerase-Kettenreaktion)
+      title: 'PCR — Prinzip, Ablauf und klinische Anwendung',
+      content: `## Polymerase-Kettenreaktion (PCR) — Grundprinzip
 
-Die Polymerase-Kettenreaktion (PCR) ist eine der wichtigsten molekularbiologischen Methoden zur gezielten Vervielfältigung von DNA-Abschnitten. Sie wurde 1983 von Kary Mullis entwickelt und ermöglicht es, aus winzigen Mengen DNA Millionen identischer Kopien zu erzeugen. Die PCR basiert auf der natürlichen DNA-Replikation, läuft aber in vitro ab und nutzt thermostabile DNA-Polymerasen.
+Die **Polymerase-Kettenreaktion (PCR)** ist eine molekularbiologische Methode zur exponentiellen Vervielfältigung definierter DNA-Abschnitte in vitro. Entwickelt 1983 von Kary Mullis (Nobelpreis 1993), revolutionierte sie Diagnostik, Forensik und Grundlagenforschung.
 
-## Prinzip der PCR
+## Die drei Schritte eines PCR-Zyklus
 
-Die PCR beruht auf sich wiederholenden Zyklen von drei Temperaturschritten. Jeder Zyklus verdoppelt die Anzahl der DNA-Moleküle, sodass nach n Zyklen theoretisch 2^n Kopien vorliegen. In der Praxis werden typischerweise 25-35 Zyklen durchgeführt.
+**1. Denaturierung (94–95 °C):** Durch starkes Erhitzen werden die Wasserstoffbrückenbindungen zwischen den komplementären DNA-Strängen aufgebrochen. Die Doppelhelix trennt sich in zwei Einzelstränge, die als Matrizen dienen.
 
-> **MerksatzBox type="altfragen":** PCR-Grundlagen (Denaturierung 94-95°C, Annealing 50-65°C, Elongation 72°C) gehören zu den häufigsten BMS-Prüfungsthemen. Die drei Schritte und ihre Temperaturen werden regelmäßig abgefragt.
+**2. Annealing (50–65 °C):** Die Temperatur wird gesenkt, sodass kurze synthetische Oligonukleotide (**Primer**, ca. 18–25 Basen) spezifisch an komplementäre Sequenzen der Ziel-DNA binden können. Es werden stets zwei Primer benötigt — ein Vorwärts- und ein Rückwärtsprimer — die den zu amplifizierenden Bereich flankieren.
 
-**Die drei Schritte pro Zyklus:**
+**3. Elongation (72 °C):** Die **Taq-Polymerase** (aus dem thermophilen Bakterium *Thermus aquaticus*) synthetisiert ab den Primern einen neuen DNA-Strang in 5'→3'-Richtung. Das Optimum liegt bei 72 °C, da das Enzym hitzebeständig ist.
 
-1. **Denaturierung (94-95°C):** Die Doppelstrang-DNA wird durch Hitze in Einzelstränge getrennt. Die Wasserstoffbrückenbindungen zwischen den komplementären Basen brechen auf.
-
-2. **Annealing (50-65°C):** Kurze DNA-Oligonukleotide, die sogenannten Primer, lagern sich an die komplementären Sequenzen der Einzelstrang-DNA an. Die Temperatur hängt von der Primerlänge und -sequenz ab.
-
-3. **Elongation (72°C):** Die thermostabile Taq-Polymerase (aus dem Bakterium Thermus aquaticus) synthetisiert den komplementären DNA-Strang ausgehend vom 3'-Ende der Primer.
-
-## Komponenten der PCR
-
-Für eine erfolgreiche PCR werden folgende Bestandteile benötigt:
-
-- **Template-DNA:** Die zu vervielfältigende Ausgangsprobe
-- **Primer:** Zwei Oligonukleotide (forward und reverse), die die zu amplifizierende Region flankieren
-- **DNA-Polymerase:** Thermostabile Taq-Polymerase (aktiv bei hohen Temperaturen)
-- **dNTPs:** Die vier Desoxyribonukleosidtriphosphate (dATP, dTTP, dGTP, dCTP)
-- **Puffer:** Enthält Magnesiumionen (Mg²⁺) als Cofaktor für die Polymerase
-
-## Anwendungen
-
-Die PCR findet vielfältige Anwendung in Forschung, Diagnostik und Forensik:
-
-- **Molekulare Diagnostik:** Nachweis von Krankheitserregern (Bakterien, Viren)
-- **Forensik:** DNA-Analyse aus Spuren am Tatort
-- **Vaterschaftstests:** Vergleich genetischer Profile
-- **Genforschung:** Klonierung, Sequenzierung, Mutationsanalyse
-- **Pränatale Diagnostik:** Nachweis genetischer Erkrankungen
-
-> **MerksatzBox type="klinisch":** Im klinischen Alltag begegnet dir PCR ständig: COVID-19-Tests (RT-qPCR), Erregerdiagnostik bei Sepsis (Blutkultur-PCR liefert Ergebnis in 6h statt 2-3 Tagen), Tumordiagnostik (EGFR-Mutation → Therapiewahl bei Lungenkrebs). PCR ist das Arbeitspferd der modernen Labormedizin.
+Nach n Zyklen entstehen theoretisch **2ⁿ Kopien** der Ziel-DNA — ein exponentielles Wachstum. Nach 30 Zyklen sind bereits über eine Milliarde Kopien vorhanden.
 
 ## Varianten der PCR
 
-Neben der Standard-PCR wurden zahlreiche Varianten entwickelt:
+**RT-PCR (Reverse Transkriptase-PCR):** RNA wird zunächst durch das Enzym Reverse Transkriptase in komplementäre cDNA (complementary DNA) umgeschrieben, die dann per Standard-PCR amplifiziert wird. Anwendung: Nachweis von RNA-Viren (z. B. HIV, SARS-CoV-2), Genexpressionsanalyse.
 
-- **Quantitative PCR (qPCR):** Ermöglicht die Quantifizierung der DNA-Menge in Echtzeit
-- **Reverse Transkriptase-PCR (RT-PCR):** Vervielfältigung von RNA nach Umschreibung in cDNA
-- **Nested PCR:** Zwei aufeinanderfolgende PCR-Reaktionen für höhere Spezifität
-- **Multiplex-PCR:** Gleichzeitige Amplifikation mehrerer DNA-Abschnitte`,
-      lernziele: [],
-      sections: [],
-      merksätze: [
-        'Die PCR verdoppelt DNA-Sequenzen exponentiell in zyklischen Wiederholungen: Nach n Zyklen entstehen theoretisch 2^n Kopien.',
-        'Drei Schritte pro Zyklus: Denaturierung (94-95°C trennt Doppelstrang), Annealing (50-65°C bindet Primer), Elongation (72°C synthetisiert neuen Strang).',
-        'Die Taq-Polymerase aus Thermus aquaticus ist thermostabil und überlebt die hohen Temperaturen der Denaturierung.',
-        'Primer sind essenziell: Sie definieren Start- und Endpunkt der zu amplifizierenden Sequenz und müssen komplementär zu den Zielsequenzen sein.',
-        'Exponentielles Wachstum ermöglicht die Amplifikation aus kleinsten DNA-Mengen – theoretisch reicht ein einziges DNA-Molekül als Ausgangsmaterial.'
-      ],
-      selfTest: [
-        {
-          question: 'Welche Temperatur wird für die Denaturierung der DNA in der PCR verwendet?',
-          options: [
-            '50-65°C (Annealing-Temperatur)',
-            '30-40°C (Niedrige Temperatur)',
-            '94-95°C (Denaturierungs-Temperatur)',
-            '37°C (Körpertemperatur)',
-            '4°C (Lagerungstemperatur)'
-          ],
-          correctIndex: 2,
-          explanation: 'Bei etwa 94-95°C denaturiert die doppelsträngige DNA durch Aufbrechen der Wasserstoffbrückenbindungen zwischen den komplementären Basen. Diese hohe Temperatur ist notwendig, um die DNA-Stränge vollständig zu trennen und für die Primer-Bindung im nächsten Schritt zugänglich zu machen.',
-          hints: [
-            'Die höchste Temperatur im PCR-Zyklus trennt die Doppelstränge.',
-            'Überlege: Bei welcher Temperatur werden Wasserstoffbrücken aufgebrochen?'
-          ],
-          tags: ['pcr', 'polymerase-kettenreaktion', 'denaturierung'],
-          difficulty: 2
-        },
-        {
-          question: 'Was ist die Funktion der Primer in der PCR?',
-          options: [
-            'Sie synthetisieren den neuen DNA-Strang',
-            'Sie definieren Start- und Endpunkt der Amplifikation',
-            'Sie denaturieren die DNA',
-            'Sie stabilisieren die DNA-Polymerase',
-            'Sie liefern Energie für die Reaktion'
-          ],
-          correctIndex: 1,
-          explanation: 'Primer sind kurze Oligonukleotide, die komplementär zu den flankierenden Sequenzen der zu amplifizierenden Region sind. Sie lagern sich beim Annealing an die Einzelstrang-DNA an und definieren damit den Startpunkt für die DNA-Polymerase. Nur der Bereich zwischen forward und reverse Primer wird vervielfältigt.',
-          hints: [
-            'Primer sind kurze DNA-Stücke, die sich an spezifische Sequenzen anlagern.',
-            'Überlege: Woher weiß die Polymerase, wo sie beginnen soll?'
-          ],
-          tags: ['pcr', 'polymerase-kettenreaktion', 'primer'],
-          difficulty: 1
-        },
-        {
-          question: 'Warum wird in der PCR die Taq-Polymerase verwendet?',
-          options: [
-            'Sie arbeitet besonders schnell',
-            'Sie ist sehr kostengünstig',
-            'Sie ist thermostabil und überlebt hohe Temperaturen',
-            'Sie korrigiert Fehler besonders effizient',
-            'Sie benötigt keine Cofaktoren'
-          ],
-          correctIndex: 2,
-          explanation: 'Die Taq-Polymerase stammt aus dem thermophilen Bakterium Thermus aquaticus und ist bei Temperaturen bis 95°C stabil. Dies ist entscheidend für die PCR, da in jedem Zyklus eine Denaturierung bei 94-95°C stattfindet. Andere DNA-Polymerasen würden bei diesen Temperaturen denaturieren und ihre Funktion verlieren.',
-          hints: [
-            'Thermus aquaticus lebt in heißen Quellen.',
-            'Was passiert mit den meisten Enzymen bei 95°C?'
-          ],
-          tags: ['pcr', 'polymerase-kettenreaktion', 'taq-polymerase'],
-          difficulty: 2
-        },
-        {
-          question: 'Nach wie vielen PCR-Zyklen liegen theoretisch 1024 Kopien einer DNA-Sequenz vor, wenn man mit einem Molekül startet?',
-          options: [
-            '5 Zyklen',
-            '8 Zyklen',
-            '10 Zyklen',
-            '16 Zyklen',
-            '20 Zyklen'
-          ],
-          correctIndex: 2,
-          explanation: 'Die PCR verdoppelt die DNA-Menge in jedem Zyklus exponentiell (2^n). Nach 10 Zyklen erhält man 2^10 = 1024 Kopien. Diese exponentielle Amplifikation ist der Grund für die hohe Effizienz der PCR: Bereits nach 30 Zyklen entstehen über eine Milliarde Kopien (2^30 ≈ 1,07 × 10^9).',
-          hints: [
-            'Die Formel lautet: Anzahl = 2^n, wobei n die Zyklenanzahl ist.',
-            'Welche Potenz von 2 ergibt 1024?'
-          ],
-          tags: ['pcr', 'polymerase-kettenreaktion', 'amplifikation'],
-          difficulty: 2
-        },
-        {
-          question: 'Welche Aussage zum Annealing-Schritt der PCR ist korrekt?',
-          options: [
-            'Die DNA-Stränge werden getrennt',
-            'Die Primer lagern sich an komplementäre Sequenzen an',
-            'Die DNA-Polymerase synthetisiert den neuen Strang',
-            'Die Reaktion wird gestoppt',
-            'Die DNA wird vollständig denaturiert'
-          ],
-          correctIndex: 1,
-          explanation: 'Beim Annealing (typischerweise 50-65°C) lagern sich die Primer spezifisch an ihre komplementären Zielsequenzen auf den Einzelstrang-DNA-Molekülen an. Die Temperatur wird so gewählt, dass die Primer stabil binden können, aber unspezifische Bindungen minimiert werden. Die Annealing-Temperatur hängt von der Länge und GC-Gehalt der Primer ab.',
-          hints: [
-            'Annealing bedeutet „Anlagerung" oder „Hybridisierung".',
-            'Bei mittlerer Temperatur können komplementäre Sequenzen binden.'
-          ],
-          tags: ['pcr', 'polymerase-kettenreaktion', 'annealing'],
-          difficulty: 1
-        },
-        {
-          question: 'Welche Komponente ist NICHT zwingend erforderlich für eine Standard-PCR?',
-          options: [
-            'Template-DNA',
-            'DNA-Polymerase',
-            'Primer (forward und reverse)',
-            'Reverse Transkriptase',
-            'Desoxyribonukleosidtriphosphate (dNTPs)'
-          ],
-          correctIndex: 3,
-          explanation: 'Die Reverse Transkriptase wird nur bei der RT-PCR benötigt, wenn RNA in cDNA umgeschrieben werden soll. Für eine Standard-PCR mit DNA-Template sind dagegen Template-DNA, Taq-Polymerase, Primer und dNTPs essentiell. Zusätzlich wird ein geeigneter Puffer mit Mg²⁺-Ionen benötigt, die als Cofaktor für die Polymerase dienen.',
-          hints: [
-            'Überlege: Was wird nur benötigt, wenn RNA das Ausgangsmaterial ist?',
-            'Die Standard-PCR arbeitet mit DNA als Template.'
-          ],
-          tags: ['pcr', 'polymerase-kettenreaktion', 'komponenten'],
-          difficulty: 2
-        }
-      ]
-    },
-    {
-      id: 'bio-7-02',
-      title: 'DNA-Sequenzierung',
-      content: `# DNA-Sequenzierung
+**qPCR (quantitative Real-time-PCR):** Durch Fluoreszenzfarbstoffe (z. B. SYBR Green, das doppelsträngige DNA interkaliert, oder TaqMan-Sonden) wird die DNA-Menge in Echtzeit gemessen. Dies ermöglicht eine Quantifizierung der Ausgangs-DNA. Wichtig beim COVID-19-PCR-Test.
 
-Die DNA-Sequenzierung ist die Bestimmung der Nukleotidabfolge in einem DNA-Molekül. Sie ist eine Schlüsselmethode der modernen Molekularbiologie und Medizin. Seit der Entwicklung der Sanger-Sequenzierung in den 1970er Jahren haben sich die Technologien stetig weiterentwickelt, bis hin zu modernen Next-Generation-Sequencing (NGS)-Verfahren, die das gesamte menschliche Genom in wenigen Tagen sequenzieren können.
-
-## Sanger-Sequenzierung (Kettenabbruch-Methode)
-
-Die von Frederick Sanger 1977 entwickelte Methode war lange Zeit der Goldstandard der DNA-Sequenzierung und ermöglichte die Sequenzierung des ersten menschlichen Genoms im Rahmen des Human Genome Project (2003).
-
-### Prinzip
-
-Die Sanger-Sequenzierung basiert auf dem kontrollierten, zufälligen Abbruch der DNA-Synthese. Sie nutzt modifizierte Nukleotide, die sogenannten Didesoxyribonukleosidtriphosphate (ddNTPs).
-
-> **MerksatzBox type="altfragen":** Der Unterschied zwischen dNTPs und ddNTPs (fehlende 3'-OH-Gruppe führt zum Kettenabbruch) ist ein klassisches Prüfungsthema. Verstehe das Prinzip, nicht nur auswendig lernen.
-
-**Unterschied zu normalen dNTPs:**
-- **dNTPs** haben eine OH-Gruppe am 3'-C-Atom der Ribose → DNA-Synthese kann weiterlaufen
-- **ddNTPs** fehlt diese OH-Gruppe → Kettenabbruch, da keine Phosphodiesterbindung zum nächsten Nukleotid gebildet werden kann
-
-### Ablauf der Sanger-Sequenzierung
-
-1. **DNA-Denaturierung:** Die zu sequenzierende DNA wird in Einzelstränge getrennt
-2. **Primer-Anlagerung:** Ein Primer bindet an eine bekannte Sequenz
-3. **DNA-Synthese mit Kettenabbruch:** DNA-Polymerase synthetisiert neue Stränge. Im Reaktionsgemisch befinden sich sowohl normale dNTPs als auch fluoreszenzmarkierte ddNTPs. Wird zufällig ein ddNTP eingebaut, stoppt die Synthese an dieser Position
-4. **Fragmenttrennung:** Die unterschiedlich langen DNA-Fragmente werden durch Kapillarelektrophorese nach Größe getrennt
-5. **Detektion:** Ein Laser detektiert die Fluoreszenzfarbstoffe der ddNTPs am Ende jedes Fragments. Die Reihenfolge der Farbsignale entspricht der Nukleotidsequenz
-
-### Moderne Automatisierung
-
-Heutige Sanger-Sequenzierung nutzt vier verschiedene Fluoreszenzfarbstoffe (je einer für A, T, G, C), sodass alle vier Basen in einem einzigen Reaktionsgefäß sequenziert werden können. Die Methode liefert Sequenzen von 500-1000 Basenpaaren mit sehr hoher Genauigkeit (>99,9%).
-
-## Next-Generation Sequencing (NGS)
-
-NGS-Technologien ermöglichen die parallele Sequenzierung von Millionen DNA-Fragmenten gleichzeitig. Sie sind deutlich schneller und kostengünstiger als die Sanger-Methode, allerdings mit kürzeren Leselängen.
-
-### Prinzipien moderner NGS-Verfahren
-
-**Illumina-Sequenzierung (am weitesten verbreitet):**
-1. **DNA-Fragmentierung:** Genomische DNA wird in kurze Fragmente (150-300 bp) zerlegt
-2. **Adapteranlagerung:** An beide Enden werden kurze DNA-Adapter ligiert
-3. **Bridge-Amplifikation:** Die Fragmente werden auf einer festen Oberfläche (Flow Cell) klonal vervielfältigt
-4. **Sequenzierung durch Synthese:** Fluoreszenzmarkierte Nukleotide werden einzeln eingebaut und detektiert
-
-**Vorteile von NGS:**
-- Hoher Durchsatz (Millionen Reads parallel)
-- Kostengünstig für große Datenmengen
-- Quantitative Information über DNA-Mengen
-- Geeignet für Gesamtgenomsequenzierung
-
-## Anwendungen der DNA-Sequenzierung
-
-- **Humangenomik:** Identifikation krankheitsrelevanter Mutationen
-- **Onkologie:** Tumorgenomanalyse, personalisierte Krebstherapie
-- **Pränatale Diagnostik:** Nicht-invasive Pränataldiagnostik (NIPT)
-- **Infektiologie:** Erregeridentifikation und Resistenzbestimmung
-- **Forensik:** Identifikation von Personen
-- **Evolutionsforschung:** Vergleich von Genomen verschiedener Spezies
-
-> **MerksatzBox type="klinisch":** DNA-Sequenzierung ist Basis der personalisierten Medizin. Konkret: Bei metastasiertem Kolonkarzinom sequenzieren wir den Tumor auf KRAS-Mutationen – Wildtyp erhält Cetuximab (monoklonaler Antikörper), KRAS-mutiert nicht (Resistenz). Gleiche Diagnose, unterschiedliche Therapie – basierend auf Sequenzierung.`,
-      lernziele: [],
-      sections: [],
-      merksätze: [
-        'Die Sanger-Sequenzierung nutzt Didesoxyribonukleotide (ddNTPs), denen die 3\'-OH-Gruppe fehlt – ihr Einbau führt zum Kettenabbruch.',
-        'Der entscheidende Unterschied: dNTPs ermöglichen DNA-Synthese, ddNTPs stoppen sie durch fehlende 3\'-OH-Gruppe.',
-        'Next-Generation Sequencing (NGS) sequenziert Millionen Fragmente parallel und ist ideal für Gesamtgenomanalysen.',
-        'Sanger-Methode: hohe Genauigkeit (>99,9%), lange Reads (500-1000 bp), ideal für einzelne Gene; NGS: hoher Durchsatz, kurze Reads, ideal für Genome.',
-        'Moderne Sanger-Sequenzierung nutzt vier Fluoreszenzfarbstoffe (A, T, G, C), sodass alle Basen in einer Reaktion bestimmt werden.'
-      ],
-      selfTest: [
-        {
-          question: 'Was ist der entscheidende Unterschied zwischen dNTPs und ddNTPs bei der Sanger-Sequenzierung?',
-          options: [
-            'ddNTPs haben eine zusätzliche Methylgruppe',
-            'ddNTPs fehlt die 3\'-OH-Gruppe, was zum Kettenabbruch führt',
-            'ddNTPs sind größer als dNTPs',
-            'ddNTPs enthalten eine andere Phosphatgruppe',
-            'ddNTPs haben eine andere Basenpaarung'
-          ],
-          correctIndex: 1,
-          explanation: 'Didesoxyribonukleotiden (ddNTPs) fehlt die Hydroxylgruppe am 3\'-Kohlenstoffatom der Ribose. Diese OH-Gruppe ist jedoch notwendig, um eine Phosphodiesterbindung zum nächsten Nukleotid zu bilden. Wird ein ddNTP eingebaut, kann die DNA-Synthese nicht fortgesetzt werden – es kommt zum Kettenabbruch. Dies ist das Grundprinzip der Sanger-Sequenzierung.',
-          hints: [
-            'Der Name „Didesoxyribonukleotid" gibt einen Hinweis – es fehlt etwas.',
-            'Überlege: Was wird für die Verknüpfung von Nukleotiden benötigt?'
-          ],
-          tags: ['sequenzierung', 'sanger', 'ddntp'],
-          difficulty: 2
-        },
-        {
-          question: 'Welche Methode wird bei der klassischen Sanger-Sequenzierung zur Trennung der DNA-Fragmente verwendet?',
-          options: [
-            'Zentrifugation',
-            'Gelelektrophorese oder Kapillarelektrophorese',
-            'Chromatographie',
-            'Filtration',
-            'Magnetische Separation'
-          ],
-          correctIndex: 1,
-          explanation: 'Die DNA-Fragmente unterschiedlicher Länge werden durch (Kapillar-)Elektrophorese nach ihrer Größe getrennt. Kleine Fragmente wandern schneller durch das Medium als große. Moderne Systeme nutzen Kapillarelektrophorese, bei der die Fragmente durch eine sehr dünne Kapillare wandern und am Ende durch Laser-induzierte Fluoreszenz detektiert werden.',
-          hints: [
-            'Die Methode trennt Moleküle nach Größe unter Verwendung eines elektrischen Feldes.',
-            'DNA ist negativ geladen und wandert zur Anode.'
-          ],
-          tags: ['sequenzierung', 'sanger', 'elektrophorese'],
-          difficulty: 1
-        },
-        {
-          question: 'Was ermöglicht Next-Generation Sequencing (NGS) im Vergleich zur Sanger-Sequenzierung?',
-          options: [
-            'Längere DNA-Fragmente zu sequenzieren',
-            'Höhere Genauigkeit zu erreichen',
-            'Millionen DNA-Fragmente parallel zu sequenzieren',
-            'Sequenzierung ohne DNA-Polymerase',
-            'Sequenzierung ohne Primer'
-          ],
-          correctIndex: 2,
-          explanation: 'Der entscheidende Vorteil von NGS ist die massive Parallelisierung: Millionen bis Milliarden DNA-Fragmente werden gleichzeitig sequenziert. Dadurch können in kurzer Zeit große Datenmengen generiert werden, was z.B. die Sequenzierung ganzer Genome in wenigen Tagen ermöglicht. Die Sanger-Methode ist zwar genauer, kann aber nur eine Sequenz pro Reaktion bestimmen.',
-          hints: [
-            '„Next-Generation" bezieht sich auf den enormen Durchsatz.',
-            'Überlege: Was macht NGS revolutionär für die Genomforschung?'
-          ],
-          tags: ['sequenzierung', 'ngs', 'next-generation'],
-          difficulty: 2
-        },
-        {
-          question: 'Wie lang sind typischerweise die Sequenzen, die mit moderner Sanger-Sequenzierung erzeugt werden?',
-          options: [
-            '50-100 Basenpaare',
-            '100-200 Basenpaare',
-            '500-1000 Basenpaare',
-            '5000-10000 Basenpaare',
-            '50000-100000 Basenpaare'
-          ],
-          correctIndex: 2,
-          explanation: 'Moderne Sanger-Sequenzierung liefert typischerweise Reads von 500-1000 Basenpaaren Länge mit sehr hoher Genauigkeit (>99,9%). Dies ist deutlich länger als bei den meisten NGS-Methoden (oft 150-300 bp), macht die Sanger-Methode aber auch langsamer und teurer pro Base. Sie eignet sich daher besonders für die gezielte Sequenzierung einzelner Gene oder zur Validierung von NGS-Ergebnissen.',
-          hints: [
-            'Sanger-Sequenzierung erzeugt längere Reads als typische NGS-Methoden.',
-            'Die Methode wird oft für einzelne Gene oder zur Validierung verwendet.'
-          ],
-          tags: ['sequenzierung', 'sanger', 'read-länge'],
-          difficulty: 2
-        },
-        {
-          question: 'Welche Aussage zur DNA-Sequenzierung ist korrekt?',
-          options: [
-            'ddNTPs haben eine 3\'-OH-Gruppe und ermöglichen Kettenverlängerung',
-            'NGS ist immer genauer als Sanger-Sequenzierung',
-            'Sanger-Sequenzierung nutzt fluoreszenzmarkierte ddNTPs zur Basenerkennung',
-            'Bei der Sanger-Methode werden DNA-Fragmente nach Masse getrennt',
-            'NGS kann ohne DNA-Amplifikation durchgeführt werden'
-          ],
-          correctIndex: 2,
-          explanation: 'In der modernen Sanger-Sequenzierung sind die vier ddNTPs (A, T, G, C) jeweils mit unterschiedlichen Fluoreszenzfarbstoffen markiert. Nach der elektrophoretischen Trennung werden die Fragmente mit einem Laser angeregt, und die Farbe des Signals zeigt an, welche Base am Ende des Fragments steht. Die Abfolge der Farbsignale ergibt die DNA-Sequenz.',
-          hints: [
-            'Moderne Systeme nutzen vier verschiedene Farben für die vier Basen.',
-            'Die Fluoreszenz wird am Ende jedes Fragments detektiert.'
-          ],
-          tags: ['sequenzierung', 'sanger', 'fluoreszenz'],
-          difficulty: 2
-        },
-        {
-          question: 'In welchem Bereich liegt die typische Genauigkeit der Sanger-Sequenzierung?',
-          options: [
-            '50-60%',
-            '80-90%',
-            '95-98%',
-            '>99,9%',
-            '100% (fehlerfrei)'
-          ],
-          correctIndex: 3,
-          explanation: 'Die Sanger-Sequenzierung erreicht eine sehr hohe Genauigkeit von über 99,9%, was bedeutet, dass weniger als eine Base von 1000 falsch bestimmt wird. Diese hohe Präzision macht die Methode zum Goldstandard für die Validierung von Sequenzierergebnissen und für klinische Anwendungen, bei denen es auf absolute Genauigkeit ankommt, etwa bei der Diagnostik genetischer Erkrankungen.',
-          hints: [
-            'Sanger gilt als „Goldstandard" für Genauigkeit.',
-            'Die Methode wird zur Validierung anderer Sequenziermethoden verwendet.'
-          ],
-          tags: ['sequenzierung', 'sanger', 'genauigkeit'],
-          difficulty: 1
-        }
-      ]
-    },
-    {
-      id: 'bio-7-03',
-      title: 'Genomanalyse',
-      content: `# Genomanalyse
-
-Die Genomanalyse umfasst alle Methoden zur Untersuchung der Gesamtheit der genetischen Information eines Organismus. Während die DNA-Sequenzierung die Basenabfolge bestimmt, geht die Genomanalyse darüber hinaus: Sie untersucht Genexpression, epigenetische Modifikationen, strukturelle Variationen und funktionelle Zusammenhänge auf Genom-Ebene.
-
-## Ebenen der Genomanalyse
-
-### 1. Strukturelle Genomanalyse
-
-Die strukturelle Genomanalyse beschäftigt sich mit der Organisation und Architektur des Genoms:
-
-- **Kartierung von Genen:** Bestimmung der chromosomalen Lokalisation von Genen
-- **Identifikation von Genen:** Vorhersage kodierender Sequenzen durch Bioinformatik
-- **Strukturelle Variationen:** Analyse von Deletionen, Duplikationen, Inversionen, Translokationen
-- **Kopienzahl-Varianten (CNVs):** Unterschiede in der Anzahl von DNA-Segmenten zwischen Individuen
-
-### 2. Funktionelle Genomanalyse
-
-Die funktionelle Genomanalyse untersucht, wie Gene reguliert werden und welche Funktion sie haben:
-
-- **Genexpressionsanalyse:** Bestimmung, welche Gene in welchen Geweben aktiv sind
-- **Proteomanalyse:** Untersuchung aller in einer Zelle produzierten Proteine
-- **Metabolomanalyse:** Analyse aller Stoffwechselprodukte
-- **Interaktomanalyse:** Kartierung von Protein-Protein-Wechselwirkungen
-
-## Microarray-Technologie
-
-Microarrays (DNA-Chips) ermöglichen die parallele Analyse tausender Gene auf einem einzigen Chip.
-
-### Prinzip
-
-Ein Microarray besteht aus einer festen Oberfläche (meist Glasplättchen), auf der DNA-Sonden in einem rasterförmigen Muster aufgebracht sind. Jede Sonde ist komplementär zu einer spezifischen DNA- oder RNA-Sequenz.
-
-### Genexpressionsanalyse mit Microarrays
-
-1. **RNA-Isolation:** mRNA wird aus den zu untersuchenden Zellen/Geweben isoliert
-2. **Reverse Transkription:** mRNA wird in cDNA umgeschrieben
-3. **Fluoreszenzmarkierung:** cDNA wird mit Fluoreszenzfarbstoffen markiert (oft zwei Farben für Vergleich zweier Proben)
-4. **Hybridisierung:** Markierte cDNA bindet an komplementäre Sonden auf dem Chip
-5. **Detektion:** Laser-Scanner messen die Fluoreszenzintensität jedes Spots
-6. **Auswertung:** Die Intensität korreliert mit der Expression des jeweiligen Gens
-
-### Anwendungen von Microarrays
-
-- **Krankheitsforschung:** Vergleich von Genexpressionsprofilen gesunder und kranker Gewebe
-- **Tumordiagnostik:** Molekulare Subtypisierung von Tumoren
-- **Toxikologie:** Analyse von Genexpressionsveränderungen nach Substanzexposition
-- **SNP-Genotypisierung:** Nachweis von Einzelnukleotid-Polymorphismen
-
-## RNA-Sequenzierung (RNA-Seq)
-
-RNA-Seq ist eine NGS-basierte Methode zur umfassenden Analyse des Transkriptoms (Gesamtheit aller RNA-Moleküle einer Zelle).
-
-> **MerksatzBox type="klinisch":** RNA-Seq revolutioniert die Onkologie: Durch Genexpressionsprofiling können wir Brustkrebs in molekulare Subtypen einteilen (Luminal A, Luminal B, HER2+, Triple-negativ) – jeder Subtyp hat unterschiedliche Prognose und Therapie. Früher nur Histologie, heute Präzisionsmedizin.
-
-### Vorteile gegenüber Microarrays
-
-- **Keine Vorinformation nötig:** Erfasst auch unbekannte Transkripte
-- **Höhere Sensitivität:** Detektion auch schwach exprimierter Gene
-- **Quantitativ:** Präzise Bestimmung der Expressionsstärke
-- **Entdeckung neuer Transkripte:** Identifikation alternativer Spleißvarianten
-
-## Bioinformatik in der Genomanalyse
-
-Die Analyse genomischer Daten ist ohne Bioinformatik unmöglich. Typische Aufgaben:
-
-- **Sequenzassemblierung:** Zusammenfügen kurzer DNA-Fragmente zu längeren Sequenzen
-- **Annotation:** Identifikation von Genen und funktionellen Elementen
-- **Varianten-Analyse:** Identifikation von Mutationen, SNPs, Indels
-- **Pathway-Analyse:** Zuordnung von Genen zu biologischen Signalwegen
-- **Phylogenetische Analysen:** Vergleich von Genomen verschiedener Spezies
-
-## Epigenetische Analysen
-
-Epigenetische Modifikationen beeinflussen die Genexpression ohne Änderung der DNA-Sequenz:
-
-- **DNA-Methylierung:** Hinzufügen von Methylgruppen an Cytosin-Basen (oft Genrepression)
-- **Histonmodifikationen:** Chemische Veränderungen an Histon-Proteinen beeinflussen Chromatinstruktur
-- **Chromatin-Immunpräzipitation (ChIP):** Identifikation von Protein-DNA-Wechselwirkungen
+**Nested PCR:** Zwei aufeinanderfolgende PCR-Runden mit verschachtelten Primern erhöhen Spezifität und Sensitivität bei sehr geringer Ausgangsmenge.
 
 ## Klinische Anwendungen
 
-- **Personalisierte Medizin:** Anpassung von Therapien basierend auf individuellem Genom
-- **Pharmakogenomik:** Vorhersage von Arzneimittelwirkungen und -nebenwirkungen
-- **Tumorgenomik:** Identifikation therapeutischer Targets in Krebszellen
-- **Präzisionsdiagnostik:** Molekulare Charakterisierung komplexer Erkrankungen`,
-      lernziele: [],
-      sections: [],
-      merksätze: [
-        'Genomanalyse geht über Sequenzierung hinaus: Sie untersucht Genexpression, Epigenetik, strukturelle Variationen und funktionelle Zusammenhänge.',
-        'Microarrays ermöglichen die parallele Analyse tausender Gene auf einem Chip durch Hybridisierung fluoreszenzmarkierter cDNA an komplementäre Sonden.',
-        'RNA-Seq hat Microarrays in vielen Anwendungen abgelöst: höhere Sensitivität, keine Vorinformation nötig, Entdeckung neuer Transkripte möglich.',
-        'Bioinformatik ist unverzichtbar: Sequenzassemblierung, Annotation, Varianten-Analyse und Pathway-Zuordnung sind ohne Computeralgorithmen unmöglich.',
-        'Epigenetik beeinflusst Genexpression ohne DNA-Sequenzänderung: DNA-Methylierung und Histonmodifikationen steuern die Chromatinstruktur.'
+- **Infektionsdiagnostik:** COVID-19 (RT-qPCR), HIV-Viruslast, Tuberkulose, Sepsis-Erreger
+- **Pränatale Diagnostik:** Nachweis genetischer Varianten aus Amnionzellen oder cfDNA (zellfreie DNA)
+- **Forensik:** DNA-Profile aus Blut, Speichel, Haaren (nur mit Wurzel)
+- **Onkologie:** Nachweis somatischer Mutationen (z. B. BRCA1/2, BCR-ABL bei CML)
+- **Vaterschaftstest:** STR-Analyse nach PCR-Amplifikation`,
+      lernziele: [
+        "Die drei PCR-Schritte (Denaturierung, Annealing, Elongation) mit Temperaturen und molekularen Vorgängen erklären",
+        "Den Unterschied zwischen Standard-PCR, RT-PCR und qPCR beschreiben und Anwendungsgebiete nennen",
+        "Die exponentielle Amplifikation (2ⁿ) berechnen und klinische Anwendungen der PCR aufzählen",
       ],
+      sections: [
+        {
+          heading: "Taq-Polymerase — Warum ein Enzym aus einer heißen Quelle?",
+          text: "Normale DNA-Polymerasen aus mesophilen Organismen würden bei den hohen Denaturierungstemperaturen von 94–95 °C irreversibel denaturieren. Die Taq-Polymerase stammt aus dem thermophilen Bakterium Thermus aquaticus, das in heißen Quellen (z. B. Yellowstone) lebt. Sie ist bis ca. 95 °C stabil und kann nach der Denaturierungsphase sofort mit der Elongation bei 72 °C beginnen, ohne dass neues Enzym hinzugegeben werden muss. Dies ermöglicht die vollständige Automatisierung im Thermocycler. Ein Nachteil ist die fehlende Korrekturlesefunktion (3'→5'-Exonuklease), wodurch Taq eine höhere Fehlerrate hat als Pfu-Polymerase, die für klonierende Anwendungen bevorzugt wird.",
+          merksatz: "Taq-Polymerase: hitzestabil (aus Thermus aquaticus), kein Proofreading — Thermocycler automatisiert alle drei PCR-Schritte.",
+        },
+        {
+          heading: "RT-PCR beim COVID-19-Nachweis",
+          text: "SARS-CoV-2 ist ein RNA-Virus mit positivem Einzelstrang-RNA-Genom. Zum Nachweis wird zunächst eine Reverse Transkriptase eingesetzt, die die virale RNA in cDNA umschreibt. Anschließend erfolgt die Amplifikation spezifischer Genomabschnitte (z. B. E-Gen, N-Gen, ORF1ab) mittels qPCR. Der CT-Wert (Cycle Threshold) gibt an, nach wie vielen Zyklen das Fluoreszenzsignal einen Schwellenwert überschreitet: ein niedriger CT-Wert bedeutet hohe Viruslast. CT < 25 gilt als hochinfektiös, CT > 35 als grenzwertig positiv. Diese Methode ist hochspezifisch und hochsensitiv — der Goldstandard in der COVID-19-Diagnostik.",
+          merksatz: "RT-PCR: RNA → (Reverse Transkriptase) → cDNA → PCR. CT-Wert: je niedriger, desto höhere Viruslast.",
+        },
+      ],
+      merksätze: [
+        "PCR-Formel: n Zyklen → 2ⁿ Kopien (exponentiell). 30 Zyklen ≈ 10⁹ Kopien.",
+        "Drei Phasen: Denaturierung 94–95°C | Annealing 50–65°C | Elongation 72°C (Taq-Optimum).",
+        "RT-PCR = RNA-Viren-Nachweis (HIV, COVID-19); qPCR = quantifiziert in Echtzeit via Fluoreszenz.",
+      ],
+      klinischerBezug: "Der COVID-19-PCR-Test (RT-qPCR auf SARS-CoV-2-RNA) wurde zur weltweit meistgenutzten Diagnostikmethode der Pandemie; der CT-Wert korreliert invers mit der Infektiosität. In der Onkologie erlaubt die RT-PCR den sensitiven Nachweis der BCR-ABL-Translokation bei CML zur Therapiekontrolle.",
+      altfrage: {
+        question: "Welche Temperatur wird beim Annealing-Schritt der PCR typischerweise verwendet, und welche molekulare Reaktion findet dabei statt?",
+        answer: "Beim Annealing wird die Temperatur auf 50–65 °C gesenkt. In diesem Schritt lagern sich die kurzen synthetischen Primer (Oligonukleotide) spezifisch an die komplementären Sequenzen der einzelsträngigen Ziel-DNA an (Hybridisierung). Die genaue Temperatur hängt vom Schmelzpunkt (Tm) der Primer ab.",
+      },
       selfTest: [
         {
-          question: 'Was ist der Hauptunterschied zwischen struktureller und funktioneller Genomanalyse?',
+          question: "Ein Wissenschaftler führt 35 PCR-Zyklen mit einem einzelnen DNA-Ausgangsmolekül durch. Wie viele DNA-Moleküle sind theoretisch nach Abschluss vorhanden?",
           options: [
-            'Strukturelle Analyse untersucht nur Bakterien, funktionelle nur Eukaryoten',
-            'Strukturelle Analyse bestimmt Organisation des Genoms, funktionelle untersucht Genregulation und -funktion',
-            'Strukturelle Analyse ist billiger als funktionelle',
-            'Strukturelle Analyse benötigt keine Sequenzierung',
-            'Es gibt keinen Unterschied, die Begriffe sind synonym'
-          ],
-          correctIndex: 1,
-          explanation: 'Die strukturelle Genomanalyse befasst sich mit der Organisation und Architektur des Genoms (Genlokalisation, strukturelle Variationen, CNVs). Die funktionelle Genomanalyse untersucht dagegen, wie Gene reguliert werden, welche Funktion sie haben und wie sie interagieren (Genexpression, Proteom, Metabolom, Interaktom). Beide Ansätze ergänzen sich und sind für das umfassende Verständnis genomischer Prozesse notwendig.',
-          hints: [
-            'Struktur = Aufbau und Organisation; Funktion = Aktivität und Rolle.',
-            'Überlege: Was sagt die Position eines Gens versus seine Aktivität aus?'
-          ],
-          tags: ['genomanalyse', 'strukturell', 'funktionell'],
-          difficulty: 3
-        },
-        {
-          question: 'Welches Prinzip liegt der Microarray-Technologie zugrunde?',
-          options: [
-            'PCR-Amplifikation spezifischer Gene',
-            'Hybridisierung fluoreszenzmarkierter cDNA an komplementäre DNA-Sonden',
-            'Sequenzierung durch Kettenabbruch',
-            'Elektrophoretische Trennung von DNA-Fragmenten',
-            'Klonierung von DNA in Bakterien'
-          ],
-          correctIndex: 1,
-          explanation: 'Microarrays nutzen das Prinzip der komplementären Basenpaarung: Auf dem Chip sind tausende verschiedene DNA-Sonden aufgebracht. Die zu untersuchende mRNA wird in cDNA umgeschrieben und fluoreszenzmarkiert. Diese markierte cDNA hybridisiert (bindet) an komplementäre Sonden auf dem Chip. Die Fluoreszenzintensität jedes Spots gibt Auskunft über die Expression des entsprechenden Gens.',
-          hints: [
-            'Microarrays nutzen komplementäre Basenpaarung.',
-            'Die Methode verwendet Fluoreszenz zur Detektion.'
-          ],
-          tags: ['genomanalyse', 'microarray', 'hybridisierung'],
-          difficulty: 2
-        },
-        {
-          question: 'Welcher Vorteil hat RNA-Seq gegenüber Microarrays?',
-          options: [
-            'RNA-Seq ist deutlich kostengünstiger',
-            'RNA-Seq benötigt keine Bioinformatik',
-            'RNA-Seq kann auch unbekannte Transkripte erfassen',
-            'RNA-Seq ist schneller durchzuführen',
-            'RNA-Seq benötigt keine RNA-Isolation'
+            "35 Moleküle",
+            "70 Moleküle",
+            "Etwa 34 Milliarden Moleküle (2³⁵)",
+            "Etwa eine Million Moleküle (2²⁰)",
+            "Exakt 2.000 Moleküle",
           ],
           correctIndex: 2,
-          explanation: 'Ein entscheidender Vorteil von RNA-Seq ist, dass keine Vorinformation über die zu untersuchenden Sequenzen nötig ist. Die Methode sequenziert alle vorhandenen RNA-Moleküle und kann daher auch bisher unbekannte Transkripte, neue Spleißvarianten oder nicht-kodierende RNAs identifizieren. Microarrays können dagegen nur Sequenzen detektieren, für die Sonden auf dem Chip vorhanden sind.',
+          explanation: "Nach n Zyklen entstehen 2ⁿ Kopien. 2³⁵ = 34.359.738.368, also etwa 34 Milliarden Moleküle. Die exponentielle Amplifikation ist das Kernprinzip der PCR und ermöglicht den Nachweis selbst kleinster DNA-Mengen.",
           hints: [
-            'Microarrays benötigen vorab definierte Sonden für bekannte Sequenzen.',
-            'Sequenzierung ist eine „offene" Methode ohne Vorselektion.'
+            "Die Formel für die Kopienzahl lautet 2ⁿ, wobei n die Anzahl der Zyklen ist.",
+            "2¹⁰ ≈ 1.000; 2²⁰ ≈ 1 Million; 2³⁰ ≈ 1 Milliarde — skalieren Sie entsprechend.",
           ],
-          tags: ['genomanalyse', 'rna-seq', 'microarray'],
-          difficulty: 3
+          difficulty: 2,
+          tags: [],
         },
         {
-          question: 'Was versteht man unter dem Transkriptom einer Zelle?',
+          question: "Warum wird bei der PCR die Taq-Polymerase anstelle einer normalen E.-coli-DNA-Polymerase verwendet?",
           options: [
-            'Die Gesamtheit aller Proteine',
-            'Die Gesamtheit aller DNA-Sequenzen',
-            'Die Gesamtheit aller RNA-Moleküle',
-            'Die Gesamtheit aller Stoffwechselprodukte',
-            'Die Gesamtheit aller epigenetischen Modifikationen'
-          ],
-          correctIndex: 2,
-          explanation: 'Das Transkriptom umfasst alle RNA-Moleküle, die zu einem bestimmten Zeitpunkt in einer Zelle oder einem Gewebe vorhanden sind. Es spiegelt wider, welche Gene aktiv transkribiert werden und gibt damit Auskunft über den funktionellen Zustand der Zelle. Im Gegensatz zum statischen Genom verändert sich das Transkriptom dynamisch je nach Zelltyp, Entwicklungsstadium und äußeren Einflüssen.',
-          hints: [
-            'Das Präfix „Transkript-" bezieht sich auf Transkription.',
-            'Was ist das Hauptprodukt der Transkription?'
-          ],
-          tags: ['genomanalyse', 'transkriptom', 'rna'],
-          difficulty: 1
-        },
-        {
-          question: 'Welche Rolle spielt Bioinformatik in der Genomanalyse?',
-          options: [
-            'Bioinformatik ist nur für die Datenspeicherung notwendig',
-            'Bioinformatik ist optional und dient nur der Visualisierung',
-            'Bioinformatik ist unverzichtbar für Assemblierung, Annotation und Variantenanalyse',
-            'Bioinformatik wird nur in der Bakteriengenetik benötigt',
-            'Bioinformatik ersetzt die experimentelle Arbeit vollständig'
-          ],
-          correctIndex: 2,
-          explanation: 'Bioinformatik ist in der modernen Genomanalyse unverzichtbar. Die enormen Datenmengen aus NGS-Projekten (ein menschliches Genom produziert ~200 GB Rohdaten) können nur mit Computeralgorithmen bewältigt werden. Typische Aufgaben sind die Assemblierung fragmentierter Sequenzen zu vollständigen Genomen, die Annotation (Identifikation von Genen), die Varianten-Analyse (Mutationen, SNPs) und die funktionelle Interpretation (Pathway-Zuordnung).',
-          hints: [
-            'Ein menschliches Genom enthält ~3 Milliarden Basenpaare.',
-            'Moderne Sequenzierung erzeugt Millionen kurzer Reads, die zusammengesetzt werden müssen.'
-          ],
-          tags: ['genomanalyse', 'bioinformatik'],
-          difficulty: 1
-        },
-        {
-          question: 'Was ist eine Kopienzahl-Variante (Copy Number Variant, CNV)?',
-          options: [
-            'Eine Punktmutation in einem Gen',
-            'Ein Unterschied in der Anzahl von DNA-Segmenten zwischen Individuen',
-            'Eine epigenetische Modifikation',
-            'Ein Fehler bei der PCR-Amplifikation',
-            'Eine Form der alternativen Spleißung'
+            "Taq-Polymerase hat eine höhere Genauigkeit (Proofreading-Funktion)",
+            "Taq-Polymerase ist hitzestabil und übersteht die Denaturierungsphase bei 94–95 °C",
+            "Taq-Polymerase kann RNA direkt als Matrize verwenden",
+            "Taq-Polymerase arbeitet bei Raumtemperatur und spart Energie",
+            "Taq-Polymerase ist billiger als alle anderen Polymerasen",
           ],
           correctIndex: 1,
-          explanation: 'Kopienzahl-Varianten (CNVs) sind strukturelle Variationen, bei denen DNA-Segmente in unterschiedlicher Anzahl vorliegen. Während die meisten Gene diploid vorliegen (zwei Kopien), können CNVs zu Deletionen (weniger Kopien) oder Duplikationen (mehr Kopien) führen. CNVs können von wenigen Kilobasen bis zu mehreren Megabasen groß sein und tragen zur genetischen Vielfalt bei, können aber auch Krankheiten verursachen.',
+          explanation: "Die Taq-Polymerase stammt aus dem thermophilen Bakterium Thermus aquaticus und ist bis ca. 95 °C stabil. Normale Polymerasen würden bei den Denaturierungstemperaturen der PCR irreversibel inaktiviert werden. Die Hitzestabilität ermöglicht die vollautomatische Durchführung im Thermocycler, da das Enzym nicht nach jedem Zyklus neu zugesetzt werden muss.",
           hints: [
-            '„Copy Number" bedeutet „Kopienzahl" – wie oft kommt ein DNA-Segment vor?',
-            'Dies ist eine strukturelle, nicht sequenz-basierte Variation.'
+            "Denken Sie an die Herkunft des Bakteriums Thermus aquaticus — heiße Quellen im Yellowstone-Nationalpark.",
+            "Was passiert mit Proteinen bei hohen Temperaturen? Und warum wäre das für das PCR-Enzym problematisch?",
           ],
-          tags: ['genomanalyse', 'cnv', 'strukturelle-variation'],
-          difficulty: 3
-        }
-      ]
+          difficulty: 1,
+          tags: [],
+        },
+        {
+          question: "Ein Labor möchte den RNA-Gehalt des SARS-CoV-2-Virus in einem Patientenabstrich quantifizieren. Welche PCR-Variante ist hierfür am besten geeignet?",
+          options: [
+            "Standard-PCR mit anschließender Gelelektrophorese",
+            "Nested PCR mit zwei Primerpaaren",
+            "RT-qPCR (Reverse Transkriptase quantitative PCR)",
+            "Allel-spezifische PCR",
+            "Degenerative PCR mit degenerierten Primern",
+          ],
+          correctIndex: 2,
+          explanation: "RT-qPCR kombiniert die Reverse Transkription (RNA → cDNA) mit der quantitativen Echtzeit-PCR. Da SARS-CoV-2 ein RNA-Virus ist, wird zuerst die virale RNA durch Reverse Transkriptase in cDNA umgeschrieben. Die qPCR quantifiziert dann über Fluoreszenz in Echtzeit — der CT-Wert korreliert mit der Ausgangsmenge an Virus-RNA.",
+          hints: [
+            "SARS-CoV-2 ist ein RNA-Virus — welcher Schritt ist nötig, bevor eine DNA-Polymerase tätig werden kann?",
+            "Das 'q' in qPCR steht für quantitativ — welche Methode erlaubt Echtzeit-Messung?",
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+        {
+          question: "In welcher Reihenfolge finden die Schritte eines PCR-Zyklus statt?",
+          options: [
+            "Annealing → Denaturierung → Elongation",
+            "Elongation → Annealing → Denaturierung",
+            "Denaturierung → Elongation → Annealing",
+            "Denaturierung → Annealing → Elongation",
+            "Annealing → Elongation → Denaturierung",
+          ],
+          correctIndex: 3,
+          explanation: "Ein PCR-Zyklus folgt immer der Reihenfolge: (1) Denaturierung bei 94–95 °C (DNA-Stränge trennen), (2) Annealing bei 50–65 °C (Primer binden), (3) Elongation bei 72 °C (Taq-Polymerase synthetisiert neuen Strang). Diese Abfolge wird 25–40 Mal wiederholt.",
+          hints: [
+            "Zuerst muss die DNA getrennt werden, bevor Primer binden können.",
+            "Die Taq-Polymerase kann erst nach der Primerbindung ihren Job beginnen.",
+          ],
+          difficulty: 1,
+          tags: [],
+        },
+        {
+          question: "Bei der RT-PCR wird das Enzym Reverse Transkriptase verwendet. Was ist die Funktion dieses Enzyms?",
+          options: [
+            "Es denaturiert die RNA bei hohen Temperaturen",
+            "Es synthetisiert RNA aus einer DNA-Matrize",
+            "Es synthetisiert cDNA aus einer RNA-Matrize (RNA → DNA)",
+            "Es repariert Einzelstrangbrüche in der DNA",
+            "Es phosphoryliert die Primer vor dem Annealing",
+          ],
+          correctIndex: 2,
+          explanation: "Reverse Transkriptase ist eine RNA-abhängige DNA-Polymerase, die ursprünglich aus Retroviren (z. B. HIV) stammt. Sie schreibt RNA in komplementäre DNA (cDNA) um — also entgegen dem normalen Informationsfluss (DNA → RNA). Die erzeugte cDNA dient dann als Matrize für die anschließende Standard-PCR.",
+          hints: [
+            "Das Enzym kommt natürlich in Retroviren vor — denken Sie an HIV, das sein RNA-Genom in DNA umschreibt.",
+            "Das Präfix 'Revers-' gibt einen Hinweis auf die Richtung: entgegen dem normalen Informationsfluss.",
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+      ],
+    },
+    {
+      id: 'bio-7-02',
+      title: 'DNA-Sequenzierung und Genomanalyse',
+      content: `## DNA-Sequenzierung — Grundlagen
+
+Die DNA-Sequenzierung ermittelt die genaue Abfolge der Nukleotide (A, T, G, C) in einem DNA-Molekül. Dieses Wissen ist Grundlage für Diagnose genetischer Erkrankungen, Evolutionsforschung und personalisierte Medizin.
+
+## Sanger-Sequenzierung (1. Generation)
+
+Die von Frederick Sanger 1977 entwickelte Kettenabbruch-Methode (Nobelpreis 1980) basiert auf dem Einbau von **Didesoxynukleotiden (ddNTPs)**. Diese fehlen die 3'-OH-Gruppe, die für die Verlängerung des DNA-Strangs nötig ist — wird ein ddNTP eingebaut, stoppt die Synthese.
+
+Ablauf: Vier separate Ansätze mit je einem ddNTP-Typ (ddATP, ddTTP, ddGTP, ddCTP) oder ein Ansatz mit fluoreszenzmarkierten ddNTPs erzeugen Fragmente aller möglichen Längen. Nach **Gelelektrophorese** (Auftrennung nach Größe) lässt sich die Sequenz ablesen. Die moderne Kapillarelektrophorese mit Laserdetektion ermöglicht bis zu 1.000 bp pro Lauf. Sanger bleibt der Goldstandard für kurze Sequenzen und Validierung.
+
+## Next-Generation Sequencing (NGS / 2. Generation)
+
+NGS-Plattformen (z. B. Illumina) sequenzieren massiv-parallel Millionen kurzer Fragmente gleichzeitig. Das **Whole Genome Sequencing (WGS)** sequenziert das gesamte Genom (~3,2 Mrd. Basenpaare beim Menschen) in wenigen Tagen. Prinzip bei Illumina: **Sequencing by Synthesis** mit fluoreszenzmarkierten, reversibel terminierten Nukleotiden und optischer Detektion pro Zyklus.
+
+NGS ermöglicht:
+- **Exom-Sequenzierung:** nur proteinkodierenden Bereiche (~2% des Genoms)
+- **RNA-Seq:** Transkriptomanalyse (welche Gene werden exprimiert und wie stark?)
+- **ChIP-Seq:** Protein-DNA-Wechselwirkungen (z. B. Histonmodifikationen, Transkriptionsfaktorbindung)
+
+## Microarray/Genexpressionsanalyse
+
+Ein **DNA-Microarray (Genchip)** trägt Tausende kurzer DNA-Sonden auf einer Trägeroberfläche. Fluoreszenzmarkierte cDNA (aus mRNA der Probe) hybridisiert mit komplementären Sonden. Die Intensität des Fluoreszenzsignals spiegelt die Expressionsstärke eines Gens wider. Anwendung: Vergleich krankes vs. gesundes Gewebe, Tumorprofilierung.
+
+## Bioinformatik
+
+Rohe Sequenzdaten (Reads) müssen **assembliert** (zusammengesetzt) und gegen ein Referenzgenom **aligniert** (ausgerichtet) werden. Softwaretools wie BLAST, BWA oder GATK identifizieren Varianten (SNPs, Indels, Strukturvarianten). Bioinformatik ist heute der Flaschenhals der Genomik — Datenspeicherung und -analyse übersteigen die eigentlichen Sequenzierkosten.`,
+      lernziele: [
+        "Das Prinzip der Sanger-Sequenzierung (Kettenabbruch durch ddNTPs) erklären und von NGS abgrenzen",
+        "Die Anwendungen von NGS (WGS, Exom-Sequenzierung, RNA-Seq) und Microarrays beschreiben",
+        "Die Rolle der Bioinformatik bei der Auswertung von Sequenzdaten erläutern",
+      ],
+      sections: [
+        {
+          heading: "Sanger vs. NGS — Ein Vergleich",
+          text: "Die Sanger-Sequenzierung ist präzise, aber langsam und teuer für große Genome. Ein menschliches Genom per Sanger würde Jahrzehnte und Milliarden Dollar kosten — das Humangenomprojekt (1990–2003) bestätigt dies. NGS-Technologien (Illumina, Ion Torrent) parallelisieren die Sequenzierung radikal: Statt eines Fragments gleichzeitig werden Hunderte Millionen parallel gelesen. Die kurzen Reads (150–300 bp bei Illumina) werden bioinformatisch zusammengesetzt. Third-Generation Sequencing (PacBio, Oxford Nanopore) liest einzelne Moleküle ohne Amplifikation und erzeugt sehr lange Reads (bis zu 100 kbp), was die Assemblierung komplexer Regionen erleichtert.",
+          merksatz: "Sanger = Goldstandard für kurze Sequenzen (bis 1 kbp); NGS = Hochdurchsatz für ganze Genome; 3. Generation = lange Reads, Einzelmolekül.",
+        },
+        {
+          heading: "Klinische Genomdiagnostik",
+          text: "Genpanel-Sequenzierung untersucht gezielt 10–500 bekannte Krankheitsgene (z. B. Krebsgenpanels, Kardio-Panels). Die Exom-Sequenzierung analysiert alle ~20.000 proteinkodierenden Gene und findet die Ursache seltener Erkrankungen in ca. 30–40% ungeklärter Fälle. Das Whole Genome Sequencing erfasst auch nicht-kodierende Regionen (Promotoren, Spleißstellen, nichtkodierendeRNAs). In der Tumordiagnostik erlaubt Liquid Biopsy die Sequenzierung zirkulierender Tumor-DNA (ctDNA) aus Blut — nicht-invasive Therapiekontrolle und Frühdiagnose. Die ACMG-Richtlinien klassifizieren genetische Varianten nach Pathogenität (pathogen, wahrscheinlich pathogen, VUS, wahrscheinlich benign, benign).",
+          merksatz: "Liquid Biopsy: ctDNA aus Blut sequenzieren → nicht-invasive Tumordiagnostik. Exom-Sequenzierung klärt ~35% seltener Erkrankungen.",
+        },
+      ],
+      merksätze: [
+        "Sanger: ddNTPs → Kettenabbruch → Fragmente → Elektrophorese → Sequenz ablesen.",
+        "NGS (Illumina): Sequencing by Synthesis, massiv-parallel, kurze Reads (150–300 bp), Bioinformatik nötig.",
+        "Microarray: Hybridisierung fluoreszenzmarkierter cDNA → misst Genexpression (nicht Sequenz).",
+      ],
+      klinischerBezug: "NGS-basierte Tumorgenomik (z. B. Foundation One-Panel) identifiziert therapierbare Mutationen für zielgerichtete Therapien. Seltene Erkrankungen werden durch Trio-Exomsequenzierung (Patient + Eltern) in bis zu 40% der Fälle molekular aufgeklärt.",
+      altfrage: {
+        question: "Was sind Didesoxynukleotide (ddNTPs) und warum führen sie zum Kettenabbruch bei der Sanger-Sequenzierung?",
+        answer: "Didesoxynukleotide fehlen die 3'-Hydroxylgruppe (3'-OH), die normalerweise für die Ausbildung der Phosphodiesterbindung mit dem nächsten Nukleotid benötigt wird. Wenn die DNA-Polymerase ein ddNTP einbaut, kann kein weiteres Nukleotid angefügt werden — die Synthese bricht ab. Da ddNTPs statistisch an jeder passenden Position eingebaut werden, entstehen Fragmente aller möglichen Längen, aus denen die Sequenz abgelesen werden kann.",
+      },
+      selfTest: [
+        {
+          question: "Was unterscheidet ein Didesoxynukleotid (ddNTP) von einem normalen Desoxynukleotid (dNTP) chemisch?",
+          options: [
+            "ddNTPs haben eine zusätzliche Phosphatgruppe am 5'-Ende",
+            "ddNTPs fehlt die 3'-Hydroxylgruppe (3'-OH)",
+            "ddNTPs enthalten Ribose statt Desoxyribose",
+            "ddNTPs sind immer radioaktiv markiert",
+            "ddNTPs haben eine methylierte Base",
+          ],
+          correctIndex: 1,
+          explanation: "Didesoxynukleotide (ddNTPs) unterscheiden sich von normalen dNTPs durch das Fehlen der 3'-OH-Gruppe. Diese Gruppe ist essentiell für die Ausbildung der Phosphodiesterbindung mit dem nächsten Nukleotid. Fehlt sie, kann die DNA-Kette nicht verlängert werden — es kommt zum Kettenabbruch, dem Kernprinzip der Sanger-Sequenzierung.",
+          hints: [
+            "Das Präfix 'Di-desoxy' gibt einen Hinweis: zwei Hydroxygruppen fehlen (2'- und 3'-OH).",
+            "Die Phosphodiesterbindung wird zwischen dem 3'-OH des einen und dem 5'-Phosphat des nächsten Nukleotids gebildet.",
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+        {
+          question: "Welche NGS-Methode eignet sich am besten zur Analyse der Genexpression (welche Gene werden in einem Gewebe aktiv transkribiert)?",
+          options: [
+            "Whole Genome Sequencing (WGS)",
+            "Exom-Sequenzierung",
+            "ChIP-Seq",
+            "RNA-Seq",
+            "Sanger-Sequenzierung von cDNA-Bibliotheken",
+          ],
+          correctIndex: 3,
+          explanation: "RNA-Seq (RNA-Sequenzierung) analysiert das Transkriptom — die Gesamtheit aller in einem Gewebe transkribierten RNA-Moleküle. mRNA wird in cDNA umgeschrieben und dann sequenziert. Die Anzahl der Reads pro Gen korreliert mit seiner Expressionsstärke. Diese Methode ermöglicht die gleichzeitige Messung der Expression aller ~20.000 menschlichen Gene.",
+          hints: [
+            "WGS und Exom-Sequenzierung analysieren DNA (Genomsequenz), nicht Genaktivität.",
+            "Welche Methode würde mit RNA als Ausgangsmaterial beginnen?",
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+        {
+          question: "Ein Labor möchte prüfen, ob ein Patient eine bekannte pathogene Mutation im BRCA1-Gen trägt. Welche Methode ist am effizientesten und kostengünstigsten?",
+          options: [
+            "Whole Genome Sequencing",
+            "RNA-Seq",
+            "Sanger-Sequenzierung der relevanten BRCA1-Exons",
+            "Microarray-Analyse",
+            "ChIP-Seq",
+          ],
+          correctIndex: 2,
+          explanation: "Für die Analyse einer bekannten, spezifischen Mutation in einem bestimmten Gen ist die Sanger-Sequenzierung der relevanten Exons am effizientesten und kostengünstigsten. WGS würde viel mehr Daten generieren als nötig. Microarrays eignen sich für Genexpressionsanalysen oder bekannte SNP-Muster, aber nicht für die Sequenzierung beliebiger Mutationen.",
+          hints: [
+            "Wenn nur ein einziges Gen untersucht werden soll, ist ein genomweiter Ansatz unverhältnismäßig.",
+            "Sanger-Sequenzierung gilt als Goldstandard für kurze Sequenzieraufgaben.",
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+        {
+          question: "Was misst ein DNA-Microarray (Genchip)?",
+          options: [
+            "Die DNA-Sequenz eines Gens",
+            "Die Anzahl der Chromosomenkopien",
+            "Die relative Expressionsstärke von Genen (mRNA-Menge)",
+            "Die Methylierungsmuster der DNA",
+            "Die Länge von Telomeren",
+          ],
+          correctIndex: 2,
+          explanation: "Ein DNA-Microarray misst die relative Genexpression: mRNA aus der Probe wird in fluoreszenzmarkierte cDNA umgeschrieben und hybridisiert mit komplementären Sonden auf dem Chip. Die Intensität des Fluoreszenzsignals ist proportional zur mRNA-Menge des entsprechenden Gens. Durch Vergleich zweier Proben (z. B. Tumor vs. Normalgewebe) lassen sich differentiell exprimierte Gene identifizieren.",
+          hints: [
+            "Microarrays verwenden Hybridisierung — was muss die Probe enthalten, um mit den DNA-Sonden zu hybridisieren?",
+            "Das Ausgangsmaterial für Microarrays ist mRNA, nicht genomische DNA.",
+          ],
+          difficulty: 1,
+          tags: [],
+        },
+        {
+          question: "Welche der folgenden Aussagen über Next-Generation Sequencing (NGS) ist korrekt?",
+          options: [
+            "NGS sequenziert ein DNA-Molekül nach dem anderen (sequentiell)",
+            "NGS benötigt keine Bioinformatik, da die Sequenz direkt abgelesen wird",
+            "NGS erzeugt typischerweise sehr lange Reads von über 10.000 Basenpaaren",
+            "NGS sequenziert Millionen kurzer DNA-Fragmente massiv-parallel",
+            "NGS basiert auf dem Kettenabbruch-Prinzip mit ddNTPs",
+          ],
+          correctIndex: 3,
+          explanation: "NGS zeichnet sich durch massiv-parallele Sequenzierung aus: Millionen kurzer DNA-Fragmente (150–300 bp bei Illumina) werden gleichzeitig sequenziert. Die resultierenden Short Reads werden bioinformatisch zu einer kompletten Genomsequenz zusammengesetzt (Assembly) oder gegen ein Referenzgenom ausgerichtet (Alignment). Diese Parallelisierung ermöglicht die Sequenzierung ganzer Genome in Tagen statt Jahrzehnten.",
+          hints: [
+            "Das 'massiv-parallel' ist das entscheidende Merkmal, das NGS von der Sanger-Sequenzierung unterscheidet.",
+            "Short Reads müssen erst bioinformatisch zu längeren Sequenzen zusammengesetzt werden.",
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+      ],
     },
     {
       id: 'bio-7-04',
-      title: 'Genetischer Fingerabdruck',
-      content: `# Genetischer Fingerabdruck
+      title: 'Genetischer Fingerabdruck — STR, RFLP und Forensik',
+      content: `## Genetischer Fingerabdruck — Grundprinzip
 
-Der genetische Fingerabdruck ist eine molekularbiologische Methode zur eindeutigen Identifikation von Individuen anhand ihrer DNA. Die Methode nutzt die individuelle Variation bestimmter DNA-Sequenzen und wird vor allem in der Forensik, bei Vaterschaftstests und in der Evolutionsbiologie eingesetzt.
+Der **genetische Fingerabdruck** (DNA-Fingerprinting) nutzt die individuelle Variation im menschlichen Genom zur eindeutigen Identifikation von Personen. Da >99,9% der menschlichen DNA bei allen Menschen identisch sind, konzentriert sich die Methode auf hochvariable Regionen — sogenannte **polymorphe Loci**.
 
-## Grundprinzip
+## Short Tandem Repeats (STR)
 
-Der genetische Fingerabdruck basiert auf der Tatsache, dass das menschliche Genom hochvariable Regionen enthält, die sich zwischen Individuen unterscheiden. Nur eineiige Zwillinge haben identische DNA-Muster. Die moderne Forensik nutzt hauptsächlich Short Tandem Repeats (STRs) zur Identifikation.
+**STRs** (auch Mikrosatelliten) sind kurze Sequenzmotive von 2–7 Basenpaaren, die tandem wiederholt werden (z. B. AGAT-AGAT-AGAT...). Die Anzahl der Wiederholungen variiert stark zwischen Individuen — dieser **Längenpolymorphismus** bildet die Basis des modernen DNA-Fingerabdrucks.
 
-## Short Tandem Repeats (STRs)
+Vorgehen:
+1. DNA-Extraktion (aus Blut, Speichel, Haar mit Wurzel, Epithelzellen)
+2. PCR-Amplifikation von 15–20 STR-Loci (CODIS-System in den USA, z. B. D3S1358, vWA, FGA)
+3. Kapillarelektrophorese zur Längenbestimmung der Fragmente
+4. Statistischer Vergleich: Die Wahrscheinlichkeit, dass zwei nicht verwandte Personen identische Profile zeigen, liegt bei weniger als 1 in 10¹⁵
 
-STRs sind kurze DNA-Sequenzen (typischerweise 2-6 Basenpaare), die sich mehrfach hintereinander wiederholen.
+## RFLP (Restriction Fragment Length Polymorphism)
 
-> **MerksatzBox type="altfragen":** STR-Analyse ist der moderne Standard für genetische Fingerabdrücke (13-20 Loci, Multiplex-PCR). Die ältere RFLP-Methode wird oft als Vergleich abgefragt – kenne die Unterschiede.
+**RFLP** basiert auf Variationen in Restriktionsschnittstellen. Unterschiedliche Allele haben unterschiedliche Erkennungssequenzen für Restriktionsenzyme → verschieden lange Fragmente nach Restriktionsverdau. Nach Gelelektrophorese und Southern Blot entstehen charakteristische Bandenmuster. RFLP ist heute weitgehend durch STR-Analyse und SNP-Genotypisierung ersetzt worden, da es mehr DNA benötigt und aufwändiger ist.
 
-### Eigenschaften von STRs
+## Gelelektrophorese
 
-- **Tandem-Wiederholungen:** Die Sequenz wiederholt sich direkt hintereinander
-- **Hochvariabel:** Die Anzahl der Wiederholungen variiert stark zwischen Individuen
-- **Nicht-kodierend:** Meist in nicht-kodierenden Regionen lokalisiert
-- **Stabil vererbt:** Mendel'sche Vererbung von beiden Elternteilen
+Die **Gelelektrophorese** trennt DNA-Fragmente nach Größe. Im elektrischen Feld wandern negativ geladene DNA-Fragmente durch ein Agarosegel zur Anode. Kleinere Fragmente wandern schneller als größere. Durch Vergleich mit einem Größenmarker (Leiter) können die Fragmentlängen bestimmt werden. Bei der STR-Analyse erfolgt dies in Kapillaren mit hoher Auflösung (Kapillarelektrophorese, CE).
 
-**Beispiel:**
-- Sequenz: GATA
-- Person A: (GATA)₈ = 8 Wiederholungen
-- Person B: (GATA)₁₂ = 12 Wiederholungen
+## Forensische Anwendungen
 
-### STR-Analyse in der Praxis
+- **Tatortspuren:** Vergleich von Täter-DNA (Tatortprobe) mit Verdächtigem oder Datenbank (z. B. CODIS)
+- **Opferidentifikation:** Bei Massenkatastrophen, Kriegsverbrechern (z. B. Srebrenica-Identifikation)
+- **Vaterschaftstest:** Kind trägt für jeden Locus je ein Allel von Mutter und Vater — Ausschluss bei Nicht-Übereinstimmung
+- **Verwandtschaftsanalyse:** Abstammungsforschung, historische Persönlichkeiten (z. B. Zaren-Familie)
 
-Für forensische Anwendungen werden typischerweise 13-20 verschiedene STR-Loci gleichzeitig analysiert (Multiplex-PCR). Die Kombination aller Allele ergibt ein statistisch nahezu einzigartiges Profil.
+## Einschränkungen und ethische Aspekte
 
-## Methodik des genetischen Fingerabdrucks
-
-### 1. DNA-Isolation
-
-DNA wird aus biologischen Spuren isoliert:
-- Blut, Speichel, Haare (mit Wurzel)
-- Hautschuppen, Schweiß
-- Sperma bei Sexualdelikten
-- Knochen, Zähne (auch nach langer Zeit)
-
-Bereits kleinste Mengen (wenige Nanogramm) reichen für die Analyse aus.
-
-### 2. PCR-Amplifikation
-
-Die ausgewählten STR-Loci werden mittels Multiplex-PCR vervielfältigt:
-- Mehrere Primerpaare gleichzeitig im Reaktionsansatz
-- Fluoreszenzmarkierte Primer für spätere Detektion
-- Typischerweise 28-30 PCR-Zyklen
-
-### 3. Fragmentlängenanalyse
-
-Die amplifizierten STR-Fragmente werden nach Größe getrennt:
-- **Kapillarelektrophorese:** Auftrennung nach Fragmentlänge
-- **Fluoreszenz-Detektion:** Laser detektiert markierte Fragmente
-- **Automatisierte Auswertung:** Software bestimmt Allellängen
-
-### 4. Profilerstellung
-
-Für jeden STR-Locus werden die Allele bestimmt:
-- Jedes Individuum hat zwei Allele pro Locus (eines vom Vater, eines von der Mutter)
-- Homozygot: beide Allele gleich lang → ein Peak
-- Heterozygot: Allele unterschiedlich lang → zwei Peaks
-
-## RFLP-Methode (historisch)
-
-Die Restriktionsfragmentlängen-Polymorphismus-Analyse war die erste Methode für genetische Fingerabdrücke, wurde aber weitgehend durch STR-Analyse ersetzt.
-
-**Prinzip:**
-1. DNA-Verdau mit Restriktionsenzymen
-2. Elektrophorese zur Fragmenttrennung
-3. Southern Blot und Hybridisierung mit radioaktiven Sonden
-4. Autoradiographie zur Mustererkennung
-
-**Nachteile gegenüber STR:**
-- Benötigt große DNA-Mengen (>100 ng)
-- Zeitaufwendig (mehrere Wochen)
-- Degradierte DNA problematisch
-- Weniger diskriminierend
-
-## Anwendungen
-
-### Forensik
-
-- **Täteridentifikation:** Vergleich von Tatort-Spuren mit Verdächtigen-DNA
-- **Opferidentifikation:** Bei Massenkatastrophen, Kriegsverbrechen
-- **Ausschluss Unschuldiger:** Entlastung fälschlich Beschuldigter
-- **Cold Cases:** Wiederaufnahme alter Fälle mit neuen Methoden
-
-> **MerksatzBox type="klinisch":** Genetischer Fingerabdruck ist nicht nur Forensik – in der Transplantationsmedizin nutzen wir STR-Analyse für Chimärismus-Monitoring nach allogener Stammzelltransplantation: Wir prüfen, ob Spender- oder Empfänger-Hämatopoese dominiert. Bei >95% Spender-Chimärismus gilt die Transplantation als erfolgreich.
-
-### Vaterschaftstests
-
-Vaterschaftstests basieren auf dem Prinzip der Mendel'schen Vererbung:
-- Kind erhält je ein Allel von Mutter und Vater
-- Analyse von 15-20 STR-Loci
-- Statistische Sicherheit: >99,99%
-- Ausschluss ist definitiv möglich, Nachweis nur statistisch
-
-### Weitere Anwendungen
-
-- **Evolutionsbiologie:** Verwandtschaftsanalysen zwischen Populationen
-- **Archäologie:** DNA-Analyse historischer Funde
-- **Transplantationsmedizin:** Chimärismus-Analyse nach Stammzelltransplantation
-- **Tier- und Pflanzenzucht:** Abstammungsnachweise
-
-## DNA-Datenbanken
-
-Viele Länder unterhalten forensische DNA-Datenbanken:
-- **Deutschland:** DNA-Analysedatei (DAD) beim BKA
-- **USA:** CODIS (Combined DNA Index System)
-- **UK:** National DNA Database (NDNAD)
-
-**Gesetzliche Regelungen:**
-- Nur nach richterlicher Anordnung
-- Speicherung von Profilen, nicht vollständiger DNA-Sequenzen
-- Datenschutz und Zweckbindung
-- Löschfristen nach Verurteilung/Freispruch
-
-## Ethische und rechtliche Aspekte
-
-- **Datenschutz:** Schutz genetischer Informationen
-- **Genetische Privatsphäre:** DNA enthält auch Informationen über Verwandte
-- **Diskriminierung:** Missbrauch genetischer Daten verhindern
-- **Informed Consent:** Aufklärung und Einwilligung bei freiwilligen Tests`,
-      lernziele: [],
-      sections: [],
-      merksätze: [
-        'Der genetische Fingerabdruck nutzt Short Tandem Repeats (STRs) – kurze, sich wiederholende DNA-Sequenzen, deren Anzahl zwischen Individuen hochvariabel ist.',
-        'STR-Analyse: 13-20 verschiedene Loci werden per Multiplex-PCR amplifiziert und durch Kapillarelektrophorese nach Fragmentlänge getrennt.',
-        'Jeder Mensch hat zwei Allele pro STR-Locus (eins vom Vater, eins von der Mutter) – heterozygot = zwei Peaks, homozygot = ein Peak.',
-        'Vaterschaftstests nutzen Mendel\'sche Vererbung: Das Kind muss je ein Allel von Mutter und Vater geerbt haben (Sicherheit >99,99%).',
-        'RFLP-Methode ist historisch: benötigte viel DNA, war zeitaufwendig, wurde durch schnellere und sensitivere STR-Analyse ersetzt.'
+Gemischte Spuren (mehrere Personen), degradierte DNA und Laborkontaminationen können zu Fehlinterpretationen führen. DNA-Datenbanken (CODIS, Interpol-DNA) werfen datenschutzrechtliche Fragen auf: Wer wird erfasst? Wie lange werden Daten gespeichert?`,
+      lernziele: [
+        "Das Prinzip der STR-Analyse und ihre Anwendung im genetischen Fingerabdruck erklären",
+        "RFLP von STR-Analyse unterscheiden und die Rolle der Gelelektrophorese beschreiben",
+        "Forensische Anwendungen des genetischen Fingerabdrucks und ethische Aspekte nennen",
       ],
+      sections: [
+        {
+          heading: "STR-Analyse — Schritt für Schritt",
+          text: "Bei der STR-Analyse werden zunächst 15–20 definierte STR-Loci per PCR mit fluoreszenzmarkierten Primern amplifiziert. Da jeder Mensch an jedem Locus zwei Allele trägt (maternal und paternal), zeigt das Elektropherogramm pro Locus bis zu zwei Peaks. Die Fragmentlänge bestimmt die Allelnummer (z. B. Locus D7S820: Allel 8 bedeutet 8 Wiederholungen). Durch Kombination von 15–20 Loci wird ein individuelles genetisches Profil erstellt. Die statistische Wahrscheinlichkeit, dass zwei nicht verwandte Personen an allen Loci identische Allele tragen, beträgt weniger als 1 zu einer Billiarde. Eineiige Zwillinge haben identische STR-Profile — eine wichtige forensische Einschränkung.",
+          merksatz: "STR: Kurze Tandem-Wiederholungen, individuell verschiedene Anzahl → PCR + Kapillarelektrophorese → einzigartiges DNA-Profil.",
+        },
+        {
+          heading: "Vaterschaftstest mit STR",
+          text: "Beim Vaterschaftstest werden STR-Profile von Kind, Mutter und möglichem Vater verglichen. Das Kind erbt an jedem Locus je ein Allel von der Mutter und eines vom biologischen Vater. Die mütterlichen Allele werden abgezogen — die verbleibenden Vater-Allele des Kindes müssen im Profil des Vaters vorhanden sein. Bei 15 Loci und einem Ausschluss gilt der Mann sicher als nicht der Vater. Beim Einschluss wird eine kombinierte Vaterschaftswahrscheinlichkeit berechnet — in Deutschland müssen Gerichte eine Wahrscheinlichkeit von mehr als 99,9% fordern. Rechtlich sind Vaterschaftstests in Deutschland ohne Zustimmung der Betroffenen verboten (§ 17 GenDG).",
+          merksatz: "Vaterschaftstest: Kind-Allele = Mutter-Allele + Vater-Allele. Ausschluss bei Nichtübereinstimmung an auch nur einem Locus möglich.",
+        },
+      ],
+      merksätze: [
+        "STRs: 2–7 bp-Motive in variabler Wiederholungsanzahl → Längenpolymorphismus → individuelle DNA-Signatur.",
+        "RFLP: Restriktionsverdau → Gelelektrophorese → Bandenmuster; heute durch STR/SNP-Analyse weitgehend ersetzt.",
+        "Gelelektrophorese: kleine Fragmente wandern weiter (schneller) zur Anode; Größenmarker zum Kalibrieren.",
+      ],
+      klinischerBezug: "In der forensischen Medizin ist der genetische Fingerabdruck (STR-Analyse) Bestandteil jeder DNA-Auswertung am Tatort. In der Transplantationsmedizin wird die HLA-Typisierung per PCR und Sequenzierung zur Spender-Empfänger-Kompatibilitätsprüfung eingesetzt.",
+      altfrage: {
+        question: "Erläutern Sie, warum zwei nicht-verwandte Personen nahezu niemals identische genetische Fingerabdrücke haben.",
+        answer: "Der genetische Fingerabdruck basiert auf der Analyse von 15–20 hochvariablen STR-Loci. An jedem Locus gibt es viele verschiedene Allele (unterschiedliche Wiederholungsanzahlen) in der Population. Die Wahrscheinlichkeit, dass zwei nicht verwandte Personen an einem einzigen Locus identische Allele tragen, beträgt bereits nur einige Prozent. Da die Loci unabhängig voneinander vererbt werden, multiplizieren sich diese Wahrscheinlichkeiten — das Produkt über 15–20 Loci ergibt eine Übereinstimmungswahrscheinlichkeit von weniger als 1 zu 10¹⁵.",
+      },
       selfTest: [
         {
-          question: 'Was sind Short Tandem Repeats (STRs)?',
+          question: "Was sind Short Tandem Repeats (STRs) und warum sind sie für den genetischen Fingerabdruck geeignet?",
           options: [
-            'Lange, sich wiederholende Proteinsequenzen',
-            'Kurze DNA-Sequenzen (2-6 bp), die sich mehrfach hintereinander wiederholen',
-            'Einzelnukleotid-Polymorphismen',
-            'Methylierungsmuster der DNA',
-            'Histonmodifikationen'
+            "Einzelnukleotid-Polymorphismen (SNPs) in kodierenden Genen",
+            "Kurze Sequenzmotive (2–7 bp), die in variabler Wiederholungsanzahl zwischen Individuen vorliegen",
+            "Lange repetitive Sequenzen von über 1.000 bp Länge",
+            "Methylierungsmuster in CpG-Inseln",
+            "Inversionen und Translokationen im Chromosomensatz",
           ],
           correctIndex: 1,
-          explanation: 'STRs (Short Tandem Repeats) sind kurze DNA-Sequenzen, typischerweise 2-6 Basenpaare lang, die sich mehrfach direkt hintereinander wiederholen. Die Anzahl dieser Wiederholungen variiert zwischen Individuen stark, was STRs ideal für die Identifikation macht. Beispiel: Die Sequenz GATA könnte bei einer Person 8-mal, bei einer anderen 12-mal wiederholt sein.',
+          explanation: "STRs (Mikrosatelliten) sind kurze Sequenzmotive von 2–7 Basenpaaren (z. B. AGAT), die tandemförmig hintereinander wiederholt werden. Die Anzahl der Wiederholungen variiert stark zwischen Individuen — dieser Längenpolymorphismus macht STRs ideal für den genetischen Fingerabdruck, da sie mit PCR und Kapillarelektrophorese einfach und präzise analysiert werden können.",
           hints: [
-            '„Short" bedeutet kurz, „Tandem" bedeutet hintereinander, „Repeat" bedeutet Wiederholung.',
-            'Die Anzahl der Wiederholungen ist das variable Element.'
+            "'Tandem' bedeutet hintereinander — die Wiederholungen liegen direkt nebeneinander.",
+            "Der entscheidende Unterschied zwischen Individuen ist die Anzahl der Wiederholungen, nicht die Sequenz selbst.",
           ],
-          tags: ['genetischer-fingerabdruck', 'str', 'tandem-repeats'],
-          difficulty: 1
+          difficulty: 1,
+          tags: [],
         },
         {
-          question: 'Wie viele STR-Loci werden typischerweise in der modernen forensischen DNA-Analyse untersucht?',
+          question: "Bei der Gelelektrophorese eines STR-Profils wandern kleinere Fragmente...",
           options: [
-            '2-3 Loci',
-            '5-7 Loci',
-            '13-20 Loci',
-            '50-100 Loci',
-            '1000+ Loci'
+            "langsamer, weil sie mehr Ladung tragen",
+            "schneller, weil sie weniger Widerstand im Gel erfahren",
+            "gar nicht, da sie an der Anode festgehalten werden",
+            "zur Kathode, weil DNA positiv geladen ist",
+            "abhängig von ihrer Basenzusammensetzung (A/T vs. G/C)",
+          ],
+          correctIndex: 1,
+          explanation: "Bei der Gelelektrophorese wandern alle DNA-Moleküle aufgrund ihrer negativen Ladung (Phosphatgruppen) zur positiven Elektrode (Anode). Kleinere Fragmente bewegen sich schneller durch das Gelgeflecht, weil sie auf weniger Widerstand treffen — sie wandern also weiter als große Fragmente bei gleicher Laufzeit. Dies erlaubt die Größentrennung und damit die Bestimmung der Allellänge.",
+          hints: [
+            "DNA hat eine negative Ladung (wegen der Phosphatgruppen) — in welche Richtung bewegt sich eine negative Ladung im elektrischen Feld?",
+            "Stellen Sie sich Moleküle vor, die durch ein Sieb laufen — welche kommen schneller durch?",
+          ],
+          difficulty: 1,
+          tags: [],
+        },
+        {
+          question: "Ein Vaterschaftstest zeigt folgendes STR-Profil an Locus D7S820: Kind: Allele 10, 12; Mutter: Allele 10, 11; möglicher Vater: Allele 11, 13. Ist Vaterschaft ausgeschlossen?",
+          options: [
+            "Nein, Allel 13 des Vaters passt zum Kind",
+            "Nein, Allel 11 des Vaters passt zum Kind",
+            "Ja, denn das Kind hat Allel 12, das weder von der Mutter noch vom möglichen Vater stammt",
+            "Nein, ein einziger Locus reicht nicht für einen Ausschluss",
+            "Ja, weil der Vater kein Allel 10 trägt",
           ],
           correctIndex: 2,
-          explanation: 'In der modernen Forensik werden typischerweise 13-20 verschiedene STR-Loci gleichzeitig analysiert (Multiplex-PCR). Diese Kombination liefert ein statistisch nahezu einzigartiges Profil für jedes Individuum. Mehr Loci erhöhen die Diskriminierungskraft und reduzieren die Wahrscheinlichkeit zufälliger Übereinstimmungen auf astronomisch kleine Werte.',
+          explanation: "Das Kind hat die Allele 10 und 12. Allel 10 stammt von der Mutter (Mutter trägt 10). Das verbleibende kindliche Allel 12 muss vom biologischen Vater stammen. Der mögliche Vater trägt die Allele 11 und 13 — kein Allel 12. Damit kann er nicht der biologische Vater sein. Ein Ausschluss an einem Locus reicht für den Ausschluss der Vaterschaft aus.",
           hints: [
-            'Mehr Loci = höhere Sicherheit der Identifikation.',
-            'Die Analyse erfolgt gleichzeitig in einer Reaktion (Multiplex).'
+            "Ziehen Sie die mütterlichen Allele vom Kind ab — was bleibt als 'Vater-Allel' übrig?",
+            "Das verbleibende Allel muss im Profil des möglichen Vaters vorhanden sein.",
           ],
-          tags: ['genetischer-fingerabdruck', 'str', 'forensik'],
-          difficulty: 2
+          difficulty: 3,
+          tags: [],
         },
         {
-          question: 'Warum hat ein heterozygoter STR-Locus zwei Peaks im Elektropherogramm?',
+          question: "Was ist der Hauptunterschied zwischen RFLP und STR-Analyse beim genetischen Fingerabdruck?",
           options: [
-            'Weil die DNA degradiert ist',
-            'Weil zwei verschiedene Allele (unterschiedliche Längen) vorliegen',
-            'Weil ein Fehler bei der PCR aufgetreten ist',
-            'Weil die DNA von zwei Personen stammt',
-            'Weil die Kapillarelektrophorese fehlerhaft war'
+            "RFLP analysiert Tandem-Wiederholungen; STR nutzt Restriktionsenzyme",
+            "RFLP benötigt mehr DNA und Restriktionsverdau; STR-Analyse nutzt PCR und ist sensitiver",
+            "STR erfordert radioaktive Markierung; RFLP ist fluoreszenzbasiert",
+            "RFLP analysiert SNPs; STR analysiert Methylierungsmuster",
+            "Es gibt keinen Unterschied — beides sind synonyme Begriffe",
           ],
           correctIndex: 1,
-          explanation: 'Jeder Mensch erbt ein Allel vom Vater und ein Allel von der Mutter. Bei einem heterozygoten Locus sind diese beiden Allele unterschiedlich lang (unterschiedliche Anzahl von Tandem-Repeats). In der Kapillarelektrophorese werden beide Fragmente getrennt detektiert, was zu zwei Peaks führt. Bei homozygotem Locus (beide Allele gleich lang) erscheint nur ein Peak.',
+          explanation: "RFLP (Restriction Fragment Length Polymorphism) basiert auf dem Verdau mit Restriktionsenzymen und anschließendem Southern Blot — eine aufwändige Methode, die größere DNA-Mengen erfordert und degradierte DNA-Proben nicht analysieren kann. STR-Analyse nutzt PCR zur Amplifikation, benötigt sehr wenige Ausgangszellen und ist hochsensitiv. Daher hat STR RFLP in der forensischen Praxis weitgehend ersetzt.",
           hints: [
-            'Heterozygot bedeutet „verschiedene Allele".',
-            'Jeder Mensch hat zwei Kopien jedes Chromosoms (außer Geschlechtschromosomen bei Männern).'
+            "RFLP = Restriction Fragment Length Polymorphism — was schneidet die DNA?",
+            "STR-Analyse nutzt PCR — welchen Vorteil bietet PCR bei geringen oder degradierten DNA-Mengen?",
           ],
-          tags: ['genetischer-fingerabdruck', 'str', 'heterozygot'],
-          difficulty: 2
+          difficulty: 2,
+          tags: [],
         },
         {
-          question: 'Welcher Vorteil hat die STR-Analyse gegenüber der älteren RFLP-Methode?',
+          question: "Eineiige Zwillinge haben identische genetische Fingerabdrücke. Welche forensische Schlussfolgerung ergibt sich daraus?",
           options: [
-            'STR benötigt größere DNA-Mengen',
-            'STR ist zeitaufwendiger',
-            'STR funktioniert auch mit degradierter DNA und kleinen Probenmengen',
-            'STR ist weniger diskriminierend',
-            'STR benötigt keine PCR'
+            "Eineiige Zwillinge können forensisch durch Standard-STR-Analyse nicht unterschieden werden",
+            "Eineiige Zwillinge sind genetisch nicht wirklich identisch",
+            "Der genetische Fingerabdruck kann durch Umweltfaktoren verändert werden",
+            "Bei eineiigen Zwillingen muss die DNA-Analyse doppelt durchgeführt werden",
+            "Epigenetische Analysen allein reichen zur forensischen Unterscheidung aus",
           ],
-          correctIndex: 2,
-          explanation: 'Die STR-Analyse hat mehrere entscheidende Vorteile: Sie funktioniert mit sehr kleinen DNA-Mengen (wenige Nanogramm) dank PCR-Amplifikation, ist deutlich schneller (Stunden statt Wochen), kommt besser mit degradierter DNA zurecht (kurze Fragmente) und ist hochdiskriminierend. Die RFLP-Methode benötigte dagegen >100 ng intakte DNA und war sehr zeitaufwendig.',
+          correctIndex: 0,
+          explanation: "Eineiige Zwillinge entstehen aus einer befruchteten Eizelle und haben identische Nukleotidsequenzen, einschließlich aller STR-Loci. Daher sind ihre genetischen Fingerabdrücke nicht unterscheidbar. In forensischen Fällen mit eineiigen Zwillingen als Verdächtigen kann DNA allein nicht zur Identifikation des Täters beitragen — andere Beweise müssen herangezogen werden. Neueste Forschung nutzt seltene somatische Mutationen zur Unterscheidung.",
           hints: [
-            'PCR ermöglicht die Amplifikation aus kleinsten Mengen.',
-            'Kurze STR-Fragmente bleiben auch in degradierter DNA oft intakt.'
+            "Eineiige Zwillinge haben denselben genetischen Ursprung — welchen Effekt hat das auf ihre DNA-Sequenz?",
+            "Der genetische Fingerabdruck basiert auf Sequenzunterschieden — was passiert, wenn keine vorhanden sind?",
           ],
-          tags: ['genetischer-fingerabdruck', 'str', 'rflp'],
-          difficulty: 2
+          difficulty: 2,
+          tags: [],
         },
-        {
-          question: 'Wie funktioniert ein Vaterschaftstest auf molekularer Ebene?',
-          options: [
-            'Vergleich der Blutgruppen',
-            'Überprüfung ob das Kind je ein Allel von Mutter und vermeintlichem Vater geerbt hat',
-            'Sequenzierung des gesamten Genoms',
-            'Messung der DNA-Menge',
-            'Analyse der Chromosomenanzahl'
-          ],
-          correctIndex: 1,
-          explanation: 'Bei einem Vaterschaftstest werden 15-20 STR-Loci analysiert. Für jeden Locus muss das Kind ein Allel von der Mutter und ein Allel vom biologischen Vater geerbt haben. Wenn bei mehreren Loci das Kind Allele trägt, die weder von der Mutter noch vom vermeintlichen Vater stammen können, ist die Vaterschaft ausgeschlossen. Bei Übereinstimmung liegt die Wahrscheinlichkeit der Vaterschaft bei >99,99%.',
-          hints: [
-            'Mendel\'sche Vererbung: je ein Allel von jedem Elternteil.',
-            'Das Kind kann keine Allele tragen, die bei keinem Elternteil vorkommen.'
-          ],
-          tags: ['genetischer-fingerabdruck', 'str', 'vaterschaftstest'],
-          difficulty: 2
-        },
-        {
-          question: 'Welche biologische Spur eignet sich NICHT für einen genetischen Fingerabdruck?',
-          options: [
-            'Blut',
-            'Haare mit Wurzel',
-            'Hautschuppen',
-            'Urin (zellfrei)',
-            'Speichel'
-          ],
-          correctIndex: 3,
-          explanation: 'Für einen genetischen Fingerabdruck werden Zellen mit Zellkernen benötigt, da die analysierte DNA aus dem Zellkern stammt. Zellfreier Urin enthält keine Zellen und ist daher ungeeignet. Blut (Leukozyten), Haare mit Wurzel (Haarfollikelzellen), Hautschuppen (Epithelzellen) und Speichel (Epithelzellen der Mundschleimhaut) enthalten alle kernhaltige Zellen und sind für DNA-Analysen geeignet.',
-          hints: [
-            'DNA-Analyse erfordert Zellen mit Zellkern.',
-            'Überlege: Welche Körperflüssigkeit kann zellfrei sein?'
-          ],
-          tags: ['genetischer-fingerabdruck', 'forensik', 'dna-isolation'],
-          difficulty: 3
-        }
-      ]
+      ],
     },
     {
       id: 'bio-7-05',
-      title: 'Gentechnisch veränderte Organismen (GVO)',
-      content: `# Gentechnisch veränderte Organismen (GVO)
+      title: 'Gentechnisch veränderte Organismen — Methoden',
+      content: `## Grundlagen der Gentechnik
 
-Gentechnisch veränderte Organismen (GVO) sind Lebewesen, deren genetisches Material gezielt durch molekularbiologische Techniken verändert wurde. Im Gegensatz zur klassischen Züchtung, die auf natürlicher Rekombination beruht, ermöglicht die Gentechnik die präzise Einführung, Entfernung oder Modifikation spezifischer Gene – auch über Artgrenzen hinweg.
+Die **Gentechnik** umfasst Methoden zur gezielten Veränderung des Erbguts von Organismen. Zentrale Werkzeuge sind Restriktionsenzyme, Vektoren, Transformationsmethoden und moderne Genomeditierungssysteme wie CRISPR-Cas9.
 
-## Grundprinzipien der Gentechnik
+## Restriktionsenzyme
 
-### 1. Isolierung des Zielgens
+**Restriktionsenzyme (Typ II)** erkennen spezifische palindromische DNA-Sequenzen (4–8 bp) und schneiden diese. Zum Beispiel erkennt EcoRI die Sequenz 5'-GAATTC-3' und erzeugt 5'-Überhänge (**sticky ends**), die die Ligation mit komplementären Fragmenten erleichtern. Andere Enzyme (z. B. SmaI) erzeugen **blunt ends** (glatte Enden). Restriktionsenzyme wurden als natürliche Abwehr von Bakterien gegen Fremd-DNA entdeckt.
 
-Das gewünschte Gen muss zunächst identifiziert und isoliert werden:
-- **Genomische DNA:** Direktisolierung aus Organismus
-- **cDNA:** Umschreibung von mRNA mittels reverser Transkriptase (ohne Introns)
-- **Synthese:** Chemische oder enzymatische Synthese basierend auf bekannter Sequenz
+## Vektoren
 
-### 2. Restriktionsenzyme und DNA-Schnitt
+**Vektoren** sind DNA-Moleküle, die Fremd-DNA in eine Wirtszelle transportieren und dort replizieren. Wichtigste Typen:
+- **Plasmide:** Kleine zirkuläre bakterielle DNA-Moleküle mit Antibiotikaresistenzgen (zur Selektion) und Multiple Cloning Site (MCS). Aufnahmekapazität: bis ~10 kb
+- **Virale Vektoren (z. B. Adenoviren, lentivirale Vektoren):** Integration in das Wirtsgenom möglich; für Gentherapie genutzt
+- **YACs (Yeast Artificial Chromosomes):** Für sehr große Inserts (bis 2 Mb)
 
-Restriktionsenzyme sind bakterielle Enzyme, die DNA an spezifischen Erkennungssequenzen schneiden:
+## Klonierung — Ablauf
 
-**Eigenschaften:**
-- Erkennen palindromische Sequenzen (meist 4-8 bp)
-- Schneiden doppelsträngige DNA
-- Erzeugen glatte Enden (blunt ends) oder überhängende Enden (sticky ends)
+1. Ziel-DNA und Vektor mit selben Restriktionsenzymen schneiden
+2. Ligation mit DNA-Ligase (sticky ends verbinden)
+3. **Transformation:** Einbringen des rekombinanten Plasmids in Wirtsbakterium (z. B. *E. coli*) — Hitzeschock oder Elektroporation
+4. **Selektion:** Wachstum auf antibiotikahaltigem Medium eliminiert Zellen ohne Plasmid; Blau-Weiß-Selektion (lacZ-Gen) unterscheidet Plasmide mit und ohne Insert
 
-**Beispiel EcoRI:**
+## CRISPR-Cas9
 
-5'-GAATTC-3'    →    5'-G     AATTC-3'
-3'-CTTAAG-5'         3'-CTTAA     G-5'
-                     (sticky ends)
+**CRISPR-Cas9** (Clustered Regularly Interspaced Short Palindromic Repeats) ermöglicht präzise Genomedition. Das Cas9-Protein ist eine RNA-geführte Endonuklease: eine Guide-RNA (gRNA, ~20 nt) dirigiert Cas9 zur Zielsequenz, wo ein Doppelstrangbruch erzeugt wird. Die Reparatur erfolgt über **NHEJ** (Non-Homologous End Joining, fehleranfällig → Gen-Knockout) oder **HDR** (Homology-Directed Repair, präzise Sequenzänderung). Anwendungen: Forschung, CAR-T-Zell-Therapie, Sichelzellanämie-Heilung (2023 zugelassen).
 
-### 3. Vektoren als DNA-Träger
+## GVO in Medizin und Landwirtschaft
 
-Vektoren sind DNA-Moleküle, die fremde DNA aufnehmen und in Zielzellen transportieren können:
-
-**Plasmide (am häufigsten):**
-- Kleine, zirkuläre DNA-Moleküle aus Bakterien
-- Replizieren unabhängig vom bakteriellen Chromosom
-- Enthalten Origin of Replication (ori), Selektionsmarker (z.B. Antibiotikaresistenz), Multiple Cloning Site (MCS)
-
-**Weitere Vektoren:**
-- Bakteriophagen (Viren, die Bakterien infizieren)
-- BACs/YACs (für große DNA-Fragmente)
-- Virale Vektoren (für Gentherapie)
-
-### 4. Ligation – Verknüpfung von DNA-Fragmenten
-
-Das isolierte Gen und der geschnittene Vektor werden mittels DNA-Ligase verknüpft:
-- Ligase bildet Phosphodiesterbindungen zwischen DNA-Fragmenten
-- Kompatible Enden (gleiche Restriktionsschnittstellen) erleichtern die Ligation
-- Resultat: Rekombinanter Vektor mit eingefügtem Fremdgen
-
-### 5. Transformation – Einschleusung in Zielzellen
-
-Der rekombinante Vektor wird in Wirtszellen eingebracht:
-
-**Bakterien:**
-- Chemische Transformation (Calciumchlorid-Methode)
-- Elektroporation (elektrische Impulse machen Membran durchlässig)
-
-**Pflanzenzellen:**
-- Agrobacterium tumefaciens (natürlicher DNA-Transfer durch Ti-Plasmid)
-- Genkanone (Partikelbeschuss)
-- Protoplastenfusion
-
-**Tierzellen:**
-- Mikroinjektion in Zellkern oder Vorkern (Pronukleus)
-- Virale Vektoren
-- Liposomen (Lipid-Vesikel)
-
-### 6. Selektion transformierter Zellen
-
-Nur ein Bruchteil der Zellen nimmt erfolgreich DNA auf. Selektion erfolgt durch:
-- **Antibiotikaresistenz:** Nur transformierte Bakterien überleben auf Antibiotika-Medium
-- **Reportergene:** GFP (grünes Fluoreszenzprotein), β-Galaktosidase (Blau-Weiß-Selektion)
-- **PCR-Screening:** Nachweis des eingefügten Gens
-
-## Anwendungen gentechnisch veränderter Organismen
-
-### Medizin und Pharmazie
-
-**Produktion therapeutischer Proteine:**
-- **Insulin:** Bakterien (E. coli) oder Hefen produzieren humanes Insulin
-- **Wachstumshormon:** Behandlung von Kleinwuchs
-- **Gerinnungsfaktoren:** Faktor VIII für Hämophilie-Patienten
-- **Antikörper:** Monoklonale Antikörper zur Krebstherapie
-
-**Vorteile:**
-- Große Mengen kostengünstig produzierbar
-- Humane Proteine (keine tierischen Verunreinigungen)
-- Geringeres Infektionsrisiko
-
-### Landwirtschaft
-
-**Transgene Pflanzen:**
-- **Herbizidresistenz:** Glyphosat-resistente Sojabohnen, Mais
-- **Insektenresistenz:** Bt-Mais (Bacillus thuringiensis-Toxin)
-- **Virusresistenz:** Papaya gegen Ringspot-Virus
-- **Verbesserte Eigenschaften:** Golden Rice (β-Carotin-Anreicherung gegen Vitamin-A-Mangel)
-
-**Transgene Tiere:**
-- Schnelleres Wachstum (AquAdvantage Lachs)
-- Produktion pharmazeutischer Proteine in Milch
-- Krankheitsresistenz
-
-### Forschung
-
-- **Modellorganismen:** Knockout-Mäuse zur Untersuchung von Genfunktionen
-- **Reportergene:** Visualisierung von Genexpression
-- **Grundlagenforschung:** Verstehen biologischer Prozesse
-
-## Biosicherheit und Containment
-
-**S1-S4 Sicherheitsstufen:**
-- **S1:** Keine oder geringe Gefahr (E. coli K12)
-- **S2:** Mäßiges Risiko
-- **S3:** Ernstes Risiko (HIV, Tuberkulose)
-- **S4:** Höchstes Risiko (Ebola, Pocken)
-
-## Ethische und gesellschaftliche Aspekte
-
-**Chancen:**
-- Bekämpfung von Hunger und Mangelernährung
-- Neue Medikamente und Therapien
-- Umweltschutz durch reduzierte Pestizidnutzung
-
-**Risiken und Bedenken:**
-- Langzeiteffekte auf Ökosysteme unklar
-- Horizontaler Gentransfer auf Wildpflanzen
-- Abhängigkeit von Saatgutkonzernen
-- Ethische Fragen bei Eingriffen in Keimbahn
-
-**Regulierung:**
-- Zulassungsverfahren und Risikobewertung
-- Kennzeichnungspflicht für GVO-Produkte (EU)
-- Koexistenz mit konventioneller und ökologischer Landwirtschaft`,
-      lernziele: [],
-      sections: [],
-      merksätze: [
-        'Restriktionsenzyme schneiden DNA an spezifischen palindromischen Sequenzen und erzeugen kompatible Enden (sticky ends) für die Ligation.',
-        'Plasmide sind ideale Vektoren: kleine, zirkuläre DNA-Moleküle mit ori (Replikation), Selektionsmarker (Antibiotikaresistenz) und MCS (Klonierungsstelle).',
-        'Transformation: Einschleusung rekombinanter DNA in Zielzellen durch chemische Methoden, Elektroporation (Bakterien) oder Agrobacterium (Pflanzen).',
-        'GVO-Anwendungen: Insulinproduktion in Bakterien, Bt-Mais mit Insektenresistenz, Golden Rice mit β-Carotin gegen Vitamin-A-Mangel.',
-        'Selektion transformierter Zellen erfolgt über Antibiotikaresistenz oder Reportergene (GFP, β-Galaktosidase für Blau-Weiß-Selektion).'
+**Medizin:** Humanes Insulin (in *E. coli*), Erythropoetin (EPO), Blutgerinnungsfaktoren, Impfstoffe (rekombinante Proteine)
+**Landwirtschaft:** Bt-Mais (Bt-Toxin gegen Insekten), herbizidresistenter Soja (Roundup Ready), Golden Rice (Beta-Carotin), stressresistente Kulturpflanzen`,
+      lernziele: [
+        "Das Prinzip der Klonierung mit Restriktionsenzymen, Vektoren und Transformation beschreiben",
+        "Den CRISPR-Cas9-Mechanismus und seine Anwendungen erläutern",
+        "Medizinische und landwirtschaftliche Anwendungen von GVO nennen und kritisch bewerten",
       ],
+      sections: [
+        {
+          heading: "Selektion rekombinanter Klone",
+          text: "Nach der Transformation werden Bakterien auf Selektivmedium (z. B. Ampicillin) ausplattiert. Nur Zellen mit Plasmid überleben, da das Plasmid ein Ampicillinresistenzgen trägt. Um zwischen Klonen mit Insert und leeren Vektoren zu unterscheiden, nutzt man die Blau-Weiß-Selektion: Das lacZ-Gen im Vektor codiert für Beta-Galaktosidase, die das Substrat X-Gal blau färbt. Wenn ein Insert das lacZ-Gen unterbricht, produzieren diese Bakterien keine aktive Beta-Galaktosidase — die Kolonien bleiben weiß. Weiße Kolonien enthalten also ein Insert. Anschließend werden positive Klone durch Kolonie-PCR oder Restriktionsverdau und Gelelektrophorese verifiziert.",
+          merksatz: "Blau-Weiß-Selektion: blaue Kolonien = kein Insert (lacZ intakt); weiße Kolonien = Insert vorhanden (lacZ unterbrochen).",
+        },
+        {
+          heading: "CRISPR-Cas9 — Revolutionäre Genomedition",
+          text: "CRISPR-Cas9 wurde aus dem Immunsystem von Bakterien (z. B. Streptococcus pyogenes) abgeleitet. Bakterien speichern Sequenzen früherer Viren als Erinnerung (CRISPRs) und nutzen Cas-Proteine zum Erkennen und Schneiden dieser Sequenzen bei erneuter Infektion. Wissenschaftler (Jennifer Doudna, Emmanuelle Charpentier, Nobelpreis Chemie 2020) nutzten dieses System für gezielte Genomedition. Eine programmierbare gRNA kann theoretisch jede Sequenz im Genom ansteuern. Aktuelle Anwendungen: Casgevy (Exagamglogene Autotemcel) — erste zugelassene CRISPR-Therapie (2023) zur Heilung von Sichelzellanämie und Beta-Thalassämie durch Reaktivierung des fetalen Hämoglobins (HbF).",
+          merksatz: "CRISPR-Cas9: guide RNA → Cas9-Endonuklease → Doppelstrangbruch → NHEJ (Knockout) oder HDR (präzise Korrektur). Nobelpreis Chemie 2020.",
+        },
+      ],
+      merksätze: [
+        "Restriktionsenzyme Typ II: erkennen palindromische Sequenzen, erzeugen sticky oder blunt ends.",
+        "Klonierung: Restriktionsverdau → Ligation → Transformation → Selektion (Antibiotikum + Blau-Weiß).",
+        "CRISPR-Cas9: gRNA dirigiert Cas9 zur Zielsequenz → Doppelstrangbruch → Gen-Knockout (NHEJ) oder Korrektur (HDR).",
+      ],
+      klinischerBezug: "Humanes Insulin wird seit 1982 rekombinant in E. coli produziert — ein Meilenstein der Biotechnologie. CRISPR-basierte Therapien (Casgevy, 2023) ermöglichen erstmals die Heilung genetischer Blutkrankheiten wie Sichelzellanämie durch einmalige Stammzellentherapie.",
+      altfrage: {
+        question: "Was sind 'sticky ends' (klebrige Enden) bei Restriktionsverdau und welchen Vorteil haben sie gegenüber 'blunt ends'?",
+        answer: "Sticky ends entstehen, wenn ein Restriktionsenzym die DNA-Stränge versetzt schneidet, sodass kurze einzelsträngige Überhänge (4–6 Nukleotide) entstehen. Diese Überhänge sind komplementär zueinander und können durch komplementäre Basenpaarung mit anderen sticky ends aneinander hybridisieren. Dies erleichtert die effiziente Ligation von Vektor und Insert erheblich, da die komplementären Überhänge die richtigen Partner finden und zusammenhalten. Blunt ends haben keine Überhänge und müssen direkt ligiert werden, was weniger effizient ist.",
+      },
       selfTest: [
         {
-          question: 'Was ist die Funktion von Restriktionsenzymen in der Gentechnik?',
+          question: "Was ist die Funktion von Restriktionsenzymen des Typs II bei der Klonierung?",
           options: [
-            'Sie amplifizieren DNA',
-            'Sie schneiden DNA an spezifischen Erkennungssequenzen',
-            'Sie verbinden DNA-Fragmente',
-            'Sie synthetisieren neue DNA',
-            'Sie markieren DNA mit Fluoreszenz'
+            "Sie verbinden (ligieren) DNA-Fragmente miteinander",
+            "Sie erkennen spezifische palindromische DNA-Sequenzen und schneiden sie",
+            "Sie transportieren Fremd-DNA in die Wirtszelle",
+            "Sie methylieren DNA zur Schutzmarkierung",
+            "Sie synthetisieren neue DNA-Stränge an der Schnittstelle",
           ],
           correctIndex: 1,
-          explanation: 'Restriktionsenzyme (Restriktionsendonukleasen) sind bakterielle Enzyme, die DNA an spezifischen palindromischen Erkennungssequenzen schneiden. Sie erzeugen definierte Schnittstellen, oft mit überhängenden Enden (sticky ends), die komplementär zueinander sind. Dies ermöglicht die gezielte Verknüpfung von DNA-Fragmenten aus verschiedenen Quellen – die Grundlage der rekombinanten DNA-Technologie.',
+          explanation: "Restriktionsenzyme Typ II erkennen spezifische palindromische DNA-Sequenzen (4–8 bp) und schneiden die DNA an dieser Stelle. Durch den Schnitt entstehen definierte Fragmente mit sticky ends oder blunt ends. Diese Eigenschaft wird in der Klonierung genutzt, um Ziel-DNA und Vektor mit kompatiblen Enden zu erzeugen, die dann durch DNA-Ligase verbunden werden können.",
           hints: [
-            'Der Name „Restriktions-Endonuklease" deutet auf eine schneidende Funktion hin.',
-            'Diese Enzyme erkennen spezifische Sequenzen wie z.B. GAATTC.'
+            "Restriktionsenzyme kommen natürlich in Bakterien vor — was schneiden sie dort?",
+            "Das Wort 'Restriktion' bedeutet 'Einschränkung' — sie schränken Fremd-DNA ein, indem sie sie zerschneiden.",
           ],
-          tags: ['gvo', 'gentechnik', 'restriktionsenzyme'],
-          difficulty: 1
+          difficulty: 1,
+          tags: [],
         },
         {
-          question: 'Welche Eigenschaften muss ein Plasmid als Klonierungsvektor typischerweise besitzen?',
+          question: "Welche Eigenschaft eines Plasmid-Vektors ermöglicht die Selektion transformierter Bakterien auf Antibiotikamedium?",
           options: [
-            'Nur eine große Größe',
-            'Origin of Replication, Selektionsmarker und Multiple Cloning Site',
-            'Nur Antibiotikaresistenz',
-            'Keine spezifischen Eigenschaften nötig',
-            'Nur eine zirkuläre Struktur'
+            "Der Replikationsursprung (ori) sichert die Plasmidvermehrung",
+            "Das Antibiotikaresistenzgen (z. B. AmpR) verleiht den Bakterien Resistenz",
+            "Die Multiple Cloning Site (MCS) enthält Restriktionsschnittstellen",
+            "Das lacZ-Gen ermöglicht Blau-Weiß-Selektion",
+            "Der Promotor ermöglicht Expression des Fremdgens",
           ],
           correctIndex: 1,
-          explanation: 'Ein funktioneller Klonierungsvektor benötigt drei Kernelemente: (1) Origin of Replication (ori) für autonome Replikation in der Wirtszelle, (2) Selektionsmarker (meist Antibiotikaresistenzgen) zur Identifikation transformierter Zellen, (3) Multiple Cloning Site (MCS) mit mehreren Restriktionsschnittstellen für die Insertion fremder DNA. Diese Kombination ermöglicht effiziente Klonierung und Selektion.',
+          explanation: "Das Antibiotikaresistenzgen (z. B. AmpR für Ampicillinresistenz) auf dem Plasmid ist das Selektionsmerkmal: Nur Bakterien, die das Plasmid aufgenommen haben (transformierte Zellen), können auf ampicillinhaltigem Medium überleben und wachsen. Alle nicht-transformierten Zellen sterben ab. Dieses Prinzip ermöglicht die einfache Selektion rekombinanter Klone.",
           hints: [
-            'Ein Vektor muss sich vermehren, selektierbar sein und Fremd-DNA aufnehmen können.',
-            'Überlege: Woher weiß man, welche Bakterien das Plasmid aufgenommen haben?'
+            "Warum werden Bakterien auf einem Medium mit Antibiotikum ausgestrichen?",
+            "Das Resistenzgen liegt auf dem Plasmid — welchen Vorteil hat das für die Bakterienzelle?",
           ],
-          tags: ['gvo', 'gentechnik', 'plasmid', 'vektor'],
-          difficulty: 2
+          difficulty: 1,
+          tags: [],
         },
         {
-          question: 'Was versteht man unter „Transformation" in der Gentechnik?',
+          question: "Was ist der Unterschied zwischen NHEJ und HDR bei der CRISPR-Cas9-Reparatur?",
           options: [
-            'Die Umwandlung von RNA in DNA',
-            'Die Einschleusung fremder DNA in Zielzellen',
-            'Die Mutation von Genen',
-            'Die Vermehrung von Bakterien',
-            'Die Synthese von Proteinen'
-          ],
-          correctIndex: 1,
-          explanation: 'Transformation bezeichnet die Aufnahme externer DNA (z.B. eines rekombinanten Plasmids) in Zellen. Bei Bakterien erfolgt dies häufig durch chemische Methoden (CaCl₂-Behandlung) oder Elektroporation. Die aufgenommene DNA kann dann repliziert und exprimiert werden. Der Begriff ist spezifisch für die genetische Veränderung durch DNA-Aufnahme, nicht zu verwechseln mit der onkologischen „Transformation" (Entartung von Zellen).',
-          hints: [
-            'Trans- = hinüber; -formation = Gestaltung/Formung.',
-            'Der Prozess bringt neue genetische Information in die Zelle.'
-          ],
-          tags: ['gvo', 'gentechnik', 'transformation'],
-          difficulty: 2
-        },
-        {
-          question: 'Wie werden transformierte Bakterien typischerweise selektiert?',
-          options: [
-            'Nach ihrer Größe',
-            'Durch Wachstum auf Antibiotika-haltigem Medium',
-            'Nach ihrer Farbe im Tageslicht',
-            'Durch mikroskopische Untersuchung',
-            'Durch Zentrifugation'
-          ],
-          correctIndex: 1,
-          explanation: 'Plasmide enthalten typischerweise ein Antibiotikaresistenzgen als Selektionsmarker. Nach der Transformation werden Bakterien auf Medium mit dem entsprechenden Antibiotikum ausplattiert. Nur Bakterien, die erfolgreich das Plasmid aufgenommen haben, besitzen die Resistenz und können wachsen. Nicht-transformierte Bakterien sterben ab. Dies ist eine effiziente Methode zur Anreicherung erfolgreicher Transformanten.',
-          hints: [
-            'Plasmide enthalten oft Resistenzgene.',
-            'Nur transformierte Zellen überleben eine bestimmte Behandlung.'
-          ],
-          tags: ['gvo', 'gentechnik', 'selektion', 'antibiotikaresistenz'],
-          difficulty: 2
-        },
-        {
-          question: 'Welche Methode nutzt Agrobacterium tumefaciens zur Pflanzentransformation?',
-          options: [
-            'Elektroporation',
-            'Chemische Transformation',
-            'Natürlicher DNA-Transfer über Ti-Plasmid',
-            'Mikroinjektion',
-            'PCR-Amplifikation'
+            "NHEJ ist präzise; HDR ist fehleranfällig",
+            "NHEJ benötigt eine Matrize; HDR nicht",
+            "NHEJ ist fehleranfällig und führt oft zu Frameshift-Mutationen; HDR ermöglicht präzise Sequenzänderungen mithilfe einer Matrize",
+            "NHEJ funktioniert nur in Pflanzenzellen; HDR nur in tierischen Zellen",
+            "Es gibt keinen funktionellen Unterschied zwischen den beiden Wegen",
           ],
           correctIndex: 2,
-          explanation: 'Agrobacterium tumefaciens ist ein Bodenbakterium, das natürlicherweise Pflanzenzellen mit DNA infizieren kann. Es nutzt sein Ti-Plasmid (tumor-inducing), um einen Teil seiner DNA (T-DNA) in das Pflanzengenom zu integrieren. In der Gentechnik wird dieser natürliche Mechanismus genutzt: Das gewünschte Gen wird in die T-DNA-Region kloniert, und Agrobacterium überträgt es in Pflanzenzellen – eine elegante und effiziente Transformationsmethode.',
+          explanation: "NHEJ (Non-Homologous End Joining) verbindet die geschnittenen DNA-Enden direkt, oft mit kleinen Insertionen oder Deletionen (Indels) — dieser Fehler führt zu Frameshift-Mutationen und damit zum Verlust der Proteinfunktion (Gen-Knockout). HDR (Homology-Directed Repair) nutzt eine bereitgestellte DNA-Matrize zur präzisen Reparatur oder Korrektur der Sequenz. HDR ist effizienter in teilenden Zellen (S/G2-Phase).",
           hints: [
-            'Agrobacterium ist ein Bakterium, das natürlicherweise Pflanzen „infiziert".',
-            'Der Transfer funktioniert über ein spezielles Plasmid.'
+            "HDR nutzt eine Matrize — an welchen anderen bekannten DNA-Reparaturprozess erinnert das?",
+            "NHEJ ist schnell aber fehleranfällig — wenn man ein Gen ausschalten möchte, welcher Weg ist geeigneter?",
           ],
-          tags: ['gvo', 'gentechnik', 'agrobacterium', 'pflanzentransformation'],
-          difficulty: 2
+          difficulty: 3,
+          tags: [],
         },
         {
-          question: 'Was ist Golden Rice und welches Problem soll er lösen?',
+          question: "Welches Prinzip liegt der Herstellung von rekombinantem humanem Insulin in E. coli zugrunde?",
           options: [
-            'Eine Reissorte mit goldener Farbe für dekorative Zwecke',
-            'Reis mit β-Carotin-Anreicherung gegen Vitamin-A-Mangel',
-            'Reis mit erhöhtem Goldgehalt im Boden',
-            'Reis mit besonders hohem Ertrag',
-            'Reis mit Resistenz gegen alle Schädlinge'
+            "E. coli produziert Insulin natürlich — es muss nur extrahiert werden",
+            "Das humane Insulingen wird in einen Expressionsvektor kloniert und in E. coli transformiert, wo es exprimiert wird",
+            "Insulin wird durch rein chemische Synthese hergestellt, ohne E. coli",
+            "E. coli-Insulin ist von Natur aus identisch mit humanem Insulin",
+            "Das Insulingen wird via CRISPR in das E. coli-Chromosom integriert",
           ],
           correctIndex: 1,
-          explanation: 'Golden Rice ist eine gentechnisch veränderte Reissorte, die β-Carotin (Provitamin A) im Endosperm produziert. Das β-Carotin verleiht dem Reis eine goldgelbe Farbe. Ziel ist die Bekämpfung von Vitamin-A-Mangel, der besonders in Entwicklungsländern verbreitet ist und zu Blindheit und erhöhter Kindersterblichkeit führt. Golden Rice ist ein kontrovers diskutiertes Beispiel für den potenziellen Nutzen von GVO in der Entwicklungshilfe.',
+          explanation: "Das humane Insulingen (als cDNA aus mRNA kloniert) wird in einen bakteriellen Expressionsvektor mit starkem Promotor kloniert. Nach Transformation in E. coli kann das Bakterium das humane Insulin-Protein produzieren. Das Protein wird aufgereinigt und zur medizinischen Verwendung aufbereitet. Dieses Verfahren ermöglicht kostengünstige und tierfreie Insulinproduktion seit 1982.",
           hints: [
-            'Die goldene Farbe kommt von einem Vitamin-Vorläufer.',
-            'Vitamin-A-Mangel ist ein großes Problem in Ländern, wo Reis Hauptnahrungsmittel ist.'
+            "Wie würde man ein menschliches Protein in einem Bakterium produzieren lassen?",
+            "Denken Sie an den Klonierungsablauf: Welche Schritte sind nötig, damit E. coli ein humanes Protein herstellt?",
           ],
-          tags: ['gvo', 'gentechnik', 'golden-rice', 'vitamin-a'],
-          difficulty: 3
-        }
-      ]
+          difficulty: 2,
+          tags: [],
+        },
+        {
+          question: "Welche Funktion hat die Guide-RNA (gRNA) bei CRISPR-Cas9?",
+          options: [
+            "Sie schneidet die Ziel-DNA als Endonuklease",
+            "Sie repariert den Doppelstrangbruch durch HDR",
+            "Sie dirigiert das Cas9-Protein durch Komplementarität zur gewünschten Zielsequenz",
+            "Sie transkribiert das Fremdgen in mRNA",
+            "Sie inhibiert NHEJ und aktiviert HDR-Reparatur",
+          ],
+          correctIndex: 2,
+          explanation: "Die Guide-RNA (gRNA, ca. 20 Nukleotide) ist komplementär zur Zielsequenz in der genomischen DNA. Sie bildet einen Komplex mit dem Cas9-Protein und dirigiert dieses durch Basenpaarung zur gewünschten Position im Genom. Das PAM-Motiv (Protospacer Adjacent Motif, oft NGG) flankiert die Zielsequenz und ist für die Cas9-Bindung erforderlich. Durch einfache Änderung der gRNA-Sequenz kann jede beliebige Zielsequenz im Genom angesteuert werden.",
+          hints: [
+            "Die gRNA ist 'komplementär' — was bedeutet das für ihre Funktion als Wegweiser?",
+            "Cas9 allein hat keine Sequenzspezifität — was verleiht ihm diese?",
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+      ],
     },
     {
       id: 'bio-7-06',
-      title: 'Klonierung',
-      content: `# Klonierung
+      title: 'Klonierung — Reproduktiv, Therapeutisch, Ethik',
+      content: `## Klonierung — Definition und Überblick
 
-Klonierung bezeichnet die Erzeugung genetisch identischer Kopien von Zellen, Geweben oder ganzen Organismen. Während molekulare Klonierung (DNA-Klonierung) seit Jahrzehnten Routine in der Forschung ist, sorgt das reproduktive Klonieren von Säugetieren seit dem Schaf „Dolly" 1996 für intensive ethische Debatten.
+**Klonierung** bezeichnet die Erzeugung genetisch identischer Kopien eines Organismus oder einzelner Zellen. Im biologischen Kontext unterscheidet man zwischen **reproduktivem Klonen** (Erzeugung eines genetisch identischen Lebewesens), **therapeutischem Klonen** (Gewinnung embryonaler Stammzellen) und **molekularem Klonen** (Vervielfältigung von DNA-Fragmenten, bereits im UK GVO besprochen).
 
-## Arten der Klonierung
+## Reproduktives Klonen — Somatischer Kerntransfer (SCNT)
 
-### 1. Molekulare Klonierung
+Das reproduktive Klonen bei Säugetieren basiert auf dem **somatischen Kerntransfer (Somatic Cell Nuclear Transfer, SCNT)**. Erstmals erfolgreich angewendet 1996 von Ian Wilmut am Roslin Institute (Schaf Dolly):
 
-Die Vervielfältigung spezifischer DNA-Sequenzen in Vektoren (siehe Kapitel GVO). Dies ist eine Standardmethode in der Molekularbiologie und ethisch unproblematisch.
+**Ablauf SCNT:**
+1. Entnahme einer Eizelle und Entfernung des Zellkerns (Enukleierung)
+2. Einpflanzung des Zellkerns einer somatischen Spenderzelle (z. B. Euterdrüsenzelle, wie bei Dolly)
+3. Elektrischer Impuls oder Chemikalien stimulieren die Eizelle zur Entwicklung
+4. In-vitro-Kultivierung bis zum Blastocystenstadium, dann Einpflanzung in eine Leihmutter
 
-### 2. Reproduktive Klonierung
+Dolly war das erste geklonte Säugetier aus einer adulten somatischen Zelle — ein Beweis für die **totipotente Reprogrammierbarkeit** eines Zellkerns. Dolly zeigte verkürzte Telomere und Alterserkrankungen und verstarb mit 6 Jahren (Schafe werden normalerweise 10–12 Jahre alt).
 
-Erzeugung eines genetisch identischen Organismus. Bei Säugetieren erfolgt dies meist durch somatischen Kerntransfer (SCNT).
+## Therapeutisches Klonen
 
-### 3. Therapeutische Klonierung
+Beim **therapeutischen Klonen** wird der SCNT-Prozess bis zum Blastocystenstadium durchgeführt, die Embryonen werden jedoch nicht implantiert, sondern aus der inneren Zellmasse werden **embryonale Stammzellen (ESCs)** gewonnen. Da diese genetisch mit dem Spender identisch sind, würden aus ihnen gewonnene Gewebe/Organe nicht immunologisch abgestoßen. Ethisch hochumstritten, da Embryonen zerstört werden.
 
-Erzeugung embryonaler Stammzellen zur medizinischen Nutzung, nicht zur Erschaffung eines Individuums. Ethisch und rechtlich stark reguliert.
+## iPS-Zellen — Ethische Alternative
 
-## Somatischer Kerntransfer (SCNT)
+**Induzierte pluripotente Stammzellen (iPS)** wurden 2006 von Shinya Yamanaka (Nobelpreis 2012 mit John Gurdon) durch Reprogrammierung adulter somatischer Zellen (z. B. Hautfibroblasten) mit vier Transkriptionsfaktoren (Oct4, Sox2, Klf4, c-Myc = **Yamanaka-Faktoren**) gewonnen. iPS-Zellen sind pluripotent (können alle Körperzellen bilden) und umgehen ethische Probleme, da kein Embryo benötigt wird.
 
-SCNT ist die Standardmethode für das reproduktive Klonieren von Säugetieren.
-
-### Ablauf des SCNT
-
-1. **Entnahme einer Eizelle:**
-   - Unbefruchtete Eizelle wird entnommen
-   - Aus einem erwachsenen Spendertier oder aus IVF-Prozeduren
-
-2. **Enukleation:**
-   - Der Zellkern der Eizelle wird entfernt
-   - Die Eizelle ist nun kernlos, enthält aber Zytoplasma mit Mitochondrien
-
-3. **Entnahme einer somatischen Zelle:**
-   - Körperzelle (z.B. Hautzelle, Fibroblasten) vom zu klonierenden Individuum
-   - Diese Zelle ist diploid und differenziert
-
-4. **Kerntransfer:**
-   - Der Zellkern der somatischen Zelle wird in die entkernte Eizelle übertragen
-   - Erfolgt durch Mikroinjektion oder Zellfusion (Elektrofusion)
-
-5. **Reprogrammierung:**
-   - Das Zytoplasma der Eizelle „reprogrammiert" den somatischen Kern
-   - Differenzierungsmarker werden gelöscht, der Kern wird pluripotent
-   - Dieser Schritt ist kritisch und oft ineffizient
-
-6. **Aktivierung:**
-   - Die rekonstruierte Eizelle wird künstlich aktiviert (elektrische Pulse, Chemikalien)
-   - Dies imitiert die Befruchtung und startet die Zellteilung
-
-7. **Embryonalentwicklung:**
-   - Der Embryo entwickelt sich in vitro bis zum Blastozysten-Stadium
-   - Transfer in Leihmutter für weitere Entwicklung
-
-8. **Geburt:**
-   - Nach normaler Tragezeit wird ein Klon geboren
-   - Genetisch identisch zum Zellkern-Spender (nicht zur Eizellspenderin – mitochondriale DNA stammt von Eizelle!)
-
-## Dolly das Schaf – Meilenstein der Klonierung
-
-1996 gelang Ian Wilmut und seinem Team am Roslin Institute in Schottland die Geburt des Schafs Dolly – des ersten geklonten Säugetiers aus einer adulten somatischen Zelle.
-
-**Bedeutung:**
-- Beweis, dass differenzierte Zellen vollständig reprogrammiert werden können
-- Paradigmenwechsel: Entwicklung ist nicht irreversibel
-- Startschuss für intensive Forschung und ethische Debatten
-
-**Dolly's Leben:**
-- Geboren: 5. Juli 1996
-- Gestorben: 14. Februar 2003 (6 Jahre alt; normale Schaf-Lebenserwartung: 11-12 Jahre)
-- Gesundheitsprobleme: Arthritis, Lungenerkrankung
-- Diskussion: Vorzeitige Alterung? Verkürzte Telomere?
-
-**Effizienz:**
-- 277 Eizellen verwendet
-- 29 Embryonen transferiert
-- 1 lebendgeborenes Lamm (Dolly)
-- Erfolgsrate: <1%
-
-## Reproduktive vs. therapeutische Klonierung
-
-### Reproduktive Klonierung
-
-**Ziel:** Erzeugung eines lebenden Organismus
-
-**Anwendungen:**
-- Reproduktion bedrohter Tierarten
-- Landwirtschaft (Tiere mit gewünschten Eigenschaften)
-- Haustier-Klonierung (kommerziell verfügbar)
-
-**Probleme:**
-- Sehr geringe Erfolgsrate (oft <5%)
-- Hohe Fehlbildungsrate
-- Gesundheitsprobleme bei Klonen
-- Ethische Bedenken (besonders bei menschlichem Klonen)
-
-### Therapeutische Klonierung
-
-**Ziel:** Gewinnung embryonaler Stammzellen für Therapie
-
-**Ablauf:**
-1. SCNT mit Zellen des Patienten
-2. Entwicklung bis Blastozysten-Stadium
-3. Isolation embryonaler Stammzellen
-4. Keine Implantation in Uterus
-5. Differenzierung zu benötigtem Zelltyp
-6. Transplantation ohne Abstoßungsrisiko (genetisch identisch)
-
-**Potenzielle Anwendungen:**
-- Parkinson: Dopamin-produzierende Neuronen
-- Diabetes Typ 1: Insulin-produzierende β-Zellen
-- Herzinfarkt: Kardiomyozyten
-- Rückenmarksverletzungen: Nervenzellen
-
-**Ethische Probleme:**
-- Verbrauch menschlicher Embryonen
-- Status des Embryos (ab wann schützenswert?)
-- Slippery-slope-Argument (Gefahr des Missbrauchs)
-
-## Weitere geklonte Tiere
-
-Nach Dolly wurden zahlreiche weitere Tierarten geklont:
-- Mäuse, Ratten, Kaninchen
-- Rinder, Schweine, Ziegen
-- Katzen, Hunde
-- Pferde (besonders Rennpferde und Polopferde)
-- Kamele, Büffel
-- Affen (Primaten, 2018)
-
-## Alternative: Induzierte pluripotente Stammzellen (iPSCs)
-
-2006/2007 entwickelten Shinya Yamanaka und Kollegen eine Alternative zur therapeutischen Klonierung:
-
-**Prinzip:**
-- Somatische Zellen werden durch Einführung von 4 Transkriptionsfaktoren (Oct4, Sox2, Klf4, c-Myc) in pluripotente Stammzellen umprogrammiert
-- Keine Eizellen oder Embryonen nötig
-- Ethisch weniger problematisch
-
-**Vorteile:**
-- Technisch einfacher als SCNT
-- Keine Eizellen benötigt
-- Patientenspezifische Stammzellen möglich
-
-**Nachteile:**
-- Tumorrisiko durch c-Myc (Onkogen)
-- Unvollständige Reprogrammierung möglich
-- Langzeitstabilität unklar
-
-## Rechtliche Situation
-
-**Deutschland:**
-- Reproduktive Klonierung von Menschen verboten (Embryonenschutzgesetz)
-- Therapeutische Klonierung verboten
-- Import embryonaler Stammzellen nur unter strengen Auflagen (Stichtag-Regelung)
-
-**International:**
-- UN-Deklaration gegen reproduktive Klonierung (2005)
-- Therapeutische Klonierung: unterschiedliche Regelungen (UK erlaubt, viele Länder verbieten)
+Anwendungen: Krankheitsmodellierung, Medikamententestung, perspektivisch Organersatz (Tissue Engineering).
 
 ## Ethische Aspekte
 
-**Argumente für therapeutische Klonierung:**
-- Heilung bisher unheilbarer Krankheiten
-- Patientenspezifische Therapie ohne Abstoßung
-- Forschungsfreiheit
-- Leidensminderung
-
-**Argumente gegen:**
-- Instrumentalisierung menschlichen Lebens
-- Embryo hat Schutzwürdigkeit
-- Dammbruch-Gefahr (Weg zu reproduktiver Klonierung)
-- Ausbeutung von Eizellspenderinnen
-
-**Reproduktive Klonierung von Menschen:**
-- Weitgehender internationaler Konsens: ethisch inakzeptabel
-- Gefahr genetischer Defekte
-- Psychologische Probleme für Klone
-- Identität und Individualität
-- Kommerzialisierung von Leben`,
-      lernziele: [],
-      sections: [],
-      merksätze: [
-        'SCNT (Somatischer Kerntransfer): Zellkern aus somatischer Zelle wird in entkernte Eizelle übertragen – Eizell-Zytoplasma reprogrammiert den Kern.',
-        'Dolly (1996) war der erste Klon aus einer adulten somatischen Zelle – Beweis für vollständige Reprogrammierbarkeit differenzierter Zellen.',
-        'Reproduktive Klonierung: Ziel ist ein lebender Organismus (geringe Erfolgsrate, ethisch problematisch); therapeutische Klonierung: Ziel sind embryonale Stammzellen für Therapie.',
-        'Wichtig: Klon ist nicht 100% identisch – mitochondriale DNA stammt von der Eizellspenderin, nicht vom Zellkern-Spender.',
-        'iPSCs (induzierte pluripotente Stammzellen) sind die ethisch weniger problematische Alternative: somatische Zellen werden durch 4 Faktoren zu Stammzellen umprogrammiert.'
+- **Reproduktives Klonen:** Bei Menschen in fast allen Ländern verboten — Instrumentalisierung von Menschen, Würdeverletzung, ungeklärte psychologische Folgen
+- **Therapeutisches Klonen:** Moralischer Status des Embryos umstritten — Wann beginnt Leben? Streng reguliert oder verboten in vielen Ländern
+- **iPS-Zellen:** Breiterer Konsens, da kein Embryo zerstört wird, aber Risiken (Tumorbildung durch c-Myc) müssen gelöst werden`,
+      lernziele: [
+        "Den Ablauf des somatischen Kerntransfers (SCNT) und das Experiment mit Schaf Dolly beschreiben",
+        "Reproduktives von therapeutischem Klonen abgrenzen und die Rolle von iPS-Zellen erläutern",
+        "Ethische Argumente für und gegen reproduktives und therapeutisches Klonen nennen",
       ],
+      sections: [
+        {
+          heading: "Schaf Dolly — Der Beweis der Reprogrammierbarkeit",
+          text: "Schaf Dolly (1996) war revolutionär, weil sie zeigte, dass der Kern einer ausdifferenzierten adulten Zelle vollständig reprogrammiert werden kann — alle Gene, die zur Embryonalentwicklung nötig sind, waren noch vorhanden, nur stillgelegt. Vor Dolly glaubte man, Differenzierung sei ein irreversibler Prozess. Der Erfolg war allerdings ineffizient: Von 277 Versuchen führte nur einer zu einem lebendigen Lamm. Spätere Experimente klonten Mäuse, Rinder, Katzen (CC, die erste geklonte Katze, 2001) und sogar Wölfe. Das reproduktive Klonen von Primaten gelang 2018 in China (Macaca fascicularis, Zhong Zhong und Hua Hua). Beim Menschen ist es global verboten.",
+          merksatz: "SCNT: Zellkern aus Spenderzelle + entkerne Eizelle → elektrischer Impuls → Embryo → Leihmutter. Dolly: erste Klon aus adulter Körperzelle (1996).",
+        },
+        {
+          heading: "Yamanaka-Faktoren und iPS-Zellen",
+          text: "Yamanaka identifizierte vier Transkriptionsfaktoren (Oct4, Sox2, Klf4, c-Myc), die — in Fibroblasten eingeschleust — diese zu pluripotenten Stammzellen reprogrammieren. Oct4 und Sox2 sind Kern-Pluripotenzfaktoren, die in embryonalen Stammzellen natürlich aktiv sind. c-Myc ist ein Proto-Onkogen, was das Tumorrisiko bei frühen iPS-Ansätzen erhöhte — neuere Protokolle verzichten auf c-Myc. iPS-Zellen sind eine Brücke zwischen Stammzellforschung und ethischen Prinzipien: Sie ermöglichen patientenspezifische Stammzelllinien ohne Embryonenzerstörung. Heute werden iPS-Zellen für Krankheitsmodelle (z. B. ALS, Parkinson) und als Ausgangsmaterial für potenzielle Zelltherapien eingesetzt.",
+          merksatz: "Yamanaka-Faktoren: Oct4, Sox2, Klf4, c-Myc → adulte Zelle → iPS-Zelle (pluripotent). Nobelpreis Medizin 2012 (mit Gurdon).",
+        },
+      ],
+      merksätze: [
+        "SCNT: enukleierte Eizelle + Spenderkern → Blastocyste → (reproduktiv) Leihmutter | (therapeutisch) ESC-Gewinnung.",
+        "Dolly (1996): erste Klon aus ausdifferenzierter adulter Zelle; verkürzte Telomere; starb mit 6 Jahren.",
+        "iPS-Zellen (Yamanaka 2006): Reprogrammierung adulter Zellen mit Oct4, Sox2, Klf4, c-Myc → pluripotent, ohne Embryo.",
+      ],
+      klinischerBezug: "Therapeutisches Klonen und iPS-Zellen bieten das Potenzial zur personalisierten Zelltherapie. Erste klinische Studien mit iPS-Zell-abgeleiteten Photorezeptoren zur Behandlung der Makuladegeneration laufen. Das Hauptrisiko bleibt die Tumorbildung durch unvollständige Differenzierung oder Aktivierung von Onkogenen.",
+      altfrage: {
+        question: "Worin besteht der fundamentale Unterschied zwischen reproduktivem und therapeutischem Klonen?",
+        answer: "Beim reproduktiven Klonen wird der durch SCNT erzeugte Embryo in eine Leihmutter implantiert und entwickelt sich zu einem vollständigen, genetisch identischen Organismus. Beim therapeutischen Klonen wird der Embryo ebenfalls durch SCNT erzeugt, aber nicht implantiert — stattdessen werden aus der inneren Zellmasse der Blastozyste embryonale Stammzellen (ESCs) gewonnen. Das Ziel ist nicht die Reproduktion eines Individuums, sondern die Gewinnung immunkompatiblen Gewebes zur Therapie. Beide Verfahren zerstören den Embryo, was ethisch umstritten ist.",
+      },
       selfTest: [
         {
-          question: 'Was ist der erste Schritt beim somatischen Kerntransfer (SCNT)?',
+          question: "Welche Technik wurde zur Erschaffung von Schaf Dolly verwendet?",
           options: [
-            'Aktivierung der Eizelle',
-            'Entnahme und Enukleation einer Eizelle',
-            'Reprogrammierung des Zellkerns',
-            'Transfer in die Leihmutter',
-            'Isolation embryonaler Stammzellen'
+            "In-vitro-Fertilisation (IVF) mit genetisch veränderter Samenzelle",
+            "Somatischer Kerntransfer (SCNT): Kern einer Euterdrüsenzelle in eine enukleierte Eizelle",
+            "Injektion von iPS-Zellen in eine Eizelle",
+            "Parthenogenese (ungeschlechtliche Entwicklung einer Eizelle)",
+            "CRISPR-Cas9-vermittelte Genomeditierung der Eizelle",
           ],
           correctIndex: 1,
-          explanation: 'Der erste Schritt beim SCNT ist die Entnahme einer unbefruchteten Eizelle und die anschließende Enukleation (Entfernung des Zellkerns). Die kernlose Eizelle behält ihr Zytoplasma mit allen reprogrammierenden Faktoren und Mitochondrien. Erst danach wird der Zellkern einer somatischen Zelle (vom zu klonierenden Individuum) in diese entkernte Eizelle transferiert.',
+          explanation: "Dolly wurde durch somatischen Kerntransfer (SCNT) erschaffen: Der Kern einer adulten Euterdrüsenzelle (Spenderschaf) wurde in eine entkernte (enukleierte) Eizelle eines anderen Schafs übertragen. Ein elektrischer Impuls stimulierte die rekonstruierte Eizelle zur Entwicklung. Der entstehende Embryo wurde in eine Leihmutter implantiert. Dolly war genetisch identisch mit dem Spenderschaf der Euterdrüsenzelle.",
           hints: [
-            'Man benötigt zunächst eine leere „Hülle" für den neuen Kern.',
-            'Die Eizelle muss vorbereitet werden, bevor ein Kern eingefügt werden kann.'
+            "Dolly stammte genetisch von einem adulten Körperzellkern — welches Verfahren überträgt Zellkerne?",
+            "Ian Wilmut am Roslin Institute, 1996 — welche Technik revolutionierte die Klonierungsforschung?",
           ],
-          tags: ['klonierung', 'scnt', 'kerntransfer'],
-          difficulty: 2
+          difficulty: 1,
+          tags: [],
         },
         {
-          question: 'Warum ist ein geklontes Tier NICHT 100% genetisch identisch mit dem Zellkern-Spender?',
+          question: "Was sind die Yamanaka-Faktoren und welche Bedeutung haben sie für die Stammzellforschung?",
           options: [
-            'Weil Mutationen bei der Reprogrammierung entstehen',
-            'Weil die mitochondriale DNA von der Eizellspenderin stammt',
-            'Weil epigenetische Marker anders sind',
-            'Weil die Leihmutter Gene überträgt',
-            'Weil der Transfer immer Fehler verursacht'
+            "Vier Wachstumsfaktoren, die embryonale Stammzellen zur Differenzierung stimulieren",
+            "Vier Transkriptionsfaktoren (Oct4, Sox2, Klf4, c-Myc), die adulte Zellen zu iPS-Zellen reprogrammieren",
+            "Enzyme, die bei der CRISPR-Cas9-Reparatur beteiligt sind",
+            "Histonmodifikationen, die Pluripotenz-Gene aktivieren",
+            "Vier Zytokine, die embryonale Stammzellen in vitro kultivierbar machen",
           ],
           correctIndex: 1,
-          explanation: 'Ein Klon erhält die nukleäre DNA (Chromosomen im Zellkern) vom Zellkern-Spender, aber die mitochondriale DNA stammt von der Eizellspenderin. Mitochondrien haben ihr eigenes kleines Genom (mtDNA, ~37 Gene). Daher ist ein Klon zwar für die überwältigende Mehrheit der Gene identisch, aber nicht für die mitochondrialen Gene. Dies ist besonders relevant für Erkrankungen, die mit mitochondrialer Dysfunktion zusammenhängen.',
+          explanation: "Shinya Yamanaka (Nobelpreis 2012) entdeckte, dass die Einschleusung von vier spezifischen Transkriptionsfaktoren — Oct4, Sox2, Klf4 und c-Myc — in adulte somatische Zellen (z. B. Fibroblasten) diese zu induzierten pluripotenten Stammzellen (iPS-Zellen) reprogrammiert. Diese Entdeckung revolutionierte die Stammzellforschung, da erstmals pluripotente Stammzellen ohne Embryonenzerstörung gewonnen werden konnten.",
           hints: [
-            'Bei der Enukleation wird nur der Zellkern entfernt, nicht alle DNA.',
-            'Überlege: Welche Organellen haben eigene DNA?'
+            "Yamanaka erhielt den Nobelpreis 2012 für die Reprogrammierung adulter Zellen — welche Moleküle erzwingen diese Reprogrammierung?",
+            "Vier spezifische Transkriptionsfaktoren sind der Schlüssel: Oct4 und Sox2 sind die wichtigsten.",
           ],
-          tags: ['klonierung', 'scnt', 'mitochondrien'],
-          difficulty: 2
+          difficulty: 2,
+          tags: [],
         },
         {
-          question: 'Was war die besondere Bedeutung des Schafs Dolly?',
+          question: "Ein Forscher möchte eine patientenspezifische Stammzelllinie für die Erforschung der Parkinson-Krankheit ohne ethische Kontroversen erstellen. Welche Methode eignet sich am besten?",
           options: [
-            'Erstes geklontes Säugetier überhaupt',
-            'Erstes aus einer adulten somatischen Zelle geklontes Säugetier',
-            'Erstes Tier mit verlängerter Lebenserwartung',
-            'Erstes gentechnisch verändertes Schaf',
-            'Erstes Tier mit menschlichen Genen'
-          ],
-          correctIndex: 1,
-          explanation: 'Dolly war das erste Säugetier, das aus einer adulten, differenzierten somatischen Zelle (Euterzelle) geklont wurde. Vorher waren bereits Tiere aus embryonalen Zellen geklont worden, aber Dolly bewies, dass selbst vollständig differenzierte Zellen durch das Eizell-Zytoplasma in einen pluripotenten Zustand zurückversetzt werden können. Dies war ein wissenschaftlicher Paradigmenwechsel: Entwicklung ist nicht irreversibel.',
-          hints: [
-            'Vorher glaubte man, differenzierte Zellen könnten nicht vollständig umprogrammiert werden.',
-            'Die Spenderzelle war eine gewöhnliche Körperzelle, keine Embryonalzelle.'
-          ],
-          tags: ['klonierung', 'dolly', 'scnt'],
-          difficulty: 2
-        },
-        {
-          question: 'Was ist der entscheidende Unterschied zwischen reproduktiver und therapeutischer Klonierung?',
-          options: [
-            'Die verwendete Technik (SCNT vs. iPSC)',
-            'Das Ziel: lebender Organismus vs. Gewinnung von Stammzellen',
-            'Die Erfolgsrate',
-            'Die Kosten',
-            'Die Dauer des Prozesses'
-          ],
-          correctIndex: 1,
-          explanation: 'Der entscheidende Unterschied liegt im Ziel: Reproduktive Klonierung zielt auf die Geburt eines lebenden, genetisch identischen Organismus ab (Embryo wird in Leihmutter implantiert). Therapeutische Klonierung zielt auf die Gewinnung embryonaler Stammzellen für medizinische Zwecke ab – der Embryo wird nicht implantiert, sondern im Blastozysten-Stadium werden Stammzellen isoliert. Beide nutzen SCNT, aber mit unterschiedlicher Zielsetzung.',
-          hints: [
-            'Reproduktiv = Fortpflanzung/Erzeugung; therapeutisch = Heilung/Therapie.',
-            'Wird der Embryo übertragen oder werden Zellen entnommen?'
-          ],
-          tags: ['klonierung', 'reproduktiv', 'therapeutisch'],
-          difficulty: 3
-        },
-        {
-          question: 'Was sind induzierte pluripotente Stammzellen (iPSCs)?',
-          options: [
-            'Stammzellen aus geklonten Embryonen',
-            'Somatische Zellen, die durch 4 Transkriptionsfaktoren zu Stammzellen umprogrammiert wurden',
-            'Embryonale Stammzellen aus IVF-Embryonen',
-            'Adulte Stammzellen aus Knochenmark',
-            'Krebszellen mit Stammzell-Eigenschaften'
-          ],
-          correctIndex: 1,
-          explanation: 'iPSCs sind somatische Zellen (z.B. Hautzellen), die durch Einführung von 4 Transkriptionsfaktoren (Oct4, Sox2, Klf4, c-Myc – oft „Yamanaka-Faktoren" genannt) in einen pluripotenten Zustand umprogrammiert wurden. Sie ähneln embryonalen Stammzellen funktionell, benötigen aber keine Eizellen oder Embryonen. Dies macht sie ethisch weniger problematisch als therapeutische Klonierung und wurde 2012 mit dem Nobelpreis ausgezeichnet.',
-          hints: [
-            'Der Begriff „induziert" deutet auf eine künstliche Herbeiführung hin.',
-            'Diese Methode wurde als ethische Alternative zur therapeutischen Klonierung entwickelt.'
-          ],
-          tags: ['klonierung', 'ipsc', 'stammzellen'],
-          difficulty: 3
-        },
-        {
-          question: 'Welche Aussage zur Effizienz des reproduktiven Klonierens ist korrekt?',
-          options: [
-            'Die Erfolgsrate liegt bei über 90%',
-            'Die Erfolgsrate liegt bei etwa 50%',
-            'Die Erfolgsrate ist sehr gering (oft <5%), viele Versuche enden mit Fehlbildungen',
-            'Jeder Versuch ist erfolgreich',
-            'Die Effizienz ist identisch mit natürlicher Fortpflanzung'
+            "Therapeutisches Klonen mit SCNT aus den Hautzellen des Patienten",
+            "Reproduktives Klonen des Patienten",
+            "Reprogrammierung der Hautfibroblasten des Patienten zu iPS-Zellen",
+            "Isolierung embryonaler Stammzellen aus einer gespendeten Blastozyste",
+            "Gewinnung von Stammzellen aus dem Knochenmark des Patienten",
           ],
           correctIndex: 2,
-          explanation: 'Das reproduktive Klonieren ist sehr ineffizient. Bei Dolly wurden 277 Eizellen verwendet, 29 Embryonen transferiert, aber nur 1 lebendes Lamm geboren – eine Erfolgsrate von deutlich unter 1%. Auch heute liegt die Erfolgsrate meist unter 5%. Viele Embryonen entwickeln sich nicht, oder es kommt zu Fehlbildungen. Überlebende Klone zeigen oft Gesundheitsprobleme wie vorzeitige Alterung, Organfehlfunktionen oder Immundefekte.',
+          explanation: "iPS-Zellen aus den patienteneigenen Zellen (z. B. Hautfibroblasten) umgehen beide ethischen Probleme: Es werden keine Embryonen benötigt (wie bei ESCs oder therapeutischem Klonen), und die Zellen sind genetisch identisch mit dem Patienten. Als Parkinson-Modell können die iPS-Zellen zu dopaminergen Neuronen differenziert werden, die die patientenspezifischen Mutationen tragen.",
           hints: [
-            'Das Klonen von Dolly benötigte hunderte Versuche.',
-            'Die Reprogrammierung ist ein hochkomplexer und fehleranfälliger Prozess.'
+            "Welche Stammzellmethode benötigt keinen Embryo und ist trotzdem patientenspezifisch?",
+            "iPS = induzierte pluripotente Stammzellen — 'patientenspezifisch' und 'ohne Embryo' sind Schlüsselhinweise.",
           ],
-          tags: ['klonierung', 'effizienz', 'erfolgsrate'],
-          difficulty: 1
-        }
-      ]
-    }
-  ]
+          difficulty: 2,
+          tags: [],
+        },
+        {
+          question: "Warum ist reproduktives Klonen von Menschen in fast allen Ländern verboten?",
+          options: [
+            "Weil es technisch unmöglich ist",
+            "Weil geklonte Menschen keine vollständige Immunabwehr hätten",
+            "Wegen ethischer Bedenken: Würdeverletzung, Instrumentalisierung, ungeklärte psychologische Folgen und hohe technische Fehlerrate",
+            "Weil geklonte Individuen rechtlich als Eigentum der Wissenschaftler gelten würden",
+            "Weil geklonte Individuen aufgrund kürzerer Telomere keine normalen Lebensspannen erreichen",
+          ],
+          correctIndex: 2,
+          explanation: "Das Verbot reproduktiven Klonens beim Menschen basiert auf mehreren ethischen Prinzipien: (1) Menschenwürde — Menschen dürfen nicht als Mittel zum Zweck instrumentalisiert werden; (2) Autonomie — ein Klon hätte nicht die Freiheit, sein Leben ohne Vergleich zum Original zu gestalten; (3) technische Sicherheitsbedenken — die hohe Fehlrate beim Tierklonen (Dolly: 1 von 277 Versuchen) wäre beim Menschen inakzeptabel; (4) soziale und psychologische Folgen sind unabsehbar.",
+          hints: [
+            "Denken Sie an ethische Grundprinzipien: Würde, Autonomie, Nichtschaden.",
+            "Dolly brauchte 277 Versuche — was würde das beim Menschen bedeuten?",
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+        {
+          question: "Warum zeigte Schaf Dolly Anzeichen vorzeitiger Alterung?",
+          options: [
+            "Weil das Leihmutterschaf genetisch nicht kompatibel war",
+            "Weil die DNA-Polymerase Fehler bei der Replikation machte",
+            "Weil Dollys Zellkern von einem älteren Tier stammte und verkürzte Telomere aufwies",
+            "Weil iPS-Zellen instabile Genome haben",
+            "Weil Klone keine funktionierenden Mitochondrien besitzen",
+          ],
+          correctIndex: 2,
+          explanation: "Dollys Zellkern stammte aus der Euterdrüsenzelle eines 6-jährigen Schafs. Telomere — die schützenden Endkappen der Chromosomen — verkürzen sich mit jeder Zellteilung. Da Dollys Zellkern bereits 6 Jahre alt war, hatte er entsprechend kürzere Telomere als neugeborene Schafe. Dolly zeigte daher früh Arthritis und Lungenerkrankungen und starb mit 6 Jahren, halb so alt wie der Altersdurchschnitt bei Schafen.",
+          hints: [
+            "Telomere schützen Chromosomenenden und verkürzen sich mit dem Alter der Zelle.",
+            "Von welchem Tier stammte Dollys Zellkern — wie alt war diese Spenderzelle?",
+          ],
+          difficulty: 3,
+          tags: [],
+        },
+      ],
+    },
+  ],
 };

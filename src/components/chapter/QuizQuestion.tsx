@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, XCircle, RotateCcw, Lightbulb, BookOpen } from "lucide-react";
-import { Button } from "../ui/button";
 import type { SelfTestQuestion } from "../../data/bmsKapitel/types";
 import { playCorrectAnswerSound } from "../../lib/sounds";
 import { useQuizSessionStore } from "../../store/quizSessionStore";
@@ -16,48 +15,38 @@ interface QuizQuestionProps {
 }
 
 /**
- * Reusable interactive quiz component with Socratic Feedback:
- * Bei falscher Antwort zuerst „Gib mir einen Tipp“ (Hinweise), erst danach „Lösung anzeigen“.
+ * Interaktives Quiz: Immediate Feedback, kein Prüfen-Button, Glassmorphism-Feedback, Smart Reveal, Input Lock.
  */
 export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQuestionProps) {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [isChecked, setIsChecked] = useState(false);
+  console.log("BMS Quiz-Logik geladen");
+
+  const [selectedOption, setSelectedOption] = useState<number | null>(null);
+  const [isAnswered, setIsAnswered] = useState(false);
   const [hintIndex, setHintIndex] = useState(0);
   const [solutionRevealed, setSolutionRevealed] = useState(false);
   const [isSecondAttempt, setIsSecondAttempt] = useState(false);
 
   const correctIndex = question.correctIndex !== undefined ? question.correctIndex : 0;
   const explanation = question.explanation || "Erklärung folgt";
+  const merksatz = (question as { merksatz?: string }).merksatz;
   const options = question.options || [];
   const hints = question.hints && question.hints.length > 0 ? question.hints : [FALLBACK_HINT];
 
-  const handleSelectAnswer = (optionIndex: number) => {
-    if (isChecked) return;
-    setSelectedIndex(optionIndex);
-  };
-
   const recordQuizAnswer = useQuizSessionStore((s) => s.recordQuizAnswer);
 
-  const handleCheckAnswer = () => {
-    if (selectedIndex === null) return;
-    const isCorrect = selectedIndex === correctIndex;
-    setIsChecked(true);
+  const handleSelectAnswer = (index: number) => {
+    if (isAnswered) return;
+    setSelectedOption(index);
+    setIsAnswered(true);
+    const isCorrect = index === correctIndex;
     if (isCorrect) playCorrectAnswerSound();
     recordQuizAnswer(isCorrect);
     onAnswerChange?.(isCorrect, isSecondAttempt);
   };
 
-  const handleReset = () => {
-    setSelectedIndex(null);
-    setIsChecked(false);
-    setHintIndex(0);
-    setSolutionRevealed(false);
-    setIsSecondAttempt(false);
-  };
-
   const handleSecondTry = () => {
-    setIsChecked(false);
-    setSelectedIndex(null);
+    setIsAnswered(false);
+    setSelectedOption(null);
     setIsSecondAttempt(true);
   };
 
@@ -66,14 +55,14 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
   };
 
   const hasMoreHints = hintIndex < hints.length;
-  const isCorrect = isChecked && selectedIndex === correctIndex;
-  const isWrong = isChecked && selectedIndex !== null && selectedIndex !== correctIndex;
-  const hasAnswer = selectedIndex !== null;
+  const isCorrect = isAnswered && selectedOption === correctIndex;
+  const isWrong = isAnswered && selectedOption !== null && selectedOption !== correctIndex;
 
   return (
     <motion.div
-      className="bg-white dark:bg-slate-900/50 dark:backdrop-blur-md rounded-xl border border-slate-200 dark:border-white/10 p-6 shadow-sm dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] hover:shadow-md transition-shadow"
+      className="bg-white/80 dark:bg-slate-900/60 backdrop-blur-md rounded-xl border border-slate-200 dark:border-white/10 p-6 shadow-sm dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] hover:shadow-md transition-shadow"
       animate={isWrong ? { x: [0, -8, 8, -8, 8, 0] } : isCorrect ? { scale: [1, 1.02, 1] } : {}}
+      data-answered={isAnswered}
       transition={{ duration: isWrong ? 0.4 : 0.3, ease: "easeOut" }}
     >
       {/* Question */}
@@ -87,40 +76,39 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
           </p>
         </div>
 
-        {/* Options */}
-        <div className="ml-11 space-y-2">
+        {/* Options: Sofort-Check (Grün/Rot), Lock-In nach Klick */}
+        <div className="ml-0 sm:ml-11 flex flex-col gap-2">
           {options.map((option, oi) => {
-            const isSelected = selectedIndex === oi;
-            const isCorrectOption = isChecked && oi === correctIndex;
-            const isWrongSelected = isChecked && isSelected && oi !== correctIndex;
+            const isChosen = selectedOption === oi;
+            const isCorrectOption = isAnswered && oi === correctIndex;
+            const isWrongChosen = isAnswered && isChosen && oi !== correctIndex;
 
             return (
               <motion.button
                 key={oi}
                 type="button"
                 onClick={() => handleSelectAnswer(oi)}
-                disabled={isChecked && !isSelected}
-                className={`w-full text-left px-4 py-3 rounded-lg border transition-all focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 dark:focus:border-primary-400 ${
+                disabled={isAnswered}
+                className={`w-full min-w-0 text-left px-4 py-3 rounded-xl border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500/50
+                  ${
                   isCorrectOption
-                    ? "border-green-500 bg-green-50 dark:bg-green-900/30 text-green-900 dark:text-green-100 font-medium shadow-sm"
-                    : isWrongSelected
-                    ? "border-red-500 bg-red-50 dark:bg-red-900/30 text-red-900 dark:text-red-100"
-                    : isSelected && !isChecked
-                    ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-900 dark:text-emerald-200 font-medium"
-                    : isChecked
-                    ? "border-slate-200 dark:border-white/10 bg-gray-50 dark:bg-gray-800/50 text-gray-500 dark:text-gray-500 cursor-not-allowed"
-                    : "border-slate-200 dark:border-white/10 hover:border-emerald-300 dark:hover:border-emerald-700 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-700 dark:text-slate-100 cursor-pointer"
+                    ? "bg-green-500/20 border-green-500 text-green-900 dark:text-green-100 font-medium shadow-[0_0_12px_rgba(34,197,94,0.25)]"
+                    : isWrongChosen
+                    ? "bg-red-500/20 border-red-500 text-red-900 dark:text-red-100 shadow-[0_0_12px_rgba(239,68,68,0.2)]"
+                    : isAnswered
+                    ? "border-slate-200 dark:border-white/10 bg-slate-50/80 dark:bg-slate-800/50 text-gray-500 cursor-not-allowed"
+                    : "bg-white/70 dark:bg-slate-800/50 border-white/30 dark:border-white/10 hover:border-emerald-400 text-gray-700 dark:text-slate-100 cursor-pointer"
                 }`}
               >
-                <span className="font-bold mr-3 text-base">
+                <span className="font-bold mr-3 text-base shrink-0">
                   {String.fromCharCode(65 + oi)})
                 </span>
-                <span className="text-base">{option}</span>
+                <span className="text-base break-words">{option}</span>
                 {isCorrectOption && (
-                  <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400 float-right mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400 float-right mt-0.5 shrink-0" />
                 )}
-                {isWrongSelected && (
-                  <XCircle className="w-5 h-5 text-red-600 dark:text-red-400 float-right mt-0.5" />
+                {isWrongChosen && (
+                  <XCircle className="w-5 h-5 text-red-600 dark:text-red-400 float-right mt-0.5 shrink-0" />
                 )}
               </motion.button>
             );
@@ -128,26 +116,16 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
         </div>
       </div>
 
-      {/* Check Button */}
-      {!isChecked && (
-        <div className="ml-11">
-          <Button
-            onClick={handleCheckAnswer}
-            disabled={!hasAnswer}
-            className="bg-emerald-600 hover:bg-emerald-700 text-white"
-          >
-            Antwort prüfen
-          </Button>
-        </div>
-      )}
-
-      {/* Feedback: bei richtig sofort Erklärung, bei falsch zuerst Hinweise (Socratic Feedback) */}
-      {isChecked && (
-        <div
-          className={`ml-11 mt-4 p-4 rounded-lg border-l-4 ${
+      {/* Smart Reveal: Erklärung und Merksatz erst nach Beantwortung, weiche Transition */}
+      {isAnswered && (
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className={`ml-0 sm:ml-11 mt-4 p-4 rounded-lg border-l-4 backdrop-blur-sm ${
             isCorrect
-              ? "bg-green-50 dark:bg-green-900/20 border-green-500"
-              : "bg-red-50 dark:bg-red-900/20 border-red-500"
+              ? "bg-green-50/90 dark:bg-green-900/20 border-green-500"
+              : "bg-red-50/90 dark:bg-red-900/20 border-red-500"
           }`}
         >
           <div className="flex items-start gap-3">
@@ -166,11 +144,19 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
               >
                 {isCorrect ? "✅ Richtig!" : "❌ Falsch"}
               </p>
-              {isCorrect ? (
-                <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                  {explanation}
-                </p>
-              ) : (
+              {isCorrect && (
+                <>
+                  <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                    {explanation}
+                  </p>
+                  {merksatz && (
+                    <p className="text-sm mt-2 pt-2 border-t border-green-200 dark:border-green-800 text-green-800 dark:text-green-200 italic">
+                      {merksatz}
+                    </p>
+                  )}
+                </>
+              )}
+              {isWrong && (
                 <>
                   {hintIndex > 0 && (
                     <div className="space-y-2 mb-3">
@@ -189,9 +175,16 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                     </div>
                   )}
                   {solutionRevealed ? (
-                    <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                      {explanation}
-                    </p>
+                    <>
+                      <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                        {explanation}
+                      </p>
+                      {merksatz && (
+                        <p className="text-sm mt-2 pt-2 border-t border-red-200 dark:border-red-800 text-red-800 dark:text-red-200 italic">
+                          {merksatz}
+                        </p>
+                      )}
+                    </>
                   ) : (
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                       Versuche es mit einem Tipp, bevor du die Lösung siehst – so prägt sich der Stoff besser ein.
@@ -241,16 +234,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
               )}
             </div>
           </div>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleReset}
-            className="mt-3 text-sm"
-          >
-            <RotateCcw className="w-4 h-4 mr-1" />
-            Antwort ändern
-          </Button>
-        </div>
+        </motion.div>
       )}
     </motion.div>
   );

@@ -328,7 +328,7 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
   const canGoPrev = !isFirst || !!onPrevChapter;
 
   return (
-    <div className="max-w-3xl mx-auto space-y-6 pb-12">
+    <div className="max-w-3xl mx-auto space-y-6 pb-12 relative">
       <StickyBackButton onClick={onBack} />
 
       {/* Top bar */}
@@ -424,9 +424,9 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
         </Card>
       )}
 
-      {/* Main content: image (lazy) + text + optional quiz — Error Boundary bei fehlendem/korruptem Inhalt */}
-      <Card>
-        <CardContent className={`${kapitel?.id === 'bio-kap1' ? 'p-8' : 'p-6'}`}>
+      {/* Main content: im Fluss (relative), kein Overlap mit Header */}
+      <Card className="relative">
+        <CardContent className={`relative ${kapitel?.id === 'bio-kap1' ? 'p-8' : 'p-6'}`}>
           <ContentErrorBoundary context={`${kapitel?.id ?? "chapter"}-${uk?.id ?? "uk"}`}>
             <ContentVisualizer
               uk={uk}
@@ -439,9 +439,9 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
         </CardContent>
       </Card>
 
-      {/* Merksätze - Enhanced for "Die Zelle" */}
+      {/* Merksätze - im Content-Fluss (relative), keine Überlagerung */}
       {(uk.merksätze && Array.isArray(uk.merksätze) && uk.merksätze.length > 0) && (
-        <div className={kapitel.id === 'bio-kap1' ? 'space-y-4 my-8' : 'space-y-4'}>
+        <div className={`relative ${kapitel.id === 'bio-kap1' ? 'space-y-4 my-8' : 'space-y-4'}`}>
           {kapitel.id === 'bio-kap1' && (
             <div className="mb-2 pb-2 border-b-2 border-gray-300 dark:border-gray-600">
               <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
@@ -453,17 +453,15 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
             </div>
           )}
           {uk.merksätze.map((merksatz, i) => (
-            <div key={i}>
+            <div key={i} className="relative">
               {kapitel.id === 'bio-kap1' ? (
-                // Enhanced MerksatzBox for "Die Zelle"
-                <div className="bg-amber-50 dark:bg-amber-900/30 border-l-4 border-amber-500 shadow-md p-5 rounded-r-lg">
+                <div className="relative bg-amber-50 dark:bg-amber-900/30 border-l-4 border-amber-500 shadow-md p-5 rounded-r-lg">
                   <p className="font-bold text-base text-amber-800 dark:text-amber-300 flex items-center gap-2 mb-2">
                     <span className="text-xl">💡</span> Merke
                   </p>
                   <p className="text-base text-amber-900 dark:text-amber-200 leading-relaxed" dangerouslySetInnerHTML={{ __html: merksatz.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold">$1</strong>') }} />
                 </div>
               ) : (
-                // Standard MerksatzBox for other chapters
                 <MerksatzBox text={merksatz} type="merke" />
               )}
             </div>
