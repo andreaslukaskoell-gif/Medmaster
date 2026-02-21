@@ -4,12 +4,17 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
-import { generateMockPercentile } from "@/lib/utils";
 import { Leaderboard } from "@/components/community/Leaderboard";
 
+function getScoreBewertung(score: number): string {
+  if (score >= 80) return "Stark!";
+  if (score >= 60) return "Gut unterwegs";
+  return "Noch Luft nach oben";
+}
+
 export default function Community() {
-  const { quizResults, xp, streak } = useStore();
-  const [activeTab, setActiveTab] = useState<"percentile" | "leaderboard">("percentile");
+  const { quizResults } = useStore();
+  const [activeTab, setActiveTab] = useState<"vergleich" | "leaderboard">("vergleich");
 
   const totalQuizzes = quizResults.length;
   const avgScore =
@@ -19,8 +24,6 @@ export default function Community() {
         )
       : 0;
 
-  const percentile = generateMockPercentile(avgScore);
-
   const bySubject: Record<string, { correct: number; total: number }> = {};
   quizResults.forEach((r) => {
     const key = r.subject || r.type;
@@ -29,14 +32,13 @@ export default function Community() {
     bySubject[key].total += r.total;
   });
 
-  const subjectPercentiles = Object.entries(bySubject).map(([name, data]) => ({
+  const subjectScores = Object.entries(bySubject).map(([name, data]) => ({
     name,
     score: Math.round((data.correct / data.total) * 100),
-    percentile: generateMockPercentile(Math.round((data.correct / data.total) * 100)),
   }));
 
   const tabs = [
-    { id: "percentile" as const, label: "Vergleich" },
+    { id: "vergleich" as const, label: "Dein Stand" },
     { id: "leaderboard" as const, label: "Rangliste" },
   ];
 
@@ -46,19 +48,10 @@ export default function Community() {
 
       <div>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Community</h1>
-        <p className="text-muted mt-1">Vergleiche dich mit anderen MedAT-Lernenden.</p>
+        <p className="text-muted mt-1">Dein Lernfortschritt auf einen Blick.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Card>
-          <CardContent className="p-4 text-center">
-            <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center mx-auto mb-2">
-              <Trophy className="w-6 h-6 text-primary-700 dark:text-primary-400" />
-            </div>
-            <p className="text-3xl font-bold text-primary-700 dark:text-primary-400">Top {100 - percentile}%</p>
-            <p className="text-xs text-muted">Dein Perzentil</p>
-          </CardContent>
-        </Card>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card>
           <CardContent className="p-4 text-center">
             <div className="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-xl flex items-center justify-center mx-auto mb-2">
@@ -70,11 +63,11 @@ export default function Community() {
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
-            <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center mx-auto mb-2">
-              <Users className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+            <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center mx-auto mb-2">
+              <Trophy className="w-6 h-6 text-primary-700 dark:text-primary-400" />
             </div>
-            <p className="text-3xl font-bold text-orange-700 dark:text-orange-400">81</p>
-            <p className="text-xs text-muted">Aktive Lernende</p>
+            <p className="text-3xl font-bold text-primary-700 dark:text-primary-400">{totalQuizzes}</p>
+            <p className="text-xs text-muted">Abgeschlossene Quizze</p>
           </CardContent>
         </Card>
       </div>
@@ -95,67 +88,61 @@ export default function Community() {
         ))}
       </div>
 
-      {activeTab === "percentile" && (
+      {activeTab === "vergleich" && (
         <div className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Gesamtvergleich</CardTitle>
+              <CardTitle>Dein Gesamtstand</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-4">
-                <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-gray-700 dark:text-gray-300">Dein Durchschnitt: {avgScore}%</span>
-                    <span className="text-sm font-bold text-primary-700">Perzentil: {percentile}</span>
-                  </div>
-                  <div className="relative h-8 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div
-                      className="absolute inset-y-0 left-0 bg-linear-to-r from-red-400 via-yellow-400 to-green-400 rounded-full"
-                      style={{ width: "100%" }}
-                    />
-                    <div
-                      className="absolute top-0 h-8 w-1 bg-primary-800 dark:bg-white rounded-full z-10"
-                      style={{ left: `${percentile}%` }}
-                    />
-                    <div
-                      className="absolute -top-6 text-xs font-bold text-primary-800 dark:text-primary-300"
-                      style={{ left: `${percentile}%`, transform: "translateX(-50%)" }}
-                    >
-                      Du
-                    </div>
-                  </div>
-                  <div className="flex justify-between text-[10px] text-muted mt-1">
-                    <span>0%</span>
-                    <span>Community-Durchschnitt (~65%)</span>
-                    <span>100%</span>
-                  </div>
-                </div>
-
+              {totalQuizzes < 5 ? (
                 <p className="text-sm text-muted">
-                  Du bist besser als <span className="font-bold text-primary-700">{percentile}%</span> aller
-                  MedAT-Lernenden auf MedMaster. {percentile >= 80 ? "Hervorragend!" : percentile >= 50 ? "Guter Fortschritt!" : "Weiter üben!"}
+                  Löse mindestens 5 Quizze um deinen Vergleichswert zu sehen.
+                  <span className="block mt-1 text-primary-600 dark:text-primary-400 font-medium">
+                    Bisher: {totalQuizzes}/5 Quizze abgeschlossen.
+                  </span>
                 </p>
-              </div>
+              ) : (
+                <div className="space-y-3">
+                  <p className="text-sm text-gray-700 dark:text-gray-300">
+                    Dein Durchschnitt:{" "}
+                    <span className="font-bold text-gray-900 dark:text-white">{avgScore}%</span>
+                    {" — "}
+                    <span className="font-semibold text-primary-700 dark:text-primary-400">
+                      {getScoreBewertung(avgScore)}
+                    </span>
+                  </p>
+                  <div className="h-2.5 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                    <div
+                      className="h-full rounded-full bg-primary-500 transition-all duration-700"
+                      style={{ width: `${avgScore}%` }}
+                    />
+                  </div>
+                  <p className="text-xs text-muted">
+                    Basiert auf {totalQuizzes} abgeschlossenen Quizzen.
+                  </p>
+                </div>
+              )}
             </CardContent>
           </Card>
 
-          {subjectPercentiles.length > 0 && (
+          {subjectScores.length > 0 && (
             <Card>
               <CardHeader>
-                <CardTitle>Vergleich nach Fach</CardTitle>
+                <CardTitle>Nach Fach</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  {subjectPercentiles.map((sp) => (
+                  {subjectScores.map((sp) => (
                     <div key={sp.name} className="flex items-center gap-3">
                       <span className="text-sm font-medium w-28 capitalize text-gray-700 dark:text-gray-300">
                         {sp.name}
                       </span>
                       <div className="flex-1">
-                        <Progress value={sp.percentile} />
+                        <Progress value={sp.score} />
                       </div>
-                      <span className="text-xs font-bold text-primary-700 w-20 text-right">
-                        Top {100 - sp.percentile}%
+                      <span className="text-xs font-bold text-primary-700 dark:text-primary-400 w-12 text-right">
+                        {sp.score}%
                       </span>
                     </div>
                   ))}

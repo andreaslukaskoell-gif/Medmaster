@@ -11,7 +11,6 @@ import {
   type LeaderboardEntry,
   type LeaderboardCategory,
   type FachFilter,
-  generateMockLeaderboardEntries,
   rankByGlobal,
   rankByWeekly,
   rankByFach,
@@ -43,6 +42,7 @@ export function Leaderboard() {
   const [category, setCategory] = useState<LeaderboardCategory>("global");
   const [fach, setFach] = useState<FachFilter>("biologie");
   const [dbEntries, setDbEntries] = useState<LeaderboardEntry[]>([]);
+  const [dbLoaded, setDbLoaded] = useState(false);
 
   // Sync current user's stats to Supabase once on mount
   useEffect(() => {
@@ -67,9 +67,10 @@ export function Leaderboard() {
   }, [profile?.id]);
 
   useEffect(() => {
-    if (!supabase) return;
+    if (!supabase) { setDbLoaded(true); return; }
     fetchLeaderboardFromDB(supabase, category, category === "fach" ? fach : undefined).then((rows) => {
-      if (rows.length > 0) setDbEntries(rows);
+      setDbEntries(rows);
+      setDbLoaded(true);
     });
   }, [category, fach]);
 
@@ -111,14 +112,13 @@ export function Leaderboard() {
   }, [profile, xp, earnedBadges, xpThisWeek, getFachReadiness]);
 
   const rankedList = useMemo(() => {
-    const base: LeaderboardEntry[] = dbEntries.length > 0
-      ? dbEntries.map((e) => ({ ...e, isCurrentUser: e.id === profile?.id }))
-      : generateMockLeaderboardEntries(MOCK_SIZE).map((e) => ({ ...e, isCurrentUser: false })) as LeaderboardEntry[];
+    if (!dbLoaded) return [];
+    const base: LeaderboardEntry[] = dbEntries.map((e) => ({ ...e, isCurrentUser: e.id === profile?.id }));
     const all = [...base.filter((e) => !e.isCurrentUser), currentUserEntry];
     if (category === "global") return rankByGlobal(all);
     if (category === "weekly") return rankByWeekly(all);
     return rankByFach(all, fach);
-  }, [category, fach, currentUserEntry, dbEntries, profile?.id]);
+  }, [category, fach, currentUserEntry, dbEntries, dbLoaded, profile?.id]);
 
   const topEntries = rankedList.slice(0, TOP_LIST_SIZE);
   const currentRank = rankedList.find((e) => e.isCurrentUser)?.rank ?? 0;
@@ -136,8 +136,35 @@ export function Leaderboard() {
   const getValue = (e: LeaderboardEntry) =>
     category === "global" ? e.xp : category === "weekly" ? e.xpThisWeek : (e.subjectScores[fach] ?? 0);
 
-  if (!mounted) {
+  if (!mounted || !dbLoaded) {
     return <LeaderboardSkeleton />;
+  }
+
+  // Empty state: only current user in list (no real peers yet)
+  if (dbEntries.length === 0) {
+    return (
+      <div className="space-y-4">
+        <div className="rounded-2xl border border-white/20 bg-[#0f172a]/80 backdrop-blur-xl shadow-xl p-8 text-center">
+          <div className="text-4xl mb-4">🏆</div>
+          <h3 className="text-lg font-semibold text-white mb-2">Rangliste</h3>
+          <p className="text-slate-400 text-sm mb-4">
+            Die Rangliste füllt sich wenn mehr Lernende beitreten.
+          </p>
+          <p className="text-primary-400 font-semibold text-sm mb-6">Du kannst der Erste sein! 🥇</p>
+          <button
+            type="button"
+            onClick={() => {
+              const text = "Bereite dich kostenlos auf den MedAT vor: medmaster.app 🧠";
+              if (navigator.share) { navigator.share({ text }).catch(() => {}); }
+              else { navigator.clipboard.writeText(text).catch(() => {}); }
+            }}
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-sm font-medium transition-colors cursor-pointer"
+          >
+            Freunde einladen
+          </button>
+        </div>
+      </div>
+    );
   }
 
   return (
