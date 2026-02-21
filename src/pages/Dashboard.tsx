@@ -1,7 +1,7 @@
 import { useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Award, Flame, BookOpen, Sparkles, ArrowRight } from "lucide-react";
+import { Award, Flame, BookOpen, Sparkles, ArrowRight, Target, CheckCircle2, Clock } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -14,6 +14,7 @@ import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { useDashboardProfile } from "@/hooks/useDashboardProfile";
 import { cn, daysUntilMedAT } from "@/lib/utils";
 import { getDailyGoalFromPlan, getConsecutiveDaysGoalMissed } from "@/lib/dailyGoal";
+import { getTodaysResult } from "@/lib/dailyChallenge";
 import { getLevelFromXP, getLevelProgressPercent } from "@/lib/progression";
 import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { BADGE_DEFINITIONS } from "@/data/badges";
@@ -110,6 +111,7 @@ export default function Dashboard() {
   }, [badgeState]);
 
   const questProgress = dailyGoalState.hasPlan ? dailyGoalState.primaryProgressPct : 0;
+  const dailyResult = getTodaysResult();
 
   const glassClass =
     "rounded-2xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-white/10 dark:border-white/10 shadow-lg shadow-slate-200/20 dark:shadow-black/20 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300";
@@ -197,6 +199,57 @@ export default function Dashboard() {
                 )}
               </CardContent>
             </div>
+          </motion.section>
+
+          {/* Daily Challenge Widget */}
+          <motion.section
+            variants={tileMotion}
+            className="sm:col-span-2 lg:col-span-4"
+            aria-label="BMS des Tages"
+          >
+            {dailyResult ? (
+              <Link to="/daily">
+                <div className={cn(glassClass, "relative overflow-hidden border-l-4 border-emerald-500")}>
+                  <div className="absolute inset-0 bg-linear-to-r from-emerald-500/5 to-transparent pointer-events-none" />
+                  <CardContent className="relative p-4 sm:p-5 flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-emerald-500/15 flex items-center justify-center shrink-0">
+                        <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-slate-900 dark:text-white">✅ BMS des Tages gelöst!</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1 mt-0.5">
+                          <Clock className="w-3 h-3" /> Nächste Frage morgen
+                        </p>
+                      </div>
+                    </div>
+                    <span className="shrink-0 text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-900/40 px-2.5 py-1 rounded-full">
+                      +{dailyResult.xpEarned} XP
+                    </span>
+                  </CardContent>
+                </div>
+              </Link>
+            ) : (
+              <Link to="/daily">
+                <div className={cn(glassClass, "relative overflow-hidden border-l-4 border-amber-400 hover:border-amber-500 cursor-pointer")}>
+                  <div className="absolute inset-0 bg-linear-to-r from-amber-500/8 to-transparent pointer-events-none" />
+                  <CardContent className="relative p-4 sm:p-5 flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-amber-500/15 flex items-center justify-center shrink-0">
+                        <Target className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-slate-900 dark:text-white">🎯 BMS des Tages wartet!</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Täglich eine Frage — bis zu 100 XP</p>
+                      </div>
+                    </div>
+                    <span className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-amber-700 dark:text-amber-300 bg-amber-100 dark:bg-amber-900/40 px-3 py-1.5 rounded-full">
+                      Jetzt lösen <ArrowRight className="w-3 h-3" />
+                    </span>
+                  </CardContent>
+                </div>
+              </Link>
+            )}
           </motion.section>
 
           {/* Kachel 1: XP / Level + Progress */}

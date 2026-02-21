@@ -37,6 +37,8 @@ const PerformanceOverview = lazy(() => import("@/pages/PerformanceOverview"));
 const BMSQuiz = lazy(() => import("@/pages/BMSQuiz"));
 const SmartRecoveryPage = lazy(() => import("@/pages/SmartRecoveryPage"));
 const FragenTrainer = lazy(() => import("@/pages/FragenTrainer"));
+const DailyChallenge = lazy(() => import("@/pages/DailyChallenge"));
+const BMSWrapped = lazy(() => import("@/pages/BMSWrapped"));
 
 function LoadingSpinner() {
   return (
@@ -109,6 +111,8 @@ export default function App() {
             <Route path="/prognose" element={<Prognose />} />
             <Route path="/performance" element={<PerformanceOverview />} />
             <Route path="/fragen-trainer" element={<FragenTrainer />} />
+            <Route path="/daily" element={<DailyChallenge />} />
+            <Route path="/wrapped" element={<BMSWrapped />} />
           </Route>
         </Routes>
       </Suspense>

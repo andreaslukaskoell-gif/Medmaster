@@ -34,6 +34,7 @@ import {
   Settings,
   Sparkles,
   Lock,
+  Trophy,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useStore } from "@/store/useStore";
@@ -73,6 +74,7 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
     id: "lernen",
     title: "LERNEN",
     items: [
+      { to: "/daily", icon: Trophy,     label: "Daily", iconColor: "text-amber-500", highlight: true },
       { to: "/bms", icon: BookOpen,     label: "BMS",  iconColor: "text-[var(--accent-bio)]",   hasChildren: true },
       { to: "/kff", icon: Brain,        label: "KFF",  iconColor: "text-amber-500" },
       { to: "/tv",  icon: FileText,     label: "TV",   iconColor: "text-indigo-500" },

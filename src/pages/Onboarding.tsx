@@ -1,291 +1,520 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
-  RadarChart,
-  Radar,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
-  ResponsiveContainer,
-} from "recharts";
-import { GraduationCap, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { useStore } from "@/store/useStore";
+  GraduationCap,
+  Calendar,
+  Clock,
+  BookOpen,
+  ArrowRight,
+  CheckCircle2,
+  Sparkles,
+  Target,
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { useStore } from '@/store/useStore';
+import { cn } from '@/lib/utils';
 
-interface OnboardingQuestion {
-  id: string;
-  subject: string;
-  text: string;
-  options: { id: string; text: string }[];
-  correctOptionId: string;
-}
+type Step = 'welcome' | 'date' | 'time' | 'fach' | 'done';
 
-const einstufungsFragen: OnboardingQuestion[] = [
-  // 4 BMS
-  { id: "e-bio", subject: "BMS - Biologie", text: "Welches Molekül speichert die genetische Information in Zellen?", options: [{ id: "a", text: "Proteine" }, { id: "b", text: "DNA" }, { id: "c", text: "Lipide" }, { id: "d", text: "Kohlenhydrate" }], correctOptionId: "b" },
-  { id: "e-chem", subject: "BMS - Chemie", text: "Wie lautet die Summenformel von Wasser?", options: [{ id: "a", text: "HO2" }, { id: "b", text: "H2O" }, { id: "c", text: "OH" }, { id: "d", text: "H2O2" }], correctOptionId: "b" },
-  { id: "e-phys", subject: "BMS - Physik", text: "Welche Einheit misst die elektrische Spannung?", options: [{ id: "a", text: "Ampere" }, { id: "b", text: "Watt" }, { id: "c", text: "Volt" }, { id: "d", text: "Ohm" }], correctOptionId: "c" },
-  { id: "e-math", subject: "BMS - Mathematik", text: "Was ergibt 3² + 4²?", options: [{ id: "a", text: "7" }, { id: "b", text: "12" }, { id: "c", text: "24" }, { id: "d", text: "25" }], correctOptionId: "d" },
-  // 4 BMS Advanced
-  { id: "e-bio2", subject: "BMS - Biologie", text: "In welcher Phase der Mitose werden die Chromatiden zu den Zellpolen gezogen?", options: [{ id: "a", text: "Prophase" }, { id: "b", text: "Metaphase" }, { id: "c", text: "Anaphase" }, { id: "d", text: "Telophase" }], correctOptionId: "c" },
-  { id: "e-chem2", subject: "BMS - Chemie", text: "Welche Bindungsart liegt im NaCl-Kristall vor?", options: [{ id: "a", text: "Kovalente Bindung" }, { id: "b", text: "Ionenbindung" }, { id: "c", text: "Metallische Bindung" }, { id: "d", text: "Van-der-Waals-Bindung" }], correctOptionId: "b" },
-  { id: "e-phys2", subject: "BMS - Physik", text: "Wie berechnet sich die kinetische Energie?", options: [{ id: "a", text: "E = mgh" }, { id: "b", text: "E = ½mv²" }, { id: "c", text: "E = mc²" }, { id: "d", text: "E = Fs" }], correctOptionId: "b" },
-  { id: "e-math2", subject: "BMS - Mathematik", text: "Was ist die Ableitung von f(x) = x³?", options: [{ id: "a", text: "3x" }, { id: "b", text: "3x²" }, { id: "c", text: "x²" }, { id: "d", text: "3x³" }], correctOptionId: "b" },
-  // 4 KFF
-  { id: "e-zf", subject: "KFF - Zahlenfolgen", text: "Welche Zahl kommt als nächstes? 2, 4, 8, 16, ...", options: [{ id: "a", text: "24" }, { id: "b", text: "32" }, { id: "c", text: "20" }, { id: "d", text: "30" }], correctOptionId: "b" },
-  { id: "e-imp", subject: "KFF - Implikationen", text: "'Wenn es regnet, ist die Straße nass.' Die Straße ist trocken. Was folgt?", options: [{ id: "a", text: "Es regnet" }, { id: "b", text: "Es regnet nicht" }, { id: "c", text: "Keine Aussage möglich" }, { id: "d", text: "Die Straße ist nass" }], correctOptionId: "b" },
-  { id: "e-zf2", subject: "KFF - Zahlenfolgen", text: "Welche Zahl kommt als nächstes? 1, 1, 2, 3, 5, ...", options: [{ id: "a", text: "7" }, { id: "b", text: "6" }, { id: "c", text: "8" }, { id: "d", text: "10" }], correctOptionId: "c" },
-  { id: "e-imp2", subject: "KFF - Implikationen", text: "'Alle Ärzte haben studiert.' Tom hat studiert. Was folgt?", options: [{ id: "a", text: "Tom ist Arzt" }, { id: "b", text: "Tom ist kein Arzt" }, { id: "c", text: "Keine sichere Aussage möglich" }, { id: "d", text: "Tom hat Medizin studiert" }], correctOptionId: "c" },
-  // 2 TV
-  { id: "e-tv", subject: "TV - Textverständnis", text: "Wann ist eine Aussage 'ableitbar' aus einem Text?", options: [{ id: "a", text: "Wenn sie allgemein wahr ist" }, { id: "b", text: "Wenn sie logisch aus dem Text folgt" }, { id: "c", text: "Wenn sie plausibel klingt" }, { id: "d", text: "Wenn sie der eigenen Meinung entspricht" }], correctOptionId: "b" },
-  { id: "e-tv2", subject: "TV - Textverständnis", text: "Ein Text sagt: 'Viele Patienten berichten Besserung.' Ist 'Alle Patienten werden geheilt' ableitbar?", options: [{ id: "a", text: "Ja, das ist ableitbar" }, { id: "b", text: "Nein, 'viele' heißt nicht 'alle'" }, { id: "c", text: "Ja, wenn die Behandlung wirkt" }, { id: "d", text: "Hängt vom Kontext ab" }], correctOptionId: "b" },
-  // 2 SEK
-  { id: "e-sek", subject: "SEK - Emotionen", text: "Welches Merkmal zeigt echte Freude (Duchenne-Lächeln)?", options: [{ id: "a", text: "Nur der Mund lächelt" }, { id: "b", text: "Krähenfüße um die Augen" }, { id: "c", text: "Gerümpfte Nase" }, { id: "d", text: "Angehobene Augenbrauen" }], correctOptionId: "b" },
-  { id: "e-sek2", subject: "SEK - Regulation", text: "Ein Patient weint. Was ist die beste Reaktion?", options: [{ id: "a", text: "Schnell ablenken" }, { id: "b", text: "Sagen: 'Weinen hilft nicht'" }, { id: "c", text: "Empathie zeigen und zuhören" }, { id: "d", text: "Raum verlassen" }], correctOptionId: "c" },
+const TIME_OPTIONS = [
+  { label: '15 min', value: 15, hours: 0.25 },
+  { label: '30 min', value: 30, hours: 0.5 },
+  { label: '60 min', value: 60, hours: 1 },
+  { label: '90+ min', value: 90, hours: 1.5 },
 ];
 
-const subjectGroups: Record<string, string[]> = {
-  "BMS": ["e-bio", "e-chem", "e-phys", "e-math", "e-bio2", "e-chem2", "e-phys2", "e-math2"],
-  "KFF": ["e-zf", "e-imp", "e-zf2", "e-imp2"],
-  "TV": ["e-tv", "e-tv2"],
-  "SEK": ["e-sek", "e-sek2"],
+const FACH_OPTIONS = [
+  { id: 'biologie', label: 'Biologie', emoji: '🔬' },
+  { id: 'chemie', label: 'Chemie', emoji: '⚗️' },
+  { id: 'physik', label: 'Physik', emoji: '⚡' },
+  { id: 'mathematik', label: 'Mathematik', emoji: '🔢' },
+];
+
+// Total content hours to cover (~400 hours based on spec)
+const TOTAL_CONTENT_HOURS = 400;
+
+function calcCountdown(dateStr: string): number {
+  if (!dateStr) return 0;
+  const target = new Date(dateStr);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  target.setHours(0, 0, 0, 0);
+  const diff = Math.round((target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+  return diff;
+}
+
+function calcWeeksToCompletion(hoursPerDay: number): number {
+  if (hoursPerDay <= 0) return 0;
+  const totalWeeks = Math.ceil(TOTAL_CONTENT_HOURS / (hoursPerDay * 7));
+  return totalWeeks;
+}
+
+const slideVariants = {
+  enter: { x: 60, opacity: 0 },
+  center: { x: 0, opacity: 1 },
+  exit: { x: -60, opacity: 0 },
 };
 
-export default function Onboarding() {
-  const [step, setStep] = useState<"welcome" | "quiz" | "results">("welcome");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, string>>({});
-  const navigate = useNavigate();
-  const { completeOnboarding } = useStore();
+// ── Step: Welcome ────────────────────────────────────────────────────────────
 
-  const handleFinish = () => {
-    const scores: Record<string, { correct: number; total: number }> = {};
-    Object.entries(subjectGroups).forEach(([group, ids]) => {
-      const groupQs = einstufungsFragen.filter((q) => ids.includes(q.id));
-      const correct = groupQs.filter((q) => answers[q.id] === q.correctOptionId).length;
-      scores[group] = { correct, total: groupQs.length };
-    });
-
-    const totalCorrect = Object.values(scores).reduce((s, v) => s + v.correct, 0);
-    const totalTotal = Object.values(scores).reduce((s, v) => s + v.total, 0);
-    const pct = Math.round((totalCorrect / totalTotal) * 100);
-
-    const level = pct >= 75 ? "Fortgeschritten" : pct >= 50 ? "Mittel" : "Anfaenger";
-    const recommendations: string[] = [];
-    Object.entries(scores).forEach(([group, data]) => {
-      const groupPct = Math.round((data.correct / data.total) * 100);
-      if (groupPct < 50) recommendations.push(`${group}: Grundlagen auffrischen`);
-      else if (groupPct < 75) recommendations.push(`${group}: Übungen vertiefen`);
-    });
-
-    completeOnboarding({ scores, recommendations, level, completedAt: new Date().toISOString() });
-    setStep("results");
-  };
-
-  if (step === "welcome") {
-    return (
-      <div className="max-w-2xl mx-auto space-y-8 pt-8">
-        <div className="text-center space-y-4">
-          <div className="w-20 h-20 bg-primary-100 dark:bg-primary-900/30 rounded-2xl flex items-center justify-center mx-auto">
-            <GraduationCap className="w-10 h-10 text-primary-700 dark:text-primary-400" />
-          </div>
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Willkommen bei MedMaster!</h1>
-          <p className="text-muted max-w-md mx-auto">
-            Bevor du loslegst, möchten wir deinen aktuellen Wissensstand einschätzen.
-            Der Einstufungstest dauert nur wenige Minuten und hilft uns, deinen Lernplan zu personalisieren.
-          </p>
-        </div>
-
-        <Card>
-          <CardContent className="p-6 space-y-4">
-            <div className="grid grid-cols-2 gap-3 text-sm">
-              <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg text-center">
-                <p className="font-bold text-gray-900 dark:text-gray-100">16</p>
-                <p className="text-xs text-muted">Fragen</p>
-              </div>
-              <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg text-center">
-                <p className="font-bold text-gray-900 dark:text-gray-100">~5 Min</p>
-                <p className="text-xs text-muted">Dauer</p>
-              </div>
-              <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg text-center">
-                <p className="font-bold text-gray-900 dark:text-gray-100">4</p>
-                <p className="text-xs text-muted">Bereiche</p>
-              </div>
-              <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg text-center">
-                <p className="font-bold text-gray-900 dark:text-gray-100">Individuell</p>
-                <p className="text-xs text-muted">Lernplan</p>
-              </div>
-            </div>
-            <Button size="lg" className="w-full" onClick={() => setStep("quiz")}>
-              <Sparkles className="w-5 h-5 mr-2" />
-              Einstufungstest starten
-            </Button>
-            <button
-              onClick={() => { completeOnboarding(null); navigate("/"); }}
-              className="w-full text-sm text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
-            >
-              Überspringen
-            </button>
-          </CardContent>
-        </Card>
+function StepWelcome({ onNext }: { onNext: () => void }) {
+  return (
+    <motion.div
+      key="welcome"
+      variants={slideVariants}
+      initial="enter"
+      animate="center"
+      exit="exit"
+      transition={{ type: 'tween', duration: 0.3 }}
+      className="flex flex-col items-center text-center space-y-8"
+    >
+      <div className="w-24 h-24 bg-blue-100 dark:bg-blue-900/30 rounded-3xl flex items-center justify-center">
+        <GraduationCap className="w-12 h-12 text-blue-600 dark:text-blue-400" />
       </div>
-    );
-  }
 
-  if (step === "results") {
-    const { einstufungsResult } = useStore.getState();
-    if (!einstufungsResult) return null;
-
-    const radarData = Object.entries(einstufungsResult.scores).map(([name, data]) => ({
-      subject: name,
-      Prozent: Math.round((data.correct / data.total) * 100),
-      fullMark: 100,
-    }));
-
-    const totalCorrect = Object.values(einstufungsResult.scores).reduce((s, v) => s + v.correct, 0);
-    const totalTotal = Object.values(einstufungsResult.scores).reduce((s, v) => s + v.total, 0);
-
-    return (
-      <div className="max-w-2xl mx-auto space-y-6 pt-4">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Dein Ergebnis</h1>
-          <p className="text-muted mt-1">Einstufungstest abgeschlossen!</p>
-        </div>
-
-        <Card>
-          <CardContent className="p-6 text-center">
-            <div className="text-5xl font-bold text-primary-700 dark:text-primary-400">
-              {totalCorrect}/{totalTotal}
-            </div>
-            <p className="text-muted mt-1">{Math.round((totalCorrect / totalTotal) * 100)}% richtig</p>
-            <Badge className="mt-2" variant={einstufungsResult.level === "Fortgeschritten" ? "success" : einstufungsResult.level === "Mittel" ? "warning" : "info"}>
-              Niveau: {einstufungsResult.level}
-            </Badge>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="p-4">
-            <ResponsiveContainer width="100%" height={280}>
-              <RadarChart data={radarData}>
-                <PolarGrid stroke="#e2e8f0" />
-                <PolarAngleAxis dataKey="subject" tick={{ fill: "#64748b", fontSize: 12 }} />
-                <PolarRadiusAxis angle={30} domain={[0, 100]} tick={{ fill: "#94a3b8", fontSize: 10 }} />
-                <Radar name="Ergebnis" dataKey="Prozent" stroke="#0f766e" fill="#0f766e" fillOpacity={0.3} strokeWidth={2} />
-              </RadarChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
-
-        {einstufungsResult.recommendations.length > 0 && (
-          <Card>
-            <CardContent className="p-4 space-y-2">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Empfehlungen</h3>
-              {einstufungsResult.recommendations.map((rec, i) => (
-                <div key={i} className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
-                  <CheckCircle2 className="w-4 h-4 text-primary-500 shrink-0" />
-                  {rec}
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-        )}
-
-        <Button size="lg" className="w-full" onClick={() => navigate("/")}>
-          <ArrowRight className="w-5 h-5 mr-2" />
-          Zum Dashboard
-        </Button>
+      <div className="space-y-3">
+        <h1 className="text-3xl font-extrabold text-gray-900 dark:text-gray-100">
+          Willkommen bei Medmaster 🧠
+        </h1>
+        <p className="text-gray-500 dark:text-gray-400 text-base max-w-sm mx-auto">
+          Lass uns deinen persoenlichen Lernplan erstellen.
+        </p>
       </div>
-    );
-  }
 
-  // Quiz step
-  const q = einstufungsFragen[currentIndex];
-  const allAnswered = einstufungsFragen.every((q) => answers[q.id]);
+      <Button size="lg" className="w-full max-w-xs text-base" onClick={onNext}>
+        Los geht&apos;s
+        <ArrowRight className="w-4 h-4 ml-2" />
+      </Button>
+    </motion.div>
+  );
+}
+
+// ── Step: Date ───────────────────────────────────────────────────────────────
+
+function StepDate({
+  onNext,
+  value,
+  onChange,
+}: {
+  onNext: () => void;
+  value: string;
+  onChange: (v: string) => void;
+}) {
+  const countdown = calcCountdown(value);
+  const isValid = value !== '' && countdown > 0;
+
+  // Min date: tomorrow
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const minDate = tomorrow.toISOString().split('T')[0];
 
   return (
-    <div className="max-w-2xl mx-auto space-y-6 pt-4">
-      <div className="flex items-center justify-between">
-        <Badge variant="info">{q.subject}</Badge>
-        <span className="text-sm text-muted">
-          {currentIndex + 1} / {einstufungsFragen.length}
-        </span>
+    <motion.div
+      key="date"
+      variants={slideVariants}
+      initial="enter"
+      animate="center"
+      exit="exit"
+      transition={{ type: 'tween', duration: 0.3 }}
+      className="flex flex-col items-center text-center space-y-8 w-full"
+    >
+      <div className="w-20 h-20 bg-orange-100 dark:bg-orange-900/30 rounded-3xl flex items-center justify-center">
+        <Calendar className="w-10 h-10 text-orange-600 dark:text-orange-400" />
       </div>
 
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-        <div
-          className="bg-primary-600 h-2 rounded-full transition-all"
-          style={{ width: `${((currentIndex + 1) / einstufungsFragen.length) * 100}%` }}
+      <div className="space-y-2">
+        <h2 className="text-2xl font-extrabold text-gray-900 dark:text-gray-100">
+          Wann schreibst du die BMS?
+        </h2>
+        <p className="text-gray-500 dark:text-gray-400 text-sm">
+          Gib dein Pruefungsdatum ein
+        </p>
+      </div>
+
+      <div className="w-full max-w-xs space-y-4">
+        <input
+          type="date"
+          min={minDate}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          className="w-full border border-gray-300 dark:border-gray-600 rounded-xl px-4 py-3 text-center text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-800 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-      </div>
 
-      <Card>
-        <CardContent className="p-6">
-          <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">{q.text}</p>
-          <div className="space-y-3">
-            {q.options.map((opt) => (
-              <button
-                key={opt.id}
-                onClick={() => {
-                  setAnswers((p) => ({ ...p, [q.id]: opt.id }));
-                  if (currentIndex < einstufungsFragen.length - 1) {
-                    setTimeout(() => setCurrentIndex((i) => i + 1), 200);
-                  }
-                }}
-                className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
-                  answers[q.id] === opt.id
-                    ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                    : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
-                }`}
-              >
-                <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>
-                {opt.text}
-              </button>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+        <AnimatePresence>
+          {isValid && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl px-4 py-3 text-blue-700 dark:text-blue-300 font-semibold text-base"
+            >
+              Noch {countdown} Tage!
+            </motion.div>
+          )}
+          {value !== '' && !isValid && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-red-500 text-sm"
+            >
+              Bitte ein Datum in der Zukunft waehlen
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-      <div className="flex items-center justify-between">
         <Button
-          variant="outline"
-          onClick={() => setCurrentIndex((i) => i - 1)}
-          disabled={currentIndex === 0}
+          size="lg"
+          className="w-full text-base"
+          onClick={onNext}
+          disabled={!isValid}
         >
-          Zurück
+          Weiter
+          <ArrowRight className="w-4 h-4 ml-2" />
         </Button>
-        {currentIndex < einstufungsFragen.length - 1 ? (
-          <Button
-            onClick={() => setCurrentIndex((i) => i + 1)}
-            disabled={!answers[q.id]}
-          >
-            Weiter <ArrowRight className="w-4 h-4 ml-1" />
-          </Button>
-        ) : (
-          <Button onClick={handleFinish} disabled={!allAnswered}>
-            Auswertung
-          </Button>
-        )}
+      </div>
+    </motion.div>
+  );
+}
+
+// ── Step: Time ───────────────────────────────────────────────────────────────
+
+function StepTime({
+  onNext,
+  value,
+  onChange,
+}: {
+  onNext: () => void;
+  value: number | null;
+  onChange: (v: number) => void;
+}) {
+  const selectedOption = TIME_OPTIONS.find((o) => o.value === value);
+  const weeksToCompletion = selectedOption
+    ? calcWeeksToCompletion(selectedOption.hours)
+    : null;
+
+  return (
+    <motion.div
+      key="time"
+      variants={slideVariants}
+      initial="enter"
+      animate="center"
+      exit="exit"
+      transition={{ type: 'tween', duration: 0.3 }}
+      className="flex flex-col items-center text-center space-y-8 w-full"
+    >
+      <div className="w-20 h-20 bg-purple-100 dark:bg-purple-900/30 rounded-3xl flex items-center justify-center">
+        <Clock className="w-10 h-10 text-purple-600 dark:text-purple-400" />
       </div>
 
-      <div className="flex flex-wrap justify-center gap-1.5">
-        {einstufungsFragen.map((q, i) => (
-          <button
-            key={q.id}
-            onClick={() => setCurrentIndex(i)}
-            className={`w-7 h-7 rounded text-xs font-medium transition-colors cursor-pointer ${
-              i === currentIndex
-                ? "bg-primary-700 text-white"
-                : answers[q.id]
-                  ? "bg-primary-200 dark:bg-primary-800 text-primary-800 dark:text-primary-200"
-                  : "bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400"
-            }`}
+      <div className="space-y-2">
+        <h2 className="text-2xl font-extrabold text-gray-900 dark:text-gray-100">
+          Wie viel Zeit hast du pro Tag?
+        </h2>
+        <p className="text-gray-500 dark:text-gray-400 text-sm">
+          Waehle deine taegliche Lernzeit
+        </p>
+      </div>
+
+      <div className="w-full max-w-xs space-y-4">
+        <div className="grid grid-cols-2 gap-3">
+          {TIME_OPTIONS.map((opt) => (
+            <button
+              key={opt.value}
+              onClick={() => onChange(opt.value)}
+              className={cn(
+                'rounded-2xl border-2 py-5 px-3 text-center font-bold text-lg transition-all cursor-pointer',
+                value === opt.value
+                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 shadow-md'
+                  : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600'
+              )}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
+
+        <AnimatePresence>
+          {weeksToCompletion !== null && (
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 8 }}
+              className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl px-4 py-3 text-green-700 dark:text-green-300 text-sm"
+            >
+              In ca.{' '}
+              <span className="font-bold">{weeksToCompletion} Wochen</span>{' '}
+              wirst du alle Themen abgedeckt haben
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <Button
+          size="lg"
+          className="w-full text-base"
+          onClick={onNext}
+          disabled={value === null}
+        >
+          Weiter
+          <ArrowRight className="w-4 h-4 ml-2" />
+        </Button>
+      </div>
+    </motion.div>
+  );
+}
+
+// ── Step: Fach ───────────────────────────────────────────────────────────────
+
+function StepFach({
+  onNext,
+  value,
+  onChange,
+}: {
+  onNext: () => void;
+  value: string | null;
+  onChange: (v: string) => void;
+}) {
+  const selectedFach = FACH_OPTIONS.find((f) => f.id === value);
+
+  return (
+    <motion.div
+      key="fach"
+      variants={slideVariants}
+      initial="enter"
+      animate="center"
+      exit="exit"
+      transition={{ type: 'tween', duration: 0.3 }}
+      className="flex flex-col items-center text-center space-y-8 w-full"
+    >
+      <div className="w-20 h-20 bg-teal-100 dark:bg-teal-900/30 rounded-3xl flex items-center justify-center">
+        <BookOpen className="w-10 h-10 text-teal-600 dark:text-teal-400" />
+      </div>
+
+      <div className="space-y-2">
+        <h2 className="text-2xl font-extrabold text-gray-900 dark:text-gray-100">
+          Was ist dein schwaechstes Fach?
+        </h2>
+        <p className="text-gray-500 dark:text-gray-400 text-sm">
+          Wir priorisieren deine Schwachstellen
+        </p>
+      </div>
+
+      <div className="w-full max-w-xs space-y-4">
+        <div className="grid grid-cols-2 gap-3">
+          {FACH_OPTIONS.map((fach) => (
+            <button
+              key={fach.id}
+              onClick={() => onChange(fach.id)}
+              className={cn(
+                'rounded-2xl border-2 py-5 px-3 text-center font-bold transition-all cursor-pointer',
+                value === fach.id
+                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 shadow-md'
+                  : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600'
+              )}
+            >
+              <div className="text-2xl mb-1">{fach.emoji}</div>
+              <div className="text-sm">{fach.label}</div>
+            </button>
+          ))}
+        </div>
+
+        <AnimatePresence>
+          {selectedFach && (
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 8 }}
+              className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl px-4 py-3 text-blue-700 dark:text-blue-300 text-sm font-semibold"
+            >
+              Wir starten mit {selectedFach.label}!
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <Button
+          size="lg"
+          className="w-full text-base"
+          onClick={onNext}
+          disabled={value === null}
+        >
+          Lernplan erstellen
+          <ArrowRight className="w-4 h-4 ml-2" />
+        </Button>
+      </div>
+    </motion.div>
+  );
+}
+
+// ── Step: Done ───────────────────────────────────────────────────────────────
+
+function StepDone() {
+  return (
+    <motion.div
+      key="done"
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ type: 'spring', stiffness: 200 }}
+      className="flex flex-col items-center text-center space-y-6"
+    >
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ type: 'spring', stiffness: 250, delay: 0.15 }}
+        className="w-28 h-28 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center"
+      >
+        <CheckCircle2 className="w-16 h-16 text-green-500" />
+      </motion.div>
+
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.3 }}
+        className="space-y-2"
+      >
+        <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-100">
+          Alles bereit! 🎉
+        </h2>
+        <p className="text-2xl font-bold text-green-600 dark:text-green-400">
+          +50 XP — Willkommen an Bord!
+        </p>
+      </motion.div>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+        className="text-gray-500 dark:text-gray-400 text-sm"
+      >
+        Dein Lernplan wurde erstellt. Weiterleitung...
+      </motion.p>
+    </motion.div>
+  );
+}
+
+// ── Main Component ────────────────────────────────────────────────────────────
+
+const STEP_ORDER: Step[] = ['welcome', 'date', 'time', 'fach', 'done'];
+
+function StepIndicator({ current }: { current: Step }) {
+  const steps: { key: Step; label: string }[] = [
+    { key: 'welcome', label: 'Start' },
+    { key: 'date', label: 'Datum' },
+    { key: 'time', label: 'Zeit' },
+    { key: 'fach', label: 'Fach' },
+  ];
+  const currentIdx = STEP_ORDER.indexOf(current);
+
+  return (
+    <div className="flex items-center gap-2 mb-8">
+      {steps.map((s, i) => (
+        <div key={s.key} className="flex items-center gap-2">
+          <div
+            className={cn(
+              'w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all',
+              i < currentIdx
+                ? 'bg-blue-500 text-white'
+                : i === currentIdx
+                  ? 'bg-blue-500 text-white ring-4 ring-blue-200 dark:ring-blue-800'
+                  : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500'
+            )}
           >
-            {i + 1}
-          </button>
-        ))}
+            {i < currentIdx ? <CheckCircle2 className="w-4 h-4" /> : i + 1}
+          </div>
+          {i < steps.length - 1 && (
+            <div
+              className={cn(
+                'flex-1 h-0.5 w-6 rounded-full transition-all',
+                i < currentIdx ? 'bg-blue-500' : 'bg-gray-200 dark:bg-gray-700'
+              )}
+            />
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default function Onboarding() {
+  const [step, setStep] = useState<Step>('welcome');
+  const [medatDate, setMedatDate] = useState('');
+  const [selectedTime, setSelectedTime] = useState<number | null>(null);
+  const [selectedFach, setSelectedFach] = useState<string | null>(null);
+  const navigate = useNavigate();
+  const { addXP, setLernplanConfig, completeOnboarding } = useStore();
+
+  // Auto-navigate away from "done" slide after 1.5s
+  useEffect(() => {
+    if (step !== 'done') return;
+
+    // Grant XP welcome bonus
+    addXP(50);
+
+    // Compute hoursPerWeek from selected time
+    const optionData = TIME_OPTIONS.find((o) => o.value === selectedTime);
+    const hoursPerDay = optionData?.hours ?? 0.5;
+    const hoursPerWeek = Math.round(hoursPerDay * 7 * 10) / 10;
+
+    // Save lernplan config
+    setLernplanConfig({
+      medatDate,
+      hoursPerWeek,
+      generatedAt: new Date().toISOString(),
+    });
+
+    // Mark onboarding complete (pass null for einstufungsResult — simplified flow)
+    completeOnboarding(null);
+
+    const timer = setTimeout(() => {
+      navigate('/daily', { replace: true });
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, [step]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const goNext = () => {
+    const idx = STEP_ORDER.indexOf(step);
+    if (idx < STEP_ORDER.length - 1) {
+      setStep(STEP_ORDER[idx + 1]);
+    }
+  };
+
+  const showIndicator = step !== 'done';
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950 px-4">
+      <div className="w-full max-w-sm">
+        {showIndicator && <StepIndicator current={step} />}
+
+        <AnimatePresence mode="wait">
+          {step === 'welcome' && (
+            <StepWelcome key="welcome" onNext={goNext} />
+          )}
+          {step === 'date' && (
+            <StepDate
+              key="date"
+              value={medatDate}
+              onChange={setMedatDate}
+              onNext={goNext}
+            />
+          )}
+          {step === 'time' && (
+            <StepTime
+              key="time"
+              value={selectedTime}
+              onChange={setSelectedTime}
+              onNext={goNext}
+            />
+          )}
+          {step === 'fach' && (
+            <StepFach
+              key="fach"
+              value={selectedFach}
+              onChange={setSelectedFach}
+              onNext={goNext}
+            />
+          )}
+          {step === 'done' && <StepDone key="done" />}
+        </AnimatePresence>
       </div>
     </div>
   );

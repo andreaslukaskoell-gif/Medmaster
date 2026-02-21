@@ -2,6 +2,7 @@
  * Leaderboard: Global, Wochen-Champions, Fachbereich-Profi.
  * Mock-Daten für Anzeige; aktueller User wird aus Store eingefügt.
  */
+import type { SupabaseClient } from '@supabase/supabase-js';
 
 export type LeaderboardCategory = "global" | "weekly" | "fach";
 export type FachFilter = "biologie" | "chemie" | "physik" | "mathematik" | "kff";
@@ -120,4 +121,80 @@ export function getTopPercent(rank: number, total: number): number {
   if (total <= 0) return 100;
   const percentile = ((total - rank) / total) * 100;
   return Math.max(1, Math.min(100, Math.round(percentile)));
+}
+
+export interface LeaderboardSyncData {
+  nickname: string;
+  xp: number;
+  level: number;
+  xpThisWeek: number;
+  subjectScores: Partial<Record<FachFilter, number>>;
+  badgeIds: string[];
+}
+
+/** Synct aktuellen User-Stand in die Supabase leaderboard_snapshots Tabelle */
+export async function syncUserToLeaderboard(
+  supabase: SupabaseClient,
+  userId: string,
+  data: LeaderboardSyncData
+): Promise<void> {
+  try {
+    await supabase.from('leaderboard_snapshots').upsert(
+      {
+        user_id: userId,
+        nickname: data.nickname || 'Anonym',
+        xp: data.xp ?? 0,
+        level: data.level ?? 1,
+        xp_this_week: data.xpThisWeek ?? 0,
+        subject_scores: data.subjectScores ?? {},
+        badge_ids: data.badgeIds ?? [],
+        updated_at: new Date().toISOString(),
+      },
+      { onConflict: 'user_id' }
+    );
+  } catch {
+    // Silently fail — leaderboard sync is non-critical
+  }
+}
+
+/** Lädt echte Leaderboard-Daten aus Supabase; fällt auf Mock zurück wenn leer */
+export async function fetchLeaderboardFromDB(
+  supabase: SupabaseClient,
+  category: LeaderboardCategory,
+  fach?: FachFilter
+): Promise<LeaderboardEntry[]> {
+  try {
+    let query = supabase
+      .from('leaderboard_snapshots')
+      .select('*')
+      .limit(50);
+
+    if (category === 'weekly') {
+      query = query.order('xp_this_week', { ascending: false });
+    } else if (category === 'fach' && fach) {
+      // Order by fach-specific score extracted from jsonb
+      query = query.order(`subject_scores->>${fach}`, { ascending: false });
+    } else {
+      query = query.order('xp', { ascending: false });
+    }
+
+    const { data, error } = await query;
+    if (error || !data || data.length === 0) return [];
+
+    return data.map((row, i) => ({
+      id: row.user_id,
+      nickname: row.nickname,
+      avatar: row.nickname.slice(0, 2).toUpperCase(),
+      level: row.level ?? 1,
+      badgeIds: row.badge_ids ?? [],
+      xp: row.xp ?? 0,
+      xpThisWeek: row.xp_this_week ?? 0,
+      subjectScores: (row.subject_scores ?? {}) as Partial<Record<FachFilter, number>>,
+      rankChange: 0,
+      isCurrentUser: false,
+      rank: i + 1,
+    }));
+  } catch {
+    return [];
+  }
 }
