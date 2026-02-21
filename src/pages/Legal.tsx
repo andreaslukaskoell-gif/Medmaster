@@ -1,21 +1,74 @@
+/**
+ * TODO: BEFORE LAUNCH
+ * =====================
+ * This Legal page contains placeholders that MUST be filled in before going live:
+ *
+ * 1. [DEIN NAME] → Replace with business owner name
+ * 2. [ADRESSE] → Replace with business address
+ * 3. [UID-NUMMER falls vorhanden] → Replace with UID number if applicable
+ *
+ * Missing these fields violates Austrian legal requirements (MedienG § 25, ECG § 5).
+ * The legal pages will display a red warning in PRODUCTION if these are not updated.
+ *
+ * Check the Legal.tsx component for the warning banner implementation.
+ */
+
 import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
-import { ArrowLeft, Scale, Shield } from "lucide-react";
+import { ArrowLeft, Scale, Shield, AlertTriangle } from "lucide-react";
 
 type Tab = "impressum" | "datenschutz";
+
+const REQUIRED_PLACEHOLDERS = ["[DEIN NAME]", "[ADRESSE]", "[UID-NUMMER"];
 
 export default function Legal() {
   const location = useLocation();
   const [tab, setTab] = useState<Tab>(
     location.pathname === "/datenschutz" ? "datenschutz" : "impressum"
   );
+  const [hasMissingPlaceholders, setHasMissingPlaceholders] = useState(false);
 
   useEffect(() => {
     setTab(location.pathname === "/datenschutz" ? "datenschutz" : "impressum");
   }, [location.pathname]);
 
+  useEffect(() => {
+    // Check for missing placeholders in the document
+    const pageContent = document.body.innerText;
+    const hasMissing = REQUIRED_PLACEHOLDERS.some(placeholder => pageContent.includes(placeholder));
+    setHasMissingPlaceholders(hasMissing);
+  }, [tab]);
+
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Dev/Production Warning */}
+      {import.meta.env.DEV ? (
+        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-0">
+          <div className="flex gap-3">
+            <AlertTriangle className="w-5 h-5 text-yellow-600 shrink-0 mt-0.5" />
+            <div className="flex-1">
+              <p className="text-sm font-semibold text-yellow-800">DEV MODE: Gesetzliche Angaben unvollständig</p>
+              <p className="text-xs text-yellow-700 mt-1">
+                Bitte alle [PLATZHALTER] mit echten Daten ausfüllen, bevor die Seite live geht:
+                Name, Adresse, UID-Nummer
+              </p>
+            </div>
+          </div>
+        </div>
+      ) : hasMissingPlaceholders ? (
+        <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-0">
+          <div className="flex gap-3">
+            <AlertTriangle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
+            <div className="flex-1">
+              <p className="text-sm font-semibold text-red-800">FEHLER: Gesetzliche Angaben unvollständig</p>
+              <p className="text-xs text-red-700 mt-1">
+                Diese Seite enthält noch Platzhalter. Bitte kontaktieren Sie den Administrator.
+              </p>
+            </div>
+          </div>
+        </div>
+      ) : null}
+
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-3">

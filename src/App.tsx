@@ -54,6 +54,14 @@ function OnboardingGuard() {
   return <Onboarding />;
 }
 
+function AdminGuard({ children }: { children: React.ReactNode }) {
+  const isDev = import.meta.env.DEV;
+  if (!isDev) {
+    return <Navigate to="/" replace />;
+  }
+  return <>{children}</>;
+}
+
 function BMSQuizWrapper() {
   const { fach } = useParams<{ fach: string }>();
   const navigate = useNavigate();
@@ -102,10 +110,10 @@ export default function App() {
             <Route path="/schwachstellen" element={<LevelGate requiredLevel={10} featureLabel="Schwachstellen-Analyse"><SchwachstellenTrainer /></LevelGate>} />
             <Route path="/schwachstellen/recovery" element={<SmartRecoveryPage />} />
             <Route path="/preise" element={<Pricing />} />
-            <Route path="/admin/kapitel-editor" element={<KapitelEditor />} />
-            <Route path="/admin/audit" element={<ContentAudit />} />
-            <Route path="/admin/preview" element={<AdminPreview />} />
-            <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            <Route path="/admin/kapitel-editor" element={<AdminGuard><KapitelEditor /></AdminGuard>} />
+            <Route path="/admin/audit" element={<AdminGuard><ContentAudit /></AdminGuard>} />
+            <Route path="/admin/preview" element={<AdminGuard><AdminPreview /></AdminGuard>} />
+            <Route path="/admin/dashboard" element={<AdminGuard><AdminDashboard /></AdminGuard>} />
             <Route path="/wissencheck" element={<WissenCheck />} />
             <Route path="/wissencheck/:fach" element={<WissenCheck />} />
             <Route path="/prognose" element={<Prognose />} />

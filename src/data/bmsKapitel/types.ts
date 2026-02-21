@@ -91,4 +91,10 @@ export interface Kapitel {
    * Example: ['bio-kap7'] links to Methoden der Genetik
    */
   linkedChapters?: string[];
+  /**
+   * If true, renders this chapter with enhanced formatting:
+   * larger text, more spacing, numbered section headings.
+   * Set on bio-kap1 ("Die Zelle") as the flagship chapter.
+   */
+  enhancedFormatting?: boolean;
 }

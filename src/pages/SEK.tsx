@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
+import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { sekStrategyGuide } from "@/data/sekData";
 import {
   emotionenErkennenTasks,
@@ -34,20 +35,7 @@ export default function SEK() {
   const [view, setView] = useState<SekView>("overview");
 
   if (view === "strategy") {
-    return (
-      <div className="max-w-3xl mx-auto space-y-6">
-        <Button variant="ghost" size="sm" onClick={() => setView("overview")}>
-          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
-        </Button>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{sekStrategyGuide.title}</h1>
-        {sekStrategyGuide.sections.map((s, i) => (
-          <Card key={i}><CardContent className="p-6">
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">{s.heading}</h2>
-            <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">{s.content}</div>
-          </CardContent></Card>
-        ))}
-      </div>
-    );
+    return <StrategyGuideView guide={sekStrategyGuide} onBack={() => setView("overview")} />;
   }
 
   if (view === "erkennen-quiz" || view === "erkennen-result") return <EmotionenErkennenQuiz tasks={emotionenErkennenTasks} onBack={() => setView("overview")} />;
@@ -63,12 +51,12 @@ export default function SEK() {
       </div>
 
       <Card>
-        <CardContent className="p-5 flex items-center justify-between">
+        <CardContent className="p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
             <h3 className="font-semibold text-gray-900 dark:text-gray-100">Strategie-Guide</h3>
             <p className="text-sm text-muted">Lerne die 7 Basisemotionen und Strategien für alle 3 SEK-Untertests</p>
           </div>
-          <Button variant="outline" onClick={() => setView("strategy")}>
+          <Button variant="outline" onClick={() => setView("strategy")} className="w-full sm:w-auto">
             <BookOpen className="w-4 h-4 mr-2" /> Lesen
           </Button>
         </CardContent>
@@ -78,10 +66,10 @@ export default function SEK() {
         <Card>
           <CardContent className="p-5">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 bg-pink-100 dark:bg-pink-900/30 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-pink-100 dark:bg-pink-900/30 rounded-lg flex items-center justify-center shrink-0">
                 <span className="text-pink-600 dark:text-pink-400 text-sm font-bold">EE</span>
               </div>
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">Emotionen erkennen</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Emotionen erkennen</h3>
             </div>
             <p className="text-sm text-muted mb-1">5 Emotionen pro Situation: wahrscheinlich oder unwahrscheinlich?</p>
             <p className="text-xs text-muted mb-3">{emotionenErkennenTasks.length} Situationen | Alles-oder-Nichts</p>
@@ -94,10 +82,10 @@ export default function SEK() {
         <Card>
           <CardContent className="p-5">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 bg-amber-100 dark:bg-amber-900/30 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-amber-100 dark:bg-amber-900/30 rounded-lg flex items-center justify-center shrink-0">
                 <span className="text-amber-600 dark:text-amber-400 text-sm font-bold">ER</span>
               </div>
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">Emotionen regulieren</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Emotionen regulieren</h3>
             </div>
             <p className="text-sm text-muted mb-1">Beste Bewältigungsstrategie wählen (4 Optionen)</p>
             <p className="text-xs text-muted mb-3">{emotionenRegulierenTasks.length} Szenarien | Prozentual</p>
@@ -110,10 +98,10 @@ export default function SEK() {
         <Card>
           <CardContent className="p-5">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center shrink-0">
                 <span className="text-blue-600 dark:text-blue-400 text-sm font-bold">SE</span>
               </div>
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">Soziales Entscheiden</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Soziales Entscheiden</h3>
             </div>
             <p className="text-sm text-muted mb-1">5 Aussagen nach Wichtigkeit ranken (A-E)</p>
             <p className="text-xs text-muted mb-3">{sozialesEntscheidenTasks.length} Dilemmata | Kohlberg-basiert</p>
@@ -193,7 +181,7 @@ function EmotionenErkennenQuiz({ tasks, onBack }: { tasks: EmotionenErkennenTask
             <Card key={q.id} className={`border-l-4 ${allCorrect ? "border-l-green-500" : "border-l-red-500"}`}>
               <CardContent className="p-5">
                 <div className="flex items-center gap-2 mb-2">
-                  {allCorrect ? <CheckCircle2 className="w-5 h-5 text-green-500" /> : <XCircle className="w-5 h-5 text-red-500" />}
+                  {allCorrect ? <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> : <XCircle className="w-5 h-5 text-red-500 shrink-0" />}
                   <span className="text-sm font-medium">{qi + 1}. {q.situation.slice(0, 80)}...</span>
                 </div>
                 <div className="ml-7 space-y-1">
@@ -228,10 +216,10 @@ function EmotionenErkennenQuiz({ tasks, onBack }: { tasks: EmotionenErkennenTask
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen</Button>
-        <div className="flex items-center gap-2">
-          <Badge className="bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-400">Emotionen erkennen</Badge>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+          <Badge className="bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-400 w-fit">Emotionen erkennen</Badge>
           <span className="text-sm text-muted">{index + 1}/{questions.length}</span>
         </div>
       </div>
@@ -248,7 +236,7 @@ function EmotionenErkennenQuiz({ tasks, onBack }: { tasks: EmotionenErkennenTask
           {q.emotionen.map((e) => {
             const val = currentAnswers[e.name];
             return (
-              <div key={e.name} className="flex items-center justify-between p-3 rounded-lg border border-border dark:border-gray-700">
+              <div key={e.name} className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-3 rounded-lg border border-border dark:border-gray-700">
                 <span className="text-sm font-medium text-gray-900 dark:text-gray-100">{e.name}</span>
                 <div className="flex gap-2">
                   <button
@@ -258,7 +246,7 @@ function EmotionenErkennenQuiz({ tasks, onBack }: { tasks: EmotionenErkennenTask
                         [q.id]: { ...(prev[q.id] || {}), [e.name]: "wahrscheinlich" },
                       }));
                     }}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
+                    className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
                       val === "wahrscheinlich"
                         ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border border-green-300 dark:border-green-700"
                         : "bg-gray-50 dark:bg-gray-800 text-gray-500 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -273,7 +261,7 @@ function EmotionenErkennenQuiz({ tasks, onBack }: { tasks: EmotionenErkennenTask
                         [q.id]: { ...(prev[q.id] || {}), [e.name]: "unwahrscheinlich" },
                       }));
                     }}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
+                    className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
                       val === "unwahrscheinlich"
                         ? "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 border border-red-300 dark:border-red-700"
                         : "bg-gray-50 dark:bg-gray-800 text-gray-500 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -287,11 +275,11 @@ function EmotionenErkennenQuiz({ tasks, onBack }: { tasks: EmotionenErkennenTask
           })}
         </div>
       </CardContent></Card>
-      <div className="flex justify-between">
-        <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
+      <div className="flex flex-col sm:flex-row justify-between gap-2">
+        <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0} className="w-full sm:w-auto"><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
         {index < questions.length - 1
-          ? <Button onClick={() => setIndex((i) => i + 1)}>Weiter <ArrowRight className="w-4 h-4 ml-1" /></Button>
-          : <Button onClick={handleSubmit} disabled={!allQuestionsAnswered}><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
+          ? <Button onClick={() => setIndex((i) => i + 1)} className="w-full sm:w-auto">Weiter <ArrowRight className="w-4 h-4 ml-1" /></Button>
+          : <Button onClick={handleSubmit} disabled={!allQuestionsAnswered} className="w-full sm:w-auto"><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
         }
       </div>
       <FloatingQuestionCounter current={index + 1} total={questions.length} />
@@ -385,10 +373,10 @@ function EmotionenRegulierenQuiz({ tasks, onBack }: { tasks: EmotionenRegulieren
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen</Button>
-        <div className="flex items-center gap-2">
-          <Badge className="bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400">Emotionen regulieren</Badge>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+          <Badge className="bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 w-fit">Emotionen regulieren</Badge>
           <span className="text-sm text-muted">{index + 1}/{questions.length}</span>
         </div>
       </div>
@@ -399,7 +387,7 @@ function EmotionenRegulierenQuiz({ tasks, onBack }: { tasks: EmotionenRegulieren
         <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg mb-4">
           <p className="text-sm text-gray-800 dark:text-gray-200">{q.situation}</p>
         </div>
-        <div className="flex gap-2 mb-4">
+        <div className="flex gap-2 mb-4 flex-wrap">
           <Badge variant="danger">{q.emotion}</Badge>
           <Badge variant="info">Ziel: {q.ziel}</Badge>
         </div>
@@ -417,11 +405,11 @@ function EmotionenRegulierenQuiz({ tasks, onBack }: { tasks: EmotionenRegulieren
           ))}
         </div>
       </CardContent></Card>
-      <div className="flex justify-between">
-        <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
+      <div className="flex flex-col sm:flex-row justify-between gap-2">
+        <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0} className="w-full sm:w-auto"><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
         {index < questions.length - 1
-          ? <Button onClick={() => setIndex((i) => i + 1)}>Weiter <ArrowRight className="w-4 h-4 ml-1" /></Button>
-          : <Button onClick={handleSubmit} disabled={!allAnswered}><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
+          ? <Button onClick={() => setIndex((i) => i + 1)} className="w-full sm:w-auto">Weiter <ArrowRight className="w-4 h-4 ml-1" /></Button>
+          : <Button onClick={handleSubmit} disabled={!allAnswered} className="w-full sm:w-auto"><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
         }
       </div>
       <FloatingQuestionCounter current={index + 1} total={questions.length} />
@@ -535,10 +523,10 @@ function SozialesEntscheidenQuiz({ tasks, onBack }: { tasks: SozialesEntscheiden
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen</Button>
-        <div className="flex items-center gap-2">
-          <Badge className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400">Soziales Entscheiden</Badge>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+          <Badge className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 w-fit">Soziales Entscheiden</Badge>
           <span className="text-sm text-muted">{index + 1}/{questions.length}</span>
         </div>
       </div>
@@ -552,8 +540,8 @@ function SozialesEntscheidenQuiz({ tasks, onBack }: { tasks: SozialesEntscheiden
         <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">Ordne die Aussagen nach Wichtigkeit (1 = wichtigste, 5 = unwichtigste):</p>
         <div className="space-y-3">
           {q.aussagen.map((a, ai) => (
-            <div key={ai} className="flex items-center gap-3 p-3 rounded-lg border border-border dark:border-gray-700">
-              <div className="flex gap-1">
+            <div key={ai} className="flex flex-col sm:flex-row sm:items-center gap-3 p-3 rounded-lg border border-border dark:border-gray-700">
+              <div className="flex gap-1 flex-wrap">
                 {[1, 2, 3, 4, 5].map((rank) => {
                   const isSelected = currentRanking[ai] === rank;
                   const isUsed = Object.values(currentRanking).includes(rank) && !isSelected;
@@ -577,11 +565,11 @@ function SozialesEntscheidenQuiz({ tasks, onBack }: { tasks: SozialesEntscheiden
           ))}
         </div>
       </CardContent></Card>
-      <div className="flex justify-between">
-        <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0}><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
+      <div className="flex flex-col sm:flex-row justify-between gap-2">
+        <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0} className="w-full sm:w-auto"><ArrowLeft className="w-4 h-4 mr-1" /> Zurück</Button>
         {index < questions.length - 1
-          ? <Button onClick={() => setIndex((i) => i + 1)}>Weiter <ArrowRight className="w-4 h-4 ml-1" /></Button>
-          : <Button onClick={handleSubmit} disabled={!allQuestionsRanked}><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
+          ? <Button onClick={() => setIndex((i) => i + 1)} className="w-full sm:w-auto">Weiter <ArrowRight className="w-4 h-4 ml-1" /></Button>
+          : <Button onClick={handleSubmit} disabled={!allQuestionsRanked} className="w-full sm:w-auto"><Send className="w-4 h-4 mr-1" /> Auswertung</Button>
         }
       </div>
       <FloatingQuestionCounter current={index + 1} total={questions.length} />

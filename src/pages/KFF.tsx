@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
+import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import {
   kffStrategyGuide,
 } from "@/data/kffData";
@@ -55,22 +56,7 @@ export default function KFF() {
   }
 
   if (view === "figuren-strategy") {
-    return (
-      <div className="max-w-3xl mx-auto space-y-6">
-        <Button variant="ghost" size="sm" onClick={() => setView("overview")}>
-          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
-        </Button>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{figurenStrategyGuide.title}</h1>
-        {figurenStrategyGuide.sections.map((s, i) => (
-          <Card key={i}>
-            <CardContent className="p-6">
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">{s.heading}</h2>
-              <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">{s.content}</div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    );
+    return <StrategyGuideView guide={figurenStrategyGuide} onBack={() => setView("overview")} />;
   }
 
   if (view === "figuren-quiz") return <FigurenQuiz onBack={() => setView("overview")} />;
@@ -87,22 +73,7 @@ export default function KFF() {
         </div>
       );
     }
-    return (
-      <div className="max-w-3xl mx-auto space-y-6">
-        <Button variant="ghost" size="sm" onClick={() => setView("overview")}>
-          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
-        </Button>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{guide.title}</h1>
-        {guide.sections.map((s, i) => (
-          <Card key={i}>
-            <CardContent className="p-6">
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">{s.heading}</h2>
-              <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">{s.content}</div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    );
+    return <StrategyGuideView guide={guide} onBack={() => setView("overview")} />;
   }
 
   if (view === "zahlenfolgen") return <ZahlenfolgenQuiz onBack={() => setView("overview")} />;

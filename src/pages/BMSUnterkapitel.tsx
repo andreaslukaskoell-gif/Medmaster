@@ -426,12 +426,13 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
 
       {/* Main content: im Fluss (relative), kein Overlap mit Header */}
       <Card className="relative">
-        <CardContent className={`relative ${kapitel?.id === 'bio-kap1' ? 'p-8' : 'p-6'}`}>
+        <CardContent className={`relative ${kapitel?.enhancedFormatting ? 'p-8' : 'p-6'}`}>
           <ContentErrorBoundary context={`${kapitel?.id ?? "chapter"}-${uk?.id ?? "uk"}`}>
             <ContentVisualizer
               uk={uk}
               subject={kapitel?.subject ?? "biologie"}
               chapterId={kapitel?.id}
+              enhancedFormatting={kapitel?.enhancedFormatting}
               hinterfragMode={hinterfragMode}
               progressiveDisclosure={progressiveDisclosure}
             />
@@ -539,16 +540,16 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
         };
 
         return (
-          <div className={kapitel.id === 'bio-kap1' ? 'mt-8' : ''}>
-            {kapitel.id === 'bio-kap1' ? (
+          <div className={kapitel.enhancedFormatting ? 'mt-8' : ''}>
+            {kapitel.enhancedFormatting ? (
               <InteractiveQuiz questions={allQuestions} {...kontrollProps} />
             ) : (
               <>
-                <div className={kapitel.id === 'bio-kap1' ? 'mb-4 pb-3 border-b-2 border-gray-300 dark:border-gray-600' : ''}>
-                  <h2 className={`${kapitel.id === 'bio-kap1' ? 'text-2xl font-bold' : 'text-xl font-semibold'} text-gray-900 dark:text-gray-100`}>
-                    {kapitel.id === 'bio-kap1' && '📝 '}Kontrollfragen
+                <div className={kapitel.enhancedFormatting ? 'mb-4 pb-3 border-b-2 border-gray-300 dark:border-gray-600' : ''}>
+                  <h2 className={`${kapitel.enhancedFormatting ? 'text-2xl font-bold' : 'text-xl font-semibold'} text-gray-900 dark:text-gray-100`}>
+                    {kapitel.enhancedFormatting && '📝 '}Kontrollfragen
                   </h2>
-                  {kapitel.id === 'bio-kap1' && (
+                  {kapitel.enhancedFormatting && (
                     <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                       Teste dein Wissen mit diesen Fragen
                     </p>

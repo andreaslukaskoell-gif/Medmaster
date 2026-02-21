@@ -8,6 +8,7 @@ interface ContentVisualizerProps {
   uk: Unterkapitel;
   subject: string;
   chapterId?: string;
+  enhancedFormatting?: boolean;
   /** Extra class for the main content wrapper (e.g. padding from parent Card). */
   contentClassName?: string;
   /** Hinterfrag-Modus: [? Frage | Antwort ] als Frage anzeigen, Antwort bei Klick/Hover. */
@@ -26,12 +27,13 @@ export function ContentVisualizer({
   uk,
   subject,
   chapterId,
+  enhancedFormatting,
   contentClassName = "",
   hinterfragMode = false,
   progressiveDisclosure = true,
   keywordLinkEntries,
 }: ContentVisualizerProps) {
-  const isDieZelle = chapterId === "bio-kap1";
+  const isDieZelle = enhancedFormatting ?? false;
   if (!uk) {
     return (
       <div className={`space-y-6 ${contentClassName}`}>
@@ -53,7 +55,7 @@ export function ContentVisualizer({
       )}
 
       {/* Text content */}
-      <SubchapterContent uk={uk} subject={subject} chapterId={chapterId} hinterfragMode={hinterfragMode} progressiveDisclosure={progressiveDisclosure} keywordLinkEntries={keywordLinkEntries} />
+      <SubchapterContent uk={uk} subject={subject} chapterId={chapterId} enhancedFormatting={enhancedFormatting} hinterfragMode={hinterfragMode} progressiveDisclosure={progressiveDisclosure} keywordLinkEntries={keywordLinkEntries} />
 
       {/* Quiz – only if data present */}
       {uk?.quiz && uk.quiz.length > 0 && (
