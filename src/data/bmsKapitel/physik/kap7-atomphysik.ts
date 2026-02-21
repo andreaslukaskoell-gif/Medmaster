@@ -2,701 +2,922 @@ import type { Kapitel } from '../types';
 
 export const physKap7: Kapitel = {
   id: 'phys-kap7',
-  title: "Atomphysik",
+  title: 'Atomphysik',
   subject: 'physik',
-  icon: '☢️',
-  estimatedTime: '45 min',
+  icon: '⚛️',
+  estimatedTime: '120 min',
   unterkapitel: [
+    // ─────────────────────────────────────────────────────────────────────────
+    // UK ph-7-01: Atommodelle und Spektroskopie
+    // ─────────────────────────────────────────────────────────────────────────
     {
       id: 'ph-7-01',
-      title: "Atom- und Kernphysik",
-      content: `# Atom- und Kernphysik
+      title: 'Atommodelle und Spektroskopie',
+      content: `# Atommodelle und Spektroskopie
 
-## Atommodell (Kern-Hülle)
+## Entwicklung der Atommodelle
 
-Atom besteht aus positiv geladenem Kern (Protonen + Neutronen) und negativer Elektronenhülle. Der Atomkern ist winzig (10⁻¹⁵ m) gegenüber dem Atomradius (10⁻¹⁰ m).
+Das **Thomsonsche Modell** (1904) stellte sich das Atom als eine gleichförmig positive Ladungsverteilung vor, in der Elektronen wie Rosinen in einem Kuchen eingebettet sind ("Plum-Pudding-Modell"). Es konnte keine diskreten Spektrallinien erklären.
 
-## Radioaktivität
+Das **Rutherfordsche Kernmodell** (1911) folgte aus dem berühmten Streuexperiment: Alpha-Teilchen wurden an einer dünnen Goldfolie gestreut. Da einige Teilchen unter großen Winkeln zurückgeworfen wurden, schloss Rutherford auf einen winzigen, massereichen, positiv geladenen Kern (Radius ≈ 10⁻¹⁵ m) umgeben von einer weitgehend leeren Elektronenhülle (Radius ≈ 10⁻¹⁰ m). Nachteil: Ein spiralförmig in den Kern fallendes Elektron würde nach der klassischen Elektrodynamik kontinuierlich Energie abstrahlen – das Atom wäre instabil.
 
-**α-Zerfall**: Emission eines He-Kerns (⁴₂He). Ordnungszahl −2, Massenzahl −4. Geringe Reichweite.
+Das **Bohrsche Atommodell** (1913) löste dieses Problem durch zwei Postulate:
+1. Elektronen bewegen sich auf bestimmten erlaubten Kreisbahnen (Schalen) ohne Energieabstrahlung.
+2. Energie wird nur beim Übergang zwischen Schalen emittiert oder absorbiert (E = hf).
 
-**β⁻-Zerfall**: Ein Neutron → Proton + Elektron + Antineutrino. Ordnungszahl +1.
+Die erlaubten Bahnen entsprechen Hauptquantenzahlen n = 1, 2, 3, ... mit Energien Eₙ = −13,6 eV/n² für Wasserstoff. Je größer n, desto weiter die Bahn vom Kern und desto höher (weniger negativ) die Energie.
 
-**β⁺-Zerfall (Positronenemission)**: Proton → Neutron + Positron + Neutrino.
+Das **quantenmechanische Modell** (Schrödinger, Heisenberg, 1920er) ersetzt feste Bahnen durch **Orbitale** – Raumgebiete, in denen die Aufenthaltswahrscheinlichkeit des Elektrons ≥ 90 % beträgt. Die Wellenfunktion ψ beschreibt den Quantenzustand; |ψ|² ist die Wahrscheinlichkeitsdichte.
 
-**γ-Strahlung**: Elektromagnetische Strahlung aus angeregten Kernen. Keine Änderung von Z oder A. Höchste Durchdringungsfähigkeit.
+## Emission und Absorption – Spektrallinien
 
-## Halbwertszeit
+Wenn ein Elektron von einer höheren Schale (n₂) auf eine niedrigere (n₁) fällt, wird ein **Photon** emittiert:
 
-**T½**: Zeit, nach der die Hälfte der radioaktiven Kerne zerfallen ist.
-N(t) = N₀ · (½)^(t/T½)
+> **E = hf = hc/λ**
 
-## Kernspaltung und -fusion
+mit h = 6,626 × 10⁻³⁴ J·s (Plancksches Wirkungsquantum), f = Frequenz, c ≈ 3 × 10⁸ m/s, λ = Wellenlänge.
 
-- **Spaltung**: Schwere Kerne (²³⁵U) spalten sich → Kernkraft, Kettenreaktion
-- **Fusion**: Leichte Kerne verschmelzen (H → He in Sonne) → große Energiemengen
+Die Energie des Photons entspricht der Energiedifferenz: ΔE = Eₙ₂ − Eₙ₁ = hf.
 
-## Für den MedAT
+Beim **Absorptionsspektrum** werden aus einem kontinuierlichen Spektrum bestimmte Wellenlängen absorbiert (dunkle Linien). Beim **Emissionsspektrum** leuchten nur bestimmte Wellenlängen (helle Linien auf dunklem Hintergrund).
 
-- α-Strahlung: stoppbar durch Papier; β: Aluminium; γ: Blei/dickes Beton
-- Halbwertszeit: exponentieller Zerfall
-- Medizinische Anwendungen: Röntgen (γ), PET (β⁺), Strahlentherapie
-`,
-      lernziele: [],
-      sections: [],
-      merksätze: [],
+Für **Wasserstoff** liefern Übergänge zur n = 2-Schale die **Balmer-Serie** (sichtbares Licht):
+- Hα: 656 nm (rot), Übergang 3→2
+- Hβ: 486 nm (blau-grün), Übergang 4→2
+- Hγ: 434 nm (violett), Übergang 5→2
+
+Übergänge zur n = 1-Schale ergeben die Lyman-Serie (UV), zur n = 3-Schale die Paschen-Serie (IR).
+
+## Spektrophotometrie – Lambert-Beer-Gesetz
+
+In der Praxis misst die **Spektrophotometrie** die Extinktion (Absorbanz) einer Lösung:
+
+> **A = ε · c · d**
+
+mit A = Extinktion (dimensionslos), ε = molarer Extinktionskoeffizient [L·mol⁻¹·cm⁻¹], c = Konzentration [mol/L], d = Schichtdicke [cm].
+
+Je mehr chromophore Moleküle in der Lösung und je länger der optische Weg, desto mehr Licht wird absorbiert. Die Transmission T = I/I₀ und Extinktion A = −log T = log(I₀/I) sind verknüpft.
+
+Klinisch relevant: **Hämoglobin-Absorptionsspektrum**. Oxygeniertes Hämoglobin (HbO₂) und desaturiertes Hämoglobin (Hb) haben unterschiedliche Absorptionsmaxima. Die **Pulsoximetrie** nutzt 660 nm (rotes Licht, Hb absorbiert stark) und 940 nm (nahes Infrarot, HbO₂ absorbiert stärker) zur nichtinvasiven Bestimmung der Sauerstoffsättigung.`,
+      lernziele: [
+        'Die Entwicklung von Thomson über Rutherford zum Bohrschen Atommodell und das quantenmechanische Modell erklären.',
+        'Die Photonenenergie E = hf = hc/λ berechnen und Spektrallinien auf Elektronenübergänge zurückführen.',
+        'Emissions- und Absorptionsspektren unterscheiden sowie die Balmer-Serie für Wasserstoff kennen.',
+        'Das Lambert-Beer-Gesetz A = ε·c·d formulieren und auf Konzentrationsmessungen anwenden.',
+        'Das Prinzip der Pulsoximetrie mit den Absorptionseigenschaften von Hb und HbO₂ erklären.',
+      ],
+      sections: [
+        {
+          heading: 'Atommodelle im Überblick',
+          text: 'Thomson: Elektronen in positiver Ladungswolke. Rutherford: Streuexperiment zeigt winzigen Massekern. Bohr: diskrete Elektronenschalen mit Energieniveaus Eₙ = −13,6 eV/n² für H. Quantenmechanik: Orbitale als Wahrscheinlichkeitsverteilungen (|ψ|²). Jedes Modell löst Probleme seines Vorgängers, hat aber selbst Grenzen – das Bohrsche Modell funktioniert exakt nur für wasserstoffähnliche Systeme.',
+          merksatz: 'Bohr-Postulat: Elektronen strahlen auf erlaubten Bahnen keine Energie ab; Emission/Absorption nur beim Schalensprung.',
+        },
+        {
+          heading: 'Photonen und Spektrallinien',
+          text: 'Jede Spektrallinie entspricht einem bestimmten Elektronenübergang. Energie des Photons: E = hf = hc/λ. Für Wasserstoff gilt die Balmer-Formel für sichtbare Linien (Übergänge auf n=2). Emissionsspektren sind "Fingerabdrücke" von Elementen. Absorptionsspektren entstehen, wenn Atome Photonen mit genau passender Energie aus dem Kontinuum herausfiltern.',
+          merksatz: 'E_Photon = hf = hc/λ; h = 6,626×10⁻³⁴ J·s. Balmer-Serie: Übergänge auf n=2 → sichtbares Licht.',
+        },
+        {
+          heading: 'Spektrophotometrie und Pulsoximetrie',
+          text: 'Lambert-Beer: A = ε·c·d – Extinktion proportional zu Konzentration und Schichtdicke. Pulsoximeter nutzen zwei Wellenlängen (660 nm und 940 nm), weil HbO₂ und Hb sich in ihren Absorptionsspektren unterscheiden. Aus dem Verhältnis der pulsatilen Signale wird die arterielle Sauerstoffsättigung SpO₂ berechnet. Normwert SpO₂ ≥ 95 %, unter 90 % liegt eine klinisch relevante Hypoxämie vor.',
+          merksatz: 'Lambert-Beer: A = ε·c·d. Pulsoximetrie: 660 nm (Hb) vs. 940 nm (HbO₂) → SpO₂.',
+        },
+      ],
+      merksätze: [
+        'Rutherford-Streuexperiment: Rückstreuung von α-Teilchen beweist kleinen, dichten, positiven Atomkern.',
+        'Bohr: Elektronen auf diskreten Schalen (n=1,2,3…); Energieniveaus für H: Eₙ = −13,6 eV/n².',
+        'Photon bei Schalensprung: E = hf = hc/λ; h = 6,626×10⁻³⁴ J·s.',
+        'Balmer-Serie (H): Übergänge auf n=2, sichtbares Licht; Hα = 656 nm (rot), Hβ = 486 nm (blau-grün).',
+        'Quantenmechanisches Modell: Orbitale = Räume mit 90 % Aufenthaltswahrscheinlichkeit (|ψ|²).',
+        'Lambert-Beer-Gesetz: A = ε·c·d – Extinktion linear zu Konzentration und Schichtdicke.',
+        'Pulsoximetrie: 660 nm (Hb absorbiert stark) und 940 nm (HbO₂ absorbiert stärker).',
+        'Absorptionsspektrum: dunkle Linien im Kontinuum (Atome absorbieren Photonen bestimmter Energie).',
+        'Emissionsspektrum: helle Linien = charakteristische Wellenlängen bei Elektronenübergängen nach unten.',
+        'SpO₂-Normwert: ≥ 95 %; < 90 % = klinische Hypoxämie.',
+      ],
+      altfrage: {
+        question: 'Erläutern Sie das Bohrsche Atommodell und erklären Sie, wie Spektrallinien entstehen. Gehen Sie dabei auf die Photonenenergie ein.',
+        answer: 'Das Bohrsche Atommodell (1913) postuliert, dass Elektronen in Wasserstoffatomen nur auf bestimmten, diskreten Kreisbahnen um den Kern umlaufen dürfen, ohne dabei Energie abzustrahlen. Diese Bahnen sind durch die Hauptquantenzahl n = 1, 2, 3, ... charakterisiert. Die zugehörigen Energieniveaus für Wasserstoff berechnen sich nach Eₙ = −13,6 eV/n². Die innerste Bahn (n=1, Grundzustand) hat die niedrigste Energie (−13,6 eV), höhere Bahnen sind energiereicher (weniger negativ). Wenn ein Elektron von einer höheren Schale n₂ auf eine niedrigere Schale n₁ fällt (n₂ > n₁), gibt es die Energiedifferenz ΔE = Eₙ₂ − Eₙ₁ in Form eines Photons ab. Die Frequenz dieses Photons ergibt sich aus E = hf, also f = ΔE/h, mit dem Planckschen Wirkungsquantum h = 6,626 × 10⁻³⁴ J·s. Da es nur diskrete Energieniveaus gibt, können auch nur diskrete Photonenfrequenzen (und damit Wellenlängen λ = c/f) emittiert werden – dies erscheint als Linienspektrum. Umgekehrt können Atome im Grundzustand Photonen mit genau dieser Energie absorbieren und das Elektron auf eine höhere Schale heben (Absorptionsspektrum). Die Balmer-Serie für Wasserstoff umfasst alle Übergänge auf n=2: Hα (656 nm, rot), Hβ (486 nm, blau-grün) und weitere Linien im sichtbaren Bereich. Diese Linienspektren dienen als eindeutiger "Fingerabdruck" jedes Elements und werden in der Spektralanalyse zur Identifikation von Elementen genutzt.',
+      },
+      klinischerBezug: 'Pulsoximetrie (SpO₂): nutzt unterschiedliche Absorption von Hb (660 nm) und HbO₂ (940 nm). Lambert-Beer-Gesetz ist Grundlage aller photometrischen Laboranalysen (Hämoglobin, Bilirubin, Glucose-Oxidase-Tests).',
       selfTest: [
         {
-          question: "Aus welchen Teilchen besteht ein Atom im Kern-Hülle-Modell?",
+          question: 'Welches Experiment bewies, dass Atome einen kleinen, dichten, positiv geladenen Kern besitzen?',
           options: [
-          "Protonen im Kern, Elektronen in der Hülle",
-          "Protonen und Neutronen im Kern, Elektronen in der Hülle",
-          "Protonen und Elektronen im Kern, Neutronen in der Hülle",
-          "Nur Protonen im Kern, Neutronen und Elektronen in der Hülle",
-          "Protonen, Neutronen und Elektronen im Kern"
+            'Das Doppelspaltexperiment von Young',
+            'Das Photoelektrische-Effekt-Experiment von Lenard',
+            'Das Goldfolien-Streuexperiment von Rutherford',
+            'Die Messung der Elektronenmasse durch Thomson',
+            'Die Spektralanalyse von Kirchhoff und Bunsen',
           ],
-          correctIndex: 1,
-          explanation: "Der Atomkern besteht aus positiv geladenen Protonen und ungeladenen Neutronen (zusammen Nukleonen genannt). Die negativ geladenen Elektronen befinden sich in der Atomhülle und bewegen sich in Orbitalen um den Kern.",
+          correctIndex: 2,
+          explanation: 'Im Rutherford-Streuexperiment (1911) wurden Alpha-Teilchen auf eine dünne Goldfolie geschossen. Die meisten Teilchen passierten ungehindert, aber einige wurden unter großen Winkeln – sogar zurück – gestreut. Diese Beobachtung ließ sich nur erklären, wenn sich die gesamte positive Ladung und nahezu die gesamte Masse auf einen winzigen Kern (Radius ≈ 10⁻¹⁵ m) konzentriert, umgeben von einer weitgehend leeren Hülle (Radius ≈ 10⁻¹⁰ m). Das Thomson-Modell hätte diese starke Rückstreuung nicht erzeugt. Rutherford schloss aus dem Anteil der stark gestreuten Teilchen auf die ungefähre Kerngröße.',
+          hints: [
+            'Denke daran: Welches Experiment schoss geladene Teilchen auf eine Metallfolie und beobachtete unerwartete Rückstreuung?',
+            'Das Ergebnis überraschte Rutherford selbst: "Als würde man eine Artilleriegranate auf Seidenpapier schießen und sie springt zurück."',
+          ],
+          tags: [],
           difficulty: 1,
         },
         {
-          question: "Was versteht man unter der Ordnungszahl (Kernladungszahl) Z eines Elements?",
+          question: 'Ein Elektron im Wasserstoffatom fällt von der Schale n=4 auf n=2 (Balmer-Serie). Die Energiedifferenz beträgt 2,55 eV. Welche Wellenlänge hat das emittierte Photon? (h = 6,63×10⁻³⁴ J·s, c = 3×10⁸ m/s, 1 eV = 1,6×10⁻¹⁹ J)',
           options: [
-          "Die Anzahl der Neutronen im Atomkern",
-          "Die Summe aus Protonen und Neutronen",
-          "Die Anzahl der Protonen im Atomkern",
-          "Die Anzahl der Elektronen in der äußersten Schale",
-          "Die relative Atommasse des Elements"
-          ],
-          correctIndex: 2,
-          explanation: "Die Ordnungszahl Z gibt die Anzahl der Protonen im Atomkern an. Sie bestimmt die chemischen Eigenschaften des Elements und seine Position im Periodensystem. Bei neutralen Atomen entspricht Z auch der Anzahl der Elektronen.",
-          difficulty: 1,
-        },
-        {
-          question: "Was sind Isotope?",
-          options: [
-          "Atome mit gleicher Neutronenzahl aber unterschiedlicher Protonenzahl",
-          "Atome mit gleicher Elektronenzahl aber unterschiedlicher Protonenzahl",
-          "Atome mit gleicher Protonenzahl aber unterschiedlicher Neutronenzahl",
-          "Atome mit gleicher Massenzahl aber unterschiedlicher Ladung",
-          "Atome mit gleicher Elektronenkonfiguration aber unterschiedlicher Masse"
-          ],
-          correctIndex: 2,
-          explanation: "Isotope sind Atome desselben Elements (gleiche Protonenzahl Z), die sich in der Anzahl der Neutronen unterscheiden. Beispiel: ¹²C und ¹⁴C sind beide Kohlenstoff-Isotope mit 6 Protonen, aber 6 bzw. 8 Neutronen.",
-          difficulty: 2,
-        },
-        {
-          question: "Welche Hauptquantenzahl n beschreibt die erste Elektronenschale (K-Schale)?",
-          options: [
-          "n = 0",
-          "n = 1",
-          "n = 2",
-          "n = 3",
-          "n = 4"
+            '122 nm (UV)',
+            '486 nm (blau-grün, sichtbar)',
+            '656 nm (rot, sichtbar)',
+            '820 nm (nahes IR)',
+            '1280 nm (IR)',
           ],
           correctIndex: 1,
-          explanation: "Die Hauptquantenzahl n nimmt ganzzahlige Werte ab 1 an. n = 1 bezeichnet die K-Schale (erste Schale), n = 2 die L-Schale, n = 3 die M-Schale usw. Die Hauptquantenzahl bestimmt die Energie und den mittleren Abstand der Elektronen vom Kern.",
-          difficulty: 2,
-        },
-        {
-          question: "Wie viele Elektronen können maximal in der zweiten Elektronenschale (L-Schale) untergebracht werden?",
-          options: [
-          "2 Elektronen",
-          "4 Elektronen",
-          "6 Elektronen",
-          "8 Elektronen",
-          "10 Elektronen"
+          explanation: 'Energie: ΔE = 2,55 eV × 1,6×10⁻¹⁹ J/eV = 4,08×10⁻¹⁹ J. Wellenlänge: λ = hc/ΔE = (6,63×10⁻³⁴ × 3×10⁸) / 4,08×10⁻¹⁹ = 19,89×10⁻²⁶ / 4,08×10⁻¹⁹ ≈ 4,87×10⁻⁷ m = 487 nm ≈ 486 nm. Dies ist die Hβ-Linie der Balmer-Serie, blau-grünes Licht. Die 656 nm-Linie (Hα) entspricht dem Übergang 3→2 mit einer Energiedifferenz von 1,89 eV, die 122 nm-Linie gehört zur Lyman-Serie (Übergang auf n=1).',
+          hints: [
+            'Formel: λ = hc/E. Wandle zuerst eV in Joule um: 1 eV = 1,6×10⁻¹⁹ J.',
+            'Balmer-Serie liegt im sichtbaren Bereich (380–750 nm). Die 4→2-Linie ist die Hβ-Linie.',
           ],
-          correctIndex: 3,
-          explanation: "Die maximale Elektronenzahl pro Schale berechnet sich nach 2n². Für die L-Schale (n = 2) gilt: 2 × 2² = 8 Elektronen. Diese verteilen sich auf das 2s-Orbital (2 e⁻) und drei 2p-Orbitale (6 e⁻).",
-          difficulty: 1,
-        },
-        {
-          question: "Welche Aussage über s-Orbitale ist korrekt?",
-          options: [
-          "s-Orbitale haben eine hantelförmige Struktur",
-          "s-Orbitale können maximal 6 Elektronen aufnehmen",
-          "s-Orbitale sind kugelförmig symmetrisch",
-          "s-Orbitale existieren erst ab der zweiten Schale",
-          "s-Orbitale haben die Nebenquantenzahl l = 1"
-          ],
-          correctIndex: 2,
-          explanation: "s-Orbitale sind kugelsymmetrisch (nicht hantelförmig wie p-Orbitale) und können maximal 2 Elektronen mit entgegengesetztem Spin aufnehmen. Sie existieren in jeder Schale (1s, 2s, 3s...) und haben die Nebenquantenzahl l = 0.",
-          difficulty: 2,
-        },
-        {
-          question: "Ein Elektron im Wasserstoffatom befindet sich im 3d-Orbital. Welche Quantenzahlen sind möglich?",
-          options: [
-          "n = 3, l = 0",
-          "n = 3, l = 1",
-          "n = 3, l = 2",
-          "n = 3, l = 3",
-          "n = 2, l = 2"
-          ],
-          correctIndex: 2,
-          explanation: "Für d-Orbitale gilt l = 2. Die Hauptquantenzahl n muss mindestens l + 1 sein, also n ≥ 3 für d-Orbitale. Daher ist 3d mit n = 3 und l = 2 korrekt. Die Nebenquantenzahl l kann Werte von 0 bis n-1 annehmen.",
+          tags: [],
           difficulty: 3,
         },
         {
-          question: "Was besagt das Pauli-Prinzip für Elektronen in Atomen?",
+          question: 'Das Lambert-Beer-Gesetz lautet A = ε·c·d. Eine Lösung hat bei 540 nm einen molaren Extinktionskoeffizienten ε = 1000 L·mol⁻¹·cm⁻¹. Die Schichtdicke beträgt 1 cm und die gemessene Extinktion A = 0,5. Welche Konzentration hat die Lösung?',
           options: [
-          "Elektronen besetzen zürst die energieärmsten Orbitale",
-          "Keine zwei Elektronen können in allen Quantenzahlen übereinstimmen",
-          "Elektronen in einem Orbital haben parallele Spins",
-          "Orbitale werden zürst einfach, dann doppelt besetzt",
-          "Die Elektronenzahl entspricht der Protonenzahl"
+            '0,05 mmol/L',
+            '0,5 mmol/L',
+            '5 mmol/L',
+            '50 mmol/L',
+            '500 mmol/L',
           ],
           correctIndex: 1,
-          explanation: "Das Pauli-Ausschlussprinzip besagt, dass sich keine zwei Elektronen in einem Atom in allen vier Quantenzahlen (n, l, ml, ms) gleichen dürfen. Daher können in einem Orbital maximal zwei Elektronen mit entgegengesetztem Spin sein.",
-          difficulty: 1,
-        },
-        {
-          question: "Welche Kraft hält die Protonen im Atomkern zusammen, obwohl sie sich elektrisch abstoßen?",
-          options: [
-          "Die elektromagnetische Kraft",
-          "Die Gravitationskraft",
-          "Die schwache Wechselwirkung",
-          "Die starke Wechselwirkung (Kernkraft)",
-          "Die Van-der-Waals-Kraft"
+          explanation: 'Aus A = ε·c·d folgt: c = A/(ε·d) = 0,5 / (1000 L·mol⁻¹·cm⁻¹ × 1 cm) = 0,5 / 1000 mol/L = 0,0005 mol/L = 0,5 mmol/L. Das Lambert-Beer-Gesetz ist die Grundlage aller photometrischen Konzentrationsbestimmungen im Labor. Die Extinktion A ist dimensionslos und definiert als A = log₁₀(I₀/I) = −log₁₀(T), wobei T die Transmission ist. Bei A = 0,5 beträgt die Transmission T = 10⁻⁰·⁵ ≈ 31,6 %, d.h. nur etwa 32 % des Lichtes passieren die Küvette.',
+          hints: [
+            'Stelle A = ε·c·d nach c um: c = A/(ε·d).',
+            'Achte auf die Einheiten: ε in L·mol⁻¹·cm⁻¹, d in cm, c kommt in mol/L heraus.',
           ],
-          correctIndex: 3,
-          explanation: "Die starke Wechselwirkung (starke Kernkraft) ist die stärkste der vier Grundkräfte und wirkt nur auf sehr kurze Distanzen (ca. 10⁻¹⁵ m). Sie bindet Quarks zu Nukleonen und Nukleonen untereinander im Kern, wobei sie die elektrische Abstoßung der Protonen überwindet.",
+          tags: [],
           difficulty: 2,
         },
         {
-          question: "Was ist die Reichweite der starken Wechselwirkung?",
+          question: 'Warum zeigen verschiedene Elemente unterschiedliche Emissionsspektren?',
           options: [
-          "Unendlich weit, nimmt aber mit dem Quadrat der Entfernung ab",
-          "Etwa 10⁻⁸ m (Atomdurchmesser)",
-          "Etwa 10⁻¹⁵ m (Kerndurchmesser)",
-          "Etwa 10⁻¹⁸ m (Protondurchmesser)",
-          "Etwa 10⁻³⁵ m (Planck-Länge)"
+            'Weil jedes Element eine andere Kernmasse hat',
+            'Weil die Elektronen verschiedener Elemente unterschiedliche diskrete Energieniveaus besitzen',
+            'Weil schwere Elemente mehr Elektronen haben und deshalb mehr Licht emittieren',
+            'Weil die Kernladung die Lichtgeschwindigkeit beeinflusst',
+            'Weil alle Elektronen auf der gleichen Schale sitzen, aber unterschiedlich schnell rotieren',
           ],
-          correctIndex: 2,
-          explanation: "Die starke Wechselwirkung hat eine sehr kurze Reichweite von etwa 10⁻¹⁵ m, was der Größenordnung des Atomkerns entspricht. Außerhalb dieser Distanz nimmt sie extrem schnell ab. Dies erklärt, warum sie zwar die stärkste Kraft ist, aber nur im Kernbereich wirkt.",
+          correctIndex: 1,
+          explanation: 'Die Energieniveaus der Elektronen sind spezifisch für jedes Element, da sie von der Kernladungszahl Z und der Wechselwirkung aller Elektronen untereinander abhängen. Für Wasserstoff (Z=1) gilt Eₙ = −13,6 eV/n², für andere Elemente gelten kompliziertere Formeln. Da Emissionslinien genau den Energiedifferenzen zwischen Niveaus entsprechen (E = hf), sind die Spektrallinien ein eindeutiger "Fingerabdruck" jedes Elements. Dies ist die Grundlage der Emissionsspektroskopie und der Flammenfärbung in der qualitativen Analyse.',
+          hints: [
+            'Spektrallinien entstehen durch Elektronenübergänge. Was ist elementspezifisch – die Kernladung bestimmt die Energieniveaus.',
+            'Wasserstoff (Z=1) hat andere Energieniveaus als Natrium (Z=11) – daher andere Spektrallinien.',
+          ],
+          tags: [],
           difficulty: 2,
         },
         {
-          question: "Welche Aussage über die schwache Wechselwirkung ist korrekt?",
+          question: 'Die Pulsoximetrie misst die arterielle Sauerstoffsättigung (SpO₂) mit zwei Wellenlängen. Welches Prinzip liegt dieser Messung zugrunde?',
           options: [
-          "Sie ist verantwortlich für den Zusammenhalt des Atomkerns",
-          "Sie vermittelt radioaktive Beta-Zerfälle",
-          "Sie wirkt nur zwischen Protonen",
-          "Sie hat eine größere Reichweite als die starke Wechselwirkung",
-          "Sie ist stärker als die elektromagnetische Kraft"
-          ],
-          correctIndex: 1,
-          explanation: "Die schwache Wechselwirkung ist verantwortlich für Beta-Zerfälle, bei denen sich Neutronen in Protonen umwandeln (oder umgekehrt). Sie wirkt auf Quarks und Leptonen und ist deutlich schwächer als die starke und elektromagnetische Kraft, aber stärker als die Gravitation.",
-          difficulty: 3,
-        },
-        {
-          question: "Warum sind schwere Atomkerne instabiler als leichte?",
-          options: [
-          "Weil die Gravitationskraft mit zunehmender Masse zunimmt",
-          "Weil die elektromagnetische Abstoßung langreichweitiger ist als die Kernkraft",
-          "Weil schwere Kerne mehr Elektronen haben",
-          "Weil die starke Kraft bei schweren Kernen verschwindet",
-          "Weil schwere Kerne keine Neutronen enthalten"
-          ],
-          correctIndex: 1,
-          explanation: "Die starke Kernkraft wirkt nur auf kurze Distanzen zwischen benachbarten Nukleonen. Die elektrische Abstoßung zwischen Protonen wirkt dagegen über größere Entfernungen. In großen Kernen summiert sich die Abstoßung aller Protonen, während die Kernkraft nur lokal wirkt, was zu Instabilität führt.",
-          difficulty: 2,
-        },
-        {
-          question: "Was ist ein Antiteilchen des Elektrons?",
-          options: [
-          "Das Proton",
-          "Das Positron",
-          "Das Neutron",
-          "Das Neutrino",
-          "Das Photon"
-          ],
-          correctIndex: 1,
-          explanation: "Das Positron ist das Antiteilchen des Elektrons. Es hat dieselbe Masse wie ein Elektron, aber positive Ladung. Bei der Begegnung von Elektron und Positron kommt es zur Paarvernichtung (Annihilation), wobei Energie in Form von Gammastrahlung freigesetzt wird.",
-          difficulty: 3,
-        },
-        {
-          question: "Was versteht man unter Kernspaltung?",
-          options: [
-          "Die Verschmelzung zweier leichter Kerne zu einem schwereren",
-          "Die Aufspaltung eines schweren Atomkerns in leichtere Fragmente",
-          "Die Emission eines Alpha-Teilchens aus dem Kern",
-          "Die Umwandlung eines Neutrons in ein Proton",
-          "Die Ionisation der Elektronenhülle"
-          ],
-          correctIndex: 1,
-          explanation: "Bei der Kernspaltung (Fission) wird ein schwerer Atomkern (z.B. ²³⁵U) durch Neutronenbeschuss in zwei oder mehr leichtere Kerne gespalten. Dabei werden 2-3 Neutronen und viel Energie freigesetzt. Dies ist das Prinzip von Kernkraftwerken und Atombomben.",
-          difficulty: 2,
-        },
-        {
-          question: "Welches Isotop wird hauptsächlich in Kernreaktoren für die kontrollierte Kernspaltung verwendet?",
-          options: [
-          "²³⁸U (Uran-238)",
-          "²³⁵U (Uran-235)",
-          "²³²Th (Thorium-232)",
-          "²⁴⁰Pu (Plutonium-240)",
-          "¹²C (Kohlenstoff-12)"
-          ],
-          correctIndex: 1,
-          explanation: "²³⁵U ist das einzige in der Natur vorkommende spaltbare Isotop und wird in Kernreaktoren verwendet. Es macht nur 0,7% des natürlichen Urans aus (99,3% ist ²³⁸U). Thermische Neutronen können ²³⁵U effektiv spalten, während ²³⁸U nur durch schnelle Neutronen spaltbar ist.",
-          difficulty: 2,
-        },
-        {
-          question: "Was ist die Funktion von Moderatoren in Kernreaktoren?",
-          options: [
-          "Sie absorbieren überschüssige Neutronen zur Steuerung der Kettenreaktion",
-          "Sie verlangsamen schnelle Neutronen auf thermische Geschwindigkeiten",
-          "Sie schirmen die Umgebung vor Strahlung ab",
-          "Sie kühlen den Reaktorkern",
-          "Sie wandeln radioaktive Abfälle um"
-          ],
-          correctIndex: 1,
-          explanation: "Moderatoren (z.B. Wasser, Graphit, schweres Wasser) bremsen die bei der Spaltung entstehenden schnellen Neutronen durch elastische Stöße ab. Langsame (thermische) Neutronen haben eine viel höhere Wahrscheinlichkeit, weitere ²³⁵U-Kerne zu spalten, was die Kettenreaktion aufrechterhält.",
-          difficulty: 3,
-        },
-        {
-          question: "Was ist die kritische Masse bei der Kernspaltung?",
-          options: [
-          "Die Masse, bei der ein Reaktor überhitzt",
-          "Die minimale Masse, bei der eine selbsterhaltende Kettenreaktion möglich ist",
-          "Die Masse eines einzelnen Uranatoms",
-          "Die maximal zulässige Masse in einem Reaktor",
-          "Die Masse der Spaltprodukte nach einer Reaktion"
-          ],
-          correctIndex: 1,
-          explanation: "Die kritische Masse ist die minimale Menge spaltbaren Materials, bei der im Durchschnitt mindestens ein freigesetztes Neutron eine weitere Spaltung auslöst. Unterhalb der kritischen Masse entweichen zu viele Neutronen nach außen, und die Kettenreaktion erlischt.",
-          difficulty: 2,
-        },
-        {
-          question: "Was versteht man unter Kernfusion?",
-          options: [
-          "Die Spaltung schwerer Atomkerne",
-          "Die Verschmelzung leichter Atomkerne zu schwereren",
-          "Die Anlagerung von Neutronen an den Kern",
-          "Die Emission von Gammastrahlung",
-          "Die Umwandlung von Materie in Antimaterie"
-          ],
-          correctIndex: 1,
-          explanation: "Bei der Kernfusion verschmelzen leichte Atomkerne (z.B. Wasserstoff-Isotope) zu schwereren Kernen unter Freisetzung enormer Energie. Dies ist der Energieproduktionsprozess in Sternen wie der Sonne. Fusion erfordert extrem hohe Temperaturen (Millionen Grad).",
-          difficulty: 2,
-        },
-        {
-          question: "Welche Fusionsreaktion findet hauptsächlich in der Sonne statt?",
-          options: [
-          "Die Verschmelzung von Helium zu Kohlenstoff",
-          "Die Proton-Proton-Kette, bei der Wasserstoff zu Helium fusioniert",
-          "Die Verschmelzung von Kohlenstoff zu Eisen",
-          "Die Spaltung von Uran zu Blei",
-          "Die Umwandlung von Neutronen zu Protonen"
-          ],
-          correctIndex: 1,
-          explanation: "In der Sonne läuft hauptsächlich die Proton-Proton-Kette ab: Vier Protonen (¹H) verschmelzen über mehrere Schritte zu einem Heliumkern (⁴He), wobei Positronen, Neutrinos und Gammastrahlung entstehen. Diese Reaktion erzeugt die Energie der Sonne.",
-          difficulty: 3,
-        },
-        {
-          question: "Warum ist die Kernfusion schwerer zu realisieren als die Kernspaltung?",
-          options: [
-          "Weil Fusionskerne radioaktiv sind",
-          "Weil extreme Temperaturen und Drücke nötig sind, um die Coulomb-Abstoßung zu überwinden",
-          "Weil Fusion weniger Energie freisetzt als Spaltung",
-          "Weil keine geeigneten Brennstoffe existieren",
-          "Weil Fusion nur im Vakuum stattfinden kann"
-          ],
-          correctIndex: 1,
-          explanation: "Damit positiv geladene Kerne fusionieren können, müssen sie die elektrische Abstoßung (Coulomb-Barriere) überwinden. Dies erfordert Temperaturen von mehreren Millionen Grad Celsius und hohen Druck. Die technische Herausforderung liegt im Einschluss des heißen Plasmas.",
-          difficulty: 3,
-        },
-        {
-          question: "Welche Isotope werden bevorzugt für kontrollierte Fusionsexperimente verwendet?",
-          options: [
-          "Uran-235 und Plutonium-239",
-          "Kohlenstoff-12 und Sauerstoff-16",
-          "Deuterium und Tritium",
-          "Helium-3 und Helium-4",
-          "Wasserstoff-1 und Wasserstoff-2"
-          ],
-          correctIndex: 2,
-          explanation: "Die D-T-Reaktion (Deuterium + Tritium → Helium-4 + Neutron) hat bei erreichbaren Temperaturen den höchsten Wirkungsquerschnitt. Deuterium ist in Meerwasser reichlich vorhanden, Tritium wird im Reaktor aus Lithium erbrütet. Diese Reaktion setzt 17,6 MeV pro Fusion frei.",
-          difficulty: 2,
-        },
-        {
-          question: "Warum wird bei Kernspaltung und Kernfusion Energie frei?",
-          options: [
-          "Weil Masse verloren geht und nach E = mc² in Energie umgewandelt wird",
-          "Weil chemische Bindungen aufgebrochen werden",
-          "Weil Elektronen von höheren auf tiefere Orbitale fallen",
-          "Weil Wärme aus der Umgebung aufgenommen wird",
-          "Weil kinetische Energie der Teilchen zunimmt"
+            'Hb und HbO₂ haben bei 660 nm und 940 nm unterschiedliche Absorptionskoeffizienten',
+            'Oxygeniertes Blut hat eine andere Viskosität als desaturiertes Blut',
+            'Die Herzfrequenz verändert die Lichtstreuung durch rote Blutkörperchen',
+            'Hb fluoresziert bei 660 nm, HbO₂ bei 940 nm',
+            'Das Reflexionsverhalten von Hämoglobin ändert sich mit dem pH-Wert',
           ],
           correctIndex: 0,
-          explanation: "Die Bindungsenergie pro Nukleon ist bei mittelschweren Kernen (um Eisen) am höchsten. Bei Fusion leichter Kerne und Spaltung schwerer Kerne entstehen stabilere Produkte mit höherer Bindungsenergie. Der Massendefekt wird nach Einsteins E = mc² in Energie umgewandelt.",
+          explanation: 'Hämoglobin (Hb) und Oxyhämoglobin (HbO₂) haben unterschiedliche Absorptionsspektren: Bei 660 nm (rotes Licht) absorbiert desaturiertes Hb deutlich stärker als HbO₂. Bei 940 nm (nahes Infrarot) ist es umgekehrt – HbO₂ absorbiert stärker. Das Pulsoximeter sendet beide Wellenlängen durch das Gewebe (Fingerkuppe, Ohrläppchen) und misst die pulsatile Änderung der Extinktion. Aus dem Verhältnis der Absorptionsänderungen bei beiden Wellenlängen berechnet der Algorithmus die SpO₂. Normwert ≥ 95 %; unter 90 % liegt eine klinisch bedeutsame Hypoxämie vor. Diese Methode ist nicht-invasiv und liefert kontinuierlich Messwerte.',
+          hints: [
+            'Das Lambert-Beer-Gesetz gilt: A = ε·c·d. Was unterscheidet Hb von HbO₂?',
+            'Bei 660 nm (rotes Licht): Hb absorbiert stark → venöses Blut sieht dunkelrot aus. HbO₂ absorbiert schwächer → arterielles Blut ist hellrot.',
+          ],
+          tags: [],
           difficulty: 2,
         },
         {
-          question: "Was versteht man unter Radioaktivität?",
+          question: 'Welche Aussage zum quantenmechanischen Atommodell ist korrekt?',
           options: [
-          "Die Emission elektromagnetischer Wellen durch heiße Körper",
-          "Die spontane Umwandlung instabiler Atomkerne unter Aussendung ionisierender Strahlung",
-          "Die Absorption von Röntgenstrahlung durch Materie",
-          "Die chemische Reaktion radioaktiver Stoffe mit Luft",
-          "Die Erwärmung radioaktiver Materialien"
-          ],
-          correctIndex: 1,
-          explanation: "Radioaktivität ist die spontane Umwandlung (Zerfall) instabiler Atomkerne unter Emission ionisierender Strahlung (Alpha-, Beta- oder Gammastrahlung). Dieser Prozess kann nicht durch äußere Bedingungen (Temperatur, Druck, chemische Bindung) beeinflusst werden.",
-          difficulty: 1,
-        },
-        {
-          question: "Was ist ein Alpha-Teilchen?",
-          options: [
-          "Ein hochenergetisches Elektron",
-          "Ein Heliumkern (2 Protonen, 2 Neutronen)",
-          "Ein hochenergetisches Photon",
-          "Ein freies Neutron",
-          "Ein Positron"
-          ],
-          correctIndex: 1,
-          explanation: "Ein Alpha-Teilchen besteht aus 2 Protonen und 2 Neutronen, ist also identisch mit einem Helium-4-Kern. Es trägt eine zweifach positive Ladung und hat eine relativ große Masse. Alpha-Strahlung hat geringe Durchdringungsfähigkeit (bereits durch Papier stoppbar).",
-          difficulty: 1,
-        },
-        {
-          question: "Wie ändert sich ein Atomkern beim Alpha-Zerfall?",
-          options: [
-          "Ordnungszahl Z erhöht sich um 2, Massenzahl A erhöht sich um 4",
-          "Ordnungszahl Z verringert sich um 1, Massenzahl A bleibt gleich",
-          "Ordnungszahl Z verringert sich um 2, Massenzahl A verringert sich um 4",
-          "Ordnungszahl Z bleibt gleich, Massenzahl A verringert sich um 4",
-          "Ordnungszahl Z und Massenzahl A bleiben unverändert"
+            'Elektronen bewegen sich auf elliptischen Bahnen um den Kern',
+            'Die Position eines Elektrons lässt sich gleichzeitig mit Impuls exakt bestimmen',
+            'Orbitale beschreiben Räume mit einer definierten Aufenthaltswahrscheinlichkeit des Elektrons',
+            'Das s-Orbital hat eine hantelförmige Form',
+            'Alle Elektronen einer Schale haben exakt dieselbe Energie',
           ],
           correctIndex: 2,
-          explanation: "Beim Alpha-Zerfall emittiert der Kern ein Alpha-Teilchen (⁴He). Dadurch verringert sich die Ordnungszahl um 2 (zwei Protonen weniger) und die Massenzahl um 4 (zwei Protonen und zwei Neutronen weniger). Beispiel: ²³⁸U → ²³⁴Th + ⁴He.",
+          explanation: 'Im quantenmechanischen Modell wird ein Elektron durch seine Wellenfunktion ψ beschrieben. Das Betragsquadrat |ψ|² gibt die Wahrscheinlichkeitsdichte an – d.h. die Wahrscheinlichkeit, das Elektron an einem bestimmten Ort zu finden. Orbitale sind die dreidimensionalen Bereiche, die etwa 90 % der Aufenthaltswahrscheinlichkeit einschließen. Das s-Orbital ist kugelsymmetrisch, p-Orbitale sind hantelförmig. Die Heisenbergsche Unschärferelation (Δx·Δp ≥ ℏ/2) verbietet es, Ort und Impuls gleichzeitig exakt zu kennen. Elektronen in Unterschalen (s, p, d, f) einer Schale haben etwas unterschiedliche Energien (Ausnahme: Wasserstoff).',
+          hints: [
+            'Das quantenmechanische Modell ersetzt feste Bahnen durch Wahrscheinlichkeitsverteilungen – Stichwort Unschärferelation.',
+            's-Orbital: kugelsymmetrisch. p-Orbital: hantelförmig. Orbitalform ≠ Elektronenbahn.',
+          ],
+          tags: [],
           difficulty: 2,
         },
         {
-          question: "Was ist Beta-minus-Strahlung?",
+          question: 'Licht der Wellenlänge 400 nm trifft auf ein Atom. Welche Photonenenergie hat dieses Licht in eV? (h = 6,63×10⁻³⁴ J·s, c = 3×10⁸ m/s, 1 eV = 1,6×10⁻¹⁹ J)',
           options: [
-          "Eine Emission von Protonen",
-          "Eine Emission von Neutronen",
-          "Eine Emission von Elektronen",
-          "Eine Emission von Positronen",
-          "Eine Emission von Photonen"
+            '1,2 eV',
+            '2,1 eV',
+            '3,1 eV',
+            '4,8 eV',
+            '6,2 eV',
           ],
           correctIndex: 2,
-          explanation: "Bei der Beta-minus-Strahlung wandelt sich ein Neutron im Kern in ein Proton um, wobei ein Elektron (β⁻) und ein Antineutrino emittiert werden. Die Ordnungszahl steigt um 1, die Massenzahl bleibt gleich. Beispiel: ¹⁴C → ¹⁴N + e⁻ + ν̄ₑ.",
-          difficulty: 1,
-        },
-        {
-          question: "Welche Aussage über Gamma-Strahlung ist korrekt?",
-          options: [
-          "Sie besteht aus geladenen Teilchen",
-          "Sie entsteht bei Übergängen zwischen Kernenergie-Niveaus",
-          "Sie hat geringere Energie als sichtbares Licht",
-          "Sie ist nur schwach durchdringend",
-          "Sie verändert die Ordnungszahl des Kerns"
+          explanation: 'E = hc/λ = (6,63×10⁻³⁴ J·s × 3×10⁸ m/s) / (400×10⁻⁹ m) = 19,89×10⁻²⁶ / 4×10⁻⁷ = 4,97×10⁻¹⁹ J. In eV: E = 4,97×10⁻¹⁹ J / 1,6×10⁻¹⁹ J/eV ≈ 3,1 eV. Licht mit 400 nm ist violettes Licht (Grenze zum UV). Zum Vergleich: rotes Licht (700 nm) hat etwa 1,77 eV, UV-C bei 200 nm hat 6,2 eV. Photonen mit Energien über etwa 3 eV können Biomoleküle direkt schädigen (DNA-Absorption im UV).',
+          hints: [
+            'Formel: E = hf = hc/λ. Zuerst E in Joule, dann Umrechnung: 1 eV = 1,6×10⁻¹⁹ J.',
+            'Kürzere Wellenlänge = höhere Frequenz = höhere Energie. 400 nm ist violett/UV-nahe.',
           ],
-          correctIndex: 1,
-          explanation: "Gamma-Strahlung ist hochenergetische elektromagnetische Strahlung (Photonen), die bei Übergängen zwischen angeregten Zuständen des Atomkerns entsteht. Sie verändert weder Ordnungszahl noch Massenzahl und hat die höchste Durchdringungsfähigkeit aller radioaktiven Strahlungsarten.",
-          difficulty: 2,
-        },
-        {
-          question: "Welche Strahlungsart hat die geringste Reichweite in Luft?",
-          options: [
-          "Gamma-Strahlung",
-          "Beta-Strahlung",
-          "Alpha-Strahlung",
-          "Röntgenstrahlung",
-          "Neutronenstrahlung"
-          ],
-          correctIndex: 2,
-          explanation: "Alpha-Strahlung hat aufgrund ihrer hohen Masse und Ladung die geringste Reichweite (wenige Zentimeter in Luft, gestoppt durch Papier). Beta-Strahlung erreicht einige Meter in Luft, Gamma-Strahlung hat die höchste Reichweite und benötigt dicke Blei- oder Betonschichten zur Abschirmung.",
-          difficulty: 2,
-        },
-        {
-          question: "Warum wird bei der Beta-Strahlung zusätzlich ein Neutrino emittiert?",
-          options: [
-          "Um die elektrische Ladung zu neutralisieren",
-          "Um Energie- und Impulserhaltung zu gewährleisten",
-          "Um die Massenzahl konstant zu halten",
-          "Um die Kernkraft zu verstärken",
-          "Um Gammastrahlung zu erzeugen"
-          ],
-          correctIndex: 1,
-          explanation: "Experimente zeigten, dass die Beta-Teilchen ein kontinuierliches Energiespektrum haben statt einer festen Energie. Pauli postulierte das Neutrino (bzw. Antineutrino), um die Energie- und Impulserhaltung zu erklären. Das Neutrino trägt die fehlende Energie und den Impuls.",
+          tags: [],
           difficulty: 3,
         },
+      ],
+    },
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // UK ph-7-02: Radioaktivität — Strahlenarten und Zerfallsgesetze
+    // ─────────────────────────────────────────────────────────────────────────
+    {
+      id: 'ph-7-02',
+      title: 'Radioaktivität – Strahlenarten und Zerfallsgesetze',
+      content: `# Radioaktivität – Strahlenarten und Zerfallsgesetze
+
+## Alpha-Strahlung (α)
+
+Alpha-Teilchen sind identisch mit einem **Helium-4-Kern**: 2 Protonen + 2 Neutronen, Masse ≈ 4 u, Ladung +2e.
+
+Beim α-Zerfall gilt:
+> ᴬ_Z X → ᴬ⁻⁴_(Z-2) Y + ⁴₂He
+
+Ordnungszahl sinkt um 2, Massenzahl sinkt um 4. Beispiel: ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He.
+
+**Eigenschaften:** Geringe Reichweite (wenige cm in Luft, wird von einem Blatt Papier oder der Hornhaut der Haut gestoppt). Hohe Ionisierungsdichte (gibt Energie auf sehr kurzer Strecke ab). Äußerlich: ungefährlich. Bei innerer Kontamination (Inhalation, Ingestion): extrem gefährlich (z.B. Radon-Zerfall in der Lunge, Polonium-210-Vergiftung).
+
+## Beta-minus-Strahlung (β⁻)
+
+Ein Neutron im Kern wandelt sich um:
+> n → p + e⁻ + ν̄ₑ (Antineutrino)
+
+> ᴬ_Z X → ᴬ_(Z+1) Y + e⁻ + ν̄ₑ
+
+Ordnungszahl steigt um 1, Massenzahl bleibt konstant. Beispiel: ¹⁴₆C → ¹⁴₇N + e⁻ + ν̄ₑ.
+
+**Eigenschaften:** Mittelgroße Reichweite (einige Meter in Luft, cm in Gewebe). Wird von einer Aluminium-Platte (~3 mm) gestoppt. Kontinuierliches Energiespektrum (Neutrino trägt Rest der Energie).
+
+## Gamma-Strahlung (γ)
+
+Gamma-Strahlung ist hochenergetische **elektromagnetische Strahlung** (Photonen, E > 100 keV). Sie entsteht, wenn ein nach einem α- oder β-Zerfall im angeregten Zustand verbleibender Tochterkern in den Grundzustand übergeht. Keine Änderung von Z oder A.
+
+**Eigenschaften:** Sehr hohe Durchdringungsfähigkeit; zur Abschirmung sind dicke Schichten Blei (mehrere cm) oder Beton (mehrere Dezimeter) nötig. Geringe Ionisierungsdichte pro Wegstrecke, aber große Reichweite in Gewebe.
+
+## Exponentieller Zerfall und Halbwertszeit
+
+Radioaktiver Zerfall ist ein statistischer Prozess. Die Anzahl N(t) noch nicht zerfallener Kerne nimmt exponentiell ab:
+
+> **N(t) = N₀ · e^(−λt)**
+
+λ = Zerfallskonstante [s⁻¹], charakteristisch für jedes Nuklid.
+
+Die **Halbwertszeit** T½ ist die Zeit, nach der die Hälfte der Kerne zerfallen ist:
+
+> **T½ = ln 2 / λ = 0,693 / λ**
+
+Äquivalent: N(T½) = N₀/2.
+
+Nach n Halbwertszeiten gilt: N(t) = N₀ · (1/2)ⁿ mit n = t/T½.
+
+## Aktivität
+
+Die **Aktivität** A gibt die Anzahl der Zerfälle pro Sekunde an:
+
+> **A = λ · N [Bq]**
+
+1 Becquerel (Bq) = 1 Zerfall/s. Frühere Einheit: 1 Curie (Ci) = 3,7 × 10¹⁰ Bq (Aktivität von 1 g ²²⁶Ra).
+
+Da N(t) = N₀ · e^(−λt), gilt auch A(t) = A₀ · e^(−λt).
+
+## Medizinische Isotope im Überblick
+
+| Isotop | Zerfall | T½ | Anwendung |
+|---|---|---|---|
+| ⁹⁹ᵐTc | γ (isomer) | 6 h | Szintigraphie (Knochen, Herz, Lunge) |
+| ¹³¹I | β⁻ + γ | 8 d | Schilddrüsen-Therapie, -Diagnostik |
+| ¹⁸F | β⁺ | 110 min | PET (FDG) |
+| ⁶⁷Ga | γ | 3,3 d | Infektions-/Tumorlokalisation |
+| ²⁰¹Tl | γ (EC) | 3,0 d | Myokard-Szintigraphie |
+
+Strahlendosen werden in **Gray (Gy)** (absorbierte Energie J/kg) und **Sievert (Sv)** (biologische Wirksamkeit = Gy × Strahlungs-Wichtungsfaktor w_R) gemessen. Für γ- und β-Strahlung gilt w_R = 1; für α-Strahlung w_R = 20.`,
+      lernziele: [
+        'Die drei Strahlungsarten (α, β⁻, γ) hinsichtlich Teilchenart, Ladung, Reichweite und Abschirmung beschreiben.',
+        'Das Zerfallsgesetz N(t) = N₀·e^(−λt) und die Halbwertszeit T½ = ln2/λ anwenden.',
+        'Aktivität A = λ·N in Becquerel berechnen und auf n Halbwertszeiten bezogene Berechnungen durchführen.',
+        'Die Änderung von Ordnungszahl und Massenzahl bei α- und β-Zerfällen angeben.',
+        'Medizinisch relevante Isotope (⁹⁹ᵐTc, ¹³¹I, ¹⁸F) und ihre Anwendungen kennen.',
+      ],
+      sections: [
         {
-          question: "Was versteht man unter der Aktivität einer radioaktiven Probe?",
-          options: [
-          "Die Gesamtenergie der emittierten Strahlung",
-          "Die Anzahl der Zerfälle pro Zeiteinheit",
-          "Die Masse des radioaktiven Materials",
-          "Die Temperatur der Probe",
-          "Die chemische Reaktivität des Materials"
-          ],
-          correctIndex: 1,
-          explanation: "Die Aktivität A gibt die Anzahl der Kernzerfälle pro Zeiteinheit an. Die SI-Einheit ist das Becquerel (Bq): 1 Bq = 1 Zerfall/s. Eine ältere Einheit ist das Curie (Ci): 1 Ci = 3,7 × 10¹⁰ Bq. Die Aktivität nimmt exponentiell mit der Zeit ab.",
-          difficulty: 2,
+          heading: 'Die drei klassischen Strahlungsarten',
+          text: 'Alpha-Strahlung: He-4-Kern, Ladung +2, geringe Reichweite (Papier), hohe Ionisierungsdichte, Z−2, A−4. Beta-minus: Elektron, Ladung −1, mittlere Reichweite (Aluminium), Z+1, A konstant. Gamma: Photon, keine Ladung, sehr hohe Reichweite (Blei/Beton nötig), keine Änderung von Z oder A. Merkregel Abschirmung: "PapierAluminiumBlei" für α, β, γ.',
+          merksatz: 'α: Papier stoppt; β: Aluminium stoppt; γ: Blei/Beton nötig. α: Z−2, A−4; β⁻: Z+1, A gleich.',
         },
         {
-          question: "Was ist die Halbwertszeit eines radioaktiven Isotops?",
+          heading: 'Exponentieller Zerfall und Halbwertszeit',
+          text: 'N(t) = N₀·e^(−λt) ist das fundamentale Zerfallsgesetz. Die Zerfallskonstante λ und die Halbwertszeit T½ sind verknüpft durch T½ = ln2/λ ≈ 0,693/λ. Praktisch: Nach n = t/T½ Halbwertszeiten gilt N = N₀·(1/2)ⁿ. Aktivität A = λ·N nimmt ebenso exponentiell ab. Einheit: Becquerel (Bq) = 1/s. 1 Ci = 3,7×10¹⁰ Bq.',
+          merksatz: 'T½ = 0,693/λ; nach n Halbwertszeiten: N = N₀·(½)ⁿ; Aktivität A = λ·N in Bq.',
+        },
+        {
+          heading: 'Medizinische Radionuklide',
+          text: '⁹⁹ᵐTc (T½=6h) ist das wichtigste Nuklid der Nuklearmedizin: reiner γ-Strahler, kurze HWZ → niedrige Strahlungsbelastung, gut verfügbar aus ⁹⁹Mo-Generator. ¹³¹I (β⁻+γ, T½=8d) wird für Schilddrüsentherapie genutzt: β⁻-Strahlung zerstört lokal Schilddrüsengewebe. ¹⁸F (β⁺, T½=110min) für PET: Positron trifft Elektron → zwei 511-keV-Gammaphotonen (Vernichtungsstrahlung). Strahlendosis: Gray (Gy) = J/kg absorbiert; Sievert (Sv) = Gy × w_R berücksichtigt biologische Wirksamkeit.',
+          merksatz: '⁹⁹ᵐTc: γ-Strahler, T½=6h, Szintigraphie. ¹³¹I: β⁻+γ, T½=8d, Schilddrüse. ¹⁸F: β⁺, T½=110min, PET.',
+        },
+      ],
+      merksätze: [
+        'α-Zerfall: A−4, Z−2 (Tochterkern 2 Positionen links im PSE); Abschirmung: Papier.',
+        'β⁻-Zerfall: A gleich, Z+1 (Tochterkern 1 Position rechts im PSE); Abschirmung: Aluminium.',
+        'γ-Strahlung: keine Änderung von A oder Z; Abschirmung: Blei (mehrere cm) oder Beton.',
+        'Zerfallsgesetz: N(t) = N₀·e^(−λt); Halbwertszeit T½ = ln2/λ ≈ 0,693/λ.',
+        'n Halbwertszeiten: N = N₀·(½)ⁿ – praktisch für Kopfrechnen.',
+        'Aktivität A = λ·N [Bq]; 1 Bq = 1 Zerfall/s; 1 Ci = 3,7×10¹⁰ Bq.',
+        '⁹⁹ᵐTc: T½ = 6 h, reiner γ-Strahler, wichtigstes Nuklid der Nuklearmedizin.',
+        '¹³¹I: T½ = 8 d, β⁻+γ, Schilddrüsentherapie (destruktiv) und -diagnostik.',
+        '¹⁸F: T½ = 110 min, β⁺-Strahler (Positronenemitter), Grundlage der PET.',
+        'Energiedosis in Gray (Gy = J/kg); Äquivalentdosis in Sievert (Sv = Gy × w_R); α: w_R = 20.',
+      ],
+      altfrage: {
+        question: 'Beschreiben Sie die drei Arten radioaktiver Strahlung und erklären Sie das Zerfallsgesetz. Welche Bedeutung haben diese Kenntnisse für die Medizin?',
+        answer: 'Die drei klassischen Strahlungsarten unterscheiden sich grundlegend in Teilchenart, Ladung und Durchdringungsvermögen. Alpha-Strahlung besteht aus Helium-4-Kernen (2 Protonen, 2 Neutronen, Ladung +2e), hat eine Reichweite von nur wenigen Zentimetern in Luft und wird von einem Blatt Papier oder der Epidermis gestoppt. Bei α-Zerfall sinkt die Ordnungszahl um 2 und die Massenzahl um 4. Beta-minus-Strahlung besteht aus Elektronen, die entstehen, wenn im Kern ein Neutron zu einem Proton, einem Elektron und einem Antineutrino zerfällt. Die Reichweite beträgt einige Meter in Luft; Aluminium (ca. 3 mm) reicht zur Abschirmung. Die Ordnungszahl steigt um 1, die Massenzahl bleibt konstant. Gamma-Strahlung ist hochenergetische elektromagnetische Strahlung, die beim Übergang angeregter Kerne in den Grundzustand entsteht; sie ändert weder A noch Z, hat aber die höchste Durchdringungsfähigkeit und erfordert Blei- oder Betonabschirmung. Radioaktiver Zerfall folgt dem Exponentialgesetz N(t) = N₀·e^(−λt) mit Halbwertszeit T½ = ln2/λ. Medizinisch bedeutsam: ⁹⁹ᵐTc als reiner γ-Strahler mit T½=6h für Szintigraphie (niedrige Strahlendosis, ideal für Bildgebung); ¹³¹I mit T½=8d für Schilddrüsentherapie (β⁻-Strahlung zerstört lokales Gewebe); ¹⁸F für PET (β⁺-Strahlung erzeugt Vernichtungsstrahlung). Die Dosimetrie unterscheidet Energiedosis (Gray: absorbierte Energie pro Masse) und Äquivalentdosis (Sievert: biologische Wirksamkeit).',
+      },
+      klinischerBezug: '⁹⁹ᵐTc-Szintigraphie (Knochen, Herz, Lunge, Niere): T½=6h minimiert Strahlendosis. ¹³¹I-Therapie bei Schilddrüsenkarzinom. ¹⁸F-FDG-PET: Tumordiagnostik und Therapiekontrolle via erhöhtem Glukosestoffwechsel.',
+      selfTest: [
+        {
+          question: 'Ein Radionuklid hat eine Halbwertszeit von 6 Stunden. Eine Probe hat zu Beginn eine Aktivität von 1600 Bq. Welche Aktivität hat sie nach 24 Stunden?',
           options: [
-          "Die Zeit, bis die Hälfte der Energie abgestrahlt wurde",
-          "Die Zeit, bis die Hälfte der ursprünglichen Atomkerne zerfallen ist",
-          "Die Zeit, bis die Aktivität auf null sinkt",
-          "Die halbe Lebensdauer eines einzelnen Atoms",
-          "Die Zeit bis zur halben Temperatur der Probe"
+            '200 Bq',
+            '100 Bq',
+            '50 Bq',
+            '25 Bq',
+            '400 Bq',
           ],
           correctIndex: 1,
-          explanation: "Die Halbwertszeit T₁/₂ ist die Zeit, nach der die Hälfte der ursprünglich vorhandenen radioaktiven Atomkerne zerfallen ist. Nach 2 × T₁/₂ sind noch 25% übrig, nach 3 × T₁/₂ noch 12,5% usw. Die Halbwertszeit ist charakteristisch für jedes Isotop.",
+          explanation: '24 Stunden / 6 Stunden = 4 Halbwertszeiten. Nach jeder Halbwertszeit halbiert sich die Aktivität: 1600 → 800 → 400 → 200 → 100 Bq. Allgemein: A(t) = A₀ · (1/2)ⁿ = 1600 · (1/2)⁴ = 1600 · 1/16 = 100 Bq. ⁹⁹ᵐTc hat eine Halbwertszeit von 6 Stunden – nach 24 Stunden sind nur noch 6,25 % der ursprünglichen Aktivität vorhanden, was die relativ geringe Strahlenbelastung bei nuklearmedizinischen Untersuchungen erklärt.',
+          hints: [
+            'Berechne zuerst n = t/T½ = 24h/6h = 4 Halbwertszeiten.',
+            'Nach n Halbwertszeiten: A = A₀ · (½)ⁿ.',
+          ],
+          tags: [],
           difficulty: 1,
         },
         {
-          question: "Eine radioaktive Probe hat eine Halbwertszeit von 8 Tagen. Nach 24 Tagen sind noch 10 g übrig. Wie viel Material war ursprünglich vorhanden?",
+          question: 'Wie ändert sich ein Atomkern beim Beta-minus-Zerfall?',
           options: [
-          "20 g",
-          "40 g",
-          "60 g",
-          "80 g",
-          "120 g"
+            'Ordnungszahl Z sinkt um 1, Massenzahl A sinkt um 1',
+            'Ordnungszahl Z steigt um 1, Massenzahl A bleibt gleich',
+            'Ordnungszahl Z sinkt um 2, Massenzahl A sinkt um 4',
+            'Ordnungszahl Z bleibt gleich, Massenzahl A steigt um 1',
+            'Ordnungszahl Z steigt um 2, Massenzahl A steigt um 4',
+          ],
+          correctIndex: 1,
+          explanation: 'Beim β⁻-Zerfall wandelt sich im Kern ein Neutron in ein Proton um: n → p + e⁻ + ν̄ₑ. Dadurch steigt die Protonenzahl (Ordnungszahl Z) um 1, während die Gesamtzahl der Nukleonen (Massenzahl A = Z + N) konstant bleibt, da ein Neutron durch ein Proton ersetzt wird. Beispiel: ¹⁴₆C → ¹⁴₇N. Im Periodensystem verschiebt sich der Tochterkern um eine Position nach rechts (höheres Z). Der α-Zerfall (Z−2, A−4) oder β⁺-Zerfall (Z−1, A gleich) verlaufen anders.',
+          hints: [
+            'β⁻-Zerfall: Ein Neutron wird zu einem Proton. Was passiert mit Z (Protonenzahl) und A (Nukleonenzahl)?',
+            'Massenzahl A = Protonen + Neutronen. Wenn n zu p wird, ändert sich A nicht.',
+          ],
+          tags: [],
+          difficulty: 1,
+        },
+        {
+          question: 'Die Zerfallskonstante eines Radionuklids beträgt λ = 0,0866 h⁻¹. Wie groß ist die Halbwertszeit?',
+          options: [
+            '4 Stunden',
+            '6 Stunden',
+            '8 Stunden',
+            '12 Stunden',
+            '24 Stunden',
+          ],
+          correctIndex: 2,
+          explanation: 'T½ = ln2/λ = 0,693/0,0866 h⁻¹ ≈ 8,0 Stunden. Dies entspricht der Halbwertszeit von ¹³¹I (genauer: 8,02 Tage – hier wurde ein vereinfachtes Rechenbeispiel mit Stunden gewählt). Die Umrechnung T½ = 0,693/λ ist die grundlegende Formel, die die Halbwertszeit mit der Zerfallskonstanten verknüpft. Für ⁹⁹ᵐTc (T½=6h) wäre λ = 0,693/6h = 0,1155 h⁻¹, für ¹⁸F (T½=110min ≈ 1,83h) wäre λ = 0,693/1,83h ≈ 0,379 h⁻¹.',
+          hints: [
+            'Formel: T½ = ln2/λ = 0,693/λ.',
+            'Einheiten beachten: λ in h⁻¹ → T½ in Stunden.',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Warum ist Alpha-Strahlung bei innerer Kontamination besonders gefährlich, obwohl sie äußerlich harmlos ist?',
+          options: [
+            'Weil Alpha-Teilchen im Körper schneller werden',
+            'Weil Alpha-Strahlung im Körper fluoresziert und Zellen aktiviert',
+            'Weil Alpha-Teilchen eine hohe Ionisierungsdichte haben und die gesamte Energie auf sehr kurzer Strecke im Gewebe deponieren',
+            'Weil Alpha-Teilchen die Blut-Hirn-Schranke leichter überwinden',
+            'Weil Alpha-Teilchen in der Lunge in Beta-Strahlung umgewandelt werden',
+          ],
+          correctIndex: 2,
+          explanation: 'Alpha-Teilchen sind wegen ihrer hohen Masse (4 u) und doppelten positiven Ladung (+2e) sehr effektive Ionisierer. Sie geben ihre kinetische Energie auf einer sehr kurzen Strecke (wenige Mikrometer in Gewebe) vollständig ab – man spricht von hoher linearer Energieübertragung (LET). Äußerlich werden sie von der toten Hornhaut gestoppt und schädigen keine lebenden Zellen. Bei innerer Kontamination (z.B. Inhalation von Radon oder Ingestion von Polonium-210) treffen die Alpha-Teilchen direkt auf lebende Zellen des Atemtrakts oder der Darmschleimhaut und verursachen schwere DNA-Schäden auf engstem Raum. Dies erklärt Radon als zweitwichtigste Ursache für Lungenkrebs.',
+          hints: [
+            'Außerhalb des Körpers: Haut stoppt Alpha-Strahlung. Im Körper: Es gibt keine schützende Barriere mehr.',
+            'Hohe Ionisierungsdichte bedeutet: viel Energie wird auf kurzer Strecke abgegeben → schwere lokale Schäden.',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Warum wird ⁹⁹ᵐTc bevorzugt in der nuklearmedizinischen Diagnostik eingesetzt?',
+          options: [
+            'Weil es ein reiner Alpha-Strahler ist und sich gut im Gewebe verteilt',
+            'Weil es eine sehr lange Halbwertszeit hat und eine einmalige Injektion für mehrere Tage reicht',
+            'Weil es ein reiner Gamma-Strahler mit kurzer Halbwertszeit (6 h) ist und gut an Trägermoleküle gekoppelt werden kann',
+            'Weil es natürlich im Körper vorkommt und daher keine Immunreaktion auslöst',
+            'Weil es durch Röntgenstrahlung aktiviert wird und keine externe Quelle braucht',
+          ],
+          correctIndex: 2,
+          explanation: '⁹⁹ᵐTc hat mehrere ideale Eigenschaften für die diagnostische Nuklearmedizin: Erstens ist es ein reiner Gamma-Strahler mit einer Gammaenergie von 140 keV – optimal für Gammakameras, keine α- oder β-Strahlung erhöht die Strahlendosis. Zweitens ist die Halbwertszeit von 6 Stunden kurz genug für eine niedrige Strahlendosis, aber lang genug für die Untersuchungsdauer. Drittens ist ⁹⁹ᵐTc aus dem ⁹⁹Mo-Generator täglich frisch verfügbar (⁹⁹Mo hat T½=66h). Viertens lässt es sich chemisch leicht an verschiedene Trägermoleküle (Phosphonate für Knochen, MIBI für Herz, MAG3 für Niere) koppeln. Das "m" steht für metastabil – isomerer Zustand des Kerns.',
+          hints: [
+            'Für Diagnostik: Man will sehen, nicht heilen → Strahlung sollte den Körper verlassen können (γ) und die Dosis gering sein (kurze T½).',
+            '⁹⁹ᵐTc "m" = metastabil; reiner γ-Strahler; T½ = 6h → ideal für Bildgebung.',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Eine Probe von ¹³¹I hat anfangs 800 Bq. ¹³¹I hat eine Halbwertszeit von 8 Tagen. Nach wie vielen Tagen beträgt die Aktivität noch 100 Bq?',
+          options: [
+            '16 Tage',
+            '24 Tage',
+            '32 Tage',
+            '40 Tage',
+            '48 Tage',
+          ],
+          correctIndex: 1,
+          explanation: 'Gesucht: Anzahl n der Halbwertszeiten, bis A = 100 Bq. 800 · (1/2)ⁿ = 100 → (1/2)ⁿ = 100/800 = 1/8 = (1/2)³ → n = 3. Kontrolle: 800 → 400 (8d) → 200 (16d) → 100 (24d). Die Zeit beträgt t = n · T½ = 3 · 8 d = 24 Tage. Dies ist klinisch relevant: Nach der ¹³¹I-Schilddrüsentherapie muss der Patient Kontaktbeschränkungen einhalten, bis die Aktivität unter einen Schwellenwert fällt.',
+          hints: [
+            'Stelle A = A₀·(½)ⁿ nach n um, dann t = n·T½.',
+            'Wieviel mal muss man 800 halbieren, bis man 100 erhält? 800 → 400 → 200 → 100 (3 Schritte).',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Was ist der Unterschied zwischen der Energiedosis (Gray) und der Äquivalentdosis (Sievert)?',
+          options: [
+            'Gray misst die Anzahl der Zerfälle; Sievert die absorbierte Energie',
+            'Gray ist die absorbierte Energie pro Masse; Sievert berücksichtigt zusätzlich die biologische Wirksamkeit der Strahlenart',
+            'Gray gilt für Gamma-Strahlung; Sievert nur für Alpha-Strahlung',
+            'Sievert ist immer größer als Gray, weil es eine höhere Energieeinheit ist',
+            'Gray und Sievert sind für alle Strahlungsarten identisch',
+          ],
+          correctIndex: 1,
+          explanation: 'Die Energiedosis D in Gray (1 Gy = 1 J/kg) misst die pro Masseneinheit absorbierte Strahlungsenergie – unabhängig von der Strahlungsart. Die Äquivalentdosis H in Sievert berücksichtigt, dass verschiedene Strahlungsarten bei gleicher absorbierter Energie unterschiedlich stark biologisch wirken: H = D · w_R. Der Strahlungs-Wichtungsfaktor w_R beträgt für Röntgen/γ/β: 1; für Neutronen: 5–20 (je nach Energie); für α-Strahlung: 20. Für γ- und β-Strahlung gilt daher numerisch 1 Gy = 1 Sv, für α-Strahlung aber: 1 Gy entspricht 20 Sv Äquivalentdosis. Die effektive Dosis (ebenfalls in Sv) berücksichtigt zusätzlich die Strahlenempfindlichkeit verschiedener Organe.',
+          hints: [
+            'Gray = physikalische Größe (J/kg). Sievert = biologisch gewichtete Größe.',
+            'Gleichung: H [Sv] = D [Gy] × w_R. Für α-Strahlung: w_R = 20, also besonders schädlich.',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+      ],
+    },
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // UK ph-7-03: Röntgenstrahlung und Strahlenwirkung
+    // ─────────────────────────────────────────────────────────────────────────
+    {
+      id: 'ph-7-03',
+      title: 'Röntgenstrahlung und Strahlenwirkung',
+      content: `# Röntgenstrahlung und Strahlenwirkung
+
+## Entstehung von Röntgenstrahlung
+
+In einer **Röntgenröhre** werden Elektronen aus einer Glühkathode emittiert und durch eine Hochspannung (typisch 30–150 kV) zur Anode (meist Wolfram) beschleunigt. Beim Auftreffen auf die Anode entstehen zwei Arten von Röntgenstrahlung:
+
+**1. Bremsstrahlung:** Die Elektronen werden im Coulomb-Feld der Atome abgebremst. Die dabei abgegebene kinetische Energie wird als Photon emittiert. Es entsteht ein kontinuierliches Spektrum mit einer minimalen Wellenlänge λ_min = hc/(e·U), entsprechend der maximalen Photonenenergie E_max = e·U. Mit U = 100 kV ergibt sich E_max = 100 keV.
+
+**2. Charakteristische Strahlung:** Wenn ein eintreffendes Elektron ein kernnahes Elektron aus dem Wolframatom schlägt, fällt ein Elektron von einer äußeren Schale in die entstehende Lücke und emittiert dabei ein Photon mit einer für Wolfram spezifischen Energie (diskrete Linien). Diese Linien überlagern das Bremsspektrum.
+
+## Röntgenabsorption im Gewebe
+
+Röntgenphotonen werden durch drei Wechselwirkungen geschwächt:
+- **Photoelektrischer Effekt** (dominiert bei niedrigen Energien, Z⁴-Abhängigkeit): Photon überträgt gesamte Energie auf Hüllenelektron → Ion + freies Elektron.
+- **Compton-Effekt** (dominiert bei mittleren Energien, 100 keV–10 MeV): Photon wird an einem (quasi-)freien Elektron gestreut, gibt einen Teil seiner Energie ab.
+- **Paarbildung** (erst ab 1,02 MeV, da Ruheenergie von e⁻+e⁺ = 2×0,511 MeV): Photon erzeugt Elektron-Positron-Paar.
+
+Die **Schwächung** eines monoenergetischen Röntgenstrahls folgt dem exponentiellen Gesetz:
+
+> **I(x) = I₀ · e^(−μx)**
+
+μ = linearer Schwächungskoeffizient [cm⁻¹], abhängig von Photonenenergie und Material. Dichtes Material (hohe Ordnungszahl, hohe Dichte) → großes μ → starke Abschwächung. Knochen (Ca, Z=20) absorbiert mehr als Weichgewebe; Blei (Z=82) ist optimales Abschirmmaterial.
+
+Die **Halbwertsschichtdicke** (HVL = Half Value Layer) ist die Materialdicke, die die Intensität auf die Hälfte reduziert: HVL = ln2/μ.
+
+## Biologische Strahlenwirkung
+
+**Direkte Wirkung:** Ionisierende Strahlung trifft direkt auf DNA-Moleküle → Einzel- oder Doppelstrangbrüche, Basenmodifikationen, Vernetzungen.
+
+**Indirekte Wirkung (dominant, ≈70 %):** Strahlung ionisiert Wasser → Bildung freier Radikale (OH•, H•, e_aq). Diese reaktiven Spezies greifen dann die DNA an.
+
+**DNA-Schäden:**
+- Einzelstrangbrüche: oft reparierbar (Matrize vorhanden)
+- Doppelstrangbrüche: schwer zu reparieren, führen zu Chromosomenaberrationen, Mutation oder Zelltod
+- Bei hohen Dosen: Zelluntergang, bei mittleren: genomische Instabilität
+
+**Strahlenempfindlichkeit** (Bergonié-Tribondeau-Gesetz): Teilende Zellen sind strahlenempfindlicher als ruhende. Reihenfolge (abnehmend): Lymphozyten > Knochenmarkszellen > Epithelzellen des Darms/Gonaden > Muskelzellen > Nervenzellen.
+
+**Strahlenwirkungstypen:**
+- **Stochastische Effekte:** kein Schwellenwert, Wahrscheinlichkeit steigt linear mit Dosis; Beispiele: Krebsinduktion, Erbgutveränderungen.
+- **Deterministische (nicht-stochastische) Effekte:** treten erst oberhalb einer Schwellendosis auf; Schwere nimmt mit der Dosis zu; Beispiele: Strahlenkater, Epilation, Strahlenkatarrh, akutes Strahlensyndrom.
+
+## Strahlenschutzgrundsätze
+
+Die drei ALARA-Prinzipien (As Low As Reasonably Achievable):
+1. **Abstand:** Intensität nimmt mit 1/r² ab (inverse Quadratwurzel)
+2. **Zeit:** Dosis = Dosisleistung × Zeit – Expositionszeit minimieren
+3. **Abschirmung:** geeignetes Material zwischen Quelle und Person
+
+Typische effektive Dosen: Röntgen Thorax ≈ 0,02–0,1 mSv; Mammographie ≈ 0,4 mSv; CT Thorax ≈ 7 mSv; CT Abdomen ≈ 10 mSv; natürliche Hintergrundstrahlung ≈ 2,1 mSv/Jahr (Deutschland/Österreich).`,
+      lernziele: [
+        'Die Entstehung von Bremsstrahlung und charakteristischer Strahlung in der Röntgenröhre erklären.',
+        'Das Schwächungsgesetz I = I₀·e^(−μx) und die Halbwertsschichtdicke anwenden.',
+        'Die direkte und indirekte Strahlenwirkung auf DNA unterscheiden und DNA-Schadenstypen nennen.',
+        'Stochastische und deterministische Strahleneffekte definieren und das Schwellenwertkonzept erklären.',
+        'Die Strahlenschutzgrundsätze (Abstand, Zeit, Abschirmung) anwenden und typische Strahlendosen kennen.',
+      ],
+      sections: [
+        {
+          heading: 'Röntgenröhre: Brems- und charakteristische Strahlung',
+          text: 'Elektronen werden auf Wolfram-Anode beschleunigt (U = 30–150 kV). Bremsstrahlung: kontinuierliches Spektrum, E_max = eU. Charakteristische Strahlung: diskrete Linien bei spezifischen Energien des Anodenmaterials. λ_min = hc/(eU). Das resultierende Spektrum ist die Überlagerung beider Anteile. Je höher die Spannung, desto kürzer λ_min (härtere, durchdringendere Strahlung).',
+          merksatz: 'Röntgenröhre: Bremsstrahlung (kontinuierlich) + charakteristische Strahlung (Linien); E_max = eU; λ_min = hc/(eU).',
+        },
+        {
+          heading: 'Schwächungsgesetz und Gewebskontrast',
+          text: 'I = I₀·e^(−μx): Je größer μ (dichtes Material, hohe Ordnungszahl), desto stärker die Abschwächung. Knochen (Ca): μ groß → erscheint hell im Röntgenbild. Lunge (Luft): μ klein → erscheint dunkel. Kontrast im Röntgenbild basiert auf Unterschieden in μ zwischen verschiedenen Geweben. Blei (Z=82) hat das höchste μ und ist bestes Abschirmmaterial. Halbwertsschichtdicke HVL = ln2/μ.',
+          merksatz: 'I = I₀·e^(−μx); großes μ = starke Schwächung (Knochen/Blei hell im Röntgen). HVL = ln2/μ.',
+        },
+        {
+          heading: 'Biologische Wirkung und Strahlenschutz',
+          text: 'Direkte Wirkung: Strahlung trifft direkt DNA → Ionisation. Indirekte Wirkung (70 %): Radiolyse von Wasser → OH•-Radikale → DNA-Schäden. Doppelstrangbrüche sind die kritischsten Läsionen. Stochastische Effekte (Krebs, Mutation): kein Schwellenwert. Deterministische Effekte (Strahlenkater, Knochenmarksdepression): Schwellendosis. Strahlenschutz: ALARA – Abstand (1/r²), Zeit minimieren, Abschirmung.',
+          merksatz: 'Indirekte Wirkung dominiert (70 %): H₂O + Strahlung → OH• → DNA-Schäden. Doppelstrangbrüche = kritischste Läsion.',
+        },
+      ],
+      merksätze: [
+        'Röntgenröhre: Bremsstrahlung (kontinuierlich) + charakteristische Strahlung (elementspezifische Linien).',
+        'E_max (Photon) = eU; λ_min = hc/(eU) – höhere Spannung = kurzwelligere (härtere) Strahlung.',
+        'Schwächungsgesetz: I = I₀·e^(−μx); HVL = Halbwertsschichtdicke = ln2/μ.',
+        'Knochen (hohe Dichte, Ca): großes μ → hell im Röntgenbild. Lunge (Luft): kleines μ → dunkel.',
+        'Direkte Strahlenwirkung: Ionisation von DNA. Indirekte Wirkung (≈70 %): OH•-Radikale aus Radiolyse von Wasser.',
+        'Doppelstrangbrüche der DNA: schwer reparierbar → Mutation, Chromosomenaberration oder Zelltod.',
+        'Bergonié-Tribondeau: Teilende Zellen strahlenempfindlicher. Lymphozyten > Knochenmark > Darmepithel > Muskel > Nerv.',
+        'Stochastische Effekte: kein Schwellenwert, Beispiel Krebsentstehung (lineare Dosis-Wirkungs-Beziehung).',
+        'Deterministische Effekte: Schwellendosis, Beispiel akutes Strahlensyndrom (Schwere wächst mit Dosis).',
+        'ALARA: Abstand (I ∝ 1/r²), Zeit (D = Ḋ·t), Abschirmung. CT Abdomen ≈ 10 mSv; natürliche Strahlung ≈ 2 mSv/Jahr.',
+      ],
+      altfrage: {
+        question: 'Erläutern Sie die Entstehung von Röntgenstrahlung und beschreiben Sie deren biologische Wirkung auf lebendes Gewebe.',
+        answer: 'Röntgenstrahlung entsteht in der Röntgenröhre durch Beschleunigung von Elektronen (aus einer Glühkathode) mittels einer Hochspannung von typisch 30–150 kV auf eine Wolfram-Anode. Beim Auftreffen entstehen zwei Strahlungsarten: Bremsstrahlung mit einem kontinuierlichen Energiespektrum (maximale Photonenenergie E_max = eU, wobei e die Elementarladung und U die Beschleunigungsspannung sind) und charakteristische Strahlung in Form diskreter Linien, die entstehen, wenn stoßbedingt freie Schalenplätze in der inneren Elektronenhülle durch äußere Elektronen aufgefüllt werden. Die biologische Wirkung ionisierender Strahlung auf Gewebe lässt sich in direkte und indirekte Wirkung unterteilen. Bei der direkten Wirkung treffen Strahlungsquanten unmittelbar auf DNA-Moleküle und ionisieren diese (Strangbrüche, Basenmodifikationen). Die indirekte Wirkung – quantitativ bedeutsamer (ca. 70 %) – beruht auf der Radiolyse von Wasser: H₂O + Strahlung → OH•-Radikale + H• + e⁻_aq. Diese hochreaktiven Spezies greifen ihrerseits DNA und Proteine an. Die kritischsten DNA-Läsionen sind Doppelstrangbrüche (DSB), da beide Matrizenstränge beschädigt sind und fehlerhafte Reparatur zu Chromosomenaberrationen führen kann. Bezüglich Strahlenempfindlichkeit gilt das Bergonié-Tribondeau-Gesetz: sich teilende Zellen sind vulnerabler. Strahlenwirkungen werden in stochastische (kein Schwellenwert, z.B. Krebsentstehung) und deterministische (Schwellendosis, z.B. akutes Strahlensyndrom) eingeteilt. Schutzmaßnahmen folgen dem ALARA-Prinzip.',
+      },
+      klinischerBezug: 'Röntgen Thorax ≈ 0,02–0,1 mSv; CT Abdomen ≈ 10 mSv. Strahlentherapie nutzt gezielte Doppelstrangbrüche zur Tumorzellzerstörung. Strahlenschutzkontrolle via Dosimeter im klinischen Betrieb.',
+      selfTest: [
+        {
+          question: 'Welche Aussage zur Bremsstrahlung in der Röntgenröhre ist korrekt?',
+          options: [
+            'Sie entsteht durch Übergänge zwischen inneren Elektronenschalen des Anodenmaterials',
+            'Sie hat ein diskretes Linienspektrum mit für Wolfram typischen Energien',
+            'Sie entsteht durch Abbremsung von Elektronen im Coulomb-Feld der Anode und ergibt ein kontinuierliches Spektrum',
+            'Ihre maximale Photonenenergie ist unabhängig von der Beschleunigungsspannung',
+            'Sie tritt nur bei Alpha-Strahlern auf',
+          ],
+          correctIndex: 2,
+          explanation: 'Bremsstrahlung entsteht, wenn energiereiche Elektronen in das Coulomb-Feld der Anodenatome (Wolfram) eindringen und abgebremst werden. Die Abbremsung kann in verschiedenem Ausmaß erfolgen, weshalb ein kontinuierliches Energiespektrum von null bis E_max = eU entsteht (U = Beschleunigungsspannung). Je mehr Energie das Elektron verliert, desto höherenergetisch das emittierte Photon. Die charakteristische Strahlung (Linienspektrum) entsteht dagegen durch Elektronen-Schalenübergänge. Für die maximale Photonenenergie gilt E_max = eU = hf_max = hc/λ_min, d.h. bei U=100 kV beträgt E_max = 100 keV.',
+          hints: [
+            'Bremsstrahlung = "Abbremsung" von Elektronen. Welches Spektrum entsteht bei stufenloser Abbremsung?',
+            'Charakteristische Strahlung = Linienspektrum (elementspezifisch). Bremsstrahlung = kontinuierliches Spektrum.',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Warum erscheinen Knochen im Röntgenbild heller (weißer) als Weichgewebe?',
+          options: [
+            'Weil Knochen Röntgenstrahlen emittieren',
+            'Weil Knochen einen höheren linearen Schwächungskoeffizienten μ haben und mehr Strahlung absorbieren',
+            'Weil Knochen reflektieren, während Weichgewebe die Strahlung absorbiert',
+            'Weil Knochen wärmer sind und dadurch Röntgenstrahlen erzeugen',
+            'Weil Knochen eine niedrigere Dichte als Weichgewebe haben',
+          ],
+          correctIndex: 1,
+          explanation: 'Im konventionellen Röntgenbild erscheinen Strukturen hell (weiß), die viel Röntgenstrahlung absorbieren (schwächen), da weniger Strahlung auf den Detektor/Film trifft. Knochen enthalten Calcium (Z=20) mit einem hohen Schwächungskoeffizienten μ, der stark mit Z (≈Z⁴ beim Photoeffekt) ansteigt. Weichgewebe (hauptsächlich C, H, O, N, Z≈6-8) absorbiert wesentlich weniger. Die Absorption folgt I = I₀·e^(−μx); bei gleichem x (Dicke) ist I für Knochen viel kleiner → weniger Photonen erreichen den Detektor → helle Darstellung. Luft (μ ≈ 0) erscheint schwarz (Lunge), Metall (z.B. Prothesen) erscheint weiß.',
+          hints: [
+            'Hell im Röntgenbild = viel Absorption (wenig Strahlung kommt durch). Welches Material absorbiert mehr?',
+            'Schwächungskoeffizient μ hängt von Ordnungszahl und Dichte ab. Ca (Z=20) > C/H/O (Z=6-8).',
+          ],
+          tags: [],
+          difficulty: 1,
+        },
+        {
+          question: 'Eine Röntgenstrahlenquelle hat eine Halbwertsschichtdicke (HVL) in Blei von 5 mm. Welche Bleidicke ist nötig, um die Intensität auf 12,5 % zu reduzieren?',
+          options: [
+            '5 mm',
+            '10 mm',
+            '15 mm',
+            '20 mm',
+            '25 mm',
+          ],
+          correctIndex: 2,
+          explanation: '12,5 % = 1/8 = (1/2)³, also sind 3 Halbwertsschichtdicken erforderlich. Benötigte Dicke: 3 × 5 mm = 15 mm. Allgemein gilt: I/I₀ = (1/2)ⁿ mit n = Anzahl der HVL. Lösung: (1/2)ⁿ = 0,125 = (1/2)³ → n = 3 → Dicke = 3 × HVL = 15 mm. Die Halbwertsschichtdicke HVL = ln2/μ ist das Analogon zur Halbwertszeit in der Radioaktivität und wird zur praktischen Abschirmberechnung eingesetzt.',
+          hints: [
+            '12,5 % = 1/8: Wieviel Halbierungen brauche ich, um von 100 % auf 12,5 % zu gelangen?',
+            'HVL ist die Dicke für Halbierung. Für n Halbierungen: n × HVL Gesamtdicke.',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Welche Art von Strahlenschäden an der DNA ist am schwierigsten zu reparieren?',
+          options: [
+            'Einzelstrangbrüche',
+            'Basenmethylierungen',
+            'Doppelstrangbrüche',
+            'Pyrimidindimere (UV-bedingt)',
+            'Oxidierte Basen',
+          ],
+          correctIndex: 2,
+          explanation: 'Doppelstrangbrüche (DSB) sind die gefährlichsten Strahlenschäden, da beide DNA-Stränge gleichzeitig getrennt sind. Bei Einzelstrangbrüchen kann der intakte Gegenstrang als Matrize für fehlerfreie Reparatur (Basenexzisionsreparatur, Einzelstrangbruchreparatur) genutzt werden. DSB hingegen müssen durch fehleranfällige Reparaturwege repariert werden: homologe Rekombination (fehlerfrei, nur in S/G2-Phase möglich) oder nicht-homologe Endverknüpfung (NHEJ, fehleranfällig, führt oft zu Deletionen). Fehlerhafte DSB-Reparatur ist eine Hauptursache für Chromosomenaberrationen, Mutationen und maligne Transformation. Ionisierende Strahlung erzeugt DSB besonders effizient bei hoher Ionisierungsdichte (α-Strahlung, schwere Ionen).',
+          hints: [
+            'Bei einem Einzelstrangbruch: Der andere Strang dient als Reparaturmatrize. Bei einem Doppelstrangbruch?',
+            'DSB = beide DNA-Stränge gebrochen → keine Matrize → fehleranfällige Reparatur → Chromosomenaberrationen.',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Welcher Unterschied besteht zwischen stochastischen und deterministischen Strahleneffekten?',
+          options: [
+            'Stochastische Effekte treten nur nach einmaliger Bestrahlung auf; deterministische nur nach chronischer Bestrahlung',
+            'Stochastische Effekte haben keine Schwellendosis und die Wahrscheinlichkeit steigt mit der Dosis; deterministische Effekte haben eine Schwellendosis und die Schwere wächst mit der Dosis',
+            'Stochastische Effekte sind immer tödlich; deterministische Effekte sind immer reversibel',
+            'Deterministische Effekte betreffen nur Knochenmark; stochastische Effekte nur die Haut',
+            'Stochastische Effekte werden in Gray gemessen; deterministische in Sievert',
+          ],
+          correctIndex: 1,
+          explanation: 'Stochastische Strahleneffekte (vom Zufall abhängig) haben – nach aktuellem Strahlenschutzmodell – keine Schwellendosis. Bereits geringe Dosen erhöhen die Wahrscheinlichkeit einer Krebsentstehung oder Erbgutveränderung. Mit wachsender Dosis steigt nur die Wahrscheinlichkeit, nicht die Schwere. Beispiele: Leukämie, Schilddrüsenkarzinom nach Strahlenexposition. Deterministische Effekte haben eine Schwellendosis – unterhalb derer treten sie nicht auf. Oberhalb der Schwelle wächst die Schwere des Effekts mit der Dosis. Beispiele: Erythem der Haut (Schwelle: ~2 Gy), Strahlenkatarrh (Linsentrübung, ~1–2 Gy), akutes Strahlensyndrom (>1 Gy Ganzkörperbestrahlung), Knochenmarksdepression (>2 Gy). Dies ist die Grundlage für Grenzwertdiskussionen im Strahlenschutz.',
+          hints: [
+            'Stochastisch = zufällig (Krebs: auch bei niedriger Dosis möglich, aber unwahrscheinlicher).',
+            'Deterministisch = vorhersagbar ab einer Schwelle (z.B. Strahlenkatarrh erst ab ~1 Gy).',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Ein Arzt steht 2 Meter von einer Röntgenquelle entfernt und empfängt eine Dosisleistung von 0,04 mSv/h. Welche Dosisleistung erhält er in 4 Meter Abstand?',
+          options: [
+            '0,02 mSv/h',
+            '0,01 mSv/h',
+            '0,008 mSv/h',
+            '0,005 mSv/h',
+            '0,002 mSv/h',
+          ],
+          correctIndex: 1,
+          explanation: 'Die Intensität einer punktförmigen Strahlungsquelle nimmt mit dem inversen Quadrat des Abstands ab: I ∝ 1/r². Wird der Abstand von 2 m auf 4 m verdoppelt, sinkt die Intensität auf (2/4)² = (1/2)² = 1/4 des ursprünglichen Werts. Dosisleistung: 0,04 mSv/h × 1/4 = 0,01 mSv/h. Dies veranschaulicht den Abstandsschutz als wirksamste und einfachste Strahlenschutzmaßnahme. Eine Verdoppelung des Abstands reduziert die Dosis auf ein Viertel.',
+          hints: [
+            'Abstandsgesetz: I ∝ 1/r². Abstand verdoppelt → Intensität geviertelt.',
+            'Verhältnis: (r₁/r₂)² = (2m/4m)² = 1/4. Neue Leistung = alte × 1/4.',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Welche Zellen sind nach dem Bergonié-Tribondeau-Gesetz am strahlenempfindlichsten?',
+          options: [
+            'Nervenzellen des Gehirns',
+            'Herzmuskelzellen',
+            'Knochenmarkszellen und Lymphozyten',
+            'Leberzellen',
+            'Skelettmuskelzellen',
+          ],
+          correctIndex: 2,
+          explanation: 'Das Bergonié-Tribondeau-Gesetz (1906) besagt: Gewebe ist strahlenempfindlicher, je höher die Teilungsaktivität, je unreifer die Zellen und je länger die Mitosephase. Lymphozyten und Knochenmarksstammzellen teilen sich sehr häufig und sind daher besonders strahlenempfindlich. Darm- und Schleimhautepithel, Gonaden und fetale Gewebe sind ebenfalls hochempfindlich. Nervenzellen und Herzmuskelzellen sind postmitotisch (teilen sich kaum) und wesentlich strahlenresistenter. Diese Reihenfolge ist klinisch bedeutsam: Das akute Strahlensyndrom zeigt als frühe Manifestation Knochenmarksversagen (Leukopenie, Thrombopenie) und Schleimhautulzera.',
+          hints: [
+            'Bergonié-Tribondeau: Hohe Teilungsrate = hohe Strahlenempfindlichkeit. Welche Zellen teilen sich am meisten?',
+            'Lymphozyten und Knochenmark teilen sich ständig (Blutbildung). Nervenzellen und Muskelzellen kaum.',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+      ],
+    },
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // UK ph-7-04: Nuklearmedizin und Quantenphänomene
+    // ─────────────────────────────────────────────────────────────────────────
+    {
+      id: 'ph-7-04',
+      title: 'Nuklearmedizin und Quantenphänomene',
+      content: `# Nuklearmedizin und Quantenphänomene
+
+## PET – Positronen-Emissions-Tomographie
+
+Bei der PET wird ein β⁺-strahlendes Radiopharmakon injiziert. Das emittierte Positron bewegt sich kurz durch das Gewebe (wenige mm) und trifft auf ein Elektron. Es kommt zur **Paarvernichtung (Annihilation)**:
+
+> e⁺ + e⁻ → 2 γ-Photonen mit je 511 keV, emittiert in entgegengesetzten Richtungen (180° ± 0,5°)
+
+Das PET-Gerät detektiert diese **Koinzidenzpaare** (zwei Photonen gleichzeitig, innerhalb eines Zeitfensters von ~10 ns). Entlang der Verbindungslinie dieser Koinzidenzen (line of response, LOR) liegt das Annihilationsereignis. Aus vielen LOR wird ein 3D-Bild rekonstruiert.
+
+**¹⁸F-FDG (Fluordesoxyglukose):** ¹⁸F (T½=110 min) ist an Desoxyglukose gebunden. FDG wird wie Glukose in Zellen aufgenommen (via GLUT-Transporter), aber nach Phosphorylierung nicht weiter metabolisiert → Akkumulation in Zellen mit hohem Glukoseumsatz. Tumorzellen, Entzündungsherde und bestimmte Hirnareale reichern FDG an → hohe Signalintensität im PET-Bild. Hauptanwendungen: Tumorstaging, Metastasensuche, Therapiekontrolle, kardiologische Vitalitätsdiagnostik, neurologische Diagnostik (Demenz, Epilepsie).
+
+## SPECT – Single Photon Emission Computed Tomography
+
+SPECT nutzt γ-Strahler (meist ⁹⁹ᵐTc) und eine rotierende **Gammakamera** mit einem **Kollimator** aus Blei (lässt nur annähernd parallele Photonen passieren). Aus Projektionen bei verschiedenen Winkeln wird ein 3D-Bild rekonstruiert (gefilterte Rückprojektion oder iterative Algorithmen). Geringere Auflösung als PET (8–15 mm vs. 4–7 mm), aber günstiger und verbreiteter. SPECT/CT kombiniert funktionelle und anatomische Information.
+
+## MRT – Magnetresonanztomographie
+
+Das **Kernspinresonanz-Prinzip (NMR)** beruht auf den magnetischen Eigenschaften von Atomkernen mit ungerader Protonen- oder Neutronenzahl. ¹H (Proton) ist der wichtigste Kern in der klinischen MRT (abundant in biologischem Gewebe).
+
+Im starken äußeren Magnetfeld B₀ (1,5–3 Tesla in klinischen Geräten) orientieren sich Protonenspins parallel oder antiparallel zu B₀ und **präzedieren** mit der **Larmorfrequenz**:
+
+> **f = γ · B₀** (γ_H = 42,58 MHz/T)
+
+Bei B₀ = 1,5 T: f = 42,58 × 1,5 ≈ 63,9 MHz (Radiofrequenz). Ein RF-Puls genau dieser Frequenz versetzt die Längsmagnetisierung in die Transversalebene (Resonanz). Nach dem Puls relaxiert das System:
+
+- **T1-Relaxation** (Längsrelaxation): Rückkehr der Längsmagnetisierung zu M₀; abhängig von Wechselwirkungen Proton–Umgebung (Spin-Gitter). Fett: kurzes T1 (hell in T1-Bild).
+- **T2-Relaxation** (Querrelaxation): Zerfall der Transversalmagnetisierung durch Dephasierung (Spin-Spin-Relaxation). Wasser: langes T2 (hell in T2-Bild).
+
+Durch Schaltung von Gradientenfeldern wird die Ortsabhängigkeit der Larmorfrequenz erzeugt → Ortskodierung. Kontrastmittel (Gadolinium, paramagnetisch) verkürzt T1 → Gewebe erscheint in T1-Sequenzen heller.
+
+**Vorteile der MRT:** Kein ionisierende Strahlung, exzellenter Weichteilkontrast, multiplanare Bildgebung. **Kontraindikationen:** Ferromagnetische Implantate, Herzschrittmacher (älterer Generation), Cochlea-Implantate.
+
+## Photoelektrischer Effekt
+
+Der **Photoelektrische Effekt** (Einstein, 1905) beschreibt die Emission von Elektronen aus einer Metalloberfläche beim Einfall von Licht, wenn die Photonenenergie eine minimale Schwelle überschreitet:
+
+> **E_kin = hf − φ** (φ = Austrittsarbeit des Metalls)
+
+Emission tritt nur auf, wenn hf ≥ φ, d.h. f ≥ f_Grenz = φ/h. Unterhalb der Grenzfrequenz wird kein Elektron emittiert – egal wie intensiv das Licht ist. Oberhalb steigt die kinetische Energie der Elektronen linear mit f. Die Intensität beeinflusst nur die Anzahl der Elektronen, nicht ihre Energie.
+
+**Bedeutung:** Belegte den Teilchencharakter des Lichtes (Photonen) und war ein zentraler Beweis für den Welle-Teilchen-Dualismus. Einstein erhielt dafür 1921 den Nobelpreis. In der medizinischen Bildgebung ist der Photoeffekt der dominierende Wechselwirkungsmechanismus für Röntgenphotonen niedriger Energie in dichtem Gewebe (Z⁴-Abhängigkeit).`,
+      lernziele: [
+        'Das Prinzip der Paarvernichtung und Koinzidenzdetektion beim PET erklären und ¹⁸F-FDG-Akkumulation begründen.',
+        'SPECT und PET hinsichtlich verwendeter Radionuklide, Detektionsprinzip und Auflösung vergleichen.',
+        'Die Larmorfrequenz f = γ·B₀ berechnen und T1- sowie T2-Relaxation unterscheiden.',
+        'Den photoelektrischen Effekt und die Grenzfrequenzbedingung hf ≥ φ erklären.',
+        'Die Kontraindikationen der MRT und den Unterschied zu ionisierenden Verfahren kennen.',
+      ],
+      sections: [
+        {
+          heading: 'PET und SPECT: Funktionsprinzipien',
+          text: 'PET: β⁺-Strahler → Positron + Elektron → Annihilation → 2 × 511-keV-Photonen in 180°. Koinzidenzdetektion definiert die line of response; hohe Sensitivität und quantitative Auswertung. FDG (¹⁸F): Glukoseanalogon, reichert sich in stoffwechselaktiven Zellen an (Tumor, Entzündung, Gehirn). SPECT: γ-Strahler (⁹⁹ᵐTc) + Gammakamera + Kollimator; günstiger, weiter verbreitet, etwas geringere Auflösung als PET.',
+          merksatz: 'PET: β⁺ → Annihilation → 2×511 keV (180°) → Koinzidenz. SPECT: γ-Strahler + Gammakamera + Kollimator.',
+        },
+        {
+          heading: 'MRT: Kernspinresonanz und Relaxation',
+          text: '¹H im Magnetfeld B₀ präzediert mit Larmorfrequenz f = γ·B₀ (γ_H = 42,58 MHz/T). RF-Puls bei f_Larmor kippt Magnetisierung in Transversalebene. T1: Längsmagnetisierung erholt sich (Spin-Gitter-Relaxation). T2: Transversalmagnetisierung zerfällt (Spin-Spin-Dephasierung). Fett kurzes T1 (hell T1-Bild); Wasser langes T2 (hell T2-Bild). Gadolinium-KM verkürzt T1 → Enhancement. Keine ionisierende Strahlung – Vorteil gegenüber CT/Röntgen.',
+          merksatz: 'Larmor: f = 42,58 MHz/T × B₀. T1: Längsrelaxation (Fett hell). T2: Querrelaxation (Wasser hell). MRT = keine ionisierende Strahlung.',
+        },
+        {
+          heading: 'Photoelektrischer Effekt und Welle-Teilchen-Dualismus',
+          text: 'Licht schlägt Elektronen aus Metall nur wenn hf ≥ φ (Austrittsarbeit). Unterhalb der Grenzfrequenz kein Effekt – unabhängig von der Intensität. E_kin = hf − φ. Beweis für Teilchennatur des Lichtes (Photonen). Welle-Teilchen-Dualismus: Licht verhält sich je nach Experiment als Welle (Beugung, Interferenz) oder Teilchen (Photoeffekt, Compton-Effekt). De-Broglie: auch Materie hat Welleneigenschaften (λ = h/p).',
+          merksatz: 'Photoeffekt: E_kin = hf − φ; Emission nur wenn f ≥ f_Grenz = φ/h. Belegt Photonennatur des Lichts.',
+        },
+      ],
+      merksätze: [
+        'PET: β⁺-Strahler → Annihilation → 2 Gamma-Photonen je 511 keV unter 180°; Koinzidenzdetektion.',
+        '¹⁸F-FDG: Desoxyglukose akkumuliert in Hochumsatz-Zellen (Tumor, Hirn); T½=110 min.',
+        'SPECT: γ-Strahler (⁹⁹ᵐTc) + Gammakamera mit Blei-Kollimator; 3D-Rekonstruktion aus Projektionen.',
+        'MRT: ¹H im B₀-Feld präzediert mit Larmorfrequenz f = γ·B₀ (γ_H = 42,58 MHz/T).',
+        'Bei B₀ = 1,5 T: f_Larmor ≈ 64 MHz; bei 3,0 T: f ≈ 128 MHz.',
+        'T1-Relaxation: Längsmagnetisierung erholt sich; Fett hat kurzes T1 → hell im T1-Bild.',
+        'T2-Relaxation: Transversalmagnetisierung zerfällt durch Dephasierung; Wasser hat langes T2 → hell im T2-Bild.',
+        'Gadolinium-KM: paramagnetisch, verkürzt T1 → Gewebe mit KM erscheint in T1 heller (Enhancement).',
+        'Photoelektrischer Effekt: E_kin = hf − φ; Grenzfrequenz f_Grenz = φ/h; kein Elektron unter Grenzfrequenz.',
+        'MRT: keine ionisierende Strahlung; Kontraindikationen: ferromagnetische Implantate, alte Herzschrittmacher.',
+      ],
+      altfrage: {
+        question: 'Beschreiben Sie das Prinzip der PET und erklären Sie, wie ¹⁸F-FDG zur Tumordiagnostik eingesetzt wird.',
+        answer: 'Die Positronen-Emissions-Tomographie (PET) ist ein nuklearmedizinisches Schnittbildverfahren, das auf dem β⁺-Zerfall radioaktiver Nuklide beruht. Das häufigste Radiopharmakon ist ¹⁸F-Fluordesoxyglukose (¹⁸F-FDG). ¹⁸F zerfällt mit einer Halbwertszeit von 110 Minuten unter Emission eines Positrons (β⁺-Zerfall). Das Positron bewegt sich wenige Millimeter durch Gewebe, bis es auf ein Elektron trifft und mit diesem annihiliert (Paarvernichtung): e⁺ + e⁻ → 2 Gammaphotonen mit je 511 keV, die sich unter exakt 180° voneinander wegbewegen (Impulserhaltung). Der PET-Scanner enthält einen Ring von Szintillationsdetektoren, die Koinzidenzereignisse registrieren: Werden zwei 511-keV-Photonen innerhalb eines kurzen Zeitfensters (~10 ns) auf gegenüberliegenden Detektoren registriert, liegt das Annihilationsereignis auf der Verbindungslinie (Line of Response, LOR). Aus hunderttausenden solcher LOR wird mittels tomographischer Rekonstruktionsalgorithmen ein dreidimensionales Bild der Nuklidverteilung berechnet. FDG wird wie normale Glukose über GLUT-Transporter in Zellen aufgenommen und von Hexokinase phosphoryliert, aber nicht weiter metabolisiert (da die 2-OH-Gruppe fehlt). In Zellen mit hohem Glukosestoffwechsel – Tumorzellen (Warburg-Effekt), aktive Entzündungsherde, Hirngewebe – akkumuliert FDG. Klinische Anwendungen: Tumorstaging (Lokalisation von Primärtumor und Metastasen), Therapiekontrolle (Ansprechen auf Chemotherapie), Suche nach unbekanntem Primärtumor (CUP-Syndrom), kardiologische Vitalitätsdiagnostik (Nachweis hibernating myocardium), neurologisch-psychiatrische Diagnostik (Alzheimer-Demenz, Epilepsieherd-Lokalisation). Meist wird PET mit CT oder MRT kombiniert (PET/CT, PET/MRT), um funktionelle und anatomische Information zu fusionieren.',
+      },
+      klinischerBezug: '¹⁸F-FDG-PET/CT: Goldstandard für Tumorstaging, Therapiekontrolle. MRT: kein Strahlenrisiko, bester Weichteilkontrast – bevorzugt bei Kinder, Gehirn, Gelenke, Becken. SPECT/CT mit ⁹⁹ᵐTc: Skelettszintigraphie, Myokardperfusion, Schilddrüsenszintigraphie.',
+      selfTest: [
+        {
+          question: 'Bei der PET werden zwei Gammaphotonen mit je 511 keV detektiert. Woher stammt diese spezifische Energie von 511 keV?',
+          options: [
+            'Sie entspricht der Bindungsenergie eines Protons im Kern',
+            'Sie ist die kinetische Energie des emittierten Positrons',
+            'Sie entspricht der Ruheenergie eines Elektrons (m_e·c²), da bei der Annihilation die gesamte Ruhemasse beider Teilchen in Energie umgewandelt wird',
+            'Sie wird durch die Zerfallskonstante von ¹⁸F bestimmt',
+            'Sie ist die Ionisierungsenergie von Fluor-18',
+          ],
+          correctIndex: 2,
+          explanation: 'Bei der Paarvernichtung (Annihilation) treffen ein Positron und ein Elektron aufeinander. Die Gesamtenergie wird nach E = mc² vollständig in Strahlungsenergie umgewandelt. Die Ruhemasse eines Elektrons beträgt m_e = 9,109×10⁻³¹ kg, entsprechend einer Ruheenergie von m_e·c² ≈ 0,511 MeV = 511 keV. Da Positron und Elektron jeweils 511 keV Ruhemasse haben, entstehen zwei Photonen mit je 511 keV (der Impuls des Positrons ist vor der Annihilation klein, daher sind die Photonen nahezu exakt antiparallel). Der konstante Wert 511 keV ist charakteristisch für alle Paarvernichtungsereignisse und erlaubt eine eindeutige Identifikation im Detektor.',
+          hints: [
+            'Annihilation: e⁺ + e⁻ → 2γ. Die Energie der Photonen kommt aus der Ruhemasse beider Teilchen: E = m_e·c².',
+            'm_e·c² = 0,511 MeV = 511 keV. Da zwei Teilchen annihilieren, entstehen zwei Photonen mit je 511 keV.',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Warum reichert sich ¹⁸F-FDG in Tumorzellen stärker an als in normalem Gewebe?',
+          options: [
+            'Weil Tumorzellen eine höhere Dichte an Fluorid-Transportsystemen haben',
+            'Weil Tumorzellen einen erhöhten Glukosestoffwechsel (Warburg-Effekt) aufweisen und FDG intrazellulär akkumuliert, da es nach Phosphorylierung nicht weiter abgebaut wird',
+            'Weil das Fluor-18 magnetisch von Tumorzellkernen angezogen wird',
+            'Weil Tumorzellen weniger Hexokinase produzieren und FDG daher länger in der Zelle verbleibt',
+            'Weil FDG von Tumorzellen aktiv sezerniert wird und sich im Tumorgewebe sammelt',
+          ],
+          correctIndex: 1,
+          explanation: 'Der Warburg-Effekt (Otto Warburg, 1924) beschreibt die bevorzugte Nutzung aerober Glykolyse durch Tumorzellen, selbst bei ausreichend Sauerstoff. Tumorzellen überexprimieren Glukose-Transporter (GLUT1, GLUT3) und Hexokinase, nehmen daher vermehrt Glukose (und FDG) auf. Nach Aufnahme wird FDG von der Hexokinase zu FDG-6-Phosphat phosphoryliert. Da die 2-Hydroxylgruppe der natürlichen Glukose bei FDG durch Fluor ersetzt ist, kann das Enzym Phosphoglukose-Isomerase FDG-6-Phosphat nicht weiter umwandeln. FDG-6-Phosphat ist auch zu polar, um die Zellmembran zu verlassen und akkumuliert intrazellulär. In normalen Zellen mit niedrigerem Glukoseumsatz ist die Anreicherung geringer, was den Tumorkontrast im PET-Bild erzeugt.',
+          hints: [
+            'FDG = Desoxyglukose. "Desoxy" bedeutet: eine OH-Gruppe fehlt. Was passiert nach der Phosphorylierung durch Hexokinase?',
+            'Tumorzellen: Warburg-Effekt = hoher Glukosestoffwechsel. FDG: wird aufgenommen, aber metabolisch blockiert → Akkumulation.',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Ein MRT-Gerät arbeitet mit einem Magnetfeld B₀ = 3,0 Tesla. Welche Larmorfrequenz haben die ¹H-Protonen? (γ_H = 42,58 MHz/T)',
+          options: [
+            '42,58 MHz',
+            '63,87 MHz',
+            '85,16 MHz',
+            '127,74 MHz',
+            '212,9 MHz',
           ],
           correctIndex: 3,
-          explanation: "24 Tage entsprechen 3 Halbwertszeiten (24/8 = 3). Nach n Halbwertszeiten gilt: N = N₀ × (1/2)ⁿ. Also: 10 g = N₀ × (1/2)³ = N₀ × 1/8. Daraus folgt: N₀ = 10 g × 8 = 80 g.",
-          difficulty: 2,
+          explanation: 'f = γ_H · B₀ = 42,58 MHz/T × 3,0 T = 127,74 MHz ≈ 127,7 MHz. Diese Frequenz liegt im UKW-Bereich (FM-Radio: 87–108 MHz – etwas höher). Zum Vergleich: bei 1,5 T (das häufigste klinische MRT) beträgt f ≈ 64 MHz. Der RF-Puls (Hochfrequenzpuls) muss exakt die Larmorfrequenz haben, um Resonanz zu erzeugen und die Magnetisierung in die Transversalebene zu kippen. Die Larmorfrequenz hängt linear von B₀ ab; daher benötigen 3-Tesla-Geräte andere RF-Frequenzen als 1,5-Tesla-Geräte.',
+          hints: [
+            'Larmorgleichung: f = γ·B₀. Einsetzen: γ_H = 42,58 MHz/T, B₀ = 3,0 T.',
+            'Einheiten: MHz/T × T = MHz.',
+          ],
+          tags: [],
+          difficulty: 1,
         },
         {
-          question: "Die Aktivität einer Probe beträgt anfangs 800 Bq. Nach 12 Stunden beträgt sie noch 100 Bq. Wie groß ist die Halbwertszeit?",
+          question: 'Welche Aussage zum photoelektrischen Effekt ist korrekt?',
           options: [
-          "2 Stunden",
-          "3 Stunden",
-          "4 Stunden",
-          "6 Stunden",
-          "8 Stunden"
+            'Elektronen werden emittiert, sobald die Lichtintensität einen Schwellenwert überschreitet',
+            'Die kinetische Energie der emittierten Elektronen hängt von der Lichtintensität ab',
+            'Elektronen werden nur emittiert, wenn die Lichtfrequenz mindestens die Grenzfrequenz f_Grenz = φ/h erreicht',
+            'Der Effekt tritt nur bei Infrarotlicht auf',
+            'Die Anzahl der emittierten Elektronen hängt von der Lichtfrequenz ab',
           ],
           correctIndex: 2,
-          explanation: "A = A₀ × (1/2)ⁿ. Hier: 100 = 800 × (1/2)ⁿ → (1/2)ⁿ = 1/8 = (1/2)³, also n = 3 Halbwertszeiten in 12 Stunden. Daraus: T₁/₂ = 12 h / 3 = 4 Stunden. Alternativ: 800 → 400 → 200 → 100 in jeweils 4 Stunden.",
-          difficulty: 3,
-        },
-        {
-          question: "Welches radioaktive Isotop wird zur Altersbestimmung organischer Materialien verwendet?",
-          options: [
-          "Uran-238",
-          "Kohlenstoff-14",
-          "Jod-131",
-          "Kobalt-60",
-          "Plutonium-239"
+          explanation: 'Der photoelektrische Effekt zeigt, dass Licht gequantelt (in Photonen) vorliegt. Ein Photon muss mindestens die Austrittsarbeit φ des Metalls aufbringen, um ein Elektron herauszuschlagen. Da E_Photon = hf, muss gelten: hf ≥ φ, also f ≥ f_Grenz = φ/h. Unterhalb dieser Grenzfrequenz werden keinerlei Elektronen emittiert – egal wie intensiv das Licht ist (viele Photonen niedriger Energie können nicht "aufaddiert" werden). Die kinetische Energie der emittierten Elektronen beträgt E_kin = hf − φ und hängt nur von der Frequenz (nicht der Intensität) ab. Die Intensität beeinflusst lediglich die Anzahl der Elektronen pro Zeiteinheit (bei f > f_Grenz). Dieser Befund ist nur durch das Photonen-Modell erklärbar, nicht durch die Wellentheorie.',
+          hints: [
+            'Klassische Wellentheorie würde sagen: Mehr Intensität → mehr Energie → irgendwann Emission. Was beobachtet man wirklich?',
+            'Photoeffekt: E_kin = hf − φ. Emission nur wenn hf ≥ φ. Intensität beeinflusst die Anzahl, nicht die Energie der Elektronen.',
           ],
-          correctIndex: 1,
-          explanation: "Die Radiokarbonmethode (C-14-Methode) nutzt ¹⁴C mit einer Halbwertszeit von 5.730 Jahren. ¹⁴C entsteht durch kosmische Strahlung in der Atmosphäre und wird von lebenden Organismen aufgenommen. Nach dem Tod stoppt die Aufnahme, und der ¹⁴C-Gehalt nimmt durch Zerfall ab.",
+          tags: [],
           difficulty: 2,
         },
         {
-          question: "Eine Probe enthält nach 17.190 Jahren noch 12,5% des ursprünglichen ¹⁴C. Was ist die Halbwertszeit von ¹⁴C?",
+          question: 'Was ist ein wesentlicher Vorteil der MRT gegenüber CT und Röntgen für die pädiatrische Bildgebung?',
           options: [
-          "3.865 Jahre",
-          "4.298 Jahre",
-          "5.730 Jahre",
-          "6.430 Jahre",
-          "8.595 Jahre"
+            'Die MRT ist schneller und daher besser für unruhige Kinder geeignet',
+            'Die MRT verwendet keine ionisierende Strahlung und vermeidet damit das strahlenbedingte Krebsrisiko',
+            'Die MRT-Geräte sind kleiner und passen besser zu Kindern',
+            'Die MRT zeigt Knochenfrakturen besser als Röntgen',
+            'Die MRT kann ohne Vorbereitung und ohne Sedierung durchgeführt werden',
+          ],
+          correctIndex: 1,
+          explanation: 'MRT basiert auf Radiofrequenzwellen und statischen/gepulsten Magnetfeldern – keine ionisierende Strahlung. Da Kinder eine höhere Strahlenempfindlichkeit haben (jüngere Zellen, mehr Zellteilungen, längere Lebenserwartung mit mehr Zeit für strahleninduzierte Krebsmanifestationen), ist die Vermeidung von ionisierender Strahlung bei Kindern besonders wichtig. Stochastische Strahleneffekte (Krebsrisiko) haben nach aktuellem Modell keine Schwellendosis. CT-Untersuchungen bei Kindern sollten daher streng indiziert werden. Die MRT bietet zudem exzellenten Weichteilkontrast und ermöglicht multiplanare Bildgebung. Nachteile: längere Untersuchungsdauer (oft Sedierung bei Kleinkindern nötig), laut (Gradientenspulen), teurer, keine Metallimplantate.',
+          hints: [
+            'Was unterscheidet MRT grundlegend von CT und Röntgen hinsichtlich der Strahlungsart?',
+            'Kinder sind strahlenempfindlicher als Erwachsene. MRT = keine ionisierende Strahlung = kein strahleninduziertes Krebsrisiko.',
+          ],
+          tags: [],
+          difficulty: 1,
+        },
+        {
+          question: 'Welcher Unterschied besteht zwischen T1- und T2-gewichteten MRT-Sequenzen in Bezug auf Fett und Wasser?',
+          options: [
+            'Fett ist in T1 dunkel und hell in T2; Wasser ist in T1 hell und dunkel in T2',
+            'Fett und Wasser erscheinen in T1 und T2 identisch, nur die Auflösung unterscheidet sich',
+            'Fett ist in T1 hell (kurzes T1) und in T2 mittel; Wasser ist in T1 dunkel (langes T1) und in T2 hell (langes T2)',
+            'T1 zeigt nur Knochen, T2 nur Weichteile',
+            'Gadolinium-Kontrastmittel macht Gewebe in T2-Sequenzen heller',
           ],
           correctIndex: 2,
-          explanation: "12,5% = 1/8 des Originals. 1/8 = (1/2)³, also sind 3 Halbwertszeiten vergangen. T₁/₂ = 17.190 Jahre / 3 = 5.730 Jahre. Dies ist die tatsächliche Halbwertszeit von Kohlenstoff-14.",
-          difficulty: 3,
+          explanation: 'T1-Relaxationszeit (Längsrelaxation): Fett hat ein kurzes T1, weil Fettketten effizient Energie an das Umgebungsgitter abgeben. Kurzes T1 → schnelle Erholung der Längsmagnetisierung → helles Signal in T1-Bildern. Wasser hat ein langes T1 (ineffiziente Spin-Gitter-Relaxation) → dunkel in T1. T2-Relaxationszeit (Querrelaxation): Wasser hat ein langes T2, da Wassermoleküle wenig Spin-Spin-Wechselwirkungen erfahren → Transversalmagnetisierung zerfällt langsam → helles Signal in T2. Fett hat mittleres T2. Praktisch: T1 eignet sich zur Anatomie und nach Gadolinium-KM (Enhancement = Helligkeitszunahme in T1); T2 zeigt pathologisches Ödem (Wasser-Ansammlung = hell in T2, z.B. Hirnödem, Entzündung, Tumor-Perifokale).',
+          hints: [
+            'T1: Fett hell, Wasser dunkel. T2: Wasser hell (langes T2 = "leuchtet nach"). Eselsbrücke: T2 = "Wasser leuchtet".',
+            'Kurze Relaxationszeit → Signal ist bei Messung noch groß → hell im Bild. Langes T1 = Signal noch nicht erholt → dunkel.',
+          ],
+          tags: [],
+          difficulty: 2,
         },
         {
-          question: "Was bedeutet \"ionisierende Strahlung\"?",
+          question: 'Bei einer PET-Aufnahme werden gleichzeitig zwei Detektoren A und B auf gegenüberliegenden Seiten aktiviert. Was bedeutet dieses Koinzidenzsignal für die Lokalisierung des Ereignisses?',
           options: [
-          "Strahlung, die Metalle zum Leuchten bringt",
-          "Strahlung, die Atome oder Moleküle ionisiert",
-          "Strahlung, die nur in Ionen eindringen kann",
-          "Strahlung, die elektrische Ströme erzeugt",
-          "Strahlung, die magnetische Felder bildet"
+            'Das Annihilationsereignis hat irgendwo im Scanner stattgefunden',
+            'Das Ereignis liegt auf der Verbindungslinie zwischen Detektor A und B (line of response)',
+            'Das Ereignis liegt genau in der Mitte zwischen A und B',
+            'Es wurden zwei verschiedene Radionuklide aktiviert',
+            'Das Signal zeigt an, dass eine Fehldetektion vorliegt',
           ],
           correctIndex: 1,
-          explanation: "Ionisierende Strahlung hat genug Energie, um Elektronen aus Atomen oder Molekülen zu entfernen und damit Ionen zu erzeugen. Dazu gehören Alpha-, Beta-, Gamma-Strahlung, Röntgenstrahlung und hochenergetische UV-Strahlung. Sie kann biologisches Gewebe schädigen.",
+          explanation: 'Bei der PET-Koinzidenzdetektion gilt: Wenn zwei Detektoren innerhalb eines kurzen Zeitfensters (typisch 3–15 ns) gleichzeitig ein 511-keV-Photon registrieren, muss die Paarvernichtung auf der Verbindungslinie dieser beiden Detektoren stattgefunden haben (line of response, LOR). Da die beiden Annihilationsphotonen unter 180° emittiert werden und sich mit Lichtgeschwindigkeit bewegen, kommen sie quasi gleichzeitig an (kleine Zeitdifferenz erlaubt TOF-PET: time-of-flight, bestimmt genaueren Ort auf der LOR). Aus Hunderttausenden von LOR unterschiedlicher Winkel und Positionen wird mittels tomographischer Algorithmen (gefilterte Rückprojektion, OSEM) die 3D-Verteilung des Radionuklids rekonstruiert. Der Vorteil gegenüber SPECT: kein mechanischer Kollimator nötig → höhere Sensitivität.',
+          hints: [
+            'Zwei 511-keV-Photonen entstehen unter 180°. Wenn beide gleichzeitig auf gegenüberliegenden Detektoren ankommen…',
+            'Das Ereignis liegt irgendwo auf der geraden Linie zwischen den beiden Detektoren – das ist die LOR.',
+          ],
+          tags: [],
           difficulty: 2,
         },
-        {
-          question: "Welche Strahlungsart hat die höchste Ionisierungsfähigkeit?",
-          options: [
-          "Gamma-Strahlung",
-          "Beta-Strahlung",
-          "Alpha-Strahlung",
-          "Röntgenstrahlung",
-          "UV-Strahlung"
-          ],
-          correctIndex: 2,
-          explanation: "Alpha-Strahlung hat die höchste Ionisierungsdichte aufgrund ihrer hohen Masse und zweifachen Ladung. Sie erzeugt viele Ionenpaare auf kurzer Strecke, was sie bei innerer Kontamination sehr gefährlich macht, aber gleichzeitig leicht abschirmbar (geringe Reichweite).",
-          difficulty: 2,
-        },
-        {
-          question: "Was versteht man unter der Absorption ionisierender Strahlung?",
-          options: [
-          "Die Reflexion der Strahlung an Oberflächen",
-          "Die Schwächung der Strahlung beim Durchgang durch Materie",
-          "Die Verstärkung der Strahlung durch Streuung",
-          "Die Umwandlung von Strahlung in Wärme",
-          "Die Ablenkung der Strahlung durch Magnetfelder"
-          ],
-          correctIndex: 1,
-          explanation: "Absorption beschreibt die Schwächung der Strahlung beim Durchgang durch Materie durch Wechselwirkungen (Ionisation, Streuung, Paarbildung). Die Intensität nimmt exponentiell ab: I = I₀ × e^(-μx), wobei μ der Absorptionskoeffizient und x die Dicke des Materials ist.",
-          difficulty: 2,
-        },
-        {
-          question: "Die Intensität von Gamma-Strahlung wird durch eine 5 cm dicke Bleiplatte auf 25% reduziert. Welche Dicke reduziert sie auf 6,25%?",
-          options: [
-          "5 cm",
-          "7,5 cm",
-          "10 cm",
-          "15 cm",
-          "20 cm"
-          ],
-          correctIndex: 2,
-          explanation: "25% = 1/4 und 6,25% = 1/16 = (1/4)². Die erste Schicht (5 cm) reduziert auf 1/4, eine zweite identische Schicht (weitere 5 cm) reduziert nochmal auf 1/4 davon, also insgesamt auf 1/16. Gesamtdicke: 10 cm. Alternativ: 5 cm ist die Halbwertsdicke für Faktor 4 = 2², also 2 Halbwertsdicken. Für 16 = 2⁴ braucht man 4 Halbwertsdicken.",
-          difficulty: 3,
-        },
-        {
-          question: "Welche Aussage über kosmische Strahlung ist korrekt?",
-          options: [
-          "Sie besteht ausschließlich aus Elektronen",
-          "Sie kommt hauptsächlich von der Sonne",
-          "Sie besteht überwiegend aus hochenergetischen Protonen und Atomkernen",
-          "Sie kann die Erdatmosphäre nicht durchdringen",
-          "Sie ist nur nachts nachweisbar"
-          ],
-          correctIndex: 2,
-          explanation: "Die primäre kosmische Strahlung besteht zu ~90% aus Protonen, ~9% aus Heliumkernen und ~1% aus schwereren Kernen. Sie stammt von Supernovae, aktiven Galaxienkernen und anderen hochenergetischen kosmischen Quellen. In der Atmosphäre erzeugt sie Teilchenschauer (sekundäre kosmische Strahlung).",
-          difficulty: 2,
-        },
-        {
-          question: "Wodurch entsteht das natürliche Kohlenstoff-14 in der Atmosphäre?",
-          options: [
-          "Durch radioaktiven Zerfall von Uran",
-          "Durch Reaktionen von Neutronen aus kosmischer Strahlung mit Stickstoff",
-          "Durch Photosynthese in Pflanzen",
-          "Durch chemische Reaktionen mit Sauerstoff",
-          "Durch vulkanische Aktivität"
-          ],
-          correctIndex: 1,
-          explanation: "Kosmische Strahlung erzeugt in der oberen Atmosphäre Neutronen, die mit Stickstoff-14 reagieren: ¹⁴N + n → ¹⁴C + p. Das entstehende ¹⁴C oxidiert zu CO₂ und wird in den Kohlenstoffkreislauf eingebaut. Dies ermöglicht die Radiokarbondatierung.",
-          difficulty: 2,
-        },
-        {
-          question: "Was ist eine Zerfallsreihe?",
-          options: [
-          "Die zeitliche Abfolge von Zerfällen in einer Probe",
-          "Eine Sequenz von radioaktiven Zerfällen, die von einem Mutternuklid zu einem stabilen Endprodukt führt",
-          "Die räumliche Anordnung zerfallender Atome",
-          "Eine mathematische Formel zur Berechnung der Halbwertszeit",
-          "Die Reihenfolge der Entdeckung radioaktiver Elemente"
-          ],
-          correctIndex: 1,
-          explanation: "Eine Zerfallsreihe ist eine Kette aufeinanderfolgender radioaktiver Zerfälle. Beispiel: Die Uran-Radium-Reihe beginnt bei ²³⁸U und endet nach vielen Alpha- und Beta-Zerfällen beim stabilen ²⁰⁶Pb. Es gibt vier natürliche Zerfallsreihen (Uran-238, Uran-235, Thorium-232, Neptunium-237).",
-          difficulty: 3,
-        },
-        {
-          question: "²³⁸U zerfällt über mehrere Schritte zu ²⁰⁶Pb. Wie viele Alpha-Zerfälle sind mindestens nötig?",
-          options: [
-          "4 Alpha-Zerfälle",
-          "6 Alpha-Zerfälle",
-          "8 Alpha-Zerfälle",
-          "10 Alpha-Zerfälle",
-          "12 Alpha-Zerfälle"
-          ],
-          correctIndex: 2,
-          explanation: "Die Massenzahl verringert sich von 238 auf 206, also um 32. Jeder Alpha-Zerfall verringert A um 4. Daher: 32/4 = 8 Alpha-Zerfälle. Die Ordnungszahl sinkt dabei von 92 auf 82, also um 10. Da 8 Alpha-Zerfälle Z um 16 senken, müssen 6 Beta-Zerfälle erfolgen (erhöhen Z um 6), um netto -10 zu erreichen.",
-          difficulty: 2,
-        },
-        {
-          question: "Welches Gas in der Uran-Zerfallsreihe ist besonders gesundheitsgefährdend?",
-          options: [
-          "Helium",
-          "Wasserstoff",
-          "Radon",
-          "Sauerstoff",
-          "Stickstoff"
-          ],
-          correctIndex: 2,
-          explanation: "Radon-222 ist ein radioaktives Edelgas, das in der Uran-238-Zerfallsreihe entsteht. Als Gas kann es aus dem Boden in Gebäude eindringen und sich anreichern. Es ist ein Alpha-Strahler mit einer Halbwertszeit von 3,8 Tagen und die zweithäufigste Ursache für Lungenkrebs nach Rauchen.",
-          difficulty: 2,
-        },
-        {
-          question: "Was ist der Massendefekt eines Atomkerns?",
-          options: [
-          "Der Massenverlust durch radioaktiven Zerfall",
-          "Die Differenz zwischen der Summe der Nukleonmassen und der tatsächlichen Kernmasse",
-          "Die Masse der Elektronen in der Hülle",
-          "Die Massenzunahme bei Kernfusion",
-          "Der Fehler bei der Massenbestimmung"
-          ],
-          correctIndex: 1,
-          explanation: "Der Massendefekt Δm ist die Differenz zwischen der Summe der Massen freier Protonen und Neutronen und der tatsächlichen Kernmasse. Diese \"fehlende\" Masse wurde bei der Kernbildung in Bindungsenergie umgewandelt: E_B = Δm × c². Je größer der Massendefekt, desto stabiler der Kern.",
-          difficulty: 3,
-        },
-        {
-          question: "Ein Helium-4-Kern hat eine Masse von 4,0015 u. Die Massen von Proton und Neutron betragen jeweils etwa 1,007 u und 1,009 u. Wie groß ist ungefähr der Massendefekt?",
-          options: [
-          "0,001 u",
-          "0,010 u",
-          "0,030 u",
-          "0,050 u",
-          "0,100 u"
-          ],
-          correctIndex: 2,
-          explanation: "Summe der Einzelmassen: 2 × 1,007 u + 2 × 1,009 u = 2,014 u + 2,018 u = 4,032 u. Massendefekt: Δm = 4,032 u - 4,0015 u ≈ 0,030 u. Diese Masse entspricht der Bindungsenergie des Heliumkerns von etwa 28 MeV.",
-          difficulty: 3,
-        },
-        {
-          question: "Welche Einheit wird für die Strahlendosis (absorbierte Energie pro Masse) verwendet?",
-          options: [
-          "Becquerel (Bq)",
-          "Gray (Gy)",
-          "Curie (Ci)",
-          "Sievert (Sv)",
-          "Röntgen (R)"
-          ],
-          correctIndex: 1,
-          explanation: "Gray (Gy) ist die SI-Einheit der Energiedosis: 1 Gy = 1 J/kg absorbierte Energie. Die Äquivalentdosis (biologische Wirkung) wird in Sievert (Sv) gemessen. Becquerel (Bq) ist die Einheit der Aktivität. Eine alte Einheit der Energiedosis ist Rad (1 Gy = 100 rad).",
-          difficulty: 2,
-        },
-        {
-          question: "Warum ist Alpha-Strahlung bei innerer Kontamination (Einatmen, Verschlucken) besonders gefährlich?",
-          options: [
-          "Weil sie sehr durchdringend ist",
-          "Weil sie eine hohe Ionisierungsdichte auf kurzer Strecke hat",
-          "Weil sie sehr weit reicht",
-          "Weil sie nicht abgeschirmt werden kann",
-          "Weil sie durch Magnetfelder nicht ablenkbar ist"
-          ],
-          correctIndex: 1,
-          explanation: "Alpha-Teilchen haben eine sehr hohe Ionisierungsdichte, geben also ihre Energie auf sehr kurzer Strecke ab. Bei äußerer Bestrahlung werden sie von der Haut gestoppt (harmlos). Im Körper deponieren sie ihre gesamte Energie im Gewebe und verursachen schwere lokale Schäden (z.B. Lungenkrebs durch Radon).",
-          difficulty: 2,
-        },
-        {
-          question: "Welches Prinzip beschreibt die drei Grundregeln des Strahlenschutzes?",
-          options: [
-          "Zeit, Raum, Frequenz",
-          "Abstand, Abschirmung, Aufenthaltsdauer",
-          "Masse, Energie, Impuls",
-          "Reflektion, Absorption, Transmission",
-          "Alpha, Beta, Gamma"
-          ],
-          correctIndex: 1,
-          explanation: "Die drei A's des Strahlenschutzes: 1) Abstand: Intensität nimmt mit 1/r² ab. 2) Abschirmung: Geeignete Materialien zwischen Quelle und Person. 3) Aufenthaltsdauer: Exposition minimieren. Diese Prinzipien reduzieren die Strahlendosis effektiv.",
-          difficulty: 2,
-        },
-        {
-          question: "Eine Probe von Jod-131 (Halbwertszeit 8 Tage) hat eine anfängliche Aktivität von 3200 Bq. Welche Aktivität hat sie nach 32 Tagen?",
-          options: [
-          "100 Bq",
-          "200 Bq",
-          "400 Bq",
-          "800 Bq",
-          "1600 Bq"
-          ],
-          correctIndex: 1,
-          explanation: "32 Tage entsprechen 4 Halbwertszeiten (32/8 = 4). Nach jeder Halbwertszeit halbiert sich die Aktivität: 3200 → 1600 → 800 → 400 → 200 Bq. Oder: A = A₀ × (1/2)ⁿ = 3200 × (1/2)⁴ = 3200 × 1/16 = 200 Bq.",
-          difficulty: 3,
-        }
       ],
-    }
+    },
   ],
 };
