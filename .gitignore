@@ -26,3 +26,33 @@ dist-ssr
 .aider*
 # Lokales Backup für BMS-Import (enthält ggf. sensible Daten)
 **/backup-bms-chapters.json
+
+# Claude Code tool directories
+.claude/agents/
+.claude/commands/
+.claude/get-shit-done/
+.claude/gsd-file-manifest.json
+.claude/hooks/
+.claude/package.json
+.claude/settings.json
+
+# Planning artifacts
+.planning/
+
+# One-time migration / helper scripts
+check-db.mjs
+check-schema.mjs
+create-bms-chapters.mjs
+find-methoden-genetik.mjs
+fix_sql_quotes.py
+migrate-bms-chapters.sql
+migrate-bms-chapters-FIXED.sql
+migrate-kap7.mjs
+AUDIT_STUDYMED_VERGLEICH.md
+CLAUDE_CODE_PROMPT_BMS_CONTENT.md
+MIGRATION_INSTRUCTIONS.md
+
+# Supabase temp / backup
+supabase/.temp/
+supabase/migrations/*.backup
+supabase/migrations/*.bak*
