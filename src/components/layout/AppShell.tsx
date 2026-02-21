@@ -8,14 +8,14 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { OPEN_COMMAND_PALETTE } from "@/lib/commandPaletteConstants";
 
 const CommandPalette = lazy(() => import("@/components/CommandPalette").then(m => ({ default: m.CommandPalette })));
+const InterleavingOverlayLazy = lazy(() => import("@/components/InterleavingOverlay").then(m => ({ default: m.InterleavingOverlay })));
+const RandomRewardToastLazy = lazy(() => import("@/components/learning/RandomRewardToast").then(m => ({ default: m.RandomRewardToast })));
+const HotStreakOverlayLazy = lazy(() => import("@/components/learning/HotStreakOverlay").then(m => ({ default: m.HotStreakOverlay })));
+const LevelUpOverlayLazy = lazy(() => import("@/components/learning/LevelUpOverlay").then(m => ({ default: m.LevelUpOverlay })));
+const BadgeUnlockModalLazy = lazy(() => import("@/components/badges/BadgeUnlockModal").then(m => ({ default: m.BadgeUnlockModal })));
 import { SyncToast } from "@/components/SyncToast";
 import { BreadcrumbProvider } from "@/contexts/BreadcrumbContext";
-import { InterleavingOverlay } from "@/components/InterleavingOverlay";
 import { useInterleavingStore, shouldShowInterleavingOverlay } from "@/store/interleaving";
-import { RandomRewardToast } from "@/components/learning/RandomRewardToast";
-import { HotStreakOverlay } from "@/components/learning/HotStreakOverlay";
-import { LevelUpOverlay } from "@/components/learning/LevelUpOverlay";
-import { BadgeUnlockModal } from "@/components/badges/BadgeUnlockModal";
 import { useQuizSessionStore } from "@/store/quizSessionStore";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
@@ -148,21 +148,25 @@ export function AppShell() {
             <CommandPalette open={commandPaletteOpen} onClose={() => setCommandPaletteOpen(false)} />
           </Suspense>
         )}
-        <InterleavingOverlay
-          visible={interleavingOverlayVisible}
-          currentArea={currentArea}
-          onDismiss={dismissInterleaving}
-        />
+        <Suspense fallback={null}>
+          <InterleavingOverlayLazy
+            visible={interleavingOverlayVisible}
+            currentArea={currentArea}
+            onDismiss={dismissInterleaving}
+          />
+        </Suspense>
         <SyncToast />
-        <HotStreakOverlay active={hotStreakActive} />
-        <RandomRewardToast message={rewardMessage} type={rewardType} onDismiss={clearReward} />
-        <LevelUpOverlay
-          level={levelUpState?.level}
-          levelName={levelUpState?.level ? getLevelName(levelUpState.level) : undefined}
-          feature={levelUpState?.feature}
-          onDismiss={() => setLevelUpState(null)}
-        />
-        <BadgeUnlockModal badgeId={pendingBadgeId} onDismiss={() => setPendingBadgeId(null)} />
+        <Suspense fallback={null}>
+          <HotStreakOverlayLazy active={hotStreakActive} />
+          <RandomRewardToastLazy message={rewardMessage} type={rewardType} onDismiss={clearReward} />
+          <LevelUpOverlayLazy
+            level={levelUpState?.level}
+            levelName={levelUpState?.level ? getLevelName(levelUpState.level) : undefined}
+            feature={levelUpState?.feature}
+            onDismiss={() => setLevelUpState(null)}
+          />
+          <BadgeUnlockModalLazy badgeId={pendingBadgeId} onDismiss={() => setPendingBadgeId(null)} />
+        </Suspense>
         <Sidebar mobileOpen={mobileOpen} onClose={closeSidebar} />
         {/* Main area: full width on small screens; from lg reserve space for sidebar (sync: sidebarLayout.ts) */}
         <div className={cn("min-h-screen flex flex-col relative z-50 w-full", SIDEBAR_MAIN_ML)}>
