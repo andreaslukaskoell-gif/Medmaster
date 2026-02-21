@@ -15,7 +15,7 @@ const SUBJECT_LABELS: Record<string, string> = {
   mathematik: "Mathematik",
 };
 
-export const OPEN_COMMAND_PALETTE = "open-command-palette";
+export { OPEN_COMMAND_PALETTE } from "@/lib/commandPaletteConstants";
 
 export type SearchItem =
   | { type: "chapter"; kapitel: Kapitel }

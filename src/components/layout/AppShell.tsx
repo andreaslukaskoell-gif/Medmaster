@@ -1,11 +1,13 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef, lazy, Suspense } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sidebar } from "./Sidebar";
 import { TopBar } from "./TopBar";
 import { BottomTabBar } from "./BottomTabBar";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
-import { CommandPalette, OPEN_COMMAND_PALETTE } from "@/components/CommandPalette";
+import { OPEN_COMMAND_PALETTE } from "@/lib/commandPaletteConstants";
+
+const CommandPalette = lazy(() => import("@/components/CommandPalette").then(m => ({ default: m.CommandPalette })));
 import { SyncToast } from "@/components/SyncToast";
 import { BreadcrumbProvider } from "@/contexts/BreadcrumbContext";
 import { InterleavingOverlay } from "@/components/InterleavingOverlay";
@@ -34,6 +36,7 @@ const INTERLEAVE_CHECK_MS = 60 * 1000; // 1 min
 export function AppShell() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
+  const [cmdPaletteEverOpened, setCmdPaletteEverOpened] = useState(false);
   const [interleavingOverlayVisible, setInterleavingOverlayVisible] = useState(false);
   const location = useLocation();
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -92,18 +95,21 @@ export function AppShell() {
   }, [snooze]);
 
   useEffect(() => {
+    const openPalette = () => {
+      setCommandPaletteOpen(true);
+      setCmdPaletteEverOpened(true);
+    };
     const handler = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
         e.preventDefault();
-        setCommandPaletteOpen(true);
+        openPalette();
       }
     };
-    const onOpen = () => setCommandPaletteOpen(true);
     window.addEventListener("keydown", handler);
-    window.addEventListener(OPEN_COMMAND_PALETTE, onOpen);
+    window.addEventListener(OPEN_COMMAND_PALETTE, openPalette);
     return () => {
       window.removeEventListener("keydown", handler);
-      window.removeEventListener(OPEN_COMMAND_PALETTE, onOpen);
+      window.removeEventListener(OPEN_COMMAND_PALETTE, openPalette);
     };
   }, []);
 
@@ -137,7 +143,11 @@ export function AppShell() {
   return (
     <BreadcrumbProvider>
       <div className="min-h-screen bg-[var(--background)]">
-        <CommandPalette open={commandPaletteOpen} onClose={() => setCommandPaletteOpen(false)} />
+        {cmdPaletteEverOpened && (
+          <Suspense fallback={null}>
+            <CommandPalette open={commandPaletteOpen} onClose={() => setCommandPaletteOpen(false)} />
+          </Suspense>
+        )}
         <InterleavingOverlay
           visible={interleavingOverlayVisible}
           currentArea={currentArea}

@@ -3,7 +3,7 @@
  * Jedes Badge hat eine id, Name, Stufe, Beschreibung und wird durch Store-Daten geprüft.
  */
 
-import { alleKapitel } from "@/data/bmsKapitel";
+import type { Kapitel } from "@/data/bmsKapitel/types";
 
 export type BadgeTier = "bronze" | "silver" | "gold";
 
@@ -81,9 +81,9 @@ export function checkEarlyBird(firstActivityTimeByDay: Record<string, string>): 
   return false;
 }
 
-export function getAllBiologyUnterkapitelIds(): string[] {
+export function getAllBiologyUnterkapitelIds(kapitel: Kapitel[]): string[] {
   const ids: string[] = [];
-  for (const k of alleKapitel) {
+  for (const k of kapitel) {
     if (k.subject !== "biologie") continue;
     for (const u of k.unterkapitel || []) {
       if (u?.id) ids.push(u.id);
@@ -92,9 +92,9 @@ export function getAllBiologyUnterkapitelIds(): string[] {
   return ids;
 }
 
-export function getAllPhysikUnterkapitelIds(): string[] {
+export function getAllPhysikUnterkapitelIds(kapitel: Kapitel[]): string[] {
   const ids: string[] = [];
-  for (const k of alleKapitel) {
+  for (const k of kapitel) {
     if (k.subject !== "physik") continue;
     for (const u of k.unterkapitel || []) {
       if (u?.id) ids.push(u.id);
@@ -110,13 +110,14 @@ export function getBadgeProgress(
     maxConsecutiveCorrectEver: number;
     smartRecoveryCount: number;
     firstActivityTimeByDay: Record<string, string>;
-  }
+  },
+  kapitel: Kapitel[] = []
 ): { earned: boolean; progress?: string } {
   switch (badgeId) {
     case "fruehaufsteher":
       return { earned: checkEarlyBird(state.firstActivityTimeByDay) };
     case "bms-gigant": {
-      const bioIds = getAllBiologyUnterkapitelIds();
+      const bioIds = getAllBiologyUnterkapitelIds(kapitel);
       const completed = bioIds.filter((id) => state.completedChapters.includes(id)).length;
       return {
         earned: bioIds.length > 0 && completed >= bioIds.length,
@@ -134,7 +135,7 @@ export function getBadgeProgress(
         progress: `${state.smartRecoveryCount}/${FEHLER_FRESSER_COUNT} Smart-Recovery`,
       };
     case "physik-profi": {
-      const physikIds = getAllPhysikUnterkapitelIds();
+      const physikIds = getAllPhysikUnterkapitelIds(kapitel);
       const completed = physikIds.filter((id) => state.completedChapters.includes(id)).length;
       return {
         earned: physikIds.length > 0 && completed >= physikIds.length,

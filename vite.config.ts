@@ -25,7 +25,12 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          'main-vendor': ['react', 'react-dom', 'react-router-dom', 'zustand'],
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-state': ['zustand'],
+          'vendor-motion': ['framer-motion'],
+          'vendor-supabase': ['@supabase/supabase-js'],
+          'vendor-recharts': ['recharts'],
+          'vendor-markdown': ['react-markdown', 'remark-gfm'],
         },
       },
     },

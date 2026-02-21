@@ -7,7 +7,7 @@ import { useStore } from "@/store/useStore";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { SyncStatus } from "./SyncStatus";
 import { daysUntilMedAT } from "@/lib/utils";
-import { OPEN_COMMAND_PALETTE } from "@/components/CommandPalette";
+import { OPEN_COMMAND_PALETTE } from "@/lib/commandPaletteConstants";
 import { GlobalBreadcrumb } from "./GlobalBreadcrumb";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";

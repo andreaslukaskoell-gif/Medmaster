@@ -40,12 +40,6 @@ import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { getLevelFromXP, getRequiredLevelForPath } from "@/lib/progression";
-import {
-  alleKapitel,
-  findChapterByUnterkapitelId,
-  getKapitelById,
-  getKapitelBySubject,
-} from "@/data/bmsKapitel";
 import { pathForChapter } from "@/lib/bmsRoutes";
 import type { Kapitel } from "@/data/bmsKapitel/types";
 import { SIDEBAR_PANEL_WIDTH, SIDEBAR_LG_POSITION } from "./sidebarLayout";
@@ -225,6 +219,22 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
   const [openBmsSubject, setOpenBmsSubject] = useState<string | null>(null);
   const [bmsExpanded, setBmsExpanded] = useState(false);
 
+  // Lazy-load BMS chapter metadata to keep it out of the main bundle
+  const [bmsModule, setBmsModule] = useState<{
+    alleKapitel: Kapitel[];
+    findChapterByUnterkapitelId: (id: string) => { kapitel: Kapitel; index: number } | null | undefined;
+    getKapitelById: (id: string) => Kapitel | undefined;
+    getKapitelBySubject: (s: string) => Kapitel[];
+  } | null>(null);
+  useEffect(() => {
+    import("@/data/bmsKapitel").then((m) => setBmsModule({
+      alleKapitel: m.alleKapitel,
+      findChapterByUnterkapitelId: m.findChapterByUnterkapitelId,
+      getKapitelById: m.getKapitelById,
+      getKapitelBySubject: m.getKapitelBySubject,
+    }));
+  }, []);
+
   const lastPath = useAdaptiveStore((s) => s.lastPath);
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
   const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
@@ -246,29 +256,30 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
     return Object.values(sr).filter((item) => item?.nextDue <= today).length;
   });
 
-  const bmsProgress = useStore((s) => {
-    const completed = s.completedChapters ?? [];
-    const totalUK = alleKapitel.reduce((sum, k) => sum + (k?.unterkapitel?.length ?? 0), 0);
+  const completedChapters = useStore((s) => s.completedChapters ?? []);
+  const bmsProgress = useMemo(() => {
+    const kapitel = bmsModule?.alleKapitel ?? [];
+    const totalUK = kapitel.reduce((sum, k) => sum + (k?.unterkapitel?.length ?? 0), 0);
     if (totalUK === 0) return 0;
-    const completedUK = alleKapitel.reduce(
-      (sum, k) => sum + (k?.unterkapitel?.filter((u) => u?.id && completed.includes(u.id)).length ?? 0),
+    const completedUK = kapitel.reduce(
+      (sum, k) => sum + (k?.unterkapitel?.filter((u) => u?.id && completedChapters.includes(u.id)).length ?? 0),
       0
     );
     return Math.round((completedUK / totalUK) * 100);
-  });
+  }, [bmsModule, completedChapters]);
 
   const lastPathLabel = useMemo(() => {
     if (!lastPath || lastPath === "/" || lastPath === "/bms") return null;
-    if (lastViewedUnterkapitelId) {
-      const found = findChapterByUnterkapitelId(lastViewedUnterkapitelId);
+    if (lastViewedUnterkapitelId && bmsModule) {
+      const found = bmsModule.findChapterByUnterkapitelId(lastViewedUnterkapitelId);
       if (found) {
         const uk = found.kapitel.unterkapitel?.[found.index];
         const subj: Record<string, string> = { biologie: "Bio", chemie: "Chemie", physik: "Physik", mathematik: "Mathe" };
         return uk ? `${subj[found.kapitel.subject]} · ${uk.title}` : `${subj[found.kapitel.subject]} · ${found.kapitel.title}`;
       }
     }
-    if (lastViewedKapitelId) {
-      const kap = getKapitelById(lastViewedKapitelId);
+    if (lastViewedKapitelId && bmsModule) {
+      const kap = bmsModule.getKapitelById(lastViewedKapitelId);
       if (kap) {
         const subj: Record<string, string> = { biologie: "Bio", chemie: "Chemie", physik: "Physik", mathematik: "Mathe" };
         return `${subj[kap.subject]} · ${kap.title}`;
@@ -277,7 +288,7 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
     const m = lastPath.match(/\/bms\/([^/]+)\/([^/]+)/);
     if (m) return `${m[1]} · ${m[2]}`;
     return "Zuletzt gelesen";
-  }, [lastPath, lastViewedKapitelId, lastViewedUnterkapitelId]);
+  }, [lastPath, lastViewedKapitelId, lastViewedUnterkapitelId, bmsModule]);
 
   const isLastPathActive = lastPath !== null && lastPath !== "/" && pathname === lastPath;
   const filterDue = useMemo(() => new URLSearchParams(search).get("filter") === "due", [search]);
@@ -289,7 +300,7 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
   }, [isLastPathActive]);
 
   const chaptersBySubject = (subject: "biologie" | "chemie" | "physik" | "mathematik"): Kapitel[] =>
-    getKapitelBySubject(subject) || [];
+    bmsModule?.getKapitelBySubject(subject) ?? [];
 
   const toggleSection = (id: string) => {
     setOpenSections((prev) => ({ ...prev, [id]: !prev[id] }));

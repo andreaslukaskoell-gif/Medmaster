@@ -1,7 +1,5 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import { BADGE_DEFINITIONS } from "@/data/badges";
-import { getBadgeProgress } from "@/data/badges";
 import { computeXP } from "@/lib/xp";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 
@@ -181,7 +179,7 @@ interface AppState {
   incrementSmartRecoveryCount: () => void;
   setMaxConsecutiveCorrect: (n: number) => void;
   /** Prüft alle Badges, vergibt neu verdiente, gibt neu verdientes Badge-ID zurück oder null */
-  checkAndAwardBadges: () => string | null;
+  checkAndAwardBadges: () => Promise<string | null>;
   setPendingBadgeId: (id: string | null) => void;
   checkStreak: () => void;
   toggleDarkMode: () => void;
@@ -274,25 +272,22 @@ export const useStore = create<AppState>()(
             firstActivityTimeByDay: { ...s.firstActivityTimeByDay, [today]: new Date().toISOString() },
           };
         });
-        const newBadge = get().checkAndAwardBadges();
-        if (newBadge) set({ pendingBadgeId: newBadge });
+        get().checkAndAwardBadges().then((newBadge) => { if (newBadge) set({ pendingBadgeId: newBadge }); });
       },
 
       incrementSmartRecoveryCount: () => {
         set((s) => ({ smartRecoveryCount: s.smartRecoveryCount + 1 }));
-        const newBadge = get().checkAndAwardBadges();
-        if (newBadge) set({ pendingBadgeId: newBadge });
+        get().checkAndAwardBadges().then((newBadge) => { if (newBadge) set({ pendingBadgeId: newBadge }); });
       },
 
       setMaxConsecutiveCorrect: (n) => {
         set((s) => ({ maxConsecutiveCorrectEver: Math.max(s.maxConsecutiveCorrectEver, n) }));
         if (n >= 20) {
-          const newBadge = get().checkAndAwardBadges();
-          if (newBadge) set({ pendingBadgeId: newBadge });
+          get().checkAndAwardBadges().then((newBadge) => { if (newBadge) set({ pendingBadgeId: newBadge }); });
         }
       },
 
-      checkAndAwardBadges: () => {
+      checkAndAwardBadges: async () => {
         const state = get();
         const badgeState = {
           completedChapters: state.completedChapters,
@@ -300,9 +295,13 @@ export const useStore = create<AppState>()(
           smartRecoveryCount: state.smartRecoveryCount,
           firstActivityTimeByDay: state.firstActivityTimeByDay,
         };
+        const [{ BADGE_DEFINITIONS, getBadgeProgress }, { alleKapitel }] = await Promise.all([
+          import("@/data/badges"),
+          import("@/data/bmsKapitel"),
+        ]);
         for (const badge of BADGE_DEFINITIONS) {
           if (state.earnedBadges.includes(badge.id)) continue;
-          const { earned } = getBadgeProgress(badge.id, badgeState);
+          const { earned } = getBadgeProgress(badge.id, badgeState, alleKapitel);
           if (earned) {
             set((s) => ({ earnedBadges: [...s.earnedBadges, badge.id] }));
             return badge.id;
@@ -375,8 +374,7 @@ export const useStore = create<AppState>()(
             ? s.completedChapters
             : [...s.completedChapters, chapterId],
         }));
-        const newBadge = get().checkAndAwardBadges();
-        if (newBadge) set({ pendingBadgeId: newBadge });
+        get().checkAndAwardBadges().then((newBadge) => { if (newBadge) set({ pendingBadgeId: newBadge }); });
       },
 
       setAnswer: (questionId, answer) =>

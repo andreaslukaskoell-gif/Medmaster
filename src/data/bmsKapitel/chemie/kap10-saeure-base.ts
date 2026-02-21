@@ -1,683 +1,1074 @@
 import type { Kapitel } from '../types';
 
 export const chemKap10: Kapitel = {
-  id: "chem-kap10",
+  id: 'chem-kap10',
   title: "Säure-Base",
-  subject: "chemie",
-  icon: "🧫",
-  estimatedTime: "55 min",
+  subject: 'chemie',
+  icon: '🧫',
+  estimatedTime: '90 min',
   unterkapitel: [
     {
-      id: "ch-10-01",
-      title: "Säuren und Basen nach Brønsted-Lowry",
-      content: `## Das Brønsted-Lowry-Konzept
+      id: 'ch-10-01',
+      title: "Säure-Base-Definitionen und pH-Wert",
+      content: `# Säure-Base-Definitionen und pH-Wert
 
-Das Brønsted-Lowry-Konzept (1923) definiert:
-- **Säure:** Protonendonor — gibt H⁺ (Proton) an eine Base ab
-- **Base:** Protonenakzeptor — nimmt H⁺ von einer Säure auf
+## Historische Entwicklung der Säure-Base-Theorie
 
-Dies erweitert die ältere Arrhenius-Definition (Säure = H⁺-Lieferant in Wasser, Base = OH⁻-Lieferant) auf alle Lösungsmittel.
+Die Säure-Base-Chemie hat im Laufe der Wissenschaftsgeschichte mehrere konzeptionelle Erweiterungen erfahren. Die älteste und engste Definition stammt von **Arrhenius** (1884): Säuren sind Substanzen, die in wässriger Lösung H⁺-Ionen (Protonen) freisetzen, Basen sind Substanzen, die OH⁻-Ionen freisetzen. Diese Definition ist nur auf wässrige Lösungen anwendbar und erklärt beispielsweise nicht, warum Ammoniak (NH₃) basisch reagiert, obwohl es keine OH⁻-Gruppe enthält.
 
-## Konjugierte Säure-Base-Paare
+## Die Brønsted-Lowry-Definition
 
-Bei jeder Protonenübertragung entstehen konjugierte Paare:
-**HA + B ⇌ A⁻ + BH⁺**
+**Johannes Nicolaus Brønsted** (1923) erweiterte das Konzept grundlegend:
 
-- HA / A⁻ bilden ein konjugiertes Säure-Base-Paar (HA ist Säure, A⁻ die konjugierte Base)
-- B / BH⁺ bilden ein konjugiertes Säure-Base-Paar (B ist Base, BH⁺ die konjugierte Säure)
+- **Säure** = Protonendonator: gibt ein Proton (H⁺) ab
+- **Base** = Protonenakzeptor: nimmt ein Proton (H⁺) auf
 
-**Merksatz:** Die konjugierte Base einer starken Säure ist schwach (und umgekehrt).
+Diese Definition gilt auch für nicht-wässrige Lösungen und erklärt Protonenübertragungsreaktionen umfassend. Jede Säure-Base-Reaktion ist nach Brønsted eine **Protonenübertragung** zwischen einem Donor und einem Akzeptor.
 
-## Säurestärke und K_s
+Beispiel:
+\`\`\`
+CH₃COOH  +  H₂O  ⇌  CH₃COO⁻  +  H₃O⁺
+ Säure₁     Base₂     Base₁      Säure₂
+\`\`\`
 
-Die Stärke einer Säure wird durch die Gleichgewichtskonstante K_s (oder K_a) quantifiziert:
+Aus jeder Säure entsteht nach Protonenabgabe die **korrespondierende (konjugierte) Base** – und umgekehrt. Säure und ihre korrespondierende Base unterscheiden sich immer genau um ein H⁺.
 
-**K_s = [H₃O⁺] · [A⁻] / [HA]**
+**Starke Säure** → **schwache korrespondierende Base** (und umgekehrt). Je leichter eine Säure Protonen abgibt, desto stabiler (schwächer) ist die entstehende Basis.
 
-**pK_s = −log(K_s):** Kleines pK_s = starke Säure (großes K_s); großes pK_s = schwache Säure.
+**Amphotere Teilchen (Ampholyte)** können sowohl als Säure als auch als Base reagieren. Wichtigstes Beispiel: Wasser (H₂O) und Hydrogencarbonat (HCO₃⁻).
 
-## Starke vs. schwache Säuren
+## Die Lewis-Definition
 
-**Starke Säuren** (vollständige Dissoziation, K_s >> 1, pK_s < 0):
-- HCl (Salzsäure), HBr, HI
-- H₂SO₄ (Schwefelsäure, erste Dissoziation)
-- HNO₃ (Salpetersäure)
+**Gilbert N. Lewis** (1923) formulierte die allgemeinste Säure-Base-Definition:
 
-**Schwache Säuren** (partielle Dissoziation, K_s << 1, pK_s > 0):
-- CH₃COOH (Essigsäure, pK_s = 4,75)
-- H₂CO₃ (Kohlensäure, pK_s1 = 6,4)
-- H₃PO₄ (Phosphorsäure, pK_s1 = 2,1)
-- NH₄⁺ (konjugierte Säure des Ammoniaks, pK_s = 9,25)
+- **Lewis-Säure** = Elektronenpaarakzeptor (nimmt ein Elektronenpaar auf)
+- **Lewis-Base** = Elektronenpaardonor (gibt ein Elektronenpaar ab)
 
-## Lewis-Säure-Base-Konzept (Erweiterung)
+Diese Definition ist die weiteste und umfasst auch Reaktionen ohne Protonentransfer. Beispiele für Lewis-Säuren: BF₃, AlCl₃, Metallkationen (Fe³⁺, Cu²⁺). Lewis-Säuren haben oft ein unbesetztes Orbital. Alle Brønsted-Säuren sind auch Lewis-Säuren, aber nicht umgekehrt.
 
-Lewis (1923) definiert noch allgemeiner: Säure = Elektronenpaarakzeptor, Base = Elektronenpaardonor. Dies erklärt auch Reaktionen ohne Protonentransfer (z. B. BF₃ + NH₃ → F₃B-NH₃).`,
+Wichtige Lewis-Säure-Base-Reaktion:
+\`\`\`
+BF₃ + :NH₃ → F₃B←NH₃  (Addukt)
+Lewis-S.  Lewis-B.
+\`\`\`
+
+## Das Ionenprodukt des Wassers (Kw) und die Autoprotolyse
+
+Wasser ist ein Amphoproton – es kann selbst mit sich selbst reagieren:
+
+\`\`\`
+H₂O + H₂O ⇌ H₃O⁺ + OH⁻
+\`\`\`
+
+Diese Reaktion heißt **Autoprotolyse** des Wassers. Das Gleichgewicht liegt weit auf der linken Seite (Wasser ionisiert kaum). Das **Ionenprodukt des Wassers** ist:
+
+**K_W = [H₃O⁺] · [OH⁻] = 10⁻¹⁴ mol²/L² (bei 25 °C)**
+
+In reinem Wasser: [H₃O⁺] = [OH⁻] = 10⁻⁷ mol/L → pH = 7 (neutral bei 25 °C).
+
+K_W ist **temperaturabhängig**: Bei höherer Temperatur steigt K_W (Autoprotolyse ist endotherm). Bei 37 °C (Körpertemperatur) ist K_W ≈ 2,4 × 10⁻¹⁴, sodass der Neutralpunkt bei pH ≈ 6,8 liegt. „Neutral" bedeutet also nicht immer pH = 7, sondern [H₃O⁺] = [OH⁻].
+
+## Definition und Berechnung des pH-Werts
+
+Der **pH-Wert** ist der negative dekadische Logarithmus der Hydronium-Ionen-Konzentration:
+
+**pH = −log₁₀[H₃O⁺]**
+
+Daraus folgt: **[H₃O⁺] = 10⁻pH**
+
+Analog: **pOH = −log₁₀[OH⁻]** und **pH + pOH = pK_W = 14** (bei 25 °C)
+
+### pH-Skala (bei 25 °C)
+| pH | [H₃O⁺] (mol/L) | Charakter |
+|-----|-----------------|-----------|
+| 0   | 1               | stark sauer |
+| 3   | 10⁻³            | sauer |
+| 7   | 10⁻⁷            | neutral |
+| 11  | 10⁻¹¹           | basisch |
+| 14  | 10⁻¹⁴           | stark basisch |
+
+Eine **Veränderung um eine pH-Einheit** bedeutet eine **10-fache Änderung** der H₃O⁺-Konzentration (logarithmische Skala!).
+
+## Klinischer Kontext: Blut-pH
+
+Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichung nach unten heißt **Azidose** (< 7,35), nach oben **Alkalose** (> 7,45). Diese engen Grenzen sind lebenswichtig, da Enzymstrukturen und Proteinfunktionen pH-sensitiv sind. Schon bei pH < 7,0 oder pH > 7,7 besteht Lebensgefahr.`,
       lernziele: [
-        "Das Brønsted-Lowry-Konzept erklären und konjugierte Säure-Base-Paare identifizieren",
-        "K_s und pK_s definieren und für die Klassifizierung starker und schwacher Säuren nutzen",
-        "Den Unterschied zwischen Brønsted-Lowry und Lewis-Konzept beschreiben",
+        "Die Säure-Base-Definitionen nach Arrhenius, Brønsted-Lowry und Lewis erklären und vergleichen können",
+        "Korrespondierende Säure-Base-Paare identifizieren und den Begriff Ampholyt erklären",
+        "Das Ionenprodukt des Wassers Kw und die Autoprotolyse beschreiben",
+        "Den pH-Wert berechnen und die logarithmische pH-Skala interpretieren",
+        "Den Zusammenhang pH + pOH = 14 anwenden"
       ],
       sections: [
         {
-          heading: "Konjugierte Paare und Reaktionsrichtung",
-          text: "In einer Säure-Base-Reaktion überträgt die stärkere Säure ein Proton an die stärkere Base. Das Gleichgewicht liegt auf der Seite der schwächeren Säure und schwächeren Base. Beispiel: HCl + NH₃ → NH₄⁺ + Cl⁻. HCl (starke Säure, konjugierte Base Cl⁻ sehr schwach) gibt H⁺ an NH₃ (mittelstarke Base, konjugierte Säure NH₄⁺ schwach). Das Gleichgewicht liegt rechts (fast vollständig). Diese Überlegung erlaubt es vorherzusagen, ob eine Reaktion in der angegebenen Richtung abläuft, ohne K_s zu berechnen.",
-          merksatz: "Starke Säure → schwache konjugierte Base; GGW auf Seite der schwächeren Säure",
+          heading: "Brønsted-Lowry vs. Lewis: Die zwei wichtigsten Definitionen",
+          text: "Brønsted definiert Säuren und Basen über den Protonentransfer, Lewis über den Elektronenpaar-Transfer. Für den MedAT-H ist die Brønsted-Definition zentral: Säure = Protonendonor, Base = Protonenakzeptor. Lewis-Säuren (z. B. Fe³⁺, AlCl₃) haben ein unbesetztes Orbital und akzeptieren Elektronenpaare ohne H⁺-Transfer. Alle Brønsted-Säuren sind auch Lewis-Säuren, aber nicht umgekehrt.",
+          merksatz: "Brønsted: Säure gibt H⁺ ab, Base nimmt H⁺ auf. Lewis: Säure nimmt Elektronenpaar auf, Base gibt es ab."
         },
         {
-          heading: "Säurestärke und Molekülstruktur",
-          text: "Die Säurestärke hängt von der Stabilität der konjugierten Base (A⁻) ab: Je stabiler A⁻, desto leichter gibt HA das Proton ab (stärkere Säure). Stabilitätsfaktoren: Elektronegativität (F > O > N > C — O-H-Säuren stärker als N-H-Säuren), Bindungslänge/Bindungsstärke (H-X schwächer bei größerem X → HI stärker als HCl), Induktive Effekte (elektronenziehende Gruppen erhöhen Säurestärke — Trichloressigsäure pK_s = 0,5 vs. Essigsäure pK_s = 4,75), Resonanzstabilisierung (Carboxylat-Ion stabilisiert durch zwei gleiche C-O-Bindungen).",
-          merksatz: "Stabile konjugierte Base A⁻ = starke Säure HA",
+          heading: "Korrespondierende Paare und Ampholyte",
+          text: "Eine Brønsted-Säure HA gibt ein Proton ab und wird zur korrespondierenden Base A⁻. HA und A⁻ bilden ein konjugiertes Paar. Je stärker die Säure, desto schwächer die korrespondierende Base. Ampholyte wie Wasser (H₂O) oder Hydrogencarbonat (HCO₃⁻) können sowohl Protonen abgeben als auch aufnehmen – sie sind gleichzeitig Brønsted-Säure und Brønsted-Base.",
+          merksatz: "Starke Säure → schwache korrespondierende Base (und umgekehrt). pKs(Säure) + pKb(korr. Base) = 14."
         },
+        {
+          heading: "pH-Berechnung und Ionenprodukt",
+          text: "Das Ionenprodukt Kw = [H₃O⁺]·[OH⁻] = 10⁻¹⁴ (25 °C) ist die Grundlage aller pH-Berechnungen. pH = −log[H₃O⁺], also [H₃O⁺] = 10⁻pH. Bei 25 °C gilt pH + pOH = 14. Kw steigt mit der Temperatur: Bei 37 °C Kw ≈ 2,4 × 10⁻¹⁴ → Neutralpunkt bei pH ≈ 6,8. Eine Veränderung um 1 pH-Einheit = Faktor 10 in der H₃O⁺-Konzentration.",
+          merksatz: "pH = −log[H₃O⁺] | pH + pOH = 14 | Kw = 10⁻¹⁴ | Neutral: pH = 7 nur bei 25 °C."
+        }
       ],
       merksätze: [
-        "Brønsted: Säure = H⁺-Donor, Base = H⁺-Akzeptor",
-        "pK_s klein = starke Säure; pK_s groß = schwache Säure",
-        "Konjugiert: stark ↔ schwach — starke Säure, schwache konj. Base",
+        "Brønsted-Säure = Protonendonor (gibt H⁺ ab); Brønsted-Base = Protonenakzeptor (nimmt H⁺ auf).",
+        "Lewis-Säure = Elektronenpaarakzeptor; Lewis-Base = Elektronenpaardonor – ohne zwingenden H⁺-Transfer.",
+        "Korrespondierendes Paar: HA und A⁻ unterscheiden sich um genau ein H⁺.",
+        "Starke Säure → schwache korrespondierende Base; schwache Säure → starke korrespondierende Base.",
+        "Ampholyt (Amphoteres Teilchen): kann sowohl H⁺ abgeben als auch aufnehmen. Beispiele: H₂O, HCO₃⁻, HPO₄²⁻.",
+        "Autoprotolyse des Wassers: 2 H₂O ⇌ H₃O⁺ + OH⁻; Kw = 10⁻¹⁴ bei 25 °C.",
+        "pH = −log[H₃O⁺]; eine pH-Einheit = Faktor 10 in der H₃O⁺-Konzentration.",
+        "pH + pOH = 14 (bei 25 °C); gilt aus Kw = [H₃O⁺]·[OH⁻] = 10⁻¹⁴.",
+        "Blut-pH normal: 7,35–7,45. Azidose: < 7,35; Alkalose: > 7,45.",
+        "Kw ist temperaturabhängig – bei 37 °C liegt der Neutralpunkt bei pH ≈ 6,8, nicht bei 7,0."
       ],
-      klinischerBezug: "Magensäure (HCl, pH 1–2) aktiviert Pepsinogen zu Pepsin und tötet Bakterien. Bei Gastritis/Ulkus überschüssige H⁺-Produktion: Behandlung mit Protonenpumpenhemmern (PPIs, z.B. Omeprazol hemmt irreversibel H⁺/K⁺-ATPase) oder H2-Antagonisten.",
       altfrage: {
-        question: "Was ist eine konjugierte Säure-Base-Paar nach Brønsted-Lowry?",
-        answer: "Ein konjugiertes Säure-Base-Paar besteht aus einer Säure (HA) und der nach Protonenabgabe entstehenden Base (A⁻). Sie unterscheiden sich um genau ein Proton H⁺. Beispiel: CH₃COOH / CH₃COO⁻ (Essigsäure / Acetat). Die konjugierte Base einer starken Säure ist immer eine schwache Base.",
+        question: "Erläutern Sie die drei historischen Säure-Base-Definitionen (Arrhenius, Brønsted-Lowry, Lewis) und erklären Sie, warum die Lewis-Definition die allgemeinste ist. Geben Sie für jede Definition ein Beispiel.",
+        answer: "Die Arrhenius-Definition (1884) ist die engste: Säuren liefern in Wasser H⁺-Ionen (z. B. HCl → H⁺ + Cl⁻), Basen liefern OH⁻-Ionen (z. B. NaOH → Na⁺ + OH⁻). Diese Definition ist auf wässrige Systeme beschränkt und kann nicht erklären, warum NH₃ basisch reagiert.\n\nBrønsted und Lowry (1923) erweiterten das Konzept auf Protonenübertragungen: Säure = Protonendonor, Base = Protonenakzeptor. Die Definition gilt auch in nicht-wässrigen Medien. Beispiel: NH₃ + H₂O ⇌ NH₄⁺ + OH⁻ – Wasser ist hier die Säure (gibt H⁺ ab), NH₃ die Base (nimmt H⁺ auf). Jede Säure hat eine korrespondierende Base, die aus ihr durch Protonenabgabe entsteht.\n\nLewis (1923) formulierte die allgemeinste Definition über Elektronenpaare: Lewis-Säure = Elektronenpaarakzeptor, Lewis-Base = Elektronenpaardonor. Beispiel: BF₃ (Lewis-Säure, hat leeres Orbital) + NH₃ (Lewis-Base, hat freies Elektronenpaar) → Addukt F₃B←NH₃. Diese Definition umfasst Reaktionen ganz ohne H⁺-Beteiligung, z. B. Metallkomplexe. Alle Brønsted-Säuren sind auch Lewis-Säuren (H⁺ ist ein Elektronenpaarakzeptor), aber nicht alle Lewis-Säuren sind Brønsted-Säuren (BF₃ hat kein abzugebendes Proton)."
       },
+      klinischerBezug: "Der Blut-pH von 7,35–7,45 muss präzise aufrechterhalten werden, da Enzyme und Membranproteine pH-sensitiv sind; bereits pH-Abweichungen von ±0,1 Einheiten können schwerwiegende physiologische Folgen haben. Im Säure-Base-Haushalt des Körpers spielen alle drei Definitionen eine Rolle: Brønsted-Konzept für Puffersysteme (HCO₃⁻/H₂CO₃), Lewis-Konzept für Metallionen-Komplexe (Hämoglobin-Fe²⁺ als Lewis-Säure, das O₂ als Lewis-Base bindet).",
       selfTest: [
         {
-          question: "Welches Paar ist ein konjugiertes Säure-Base-Paar nach Brønsted-Lowry?",
+          question: "Nach Brønsted-Lowry reagiert Ammoniak (NH₃) mit Wasser. Welche Rolle nimmt NH₃ dabei ein?",
           options: [
-            "HCl / NaCl",
-            "H₂SO₄ / SO₄²⁻",
-            "CH₃COOH / CH₃COO⁻",
-            "NaOH / H₂O",
-            "NH₃ / N₂",
+            "NH₃ ist eine Brønsted-Säure, weil es ein Proton abgibt",
+            "NH₃ ist eine Brønsted-Base, weil es ein Proton aufnimmt",
+            "NH₃ ist eine Lewis-Säure, weil es ein Elektronenpaar akzeptiert",
+            "NH₃ ist ein Ampholyt, weil es sowohl Proton gibt als auch nimmt",
+            "NH₃ reagiert nicht mit Wasser nach Brønsted"
+          ],
+          correctIndex: 1,
+          explanation: "Nach Brønsted-Lowry ist NH₃ eine Base, weil es ein Proton (H⁺) vom Wasser aufnimmt: NH₃ + H₂O ⇌ NH₄⁺ + OH⁻. NH₃ ist der Protonenakzeptor (Base), H₂O der Protonendonor (Säure). Die korrespondierenden Paare sind: NH₄⁺/NH₃ und H₂O/OH⁻. NH₃ ist zwar eine Lewis-Base (Elektronenpaardonor über das freie Elektronenpaar am N), aber in dieser Reaktion mit Wasser ist die Brønsted-Beschreibung als Protonenakzeptor maßgeblich.",
+          hints: ["Brønsted-Base = Protonenakzeptor (nimmt H⁺ auf)", "NH₃ + H₂O → NH₄⁺ + OH⁻: Wer gibt H⁺ ab, wer nimmt es auf?"],
+          difficulty: 1,
+          tags: []
+        },
+        {
+          question: "Die Autoprotolyse des Wassers bei 25 °C ergibt ein Ionenprodukt. Welches ist korrekt?",
+          options: [
+            "Kw = [H₂O]² = 10⁻¹⁴ mol²/L²",
+            "Kw = [H₃O⁺] · [OH⁻] = 10⁻⁷ mol²/L²",
+            "Kw = [H₃O⁺] · [OH⁻] = 10⁻¹⁴ mol²/L²",
+            "Kw = [H⁺] / [OH⁻] = 10⁻¹⁴",
+            "Kw = [H₃O⁺]² = 10⁻¹⁴ mol²/L²"
           ],
           correctIndex: 2,
-          explanation: "CH₃COOH (Essigsäure) und CH₃COO⁻ (Acetat) unterscheiden sich um genau ein Proton H⁺ — das definiert ein konjugiertes Säure-Base-Paar nach Brønsted-Lowry. H₂SO₄/SO₄²⁻ unterscheiden sich um zwei Protonen (kein konjugiertes Paar). NaOH/H₂O sind kein konjugiertes Paar.",
-          hints: [
-            "Konjugiertes Paar = unterschied von einem Proton H⁺",
-            "HA und A⁻ sind immer ein konjugiertes Paar",
-          ],
+          explanation: "Das Ionenprodukt des Wassers ist Kw = [H₃O⁺] · [OH⁻] = 10⁻¹⁴ mol²/L² bei 25 °C. In reinem Wasser sind beide Konzentrationen gleich: [H₃O⁺] = [OH⁻] = 10⁻⁷ mol/L, Produkt = 10⁻¹⁴. Die Konzentration des Wassers selbst (ca. 55,5 mol/L) wird in Kw nicht aufgeführt, da sie nahezu konstant ist und in die Gleichgewichtskonstante eingearbeitet wurde. Kw ist temperaturabhängig – er steigt bei Erwärmung, da die Autoprotolyse endotherm ist.",
+          hints: ["Kw = Produkt aus [H₃O⁺] und [OH⁻], nicht Quotient", "In reinem Wasser: [H₃O⁺] = [OH⁻] = 10⁻⁷ mol/L"],
           difficulty: 1,
-          tags: [],
+          tags: []
         },
         {
-          question: "Welche Säure ist die stärkste (kleinster pK_s)?",
+          question: "Eine wässrige Lösung hat [H₃O⁺] = 10⁻³ mol/L. Welcher pH-Wert liegt vor und wie hoch ist [OH⁻]?",
           options: [
-            "Essigsäure (pK_s = 4,75)",
-            "Kohlensäure (pK_s1 = 6,4)",
-            "Ammoniumion NH₄⁺ (pK_s = 9,25)",
-            "Salzsäure HCl (pK_s ≈ −7)",
-            "Phosphorsäure H₃PO₄ (pK_s1 = 2,1)",
+            "pH = 3; [OH⁻] = 10⁻¹¹ mol/L",
+            "pH = 3; [OH⁻] = 10⁻⁷ mol/L",
+            "pH = 11; [OH⁻] = 10⁻³ mol/L",
+            "pH = 3; [OH⁻] = 10⁻³ mol/L",
+            "pH = −3; [OH⁻] = 10⁻¹⁴ mol/L"
           ],
-          correctIndex: 3,
-          explanation: "Kleinster pK_s bedeutet größtes K_s, also stärkste Säure. HCl hat pK_s ≈ −7 (vollständig dissoziiert, starke Säure). Im Vergleich: Phosphorsäure pK_s = 2,1, Essigsäure 4,75, Kohlensäure 6,4, NH₄⁺ 9,25 — alle schwächer als HCl.",
-          hints: [
-            "Kleinerer pK_s = stärkere Säure",
-            "Welche Säuren sind stark (vollständig dissoziiert)?",
+          correctIndex: 0,
+          explanation: "pH = −log[H₃O⁺] = −log(10⁻³) = 3. Für [OH⁻]: Kw = [H₃O⁺] · [OH⁻] = 10⁻¹⁴, also [OH⁻] = 10⁻¹⁴ / 10⁻³ = 10⁻¹¹ mol/L. Probe: pH + pOH = 3 + 11 = 14 ✓. Die Lösung ist sauer (pH < 7). Die logarithmische Beziehung zwischen pH und [H₃O⁺] ist fundamental: Eine Änderung um 1 pH-Einheit bedeutet eine 10-fache Änderung der H₃O⁺-Konzentration.",
+          hints: ["pH = −log[H₃O⁺]; pOH = −log[OH⁻]; pH + pOH = 14", "Kw = [H₃O⁺] · [OH⁻] = 10⁻¹⁴ → [OH⁻] = 10⁻¹⁴ / [H₃O⁺]"],
+          difficulty: 1,
+          tags: []
+        },
+        {
+          question: "BF₃ reagiert mit NH₃ zu einem Addukt. Nach welcher Definition ist BF₃ eine Säure?",
+          options: [
+            "Nach Arrhenius, weil BF₃ H⁺-Ionen liefert",
+            "Nach Brønsted, weil BF₃ ein Proton abgibt",
+            "Nach Lewis, weil BF₃ ein Elektronenpaar akzeptiert",
+            "Nach Lewis, weil BF₃ ein Elektronenpaar abgibt",
+            "BF₃ ist nach keiner Definition eine Säure"
           ],
+          correctIndex: 2,
+          explanation: "BF₃ ist eine Lewis-Säure, weil es ein leeres p-Orbital am Boratom besitzt und daher ein freies Elektronenpaar von NH₃ (Lewis-Base) akzeptieren kann: BF₃ + :NH₃ → F₃B←NH₃. Bei dieser Reaktion wird kein Proton übertragen – sie ist daher nach Brønsted-Lowry keine Säure-Base-Reaktion. Die Lewis-Definition ist die weiteste: Sie umfasst alle Elektronenpaar-Übertragungen, auch ohne H⁺-Beteiligung.",
+          hints: ["Lewis-Säure = Elektronenpaarakzeptor (hat leeres Orbital)", "BF₃ hat kein H⁺ abzugeben → keine Brønsted-Säure"],
           difficulty: 2,
-          tags: [],
+          tags: []
         },
         {
-          question: "Nach Brønsted-Lowry ist Wasser in der Reaktion H₂O + NH₃ ⇌ OH⁻ + NH₄⁺:",
+          question: "Das korrespondierende (konjugierte) Säure-Base-Paar von H₂PO₄⁻ als Säure ist:",
           options: [
-            "Eine Base (H⁺-Akzeptor)",
-            "Eine Säure (H⁺-Donor)",
-            "Weder Säure noch Base",
-            "Ein Oxidationsmittel",
-            "Ein Lösungsmittel ohne Säure-Base-Funktion",
+            "H₃PO₄ / H₂PO₄⁻",
+            "H₂PO₄⁻ / HPO₄²⁻",
+            "HPO₄²⁻ / PO₄³⁻",
+            "H₃PO₄ / HPO₄²⁻",
+            "H₂PO₄⁻ / PO₄³⁻"
           ],
           correctIndex: 1,
-          explanation: "In H₂O + NH₃ ⇌ OH⁻ + NH₄⁺ gibt Wasser ein Proton H⁺ an NH₃ ab. Wasser ist der Protonendonor (Säure), NH₃ ist der Protonenakzeptor (Base). Die konjugierte Base von H₂O ist OH⁻, die konjugierte Säure von NH₃ ist NH₄⁺. Wasser ist amphiprot — kann je nach Partner Säure oder Base sein.",
-          hints: [
-            "Was gibt hier H⁺ ab?",
-            "Wasser ist amphiprot — schau, an wen H⁺ übertragen wird",
-          ],
+          explanation: "Wenn H₂PO₄⁻ als Säure fungiert, gibt es ein Proton ab: H₂PO₄⁻ ⇌ H⁺ + HPO₄²⁻. Das korrespondierende Paar ist H₂PO₄⁻ (Säure) / HPO₄²⁻ (korrespondierende Base). Korrespondierende Paare unterscheiden sich immer um genau ein H⁺. H₂PO₄⁻ ist ein Ampholyt: es kann auch als Base reagieren und H⁺ aufnehmen (→ H₃PO₄). Dies ist relevant für den physiologischen Phosphatpuffer (pKs₂ ≈ 7,2), der im Urin und intrazellulär wichtig ist.",
+          hints: ["Korrespondierende Paare: Säure ⇌ H⁺ + korrespondierende Base", "H₂PO₄⁻ − H⁺ = HPO₄²⁻"],
           difficulty: 2,
-          tags: [],
+          tags: []
         },
         {
-          question: "Warum ist Trichloressigsäure (CCl₃COOH, pK_s = 0,5) viel stärker als Essigsäure (CH₃COOH, pK_s = 4,75)?",
+          question: "Wasser bei 37 °C hat ein größeres Kw als bei 25 °C. Welche Aussage über den pH-Neutralpunkt bei 37 °C ist korrekt?",
           options: [
-            "Weil Cl größer als H ist",
-            "Weil drei Cl-Atome elektronenziehend das Carboxylat-Ion stabilisieren",
-            "Weil CCl₃COOH mehr Protonen hat",
-            "Weil Cl basischer als H ist",
-            "Weil CCl₃COOH eine stärkere C-Cl-Bindung hat",
+            "Der Neutralpunkt liegt bei pH = 7, unverändert",
+            "Der Neutralpunkt liegt bei pH > 7, Wasser wird basischer",
+            "Der Neutralpunkt liegt bei pH < 7 (ca. 6,8), Wasser bleibt aber neutral",
+            "Der Neutralpunkt hängt nur von der Konzentration ab, nicht von der Temperatur",
+            "Wasser ist bei 37 °C sauer, weil [H₃O⁺] > [OH⁻]"
           ],
-          correctIndex: 1,
-          explanation: "Die drei Chloratome sind stark elektronegativ und ziehen Elektronen (induktiver Effekt, -I) vom Carboxylat-Ion weg. Dies stabilisiert die negative Ladung im Anion (CCl₃COO⁻) stärker als im CH₃COO⁻. Je stabiler die konjugierte Base, desto leichter gibt die Säure H⁺ ab → stärkere Säure. pK_s-Differenz von ~4 entspricht einer Säurestärkeratio von 10⁴.",
-          hints: [
-            "Elektronenziehende Gruppen (Cl) stabilisieren A⁻",
-            "Stabile konjugierte Base = stärkere Säure",
-          ],
+          correctIndex: 2,
+          explanation: "Bei 37 °C beträgt Kw ≈ 2,4 × 10⁻¹⁴, daher [H₃O⁺] = [OH⁻] = √(2,4 × 10⁻¹⁴) ≈ 1,55 × 10⁻⁷ mol/L → pH ≈ 6,81. Der Neutralpunkt liegt also bei ca. 6,8, nicht bei 7. Trotzdem ist reines Wasser bei 37 °C neutral, denn [H₃O⁺] = [OH⁻]. 'Neutral' bedeutet immer [H₃O⁺] = [OH⁻], nicht automatisch pH = 7. Dieser Unterschied ist klinisch relevant: Physiologische Prozesse laufen bei Körpertemperatur ab, wo der Neutralpunkt leicht verschoben ist.",
+          hints: ["Neutral bedeutet [H₃O⁺] = [OH⁻], nicht zwingend pH = 7", "Kw steigt mit Temperatur → √Kw steigt → pH des Neutralpunkts sinkt"],
           difficulty: 3,
-          tags: [],
+          tags: []
         },
         {
-          question: "Was ist der Unterschied zwischen dem Brønsted-Lowry- und Lewis-Konzept?",
+          question: "HCO₃⁻ (Hydrogencarbonat) ist ein Ampholyt. In welchen beiden Reaktionen zeigt sich das?",
           options: [
-            "Lewis-Säuren geben H⁺ ab, Brønsted-Säuren akzeptieren Elektronen",
-            "Brønsted-Lowry: H⁺-Übertragung; Lewis: Elektronenpaar-Übertragung (ohne H⁺)",
-            "Beide Konzepte sind identisch",
-            "Lewis gilt nur für Basen, Brønsted nur für Säuren",
-            "Lewis-Konzept gilt nur in organischen Lösungsmitteln",
+            "Als Säure: HCO₃⁻ → H⁺ + CO₃²⁻; als Base: HCO₃⁻ + H⁺ → H₂CO₃",
+            "Als Säure: HCO₃⁻ → 2H⁺ + CO₃²⁻; als Base: HCO₃⁻ → OH⁻ + CO₂",
+            "Als Säure: HCO₃⁻ + OH⁻ → CO₂ + H₂O; als Base: HCO₃⁻ → H₂O + CO₂",
+            "Als Säure und Base: HCO₃⁻ ⇌ H₂CO₃ ⇌ CO₂ + H₂O (nur eine Richtung)",
+            "HCO₃⁻ ist kein Ampholyt, es reagiert nur als Base"
           ],
-          correctIndex: 1,
-          explanation: "Das Brønsted-Lowry-Konzept basiert auf Protonenübertragung (H⁺). Das Lewis-Konzept ist allgemeiner: Lewis-Säure = Elektronenpaarakzeptor, Lewis-Base = Elektronenpaardonor. Jede Brønsted-Säure ist auch eine Lewis-Säure (H⁺ ist ein Elektronenpaarakzeptor), aber nicht umgekehrt. BF₃ ist eine Lewis-Säure ohne Proton.",
-          hints: [
-            "Lewis-Konzept braucht kein H⁺",
-            "Was ist ein Elektronenpaarakzeptor?",
-          ],
+          correctIndex: 0,
+          explanation: "HCO₃⁻ ist ein klassischer Ampholyt (amphoteres Teilchen): Als Brønsted-Säure gibt es ein Proton ab: HCO₃⁻ ⇌ H⁺ + CO₃²⁻ (pKs ≈ 10,3). Als Brønsted-Base nimmt es ein Proton auf: HCO₃⁻ + H⁺ → H₂CO₃ (bzw. CO₂ + H₂O). Diese Amphoterie ist für den Kohlensäure-Bicarbonat-Puffer im Blut entscheidend: HCO₃⁻ kann sowohl zugesetzte Säure als auch zugesetzte Base abpuffern, indem es in die entsprechende Richtung reagiert.",
+          hints: ["Ampholyt = kann sowohl H⁺ abgeben als auch aufnehmen", "HCO₃⁻ als Säure → CO₃²⁻; als Base → H₂CO₃"],
           difficulty: 2,
-          tags: [],
+          tags: []
         },
-      ],
+        {
+          question: "Eine Lösung hat pH = 5. Um welchen Faktor ist ihre H₃O⁺-Konzentration höher als bei pH = 8?",
+          options: [
+            "Faktor 3",
+            "Faktor 30",
+            "Faktor 1000",
+            "Faktor 10000",
+            "Faktor 100"
+          ],
+          correctIndex: 2,
+          explanation: "Bei pH 5: [H₃O⁺] = 10⁻⁵ mol/L. Bei pH 8: [H₃O⁺] = 10⁻⁸ mol/L. Verhältnis: 10⁻⁵ / 10⁻⁸ = 10³ = 1000. Die Differenz von 3 pH-Einheiten entspricht dem Faktor 10³ = 1000. Der Unterschied ist nicht additiv (3-fach), sondern multiplikativ (10³-fach), da der pH-Wert eine logarithmische Skala ist. Diese Eigenschaft ist klinisch relevant: Kleine pH-Unterschiede (z. B. im Blut: 7,35 vs. 7,45) entsprechen bedeutsamen Unterschieden in der H₃O⁺-Konzentration.",
+          hints: ["Differenz von n pH-Einheiten = Faktor 10ⁿ in der H₃O⁺-Konzentration", "10⁻⁵ / 10⁻⁸ = 10^(8−5) = 10³"],
+          difficulty: 2,
+          tags: []
+        }
+      ]
     },
+
     {
-      id: "ch-10-02",
-      title: "pH-Wert — Definition, Berechnung und klinische Bedeutung",
-      content: `## Definition des pH-Werts
+      id: 'ch-10-02',
+      title: "Starke und schwache Säuren/Basen – Ka, Kb, pKa",
+      content: `# Starke und schwache Säuren/Basen: Ka, Kb, pKa
 
-Der pH-Wert (Potentia Hydrogenii) wurde 1909 von Søren Sørensen eingeführt:
+## Starke Säuren: Vollständige Dissoziation
 
-**pH = −log[H₃O⁺]**
+**Starke Säuren** dissoziieren in wässriger Lösung vollständig (nahezu irreversibel). Das bedeutet: Alle Säuremoleküle geben ihr Proton an das Wasser ab.
 
-bzw. pOH = −log[OH⁻], und es gilt:
+Beispiele starker Säuren:
+| Säure | Name | pKa |
+|-------|------|-----|
+| HCl  | Salzsäure | ≈ −7 |
+| HBr  | Bromwasserstoffsäure | ≈ −9 |
+| HI   | Iodwasserstoffsäure | ≈ −10 |
+| HNO₃ | Salpetersäure | ≈ −1,4 |
+| H₂SO₄ | Schwefelsäure (1. Stufe) | ≈ −3 |
+| HClO₄ | Perchlorsäure | ≈ −10 |
 
-**pH + pOH = 14** (bei 25 °C, da pK_w = 14)
+Für starke Säuren gilt: **[H₃O⁺] = c(Säure)** (vollständige Dissoziation, kein Gleichgewicht). Der pH berechnet sich direkt: **pH = −log c(Säure)**.
 
-Die pH-Skala läuft von 0 bis 14 (in wässriger Lösung bei 25 °C):
-- pH < 7: sauer ([H₃O⁺] > [OH⁻])
-- pH = 7: neutral ([H₃O⁺] = [OH⁻] = 10⁻⁷ mol/L)
-- pH > 7: basisch ([H₃O⁺] < [OH⁻])
+Beispiel: 0,01 mol/L HCl → [H₃O⁺] = 0,01 = 10⁻² mol/L → **pH = 2**
 
-## pH-Berechnung: Starke Säuren
+## Schwache Säuren: Gleichgewichtige Dissoziation
 
-Starke Säuren dissoziieren vollständig. Für c mol/L HCl:
-**[H₃O⁺] = c → pH = −log(c)**
+**Schwache Säuren** dissoziieren nur teilweise. Es stellt sich ein Gleichgewicht ein:
 
-Beispiel: c(HCl) = 0,01 mol/L → [H₃O⁺] = 10⁻² mol/L → **pH = 2**
+\`\`\`
+HA  +  H₂O  ⇌  H₃O⁺  +  A⁻
+\`\`\`
 
-## pH-Berechnung: Schwache Säuren
+Die **Säurekonstante Ka** (auch Ks) beschreibt dieses Gleichgewicht:
 
-Schwache Säure HA mit Konzentration c und K_s:
-Näherungsformel (wenn c >> [H₃O⁺]):
+$$K_a = \frac{[\text{H}_3\text{O}^+][\text{A}^-]}{[\text{HA}]}$$
 
-**[H₃O⁺] ≈ √(K_s · c)**
+(Konzentration des Wassers ist konstant und wird in Ka eingearbeitet.)
 
-**pH = ½(pK_s − log c)**
+Je größer Ka, desto stärker die Säure. Der **pKa = −log Ka** ist praktischer:
 
-Beispiel: c(CH₃COOH) = 0,1 mol/L, pK_s = 4,75:
-pH = ½(4,75 + 1) = ½ · 5,75 = 2,875 ≈ 2,9
+- **pKa < 0**: starke Säure
+- **pKa = 0–4**: mittelstarke Säure
+- **pKa = 4–10**: schwache Säure
+- **pKa > 10**: sehr schwache Säure
 
-## pH in Körperflüssigkeiten
+### Wichtige schwache Säuren und ihre pKa-Werte:
+| Säure | pKa |
+|-------|-----|
+| Essigsäure (CH₃COOH) | 4,75 |
+| Kohlensäure (H₂CO₃) | 6,35 |
+| Ammoniumion (NH₄⁺) | 9,25 |
+| Hydrogencarbonat (HCO₃⁻) | 10,33 |
+| Wasser (H₂O) | 15,74 |
+| Ethanol (C₂H₅OH) | 16 |
 
-| Körperflüssigkeit | pH-Bereich |
-|---|---|
-| Arterielles Blut | 7,35–7,45 |
-| Magensaft | 1–2 |
-| Urin | 4,5–8 |
-| Speichel | 6,5–7,5 |
-| Liquor cerebrospinalis | 7,3–7,4 |
+## pH-Berechnung für schwache Säuren
 
-Das arterielle Blut wird durch Puffer (Bicarbonat, Proteine, Phosphat) und Regulation (Lunge, Niere) streng auf pH 7,35–7,45 gehalten. Abweichungen über 0,4 pH-Einheiten sind lebensbedrohlich.`,
+Für eine schwache Säure HA der Konzentration c₀ gilt mit dem Dissoziationsgrad α:
+
+**Vereinfachte Formel** (gilt für α << 1, d. h. schwache Säure):
+
+$$[\text{H}_3\text{O}^+] = \sqrt{K_a \cdot c_0}$$
+
+**pH = ½ · (pKa − log c₀)**
+
+Beispiel: 0,1 mol/L Essigsäure (pKa = 4,75):
+- [H₃O⁺] = √(10⁻⁴·⁷⁵ × 0,1) = √(10⁻⁵·⁷⁵) = 10⁻²·⁸⁷⁵ ≈ 1,33 × 10⁻³ mol/L
+- pH ≈ 2,87
+
+## Mehrprotonige Säuren (polyprotische Säuren)
+
+Säuren können mehrere Protonen stufenweise abgeben. Jede Stufe hat eine eigene Säurekonstante, die bei jeder folgenden Stufe kleiner wird:
+
+**Phosphorsäure H₃PO₄:**
+- pKa1 ≈ 2,15 (H₃PO₄ ⇌ H⁺ + H₂PO₄⁻)
+- pKa2 ≈ 7,20 (H₂PO₄⁻ ⇌ H⁺ + HPO₄²⁻) ← wichtig für Phosphatpuffer
+- pKa3 ≈ 12,35 (HPO₄²⁻ ⇌ H⁺ + PO₄³⁻)
+
+**Kohlensäure H₂CO₃:**
+- pKa1 ≈ 6,35 (H₂CO₃ ⇌ H⁺ + HCO₃⁻) ← wichtig für Blutpuffer
+- pKa2 ≈ 10,33 (HCO₃⁻ ⇌ H⁺ + CO₃²⁻)
+
+## Starke Basen: NaOH, KOH
+
+Starke Basen dissoziieren vollständig. [OH⁻] = c(Base).
+
+pOH = −log[OH⁻]; pH = 14 − pOH
+
+Beispiel: 0,001 mol/L NaOH → [OH⁻] = 10⁻³ mol/L → pOH = 3 → pH = 11
+
+## Schwache Basen und Kb
+
+Schwache Basen (z. B. NH₃, Amine) reagieren teilweise mit Wasser:
+
+\`\`\`
+B  +  H₂O  ⇌  BH⁺  +  OH⁻
+\`\`\`
+
+**Basenkonstante:** $K_b = \frac{[\text{BH}^+][\text{OH}^-]}{[\text{B}]}$
+
+**pKb = −log Kb**
+
+Beziehung zwischen korrespondierendem Paar: **pKa(Säure) + pKb(korr. Base) = pKw = 14**
+
+Beispiel: NH₃ hat pKb = 4,75 → korrespondierende Säure NH₄⁺ hat pKa = 9,25.
+
+## Klinische Relevanz
+
+Im Blut agieren viele biologisch wichtige Moleküle als schwache Säuren oder Basen: CO₂/H₂CO₃ (pKa ≈ 6,1 im physiologischen Kontext), Phosphat (pKa2 ≈ 7,2), Proteine (Histidinreste pKa ≈ 6). Diese schwachen Säure-Base-Paare bilden die Grundlage der Puffersysteme des Blutes.`,
       lernziele: [
-        "Den pH-Wert definieren und einfache pH-Berechnungen für starke und schwache Säuren durchführen",
-        "Die Beziehung pH + pOH = 14 anwenden können",
-        "Den physiologischen pH-Bereich des Blutes und wichtiger Körperflüssigkeiten nennen",
+        "Den Unterschied zwischen starken und schwachen Säuren anhand der Dissoziation und Ka/pKa erklären",
+        "Den pH starker Säuren und Basen direkt berechnen",
+        "Den pH schwacher Säuren mit der Näherungsformel pH = ½(pKa − log c₀) berechnen",
+        "Mehrprotonige Säuren und ihre stufenweise Dissoziation beschreiben",
+        "Die Beziehung pKa + pKb = 14 anwenden"
       ],
       sections: [
         {
-          heading: "pH-Berechnung für starke und schwache Säuren im Vergleich",
-          text: "Bei starken Säuren ist die Berechnung direkt: pH = −log c. Bei 0,1 mol/L HCl → pH = 1. Bei schwachen Säuren muss die Dissoziationskonstante K_s berücksichtigt werden. Die Näherungsformel pH = ½(pK_s − log c) gilt, wenn der Dissoziationsgrad α < 5 % ist (d.h. c >> K_s). Für Essigsäure (pK_s = 4,75, c = 0,1 mol/L): pH = ½(4,75 + 1) = 2,9. Im Vergleich: 0,1 mol/L HCl (starke Säure) → pH = 1 — also ist 0,1 mol/L Essigsäure ca. 10-mal schwächer sauer. Diese Unterschiede sind biologisch relevant: Magensäure (HCl, pH 1–2) vs. Blut (pH 7,4).",
-          merksatz: "Starke Säure: pH = −log c; schwache Säure: pH = ½(pK_s − log c)",
+          heading: "Starke vs. schwache Säuren: Was ist der Unterschied?",
+          text: "Starke Säuren dissoziieren vollständig (Dissoziationsgrad α ≈ 1): In 0,1 mol/L HCl liegen nahezu keine HCl-Moleküle mehr vor, nur H₃O⁺ und Cl⁻. Der pH = −log c(HCl) direkt. Schwache Säuren dissoziieren nur teilweise (α << 1): In 0,1 mol/L Essigsäure dissoziieren nur ca. 1,3 % der Moleküle. Zur pH-Berechnung braucht man Ka. Merkhilfe: Starke Säure → keine HA-Moleküle mehr; schwache Säure → Gleichgewicht mit viel HA.",
+          merksatz: "Starke Säure: [H₃O⁺] = c₀, pH = −log c₀. Schwache Säure: [H₃O⁺] = √(Ka · c₀), pH = ½(pKa − log c₀)."
         },
         {
-          heading: "Klinische Bedeutung des pH",
-          text: "Der pH des Blutes (7,35–7,45) wird durch drei Systeme reguliert: Puffersysteme (sofortige Wirkung, Sekunden), Atemregulation (Minuten, CO₂-Abatmung) und renale Regulation (Stunden bis Tage, H⁺/HCO₃⁻-Ausscheidung). Azidose (pH < 7,35) und Alkalose (pH > 7,45) stören Enzymfunktionen, Ionenkanäle und Proteinfaltung. Bei pH < 6,8 oder > 7,8 ist die Prognose ohne Therapie infaust. Die Henderson-Hasselbalch-Gleichung ermöglicht die klinische Beurteilung von Säure-Base-Störungen aus Blutgaswerten (pH, pCO₂, HCO₃⁻).",
-          merksatz: "Blut-pH: 7,35–7,45; < 7,35 = Azidose, > 7,45 = Alkalose",
+          heading: "Ka, pKa und Säurestärke",
+          text: "Ka ist die Gleichgewichtskonstante der Dissoziation: Ka = [H₃O⁺][A⁻]/[HA]. Großes Ka → starke Dissoziation → starke Säure. pKa = −log Ka: kleiner pKa = starke Säure. Starke Säuren wie HCl haben pKa ≈ −7, schwache wie CH₃COOH pKa ≈ 4,75, sehr schwache wie NH₄⁺ pKa ≈ 9,25. Beim Halbäquivalenzpunkt einer Titration gilt pH = pKa (Henderson-Hasselbalch bei gleicher Säure- und Basekonzentration).",
+          merksatz: "pKa < 0: starke Säure. pKa 4–7: schwache Säure. pKa > 10: sehr schwache Säure. Kleineres pKa = stärkere Säure."
         },
+        {
+          heading: "Mehrprotonige Säuren: Stufenweise Dissoziation",
+          text: "Polyprotische Säuren geben ihre Protonen schrittweise ab. Jede Stufe hat eine eigene Ka, die kleiner wird: Ka1 > Ka2 > Ka3. Der erste Schritt ist immer der leichteste (aus neutralem Molekül), spätere Schritte schwieriger (aus negativer Spezies). Für Puffer nutzt man meist das Paar aus der am physiologisch relevanten pKa-Stufe. Beispiel: H₃PO₄ nutzt pKa2 = 7,2 für den Phosphatpuffer (HPO₄²⁻/H₂PO₄⁻) im Blut und Urin.",
+          merksatz: "Polyprotische Säure: Ka1 >> Ka2 >> Ka3. Der pH einer Lösung wird meist durch Ka1 dominiert."
+        }
       ],
       merksätze: [
-        "pH = −log[H₃O⁺]; pH + pOH = 14",
-        "Starke Säure c=0,01 M → pH=2; schwach: pH=½(pKs−log c)",
-        "Blut pH 7,35–7,45; Magen 1–2; Urin 4,5–8",
+        "Starke Säuren: HCl, HBr, HI, HNO₃, H₂SO₄ (1. Stufe), HClO₄ – alle dissoziieren vollständig.",
+        "Schwache Säuren dissoziieren teilweise: Ka-Wert bestimmt das Gleichgewicht.",
+        "pKa = −log Ka: Je kleiner pKa, desto stärker die Säure.",
+        "pH starke Säure: pH = −log c₀ (direkt, vollständige Dissoziation).",
+        "pH schwache Säure (Näherung): pH = ½ · (pKa − log c₀).",
+        "pKa(Säure) + pKb(korrespondierende Base) = 14 bei 25 °C.",
+        "Starke Base (NaOH): [OH⁻] = c₀; pOH = −log c₀; pH = 14 − pOH.",
+        "H₃PO₄: pKa1 ≈ 2,1; pKa2 ≈ 7,2; pKa3 ≈ 12,4 – stufenweise Dissoziation.",
+        "H₂CO₃: pKa1 ≈ 6,35; pKa2 ≈ 10,33 – Basis des Blutpuffers.",
+        "Am Halbäquivalenzpunkt einer Titration: pH = pKa der schwachen Säure."
       ],
-      klinischerBezug: "Blutgasanalyse (BGA) misst pH, pO₂, pCO₂ und HCO₃⁻ direkt. Bei metabolischer Azidose (z.B. Laktatazidose bei Schock, Ketoazidose bei Diabetes mellitus Typ 1) fällt pH und HCO₃⁻. Respiratorische Kompensation: Hyperventilation senkt pCO₂ → pH steigt teilweise.",
       altfrage: {
-        question: "Wie berechnet man den pH einer 0,1 mol/L Salzsäure-Lösung?",
-        answer: "HCl ist eine starke Säure und dissoziiert vollständig. [H₃O⁺] = 0,1 mol/L = 10⁻¹ mol/L. pH = −log[H₃O⁺] = −log(10⁻¹) = 1. Also pH = 1.",
+        question: "Erklären Sie den Begriff der Säurekonstante Ka und des pKa-Werts. Wie berechnet man den pH-Wert einer 0,1 mol/L Essigsäure-Lösung (pKa = 4,75)? Warum unterscheidet sich dieser pH-Wert von dem einer 0,1 mol/L Salzsäure-Lösung?",
+        answer: "Die Säurekonstante Ka beschreibt das Gleichgewicht der Protonenabgabe einer schwachen Säure HA in Wasser: Ka = [H₃O⁺][A⁻]/[HA]. Je größer Ka, desto weiter liegt das Gleichgewicht auf der rechten Seite (stärkere Dissoziation, stärkere Säure). Der pKa = −log Ka ist ein praktischer logarithmischer Maßstab: Kleinerer pKa = stärkere Säure.\n\nFür Essigsäure (pKa = 4,75, Ka ≈ 1,78 × 10⁻⁵):\nMit der Näherungsformel für schwache Säuren: [H₃O⁺] = √(Ka · c₀) = √(1,78 × 10⁻⁵ × 0,1) = √(1,78 × 10⁻⁶) ≈ 1,33 × 10⁻³ mol/L. pH ≈ −log(1,33 × 10⁻³) ≈ 2,87.\n\nFür Salzsäure (starke Säure, vollständige Dissoziation): [H₃O⁺] = c₀ = 0,1 mol/L → pH = 1.\n\nDer Unterschied: Salzsäure dissoziiert vollständig (alle HCl-Moleküle liefern H₃O⁺), Essigsäure nur zu ca. 1,3 % (nur wenige CH₃COOH-Moleküle dissoziieren). Obwohl beide die gleiche Ausgangskonzentration haben, ist der pH der Essigsäure fast 2 Einheiten höher – ein Faktor 100 in der H₃O⁺-Konzentration. Dies verdeutlicht: Konzentration ≠ Säurestärke."
       },
+      klinischerBezug: "Im Blut sind fast alle biologisch aktiven Säure-Base-Paare schwache Säuren: CO₂/HCO₃⁻ (pKa ≈ 6,1), H₂PO₄⁻/HPO₄²⁻ (pKa ≈ 7,2) und Histidinreste in Proteinen (pKa ≈ 6). Ihre partiellen Dissoziationsgleichgewichte erlauben das Abpuffern von H⁺-Veränderungen. Starke Säuren wie HCl (Magensäure, pH ≈ 1–2) dissoziieren vollständig und würden ohne Schutzschicht das Gewebe zerstören.",
       selfTest: [
         {
-          question: "Welchen pH hat eine 0,001 mol/L HCl-Lösung?",
+          question: "Welcher pKa-Wert kennzeichnet eine starke Säure?",
+          options: [
+            "pKa = 12",
+            "pKa = 7",
+            "pKa = 4,75",
+            "pKa = −3",
+            "pKa = 9,25"
+          ],
+          correctIndex: 3,
+          explanation: "Ein stark negativer pKa-Wert kennzeichnet eine starke Säure. Schwefelsäure (H₂SO₄) hat pKa ≈ −3, Salzsäure (HCl) pKa ≈ −7, Perchlorsäure pKa ≈ −10. Diese Säuren dissoziieren praktisch vollständig. pKa = 4,75 gehört zu Essigsäure (schwach), pKa = 9,25 zu NH₄⁺ (sehr schwach), pKa = 12 ist eine sehr schwache Säure. Merkreihe: HClO₄ > HI > HBr > HCl > H₂SO₄ (1. Stufe) > HNO₃ – alle starke Säuren.",
+          hints: ["Je kleiner pKa (auch negativ), desto stärker die Säure", "Starke Säuren: pKa << 0; schwache Säuren: pKa > 2"],
+          difficulty: 1,
+          tags: []
+        },
+        {
+          question: "Berechnen Sie den pH einer 0,01 mol/L HNO₃-Lösung (starke Säure).",
           options: [
             "pH = 1",
             "pH = 2",
             "pH = 3",
-            "pH = 11",
-            "pH = 7",
-          ],
-          correctIndex: 2,
-          explanation: "HCl ist eine starke Säure (vollständige Dissoziation). [H₃O⁺] = 0,001 mol/L = 10⁻³ mol/L. pH = −log(10⁻³) = 3. Merkregel: c = 10⁻ⁿ mol/L → pH = n für starke Säuren.",
-          hints: [
-            "HCl dissoziiert vollständig: [H₃O⁺] = c(HCl)",
-            "pH = −log[H₃O⁺] = −log(0,001) = ?",
-          ],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: "Eine Lösung hat pH = 9. Welchen pOH hat sie?",
-          options: [
-            "pOH = 9",
-            "pOH = 7",
-            "pOH = 5",
-            "pOH = 4",
-            "pOH = 14",
-          ],
-          correctIndex: 2,
-          explanation: "Es gilt pH + pOH = 14 (bei 25 °C). Also pOH = 14 − pH = 14 − 9 = 5. Diese Lösung ist basisch (pH > 7). [OH⁻] = 10⁻⁵ mol/L, [H₃O⁺] = 10⁻⁹ mol/L.",
-          hints: [
-            "pH + pOH = 14 bei 25 °C",
-            "pOH = 14 − pH",
-          ],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: "Welcher pH-Bereich gilt für arterielles Blut?",
-          options: [
-            "pH 6,8–7,0",
-            "pH 7,0–7,2",
-            "pH 7,35–7,45",
-            "pH 7,5–8,0",
-            "pH 1–2",
-          ],
-          correctIndex: 2,
-          explanation: "Arterielles Blut hat einen streng regulierten pH von 7,35–7,45 (leicht basisch). Dieser Bereich ist für optimale Enzymfunktion und Hämoglobin-O₂-Bindung notwendig. pH < 7,35 = Azidose, pH > 7,45 = Alkalose. Abweichungen über 0,4 Einheiten sind lebensbedrohlich.",
-          hints: [
-            "Blut ist leicht basisch — pH > 7",
-            "Die Schwankungsbreite ist eng: ca. 0,1 pH-Einheiten",
-          ],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: "Eine schwache Säure HA hat pK_s = 4,75 und c = 0,1 mol/L. Welchen näherungsweisen pH hat die Lösung?",
-          options: [
-            "pH ≈ 1,0",
-            "pH ≈ 2,9",
-            "pH ≈ 4,75",
-            "pH ≈ 7,0",
-            "pH ≈ 5,9",
+            "pH = 12",
+            "pH = 7"
           ],
           correctIndex: 1,
-          explanation: "Für schwache Säuren gilt: pH = ½(pK_s − log c). log(0,1) = −1, also −log c = +1. pH = ½(4,75 + 1) = ½ × 5,75 = 2,875 ≈ 2,9. Dies ist der pH von 0,1 mol/L Essigsäure (pK_s = 4,75).",
-          hints: [
-            "Formel für schwache Säure: pH = ½(pK_s − log c)",
-            "log(0,1) = −1, also −log(0,1) = +1",
-          ],
-          difficulty: 2,
-          tags: [],
+          explanation: "HNO₃ ist eine starke Säure und dissoziiert vollständig: HNO₃ → H⁺ + NO₃⁻. Daher: [H₃O⁺] = c(HNO₃) = 0,01 mol/L = 10⁻² mol/L. pH = −log(10⁻²) = 2. Die vollständige Dissoziation ist das Schlüsselprinzip für starke Säuren: Es gibt keine HNO₃-Moleküle mehr in Lösung, nur H₃O⁺ und NO₃⁻. Bei schwachen Säuren wäre der pH höher, da nicht alle Moleküle dissoziieren.",
+          hints: ["HNO₃ ist eine starke Säure → vollständige Dissoziation → [H₃O⁺] = c₀", "pH = −log(0,01) = −log(10⁻²) = 2"],
+          difficulty: 1,
+          tags: []
         },
         {
-          question: "pH sinkt von 7 auf 5. Um welchen Faktor steigt [H₃O⁺]?",
+          question: "Eine schwache Säure HA hat Ka = 10⁻⁵. Welcher pKa ergibt sich, und wie groß ist der pH einer 0,1 mol/L Lösung (Näherung)?",
           options: [
-            "2-fach",
-            "10-fach",
-            "100-fach",
-            "1000-fach",
-            "0,5-fach",
+            "pKa = 5; pH = 3",
+            "pKa = 5; pH = 3,5",
+            "pKa = 5; pH = 5",
+            "pKa = −5; pH = 3",
+            "pKa = 5; pH = 2,5"
+          ],
+          correctIndex: 0,
+          explanation: "pKa = −log(10⁻⁵) = 5. Für den pH: Näherungsformel für schwache Säuren: pH = ½ · (pKa − log c₀) = ½ · (5 − log 0,1) = ½ · (5 − (−1)) = ½ · 6 = 3. Alternativ: [H₃O⁺] = √(Ka · c₀) = √(10⁻⁵ × 10⁻¹) = √(10⁻⁶) = 10⁻³ mol/L → pH = 3. Die Näherung gilt, wenn die Dissoziation << c₀ ist (hier: 10⁻³ << 0,1 ✓).",
+          hints: ["pKa = −log Ka; Näherung: pH = ½(pKa − log c₀)", "[H₃O⁺] = √(Ka · c₀) = √(10⁻⁵ · 10⁻¹) = 10⁻³"],
+          difficulty: 2,
+          tags: []
+        },
+        {
+          question: "Ammoniak (NH₃) hat pKb = 4,75. Welchen pKa hat das konjugierte Ammoniumion (NH₄⁺)?",
+          options: [
+            "pKa = 4,75",
+            "pKa = 9,25",
+            "pKa = 14",
+            "pKa = 7",
+            "pKa = −4,75"
+          ],
+          correctIndex: 1,
+          explanation: "Es gilt: pKa(Säure) + pKb(korrespondierende Base) = pKw = 14 (bei 25 °C). Also: pKa(NH₄⁺) = 14 − pKb(NH₃) = 14 − 4,75 = 9,25. NH₄⁺ ist eine schwache Säure (pKa = 9,25), NH₃ ist eine schwache Base (pKb = 4,75). Das konjugierte Paar NH₄⁺/NH₃ unterscheidet sich um genau ein H⁺. Diese Beziehung gilt immer für korrespondierende Säure-Base-Paare und folgt aus Ks × Kb = Kw.",
+          hints: ["pKa(korr. Säure) + pKb(korr. Base) = 14", "pKa(NH₄⁺) = 14 − pKb(NH₃) = 14 − 4,75"],
+          difficulty: 2,
+          tags: []
+        },
+        {
+          question: "Phosphorsäure H₃PO₄ ist eine dreistufige Säure mit pKa1 ≈ 2,1, pKa2 ≈ 7,2, pKa3 ≈ 12,4. Welche Spezies dominiert bei pH 7?",
+          options: [
+            "H₃PO₄ (undissoziiert)",
+            "H₂PO₄⁻ und HPO₄²⁻ (ungefähr gleich)",
+            "HPO₄²⁻ (fast vollständig)",
+            "PO₄³⁻ (vollständig deprotoniert)",
+            "H₂PO₄⁻ (dominiert)"
+          ],
+          correctIndex: 1,
+          explanation: "Bei pH 7 liegt das System nahe am pKa2 ≈ 7,2. Nach Henderson-Hasselbalch gilt bei pH = pKa: [A⁻]/[HA] = 1, also gleiche Mengen beider Spezies. Bei pH 7 (etwas unter pKa2 = 7,2) überwiegt leicht H₂PO₄⁻ gegenüber HPO₄²⁻, aber beide sind in ähnlicher Konzentration vorhanden. Dies macht das H₂PO₄⁻/HPO₄²⁻-Paar ideal für den physiologischen Phosphatpuffer bei pH ≈ 7–7,4. H₃PO₄ ist bei pH 7 praktisch nicht mehr vorhanden (weit über pKa1 = 2,1).",
+          hints: ["Bei pH = pKa liegt das Gleichgewicht 50:50 zwischen Säure und korrespondierender Base", "pKa2 der Phosphorsäure ≈ 7,2 liegt nah an pH 7"],
+          difficulty: 2,
+          tags: []
+        },
+        {
+          question: "Eine 0,1 mol/L NaOH-Lösung (starke Base) hat welchen pH-Wert?",
+          options: [
+            "pH = 1",
+            "pH = 7",
+            "pH = 12",
+            "pH = 13",
+            "pH = 14"
+          ],
+          correctIndex: 3,
+          explanation: "NaOH ist eine starke Base, dissoziiert vollständig: [OH⁻] = 0,1 mol/L = 10⁻¹ mol/L. pOH = −log(10⁻¹) = 1. pH = 14 − pOH = 14 − 1 = 13. Bei 0,1 mol/L starker Base ist pH = 13, nicht 14 (das wäre 1 mol/L NaOH: [OH⁻] = 1 mol/L, pOH = 0, pH = 14). Der Unterschied zwischen pH 12, 13 und 14 entspricht jeweils einer 10-fachen Änderung der OH⁻-Konzentration.",
+          hints: ["NaOH: [OH⁻] = c₀; pOH = −log c₀; pH = 14 − pOH", "0,1 = 10⁻¹ → pOH = 1 → pH = 13"],
+          difficulty: 1,
+          tags: []
+        },
+        {
+          question: "Warum nimmt die Säurestärke bei mehrprotonigen Säuren von Stufe zu Stufe ab?",
+          options: [
+            "Weil die Molekülmasse mit jeder Deprotonierung sinkt",
+            "Weil das Ion mit jeder Protonabgabe negativer wird und das nächste H⁺ fester hält",
+            "Weil die Konzentration der Säure sinkt",
+            "Weil die Reaktionstemperatur sinkt",
+            "Weil mehr Wasser verbraucht wird"
+          ],
+          correctIndex: 1,
+          explanation: "Bei polyprotischen Säuren wird jedes weitere Proton von einer negativ geladenen Spezies abgegeben. Ein negatives Ion hält Protonen deutlich stärker (elektrostatische Anziehung) als ein neutrales Molekül. Deshalb: Ka1 >> Ka2 >> Ka3. Bei H₃SO₄ → H₂SO₄ → HSO₄⁻ → SO₄²⁻ nimmt die Ladung zu, und jede Stufe ist schwerer zu deprotonieren. Der gleiche Effekt gilt für H₃PO₄ (pKa1 ≈ 2,1; pKa2 ≈ 7,2; pKa3 ≈ 12,4) – jede Stufe ist um ca. 5 pKa-Einheiten schwächer.",
+          hints: ["Negative Ladung stabilisiert H⁺ im Molekül → schwieriger abzuspalten", "Ka1 >> Ka2: erste Stufe aus neutralem Molekül, zweite aus negativem Ion"],
+          difficulty: 3,
+          tags: []
+        },
+        {
+          question: "Methylamin (CH₃NH₂) ist eine schwache Base mit pKb = 3,36. Eine wässrige Lösung von Methylaminhydrochlorid (CH₃NH₃⁺Cl⁻) reagiert:",
+          options: [
+            "Neutral (pH = 7), weil es ein Salz ist",
+            "Basisch (pH > 7), weil Methylamin eine Base ist",
+            "Sauer (pH < 7), weil CH₃NH₃⁺ eine schwache Säure ist",
+            "Sauer (pH < 7), weil Cl⁻ sauer reagiert",
+            "Basisch (pH > 7), weil HCl eine starke Säure war"
           ],
           correctIndex: 2,
-          explanation: "pH = −log[H₃O⁺]. Bei pH 7: [H₃O⁺] = 10⁻⁷ mol/L. Bei pH 5: [H₃O⁺] = 10⁻⁵ mol/L. Das Verhältnis: 10⁻⁵/10⁻⁷ = 10² = 100. Die pH-Skala ist logarithmisch: pro Einheit Abfall steigt [H₃O⁺] um Faktor 10, bei 2 Einheiten Abfall um Faktor 100.",
-          hints: [
-            "pH-Skala ist logarithmisch (Basis 10)",
-            "Pro 1 pH-Einheit ändert sich [H₃O⁺] um Faktor 10",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-      ],
+          explanation: "Methylaminhydrochlorid enthält das Kation CH₃NH₃⁺ (konjugierte Säure zum Methylamin) und Cl⁻ (konjugierte Base der starken Säure HCl). Cl⁻ reagiert neutral (Salz starker Säure). CH₃NH₃⁺ ist die konjugierte Säure einer schwachen Base: pKa(CH₃NH₃⁺) = 14 − pKb(CH₃NH₂) = 14 − 3,36 = 10,64. CH₃NH₃⁺ ist also eine sehr schwache Säure und gibt leicht Protonen ab → Lösung reagiert sauer (pH < 7). Allgemein: Salz einer schwachen Base mit starker Säure → saure Lösung.",
+          hints: ["Salz der schwachen Base + starke Säure → saure Lösung (konjugierte Säure ist schwach sauer)", "pKa(CH₃NH₃⁺) = 14 − pKb(CH₃NH₂)"],
+          difficulty: 3,
+          tags: []
+        }
+      ]
     },
+
     {
-      id: "ch-10-03",
-      title: "Puffer — Henderson-Hasselbalch und biologische Puffersysteme",
-      content: `## Was ist ein Puffer?
+      id: 'ch-10-03',
+      title: "Puffersysteme und Henderson-Hasselbalch",
+      content: `# Puffersysteme und die Henderson-Hasselbalch-Gleichung
 
-Ein Puffer ist ein System, das den pH-Wert bei Zugabe kleiner Mengen Säure oder Base nahezu konstant hält. Ein Puffer besteht aus:
-- Einer **schwachen Säure** (HA) und ihrer **konjugierten Base** (A⁻)
-- In annähernd gleichen Konzentrationen
+## Was ist ein Puffer?
 
-**Wirkprinzip:**
-- Zugabe von Säure (H⁺): H⁺ + A⁻ → HA (Base "fängt" H⁺)
-- Zugabe von Base (OH⁻): OH⁻ + HA → A⁻ + H₂O (Säure "neutralisiert" OH⁻)
+Ein **Puffersystem** ist eine Lösung, die pH-Änderungen bei Zugabe kleiner Mengen Säure oder Base minimiert. Puffer bestehen aus einem **schwachen Säure-Base-Paar**:
 
-## Henderson-Hasselbalch-Gleichung
+- Einer **schwachen Säure (HA)** – neutralisiert zugesetzte Basen
+- Ihrer **konjugierten Base (A⁻)** – neutralisiert zugesetzte Säuren
 
-Die Henderson-Hasselbalch-Gleichung beschreibt den pH eines Puffers:
+Reaktionen beim Puffern:
+\`\`\`
+Zugabe von H⁺:  A⁻ + H⁺ → HA          (Base fängt Säure ab)
+Zugabe von OH⁻: HA + OH⁻ → A⁻ + H₂O  (Säure fängt Base ab)
+\`\`\`
 
-**pH = pK_s + log([A⁻]/[HA])**
+## Die Henderson-Hasselbalch-Gleichung
 
-- Bei [A⁻] = [HA]: pH = pK_s (optimale Pufferwirkung)
-- Pufferbereich: pK_s ± 1 (zwischen 1:10 und 10:1 Verhältnis)
-- Außerhalb dieses Bereichs ist die Pufferkapazität gering
+Die zentrale Gleichung für Puffersysteme:
 
-## Bicarbonat-Puffer im Blut
+$$\text{pH} = \text{p}K_a + \log \frac{[\text{A}^-]}{[\text{HA}]}$$
 
-Das wichtigste extrazelluläre Puffersystem:
+**Bedeutung der Terme:**
+- pKa: Säurestärke der schwachen Säure im Puffer
+- [A⁻]/[HA]: Verhältnis von konjugierter Base zu schwacher Säure
+- Bei [A⁻] = [HA] (Verhältnis = 1): log(1) = 0 → **pH = pKa**
 
-**H₂CO₃ ⇌ H⁺ + HCO₃⁻** (pK_s1 = 6,4)
+**Pufferbereich:** pH = pKa ± 1 (effektiver Pufferbereich)
 
-Henderson-Hasselbalch: pH = 6,4 + log([HCO₃⁻]/[H₂CO₃])
+Außerhalb dieses Bereichs kann das System kaum noch puffern.
 
-Im arteriellen Blut: [HCO₃⁻] ≈ 24 mEq/L, [H₂CO₃] ≈ 1,2 mEq/L
-pH = 6,4 + log(24/1,2) = 6,4 + log(20) = 6,4 + 1,3 = **7,4**
-
-## Phosphat-Puffer (intrazellulär)
-
-H₂PO₄⁻ ⇌ H⁺ + HPO₄²⁻ (pK_s = 6,8)
-Optimal bei pH ≈ 6,8 — wichtiger Puffer im intrazellulären Milieu und in Urin.
-
-## Protein-Puffer
-
-Hämoglobin (Hb) und Plasmaproteine puffern durch Histidin-Seitenketten (pK_s ≈ 6,5). Hb ist der wichtigste intraerythrozytäre Puffer. Deoxyhämoglobin (DeoxyHb) ist eine stärkere Base als OxyHb (Bohr-Effekt).
+### Herleitung aus Ka:
+Ka = [H₃O⁺][A⁻]/[HA] → [H₃O⁺] = Ka · [HA]/[A⁻]
+→ −log[H₃O⁺] = −log Ka + log([A⁻]/[HA])
+→ pH = pKa + log([A⁻]/[HA]) ✓
 
 ## Pufferkapazität
 
-Die Pufferkapazität β ist die Menge Säure/Base in mol/L, die pro pH-Einheit Änderung aufgenommen werden kann. Sie ist maximal bei pH = pK_s und hängt von der Gesamtkonzentration der Pufferkomponenten ab.`,
-      lernziele: [
-        "Das Pufferprinzip erklären und die Henderson-Hasselbalch-Gleichung anwenden",
-        "Den Bicarbonat-Puffer im Blut quantitativ verstehen",
-        "Phosphat-, Protein- und Bicarbonat-Puffer nach Lokalisation und Bedeutung unterscheiden",
-      ],
-      sections: [
-        {
-          heading: "Henderson-Hasselbalch im klinischen Kontext",
-          text: "Die Henderson-Hasselbalch-Gleichung pH = pK_s + log([A⁻]/[HA]) ist das Werkzeug zur Interpretation von Blutgaswerten. Für den Bicarbonat-Puffer gilt: pH = 6,4 + log([HCO₃⁻]/[CO₂]). Da [CO₂] = 0,03 × pCO₂ (kPa) oder 0,23 × pCO₂ (mmHg), kann man aus gemessenem pH und pCO₂ das [HCO₃⁻] berechnen und umgekehrt. Klinisch wichtig: Bei respiratorischer Azidose (↑pCO₂) sinkt pH → renale Kompensation erhöht [HCO₃⁻]. Bei metabolischer Azidose (↓HCO₃⁻) sinkt pH → respiratorische Kompensation erniedrigt pCO₂ (Hyperventilation, Kussmaul-Atmung).",
-          merksatz: "pH = pK_s + log([Base]/[Säure]); max. Pufferung bei [A⁻]=[HA]",
-        },
-        {
-          heading: "Bicarbonat-Puffer — Besonderheit des offenen Systems",
-          text: "Der Bicarbonat-Puffer ist im Körper ein offenes System: CO₂ wird kontinuierlich durch die Atmung abgegeben und durch Stoffwechsel produziert. Dadurch kann der Körper [H₂CO₃] über die Atemfrequenz regulieren (pCO₂ steuerbar). Bei pH = 7,4 liegt das Verhältnis [HCO₃⁻]/[H₂CO₃] = 20:1, weit außerhalb des optimalen Pufferbereichs (pK_s ± 1). Trotzdem ist der Bicarbonat-Puffer der effektivste Blutpuffer, weil seine Komponenten (pCO₂ durch Lunge, HCO₃⁻ durch Niere) unabhängig reguliert werden können — ein Vorteil gegenüber geschlossenen Puffersystemen.",
-          merksatz: "Bicarbonat-Puffer: offenes System — CO₂ durch Lunge regulierbar",
-        },
-      ],
-      merksätze: [
-        "Puffer = schwache Säure + konj. Base; pH = pK_s + log([A⁻]/[HA])",
-        "Bicarbonat-Blut: [HCO₃⁻]/[H₂CO₃] = 20:1 → pH 7,4",
-        "Max. Pufferkapazität bei pH = pK_s",
-      ],
-      klinischerBezug: "Aus der Henderson-Hasselbalch-Gleichung erklärt sich die Kussmaul-Atmung bei diabetischer Ketoazidose: Durch Tiefatemstoßen wird CO₂ (= H₂CO₃-Äquivalent) abgeatmet → [HCO₃⁻]/[CO₂]-Quotient steigt → pH steigt (respiratorische Kompensation einer metabolischen Azidose).",
-      altfrage: {
-        question: "Bei welchem pH wird ein Essigsäure-Acetat-Puffer (pK_s = 4,75) optimal gepuffert?",
-        answer: "Der Puffer ist bei pH = pK_s optimal, also bei pH 4,75. An diesem Punkt sind [CH₃COOH] = [CH₃COO⁻] (gleiches Verhältnis = 1, log(1) = 0). Die Pufferkapazität ist hier maximal, und kleine Mengen Säure oder Base verursachen die geringste pH-Änderung.",
-      },
-      selfTest: [
-        {
-          question: "Ein Essigsäure/Acetat-Puffer hat [CH₃COOH] = 0,1 mol/L und [CH₃COO⁻] = 0,1 mol/L (pK_s = 4,75). Welchen pH hat der Puffer?",
-          options: [
-            "pH = 2,9",
-            "pH = 4,0",
-            "pH = 4,75",
-            "pH = 7,0",
-            "pH = 5,75",
-          ],
-          correctIndex: 2,
-          explanation: "Henderson-Hasselbalch: pH = pK_s + log([A⁻]/[HA]) = 4,75 + log(0,1/0,1) = 4,75 + log(1) = 4,75 + 0 = 4,75. Wenn [Säure] = [Base], ist der pH gleich pK_s. Dies ist auch der Punkt maximaler Pufferkapazität.",
-          hints: [
-            "Henderson-Hasselbalch: pH = pK_s + log([Base]/[Säure])",
-            "Was ist log(1)?",
-          ],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: "Was passiert mit dem pH eines Puffers, wenn man [A⁻]/[HA] von 1 auf 10 erhöht?",
-          options: [
-            "pH sinkt um 1 Einheit",
-            "pH steigt um 1 Einheit",
-            "pH bleibt konstant",
-            "pH verdoppelt sich",
-            "pH sinkt um 2 Einheiten",
-          ],
-          correctIndex: 1,
-          explanation: "Nach Henderson-Hasselbalch: Δ(pH) = log(10/1) − log(1/1) = log(10) − log(1) = 1 − 0 = 1. Bei einer Zehnfacherhöhung des [A⁻]/[HA]-Verhältnisses steigt der pH um genau 1 pH-Einheit. Die logarithmische Natur der pH-Skala erklärt dies.",
-          hints: [
-            "Henderson-Hasselbalch: pH = pK_s + log([A⁻]/[HA])",
-            "log(10) = 1",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Im Blut gilt [HCO₃⁻] = 24 mmol/L und [H₂CO₃] = 1,2 mmol/L (pK_s = 6,4). Was ergibt Henderson-Hasselbalch?",
-          options: [
-            "pH = 6,4",
-            "pH = 6,7",
-            "pH = 7,4",
-            "pH = 7,8",
-            "pH = 5,1",
-          ],
-          correctIndex: 2,
-          explanation: "pH = 6,4 + log(24/1,2) = 6,4 + log(20) = 6,4 + 1,301 ≈ 7,4. Das physiologische Verhältnis HCO₃⁻/H₂CO₃ = 20:1 ergibt exakt den normalen Blut-pH von 7,4. Jede Änderung dieses Verhältnisses verändert den Blut-pH entsprechend.",
-          hints: [
-            "Henderson-Hasselbalch anwenden: pH = pK_s + log([HCO₃⁻]/[H₂CO₃])",
-            "log(20) ≈ 1,3",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Welcher Puffer ist hauptsächlich intrazellulär aktiv?",
-          options: [
-            "Bicarbonat-Puffer (H₂CO₃/HCO₃⁻)",
-            "Phosphat-Puffer (H₂PO₄⁻/HPO₄²⁻, pK_s = 6,8)",
-            "Hämoglobin-Puffer",
-            "Albumin-Puffer",
-            "Citrat-Puffer",
-          ],
-          correctIndex: 1,
-          explanation: "Der Phosphat-Puffer (H₂PO₄⁻/HPO₄²⁻, pK_s = 6,8) ist hauptsächlich intrazellulär aktiv, da Phosphat intrazellulär in höherer Konzentration vorliegt. Er ist auch im Urin wichtig. Der Bicarbonat-Puffer ist extrazellulär dominierend, Hämoglobin puffert intrazellulär in Erythrozyten.",
-          hints: [
-            "Welche Puffersubstanzen kommen intrazellulär vor?",
-            "Phosphat ist reichlich im Zellinneren vorhanden",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Warum ist der Bicarbonat-Puffer trotz pH = 7,4 (weit von pK_s = 6,4) so effektiv?",
-          options: [
-            "Weil er bei pH 7,4 maximale Kapazität hat",
-            "Weil CO₂ durch die Atmung und HCO₃⁻ durch die Niere unabhängig reguliert werden können",
-            "Weil HCO₃⁻ sehr hohe Konzentration im Blut hat",
-            "Weil die Lunge den pH direkt misst",
-            "Weil CO₂ unlöslich in Blut ist",
-          ],
-          correctIndex: 1,
-          explanation: "Obwohl der optimale Pufferbereich bei pK_s ± 1 = 5,4–7,4 liegt, ist der Bicarbonat-Puffer so effektiv, weil er ein offenes System ist: Die Lunge kann pCO₂ (= [H₂CO₃]) und die Niere [HCO₃⁻] unabhängig regulieren. Jede Komponente ist separat steuerbar, was eine präzise pH-Regulation ermöglicht, die keine anderen Puffersysteme erreichen.",
-          hints: [
-            "Geschlossenes vs. offenes Puffersystem — was ist der Vorteil?",
-            "Welche Organe regulieren CO₂ und HCO₃⁻?",
-          ],
-          difficulty: 3,
-          tags: [],
-        },
-      ],
-    },
-    {
-      id: "ch-10-04",
-      title: "Säure-Base-Haushalt im Körper",
-      content: `## Übersicht der Säure-Base-Störungen
+Die **Pufferkapazität** β gibt an, wie viel Säure oder Base ein Puffer aufnehmen kann, bevor der pH sich stark ändert. Sie ist:
 
-Der Säure-Base-Haushalt des Körpers kann in vier grundlegende Störungen unterteilt werden, je nachdem ob die Ursache metabolisch (Bicarbonat) oder respiratorisch (CO₂) ist.
+- Am **größten bei pH = pKa** (gleiche Mengen HA und A⁻)
+- Proportional zur **Gesamtkonzentration** des Puffersystems (c = [HA] + [A⁻])
+- **Begrenzt**: Ist entweder HA oder A⁻ verbraucht, versagt der Puffer
 
-## Metabolische Azidose
+**Praktische Konsequenz:** Ein konzentrierterer Puffer kann mehr Säure/Base abpuffern, ändert aber den pH bei Verdünnung (nur wenn beide Komponenten gleich verdünnt werden, bleibt pH konstant).
 
-**Definition:** pH < 7,35 + primär ↓[HCO₃⁻]
-**Ursachen:**
-- Diabetische Ketoazidose (↑β-Hydroxybutyrat, Acetoacetat)
-- Laktatazidose (Hypoxie, Sepsis, Metformin)
-- Urämische Azidose (Nierenversagen)
-- Diarrhö (Verlust von HCO₃⁻)
+## Das Carbonat-Puffersystem im Blut
 
-**Respiratorische Kompensation:** Hyperventilation → ↓pCO₂ → pH steigt (Kussmaul-Atmung)
+Das wichtigste Puffersystem im Blut ist das **Kohlensäure-Bicarbonat-System**:
 
-## Metabolische Alkalose
+\`\`\`
+CO₂(g)  ⇌  CO₂(aq)  +  H₂O  ⇌  H₂CO₃  ⇌  H⁺  +  HCO₃⁻
+\`\`\`
 
-**Definition:** pH > 7,45 + primär ↑[HCO₃⁻]
-**Ursachen:**
-- Erbrechen (Verlust von HCl → HCO₃⁻ steigt relativ)
-- Diuretika (Furosemid → H⁺ und K⁺ Verlust)
-- Primärer Hyperaldosteronismus (↑H⁺-Ausscheidung in Niere)
+Der effektive pKa im physiologischen Kontext (berücksichtigt CO₂-Hydratation) beträgt **≈ 6,1**.
 
-**Respiratorische Kompensation:** Hypoventilation → ↑pCO₂ → pH sinkt
+Henderson-Hasselbalch für Blut:
+$$7,4 = 6,1 + \log \frac{[\text{HCO}_3^-]}{[\text{CO}_2]}$$
 
-## Respiratorische Azidose
+$$\log \frac{[\text{HCO}_3^-]}{[\text{CO}_2]} = 1,3 \Rightarrow \frac{[\text{HCO}_3^-]}{[\text{CO}_2]} \approx 20:1$$
 
-**Definition:** pH < 7,35 + primär ↑pCO₂
-**Ursachen:**
-- Hypoventilation (COPD, Opioid-Vergiftung, Schlaf-Apnoe, neuromuskuläre Erkrankungen)
-- Akut: pCO₂ ↑, HCO₃⁻ noch normal
-- Chronisch: renale Kompensation ↑HCO₃⁻
+Normalwerte im arteriellen Blut:
+- [HCO₃⁻] ≈ 24 mmol/L
+- pCO₂ ≈ 40 mmHg (entspricht ~1,2 mmol/L gelöstem CO₂)
+- pH ≈ 7,4
 
-## Respiratorische Alkalose
+**Regulation:**
+- Lunge: reguliert CO₂ (schnell, Minuten)
+- Niere: reguliert HCO₃⁻ (langsam, Stunden bis Tage)
 
-**Definition:** pH > 7,45 + primär ↓pCO₂
-**Ursachen:**
-- Hyperventilation (Angst, Fieber, Höhenaufenthalt, Lungenembolie)
-- Akut: Tetanie möglich (↓[Ca²⁺] ionisiert durch pH-Anstieg)
+## Der Phosphatpuffer
 
-**Renale Kompensation:** ↓HCO₃⁻-Reabsorption → pH sinkt
+Das Phosphat-Puffersystem (H₂PO₄⁻/HPO₄²⁻, pKa ≈ 7,2) ist im Blutplasma weniger wichtig, aber entscheidend im **Urin** und **intrazellulär**:
 
-## Kompensationsmechanismen
+\`\`\`
+H₂PO₄⁻  ⇌  H⁺  +  HPO₄²⁻     pKa ≈ 7,2
+\`\`\`
 
-| Störung | Primäre Änderung | Kompensation |
+Bei pH 7,4 überwiegt HPO₄²⁻ (~80 %) über H₂PO₄⁻ (~20 %).
+
+## Proteinpuffer
+
+Proteine (besonders Hämoglobin und Plasmaproteine) sind die **quantitativ wichtigsten** Puffer im Blut. Die ionisierbaren Seitenketten der Aminosäuren, v. a. **Histidin** (pKa ≈ 6), fungieren als Säure-Base-Paare. Hämoglobin wirkt im Erythrozyten als Puffer, besonders beim Bohr-Effekt (H⁺ stabilisiert deoxy-Hb).
+
+## Klinische Puffersysteme im Überblick
+
+| Puffersystem | pKa | Wichtigste Lokalisation |
 |---|---|---|
-| Met. Azidose | ↓HCO₃⁻ | ↓pCO₂ (Hyperventilation) |
-| Met. Alkalose | ↑HCO₃⁻ | ↑pCO₂ (Hypoventilation) |
-| Resp. Azidose | ↑pCO₂ | ↑HCO₃⁻ (Niere) |
-| Resp. Alkalose | ↓pCO₂ | ↓HCO₃⁻ (Niere) |`,
+| H₂CO₃/HCO₃⁻ | 6,1 (eff.) | Blutplasma |
+| H₂PO₄⁻/HPO₄²⁻ | 7,2 | Intrazelluläres Milieu, Urin |
+| Hämoglobin-Puffer | ≈ 6–8 | Erythrozyten |
+| Plasmaprotein-Puffer | ≈ 6–8 | Blutplasma |
+
+## Klinisch: Azidose und Alkalose durch Pufferversagen
+
+Der Carbonat-Puffer kann versagen, wenn:
+- **CO₂ steigt** (respiratorische Azidose: z. B. Hyperventilationsausfall, COPD)
+- **HCO₃⁻ sinkt** (metabolische Azidose: z. B. Ketoazidose, Laktazidose, Nierenversagen)
+- **CO₂ sinkt** (respiratorische Alkalose: Hyperventilation)
+- **HCO₃⁻ steigt** (metabolische Alkalose: z. B. Erbrechen, Diuretika)`,
       lernziele: [
-        "Die vier Säure-Base-Störungen (metabolische/respiratorische Azidose/Alkalose) definieren und häufige Ursachen nennen",
-        "Primäre Störung und Kompensationsmechanismus für jede Störung beschreiben",
-        "Blutgaswerte (pH, pCO₂, HCO₃⁻) zur Identifikation von Säure-Base-Störungen interpretieren",
+        "Die Henderson-Hasselbalch-Gleichung anwenden und den pH von Pufferlösungen berechnen",
+        "Den Pufferbereich (pH = pKa ± 1) und die Pufferkapazität erklären",
+        "Das Carbonat-Puffersystem des Blutes mit der Henderson-Hasselbalch-Gleichung analysieren",
+        "Die Rolle von Phosphat- und Proteinpuffern im Körper beschreiben",
+        "Azidose und Alkalose auf das Versagen des Carbonat-Puffersystems zurückführen"
       ],
       sections: [
         {
-          heading: "Diabetische Ketoazidose als Fallbeispiel",
-          text: "Bei absolutem Insulinmangel (Diabetes mellitus Typ 1) kommt es zu unkontrolliertem Fettabbau und Ketonkörperbildung (Acetoacetat, β-Hydroxybutyrat — beide Säuren). Die Akkumulation dieser Ketonkörper verbraucht HCO₃⁻ (Pufferung) → [HCO₃⁻] sinkt → pH sinkt (metabolische Azidose). Typische BGA: pH < 7,3, [HCO₃⁻] < 15 mEq/L, pCO₂ erniedrigt (respiratorische Kompensation durch Kussmaul-Atmung). Der Anionenlücken-Wert (AG = [Na⁺] − ([Cl⁻] + [HCO₃⁻])) ist erhöht (AG > 12 mEq/L = Anionenlücken-Azidose). Therapie: Insulin, Flüssigkeit, Elektrolyte.",
-          merksatz: "DKA: ↑Ketone → ↓HCO₃⁻ → met. Azidose + Kussmaul-Atmung",
+          heading: "Henderson-Hasselbalch: Die Formel verstehen",
+          text: "pH = pKa + log([A⁻]/[HA]) gilt für jedes konjugierte Säure-Base-Paar. Bei [A⁻] = [HA] ist log(1) = 0, also pH = pKa. Erhöht man [A⁻] (mehr Base), steigt pH. Erhöht man [HA] (mehr Säure), sinkt pH. Der effektive Pufferbereich liegt bei pH = pKa ± 1 (Verhältnis 10:1 bis 1:10). Klinisch: Blut-pH 7,4 = pKa(6,1) + log(20) = 6,1 + 1,3 = 7,4.",
+          merksatz: "pH = pKa + log([Base]/[Säure]). Bei pH = pKa: 50:50-Verhältnis. Pufferbereich: pKa ± 1."
         },
         {
-          heading: "Respiratorische Alkalose durch Hyperventilation",
-          text: "Bei Hyperventilation (Angst, Schmerz, Fieber, Höhenaufenthalt) wird mehr CO₂ abgeatmet als produziert wird → pCO₂ sinkt → H₂CO₃ sinkt → HCO₃⁻/H₂CO₃-Quotient steigt → pH steigt (respiratorische Alkalose). Klinisch: Parästhesien, Tetanie (↓ionisiertes Ca²⁺ durch pH-Anstieg: Ca²⁺-Proteinbindung steigt → freies Ca²⁺ sinkt). Therapie akut: In eine Tüte atmen (rückatmen von CO₂). Renale Kompensation (bei längerem Verlauf): ↓HCO₃⁻-Reabsorption → pH normalisiert sich. Wichtig: Bei Höhenkrankheit führt chronische Hyperventilation zu teilweise kompensierter respiratorischer Alkalose.",
-          merksatz: "Hyperventilation → ↓pCO₂ → resp. Alkalose → Tetanie",
+          heading: "Das Blut-Carbonat-System: Lunge und Niere als Regulatoren",
+          text: "Blut-pH 7,4 hält das System bei [HCO₃⁻]/[CO₂] ≈ 20:1 aufrecht. Die Lunge reguliert CO₂ innerhalb von Minuten (schnelle Kompensation): Hyperventilation → CO₂ sinkt → pH steigt. Die Niere reguliert HCO₃⁻ über Stunden bis Tage (langsame Kompensation): mehr H⁺-Ausscheidung und HCO₃⁻-Reabsorption. Respiratorische Störungen werden renal kompensiert und umgekehrt.",
+          merksatz: "Lunge reguliert CO₂ (schnell), Niere reguliert HCO₃⁻ (langsam). pKa(eff.) = 6,1 für Blutpuffer."
         },
+        {
+          heading: "Pufferkapazität: Warum Konzentration wichtig ist",
+          text: "Die Pufferkapazität ist proportional zur Konzentration beider Pufferkomponenten. Ein Puffer bei pH = pKa hat maximale Kapazität (beide Komponenten vorhanden). Ist eine Komponente erschöpft (nur noch HA oder nur noch A⁻), versagt der Puffer. Klinisch: Bei metabolischer Azidose wird HCO₃⁻ verbraucht (puffert H⁺ zu H₂CO₃ → CO₂) → Pufferkapazität nimmt ab → pH sinkt trotz Kompensation.",
+          merksatz: "Pufferkapazität maximal bei pH = pKa. Konzentriertere Puffer = höhere Kapazität. Begrenzt: Erschöpfung möglich."
+        }
       ],
       merksätze: [
-        "Met. Azidose: ↓HCO₃⁻ (Ketoazidose, Laktatazidose, Diarrhö)",
-        "Resp. Azidose: ↑pCO₂ (Hypoventilation, COPD)",
-        "Kompensation immer entgegengesetzt zur primären Störung",
+        "Henderson-Hasselbalch: pH = pKa + log([A⁻]/[HA]) – die wichtigste Puffergleichung.",
+        "Bei [A⁻] = [HA] gilt pH = pKa (Halbäquivalenzpunkt; maximale Pufferkapazität).",
+        "Pufferbereich: pH = pKa ± 1 (Verhältnis 1:10 bis 10:1).",
+        "Blut-Puffersystem: H₂CO₃/HCO₃⁻, pKa(eff.) ≈ 6,1; pH 7,4 → [HCO₃⁻]/[CO₂] ≈ 20:1.",
+        "Lunge reguliert CO₂ schnell; Niere reguliert HCO₃⁻ langsam.",
+        "Phosphatpuffer (H₂PO₄⁻/HPO₄²⁻, pKa ≈ 7,2): wichtig intrazellulär und im Urin.",
+        "Proteine (Hämoglobin, Histidinreste) sind quantitativ wichtigste Puffer im Blut.",
+        "Zugabe von H⁺: A⁻ + H⁺ → HA. Zugabe von OH⁻: HA + OH⁻ → A⁻ + H₂O.",
+        "Azidose: pH < 7,35; Alkalose: pH > 7,45 – Pufferversagen oder Überbelastung.",
+        "Pufferkapazität erschöpft → pH fällt/steigt stark → medizinischer Notfall."
       ],
-      klinischerBezug: "Blutgasanalyse-Interpretation (4-Schritte): 1. pH: Azidose oder Alkalose? 2. pCO₂: respiratorische Ursache? 3. HCO₃⁻: metabolische Ursache? 4. Kompensation vorhanden? Beispiel: pH 7,28, pCO₂ normal, HCO₃⁻ 14 → metabolische Azidose ohne respiratorische Kompensation (akut oder Atemversagen).",
       altfrage: {
-        question: "Was ist die respiratorische Kompensation bei metabolischer Azidose?",
-        answer: "Bei metabolischer Azidose (↓pH, ↓HCO₃⁻) wird die Atmung durch Chemorezeptoren stimuliert → Hyperventilation → mehr CO₂ wird abgeatmet → pCO₂ sinkt → H₂CO₃ sinkt → pH steigt (partielle Kompensation). Klinisch sichtbar als Kussmaul-Atmung (tiefe, schnelle Atemzüge). Eine vollständige Kompensation durch die Atmung allein ist nicht möglich.",
+        question: "Erklären Sie anhand der Henderson-Hasselbalch-Gleichung, warum das Carbonat-Puffersystem trotz eines pKa von 6,1 den Blut-pH bei 7,4 puffern kann, und wie Lunge und Niere zur Regulation beitragen.",
+        answer: "Die Henderson-Hasselbalch-Gleichung lautet: pH = pKa + log([HCO₃⁻]/[CO₂]). Für das Blut: 7,4 = 6,1 + log([HCO₃⁻]/[CO₂]), also log([HCO₃⁻]/[CO₂]) = 1,3, d. h. das Verhältnis [HCO₃⁻]/[CO₂] ≈ 20:1. Obwohl der pKa (6,1) weit vom Blut-pH (7,4) entfernt liegt und der optimale Pufferbereich eigentlich bei pKa ± 1 = 5,1–7,1 wäre, ist das System effektiv, weil beide Komponenten reguliert werden können.\n\nDie **Lunge** reguliert CO₂ schnell (innerhalb von Minuten) über die Ventilation: Azidose → Hyperventilation → CO₂ sinkt → Nenner kleiner → Verhältnis steigt → pH steigt (respiratorische Kompensation). Alkalose → Hypoventilation → CO₂ steigt → pH sinkt.\n\nDie **Niere** reguliert HCO₃⁻ langsam (Stunden bis Tage): Bei Azidose scheidet die Niere mehr H⁺ aus (als NH₄⁺ und titrierbarer Säure) und reabsorbiert mehr HCO₃⁻ → Zähler steigt → pH steigt. Bei Alkalose umgekehrt.\n\nDie Kombination aus schneller respiratorischer und langsamer renaler Kompensation macht das System besonders flexibel und zum wichtigsten Blutpuffer. Die hohen Konzentrationen (HCO₃⁻ ≈ 24 mmol/L) verleihen dem System zudem eine große Pufferkapazität."
       },
+      klinischerBezug: "Die Henderson-Hasselbalch-Gleichung ist das Fundament der klinischen Blutgasanalyse: pH = 6,1 + log([HCO₃⁻]/[pCO₂ × 0,0307]). Eine respiratorische Azidose (pCO₂ ↑, z. B. bei COPD) wird renal durch HCO₃⁻-Retention kompensiert; eine metabolische Azidose (HCO₃⁻ ↓, z. B. Ketoazidose) wird respiratorisch durch Hyperventilation (Kussmaul-Atmung, CO₂ ↓) kompensiert. Diese gegenläufige Kompensation ist diagnostisch zentral zur Unterscheidung primärer und kompensatorischer Störungen.",
       selfTest: [
         {
-          question: "Ein Patient hat pH 7,28, pCO₂ 65 mmHg (erhöht), HCO₃⁻ 26 mEq/L (normal). Was liegt vor?",
+          question: "Ein Puffersystem aus Essigsäure (pKa = 4,75) enthält [CH₃COO⁻] = 0,1 mol/L und [CH₃COOH] = 0,01 mol/L. Welcher pH liegt vor?",
           options: [
-            "Metabolische Azidose",
+            "pH = 3,75",
+            "pH = 4,75",
+            "pH = 5,75",
+            "pH = 6,75",
+            "pH = 7,4"
+          ],
+          correctIndex: 2,
+          explanation: "pH = pKa + log([A⁻]/[HA]) = 4,75 + log(0,1/0,01) = 4,75 + log(10) = 4,75 + 1 = 5,75. Das Verhältnis [Base]/[Säure] = 10:1 verschiebt den pH um +1 pKa-Einheit nach oben. Bei 1:1 wäre pH = pKa = 4,75; bei 100:1 wäre pH = 4,75 + 2 = 6,75. Die Henderson-Hasselbalch-Gleichung erlaubt diese direkte Berechnung, ohne Ka explizit umzurechnen.",
+          hints: ["pH = pKa + log([A⁻]/[HA])", "log(10) = 1 → pH = 4,75 + 1"],
+          difficulty: 1,
+          tags: []
+        },
+        {
+          question: "Welche der folgenden Aussagen zur Pufferkapazität ist FALSCH?",
+          options: [
+            "Die Pufferkapazität ist am größten, wenn pH = pKa",
+            "Eine konzentriertere Pufferlösung hat eine größere Pufferkapazität",
+            "Ein Puffer kann unbegrenzt viel Säure oder Base neutralisieren",
+            "Die Pufferkapazität nimmt ab, wenn das Verhältnis [A⁻]/[HA] sehr groß oder sehr klein wird",
+            "Der effektive Pufferbereich liegt bei pH = pKa ± 1"
+          ],
+          correctIndex: 2,
+          explanation: "Ein Puffer kann NICHT unbegrenzt Säure oder Base aufnehmen – das ist die falsche Aussage. Die Pufferkapazität ist begrenzt durch die Mengen der vorhandenen Pufferkomponenten. Wird HA vollständig zu A⁻ umgewandelt (bei Zugabe von Base) oder A⁻ vollständig zu HA (bei Zugabe von Säure), ist die Kapazität erschöpft. Alle anderen Aussagen sind korrekt: Maximale Kapazität bei pH = pKa, konzentriertere Puffer puffern mehr, effektiver Pufferbereich bei pKa ± 1.",
+          hints: ["Puffer haben endliche Kapazität – erschöpfbar", "Maximale Kapazität bei pH = pKa, nicht unbegrenzt"],
+          difficulty: 1,
+          tags: []
+        },
+        {
+          question: "Das Blut hat pH 7,4, der effektive pKa des Carbonat-Systems beträgt 6,1. Wie hoch ist das Verhältnis [HCO₃⁻]/[CO₂]?",
+          options: [
+            "1:1",
+            "10:1",
+            "20:1",
+            "100:1",
+            "7,4:6,1"
+          ],
+          correctIndex: 2,
+          explanation: "Henderson-Hasselbalch: 7,4 = 6,1 + log([HCO₃⁻]/[CO₂]). log([HCO₃⁻]/[CO₂]) = 7,4 − 6,1 = 1,3. [HCO₃⁻]/[CO₂] = 10^1,3 ≈ 20. Das Verhältnis ist ≈ 20:1 (nicht 10:1, was einem Unterschied von genau 1 pH-Einheit entsprechen würde). Normalwerte: [HCO₃⁻] ≈ 24 mmol/L, gelöstes CO₂ ≈ 1,2 mmol/L (bei pCO₂ = 40 mmHg). Das asymmetrische Verhältnis 20:1 erklärt, warum das System auf Säurezugabe empfindlicher reagiert als auf Basenzugabe.",
+          hints: ["7,4 = 6,1 + log(x) → log(x) = 1,3 → x = 10^1,3 ≈ 20", "10^1 = 10; 10^1,3 ≈ 20"],
+          difficulty: 2,
+          tags: []
+        },
+        {
+          question: "Ein Patient hat pH 7,2, pCO₂ = 30 mmHg (erniedrigt). Was für eine Störung liegt vor?",
+          options: [
+            "Respiratorische Azidose",
             "Metabolische Alkalose",
-            "Respiratorische Azidose (akut)",
+            "Metabolische Azidose mit respiratorischer Kompensation",
             "Respiratorische Alkalose",
-            "Gemischte Störung",
+            "Kein Säure-Base-Problem"
           ],
           correctIndex: 2,
-          explanation: "pH < 7,35 = Azidose. pCO₂ erhöht = respiratorische Ursache. HCO₃⁻ noch normal (noch keine renale Kompensation) → akute respiratorische Azidose (z.B. akutes Atemversagen, Opioid-Überdosis). Bei chronischer respiratorischer Azidose wäre HCO₃⁻ kompensatorisch erhöht.",
-          hints: [
-            "Schritt 1: pH sauer oder basisch?",
-            "Schritt 2: pCO₂ oder HCO₃⁻ primär verändert?",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Warum entsteht Tetanie bei Hyperventilation?",
-          options: [
-            "Weil CO₂ neurotoxisch ist",
-            "Weil pH-Anstieg die Proteinbindung von Ca²⁺ erhöht und ionisiertes Ca²⁺ sinkt",
-            "Weil O₂-Überversorgung Muskeln stimuliert",
-            "Weil K⁺ aus Zellen austritt",
-            "Weil Hyperventilation Hypoxie verursacht",
-          ],
-          correctIndex: 1,
-          explanation: "Hyperventilation → ↓pCO₂ → ↑pH (respiratorische Alkalose). Bei höherem pH bindet mehr Ca²⁺ an Plasmaproteine (Albumin) → [Ca²⁺] ionisiert sinkt (Hypokalzämie). Ionisiertes Ca²⁺ ist für die Stabilisierung von Nervenmembranen notwendig; Mangel → erhöhte neuronale Erregbarkeit → Tetanie (Muskelkrämpfe, Kribbeln, Pfötchenstellung).",
-          hints: [
-            "Respiratorische Alkalose erhöht den pH",
-            "Wie verändert pH-Anstieg die Calcium-Proteinbindung?",
-          ],
+          explanation: "pH 7,2 < 7,35 → Azidose. pCO₂ = 30 mmHg (normal: 35–45 mmHg) → erniedrigt → Hyperventilation. Bei einer primären respiratorischen Azidose wäre pCO₂ erhöht. Hier ist pCO₂ erniedrigt – das ist eine respiratorische Kompensation: Die Hyperventilation versucht, durch CO₂-Abatmung den pH zu heben. Primäre Störung: metabolische Azidose (HCO₃⁻ ↓). Kompensation: respiratorisch (pCO₂ ↓ durch Hyperventilation). Klinisches Beispiel: Diabetische Ketoazidose mit Kussmaul-Atmung.",
+          hints: ["pH < 7,35 = Azidose; pCO₂ erniedrigt = Hyperventilation (Kompensation)", "Primäre Störung: wo liegt die Ursache? Kompensation: entgegengesetzt"],
           difficulty: 3,
-          tags: [],
+          tags: []
         },
         {
-          question: "Welche Störung entsteht bei anhaltendem Erbrechen?",
+          question: "Warum liegt der pKa des Carbonat-Puffers effektiv bei 6,1, obwohl die reine Kohlensäure H₂CO₃ pKa1 ≈ 6,35 hat?",
           options: [
-            "Metabolische Azidose (Verlust von HCO₃⁻)",
-            "Respiratorische Azidose (Hypoventilation)",
-            "Metabolische Alkalose (Verlust von HCl)",
-            "Respiratorische Alkalose (Hyperventilation)",
-            "Keine Säure-Base-Störung",
+            "Weil die Niere den pKa verändert",
+            "Weil gelöstes CO₂ in die Pufferrechnung einbezogen wird und [CO₂] >> [H₂CO₃] ist",
+            "Weil Hämoglobin den pKa senkt",
+            "Weil der pH-Wert des Blutes den pKa beeinflusst",
+            "Weil der Ionenstärke-Effekt im Blut den pKa senkt"
+          ],
+          correctIndex: 1,
+          explanation: "Im Blut ist die Konzentration von gelöstem CO₂ viel größer als die von H₂CO₃ (das Hydratationsgleichgewicht CO₂ + H₂O ⇌ H₂CO₃ liegt weit auf der CO₂-Seite, Verhältnis ca. 700:1). Wenn man in der Pufferrechnung nicht [H₂CO₃] allein, sondern [CO₂(aq)] + [H₂CO₃] ≈ [CO₂(aq)] als Nenner verwendet (was physiologisch sinnvoll ist, da CO₂ der regulierbare Parameter ist), ergibt sich ein effektiver pKa von 6,1 statt 6,35. Dieser effektive pKa wird mit 6,1 angegeben und ist für die Henderson-Hasselbalch-Gleichung im Blutkontext zu verwenden.",
+          hints: ["CO₂(aq) >> H₂CO₃; effektiver Nenner ist CO₂(gesamt)", "pKa(eff) = 6,1 gilt für [HCO₃⁻]/[CO₂(aq)] – der in der Klinik verwendete Wert"],
+          difficulty: 3,
+          tags: []
+        },
+        {
+          question: "Man bereitet einen Phosphatpuffer bei pH 7,4 mit dem Paar H₂PO₄⁻/HPO₄²⁻ (pKa = 7,2) vor. Welches Molverhältnis [HPO₄²⁻]/[H₂PO₄⁻] ist erforderlich?",
+          options: [
+            "Etwa 0,16:1 (mehr H₂PO₄⁻)",
+            "Genau 1:1",
+            "Etwa 1,58:1 (mehr HPO₄²⁻)",
+            "Etwa 10:1",
+            "Genau 7,4:7,2"
           ],
           correctIndex: 2,
-          explanation: "Beim Erbrechen geht Magensäure (HCl) verloren. Der Magen produziert laufend HCl aus CO₂ + H₂O → H₂CO₃ → H⁺ (in Magen) + HCO₃⁻ (ins Blut). Wenn HCl durch Erbrechen verloren geht, akkumuliert HCO₃⁻ im Blut → [HCO₃⁻] steigt → pH steigt = metabolische Alkalose. Kompensation: Hypoventilation → ↑pCO₂.",
-          hints: [
-            "Was enthält Magensaft hauptsächlich?",
-            "Verlust von HCl → was passiert mit HCO₃⁻ im Blut?",
-          ],
+          explanation: "Henderson-Hasselbalch: 7,4 = 7,2 + log([HPO₄²⁻]/[H₂PO₄⁻]). log([HPO₄²⁻]/[H₂PO₄⁻]) = 0,2. [HPO₄²⁻]/[H₂PO₄⁻] = 10^0,2 ≈ 1,58. Es überwiegt HPO₄²⁻ leicht (etwa 61 % HPO₄²⁻, 39 % H₂PO₄⁻). Bei pKa = 7,2 und pH = 7,4 (0,2 pH-Einheiten über pKa) gilt: etwas mehr als 50 % liegen als Base vor. Bei pKa 7,2 ist dieser Puffer ideal für physiologische pH-Werte und wird für Laborpuffer verwendet.",
+          hints: ["7,4 = 7,2 + log(x) → log(x) = 0,2 → x = 10^0,2 ≈ 1,58", "10^0,2 ≈ 1,58 (da 10^0 = 1 und 10^1 = 10)"],
           difficulty: 2,
-          tags: [],
+          tags: []
         },
         {
-          question: "Welche Kompensation tritt bei chronischer respiratorischer Azidose auf?",
+          question: "Warum ist der Phosphatpuffer (pKa ≈ 7,2) im Blutplasma weniger wichtig als intrazellulär, obwohl sein pKa ideal für pH 7,4 wäre?",
           options: [
-            "Hyperventilation (↓pCO₂)",
-            "Niere erhöht HCO₃⁻-Reabsorption (↑HCO₃⁻)",
-            "Niere scheidet HCO₃⁻ aus (↓HCO₃⁻)",
-            "Leber produziert mehr Pufferproteine",
-            "Milz gibt Erythrozyten frei",
+            "Weil Phosphat zu schnell reagiert und das System instabil macht",
+            "Weil die Phosphatkonzentration im Plasma sehr niedrig ist (~1 mmol/L) verglichen mit HCO₃⁻ (~24 mmol/L)",
+            "Weil Phosphat nur im sauren Milieu als Puffer wirkt",
+            "Weil Phosphat mit Kalzium reagiert und ausfällt",
+            "Weil Phosphat durch die Niere vollständig entfernt wird"
           ],
           correctIndex: 1,
-          explanation: "Bei chronischer respiratorischer Azidose (z.B. COPD) ist pCO₂ dauerhaft erhöht → pH dauerhaft erniedrigt. Die Niere kompensiert durch erhöhte H⁺-Ausscheidung (als NH₄⁺ und titrierbare Säure) und vermehrte HCO₃⁻-Reabsorption → [HCO₃⁻] steigt → pH-Normalisierung (partielle Kompensation). BGA bei kompensierter COPD: pH fast normal, pCO₂ ↑, HCO₃⁻ ↑.",
-          hints: [
-            "Renale Kompensation bei Azidose: Mehr oder weniger HCO₃⁻?",
-            "Niere reguliert HCO₃⁻ über Tage bis Wochen",
-          ],
-          difficulty: 2,
-          tags: [],
+          explanation: "Obwohl pKa ≈ 7,2 ideal nahe am physiologischen pH liegt, ist die Phosphatkonzentration im Blutplasma sehr niedrig (ca. 1 mmol/L), verglichen mit HCO₃⁻ (ca. 24 mmol/L). Die Pufferkapazität ist proportional zur Konzentration der Pufferkomponenten. Intrazellulär hingegen sind Phosphatkonzentrationen höher (ca. 10–40 mmol/L), weshalb der Phosphatpuffer dort eine bedeutende Rolle spielt. Zusätzlich ist der Carbonatpuffer durch die Regulierbarkeit von CO₂ über die Lunge besonders leistungsfähig.",
+          hints: ["Pufferkapazität ∝ Konzentration der Pufferkomponenten", "Plasma: [HCO₃⁻] ≈ 24 mmol/L >> [Phosphat] ≈ 1 mmol/L"],
+          difficulty: 3,
+          tags: []
         },
         {
-          question: "Was ist die Kussmaul-Atmung und bei welchem Zustand tritt sie auf?",
+          question: "Welches Ergebnis hat die Henderson-Hasselbalch-Gleichung, wenn [A⁻]/[HA] = 100:1?",
           options: [
-            "Flache, schnelle Atmung bei Herzversagen",
-            "Tiefe, schnelle Atemzüge zur Kompensation einer metabolischen Azidose",
-            "Langsame Atmung bei Opioid-Vergiftung",
-            "Periodische Atemunterbrechungen bei Schlaf-Apnoe",
-            "Schnappatmung bei Hirntod",
+            "pH = pKa − 2",
+            "pH = pKa − 1",
+            "pH = pKa",
+            "pH = pKa + 1",
+            "pH = pKa + 2"
           ],
-          correctIndex: 1,
-          explanation: "Kussmaul-Atmung ist eine tiefe, regelmäßige, schnelle Atmung als respiratorische Kompensation einer metabolischen Azidose. Sie tritt klassisch bei diabetischer Ketoazidose auf: Durch tiefes Ausatmen wird mehr CO₂ abgeatmet → pCO₂ sinkt → pH steigt (partiell). Benannt nach Adolf Kussmaul (1874). Der süßliche Acetongeruch der Atemluft ist ein weiteres Kennzeichen der Ketoazidose.",
-          hints: [
-            "Metabolische Azidose wird respiratorisch kompensiert",
-            "Durch tiefes Atmen wird mehr CO₂ abgeatmet",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-      ],
+          correctIndex: 4,
+          explanation: "pH = pKa + log([A⁻]/[HA]) = pKa + log(100) = pKa + 2. Beim Verhältnis 100:1 (100-facher Überschuss der Baseform) liegt der pH 2 Einheiten über dem pKa. Bei 10:1 wäre pH = pKa + 1; bei 1:1 pH = pKa; bei 1:10 pH = pKa − 1; bei 1:100 pH = pKa − 2. Dies verdeutlicht den Pufferbereich: Außerhalb von pKa ± 1 (also 1:10 bis 10:1) ist eine Komponente so stark verarmt, dass kaum noch Pufferung möglich ist.",
+          hints: ["log(100) = log(10²) = 2", "pH = pKa + log(100) = pKa + 2"],
+          difficulty: 1,
+          tags: []
+        }
+      ]
     },
-  ],
+
+    {
+      id: 'ch-10-04',
+      title: "Titrationskurven, Indikatoren und klinische Anwendung",
+      content: `# Titrationskurven, Indikatoren und klinische Anwendung
+
+## Grundprinzip der Titration
+
+Eine **Titration** ist ein analytisches Verfahren zur quantitativen Bestimmung einer unbekannten Konzentration. Eine Lösung bekannter Konzentration (Titrant, in der Bürette) wird einer Lösung unbekannter Konzentration (Analyt, in dem Erlenmeyerkolben) tropfenweise zugegeben, bis die Reaktion vollständig ist.
+
+**Äquivalenzpunkt**: Der Punkt, an dem stöchiometrisch genauso viele Moles Titrant wie Analyt vorhanden sind.
+
+**Berechnung:** n(Säure) = n(Base) → c₁ · V₁ = c₂ · V₂
+
+## Titrationskurven: Vier wichtige Fälle
+
+### 1. Starke Säure mit starker Base (z. B. HCl mit NaOH)
+
+- Äquivalenzpunkt bei **pH = 7** (Salz NaCl reagiert neutral)
+- Steiler pH-Sprung um den Äquivalenzpunkt (ca. pH 3–11 in enger Volumenspanne)
+- Indikatoren: **Phenolphthalein** (pH 8–10) oder **Methylorange** (pH 3,1–4,4) geeignet
+
+### 2. Schwache Säure mit starker Base (z. B. CH₃COOH mit NaOH)
+
+- Äquivalenzpunkt bei **pH > 7** (basisch, weil Acetat CH₃COO⁻ basisch hydrolysiert)
+- Am Halbäquivalenzpunkt (Volumen = ½ Äquivalenzvolumen): **pH = pKa** der Säure
+- Pufferbereich sichtbar: flache Kurve um pKa ± 1
+- Indikator: **Phenolphthalein** geeignet (Umschlag im Basischen)
+
+### 3. Starke Säure mit schwacher Base (z. B. HCl mit NH₃)
+
+- Äquivalenzpunkt bei **pH < 7** (sauer, weil NH₄⁺ sauer hydrolysiert)
+- Indikator: **Methylorange** geeignet (Umschlag im Sauren)
+
+### 4. Schwache Säure mit schwacher Base
+
+- Kein klarer Äquivalenzpunkt (schwacher pH-Sprung)
+- In der Praxis vermieden, Indikatoren ungeeignet
+
+### Mehrprotonige Säuren (z. B. H₃PO₄ mit NaOH)
+
+Zeigen **mehrere Äquivalenzpunkte** (einen pro Protonierungsstufe). Bei H₃PO₄ gibt es drei Äquivalenzpunkte und zwei erkennbare Pufferbereiche.
+
+## Indikatoren: Schwache Säuren mit Farbunterschied
+
+Indikatoren (HIn) sind selbst schwache Säuren, deren Protonierungs- und Deprotonierungsform unterschiedliche Farben haben:
+
+\`\`\`
+HIn  ⇌  H⁺  +  In⁻
+(Farbe 1)      (Farbe 2)
+\`\`\`
+
+Der Farbumschlag erfolgt beim **pKa(HIn)**. Im Bereich **pKa ± 1** sieht man eine Mischfarbe.
+
+### Wichtige Indikatoren:
+| Indikator | Umschlagsbereich | Farbe sauer | Farbe basisch |
+|-----------|-----------------|-------------|----------------|
+| Methylorange | 3,1–4,4 | Rot | Gelb |
+| Methylrot | 4,4–6,2 | Rot | Gelb |
+| Lackmus (Litmus) | 5,0–8,0 | Rot | Blau |
+| Bromthymolblau | 6,0–7,6 | Gelb | Blau |
+| Phenolphthalein | 8,2–10,0 | Farblos | Rot-violett |
+| Thymolblau | 8,0–9,6 | Gelb | Blau |
+
+**Auswahl des Indikators:** Der Indikator muss so gewählt werden, dass sein Umschlagsbereich mit dem pH am Äquivalenzpunkt übereinstimmt.
+
+## Klinische Säure-Base-Pathophysiologie
+
+Der normale Blut-pH liegt bei **7,35–7,45**. Vier primäre Störungen sind zu unterscheiden:
+
+### Respiratorische Azidose
+- **Ursache:** Hypoventilation → CO₂ ↑ (pCO₂ > 45 mmHg)
+- **pH:** < 7,35 (Azidose)
+- **Kompensation:** Niere erhöht HCO₃⁻-Reabsorption (langsam, Tage)
+- **Beispiele:** COPD, Sedierung, Atemmuskellähmung
+
+### Respiratorische Alkalose
+- **Ursache:** Hyperventilation → CO₂ ↓ (pCO₂ < 35 mmHg)
+- **pH:** > 7,45 (Alkalose)
+- **Kompensation:** Niere erhöht HCO₃⁻-Ausscheidung
+- **Beispiele:** Angst, Höhenkrankheit, Fieber
+
+### Metabolische Azidose
+- **Ursache:** HCO₃⁻ ↓ oder H⁺-Überschuss
+- **pH:** < 7,35
+- **Kompensation:** Hyperventilation → CO₂ ↓ (Kussmaul-Atmung)
+- **Beispiele:** Ketoazidose (Diabetes), Laktazidose, Nierenversagen, Diarrhö
+- **Anionenlücke:** AG = Na⁺ − (Cl⁻ + HCO₃⁻) normal 8–16 mEq/L; erhöhte AG bei Keto-/Laktazidose
+
+### Metabolische Alkalose
+- **Ursache:** HCO₃⁻ ↑ oder H⁺-Verlust
+- **pH:** > 7,45
+- **Kompensation:** Hypoventilation → CO₂ ↑
+- **Beispiele:** Erbrechen (HCl-Verlust), Diuretika-Einnahme, übermäßige NaHCO₃-Zufuhr
+
+## Zusammenfassung: Blutgasanalyse-Interpretation
+
+| Störung | pH | pCO₂ | HCO₃⁻ |
+|---------|-----|------|--------|
+| Resp. Azidose | ↓ | ↑ | ↑ (kompensatorisch) |
+| Resp. Alkalose | ↑ | ↓ | ↓ (kompensatorisch) |
+| Met. Azidose | ↓ | ↓ (kompensatorisch) | ↓ |
+| Met. Alkalose | ↑ | ↑ (kompensatorisch) | ↑ |
+
+## Normwerte für Blutgasanalyse (BGA)
+- pH: 7,35–7,45
+- pCO₂: 35–45 mmHg
+- pO₂: 75–100 mmHg (arteriell)
+- HCO₃⁻: 22–26 mmol/L
+- Base Excess (BE): −2 bis +2 mmol/L`,
+      lernziele: [
+        "Titrationskurven für starke und schwache Säure/Base-Kombinationen beschreiben und den Äquivalenzpunkt lokalisieren",
+        "Den pH am Äquivalenzpunkt vorhersagen (neutral, sauer oder basisch) und begründen",
+        "Den passenden Indikator für eine gegebene Titration auswählen",
+        "Die vier primären Säure-Base-Störungen (respiratorisch/metabolisch, Azidose/Alkalose) erklären und anhand von BGA-Werten identifizieren",
+        "Kompensationsmechanismen von Lunge und Niere beschreiben"
+      ],
+      sections: [
+        {
+          heading: "Titrationskurven: Äquivalenzpunkt und pH-Sprung",
+          text: "Bei der Titration starker Säure mit starker Base liegt der Äquivalenzpunkt bei pH 7 (NaCl reagiert neutral). Bei schwacher Säure mit starker Base liegt er im Basischen (pH > 7), weil das entstehende Salz (z. B. Natriumacetat) basisch hydrolysiert. Am Halbäquivalenzpunkt gilt pH = pKa – das ist der Pufferbereich. Der steile pH-Sprung um den Äquivalenzpunkt ist charakteristisch und erlaubt die Indikatorwahl. Je schwächer die Säure oder Base, desto weniger steil der Sprung.",
+          merksatz: "Starke Säure + starke Base → Äquivalenzpunkt pH 7. Schwache Säure + starke Base → pH > 7. Schwache Base + starke Säure → pH < 7."
+        },
+        {
+          heading: "Indikatoren: Auswahl nach Äquivalenzpunkt",
+          text: "Indikatoren sind selbst schwache Säuren (HIn ⇌ H⁺ + In⁻) mit zwei verschiedenfarbigen Formen. Der Umschlag findet bei pKa(HIn) statt. Der Indikator muss im Umschlagsbereich des Äquivalenzpunkts liegen. Für starke Säure/starke Base: Phenolphthalein (8–10) oder Methylorange (3–4) möglich, weil der pH-Sprung beide Bereiche überquert. Für schwache Säure/starke Base: nur Phenolphthalein (basischer Äquivalenzpunkt). Für starke Säure/schwache Base: nur Methylorange oder Methylrot.",
+          merksatz: "Indikatorwahl: pKa(Indikator) ≈ pH am Äquivalenzpunkt. Phenolphthalein für basische, Methylorange für saure Äquivalenzpunkte."
+        },
+        {
+          heading: "Klinische Azidose und Alkalose: BGA-Interpretation",
+          text: "Vier primäre Störungen: (1) Respiratorische Azidose: pH ↓, pCO₂ ↑ → renale Kompensation (HCO₃⁻ ↑). (2) Respiratorische Alkalose: pH ↑, pCO₂ ↓ → renale Kompensation (HCO₃⁻ ↓). (3) Metabolische Azidose: pH ↓, HCO₃⁻ ↓ → respiratorische Kompensation (pCO₂ ↓, Kussmaul-Atmung). (4) Metabolische Alkalose: pH ↑, HCO₃⁻ ↑ → respiratorische Kompensation (pCO₂ ↑). Die primäre Störung und die Kompensation verändern sich immer in dieselbe Richtung (CO₂ und HCO₃⁻ ändern sich gleichsinnig bei Kompensation).",
+          merksatz: "pH ↓ = Azidose. pH ↑ = Alkalose. Primär CO₂-Änderung = respiratorisch. Primär HCO₃⁻-Änderung = metabolisch."
+        }
+      ],
+      merksätze: [
+        "Titration: n(Säure) = n(Base) am Äquivalenzpunkt → c₁V₁ = c₂V₂.",
+        "Starke Säure + starke Base: Äquivalenzpunkt pH = 7 (neutrales Salz).",
+        "Schwache Säure + starke Base: Äquivalenzpunkt pH > 7 (basisches Salz hydrolysiert).",
+        "Am Halbäquivalenzpunkt einer schwachen Säure: pH = pKa.",
+        "Indikatoren: schwache Säuren mit zwei Farbformen; Umschlag bei pKa(Indikator).",
+        "Phenolphthalein: farblos (sauer) → rot-violett (basisch), Umschlag pH 8,2–10,0.",
+        "Methylorange: rot (sauer) → gelb (basisch), Umschlag pH 3,1–4,4.",
+        "Blut-pH 7,35–7,45; pCO₂ 35–45 mmHg; HCO₃⁻ 22–26 mmol/L – Normwerte.",
+        "Respiratorische Azidose: pCO₂ ↑, pH ↓ (z. B. COPD); renale Kompensation: HCO₃⁻ ↑.",
+        "Metabolische Azidose: HCO₃⁻ ↓, pH ↓ (z. B. Ketoazidose); respiratorische Kompensation: pCO₂ ↓ (Kussmaul)."
+      ],
+      altfrage: {
+        question: "Beschreiben Sie den Verlauf der Titrationskurve bei der Titration einer schwachen Säure (z. B. Essigsäure, pKa = 4,75) mit Natronlauge. Auf welchen pH-Wert setzt der Äquivalenzpunkt, und welcher Indikator ist geeignet?",
+        answer: "Die Titrationskurve der Essigsäure mit NaOH beginnt bei einem relativ flachen Anfangs-pH (für 0,1 mol/L CH₃COOH ca. pH 2,87). Zu Beginn der Titration (0 bis ca. 50 % des Äquivalenzvolumens) steigt der pH nur langsam an – dies ist der Pufferbereich, in dem sowohl CH₃COOH als auch CH₃COO⁻ vorhanden sind. Am Halbäquivalenzpunkt (50 % des Äquivalenzvolumens hinzugefügt) gilt pH = pKa = 4,75, da [CH₃COOH] = [CH₃COO⁻].\n\nNachdem etwa 90–100 % des Äquivalenzvolumens zugegeben wurden, steigt der pH rasch an (steiler pH-Sprung). Am Äquivalenzpunkt liegt der pH nicht bei 7, sondern im basischen Bereich (ca. pH 8,9 für 0,1 mol/L CH₃COONa). Das ist so, weil das entstehende Natriumacetat (CH₃COONa) in Wasser basisch hydrolysiert: CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻ – Acetat ist die konjugierte Base der schwachen Essigsäure und ist eine mittelstarke Base.\n\nDa der Äquivalenzpunkt im basischen Bereich (pH ≈ 8–9) liegt, ist **Phenolphthalein** (Umschlagsbereich pH 8,2–10,0) der geeignete Indikator: Er schlägt genau in diesem Bereich von farblos nach rot-violett um. Methylorange (Umschlag pH 3,1–4,4) wäre ungeeignet, da es im Pufferbereich der Essigsäure umschlägt, nicht am Äquivalenzpunkt."
+      },
+      klinischerBezug: "Die Unterscheidung der vier primären Säure-Base-Störungen (respiratorisch/metabolisch × Azidose/Alkalose) ist eine Kernkompetenz der klinischen Medizin. Bei einer Blutgasanalyse (BGA) bestimmt man pH, pCO₂ und HCO₃⁻: pH < 7,35 bei pCO₂ > 45 mmHg ist respiratorische Azidose (z. B. COPD-Exazerbation), pH < 7,35 bei HCO₃⁻ < 22 mmol/L ist metabolische Azidose (z. B. Ketoazidose; Kussmaul-Atmung als Kompensation). Die gleichzeitige Beurteilung des Kompensationsstatus erlaubt die Diagnose primärer und sekundärer Störungen.",
+      selfTest: [
+        {
+          question: "Bei der Titration von 25 mL HCl (unbekannte Konzentration) werden 20 mL NaOH (0,1 mol/L) verbraucht. Wie groß ist c(HCl)?",
+          options: [
+            "0,05 mol/L",
+            "0,08 mol/L",
+            "0,1 mol/L",
+            "0,125 mol/L",
+            "0,2 mol/L"
+          ],
+          correctIndex: 1,
+          explanation: "Am Äquivalenzpunkt gilt: n(HCl) = n(NaOH) (1:1-Stöchiometrie). n(NaOH) = c × V = 0,1 mol/L × 0,020 L = 0,002 mol. n(HCl) = 0,002 mol. c(HCl) = n/V = 0,002 mol / 0,025 L = 0,08 mol/L. Merke: c₁V₁ = c₂V₂ gilt nur bei einbasigen Säuren und einsäurigen Basen (1:1-Stöchiometrie). Bei zweiprotoniger Säure wie H₂SO₄ wäre das Verhältnis 1:2, also c(H₂SO₄) = c(NaOH) × V(NaOH) / (2 × V(H₂SO₄)).",
+          hints: ["n(HCl) = n(NaOH) am Äquivalenzpunkt", "c(HCl) = n/V = (0,1 × 0,020) / 0,025"],
+          difficulty: 1,
+          tags: []
+        },
+        {
+          question: "Welcher Indikator ist für die Titration von Essigsäure (pKa = 4,75) mit NaOH am besten geeignet?",
+          options: [
+            "Methylorange (Umschlag pH 3,1–4,4)",
+            "Methylrot (Umschlag pH 4,4–6,2)",
+            "Lackmus (Umschlag pH 5,0–8,0)",
+            "Phenolphthalein (Umschlag pH 8,2–10,0)",
+            "Bromthymolblau (Umschlag pH 6,0–7,6)"
+          ],
+          correctIndex: 3,
+          explanation: "Bei der Titration einer schwachen Säure (Essigsäure) mit einer starken Base (NaOH) liegt der Äquivalenzpunkt im Basischen (pH ≈ 8–9, weil Acetat basisch hydrolysiert). Daher braucht man einen Indikator, der in diesem basischen Bereich umschlägt: Phenolphthalein (Umschlag pH 8,2–10,0) ist ideal. Methylorange schlägt im sauren Bereich um (pH 3,1–4,4) – das liegt im Pufferbereich der Essigsäure, nicht am Äquivalenzpunkt. Bromthymolblau (6–7,6) liegt zu nah am neutralen Bereich.",
+          hints: ["Äquivalenzpunkt schwache Säure + starke Base: pH > 7", "Indikator muss im pH-Bereich des Äquivalenzpunkts umschlagen"],
+          difficulty: 1,
+          tags: []
+        },
+        {
+          question: "Bei der Titration von NH₃ (schwache Base, pKb = 4,75) mit HCl (starke Säure) liegt der Äquivalenzpunkt bei:",
+          options: [
+            "pH = 7 (neutral)",
+            "pH > 7 (basisch)",
+            "pH < 7 (sauer)",
+            "pH = pKb = 4,75",
+            "pH = 14"
+          ],
+          correctIndex: 2,
+          explanation: "Bei der Titration einer schwachen Base (NH₃) mit einer starken Säure (HCl) entsteht am Äquivalenzpunkt das Salz NH₄Cl. NH₄⁺ ist die konjugierte Säure der schwachen Base NH₃ und reagiert sauer: NH₄⁺ + H₂O ⇌ NH₃ + H₃O⁺. pKa(NH₄⁺) = 14 − pKb(NH₃) = 14 − 4,75 = 9,25. Der pH am Äquivalenzpunkt liegt sauer, ca. bei pH = 5–5,5 (für 0,1 mol/L NH₄Cl). Geeigneter Indikator: Methylorange oder Methylrot (Umschlag im Sauren).",
+          hints: ["Schwache Base + starke Säure → Salz hydrolysiert sauer", "NH₄⁺ ist konjugierte Säure von NH₃ → saure Lösung am Äquivalenzpunkt"],
+          difficulty: 2,
+          tags: []
+        },
+        {
+          question: "Ein Patient hat folgende BGA-Werte: pH = 7,52, pCO₂ = 30 mmHg, HCO₃⁻ = 24 mmol/L. Welche Störung liegt vor?",
+          options: [
+            "Metabolische Alkalose",
+            "Respiratorische Alkalose (unkompensiert)",
+            "Respiratorische Azidose",
+            "Metabolische Azidose mit respiratorischer Kompensation",
+            "Keine Störung"
+          ],
+          correctIndex: 1,
+          explanation: "pH 7,52 > 7,45 → Alkalose. pCO₂ = 30 mmHg < 35 mmHg (erniedrigt) → CO₂ wird abgeatmet → Hyperventilation. HCO₃⁻ = 24 mmol/L (normal). Primäre Störung: pCO₂ erniedrigt → respiratorische Alkalose. Da HCO₃⁻ noch normal ist, keine renale Kompensation → unkompensiert. Bei kompensierter respiratorischer Alkalose würde die Niere HCO₃⁻ ausscheiden (HCO₃⁻ ↓). Ursachen: Hyperventilation bei Angst, Schmerz, Höhe, Sepsis. Behandlung: Ursache beheben, evtl. CO₂-Rückatmung.",
+          hints: ["pH > 7,45 = Alkalose; pCO₂ erniedrigt = respiratorisch primär", "HCO₃⁻ normal → keine renale Kompensation → unkompensiert"],
+          difficulty: 2,
+          tags: []
+        },
+        {
+          question: "Ein diabetischer Patient mit schlechter Einstellung hat pH 7,22, pCO₂ = 25 mmHg, HCO₃⁻ = 10 mmol/L. Welche Diagnose und welches klinische Zeichen der Kompensation sind zu erwarten?",
+          options: [
+            "Respiratorische Azidose; Oligurie als Kompensation",
+            "Metabolische Azidose; Kussmaul-Atmung als respiratorische Kompensation",
+            "Metabolische Alkalose; Hypoventilation als Kompensation",
+            "Respiratorische Alkalose; renale HCO₃⁻-Retention als Kompensation",
+            "Gemischte Störung ohne erkennbare Kompensation"
+          ],
+          correctIndex: 1,
+          explanation: "pH 7,22 < 7,35 → Azidose. HCO₃⁻ = 10 mmol/L (normal 22–26) → stark erniedrigt → primär metabolische Azidose. pCO₂ = 25 mmHg (normal 35–45) → erniedrigt → respiratorische Kompensation durch Hyperventilation. Klinisches Zeichen: Kussmaul-Atmung (tiefe, regelmäßige, geräuschvolle Atemzüge) – charakteristisch für die diabetische Ketoazidose. Bei der Ketoazidose sind Ketonkörper (β-Hydroxybutyrat, Acetoacetat) starke Säuren, die HCO₃⁻ verbrauchen. Behandlung: Insulin, Flüssigkeit, Elektrolytausgleich.",
+          hints: ["HCO₃⁻ ↓ → metabolische Störung; pCO₂ ↓ → respiratorische Kompensation", "Ketoazidose → Kussmaul-Atmung (tiefe Hyperventilation als Kompensation)"],
+          difficulty: 2,
+          tags: []
+        },
+        {
+          question: "Was versteht man unter dem Halbäquivalenzpunkt bei der Titration einer schwachen Säure, und welchen Wert hat der pH dort?",
+          options: [
+            "Der Punkt, an dem die Hälfte des Titranten zugegeben wurde und pH = 7",
+            "Der Punkt, an dem [HA] = [A⁻] und pH = pKa der schwachen Säure",
+            "Der Äquivalenzpunkt selbst, bei pH > 7",
+            "Der Punkt, an dem der Indikator umschlägt",
+            "Der Punkt, an dem [OH⁻] = [H₃O⁺]"
+          ],
+          correctIndex: 1,
+          explanation: "Der Halbäquivalenzpunkt liegt bei der Hälfte des Äquivalenzvolumens (also wenn halb so viel Base zugegeben wurde wie am Äquivalenzpunkt nötig). An diesem Punkt ist genau die Hälfte der Säure HA zur konjugierten Base A⁻ neutralisiert worden: [HA] = [A⁻]. Nach Henderson-Hasselbalch: pH = pKa + log([A⁻]/[HA]) = pKa + log(1) = pKa + 0 = pKa. Am Halbäquivalenzpunkt ist also pH = pKa der schwachen Säure. Dieser Punkt ist diagnostisch wichtig: Man kann pKa einer unbekannten Säure durch Titration bestimmen.",
+          hints: ["Halbäquivalenz: halb neutralisiert → [HA] = [A⁻]", "Henderson-Hasselbalch: bei [HA] = [A⁻] → log(1) = 0 → pH = pKa"],
+          difficulty: 2,
+          tags: []
+        },
+        {
+          question: "Phenolphthalein ist farblos bei pH 7 und rot-violett bei pH 10. Es selbst ist eine schwache Säure mit pKa ≈ 9,1. Bei welchem pH findet der Farbumschlag statt?",
+          options: [
+            "Bei pH = 7 (neutral)",
+            "Bei pH = 14 (maximal basisch)",
+            "Bei pH ≈ 9,1 (= pKa des Indikators)",
+            "Bei pH = 7,4 (Blut-pH)",
+            "Der Umschlag hängt nicht vom pKa ab"
+          ],
+          correctIndex: 2,
+          explanation: "Indikatoren sind schwache Säuren (HIn). Der Farbumschlag findet in der Nähe des pKa des Indikators statt. Bei pH << pKa überwiegt HIn (saure, farblose Form). Bei pH >> pKa überwiegt In⁻ (basische, rote Form). Bei pH = pKa sind [HIn] = [In⁻]: man sieht eine Mischfarbe, und das ist der Mittelpunkt des Umschlagsbereichs (pKa ± 1). Für Phenolphthalein mit pKa ≈ 9,1 ist der Umschlagsbereich 8,1–10,1. Dies erklärt, warum Phenolphthalein für Titrationen mit basischem Äquivalenzpunkt geeignet ist.",
+          hints: ["Indikator-Umschlag bei pH ≈ pKa(Indikator)", "HIn (farblos) ⇌ H⁺ + In⁻ (farbig): Gleichgewicht bestimmt Farbe"],
+          difficulty: 2,
+          tags: []
+        },
+        {
+          question: "Ein Patient mit chronischer Niereninsuffizienz hat pH 7,30, pCO₂ = 32 mmHg, HCO₃⁻ = 15 mmol/L. Welche Störung liegt vor?",
+          options: [
+            "Respiratorische Azidose mit metabolischer Kompensation",
+            "Metabolische Alkalose",
+            "Metabolische Azidose mit respiratorischer Kompensation",
+            "Respiratorische Alkalose mit metabolischer Kompensation",
+            "Normalbefund"
+          ],
+          correctIndex: 2,
+          explanation: "pH 7,30 < 7,35 → Azidose. HCO₃⁻ = 15 mmol/L < 22 mmol/L → stark erniedrigt → primär metabolische Ursache (Niere kann H⁺ nicht ausreichend ausscheiden und HCO₃⁻ nicht regenerieren). pCO₂ = 32 mmHg < 35 mmHg → erniedrigt → respiratorische Kompensation (Hyperventilation). Diagnose: Metabolische Azidose mit respiratorischer Kompensation, typisch für chronische Niereninsuffizienz. Die Niere ist hier die Ursache (kann keine Säuren ausscheiden), nicht die Kompensationsorgane. Behandlung: Natriumbicarbonat-Substitution, renale Ersatztherapie.",
+          hints: ["HCO₃⁻ erniedrigt → primär metabolisch; pCO₂ erniedrigt → respiratorische Kompensation", "Chronische Niereninsuffizienz → HCO₃⁻ ↓ (Niere kann Säure nicht ausscheiden)"],
+          difficulty: 3,
+          tags: []
+        }
+      ]
+    }
+  ]
 };

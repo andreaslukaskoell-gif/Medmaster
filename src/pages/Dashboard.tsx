@@ -18,6 +18,7 @@ import { getLevelFromXP, getLevelProgressPercent } from "@/lib/progression";
 import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { BADGE_DEFINITIONS } from "@/data/badges";
 import { getBadgeProgress } from "@/data/badges";
+import { alleKapitel } from "@/data/bmsKapitel";
 
 const MODULE_TO_PATH: Record<string, string> = { BMS: "/bms", KFF: "/kff", TV: "/tv", SEK: "/sek" };
 
@@ -105,7 +106,7 @@ export default function Dashboard() {
     [completedChapters, maxConsecutiveCorrectEver, smartRecoveryCount, firstActivityTimeByDay]
   );
   const earnedBadges = useMemo(() => {
-    return BADGE_DEFINITIONS.filter((b) => getBadgeProgress(b.id, badgeState).earned).slice(-3);
+    return BADGE_DEFINITIONS.filter((b) => getBadgeProgress(b.id, badgeState, alleKapitel).earned).slice(-3);
   }, [badgeState]);
 
   const questProgress = dailyGoalState.hasPlan ? dailyGoalState.primaryProgressPct : 0;
