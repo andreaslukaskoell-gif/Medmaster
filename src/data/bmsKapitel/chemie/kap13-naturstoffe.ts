@@ -1,813 +1,872 @@
 import type { Kapitel } from '../types';
 
 export const chemKap13: Kapitel = {
-  id: "chem-kap13",
+  id: 'chem-kap13',
   title: "Naturstoffe",
-  subject: "chemie",
-  icon: "🔬",
-  estimatedTime: "65 min",
+  subject: 'chemie',
+  icon: '🔬',
+  estimatedTime: '90 min',
   unterkapitel: [
     {
-      id: "ch-13-01",
-      title: "Kohlenhydrate — Von Monosacchariden zu Polysacchariden",
-      content: `## Monosaccharide — Einfachzucker
+      id: 'ch-13-01',
+      title: "Aminosäuren und Proteine",
+      content: `# Aminosäuren und Proteine
 
-Monosaccharide sind die Grundbausteine aller Kohlenhydrate. Die wichtigsten Hexosen (6C, Formel C₆H₁₂O₆):
+## Grundstruktur der Aminosäuren
 
-- **Glucose** (Traubenzucker): Hauptenergielieferant aller Zellen; Blutglucose 3,9–6,1 mmol/L
-- **Fructose** (Fruchtzucker): süßer als Glucose, im Obst, Honig
-- **Galaktose**: Milchzucker-Baustein (Laktose = Galaktose + Glucose)
+Alle 20 proteinogenen Aminosäuren besitzen einen einheitlichen Grundbauplan am α-Kohlenstoff: eine **α-Aminogruppe** (–NH₂), eine **α-Carboxylgruppe** (–COOH), ein Wasserstoffatom und eine variable **Seitenkette (R-Gruppe)**. Glycin ist die einzige Ausnahme ohne Stereozentrum (R = H), alle anderen liegen als L-Enantiomere vor.
 
-Pentosen (5C): Ribose (in RNA) und Desoxyribose (in DNA).
+## Klassifikation der Aminosäuren
 
-## Fischer- und Haworth-Projektion
+Nach der Polarität der R-Gruppe unterscheidet man:
+- **Unpolare (hydrophobe)**: Alanin, Valin, Leucin, Isoleucin, Phenylalanin, Tryptophan, Methionin, Prolin
+- **Polare ungeladene**: Serin, Threonin, Cystein, Tyrosin, Asparagin, Glutamin
+- **Saure (negativ bei pH 7)**: Asparaginsäure, Glutaminsäure
+- **Basische (positiv bei pH 7)**: Lysin, Arginin, Histidin
+- **Schwefelhaltige**: Cystein (–SH, Disulfidbrücken) und Methionin (–S–CH₃)
+- **Aromatische**: Phenylalanin, Tyrosin, Tryptophan
 
-- **Fischer-Projektion:** Lineare Darstellung mit C1 (Aldehydgruppe) oben. Horizontale Bindungen zeigen aus der Papierebene heraus. D-Glucose hat alle OH-Gruppen nach rechts (an C5: OH rechts = D-Konfiguration).
-- **Haworth-Projektion:** Ringförmige Darstellung (Pyranose = 6-Ring, Furanose = 5-Ring). Glucose bildet in wässriger Lösung einen 6-Ring (Pyranoseform).
+**Essentielle Aminosäuren** (8 beim Erwachsenen): Isoleucin, Leucin, Lysin, Methionin, Phenylalanin, Threonin, Tryptophan, Valin. Histidin ist essentiell für Kinder.
 
-## α- vs. β-D-Glucose: Anomere
+## Peptidbindung
 
-Beim Ringschluss (Halbacetalbildung) entsteht ein neues Stereozentrum am C1 (anomeres C):
-- **α-D-Glucose:** OH an C1 liegt axial (unterhalb der Ringebene in Haworth: gleiche Seite wie C6-CH₂OH)
-- **β-D-Glucose:** OH an C1 liegt äquatorial (oberhalb in Haworth: gegenüber C6-CH₂OH)
+Die Peptidbindung entsteht durch **Kondensationsreaktion** zwischen der Carboxylgruppe einer Aminosäure und der Aminogruppe der nächsten unter Abspaltung eines Wassermoleküls. Das Resultat ist eine Amidbindung (–CO–NH–). Charakteristika der Peptidbindung: **planar** (sp²-Hybridisierung), **partieller Doppelbindungscharakter** (Mesomerie), **keine freie Rotation** um die C–N-Achse, Syntheserichtung von N-Terminus → C-Terminus.
 
-In wässriger Lösung stehen α und β im Gleichgewicht (Mutarotation).
+## Proteinstruktur
 
-## Glykosidische Bindung und Disaccharide
+Die räumliche Organisation von Proteinen wird in vier Ebenen beschrieben:
+- **Primärstruktur**: lineare Aminosäuresequenz, durch Peptidbindungen festgelegt; bestimmt alle übergeordneten Strukturen
+- **Sekundärstruktur**: lokale räumliche Anordnung durch H-Brücken im Peptidrückgrat; α-Helix (H-Brücken zwischen C=O an Position n und N–H an n+4), β-Faltblatt (H-Brücken zwischen parallelen oder antiparallelen Strängen)
+- **Tertiärstruktur**: gesamte 3D-Faltung des Polypeptids; stabilisiert durch hydrophobe Wechselwirkungen (unpolarer Kern), Disulfidbrücken (Cystein–Cystein), ionische Salzbrücken, H-Brücken und Van-der-Waals-Kräfte
+- **Quartärstruktur**: Anordnung mehrerer Untereinheiten (Polypeptidketten) zu einem funktionstüchtigen Proteinkomplex; Beispiel: Hämoglobin (2α + 2β)
 
-Die glykosidische Bindung verknüpft Monosaccharide unter Wasserabspaltung:
+## Denaturierung
 
-- **α-1,4-glykosidisch:** in Stärke (Amylose: linear; Amylopektin: verzweigt α-1,6) und Glykogen
-- **β-1,4-glykosidisch:** in Cellulose (kann vom Menschen nicht gespalten werden — kein β-Glucosidase)
+Denaturierung bezeichnet den **Verlust der nativen Raumstruktur** (Sekundär- bis Quartärstruktur) bei erhaltener Primärstruktur. Auslöser: hohe Temperatur (Zerstörung von H-Brücken und hydrophoben WW), extremer pH-Wert (Änderung ionischer WW), organische Lösungsmittel (Stören des hydrophoben Effekts), reduzierende Agenzien (Spaltung von Disulfidbrücken). Denaturierung kann **reversibel** (z.B. Chaperone assistieren bei Rückfaltung) oder **irreversibel** (gekochtes Ei, Prionen) sein.
 
-**Disaccharide:**
-- Saccharose: α-Glucose + β-Fructose (α-1,2-Bindung), kein reduzierendes Ende
-- Laktose: β-Galaktose + Glucose (β-1,4-Bindung), reduzierend
-- Maltose: α-Glucose + α-Glucose (α-1,4-Bindung), reduzierend
+## Klinische Relevanz
 
-**Polysaccharide:** Stärke (Pflanzenspeicher), Glykogen (Tierspeicher, verzweigt), Cellulose (Strukturpolysaccharid), Chitin (Exoskelett).`,
+**Sichelzellanämie**: Punktmutation Glu→Val an Position 6 der β-Globinkette führt zu Aggregation von Desoxy-HbS. **Phenylketonurie (PKU)**: Enzymdefekt Phenylalanin-Hydroxylase → Phenylalanin akkumuliert, kein Tyrosin. **Enzyme als Biomarker**: Troponin T/I (Herzinfarkt), CK-MB (Herzmuskelnekrose), LDH (unspezifisch), GPT/ALT und AST (Leberschäden).`,
       lernziele: [
-        "Monosaccharide (Glucose, Fructose, Galaktose) unterscheiden und in Fischer- und Haworth-Projektion darstellen",
-        "Alpha- und Beta-D-Glucose unterscheiden und die anomere Position beschreiben",
-        "Alpha-1,4- und Beta-1,4-glykosidische Bindungen und ihre biologischen Konsequenzen erläutern",
+        "Den Grundaufbau einer Aminosäure (α-C, Amino-, Carboxylgruppe, R-Gruppe) beschreiben und Aminosäuren nach Polarität und Ladung klassifizieren",
+        "Die Bildung einer Peptidbindung als Kondensationsreaktion erklären und ihre strukturellen Besonderheiten (planar, partieller Doppelbindungscharakter) nennen",
+        "Die vier Ebenen der Proteinstruktur und die jeweiligen stabilisierenden Wechselwirkungen beschreiben",
+        "Denaturierung erklären und Beispiele für reversible und irreversible Denaturierung nennen",
+        "Klinisch relevante Proteindefekte (Sichelzellanämie, PKU) und enzymatische Biomarker kennen",
       ],
       sections: [
         {
-          heading: "Alpha vs. Beta — biologische Konsequenzen",
-          text: "Die Art der glykosidischen Bindung hat fundamentale biologische Auswirkungen. α-1,4-Bindungen (in Stärke und Glykogen) bilden eine Wendelstruktur (Helix), die durch menschliche Amylase spaltbar ist. β-1,4-Bindungen (in Cellulose) bilden gestreckte, gerade Ketten, die Wasserstoffbrücken zwischen benachbarten Ketten ausbilden → mechanisch stabile Fasern. Menschen besitzen keine β-Glucosidase → Cellulose unverdaubar (Ballaststoff). Wiederkäuer haben Bakterien im Pansen mit β-Glucosidasen → können Cellulose verdauen. Diese Bindungstyp-Unterschiede erklären die Vielfalt der Polysaccharid-Eigenschaften (löslich: Stärke; unlöslich: Cellulose).",
-          merksatz: "α-1,4: Stärke/Glykogen (spaltbar); β-1,4: Cellulose (unlöslich, Ballaststoff)",
+          heading: "Peptidbindung und Proteinstruktur im Überblick",
+          text: "Die Peptidbindung ist das Rückgrat aller Proteine. Sie entsteht durch Kondensation (–H₂O) zwischen –COOH und –NH₂. Ihre Planarität durch Mesomerie schränkt die Rotation ein und zwingt das Polypeptid in definierte Konformationen. Auf der Primärstruktur (Sequenz) bauen Sekundärstruktur (α-Helix, β-Faltblatt durch H-Brücken im Rückgrat), Tertiärstruktur (globale 3D-Faltung durch Seitenketten-WW) und Quartärstruktur (Multimerbildung) auf.",
+          merksatz: "Primär = Sequenz; Sekundär = H-Brücken im Rückgrat; Tertiär = Seitenketten-Wechselwirkungen; Quartär = Untereinheiten.",
         },
         {
-          heading: "Glykogen als Glucosespeicher",
-          text: "Glykogen ist das Speicherpolysaccharid in Tieren (Leber: ca. 100 g, Muskel: ca. 400 g). Struktur: verzweigt (α-1,4-Ketten, alle 8–12 Glucose-Einheiten α-1,6-Verzweigung). Die Verzweigung ermöglicht schnellen Abbau (viele nichtreduzierende Enden für Glykogenphosphorylase). Glykogenolyse: Glykogenphosphorylase + Debranching-Enzym → Glucose-1-Phosphat → Glucose-6-Phosphat → Glycolyse (Muskel) oder Glucose (Leber). Regulation durch Insulin (Glykogensynthese ↑) und Glucagon/Adrenalin (Glykogenolyse ↑). Glykogenspeicherkrankheiten (z.B. Pompe, McArdle) = genetische Enzymdefekte.",
-          merksatz: "Glykogen: α-1,4 + α-1,6 (verzweigt), Leber + Muskel",
-        },
-      ],
-      merksätze: [
-        "Glucose/Fructose/Galaktose: C₆H₁₂O₆; D-Form = OH an C5 rechts",
-        "α-Glucose: OH-C1 axial/unten; β-Glucose: OH-C1 äquatorial/oben",
-        "α-1,4: Stärke (Amylase spaltbar); β-1,4: Cellulose (unverdaubar)",
-      ],
-      klinischerBezug: "Laktoseintoleranz: Mangel an intestinaler Laktase (β-Galaktosidase) → Laktose wird nicht gespalten → osmotisch im Dickdarm → bakterielle Fermentation → Blähungen, Diarrhö. Therapie: Laktosearme Diät oder exogene Laktase. Galaktosämie: Mangel an Galaktose-1-Phosphat-Uridyltransferase → Galaktose-1-P akkumuliert → hepatische und neurologische Schäden.",
-      altfrage: {
-        question: "Warum kann der Mensch Cellulose nicht verdauen, obwohl sie aus Glucose-Einheiten besteht?",
-        answer: "Cellulose besteht aus β-1,4-glykosidisch verknüpften Glucoseeinheiten. Der menschliche Verdauungstrakt besitzt keine β-1,4-Glucosidase (Cellulase), die diese Bindung spalten kann. Amylase spaltet nur α-1,4-Bindungen (in Stärke/Glykogen). Cellulose ist daher ein unverdaulicher Ballaststoff. Nur bestimmte Bakterien (im Pansen von Wiederkäuern oder im Darm von Termiten) produzieren Cellulasen.",
-      },
-      selfTest: [
-        {
-          question: "Was ist der Unterschied zwischen α-D-Glucose und β-D-Glucose?",
-          options: [
-            "α hat 5 C-Atome, β hat 6 C-Atome",
-            "α-D-Glucose hat OH an C1 axial (unterhalb Ringebe), β-D-Glucose hat OH an C1 äquatorial (oberhalb)",
-            "α und β sind in der Fischer-Projektion gleich",
-            "α ist die D-Form, β ist die L-Form",
-            "β hat eine Doppelbindung, α nicht",
-          ],
-          correctIndex: 1,
-          explanation: "Beim Ringschluss (Halbacetalbildung) der Glucose entsteht ein neues Stereozentrum am C1 (anomeres C). α-D-Glucose: OH an C1 ist axial = unterhalb der Ringeben in der Haworth-Projektion (gleiche Seite wie H an C1, cis zur C6-CH₂OH). β-D-Glucose: OH an C1 ist äquatorial = oberhalb der Ringebene in Haworth. Beide Anomere stehen in wässriger Lösung im Gleichgewicht (Mutarotation).",
-          hints: [
-            "Anomeres C = C1 (der Aldehyd-C im offenkettigen Zucker)",
-            "α: OH unterhalb; β: OH oberhalb in Haworth-Projektion",
-          ],
-          difficulty: 2,
-          tags: [],
+          heading: "Essentielle Aminosäuren und ihre klinische Bedeutung",
+          text: "Die acht essentiellen Aminosäuren des Erwachsenen (Ile, Leu, Lys, Met, Phe, Thr, Trp, Val) können vom Körper nicht synthetisiert werden. PKU entsteht bei fehlendem Abbau von Phenylalanin (Enzymdefekt Phe-Hydroxylase → fehlendes Tyrosin, toxische Phe-Metabolite → Hirnschäden wenn unbehandelt). Die Sichelzellanämie zeigt, wie ein einziger Aminosäurenaustausch in der Primärstruktur die gesamte Proteinfunktion und klinische Manifestation verändert.",
+          merksatz: "Essentielle AS: Ile-Leu-Lys-Met-Phe-Thr-Trp-Val — Merkhilfe: 'Ich Liebe Leckere Mahlzeiten, Phanta-stisch Toll Wirklich Verdient'.",
         },
         {
-          question: "Welche Aussage zur glykosidischen Bindung in Stärke ist korrekt?",
-          options: [
-            "β-1,4-glykosidische Bindungen in linearen Ketten",
-            "α-1,4-glykosidische Bindungen (und α-1,6 in Amylopektin)",
-            "β-1,6-glykosidische Bindungen (Cellulose)",
-            "Nur α-1,6-Bindungen in verzweigten Ketten",
-            "Keine glykosidischen Bindungen — nur Wasserstoffbrücken",
-          ],
-          correctIndex: 1,
-          explanation: "Stärke besteht aus zwei Komponenten: Amylose (lineare α-1,4-Ketten) und Amylopektin (α-1,4-Ketten mit α-1,6-Verzweigungen alle 24–30 Glucoseeinheiten). Diese α-1,4-Bindungen werden durch menschliche α-Amylase (Speichel, Pankreas) gespalten. Cellulose hat β-1,4-Bindungen, die nicht spaltbar sind.",
-          hints: [
-            "Stärke vs. Cellulose: α vs. β macht den Unterschied",
-            "α-1,4 = Stärke; β-1,4 = Cellulose",
-          ],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: "Maltose entsteht bei der Stärkehydrolyse durch Amylase. Was sind ihre Bestandteile?",
-          options: [
-            "Glucose + Galaktose (β-1,4-Bindung)",
-            "Glucose + Fructose (α-1,2-Bindung)",
-            "Glucose + Glucose (α-1,4-Bindung)",
-            "Galaktose + Galaktose (β-1,4-Bindung)",
-            "Glucose + Glucose (β-1,4-Bindung)",
-          ],
-          correctIndex: 2,
-          explanation: "Maltose (Malzzucker) besteht aus zwei α-D-Glucoseeinheiten, die durch eine α-1,4-glykosidische Bindung verknüpft sind. Sie entsteht als Zwischenprodukt der Stärkehydrolyse durch Amylase. Maltose hat ein freies anomeres C1 (reduzierendes Ende) und ist daher ein reduzierendes Disaccharid. Saccharose (Glc+Fruc) ist nicht-reduzierend.",
-          hints: [
-            "Stärke = α-1,4-verknüpfte Glucose → Hydrolyse → Maltose",
-            "Maltose = Mal + ose → Mal-zprodukt aus Stärke",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Laktose (Milchzucker) besteht aus:",
-          options: [
-            "Zwei Glucosemolekülen",
-            "Glucose + Fructose",
-            "Galaktose + Glucose (β-1,4-Bindung)",
-            "Galaktose + Galaktose (α-1,4-Bindung)",
-            "Fructose + Galaktose",
-          ],
-          correctIndex: 2,
-          explanation: "Laktose besteht aus β-D-Galaktose und D-Glucose, verknüpft durch eine β-1,4-glykosidische Bindung. Für die Hydrolyse wird Laktase (β-Galaktosidase) benötigt. Fehlt dieses Enzym (Laktoseintoleranz), kann Laktose nicht gespalten werden. Laktose ist reduzierend (Glucose-Teil hat freies anomeres C).",
-          hints: [
-            "Lakt-ose kommt in Milch vor → Milchzucker enthält Galaktose",
-            "β-1,4-Bindung → Laktase nötig",
-          ],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: "Was ist Glykogen und wo wird es gespeichert?",
-          options: [
-            "Ein lineares Stärkepolymer; gespeichert in Pflanzenzellen",
-            "Ein Oligosaccharid; im Blutplasma gelöst",
-            "Ein hochverzweigtes α-1,4/α-1,6-Glucosepolymer; gespeichert in Leber und Muskel",
-            "Ein Cellulose-ähnliches β-1,4-Polymer; in Erythrozyten",
-            "Ein Glykoprotein; in Thrombozyten",
-          ],
-          correctIndex: 2,
-          explanation: "Glykogen ist das tierische Pendant zu Stärke: hochverzweigtes Polysaccharid aus α-1,4-verknüpften Glucoseeinheiten mit α-1,6-Verzweigungen alle 8–12 Einheiten. Gespeichert in Leber (ca. 100 g, zur Blutglucosehomöostase) und Muskel (ca. 400 g, für lokale Energieversorgung). Hohe Verzweigung erlaubt schnelle Mobilisierung durch viele nichtreduzierende Enden.",
-          hints: [
-            "Glykogen = tierisches Speicherpolysaccharid",
-            "Leber für Blutzucker, Muskel für Eigenversorgung",
-          ],
-          difficulty: 1,
-          tags: [],
-        },
-      ],
-    },
-    {
-      id: "ch-13-02",
-      title: "Aminosäuren und Proteine — Primär- bis Quartärstruktur",
-      content: `## Aminosäuren — Struktur und pI
-
-Die 20 proteinogenen Aminosäuren haben die allgemeine Struktur: H₂N-Cα(H)(R)-COOH.
-
-In wässriger Lösung liegen sie als Zwitterionen vor (NH₃⁺ und COO⁻ gleichzeitig). Der pI (isoelektrischer Punkt) ist der pH, bei dem die Nettoladung null ist:
-
-**pI ≈ ½(pK₁ + pK₂)**
-
-- Für Asp (sauer): pI ≈ ½(2,1 + 3,9) = 3,0
-- Für Lys (basisch): pI ≈ ½(9,2 + 10,5) = 9,85
-
-## Peptidbindung — Struktur und Eigenschaften
-
-Die Peptidbindung (-CO-NH-) hat durch Resonanz partiellen Doppelbindungscharakter → planar, überwiegend trans. Peptide wachsen vom N-Terminus (linkes Ende, freie NH₂) zum C-Terminus (rechts, freie COOH).
-
-## Primärstruktur
-
-Die **Primärstruktur** ist die Aminosäuresequenz (kovalent festgelegt). Sie bestimmt alle übergeordneten Strukturen. Sequenz-Änderung → andere Funktion oder Krankheit (Sichelzellanämie: Glu→Val an Position 6 der β-Kette des Hämoglobins).
-
-## Sekundärstruktur
-
-**α-Helix:** Rechtsgängige Spirale; Wasserstoffbrücken zwischen NH-Gruppe einer AS und C=O-Gruppe der i+4-AS entlang der Helix. 3,6 AS pro Windung. Stabil durch H-Brücken. Häufig in Transmembranproteinen.
-
-**β-Faltblatt:** Zwei oder mehr β-Stränge liegen parallel oder antiparallel nebeneinander; H-Brücken zwischen NH und C=O benachbarter Stränge. Planares, faltblattartiges Muster. Häufig in β-Amyloid (Alzheimer).
-
-## Tertiärstruktur
-
-3D-Faltung des gesamten Polypeptids. Stabilisiert durch:
-- **Disulfidbrücken** (kovalent, zwischen zwei Cys-SH)
-- Hydrophobe Wechselwirkungen (unpolaren Seitenketten nach innen)
-- Wasserstoffbrücken
-- Ionische Wechselwirkungen (Salzbrücken)
-
-## Quartärstruktur
-
-Mehrere Polypeptidketten (Untereinheiten) assoziieren nicht-kovalent. Beispiel: Hämoglobin (α₂β₂), Antikörper (2 schwere + 2 leichte Ketten).`,
-      lernziele: [
-        "Die vier Strukturebenen von Proteinen (Primär bis Quartär) mit stabilisierenden Kräften beschreiben",
-        "Die Eigenschaften der Peptidbindung (planar, trans, partieller Doppelbindungscharakter) erklären",
-        "Für die Sekundärstruktur (α-Helix, β-Faltblatt) die Wechselwirkungstypen angeben",
-      ],
-      sections: [
-        {
-          heading: "Proteinstruktur und Denaturierung",
-          text: "Die Tertiärstruktur eines Proteins entsteht durch spontane Faltung der Polypeptidkette, getrieben durch den hydrophoben Effekt (Aminosäuren mit unpolaren Seitenketten ordnen sich ins Innere, weg von Wasser). Chaperone (z.B. Hsp70) helfen bei der korrekten Faltung in vivo. Denaturierung = Verlust der 3D-Struktur durch Aufbrechen nicht-kovalenter Bindungen (Hitze, Detergenzien, extremes pH, Harnstoff). Die Primärstruktur (kovalente Bindungen) bleibt erhalten. Denaturierung ist oft irreversibel (z.B. gekochtes Ei). In manchen Fällen renaturiert ein Protein nach Entfernen des denaturierenden Agens (klassisches Experiment: Ribonuklease A nach Harnstoff-Entfernung).",
-          merksatz: "Denaturierung: Verlust der 3D-Struktur (nicht-kovalent); Primärstruktur bleibt",
-        },
-        {
-          heading: "Hämoglobin als Quartärstruktur-Beispiel",
-          text: "Hämoglobin (Hb) ist ein heterotetrameres Protein (α₂β₂) mit vier Hämgruppen (Fe²⁺). Jede Untereinheit bindet ein O₂-Molekül. Durch kooperative Bindung steigt die Sauerstoffaffinität mit zunehmender O₂-Sättigung (sigmoide O₂-Dissoziationskurve). Bohr-Effekt: ↑CO₂ und ↓pH verringern O₂-Affinität (rechtsverschobene Kurve) — begünstigt O₂-Abgabe im Gewebe. 2,3-BPG (Biphosphoglycerat) stabilisiert deoxygenierten Zustand (T-State) und senkt O₂-Affinität. Fetales Hb (HbF, γ-Ketten statt β) bindet 2,3-BPG schwächer → höhere O₂-Affinität (kann O₂ von mütterlichem Hb übernehmen).",
-          merksatz: "Hb: α₂β₂, 4 Häm, kooperativ, Bohr-Effekt, 2,3-BPG",
+          heading: "Enzymatische Biomarker in der Klinik",
+          text: "Intrazelluläre Enzyme treten bei Zellschäden ins Blut aus und dienen als diagnostische Marker. Troponin T und I sind herzmuskelspezifisch und hochsensitiv für den Myokardinfarkt. CK-MB (Kreatinkinase, Herzfraktion) steigt früh an. LDH (Laktatdehydrogenase) ist wenig spezifisch, aber sensibel. GPT/ALT ist leberparenchymspezifisch (Hepatitis), AST/GOT findet sich in Herz und Leber.",
+          merksatz: "Troponin → Herzinfarkt; GPT/ALT → Leber; CK-MB → frühzeitig bei Herzschäden.",
         },
       ],
       merksätze: [
-        "Primär: Sequenz (kovalent); Sekundär: H-Brücken (α-Helix, β-Faltblatt)",
-        "Tertiär: 3D-Faltung (hydrophob, Disulfid, H-Brücken); Quartär: Untereinheiten",
-        "Sichelzellanämie: Glu₆→Val₆ in β-Hb → HbS-Aggregation bei Hypoxie",
+        "Alle proteinogenen Aminosäuren (außer Glycin) sind L-konfiguriert und tragen am α-C: –NH₂, –COOH, –H, –R.",
+        "Essentielle AS (8 Erwachsene): Ile, Leu, Lys, Met, Phe, Thr, Trp, Val — Histidin zusätzlich für Kinder.",
+        "Peptidbindung = Amidbindung; entsteht durch Kondensation (–H₂O); ist planar wegen Mesomerie.",
+        "Synthese am Ribosom: N-Terminus → C-Terminus (5'→3' auf mRNA kodiert).",
+        "Sekundärstruktur α-Helix: H-Brücken zwischen C=O(n) und N–H(n+4), rechtsgängig.",
+        "Disulfidbrücken (Cys–Cys) sind die einzigen kovalenten Bindungen in der Tertiär-/Quartärstruktur (außer Peptidbindungen).",
+        "Denaturierung zerstört Sekundär- bis Quartärstruktur, nicht die Primärstruktur.",
+        "Sichelzellanämie: Glu6Val in β-Globin → Hämoglobin-S aggregiert bei Desoxigenierung.",
+        "PKU: Phenylalanin-Hydroxylase-Defekt → Phe akkumuliert, Tyrosin wird nicht gebildet.",
+        "Biomarker: Troponin = Herzinfarkt; GPT/ALT = Leberschaden; LDH = unspezifisch.",
       ],
-      klinischerBezug: "Sichelzellanämie: Ein-Punkt-Mutation (Glu→Val an Position 6 der β-Globin-Kette) führt zu HbS. Bei Desoxygenierung aggregiert HbS zu Fasern → Sichelzellform → Hämolyse, Gefäßverschlüsse (Schmerz-Episoden, Organinfarkte). Heterozygote (Sichelzellmerkmal) sind malaria-partiell-geschützt (evolutionärer Vorteil in Malariagebieten).",
       altfrage: {
-        question: "Was stabilisiert die α-Helix-Sekundärstruktur?",
-        answer: "Die α-Helix wird durch intramolekulare Wasserstoffbrücken stabilisiert, die zwischen der NH-Gruppe einer Aminosäure und der C=O-Gruppe der i+4 entfernten Aminosäure entlang der Helixachse gebildet werden. Die Seitenketten zeigen nach außen. Pro Windung kommen 3,6 Aminosäuren. Der H-Brücken-Abstand beträgt 0,54 nm pro Windung.",
+        question: "Erläutern Sie den Zusammenhang zwischen Primärstruktur und den höheren Strukturebenen eines Proteins am Beispiel der Sichelzellanämie.",
+        answer: "Die Primärstruktur eines Proteins ist die lineare Abfolge der Aminosäuren, die durch Peptidbindungen verknüpft sind. Sie wird direkt durch die DNA-Sequenz kodiert und legt alle übergeordneten Strukturen fest, da sie die chemischen Eigenschaften der Seitenketten bestimmt, die für Faltung und Funktion verantwortlich sind. Bei der Sichelzellanämie ist dies exemplarisch zu sehen: Eine einzige Punktmutation im β-Globin-Gen führt zum Austausch der hydrophilen, negativ geladenen Glutaminsäure an Position 6 durch die hydrophobe, ungeladene Aminosäure Valin (Glu6Val). Dieser Austausch verändert die Tertiärstruktur geringfügig, hat aber dramatische Konsequenzen für die Quartärstruktur: Desoxy-HbS-Moleküle polymerisieren, da die hydrophobe Val-Seitenkette in eine komplementäre hydrophobe Tasche eines benachbarten Moleküls passt. Die langen HbS-Polymere verformen Erythrozyten zu sichelförmigen Zellen, die Kapillaren verstopfen und vorzeitig hämolysieren. Dieses Beispiel zeigt, dass die gesamte Funktion eines Proteins – von der atomaren Struktur bis zum klinischen Krankheitsbild – in der Primärstruktur kodiert ist und ein einziger Aminosäureaustausch diese gesamte Kaskade verändern kann.",
       },
+      klinischerBezug: "Troponin, CK-MB und LDH als Serummarker bei Myokardinfarkt; PKU-Screening bei Neugeborenen; Sichelzellanämie als Modell für Struktur-Funktions-Beziehung.",
       selfTest: [
         {
-          question: "Was stabilisiert hauptsächlich die Tertiärstruktur eines globulären Proteins?",
+          question: "Welche der folgenden Aminosäuren ist die einzige achirale proteinogene Aminosäure?",
           options: [
-            "Peptidbindungen (kovalent) entlang der Kette",
-            "Nur Disulfidbrücken zwischen Cys-Resten",
-            "Hydrophobe Wechselwirkungen, Wasserstoffbrücken, Ionische Wechselwirkungen, Disulfidbrücken",
-            "Nur kovalente C-C-Bindungen",
-            "Van-der-Waals-Kräfte allein",
-          ],
-          correctIndex: 2,
-          explanation: "Die Tertiärstruktur wird durch ein Zusammenspiel mehrerer Kräfte stabilisiert: Hydrophobe Wechselwirkungen (dominant, unpolare Seitenketten im Inneren), Wasserstoffbrücken (polar Seitenketten), ionische Wechselwirkungen (Salzbrücken zwischen entgegengesetzt geladenen Gruppen), Disulfidbrücken (kovalent, zwischen zwei Cys). Van-der-Waals-Kräfte spielen ebenfalls eine Rolle.",
-          hints: [
-            "Mehrere verschiedene Kräfte stabilisieren Tertiärstruktur",
-            "Disulfidbrücken sind kovalent, die anderen nicht-kovalent",
-          ],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: "Warum ist die Sichelzellanämie ein Beispiel für die Bedeutung der Primärstruktur?",
-          options: [
-            "Eine Änderung der Tertiärstruktur bewirkt Sichelbil dung",
-            "Ein Aminosäureaustausch (Glu₆→Val₆ in β-Hb) führt zu Aggregation und Sichelzellform",
-            "Hämoglobin fehlt komplett",
-            "HbS hat andere Quartärstruktur (4 α-Ketten statt α₂β₂)",
-            "Die Mutation ändert nur den isoelektrischen Punkt",
+            "Alanin",
+            "Glycin",
+            "Cystein",
+            "Serin",
+            "Valin",
           ],
           correctIndex: 1,
-          explanation: "Bei Sichelzellanämie ist an Position 6 der β-Kette Glutamat (negativ geladen, hydrophil) durch Valin (unpolar, hydrophob) ersetzt (Glu→Val). Diese einzige Änderung in der Primärstruktur macht HbS hydrophober auf der Oberfläche → bei Desoxygenierung aggregieren HbS-Moleküle zu langen Fasern → Erythrozyten nehmen Sichelform an → Hämolyse und Mikroverschlüsse.",
+          explanation: "Glycin (H₂N–CH₂–COOH) ist die einzige proteinogene Aminosäure ohne Stereozentrum, da das α-Kohlenstoffatom zwei identische Wasserstoffatome trägt (R = H). Damit fehlt die Voraussetzung für Chiralität (vier verschiedene Substituenten am sp³-C). Alle anderen 19 proteinogenen Aminosäuren tragen vier unterschiedliche Gruppen am α-C und liegen ausschließlich in der L-Konfiguration vor. Alanin (R = –CH₃), Cystein (R = –CH₂–SH), Serin (R = –CH₂–OH) und Valin (R = –CH(CH₃)₂) sind alle chiral.",
           hints: [
-            "Eine Aminosäure → gesamte Krankheit",
-            "Glu (geladen) → Val (unpolar): was ändert sich an der Oberfläche?",
+            "Chiralität erfordert vier verschiedene Substituenten am zentralen Kohlenstoffatom.",
+            "Betrachte, was die Seitenkette (R-Gruppe) dieser Aminosäure ist — sie ist die kleinste denkbare.",
           ],
-          difficulty: 2,
-          tags: [],
+          tags: ["aminosäuren", "chiralität", "glycin"],
+          difficulty: 1,
         },
         {
-          question: "Wie viele Aminosäuren kommen pro Windung der α-Helix?",
+          question: "Welche strukturelle Besonderheit der Peptidbindung verhindert die freie Rotation um die C–N-Achse?",
           options: [
-            "2,0",
-            "3,0",
-            "3,6",
-            "4,0",
-            "6,0",
-          ],
-          correctIndex: 2,
-          explanation: "Die α-Helix hat 3,6 Aminosäuren pro Windung (Translationsschritt: 0,15 nm/AS, Steigung pro Windung: 0,54 nm). Wasserstoffbrücken bilden sich zwischen i und i+4 (also AS 1 mit 5, 2 mit 6, etc.). Die rechtsgängige α-Helix nach Pauling ist die häufigste Form. In Membranproteinen sind Transmembranhelices besonders stabil (hydrophobe Seitenketten nach außen zu Lipid).",
-          hints: [
-            "i und i+4 bedeutet: 4 Positionen dazwischen = 3,6 Windungen",
-            "Eine vollständige Helixwindung umfasst 3,6 AS",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Was ist Denaturierung eines Proteins?",
-          options: [
-            "Abbau der Peptidbindungen durch Proteasen",
-            "Verlust der 3D-Faltung durch Störung nicht-kovalenter Bindungen",
-            "Spaltung aller Disulfidbrücken",
-            "Synthese eines neuen Proteins mit anderer Sequenz",
-            "Glykosilierung des Proteins",
+            "Die Peptidbindung ist eine Einfachbindung mit großem Raumanspruch",
+            "Die Peptidbindung hat partiellen Doppelbindungscharakter durch Mesomerie",
+            "Die Peptidbindung ist eine Disulfidbrücke zwischen Cysteinen",
+            "Die Peptidbindung enthält ein Metallatom als Rotationshemmung",
+            "Die freie Rotation wird ausschließlich durch sterische Hinderung der R-Gruppen verhindert",
           ],
           correctIndex: 1,
-          explanation: "Denaturierung ist der Verlust der nativen (funktionellen) 3D-Struktur eines Proteins durch Aufbrechen nicht-kovalenter Wechselwirkungen (Wasserstoffbrücken, hydrophobe Wechselwirkungen, ionische Bindungen). Die Primärstruktur (kovalente Peptidbindungen) bleibt erhalten. Auslöser: Hitze, Säure/Lauge, Detergenzien (SDS), Chaotrope (Harnstoff, Guanidin). Oft irreversibel (Ei-Weiß kochen).",
+          explanation: "Die Peptidbindung (–CO–NH–) besitzt partiellen Doppelbindungscharakter aufgrund von Mesomerie: Das freie Elektronenpaar des Stickstoffs ist in das π-System der benachbarten Carbonylgruppe delokalisiert. Dadurch liegt die C–N-Bindung energetisch zwischen Einfach- und Doppelbindung (Bindungslänge ~1,32 Å, kürzer als typische C–N-Einfachbindung mit ~1,47 Å). Diese Elektronendelokalisierung macht die Bindung planar und starr — alle vier Atome (Cα, C=O, N, H sowie der folgende Cα) liegen in einer Ebene. Dies schränkt die möglichen Konformationen eines Polypeptids erheblich ein und ist Grundlage für definierte Sekundärstrukturen.",
           hints: [
-            "Denaturierung ≠ Hydrolyse der Peptidbindungen",
-            "Primärstruktur (Sequenz) bleibt bei Denaturierung erhalten",
+            "Erinnere dich an das Konzept der Mesomerie bei der Amid-Gruppe.",
+            "Bei welchem Hybridisierungszustand ist keine freie Rotation möglich?",
           ],
-          difficulty: 1,
-          tags: [],
+          tags: ["peptidbindung", "mesomerie", "proteinstruktur"],
+          difficulty: 2,
         },
         {
-          question: "Welche Kräfte stabilisieren das β-Faltblatt?",
+          question: "Welche Wechselwirkungen stabilisieren die α-Helix als Sekundärstruktur?",
           options: [
-            "Kovalente C=O-Bindungen zwischen Strängen",
-            "Wasserstoffbrücken zwischen NH-Gruppen und C=O-Gruppen benachbarter Stränge",
-            "Disulfidbrücken zwischen Cys-Resten benachbarter Stränge",
+            "Kovalente Disulfidbrücken zwischen Cysteinen im gleichen Strang",
             "Ionische Wechselwirkungen zwischen geladenen Seitenketten",
-            "Van-der-Waals-Kräfte zwischen aromatischen Ringen",
+            "Intramolekulare Wasserstoffbrücken zwischen C=O(n) und N–H(n+4) im Peptidrückgrat",
+            "Hydrophobe Wechselwirkungen zwischen unpolaren Seitenketten",
+            "Phosphodiesterbindungen zwischen den Aminosäureresten",
+          ],
+          correctIndex: 2,
+          explanation: "Die α-Helix wird durch intramolekulare Wasserstoffbrücken zwischen der Carbonylgruppe (C=O) der Aminosäure an Position n und der Amidgruppe (N–H) der Aminosäure an Position n+4 im selben Strang stabilisiert. Diese H-Brücken verlaufen parallel zur Helixachse. Eine vollständige Windung umfasst 3,6 Aminosäurereste. Disulfidbrücken und ionische Wechselwirkungen stabilisieren die Tertiärstruktur, hydrophobe Effekte tragen ebenfalls zur Tertiärstruktur bei. Phosphodiesterbindungen gehören zur DNA/RNA, nicht zu Proteinen.",
+          hints: [
+            "Sekundärstruktur wird durch H-Brücken im Peptidrückgrat (nicht in den Seitenketten) stabilisiert.",
+            "Die Zahl 'n+4' ist der Schlüssel zur α-Helix-Definition.",
+          ],
+          tags: ["sekundärstruktur", "alpha-helix", "wasserstoffbrücken"],
+          difficulty: 2,
+        },
+        {
+          question: "Bei der Sichelzellanämie liegt die Ursache in welcher Strukturebene des Hämoglobins?",
+          options: [
+            "Tertiärstruktur: Fehlfaltung der β-Globinkette durch Disulfidbrückenbruch",
+            "Primärstruktur: Glu→Val-Austausch an Position 6 der β-Globinkette",
+            "Sekundärstruktur: Zerstörung der α-Helix-Segmente",
+            "Quartärstruktur: α- und β-Ketten können sich nicht zusammenlagern",
+            "Kovalente Modifikation der Häm-Gruppe durch Oxidation",
           ],
           correctIndex: 1,
-          explanation: "Das β-Faltblatt wird durch Wasserstoffbrücken zwischen der NH-Gruppe eines Strangs und der C=O-Gruppe des benachbarten Strangs stabilisiert. Diese H-Brücken verlaufen senkrecht zur Strangrichtung. Die Seitenketten zeigen abwechselnd ober- und unterhalb der Faltblattebene. β-Faltblätter können parallel (gleiche Richtung der Stränge) oder antiparallel (entgegengesetzte Richtung, energetisch günstiger) vorliegen.",
+          explanation: "Die Sichelzellanämie wird durch eine Punktmutation im β-Globin-Gen verursacht, die zu einem Aminosäureaustausch in der Primärstruktur führt: Glutaminsäure (hydrophil, negativ geladen) an Position 6 wird durch Valin (hydrophob, ungeladen) ersetzt. Die veränderte Primärstruktur (HbS statt HbA) führt dazu, dass desoxygenierte HbS-Moleküle polymerisieren, weil die hydrophobe Val6-Seitenkette in eine komplementäre hydrophobe Tasche des Nachbarmoleküls passt. Dieses Beispiel illustriert, wie die Primärstruktur alle übergeordneten Strukturen und die Funktion eines Proteins determiniert.",
           hints: [
-            "Sekundärstruktur-H-Brücken sind zwischen Backbone-NH und C=O (nicht Seitenketten)",
-            "β-Faltblatt: H-Brücken quer zwischen benachbarten Strängen",
+            "Beginne bei der molekularen Ursache: eine DNA-Mutation führt zu einem einzigen Aminosäurenaustausch.",
+            "Welche Strukturebene beschreibt die Aminosäuresequenz eines Proteins?",
           ],
+          tags: ["sichelzellanämie", "primärstruktur", "hämoglobin", "klinisch"],
           difficulty: 2,
-          tags: [],
+        },
+        {
+          question: "Welche der folgenden Bindungstypen trägt zur Stabilisierung der Tertiärstruktur bei, NICHT aber zur Sekundärstruktur?",
+          options: [
+            "Wasserstoffbrücken zwischen Peptidrückgrat-Gruppen",
+            "Disulfidbrücken zwischen Cysteinen",
+            "Peptidbindungen zwischen Aminosäureresten",
+            "Die planare Struktur der Peptidbindung",
+            "Van-der-Waals-Kräfte im Rückgrat",
+          ],
+          correctIndex: 1,
+          explanation: "Disulfidbrücken (–S–S–) entstehen durch oxidative Kupplung zweier Cystein-Thiolgruppen (–SH) und sind kovalente Bindungen zwischen Seitenketten — ein charakteristisches Merkmal der Tertiär- (und Quartär-)struktur. Sekundärstrukturen (α-Helix, β-Faltblatt) werden hingegen durch nicht-kovalente Wasserstoffbrücken im Peptidrückgrat stabilisiert. Peptidbindungen definieren die Primärstruktur. Die Planarität der Peptidbindung begrenzt Konformationen, ist aber kein Stabilisierungsmechanismus für eine bestimmte Strukturebene.",
+          hints: [
+            "Sekundärstruktur = Wasserstoffbrücken im Rückgrat. Was ist dagegen eine kovalente Bindung zwischen Seitenketten?",
+            "Cystein enthält eine –SH-Gruppe, die eine besondere kovalente Bindung eingehen kann.",
+          ],
+          tags: ["tertiärstruktur", "disulfidbrücken", "cystein"],
+          difficulty: 3,
+        },
+        {
+          question: "Welche Aussage zur Denaturierung von Proteinen ist korrekt?",
+          options: [
+            "Denaturierung spaltet alle Peptidbindungen und setzt Aminosäuren frei",
+            "Denaturierung zerstört die Primärstruktur, lässt aber höhere Strukturen intakt",
+            "Denaturierung hebt Sekundär- bis Quartärstruktur auf, die Primärstruktur bleibt erhalten",
+            "Denaturierung ist immer reversibel durch Wiederherstellung physiologischer Bedingungen",
+            "Denaturierung betrifft nur die Quartärstruktur, nicht die Sekundärstruktur",
+          ],
+          correctIndex: 2,
+          explanation: "Denaturierung bezeichnet den Verlust der nativen räumlichen Struktur (Sekundär-, Tertiär- und Quartärstruktur), wobei die kovalenten Peptidbindungen (Primärstruktur) erhalten bleiben. Auslöser sind Hitze (> Optimum → Zerstörung von H-Brücken und hydrophoben WW), extremer pH (Veränderung ionischer WW), organische Lösungsmittel (Störung des hydrophoben Effekts) und Reduktionsmittel (β-Mercaptoethanol → Spaltung von Disulfidbrücken). Denaturierung kann reversibel sein (manche Enzyme renaturieren bei Normalbedingungen, Chaperone helfen), ist aber häufig irreversibel (gekochtes Eiweiß, Prionen).",
+          hints: [
+            "Welche Bindungen in einem Protein sind kovalent und welche nicht-kovalent?",
+            "Denaturierung = 'Verlust der Natur(form)' — der chemische Rückgrat bleibt, nur die Faltung geht verloren.",
+          ],
+          tags: ["denaturierung", "proteinstruktur", "reversibel"],
+          difficulty: 1,
+        },
+        {
+          question: "Ein 45-jähriger Patient kommt mit typischen Brustschmerzen in die Notaufnahme. Welcher der folgenden Labormarker ist am spezifischsten für einen akuten Myokardinfarkt und steigt frühzeitig an?",
+          options: [
+            "LDH (Laktatdehydrogenase)",
+            "GPT/ALT (Alaninaminotransferase)",
+            "Amylase",
+            "Troponin T oder Troponin I",
+            "Gesamtprotein im Serum",
+          ],
+          correctIndex: 3,
+          explanation: "Troponin T und Troponin I sind kardiale Proteine des kontraktilen Apparats der Herzmuskelzellen und sind bei gesunden Personen im Blut kaum nachweisbar. Bei Myokardnekrose werden sie frühzeitig (3–6 h nach Ereignis) freigesetzt und sind für mehrere Tage erhöht. Sie gelten heute als Goldstandard für die Infarktdiagnostik (hohe Sensitivität und Spezifität). LDH ist wenig spezifisch (kommt in vielen Geweben vor). GPT/ALT ist ein Leberwert (hepatozellulärer Schaden). Amylase weist auf Pankreatitis hin.",
+          hints: [
+            "Welches Protein ist ausschließlich im Herzmuskel in dieser Form vorhanden?",
+            "Der gesuchte Marker ist seit den 1990ern der Standard für Herzinfarktdiagnostik und hat CK-MB weitgehend ersetzt.",
+          ],
+          tags: ["biomarker", "troponin", "herzinfarkt", "klinisch"],
+          difficulty: 2,
         },
       ],
     },
+
     {
-      id: "ch-13-03",
-      title: "Lipide — Fette, Phospholipide und Cholesterin",
-      content: `## Fettsäuren — gesättigt und ungesättigt
+      id: 'ch-13-02',
+      title: "Kohlenhydrate — Mono-, Di- und Polysaccharide",
+      content: `# Kohlenhydrate — Mono-, Di- und Polysaccharide
 
-Fettsäuren sind lineare Carbonsäuren mit gerader Anzahl an C-Atomen (4–22 C).
+## Monosaccharide — Grundbausteine
 
-- **Gesättigte Fettsäuren (SFA):** Keine C=C-Doppelbindung. Geradkettig, dicht gepackt → hoher Schmelzpunkt → fest (tierische Fette). Beispiele: Palmitinsäure (16:0), Stearinsäure (18:0).
-- **Einfach ungesättigte (MUFA):** Eine cis-C=C-Doppelbindung. Ölsäure (18:1 cis-Δ9): Olivenöl.
-- **Mehrfach ungesättigte (PUFA):** Mehrere cis-C=C-Doppelbindungen. Linolsäure (18:2 cis-Δ9,12, ω-6), α-Linolensäure (18:3, ω-3), EPA, DHA.
+Monosaccharide sind nicht weiter hydrolysierbare Zucker mit der allgemeinen Formel (CH₂O)ₙ. Einteilung nach Kettenlänge: **Triosen** (n=3, z.B. Glycerinaldehyd), Tetrosen, **Pentosen** (n=5: Ribose, Desoxyribose), **Hexosen** (n=6: Glucose, Fructose, Galactose). Einteilung nach funktioneller Gruppe: **Aldosen** (Aldehydgruppe am C1, z.B. Glucose) vs. **Ketosen** (Ketogruppe am C2, z.B. Fructose).
 
-cis-Doppelbindungen bewirken Knicke in der Kette → weniger dichte Packung → niedrigerer Schmelzpunkt → flüssig (Pflanzenöle).
+**Fischer-Projektion**: Darstellung als offene Kette; Referenz ist D-Glycerinaldehyd (OH rechts am letzten Chiralitätszentrum → D-Konfiguration). **Haworth-Projektion**: Ringform (Pyranose = Sechsring bei Hexosen, Furanose = Fünfring). Bei der Ringschluss-Reaktion entsteht ein neues Chiralitätszentrum: **α-Anomer** (OH am anomeren C1 axial = auf gleicher Seite wie die Ringbildung; in Haworth: unten) vs. **β-Anomer** (OH am C1 äquatorial; in Haworth: oben).
+
+**Epimere**: Konfigurationsisomere, die sich nur an einem Chiralitätszentrum unterscheiden. D-Galactose ist das C4-Epimer von D-Glucose (C4-OH nach oben in Haworth statt unten).
+
+## Wichtige Monosaccharide
+
+- **D-Glucose**: Aldohexose, Blutglukose (Normalwert 3,9–6,1 mmol/L nüchtern), einziges regulär nutzbares Substrat des Gehirns (außer Ketose bei Fasten)
+- **D-Fructose**: Ketohexose, süßester natürlicher Zucker, kommt in Obst und Honig vor, Bestandteil von Saccharose
+- **D-Galactose**: Aldohexose, C4-Epimer der Glucose, Bestandteil von Laktose
+- **D-Ribose**: Aldopentose, Bestandteil der RNA
+- **2-Desoxy-D-Ribose**: Aldopentose, Bestandteil der DNA (OH an C2 durch H ersetzt)
+
+## Disaccharide und glykosidische Bindung
+
+Zwei Monosaccharide verbinden sich unter Abspaltung von Wasser durch eine **glykosidische Bindung** (O-glykosidisch) zwischen dem anomeren C und einer OH-Gruppe des anderen Zuckers.
+
+| Disaccharid | Bestandteile | Bindungstyp | Reduzierend? |
+|---|---|---|---|
+| **Maltose** | Glc + Glc | α-1→4 | ja |
+| **Saccharose** | Glc + Frc | α-1→β-2 | **nein** |
+| **Laktose** | Gal + Glc | β-1→4 | ja |
+
+Saccharose ist **nicht reduzierend**, da beide anomeren OH-Gruppen an der Bindung beteiligt sind und keine freie Halbacetalgruppe mehr vorliegt.
+
+## Polysaccharide
+
+- **Stärke**: Speicherpolysaccharid der Pflanzen; Amylose (unverzweigt, α-1,4, Helix) + Amylopektin (verzweigt, α-1,4-Kette mit α-1,6-Verzweigungen alle 20–25 Reste)
+- **Glykogen**: Tierisches/humanes Speicherpolysaccharid in Leber und Muskel; wie Amylopektin aber stärker verzweigt (α-1,6-Verzweigung alle 8–12 Reste)
+- **Cellulose**: Strukturpolysaccharid der Pflanzenzellwand; β-1,4-verknüpfte Glucose; unlöslich, keine Hydrolyse durch humane Amylase (kein β-1,4-Glukosidase-Gen) → Ballaststoff
+
+## Klinischer Bezug
+
+**Laktoseintoleranz**: Laktasemangel (Laktase = Disaccharidase) → Laktose wird nicht zu Gal + Glc gespalten → osmotische Diarrhö, Gasbildung durch Darmbakterien. **Diabetes mellitus**: Chronische Hyperglykämie → nicht-enzymatische Glykierung von Hämoglobin: Glucose bindet kovalent an N-terminales Valin der β-Globinkette → **HbA1c** als Maß für Glykämiekontrolle der letzten 8–12 Wochen (Erythrozyten-Halbwertszeit). **Glykogenspeicherkrankheiten**: z.B. Morbus Pompe (Typ II, Mangel an α-1,4-Glukosidase in Lysosomen).`,
+      lernziele: [
+        "Monosaccharide nach Kettenlänge und funktioneller Gruppe klassifizieren sowie Aldosen und Ketosen unterscheiden",
+        "Die Fischer- und Haworth-Projektion erklären und α- und β-Anomere von D-Glucose benennen",
+        "Die wichtigsten Disaccharide (Maltose, Saccharose, Laktose) nach Bestandteilen und Bindungstyp unterscheiden sowie das Konzept 'reduzierend/nicht-reduzierend' erklären",
+        "Die Polysaccharide Stärke, Glykogen und Cellulose in Struktur und Funktion vergleichen",
+        "HbA1c als Langzeitmarker der Glukosekontrolle und Laktoseintoleranz biochemisch erklären",
+      ],
+      sections: [
+        {
+          heading: "α- und β-Anomere der Glucose",
+          text: "Beim Ringschluss der offenkettigen D-Glucose zur Pyranoseform (Sechsring) greift das C5-OH nukleophil die Aldehydgruppe am C1 an. Dabei entsteht ein neues Chiralitätszentrum am C1 (anomeres Kohlenstoffatom). In der Haworth-Projektion zeigt die OH-Gruppe am C1 bei α-D-Glucose nach unten (gleiche Seite wie die Ringbildung), bei β-D-Glucose nach oben. In wässriger Lösung stellt sich ein Gleichgewicht ein: ~36% α, ~64% β, <1% offenkettige Form (Mutarotation). Der Unterschied ist biologisch bedeutsam: Stärke (α) ist verdaulich, Cellulose (β) ist es nicht.",
+          merksatz: "α = OH unten in Haworth; β = OH oben. 'α steht axial' (in der Sesselkonformation von Pyranose).",
+        },
+        {
+          heading: "Saccharose ist nicht reduzierend",
+          text: "Reduzierende Zucker haben eine freie Halbacetalgruppe (anomere OH) und können Cu²⁺ in der Fehling-Probe reduzieren. Saccharose ist das einzige häufige Disaccharid, das nicht reduzierend ist, weil sowohl das anomere C1 der Glucose als auch das anomere C2 der Fructose an der glykosidischen Bindung (α-1→β-2) beteiligt sind — es gibt keine freie Halbacetalgruppe. Maltose und Laktose sind reduzierend (nur C1 der einen Komponente ist gebunden, C1' der anderen ist frei).",
+          merksatz: "Saccharose = nicht reduzierend (beide anomere C gebunden). Maltose & Laktose = reduzierend.",
+        },
+        {
+          heading: "HbA1c: Biochemie und klinische Bedeutung",
+          text: "HbA1c entsteht durch nicht-enzymatische Glykierung (Maillard-Reaktion): Glucose reagiert spontan mit der freien Aminogruppe am N-terminalen Valin der β-Globinkette über eine Schiff-Base zur stabilen Amadori-Verbindung. Da Erythrozyten keine Membranproteine erneuern (kernlos, keine Proteinsynthese), spiegelt HbA1c die durchschnittliche Blutglukose der letzten ~8–12 Wochen wider. Therapieziel bei Typ-2-Diabetes meist HbA1c < 7% (53 mmol/mol). Beachte: Anämie oder Hämolysezustände verfälschen den HbA1c-Wert.",
+          merksatz: "HbA1c = Glykiertes Hämoglobin = 8–12 Wochen Glukosegedächtnis.",
+        },
+      ],
+      merksätze: [
+        "Aldosen haben die Aldehyd- (–CHO) am C1, Ketosen die Ketofunktion am C2 (z.B. Fructose).",
+        "α-D-Glucose: OH an C1 nach unten (axial in Sesselkonformation); β-D-Glucose: OH an C1 nach oben (äquatorial).",
+        "D-Galactose = C4-Epimer der D-Glucose (nur C4-OH-Konfiguration unterscheidet sich).",
+        "Maltose: Glc-α1,4-Glc; Saccharose: Glc-α1-β2-Frc (nicht reduzierend!); Laktose: Gal-β1,4-Glc.",
+        "Amylose: α-1,4-unverzweigt (Helix); Amylopektin: α-1,4 mit α-1,6-Verzweigungen alle 20–25 Reste.",
+        "Glykogen = wie Amylopektin, aber α-1,6-Verzweigung alle 8–12 Reste (stärker verzweigt).",
+        "Cellulose: β-1,4-Glc → unlöslich; Mensch hat keine Cellulase → Ballaststoff.",
+        "HbA1c = nicht-enzymatische Glykierung, spiegelt Ø-Blutglukose der letzten 8–12 Wochen wider.",
+        "Laktoseintoleranz: Laktasemangel → Gal+Glc werden nicht freigesetzt → Diarrhö, Blähungen.",
+        "Ribose (RNA) = Pentose mit OH am C2; Desoxyribose (DNA) = Pentose ohne OH am C2.",
+      ],
+      altfrage: {
+        question: "Erklären Sie den Unterschied zwischen Amylose, Amylopektin und Glykogen in Bezug auf Struktur und physiologische Bedeutung.",
+        answer: "Amylose, Amylopektin und Glykogen sind alle Glucosepolymere aus α-D-Glucose, unterscheiden sich aber erheblich in ihrer Verzweigungsstruktur und ihrer biologischen Funktion. Amylose ist ein lineares Polymer aus α-1,4-glykosidisch verknüpfter D-Glucose, das in wässriger Lösung eine Helixstruktur annimmt. In dieser Helix werden Jodmoleküle eingelagert, was zu der charakteristischen blau-violetten Färbung beim Stärke-Iod-Nachweis führt. Amylopektin dagegen ist ein verzweigtes Molekül: Es hat ebenfalls ein α-1,4-verknüpftes Grundgerüst, aber zusätzlich α-1,6-glykosidische Verzweigungspunkte etwa alle 20–25 Glucosereste. Beide zusammen bilden die Stärke in Pflanzen als Reservekohlenhydrat. Glykogen ist das funktionelle Analogon in Tier und Mensch und wird vor allem in der Leber (Regulierung des Blutglukosespiegels) und im Skelettmuskel (lokale Energiereserve) gespeichert. Es ähnelt dem Amylopektin strukturell, ist aber noch stärker verzweigt: Die α-1,6-Verzweigungen treten bereits alle 8–12 Glucosereste auf. Diese hohe Verzweigungsdichte hat eine entscheidende physiologische Bedeutung: Sie erzeugt viele nicht-reduzierende Enden, an denen Glykogen-Phosphorylase gleichzeitig Glucosereste abspalten kann, was eine sehr schnelle Mobilisierung von Glucose ermöglicht — wichtig für plötzlichen Energiebedarf (z.B. Flucht, intensive körperliche Belastung).",
+      },
+      klinischerBezug: "HbA1c als Therapiemonitor bei Diabetes mellitus; Laktoseintoleranz durch Laktasemangel; Glykogenspeicherkrankheiten bei Enzymdefekten des Glykogenabbaus.",
+      selfTest: [
+        {
+          question: "Welche Aussage zur Saccharose ist korrekt?",
+          options: [
+            "Saccharose besteht aus zwei α-D-Glucosemolekülen",
+            "Saccharose ist ein reduzierendes Disaccharid",
+            "Saccharose wird durch eine α-1→β-2-glykosidische Bindung zwischen Glucose und Fructose gebildet",
+            "Saccharose kann durch die Fehling-Probe nachgewiesen werden",
+            "Saccharose enthält eine freie Halbacetalgruppe am anomeren Kohlenstoff",
+          ],
+          correctIndex: 2,
+          explanation: "Saccharose (Haushaltszucker) besteht aus α-D-Glucose und β-D-Fructose, die durch eine α-1→β-2-glykosidische Bindung verknüpft sind. Diese Bindung involviert beide anomeren Kohlenstoffatome (C1 der Glucose und C2 der Fructose), sodass keine freie Halbacetalgruppe mehr vorliegt. Deshalb ist Saccharose das einzige unter den häufigen Disacchariden, das nicht reduzierend ist und die Fehling-Probe negativ reagiert. Maltose (α-1,4, Glc+Glc) und Laktose (β-1,4, Gal+Glc) sind reduzierend.",
+          hints: [
+            "Welches Disaccharid hat eine Bindung zwischen beiden anomeren Kohlenstoffatomen?",
+            "Nicht-reduzierende Zucker haben keine freie Halbacetalgruppe — warum ist das bei Saccharose so?",
+          ],
+          tags: ["saccharose", "disaccharide", "reduzierend", "glykosidische-bindung"],
+          difficulty: 2,
+        },
+        {
+          question: "Was unterscheidet Amylopektin strukturell von Amylose?",
+          options: [
+            "Amylopektin besteht aus β-D-Glucose, Amylose aus α-D-Glucose",
+            "Amylopektin ist unverzweigt, Amylose enthält α-1,6-Verzweigungen",
+            "Amylopektin enthält α-1,6-Verzweigungen alle 20–25 Reste, Amylose ist unverzweigt",
+            "Amylopektin kommt nur in Tieren vor, Amylose nur in Pflanzen",
+            "Amylopektin hat eine kürzere Kettenlänge als Amylose",
+          ],
+          correctIndex: 2,
+          explanation: "Amylose und Amylopektin sind beide Bestandteile der pflanzlichen Stärke und bestehen aus α-D-Glucose mit α-1,4-glykosidischen Hauptkettenbindungen. Amylose ist jedoch ein lineares, unverzweigtes Polymer (bildet Helixstruktur → Iod-Einlagerung → blau). Amylopektin hat dagegen zusätzlich α-1,6-glykosidische Verzweigungspunkte etwa alle 20–25 Glucosereste. Das tierische/humane Glykogen ist strukturell ähnlich wie Amylopektin, aber noch stärker verzweigt (alle 8–12 Reste). Cellulose (nicht Amylose) besteht aus β-D-Glucose.",
+          hints: [
+            "Denke an den Stärke-Iod-Test: Welcher Stärketyp bildet eine Helix für die Iod-Einlagerung?",
+            "Das Präfix 'Pektin' kommt von 'pectus' und weist auf Verzweigung hin — welche Bindung ist für Verzweigungen verantwortlich?",
+          ],
+          tags: ["amylose", "amylopektin", "stärke", "glykogen"],
+          difficulty: 2,
+        },
+        {
+          question: "D-Galactose ist das C4-Epimer von D-Glucose. Was bedeutet 'Epimer'?",
+          options: [
+            "Zwei Verbindungen mit gleicher Summenformel aber unterschiedlicher Funktionsgruppe",
+            "Zwei Stereoisomere, die sich an genau einem Chiralitätszentrum unterscheiden",
+            "Zwei Enantiomere, die Spiegelbilder voneinander sind",
+            "Zwei Verbindungen, die ineinander umgewandelt werden können ohne Bindungsbruch",
+            "Zwei Anomere mit unterschiedlicher Konfiguration am anomeren Kohlenstoff",
+          ],
+          correctIndex: 1,
+          explanation: "Epimere sind Diastereomere, die sich nur in der Konfiguration an einem einzigen Chiralitätszentrum unterscheiden. D-Galactose ist das C4-Epimer von D-Glucose: Beide sind Aldohexosen (C₆H₁₂O₆), unterscheiden sich aber ausschließlich in der Konfiguration der OH-Gruppe am C4-Atom (in Haworth: OH nach unten bei Glucose, nach oben bei Galactose). Enantiomere sind vollständige Spiegelbilder (alle Chiralitätszentren invertiert, z.B. D- und L-Glucose). Anomere sind spezielle Epimere am anomeren C (C1 bei Aldosen). Konformere entstehen durch Rotation ohne Bindungsbruch.",
+          hints: [
+            "Epimere sind eine Untergruppe der Diastereomere — wie viele Chiralitätszentren unterscheiden sich?",
+            "Vergleiche die Haworth-Strukturen: An welchem Kohlenstoffatom zeigt die OH-Gruppe bei Galactose anders als bei Glucose?",
+          ],
+          tags: ["epimere", "galactose", "glucose", "stereoisomerie"],
+          difficulty: 3,
+        },
+        {
+          question: "Ein Patient hat HbA1c = 9,5% (80 mmol/mol). Was gibt dieser Wert an?",
+          options: [
+            "Die aktuelle Blutglukosekonzentration zum Zeitpunkt der Messung",
+            "Die durchschnittliche Blutglukosekonzentration der letzten 8–12 Wochen",
+            "Den prozentualen Anteil des Hämoglobins, der durch enzymatische Reaktionen verändert wurde",
+            "Die Konzentration von freier Glucose im Blutplasma",
+            "Den Anteil des Hämoglobins, der durch Oxidation denaturiert ist",
+          ],
+          correctIndex: 1,
+          explanation: "HbA1c (Hämoglobin A1c) entsteht durch nicht-enzymatische Glykierung: Glucose reagiert spontan mit der freien α-Aminogruppe des N-terminalen Valins der β-Globinkette. Da Erythrozyten (kernlos, keine Proteinsynthese) ihre Proteine nicht erneuern, akkumuliert HbA1c proportional zur durchschnittlichen Blutglukose über die gesamte Lebensspanne des Erythrozyten (~120 Tage, relevanter Zeitraum 8–12 Wochen). Ein HbA1c von 9,5% entspricht einer durchschnittlichen Glukose von ~12–13 mmol/L und zeigt eine deutlich unzureichende Diabeteskontrolle an. Ein Zielwert < 7% (53 mmol/mol) wird oft angestrebt.",
+          hints: [
+            "Erythrozyten haben keine Zellkern — können sie ihre Proteine ersetzen?",
+            "HbA1c ist das 'glykierte' Hämoglobin — über welchen Zeitraum sammelt sich diese Modifikation an?",
+          ],
+          tags: ["hba1c", "diabetes", "glykierung", "klinisch"],
+          difficulty: 1,
+        },
+        {
+          question: "Warum kann der Mensch Cellulose nicht als Energiequelle nutzen?",
+          options: [
+            "Cellulose ist aus L-Glucose aufgebaut, die im Stoffwechsel nicht verwertbar ist",
+            "Cellulose besitzt keine glykosidischen Bindungen und kann daher nicht hydrolysiert werden",
+            "Der Mensch besitzt keine Enzyme zur Hydrolyse der β-1,4-glykosidischen Bindungen",
+            "Cellulose enthält kovalent gebundene Phosphatgruppen, die ihre Verdauung verhindern",
+            "Cellulose ist zu wasserunlöslich, um überhaupt mit Enzymen in Kontakt zu kommen",
+          ],
+          correctIndex: 2,
+          explanation: "Cellulose besteht aus β-1,4-glykosidisch verknüpfter D-Glucose. Der Mensch (und die meisten Säugetiere) besitzen keine β-1,4-Glucosidase (Cellulase), die diese spezifische Bindung hydrolysieren kann. Menschliche Amylasen (Speichel und Pankreas) können nur α-1,4-glykosidische Bindungen spalten (Stärke, Glykogen). Wiederkäuer haben im Pansen Bakterien, die Cellulasen produzieren. Cellulose wird deshalb als unverdaulicher Ballaststoff klassifiziert, obwohl sie aus demselben Monomer (Glucose) wie Stärke besteht. Die Ursache liegt also ausschließlich in der Anomerie (β statt α) der glykosidischen Bindung.",
+          hints: [
+            "Stärke (α-1,4) und Cellulose (β-1,4) bestehen beide aus Glucose — warum ist nur Stärke verdaulich?",
+            "Welche Eigenschaft hat das für Cellulose spezifische Enzym, das Menschen fehlen?",
+          ],
+          tags: ["cellulose", "beta-1-4", "ballaststoff", "verdauung"],
+          difficulty: 2,
+        },
+        {
+          question: "Welches Monosaccharid ist der exklusive Energielieferant des Gehirns unter Normalbedingungen?",
+          options: [
+            "Fructose",
+            "Galactose",
+            "Glucose",
+            "Ribose",
+            "Mannose",
+          ],
+          correctIndex: 2,
+          explanation: "Das Gehirn ist auf eine kontinuierliche Zufuhr von D-Glucose angewiesen, da es keine nennenswerten eigenen Glykogenspeicher hat und unter Normalbedingungen keine freien Fettsäuren oxidieren kann (Blut-Hirn-Schranke limitiert den Transport langkettiger Fettsäuren). Sinkt der Blutglukosespiegel unter ~3 mmol/L (Hypoglykämie), kommt es zu Bewusstseinsstörungen bis zum Koma. Ausnahme: Bei längerem Fasten oder diabetischer Ketoazidose kann das Gehirn schrittweise auf Ketonkörper (Acetoacetat, β-Hydroxybutyrat) umstellen, die aus der hepatischen Fettsäureoxidation entstehen.",
+          hints: [
+            "Das Gehirn kann keine Fettsäuren direkt verbrennen — was ist dann sein Primärsubstrat?",
+            "Hypoglykämie betrifft zuerst das Gehirn — welcher Zucker fehlt dabei?",
+          ],
+          tags: ["glucose", "gehirn", "hypoglykämie", "energieversorgung"],
+          difficulty: 1,
+        },
+        {
+          question: "Bei Laktoseintoleranz liegt ein Mangel an welchem Enzym vor, und welche biochemische Konsequenz hat dies direkt?",
+          options: [
+            "Amylase-Mangel → Stärke wird nicht verdaut → Hyperglykämie",
+            "Laktase-Mangel → Laktose wird nicht in Galactose und Glucose gespalten → osmotische Diarrhö",
+            "Saccharase-Mangel → Saccharose akkumuliert → Laktoseintoleranz",
+            "Galactosidase-Mangel → Galactosämie mit Laktose im Blut",
+            "Glucosidasemangel → Glykogenose Typ II (Pompe) mit Laktoseintoleranz",
+          ],
+          correctIndex: 1,
+          explanation: "Laktase (Laktase-Phlorizin-Hydrolase) ist eine Disaccharidase im Bürstensaum des Dünndarmepithels, die Laktose (β-1,4-Gal-Glc) in D-Galactose und D-Glucose spaltet. Bei Laktasemangel (primär genetisch, mit zunehmendem Alter bei vielen Ethnien normal) gelangt unverdaute Laktose in den Dickdarm. Dort fermentieren Darmbakterien die Laktose zu kurzkettigen Fettsäuren, CO₂ und H₂ → Blähungen, Schmerzen. Außerdem wirkt unverdaute Laktose osmotisch → osmotische Diarrhö. Amylasemangel betrifft Stärke, Saccharasemangel betrifft Saccharose, Pompe betrifft Glykogen.",
+          hints: [
+            "Laktase = das Enzym, das Laktose spaltet. Welches Disaccharid ist das und welche Monosaccharide entstehen?",
+            "Unverdaulicher Zucker im Dickdarm → Was machen Darmbakterien damit?",
+          ],
+          tags: ["laktoseintoleranz", "laktase", "disaccharidase", "klinisch"],
+          difficulty: 2,
+        },
+      ],
+    },
+
+    {
+      id: 'ch-13-03',
+      title: "Lipide — Fette, Phospholipide und Steroide",
+      content: `# Lipide — Fette, Phospholipide und Steroide
+
+## Fettsäuren
+
+Fettsäuren sind unverzweigte (meist) Carbonsäuren mit langer Kohlenwasserstoffkette. Einteilung:
+- **Gesättigte Fettsäuren**: Keine Doppelbindungen; gerade, dicht packbar → fest bei Raumtemperatur. Wichtiges Beispiel: **Palmitinsäure** (C16:0, Hexadecansäure), **Stearinsäure** (C18:0)
+- **Einfach ungesättigte**: Eine C=C-Doppelbindung. Beispiel: **Ölsäure** (C18:1Δ9, cis; Hauptfettsäure in Olivenöl) → flüssig bei Raumtemperatur
+- **Mehrfach ungesättigte**: Mehrere Doppelbindungen; **essentielle** Fettsäuren: Linolsäure (C18:2, ω-6) und α-Linolensäure (C18:3, ω-3), müssen mit der Nahrung aufgenommen werden
+
+**cis vs. trans**: Natürlich vorkommende ungesättigte Fettsäuren liegen meist in cis-Konfiguration vor (Knick in der Kette → niedrigerer Schmelzpunkt). Trans-Fettsäuren (z.B. durch industrielle Fetthärtung) verhalten sich ähnlich wie gesättigte Fettsäuren (gerade Kette, höherer Schmelzpunkt) und sind atherogen (erhöhen LDL, senken HDL).
+
+**Energiedichte**: Lipide liefern **38 kJ/g** (mehr als doppelt so viel wie Kohlenhydrate oder Proteine: je 17 kJ/g), da Fettsäuren stärker reduziert sind.
 
 ## Triglyceride (Triacylglycerine)
 
-Triglyceride bestehen aus Glycerol und drei Fettsäuren, verbunden durch Esterbindungen. Energiedichte: 37 kJ/g (viel höher als Kohlenhydrate mit 17 kJ/g), da Kohlenstoff im Durchschnitt oxidationszahlniedriger ist.
+Triglyceride entstehen durch **Veresterung** (Kondensation) von Glycerin mit drei Fettsäuren. Drei OH-Gruppen des Glycerins reagieren mit je einer –COOH-Gruppe der Fettsäuren → 3 Esterbindungen + 3 H₂O. Sie sind hydrophob und bilden die wichtigsten Energiespeicher in Fettzellen (Adipozyten). **Lipolyse**: Triglycerid → Glycerin + 3 freie Fettsäuren durch Lipasen (hormonsensitive Lipase, LPL).
 
-**Verseifung (Saponifikation):** NaOH + Triglycerid → Glycerol + 3 Fettsäure-Na-Salze (Seife)
+## Phospholipide
 
-## Phospholipide — Bausteine der Zellmembran
+Phospholipide (v.a. Glycerophospholipide) ähneln Triglyceriden, aber eine Fettsäure ist durch eine **Phosphatgruppe mit polarem Kopf** ersetzt: sn-1 und sn-2 am Glycerin tragen Fettsäuren, sn-3 trägt Phosphat + polaren Rest (Cholin, Serin, Ethanolamin, Inositol). Das wichtigste: **Phosphatidylcholin (Lecithin)**.
 
-Phospholipide bestehen aus: Glycerol + 2 Fettsäuren + Phosphatgruppe + polarer Kopfgruppe (z. B. Cholin → Phosphatidylcholin, Lecithin).
+**Amphipathischer Charakter**: polarer Phosphatkopf (hydrophil) + zwei unpolare Fettsäureschwänze (hydrophob) → spontane **Bilayer-Bildung** in wässriger Umgebung (treibende Kraft: hydrophober Effekt). Diese Eigenschaft macht Phospholipide zum Grundbaustein aller biologischen Membranen.
 
-**Amphiphil:** Hydrophober Schwanz (zwei Fettsäureketten) + hydrophiler Kopf (Phosphat + Cholin). In wässriger Umgebung bilden sie spontan Lipid-Doppelschichten (Zellmembran) oder Micellen.
+## Steroide
 
-## Cholesterin — Steroid und Membrankomponente
+Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): drei kondensierte Sechsringe (A, B, C) + ein Fünfring (D). Alle Steroide sind von **Cholesterin** abgeleitet:
 
-Cholesterin hat das **Steroid-Grundgerüst** (vier kondensierte Kohlenstoffringe, A-D, mit 17 C in den Ringen). Es ist ein rigides, planares Molekül.
+| Steroid | Funktion |
+|---|---|
+| **Cholesterin** | Membrankomponente (reguliert Fluidität), Ausgangsstoff für alle Steroide |
+| **Cortisol** | Glucocorticoid; Stressreaktion, Gluconeogenese, Antiinflammation |
+| **Aldosteron** | Mineralocorticoid; Na⁺/K⁺-Regulation in Niere |
+| **Testosteron** | Androgen; Virilisierung, Spermatogenese |
+| **Östradiol** | Östrogen; Feminisierung, Menstruationszyklus |
+| **Progesteron** | Gelbkörperhormon; Schwangerschaft |
+| **Vitamin D₃** | Calcitriol (aktiv); Calcium- und Phosphathomöostase |
+| **Gallensäuren** | Cholsäure etc.; Fettemulgierung im Darm |
 
-**Funktionen:**
-1. **Membranfluidität:** Cholesterin zwischen Phospholipid-Schwänzen → bei hoher Temp. Fluidität ↓ (Ordnung), bei niedriger T Fluidität ↑ (verhindert Kristallisation)
-2. **Steroidhormonvorstufe:** Cortisol, Aldosteron, Testosteron, Östrogen, Vitamin D₃
-3. **Gallensäurenvorstufe:** Cholat, Chenodesoxycholat (emulgieren Nahrungsfette)
-4. **Myelin:** Cholesterin-reich in Nervenisolierung`,
+## Klinischer Bezug
+
+**Hypercholesterinämie**: LDL > 160 mg/dL (4,1 mmol/L) → Atheroskleroserisiko steigt. **Atherosklerose**: LDL-Oxidation, Schaumzellbildung, Plaques in Arterienwand. **Statine** hemmen **HMG-CoA-Reduktase** (Schlüsselenzym der Cholesterinbiosynthese → Mevalonat-Weg) → LDL-Senkung. **Omega-3-Fettsäuren** (EPA, DHA): antiinflammatorisch, senken Triglyceride. **Ketonkörper** (Acetoacetat, β-Hydroxybutyrat, Aceton) entstehen bei hepatischer Fettsäureoxidation (Diabetes Typ 1, Fasten) → Ketoazidose bei unkontrolliertem Diabetes.`,
       lernziele: [
-        "Gesättigte und ungesättigte Fettsäuren unterscheiden und den Einfluss auf Schmelzpunkt und Membraneigenschaften erläutern",
-        "Die amphiphile Struktur von Phospholipiden erklären und ihre Rolle beim Membranaufbau beschreiben",
-        "Die Funktionen von Cholesterin (Membranfluidität, Hormonvorstufe, Gallensäuren) nennen",
+        "Fettsäuren nach Sättigungsgrad klassifizieren, den Unterschied zwischen cis/trans-Konfiguration und seine physiologische Bedeutung erklären",
+        "Die Struktur von Triglyceriden und ihre Bildung durch Veresterung beschreiben sowie die Lipolyse erklären",
+        "Den amphipathischen Aufbau von Phospholipiden und die Konsequenz für die Membranbildung erläutern",
+        "Das Sterangerüst und die wichtigsten Steroide (Cholesterin, Steroidhormone, Vitamin D, Gallensäuren) benennen",
+        "Hypercholesterinämie, Atherosklerose und das Wirkprinzip von Statinen (HMG-CoA-Reduktase-Hemmung) erklären",
       ],
       sections: [
         {
-          heading: "Phospholipid-Doppelschicht und Membranfluidität",
-          text: "Die Zellmembran ist eine Lipid-Doppelschicht aus Phospholipiden (und Sphingolipiden), in die Proteine eingebettet sind (Fluid Mosaic Model, Singer & Nicolson 1972). Phospholipide ordnen sich so, dass ihre hydrophoben Schwänze ins Innere zeigen und ihre hydrophilen Köpfe das wässrige Innen- und Außenmilieu berühren. Die Membranfluidität ist temperaturabhängig: Höherer Anteil ungesättigter Fettsäuren (cis-Knicke) → niedrigerer Schmelzpunkt → mehr Fluidität. Cholesterin reguliert die Fluidität bidirektional: Bei hoher T verhindert es übermäßige Fluidität (ordnend), bei niedriger T verhindert es Erstarrung (verflüssigend). Lipid Rafts: Cholesterinreiche Mikrodomänen in der Membran mit besonderer Signalgebungsfunktion.",
-          merksatz: "Phospholipid-Doppelschicht: amphiphil, Kopf außen, Schwanz innen",
+          heading: "Fettsäuren: Struktur und Eigenschaften",
+          text: "Die Länge der Kohlenwasserstoffkette und der Sättigungsgrad bestimmen physikalische Eigenschaften und biologische Wirkung von Fettsäuren. Gesättigte Fettsäuren (keine Doppelbindungen, Palmitinsäure C16:0, Stearinsäure C18:0) können sich gestreckt eng aneinanderlagern → hohe Van-der-Waals-Kräfte → festes Fett bei Raumtemperatur. Ungesättigte Fettsäuren (Ölsäure C18:1Δ9, cis) haben einen Knick an der Doppelbindung → schlechtere Packung → niedriger Schmelzpunkt → flüssiges Öl. Trans-Fettsäuren aus industrieller Fetthärtung sind atherogen. Essentielle Fettsäuren (Linolsäure ω-6, α-Linolensäure ω-3) dienen als Vorläufer für Eicosanoide (Prostaglandine, Leukotriene).",
+          merksatz: "Gesättigte Fettsäuren = fest, arteriogen; ungesättigte cis = flüssig, protektiv; trans = fest, arteriogen.",
         },
         {
-          heading: "Cholesterin-Stoffwechsel und klinische Relevanz",
-          text: "Cholesterin wird in der Leber (und anderen Zellen) aus Acetyl-CoA synthetisiert (HMG-CoA-Reduktase ist der geschwindigkeitsbestimmende Schritt, gehemmt durch Statine). Transport im Blut als Lipoproteine: VLDL → IDL → LDL (bringt Cholesterin in Gewebe, LDL-Rezeptor-vermittelt); HDL (nimmt Cholesterin aus Gewebe auf → reverse Cholesterintransport). Hypercholesterinämie (LDL ↑) → Oxidiertes LDL → Schaumzellen → Arteriosklerose. Familäre Hypercholesterinämie: LDL-Rezeptor-Defekt (autosomal-dominant) → LDL ↑↑ → frühzeitige KHK. Statine (HMG-CoA-Reduktase-Hemmer, z.B. Simvastatin) senken LDL und reduzieren kardiovaskuläres Risiko.",
-          merksatz: "HMG-CoA-Reduktase: geschw.best. Schritt der Cholesterinsynthese → Statin-Angriffspunkt",
+          heading: "Phospholipide und Membranbildung",
+          text: "Glycerophospholipide (z.B. Phosphatidylcholin = Lecithin) bestehen aus Glycerin, zwei Fettsäuren (sn-1 meist gesättigt, sn-2 meist ungesättigt), einer Phosphatgruppe und einem polaren Alkohol-Rest (Cholin, Serin etc.). Sie sind amphipathisch: Der polare Phosphokopf interagiert mit Wasser (hydrophil), die unpolaren Fettsäureschwänze meiden Wasser (hydrophob). In wässrigem Milieu organisieren sich Phospholipide spontan zu einem Bilayer — die Grundstruktur aller biologischen Membranen. Cholesterin lagert sich zwischen die Fettsäureschwänze und moduliert die Membranfluidität (bei tiefen Temperaturen verhindernd Erstarren; bei hohen Temperaturen verhindernd Überfließen).",
+          merksatz: "Phospholipid = Amphiphil; polarer Kopf außen, apolare Schwänze innen → Bilayer = Membran.",
+        },
+        {
+          heading: "Cholesterin und Statine",
+          text: "Cholesterin wird in der Leber aus Acetyl-CoA über den Mevalonat-Weg synthetisiert; das Schlüsselenzym ist HMG-CoA-Reduktase. Im Blut wird Cholesterin in Lipoproteinen transportiert: LDL transportiert Cholesterin zu peripheren Geweben (hohes LDL = 'schlechtes' Cholesterin → Atherosklerose), HDL holt Cholesterin aus Geweben zurück zur Leber. Statine (Atorvastatin, Simvastatin) hemmen kompetitiv HMG-CoA-Reduktase → weniger endogene Cholesterinsynthese → Hochregulation der LDL-Rezeptoren in Hepatozyten → mehr LDL-Aufnahme aus Blut → LDL-Senkung um 30–50%.",
+          merksatz: "Statine hemmen HMG-CoA-Reduktase → weniger Cholesterinsynthese → LDL-Rezeptor-Hochregulation → LDL-Senkung.",
         },
       ],
       merksätze: [
-        "SFA: gesättigt, fest, hoch-Sdp.; PUFA: ungesättigt, flüssig, cis-Knicke",
-        "Phospholipide: amphiphil → Doppelschicht (Membran) und Micellen",
-        "Cholesterin: Membranfluidität, Steroidhormon-Vorstufe, Gallensäuren",
+        "Fettsäuren: gesättigt = keine C=C; einfach ungesättigt = eine C=C; mehrfach ungesättigt = ≥2 C=C.",
+        "Essentielle Fettsäuren: Linolsäure (ω-6) und α-Linolensäure (ω-3) — müssen mit Nahrung zugeführt werden.",
+        "cis-Doppelbindung → Knick → niedriger Schmelzpunkt; trans-Doppelbindung → gerade → höherer Schmelzpunkt.",
+        "Energiedichte: Lipide 38 kJ/g vs. Kohlenhydrate/Proteine je 17 kJ/g.",
+        "Triglycerid = Glycerin + 3 Fettsäuren, verknüpft durch 3 Esterbindungen (Kondensation).",
+        "Phospholipide = amphipathisch (polarer Phosphatkopf + 2 apolare Fettsäureschwänze) → Bilayer.",
+        "Lecithin (Phosphatidylcholin) = häufigstes Membranphospholipid.",
+        "Sterangerüst = 4 kondensierte Ringe (3× Sechsring + 1× Fünfring); Cholesterin ist Grundgerüst.",
+        "Statine hemmen HMG-CoA-Reduktase (Schlüsselenzym der Cholesterinbiosynthese).",
+        "Ketonkörper: Acetoacetat, β-Hydroxybutyrat, Aceton — entstehen bei exzessiver Lipolyse (Fasten, Typ-1-Diabetes).",
       ],
-      klinischerBezug: "Gallensteine: übersättigte Galle mit Cholesterin → Kristallisation → Cholesterol-Gallensteine (80 %). Therapie: UDCA (Ursodeoxycholsäure löst Cholesterinsteine auf), laparoskopische Cholezystektomie. Essentielle Fettsäuren (Linolsäure ω-6, α-Linolensäure ω-3) können vom Menschen nicht synthetisiert werden und müssen mit der Nahrung aufgenommen werden.",
       altfrage: {
-        question: "Warum sind Pflanzenöle bei Raumtemperatur flüssig, tierische Fette fest?",
-        answer: "Pflanzenöle enthalten viele mehrfach ungesättigte Fettsäuren (PUFA) mit cis-Doppelbindungen. Diese cis-Knicke verhindern eine dichte Packung der Fettsäureketten → niedriger Schmelzpunkt → flüssig. Tierische Fette enthalten vorwiegend gesättigte Fettsäuren (SFA), die geradkettig und dicht gepackt sind → starke Van-der-Waals-Kräfte → höherer Schmelzpunkt → fest.",
+        question: "Erläutern Sie, weshalb Phospholipide spontan Lipiddoppelschichten bilden und welche Rolle Cholesterin in biologischen Membranen spielt.",
+        answer: "Phospholipide sind amphipathische Moleküle: Sie besitzen einen hydrophilen (wasserfreundlichen) polaren Kopf (Phosphatgruppe mit Cholin oder einem anderen polaren Alkohol) und zwei hydrophobe (wasserfeindliche) unpolare Fettsäureschwänze. Wenn Phospholipide in wässriges Milieu gebracht werden, führt der hydrophobe Effekt zur spontanen Selbstorganisation: Die Fettsäureschwänze meiden den Kontakt mit Wasser und lagern sich zusammen (hydrophobe Wechselwirkungen), während die polaren Köpfe zur wässrigen Phase weisen. Das thermodynamisch günstigste Arrangement ist dabei nicht die Mizelle (wie bei Detergenzien mit nur einem Schwanz), sondern eine **Phospholipid-Doppelschicht (Bilayer)**: Zwei Lagen Phospholipide ordnen sich so an, dass ihre Fettsäureschwänze nach innen zeigen und ihre polaren Köpfe nach außen zur wässrigen Phase. Dies führt zu einem selbstdichtenden, flexiblen flüssigkristallinen Membransystem — der Grundstruktur aller biologischen Membranen. Cholesterin fügt sich mit seiner kleinen OH-Gruppe in Richtung der Phosphatkopfgruppen und seinem unpolaren Sterangerüst zwischen den Fettsäureketten ein. Es erfüllt dabei eine duale temperaturabhängige Funktion: Bei niedrigen Temperaturen verhindert es das Erstarren der Membran (Fluiditätspuffer), bei hohen Temperaturen die übermäßige Fluidisierung. Darüber hinaus dient Cholesterin als Ausgangsstoff für Steroidhormone, Gallensäuren und Vitamin D₃.",
       },
+      klinischerBezug: "Hypercholesterinämie und Atherosklerose; Statine als HMG-CoA-Reduktase-Hemmer; Ketoazidose bei Typ-1-Diabetes; Trans-Fettsäuren als kardiovaskulärer Risikofaktor.",
       selfTest: [
         {
-          question: "Was ist der Unterschied zwischen gesättigten und ungesättigten Fettsäuren hinsichtlich Schmelzpunkt?",
+          question: "Welche Aussage über die Energiedichte von Lipiden im Vergleich zu Kohlenhydraten ist korrekt?",
           options: [
-            "Gesättigte Fettsäuren haben niedrigeren Schmelzpunkt (flüssig)",
-            "Ungesättigte Fettsäuren haben höheren Schmelzpunkt (fest)",
-            "Gesättigte haben höheren Schmelzpunkt; ungesättigte (cis) haben niedrigeren Schmelzpunkt",
-            "Kein Unterschied im Schmelzpunkt",
-            "Mehrfach ungesättigte Fettsäuren sind immer fester als einfach ungesättigte",
+            "Lipide und Kohlenhydrate haben die gleiche Energiedichte von ca. 17 kJ/g",
+            "Kohlenhydrate liefern mit 38 kJ/g mehr Energie als Lipide mit 17 kJ/g",
+            "Lipide liefern mit ca. 38 kJ/g mehr als doppelt so viel Energie wie Kohlenhydrate (ca. 17 kJ/g)",
+            "Proteine liefern mehr Energie als Lipide",
+            "Lipide liefern nur 4 kcal/g, Kohlenhydrate dagegen 9 kcal/g",
           ],
           correctIndex: 2,
-          explanation: "Gesättigte Fettsäuren (keine C=C) sind geradkettig und können eng packen → starke Van-der-Waals-Kräfte → hoher Schmelzpunkt → fest (Butter, Schmalz). Ungesättigte Fettsäuren mit cis-Doppelbindungen haben Knicke in der Kette → lockere Packung → schwächere Wechselwirkungen → niedriger Schmelzpunkt → flüssig (Olivenöl, Fischöl).",
+          explanation: "Lipide (Fette) liefern ca. 38 kJ/g (≈ 9 kcal/g), während Kohlenhydrate und Proteine je ca. 17 kJ/g (≈ 4 kcal/g) liefern. Die höhere Energiedichte der Lipide erklärt sich durch den stärker reduzierten (höherer Wasserstoffgehalt, weniger Sauerstoff) Zustand der Fettsäuren im Vergleich zu Kohlenhydraten (die formal CH₂O-Einheiten enthalten und somit 'schon partiell oxidiert' sind). Deshalb sind Triglyceride als Energiespeicher effizienter als Glykogen (zudem nimmt Glykogen gebundenes Wasser mit → effektive Energiedichte von Glykogen noch geringer).",
           hints: [
-            "cis-Knicke = lockere Packung = niedrigerer Schmelzpunkt",
-            "Fest = gesättigt; flüssig = ungesättigt (bei Raumtemperatur)",
+            "Lipide enthalten viel mehr Wasserstoff relativ zum Sauerstoff als Kohlenhydrate — welche Konsequenz hat das für die Oxidationsenergie?",
+            "Merke: Fett = 9 kcal/g; KH und Protein = 4 kcal/g.",
           ],
+          tags: ["energiedichte", "lipide", "kohlenhydrate", "stoffwechsel"],
           difficulty: 1,
-          tags: [],
         },
         {
-          question: "Warum sind Phospholipide für den Membranaufbau geeignet?",
+          question: "Was macht Phospholipide zu idealen Membranbestandteilen?",
           options: [
-            "Weil sie nur hydrophob sind und gut in Wasser lösen",
-            "Weil sie amphiphil sind (hydrophiler Kopf + hydrophober Schwanz) und spontan Doppelschichten bilden",
-            "Weil sie kovalente Bindungen zwischen Membranen bilden",
-            "Weil sie unlöslich sind und Membrangerüst bilden",
-            "Weil sie aus vier Ringen (wie Cholesterin) bestehen",
-          ],
-          correctIndex: 1,
-          explanation: "Phospholipide sind amphiphil: Sie haben einen polaren/hydrophilen Kopf (Phosphat + Kopfgruppe, z.B. Cholin) und zwei unpolare/hydrophobe Schwänze (Fettsäureketten). In wässriger Umgebung ordnen sie sich spontan so an, dass Köpfe zum Wasser zeigen und Schwänze ins Innere → Lipid-Doppelschicht. Diese Selbstorganisation (Entropie des Wassers) ist der Hauptantrieb des Membranaufbaus.",
-          hints: [
-            "Amphiphil = hat hydrophiles und hydrophobes Ende",
-            "In Wasser: Schwänze verstecken sich im Inneren",
-          ],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: "Welche Funktion hat Cholesterin in der Zellmembran?",
-          options: [
-            "Es bildet die Hauptstruktur der Membran (>50%)",
-            "Es reguliert die Membranfluidität (bei Wärme: ordnend, bei Kälte: verflüssigend)",
-            "Es stabilisiert die Membran ausschließlich durch kovalente Bindungen",
-            "Es pumpt Ionen durch die Membran",
-            "Es dient nur als Vorstufe für Steroidhormone",
-          ],
-          correctIndex: 1,
-          explanation: "Cholesterin ist rigid und planar und legt sich zwischen die Fettsäureschwänze der Phospholipide. Bei hoher Temperatur: Cholesterin ordnet die beweglichen Schwänze → Fluidität nimmt ab (verhindert zu hohe Flüssigkeit). Bei niedriger Temperatur: Cholesterin verhindert die Kristallisation der Schwänze → Fluidität bleibt. Es ist ein 'Fluiditätspuffer'. Außerdem ist Cholesterin reich in Lipid Rafts (Signaldomänen).",
-          hints: [
-            "Cholesterin stabilisiert in beide Richtungen — nicht nur eine",
-            "Lipid Rafts sind cholesterinreich",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Was sind essentielle Fettsäuren?",
-          options: [
-            "Fettsäuren, die vom Körper synthetisiert werden können",
-            "Alle gesättigten Fettsäuren",
-            "Fettsäuren die der Mensch nicht selbst synthetisieren kann und mit der Nahrung aufnehmen muss",
-            "Fettsäuren, die in Mitochondrien abgebaut werden",
-            "Fettsäuren ohne Bedeutung für die Gesundheit",
+            "Sie sind vollständig hydrophob und bilden dadurch wasserundurchlässige Schichten",
+            "Sie sind vollständig hydrophil und können sich frei in wässriger Lösung lösen",
+            "Sie sind amphipathisch (polarer Kopf + apolare Schwänze) und bilden spontan Bilayer in Wasser",
+            "Sie tragen drei Fettsäureketten wie Triglyceride und sind deshalb besonders stabil",
+            "Sie können kovalente Bindungen mit Membranproteinen eingehen und die Membran fixieren",
           ],
           correctIndex: 2,
-          explanation: "Essentielle Fettsäuren sind mehrfach ungesättigte Fettsäuren (PUFA), die der Mensch nicht selbst synthetisieren kann: Linolsäure (18:2 ω-6) und α-Linolensäure (18:3 ω-3). Der menschliche Körper kann zwar Doppelbindungen einführen (Δ9-Desaturase), aber nicht über die ω-6 oder ω-3 Position hinaus. Aus Linolsäure entstehen Arachidonsäure (Vorläufer der Prostaglandine/Leukotriene), aus ALA entstehen EPA und DHA (antiinflammatorisch).",
+          explanation: "Phospholipide sind amphipathische Moleküle: Der hydrophile polare Kopf (Phosphat + Cholin oder anderer polarer Rest) ist wasserfreundlich, die zwei hydrophoben Fettsäureschwänze sind wasserfeindlich. In wässrigem Milieu ordnen sie sich durch den hydrophoben Effekt spontan zu einer Doppelschicht (Bilayer) an: Köpfe nach außen zur wässrigen Phase, Schwänze nach innen. Diese Selbstorganisation liefert die Grundstruktur aller biologischen Membranen. Triglyceride (drei Fettsäuren, kein polarer Kopf) sind vollständig hydrophob und bilden keine Membranen, sondern Fetttröpfchen.",
           hints: [
-            "Essentiell = muss mit Nahrung aufgenommen werden",
-            "ω-3 (ALA, EPA, DHA) und ω-6 (Linolsäure, AA) sind essentiell",
+            "Was ist das Besondere an einer Substanz, die sowohl hydrophile als auch hydrophobe Bereiche hat?",
+            "Denke an den hydrophoben Effekt: Was geschieht mit unpolaren Bereichen in Wasser?",
           ],
-          difficulty: 2,
-          tags: [],
+          tags: ["phospholipide", "membran", "amphipathisch", "bilayer"],
+          difficulty: 1,
         },
         {
-          question: "Aus welchem Vorläufermolekül werden Steroidhormone (Cortisol, Testosteron) synthetisiert?",
+          question: "Welcher der folgenden Faktoren erklärt den niedrigeren Schmelzpunkt von Olivenöl im Vergleich zu Palmfett?",
           options: [
-            "Glycerol",
-            "Glukose",
+            "Olivenöl enthält Phospholipide, Palmfett dagegen nicht",
+            "Palmfett hat eine kürzere Kohlenstoffkette als Olivenöl",
+            "Olivenöl enthält vorwiegend einfach ungesättigte (cis) Fettsäuren mit Knick in der Kette",
+            "Olivenöl hat einen höheren Anteil an trans-Fettsäuren",
+            "Palmfett enthält Steroide, die den Schmelzpunkt erhöhen",
+          ],
+          correctIndex: 2,
+          explanation: "Olivenöl enthält hauptsächlich Ölsäure (C18:1Δ9, cis-Konfiguration, einfach ungesättigt). Die cis-Doppelbindung erzeugt einen Knick von ca. 30° in der Fettsäurekette. Dieser Knick verhindert die enge parallele Packung der Fettsäuremoleküle und reduziert die Van-der-Waals-Wechselwirkungen → niedriger Schmelzpunkt → bei Raumtemperatur flüssig. Palmfett enthält hauptsächlich Palmitinsäure (C16:0, gesättigt, gestreckte Kette) → dichte Packung → stärkere Van-der-Waals-Kräfte → höherer Schmelzpunkt → fest bei Raumtemperatur. Trans-Fettsäuren verhalten sich ähnlich wie gesättigte (gerade Kette) und wären ebenfalls fest.",
+          hints: [
+            "Was bewirkt eine cis-Doppelbindung geometrisch für die Form der Fettsäurekette?",
+            "Dichte Packung → mehr Van-der-Waals-Kräfte → höherer Schmelzpunkt. Welche Fettsäureart erlaubt dichteste Packung?",
+          ],
+          tags: ["fettsäuren", "schmelzpunkt", "cis", "gesättigt-ungesättigt"],
+          difficulty: 2,
+        },
+        {
+          question: "Welches Enzym wird durch Statine gehemmt und welche Konsequenz hat dies für den Cholesterinstoffwechsel?",
+          options: [
+            "Cholesterin-Oxidase → Cholesterin wird direkt abgebaut → LDL sinkt",
+            "LDL-Rezeptor → weniger LDL-Aufnahme in Hepatozyten → LDL-Anstieg im Blut",
+            "HMG-CoA-Reduktase → weniger Cholesterinsynthese → Hochregulation der LDL-Rezeptoren → LDL-Senkung",
+            "Lipoprotein-Lipase → weniger VLDL-Abbau → Triglyceridanstieg",
+            "Phospholipase A₂ → Membranabbau in Hepatozyten → diffuse Lipidstörung",
+          ],
+          correctIndex: 2,
+          explanation: "Statine (z.B. Atorvastatin, Simvastatin, Rosuvastatin) hemmen kompetitiv die HMG-CoA-Reduktase, das Schlüsselenzym der Cholesterinbiosynthese im Mevalonat-Weg. Durch weniger endogene Cholesterinsynthese in der Leber sinkt der intrahepatische Cholesteringehalt. Als Reaktion darauf reguliert die Leberzelle die LDL-Rezeptoren auf ihrer Oberfläche hoch (mehr SREBP-2-Aktivierung). Diese erhöhte LDL-Rezeptor-Dichte führt zu verstärkter Aufnahme von LDL-Cholesterin aus dem Blut → LDL-Senkung um 30–50%. HDL-Cholesterin steigt leicht an. Statine sind die wirksamsten Medikamente zur LDL-Senkung und zur Reduktion kardiovaskulärer Ereignisse.",
+          hints: [
+            "HMG-CoA-Reduktase ist das Schrittmacherenzym der Cholesterinbiosynthese — was passiert, wenn es gehemmt wird?",
+            "Die Leber reagiert auf niedrigen intrazellulären Cholesterinspiegel mit Hochregulation von Rezeptoren — welchen?",
+          ],
+          tags: ["statine", "hmg-coa-reduktase", "cholesterin", "ldl", "klinisch"],
+          difficulty: 2,
+        },
+        {
+          question: "Welches Steroid dient als gemeinsamer Ausgangsstoff für Cortisol, Testosteron und Vitamin D₃?",
+          options: [
+            "Östradiol",
             "Cholesterin",
-            "Phospholipide",
-            "Arachidonsäure",
+            "Aldosteron",
+            "Cortisol",
+            "Progesteron",
           ],
-          correctIndex: 2,
-          explanation: "Alle Steroidhormone werden aus Cholesterin synthetisiert: Cholesterin → Pregnenolon (mitochondriales Cytochrom P450scc) → Progesteron → Cortisol/Aldosteron (Nebennierenrinde) oder Testosteron/Östrogen (Gonaden) oder Vitamin D₃ (Haut, Leber, Niere). Das Steroid-Grundgerüst (4 kondensierte C-Ringe) bleibt bei allen Derivaten erhalten — nur die Substituenten und Seitenketten unterscheiden sich.",
+          correctIndex: 1,
+          explanation: "Cholesterin ist der universelle Vorläufer aller Steroide im menschlichen Körper. Es besitzt das Sterangerüst (vier kondensierte Ringe: drei Sechsringe + ein Fünfring) und eine –OH-Gruppe an C3 sowie eine aliphatische Seitenkette. Aus Cholesterin werden in den Nebennieren Glucocorticoide (Cortisol) und Mineralocorticoide (Aldosteron) synthetisiert, in den Gonaden Androgene (Testosteron) und Östrogene (Östradiol), in der Leber Gallensäuren, und in Haut/Leber/Niere Vitamin D₃ (Cholecalciferol → Calcidiol → Calcitriol). Progesteron ist selbst ein Steroid-Intermediat, kein Ausgangsstoff für alle genannten.",
           hints: [
-            "Steroid-Grundgerüst kommt von Cholesterin",
-            "Cortisol, Aldosteron, Testosteron, Östrogen = Steroidhormone",
+            "Was haben Cortisol, Testosteron, Aldosteron und Vitamin D strukturell gemeinsam?",
+            "Der Ausgangsstoff ist das häufigste Steroid in Säugetierzellmembranen.",
           ],
+          tags: ["cholesterin", "steroide", "steroidhormone", "biosynthese"],
           difficulty: 1,
-          tags: [],
+        },
+        {
+          question: "Ketonkörper entstehen bei längerem Fasten oder unkontrolliertem Typ-1-Diabetes. Welche Metabolite sind das und in welchem Organ werden sie hauptsächlich gebildet?",
+          options: [
+            "Glucose und Fructose; gebildet in der Niere durch Gluconeogenese",
+            "Acetoacetat, β-Hydroxybutyrat und Aceton; gebildet in der Leber aus überschüssigem Acetyl-CoA",
+            "Pyruvat und Lactat; gebildet in der Muskulatur bei anaerober Glykolyse",
+            "Cholesterin und Gallensäuren; gebildet in der Leber bei erhöhtem Fettkonsum",
+            "Harnsäure und Ammoniak; gebildet in der Leber beim Proteinabbau",
+          ],
+          correctIndex: 1,
+          explanation: "Ketonkörper sind Acetoacetat, β-Hydroxybutyrat und Aceton. Sie entstehen in der Leber (Mitochondrien) aus überschüssigem Acetyl-CoA, das bei gesteigerter Fettsäureoxidation (β-Oxidation) anfällt, wenn der Oxalacetat-Pool für den Citratzyklus nicht ausreicht (z.B. bei Glukosemangel). In der Ketogenese kondensieren zwei Acetyl-CoA-Moleküle zu Acetoacetyl-CoA, das zu Acetoacetat umgewandelt wird; durch Reduktion entsteht β-Hydroxybutyrat, durch spontane Decarboxylierung flüchtiges Aceton. Bei unkontrolliertem Typ-1-Diabetes führt absoluter Insulinmangel zu unkontrollierter Lipolyse und Ketogenese → Ketoazidose (Blut-pH fällt, Acetongeruch der Atemluft).",
+          hints: [
+            "In welchem Organ läuft die β-Oxidation der Fettsäuren ab und was ist das Endprodukt?",
+            "Bei Glukosemangel fehlt Oxalacetat für den Citratzyklus — wohin geht dann das Acetyl-CoA?",
+          ],
+          tags: ["ketonkörper", "ketoazidose", "diabetes", "fasten", "klinisch"],
+          difficulty: 3,
+        },
+        {
+          question: "Welche Funktion haben Gallensäuren und von welchem Molekül werden sie synthetisiert?",
+          options: [
+            "Gallensäuren sind Verdauungsenzyme für Fette; sie werden aus Aminosäuren gebildet",
+            "Gallensäuren sind Emulgatoren für Fette im Darm; sie werden aus Cholesterin gebildet",
+            "Gallensäuren sind Hormone mit Steroidstruktur; sie werden in der Bauchspeicheldrüse gebildet",
+            "Gallensäuren sind Transportproteine für Lipide im Blut; sie werden aus Triglyceriden gebildet",
+            "Gallensäuren sind Cofaktoren der Lipasen und werden aus Fettsäuren gebildet",
+          ],
+          correctIndex: 1,
+          explanation: "Gallensäuren (z.B. Cholsäure, Chenodesoxycholsäure) werden in der Leber aus Cholesterin synthetisiert und als Gallensalze (konjugiert mit Glycin oder Taurin) in der Gallenblase gespeichert. Im Dünndarm wirken sie als biologische Detergenzien (Emulgatoren): Durch ihren amphipathischen Charakter (Sterangerüst + polare OH-Gruppen) emulgieren sie Nahrungsfette in kleine Mizellen → vergrößerte Angriffsfläche für pankre­atische Lipasen. Gallensäuren werden im terminalen Ileum resorbiert und zur Leber zurücktransportiert (enterohepatischer Kreislauf). Sie sind keine Enzyme selbst, sondern ermöglichen die effiziente enzymatische Fettspaltung.",
+          hints: [
+            "Gallensäuren haben ein Sterangerüst — von welchem häufigen Steroid werden sie abgeleitet?",
+            "Was bedeutet 'emulgieren' und warum ist das für die Fettverdauung wichtig?",
+          ],
+          tags: ["gallensäuren", "cholesterin", "fettverdauung", "emulgierung"],
+          difficulty: 2,
         },
       ],
     },
+
     {
-      id: "ch-13-04",
-      title: "Nukleinsäuren — DNA, RNA und Nukleotide",
-      content: `## Nukleotide — Grundbausteine
+      id: 'ch-13-04',
+      title: "Nukleinsäuren — DNA und RNA",
+      content: `# Nukleinsäuren — DNA und RNA
 
-Ein Nukleotid besteht aus drei Komponenten:
-1. **Phosphatgruppe** (ein oder mehrere Phosphatreste)
-2. **Pentose** (Zucker): Desoxyribose in DNA (kein OH an C2), Ribose in RNA (OH an C2)
-3. **Stickstoffbase** (N-glykosidische Bindung zwischen Base und C1' des Zuckers)
+## Nukleotid-Aufbau
 
-## Purine und Pyrimidine
+Das Grundmonomer der Nukleinsäuren ist das **Nukleotid**, bestehend aus drei Komponenten:
+1. **Stickstoffbase** (Purin oder Pyrimidin)
+2. **Pentosezucker** (Ribose bei RNA; 2'-Desoxyribose bei DNA — kein OH an C2')
+3. **Phosphatgruppe(n)** (1–3; in Nukleinsäuren ist es die 5'-Phosphatgruppe)
 
-**Purine** (2-Ring-System, 9 Atome):
-- **Adenin (A)** und **Guanin (G)** — in DNA und RNA
+**Nukleosid** = Base + Zucker (ohne Phosphat). **Nukleotid** = Nukleosid + Phosphat(e). **ATP** (Adenosin-Triphosphat) ist das zentrale Energietransportmolekül der Zelle: Die Hydrolyse der β-γ-Phosphorsäureanhydridbindung liefert ΔG°' ≈ –30,5 kJ/mol.
 
-**Pyrimidine** (1-Ring-System, 6 Atome):
-- **Cytosin (C)** — in DNA und RNA
-- **Thymin (T)** — nur in DNA (hat extra Methylgruppe am C5)
-- **Uracil (U)** — nur in RNA (ersetzt Thymin)
+## Stickstoffbasen
 
-Merkhilfe: PuRines = Double ring (A und G); PYrimidines = Einzelring (C, T, U)
+**Purinbasen** (Doppelring, 9 Atome): **Adenin (A)** und **Guanin (G)** — in DNA und RNA
+**Pyrimidinbasen** (Einzelring, 6 Atome): **Cytosin (C)** in DNA + RNA; **Thymin (T)** nur in DNA (hat Methylgruppe an C5); **Uracil (U)** nur in RNA (keine Methylgruppe)
 
-## DNA — Struktur und Doppelhelix
+## Chargaff-Regeln
 
-Die DNA-Doppelhelix (Watson-Crick-Modell, 1953) ist:
-- **Antiparallel:** Strang läuft 5'→3', Gegenstrang 3'→5'
-- **B-Form** (unter physiologischen Bedingungen): rechtsgängige Helix, 10 bp pro Windung, Steigung 3,4 nm
-- **Basenpaare:** A=T (2 Wasserstoffbrücken), G≡C (3 Wasserstoffbrücken)
-- Zucker-Phosphat-Rückgrat außen (hydrophil), Basen innen (hydrophob, π-Stacking)
+In doppelsträngiger DNA gilt:
+- **A = T** (verbunden durch **2 Wasserstoffbrücken**)
+- **G ≡ C** (verbunden durch **3 Wasserstoffbrücken**)
+- **A + G = C + T** (Purine = Pyrimidine)
+- Der GC-Gehalt variiert zwischen Organismen und bestimmt die Schmelztemperatur der DNA (hoher GC% → höhere Tm)
 
-## RNA — Unterschiede zur DNA
+## DNA-Doppelhelix
 
-- Einzelstrang (kann Sekundärstrukturen bilden: Haarnadeln)
-- Ribose statt Desoxyribose (OH an C2)
-- Uracil statt Thymin
+**Watson-Crick-Modell (B-DNA)**:
+- Zwei **antiparallele** Stränge (5'→3' und 3'→5')
+- **Rechtsgängige** Helix
+- 10,5 Basenpaare pro Windung; Windungshöhe 3,4 nm
+- Komplementäre Basenpaare im Inneren durch H-Brücken; hydrophobe Stapelung (π-π-Stacking) der Basen
+- Zucker-Phosphat-Rückgrat außen, negativ geladen (Phosphatgruppen) → bindet Histonproteine
 
-Typen: mRNA (Vorlage für Translation), tRNA (Aminosäure-Adapter), rRNA (Ribosomstruktur), snRNA, miRNA, siRNA.
+**Antiparallel** bedeutet: Ein Strang verläuft 5'→3', der komplementäre 3'→5'. DNA-Polymerasen synthetisieren ausschließlich in 5'→3'-Richtung, weshalb ein Strang kontinuierlich (Leitstrang) und einer diskontinuierlich (Folgestrang, Okazaki-Fragmente) repliziert wird.
 
-## ATP als Energieträger
+## RNA-Typen
 
-Adenosin-5'-Triphosphat (ATP): Ribose + Adenin + 3 Phosphatreste. Hydrolyse von ATP → ADP + Pᵢ:
-**ΔG° = −30,5 kJ/mol**
+| RNA-Typ | Funktion |
+|---|---|
+| **mRNA** (messenger) | Überträgt genetische Information vom Kern zum Ribosom; wird translatiert |
+| **tRNA** (transfer) | Transportiert Aminosäuren zum Ribosom; Anticodon paart mit mRNA-Codon |
+| **rRNA** (ribosomale) | Strukturkomponente des Ribosoms (28S, 18S, 5.8S, 5S beim Eukaryoten); katalytisch aktiv (Ribozym: Peptidyltransferase der großen Untereinheit) |
+| **miRNA / siRNA** | Regulieren Genexpression durch mRNA-Abbau oder Translationshemmung (RNA-Interferenz) |
 
-Die hohe Energie aus der Hydrolyse beruht auf: Abstoßung der negativen Ladungen im Triphosphat, Resonanzstabilisierung von ADP und Pᵢ, Hydratation der Produkte.`,
+## Nukleosid-Analoga in der Therapie
+
+**Aciclovir** (Acycloguanosin): Guanosin-Analogon ohne 3'-OH → keine Kettenverlängerung nach Einbau → Kettenabbruch → hemmt virale DNA-Polymerase (Herpesviren). **Tenofovir**: Adenosinmonophosphat-Analogon → hemmt HIV-Reverse Transkriptase. **Remdesivir**: Adenosin-Analogon → hemmt SARS-CoV-2-RNA-abhängige RNA-Polymerase.
+
+## DNA-Methylierung und Epigenetik
+
+DNA-Methylierung (Methylierung von Cytosin an CpG-Dinukleotiden durch DNA-Methyltransferasen) ist eine epigenetische Modifikation: Sie ändert nicht die Basensequenz, beeinflusst aber die Transkription (Promotor-Methylierung → Silencing). Dies ist wichtig für Genimprinting, X-Inaktivierung, Krebsentstehung (Hypermethylierung von Tumorsuppressor-Promotoren).`,
       lernziele: [
-        "Purine (A, G) und Pyrimidine (C, T, U) unterscheiden und die Basenpaarung in der DNA beschreiben",
-        "Die Struktur der DNA-Doppelhelix (antiparallel, B-Form, Basenpaare) erläutern",
-        "ATP als Energieträger und den ΔG°-Wert der ATP-Hydrolyse beschreiben",
+        "Die drei Komponenten eines Nukleotids nennen und Nukleosid von Nukleotid unterscheiden",
+        "Die Purin- und Pyrimidinbasen und ihre Paarungsregeln (Chargaff) mit Anzahl der Wasserstoffbrücken beschreiben",
+        "Den Aufbau der DNA-Doppelhelix (antiparallel, rechtsgängig, 10,5 bp/Windung) erklären",
+        "Die vier wichtigsten RNA-Typen (mRNA, tRNA, rRNA, miRNA) und ihre Funktionen benennen",
+        "Das Wirkprinzip von Nukleosid-Analoga als Virostatika (Kettenabbruch) erklären",
       ],
       sections: [
         {
-          heading: "DNA-Replikation und RNA-Transkription — Überblick",
-          text: "Die DNA-Doppelhelix dient als Vorlage für zwei Prozesse: Replikation (DNA → DNA) und Transkription (DNA → RNA). Bei der semikonservativen Replikation entstehen zwei Tochtermoleküle, die je einen alten und einen neuen Strang enthalten. Wichtige Enzyme: DNA-Polymerase (synthetisiert 5'→3', braucht Primer), Primase, Helicase, Ligase. Die Transkription (RNA-Polymerase, keine Primer nötig) erzeugt pre-mRNA, die prozessiert wird (5'-Cap, Poly-A-Schwanz, Spleißen der Introns). Inhibitoren der DNA/RNA-Synthese: Rifampicin (hemmt prokaryotische RNA-Pol), Actinomycin D (DNA-interkalierend), Fluorochinolone (hemmen DNA-Gyrase), Aciclovir (hemmt virale DNA-Pol).",
-          merksatz: "DNA: A=T (2 H-Brücken), G≡C (3 H-Brücken); antiparallel, 5'→3'",
+          heading: "Nukleotid-Aufbau und ATP",
+          text: "Ein Nukleotid besteht aus einer Stickstoffbase (Purin oder Pyrimidin), einem Pentosezucker (Ribose oder Desoxyribose) und einer Phosphatgruppe. In der Nukleinsäure-Kette verbindet eine Phosphodiesterbindung das 3'-OH des einen Zuckers mit dem 5'-Phosphat des nächsten Nukleotids (3'→5'-Verknüpfung). ATP (Adenosin-Triphosphat) ist das universelle Energiewährungsmolekül: Die Hydrolyse von ATP zu ADP + Pᵢ liefert etwa 30,5 kJ/mol unter Standardbedingungen. Die Unterschiede zwischen DNA und RNA: Ribose (RNA) hat OH an C2', Desoxyribose (DNA) hat nur H an C2'. RNA enthält Uracil statt Thymin.",
+          merksatz: "DNA = Desoxyribose + T; RNA = Ribose + U. Nukleosid = Base + Zucker; Nukleotid = Base + Zucker + Phosphat.",
         },
         {
-          heading: "ATP-Synthese und -Hydrolyse",
-          text: "ATP wird in der Zelle hauptsächlich durch drei Mechanismen synthetisiert: Oxidative Phosphorylierung (ATP-Synthase in Mitochondrien, getrieben durch Protonengradient = Chemiosmose), Substratkettenphosphorylierung (Glycolyse, Citratzyklus) und Photophosphorylierung (in Chloroplasten). Die ATP-Synthase (F₀F₁-ATPase) ist eine rotary motor-Maschine: Protonenfluss durch F₀ treibt Rotation der γ-Untereinheit → Konformationsänderungen in F₁ → ADP + Pᵢ → ATP. Bei ATP-Hydrolyse wird die Energie für mechanische Arbeit (Myosin, Kinesin), chemische Arbeit (Biosynthesen) und osmotische Arbeit (Ionenpumpen wie Na⁺/K⁺-ATPase) genutzt.",
-          merksatz: "ATP: ΔG°=-30,5 kJ/mol; ATP-Synthase: Protonengradient treibt Rotation",
+          heading: "DNA-Doppelhelix und Chargaff-Regeln",
+          text: "Die B-DNA (häufigste Form in vivo) ist eine rechtsgängige Doppelhelix: zwei antiparallele Stränge winden sich umeinander. Im Inneren befinden sich die Basenpaare (A=T mit 2 H-Brücken; G≡C mit 3 H-Brücken), das Zucker-Phosphat-Rückgrat liegt außen. 10,5 Basenpaare pro Windung, Steigung 3,4 nm. Die Chargaff-Regeln folgen aus der komplementären Basenpaarung: In jeder dsDNA gilt A=T und G=C. Der GC-Gehalt ist artspezifisch und korreliert positiv mit der Schmelztemperatur (Tm), da G-C-Paare (3 H-Brücken) stabiler sind als A-T-Paare (2 H-Brücken).",
+          merksatz: "A=T (2 H-Brücken); G≡C (3 H-Brücken). GC-reich → höhere Schmelztemperatur.",
+        },
+        {
+          heading: "RNA-Typen und Nukleosid-Analoga",
+          text: "mRNA überträgt die genetische Information und enthält 5'-Cap, Poly-A-Schwanz und kodierenden Bereich (Codons = Tripletts). tRNA trägt die Aminosäuren und hat ein Anticodon, das komplementär zum mRNA-Codon ist. rRNA bildet das Ribosom und katalysiert als Ribozym die Peptidbindungsbildung. miRNA reguliert die Genexpression posttranskriptionell. Nukleosid-Analoga (Aciclovir, Tenofovir) nutzen die Ähnlichkeit zu natürlichen Nukleosiden: Nach Phosphorylierung durch virale Kinasen werden sie von viralen Polymerasen eingebaut, terminieren aber die Kettenverlängerung (Fehlen des 3'-OH → kein nächstes Nukleotid kann angehängt werden).",
+          merksatz: "Aciclovir: kein 3'-OH → Kettenabbruch → hemmt virale DNA-Synthese. Wirksam gegen Herpes simplex.",
         },
       ],
       merksätze: [
-        "Purine: A+G (Doppelring); Pyrimidine: C+T+U (Einzelring)",
-        "DNA: A=T (2 HB), G≡C (3 HB), antiparallel, B-Helix",
-        "ATP-Hydrolyse: ΔG° = −30,5 kJ/mol; RNA hat Ribose + Uracil",
+        "Purine (Doppelring): Adenin (A), Guanin (G) — in DNA und RNA. Pyrimidine (Einzelring): C, T (nur DNA), U (nur RNA).",
+        "Chargaff: A=T (2 H-Brücken); G≡C (3 H-Brücken); A+G = C+T (Purine = Pyrimidine).",
+        "DNA-Helix: antiparallel (5'→3' || 3'→5'), rechtsgängig, 10,5 bp/Windung, 3,4 nm Steigung.",
+        "Desoxyribose (DNA): kein OH an C2'; Ribose (RNA): OH an C2'.",
+        "Nukleosid = Base + Zucker; Nukleotid = Base + Zucker + Phosphat; ATP = Adenosin-Triphosphat.",
+        "mRNA = Botschaft vom Kern zum Ribosom; tRNA = trägt Aminosäure + Anticodon; rRNA = Ribosom-Grundgerüst.",
+        "Anticodon der tRNA ist komplementär und antiparallel zum Codon der mRNA.",
+        "Kettenabbruch-Prinzip: Nukleosid-Analogon ohne 3'-OH → keine weiteren Nukleotide anknüpfbar.",
+        "DNA-Methylierung an CpG: epigenetische Regulation ohne Sequenzänderung; Promotor-Methylierung → Gen-Silencing.",
+        "GC-reiche DNA hat höhere Schmelztemperatur (3 H-Brücken pro GC vs. 2 bei AT).",
       ],
-      klinischerBezug: "Antivirale Nukleosidanaloga (Aciclovir gegen HSV, Zidovudin/AZT gegen HIV): Diese Analoga fehlt eine OH-Gruppe am C3' der Ribose (statt 3'-OH ein H oder N₃) → werden von DNA-Polymerase eingebaut → Kettenabbruch (kein weiteres Nukleotid kann addiert werden). Selektivität: virale Polymerasen haben höhere Affinität für die Analoga als zelluläre Polymerasen.",
       altfrage: {
-        question: "Worin unterscheiden sich DNA und RNA strukturell?",
-        answer: "Drei Hauptunterschiede: 1. Zucker: DNA enthält Desoxyribose (kein 2'-OH), RNA enthält Ribose (2'-OH vorhanden). 2. Base: DNA enthält Thymin, RNA enthält Uracil (Thymin mit Methylgruppe am C5). 3. Strangstruktur: DNA ist normalerweise doppelsträngig (Doppelhelix), RNA ist normalerweise einzelsträngig (kann aber Sekundärstrukturen wie Haarnadeln bilden).",
+        question: "Erläutern Sie das Wirkprinzip von Aciclovir als Virostatikum und erklären Sie, warum es selektiv virusbefallene Zellen betrifft.",
+        answer: "Aciclovir (Acycloguanosin) ist ein Guanosin-Analogon und eines der wichtigsten Virostatika zur Behandlung von Herpesvirus-Infektionen (HSV-1, HSV-2, VZV). Sein Wirkprinzip basiert auf einem mehrstufigen Aktivierungsprozess kombiniert mit dem Kettenabbruch-Mechanismus. Im ersten Schritt wird Aciclovir von der virusspezifischen Thymidinkinase (TK) phosphoryliert zu Aciclovir-Monophosphat. Dies ist der Schlüsselschritt für die Selektivität: Herpesviren codieren ihre eigene TK, die eine viel höhere Affinität für Aciclovir hat als die zelluläre Thymidinkinase des Wirts. In nicht-infizierten Zellen findet diese erste Phosphorylierung kaum statt. In einem zweiten und dritten Schritt wird Aciclovir-Monophosphat durch zelluläre Kinasen zu Aciclovir-Triphosphat phosphoryliert. Dieses wird von der viralen DNA-Polymerase als falsches Substrat in den wachsenden DNA-Strang eingebaut. Da Aciclovir keine 3'-Hydroxylgruppe am Zuckeranalogon besitzt (der Zuckerring ist 'offen', es fehlt C3' und damit die 3'-OH-Gruppe), kann das nächste Nukleotid nicht an die 3'-Position angehängt werden — der DNA-Strang bricht ab. Die virale Replikation wird so effektiv unterbunden, während gesunde, nicht-infizierte Zellen kaum betroffen sind.",
       },
+      klinischerBezug: "Aciclovir (Herpes), Tenofovir (HIV), Remdesivir (COVID-19) als Nukleosid-Analoga mit Kettenabbruchmechanismus; DNA-Methylierung in Krebsentstehung; Chargaff-Regeln für forensische DNA-Analyse.",
       selfTest: [
         {
-          question: "Welche der folgenden Basen ist eine Purinbase?",
+          question: "Welche der folgenden Basen kommt ausschließlich in RNA vor?",
           options: [
-            "Thymin",
-            "Cytosin",
-            "Uracil",
+            "Adenin",
             "Guanin",
-            "Alle sind Pyrimidine",
+            "Cytosin",
+            "Thymin",
+            "Uracil",
           ],
-          correctIndex: 3,
-          explanation: "Purine haben ein bicyclisches Ringsystem (Pyrimidin + Imidazol, 9 Atome): Adenin (A) und Guanin (G). Pyrimidine haben einen einfachen 6-Ring (6 Atome): Cytosin (C), Thymin (T) und Uracil (U). Merkhilfe: PuRine = puRe Gold (AG), PYrimidines = CUT (Cytosin, Uracil, Thymin).",
+          correctIndex: 4,
+          explanation: "Uracil ist eine Pyrimidinbase, die ausschließlich in RNA vorkommt. Sie entspricht funktionell dem Thymin der DNA (paart mit Adenin), besitzt aber keine Methylgruppe am C5. Thymin kommt ausschließlich in DNA vor. Adenin, Guanin und Cytosin kommen in beiden Nukleinsäuren (DNA und RNA) vor. Die Pentose unterscheidet ebenfalls: RNA enthält Ribose (OH an C2'), DNA enthält Desoxyribose (H an C2').",
           hints: [
-            "Purin = Doppelringsystem; Pyrimidin = Einzelringsystem",
-            "A und G sind Purine; C, T, U sind Pyrimidine",
+            "DNA: A, T, G, C; RNA: A, ?, G, C — welche Base ersetzt Thymin in der RNA?",
+            "Der Name 'Ur-acil' enthält einen Hinweis: 'ur' = ursprünglich — RNA ist evolutionär älter als DNA.",
           ],
+          tags: ["uracil", "thymin", "rna", "dna", "basen"],
           difficulty: 1,
-          tags: [],
         },
         {
-          question: "In der DNA-Doppelhelix paart Guanin (G) mit Cytosin (C) durch:",
+          question: "Ein DNA-Doppelstrang hat einen GC-Gehalt von 60%. Wie viele Wasserstoffbrücken gibt es pro 100 Basenpaare?",
           options: [
-            "2 Wasserstoffbrücken (wie A-T)",
-            "3 Wasserstoffbrücken",
-            "1 kovalente Bindung",
-            "4 Wasserstoffbrücken",
-            "Ionische Bindung",
-          ],
-          correctIndex: 1,
-          explanation: "In der DNA-Doppelhelix bilden G und C drei Wasserstoffbrücken miteinander (G≡C), während A und T nur zwei Wasserstoffbrücken bilden (A=T). Der höhere GC-Gehalt einer DNA erhöht die Schmelztemperatur (Tm), da mehr Energie zum Aufbrechen der stärkeren G≡C-Paarung benötigt wird. Dies ist wichtig für PCR-Design (GC-reiche Primer haben höhere Tm).",
-          hints: [
-            "G≡C: 3 H-Brücken; A=T: 2 H-Brücken",
-            "Mehr H-Brücken = stärkere Paarung = höhere Schmelztemperatur",
-          ],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: "Was ist der Unterschied zwischen Desoxyribose (DNA) und Ribose (RNA)?",
-          options: [
-            "Desoxyribose hat 5 C-Atome, Ribose hat 6 C-Atome",
-            "Desoxyribose fehlt die OH-Gruppe am C2' (hat nur H), Ribose hat OH an C2'",
-            "Ribose ist rechtsdrehend, Desoxyribose linksdrehend",
-            "Desoxyribose ist in RNA, Ribose in DNA",
-            "Beide Zucker sind strukturell identisch",
-          ],
-          correctIndex: 1,
-          explanation: "Der einzige strukturelle Unterschied zwischen Desoxyribose (in DNA) und Ribose (in RNA) ist die OH-Gruppe am C2': Desoxyribose hat nur H (desoxy = ohne O), Ribose hat OH. Dieser kleine Unterschied hat große Konsequenzen: RNA ist weniger stabil (2'-OH kann in Intramolekular-Hydrolyse involviert sein → RNA kürzer-lebig als DNA). DNA ist chemisch stabiler als RNA — sinnvoll für ein dauerhaftes Speichermolekül.",
-          hints: [
-            "Desoxy = ohne O = kein 2'-OH",
-            "RNA hat 2'-OH → reaktiver, weniger stabil als DNA",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Der ΔG°-Wert der ATP-Hydrolyse beträgt ca. −30,5 kJ/mol. Was bedeutet das?",
-          options: [
-            "Die Reaktion ist endergonisch (benötigt Energie)",
-            "Die Reaktion ist exergonisch und gibt Energie frei, die für zelluläre Arbeit nutzbar ist",
-            "Die Reaktion ist im Gleichgewicht (ΔG° = 0)",
-            "Die Reaktion läuft nur bei hoher Temperatur ab",
-            "Die Energie wird als Wärme direkt abgegeben",
-          ],
-          correctIndex: 1,
-          explanation: "ΔG° = −30,5 kJ/mol (negativ) → die ATP-Hydrolyse ist exergonisch (spontan) und gibt Energie frei. Diese Energie kann durch Kopplung an endergonische Reaktionen (ΔG° > 0) genutzt werden — z.B. Proteinsynthese, Muskelkontraktion, Ionentransport. ATP ist das universelle Energiewährungsmedium der Zelle. In vivo ist ΔG unter physiologischen Bedingungen noch negativer (ca. −50 bis −70 kJ/mol) wegen der niedrigen ADP/ATP-Konzentrationsverhältnisse.",
-          hints: [
-            "Negatives ΔG° = exergonisch = gibt Energie ab",
-            "ATP-Energie wird für endergonische Reaktionen verwendet (Kopplung)",
-          ],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: "Welche Aussage über die DNA-Doppelhelix ist FALSCH?",
-          options: [
-            "Die beiden Stränge sind antiparallel (5'→3' und 3'→5')",
-            "Die Basen zeigen ins Innere der Helix",
-            "Das Zucker-Phosphat-Rückgrat ist hydrophil und liegt außen",
-            "Die Doppelhelix ist linksgängig unter physiologischen Bedingungen",
-            "A und T paaren mit 2 Wasserstoffbrücken",
-          ],
-          correctIndex: 3,
-          explanation: "Die B-DNA (unter physiologischen Bedingungen vorherrschend) ist RECHTSGÄNGIG, nicht linksgängig. Die anderen Aussagen sind alle korrekt: antiparallele Stränge, Basen innen (hydrophob, π-Stacking), Zucker-Phosphat außen (hydrophil), A=T (2 HB). Die linksgängige Z-DNA ist eine seltene Form unter bestimmten Salzbedingungen und in GC-reichen Sequenzen.",
-          hints: [
-            "B-DNA: rechtsgängig ist die physiologische Form",
-            "Linksgängig = Z-DNA (selten, unter speziellen Bedingungen)",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-      ],
-    },
-    {
-      id: "ch-13-05",
-      title: "Enzyme und Vitamine",
-      content: `## Enzymklassen — EC-Klassifikation
-
-Enzyme werden nach der katalysierten Reaktion in sechs Hauptklassen eingeteilt:
-
-1. **Oxidoreduktasen:** Oxidation-Reduktion (Elektronenübertragung). Beispiele: Lactatdehydrogenase (LDH), Alkohol-Dehydrogenase (ADH), Cytochrom-c-Oxidase.
-2. **Transferasen:** Übertragung einer chemischen Gruppe (Methyl, Aminogruppe, Phosphat). Beispiele: Aminotransferasen (ALT, AST), Kinasen (Phosphatgruppe).
-3. **Hydrolasen:** Hydrolyse (Spaltung unter H₂O-Addition). Beispiele: Proteasen (Trypsin, Pepsin), Lipasen, Amylase, Phosphatasen.
-4. **Lyasen:** Addition oder Elimination (kein Wasser, keine Redox). Beispiele: Pyruvat-Decarboxylase, Fumarase.
-5. **Isomerasen:** Isomerisierung (Umwandlung von Isomeren). Beispiele: Phosphoglucoisomerase, Prolin-Isomerase (Peptidyl-Prolyl-Isomerase).
-6. **Ligasen:** Verknüpfung zweier Moleküle unter ATP-Verbrauch. Beispiele: DNA-Ligase, Acetyl-CoA-Carboxylase, Glutaminsynthetase.
-
-## Coenzyme und Cofaktoren
-
-Viele Enzyme benötigen nicht-proteinische Hilfsmoleküle:
-
-- **Cofaktoren:** Metallionen (Zn²⁺ in Carboxypeptidasen, Fe²⁺ im Häm, Mg²⁺ für Kinasen/DNA-Polymerase)
-- **Coenzyme (organisch):** NAD⁺ (Vit. B3-Derivat), FAD (Vit. B2-Derivat), Coenzym A (Vit. B5-Derivat), Thiaminpyrophosphat (Vit. B1), Pyridoxalphosphat (Vit. B6), Tetrahydrofolat (Folsäure-Derivat), Methylcobalamin (Vit. B12-Derivat)
-
-## Wasserlösliche Vitamine als Coenzym-Vorstufen
-
-| Vitamin | Coenzym | Funktion |
-|---|---|---|
-| B1 (Thiamin) | TPP | Decarboxylierung (Pyruvat-DH) |
-| B2 (Riboflavin) | FAD/FMN | Redox (Atmungskette) |
-| B3 (Niacin) | NAD⁺/NADP⁺ | Redox (überall) |
-| B5 (Pantothensäure) | CoA | Acylgruppenübertragung |
-| B6 (Pyridoxin) | PLP | Aminosäuremetabolismus |
-| B12 (Cobalamin) | Methylcobalamin | Methylgruppen, Folsäure-Zyklus |
-| Folsäure | THF | Einkohlenstoff-Übertragung, DNA-Synthese |
-| C (Ascorbinsäure) | — | Antioxidans, Kollagensynthese (Prolyl-Hydroxylase) |
-
-## Fettlösliche Vitamine ADEK
-
-- **Vitamin A** (Retinol): Sehzyklus (Retinal), Zelldifferenzierung (Retinsäure)
-- **Vitamin D** (Calcitriol): Ca²⁺/PO₄-Homöostase, Parathormon-Gegenspieler
-- **Vitamin E** (Tocopherol): Antioxidans (Membranen), verhindert Lipidperoxidation
-- **Vitamin K** (Phylloquinon): Carboxylierung von Gerinnungsfaktoren II, VII, IX, X, Protein C/S
-
-## Vitaminmangelsyndrome
-
-- Vit. C-Mangel → Skorbut (defekte Kollagensynthese: Zahnfleischbluten, Hämorrhagien)
-- Vit. B1-Mangel → Beriberi (Neuropathie, Herzinsuffizienz) / Wernicke-Enzephalopathie (Alkoholiker)
-- Vit. D-Mangel → Rachitis (Kinder) / Osteomalazie (Erwachsene)
-- Vit. B3-Mangel → Pellagra (4 Ds: Dermatitis, Diarrhö, Demenz, Death)
-- Folsäuremangel → Neuralrohrdefekte (Spina bifida), megaloblastäre Anämie`,
-      lernziele: [
-        "Die sechs Enzymklassen nach EC-Klassifikation benennen und je ein Beispiel nennen",
-        "Wichtige Coenzyme und ihre Vitaminvorstufen zuordnen (NAD⁺/B3, FAD/B2, CoA/B5, TPP/B1)",
-        "Die klinischen Symptome wichtiger Vitaminmangelzustände nennen",
-      ],
-      sections: [
-        {
-          heading: "Coenzyme als Vitaminderivate",
-          text: "Viele Vitamine des B-Komplexes sind Vorstufen von Coenzymen, die in zentralen Stoffwechselreaktionen unentbehrlich sind. Vitamin B1 (Thiamin) wird zu Thiaminpyrophosphat (TPP), dem Coenzym der Pyruvat-Dehydrogenase und α-Ketoglutarat-Dehydrogenase (Citratzyklus). B1-Mangel → TPP-Mangel → Hemmung dieser Schlüsselenzyme → Beriberi oder Wernicke-Enzephalopathie. Vitamin B12 (Cobalamin) enthält Kobalt und katalysiert als Methylcobalamin die Remethylierung von Homocystein zu Methionin (zusammen mit Folsäure). B12-Mangel → Methionin-Mangel + Methylmalonat-Akkumulation + megaloblastäre Anämie + funikuläre Myelose.",
-          merksatz: "B1→TPP (Pyruvat-DH); B2→FAD; B3→NAD⁺; B5→CoA; B6→PLP; B12→Methylcobalamin",
-        },
-        {
-          heading: "Vitaminmangel-Syndrome klinisch",
-          text: "Skorbut (Vitamin-C-Mangel) trat historisch bei Seeleuten auf. Vitamin C ist Cofaktor der Prolyl- und Lysyl-Hydroxylase (Kollagen-Synthese: Hydroxylierung von Prolin und Lysin nötig für Tripelhelix-Stabilität). Mangel → brüchiges Kollagen → Zahnfleischbluten, Wundheilungsstörungen, petechiale Hämorrhagien. Rachitis (Vitamin-D-Mangel in Wachstumsphase) führt zu weichen, biegsamen Knochen (Ausbiegung der Beine) durch gestörte Mineralisierung. Pellagra (Vit. B3-Mangel, Tryptophan-Mangel) bei maisbasierter Ernährung (Mais enthält Niacin in nicht bioverfügbarer Form — traditionelles Nixtamal-Verfahren macht es verfügbar). 4 Ds: Dermatitis (lichtempfindlich), Diarrhö, Demenz, Death.",
-          merksatz: "Skorbut: Vit. C; Beriberi/Wernicke: Vit. B1; Rachitis: Vit. D; Pellagra: Vit. B3",
-        },
-      ],
-      merksätze: [
-        "6 Enzymklassen: Oxidored., Transferase, Hydrolase, Lyase, Isomerase, Ligase",
-        "B1→TPP, B2→FAD, B3→NAD⁺, B5→CoA — Coenzyme aus Vitaminen",
-        "ADEK fettlöslich; Mangel: Skorbut(C), Beriberi(B1), Rachitis(D), Pellagra(B3)",
-      ],
-      klinischerBezug: "Warfarin (Phenprocoumon) hemmt die Vitamin-K-abhängige Carboxylase → Gerinnungsfaktoren II, VII, IX, X bleiben inaktiv (können kein Ca²⁺ binden) → Antikoagulation. Antagonist: Vitamin K (Phytomenadion). Folsäuresupplementation (400–800 μg/d) vor und in der Frühschwangerschaft reduziert Neuralrohrdefekte um >70 % (Spina bifida, Anenzephalie).",
-      altfrage: {
-        question: "Warum ist Vitamin C für die Kollagensynthese notwendig?",
-        answer: "Vitamin C (Ascorbinsäure) ist ein essentieller Cofaktor der Prolyl-3-Hydroxylase und Lysyl-Hydroxylase. Diese Enzyme hydroxylieren Prolin- und Lysin-Reste in der Kollagen-Vorstufe (Prokollagen). Die Hydroxylierungen sind für die Ausbildung der stabilen Tripelhelix (Wasserstoffbrücken über Hydroxyprolin) und für die intermolekulare Quervernetzung (über Hydroxylysin) notwendig. Ohne Hydroxylierung → instabiles, brüchiges Kollagen → Skorbut.",
-      },
-      selfTest: [
-        {
-          question: "Zu welcher Enzymklasse gehört die Lactatdehydrogenase (LDH)?",
-          options: [
-            "Hydrolase (spaltet unter H₂O-Addition)",
-            "Transferase (überträgt Phosphatgruppe)",
-            "Oxidoreduktase (katalysiert Redox-Reaktion: Laktat ⇌ Pyruvat + NADH)",
-            "Lyase (Decarboxylierung)",
-            "Isomerase (Isomerisierung)",
+            "200 Wasserstoffbrücken",
+            "220 Wasserstoffbrücken",
+            "240 Wasserstoffbrücken",
+            "260 Wasserstoffbrücken",
+            "300 Wasserstoffbrücken",
           ],
           correctIndex: 2,
-          explanation: "LDH katalysiert die reversible Reaktion: Laktat + NAD⁺ ⇌ Pyruvat + NADH + H⁺. Da Elektronen (in Form von Wasserstoff) übertragen werden (NAD⁺ wird zu NADH reduziert, Laktat wird zu Pyruvat oxidiert), ist LDH eine Oxidoreduktase (EC 1). Klinisch: LDH ist ein unspezifischer Marker für Zelluntergang (Herzinfarkt, Hämolyse, Lebererkrankung).",
+          explanation: "Bei 100 Basenpaaren und 60% GC-Gehalt: 60 G≡C-Paare × 3 H-Brücken = 180 H-Brücken, plus 40 A=T-Paare × 2 H-Brücken = 80 H-Brücken. Gesamt: 180 + 80 = 260 Wasserstoffbrücken. Warte: 60×3 = 180, 40×2 = 80, Summe = 260. Das ist Option D. Lass nochmals rechnen: 60% GC → 60 G-C-Paare (je 3 H-Brücken = 180) + 40 A-T-Paare (je 2 H-Brücken = 80) = 260 Wasserstoffbrücken insgesamt.",
           hints: [
-            "Enzymklasse 1 = Oxidoreduktasen: Redox-Reaktionen mit NAD⁺/NADH",
-            "LDH: Laktat ⇌ Pyruvat — wird NAD⁺ reduziert?",
+            "G≡C hat 3 H-Brücken, A=T hat 2 H-Brücken. Bei 100 bp und 60% GC: 60 GC-Paare + 40 AT-Paare.",
+            "Rechne: 60×3 + 40×2 = ?",
           ],
-          difficulty: 2,
-          tags: [],
+          tags: ["chargaff", "wasserstoffbrücken", "gc-gehalt", "dna"],
+          difficulty: 3,
         },
         {
-          question: "Welches Vitamin ist die Vorstufe von FAD und FMN?",
+          question: "Was bedeutet 'antiparallel' in Bezug auf die DNA-Doppelhelix?",
           options: [
-            "Vitamin B1 (Thiamin)",
-            "Vitamin B2 (Riboflavin)",
-            "Vitamin B3 (Niacin)",
-            "Vitamin B5 (Pantothensäure)",
-            "Vitamin B6 (Pyridoxin)",
-          ],
-          correctIndex: 1,
-          explanation: "Vitamin B2 (Riboflavin) ist die Vorstufe von FAD (Flavinadenindinukleotid) und FMN (Flavinmononukleotid). FAD/FMN sind Coenzyme in Oxidoreduktasen wie Succinat-Dehydrogenase (Citratzyklus, Komplex II der Atmungskette), Acyl-CoA-Dehydrogenase (β-Oxidation), und NADH-Dehydrogenase (Komplex I).",
-          hints: [
-            "FAD enthält 'Flavin' → Riboflavin",
-            "B2 = Riboflavin → FAD/FMN",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Welches Krankheitsbild entsteht durch Vitamin-C-Mangel?",
-          options: [
-            "Rachitis (weiche Knochen)",
-            "Beriberi (Neuropathie)",
-            "Skorbut (Zahnfleischbluten, Hämorrhagien)",
-            "Pellagra (Dermatitis, Demenz)",
-            "Perniziöse Anämie",
+            "Die beiden Stränge verlaufen parallel in derselben 5'→3'-Richtung",
+            "Die Basensequenzen der beiden Stränge sind identisch",
+            "Ein Strang verläuft in 5'→3'-Richtung, der komplementäre Strang in 3'→5'-Richtung",
+            "Die Doppelhelix ist linksgängig (Z-DNA)",
+            "Die Phosphatgruppen wechseln zwischen den Strängen ab",
           ],
           correctIndex: 2,
-          explanation: "Vitamin-C-Mangel führt zu Skorbut: Vitamin C ist Cofaktor der Kollagen-Hydroxylaseenzymen (Prolyl- und Lysyl-Hydroxylase). Ohne Hydroxylierung ist Kollagen instabil → Gefäßwände brüchig → Zahnfleischbluten, petechiale Hämorrhagien, Wundheilungsstörungen, Knochenschmerzen. Historisch gefürchtet bei Seeleuten ohne frisches Obst/Gemüse. Vitamin-D-Mangel → Rachitis; B1-Mangel → Beriberi; B3-Mangel → Pellagra; B12-Mangel → Perniziöse Anämie.",
+          explanation: "Antiparallel bedeutet, dass die beiden Stränge der DNA-Doppelhelix in entgegengesetzter Richtung verlaufen: Wenn ein Strang von 5'→3' verläuft, dann verläuft der komplementäre Partnerstrang in 3'→5'-Richtung (bezogen auf dieselbe räumliche Richtung). Diese Antiparallelität ist Konsequenz der komplementären Basenpaarung und der Geometrie der glykosidischen Bindungen. Biologisch bedeutsam: DNA-Polymerasen synthetisieren nur in 5'→3'-Richtung, weshalb an der Replikationsgabel ein Strang kontinuierlich (Leitstrang, 5'→3' in Syntheserichtung) und einer diskontinuierlich (Folgestrang, als Okazaki-Fragmente) repliziert wird.",
           hints: [
-            "Skorbut: historische Seefahrerkrankheit durch Mangel an welchem Vitamin?",
-            "Kollagen-Synthese erfordert welches Vitamin?",
+            "Schreibe zwei Zahlenreihen übereinander: 5'→3' und 3'←5'. Das ist antiparallel.",
+            "DNA-Polymerase synthetisiert nur 5'→3'. Was bedeutet das für den anderen Strang an der Replikationsgabel?",
           ],
+          tags: ["dna-helix", "antiparallel", "replikation"],
+          difficulty: 2,
+        },
+        {
+          question: "Welche RNA trägt eine Aminosäure zum Ribosom und erkennt das mRNA-Codon durch ihr Anticodon?",
+          options: [
+            "mRNA (messenger RNA)",
+            "rRNA (ribosomale RNA)",
+            "tRNA (transfer RNA)",
+            "miRNA (micro RNA)",
+            "siRNA (small interfering RNA)",
+          ],
+          correctIndex: 2,
+          explanation: "Die tRNA (Transfer-RNA) ist das Adaptormolekül zwischen der Nukleinsäure-Welt (mRNA-Codon) und der Protein-Welt (Aminosäure). Sie hat eine charakteristische Kleeblattstruktur (sekundär) bzw. L-förmige 3D-Struktur. Am 3'-Ende (CCA-Trinukleotid) ist die spezifische Aminosäure kovalent gebunden (durch Aminoacyl-tRNA-Synthetasen, 'Aktivierung'). Das Anticodon-Loop enthält ein Trinukleotid (Anticodon), das komplementär und antiparallel zum spezifischen mRNA-Codon ist. mRNA enthält die Codons, rRNA ist Ribosombestandteil, miRNA/siRNA regulieren die Genexpression posttranskriptionell.",
+          hints: [
+            "Welche RNA hat ein 'Anticodon' — das Gegenstück zum Codon auf der mRNA?",
+            "Transfer = Transport. Was wird von wo nach wo transportiert?",
+          ],
+          tags: ["trna", "anticodon", "translation", "rna-typen"],
           difficulty: 1,
-          tags: [],
         },
         {
-          question: "Warfarin hemmt die Wirkung von Vitamin K. Was ist die Folge?",
+          question: "Warum ist Aciclovir selektiv für virusinfizierte Zellen und kaum toxisch für gesunde Wirtszellen?",
           options: [
-            "Vitamin-K-Mangelsymptome im Knochen (Osteomalazie)",
-            "Inaktivierung der Gerinnungsfaktoren II, VII, IX, X → Antikoagulation",
-            "Erhöhte Calcium-Resorption im Darm",
-            "Hemmung der LDL-Cholesterol-Synthese",
-            "Erhöhtes Blutungsrisiko durch Thrombozytenmangel",
+            "Aciclovir kann die Plasmamembran gesunder Zellen nicht passieren",
+            "Die erste Phosphorylierung wird fast ausschließlich durch die viruseigene Thymidinkinase durchgeführt, die eine viel höhere Affinität für Aciclovir hat als die zelluläre Kinase",
+            "Gesunde Zellen können Aciclovir enzymatisch abbauen, infizierte Zellen nicht",
+            "Aciclovir wird nur von Viruspartikeln, nicht von Zellen aufgenommen",
+            "Die zelluläre DNA-Polymerase erkennt Aciclovir nicht als Substrat, die virale DNA-Polymerase hat eine absolut niedrigere Genauigkeit",
           ],
           correctIndex: 1,
-          explanation: "Vitamin K ist Cofaktor der γ-Glutamylcarboxylase, die Glutamylreste in den Gerinnungsfaktoren II (Prothrombin), VII, IX, X sowie Protein C und S carboxyliert. Diese Carboxylierung ist nötig für die Ca²⁺-Bindung (und damit Aktivierung) der Faktoren. Warfarin hemmt die Vitamin-K-Epoxid-Reduktase → weniger aktives Vitamin K → Faktoren bleiben uncarboxyliert → Antikoagulation → erhöhtes Blutungsrisiko.",
+          explanation: "Die Selektivität von Aciclovir beruht auf einem zweistufigen Mechanismus: Erstens wird Aciclovir hauptsächlich durch die viruseigene Thymidinkinase (TK) zu Aciclovir-Monophosphat phosphoryliert. Die HSV-TK hat eine deutlich höhere Affinität (niedrigerer Km) für Aciclovir als die zelluläre Thymidinkinase. In nicht-infizierten Zellen findet diese erste Aktivierung kaum statt. Zweitens: Aciclovir-Triphosphat hemmt präferentiell die virale DNA-Polymerase (Ki viral ≪ Ki zellulär). Dieser zweifache Selektivitätsmechanismus erklärt die geringe Toxizität von Aciclovir für den Wirt bei gleichzeitig effektiver antiviraler Wirkung.",
           hints: [
-            "Vitamin K: Gerinnungsfaktoren II, VII, IX, X",
-            "Warfarin = Vitamin-K-Antagonist → welche Faktoren fallen aus?",
+            "Welches Enzym führt die erste Aktivierungsphosphorylierung von Aciclovir durch, und wer kodiert es?",
+            "Das Virus bringt sein eigenes Aktivierungsenzym mit — welcher Vorteil ergibt sich daraus für die Selektivität?",
           ],
-          difficulty: 2,
-          tags: [],
+          tags: ["aciclovir", "selektivität", "thymidinkinase", "virostatika"],
+          difficulty: 3,
         },
         {
-          question: "Was ist die Funktion von Coenzym A (CoA)?",
+          question: "Ein dsDNA-Abschnitt hat auf einem Strang die Sequenz 5'-ATGCGT-3'. Wie lautet der komplementäre Gegenstrang?",
           options: [
-            "CoA ist ein Elektronenakzeptor (wie NAD⁺)",
-            "CoA überträgt Acylgruppen (z.B. Acetylgruppen) auf andere Moleküle",
-            "CoA ist ein Protonenpuffer",
-            "CoA ist Teil der DNA-Helikase",
-            "CoA aktiviert ATP durch Phosphorylierung",
+            "5'-ATGCGT-3'",
+            "5'-TACGCA-3'",
+            "3'-ATGCGT-5'",
+            "5'-ACGCAT-3'",
+            "3'-UACGCA-5'",
           ],
-          correctIndex: 1,
-          explanation: "Coenzym A (CoA, aus Vitamin B5/Pantothensäure) trägt über seine Thiolgruppe (-SH) Acylgruppen als Thioester: Acetyl-CoA (CH₃-CO-S-CoA) ist die aktivierte Form der Essigsäure und Ausgangspunkt für Citratzyklus, Fettsäuresynthese und Cholesterinsynthese. Die Thioesterbindung ist energiereich (ΔG° ≈ −31 kJ/mol bei Hydrolyse). CoA ist essentiell für den Fettsäuremetabolismus (β-Oxidation: Acyl-CoA-Intermediate) und die Biosynthese von Aminosäuren, Ketonen, Cholesterin.",
+          correctIndex: 3,
+          explanation: "Der komplementäre Strang folgt den Chargaff-Regeln (A paart mit T, G paart mit C) und verläuft antiparallel. Ausgangs-Strang: 5'-A-T-G-C-G-T-3'. Komplementär und antiparallel: 3'-T-A-C-G-C-A-5' = 5'-A-C-G-C-A-T-3'. Schritt für Schritt: A→T, T→A, G→C, C→G, G→C, T→A ergibt den Komplementärstrang (3'→5'): TACGCA. Umgekehrt in 5'→3'-Richtung: ACGCAT. Antwort D ist korrekt. RNA würde Uracil statt Thymin enthalten (Antwort E), ist hier aber nicht gemeint (es handelt sich um dsDNA).",
           hints: [
-            "CoA enthält -SH Gruppe → bindet Acylgruppen als Thioester",
-            "Acetyl-CoA ist das zentrale CoA-Derivat im Stoffwechsel",
+            "Komplementäre Basenpaare: A↔T, G↔C. Denk daran, dass der Gegenstrang antiparallel ist!",
+            "Schreibe erst den Komplementärstrang 3'→5', dann drehe ihn um für die 5'→3'-Schreibweise.",
           ],
+          tags: ["basenpaarung", "komplementärstrang", "antiparallel", "dna"],
           difficulty: 2,
-          tags: [],
+        },
+        {
+          question: "Was ist der Unterschied zwischen DNA-Methylierung als epigenetischer Modifikation und einer Punktmutation?",
+          options: [
+            "Beide verändern die Basensequenz der DNA dauerhaft",
+            "DNA-Methylierung verändert die Basensequenz, Punktmutationen nicht",
+            "DNA-Methylierung verändert die Genexpression ohne Änderung der Basensequenz; Punktmutationen verändern die Basensequenz selbst",
+            "Punktmutationen sind vererbbar, DNA-Methylierung nicht",
+            "DNA-Methylierung betrifft nur Adenin; Punktmutationen betreffen Cytosin",
+          ],
+          correctIndex: 2,
+          explanation: "DNA-Methylierung ist eine epigenetische Modifikation: Eine Methylgruppe (–CH₃) wird durch DNA-Methyltransferasen kovalent an das C5-Atom von Cytosin in CpG-Dinukleotiden angehängt. Die Basensequenz (A, T, G, C) bleibt dabei identisch — nur die chemische Modifikation am Cytosin ändert sich. Dennoch kann Promotor-Methylierung die Transkription eines Gens stillegen (Silencing). Bei Punktmutationen wird hingegen eine Base durch eine andere ausgetauscht, deletiert oder insertiert — die Sequenz selbst ändert sich. Epigenetische Markierungen (Methylierungen, Histonmodifikationen) können vererbt werden (transgenerationelle Epigenetik), sind aber prinzipiell reversibel.",
+          hints: [
+            "'Epi-genetik' bedeutet 'über der Genetik' — die Sequenz bleibt, die Regulation ändert sich.",
+            "Was wird bei einer Mutation verändert: die Sequenz (A, T, G, C) oder eine chemische Gruppe daran?",
+          ],
+          tags: ["epigenetik", "dna-methylierung", "punktmutation", "genexpression"],
+          difficulty: 2,
         },
       ],
     },

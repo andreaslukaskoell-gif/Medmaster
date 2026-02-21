@@ -2,419 +2,746 @@ import type { Kapitel } from '../types';
 
 export const chemKap2: Kapitel = {
   id: 'chem-kap2',
-  title: 'Mikrokosmos — Quantenphysik und Spektroskopie',
+  title: 'Mikrokosmos — Moleküle und Wechselwirkungen',
   subject: 'chemie',
   icon: '🌀',
-  estimatedTime: '40 min',
+  estimatedTime: '90 min',
   unterkapitel: [
+    // ─────────────────────────────────────────────────────────────
+    // UK 1 — Intermolekulare Wechselwirkungen
+    // ─────────────────────────────────────────────────────────────
     {
       id: 'ch-2-01',
-      title: 'Welle-Teilchen-Dualismus und Unschärferelation',
-      content: `## Welle-Teilchen-Dualismus
+      title: 'Intermolekulare Wechselwirkungen',
+      content: `## Überblick
 
-Im frühen 20. Jahrhundert wurde deutlich, dass Licht sowohl Wellen- als auch Teilcheneigenschaften besitzt (Photoeffekt, Doppelspaltexperiment). Louis de Broglie postulierte 1924, dass auch Materie Welleneigenschaften hat. Die **de-Broglie-Wellenlänge** eines Teilchens mit Masse m und Impuls p ist: λ = h/p = h/(mv), wobei h = 6,626×10⁻³⁴ J·s das Planck'sche Wirkungsquantum ist. Für Elektronen im Atom liegen diese Wellenlängen im Angström-Bereich — vergleichbar mit Atomabständen.
+Zwischen Molekülen und Ionen wirken **nicht-kovalente Wechselwirkungen**, die zwar schwächer als kovalente Bindungen sind, aber gemeinsam physikalische Eigenschaften (Siedepunkte, Löslichkeit) und biologische Strukturen (Proteinfaltung, DNA-Doppelhelix) bestimmen. Man unterscheidet drei Hauptklassen van-der-Waals-Kräfte sowie die besonders starken **Wasserstoffbrückenbindungen**.
 
-## Heisenberg'sche Unschärferelation
+## Van-der-Waals-Kräfte
 
-Werner Heisenberg formulierte 1927 eine fundamentale Grenze der Messbarkeit: Ort x und Impuls p eines Teilchens können nicht gleichzeitig beliebig genau bestimmt werden. Mathematisch: Δx · Δp ≥ ℏ/2, wobei ℏ = h/(2π) das reduzierte Planck'sche Wirkungsquantum ist. Dies ist keine technische Limitation, sondern ein Naturgesetz. Eine genauere Ortsbestimmung (kleines Δx) erzwingt zwingend eine größere Impulsunschärfe (großes Δp) und umgekehrt.
+**London-Dispersionskräfte** (induziert-Dipol–induziert-Dipol):
+Entstehen durch kurzzeitige Unsymmetrien in der Elektronenverteilung, die in Nachbarmolekülen einen **induzierten Dipol** erzeugen. Sie existieren in *allen* Molekülen (polar wie unpolar). Ihre Stärke steigt mit zunehmender **Molmasse** (mehr Elektronen → größere Polarisierbarkeit) und mit größerer Moleküloberfläche. Beispiel: n-Pentan (Siedepunkt 36 °C) siedet höher als Neopentan (9,5 °C) trotz gleicher Summenformel, weil n-Pentan mehr Kontaktfläche besitzt.
 
-## Vom Bohrschen Modell zur Quantenmechanik
+**Keesom-Wechselwirkungen** (Dipol–Dipol):
+Wirken zwischen Molekülen mit permanentem Dipolmoment. Die positiven Enden zweier Dipole ordnen sich zu den negativen Enden benachbarter Moleküle aus. Stärke ∝ μ²/r⁶ (μ = Dipolmoment, r = Abstand). Beispiele: HCl, Aceton.
 
-Das Bohrsche Modell versagte bei Mehrelektronenatomen. Erwin Schrödinger entwickelte 1926 die Wellengleichung (Schrödinger-Gleichung), deren Lösungen die **Wellenfunktionen ψ** (Orbitale) sind. Das Betragsquadrat |ψ|² gibt die **Aufenthaltswahrscheinlichkeit** des Elektrons an einem bestimmten Ort an. Orbitale sind daher keine festen Bahnen, sondern dreidimensionale Wahrscheinlichkeitsdichten.
+**Debye-Wechselwirkungen** (Dipol–induzierter Dipol):
+Ein permanenter Dipol polarisiert ein benachbartes unpolares Molekül. Geringer als London- und Keesom-Kräfte, aber stets vorhanden, wenn polare und unpolare Moleküle benachbart sind.
 
-## Bedeutung für das Atommodell
+## Wasserstoffbrückenbindungen
 
-Die Unschärferelation erklärt, warum Elektronen keine definierten Bahnen haben können: Wäre der Ort eines Elektrons im Atom exakt bekannt, wäre seine kinetische Energie (durch die Impulsunschärfe) enorm groß und das Atom instabil. Die räumliche Ausdehnung der Orbitale ist daher eine direkte Folge der Quantenmechanik und nicht eine Messungenauigkeit.`,
+Wasserstoffbrücken (H-Brücken) entstehen, wenn ein **elektropositives H-Atom**, das kovalent an ein stark elektronegatives Atom X gebunden ist (X = N, O oder F), mit dem freien Elektronenpaar eines weiteren elektronegativen Atoms Y (Y = N, O, F) wechselwirkt:
+
+**X–H ··· Y** (Bindungslänge ≈ 170–200 pm, Energie 10–40 kJ/mol)
+
+H-Brücken sind **nicht kovalent**, aber deutlich stärker als gewöhnliche van-der-Waals-Kräfte. Sie sind **gerichtet** (optimaler Winkel ≈ 180°) und **kooperativ** (mehrere H-Brücken stabilisieren sich gegenseitig).
+
+**Biologische Beispiele:**
+- *Wasser*: jedes Molekül kann bis zu 4 H-Brücken ausbilden (2 Donoren, 2 Akzeptoren) → hohe Siedetemperatur (100 °C), hohe Verdampfungswärme, Anomalie des Wassers
+- *DNA-Doppelhelix*: A–T bildet 2 H-Brücken, G–C bildet 3 → G-C-reiche DNA ist thermisch stabiler (relevant für PCR-Denaturierungstemperatur)
+- *Proteine*: α-Helix (i–i+4 H-Brücken entlang der Helix) und β-Faltblatt (intermolekulare H-Brücken zwischen Strängen) werden durch H-Brücken stabilisiert
+
+## Stärkeranking der Bindungen und Wechselwirkungen
+
+**Ionenbindung > Kovalente Bindung > Wasserstoffbrücken > Dipol–Dipol (Keesom) > London-Dispersion**
+
+Typische Energien im Vergleich:
+| Wechselwirkung | Energie |
+|---|---|
+| Kovalente Bindung (C–C) | ~350 kJ/mol |
+| Ionenbindung (NaCl) | ~786 kJ/mol (Gitterenergie) |
+| Wasserstoffbrücke | 10–40 kJ/mol |
+| Dipol–Dipol | 3–10 kJ/mol |
+| London-Dispersion | 0,05–40 kJ/mol |
+
+## Klinische Relevanz
+
+Die Wasserlöslichkeit von Pharmaka hängt direkt von intermolekularen Wechselwirkungen ab: **polare, H-Brücken-bildende Moleküle** (Paracetamol, viele Antibiotika) sind wasserlöslich und renal eliminierbar; **unpolare Moleküle** (Anästhetika, Steroide) akkumulieren in Lipidphasen. Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydrophoben Wechselwirkungen (London-Kräften) und ionischen Kontakten — **Denaturierung** durch Hitze, Harnstoff oder pH-Änderung bricht dieses Netzwerk auf. Bei der **PCR** wird die DNA durch Erhitzen auf 94–98 °C (Denaturierungsschritt) vollständig aufgebrochen, weil alle H-Brücken zwischen den Basenpaaren überwunden werden.`,
+
       lernziele: [
-        "Den Welle-Teilchen-Dualismus erklären und die de-Broglie-Wellenlänge berechnen",
-        "Die Heisenberg'sche Unschärferelation formulieren und ihre physikalische Bedeutung erläutern",
-        "Den Übergang vom Bohrschen Modell zum quantenmechanischen Orbitalmodell begründen",
+        'Die drei Klassen der van-der-Waals-Kräfte (London, Keesom, Debye) und ihre Entstehungsmechanismen erklären können.',
+        'Wasserstoffbrückenbindungen (X–H···Y, X/Y = N, O, F) in ihrer Stärke, Geometrie und biologischen Bedeutung beschreiben können.',
+        'Das Stärkeranking intermolekularer Wechselwirkungen kennen und auf Siedepunkte und Löslichkeit anwenden können.',
+        'Den Einfluss intermolekularer Kräfte auf Proteinfaltung, DNA-Stabilität und Pharmakologie erläutern können.',
+        'Wasserstoffbrücken in konkreten Biomolekülen (Wasser, DNA, α-Helix, β-Faltblatt) identifizieren können.',
       ],
+
       sections: [
         {
-          heading: "De-Broglie-Wellenlänge: Rechnung und Bedeutung",
-          text: "Die de-Broglie-Wellenlänge λ = h/p verknüpft Wellen- und Teilcheneigenschaften. Für ein Elektron (m=9,1×10⁻³¹ kg) mit Geschwindigkeit v=10⁶ m/s ergibt sich λ = 6,626×10⁻³⁴ / (9,1×10⁻³¹ × 10⁶) ≈ 7×10⁻¹⁰ m = 0,7 Å. Dieser Wert liegt im Bereich typischer Atomabstände (~1-3 Å), was erklärt, warum Quanteneffekte für Elektronen in Atomen relevant sind. Für makroskopische Objekte (z.B. ein Tennisball, m=0,06 kg, v=50 m/s) wäre λ ≈ 2×10⁻³⁴ m — praktisch nicht messbar, weshalb Quanteneffekte im Alltag keine Rolle spielen.",
+          heading: 'London-Dispersionskräfte — überall, aber unsichtbar',
+          text: 'London-Kräfte basieren auf spontanen Dipolen, die durch Quantenfluktuationen in der Elektronenverteilung entstehen. Obwohl jede einzelne Wechselwirkung sehr schwach ist, summieren sie sich über viele Atome zu beachtlicher Stärke. Große, polarisierbare Moleküle (lange Kohlenwasserstoffketten, halogenierte Verbindungen) haben starke London-Kräfte und hohe Siedepunkte. Im menschlichen Körper halten London-Kräfte unpolare Lipidschwänze in Membranen zusammen und verankern hydrophobe Aminosäurereste im Proteininneren.',
+          merksatz: 'Mehr Elektronen = mehr Polarisierbarkeit = stärkere London-Kräfte = höherer Siedepunkt.',
         },
         {
-          heading: "Orbitale als Wahrscheinlichkeitsdichten",
-          text: "Die Wellenfunktion ψ (Psi) eines Elektrons ist eine mathematische Funktion des Ortes. Sie hat an sich keine direkte physikalische Bedeutung, aber ihr Betragsquadrat |ψ|² gibt die Wahrscheinlichkeitsdichte an — also die Wahrscheinlichkeit, das Elektron in einem kleinen Volumenelement dV zu finden, beträgt |ψ|²dV. Elektronen in s-Orbitalen haben die höchste Aufenthaltswahrscheinlichkeit nahe dem Kern (kugelförmige Verteilung), während p-Orbitale zwei Lappen entlang einer Achse zeigen, mit einem Knotenpunkt im Kern. Diese räumliche Struktur der Orbitale ist entscheidend für das Verständnis chemischer Bindungen.",
+          heading: 'Wasserstoffbrücken — die Architekten des Lebens',
+          text: 'Wasserstoffbrücken sind die wichtigsten nicht-kovalenten Wechselwirkungen in der Biologie. Sie verleihen Wasser seine einzigartigen Eigenschaften (Kohäsion, Kapillarität, hohe Wärmekapazität), stabilisieren die Sekundärstruktur von Proteinen und sichern die Komplementarität der DNA-Stränge. Die Regel X = N, O, F (und Y = N, O, F) ist essenziell: C–H-Bindungen bilden normalerweise keine nennenswerten H-Brücken (H zu wenig elektropositiv). Atome der zweiten Periode mit hoher Elektronegativität sind die klassischen Partner.',
+          merksatz: 'H-Brücke = X–H···Y mit X, Y ∈ {N, O, F}; Energie 10–40 kJ/mol; gerichtet und kooperativ.',
+        },
+        {
+          heading: 'Stärkeranking und physikalische Konsequenzen',
+          text: 'Das Stärkeranking bestimmt Siedepunkte: HF (H-Brücken) siedet bei 19 °C, HCl (nur Dipol-Dipol + London) bei −85 °C, obwohl Cl viel schwerer als F ist. Wasser siedet wegen seines dichten H-Brücken-Netzwerks erst bei 100 °C. Für Pharmaka gilt: je mehr H-Brücken-fähige Gruppen (OH, NH, C=O), desto wasserlöslicher und desto schlechter lipidlöslich → beeinflusst Resorption und Verteilung im Körper (Lipinski-Regel).',
+          merksatz: 'Anomale Siedepunkte von H₂O, HF, NH₃ gegenüber Homologen → Beweis für H-Brücken.',
         },
       ],
+
       merksätze: [
-        "de Broglie: λ = h/p — auch Elektronen haben Wellenlänge",
-        "Heisenberg: Δx·Δp ≥ ℏ/2 — Ort und Impuls nie gleichzeitig scharf",
-        "|ψ|² = Aufenthaltswahrscheinlichkeit des Elektrons im Orbital",
+        'London-Dispersion: temporäre Dipole in allen Molekülen; wächst mit Molmasse und Elektronenzahl.',
+        'Keesom-Wechselwirkung: permanente Dipol–Dipol-Kräfte; nur bei polaren Molekülen.',
+        'Debye-Wechselwirkung: permanenter Dipol polarisiert Nachbarmolekül; stets begleitend.',
+        'Wasserstoffbrücke: X–H···Y (X, Y = N, O, F); 10–40 kJ/mol; viel stärker als übliche van-der-Waals.',
+        'Wasser kann 4 H-Brücken bilden → außergewöhnlich hoher Siedepunkt (100 °C).',
+        'DNA: A–T = 2 H-Brücken; G–C = 3 H-Brücken → GC-reich = höhere Schmelztemperatur.',
+        'α-Helix und β-Faltblatt in Proteinen werden durch H-Brücken stabilisiert.',
+        'Stärkeranking: Ionenbindung > kovalent > H-Brücken > Dipol–Dipol > London.',
+        'Denaturierung = Zerstörung nicht-kovalenter Wechselwirkungen (H-Brücken, hydrophob) → Entfaltung.',
+        'PCR-Denaturierungsschritt (94 °C) bricht H-Brücken zwischen DNA-Strängen auf.',
       ],
-      klinischerBezug: "Die Wellennatur von Elektronen wird in der Elektronenmikroskopie genutzt: Da Elektronen bei typischen Beschleunigungsspannungen Wellenlängen von ~0,004 nm erreichen, ermöglichen sie eine Auflösung weit unter der sichtbaren Lichtmikroskopie (~200 nm) und lassen ultrastrukturelle Details biologischer Proben sichtbar machen.",
+
       altfrage: {
-        question: "Warum haben Elektronen im Atom keine definierten Bahnen wie im Bohrschen Modell?",
-        answer: "Aufgrund der Heisenberg'schen Unschärferelation (Δx·Δp ≥ ℏ/2) kann Ort und Impuls eines Elektrons nicht gleichzeitig beliebig genau bekannt sein. Wäre der Ort exakt definiert (feste Bahn), wäre der Impuls völlig unbestimmt, was zu unendlich hoher kinetischer Energie führen würde. Stattdessen werden Elektronen durch Orbitale — Aufenthaltswahrscheinlichkeiten |ψ|² — beschrieben.",
+        question: 'Erläutern Sie die Wasserstoffbrückenbindung am Beispiel des Wassers und der DNA. Erklären Sie dabei die strukturellen Voraussetzungen, typische Energiewerte und klinisch relevante Konsequenzen.',
+        answer: `Eine Wasserstoffbrückenbindung entsteht, wenn ein Wasserstoffatom, das an ein stark elektronegatives Atom X (N, O oder F) gebunden ist, mit dem freien Elektronenpaar eines weiteren elektronegativen Atoms Y (ebenfalls N, O oder F) wechselwirkt. Das H-Atom ist durch die Elektronegativität von X elektropositiv polarisiert und wird daher elektrostatisch von Y angezogen. Die Bindungsenergie liegt bei 10–40 kJ/mol, also deutlich geringer als kovalente Bindungen (~350 kJ/mol für C–C), aber erheblich stärker als gewöhnliche van-der-Waals-Kräfte.
+
+Im **Wasser** kann jedes Molekül bis zu vier H-Brücken ausbilden: zwei als Donor (über die zwei O–H-Bindungen) und zwei als Akzeptor (über die zwei freien Elektronenpaare des Sauerstoffs). Dieses dichte Netzwerk erklärt die anomal hohe Siedetemperatur (100 °C statt der nach Molmasse erwarteten ca. −80 °C), die hohe Verdampfungswärme, die Oberflächenspannung sowie die Anomalie des Wassers (Dichtemaximum bei 4 °C wegen H-Brücken-Geometrie im Eis).
+
+In der **DNA-Doppelhelix** halten H-Brücken die beiden antiparallelen Stränge zusammen: Adenin–Thymin bildet 2 H-Brücken, Guanin–Cytosin bildet 3 H-Brücken. GC-reiche DNA-Abschnitte sind daher thermisch stabiler. Diese Eigenschaft wird bei der **PCR (Polymerase-Kettenreaktion)** ausgenutzt: Im Denaturierungsschritt (94–98 °C) werden alle H-Brücken zwischen den Basenpaaren aufgebrochen, die kovalenten Phosphodiesterbindungen der Stränge bleiben intakt. Beim Abkühlen lagern sich komplementäre Primer spezifisch an (Annealing).
+
+In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix verbindet jede NH-Gruppe einer Aminosäure mit der C=O-Gruppe der viertfolgenden Aminosäure (i → i+4). Im β-Faltblatt bilden parallele oder antiparallele Stränge H-Brücken untereinander. Denaturierung (Hitze, Harnstoff, pH-Extreme) zerstört dieses Netzwerk irreversibel oder reversibel, was den Funktionsverlust von Enzymen erklärt.`,
       },
+
+      klinischerBezug: 'Wasserstoffbrücken bestimmen Proteinfaltung, DNA-Stabilität und Pharmaka-Löslichkeit; PCR nutzt gezielt die thermische Aufhebung von H-Brücken zur DNA-Denaturierung bei 94–98 °C.',
+
       selfTest: [
         {
-          question: "Was beschreibt |ψ|² im quantenmechanischen Atommodell?",
+          question: 'Welche der folgenden Aussagen zu London-Dispersionskräften ist korrekt?',
           options: [
-            "Die Energie des Elektrons in einem Orbital",
-            "Die genaue Position des Elektrons zu einem bestimmten Zeitpunkt",
-            "Die Aufenthaltswahrscheinlichkeit des Elektrons an einem Ort",
-            "Die Geschwindigkeit des Elektrons auf seiner Bahn",
-            "Die Anzahl der Elektronen in einem Orbital",
+            'Sie existieren nur in unpolaren Molekülen.',
+            'Sie beruhen auf permanenten Dipolen.',
+            'Sie entstehen durch spontane Elektronenfluktuationen und nehmen mit der Molmasse zu.',
+            'Sie sind stärker als Wasserstoffbrücken.',
+            'Sie sind unabhängig von der Molekülgröße.',
           ],
           correctIndex: 2,
-          explanation: "|ψ|² ist das Betragsquadrat der Wellenfunktion und gibt die Wahrscheinlichkeitsdichte an — also die Wahrscheinlichkeit, das Elektron in einem bestimmten Raumbereich zu finden.",
+          explanation: 'London-Dispersionskräfte entstehen durch kurzfristige Unsymmetrien in der Elektronenverteilung (spontane Dipole), die in Nachbarmolekülen induzierte Dipole erzeugen. Sie existieren in *allen* Molekülen (polar und unpolar). Mit steigender Molmasse (mehr Elektronen, größere Polarisierbarkeit) nehmen sie zu. Sie sind deutlich schwächer als Wasserstoffbrücken, nicht stärker. Die Aussage, sie seien nur in unpolaren Molekülen vorhanden, ist falsch: Auch polare Moleküle haben zusätzlich London-Kräfte.',
           hints: [
-            "ψ ist die Wellenfunktion, |ψ|² ihr Betragsquadrat",
-            "Im Quantenmodell gibt es keine definierte Elektronenbahn mehr",
+            'Denken Sie daran, in welchen Molekülen "keine" anderen Wechselwirkungen auftreten können.',
+            'Was passiert mit der Polarisierbarkeit, wenn mehr Elektronen vorhanden sind?',
           ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'In der DNA-Doppelhelix bildet das Basenpaar Guanin–Cytosin (G–C) wie viele Wasserstoffbrücken?',
+          options: [
+            '1',
+            '2',
+            '3',
+            '4',
+            '5',
+          ],
+          correctIndex: 2,
+          explanation: 'Guanin–Cytosin bildet 3 Wasserstoffbrücken, Adenin–Thymin dagegen nur 2. Dies hat direkte Konsequenzen: GC-reiche DNA-Abschnitte weisen eine höhere Schmelztemperatur auf, weil mehr H-Brücken pro Basenpaar aufgebrochen werden müssen. Bei der PCR beeinflusst der GC-Gehalt die erforderliche Denaturierungstemperatur und -dauer. G-C-Paare sind um 50 % stärker verknüpft als A-T-Paare.',
+          hints: [
+            'Erinnern Sie sich: A–T hat 2, G–C hat ... eine mehr.',
+            'Die Regel heißt: „A=T mit 2, G≡C mit 3 Balken".',
+          ],
+          tags: [],
           difficulty: 1,
-          tags: [],
         },
         {
-          question: "Ein Elektron hat den Impuls p = 10⁻²⁴ kg·m/s. Welche de-Broglie-Wellenlänge besitzt es? (h = 6,6×10⁻³⁴ J·s)",
+          question: 'Welche strukturellen Voraussetzungen muss ein Molekül erfüllen, um als Wasserstoffbrücken-Donor zu wirken?',
           options: [
-            "6,6×10⁻¹⁰ m",
-            "6,6×10⁻⁸ m",
-            "1,5×10⁻⁹ m",
-            "6,6×10⁻⁵⁸ m",
-            "1,0×10⁻²⁴ m",
-          ],
-          correctIndex: 0,
-          explanation: "λ = h/p = 6,6×10⁻³⁴ J·s / 10⁻²⁴ kg·m/s = 6,6×10⁻¹⁰ m = 0,66 nm. Das liegt im Röntgenbereich und ist vergleichbar mit Atomabständen.",
-          hints: [
-            "Verwende λ = h/p",
-            "Teile h durch den gegebenen Impuls p",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Was besagt die Heisenberg'sche Unschärferelation Δx·Δp ≥ ℏ/2?",
-          options: [
-            "Messgeräte sind zu ungenau, um Elektronen exakt zu orten",
-            "Ort und Impuls eines Quantenobjekts können grundsätzlich nicht gleichzeitig beliebig genau bestimmt werden",
-            "Elektronen bewegen sich so schnell, dass ihre Position nie gemessen werden kann",
-            "Die Energie eines Elektrons ist immer unscharf",
-            "Quantenmechanische Messungen stören das Elektron immer stärker als klassische Messungen",
+            'Es muss ein freies Elektronenpaar besitzen.',
+            'Es muss ein H-Atom tragen, das an N, O oder F gebunden ist.',
+            'Es muss unpolar sein.',
+            'Es muss ein positiv geladenes Ion sein.',
+            'Es muss ein aromatisches System besitzen.',
           ],
           correctIndex: 1,
-          explanation: "Die Unschärferelation ist kein technisches, sondern ein fundamentales Naturgesetz: Je kleiner die Ortsunschärfe Δx, desto größer muss die Impulsunschärfe Δp sein — und umgekehrt. Dies gilt unabhängig von der Qualität des Messgeräts.",
+          explanation: 'Ein Wasserstoffbrücken-Donor benötigt ein H-Atom, das kovalent an ein stark elektronegatives Atom (N, O oder F) gebunden ist. Durch die hohe Elektronegativität wird das H-Atom δ+ polarisiert und kann elektrostatisch mit einem freien Elektronenpaar des Akzeptors (ebenfalls N, O oder F) wechselwirken. Ein freies Elektronenpaar allein macht ein Molekül zum Akzeptor, nicht zum Donor. Unpolarität, Ladung und Aromatizität sind keine Voraussetzungen.',
           hints: [
-            "Es geht um eine fundamentale Naturgrenze, nicht um technische Limitierungen",
-            "Δx und Δp sind Unschärfen von Ort und Impuls",
+            'Donor bedeutet: Das Molekül "gibt" das H an die Brücke ab.',
+            'Welche Atome sind elektronegativ genug, um H stark zu polarisieren?',
           ],
-          difficulty: 2,
           tags: [],
+          difficulty: 2,
         },
         {
-          question: "Welcher Wissenschaftler postulierte den Welle-Charakter von Materie (Materiewellen)?",
+          question: 'Warum siedet Wasser (H₂O, M = 18 g/mol) bei 100 °C, Schwefelwasserstoff (H₂S, M = 34 g/mol) aber nur bei −60 °C?',
           options: [
-            "Werner Heisenberg",
-            "Erwin Schrödinger",
-            "Louis de Broglie",
-            "Niels Bohr",
-            "Max Planck",
+            'H₂O hat eine höhere Molmasse als H₂S.',
+            'H₂S ist giftiger als H₂O.',
+            'H₂O bildet ein ausgedehntes Wasserstoffbrücken-Netzwerk; H₂S nicht, weil S zu wenig elektronegativ ist.',
+            'H₂S hat stärkere London-Kräfte als H₂O.',
+            'H₂O hat einen größeren Dipolmoment-Unterschied durch London-Dispersion.',
           ],
           correctIndex: 2,
-          explanation: "Louis de Broglie postulierte 1924 in seiner Dissertation, dass Materie Welleneigenschaften besitzt, analog zum Licht. Die Wellenlänge berechnet sich mit λ = h/p. Heisenberg formulierte die Unschärferelation, Schrödinger die Wellengleichung.",
+          explanation: 'Wasser bildet pro Molekül bis zu 4 Wasserstoffbrücken (2 Donor-OH, 2 Akzeptor-Elektronenpaare am O), da Sauerstoff hochelektronegativ ist (χ = 3,44). Für eine H-Brücke ist X = N, O oder F erforderlich. Schwefel (χ = 2,58) ist zu wenig elektronegativ und zu groß, um nennenswerte H-Brücken auszubilden. H₂S wird daher nur durch van-der-Waals-Kräfte zusammengehalten, die aufgrund der niedrigen Molmasse schwach sind — daher der viel niedrigere Siedepunkt trotz höherer Molmasse.',
           hints: [
-            "Denke an den Namen der Wellenlängenformel: de-Broglie-Wellenlänge",
-            "Der Nobelpreis dafür wurde 1929 vergeben",
+            'Welche Elemente können H-Brücken eingehen?',
+            'Schwefel steht unter Sauerstoff im PSE — was bedeutet das für die Elektronegativität?',
           ],
-          difficulty: 2,
           tags: [],
+          difficulty: 2,
         },
         {
-          question: "Warum spielen Quanteneffekte (Welle-Teilchen-Dualismus) für einen Fußball kaum eine Rolle?",
+          question: 'Ein Anästhetikum ist ein sehr unpolares Molekül ohne H-Brücken-fähige Gruppen. Welche Aussage über seine intermolekularen Wechselwirkungen und Löslichkeit ist korrekt?',
           options: [
-            "Fußbälle bestehen aus zu vielen Atomen, um Quanteneffekte zu zeigen",
-            "Die de-Broglie-Wellenlänge eines Fußballs ist extrem klein und nicht messbar",
-            "Fußbälle sind elektrisch neutral und unterliegen daher nicht der Quantenmechanik",
-            "Die Heisenberg'sche Unschärferelation gilt nur für Elektronen",
-            "Fußbälle bewegen sich zu langsam für Quanteneffekte",
+            'Es ist gut wasserlöslich aufgrund starker Keesom-Wechselwirkungen.',
+            'Es weist nur London-Dispersionskräfte auf und ist gut lipidlöslich.',
+            'Es bildet H-Brücken mit Wassermolekülen und ist daher renal eliminierbar.',
+            'Es hat keine intermolekularen Wechselwirkungen und ist ein ideales Gas.',
+            'Es ist ionisch und daher gut in Körperflüssigkeiten verteilt.',
           ],
           correctIndex: 1,
-          explanation: "Für einen Fußball (m≈0,45 kg, v≈30 m/s) ergibt sich λ = h/(mv) ≈ 5×10⁻³⁵ m — dieser Wert ist um viele Größenordnungen kleiner als jede messbare Länge (Atomkern: ~10⁻¹⁵ m). Quanteneffekte sind daher praktisch irrelevant.",
+          explanation: 'Ein unpolares Molekül ohne H-Brücken-fähige Gruppen (keine N–H, O–H oder F–H-Bindungen und keine permanenten Dipole) besitzt ausschließlich London-Dispersionskräfte. Diese begünstigen die Löslichkeit in unpolaren Phasen (Lipide, Membranen) gemäß dem Prinzip "Gleiches löst sich in Gleichem". Lipidlösliche Anästhetika (z. B. Halothan) penetrieren leicht Lipiddoppelschichten und wirken direkt auf Membranproteine. Sie sind schlecht wasserlöslich und werden hauptsächlich hepatisch metabolisiert, nicht renal unverändert ausgeschieden.',
           hints: [
-            "Berechne λ = h/p für große Massen: h ist sehr klein (~10⁻³⁴)",
-            "Für schwere Objekte wird λ extrem klein",
+            'Welches Wechselwirkungsprinzip gilt immer, unabhängig von Polarität?',
+            '"Similia similibus solvuntur" — was bedeutet das?',
           ],
-          difficulty: 3,
           tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Welche Wechselwirkung ist die stärkste der folgenden nicht-kovalenten Wechselwirkungen?',
+          options: [
+            'London-Dispersionskräfte zwischen Edelgasatomen',
+            'Keesom-Wechselwirkung zwischen HCl-Molekülen',
+            'Debye-Wechselwirkung zwischen Wasser und Hexan',
+            'Wasserstoffbrücke zwischen zwei Wassermolekülen',
+            'London-Dispersionskräfte zwischen zwei Methanmolekülen',
+          ],
+          correctIndex: 3,
+          explanation: 'Das Stärkeranking nicht-kovalenter Wechselwirkungen lautet: H-Brücken (10–40 kJ/mol) > Dipol–Dipol/Keesom (3–10 kJ/mol) > Debye (~1–5 kJ/mol) > London-Dispersion (sehr variabel, bei kleinen Molekülen wie Edelgasen und Methan sehr gering). Die Wasserstoffbrücke zwischen zwei Wassermolekülen (~20 kJ/mol) übertrifft alle anderen aufgeführten Optionen. London-Kräfte zwischen Edelgasatomen (monatomisch, geringe Elektronenzahl) und zwischen Methanmolekülen sind besonders schwach.',
+          hints: [
+            'Ordnen Sie: Was braucht X–H···Y?',
+            'Vergleichen Sie die Energien: 10–40 kJ/mol vs. unter 10 kJ/mol.',
+          ],
+          tags: [],
+          difficulty: 1,
+        },
+        {
+          question: 'Denaturierung von Proteinen durch Erhitzen zerstört primär welche Art von Bindungen/Wechselwirkungen?',
+          options: [
+            'Primär kovalente Peptidbindungen in der Primärstruktur.',
+            'Primär nicht-kovalente Wechselwirkungen wie H-Brücken, hydrophobe Kontakte und ionische Wechselwirkungen der Sekundär- und Tertiärstruktur.',
+            'Primär kovalente Disulfidbrücken in der Tertiärstruktur.',
+            'Nur Van-der-Waals-Kräfte, nicht aber Wasserstoffbrücken.',
+            'Ausschließlich elektrostatische Wechselwirkungen zwischen geladenen Aminosäuren.',
+          ],
+          correctIndex: 1,
+          explanation: 'Proteindenaturierung durch Hitze (oder Harnstoff, pH-Extrema) zerstört die nicht-kovalenten Wechselwirkungen, die Sekundär-, Tertiär- und Quartärstruktur stabilisieren: Wasserstoffbrücken (α-Helix, β-Faltblatt), hydrophobe Wechselwirkungen (London-Kräfte im unpolaren Proteinkern) sowie ionische Wechselwirkungen zwischen geladenen Seitenketten. Die kovalenten Peptidbindungen der Primärstruktur bleiben beim Erhitzen intakt (dazu bräuchte man Säure-/Base-Hydrolyse). Kovalente Disulfidbrücken werden durch Hitze allein nicht gespalten — dafür braucht man Reduktionsmittel.',
+          hints: [
+            'Denken Sie an die Energieunterschiede: nicht-kovalent vs. kovalent.',
+            'Welche Bindungen halten α-Helix und β-Faltblatt zusammen?',
+          ],
+          tags: [],
+          difficulty: 3,
         },
       ],
     },
+
+    // ─────────────────────────────────────────────────────────────
+    // UK 2 — Löslichkeit, Konzentration und Osmose
+    // ─────────────────────────────────────────────────────────────
     {
       id: 'ch-2-02',
-      title: 'Elektromagnetische Strahlung und Photonen',
-      content: `## Elektromagnetische Strahlung
+      title: 'Löslichkeit, Konzentration und Osmose',
+      content: `## Löslichkeit und das Prinzip "Similia similibus solvuntur"
 
-Elektromagnetische (EM) Strahlung ist eine Kombination aus sich gegenseitig erzeugenden elektrischen und magnetischen Feldern, die sich mit Lichtgeschwindigkeit c = 3×10⁸ m/s ausbreiten. Charakteristische Größen sind Frequenz f (Hz), Wellenlänge λ (m) und die Beziehung: c = λ · f. Das EM-Spektrum umfasst Radiowellen (km-Wellenlänge), Mikrowellen, Infrarot, sichtbares Licht (380-780 nm), Ultraviolett, Röntgenstrahlung bis hin zu Gammastrahlung (pm-Bereich).
+**Polare Lösungsmittel** (z. B. Wasser) lösen **polare und ionische** Substanzen: Wasser hydratisiert Ionen und bildet H-Brücken mit polaren Molekülen (OH, NH, C=O). Die Hydratationsenthalpie kompensiert die Gitterenergie.
 
-## Planck'sches Wirkungsquantum und Photonenenergie
+**Unpolare Lösungsmittel** (Hexan, Dichlormethan) lösen **unpolare** Substanzen (Lipide, Steroide, Wachse) über London-Wechselwirkungen.
 
-Max Planck erkannte 1900, dass Energie nicht kontinuierlich, sondern nur in diskreten Portionen (Quanten) emittiert wird. Ein **Photon** ist ein Energiequant der EM-Strahlung mit der Energie: **E = h · f = h · c / λ**, wobei h = 6,626×10⁻³⁴ J·s das Planck'sche Wirkungsquantum ist. Hochfrequente Strahlung (kurze Wellenlänge) trägt mehr Energie pro Photon: Röntgenstrahlung (λ≈0,1 nm) hat ~10.000-mal mehr Energie pro Photon als rotes Licht (λ≈700 nm).
+**Amphiphile Moleküle** (Detergenzien, Phospholipide) besitzen einen polaren Kopf und einen unpolaren Schwanz → Mizellenbildung in Wasser: Schwänze innen, Köpfe außen.
 
-## Photoeffekt und Einstein
+## Konzentrationsbegriffe
 
-Albert Einstein erklärte 1905 den Photoeffekt (Nobelpreis 1921): Wenn Licht auf ein Metall trifft, können Elektronen nur dann aus der Oberfläche herausgelöst werden, wenn die Photonenenergie hf die Austrittsarbeit W übersteigt. Die kinetische Energie der emittierten Elektronen: E_kin = hf − W. Unterhalb einer bestimmten Grenzfrequenz werden keine Elektronen emittiert — unabhängig von der Intensität des Lichts.
+| Begriff | Formel | Einheit | Anwendung |
+|---|---|---|---|
+| Molarität (c) | n / V | mol/L (M) | Standardkonzentration im Labor |
+| Molalität (b) | n / m(Lösungsmittel) | mol/kg | Kolligative Eigenschaften |
+| Massenkonzentration (β) | m / V | g/L | Klinische Laborbefunde |
+| Massenanteil (w) | m(Stoff) / m(Lösung) | % (m/m) | Lösungsansatz |
+| Volumenanteil (φ) | V(Stoff) / V(Lösung) | % (v/v) | Alkohol, Sauerstoffkonzentration |
+| Massenvolumenkonzentration | m(Stoff) / V(Lösung) | % (m/v) | Infusionslösungen (z. B. 0,9 % NaCl) |
 
-## Medizinische Anwendungen
+**Umrechnung Molarität ↔ g/L:** c [mol/L] × M [g/mol] = β [g/L]
+Beispiel: 0,9 % NaCl (m/v) = 9 g NaCl / L; M(NaCl) = 58,44 g/mol → c = 9/58,44 ≈ 0,154 mol/L
 
-**Röntgenstrahlung** (0,01-10 nm) dringt durch Gewebe und wird durch dichte Strukturen (Knochen) stärker absorbiert. In der CT (Computertomographie) werden 3D-Bilder rekonstruiert. **UV-Strahlung** (10-380 nm) aktiviert die Vitamin-D-Synthese in der Haut, schädigt aber bei Überexposition die DNA. **Infrarotstrahlung** (780 nm-1 mm) wird als Wärme wahrgenommen und findet Anwendung in der Wärmebilddiagnostik.`,
+## Osmose und osmotischer Druck
+
+**Osmose** ist die Bewegung von Lösungsmittelmolekülen (Wasser) durch eine **semipermeable Membran** (durchlässig für Wasser, nicht für gelöste Teilchen) vom Bereich **niedrigerer** in den Bereich **höherer** Teilchenkonzentration (= vom niedrigen osmotischen Druck zum hohen osmotischen Druck).
+
+**Osmotischer Druck (π):** Nach van't Hoff: π = i · c · R · T
+- i = van't-Hoff-Faktor (Anzahl der Teilchen nach Dissoziation; NaCl: i = 2; Glukose: i = 1)
+- c = Molarität [mol/L]
+- R = 8,314 J/(mol·K), T = Temperatur in Kelvin
+
+**Osmolarität** [mOsmol/L] = Summe aller osmotisch aktiven Teilchen pro Liter.
+
+Blutplasma-Osmolarität: **285–295 mOsmol/L** (Normbereich, geregelt durch ADH und Durst)
+
+Beispielrechnung für 0,154 mol/L NaCl: Osmolarität = 0,154 × 2 × 1000 = 308 mOsmol/L (≈ isoosmolar mit Blut)
+Für 5 % Glukose: 50 g/L ÷ 180 g/mol = 0,278 mol/L × 1 = 278 mOsmol/L (≈ isoosmolar)
+
+## Klinisch: Isoton, hypoton, hyperton
+
+- **Isotonische Lösung** (≈ 285–295 mOsmol/L): Gleichgewicht → keine Volumenänderung der Erythrozyten. Beispiele: 0,9 % NaCl, 5 % Glukose
+- **Hypotone Lösung** (<270 mOsmol/L): Wasser strömt in Zellen → **Hämolyse** (Erythrozyten platzen bei starker Hypotonie)
+- **Hypertone Lösung** (>310 mOsmol/L): Wasser strömt aus Zellen → **Hämaggregation/Crenation** (Erythrozyten schrumpfen)
+
+**Kolloidosmotischer (onkotischer) Druck:** Plasmaproteine (v. a. **Albumin**) können die Kapillarmembran nicht passieren → halten Wasser im Gefäßsystem. Albumin (35–50 g/L) generiert ca. 25 mmHg onkotischen Druck. Bei **Hypoalbuminämie** (Leberzirrhose, nephrotisches Syndrom, Malnutrition) sinkt der onkotische Druck → Wasseraustritt ins Interstitium → **Ödembildung**.
+
+## Kolligative Eigenschaften
+
+Eigenschaften, die nur von der **Teilchenzahl**, nicht von der Art des Gelösten abhängen:
+1. **Siedepunktserhöhung:** ΔTb = Kb · m · i (Kb für Wasser = 0,512 K·kg/mol)
+2. **Gefrierpunktserniedrigung:** ΔTf = Kf · m · i (Kf für Wasser = 1,853 K·kg/mol; Grundlage für Osmolalitätsmessung)
+3. **Dampfdruckerniedrigung** (Raoult)
+4. **Osmose**
+
+Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechnete Osmolalität: 2×[Na⁺] + [Glukose]/18 + [Harnstoff]/6 (Einheiten in mg/dL) bzw. vereinfacht 2×[Na] + [Glukose] + [Harnstoff] (Einheiten in mmol/L).`,
+
       lernziele: [
-        "Die Photonenenergie mit E = hf = hc/λ berechnen und verschiedene Spektralbereiche zuordnen",
-        "Den Photoeffekt erklären und die Einsteingleichung E_kin = hf − W anwenden",
-        "Medizinische Anwendungen von Röntgen-, UV- und IR-Strahlung beschreiben",
+        'Das Löslichkeitsprinzip "Similia similibus solvuntur" auf polare, unpolare und amphiphile Substanzen anwenden können.',
+        'Die verschiedenen Konzentrationsangaben (Molarität, Massenkonzentration, %) definieren und ineinander umrechnen können.',
+        'Osmose, osmotischen Druck und Osmolarität erklären und mit dem van\'t-Hoff-Faktor berechnen können.',
+        'Isotonische, hypotone und hypertone Lösungen unterscheiden und ihre Wirkung auf Erythrozyten beschreiben können.',
+        'Den kolloidosmotischen Druck und die klinische Bedeutung von Albumin bei der Ödembildung erklären können.',
       ],
+
       sections: [
         {
-          heading: "Das elektromagnetische Spektrum",
-          text: "Das EM-Spektrum ist kontinuierlich und reicht von langen Radiowellen (λ bis zu km) über Mikrowellen, Infrarot, sichtbares Licht (380-780 nm), Ultraviolett, Röntgenstrahlung bis zu Gammastrahlung (λ < 0,01 nm). Im sichtbaren Bereich entsprechen Wellenlängen bestimmten Farben: Violett (~380-450 nm), Blau (450-495 nm), Grün (495-570 nm), Gelb (570-590 nm), Orange (590-620 nm), Rot (620-780 nm). Die Energie pro Photon steigt mit abnehmender Wellenlänge: Violettes Licht hat ~1,6-mal mehr Energie als rotes. Ionisierende Strahlung (UV, Röntgen, Gamma) hat genug Energie, um Elektronen aus Atomen zu entfernen und DNA-Schäden zu verursachen.",
+          heading: 'Löslichkeit — polar löst polar',
+          text: 'Der Grundsatz "Similia similibus solvuntur" erklärt, warum Wasser Salze und Zucker löst, aber keine Fette: Polare Substanzen wechselwirken über H-Brücken und elektrostatische Kräfte mit Wasser; unpolare Substanzen können diese Wechselwirkungen nicht eingehen und werden daher aus dem Wasser "ausgeschlossen" (hydrophober Effekt). Amphiphile Moleküle wie Phospholipide nutzen beide Eigenschaften: Der polare Kopf zeigt ins Wasser, der unpolare Schwanz organisiert sich weg vom Wasser — Grundlage der Biomembran.',
+          merksatz: '"Gleiches löst sich in Gleichem" — polar in polar, unpolar in unpolar.',
         },
         {
-          heading: "Photoeffekt: Beweis der Teilchennatur des Lichts",
-          text: "Der Photoeffekt beweist, dass Licht aus diskreten Photonen besteht. Klassisch würde man erwarten, dass bei ausreichend intensivem Licht stets Elektronen herausgelöst werden. Stattdessen zeigt sich: Unterhalb der Grenzfrequenz f₀ = W/h werden nie Elektronen emittiert, egal wie intensiv das Licht ist. Oberhalb von f₀ werden sofort Elektronen mit E_kin = hf − W emittiert. Die Intensität des Lichts bestimmt nur die Anzahl der emittierten Elektronen (Stromstärke), nicht ihre Energie. Dies beweist, dass ein einzelnes Photon mit einem einzelnen Elektron interagiert — ein klassisches Wellenmodell kann das nicht erklären.",
+          heading: 'Osmose und klinische Konsequenzen',
+          text: 'Die Osmoregulation ist lebensnotwendig: Das Blutplasma wird bei 285–295 mOsmol/L gehalten (Hypothalamus/ADH-Achse). Jede Abweichung gefährdet die Zellintegrität. Hypotone Lösungen (z. B. reines Wasser i.v.) würden Erythrozyten durch Wassereinstrom zum Platzen bringen (Hämolyse). Hypertone Lösungen (z. B. Meerwasser trinken) entziehen Zellen Wasser. Albumin als wichtigstes Plasmaprotein generiert den onkotischen Druck und hält Wasser im Gefäß; sein Abfall führt zu Ödemen.',
+          merksatz: 'Osmose: Wasser wandert vom geringen zum hohen osmotischen Druck — immer von "verdünnt" nach "konzentriert".',
+        },
+        {
+          heading: 'Konzentrationsrechnung im klinischen Alltag',
+          text: 'Die häufigste Infusionslösung "NaCl 0,9 %" bedeutet 0,9 g NaCl pro 100 mL = 9 g/L. Mit M(NaCl) = 58,44 g/mol ergibt sich c = 0,154 mol/L. Da NaCl vollständig in Na⁺ und Cl⁻ dissoziiert (i = 2), beträgt die Osmolarität 2 × 154 = 308 mOsmol/L — knapp isotonisch. "5 % Glukose" = 50 g/L; M(Glukose) = 180 g/mol → c = 0,278 mol/L; i = 1 → 278 mOsmol/L. Diese Rechnungen sind prüfungsrelevant.',
+          merksatz: 'Osmolarität [mOsmol/L] = Molarität × i × 1000; NaCl: i = 2, Glukose: i = 1.',
         },
       ],
+
       merksätze: [
-        "E = hf = hc/λ: hohe Frequenz (kurze Wellenlänge) = hohe Photonenenergie",
-        "Photoeffekt: E_kin = hf − W (nur wenn hf > W, sonst kein Elektron)",
-        "Sichtbares Licht: 380 nm (violett) bis 780 nm (rot)",
+        '"Similia similibus solvuntur" — polar löst polar, unpolar löst unpolar.',
+        'Molarität c [mol/L] = n/V; Massenkonzentration β [g/L] = c × M.',
+        '0,9 % NaCl = 154 mmol/L NaCl = 308 mOsmol/L ≈ isotonisch.',
+        '5 % Glukose = 278 mOsmol/L ≈ isotonisch; nach Metabolisierung wirkt es wie hypotones Wasser.',
+        'Osmose: Wasser wandert immer vom geringen zum hohen osmotischen Druck (semipermeable Membran).',
+        'Van\'t-Hoff-Faktor i: NaCl → i = 2; CaCl₂ → i = 3; Glukose → i = 1.',
+        'Blutplasma-Osmolarität normal: 285–295 mOsmol/L; geregelt durch ADH und Niere.',
+        'Hypotone Lösung → Hämolyse der Erythrozyten; hypertone Lösung → Crenation (Schrumpfen).',
+        'Albumin erzeugt onkotischen Druck (~25 mmHg) → hält Wasser im Gefäß.',
+        'Hypoalbuminämie (Leberzirrhose, nephrotisches Syndrom) → Ödeme durch verminderten onkotischen Druck.',
       ],
-      klinischerBezug: "Röntgenstrahlung ionisiert Gewebe und kann DNA-Strangbrüche verursachen, weshalb Strahlenexposition in der Medizin streng reguliert wird. Die Photonenenergie (E=hf) bestimmt das Gewebepenetrationsvermögen: Hochenergetische Gammastrahlen (Strahlentherapie) können gezielt tief liegende Tumoren bestrahlen.",
+
       altfrage: {
-        question: "Welche Frequenz hat Licht der Wellenlänge 500 nm? (c = 3×10⁸ m/s)",
-        answer: "f = c/λ = (3×10⁸ m/s) / (500×10⁻⁹ m) = 6×10¹⁴ Hz. Die Photonenenergie beträgt E = hf = 6,626×10⁻³⁴ × 6×10¹⁴ ≈ 4×10⁻¹⁹ J ≈ 2,5 eV (grünes Licht).",
+        question: 'Ein Patient mit nephrotischem Syndrom (starker Proteinverlust im Urin) entwickelt ausgeprägte periphere Ödeme trotz normalem Blutdruck. Erläutern Sie den pathophysiologischen Mechanismus und die zugrundeliegenden physikalisch-chemischen Prinzipien.',
+        answer: `Das nephrotische Syndrom ist durch eine massive Proteinurie (>3,5 g/Tag) gekennzeichnet, die zur Hypoalbuminämie führt (Serumalbumin < 30 g/L, normal 35–50 g/L). Albumin ist das mengenmäßig wichtigste Plasmaprotein und mit einem Molekulargewicht von ca. 66 kDa zu groß, um unter normalen Bedingungen die Kapillarmembran zu passieren.
+
+Der **kolloidosmotische (onkotische) Druck** bezeichnet den osmotischen Druck, den Makromoleküle (vor allem Albumin) aufbauen, die nicht durch Membranen diffundieren können. Er beträgt beim Gesunden ca. 25–28 mmHg und hält Wasser im Gefäßlumen, indem er dem hydrostatischen Filtrationsdruck (ca. 35 mmHg arteriell, 15 mmHg venös) entgegenwirkt. Das Gleichgewicht zwischen Filtration und Reabsorption beschreibt die Starling-Gleichung.
+
+Bei Hypoalbuminämie sinkt der onkotische Druck erheblich (z. B. auf < 15 mmHg). Das hydrostatische Druckgefälle überwiegt nun an beiden Seiten des Kapillarbetts → Nettofiltration von Flüssigkeit ins Interstitium → **Ödembildung**. Da das Blutvolumen sinkt (Volumenmangel im Gefäß), aktiviert die Niere das RAAS (Renin-Angiotensin-Aldosteron-System) und schüttet ADH aus → Na⁺- und Wasserretention → paradoxe Verstärkung der Ödeme, obwohl bereits zu viel Wasser im Interstitium ist.
+
+Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle — in diesem Fall dem Druckgefälle von Gefäß zum Interstitium. Da die Plasmaproteine fehlen, fehlt der Gegendruck. Die Therapie zielt auf Albuminsubstitution (kurzzeitig), Diuretika zur Natriumausscheidung und Behandlung der Grunderkrankung.`,
       },
+
+      klinischerBezug: 'Isotonische Infusionslösungen (0,9 % NaCl, 5 % Glukose) schützen Erythrozyten; Hypoalbuminämie (nephrotisches Syndrom, Leberzirrhose) senkt onkotischen Druck und verursacht Ödeme.',
+
       selfTest: [
         {
-          question: "Licht hat die Wellenlänge 300 nm. Welchem Spektralbereich gehört es an?",
+          question: 'Wie groß ist die Osmolarität einer 0,5 mol/L CaCl₂-Lösung? (CaCl₂ → Ca²⁺ + 2 Cl⁻)',
           options: [
-            "Sichtbares Licht (violett)",
-            "Infrarotstrahlung",
-            "Ultraviolettstrahlung",
-            "Röntgenstrahlung",
-            "Mikrowellen",
+            '500 mOsmol/L',
+            '750 mOsmol/L',
+            '1000 mOsmol/L',
+            '1500 mOsmol/L',
+            '250 mOsmol/L',
+          ],
+          correctIndex: 3,
+          explanation: 'CaCl₂ dissoziiert vollständig in 1 Ca²⁺ und 2 Cl⁻, also 3 Teilchen pro Formeleinheit → van\'t-Hoff-Faktor i = 3. Osmolarität = c × i × 1000 = 0,5 mol/L × 3 × 1000 = 1500 mOsmol/L. Diese Lösung ist stark hypertonisch (Blut: ~290 mOsmol/L). Starke Hypertonizität würde Erythrozyten schrumpfen lassen (Crenation) und darf nicht als Infusion gegeben werden.',
+          hints: [
+            'Zählen Sie die Ionen: CaCl₂ → Ca²⁺ + 2 Cl⁻ = wie viele Teilchen?',
+            'Osmolarität = Molarität × Anzahl Teilchen (i) × 1000.',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Ein Patient erhält versehentlich reines Wasser (destilliert) als intravenöse Infusion. Was passiert mit seinen Erythrozyten?',
+          options: [
+            'Sie schrumpfen (Crenation), weil Wasser hypotonisch ist.',
+            'Nichts, weil Erythrozyten keine semipermeable Membran haben.',
+            'Sie schwellen an und platzen (Hämolyse), weil Wasser ins Zellinnere strömt.',
+            'Sie werden agglutiniert durch den osmotischen Druck.',
+            'Ihre Hämoglobinkonzentration steigt durch Wasserentzug.',
           ],
           correctIndex: 2,
-          explanation: "UV-Strahlung hat Wellenlängen von 10-380 nm. 300 nm liegt im UV-Bereich. Sichtbares Licht beginnt erst bei ~380 nm (violett), IR beginnt bei ~780 nm.",
+          explanation: 'Reines Wasser hat eine Osmolarität von 0 mOsmol/L — extrem hypototonisch gegenüber dem Zellinneren (Erythrozyt: ~300 mOsmol/L). Wasser strömt per Osmose durch die semipermeable Erythrozytenmembran in die Zelle, bis der osmotische Druck ausgeglichen ist oder die Membran reißt. Die Folge ist Hämolyse (Platzen der Erythrozyten) mit Freisetzung von Hämoglobin — klinisch: Hämoglobinurie, Nierenversagen möglich. Deswegen müssen alle i.v.-Lösungen isotonisch formuliert sein.',
           hints: [
-            "Sichtbares Licht: 380-780 nm",
-            "Kürzere Wellenlängen als sichtbares Licht sind UV oder Röntgen",
+            'Wohin wandert Wasser bei der Osmose — zur höheren oder niedrigeren Konzentration?',
+            'Der Erythrozyt hat eine höhere Innenkonzentration als das Außenmedium.',
           ],
+          tags: [],
           difficulty: 1,
-          tags: [],
         },
         {
-          question: "Welche Photonenenergie hat Licht der Frequenz f = 6×10¹⁴ Hz? (h = 6,6×10⁻³⁴ J·s)",
+          question: 'Welche Konzentration hat eine 5 % (m/v) Glukoselösung in mol/L? (M Glukose = 180 g/mol)',
           options: [
-            "6,6×10⁻³⁴ J",
-            "6×10¹⁴ J",
-            "3,96×10⁻¹⁹ J",
-            "1,1×10⁻⁴⁸ J",
-            "9,1×10⁻³¹ J",
-          ],
-          correctIndex: 2,
-          explanation: "E = hf = 6,6×10⁻³⁴ J·s × 6×10¹⁴ Hz = 3,96×10⁻¹⁹ J ≈ 4×10⁻¹⁹ J. Das entspricht grünem Licht (~2,5 eV).",
-          hints: [
-            "Verwende E = hf",
-            "Multipliziere h mit der gegebenen Frequenz f",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Beim Photoeffekt wird Licht der Frequenz f auf eine Metalloberfläche gestrahlt. Was passiert, wenn f kleiner als die Grenzfrequenz f₀ ist?",
-          options: [
-            "Es werden Elektronen emittiert, aber mit sehr geringer Energie",
-            "Es werden Elektronen emittiert, aber erst nach einer Verzögerungszeit",
-            "Es werden keine Elektronen emittiert, egal wie groß die Intensität ist",
-            "Es werden mehr Elektronen emittiert, wenn die Intensität erhöht wird",
-            "Das Metall heizt sich auf und emittiert schließlich Elektronen durch Wärme",
-          ],
-          correctIndex: 2,
-          explanation: "Unterhalb der Grenzfrequenz f₀ = W/h hat kein einzelnes Photon genug Energie (hf < W), um ein Elektron aus dem Metall zu lösen. Mehr Intensität bedeutet mehr Photonen, aber jedes Photon hat dieselbe Energie — daher keine Elektronen, egal wie intensiv das Licht ist.",
-          hints: [
-            "Ein Photon interagiert mit einem Elektron — kein Aufsummieren von Photonen",
-            "Die Bedingung für Elektronenemission ist hf > W (Austrittsarbeit)",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Ein Metall hat die Austrittsarbeit W = 4×10⁻¹⁹ J. Licht der Frequenz f = 8×10¹⁴ Hz trifft auf die Oberfläche. (h = 6,6×10⁻³⁴ J·s). Welche kinetische Energie haben die emittierten Elektronen?",
-          options: [
-            "1,28×10⁻¹⁹ J",
-            "4×10⁻¹⁹ J",
-            "5,28×10⁻¹⁹ J",
-            "1,68×10⁻¹⁹ J",
-            "Keine Elektronen werden emittiert",
-          ],
-          correctIndex: 0,
-          explanation: "E_kin = hf − W = 6,6×10⁻³⁴ × 8×10¹⁴ − 4×10⁻¹⁹ = 5,28×10⁻¹⁹ − 4×10⁻¹⁹ = 1,28×10⁻¹⁹ J.",
-          hints: [
-            "Berechne zuerst die Photonenenergie: E = hf",
-            "E_kin = hf − W (Einsteinsche Gleichung des Photoeffekts)",
-          ],
-          difficulty: 3,
-          tags: [],
-        },
-        {
-          question: "Warum kann UV-Strahlung, aber nicht Radiostrahlung, DNA-Schäden verursachen?",
-          options: [
-            "UV-Strahlung hat eine größere Wellenlänge und damit mehr Energie",
-            "UV-Photonen haben genug Energie, um chemische Bindungen in DNA-Molekülen aufzubrechen, Radiophotonen nicht",
-            "Radiostrahlung dringt nicht durch die Haut und erreicht die DNA nicht",
-            "UV-Strahlung ist ionisierend, weil sie aus mehreren Photonen gleichzeitig besteht",
-            "DNA absorbiert selektiv nur Radiowellen",
+            '0,028 mol/L',
+            '0,278 mol/L',
+            '0,500 mol/L',
+            '2,78 mol/L',
+            '5,00 mol/L',
           ],
           correctIndex: 1,
-          explanation: "UV-Photonen haben Energien von ~3-12 eV (λ=100-400 nm), was ausreicht, um chemische Bindungen (Bindungsenergie ~3-10 eV) zu brechen und z.B. Pyrimidindimere in der DNA zu bilden. Radiophotonen haben Energien von ~10⁻⁹ bis 10⁻⁶ eV — millionenmal zu wenig für Bindungsbrüche.",
+          explanation: '5 % (m/v) bedeutet 5 g Glukose pro 100 mL = 50 g/L. Mit der Molmasse M = 180 g/mol gilt: c = 50 g/L ÷ 180 g/mol ≈ 0,278 mol/L. Die Osmolarität beträgt 0,278 mol/L × 1 (Glukose dissoziiert nicht, i = 1) × 1000 ≈ 278 mOsmol/L — damit ist die Lösung annähernd isotonisch mit Blutplasma (285–295 mOsmol/L).',
           hints: [
-            "E = hf: Radiofrequenzen sind sehr niedrig → sehr wenig Energie pro Photon",
-            "Chemische Bindungen brauchen typisch ~3-10 eV zum Brechen",
+            '5 % (m/v) = 5 g pro 100 mL = wie viele g pro Liter?',
+            'c = Masse pro Liter ÷ Molmasse.',
           ],
-          difficulty: 3,
           tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Warum entwickelt ein Patient mit schwerer Hypoalbuminämie (Albumin 15 g/L statt 40 g/L) periphere Ödeme?',
+          options: [
+            'Weil Albumin Wasser aktiv in die Zellen pumpt.',
+            'Weil der onkotische Druck im Plasma sinkt und Wasser aus den Kapillaren ins Interstitium austritt.',
+            'Weil Albumin die Nierenfunktion hemmt und Wasser retiniert wird.',
+            'Weil fehlende Albumine die Blut-Hirn-Schranke destabilisieren.',
+            'Weil Albumin normalerweise Wasser aus dem Darm resorbiert.',
+          ],
+          correctIndex: 1,
+          explanation: 'Albumin ist zu groß, um die Kapillarmembran normal zu passieren, und erzeugt dadurch den onkotischen (kolloidosmotischen) Druck von ~25 mmHg, der Wasser im Gefäßlumen hält. Bei Hypoalbuminämie (z. B. nephrotisches Syndrom, Leberzirrhose, Malnutrition) sinkt dieser Gegendruck. Der hydrostatische Druck der Kapillaren überwiegt nun an beiden Seiten, Wasser filtiert verstärkt ins Interstitium: Ödeme entstehen. Dies ist reines Osmose-Prinzip: Wasser folgt dem osmotischen Gradienten — von höherer zu niedrigerer Albuminkonzentration (Gefäß → Interstitium).',
+          hints: [
+            'Was erzeugt der kolloidosmotische Druck — Wasser halten oder herausdrücken?',
+            'Starling-Gleichung: hydrostatischer Druck filtert aus, onkotischer Druck hält zurück.',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Jod (I₂) ist nahezu wasserunlöslich, löst sich aber gut in Tetrachlorkohlenstoff (CCl₄). Welches Prinzip erklärt das am besten?',
+          options: [
+            'Jod bildet H-Brücken mit CCl₄.',
+            'CCl₄ ist polar und bildet Dipol-Dipol-Wechselwirkungen mit I₂.',
+            '"Similia similibus solvuntur" — beide sind unpolarer Natur und wechselwirken über London-Kräfte.',
+            'Jod ist ionisch und CCl₄ ist ein starkes Ionensolvatans.',
+            'CCl₄ hat eine höhere Dielektrizitätskonstante als Wasser.',
+          ],
+          correctIndex: 2,
+          explanation: 'Jod (I₂) ist ein unpolares, symmetrisches Molekül ohne permanentes Dipolmoment. CCl₄ ist ebenfalls unpolar (symmetrisches Tetraeder, Dipolmomente heben sich auf). Beide wechselwirken über London-Dispersionskräfte, die für unpolare Moleküle die einzigen intermolekularen Kräfte sind. Da "Gleiches sich in Gleichem löst", ist I₂ gut in CCl₄ löslich. In Wasser (hochpolar, H-Brücken-Netzwerk) ist I₂ dagegen nahezu unlöslich, weil I₂ dieses Netzwerk nicht aufrechterhalten kann. CCl₄ hat eine niedrigere Dielektrizitätskonstante als Wasser, kein Dipolmoment und keine H-Brücken.',
+          hints: [
+            'Welche Symmetrie hat I₂? Hat es ein Dipolmoment?',
+            'CCl₄ hat vier gleiche C-Cl-Bindungen in Tetraederanordnung — was bedeutet das für das Gesamtdipolmoment?',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Welche Lösung ist die richtige intravenöse Flüssigkeit für einen Patienten mit Hypovolämie (Blutdruckabfall durch Volumenmangel) ohne bekannte Elektrolytstörungen?',
+          options: [
+            'Destilliertes Wasser, weil es keine zusätzlichen Elektrolyte enthält.',
+            '10 % NaCl-Lösung, um den Blutdruck schnell zu erhöhen.',
+            'Isotonische 0,9 % NaCl-Lösung (154 mmol/L, ~308 mOsmol/L).',
+            'Hypotone 0,45 % NaCl-Lösung, um mehr Volumen in die Zellen zu bringen.',
+            '70 % Ethanol, weil Alkohol gefäßerweiternd wirkt.',
+          ],
+          correctIndex: 2,
+          explanation: 'Bei Hypovolämie muss das intravasale Volumen aufgefüllt werden ohne Hämolyse oder Crenation zu riskieren. Die isotonische 0,9 % NaCl-Lösung (154 mmol/L NaCl, Osmolarität ~308 mOsmol/L) entspricht annähernd dem osmotischen Druck des Blutplasmas (285–295 mOsmol/L) und verursacht keine Volumenverschiebungen über Erythrozytenmembranen. Destilliertes Wasser (0 mOsmol/L) würde akute Hämolyse verursachen. 10 % NaCl ist stark hypertonisch und würde Zellen schrumpfen lassen sowie hypernatriämische Schäden verursachen. Hypotone Lösungen würden Zellen aufschwellen lassen.',
+          hints: [
+            'Welche Osmolarität entspricht der des Blutes (~290 mOsmol/L)?',
+            'Was passiert bei zu niedriger oder zu hoher Osmolarität mit Erythrozyten?',
+          ],
+          tags: [],
+          difficulty: 1,
+        },
+        {
+          question: 'Was ist der Van\'t-Hoff-Faktor (i) für Calciumchlorid CaCl₂, das vollständig dissoziiert?',
+          options: [
+            '1',
+            '2',
+            '3',
+            '4',
+            '6',
+          ],
+          correctIndex: 2,
+          explanation: 'CaCl₂ dissoziiert in wässriger Lösung vollständig: CaCl₂ → Ca²⁺ + 2 Cl⁻. Pro Formeleinheit entstehen 3 Ionen. Der van\'t-Hoff-Faktor i gibt die Anzahl der Partikel an, in die eine Formeleinheit dissoziiert. Für CaCl₂ gilt daher i = 3. Dies ist wichtig für die Berechnung der Osmolarität (= c × i × 1000) und kolligativer Eigenschaften. Vergleich: NaCl: i = 2 (Na⁺ + Cl⁻); Glukose: i = 1 (kein Zerfall); MgCl₂: i = 3; AlCl₃: i = 4.',
+          hints: [
+            'Schreiben Sie die Dissoziationsgleichung auf: CaCl₂ → ?',
+            'Zählen Sie die Produkt-Ionen.',
+          ],
+          tags: [],
+          difficulty: 1,
         },
       ],
     },
+
+    // ─────────────────────────────────────────────────────────────
+    // UK 3 — Aggregatzustände, Phasenübergänge und Kolloidchemie
+    // ─────────────────────────────────────────────────────────────
     {
       id: 'ch-2-03',
-      title: 'Atomspektren und Spektralanalyse',
-      content: `## Emission- und Absorptionsspektren
+      title: 'Aggregatzustände, Phasenübergänge und Kolloidchemie',
+      content: `## Aggregatzustände im Vergleich
 
-Wenn Atome Energie aufnehmen (z.B. durch Erhitzen oder elektrische Entladung), werden Elektronen auf höhere Energieniveaus angehoben (Anregung). Bei der Rückkehr in den Grundzustand emittieren sie Photonen mit genau der Energiedifferenz zwischen den Niveaus: E_Photon = E₂ − E₁ = hf. Da die Energieniveaus eines Elements diskret und charakteristisch sind, entsteht ein elementspezifisches **Emissionsspektrum** (Linienspektrum). Umgekehrt absorbieren Atome genau die Wellenlängen, die sie auch emittieren → **Absorptionsspektrum** (dunkle Linien im kontinuierlichen Spektrum).
+| Eigenschaft | Fest | Flüssig | Gasförmig |
+|---|---|---|---|
+| Teilchenanordnung | Geordnet, dicht | Ungeordnet, dicht | Ungeordnet, weit |
+| Volumen | Bestimmt | Bestimmt | Nicht bestimmt |
+| Form | Bestimmt | Angepasst | Angepasst |
+| Kompressibilität | Gering | Gering | Hoch |
+| Beweglichkeit | Nur Schwingung | Gleiten | Frei |
 
-## Serien des Wasserstoffspektrums
+## Phasenübergänge und Wärmetönung
 
-Wasserstoff ist das einfachste Atom (Z=1) und hat das am besten verstandene Spektrum. Die Elektronenübergänge sind in Serien gruppiert:
-- **Lyman-Serie**: Übergänge zur n=1 (UV-Bereich)
-- **Balmer-Serie**: Übergänge zur n=2 (sichtbares Licht, rot: 656 nm / blau: 486 nm / violett: 434 nm)
-- **Paschen-Serie**: Übergänge zur n=3 (Infrarot)
+Die Phasenübergänge und ihre thermodynamischen Vorzeichen:
 
-## Franck-Hertz-Versuch
+- **Schmelzen** (fest → flüssig): endotherm (Schmelzenthalpie ΔH > 0)
+- **Erstarren** (flüssig → fest): exotherm (ΔH < 0)
+- **Verdampfen/Sieden** (flüssig → gasförmig): endotherm (Verdampfungsenthalpie ΔHvap > 0)
+- **Kondensieren** (gasförmig → flüssig): exotherm
+- **Sublimation** (fest → gasförmig, direkt): endotherm; Beispiel: trockenes Eis (CO₂), Iod, Naphthalin
+- **Desublimation/Resublimation** (gasförmig → fest, direkt): exotherm; Beispiel: Reifbildung
 
-James Franck und Gustav Hertz zeigten 1914, dass Elektronen Energie nur in diskreten Quanten an Atome übertragen. Elektronen mit zu wenig Energie stoßen elastisch (kein Energieübertrag). Erst bei ausreichender Energie findet inelastische Streuung statt, und das Atom wird angeregt. Dies bewies die Quantelung der Energieniveaus.
+**Eselsbrücke:** Beim Übergang zu "ungeordneter/freier" Phase wird Energie aufgenommen (endo); beim Übergang zu "geordneter" Phase wird Energie abgegeben (exo).
 
-## Fluoreszenz, Phosphoreszenz und Spektroskopie
+## Dampfdruck und Siedepunkt
 
-**Fluoreszenz**: Unmittelbare Emission nach Anregung (< 10⁻⁸ s). Anwendung: Fluoreszenzfärbung in der Histologie, FACS, Immunfluoreszenz. **Phosphoreszenz**: Verzögerte Emission (ms bis Stunden) durch metastabile Zustände (Triplettzustand). In der Diagnostik wird **Spektroskopie** genutzt, um Moleküle anhand ihrer charakteristischen Absorptions- oder Emissionsspektren zu identifizieren und zu quantifizieren.`,
+Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im Gleichgewicht bei gegebener Temperatur. Er steigt mit der Temperatur (Clausius-Clapeyron-Gleichung).
+
+**Siedepunkt:** Temperatur, bei der der Dampfdruck dem **äußeren Druck** entspricht.
+- Normalsiedepunkt: Dampfdruck = 1 atm (101,325 kPa)
+- Im Gebirge (Luftdruck < 1 atm): niedrigerer Siedepunkt (Wasser kocht bei weniger als 100 °C → längere Garzeit)
+- Im Druckkochtopf (Druck > 1 atm): höherer Siedepunkt → schnelleres Garen
+
+**Siedepunktserhöhung** durch gelöste Substanzen (kolligative Eigenschaft):
+ΔTb = Kb · m · i
+- Kb(Wasser) = 0,512 K·kg/mol
+- m = Molalität [mol/kg]
+- i = van't-Hoff-Faktor
+
+## Kolloidchemie
+
+**Kolloide** sind Systeme, in denen Partikel mit einem Durchmesser von **1 nm bis 1 μm** in einem Dispersionsmedium verteilt sind. Sie liegen zwischen echten Lösungen (<1 nm, molekulardispers) und Suspensionen (>1 μm, sedimentieren).
+
+**Klassifikation nach Dispersionsmedium und -phase:**
+
+| Typ | Disperse Phase | Dispersionsmedium | Beispiel |
+|---|---|---|---|
+| Sol (Lyosol) | Fest | Flüssig | Gold-Sol, Stärkelösung |
+| Emulsion | Flüssig | Flüssig | Milch, Mayonnaise |
+| Schaum | Gas | Flüssig | Seifenschaum, Schlagsahne |
+| Aerosol (flüssig) | Flüssig | Gas | Nebel, Spraydosen |
+| Aerosol (fest) | Fest | Gas | Rauch, Staub |
+| Gel | Flüssig | Fest | Gelatine, Agar-Agar |
+
+**Kolloidale Eigenschaften:**
+
+- **Brownsche Bewegung**: unregelmäßige Zitterbewegung kolloidaler Teilchen durch thermische Stöße der Lösungsmittelmoleküle; verhindert Sedimentation
+- **Tyndall-Effekt**: kolloidale Teilchen (1–1000 nm) streuen sichtbares Licht → der Lichtstrahl wird sichtbar (echte Lösungen streuen kaum; Suspensionen trüben vollständig)
+- **Elektrische Doppelschicht (Zeta-Potential)**: kolloidale Partikel tragen oft eine Oberflächenladung (negativ bei Kolloiden wie Albumin bei Blut-pH), die andere gleichnamig geladene Partikel abstoßt → Stabilisierung des Kolloids (Koagulation verhindert)
+- **Koagulation**: Zusammenballung kolloidaler Partikel bei Ladungsneutralisierung (Salzzugabe, pH-Änderung, Erhitzen)
+
+## Klinische Kolloidchemie
+
+**Blut als Kolloid:** Erythrozyten (Durchmesser ~7 μm: eigentlich Suspension) und **Plasmaproteine** (Albumin ~7 nm, Fibrinogen ~50 nm: echte Kolloide) verleihen Blut kolloidale Eigenschaften. Plasma zeigt den Tyndall-Effekt.
+
+**Kolloidale Infusionslösungen** werden als Volumenersatz bei Schock eingesetzt:
+- **HAES (Hydroxyethylstärke):** synthetisches Polysaccharid-Kolloid; verbleibt länger im Gefäßsystem als kristalloide Lösungen (NaCl, Ringer); Risiko: Nierenschäden bei Sepsis (heute eingeschränkt)
+- **Gelatinepräparate** (modifizierte Gelatine): tierisches Kollagen-Derivat; kürzere Wirkdauer als HAES
+- **Humanalbumin:** natürliches Kolloid; bei Hypoalbuminämie und Leberzirrhose mit hepatorenalem Syndrom indiziert
+
+**Emulsionen in der Medizin:**
+- **Parenterale Ernährung:** Fettemulsionen (Sojaöl/Wasser mit Phospholipid-Emulgator) liefern Energie ohne enterale Resorption
+- **Lungenembolie durch Fettembolie:** Fetttröpfchen aus Knochenmarkschädigung (Fraktur) bilden Emulsion im Blut und können Lungenarterien verlegen
+- **Surfactant der Lunge:** Phospholipid-Gemisch (Dipalmitoylphosphatidylcholin, DPPC), das die Alveolen-Wasser-Grenzfläche stabilisiert und die Oberflächenspannung senkt → verhindert Alveolarkollaps; bei Frühgeborenen noch nicht ausgereift → **Atemnotsyndrom (RDS)**`,
+
       lernziele: [
-        "Emissions- und Absorptionsspektren erklären und den Unterschied beschreiben",
-        "Die Serien des Wasserstoffspektrums (Lyman, Balmer, Paschen) und ihre Spektralbereiche zuordnen",
-        "Fluoreszenz und Phosphoreszenz unterscheiden und diagnostische Anwendungen nennen",
+        'Die drei Aggregatzustände und ihre Eigenschaften kennen sowie alle Phasenübergänge mit Wärmetönung (endo-/exotherm) benennen können.',
+        'Den Zusammenhang zwischen Dampfdruck, Siedepunkt und äußerem Druck erklären und die Siedepunktserhöhung berechnen können.',
+        'Kolloide von echten Lösungen und Suspensionen abgrenzen und die Eigenschaften (Brownsche Bewegung, Tyndall-Effekt) erklären können.',
+        'Die verschiedenen Kolloidtypen (Sol, Emulsion, Aerosol, Gel) unterscheiden und medizinische Beispiele nennen können.',
+        'Kolloidale Infusionslösungen und den Surfactant der Lunge in ihrer physikalisch-chemischen Grundlage erklären können.',
       ],
+
       sections: [
         {
-          heading: "Linienspektren als Fingerabdruck der Elemente",
-          text: "Jedes Element besitzt ein einzigartiges Spektrum, das zur Identifikation genutzt werden kann — ähnlich einem Fingerabdruck. In der Astrophysik ermöglicht das Absorptionsspektrum der Sonne (Fraunhofer-Linien) die Bestimmung ihrer chemischen Zusammensetzung: Dunkle Linien entstehen, wenn Sonnenlicht von kühlen Atmosphärenschichten absorbiert wird. Die Spektralanalyse (AAS, AES) wird in der klinischen Chemie zur Bestimmung von Spurenelementen (Natrium, Kalium, Calcium, Eisen) in Körperflüssigkeiten eingesetzt. Flammenspektrometrie ist einfach und kostengünstig für Na und K (gelbe bzw. violette Flamme). Graphitrohrofen-AAS erreicht Nachweisgrenzen im ng/L-Bereich.",
+          heading: 'Phasenübergänge — Energiebilanz merken',
+          text: 'Alle Übergänge zu einem ungeordneteren Zustand (fest→flüssig→gasförmig) sind endotherm: Energie muss zugeführt werden, um Ordnung aufzubrechen. Umgekehrt sind Übergänge zu geordneteren Phasen exotherm. Die Sublimation (fest→gasförmig) überspringt die flüssige Phase und ist stark endotherm — flüssiges Wasser unter 0,006 atm sublimiert (technisch: Gefriertrocknung). Im Körper ist die Verdampfungswärme des Wassers (2257 J/g) entscheidend für die Thermoregulation: Schwitzen kühlt durch Verdampfung.',
+          merksatz: 'Endo = Energie zuführen = Ordnung aufbrechen (fest→flüssig→gasförmig); Exo = Energie abgeben = Ordnung aufbauen.',
         },
         {
-          heading: "Fluoreszenz in der medizinischen Diagnostik",
-          text: "Fluoreszenz beruht auf der Absorption eines Photons (Anregung) und der nahezu sofortigen Emission eines Photons niedrigerer Energie (Stokes-Verschiebung: Emissionswellenlänge > Anregungswellenlänge). In der Medizin sind Fluoreszenzfarbstoffe (Fluorophore) wie FITC, DAPI oder Texas Red unverzichtbar. Die Immunfluoreszenzmikroskopie lokalisiert Proteine in Gewebeschnitten durch fluoreszenzmarkierte Antikörper. Die Durchflusszytometrie (FACS) kann einzelne Blutzellen anhand fluoreszenzmarkierter Oberflächenmarker sortieren und zählen. Neuere Techniken wie TIRF und STORM erreichen Auflösungen weit unterhalb der Beugungsgrenze.",
+          heading: 'Kolloide — zwischen Lösung und Suspension',
+          text: 'Die Partikelgröße ist das entscheidende Kriterium: echte Lösungen (<1 nm, unsichtbar), Kolloide (1 nm–1 μm, opaleszent, Tyndall-Effekt), Suspensionen (>1 μm, trüb, sedimentieren). Der Tyndall-Effekt — sichtbares Streulicht durch kolloidale Partikel — wird klinisch genutzt: Plasma ist opaleszent (kolloidale Proteine), aber nach Entfernung der Proteine klar. Brownsche Bewegung hält kolloidale Partikel in Schwebe; bei großen Partikeln (Suspensionen) überwiegt die Gravitation.',
+          merksatz: 'Tyndall-Effekt: Kolloid streut Licht sichtbar; echte Lösung tut das nicht.',
+        },
+        {
+          heading: 'Klinische Kolloidchemie',
+          text: 'Blut ist kein "kolloidales System" im strengen Sinne, aber Plasma verhält sich kolloidartig durch die Plasmaproteine (Albumin, Globuline, Fibrinogen). Kolloidale Infusionslösungen (HAES, Gelatine, Albumin) bleiben länger im Gefäßsystem als kristalloide (NaCl, Ringer), weil die großen Makromoleküle die Kapillarwand nicht passieren können und so den onkotischen Druck aufrechterhalten. Surfactant der Lunge (ein Phospholipid-Protein-Gemisch) ist eine biologische Emulsion, die die Grenzflächenspannung der Alveolen-Luft-Fläche senkt und Kollaps verhindert.',
+          merksatz: 'Kolloidale Infusionslösungen erhalten onkotischen Druck → länger im Gefäß als NaCl-Lösung.',
         },
       ],
+
       merksätze: [
-        "Balmer-Serie: Übergänge zu n=2, sichtbares Licht (rot 656 nm, blau 486 nm)",
-        "Lyman: n=1, UV; Balmer: n=2, sichtbar; Paschen: n=3, IR",
-        "Fluoreszenz: sofortige Lichtemission (< 10⁻⁸s) nach Anregung",
+        'Schmelzen und Verdampfen sind endotherm; Erstarren und Kondensieren sind exotherm.',
+        'Sublimation: fest → gasförmig (direkt); Desublimation: gasförmig → fest. Beide überspringen die Flüssigphase.',
+        'Siedepunkt = Temperatur, bei der Dampfdruck = äußerer Druck; im Gebirge niedriger als bei Normaldruck.',
+        'Siedepunktserhöhung: ΔTb = Kb × m × i; kolligative Eigenschaft abhängig von Teilchenzahl.',
+        'Kolloide: Partikelgröße 1 nm – 1 μm; Tyndall-Effekt; Brownsche Bewegung; keine Sedimentation.',
+        'Echte Lösungen: <1 nm; kein Tyndall-Effekt. Suspensionen: >1 μm; sedimentieren.',
+        'Emulsion = Flüssig-in-Flüssig-Kolloid; Emulgator stabilisiert (z. B. Lecithin in Milch).',
+        'Blutplasma enthält kolloidale Proteine (Albumin ~7 nm) → onkotischer Druck.',
+        'HAES und Gelatine als kolloidale Volumenersatzmittel bleiben länger intravaskulär als kristalloide.',
+        'Surfactant (DPPC) senkt Alveolären-Oberflächenspannung; Mangel → Atemnotsyndrom (RDS) bei Frühgeborenen.',
       ],
-      klinischerBezug: "Fluoreszenzmarkierte Antikörper sind das Rückgrat der modernen Immundiagnostik: In der Immunfluoreszenz, im ELISA und in der Durchflusszytometrie ermöglichen sie die sensitive und spezifische Detektion von Krankheitserregern, Autoantikörpern und Tumorzellmarkern.",
+
       altfrage: {
-        question: "Warum erzeugen angeregte Atome ein Linienspektrum statt eines kontinuierlichen Spektrums?",
-        answer: "Elektronen in Atomen können nur diskrete Energieniveaus einnehmen. Bei der Rückkehr von einem angeregten Niveau in ein niedrigeres wird ein Photon mit genau der Energiedifferenz ΔE = hf emittiert. Da nur bestimmte Übergänge zwischen diskreten Niveaus möglich sind, entstehen nur bestimmte Frequenzen — das elementspezifische Linienspektrum.",
+        question: 'Erklären Sie den Tyndall-Effekt und die Brownsche Bewegung in kolloidalen Systemen. Erläutern Sie dann die klinische Bedeutung der kolloidalen Eigenschaften des Blutes am Beispiel des onkotischen Drucks und kolloidaler Infusionslösungen.',
+        answer: `Der **Tyndall-Effekt** bezeichnet die Streuung von Licht durch kolloidale Partikel (Durchmesser 1 nm–1 μm). Wenn ein Lichtstrahl ein kolloidales System passiert, wird er an den Partikeloberflächen nach allen Seiten gestreut (Rayleigh-Streuung für Partikel < λ; Mie-Streuung für größere). Der Lichtstrahl wird dadurch seitlich sichtbar, obwohl das Kolloid optisch klar oder leicht opaleszent erscheint. In echten Lösungen (Partikel <1 nm, z. B. NaCl, Glukose) ist der Effekt nicht sichtbar, weil die gelösten Teilchen viel kleiner als die Lichtwellenlänge sind. Suspensionen (>1 μm) trüben das Licht diffus. Der Tyndall-Effekt ist damit ein einfaches diagnostisches Kriterium zur Unterscheidung echter Lösungen von Kolloiden.
+
+Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Partikel infolge der unregelmäßigen thermischen Stöße der Lösungsmittelmoleküle (Wärmeenergie ~kBT ≈ 0,026 eV bei Raumtemperatur). Da kolloidale Partikel klein genug sind, um durch diese Stöße signifikant aus ihrer Position bewegt zu werden, sedimentieren sie nicht unter dem Einfluss der Schwerkraft. Diese Eigenschaft ist entscheidend für die Stabilität kolloidaler Systeme. Große Teilchen (>1 μm, Suspensionen) haben genug Masse, um trotz Brownscher Bewegung zu sedimentieren.
+
+**Klinische Bedeutung kolloidaler Blut-Eigenschaften:** Plasma enthält kolloidale Proteine — vor allem Albumin (Molmasse ~66 kDa, Durchmesser ~7 nm), aber auch Fibrinogen, Globuline und Gerinnungsfaktoren. Diese Proteine können die Kapillarmembran (Porendurchmesser <2 nm effektiv für Proteine) nicht passieren und erzeugen dadurch den **onkotischen (kolloidosmotischen) Druck** von ca. 25–28 mmHg. Dieser Druck hält Wasser im Gefäßlumen, indem er dem nach außen filtrierenden hydrostatischen Druck entgegenwirkt (Starling-Gleichgewicht).
+
+**Kolloidale Infusionslösungen** (HAES, Gelatine, Humanalbumin) nutzen dasselbe Prinzip: Die großen Makromoleküle (Hydroxyethylstärke: >100 kDa; Gelatine: ~30 kDa; Albumin: 66 kDa) bleiben nach intravenöser Gabe im Gefäßlumen und erhöhen den onkotischen Druck, was das intravasale Volumen länger aufrechterhält als kristalloide Lösungen (NaCl, Ringer). Bei hypoosmolarem Schock (z. B. nach schwerem Blutverlust) ist dies klinisch vorteilhaft. HAES ist seit 2013 bei kritisch kranken und Sepsis-Patienten aufgrund von Nierenschäden eingeschränkt; Humanalbumin wird bei Leberzirrhose mit spontaner bakterieller Peritonitis und hepatorenalem Syndrom eingesetzt.`,
       },
+
+      klinischerBezug: 'Kolloidale Infusionslösungen (HAES, Albumin) nutzen die onkotische Wirkung großer Makromoleküle; Surfactant-Mangel bei Frühgeborenen führt durch fehlende Emulsifiziereigenschaften zum Atemnotsyndrom RDS.',
+
       selfTest: [
         {
-          question: "Welche Spektralserie des Wasserstoffs liegt im sichtbaren Bereich?",
+          question: 'Welcher Phasenübergang ist exotherm?',
           options: [
-            "Lyman-Serie",
-            "Balmer-Serie",
-            "Paschen-Serie",
-            "Brackett-Serie",
-            "Pfund-Serie",
+            'Schmelzen (fest → flüssig)',
+            'Verdampfen (flüssig → gasförmig)',
+            'Sublimation (fest → gasförmig)',
+            'Kondensation (gasförmig → flüssig)',
+            'Endotherm sind alle Phasenübergänge.',
           ],
-          correctIndex: 1,
-          explanation: "Die Balmer-Serie (Übergänge auf n=2) liegt im sichtbaren Bereich: H-α bei 656 nm (rot), H-β bei 486 nm (blau), H-γ bei 434 nm (violett). Die Lyman-Serie (n=1) liegt im UV, die Paschen-Serie (n=3) im IR.",
+          correctIndex: 3,
+          explanation: 'Kondensation (gasförmig → flüssig) ist exotherm: Beim Übergang in den geordneteren, dichteren Zustand wird die beim Verdampfen aufgenommene Wärme (Verdampfungswärme) wieder freigesetzt. Dieses Prinzip erklärt, warum Dampfverbrennungen schlimmer sind als Wasserverbrennungen gleicher Temperatur — Dampf gibt beim Kondensieren auf der Haut zusätzlich Verdampfungswärme (2257 J/g) ab. Alle Übergänge zu weniger geordneten Phasen (Schmelzen, Verdampfen, Sublimation) sind endotherm.',
           hints: [
-            "Sichtbares Licht: 380-780 nm",
-            "Die Serie nach Johann Jakob Balmer liegt im Sichtbaren",
+            'Merkrege: Unordnung schaffen = Energie aufnehmen; Ordnung aufbauen = Energie abgeben.',
+            'Kondensation ist das Gegenteil von Verdampfen — gleich exotherm wie Verdampfen endotherm ist.',
           ],
+          tags: [],
           difficulty: 1,
-          tags: [],
         },
         {
-          question: "Was ist der Unterschied zwischen Emissions- und Absorptionsspektrum?",
+          question: 'Wasser siedet in einer Gebirgsküche bei 3000 m Höhe (Luftdruck ~70 kPa statt 101 kPa) bei ca. 90 °C. Warum?',
           options: [
-            "Emissionsspektrum zeigt kontinuierliche Farben, Absorptionsspektrum zeigt Linien",
-            "Emissionsspektrum hat helle Linien auf dunklem Hintergrund, Absorptionsspektrum dunkle Linien im Kontinuum",
-            "Emissionsspektrum entsteht bei UV-Licht, Absorptionsspektrum bei Röntgenlicht",
-            "Beide Spektren sind identisch, nur die Messmethode unterscheidet sich",
-            "Absorptionsspektren zeigen immer mehr Linien als Emissionsspektren",
+            'Weil Wasser in großer Höhe eine niedrigere Molmasse hat.',
+            'Weil der Dampfdruck mit steigender Höhe zunimmt.',
+            'Weil der Siedepunkt dort liegt, wo Dampfdruck = äußerer Luftdruck; niedrigerer Luftdruck → niedrigerer Siedepunkt.',
+            'Weil die Schwerkraft den Siedepunkt beeinflusst.',
+            'Weil Wasser in der Höhe stärker ionisiert ist.',
           ],
-          correctIndex: 1,
-          explanation: "Emissionsspektren zeigen helle charakteristische Linien auf schwarzem Hintergrund (emittierte Photonen). Absorptionsspektren zeigen dunkle Linien im kontinuierlichen Regenbogenspektrum (absorbierte Wellenlängen). Beide Spektren zeigen dieselben charakteristischen Wellenlängen des Elements.",
+          correctIndex: 2,
+          explanation: 'Der Siedepunkt einer Flüssigkeit ist definiert als die Temperatur, bei der ihr Dampfdruck dem äußeren Druck entspricht. In großer Höhe ist der Luftdruck niedriger (3000 m: ~70 kPa statt 101,3 kPa). Wasser muss daher auf eine geringere Temperatur erhitzt werden, damit sein Dampfdruck den verminderten Luftdruck erreicht. Bei 70 kPa beträgt der Siedepunkt ca. 90 °C. Folge: Lebensmittel müssen länger gekocht werden, weil die Kochtemperatur niedriger ist. Im Druckkochtopf (>1 atm) steigt der Siedepunkt entsprechend an, was die Garzeit verkürzt.',
           hints: [
-            "Emission = Atome senden Licht aus; Absorption = Atome schlucken bestimmte Wellenlängen",
-            "Ein Kontinuumsspektrum mit fehlenden Wellenlängen ist ein Absorptionsspektrum",
+            'Definition Siedepunkt: Dampfdruck = ?',
+            'Was passiert mit dem Luftdruck in großer Höhe?',
           ],
+          tags: [],
           difficulty: 2,
-          tags: [],
         },
         {
-          question: "Was beweist der Franck-Hertz-Versuch?",
+          question: 'Woran ist ein kolloidales System von einer echten Lösung zu unterscheiden?',
           options: [
-            "Elektronen haben Welleneigenschaften",
-            "Atome können nur diskrete Energiemengen aufnehmen (Quantelung der Energieniveaus)",
-            "Photonen haben keine Masse",
-            "Die Elektronenmasse ist konstant",
-            "Röntgenstrahlung entsteht durch Elektronenstöße",
+            'Das Kolloid ist immer trüb und sedimentiert.',
+            'Echte Lösungen zeigen den Tyndall-Effekt, Kolloide nicht.',
+            'Kolloide zeigen den Tyndall-Effekt; echte Lösungen nicht.',
+            'Kolloide bestehen nur aus anorganischen Substanzen.',
+            'Echte Lösungen haben größere Partikel als Kolloide.',
           ],
-          correctIndex: 1,
-          explanation: "Im Franck-Hertz-Versuch stoßen Elektronen inelastisch mit Quecksilberatomen, aber nur wenn sie genau die Anregungsenergie (4,9 eV für Hg) besitzen. Bei geringerer Energie erfolgt nur elastischer Stoß ohne Energieübertrag. Dies beweist die Quantelung der Energieniveaus.",
+          correctIndex: 2,
+          explanation: 'Der Tyndall-Effekt — die seitliche Sichtbarkeit eines Lichtstrahls durch Lichtstreuung an Partikeln — ist das klassische Unterscheidungsmerkmal. Kolloidale Partikel (1 nm–1 μm) haben die richtige Größe, um Licht effizient zu streuen. Partikel echter Lösungen (<1 nm) sind viel kleiner als die Lichtwellenlänge und streuen kaum. Kolloide sedimentieren aufgrund der Brownschen Bewegung nicht spontan (im Gegensatz zu Suspensionen mit >1 μm-Partikeln). Kolloide können sowohl organische als auch anorganische Substanzen sein.',
           hints: [
-            "Inelastische Stöße finden nur bei bestimmten Elektronenenergien statt",
-            "Der Versuch zeigt, dass Energie nur in bestimmten Portionen übertragen werden kann",
+            'Tyndall-Effekt: Ein Lichtstrahl wird in einem bestimmten Medium seitlich sichtbar — in welchem?',
+            'Partikelgröße: Lösung <1 nm, Kolloid 1–1000 nm, Suspension >1000 nm.',
           ],
-          difficulty: 2,
           tags: [],
+          difficulty: 1,
         },
         {
-          question: "Was ist die Stokes-Verschiebung bei der Fluoreszenz?",
+          question: 'Bei einem Frühgeborenen der 28. Schwangerschaftswoche wird ein Atemnotsyndrom (RDS) diagnostiziert. Welcher physikalisch-chemische Mechanismus liegt diesem Syndrom zugrunde?',
           options: [
-            "Die Energie des emittierten Photons ist größer als die des absorbierten",
-            "Das emittierte Licht hat eine längere Wellenlänge als das absorbierte",
-            "Der Fluoreszenzfarbstoff verschiebt sich im Gewebe",
-            "Das absorbierte Licht hat eine längere Wellenlänge als das emittierte",
-            "Die Emissionszeit verschiebt sich bei steigender Temperatur",
+            'Fehlendes Hämoglobin führt zu unzureichender O₂-Bindung.',
+            'Fehlender Surfactant erhöht die Oberflächenspannung der Alveolen → Kollaps beim Ausatmen.',
+            'Zu niedrige Temperatur in den Lungen verhindert Gaseintausch.',
+            'Fehlende Osmolarität der Lungenflüssigkeit verursacht Ödem.',
+            'Überschuss an Surfactant lässt die Alveolen überdehnen.',
           ],
           correctIndex: 1,
-          explanation: "Bei der Fluoreszenz gibt das angeregte Molekül zunächst etwas Energie durch Schwingungsrelaxation ab. Das dann emittierte Photon hat daher weniger Energie (niedrigere Frequenz, längere Wellenlänge) als das absorbierte. Diese Rotverschiebung wird als Stokes-Verschiebung bezeichnet.",
+          explanation: 'Surfactant (surface-active agent) ist ein Phospholipid-Protein-Gemisch, das von Typ-II-Pneumozyten produziert wird und ab ca. 34.–36. SSW in ausreichender Menge vorhanden ist. Sein Hauptbestandteil DPPC (Dipalmitoylphosphatidylcholin) lagert sich als monomolekularer Film an die Alveolen-Luft-Grenzfläche. Er senkt die Oberflächenspannung des Wasserfilms von ~70 mN/m auf < 5 mN/m bei kleinen Alveolen. Ohne Surfactant würde die Laplace-Druckformel (ΔP = 2γ/r) bewirken, dass kleine Alveolen bei niedrigem Radius hohen Innendruck haben und beim Ausatmen kollabieren. RDS-Therapie: exogene Surfactant-Instillation (Beractant, Poractant alfa) und CPAP-Beatmung.',
           hints: [
-            "Emittiertes Photon hat weniger Energie als absorbiertes → welche Wellenlänge?",
-            "E = hf: weniger Energie bedeutet niedrigere Frequenz und längere Wellenlänge",
+            'Laplace-Gleichung: ΔP = 2γ/r — was passiert bei hoher Oberflächenspannung γ und kleinem Radius r?',
+            'Surfactant ist ein grenzflächenaktiver Stoff — er setzt die Oberflächenspannung herab.',
           ],
+          tags: [],
           difficulty: 3,
-          tags: [],
         },
         {
-          question: "Ein Elektron in einem Wasserstoffatom fällt von n=4 auf n=2. In welchem Spektralbereich liegt das emittierte Photon?",
+          question: 'Was unterscheidet eine Emulsion von einem Sol?',
           options: [
-            "Infrarot (Paschen-Serie)",
-            "Sichtbares Licht (Balmer-Serie)",
-            "UV-Licht (Lyman-Serie)",
-            "Röntgenstrahlung",
-            "Mikrowellen",
+            'Eine Emulsion hat Partikel kleiner als 1 nm.',
+            'In einem Sol ist die disperse Phase flüssig; in einer Emulsion ist sie fest.',
+            'In einer Emulsion ist die disperse Phase flüssig (Flüssig-in-Flüssig); in einem Sol ist sie fest (Fest-in-Flüssig).',
+            'Eine Emulsion sedimentiert, ein Sol nicht.',
+            'Emulsionen existieren nur in biologischen Systemen.',
+          ],
+          correctIndex: 2,
+          explanation: 'Der Unterschied liegt in der Aggregatzustand der dispersen Phase: Ein Sol (Lyosol) ist ein Kolloid mit fester disperser Phase in flüssigem Dispersionsmedium (z. B. Goldkolloid, Stärkelösung). Eine Emulsion ist ein Kolloid mit flüssiger disperser Phase in flüssigem Dispersionsmedium (Flüssig-in-Flüssig, z. B. Milch = Fett in Wasser, Mayonnaise). Emulsionen werden durch Emulgatoren (amphiphile Moleküle wie Lecithin, Gallensäuren) stabilisiert, die sich an der Phasengrenze anlagern. Parenterale Fettemulsionen für die künstliche Ernährung sind medizinisch relevante Beispiele.',
+          hints: [
+            'Sol: Was ist "Sol" — von lat. "solutio" für Lösung; disperse Phase ist fest.',
+            'Emulsion: Denken Sie an Milch — Fett in Wasser: welcher Aggregatzustand ist die disperse Phase?',
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: 'Welche der folgenden Substanzen zeigt bei gleicher Molalität (m = 0,1 mol/kg) die stärkste Siedepunktserhöhung in Wasser?',
+          options: [
+            'Glukose (i = 1)',
+            'NaCl (i = 2)',
+            'CaCl₂ (i = 3)',
+            'AlCl₃ (i = 4)',
+            'Alle gleich, weil gleiche Molalität.',
+          ],
+          correctIndex: 3,
+          explanation: 'Die Siedepunktserhöhung ΔTb = Kb × m × i ist eine kolligative Eigenschaft, die von der Gesamtzahl der gelösten Teilchen (nicht ihrer Art) abhängt. Bei gleicher Molalität m = 0,1 mol/kg gilt: Glukose (i = 1): ΔTb = 0,512 × 0,1 × 1 = 0,0512 K; NaCl (i = 2): 0,1024 K; CaCl₂ (i = 3): 0,1536 K; AlCl₃ (i = 4: Al³⁺ + 3 Cl⁻ = 4 Teilchen): 0,2048 K. AlCl₃ erzeugt die meisten Teilchen und hat damit die größte Siedepunktserhöhung.',
+          hints: [
+            'Schreiben Sie die Dissoziationsgleichung für AlCl₃ auf: AlCl₃ → Al³⁺ + 3 Cl⁻ = ? Teilchen.',
+            'Formel: ΔTb = Kb × m × i; welches i ist am größten?',
+          ],
+          tags: [],
+          difficulty: 3,
+        },
+        {
+          question: 'Brownsche Bewegung schützt kolloidale Partikel vor Sedimentation. Was ist die physikalische Grundlage dieser Bewegung?',
+          options: [
+            'Elektrostatische Abstoßung zwischen gleichnamig geladenen Kolloidpartikeln.',
+            'Thermische Energie der Lösungsmittelmoleküle, die Kolloidpartikel durch zufällige Stöße ständig in Bewegung halten.',
+            'Magnetische Wechselwirkungen zwischen Kolloidpartikeln und dem Lösungsmittel.',
+            'Gravitation, die auf Kolloidpartikel gleichmäßig wirkt.',
+            'Chemische Reaktionen an der Kolloidpartikeloberfläche.',
           ],
           correctIndex: 1,
-          explanation: "Alle Übergänge, die beim Wasserstoff auf n=2 enden, gehören zur Balmer-Serie, die im sichtbaren Lichtbereich liegt. Der Übergang 4→2 entspricht der H-β-Linie bei 486 nm (blau-grün).",
+          explanation: 'Brownsche Bewegung (entdeckt von Robert Brown, 1827; erklärt von Einstein, 1905) basiert auf den thermischen Stößen der Lösungsmittelmoleküle gegen die kolloidalen Partikel. Die mittlere thermische Energie jedes Freiheitsgrades beträgt kBT/2 (kB = Boltzmann-Konstante, T = Temperatur). Kolloidale Partikel (1–1000 nm) sind zwar größer als Atome, aber klein genug, dass die summierte Stoßkraft aus ungleichmäßigen Richtungen eine zufällige, unkontrollierte Bewegung erzeugt. Diese überlagert die langsame Sedimentation durch Gravitation. Suspensionen (>1 μm) haben zu viel Masse — Gravitation dominiert, sie sedimentieren.',
           hints: [
-            "Die Endquantenzahl bestimmt die Serie: n=1→Lyman, n=2→Balmer, n=3→Paschen",
-            "Balmer-Serie liegt im sichtbaren Bereich",
+            'Einstein erklärte die Brownsche Bewegung 1905 über die kinetische Gastheorie.',
+            'Bei welcher Temperatur würde Brownsche Bewegung aufhören? Bei 0 K (absoluter Nullpunkt).',
           ],
-          difficulty: 2,
           tags: [],
+          difficulty: 2,
         },
       ],
     },

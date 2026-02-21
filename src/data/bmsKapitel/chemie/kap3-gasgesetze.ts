@@ -5,570 +5,749 @@ export const chemKap3: Kapitel = {
   title: 'Gasgesetze',
   subject: 'chemie',
   icon: '💨',
-  estimatedTime: '45 min',
+  estimatedTime: '60 min',
   unterkapitel: [
     {
       id: 'ch-3-01',
       title: 'Ideale Gasgleichung pV=nRT',
       content: `## Die Ideale Gasgleichung
 
-Die ideale Gasgleichung **pV = nRT** ist eine der fundamentalsten Gleichungen der Chemie. Sie verknüpft vier Zustandsgrößen eines Gases:
+Die ideale Gasgleichung **pV = nRT** ist eine der fundamentalsten Gleichungen der physikalischen Chemie. Sie beschreibt das Verhalten eines hypothetischen idealen Gases und verknüpft vier makroskopische Zustandsgrößen:
 
-- **p** = Druck [Pa = N/m² = kg/(m·s²)] oder [bar, atm]: Der Druck, den das Gas auf seine Behälterwände ausübt
-- **V** = Volumen [m³] oder [L]: Das von Gas eingenommene Volumen
-- **n** = Stoffmenge [mol]: Die Anzahl der Gasteilchen in Einheiten der Avogadrozahl
-- **R** = universelle Gaskonstante = 8,314 J/(mol·K) = 8,314 Pa·m³/(mol·K) = 0,08314 L·bar/(mol·K)
-- **T** = absolute Temperatur [K]: Kelvin = Celsius + 273,15
+- **p** = Druck [Pa = N/m²] oder [bar, atm, mmHg]: Der Druck ist die Kraft pro Fläche, die Gasteilchen durch Kollisionen auf die Behälterwand ausüben.
+- **V** = Volumen [m³ oder L]: Das vom Gas eingenommene Raumvolumen.
+- **n** = Stoffmenge [mol]: Gibt die Teilchenanzahl in Vielfachen der Avogadro-Zahl an (N_A = 6,022 × 10²³ mol⁻¹).
+- **R** = universelle Gaskonstante = 8,314 J/(mol·K) = 8,314 Pa·m³/(mol·K) = 0,08314 L·bar/(mol·K) = 0,08206 L·atm/(mol·K).
+- **T** = absolute Temperatur [K]: Kelvin = Celsius + 273,15. Niemals Celsius direkt einsetzen!
 
-## Ideales vs. reales Gas
+## Herleitung aus den Einzelgesetzen
 
-Ein **ideales Gas** ist ein Modell mit zwei Vereinfachungen: (1) Gasteilchen haben kein Eigenvolumen (Punktmassen) und (2) es gibt keine intermolekularen Wechselwirkungen. In der Realität haben Moleküle Eigenvolumen und ziehen sich an (van-der-Waals-Kräfte). Reale Gase weichen besonders bei **hohem Druck** (Eigenvolumen wird relevant) und **tiefer Temperatur** (Wechselwirkungen stärker) vom idealen Verhalten ab.
+Die ideale Gasgleichung ergibt sich aus der Kombination dreier historischer Gasgesetze:
+
+**1. Gesetz von Boyle-Mariotte (1662):** Bei konstanter Temperatur (T = const) und konstanter Stoffmenge (n = const) ist das Produkt aus Druck und Volumen konstant: **p · V = const**, also p₁V₁ = p₂V₂. Physikalisch: Halbiert man das Volumen, verdoppelt sich die Stoßfrequenz der Teilchen auf die Wand → doppelter Druck.
+
+**2. Gesetz von Charles/Gay-Lussac (1787/1802):** Bei konstantem Druck (p = const) ist das Volumen proportional zur absoluten Temperatur: **V/T = const**, also V₁/T₁ = V₂/T₂. Erhöht man T, steigt die kinetische Energie → Teilchen stoßen stärker → Volumen wächst, damit p konstant bleibt.
+
+**3. Gesetz von Avogadro (1811):** Bei gleichem Druck und gleicher Temperatur enthalten gleiche Volumina aller idealen Gase gleich viele Teilchen: **V/n = const**. Das molare Volumen V_m = V/n ist bei STP stets 22,4 L/mol.
+
+Kombiniert: p·V/(n·T) = R = const → **pV = nRT**.
+
+## Umrechnungen und praktische Anwendung
+
+Häufige Umformungen:
+
+- Dichte eines Gases: ρ = m/V = M·p/(R·T), wobei M die molare Masse [g/mol] ist.
+- Molare Masse aus Messung: M = m·R·T/(p·V)
+- Konzentration: c = n/V = p/(R·T)
+
+**Standardbedingungen:**
+- STP (IUPAC seit 1982): 0 °C (273,15 K), 1 bar → V_m = 22,711 L/mol (exakt)
+- Ältere Definition: 0 °C, 1 atm (101.325 Pa) → V_m = 22,414 L/mol (in vielen Büchern noch üblich)
+- SATP: 25 °C (298,15 K), 1 bar → V_m = 24,790 L/mol
+
+**Druckeinheiten im Überblick:**
+- 1 atm = 101.325 Pa = 1,01325 bar = 760 mmHg (Torr)
+- Normaldruck der Atmosphäre ≈ 101.300 Pa ≈ 1 bar
+- Partialdruck: p_i = n_i·R·T/V (Anteil der Komponente i im Gemisch)
+
+## Ideales vs. Reales Gas
+
+Ein **ideales Gas** basiert auf zwei Modellannahmen:
+1. Gasteilchen sind punktförmig (kein Eigenvolumen).
+2. Keine intermolekularen Wechselwirkungen.
+
+**Reale Gase** weichen davon ab, besonders bei:
+- **Hohem Druck**: Eigenvolumen der Moleküle wird relevant → Gas schwerer komprimierbar → Kompressibilitätsfaktor Z = pV/(nRT) > 1.
+- **Tiefer Temperatur**: Van-der-Waals-Anziehungskräfte dominieren → Gas leichter komprimierbar → Z < 1.
+- **Nahe dem Kondensationspunkt**: Phasenübergänge treten auf.
 
 ## Van-der-Waals-Gleichung
 
-Die van-der-Waals-Gleichung korrigiert das ideale Gasgesetz für reale Gase: (p + a·n²/V²)(V − nb) = nRT. Dabei korrigiert der Term a·n²/V² den Druck wegen intermolekularer Anziehung und nb das Volumen wegen Eigengröße der Moleküle (a und b sind substanzspezifische Konstanten).
+Die van-der-Waals-Gleichung (1873) korrigiert das ideale Gasgesetz für reale Gase:
 
-## Standardbedingungen
+**(p + a·n²/V²) · (V − n·b) = n·R·T**
 
-**STP** (Standard Temperature and Pressure): 0°C (273,15 K) und 1 bar (früher 1 atm). Bei STP beträgt das molare Volumen eines idealen Gases: V_m = RT/p = 8,314 × 273,15 / 100.000 = **22,4 L/mol**. Das bedeutet: 1 mol eines beliebigen idealen Gases nimmt bei STP stets 22,4 Liter ein.`,
+- **a** [L²·bar/mol²]: Korrigiert den Druck – intermolekulare Anziehung verringert den Wandstoß-Druck.
+- **b** [L/mol]: Korrigiert das Volumen – Kovolumen (Eigenvolumen) der Moleküle.
+
+Für H₂O: a = 5,537, b = 0,03049. Für He: a = 0,0346, b = 0,0238 (fast ideales Verhalten).
+
+## Kinetische Gastheorie
+
+Die mikroskopische Erklärung liefert die **kinetische Gastheorie** (Maxwell, Boltzmann):
+- Mittlere kinetische Energie: E_kin = (3/2)·k_B·T, wobei k_B = 1,381 × 10⁻²³ J/K.
+- Quadratischer Mittelwert der Geschwindigkeit: v_rms = √(3·R·T/M).
+- Bei 25 °C hat N₂ (M = 0,028 kg/mol): v_rms = √(3 × 8,314 × 298 / 0,028) ≈ 515 m/s.`,
       lernziele: [
-        "Die ideale Gasgleichung pV=nRT mit allen Variablen und Einheiten erklären",
-        "Den Unterschied zwischen idealem und realem Gas beschreiben und die van-der-Waals-Korrektur erläutern",
-        "Das molare Volumen bei STP berechnen und anwenden",
+        'Die ideale Gasgleichung pV=nRT aus den Einzelgesetzen (Boyle-Mariotte, Charles, Avogadro) herleiten und auf Rechenaufgaben anwenden.',
+        'Zustandsgrößen p, V, n, T mit korrekten Einheiten benennen und ineinander umrechnen (inkl. Druckeinheiten atm, bar, Pa, mmHg).',
+        'Den Unterschied zwischen idealem und realem Gas erklären und die van-der-Waals-Gleichung interpretieren.',
+        'Das molare Volumen bei Standardbedingungen (STP) kennen und zur Berechnung von Gasmassen/-mengen verwenden.',
+        'Die kinetische Gastheorie als mikroskopische Grundlage der Gasgesetze beschreiben.',
       ],
       sections: [
         {
-          heading: "Rechnen mit der Gasgleichung",
-          text: "Die Gasgleichung pV=nRT kann nach jeder der vier Größen umgestellt werden. Beispiel 1: Wie viel mol CO₂ befinden sich in einem 10-L-Behälter bei 2 bar und 27°C (=300 K)? n = pV/(RT) = (2×10⁵ Pa × 0,01 m³) / (8,314 × 300) = 2000/2494 ≈ 0,80 mol. Beispiel 2: Welchen Druck übt 0,5 mol N₂ in einem 5-L-Gefäß bei 25°C aus? p = nRT/V = (0,5 × 8,314 × 298) / 0,005 = 248.486 Pa ≈ 2,48 bar. Wichtig: Temperatur immer in Kelvin, Druck in Pascal und Volumen in m³ für konsistente SI-Einheiten.",
+          heading: 'Boyle-Mariotte: Druck und Volumen',
+          text: 'Das Gesetz von Boyle-Mariotte (1662) beschreibt das isothermische Verhalten idealer Gase: Bei konstanter Temperatur und Stoffmenge ist das Produkt p·V konstant. Verdoppelt man den Druck, halbiert sich das Volumen. Graphisch ergibt sich eine Hyperbel im p-V-Diagramm (Isotherme). Technisch genutzt wird dieses Prinzip bei Kompressoren, Fahrradpumpen und Tauchgeräten. Beim Auftauchen aus der Tiefe dehnen sich Gasblasen im Blut aus – dies ist die physikalische Grundlage der gefährlichen Dekompressionskrankheit.',
+          merksatz: 'p · V = const (bei T, n = const): Druck und Volumen sind umgekehrt proportional – halbiertes Volumen, doppelter Druck.',
         },
         {
-          heading: "Molares Volumen und seine Bedeutung",
-          text: "Das molare Volumen V_m = 22,4 L/mol bei STP ist eine wichtige Größe in der Stöchiometrie. Es gilt für jedes ideale Gas unabhängig von der Molekülidentität (Avogadro-Prinzip: Gleiche Volumina verschiedener Gase bei gleichen Bedingungen enthalten gleich viele Teilchen). Anwendung: Bei einer Reaktion entstehen 88 g CO₂ (M=44 g/mol → n=2 mol). Bei STP nimmt das CO₂ ein Volumen von 2 × 22,4 = 44,8 L ein. Bei anderen Bedingungen (z.B. Körpertemperatur 37°C=310 K, 1 bar): V_m = RT/p = 8,314 × 310 / 100.000 = 25,77 L/mol.",
+          heading: 'Charles und Gay-Lussac: Temperatur und Volumen/Druck',
+          text: 'Das Gesetz von Charles (isobar, p = const): V/T = const – Volumen und Kelvin-Temperatur sind direkt proportional. Das Gesetz von Gay-Lussac (isochor, V = const): p/T = const – Druck und Kelvin-Temperatur sind direkt proportional. Beide Gesetze erfordern die absolute Temperaturskala in Kelvin. Senkt man ein Gas auf 0 K ab, würde sein Volumen theoretisch null – der absolute Nullpunkt. Im Alltag: Ein Autoreifen zeigt im Sommer höheren Druck als im Winter, da bei höherer Temperatur die Gasmoleküle schneller sind und häufiger stoßen (isochore Näherung).',
+          merksatz: 'V/T = const (isobar) und p/T = const (isochor): Temperatur immer in Kelvin! T[K] = T[°C] + 273,15.',
+        },
+        {
+          heading: 'Avogadro und das molare Volumen',
+          text: 'Avogadros Gesetz (1811): Gleiche Volumina idealer Gase enthalten bei gleichem p und T gleich viele Teilchen, unabhängig von der chemischen Natur. V/n = const (bei p, T = const). Das molare Volumen V_m bei STP (0 °C, 1 bar) beträgt 22,4 L/mol. Damit gilt: 1 mol O₂ (32 g) und 1 mol CO₂ (44 g) nehmen bei STP dasselbe Volumen ein! Diese Erkenntnis ermöglicht es, aus gemessenem Gasvolumen direkt auf die Stoffmenge zu schließen – fundamental für Stöchiometrie und Gasanalyse.',
+          merksatz: 'V_m = 22,4 L/mol bei STP (0 °C, 1 bar): Jedes ideale Gas belegt bei Standardbedingungen dasselbe molare Volumen – unabhängig von seiner Molmasse!',
+        },
+        {
+          heading: 'Reale Gase und van-der-Waals-Gleichung',
+          text: 'Reale Gase weichen vom Idealverhalten ab, wenn der Druck hoch oder die Temperatur niedrig ist. Der Kompressibilitätsfaktor Z = pV/(nRT) misst die Abweichung: Z = 1 (ideal), Z > 1 (Eigenvolumen dominiert, Gas schwerer komprimierbar), Z < 1 (Anziehung dominiert). Die van-der-Waals-Gleichung korrigiert beide Effekte: (p + a·n²/V²)(V − nb) = nRT. In der Medizin relevant: Anästhesiegase wie Halothan oder Desfluran sind reale Gase; ihre Löslichkeit in Blut und Gewebe hängt von intermolekularen Kräften ab.',
+          merksatz: 'Z = pV/(nRT): Bei Z = 1 ideales Gas; Z > 1 Eigenvolumen dominiert; Z < 1 Anziehungskräfte dominieren.',
         },
       ],
       merksätze: [
-        "pV=nRT: Druck × Volumen = Mol × Gaskonstante × Temperatur (in Kelvin!)",
-        "Molares Volumen bei STP: 22,4 L/mol für ideale Gase",
-        "Reale Gase weichen ab bei: hohem Druck und tiefer Temperatur",
+        'pV = nRT: Druck mal Volumen gleich Stoffmenge mal Gaskonstante mal Temperatur (immer in Kelvin!).',
+        'R = 8,314 J/(mol·K) = 0,08314 L·bar/(mol·K) = 0,08206 L·atm/(mol·K): Die universelle Gaskonstante.',
+        'V_m = 22,4 L/mol bei STP (0 °C, 1 bar): Das molare Volumen jedes idealen Gases.',
+        'Boyle-Mariotte: p·V = const (isotherm) – Druck und Volumen umgekehrt proportional.',
+        'Charles: V/T = const (isobar) – Volumen und Kelvin-Temperatur direkt proportional.',
+        'Gay-Lussac: p/T = const (isochor) – Druck und Kelvin-Temperatur direkt proportional.',
+        'Avogadro: Gleiche Volumina idealer Gase (bei gleichem p, T) enthalten gleich viele Teilchen.',
+        'K = °C + 273,15: Immer in Kelvin rechnen – negative Kelvin-Werte sind physikalisch unmöglich.',
+        'Reales Gas weicht bei hohem Druck (Z > 1) und tiefer Temperatur (Z < 1) vom Idealverhalten ab.',
+        'Van-der-Waals: (p + an²/V²)(V − nb) = nRT – a korrigiert Anziehung, b korrigiert Eigenvolumen.',
       ],
-      klinischerBezug: "Die ideale Gasgleichung ist Grundlage der Blutgasanalyse: Aus dem gemessenen Partialdruck von O₂ und CO₂ im Blut werden die gelösten Gasmengen berechnet. Die Beatmungstherapie nutzt pV=nRT zur Berechnung des Atemzugvolumens in Abhängigkeit von Druck und Temperatur.",
       altfrage: {
-        question: "Wie viel Liter nimmt 1 mol eines idealen Gases bei 0°C und 1 bar ein?",
-        answer: "V = nRT/p = 1 mol × 8,314 J/(mol·K) × 273,15 K / 100.000 Pa = 22,71 J/Pa = 22,71×10⁻³ m³ ≈ 22,4 L. Dies ist das molare Volumen bei STP, eine Standardgröße in der Chemie.",
+        question: 'Erläutern Sie die ideale Gasgleichung pV = nRT und erklären Sie, unter welchen Bedingungen reale Gase davon abweichen. Welche Korrekturen nimmt die van-der-Waals-Gleichung vor?',
+        answer: `Die ideale Gasgleichung pV = nRT verknüpft Druck (p), Volumen (V), Stoffmenge (n), universelle Gaskonstante (R = 8,314 J/(mol·K)) und absolute Temperatur (T in Kelvin). Sie entstand durch Kombination der Gesetze von Boyle-Mariotte (pV = const bei T = const), Charles (V/T = const bei p = const) und Avogadro (V/n = const bei p, T = const). Das Modell setzt voraus: (1) Gasteilchen sind punktförmig (kein Eigenvolumen), (2) keine intermolekularen Wechselwirkungen.
+
+Reale Gase weichen besonders bei hohem Druck und tiefer Temperatur vom Idealverhalten ab. Bei hohem Druck wird das Eigenvolumen der Moleküle relevant – das freie Volumen ist kleiner als angenommen, der Kompressibilitätsfaktor Z = pV/(nRT) steigt über 1. Bei tiefer Temperatur überwiegen van-der-Waals-Anziehungskräfte (London-Dispersion, Dipol-Dipol-Wechselwirkungen), die den effektiven Wanddruck verringern – Z sinkt unter 1.
+
+Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide Effekte: Der Term a·n²/V² addiert zum gemessenen Druck, um den durch Anziehungskräfte verringerten Wandstoß-Druck zu kompensieren. Der Term nb subtrahiert das Kovolumen der Moleküle vom Gesamtvolumen (V − nb = freies Volumen). Die substanzspezifischen Konstanten a und b spiegeln Polarität und Molekülgröße wider: H₂O (a = 5,537, stark polar) weicht viel stärker ab als He (a = 0,0346, kaum Wechselwirkungen). Nahe dem Kondensationspunkt versagt die van-der-Waals-Gleichung ebenfalls.`,
       },
+      klinischerBezug: 'In der Anästhesiologie werden volatile Anästhetika (Sevofluran, Desfluran) als Gase dosiert; ihre Partialdruck-Verhältnisse im Blut folgen realen Gasgesetzen und bestimmen die Narkosetiefe (Blut-Gas-Löslichkeitskoeffizient). In der Pneumologie gilt: Der alveoläre Gasdruck ist die Summe der Partialdrücke von O₂ (≈13 kPa), CO₂ (≈5,3 kPa), N₂ und H₂O-Dampf bei 37 °C; Abweichungen zeigen pulmonale Erkrankungen an. Bei der Dekompressionserkrankung dehnen sich nach Boyle-Mariotte beim schnellen Auftauchen N₂-Blasen aus dem Blut aus und blockieren Gefäße.',
       selfTest: [
         {
-          question: "Welche Temperatur in Kelvin entspricht 37°C (Körpertemperatur)?",
+          question: 'Ein ideales Gas bei 27 °C und 2 bar hat ein Volumen von 5 L. Auf welches Volumen ändert es sich, wenn der Druck auf 4 bar steigt und die Temperatur auf 127 °C erhöht wird?',
           options: [
-            "237 K",
-            "273 K",
-            "300 K",
-            "310 K",
-            "373 K",
+            'A) 3,33 L',
+            'B) 2,50 L',
+            'C) 4,17 L',
+            'D) 6,67 L',
+            'E) 1,25 L',
           ],
-          correctIndex: 3,
-          explanation: "T(K) = T(°C) + 273,15 ≈ T(°C) + 273. Für 37°C: T = 37 + 273 = 310 K.",
+          correctIndex: 0,
+          explanation: 'Kombinierte Gasgleichung: p₁V₁/T₁ = p₂V₂/T₂. T₁ = 27 + 273 = 300 K, T₂ = 127 + 273 = 400 K. V₂ = V₁ × (p₁/p₂) × (T₂/T₁) = 5 × (2/4) × (400/300) = 5 × 0,5 × 1,333 = 3,33 L. Der Druckanstieg von 2→4 bar halbiert das Volumen (Boyle-Mariotte), die Temperaturerhöhung von 300→400 K vergrößert es um Faktor 4/3 (Charles). Netto: 5 × 0,5 × 4/3 = 3,33 L. Merke: Celsius NIEMALS direkt in die Gasformel einsetzen – immer zuerst in Kelvin umrechnen!',
           hints: [
-            "Kelvin = Celsius + 273 (gerundet)",
-            "0°C = 273 K, 100°C = 373 K",
+            'Verwende p₁V₁/T₁ = p₂V₂/T₂ und rechne Celsius in Kelvin um: K = °C + 273,15.',
+            'Druckerhöhung verkleinert Volumen (Boyle); Temperaturerhöhung vergrößert es (Charles) – beide Effekte kombinieren.',
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: [],
         },
         {
-          question: "Welchen Druck übt 2 mol eines idealen Gases in einem 10-L-Behälter bei 300 K aus? (R = 8,314 J/mol·K; 1 L = 10⁻³ m³)",
+          question: 'Welches der folgenden Gase weicht am stärksten vom idealen Verhalten ab?',
           options: [
-            "0,5 bar",
-            "2,5 bar",
-            "4,99 bar",
-            "24,9 bar",
-            "49,9 bar",
+            'A) Helium (He) bei 100 °C und 1 bar',
+            'B) Stickstoff (N₂) bei 25 °C und 1 bar',
+            'C) Wasserdampf (H₂O) bei 200 °C und 100 bar',
+            'D) Argon (Ar) bei 0 °C und 1 bar',
+            'E) Wasserstoff (H₂) bei 50 °C und 2 bar',
           ],
           correctIndex: 2,
-          explanation: "p = nRT/V = (2 × 8,314 × 300) / (10×10⁻³) = 4988,4 / 0,01 = 498.840 Pa ≈ 4,99 bar.",
+          explanation: 'Reale Gase weichen vom Idealverhalten ab, wenn (1) der Druck hoch ist (Eigenvolumen der Moleküle relevant) und (2) die Temperatur niedrig ist (intermolekulare Kräfte stark). H₂O bei 200 °C und 100 bar erfüllt beide Bedingungen: extrem hoher Druck UND starke Dipol-Dipol-Wechselwirkungen sowie Wasserstoffbrückenbindungen (sehr großes a in van-der-Waals-Gleichung: a = 5,537 L²·bar/mol²). Edelgase wie He und Ar haben kaum Wechselwirkungen (kleines a) und verhalten sich auch unter moderatem Druck noch weitgehend ideal. H₂ und N₂ zeigen bei Normaldruck und mittlerer Temperatur kaum Abweichungen.',
           hints: [
-            "Umstellen nach p: p = nRT/V",
-            "Volumen in m³: 10 L = 0,01 m³",
+            'Starke Abweichungen bei hohem Druck UND tiefer Temperatur und/oder polaren Molekülen.',
+            'H₂O hat Wasserstoffbrückenbindungen – sehr großes a in van-der-Waals; 100 bar ist extrem hoher Druck.',
           ],
           difficulty: 2,
           tags: [],
         },
         {
-          question: "Was ist das molare Volumen eines idealen Gases bei STP (0°C, 1 bar)?",
+          question: 'Was ist der korrekte Wert der universellen Gaskonstante R?',
           options: [
-            "11,2 L/mol",
-            "22,4 L/mol",
-            "24,5 L/mol",
-            "44,8 L/mol",
-            "8,31 L/mol",
+            'A) 8,314 J/(mol·K)',
+            'B) 6,022 × 10²³ J/(mol·K)',
+            'C) 1,381 × 10⁻²³ J/K',
+            'D) 9,81 m/s²',
+            'E) 22,4 J/(mol·K)',
           ],
-          correctIndex: 1,
-          explanation: "Bei STP (0°C = 273 K, 1 bar = 10⁵ Pa) gilt: V_m = RT/p = 8,314 × 273 / 100.000 ≈ 0,0227 m³/mol = 22,7 L/mol ≈ 22,4 L/mol (Merkwert).",
+          correctIndex: 0,
+          explanation: 'R = 8,314 J/(mol·K) ist die universelle Gaskonstante. Weitere Einheiten: 0,08314 L·bar/(mol·K) oder 0,08206 L·atm/(mol·K). Option B ist die Avogadro-Zahl N_A = 6,022 × 10²³ mol⁻¹ (keine Energieeinheit). Option C ist die Boltzmann-Konstante k_B = R/N_A = 1,381 × 10⁻²³ J/K, die für einzelne Teilchen gilt (nicht pro Mol). Option D ist die Erdbeschleunigung g. Option E entspricht dem molaren Volumen in L/mol, nicht der Gaskonstante. Merke: R und k_B sind verwandt durch R = k_B × N_A.',
           hints: [
-            "Das molare Volumen bei STP ist ein wichtiger Merkwert",
-            "Es gilt für jedes ideale Gas bei STP",
+            'R gilt pro Mol, k_B (Boltzmann) gilt pro Teilchen: R = k_B × N_A.',
+            'Einheit von R muss mit pV=nRT konsistent sein: [Pa·m³/(mol·K)] = [J/(mol·K)].',
           ],
           difficulty: 1,
           tags: [],
         },
         {
-          question: "Bei welchen Bedingungen weicht ein reales Gas am stärksten vom idealen Verhalten ab?",
+          question: 'Wie viele Gramm CO₂ (M = 44 g/mol) befinden sich in einem 10-L-Behälter bei 0 °C und 2 bar?',
           options: [
-            "Hohe Temperatur und niedriger Druck",
-            "Niedrige Temperatur und niedriger Druck",
-            "Hohe Temperatur und hoher Druck",
-            "Niedrige Temperatur und hoher Druck",
-            "Das ideale Gas und das reale Gas verhalten sich immer gleich",
+            'A) 39,3 g',
+            'B) 44,0 g',
+            'C) 19,6 g',
+            'D) 88,0 g',
+            'E) 22,0 g',
           ],
-          correctIndex: 3,
-          explanation: "Bei niedrigen Temperaturen werden intermolekulare Wechselwirkungen stärker (Teilchen bewegen sich langsamer), und bei hohem Druck wird das Eigenvolumen der Moleküle relevant. Beide Effekte werden im idealen Gasmodell vernachlässigt.",
+          correctIndex: 0,
+          explanation: 'Mit pV = nRT: n = pV/(RT). Einheiten L·bar: n = (2 bar × 10 L) / (0,08314 L·bar/(mol·K) × 273,15 K) = 20 / 22,71 = 0,881 mol. Masse: m = n × M = 0,881 mol × 44 g/mol = 38,8 g ≈ 39,3 g. Probe: Bei STP (1 bar, 0 °C) passen in 10 L genau 10/22,4 = 0,446 mol. Bei 2 bar (doppelter Druck) doppelt so viel: 0,892 mol → 39,3 g. Merke: 0 °C = 273,15 K – immer in Kelvin umrechnen!',
           hints: [
-            "Reale Gase haben Eigenvolumen und intermolekulare Kräfte",
-            "Wann werden diese Effekte bedeutsam?",
+            'n = pV/(RT). Verwende R = 0,08314 L·bar/(mol·K) wenn p in bar und V in L.',
+            'Bei STP passen 22,4 L = 1 mol. Bei 2 bar und 0 °C passen in 10 L doppelt so viel wie bei 1 bar.',
           ],
           difficulty: 2,
           tags: [],
         },
         {
-          question: "Welche Einheit hat die universelle Gaskonstante R in der Gleichung pV=nRT?",
+          question: 'Welche Aussage zu Avogadros Gesetz ist korrekt?',
           options: [
-            "J/mol",
-            "J/(mol·K)",
-            "Pa·L/mol",
-            "bar/K",
-            "mol·K/J",
+            'A) Bei gleichem Druck und gleicher Temperatur enthalten gleiche Gasvolumina gleich viele Teilchen, unabhängig von der Molmasse.',
+            'B) Schwerere Gase enthalten bei STP mehr Mol als leichtere Gase im gleichen Volumen.',
+            'C) Das molare Volumen hängt bei STP von der Molmasse des Gases ab.',
+            'D) Avogadros Gesetz gilt nur für einatomige Edelgase.',
+            'E) 1 mol eines idealen Gases belegt bei STP stets 11,2 L.',
           ],
-          correctIndex: 1,
-          explanation: "R = pV/(nT). Mit [p]=Pa=J/m³, [V]=m³, [n]=mol, [T]=K ergibt sich [R] = (J/m³ × m³)/(mol × K) = J/(mol·K). R = 8,314 J/(mol·K).",
+          correctIndex: 0,
+          explanation: 'Avogadros Gesetz (1811): Bei gleichen Bedingungen (p, T) enthalten gleiche Volumina aller idealen Gase gleich viele Teilchen, unabhängig von deren Masse oder chemischer Natur. Deshalb ist das molare Volumen V_m = 22,4 L/mol bei STP für ALLE idealen Gase gleich. 1 mol He (4 g), 1 mol N₂ (28 g) und 1 mol CO₂ (44 g) nehmen bei STP je 22,4 L ein. Option B und C sind falsch (Molmasse irrelevant für Teilchenanzahl). Option D ist falsch (gilt für alle idealen Gase). Option E ist falsch (22,4 L, nicht 11,2 L).',
           hints: [
-            "Leite die Einheit aus pV=nRT ab: R = pV/(nT)",
-            "Einheiten von p×V geben Energie (Joule)",
+            'V/n = const bei p, T = const. Die Teilchenzahl – nicht die Masse – bestimmt das Volumen.',
+            'Das molare Volumen bei STP (0 °C, 1 bar) = 22,4 L/mol für jedes ideale Gas.',
+          ],
+          difficulty: 1,
+          tags: [],
+        },
+        {
+          question: 'In der van-der-Waals-Gleichung (p + an²/V²)(V − nb) = nRT: Was korrigiert der Parameter b?',
+          options: [
+            'A) Das Eigenvolumen der Gasmoleküle (Kovolumen)',
+            'B) Die intermolekularen Anziehungskräfte zwischen den Molekülen',
+            'C) Die Temperaturabhängigkeit der Wechselwirkungen',
+            'D) Den Druck bei hoher Teilchendichte',
+            'E) Die Abweichung der Molmasse vom idealen Wert',
+          ],
+          correctIndex: 0,
+          explanation: 'In der van-der-Waals-Gleichung korrigiert b (Kovolumen) das Eigenvolumen der Gasmoleküle: Das tatsächlich freie Volumen ist nicht V, sondern (V − nb). Jedes Mol Moleküle beansprucht ein Ausschlussvolumen von b Litern. Bei hohem Druck ist (V − nb) deutlich kleiner als V – das erklärt Z > 1 (Gas schwerer komprimierbar). Der Parameter a korrigiert dagegen den Druck: Intermolekulare Anziehung verringert den Impuls der Wandstöße, der wahre Druck (p + an²/V²) ist höher als gemessen. Merke: a → Druckkorrektur (Anziehung), b → Volumenkorrektur (Eigenvolumen).',
+          hints: [
+            'b korrigiert das Volumen (Eigenvolumen), a korrigiert den Druck (Anziehungskräfte).',
+            '(V − nb) = freies Volumen. nb = Gesamtvolumen aller Moleküle selbst.',
           ],
           difficulty: 2,
+          tags: [],
+        },
+        {
+          question: 'Ein Taucher atmet bei 30 m Wassertiefe (Gesamtdruck ca. 4 bar) Luft. Wie ändert sich das Volumen einer 1-L-Luftblase beim Aufstieg zur Oberfläche (1 bar, T = const)?',
+          options: [
+            'A) Sie wird 4-mal größer (4 L)',
+            'B) Sie bleibt gleich groß (1 L)',
+            'C) Sie wird 2-mal größer (2 L)',
+            'D) Sie wird 0,25-mal kleiner (0,25 L)',
+            'E) Sie wird 3-mal größer (3 L)',
+          ],
+          correctIndex: 0,
+          explanation: 'Nach Boyle-Mariotte bei T = const: p₁V₁ = p₂V₂. Mit p₁ = 4 bar, V₁ = 1 L, p₂ = 1 bar: V₂ = p₁V₁/p₂ = 4 × 1/1 = 4 L. Die Blase vervierfacht ihr Volumen. Dies ist der physikalische Mechanismus der Dekompressionskrankheit: Unter hohem Druck löst sich N₂ vermehrt im Blut (Henry-Gesetz). Beim schnellen Auftauchen dehnen sich N₂-Blasen aus und blockieren Blutgefäße. Therapie: Rekompression in der Überdruckkammer, dann langsames kontrolliiertes Auftauchen mit Dekompressionsstopps.',
+          hints: [
+            'Boyle-Mariotte: p₁V₁ = p₂V₂. Wie verhält sich das Volumen bei Druckabfall von 4 auf 1 bar?',
+            'Bei 30 m Tiefe: 1 bar Luftdruck + 3 bar Wassersäule (je 10 m ≈ 1 bar) = 4 bar gesamt.',
+          ],
+          difficulty: 1,
+          tags: [],
+        },
+        {
+          question: 'Welchen Wert hat die quadratische Mittelgeschwindigkeit v_rms von N₂ (M = 0,028 kg/mol) bei 300 K? (R = 8,314 J/(mol·K))',
+          options: [
+            'A) ≈ 517 m/s',
+            'B) ≈ 184 m/s',
+            'C) ≈ 1034 m/s',
+            'D) ≈ 299 m/s',
+            'E) ≈ 89 m/s',
+          ],
+          correctIndex: 0,
+          explanation: 'v_rms = √(3RT/M) aus der kinetischen Gastheorie. Mit R = 8,314 J/(mol·K), T = 300 K, M = 0,028 kg/mol: v_rms = √(3 × 8,314 × 300 / 0,028) = √(7482,6 / 0,028) = √(267.236) ≈ 517 m/s. Gasmoleküle bewegen sich bei Raumtemperatur mit über 500 m/s (ca. 1,5-fache Schallgeschwindigkeit)! Schwerere Gase sind langsamer: CO₂ (M = 0,044 kg/mol) hat v_rms ≈ 411 m/s bei 300 K. Diese hohen Geschwindigkeiten erklären die schnelle makroskopische Gasdiffusion. Merke: M muss in kg/mol eingesetzt werden!',
+          hints: [
+            'v_rms = √(3RT/M). M in kg/mol einsetzen (0,028, nicht 28).',
+            'J/(mol·K) × K / (kg/mol) = J/kg = m²/s² → Wurzel ergibt m/s.',
+          ],
+          difficulty: 3,
           tags: [],
         },
       ],
     },
     {
       id: 'ch-3-02',
-      title: 'Gasgesetze mit Rechenbeispielen',
-      content: `## Boyle-Mariotte'sches Gesetz (T=const)
+      title: "Dalton's Partialdruck-Gesetz",
+      content: `## Das Daltonsche Partialdruck-Gesetz
 
-Bei konstanter Temperatur (isothermer Prozess) ist das Produkt aus Druck und Volumen konstant: **p₁V₁ = p₂V₂**. Volumen und Druck sind antiproportional — halbiert man das Volumen, verdoppelt sich der Druck.
+Das Daltonsche Gesetz (John Dalton, 1801) beschreibt das Druckverhalten von Gasgemischen:
 
-**Beispiel**: Ein Gasvolumen von 4 L bei 2 bar wird auf 1 L komprimiert. Neuer Druck: p₂ = p₁V₁/V₂ = (2×4)/1 = **8 bar**.
+**Der Gesamtdruck eines Gasgemisches ist gleich der Summe der Partialdrücke aller Komponenten:**
 
-## Gay-Lussac'sches Gesetz (p=const)
+p_gesamt = p₁ + p₂ + p₃ + ... = Σ pᵢ
 
-Bei konstantem Druck (isobarer Prozess) ist das Verhältnis von Volumen zu Temperatur konstant: **V₁/T₁ = V₂/T₂** (Volumen und Temperatur sind proportional). Ein Gas dehnt sich bei Erwärmung aus.
+Dabei ist der **Partialdruck** pᵢ derjenige Druck, den jede Gaskomponente allein ausüben würde, wenn sie das gesamte Volumen des Behälters ausfüllte:
 
-**Beispiel**: 2 L Gas bei 300 K werden auf 600 K erhitzt. Neues Volumen: V₂ = V₁×T₂/T₁ = 2×600/300 = **4 L**.
+pᵢ = nᵢ · R · T / V = xᵢ · p_gesamt
 
-## Amonton'sches Gesetz (V=const)
+**xᵢ = Molenbruch** der Komponente i: xᵢ = nᵢ / n_gesamt (dimensionslos, zwischen 0 und 1, Summe = 1).
 
-Bei konstantem Volumen (isochorer Prozess) ist das Verhältnis von Druck zu Temperatur konstant: **p₁/T₁ = p₂/T₂** (Druck und Temperatur sind proportional).
+## Physikalische Begründung
 
-**Beispiel**: Autoreifen bei 20°C (293 K) hat 2,2 bar. Nach Fahrt bei 50°C (323 K): p₂ = 2,2×323/293 = **2,43 bar**.
+Das Daltonsche Gesetz gilt exakt für ideale Gase, da ideale Gasteilchen keine Wechselwirkungen haben. Jede Gassorte bewegt sich völlig unabhängig von den anderen und trägt unabhängig zum Gesamtdruck bei. Für reale Gase gilt es nur näherungsweise.
 
-## Kombinierte Gasgleichung
+## Partialdrücke in der Atmosphäre
 
-Alle drei Gesetze lassen sich kombinieren (wenn n=const): **p₁V₁/T₁ = p₂V₂/T₂**. Diese Gleichung erlaubt die Berechnung jeder der sechs Größen, wenn die anderen fünf bekannt sind.
+Trockene Luft (bei 1 atm = 101,325 kPa) enthält:
+| Gas | Molenbruch | Partialdruck |
+|-----|------------|--------------|
+| N₂  | 0,7808     | 79,12 kPa    |
+| O₂  | 0,2095     | 21,22 kPa    |
+| Ar  | 0,0093     | 0,94 kPa     |
+| CO₂ | 0,0004     | 0,04 kPa     |
 
-**Beispiel**: 5 L Gas bei 1 bar und 300 K werden auf 2 bar und 400 K gebracht: V₂ = (p₁V₁T₂)/(T₁p₂) = (1×5×400)/(300×2) = **3,33 L**.`,
+**Wichtig:** Bei feuchter Luft muss der Wasserdampfdruck berücksichtigt werden! Bei 37 °C (Körpertemperatur) beträgt p(H₂O) ≈ 6,27 kPa (47 mmHg).
+
+## Alveolarer Gasaustausch
+
+In der Atemphysiologie sind Partialdrücke zentral. Die **Alveolarluft** bei 37 °C und 101,325 kPa (nach Wasserdampfsättigung):
+
+- p(O₂)_alveolär ≈ 13,3 kPa (100 mmHg)
+- p(CO₂)_alveolär ≈ 5,3 kPa (40 mmHg)
+- p(N₂) ≈ 76,4 kPa
+- p(H₂O) = 6,27 kPa (37 °C, gesättigt)
+
+O₂-Partialdruck im venösen Blut ≈ 5,3 kPa (40 mmHg) → O₂ diffundiert Alveole → Blut (Druckgradient). CO₂ im venösen Blut ≈ 6,1 kPa (46 mmHg) > 5,3 kPa alveolär → CO₂ diffundiert Blut → Alveole.
+
+## Berechnung mit Molenbrüchen
+
+**Beispiel:** Gasgemisch: 2 mol N₂, 1 mol O₂, 0,5 mol CO₂. Gesamtdruck 3 bar.
+- n_gesamt = 3,5 mol
+- x(N₂) = 2/3,5 = 0,571 → p(N₂) = 0,571 × 3 = 1,714 bar
+- x(O₂) = 1/3,5 = 0,286 → p(O₂) = 0,286 × 3 = 0,857 bar
+- x(CO₂) = 0,5/3,5 = 0,143 → p(CO₂) = 0,143 × 3 = 0,429 bar
+- Kontrolle: 1,714 + 0,857 + 0,429 = 3,000 bar ✓
+
+## Henry-Gesetz und Gaslöslichkeit
+
+Das Henry-Gesetz ergänzt das Daltonsche Gesetz für Gaslöslichkeit in Flüssigkeiten:
+
+**c = k_H · p**
+
+wobei k_H die substanzspezifische Henry-Konstante ist. Bei erhöhtem O₂-Partialdruck (Sauerstofftherapie) löst sich mehr O₂ physikalisch im Plasma. Bei Kohlensäuregetränken wird CO₂ unter Druck gelöst; beim Öffnen sinkt p → CO₂ perlt aus.
+
+## Gasgemische in der Medizin
+
+- **Raumluft:** O₂ 21 % → p(O₂) ≈ 21 kPa
+- **Sauerstofftherapie:** F_IO₂ = 0,4–1,0 → deutlich erhöhte p(O₂) → mehr physikalisch gelöstes O₂
+- **Lachgas/O₂ (Entonox®):** 50:50 N₂O/O₂ als Analgetikum
+- **Heliox (He/O₂):** Bei obstruktiver Atemwegserkrankung – He (leichter als N₂) senkt den Gasströmungswiderstand
+- **Tauchgas:** Komprimierte Luft → erhöhte Partialdrücke aller Gase → N₂-Narkose (Tiefenrausch) ab p(N₂) > 3–4 bar`,
       lernziele: [
-        "Die drei Einzelgasgesetze (Boyle-Mariotte, Gay-Lussac, Amonton) anwenden und korrekte Bedingungen nennen",
-        "Die kombinierte Gasgleichung aufstellen und Rechenaufgaben lösen",
-        "Proportionalitäten und Antiproportionalitäten zwischen p, V und T benennen",
+        'Das Daltonsche Partialdruck-Gesetz formulieren und Partialdrücke aus Molenbrüchen berechnen.',
+        'Die atmosphärische Zusammensetzung (N₂, O₂, CO₂, H₂O) in Partialdrücken angeben und ihre Bedeutung in der Atemphysiologie erklären.',
+        'Das Henry-Gesetz als Ergänzung des Daltonschen Gesetzes für Gaslöslichkeit beschreiben.',
+        'Klinische Anwendungen (Sauerstofftherapie, Tauchen, Anästhesie) auf Basis von Partialdrücken erläutern.',
       ],
       sections: [
         {
-          heading: "Überblick der Gasgesetze",
-          text: "Die drei klassischen Gasgesetze sind Sonderfälle der idealen Gasgleichung pV=nRT bei jeweils einer konstanten Zustandsgröße. Boyle-Mariotte (T=const, isotherm): p·V = const → p antiproportional zu V. Gay-Lussac (p=const, isobar): V/T = const → V proportional zu T. Amonton (V=const, isochor): p/T = const → p proportional zu T. Ein Hilfsmittel: Stellt man sich ein Gas als Kiste mit Billardkugeln vor, die gegen die Wände prallen, so erklärt sich intuitiv: mehr Kugeln (n), mehr Kollisionen → mehr Druck; kleinere Kiste (V) → mehr Kollisionen → mehr Druck; höhere Temperatur → schnellere Kugeln → mehr Druck.",
+          heading: 'Partialdruck und Molenbruch',
+          text: 'Der Partialdruck pᵢ ist der Druck, den eine Gaskomponente allein im Gesamtvolumen ausüben würde. Er ist direkt proportional zum Molenbruch: pᵢ = xᵢ · p_gesamt, wobei xᵢ = nᵢ/n_gesamt. Da alle Molenbrüche sich zu 1 addieren, addieren sich alle Partialdrücke zum Gesamtdruck. Diese Beziehung gilt exakt für ideale Gase (keine Kreuzwechselwirkungen) und näherungsweise für reale Gase bei moderatem Druck. Bei feuchter Luft muss der Sättigungsdampfdruck des Wassers berücksichtigt werden: p(trocken) = p_gesamt − p(H₂O).',
+          merksatz: 'p_gesamt = Σ pᵢ = Σ xᵢ · p_gesamt: Jede Gaskomponente trägt mit ihrem Molenbruch zum Gesamtdruck bei.',
         },
         {
-          heading: "Kombinierte Gasgleichung in der Praxis",
-          text: "Die kombinierte Gasgleichung p₁V₁/T₁ = p₂V₂/T₂ gilt, wenn die Stoffmenge n konstant bleibt (geschlossenes System). Sie ist das wichtigste Werkzeug für Berechnungen beim Wechsel zwischen zwei Zuständen. Vorgehen: Bekannte Größen einsetzen, nach der gesuchten umstellen. Häufige Fehler: Celsius statt Kelvin verwenden (immer +273!), Druckeinheiten mischen. Beispiel aus der Praxis: Ein Sauerstoffzylinder (10 L, 150 bar, 20°C) bei 37°C: V₂ = p₁V₁T₂/(T₁p₂). Bei Umgebungsdruck (1 bar): V₂ = 150×10×310/(293×1) = 1587 L Sauerstoff — genug für viele Stunden Beatmung.",
+          heading: 'Alveolarer Gasaustausch und Diffusionsgradienten',
+          text: "O₂ diffundiert aus der Alveole (p(O₂) ≈ 13,3 kPa) ins venöse Blut (p(O₂) ≈ 5,3 kPa) – immer von höherem zu niedrigerem Partialdruck (Fick'sches Diffusionsgesetz). CO₂ diffundiert in Gegenrichtung: venöses Blut (6,1 kPa) → Alveole (5,3 kPa). Diese Gradienten werden durch die alveolo-kapilläre Membran ermöglicht, die nur 0,3–0,5 μm dick ist. Bei Lungenödem oder Fibrose verdickt sich diese Membran – Gasaustausch gestört, O₂-Sättigung sinkt. Sauerstofftherapie (hohe F_IO₂) erhöht p(O₂) alveolär und treibt trotz verminderter Diffusionskapazität mehr O₂ ins Blut.",
+          merksatz: 'Gase diffundieren immer von hohem zu niedrigem Partialdruck – der Gradient ist die Triebkraft des Gasaustauschs.',
+        },
+        {
+          heading: 'Henry-Gesetz und medizinische Anwendungen',
+          text: 'Das Henry-Gesetz c = k_H · p beschreibt die physikalische Löslichkeit von Gasen in Flüssigkeiten: Bei höherem Partialdruck löst sich mehr Gas. Anwendungen: (1) Taucherkrankheit: Hoher N₂-Partialdruck unter Wasser → viel N₂ im Blut gelöst; bei schnellem Druckabfall perlt N₂ aus (wie Sekt beim Öffnen) → Gasblasen in Gefäßen und Gewebe. (2) Hyperbare Sauerstofftherapie: 100 % O₂ bei 2–3 bar → physikalisch gelöstes O₂ im Plasma stark erhöht → Behandlung von CO-Vergiftung, Gasbrand, Wundheilungsstörungen. (3) CO₂ in Sprudel: Unter Druck gelöst, entweicht beim Öffnen.',
+          merksatz: 'Henry: c = k_H · p. Mehr Druck → mehr Gas gelöst. Plötzlicher Druckabfall → Gasblasenbildung (Taucherunfall).',
         },
       ],
       merksätze: [
-        "Boyle-Mariotte: p₁V₁ = p₂V₂ (T=const) — Druck und Volumen antiproportional",
-        "Gay-Lussac: V₁/T₁ = V₂/T₂ (p=const) — Volumen und Temperatur proportional",
-        "Kombiniert: p₁V₁/T₁ = p₂V₂/T₂ — immer T in Kelvin!",
+        "Daltonsches Gesetz: p_gesamt = p₁ + p₂ + ... = Σ pᵢ (Summe aller Partialdrücke).",
+        "Partialdruck: pᵢ = xᵢ · p_gesamt, wobei xᵢ = nᵢ/n_gesamt der Molenbruch ist.",
+        "Luft: 78 % N₂ (≈79 kPa), 21 % O₂ (≈21 kPa), 1 % Ar, 0,04 % CO₂ – bei 101,3 kPa Normaldruck.",
+        "Alveolarer O₂-Partialdruck: ≈13,3 kPa (100 mmHg); venöses Blut: ≈5,3 kPa (40 mmHg).",
+        "O₂ diffundiert Alveole → Blut; CO₂ diffundiert Blut → Alveole: immer von höherem zu niedrigerem Partialdruck.",
+        "Wasserdampf bei 37 °C: p(H₂O) = 6,27 kPa (47 mmHg) – bei Körpertemperatur immer berücksichtigen!",
+        "Henry-Gesetz: c = k_H · p. Gaslöslichkeit proportional zum Partialdruck über der Flüssigkeit.",
+        "Taucherkrankheit: N₂ löst sich unter Druck im Blut; schneller Druckabfall → Blasenbildung (Henry + Boyle).",
+        "Heliox (He/O₂): Helium (4 g/mol) senkt Gasdichte → weniger Strömungswiderstand bei Atemwegsobstruktion.",
+        "mmHg ↔ kPa: 1 mmHg = 0,1333 kPa; 1 kPa = 7,5 mmHg. Klinisch oft mmHg, wissenschaftlich kPa.",
       ],
-      klinischerBezug: "Boyle-Mariotte gilt direkt in der Beatmungsmedizin: Der Beatmungsdruck bestimmt das in die Lunge einströmende Volumen. In der Druckkammer (hyperbare Therapie) wird der Umgebungsdruck erhöht, was nach Boyle-Mariotte Gasblasen im Körper komprimiert und so die Dekompressionskrankheit behandelt.",
       altfrage: {
-        question: "Ein Autoreifen hat bei 10°C einen Druck von 2,0 bar. Welchen Druck hat er nach langer Fahrt bei 60°C (isochorer Prozess)?",
-        answer: "T₁=283 K, T₂=333 K, p₁=2,0 bar. Nach Amonton: p₂ = p₁×T₂/T₁ = 2,0×333/283 ≈ 2,35 bar. Der Reifendruck steigt bei Erwärmung an — deshalb sollte man Reifendruck stets kalt messen.",
+        question: "Erläutern Sie das Daltonsche Partialdruck-Gesetz und seine Bedeutung für den pulmonalen Gasaustausch. Welche Rolle spielt das Henry-Gesetz dabei?",
+        answer: `Das Daltonsche Gesetz (1801) besagt: p_gesamt = Σ pᵢ. Der Partialdruck jeder Komponente ist pᵢ = xᵢ · p_gesamt, wobei xᵢ = nᵢ/n_gesamt. Jede Gaskomponente eines idealen Gemisches verhält sich unabhängig von den anderen.
+
+In der Atemphysiologie ist dies fundamental: Atmosphärische Luft enthält bei 101,3 kPa ca. 21,2 kPa O₂ und 0,04 kPa CO₂. In der Alveole, gesättigt mit Wasserdampf bei 37 °C (p(H₂O) = 6,27 kPa), beträgt p(O₂) alveolär ≈ 13,3 kPa und p(CO₂) ≈ 5,3 kPa. Im venösen Blut ist p(O₂) ≈ 5,3 kPa und p(CO₂) ≈ 6,1 kPa. Diese Partialdruckgradienten treiben die Diffusion: O₂ diffundiert Alveole → Blut, CO₂ in entgegengesetzter Richtung.
+
+Das Henry-Gesetz (c = k_H · p) beschreibt die physikalische Löslichkeit: Im Blut sind ca. 98,5 % des O₂ an Hämoglobin gebunden; nur 1,5 % physikalisch gelöst. Bei Sauerstofftherapie (hohe F_IO₂) steigt auch der physikalisch gelöste Anteil – entscheidend bei CO-Vergiftung (hyperbare O₂-Therapie verdrängt CO vom Hämoglobin). Die Taucherkrankheit illustriert beide Gesetze: Erhöhter Gesamtdruck → erhöhter N₂-Partialdruck → mehr N₂ gelöst (Henry). Schneller Druckabfall → N₂ perlt aus → Gasblasen in Gewebe (Boyle). Therapie: hyperbare Rekompression.`,
       },
+      klinischerBezug: "In der Intensivmedizin wird die F_IO₂ (inspiratorische O₂-Fraktion) gezielt eingestellt: Bei F_IO₂ = 1,0 und 101,3 kPa beträgt p(O₂) alveolär nach H₂O-Abzug ca. 95 kPa – weit über den 13,3 kPa der Raumluft. Die hyperbare Oxygenierung (2–3 bar, 100 % O₂) nutzt das Henry-Gesetz: Physikalisch gelöstes O₂ im Plasma steigt auf > 6 ml/dl (normal: 0,3 ml/dl), sodass Gewebe auch ohne funktionstüchtiges Hämoglobin versorgt werden können – Therapieprinzip bei CO-Vergiftung und Gasbrand.",
       selfTest: [
         {
-          question: "Ein Gas nimmt bei 1 bar ein Volumen von 6 L ein. Bei konstantem Temperatur wird der Druck auf 3 bar erhöht. Was ist das neue Volumen?",
+          question: 'Ein Gasgemisch enthält 3 mol N₂, 1 mol O₂ und 1 mol CO₂. Der Gesamtdruck beträgt 5 bar. Wie groß ist der Partialdruck von O₂?',
           options: [
-            "18 L",
-            "9 L",
-            "3 L",
-            "2 L",
-            "1 L",
+            'A) 1,0 bar',
+            'B) 0,5 bar',
+            'C) 2,0 bar',
+            'D) 1,5 bar',
+            'E) 0,2 bar',
           ],
-          correctIndex: 3,
-          explanation: "Boyle-Mariotte (T=const): p₁V₁ = p₂V₂ → V₂ = p₁V₁/p₂ = (1×6)/3 = 2 L. Druckverdreifachung → Volumendrittelung.",
+          correctIndex: 0,
+          explanation: 'n_gesamt = 3 + 1 + 1 = 5 mol. Molenbruch O₂: x(O₂) = 1/5 = 0,2. Partialdruck: p(O₂) = 0,2 × 5 bar = 1,0 bar. Kontrolle: p(N₂) = (3/5) × 5 = 3 bar; p(CO₂) = (1/5) × 5 = 1 bar. Summe: 3 + 1 + 1 = 5 bar ✓. Das Daltonsche Gesetz gilt für ideale Gase exakt: Jede Komponente trägt proportional zu ihrem Molenbruch zum Gesamtdruck bei, unabhängig von den anderen Gasen.',
           hints: [
-            "Verwende p₁V₁ = p₂V₂",
-            "Wenn Druck steigt, sinkt Volumen (antiproportional)",
+            'x(O₂) = n(O₂)/n_gesamt = 1/5 = 0,2. Dann: p(O₂) = x(O₂) × p_gesamt.',
+            'n_gesamt = Summe aller Molzahlen: 3 + 1 + 1 = 5 mol.',
           ],
           difficulty: 1,
           tags: [],
         },
         {
-          question: "Gas bei 200 K hat ein Volumen von 2 L (p=const). Auf welches Volumen dehnt es sich bei 400 K aus?",
+          question: 'Warum muss bei der Berechnung des alveolären O₂-Partialdrucks der Wasserdampfdruck berücksichtigt werden?',
           options: [
-            "1 L",
-            "2 L",
-            "4 L",
-            "8 L",
-            "16 L",
+            'A) Weil Wasserdampf bei 37 °C einen Partialdruck von ca. 6,27 kPa hat, der den verfügbaren Anteil für O₂ und CO₂ reduziert.',
+            'B) Weil Wasser O₂ chemisch bindet und so den Partialdruck senkt.',
+            'C) Weil Wasserdampf den N₂-Partialdruck erhöht.',
+            'D) Weil Wasserdampf bei 37 °C kondensiert und kein Gas mehr ist.',
+            'E) Weil Wasser das Henry-Gesetz ungültig macht.',
           ],
-          correctIndex: 2,
-          explanation: "Gay-Lussac (p=const): V₁/T₁ = V₂/T₂ → V₂ = V₁×T₂/T₁ = 2×400/200 = 4 L. Temperaturverdopplung → Volumenverdopplung.",
+          correctIndex: 0,
+          explanation: 'Bei 37 °C ist eingeatmete Luft in der Lunge vollständig mit Wasserdampf gesättigt. Der Sättigungsdampfdruck beträgt ca. 6,27 kPa (47 mmHg). Nach Dalton: p_gesamt = p(O₂) + p(CO₂) + p(N₂) + p(H₂O). Bei p_gesamt = 101,3 kPa verbleiben für O₂, CO₂ und N₂ zusammen nur 101,3 − 6,27 = 95,0 kPa. Der O₂-Anteil von 21 % trifft dann auf 95,0 kPa (minus CO₂-Anteil) → p(O₂)_alveolär ≈ 13,3 kPa statt der 21,2 kPa der trockenen Außenluft.',
           hints: [
-            "Verwende V₁/T₁ = V₂/T₂ (Temperatur in Kelvin!)",
-            "Wenn Temperatur steigt, steigt Volumen proportional",
-          ],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: "Gas bei 1 bar, 300 K, 10 L wird auf 2 bar und 600 K gebracht. Welches Volumen nimmt es ein?",
-          options: [
-            "5 L",
-            "10 L",
-            "20 L",
-            "40 L",
-            "2,5 L",
-          ],
-          correctIndex: 1,
-          explanation: "Kombinierte Gasgleichung: V₂ = (p₁V₁T₂)/(T₁p₂) = (1×10×600)/(300×2) = 6000/600 = 10 L. Druckverdopplung und Temperaturverdopplung heben sich gerade auf.",
-          hints: [
-            "Verwende p₁V₁/T₁ = p₂V₂/T₂",
-            "Überlege, welche Effekte sich aufheben könnten",
+            'Dalton: p_gesamt = Σ pᵢ. H₂O-Dampf belegt bei 37 °C schon 6,27 kPa des Gesamtdrucks.',
+            'Sättigungsdampfdruck H₂O bei 37 °C = 6,27 kPa (47 mmHg) – diese Zahl im medizinischen Kontext wichtig.',
           ],
           difficulty: 2,
           tags: [],
         },
         {
-          question: "Welches Gasgesetz gilt bei konstantem Druck?",
+          question: 'Ein Taucher taucht auf 40 m Tiefe (Gesamtdruck 5 bar). Wie groß ist der N₂-Partialdruck in der Atemluft (Luft: 78 % N₂)?',
           options: [
-            "Boyle-Mariotte: p₁V₁=p₂V₂",
-            "Gay-Lussac: V/T=const",
-            "Amonton: p/T=const",
-            "Dalton: p_ges=Σp_i",
-            "Van der Waals: (p+a/V²)(V-b)=RT",
+            'A) 3,9 bar',
+            'B) 0,78 bar',
+            'C) 5,0 bar',
+            'D) 2,5 bar',
+            'E) 1,95 bar',
           ],
-          correctIndex: 1,
-          explanation: "Bei konstantem Druck (isobar) gilt das Gay-Lussac'sche Gesetz: V/T = const, also V₁/T₁ = V₂/T₂. Volumen und Temperatur sind direkt proportional. Boyle-Mariotte gilt bei T=const, Amonton bei V=const.",
+          correctIndex: 0,
+          explanation: 'p(N₂) = x(N₂) × p_gesamt = 0,78 × 5 bar = 3,9 bar. An der Oberfläche (1 bar): p(N₂) = 0,78 bar. Unter Wasser steigt der N₂-Partialdruck auf das 5-fache! Nach Henry-Gesetz löst sich entsprechend 5× mehr N₂ im Blut. Ab p(N₂) ≈ 3 bar (≈ 30 m mit Luft) tritt Stickstoffnarkose (Tiefenrausch) auf: N₂ wirkt euphorisierend und sedierend, was unter Wasser lebensgefährlich werden kann. Je 10 m Wassertiefe erhöht sich der Druck um ca. 1 bar (Wasserdruck = ρgh ≈ 1000 × 9,81 × 10 = 98.100 Pa ≈ 1 bar).',
           hints: [
-            "Gay-Lussac und isobar (p=const) gehören zusammen",
-            "Merke: Volumen und Temperatur sind bei p=const proportional",
+            'p(N₂) = 0,78 × p_gesamt. Bei 40 m Tiefe: Gesamtdruck = 1 bar Luft + 4 bar Wasser = 5 bar.',
+            'Je 10 m Tiefe ≈ 1 bar Überdruck. Bei 40 m: 1 + 4 = 5 bar gesamt.',
           ],
           difficulty: 2,
           tags: [],
         },
         {
-          question: "Ein Gasvolumen von 3 L bei 27°C und 1 bar wird auf 127°C erhitzt und auf 0,5 bar entspannt. Welches Volumen ergibt sich?",
+          question: 'Welche Aussage zum Henry-Gesetz ist korrekt?',
           options: [
-            "6 L",
-            "4 L",
-            "8 L",
-            "3 L",
-            "12 L",
+            'A) Die Konzentration eines gelösten Gases ist proportional zu seinem Partialdruck über der Lösung.',
+            'B) Bei höherer Temperatur löst sich mehr Gas in einer Flüssigkeit.',
+            'C) Das Henry-Gesetz beschreibt die Druckverteilung in Gasgemischen.',
+            'D) Alle Gase haben dieselbe Henry-Konstante in Wasser.',
+            'E) Das Henry-Gesetz gilt nur für Edelgase.',
           ],
-          correctIndex: 2,
-          explanation: "T₁=300 K, T₂=400 K. V₂ = p₁V₁T₂/(T₁p₂) = (1×3×400)/(300×0,5) = 1200/150 = 8 L. Druckhalbierung verdoppelt Volumen, Temperaturerhöhung von 300 auf 400 K (4/3-fach) vergrößert es zusätzlich.",
+          correctIndex: 0,
+          explanation: 'Henry-Gesetz (William Henry, 1803): c = k_H · p. Die Gaslöslichkeit ist direkt proportional zum Partialdruck. Option B ist falsch: Bei höherer Temperatur sinkt die Gaslöslichkeit in Flüssigkeiten (thermische Bewegung überwindet Solvatation – deshalb entweicht CO₂ aus warmem Sprudel schneller als aus kaltem). Option C beschreibt das Daltonsche Gesetz. Option D ist falsch: k_H variiert stark – CO₂ ist ca. 25× löslicher als O₂ in Wasser (daher transportiert Blut CO₂ viel effizienter als O₂ auf dem physikalischen Weg). Option E ist falsch.',
           hints: [
-            "Temperatur in Kelvin umrechnen: 27°C→300 K, 127°C→400 K",
-            "Kombinierte Gasgleichung: V₂ = V₁×(p₁/p₂)×(T₂/T₁)",
+            'Henry: c = k_H · p. Mehr Partialdruck → mehr gelöstes Gas.',
+            'Gaslöslichkeit sinkt mit steigender Temperatur (anders als bei Feststoffen).',
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+        {
+          question: 'Ein Patient erhält F_IO₂ = 0,6 (60 % O₂) bei Atmosphärendruck (101,3 kPa). Wie groß ist p(O₂) näherungsweise (ohne Wasserdampfkorrektur)?',
+          options: [
+            'A) 60,8 kPa',
+            'B) 21,0 kPa',
+            'C) 40,0 kPa',
+            'D) 101,3 kPa',
+            'E) 13,3 kPa',
+          ],
+          correctIndex: 0,
+          explanation: 'p(O₂) = F_IO₂ × p_gesamt = 0,6 × 101,3 kPa = 60,8 kPa. Das ist fast das Dreifache des normalen O₂-Partialdrucks von 21,2 kPa (Raumluft). Klinisch wird F_IO₂ (inspiratorische O₂-Fraktion) angepasst, um den alveolären p(O₂) zu steuern. Bei ARDS wird F_IO₂ auf 0,6–1,0 erhöht. Mit exakter Berechnung unter Berücksichtigung von Wasserdampf (6,27 kPa bei 37 °C): p(O₂) = 0,6 × (101,3 − 6,27) ≈ 57,0 kPa. Klinisches Ziel: arterieller p(O₂) > 10 kPa (> 75 mmHg).',
+          hints: [
+            'p(O₂) = F_IO₂ × p_gesamt. F_IO₂ = 0,6 bedeutet 60 % O₂-Anteil.',
+            'Raumluft: F_IO₂ = 0,21 → p(O₂) ≈ 21 kPa. Bei 0,6 entsprechend knapp dreimal mehr.',
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+        {
+          question: 'Was ist Heliox und welcher physikalische Vorteil macht es bei obstruktiven Atemwegserkrankungen nützlich?',
+          options: [
+            'A) He/O₂-Gemisch: Helium ist leichter als N₂ und reduziert die Gasdichte, was den Atemwiderstand senkt.',
+            'B) H₂/O₂-Gemisch: Wasserstoff verbessert den O₂-Transport im Blut.',
+            'C) N₂O/O₂-Gemisch (Lachgas): Wirkt analgetisch und erleichtert das Atmen.',
+            'D) CO₂/O₂-Gemisch: CO₂ stimuliert das Atemzentrum und vertieft die Atmung.',
+            'E) Ar/O₂-Gemisch: Argon schützt die Atemwege vor Entzündungen.',
+          ],
+          correctIndex: 0,
+          explanation: 'Heliox ist ein He/O₂-Gemisch (typisch 70:30 oder 80:20). Helium (M = 4 g/mol) ist viel leichter als Stickstoff (M = 28 g/mol) → Heliox hat deutlich geringere Gasdichte als Raumluft. Bei Atemwegsobstruktion dominiert turbulenter Gasfluss, dessen Widerstand mit der Gasdichte skaliert (∝ √ρ). Geringere Dichte → weniger turbulenter Widerstand → geringere Atemarbeit. Anwendung: Asthmaanfall, Krupp, obstruktive Tumoren. Nachteil: Begrenzte O₂-Konzentration (20–30 %). N₂O/O₂ (Entonox) ist ein Analgetikum ohne Dichtevorteil. Das Grahamsches Gesetz gilt für Effusion, aber auch hier ist die leichtere Masse von He ein Vorteil.',
+          hints: [
+            'He (4 g/mol) ist 7× leichter als N₂ (28 g/mol) → Heliox hat viel geringere Dichte als Luft.',
+            'Bei Obstruktion (Asthma, Krupp) dominiert turbulenter Fluss – Heliox reduziert diesen durch geringere Dichte.',
           ],
           difficulty: 3,
+          tags: [],
+        },
+        {
+          question: 'Was beschreibt der Molenbruch xᵢ einer Komponente in einem Gasgemisch?',
+          options: [
+            'A) Das Verhältnis der Molzahl der Komponente zur Gesamtmolzahl: xᵢ = nᵢ / n_gesamt.',
+            'B) Das Verhältnis der Masse der Komponente zur Gesamtmasse des Gemisches.',
+            'C) Das Verhältnis des Volumens der Komponente zum Gesamtvolumen bei verschiedenen Drücken.',
+            'D) Die Anzahl der Mole pro Liter Lösung (molare Konzentration).',
+            'E) Der Prozentsatz der Moleküle in Masseneinheiten.',
+          ],
+          correctIndex: 0,
+          explanation: 'Molenbruch xᵢ = nᵢ/n_gesamt ist dimensionslos (0 bis 1). Er gibt an, welcher Anteil aller Gasteilchen auf Komponente i entfällt. Σ xᵢ = 1 (alle Molenbrüche summieren sich zu 1). Für ideale Gase bei konstantem p und T ist Molenbruch = Volumenanteil. Luft: x(N₂) ≈ 0,78, x(O₂) ≈ 0,21, x(Ar) ≈ 0,01. Der Massenanteil ωᵢ = mᵢ/m_gesamt ist eine andere Größe – er berücksichtigt Molmassen und ist für Gase mit verschiedenen M ≠ xᵢ. Direkte Anwendung: pᵢ = xᵢ · p_gesamt (nur mit Molenbruch, nicht mit Massenanteil!).',
+          hints: [
+            'Molenbruch = nᵢ/n_gesamt (0 bis 1). Nicht mit Massenanteil (ω = mᵢ/m_gesamt) verwechseln!',
+            'Σ xᵢ = 1 und Σ pᵢ = p_gesamt: Der Molenbruch verbindet Zusammensetzung direkt mit Partialdruck.',
+          ],
+          difficulty: 1,
           tags: [],
         },
       ],
     },
     {
       id: 'ch-3-03',
-      title: 'Mol, Avogadro und Stöchiometrie der Gase',
-      content: `## Das Mol als chemische Einheit
+      title: "Diffusion und Effusion (Graham'sches Gesetz)",
+      content: `## Diffusion von Gasen
 
-Das **Mol** (mol) ist die SI-Einheit der Stoffmenge. 1 mol enthält genau **N_A = 6,022×10²³** Teilchen (Avogadro-Konstante). Diese Zahl ist so gewählt, dass 1 mol ¹²C genau 12 g wiegt. Die **molare Masse M** eines Elements oder einer Verbindung gibt an, wie viel Gramm 1 mol der Substanz wiegt (Einheit: g/mol) und entspricht zahlenmäßig der relativen Atommasse bzw. Molmasse.
+**Diffusion** ist der spontane, thermisch getriebene Transport von Gasteilchen von Orten höherer Konzentration zu Orten niedrigerer Konzentration. Der Antrieb ist die Entropiezunahme: Systeme streben zum Zustand maximaler Unordnung.
 
-Beziehung: **n = m/M** → Stoffmenge (mol) = Masse (g) / molare Masse (g/mol)
+Makroskopisch beschreibt das **erste Ficksche Diffusionsgesetz** die Diffusion:
 
-Beispiele: M(H₂O) = 2×1 + 16 = 18 g/mol; M(NaCl) = 23 + 35,5 = 58,5 g/mol; M(CO₂) = 12 + 2×16 = 44 g/mol.
+**J = −D · (dc/dx)**
 
-## Avogadro'sches Gesetz und Molvolumen
+- J: Diffusionsstromdichte [mol/(m²·s)] – Stofffluss pro Fläche und Zeit
+- D: Diffusionskoeffizient [m²/s] – substanz- und mediumspezifisch
+- dc/dx: Konzentrationsgradient (negatives Vorzeichen: Fluss von hoher zu niedriger Konzentration)
 
-Avogadro erkannte, dass gleiche Volumina verschiedener idealer Gase bei gleichen Bedingungen (T, p) gleich viele Gasteilchen enthalten. Daraus folgt das **molare Volumen**: 1 mol eines idealen Gases nimmt bei STP (0°C, 1 bar) stets 22,4 L ein — unabhängig von der Molekülart.
+## Grahamsches Gesetz der Diffusion und Effusion
 
-## Dalton'sches Partialdruckgesetz
+Thomas Graham (1848) entdeckte: Die Diffusionsrate eines Gases ist **umgekehrt proportional zur Wurzel seiner molaren Masse**:
 
-In einem Gasgemisch übt jede Komponente i einen **Partialdruck p_i** aus, als wäre sie allein im Behälter. Der Gesamtdruck ist die Summe aller Partialdrücke: **p_ges = p₁ + p₂ + p₃ + ...** = Σp_i. Der Partialdruck hängt vom Molenbruch x_i ab: p_i = x_i × p_ges.
+**r₁/r₂ = √(M₂/M₁)**
 
-Beispiel: Luft (p=1 bar): p(N₂) ≈ 0,78 bar, p(O₂) ≈ 0,21 bar, p(Ar) ≈ 0,01 bar.
+Gleiches gilt für **Effusion** (Ausströmen durch eine sehr kleine Öffnung ins Vakuum). Das Grahamsche Gesetz folgt direkt aus der kinetischen Gastheorie: Bei gleicher Temperatur haben alle Gasmoleküle dieselbe mittlere kinetische Energie (½Mv² = 3/2 k_BT → v ∝ 1/√M).
 
-## Stöchiometrische Gasberechnung
+**Beispiele:**
+- H₂ (M = 2) vs. O₂ (M = 32): r(H₂)/r(O₂) = √(32/2) = √16 = 4 → H₂ diffundiert 4-mal schneller!
+- N₂ (M = 28) vs. CO₂ (M = 44): r(N₂)/r(CO₂) = √(44/28) ≈ 1,25 → N₂ 25 % schneller.
 
-Aus einer Reaktionsgleichung lassen sich Gasvolumina berechnen: Bei der Reaktion 2H₂ + O₂ → 2H₂O verbrennen 2 mol H₂ mit 1 mol O₂. Bei STP: 2×22,4 L H₂ + 22,4 L O₂ → 2×18 g H₂O (flüssig).`,
+## Mittlere freie Weglänge
+
+In einem Gas kollidieren Moleküle ständig. Die **mittlere freie Weglänge** λ ist die Durchschnittsstrecke zwischen zwei Kollisionen:
+
+**λ = k_BT / (√2 · π · d² · p)**
+
+Bei Atmosphärendruck und 25 °C: λ ≈ 60–70 nm für N₂. Kollisionsfrequenz z ≈ 5 × 10⁹ s⁻¹ (5 Milliarden/s!). Trotz hoher Molekülgeschwindigkeit (v_rms ≈ 515 m/s) ist die Nettoausbreitung durch ständige Richtungsänderungen langsam.
+
+## Ficksche Gesetze in der Lungendiffusion
+
+Für den pulmonalen Gasaustausch gilt (Ficks Gesetz für Membranen):
+
+**Fluss = (D × A × Δp) / d**
+
+- A: Alveolarfläche (60–80 m² – entspricht einem Tennisplatz!)
+- D: Diffusionskoeffizient (∝ Löslichkeit / √Molmasse)
+- Δp: Partialdruckgradient über der Membran
+- d: Diffusionsstrecke (alveolo-kapilläre Membran: 0,3–0,5 μm)
+
+CO₂ diffundiert ca. 20-mal schneller als O₂ in der Lunge, obwohl es schwerer ist, weil CO₂ in wässrigen Medien viel löslicher ist (Löslichkeit geht linear in D ein, Masse nur als Wurzel).
+
+## Anwendung: Isotopentrennung
+
+Grahams Effusionsgesetz ermöglicht die Trennung von Gasisotopen. Urananreicherung für Kernkraftwerke nutzt Effusion von UF₆:
+
+r(²³⁵UF₆)/r(²³⁸UF₆) = √(352/349) = 1,0043
+
+Nur 0,43 % Unterschied pro Stufe → tausende Kaskadenstufen nötig!
+
+## Zweites Ficksches Gesetz
+
+Das zweite Ficksche Gesetz beschreibt die zeitliche Konzentrationsänderung:
+
+**∂c/∂t = D · ∂²c/∂x²**
+
+Charakteristische Diffusionszeitskala: t ≈ x²/(2D). Diffusion ist über kurze Strecken (Zellmembran: nm) extrem schnell, über große Distanzen (Organe: cm) viel zu langsam – deshalb brauchen höhere Organismen Kreislaufsysteme.`,
       lernziele: [
-        "n = m/M berechnen und die Avogadro-Konstante erklären",
-        "Das Dalton'sche Partialdruckgesetz formulieren und Partialdrücke berechnen",
-        "Stöchiometrische Berechnungen mit Gasen durchführen",
+        "Das Grahamsche Gesetz der Diffusion/Effusion formulieren und anwenden: r₁/r₂ = √(M₂/M₁).",
+        "Das erste Ficksche Gesetz (J = −D·dc/dx) interpretieren und auf pulmonale Diffusion anwenden.",
+        "Die Faktoren nennen, die die Diffusionskapazität der Lunge beeinflussen (Fläche, Gradient, Strecke, Löslichkeit).",
+        "Den Begriff der mittleren freien Weglänge erklären und dessen Bedeutung für Gasdiffusion verstehen.",
       ],
       sections: [
         {
-          heading: "Mol-Berechnungen: Schritt für Schritt",
-          text: "Typische Mol-Berechnungen folgen einem Schema: (1) Molare Masse aus dem Periodensystem bestimmen. (2) n = m/M berechnen. Beispiel: Wie viele Mol CO₂ sind in 22 g CO₂? M(CO₂)=12+2×16=44 g/mol → n=22/44=0,5 mol. Umgekehrt: Welche Masse haben 0,25 mol NaCl? m=n×M=0,25×58,5=14,6 g. Für Gase: Welches Volumen nehmen 0,5 mol CO₂ bei STP ein? V=n×V_m=0,5×22,4=11,2 L. Oder mit Gasgleichung: V=nRT/p=0,5×8,314×273/100.000=0,01135 m³=11,35 L.",
+          heading: "Grahamsches Gesetz: Leichtere Gase diffundieren schneller",
+          text: "Grahams Gesetz (1848) folgt aus der Gleichverteilung kinetischer Energie: ½M₁v₁² = ½M₂v₂² → v₁/v₂ = √(M₂/M₁). Leichtere Gase bewegen sich schneller und diffundieren rascher. Klassisches Experiment: NH₃ (M = 17) und HCl (M = 36,5) werden in ein Rohr eingebracht. NH₃ diffundiert schneller (r-Verhältnis = √(36,5/17) ≈ 1,47) – der weiße NH₄Cl-Niederschlag (NH₃ + HCl → NH₄Cl) bildet sich näher an der HCl-Quelle. Dies ist ein direkter experimenteller Nachweis des Grahamschen Gesetzes.",
+          merksatz: "Graham: r ∝ 1/√M. Leichtes Gas diffundiert schnell – viermal leichteres Gas diffundiert doppelt so schnell.",
         },
         {
-          heading: "Dalton'sches Gesetz und medizinische Gasgemische",
-          text: "Das Dalton'sche Gesetz hat direkte klinische Relevanz. Beim Atmen der normalen Atmosphäre (p≈1 atm=101,3 kPa) gilt: p(O₂)=0,21×101,3=21,3 kPa. In der Alveole wird durch CO₂ und Wasserdampf der O₂-Partialdruck auf ~13,3 kPa reduziert. Bei der Hyperoxietherapie (100% O₂, 1 atm) steigt p(O₂) auf 101,3 kPa → fünffach höherer Partialdruck → mehr O₂ gelöst im Blut. In der hyperbaren Sauerstofftherapie (2-3 atm, 100% O₂) steigt p(O₂) auf 200-300 kPa → 10-15-fach erhöhte O₂-Lösung.",
+          heading: "Ficks Gesetz und pulmonale Diffusion",
+          text: "In der Lunge diffundiert O₂ durch die alveolo-kapilläre Membran (0,3–0,5 μm dünn). Nach Fick: Fluss = D·A·Δp/d. Die riesige Alveolarfläche (60–80 m²!) und die hauchzarte Membran maximieren den Gasaustausch. CO₂ diffundiert 20× schneller als O₂ (trotz höherer Molmasse) wegen viel höherer Wasserlöslichkeit. Bei Erkrankungen: Lungenfibrose (d↑) und Emphysem (A↓) reduzieren den Fluss. Der DLCO-Test (CO-Diffusionskapazität) misst klinisch die Diffusionsfähigkeit: CO als Tracergas (extrem hohe Hb-Affinität → p_Blut ≈ 0 → maximaler Gradient).",
+          merksatz: "Fick: Fluss = D·A·Δp/d. Große Fläche, hoher Gradient, kurze Strecke, hohe Löslichkeit → maximale Diffusion.",
+        },
+        {
+          heading: "Mittlere freie Weglänge und Diffusionsgeschwindigkeit",
+          text: "Obwohl N₂ bei Raumtemperatur mit v_rms ≈ 515 m/s rast, diffundiert es langsam durch ein Gasmedium, weil ständige Kollisionen (ca. 5 × 10⁹/s, freie Weglänge λ ≈ 66 nm) die Richtung ändern. Der Diffusionskoeffizient D ≈ (1/3)·v_mittl·λ ≈ 2 × 10⁻⁵ m²/s für Gase in Luft. In Wasser: D ≈ 10⁻⁹ m²/s (10.000× langsamer!). Biologisch optimierte Lösung: Alveolarmembran (nm-dünn), maximale Oberfläche (60 m²), und für große Distanzen ein Kreislaufsystem.",
+          merksatz: "λ bei 1 bar ≈ 60–70 nm (N₂). Höherer Druck → kürzere λ → langsamere Diffusion im Gas. In Wasser ist D 10.000× kleiner als in Luft.",
         },
       ],
       merksätze: [
-        "n = m/M: Mol = Gramm durch molare Masse",
-        "N_A = 6,022×10²³ Teilchen pro Mol (Avogadro-Konstante)",
-        "Dalton: p_ges = Σp_i — Partialdrücke addieren sich",
+        "Graham: r₁/r₂ = √(M₂/M₁) – Diffusions-/Effusionsrate umgekehrt proportional zur Wurzel der molaren Masse.",
+        "Bei gleicher T: ½Mv² = const für alle idealen Gase – leichtere Moleküle bewegen sich schneller.",
+        "H₂ (2 g/mol) diffundiert 4× schneller als O₂ (32 g/mol): √(32/2) = √16 = 4.",
+        "Ficks 1. Gesetz: J = −D·dc/dx – Fluss proportional zum Konzentrationsgradienten (von hoch nach niedrig).",
+        "Ficks Gesetz in der Lunge: Fluss = D·A·Δp/d – optimiert durch große A und kleines d.",
+        "CO₂ diffundiert in der Lunge 20× schneller als O₂ (wegen höherer Wasserlöslichkeit, trotz größerer Molmasse).",
+        "Mittlere freie Weglänge λ bei 1 bar ≈ 60–70 nm (N₂). Kollisionsfrequenz ≈ 5 Mrd./s.",
+        "Diffusionszeitskala: t ≈ x²/(2D). Über nm: Nanosekunden. Über 1 cm: Stunden!",
+        "Effusion: Ausströmen durch winzige Öffnung ins Vakuum – ebenfalls ∝ 1/√M (Graham gilt).",
+        "Isotopentrennung UF₆: Nur 0,43 % Unterschied pro Effusionsstufe → Tausende Kaskadenstufen nötig.",
       ],
-      klinischerBezug: "Das Dalton'sche Partialdruckgesetz erklärt die arterielle Sauerstoffversorgung: Der alveoläre O₂-Partialdruck (pAO₂) bestimmt die O₂-Sättigung des Hämoglobins. Bei Höhenkrankheit sinkt p_ges → p(O₂) sinkt → Hypoxie. Supplementärer Sauerstoff erhöht p(O₂) und korrigiert die Hypoxie.",
       altfrage: {
-        question: "Wie viele Moleküle CO₂ sind in 44 g CO₂ enthalten?",
-        answer: "M(CO₂) = 44 g/mol → n = 44/44 = 1 mol CO₂. Anzahl der Moleküle: N = n × N_A = 1 × 6,022×10²³ = 6,022×10²³ Moleküle.",
+        question: "Formulieren Sie das Grahamsche Gesetz und erläutern Sie seine physikalische Grundlage. Wie wird das Ficksche Gesetz in der Lungendiffusion angewendet?",
+        answer: `Das Grahamsche Gesetz (1848): r₁/r₂ = √(M₂/M₁). Es folgt aus der kinetischen Gastheorie: Bei gleicher Temperatur haben alle Gasmoleküle dieselbe mittlere kinetische Energie (½Mv² = 3/2 k_BT), woraus v ∝ 1/√M folgt. Leichtere Moleküle bewegen sich schneller und diffundieren/effundieren rascher. Beispiel: H₂ (M = 2) diffundiert √(32/2) = 4-mal schneller als O₂ (M = 32).
+
+Das Ficksche Diffusionsgesetz (1. Gesetz): J = −D·dc/dx, wobei D der Diffusionskoeffizient und dc/dx der Konzentrationsgradient ist. In der Lunge: Fluss = (D × A × Δp)/d. Die riesige Alveolarfläche A (60–80 m²) und die hauchzarte alveolo-kapilläre Membran (d = 0,3–0,5 μm) maximieren den Gasaustausch. Der Druckgradient Δp(O₂) ≈ 8 kPa (Alveole 13,3 kPa – venöses Blut 5,3 kPa) treibt die Diffusion.
+
+D ist proportional zur Gaslöslichkeit und umgekehrt proportional zu √M: D ∝ α/√M. Obwohl CO₂ (44 g/mol) schwerer als O₂ (32 g/mol) ist, diffundiert CO₂ ca. 20× schneller, weil seine Wasserlöslichkeit 24× höher ist (24/1,17 ≈ 20). Deshalb ist CO₂-Elimination kaum beeinträchtigt, wenn die Diffusionskapazität sinkt, während O₂-Aufnahme bereits früh leidet. Klinisch misst der DLCO-Test die Diffusionskapazität – reduziert bei Fibrose (d↑), Emphysem (A↓) und pulmonaler Hypertonie.`,
       },
+      klinischerBezug: "Der DLCO-Test (Diffusionskapazität für CO) nutzt Ficks Gesetz direkt: CO hat extrem hohe Hb-Affinität (200× > O₂), sodass p_Blut(CO) ≈ 0 und der maximale Partialdruckgradient immer gewährleistet ist – nur die Membranparameter (A, d, D) limitieren. Reduzierter DLCO ist diagnostisch für Lungenfibrose (d↑), Emphysem (A↓) und pulmonale Hypertonie (Gefäßverdickung). Die Heliox-Therapie (He/O₂) bei obstruktiver Lungenerkrankung nutzt die geringere Gasdichte von He (M = 4 g/mol vs. N₂: 28 g/mol), die nach Grahamschen Prinzipien zu höherem Diffusionskoeffizienten und geringerem turbulentem Atemwiderstand führt.",
       selfTest: [
         {
-          question: "Wie viele Mol enthält 36 g Wasser (M(H₂O) = 18 g/mol)?",
+          question: 'Wie viel mal schneller diffundiert CH₄ (M = 16 g/mol) im Vergleich zu SO₂ (M = 64 g/mol)?',
           options: [
-            "0,5 mol",
-            "1 mol",
-            "2 mol",
-            "18 mol",
-            "36 mol",
-          ],
-          correctIndex: 2,
-          explanation: "n = m/M = 36 g / 18 g/mol = 2 mol. 36 g Wasser entsprechen 2 mol und enthalten 2 × 6,022×10²³ Wassermoleküle.",
-          hints: [
-            "Verwende n = m/M",
-            "Teile die Masse durch die molare Masse",
-          ],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: "Luft enthält 78% N₂ und 21% O₂ (Volumenprozent). Wie groß ist der O₂-Partialdruck bei p_ges = 1000 hPa?",
-          options: [
-            "78 hPa",
-            "210 hPa",
-            "780 hPa",
-            "21 hPa",
-            "1000 hPa",
-          ],
-          correctIndex: 1,
-          explanation: "p(O₂) = Molenbruch × p_ges = 0,21 × 1000 hPa = 210 hPa. Volumenprozent = Molprozent = Molenbruch für ideale Gase.",
-          hints: [
-            "p_i = x_i × p_ges, wobei x_i der Molenbruch ist",
-            "21% O₂ entspricht x(O₂) = 0,21",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Wie viele Liter nimmt 0,5 mol N₂ bei STP ein?",
-          options: [
-            "5,6 L",
-            "11,2 L",
-            "22,4 L",
-            "44,8 L",
-            "28 L",
-          ],
-          correctIndex: 1,
-          explanation: "Bei STP gilt V_m = 22,4 L/mol für jedes ideale Gas. Für 0,5 mol: V = 0,5 × 22,4 = 11,2 L.",
-          hints: [
-            "Molares Volumen bei STP: 22,4 L/mol",
-            "V = n × V_m",
-          ],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: "Was besagt die Avogadro-Konstante N_A = 6,022×10²³ mol⁻¹?",
-          options: [
-            "1 mol enthält immer 6,022×10²³ Teilchen (Atome, Moleküle, Ionen o.ä.)",
-            "1 g jedes Elements enthält 6,022×10²³ Atome",
-            "1 L eines Gases enthält bei STP 6,022×10²³ Moleküle",
-            "Kohlenstoff-12 hat eine Masse von 6,022×10²³ g",
-            "Die Lichtgeschwindigkeit beträgt 6,022×10²³ m/s",
+            'A) 2-mal schneller',
+            'B) 4-mal schneller',
+            'C) 0,5-mal (halb so schnell)',
+            'D) 8-mal schneller',
+            'E) 1,4-mal schneller',
           ],
           correctIndex: 0,
-          explanation: "Die Avogadro-Konstante N_A = 6,022×10²³ mol⁻¹ gibt an, wie viele Teilchen in 1 mol einer Substanz enthalten sind — unabhängig davon, ob es sich um Atome, Moleküle, Ionen oder andere Einheiten handelt.",
+          explanation: 'Graham: r(CH₄)/r(SO₂) = √(M(SO₂)/M(CH₄)) = √(64/16) = √4 = 2. CH₄ diffundiert genau 2× schneller als SO₂. Merke: Das Massenverhältnis (64/16 = 4) muss GEWURZELT werden → √4 = 2. Häufiger Fehler: Massenverhältnis nicht wurzeln → falsche Antwort 4. Oder falsch herum: √(16/64) = 0,5 → SO₂ wäre schneller, was falsch ist. Das schwerere Gas (SO₂, 64 g/mol) ist langsamer. Das Verhältnis der Molmassen 64:16 = 4:1 ergibt ein Geschwindigkeitsverhältnis von √4 = 2:1.',
           hints: [
-            "N_A verknüpft die makroskopische (Mol) mit der mikroskopischen Ebene (Teilchenanzahl)",
-            "1 mol = immer N_A Teilchen",
+            'Graham: r₁/r₂ = √(M₂/M₁). Das schwerere Gas kommt in den Zähler unter der Wurzel.',
+            '√(64/16) = √4 = 2. Das Massenverhältnis 4:1 ergibt Geschwindigkeitsverhältnis 2:1 (nicht 4:1!).',
           ],
-          difficulty: 2,
+          difficulty: 1,
           tags: [],
         },
         {
-          question: "Bei der Reaktion C + O₂ → CO₂ verbrennt Kohlenstoff. Welches Volumen CO₂ entsteht aus 24 g Kohlenstoff bei STP? (M(C)=12 g/mol)",
+          question: 'Warum diffundiert CO₂ in der Lunge ca. 20-mal schneller als O₂, obwohl CO₂ schwerer ist?',
           options: [
-            "11,2 L",
-            "22,4 L",
-            "44,8 L",
-            "33,6 L",
-            "5,6 L",
+            'A) Weil CO₂ eine viel höhere Löslichkeit in wässrigen Medien hat als O₂ – Löslichkeit geht linear in D ein, Molmasse nur als Wurzel.',
+            'B) Weil CO₂ kleiner ist als O₂.',
+            'C) Weil CO₂ einen höheren Partialdruck hat als O₂ in der Alveole.',
+            'D) Weil CO₂ chemisch mit Wasser reagiert und dadurch schneller transportiert wird.',
+            'E) Weil das Grahamsche Gesetz für CO₂ in Flüssigkeiten nicht gilt.',
           ],
-          correctIndex: 2,
-          explanation: "n(C) = 24/12 = 2 mol. Da C und CO₂ im Verhältnis 1:1 reagieren, entstehen ebenfalls 2 mol CO₂. Bei STP: V = 2 × 22,4 = 44,8 L.",
+          correctIndex: 0,
+          explanation: 'In biologischen Medien gilt: D ∝ α/√M, wobei α die Bunsensche Löslichkeit ist. CO₂ ist in Wasser ca. 24× löslicher als O₂ (α(CO₂) ≈ 0,592 vs. α(O₂) ≈ 0,024 ml/(ml·atm) bei 37 °C). Der Molmassen-Nachteil: √(44)/√(32) = 1,17-fach. Effektiv: 24/1,17 ≈ 20× schnellere Diffusion. Die chemische Reaktion von CO₂ mit Wasser (CO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻, katalysiert durch Carboanhydrase) erhöht zwar den Gesamttransport, ist aber vom physikalischen Diffusionskoeffizienten zu trennen.',
           hints: [
-            "Berechne zuerst n(C) = m/M",
-            "Stöchiometrisches Verhältnis C:CO₂ = 1:1",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-      ],
-    },
-    {
-      id: 'ch-3-04',
-      title: 'Gasgesetze in der Medizin',
-      content: `## Atemphysik und Boyle-Mariotte
-
-Die Lungenatmung folgt direkt dem Boyle-Mariotte'schen Gesetz (T≈const). Bei der **Inspiration** kontrahiert das Zwerchfell und vergrößert das Lungenvolumen. Nach Boyle-Mariotte sinkt dadurch der Druck in der Lunge unter den Atmosphärendruck → Luft strömt ein. Bei der **Exspiration** entspannt das Zwerchfell, das Volumen sinkt, der Druck steigt → Luft strömt aus. Der Druckunterschied beträgt beim normalen Atmen nur ~1-3 mmHg (130-400 Pa).
-
-## Tauchmedizin und Dekompressionskrankheit
-
-Unter Wasser steigt der Druck mit der Tiefe: pro 10 m Wassertiefe nimmt der Druck um ~1 bar zu. In 30 m Tiefe: p = 4 bar absolut. Nach Boyle-Mariotte: Das Gasvolumen im Körper (z.B. Lunge, Nebenhöhlen) wird auf 1/4 komprimiert.
-
-**Henry'sches Gesetz**: Die Menge eines Gases, die sich in einer Flüssigkeit löst, ist proportional zum Partialdruck dieses Gases: c = k_H × p. Bei 4 bar löst sich viermal mehr N₂ im Blut als bei 1 bar. Beim zu schnellen Auftauchen bilden sich N₂-Bläschen im Blut und Gewebe (Dekompressionskrankheit, "Taucherkrankheit") → Schmerzen, Lähmungen, Embolien.
-
-## Hyperbare Sauerstofftherapie (HBO)
-
-In der Druckkammer (2-3 bar, 100% O₂) wird nach Dalton und Henry ein wesentlich höherer O₂-Partialdruck erzielt. Nach Henry löst sich bis zu 10-mal mehr O₂ im Plasma. Anwendungen: Kohlenmonoxidvergiftung (CO verdrängt O₂ vom Hämoglobin, HBO-O₂ verdrängt CO zurück), Wundheilung (Hypoxie-Therapie), nekrotisierende Fasziitis.
-
-## Höhenkrankheit
-
-Mit steigender Höhe nimmt der Luftdruck ab. Bei 4000 m Höhe: p ≈ 0,62 bar → p(O₂) = 0,21 × 0,62 = 0,13 bar (statt 0,21 bar). Der reduzierte O₂-Partialdruck führt zu verminderter O₂-Sättigung des Hämoglobins → Höhenkrankheit (Kopfschmerzen, Schwindel, Übelkeit, im Extremfall Lungenödem).`,
-      lernziele: [
-        "Den Mechanismus der Lungenatmung mit Boyle-Mariotte erklären",
-        "Die Dekompressionskrankheit mit Henry'schem Gesetz und Druckveränderungen begründen",
-        "Den Effekt von Höhe und hyperbarem Druck auf den O₂-Partialdruck berechnen",
-      ],
-      sections: [
-        {
-          heading: "Henry'sches Gesetz und Gaslöslichkeit",
-          text: "Das Henry'sche Gesetz beschreibt die Löslichkeit von Gasen in Flüssigkeiten: c = k_H × p, wobei c die Konzentration des gelösten Gases, k_H die Henry-Konstante (substanzspezifisch) und p der Partialdruck des Gases über der Flüssigkeit ist. N₂ hat eine geringe Henry-Konstante in Wasser/Blut, löst sich aber bei Tauchtiefe trotzdem erheblich mehr. O₂ hat eine etwas höhere Löslichkeit und ist zudem an Hämoglobin gebunden. CO₂ hat eine sehr hohe Löslichkeit (k_H = 0,034 mol/L/bar) und reagiert mit Wasser zu H₂CO₃. Das Henry-Gesetz erklärt auch, warum in Sprudel gelöstes CO₂ beim Öffnen der Flasche (Druckabfall) aufschäumt.",
-        },
-        {
-          heading: "Höhenkrankheit: Physik und Klinik",
-          text: "Die barometrische Höhenformel beschreibt den exponentiellen Druckabfall mit der Höhe. Auf dem Mount Everest (8848 m) beträgt der Luftdruck nur noch ~0,33 bar → p(O₂) ≈ 0,07 bar (statt 0,21 bar auf Meereshöhe). Die Hämoglobin-Sauerstoffbindungskurve zeigt, dass bei niedrigem p(O₂) die O₂-Sättigung stark sinkt. Akklimatisation erfolgt durch Erythropoiese (mehr rote Blutkörperchen), Hyperventilation und erhöhtes 2,3-Bisphosphoglycerat (verschiebt Bindungskurve). Sauerstoffgabe (supplementärer O₂) erhöht den p(O₂) in der Einatemluft und behandelt akut die Höhenkrankheit.",
-        },
-      ],
-      merksätze: [
-        "Inspiration: Lungenvolumen↑ → Druck↓ → Luft strömt ein (Boyle-Mariotte)",
-        "Henry: c = k_H × p — mehr Druck = mehr Gas gelöst (Dekompressions-Risiko!)",
-        "Höhe: p↓ → p(O₂)↓ → Hypoxie; HBO: p↑ → p(O₂)↑ → mehr O₂ gelöst",
-      ],
-      klinischerBezug: "Bei der Narkosebeatmung werden Gasgesetze direkt angewendet: Das Atemzugvolumen, der PEEP (positiver endexspiratorischer Druck) und die Sauerstoffkonzentration werden nach physikalischen Prinzipien eingestellt, um eine adäquate O₂-Versorgung und CO₂-Elimination zu gewährleisten.",
-      altfrage: {
-        question: "Warum sollte ein Taucher beim Auftauchen niemals die Luft anhalten?",
-        answer: "Beim Auftauchen sinkt der Umgebungsdruck. Nach Boyle-Mariotte dehnt sich das Gas in der Lunge aus (V ~ 1/p). Wenn man die Luft anhält und von 30 m (4 bar) auf die Oberfläche (1 bar) auftaucht, vervierfacht sich das Lungenvolumen theoretisch — dies führt zur Überblähung und Ruptur der Alveolen (Barotrauma, Pneumothorax, Luftembolie).",
-      },
-      selfTest: [
-        {
-          question: "Was passiert physikalisch beim Einatmen (Inspiration)?",
-          options: [
-            "Das Zwerchfell entspannt sich, das Lungenvolumen sinkt, der Druck steigt, Luft strömt ein",
-            "Das Zwerchfell kontrahiert, das Lungenvolumen steigt, der Druck sinkt unter Atmosphärendruck, Luft strömt ein",
-            "Die Rippen senken sich, das Lungenvolumen sinkt, ein Sog entsteht, Luft wird eingesaugt",
-            "Das Zwerchfell kontrahiert, der Druck steigt über Atmosphärendruck, Luft wird hineingepresst",
-            "Die Lunge dehnt sich aktiv aus und saugt Luft aktiv an",
-          ],
-          correctIndex: 1,
-          explanation: "Bei der Inspiration kontrahiert das Zwerchfell und senkt sich, die äußeren Intercostalmuskeln heben die Rippen. Das Lungenvolumen nimmt zu → nach Boyle-Mariotte sinkt der intrapulmonale Druck unter den Atmosphärendruck → Luft strömt passiv ein.",
-          hints: [
-            "Die Lunge kann sich nicht selbst bewegen — was bewegt sie?",
-            "Boyle-Mariotte: Volumen↑ → Druck↓",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Was ist die physikalische Ursache der Dekompressionskrankheit?",
-          options: [
-            "Zu viel O₂ löst sich beim Tauchen im Blut und vergiftet den Körper",
-            "Der Druck auf die Lunge verhindert die Atmung in der Tiefe",
-            "N₂ löst sich bei Tauchdruck im Blut; beim schnellen Auftauchen bilden sich Gasblasen",
-            "CO₂ kann bei hohem Druck nicht mehr abgeatmet werden",
-            "Das Blut gefriert bei hohem Unterwasserdruck",
-          ],
-          correctIndex: 2,
-          explanation: "Nach Henry's Gesetz (c = k_H × p) löst sich bei hohem Druck mehr N₂ im Blut. Beim zu schnellen Auftauchen sinkt der Druck zu rasch → N₂ kann nicht über die Lunge abgeatmet werden → Gasblasen entstehen im Blut und Gewebe → Dekompressionskrankheit.",
-          hints: [
-            "Henry'sches Gesetz: Mehr Druck = mehr Gas gelöst",
-            "Was passiert beim Entspannen einer Sprudelflasche?",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Auf 4000 m Höhe beträgt der Luftdruck 0,6 bar. Wie groß ist der O₂-Partialdruck? (O₂-Anteil in Luft: 21%)",
-          options: [
-            "0,21 bar",
-            "0,13 bar",
-            "0,063 bar",
-            "0,6 bar",
-            "0,042 bar",
-          ],
-          correctIndex: 1,
-          explanation: "p(O₂) = x(O₂) × p_ges = 0,21 × 0,6 bar = 0,126 bar ≈ 0,13 bar. Das sind nur 62% des normalen O₂-Partialdrucks auf Meereshöhe (0,21 bar).",
-          hints: [
-            "p(O₂) = Molenbruch × Gesamtdruck",
-            "x(O₂) = 21% = 0,21",
-          ],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: "Warum wirkt die hyperbare Sauerstofftherapie bei CO-Vergiftung?",
-          options: [
-            "O₂ bei hohem Druck neutralisiert CO chemisch zu CO₂",
-            "Hoher p(O₂) verdrängt CO vom Hämoglobin und erhöht physikalisch gelöstes O₂ im Plasma",
-            "Hoher Druck zerstört CO-Moleküle in der Lunge",
-            "O₂ bei hohem Druck wird schneller vom Hämoglobin aufgenommen",
-            "Hoher Druck verhindert, dass CO aus dem Körper transportiert wird",
-          ],
-          correctIndex: 1,
-          explanation: "CO bindet ~240-mal stärker an Hämoglobin als O₂ (Carboxyhämoglobin). Bei hohem p(O₂) (HBO: bis 300 kPa) verschiebt das Massenwirkungsgesetz das Gleichgewicht zurück → O₂ verdrängt CO. Zudem löst sich mehr O₂ physikalisch im Plasma (nach Henry), genug zur Versorgung ohne Hämoglobin.",
-          hints: [
-            "CO blockiert Hämoglobin — wie kann O₂ es verdrängen?",
-            "Henry'sches Gesetz: Mehr p(O₂) → mehr O₂ im Plasma gelöst",
+            'D ∝ Löslichkeit/√M. Löslichkeit (linear) schlägt Molmasse (als Wurzel) bei CO₂ deutlich.',
+            'CO₂-Löslichkeit in Wasser ≈ 24× höher als O₂. Molmassen-Nachteil von CO₂ nur 1,17×. Netto: 20×.',
           ],
           difficulty: 3,
           tags: [],
         },
         {
-          question: "Ein Taucher atmet in 40 m Tiefe (p=5 bar, T=const). Welches Volumen hat sein Atemgas, wenn es auf Meereshöhe (1 bar) ausgedehnt wird?",
+          question: 'Was ist die mittlere freie Weglänge eines Gasmoleküls?',
           options: [
-            "Es bleibt gleich",
-            "Es verdoppelt sich",
-            "Es wird 5-mal größer",
-            "Es wird 5-mal kleiner",
-            "Es wird 25-mal größer",
+            'A) Die durchschnittliche Strecke zwischen zwei aufeinanderfolgenden Kollisionen.',
+            'B) Die Gesamtstrecke, die ein Molekül pro Sekunde zurücklegt.',
+            'C) Der Moleküldurchmesser.',
+            'D) Die Strecke vom Molekül zur nächsten Behälterwand.',
+            'E) Die Wellenlänge thermischer Strahlung des Moleküls.',
           ],
-          correctIndex: 2,
-          explanation: "Boyle-Mariotte: p₁V₁ = p₂V₂ → V₂ = V₁ × p₁/p₂ = V₁ × 5/1 = 5V₁. Das Gasvolumen verfünffacht sich — deshalb ist das Anhalten der Luft beim Auftauchen lebensgefährlich (Lungenüberblähung).",
+          correctIndex: 0,
+          explanation: 'Die mittlere freie Weglänge λ ist die Durchschnittsstrecke zwischen zwei Kollisionen: λ = k_BT/(√2·π·d²·p). Bei 1 bar und 25 °C beträgt λ für N₂ ca. 66 nm – winzig gegenüber v_rms ≈ 515 m/s. Das Molekül kollidiert ca. 5 Milliarden Mal pro Sekunde! Die Nettoausbreitung durch einen Konzentrationsgradienten ist trotzdem langsam, da jede Kollision die Richtung ändert (Random Walk). Bei niedrigem Druck (λ >> Behälterdurchmesser) spricht man vom Knudsen-Regime: Moleküle kollidieren eher mit Wänden als miteinander – Effusion dominiert.',
           hints: [
-            "Boyle-Mariotte: p₁V₁ = p₂V₂ (T=const)",
-            "Druckverhältnis: 5 bar / 1 bar = 5",
+            'λ = k_BT/(√2·π·d²·p). Bei niedrigem p ist λ groß (weniger Partnermoleküle zum Kollidieren).',
+            'Erklärt, warum Diffusion trotz hoher Molekülgeschwindigkeit makroskopisch langsam ist (ständige Richtungsänderungen).',
           ],
           difficulty: 2,
+          tags: [],
+        },
+        {
+          question: 'Welches der folgenden Gase effundiert am langsamsten durch eine kleine Öffnung?',
+          options: [
+            'A) UF₆ (M = 352 g/mol)',
+            'B) H₂ (M = 2 g/mol)',
+            'C) He (M = 4 g/mol)',
+            'D) CH₄ (M = 16 g/mol)',
+            'E) N₂ (M = 28 g/mol)',
+          ],
+          correctIndex: 0,
+          explanation: 'Nach Graham: r ∝ 1/√M. Das schwerste Gas effundiert am langsamsten. UF₆ (M = 352 g/mol) ist das schwerste: r(H₂)/r(UF₆) = √(352/2) = √176 ≈ 13,3 – H₂ ist 13,3× schneller! Technisch wichtig: Die geringfügig unterschiedliche Effusionsrate von ²³⁵UF₆ (M = 349) und ²³⁸UF₆ (M = 352) – Verhältnis: √(352/349) ≈ 1,0043 – wird in der Urananreicherung genutzt. Der Unterschied beträgt nur 0,43 % pro Stufe, weshalb tausende Effusionsstufen nötig sind (Gasdiffusionskaskade). M(UF₆) = 238 + 6 × 19 = 352 g/mol.',
+          hints: [
+            'Graham: r ∝ 1/√M. Das schwerste Gas effundiert am langsamsten.',
+            'UF₆ = 1 U-Atom (238 g/mol) + 6 F-Atome (6×19 = 114 g/mol) = 352 g/mol – das Schwerste in der Liste.',
+          ],
+          difficulty: 1,
+          tags: [],
+        },
+        {
+          question: 'Welche Aussage zu Ficks erstem Gesetz (J = −D·dc/dx) ist korrekt?',
+          options: [
+            'A) Der Diffusionsfluss ist proportional zum Konzentrationsgradienten und zeigt in Richtung abnehmender Konzentration (von hoch nach niedrig).',
+            'B) Der Diffusionsfluss ist proportional zum Quadrat des Konzentrationsgradienten.',
+            'C) Bei höherer Temperatur ist D kleiner, weil Gase dann langsamer diffundieren.',
+            'D) Das Minuszeichen zeigt an, dass Diffusion ein reversibler Prozess ist.',
+            'E) D ist für alle Gase in allen Medien gleich groß.',
+          ],
+          correctIndex: 0,
+          explanation: 'Ficks 1. Gesetz J = −D·dc/dx: Fluss J ist proportional zum Konzentrationsgradienten dc/dx. Das Minuszeichen besagt: Fluss fließt ENTGEGEN dem Gradienten (von hoher zu niedriger Konzentration). D ist substanz- und mediumspezifisch: O₂ in Luft D ≈ 2 × 10⁻⁵ m²/s; CO₂ in Wasser D ≈ 1,9 × 10⁻⁹ m²/s (10.000× kleiner!). Bei höherer Temperatur steigt D für Gase (D ∝ T^(3/2)/p nach kinetischer Gastheorie). Option B ist falsch (linear, nicht quadratisch). Option D ist falsch (Minuszeichen = Richtung des Flusses, nicht Reversibilität).',
+          hints: [
+            'Minuszeichen: dc/dx > 0 (Konzentration steigt in x-Richtung) → Fluss in −x-Richtung (von hoch nach niedrig).',
+            'D ist groß in Gasen (~10⁻⁵ m²/s) und viel kleiner in Flüssigkeiten (~10⁻⁹ m²/s).',
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+        {
+          question: 'Ein Patient mit Lungenfibrose hat 40 % der normalen Alveolarfläche und eine doppelt so dicke alveolo-kapilläre Membran. Auf welchen Prozentsatz der Norm sinkt die Diffusionskapazität?',
+          options: [
+            'A) 20 %',
+            'B) 40 %',
+            'C) 80 %',
+            'D) 50 %',
+            'E) 60 %',
+          ],
+          correctIndex: 0,
+          explanation: 'Diffusionskapazität ∝ A/d (nach Fick). Neue Kapazität = (0,4·A_norm)/(2·d_norm) = 0,2 × (A_norm/d_norm). Nur 20 % der Norm! Beide Faktoren wirken gleichzeitig: Fläche halbiert sich effektiv auf 40 % → das allein würde 40 % ergeben. Zusätzlich doppelte Membrandicke → durch 2 dividieren → 40 % / 2 = 20 %. Klinisch: Eine so schwere kombinierte Schädigung führt zu massiver Hypoxämie, die trotz hoher F_IO₂ schwer zu korrigieren ist. Der DLCO-Test würde ebenfalls nur ca. 20 % des Sollwerts ergeben.',
+          hints: [
+            'Diffusionskapazität ∝ A/d. Neue Kapazität = (0,4·A)/(2·d) = 0,2 × (A/d) → 20 % der Norm.',
+            'A sinkt auf 40 %, d steigt auf 200 % → beide Effekte: 0,4 / 2 = 0,2 = 20 %.',
+          ],
+          difficulty: 3,
+          tags: [],
+        },
+        {
+          question: 'Welcher Faktor verdoppelt die Effusionsrate eines Gases nach dem Grahamschen Gesetz?',
+          options: [
+            'A) Die molare Masse auf 1/4 reduzieren (von M auf M/4)',
+            'B) Die Temperatur auf 200 % erhöhen',
+            'C) Den Druck auf 200 % erhöhen',
+            'D) Die molare Masse auf 1/2 reduzieren (von M auf M/2)',
+            'E) Die Öffnungsfläche verdoppeln',
+          ],
+          correctIndex: 0,
+          explanation: 'Graham: r ∝ 1/√M. Um r zu verdoppeln: 1/√M_neu = 2/√M_alt → √M_neu = √M_alt/2 → M_neu = M_alt/4. Masse auf ein VIERTEL reduzieren! Option D (M/2) würde r nur um √2 ≈ 1,41× erhöhen – nicht verdoppeln. Der Wurzel-Zusammenhang täuscht: Man denkt an Halbierung der Masse für doppelte Rate, aber es ist Viertelung nötig. Merke: Wegen der Wurzel in Grahams Gesetz braucht man das 4-fache Massenverhältnis für das 2-fache Geschwindigkeitsverhältnis. Analogie: v_rms ∝ 1/√M – genau dasselbe Prinzip.',
+          hints: [
+            'r ∝ 1/√M. Für doppelte r: √(M_neu) = √(M_alt)/2 → M_neu = M_alt/4.',
+            'Achtung Wurzelfalle: Masse HALBIEREN gibt nur √2 ≈ 1,41× Rate, nicht 2×. Masse auf 1/4 für 2× Rate.',
+          ],
+          difficulty: 3,
           tags: [],
         },
       ],

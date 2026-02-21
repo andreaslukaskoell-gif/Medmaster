@@ -5,109 +5,240 @@ export const physKap2: Kapitel = {
   title: 'Mechanik',
   subject: 'physik',
   icon: '⚙️',
-  estimatedTime: '60 min',
+  estimatedTime: '90 min',
   unterkapitel: [
     {
       id: 'ph-2-01',
       title: 'Newtonsche Gesetze und Kinematik',
-      content: `Die klassische Mechanik beschreibt, wie sich Körper unter dem Einfluss von Kräften bewegen. Isaac Newton formulierte im 17. Jahrhundert drei Gesetze, die bis heute — für Geschwindigkeiten weit unterhalb der Lichtgeschwindigkeit — die Grundlage aller mechanischen Berechnungen bilden. Diese Gesetze sind nicht nur theoretische Konstrukte; sie erklären, warum Knochen brechen, wie das Herz pumpt und weshalb Blut durch Gefäße fließt.
+      content: `## Newtonsche Gesetze und Kinematik
 
-Das erste Newtonsche Gesetz (Trägheitsgesetz) besagt: Ein Körper verharrt im Zustand der Ruhe oder der gleichförmigen geradlinigen Bewegung, solange keine äußere Kraft auf ihn wirkt. Trägheit ist die Widerstandsfähigkeit eines Körpers gegen Änderungen seines Bewegungszustands. Ein schweres Objekt ist träger als ein leichtes — deshalb ist eine massive Person schwieriger zu beschleunigen und schwieriger zu stoppen. Im Körper manifestiert sich Trägheit beim Aufprall: Bei einem Autounfall bewegen sich Organe mit der Aufprallverzögerung weiter und können sich von Gefäßen abreißen — die gefährlichste Verletzung bei Dezelerationstraumen.
+Die klassische Mechanik ist das Fundament der Physik und beschreibt, wie sich Körper unter dem Einfluss von Kräften bewegen. Isaac Newton formulierte im 17. Jahrhundert drei Grundgesetze, die für Geschwindigkeiten weit unterhalb der Lichtgeschwindigkeit bis heute uneingeschränkt gültig sind. Diese Gesetze sind keine abstrakten Theorien — sie erklären, warum Knochen brechen, wie das Herz Blut pumpt und weshalb Venenpunktionen eine bestimmte Kraft erfordern.
 
-Das zweite Newtonsche Gesetz ist das zentrale Gesetz der Mechanik: F = m × a. Kraft ist gleich Masse mal Beschleunigung. Eine Kraft von 1 Newton beschleunigt 1 kg um 1 m/s². Dieses Gesetz sagt, wie stark eine Kraft einen Körper beschleunigt. Im Körper: Das Herz erzeugt eine Kraft auf das Blut (F = Δp × A, mit Δp = Druckdifferenz und A = Klappenfläche) und beschleunigt es entsprechend der Blutmasse. Kräfte sind Vektoren — sie haben Betrag und Richtung. Mehrere Kräfte überlagern sich zur Gesamtkraft (Superpositionsprinzip).
+## Kinematik: Bewegung ohne Kräfte
 
-Das dritte Newtonsche Gesetz (actio = reactio) ist vielleicht das intuitivst überraschendste: Wenn Körper A eine Kraft auf Körper B ausübt, übt B eine gleich große, entgegengesetzte Kraft auf A aus. Wenn Sie auf den Boden treten, tritt der Boden gleichwertig zurück. Im Gelenk: Wenn Muskeln auf den Knochen ziehen, zieht der Knochen gleichwertig auf den Muskel. Diese Reaktionskräfte bestimmen die Belastung von Gelenken und Bandstrukturen.
+Die Kinematik beschreibt Bewegung rein geometrisch, ohne die Ursachen zu hinterfragen. Grundgrößen sind Ort (s), Zeit (t), Geschwindigkeit (v) und Beschleunigung (a).
 
-Die Kinematik beschreibt Bewegung ohne Berücksichtigung von Kräften. Bei gleichförmiger Bewegung gilt v = s/t (Geschwindigkeit = Weg/Zeit). Bei gleichmäßiger Beschleunigung a: v(t) = v₀ + a·t und s(t) = s₀ + v₀·t + ½·a·t². Der freie Fall ist gleichmäßig beschleunigte Bewegung mit der Erdbeschleunigung g = 9,81 m/s²: v(t) = g·t und h(t) = ½·g·t². Beispiel: Ein Objekt fällt 5 Sekunden — erreicht v = 9,81 × 5 = 49 m/s und fällt h = ½ × 9,81 × 25 = 123 m.
+**Gleichförmige Bewegung:** Bei konstanter Geschwindigkeit gilt s = v · t. Der Weg ist proportional zur Zeit. Im v-t-Diagramm ist das eine Horizontale; die Fläche unter der Kurve ergibt den zurückgelegten Weg.
 
-Die Kreisbewegung ist eine besondere Form der Beschleunigung: Auch bei konstanter Bahngeschwindigkeit v ändert sich ständig die Richtung, was eine Beschleunigung Richtung Kreismittelpunkt erfordert — die Zentripetalbeschleunigung a_z = v²/r. Die zugehörige Zentripetalkraft F_z = m·v²/r = m·ω²·r. In der Medizin: Bei schnellen Kopfbewegungen wirkt Zentripetalkraft auf das Gehirn; Zentrifugen trennen Blutbestandteile durch die Zentrifugalkraft (Scheinkraft im rotierenden Bezugssystem).`,
+**Gleichmäßig beschleunigte Bewegung:** Wenn eine konstante Kraft auf einen Körper wirkt, gilt a = const. Die Geschwindigkeit wächst linear: v(t) = v₀ + a · t. Der Weg folgt einer Parabelgleichung: s(t) = s₀ + v₀·t + ½·a·t². Der freie Fall ist der Spezialfall mit a = g ≈ 9,81 m/s² (Erdbeschleunigung). Ein Körper, der aus der Ruhe fällt, erreicht nach 1 s eine Geschwindigkeit von 9,81 m/s und hat 4,9 m zurückgelegt.
+
+**Vektorielle Darstellung:** Geschwindigkeit und Beschleunigung sind Vektoren — sie haben Betrag (Skalar) und Richtung. Bei schiefer Wurf-Bewegung zerlegt man die Bewegung in horizontale (v_x = const) und vertikale Komponente (v_y = v₀y − g·t). Die Bahnkurve ist eine Parabel.
+
+**Relativbewegung:** Geschwindigkeiten addieren sich vektoriell. Wenn ein Läufer mit 4 m/s in einem Zug fährt, der selbst 30 m/s schnell fährt, ist seine Geschwindigkeit relativ zur Erde 34 m/s (in Fahrtrichtung) oder 26 m/s (entgegen). Dieses Superpositionsprinzip gilt für alle Bewegungsgrößen.
+
+## Das erste Newtonsche Gesetz — Trägheitsgesetz
+
+Ein Körper verharrt im Zustand der Ruhe oder der gleichförmigen geradlinigen Bewegung, solange keine resultierende äußere Kraft auf ihn wirkt. Trägheit (lat. inertia) bedeutet Widerstandsfähigkeit gegen Zustandsänderung. Die Trägheit ist proportional zur Masse: Ein 80-kg-Mensch hat die doppelte Trägheit eines 40-kg-Kindes.
+
+Im klinischen Kontext ist das Trägheitsgesetz bei Dezelerationstraumen entscheidend: Bei einem Frontalaufprall bremst das Fahrzeug schlagartig ab, aber Organe (Leber, Milz, Aorta) bewegen sich aufgrund ihrer Trägheit weiter vorwärts. Dabei können Gefäßstiele abreißen — besonders die Aorta descendens ist anfällig für Transektionen, weil sie an der Wirbelsäule fixiert ist, während der Aortenbogen sich weiter vorwärts bewegt.
+
+## Das zweite Newtonsche Gesetz — Aktionsprinzip
+
+F = m · a ist das wichtigste Gesetz der Mechanik. Eine Kraft von 1 Newton (N = kg·m/s²) beschleunigt 1 kg um 1 m/s². Das Gesetz ist vektoriell: Die Beschleunigung zeigt in dieselbe Richtung wie die resultierende Kraft.
+
+Aus F = m·a folgt direkt: Größere Masse → geringere Beschleunigung bei gleicher Kraft. Das erklärt, warum ein schwerer Patient schwieriger zu reanimieren ist — bei identischer Herzmassagekraft ist die erzeugte Thoraxkompression (Beschleunigung des Sternums) geringer. Die optimale Drucktiefe erfordert daher eine angepasste Kraft.
+
+**Superpositionsprinzip:** Mehrere Kräfte überlagern sich zur Gesamtkraft F_res = F₁ + F₂ + ... (Vektorsumme). Im Gleichgewicht ist F_res = 0. Das Auflösen dieser Vektorgleichungen (Komponentenform: F_x = 0, F_y = 0) ist das Werkzeug der Statik.
+
+## Das dritte Newtonsche Gesetz — Reaktionsprinzip (actio = reactio)
+
+Wenn Körper A eine Kraft auf Körper B ausübt, übt Körper B gleichzeitig eine gleich große, aber entgegengesetzte Kraft auf Körper A aus. Beide Kräfte bilden ein Aktions-Reaktions-Paar, wirken aber auf verschiedene Körper — sie heben sich daher nicht auf!
+
+Beim Laufen: Der Fuß drückt die Erde nach hinten-unten (Aktionskraft). Die Erde drückt den Fuß nach vorne-oben (Reaktionskraft = Bodenreaktionskraft). Nur diese Reaktionskraft beschleunigt den Menschen vorwärts. Bei der Injektion: Die Spritze drückt auf die Haut (Aktionskraft), die Haut drückt auf die Spritze zurück (Reaktionskraft) — der Arzt muss diese überwinden.
+
+## Freie und erzwungene Schwingungen
+
+Ein Pendel schwingt mit seiner Eigenfrequenz f₀ = (1/2π)·√(g/l). Resonanz tritt auf, wenn die Anregungsfrequenz gleich der Eigenfrequenz ist — dann wächst die Amplitude dramatisch. Im Körper: Knochen und Gelenke haben mechanische Eigenfrequenzen. Vibrationstraining nutzt Resonanzeffekte zur Muskelstimulation.`,
       lernziele: [
-        'Die drei Newtonschen Gesetze formulieren und Beispiele nennen',
-        'Kinematische Grundgleichungen für gleichförmige und gleichmäßig beschleunigte Bewegung anwenden',
-        'Freier Fall: Geschwindigkeit und Fallhöhe berechnen',
-        'Kreisbewegung und Zentripetalkraft verstehen',
+        'Die drei Newtonschen Gesetze korrekt formulieren und auf biologische Beispiele anwenden',
+        'Gleichförmige und gleichmäßig beschleunigte Bewegungen mathematisch beschreiben (v(t), s(t))',
+        'Den Unterschied zwischen Kinematik und Dynamik erklären',
+        'Vektorielle Addition von Kräften und Geschwindigkeiten durchführen',
+        'Klinische Beispiele für Trägheit und Dezelerationstrauma benennen',
       ],
       sections: [
         {
+          heading: 'Kinematik: Gleichförmige und beschleunigte Bewegung',
+          text: 'Die Kinematik beschreibt Bewegung ohne Rücksicht auf ihre Ursachen. Bei gleichförmiger Bewegung gilt s = v·t (linearer Weg-Zeit-Zusammenhang). Bei gleichmäßiger Beschleunigung gilt v(t) = v₀ + a·t und s(t) = v₀·t + ½·a·t². Der freie Fall ist der wichtigste Sonderfall mit a = g = 9,81 m/s². Alle Bewegungsgrößen (v, a) sind Vektoren — bei schiefer Bewegung werden sie komponentenweise behandelt.',
+          merksatz: 'v = v₀ + at — Geschwindigkeit wächst linear mit der Zeit bei konstanter Beschleunigung. Fläche unter v(t)-Kurve = zurückgelegter Weg.',
+        },
+        {
           heading: 'Die drei Newtonschen Gesetze',
-          text: '1. Trägheitsgesetz: Kein Einfluss → kein Richtungswechsel. Trägheit = Widerstand gegen Zustandsänderung (Maß: Masse). 2. Kraftgesetz: F = m·a — Kraft verursacht Beschleunigung proportional zur Masse. Einheit: Newton (N = kg·m/s²). 3. Actio=reactio: Kräfte treten immer paarweise auf — gleich groß, entgegengesetzt. Im klinischen Kontext: Dezelerationstrauma (1. Gesetz), Knochenbruchkraft (2. Gesetz), Gelenkreaktionskräfte (3. Gesetz).',
-          merksatz: 'Newton 2: F = m·a — KRAFT macht MASSE beschleunigen',
+          text: '1. Trägheitsgesetz: Kein Nettokraft → keine Zustandsänderung. 2. Aktionsprinzip: F = m·a — Kraft bestimmt Beschleunigung proportional zur Masse. 3. Reaktionsprinzip: actio = reactio — Kräfte treten immer paarweise auf, wirken auf verschiedene Körper. Diese drei Gesetze bilden das vollständige Framework der newtonschen Mechanik.',
+          merksatz: 'actio = reactio: Gleich groß, entgegengesetzt, aber auf verschiedene Körper wirkend — daher heben sie sich NICHT auf!',
         },
         {
-          heading: 'Kinematik — Gleichungen der Bewegung',
-          text: 'Gleichförmige Bewegung (a=0): s = v·t. Gleichmäßig beschleunigt: v(t) = v₀ + a·t; s(t) = v₀t + ½at²; v² = v₀² + 2·a·s. Freier Fall: g = 9,81 m/s² (Erdbeschleunigung), a = g nach unten. Wichtige Zahlenwerte: nach 1 s → v = 9,81 m/s, h = 4,9 m; nach 2 s → v = 19,6 m/s, h = 19,6 m. Der quadratische Term ½at² zeigt: Falltiefe wächst quadratisch mit der Zeit.',
-        },
-        {
-          heading: 'Kreisbewegung und Zentripetalkraft',
-          text: 'Winkelgeschwindigkeit ω = 2π/T = 2πf [rad/s]. Bahngeschwindigkeit v = ω·r. Zentripetalbeschleunigung a_z = v²/r = ω²·r — immer zum Kreismittelpunkt gerichtet. Zentripetalkraft F_z = m·v²/r — diese Kraft hält den Körper auf der Kreisbahn. In Laborzentrifugen werden bis zu 100.000 g (Vielfaches der Erdbeschleunigung) erreicht, um Zellbestandteile zu trennen. Der menschliche Körper kann kurzfristig etwa 5–9 g tolerieren.',
+          heading: 'Klinische Anwendung: Dezelerationstrauma',
+          text: 'Bei plötzlichem Abbremsen (Autounfall, Sturz) wirkt die Trägheit: Organe setzen ihre Bewegung fort, während das Skelett aufgehalten wird. Besonders gefährdet sind: (1) Aorta descendens bei Aortenbogenverankerung, (2) Leber- und Milzstiele, (3) Gehirn (Contrecoup-Verletzung). Das zweite Newtonsche Gesetz erklärt, warum Körperschutz (Airbag, Helm) die Bremsstrecke verlängert und damit die Kraft F = m·a reduziert.',
+          merksatz: 'Airbag-Prinzip: Längere Bremsstrecke → geringere Verzögerung a → geringere Kraft F = m·a auf den Körper.',
         },
       ],
       merksätze: [
-        'F = m·a: Kraft in Newton, Masse in kg, Beschleunigung in m/s²',
-        'Freier Fall: v = g·t, h = ½·g·t² mit g = 9,81 m/s²',
-        'Actio = reactio: Kräfte treten immer als Paare auf, gleich groß, entgegengesetzt',
+        'Trägheitsgesetz: Kein F_res → kein Δv. Alles bleibt so, wie es ist.',
+        'F = m·a: Kraft ist Masse mal Beschleunigung. 1 N = 1 kg·m/s².',
+        'actio = reactio: Immer gleich groß, entgegengesetzt, verschiedene Körper.',
+        'Freier Fall: g = 9,81 m/s² ≈ 10 m/s². Nach 1 s: v = 10 m/s, s = 5 m.',
+        'v(t) = v₀ + a·t — lineare Geschwindigkeitszunahme bei konstanter Beschleunigung.',
+        's(t) = v₀·t + ½·a·t² — parabolischer Weg bei gleichmäßiger Beschleunigung.',
+        'Vektoraddition: Kräfte und Geschwindigkeiten addieren sich komponentenweise.',
+        'Dezelerationstrauma: Trägheit der Organe führt zu Gefäßabriss bei plötzlichem Stopp.',
+        'Superpositionsprinzip: F_res = ΣFᵢ (Vektorsumme aller Einzelkräfte).',
+        'Gleichgewicht: F_res = 0 → ΣFₓ = 0 und ΣFᵧ = 0 (für jede Komponente separat).',
       ],
       altfrage: {
-        question: 'Ein Rettungshubschrauber bringt in 8 Sekunden aus dem Stand eine Geschwindigkeit von 40 m/s auf. Welche mittlere Kraft wirkt auf einen Passagier mit 80 kg Masse?',
-        answer: 'Beschleunigung: a = Δv/Δt = 40 m/s / 8 s = 5 m/s². Kraft: F = m·a = 80 kg × 5 m/s² = 400 N. Zusätzlich wirkt das Eigengewicht FG = m·g = 80 × 9,81 = 784,8 N nach unten. Die Gesamtkraft in Flugrichtung beträgt 400 N; das Verhältnis zur Gewichtskraft ist 400/784,8 ≈ 0,51 g — also etwa eine halbe Erdbeschleunigung zusätzlich.',
+        question: 'Erläutern Sie das zweite Newtonsche Gesetz (F = m·a) und zeigen Sie anhand von drei verschiedenen klinischen Beispielen, wie dieses Gesetz in der Medizin relevant ist.',
+        answer: `Das zweite Newtonsche Gesetz besagt, dass die auf einen Körper wirkende Nettokraft gleich dem Produkt aus seiner Masse und der resultierenden Beschleunigung ist: F = m·a. Es handelt sich um eine Vektorgleichung — Kraft und Beschleunigung zeigen in dieselbe Richtung. Die Einheit der Kraft ist das Newton (N = kg·m/s²).
+
+Klinisches Beispiel 1 — Herzreanimation (CPR): Beim Herzdruckmassage muss der Helfer eine ausreichende Kraft aufwenden, um das Sternum um 5–6 cm zu komprimieren. Da F = m·a gilt und der Thorax eine bestimmte Masse und Federsteifigkeit hat, muss die Druckkraft entsprechend angepasst werden. Bei adipösen Patienten ist mehr Kraft nötig, um dieselbe Kompressionstiefe zu erzielen.
+
+Klinisches Beispiel 2 — Knochenbruch: Knochen brechen, wenn die einwirkende Kraft eine materialspezifische Bruchfestigkeit überschreitet. Die Kraft beim Aufprall (Sturz) ergibt sich aus F = m·a, wobei a die Verzögerung beim Aufprall ist. Ein Sturz auf hartem Boden (kurze Bremsstrecke, hohe Verzögerung) erzeugt eine größere Kraft als ein Sturz auf weichem Untergrund (längere Bremsstrecke, geringere Verzögerung). Schutzausrüstung (Helmpolster, Airbag) verlängert die Bremsstrecke gezielt, um a und damit F zu reduzieren.
+
+Klinisches Beispiel 3 — Injektion und Venenpunktion: Um eine Kanüle in eine Vene einzuführen, muss der Arzt eine Kraft aufwenden, die den Gewebewiderstand überwindet. F = m·a beschreibt die Beschleunigung der Kanüle durch das Gewebe. Zu wenig Kraft führt dazu, dass die Kanüle nicht eindringt; zu viel Kraft bewirkt ein Durchstechen der Gegenwand. Die optimale Technik nutzt eine kontrollierte, mittelgroße Beschleunigung.`,
       },
-      klinischerBezug: 'Dezelerationstraumen entstehen, wenn der Körper durch einen plötzlichen Stopp abgebremst wird (Autounfall, Sturz). Innere Organe bewegen sich durch ihre Trägheit weiter und können sich von Befestigungsstrukturen abreißen: Aortenruptur an der Aorta descendens (fixiert am Lig. arteriosum), Leberruptur, Milzruptur. Die wirkende Kraft hängt von Masse und Verzögerung ab (F = m·a). Airbags und Sicherheitsgurte verlängern die Bremszeit und reduzieren so die Kraft nach F = m·Δv/Δt.',
+      klinischerBezug: 'Das Trägheitsgesetz erklärt Dezelerationstraumen bei Verkehrsunfällen: Organe (Aorta, Leber, Gehirn) setzen ihre Bewegung nach plötzlichem Fahrzeugstopp fort und können abreißen oder kontusionieren. Das zweite Newtonsche Gesetz ist direkt bei der Herzdruckmassage relevant — die Kompressionstiefe von 5–6 cm erfordert eine Kraft von ca. 400–500 N auf den Thorax. Beim Einführen von Kathetern und Kanülen muss die aufgebrachte Kraft an den Gewebewiderstand angepasst werden, um eine präzise, kontrollierte Penetration zu gewährleisten.',
       selfTest: [
         {
-          question: 'Ein Körper der Masse 5 kg erfährt eine Nettokraft von 20 N. Wie groß ist seine Beschleunigung?',
-          options: ['0,25 m/s²', '4 m/s²', '25 m/s²', '100 m/s²', '15 m/s²'],
-          correctIndex: 1,
-          explanation: 'Aus F = m·a folgt a = F/m = 20 N / 5 kg = 4 m/s². Newton (N) = kg·m/s², also N/kg = m/s². Eine Nettokraft von 20 N beschleunigt 5 kg mit 4 m/s² — nach 1 Sekunde hat der Körper eine Geschwindigkeit von 4 m/s erreicht.',
-          hints: ['Forme F = m·a nach a um: a = F/m.', 'Einheitenkontrolle: N/kg = kg·m/s²/kg = m/s².'],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: 'Ein Stein wird fallen gelassen. Nach wie vielen Sekunden erreicht er eine Geschwindigkeit von 29,4 m/s? (g = 9,81 m/s²)',
-          options: ['1 s', '2 s', '3 s', '4 s', '5 s'],
-          correctIndex: 2,
-          explanation: 'v = g·t → t = v/g = 29,4 m/s / 9,81 m/s² = 3 s. Merkhilfe: Nach 1 s hat ein fallender Körper ca. 10 m/s (entspricht g), nach 3 s ca. 30 m/s. In dieser Zeit fällt er h = ½·g·t² = ½ × 9,81 × 9 ≈ 44,1 m.',
-          hints: ['Freier Fall: v = g·t. Forme nach t um: t = v/g.', 'g ≈ 10 m/s² (Näherung) → t ≈ 29,4/10 ≈ 3 s.'],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: 'Welches Newtonsche Gesetz erklärt, warum bei einem Autounfall durch Verzögerung innere Organe Schaden nehmen können?',
+          question: 'Ein Körper der Masse 4 kg wird mit einer Nettokraft von 20 N beschleunigt. Welche Beschleunigung erfährt er?',
           options: [
-            'Erstes Gesetz (Trägheit)',
-            'Zweites Gesetz (F=ma)',
-            'Drittes Gesetz (actio=reactio)',
-            'Alle drei gemeinsam',
-            'Keines — das ist ein biologisches Phänomen',
+            'A) 1 m/s²',
+            'B) 2 m/s²',
+            'C) 5 m/s²',
+            'D) 10 m/s²',
+            'E) 80 m/s²',
           ],
-          correctIndex: 0,
-          explanation: 'Das erste Newtonsche Gesetz (Trägheitsgesetz) erklärt das Dezelerationstrauma: Wenn das Auto abrupt stoppt, bewegen sich die Organe durch ihre Trägheit weiter in Fahrtrichtung — und reißen von ihren Befestigungsstrukturen ab. Trägheit ist der Widerstand gegen Änderungen des Bewegungszustands.',
-          hints: ['Welches Gesetz beschreibt, dass Körper ihren Bewegungszustand behalten wollen?', 'Organe wissen nicht, dass das Auto stoppt — was passiert mit ihnen?'],
+          correctIndex: 2,
+          explanation: 'Nach dem zweiten Newtonschen Gesetz gilt F = m·a, umgestellt a = F/m. Mit F = 20 N und m = 4 kg ergibt sich a = 20/4 = 5 m/s². Einheitencheck: N/kg = (kg·m/s²)/kg = m/s² — korrekt. Option A wäre a = F/m = 20/20 (falsche Masse), Option D würde F/m = 10 nur bei m = 2 kg gelten. Merke: Bei F = m·a immer zuerst die gesuchte Größe freistellen.',
+          hints: [
+            'Stelle F = m·a nach der gesuchten Größe a um: a = F/m.',
+            'Setze F = 20 N und m = 4 kg ein und dividiere.',
+          ],
           difficulty: 1,
           tags: [],
         },
         {
-          question: 'Ein Rennfahrer fährt mit v = 20 m/s auf einer Kreisbahn mit Radius r = 50 m. Wie groß ist die Zentripetalbeschleunigung?',
-          options: ['0,4 m/s²', '4 m/s²', '8 m/s²', '400 m/s²', '2 m/s²'],
+          question: 'Ein Stein fällt aus der Ruhe (v₀ = 0) frei nach unten. Nach 3 Sekunden beträgt seine Geschwindigkeit (g = 10 m/s²):',
+          options: [
+            'A) 3 m/s',
+            'B) 10 m/s',
+            'C) 15 m/s',
+            'D) 30 m/s',
+            'E) 45 m/s',
+          ],
+          correctIndex: 3,
+          explanation: 'Beim freien Fall gilt v(t) = v₀ + g·t. Mit v₀ = 0 und g = 10 m/s²: v(3 s) = 0 + 10·3 = 30 m/s. Die zurückgelegte Strecke wäre s = ½·g·t² = ½·10·9 = 45 m. Option C (15 m/s) wäre das Ergebnis nach 1,5 s. Option E (45 m/s) entspricht dem Weg in Metern, nicht der Geschwindigkeit. Die Geschwindigkeit beim freien Fall wächst linear mit der Zeit.',
+          hints: [
+            'Freier Fall: v(t) = g·t (da v₀ = 0).',
+            'Multipliziere g = 10 m/s² mit t = 3 s.',
+          ],
+          difficulty: 1,
+          tags: [],
+        },
+        {
+          question: 'Welche Aussage zum dritten Newtonschen Gesetz (actio = reactio) ist KORREKT?',
+          options: [
+            'A) Aktions- und Reaktionskraft wirken auf denselben Körper und heben sich auf.',
+            'B) Die Reaktionskraft ist immer kleiner als die Aktionskraft.',
+            'C) Aktions- und Reaktionskraft wirken auf verschiedene Körper und heben sich nicht auf.',
+            'D) Das Gesetz gilt nur für ruhende Körper.',
+            'E) Aktionskraft und Reaktionskraft wirken in dieselbe Richtung.',
+          ],
           correctIndex: 2,
-          explanation: 'Zentripetalbeschleunigung: a_z = v²/r = (20 m/s)² / 50 m = 400/50 = 8 m/s². Dies entspricht etwa 0,82 g. Die Zentripetalkraft auf einen 70 kg-Fahrer beträgt F = m·a = 70 × 8 = 560 N.',
-          hints: ['Formel: a_z = v²/r. Beachte: v wird quadriert!', '(20)² = 400; 400/50 = 8.'],
+          explanation: 'Das dritte Newtonsche Gesetz besagt: Übt Körper A eine Kraft auf Körper B aus (Aktionskraft), so übt Körper B gleichzeitig eine gleich große, aber entgegengesetzte Kraft auf Körper A aus (Reaktionskraft). Entscheidend: Beide Kräfte wirken auf VERSCHIEDENE Körper — deshalb heben sie sich nicht auf und können keine resultierende Kraft auf ein System erzeugen. Anwendung: Beim Laufen drückt der Fuß die Erde nach hinten; die Erde drückt den Fuß nach vorne (Bodenreaktionskraft = Vortrieb). Option A ist falsch — gleiche Körper würden Aufhebung bedeuten.',
+          hints: [
+            'Aktions- und Reaktionskraft greifen immer an zwei verschiedenen Körpern an.',
+            'Würden sie am selben Körper angreifen, würden sie sich aufheben — das ist aber nicht der Fall.',
+          ],
           difficulty: 2,
           tags: [],
         },
         {
-          question: 'Actio und Reactio — welche Aussage ist korrekt?',
+          question: 'Ein Auto fährt mit v = 108 km/h und bremst auf einem Weg von 50 m auf v = 0 ab. Welche mittlere Verzögerung (Betrag der Beschleunigung) wirkt auf die Insassen?',
           options: [
-            'Actio und Reactio heben sich gegenseitig auf, da sie gleich groß sind',
-            'Actio und Reactio wirken immer auf verschiedene Körper',
-            'Actio ist immer größer als Reactio',
-            'Actio und Reactio wirken immer in dieselbe Richtung',
-            'Actio=Reactio gilt nur bei Körpern in Ruhe',
+            'A) 2,16 m/s²',
+            'B) 5,4 m/s²',
+            'C) 9 m/s²',
+            'D) 18 m/s²',
+            'E) 27 m/s²',
+          ],
+          correctIndex: 2,
+          explanation: '108 km/h = 30 m/s. Nutze v² = v₀² − 2·a·s (mit Endgeschwindigkeit v = 0): 0 = 30² − 2·a·50 → 2·a·50 = 900 → a = 900/100 = 9 m/s². Das entspricht fast genau einer g-Kraft (g ≈ 9,81 m/s²). Bei solchen Verzögerungen wirken enorme Kräfte auf den Körper: F = m·a = 80 kg · 9 m/s² = 720 N. Ohne Sicherheitsgurt würde ein 80-kg-Mensch mit dieser Kraft gegen das Lenkrad gedrückt — erklärt die schweren Thoraxtraumen.',
+          hints: [
+            'Erst Einheitenumrechnung: 108 km/h = 108/3,6 = 30 m/s.',
+            'Nutze die kinematische Formel v² = v₀² − 2·a·s und löse nach a auf.',
+          ],
+          difficulty: 3,
+          tags: [],
+        },
+        {
+          question: 'Was beschreibt die Kinematik im Unterschied zur Dynamik?',
+          options: [
+            'A) Kinematik untersucht die Ursachen der Bewegung (Kräfte).',
+            'B) Kinematik beschreibt Bewegung rein geometrisch ohne Betrachtung der Kräfte.',
+            'C) Kinematik gilt nur für rotierende Körper.',
+            'D) Kinematik ist ein Teilgebiet der Thermodynamik.',
+            'E) Kinematik beschäftigt sich ausschließlich mit der Gleichgewichtslehre.',
           ],
           correctIndex: 1,
-          explanation: 'Actio und Reactio sind gleich groß und entgegengesetzt — aber sie wirken auf verschiedene Körper. Deshalb heben sie sich nicht auf (das würde Kräfte am selben Körper erfordern). Beispiel: Erde zieht Apfel nach unten (actio), Apfel zieht Erde nach oben (reactio) — beide Kräfte gleich groß, aber Erde ist zu schwer, um merklich beschleunigt zu werden.',
-          hints: ['Das Schlüsselwort ist: auf welchem Körper wirken die Kräfte?', 'Wenn A und B sich gegenseitig anziehen — wo wirkt jede Kraft?'],
+          explanation: 'Kinematik (gr. kinema = Bewegung) beschreibt Bewegung rein durch Größen wie Ort, Geschwindigkeit und Beschleunigung — ohne die verursachenden Kräfte zu hinterfragen. Die Dynamik (gr. dynamis = Kraft) hingegen verknüpft Bewegung mit Kräften über F = m·a. Die Statik ist der Sonderfall der Dynamik, bei dem alle Kräfte im Gleichgewicht sind (F_res = 0). Kinematische Größen: s(t), v(t), a(t). Dynamische Größen: F, m, Impuls p, Energie E.',
+          hints: [
+            'Das Wort "Kinematik" kommt vom griechischen "kinema" = Bewegung — reine Bewegungsbeschreibung.',
+            'Die Dynamik fügt die Ursache (Kraft) hinzu — Kinematik beschreibt nur das "Was", nicht das "Warum".',
+          ],
+          difficulty: 1,
+          tags: [],
+        },
+        {
+          question: 'Eine Krankenschwester schiebt ein Krankenbett (Masse 80 kg) mit einer horizontalen Kraft von 160 N über einen reibungsfreien Boden. Welche Beschleunigung erreicht das Bett?',
+          options: [
+            'A) 0,5 m/s²',
+            'B) 1,0 m/s²',
+            'C) 2,0 m/s²',
+            'D) 4,0 m/s²',
+            'E) 12,8 m/s²',
+          ],
+          correctIndex: 2,
+          explanation: 'F = m·a → a = F/m = 160 N / 80 kg = 2,0 m/s². Ohne Reibung ist die Nettokraft gleich der aufgebrachten Kraft. In der Praxis gibt es immer Reibung (Rollreibung der Räder), die die tatsächliche Beschleunigung reduziert. Die Reibungskraft F_R = μ·F_N = μ·m·g müsste von der Antriebskraft subtrahiert werden. Für ein Krankenhausbett mit guten Rädern liegt μ_Roll ≈ 0,01–0,02, also F_R ≈ 8–16 N — der Effekt ist klein, aber vorhanden.',
+          hints: [
+            'Ohne Reibung ist die Nettokraft gleich der aufgebrachten Kraft: F_netto = F = 160 N.',
+            'a = F/m — teile die Kraft durch die Masse.',
+          ],
+          difficulty: 1,
+          tags: [],
+        },
+        {
+          question: 'Welches kinematische Merkmal unterscheidet gleichförmige von gleichmäßig beschleunigter Bewegung im v-t-Diagramm?',
+          options: [
+            'A) Gleichförmige Bewegung zeigt eine Parabel, beschleunigte Bewegung eine Gerade.',
+            'B) Gleichförmige Bewegung zeigt eine Horizontale (v = const), beschleunigte Bewegung eine Gerade mit Steigung.',
+            'C) Beide Bewegungen zeigen identische v-t-Kurven.',
+            'D) Beschleunigte Bewegung zeigt eine Horizontale, gleichförmige eine Parabel.',
+            'E) Im v-t-Diagramm lässt sich kein Unterschied erkennen.',
+          ],
+          correctIndex: 1,
+          explanation: 'Im v-t-Diagramm gilt: Gleichförmige Bewegung (a = 0, v = const) erscheint als horizontale Gerade. Gleichmäßig beschleunigte Bewegung (a = const ≠ 0) zeigt eine geneigte Gerade mit Steigung a (Steigung = Beschleunigung). Die Fläche unter der v-t-Kurve ergibt in beiden Fällen den zurückgelegten Weg. Im s-t-Diagramm (Ort-Zeit) ist gleichförmige Bewegung eine Gerade, beschleunigte Bewegung eine Parabel. Diese Diagramminterpretation ist grundlegend für die Auswertung von Bewegungsdaten.',
+          hints: [
+            'Die Steigung der v-t-Kurve entspricht der Beschleunigung: Δv/Δt = a.',
+            'Bei a = 0 ist die Steigung null → horizontale Linie. Bei a ≠ 0 steigt oder fällt die Gerade.',
+          ],
           difficulty: 2,
+          tags: [],
+        },
+        {
+          question: 'Beim Venenpunktionstraining wird die Kanüle mit v₀ = 0 durch eine gleichförmige Beschleunigung von a = 0,4 m/s² in die Vene geführt. Wie lange dauert es, bis sie eine Tiefe von 2 cm (0,02 m) erreicht?',
+          options: [
+            'A) 0,05 s',
+            'B) 0,1 s',
+            'C) 0,16 s',
+            'D) 0,32 s',
+            'E) 1,0 s',
+          ],
+          correctIndex: 3,
+          explanation: 's = ½·a·t² (da v₀ = 0). Umgestellt: t = √(2s/a) = √(2·0,02/0,4) = √(0,04/0,4) = √0,1 ≈ 0,316 s ≈ 0,32 s. Die Endgeschwindigkeit wäre v = a·t = 0,4·0,316 ≈ 0,13 m/s = 13 cm/s — eine realistische Einstechgeschwindigkeit. Zu schnelles Einstechen (hohe a) führt zu Durchstechen der Gegenwand; zu langsames Einstechen ermöglicht dem Gewebe, auszuweichen. Diese kinematischen Überlegungen helfen, optimale Punktionstechniken zu entwickeln.',
+          hints: [
+            'Bei v₀ = 0 gilt s = ½·a·t². Stelle nach t um: t = √(2s/a).',
+            'Einheitencheck: √(m / (m/s²)) = √(s²) = s — korrekt.',
+          ],
+          difficulty: 3,
           tags: [],
         },
       ],
@@ -115,99 +246,206 @@ Die Kreisbewegung ist eine besondere Form der Beschleunigung: Auch bei konstante
     {
       id: 'ph-2-02',
       title: 'Erhaltungssätze — Energie, Impuls, Drehimpuls',
-      content: `Die Erhaltungssätze gehören zu den fundamentalsten Prinzipien der Physik. Sie besagen, dass bestimmte Größen — Energie, Impuls, Drehimpuls — in abgeschlossenen Systemen konstant bleiben, auch wenn sich die Erscheinungsform ändert. Diese Gesetze sind keine willkürlichen Annahmen, sondern folgen mathematisch aus den Symmetrien der Natur: Energieerhaltung aus der Zeitinvarianz der Physikgesetze, Impulserhaltung aus der Raumtranslationssymmetrie, Drehimpulserhaltung aus der Rotationssymmetrie.
+      content: `## Erhaltungssätze — Energie, Impuls, Drehimpuls
 
-Der Energieerhaltungssatz ist der mächtigste dieser Sätze: Die Gesamtenergie eines abgeschlossenen Systems bleibt konstant. Energie kann weder erzeugt noch vernichtet, nur umgewandelt werden. Die kinetische Energie E_kin = ½mv² ist die Energie der Bewegung. Die potenzielle Energie E_pot = mgh ist die Energie der Lage (gespeicherte Energie durch Höhe). Im freien Fall nimmt E_pot ab, während E_kin zunimmt — die Summe bleibt konstant: ½mv² + mgh = const. Auf der Achterbahn wird Höhe in Geschwindigkeit umgewandelt und umgekehrt; ohne Reibung wäre die Bahn ewig in Betrieb.
+Erhaltungssätze gehören zu den tiefsten Prinzipien der Physik. Sie besagen, dass bestimmte physikalische Größen in einem abgeschlossenen System konstant bleiben — unabhängig von den internen Vorgängen. Die drei wichtigsten Erhaltungssätze der Mechanik sind: Energieerhaltung, Impulserhaltung und Drehimpulserhaltung. Sie folgen aus fundamentalen Symmetrieprinzipien (Noether-Theorem): Energieerhaltung aus Zeitsymmetrie, Impulserhaltung aus Translationssymmetrie, Drehimpulserhaltung aus Rotationssymmetrie.
 
-Im menschlichen Körper gilt ebenfalls Energieerhaltung: Chemische Energie der Nahrung (ATP) wird in mechanische Arbeit (Muskelkontraktion), Wärme und elektrische Energie (Nervensignale) umgewandelt. Der Wirkungsgrad menschlicher Muskeln liegt bei etwa 25–30% — der Rest wird als Wärme abgegeben, was die Körpertemperatur hält.
+## Impuls und Impulserhaltung
 
-Arbeit ist das Skalarprodukt aus Kraft und Weg: W = F·s·cos(α), wobei α der Winkel zwischen Kraft und Bewegungsrichtung ist. Eine senkrecht zur Bewegung stehende Kraft (α=90°) verrichtet keine Arbeit — die Normalkraft des Bodens bei horizontaler Bewegung, die Zentripetalkraft bei Kreisbewegung. Leistung P = W/t = F·v ist die Arbeit pro Zeit. Ein Mensch kann kurzfristig etwa 500–700 W Leistung erbringen; im Ausdauerbereich sind es 100–300 W.
+Der Impuls p = m · v ist das Produkt aus Masse und Geschwindigkeit (Einheit: kg·m/s = N·s). Impuls ist ein Vektor — Betrag und Richtung sind entscheidend. Der Kraftstoß J = F · Δt = Δp beschreibt die Änderung des Impulses durch eine Kraft über eine Zeitspanne. Daraus folgt das zweite Newtonsche Gesetz in allgemeinerer Form: F = dp/dt.
 
-Der Impuls p = m·v ist das Produkt aus Masse und Geschwindigkeit. Im Impulssatz gilt: Für abgeschlossene Systeme bleibt der Gesamtimpuls erhalten. Bei einem elastischen Stoß werden sowohl Energie als auch Impuls erhalten — kein Energieverlust in Wärme oder Verformung. Bei einem vollständig unelastischen Stoß kleben die Körper zusammen; Impuls wird erhalten, aber Energie geht in Verformung und Wärme verloren. Zwischen diesen Extremen liegen reale Stöße.
+Impulserhaltungssatz: In einem abgeschlossenen System (keine äußeren Kräfte) bleibt der Gesamtimpuls konstant: p_ges = Σmᵢ·vᵢ = const. Das gilt unabhängig davon, welche inneren Kräfte wirken (Explosionen, Kollisionen, chemische Reaktionen).
 
-Praktisches Beispiel: Zwei Schlitten, m₁ = 60 kg mit v₁ = 4 m/s und m₂ = 40 kg in Ruhe, stoßen unelastisch zusammen. Impulserhaltung: m₁v₁ = (m₁+m₂)v'. Somit: 60×4 = 100×v' → v' = 2,4 m/s. Anfangsenergie: ½×60×16 = 480 J. Endenergie: ½×100×5,76 = 288 J. Verlust: 192 J — geht in Wärme und Verformung.
+Anwendungen: Bei einem elastischen Stoß (Billardkugeln) sind sowohl Impuls als auch kinetische Energie erhalten. Bei einem inelastischen Stoß (Knetmasse-Kollision) ist nur der Impuls erhalten — kinetische Energie wird in Wärme, Verformungsenergie umgewandelt. Beim vollkommen unelastischen Stoß vereinigen sich beide Körper: m₁·v₁ + m₂·v₂ = (m₁+m₂)·v'. In der Medizin: Ballistisches Trauma — ein Projektil überträgt seinen Impuls auf das Gewebe: F·Δt = Δp. Hohle Projektile (Deformationsgeschosse) verlängern den Kontaktzeitraum und erhöhen die Gewebedeformation.
 
-Der Drehimpuls L = I·ω (Trägheitsmoment × Winkelgeschwindigkeit) bleibt in abgeschlossenen Systemen erhalten. Ein Eiskunstläufer dreht langsam mit ausgestreckten Armen; zieht er die Arme an den Körper, wird I kleiner, also muss ω größer werden — er dreht schneller. Dieses Prinzip gilt auch für den Herzmuskel, der sich während der Systole verformt und dabei Drehimpuls überträgt.`,
+## Arbeit, Energie und der Energieerhaltungssatz
+
+Mechanische Arbeit W = F · s · cos(θ) ist das Produkt aus Kraft, Weg und dem Kosinus des Winkels zwischen Kraft- und Wegrichtung (Einheit: Joule, J = N·m = kg·m²/s²). Nur die Kraftkomponente parallel zum Weg leistet Arbeit. Eine Kraft senkrecht zur Bewegungsrichtung (z. B. Zentripetalkraft) leistet keine Arbeit!
+
+**Kinetische Energie** (Bewegungsenergie): E_kin = ½·m·v². Sie ist proportional zum Quadrat der Geschwindigkeit — bei doppelter Geschwindigkeit viermal so viel kinetische Energie. Das erklärt, warum Hochgeschwindigkeitsprojektile so verheerend sind und warum der Bremsweg bei Kraftfahrzeugen quadratisch mit der Geschwindigkeit wächst.
+
+**Potenzielle Energie** (Lageenergie): E_pot = m·g·h. Die potenzielle Energie ist eine Zustandsgröße — sie hängt nur von der Höhe h über einem gewählten Referenzniveau ab, nicht vom zurückgelegten Weg.
+
+**Energieerhaltungssatz:** In einem abgeschlossenen System ohne Reibung gilt: E_kin + E_pot = const. Energie kann zwischen kinetischer und potenzieller Form umgewandelt werden, aber die Gesamtenergie bleibt konstant. Mit Reibung gilt: Die mechanische Energie nimmt ab, aber die freigesetzte Wärme kompensiert exakt den Verlust — die Gesamtenergie (thermisch + mechanisch) bleibt erhalten.
+
+## Leistung und Wirkungsgrad
+
+Leistung P = W/t = F·v (Einheit: Watt, W = J/s). Leistung ist Arbeit pro Zeit. Ein Mensch kann kurzfristig etwa 1000 W (1 kW) leisten, im Dauerbetrieb etwa 100–200 W. Das Herz pumpt täglich ca. 8000 l Blut und leistet dabei eine mechanische Arbeit von ca. 1 J pro Herzschlag (70 Schläge/min → ca. 1 W mechanische Herzleistung, tatsächlich benötigt das Herz ca. 6 W wegen des Wirkungsgrades des Herzmuskelgewebes von etwa 17 %).
+
+Wirkungsgrad η = P_nutz / P_ges · 100 %. Der menschliche Körper hat beim Laufen einen Wirkungsgrad von ca. 20–25 % — der Rest wird als Wärme abgegeben.
+
+## Drehimpuls und Rotationsenergie
+
+Drehimpuls L = I · ω, wobei I das Trägheitsmoment (kg·m²) und ω die Winkelgeschwindigkeit (rad/s) ist. Drehimpulserhaltung: In Abwesenheit äußerer Drehmomente bleibt L = const. Der Pirouetten-Effekt: Wenn ein Eiskunstläufer die Arme anzieht (verringert I), erhöht sich ω — bei konstantem L. Rotationsenergie: E_rot = ½·I·ω². Im Körper bestimmt das Trägheitsmoment der Gliedmaßen die Energieeffizienz der Bewegung.`,
       lernziele: [
-        'Energieerhaltung und Umwandlung zwischen kinetischer und potenzieller Energie anwenden',
-        'Arbeit und Leistung berechnen',
-        'Impulserhaltung bei elastischen und unelastischen Stößen anwenden',
-        'Wirkungsgrad als Verhältnis Nutzleistung/Gesamtleistung kennen',
+        'Impuls (p = mv) und Kraftstoß (J = FΔt) definieren und den Impulserhaltungssatz anwenden',
+        'Mechanische Arbeit, kinetische und potenzielle Energie berechnen',
+        'Den Energieerhaltungssatz auf Reibungs- und reibungsfreie Systeme anwenden',
+        'Leistung und Wirkungsgrad berechnen und biologische Beispiele nennen',
+        'Elastische von inelastischen Stößen unterscheiden und Berechnungen durchführen',
       ],
       sections: [
         {
-          heading: 'Energieerhaltung und Energieformen',
-          text: 'E_kin = ½mv² (kinetische Energie), E_pot = mgh (gravitationspotenzielle Energie). Gesamtenergie = E_kin + E_pot = konstant (ohne Reibung). Mit Reibung: Energie geht in Wärme verloren. Wirkungsgrad η = E_nutz/E_zu ≤ 1 (nie größer als 1, da kein Perpetuum mobile). Menschlicher Muskel: η ≈ 25–30%. Herzpumpe: η ≈ 15–25%. In der Medizin: ATP-Hydrolyse liefert Energie für Muskelkontraktion, Ionenpumpen, Synthese.',
-          merksatz: 'E_kin + E_pot = const (abgeschlossenes System ohne Reibung)',
+          heading: 'Impuls und Kraftstoß',
+          text: 'Der Impuls p = m·v ist ein Vektor (Einheit: kg·m/s). Der Kraftstoß J = F·Δt = Δp beschreibt die Impulsänderung. Bei Kollisionen ist in abgeschlossenen Systemen der Gesamtimpuls erhalten: Σp_vorher = Σp_nachher. Elastische Stöße erhalten zusätzlich die kinetische Energie. Inelastische Stöße (Deformationen, Knochenbrüche, Gewebeschäden) wandeln kinetische Energie in andere Energieformen um.',
+          merksatz: 'p = m·v. Kraftstoß = Impulsänderung: F·Δt = Δp. Längerer Kontakt → geringere Kraft bei gleicher Impulsänderung.',
         },
         {
-          heading: 'Arbeit, Leistung und Wirkungsgrad',
-          text: 'Arbeit W = F·s·cos(α) [Joule]. Nur Kraftkomponenten in Bewegungsrichtung verrichten Arbeit. Leistung P = W/t = F·v [Watt]. Wirkungsgrad η = P_nutz/P_zu. Beispiele: Treppen steigen — W = m·g·h = 70 × 9,81 × 3 = 2060 J pro Stockwerk. Laufen mit 10 km/h: ca. 700 W Gesamtleistung (η ≈ 0,25 → Nutzleistung ≈ 175 W; Wärme 525 W). Herzarbeit pro Schlag: W ≈ 1 J; Herzleistung ≈ 1–5 W.',
+          heading: 'Energieerhaltung: kinetisch und potenziell',
+          text: 'E_kin = ½mv², E_pot = mgh. Ohne Reibung: E_kin + E_pot = const. Ein Körper, der aus Höhe h fällt, erreicht am Boden v = √(2gh). Mit Reibung wird mechanische Energie in Wärme umgewandelt, die Gesamtenergie (inkl. thermisch) bleibt jedoch erhalten. Der Energieerhaltungssatz ist universell gültig — er gilt auch für elektrische, chemische und thermische Energie.',
+          merksatz: 'v = √(2gh) — Auftreffgeschwindigkeit beim freien Fall aus Höhe h (ohne Reibung).',
         },
         {
-          heading: 'Stoßgesetze — Impulserhaltung',
-          text: 'Impuls p = m·v [kg·m/s]. Impulserhaltung: Σp_vor = Σp_nach (immer). Energieerhaltung: nur beim elastischen Stoß. Elastischer Stoß (z.B. Billardkugeln): Impuls + Energie erhalten. Unelastischer Stoß (z.B. Knet): Impuls erhalten, Energie verloren. Vollständig unelastisch: Körper kleben zusammen, maximaler Energieverlust. Medizin: Stoßwellenlithotripsie nutzt Druckwellen zur Nierensteinzerstörung; Herzschrittmacher-Impuls überträgt Impuls ans Herz.',
+          heading: 'Herzleistung und biologische Arbeit',
+          text: 'Das Herz leistet pro Herzschlag ca. W = p·ΔV ≈ 100 mmHg · 70 ml ≈ 1 J mechanische Arbeit. Bei 70 Schlägen/min ergibt das P ≈ 1,2 W mechanische Herzleistung. Da der Wirkungsgrad des Herzmuskels ca. 17 % beträgt, verbraucht das Herz metabolisch ca. 7 W. Im Dauerstress (Tachykardie, Hypertension) steigt dieser Wert stark an und führt zur Myokardhypertrophie.',
+          merksatz: 'Herzarbeit ≈ 1 J/Schlag. Mechanische Herzleistung ≈ 1 W (Ruhe). Gesamtmetabolismus Herz ≈ 7 W (η ≈ 17 %).',
         },
       ],
       merksätze: [
-        'Energieerhaltung: E_kin + E_pot = const; η = P_nutz/P_zu ≤ 1',
-        'Impulserhaltung: Σ(m·v)_vorher = Σ(m·v)_nachher — immer gültig',
-        'Elastischer Stoß: Impuls + Energie erhalten; unelastisch: nur Impuls erhalten',
+        'Impuls p = m·v: Vektorgröße in kg·m/s. Impulserhaltung in abgeschlossenen Systemen.',
+        'Kraftstoß J = F·Δt = Δp. Längere Einwirkzeit → geringere Spitzenkraft (Airbag-Prinzip).',
+        'E_kin = ½·m·v²: Bei doppelter Geschwindigkeit viermal so viel kinetische Energie.',
+        'E_pot = m·g·h: Lageenergie abhängig von Höhe, Masse und Erdbeschleunigung.',
+        'Energieerhaltung: E_kin + E_pot = const (ohne Reibungsverluste).',
+        'Arbeit W = F·s·cos(θ): Senkrechte Kraft zum Weg → keine Arbeit geleistet.',
+        'Leistung P = W/t = F·v: Einheit Watt (W = J/s).',
+        'Elastischer Stoß: Impuls UND kinetische Energie erhalten.',
+        'Inelastischer Stoß: NUR Impuls erhalten, kinetische Energie nimmt ab.',
+        'Drehimpulserhaltung: I·ω = const → kleineres I → größeres ω (Pirouetteneffekt).',
       ],
       altfrage: {
-        question: 'Eine Patientin (60 kg) steigt eine Treppe mit 12 Stufen (je 18 cm hoch) in 6 Sekunden. Welche mechanische Leistung bringt sie auf, und wie viel Wärme wird bei η=0,25 abgegeben?',
-        answer: 'Höhe: h = 12 × 0,18 m = 2,16 m. Arbeit: W = m·g·h = 60 × 9,81 × 2,16 = 1270 J. Leistung: P_nutz = W/t = 1270/6 ≈ 212 W. Gesamtleistung: P_ges = P_nutz/η = 212/0,25 = 847 W. Wärmeleistung: P_wärme = P_ges - P_nutz = 847 - 212 = 635 W. Der Körper gibt also dreimal mehr Wärme ab als mechanische Arbeit — daher schwitzt man beim Treppensteigen.',
+        question: 'Erläutern Sie den Unterschied zwischen elastischem und inelastischem Stoß und erklären Sie, welche Erhaltungsgrößen in jedem Fall gelten. Geben Sie ein klinisches Beispiel für einen inelastischen Stoß.',
+        answer: `Bei einem elastischen Stoß bleiben sowohl der Gesamtimpuls als auch die gesamte kinetische Energie erhalten. Das bedeutet: Σ(m·v)_vorher = Σ(m·v)_nachher UND Σ(½·m·v²)_vorher = Σ(½·m·v²)_nachher. Ein klassisches Beispiel ist der Stoß zweier Billardkugeln — in der Praxis sind vollkommen elastische Stöße idealisiert, da immer geringe Verformungsenergie und Wärme entstehen.
+
+Beim inelastischen Stoß ist nur der Gesamtimpuls erhalten, nicht die kinetische Energie. Ein Teil der kinetischen Energie wird in innere Energie (Verformung, Wärme, Schall) umgewandelt. Der Extremfall ist der vollkommen unelastische Stoß, bei dem sich beide Körper vereinigen: v' = (m₁·v₁ + m₂·v₂)/(m₁+m₂). Der Energieverlust ist maximal.
+
+Klinisches Beispiel: Bei einem Sturz auf den Kopf (Schädel-Hirn-Trauma) trifft der Kopf (Masse ca. 5 kg, Geschwindigkeit ca. 4 m/s nach 80-cm-Sturz) auf den Boden. Der Stoß ist vollkommen unelastisch — der Kopf bleibt nach dem Aufprall am Boden. Die kinetische Energie (E = ½·5·16 = 40 J) wird in Deformationsenergie des Schädels, Schockwellen im Hirngewebe und Wärme umgewandelt. Der Impuls p = 5·4 = 20 kg·m/s wird durch die Bodenkraft abgebaut. Ein weicher Untergrund (Helm, Matte) verlängert den Stoßvorgang (größeres Δt), reduziert die Spitzenkraft und schützt das Gewebe.`,
       },
-      klinischerBezug: 'In der Notaufnahme ist die Kenntnis von Erhaltungssätzen klinisch relevant: Bei einem Sturz aus 2 Metern Höhe erreicht der Patient eine Aufprallgeschwindigkeit von v = √(2gh) = √(2 × 9,81 × 2) ≈ 6,3 m/s ≈ 22,5 km/h. Die kinetische Energie E = ½mv² = ½ × 70 × 39,6 ≈ 1386 J muss beim Aufprall auf den Boden absorbiert werden. Je kürzer die Bremszeit, desto größer die Kraft. Auf hartem Boden mit Bremszeit von Millisekunden entstehen enorme Aufprallkräfte, die zu Frakturen führen.',
+      klinischerBezug: 'Der Impulserhaltungssatz erklärt ballistische Verletzungen: Ein Projektil (Masse ca. 10 g, Geschwindigkeit ca. 300 m/s, Impuls 3 N·s) überträgt seinen gesamten Impuls auf das Körpergewebe innerhalb von Millisekunden — die resultierende Gewebekraft kann tödlich sein. Die Herzleistung (mechanisch ca. 1 W, metabolisch ca. 7 W) ist ein Maß für den kardialen Sauerstoffbedarf; bei Hypertonie steigt die Druck-Volumen-Arbeit des Herzens, was den myokardialen O₂-Verbrauch erhöht und zur Linksherzhypertrophie führt.',
       selfTest: [
         {
-          question: 'Ein Ball der Masse 0,5 kg fällt aus 5 m Höhe. Welche Geschwindigkeit hat er kurz vor dem Aufprall? (g = 10 m/s²)',
-          options: ['5 m/s', '10 m/s', '25 m/s', '50 m/s', '7,07 m/s'],
-          correctIndex: 1,
-          explanation: 'Energieerhaltung: E_pot = E_kin → mgh = ½mv² → v = √(2gh) = √(2 × 10 × 5) = √100 = 10 m/s. Alternativ über Kinematik: v² = 2gh → v = 10 m/s. Die Masse kürzt sich heraus — alle Körper fallen gleich schnell (Galileo).',
-          hints: ['Setze E_pot = E_kin: mgh = ½mv². Die Masse kürzt sich.', 'v = √(2gh) — merkwürdige Wurzelformel, aber leicht herstellbar.'],
+          question: 'Ein 70-kg-Patient springt aus 1,25 m Höhe und landet auf hartem Boden. Welche kinetische Energie hat er unmittelbar vor dem Aufprall (g = 10 m/s²)?',
+          options: [
+            'A) 175 J',
+            'B) 350 J',
+            'C) 437,5 J',
+            'D) 875 J',
+            'E) 1225 J',
+          ],
+          correctIndex: 3,
+          explanation: 'Energieerhaltung: E_pot = E_kin → mgh = E_kin. E_kin = 70·10·1,25 = 875 J. Alternativ: v = √(2gh) = √(2·10·1,25) = √25 = 5 m/s, dann E_kin = ½·70·25 = 875 J. Diese 875 J werden beim Aufprall in Verformungsenergie, Schallenergie und Wärme umgewandelt. Ein Sturz aus dieser Höhe kann bei älteren Patienten (Osteoporose) bereits zu Frakturen führen — die Knochen können nur begrenzte Energie elastisch und plastisch aufnehmen.',
+          hints: [
+            'Nutze Energieerhaltung: Die potenzielle Energie mgh wird vollständig in kinetische Energie umgewandelt.',
+            'E_kin = mgh = 70 kg · 10 m/s² · 1,25 m.',
+          ],
           difficulty: 2,
           tags: [],
         },
         {
-          question: 'Welche Eigenschaft bleibt bei einem vollständig unelastischen Stoß erhalten?',
+          question: 'Das Herz pumpt pro Schlag ein Schlagvolumen von 70 ml gegen einen mittleren Aortendruck von 100 mmHg. Welche mechanische Arbeit leistet das Herz pro Schlag? (1 mmHg = 133 Pa)',
           options: [
-            'Kinetische Energie',
-            'Potenzielle Energie',
-            'Impuls',
-            'Drehimpuls und Impuls',
-            'Keine Erhaltungsgröße bleibt erhalten',
+            'A) 0,07 J',
+            'B) 0,093 J',
+            'C) 0,93 J',
+            'D) 9,3 J',
+            'E) 93 J',
           ],
           correctIndex: 2,
-          explanation: 'Bei jedem Stoß (elastisch oder unelastisch) bleibt der Impuls erhalten, sofern keine äußeren Kräfte wirken. Beim vollständig unelastischen Stoß gehen die Körper zusammen und maximale kinetische Energie wird in Wärme/Verformung umgewandelt. Die Gesamtenergie bleibt erhalten (1. Hauptsatz), aber kinetische Energie nimmt ab.',
-          hints: ['Impulserhaltung gilt immer, Energieerhaltung (kinetisch) nur beim elastischen Stoß.', 'Was unterscheidet elastischen von unelastischem Stoß? → Energieverlust!'],
-          difficulty: 1,
+          explanation: 'W = p·ΔV. Druckumrechnung: 100 mmHg = 100·133 = 13300 Pa. Volumenstrom: 70 ml = 70·10⁻⁶ m³. W = 13300 Pa · 70·10⁻⁶ m³ = 13300 · 0,000070 = 0,931 J ≈ 0,93 J. Bei 70 Schlägen/min: P = 0,93 J · 70/60 s⁻¹ ≈ 1,08 W mechanische Herzleistung. Da der Herzmuskelwirkungsgrad nur ca. 17 % beträgt, verbraucht das Herz metabolisch ca. 6 W, was einem Tagesverbrauch von ca. 518 kJ entspricht.',
+          hints: [
+            'Herzarbeit = Druck × Volumen: W = p·ΔV. Erst Einheiten umrechnen: mmHg → Pa, ml → m³.',
+            '1 mmHg = 133 Pa; 1 ml = 10⁻⁶ m³. Dann W = p·ΔV.',
+          ],
+          difficulty: 3,
           tags: [],
         },
         {
-          question: 'Eine Person (70 kg) hebt einen 20 kg-Koffer auf 1,5 m Höhe in 3 Sekunden. Welche mittlere Leistung wird aufgewendet? (g = 10 m/s²)',
-          options: ['10 W', '30 W', '100 W', '300 W', '450 W'],
+          question: 'Ein Körper (m = 5 kg) wird von Ruhe aus über eine Strecke von 10 m mit einer konstanten Kraft von 20 N beschleunigt. Welche kinetische Energie hat er danach?',
+          options: [
+            'A) 50 J',
+            'B) 100 J',
+            'C) 200 J',
+            'D) 400 J',
+            'E) 1000 J',
+          ],
           correctIndex: 2,
-          explanation: 'Arbeit: W = m·g·h = 20 × 10 × 1,5 = 300 J. Leistung: P = W/t = 300/3 = 100 W. Beachte: Nur die Masse des Koffers (20 kg) ist relevant, da die Person selbst nicht gehoben wird. 100 W entspricht etwa der Leistung einer alten Glühbirne — eine alltagstaugliche Referenz.',
-          hints: ['Arbeit W = m·g·h mit der Masse des Koffers (20 kg), nicht der Person.', 'Leistung P = W/t.'],
+          explanation: 'Geleistete Arbeit = Zunahme der kinetischen Energie: W = F·s = 20 N · 10 m = 200 J. Damit: E_kin = 200 J. Zur Kontrolle: a = F/m = 20/5 = 4 m/s². v² = 2·a·s = 2·4·10 = 80 m²/s². E_kin = ½·m·v² = ½·5·80 = 200 J. Beide Methoden liefern dasselbe Ergebnis — das Arbeit-Energie-Theorem ist elegant und oft schneller.',
+          hints: [
+            'Das Arbeit-Energie-Theorem: Die geleistete Arbeit W = F·s entspricht der Änderung der kinetischen Energie.',
+            'W = F·s = 20·10 = 200 J = E_kin (da Startzustand: Ruhe, E_kin,0 = 0).',
+          ],
           difficulty: 2,
           tags: [],
         },
         {
-          question: 'Der Wirkungsgrad des menschlichen Muskels beträgt ungefähr:',
-          options: ['5–10%', '25–30%', '50–60%', '75–80%', 'nahezu 100%'],
-          correctIndex: 1,
-          explanation: 'Der menschliche Muskel wandelt etwa 25–30% der chemischen Energie (ATP) in mechanische Arbeit um. Der Rest (70–75%) wird als Wärme abgegeben — was erklärt, warum wir beim Sport schwitzen und warm werden. Herzmuskel: η ≈ 15–25%. Elektromotoren erreichen η ≈ 90–95%.',
-          hints: ['Der Muskel ist thermodynamisch keine optimale Maschine.', 'η = mechanische Nutzleistung / ATP-Energiezufuhr ≈ 0,25–0,30.'],
+          question: 'Welche Energieform wird beim inelastischen Stoß NICHT erhalten?',
+          options: [
+            'A) Gesamtenergie (inkl. Wärme)',
+            'B) Gesamtimpuls',
+            'C) Kinetische Energie',
+            'D) Drehimpuls (bei Abwesenheit äußerer Drehmomente)',
+            'E) Elektrische Ladung',
+          ],
+          correctIndex: 2,
+          explanation: 'Beim inelastischen Stoß ist nur der Gesamtimpuls erhalten (kein äußerer Kraftstoß), nicht aber die kinetische Energie. Ein Teil der kinetischen Energie wird in Verformungsenergie, Wärme und Schall umgewandelt. Die Gesamtenergie (inkl. aller Energieformen) ist gemäß dem ersten Hauptsatz der Thermodynamik immer erhalten — kinetische Energie ist aber nicht erhalten. Beim elastischen Stoß sind sowohl Impuls als auch kinetische Energie erhalten.',
+          hints: [
+            'Beim inelastischen Stoß hört man oft ein Geräusch (Schallenergie) oder sieht eine Verformung — das ist die umgewandelte kinetische Energie.',
+            'Impuls ist immer erhalten (solange keine äußere Kraft wirkt). Kinetische Energie nur beim elastischen Stoß.',
+          ],
           difficulty: 1,
           tags: [],
         },
         {
-          question: 'Ein Schlitten (m=50 kg, v=6 m/s) prallt auf einen ruhenden Schlitten (m=50 kg) und sie fahren zusammen weiter (unelastischer Stoß). Welche Geschwindigkeit hat das System danach?',
-          options: ['6 m/s', '4 m/s', '3 m/s', '2 m/s', '1 m/s'],
+          question: 'Ein Eiskunstläufer (I₁ = 4 kg·m²) dreht mit ω₁ = 2 rad/s. Er zieht die Arme an und reduziert sein Trägheitsmoment auf I₂ = 1 kg·m². Wie groß ist die neue Winkelgeschwindigkeit ω₂?',
+          options: [
+            'A) 0,5 rad/s',
+            'B) 2 rad/s',
+            'C) 4 rad/s',
+            'D) 8 rad/s',
+            'E) 16 rad/s',
+          ],
+          correctIndex: 3,
+          explanation: 'Drehimpulserhaltung: L = I·ω = const → I₁·ω₁ = I₂·ω₂. Umgestellt: ω₂ = I₁·ω₁/I₂ = 4·2/1 = 8 rad/s. Der Läufer rotiert also viermal schneller als zuvor! Die Rotationsenergie ändert sich dabei: E₁ = ½·4·4 = 8 J, E₂ = ½·1·64 = 32 J — die Energie hat sich vervierfacht. Die zusätzliche Energie stammt aus der Muskelarbeit, die der Läufer aufwenden muss, um die Arme einzuziehen (gegen die Zentrifugalkraft).',
+          hints: [
+            'Drehimpulserhaltung: L = I·ω = const. Stelle nach ω₂ um: ω₂ = I₁·ω₁/I₂.',
+            'I₁ = 4 kg·m², ω₁ = 2 rad/s, I₂ = 1 kg·m² → ω₂ = ?',
+          ],
+          difficulty: 3,
+          tags: [],
+        },
+        {
+          question: 'Ein Kraftstoß von F = 5 N wirkt über Δt = 0,02 s auf die Haut. Welchen Impuls überträgt er?',
+          options: [
+            'A) 0,001 N·s',
+            'B) 0,01 N·s',
+            'C) 0,1 N·s',
+            'D) 1 N·s',
+            'E) 250 N·s',
+          ],
           correctIndex: 2,
-          explanation: "Impulserhaltung: m₁·v₁ = (m₁+m₂)·v'. 50×6 = 100×v' → v' = 300/100 = 3 m/s. Die Energie halbiert sich: E_kin vorher = ½×50×36 = 900 J; E_kin nachher = ½×100×9 = 450 J. 450 J werden als Verformungsenergie/Wärme abgegeben.",
-          hints: ["Impulserhaltung: m₁v₁ + m₂v₂ = (m₁+m₂)v'.", "Da m₁=m₂ und v₂=0: v' = v₁/2."],
+          explanation: 'Kraftstoß J = F·Δt = 5 N · 0,02 s = 0,1 N·s. Der Kraftstoß entspricht der Impulsänderung Δp = 0,1 kg·m/s. Das bedeutet: Wenn die Nadel (Masse z. B. 0,01 kg) diese Impulsänderung erfährt, ändert sich ihre Geschwindigkeit um Δv = Δp/m = 0,1/0,01 = 10 m/s. Das Konzept des Kraftstoßes erklärt, warum schnelle, kurze Krafteinwirkungen (Schlag) und langsame, längere Einwirkungen (Druck) denselben Impuls übertragen können, aber sehr unterschiedliche Gewebeschäden verursachen.',
+          hints: [
+            'Kraftstoß J = F·Δt. Einfaches Produkt aus Kraft und Zeitdauer.',
+            '5 N · 0,02 s = 0,10 N·s.',
+          ],
+          difficulty: 1,
+          tags: [],
+        },
+        {
+          question: 'Welche Leistung erbringt ein Arzt, der eine 20-kg-Patientenliege in 4 Sekunden um 0,5 m anhebt (g = 10 m/s²)?',
+          options: [
+            'A) 2,5 W',
+            'B) 10 W',
+            'C) 25 W',
+            'D) 100 W',
+            'E) 400 W',
+          ],
+          correctIndex: 2,
+          explanation: 'W = F·s = m·g·h = 20·10·0,5 = 100 J. P = W/t = 100 J/4 s = 25 W. Das entspricht etwa 25 % der Dauerleistungsfähigkeit eines durchschnittlichen Menschen (ca. 100 W). Bei 8 Stunden Arbeit mit dieser Leistung würde ein Arzt 8·3600·25 = 720 kJ mechanische Arbeit leisten — der tatsächliche Energieverbrauch ist wegen η < 100 % höher. Diese Berechnungen sind relevant für die Ergonomie im Pflegebereich.',
+          hints: [
+            'Erst Arbeit berechnen: W = mgh = 20·10·0,5 = 100 J.',
+            'Dann Leistung: P = W/t = 100 J / 4 s = 25 W.',
+          ],
           difficulty: 2,
           tags: [],
         },
@@ -216,109 +454,208 @@ Der Drehimpuls L = I·ω (Trägheitsmoment × Winkelgeschwindigkeit) bleibt in a
     {
       id: 'ph-2-03',
       title: 'Statik, Druck und Hydrodynamik',
-      content: `Flüssigkeiten und Gase verhalten sich grundlegend anders als feste Körper: Sie können fließen, sich verformen und Druck in alle Richtungen gleichmäßig weiterleiten. Die Physik der ruhenden Flüssigkeiten (Hydrostatik) und strömenden Flüssigkeiten (Hydrodynamik) ist unmittelbar relevant für das Verständnis des Blutkreislaufs, der Atmung und zahlreicher medizinischer Geräte.
+      content: `## Statik, Druck und Hydrodynamik
 
-Druck ist definiert als Kraft pro Fläche: p = F/A, gemessen in Pascal (Pa = N/m²). Druck wirkt in Flüssigkeiten isotrop — gleich in alle Richtungen. Das ist das Pascalsche Prinzip: Ein in einer Flüssigkeit erzeugter Druckanstieg überträgt sich gleichmäßig auf alle Bereiche. Hydraulische Pressen nutzen dieses Prinzip: Eine kleine Kraft auf kleine Fläche erzeugt denselben Druckanstieg wie eine große Kraft auf große Fläche — F₁/A₁ = F₂/A₂.
+Die Statik untersucht Körper und Systeme im Gleichgewicht, während die Hydrodynamik die Bewegung von Flüssigkeiten und Gasen beschreibt. Beide Gebiete sind für die Medizin von zentraler Bedeutung: Statik erklärt die Mechanik des Bewegungsapparates (Hebelprinzipien im Skelett), Hydrodynamik beschreibt den Blutfluss und die Funktion der Lunge.
 
-Der hydrostatische Druck p = ρ·g·h hängt nur von der Flüssigkeitsdichte ρ, der Erdbeschleunigung g und der Tiefe h ab — unabhängig von Gefäßform und -volumen. Das ist das Prinzip der kommunizierenden Röhren. Im Körper: Der venöse Blutdruck in den Beinvenen im Stehen beträgt: p = ρ·g·h = 1060 kg/m³ × 9,81 m/s² × 1,5 m ≈ 15.600 Pa ≈ 117 mmHg — viel mehr als der arterielle Druck (80 mmHg diastolisch). Daher ist aktiver Venenpumpenmechanismus durch Muskeln und Venenklappen lebenswichtig.
+## Statik und Gleichgewichtsbedingungen
 
-Das Archimedische Prinzip beschreibt den Auftrieb: Ein in eine Flüssigkeit eingetauchter Körper erfährt eine nach oben gerichtete Auftriebskraft F_A = ρ_Fluid × g × V_verdrängt. Ein Körper schwimmt, wenn F_A ist größer oder gleich F_Gewicht, also wenn seine mittlere Dichte kleiner als die der Flüssigkeit ist. Lunge hat durch enthaltene Luft eine geringe Dichte — daher sind Lungen im Wasser auftriebspositiv. In der Medizin: Ultraschalluntersuchung von Feten — der Fetus schwimmt im Fruchtwasser (Dichte ≈ Dichte Körper). Spezifisches Gewicht des Urins gibt Auskunft über Konzentrationsfähigkeit der Nieren.
+Ein Körper befindet sich im mechanischen Gleichgewicht, wenn zwei Bedingungen gleichzeitig erfüllt sind:
+1. **Kräftegleichgewicht:** Die Summe aller Kräfte (Vektoren) ist null: ΣF = 0. Damit ist Translationsgleichgewicht gewährleistet.
+2. **Momentengleichgewicht:** Die Summe aller Drehmomente um jeden beliebigen Punkt ist null: ΣM = 0. Damit ist Rotationsgleichgewicht gewährleistet.
 
-Die Bernoulli-Gleichung beschreibt die Energieerhaltung in strömenden Flüssigkeiten: p + ½ρv² + ρgh = const. Dies bedeutet: Wo die Strömungsgeschwindigkeit v zunimmt (Engstelle), fällt der statische Druck p ab — und umgekehrt. Dies erklärt den Venturi-Effekt: Bei einer Gefäßeinengung beschleunigt das Blut, der Druck fällt. Hinter der Einengung kann es zur turbulenten Rückströmung kommen, was Arteriosklerose begünstigt.
+**Drehmoment:** M = F · d, wobei d der senkrechte Hebelarm (Abstand von der Drehachse zur Wirkungslinie der Kraft) ist. Einheit: N·m. Ein großer Hebelarm ermöglicht es, mit kleiner Kraft ein großes Drehmoment zu erzeugen — das ist das Hebelgesetz.
 
-Das Hagen-Poiseuille-Gesetz beschreibt den Volumenstrom durch ein zylindrisches Gefäß: Q = π·r⁴·Δp/(8·η·L). Der Radius geht mit der vierten Potenz ein — eine Halbierung des Gefäßradius reduziert den Durchfluss auf 1/16! Das ist der entscheidende Punkt der Gefäßphysiologie: Gefäße regulieren Blutfluss primär durch Änderung ihres Radius (Vasokonstriktion/Vasodilatation). Ein um 10% verengtes Gefäß hat bereits etwa 35% weniger Durchfluss. Viskosität η des Blutes (3–4 mPa·s, abhängig von Hämatokrit) und Gefäßlänge L spielen ebenfalls eine Rolle, sind aber physiologisch weniger variabel als r.`,
+Im Körper: Der Unterarm ist ein einarmiger Hebel (Typ 3). Der Bizeps (Kraft F_B) wirkt ca. 5 cm vom Ellenbogengelenk (Drehachse) entfernt. Eine Last von 10 kg (100 N) in der Hand wirkt ca. 35 cm von der Drehachse. Momentengleichgewicht: F_B · 0,05 = 100 · 0,35 → F_B = 700 N. Der Muskel muss eine siebenmal größere Kraft aufwenden als die Last — das ist anatomisch nachteilig, aber ermöglicht schnelle, weite Bewegungen (Geschwindigkeitshebel).
+
+## Druck in Flüssigkeiten
+
+Druck p = F/A (Einheit: Pascal, Pa = N/m²). Der Druck wirkt in alle Richtungen gleich (Pascal'sches Prinzip). Der hydrostatische Druck in einer Flüssigkeit der Dichte ρ in Tiefe h beträgt p = ρ·g·h. Im menschlichen Körper: Der arterielle Blutdruck (systolisch ca. 120 mmHg) überwindet den peripheren Gefäßwiderstand und treibt das Blut durch den Kreislauf. Der venöse Druck (ca. 5 mmHg) ist viel niedriger — Klappen verhindern Rückfluss.
+
+**Auftrieb:** Ein in eine Flüssigkeit eingetauchter Körper erfährt eine Auftriebskraft F_A = ρ_Fl · g · V_verdrängt (Archimedisches Prinzip). Für den menschlichen Körper (Dichte ca. 0,98 kg/dm³ im Wasser) ist der Auftrieb fast vollständig gleich dem Gewicht — das ermöglicht therapeutisches Schwimmen und Rehabilitationsübungen im Wasser.
+
+## Strömungslehre: Kontinuitätsgleichung und Bernoulli
+
+**Kontinuitätsgleichung:** In einer inkompressiblen, reibungsfreien Strömung gilt: A₁·v₁ = A₂·v₂ (Volumenstrom Q = A·v = const). Wenn der Querschnitt kleiner wird, steigt die Strömungsgeschwindigkeit. Im Körper: In der Aorta (Durchmesser ca. 2,5 cm, Querschnitt ca. 5 cm²) fließt Blut mit ca. 20 cm/s. In den Kapillaren (Gesamtquerschnitt ca. 5000 cm², 1000-fach größer) fließt Blut nur ca. 0,03 cm/s — optimal für den Stoffaustausch.
+
+**Bernoulli-Gleichung:** ½·ρ·v² + ρ·g·h + p = const. Dies ist der Energieerhaltungssatz für Strömungen. An engen Stellen (hohe Geschwindigkeit) ist der Druck niedrig, an weiten Stellen (geringe Geschwindigkeit) ist der Druck hoch. Anwendung: Bei einer Arterienstenose steigt die Strömungsgeschwindigkeit — der Druck fällt hinter der Stenose ab (poststenotischer Druckabfall).
+
+**Poiseuille-Gesetz (reibungsbehaftete Strömung):** Der Volumenstrom durch ein zylindrisches Gefäß ist Q = (π·r⁴·Δp)/(8·η·l). Der Radius geht mit der vierten Potenz ein! Eine Halbierung des Gefäßradius reduziert den Volumenstrom auf 1/16 des ursprünglichen Wertes. Das erklärt, warum Koronarstenosen so kritisch sind: Eine 50%ige Radiusreduktion reduziert den Blutfluss auf 6,25 % des Normalen.
+
+## Viskosität und Strömungstypen
+
+Viskosität η (Einheit: Pa·s) beschreibt den inneren Reibungswiderstand einer Flüssigkeit. Wasser: η ≈ 10⁻³ Pa·s; Blut: η ≈ 3–4·10⁻³ Pa·s (nicht-newtonsches Fluid — abhängig von Hämatokrit und Scherrate). Bei laminarer Strömung (Reynoldszahl Re < 2300) fließen Flüssigkeitsschichten parallel ohne Vermischung. Bei turbulenter Strömung (Re > 4000) entstehen Wirbel — Herzgeräusche (Turbulenzen an verengten Klappen) sind klinisch diagnostisch wichtig.`,
       lernziele: [
-        'Druck, hydrostatischen Druck und Auftrieb berechnen',
-        'Bernoulli-Gleichung verstehen und auf Blutfluss anwenden',
-        'Hagen-Poiseuille-Gesetz und klinische Relevanz von Gefäßradius kennen',
-        'Pascalsches Prinzip bei hydraulischen Systemen erläutern',
+        'Die zwei Gleichgewichtsbedingungen (Kräfte- und Momentengleichgewicht) anwenden',
+        'Drehmomente berechnen und das Hebelgesetz auf den Bewegungsapparat anwenden',
+        'Die Bernoulli-Gleichung und Kontinuitätsgleichung auf den Blutkreislauf anwenden',
+        'Das Poiseuille-Gesetz erklären und die Bedeutung des Radius⁴-Gesetzes für Gefäßstenosen verstehen',
+        'Laminare und turbulente Strömung unterscheiden und die Reynoldszahl einordnen',
       ],
       sections: [
         {
-          heading: 'Druck und hydrostatisches Prinzip',
-          text: 'Druck p = F/A [Pa = N/m²]. Hydrostatischer Druck: p = ρ·g·h — proportional zu Dichte, g und Tiefe. Pascalsches Prinzip: Druckänderung überträgt sich gleichmäßig. Auftrieb: F_A = ρ_Fluid·g·V (Archimedisches Prinzip). Klinisch: Venöser Blutdruck in Beinvenen im Stehen ≈ 80–120 mmHg hydrostatisch. Ödeme entstehen, wenn hydrostatischer Druck den kolloidosmotischen Druck übersteigt. Messung des Liquordrucks (normal: 7–15 cmH₂O) durch Lumbalpunktion.',
-          merksatz: 'p_hydrost = ρ·g·h — nur von Tiefe abhängig, nicht von Gefäßform!',
+          heading: 'Hebelgesetz und Muskelkräfte',
+          text: 'Ein Hebel im Gleichgewicht erfüllt: F₁·d₁ = F₂·d₂ (Drehmomentgleichgewicht). Im Körper sind Muskeln nahe an Gelenken angesetzt (kleiner Hebelarm), was große Muskelkräfte erfordert, aber schnelle und weite Bewegungen ermöglicht. Der Unterarm-Bizeps-Mechanismus ist ein Typ-3-Hebel: Muskelkraft (ca. 5 cm vom Gelenk) vs. Last (ca. 35 cm vom Gelenk) → Kraft-Übersetzung 1:7. Für 10 kg Last braucht der Bizeps ca. 700 N.',
+          merksatz: 'M = F·d. Kleiner Hebelarm → große Kraft nötig. Großer Hebelarm → kleine Kraft nötig. Gleichgewicht: F₁·d₁ = F₂·d₂.',
         },
         {
-          heading: 'Bernoulli-Gleichung und Strömungsdynamik',
-          text: 'Bernoulli: p + ½ρv² + ρgh = const. Bei Einengung: v↑ → p↓ (Venturi-Effekt). Bei Erweiterung: v↓ → p↑. Turbulente vs. laminare Strömung: Reynolds-Zahl Re = ρ·v·d/η; Re < 2000: laminar; Re > 4000: turbulent. Herzgeräusche entstehen durch turbulente Strömung. Bernoulli in der Medizin: Doppler-Echokardiographie misst v über Herzklappen, aus der man Δp = 4·v² (vereinfacht nach Bernoulli) berechnet.',
+          heading: 'Bernoulli und Blutdruck',
+          text: 'Die Bernoulli-Gleichung (½ρv² + ρgh + p = const) besagt: Schnelle Strömung → niedriger Druck. Bei Gefäßstenosen steigt v, fällt p. Das Poiseuille-Gesetz Q = πr⁴Δp/(8ηl) zeigt die extreme Abhängigkeit vom Radius — das r⁴-Gesetz macht den Gefäßradius zum dominanten Faktor für den Blutfluss.',
+          merksatz: 'Poiseuille: Q ~ r⁴. Radius halbiert → Fluss auf 1/16 reduziert. Gefäßverengung ist extrem flusslimitierend.',
         },
         {
-          heading: 'Hagen-Poiseuille und Gefäßwiderstand',
-          text: 'Hagen-Poiseuille: Q = π·r⁴·Δp/(8·η·L). Strömwiderstand R = 8·η·L/(π·r⁴). Kritisch: r⁴-Abhängigkeit! Verdoppelung von r → 16-facher Fluss. Halbierung von r → 1/16 Fluss. Klinisch: Aspirin verdünnt Blut (senkt η); Nitroglycerin weitet Gefäße (erhöht r); Atherosklerose verengt Gefäße (r↓ → Q stark↓). Vergleich mit elektrischem Strom: Q entspricht I, Δp entspricht U, hydraulischer R entspricht elektrischem R.',
+          heading: 'Laminare vs. turbulente Strömung',
+          text: 'Die Reynoldszahl Re = ρ·v·d/η entscheidet über den Strömungstyp: Re < 2300 → laminar (geordnet, schichtenweise); Re > 4000 → turbulent (wirbelnd, Energieverlust). Turbulente Strömung erzeugt Geräusche (Herzgeräusche, Strömungsgeräusche bei Stenosen). Im normalen Kreislauf ist die Strömung meist laminar; an Klappen, Stenosen und Biegungen kann Turbulenz entstehen. Turbulenz erhöht den Strömungswiderstand und den Energiebedarf des Herzens.',
+          merksatz: 'Re = ρvd/η. Re < 2300: laminar (leise, effizient). Re > 4000: turbulent (laut, energieaufwendig).',
         },
       ],
       merksätze: [
-        'Hagen-Poiseuille: Q ~ r⁴ — Gefäßradius halbieren → Fluss 16-fach kleiner!',
-        'Bernoulli: Mehr Geschwindigkeit → weniger Druck (Venturi-Effekt)',
-        'Auftrieb F_A = ρ_Fluid·g·V_verdrängt (Archimedes)',
+        'Gleichgewicht: ΣF = 0 (Kräfte) UND ΣM = 0 (Momente). Beide Bedingungen müssen erfüllt sein.',
+        'Drehmoment M = F · d. Einheit: N·m. Großer Hebelarm → großes Drehmoment bei kleiner Kraft.',
+        'Druck p = F/A. Einheit Pascal (Pa). Hydrostatisch: p = ρgh.',
+        'Bernoulli: ½ρv² + ρgh + p = const. Schnell → niedriger Druck (Venturi-Effekt).',
+        'Kontinuität: A₁v₁ = A₂v₂. Enger Querschnitt → schnellere Strömung.',
+        'Poiseuille: Q = πr⁴Δp/(8ηl). Radius geht mit 4. Potenz ein!',
+        'Reynoldszahl: Re = ρvd/η. Laminar: Re < 2300. Turbulent: Re > 4000.',
+        'Archimedisches Prinzip: F_A = ρ_Fl·g·V. Auftrieb = Gewicht des verdrängten Fluids.',
+        'Kapillaren: Gesamtquerschnitt 1000× größer als Aorta → Blutfluss 1000× langsamer (Kontinuität).',
+        'Arterienstenose 50 % Radius → Fluss auf (0,5)⁴ = 6,25 % des Normalflusses (Poiseuille).',
       ],
       altfrage: {
-        question: 'Bei einer Arteriosklerose reduziert sich der Radius einer Koronararterie von 3 mm auf 2 mm. Um welchen Faktor ändert sich der Blutfluss Q laut Hagen-Poiseuille (bei gleichem Δp)?',
-        answer: 'Q ~ r⁴. Faktor = (2/3)⁴ = 16/81 ≈ 0,198. Der Blutfluss sinkt auf etwa 20% des ursprünglichen Werts — also eine Reduktion um 80%! Eine 33%-ige Reduktion des Radius führt zu 80%-iger Flussreduktion. Das erklärt, warum Koronarstenosen von 50% des Lumens (entspricht r-Reduktion um 29%) bereits zu schwerer Ischämie führen können.',
+        question: 'Erklären Sie das Poiseuille-Gesetz und erläutern Sie, warum eine Koronarstenose mit 50%iger Lumenreduktion klinisch so kritisch ist. Welche therapeutischen Maßnahmen leiten sich daraus ab?',
+        answer: `Das Hagen-Poiseuille-Gesetz beschreibt den Volumenstrom Q einer viskosen, inkompressiblen Flüssigkeit durch ein zylindrisches Rohr bei laminarer Strömung: Q = (π·r⁴·Δp)/(8·η·l). Dabei ist r der Gefäßradius, Δp der Druckgradient, η die dynamische Viskosität und l die Rohrlänge. Der kritische Parameter ist der Radius, der mit der vierten Potenz eingeht.
+
+Eine 50%ige Lumenreduktion bedeutet eine Halbierung des Radius (r₂ = 0,5·r₁). Die Auswirkung auf den Volumenstrom: Q₂/Q₁ = (r₂/r₁)⁴ = (0,5)⁴ = 1/16 = 6,25 %. Der Koronarfluss sinkt also auf nur 6,25 % des ursprünglichen Wertes. In der Praxis versucht der Körper durch Erhöhung des Blutdrucks gegenzusteuern, was die kardiale Nachlast erhöht und die Herzarbeit steigert.
+
+Klinische Konsequenzen: Schon bei moderater körperlicher Belastung kann das Koronargefäß nicht genug Blut liefern → Angina pectoris (ischämische Brustschmerzen). Bei maximaler Stenose (> 90 %) kann die Myokardversorgung auch in Ruhe insuffizient sein → Herzinfarkt.
+
+Therapeutische Konsequenzen aus dem r⁴-Gesetz: (1) Perkutane transluminale Koronarangioplastie (PTCA/Stenting) — Ballon-Aufweitung von r = 0,5r₀ auf r₀ steigert den Fluss um Faktor 16. (2) Bypass-Operation — Umgehung der Stenose mit neuem Gefäß mit größerem r. (3) Medikamentöse Vasodilatation — Nitroglycerin erhöht r durch glatte Muskelrelaxation. Das Poiseuille-Gesetz zeigt, warum kleinste Radienänderungen massive Auswirkungen auf den Blutfluss haben.`,
       },
-      klinischerBezug: 'Das Hagen-Poiseuille-Gesetz ist das physikalische Fundament der Kreislaufphysiologie. Arteriolen (kleine Widerstandsgefäße) regulieren durch Vasokonstriktion und Vasodilatation den Blutfluss in Organe. Ödementstehung: Wenn kapillärer hydrostatischer Druck (p_hyd ≈ 32 mmHg arteriell, 15 mmHg venös) den kolloidal-osmotischen Druck (ca. 25 mmHg) übersteigt, tritt Flüssigkeit ins Interstitium aus. Herzinsuffizienz erhöht venösen Druck → Ödem in Lunge und Unterschenkel.',
+      klinischerBezug: 'Das Poiseuille-Gesetz (Q ~ r⁴) erklärt die extreme klinische Relevanz von Gefäßstenosen: Eine Lumenreduktion um 50 % (Radiushalbierung) reduziert den Blutfluss auf 6,25 % des Normalen — das Herzmuskelgewebe wird ischämisch. Stenting bei Koronarstenosen nutzt genau dieses Gesetz: Schon eine kleine Radiusvergrößerung (r × 1,2) steigert den Fluss auf das 2,1-fache. Die Bernoulli-Gleichung erklärt zusätzlich, warum an Stenosen der Druck poststenotisch abfällt und Kalzifizierungen das Risiko einer plötzlichen Gefäßdissektion erhöhen.',
       selfTest: [
         {
-          question: 'In welcher Tiefe unter Wasser beträgt der hydrostatische Druck 98.100 Pa? (ρ_Wasser = 1000 kg/m³, g = 9,81 m/s²)',
-          options: ['1 m', '5 m', '10 m', '100 m', '20 m'],
-          correctIndex: 2,
-          explanation: 'p = ρ·g·h → h = p/(ρ·g) = 98.100/(1000 × 9,81) = 10 m. In 10 m Wassertiefe beträgt der hydrostatische Druck ≈ 1 atm = 101.325 Pa ≈ 98.100 Pa (leichte Abweichung durch g-Näherung). Daher: Gesamtdruck in 10 m Tiefe ≈ 2 atm.',
-          hints: ['Forme p = ρ·g·h nach h um: h = p/(ρ·g).', 'Bekannte Näherung: 10 m Wassertiefe ≈ 1 atm Überdruck.'],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: 'Nach dem Hagen-Poiseuille-Gesetz — wie verändert sich der Blutfluss, wenn der Gefäßradius auf das Doppelte zunimmt?',
-          options: ['Verdoppelt', 'Vervierfacht', 'Verachtfacht', 'Versechzehnfacht', 'Bleibt gleich'],
-          correctIndex: 3,
-          explanation: 'Q ~ r⁴. Wenn r → 2r, dann Q → (2r)⁴/r⁴ = 2⁴ = 16. Der Fluss nimmt um den Faktor 16 zu. Diese extrem starke Abhängigkeit erklärt, warum kleine Radienänderungen durch Vasodilatation enorme Auswirkungen auf die Durchblutung haben.',
-          hints: ['Q ~ r⁴ bedeutet: Verdopplung von r → Q mal 2⁴.', '2⁴ = 2 × 2 × 2 × 2 = 16.'],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: 'Die Bernoulli-Gleichung erklärt, warum bei einer Gefäßeinengung (Stenose):',
+          question: 'Ein Muskel wirkt 4 cm vom Gelenk (Drehachse) entfernt. Eine Last von 50 N hängt 20 cm vom Gelenk. Wie groß muss die Muskelkraft im Gleichgewicht sein?',
           options: [
-            'Der Druck an der Engstelle zunimmt',
-            'Die Geschwindigkeit an der Engstelle abnimmt',
-            'Der Druck an der Engstelle abnimmt und die Geschwindigkeit zunimmt',
-            'Druck und Geschwindigkeit beide zunehmen',
-            'Bernoulli gilt nur für Gase, nicht für Blut',
+            'A) 10 N',
+            'B) 50 N',
+            'C) 200 N',
+            'D) 250 N',
+            'E) 1000 N',
+          ],
+          correctIndex: 3,
+          explanation: 'Momentengleichgewicht: F_Muskel · d_Muskel = F_Last · d_Last. F_M · 0,04 m = 50 N · 0,20 m → F_M = (50 · 0,20)/0,04 = 10/0,04 = 250 N. Der Muskel muss 250 N aufwenden, um eine Last von nur 50 N zu halten — Faktor 5. Dies ist typisch für Körperhebel: kurze Muskelhebelarme erfordern große Muskelkräfte, ermöglichen aber große Bewegungsgeschwindigkeiten. Die Gelenkreaktionskraft beträgt dabei: F_Gelenk = F_M − F_Last = 250 − 50 = 200 N.',
+          hints: [
+            'Momentengleichgewicht: F₁·d₁ = F₂·d₂. Drehmoment Muskel = Drehmoment Last.',
+            'F_M · 4 cm = 50 N · 20 cm → F_M = 50·20/4.',
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+        {
+          question: 'In der Aorta (Querschnitt 5 cm²) fließt Blut mit 20 cm/s. Welche Geschwindigkeit hat das Blut in Kapillaren mit einem Gesamtquerschnitt von 2500 cm²?',
+          options: [
+            'A) 0,002 cm/s',
+            'B) 0,004 cm/s',
+            'C) 0,04 cm/s',
+            'D) 4 cm/s',
+            'E) 10 cm/s',
           ],
           correctIndex: 2,
-          explanation: 'Nach Bernoulli: p + ½ρv² = const. Bei konstanter Höhe gilt: Nimmt v zu, muss p abnehmen. An einer Stenose wird das Blut beschleunigt (v↑) und der statische Druck fällt (p↓). Hinter der Stenose verlangsamt das Blut sich wieder und der Druck steigt — allerdings entsteht dort oft turbulente Strömung und ein Druckverlust.',
-          hints: ['Bernoulli: p + ½ρv² = const → wenn v↑, dann p↓.', 'Denke an einen Gartenschlauch, den man zukneift: Wasser schießt schneller heraus.'],
+          explanation: 'Kontinuitätsgleichung: A₁·v₁ = A₂·v₂ → v₂ = A₁·v₁/A₂ = (5·20)/2500 = 100/2500 = 0,04 cm/s. Der Blutfluss in den Kapillaren ist 500-mal langsamer als in der Aorta! Diese extrem geringe Kapillarströmungsgeschwindigkeit ist physiologisch essenziell: Sie ermöglicht ausreichend Zeit für den Diffusionsaustausch von O₂, CO₂, Glukose und Metaboliten zwischen Blut und Gewebe. Würde das Blut schneller fließen, wäre der Diffusionsaustausch unvollständig.',
+          hints: [
+            'Kontinuitätsgleichung: A₁·v₁ = A₂·v₂. Löse nach v₂ auf.',
+            'v₂ = (A₁/A₂) · v₁ = (5/2500) · 20 cm/s.',
+          ],
           difficulty: 2,
           tags: [],
         },
         {
-          question: 'Was beschreibt das Archimedische Prinzip?',
+          question: 'Welche Aussage zur Bernoulli-Gleichung ist KORREKT?',
           options: [
-            'Die Kraft auf eine schwimmende Kugel proportional zu ihrem Gewicht',
-            'Die Auftriebskraft auf einen eingetauchten Körper gleich dem Gewicht der verdrängten Flüssigkeit',
-            'Den Druckverlauf in einer strömenden Flüssigkeit',
-            'Die Abhängigkeit des Drucks von der Tiefe',
-            'Das Gleichgewicht zwischen Druck und Auftrieb an der Wasseroberfläche',
+            'A) An engen Stellen eines Gefäßes steigt der Druck an.',
+            'B) An engen Stellen eines Gefäßes sinkt der Druck (bei steigender Geschwindigkeit).',
+            'C) Die Bernoulli-Gleichung gilt nur für turbulente Strömungen.',
+            'D) Die Bernoulli-Gleichung ignoriert die Strömungsgeschwindigkeit.',
+            'E) Hohe Viskosität ist Voraussetzung für die Bernoulli-Gleichung.',
           ],
           correctIndex: 1,
-          explanation: 'Das Archimedische Prinzip: F_A = ρ_Fluid·g·V_verdrängt = Gewichtskraft der verdrängten Flüssigkeitsmenge. Ein Körper schwimmt, wenn F_A ist größer oder gleich F_Gewicht, also wenn seine mittlere Dichte kleiner als die des Fluids ist. Medizinisch: Eine luftgefüllte Lunge schwimmt im Wasser (relevant in der Forensik für Ertrinkungsfälle).',
-          hints: ['Auftrieb = Gewicht der verdrängten Flüssigkeit — nicht des Körpers.', 'V_verdrängt ist das eingetauchte Volumen, nicht unbedingt das gesamte Körpervolumen.'],
-          difficulty: 1,
+          explanation: 'Die Bernoulli-Gleichung (½ρv² + ρgh + p = const) ist der Energieerhaltungssatz für ideale (reibungsfreie, inkompressible) Strömungen. Da die Summe konstant ist: Wenn v steigt (enge Stelle), muss p sinken. Dieser Venturi-Effekt ist medizinisch bedeutsam: An einer Arterienstenose steigt v → p fällt poststenotisch → das Gefäß könnte kollabieren. Die Bernoulli-Gleichung gilt idealisiert für reibungsfreie Strömungen — Reibungseffekte werden im Poiseuille-Gesetz berücksichtigt.',
+          hints: [
+            'Bernoulli: Wenn ein Term steigt, müssen andere sinken (Summe = const).',
+            'Engere Stelle → höhere Geschwindigkeit (Kontinuität) → nach Bernoulli muss der Druck sinken.',
+          ],
+          difficulty: 2,
           tags: [],
         },
         {
-          question: 'Welche Aussage zur Viskosität des Blutes ist korrekt?',
+          question: 'Ein Koronargefäß wird auf 1/3 seines ursprünglichen Radius verengt. Auf welchen Bruchteil sinkt der Volumenstrom (nach Poiseuille, bei gleichem Δp)?',
           options: [
-            'Blutviskosität ist unabhängig vom Hämatokrit',
-            'Eine höhere Viskosität erhöht laut Hagen-Poiseuille den Blutfluss',
-            'Blutviskosität liegt bei 3–4 mPa·s und hängt stark vom Hämatokrit ab',
-            'Blutviskosität ist identisch mit der von Wasser (1 mPa·s)',
-            'Viskosität hat keinen Einfluss auf den Gefäßwiderstand',
+            'A) 1/3',
+            'B) 1/9',
+            'C) 1/27',
+            'D) 1/81',
+            'E) 1/243',
           ],
-          correctIndex: 2,
-          explanation: 'Blut hat eine höhere Viskosität als Wasser (3–4 mPa·s vs. 1 mPa·s), hauptsächlich wegen der Erythrozyten. Der Hämatokrit (Volumenanteil der Erythrozyten) ist der wichtigste Bestimmungsfaktor der Blutviskosität. Bei Polyzythämie (Hkt > 55%) steigt die Viskosität stark an, erhöht den Gefäßwiderstand (R steigt mit η nach Hagen-Poiseuille) und belastet das Herz.',
-          hints: ['Hagen-Poiseuille: R = 8·η·L/(π·r⁴) — R steigt mit η.', 'Erythrozyten machen Blut zähflüssiger als reines Wasser.'],
+          correctIndex: 3,
+          explanation: 'Poiseuille: Q ~ r⁴. Q_neu/Q_alt = (r_neu/r_alt)⁴ = (1/3)⁴ = 1/81 ≈ 1,2 % des ursprünglichen Flusses. Eine Drittelung des Radius reduziert den Blutfluss auf weniger als 2 % des Normalflusses! Das ist unter Ruhe-Sauerstoffbedarf — das Myokard wäre komplett ischämisch. In der klinischen Praxis versucht der Körper durch Druckerhöhung (Hypertension) gegenzusteuern, was die kardiale Arbeit massiv steigert und einen Teufelskreis initiiert.',
+          hints: [
+            'Poiseuille: Q ~ r⁴. Wenn r auf 1/3 schrumpft, wird Q zu (1/3)⁴.',
+            '(1/3)⁴ = 1/(3⁴) = 1/81.',
+          ],
+          difficulty: 3,
+          tags: [],
+        },
+        {
+          question: 'Was ist der hydrostatische Druck in einem Blutgefäß 1,5 m unterhalb des Herzens (ρ_Blut = 1050 kg/m³, g = 10 m/s²)?',
+          options: [
+            'A) 105 Pa',
+            'B) 1050 Pa',
+            'C) 10500 Pa',
+            'D) 15750 Pa',
+            'E) 105000 Pa',
+          ],
+          correctIndex: 3,
+          explanation: 'Hydrostatischer Druck: p = ρ·g·h = 1050 · 10 · 1,5 = 15750 Pa = 15,75 kPa. Umrechnung in mmHg: 15750/133 ≈ 118 mmHg. Das bedeutet: In den Fußvenen eines stehenden Menschen liegt der Blutdruck bei systolisch 120 + 118 ≈ 238 mmHg! Das erklärt das Krampfaderproblem (Veneninsuffizienz bei Stehenden), das Ödemrisiko in den Beinen und warum venöse Ulzera vorwiegend am Unterschenkel auftreten.',
+          hints: [
+            'Hydrostatischer Druck: p = ρ·g·h. Alle Einheiten SI: kg/m³, m/s², m → Pa.',
+            '1050 · 10 · 1,5 = ?',
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+        {
+          question: 'Welche Aussage zur Reynolds-Zahl ist KORREKT?',
+          options: [
+            'A) Re > 4000 beschreibt laminare Strömung ohne Wirbel.',
+            'B) Re < 2300 beschreibt laminare Strömung; Re > 4000 turbulente Strömung.',
+            'C) Die Reynolds-Zahl ist dimensionsbehaftet (Einheit: Pa).',
+            'D) Turbulente Strömung ist leiser als laminare Strömung.',
+            'E) Eine hohe Viskosität erhöht die Reynolds-Zahl.',
+          ],
+          correctIndex: 1,
+          explanation: 'Die Reynolds-Zahl Re = ρ·v·d/η ist dimensionslos. Re < 2300: laminare Strömung (Schichtströmung, geordnet, kein Vermischen, energieeffizient, geräuscharm). Re > 4000: turbulente Strömung (Wirbelbildung, Energieverlust, Geräuscherzeugung). Klinisch: Herzgeräusche entstehen durch Turbulenzen an verengten Herzklappen oder Septumdefekten. Eine hohe Viskosität η steht im Nenner — erhöhte Viskosität senkt Re (begünstigt Laminarströmung).',
+          hints: [
+            'Re = ρvd/η. Der Nenner ist η (Viskosität) — größeres η → kleineres Re → laminarer.',
+            'Laminar bei Re < 2300, turbulent bei Re > 4000. Turbulenz → Geräusche.',
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+        {
+          question: 'Ein Taucher befindet sich auf 10 m Tiefe (ρ_Wasser = 1000 kg/m³, g = 10 m/s², p_atm = 100000 Pa). Wie groß ist der Gesamtdruck auf ihn?',
+          options: [
+            'A) 10000 Pa',
+            'B) 100000 Pa',
+            'C) 110000 Pa',
+            'D) 200000 Pa',
+            'E) 1000000 Pa',
+          ],
+          correctIndex: 3,
+          explanation: 'Gesamtdruck = Atmosphärendruck + hydrostatischer Druck = p_atm + ρ·g·h = 100000 + 1000·10·10 = 100000 + 100000 = 200000 Pa = 2 bar. Pro 10 m Tauchtiefe kommt 1 bar Druck hinzu. Bei 10 m Tiefe hat sich der absolute Druck verdoppelt. Das ist relevant für das Boyle-Mariotte-Gesetz: Luft in der Lunge komprimiert sich auf die Hälfte des Volumens. Beim Auftauchen muss diese Kompression durch Ausatmen ausgeglichen werden — sonst Barotrauma.',
+          hints: [
+            'Gesamtdruck = p_atm + ρgh. Beide Anteile addieren sich.',
+            'Hydrostatischer Anteil: 1000 · 10 · 10 = 100000 Pa = 1 bar.',
+          ],
           difficulty: 2,
           tags: [],
         },
@@ -327,110 +664,211 @@ Das Hagen-Poiseuille-Gesetz beschreibt den Volumenstrom durch ein zylindrisches 
     {
       id: 'ph-2-04',
       title: 'Gravitation und Rotation',
-      content: `Die Gravitation ist eine der vier fundamentalen Wechselwirkungen in der Natur und die erste, die mathematisch präzise beschrieben wurde. Newtons Gravitationsgesetz lautet: F = G·m₁·m₂/r², wobei G = 6,674 × 10⁻¹¹ N·m²/kg² die Gravitationskonstante ist. Jede Masse zieht jede andere Masse an — die Kraft nimmt quadratisch mit dem Abstand ab (Abstandsquadratgesetz) und ist proportional zum Produkt der Massen.
+      content: `## Gravitation und Rotation
 
-Die Erdbeschleunigung g ergibt sich aus dem Gravitationsgesetz: g = G·M_Erde/R_Erde² ≈ 9,81 m/s². Auf der Erdoberfläche ist g praktisch konstant, variiert aber mit Höhe und geografischer Breite leicht. Auf dem Mond beträgt g_Mond ≈ 1,62 m/s² (ca. g/6), auf Mars g_Mars ≈ 3,72 m/s². Die Kenntnis von g ist fundamentale Voraussetzung für alle Fallberechnungen, Druckmessungen und biomechanischen Analysen.
+Gravitation und Rotation sind zwei der fundamentalsten Phänomene der Physik. Die Gravitation beschreibt die Anziehungskraft zwischen Massen, Rotation beschreibt die Kreisbewegung und die damit verbundenen Beschleunigungen und Kräfte. Beide sind in der Medizin präsent: von der Erdanziehung auf den menschlichen Körper (Blutverteilung, orthopädische Belastung) bis zur Zentrifugation in der Labormedizin.
 
-Das Gravitationspotenzial φ = −G·M/r ist die potenzielle Energie pro Einheitsmasse. Je tiefer man sich in einem Gravitationsfeld befindet, desto negativer das Potential — Energie muss aufgewandt werden, um aus einem Gravitationsfeld zu entkommen (Fluchtgeschwindigkeit). Im medizinischen Alltag: Die potenzielle Energie E_pot = mgh wird bei der Berechnung von Sturzfolgen und bei der Auslegung von medizinischen Geräten (z.B. Infusionsständer) benötigt.
+## Newtonsches Gravitationsgesetz
 
-Drehmoment M = F·r·sin(α) beschreibt die Drehwirkung einer Kraft auf einen Körper. Das Hebelgesetz: F₁·r₁ = F₂·r₂ (Gleichgewicht). Ein langer Hebel erhöht die Wirkung einer kleinen Kraft. Im Körper sind Muskeln, Knochen und Gelenke als Hebelsysteme organisiert. Der Bizeps insertiert nahe am Ellenbogengelenk (kurzer Hebelarm), während die Last an der Hand einen langen Hebelarm hat. Das macht Muskeln mechanisch ineffizient (Kraft >> Last), ermöglicht aber große Bewegungsgeschwindigkeiten.
+Isaac Newton erkannte, dass dieselbe Kraft, die einen Apfel fallen lässt, auch den Mond auf seiner Bahn hält. Das Gravitationsgesetz: F_G = G · (m₁ · m₂)/r², wobei G = 6,674·10⁻¹¹ N·m²/kg² die Gravitationskonstante ist. Die Gravitationskraft ist proportional zu beiden Massen und nimmt mit dem Quadrat des Abstands ab (Abstandsquadratgesetz). Auf der Erdoberfläche vereinfacht sich die Formel: F_G = m·g, wobei g = G·M_Erde/r_Erde² ≈ 9,81 m/s².
 
-Die Rotationsenergie E_rot = ½·I·ω² (analog zu E_kin = ½mv²) hängt vom Trägheitsmoment I = Σmᵢrᵢ² ab. I ist das Rotationsäquivalent der trägen Masse: Es beschreibt, wie schwer ein Körper rotationsmäßig zu beschleunigen ist. Je weiter die Masse vom Rotationszentrum entfernt ist, desto größer I. Eine Hohlkugel hat höheres I als eine Vollkugel gleicher Masse. Der Drehimpuls L = I·ω ist beim kreisenden Eiskunstläufer konstant: Zieht er die Arme an (I kleiner), dreht er schneller (ω größer).
+**Gewichtskraft vs. Masse:** Masse m ist eine unveränderliche Eigenschaft des Körpers (Menge der Materie). Gewichtskraft F_G = m·g ist die Gravitationskraft auf der Erde. Auf dem Mond (g_Mond ≈ 1,62 m/s²) wiegt derselbe Körper nur 1/6 seines Erdgewichts. In der Schwerelosigkeit (Raumstation, freier Fall) ist F_G = 0 — der Körper ist gewichtslos, aber seine Masse bleibt gleich.
 
-Im Skelett wirken Muskeln oft mit kurzen Hebelarmen (nahe dem Gelenk): Der Patellarsehnenreflex nutzt den kurzen Hebelarm des Quadrizeps am Tibiatuberkel. Das Hüftgelenk trägt beim einbeinigen Stehen eine Kraft, die etwa 3-fach größer als das Körpergewicht ist — berechnet aus dem Kräftegleichgewicht der Drehmomente. Dies erklärt, warum Hüftgelenke bei gleicher Belastung wie beim Gehen langfristig verschleißen.`,
+**Keplersche Gesetze:** (1) Planeten bewegen sich auf Ellipsen mit der Sonne im Brennpunkt. (2) Der Fahrstrahl überstreicht in gleichen Zeiten gleiche Flächen — das folgt aus der Drehimpulserhaltung. (3) Das Quadrat der Umlaufzeit ist proportional zur dritten Potenz der großen Halbachse: T² ~ a³. Diese Gesetze gelten analog für Satelliten und ermöglichen die Berechnung von GPS-Satellitenbahnen.
+
+## Kreisbewegung und Zentripetalbeschleunigung
+
+Gleichförmige Kreisbewegung bedeutet konstante Bahngeschwindigkeit v bei sich ständig ändernder Richtung. Die Zentripetalbeschleunigung zeigt immer zur Kreismitte: a_z = v²/r = ω²·r (ω = Winkelgeschwindigkeit in rad/s). Die Zentripetalkraft F_z = m·a_z = m·v²/r = m·ω²·r muss durch eine reale Kraft bereitgestellt werden (Gravitation bei Planeten, Normalkraft auf einer Kurve, Seilspannung).
+
+Wichtige Beziehungen: Umlaufzeit T = 2π/ω. Frequenz f = 1/T. Bahngeschwindigkeit v = ω·r = 2πr/T.
+
+**Scheinkräfte bei Rotation:** Im rotierenden Bezugssystem wirken Scheinkräfte (Trägheitskräfte): Zentrifugalkraft F_cf = m·ω²·r (nach außen gerichtet) und Corioliskraft (bei Bewegungen im rotierenden System).
+
+## Labormedizin: Zentrifugation
+
+Die Zentrifuge nutzt die Zentrifugalkraft zur Trennung von Blutbestandteilen. Bei r = 10 cm und ω = 300 rad/s berechnet sich die Zentrifugalbeschleunigung: a = ω²·r = 90000 · 0,1 = 9000 m/s² ≈ 918 g. In diesem Feld sedimentieren Erythrozyten (dichteste Komponente), dann Leukozyten und Thrombozyten (Buffy coat), dann Plasma (hellgelb) von unten nach oben. Der Hämatokrit wird durch Mikrohämatokrit-Zentrifugation bestimmt.
+
+**Relative Zentrifugalbeschleunigung (RCF):** RCF = (ω²·r)/g. Gängige Vereinfachung: RCF = 1,118 · 10⁻⁵ · n² · r (mit n in rpm und r in mm).
+
+## Rotation des menschlichen Körpers: Biomechanik
+
+Das Trägheitsmoment I = Σmᵢ·rᵢ² (Einheit: kg·m²) ist das rotatorische Analogon zur Masse. Es hängt nicht nur von der Masse ab, sondern auch davon, wie weit die Masse von der Drehachse entfernt ist. Ausgestreckte Arme erhöhen I erheblich — daher drehen Eiskunstläufer mit angezogenen Armen schneller (Drehimpulserhaltung).
+
+**Winkelkinematik:** ω = ω₀ + α·t und θ = θ₀ + ω₀·t + ½·α·t² (mit Winkelbeschleunigung α). Das Drehmoment M = I·α ist das rotatorische Analogon zu F = m·a.
+
+**Stabilität und Gleichgewicht:** Ein Körper ist im stabilen Gleichgewicht, wenn sein Schwerpunkt möglichst tief liegt und die Standfläche groß ist. Das Gleichgewichtskriterium: Die senkrechte Projektion des Schwerpunkts muss innerhalb der Standfläche liegen. Ältere Menschen mit hohem Schwerpunkt und schmaler Standfläche sind sturzgefährdeter.`,
       lernziele: [
-        'Newtonsches Gravitationsgesetz und Erdbeschleunigung herleiten',
-        'Drehmoment, Hebelgesetz und Gleichgewichtsbedingungen anwenden',
-        'Trägheitsmoment und Rotationsenergie berechnen',
-        'Biomechanische Hebelwirkungen im Skelett analysieren',
+        'Das Newtonsche Gravitationsgesetz anwenden und zwischen Masse und Gewichtskraft unterscheiden',
+        'Zentripetalbeschleunigung und Zentripetalkraft für gleichförmige Kreisbewegungen berechnen',
+        'Das Prinzip der Zentrifugation und die relative Zentrifugalbeschleunigung (RCF) erklären',
+        'Trägheitsmoment und Drehimpulserhaltung auf biologische Rotationsbewegungen anwenden',
+        'Die Bedingungen für stabiles Gleichgewicht des menschlichen Körpers erläutern',
       ],
       sections: [
         {
-          heading: 'Gravitation und Gravitationspotenzial',
-          text: 'F_Grav = G·m₁·m₂/r² mit G = 6,674 × 10⁻¹¹ N·m²/kg². Erdbeschleunigung: g = G·M_Erde/R_Erde² = 9,81 m/s² (auf Meereshöhe). Auf dem Mond: g_Mond ≈ g/6 = 1,62 m/s² — Gewichtskraft fällt auf 1/6. Gravitationspotenzial: φ = −G·M/r [J/kg]; potenzielle Energie: E_pot = m·φ = −G·m·M/r. Klinisch relevant: Sturzhöhe berechnen (E_pot = mgh), Infusionsdruck (Infusionsbeutel muss höher als Patient hängen).',
-          merksatz: 'g = G·M/r² ≈ 9,81 m/s² auf Erdoberfläche; auf Mond ≈ 1,62 m/s²',
+          heading: 'Gravitation: Universalgesetz und Erdanziehung',
+          text: 'F_G = G·m₁·m₂/r² — Gravitation wirkt zwischen allen Massen, nimmt mit dem Quadrat des Abstands ab. Auf der Erdoberfläche: F_G = m·g mit g ≈ 9,81 m/s². Wichtig: Masse (unveränderlich, kg) ≠ Gewicht (kraftabhängig, N). In der Schwerelosigkeit (ISS) ist F_G ≈ 0 — Muskeln und Knochen atrophieren durch fehlende mechanische Belastung (Osteoporose im Weltraum). Medizinisch relevant: Orthostase (Aufstehen) erfordert Gegenregulation gegen den hydrostatischen Blutdruck-Abfall.',
+          merksatz: 'F_G = m·g auf der Erdoberfläche. Gewicht ist eine Kraft (N), Masse ist eine Materieeigenschaft (kg). Im Weltraum: Masse bleibt, Gewicht → 0.',
         },
         {
-          heading: 'Drehmoment und Hebelgesetz',
-          text: 'Drehmoment M = F·r·sin(α) [N·m]; r = Hebelarm (senkrechter Abstand Kraftlinie–Drehpunkt). Gleichgewicht: ΣM = 0 → F₁·r₁ = F₂·r₂. Menschliche Biomechanik als Hebelsystem: Bizeps (Insertion ≈ 5 cm vom Ellenbogen) trägt Last an Hand (≈ 35 cm). Übersetzung: 35/5 = 7 — Muskel muss 7-fache Kraft der Last aufbringen! Dafür: Geschwindigkeit der Hand ist 7-fach höher als Muskelverkürzung.',
+          heading: 'Zentripetalkraft und Kreisbewegung',
+          text: 'Gleichförmige Kreisbewegung: v = ω·r = 2πr/T. Zentripetalbeschleunigung: a_z = v²/r = ω²·r. Zentripetalkraft: F_z = m·v²/r — sie zeigt immer zur Kreismitte und wird durch eine reale Kraft bereitgestellt (Reibung, Gravitation, Seilspannung). In der Zentrifuge: a_z = ω²·r kann Hunderte bis Tausende von g erreichen und trennt Substanzen nach Dichte.',
+          merksatz: 'a_z = v²/r = ω²·r. Zentripetalkraft zeigt zur Mitte — sie ist keine Scheinkraft, sondern eine reale Kraft!',
         },
         {
-          heading: 'Rotationsenergie und Trägheitsmoment',
-          text: 'Trägheitsmoment I = Σmᵢ·rᵢ² [kg·m²]. Für spezielle Körper: Vollzylinder I = ½mR², Vollkugel I = 2/5 mR², Hohlzylinder I = mR². Rotationsenergie E_rot = ½·I·ω². Drehimpuls L = I·ω = const (ohne äußeres Drehmoment). Eiskunstläuferin mit ausgestreckten Armen: I groß → ω klein. Arme angelegt: I klein → ω groß (schnellere Drehung). Anwendung: Gyroeffekt, Herzrotation bei Systole.',
+          heading: 'Zentrifuge in der Labormedizin',
+          text: 'Die Zentrifuge trennt Blutbestandteile durch die RCF: RCF = ω²·r/g. Typische Vollblutaufarbeitung: 300–500 × g für 10 min → Plasma (oben), Buffy coat (Leukozyten + Thrombozyten, Mitte), Erythrozyten (unten). Für Serumgewinnung: 1000–2000 × g. Für DNA-Aufreinigung: Dichtegradientenzentrifugation mit CsCl bei 100.000 × g (Ultrazentrifuge).',
+          merksatz: 'RCF = ω²·r/g. Höheres RCF → schnellere Sedimentation dichter Teilchen. 1 × g = Erdbeschleunigung = 9,81 m/s².',
         },
       ],
       merksätze: [
-        'Hebelgesetz: F₁·r₁ = F₂·r₂; Muskeln haben kurze Hebelarme → hohe Kraft, kurze Längenänderung',
-        'Drehimpulserhaltung: I·ω = const — Arme anziehen → schneller drehen',
-        'F_Grav = G·m₁·m₂/r² — Abstandsquadratgesetz',
+        'F_G = G·m₁·m₂/r². Abstandsquadratgesetz: Doppelter Abstand → viermal kleinere Kraft.',
+        'g = 9,81 m/s² ≈ 10 m/s² auf der Erdoberfläche. Auf dem Mond: g_M ≈ 1,62 m/s².',
+        'Gewichtskraft F_G = m·g (Newton). Masse m (Kilogramm). Nicht verwechseln!',
+        'Zentripetalbeschleunigung a_z = v²/r = ω²·r. Zeigt zur Kreismitte.',
+        'Zentripetalkraft F_z = m·ω²·r — sie ist real, keine Scheinkraft.',
+        'ω (Winkelgeschwindigkeit) in rad/s. v = ω·r. T = 2π/ω. f = 1/T.',
+        'Trägheitsmoment I = Σmᵢ·rᵢ². Masse fern von der Achse → großes I.',
+        'Drehimpuls L = I·ω = const (ohne äußere Drehmomente).',
+        'Stabiles Gleichgewicht: Schwerpunkt tief, Standfläche groß, Projektion des SP innerhalb der Standfläche.',
+        'Zentrifuge: RCF = ω²·r/g. 3000 rpm, r = 10 cm → RCF ≈ 1000 g.',
       ],
       altfrage: {
-        question: 'Ein Mensch (70 kg) trägt eine Aktentasche (10 kg) in der rechten Hand. Das Hüftgelenk ist der Drehpunkt. Der Hebelarm der Tasche (rechts) beträgt 30 cm, der Hebelarm der Abduktoren (links) beträgt 8 cm. Welche Kraft müssen die Hüftabduktoren aufbringen, um das Gleichgewicht zu halten?',
-        answer: 'Drehmoment der Tasche: M_T = 10 × 9,81 × 0,30 = 29,4 N·m. Gleichgewicht: F_Abduktor × 0,08 = 29,4 N·m → F_Abduktor = 29,4/0,08 = 367,5 N ≈ 37,5 kg-Äquivalent. Zum Vergleich: 10 kg Tasche erzeugt 368 N Abduktorenkraft — wegen des unvorteilhaften Hebelarms. Genau deshalb schont man das Hüftgelenk, indem man auf der betroffenen Seite einen Stock trägt (verlängert Hebelarm der Stützseite).',
+        question: 'Erklären Sie das Prinzip der Laborzentrifuge, leiten Sie die Formel für die relative Zentrifugalbeschleunigung (RCF) her und erläutern Sie, wie Blut durch differentielle Zentrifugation in seine Bestandteile getrennt wird.',
+        answer: `Eine Zentrifuge dreht Probenröhrchen mit hoher Winkelgeschwindigkeit ω um eine zentrale Achse. Auf jedes Teilchen der Masse m im Abstand r von der Drehachse wirkt eine Zentripetalbeschleunigung a_z = ω²·r (im Laborsystem) bzw. eine Zentrifugalkraft F_cf = m·ω²·r (im mitrotierenden System, nach außen). Schwerere und dichtere Teilchen erfahren eine größere Kraft und sedimentieren schneller nach außen (zum Boden des Röhrchens).
+
+Herleitung der RCF: Die Zentrifugalbeschleunigung a_cf = ω²·r wird auf die Erdbeschleunigung g normiert: RCF = a_cf/g = ω²·r/g. Mit ω = 2πn (n = Umdrehungen/Sekunde): RCF = 4π²·n²·r/g. Praktisch: Bei n = 3000 rpm = 50 U/s und r = 0,1 m: RCF = 4π²·2500·0,1/9,81 ≈ 1005 g.
+
+Differentielle Bluttrennung: Vollblut enthält Bestandteile unterschiedlicher Dichte und Größe. Bei 300–500 × g (10 min): Erythrozyten (Dichte ca. 1,10 g/ml) sedimentieren nach unten; Leukozyten und Thrombozyten (Dichte ca. 1,04–1,07 g/ml) bilden den Buffy coat; Plasma (Dichte ca. 1,025 g/ml) bleibt oben. Bei höheren RCF (1000–2000 × g) sedimentieren auch Thrombozyten. Für Thrombozyten-Konzentrate: Niedertourige Zentrifugation (200 × g) trennt zunächst Erythrozyten ab, dann hochtourig (1000 × g) pelletiert die Thrombozyten.
+
+Ultrazentrifugation (100.000–500.000 × g): Trennt Lipoproteine (LDL, HDL nach Dichte), Zellorganellen, Ribosomen und sogar Makromoleküle. Dichtegradientenzentrifugation in CsCl oder Saccharose ermöglicht die Isopyknische Trennung — jede Substanz wandert in ihre charakteristische Gleichgewichtsdichte.`,
       },
-      klinischerBezug: 'In der Orthopädie sind Hebelgesetze allgegenwärtig. Das Kniegelenk beim Sitzen: Der Quadrizeps (Streckmuskel) wirkt mit einem kurzen Hebelarm (Patella) gegen die Gravitation, die am langen Unterschenkel-Hebelarm zieht. Bei 90° Knieflexion müssen die Strecksehnen das Vielfache des Unterschenkelgewichts aufbringen. Das erklärt, warum Treppensteigen für Kniepatienten schmerzhaft ist. Hüfttotalendoprothesen müssen diese Hebelkräfte (bis zu 3–4 × Körpergewicht beim Gehen) langfristig standhalten.',
+      klinischerBezug: 'Die Zentrifugation ist ein zentrales labormedizinisches Werkzeug: Vollblut-Zentrifugation trennt Plasma, Buffy coat und Erythrozyten für Blutbild, Gerinnung und Serumanalyse. Bei der Orthostase (Aufstehen aus dem Liegen) muss das kardiovaskuläre System den hydrostatischen Druckabfall von ca. 18 mmHg kompensieren — bei Versagen: orthostatische Hypotonie mit Synkope. Langfristige Schwerelosigkeit (Astronauten, ISS) führt zu Knochendemineralisierung (ca. 1–2 % Knochenmasse/Monat) und Muskelatrophie durch fehlende Gravitationsbelastung, was neue Therapieansätze für Osteoporose und Immobilisierungssyndrome inspiriert.',
       selfTest: [
         {
-          question: 'Auf dem Mars beträgt g_Mars ≈ 3,72 m/s². Wie viel würde eine 70 kg-Person auf dem Mars wiegen?',
-          options: ['70 N', '260 N', '686 N', '3720 N', '189 N'],
-          correctIndex: 1,
-          explanation: 'Gewichtskraft F_G = m·g_Mars = 70 kg × 3,72 m/s² = 260,4 N. Zum Vergleich: Auf der Erde wiegt dieselbe Person 70 × 9,81 = 686,7 N. Auf dem Mars wäre man also etwa 38% des Erdgewichts. Masse bleibt immer 70 kg — Gewicht ist ortsabhängig.',
-          hints: ['F_G = m·g — verwende g_Mars = 3,72 m/s², nicht 9,81.', 'Gewicht (N) ist nicht dasselbe wie Masse (kg).'],
+          question: 'Eine Laborzentrifuge dreht mit 3000 rpm (Umdrehungen/Minute) und hat einen Radius von 10 cm. Wie groß ist die Zentripetalbeschleunigung in Einheiten von g (g = 10 m/s²)?',
+          options: [
+            'A) 30 g',
+            'B) 100 g',
+            'C) 300 g',
+            'D) 1000 g',
+            'E) 3000 g',
+          ],
+          correctIndex: 3,
+          explanation: 'ω = 3000 rpm = 3000/60 U/s = 50 U/s = 50 · 2π rad/s ≈ 314 rad/s. a_z = ω²·r = 314² · 0,1 = 98596 · 0,1 ≈ 9860 m/s². RCF = 9860/10 ≈ 986 g ≈ 1000 g. Vereinfachte Formel: RCF ≈ (n/1000)² · r_cm · 112 = (3)² · 10 · 11,2 ≈ 1008 g. Klinische Relevanz: Bei 1000 g sedimentieren Erythrozyten vollständig innerhalb von 5–10 min. Leukozyten und Thrombozyten benötigen höhere RCF oder längere Zeit.',
+          hints: [
+            'Erst ω umrechnen: rpm → rad/s: ω = 3000/60 · 2π ≈ 314 rad/s.',
+            'a_z = ω²·r. Dann RCF = a_z / g (mit g = 10 m/s²).',
+          ],
+          difficulty: 3,
+          tags: [],
+        },
+        {
+          question: 'Welche Kraft hält einen Satelliten auf seiner Kreisbahn um die Erde?',
+          options: [
+            'A) Zentrifugalkraft (Scheinkraft nach außen)',
+            'B) Trägheitskraft',
+            'C) Gravitationskraft (als Zentripetalkraft)',
+            'D) Magnetkraft der Erde',
+            'E) Der Satellit braucht keine Kraft — er bewegt sich im Vakuum kräftefrei.',
+          ],
+          correctIndex: 2,
+          explanation: 'Die Gravitationskraft der Erde liefert die notwendige Zentripetalkraft für die Kreisbahn: F_G = m·g(r) = m·v²/r. In der richtigen Höhe und Geschwindigkeit fällt der Satellit ständig um die Erde herum — er bewegt sich nicht kräftefrei (das widerspräche dem Trägheitsgesetz, das geradlinige Bewegung ohne Kraft vorhersagt). Die Zentrifugalkraft ist eine Scheinkraft im mitrotierenden Bezugssystem — sie existiert nicht im Inertialsystem der Erde.',
+          hints: [
+            'Im Inertialsystem (Erde) wirkt nur eine reale Kraft auf den Satelliten: die Gravitationskraft.',
+            'Zentrifugalkraft ist eine Scheinkraft im mitrotierenden System — sie ist keine reale Kraft.',
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+        {
+          question: 'Ein Autofahrer fährt mit v = 20 m/s durch eine Kurve mit Radius r = 50 m. Wie groß ist die Zentripetalbeschleunigung?',
+          options: [
+            'A) 2 m/s²',
+            'B) 4 m/s²',
+            'C) 8 m/s²',
+            'D) 16 m/s²',
+            'E) 400 m/s²',
+          ],
+          correctIndex: 2,
+          explanation: 'a_z = v²/r = (20)²/50 = 400/50 = 8 m/s² ≈ 0,82 g. Diese Beschleunigung wirkt zur Kurvenmitte und wird durch die Reibung zwischen Reifen und Fahrbahn bereitgestellt. Auf nasser Fahrbahn (geringer Reibkoeffizient μ ≈ 0,4) kann maximal a_max = μ·g = 0,4·10 = 4 m/s² durch Reibung erzeugt werden — bei 8 m/s² würde das Auto schleudern. Sicherheitsrelevant: Kurvenradius und Geschwindigkeit sind durch a_z = v²/r verknüpft — doppelte Geschwindigkeit erfordert viermal größeren Kurvenradius.',
+          hints: [
+            'Zentripetalbeschleunigung: a_z = v²/r.',
+            '20² = 400. 400/50 = 8 m/s².',
+          ],
           difficulty: 1,
           tags: [],
         },
         {
-          question: 'Ein Kind (25 kg) sitzt 2 m vom Drehpunkt einer Wippe entfernt. In welchem Abstand muss ein Erwachsener (75 kg) sitzen, um die Wippe ins Gleichgewicht zu bringen?',
-          options: ['0,33 m', '0,67 m', '1,0 m', '2,0 m', '6,0 m'],
-          correctIndex: 1,
-          explanation: 'Hebelgesetz: F₁·r₁ = F₂·r₂ → m₁·g·r₁ = m₂·g·r₂ → m₁·r₁ = m₂·r₂. 25 × 2 = 75 × r₂ → r₂ = 50/75 = 0,67 m. Der Erwachsene muss nur 0,67 m vom Drehpunkt sitzen — deutlich näher als das Kind, weil er schwerer ist.',
-          hints: ['Hebelgesetz: F₁·r₁ = F₂·r₂; g kürzt sich heraus.', 'r₂ = m₁·r₁/m₂ = 25×2/75 = ?'],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: 'Welche Aussage zum Trägheitsmoment I ist korrekt?',
+          question: 'Auf dem Mond (g_Mond = 1,6 m/s²) wiegt ein Astronaut 120 N. Wie groß ist seine Masse?',
           options: [
-            'I hängt nur von der Masse ab',
-            'I ist gleich der trägen Masse',
-            'I hängt von der Massenverteilung relativ zur Rotationsachse ab',
-            'I ist für alle Körper gleicher Masse identisch',
-            'I hat die Einheit kg/m²',
+            'A) 12 kg',
+            'B) 48 kg',
+            'C) 75 kg',
+            'D) 192 kg',
+            'E) 750 kg',
           ],
           correctIndex: 2,
-          explanation: 'Das Trägheitsmoment I = Σmᵢ·rᵢ² hängt sowohl von der Gesamtmasse als auch davon ab, wie diese Masse relativ zur Rotationsachse verteilt ist. Gleiche Masse weiter von der Achse entfernt → größeres I → schwerer zu beschleunigen. Eine Hohlscheibe hat größeres I als eine Vollscheibe gleicher Masse, weil die Masse weiter von der Achse entfernt ist.',
-          hints: ['I = Σm·r² — der Abstand r zur Rotationsachse geht quadratisch ein.', 'Eiskunstläuferin: Arme ausgestreckt → große r → großes I → langsame Rotation.'],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: 'Der Drehimpuls eines rotierenden Systems bleibt erhalten, wenn:',
-          options: [
-            'Die Energie konstant bleibt',
-            'Kein äußeres Drehmoment wirkt',
-            'Die Winkelgeschwindigkeit konstant bleibt',
-            'Die Masse konstant bleibt',
-            'Das Trägheitsmoment konstant bleibt',
+          explanation: 'F_G = m·g_Mond → m = F_G/g_Mond = 120 N / 1,6 m/s² = 75 kg. Zur Kontrolle: Auf der Erde würde dieser Astronaut wiegen F_G,Erde = 75·10 = 750 N ≈ 76 kg. Das Verhältnis: g_Mond/g_Erde = 1,6/10 = 0,16 ≈ 1/6 — auf dem Mond wiegt man ca. 1/6 seines Erdgewichts. Die Masse bleibt identisch (75 kg), denn sie ist eine intrinsische Eigenschaft des Körpers, unabhängig von g.',
+          hints: [
+            'F_G = m · g. Umstellen nach m: m = F_G / g_Mond.',
+            'm = 120 N / 1,6 m/s² = ?',
           ],
-          correctIndex: 1,
-          explanation: 'Der Drehimpuls L = I·ω bleibt erhalten, wenn kein äußeres Drehmoment auf das System wirkt — analog zur linearen Impulserhaltung (keine äußere Kraft). Wenn I sich ändert (z.B. durch Arme anziehen), ändert sich ω entsprechend, sodass L = I·ω konstant bleibt.',
-          hints: ['Analogie: Impuls bleibt erhalten wenn keine äußere Kraft → Drehimpuls wenn kein äußeres Drehmoment.', 'L = I·ω = const → wenn I kleiner, dann ω größer.'],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: 'Welche Aussage zur Gravitationskraft zwischen Erde und Mond ist korrekt?',
-          options: [
-            'Die Erde zieht den Mond stärker an als der Mond die Erde',
-            'Der Mond zieht die Erde stärker an als die Erde den Mond',
-            'Beide ziehen sich mit gleich großer Kraft an (actio=reactio)',
-            'Die Gravitation ist hier unerheblich, da der Mond zu weit entfernt ist',
-            'Die Kraft hängt nur von der Mondmasse ab',
-          ],
-          correctIndex: 2,
-          explanation: 'Nach dem dritten Newtonschen Gesetz (actio = reactio) und dem Gravitationsgesetz F = G·m₁·m₂/r² wirken Erde und Mond mit gleich großen Kräften aufeinander. Die Beschleunigungen sind unterschiedlich (a = F/m), weil die Massen verschieden sind — die Erde wird kaum merklich beschleunigt, der Mond stark.',
-          hints: ['F_Grav = G·m₁·m₂/r² — symmetrisch in m₁ und m₂.', 'Actio=Reactio: Kraft auf Mond durch Erde = Kraft auf Erde durch Mond.'],
           difficulty: 1,
+          tags: [],
+        },
+        {
+          question: 'Welche Bedingung muss für stabiles Gleichgewicht des menschlichen Körpers im Stand erfüllt sein?',
+          options: [
+            'A) Der Schwerpunkt muss möglichst hoch liegen.',
+            'B) Die Standfläche muss möglichst klein sein.',
+            'C) Die senkrechte Projektion des Schwerpunkts muss innerhalb der Standfläche liegen.',
+            'D) Der Körper muss symmetrisch belastet sein.',
+            'E) Das Trägheitsmoment muss maximal sein.',
+          ],
+          correctIndex: 2,
+          explanation: 'Stabiles Gleichgewicht erfordert, dass die senkrechte Projektion (Lot) des Schwerpunkts innerhalb der Standfläche liegt. Wenn das Lot außerhalb fällt, erzeugt die Gewichtskraft ein Kippmoment — der Körper fällt. Zusätzliche Stabilitätsfaktoren: (1) Tiefer Schwerpunkt (kleines Kippmoment bei Auslenkung), (2) Große Standfläche (toleriert größere Auslenkungen). Ältere Menschen mit reduzierter Muskelkraft und eingeschränkter Tiefensensibilität sind sturzgefährdet.',
+          hints: [
+            'Stell dir vor, du lehnst dich weit vor — wann fällst du um? Wenn das Lot deines Schwerpunkts vor die Zehen gerät.',
+            'Standfläche = Fläche zwischen den Füßen. Projektion des SP muss darin liegen.',
+          ],
+          difficulty: 2,
+          tags: [],
+        },
+        {
+          question: 'Ein Raumschiff umkreist die Erde in 400 km Höhe. Dort ist g ≈ 8,7 m/s². Mit welcher Geschwindigkeit umkreist es die Erde (Erdradius r_E = 6400 km)? Nutze: g = v²/r.',
+          options: [
+            'A) 2,9 km/s',
+            'B) 7,7 km/s',
+            'C) 11,2 km/s',
+            'D) 28,4 km/s',
+            'E) 40,0 km/s',
+          ],
+          correctIndex: 1,
+          explanation: 'r = r_E + h = 6400 + 400 = 6800 km = 6,8·10⁶ m. Zentripetalbeschleunigung = Gravitationsbeschleunigung: g = v²/r → v = √(g·r) = √(8,7 · 6,8·10⁶) = √(59,16·10⁶) ≈ 7692 m/s ≈ 7,7 km/s. Das ist die erste kosmische Geschwindigkeit in dieser Höhe. Die ISS umkreist die Erde mit ca. 7,7 km/s und benötigt ca. 90 min für einen Umlauf. Option C (11,2 km/s) wäre die zweite kosmische Geschwindigkeit (Fluchtgeschwindigkeit) von der Erdoberfläche.',
+          hints: [
+            'Gravitationskraft = Zentripetalkraft: m·g = m·v²/r → v = √(g·r).',
+            'Gesamtradius: r = 6400 + 400 = 6800 km = 6,8 × 10⁶ m.',
+          ],
+          difficulty: 3,
+          tags: [],
+        },
+        {
+          question: 'Welche Aussage zum Trägheitsmoment I ist KORREKT?',
+          options: [
+            'A) I ist eine Vektorgröße.',
+            'B) I hängt nur von der Masse ab, nicht von der Massenverteilung.',
+            'C) I ist das rotatorische Analogon zur Masse und hängt von der Massenverteilung um die Drehachse ab.',
+            'D) Kleineres I bedeutet langsamere Rotation bei konstantem Drehimpuls.',
+            'E) Das Trägheitsmoment ist in allen Situationen konstant.',
+          ],
+          correctIndex: 2,
+          explanation: 'Das Trägheitsmoment I = Σmᵢ·rᵢ² (Einheit: kg·m²) ist eine skalare Größe (kein Vektor). Es ist das rotatorische Pendant zur Masse und beschreibt den Widerstand gegen Winkelgeschwindigkeitsänderungen. Entscheidend: I hängt von der Massenverteilung um die Drehachse ab — je weiter die Masse von der Achse entfernt ist, desto größer I. Beim Eiskunstläufer: Ausgestreckte Arme → großes I → langsame Rotation; Arme angelegt → kleines I → schnelle Rotation (Drehimpulserhaltung: L = I·ω = const → kleines I → großes ω).',
+          hints: [
+            'I = Σm·r² — der Abstand r von der Drehachse geht quadratisch ein.',
+            'Bei L = I·ω = const: Wenn I kleiner wird, muss ω größer werden.',
+          ],
+          difficulty: 2,
           tags: [],
         },
       ],

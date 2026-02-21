@@ -2,439 +2,663 @@ import type { Kapitel } from '../types';
 
 export const mathKap6: Kapitel = {
   id: 'math-kap6',
-  title: 'Vektorrechnung',
+  title: "Vektorrechnung",
   subject: 'mathematik',
   icon: '➡️',
-  estimatedTime: '50 min',
+  estimatedTime: '60 min',
   unterkapitel: [
+    // ─────────────────────────────────────────────────────────────────
+    // UK ma-6-01: Vektoren — Grundbegriffe und Operationen
+    // ─────────────────────────────────────────────────────────────────
     {
       id: 'ma-6-01',
-      title: 'Vektoren — Darstellung, Addition und Subtraktion',
-      content: `# Vektoren — Darstellung, Addition und Subtraktion
+      title: "Vektoren — Grundbegriffe und Operationen",
+      content: `# Vektoren — Grundbegriffe und Operationen
 
-Ein Vektor ist eine mathematische Größe, die sowohl einen Betrag (Größe) als auch eine Richtung besitzt. Im Gegensatz dazu hat ein Skalar nur einen Betrag ohne Richtungsangabe. Temperatur (37°C), Masse (70 kg) und Zeit (5 s) sind Skalare. Kraft, Geschwindigkeit, Impuls und elektrisches Feld sind Vektoren — sie haben neben ihrer Stärke auch eine Richtung.
+Ein **Vektor** ist eine gerichtete Größe: Er besitzt sowohl einen **Betrag** (Länge) als auch eine **Richtung**. Im Gegensatz dazu ist ein **Skalar** eine reine Zahlgröße ohne Richtung (z. B. Temperatur, Masse). Vektoren werden grafisch als Pfeile dargestellt und algebraisch als Spaltenvektoren geschrieben:
 
-## Darstellung von Vektoren
+$$\\vec{a} = \\begin{pmatrix} a_1 \\\\ a_2 \\\\ a_3 \\end{pmatrix}$$
 
-Ein Vektor im dreidimensionalen Raum wird durch drei Komponenten dargestellt:
-v = (v₁, v₂, v₃) oder als Spaltenvektor
+Der Betrag eines Vektors ergibt sich aus dem verallgemeinerten Satz des Pythagoras im Raum:
 
-Die geometrische Bedeutung: v₁ ist die Verschiebung in x-Richtung, v₂ in y-Richtung, v₃ in z-Richtung.
+$$|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$$
 
-**Betrag (Länge) eines Vektors:**
-|v| = √(v₁² + v₂² + v₃²)
+## Vektoroperationen
 
-Das ist die dreidimensionale Erweiterung des Satzes des Pythagoras. Im 2D: |v| = √(v₁² + v₂²).
+**Addition** zweier Vektoren erfolgt komponentenweise: $\\vec{a} + \\vec{b} = (a_1+b_1,\\, a_2+b_2,\\, a_3+b_3)^\\top$. Geometrisch entspricht dies der **Parallelogrammregel**: Beide Vektoren werden am selben Ausgangspunkt angetragen, die Diagonale des Parallelogramms ist der Summenvektor (Resultierende).
 
-Beispiel: v = (3, 4, 0) hat Betrag |v| = √(9 + 16 + 0) = √25 = 5.
+**Subtraktion** $\\vec{a} - \\vec{b}$ ist äquivalent zur Addition von $\\vec{a}$ und $(-\\vec{b})$.
 
-## Skalar vs. Vektor — der fundamentale Unterschied
+**Skalare Multiplikation** $\\lambda \\cdot \\vec{v}$ streckt oder staucht den Vektor; für $\\lambda < 0$ kehrt sich die Richtung um.
 
-Masse ist ein Skalar: 70 kg. Gewichtskraft ist ein Vektor: F = (0, 0, −686 N) (nach unten, für 70 kg). Geschwindigkeit ist ein Vektor: Wenn man "80 km/h" sagt, meint man den Betrag; die Richtung muss explizit angegeben werden. In der Biomechanik sind Muskelkräfte Vektoren — ihre Richtung bestimmt, welche Bewegung ausgeführt wird.
+## Linearkombination und lineare Unabhängigkeit
 
-## Vektoraddition
+Eine **Linearkombination** mehrerer Vektoren ist eine Summe der Form $\\lambda_1 \\vec{v_1} + \\lambda_2 \\vec{v_2} + \\ldots$. Vektoren heißen **linear unabhängig**, wenn keiner von ihnen als Linearkombination der anderen darstellbar ist, d. h. $\\lambda_1 \\vec{v_1} + \\lambda_2 \\vec{v_2} = \\vec{0}$ nur für $\\lambda_1 = \\lambda_2 = 0$ gilt.
 
-Vektoren werden komponentenweise addiert:
-a + b = (a₁ + b₁, a₂ + b₂, a₃ + b₃)
+**Basisvektoren** spannen den gesamten Raum auf. Im $\\mathbb{R}^3$ bilden $\\vec{e_1}=(1,0,0)^\\top$, $\\vec{e_2}=(0,1,0)^\\top$, $\\vec{e_3}=(0,0,1)^\\top$ die Standardbasis. Jeder Vektor lässt sich eindeutig als Linearkombination dieser Basisvektoren schreiben.
 
-Geometrisch: Parallelogrammregel oder Pfeilkopf-an-Pfeilende-Methode (Tip-to-Tail). Der Summenvektor (Resultante) schließt das Parallelogramm.
+## Einheitsvektor
 
-Beispiel: a = (3, 1, 0), b = (1, 4, 0). a + b = (4, 5, 0). Betrag: |a + b| = √(16 + 25) = √41 ≈ 6,4.
+Der **Einheitsvektor** $\\hat{e}$ zeigt in dieselbe Richtung wie $\\vec{v}$, hat aber den Betrag 1:
 
-## Vektorsubtraktion
+$$\\hat{e} = \\frac{\\vec{v}}{|\\vec{v}|}$$
 
-a − b = a + (−b) = (a₁ − b₁, a₂ − b₂, a₃ − b₃)
+Einheitsvektoren geben reine Richtungsinformationen wieder und sind wichtig bei der Zerlegung von Kräften.
 
-Geometrisch: Man dreht b um und addiert. Der Differenzvektor zeigt von der Spitze von b zur Spitze von a (wenn beide vom gleichen Anfangspunkt starten).
+## Klinische Bedeutung
 
-## Skalarmultiplikation
-
-k · v = (k·v₁, k·v₂, k·v₃)
-
-Bei k > 0: Gleiche Richtung, k-fache Länge. Bei k < 0: Gegenrichtung, |k|-fache Länge. Bei k = 0: Nullvektor (0, 0, 0).
-
-Speziell: −v = (−v₁, −v₂, −v₃) zeigt in die Gegenrichtung.
-
-## Klinische Anwendungen
-
-In der Biomechanik werden Kräfte am Gelenk als Vektoren beschrieben. Das Hüftgelenk trägt beim Stand auf einem Bein das 2,5- bis 3-fache des Körpergewichts — das ist das Ergebnis der Vektoraddition aus Körpergewichtskraft und der Muskelkraft der Glutealmuskulatur. Ein Arzt muss verstehen, dass die "Kraft auf das Hüftgelenk" eine Vektorsumme ist, keine einfache Addition von Gewicht. Der Herzdipol im EKG ist ein Vektor, der die elektrische Aktivierungsrichtung des Herzens beschreibt — die Herzachse wird in Grad angegeben.`,
+Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** werden Muskelkräfte und Gelenkbelastungen als Vektoren zerlegt. Die resultierende Gelenkkraft ist die Vektorsumme aller angreifenden Kräfte. Im **EKG** wird die elektrische Herzachse als Summenvektor der Erregungsausbreitung dargestellt; der Cabrera-Kreis visualisiert diese Achse in der Frontalebene. Der **Blutfluss** in Gefäßen besitzt sowohl eine Geschwindigkeit (Betrag) als auch eine Fließrichtung und wird daher vektoriell beschrieben.`,
       lernziele: [
-        'Den Unterschied zwischen Skalar und Vektor erklären',
-        'Den Betrag eines Vektors berechnen',
-        'Vektoren addieren, subtrahieren und mit Skalaren multiplizieren',
-        'Die Parallelogrammregel geometrisch anwenden',
+        "Vektoren als gerichtete Größen definieren und von Skalaren abgrenzen können.",
+        "Addition, Subtraktion und skalare Multiplikation von Vektoren komponentenweise und geometrisch durchführen können.",
+        "Den Betrag eines Vektors im zwei- und dreidimensionalen Raum mit dem Satz des Pythagoras berechnen können.",
+        "Lineare Unabhängigkeit von Vektoren erklären und überprüfen können.",
+        "Den Einheitsvektor zu einem gegebenen Vektor bestimmen können.",
       ],
       sections: [
         {
-          heading: 'Skalar und Vektor — der fundamentale Unterschied',
-          text: 'Skalare haben nur einen Betrag: Temperatur (37°C), Masse (70 kg), Zeit (3 s), Energie (500 J). Vektoren haben Betrag und Richtung: Kraft (100 N nach rechts), Geschwindigkeit (80 km/h Nordost), Magnetfeld (2 T senkrecht zur Fläche). In der Physik ist es wichtig, den Unterschied zu kennen: F = m × a ist korrekt, aber F und a sind Vektoren, m ist ein Skalar. Ein Skalar multipliziert mit einem Vektor ergibt einen Vektor mit geändertem Betrag aber gleicher (oder entgegengesetzter) Richtung.',
-          merksatz: 'Skalare: nur Betrag (Zahl + Einheit). Vektoren: Betrag UND Richtung (Pfeil).',
+          heading: "Darstellung und Betrag von Vektoren",
+          text: "Ein Vektor wird als Spaltenvektor $(a_1, a_2, a_3)^\\top$ geschrieben. Sein Betrag ist $|\\vec{a}| = \\sqrt{a_1^2 + a_2^2 + a_3^2}$ (Pythagoras im Raum). Im 2D-Fall entfällt die dritte Komponente. Der Nullvektor $(0, 0, 0)^\\top$ hat Betrag 0 und keine definierte Richtung.",
+          merksatz: "Betrag = räumlicher Pythagoras: |v| = √(v₁² + v₂² + v₃²). Der Einheitsvektor ê = v/|v| hat stets Betrag 1.",
         },
         {
-          heading: 'Vektoren berechnen — Betrag und Komponenten',
-          text: 'Betrag |v| = √(v₁² + v₂² + v₃²) — dreidimensionaler Pythagoras. Für v = (1, 2, 2): |v| = √(1+4+4) = √9 = 3. Die Komponenten geben die "Anteile" in jeder Richtung an. Ein Kraftvektor F = (0, 0, −mg) = (0, 0, −686 N) für 70 kg bedeutet: keine Kraft in x- oder y-Richtung, nur nach unten (negatives z). Das ist die Gewichtskraft.',
+          heading: "Vektoroperationen und geometrische Interpretation",
+          text: "Addition komponentenweise: $(a_1+b_1, a_2+b_2)^\\top$. Geometrisch: Parallelogrammregel (Resultierende). Skalarmultiplikation $\\lambda \\cdot \\vec{v}$ streckt (|λ|>1), staucht (|λ|<1) oder spiegelt (λ<0) den Vektor. Zwei Vektoren sind **parallel**, wenn einer ein skalares Vielfaches des anderen ist: $\\vec{a} = k \\cdot \\vec{b}$.",
+          merksatz: "Parallelogrammregel: Die Diagonale ist der Summenvektor. Parallele Vektoren: a = k·b für ein k ≠ 0.",
         },
         {
-          heading: 'Addition und die Parallelogrammregel',
-          text: 'Komponentenweise Addition: (a₁+b₁, a₂+b₂, a₃+b₃). Geometrisch: Beide Vektoren vom gleichen Startpunkt zeichnen. Der Summenvektor ist die Diagonale des Parallelogramms. Alternativ: Tip-to-Tail (den zweiten Vektor am Ende des ersten beginnen). Der Summenvektor ist dann der Pfeil vom Anfang des ersten zum Ende des zweiten. Beide Methoden liefern dasselbe Ergebnis.',
+          heading: "Linearkombination, Basis und klinische Anwendung",
+          text: "Jeder Vektor im $\\mathbb{R}^3$ lässt sich als Linearkombination der drei Standardbasisvektoren eindeutig darstellen. In der Biomechanik wird eine Muskelkraft in ihre Komponenten entlang der Gelenk-Längsachse (Kompressionsanteil) und senkrecht dazu (Scherkraftanteil) zerlegt. Im EKG ergibt die Vektorsumme aller Herzaktionspotenziale den elektrischen Herzachsenvektor.",
+          merksatz: "Klinisch: Gelenkkraft = Vektorsumme aller Muskelkräfte. EKG-Herzachse = elektrischer Summenvektor der Erregung.",
         },
       ],
       merksätze: [
-        'Betrag: |v| = √(v₁²+v₂²+v₃²) — 3D-Pythagoras',
-        'Addition: (a₁+b₁, a₂+b₂, a₃+b₃) — komponentenweise',
-        'Skalarmultiplikation: k·v = (k·v₁, k·v₂, k·v₃); k<0 dreht Richtung um',
+        "Ein Vektor besitzt Betrag UND Richtung — ein Skalar nur einen Zahlenwert.",
+        "Betrag im Raum: |v| = √(v₁² + v₂² + v₃²) — verallgemeinerter Pythagoras.",
+        "Addition: komponentenweise; geometrisch Parallelogrammregel (Resultierende = Diagonale).",
+        "Skalare Multiplikation λ·v: λ > 1 streckt, 0 < λ < 1 staucht, λ < 0 dreht Richtung um.",
+        "Einheitsvektor ê = v/|v|: Betrag genau 1, zeigt die Richtung von v.",
+        "Linear unabhängig: Kein Vektor ist Linearkombination der anderen.",
+        "Standardbasis im ℝ³: e₁=(1,0,0), e₂=(0,1,0), e₃=(0,0,1) — spannen den Raum auf.",
+        "Parallele Vektoren: a = k·b für ein skalares k ≠ 0.",
+        "Biomechanik: Gelenkkraft = Vektorsumme aller angreifenden Muskelkräfte.",
+        "EKG-Herzachse: elektrischer Vektor der Erregungsausbreitung — darstellbar im Cabrera-Kreis.",
       ],
       altfrage: {
-        question: 'Ein Muskel übt eine Kraft F₁ = (3, 4, 0) N aus, ein zweiter F₂ = (−1, 2, 0) N. Wie groß ist die Resultante (Betrag der Summe)?',
-        answer: 'Vektorsumme: F_res = F₁ + F₂ = (3+(−1), 4+2, 0+0) = (2, 6, 0) N. Betrag: |F_res| = √(4 + 36 + 0) = √40 = 2√10 ≈ 6,32 N. Die resultierende Kraft beträgt 6,32 N.',
+        question: "Erklären Sie den Begriff 'Vektor' und seine grundlegenden Operationen. Welche klinische Bedeutung haben Vektoren in der Medizin?",
+        answer: "Ein Vektor ist eine gerichtete physikalische oder mathematische Größe, die durch Betrag und Richtung vollständig beschrieben wird. Im Unterschied zum Skalar (reine Zahlgröße wie Temperatur oder Masse) trägt der Vektor eine Richtungsinformation. Algebraisch wird er als Spaltenvektor $(a_1, a_2, a_3)^\\top$ dargestellt. Der Betrag $|\\vec{v}| = \\sqrt{v_1^2+v_2^2+v_3^2}$ entspricht dem verallgemeinerten Satz des Pythagoras im Raum. Die **Addition** zweier Vektoren erfolgt komponentenweise und entspricht geometrisch der Parallelogrammregel: Die Resultierende ist die Diagonale des durch beide Vektoren aufgespannten Parallelogramms. Bei der **skalaren Multiplikation** $\\lambda \\cdot \\vec{v}$ wird der Betrag mit $|\\lambda|$ skaliert; für $\\lambda < 0$ kehrt sich die Richtung um. Der **Einheitsvektor** $\\hat{e} = \\vec{v}/|\\vec{v}|$ hat genau den Betrag 1 und gibt nur die Richtung an. Klinisch sind Vektoren in der Biomechanik unverzichtbar: Muskelkräfte und Gelenkreaktionskräfte werden als Vektoren dargestellt und addiert, um die resultierende Belastung zu berechnen. Im EKG repräsentiert die Herzachse den elektrischen Summenvektor der Erregungsausbreitung und wird im Cabrera-Kreis visualisiert. Blutfluss besitzt sowohl Geschwindigkeit als auch Richtung und ist daher grundsätzlich eine vektorielle Größe.",
       },
-      klinischerBezug: 'In der Orthopädie und Biomechanik ist die Vektoraddition von Kräften klinisch relevant. Im Hüftgelenk beim einseitigen Standgang wirken: 1) Körpergewicht (Vektor nach unten, ca. 700 N) und 2) Glutealmuskelkraft (Vektor schräg nach oben-innen, ca. 1.500 N). Die Vektorsumme dieser Kräfte ergibt die Gelenkkraft, die tatsächlich auf die Hüftpfanne wirkt — ca. 2.100 N = 3× Körpergewicht. Dieses Prinzip erklärt, warum Hüftgelenke trotz mäßigem Körpergewicht hohe Belastungen erfahren, und ist Grundlage der Hüftprothesen-Auslegung.',
+      klinischerBezug: "Biomechanik: Gelenkkräfte als Vektorsummen; EKG-Herzachse als elektrischer Summenvektor (Cabrera-Kreis); Blutflussvektor in der Hämodynamik.",
       selfTest: [
         {
-          question: 'Was ist der Betrag des Vektors v = (2, 3, 6)?',
-          options: ['7', '11', '√13', '49', '√61'],
+          question: "Berechnen Sie den Betrag des Vektors $\\vec{v} = (3, 4)$.",
+          options: [
+            "5",
+            "7",
+            "√7",
+            "12",
+            "√13",
+          ],
           correctIndex: 0,
-          explanation: '|v| = √(2² + 3² + 6²) = √(4 + 9 + 36) = √49 = 7.',
-          hints: ['|v| = √(v₁²+v₂²+v₃²). Berechne 2²+3²+6².', '4+9+36 = 49; √49 = 7.'],
-          difficulty: 1,
+          explanation: "Der Betrag eines 2D-Vektors berechnet sich nach dem Satz des Pythagoras: $|\\vec{v}| = \\sqrt{v_1^2 + v_2^2} = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$. Das 3-4-5-Dreieck ist eines der bekanntesten pythagoräischen Tripel und sollte sofort erkennbar sein. Die Antwort 7 wäre eine fehlerhafte direkte Addition der Komponenten, 12 das fehlerhafte Produkt.",
+          hints: [
+            "Denken Sie an den Satz des Pythagoras: In einem rechtwinkligen Dreieck gilt a² + b² = c².",
+            "Kennen Sie das pythagoräische Tripel 3-4-? — es handelt sich um ein sehr klassisches Beispiel.",
+          ],
           tags: [],
+          difficulty: 1,
         },
         {
-          question: 'a = (1, −2, 3), b = (4, 1, −1). Was ergibt a + b?',
-          options: ['(5, −1, 2)', '(3, −3, 4)', '(5, 1, 2)', '(−3, −3, 4)', '(4, −2, −3)'],
+          question: "Gegeben $\\vec{a} = (2, 3)$ und $\\vec{b} = (4, -1)$. Was ergibt $\\vec{a} + \\vec{b}$?",
+          options: [
+            "(6, 2)",
+            "(6, 4)",
+            "(2, 4)",
+            "(8, 3)",
+            "(2, 2)",
+          ],
           correctIndex: 0,
-          explanation: 'Komponentenweise Addition: (1+4, −2+1, 3+(−1)) = (5, −1, 2).',
-          hints: ['Jede Komponente einzeln addieren.', '(1+4, −2+1, 3−1) = ?'],
-          difficulty: 1,
+          explanation: "Vektoren werden komponentenweise addiert: $\\vec{a} + \\vec{b} = (2+4,\\; 3+(-1)) = (6, 2)$. Die erste Komponente: 2+4=6. Die zweite Komponente: 3+(-1)=3-1=2. Ein häufiger Fehler ist das Addieren der zweiten Komponente als 3+1=4, weil das negative Vorzeichen übersehen wird. Geometrisch ist die Summe der Diagonalvektor des durch $\\vec{a}$ und $\\vec{b}$ aufgespannten Parallelogramms.",
+          hints: [
+            "Addieren Sie die Komponenten jeweils getrennt: erste Komponente für sich, zweite Komponente für sich.",
+            "Achten Sie auf das Vorzeichen: Die zweite Komponente von b ist −1, nicht +1.",
+          ],
           tags: [],
+          difficulty: 1,
         },
         {
-          question: 'Was ist −3 × v für v = (2, −1, 4)?',
-          options: ['(−6, 3, −12)', '(−6, 3, 12)', '(6, −3, 12)', '(6, 3, −12)', '(−2, 1, −4)'],
+          question: "Welche x-Komponente hat der Einheitsvektor in Richtung von $\\vec{v} = (6, 8)$?",
+          options: [
+            "0,6",
+            "0,8",
+            "6",
+            "0,5",
+            "1",
+          ],
           correctIndex: 0,
-          explanation: '−3 × (2, −1, 4) = (−3×2, −3×(−1), −3×4) = (−6, 3, −12). Negative Skalarmultiplikation: Jede Komponente mit −3 multiplizieren.',
-          hints: ['k·v = (k·v₁, k·v₂, k·v₃). Hier k = −3.', '−3×2=−6; −3×(−1)=+3; −3×4=−12.'],
-          difficulty: 1,
+          explanation: "Der Betrag von $\\vec{v}$ ist $|\\vec{v}| = \\sqrt{6^2+8^2} = \\sqrt{36+64} = \\sqrt{100} = 10$. Der Einheitsvektor ist $\\hat{e} = \\vec{v}/|\\vec{v}| = (6/10,\\; 8/10) = (0{,}6;\\; 0{,}8)$. Die x-Komponente ist daher 0,6. Zur Überprüfung: $|(0{,}6;\\; 0{,}8)| = \\sqrt{0{,}36+0{,}64} = \\sqrt{1} = 1$ — korrekt, da Einheitsvektor.",
+          hints: [
+            "Berechnen Sie zuerst den Betrag |v| mit dem Satz des Pythagoras.",
+            "Der Einheitsvektor ist ê = v / |v| — dividieren Sie jede Komponente durch den Betrag.",
+          ],
           tags: [],
-        },
-        {
-          question: 'Was ist der Unterschied zwischen Geschwindigkeit (Vektor) und Geschwindigkeitsbetrag (Skalar)?',
-          options: ['Geschwindigkeit hat Richtung, Betrag nicht', 'Kein Unterschied', 'Betrag hat Einheit, Vektor nicht', 'Vektor ist immer größer', 'Vektor hat keine Einheit'],
-          correctIndex: 0,
-          explanation: 'Der Geschwindigkeitsvektor v = (vx, vy, vz) enthält Betrag UND Richtung. Der Geschwindigkeitsbetrag (Schnelligkeit) |v| = v ist nur der Betrag ohne Richtungsangabe. 80 km/h ist ein Betrag; "80 km/h nach Norden" ist ein Vektor.',
-          hints: ['Vektor = Betrag + Richtung. Was fehlt beim Betrag?', 'Skalar hat nur eine Zahl; Vektor hat auch eine Richtung.'],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: 'Zwei Kräfte wirken auf einen Punkt: F₁ = (3, 0, 0) N und F₂ = (0, 4, 0) N. Was ist der Betrag der Resultante?',
-          options: ['5 N', '7 N', '1 N', '12 N', '√7 N'],
-          correctIndex: 0,
-          explanation: 'F_res = (3+0, 0+4, 0) = (3, 4, 0). Betrag: |F_res| = √(9+16+0) = √25 = 5 N. Das pythagoräische Tripel (3, 4, 5) erscheint hier in der Vektorrechnung.',
-          hints: ['Addiere die Vektoren komponentenweise. Berechne dann den Betrag.', '|F_res| = √(3²+4²) = √(9+16) = √25 = ?'],
           difficulty: 2,
-          tags: [],
         },
         {
-          question: 'Was ist a − b für a = (5, 2, −1) und b = (3, −1, 2)?',
-          options: ['(2, 3, −3)', '(8, 1, 1)', '(2, 3, 3)', '(−2, 3, −3)', '(2, −3, −3)'],
+          question: "Die Vektoren $\\vec{a} = (4, 3)$ und $\\vec{b} = (x, 5)$ sind orthogonal. Bestimmen Sie $x$.",
+          options: [
+            "$-15/4$",
+            "$15/4$",
+            "$-4/15$",
+            "$4/15$",
+            "$-3$",
+          ],
           correctIndex: 0,
-          explanation: 'a − b = (5−3, 2−(−1), −1−2) = (2, 3, −3). Subtraktion komponentenweise: Vorzeichen von b umkehren, dann addieren.',
-          hints: ['Komponentenweise subtrahieren: (a₁−b₁, a₂−b₂, a₃−b₃).', '(5−3, 2−(−1), −1−2) = (2, 2+1, −3).'],
-          difficulty: 2,
+          explanation: "Orthogonalität bedeutet: das Skalarprodukt ist gleich null. $\\vec{a} \\cdot \\vec{b} = 4 \\cdot x + 3 \\cdot 5 = 4x + 15 = 0$. Auflösen nach $x$: $4x = -15 \\Rightarrow x = -15/4 = -3{,}75$. Zur Probe: Skalarprodukt $= 4 \\cdot (-15/4) + 3 \\cdot 5 = -15 + 15 = 0$ — korrekt. In der Biomechanik bedeutet Orthogonalität, dass zwei Kraftkomponenten keine gemeinsame Wirkungsrichtung teilen.",
+          hints: [
+            "Orthogonale Vektoren haben Skalarprodukt 0: a₁·b₁ + a₂·b₂ = 0.",
+            "Setzen Sie die bekannten Werte ein und lösen Sie die entstehende lineare Gleichung nach x auf.",
+          ],
           tags: [],
+          difficulty: 2,
+        },
+        {
+          question: "Berechnen Sie den Betrag des 3D-Vektors $\\vec{v} = (1, -2, 2)$.",
+          options: [
+            "3",
+            "√5",
+            "5",
+            "1",
+            "√13",
+          ],
+          correctIndex: 0,
+          explanation: "Im dreidimensionalen Raum gilt: $|\\vec{v}| = \\sqrt{v_1^2+v_2^2+v_3^2} = \\sqrt{1^2+(-2)^2+2^2} = \\sqrt{1+4+4} = \\sqrt{9} = 3$. Wichtig: $(-2)^2 = +4$, nicht $-4$. Das Quadrieren beseitigt das negative Vorzeichen. Der Vektor hat die interessante Eigenschaft, dass $\\sqrt{9}=3$ eine ganze Zahl ergibt.",
+          hints: [
+            "Der Betrag im 3D-Raum: |v| = √(v₁² + v₂² + v₃²) — alle drei Komponenten werden quadriert und addiert.",
+            "Achtung: (−2)² = +4. Das Quadrat einer negativen Zahl ist immer positiv.",
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: "Sind $\\vec{a} = (2, 4, -2)$ und $\\vec{b} = (-1, -2, 1)$ linear abhängig?",
+          options: [
+            "Ja, denn $\\vec{a} = -2 \\cdot \\vec{b}$",
+            "Nein, da sie verschiedene Beträge haben",
+            "Nein, da das Skalarprodukt nicht null ist",
+            "Ja, aber nur im 2D-Fall",
+            "Nein, linear abhängige Vektoren müssen gleich lang sein",
+          ],
+          correctIndex: 0,
+          explanation: "Zwei Vektoren sind linear abhängig genau dann, wenn einer ein skalares Vielfaches des anderen ist. Hier: $-2 \\cdot \\vec{b} = -2 \\cdot (-1,-2,1) = (2,4,-2) = \\vec{a}$. Also ist $\\vec{a} = -2 \\cdot \\vec{b}$ — die Vektoren sind parallel (gegenläufig) und damit linear abhängig. Unterschiedliche Beträge schließen lineare Abhängigkeit nicht aus; auch das Skalarprodukt allein entscheidet nicht darüber (es muss für parallele Vektoren $\\vec{a} \\cdot \\vec{b} = \\pm|\\vec{a}||\\vec{b}|$ gelten).",
+          hints: [
+            "Linear abhängig bedeutet: einer der Vektoren lässt sich als skalares Vielfaches des anderen darstellen: a = k·b.",
+            "Prüfen Sie, ob b = k·a für ein reelles k gilt, indem Sie die Komponenten vergleichen: k = a₁/b₁ = ?",
+          ],
+          tags: [],
+          difficulty: 3,
+        },
+        {
+          question: "Ein Vektor $\\vec{v}$ hat Betrag 10 und bildet mit der x-Achse einen Winkel von 60°. Wie groß ist die y-Komponente?",
+          options: [
+            "$5\\sqrt{3}$",
+            "5",
+            "$10\\sqrt{3}$",
+            "$\\sqrt{3}$",
+            "10",
+          ],
+          correctIndex: 0,
+          explanation: "Ein Vektor mit Betrag $r$ und Winkel $\\alpha$ zur x-Achse hat die Komponenten $(r\\cos\\alpha,\\; r\\sin\\alpha)$. Hier: y-Komponente $= 10 \\cdot \\sin(60°) = 10 \\cdot \\frac{\\sqrt{3}}{2} = 5\\sqrt{3} \\approx 8{,}66$. Die x-Komponente wäre $10 \\cdot \\cos(60°) = 10 \\cdot 0{,}5 = 5$. Der Merksatz: $\\sin(60°) = \\frac{\\sqrt{3}}{2}$, $\\cos(60°) = \\frac{1}{2}$.",
+          hints: [
+            "Erinnern Sie sich: Die Komponenten eines Vektors der Länge r mit Winkel α zur x-Achse sind (r·cos α, r·sin α).",
+            "sin(60°) = √3/2 ≈ 0,866. Multiplizieren Sie mit dem Betrag 10.",
+          ],
+          tags: [],
+          difficulty: 3,
         },
       ],
     },
+
+    // ─────────────────────────────────────────────────────────────────
+    // UK ma-6-02: Skalarprodukt und Kreuzprodukt
+    // ─────────────────────────────────────────────────────────────────
     {
       id: 'ma-6-02',
-      title: 'Skalarprodukt und Kreuzprodukt',
+      title: "Skalarprodukt und Kreuzprodukt",
       content: `# Skalarprodukt und Kreuzprodukt
 
-Es gibt zwei verschiedene Arten, zwei Vektoren zu "multiplizieren": das Skalarprodukt (Ergebnis ist ein Skalar) und das Kreuzprodukt (Ergebnis ist ein Vektor). Beide haben fundamentale physikalische Bedeutungen: Das Skalarprodukt misst die "Übereinstimmung" zweier Vektoren (Winkel zwischen ihnen), das Kreuzprodukt liefert die Fläche des Parallelogramms und die Richtung senkrecht zu beiden Vektoren.
+## Skalarprodukt
 
-## Das Skalarprodukt
+Das **Skalarprodukt** (Dot-Produkt) zweier Vektoren $\\vec{a}$ und $\\vec{b}$ ist definiert als:
 
-Das Skalarprodukt (auch Dot-Produkt oder inneres Produkt) von a und b:
+$$\\vec{a} \\cdot \\vec{b} = a_1 b_1 + a_2 b_2 + a_3 b_3 = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\cos \\theta$$
 
-a · b = a₁b₁ + a₂b₂ + a₃b₃
+Das Ergebnis ist ein **Skalar** (keine Richtung). Die geometrische Bedeutung: Das Skalarprodukt misst, wie sehr zwei Vektoren in dieselbe Richtung zeigen.
 
-Alternativ geometrisch:
-a · b = |a| × |b| × cos(α)
+**Wichtige Spezialfälle:**
+- $\\vec{a} \\cdot \\vec{b} = 0 \\Rightarrow$ Vektoren sind **orthogonal** (senkrecht, $\\theta = 90°$)
+- $\\vec{a} \\cdot \\vec{b} > 0 \\Rightarrow$ spitzer Winkel ($\\theta < 90°$)
+- $\\vec{a} \\cdot \\vec{b} < 0 \\Rightarrow$ stumpfer Winkel ($\\theta > 90°$)
+- $\\vec{a} \\cdot \\vec{a} = |\\vec{a}|^2$ (Skalarprodukt mit sich selbst = Betrag zum Quadrat)
 
-wobei α der Winkel zwischen a und b ist.
+**Winkelberechnung:**
+$$\\cos \\theta = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|}$$
 
-**Wichtigste Konsequenz:** a · b = 0 ↔ cos(α) = 0 ↔ α = 90° ↔ a und b sind orthogonal (senkrecht aufeinander).
+## Kreuzprodukt
 
-Das Skalarprodukt ist:
-- Kommutativ: a · b = b · a
-- Distributiv: a · (b + c) = a · b + a · c
-- Das Skalarprodukt eines Vektors mit sich selbst: a · a = |a|² (also |a| = √(a · a))
+Das **Kreuzprodukt** (Vektorprodukt) ist nur im $\\mathbb{R}^3$ definiert und liefert einen **Vektor**:
 
-## Winkel zwischen Vektoren berechnen
+$$\\vec{a} \\times \\vec{b} = \\begin{pmatrix} a_2 b_3 - a_3 b_2 \\\\ a_3 b_1 - a_1 b_3 \\\\ a_1 b_2 - a_2 b_1 \\end{pmatrix}$$
 
-Aus a · b = |a| × |b| × cos(α) folgt:
-cos(α) = (a · b) / (|a| × |b|)
+Dieses Ergebnis steht **senkrecht** auf beiden Ausgangsvektoren.
 
-Das ist die Formel, um den Winkel zwischen zwei Vektoren zu berechnen. Man berechnet zunächst das Skalarprodukt und die Beträge, dann den Quotienten, dann den Arcuskosinus.
+**Betrag des Kreuzprodukts:**
+$$|\\vec{a} \\times \\vec{b}| = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\sin \\theta$$
 
-Beispiel: a = (1, 0, 0), b = (0, 1, 0). a · b = 0. cos(α) = 0 → α = 90°. Die x- und y-Achse stehen senkrecht aufeinander. Korrekt!
+Geometrisch entspricht dies dem **Flächeninhalt des Parallelogramms**, das von $\\vec{a}$ und $\\vec{b}$ aufgespannt wird.
 
-## Das Kreuzprodukt
+**Wichtige Eigenschaften:**
+- **Antikommutativ**: $\\vec{a} \\times \\vec{b} = -(\\vec{b} \\times \\vec{a})$
+- Parallele Vektoren ($\\theta = 0°$ oder $180°$): $\\vec{a} \\times \\vec{b} = \\vec{0}$
+- Die Richtung folgt der **Rechten-Hand-Regel**: Finger von $\\vec{a}$ zu $\\vec{b}$ einrollen, Daumen zeigt in Richtung $\\vec{a} \\times \\vec{b}$
 
-Das Kreuzprodukt (auch Vektorprodukt oder äußeres Produkt) von a und b:
+## Sarrus-Regel
 
-a × b = (a₂b₃ − a₃b₂, a₃b₁ − a₁b₃, a₁b₂ − a₂b₁)
+Zur praktischen Berechnung des Kreuzprodukts wird die Sarrus-Regel verwendet (Entwicklung nach der 3×3-Determinante): Man schreibt die Komponenten in eine 3×3-Matrix und berechnet die Determinante mit der Regel der Sarrus.
 
-Die Eselsbrücke für die Formel: Man berechnet die Determinante der Matrix mit den Einheitsvektoren i, j, k in der ersten Zeile und den Vektoren a, b in den restlichen Zeilen.
+## Klinische Bedeutung
 
-**Eigenschaften des Kreuzprodukts:**
-- Das Ergebnis ist ein Vektor senkrecht (orthogonal) zu BEIDEN Ausgangsvektoren: (a × b) ⊥ a und (a × b) ⊥ b
-- |a × b| = |a| × |b| × sin(α) = Fläche des Parallelogramms, das a und b aufspannen
-- Antikommutativ: a × b = −(b × a)
-- a × b = 0, wenn a und b parallel sind (sin(0°) = 0) oder einer von beiden der Nullvektor ist
-- Nur im 3D definiert (nicht in 2D)
-
-## Physikalische Bedeutung
-
-Das Kreuzprodukt beschreibt physikalische Größen, die "senkrecht" zu zwei Eingangsvektoren wirken:
-
-**Drehmoment:** τ = r × F. Der Drehmomentvektor steht senkrecht zur Ebene, die von Hebelarm r und Kraft F aufgespannt wird. Der Betrag |τ| = |r| × |F| × sin(α) — maximal wenn r ⊥ F (sin(90°) = 1).
-
-**Lorentzkraft:** F = q × v × B. Die Kraft auf ein geladenes Teilchen im Magnetfeld steht senkrecht zur Teilchengeschwindigkeit v und zum Magnetfeld B. Das erklärt, warum Teilchen im Magnetfeld kreisförmige Bahnen beschreiben.
-
-**MRI (Magnetresonanztomographie):** Die Ablenkung von Protonen durch Magnetfelder basiert auf der Lorentzkraft — ein direktes medizinisches Beispiel des Kreuzprodukts.
-
-## Klinisches Beispiel: EKG-Vektoranalyse
-
-Die Herzachse (elektrische Achse) ist ein Vektor im Frontalplan, der die dominante Richtung der ventrikulären Depolarisation beschreibt. Sie wird in Grad angegeben (normal: −30° bis +90°). Die Analyse der EKG-Ableitungen I (Ableitung entlang der x-Achse) und aVF (entlang der y-Achse) erlaubt die Berechnung des Winkels über den Arcustangens — Vektorrechnung im EKG.`,
+Das **Drehmoment** $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist das Kreuzprodukt aus Hebelarm und Kraft und ist zentral für die Biomechanik von Gelenken. Je länger der Hebelarm und je senkrechter die Kraft, desto größer das Drehmoment. In der **MRT-Sicherheit** ist die Lorentz-Kraft $\\vec{F} = q(\\vec{v} \\times \\vec{B})$ relevant: Metallische Implantate mit bewegten Ladungsträgern erfahren im starken Magnetfeld eine Kraft, die mit dem Kreuzprodukt berechnet wird. Das Skalarprodukt wird verwendet, um die **Projektion** einer Kraft auf eine bestimmte Richtung zu berechnen.`,
       lernziele: [
-        'Das Skalarprodukt komponentenweise berechnen und geometrisch interpretieren',
-        'Orthogonalität über das Skalarprodukt prüfen (a·b=0)',
-        'Den Winkel zwischen zwei Vektoren über cos(α) = (a·b)/(|a|·|b|) berechnen',
-        'Das Kreuzprodukt berechnen und als Drehmoment/Lorentzkraft interpretieren',
+        "Das Skalarprodukt komponentenweise und über den Winkel berechnen und interpretieren können.",
+        "Orthogonalität zweier Vektoren anhand des Skalarprodukts erkennen und beweisen können.",
+        "Den Winkel zwischen zwei Vektoren mit Hilfe des Skalarprodukts berechnen können.",
+        "Das Kreuzprodukt im ℝ³ berechnen und seine geometrische Bedeutung (Normalenvektor, Fläche) erklären können.",
+        "Die Antikommutativität des Kreuzprodukts und die Rechte-Hand-Regel anwenden können.",
       ],
       sections: [
         {
-          heading: 'Skalarprodukt — Berechnung und Bedeutung',
-          text: 'a·b = a₁b₁+a₂b₂+a₃b₃ = |a|·|b|·cos(α). Das Skalarprodukt gibt an, wie stark zwei Vektoren "in dieselbe Richtung zeigen". Parallele Vektoren (α=0°): a·b = |a|·|b| (Maximum). Orthogonale Vektoren (α=90°): a·b = 0. Antiparallele Vektoren (α=180°): a·b = −|a|·|b| (Minimum). In der Physik: Arbeit W = F·s ist das Skalarprodukt aus Kraft und Weg (nur der Anteil der Kraft in Wegrichtung leistet Arbeit).',
-          merksatz: 'a·b = 0 ↔ Vektoren senkrecht. a·b = |a|·|b|·cos(α) → Winkelberechnung.',
+          heading: "Skalarprodukt — Definition und Anwendung",
+          text: "Das Skalarprodukt $\\vec{a} \\cdot \\vec{b} = a_1 b_1 + a_2 b_2 + a_3 b_3 = |\\vec{a}||\\vec{b}|\\cos\\theta$ liefert einen Skalar. Ist es gleich null, stehen die Vektoren senkrecht aufeinander (orthogonal). Der Winkel zwischen zwei Vektoren ergibt sich zu $\\cos\\theta = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|}$. Das Skalarprodukt ist kommutativ: $\\vec{a}\\cdot\\vec{b} = \\vec{b}\\cdot\\vec{a}$.",
+          merksatz: "Skalarprodukt = 0 → orthogonal. Skalarprodukt > 0 → spitzer Winkel. Skalarprodukt < 0 → stumpfer Winkel.",
         },
         {
-          heading: 'Kreuzprodukt — Berechnung und Eigenschaften',
-          text: 'a×b = (a₂b₃−a₃b₂, a₃b₁−a₁b₃, a₁b₂−a₂b₁). Das Kreuzprodukt ist antikommutativ: a×b = −(b×a). Das Ergebnis steht senkrecht zu beiden Eingangsvektoren. |a×b| = |a|·|b|·sin(α) = Parallelogramm-Fläche. Die Richtung folgt der Rechten-Hand-Regel: Wenn Zeigefinger auf a und Mittelfinger auf b zeigt, zeigt der Daumen in Richtung a×b. Null-Kreuzprodukt bedeutet parallele Vektoren.',
+          heading: "Kreuzprodukt — Definition, Eigenschaften und Berechnung",
+          text: "Das Kreuzprodukt $\\vec{a}\\times\\vec{b}$ ist nur im ℝ³ definiert und ergibt einen Vektor senkrecht zu $\\vec{a}$ und $\\vec{b}$. Sein Betrag $|\\vec{a}\\times\\vec{b}| = |\\vec{a}||\\vec{b}|\\sin\\theta$ entspricht der Fläche des aufgespannten Parallelogramms. Die Richtung folgt der Rechten-Hand-Regel. Antikommutativ: $\\vec{a}\\times\\vec{b} = -(\\vec{b}\\times\\vec{a})$. Für parallele Vektoren gilt $\\vec{a}\\times\\vec{b} = \\vec{0}$.",
+          merksatz: "Kreuzprodukt → Vektor ⊥ zu beiden; |a×b| = Parallelogrammfläche; antikommutativ: a×b = −(b×a).",
         },
         {
-          heading: 'Drehmoment und Lorentzkraft',
-          text: 'Drehmoment τ = r×F: r = Ortsvektor (Hebelarm), F = Kraft. |τ| = |r|·|F|·sin(α) → maximal bei rechtem Winkel. In der Biomechanik: Ein Muskel, der senkrecht zum Knochen zieht, erzeugt maximales Drehmoment. Lorentzkraft F = q·v×B: Ein Proton (q = 1,6×10⁻¹⁹ C) mit v = 10⁶ m/s in B = 1 T erfährt F = q|v||B|sin(90°) = 1,6×10⁻¹³ N. Diese winzige Kraft reicht für kreisförmige Protonenbahnen im MRI. Beide Formeln folgen dem Kreuzprodukt-Muster.',
+          heading: "Klinische Anwendungen: Drehmoment und Lorentz-Kraft",
+          text: "Das Drehmoment $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist das Kreuzprodukt aus Hebelarm $\\vec{r}$ und Kraft $\\vec{F}$. Im Knie beispielsweise ergibt die Quadrizepskraft mal dem Hebelarm das Streckmoment. In der MRT-Sicherheit ist die Lorentz-Kraft $\\vec{F} = q(\\vec{v}\\times\\vec{B})$ relevant: Ein im Magnetfeld bewegtes metallisches Implantat kann eine Kraft durch das Kreuzprodukt aus Ladungsgeschwindigkeit und Magnetfeld erfahren. Das Skalarprodukt erlaubt die Projektion einer Kraft auf eine Bewegungsrichtung (mechanische Arbeit: $W = \\vec{F}\\cdot\\vec{s}$).",
+          merksatz: "Drehmoment M = r × F (Kreuzprodukt). Mechanische Arbeit W = F · s (Skalarprodukt). MRT: Lorentz-Kraft F = q·(v×B).",
         },
       ],
       merksätze: [
-        'Skalarprodukt: a·b = a₁b₁+a₂b₂+a₃b₃; a·b=0 → Vektoren senkrecht',
-        'Kreuzprodukt: a×b senkrecht zu a und b; |a×b| = Parallelogramm-Fläche',
-        'Drehmoment τ = r×F; Lorentzkraft F = q·v×B — beide nutzen das Kreuzprodukt',
+        "Skalarprodukt: a·b = a₁b₁ + a₂b₂ + a₃b₃ — Ergebnis ist ein Skalar.",
+        "a·b = |a|·|b|·cos θ — damit lässt sich der Winkel zwischen Vektoren berechnen.",
+        "a·b = 0 bedeutet Orthogonalität (θ = 90°) — zentrales Kriterium!",
+        "Kreuzprodukt: a×b steht senkrecht auf a UND b — Ergebnis ist ein Vektor.",
+        "|a×b| = |a|·|b|·sin θ = Fläche des aufgespannten Parallelogramms.",
+        "Rechte-Hand-Regel: Finger von a nach b einrollen, Daumen zeigt a×b.",
+        "Antikommutativ: a×b = −(b×a) — Reihenfolge vertauschen ändert das Vorzeichen.",
+        "Parallele Vektoren: Kreuzprodukt = Nullvektor (sin 0° = 0).",
+        "Drehmoment M = r×F — Kreuzprodukt aus Hebelarm und Kraft in der Biomechanik.",
+        "Mechanische Arbeit W = F·s — Skalarprodukt aus Kraft und Weg.",
       ],
       altfrage: {
-        question: 'Berechnen Sie das Skalarprodukt a·b und den Winkel zwischen a = (1, 1, 0) und b = (1, −1, 0). Sind die Vektoren orthogonal?',
-        answer: 'Skalarprodukt: a·b = 1×1 + 1×(−1) + 0×0 = 1 − 1 + 0 = 0. Da a·b = 0, sind die Vektoren orthogonal (cos(α) = 0 → α = 90°). Zur Bestätigung: |a| = √2, |b| = √2. cos(α) = 0/(√2×√2) = 0 → α = 90°. Die Vektoren (1,1,0) und (1,−1,0) stehen senkrecht aufeinander.',
+        question: "Was ist der Unterschied zwischen Skalarprodukt und Kreuzprodukt? Beschreiben Sie Berechnung, Ergebnis und je eine klinische Anwendung.",
+        answer: "Das **Skalarprodukt** $\\vec{a}\\cdot\\vec{b} = a_1b_1+a_2b_2+a_3b_3 = |\\vec{a}||\\vec{b}|\\cos\\theta$ liefert einen **Skalar** ohne Richtung. Es misst die Übereinstimmung der Richtungen zweier Vektoren. Ist das Skalarprodukt null, stehen die Vektoren senkrecht (orthogonal) aufeinander. Bei positivem Wert schließen sie einen spitzen Winkel ein, bei negativem einen stumpfen. Klinisch wird das Skalarprodukt für die mechanische Arbeit $W = \\vec{F}\\cdot\\vec{s}$ verwendet: Nur die Kraftkomponente in Bewegungsrichtung leistet Arbeit. Das **Kreuzprodukt** $\\vec{a}\\times\\vec{b}$ ist nur im $\\mathbb{R}^3$ definiert und liefert einen **Vektor**, der senkrecht auf beiden Ausgangsvektoren steht. Sein Betrag $|\\vec{a}\\times\\vec{b}| = |\\vec{a}||\\vec{b}|\\sin\\theta$ entspricht dem Flächeninhalt des von beiden Vektoren aufgespannten Parallelogramms. Die Richtung folgt der Rechten-Hand-Regel. Im Gegensatz zum Skalarprodukt ist das Kreuzprodukt **antikommutativ**: $\\vec{a}\\times\\vec{b} = -(\\vec{b}\\times\\vec{a})$. Klinisch ist das Drehmoment $\\vec{M} = \\vec{r}\\times\\vec{F}$ die wichtigste Anwendung: Es beschreibt die Dreheigenschaft einer Kraft um einen Gelenkpunkt und ist zentral für das Verständnis von Hebelkräften in der Biomechanik.",
       },
-      klinischerBezug: 'In der MRT (Magnetresonanztomographie) bewegen sich Protonen im starken Magnetfeld (1,5 T oder 3 T) und erfahren die Lorentzkraft F = q·v×B. Die resultierenden Kreisbewegungen der Protonen erzeugen elektromagnetische Signale, die für die Bildgebung genutzt werden. Die Larmorfrequenz, mit der die Protonen präzessieren, ist ω = γ·B (γ = gyromagnetisches Verhältnis). Das Verständnis dieser Vektorbeziehungen ist fundamental für die Physik der MRT — eine der wichtigsten diagnostischen Methoden in der modernen Medizin.',
+      klinischerBezug: "Drehmoment M = r×F an Gelenken (Biomechanik); Lorentz-Kraft F = q·(v×B) für MRT-Implantat-Sicherheit; mechanische Arbeit W = F·s (Skalarprodukt).",
       selfTest: [
         {
-          question: 'Berechnen Sie das Skalarprodukt von a = (2, 3, 1) und b = (1, 2, −4).',
-          options: ['4', '6', '−4', '12', '0'],
+          question: "Berechnen Sie das Skalarprodukt von $\\vec{a} = (3, -2, 1)$ und $\\vec{b} = (1, 4, -2)$.",
+          options: [
+            "−7",
+            "7",
+            "−3",
+            "3",
+            "5",
+          ],
           correctIndex: 0,
-          explanation: 'a·b = 2×1 + 3×2 + 1×(−4) = 2 + 6 − 4 = 4.',
-          hints: ['Skalarprodukt: a₁b₁+a₂b₂+a₃b₃.', '2×1=2; 3×2=6; 1×(−4)=−4. Summe: 2+6−4.'],
+          explanation: "Das Skalarprodukt wird komponentenweise berechnet: $\\vec{a}\\cdot\\vec{b} = 3\\cdot1 + (-2)\\cdot4 + 1\\cdot(-2) = 3 - 8 - 2 = -7$. Das negative Ergebnis bedeutet, dass der Winkel zwischen den Vektoren stumpf ist ($\\theta > 90°$). Eine häufige Fehlerquelle ist das Übersehen der negativen Vorzeichen bei den Komponenten.",
+          hints: [
+            "Skalarprodukt: a₁·b₁ + a₂·b₂ + a₃·b₃ — multiplizieren Sie die entsprechenden Komponenten und addieren Sie.",
+            "Beachten Sie die Vorzeichen: (−2)·4 = −8 und 1·(−2) = −2.",
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: "Welchen Winkel schließen $\\vec{a} = (1, 0)$ und $\\vec{b} = (1, 1)$ ein?",
+          options: [
+            "45°",
+            "30°",
+            "60°",
+            "90°",
+            "0°",
+          ],
+          correctIndex: 0,
+          explanation: "$\\vec{a}\\cdot\\vec{b} = 1\\cdot1 + 0\\cdot1 = 1$. Betrag: $|\\vec{a}| = 1$, $|\\vec{b}| = \\sqrt{1^2+1^2} = \\sqrt{2}$. Also $\\cos\\theta = \\frac{1}{1\\cdot\\sqrt{2}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$, was $\\theta = 45°$ entspricht. Merksatz: $\\cos(45°) = \\frac{\\sqrt{2}}{2} \\approx 0{,}707$.",
+          hints: [
+            "Berechnen Sie cos θ = (a·b) / (|a|·|b|) und bestimmen Sie daraus den Winkel.",
+            "cos(45°) = √2/2 ≈ 0,707; cos(60°) = 0,5; cos(30°) = √3/2 ≈ 0,866.",
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: "Welche Aussage über das Kreuzprodukt $\\vec{a}\\times\\vec{b}$ ist korrekt?",
+          options: [
+            "Es steht senkrecht auf $\\vec{a}$ und $\\vec{b}$ und ist nur im ℝ³ definiert",
+            "Es ist kommutativ: $\\vec{a}\\times\\vec{b} = \\vec{b}\\times\\vec{a}$",
+            "Es liefert einen Skalar",
+            "Es ist auch im ℝ² definiert",
+            "Parallele Vektoren haben ein maximales Kreuzprodukt",
+          ],
+          correctIndex: 0,
+          explanation: "Das Kreuzprodukt ist ausschließlich im dreidimensionalen Raum $\\mathbb{R}^3$ definiert und liefert einen Vektor (keinen Skalar), der senkrecht auf beiden Ausgangsvektoren steht. Es ist **antikommutativ**: $\\vec{a}\\times\\vec{b} = -(\\vec{b}\\times\\vec{a})$, nicht kommutativ. Für parallele Vektoren ($\\sin\\theta = 0$) ist das Kreuzprodukt der Nullvektor, nicht maximal. Das Maximum wird bei $\\theta = 90°$ erreicht.",
+          hints: [
+            "Was ist das Ergebnis des Kreuzprodukts — Skalar oder Vektor? In welchem Raum ist es definiert?",
+            "Denken Sie an die Antikommutativität: Das Vertauschen der Reihenfolge ändert das Vorzeichen.",
+          ],
+          tags: [],
           difficulty: 1,
-          tags: [],
         },
         {
-          question: 'Sind a = (1, 2, 3) und b = (2, −1, 0) orthogonal?',
-          options: ['Ja, a·b = 0', 'Nein, a·b = 4', 'Nein, a·b ≠ 0 aber ≠ 4', 'Ja, weil |a| = |b|', 'Nein, a·b = 6'],
+          question: "Berechnen Sie $\\vec{a}\\times\\vec{b}$ für $\\vec{a} = (1, 0, 0)$ und $\\vec{b} = (0, 1, 0)$.",
+          options: [
+            "$(0, 0, 1)$",
+            "$(1, 1, 0)$",
+            "$(0, 1, 1)$",
+            "$(1, 0, 1)$",
+            "$(0, 0, 0)$",
+          ],
           correctIndex: 0,
-          explanation: 'a·b = 1×2 + 2×(−1) + 3×0 = 2 − 2 + 0 = 0. Da a·b = 0, sind die Vektoren orthogonal (90° Winkel).',
-          hints: ['Berechne a₁b₁+a₂b₂+a₃b₃.', '2 + (−2) + 0 = 0 → orthogonal.'],
+          explanation: "Kreuzprodukt-Formel: $(a_2b_3-a_3b_2,\\; a_3b_1-a_1b_3,\\; a_1b_2-a_2b_1)$. Einsetzen: $(0\\cdot0-0\\cdot1,\\; 0\\cdot0-1\\cdot0,\\; 1\\cdot1-0\\cdot0) = (0,0,1)$. Geometrisch: $\\vec{e_1}\\times\\vec{e_2} = \\vec{e_3}$ ist die zyklische Eigenschaft der Standardbasisvektoren. Die Rechte-Hand-Regel bestätigt: Finger von x-Richtung zur y-Richtung einrollen, Daumen zeigt in z-Richtung.",
+          hints: [
+            "Verwenden Sie die Formel: a×b = (a₂b₃−a₃b₂, a₃b₁−a₁b₃, a₁b₂−a₂b₁).",
+            "Denken Sie an die Rechte-Hand-Regel: e₁×e₂ = e₃ (x-Achse × y-Achse = z-Achse).",
+          ],
+          tags: [],
           difficulty: 2,
-          tags: [],
         },
         {
-          question: 'Was gilt für a × a (Kreuzprodukt eines Vektors mit sich selbst)?',
-          options: ['a × a = (0, 0, 0)', 'a × a = |a|²', 'a × a = a', 'a × a = 2a', 'a × a ist nicht definiert'],
+          question: "Ein Muskel übt eine Kraft $\\vec{F} = (0, 10, 0)$ N am Hebelarm $\\vec{r} = (0{,}3, 0, 0)$ m an. Welchen Betrag hat das Drehmoment $\\vec{M} = \\vec{r}\\times\\vec{F}$?",
+          options: [
+            "3 Nm",
+            "10 Nm",
+            "0 Nm",
+            "0,3 Nm",
+            "30 Nm",
+          ],
           correctIndex: 0,
-          explanation: 'a × a = 0 (Nullvektor). Der Winkel zwischen einem Vektor und sich selbst ist α = 0°. |a × a| = |a|² × sin(0°) = 0. Ein Vektor ist parallel zu sich selbst → kein Flächeninhalt → Kreuzprodukt ist der Nullvektor.',
-          hints: ['|a×b| = |a|·|b|·sin(α). Was ist α zwischen einem Vektor und sich selbst?', 'sin(0°) = 0 → |a×a| = 0 → Nullvektor.'],
+          explanation: "$\\vec{r}\\times\\vec{F} = (0\\cdot0-0\\cdot0,\\; 0\\cdot0-0{,}3\\cdot0,\\; 0{,}3\\cdot10-0\\cdot0) = (0,0,3)$ Nm. Also $|\\vec{M}| = 3$ Nm. Alternativ: $|\\vec{M}| = |\\vec{r}||\\vec{F}|\\sin(90°) = 0{,}3 \\cdot 10 \\cdot 1 = 3$ Nm. Da Hebelarm (x-Richtung) und Kraft (y-Richtung) senkrecht stehen, gilt $\\sin(90°)=1$, und das Drehmoment ist maximal.",
+          hints: [
+            "Drehmoment M = r × F. Berechnen Sie das Kreuzprodukt komponentenweise.",
+            "Da r und F senkrecht stehen (x- und y-Richtung), gilt |M| = |r|·|F|·sin(90°) = |r|·|F|·1.",
+          ],
+          tags: [],
           difficulty: 2,
-          tags: [],
         },
         {
-          question: 'Wenn a·b > 0, was kann man über den Winkel zwischen a und b sagen?',
-          options: ['α < 90° (spitzer Winkel)', 'α = 90°', 'α > 90°', 'α = 180°', 'Keine Aussage möglich'],
+          question: "Zwei Vektoren $\\vec{a} = (1, 2, -1)$ und $\\vec{b} = (2, 4, -2)$. Was gilt für ihr Kreuzprodukt?",
+          options: [
+            "$\\vec{a}\\times\\vec{b} = \\vec{0}$, da die Vektoren parallel sind",
+            "$\\vec{a}\\times\\vec{b}$ ist ein Einheitsvektor",
+            "$\\vec{a}\\times\\vec{b}$ hat den gleichen Betrag wie $\\vec{a}$",
+            "Das Kreuzprodukt ist nicht definiert",
+            "$\\vec{a}\\times\\vec{b}$ zeigt in Richtung von $\\vec{a}$",
+          ],
           correctIndex: 0,
-          explanation: 'a·b = |a|·|b|·cos(α). Da |a| > 0 und |b| > 0, bestimmt cos(α) das Vorzeichen. a·b > 0 → cos(α) > 0 → α < 90°. Die Vektoren bilden einen spitzen Winkel, d.h. sie zeigen "eher in dieselbe Richtung".',
-          hints: ['a·b = |a|·|b|·cos(α). Wann ist cos(α) > 0?', 'cos(α) > 0 für 0° ≤ α < 90°.'],
-          difficulty: 2,
+          explanation: "$\\vec{b} = 2\\cdot\\vec{a}$ (denn $(2,4,-2) = 2\\cdot(1,2,-1)$), also sind die Vektoren parallel. Für parallele Vektoren gilt $\\sin\\theta = \\sin(0°) = 0$, daher $|\\vec{a}\\times\\vec{b}| = 0$. Das Kreuzprodukt paralleler Vektoren ist immer der Nullvektor. Dies ergibt geometrisch Sinn: Parallele Vektoren spannen kein Parallelogramm auf (Fläche = 0).",
+          hints: [
+            "Ist b ein skalares Vielfaches von a? Wenn ja, sind die Vektoren parallel.",
+            "Parallele Vektoren schließen einen Winkel von 0° (oder 180°) ein. Was ergibt sin(0°)?",
+          ],
           tags: [],
-        },
-        {
-          question: 'Das Drehmoment τ = r × F. Was ist |τ| wenn |r| = 0,5 m, |F| = 20 N und α = 90°?',
-          options: ['10 N·m', '20 N·m', '5 N·m', '40 N·m', '0 N·m'],
-          correctIndex: 0,
-          explanation: '|τ| = |r|·|F|·sin(α) = 0,5 × 20 × sin(90°) = 0,5 × 20 × 1 = 10 N·m. Bei α = 90° ist sin(90°) = 1, daher maximales Drehmoment.',
-          hints: ['|τ| = |r|·|F|·sin(α). sin(90°) = 1.', '0,5 × 20 × 1 = 10 N·m.'],
-          difficulty: 2,
-          tags: [],
-        },
-        {
-          question: 'Warum ist das Kreuzprodukt antikommutativ (a×b = −(b×a))?',
-          options: ['Weil die Rechte-Hand-Regel die Richtung wechselt, wenn a und b vertauscht werden', 'Weil |a×b| ≠ |b×a|', 'Weil a und b keine skalaren Größen sind', 'Weil sin(−α) = sin(α)', 'Weil Vektoren nicht kommutativ sind'],
-          correctIndex: 0,
-          explanation: 'Wenn man a und b vertauscht, dreht sich bei der Rechte-Hand-Regel der Daumen in die Gegenrichtung — das Kreuzprodukt behält seinen Betrag, aber die Richtung wird umgekehrt: a×b = −(b×a). Der Betrag |a×b| = |b×a| bleibt gleich.',
-          hints: ['Rechte-Hand-Regel: Zeigefinger a, Mittelfinger b, Daumen = a×b. Was passiert wenn a und b getauscht werden?', 'a×b und b×a haben gleichen Betrag aber entgegengesetzte Richtungen.'],
           difficulty: 3,
+        },
+        {
+          question: "Das Skalarprodukt $\\vec{a}\\cdot\\vec{b} = -12$, $|\\vec{a}| = 4$, $|\\vec{b}| = 6$. Welcher Winkel $\\theta$ liegt zwischen den Vektoren?",
+          options: [
+            "120°",
+            "60°",
+            "90°",
+            "30°",
+            "150°",
+          ],
+          correctIndex: 0,
+          explanation: "$\\cos\\theta = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|} = \\frac{-12}{4\\cdot6} = \\frac{-12}{24} = -\\frac{1}{2}$. Da $\\cos(120°) = -\\frac{1}{2}$, folgt $\\theta = 120°$. Das negative Skalarprodukt bestätigt: der Winkel ist stumpf ($> 90°$). Merksatz: $\\cos(60°) = \\frac{1}{2}$, $\\cos(120°) = -\\frac{1}{2}$, $\\cos(90°) = 0$, $\\cos(180°) = -1$.",
+          hints: [
+            "Berechnen Sie cos θ = (a·b) / (|a|·|b|). Das negative Ergebnis deutet auf einen stumpfen Winkel hin.",
+            "cos(120°) = −½. Denken Sie an den Einheitskreis: Im zweiten Quadrant ist der Kosinus negativ.",
+          ],
           tags: [],
+          difficulty: 3,
         },
       ],
     },
+
+    // ─────────────────────────────────────────────────────────────────
+    // UK ma-6-03: Geraden, Ebenen und Matrizen
+    // ─────────────────────────────────────────────────────────────────
     {
       id: 'ma-6-03',
-      title: 'Betrag, Einheitsvektor und geometrische Anwendungen',
-      content: `# Betrag, Einheitsvektor und geometrische Anwendungen
+      title: "Geraden, Ebenen und Matrizen",
+      content: `# Geraden, Ebenen und Matrizen
 
-Einheitsvektoren, Abstände und Geradengleichungen in Parameterform sind die Werkzeuge der analytischen Geometrie. Sie ermöglichen es, geometrische Fragen algebraisch zu beantworten: Wo liegt der Mittelpunkt zweier Punkte? Wie weit sind zwei Punkte voneinander entfernt? Welcher Punkt liegt auf einer Geraden? Diese Fragen erscheinen in der medizinischen Bildgebung (3D-Koordinaten anatomischer Strukturen), in der Robotik (chirurgische Roboter) und in der Strahlentherapie (Bestrahlungsplanung).
+## Geradengleichung im Raum
 
-## Der Einheitsvektor
+Eine Gerade im dreidimensionalen Raum wird durch die **Parameterform** beschrieben:
 
-Ein Einheitsvektor (normierter Vektor) hat den Betrag 1. Er gibt die Richtung an, ohne Größeninformation zu enthalten. Der Einheitsvektor in Richtung v wird berechnet durch:
+$$\\vec{r} = \\vec{r_0} + t \\cdot \\vec{d}, \\quad t \\in \\mathbb{R}$$
 
-ê = v / |v|
+Dabei ist $\\vec{r_0}$ der **Stützvektor** (ein Punkt auf der Geraden) und $\\vec{d}$ der **Richtungsvektor** (gibt die Richtung an). Der Parameter $t$ durchläuft alle reellen Zahlen und erzeugt alle Punkte der Geraden.
 
-Man dividiert jeden Vektorkomponenten durch den Betrag des Vektors.
+**Punktprobe:** Um zu prüfen, ob ein Punkt $P$ auf der Geraden liegt, setzt man $\\vec{r} = P$ und löst nach $t$ — wenn das lineare Gleichungssystem konsistent ist, liegt $P$ auf der Geraden.
 
-Beispiel: v = (3, 4, 0). |v| = 5. Einheitsvektor: ê = (3/5, 4/5, 0) = (0,6; 0,8; 0). Probe: |ê| = √(0,36 + 0,64 + 0) = √1 = 1. Korrekt!
+## Ebenengleichungen
 
-Die drei kartesischen Einheitsvektoren (Basisvektoren):
-- e₁ = (1, 0, 0) — x-Richtung
-- e₂ = (0, 1, 0) — y-Richtung
-- e₃ = (0, 0, 1) — z-Richtung
+Ebenen im ℝ³ können auf drei äquivalente Weisen dargestellt werden:
 
-Jeder Vektor v = (v₁, v₂, v₃) kann als Linearkombination der Basisvektoren geschrieben werden: v = v₁·e₁ + v₂·e₂ + v₃·e₃.
+**1. Normalenform:** $\\vec{n} \\cdot (\\vec{r} - \\vec{r_0}) = 0$
+- $\\vec{n}$ ist der Normalenvektor (senkrecht zur Ebene), $\\vec{r_0}$ ein Punkt auf der Ebene.
 
-## Der Nullvektor
+**2. Koordinatenform:** $ax + by + cz = d$
+- Die Koeffizienten $(a, b, c)$ bilden den Normalenvektor $\\vec{n}$.
 
-Der Nullvektor (0, 0, 0) hat Betrag 0 und keine definierte Richtung. Er entsteht z.B. wenn man einen Vektor von sich selbst subtrahiert: v − v = (0, 0, 0).
+**3. Parameterform:** $\\vec{r} = \\vec{r_0} + s\\cdot\\vec{d_1} + t\\cdot\\vec{d_2}$
+- Zwei Richtungsvektoren $\\vec{d_1}$, $\\vec{d_2}$ spannen die Ebene auf.
 
-## Parallele Vektoren
+## Matrizenrechnung
 
-Zwei Vektoren a und b sind parallel (kollinear), wenn ein Skalar k existiert, sodass a = k × b. Geometrisch zeigen sie in dieselbe oder entgegengesetzte Richtung. Parallele Vektoren haben einen Winkel von 0° oder 180° — ihr Kreuzprodukt ist der Nullvektor.
+Eine **Matrix** $A$ ist ein rechteckiges Schema von Zahlen (m Zeilen × n Spalten). Matrizen ermöglichen die kompakte Darstellung linearer Gleichungssysteme.
 
-## Mittelpunkt und Abstand
+**Addition:** Nur für gleich große Matrizen, elementweise: $(A+B)_{ij} = A_{ij} + B_{ij}$
 
-**Mittelpunkt** zwischen den Punkten A(a₁, a₂, a₃) und B(b₁, b₂, b₃):
-M = ((a₁+b₁)/2, (a₂+b₂)/2, (a₃+b₃)/2) = (A + B) / 2
+**Skalare Multiplikation:** $(\lambda A)_{ij} = \lambda \\cdot A_{ij}$
 
-**Abstand** zwischen A und B:
-d(A, B) = |B − A| = √((b₁−a₁)² + (b₂−a₂)² + (b₃−a₃)²)
+**Matrizenprodukt:** $A$ (m×n) mal $B$ (n×p) = $C$ (m×p). Das Element $C_{ij} = \\sum_k A_{ik} B_{kj}$ (Zeile von $A$ mal Spalte von $B$). Matrizenmultiplikation ist i. A. **nicht kommutativ**: $A \\cdot B \\neq B \\cdot A$.
 
-Das ist der räumliche Abstand — dreidimensionaler Pythagoras.
+**Transponierte Matrix:** $A^\\top$ entsteht durch Vertauschen von Zeilen und Spalten: $(A^\\top)_{ij} = A_{ji}$. Eine Matrix heißt **symmetrisch**, wenn $A = A^\\top$.
 
-## Geradengleichung in Parameterform
+**Determinante einer 2×2-Matrix:**
+$$\\det(A) = \\det\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = ad - bc$$
 
-Eine Gerade durch Punkt A mit Richtungsvektor r lautet in Parameterform:
-P = A + t × r, wobei t ∈ ℝ (Parameter)
+- $\\det(A) = 0$: Die Zeilen/Spalten sind linear abhängig; das LGS hat keine eindeutige Lösung.
+- $\\det(A) \\neq 0$: Matrix ist regulär (invertierbar), das LGS hat genau eine Lösung.
 
-Für jeden Wert von t ergibt sich ein Punkt auf der Geraden. Bei t = 0: Punkt A. Bei t = 1: Punkt A + r. Bei t = −1: Punkt A − r.
+## Klinische Bedeutung
 
-Für eine Gerade durch zwei Punkte A und B: r = B − A (Richtungsvektor), Geradengleichung: P = A + t × (B − A).
-
-## Klinische Anwendungen
-
-In der 3D-Bildgebung (CT, MRT) werden anatomische Strukturen durch ihre 3D-Koordinaten beschrieben. Der kürzeste Abstand zwischen zwei Strukturen (z.B. Tumor und Risikostruktur in der Strahlentherapie) wird mit Abstandsformeln berechnet. In der chirurgischen Robotik (Da Vinci System) werden Werkzeugbewegungen als Vektoren und Geradengleichungen beschrieben. Endoskopische Kameras nutzen Vektoren zur Berechnung von Blickwinkeln. Ultraschall-Bildgebung rekonstruiert 3D-Bilder aus 2D-Schnittebenen durch Vektortransformationen.`,
+In der **CT-Bildrekonstruktion** werden die gemessenen Absorptionswerte durch eine Radon-Transformation verarbeitet. Die Rückprojektion ist mathematisch eine Matrizenoperation: Aus Messdaten (Sinogramm) wird durch iterative Matrizenoperationen ein 3D-Bilddatensatz rekonstruiert. In der **Bioinformatik** werden Genexpressionsdaten als Matrizen gespeichert (Zeilen = Gene, Spalten = Patientenproben). Die **Hauptkomponentenanalyse (PCA)** reduziert diese hochdimensionalen Matrizen auf die relevantesten Dimensionen und ermöglicht die Visualisierung von Mustern in medizinischen Studien.`,
       lernziele: [
-        'Einen Einheitsvektor aus einem beliebigen Vektor berechnen',
-        'Mittelpunkt und Abstand zweier Punkte im 3D-Raum berechnen',
-        'Parallele Vektoren identifizieren (a = k × b)',
-        'Eine Geradengleichung in Parameterform aufstellen',
+        "Die Parameterform einer Geraden im ℝ³ aufstellen und Punkte auf der Geraden berechnen können.",
+        "Ebenengleichungen in Normalenform, Koordinatenform und Parameterform ineinander umrechnen können.",
+        "Matrizenaddition, skalare Multiplikation und Matrizenmultiplikation (mit Dimensionsregel m×n · n×p = m×p) durchführen können.",
+        "Die Determinante einer 2×2-Matrix berechnen und ihre geometrische/algebraische Bedeutung erklären können.",
+        "Die klinische Bedeutung von Matrizenoperationen in der CT-Bildrekonstruktion und Bioinformatik beschreiben können.",
       ],
       sections: [
         {
-          heading: 'Einheitsvektor — Normierung',
-          text: 'ê = v/|v|. Der Einheitsvektor hat Betrag 1 und zeigt in dieselbe Richtung wie v. Normierung ist wichtig, wenn man nur die Richtung einer Größe ohne ihre Stärke ausdrücken will. In der Physik: Richtungsvektoren für Felder (elektrisches Feld E = E_Betrag × ê), Normalvektoren auf Flächen (senkrecht zur Fläche, Betrag 1). Probe: |ê|² = ê·ê = (v₁/|v|)² + (v₂/|v|)² + ... = (v₁²+v₂²+...)/|v|² = |v|²/|v|² = 1.',
-          merksatz: 'Einheitsvektor ê = v/|v|; Betrag genau 1; zeigt Richtung ohne Größe',
+          heading: "Geraden und Ebenen im dreidimensionalen Raum",
+          text: "Eine Gerade im ℝ³ wird durch Stützvektor $\\vec{r_0}$ und Richtungsvektor $\\vec{d}$ dargestellt: $\\vec{r} = \\vec{r_0} + t\\cdot\\vec{d}$. Eine Ebene kann durch zwei Richtungsvektoren aufgespannt werden (Parameterform) oder durch ihren Normalenvektor $\\vec{n}$ beschrieben werden (Normalenform: $\\vec{n}\\cdot(\\vec{r}-\\vec{r_0})=0$). In der Koordinatenform $ax+by+cz=d$ bilden die Koeffizienten $(a,b,c)$ genau den Normalenvektor.",
+          merksatz: "Gerade: r = r₀ + t·d (Stützvektor + Vielfaches des Richtungsvektors). Ebene-Normalenform: n·(r−r₀)=0.",
         },
         {
-          heading: 'Abstand und Mittelpunkt im Raum',
-          text: 'Abstand d(A,B) = |B−A|: Man berechnet den Differenzvektor B−A und nimmt seinen Betrag. Das ist der kürzeste Abstand zwischen den Punkten A und B. Mittelpunkt M = (A+B)/2: Einfache Mittelung aller Koordinaten. In der Bildgebung: CT-Koordinaten für Tumor-Zielpunkt und Kritische Strukturen werden mit diesen Formeln verarbeitet. Bestrahlungsplanung: Minimaler Abstand zwischen Tumormittelpunkt und Rückenmark in mm.',
+          heading: "Matrizenrechnung — Grundoperationen und Determinante",
+          text: "Matrizen werden elementweise addiert; das Produkt $A\\cdot B$ erfordert gleiche innere Dimensionen (n) und ist nicht kommutativ. Die Transponierte $A^\\top$ entsteht durch Zeile-Spalte-Tausch. Die Determinante einer 2×2-Matrix: $\\det(A) = ad-bc$. Ist sie null, sind die Zeilen linear abhängig — das entsprechende LGS hat keine eindeutige Lösung. Wichtige Anwendung: Prüfung auf lineare Unabhängigkeit von Vektoren.",
+          merksatz: "Matrizenprodukt: m×n · n×p = m×p. Determinante 2×2: ad−bc. det = 0 → linear abhängig, kein eindeutiges LGS.",
         },
         {
-          heading: 'Geradengleichung in Parameterform',
-          text: 'P(t) = A + t × r. Startpunkt A, Richtungsvektor r, Parameter t. Für alle t ∈ ℝ liefert die Gleichung alle Punkte auf der Geraden. Zwei Geraden schneiden sich, wenn es ein t und ein s gibt, sodass P₁(t) = P₂(s). Geraden sind parallel, wenn ihre Richtungsvektoren parallel sind (r₁ = k × r₂). Diese Darstellung ist flexibler als y = mx + b, da sie auch vertikale Geraden und 3D-Geraden beschreiben kann.',
+          heading: "Klinische Anwendungen: CT und Bioinformatik",
+          text: "CT-Bildrekonstruktion: Die gemessenen Röntgenabsorptionsdaten werden als Sinogramm gespeichert und durch Matrizenoperationen (gefilterte Rückprojektion) in ein 3D-Volumenbild umgerechnet. Bioinformatik: Genexpressionsdaten als Matrizen (Gene × Patienten). PCA (Hauptkomponentenanalyse) nutzt Eigenvektoren und Eigenwerte dieser Matrizen, um Datenmuster zu erkennen und Dimensionen zu reduzieren. Auch lineare Regression und medizinische Bildgebung (MRT, Ultraschall-Beamforming) stützen sich auf Matrizenalgebra.",
+          merksatz: "CT-Rekonstruktion = Matrizenoperationen (Rückprojektion). Bioinformatik: Genmatrix (Gene × Patienten). PCA nutzt Eigenvektoren.",
         },
       ],
       merksätze: [
-        'Einheitsvektor: ê = v/|v|; Probe: |ê| = 1',
-        'Abstand: d(A,B) = |B−A| = √(Δx²+Δy²+Δz²)',
-        'Geradengleichung: P = A + t·r (Parameterform, t ∈ ℝ)',
+        "Geradengleichung Raum: r = r₀ + t·d (Stützvektor + Parameter × Richtungsvektor).",
+        "Ebene Normalenform: n·(r − r₀) = 0, wobei n ⊥ Ebene.",
+        "Ebene Koordinatenform: ax + by + cz = d — Koeffizienten (a,b,c) sind der Normalenvektor.",
+        "Matrizenaddition: nur für gleich große Matrizen, elementweise.",
+        "Matrizenprodukt: A(m×n) · B(n×p) = C(m×p) — innere Dimensionen müssen übereinstimmen.",
+        "Matrizenmultiplikation ist nicht kommutativ: A·B ≠ B·A (im Allgemeinen).",
+        "Transponierte Aᵀ: Zeilen und Spalten vertauschen; symmetrisch wenn A = Aᵀ.",
+        "Determinante 2×2: det(A) = ad − bc.",
+        "det(A) = 0 → Zeilen/Spalten linear abhängig → LGS nicht eindeutig lösbar.",
+        "CT: Bildrekonstruktion durch Radon-Transformation und Matrizenoperationen (Rückprojektion).",
       ],
       altfrage: {
-        question: 'Zwei Punkte in der CT-Bildgebung: Tumor-Mittelpunkt A = (10, 20, 15) mm und Rückenmark-Mitte B = (10, 45, 15) mm. Berechnen Sie den Abstand und den Mittelpunkt.',
-        answer: 'Differenzvektor B−A = (0, 25, 0). Abstand: d = |B−A| = √(0+625+0) = √625 = 25 mm. Mittelpunkt: M = ((10+10)/2, (20+45)/2, (15+15)/2) = (10, 32,5, 15) mm. Der Tumor ist 25 mm vom Rückenmark entfernt; der Mittelpunkt liegt bei (10, 32,5, 15) mm.',
+        question: "Beschreiben Sie die Darstellungsformen von Ebenen im Raum und erläutern Sie die Bedeutung der Determinante einer Matrix.",
+        answer: "Eine Ebene im dreidimensionalen Raum lässt sich auf drei äquivalente Arten beschreiben. In der **Parameterform** $\\vec{r} = \\vec{r_0} + s\\cdot\\vec{d_1} + t\\cdot\\vec{d_2}$ wird die Ebene durch einen Aufpunkt $\\vec{r_0}$ und zwei linear unabhängige Richtungsvektoren $\\vec{d_1}$, $\\vec{d_2}$ definiert. In der **Normalenform** $\\vec{n}\\cdot(\\vec{r}-\\vec{r_0})=0$ steht der Normalenvektor $\\vec{n}$ senkrecht auf der Ebene — dieser lässt sich als Kreuzprodukt der Richtungsvektoren berechnen: $\\vec{n} = \\vec{d_1}\\times\\vec{d_2}$. In der **Koordinatenform** $ax+by+cz=d$ bilden die Koeffizienten $(a,b,c)$ genau den Normalenvektor. Die **Determinante** einer 2×2-Matrix $A = \\begin{pmatrix}a & b \\\\ c & d\\end{pmatrix}$ ist $\\det(A) = ad-bc$. Geometrisch entspricht sie dem Flächeninhalt des von den Zeilenvektoren aufgespannten Parallelogramms. Ist $\\det(A) = 0$, sind die Zeilen (oder Spalten) linear abhängig: Das zugehörige lineare Gleichungssystem besitzt keine eindeutige Lösung (entweder keine oder unendlich viele). Ist $\\det(A) \\neq 0$, ist die Matrix regulär und invertierbar — das LGS hat genau eine Lösung. In der medizinischen Bildgebung spielt die Matrizenrechnung eine fundamentale Rolle: Die CT-Rekonstruktion basiert auf der Inversion von Matrizenoperationen (gefilterte Rückprojektion der Radon-Transformation).",
       },
-      klinischerBezug: 'In der Strahlentherapie (Radiotherapie) ist der Abstand zwischen dem Tumor und Risikoorganen (OAR = Organs at Risk) ein kritischer Parameter. Das Bestrahlungsplanungssystem (z.B. Eclipse, RayStation) berechnet automatisch die minimale Distanz in mm für alle anatomischen Strukturen im 3D-Volumen. Die Dosis-Abstandsbeziehung (Dosisabfall mit 1/r² für Punktquelle) und die Bestrahlungswinkeloptimierung nutzen Vektormathematik. Der Einsatz von IMRT (Intensity Modulated Radiation Therapy) und VMAT (Volumetric Arc Therapy) basiert auf ausgefeilten Vektoroptimierungsalgorithmen.',
+      klinischerBezug: "CT-Bildrekonstruktion via Radon-Transformation (Matrizenoperationen); Genexpressionsdaten als Matrizen; PCA zur Mustererkennung in medizinischen Studien.",
       selfTest: [
         {
-          question: 'Was ist der Einheitsvektor von v = (0, 0, 5)?',
-          options: ['(0, 0, 1)', '(0, 0, 5)', '(0, 0, 0,2)', '(0, 5, 0)', '(1, 0, 0)'],
+          question: "Welcher Punkt liegt auf der Geraden $\\vec{r} = (1,2,3)^\\top + t\\cdot(1,0,-1)^\\top$?",
+          options: [
+            "$(3, 2, 1)$",
+            "$(2, 2, 2)$",
+            "$(1, 3, 3)$",
+            "$(3, 3, 1)$",
+            "$(0, 2, 4)$",
+          ],
           correctIndex: 0,
-          explanation: '|v| = √(0+0+25) = 5. Einheitsvektor: ê = v/|v| = (0, 0, 5)/5 = (0, 0, 1). Das ist der Einheitsvektor in z-Richtung (e₃).',
-          hints: ['ê = v/|v|. Berechne zuerst |v|.', '|v| = 5 → ê = (0, 0, 5)/5 = ?'],
-          difficulty: 1,
+          explanation: "Für $t=2$: $\\vec{r} = (1,2,3)+2(1,0,-1) = (1+2,\\;2+0,\\;3-2) = (3,2,1)$. Zur Kontrolle: $t=1$ gibt $(2,2,2)$ — diese Antwort ist nicht im Angebot. Das Einsetzen von $t=2$ in die Parameterform liefert eindeutig $(3,2,1)$. Die anderen Optionen ergeben bei keinem $t$ einen konsistenten Wert für alle drei Koordinaten.",
+          hints: [
+            "Setzen Sie verschiedene Werte für t ein: t=0 gibt den Stützvektor selbst, t=1 gibt r₀ + d, t=2 gibt r₀ + 2d.",
+            "Überprüfen Sie jede Antwortoption: Gibt es ein t, sodass (1,2,3) + t·(1,0,−1) = Antwortoption?",
+          ],
           tags: [],
-        },
-        {
-          question: 'Wie lautet der Mittelpunkt M zwischen A = (2, 4, 6) und B = (8, 2, 0)?',
-          options: ['(5, 3, 3)', '(6, 6, 6)', '(10, 6, 6)', '(3, 3, 5)', '(4, 2, 6)'],
-          correctIndex: 0,
-          explanation: 'M = ((2+8)/2, (4+2)/2, (6+0)/2) = (10/2, 6/2, 6/2) = (5, 3, 3).',
-          hints: ['Mittelpunkt: Koordinaten addieren, durch 2 dividieren.', '((2+8)/2, (4+2)/2, (6+0)/2) = ?'],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: 'Sind a = (2, 4, 6) und b = (1, 2, 3) parallel?',
-          options: ['Ja, a = 2×b', 'Nein, Kreuzprodukt ≠ 0', 'Nein, Beträge verschieden', 'Ja, Skalarprodukt = 0', 'Nein, Richtungen entgegengesetzt'],
-          correctIndex: 0,
-          explanation: 'a = (2, 4, 6) = 2 × (1, 2, 3) = 2 × b. Da ein Skalar k=2 existiert mit a = k×b, sind die Vektoren parallel (gleiche Richtung, doppelte Länge).',
-          hints: ['Parallel: a = k × b für eine Zahl k. Prüfe, ob 2 × b = a.', '2 × (1, 2, 3) = (2, 4, 6) = a → parallel!'],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: 'Was ist der Abstand zwischen P₁ = (1, 1, 1) und P₂ = (4, 5, 1)?',
-          options: ['5', '3', '4', '√50', '7'],
-          correctIndex: 0,
-          explanation: 'Differenzvektor: P₂−P₁ = (3, 4, 0). Abstand: |P₂−P₁| = √(9+16+0) = √25 = 5. Wieder das pythagoräische Tripel (3, 4, 5) — aber im 3D-Raum.',
-          hints: ['d = |P₂−P₁|. Berechne den Differenzvektor und seinen Betrag.', '(4−1, 5−1, 1−1) = (3, 4, 0); ||(3,4,0)|| = √(9+16+0).'],
           difficulty: 2,
-          tags: [],
         },
         {
-          question: 'Eine Gerade läuft durch A = (1, 2, 3) mit Richtungsvektor r = (0, 1, 0). Welcher Punkt liegt auf der Geraden für t = 3?',
-          options: ['(1, 5, 3)', '(1, 2, 6)', '(4, 2, 3)', '(0, 3, 0)', '(3, 2, 3)'],
+          question: "Was ist der Normalenvektor der Ebene mit Koordinatenform $2x - 3y + z = 5$?",
+          options: [
+            "$(2, -3, 1)$",
+            "$(2, 3, -1)$",
+            "$(5, 5, 5)$",
+            "$(-2, 3, -1)$",
+            "$(1, 1, 1)$",
+          ],
           correctIndex: 0,
-          explanation: 'P = A + t × r = (1, 2, 3) + 3 × (0, 1, 0) = (1, 2+3, 3) = (1, 5, 3). Die Gerade verläuft parallel zur y-Achse durch (1, _, 3).',
-          hints: ['P = A + t × r. Einsetzen: A = (1,2,3), t = 3, r = (0,1,0).', '(1, 2, 3) + 3×(0, 1, 0) = (1, 2+3, 3+0).'],
-          difficulty: 2,
+          explanation: "In der Koordinatenform $ax+by+cz=d$ bilden die Koeffizienten $(a,b,c)$ direkt den Normalenvektor der Ebene. Hier: $a=2$, $b=-3$, $c=1$, also $\\vec{n} = (2,-3,1)^\\top$. Der Normalenvektor steht senkrecht auf der Ebene. Dies kann mit dem Skalarprodukt verifiziert werden: Jeder in der Ebene liegende Vektor ergibt mit $\\vec{n}$ das Skalarprodukt 0.",
+          hints: [
+            "In der Koordinatenform ax + by + cz = d sind die Koeffizienten a, b, c direkt die Komponenten des Normalenvektors.",
+            "Der Normalenvektor steht senkrecht auf der Ebene — er ergibt mit jedem Ebenenvektor das Skalarprodukt 0.",
+          ],
           tags: [],
+          difficulty: 1,
         },
         {
-          question: 'Was ist der Einheitsvektor von v = (3, −4, 0)?',
-          options: ['(0,6; −0,8; 0)', '(3, −4, 0)', '(0,3; −0,4; 0)', '(−0,6; 0,8; 0)', '(1; −1; 0)'],
+          question: "Berechnen Sie das Produkt $A \\cdot B$ für $A = \\begin{pmatrix}1 & 2\\\\3 & 4\\end{pmatrix}$ und $B = \\begin{pmatrix}1\\\\0\\end{pmatrix}$.",
+          options: [
+            "$\\begin{pmatrix}1\\\\3\\end{pmatrix}$",
+            "$\\begin{pmatrix}3\\\\7\\end{pmatrix}$",
+            "$\\begin{pmatrix}1\\\\4\\end{pmatrix}$",
+            "$\\begin{pmatrix}2\\\\4\\end{pmatrix}$",
+            "$\\begin{pmatrix}4\\\\6\\end{pmatrix}$",
+          ],
           correctIndex: 0,
-          explanation: '|v| = √(9+16+0) = 5. ê = (3/5, −4/5, 0) = (0,6; −0,8; 0). Probe: 0,6² + 0,8² = 0,36 + 0,64 = 1.',
-          hints: ['|v| = √(3²+4²) = 5. ê = v/|v|.', '(3/5, −4/5, 0) = (0,6; −0,8; 0). Probe: 0,6²+0,8² = 1?'],
-          difficulty: 2,
+          explanation: "A ist 2×2, B ist 2×1 → Ergebnis C ist 2×1. $C_{11} = 1\\cdot1+2\\cdot0 = 1$; $C_{21} = 3\\cdot1+4\\cdot0 = 3$. Also $C = (1,3)^\\top$. Beim Matrizenprodukt wird jede Zeile von A mit der (einzigen) Spalte von B skalar multipliziert. Dimensionsregel: 2×2 mal 2×1 = 2×1 — die inneren Dimensionen (beide 2) stimmen überein.",
+          hints: [
+            "Dimensionsregel: A ist (2×2), B ist (2×1). Das Ergebnis ist (2×1).",
+            "Zeile 1 von A mal Spalte von B: 1·1 + 2·0 = 1. Zeile 2 von A mal Spalte von B: 3·1 + 4·0 = 3.",
+          ],
           tags: [],
+          difficulty: 2,
+        },
+        {
+          question: "Berechnen Sie die Determinante von $A = \\begin{pmatrix}3 & 5\\\\1 & 2\\end{pmatrix}$.",
+          options: [
+            "1",
+            "−1",
+            "11",
+            "6",
+            "0",
+          ],
+          correctIndex: 0,
+          explanation: "Für eine 2×2-Matrix gilt: $\\det(A) = ad - bc = 3\\cdot2 - 5\\cdot1 = 6 - 5 = 1$. Da $\\det(A) = 1 \\neq 0$, ist die Matrix regulär und invertierbar — das zugehörige LGS hat genau eine Lösung. Der Wert 1 ist besonders praktisch, da die Inverse $A^{-1}$ dann einfach zu berechnen ist.",
+          hints: [
+            "Determinante 2×2: det(A) = a·d − b·c (Hauptdiagonale minus Nebendiagonale).",
+            "Hier: a=3, b=5, c=1, d=2. Also: 3·2 − 5·1 = ?",
+          ],
+          tags: [],
+          difficulty: 1,
+        },
+        {
+          question: "Was bedeutet es, wenn $\\det(A) = 0$ für eine quadratische Matrix gilt?",
+          options: [
+            "Die Spalten (Zeilen) sind linear abhängig und das LGS $A\\vec{x}=\\vec{b}$ hat keine eindeutige Lösung",
+            "Die Matrix ist die Einheitsmatrix",
+            "Das LGS hat genau eine Lösung",
+            "Die Matrix ist symmetrisch",
+            "Alle Einträge der Matrix sind null",
+          ],
+          correctIndex: 0,
+          explanation: "Ist $\\det(A) = 0$, sind die Zeilen- (oder äquivalent: Spalten-) Vektoren der Matrix linear abhängig. Das homogene LGS $A\\vec{x}=\\vec{0}$ hat dann nichttriviale Lösungen. Für das inhomogene System $A\\vec{x}=\\vec{b}$ bedeutet dies entweder keine Lösung (widersprüchlich) oder unendlich viele (unterbestimmt). Geometrisch: Die Zeilenvektoren spannen keinen vollständigen Raum auf (ein Parallelogramm mit Fläche 0 bedeutet Kollinearität). Eine Matrix mit $\\det = 0$ heißt **singulär** (nicht invertierbar).",
+          hints: [
+            "det(A) = 0 bedeutet, dass die Vektoren, die die Zeilen (oder Spalten) bilden, linear abhängig sind.",
+            "Eine nicht invertierbare (singuläre) Matrix ergibt kein eindeutig lösbares LGS.",
+          ],
+          tags: [],
+          difficulty: 2,
+        },
+        {
+          question: "Welche Dimensionen hat das Produkt $A\\cdot B$, wenn $A$ eine 3×4-Matrix und $B$ eine 4×2-Matrix ist?",
+          options: [
+            "3×2",
+            "4×4",
+            "3×4",
+            "2×3",
+            "Das Produkt ist nicht definiert",
+          ],
+          correctIndex: 0,
+          explanation: "Die Dimensionsregel lautet: $(m\\times n)\\cdot(n\\times p) = (m\\times p)$. Hier: $(3\\times4)\\cdot(4\\times2) = (3\\times2)$. Die inneren Dimensionen (beide 4) stimmen überein, daher ist das Produkt definiert. Das Ergebnis hat m=3 Zeilen (aus A) und p=2 Spalten (aus B). Dies ist die wichtigste Voraussetzung bei der Matrizenmultiplikation — die Anzahl der Spalten von A muss gleich der Anzahl der Zeilen von B sein.",
+          hints: [
+            "Merkhilfe: (m×n)·(n×p) = (m×p). Die 'innere' Dimension n muss übereinstimmen und 'verschwindet'.",
+            "Nehmen Sie die äußeren Dimensionen: 3 (Zeilen von A) und 2 (Spalten von B).",
+          ],
+          tags: [],
+          difficulty: 1,
+        },
+        {
+          question: "In der CT-Bildrekonstruktion werden Matrizenoperationen verwendet. Welches mathematische Verfahren liegt der CT-Rekonstruktion zugrunde?",
+          options: [
+            "Radon-Transformation mit anschließender gefilterter Rückprojektion (Matrizenoperationen)",
+            "Direkte Fourier-Inversion ohne Matrizenrechnung",
+            "Einfache Vektoraddition der Messwerte",
+            "Determinantenberechnung der Absorptionsmatrix",
+            "Kreuzprodukt der Messstrahlen",
+          ],
+          correctIndex: 0,
+          explanation: "Die CT-Bildrekonstruktion basiert auf der **Radon-Transformation**: Für jeden Projektionswinkel wird ein eindimensionales Absorptionsprofil gemessen. Das Sinogramm (alle Projektionen zusammen) wird durch die **gefilterte Rückprojektion** in ein 2D/3D-Bild umgewandelt — dies ist mathematisch eine Matrizenoperation. Die Bilddaten werden als Matrix (Pixel-Array) gespeichert. Iterative Rekonstruktionsverfahren lösen ein großes lineares Gleichungssystem $A\\vec{x}=\\vec{b}$ (A = Systemmatrix, x = Bildvektor, b = Messdaten).",
+          hints: [
+            "CT misst Absorptionswerte aus verschiedenen Winkeln. Wie wird daraus ein Bild berechnet?",
+            "Das Schlüsselwort ist 'Rückprojektion' — mathematisch entspricht dies einer Matrizenoperation auf den Messdaten.",
+          ],
+          tags: [],
+          difficulty: 3,
         },
       ],
     },
