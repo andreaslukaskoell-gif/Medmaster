@@ -1,9 +1,10 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Brain, ListChecks, BookOpen, Sparkles, Star, ArrowRight, GraduationCap, Shield, Zap } from "lucide-react";
+import { Brain, ListChecks, BookOpen, Sparkles, ArrowRight, GraduationCap, Shield, Zap, LayoutGrid, RefreshCw, TrendingUp, Users } from "lucide-react";
+import { supabase } from "@/lib/supabase";
 
 const MEDICAL_BLUE = "#0055ff";
-const MEDICAL_BLUE_LIGHT = "#e0ebff";
 
 const features = [
   {
@@ -19,10 +20,28 @@ const features = [
     color: "bg-[#e0ebff] dark:bg-primary-900/30 text-[#0055ff] dark:text-primary-400",
   },
   {
-    icon: BookOpen,
-    title: "1.000+ Übungsfragen",
-    description: "BMS, KFF, Textverständnis und Sozial-emotionale Kompetenzen — alles in einer App.",
-    color: "bg-[#e0ebff] dark:bg-primary-900/30 text-[#0055ff] dark:text-primary-400",
+    icon: LayoutGrid,
+    title: "Alle 4 MedAT-Bereiche",
+    description: "BMS, KFF, TV und SEK vollständig abgedeckt — alles in einer App, kein Wechsel nötig.",
+    color: "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400",
+  },
+  {
+    icon: Zap,
+    title: "Prüfungs-Simulation",
+    description: "Realistische MedAT-Simulationen unter echten Prüfungsbedingungen mit Timer und Auswertung.",
+    color: "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400",
+  },
+  {
+    icon: RefreshCw,
+    title: "Spaced Repetition System",
+    description: "Wissenschaftlich optimierte Wiederholung: Du lernst genau das, was du gerade vergisst.",
+    color: "bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400",
+  },
+  {
+    icon: TrendingUp,
+    title: "Fortschritt & Prognose",
+    description: "Live-Tracking deines Wissensstands pro Fach. KI-gestützte Prüfungstag-Prognose.",
+    color: "bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-400",
   },
 ];
 
@@ -32,19 +51,29 @@ const pricingPlans = [
   { name: "Pro", price: "€19.90", period: "/Monat", features: ["Alles aus Standard", "KI-Tutor Chat", "Prüfungstag-Prognose", "Prioritärer Support", "Lernplan-Generator"], cta: "Pro wählen", highlight: false },
 ];
 
-const testimonials = [
-  { name: "Sarah M.", uni: "MedUni Wien 2025", text: "Dank MedMaster habe ich meine BMS-Schwachstellen erkannt und gezielt trainiert. Die adaptive Fragenauswahl hat den Unterschied gemacht!", rating: 5 },
-  { name: "Lukas K.", uni: "MedUni Graz 2025", text: "Die Stichwortlisten-Abdeckung gibt mir die Sicherheit, dass ich wirklich alles Relevante gelernt habe. Beste MedAT-App!", rating: 5 },
-  { name: "Anna T.", uni: "MedUni Innsbruck 2025", text: "Der KI-Tutor erklärt Fehler so, dass ich sie wirklich verstehe. Viel besser als nur eine Erklärung zu lesen.", rating: 5 },
-];
-
 const container = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.06 } } };
 const item = { hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0 } };
 
 export default function LandingPage() {
+  const [userCount, setUserCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (!supabase) return;
+    supabase.from("leaderboard_snapshots").select("*", { count: "exact", head: true }).then(({ count }) => {
+      if (count && count >= 50) setUserCount(count);
+    });
+  }, []);
+
+  const socialProofItems = [
+    ...(userCount ? [{ emoji: "📊", text: `Bereits über ${userCount} aktive Lernende` }] : []),
+    { emoji: "⭐", text: "Alle 4 MedAT-Bereiche abgedeckt" },
+    { emoji: "🎯", text: "Offizielle Stichwortliste 2025/2026" },
+    { emoji: "🆓", text: "Kostenlos starten — kein Abo nötig" },
+  ];
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
-      {/* Nav — clean, floating feel */}
+      {/* Nav */}
       <motion.nav
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -93,7 +122,7 @@ export default function LandingPage() {
             MedAT 2026 bestehen —
             <br />
             <span className="bg-clip-text text-transparent" style={{ backgroundImage: `linear-gradient(135deg, ${MEDICAL_BLUE}, #3b82f6)` }}>
-              mit KI ab €12.90/Monat
+              der smarteste Weg dorthin
             </span>
           </motion.h1>
           <motion.p
@@ -102,7 +131,8 @@ export default function LandingPage() {
             transition={{ delay: 0.35 }}
             className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Die smarteste MedAT-Vorbereitung Österreichs. Adaptives Lernen, offizielle Stichwortliste und über 1.000 Übungsfragen.
+            Österreichs erste MedAT-Plattform mit adaptivem KI-Lernsystem.
+            BMS, KFF, TV und SEK — alles in einer App. Kostenlos starten.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -157,7 +187,7 @@ export default function LandingPage() {
             <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Warum MedMaster?</h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">Entwickelt von MedAT-Absolventen, optimiert mit KI.</p>
           </motion.div>
-          <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((f) => (
               <motion.div
                 key={f.title}
@@ -201,8 +231,29 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Social Proof */}
+      <section className="py-16 sm:py-20 bg-gray-50/50 dark:bg-gray-900/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">Fakten statt Versprechen</h2>
+          </motion.div>
+          <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {socialProofItems.map((sp) => (
+              <motion.div
+                key={sp.text}
+                variants={item}
+                className="flex items-center gap-4 bg-white dark:bg-gray-900 rounded-2xl px-6 py-5 shadow-sm border border-gray-100 dark:border-gray-800/50"
+              >
+                <span className="text-2xl shrink-0">{sp.emoji}</span>
+                <span className="text-sm font-medium text-gray-800 dark:text-gray-200">{sp.text}</span>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Pricing */}
-      <section id="preise" className="py-16 sm:py-24 bg-gray-50/50 dark:bg-gray-900/30">
+      <section id="preise" className="py-16 sm:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Beste MedAT-Vorbereitung zum fairsten Preis</h2>
@@ -248,33 +299,6 @@ export default function LandingPage() {
                     {plan.cta}
                   </Link>
                 </motion.div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 sm:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <motion.h2 initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl font-bold text-gray-900 dark:text-gray-100 text-center mb-14">
-            Das sagen unsere Nutzer
-          </motion.h2>
-          <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            {testimonials.map((t) => (
-              <motion.div
-                key={t.name}
-                variants={item}
-                className="bg-white dark:bg-gray-900 rounded-2xl p-6 sm:p-8 border border-gray-100 dark:border-gray-800 shadow-sm"
-              >
-                <div className="flex gap-0.5 mb-4">
-                  {Array.from({ length: t.rating }).map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 dark:text-gray-300 text-sm mb-4 leading-relaxed italic">"{t.text}"</p>
-                <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">{t.name}</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">{t.uni}</p>
               </motion.div>
             ))}
           </motion.div>
