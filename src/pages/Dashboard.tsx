@@ -1,7 +1,7 @@
-import { useMemo, useEffect } from "react";
+import { useMemo, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Award, Flame, BookOpen, Sparkles, ArrowRight, Target, CheckCircle2, Clock } from "lucide-react";
+import { Award, Flame, BookOpen, Sparkles, ArrowRight, Target, CheckCircle2, Clock, Share2 } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -15,6 +15,7 @@ import { useDashboardProfile } from "@/hooks/useDashboardProfile";
 import { cn, daysUntilMedAT } from "@/lib/utils";
 import { getDailyGoalFromPlan, getConsecutiveDaysGoalMissed } from "@/lib/dailyGoal";
 import { getTodaysResult } from "@/lib/dailyChallenge";
+import { shareText, getStreakShareText } from "@/lib/shareUtils";
 import { getLevelFromXP, getLevelProgressPercent } from "@/lib/progression";
 import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { BADGE_DEFINITIONS } from "@/data/badges";
@@ -279,10 +280,13 @@ export default function Dashboard() {
                   <div className="w-11 h-11 rounded-xl bg-orange-500/20 dark:bg-orange-500/30 flex items-center justify-center shrink-0">
                     <Flame className="w-5 h-5 text-orange-600 dark:text-orange-400" />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <p className="text-2xl font-bold text-slate-900 dark:text-white">{streak}</p>
                     <p className="text-xs text-slate-500 dark:text-slate-400">Tage Streak</p>
                   </div>
+                  {streak > 0 && (
+                    <StreakShareButton streak={streak} />
+                  )}
                 </div>
               </CardContent>
             </div>
@@ -363,5 +367,24 @@ export default function Dashboard() {
         )}
       </div>
     </div>
+  );
+}
+
+function StreakShareButton({ streak }: { streak: number }) {
+  const [copied, setCopied] = useState(false);
+  return (
+    <button
+      type="button"
+      onClick={async () => {
+        await shareText(getStreakShareText(streak));
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      }}
+      className="p-2 rounded-lg text-orange-500 hover:bg-orange-500/10 transition-colors cursor-pointer"
+      aria-label="Streak teilen"
+      title="Streak teilen"
+    >
+      {copied ? <CheckCircle2 className="w-4 h-4 text-emerald-500" /> : <Share2 className="w-4 h-4" />}
+    </button>
   );
 }

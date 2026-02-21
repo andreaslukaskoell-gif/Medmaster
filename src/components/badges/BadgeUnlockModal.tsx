@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { X, Share2 } from "lucide-react";
 import { BadgeIcon } from "./BadgeIcon";
 import { BADGE_DEFINITIONS } from "@/data/badges";
 import type { BadgeTier } from "@/data/badges";
 import { cn } from "@/lib/utils";
+import { shareText, getBadgeShareText } from "@/lib/shareUtils";
 
 interface BadgeUnlockModalProps {
   badgeId: string | null;
@@ -20,6 +21,7 @@ const MOTIVATIONAL_MESSAGES: Record<BadgeTier, string> = {
 export function BadgeUnlockModal({ badgeId, onDismiss }: BadgeUnlockModalProps) {
   const badge = badgeId ? BADGE_DEFINITIONS.find((b) => b.id === badgeId) : null;
   const visible = !!badge;
+  const [shared, setShared] = useState(false);
 
   useEffect(() => {
     if (!visible) return;
@@ -86,7 +88,19 @@ export function BadgeUnlockModal({ badgeId, onDismiss }: BadgeUnlockModalProps) 
               <p className="text-primary-300 dark:text-primary-400 text-sm font-medium">
                 {MOTIVATIONAL_MESSAGES[badge.tier]}
               </p>
-              <p className="text-xs text-slate-500 mt-4">Klicken oder Escape zum Schließen</p>
+              <button
+                type="button"
+                onClick={async () => {
+                  await shareText(getBadgeShareText(badge.name, badge.tier));
+                  setShared(true);
+                  setTimeout(() => setShared(false), 2000);
+                }}
+                className="mt-5 flex items-center gap-2 mx-auto px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 text-sm transition-colors cursor-pointer"
+              >
+                <Share2 className="w-4 h-4" />
+                {shared ? "Kopiert!" : "Teilen"}
+              </button>
+              <p className="text-xs text-slate-500 mt-3">Klicken oder Escape zum Schließen</p>
             </div>
           </motion.div>
         </motion.div>

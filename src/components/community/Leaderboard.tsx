@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronUp, ChevronDown, Minus } from "lucide-react";
 import { useStore } from "@/store/useStore";
@@ -16,7 +16,10 @@ import {
   rankByWeekly,
   rankByFach,
   getTopPercent,
+  fetchLeaderboardFromDB,
+  syncUserToLeaderboard,
 } from "@/lib/leaderboard";
+import { supabase } from "@/lib/supabase";
 import { BADGE_DEFINITIONS } from "@/data/badges";
 import { BadgeIcon } from "@/components/badges/BadgeIcon";
 import { cn } from "@/lib/utils";
@@ -39,6 +42,36 @@ export function Leaderboard() {
   const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
   const [category, setCategory] = useState<LeaderboardCategory>("global");
   const [fach, setFach] = useState<FachFilter>("biologie");
+  const [dbEntries, setDbEntries] = useState<LeaderboardEntry[]>([]);
+
+  // Sync current user's stats to Supabase once on mount
+  useEffect(() => {
+    if (!supabase || !profile?.id) return;
+    const nickname = profile.display_name || profile.username || "Anonym";
+    const level = getLevelFromXP(xp);
+    syncUserToLeaderboard(supabase, profile.id, {
+      nickname,
+      xp,
+      level,
+      xpThisWeek,
+      subjectScores: {
+        biologie: getFachReadiness("biologie"),
+        chemie: getFachReadiness("chemie"),
+        physik: getFachReadiness("physik"),
+        mathematik: getFachReadiness("mathematik"),
+        kff: Math.min(100, Math.floor(xp / 50) + 30),
+      },
+      badgeIds: earnedBadges.slice(0, 3),
+    });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [profile?.id]);
+
+  useEffect(() => {
+    if (!supabase) return;
+    fetchLeaderboardFromDB(supabase, category, category === "fach" ? fach : undefined).then((rows) => {
+      if (rows.length > 0) setDbEntries(rows);
+    });
+  }, [category, fach]);
 
   const xpThisWeek = useMemo(() => {
     const now = new Date();
@@ -78,15 +111,14 @@ export function Leaderboard() {
   }, [profile, xp, earnedBadges, xpThisWeek, getFachReadiness]);
 
   const rankedList = useMemo(() => {
-    const mock = generateMockLeaderboardEntries(MOCK_SIZE).map((e) => ({
-      ...e,
-      isCurrentUser: false,
-    })) as LeaderboardEntry[];
-    const all = [...mock, currentUserEntry];
+    const base: LeaderboardEntry[] = dbEntries.length > 0
+      ? dbEntries.map((e) => ({ ...e, isCurrentUser: e.id === profile?.id }))
+      : generateMockLeaderboardEntries(MOCK_SIZE).map((e) => ({ ...e, isCurrentUser: false })) as LeaderboardEntry[];
+    const all = [...base.filter((e) => !e.isCurrentUser), currentUserEntry];
     if (category === "global") return rankByGlobal(all);
     if (category === "weekly") return rankByWeekly(all);
     return rankByFach(all, fach);
-  }, [category, fach, currentUserEntry]);
+  }, [category, fach, currentUserEntry, dbEntries, profile?.id]);
 
   const topEntries = rankedList.slice(0, TOP_LIST_SIZE);
   const currentRank = rankedList.find((e) => e.isCurrentUser)?.rank ?? 0;
