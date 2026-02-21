@@ -405,6 +405,7 @@ Die **Plazentaschranke** (Histo-hämatische Schranke) trennt mütterliches von f
           text: "Die Nabelschnur enthält 2 Nabelarterien (Aa. umbilicales) und 1 Nabelvene (V. umbilicalis), eingehüllt in Wharton-Sulze. Merkhilfe: 'AVA' (Arterie-Vene-Arterie). Sauerstoffarmes, kohlendioxidreiches fetales Blut fließt durch die Arterien zur Plazenta; sauerstoffreiches Blut kehrt über die Vene zum Fötus zurück – also umgekehrt zur konventionellen Arterie/Vene-Definition (fetale Arterien führen 'venöses' Blut). Fehlt eine Nabelarterie (Single Umbilical Artery, SUA), ist dies mit erhöhtem Risiko für Fehlbildungen assoziiert. Das Amnion (innere Membran) produziert und umgibt Fruchtwasser (Amnionflüssigkeit, ca. 800 ml am Termin). Das Chorion (äußere Membran) liegt dem Amnion an und grenzt an die Decidua.",
         },
       ],
+      diagram: 'membrane-transport',
       merksätze: [
         "Plazenta: fetal (Chorionzotten) + mütterlich (Decidua basalis); kein direkter Blut-Kontakt zwischen Mutter und Kind.",
         "Nabelschnur: 2 Arterien (sauerstoffarm vom Kind) + 1 Vene (sauerstoffreich zum Kind) – AVA.",

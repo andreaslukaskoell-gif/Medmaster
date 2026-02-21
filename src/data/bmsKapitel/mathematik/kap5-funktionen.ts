@@ -249,6 +249,7 @@ Quadratische Funktionen modellieren viele physikalische Vorgänge: Wurfparabeln,
           merksatz: "E_kin = ½mv²: quadratisch in v. A = πr²: quadratisch in r. Kleine Änderungen im Radius bewirken große Flächenänderungen.",
         },
       ],
+      diagram: 'coordinate-system',
       merksätze: [
         "f(x) = ax² + bx + c: a ≠ 0, Graph ist Parabel.",
         "a > 0: Öffnung nach oben (Minimum); a < 0: Öffnung nach unten (Maximum).",
@@ -437,6 +438,7 @@ Jede Exponentialfunktion f(x) = aˣ lässt sich als f(x) = eˣ·ln(a) schreiben,
           merksatz: "Kinetik 1. Ordnung: C(t) = C₀·e^(−kt). Nach 5·T½ ≈ 97 % eliminiert → klinisch vollständig weg.",
         },
       ],
+      diagram: 'coordinate-system',
       merksätze: [
         "f(x) = a · bˣ: b > 1 Wachstum; 0 < b < 1 Zerfall.",
         "Natürliche Basis: e ≈ 2,718; (eˣ)' = eˣ.",
@@ -638,6 +640,7 @@ Diese Umrechnung ist bei der Berechnung von Halbwertszeiten wichtig: T½ = log�
           merksatz: "ln C vs. t linear → Kinetik 1. Ordnung. Steigung = −k, Achsenabschnitt = ln C₀. T½ = 0,693/k.",
         },
       ],
+      diagram: 'coordinate-system',
       merksätze: [
         "log_b(x) = y ⟺ bʸ = x. Logarithmus ist Umkehrfunktion der Potenz.",
         "Produktregel: ln(a·b) = ln(a) + ln(b).",
@@ -846,6 +849,7 @@ Beim Vergleich zweier Graphen achtet man auf:
           merksatz: "Michaelis-Menten: v = v_max/2 bei [S] = Km. Hyperbel mit Asymptote v_max. Linearisierung: Lineweaver-Burk-Plot.",
         },
       ],
+      diagram: 'coordinate-system',
       merksätze: [
         "Asymptote: Gerade, an die sich Graph annähert, ohne sie zu erreichen.",
         "Horizontale Asymptote: y = lim(x→±∞) f(x).",

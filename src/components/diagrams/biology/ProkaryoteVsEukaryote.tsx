@@ -158,7 +158,7 @@ export default function ProkaryoteVsEukaryote() {
           onMouseLeave={() => setActive(null)}
         >
           <path
-            d="M 225 230 Q 245 215, 265 220 Q 285 225, 300 215"
+            d="M 225 230 Q 240 210, 260 215 Q 280 218, 295 205"
             fill="none"
             stroke="#0891b2"
             strokeWidth="2.5"
@@ -283,44 +283,44 @@ export default function ProkaryoteVsEukaryote() {
         {/* ========== LABELS ========== */}
 
         {/* Prokaryot labels */}
-        <text x="50" y="140" fontSize="9" className="fill-gray-600 dark:fill-gray-400">Kapsel</text>
+        <text x="50" y="140" fontSize="10" stroke="white" strokeWidth="3" paintOrder="stroke" className="fill-gray-600 dark:fill-gray-400">Kapsel</text>
         <line x1="90" y1="145" x2="110" y2="165" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" className="stroke-gray-400" />
 
-        <text x="240" y="100" fontSize="9" className="fill-gray-600 dark:fill-gray-400">Zellwand</text>
+        <text x="240" y="100" fontSize="10" stroke="white" strokeWidth="3" paintOrder="stroke" className="fill-gray-600 dark:fill-gray-400">Zellwand</text>
         <line x1="240" y1="105" x2="210" y2="165" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" className="stroke-gray-400" />
 
-        <text x="35" y="230" fontSize="9" className="fill-gray-600 dark:fill-gray-400">Nucleoid</text>
+        <text x="35" y="230" fontSize="10" stroke="white" strokeWidth="3" paintOrder="stroke" className="fill-gray-600 dark:fill-gray-400">Nucleoid</text>
         <line x1="70" y1="230" x2="90" y2="230" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" className="stroke-gray-400" />
 
-        <text x="245" y="200" fontSize="9" className="fill-gray-600 dark:fill-gray-400">Plasmide</text>
+        <text x="245" y="200" fontSize="10" stroke="white" strokeWidth="3" paintOrder="stroke" className="fill-gray-600 dark:fill-gray-400">Plasmide</text>
         <line x1="245" y1="205" x2="185" y2="260" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" className="stroke-gray-400" />
 
-        <text x="305" y="220" fontSize="9" className="fill-gray-600 dark:fill-gray-400">Flagellum</text>
-        <line x1="305" y1="225" x2="300" y2="218" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" className="stroke-gray-400" />
+        <text x="305" y="220" fontSize="10" stroke="white" strokeWidth="3" paintOrder="stroke" className="fill-gray-600 dark:fill-gray-400">Flagellum</text>
+        <line x1="305" y1="225" x2="295" y2="208" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" className="stroke-gray-400" />
 
-        <text x="215" y="150" fontSize="9" className="fill-gray-600 dark:fill-gray-400">Pili</text>
+        <text x="215" y="150" fontSize="10" stroke="white" strokeWidth="3" paintOrder="stroke" className="fill-gray-600 dark:fill-gray-400">Pili</text>
         <line x1="215" y1="155" x2="210" y2="150" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" className="stroke-gray-400" />
 
         {/* Eukaryot labels */}
-        <text x="620" y="130" fontSize="9" className="fill-gray-600 dark:fill-gray-400">Zellkern</text>
+        <text x="620" y="130" fontSize="10" stroke="white" strokeWidth="3" paintOrder="stroke" className="fill-gray-600 dark:fill-gray-400">Zellkern</text>
         <line x1="620" y1="135" x2="555" y2="210" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" className="stroke-gray-400" />
 
-        <text x="390" y="190" fontSize="9" className="fill-gray-600 dark:fill-gray-400">Mitochondrium</text>
+        <text x="390" y="190" fontSize="10" stroke="white" strokeWidth="3" paintOrder="stroke" className="fill-gray-600 dark:fill-gray-400">Mitochondrium</text>
         <line x1="420" y1="195" x2="445" y2="200" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" className="stroke-gray-400" />
 
-        <text x="360" y="245" fontSize="9" className="fill-gray-600 dark:fill-gray-400">Raues ER</text>
+        <text x="360" y="245" fontSize="10" stroke="white" strokeWidth="3" paintOrder="stroke" className="fill-gray-600 dark:fill-gray-400">Raues ER</text>
         <line x1="390" y1="250" x2="425" y2="250" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" className="stroke-gray-400" />
 
-        <text x="360" y="325" fontSize="9" className="fill-gray-600 dark:fill-gray-400">Glattes ER</text>
+        <text x="360" y="325" fontSize="10" stroke="white" strokeWidth="3" paintOrder="stroke" className="fill-gray-600 dark:fill-gray-400">Glattes ER</text>
         <line x1="395" y1="325" x2="425" y2="320" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" className="stroke-gray-400" />
 
-        <text x="625" y="215" fontSize="9" className="fill-gray-600 dark:fill-gray-400">Golgi</text>
+        <text x="625" y="215" fontSize="10" stroke="white" strokeWidth="3" paintOrder="stroke" className="fill-gray-600 dark:fill-gray-400">Golgi</text>
         <line x1="625" y1="220" x2="610" y2="220" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" className="stroke-gray-400" />
 
-        <text x="575" y="305" fontSize="9" className="fill-gray-600 dark:fill-gray-400">Ribosomen 80S</text>
+        <text x="575" y="305" fontSize="10" stroke="white" strokeWidth="3" paintOrder="stroke" className="fill-gray-600 dark:fill-gray-400">Ribosomen 80S</text>
         <line x1="575" y1="310" x2="555" y2="302" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" className="stroke-gray-400" />
 
-        <text x="85" y="215" fontSize="9" className="fill-gray-600 dark:fill-gray-400">Ribosomen 70S</text>
+        <text x="85" y="215" fontSize="10" stroke="white" strokeWidth="3" paintOrder="stroke" className="fill-gray-600 dark:fill-gray-400">Ribosomen 70S</text>
         <line x1="115" y1="215" x2="120" y2="220" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" className="stroke-gray-400" />
       </svg>
 

@@ -520,6 +520,7 @@ In der **CT-Bildrekonstruktion** werden die gemessenen Absorptionswerte durch ei
           merksatz: "CT-Rekonstruktion = Matrizenoperationen (Rückprojektion). Bioinformatik: Genmatrix (Gene × Patienten). PCA nutzt Eigenvektoren.",
         },
       ],
+      diagram: 'vector-addition',
       merksätze: [
         "Geradengleichung Raum: r = r₀ + t·d (Stützvektor + Parameter × Richtungsvektor).",
         "Ebene Normalenform: n·(r − r₀) = 0, wobei n ⊥ Ebene.",

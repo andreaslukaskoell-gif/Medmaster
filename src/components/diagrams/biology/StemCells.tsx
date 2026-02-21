@@ -29,42 +29,42 @@ const parts = [
   {
     id: "erythrocyte",
     label: "Erythrozyten",
-    detail: "Rote Blutkörperchen. Spezialisiert auf Sauerstofftransport."
+    detail: "Rote Blutkörperchen (RBK). Kern- und organellenlos; bikonkave Form ↑ Oberfläche. Hämoglobin HbA (α₂β₂) bindet O₂ kooperativ. Lebensdauer ~120 Tage → Abbau in Milz. Normalwert: 4,5–5,5 Mio./μL."
   },
   {
     id: "leukocyte",
     label: "Leukozyten",
-    detail: "Weiße Blutkörperchen. Teil des Immunsystems."
+    detail: "Weiße Blutkörperchen (Normalwert 4–10 × 10⁹/L). Lymphozyten (B-, T-, NK-Zellen), Granulozyten (neutrophil, eosinophil, basophil) und Monozyten. Spezifische und unspezifische Immunabwehr."
   },
   {
     id: "thrombocyte",
     label: "Thrombozyten",
-    detail: "Blutplättchen. Wichtig für die Blutgerinnung."
+    detail: "Blutplättchen. Kernlose Zellbruchstücke von Megakaryozyten (Knochenmark). 150.000–400.000/μL. Primäre Hämostase: Adhäsion (vWF/GPIb), Aktivierung, Aggregation → Plättchenthrombus."
   },
   {
     id: "osteoblast",
     label: "Osteoblasten",
-    detail: "Knochenbildende Zellen."
+    detail: "Knochenbildende Zellen aus mesenchymalen SZ. Synthetisieren Kollagen Typ I und Osteocalcin → Knochenmatrix. Bei vollständiger Einmauerung: Differenzierung zu Osteozyten. Reguliert durch PTH (+) und Calcitonin."
   },
   {
     id: "chondrocyte",
     label: "Chondrozyten",
-    detail: "Knorpelzellen."
+    detail: "Knorpelzellen in lakunären Höhlen der Knorpelmatrix. Produzieren Kollagen Typ II und Aggrekan (Proteoglykan). Avaskulär → Ernährung durch Diffusion. Hyaliner Knorpel: Gelenke, Luftwege, Rippenknorpel."
   },
   {
     id: "adipocyte",
     label: "Adipozyten",
-    detail: "Fettzellen. Energiespeicherung."
+    detail: "Fettzellen. Unilokulär: ein großer Lipidtropfen (Triglyceride). Endokrin aktiv: Leptin (Sättigungssignal), Adiponectin (Insulinsensitivität ↑). Braunes Fettgewebe (UCP1): Thermogenese durch entkoppelte Atmung."
   },
   {
     id: "neuron",
     label: "Neuronen",
-    detail: "Nervenzellen. Signalübertragung im Nervensystem."
+    detail: "Nervenzellen. Soma + Dendriten (Eingang) + Axon (Ausgang). Aktionspotenziale via spannungsgesteuerte Na⁺/K⁺-Kanäle. Myelinisiert: saltatorische Erregungsleitung (Schwann-Zellen/Oligodendrozyten). Chemische Synapsen: Neurotransmitter."
   },
   {
     id: "glia",
     label: "Gliazellen",
-    detail: "Stützzellen des Nervensystems. Astrozyten, Oligodendrozyten, Mikroglia."
+    detail: "Stützzellen: Astrozyten (Blut-Hirn-Schranke, K⁺-Pufferung), Oligodendrozyten (Myelinisierung ZNS), Schwann-Zellen (Myelinisierung PNS), Mikroglia (Makrophagen des ZNS). Keine Aktionspotenziale."
   },
 ];
 
@@ -196,14 +196,14 @@ export default function StemCells() {
           cy="375"
           rx="15"
           ry="8"
-          fill="#f97316"
-          stroke="#ea580c"
+          fill="#ef4444"
+          stroke="#dc2626"
           strokeWidth="1.5"
           className="cursor-pointer hover:opacity-80 transition-opacity"
           onMouseEnter={() => setActive(parts[5])}
           onMouseLeave={() => setActive(null)}
         />
-        <ellipse cx="100" cy="375" rx="8" ry="4" fill="#fed7aa" opacity="0.6" />
+        <ellipse cx="100" cy="375" rx="8" ry="4" fill="#fca5a5" opacity="0.6" />
         <text x="100" y="395" fontSize="8" fill="#6b7280" textAnchor="middle" className="pointer-events-none">Erythrozyten</text>
 
         {/* Leukozyten (irregular shape) */}
@@ -211,8 +211,8 @@ export default function StemCells() {
           cx="180"
           cy="375"
           r="12"
-          fill="#f97316"
-          stroke="#ea580c"
+          fill="#ef4444"
+          stroke="#dc2626"
           strokeWidth="1.5"
           className="cursor-pointer hover:opacity-80 transition-opacity"
           onMouseEnter={() => setActive(parts[6])}
@@ -228,9 +228,9 @@ export default function StemCells() {
           onMouseEnter={() => setActive(parts[7])}
           onMouseLeave={() => setActive(null)}
         >
-          <circle cx="255" cy="375" r="6" fill="#f97316" stroke="#ea580c" strokeWidth="1.5" />
-          <circle cx="265" cy="375" r="5" fill="#f97316" stroke="#ea580c" strokeWidth="1.5" />
-          <circle cx="260" cy="383" r="4" fill="#f97316" stroke="#ea580c" strokeWidth="1.5" />
+          <circle cx="255" cy="375" r="6" fill="#ef4444" stroke="#dc2626" strokeWidth="1.5" />
+          <circle cx="265" cy="375" r="5" fill="#ef4444" stroke="#dc2626" strokeWidth="1.5" />
+          <circle cx="260" cy="383" r="4" fill="#ef4444" stroke="#dc2626" strokeWidth="1.5" />
         </g>
         <text x="260" y="400" fontSize="8" fill="#6b7280" textAnchor="middle" className="pointer-events-none">Thrombozyten</text>
 
@@ -241,8 +241,8 @@ export default function StemCells() {
           width="20"
           height="20"
           rx="2"
-          fill="#f97316"
-          stroke="#ea580c"
+          fill="#f59e0b"
+          stroke="#d97706"
           strokeWidth="1.5"
           className="cursor-pointer hover:opacity-80 transition-opacity"
           onMouseEnter={() => setActive(parts[8])}
@@ -257,8 +257,8 @@ export default function StemCells() {
           cy="375"
           rx="14"
           ry="11"
-          fill="#f97316"
-          stroke="#ea580c"
+          fill="#f59e0b"
+          stroke="#d97706"
           strokeWidth="1.5"
           className="cursor-pointer hover:opacity-80 transition-opacity"
           onMouseEnter={() => setActive(parts[9])}
@@ -272,8 +272,8 @@ export default function StemCells() {
           cx="400"
           cy="375"
           r="13"
-          fill="#f97316"
-          stroke="#ea580c"
+          fill="#f59e0b"
+          stroke="#d97706"
           strokeWidth="1.5"
           className="cursor-pointer hover:opacity-80 transition-opacity"
           onMouseEnter={() => setActive(parts[10])}
@@ -289,9 +289,9 @@ export default function StemCells() {
           onMouseEnter={() => setActive(parts[11])}
           onMouseLeave={() => setActive(null)}
         >
-          <circle cx="460" cy="375" r="10" fill="#f97316" stroke="#ea580c" strokeWidth="1.5" />
-          <line x1="470" y1="375" x2="485" y2="375" stroke="#ea580c" strokeWidth="2" />
-          <polygon points="485,375 480,372 480,378" fill="#ea580c" />
+          <circle cx="460" cy="375" r="10" fill="#3b82f6" stroke="#1d4ed8" strokeWidth="1.5" />
+          <line x1="470" y1="375" x2="485" y2="375" stroke="#1d4ed8" strokeWidth="2" />
+          <polygon points="485,375 480,372 480,378" fill="#1d4ed8" />
           <circle cx="460" cy="375" r="4" fill="#7c2d12" opacity="0.6" />
         </g>
         <text x="460" y="398" fontSize="8" fill="#6b7280" textAnchor="middle" className="pointer-events-none">Neuronen</text>
@@ -302,13 +302,13 @@ export default function StemCells() {
           onMouseEnter={() => setActive(parts[12])}
           onMouseLeave={() => setActive(null)}
         >
-          <circle cx="520" cy="375" r="8" fill="#f97316" stroke="#ea580c" strokeWidth="1.5" />
-          <line x1="520" y1="367" x2="520" y2="360" stroke="#ea580c" strokeWidth="2" />
-          <line x1="520" y1="383" x2="520" y2="390" stroke="#ea580c" strokeWidth="2" />
-          <line x1="512" y1="375" x2="505" y2="375" stroke="#ea580c" strokeWidth="2" />
-          <line x1="528" y1="375" x2="535" y2="375" stroke="#ea580c" strokeWidth="2" />
-          <line x1="514" y1="369" x2="509" y2="364" stroke="#ea580c" strokeWidth="1.5" />
-          <line x1="526" y1="381" x2="531" y2="386" stroke="#ea580c" strokeWidth="1.5" />
+          <circle cx="520" cy="375" r="8" fill="#3b82f6" stroke="#1d4ed8" strokeWidth="1.5" />
+          <line x1="520" y1="367" x2="520" y2="360" stroke="#1d4ed8" strokeWidth="2" />
+          <line x1="520" y1="383" x2="520" y2="390" stroke="#1d4ed8" strokeWidth="2" />
+          <line x1="512" y1="375" x2="505" y2="375" stroke="#1d4ed8" strokeWidth="2" />
+          <line x1="528" y1="375" x2="535" y2="375" stroke="#1d4ed8" strokeWidth="2" />
+          <line x1="514" y1="369" x2="509" y2="364" stroke="#1d4ed8" strokeWidth="1.5" />
+          <line x1="526" y1="381" x2="531" y2="386" stroke="#1d4ed8" strokeWidth="1.5" />
         </g>
         <text x="520" y="403" fontSize="8" fill="#6b7280" textAnchor="middle" className="pointer-events-none">Gliazellen</text>
 
