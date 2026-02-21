@@ -136,7 +136,7 @@ export function AppShell() {
 
   return (
     <BreadcrumbProvider>
-      <div className="min-h-screen bg-[#fafbfc] dark:bg-gray-950">
+      <div className="min-h-screen bg-[var(--background)]">
         <CommandPalette open={commandPaletteOpen} onClose={() => setCommandPaletteOpen(false)} />
         <InterleavingOverlay
           visible={interleavingOverlayVisible}

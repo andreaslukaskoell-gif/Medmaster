@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { BlurFade } from "@/components/ui/blur-fade";
 import {
   Dna,
   Atom,
@@ -523,14 +524,14 @@ export default function BMS() {
         </div>
 
         <div>
-          <h1 className="text-2xl font-bold text-midnight dark:text-slate-100 flex items-center gap-3">
-            <subjectData.icon className="w-8 h-8 text-primary-500" />
+          <h1 className="text-xl font-semibold text-[var(--foreground)] flex items-center gap-3">
+            <subjectData.icon className="w-6 h-6 text-[var(--color-primary-500)]" />
             {subjectData.label}
           </h1>
-          <p className="text-slate-600 dark:text-slate-400 mt-1">
-            {kapitel.length} Kapitel mit {subjectUK} Unterkapiteln
+          <p className="text-sm text-[var(--muted)] mt-1">
+            {kapitel.length} Kapitel · {subjectUK} Unterkapitel
             {subjectUK > 0 && (
-              <span className="text-primary-500 font-medium ml-2">
+              <span className="text-[var(--color-primary-500)] font-medium ml-2">
                 {subjectCompletedUK}/{subjectUK} abgeschlossen
               </span>
             )}
@@ -539,13 +540,13 @@ export default function BMS() {
 
         {subjectUK > 0 && (
           <div className="space-y-1">
-            <div className="flex justify-between text-xs text-slate-500 dark:text-slate-400">
+            <div className="flex justify-between text-xs text-[var(--muted)]">
               <span>Fortschritt</span>
               <span>{subjectCompletedUK}/{subjectUK} Unterkapitel</span>
             </div>
-            <div className="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+            <div className="w-full bg-[var(--border)] rounded-full h-1.5">
               <div
-                className="bg-primary-500 h-2 rounded-full transition-all duration-300"
+                className="bg-[var(--color-primary-500)] h-1.5 rounded-full transition-all duration-300"
                 style={{ width: `${(subjectCompletedUK / subjectUK) * 100}%` }}
               />
             </div>
@@ -671,26 +672,30 @@ export default function BMS() {
   // Main view: 4 subject cards
   // Note: totalUK and completedUK are already computed above (before early returns)
   return (
-    <div className="max-w-6xl mx-auto space-y-6 p-6 overflow-hidden">
+    <div className="max-w-4xl mx-auto space-y-8 px-6 py-8">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "BMS" }]} />
 
-      <div>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">BMS - Basiskenntnistest</h1>
-        <p className="text-muted mt-2">
-          {safeAlleKapitel.length} Kapitel mit {totalUK} Unterkapiteln
-          {totalUK > 0 && (
-            <span className="text-primary-700 dark:text-primary-400 font-medium ml-2">
-              {completedUK}/{totalUK} abgeschlossen
-            </span>
-          )}
-        </p>
-      </div>
+      <BlurFade delay={0} inView>
+        <div>
+          <h1 className="text-2xl font-semibold text-[var(--foreground)]">BMS</h1>
+          <p className="text-sm text-[var(--muted)] mt-1">
+            {safeAlleKapitel.length} Kapitel · {totalUK} Unterkapitel
+            {totalUK > 0 && (
+              <span className="text-[var(--color-primary-500)] font-medium ml-2">
+                {completedUK}/{totalUK} abgeschlossen
+              </span>
+            )}
+          </p>
+        </div>
+      </BlurFade>
 
       {/* MedAT Readiness Score */}
-      <MRSWidget mrs={mrs} loading={mrsLoading} />
+      <BlurFade delay={0.05} inView>
+        <MRSWidget mrs={mrs} loading={mrsLoading} />
+      </BlurFade>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {subjects.map((subject) => {
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {subjects.map((subject, idx) => {
           let sKapitel: Kapitel[] = [];
           try {
             const staticChapters = (getKapitelBySubject && getKapitelBySubject(subject.id)) || [];
@@ -713,7 +718,6 @@ export default function BMS() {
             sKapitel = sKapitel.map(chapter => {
               const staticChap = staticById.get(chapter.id);
               if (staticChap?.sequence !== undefined) {
-                // BMS sequenced chapter: static content takes precedence
                 return {
                   ...chapter,
                   title: staticChap.title,
@@ -725,89 +729,115 @@ export default function BMS() {
                   linkedChapters: staticChap.linkedChapters ?? [],
                 };
               }
-              return chapter; // Normal chapter: keep Supabase content
+              return chapter;
             });
           } catch (error) {
             console.error(`❌ Error loading chapters for ${subject.id}:`, error);
             sKapitel = [];
           }
-          
+
           const sTotal = sKapitel.reduce((sum, k) => {
             if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
             return sum + k.unterkapitel.length;
           }, 0);
-          
+
           const sDone = sKapitel.reduce((sum, k) => {
             if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
             return sum + (k.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length || 0);
           }, 0);
 
+          const progressPct = sTotal > 0 ? (sDone / sTotal) * 100 : 0;
+
+          // Subject accent color via CSS variable
+          const accentVars: Record<string, string> = {
+            biologie:   "var(--accent-bio)",
+            chemie:     "var(--accent-chem)",
+            physik:     "var(--accent-phys)",
+            mathematik: "var(--accent-math)",
+          };
+          const accentColor = accentVars[subject.id] ?? "var(--color-primary-500)";
+
           return (
-            <Card
-              key={subject.id}
-              className={`hover:shadow-lg transition-all cursor-pointer border-l-4 ${subject.colors.border} h-full`}
-              onClick={() => {
-                setSelectedSubject(subject.id);
-                navigate(pathForSubject(subject.id));
-              }}
-            >
-              <CardContent className="p-6">
+            <BlurFade key={subject.id} delay={0.1 + idx * 0.05} inView>
+              <div
+                className="group relative rounded-lg border border-[var(--border)] bg-[var(--card)] p-5 cursor-pointer overflow-hidden transition-all duration-200 hover:border-[var(--foreground)]/20 hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.08)]"
+                style={{ borderLeftWidth: "3px", borderLeftColor: accentColor }}
+                onClick={() => {
+                  setSelectedSubject(subject.id);
+                  navigate(pathForSubject(subject.id));
+                }}
+              >
                 <div className="flex items-start gap-4">
-                  <div className={`w-16 h-16 rounded-xl ${subject.colors.bg} ${subject.colors.bgDark} ${subject.colors.text} ${subject.colors.textDark} flex items-center justify-center shrink-0`}>
-                    <subject.icon className="w-8 h-8" />
+                  {/* Icon */}
+                  <div
+                    className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-105"
+                    style={{ backgroundColor: `${accentColor}18`, color: accentColor }}
+                  >
+                    <subject.icon className="w-5 h-5" />
                   </div>
+
+                  {/* Content */}
                   <div className="flex-1 min-w-0">
-                    <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-1">
-                      {subject.label}
-                    </h2>
-                    <p className="text-sm text-muted mb-3">
+                    <div className="flex items-center justify-between gap-2 mb-0.5">
+                      <h2 className="text-base font-semibold text-[var(--foreground)]">
+                        {subject.label}
+                      </h2>
+                      <ChevronRight className="w-4 h-4 text-[var(--muted)] shrink-0 transition-transform duration-200 group-hover:translate-x-0.5" />
+                    </div>
+
+                    <p className="text-xs text-[var(--muted)] mb-3 leading-relaxed">
                       {subject.description}
                     </p>
-                    <div className="flex items-center gap-4 text-sm">
-                      <span className="text-muted">
-                        {sKapitel.length} Kapitel
-                      </span>
+
+                    <div className="flex items-center gap-3 text-xs text-[var(--muted)] mb-2.5">
+                      <span>{sKapitel.length} Kapitel</span>
                       {sTotal > 0 && (
                         <>
-                          <span className="text-muted">•</span>
-                          <span className="text-primary-600 dark:text-primary-400 font-medium">
-                            {sDone}/{sTotal} Unterkapitel
+                          <span>·</span>
+                          <span style={{ color: accentColor }} className="font-medium">
+                            {sDone}/{sTotal} UK
                           </span>
                         </>
                       )}
                     </div>
+
+                    {/* Progress bar */}
                     {sTotal > 0 && (
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                      <div className="w-full bg-[var(--border)] rounded-full h-1.5">
                         <div
-                          className={`${subject.colors.progress} h-2 rounded-full transition-all`}
-                          style={{ width: `${(sDone / sTotal) * 100}%` }}
+                          className="h-1.5 rounded-full transition-all duration-500"
+                          style={{
+                            width: `${progressPct}%`,
+                            backgroundColor: accentColor,
+                          }}
                         />
                       </div>
                     )}
                   </div>
-                  <ChevronRight className="w-6 h-6 text-muted shrink-0" />
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </BlurFade>
           );
         })}
       </div>
 
       {safeAlleKapitel.length === 0 && (
-        <Card className="bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800">
-          <CardContent className="p-6 text-center">
-            <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-300 mb-2">
-              Noch keine Kapitel vorhanden
-            </h3>
-            <p className="text-sm text-blue-800 dark:text-blue-400 mb-4">
-              Erstelle deine ersten Kapitel im Editor. Sie werden automatisch hier angezeigt.
-            </p>
-            <Button onClick={() => navigate('/admin/kapitel-editor')} className="gap-2">
-              <BookOpen className="w-4 h-4" />
-              Zum Kapitel-Editor
-            </Button>
-          </CardContent>
-        </Card>
+        <BlurFade delay={0.2} inView>
+          <Card className="border-[var(--border)] bg-[var(--card)]">
+            <CardContent className="p-6 text-center">
+              <h3 className="text-base font-semibold text-[var(--foreground)] mb-2">
+                Noch keine Kapitel vorhanden
+              </h3>
+              <p className="text-sm text-[var(--muted)] mb-4">
+                Erstelle deine ersten Kapitel im Editor.
+              </p>
+              <Button onClick={() => navigate('/admin/kapitel-editor')} className="gap-2">
+                <BookOpen className="w-4 h-4" />
+                Zum Kapitel-Editor
+              </Button>
+            </CardContent>
+          </Card>
+        </BlurFade>
       )}
     </div>
   );

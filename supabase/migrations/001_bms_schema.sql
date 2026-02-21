@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS bms_subchapters (
 
 -- User Progress table
 CREATE TABLE IF NOT EXISTS user_progress (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID NOT NULL REFERENCES profiles(id) ON DELETE CASCADE,
   chapter_id TEXT REFERENCES bms_chapters(id) ON DELETE CASCADE,
   subchapter_id TEXT REFERENCES bms_subchapters(id) ON DELETE CASCADE,

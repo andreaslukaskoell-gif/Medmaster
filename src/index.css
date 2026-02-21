@@ -4,6 +4,31 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* ── Design System: Semantic CSS Variables ─────────────────────────── */
+:root {
+  --background: #fafafa;
+  --foreground: #0a0a0a;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --accent-bio: #22c55e;
+  --accent-chem: #ef4444;
+  --accent-phys: #3b82f6;
+  --accent-math: #a855f7;
+  --muted: #888888;
+  --sidebar-bg: rgba(255, 255, 255, 0.92);
+  --topbar-bg: rgba(250, 250, 250, 0.9);
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --card: #111111;
+  --border: #222222;
+  --muted: #666666;
+  --sidebar-bg: rgba(12, 12, 12, 0.92);
+  --topbar-bg: rgba(10, 10, 10, 0.9);
+}
+
 @theme {
   /* Medical UI: Med-Blue primary (#007AFF) */
   --color-primary-50: #e6f2ff;
@@ -28,15 +53,30 @@
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* Map semantic vars to Tailwind utilities */
+@theme inline {
+  --color-background: var(--background);
+  --color-app-foreground: var(--foreground);
+  --color-app-card: var(--card);
+  --color-app-border: var(--border);
+  --color-accent-bio: var(--accent-bio);
+  --color-accent-chem: var(--accent-chem);
+  --color-accent-phys: var(--accent-phys);
+  --color-accent-math: var(--accent-math);
+  --color-app-muted: var(--muted);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-soft-white);
-  color: var(--color-midnight);
+  background-color: var(--background);
+  color: var(--foreground);
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Glassmorphism cards */
@@ -71,8 +111,8 @@ body.dark-body .card-glass {
 
 .dark body,
 body.dark-body {
-  background-color: #0f172a;
-  color: #e2e8f0;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 .page-transition {

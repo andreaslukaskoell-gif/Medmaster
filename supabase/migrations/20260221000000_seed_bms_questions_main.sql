@@ -1,3 +1,6 @@
+-- Temporarily disable FK checks for this seed migration
+SET session_replication_role = replica;
+
 -- ============================================================
 -- BMS Questions Main Bank — Seed Migration
 -- Generiert: 2026-02-21
@@ -1176,10 +1179,10 @@ INSERT INTO bms_questions (
   'typa-bio-6-01-replikation',
   'A', 'biologie', 'bio-6-01',
   'Bei der DNA-Replikation in Eukaryoten: Welche Aussage zum Leitstrang und Folgestrang ist korrekt?',
-  '[{"key":"A","text":"Der Leitstrang wird kontinuierlich in 5'→3'-Richtung synthetisiert, der Folgestrang diskontinuierlich als Okazaki-Fragmente in 3'→5'-Richtung"},{"key":"B","text":"Beide Stränge werden kontinuierlich synthetisiert, da die Replikationsgabel zwei unabhängige DNA-Polymerasen enthält"},{"key":"C","text":"Der Leitstrang wird kontinuierlich 5'→3' synthetisiert, der Folgestrang wird in Okazaki-Fragmente (5'→3' von der Gabel weg) synthetisiert"},{"key":"D","text":"RNA-Primer werden nur am Leitstrang benötigt, nicht am Folgestrang"},{"key":"E","text":"Okazaki-Fragmente beim Menschen sind 1–2 kb lang (gleich wie bei Prokaryoten)"}]'::jsonb,
+  '[{"key":"A","text":"Der Leitstrang wird kontinuierlich in 5''→3''-Richtung synthetisiert, der Folgestrang diskontinuierlich als Okazaki-Fragmente in 3''→5''-Richtung"},{"key":"B","text":"Beide Stränge werden kontinuierlich synthetisiert, da die Replikationsgabel zwei unabhängige DNA-Polymerasen enthält"},{"key":"C","text":"Der Leitstrang wird kontinuierlich 5''→3'' synthetisiert, der Folgestrang wird in Okazaki-Fragmente (5''→3'' von der Gabel weg) synthetisiert"},{"key":"D","text":"RNA-Primer werden nur am Leitstrang benötigt, nicht am Folgestrang"},{"key":"E","text":"Okazaki-Fragmente beim Menschen sind 1–2 kb lang (gleich wie bei Prokaryoten)"}]'::jsonb,
   'C',
   NULL, NULL,
-  'DNA-Polymerase synthetisiert NUR in 5'→3'-Richtung. Leitstrang: Synthese geht in Richtung der sich öffnenden Gabel (5'→3') — kontinuierlich. Folgestrang: Muss gegen die Gabelöffnungsrichtung synthetisiert werden — also rückwärts in Stücken (Okazaki-Fragmente), aber jedes Fragment selbst wird 5'→3' synthetisiert — von der Gabel weg. C ist korrekt. A ist falsch (Folgestrang NICHT in 3'→5', sondern jedes Fragment 5'→3'). D falsch: Primase legt RNA-Primer für jeden Okazaki-Fragment und für den Leitstrang. E falsch: Eukaryoten = kurze Fragmente (~150–200 nt), Prokaryoten = 1–2 kb.',
+  'DNA-Polymerase synthetisiert NUR in 5''→3''-Richtung. Leitstrang: Synthese geht in Richtung der sich öffnenden Gabel (5''→3'') — kontinuierlich. Folgestrang: Muss gegen die Gabelöffnungsrichtung synthetisiert werden — also rückwärts in Stücken (Okazaki-Fragmente), aber jedes Fragment selbst wird 5''→3'' synthetisiert — von der Gabel weg. C ist korrekt. A ist falsch (Folgestrang NICHT in 3''→5'', sondern jedes Fragment 5''→3''). D falsch: Primase legt RNA-Primer für jeden Okazaki-Fragment und für den Leitstrang. E falsch: Eukaryoten = kurze Fragmente (~150–200 nt), Prokaryoten = 1–2 kb.',
   2
 ),
 (
@@ -5322,7 +5325,7 @@ ON CONFLICT (id) DO NOTHING;
 -- ============================================================
 
 -- ph-1-01: SI-Grundgrößen und abgeleitete Einheiten
-INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
+INSERT INTO bms_questions (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
 
 ('typa-ph-1-01-newton-einheit', 'A', 'physik', 'ph-1-01',
  'Welche Einheit hat die Kraft im SI-System?',
@@ -5411,15 +5414,14 @@ INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, 
  '[{"key":"A","text":"kg/(m·s)"},{"key":"B","text":"kg·m/s²"},{"key":"C","text":"kg/(m²·s)"},{"key":"D","text":"kg·m²/s"},{"key":"E","text":"kg/s²"}]',
  'A', '[]', '[]',
  'Pa·s = [kg/(m·s²)]·s = kg/(m·s). Die Viskosität von Blut liegt bei etwa 3–4 × 10⁻³ Pa·s = 3–4 mPa·s, was die Fließeigenschaften bestimmt.',
- 3);
-
+ 3)
 ON CONFLICT (id) DO NOTHING;
 
 -- ============================================================
 -- KAP 2: MECHANIK
 -- ============================================================
 
-INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
+INSERT INTO bms_questions (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
 
 -- ph-2-01: Newtonsche Gesetze und Kinematik
 ('typa-ph-2-01-freier-fall', 'A', 'physik', 'ph-2-01',
@@ -5518,15 +5520,14 @@ INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, 
  '[{"key":"A","text":"Sie wird auf ein Viertel reduziert"},{"key":"B","text":"Sie wird halbiert"},{"key":"C","text":"Sie verdoppelt sich"},{"key":"D","text":"Sie bleibt gleich"},{"key":"E","text":"Sie wird auf ein Achtel reduziert"}]',
  'A', '[]', '[]',
  'F_G = G·m₁·m₂/r². Bei doppeltem Abstand: F_G'' = G·m₁·m₂/(2r)² = F_G/4. Die Gravitationskraft nimmt mit dem Quadrat des Abstands ab.',
- 1);
-
+ 1)
 ON CONFLICT (id) DO NOTHING;
 
 -- ============================================================
 -- KAP 3: SCHWINGUNGEN UND WELLEN
 -- ============================================================
 
-INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
+INSERT INTO bms_questions (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
 
 -- ph-3-01: Harmonische Schwingungen
 ('typa-ph-3-01-fadenpendel', 'A', 'physik', 'ph-3-01',
@@ -5611,15 +5612,14 @@ INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, 
  '[{"nr":1,"text":"Stehende Wellen entstehen durch Überlagerung zweier gleichfrequenter, entgegengesetzt laufender Wellen."},{"nr":2,"text":"An einem Knoten einer stehenden Welle ist die Amplitude maximal."},{"nr":3,"text":"Resonanz tritt auf, wenn die Anregungsfrequenz mit einer Eigenfrequenz des Systems übereinstimmt."},{"nr":4,"text":"Die Resonanzkatastrophe ist ausschließlich bei mechanischen Systemen möglich, nicht bei elektrischen Schwingkreisen."},{"nr":5,"text":"Bei einer beidseitig offenen Röhre der Länge L beträgt die Grundfrequenz f = c/(2L)."}]',
  '[{"key":"A","text":"1, 3, 5"},{"key":"B","text":"1, 2, 3"},{"key":"C","text":"2, 4, 5"},{"key":"D","text":"1, 4, 5"},{"key":"E","text":"2, 3, 4"}]',
  'Korrekt sind 1, 3 und 5. Aussage 2 ist falsch: An einem Knoten ist die Amplitude null; maximale Amplitude herrscht am Bauch. Aussage 4 ist falsch: Resonanzkatastrophen gibt es auch in Elektrik (z.B. Serienresonanz).',
- 2);
-
+ 2)
 ON CONFLICT (id) DO NOTHING;
 
 -- ============================================================
 -- KAP 4: WÄRMELEHRE
 -- ============================================================
 
-INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
+INSERT INTO bms_questions (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
 
 -- ph-4-01: Temperatur und Wärme
 ('typa-ph-4-01-waermekapazitaet', 'A', 'physik', 'ph-4-01',
@@ -5704,15 +5704,14 @@ INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, 
  '[{"nr":1,"text":"Beim Schmelzen (fest→flüssig) wird Energie aufgenommen, die Temperatur bleibt dabei konstant."},{"nr":2,"text":"Die Schmelzwärme von Eis beträgt ca. 334 kJ/kg."},{"nr":3,"text":"Schwitzen ist ein effizienter Kühlmechanismus, weil die Verdampfungswärme von Wasser sehr hoch ist (2257 kJ/kg)."},{"nr":4,"text":"Der Gefrierpunkt von Blut liegt aufgrund der gelösten Stoffe höher als der von reinem Wasser."},{"nr":5,"text":"Kryochirurgie nutzt die Wärmeabgabe beim Einfrieren von Gewebe zu therapeutischen Zwecken."}]',
  '[{"key":"A","text":"1, 2, 3"},{"key":"B","text":"1, 3, 5"},{"key":"C","text":"2, 4, 5"},{"key":"D","text":"1, 2, 5"},{"key":"E","text":"2, 3, 4"}]',
  'Korrekt sind 1, 2 und 3. Aussage 4 ist falsch: der Gefrierpunkt sinkt (Gefrierpunktserniedrigung) durch gelöste Stoffe (Blut gefriert bei ca. −0,56°C). Aussage 5 ist teilweise korrekt (Gewebe wird eingefroren), aber Kryochirurgie entzieht dem Gewebe Wärme (Wärme wird abgegeben) — die Formulierung ist zu ungenau.',
- 2);
-
+ 2)
 ON CONFLICT (id) DO NOTHING;
 
 -- ============================================================
 -- KAP 5: ELEKTRIZITÄTSLEHRE
 -- ============================================================
 
-INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
+INSERT INTO bms_questions (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
 
 -- ph-5-01: Ladung, Feld und Coulomb
 ('typa-ph-5-01-coulomb', 'A', 'physik', 'ph-5-01',
@@ -5790,15 +5789,14 @@ INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, 
  '[{"nr":1,"text":"Die Lorentzkraft auf eine bewegte Ladung lautet F = q·v×B und steht senkrecht zur Bewegungsrichtung."},{"nr":2,"text":"In einem MRT-Gerät werden Radiowellen zur Anregung von Protonen-Spins genutzt."},{"nr":3,"text":"Röntgenstrahlung hat eine kürzere Wellenlänge als sichtbares Licht."},{"nr":4,"text":"Der effektive Wechselstromwert U_eff entspricht U₀/2 (Spitzenspannung geteilt durch 2)."},{"nr":5,"text":"Elektromagnetische Wellen breiten sich im Vakuum mit c ≈ 3 × 10⁸ m/s aus."}]',
  '[{"key":"A","text":"1, 2, 3"},{"key":"B","text":"1, 3, 5"},{"key":"C","text":"2, 3, 4"},{"key":"D","text":"1, 4, 5"},{"key":"E","text":"2, 4, 5"}]',
  'Korrekt sind 1, 2 und 3. Aussage 4 ist falsch: U_eff = U₀/√2 (nicht U₀/2). Aussage 5 ist korrekt — dann wären 1, 2, 3, 5 richtig. Bestes Tripel: 1, 2, 3.',
- 2);
-
+ 2)
 ON CONFLICT (id) DO NOTHING;
 
 -- ============================================================
 -- KAP 6: OPTIK
 -- ============================================================
 
-INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
+INSERT INTO bms_questions (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
 
 -- ph-6-01: Reflexion und Brechung
 ('typa-ph-6-01-snellius', 'A', 'physik', 'ph-6-01',
@@ -5876,15 +5874,14 @@ INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, 
  '[{"nr":1,"text":"Myopie (Kurzsichtigkeit) entsteht, wenn Lichtstrahlen vor der Netzhaut fokussiert werden."},{"nr":2,"text":"Hyperopie (Weitsichtigkeit) wird mit einer Zerstreuungslinse (D < 0) korrigiert."},{"nr":3,"text":"Presbyopie (Alterssichtigkeit) entsteht durch nachlassende Akkommodationsfähigkeit der Augenlinse."},{"nr":4,"text":"Astigmatismus wird durch unterschiedliche Krümmung der Kornea in verschiedenen Meridianebenen verursacht."},{"nr":5,"text":"LASIK korrigiert Fehlsichtigkeiten, indem die Augenlinse chirurgisch entfernt und ersetzt wird."}]',
  '[{"key":"A","text":"1, 3, 4"},{"key":"B","text":"1, 2, 4"},{"key":"C","text":"2, 4, 5"},{"key":"D","text":"1, 4, 5"},{"key":"E","text":"2, 3, 5"}]',
  'Korrekt sind 1, 3 und 4. Aussage 2 ist falsch: Hyperopie wird mit einer Sammellinse (D > 0) korrigiert. Aussage 5 ist falsch: LASIK verändert die Hornhautkrümmung durch Laser, die Augenlinse bleibt erhalten.',
- 2);
-
+ 2)
 ON CONFLICT (id) DO NOTHING;
 
 -- ============================================================
 -- KAP 7: ATOMPHYSIK UND KERNPHYSIK
 -- ============================================================
 
-INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
+INSERT INTO bms_questions (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
 
 -- ph-7-01: Atomkern und Kernkräfte
 ('typa-ph-7-01-massenzahl', 'A', 'physik', 'ph-7-01',
@@ -5976,15 +5973,14 @@ INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, 
  '[{"key":"A","text":"1,293 MeV"},{"key":"B","text":"0 MeV (Energie bleibt erhalten)"},{"key":"C","text":"2 × 1,293 = 2,586 MeV"},{"key":"D","text":"0,511 MeV"},{"key":"E","text":"938 MeV"}]',
  'A', '[]', '[]',
  'Nach E = Δm·c² entspricht ein Massendefekt von 1,293 MeV/c² einer freigesetzten Energie von 1,293 MeV. Diese Energie verteilt sich auf das Elektron (β⁻), das Antineutrino und den Rückstoß des Protons.',
- 3);
-
+ 3)
 ON CONFLICT (id) DO NOTHING;
 
 -- ============================================================
 -- ZUSATZFRAGEN für alle Kapitel (Ziel: ≥100 Fragen gesamt)
 -- ============================================================
 
-INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
+INSERT INTO bms_questions (id, typ, fach, uk_id, stamm, optionen, korrekte_option, aussagen, kombinationen, erklaerung, schwierigkeit) VALUES
 
 -- Kap 1 Zusatz
 ('typa-ph-1-01-mol-einheit', 'A', 'physik', 'ph-1-01',
@@ -6159,8 +6155,7 @@ INSERT INTO bms_fragen (id, typ, fach, uk_id, stamm, optionen, korrekte_option, 
  '[{"key":"A","text":"Den Tiefenbereich maximaler Energieabgabe, der gezielt auf den Tumor ausgerichtet wird"},{"key":"B","text":"Den Bereich minimaler Energieabgabe am Eintrittsort"},{"key":"C","text":"Die Reflexion der Protonen an der Tumoroberfläche"},{"key":"D","text":"Die Streuung von Röntgenstrahlung im Gewebe"},{"key":"E","text":"Den Bereich hinter dem Tumor mit maximaler Strahlungsbelastung"}]',
  'A', '[]', '[]',
  'Der Bragg-Peak ist das charakteristische Maximum der Ionisationsdichte am Ende der Reichweite geladener Teilchen. Protonen geben den Großteil ihrer Energie tief im Gewebe ab, danach ist die Dosis nahezu null — ideal für Tumor-Tiefentherapie mit Schonung umgebenden Gewebes.',
- 2);
-
+ 2)
 ON CONFLICT (id) DO NOTHING;
 
 -- ============================================================
@@ -7566,3 +7561,7 @@ ON CONFLICT (id) DO NOTHING;
 -- Gesamt: 16 Unterkapitel, 101 Fragen
 -- (Kap 1: 19, Kap 2: 24, Kap 3: 19, Kap 4: 17, Kap 5: 22, Kap 6: 16 + 5 = ~100)
 -- ============================================================
+
+
+-- Restore FK checks
+SET session_replication_role = DEFAULT;
