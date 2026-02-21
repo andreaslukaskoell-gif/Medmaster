@@ -33,7 +33,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
   - **Parasympathikus** (rest-and-digest)
   - **Enterisches NS** (Darmwand, teilweise autonom)
 
-### Sympathikus vs. Parasympathikus ⭐
+### Sympathikus vs. Parasympathikus
 
 | Merkmal | Sympathikus (fight-or-flight) | Parasympathikus (rest-and-digest) |
 |---------|-------------------------------|-----------------------------------|
@@ -70,7 +70,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 - Magen-Darm: Peristaltik ↑ (M3), Sekretion ↑ → Verdauung aktiv
 - Blase: Miktion (M3, Detrusor kontrahiert, Sphinkter relaxiert)
 
-### Synapse ⭐
+### Synapse
 
 **Chemische Synapse (häufigster Typ):**
 
@@ -97,7 +97,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
    - **Enzymatischer Abbau:** Acetylcholinesterase (Acetylcholin → Acetat + Cholin), MAO (Monoaminoxidase, Dopamin/Noradrenalin/Serotonin), COMT (Catechol-O-Methyltransferase)
    - **Diffusion** aus Spalt
 
-**Wichtige Neurotransmitter:** ⭐
+**Wichtige Neurotransmitter:**
 
 | Neurotransmitter | Rezeptoren | Funktion | Abbau/Wiederaufnahme | Klinisch |
 |------------------|------------|----------|----------------------|----------|
@@ -108,7 +108,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 | **Noradrenalin** | α1/α2, β1/β2 (alle metabotrop) | Aufmerksamkeit, Wachheit, Sympathikus | NET (Noradrenalin-Transporter), MAO, COMT | ADHS (Noradrenalin ↓, Methylphenidat [NET-Inhibitor]), Depression (SNRI [Venlafaxin]) |
 | **Acetylcholin** | Nikotinisch (ionotrop, Na⁺, neuromuskuläre Endplatte, Ganglien), Muskarinisch (M1-M5, metabotrop) | Neuromuskuläre Übertragung, Parasympathikus, Lernen/Gedächtnis | Acetylcholinesterase (→ Acetat + Cholin) | Myasthenia gravis (nikotinische Rezeptor-Antikörper), Alzheimer (Acetylcholin ↓, Donepezil [Cholinesterase-Inhibitor]) |
 
-### Aktionspotential ⭐
+### Aktionspotential
 
 **Ruhepotential:** ~-70 mV (Neuronen), ~-90 mV (Skelettmuskulatur)
 
@@ -148,9 +148,9 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 
 **Weiterleitung:**
 - **Unmyelinisiert:** Kontinuierlich (~1 m/s, langsam)
-- **Myelinisiert:** **Saltatorisch** (Ranvier-Schnürringe, ~120 m/s, schnell, energieeffizient) ⭐
+- **Myelinisiert:** **Saltatorisch** (Ranvier-Schnürringe, ~120 m/s, schnell, energieeffizient)
 
-### Saltatorische Erregungsleitung ⭐
+### Saltatorische Erregungsleitung
 
 **Siehe Bio Kap 2, UK 4 (Nervengewebe) für Details.**
 
@@ -161,7 +161,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 - **Mechanismus:** Aktionspotential an Schnürring → Depolarisation breitet sich passiv (elektrotonisch) durch Internodium → nächster Schnürring depolarisiert → Aktionspotential regeneriert → springt von Schnürring zu Schnürring
 - **Vorteile:** Schneller (~120 m/s Aα-Fasern vs. ~1 m/s C-Fasern), energieeffizienter (Na⁺/K⁺-ATPase nur an Schnürringen)
 
-### Reflexbogen ⭐
+### Reflexbogen
 
 **Definition:** Unwillkürliche, schnelle, stereotype Reaktion auf Reiz (ohne Bewusstsein).
 
@@ -172,7 +172,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 4. **Efferente (motorische) Faser:** Motoneuron (Vorderwurzel)
 5. **Effektor:** Muskel (Kontraktion)
 
-**Monosynaptischer Reflex (Eigenreflex):** ⭐
+**Monosynaptischer Reflex (Eigenreflex):**
 
 **Beispiel: Patellarsehnenreflex (Kniesehnenreflex):**
 1. **Stimulus:** Schlag auf Patellarsehne
@@ -222,38 +222,40 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 - **Exzitations-Inhibitions-Ungleichgewicht:** Glutamat ↑ oder GABA ↓
 - **Therapie:** GABA-verstärkend (Valproat, Benzodiazepine), Na⁺-Kanal-Blocker (Carbamazepin, Lamotrigin), Ca²⁺-Kanal-Blocker (Ethosuximid [Absencen])
 
----
-
-> **🎯 Prüfungsfokus**
-> - **Gliederung:** ZNS (Gehirn, Rückenmark), PNS (somatisch [willkürlich], autonom [unwillkürlich: Sympathikus, Parasympathikus]).
-> - **Sympathikus:** Thorakolumbal (T1-L2), Noradrenalin (postganglionär), α/β-Rezeptoren. Fight-or-flight: Herz ↑ (β1), Bronchodilatation (β2), Mydriasis (α1), Peristaltik ↓ (α2), Glykogenolyse ↑ (β2).
-> - **Parasympathikus:** Kraniosakral (Hirnnerven III/VII/IX/X, S2-S4), Acetylcholin (prä-+postganglionär), M2/M3-Rezeptoren. Rest-and-digest: Herz ↓ (M2, Vagus), Bronchokonstriktion (M3), Miosis (M3), Peristaltik ↑ (M3), Miktion (M3).
-> - **Synapse:** Präsynaptisch (Vesikel, Ca²⁺-Kanäle, SNARE [Synaptobrevin, Syntaxin, SNAP-25]) → Neurotransmitter-Freisetzung (Quantal Release) → Postsynaptisch (Rezeptoren: ionotrop [AMPA, NMDA, GABA_A, nikotinisch], metabotrop [D1/D2, 5-HT, α/β, M1-M5]). EPSP (Depolarisation, Glutamat/Acetylcholin) vs. IPSP (Hyperpolarisation, GABA/Glycin).
-> - **Neurotransmitter:** Glutamat (exzitatorisch, AMPA/NMDA, Exzitotoxizität), GABA (inhibitorisch, GABA_A [Cl⁻], Benzodiazepine), Dopamin (Bewegung/Belohnung, D1/D2, Parkinson/Schizophrenie), Serotonin (Stimmung, 5-HT, Depression/SSRI), Noradrenalin (Aufmerksamkeit, α/β, ADHS), Acetylcholin (neuromuskulär, nikotinisch/muskarinisch, Myasthenia gravis).
-> - **Aktionspotential:** Ruhepotential ~-70 mV (Na⁺/K⁺-ATPase, K⁺-Leckkanäle). Schwelle ~-55 mV → Na⁺-Kanäle öffnen → Depolarisation (+40 mV) → Na⁺-Kanäle inaktivieren, K⁺-Kanäle öffnen → Repolarisation → Hyperpolarisation. Refraktärzeit (absolut/relativ). Alles-oder-Nichts-Prinzip.
-> - **Saltatorische Leitung:** Myelinisierte Axone (Ranvier-Schnürringe [Na⁺-Kanäle ↑↑↑], Internodien [Myelin, Isolation]) → Aktionspotential springt → schnell (~120 m/s vs. ~1 m/s unmyelinisiert), energieeffizient.
-> - **Reflexbogen:** Rezeptor → afferente Faser → (Interneuron) → efferente Faser (Motoneuron) → Effektor. Monosynaptisch (Patellarsehnenreflex: Muskelspindel → Ia-Faser → α-Motoneuron → Quadriceps, reziproke Hemmung). Polysynaptisch (Fluchtreflex: Nozizeptor → Interneurone → Beuger kontrahiert, Strecker gehemmt).
-
----
-
-## MERKSÄTZE
-
->>>> **Merke:** **Sympathikus** (fight-or-flight, thorakolumbal [T1-L2], Noradrenalin, α/β-Rezeptoren): Herz ↑ (β1, Frequenz/Kontraktilität), Bronchodilatation (β2), Mydriasis (α1, Pupille), Peristaltik ↓ (α2), Glykogenolyse ↑ (β2), Lipolyse ↑ (β3). **Parasympathikus** (rest-and-digest, kraniosakral [Hirnnerven III/VII/IX/X, S2-S4], Acetylcholin, M2/M3): Herz ↓ (M2, Vagus), Bronchokonstriktion (M3), Miosis (M3), Peristaltik ↑ (M3), Miktion (M3).
-
->>>> **Merke:** **Synapse:** Präsynaptisch (Ca²⁺-Kanäle, SNARE [Synaptobrevin + Syntaxin + SNAP-25], Synaptotagmin [Ca²⁺-Sensor]) → Vesikel-Fusion → Neurotransmitter-Freisetzung (Quantal Release) → Postsynaptisch (ionotrop [AMPA, NMDA, GABA_A, nikotinisch], metabotrop [D1/D2, 5-HT, α/β, M1-M5]). **EPSP** (Depolarisation, Glutamat/Acetylcholin) vs. **IPSP** (Hyperpolarisation, GABA/Glycin).
-
->>>> **Merke:** **Aktionspotential:** Ruhepotential ~-70 mV (Na⁺/K⁺-ATPase [3 Na⁺ raus, 2 K⁺ rein], K⁺-Leckkanäle). Schwelle ~-55 mV → **Na⁺-Kanäle öffnen** (Depolarisation +40 mV) → Na⁺-Kanäle **inaktivieren** (Inaktivierungstor) + **K⁺-Kanäle öffnen** (Repolarisation) → Hyperpolarisation. **Refraktärzeit:** Absolut (Na⁺-Kanäle inaktiviert, KEIN AP) + relativ (Na⁺-Kanäle erholen, K⁺-Kanäle offen, überschwellig). **Alles-oder-Nichts-Prinzip** (Schwelle überschritten → volles AP).
-
->>>> **Merke:** **Saltatorische Erregungsleitung** (myelinisierte Axone): **Ranvier-Schnürringe** (unmyelinisiert, ~1 μm, Na⁺-Kanäle ↑↑↑ [Nav1.6]) → Aktionspotential regeneriert. **Internodien** (~1 mm, Myelin [80% Lipide], Isolation) → Depolarisation breitet sich passiv aus (elektrotonisch, kein Ionenverlust). Aktionspotential **springt** von Schnürring zu Schnürring → schnell (~120 m/s vs. ~1 m/s unmyelinisiert), energieeffizient (Na⁺/K⁺-ATPase nur an Schnürringen).
-
----
-
-**Geschätzte Lesezeit:** 16 Minuten
-**Stichwortliste-Coverage:** 10/10 ✅
-**Priorität:** HOCH
 `,
-      lernziele: [],
-      sections: [],
+      lernziele: [
+        "Das Nervensystem in ZNS und PNS (somatisch und autonom) gliedern und die Funktion jedes Teils beschreiben.",
+        "Die Wirkungen von Sympathikus und Parasympathikus auf Herz, Bronchien, Pupille, Magen-Darm und Blase vergleichen und die jeweiligen Neurotransmitter und Rezeptoren benennen.",
+        "Den Ablauf der synaptischen Transmission an einer chemischen Synapse einschließlich SNARE-Komplex, Neurotransmitter-Freisetzung und postsynaptischer Potentiale (EPSP/IPSP) erklären.",
+        "Das Aktionspotential mit seinen Phasen (Depolarisation, Repolarisation, Hyperpolarisation) und dem Alles-oder-Nichts-Prinzip erläutern.",
+        "Den Unterschied zwischen monosynaptischem (Patellarsehnenreflex) und polysynaptischem Reflex (Fluchtreflex) anhand des Reflexbogens darstellen.",
+      ],
+      sections: [
+        {
+          heading: "Einleitung",
+          text: "Das Nervensystem ist das zentrale Informationsverarbeitungs- und Steuerungssystem des Körpers. Es gliedert sich in ZNS (Gehirn + Rückenmark) und PNS (Spinal-/Hirnnerven). Das vegetative Nervensystem reguliert unwillkürlich innere Organe und umfasst Sympathikus (fight-or-flight) und Parasympathikus (rest-and-digest).",
+          merksatz: "**Sympathikus** (fight-or-flight, thorakolumbal [T1-L2], Noradrenalin, α/β-Rezeptoren): Herz ↑ (β1, Frequenz/Kontraktilität), Bronchodilatation (β2), Mydriasis (α1, Pupille), Peristaltik ↓ (α2), Glykogenolyse ↑ (β2), Lipolyse ↑ (β3). **Parasympathikus** (rest-and-digest, kraniosakral [Hirnnerven III/VII/IX/X, S2-S4], Acetylcholin, M2/M3): Herz ↓ (M2, Vagus), Bronchokonstriktion (M3), Miosis (M3), Peristaltik ↑ (M3), Miktion (M3).",
+        },
+        {
+          heading: "Kerninhalt",
+          text: "Das Kerninhalt-Kapitel behandelt die Gliederung des Nervensystems, den Sympathikus/Parasympathikus-Vergleich, Synapsen, Aktionspotentiale, saltatorische Erregungsleitung und den Reflexbogen. Jede Sektion enthält detaillierte Tabellen und Mechanismen für den MedAT.",
+          merksatz: "**Synapse:** Präsynaptisch (Ca²⁺-Kanäle, SNARE [Synaptobrevin + Syntaxin + SNAP-25], Synaptotagmin [Ca²⁺-Sensor]) → Vesikel-Fusion → Neurotransmitter-Freisetzung (Quantal Release) → Postsynaptisch (ionotrop [AMPA, NMDA, GABA_A, nikotinisch], metabotrop [D1/D2, 5-HT, α/β, M1-M5]). **EPSP** (Depolarisation, Glutamat/Acetylcholin) vs. **IPSP** (Hyperpolarisation, GABA/Glycin).",
+        },
+        {
+          heading: "Aktionspotential",
+          text: "Das Ruhepotential beträgt ~-70 mV und wird durch Na⁺/K⁺-ATPase und K⁺-Leckkanäle aufrechterhalten. Bei Schwellenreizung (~-55 mV) öffnen spannungsgesteuerte Na⁺-Kanäle, Depolarisation auf +40 mV, dann Repolarisation durch K⁺-Kanäle und Inaktivierung der Na⁺-Kanäle.",
+          merksatz: "**Aktionspotential:** Ruhepotential ~-70 mV (Na⁺/K⁺-ATPase [3 Na⁺ raus, 2 K⁺ rein], K⁺-Leckkanäle). Schwelle ~-55 mV → **Na⁺-Kanäle öffnen** (Depolarisation +40 mV) → Na⁺-Kanäle **inaktivieren** (Inaktivierungstor) + **K⁺-Kanäle öffnen** (Repolarisation) → Hyperpolarisation. **Refraktärzeit:** Absolut (Na⁺-Kanäle inaktiviert, KEIN AP) + relativ (Na⁺-Kanäle erholen, K⁺-Kanäle offen, überschwellig). **Alles-oder-Nichts-Prinzip** (Schwelle überschritten → volles AP).",
+        },
+        {
+          heading: "Saltatorische Erregungsleitung",
+          text: "Myelinisierte Axone leiten Aktionspotentiale saltatorisch: Das Aktionspotential springt von Ranvier-Schnürring zu Ranvier-Schnürring, da die Internodien elektrisch isoliert sind. Dies ermöglicht Leitungsgeschwindigkeiten von ~120 m/s und ist energieeffizienter als kontinuierliche Leitung.",
+          merksatz: "**Saltatorische Erregungsleitung** (myelinisierte Axone): **Ranvier-Schnürringe** (unmyelinisiert, ~1 μm, Na⁺-Kanäle ↑↑↑ [Nav1.6]) → Aktionspotential regeneriert. **Internodien** (~1 mm, Myelin [80% Lipide], Isolation) → Depolarisation breitet sich passiv aus (elektrotonisch, kein Ionenverlust). Aktionspotential **springt** von Schnürring zu Schnürring → schnell (~120 m/s vs. ~1 m/s unmyelinisiert), energieeffizient (Na⁺/K⁺-ATPase nur an Schnürringen).",
+        },
+        {
+          heading: "Reflexbogen",
+          text: "Der Reflexbogen besteht aus Rezeptor, afferenter Faser, (Interneuron), efferenter Faser und Effektor. Der monosynaptische Eigenreflex (z.B. Patellarsehnenreflex) verbindet Ia-Faser direkt mit dem α-Motoneuron ohne Interneuron. Polysynaptische Fremdreflexe (z.B. Fluchtreflex) schalten mehrere Interneurone ein.",
+        },
+      ],
       diagram: 'nervensystem-übersicht',
 
       merksätze: [
@@ -367,7 +369,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 
 ## KERNINHALT
 
-### Auge ⭐
+### Auge
 
 **Aufbau:**
 
@@ -382,7 +384,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 
 4. **Glaskörper (Corpus vitreum):** Gelartig, Hyaluronan + Kollagen II, füllt Bulbus (2/3 Volumen)
 
-**Retina (Netzhaut):** ⭐
+**Retina (Netzhaut):**
 
 **Schichten (von außen nach innen, Licht durchquert Schichten rückwärts!):**
 1. Pigmentepithel (RPE, Vitamin A-Recycling, Phagozytose)
@@ -395,7 +397,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 8. Nervenfaserschicht (Axone)
 9. Membrana limitans interna (Basalmembran)
 
-**Photorezeptoren:** ⭐
+**Photorezeptoren:**
 
 | Merkmal | Stäbchen (Rods) | Zapfen (Cones) |
 |---------|-----------------|----------------|
@@ -407,7 +409,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 | **Photopigment** | **Rhodopsin** (11-cis-Retinal + Opsin, λ_max ~500 nm [grün-blau]) | **3 Typen:** S-Opsin (blau, ~420 nm), M-Opsin (grün, ~530 nm), L-Opsin (rot, ~560 nm) |
 | **Adaptationszeit** | Langsam (~30 Min Dunkeladaptation) | Schnell (~5 Min Helladaptation) |
 
-**Fototransduktion (Stäbchen):** ⭐
+**Fototransduktion (Stäbchen):**
 
 **Dunkelheit (Ruhezustand = DEPOLARISIERT!):**
 1. **cGMP hoch** (Guanylatzyklase aktiv)
@@ -429,7 +431,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 - All-trans-Retinal → 11-cis-Retinal (via Retinal-Isomerase im Pigmentepithel, Vitamin A-Zyklus)
 - **Recoverin** (Ca²⁺-Sensor) reguliert Guanylatzyklase (Ca²⁺ ↓ → cGMP-Synthese ↑ → Dunkelzustand wiederhergestellt)
 
-**Akkommodation (Naheinstellung):** ⭐
+**Akkommodation (Naheinstellung):**
 
 **Ferneinstellung (Ruhe):**
 - **Ziliarmuskel relaxiert** (ringförmiger glatter Muskel)
@@ -456,7 +458,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 - **Katarakt (Grauer Star):** Linsentrübung (Proteinaggregate, Alter, Diabetes, UV) → Sehschärfe ↓ → Therapie: Linsen-Ersatz (Kunstlinse)
 - **Makuladegeneration:** Degenerative Veränderungen Makula (Fovea centralis) → Zentrale Sehschärfe ↓, peripher erhalten
 
-### Ohr ⭐
+### Ohr
 
 **Aufbau:** 3 Teile (Außenohr, Mittelohr, Innenohr)
 
@@ -471,14 +473,14 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 - **Tuba auditiva (Eustachische Röhre):** Verbindung Mittelohr ↔ Nasopharynx, Druckausgleich (öffnet beim Schlucken/Gähnen)
 - **Muskeln (Schutzreflex):** M. stapedius (N. facialis [VII], dämpft Steigbügel), M. tensor tympani (N. trigeminus [V], spannt Trommelfell) → schützen vor lauten Geräuschen (Dämpfung ~20 dB)
 
-**Innenohr (knöchernes Labyrinth, Perilymphe [Na⁺-reich, wie EZF] + häutiges Labyrinth, Endolymphe [K⁺-reich, wie IZF]):** ⭐
+**Innenohr (knöchernes Labyrinth, Perilymphe [Na⁺-reich, wie EZF] + häutiges Labyrinth, Endolymphe [K⁺-reich, wie IZF]):**
 
 **Cochlea (Schnecke, Hören):**
 - **3 Gänge:** Scala vestibuli (oben, Perilymphe) → Scala media (Mitte, Endolymphe, **Corti-Organ**) → Scala tympani (unten, Perilymphe)
 - **Oval-Fenster:** Steigbügel-Fußplatte → Perilymphe (Scala vestibuli)
 - **Rundes Fenster:** Druckausgleich (Perilymphe-Schwingung → Rundes Fenster wölbt sich)
 
-**Corti-Organ (Hörorgan):** ⭐
+**Corti-Organ (Hörorgan):**
 - **Basilarmembran:** Schmal/steif an Basis (hohe Frequenzen ~20.000 Hz), breit/flexibel an Apex (niedrige Frequenzen ~20 Hz) → **Tonotopie** (Frequenz-Orts-Kodierung)
 - **Haarzellen (Mechanorezeptoren):** 1 Reihe innere Haarzellen (IHC, ~3500, 95% afferente Innervation [N. cochlearis]) + 3 Reihen äußere Haarzellen (OHC, ~12.000, efferente Innervation, Verstärkung)
 - **Stereozilien (modifizierte Mikrovilli, KEINE echten Zilien!):** Bündel auf Haarzelle, abgestufte Höhe, verbunden via Tip-Links (Cadherin 23)
@@ -493,7 +495,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 6. Spannungsgesteuerte **Ca²⁺-Kanäle** (Ca_v1.3) öffnen → Ca²⁺ rein → **Glutamat-Freisetzung** (Synapse)
 7. **N. cochlearis** (Spiralganglion-Neuronen) → **Aktionspotential** → Hirnstamm (Nucleus cochlearis) → auditorischer Kortex (Gyrus temporalis superior)
 
-**Vestibularapparat (Gleichgewicht):** ⭐
+**Vestibularapparat (Gleichgewicht):**
 
 **Bogengänge (3, orthogonal):**
 - **Funktion:** Rotation (Winkelbeschleunigung)
@@ -522,7 +524,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 **Geschmack (Gustatorisches System):**
 - **Geschmacksknospen:** Papillen (Zungenoberfläche: Papillae foliatae [seitlich], circumvallatae [hinten, V-förmig], fungiformes [vorne])
 - **Geschmackszellen (Type II/III):** Epithelzellen (KEINE Neuronen!), Mikrovilli (Porus gustatorius)
-- **5 Qualitäten:** ⭐
+- **5 Qualitäten:**
   - **Süß:** Glukose, Saccharose → T1R2/T1R3 (G-Protein [Gustducin] → cAMP ↑ → TRPM5-Kanal → Depolarisation)
   - **Umami:** Glutamat, L-Aminosäuren → T1R1/T1R3
   - **Bitter:** Alkaloide (Koffein, Chinin), Toxine → T2R (25 Typen, Schutzfunktion)
@@ -530,7 +532,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
   - **Salzig:** Na⁺ → ENaC (Epithelial Na⁺ Channel) → Depolarisation
 - **Innervation:** N. facialis [VII] (vordere 2/3 Zunge, Chorda tympani), N. glossopharyngeus [IX] (hintere 1/3), N. vagus [X] (Epiglottis) → Nucleus tractus solitarius (Hirnstamm) → Thalamus (VPM) → Insula/Operculum (gustatorischer Kortex)
 
-### Haut ⭐
+### Haut
 
 **Schichten:**
 
@@ -553,7 +555,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 - **Talgdrüsen (Glandulae sebaceae):** Holokrines Sekret (Talg = Lipide, Zellen lysieren), mit Haarfollikel assoziiert
 - **Schweißdrüsen:** Ekkrine (Thermoregulation, Acetylcholin [Sympathikus!], wässriger Schweiß) vs. Apokrine (Achsel/Genitalbereich, Geruch, adrenerge Stimulation)
 
-**Hautrezeptoren (Mechanorezeptoren + Thermorezeptoren + Nozizeptoren):** ⭐
+**Hautrezeptoren (Mechanorezeptoren + Thermorezeptoren + Nozizeptoren):**
 
 | Rezeptor | Modalität | Adaptation | Lokalisation | Funktion |
 |----------|-----------|------------|--------------|----------|
@@ -578,35 +580,38 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
 - **Plattenepithelkarzinom:** Zweithäufigster, Metastasierung möglich, UV-Exposition, Vorstufe: Aktinische Keratose
 - **Psoriasis (Schuppenflechte):** Autoimmun (T-Zellen → Keratinozyten-Hyperproliferation), silbrige Schuppen (Stratum corneum ↑), Auspitz-Zeichen (Punktblutungen bei Abkratzen), Therapie: Topisch (Vitamin D-Analoga, Glukokortikoide), Systemisch (Methotrexat, Biologika [TNF-α-Inhibitoren, IL-17-Inhibitoren])
 
----
-
-> **🎯 Prüfungsfokus**
-> - **Auge:** Photorezeptoren (Stäbchen [skotopisch, Rhodopsin, ~120 Mio., peripher], Zapfen [photopisch, 3 Opsine, ~6 Mio., Fovea]). Fototransduktion: Licht → Rhodopsin → Transducin → PDE → cGMP ↓ → Na⁺-Kanäle schließen → Hyperpolarisation → Glutamat ↓. Akkommodation: Ziliarmuskel kontrahiert (Parasympathikus, M3) → Zonulafasern entspannen → Linse wölbt (Naheinstellung).
-> - **Ohr:** Gehörknöchelchen (Hammer, Amboss, Steigbügel, Impedanzanpassung ~22-fach). Corti-Organ: Basilarmembran (Tonotopie: Basis = hohe Frequenz, Apex = niedrige Frequenz), Haarzellen (Stereozilien, Tip-Links, K⁺-Kanäle öffnen [Endolymphe K⁺-reich, +80 mV] → Depolarisation → Glutamat). Vestibularapparat: Bogengänge (Rotation, Cupula), Utriculus/Sacculus (lineare Beschleunigung, Otolithen).
-> - **Geschmack:** 5 Qualitäten (süß [T1R2/T1R3, Glukose], umami [T1R1/T1R3, Glutamat], bitter [T2R, Toxine], sauer [H⁺, PKD2L1], salzig [Na⁺, ENaC]). Innervation: N. facialis [VII, vordere 2/3], N. glossopharyngeus [IX, hintere 1/3], N. vagus [X, Epiglottis].
-> - **Haut:** 3 Schichten (Epidermis [verhorntes Plattenepithel, Keratinozyten, Stratum corneum], Dermis [Bindegewebe, Kollagen I, Elastin], Subcutis [Fett]). Rezeptoren: Meissner (Berührung, schnell), Pacini (Vibration, schnell), Merkel (Druck, langsam), Ruffini (Dehnung, langsam), freie Nervenendigungen (Schmerz/Temperatur, Aδ [schnell], C-Fasern [langsam]).
-> - **KLINISCH:** Glaukom (Augeninnendruck ↑, N. opticus-Schädigung, Betablocker/Prostaglandin-Analoga), Katarakt (Linsentrübung, Proteinaggregate), Schwerhörigkeit (Schallleitung [Mittelohr] vs. Schallempfindung [Innenohr, Haarzellen]), Melanom (Melanozyten, ABCDE-Regel, Metastasierung).
-
----
-
-## MERKSÄTZE
-
->>>> **Merke:** **Photorezeptoren:** **Stäbchen** (skotopisch [Dämmerung], Rhodopsin [11-cis-Retinal + Opsin, λ_max ~500 nm], ~120 Mio., peripher, hohe Empfindlichkeit, niedrige Auflösung). **Zapfen** (photopisch [Tageslicht, Farben], 3 Opsine [S-blau ~420 nm, M-grün ~530 nm, L-rot ~560 nm], ~6 Mio., Fovea centralis, niedrige Empfindlichkeit, hohe Auflösung [1:1 Ganglienzelle]).
-
->>>> **Merke:** **Fototransduktion** (Stäbchen): Licht → **11-cis-Retinal → all-trans-Retinal** (Photoisomerisierung) → Rhodopsin → **Metarhodopsin II** → **Transducin** (G-Protein) → **Phosphodiesterase (PDE)** → **cGMP ↓** (Hydrolyse) → cGMP-gesteuerte **Na⁺-Kanäle SCHLIESSEN** → **HYPERPOLARISATION** (~-70 mV) → Ca²⁺-Kanäle schließen → **Glutamat ↓** (Signal).
-
->>>> **Merke:** **Akkommodation** (Naheinstellung): **Ziliarmuskel kontrahiert** (Parasympathikus, M3, N. oculomotorius [III]) → Ziliarmuskel-Ring verkleinert → **Zonulafasern entspannen** → Linse **wölbt sich** (elastische Rückstellkraft) → Brechkraft ↑ (~24 dpt maximal). **Nahakkommodationstrias:** Akkommodation + Konvergenz (M. rectus medialis) + **Miosis** (M. sphincter pupillae, M3, Tiefenschärfe ↑).
-
->>>> **Merke:** **Corti-Organ** (Hören): Schallwellen → Trommelfell → Gehörknöchelchen (Impedanzanpassung ~22-fach) → Oval-Fenster → Perilymphe → **Basilarmembran** (Tonotopie: Basis = hohe Frequenz ~20 kHz, Apex = niedrige Frequenz ~20 Hz) → **Haarzellen** (Stereozilien biegen, **Tip-Links** spannen) → **K⁺-Kanäle öffnen** (Endolymphe K⁺-reich, +80 mV) → Depolarisation → **Glutamat** → N. cochlearis.
-
----
-
-**Geschätzte Lesezeit:** 14 Minuten
-**Stichwortliste-Coverage:** 10/10 ✅
-**Priorität:** MITTEL
 `,
-      lernziele: [],
-      sections: [],
+      lernziele: [
+        "Den Aufbau des Auges beschreiben und die Fototransduktion in Stäbchen von der Lichtabsorption durch Rhodopsin bis zur Hyperpolarisation erklären.",
+        "Stäbchen und Zapfen hinsichtlich Lokalisation, Funktion und Photopigment unterscheiden.",
+        "Den Mechanismus der Akkommodation des Auges einschließlich der Nahakkommodationstrias darstellen.",
+        "Die Schallübertragung vom Trommelfell über die Gehörknöchelchen bis zur Aktivierung der Haarzellen im Corti-Organ beschreiben.",
+        "Die drei Schichten der Haut und die fünf Typen der Hautrezeptoren mit ihren Modalitäten und Adaptationsgeschwindigkeiten nennen.",
+      ],
+      sections: [
+        {
+          heading: "Einleitung",
+          text: "Sinnesorgane wandeln Reize in elektrische Signale um. Das Auge nutzt Photorezeptoren (Stäbchen und Zapfen) für Sehen, das Ohr Haarzellen für Hören und Gleichgewicht. Geruch und Geschmack basieren auf Chemorezeptoren. Die Haut enthält spezialisierte Mechano-, Thermo- und Nozizeptoren.",
+        },
+        {
+          heading: "Auge",
+          text: "Das Auge besteht aus drei Schichten: äußere Tunica fibrosa (Sklera + Kornea), mittlere Uvea (Choroidea, Ziliarkörper, Iris) und innere Retina. Photorezeptoren (Stäbchen: skotopisch, Rhodopsin; Zapfen: photopisch, 3 Opsine) wandeln Licht über Fototransduktion (Rhodopsin → Transducin → PDE → cGMP ↓ → Na⁺-Kanäle schließen → Hyperpolarisation) in Nervenimpulse um. Akkommodation erfolgt durch Ziliarmuskel-Kontraktion (Parasympathikus, M3).",
+          merksatz: "**Photorezeptoren:** **Stäbchen** (skotopisch [Dämmerung], Rhodopsin [11-cis-Retinal + Opsin, λ_max ~500 nm], ~120 Mio., peripher, hohe Empfindlichkeit, niedrige Auflösung). **Zapfen** (photopisch [Tageslicht, Farben], 3 Opsine [S-blau ~420 nm, M-grün ~530 nm, L-rot ~560 nm], ~6 Mio., Fovea centralis, niedrige Empfindlichkeit, hohe Auflösung [1:1 Ganglienzelle]).",
+        },
+        {
+          heading: "Ohr",
+          text: "Das Ohr gliedert sich in Außenohr (Ohrmuschel, Trommelfell), Mittelohr (Gehörknöchelchen: Hammer, Amboss, Steigbügel, Impedanzanpassung ~22-fach) und Innenohr (Cochlea mit Corti-Organ, Vestibularapparat). Im Corti-Organ biegen sich Stereozilien der Haarzellen gegen die Tektorialmembran → Tip-Links spannen → K⁺-Kanäle öffnen → Depolarisation → Glutamat-Freisetzung.",
+          merksatz: "**Corti-Organ** (Hören): Schallwellen → Trommelfell → Gehörknöchelchen (Impedanzanpassung ~22-fach) → Oval-Fenster → Perilymphe → **Basilarmembran** (Tonotopie: Basis = hohe Frequenz ~20 kHz, Apex = niedrige Frequenz ~20 Hz) → **Haarzellen** (Stereozilien biegen, **Tip-Links** spannen) → **K⁺-Kanäle öffnen** (Endolymphe K⁺-reich, +80 mV) → Depolarisation → **Glutamat** → N. cochlearis.",
+        },
+        {
+          heading: "Geruch und Geschmack",
+          text: "Das Riechepithel enthält ~10 Millionen olfaktorische Rezeptorneuronen mit ~400 G-Protein-gekoppelten Rezeptortypen. Das Geschmackssystem erkennt fünf Qualitäten: süß (T1R2/T1R3), umami (T1R1/T1R3), bitter (T2R), sauer (H⁺, PKD2L1) und salzig (Na⁺, ENaC). Die Innervation erfolgt über N. facialis (vordere 2/3 Zunge), N. glossopharyngeus (hintere 1/3) und N. vagus (Epiglottis).",
+        },
+        {
+          heading: "Haut",
+          text: "Die Haut besteht aus Epidermis (verhorntes Plattenepithel, Keratinozyten), Dermis (Bindegewebe, Kollagen I, Elastin) und Subcutis (Fettgewebe). Hautrezeptoren umfassen Meissner-Körperchen (Berührung, schnell adaptierend), Pacini-Körperchen (Vibration, schnell), Merkel-Zellen (Druck, langsam), Ruffini-Körperchen (Dehnung, langsam) und freie Nervenendigungen (Schmerz/Temperatur, Aδ/C-Fasern).",
+        },
+      ],
       diagram: 'sinnesorgane',
 
       merksätze: [
@@ -697,12 +702,6 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
       id: 'bio-3-03',
       title: "Hormonsystem",
       content: `# Hormonsystem – Biologie Kapitel 3 (Organsysteme)
-
-**Priorität:** HOCH
-**Geschätzte Lesezeit:** 16 Minuten
-**Stichwortliste-Abdeckung:** 11/11 Stichwörter
-
----
 
 ## Einleitung
 
@@ -924,42 +923,40 @@ Das endokrine System nutzt **negative Rückkopplung** zur Homöostase:
 - **Ovulation:** Östrogen ↑ (Follikelreifung) → **LH-Surge** ↑ → Ovulation (positives Feedback kurz vor Eisprung)
 - **Geburt:** Oxytocin → Wehen → Zervixdehnung → **Oxytocin ↑** (positive Schleife bis Geburt abgeschlossen)
 
----
-
-## 📌 Prüfungsfokus
-
-**Für die MedAT-Prüfung besonders wichtig:**
-
-1. **Hormon-Klassifikation:** Peptid- vs. Steroidhormone (Rezeptorlokalisation, Wirkgeschwindigkeit)
-2. **Hypothalamus-Hypophyse-Achse:** TRH/TSH/T₃/T₄, CRH/ACTH/Cortisol (Regelkreise mit negativer Rückkopplung)
-3. **Schilddrüse:** T₃/T₄-Biosynthese (Jodierung, TPO), Wirkungen (Stoffwechsel ↑), Hypothyreose vs. Hyperthyreose
-4. **Nebenniere:** Cortisol (Glukoneogenese ↑, immunsuppressiv) vs. Adrenalin (Fight-or-Flight, β₁/β₂-Rezeptoren)
-5. **Pankreas:** Insulin (GLUT4, Glykogensynthese ↑, Blutzucker ↓) vs. Glukagon (Glykogenolyse ↑, Glukoneogenese ↑, Blutzucker ↑)
-6. **Regelkreise:** Negative Rückkopplung (T₃/T₄ ↑ → TSH ↓), primäre vs. sekundäre Unterfunktion (TSH ↑ vs. TSH ↓)
-
----
-
-## Merksätze
-
->>>> **Hypothalamus-Hypophyse-Achse:** „TRH macht TSH, CRH macht ACTH, GnRH macht FSH/LH – negative Feedback stoppt die Achterbahn!"
->>>> (TRH → TSH → T₃/T₄; CRH → ACTH → Cortisol; beide mit negativer Rückkopplung)
-
->>>> **Schilddrüsen-Biosynthese:** „TPO jodiert Tyrosin zu MIT und DIT – 2×DIT = T₄ (Thyroxin), MIT+DIT = T₃ (Trijodthyronin)."
->>>> (Thyreoperoxidase jodiert Tyrosin-Reste → Kopplung → T₃/T₄)
-
->>>> **Insulin vs. Glukagon:** „Insulin senkt Zucker (GLUT4 rein, Glykogen speichern), Glukagon hebt Zucker (Glykogen spalten, Glukose neu bauen)."
->>>> (Insulin = anabolic [Speicherung], Glukagon = catabolic [Mobilisierung])
-
->>>> **Cortisol-Wirkungen:** „Cortisol macht Zucker (Glukoneogenese), bremst Immun (Entzündung ↓), baut Knochen ab (Osteoporose-Risiko)."
->>>> (Glukoneogenese ↑, antiinflammatorisch, immunsuppressiv, Osteoblasten ↓)
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 3 UK02 – Sinnesorgane und Haut](Bio_Kap3_UK02_Sinnesorgane_Haut.md) | [Weiter: Bio Kap 3 UK04 – Immunsystem](Bio_Kap3_UK04_Immunsystem.md) →
 `,
-      lernziele: [],
-      sections: [],
+      lernziele: [
+        "Steroid- und Peptidhormone nach Löslichkeit, Rezeptorlokalisation und Wirkgeschwindigkeit unterscheiden und den Second-Messenger-Weg (cAMP) vs. Genexpressionsweg beschreiben.",
+        "Die Hypothalamus-Hypophyse-Achse mit ihren Releasing-Hormonen (TRH, CRH, GnRH), trophen Hormonen (TSH, ACTH, LH/FSH) und peripheren Drüsenhormonen darstellen und das Prinzip der negativen Rückkopplung erklären.",
+        "Die Schilddrüsenhormon-Biosynthese (Jodid-Aufnahme, Thyreoperoxidase, MIT/DIT-Kopplung zu T₃/T₄) beschreiben und die Unterschiede zwischen primärer und sekundärer Hypothyreose (TSH ↑ vs. TSH ↓) erklären.",
+        "Die Wirkungen von Cortisol (Glukoneogenese ↑, Immunsuppression, Osteoporose-Risiko) und Adrenalin (Fight-or-Flight, α₁/β₁/β₂-Rezeptoren) auf ihre Zielgewebe beschreiben.",
+        "Den Insulin-Sekretionsmechanismus (GLUT2, ATP-K⁺-Kanal, Ca²⁺, Exozytose) und die antagonistischen Wirkungen von Insulin (GLUT4, Glykogensynthese ↑) und Glukagon (Glykogenolyse ↑, Glukoneogenese ↑) auf den Blutzucker erklären.",
+      ],
+      sections: [
+        {
+          heading: "Einleitung",
+          text: "Das Hormonsystem ist neben dem Nervensystem das zweite große Kommunikationssystem des Körpers. Es reguliert langfristige Prozesse wie Wachstum, Stoffwechsel und Reproduktion über chemische Botenstoffe (Hormone), die über das Blut zu Zielorganen transportiert werden. Die Hypothalamus-Hypophyse-Achse koordiniert viele endokrine Drüsen über hierarchische Regelkreise mit negativer Rückkopplung.",
+          merksatz: "**Hypothalamus-Hypophyse-Regelkreis:** Hypothalamus (TRH, CRH, GnRH, GHRH) → Hypophyse (TSH, ACTH, LH/FSH, GH) → periphere Drüse (T₃/T₄, Cortisol, Östrogen/Testosteron) → **negative Rückkopplung** hemmt Hypothalamus + Hypophyse. Primäre Insuffizienz: periphere Drüse ↓ → trophe Hormone ↑.",
+        },
+        {
+          heading: "Hormonklassen und Wirkungsmechanismen",
+          text: "Peptidhormone (Insulin, ACTH, TSH) sind hydrophil und wirken über Membranrezeptoren mit Second Messengern (cAMP, IP₃, Ca²⁺) – schnelle Wirkung in Minuten. Steroidhormone (Cortisol, Aldosteron, Testosteron) sind lipophil, passieren die Membran und binden intrazelluläre Rezeptoren im Zellkern, die die Genexpression regulieren – langsame Wirkung in Stunden. T₃/T₄ sind lipophile Aminosäurederivate und wirken ähnlich wie Steroidhormone.",
+          merksatz: "**Hormonklassen & Rezeptoren:** Peptidhormone (Insulin, GH, ACTH) = hydrophil → Membranrezeptoren (Tyrosinkinase, G-Protein) → Second Messenger (cAMP, IP₃, Ca²⁺) → schnelle Wirkung (Minuten). Steroidhormone (Cortisol, Testosteron, Östrogen) + T₃/T₄ = lipophil → intrazelluläre Rezeptoren → Genexpression → langsame Wirkung (Stunden).",
+        },
+        {
+          heading: "Schilddrüse und Nebenniere",
+          text: "Die Schilddrüse synthetisiert T₃ und T₄ durch TPO-katalysierte Jodierung von Tyrosin-Resten in Thyreoglobulin (2×DIT → T₄; MIT+DIT → T₃). T₃ ist 3–5× potenter als das Prohormon T₄. Die Nebenniere hat Rinde (Aldosteron, Cortisol, DHEA) und Mark (Adrenalin 80%, Noradrenalin 20%). Cortisol steigert Glukoneogenese, wirkt immunsuppressiv (Phospholipase A₂ ↓) und hemmt Osteoblasten.",
+          merksatz: "**Schilddrüsenhormone:** T₃ (aktiv, 3 Jod) + T₄ (Prohormon, 4 Jod, peripher → T₃). TPO jodiert Tyrosin in Thyreoglobulin: MIT + DIT → T₃, 2×DIT → T₄. Wirkung: Grundumsatz ↑, Herzfrequenz ↑ (β-Rezeptor-Upregulation), Genexpression ↑. TSH stimuliert (TRH-abhängig). Hashimoto → T₃/T₄ ↓, TSH ↑.",
+        },
+        {
+          heading: "Pankreas und Blutzuckerregulation",
+          text: "Die Langerhans-Inseln des Pankreas enthalten β-Zellen (Insulin, 65–80%) und α-Zellen (Glukagon, 15–20%). Insulin senkt den Blutzucker durch GLUT4-Translokation in Muskel/Fett, Glykogensynthese und Lipogenese. Glukagon hebt den Blutzucker durch Glykogenolyse und Glukoneogenese in der Leber. Der Insulin-Sekretionsmechanismus läuft über GLUT2, ATP-sensitive K⁺-Kanäle und Ca²⁺-abhängige Exozytose.",
+          merksatz: "**Insulin vs. Glukagon:** Insulin (β-Zellen, nach Mahlzeit): GLUT4-Translokation ↑ (Muskel/Fett), Glykogensynthese ↑ (Leber), Lipolyse ↓, Proteinaufbau ↑ → Blutzucker ↓. Glukagon (α-Zellen, Fasten): Glykogenolyse ↑, Glukoneogenese ↑ → Blutzucker ↑. Typ-1-DM: β-Zell-Zerstörung. Typ-2-DM: Insulinresistenz + relativer Mangel.",
+        },
+        {
+          heading: "Regelkreise und negative Rückkopplung",
+          text: "Das endokrine System nutzt negative Rückkopplung zur Homöostase: Effektor-Hormone hemmen Hypothalamus und Hypophyse, um ihre eigene Produktion zu drosseln. Bei primärer Drüseninsuffizienz (z.B. Schilddrüse zerstört) fehlt die Hemmung, und die trophen Hormone steigen kompensatorisch an (TSH ↑↑). Positive Rückkopplung ist selten und tritt z.B. beim LH-Surge zur Ovulation oder bei Geburts-Wehen (Oxytocin) auf.",
+        },
+      ],
       selfTest: [
         {
           question: "Welche Aussage über die Klassifikation von Hormonen trifft zu?",
@@ -1070,12 +1067,6 @@ Das endokrine System nutzt **negative Rückkopplung** zur Homöostase:
       id: 'bio-3-04',
       title: "Herz Kreislauf",
       content: `# Herz-Kreislauf-System – Biologie Kapitel 3 (Organsysteme)
-
-**Priorität:** HOCH
-**Geschätzte Lesezeit:** 17 Minuten
-**Stichwortliste-Abdeckung:** 10/10 Stichwörter
-
----
 
 ## Einleitung
 
@@ -1282,42 +1273,40 @@ Das Herz-Kreislauf-System besteht aus **2 in Serie geschalteten Kreisläufen:**
 - **Hypotonie (<90/60 mmHg):** Schwindel, Synkope (v. a. orthostatisch)
 - **Hypertensive Krise (>180/120 mmHg):** Notfall, Organschäden möglich
 
----
-
-## 📌 Prüfungsfokus
-
-**Für die MedAT-Prüfung besonders wichtig:**
-
-1. **Herzaufbau:** 4 Kammern (RA, RV, LA, LV), LV-Wand am dicksten (Systemwiderstand), 3 Wandschichten (Endokard, Myokard, Epikard)
-2. **Herzklappen:** AV-Klappen (Trikuspidal, Mitral) mit Sehnenfäden, Taschenklappen (Pulmonal, Aorta) ohne Sehnenfäden
-3. **Erregungsleitung:** SA-Knoten (60–80/min) → AV-Knoten (Verzögerung, 40–60/min) → His-Bündel → Tawara-Schenkel → Purkinje-Fasern (schnellste Leitung)
-4. **Kreisläufe:** Kleiner Kreislauf (RV → Lunge → LA, niedriger Druck, Gasaustausch), Großer Kreislauf (LV → Körper → RA, hoher Druck)
-5. **Blutgefäße:** Arterien (Windkessel), Arteriolen (Widerstand, Sympathikus α₁), Kapillaren (Stoffaustausch, Starling), Venen (Klappen, Muskel-Venen-Pumpe)
-6. **Blutdruck:** MAP = HZV × TPR, Barorezeptor-Reflex (kurzfristig), RAAS (langfristig, Angiotensin II → Vasokonstriktion + Aldosteron ↑)
-
----
-
-## Merksätze
-
->>>> **Erregungsleitung:** „SA-Knoten startet (60–80), AV-Knoten verzögert, His-Bündel leitet, Tawara teilt, Purkinje sprintet von Spitze nach oben!"
->>>> (SA → AV [Verzögerung] → His → Tawara [re/li] → Purkinje [Spitze → Basis])
-
->>>> **Kreisläufe:** „Rechts = Lunge (klein, niedrig), Links = Körper (groß, hoch) – Lungenarterie hat armes Blut, Lungenvene hat reiches Blut!"
->>>> (Kleiner Kreislauf: RV → Lungenarterie [O₂-arm!] → Lunge → Lungenvene [O₂-reich!] → LA; Großer Kreislauf: LV → Aorta → Körper → Venen → RA)
-
->>>> **Blutdruckregulation:** „Barorezeptoren messen Druck (kurzfristig), RAAS rettet Salz und Wasser (langfristig) – Angiotensin II macht eng und Aldosteron speichert!"
->>>> (Barorezeptor-Reflex: Blutdruck ↑ → Parasympathikus ↑ → HF ↓; RAAS: Renin → Angiotensin II → Vasokonstriktion + Aldosteron ↑ → Na⁺/H₂O ↑)
-
->>>> **Herzklappen:** „AV-Klappen haben Sehnenfäden (Trikuspidal 3, Mitral 2), Taschenklappen haben Taschen (Pulmonal, Aorta je 3) – beide stoppen Rückfluss!"
->>>> (AV = Atrioventrikulär, Sehnenfäden verhindern Prolaps; Taschenklappen öffnen/schließen passiv)
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 3 UK03 – Hormonsystem](Bio_Kap3_UK03_Hormonsystem.md) | [Weiter: Bio Kap 3 UK05 – Atmungssystem](Bio_Kap3_UK05_Atmungssystem.md) →
 `,
-      lernziele: [],
-      sections: [],
+      lernziele: [
+        "Den Aufbau des Herzens (4 Kammern, 3 Wandschichten Endokard/Myokard/Epikard, Perikard) und den Unterschied zwischen linkem und rechtem Ventrikel in Wanddicke und Arbeitsdruck beschreiben.",
+        "Die vier Herzklappen (AV-Klappen mit Sehnenfäden vs. Taschenklappen ohne Sehnenfäden) nach Lage, Typ und Funktion unterscheiden.",
+        "Den Weg der Erregung vom SA-Knoten über AV-Knoten, His-Bündel, Tawara-Schenkel bis zu den Purkinje-Fasern beschreiben und die Bedeutung der AV-Verzögerung erklären.",
+        "Die Blutwege durch kleinen Kreislauf (RV → Lunge → LA) und großen Kreislauf (LV → Körper → RA) sowie die Druckverhältnisse skizzieren.",
+        "Die kurzfristige Blutdruckregulation (Barorezeptor-Reflex) und die langfristige Regulation (RAAS: Renin → Angiotensin II → Aldosteron) erklären und die Formel Blutdruck = HZV × TPR anwenden.",
+      ],
+      sections: [
+        {
+          heading: "Einleitung",
+          text: "Das Herz-Kreislauf-System ist ein geschlossenes Transportsystem, das Blut durch den Körper pumpt und Sauerstoff, Nährstoffe und Hormone verteilt. Das Herz (~300 g) pumpt in Ruhe ~5 L/min und unter Belastung bis zu ~25 L/min. Großer Kreislauf (LV → Körper → RA) und kleiner Kreislauf (RV → Lunge → LA) sind in Serie geschaltet.",
+        },
+        {
+          heading: "Herzaufbau und Klappen",
+          text: "Das Herz hat 4 Kammern (RA, RV, LA, LV) und 3 Wandschichten: Endokard (Endothel, innen), Myokard (Herzmuskel, Kontraktion), Epikard (Gleitfläche). Der linke Ventrikel hat die dickste Wand (~10–15 mm vs. ~3–5 mm rechts), da er gegen den hohen Systemwiderstand pumpt. AV-Klappen (Trikuspidal: 3 Segel, Mitral: 2 Segel) haben Sehnenfäden an Papillarmuskeln; Taschenklappen (Pulmonal, Aorta: je 3 Taschen) öffnen passiv.",
+          merksatz: "**Herzklappen:** AV-Klappen haben Sehnenfäden (Trikuspidal 3, Mitral 2), Taschenklappen haben Taschen (Pulmonal, Aorta je 3) – beide stoppen Rückfluss! (AV = Atrioventrikulär, Sehnenfäden verhindern Prolaps; Taschenklappen öffnen/schließen passiv)",
+        },
+        {
+          heading: "Erregungsleitung",
+          text: "Die Erregung entsteht im SA-Knoten (60–80/min, Taktgeber), verzögert sich im AV-Knoten (~120 ms, ermöglicht Vorhof-Kontraktion vor Ventrikel), läuft dann über His-Bündel, Tawara-Schenkel und Purkinje-Fasern (schnellste Leitung, 2–4 m/s). Diese Verzögerung gewährleistet, dass Vorhöfe zuerst das Blut in die Ventrikel pumpen.",
+          merksatz: "**Erregungsleitung:** SA-Knoten startet (60–80), AV-Knoten verzögert, His-Bündel leitet, Tawara teilt, Purkinje sprintet von Spitze nach oben! (SA → AV [Verzögerung] → His → Tawara [re/li] → Purkinje [Spitze → Basis])",
+        },
+        {
+          heading: "Kreislauf und Blutgefäße",
+          text: "Arteriolen sind Widerstandsgefäße (regulieren TPR durch Sympathikus α₁); Kapillaren ermöglichen Stoffaustausch (Starling-Kräfte: Filtration arteriell, Reabsorption venös); Venen sind Kapazitätsgefäße (~70% des Blutvolumens) mit Klappen und Muskel-Venen-Pumpe. Die Windkesselfunktion der Aorta wandelt pulsatilen in kontinuierlichen Fluss um.",
+          merksatz: "**Kreisläufe:** Rechts = Lunge (klein, niedrig), Links = Körper (groß, hoch) – Lungenarterie hat O₂-armes Blut, Lungenvene hat O₂-reiches Blut! (Kleiner Kreislauf: RV → Lungenarterie → Lunge → Lungenvene → LA; Großer Kreislauf: LV → Aorta → Körper → Venen → RA)",
+        },
+        {
+          heading: "Blutdruckregulation",
+          text: "Kurzfristig: Barorezeptor-Reflex (Aortenbogen, Karotis-Sinus) – Druck ↑ → Parasympathikus ↑ → HF ↓. Langfristig: RAAS – Druck ↓ → Renin → Angiotensin II → Vasokonstriktion + Aldosteron ↑ → Na⁺/H₂O-Retention → Volumen ↑. Formel: Blutdruck = HZV × TPR = (SV × HF) × TPR.",
+          merksatz: "**Blutdruckregulation:** Barorezeptoren messen Druck (kurzfristig), RAAS rettet Salz und Wasser (langfristig) – Angiotensin II macht eng und Aldosteron speichert! (Barorezeptor-Reflex: Blutdruck ↑ → Parasympathikus ↑ → HF ↓; RAAS: Renin → Angiotensin II → Vasokonstriktion + Aldosteron ↑ → Na⁺/H₂O ↑)",
+        },
+      ],
       selfTest: [
         {
           question: "Welche Aussage über den anatomischen Aufbau des Herzens ist korrekt?",
@@ -1423,17 +1412,12 @@ Das Herz-Kreislauf-System besteht aus **2 in Serie geschalteten Kreisläufen:**
         "**Herzrhythmusstörungen:** Vorhofflimmern (unregelmäßige P-Wellen, absolute Arrhythmie, Thromboembolie-Risiko → CHA₂DS₂-VASc → Antikoagulation). AV-Block I° (PQ > 0,2 s), II° (Wenckebach: PR ↑ bis Ausfall; Mobitz II: plötzlicher Ausfall), III° (kompletter Block, Schrittmacher). Kammerflattern/-flimmern → Reanimation + Defibrillation."
       ],
       klinischerBezug: "Herzinfarkt (STEMI/NSTEMI): koronare Plaqueruptur → Thrombus → Ischämie → Infarzierung (Troponin I/T als sensitiver Marker). EKG: ST-Hebung (STEMI), T-Negativierung, Q-Zacke (alter Infarkt). Therapie: sofortige PCI (Stent) innerhalb 90 min. Herzinsuffizienz betrifft >1 Mio. Menschen in Deutschland (systolisch EF <40% vs. diastolisch EF >50%); Therapie-Basis: ACE-Hemmer + Betablocker + Diuretika + Spironolacton. Hypertonie (>140/90 mmHg): primär (essenziell, 90%, multifaktoriell) vs. sekundär (NNR: Conn, Phäochromozytom; Niere: renovaskulär). Komplikationen: Schlaganfall, Herzinfarkt, Niereninsuffizienz, Retinopathie. Vorhofflimmern: häufigste Herzrhythmusstörung (1% der Bevölkerung), Schlaganfall-Risiko ↑ (Thromboembolie aus linkem Vorhofohr) → Antikoagulation (DOAKs)."
+
     },
     {
       id: 'bio-3-05',
       title: "Blut",
       content: `# Blut – Biologie Kapitel 3 (Organsysteme)
-
-**Priorität:** HOCH
-**Geschätzte Lesezeit:** 16 Minuten
-**Stichwortliste-Abdeckung:** 9/9 Stichwörter
-
----
 
 ## Einleitung
 
@@ -1640,40 +1624,39 @@ Blut besteht aus **Plasma** (flüssiger Anteil, ~55%) und **Blutzellen** (zellul
 
 ---
 
-## 📌 Prüfungsfokus
-
-**Für die MedAT-Prüfung besonders wichtig:**
-
-1. **Zusammensetzung:** Hämatokrit (Männer ~45%, Frauen ~42%), Plasma (Albumin, Fibrinogen, Globuline), Serum = Plasma ohne Fibrinogen
-2. **Erythrozyten:** Hämoglobin (Fe²⁺, Tetramer 2α2β), Abbau → Bilirubin (Leber → Galle → Darm), Bohr-Effekt (CO₂↑/pH↓ → O₂-Abgabe↑)
-3. **Leukozyten:** Neutrophile (50–70%, Phagozytose), Lymphozyten (20–40%, T/B-Zellen), Monozyten (Makrophagen)
-4. **Gerinnung:** Primäre Hämostase (Thrombozyten, vWF), Sekundäre Hämostase (extrinsisch [TF+VII] vs. intrinsisch [XII], gemeinsame Endstrecke [Xa+Va → Thrombin → Fibrin]), Vitamin K (Faktor II, VII, IX, X)
-5. **AB0-System:** A (Anti-B), B (Anti-A), AB (keine AK, Universalempfänger), 0 (Anti-A+B, Universalspender), natürliche Antikörper (IgM)
-6. **Rhesus-System:** Rh− Mutter + Rh+ Fetus → Sensibilisierung (1. Schwangerschaft) → 2. Schwangerschaft → Morbus haemolyticus neonatorum (Anti-D-Prophylaxe!)
-
----
-
-## Merksätze
-
->>>> **Hämatokrit:** „Männer ~45%, Frauen ~42% – Erythrozyten-Volumen im Blut (Anämie ↓, Polyglobulie ↑)."
->>>> (Hämatokrit = Volumenanteil Erythrozyten, Männer höher wegen Testosteron)
-
->>>> **Gerinnungskaskade:** „Extrinsisch = TF+VII (schnell, Sekunden), Intrinsisch = XII (langsam, Minuten), Endstrecke = Xa+Va → Thrombin → Fibrin!"
->>>> (Beide Wege aktivieren Faktor X → Prothrombinase-Komplex → Thrombin → Fibrinogen → Fibrin)
-
->>>> **AB0-Blutgruppen:** „0 = Universalspender (keine Antigene), AB = Universalempfänger (keine Antikörper) – natürliche IgM-Antikörper!"
->>>> (A hat Anti-B, B hat Anti-A, AB hat keine, 0 hat Anti-A+B)
-
->>>> **Rhesus-Inkompatibilität:** „Rh− Mutter + Rh+ Kind: 1. Schwangerschaft = Sensibilisierung, 2. Schwangerschaft = Hämolyse → Anti-D-Prophylaxe nach Geburt!"
->>>> (Anti-D-Immunglobulin bindet fetale Erythrozyten → verhindert mütterliche Antikörper-Bildung)
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 3 UK04 – Herz-Kreislauf-System](Bio_Kap3_UK04_Herz_Kreislauf.md) | [Weiter: Bio Kap 3 UK06 – Atmungssystem](Bio_Kap3_UK06_Atmungssystem.md) →
 `,
-      lernziele: [],
-      sections: [],
+      lernziele: [
+        "Die Zusammensetzung des Blutes (Plasma vs. zelluläre Elemente, Hämatokrit, Plasma vs. Serum) und die Hauptfunktionen der Plasmaproteine (Albumin, Fibrinogen, Globuline) beschreiben.",
+        "Den Aufbau und die Funktion des Hämoglobins erklären sowie den Bohr-Effekt und die O₂-Bindungskurve (Rechtsverschiebung bei CO₂↑/pH↓) interpretieren.",
+        "Die primäre Hämostase (Vasokonstriktion, Thrombozytenaggregation, vWF) und die sekundäre Hämostase (extrinsischer/intrinsischer Weg, gemeinsame Endstrecke, Fibrin) beschreiben und die Rolle von Vitamin K nennen.",
+        "Die AB0-Blutgruppen (Antigene auf Erythrozyten, natürliche IgM-Antikörper) und das Rhesus-System erklären sowie die klinischen Konsequenzen der Rhesus-Inkompatibilität (Morbus haemolyticus neonatorum, Anti-D-Prophylaxe) kennen.",
+        "Den Erythrozyten-Abbauweg (Hämoglobin → Bilirubin → Leber → Galle) beschreiben und die häufigsten Anämieformen (Eisenmangel, B12/Folsäure, hämolytisch) nach Laborbefund unterscheiden.",
+      ],
+      sections: [
+        {
+          heading: "Einleitung",
+          text: "Blut ist ein flüssiges Gewebe (~5–6 L beim Erwachsenen) mit Transport-, Immunabwehr-, Hämostase- und Pufferfunktionen. Es besteht aus Plasma (~55%) und zellulären Elementen (~45%, Hämatokrit). Plasma enthält Wasser (~90%), Proteine (Albumin, Fibrinogen, Globuline) und Elektrolyte; Serum ist Plasma ohne Fibrinogen (nach Gerinnung).",
+        },
+        {
+          heading: "Erythrozyten und Hämoglobin",
+          text: "Erythrozyten sind bikonkave Scheiben ohne Zellkern mit Hämoglobin (Tetramer 2α2β, Fe²⁺). Der Bohr-Effekt beschreibt die Rechtsverschiebung der O₂-Bindungskurve bei CO₂↑/pH↓/Temperatur↑ → O₂-Abgabe ↑ im Gewebe. Abbau nach ~120 Tagen in der Milz: Hämoglobin → Bilirubin (unkonjugiert) → Leber → konjugiertes Bilirubin → Galle → Stuhl (Sterkobilin) + Urin (Urobilin).",
+          merksatz: "**Hämatokrit:** Männer ~45%, Frauen ~42% – Erythrozyten-Volumen im Blut (Anämie ↓, Polyglobulie ↑). (Hämatokrit = Volumenanteil Erythrozyten, Männer höher wegen Testosteron)",
+        },
+        {
+          heading: "Leukozyten",
+          text: "Leukozyten umfassen Neutrophile (50–70%, Phagozytose, erste Linie), Lymphozyten (20–40%, T- und B-Zellen), Monozyten (2–10%, Makrophagen-Vorläufer), Eosinophile (Parasiten, Allergie) und Basophile (<1%, Histamin). Leukozytose (>10.000/µL) deutet auf Infektion hin; Leukopenie kann Chemotherapie-Nebenwirkung sein.",
+        },
+        {
+          heading: "Gerinnung und Hämostase",
+          text: "Primäre Hämostase: Vasokonstriktion → Thrombozytenadhäsion (vWF-GPIb) → -aggregation (ADP, Thromboxan A₂, Fibrinogen-GPIIb/IIIa) → Plättchenpfropf. Sekundäre Hämostase (Koagulationskaskade): Extrinsisch (TF+VIIa, schnell) + Intrinsisch (XIIa, langsam) → Gemeinsam: Xa+Va → Thrombin → Fibrinogen → Fibrin. Vitamin K aktiviert Faktoren II, VII, IX, X.",
+          merksatz: "**Gerinnungskaskade:** Extrinsisch = TF+VII (schnell, Sekunden), Intrinsisch = XII (langsam, Minuten), Endstrecke = Xa+Va → Thrombin → Fibrin! (Beide Wege aktivieren Faktor X → Prothrombinase-Komplex → Thrombin → Fibrinogen → Fibrin)",
+        },
+        {
+          heading: "Blutgruppen",
+          text: "AB0-System: Blutgruppe A (Antigen A, Anti-B IgM), B (Antigen B, Anti-A IgM), AB (A+B, keine AK, Universalempfänger), 0 (keine Antigene, Anti-A+B IgM, Universalspender). Rhesus-System: Rh+ (ca. 85% der Bevölkerung). Rh-Inkompatibilität: Rh−-Mutter + Rh+-Kind → 1. Geburt: Sensibilisierung → 2. Schwangerschaft: Anti-D (IgG) überquert Plazenta → fetale Hämolyse. Prophylaxe: Anti-D-Immunglobulin post partum.",
+          merksatz: "**AB0-Blutgruppen:** 0 = Universalspender (keine Antigene), AB = Universalempfänger (keine Antikörper) – natürliche IgM-Antikörper! (A hat Anti-B, B hat Anti-A, AB hat keine, 0 hat Anti-A+B)",
+        },
+      ],
       selfTest: [
         {
           question: "Welche Aussage über die Zusammensetzung des Blutes und den Hämatokrit ist korrekt?",
@@ -1784,12 +1767,6 @@ Blut besteht aus **Plasma** (flüssiger Anteil, ~55%) und **Blutzellen** (zellul
       id: 'bio-3-06',
       title: "Immunsystem",
       content: `# Immunsystem – Biologie Kapitel 3 (Organsysteme)
-
-**Priorität:** HOCH
-**Geschätzte Lesezeit:** 18 Minuten
-**Stichwortliste-Abdeckung:** 12/12 Stichwörter
-
----
 
 ## Einleitung
 
@@ -2023,42 +2000,40 @@ Die **erworbene Immunität** entwickelt sich nach Erstkontakt mit einem Antigen 
 
 ---
 
-## 📌 Prüfungsfokus
-
-**Für die MedAT-Prüfung besonders wichtig:**
-
-1. **Angeborene vs. Erworbene Immunität:** Schnell/unspezifisch vs. langsam/spezifisch, Gedächtnis nur bei erworbener
-2. **NK-Zellen:** Töten Zellen ohne MHC-I (Missing Self), Perforin/Granzyme
-3. **Komplementsystem:** C3b (Opsonierung), C5a (Chemotaxis), C5b–C9 (MAC, Lyse)
-4. **Antikörper:** IgM (Primär, Pentamer), IgG (Sekundär, plazentagängig), IgA (Schleimhaut, Dimer), IgE (Allergie, Mastzellen)
-5. **T-Zellen:** CD4⁺ (Th, MHC II, koordinieren), CD8⁺ (CTL, MHC I, töten), Treg (Selbsttoleranz)
-6. **MHC:** MHC I → CD8⁺ (intrazellulär, Viren), MHC II → CD4⁺ (extrazellulär, Bakterien)
-7. **Impfung:** Aktiv (Gedächtnis, langsam), Passiv (sofort, kurz, kein Gedächtnis)
-8. **Allergie:** IgE → Mastzellen → Histamin → Anaphylaxie (Adrenalin!)
-
----
-
-## Merksätze
-
->>>> **Angeborene vs. Erworbene:** „Angeboren = schnell (Minuten), unspezifisch, kein Gedächtnis (Makrophagen, Neutrophile, Komplement). Erworben = langsam (Tage), spezifisch, Gedächtnis (T-/B-Zellen, Antikörper)."
->>>> (Angeborene Immunität reagiert sofort, erworbene braucht Zeit für klonale Expansion)
-
->>>> **Antikörper-Klassen:** „IgM = Erste (Pentamer, Primär), IgG = Gedächtnis (Sekundär, Plazenta), IgA = Schleimhaut (Dimer), IgE = Allergie (Mastzellen)!"
->>>> (IgM → akut, IgG → chronisch/Impfung, IgA → Sekrete, IgE → Anaphylaxie)
-
->>>> **MHC-Präsentation:** „MHC I auf ALLEN Zellen zeigt CD8⁺ Viren (innen), MHC II auf APCs zeigt CD4⁺ Bakterien (außen)!"
->>>> (MHC I → CD8⁺ → intrazelluläre Pathogene; MHC II → CD4⁺ → extrazelluläre Pathogene)
-
->>>> **Impfung:** „Aktiv = Antigen → eigene Antikörper → Gedächtnis (Wochen, Jahre), Passiv = fertige Antikörper → sofort, kurz (Stunden, Monate, kein Gedächtnis)!"
->>>> (Aktiv: MMR, Tetanus; Passiv: Tetanus-Immunglobulin, Anti-D)
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 3 UK05 – Blut](Bio_Kap3_UK05_Blut.md) | [Weiter: Bio Kap 3 UK07 – Atmungssystem](Bio_Kap3_UK07_Atmungssystem.md) →
 `,
-      lernziele: [],
-      sections: [],
+      lernziele: [
+        "Die angeborene (unspezifische) und erworbene (adaptive, spezifische) Immunität nach Reaktionsgeschwindigkeit, Spezifität und Gedächtnisbildung unterscheiden und die wichtigsten Zelltypen jeder Linie benennen.",
+        "Das Komplementsystem (klassischer, alternativer, Lektin-Weg) mit seinen Effekten (C3b Opsonierung, C5a Chemotaxis, MAC Lyse) beschreiben.",
+        "Die Antikörperklassen (IgM: Primärantwort, Pentamer; IgG: Sekundärantwort, plazentagängig; IgA: Schleimhaut; IgE: Allergie/Mastzellen) nach Struktur und Funktion unterscheiden.",
+        "Die MHC-Präsentation erklären: MHC I (alle kernhaltigen Zellen) → CD8⁺-T-Zellen (Viren, intrazellulär); MHC II (APCs) → CD4⁺-T-Zellen (Bakterien, extrazellulär).",
+        "Aktive vs. passive Immunisierung sowie den IgE-vermittelten Allergietyp-I-Mechanismus (Sensibilisierung → Re-Exposition → Histaminfreisetzung → Anaphylaxie, Therapie: Adrenalin) erklären.",
+      ],
+      sections: [
+        {
+          heading: "Einleitung",
+          text: "Das Immunsystem schützt vor Pathogenen, Tumorzellen und Fremdstoffen durch Erkennung von 'selbst' vs. 'fremd'. Es besteht aus angeborener Immunität (schnell, unspezifisch, kein Gedächtnis) und erworbener Immunität (langsam, hochspezifisch, Gedächtnisbildung). Physikalische Barrieren (Haut, Schleimhäute, Magensäure) bilden die erste Abwehrlinie.",
+          merksatz: "**Angeborene vs. Erworbene:** Angeboren = schnell (Minuten), unspezifisch, kein Gedächtnis (Makrophagen, Neutrophile, Komplement). Erworben = langsam (Tage), spezifisch, Gedächtnis (T-/B-Zellen, Antikörper). (Angeborene Immunität reagiert sofort, erworbene braucht Zeit für klonale Expansion)",
+        },
+        {
+          heading: "Angeborene Immunität",
+          text: "Zelluläre Komponenten: Neutrophile (Phagozytose, Respiratory Burst), Makrophagen (Phagozytose, Antigenpräsentation MHC II, IL-1/TNF-α), NK-Zellen (töten Zellen ohne MHC-I über Perforin/Granzyme), dendritische Zellen (Brücke zur adaptiven Immunität). Humorale Komponenten: Komplementsystem – C3b (Opsonierung), C5a (Chemotaxis), MAC/C5b-C9 (Lyse). Interferone hemmen Virusreplikation.",
+        },
+        {
+          heading: "Erworbene Immunität und T-Zellen",
+          text: "CD4⁺ T-Helferzellen (MHC II, koordinieren B-Zellen und CTL), CD8⁺ zytotoxische T-Zellen (MHC I, töten virusinfizierte Zellen/Tumorzellen per Perforin/Granzyme), Treg (Selbsttoleranz). B-Zellen produzieren Antikörper (Plasmazellen) und bilden Gedächtniszellen. Klonale Selektion → klonale Expansion bei Antigenerstkontak.",
+          merksatz: "**MHC-Präsentation:** MHC I auf ALLEN Zellen zeigt CD8⁺ Viren (innen), MHC II auf APCs zeigt CD4⁺ Bakterien (außen)! (MHC I → CD8⁺ → intrazelluläre Pathogene; MHC II → CD4⁺ → extrazelluläre Pathogene)",
+        },
+        {
+          heading: "Antikörper und Impfung",
+          text: "IgM (Primärantwort, Pentamer, aktiviert Komplement); IgG (Sekundärantwort, monomer, plazentagängig, häufigste Klasse); IgA (Dimer, Schleimhaut-Sekretion, Schutz Atemwege/Darm); IgE (Allergie, bindet an Mastzellen/Basophile). Aktive Impfung: Antigen → eigene Antikörper + Gedächtnis (dauerhaft). Passive Immunisierung: fertige Antikörper → sofortiger Schutz, kein Gedächtnis, kurzfristig.",
+          merksatz: "**Antikörper-Klassen:** IgM = Erste (Pentamer, Primär), IgG = Gedächtnis (Sekundär, Plazenta), IgA = Schleimhaut (Dimer), IgE = Allergie (Mastzellen)! (IgM → akut, IgG → chronisch/Impfung, IgA → Sekrete, IgE → Anaphylaxie)",
+        },
+        {
+          heading: "Allergie und Autoimmunität",
+          text: "Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf Mastzellen) → Re-Exposition (Allergen kreuzvernetzt IgE → Mastzell-Degranulation → Histamin, Leukotriene). Manifestationen: Rhinitis, Asthma, Urtikaria, Anaphylaxie. Notfalltherapie Anaphylaxie: Adrenalin i.m. (β₂ Bronchodilatation, α₁ Vasokonstriktion). Autoimmunerkrankungen entstehen durch Verlust der Selbsttoleranz.",
+          merksatz: "**Impfung:** Aktiv = Antigen → eigene Antikörper → Gedächtnis (Wochen, Jahre), Passiv = fertige Antikörper → sofort, kurz (Stunden, Monate, kein Gedächtnis)! (Aktiv: MMR, Tetanus; Passiv: Tetanus-Immunglobulin, Anti-D)",
+        },
+      ],
       selfTest: [
         {
           question: "Welche Aussage über die Unterschiede zwischen angeborener und erworbener Immunität ist korrekt?",
@@ -2169,7 +2144,6 @@ Die **erworbene Immunität** entwickelt sich nach Erstkontakt mit einem Antigen 
       title: "Lymphsystem",
       content: `# Lymphatisches System – Biologie Kapitel 3 (Organsysteme)
 
-**Priorität:** NIEDRIG
 **Geschätzte Lesezeit:** 10 Minuten
 **Stichwortliste-Abdeckung:** 5/5 Stichwörter
 
@@ -2314,7 +2288,7 @@ Das **lymphatische System** ist ein Netzwerk aus **Lymphgefäßen** und **lympha
 
 ---
 
-## 📌 Prüfungsfokus
+## Prüfungsfokus
 
 **Für die MedAT-Prüfung besonders wichtig:**
 
@@ -2327,25 +2301,37 @@ Das **lymphatische System** ist ein Netzwerk aus **Lymphgefäßen** und **lympha
 
 ## Merksätze
 
->>>> **Lymphknoten-Architektur:** „Cortex = B-Zellen (Follikel, Antikörper), Paracortex = T-Zellen (zellulär), Mark = Plasmazellen (Sekretion)!"
->>>> (B außen, T innen, Plasmazellen im Mark)
+**Lymphknoten-Architektur:** Cortex = B-Zellen (Follikel, Antikörper), Paracortex = T-Zellen (zellulär), Mark = Plasmazellen (Sekretion).
 
->>>> **Milz-Funktionen:** „Weiße Pulpa = Immunabwehr (B/T-Zellen), Rote Pulpa = Erythrozyten-Abbau (Makrophagen) + Thrombozytenspeicher (30%)!"
->>>> (Milz filtert Blut [nicht Lymphe!], bekapselte Bakterien, Erythrozyten-Friedhof)
+**Milz-Funktionen:** Weiße Pulpa = Immunabwehr (B/T-Zellen), Rote Pulpa = Erythrozyten-Abbau (Makrophagen) + Thrombozytenspeicher (30%). Milz filtert Blut (nicht Lymphe!).
 
->>>> **Splenektomie:** „Keine Milz = OPSI-Risiko → Impfung gegen Pneumokokken, Meningokokken, H. influenzae + Antibiotika-Prophylaxe (Penicillin)!"
->>>> (Bekapselte Bakterien besonders gefährlich nach Milzentfernung)
+**Splenektomie:** Keine Milz = OPSI-Risiko → Impfung gegen Pneumokokken, Meningokokken, H. influenzae + Antibiotika-Prophylaxe (Penicillin). Bekapselte Bakterien besonders gefährlich.
 
->>>> **Thymus:** „T-Zell-Schule: Positive Selektion (MHC erkennen → Überleben), Negative Selektion (Selbst-Antigen erkennen → Tod) → nur 5% bestehen!"
->>>> (Zentrale Toleranz verhindert Autoimmunität)
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 3 UK06 – Immunsystem](Bio_Kap3_UK06_Immunsystem.md) | [Weiter: Bio Kap 3 UK08 – Atmungssystem](Bio_Kap3_UK08_Atmungssystem.md) →
+**Thymus:** T-Zell-Schule: Positive Selektion (MHC erkennen → Überleben), Negative Selektion (Selbst-Antigen erkennen → Tod) → nur 5% bestehen. Zentrale Toleranz verhindert Autoimmunität.
 `,
-      lernziele: [],
-      sections: [],
+      lernziele: [
+        "Die drei Hauptfunktionen des lymphatischen Systems (Flüssigkeitsrücktransport, Immunabwehr, Fetttransport) beschreiben.",
+        "Den Aufbau und die Filterleistung eines Lymphknotens (Cortex, Paracortex, Mark) erklären.",
+        "Die Funktionen der Milz (weiße und rote Pulpa) unterscheiden und das OPSI-Risiko nach Splenektomie begründen.",
+        "Die T-Zell-Reifung im Thymus mit positiver und negativer Selektion erläutern.",
+        "Das Konzept der zentralen Toleranz und deren Bedeutung für die Autoimmunprävention darlegen.",
+      ],
+      sections: [
+        {
+          heading: "Einleitung",
+          text: "Das lymphatische System ist ein Netzwerk aus Lymphgefäßen und lymphatischen Organen, das täglich ~2–4 L interstitielle Flüssigkeit zurück ins Blut transportiert. Weitere Aufgaben sind Immunabwehr (Filtration und Antigen-Präsentation in Lymphknoten) und der Transport von Chylomikronen aus dem Darm.",
+        },
+        {
+          heading: "Kerninhalt",
+          text: "Das Kerninhalt-Kapitel behandelt Lymphe und Lymphgefäße, Lymphknoten (Cortex: B-Zellen, Paracortex: T-Zellen, Mark: Plasmazellen), Milz (weiße Pulpa: Immunabwehr, rote Pulpa: Erythrozyten-Abbau und Thrombozytenspeicher) sowie Thymus (T-Zell-Reifung, positive und negative Selektion).",
+          merksatz: "Lymphknoten-Architektur: Cortex = B-Zellen (Follikel, Antikörper), Paracortex = T-Zellen (zellulär), Mark = Plasmazellen (Sekretion).",
+        },
+        {
+          heading: "Prüfungsfokus",
+          text: "Für den MedAT besonders wichtig: Lymphfunktionen (Rücktransport, Immunabwehr, Fetttransport), Lymphknoten-Architektur, Milz-Kompartimente sowie Thymus-Selektionsprozesse. Nach Splenektomie besteht OPSI-Risiko durch bekapselte Bakterien (Prophylaxe: Impfung + Penicillin).",
+          merksatz: "Splenektomie: Keine Milz = OPSI-Risiko → Impfung gegen Pneumokokken, Meningokokken, H. influenzae + Antibiotika-Prophylaxe (Penicillin).",
+        },
+      ],
       selfTest: [
         {
           question: "Welche Aussage über das lymphatische System ist korrekt?",
@@ -2426,7 +2412,6 @@ Das **lymphatische System** ist ein Netzwerk aus **Lymphgefäßen** und **lympha
       title: "Atmungssystem",
       content: `# Atmungssystem – Biologie Kapitel 3 (Organsysteme)
 
-**Priorität:** HOCH
 **Geschätzte Lesezeit:** 17 Minuten
 **Stichwortliste-Abdeckung:** 8/8 Stichwörter
 
@@ -2636,7 +2621,7 @@ Das **Atmungssystem** (Respirationssystem) ermöglicht den **Gasaustausch** zwis
 
 ---
 
-## 📌 Prüfungsfokus
+## Prüfungsfokus
 
 **Für die MedAT-Prüfung besonders wichtig:**
 
@@ -2651,25 +2636,37 @@ Das **Atmungssystem** (Respirationssystem) ermöglicht den **Gasaustausch** zwis
 
 ## Merksätze
 
->>>> **Surfactant:** „Typ-II-Pneumozyten machen Surfactant (DPPC, Phospholipid) → Oberflächenspannung ↓ → Alveolen bleiben offen (keine Atelektase)!"
->>>> (RDS bei Frühgeborenen: Surfactant-Mangel → Kollaps → Hypoxie → Betamethason antenatal)
+**Surfactant:** Typ-II-Pneumozyten machen Surfactant (DPPC, Phospholipid) → Oberflächenspannung ↓ → Alveolen bleiben offen (keine Atelektase). RDS bei Frühgeborenen: Surfactant-Mangel → Kollaps → Hypoxie → Betamethason antenatal.
 
->>>> **Bohr-Effekt:** „CO₂ ↑, pH ↓, Temp ↑ im Gewebe → O₂-Abgabe ↑ (Rechtverschiebung) – Lunge umgekehrt (CO₂ ↓, pH ↑ → O₂-Aufnahme ↑)!"
->>>> (Metabolisch aktives Gewebe braucht O₂ → lokale Bedingungen fördern O₂-Freisetzung)
+**Bohr-Effekt:** CO₂ ↑, pH ↓, Temp ↑ im Gewebe → O₂-Abgabe ↑ (Rechtverschiebung). Lunge umgekehrt (CO₂ ↓, pH ↑ → O₂-Aufnahme ↑). Metabolisch aktives Gewebe braucht O₂ → lokale Bedingungen fördern O₂-Freisetzung.
 
->>>> **CO₂-Transport:** „70% Bikarbonat (Carboanhydrase: CO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻, Chlorid-Shift), 23% Carbamino-Hb, 7% gelöst!"
->>>> (Haldane-Effekt: Desoxy-Hb bindet mehr CO₂ als Oxy-Hb)
+**CO₂-Transport:** 70% Bikarbonat (Carboanhydrase: CO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻, Chlorid-Shift), 23% Carbamino-Hb, 7% gelöst. Haldane-Effekt: Desoxy-Hb bindet mehr CO₂ als Oxy-Hb.
 
->>>> **Atemregulation:** „Zentrale Chemorezeptoren (Medulla) = CO₂/pH (wichtigster Antrieb), periphere Chemorezeptoren (Karotis) = O₂ (sekundär, <60 mmHg)!"
->>>> (COPD: CO₂-Adaptation → hypoxischer Atemantrieb wird wichtiger)
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 3 UK07 – Lymphatisches System](Bio_Kap3_UK07_Lymphsystem.md) | [Weiter: Bio Kap 3 UK09 – Verdauungssystem](Bio_Kap3_UK09_Verdauungssystem.md) →
+**Atemregulation:** Zentrale Chemorezeptoren (Medulla) = CO₂/pH (wichtigster Antrieb), periphere Chemorezeptoren (Karotis) = O₂ (sekundär, <60 mmHg). COPD: CO₂-Adaptation → hypoxischer Atemantrieb wird wichtiger.
 `,
-      lernziele: [],
-      sections: [],
+      lernziele: [
+        "Die Funktion von Surfactant (Typ-II-Pneumozyten, DPPC) und seine Bedeutung zur Verhinderung von Atelektase erklären.",
+        "Die Mechanismen der aktiven Inspiration (Diaphragma, Mm. intercostales externi) und passiven Exspiration beschreiben.",
+        "Den pulmonalen und peripheren Gasaustausch anhand von Partialdruckgradienten für O₂ und CO₂ erläutern.",
+        "Den Bohr-Effekt und die drei Wege des CO₂-Transports im Blut (Bikarbonat, Carbaminohämoglobin, gelöst) benennen.",
+        "Die wichtigsten Atemantriebe (zentraler CO₂/pH-Sensor, peripherer O₂-Sensor) und ihre klinische Relevanz bei COPD darstellen.",
+      ],
+      sections: [
+        {
+          heading: "Einleitung",
+          text: "Das Atmungssystem ermöglicht den Gasaustausch zwischen Außenluft und Blut: O₂-Aufnahme für die Zellatmung und CO₂-Abgabe als Stoffwechselprodukt. Es besteht aus oberen Atemwegen (Nase, Pharynx) und unteren Atemwegen (Larynx, Trachea, Bronchien, Alveolen).",
+        },
+        {
+          heading: "Kerninhalt",
+          text: "Das Kapitel behandelt Atemwegsanatomie, Surfactant (Typ-II-Pneumozyten, DPPC, Atelektase-Prävention), Atemmechanik (Inspiration aktiv, Exspiration passiv), Gasaustausch (Partialdruckgradienten), Hämoglobin-Bindung (Bohr-Effekt, sigmoidale Kurve) sowie Atemregulation (zentrale und periphere Chemorezeptoren).",
+          merksatz: "Surfactant: Typ-II-Pneumozyten machen Surfactant (DPPC, Phospholipid) → Oberflächenspannung ↓ → Alveolen bleiben offen (keine Atelektase). RDS bei Frühgeborenen: Surfactant-Mangel → Kollaps → Hypoxie → Betamethason antenatal.",
+        },
+        {
+          heading: "Prüfungsfokus",
+          text: "Für den MedAT besonders wichtig: Surfactant-Funktion und RDS, aktive Inspiration vs. passive Exspiration, O₂/CO₂-Partialdruckgradienten (60 mmHg vs. 6 mmHg), Bohr-Effekt (Rechtverschiebung bei CO₂ ↑, pH ↓), CO₂-Transport (70% HCO₃⁻) und Atemantrieb (CO₂ wichtiger als O₂).",
+          merksatz: "CO₂-Transport: 70% Bikarbonat (Carboanhydrase, Chlorid-Shift), 23% Carbamino-Hb, 7% gelöst. Haldane-Effekt: Desoxy-Hb bindet mehr CO₂.",
+        },
+      ],
       selfTest: [
         {
           question: "Welche Aussage über Surfactant und seine Funktion ist korrekt?",
@@ -2780,7 +2777,6 @@ Das **Atmungssystem** (Respirationssystem) ermöglicht den **Gasaustausch** zwis
       title: "Verdauungssystem",
       content: `# Verdauungssystem – Biologie Kapitel 3 (Organsysteme)
 
-**Priorität:** HOCH
 **Geschätzte Lesezeit:** 16 Minuten
 **Stichwortliste-Abdeckung:** 11/11 Stichwörter
 
@@ -2989,7 +2985,7 @@ Das **Verdauungssystem** (Gastrointestinaltrakt, GIT) dient der **mechanischen +
 
 ---
 
-## 📌 Prüfungsfokus
+## Prüfungsfokus
 
 **Für die MedAT-Prüfung besonders wichtig:**
 
@@ -3003,25 +2999,39 @@ Das **Verdauungssystem** (Gastrointestinaltrakt, GIT) dient der **mechanischen +
 
 ## Merksätze
 
->>>> **Magen-HCl-Regulation:** „Gastrin ↑ HCl (G-Zellen, nach Nahrung), Somatostatin ↓ HCl (D-Zellen, pH <3) – PPI blockiert Protonenpumpe!"
->>>> (Vagus/Gastrin/Histamin → HCl ↑; Somatostatin → HCl ↓)
+**Magen-HCl-Regulation:** Gastrin ↑ HCl (G-Zellen, nach Nahrung), Somatostatin ↓ HCl (D-Zellen, pH <3) – PPI blockiert Protonenpumpe. Vagus/Gastrin/Histamin → HCl ↑; Somatostatin → HCl ↓.
 
->>>> **Pankreas-Regulation:** „Sekretin (pH ↓) → Bikarbonat ↑ (neutralisiert), CCK (Fett/Protein) → Enzyme ↑ + Gallenblase kontrahiert!"
->>>> (S-Zellen → Sekretin, I-Zellen → CCK)
+**Pankreas-Regulation:** Sekretin (pH ↓) → Bikarbonat ↑ (neutralisiert), CCK (Fett/Protein) → Enzyme ↑ + Gallenblase kontrahiert. S-Zellen → Sekretin, I-Zellen → CCK.
 
->>>> **Dünndarm-Resorption:** „SGLT1 = Glukose (Na⁺-gekoppelt, aktiv), GLUT5 = Fructose (passiv), Fette = Mizellen (Gallensalze) → Chylomikronen → Lymphe!"
->>>> (Kohlenhydrate/Proteine → Pfortader, Fette → Lymphe)
+**Dünndarm-Resorption:** SGLT1 = Glukose (Na⁺-gekoppelt, aktiv), GLUT5 = Fructose (passiv), Fette = Mizellen (Gallensalze) → Chylomikronen → Lymphe. Kohlenhydrate/Proteine → Pfortader, Fette → Lymphe.
 
->>>> **Bilirubin:** „Hb → Bilirubin (unkonjugiert, lipophil) → Leber (Glukuronidierung) → konjugiert (wasserlöslich) → Darm → Sterkobilin (Stuhl braun) + Urobilin (Urin gelb)!"
->>>> (Ikterus: prähepatisch [Hämolyse, unkonjugiert ↑], hepatisch [Leber, beide ↑], posthepatisch [Cholestase, konjugiert ↑, heller Stuhl])
+**Bilirubin:** Hb → Bilirubin (unkonjugiert, lipophil) → Leber (Glukuronidierung) → konjugiert (wasserlöslich) → Darm → Sterkobilin (Stuhl braun) + Urobilin (Urin gelb). Ikterus: prähepatisch (Hämolyse, unkonjugiert ↑), hepatisch (Leber, beide ↑), posthepatisch (Cholestase, konjugiert ↑, heller Stuhl).
 
 ---
-
-**Navigation:**
-← [Zurück: Bio Kap 3 UK08 – Atmungssystem](Bio_Kap3_UK08_Atmungssystem.md) | [Weiter: Bio Kap 3 UK10 – Niere und Harnsystem](Bio_Kap3_UK10_Niere_Harnsystem.md) →
 `,
-      lernziele: [],
-      sections: [],
+      lernziele: [
+        "Die Funktion der Magenzellen (Beleg-, Haupt-, Nebenzellen, G-Zellen, D-Zellen) und deren Sekrete benennen und erklären.",
+        "Die wichtigsten Pankreasenzyme und deren Aktivierungskaskade (Trypsinogen → Trypsin via Enterokinase) darstellen.",
+        "Die Mechanismen der Nährstoffresorption im Dünndarm (SGLT1 für Glukose, Mizellen für Fette, IF für Vitamin B₁₂) erläutern.",
+        "Den Bilirubin-Stoffwechsel (unkonjugiert → konjugiert → Sterkobilin/Urobilin) und die drei Ikterus-Typen unterscheiden.",
+        "Die Hauptfunktionen der Leber (Entgiftung, Harnstoffzyklus, Gerinnungsfaktor-Synthese, Galleproduktion, Bilirubin-Konjugation) beschreiben.",
+      ],
+      sections: [
+        {
+          heading: "Einleitung",
+          text: "Das Verdauungssystem (Gastrointestinaltrakt, GIT) dient der mechanischen und chemischen Verdauung von Nahrung, der Resorption von Nährstoffen/Wasser und der Exkretion unverdaulicher Reste. Der Verlauf reicht vom Mund (~9 m) über Ösophagus, Magen, Dünndarm (Duodenum, Jejunum, Ileum) bis zum Dickdarm. Akzessorische Organe: Leber, Gallenblase, Pankreas.",
+        },
+        {
+          heading: "Kerninhalt",
+          text: "Der Magen produziert HCl (Belegzellen), Pepsinogen (Hauptzellen) und Mukus (Nebenzellen); HCl-Regulation über Gastrin (↑), Somatostatin (↓) und PPI. Pankreas: Trypsinogen → Trypsin (Enterokinase), Amylase, Lipase, Bikarbonat (Sekretin-Stimulus). Dünndarm-Resorption: Glukose via SGLT1, Fette via Mizellen → Chylomikronen → Lymphe. Leber: Bilirubin-Konjugation (UGT1A1), Harnstoffzyklus, Gerinnungsfaktoren.",
+          merksatz: "Magenzellen: Belegzellen = HCl + IF, Hauptzellen = Pepsinogen, Nebenzellen = Mukus, G-Zellen = Gastrin (↑HCl), D-Zellen = Somatostatin (↓HCl).",
+        },
+        {
+          heading: "Prüfungsfokus",
+          text: "Für den MedAT besonders wichtig: Magenzellen und ihre Sekrete, Trypsinogen-Aktivierungskaskade (Enterokinase), SGLT1 (Glukose), Fett-Resorptionsweg (Mizellen → Chylomikronen → Lymphe, nicht Pfortader), Vitamin B₁₂ (IF, Ileum), Bilirubin-Stoffwechsel und Ikterus-Typen (prähepatisch/hepatisch/posthepatisch), Harnstoffzyklus und Gerinnungsfaktoren der Leber.",
+          merksatz: "Bilirubin-Weg: Hb (Milz) → Bilirubin unkonjugiert (albumin-gebunden) → Leber (Glukuronidierung) → konjugiert (wasserlöslich) → Galle → Darm → Sterkobilin (Stuhl braun) + Urobilin (Urin gelb).",
+        },
+      ],
       selfTest: [
         {
           question: "Welche Aussage über die Magensekretion ist korrekt?",
@@ -3133,7 +3143,6 @@ Das **Verdauungssystem** (Gastrointestinaltrakt, GIT) dient der **mechanischen +
       title: "Harnsystem",
       content: `# Harnsystem – Biologie Kapitel 3 (Organsysteme)
 
-**Priorität:** HOCH
 **Geschätzte Lesezeit:** 15 Minuten
 **Stichwortliste-Abdeckung:** 10/10 Stichwörter
 
@@ -3294,7 +3303,7 @@ Das **Harnsystem** (Niere + ableitende Harnwege) reguliert:
 
 ---
 
-## 📌 Prüfungsfokus
+## Prüfungsfokus
 
 **Für die MedAT-Prüfung besonders wichtig:**
 
@@ -3309,21 +3318,38 @@ Das **Harnsystem** (Niere + ableitende Harnwege) reguliert:
 
 ## Merksätze
 
->>>> **Nephron-Segmente:** „Glomerulus = Filtration (180 L/Tag), proximaler Tubulus = 65% (SGLT2 [Glukose], Na⁺, H₂O), Henle = Gegenstromprinzip (osmotischer Gradient), distaler + Sammelrohr = Aldosteron (Na⁺/K⁺), ADH (Aquaporin-2, H₂O)!"
+**Nephron-Segmente:** Glomerulus = Filtration (180 L/Tag), proximaler Tubulus = 65% (SGLT2 [Glukose], Na⁺, H₂O), Henle = Gegenstromprinzip (osmotischer Gradient), distaler + Sammelrohr = Aldosteron (Na⁺/K⁺), ADH (Aquaporin-2, H₂O).
 
->>>> **ADH-Wirkung:** „ADH → V₂-Rezeptor → Aquaporin-2 an Membran → H₂O rein → konzentrierter Harn. Diabetes insipidus = ADH ↓ → Polyurie (>3 L/Tag)!"
+**ADH-Wirkung:** ADH → V₂-Rezeptor → Aquaporin-2 an Membran → H₂O rein → konzentrierter Harn. Diabetes insipidus = ADH ↓ → Polyurie (>3 L/Tag).
 
->>>> **RAAS-Kaskade:** „Renin → Angiotensin II (ACE) → Vasokonstriktion + Aldosteron ↑ (Na⁺/H₂O ↑) + ADH ↑ → Blutdruck ↑. ACE-Hemmer blockiert!"
+**RAAS-Kaskade:** Renin → Angiotensin II (ACE) → Vasokonstriktion + Aldosteron ↑ (Na⁺/H₂O ↑) + ADH ↑ → Blutdruck ↑. ACE-Hemmer blockiert.
 
->>>> **Gegenstromprinzip:** „Abstei gend = H₂O raus (hyperton), Aufsteigend = NaCl raus (hypoton) → osmotischer Gradient (300 → 1.200 mOsm/L) → Harnkonzentrierung!"
+**Gegenstromprinzip:** Absteigend = H₂O raus (hyperton), Aufsteigend = NaCl raus (hypoton) → osmotischer Gradient (300 → 1.200 mOsm/L) → Harnkonzentrierung.
 
----
-
-**Navigation:**
-← [Zurück: Bio Kap 3 UK09 – Verdauungssystem](Bio_Kap3_UK09_Verdauungssystem.md) | [Weiter: Bio Kap 3 UK11 – Fortpflanzung](Bio_Kap3_UK11_Fortpflanzung.md) →
-`,
-      lernziele: [],
-      sections: [],
+---`,
+      lernziele: [
+        "Die vier Funktionen der Niere (Wasser-/Elektrolythaushalt, Säure-Basen-Haushalt, Blutdruckregulation, Exkretion) benennen.",
+        "Die Filtrations- und Rückresorptionsvorgänge der Nephron-Abschnitte (GFR ~120 mL/min, SGLT2 im proximalen Tubulus, Gegenstromprinzip der Henle-Schleife) erklären.",
+        "Die Nierenschwelle für Glukose (~180 mg/dL) und die klinische Bedeutung der Glukosurie bei Diabetes mellitus darstellen.",
+        "Den ADH-Mechanismus (V₂-Rezeptor → Aquaporin-2 → Harnkonzentrierung) und den Diabetes insipidus (zentral vs. nephrogen) unterscheiden.",
+        "Die RAAS-Kaskade (Renin → Angiotensin II → Aldosteron/ADH) und die Angriffspunkte von ACE-Hemmern, AT₁-Blockern und Aldosteron-Antagonisten erläutern.",
+      ],
+      sections: [
+        {
+          heading: "Einleitung",
+          text: "Das Harnsystem reguliert Wasser-/Elektrolythaushalt, Säure-Basen-Haushalt (pH ~7,4), Blutdruck (RAAS) und Exkretion von Harnstoff, Kreatinin und Fremdstoffen. Die Niere (~1 Mio. Nephrone) filtert täglich ~180 L Primärharn, von dem ~99% rückresorbiert werden (~1,5 L Endharn).",
+        },
+        {
+          heading: "Kerninhalt",
+          text: "Nephron-Segmente: Glomerulus (Filtration, GFR ~120 mL/min), proximaler Tubulus (65%, SGLT2 [Glukose 100%], Na⁺, H₂O), Henle-Schleife (Gegenstromprinzip: absteigend H₂O raus, aufsteigend NaCl raus), distaler Tubulus/Sammelrohr (Aldosteron [ENaC, Na⁺/K⁺], ADH [Aquaporin-2, H₂O]). RAAS: Renin → Angiotensin II → Vasokonstriktion + Aldosteron ↑ + ADH ↑ → Blutdruck ↑.",
+          merksatz: "Nephron-Resorption: proximal 65% (alles), Henle 20% (NaCl), distal 10% (Aldosteron-abhängig), Sammelrohr 4% (ADH-abhängig). Gesamt: 99% → 1 L Urin.",
+        },
+        {
+          heading: "Prüfungsfokus",
+          text: "Für den MedAT besonders wichtig: GFR-Zahl (~120 mL/min, ~180 L/Tag), SGLT2-Funktion (Glukose) und Nierenschwelle (~180 mg/dL), ADH → Aquaporin-2-Insertion (Sammelrohr), RAAS-Kaskade und Therapieangriffspunkte (ACE-Hemmer, AT₁-Blocker, Spironolacton), Diabetes insipidus (ADH-Mangel → Polyurie, Desmopressin-Therapie).",
+          merksatz: "RAAS: Renin (Niere, bei Blutdruck ↓) → Angiotensin I → ACE (Lunge) → Angiotensin II → Vasokonstriktion + Aldosteron (Na⁺/H₂O↑) + ADH ↑ → Blutdruck ↑.",
+        },
+      ],
       selfTest: [
         {
           question: "Welche Aussage über die glomeruläre Filtration ist korrekt?",
@@ -3430,7 +3456,6 @@ Das **Harnsystem** (Niere + ableitende Harnwege) reguliert:
       title: "Skelettsystem",
       content: `# Skelettsystem – Biologie Kapitel 3 (Organsysteme)
 
-**Priorität:** MITTEL
 **Geschätzte Lesezeit:** 12 Minuten
 **Stichwortliste-Abdeckung:** 8/8 Stichwörter
 
@@ -3564,7 +3589,7 @@ Das **Skelettsystem** (Skelett + Muskulatur) ermöglicht:
 
 ---
 
-## 📌 Prüfungsfokus
+## Prüfungsfokus
 
 1. **Osteoblasten vs. Osteoklasten:** Osteoblasten = Aufbau (Kollagen I, Mineralisierung), Osteoklasten = Abbau (H⁺, Proteasen, mehrkernig)
 2. **RANKL/OPG:** RANKL (Osteoblasten) → Osteoklasten ↑, OPG → hemmt RANKL
@@ -3576,21 +3601,38 @@ Das **Skelettsystem** (Skelett + Muskulatur) ermöglicht:
 
 ## Merksätze
 
->>>> **Osteoblasten/Osteoklasten:** „Osteoblasten bauen (Kollagen I, Ca²⁺), Osteoklasten kauen (Abbau, H⁺, mehrkernig) – RANKL aktiviert Klauen, OPG stoppt!"
+**Osteoblasten/Osteoklasten:** Osteoblasten bauen auf (Kollagen I, Ca²⁺-Mineralisierung), Osteoklasten bauen ab (H⁺, Proteasen, mehrkernig). RANKL (von Osteoblasten) aktiviert Osteoklasten über RANK; OPG als Decoy-Rezeptor hemmt RANKL.
 
->>>> **Knorpeltypen:** „Hyalin = Gelenke (Kollagen II, glatt), Elastisch = Ohr (Elastin, flex), Faser = Bandscheibe (Kollagen I, zugfest)!"
+**Knorpeltypen:** Hyalin = Gelenke (Kollagen II, glatt), Elastisch = Ohr/Epiglottis (Elastin, flexibel), Faser = Bandscheibe/Meniskus (Kollagen I, zugfest).
 
->>>> **Gelenke:** „Kugelgelenk = 3 Achsen (Schulter, Hüfte, frei beweglich), Scharniergelenk = 1 Achse (Knie, Ellenbogen, Flexion/Extension)!"
+**Gelenke:** Kugelgelenk = 3 Achsen (Schulter, Hüfte), Scharniergelenk = 1 Achse (Knie, Ellenbogen). Diarthrose = echtes Gelenk (Gelenkspalt, Synovia, Knorpel).
 
->>>> **Osteoporose:** „Östrogen ↓ (Menopause) → Osteoklasten ↑ → Knochenabbau → Fraktur-Risiko ↑. Therapie: Bisphosphonate (Osteoklasten ↓), Denosumab (Anti-RANKL)!"
+**Osteoporose:** Östrogen ↓ (Menopause) → Osteoklasten ↑ → Knochenabbau → Fraktur-Risiko ↑. Therapie: Bisphosphonate (Osteoklasten ↓), Denosumab (Anti-RANKL), Teriparatid (PTH-Analogon, Osteoblasten ↑).
 
----
-
-**Navigation:**
-← [Zurück: Bio Kap 3 UK10 – Harnsystem](Bio_Kap3_UK10_Harnsystem.md) | [Weiter: Bio Kap 3 UK12 – Fortpflanzungssystem](Bio_Kap3_UK12_Fortpflanzungssystem.md) →
-`,
-      lernziele: [],
-      sections: [],
+---`,
+      lernziele: [
+        "Den Unterschied zwischen Osteoblasten (Knochenaufbau, Kollagen I, Mineralisierung) und Osteoklasten (Knochenabbau, H⁺, mehrkernig) erklären.",
+        "Das RANKL/OPG-System und seine Bedeutung für die Osteoklastenaktivierung und Osteoporose-Therapie (Denosumab) darstellen.",
+        "Die drei Knorpeltypen (hyalin, elastisch, Faser) mit ihren Kollagen-/Elastin-Zusammensetzungen und typischen Lokalisationen benennen.",
+        "Die wichtigsten Gelenktypen (Diarthrose, Kugelgelenk, Scharniergelenk) und ihre Bewegungsachsen beschreiben.",
+        "Die Pathophysiologie der Osteoporose (Östrogenmangel, Knochenumbau) und die wichtigsten Therapieoptionen (Bisphosphonate, Denosumab) erläutern.",
+      ],
+      sections: [
+        {
+          heading: "Einleitung",
+          text: "Das Skelettsystem (206 Knochen beim Erwachsenen) erfüllt Stütz-, Schutz- und Bewegungsfunktionen, dient der Hämatopoese (rotes Knochenmark) und als Mineralspeicher (Ca²⁺, PO₄³⁻). Knochenzellen: Osteoblasten (Aufbau), Osteoklasten (Abbau), Osteozyten (eingemauert, Mechanorezeption).",
+        },
+        {
+          heading: "Kerninhalt",
+          text: "Knochenzellen: Osteoblasten (Kollagen I-Synthese, Mineralisierung, RANKL-Produktion) und Osteoklasten (mehrkernig, H⁺ + Proteasen, RANK-Aktivierung durch RANKL). Knorpeltypen: hyalin (Gelenke, Kollagen II), elastisch (Ohr, Elastin), Faser (Bandscheibe, Kollagen I). Gelenke: Diarthrose (Gelenkspalt, Synovia), Kugelgelenk (3 Achsen), Scharniergelenk (1 Achse). Ca²⁺-Regulation: PTH (Osteoklasten ↑ → Ca²⁺ ↑), Vitamin D (Resorption ↑), Calcitonin (Osteoklasten ↓).",
+          merksatz: "RANKL/OPG: Osteoblasten produzieren RANKL (aktiviert Osteoklasten via RANK → Abbau) und OPG (Decoy-Rezeptor, hemmt RANKL → schützt Knochen). Denosumab = monoklonaler Anti-RANKL-Antikörper.",
+        },
+        {
+          heading: "Prüfungsfokus",
+          text: "Für den MedAT besonders wichtig: Osteoblasten vs. Osteoklasten (Aufgaben, Marker: ALP = Aufbau, TRAP = Abbau), RANKL/OPG-System, Knorpeltypen und ihre Kollagen-Typen, Gelenktypen und Achsenzahl, Osteoporose-Pathophysiologie und Therapie (Bisphosphonate, Denosumab), PTH/Calcitonin/Vitamin D bei Ca²⁺-Regulation.",
+          merksatz: "Osteoporose: Östrogen ↓ (Menopause) → RANKL ↑ → Osteoklasten ↑ → Knochenabbau > Aufbau → Sinterungsfrakturen (Wirbelkörper), Schenkelhalsfraktur. DXA-Messung (T-Score ≤-2,5). Bisphosphonate hemmen Osteoklasten-Apoptose.",
+        },
+      ],
       selfTest: [
         {
           question: "Welche Aussage über Osteoblasten und Osteoklasten ist korrekt?",
@@ -3685,7 +3727,6 @@ Das **Skelettsystem** (Skelett + Muskulatur) ermöglicht:
       title: "Fortpflanzungssystem",
       content: `# Fortpflanzungssystem – Biologie Kapitel 3 (Organsysteme)
 
-**Priorität:** HOCH
 **Geschätzte Lesezeit:** 16 Minuten
 **Stichwortliste-Abdeckung:** 10/10 Stichwörter
 
@@ -3815,7 +3856,7 @@ Das **Fortpflanzungssystem** (reproduktives System) ermöglicht:
 
 ---
 
-## 📌 Prüfungsfokus
+## Prüfungsfokus
 
 1. **Spermatogenese:** Spermatogonien (2n) → Meiose I/II → 4 Spermien (n), Dauer ~74 Tage, Sertoli-Zellen (FSH), Leydig-Zellen (LH → Testosteron)
 2. **Oogenese:** Primäre Oozyte (2n, Arrest Prophase I) → Meiose I → sekundäre Oozyte (n, Arrest Metaphase II) → Ovulation → Meiose II (nur bei Befruchtung) → 1 Eizelle (n) + Polkörperchen
@@ -3827,21 +3868,38 @@ Das **Fortpflanzungssystem** (reproduktives System) ermöglicht:
 
 ## Merksätze
 
->>>> **Spermatogenese vs. Oogenese:** „Spermatogenese: 4 Spermien (n) aus 1 (2n), ~74 Tage, kontinuierlich ab Pubertät. Oogenese: 1 Eizelle (n) aus 1 (2n), Arrest Prophase I (Geburt) + Metaphase II (Ovulation), nur bei Befruchtung Meiose II komplett!"
+**Spermatogenese vs. Oogenese:** Spermatogenese: 4 Spermien (n) aus 1 (2n), ~74 Tage, kontinuierlich ab Pubertät. Oogenese: 1 Eizelle (n) aus 1 (2n), Arrest Prophase I (Geburt) + Metaphase II (Ovulation), nur bei Befruchtung Meiose II komplett.
 
->>>> **Menstruationszyklus:** „Follikelphase (Tag 6–14): FSH → Follikel → Östrogen ↑. Ovulation (Tag 14): Östrogen ↑↑ → LH-Peak. Lutealphase (Tag 15–28): LH → Corpus luteum → Progesteron ↑ (sekretorisch)!"
+**Menstruationszyklus:** Follikelphase (Tag 6–14): FSH → Follikel → Östrogen ↑. Ovulation (Tag 14): Östrogen ↑↑ → LH-Peak. Lutealphase (Tag 15–28): LH → Corpus luteum → Progesteron ↑ (sekretorisch).
 
->>>> **LH-Peak-Trigger:** „Östrogen niedrig/mittel → negative Rückkopplung (FSH ↓). Östrogen hoch (>2 Tage) → positive Rückkopplung → LH-Peak → Ovulation!"
+**LH-Peak-Trigger:** Östrogen niedrig/mittel → negative Rückkopplung (FSH ↓). Östrogen hoch (>2 Tage) → positive Rückkopplung → LH-Peak → Ovulation.
 
->>>> **Corpus luteum:** „Nach Ovulation: LH → Corpus luteum → Progesteron ↑ (Lutealphase, Endometrium sekretorisch). Bei Befruchtung: hCG (Trophoblast) → Corpus luteum erhalten → Progesteron ↑ → Schwangerschaft!"
+**Corpus luteum:** Nach Ovulation: LH → Corpus luteum → Progesteron ↑ (Lutealphase, Endometrium sekretorisch). Bei Befruchtung: hCG (Trophoblast) → Corpus luteum erhalten → Progesteron ↑ → Schwangerschaft.
 
----
-
-**Navigation:**
-← [Zurück: Bio Kap 3 UK11 – Skelettsystem](Bio_Kap3_UK11_Skelettsystem.md) | [Weiter: Bio Kap 4 UK01 – Frühentwicklung](Bio_Kap4_UK01_Fruehentwicklung.md) →
-`,
-      lernziele: [],
-      sections: [],
+---`,
+      lernziele: [
+        "Die Funktionen von Sertoli-Zellen (Spermatogenese-Unterstützung, Inhibin, Blut-Hoden-Schranke) und Leydig-Zellen (Testosteron unter LH) unterscheiden.",
+        "Die Spermatogenese (Spermatogonien → 4 Spermien, ~74 Tage) mit Meiose I/II und Spermiogenese beschreiben.",
+        "Die Oogenese (Arrest in Prophase I → Meiose I bei Ovulation → Meiose II nur bei Befruchtung, 1 Eizelle + 3 Polkörperchen) erklären.",
+        "Den Menstruationszyklus (Follikelphase: FSH/Östrogen; Ovulation: LH-Peak Tag 14; Lutealphase: Corpus luteum/Progesteron) und den LH-Peak-Mechanismus (positive Rückkopplung) darstellen.",
+        "Die Rolle von hCG bei der Schwangerschaftserhaltung (Corpus luteum → Progesteron) und die Funktion der Plazenta erläutern.",
+      ],
+      sections: [
+        {
+          heading: "Einleitung",
+          text: "Das Fortpflanzungssystem ermöglicht Gametogenese (Spermien/Eizellen), Befruchtung und hormonelle Regulation (FSH, LH, Östrogen, Progesteron, Testosteron). Männlich: Hoden (Spermatogenese, Testosteron), Nebenhoden (Reifung), Samenleiter. Weiblich: Ovar (Oogenese, Hormone), Eileiter (Befruchtungsort), Uterus (Implantation).",
+        },
+        {
+          heading: "Kerninhalt",
+          text: "Spermatogenese: Spermatogonien (2n) → Meiose I/II → 4 Spermien (n), ~74 Tage. Sertoli-Zellen: FSH-abhängig, Inhibin, Blut-Hoden-Schranke. Leydig-Zellen: LH → Testosteron. Oogenese: Arrest Prophase I (bis Pubertät) → Meiose I bei Ovulation → sekundäre Oozyte (Arrest Metaphase II) → Meiose II nur bei Befruchtung → 1 Eizelle + 3 Polkörperchen. Menstruationszyklus: FSH (Follikelphase) → LH-Peak (Ovulation Tag 14) → Corpus luteum/Progesteron (Lutealphase).",
+          merksatz: "Oogenese-Arrests: primäre Oozyte = Prophase I (seit Embryonalzeit). sekundäre Oozyte = Metaphase II (seit Ovulation). Meiose II wird nur bei Befruchtung abgeschlossen. Ergebnis: 1 Eizelle + 3 Polkörperchen (degenerieren).",
+        },
+        {
+          heading: "Prüfungsfokus",
+          text: "Für den MedAT besonders wichtig: Sertoli (FSH, Inhibin, ABP) vs. Leydig (LH, Testosteron), 4 Spermien aus 1 Spermatogonium vs. 1 Eizelle aus 1 Oozyte, Meiose-II-Arrest der sekundären Oozyte bis zur Befruchtung, LH-Peak-Mechanismus (positive Rückkopplung durch hohes Östrogen), hCG-Funktion (Corpus luteum erhalten → Schwangerschaftstest) und Plazenta-Permeabilität (IgG ja, Heparin/Insulin nein).",
+          merksatz: "Menstruationszyklus: FSH → Östrogen ↑ (Follikelphase) → Östrogen ↑↑ → positive Rückkopplung → LH-Peak (Tag 14) → Ovulation → Corpus luteum → Progesteron ↑ (Lutealphase). Keine Befruchtung → Corpus luteum degeneriert → Menstruation.",
+        },
+      ],
       selfTest: [
         {
           question: "Welche Aussage über Sertoli-Zellen und Leydig-Zellen ist korrekt?",
