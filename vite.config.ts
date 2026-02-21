@@ -18,19 +18,35 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom'],
   },
+  esbuild: {
+    drop: ['console', 'debugger'],
+  },
   build: {
     outDir: 'dist',
     sourcemap: false,
-    minify: true, // esbuild (default); use 'terser' + npm i -D terser if preferred
+    minify: 'esbuild',
+    chunkSizeWarningLimit: 3000,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          'vendor-state': ['zustand'],
-          'vendor-motion': ['framer-motion'],
-          'vendor-supabase': ['@supabase/supabase-js'],
-          'vendor-recharts': ['recharts'],
-          'vendor-markdown': ['react-markdown', 'remark-gfm'],
+        manualChunks(id) {
+          // BMS chapter data — split by subject for better caching
+          if (id.includes('src/data/bmsKapitel')) {
+            if (id.includes('/biologie/')) return 'bms-biologie';
+            if (id.includes('/chemie/')) return 'bms-chemie';
+            if (id.includes('/physik/')) return 'bms-physik';
+            if (id.includes('/mathematik/')) return 'bms-mathematik';
+            return 'bms-data';
+          }
+          // Vendor splits
+          if (id.includes('node_modules')) {
+            if (id.includes('react-dom') || id.includes('react-router-dom')) return 'vendor-react';
+            if (id.includes('/react/')) return 'vendor-react';
+            if (id.includes('zustand')) return 'vendor-state';
+            if (id.includes('framer-motion')) return 'vendor-motion';
+            if (id.includes('@supabase')) return 'vendor-supabase';
+            if (id.includes('recharts')) return 'vendor-recharts';
+            if (id.includes('react-markdown') || id.includes('remark-gfm')) return 'vendor-markdown';
+          }
         },
       },
     },
