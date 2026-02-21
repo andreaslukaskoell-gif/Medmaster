@@ -476,6 +476,8 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 `,
       lernziele: [],
       sections: [],
+      diagram: 'mitosis',
+
       merksätze: [],
       selfTest: [
         {
@@ -1276,6 +1278,8 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 `,
       lernziele: [],
       sections: [],
+      diagram: 'pedigree-analysis',
+
       merksätze: [],
       selfTest: [
         {

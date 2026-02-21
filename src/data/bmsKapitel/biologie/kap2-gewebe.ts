@@ -397,6 +397,8 @@ Eine **motorische Einheit** besteht aus einem Alpha-Motoneuron und allen von ihm
           merksatz: "Motorische Einheit = 1 Alpha-Motoneuron + seine Muskelfasern; Kraft durch Rekrutierung und Frequenz.",
         },
       ],
+      diagram: 'sarkomer',
+
       merksätze: [
         "Sarkomer: Z-Z-Grenzen; bei Kontraktion kürzer werden I-Bande und H-Zone; A-Bande bleibt konstant.",
         "Ca²⁺ → Troponin C → Tropomyosin weg → Myosin bindet Aktin → Kraftschlag nach ATP-Hydrolyse.",
@@ -562,6 +564,8 @@ Die **Myelinscheide** ist eine Lipid-reiche Membranwicklung um das Axon. Sie bes
           merksatz: "Astrozyten: BHS-Induktion, K⁺-Puffer, Glutamat-Reuptake, Glianarbe nach Verletzung.",
         },
       ],
+      diagram: 'action-potential',
+
       merksätze: [
         "Oligodendrozyten (ZNS) vs. Schwann-Zellen (PNS): Beide myelinisieren; Schwann-Zellen fördern PNS-Regeneration.",
         "Saltatorische Leitung: Aktionspotential springt von Ranvier-Schnürring zu Schnürring — 100× schneller als kontinuierlich.",

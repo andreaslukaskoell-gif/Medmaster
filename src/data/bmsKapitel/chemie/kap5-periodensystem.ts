@@ -100,6 +100,7 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
         },
       ],
 
+      diagram: 'periodic-table',
       merksaetze: [
         'PSE: 7 Perioden (horizontal, = Schalenanzahl n), 18 Gruppen (vertikal, = Valenzelektronen)',
         'Mendelejew ordnete nach Atommasse; modernes PSE ordnet nach Kernladungszahl Z (Moseley, 1913)',
@@ -353,6 +354,9 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
           merksatz: 'Großer IE-Sprung nach n Ionisierungen → n Valenzelektronen → Gruppe n im PSE',
         },
       ],
+
+      diagram: 'periodic-table',
+
 
       merksätze: [
         'Atomradius: in Periode↓; in Gruppe↑ — Ursache: Z_eff und Schalenabstand',

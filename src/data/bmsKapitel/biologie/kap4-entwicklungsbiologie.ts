@@ -40,6 +40,8 @@ Am Tag 6–7 nach der Befruchtung beginnt die **Implantation (Nidation)** im **E
           text: "hCG (humanes Choriongonadotropin) ist ein Glykoproteinhormon, das strukturell dem LH ähnelt und an LH-Rezeptoren bindet. Es wird vom Trophoblast (vorwiegend Synzytiotrophoblast) ab Beginn der Implantation produziert. Seine Hauptaufgabe besteht darin, das Corpus luteum im Ovar zu erhalten, das andernfalls gegen Ende des Zyklus atretisch würde. Das erhaltene Corpus luteum produziert weiterhin Progesteron (und Östrogen), das das Endometrium sekretorisch hält und die Menstruation verhindert. Die hCG-Konzentration steigt exponentiell bis zur 8.–12. SSW (Schwangerschaftswoche), danach übernimmt die Plazenta die Progesteron-Eigenproduktion und hCG fällt ab. Der Schwangerschaftstest weist hCG im Urin mithilfe von Anti-hCG-Antikörpern nach.",
         },
       ],
+      diagram: 'cell-cycle',
+
       merksätze: [
         "Akrosom = Enzympaket; Kortikalreaktion = Polyspermie-Block nach Befruchtung.",
         "Blastozyste: Trophoblast (→ Plazenta, hCG), Embryoblast (→ Embryo), Blastozoel (Hohlraum).",

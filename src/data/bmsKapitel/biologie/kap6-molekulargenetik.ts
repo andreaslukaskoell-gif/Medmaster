@@ -171,6 +171,8 @@ export const bioKap6: Kapitel = {
 `,
       lernziele: [],
       sections: [],
+      diagram: 'dna-helix',
+
       merksätze: [],
       selfTest: [
         {
@@ -503,6 +505,8 @@ export const bioKap6: Kapitel = {
 `,
       lernziele: [],
       sections: [],
+      diagram: 'transcription-translation',
+
       merksätze: [],
       selfTest: [
         {
@@ -834,6 +838,8 @@ export const bioKap6: Kapitel = {
 `,
       lernziele: [],
       sections: [],
+      diagram: 'transcription-translation',
+
       merksätze: [],
       selfTest: [
         {

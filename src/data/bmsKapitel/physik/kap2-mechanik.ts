@@ -73,6 +73,8 @@ Ein Pendel schwingt mit seiner Eigenfrequenz f₀ = (1/2π)·√(g/l). Resonanz 
           merksatz: 'Airbag-Prinzip: Längere Bremsstrecke → geringere Verzögerung a → geringere Kraft F = m·a auf den Körper.',
         },
       ],
+      diagram: 'newton-forces',
+
       merksätze: [
         'Trägheitsgesetz: Kein F_res → kein Δv. Alles bleibt so, wie es ist.',
         'F = m·a: Kraft ist Masse mal Beschleunigung. 1 N = 1 kg·m/s².',

@@ -89,6 +89,9 @@ Die Gesamtmechanik-Energie bleibt konstant (ungedämpfter Fall) und pendelt zwis
         },
       ],
 
+      diagram: 'wave-types',
+
+
       merksätze: [
         'x(t) = A · cos(ωt + φ₀) – die Grundformel der harmonischen Schwingung.',
         'ω = 2πf = 2π/T – Kreisfrequenz verknüpft f und T.',
@@ -313,6 +316,9 @@ Diagnostischer Ultraschall nutzt Frequenzen von **2–20 MHz** (weit über mensc
           merksatz: 'Hohe US-Frequenz → bessere Auflösung, aber geringere Eindringtiefe.',
         },
       ],
+
+      diagram: 'wave-types',
+
 
       merksätze: [
         'c = f · λ – die Grundgleichung jeder Welle.',
@@ -771,6 +777,9 @@ Das Innenohr (Cochlea) ist der eigentliche Wandler von Schallschwingungen in Ner
           merksatz: 'Lärm > 85 dB → irreversibler Haarzellschaden bei 4 kHz (C5-Senke im Audiogramm).',
         },
       ],
+
+      diagram: 'doppler-effect',
+
 
       merksätze: [
         'L = 20·log₁₀(p/p₀) dB mit p₀ = 2×10⁻⁵ Pa (Hörschwelle bei 1 kHz).',

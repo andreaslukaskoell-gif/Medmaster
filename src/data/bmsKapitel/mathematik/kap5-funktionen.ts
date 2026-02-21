@@ -71,6 +71,8 @@ Zwei lineare Funktionen f(x) = m₁x + b₁ und g(x) = m₂x + b₂ schneiden si
           merksatz: "Lambert-Beer: A = ε·c·d ist linear in c. Kalibriergeraden ermöglichen Konzentrationsbestimmung aus Absorption.",
         },
       ],
+      diagram: 'coordinate-system',
+
       merksätze: [
         "f(x) = mx + b: m = Steigung, b = y-Achsenabschnitt.",
         "Steigung m = Δy/Δx = (y₂−y₁)/(x₂−x₁).",

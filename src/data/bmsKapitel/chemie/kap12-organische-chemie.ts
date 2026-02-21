@@ -99,6 +99,8 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform,
           merksatz: "Mehr C-Atome → größere Moleküloberfläche → stärkere van-der-Waals-Kräfte → höherer Siedepunkt. Verzweigung verkleinert die Oberfläche und senkt den Siedepunkt.",
         },
       ],
+      diagram: 'functional-groups',
+
       merksätze: [
         "Alkane: CₙH₂ₙ₊₂ — gesättigt, nur Einfachbindungen, reagieren durch radikalische Substitution.",
         "Alkene: CₙH₂ₙ — eine Doppelbindung, reagieren durch elektrophile Addition.",
@@ -565,6 +567,8 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
           merksatz: "Ketonkörper bei Diabetes/Fasten: Aceton (Atemgeruch), Acetoacetat, β-Hydroxybutyrat. Ketoazidose: pH sinkt < 7,35. Kussmaul-Atmung = tiefe, schnelle Atemzüge als Kompensation.",
         },
       ],
+      diagram: 'functional-groups',
+
       merksätze: [
         "Alkohole (-OH): polar, Wasserstoffbrücken, kleiner Siedepunkt-Boost. Primär → Aldehyd, sekundär → Keton bei Oxidation.",
         "Methanol ist giftig! Abbau zu Formaldehyd → Erblindung (Retinasschädigung) und Tod.",

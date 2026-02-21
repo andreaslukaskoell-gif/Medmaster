@@ -99,6 +99,8 @@ Mehrere dünne Linsen eng beieinander können als Gesamtsystem behandelt werden:
           merksatz: 'sin α_grenz = n₂/n₁ – nur möglich wenn n₁ > n₂.',
         },
       ],
+      diagram: 'lens-imaging',
+
       merksätze: [
         'Reflexionsgesetz: Einfallswinkel α = Ausfallswinkel α (beide zur Normalen gemessen).',
         'Snellius: n₁·sin α₁ = n₂·sin α₂ – beim Übergang in dichteres Medium bricht Licht zum Lot.',
@@ -338,6 +340,8 @@ wobei **NA = n · sin α** die **numerische Apertur** des Objektivs ist (n = Bre
           merksatz: 'OCT nutzt Interferenz von Niederkohärenz-Licht für hochaufgelöste Tiefenbilder (~10 µm).',
         },
       ],
+      diagram: 'em-spectrum',
+
       merksätze: [
         'Sichtbares Licht: λ = 380 nm (violett) bis 780 nm (rot).',
         'c = λ·f – Lichtgeschwindigkeit ist Produkt aus Wellenlänge und Frequenz.',

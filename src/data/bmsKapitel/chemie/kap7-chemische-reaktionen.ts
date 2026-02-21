@@ -332,6 +332,9 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
         },
       ],
 
+      diagram: 'enzyme-substrate',
+
+
       merksätze: [
         'v = Δ[P]/Δt = −Δ[E]/Δt mit Einheit mol·L⁻¹·s⁻¹.',
         'Geschwindigkeitsgesetz: v = k·[A]ᵐ·[B]ⁿ — Ordnungen sind experimentell, nicht aus Stöchiometrie.',

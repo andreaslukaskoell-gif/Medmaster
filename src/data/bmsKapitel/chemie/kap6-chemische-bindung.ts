@@ -88,6 +88,9 @@ Die Packungsgeometrie hängt vom **Radienverhältnis** r⁺/r⁻ ab:
         },
       ],
 
+      diagram: 'ionic-bond',
+
+
       merksätze: [
         'Ionenbindung = vollständige Elektronenübertragung vom Metall auf das Nichtmetall.',
         'Beide Bindungspartner streben die Edelgaskonfiguration an (Oktettregel).',
@@ -343,6 +346,9 @@ Delokalisierung stabilisiert Moleküle (Resonanzenergie). Aromatizität ist ein 
           merksatz: 'Einfachbindung = σ; Doppelbindung = σ + π; π verhindert freie Rotation.',
         },
       ],
+
+      diagram: 'covalent-bond',
+
 
       merksätze: [
         'Kovalente Bindung: Elektronenpaar wird gemeinsam genutzt (nicht übertragen).',

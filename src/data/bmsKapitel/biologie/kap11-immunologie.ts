@@ -55,6 +55,8 @@ IgG ist das häufigste und beste verstandene Immunglobulin. Es besteht aus:
           merksatz: "Komplementklassischer Weg: Ag-Ak-Komplex → C1q → C3-Konvertase → C3b (Opsonin) → MAC (Lyse). C3a/C5a = Anaphylatoxine.",
         },
       ],
+      diagram: 'immune-response',
+
       merksätze: [
         "IgG-Aufbau: 2H + 2L Ketten, Disulfidbrücken, Fab (Antigen) + Fc (Effektur). Y-Form.",
         "Ig-Klassen: IgG (häufig, plazentagängig), IgA (Sekrete), IgM (Primär, Pentamer), IgE (Allergie), IgD (B-Zell-Signal).",
@@ -376,6 +378,8 @@ Das Rhesus-System (D-Antigen) ist das wichtigste nach AB0. Rh-positiv = D-Antige
           merksatz: "0 Rh-: universeller Spender (keine Antigene). AB Rh+: universeller Empfänger (keine Anti-A/B). In der Praxis: immer blutgruppenidentisch transfundieren wenn möglich.",
         },
       ],
+      diagram: 'blood-groups',
+
       merksätze: [
         "AB0-System: 3 Allele (I^A, I^B, i⁰). I^A und I^B kodominant. Blutgruppe 0 = ii⁰ (homozygot rezessiv).",
         "Antikörper: Blutgruppe A → Anti-B; B → Anti-A; AB → keine; 0 → Anti-A und Anti-B.",

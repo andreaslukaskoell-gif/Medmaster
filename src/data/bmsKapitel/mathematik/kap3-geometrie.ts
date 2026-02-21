@@ -636,6 +636,8 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
           merksatz: 'Bland-Altman: Differenz gegen Mittelwert — zeigt systematische Messfehler (Bias) und zufällige Streuung (Präzision) zwischen zwei Messmethoden.',
         },
       ],
+      diagram: 'coordinate-system',
+
       merksätze: [
         'Abstand zweier Punkte: d = √((Δx)² + (Δy)²).',
         'Mittelpunkt zweier Punkte: M = ((x₁+x₂)/2, (y₁+y₂)/2).',

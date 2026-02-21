@@ -116,6 +116,8 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
           merksatz: "pH = −log[H₃O⁺] | pH + pOH = 14 | Kw = 10⁻¹⁴ | Neutral: pH = 7 nur bei 25 °C."
         }
       ],
+      diagram: 'ph-scale',
+
       merksätze: [
         "Brønsted-Säure = Protonendonor (gibt H⁺ ab); Brønsted-Base = Protonenakzeptor (nimmt H⁺ auf).",
         "Lewis-Säure = Elektronenpaarakzeptor; Lewis-Base = Elektronenpaardonor – ohne zwingenden H⁺-Transfer.",
@@ -389,6 +391,8 @@ Im Blut agieren viele biologisch wichtige Moleküle als schwache Säuren oder Ba
           merksatz: "Polyprotische Säure: Ka1 >> Ka2 >> Ka3. Der pH einer Lösung wird meist durch Ka1 dominiert."
         }
       ],
+      diagram: 'ph-scale',
+
       merksätze: [
         "Starke Säuren: HCl, HBr, HI, HNO₃, H₂SO₄ (1. Stufe), HClO₄ – alle dissoziieren vollständig.",
         "Schwache Säuren dissoziieren teilweise: Ka-Wert bestimmt das Gleichgewicht.",

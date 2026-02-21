@@ -84,6 +84,9 @@ Beispiele: ¹H (Protium), ²H (Deuterium, D), ³H (Tritium, T); ¹²C, ¹³C, ¹
         },
       ],
 
+      diagram: 'atomic-orbitals',
+
+
       merksätze: [
         'Z = Protonenzahl = Ordnungszahl; A = Z + N (Massenzahl); N = A − Z.',
         'Thomson: Rosinenmodell (positive Kugel + eingebettete Elektronen).',
@@ -329,6 +332,9 @@ Für Hauptgruppenelemente gilt: Valenzelektronen = Zahl der äußersten s- und p
           merksatz: 'Übergangsmetalle: variable Oxidationsstufen durch d-Elektronen → ideal für Enzymkatalyse und Redoxreaktionen in der Biologie.',
         },
       ],
+
+      diagram: 'atomic-orbitals',
+
 
       merksätze: [
         'n = Hauptquantenzahl (Schale): 1, 2, 3, 4 …',

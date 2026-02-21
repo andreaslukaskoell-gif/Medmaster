@@ -305,6 +305,8 @@ Eine **Spannungsquelle** (Batterie, Akkumulator) erzeugt durch chemische Reaktio
           merksatz: 'P = I²·R (Joulesche Wärme). Elektrochirurgie: HF-Strom → Wärme ohne Muskelreizung.',
         },
       ],
+      diagram: 'circuit',
+
       merksätze: [
         'Ohmsches Gesetz: U = R·I — gilt für lineare Widerstände.',
         'Stromstärke: I = ΔQ/Δt [A = C/s].',
@@ -555,6 +557,8 @@ Der **Spannungsteiler** teilt eine Spannung U₀ proportional zu den Widerständ
           merksatz: 'τ = R·C (Zeitkonstante). W = ½·C·U² (gespeicherte Energie im Kondensator).',
         },
       ],
+      diagram: 'circuit',
+
       merksätze: [
         'Reihenschaltung R: R_ges = R₁ + R₂ + ... (größer als jeder Einzelwert).',
         'Parallelschaltung R: 1/R_ges = 1/R₁ + 1/R₂ + ... (kleiner als jeder Einzelwert).',

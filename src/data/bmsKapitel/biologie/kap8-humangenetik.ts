@@ -61,6 +61,8 @@ Beispiele: Hypophosphatämie (Vitamin-D-resistente Rachitis), Rett-Syndrom (MECP
           merksatz: "Huntington: CAG-Repeats > 40 → vollständige Penetranz, Antizipation (Repeats nehmen zu). Prädiktivdiagnostik ethisch komplex.",
         },
       ],
+      diagram: 'pedigree-analysis',
+
       merksätze: [
         "AD: jede Generation betroffen, 50% Risiko, kein Generationssprung. Beispiele: Marfan, Huntington.",
         "AR: Generationssprung möglich, beide Eltern Träger, 25% Risiko bei Trägerpaar. Beispiele: Mukoviszidose, PKU.",

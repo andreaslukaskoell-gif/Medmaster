@@ -72,6 +72,8 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
           merksatz: "Klinisch: Gelenkkraft = Vektorsumme aller Muskelkräfte. EKG-Herzachse = elektrischer Summenvektor der Erregung.",
         },
       ],
+      diagram: 'vector-addition',
+
       merksätze: [
         "Ein Vektor besitzt Betrag UND Richtung — ein Skalar nur einen Zahlenwert.",
         "Betrag im Raum: |v| = √(v₁² + v₂² + v₃²) — verallgemeinerter Pythagoras.",
@@ -293,6 +295,8 @@ Das **Drehmoment** $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist das Kreuzprodukt a
           merksatz: "Drehmoment M = r × F (Kreuzprodukt). Mechanische Arbeit W = F · s (Skalarprodukt). MRT: Lorentz-Kraft F = q·(v×B).",
         },
       ],
+      diagram: 'vector-addition',
+
       merksätze: [
         "Skalarprodukt: a·b = a₁b₁ + a₂b₂ + a₃b₃ — Ergebnis ist ein Skalar.",
         "a·b = |a|·|b|·cos θ — damit lässt sich der Winkel zwischen Vektoren berechnen.",
