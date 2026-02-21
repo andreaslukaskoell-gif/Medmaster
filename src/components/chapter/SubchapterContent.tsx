@@ -346,6 +346,18 @@ export function SubchapterContent({ uk, subject, chapterId, hinterfragMode = fal
 
     return (
       <div className="space-y-6">
+        {/* Full content shown first when both content and sections are present */}
+        {uk.content && cleanedContent && (
+          <div className={`${isDieZelle ? "text-base" : "text-sm"} text-gray-700 dark:text-gray-300 leading-relaxed space-y-3`}>
+            <MarkdownContent text={cleanedContent} size={isDieZelle ? "base" : "sm"} hinterfragMode={hinterfragMode} keywordLinkEntries={keywordLinkEntries} />
+          </div>
+        )}
+
+        {/* Section divider when both content and sections exist */}
+        {uk.content && cleanedContent && (
+          <hr className="my-6 border-t-2 border-gray-200 dark:border-gray-700" />
+        )}
+
         {/* Lernziele */}
         {uk.lernziele && uk.lernziele.length > 0 && (
           <div className={`${colors.bg} ${isDieZelle ? "rounded-xl shadow-sm border-2" : "rounded-xl border"} ${colors.border} ${isDieZelle ? "border-opacity-50" : "border-opacity-30"} overflow-hidden mb-6`}>

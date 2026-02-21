@@ -292,16 +292,6 @@ Die **Aktivität** A gibt die Anzahl der Zerfälle pro Sekunde an:
 
 Da N(t) = N₀ · e^(−λt), gilt auch A(t) = A₀ · e^(−λt).
 
-## Medizinische Isotope im Überblick
-
-| Isotop | Zerfall | T½ | Anwendung |
-|---|---|---|---|
-| ⁹⁹ᵐTc | γ (isomer) | 6 h | Szintigraphie (Knochen, Herz, Lunge) |
-| ¹³¹I | β⁻ + γ | 8 d | Schilddrüsen-Therapie, -Diagnostik |
-| ¹⁸F | β⁺ | 110 min | PET (FDG) |
-| ⁶⁷Ga | γ | 3,3 d | Infektions-/Tumorlokalisation |
-| ²⁰¹Tl | γ (EC) | 3,0 d | Myokard-Szintigraphie |
-
 Strahlendosen werden in **Gray (Gy)** (absorbierte Energie J/kg) und **Sievert (Sv)** (biologische Wirksamkeit = Gy × Strahlungs-Wichtungsfaktor w_R) gemessen. Für γ- und β-Strahlung gilt w_R = 1; für α-Strahlung w_R = 20.`,
       lernziele: [
         'Die drei Strahlungsarten (α, β⁻, γ) hinsichtlich Teilchenart, Ladung, Reichweite und Abschirmung beschreiben.',
@@ -325,6 +315,20 @@ Strahlendosen werden in **Gray (Gy)** (absorbierte Energie J/kg) und **Sievert (
           heading: 'Medizinische Radionuklide',
           text: '⁹⁹ᵐTc (T½=6h) ist das wichtigste Nuklid der Nuklearmedizin: reiner γ-Strahler, kurze HWZ → niedrige Strahlungsbelastung, gut verfügbar aus ⁹⁹Mo-Generator. ¹³¹I (β⁻+γ, T½=8d) wird für Schilddrüsentherapie genutzt: β⁻-Strahlung zerstört lokal Schilddrüsengewebe. ¹⁸F (β⁺, T½=110min) für PET: Positron trifft Elektron → zwei 511-keV-Gammaphotonen (Vernichtungsstrahlung). Strahlendosis: Gray (Gy) = J/kg absorbiert; Sievert (Sv) = Gy × w_R berücksichtigt biologische Wirksamkeit.',
           merksatz: '⁹⁹ᵐTc: γ-Strahler, T½=6h, Szintigraphie. ¹³¹I: β⁻+γ, T½=8d, Schilddrüse. ¹⁸F: β⁺, T½=110min, PET.',
+        },
+        {
+          heading: 'Medizinische Isotope im Überblick',
+          text: 'Die wichtigsten medizinisch genutzten Radionuklide unterscheiden sich in Zerfallsart, Halbwertszeit und klinischer Anwendung.',
+          table: {
+            headers: ["Isotop", "Zerfall", "T½", "Anwendung"],
+            rows: [
+              ["⁹⁹ᵐTc", "γ (isomer)", "6 h", "Szintigraphie (Knochen, Herz, Lunge)"],
+              ["¹³¹I", "β⁻ + γ", "8 d", "Schilddrüsen-Therapie, -Diagnostik"],
+              ["¹⁸F", "β⁺", "110 min", "PET (FDG)"],
+              ["⁶⁷Ga", "γ", "3,3 d", "Infektions-/Tumorlokalisation"],
+              ["²⁰¹Tl", "γ (EC)", "3,0 d", "Myokard-Szintigraphie"],
+            ],
+          },
         },
       ],
       merksätze: [

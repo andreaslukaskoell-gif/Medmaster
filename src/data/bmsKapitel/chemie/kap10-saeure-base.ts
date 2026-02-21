@@ -268,16 +268,6 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
 
 **Starke Säuren** dissoziieren in wässriger Lösung vollständig (nahezu irreversibel). Das bedeutet: Alle Säuremoleküle geben ihr Proton an das Wasser ab.
 
-Beispiele starker Säuren:
-| Säure | Name | pKa |
-|-------|------|-----|
-| HCl  | Salzsäure | ≈ −7 |
-| HBr  | Bromwasserstoffsäure | ≈ −9 |
-| HI   | Iodwasserstoffsäure | ≈ −10 |
-| HNO₃ | Salpetersäure | ≈ −1,4 |
-| H₂SO₄ | Schwefelsäure (1. Stufe) | ≈ −3 |
-| HClO₄ | Perchlorsäure | ≈ −10 |
-
 Für starke Säuren gilt: **[H₃O⁺] = c(Säure)** (vollständige Dissoziation, kein Gleichgewicht). Der pH berechnet sich direkt: **pH = −log c(Säure)**.
 
 Beispiel: 0,01 mol/L HCl → [H₃O⁺] = 0,01 = 10⁻² mol/L → **pH = 2**
@@ -302,16 +292,6 @@ Je größer Ka, desto stärker die Säure. Der **pKa = −log Ka** ist praktisch
 - **pKa = 0–4**: mittelstarke Säure
 - **pKa = 4–10**: schwache Säure
 - **pKa > 10**: sehr schwache Säure
-
-### Wichtige schwache Säuren und ihre pKa-Werte:
-| Säure | pKa |
-|-------|-----|
-| Essigsäure (CH₃COOH) | 4,75 |
-| Kohlensäure (H₂CO₃) | 6,35 |
-| Ammoniumion (NH₄⁺) | 9,25 |
-| Hydrogencarbonat (HCO₃⁻) | 10,33 |
-| Wasser (H₂O) | 15,74 |
-| Ethanol (C₂H₅OH) | 16 |
 
 ## pH-Berechnung für schwache Säuren
 
@@ -389,6 +369,36 @@ Im Blut agieren viele biologisch wichtige Moleküle als schwache Säuren oder Ba
           heading: "Mehrprotonige Säuren: Stufenweise Dissoziation",
           text: "Polyprotische Säuren geben ihre Protonen schrittweise ab. Jede Stufe hat eine eigene Ka, die kleiner wird: Ka1 > Ka2 > Ka3. Der erste Schritt ist immer der leichteste (aus neutralem Molekül), spätere Schritte schwieriger (aus negativer Spezies). Für Puffer nutzt man meist das Paar aus der am physiologisch relevanten pKa-Stufe. Beispiel: H₃PO₄ nutzt pKa2 = 7,2 für den Phosphatpuffer (HPO₄²⁻/H₂PO₄⁻) im Blut und Urin.",
           merksatz: "Polyprotische Säure: Ka1 >> Ka2 >> Ka3. Der pH einer Lösung wird meist durch Ka1 dominiert."
+        },
+        {
+          heading: "Starke Säuren — Übersicht",
+          text: "Die häufigsten starken Säuren mit ihren pKa-Werten:",
+          table: {
+            headers: ["Säure", "Name", "pKa"],
+            rows: [
+              ["HCl", "Salzsäure", "≈ −7"],
+              ["HBr", "Bromwasserstoffsäure", "≈ −9"],
+              ["HI", "Iodwasserstoffsäure", "≈ −10"],
+              ["HNO₃", "Salpetersäure", "≈ −1,4"],
+              ["H₂SO₄", "Schwefelsäure (1. Stufe)", "≈ −3"],
+              ["HClO₄", "Perchlorsäure", "≈ −10"],
+            ]
+          }
+        },
+        {
+          heading: "Wichtige schwache Säuren und ihre pKa-Werte",
+          text: "pKa-Werte ausgewählter schwacher Säuren:",
+          table: {
+            headers: ["Säure", "pKa"],
+            rows: [
+              ["Essigsäure (CH₃COOH)", "4,75"],
+              ["Kohlensäure (H₂CO₃)", "6,35"],
+              ["Ammoniumion (NH₄⁺)", "9,25"],
+              ["Hydrogencarbonat (HCO₃⁻)", "10,33"],
+              ["Wasser (H₂O)", "15,74"],
+              ["Ethanol (C₂H₅OH)", "16"],
+            ]
+          }
         }
       ],
       diagram: 'ph-scale',

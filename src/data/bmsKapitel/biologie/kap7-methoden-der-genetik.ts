@@ -1057,17 +1057,6 @@ Nachteile:
 - Restriktionsverdau des isolierten Plasmids → erwartetete Bandenmuster
 - Sanger-Sequenzierung des Inserts → exakte Sequenzverifikation
 
-## Vektoren — Übersicht
-
-| Vektor | Kapazität | Wirt | Besonderheit |
-|--------|-----------|------|--------------|
-| Plasmid | ~15 kb | E. coli | Standard-Klonierung, einfach |
-| Phage λ | 20–25 kb | E. coli | Phagen-Infektion, hohe Effizienz |
-| Cosmid | 40–50 kb | E. coli | Phagen-Hülle + Plasmid-Replikation |
-| BAC (Bacterial Artificial Chromosome) | 100–300 kb | E. coli | Für große genomische Fragmente |
-| YAC (Yeast Artificial Chromosome) | 200–2.000 kb | Hefe | Für sehr große Inserts (Chromosomensegmente) |
-| Expressionsvektor | variabel | E. coli/Hefe/CHO | Promotor, RBS, Tags für Proteinproduktion |
-
 ## Expressionsvektoren und rekombinante Proteine
 
 Für die **Proteinexpression** benötigt der Vektor zusätzliche Elemente:
@@ -1112,6 +1101,21 @@ Weitere rekombinante Proteine in der Medizin: Erythropoetin (EPO, Nierenversagen
           heading: 'Rekombinante Antikörper — Von der Hybridomtechnologie zum Display',
           text: 'Monoklonale Antikörper (mAbs) werden heute überwiegend gentechnisch hergestellt. Traditionell: Hybridom-Technologie (Köhler & Milstein 1975, Nobelpreis 1984) — Fusion immunisierter Maus-B-Zellen mit Myelomzellen → immortale Hybridome. Heute: Phagen-Display und Hefe-Display erlauben vollständig humane mAbs ohne Immunisierung — Antikörper-Gene werden aus einer Bibliothek selektiert. Rekombinante Antikörperformate: vollständiger IgG (150 kDa) für therapeutische mAbs (z. B. Trastuzumab/Herceptin gegen HER2+), scFv (25 kDa, single chain variable fragment) für diagnostische Anwendungen, BiTE (bispezifische T-Zell-Engager, z. B. Blinatumomab für ALL). Produktion: CHO-Zellen (Chinese Hamster Ovary) für komplexe Glykosylierung, E. coli für nicht-glykosylierte Fragmente.',
           merksatz: 'mAbs: Hybridom (Maus) → chimäre/humanisierte → vollhumane (Phagen-Display). CHO-Zellen für glykosylierte Therapeutika.',
+        },
+        {
+          heading: 'Vektoren — Übersicht',
+          text: 'Klonierungsvektoren unterscheiden sich in ihrer Kapazität (maximale Insertgröße), dem Wirtsorganismus und besonderen Eigenschaften. Die Wahl des Vektors richtet sich nach der Größe des zu klonierenden DNA-Fragments.',
+          table: {
+            headers: ["Vektor", "Kapazität", "Wirt", "Besonderheit"],
+            rows: [
+              ["Plasmid", "~15 kb", "E. coli", "Standard-Klonierung, einfach"],
+              ["Phage λ", "20–25 kb", "E. coli", "Phagen-Infektion, hohe Effizienz"],
+              ["Cosmid", "40–50 kb", "E. coli", "Phagen-Hülle + Plasmid-Replikation"],
+              ["BAC (Bacterial Artificial Chromosome)", "100–300 kb", "E. coli", "Für große genomische Fragmente"],
+              ["YAC (Yeast Artificial Chromosome)", "200–2.000 kb", "Hefe", "Für sehr große Inserts (Chromosomensegmente)"],
+              ["Expressionsvektor", "variabel", "E. coli/Hefe/CHO", "Promotor, RBS, Tags für Proteinproduktion"],
+            ],
+          },
         },
       ],
 

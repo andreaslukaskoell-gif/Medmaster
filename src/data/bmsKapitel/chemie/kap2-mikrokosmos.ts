@@ -41,19 +41,6 @@ H-Brücken sind **nicht kovalent**, aber deutlich stärker als gewöhnliche van-
 - *DNA-Doppelhelix*: A–T bildet 2 H-Brücken, G–C bildet 3 → G-C-reiche DNA ist thermisch stabiler (relevant für PCR-Denaturierungstemperatur)
 - *Proteine*: α-Helix (i–i+4 H-Brücken entlang der Helix) und β-Faltblatt (intermolekulare H-Brücken zwischen Strängen) werden durch H-Brücken stabilisiert
 
-## Stärkeranking der Bindungen und Wechselwirkungen
-
-**Ionenbindung > Kovalente Bindung > Wasserstoffbrücken > Dipol–Dipol (Keesom) > London-Dispersion**
-
-Typische Energien im Vergleich:
-| Wechselwirkung | Energie |
-|---|---|
-| Kovalente Bindung (C–C) | ~350 kJ/mol |
-| Ionenbindung (NaCl) | ~786 kJ/mol (Gitterenergie) |
-| Wasserstoffbrücke | 10–40 kJ/mol |
-| Dipol–Dipol | 3–10 kJ/mol |
-| London-Dispersion | 0,05–40 kJ/mol |
-
 ## Klinische Relevanz
 
 Die Wasserlöslichkeit von Pharmaka hängt direkt von intermolekularen Wechselwirkungen ab: **polare, H-Brücken-bildende Moleküle** (Paracetamol, viele Antibiotika) sind wasserlöslich und renal eliminierbar; **unpolare Moleküle** (Anästhetika, Steroide) akkumulieren in Lipidphasen. Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydrophoben Wechselwirkungen (London-Kräften) und ionischen Kontakten — **Denaturierung** durch Hitze, Harnstoff oder pH-Änderung bricht dieses Netzwerk auf. Bei der **PCR** wird die DNA durch Erhitzen auf 94–98 °C (Denaturierungsschritt) vollständig aufgebrochen, weil alle H-Brücken zwischen den Basenpaaren überwunden werden.`,
@@ -81,6 +68,20 @@ Die Wasserlöslichkeit von Pharmaka hängt direkt von intermolekularen Wechselwi
           heading: 'Stärkeranking und physikalische Konsequenzen',
           text: 'Das Stärkeranking bestimmt Siedepunkte: HF (H-Brücken) siedet bei 19 °C, HCl (nur Dipol-Dipol + London) bei −85 °C, obwohl Cl viel schwerer als F ist. Wasser siedet wegen seines dichten H-Brücken-Netzwerks erst bei 100 °C. Für Pharmaka gilt: je mehr H-Brücken-fähige Gruppen (OH, NH, C=O), desto wasserlöslicher und desto schlechter lipidlöslich → beeinflusst Resorption und Verteilung im Körper (Lipinski-Regel).',
           merksatz: 'Anomale Siedepunkte von H₂O, HF, NH₃ gegenüber Homologen → Beweis für H-Brücken.',
+        },
+        {
+          heading: 'Stärkeranking der Bindungen und Wechselwirkungen',
+          text: 'Ionenbindung > Kovalente Bindung > Wasserstoffbrücken > Dipol–Dipol (Keesom) > London-Dispersion',
+          table: {
+            headers: ['Wechselwirkung', 'Energie'],
+            rows: [
+              ['Kovalente Bindung (C–C)', '~350 kJ/mol'],
+              ['Ionenbindung (NaCl)', '~786 kJ/mol (Gitterenergie)'],
+              ['Wasserstoffbrücke', '10–40 kJ/mol'],
+              ['Dipol–Dipol', '3–10 kJ/mol'],
+              ['London-Dispersion', '0,05–40 kJ/mol'],
+            ],
+          },
         },
       ],
 
@@ -254,17 +255,6 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
 
 **Amphiphile Moleküle** (Detergenzien, Phospholipide) besitzen einen polaren Kopf und einen unpolaren Schwanz → Mizellenbildung in Wasser: Schwänze innen, Köpfe außen.
 
-## Konzentrationsbegriffe
-
-| Begriff | Formel | Einheit | Anwendung |
-|---|---|---|---|
-| Molarität (c) | n / V | mol/L (M) | Standardkonzentration im Labor |
-| Molalität (b) | n / m(Lösungsmittel) | mol/kg | Kolligative Eigenschaften |
-| Massenkonzentration (β) | m / V | g/L | Klinische Laborbefunde |
-| Massenanteil (w) | m(Stoff) / m(Lösung) | % (m/m) | Lösungsansatz |
-| Volumenanteil (φ) | V(Stoff) / V(Lösung) | % (v/v) | Alkohol, Sauerstoffkonzentration |
-| Massenvolumenkonzentration | m(Stoff) / V(Lösung) | % (m/v) | Infusionslösungen (z. B. 0,9 % NaCl) |
-
 **Umrechnung Molarität ↔ g/L:** c [mol/L] × M [g/mol] = β [g/L]
 Beispiel: 0,9 % NaCl (m/v) = 9 g NaCl / L; M(NaCl) = 58,44 g/mol → c = 9/58,44 ≈ 0,154 mol/L
 
@@ -325,6 +315,21 @@ Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechne
           heading: 'Konzentrationsrechnung im klinischen Alltag',
           text: 'Die häufigste Infusionslösung "NaCl 0,9 %" bedeutet 0,9 g NaCl pro 100 mL = 9 g/L. Mit M(NaCl) = 58,44 g/mol ergibt sich c = 0,154 mol/L. Da NaCl vollständig in Na⁺ und Cl⁻ dissoziiert (i = 2), beträgt die Osmolarität 2 × 154 = 308 mOsmol/L — knapp isotonisch. "5 % Glukose" = 50 g/L; M(Glukose) = 180 g/mol → c = 0,278 mol/L; i = 1 → 278 mOsmol/L. Diese Rechnungen sind prüfungsrelevant.',
           merksatz: 'Osmolarität [mOsmol/L] = Molarität × i × 1000; NaCl: i = 2, Glukose: i = 1.',
+        },
+        {
+          heading: 'Konzentrationsbegriffe',
+          text: 'Übersicht der wichtigsten Konzentrationsmaße und ihrer klinischen Anwendung.',
+          table: {
+            headers: ['Begriff', 'Formel', 'Einheit', 'Anwendung'],
+            rows: [
+              ['Molarität (c)', 'n / V', 'mol/L (M)', 'Standardkonzentration im Labor'],
+              ['Molalität (b)', 'n / m(Lösungsmittel)', 'mol/kg', 'Kolligative Eigenschaften'],
+              ['Massenkonzentration (β)', 'm / V', 'g/L', 'Klinische Laborbefunde'],
+              ['Massenanteil (w)', 'm(Stoff) / m(Lösung)', '% (m/m)', 'Lösungsansatz'],
+              ['Volumenanteil (φ)', 'V(Stoff) / V(Lösung)', '% (v/v)', 'Alkohol, Sauerstoffkonzentration'],
+              ['Massenvolumenkonzentration', 'm(Stoff) / V(Lösung)', '% (m/v)', 'Infusionslösungen (z. B. 0,9 % NaCl)'],
+            ],
+          },
         },
       ],
 
@@ -490,17 +495,7 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
     {
       id: 'ch-2-03',
       title: 'Aggregatzustände, Phasenübergänge und Kolloidchemie',
-      content: `## Aggregatzustände im Vergleich
-
-| Eigenschaft | Fest | Flüssig | Gasförmig |
-|---|---|---|---|
-| Teilchenanordnung | Geordnet, dicht | Ungeordnet, dicht | Ungeordnet, weit |
-| Volumen | Bestimmt | Bestimmt | Nicht bestimmt |
-| Form | Bestimmt | Angepasst | Angepasst |
-| Kompressibilität | Gering | Gering | Hoch |
-| Beweglichkeit | Nur Schwingung | Gleiten | Frei |
-
-## Phasenübergänge und Wärmetönung
+      content: `## Phasenübergänge und Wärmetönung
 
 Die Phasenübergänge und ihre thermodynamischen Vorzeichen:
 
@@ -532,16 +527,6 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
 
 **Kolloide** sind Systeme, in denen Partikel mit einem Durchmesser von **1 nm bis 1 μm** in einem Dispersionsmedium verteilt sind. Sie liegen zwischen echten Lösungen (<1 nm, molekulardispers) und Suspensionen (>1 μm, sedimentieren).
 
-**Klassifikation nach Dispersionsmedium und -phase:**
-
-| Typ | Disperse Phase | Dispersionsmedium | Beispiel |
-|---|---|---|---|
-| Sol (Lyosol) | Fest | Flüssig | Gold-Sol, Stärkelösung |
-| Emulsion | Flüssig | Flüssig | Milch, Mayonnaise |
-| Schaum | Gas | Flüssig | Seifenschaum, Schlagsahne |
-| Aerosol (flüssig) | Flüssig | Gas | Nebel, Spraydosen |
-| Aerosol (fest) | Fest | Gas | Rauch, Staub |
-| Gel | Flüssig | Fest | Gelatine, Agar-Agar |
 
 **Kolloidale Eigenschaften:**
 
@@ -587,6 +572,35 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
           heading: 'Klinische Kolloidchemie',
           text: 'Blut ist kein "kolloidales System" im strengen Sinne, aber Plasma verhält sich kolloidartig durch die Plasmaproteine (Albumin, Globuline, Fibrinogen). Kolloidale Infusionslösungen (HAES, Gelatine, Albumin) bleiben länger im Gefäßsystem als kristalloide (NaCl, Ringer), weil die großen Makromoleküle die Kapillarwand nicht passieren können und so den onkotischen Druck aufrechterhalten. Surfactant der Lunge (ein Phospholipid-Protein-Gemisch) ist eine biologische Emulsion, die die Grenzflächenspannung der Alveolen-Luft-Fläche senkt und Kollaps verhindert.',
           merksatz: 'Kolloidale Infusionslösungen erhalten onkotischen Druck → länger im Gefäß als NaCl-Lösung.',
+        },
+        {
+          heading: 'Aggregatzustände im Vergleich',
+          text: 'Vergleich der drei Aggregatzustände nach ihren charakteristischen Eigenschaften.',
+          table: {
+            headers: ['Eigenschaft', 'Fest', 'Flüssig', 'Gasförmig'],
+            rows: [
+              ['Teilchenanordnung', 'Geordnet, dicht', 'Ungeordnet, dicht', 'Ungeordnet, weit'],
+              ['Volumen', 'Bestimmt', 'Bestimmt', 'Nicht bestimmt'],
+              ['Form', 'Bestimmt', 'Angepasst', 'Angepasst'],
+              ['Kompressibilität', 'Gering', 'Gering', 'Hoch'],
+              ['Beweglichkeit', 'Nur Schwingung', 'Gleiten', 'Frei'],
+            ],
+          },
+        },
+        {
+          heading: 'Klassifikation nach Dispersionsmedium und -phase',
+          text: 'Kolloidtypen nach dem Aggregatzustand der dispersen Phase und des Dispersionsmediums.',
+          table: {
+            headers: ['Typ', 'Disperse Phase', 'Dispersionsmedium', 'Beispiel'],
+            rows: [
+              ['Sol (Lyosol)', 'Fest', 'Flüssig', 'Gold-Sol, Stärkelösung'],
+              ['Emulsion', 'Flüssig', 'Flüssig', 'Milch, Mayonnaise'],
+              ['Schaum', 'Gas', 'Flüssig', 'Seifenschaum, Schlagsahne'],
+              ['Aerosol (flüssig)', 'Flüssig', 'Gas', 'Nebel, Spraydosen'],
+              ['Aerosol (fest)', 'Fest', 'Gas', 'Rauch, Staub'],
+              ['Gel', 'Flüssig', 'Fest', 'Gelatine, Agar-Agar'],
+            ],
+          },
         },
       ],
 

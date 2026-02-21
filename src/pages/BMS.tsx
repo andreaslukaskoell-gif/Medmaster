@@ -481,7 +481,8 @@ export default function BMS() {
       );
     }
 
-    const kapitel = Array.isArray(sortedChapters) ? sortedChapters : [];
+    // Use only sequenced (official BMS) chapters to avoid Supabase ghost entries
+    const kapitel = Array.isArray(roadmapChapters) ? roadmapChapters : [];
 
     const subjectUK = kapitel.reduce((sum, k) => {
       if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;

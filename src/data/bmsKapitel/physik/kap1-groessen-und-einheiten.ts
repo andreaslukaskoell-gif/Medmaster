@@ -14,17 +14,7 @@ export const physKap1: Kapitel = {
 
 Die Physik beschreibt die Natur mit Hilfe von **Größen** — messbaren Eigenschaften wie Länge, Masse oder Zeit. Um weltweit vergleichbare Messungen zu ermöglichen, haben sich Wissenschaftlerinnen und Wissenschaftler auf ein einheitliches System geeinigt: das **Internationale Einheitensystem** (SI, Système International d'unités). Es bildet das Fundament jeder exakten Naturwissenschaft und damit auch der Medizin.
 
-Das SI-System definiert **sieben Basisgrößen**, aus denen sich alle anderen physikalischen Größen ableiten lassen:
-
-| Basisgröße | Formelzeichen | SI-Einheit | Einheitenzeichen |
-|---|---|---|---|
-| Länge | l | Meter | m |
-| Masse | m | Kilogramm | kg |
-| Zeit | t | Sekunde | s |
-| Elektrische Stromstärke | I | Ampere | A |
-| Thermodynamische Temperatur | T | Kelvin | K |
-| Stoffmenge | n | Mol | mol |
-| Lichtstärke | Iv | Candela | cd |
+Das SI-System definiert **sieben Basisgrößen**, aus denen sich alle anderen physikalischen Größen ableiten lassen.
 
 Die **Länge** wird in Meter (m) gemessen — ursprünglich als ein Zehnmillionstel des Weges vom Nordpol zum Äquator festgelegt, heute über die Lichtgeschwindigkeit definiert: 1 m ist die Strecke, die Licht im Vakuum in 1/299 792 458 Sekunde zurücklegt. Die **Masse** hat die Einheit Kilogramm (kg); bis 2019 war ein physisches Platiniridiumzylinder in Paris der internationale Standard, seither wird das Kilogramm über die Planck-Konstante h = 6,626 × 10⁻³⁴ J·s definiert. Die **Zeit** in Sekunden (s) wird durch Atomuhren mit einer Genauigkeit von 10⁻¹⁸ s realisiert — basierend auf 9 192 631 770 Schwingungen der Cäsium-133-Hyperfeinstruktur.
 
@@ -91,6 +81,22 @@ Ein häufiger Irrtum im Alltag: Die Masse eines Menschen (in kg) und seine Gewic
       ],
 
       sections: [
+        {
+          heading: 'SI-Basisgrößen — Übersicht',
+          text: 'Das SI-System definiert sieben fundamental unabhängige Basisgrößen. Aus diesen lassen sich alle weiteren physikalischen Größen ableiten.',
+          table: {
+            headers: ["Basisgröße", "Formelzeichen", "SI-Einheit", "Einheitenzeichen"],
+            rows: [
+              ["Länge", "l", "Meter", "m"],
+              ["Masse", "m", "Kilogramm", "kg"],
+              ["Zeit", "t", "Sekunde", "s"],
+              ["Elektrische Stromstärke", "I", "Ampere", "A"],
+              ["Thermodynamische Temperatur", "T", "Kelvin", "K"],
+              ["Stoffmenge", "n", "Mol", "mol"],
+              ["Lichtstärke", "Iv", "Candela", "cd"],
+            ],
+          },
+        },
         {
           heading: 'Die sieben SI-Basisgrößen',
           text: 'Das SI-System beruht auf sieben fundamental unabhängigen Basisgrößen: Länge (m), Masse (kg), Zeit (s), elektrische Stromstärke (A), thermodynamische Temperatur (K), Stoffmenge (mol) und Lichtstärke (cd). Diese sieben Größen sind so gewählt, dass sie unabhängig voneinander sind — keine lässt sich aus den anderen ableiten — und zusammen ausreichen, um jede bekannte physikalische Größe zu beschreiben. Seit der SI-Reform von 2019 werden alle Basiseinheiten durch Naturkonstanten definiert, nicht mehr durch physische Artefakte. Das Kilogramm ist nun über die Planck-Konstante, das Ampere über die Elementarladung, das Kelvin über die Boltzmann-Konstante und das Mol über die Avogadro-Konstante definiert. Diese Neudefinition macht das SI-System zeitlos und ortsunabhängig — jedes gut ausgestattete Labor der Welt kann die Einheiten eigenständig realisieren, ohne Zugang zu einem physischen Referenzartefakt zu benötigen.',
@@ -296,22 +302,7 @@ Die Natur operiert auf extrem unterschiedlichen Größenskalen. Ein Wasserstoffa
 
 ## SI-Präfixe: Das metrische Vorsatzsystem
 
-SI-Präfixe sind Vorsätze, die vor eine Einheit gestellt werden und sie mit einer Zehnerpotenz multiplizieren:
-
-| Präfix | Symbol | Faktor | Potenz |
-|---|---|---|---|
-| Tera | T | 1 000 000 000 000 | 10¹² |
-| Giga | G | 1 000 000 000 | 10⁹ |
-| Mega | M | 1 000 000 | 10⁶ |
-| Kilo | k | 1 000 | 10³ |
-| Hekto | h | 100 | 10² |
-| Dezi | d | 0,1 | 10⁻¹ |
-| Zenti | c | 0,01 | 10⁻² |
-| Milli | m | 0,001 | 10⁻³ |
-| Mikro | µ | 0,000 001 | 10⁻⁶ |
-| Nano | n | 0,000 000 001 | 10⁻⁹ |
-| Piko | p | 10⁻¹² | 10⁻¹² |
-| Femto | f | 10⁻¹⁵ | 10⁻¹⁵ |
+SI-Präfixe sind Vorsätze, die vor eine Einheit gestellt werden und sie mit einer Zehnerpotenz multiplizieren.
 
 ## Wissenschaftliche Notation (Exponentialschreibweise)
 
@@ -391,6 +382,27 @@ Das Beherrschen dieser Größenordnungen ermöglicht eine schnelle Plausibilitä
       ],
 
       sections: [
+        {
+          heading: 'SI-Präfixe: Übersicht',
+          text: 'SI-Präfixe sind Vorsätze, die vor eine Einheit gestellt werden und sie mit einer Zehnerpotenz multiplizieren. Sie ermöglichen eine kompakte Darstellung sehr großer und sehr kleiner Zahlen.',
+          table: {
+            headers: ["Präfix", "Symbol", "Faktor", "Potenz"],
+            rows: [
+              ["Tera", "T", "1 000 000 000 000", "10¹²"],
+              ["Giga", "G", "1 000 000 000", "10⁹"],
+              ["Mega", "M", "1 000 000", "10⁶"],
+              ["Kilo", "k", "1 000", "10³"],
+              ["Hekto", "h", "100", "10²"],
+              ["Dezi", "d", "0,1", "10⁻¹"],
+              ["Zenti", "c", "0,01", "10⁻²"],
+              ["Milli", "m", "0,001", "10⁻³"],
+              ["Mikro", "µ", "0,000 001", "10⁻⁶"],
+              ["Nano", "n", "0,000 000 001", "10⁻⁹"],
+              ["Piko", "p", "10⁻¹²", "10⁻¹²"],
+              ["Femto", "f", "10⁻¹⁵", "10⁻¹⁵"],
+            ],
+          },
+        },
         {
           heading: 'SI-Präfixe: Vom Femto zum Tera',
           text: 'Das metrische Präfixsystem ermöglicht es, mit einem Buchstaben vor der Einheit Faktoren von 10⁻¹⁵ bis 10¹² auszudrücken. Die wichtigsten Präfixe für die Medizin sind Mikro (µ, 10⁻⁶), Milli (m, 10⁻³), Kilo (k, 10³) und Mega (M, 10⁶). In der Labormedizin dominieren Mikro- und Milligrößen: Serumkonzentrationen in µmol/L, Volumina in µL (Mikroliter) bei PCR-Ansätzen, Arzneimitteldosen in mg bis µg. Besondere Vorsicht ist beim Symbol µ (Mikro) geboten — es darf nicht mit m (Milli) verwechselt werden. Ein Fehler von Faktor 1000 (z.B. 1 mg statt 1 µg) kann bei potenten Substanzen wie Fentanyl oder Adrenalin tödlich sein. Die WHO listet Einheitenverwechslungen als eine der häufigsten vermeidbaren Medikationsfehlerquellen.',
@@ -591,17 +603,7 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
 
 Die **Dimensionsanalyse** (auch: Einheitenanalyse oder dimensionale Analyse) ist eine mächtige Technik, die auf folgender Grundaussage beruht: **Jede korrekte physikalische Gleichung muss auf beiden Seiten dieselbe Dimension haben.** Wenn man eine Formel aufschreibt und die Einheiten nicht übereinstimmen, ist die Formel falsch — oder es liegt ein Umrechnungsfehler vor. Diese Methode dient gleichzeitig als Werkzeug zur Einheitenumrechnung und als Überprüfungsinstrument für Formeln.
 
-Die **Dimension** einer Größe beschreibt ihre physikalische Natur — unabhängig vom Zahlenwert oder der gewählten Einheit. Die sieben Basisdimensionen sind:
-
-| Dimension | Symbol |
-|---|---|
-| Länge | L |
-| Masse | M |
-| Zeit | T |
-| Elektrische Stromstärke | I |
-| Temperatur | Θ |
-| Stoffmenge | N |
-| Lichtstärke | J |
+Die **Dimension** einer Größe beschreibt ihre physikalische Natur — unabhängig vom Zahlenwert oder der gewählten Einheit. Die sieben Basisdimensionen entsprechen den sieben SI-Basisgrößen.
 
 Die Dimension einer abgeleiteten Größe wird in eckigen Klammern angegeben:
 - [Kraft] = M·L·T⁻² (entspricht Newton)
@@ -695,6 +697,22 @@ Der **Wirkungsgrad** η (eta) = nutzbarer Energieoutput / zugeführter Energiein
       ],
 
       sections: [
+        {
+          heading: 'Basisdimensionen des SI-Systems',
+          text: 'Jede physikalische Größe lässt sich auf sieben Basisdimensionen zurückführen. Die Dimensionsanalyse nutzt diese Basisdimensionen, um die Korrektheit von Formeln zu prüfen.',
+          table: {
+            headers: ["Dimension", "Symbol"],
+            rows: [
+              ["Länge", "L"],
+              ["Masse", "M"],
+              ["Zeit", "T"],
+              ["Elektrische Stromstärke", "I"],
+              ["Temperatur", "Θ"],
+              ["Stoffmenge", "N"],
+              ["Lichtstärke", "J"],
+            ],
+          },
+        },
         {
           heading: 'Dimensionsanalyse: Formeln überprüfen',
           text: 'Die Dimensionsanalyse nutzt die Tatsache, dass in jeder korrekten physikalischen Gleichung beide Seiten dieselbe Dimension haben müssen. Die Dimension einer Größe beschreibt ihre physikalische Natur in Form der Basisdimensionen Länge (L), Masse (M), Zeit (T), Stromstärke (I), Temperatur (Θ), Stoffmenge (N) und Lichtstärke (J). Jede abgeleitete Größe hat eine eindeutige Dimensionsformel: Kraft = M·L·T⁻², Druck = M·L⁻¹·T⁻², Energie = M·L²·T⁻², Leistung = M·L²·T⁻³. Wenn eine Herleitung zu einem Ausdruck führt, bei dem Dimensionen nicht stimmen (z.B. Meter + Sekunden addiert werden), ist garantiert ein Fehler passiert. Dimensionsanalyse ist damit eine zuverlässige Plausibilitätsprüfung — ohne Kenntnis der Lösung.',

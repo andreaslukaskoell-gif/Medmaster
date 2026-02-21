@@ -296,16 +296,6 @@ pᵢ = nᵢ · R · T / V = xᵢ · p_gesamt
 
 Das Daltonsche Gesetz gilt exakt für ideale Gase, da ideale Gasteilchen keine Wechselwirkungen haben. Jede Gassorte bewegt sich völlig unabhängig von den anderen und trägt unabhängig zum Gesamtdruck bei. Für reale Gase gilt es nur näherungsweise.
 
-## Partialdrücke in der Atmosphäre
-
-Trockene Luft (bei 1 atm = 101,325 kPa) enthält:
-| Gas | Molenbruch | Partialdruck |
-|-----|------------|--------------|
-| N₂  | 0,7808     | 79,12 kPa    |
-| O₂  | 0,2095     | 21,22 kPa    |
-| Ar  | 0,0093     | 0,94 kPa     |
-| CO₂ | 0,0004     | 0,04 kPa     |
-
 **Wichtig:** Bei feuchter Luft muss der Wasserdampfdruck berücksichtigt werden! Bei 37 °C (Körpertemperatur) beträgt p(H₂O) ≈ 6,27 kPa (47 mmHg).
 
 ## Alveolarer Gasaustausch
@@ -364,6 +354,19 @@ wobei k_H die substanzspezifische Henry-Konstante ist. Bei erhöhtem O₂-Partia
           heading: 'Henry-Gesetz und medizinische Anwendungen',
           text: 'Das Henry-Gesetz c = k_H · p beschreibt die physikalische Löslichkeit von Gasen in Flüssigkeiten: Bei höherem Partialdruck löst sich mehr Gas. Anwendungen: (1) Taucherkrankheit: Hoher N₂-Partialdruck unter Wasser → viel N₂ im Blut gelöst; bei schnellem Druckabfall perlt N₂ aus (wie Sekt beim Öffnen) → Gasblasen in Gefäßen und Gewebe. (2) Hyperbare Sauerstofftherapie: 100 % O₂ bei 2–3 bar → physikalisch gelöstes O₂ im Plasma stark erhöht → Behandlung von CO-Vergiftung, Gasbrand, Wundheilungsstörungen. (3) CO₂ in Sprudel: Unter Druck gelöst, entweicht beim Öffnen.',
           merksatz: 'Henry: c = k_H · p. Mehr Druck → mehr Gas gelöst. Plötzlicher Druckabfall → Gasblasenbildung (Taucherunfall).',
+        },
+        {
+          heading: 'Partialdrücke in der Atmosphäre',
+          text: 'Trockene Luft (bei 1 atm = 101,325 kPa) enthält folgende Gase mit ihren Molenbrüchen und Partialdrücken.',
+          table: {
+            headers: ['Gas', 'Molenbruch', 'Partialdruck'],
+            rows: [
+              ['N₂', '0,7808', '79,12 kPa'],
+              ['O₂', '0,2095', '21,22 kPa'],
+              ['Ar', '0,0093', '0,94 kPa'],
+              ['CO₂', '0,0004', '0,04 kPa'],
+            ],
+          },
         },
       ],
       merksätze: [
