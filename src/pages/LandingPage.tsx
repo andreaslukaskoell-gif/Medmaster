@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Brain, ListChecks, BookOpen, Sparkles, ArrowRight, GraduationCap, Shield, Zap, LayoutGrid, RefreshCw, TrendingUp, Users } from "lucide-react";
 import { supabase } from "@/lib/supabase";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const MEDICAL_BLUE = "#0055ff";
 
@@ -55,6 +56,7 @@ const container = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { st
 const item = { hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0 } };
 
 export default function LandingPage() {
+  usePageTitle();
   const [userCount, setUserCount] = useState<number | null>(null);
 
   useEffect(() => {

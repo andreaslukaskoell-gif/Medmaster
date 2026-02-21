@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
+import { usePageTitle } from "@/hooks/usePageTitle";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import {
   kffStrategyGuide,
@@ -44,6 +45,7 @@ const QUICK_START_VIEWS: Record<string, KffView> = {
 };
 
 export default function KFF() {
+  usePageTitle("KFF – Kognitive Fähigkeiten");
   const [searchParams] = useSearchParams();
   const startParam = searchParams.get("start");
   const initialView: KffView = (startParam && QUICK_START_VIEWS[startParam]) ? QUICK_START_VIEWS[startParam] : "overview";

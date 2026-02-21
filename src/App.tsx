@@ -69,6 +69,19 @@ function BMSQuizWrapper() {
   return <BMSQuiz subject={fach} onBack={() => navigate("/bms")} />;
 }
 
+function NotFound404() {
+  return (
+    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
+      <div className="text-center space-y-4">
+        <h1 className="text-6xl font-bold text-gray-900 dark:text-white">404</h1>
+        <p className="text-lg text-gray-600 dark:text-gray-400">Seite nicht gefunden</p>
+        <p className="text-sm text-gray-500 dark:text-gray-500">Diese Seite existiert nicht oder wurde verschoben.</p>
+        <Navigate to="/" replace />
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -121,7 +134,13 @@ export default function App() {
             <Route path="/fragen-trainer" element={<FragenTrainer />} />
             <Route path="/daily" element={<DailyChallenge />} />
             <Route path="/wrapped" element={<BMSWrapped />} />
+            
+            {/* 404 Catch-all for protected routes */}
+            <Route path="*" element={<NotFound404 />} />
           </Route>
+
+          {/* 404 Catch-all for public routes (fallback) */}
+          <Route path="*" element={<NotFound404 />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

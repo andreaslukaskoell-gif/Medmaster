@@ -16,12 +16,14 @@
 import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { ArrowLeft, Scale, Shield, AlertTriangle } from "lucide-react";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 type Tab = "impressum" | "datenschutz";
 
 const REQUIRED_PLACEHOLDERS = ["[DEIN NAME]", "[ADRESSE]", "[UID-NUMMER"];
 
 export default function Legal() {
+  usePageTitle("Impressum & Datenschutz");
   const location = useLocation();
   const [tab, setTab] = useState<Tab>(
     location.pathname === "/datenschutz" ? "datenschutz" : "impressum"

@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
+import { usePageTitle } from "@/hooks/usePageTitle";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { tvStrategyGuide, tvTexts } from "@/data/tvData";
 import { tvTextSets } from "@/data/tvTextsExpanded";
@@ -20,6 +21,7 @@ type TvView = "overview" | "strategy" | "legacy-quiz" | "legacy-results" | "set-
 const LABELS = ["A", "B", "C", "D", "E"];
 
 export default function TV() {
+  usePageTitle("TV – Textverständnis");
   const [view, setView] = useState<TvView>("overview");
   // Legacy mode
   const [selectedTextIndex, setSelectedTextIndex] = useState(0);

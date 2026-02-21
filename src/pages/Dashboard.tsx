@@ -12,6 +12,7 @@ import { useLevelUpSound } from "@/hooks/useLevelUpSound";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { useDashboardProfile } from "@/hooks/useDashboardProfile";
+import { usePageTitle } from "@/hooks/usePageTitle";
 import { cn, daysUntilMedAT } from "@/lib/utils";
 import { getDailyGoalFromPlan, getConsecutiveDaysGoalMissed } from "@/lib/dailyGoal";
 import { getTodaysResult } from "@/lib/dailyChallenge";
@@ -32,6 +33,7 @@ const tileMotion = {
 const stagger = { transition: { staggerChildren: 0.08 } };
 
 export default function Dashboard() {
+  usePageTitle("Dashboard");
   const {
     xp: storeXp,
     completedChapters,

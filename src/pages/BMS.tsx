@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { usePageTitle } from "@/hooks/usePageTitle";
 import { BlurFade } from "@/components/ui/blur-fade";
 import {
   Dna,
@@ -101,6 +102,7 @@ const subjects = [
 ] as const;
 
 export default function BMS() {
+  usePageTitle("BMS – Biomedizinische Grundlagen");
   const navigate = useNavigate();
   const { fach: fachParam, kapitel: kapitelParam } = useParams<{ fach?: string; kapitel?: string }>();
   const [searchParams] = useSearchParams();

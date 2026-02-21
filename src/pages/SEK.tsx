@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
+import { usePageTitle } from "@/hooks/usePageTitle";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { sekStrategyGuide } from "@/data/sekData";
 import {
@@ -32,6 +33,7 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function SEK() {
+  usePageTitle("SEK – Sozial-emotionale Kompetenzen");
   const [view, setView] = useState<SekView>("overview");
 
   if (view === "strategy") {
