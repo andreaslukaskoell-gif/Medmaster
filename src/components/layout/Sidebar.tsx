@@ -161,7 +161,7 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
       { to: "/community", icon: Users, label: "Community" },
       { to: "/duell", icon: Swords, label: "Duell" },
       { to: "/lernplan", icon: CalendarDays, label: "Lernplan" },
-      { to: "/preise", icon: Settings, label: "Einstellungen" },
+      { to: "/preise", icon: Settings, label: "Konto & Preise" },
     ],
   },
 ];
@@ -468,7 +468,6 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                 const to = item.to as string;
                 const hasChildren = "hasChildren" in item && item.hasChildren;
                 const isBms = to === "/bms" && hasChildren;
-                const active = isActive(to);
                 const isBmsActive = pathname === "/bms" || pathname.startsWith("/bms/");
 
                 const requiredLevel =

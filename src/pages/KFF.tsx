@@ -52,12 +52,24 @@ export default function KFF() {
   const [view, setView] = useState<KffView>(initialView);
   const [strategyKey, setStrategyKey] = useState<StrategyKey>("zahlenfolgen");
   const { user, loading: isLoading } = useAuth();
+  const [authTimedOut, setAuthTimedOut] = useState(false);
 
-  if (isLoading) {
+  useEffect(() => {
+    if (!isLoading) return;
+    const t = setTimeout(() => setAuthTimedOut(true), 5000);
+    return () => clearTimeout(t);
+  }, [isLoading]);
+
+  if (isLoading && !authTimedOut) {
     return <div className="p-8 text-slate-500 dark:text-slate-400">Lade KFF-Module...</div>;
   }
-  if (!user) {
-    return <div className="p-8 text-slate-500 dark:text-slate-400">Nicht eingeloggt.</div>;
+  if (authTimedOut || !user) {
+    return (
+      <div className="p-8 text-center">
+        <p className="text-slate-500 dark:text-slate-400 mb-4">Sitzung abgelaufen oder nicht eingeloggt.</p>
+        <a href="/login" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">→ Zum Login</a>
+      </div>
+    );
   }
 
   if (view === "figuren-strategy") {

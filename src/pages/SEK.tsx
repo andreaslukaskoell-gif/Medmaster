@@ -1,7 +1,7 @@
-import { useState, useMemo } from "react";
-import { ArrowLeft, ArrowRight, BookOpen, Play, Send, CheckCircle2, XCircle, Shuffle, GripVertical } from "lucide-react";
+import { useState } from "react";
+import { ArrowLeft, ArrowRight, BookOpen, Play, Send, CheckCircle2, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";

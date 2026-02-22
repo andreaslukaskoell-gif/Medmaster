@@ -20,7 +20,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import type { Kapitel } from "@/data/bmsKapitel/types";
-import { SUBJECT_COLORS, getSubjectColors } from '@/data/bmsKapitel/colors';
+import { SUBJECT_COLORS } from '@/data/bmsKapitel/colors';
 import { FachRoadmap } from '@/components/chapter/FachRoadmap';
 import BMSKapitelView from "./BMSKapitelView";
 import { printChapterOverview, listAllChapters } from "@/utils/listChapters";
@@ -111,7 +111,6 @@ export default function BMS() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [supabaseChapters, setSupabaseChapters] = useState<Kapitel[]>([]);
-  const [isRevalidating, setIsRevalidating] = useState(false);
   
   // Safe store access with fallback
   const store = useSafeStore();
@@ -203,9 +202,6 @@ export default function BMS() {
         setError(err);
         setIsLoading(false);
       },
-      (revalidating) => {
-        setIsRevalidating(revalidating);
-      }
     );
   }, []);
 
@@ -427,6 +423,7 @@ export default function BMS() {
         </div>
       );
     }
+    const filterParam = searchParams.get("filter");
     const ukParam = searchParams.get("uk");
     const initialUkIndex = ukParam !== null ? parseInt(ukParam, 10) : undefined;
     const validUkIndex =
@@ -669,9 +666,19 @@ export default function BMS() {
 
   // Main view: 4 subject cards
   // Note: totalUK and completedUK are already computed above (before early returns)
+  const filterParam = searchParams.get("filter");
   return (
     <div className="max-w-4xl mx-auto space-y-8 px-6 py-8">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "BMS" }]} />
+
+      {/* filter=due banner */}
+      {filterParam === "due" && (
+        <div className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 text-yellow-800 dark:text-yellow-300 text-sm">
+          <Clock className="w-4 h-4 shrink-0" />
+          <span className="font-medium">Zeigt fällige Kapitel</span>
+          <span className="text-yellow-600 dark:text-yellow-400">— Wiederhole Kapitel, die zur Festigung bereit sind.</span>
+        </div>
+      )}
 
       <BlurFade delay={0} inView>
         <div>

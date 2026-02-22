@@ -173,7 +173,6 @@ export default function BMSUnterkapitel({
   const [progressiveDisclosure, setProgressiveDisclosure] = useState(true);
   const [quickReviewMode, setQuickReviewMode] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [selfTestDone, setSelfTestDone] = useState(false);
   const allCompleteFired = useRef(false);
   /** Sammelt Kontrollfragen-Antworten für Einspeisung in Analyse (quizResults). */
   const kontrollResultsRef = useRef<{ questionIndex: number; correct: boolean }[]>([]);
@@ -370,7 +369,6 @@ export default function BMSUnterkapitel({
       kontrollResultsRef.current = [];
     }
     handleComplete();
-    setSelfTestDone(true);
     setTimeout(() => onBack(), 1200);
   };
 
