@@ -135,6 +135,19 @@ export default function BMSUnterkapitel({
     };
   }, [location.pathname, ukId]);
 
+  // Reading progress bar tracking
+  useEffect(() => {
+    const update = () => {
+      const el = document.documentElement;
+      const scrolled = el.scrollTop || document.body.scrollTop;
+      const total = el.scrollHeight - el.clientHeight;
+      setScrollProgress(total > 0 ? Math.min(100, (scrolled / total) * 100) : 0);
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+    return () => window.removeEventListener("scroll", update);
+  }, [ukId]);
+
   // Schema-Validierung beim Laden: Fehler in Konsole loggen (F12), damit du siehst, wo im JSON der Fehler liegt
   useEffect(() => {
     if (!kapitel || !ukFromIndex) return;
@@ -244,6 +257,7 @@ export default function BMSUnterkapitel({
   const [hinterfragMode, setHinterfragMode] = useState(false);
   const [progressiveDisclosure, setProgressiveDisclosure] = useState(true);
   const [quickReviewMode, setQuickReviewMode] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const isBookmarked = bookmarks.chapters.includes(uk.id);
   const isCompleted = completedChapters.includes(uk.id);
   const [selfTestDone, setSelfTestDone] = useState(false);
@@ -373,6 +387,13 @@ export default function BMSUnterkapitel({
 
   return (
     <div className="max-w-3xl mx-auto space-y-6 pb-12 relative">
+      {/* Reading progress bar — fixed at top */}
+      <div className="fixed top-0 left-0 right-0 z-50 h-0.5 bg-transparent pointer-events-none">
+        <div
+          className={`h-full transition-all duration-100 ${subjectProgressColors[kapitel.subject] || "bg-primary-600"}`}
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
       <StickyBackButton onClick={onBack} />
 
       {/* Top bar */}
