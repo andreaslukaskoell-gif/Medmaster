@@ -1811,8 +1811,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
           tags: ['nonsense-mutation', 'stopp-codon', 'trunkiertes protein'],
         },
       ],
-    }
-  
+    },
 
     // === from kap6-molekulargenetik ===
     {
@@ -2948,8 +2947,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
           tags: ['mirna', 'sirna', 'genexpression'],
         }
       ],
-    }
-  
+    },
 
     // === from kap7-methoden-der-genetik ===
     {

@@ -1038,7 +1038,7 @@ Phenylalanin, Tyrosin und Tryptophan sind aromatische Aminosäuren mit besondere
           tags: ["hückel-regel", "antiaromatisch", "cyclooctatetraen"],
         },
       ],
-    },,
+    },
     // === from kap13-naturstoffe ===
     {
       id: 'ch-13-01',
@@ -1924,6 +1924,6 @@ DNA-Methylierung (Methylierung von Cytosin an CpG-Dinukleotiden durch DNA-Methyl
           difficulty: 2,
         },
       ],
-    },,
+    },
   ],
 };
