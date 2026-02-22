@@ -85,7 +85,7 @@ Karzinome (Krebserkrankungen) entstehen zu ca. 85 % aus Epithelgewebe. Die Zilie
             "Der Begriff 'Fence-Funktion' beschreibt, was sie zusätzlich zur Barriere leisten.",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['tight junctions', 'epithel', 'barrierefunktion'],
         },
         {
           question: "Welches Epithel findet sich in der Harnblase und ermöglicht deren Dehnung?",
@@ -103,7 +103,7 @@ Karzinome (Krebserkrankungen) entstehen zu ca. 85 % aus Epithelgewebe. Die Zilie
             "Die obersten Zellen dieses Epithels sind charakteristisch gewölbt und haben einen eigenen Namen.",
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['urothel', 'harnblase', 'schirmzellen'],
         },
         {
           question: "Ein Arzt untersucht ein Gewebe: Die Zellen sind säulenförmig, sitzen auf einer Basalmembran und tragen apikale Mikrovilli. In welchem Organ befindet man sich wahrscheinlich?",
@@ -121,7 +121,7 @@ Karzinome (Krebserkrankungen) entstehen zu ca. 85 % aus Epithelgewebe. Die Zilie
             "Säulenförmige Zellen + Mikrovilli + einschichtig: Das ist das Paradebeispiel eines Resorptionsepithels.",
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['zylinderepithel', 'dünndarm', 'mikrovilli'],
         },
         {
           question: "Was kennzeichnet ein 'mehrreihiges' (pseudostratifiziertes) Epithel gegenüber einem echten mehrschichtigen Epithel?",
@@ -139,7 +139,7 @@ Karzinome (Krebserkrankungen) entstehen zu ca. 85 % aus Epithelgewebe. Die Zilie
             "Die entscheidende Frage ist: Welche Zellen berühren die Basalmembran?",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['mehrreihiges epithel', 'pseudostratifiziert', 'basalmembran'],
         },
         {
           question: "Welcher Sekretionsmechanismus ist charakteristisch für Talgdrüsen?",
@@ -157,7 +157,7 @@ Karzinome (Krebserkrankungen) entstehen zu ca. 85 % aus Epithelgewebe. Die Zilie
             "Denke an den Talg: Er ist sehr öl-reich. Wie könnte eine Zelle so viel Lipid abgeben?",
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['holokrin', 'talgdrüsen', 'sekretionsmechanismus'],
         },
       ],
     },
@@ -256,7 +256,7 @@ Knochen bestehen aus organischer Matrix (Osteoid: Kollagen Typ I, ca. 35 %) und 
             "Sehnen müssen extrem zugfest sein: Welcher Kollagentyp ist für Zugfestigkeit bekannt?",
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['kollagen', 'kollagen typ i', 'sehnen'],
         },
         {
           question: "Welches Merkmal unterscheidet Faserknorpel von Hyalinknorpel?",
@@ -274,7 +274,7 @@ Knochen bestehen aus organischer Matrix (Osteoid: Kollagen Typ I, ca. 35 %) und 
             "Bandscheiben müssen sowohl Druck als auch Zug widerstehen — welcher Knorpeltyp kann das?",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['faserknorpel', 'hyalinknorpel', 'bandscheibe'],
         },
         {
           question: "Was ist die Funktion von UCP-1 (Thermogenin) im braunen Fettgewebe?",
@@ -292,7 +292,7 @@ Knochen bestehen aus organischer Matrix (Osteoid: Kollagen Typ I, ca. 35 %) und 
             "Braunes Fettgewebe erzeugt Wärme — wie kann ein Protein das bewerkstelligen?",
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['ucp-1', 'braunes fettgewebe', 'thermogenese'],
         },
         {
           question: "Vitamin C ist für die Kollagensynthese notwendig, weil es...",
@@ -310,7 +310,7 @@ Knochen bestehen aus organischer Matrix (Osteoid: Kollagen Typ I, ca. 35 %) und 
             "Prolylhydroxylase braucht Vitamin C als Cofaktor — welcher Schritt der Kollagensynthese wird dadurch ermöglicht?",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['vitamin c', 'kollagensynthese', 'hydroxylierung'],
         },
         {
           question: "Warum heilt Knorpel nach Verletzungen so schlecht?",
@@ -328,7 +328,7 @@ Knochen bestehen aus organischer Matrix (Osteoid: Kollagen Typ I, ca. 35 %) und 
             "Knorpel wird durch Diffusion ernährt — was bedeutet das für die Zufuhr von Reparaturzellen?",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['knorpel', 'avaskularität', 'heilung'],
         },
       ],
     },
@@ -399,7 +399,7 @@ Eine **motorische Einheit** besteht aus einem Alpha-Motoneuron und allen von ihm
           merksatz: "Motorische Einheit = 1 Alpha-Motoneuron + seine Muskelfasern; Kraft durch Rekrutierung und Frequenz.",
         },
       ],
-      diagram: 'sarkomer',
+      diagram: 'sarcomere',
 
       merksätze: [
         "Sarkomer: Z-Z-Grenzen; bei Kontraktion kürzer werden I-Bande und H-Zone; A-Bande bleibt konstant.",
@@ -429,7 +429,7 @@ Eine **motorische Einheit** besteht aus einem Alpha-Motoneuron und allen von ihm
             "I-Bande = nur Aktin. Was passiert mit der I-Bande, wenn Aktin in Richtung Mitte gezogen wird?",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['sarkomer', 'a-bande', 'i-bande'],
         },
         {
           question: "Welcher Schritt der Kreuzbrücken-Kontraktion erfordert ATP?",
@@ -447,7 +447,7 @@ Eine **motorische Einheit** besteht aus einem Alpha-Motoneuron und allen von ihm
             "ATP ist nicht für den Kraftschlag nötig, sondern für das ... was danach kommt.",
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['kreuzbrückenzyklus', 'atp', 'myosin'],
         },
         {
           question: "Was unterscheidet Herzmuskulatur von Skelettmuskulatur?",
@@ -465,7 +465,7 @@ Eine **motorische Einheit** besteht aus einem Alpha-Motoneuron und allen von ihm
             "Herzmuskel ist quergestreift — aber was unterscheidet ihn vom Skelettmuskel in Bezug auf Kerne und Kopplung?",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['herzmuskel', 'skelettmuskel', 'glanzstreifen'],
         },
         {
           question: "Warum tritt Rigor mortis (Totenstarre) nach dem Tod ein?",
@@ -483,7 +483,7 @@ Eine **motorische Einheit** besteht aus einem Alpha-Motoneuron und allen von ihm
             "Nach dem Tod fällt der Energiestoffwechsel aus. Was geschieht mit aktiven Querbrücken ohne ATP?",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['rigor mortis', 'atp', 'myosin aktin'],
         },
         {
           question: "Warum werden bei Herzinfarkt Troponin-Werte im Blut gemessen?",
@@ -501,7 +501,7 @@ Eine **motorische Einheit** besteht aus einem Alpha-Motoneuron und allen von ihm
             "Was passiert mit dem Zellinhalt, wenn Kardiomyozyten absterben (nekrotisch werden)?",
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['troponin', 'herzinfarkt', 'kardiomyozyten'],
         },
       ],
     },
@@ -597,7 +597,7 @@ Die **Myelinscheide** ist eine Lipid-reiche Membranwicklung um das Axon. Sie bes
             "Am Axon beginnt die Weiterleitung — genau an seiner Basis gibt es eine spezialisierte Zone mit vielen Na⁺-Kanälen.",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['axonhügel', 'aktionspotential', 'na-kanäle'],
         },
         {
           question: "Welche Gliazellen bilden die Myelinscheide im zentralen Nervensystem (ZNS)?",
@@ -615,7 +615,7 @@ Die **Myelinscheide** ist eine Lipid-reiche Membranwicklung um das Axon. Sie bes
             "Schwann-Zellen vs. Oligodendrozyten: Welche sind im peripheren, welche im zentralen NS?",
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['oligodendrozyten', 'myelinscheide', 'zns'],
         },
         {
           question: "Was ist der Hauptvorteil der saltatorischen Erregungsleitung?",
@@ -633,7 +633,7 @@ Die **Myelinscheide** ist eine Lipid-reiche Membranwicklung um das Axon. Sie bes
             "Wenn die ATPase nur an wenigen Stellen (Schnürringen) pumpen muss, was spart das?",
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['saltatorische leitung', 'ranvier-schnürringe', 'leitungsgeschwindigkeit'],
         },
         {
           question: "Bei Multipler Sklerose wird die Myelinscheide zerstört. Welche direkte Konsequenz hat das für die Erregungsleitung?",
@@ -651,7 +651,7 @@ Die **Myelinscheide** ist eine Lipid-reiche Membranwicklung um das Axon. Sie bes
             "Denk an den elektrischen Widerstand: Ohne Myelin steigt die Kapazität der Membran — was geschieht mit dem Ionenstrom?",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['multiple sklerose', 'demyelinisierung', 'erregungsleitung'],
         },
         {
           question: "Welche Funktion haben Astrozyten an der Blut-Hirn-Schranke?",
@@ -669,7 +669,7 @@ Die **Myelinscheide** ist eine Lipid-reiche Membranwicklung um das Axon. Sie bes
             "Astrozyten haben spezialisierte Endfüße, die Blutgefäße umhüllen — was könnte das funktionell bedeuten?",
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['astrozyten', 'blut-hirn-schranke', 'tight junctions'],
         },
       ],
     },

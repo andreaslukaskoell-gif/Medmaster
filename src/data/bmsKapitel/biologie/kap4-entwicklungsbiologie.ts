@@ -66,7 +66,7 @@ Am Tag 6–7 nach der Befruchtung beginnt die **Implantation (Nidation)** im **E
           explanation: "Die Befruchtung findet physiologischerweise in der Ampulle des Eileiters (Tuba uterina) statt, dem weitesten Abschnitt im äußeren Drittel. Hier treffen Oozyte und Spermien aufeinander. Findet die Implantation nicht im Uterus, sondern z. B. im Isthmus oder Infundibulum statt, spricht man von einer Eileiterschwangerschaft (Extrauteringravidität).",
           hints: ["Denk an den weitesten Abschnitt der Tuba uterina.", "Ampulle = äußeres Drittel."],
           difficulty: 1,
-          tags: [],
+          tags: ['befruchtung', 'ampulle', 'eileiter'],
         },
         {
           question: "Welche Aussage zur Akrosom-Reaktion und Kortikalreaktion ist korrekt?",
@@ -81,7 +81,7 @@ Am Tag 6–7 nach der Befruchtung beginnt die **Implantation (Nidation)** im **E
           explanation: "Die Akrosom-Reaktion ist ein Vorgang am Spermium: Das Akrosom setzt Enzyme (Akrosin, Hyaluronidase) frei, die die Zona pellucida durchdringen. Die Kortikalreaktion ist ein Vorgang der Eizelle: Ca²⁺-Anstieg → kortikale Granula-Exozytose → Zona-Modifikation → Polyspermie-Block. Beide Vorgänge sind getrennt, aber zeitlich eng verknüpft.",
           hints: ["Akrosom gehört zum Spermium, kortikale Granula gehören zur Eizelle.", "Kortikalreaktion = Schutz vor Polyspermie."],
           difficulty: 2,
-          tags: [],
+          tags: ['akrosom-reaktion', 'kortikalreaktion', 'polyspermie'],
         },
         {
           question: "Welche Struktur der Blastozyste entwickelt sich zur Plazenta und produziert hCG?",
@@ -96,7 +96,7 @@ Am Tag 6–7 nach der Befruchtung beginnt die **Implantation (Nidation)** im **E
           explanation: "Der Trophoblast (äußere Zellschicht der Blastozyste) entwickelt sich zur Plazenta (Chorion) und ist die Quelle von hCG (humanes Choriongonadotropin). Der Embryoblast (= innere Zellmasse) entwickelt sich zum eigentlichen Embryo. Das Blastozoel ist nur der flüssigkeitsgefüllte Hohlraum.",
           hints: ["Tropho- = ernährend → Plazenta.", "hCG = humanes Choriongonadotropin → Chorion kommt vom Trophoblast."],
           difficulty: 1,
-          tags: [],
+          tags: ['trophoblast', 'plazenta', 'hcg'],
         },
         {
           question: "Wann findet die Implantation der Blastozyste im Endometrium statt?",
@@ -111,7 +111,7 @@ Am Tag 6–7 nach der Befruchtung beginnt die **Implantation (Nidation)** im **E
           explanation: "Die Implantation (Nidation) findet am Tag 6–7 nach der Befruchtung statt, was dem Tag 20–21 des Menstruationszyklus entspricht (Lutealphase, Progesteron-Hochphase). Zu diesem Zeitpunkt liegt die Blastozyste vor, während Morula und frühe Blastozyste noch im Eileiter/Uterus wandern.",
           hints: ["Blastozyste bildet sich Tag 5–6, Implantation kurz danach.", "Lutealphase = Tage 15–28 des Zyklus."],
           difficulty: 1,
-          tags: [],
+          tags: ['implantation', 'blastozyste', 'endometrium'],
         },
         {
           question: "Welche Funktion hat hCG in der frühen Schwangerschaft?",
@@ -126,7 +126,7 @@ Am Tag 6–7 nach der Befruchtung beginnt die **Implantation (Nidation)** im **E
           explanation: "hCG wird vom Trophoblast produziert und bindet an LH-Rezeptoren des Corpus luteum, das dadurch erhalten bleibt und Progesteron weiter sezerniert. Dies stabilisiert das Endometrium und verhindert die Menstruation. hCG ist im Blut ab Tag ~10, im Urin ab Tag ~14 nach Befruchtung nachweisbar und erreicht sein Maximum in der 8.–12. SSW.",
           hints: ["hCG wirkt wie LH → bindet an LH-Rezeptoren.", "Schwangerschaftstest misst hCG im Urin."],
           difficulty: 2,
-          tags: [],
+          tags: ['hcg', 'corpus luteum', 'progesteron'],
         },
       ],
     },
@@ -187,7 +187,7 @@ Das **Ektoderm** (äußeres Keimblatt) bildet Epidermis, Haar, Nägel, Drüsen d
           explanation: "Der Primitivstreifen ist eine Verdickung am kaudalen Ende des Epiblasts der zweischichtigen Keimscheibe. Epiblastzellen wandern dorthin, invaginieren durch die Primitivrinne und bilden Endoderm (verdrängt Hypoblast) und Mesoderm. Die auf der Oberfläche verbleibenden Epiblastzellen werden Ektoderm. So entstehen alle drei Keimblätter aus dem Epiblast.",
           hints: ["Gastrulation = drei Keimblätter aus dem Epiblast.", "Primitivstreifen = Invaginations-Ort am kaudalen Pol."],
           difficulty: 2,
-          tags: [],
+          tags: ['primitivstreifen', 'gastrulation', 'keimblätter'],
         },
         {
           question: "Welches Keimblatt ist die Quelle für Skelettmuskel, Herzmuskel, Nieren und Gonaden?",
@@ -202,7 +202,7 @@ Das **Ektoderm** (äußeres Keimblatt) bildet Epidermis, Haar, Nägel, Drüsen d
           explanation: "Das Mesoderm (mittleres Keimblatt) gibt Skelettmuskel (aus Myotom der Somiten), Herzmuskel, glatte Muskulatur, Nieren, Gonaden, Milz, Gefäßsystem, Knochen und Bindegewebe. Ektoderm → Haut und Nervensystem; Endoderm → Darmauskleidung, Atemwege, Drüsen.",
           hints: ["Meso = Mitte → gibt 'innere' Körperstrukturen außer Darmauskleidung.", "Nieren und Gonaden = Mesoderm (Intermediärmesoderm)."],
           difficulty: 1,
-          tags: [],
+          tags: ['mesoderm', 'skelettmuskel', 'nieren'],
         },
         {
           question: "Welche Struktur induziert die Bildung der Neuralplatte aus dem Ektoderm?",
@@ -217,7 +217,7 @@ Das **Ektoderm** (äußeres Keimblatt) bildet Epidermis, Haar, Nägel, Drüsen d
           explanation: "Das Notochord ist eine transiente Achsenstruktur, die aus dem Primitiv-Knoten (Hensen-Knoten) entsteht und Mesoderm-Ursprungs ist. Es sezerniert Signalmoleküle (z. B. Sonic Hedgehog), die das darüber liegende Ektoderm zur Bildung der Neuralplatte veranlassen (Neurulation). Das Notochord wird später zum Nucleus pulposus der Bandscheiben.",
           hints: ["Notochord = transiente Längsachse, Mesoderm-Derivat.", "Induktion: Notochord → Neuralplatte."],
           difficulty: 2,
-          tags: [],
+          tags: ['notochord', 'neuralplatte', 'neurulation'],
         },
         {
           question: "Welches Organ/Gewebe stammt vom Endoderm?",
@@ -232,7 +232,7 @@ Das **Ektoderm** (äußeres Keimblatt) bildet Epidermis, Haar, Nägel, Drüsen d
           explanation: "Das Endoderm bildet das Epithel des gesamten Gastrointestinaltrakts (Speiseröhre bis Rektum), der Lunge (Bronchialepithel), der Harnblase und der Drüsen (Leber, Pankreas, Schilddrüse, Thymus). Epidermis → Ektoderm; Skelettmuskel, Herzmuskel → Mesoderm; Neuralleiste → Ektoderm-Derivat.",
           hints: ["Endoderm = innen → Auskleidung innerer Organe.", "Leber und Pankreas: endodermale Ausstülpungen."],
           difficulty: 1,
-          tags: [],
+          tags: ['endoderm', 'darmtrakt', 'leber'],
         },
         {
           question: "Was sind Somiten und welche drei Bereiche differenzieren sie aus?",
@@ -247,7 +247,7 @@ Das **Ektoderm** (äußeres Keimblatt) bildet Epidermis, Haar, Nägel, Drüsen d
           explanation: "Somiten sind paarige Mesoderm-Blöcke, die segmental beiderseits des Neuralrohrs entstehen (Woche 3–5). Jeder Somit differenziert sich in: Sklerotom (ventral → Wirbel, Rippen), Myotom (mittig → Skelettmuskulatur) und Dermatom (dorsal → dermales Bindegewebe unter der Haut). Sie sind wichtige Muster-Einheiten des Körperbaus.",
           hints: ["Somit = Mesoderm-Segment.", "Sklero → Knochen; Myo → Muskel; Derma → Haut-Bindegewebe."],
           difficulty: 2,
-          tags: [],
+          tags: ['somiten', 'sklerotom', 'myotom'],
         },
       ],
     },
@@ -308,7 +308,7 @@ Ab der 9. Woche beginnt die **Fetalperiode**: Organwachstum und -reifung stehen 
           explanation: "Die Embryonalperiode umfasst Wochen 1–8 und endet nach Woche 8. In dieser Zeit findet die Organogenese statt. Ab Woche 9 beginnt die Fetalperiode mit Schwerpunkt auf Wachstum und Reifung bereits angelegter Organe. SSL am Ende Woche 8 ca. 3 cm.",
           hints: ["Embryo → Fötus: Wechsel nach Abschluss der Organogenese.", "Organogenese = Woche 3–8."],
           difficulty: 1,
-          tags: [],
+          tags: ['embryonalperiode', 'fetalperiode', 'organogenese'],
         },
         {
           question: "Was beschreibt das 'Alles-oder-Nichts-Prinzip' in der Embryologie?",
@@ -323,7 +323,7 @@ Ab der 9. Woche beginnt die **Fetalperiode**: Organwachstum und -reifung stehen 
           explanation: "Das Alles-oder-Nichts-Prinzip gilt nur für die Präimplantationsphase (Woche 1–2): Da frühe Blastomere totipotent sind, können verbleibende gesunde Zellen zerstörte ersetzen → kein Defekt. Sind zu viele Zellen geschädigt, stirbt der Embryo. Ab Woche 3 (Gastrulation, Differenzierung) gilt es nicht mehr: Teratogene können dann spezifische Fehlbildungen verursachen.",
           hints: ["Gilt nur für Woche 1–2.", "Totipotenz erlaubt Kompensation."],
           difficulty: 2,
-          tags: [],
+          tags: ['alles-oder-nichts-prinzip', 'teratogen', 'totipotenz'],
         },
         {
           question: "In welcher Schwangerschaftswoche beginnt die Surfactant-Produktion der Typ-II-Pneumozyten?",
@@ -338,7 +338,7 @@ Ab der 9. Woche beginnt die **Fetalperiode**: Organwachstum und -reifung stehen 
           explanation: "Typ-II-Pneumozyten beginnen ab ca. Woche 24 mit der Produktion von Surfactant (hauptsächlich Dipalmitoylphosphatidylcholin, DPPC). Surfactant reduziert die Oberflächenspannung in Alveolen und verhindert deren Kollaps beim Ausatmen. Frühgeburten vor Woche 28 haben kritisch wenig Surfactant → Atemnotsyndrom (RDS). Kortikosteroide (Betamethason) beschleunigen die Reifung.",
           hints: ["Surfactant-Reife: 'Vierfach' = Woche 24.", "Viabilität = ab ca. Woche 22–24."],
           difficulty: 2,
-          tags: [],
+          tags: ['surfactant', 'typ-ii-pneumozyten', 'lungenreife'],
         },
         {
           question: "Welche Aussage zu Teratogenen und kritischen Perioden ist korrekt?",
@@ -353,7 +353,7 @@ Ab der 9. Woche beginnt die **Fetalperiode**: Organwachstum und -reifung stehen 
           explanation: "Die kritische Periode ist die Zeit der intensivsten Differenzierung eines Organs. In dieser Zeit ist es am empfindlichsten gegenüber Teratogenen. Das ZNS hat die längste kritische Periode (Woche 3 bis postnatal). Alkohol wirkt während der gesamten Schwangerschaft. Ionisierende Strahlung ist ein anerkanntes physikalisches Teratogen.",
           hints: ["Kritisch = aktivste Differenzierungsphase.", "ZNS = längste kritische Periode."],
           difficulty: 1,
-          tags: [],
+          tags: ['teratogen', 'kritische periode', 'fehlbildung'],
         },
         {
           question: "Welcher Entwicklungsmeilenstein entspricht ca. der 16.–20. Schwangerschaftswoche?",
@@ -368,7 +368,7 @@ Ab der 9. Woche beginnt die **Fetalperiode**: Organwachstum und -reifung stehen 
           explanation: "In der 16.–20. SSW spüren Mütter erstmalig die Kindsbewegungen (Quickening); das Fetus ist mit Lanugo-Haar bedeckt. Der Herzschlag beginnt in Woche 3–4; äußere Genitalien differenzieren bis Woche 12; Surfactant-Produktion beginnt ab Woche 24; vollständige Lungenreife erst um Woche 35–37.",
           hints: ["Quickening = erstmalige Kindsbewegungen, Mitte der Schwangerschaft.", "Lanugo = feines Flaumhaar auf fetaler Haut."],
           difficulty: 1,
-          tags: [],
+          tags: ['quickening', 'kindsbewegungen', 'lanugo'],
         },
       ],
     },
@@ -430,7 +430,7 @@ Die **Plazentaschranke** (Histo-hämatische Schranke) trennt mütterliches von f
           explanation: "Die Plazenta hat zwei Anteile: Der fetale Anteil ist das Chorion frondosum (Chorionzotten des Trophoblasten), der mütterliche Anteil ist die Decidua basalis (transformiertes Endometrium unter der Plazenta). Die Chorionzotten tauchen in mütterliche Blutseen (intervillöse Räume) ein, mischen ihr Blut aber nicht direkt mit mütterlichem Blut.",
           hints: ["Chorion = Trophoblast-Derivat = fetal.", "Decidua = umgebautes Endometrium = mütterlich."],
           difficulty: 1,
-          tags: [],
+          tags: ['plazenta', 'chorionzotten', 'decidua basalis'],
         },
         {
           question: "Welches Hormon wird von der Plazenta produziert, um in der frühen Schwangerschaft das Corpus luteum zu erhalten?",
@@ -445,7 +445,7 @@ Die **Plazentaschranke** (Histo-hämatische Schranke) trennt mütterliches von f
           explanation: "hCG (humanes Choriongonadotropin) wird vom Synzytiotrophoblast der Plazenta produziert und erhält das Corpus luteum, das seinerseits Progesteron für den Endometrium-Erhalt produziert. hCG wirkt wie LH (bindet an LH-Rezeptoren). Ab Woche 8–10 übernimmt die Plazenta zunehmend die Progesteronsynthese selbst, und hCG fällt ab.",
           hints: ["hCG = 'Schwangerschaftshormon' = Schwangerschaftstest.", "LH-Analogon → erhält Corpus luteum."],
           difficulty: 1,
-          tags: [],
+          tags: ['hcg', 'corpus luteum', 'progesteron'],
         },
         {
           question: "Wie gelangt IgG von der Mutter auf den Fötus?",
@@ -460,7 +460,7 @@ Die **Plazentaschranke** (Histo-hämatische Schranke) trennt mütterliches von f
           explanation: "IgG (der einzige Immunglobulin-Isotyp, der die Plazenta passiert) wird aktiv durch Transzytose über FcRn-Rezeptoren (neonatale Fc-Rezeptoren) im Synzytiotrophoblast transportiert. Dies ist die Basis der passiven Immunität des Neugeborenen (Leihimmunität, Nestschutz). IgM, IgA, IgE und IgD passieren die Plazenta nicht.",
           hints: ["FcRn = neonataler Fc-Rezeptor.", "Nur IgG passiert Plazenta aktiv."],
           difficulty: 2,
-          tags: [],
+          tags: ['igg', 'plazentaschranke', 'transzytose'],
         },
         {
           question: "Welches Blut führt die Nabelvene zum Fötus?",
@@ -475,7 +475,7 @@ Die **Plazentaschranke** (Histo-hämatische Schranke) trennt mütterliches von f
           explanation: "Die Nabelvene (1×) führt sauerstoffreiches, nährstoffreiches Blut von der Plazenta zum Fötus. Die beiden Nabelarterien (2×) führen sauerstoffarmes, CO₂-reiches Blut vom Fötus zur Plazenta. Merkhilfe: AVA (Arterie-Vene-Arterie). Dies ist das Gegenteil der systemischen Konvention: fetale Arterien führen 'venöses' Blut.",
           hints: ["AVA = Arterie-Vene-Arterie in der Nabelschnur.", "Vene führt immer Blut zum Herz/Fötus hin."],
           difficulty: 1,
-          tags: [],
+          tags: ['nabelvene', 'nabelschnur', 'sauerstoff'],
         },
         {
           question: "Welche Aussage zur Plazentaschranke ist korrekt?",
@@ -490,7 +490,7 @@ Die **Plazentaschranke** (Histo-hämatische Schranke) trennt mütterliches von f
           explanation: "Die Plazentaschranke ist keine absolute Barriere. Lipophile (fettlösliche) Moleküle – darunter Alkohol, Nikotin, CO (aus Rauchen), viele Medikamente (Thalidomid, Retinoide) und lipophile Viren – können sie passieren. Im dritten Trimester wird sie tatsächlich dünner (weniger Zytotrophoblastzellen), was den Austausch erleichtert, aber auch die Permeabilität erhöht.",
           hints: ["Lipophil = fettlöslich = passiert Membranen leicht.", "Alkohol und Nikotin passieren die Plazenta."],
           difficulty: 2,
-          tags: [],
+          tags: ['plazentaschranke', 'lipophile stoffe', 'alkohol'],
         },
       ],
     },

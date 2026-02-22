@@ -106,7 +106,7 @@ Die Systembiologie ist ein interdisziplinäres Feld, das mathematische Modellier
             'Schnee und Salz können kristallisieren – aber sie leben nicht.',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['kennzeichen des lebens', 'stoffwechsel', 'homöostase'],
         },
         {
           question: 'Was versteht man unter Emergenz in der Systembiologie?',
@@ -124,7 +124,7 @@ Die Systembiologie ist ein interdisziplinäres Feld, das mathematische Modellier
             'Kann eine einzelne Nervenzelle denken?',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['emergenz', 'systembiologie', 'organisationsebene'],
         },
         {
           question: 'Welche Art der Rückkopplung hält die Homöostase aufrecht?',
@@ -142,7 +142,7 @@ Die Systembiologie ist ein interdisziplinäres Feld, das mathematische Modellier
             'Thermostat-Prinzip: Zu warm → Kühlung einschalten.',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['homöostase', 'rückkopplung', 'negative rückkopplung'],
         },
         {
           question: 'Auf welcher Ebene der biologischen Hierarchie sind Gewebe angesiedelt?',
@@ -160,7 +160,7 @@ Die Systembiologie ist ein interdisziplinäres Feld, das mathematische Modellier
             'Skelettmuskeln bestehen aus vielen Muskelfasern (= spezialisierten Zellen).',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['biologische hierarchie', 'gewebe', 'organe'],
         },
         {
           question: 'Warum erfüllen Viren nicht alle Kennzeichen des Lebens?',
@@ -178,7 +178,7 @@ Die Systembiologie ist ein interdisziplinäres Feld, das mathematische Modellier
             'Kann ein Virus außerhalb einer Wirtszelle Energie gewinnen?',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['viren', 'stoffwechsel', 'kennzeichen des lebens'],
         },
         {
           question: 'Welcher Begriff beschreibt das Bestreben der Zelle, einen stabilen inneren pH-Wert zu halten?',
@@ -196,7 +196,7 @@ Die Systembiologie ist ein interdisziplinäres Feld, das mathematische Modellier
             'pH 7,4 im Blut – wie bleibt dieser Wert konstant?',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['homöostase', 'ph-wert', 'blut'],
         },
         {
           question: 'Was ist das Prinzip der positiven Rückkopplung? Nennen Sie ein physiologisches Beispiel.',
@@ -214,7 +214,7 @@ Die Systembiologie ist ein interdisziplinäres Feld, das mathematische Modellier
             'Wehen werden stärker, je weiter die Geburt fortschreitet – warum?',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['positive rückkopplung', 'wehen', 'oxytocin'],
         },
         {
           question: 'Welche Aussage zur Zelltheorie ist korrekt?',
@@ -232,7 +232,7 @@ Die Systembiologie ist ein interdisziplinäres Feld, das mathematische Modellier
             'Zelltheorie = fundamentales Prinzip der Biologie seit dem 19. Jahrhundert.',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['zelltheorie', 'schleiden', 'virchow'],
         },
       ],
     },
@@ -363,7 +363,7 @@ Die strukturellen Unterschiede zwischen Prokaryoten und Eukaryoten sind die mole
             'Haben Bakterien einen Zellkern mit Membran?',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['prokaryoten', 'eukaryoten', 'zellkern'],
         },
         {
           question: 'Welche Ribosomengröße haben Prokaryoten?',
@@ -381,7 +381,7 @@ Die strukturellen Unterschiede zwischen Prokaryoten und Eukaryoten sind die mole
             '70S = 30S + 50S (Sedimentationskoeffizienten addieren sich nicht linear).',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['ribosomen', '70S', 'antibiotika'],
         },
         {
           question: 'Aus welchem Material besteht die bakterielle Zellwand?',
@@ -399,7 +399,7 @@ Die strukturellen Unterschiede zwischen Prokaryoten und Eukaryoten sind die mole
             'Murein ist ein anderer Name für dasselbe Material.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['zellwand', 'peptidoglykan', 'penicillin'],
         },
         {
           question: 'Welche der folgenden Eigenschaften belegt die Endosymbiontentheorie für Mitochondrien?',
@@ -417,7 +417,7 @@ Die strukturellen Unterschiede zwischen Prokaryoten und Eukaryoten sind die mole
             'Welche Ribosomgröße haben Bakterien?',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['endosymbiontentheorie', 'mitochondrien', 'zirkuläre dna'],
         },
         {
           question: 'Zu welcher Domäne gehören Archaeen?',
@@ -435,7 +435,7 @@ Die strukturellen Unterschiede zwischen Prokaryoten und Eukaryoten sind die mole
             'Drei Domänen des Lebens: Bacteria, Archaea, Eukarya.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['archaeen', 'drei-domänen-modell', 'carl woese'],
         },
         {
           question: 'Welches Antibiotikum hemmt die Quervernetzung von Peptidoglykan?',
@@ -453,7 +453,7 @@ Die strukturellen Unterschiede zwischen Prokaryoten und Eukaryoten sind die mole
             'Was muss vernetzt werden, damit die Zellwand stabil ist?',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['penicillin', 'peptidoglykan', 'quervernetzung'],
         },
         {
           question: 'Warum sind Gram-negative Bakterien oft resistenter gegen Penicillin als Gram-positive?',
@@ -471,7 +471,7 @@ Die strukturellen Unterschiede zwischen Prokaryoten und Eukaryoten sind die mole
             'LPS ist das Endotoxin gram-negativer Bakterien.',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['gram-negativ', 'lps', 'penicillin resistenz'],
         },
         {
           question: 'Welche Domäne des Lebens zeigt in ihrer Genregulation die größte Ähnlichkeit zu Eukaryoten?',
@@ -489,7 +489,7 @@ Die strukturellen Unterschiede zwischen Prokaryoten und Eukaryoten sind die mole
             'Wer ist evolutionär näher am Eukaryoten – Bacteria oder Archaea?',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['archaeen', 'genregulation', 'evolution'],
         },
       ],
       diagram: 'prokaryote-vs-eukaryote',
@@ -608,7 +608,7 @@ Cholesterin stabilisiert **Lipid-Rafts** – geordnete, cholesterin- und sphingo
             'Mosaik = die verschiedenen Proteine ergeben wie Mosaiksteine ein Gesamtbild.',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['flüssig-mosaik-modell', 'zellmembran', 'phospholipide'],
         },
         {
           question: 'Welche Funktion hat Cholesterin in der Zellmembran?',
@@ -626,7 +626,7 @@ Cholesterin stabilisiert **Lipid-Rafts** – geordnete, cholesterin- und sphingo
             'Was passiert mit Butter bei verschiedenen Temperaturen?',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['cholesterin', 'membranfluidität', 'puffereffekt'],
         },
         {
           question: 'Was sind integrale Membranproteine?',
@@ -644,7 +644,7 @@ Cholesterin stabilisiert **Lipid-Rafts** – geordnete, cholesterin- und sphingo
             'Transmembranproteine haben hydrophobe Helices im Membrankern.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['membranproteine', 'transmembranproteine', 'ionenkanäle'],
         },
         {
           question: 'Welche Eigenschaft der Fettsäuren erhöht die Membranfluidität?',
@@ -662,7 +662,7 @@ Cholesterin stabilisiert **Lipid-Rafts** – geordnete, cholesterin- und sphingo
             'Flüssige Pflanzenöle (viel ungesättigt) vs. feste Butter (gesättigt) – was ist der Unterschied?',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['fettsäuren', 'membranfluidität', 'ungesättigt'],
         },
         {
           question: 'Was ist die Funktion der Glykokalix?',
@@ -680,7 +680,7 @@ Cholesterin stabilisiert **Lipid-Rafts** – geordnete, cholesterin- und sphingo
             'Blutgruppen A, B, AB, 0 – worauf beruht dieser Unterschied?',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['glykokalix', 'blutgruppenantigene', 'zellerkennung'],
         },
         {
           question: 'Warum ist deltaF508-CFTR ein Beispiel für eine Membranprotein-Fehlfaltungskrankheit?',
@@ -698,7 +698,7 @@ Cholesterin stabilisiert **Lipid-Rafts** – geordnete, cholesterin- und sphingo
             'Was macht das ER mit fehlgefalteten Proteinen?',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['cftr', 'mukoviszidose', 'fehlfaltung'],
         },
         {
           question: 'Was sind Lipid-Rafts?',
@@ -716,7 +716,7 @@ Cholesterin stabilisiert **Lipid-Rafts** – geordnete, cholesterin- und sphingo
             'Cholesterin + Sphingolipide = geordnete Mikrodomänen.',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['lipid-rafts', 'cholesterin', 'signaltransduktion'],
         },
         {
           question: 'Welche Struktur ermöglicht schnellen Wassertransport durch die Membran?',
@@ -734,7 +734,7 @@ Cholesterin stabilisiert **Lipid-Rafts** – geordnete, cholesterin- und sphingo
             'Wasser diffundiert zu langsam durch reine Lipidmembranen – was beschleunigt es?',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['aquaporine', 'wassertransport', 'membrankanaäle'],
         },
       ],
       diagram: 'cell-membrane',
@@ -859,7 +859,7 @@ Der **Nucleolus** ist eine membranlose Substruktur im Kern (~1–5 µm), die dur
             'Kernporen sind selektive Tore – nicht offen für alles.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['kernhülle', 'kernporen', 'endoplasmatisches retikulum'],
         },
         {
           question: 'Was ist ein Nukleosom?',
@@ -877,7 +877,7 @@ Der **Nucleolus** ist eine membranlose Substruktur im Kern (~1–5 µm), die dur
             'Vier verschiedene Histone, jeweils doppelt = Oktamer.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['nukleosom', 'histone', 'chromatin'],
         },
         {
           question: 'Welche Funktion hat der Nucleolus?',
@@ -895,7 +895,7 @@ Der **Nucleolus** ist eine membranlose Substruktur im Kern (~1–5 µm), die dur
             'Was enthält ein Ribosom außer Proteinen?',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['nucleolus', 'ribosomale rna', 'ribosomensynthese'],
         },
         {
           question: 'Was ist Heterochromatin?',
@@ -913,7 +913,7 @@ Der **Nucleolus** ist eine membranlose Substruktur im Kern (~1–5 µm), die dur
             'Barr-Körperchen in weiblichen Zellen – was ist das?',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['heterochromatin', 'euchromatin', 'barr-körper'],
         },
         {
           question: 'Warum benötigen Proteine ein Kernlokalisierungssignal (NLS)?',
@@ -931,7 +931,7 @@ Der **Nucleolus** ist eine membranlose Substruktur im Kern (~1–5 µm), die dur
             'Proteine brauchen ein "Ticket" (NLS) für den Einlass in den Kern.',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['kernlokalisierungssignal', 'nls', 'kernimport'],
         },
         {
           question: 'Welche Erkrankung wird durch eine Mutation im Lamin-A-Gen (LMNA) verursacht?',
@@ -949,7 +949,7 @@ Der **Nucleolus** ist eine membranlose Substruktur im Kern (~1–5 µm), die dur
             'Wer altert extrem schnell?',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['progeria', 'lamin a', 'lmna'],
         },
         {
           question: 'Was ist der Unterschied zwischen RNA-Pol I und RNA-Pol II in eukaryotischen Zellen?',
@@ -967,7 +967,7 @@ Der **Nucleolus** ist eine membranlose Substruktur im Kern (~1–5 µm), die dur
             'Nucleolus = Ort der rRNA-Synthese = RNA-Pol I.',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['rna-polymerase', 'transkription', 'rrna'],
         },
         {
           question: 'Welche Histon-Modifikation ist mit aktivem Euchromatin assoziiert?',
@@ -985,7 +985,7 @@ Der **Nucleolus** ist eine membranlose Substruktur im Kern (~1–5 µm), die dur
             'Methyl auf Histon = oft repressiv; Acetyl auf Histon = oft aktiv.',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['histonmodifikation', 'epigenetik', 'azetylierung'],
         },
       ],
       diagram: 'animal-cell',

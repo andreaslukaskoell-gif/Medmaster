@@ -168,7 +168,7 @@ export const bioKap6: Kapitel = {
             "Berechne zuerst A + T (= 60 %), dann teile den Rest gleichmäßig auf G und C auf.",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['chargaff-regeln', 'adenin cytosin', 'basenpaarung'],
         },
         {
           question: "Welche Aussage zur **antiparallelen Struktur** der DNA-Doppelhelix ist korrekt?",
@@ -186,7 +186,7 @@ export const bioKap6: Kapitel = {
             "DNA-Polymerase verlängert ausschließlich in 5'→3'-Richtung — überlege, was das für die Synthese beider Stränge bedeutet.",
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['antiparallel', 'doppelhelix', 'dna-strang'],
         },
         {
           question: "Das Meselson-Stahl-Experiment (1958) bewies, dass die DNA-Replikation **semikonservativ** ist. Was bedeutet \"semikonservativ\"?",
@@ -204,7 +204,7 @@ export const bioKap6: Kapitel = {
             "Im Meselson-Stahl-Experiment zeigte sich nach einer Replikationsrunde ausschließlich Hybrid-DNA (mittlere Dichte) — was sagt das über den Verbleib der alten Stränge aus?",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['semikonservativ', 'replikation', 'meselson-stahl'],
         },
         {
           question: "Während der DNA-Replikation wird der **Leitstrang (Leading Strand)** kontinuierlich, der **Folgestrang (Lagging Strand)** diskontinuierlich synthetisiert. Welche Aussage ist korrekt?",
@@ -222,7 +222,7 @@ export const bioKap6: Kapitel = {
             "Der Folgestrang wird in kleinen Fragmenten synthetisiert, die jedes Mal einen neuen Primer brauchen — diese heißen Okazaki-Fragmente.",
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['leitstrang', 'folgestrang', 'okazaki-fragmente'],
         },
         {
           question: "DNA-Polymerase hat **3'→5' Exonuklease-Aktivität** (Korrekturlesen, Proofreading). Welche Funktion hat diese Aktivität?",
@@ -240,7 +240,7 @@ export const bioKap6: Kapitel = {
             "Stell dir vor, die Polymerase bemerkt einen falschen Baustein und macht einen Schritt zurück, um ihn zu entfernen — was verbessert das?",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['proofreading', 'dna-polymerase', 'exonuklease'],
         },
         {
           question: "**Telomerase** ist ein Ribonukleoprotein-Enzym, das Telomere (TTAGGG-Repeats) an Chromosomenenden verlängert. In welchen Zellen ist Telomerase **aktiv**, und welche klinische Bedeutung hat dies?",
@@ -258,7 +258,7 @@ export const bioKap6: Kapitel = {
             "Krebszellen teilen sich unbegrenzt — überlege, welches Enzym sie reaktivieren müssen, um die Telomere nicht zu verlieren.",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['telomerase', 'telomere', 'seneszenz'],
         }
       ],
     },
@@ -466,7 +466,7 @@ export const bioKap6: Kapitel = {
             "Denke an die vier Unterschiede: Zucker, Base (T vs. U), Stranganzahl und chemische Stabilität.",
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['rna dna unterschied', 'ribose', 'uracil'],
         },
         {
           question: "RNA-Polymerase synthetisiert RNA während der Transkription. Welche Aussage über RNA-Polymerase ist korrekt?",
@@ -484,7 +484,7 @@ export const bioKap6: Kapitel = {
             "Beide Polymerasen arbeiten in derselben Richtung (5'→3') — prüfe jede Antwort auf Richtungsangaben.",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['rna-polymerase', 'transkription', 'promotor'],
         },
         {
           question: "Bei der Transkription wird der **Template Strand (Antisense Strand)** als Matrize verwendet. Welche Aussage ist korrekt?",
@@ -502,7 +502,7 @@ export const bioKap6: Kapitel = {
             "Der Coding Strand hat die gleiche Sequenz wie die mRNA (nur T statt U) — er ist demnach nicht die Matrize, sondern der 'Informationsstrang'.",
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['template strand', 'antisense', 'transkription'],
         },
         {
           question: "Bei Eukaryoten bindet der Transkriptionsfaktor **TFIID** an die **TATA-Box** im Promotor. Welche Aussage ist korrekt?",
@@ -520,7 +520,7 @@ export const bioKap6: Kapitel = {
             "TBP (TATA-Binding Protein) ist eine Untereinheit von TFIID — es erkennt die TATA-Box und leitet die Bildung des Präinitiationskomplexes ein.",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['tfiid', 'tata-box', 'promotor'],
         },
         {
           question: "Während der **RNA-Prozessierung** bei Eukaryoten werden drei Modifikationen vorgenommen: 5'-Capping, 3'-Polyadenylierung und Splicing. Welche Aussage zur **5'-Capping** ist korrekt?",
@@ -538,7 +538,7 @@ export const bioKap6: Kapitel = {
             "Unterscheide 5'-Capping (m7G-Kappe, Schutz/Erkennung) von 3'-Polyadenylierung (Poly-A-Schwanz) — beides sind verschiedene Enden!",
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['5-capping', 'rna-prozessierung', 'mrna'],
         },
         {
           question: "**Splicing** bei Eukaryoten entfernt Introns aus der pre-mRNA. Welche Aussage zum Splicing ist korrekt?",
@@ -556,7 +556,7 @@ export const bioKap6: Kapitel = {
             "Das Spliceosom erkennt die Konsensussequenzen GU am Intronbeginn und AG am Intronende — was bedeutet das für die Häufigkeit dieser Dinukleotide?",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['splicing', 'introns', 'spleißosom'],
         }
       ],
     },
@@ -751,7 +751,7 @@ export const bioKap6: Kapitel = {
             "'Degeneriert' heißt hier nicht 'kaputt', sondern 'redundant' — mehrere Codons zeigen auf dasselbe Ziel.",
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['genetischer code', 'degeneriertheit', 'codons'],
         },
         {
           question: "Welches der folgenden Codons ist ein **Stopp-Codon** (Nonsense-Codon)?",
@@ -769,7 +769,7 @@ export const bioKap6: Kapitel = {
             "AUG ist das einzige Start-Codon und codiert Methionin — alle anderen Optionen außer den Stopp-Codons codieren reguläre Aminosäuren.",
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['stopp-codon', 'nonsense-codon', 'uaa'],
         },
         {
           question: "Die **Wobble-Hypothese** (Crick, 1966) erklärt, warum **45 tRNAs** ausreichen, um **61 codierende Codons** zu erkennen. Welche Aussage ist korrekt?",
@@ -787,7 +787,7 @@ export const bioKap6: Kapitel = {
             "Wenn 45 tRNAs für 61 Codons ausreichen, muss jede tRNA im Schnitt mehr als ein Codon lesen können — wie ist das möglich?",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['wobble-hypothese', 'trna', 'anticodon'],
         },
         {
           question: "**Aminoacyl-tRNA-Synthetase** ist ein Enzym, das tRNA mit der passenden Aminosäure belädt. Welche Aussage ist korrekt?",
@@ -805,7 +805,7 @@ export const bioKap6: Kapitel = {
             "Die Aminoacyl-tRNA-Synthetase 'belädt' die tRNA am CCA-3'-Ende — verwechsle sie nicht mit der Peptidyl-Transferase, die die Peptidbindung knüpft.",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['aminoacyl-trna-synthetase', 'trna-beladung', 'aminosäure'],
         },
         {
           question: "Bei Prokaryoten bindet das Ribosom an die **Shine-Dalgarno-Sequenz**. Bei Eukaryoten erfolgt die Initiation über die **5'-Capping** und **Kozak-Sequenz**. Welche Aussage ist korrekt?",
@@ -823,7 +823,7 @@ export const bioKap6: Kapitel = {
             "Merke: fMet (formyliertes Methionin) ist der Starter bei Prokaryoten — bei Eukaryoten ist es unformyliertes Met.",
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['ribosomale initiation', 'shine-dalgarno', 'kozak-sequenz'],
         },
         {
           question: "**Tetracyclin** ist ein Antibiotikum, das die bakterielle Proteinbiosynthese hemmt. Welcher Mechanismus liegt zugrunde?",
@@ -841,7 +841,7 @@ export const bioKap6: Kapitel = {
             "An welcher Stelle des Ribosoms bindet die neu eintreffende Aminoacyl-tRNA? Das ist die A-Site — Tetracyclin blockiert genau diese.",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['tetracyclin', 'proteinsynthese', 'antibiotikum'],
         }
       ],
     },
@@ -1029,6 +1029,7 @@ export const bioKap6: Kapitel = {
         },
       ],
       merksätze: [],
+      diagram: 'dna-helix',
       selfTest: [
         {
           question: "E. coli wächst in einem Medium mit **Laktose** als einziger Kohlenstoffquelle (keine Glukose). Welche Aussage zum **lac-Operon** ist korrekt?",
@@ -1046,7 +1047,7 @@ export const bioKap6: Kapitel = {
             "Wenn Glukose fehlt, steigt cAMP — das CAP-cAMP-System verstärkt die Transkription zusätzlich (positive Regulation).",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['lac-operon', 'genregulation', 'induktion'],
         },
         {
           question: "Das **trp-Operon** reguliert die Tryptophan-Biosynthese in E. coli. Welche Aussage ist korrekt?",
@@ -1064,7 +1065,7 @@ export const bioKap6: Kapitel = {
             "Wenn Tryptophan vorhanden ist, bindet es als Corepressor an den Repressor und schaltet die Gene ab — das ist das Gegenteil des lac-Operons.",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['trp-operon', 'repression', 'tryptophan'],
         },
         {
           question: "Bei Eukaryoten können **Enhancer** (verstärkende Sequenzen) die Transkription erhöhen. Welche Aussage ist korrekt?",
@@ -1082,7 +1083,7 @@ export const bioKap6: Kapitel = {
             "Das Gegenteil eines Enhancers ist ein Silencer — Enhancer erhöhen, Silencer senken die Transkription.",
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['enhancer', 'transkriptionsfaktoren', 'eukaryoten'],
         },
         {
           question: "**DNA-Methylierung** an CpG-Inseln (Cytosin-Guanin-Dinukleotide) ist ein wichtiger epigenetischer Mechanismus. Welche Aussage ist korrekt?",
@@ -1100,7 +1101,7 @@ export const bioKap6: Kapitel = {
             "Epigenetische Veränderungen ändern nicht die DNA-Sequenz selbst, sind aber vererbbar — wie unterscheidet sich das von einer Mutation?",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['dna-methylierung', 'epigenetik', 'cpg-inseln'],
         },
         {
           question: "**Histon-Acetylierung** durch Histon-Acetyltransferasen (HAT) ist ein wichtiger epigenetischer Mechanismus. Welche Aussage ist korrekt?",
@@ -1118,7 +1119,7 @@ export const bioKap6: Kapitel = {
             "Merke: HAT (Acetyltransferase) acetyliert → Transkription hoch; HDAC (Deacetylase) deacetyliert → Transkription runter.",
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['histon-acetylierung', 'epigenetik', 'chromatinstruktur'],
         },
         {
           question: "**miRNA** und **siRNA** sind kleine nicht-codierende RNAs, die die Genexpression regulieren. Welche Aussage ist korrekt?",
@@ -1136,7 +1137,7 @@ export const bioKap6: Kapitel = {
             "Beide RNA-Typen wirken über den RISC-Komplex — der entscheidende Unterschied liegt in ihrer Herkunft und der Vollständigkeit der Komplementarität.",
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['mirna', 'sirna', 'genexpression'],
         }
       ],
     }
