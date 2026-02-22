@@ -14,7 +14,15 @@ import {
   YAxis,
   CartesianGrid,
 } from "recharts";
-import { AlertTriangle, TrendingUp, TrendingDown, Target, Lightbulb, Calendar, Zap } from "lucide-react";
+import {
+  AlertTriangle,
+  TrendingUp,
+  TrendingDown,
+  Target,
+  Lightbulb,
+  Calendar,
+  Zap,
+} from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { RadarHexagonSkeleton } from "@/components/skeletons/AppSkeletons";
@@ -41,7 +49,8 @@ export default function Analysis() {
     const data: Record<string, { correct: number; total: number }> = {};
     quizResults.forEach((r) => {
       r.answers.forEach((a) => {
-        const key = (r.type === "bms" ? getQuestionSubject(a.questionId) : null) || r.subject || r.type;
+        const key =
+          (r.type === "bms" ? getQuestionSubject(a.questionId) : null) || r.subject || r.type;
         if (!data[key]) data[key] = { correct: 0, total: 0 };
         data[key].total += 1;
         if (a.correct) data[key].correct += 1;
@@ -71,26 +80,47 @@ export default function Analysis() {
     const patterns: { pattern: string; count: number; severity: "warning" | "danger" }[] = [];
 
     const recentResults = quizResults.slice(-10);
-    const recentAvg = recentResults.length > 0
-      ? Math.round(recentResults.reduce((s, r) => s + (r.score / r.total) * 100, 0) / recentResults.length)
-      : 0;
-    const overallAvg = quizResults.length > 0
-      ? Math.round(quizResults.reduce((s, r) => s + (r.score / r.total) * 100, 0) / quizResults.length)
-      : 0;
+    const recentAvg =
+      recentResults.length > 0
+        ? Math.round(
+            recentResults.reduce((s, r) => s + (r.score / r.total) * 100, 0) / recentResults.length
+          )
+        : 0;
+    const overallAvg =
+      quizResults.length > 0
+        ? Math.round(
+            quizResults.reduce((s, r) => s + (r.score / r.total) * 100, 0) / quizResults.length
+          )
+        : 0;
 
     if (recentAvg < overallAvg - 10) {
-      patterns.push({ pattern: "Leistungsabfall in letzten Quizzen", count: recentResults.length, severity: "warning" });
+      patterns.push({
+        pattern: "Leistungsabfall in letzten Quizzen",
+        count: recentResults.length,
+        severity: "warning",
+      });
     }
 
     weaknesses.forEach((w) => {
       if (w.total >= 5) {
-        patterns.push({ pattern: `Schwäche in ${w.name} (${w.percentage}%)`, count: w.total, severity: "danger" });
+        patterns.push({
+          pattern: `Schwäche in ${w.name} (${w.percentage}%)`,
+          count: w.total,
+          severity: "danger",
+        });
       }
     });
 
-    const unanswered = quizResults.reduce((count, r) => count + r.answers.filter((a) => !a.selectedAnswer).length, 0);
+    const unanswered = quizResults.reduce(
+      (count, r) => count + r.answers.filter((a) => !a.selectedAnswer).length,
+      0
+    );
     if (unanswered > 3) {
-      patterns.push({ pattern: "Häufig unbeantwortete Fragen", count: unanswered, severity: "warning" });
+      patterns.push({
+        pattern: "Häufig unbeantwortete Fragen",
+        count: unanswered,
+        severity: "warning",
+      });
     }
 
     return patterns;
@@ -99,10 +129,14 @@ export default function Analysis() {
   const recommendations = useMemo(() => {
     const recs: string[] = [];
     if (weaknesses.length > 0) {
-      recs.push(`Fokussiere dich auf ${weaknesses.map((w) => w.name).join(", ")} - hier hast du Verbesserungspotenzial.`);
+      recs.push(
+        `Fokussiere dich auf ${weaknesses.map((w) => w.name).join(", ")} - hier hast du Verbesserungspotenzial.`
+      );
     }
     if (strengths.length > 0) {
-      recs.push(`Deine Stärken liegen in ${strengths.map((s) => s.name).join(", ")}. Halte dieses Niveau!`);
+      recs.push(
+        `Deine Stärken liegen in ${strengths.map((s) => s.name).join(", ")}. Halte dieses Niveau!`
+      );
     }
     if (quizResults.length < 5) {
       recs.push("Absolviere mehr Quizze, um eine zuverlässigere Analyse zu erhalten.");
@@ -123,7 +157,9 @@ export default function Analysis() {
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Analyse" }]} />
 
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Stärken/Schwächen-Analyse</h1>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+          Stärken/Schwächen-Analyse
+        </h1>
         <p className="text-muted mt-1">Detaillierte Auswertung deiner Leistung nach Fachgebiet.</p>
       </div>
 
@@ -138,12 +174,21 @@ export default function Analysis() {
         </Card>
       ) : !hasData ? (
         <Card>
-          <CardContent className="p-12 text-center">
-            <Target className="w-12 h-12 text-muted mx-auto mb-3" />
-            <p className="text-lg font-medium text-gray-900 dark:text-gray-100">Noch keine Daten vorhanden</p>
-            <p className="text-sm text-muted mt-1">
-              Absolviere Quizze in BMS, KFF, TV oder SEK, um eine Analyse zu erhalten.
+          <CardContent className="p-12 text-center space-y-4">
+            <Target className="w-14 h-14 text-muted mx-auto" />
+            <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+              Noch keine Analyse verfügbar
             </p>
+            <p className="text-sm text-muted max-w-sm mx-auto">
+              Mache deinen ersten Test, um hier dein persönliches Kompetenzprofil und Schwachstellen
+              zu sehen.
+            </p>
+            <a
+              href="/simulation"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-600 text-white text-sm font-medium hover:bg-primary-700 transition-colors"
+            >
+              Erste Simulation starten →
+            </a>
           </CardContent>
         </Card>
       ) : (
@@ -158,7 +203,11 @@ export default function Analysis() {
                   <RadarChart data={radarData}>
                     <PolarGrid stroke="#e2e8f0" />
                     <PolarAngleAxis dataKey="subject" tick={{ fill: "#64748b", fontSize: 12 }} />
-                    <PolarRadiusAxis angle={30} domain={[0, 100]} tick={{ fill: "#94a3b8", fontSize: 10 }} />
+                    <PolarRadiusAxis
+                      angle={30}
+                      domain={[0, 100]}
+                      tick={{ fill: "#94a3b8", fontSize: 10 }}
+                    />
                     <Tooltip />
                     <Radar
                       name="Leistung"
@@ -254,7 +303,9 @@ export default function Analysis() {
                 {subjectData.map((d) => (
                   <div key={d.name}>
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{d.name}</span>
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        {d.name}
+                      </span>
                       <span className="text-xs text-muted">
                         {d.score}/{d.total} richtig ({d.percentage}%)
                       </span>
@@ -286,7 +337,10 @@ export default function Analysis() {
               <CardContent>
                 <div className="space-y-2">
                   {errorPatterns.map((p, i) => (
-                    <div key={i} className="flex items-center gap-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-800">
+                    <div
+                      key={i}
+                      className="flex items-center gap-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-800"
+                    >
                       <Badge variant={p.severity === "danger" ? "danger" : "warning"}>
                         {p.severity === "danger" ? "Kritisch" : "Hinweis"}
                       </Badge>
@@ -322,7 +376,10 @@ export default function Analysis() {
 
             // Simple linear projection: if current rate continues
             const globalRate = totalCorrect / totalQuestionsAnswered;
-            const projectedReadiness = Math.min(100, Math.round(readiness + (days * 0.15 * globalRate)));
+            const projectedReadiness = Math.min(
+              100,
+              Math.round(readiness + days * 0.15 * globalRate)
+            );
 
             // Weak topics that need most attention
             const weakTopics = store.getWeakestTopics(5);
@@ -338,21 +395,29 @@ export default function Analysis() {
                 <CardContent className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div className="bg-primary-50 dark:bg-primary-900/20 rounded-lg p-4 text-center">
-                      <p className="text-3xl font-bold text-primary-700 dark:text-primary-400">{readiness}%</p>
+                      <p className="text-3xl font-bold text-primary-700 dark:text-primary-400">
+                        {readiness}%
+                      </p>
                       <p className="text-xs text-muted mt-1">Aktuelle Bereitschaft</p>
                     </div>
                     <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-4 text-center">
-                      <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">{projectedReadiness}%</p>
+                      <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
+                        {projectedReadiness}%
+                      </p>
                       <p className="text-xs text-muted mt-1">Prognose am Prüfungstag</p>
                     </div>
                     <div className="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-4 text-center">
-                      <p className="text-3xl font-bold text-orange-700 dark:text-orange-400">{days}</p>
+                      <p className="text-3xl font-bold text-orange-700 dark:text-orange-400">
+                        {days}
+                      </p>
                       <p className="text-xs text-muted mt-1">Tage bis MedAT</p>
                     </div>
                   </div>
 
                   <div>
-                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2">Bereitschaft nach Fach</p>
+                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2">
+                      Bereitschaft nach Fach
+                    </p>
                     <ResponsiveContainer width="100%" height={180}>
                       <BarChart data={fachData} layout="vertical">
                         <CartesianGrid strokeDasharray="3 3" horizontal={false} />
@@ -366,16 +431,29 @@ export default function Analysis() {
 
                   {weakTopics.length > 0 && (
                     <div>
-                      <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2">Prioritäre Themen zum Verbessern</p>
+                      <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2">
+                        Prioritäre Themen zum Verbessern
+                      </p>
                       <div className="space-y-1.5">
                         {weakTopics.map((t) => (
-                          <Link key={t.stichwortId} to={`/schwachstellen?stichwort=${t.stichwortId}`} className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                          <Link
+                            key={t.stichwortId}
+                            to={`/schwachstellen?stichwort=${t.stichwortId}`}
+                            className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                          >
                             <div className="flex items-center gap-2 min-w-0">
                               <Zap className="w-3.5 h-3.5 text-orange-500 shrink-0" />
-                              <span className="text-sm text-gray-700 dark:text-gray-300 truncate">{t.thema}</span>
+                              <span className="text-sm text-gray-700 dark:text-gray-300 truncate">
+                                {t.thema}
+                              </span>
                               <span className="text-[10px] text-muted">({t.fach})</span>
                             </div>
-                            <Badge variant={t.rate < 30 ? "danger" : "warning"} className="text-xs shrink-0">{t.rate}%</Badge>
+                            <Badge
+                              variant={t.rate < 30 ? "danger" : "warning"}
+                              className="text-xs shrink-0"
+                            >
+                              {t.rate}%
+                            </Badge>
                           </Link>
                         ))}
                       </div>
@@ -440,7 +518,9 @@ export default function Analysis() {
               <div className="space-y-2">
                 {recommendations.map((rec, i) => (
                   <div key={i} className="flex items-start gap-2">
-                    <span className="text-primary-700 dark:text-primary-400 font-bold text-sm mt-0.5">{i + 1}.</span>
+                    <span className="text-primary-700 dark:text-primary-400 font-bold text-sm mt-0.5">
+                      {i + 1}.
+                    </span>
                     <p className="text-sm text-gray-700 dark:text-gray-300">{rec}</p>
                   </div>
                 ))}
