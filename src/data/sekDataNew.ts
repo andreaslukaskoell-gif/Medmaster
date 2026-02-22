@@ -833,7 +833,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
       },
       {
         text: "Ich würde versuchen, ihr Angst zu machen, indem ich die schlimmstmöglichen Konsequenzen betone.",
-        score: 1,
+        score: 0,
       },
     ],
   },

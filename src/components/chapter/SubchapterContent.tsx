@@ -269,26 +269,20 @@ function DisclosableSection({
           >
             <MarkdownContent
               text={section.text}
-              size={isDieZelle ? "base" : "sm"}
+              size="base"
               hinterfragMode={hinterfragMode}
               keywordLinkEntries={keywordLinkEntries}
             />
           </div>
           {section.merksatz && (
-            <div
-              className={`${isDieZelle ? "bg-amber-50 dark:bg-amber-900/30 border-l-4 border-amber-500 shadow-sm" : "bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-400"} p-5 rounded-r-lg my-4`}
-            >
-              <p
-                className={`font-bold ${isDieZelle ? "text-base" : "text-sm"} text-amber-800 dark:text-amber-300 flex items-center gap-2 mb-2`}
-              >
-                <span className="text-lg">💡</span> Merke
+            <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-400 dark:border-blue-600 pl-4 pr-4 py-3 my-4">
+              <p className="text-xs font-bold uppercase tracking-wider text-blue-800 dark:text-blue-300 mb-1">
+                Merke
               </p>
-              <div
-                className={`${isDieZelle ? "text-base" : "text-sm"} text-amber-900 dark:text-amber-200 leading-relaxed`}
-              >
+              <div className="text-base text-blue-900 dark:text-blue-200 leading-relaxed">
                 <MarkdownContent
                   text={section.merksatz}
-                  size={isDieZelle ? "base" : "sm"}
+                  size="base"
                   hinterfragMode={hinterfragMode}
                   keywordLinkEntries={keywordLinkEntries}
                 />
@@ -449,11 +443,11 @@ export function SubchapterContent({
         {/* Full content shown first when both content and sections are present */}
         {uk.content && cleanedContent && (
           <div
-            className={`${isDieZelle ? "text-base" : "text-sm"} text-gray-700 dark:text-gray-300 leading-relaxed space-y-3`}
+            className={`${"text-base"} text-gray-700 dark:text-gray-300 leading-relaxed space-y-3`}
           >
             <MarkdownContent
               text={cleanedContent}
-              size={isDieZelle ? "base" : "sm"}
+              size="base"
               hinterfragMode={hinterfragMode}
               keywordLinkEntries={keywordLinkEntries}
             />
@@ -559,26 +553,20 @@ export function SubchapterContent({
               >
                 <MarkdownContent
                   text={section.text}
-                  size={isDieZelle ? "base" : "sm"}
+                  size="base"
                   hinterfragMode={hinterfragMode}
                   keywordLinkEntries={keywordLinkEntries}
                 />
               </div>
               {section.merksatz && (
-                <div
-                  className={`${isDieZelle ? "bg-amber-50 dark:bg-amber-900/30 border-l-4 border-amber-500 shadow-sm" : "bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-400"} p-5 rounded-r-lg my-4`}
-                >
-                  <p
-                    className={`font-bold ${isDieZelle ? "text-base" : "text-sm"} text-amber-800 dark:text-amber-300 flex items-center gap-2 mb-2`}
-                  >
-                    <span className="text-lg">💡</span> Merke
+                <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-400 dark:border-blue-600 pl-4 pr-4 py-3 my-4">
+                  <p className="text-xs font-bold uppercase tracking-wider text-blue-800 dark:text-blue-300 mb-1">
+                    Merke
                   </p>
-                  <div
-                    className={`${isDieZelle ? "text-base" : "text-sm"} text-amber-900 dark:text-amber-200 leading-relaxed`}
-                  >
+                  <div className="text-base text-blue-900 dark:text-blue-200 leading-relaxed">
                     <MarkdownContent
                       text={section.merksatz}
-                      size={isDieZelle ? "base" : "sm"}
+                      size="base"
                       hinterfragMode={hinterfragMode}
                       keywordLinkEntries={keywordLinkEntries}
                     />
@@ -644,12 +632,10 @@ export function SubchapterContent({
   return (
     <div className={`${isDieZelle ? "space-y-8" : "space-y-6"}`}>
       {topicsBar}
-      <div
-        className={`${isDieZelle ? "text-base" : "text-sm"} text-gray-700 dark:text-gray-300 leading-relaxed space-y-3`}
-      >
+      <div className={`${"text-base"} text-gray-700 dark:text-gray-300 leading-relaxed space-y-3`}>
         <MarkdownContent
           text={cleanedContent}
-          size={isDieZelle ? "base" : "sm"}
+          size="base"
           hinterfragMode={hinterfragMode}
           keywordLinkEntries={keywordLinkEntries}
         />

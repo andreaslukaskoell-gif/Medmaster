@@ -8,9 +8,12 @@ export function VergleichsTabelle({ headers, rows }: VergleichsTabelleProps) {
     <div className="overflow-x-auto my-6">
       <table className="w-full border-collapse text-sm">
         <thead>
-          <tr className="bg-teal-600 text-white">
+          <tr className="bg-slate-800 text-white">
             {headers.map((h, i) => (
-              <th key={i} className="px-4 py-3 text-left font-semibold first:rounded-tl-lg last:rounded-tr-lg">
+              <th
+                key={i}
+                className="px-4 py-3 text-left font-semibold first:rounded-tl-lg last:rounded-tr-lg"
+              >
                 {h}
               </th>
             ))}
