@@ -10,18 +10,10 @@ export const bioKap5: Kapitel = {
     {
       id: 'bio-5-01',
       title: "Klassische Genetik",
-      content: `# Klassische Genetik (Mendel) – Biologie Kapitel 5 (Genetik)
-
-**Priorität:** HOCH
-**Geschätzte Lesezeit:** 14 Minuten
-**Stichwortliste-Abdeckung:** 9/9 Stichwörter
-
----
-
-## Einleitung
+      content: `## Einleitung
 
 Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
-1. **Vererbungsregeln** (Mendel''sche Regeln)
+1. **Vererbungsregeln** (Mendelsche Regeln)
 2. **Genotyp** (genetische Ausstattung) vs. **Phänotyp** (sichtbares Merkmal)
 3. **Dominanz**-Verhältnisse (dominant, rezessiv, intermediär, kodominant)
 
@@ -31,7 +23,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ## Kerninhalt
 
-### 1. ⭐ Grundbegriffe
+### 1. Grundbegriffe
 
 | Begriff | Definition | Beispiel |
 |---------|------------|----------|
@@ -50,9 +42,9 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-### 2. ⭐ Mendel''sche Regeln
+### 2. Mendelsche Regeln
 
-#### 2a. 1. Mendel''sche Regel (Uniformitätsregel, F₁-Generation)
+#### 2a. 1. Mendelsche Regel (Uniformitätsregel, F₁-Generation)
 
 **Regel:** Kreuzt man **reinerbige (homozygote)** Eltern mit unterschiedlichen Merkmalen, sind **alle Nachkommen (F₁) uniform** (gleich im Genotyp + Phänotyp).
 
@@ -66,7 +58,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-#### 2b. ⭐ 2. Mendel''sche Regel (Spaltungsregel, F₂-Generation)
+#### 2b. 2. Mendelsche Regel (Spaltungsregel, F₂-Generation)
 
 **Regel:** Kreuzt man **F₁-Hybriden** (Aa × Aa), **spaltet** sich F₂ in einem bestimmten Verhältnis auf.
 
@@ -92,7 +84,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-#### 2c. 3. Mendel''sche Regel (Unabhängigkeitsregel, Neukombinationsregel)
+#### 2c. 3. Mendelsche Regel (Unabhängigkeitsregel, Neukombinationsregel)
 
 **Regel:** Gene für **verschiedene Merkmale** werden **unabhängig** voneinander vererbt (wenn sie auf **verschiedenen Chromosomen** liegen oder weit auseinander auf demselben Chromosom).
 
@@ -129,7 +121,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ### 3. Dominanz-Verhältnisse
 
-⭐ **Varianten der Dominanz:**
+**Varianten der Dominanz:**
 
 | Typ | Genotyp | Phänotyp | Beispiel |
 |-----|---------|----------|----------|
@@ -169,47 +161,46 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ### 5. Klinische Beispiele (Mendelsche Vererbung beim Menschen)
 
-⭐ **Autosomal-dominant:**
+**Autosomal-dominant:**
 - **Heterozygot krank** (Aa), homozygot rezessiv gesund (aa)
 - **Beispiele:** **Marfan-Syndrom** (Bindegewebs-Erkrankung), **Achondroplasie** (Kleinwuchs), **Huntington-Krankheit** (Chorea Huntington, neurodegenerativ)
 - **Vererbung:** 50% Risiko bei erkranktem Elternteil (Aa) × gesundem Partner (aa)
 
-⭐ **Autosomal-rezessiv:**
+**Autosomal-rezessiv:**
 - **Homozygot rezessiv krank** (aa), heterozygot gesund (Aa, Carrier/Träger)
 - **Beispiele:** **Mukoviszidose** (CF, CFTR-Gen), **Sichelzellanämie** (HbS), **Phenylketonurie** (PKU, Phenylalanin-Abbau ↓)
 - **Vererbung:** 25% Risiko bei beiden Eltern heterozygot (Aa × Aa)
 
----
-
-## 📌 Prüfungsfokus
-
-1. **1. Mendel''sche Regel:** Homozygote Eltern (AA × aa) → F₁ 100% Aa (uniform, dominant)
-2. **2. Mendel''sche Regel:** F₁-Hybride (Aa × Aa) → F₂ Phänotyp **3:1** (dominant:rezessiv), Genotyp 1:2:1 (AA:Aa:aa)
-3. **3. Mendel''sche Regel:** Dihybrider Erbgang (RrGg × RrGg) → F₂ Phänotyp **9:3:3:1** (unabhängige Vererbung)
-4. **Intermediär:** Aa → Mischphänotyp (z. B. rosa), F₂ Phänotyp **1:2:1** (= Genotyp)
-5. **Kodominanz:** Beide Allele exprimiert (AB0-System: A^AB^B → AB)
-6. **Testkreuzung:** Dominant Phänotyp × aa → 100% dominant (AA) vs. 1:1 (Aa)
-
----
-
-## Merksätze
-
->>>> **Mendel''sche Regeln:** „1. Uniformität (AA × aa → 100% Aa, uniform), 2. Spaltung (Aa × Aa → 3:1 Phänotyp, 1:2:1 Genotyp), 3. Unabhängigkeit (RrGg × RrGg → 9:3:3:1, 2 Gene unabhängig)!"
-
->>>> **Dominanz-Typen:** „Dominant-rezessiv: AA = Aa ≠ aa (3:1 Phänotyp). Intermediär: AA ≠ Aa ≠ aa (1:2:1 Phänotyp = Genotyp). Kodominanz: Beide exprimiert (AB0: A^AB^B → AB)!"
-
->>>> **Testkreuzung:** „Dominant Phänotyp (rot) × aa: 100% rot → AA (homozygot), 1:1 (rot:weiß) → Aa (heterozygot)!"
-
->>>> **Autosomal-rezessiv:** „aa krank, Aa gesund (Carrier). Aa × Aa → 25% krank (aa), 50% Carrier (Aa), 25% gesund (AA). Beispiele: Mukoviszidose, Sichelzellanämie, PKU!"
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 4 UK04 – Plazenta](Bio_Kap4_UK04_Plazenta.md) | [Weiter: Bio Kap 5 UK02 – Chromosomen](Bio_Kap5_UK02_Chromosomen.md) →
 `,
-      lernziele: [],
-      sections: [],
-      merksätze: [],
+      lernziele: [
+        "Die Mendelschen Regeln (Uniformitäts-, Spaltungs- und Unabhängigkeitsregel) erklären und auf Kreuzungsbeispiele anwenden können.",
+        "Den Unterschied zwischen Genotyp und Phänotyp sowie zwischen homozygot und heterozygot beschreiben können.",
+        "Dominant-rezessive, intermediäre und kodominante Dominanzverhältnisse unterscheiden und Beispiele nennen können.",
+        "Die Testkreuzung (Rückkreuzung) erklären und zur Genotypbestimmung einsetzen können.",
+        "Klinische Beispiele autosomal-dominanter und autosomal-rezessiver Erbkrankheiten beim Menschen benennen können.",
+      ],
+      sections: [
+        {
+          heading: "Grundbegriffe der Genetik",
+          text: "Gen, Allel, Genotyp und Phänotyp sind die Grundbegriffe der klassischen Genetik. Homozygote Individuen tragen zwei gleiche Allele (AA oder aa), heterozygote zwei verschiedene (Aa). Dominante Allele setzen sich auch im heterozygoten Zustand durch, rezessive nur bei Homozygotie.",
+          merksatz: "Genotyp = genetische Ausstattung (AA, Aa, aa); Phänotyp = sichtbares Merkmal. Dominant setzt sich durch, rezessiv nur bei aa sichtbar.",
+        },
+        {
+          heading: "Mendelsche Regeln",
+          text: "Die 1. Mendelsche Regel (Uniformitätsregel) besagt: Homozygote Eltern (AA × aa) liefern in F₁ 100% uniforme Heterozygote (Aa). Die 2. Regel (Spaltungsregel): F₁-Hybriden (Aa × Aa) spalten in F₂ im Verhältnis 3:1 (Phänotyp) bzw. 1:2:1 (Genotyp). Die 3. Regel (Unabhängigkeitsregel): Zwei unabhängige Gene (RrGg × RrGg) ergeben in F₂ das Verhältnis 9:3:3:1.",
+          merksatz: "1. Uniformität (AA × aa → 100% Aa), 2. Spaltung (Aa × Aa → 3:1 Phänotyp), 3. Unabhängigkeit (RrGg × RrGg → 9:3:3:1).",
+        },
+        {
+          heading: "Dominanzverhältnisse und Testkreuzung",
+          text: "Bei intermediärer Dominanz zeigt Aa einen Mischphänotyp (F₂-Verhältnis 1:2:1). Bei Kodominanz werden beide Allele gleichzeitig exprimiert (AB0-System: A^AB^B → AB). Die Testkreuzung mit einem homozygot rezessiven Partner (aa) klärt, ob ein dominanter Phänotyp AA oder Aa zugrunde liegt: 100% dominant → AA, 1:1 → Aa.",
+          merksatz: "Testkreuzung × aa: 100% dominant = AA; 1:1 (dominant:rezessiv) = Aa.",
+        },
+      ],
+      merksätze: [
+        "Mendelsche Regeln: 1. Uniformität (AA × aa → 100% Aa, uniform), 2. Spaltung (Aa × Aa → 3:1 Phänotyp, 1:2:1 Genotyp), 3. Unabhängigkeit (RrGg × RrGg → 9:3:3:1, 2 Gene unabhängig).",
+        "Dominanz-Typen: Dominant-rezessiv: AA = Aa ≠ aa (3:1 Phänotyp). Intermediär: AA ≠ Aa ≠ aa (1:2:1 Phänotyp = Genotyp). Kodominanz: Beide exprimiert (AB0: A^AB^B → AB).",
+        "Autosomal-rezessiv: aa krank, Aa gesund (Carrier). Aa × Aa → 25% krank (aa), 50% Carrier (Aa), 25% gesund (AA). Beispiele: Mukoviszidose, Sichelzellanämie, PKU.",
+      ],
       selfTest: [
         {
           question: "Welche Aussage über genetische Grundbegriffe ist korrekt?",
@@ -226,44 +217,44 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
           tags: [],
         },
         {
-          question: "Welche Aussage über die 1. Mendel'sche Regel (Uniformitätsregel) ist korrekt?",
+          question: "Welche Aussage über die 1. Mendelsche Regel (Uniformitätsregel) ist korrekt?",
           options: [
           "Bei Kreuzung zweier heterozygoter Eltern (Aa × Aa) ist die F₁-Generation uniform.",
           "Bei Kreuzung zweier homozygoter Eltern mit unterschiedlichen Merkmalen (AA × aa) ist die F₁-Generation uniform (100% Aa) und zeigt den dominanten Phänotyp (100% rot, wenn A dominant).",
           "Die F₁-Generation zeigt ein Spaltungsverhältnis von 3:1.",
-          "Die 1. Mendel'sche Regel beschreibt die Vererbung von zwei Merkmalen gleichzeitig.",
+          "Die 1. Mendelsche Regel beschreibt die Vererbung von zwei Merkmalen gleichzeitig.",
           "Bei Kreuzung AA × aa ist die F₁-Generation zu 50% AA und 50% aa."
           ],
           correctIndex: 1,
-          explanation: "**Richtig (B):** **1. Mendel'sche Regel** (Uniformitätsregel):\n\n**Regel:** Kreuzt man **reinerbige (homozygote)** Eltern mit **unterschiedlichen Merkmalen**, sind alle Nachkommen der **F₁-Generation uniform** (gleich im Genotyp + Phänotyp).\n\n**Beispiel:** Blütenfarbe (A rot dominant, a weiß rezessiv)\n\n**Kreuzung:**\n- **P** (Elterngeneration): **AA** (rot, homozygot dominant) × **aa** (weiß, homozygot rezessiv)\n- **Gameten:** A × a\n- **F₁:** **100% Aa** (heterozygot)\n- **Phänotyp F₁:** **100% rot** (A dominant über a)\n\n**Wichtig:**\n- F₁ ist **uniform** (alle Aa, alle rot)\n- **Kein** Spaltungsverhältnis (das kommt erst in F₂, 2. Mendel'sche Regel)\n\n**Falsch (A):** Heterozygote Eltern (Aa × Aa) → F₁ **nicht uniform** (Spaltung 3:1, 2. Mendel'sche Regel). 1. Regel gilt nur für **homozygote** Eltern.\n\n**Falsch (C):** **3:1-Spaltung** tritt in **F₂** auf (Aa × Aa), nicht F₁. F₁ ist uniform.\n\n**Falsch (D):** 1. Mendel'sche Regel = **monohybrider** Erbgang (1 Merkmal). **2 Merkmale** = 3. Mendel'sche Regel (Unabhängigkeitsregel, dihybrider Erbgang).\n\n**Falsch (E):** AA × aa → F₁ **100% Aa** (nicht 50% AA, 50% aa). Alle F₁ sind heterozygot (Aa).",
+          explanation: "**Richtig (B):** **1. Mendelsche Regel** (Uniformitätsregel):\n\n**Regel:** Kreuzt man **reinerbige (homozygote)** Eltern mit **unterschiedlichen Merkmalen**, sind alle Nachkommen der **F₁-Generation uniform** (gleich im Genotyp + Phänotyp).\n\n**Beispiel:** Blütenfarbe (A rot dominant, a weiß rezessiv)\n\n**Kreuzung:**\n- **P** (Elterngeneration): **AA** (rot, homozygot dominant) × **aa** (weiß, homozygot rezessiv)\n- **Gameten:** A × a\n- **F₁:** **100% Aa** (heterozygot)\n- **Phänotyp F₁:** **100% rot** (A dominant über a)\n\n**Wichtig:**\n- F₁ ist **uniform** (alle Aa, alle rot)\n- **Kein** Spaltungsverhältnis (das kommt erst in F₂, 2. Mendelsche Regel)\n\n**Falsch (A):** Heterozygote Eltern (Aa × Aa) → F₁ **nicht uniform** (Spaltung 3:1, 2. Mendelsche Regel). 1. Regel gilt nur für **homozygote** Eltern.\n\n**Falsch (C):** **3:1-Spaltung** tritt in **F₂** auf (Aa × Aa), nicht F₁. F₁ ist uniform.\n\n**Falsch (D):** 1. Mendelsche Regel = **monohybrider** Erbgang (1 Merkmal). **2 Merkmale** = 3. Mendelsche Regel (Unabhängigkeitsregel, dihybrider Erbgang).\n\n**Falsch (E):** AA × aa → F₁ **100% Aa** (nicht 50% AA, 50% aa). Alle F₁ sind heterozygot (Aa).",
           difficulty: 1,
           tags: [],
         },
         {
-          question: "Welche Aussage über die 2. Mendel'sche Regel (Spaltungsregel) ist korrekt?",
+          question: "Welche Aussage über die 2. Mendelsche Regel (Spaltungsregel) ist korrekt?",
           options: [
           "Bei Kreuzung zweier F₁-Hybriden (Aa × Aa) ist die F₂-Generation uniform.",
           "Bei Kreuzung Aa × Aa beträgt das Phänotyp-Verhältnis in F₂ immer 1:2:1.",
           "Bei Kreuzung zweier F₁-Hybriden (Aa × Aa) spaltet sich die F₂-Generation auf. Das Genotyp-Verhältnis ist 1 AA : 2 Aa : 1 aa (1:2:1). Bei dominant-rezessiver Vererbung ist das Phänotyp-Verhältnis 3 dominant : 1 rezessiv (3:1), da AA und Aa beide den dominanten Phänotyp zeigen.",
           "Das Genotyp-Verhältnis in F₂ beträgt 3:1.",
-          "Die 2. Mendel'sche Regel gilt nur für die Vererbung von zwei Merkmalen."
+          "Die 2. Mendelsche Regel gilt nur für die Vererbung von zwei Merkmalen."
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **2. Mendel'sche Regel** (Spaltungsregel):\n\n**Regel:** Kreuzt man **F₁-Hybriden** (Aa × Aa), **spaltet** sich die F₂-Generation in einem bestimmten Verhältnis auf.\n\n**Kreuzung:** Aa × Aa (beide heterozygot)\n\n**Punnett-Quadrat:**\n\n|       | **A** | **a** |\n|-------|-------|-------|\n| **A** | **AA** | **Aa** |\n| **a** | **Aa** | **aa** |\n\n**Ergebnis:**\n\n**Genotyp-Verhältnis:** **1 AA : 2 Aa : 1 aa** (1:2:1)\n- 1/4 AA (homozygot dominant)\n- 2/4 Aa (heterozygot)\n- 1/4 aa (homozygot rezessiv)\n\n**Phänotyp-Verhältnis (dominant-rezessiv):** **3:1**\n- **AA** (1/4) → dominant Phänotyp (z. B. rot)\n- **Aa** (2/4) → dominant Phänotyp (z. B. rot, A dominant)\n- **aa** (1/4) → rezessiv Phänotyp (z. B. weiß)\n- **3 dominant : 1 rezessiv** (3:1)\n\n**WICHTIG:** Phänotyp-Verhältnis **3:1** gilt nur bei **dominant-rezessiver** Vererbung. Bei **intermediärer** Dominanz: Phänotyp = Genotyp (1:2:1).\n\n**Falsch (A):** F₂ ist **nicht uniform**, sondern **spaltet** auf (3:1 Phänotyp). Uniform = F₁ (1. Mendel'sche Regel).\n\n**Falsch (B):** Phänotyp-Verhältnis **3:1** (nicht 1:2:1) bei dominant-rezessiver Vererbung. **1:2:1** = Genotyp-Verhältnis (oder Phänotyp bei intermediär).\n\n**Falsch (D):** **Genotyp-Verhältnis 1:2:1** (nicht 3:1). **3:1** = Phänotyp-Verhältnis.\n\n**Falsch (E):** 2. Mendel'sche Regel = **monohybrider** Erbgang (1 Merkmal). **2 Merkmale** = 3. Mendel'sche Regel.",
+          explanation: "**Richtig (C):** **2. Mendelsche Regel** (Spaltungsregel):\n\n**Regel:** Kreuzt man **F₁-Hybriden** (Aa × Aa), **spaltet** sich die F₂-Generation in einem bestimmten Verhältnis auf.\n\n**Kreuzung:** Aa × Aa (beide heterozygot)\n\n**Punnett-Quadrat:**\n\n|       | **A** | **a** |\n|-------|-------|-------|\n| **A** | **AA** | **Aa** |\n| **a** | **Aa** | **aa** |\n\n**Ergebnis:**\n\n**Genotyp-Verhältnis:** **1 AA : 2 Aa : 1 aa** (1:2:1)\n- 1/4 AA (homozygot dominant)\n- 2/4 Aa (heterozygot)\n- 1/4 aa (homozygot rezessiv)\n\n**Phänotyp-Verhältnis (dominant-rezessiv):** **3:1**\n- **AA** (1/4) → dominant Phänotyp (z. B. rot)\n- **Aa** (2/4) → dominant Phänotyp (z. B. rot, A dominant)\n- **aa** (1/4) → rezessiv Phänotyp (z. B. weiß)\n- **3 dominant : 1 rezessiv** (3:1)\n\n**WICHTIG:** Phänotyp-Verhältnis **3:1** gilt nur bei **dominant-rezessiver** Vererbung. Bei **intermediärer** Dominanz: Phänotyp = Genotyp (1:2:1).\n\n**Falsch (A):** F₂ ist **nicht uniform**, sondern **spaltet** auf (3:1 Phänotyp). Uniform = F₁ (1. Mendelsche Regel).\n\n**Falsch (B):** Phänotyp-Verhältnis **3:1** (nicht 1:2:1) bei dominant-rezessiver Vererbung. **1:2:1** = Genotyp-Verhältnis (oder Phänotyp bei intermediär).\n\n**Falsch (D):** **Genotyp-Verhältnis 1:2:1** (nicht 3:1). **3:1** = Phänotyp-Verhältnis.\n\n**Falsch (E):** 2. Mendelsche Regel = **monohybrider** Erbgang (1 Merkmal). **2 Merkmale** = 3. Mendelsche Regel.",
           difficulty: 2,
           tags: [],
         },
         {
-          question: "Welche Aussage über die 3. Mendel'sche Regel (Unabhängigkeitsregel) ist korrekt?",
+          question: "Welche Aussage über die 3. Mendelsche Regel (Unabhängigkeitsregel) ist korrekt?",
           options: [
-          "Die 3. Mendel'sche Regel beschreibt die Vererbung eines einzelnen Merkmals.",
+          "Die 3. Mendelsche Regel beschreibt die Vererbung eines einzelnen Merkmals.",
           "Bei Kreuzung RrGg × RrGg beträgt das Phänotyp-Verhältnis in F₂ immer 3:1.",
           "Gene für verschiedene Merkmale werden unabhängig voneinander vererbt (wenn auf verschiedenen Chromosomen oder weit auseinander). Bei dihybridem Erbgang (RrGg × RrGg) beträgt das F₂-Phänotyp-Verhältnis 9:3:3:1 (9 R_G_, 3 R_gg, 3 rrG_, 1 rrgg), wenn beide Merkmale dominant-rezessiv vererbt werden.",
-          "Die 3. Mendel'sche Regel gilt nur, wenn die Gene auf demselben Chromosom gekoppelt sind.",
+          "Die 3. Mendelsche Regel gilt nur, wenn die Gene auf demselben Chromosom gekoppelt sind.",
           "Das Verhältnis 9:3:3:1 tritt in der F₁-Generation auf."
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **3. Mendel'sche Regel** (Unabhängigkeitsregel, Neukombinationsregel):\n\n**Regel:** Gene für **verschiedene Merkmale** werden **unabhängig** voneinander vererbt (wenn auf **verschiedenen Chromosomen** liegen oder weit auseinander auf demselben Chromosom → keine Kopplung).\n\n**Dihybrider Erbgang** (2 Merkmale):\n\n**Beispiel:** Samenform (R rund dominant, r runzelig rezessiv) + Samenfarbe (G gelb dominant, g grün rezessiv)\n\n**Kreuzung:**\n- **P:** RRGG (rund, gelb) × rrgg (runzelig, grün)\n- **F₁:** **100% RrGg** (rund, gelb, uniform)\n\n**F₁ × F₁:** RrGg × RrGg\n\n**Gameten (F₁):** RG, Rg, rG, rg (je 1/4, **unabhängige Verteilung**)\n\n**F₂-Phänotyp-Verhältnis:** **9:3:3:1**\n- **9/16** rund, gelb (R_G_: RRGG, RRGg, RrGG, RrGg)\n- **3/16** rund, grün (R_gg: RRgg, Rrgg)\n- **3/16** runzelig, gelb (rrG_: rrGG, rrGg)\n- **1/16** runzelig, grün (rrgg)\n\n**Voraussetzung:** **Unabhängige Vererbung** (verschiedene Chromosomen oder keine Kopplung). Bei **Kopplung** (Gene auf demselben Chromosom, nah beieinander) → **abweichendes** Verhältnis.\n\n**Falsch (A):** 3. Mendel'sche Regel = **mehrere Merkmale** (dihybrider Erbgang), nicht ein einzelnes Merkmal (das wäre 2. Regel).\n\n**Falsch (B):** **9:3:3:1** (nicht 3:1) bei dihybridem Erbgang. **3:1** = monohybrider Erbgang (1 Merkmal, 2. Mendel'sche Regel).\n\n**Falsch (D):** 3. Mendel'sche Regel gilt bei **unabhängiger** Vererbung (verschiedene Chromosomen oder keine Kopplung). Bei **Kopplung** (Gene nah beieinander auf demselben Chromosom) → abweichendes Verhältnis.\n\n**Falsch (E):** **9:3:3:1** tritt in **F₂** auf (nicht F₁). F₁ ist uniform (100% RrGg).",
+          explanation: "**Richtig (C):** **3. Mendelsche Regel** (Unabhängigkeitsregel, Neukombinationsregel):\n\n**Regel:** Gene für **verschiedene Merkmale** werden **unabhängig** voneinander vererbt (wenn auf **verschiedenen Chromosomen** liegen oder weit auseinander auf demselben Chromosom → keine Kopplung).\n\n**Dihybrider Erbgang** (2 Merkmale):\n\n**Beispiel:** Samenform (R rund dominant, r runzelig rezessiv) + Samenfarbe (G gelb dominant, g grün rezessiv)\n\n**Kreuzung:**\n- **P:** RRGG (rund, gelb) × rrgg (runzelig, grün)\n- **F₁:** **100% RrGg** (rund, gelb, uniform)\n\n**F₁ × F₁:** RrGg × RrGg\n\n**Gameten (F₁):** RG, Rg, rG, rg (je 1/4, **unabhängige Verteilung**)\n\n**F₂-Phänotyp-Verhältnis:** **9:3:3:1**\n- **9/16** rund, gelb (R_G_: RRGG, RRGg, RrGG, RrGg)\n- **3/16** rund, grün (R_gg: RRgg, Rrgg)\n- **3/16** runzelig, gelb (rrG_: rrGG, rrGg)\n- **1/16** runzelig, grün (rrgg)\n\n**Voraussetzung:** **Unabhängige Vererbung** (verschiedene Chromosomen oder keine Kopplung). Bei **Kopplung** (Gene auf demselben Chromosom, nah beieinander) → **abweichendes** Verhältnis.\n\n**Falsch (A):** 3. Mendelsche Regel = **mehrere Merkmale** (dihybrider Erbgang), nicht ein einzelnes Merkmal (das wäre 2. Regel).\n\n**Falsch (B):** **9:3:3:1** (nicht 3:1) bei dihybridem Erbgang. **3:1** = monohybrider Erbgang (1 Merkmal, 2. Mendelsche Regel).\n\n**Falsch (D):** 3. Mendelsche Regel gilt bei **unabhängiger** Vererbung (verschiedene Chromosomen oder keine Kopplung). Bei **Kopplung** (Gene nah beieinander auf demselben Chromosom) → abweichendes Verhältnis.\n\n**Falsch (E):** **9:3:3:1** tritt in **F₂** auf (nicht F₁). F₁ ist uniform (100% RrGg).",
           difficulty: 3,
           tags: [],
         },
@@ -281,34 +272,12 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
           difficulty: 3,
           tags: [],
         },
-        {
-          question: "Welche Aussage über die Testkreuzung (Rückkreuzung) ist korrekt?",
-          options: [
-          "Die Testkreuzung wird mit einem homozygot dominanten Partner (AA) durchgeführt.",
-          "Die Testkreuzung dient zur Bestimmung des Phänotyps eines Organismus.",
-          "Die Testkreuzung wird mit einem homozygot rezessiven Partner (aa) durchgeführt, um den Genotyp eines Organismus mit dominantem Phänotyp zu bestimmen. Ergebnis 100% dominant → Genotyp AA, Ergebnis 1:1 (dominant:rezessiv) → Genotyp Aa.",
-          "Bei Testkreuzung AA × aa ist das Nachkommen-Verhältnis 1:1.",
-          "Die Testkreuzung ist nur bei intermediärer Dominanz anwendbar."
-          ],
-          correctIndex: 2,
-          explanation: "**Richtig (C):** **Testkreuzung** (Rückkreuzung):\n\n**Problem:** Individuum mit **dominantem Phänotyp** (z. B. rot) → Genotyp könnte **AA** (homozygot) oder **Aa** (heterozygot) sein?\n\n**Lösung:** Kreuzung mit **homozygot rezessivem** Partner (**aa**)\n\n**Kreuzung 1:** AA × aa\n- **Gameten:** A × a\n- **Nachkommen:** **100% Aa** → **100% dominant Phänotyp** (rot)\n- **Schluss:** Testorganismus war **AA** (homozygot dominant)\n\n**Kreuzung 2:** Aa × aa\n- **Gameten:** A/a × a\n- **Punnett:**\n\n|       | **A** | **a** |\n|-------|-------|-------|\n| **a** | **Aa** | **aa** |\n| **a** | **Aa** | **aa** |\n\n- **Nachkommen:** 50% Aa (dominant, z. B. rot), 50% aa (rezessiv, z. B. weiß) → **1:1**\n- **Schluss:** Testorganismus war **Aa** (heterozygot)\n\n**Prinzip:** Homozygot rezessiver Partner (aa) gibt immer rezessives Allel (a) weiter → wenn Testorganismus heterozygot (Aa), spaltet sich Nachkommenschaft **1:1** auf (50% Aa, 50% aa).\n\n**Falsch (A):** Testkreuzung mit **homozygot rezessivem** (aa), nicht homozygot dominantem (AA). Mit AA würden alle Nachkommen dominant sein (unabhängig vom Genotyp des Testorganismus).\n\n**Falsch (B):** Testkreuzung bestimmt **Genotyp** (AA oder Aa), nicht Phänotyp (Phänotyp ist bereits bekannt: dominant).\n\n**Falsch (D):** AA × aa → **100% Aa** (nicht 1:1). **1:1** nur bei Aa × aa.\n\n**Falsch (E):** Testkreuzung anwendbar bei **dominant-rezessiver** Vererbung (Unterscheidung AA vs. Aa). Bei intermediär wären AA, Aa, aa phänotypisch unterscheidbar (keine Testkreuzung nötig).",
-          difficulty: 2,
-          tags: [],
-        }
       ],
     },
     {
       id: 'bio-5-02',
       title: "Chromosomen",
-      content: `# Chromosomen und Chromosomenaberrationen – Biologie Kapitel 5 (Genetik)
-
-**Priorität:** HOCH
-**Geschätzte Lesezeit:** 15 Minuten
-**Stichwortliste-Abdeckung:** 10/10 Stichwörter
-
----
-
-## Einleitung
+      content: `## Einleitung
 
 **Chromosomen** sind:
 1. **DNA-Protein-Komplexe** (DNA + Histone)
@@ -323,13 +292,13 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ## Kerninhalt
 
-### 1. ⭐ Chromosomen-Struktur
+### 1. Chromosomen-Struktur
 
 **Chromatid vs. Chromosom:**
 - **Chromatid:** **1 DNA-Doppelstrang** + Histone (nach DNA-Replikation, vor Zellteilung)
 - **Chromosom (metaphasisch):** **2 Schwester-Chromatiden** (identisch), verbunden am **Zentromer** (Centromer)
 
-⭐ **Chromosomen-Komponenten:**
+**Chromosomen-Komponenten:**
 
 | Struktur | Funktion |
 |----------|----------|
@@ -345,7 +314,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-### 2. ⭐ Karyotyp
+### 2. Karyotyp
 
 **Definition:** Geordnete Darstellung aller Chromosomen einer Zelle (Größe, Zentromer-Position)
 
@@ -365,7 +334,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-### 3. ⭐ Chromosomenaberrationen
+### 3. Chromosomenaberrationen
 
 **Klassifikation:**
 - **Numerische Aberrationen:** Chromosomenzahl-Abweichung (Aneuploidie, Polyploidie)
@@ -373,7 +342,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-#### 3a. ⭐ Numerische Aberrationen
+#### 3a. Numerische Aberrationen
 
 **Aneuploidie:** Chromosomenzahl ≠ Vielfaches von 23 (z. B. 45, 47)
 
@@ -410,7 +379,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-#### 3c. ⭐ Strukturelle Aberrationen
+#### 3c. Strukturelle Aberrationen
 
 **Deletion:** Verlust eines Chromosomenabschnitts
 
@@ -446,39 +415,38 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
   - 35 Jahre: ~1:350
   - 40 Jahre: ~1:100
 
----
-
-## 📌 Prüfungsfokus
-
-1. **Karyotyp:** 46,XX (weiblich), 46,XY (männlich), Notation (47,XX,+21 = Trisomie 21 weiblich)
-2. **Trisomie 21** (Down-Syndrom): Häufigste Autosom-Trisomie, faziale Dysmorphie, Herzfehler, Inzidenz ↑ mit Mutter-Alter, 47,XX/XY,+21
-3. **Klinefelter-Syndrom:** 47,XXY, männlich, Hypogonadismus, Infertilität, Gynäkomastie
-4. **Turner-Syndrom:** 45,X, weiblich, Kleinwuchs, Pterygium colli, Ovarial-Dysgenesie (Infertilität)
-5. **Cri-du-chat:** 5p-Deletion, Katzenschrei, Mikrozephalie
-6. **Nicht-Disjunktion:** Meiose-Fehler → Aneuploidie (Trisomie, Monosomie), Risiko ↑ mit Mutter-Alter
-
----
-
-## Merksätze
-
->>>> **Karyotyp-Notation:** „46,XX = weiblich, 46,XY = männlich. 47,XX,+21 = Trisomie 21 weiblich (Down-Syndrom). 47,XXY = Klinefelter (männlich, Y vorhanden), 45,X = Turner (weiblich, kein Y)!"
-
->>>> **Trisomie 21** (Down): „Häufigste Autosom-Trisomie (1:700), Inzidenz ↑ mit Mutter-Alter. Faziale Dysmorphie (Epikanthus, flaches Profil), Herzfehler (AV-Kanal, VSD), geistige Behinderung (variabel)!"
-
->>>> **Klinefelter vs. Turner:** „Klinefelter (47,XXY): Männlich (Y!), Hypogonadismus (kleine Hoden), Infertilität, Gynäkomastie, hoher Wuchs. Turner (45,X): Weiblich, Kleinwuchs, Pterygium colli, Streak-Gonaden (Infertilität), normale Intelligenz!"
-
->>>> **Deletion-Syndrome:** „Cri-du-chat (5p-): Katzenschrei, Mikrozephalie. Williams-Beuren (7q11.23): Elfengesicht, Aortenstenose, Elastin-Deletion. DiGeorge (22q11, CATCH-22): Cardiac, Abnormal face, Thymus, Cleft, Hypokalzämie!"
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 5 UK01 – Klassische Genetik](Bio_Kap5_UK01_Klassische_Genetik.md) | [Weiter: Bio Kap 5 UK03 – Geninteraktion](Bio_Kap5_UK03_Geninteraktion.md) →
 `,
-      lernziele: [],
-      sections: [],
+      lernziele: [
+        "Den Aufbau eines Chromosoms (Zentromer, Telomere, p- und q-Arm) beschreiben können.",
+        "Karyotyp-Notation lesen und interpretieren können (z. B. 46,XX; 47,XY,+21).",
+        "Die häufigsten numerischen Chromosomenaberrationen (Trisomie 21, Klinefelter, Turner) mit Karyotyp und Klinik benennen können.",
+        "Strukturelle Aberrationen (Deletion, Duplikation, Translokation, Inversion) unterscheiden und klinische Syndrome zuordnen können.",
+        "Die Nicht-Disjunktion als Ursache von Aneuploidie erklären und den Einfluss des mütterlichen Alters kennen.",
+      ],
+      sections: [
+        {
+          heading: "Chromosomenstruktur und Karyotyp",
+          text: "Chromosomen bestehen aus DNA und Histonen. Das Zentromer verbindet die beiden Schwester-Chromatiden und dient als Ansatz für Spindelfasern. Telomere schützen die Chromosomenenden und verkürzen sich bei jeder Teilung. Der normale menschliche Karyotyp umfasst 46 Chromosomen (22 Autosomenpaare + XX/XY).",
+          merksatz: "46,XX = weiblich; 46,XY = männlich. p-Arm = kurz, q-Arm = lang. Telomere schützen, verkürzen sich bei jeder Teilung.",
+        },
+        {
+          heading: "Numerische Chromosomenaberrationen",
+          text: "Trisomie 21 (Down-Syndrom, 47,+21) ist die häufigste Autosom-Trisomie (1:700), mit fazialer Dysmorphie, Herzfehlern und geistiger Behinderung. Klinefelter-Syndrom (47,XXY) ist männlich mit Hypogonadismus und Infertilität. Turner-Syndrom (45,X) ist weiblich mit Kleinwuchs, Pterygium colli und Ovarial-Dysgenesie. Das Risiko für Nicht-Disjunktionsfehler steigt mit dem mütterlichen Alter.",
+          merksatz: "Klinefelter (47,XXY): männlich, Hypogonadismus, Infertilität. Turner (45,X): weiblich, Kleinwuchs, Streak-Gonaden.",
+        },
+        {
+          heading: "Strukturelle Chromosomenaberrationen",
+          text: "Deletion (Verlust), Duplikation (Verdopplung), Translokation (Verlagerung) und Inversion (Drehung) sind strukturelle Aberrationen. Wichtige klinische Syndrome: Cri-du-chat (5p-Deletion), Williams-Beuren (7q11.23) und DiGeorge (22q11, CATCH-22). Balancierte Translokationen sind beim Träger oft klinisch unauffällig, erhöhen aber das Risiko für unbalancierte Nachkommen.",
+          merksatz: "Cri-du-chat = 5p-Deletion (Katzenschrei). DiGeorge = 22q11 (CATCH-22: Cardiac, Abnormal face, Thymus, Cleft, Hypokalzämie).",
+        },
+      ],
       diagram: 'mitosis',
 
-      merksätze: [],
+      merksätze: [
+        "Karyotyp-Notation: 46,XX = weiblich, 46,XY = männlich. 47,XX,+21 = Trisomie 21 weiblich (Down-Syndrom). 47,XXY = Klinefelter (männlich, Y vorhanden), 45,X = Turner (weiblich, kein Y).",
+        "Trisomie 21 (Down): Häufigste Autosom-Trisomie (1:700), Inzidenz steigt mit Mutter-Alter. Faziale Dysmorphie (Epikanthus, flaches Profil), Herzfehler (AV-Kanal, VSD).",
+        "Deletion-Syndrome: Cri-du-chat (5p-): Katzenschrei, Mikrozephalie. Williams-Beuren (7q11.23): Elfengesicht, Aortenstenose. DiGeorge (22q11, CATCH-22): Cardiac, Abnormal face, Thymus, Cleft, Hypokalzämie.",
+      ],
       selfTest: [
         {
           question: "Welche Aussage über die Chromosomen-Struktur ist korrekt?",
@@ -550,47 +518,25 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
           difficulty: 3,
           tags: [],
         },
-        {
-          question: "Welche Aussage über Nicht-Disjunktion (Non-Disjunction) ist korrekt?",
-          options: [
-          "Nicht-Disjunktion tritt nur in der Mitose auf.",
-          "Nicht-Disjunktion ist die korrekte Verteilung von Chromosomen.",
-          "Nicht-Disjunktion ist die fehlerhafte Chromosomen-Verteilung während Meiose oder Mitose. In Meiose I trennen sich homologe Chromosomen nicht, in Meiose II trennen sich Schwester-Chromatiden nicht, was zu Gameten mit n+1 oder n-1 führt. Dies verursacht Aneuploidie (Trisomie, Monosomie). Das Risiko steigt mit dem mütterlichen Alter (Hauptrisikofaktor für Trisomie 21).",
-          "Das Risiko für Nicht-Disjunktion sinkt mit dem mütterlichen Alter.",
-          "Nicht-Disjunktion führt immer zu Polyploidie."
-          ],
-          correctIndex: 2,
-          explanation: "**Richtig (C):** **Nicht-Disjunktion** (Non-Disjunction):\n\n**Definition:** **Fehlerhafte Chromosomen-Verteilung** während **Meiose** oder **Mitose**\n\n**Meiose-Fehler:**\n\n1. **Meiose I:**\n   - **Homologe Chromosomen** trennen sich **nicht**\n   - Beide homologe Chromosomen wandern in **dieselbe Zelle**\n   - **Resultat:** Gameten mit **n+1** (Trisomie-Risiko) oder **n-1** (Monosomie-Risiko)\n\n2. **Meiose II:**\n   - **Schwester-Chromatiden** trennen sich **nicht**\n   - Beide Chromatiden wandern in dieselbe Zelle\n   - **Resultat:** Gameten mit **n+1** oder **n-1**\n\n**Befruchtung:**\n- **Gamete (n+1)** + normale Gamete (n) → **Zygote (2n+1, Trisomie)**\n- **Gamete (n-1)** + normale Gamete (n) → **Zygote (2n-1, Monosomie)**\n\n**Folge:** **Aneuploidie** (Chromosomenzahl ≠ Vielfaches von 23)\n- **Trisomie:** 2n+1 = 47 (z. B. Trisomie 21, Klinefelter 47,XXY)\n- **Monosomie:** 2n-1 = 45 (z. B. Turner 45,X)\n\n**Risikofaktoren:**\n\n**Mütterliches Alter ↑** = **Hauptrisikofaktor** für Trisomie 21:\n- **Mechanismus:** Meiose I der Eizelle beginnt **pränatal**, arretiert in Prophase I → Ovulation (Dekaden später) → erhöhtes Fehlerrisiko (Kohäsine altern)\n- **Altersabhängigkeit:**\n  - 20 Jahre: ~1:1.500\n  - 35 Jahre: ~1:350\n  - **40 Jahre: ~1:100**\n  - 45 Jahre: ~1:30\n\n**Mitose-Fehler:**\n- Schwester-Chromatiden trennen sich nicht → **Mosaik** (nur Teil der Zellen betroffen, z. B. Mosaik-Trisomie 21, milderer Phänotyp)\n\n**Falsch (A):** Nicht-Disjunktion tritt in **Meiose** (häufiger) **und Mitose** auf, nicht nur Mitose.\n\n**Falsch (B):** Nicht-Disjunktion = **fehlerhafte** (nicht korrekte) Verteilung.\n\n**Falsch (D):** Risiko **steigt** (nicht sinkt) mit mütterlichem Alter (Hauptrisikofaktor für Trisomie 21).\n\n**Falsch (E):** Nicht-Disjunktion → **Aneuploidie** (n+1 oder n-1), nicht Polyploidie (3n, 4n). Polyploidie = Polyspermie (Triploidie) oder Mitose-/Meiose-Fehler (vollständiger Chromosomensatz-Duplikation).",
-          difficulty: 2,
-          tags: [],
-        }
       ],
     },
     {
       id: 'bio-5-03',
       title: "Geninteraktion",
-      content: `# Geninteraktion – Biologie Kapitel 5 (Genetik)
-
-**Priorität:** MITTEL
-**Geschätzte Lesezeit:** 11 Minuten
-**Stichwortliste-Abdeckung:** 6/6 Stichwörter
-
----
-
-## Einleitung
+      content: `## Einleitung
 
 **Geninteraktion** beschreibt, wie:
 1. **Mehrere Gene** ein **Merkmal** beeinflussen
 2. **Ein Gen** mehrere **Merkmale** beeinflusst
 3. Gene **miteinander interagieren** (Epistase, Komplementierung)
 
-**Abweichungen** von Mendel''schen Verhältnissen (9:3:3:1, 3:1) durch Geninteraktion
+**Abweichungen** von Mendelschen Verhältnissen (9:3:3:1, 3:1) durch Geninteraktion
 
 ---
 
 ## Kerninhalt
 
-### 1. ⭐ Epistase
+### 1. Epistase
 
 **Definition:** Ein Gen (**epistatisches Gen**) **überdeckt** die Wirkung eines anderen Gens (**hypostatisches Gen**)
 
@@ -608,7 +554,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
   - **B_cc**: Weiß (3/16)
   - **bbcc**: Weiß (1/16)
 
-⭐ **Kreuzung:** BbCc × BbCc (dihybrider Erbgang)
+**Kreuzung:** BbCc × BbCc (dihybrider Erbgang)
 
 **Erwartetes Mendel-Verhältnis (ohne Epistase):** 9:3:3:1
 
@@ -622,7 +568,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-### 2. ⭐ Polygenie (Polygenetische Vererbung)
+### 2. Polygenie (Polygenetische Vererbung)
 
 **Definition:** **Mehrere Gene** (Polygene) beeinflussen **ein Merkmal** → kontinuierliche Variation
 
@@ -718,36 +664,37 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 **Wichtig:** Abweichungen von 9:3:3:1 → Geninteraktion (Epistase, Komplementierung, etc.)
 
----
-
-## 📌 Prüfungsfokus
-
-1. **Epistase:** Ein Gen (epistatisch) überdeckt anderes Gen (hypostatisch), Beispiel Maus Fellfarbe (9:3:4, cc immer weiß)
-2. **Polygenie:** Mehrere Gene → ein Merkmal (z. B. Hautfarbe, 1:4:6:4:1, glockenförmig), kontinuierliche Variation
-3. **Pleiotropie:** Ein Gen → mehrere Merkmale (z. B. Sichelzellanämie: Anämie + Gefäßverschlüsse + Malaria-Resistenz)
-4. **Komplementierung:** Zwei rezessive Mutationen in verschiedenen Genen → F₁ normal (9:7 in F₂)
-5. **Modifizierte Verhältnisse:** 9:3:4 (Epistase), 9:7 (Komplementierung), 12:3:1 (dominant epistatisch)
-
----
-
-## Merksätze
-
->>>> **Epistase:** „Epistatisches Gen (c) überdeckt hypostatisches Gen (B/b). Beispiel Maus: cc (Albino) ist immer weiß, unabhängig von B. Verhältnis 9:3:4 (9 schwarz, 3 braun, 4 weiß)!"
-
->>>> **Polygenie:** „Mehrere Gene (Polygene) → ein Merkmal (z. B. Hautfarbe, Körpergröße). Additive Wirkung → kontinuierliche Variation (glockenförmig, 1:4:6:4:1). NICHT diskrete Kategorien!"
-
->>>> **Pleiotropie:** „Ein Gen → viele Merkmale! Beispiel Sichelzellanämie (HbS): Sichelzellen + Anämie + Gefäßverschlüsse + Schmerzkrisen + Malaria-Resistenz (Heterozygoten-Vorteil)!"
-
->>>> **Komplementierung:** „Zwei rezessive Mutationen in verschiedenen Genen (aaBB × AAbb) → F₁ AaBb normal (komplementieren sich). F₂-Verhältnis 9:7 (9 Farbe, 7 weiß, beide Enzyme nötig)!"
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 5 UK02 – Chromosomen](Bio_Kap5_UK02_Chromosomen.md) | [Weiter: Bio Kap 5 UK04 – Geschlechtsgebundene Vererbung](Bio_Kap5_UK04_Geschlechtsgebundene_Vererbung.md) →
 `,
-      lernziele: [],
-      sections: [],
-      merksätze: [],
+      lernziele: [
+        "Den Begriff Epistase erklären und das modifizierte Phänotypverhältnis 9:3:4 ableiten können.",
+        "Polygenie von Pleiotropie unterscheiden und je ein Beispiel nennen können.",
+        "Den Heterozygoten-Vorteil der Sichelzellanämie als Beispiel für Pleiotropie und Selektion erläutern können.",
+        "Das Prinzip der Komplementierung und das F₂-Verhältnis 9:7 erklären können.",
+        "Abweichungen von Mendelschen Verhältnissen (9:3:3:1) als Hinweis auf Geninteraktion erkennen können.",
+      ],
+      sections: [
+        {
+          heading: "Epistase",
+          text: "Epistase bedeutet, dass ein Gen (das epistatische) die Wirkung eines anderen (des hypostatischen) überdeckt. Beim klassischen Maus-Beispiel maskiert cc (Albino) die Fellfarbe des B-Locus vollständig. Die Kreuzung BbCc × BbCc ergibt statt 9:3:3:1 das Verhältnis 9:3:4 (schwarz:braun:weiß).",
+          merksatz: "Epistatisches Gen (cc) überdeckt hypostatisches Gen (B/b). Verhältnis 9:3:4.",
+        },
+        {
+          heading: "Polygenie und Pleiotropie",
+          text: "Polygenie: Mehrere Gene beeinflussen ein Merkmal additiv (z. B. Hautfarbe), was zu kontinuierlicher Variation und glockenförmiger Verteilung führt. Pleiotropie: Ein Gen beeinflusst mehrere Merkmale (z. B. HbS → Sichelzellen, Anämie, Gefäßverschlüsse und Malaria-Resistenz bei Heterozygoten).",
+          merksatz: "Polygenie: viele Gene → ein Merkmal (glockenförmig). Pleiotropie: ein Gen → viele Merkmale (z. B. Sichelzellanämie).",
+        },
+        {
+          heading: "Komplementierung und modifizierte Verhältnisse",
+          text: "Komplementierung: Zwei rezessive Mutationen in verschiedenen Genen (aaBB × AAbb) ergeben in F₁ einen Wildtyp-Phänotyp (AaBb), da sich die funktionalen Allele gegenseitig ergänzen. In F₂ entsteht ein 9:7-Verhältnis. Abweichungen von 9:3:3:1 zeigen stets Geninteraktion an.",
+          merksatz: "Komplementierung (aaBB × AAbb) → F₁ normal, F₂ = 9:7.",
+        },
+      ],
+      merksätze: [
+        "Epistase: Epistatisches Gen (c) überdeckt hypostatisches Gen (B/b). Maus-Beispiel: cc (Albino) immer weiß, unabhängig von B. Verhältnis 9:3:4.",
+        "Polygenie: Mehrere Gene → ein Merkmal (Hautfarbe, Körpergröße). Additive Wirkung → kontinuierliche Variation (glockenförmig, 1:4:6:4:1).",
+        "Pleiotropie: Ein Gen → viele Merkmale. Sichelzellanämie (HbS): Sichelzellen + Anämie + Gefäßverschlüsse + Malaria-Resistenz (Heterozygoten-Vorteil).",
+        "Komplementierung: Zwei rezessive Mutationen in verschiedenen Genen (aaBB × AAbb) → F₁ AaBb normal. F₂-Verhältnis 9:7.",
+      ],
       selfTest: [
         {
           question: "Welche Aussage über Epistase ist korrekt?",
@@ -815,7 +762,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
           "Alle Geninteraktionen führen zum gleichen Phänotyp-Verhältnis."
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **Modifizierte Mendel-Verhältnisse:**\n\n**Dihybrider Erbgang:** AaBb × AaBb (2 Gene, je 2 Allele)\n\n**Standard-Mendel (keine Geninteraktion):**\n- **Verhältnis:** **9:3:3:1**\n- **Phänotypen:** 9 A_B_, 3 A_bb, 3 aaB_, 1 aabb\n- **Interpretation:** Gene vererben **unabhängig**, keine Interaktion\n\n**Geninteraktion → Abweichungen von 9:3:3:1:**\n\n1. **Epistase (9:3:4):**\n   - **Beispiel:** Fellfarbe Maus (cc epistatisch über B/b)\n   - **Phänotypen:** 9 schwarz (B_C_), 3 braun (bbC_), 4 weiß (B_cc + bbcc)\n   - **Erklärung:** cc überdeckt B/b → immer weiß\n\n2. **Komplementierung (9:7):**\n   - **Beispiel:** Blütenfarbe (beide Enzyme A + B nötig)\n   - **Phänotypen:** 9 Farbe (A_B_), 7 weiß (A_bb + aaB_ + aabb)\n   - **Erklärung:** Mindestens ein Gen defekt → kein Pigment → weiß\n\n3. **Dominant epistatisch (12:3:1):**\n   - **Beispiel:** Gen A (A_) epistatisch über B/b\n   - **Phänotypen:** 12 (A_B_ + A_bb), 3 (aaB_), 1 (aabb)\n   - **Erklärung:** A_ maskiert B/b → gleicher Phänotyp\n\n4. **Doppelt-rezessiv epistatisch (9:7):**\n   - Wie Komplementierung (beide Gene nötig)\n\n**Regel:** **Abweichung von 9:3:3:1** → **Geninteraktion** (Epistase, Komplementierung, etc.)\n\n**Falsch (A):** **9:3:3:1** zeigt **keine** Geninteraktion (unabhängige Vererbung, 3. Mendel'sche Regel). **Abweichungen** (9:3:4, 9:7, 12:3:1) zeigen Geninteraktion.\n\n**Falsch (B):** **9:3:4** = **Epistase** (nicht Komplementierung). **9:7** = Komplementierung.\n\n**Falsch (D):** **9:7** zeigt **Geninteraktion** (Komplementierung, beide Gene erforderlich für Wildtyp), nicht keine Geninteraktion.\n\n**Falsch (E):** Verschiedene Geninteraktionen → **verschiedene** Verhältnisse (9:3:4, 9:7, 12:3:1), nicht gleich.",
+          explanation: "**Richtig (C):** **Modifizierte Mendel-Verhältnisse:**\n\n**Dihybrider Erbgang:** AaBb × AaBb (2 Gene, je 2 Allele)\n\n**Standard-Mendel (keine Geninteraktion):**\n- **Verhältnis:** **9:3:3:1**\n- **Phänotypen:** 9 A_B_, 3 A_bb, 3 aaB_, 1 aabb\n- **Interpretation:** Gene vererben **unabhängig**, keine Interaktion\n\n**Geninteraktion → Abweichungen von 9:3:3:1:**\n\n1. **Epistase (9:3:4):**\n   - **Beispiel:** Fellfarbe Maus (cc epistatisch über B/b)\n   - **Phänotypen:** 9 schwarz (B_C_), 3 braun (bbC_), 4 weiß (B_cc + bbcc)\n   - **Erklärung:** cc überdeckt B/b → immer weiß\n\n2. **Komplementierung (9:7):**\n   - **Beispiel:** Blütenfarbe (beide Enzyme A + B nötig)\n   - **Phänotypen:** 9 Farbe (A_B_), 7 weiß (A_bb + aaB_ + aabb)\n   - **Erklärung:** Mindestens ein Gen defekt → kein Pigment → weiß\n\n3. **Dominant epistatisch (12:3:1):**\n   - **Beispiel:** Gen A (A_) epistatisch über B/b\n   - **Phänotypen:** 12 (A_B_ + A_bb), 3 (aaB_), 1 (aabb)\n   - **Erklärung:** A_ maskiert B/b → gleicher Phänotyp\n\n4. **Doppelt-rezessiv epistatisch (9:7):**\n   - Wie Komplementierung (beide Gene nötig)\n\n**Regel:** **Abweichung von 9:3:3:1** → **Geninteraktion** (Epistase, Komplementierung, etc.)\n\n**Falsch (A):** **9:3:3:1** zeigt **keine** Geninteraktion (unabhängige Vererbung, 3. Mendelsche Regel). **Abweichungen** (9:3:4, 9:7, 12:3:1) zeigen Geninteraktion.\n\n**Falsch (B):** **9:3:4** = **Epistase** (nicht Komplementierung). **9:7** = Komplementierung.\n\n**Falsch (D):** **9:7** zeigt **Geninteraktion** (Komplementierung, beide Gene erforderlich für Wildtyp), nicht keine Geninteraktion.\n\n**Falsch (E):** Verschiedene Geninteraktionen → **verschiedene** Verhältnisse (9:3:4, 9:7, 12:3:1), nicht gleich.",
           difficulty: 2,
           tags: [],
         }
@@ -824,15 +771,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
     {
       id: 'bio-5-04',
       title: "Geschlechtsgebundene Vererbung",
-      content: `# Geschlechtsgebundene Vererbung – Biologie Kapitel 5 (Genetik)
-
-**Priorität:** HOCH
-**Geschätzte Lesezeit:** 13 Minuten
-**Stichwortliste-Abdeckung:** 8/8 Stichwörter
-
----
-
-## Einleitung
+      content: `## Einleitung
 
 **Geschlechtsgebundene Vererbung** (Gonosomale Vererbung) betrifft Gene auf:
 1. **X-Chromosom** (X-chromosomal, X-linked)
@@ -844,11 +783,11 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ## Kerninhalt
 
-### 1. ⭐ X-chromosomale rezessive Vererbung
+### 1. X-chromosomale rezessive Vererbung
 
 **Merkmal:** Gen auf **X-Chromosom**, **rezessiv**
 
-⭐ **Genotyp → Phänotyp:**
+**Genotyp → Phänotyp:**
 
 | Genotyp | Phänotyp | Erklärung |
 |---------|----------|-----------|
@@ -872,7 +811,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 - **Keine Vater-Sohn-Übertragung** (Vater gibt Y an Sohn, X an Tochter)
 - **Kreuzverwandtschaft** ↑ Risiko (z. B. Cousin-Cousine)
 
-⭐ **Beispiele:**
+**Beispiele:**
 
 **Hämophilie A** (Bluterkrankheit):
 - **Gen:** F8 (Faktor VIII, Gerinnungsfaktor)
@@ -927,7 +866,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-### 3. ⭐ X-Inaktivierung (Lyon-Hypothese)
+### 3. X-Inaktivierung (Lyon-Hypothese)
 
 **Prinzip:** Bei **weiblichen Zellen** (XX) wird **1 X-Chromosom inaktiviert** → Dosiskompensation (Männer XY haben nur 1 aktives X)
 
@@ -964,36 +903,37 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 - **Hairy Ears** (Hypertrichose Ohrmuschel): Dichter Haarwuchs am Ohr (umstritten, ob rein Y-chromosomal)
 - **Männliche Infertilität:** AZF-Deletionen (Y-Chromosom) → Azoospermie, Oligospermie
 
----
-
-## 📌 Prüfungsfokus
-
-1. **X-chromosomal rezessiv:** Männer häufiger betroffen (hemizygot), Töchter meist gesund (Konduktorinnen), keine Vater-Sohn-Übertragung, Beispiele: Hämophilie A, Rot-Grün-Blindheit, Muskeldystrophie Duchenne
-2. **X-chromosomal dominant:** Frauen häufiger betroffen (2 X), kranker Vater → 100% Töchter krank, 100% Söhne gesund, Beispiele: Hypophosphatämische Rachitis, Rett-Syndrom (♂ meist letal)
-3. **X-Inaktivierung:** 1 X inaktiviert (♀), zufällig, Barr-Körperchen, Mosaik-Muster (Kaliko-Katzen), XIST-Gen
-4. **Y-chromosomal:** Nur Männer, Vater-Sohn-Übertragung (100%), SRY (Hoden-Entwicklung), AZF (Spermatogenese)
-5. **Konduktorin:** X^A X^a (♀), gesund (Carrier), 50% Risiko kranke Söhne
-
----
-
-## Merksätze
-
->>>> **X-chromosomal rezessiv:** „Männer häufiger krank (hemizygot, X^a Y, nur 1 X). Töchter meist gesund (X^A X^a Konduktorin). Keine Vater-Sohn-Übertragung! Beispiele: Hämophilie A, Rot-Grün-Blindheit, Duchenne!"
-
->>>> **X-chromosomal dominant:** „Frauen häufiger betroffen (2 X). Kranker Vater (X^A Y) → 100% Töchter krank (X^A X^-), 100% Söhne gesund (X^- Y). Beispiel: Hypophosphatämische Rachitis!"
-
->>>> **X-Inaktivierung:** „Weibliche Zellen (XX) → 1 X inaktiviert (zufällig, Barr-Körperchen, XIST). Mosaik-Muster (Kaliko-Katzen: X^O X^B → Orange + Schwarz, nur ♀)! Dosiskompensation!"
-
->>>> **Y-chromosomal:** „Nur Männer betroffen! Vater → 100% Söhne (Y-Chromosom). SRY (Hoden-Entwicklung → männlich), AZF (Spermatogenese, Deletion → Infertilität)!"
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 5 UK03 – Geninteraktion](Bio_Kap5_UK03_Geninteraktion.md) | [Weiter: Bio Kap 5 UK05 – Stammbaumanalyse](Bio_Kap5_UK05_Stammbaumanalyse.md) →
 `,
-      lernziele: [],
-      sections: [],
-      merksätze: [],
+      lernziele: [
+        "X-chromosomal rezessive und dominante Vererbungsmuster anhand von Genotypen und Vererbungsregeln erklären können.",
+        "Den Begriff Hemizygotie verstehen und erklären, warum Männer bei X-chromosomal rezessiven Erkrankungen häufiger betroffen sind.",
+        "Das Prinzip der X-Inaktivierung (Lyon-Hypothese) und seine klinischen Konsequenzen beschreiben können.",
+        "Y-chromosomale Vererbung (holandrisch) von anderen Erbgängen unterscheiden und Beispiele nennen können.",
+        "Klinische Beispiele X-chromosomaler Erkrankungen (Hämophilie A, Duchenne, Rot-Grün-Blindheit) benennen und zuordnen können.",
+      ],
+      sections: [
+        {
+          heading: "X-chromosomal rezessive Vererbung",
+          text: "Bei X-chromosomal rezessiver Vererbung sind Männer (X^a Y, hemizygot) häufiger krank, da sie nur ein X-Chromosom besitzen. Frauen sind als Konduktorinnen (X^A X^a) meist gesund. Es gibt keine Vater-Sohn-Übertragung (Vater gibt Y an Söhne). Klinische Beispiele: Hämophilie A, Rot-Grün-Blindheit, Muskeldystrophie Duchenne.",
+          merksatz: "Männer häufiger krank (hemizygot, X^a Y). Töchter meist gesund (Konduktorin). Keine Vater-Sohn-Übertragung.",
+        },
+        {
+          heading: "X-chromosomal dominante Vererbung und X-Inaktivierung",
+          text: "Bei X-chromosomal dominanter Vererbung gibt ein kranker Vater (X^A Y) sein X^A an alle Töchter (100% krank) und sein Y an alle Söhne (100% gesund). Die X-Inaktivierung (Lyon-Hypothese) inaktiviert in weiblichen Zellen zufällig eines der beiden X-Chromosomen (Barr-Körperchen), was ein Mosaik-Muster erzeugt (z. B. Kaliko-Katzen).",
+          merksatz: "Kranker Vater (X^A Y) → 100% Töchter krank, 100% Söhne gesund. X-Inaktivierung = Barr-Körperchen, Mosaik-Muster.",
+        },
+        {
+          heading: "Y-chromosomale Vererbung",
+          text: "Y-chromosomale Gene betreffen ausschließlich Männer. Die Übertragung erfolgt zu 100% vom Vater auf alle Söhne, Töchter sind nie betroffen. Wichtige Gene: SRY (Hoden-Entwicklung → männlicher Phänotyp), AZF (Spermatogenese; Deletion → Infertilität).",
+          merksatz: "Y-chromosomal: Nur Männer, Vater → 100% Söhne. SRY = Hoden, AZF = Spermatogenese.",
+        },
+      ],
+      merksätze: [
+        "X-chromosomal rezessiv: Männer häufiger krank (hemizygot, X^a Y, nur 1 X). Töchter meist gesund (X^A X^a Konduktorin). Keine Vater-Sohn-Übertragung. Beispiele: Hämophilie A, Rot-Grün-Blindheit, Duchenne.",
+        "X-chromosomal dominant: Frauen häufiger betroffen (2 X). Kranker Vater (X^A Y) → 100% Töchter krank, 100% Söhne gesund. Beispiel: Hypophosphatämische Rachitis.",
+        "X-Inaktivierung: Weibliche Zellen (XX) → 1 X inaktiviert (zufällig, Barr-Körperchen, XIST). Mosaik-Muster (Kaliko-Katzen: X^O X^B → Orange + Schwarz, nur bei Weibchen).",
+        "Y-chromosomal: Nur Männer betroffen. Vater → 100% Söhne. SRY (Hoden-Entwicklung → männlich), AZF (Spermatogenese, Deletion → Infertilität).",
+      ],
       selfTest: [
         {
           question: "Ein Junge leidet an Hämophilie A. Seine Mutter und Großmutter väterlicherseits sind gesund, sein Vater und Großvater mütterlicherseits sind ebenfalls gesund. Welche Aussage zum Erbgang ist korrekt?",
@@ -1065,34 +1005,12 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
           difficulty: 1,
           tags: [],
         },
-        {
-          question: "Ein Genetiker untersucht Kaliko-Katzen (Schildpatt-Muster: orange + schwarze Flecken). Er stellt fest, dass **nur weibliche Katzen** dieses Muster zeigen. Welche genetische Erklärung ist korrekt?",
-          options: [
-          "Das Schildpatt-Muster ist Y-chromosomal vererbt und tritt nur bei XY-Katzen auf",
-          "Weibliche Katzen (X^O X^B) zeigen durch X-Inaktivierung ein Mosaik-Muster (Orange + Schwarz), männliche Katzen sind hemizygot (nur Orange oder Schwarz)",
-          "Das Muster entsteht durch Epistase zwischen zwei autosomalen Genen (O-Locus und B-Locus)",
-          "Männliche Katzen mit Klinefelter-Syndrom (XXY) können ebenfalls Schildpatt-Muster zeigen, da sie zwei X-Chromosomen haben",
-          "Beide Antworten B und D sind korrekt"
-          ],
-          correctIndex: 4,
-          explanation: "**Kaliko-Katzen** (Schildpatt): X-chromosomale Fellfarbe-Gene (X^O = Orange, X^B = Schwarz). **Weibliche Katzen** (X^O X^B) → durch **X-Inaktivierung** (zufällig, Lyon-Hypothese) entsteht **Mosaik-Muster** (einige Zellen X^O aktiv → Orange, andere X^B aktiv → Schwarz). **Männliche Katzen** (X^O Y oder X^B Y) → hemizygot → nur **eine Farbe** (Orange oder Schwarz). **Ausnahme:** XXY-Kater (Klinefelter) können Schildpatt zeigen (2 X-Chromosomen → X-Inaktivierung möglich). Beide B und D sind korrekt!",
-          difficulty: 3,
-          tags: [],
-        }
       ],
     },
     {
       id: 'bio-5-05',
       title: "Stammbaumanalyse",
-      content: `# Stammbaumanalyse – Biologie Kapitel 5 (Genetik)
-
-**Priorität:** HOCH
-**Geschätzte Lesezeit:** 12 Minuten
-**Stichwortliste-Abdeckung:** 7/7 Stichwörter
-
----
-
-## Einleitung
+      content: `## Einleitung
 
 **Stammbaumanalyse** (Pedigree-Analyse) ist die Methode zur:
 1. **Darstellung** von Vererbungsmustern in Familien
@@ -1105,7 +1023,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ## Kerninhalt
 
-### 1. ⭐ Stammbaumsymbole
+### 1. Stammbaumsymbole
 
 **Standardsymbole:**
 
@@ -1125,9 +1043,9 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-### 2. ⭐ Erbgangsmuster erkennen
+### 2. Erbgangsmuster erkennen
 
-#### 2a. ⭐ Autosomal-dominant
+#### 2a. Autosomal-dominant
 
 **Merkmale:**
 - **Jede Generation betroffen** (vertikale Transmission, kein Generationensprung)
@@ -1143,7 +1061,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-#### 2b. ⭐ Autosomal-rezessiv
+#### 2b. Autosomal-rezessiv
 
 **Merkmale:**
 - **Generationensprünge** (horizontal transmission, Eltern gesund → Kinder krank)
@@ -1159,7 +1077,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-#### 2c. ⭐ X-chromosomal rezessiv
+#### 2c. X-chromosomal rezessiv
 
 **Merkmale:**
 - **Männer häufiger betroffen** (hemizygot, X^a Y)
@@ -1204,7 +1122,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-### 3. ⭐ Wahrscheinlichkeitsberechnung
+### 3. Wahrscheinlichkeitsberechnung
 
 **Szenario:** Eltern Aa × Aa (autosomal-rezessiv, beide Konduktoren)
 
@@ -1247,40 +1165,39 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 **Stammbaum-Symbol:** **Doppellinie** (=) zwischen Partnern
 
----
-
-## 📌 Prüfungsfokus
-
-1. **Stammbaumsymbole:** Quadrat (♂), Kreis (♀), ausgefüllt (betroffen), halb (Konduktor), Doppellinie (Konsanguinität)
-2. **Autosomal-dominant:** Jede Generation betroffen, vertikale Transmission, Männer = Frauen, Beispiel Marfan
-3. **Autosomal-rezessiv:** Generationensprünge, Geschwister betroffen, Konsanguinität ↑ Risiko, Beispiel PKU
-4. **X-chromosomal rezessiv:** Männer häufiger, keine Vater-Sohn-Übertragung, diagonal (Großvater → Enkel), Beispiel Hämophilie A
-5. **X-chromosomal dominant:** Frauen häufiger, kranker Vater → 100% Töchter krank, 100% Söhne gesund
-6. **Wahrscheinlichkeit:** Aa × Aa → 25% krank (aa), 75% gesund (AA/Aa), bedingte Wahrscheinlichkeit P(Aa | gesund) = 2/3
-7. **Konsanguinität:** Verwandtenehe → autosomal-rezessive Erkrankungen ↑, Doppellinie im Stammbaum
-
----
-
-## Merksätze
-
->>>> **Autosomal-dominant:** „Jede Generation betroffen (vertikale Linie I → II → III). Männer = Frauen. Betroffene Eltern (Aa) → ~50% Kinder krank. Gesunde Eltern → gesunde Kinder! Beispiel: Marfan, Achondroplasie!"
-
->>>> **Autosomal-rezessiv:** „Generationensprünge (horizontal)! Gesunde Eltern (Aa × Aa) → 25% Kinder krank (aa). Konsanguinität ↑ Risiko (Doppellinie)! Geschwister betroffen. Beispiel: PKU, Mukoviszidose!"
-
->>>> **X-chromosomal rezessiv:** „Männer häufiger krank (hemizygot, X^a Y). Keine Vater-Sohn-Übertragung! Diagonal-Muster: Großvater (betroffen) → Tochter (Konduktorin) → Enkel (betroffen). Beispiel: Hämophilie A, Duchenne!"
-
->>>> **Wahrscheinlichkeit Aa × Aa:** „Jede Geburt unabhängig! P(krank aa) = 1/4 = 25%. P(gesund AA/Aa) = 3/4 = 75%. Bedingt: P(Aa | gesund) = 2/3 (2 von 3 gesunden sind Aa-Konduktoren)!"
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 5 UK04 – Geschlechtsgebundene Vererbung](Bio_Kap5_UK04_Geschlechtsgebundene_Vererbung.md) | [Weiter: Bio Kap 5 UK06 – Populationsgenetik](Bio_Kap5_UK06_Populationsgenetik.md) →
 `,
-      lernziele: [],
-      sections: [],
+      lernziele: [
+        "Die Standardsymbole der Stammbaumanalyse (Quadrat, Kreis, ausgefüllt, Doppellinie) kennen und anwenden können.",
+        "Autosomal-dominante, autosomal-rezessive, X-chromosomale und Y-chromosomale Erbgänge anhand typischer Stammbaummerkmale erkennen können.",
+        "Vererbungswahrscheinlichkeiten (z. B. 25% Erkrankungsrisiko bei Aa × Aa) berechnen können.",
+        "Bedingte Wahrscheinlichkeit nach Bayes (P(Aa | gesund) = 2/3) anwenden können.",
+        "Den Einfluss von Konsanguinität auf das Auftreten autosomal-rezessiver Erkrankungen erklären können.",
+      ],
+      sections: [
+        {
+          heading: "Stammbaumsymbole und Erbgangserkennung",
+          text: "Quadrate symbolisieren Männer, Kreise Frauen; ausgefüllte Symbole zeigen Betroffene, halbe Symbole Konduktoren. Die Doppellinie kennzeichnet Konsanguinität. Autosomal-dominante Erbgänge zeigen vertikale Transmission (jede Generation betroffen), autosomal-rezessive zeigen Generationensprünge mit gesunden Eltern und kranken Geschwistern.",
+          merksatz: "Autosomal-dominant: jede Generation betroffen. Autosomal-rezessiv: Generationensprünge, gesunde Eltern, Doppellinie = Konsanguinität.",
+        },
+        {
+          heading: "Gonosomale Erbgänge im Stammbaum",
+          text: "X-chromosomal rezessiv: Männer häufiger betroffen, kein Vater-Sohn-Übertragung, Diagonal-Muster (Großvater → Tochter als Konduktorin → Enkel). X-chromosomal dominant: kranker Vater → 100% Töchter krank, 100% Söhne gesund. Y-chromosomal: nur Männer betroffen, Vater-Sohn-Übertragung zu 100%.",
+          merksatz: "X-rez.: kein Vater-Sohn, diagonal. X-dom.: kranker Vater → alle Töchter krank. Y-chr.: nur Männer, Vater-Sohn 100%.",
+        },
+        {
+          heading: "Wahrscheinlichkeitsberechnung",
+          text: "Bei Aa × Aa beträgt P(aa, krank) = 1/4, P(gesund) = 3/4. Jede Geburt ist unabhängig. Die bedingte Wahrscheinlichkeit P(Aa | gesund) = 2/3 ergibt sich über das Bayes-Theorem, da von drei möglichen gesunden Genotypen zwei heterozygot sind.",
+          merksatz: "Aa × Aa: 1/4 krank, 3/4 gesund. P(Aa | gesund) = 2/3. Jede Geburt ist unabhängig!",
+        },
+      ],
       diagram: 'pedigree-analysis',
 
-      merksätze: [],
+      merksätze: [
+        "Autosomal-dominant: Jede Generation betroffen (vertikale Linie I → II → III). Männer = Frauen. Betroffene Eltern (Aa) → ~50% Kinder krank. Beispiel: Marfan, Achondroplasie.",
+        "Autosomal-rezessiv: Generationensprünge! Gesunde Eltern (Aa × Aa) → 25% Kinder krank (aa). Konsanguinität erhöht Risiko (Doppellinie). Beispiel: PKU, Mukoviszidose.",
+        "X-chromosomal rezessiv: Männer häufiger krank. Keine Vater-Sohn-Übertragung. Diagonal-Muster: Großvater → Tochter (Konduktorin) → Enkel. Beispiel: Hämophilie A, Duchenne.",
+        "Wahrscheinlichkeit Aa × Aa: Jede Geburt unabhängig. P(krank aa) = 1/4 = 25%. P(gesund) = 3/4. Bedingt: P(Aa | gesund) = 2/3.",
+      ],
       selfTest: [
         {
           question: "In einem Stammbaum sind Generation I (Eltern) gesund, Generation II zeigt 2 von 4 Geschwistern betroffen (1 Bruder, 1 Schwester), Generation III ist noch nicht vorhanden. Die Eltern in Generation I sind durch eine Doppellinie (=) verbunden. Welcher Erbgang ist am wahrscheinlichsten?",
@@ -1352,34 +1269,12 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
           difficulty: 3,
           tags: [],
         },
-        {
-          question: "In einem Stammbaum sind **alle betroffenen Individuen männlich**, und es findet eine **durchgehende Vater-Sohn-Übertragung** über 3 Generationen statt (I → II → III, nur männliche Linie). Welcher Erbgang liegt vor?",
-          options: [
-          "X-chromosomal rezessiv, da nur Männer betroffen sind (hemizygot)",
-          "Autosomal-dominant mit geschlechtsbegrenzter Expression (nur Männer zeigen Phänotyp)",
-          "Y-chromosomal (holandrisch), da Vater-Sohn-Übertragung (100%) und nur Männer betroffen",
-          "Autosomal-rezessiv, da Generationensprünge auftreten können",
-          "X-chromosomal dominant, da das Merkmal in jeder Generation auftritt"
-          ],
-          correctIndex: 2,
-          explanation: "**Y-chromosomal (holandrisch)**: **Nur Männer betroffen** + **Vater-Sohn-Übertragung (100%)** ist **pathognomonisch**. Der Vater gibt das **Y-Chromosom an alle Söhne** weiter (nicht an Töchter → X vom Vater). **Vertikale Linie** nur durch männliche Linie (I → II → III). **Wichtig:** X-chromosomal rezessiv hat **keine Vater-Sohn-Übertragung** (Vater gibt Y, nicht X an Sohn). Beispiele: Männliche Infertilität (AZF-Deletionen auf Y), Hairy Ears (umstritten).",
-          difficulty: 2,
-          tags: [],
-        }
       ],
     },
     {
       id: 'bio-5-06',
       title: "Populationsgenetik",
-      content: `# Populationsgenetik (Hardy-Weinberg-Gleichgewicht) – Biologie Kapitel 5 (Genetik)
-
-**Priorität:** HOCH
-**Geschätzte Lesezeit:** 14 Minuten
-**Stichwortliste-Abdeckung:** 8/8 Stichwörter
-
----
-
-## Einleitung
+      content: `## Einleitung
 
 **Populationsgenetik** untersucht:
 1. **Allelfrequenzen** in Populationen
@@ -1392,13 +1287,13 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ## Kerninhalt
 
-### 1. ⭐ Hardy-Weinberg-Gleichgewicht (HWE)
+### 1. Hardy-Weinberg-Gleichgewicht (HWE)
 
 **Prinzip:** Unter bestimmten Bedingungen bleiben **Allelfrequenzen konstant** über Generationen
 
 **Formel:**
 
-⭐ **p² + 2pq + q² = 1**
+**p² + 2pq + q² = 1**
 
 **Legende:**
 - **p** = Frequenz des dominanten Allels **A** (z.B. p = 0,7)
@@ -1419,7 +1314,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-### 2. ⭐ Bedingungen für HWE
+### 2. Bedingungen für HWE
 
 **5 Voraussetzungen** (idealisierende Annahmen):
 
@@ -1435,7 +1330,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-### 3. ⭐ Berechnung von Allelfrequenzen
+### 3. Berechnung von Allelfrequenzen
 
 **Szenario:** Population mit 100 Individuen (autosomal, diploid)
 
@@ -1476,7 +1371,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ### 4. Abweichungen vom HWE
 
-#### 4a. ⭐ Selektion
+#### 4a. Selektion
 
 **Definition:** Unterschiedliche **Fitness** (Überlebens-/Reproduktionsrate) der Genotypen
 
@@ -1536,38 +1431,37 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 **Wichtig:** Nicht-zufällige Paarung ändert **Genotypfrequenzen**, aber **nicht Allelfrequenzen** (p, q bleiben gleich, aber p², 2pq, q² ändern sich)
 
----
-
-## 📌 Prüfungsfokus
-
-1. **Hardy-Weinberg-Formel:** p² + 2pq + q² = 1, p + q = 1, p² (AA), 2pq (Aa), q² (aa)
-2. **Bedingungen HWE:** Keine Mutation, zufällige Paarung, keine Selektion, große Population, keine Migration
-3. **Allelfrequenz berechnen:** Aus Genotypen (Allele zählen) oder q² = √(Frequenz aa), p = 1 - q
-4. **Konduktor-Frequenz:** Bei seltener rezessiver Erkrankung (q² = 1/10.000) → q = 0,01, 2pq ≈ 2% (Konduktoren häufiger als Betroffene)
-5. **Selektion:** Heterozygoten-Vorteil (Sichelzellanämie in Malaria-Gebieten), positive/negative Selektion
-6. **Genetischer Drift:** Gründereffekt, Flaschenhals, zufällige Frequenzänderungen in kleinen Populationen
-7. **Inzucht:** Homozygotie ↑, rezessive Erkrankungen ↑, Genotypfrequenzen ändern sich (nicht p/q)
-
----
-
-## Merksätze
-
->>>> **Hardy-Weinberg-Formel:** „p² + 2pq + q² = 1 (Genotypfrequenzen), p + q = 1 (Allelfrequenzen). p² = AA, 2pq = Aa, q² = aa. Bedingungen: Keine Mutation, zufällige Paarung, keine Selektion, große Population, keine Migration!"
-
->>>> **Konduktor-Berechnung:** „Rezessive Erkrankung (q² = 1/10.000) → q = √0,0001 = 0,01, p = 0,99. Konduktor-Frequenz 2pq = 2 × 0,99 × 0,01 ≈ 2% (1 von 50). Konduktoren viel häufiger als Betroffene!"
-
->>>> **Selektion (Sichelzellanämie):** „Heterozygoten-Vorteil in Malaria-Gebieten! HbA/HbS (Heterozygot) → Malaria-Resistenz, Fitness ↑. HbS-Allel bleibt erhalten (Balancing Selection). HbS/HbS (homozygot) → Sichelzellanämie, Fitness ↓!"
-
->>>> **Genetischer Drift:** „Zufällige Frequenzänderungen in kleinen Populationen! Gründereffekt (kleine Gründerpopulation), Flaschenhals (Population schrumpft). Folge: Allelverlust, Fixierung (p = 1 oder 0). Beispiel: Geparden (geringe Diversität)!"
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 5 UK05 – Stammbaumanalyse](Bio_Kap5_UK05_Stammbaumanalyse.md) | [Weiter: Bio Kap 5 UK07 – Mutationen](Bio_Kap5_UK07_Mutationen.md) →
 `,
-      lernziele: [],
-      sections: [],
-      merksätze: [],
+      lernziele: [
+        "Die Hardy-Weinberg-Formel (p² + 2pq + q² = 1) anwenden und Genotypfrequenzen aus Allelfrequenzen berechnen können.",
+        "Die fünf Voraussetzungen des Hardy-Weinberg-Gleichgewichts nennen und erklären können.",
+        "Allelfrequenzen und Konduktorfrequenzen bei autosomal-rezessiven Erkrankungen berechnen können.",
+        "Selektion (insbesondere Heterozygoten-Vorteil bei Sichelzellanämie) als Abweichung vom HWE beschreiben können.",
+        "Genetischen Drift, Gründereffekt und Flaschenhals-Effekt als evolutionäre Kräfte erklären können.",
+      ],
+      sections: [
+        {
+          heading: "Hardy-Weinberg-Gleichgewicht",
+          text: "Das Hardy-Weinberg-Gleichgewicht beschreibt stabile Allelfrequenzen unter idealen Bedingungen: keine Mutation, zufällige Paarung, keine Selektion, große Population, keine Migration. Die Formel p² + 2pq + q² = 1 verbindet Allel- und Genotypfrequenzen (p² = AA, 2pq = Aa, q² = aa). Bei seltenen rezessiven Erkrankungen (q² = 1/10.000) sind Konduktoren (2pq ≈ 2%) viel häufiger als Betroffene.",
+          merksatz: "p² + 2pq + q² = 1, p + q = 1. q = √(Erkrankungsfrequenz). Konduktoren (2pq) viel häufiger als Betroffene (q²).",
+        },
+        {
+          heading: "Selektion und Heterozygoten-Vorteil",
+          text: "Selektion verändert Allelfrequenzen durch unterschiedliche Fitness der Genotypen. Beim Heterozygoten-Vorteil (Balancing Selection) haben Heterozygote den höchsten Reproduktionserfolg. Das HbS-Allel bleibt in Malaria-Gebieten erhalten, weil HbA/HbS-Heterozygote Malaria-resistent sind (höhere Fitness als beide Homozygoten).",
+          merksatz: "Heterozygoten-Vorteil (Sichelzellanämie): HbA/HbS → Malaria-Resistenz, Fitness am höchsten. HbS-Allel bleibt erhalten (Balancing Selection).",
+        },
+        {
+          heading: "Genetischer Drift und Migration",
+          text: "Genetischer Drift bezeichnet zufällige Frequenzänderungen in kleinen Populationen. Gründereffekt: kleine Gründerpopulation trägt zufällige Allelfrequenzen. Flaschenhals-Effekt: drastische Populationsreduktion führt zu Allelverlust. Migration (Genfluss) gleicht Allelfrequenzen zwischen Populationen an. Inzucht erhöht Homozygotie, ändert aber nicht die Allelfrequenzen p und q.",
+          merksatz: "Drift: Zufällige Frequenzänderungen in kleinen Populationen. Flaschenhals → Allelverlust (Geparden). Inzucht → Homozygotie ↑, aber p/q unverändert.",
+        },
+      ],
+      merksätze: [
+        "Hardy-Weinberg-Formel: p² + 2pq + q² = 1 (Genotypfrequenzen), p + q = 1 (Allelfrequenzen). p² = AA, 2pq = Aa, q² = aa. Bedingungen: keine Mutation, zufällige Paarung, keine Selektion, große Population, keine Migration.",
+        "Konduktor-Berechnung: Rezessive Erkrankung (q² = 1/10.000) → q = 0,01, p = 0,99. Konduktor-Frequenz 2pq ≈ 2% (1 von 50). Konduktoren viel häufiger als Betroffene.",
+        "Selektion (Sichelzellanämie): Heterozygoten-Vorteil in Malaria-Gebieten. HbA/HbS → Malaria-Resistenz, Fitness ↑. HbS-Allel bleibt erhalten (Balancing Selection).",
+        "Genetischer Drift: Zufällige Frequenzänderungen in kleinen Populationen. Gründereffekt, Flaschenhals → Allelverlust, Fixierung. Beispiel: Geparden.",
+      ],
       selfTest: [
         {
           question: "Eine Population befindet sich im Hardy-Weinberg-Gleichgewicht. Die Frequenz des rezessiven Allels **a** beträgt **q = 0,2**. Wie hoch ist die Frequenz der **heterozygoten Individuen** (Aa)?",
@@ -1639,34 +1533,12 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
           difficulty: 2,
           tags: [],
         },
-        {
-          question: "Eine kleine Insel-Population von Vögeln (50 Individuen) wird durch einen Hurrikan auf 5 Individuen reduziert. Nach Generationen wächst die Population wieder auf 500 Individuen. Welches Phänomen erklärt, warum die neue Population eine **geringere genetische Vielfalt** hat als die ursprüngliche?",
-          options: [
-          "Migration (Genfluss) – Einwanderung neuer Individuen verringert die Diversität",
-          "Positive Selektion – vorteilhafte Allele werden bevorzugt, andere eliminiert",
-          "Flaschenhals-Effekt (Bottleneck Effect) – drastische Populationsreduktion führt zu zufälligem Allelverlust",
-          "Assortative Mating – ähnliche Phänotypen paaren sich, was die Diversität erhöht",
-          "Mutation – neue Allele entstehen nach dem Hurrikan und erhöhen die Vielfalt"
-          ],
-          correctIndex: 2,
-          explanation: "**Flaschenhals-Effekt (Bottleneck Effect):** Die **drastische Reduktion** der Population (50 → 5) führt zu **zufälligem Allelverlust** (genetischer Drift). Die 5 überlebenden Individuen tragen nur einen **Bruchteil der ursprünglichen Allele** → neue Population (500) hat **geringere genetische Vielfalt**. Beispiel: Geparden (sehr geringe Diversität nach Flaschenhals vor ~10.000 Jahren). Wichtig: **Kleine Populationen → Drift**, nicht Selektion!",
-          difficulty: 2,
-          tags: [],
-        }
       ],
     },
     {
       id: 'bio-5-07',
       title: "Mutationen",
-      content: `# Mutationen – Biologie Kapitel 5 (Genetik)
-
-**Priorität:** HOCH
-**Geschätzte Lesezeit:** 16 Minuten
-**Stichwortliste-Abdeckung:** 10/10 Stichwörter
-
----
-
-## Einleitung
+      content: `## Einleitung
 
 **Mutation** = dauerhafte **Veränderung der DNA-Sequenz**
 
@@ -1684,11 +1556,11 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ## Kerninhalt
 
-### 1. ⭐ Genmutationen (Punktmutationen)
+### 1. Genmutationen (Punktmutationen)
 
 **Definition:** Veränderung **einzelner Nukleotide** (Basenpaare)
 
-#### 1a. ⭐ Substitution (Basenaustausch)
+#### 1a. Substitution (Basenaustausch)
 
 **Typen:**
 
@@ -1699,24 +1571,24 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 **Auswirkungen auf Protein:**
 
-⭐ **Stille Mutation (Silent Mutation):**
+**Stille Mutation (Silent Mutation):**
 - **Codon-Änderung**, aber **gleiche Aminosäure** (Degeneration des genetischen Codes)
 - **Beispiel:** GAA (Glu) → GAG (Glu) – keine Proteinänderung
 - **Folge:** Meist **keine klinische Relevanz** (funktionelles Protein unverändert)
 
-⭐ **Missense-Mutation:**
+**Missense-Mutation:**
 - **Codon-Änderung** → **andere Aminosäure**
 - **Beispiel:** GAA (Glu) → GUA (Val) – **Sichelzellanämie** (β-Globin Position 6)
 - **Folge:** Protein **funktional verändert** (kann harmlos oder pathogen sein)
 
-⭐ **Nonsense-Mutation:**
+**Nonsense-Mutation:**
 - **Codon-Änderung** → **Stopp-Codon** (UAA, UAG, UGA)
 - **Beispiel:** CAA (Gln) → UAA (Stopp)
 - **Folge:** **Vorzeitiger Translationsabbruch** → verkürztes, meist **nicht-funktionales Protein**
 
 ---
 
-#### 1b. ⭐ Insertion/Deletion (Indel)
+#### 1b. Insertion/Deletion (Indel)
 
 **Definition:** **Einfügen** (Insertion) oder **Entfernen** (Deletion) von Nukleotiden
 
@@ -1758,7 +1630,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-### 4. ⭐ Ursachen von Mutationen
+### 4. Ursachen von Mutationen
 
 #### 4a. Spontane Mutationen
 
@@ -1773,7 +1645,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-#### 4b. ⭐ Induzierte Mutationen (Mutagene)
+#### 4b. Induzierte Mutationen (Mutagene)
 
 **Physikalische Mutagene:**
 - **UV-Strahlung:** Thymin-Dimere (benachbarte Thymidine vernetzen) → Replikationsfehler
@@ -1790,7 +1662,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-### 5. ⭐ DNA-Reparaturmechanismen
+### 5. DNA-Reparaturmechanismen
 
 **Zellen haben mehrere Reparatursysteme:**
 
@@ -1807,7 +1679,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ### 6. Klinische Beispiele
 
-#### 6a. ⭐ Sichelzellanämie (Missense-Mutation)
+#### 6a. Sichelzellanämie (Missense-Mutation)
 
 **Gen:** β-Globin (HBB)
 - **Mutation:** Nukleotid 17: GAG → GTG (Missense)
@@ -1818,7 +1690,7 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 ---
 
-#### 6b. ⭐ Mukoviszidose (In-Frame-Deletion)
+#### 6b. Mukoviszidose (In-Frame-Deletion)
 
 **Gen:** CFTR (Cystic Fibrosis Transmembrane Conductance Regulator)
 - **Häufigste Mutation:** **ΔF508** (Deletion von 3 Nukleotiden → Phenylalanin 508 fehlt)
@@ -1836,38 +1708,31 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
 
 **Vererbung:** X-chromosomal rezessiv
 
----
-
-## 📌 Prüfungsfokus
-
-1. **Stille Mutation:** Codon-Änderung, gleiche Aminosäure (Degeneration), keine klinische Relevanz
-2. **Missense-Mutation:** Codon-Änderung → andere Aminosäure, Beispiel Sichelzellanämie (Glu → Val, β-Globin Position 6)
-3. **Nonsense-Mutation:** Codon → Stopp-Codon, vorzeitiger Translationsabbruch, nicht-funktionales Protein
-4. **Frameshift-Mutation:** Insertion/Deletion ≠ 3n Nukleotide → Leserahmen verschoben, komplett anderes Protein (meist nicht-funktional)
-5. **In-Frame-Deletion:** Vielfaches von 3 (z.B. ΔF508 bei Mukoviszidose), Aminosäure fehlt, Leserahmen erhalten
-6. **Mutagene:** UV (Thymin-Dimere), ionisierende Strahlung (Doppelstrangbrüche), Basenanaloga, alkylierende Substanzen
-7. **DNA-Reparatur:** MMR (Lynch-Syndrom), NER (Xeroderma pigmentosum), BRCA1/2 (Brustkrebs)
-
----
-
-## Merksätze
-
->>>> **Stille vs. Missense vs. Nonsense:** „Stille (Silent): Codon ändert sich, Aminosäure gleich (keine Folge). Missense: Codon → andere Aminosäure (z.B. Sichelzelle: Glu → Val). Nonsense: Codon → Stopp (vorzeitiger Abbruch, Protein verkürzt)!"
-
->>>> **Frameshift-Mutation:** „Insertion/Deletion ≠ 3n Nukleotide → Leserahmen verschoben! Alle nachfolgenden Codons falsch → komplett anderes Protein (meist nicht-funktional). In-Frame (3n): Aminosäure fehlt, Leserahmen OK (z.B. ΔF508 Mukoviszidose)!"
-
->>>> **Sichelzellanämie (Missense):** „β-Globin Position 6: GAG (Glu) → GTG (Val, Missense). HbS → Sichelzellen bei Hypoxie → Hämolyse, Gefäßverschlüsse. Autosomal-kodominant (HbA/HbS Träger, HbS/HbS Anämie)!"
-
->>>> **DNA-Reparatur-Defekte:** „MMR-Defekt → Lynch-Syndrom (Darmkrebs ↑). NER-Defekt → Xeroderma pigmentosum (Hautkrebs ↑, UV-Sensitivität). BRCA1/2-Mutation → Brustkrebs ↑ (Doppelstrangbruch-Reparatur gestört)!"
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 5 UK06 – Populationsgenetik](Bio_Kap5_UK06_Populationsgenetik.md) | [Weiter: Bio Kap 6 – Molekulare Genetik](../Bio_Kap6_UK01_DNA_Struktur.md) →
 `,
-      lernziele: [],
-      sections: [],
-      merksätze: [],
+      lernziele: [
+        "Die drei Typen von Genmutationen (stille Mutation, Missense, Nonsense) unterscheiden und klinische Beispiele zuordnen können.",
+        "Frameshift-Mutationen und In-Frame-Indels erklären und deren Folgen für das Protein beschreiben können.",
+        "Physikalische, chemische und biologische Mutagene mit ihren DNA-Schäden benennen können.",
+        "Die wichtigsten DNA-Reparaturmechanismen (MMR, NER, BRCA) und ihre Defekte als Krebs-Prädispositionen kennen.",
+        "Die molekulare Grundlage der Sichelzellanämie (Missense) und Mukoviszidose (In-Frame-Deletion ΔF508) erklären können.",
+      ],
+      sections: [
+        {
+          heading: "Genmutationen: Substitutionen",
+          text: "Stille Mutationen ändern ein Codon, ohne die Aminosäure zu verändern (genetische Degeneration). Missense-Mutationen führen zu einem Aminosäureaustausch (z. B. GAG → GTG: Glu → Val bei Sichelzellanämie). Nonsense-Mutationen erzeugen ein vorzeitiges Stopp-Codon und führen zu einem verkürzten, meist nicht-funktionalen Protein.",
+          merksatz: "Still = gleiche AS. Missense = andere AS (Sichelzelle: Glu → Val). Nonsense = Stopp-Codon, verkürztes Protein.",
+        },
+        {
+          heading: "Insertionen, Deletionen und Reparaturmechanismen",
+          text: "Frameshift-Mutationen entstehen, wenn Insertionen oder Deletionen kein Vielfaches von 3 Nukleotiden umfassen — der Leserahmen verschiebt sich, alle nachfolgenden Codons werden falsch gelesen. In-Frame-Indels (Vielfaches von 3) entfernen oder fügen Aminosäuren ein, ohne den Leserahmen zu verschieben (z. B. ΔF508 bei Mukoviszidose). Defekte DNA-Reparatur prädisponiert zu Krebs: MMR-Defekt → Lynch-Syndrom, NER-Defekt → Xeroderma pigmentosum, BRCA1/2-Defekt → Brustkrebs.",
+          merksatz: "Frameshift ≠ 3n Nukleotide → Leserahmen verschoben. In-Frame = 3n, Aminosäure fehlt (ΔF508). MMR-Defekt → Lynch, NER-Defekt → Xeroderma pigmentosum.",
+        },
+      ],
+      merksätze: [
+        "Stille (Silent) Mutation: Codon ändert sich, Aminosäure gleich (keine Folge). Missense: Codon → andere Aminosäure (Sichelzelle: Glu → Val). Nonsense: Codon → Stopp (vorzeitiger Abbruch, Protein verkürzt).",
+        "Frameshift-Mutation: Insertion/Deletion ungleich 3n Nukleotide → Leserahmen verschoben. Alle nachfolgenden Codons falsch → komplett anderes Protein. In-Frame (3n): Aminosäure fehlt, Leserahmen OK (z. B. ΔF508 Mukoviszidose).",
+        "DNA-Reparatur-Defekte: MMR-Defekt → Lynch-Syndrom (Darmkrebs ↑). NER-Defekt → Xeroderma pigmentosum (Hautkrebs ↑, UV-Sensitivität). BRCA1/2-Mutation → Brustkrebs ↑.",
+      ],
       selfTest: [
         {
           question: "Eine Punktmutation im β-Globin-Gen führt zur Veränderung des Codons GAG (Glutamat) zu GTG (Valin) an Position 6. Welcher Mutationstyp liegt vor, und welche Erkrankung entsteht?",
@@ -1939,20 +1804,6 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
           difficulty: 1,
           tags: [],
         },
-        {
-          question: "Ein Patient hat einen Defekt in der **Mismatch-Reparatur (MMR)**. Welche Aussage ist korrekt?",
-          options: [
-          "MMR behebt Thymin-Dimere nach UV-Strahlung; Defekt führt zu Xeroderma pigmentosum",
-          "MMR korrigiert Basenfehlpaarungen (z.B. G-T statt G-C); Defekt führt zu Lynch-Syndrom (Darmkrebs ↑)",
-          "MMR repariert Doppelstrangbrüche; Defekt führt zu BRCA-assoziiertem Brustkrebs",
-          "MMR entfernt oxidierte Basen (8-Oxoguanin); Defekt führt zu allgemeiner Mutationshäufung",
-          "MMR hat keine klinische Relevanz; Defekte sind meist asymptomatisch"
-          ],
-          correctIndex: 1,
-          explanation: "**Mismatch-Reparatur (MMR):** Korrigiert **Basenfehlpaarungen** (z.B. G-T statt G-C) nach DNA-Replikation. **Defekt (MLH1, MSH2, MSH6, PMS2) → Lynch-Syndrom (HNPCC, hereditäres nicht-polypöses Kolorektalkarzinom):** Autosomal-dominant, **Darmkrebs ↑** (~80% Lifetime-Risiko), auch Endometrium-, Ovarial-, Magenkarzinom ↑. Mikrosatelliten-Instabilität (MSI-H) ist Biomarker. Wichtig: **MMR** = Mismatch-Reparatur, **NER** = UV-Schäden, **BRCA** = Doppelstrangbrüche!",
-          difficulty: 2,
-          tags: [],
-        }
       ],
     }
   ],

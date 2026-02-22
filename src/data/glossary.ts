@@ -270,3 +270,50 @@ export function linkGlossaryTerms(
 
   return result;
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Smart-Link API (verwendet von SubchapterContent.tsx)
+// ─────────────────────────────────────────────────────────────────────────────
+
+/** Vorberechneter Eintrag mit Pfad für React-Rendering. */
+export interface KeywordLinkEntry {
+  term: string;
+  path: string;
+  description: string;
+}
+
+/**
+ * Ersetzt Glossar-Begriffe im Text durch Markdown-Links der Form
+ * `[Begriff](/bms/... "Begriff")` – so dass buildMarkdownComponents sie
+ * als SmartLink rendern kann.
+ * Wenn keine Einträge übergeben → Text unverändert zurückgeben.
+ */
+export function processTextForSmartLinks(
+  text: string,
+  _pathFn: (chapterId: string) => string,
+  entries?: KeywordLinkEntry[]
+): string {
+  if (!entries?.length) return text;
+  // Längere Begriffe zuerst, damit "Zellmembran" vor "Membran" matcht
+  const sorted = [...entries].sort((a, b) => b.term.length - a.term.length);
+  let result = text;
+  for (const entry of sorted) {
+    const esc = entry.term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    // Nur außerhalb bestehender Markdown-Links ersetzen
+    result = result.replace(
+      new RegExp(`(?<!\\[)\\b${esc}\\b(?![^[]*\\])`, "g"),
+      `[${entry.term}](${entry.path} "${entry.term}")`
+    );
+  }
+  return result;
+}
+
+/** Prüft, ob ein Link-Title einem Glossar-Begriff entspricht. */
+export function isKeywordLinkTitle(title: string): boolean {
+  return glossaryEntries.some((e) => e.term === title);
+}
+
+/** Liefert die Beschreibung zu einem Glossar-Begriff (für Tooltip). */
+export function getKeywordLinkDescription(title: string): string | undefined {
+  return glossaryEntries.find((e) => e.term === title)?.description;
+}
