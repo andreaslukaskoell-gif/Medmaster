@@ -49,6 +49,8 @@ export interface Unterkapitel {
   id: string;
   title: string;
   content: string;
+  /** Themen/Stichworte, die in diesem Unterkapitel abgedeckt werden. Wird oben im Kapitel als Chips angezeigt. Wenn nicht gesetzt, werden automatisch die ## Überschriften aus dem Content extrahiert. */
+  stichworte?: string[];
   lernziele?: string[];
   sections?: ContentSection[];
   diagram?: string;
@@ -70,7 +72,7 @@ export interface Unterkapitel {
 export interface Kapitel {
   id: string;
   title: string;
-  subject: 'biologie' | 'chemie' | 'physik' | 'mathematik';
+  subject: "biologie" | "chemie" | "physik" | "mathematik";
   icon: string;
   unterkapitel: Unterkapitel[];
   estimatedTime: string;

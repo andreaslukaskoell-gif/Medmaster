@@ -374,6 +374,15 @@ interface Props {
   keywordLinkEntries?: KeywordLinkEntry[];
 }
 
+/** Extrahiert ## Überschriften aus Markdown-Content als Stichworte-Chips */
+function extractTopicsFromContent(content: string): string[] {
+  const matches = content.match(/^##\s+(.+)$/gm);
+  if (!matches) return [];
+  return matches
+    .map((m) => m.replace(/^##\s+/, "").trim())
+    .filter((t) => t.length > 0 && t.length < 60);
+}
+
 export function SubchapterContent({
   uk,
   subject,
@@ -385,6 +394,11 @@ export function SubchapterContent({
 }: Props) {
   const colors = SUBJECT_COLORS[subject] || SUBJECT_COLORS.biologie;
   const [lernzieleOpen, setLernzieleOpen] = useState(false);
+
+  const topics = useMemo(() => {
+    if (uk.stichworte && uk.stichworte.length > 0) return uk.stichworte;
+    return extractTopicsFromContent(uk.content || "");
+  }, [uk.stichworte, uk.content]);
 
   // Progressive Disclosure: welche Sektionen sind „enthüllt“ (Scroll oder Verstanden)
   const sectionCount = uk.sections?.length ?? 0;
@@ -408,12 +422,30 @@ export function SubchapterContent({
     return cleaned;
   }, [uk.content]);
 
+  const topicsBar =
+    topics.length > 0 ? (
+      <div className="flex flex-wrap gap-1.5 pb-3 border-b border-gray-100 dark:border-gray-800 mb-2">
+        <span className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide self-center mr-1">
+          Themen:
+        </span>
+        {topics.map((topic) => (
+          <span
+            key={topic}
+            className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${colors.bg} ${colors.text}`}
+          >
+            {topic}
+          </span>
+        ))}
+      </div>
+    ) : null;
+
   // If sections exist, render structured content; otherwise fall back to plain content
   if (uk.sections && uk.sections.length > 0) {
     const useProgressive = progressiveDisclosure;
 
     return (
       <div className="space-y-6">
+        {topicsBar}
         {/* Full content shown first when both content and sections are present */}
         {uk.content && cleanedContent && (
           <div
@@ -611,6 +643,7 @@ export function SubchapterContent({
   // Fallback: render plain content (with Kontrollfragen removed)
   return (
     <div className={`${isDieZelle ? "space-y-8" : "space-y-6"}`}>
+      {topicsBar}
       <div
         className={`${isDieZelle ? "text-base" : "text-sm"} text-gray-700 dark:text-gray-300 leading-relaxed space-y-3`}
       >

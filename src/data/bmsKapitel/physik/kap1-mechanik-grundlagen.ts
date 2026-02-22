@@ -1,11 +1,11 @@
-import type { Kapitel } from '../types';
+import type { Kapitel } from "../types";
 
 export const physKapMechanik: Kapitel = {
-  id: 'physik-kap1',
+  id: "physik-kap1",
   title: "Grundlagen & Mechanik",
-  subject: 'physik',
-  icon: '⚙️',
-  estimatedTime: '120 min',
+  subject: "physik",
+  icon: "⚙️",
+  estimatedTime: "120 min",
   unterkapitel: [
     // === from kap1-groessen-und-einheiten ===
     {
@@ -876,7 +876,6 @@ Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung u
         },
       ],
     },
-  ,
     // === from kap2-mechanik ===
     {
       id: "ph-2-01",
@@ -1695,6 +1694,5 @@ Ultrazentrifugation (100.000–500.000 × g): Trennt Lipoproteine (LDL, HDL nach
         },
       ],
     },
-  ,
   ],
 };

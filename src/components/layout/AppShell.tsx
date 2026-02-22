@@ -3,16 +3,27 @@ import { Outlet, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sidebar } from "./Sidebar";
 import { TopBar } from "./TopBar";
-import { BottomTabBar } from "./BottomTabBar";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { OPEN_COMMAND_PALETTE } from "@/lib/commandPaletteConstants";
 
-const CommandPalette = lazy(() => import("@/components/CommandPalette").then(m => ({ default: m.CommandPalette })));
-const InterleavingOverlayLazy = lazy(() => import("@/components/InterleavingOverlay").then(m => ({ default: m.InterleavingOverlay })));
-const RandomRewardToastLazy = lazy(() => import("@/components/learning/RandomRewardToast").then(m => ({ default: m.RandomRewardToast })));
-const HotStreakOverlayLazy = lazy(() => import("@/components/learning/HotStreakOverlay").then(m => ({ default: m.HotStreakOverlay })));
-const LevelUpOverlayLazy = lazy(() => import("@/components/learning/LevelUpOverlay").then(m => ({ default: m.LevelUpOverlay })));
-const BadgeUnlockModalLazy = lazy(() => import("@/components/badges/BadgeUnlockModal").then(m => ({ default: m.BadgeUnlockModal })));
+const CommandPalette = lazy(() =>
+  import("@/components/CommandPalette").then((m) => ({ default: m.CommandPalette }))
+);
+const InterleavingOverlayLazy = lazy(() =>
+  import("@/components/InterleavingOverlay").then((m) => ({ default: m.InterleavingOverlay }))
+);
+const RandomRewardToastLazy = lazy(() =>
+  import("@/components/learning/RandomRewardToast").then((m) => ({ default: m.RandomRewardToast }))
+);
+const HotStreakOverlayLazy = lazy(() =>
+  import("@/components/learning/HotStreakOverlay").then((m) => ({ default: m.HotStreakOverlay }))
+);
+const LevelUpOverlayLazy = lazy(() =>
+  import("@/components/learning/LevelUpOverlay").then((m) => ({ default: m.LevelUpOverlay }))
+);
+const BadgeUnlockModalLazy = lazy(() =>
+  import("@/components/badges/BadgeUnlockModal").then((m) => ({ default: m.BadgeUnlockModal }))
+);
 import { SyncToast } from "@/components/SyncToast";
 import { BreadcrumbProvider } from "@/contexts/BreadcrumbContext";
 import { useInterleavingStore, shouldShowInterleavingOverlay } from "@/store/interleaving";
@@ -29,7 +40,11 @@ const pageVariants = {
   exit: { opacity: 0, y: -8 },
 };
 
-const pageTransition = { type: "tween" as const, duration: 0.3, ease: [0.25, 0.1, 0.25, 1] as const };
+const pageTransition = {
+  type: "tween" as const,
+  duration: 0.3,
+  ease: [0.25, 0.1, 0.25, 1] as const,
+};
 
 const INTERLEAVE_CHECK_MS = 60 * 1000; // 1 min
 
@@ -53,7 +68,10 @@ export function AppShell() {
   const setPendingBadgeId = useStore((s) => s.setPendingBadgeId);
   const { isPremium } = useAuth();
   const levelRef = useRef<number>(0);
-  const [levelUpState, setLevelUpState] = useState<{ level: number; feature: string | null } | null>(null);
+  const [levelUpState, setLevelUpState] = useState<{
+    level: number;
+    feature: string | null;
+  } | null>(null);
 
   useEffect(() => {
     setXpMultiplier(isPremium ? 1.5 : 1);
@@ -145,7 +163,10 @@ export function AppShell() {
       <div className="min-h-screen bg-[var(--background)]">
         {cmdPaletteEverOpened && (
           <Suspense fallback={null}>
-            <CommandPalette open={commandPaletteOpen} onClose={() => setCommandPaletteOpen(false)} />
+            <CommandPalette
+              open={commandPaletteOpen}
+              onClose={() => setCommandPaletteOpen(false)}
+            />
           </Suspense>
         )}
         <Suspense fallback={null}>
@@ -158,20 +179,27 @@ export function AppShell() {
         <SyncToast />
         <Suspense fallback={null}>
           <HotStreakOverlayLazy active={hotStreakActive} />
-          <RandomRewardToastLazy message={rewardMessage} type={rewardType} onDismiss={clearReward} />
+          <RandomRewardToastLazy
+            message={rewardMessage}
+            type={rewardType}
+            onDismiss={clearReward}
+          />
           <LevelUpOverlayLazy
             level={levelUpState?.level}
             levelName={levelUpState?.level ? getLevelName(levelUpState.level) : undefined}
             feature={levelUpState?.feature}
             onDismiss={() => setLevelUpState(null)}
           />
-          <BadgeUnlockModalLazy badgeId={pendingBadgeId} onDismiss={() => setPendingBadgeId(null)} />
+          <BadgeUnlockModalLazy
+            badgeId={pendingBadgeId}
+            onDismiss={() => setPendingBadgeId(null)}
+          />
         </Suspense>
         <Sidebar mobileOpen={mobileOpen} onClose={closeSidebar} />
         {/* Main area: full width on small screens; from lg reserve space for sidebar (sync: sidebarLayout.ts) */}
         <div className={cn("min-h-screen flex flex-col relative z-50 w-full", SIDEBAR_MAIN_ML)}>
           <TopBar menuButtonRef={menuButtonRef} onMenuToggle={() => setMobileOpen(!mobileOpen)} />
-          <main className="flex-1 pt-14 sm:pt-16 p-4 lg:p-6 pb-20 lg:pb-6">
+          <main className="flex-1 pt-14 sm:pt-16 p-4 lg:p-6 pb-6">
             <ErrorBoundary>
               <AnimatePresence mode="wait">
                 <motion.div
@@ -188,7 +216,6 @@ export function AppShell() {
               </AnimatePresence>
             </ErrorBoundary>
           </main>
-          <BottomTabBar />
         </div>
       </div>
     </BreadcrumbProvider>

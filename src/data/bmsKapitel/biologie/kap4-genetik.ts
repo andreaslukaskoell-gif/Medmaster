@@ -1,15 +1,15 @@
-import type { Kapitel } from '../types';
+import type { Kapitel } from "../types";
 
 export const bioKapGenetik: Kapitel = {
-  id: 'bio-kap4',
-  title: "Genetik",
-  subject: 'biologie',
-  icon: '🧬',
-  estimatedTime: '180 min',
+  id: "bio-kap4",
+  title: "Genetik & Molekularbiologie",
+  subject: "biologie",
+  icon: "🧬",
+  estimatedTime: "180 min",
   unterkapitel: [
     // === from kap5-klassische-genetik ===
     {
-      id: 'bio-5-01',
+      id: "bio-5-01",
       title: "Klassische Genetik",
       content: `## Einleitung
 
@@ -184,12 +184,14 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         {
           heading: "Grundbegriffe der Genetik",
           text: "Gen, Allel, Genotyp und Phänotyp sind die Grundbegriffe der klassischen Genetik. Homozygote Individuen tragen zwei gleiche Allele (AA oder aa), heterozygote zwei verschiedene (Aa). Dominante Allele setzen sich auch im heterozygoten Zustand durch, rezessive nur bei Homozygotie.",
-          merksatz: "Genotyp = genetische Ausstattung (AA, Aa, aa); Phänotyp = sichtbares Merkmal. Dominant setzt sich durch, rezessiv nur bei aa sichtbar.",
+          merksatz:
+            "Genotyp = genetische Ausstattung (AA, Aa, aa); Phänotyp = sichtbares Merkmal. Dominant setzt sich durch, rezessiv nur bei aa sichtbar.",
         },
         {
           heading: "Mendelsche Regeln",
           text: "Die 1. Mendelsche Regel (Uniformitätsregel) besagt: Homozygote Eltern (AA × aa) liefern in F₁ 100% uniforme Heterozygote (Aa). Die 2. Regel (Spaltungsregel): F₁-Hybriden (Aa × Aa) spalten in F₂ im Verhältnis 3:1 (Phänotyp) bzw. 1:2:1 (Genotyp). Die 3. Regel (Unabhängigkeitsregel): Zwei unabhängige Gene (RrGg × RrGg) ergeben in F₂ das Verhältnis 9:3:3:1.",
-          merksatz: "1. Uniformität (AA × aa → 100% Aa), 2. Spaltung (Aa × Aa → 3:1 Phänotyp), 3. Unabhängigkeit (RrGg × RrGg → 9:3:3:1).",
+          merksatz:
+            "1. Uniformität (AA × aa → 100% Aa), 2. Spaltung (Aa × Aa → 3:1 Phänotyp), 3. Unabhängigkeit (RrGg × RrGg → 9:3:3:1).",
         },
         {
           heading: "Dominanzverhältnisse und Testkreuzung",
@@ -202,82 +204,88 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         "Dominanz-Typen: Dominant-rezessiv: AA = Aa ≠ aa (3:1 Phänotyp). Intermediär: AA ≠ Aa ≠ aa (1:2:1 Phänotyp = Genotyp). Kodominanz: Beide exprimiert (AB0: A^AB^B → AB).",
         "Autosomal-rezessiv: aa krank, Aa gesund (Carrier). Aa × Aa → 25% krank (aa), 50% Carrier (Aa), 25% gesund (AA). Beispiele: Mukoviszidose, Sichelzellanämie, PKU.",
       ],
-      diagram: 'blood-groups',
+      diagram: "blood-groups",
       selfTest: [
         {
           question: "Welche Aussage über genetische Grundbegriffe ist korrekt?",
           options: [
-          "Der Genotyp ist das sichtbare Merkmal eines Organismus.",
-          "Ein heterozygoter Organismus hat zwei identische Allele für ein Gen.",
-          "Der Genotyp ist die genetische Ausstattung (Allel-Kombination), der Phänotyp ist das sichtbare Merkmal. Homozygot bedeutet beide Allele gleich (AA oder aa), heterozygot bedeutet beide Allele unterschiedlich (Aa). Ein dominantes Allel (A) setzt sich auch bei Heterozygoten durch, ein rezessives Allel (a) ist nur bei Homozygoten (aa) sichtbar.",
-          "Allele sind unterschiedliche Gene auf verschiedenen Chromosomen.",
-          "Ein rezessives Allel setzt sich auch bei Heterozygoten durch."
+            "Der Genotyp ist das sichtbare Merkmal eines Organismus.",
+            "Ein heterozygoter Organismus hat zwei identische Allele für ein Gen.",
+            "Der Genotyp ist die genetische Ausstattung (Allel-Kombination), der Phänotyp ist das sichtbare Merkmal. Homozygot bedeutet beide Allele gleich (AA oder aa), heterozygot bedeutet beide Allele unterschiedlich (Aa). Ein dominantes Allel (A) setzt sich auch bei Heterozygoten durch, ein rezessives Allel (a) ist nur bei Homozygoten (aa) sichtbar.",
+            "Allele sind unterschiedliche Gene auf verschiedenen Chromosomen.",
+            "Ein rezessives Allel setzt sich auch bei Heterozygoten durch.",
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **Genetische Grundbegriffe:**\n\n**Gen vs. Allel:**\n- **Gen:** DNA-Abschnitt, kodiert für ein Merkmal (z. B. Gen für Blütenfarbe)\n- **Allel:** **Variante** eines Gens (z. B. A [rot], a [weiß])\n\n**Genotyp vs. Phänotyp:**\n- **Genotyp:** **Genetische Ausstattung** (Allel-Kombination, z. B. AA, Aa, aa)\n- **Phänotyp:** **Sichtbares Merkmal** (Ausprägung, z. B. rote Blüte, weiße Blüte)\n\n**Homozygot vs. Heterozygot:**\n- **Homozygot:** Beide Allele **gleich**\n  - **AA** (homozygot dominant)\n  - **aa** (homozygot rezessiv)\n- **Heterozygot:** Beide Allele **unterschiedlich** (**Aa**)\n\n**Dominant vs. Rezessiv:**\n- **Dominant** (Großbuchstabe, A):\n  - Setzt sich durch, auch bei **Heterozygoten** (Aa) sichtbar\n  - **AA** → dominant Phänotyp (z. B. rot)\n  - **Aa** → dominant Phänotyp (z. B. rot)\n- **Rezessiv** (Kleinbuchstabe, a):\n  - Nur bei **Homozygoten** (aa) sichtbar\n  - **aa** → rezessiv Phänotyp (z. B. weiß)\n\n**Falsch (A):** **Phänotyp** (nicht Genotyp) = sichtbares Merkmal. Genotyp = genetische Ausstattung.\n\n**Falsch (B):** **Homozygot** (nicht heterozygot) = zwei identische Allele. Heterozygot = unterschiedliche Allele (Aa).\n\n**Falsch (D):** Allele = **Varianten desselben Gens** (auf homologen Chromosomen), nicht unterschiedliche Gene.\n\n**Falsch (E):** **Dominantes** (nicht rezessives) Allel setzt sich bei Heterozygoten durch. Rezessiv nur sichtbar bei aa.",
+          explanation:
+            "**Richtig (C):** **Genetische Grundbegriffe:**\n\n**Gen vs. Allel:**\n- **Gen:** DNA-Abschnitt, kodiert für ein Merkmal (z. B. Gen für Blütenfarbe)\n- **Allel:** **Variante** eines Gens (z. B. A [rot], a [weiß])\n\n**Genotyp vs. Phänotyp:**\n- **Genotyp:** **Genetische Ausstattung** (Allel-Kombination, z. B. AA, Aa, aa)\n- **Phänotyp:** **Sichtbares Merkmal** (Ausprägung, z. B. rote Blüte, weiße Blüte)\n\n**Homozygot vs. Heterozygot:**\n- **Homozygot:** Beide Allele **gleich**\n  - **AA** (homozygot dominant)\n  - **aa** (homozygot rezessiv)\n- **Heterozygot:** Beide Allele **unterschiedlich** (**Aa**)\n\n**Dominant vs. Rezessiv:**\n- **Dominant** (Großbuchstabe, A):\n  - Setzt sich durch, auch bei **Heterozygoten** (Aa) sichtbar\n  - **AA** → dominant Phänotyp (z. B. rot)\n  - **Aa** → dominant Phänotyp (z. B. rot)\n- **Rezessiv** (Kleinbuchstabe, a):\n  - Nur bei **Homozygoten** (aa) sichtbar\n  - **aa** → rezessiv Phänotyp (z. B. weiß)\n\n**Falsch (A):** **Phänotyp** (nicht Genotyp) = sichtbares Merkmal. Genotyp = genetische Ausstattung.\n\n**Falsch (B):** **Homozygot** (nicht heterozygot) = zwei identische Allele. Heterozygot = unterschiedliche Allele (Aa).\n\n**Falsch (D):** Allele = **Varianten desselben Gens** (auf homologen Chromosomen), nicht unterschiedliche Gene.\n\n**Falsch (E):** **Dominantes** (nicht rezessives) Allel setzt sich bei Heterozygoten durch. Rezessiv nur sichtbar bei aa.",
           difficulty: 1,
-          tags: ['genotyp', 'phänotyp', 'allele'],
+          tags: ["genotyp", "phänotyp", "allele"],
         },
         {
           question: "Welche Aussage über die 1. Mendelsche Regel (Uniformitätsregel) ist korrekt?",
           options: [
-          "Bei Kreuzung zweier heterozygoter Eltern (Aa × Aa) ist die F₁-Generation uniform.",
-          "Bei Kreuzung zweier homozygoter Eltern mit unterschiedlichen Merkmalen (AA × aa) ist die F₁-Generation uniform (100% Aa) und zeigt den dominanten Phänotyp (100% rot, wenn A dominant).",
-          "Die F₁-Generation zeigt ein Spaltungsverhältnis von 3:1.",
-          "Die 1. Mendelsche Regel beschreibt die Vererbung von zwei Merkmalen gleichzeitig.",
-          "Bei Kreuzung AA × aa ist die F₁-Generation zu 50% AA und 50% aa."
+            "Bei Kreuzung zweier heterozygoter Eltern (Aa × Aa) ist die F₁-Generation uniform.",
+            "Bei Kreuzung zweier homozygoter Eltern mit unterschiedlichen Merkmalen (AA × aa) ist die F₁-Generation uniform (100% Aa) und zeigt den dominanten Phänotyp (100% rot, wenn A dominant).",
+            "Die F₁-Generation zeigt ein Spaltungsverhältnis von 3:1.",
+            "Die 1. Mendelsche Regel beschreibt die Vererbung von zwei Merkmalen gleichzeitig.",
+            "Bei Kreuzung AA × aa ist die F₁-Generation zu 50% AA und 50% aa.",
           ],
           correctIndex: 1,
-          explanation: "**Richtig (B):** **1. Mendelsche Regel** (Uniformitätsregel):\n\n**Regel:** Kreuzt man **reinerbige (homozygote)** Eltern mit **unterschiedlichen Merkmalen**, sind alle Nachkommen der **F₁-Generation uniform** (gleich im Genotyp + Phänotyp).\n\n**Beispiel:** Blütenfarbe (A rot dominant, a weiß rezessiv)\n\n**Kreuzung:**\n- **P** (Elterngeneration): **AA** (rot, homozygot dominant) × **aa** (weiß, homozygot rezessiv)\n- **Gameten:** A × a\n- **F₁:** **100% Aa** (heterozygot)\n- **Phänotyp F₁:** **100% rot** (A dominant über a)\n\n**Wichtig:**\n- F₁ ist **uniform** (alle Aa, alle rot)\n- **Kein** Spaltungsverhältnis (das kommt erst in F₂, 2. Mendelsche Regel)\n\n**Falsch (A):** Heterozygote Eltern (Aa × Aa) → F₁ **nicht uniform** (Spaltung 3:1, 2. Mendelsche Regel). 1. Regel gilt nur für **homozygote** Eltern.\n\n**Falsch (C):** **3:1-Spaltung** tritt in **F₂** auf (Aa × Aa), nicht F₁. F₁ ist uniform.\n\n**Falsch (D):** 1. Mendelsche Regel = **monohybrider** Erbgang (1 Merkmal). **2 Merkmale** = 3. Mendelsche Regel (Unabhängigkeitsregel, dihybrider Erbgang).\n\n**Falsch (E):** AA × aa → F₁ **100% Aa** (nicht 50% AA, 50% aa). Alle F₁ sind heterozygot (Aa).",
+          explanation:
+            "**Richtig (B):** **1. Mendelsche Regel** (Uniformitätsregel):\n\n**Regel:** Kreuzt man **reinerbige (homozygote)** Eltern mit **unterschiedlichen Merkmalen**, sind alle Nachkommen der **F₁-Generation uniform** (gleich im Genotyp + Phänotyp).\n\n**Beispiel:** Blütenfarbe (A rot dominant, a weiß rezessiv)\n\n**Kreuzung:**\n- **P** (Elterngeneration): **AA** (rot, homozygot dominant) × **aa** (weiß, homozygot rezessiv)\n- **Gameten:** A × a\n- **F₁:** **100% Aa** (heterozygot)\n- **Phänotyp F₁:** **100% rot** (A dominant über a)\n\n**Wichtig:**\n- F₁ ist **uniform** (alle Aa, alle rot)\n- **Kein** Spaltungsverhältnis (das kommt erst in F₂, 2. Mendelsche Regel)\n\n**Falsch (A):** Heterozygote Eltern (Aa × Aa) → F₁ **nicht uniform** (Spaltung 3:1, 2. Mendelsche Regel). 1. Regel gilt nur für **homozygote** Eltern.\n\n**Falsch (C):** **3:1-Spaltung** tritt in **F₂** auf (Aa × Aa), nicht F₁. F₁ ist uniform.\n\n**Falsch (D):** 1. Mendelsche Regel = **monohybrider** Erbgang (1 Merkmal). **2 Merkmale** = 3. Mendelsche Regel (Unabhängigkeitsregel, dihybrider Erbgang).\n\n**Falsch (E):** AA × aa → F₁ **100% Aa** (nicht 50% AA, 50% aa). Alle F₁ sind heterozygot (Aa).",
           difficulty: 1,
-          tags: ['mendel', 'uniformitätsregel', 'f1-generation'],
+          tags: ["mendel", "uniformitätsregel", "f1-generation"],
         },
         {
           question: "Welche Aussage über die 2. Mendelsche Regel (Spaltungsregel) ist korrekt?",
           options: [
-          "Bei Kreuzung zweier F₁-Hybriden (Aa × Aa) ist die F₂-Generation uniform.",
-          "Bei Kreuzung Aa × Aa beträgt das Phänotyp-Verhältnis in F₂ immer 1:2:1.",
-          "Bei Kreuzung zweier F₁-Hybriden (Aa × Aa) spaltet sich die F₂-Generation auf. Das Genotyp-Verhältnis ist 1 AA : 2 Aa : 1 aa (1:2:1). Bei dominant-rezessiver Vererbung ist das Phänotyp-Verhältnis 3 dominant : 1 rezessiv (3:1), da AA und Aa beide den dominanten Phänotyp zeigen.",
-          "Das Genotyp-Verhältnis in F₂ beträgt 3:1.",
-          "Die 2. Mendelsche Regel gilt nur für die Vererbung von zwei Merkmalen."
+            "Bei Kreuzung zweier F₁-Hybriden (Aa × Aa) ist die F₂-Generation uniform.",
+            "Bei Kreuzung Aa × Aa beträgt das Phänotyp-Verhältnis in F₂ immer 1:2:1.",
+            "Bei Kreuzung zweier F₁-Hybriden (Aa × Aa) spaltet sich die F₂-Generation auf. Das Genotyp-Verhältnis ist 1 AA : 2 Aa : 1 aa (1:2:1). Bei dominant-rezessiver Vererbung ist das Phänotyp-Verhältnis 3 dominant : 1 rezessiv (3:1), da AA und Aa beide den dominanten Phänotyp zeigen.",
+            "Das Genotyp-Verhältnis in F₂ beträgt 3:1.",
+            "Die 2. Mendelsche Regel gilt nur für die Vererbung von zwei Merkmalen.",
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **2. Mendelsche Regel** (Spaltungsregel):\n\n**Regel:** Kreuzt man **F₁-Hybriden** (Aa × Aa), **spaltet** sich die F₂-Generation in einem bestimmten Verhältnis auf.\n\n**Kreuzung:** Aa × Aa (beide heterozygot)\n\n**Punnett-Quadrat:**\n\n|       | **A** | **a** |\n|-------|-------|-------|\n| **A** | **AA** | **Aa** |\n| **a** | **Aa** | **aa** |\n\n**Ergebnis:**\n\n**Genotyp-Verhältnis:** **1 AA : 2 Aa : 1 aa** (1:2:1)\n- 1/4 AA (homozygot dominant)\n- 2/4 Aa (heterozygot)\n- 1/4 aa (homozygot rezessiv)\n\n**Phänotyp-Verhältnis (dominant-rezessiv):** **3:1**\n- **AA** (1/4) → dominant Phänotyp (z. B. rot)\n- **Aa** (2/4) → dominant Phänotyp (z. B. rot, A dominant)\n- **aa** (1/4) → rezessiv Phänotyp (z. B. weiß)\n- **3 dominant : 1 rezessiv** (3:1)\n\n**WICHTIG:** Phänotyp-Verhältnis **3:1** gilt nur bei **dominant-rezessiver** Vererbung. Bei **intermediärer** Dominanz: Phänotyp = Genotyp (1:2:1).\n\n**Falsch (A):** F₂ ist **nicht uniform**, sondern **spaltet** auf (3:1 Phänotyp). Uniform = F₁ (1. Mendelsche Regel).\n\n**Falsch (B):** Phänotyp-Verhältnis **3:1** (nicht 1:2:1) bei dominant-rezessiver Vererbung. **1:2:1** = Genotyp-Verhältnis (oder Phänotyp bei intermediär).\n\n**Falsch (D):** **Genotyp-Verhältnis 1:2:1** (nicht 3:1). **3:1** = Phänotyp-Verhältnis.\n\n**Falsch (E):** 2. Mendelsche Regel = **monohybrider** Erbgang (1 Merkmal). **2 Merkmale** = 3. Mendelsche Regel.",
+          explanation:
+            "**Richtig (C):** **2. Mendelsche Regel** (Spaltungsregel):\n\n**Regel:** Kreuzt man **F₁-Hybriden** (Aa × Aa), **spaltet** sich die F₂-Generation in einem bestimmten Verhältnis auf.\n\n**Kreuzung:** Aa × Aa (beide heterozygot)\n\n**Punnett-Quadrat:**\n\n|       | **A** | **a** |\n|-------|-------|-------|\n| **A** | **AA** | **Aa** |\n| **a** | **Aa** | **aa** |\n\n**Ergebnis:**\n\n**Genotyp-Verhältnis:** **1 AA : 2 Aa : 1 aa** (1:2:1)\n- 1/4 AA (homozygot dominant)\n- 2/4 Aa (heterozygot)\n- 1/4 aa (homozygot rezessiv)\n\n**Phänotyp-Verhältnis (dominant-rezessiv):** **3:1**\n- **AA** (1/4) → dominant Phänotyp (z. B. rot)\n- **Aa** (2/4) → dominant Phänotyp (z. B. rot, A dominant)\n- **aa** (1/4) → rezessiv Phänotyp (z. B. weiß)\n- **3 dominant : 1 rezessiv** (3:1)\n\n**WICHTIG:** Phänotyp-Verhältnis **3:1** gilt nur bei **dominant-rezessiver** Vererbung. Bei **intermediärer** Dominanz: Phänotyp = Genotyp (1:2:1).\n\n**Falsch (A):** F₂ ist **nicht uniform**, sondern **spaltet** auf (3:1 Phänotyp). Uniform = F₁ (1. Mendelsche Regel).\n\n**Falsch (B):** Phänotyp-Verhältnis **3:1** (nicht 1:2:1) bei dominant-rezessiver Vererbung. **1:2:1** = Genotyp-Verhältnis (oder Phänotyp bei intermediär).\n\n**Falsch (D):** **Genotyp-Verhältnis 1:2:1** (nicht 3:1). **3:1** = Phänotyp-Verhältnis.\n\n**Falsch (E):** 2. Mendelsche Regel = **monohybrider** Erbgang (1 Merkmal). **2 Merkmale** = 3. Mendelsche Regel.",
           difficulty: 2,
-          tags: ['spaltungsregel', 'f2-generation', 'mendel'],
+          tags: ["spaltungsregel", "f2-generation", "mendel"],
         },
         {
-          question: "Welche Aussage über die 3. Mendelsche Regel (Unabhängigkeitsregel) ist korrekt?",
+          question:
+            "Welche Aussage über die 3. Mendelsche Regel (Unabhängigkeitsregel) ist korrekt?",
           options: [
-          "Die 3. Mendelsche Regel beschreibt die Vererbung eines einzelnen Merkmals.",
-          "Bei Kreuzung RrGg × RrGg beträgt das Phänotyp-Verhältnis in F₂ immer 3:1.",
-          "Gene für verschiedene Merkmale werden unabhängig voneinander vererbt (wenn auf verschiedenen Chromosomen oder weit auseinander). Bei dihybridem Erbgang (RrGg × RrGg) beträgt das F₂-Phänotyp-Verhältnis 9:3:3:1 (9 R_G_, 3 R_gg, 3 rrG_, 1 rrgg), wenn beide Merkmale dominant-rezessiv vererbt werden.",
-          "Die 3. Mendelsche Regel gilt nur, wenn die Gene auf demselben Chromosom gekoppelt sind.",
-          "Das Verhältnis 9:3:3:1 tritt in der F₁-Generation auf."
+            "Die 3. Mendelsche Regel beschreibt die Vererbung eines einzelnen Merkmals.",
+            "Bei Kreuzung RrGg × RrGg beträgt das Phänotyp-Verhältnis in F₂ immer 3:1.",
+            "Gene für verschiedene Merkmale werden unabhängig voneinander vererbt (wenn auf verschiedenen Chromosomen oder weit auseinander). Bei dihybridem Erbgang (RrGg × RrGg) beträgt das F₂-Phänotyp-Verhältnis 9:3:3:1 (9 R_G_, 3 R_gg, 3 rrG_, 1 rrgg), wenn beide Merkmale dominant-rezessiv vererbt werden.",
+            "Die 3. Mendelsche Regel gilt nur, wenn die Gene auf demselben Chromosom gekoppelt sind.",
+            "Das Verhältnis 9:3:3:1 tritt in der F₁-Generation auf.",
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **3. Mendelsche Regel** (Unabhängigkeitsregel, Neukombinationsregel):\n\n**Regel:** Gene für **verschiedene Merkmale** werden **unabhängig** voneinander vererbt (wenn auf **verschiedenen Chromosomen** liegen oder weit auseinander auf demselben Chromosom → keine Kopplung).\n\n**Dihybrider Erbgang** (2 Merkmale):\n\n**Beispiel:** Samenform (R rund dominant, r runzelig rezessiv) + Samenfarbe (G gelb dominant, g grün rezessiv)\n\n**Kreuzung:**\n- **P:** RRGG (rund, gelb) × rrgg (runzelig, grün)\n- **F₁:** **100% RrGg** (rund, gelb, uniform)\n\n**F₁ × F₁:** RrGg × RrGg\n\n**Gameten (F₁):** RG, Rg, rG, rg (je 1/4, **unabhängige Verteilung**)\n\n**F₂-Phänotyp-Verhältnis:** **9:3:3:1**\n- **9/16** rund, gelb (R_G_: RRGG, RRGg, RrGG, RrGg)\n- **3/16** rund, grün (R_gg: RRgg, Rrgg)\n- **3/16** runzelig, gelb (rrG_: rrGG, rrGg)\n- **1/16** runzelig, grün (rrgg)\n\n**Voraussetzung:** **Unabhängige Vererbung** (verschiedene Chromosomen oder keine Kopplung). Bei **Kopplung** (Gene auf demselben Chromosom, nah beieinander) → **abweichendes** Verhältnis.\n\n**Falsch (A):** 3. Mendelsche Regel = **mehrere Merkmale** (dihybrider Erbgang), nicht ein einzelnes Merkmal (das wäre 2. Regel).\n\n**Falsch (B):** **9:3:3:1** (nicht 3:1) bei dihybridem Erbgang. **3:1** = monohybrider Erbgang (1 Merkmal, 2. Mendelsche Regel).\n\n**Falsch (D):** 3. Mendelsche Regel gilt bei **unabhängiger** Vererbung (verschiedene Chromosomen oder keine Kopplung). Bei **Kopplung** (Gene nah beieinander auf demselben Chromosom) → abweichendes Verhältnis.\n\n**Falsch (E):** **9:3:3:1** tritt in **F₂** auf (nicht F₁). F₁ ist uniform (100% RrGg).",
+          explanation:
+            "**Richtig (C):** **3. Mendelsche Regel** (Unabhängigkeitsregel, Neukombinationsregel):\n\n**Regel:** Gene für **verschiedene Merkmale** werden **unabhängig** voneinander vererbt (wenn auf **verschiedenen Chromosomen** liegen oder weit auseinander auf demselben Chromosom → keine Kopplung).\n\n**Dihybrider Erbgang** (2 Merkmale):\n\n**Beispiel:** Samenform (R rund dominant, r runzelig rezessiv) + Samenfarbe (G gelb dominant, g grün rezessiv)\n\n**Kreuzung:**\n- **P:** RRGG (rund, gelb) × rrgg (runzelig, grün)\n- **F₁:** **100% RrGg** (rund, gelb, uniform)\n\n**F₁ × F₁:** RrGg × RrGg\n\n**Gameten (F₁):** RG, Rg, rG, rg (je 1/4, **unabhängige Verteilung**)\n\n**F₂-Phänotyp-Verhältnis:** **9:3:3:1**\n- **9/16** rund, gelb (R_G_: RRGG, RRGg, RrGG, RrGg)\n- **3/16** rund, grün (R_gg: RRgg, Rrgg)\n- **3/16** runzelig, gelb (rrG_: rrGG, rrGg)\n- **1/16** runzelig, grün (rrgg)\n\n**Voraussetzung:** **Unabhängige Vererbung** (verschiedene Chromosomen oder keine Kopplung). Bei **Kopplung** (Gene auf demselben Chromosom, nah beieinander) → **abweichendes** Verhältnis.\n\n**Falsch (A):** 3. Mendelsche Regel = **mehrere Merkmale** (dihybrider Erbgang), nicht ein einzelnes Merkmal (das wäre 2. Regel).\n\n**Falsch (B):** **9:3:3:1** (nicht 3:1) bei dihybridem Erbgang. **3:1** = monohybrider Erbgang (1 Merkmal, 2. Mendelsche Regel).\n\n**Falsch (D):** 3. Mendelsche Regel gilt bei **unabhängiger** Vererbung (verschiedene Chromosomen oder keine Kopplung). Bei **Kopplung** (Gene nah beieinander auf demselben Chromosom) → abweichendes Verhältnis.\n\n**Falsch (E):** **9:3:3:1** tritt in **F₂** auf (nicht F₁). F₁ ist uniform (100% RrGg).",
           difficulty: 3,
-          tags: ['unabhängigkeitsregel', 'dihybrider erbgang', 'mendel'],
+          tags: ["unabhängigkeitsregel", "dihybrider erbgang", "mendel"],
         },
         {
           question: "Welche Aussage über Dominanz-Verhältnisse ist korrekt?",
           options: [
-          "Bei intermediärer Dominanz zeigen AA und Aa denselben Phänotyp.",
-          "Bei Kodominanz zeigt Aa einen Mischphänotyp.",
-          "Bei intermediärer (unvollständiger) Dominanz zeigt Aa einen Mischphänotyp (z. B. Wunderblume: AA rot, Aa rosa, aa weiß), das F₂-Phänotyp-Verhältnis ist 1:2:1 (= Genotyp). Bei Kodominanz werden beide Allele gleichzeitig exprimiert (z. B. AB0-Blutgruppen: A^A B^B → AB, beide Antigene vorhanden).",
-          "Bei dominant-rezessiver Vererbung ist das F₂-Phänotyp-Verhältnis immer 1:2:1.",
-          "Kodominanz bedeutet, dass ein Allel vollständig dominant über das andere ist."
+            "Bei intermediärer Dominanz zeigen AA und Aa denselben Phänotyp.",
+            "Bei Kodominanz zeigt Aa einen Mischphänotyp.",
+            "Bei intermediärer (unvollständiger) Dominanz zeigt Aa einen Mischphänotyp (z. B. Wunderblume: AA rot, Aa rosa, aa weiß), das F₂-Phänotyp-Verhältnis ist 1:2:1 (= Genotyp). Bei Kodominanz werden beide Allele gleichzeitig exprimiert (z. B. AB0-Blutgruppen: A^A B^B → AB, beide Antigene vorhanden).",
+            "Bei dominant-rezessiver Vererbung ist das F₂-Phänotyp-Verhältnis immer 1:2:1.",
+            "Kodominanz bedeutet, dass ein Allel vollständig dominant über das andere ist.",
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **Dominanz-Verhältnisse:**\n\n**1. Dominant-rezessiv:**\n- **Genotyp → Phänotyp:** AA = Aa ≠ aa\n- **Beispiel:** Blütenfarbe (A rot, a weiß): AA/Aa → rot, aa → weiß\n- **F₂-Verhältnis (Aa × Aa):** Genotyp 1:2:1 (AA:Aa:aa), Phänotyp **3:1** (rot:weiß)\n\n**2. Intermediär** (unvollständige Dominanz):\n- **Heterozygot (Aa):** **Mischphänotyp** (zwischen AA und aa)\n- **Beispiel:** Wunderblume (Mirabilis jalapa):\n  - AA → rot\n  - **Aa → rosa** (Mischung)\n  - aa → weiß\n- **F₂-Verhältnis (Aa × Aa):** Genotyp 1:2:1 (AA:Aa:aa), Phänotyp **1:2:1** (1 rot : 2 rosa : 1 weiß)\n- **WICHTIG:** Phänotyp = Genotyp (1:2:1), nicht 3:1!\n\n**3. Kodominanz:**\n- **Beide Allele gleichzeitig exprimiert** (nicht gemischt!)\n- **Beispiel:** **AB0-Blutgruppen**\n  - Allele: A^A, B^B, 0\n  - A^A dominant über 0, B^B dominant über 0, **A^A + B^B kodominant**\n  - **Genotyp → Phänotyp:**\n    - A^A^A, A^A0 → **A** (A-Antigen)\n    - B^BB^B, B^B0 → **B** (B-Antigen)\n    - **A^AB^B** → **AB** (beide Antigene gleichzeitig exprimiert)\n    - 00 → **0** (keine Antigene)\n- **WICHTIG:** Bei AB sind **beide Allele sichtbar** (A + B Antigene), nicht gemischt!\n\n**Falsch (A):** Bei **intermediär** zeigt Aa **Mischphänotyp** (rosa), nicht gleich wie AA (rot). AA ≠ Aa ≠ aa.\n\n**Falsch (B):** Bei **Kodominanz** werden **beide Allele exprimiert** (z. B. AB: A + B Antigene), nicht gemischt. **Intermediär** = Mischphänotyp.\n\n**Falsch (D):** Bei dominant-rezessiv: F₂-Phänotyp **3:1** (nicht 1:2:1). **1:2:1** = Genotyp oder Phänotyp bei intermediär.\n\n**Falsch (E):** Kodominanz = **beide Allele gleichzeitig exprimiert** (nicht ein Allel dominant über das andere).",
+          explanation:
+            "**Richtig (C):** **Dominanz-Verhältnisse:**\n\n**1. Dominant-rezessiv:**\n- **Genotyp → Phänotyp:** AA = Aa ≠ aa\n- **Beispiel:** Blütenfarbe (A rot, a weiß): AA/Aa → rot, aa → weiß\n- **F₂-Verhältnis (Aa × Aa):** Genotyp 1:2:1 (AA:Aa:aa), Phänotyp **3:1** (rot:weiß)\n\n**2. Intermediär** (unvollständige Dominanz):\n- **Heterozygot (Aa):** **Mischphänotyp** (zwischen AA und aa)\n- **Beispiel:** Wunderblume (Mirabilis jalapa):\n  - AA → rot\n  - **Aa → rosa** (Mischung)\n  - aa → weiß\n- **F₂-Verhältnis (Aa × Aa):** Genotyp 1:2:1 (AA:Aa:aa), Phänotyp **1:2:1** (1 rot : 2 rosa : 1 weiß)\n- **WICHTIG:** Phänotyp = Genotyp (1:2:1), nicht 3:1!\n\n**3. Kodominanz:**\n- **Beide Allele gleichzeitig exprimiert** (nicht gemischt!)\n- **Beispiel:** **AB0-Blutgruppen**\n  - Allele: A^A, B^B, 0\n  - A^A dominant über 0, B^B dominant über 0, **A^A + B^B kodominant**\n  - **Genotyp → Phänotyp:**\n    - A^A^A, A^A0 → **A** (A-Antigen)\n    - B^BB^B, B^B0 → **B** (B-Antigen)\n    - **A^AB^B** → **AB** (beide Antigene gleichzeitig exprimiert)\n    - 00 → **0** (keine Antigene)\n- **WICHTIG:** Bei AB sind **beide Allele sichtbar** (A + B Antigene), nicht gemischt!\n\n**Falsch (A):** Bei **intermediär** zeigt Aa **Mischphänotyp** (rosa), nicht gleich wie AA (rot). AA ≠ Aa ≠ aa.\n\n**Falsch (B):** Bei **Kodominanz** werden **beide Allele exprimiert** (z. B. AB: A + B Antigene), nicht gemischt. **Intermediär** = Mischphänotyp.\n\n**Falsch (D):** Bei dominant-rezessiv: F₂-Phänotyp **3:1** (nicht 1:2:1). **1:2:1** = Genotyp oder Phänotyp bei intermediär.\n\n**Falsch (E):** Kodominanz = **beide Allele gleichzeitig exprimiert** (nicht ein Allel dominant über das andere).",
           difficulty: 3,
-          tags: ['dominanz', 'intermediär', 'kodominanz'],
+          tags: ["dominanz", "intermediär", "kodominanz"],
         },
       ],
     },
     {
-      id: 'bio-5-02',
+      id: "bio-5-02",
       title: "Chromosomen",
       content: `## Einleitung
 
@@ -429,20 +437,23 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         {
           heading: "Chromosomenstruktur und Karyotyp",
           text: "Chromosomen bestehen aus DNA und Histonen. Das Zentromer verbindet die beiden Schwester-Chromatiden und dient als Ansatz für Spindelfasern. Telomere schützen die Chromosomenenden und verkürzen sich bei jeder Teilung. Der normale menschliche Karyotyp umfasst 46 Chromosomen (22 Autosomenpaare + XX/XY).",
-          merksatz: "46,XX = weiblich; 46,XY = männlich. p-Arm = kurz, q-Arm = lang. Telomere schützen, verkürzen sich bei jeder Teilung.",
+          merksatz:
+            "46,XX = weiblich; 46,XY = männlich. p-Arm = kurz, q-Arm = lang. Telomere schützen, verkürzen sich bei jeder Teilung.",
         },
         {
           heading: "Numerische Chromosomenaberrationen",
           text: "Trisomie 21 (Down-Syndrom, 47,+21) ist die häufigste Autosom-Trisomie (1:700), mit fazialer Dysmorphie, Herzfehlern und geistiger Behinderung. Klinefelter-Syndrom (47,XXY) ist männlich mit Hypogonadismus und Infertilität. Turner-Syndrom (45,X) ist weiblich mit Kleinwuchs, Pterygium colli und Ovarial-Dysgenesie. Das Risiko für Nicht-Disjunktionsfehler steigt mit dem mütterlichen Alter.",
-          merksatz: "Klinefelter (47,XXY): männlich, Hypogonadismus, Infertilität. Turner (45,X): weiblich, Kleinwuchs, Streak-Gonaden.",
+          merksatz:
+            "Klinefelter (47,XXY): männlich, Hypogonadismus, Infertilität. Turner (45,X): weiblich, Kleinwuchs, Streak-Gonaden.",
         },
         {
           heading: "Strukturelle Chromosomenaberrationen",
           text: "Deletion (Verlust), Duplikation (Verdopplung), Translokation (Verlagerung) und Inversion (Drehung) sind strukturelle Aberrationen. Wichtige klinische Syndrome: Cri-du-chat (5p-Deletion), Williams-Beuren (7q11.23) und DiGeorge (22q11, CATCH-22). Balancierte Translokationen sind beim Träger oft klinisch unauffällig, erhöhen aber das Risiko für unbalancierte Nachkommen.",
-          merksatz: "Cri-du-chat = 5p-Deletion (Katzenschrei). DiGeorge = 22q11 (CATCH-22: Cardiac, Abnormal face, Thymus, Cleft, Hypokalzämie).",
+          merksatz:
+            "Cri-du-chat = 5p-Deletion (Katzenschrei). DiGeorge = 22q11 (CATCH-22: Cardiac, Abnormal face, Thymus, Cleft, Hypokalzämie).",
         },
       ],
-      diagram: 'mitosis-phases',
+      diagram: "mitosis-phases",
 
       merksätze: [
         "Karyotyp-Notation: 46,XX = weiblich, 46,XY = männlich. 47,XX,+21 = Trisomie 21 weiblich (Down-Syndrom). 47,XXY = Klinefelter (männlich, Y vorhanden), 45,X = Turner (weiblich, kein Y).",
@@ -453,77 +464,82 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         {
           question: "Welche Aussage über die Chromosomen-Struktur ist korrekt?",
           options: [
-          "Ein Chromosom besteht aus einem einzelnen DNA-Strang ohne Proteine.",
-          "Das Zentromer (Centromer) verbindet die beiden Schwester-Chromatiden und dient als Ansatzpunkt für Kinetochor (Spindelfasern). Telomere sind Chromosomenenden mit TTAGGG-Repeats, die vor Abbau schützen und sich bei jeder Teilung verkürzen. Die Chromosomenarme werden als p-Arm (kurz) und q-Arm (lang) bezeichnet.",
-          "Telomere verlängern sich bei jeder Zellteilung.",
-          "Der p-Arm ist immer länger als der q-Arm.",
-          "Das Kinetochor ist ein DNA-Abschnitt auf dem Chromosom."
+            "Ein Chromosom besteht aus einem einzelnen DNA-Strang ohne Proteine.",
+            "Das Zentromer (Centromer) verbindet die beiden Schwester-Chromatiden und dient als Ansatzpunkt für Kinetochor (Spindelfasern). Telomere sind Chromosomenenden mit TTAGGG-Repeats, die vor Abbau schützen und sich bei jeder Teilung verkürzen. Die Chromosomenarme werden als p-Arm (kurz) und q-Arm (lang) bezeichnet.",
+            "Telomere verlängern sich bei jeder Zellteilung.",
+            "Der p-Arm ist immer länger als der q-Arm.",
+            "Das Kinetochor ist ein DNA-Abschnitt auf dem Chromosom.",
           ],
           correctIndex: 1,
-          explanation: "**Richtig (B):** **Chromosomen-Struktur:**\n\n**Chromatid vs. Chromosom:**\n- **Chromatid:** 1 DNA-Doppelstrang + Histone (nach Replikation)\n- **Chromosom** (metaphasisch): **2 Schwester-Chromatiden** (identisch), verbunden am Zentromer\n\n**Komponenten:**\n\n1. **Zentromer** (Centromer):\n   - **Verbindet** die 2 Schwester-Chromatiden\n   - Ansatzpunkt für **Kinetochor**\n   - Position definiert Chromosomentyp: metazentrisch (Mitte), submetazentrisch (leicht verschoben), akrozentrisch (sehr nah am Ende)\n\n2. **Kinetochor:**\n   - **Protein-Komplex** am Zentromer\n   - **Spindelfasern** (Mikrotubuli) heften an → Chromatiden-Trennung (Anaphase)\n\n3. **Telomere:**\n   - **Chromosomenenden**\n   - DNA-Sequenz: **TTAGGG-Repeats** (Tandem-Repeats, hunderte Wiederholungen)\n   - **Funktionen:**\n     - **Schutz** vor Abbau durch Exonukleasen\n     - Verhindern Fusion mit anderen Chromosomen\n   - **Verkürzung:** Bei jeder **Zellteilung** (DNA-Polymerase kann Enden nicht vollständig replizieren) → Seneszenz (Alterung, Hayflick-Limit ~50–70 Teilungen)\n   - **Telomerase:** Enzym (in Keimzellen, Stammzellen, Krebszellen) → verlängert Telomere\n\n4. **Chromatid-Arme:**\n   - **p-Arm** (petit, **kurz**)\n   - **q-Arm** (queue, **lang**)\n\n**Falsch (A):** Chromosom = DNA + **Histone** (Proteine) → Chromatin. Nicht nur DNA.\n\n**Falsch (C):** Telomere **verkürzen** sich bei jeder Teilung (nicht verlängern), außer Telomerase aktiv (Keimzellen, Stammzellen, Krebszellen).\n\n**Falsch (D):** **q-Arm** (nicht p-Arm) ist länger. p-Arm = kurz (petit).\n\n**Falsch (E):** Kinetochor = **Protein-Komplex** (nicht DNA-Abschnitt) am Zentromer.",
+          explanation:
+            "**Richtig (B):** **Chromosomen-Struktur:**\n\n**Chromatid vs. Chromosom:**\n- **Chromatid:** 1 DNA-Doppelstrang + Histone (nach Replikation)\n- **Chromosom** (metaphasisch): **2 Schwester-Chromatiden** (identisch), verbunden am Zentromer\n\n**Komponenten:**\n\n1. **Zentromer** (Centromer):\n   - **Verbindet** die 2 Schwester-Chromatiden\n   - Ansatzpunkt für **Kinetochor**\n   - Position definiert Chromosomentyp: metazentrisch (Mitte), submetazentrisch (leicht verschoben), akrozentrisch (sehr nah am Ende)\n\n2. **Kinetochor:**\n   - **Protein-Komplex** am Zentromer\n   - **Spindelfasern** (Mikrotubuli) heften an → Chromatiden-Trennung (Anaphase)\n\n3. **Telomere:**\n   - **Chromosomenenden**\n   - DNA-Sequenz: **TTAGGG-Repeats** (Tandem-Repeats, hunderte Wiederholungen)\n   - **Funktionen:**\n     - **Schutz** vor Abbau durch Exonukleasen\n     - Verhindern Fusion mit anderen Chromosomen\n   - **Verkürzung:** Bei jeder **Zellteilung** (DNA-Polymerase kann Enden nicht vollständig replizieren) → Seneszenz (Alterung, Hayflick-Limit ~50–70 Teilungen)\n   - **Telomerase:** Enzym (in Keimzellen, Stammzellen, Krebszellen) → verlängert Telomere\n\n4. **Chromatid-Arme:**\n   - **p-Arm** (petit, **kurz**)\n   - **q-Arm** (queue, **lang**)\n\n**Falsch (A):** Chromosom = DNA + **Histone** (Proteine) → Chromatin. Nicht nur DNA.\n\n**Falsch (C):** Telomere **verkürzen** sich bei jeder Teilung (nicht verlängern), außer Telomerase aktiv (Keimzellen, Stammzellen, Krebszellen).\n\n**Falsch (D):** **q-Arm** (nicht p-Arm) ist länger. p-Arm = kurz (petit).\n\n**Falsch (E):** Kinetochor = **Protein-Komplex** (nicht DNA-Abschnitt) am Zentromer.",
           difficulty: 1,
-          tags: ['chromosomenstruktur', 'zentromer', 'telomere'],
+          tags: ["chromosomenstruktur", "zentromer", "telomere"],
         },
         {
           question: "Welche Aussage über den Karyotyp ist korrekt?",
           options: [
-          "Der normale weibliche Karyotyp ist 46,XY.",
-          "Der normale männliche Karyotyp ist 46,XX.",
-          "Der normale Karyotyp ist 46,XX (weiblich, 22 Autosomenpaare + XX) oder 46,XY (männlich, 22 Autosomenpaare + XY). Notation: 47,XX,+21 bedeutet Trisomie 21 (Down-Syndrom) bei weiblichem Individuum. Karyotyp-Erstellung erfolgt durch Mitose-Arrest in Metaphase, Chromosomen-Färbung (G-Banding) und Sortierung.",
-          "Der Karyotyp zeigt nur die Geschlechtschromosomen.",
-          "Der Karyotyp wird in der Interphase erstellt."
+            "Der normale weibliche Karyotyp ist 46,XY.",
+            "Der normale männliche Karyotyp ist 46,XX.",
+            "Der normale Karyotyp ist 46,XX (weiblich, 22 Autosomenpaare + XX) oder 46,XY (männlich, 22 Autosomenpaare + XY). Notation: 47,XX,+21 bedeutet Trisomie 21 (Down-Syndrom) bei weiblichem Individuum. Karyotyp-Erstellung erfolgt durch Mitose-Arrest in Metaphase, Chromosomen-Färbung (G-Banding) und Sortierung.",
+            "Der Karyotyp zeigt nur die Geschlechtschromosomen.",
+            "Der Karyotyp wird in der Interphase erstellt.",
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **Karyotyp:**\n\n**Definition:** Geordnete Darstellung **aller Chromosomen** einer Zelle (nach Größe, Zentromer-Position, Banding-Muster)\n\n**Normaler Karyotyp (Mensch):**\n- **46 Chromosomen** (23 Paare)\n- **22 Autosomenpaare** (Chromosom 1–22, nicht geschlechtsbestimmend)\n- **1 Gonosomenpaar** (Geschlechtschromosomen):\n  - **46,XX:** Weiblich (2 X-Chromosomen)\n  - **46,XY:** Männlich (1 X + 1 Y-Chromosom)\n\n**Karyotyp-Notation:**\n- **Chromosomenzahl, Gonosomen, Aberration**\n- **47,XX,+21:** 47 Chromosomen, weiblich (XX), zusätzliches Chromosom 21 (Trisomie 21, Down-Syndrom)\n- **47,XXY:** 47 Chromosomen, männlich (Y vorhanden), zusätzliches X (Klinefelter-Syndrom)\n- **45,X:** 45 Chromosomen, weiblich (kein Y), fehlendes X (Turner-Syndrom)\n\n**Karyogramm-Erstellung:**\n1. **Zellkultur:** Lymphozyten (Blut), Fruchtwasser-Zellen (pränatale Diagnostik)\n2. **Mitose-Arrest:** **Metaphase** (Colchicin blockiert Spindel → Chromosomen maximal kondensiert, sichtbar)\n3. **Chromosomen-Färbung:** Giemsa → **G-Banding** (Hell-Dunkel-Muster, charakteristisch für jedes Chromosom)\n4. **Fotografie + Sortierung:** Nach Größe, Zentromer-Position, Banding\n\n**Falsch (A):** 46,XX = **weiblich** (nicht männlich). 46,XY = männlich.\n\n**Falsch (B):** 46,XX = weiblich. 46,XY = **männlich** (nicht 46,XX).\n\n**Falsch (D):** Karyotyp zeigt **alle** Chromosomen (22 Autosomenpaare + 1 Gonosomenpaar), nicht nur Gonosomen.\n\n**Falsch (E):** Karyotyp wird in **Metaphase** erstellt (Mitose-Arrest, Chromosomen maximal kondensiert). Interphase: Chromatin dekondensiert, nicht sichtbar.",
+          explanation:
+            "**Richtig (C):** **Karyotyp:**\n\n**Definition:** Geordnete Darstellung **aller Chromosomen** einer Zelle (nach Größe, Zentromer-Position, Banding-Muster)\n\n**Normaler Karyotyp (Mensch):**\n- **46 Chromosomen** (23 Paare)\n- **22 Autosomenpaare** (Chromosom 1–22, nicht geschlechtsbestimmend)\n- **1 Gonosomenpaar** (Geschlechtschromosomen):\n  - **46,XX:** Weiblich (2 X-Chromosomen)\n  - **46,XY:** Männlich (1 X + 1 Y-Chromosom)\n\n**Karyotyp-Notation:**\n- **Chromosomenzahl, Gonosomen, Aberration**\n- **47,XX,+21:** 47 Chromosomen, weiblich (XX), zusätzliches Chromosom 21 (Trisomie 21, Down-Syndrom)\n- **47,XXY:** 47 Chromosomen, männlich (Y vorhanden), zusätzliches X (Klinefelter-Syndrom)\n- **45,X:** 45 Chromosomen, weiblich (kein Y), fehlendes X (Turner-Syndrom)\n\n**Karyogramm-Erstellung:**\n1. **Zellkultur:** Lymphozyten (Blut), Fruchtwasser-Zellen (pränatale Diagnostik)\n2. **Mitose-Arrest:** **Metaphase** (Colchicin blockiert Spindel → Chromosomen maximal kondensiert, sichtbar)\n3. **Chromosomen-Färbung:** Giemsa → **G-Banding** (Hell-Dunkel-Muster, charakteristisch für jedes Chromosom)\n4. **Fotografie + Sortierung:** Nach Größe, Zentromer-Position, Banding\n\n**Falsch (A):** 46,XX = **weiblich** (nicht männlich). 46,XY = männlich.\n\n**Falsch (B):** 46,XX = weiblich. 46,XY = **männlich** (nicht 46,XX).\n\n**Falsch (D):** Karyotyp zeigt **alle** Chromosomen (22 Autosomenpaare + 1 Gonosomenpaar), nicht nur Gonosomen.\n\n**Falsch (E):** Karyotyp wird in **Metaphase** erstellt (Mitose-Arrest, Chromosomen maximal kondensiert). Interphase: Chromatin dekondensiert, nicht sichtbar.",
           difficulty: 1,
-          tags: ['karyotyp', 'chromosomenzahl', 'karyogramm'],
+          tags: ["karyotyp", "chromosomenzahl", "karyogramm"],
         },
         {
           question: "Welche Aussage über Trisomie 21 (Down-Syndrom) ist korrekt?",
           options: [
-          "Trisomie 21 ist die seltenste Autosom-Trisomie.",
-          "Trisomie 21 ist letal und nicht mit dem Leben vereinbar.",
-          "Trisomie 21 (Down-Syndrom, 47,XX/XY,+21) ist die häufigste Autosom-Trisomie (1:700). Klinische Merkmale umfassen faziale Dysmorphie (Epikanthus, flaches Profil), Herzfehler (AV-Kanal, VSD), Hypotonie und geistige Behinderung (variabel). Die Inzidenz steigt mit dem mütterlichen Alter (40 Jahre: ~1:100).",
-          "Trisomie 21 entsteht nur durch Robertsonsche Translokation.",
-          "Das Risiko für Trisomie 21 ist unabhängig vom mütterlichen Alter."
+            "Trisomie 21 ist die seltenste Autosom-Trisomie.",
+            "Trisomie 21 ist letal und nicht mit dem Leben vereinbar.",
+            "Trisomie 21 (Down-Syndrom, 47,XX/XY,+21) ist die häufigste Autosom-Trisomie (1:700). Klinische Merkmale umfassen faziale Dysmorphie (Epikanthus, flaches Profil), Herzfehler (AV-Kanal, VSD), Hypotonie und geistige Behinderung (variabel). Die Inzidenz steigt mit dem mütterlichen Alter (40 Jahre: ~1:100).",
+            "Trisomie 21 entsteht nur durch Robertsonsche Translokation.",
+            "Das Risiko für Trisomie 21 ist unabhängig vom mütterlichen Alter.",
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **Trisomie 21** (Down-Syndrom):\n\n**Karyotyp:** **47,XX,+21** (weiblich) oder **47,XY,+21** (männlich) – 3 Kopien von Chromosom 21\n\n**Häufigkeit:**\n- **Häufigste Autosom-Trisomie** (lebensfähig)\n- **Inzidenz:** ~1:700 Geburten (Durchschnitt)\n- **Starke Altersabhängigkeit** (mütterliches Alter):\n  - 20 Jahre: ~1:1.500\n  - 35 Jahre: ~1:350\n  - **40 Jahre: ~1:100**\n  - 45 Jahre: ~1:30\n\n**Klinische Merkmale:**\n\n1. **Faziale Dysmorphie:**\n   - **Epikanthus** (Hautfalte am inneren Augenwinkel)\n   - **Flaches Profil** (flache Nasenwurzel)\n   - **Makroglossie** (große Zunge)\n   - **Brushfield-Spots** (Iris)\n\n2. **Herzfehler** (40–50%):\n   - **AV-Kanal-Defekt** (Atrioventrikulärer Septumdefekt)\n   - **VSD** (Ventrikelseptumdefekt)\n\n3. **Weitere:**\n   - **Hypotonie** (Muskelschwäche)\n   - **Geistige Behinderung** (variabel, IQ 25–70)\n   - **Erhöhtes Leukämie-Risiko** (ALL, AML)\n   - **Frühe Alzheimer-Demenz** (>40 Jahre)\n\n**Ursachen:**\n- **Freie Trisomie 21** (95%): **Nicht-Disjunktion** (Meiose-Fehler, meist maternal, Meiose I)\n- **Translokations-Trisomie** (4%): Robertsonsche Translokation (z. B. 14;21), balancierter Träger-Elternteil\n- **Mosaik-Trisomie** (1%): Mitose-Fehler, nur Teil der Zellen trisomisch → milderer Phänotyp\n\n**Falsch (A):** Trisomie 21 = **häufigste** (nicht seltenste) Autosom-Trisomie.\n\n**Falsch (B):** Trisomie 21 ist **lebensfähig** (nicht letal). Trisomie 18/13 sind häufig letal. Autosom-Monosomie ist letal.\n\n**Falsch (D):** Trisomie 21 entsteht **meist** (95%) durch **Nicht-Disjunktion** (freie Trisomie), nur 4% durch Translokation.\n\n**Falsch (E):** Risiko **steigt stark** mit mütterlichem Alter (40 Jahre: ~1:100 vs. 20 Jahre: ~1:1.500).",
+          explanation:
+            "**Richtig (C):** **Trisomie 21** (Down-Syndrom):\n\n**Karyotyp:** **47,XX,+21** (weiblich) oder **47,XY,+21** (männlich) – 3 Kopien von Chromosom 21\n\n**Häufigkeit:**\n- **Häufigste Autosom-Trisomie** (lebensfähig)\n- **Inzidenz:** ~1:700 Geburten (Durchschnitt)\n- **Starke Altersabhängigkeit** (mütterliches Alter):\n  - 20 Jahre: ~1:1.500\n  - 35 Jahre: ~1:350\n  - **40 Jahre: ~1:100**\n  - 45 Jahre: ~1:30\n\n**Klinische Merkmale:**\n\n1. **Faziale Dysmorphie:**\n   - **Epikanthus** (Hautfalte am inneren Augenwinkel)\n   - **Flaches Profil** (flache Nasenwurzel)\n   - **Makroglossie** (große Zunge)\n   - **Brushfield-Spots** (Iris)\n\n2. **Herzfehler** (40–50%):\n   - **AV-Kanal-Defekt** (Atrioventrikulärer Septumdefekt)\n   - **VSD** (Ventrikelseptumdefekt)\n\n3. **Weitere:**\n   - **Hypotonie** (Muskelschwäche)\n   - **Geistige Behinderung** (variabel, IQ 25–70)\n   - **Erhöhtes Leukämie-Risiko** (ALL, AML)\n   - **Frühe Alzheimer-Demenz** (>40 Jahre)\n\n**Ursachen:**\n- **Freie Trisomie 21** (95%): **Nicht-Disjunktion** (Meiose-Fehler, meist maternal, Meiose I)\n- **Translokations-Trisomie** (4%): Robertsonsche Translokation (z. B. 14;21), balancierter Träger-Elternteil\n- **Mosaik-Trisomie** (1%): Mitose-Fehler, nur Teil der Zellen trisomisch → milderer Phänotyp\n\n**Falsch (A):** Trisomie 21 = **häufigste** (nicht seltenste) Autosom-Trisomie.\n\n**Falsch (B):** Trisomie 21 ist **lebensfähig** (nicht letal). Trisomie 18/13 sind häufig letal. Autosom-Monosomie ist letal.\n\n**Falsch (D):** Trisomie 21 entsteht **meist** (95%) durch **Nicht-Disjunktion** (freie Trisomie), nur 4% durch Translokation.\n\n**Falsch (E):** Risiko **steigt stark** mit mütterlichem Alter (40 Jahre: ~1:100 vs. 20 Jahre: ~1:1.500).",
           difficulty: 2,
-          tags: ['trisomie 21', 'down-syndrom', 'aneuploidie'],
+          tags: ["trisomie 21", "down-syndrom", "aneuploidie"],
         },
         {
           question: "Welche Aussage über Gonosomen-Aberrationen ist korrekt?",
           options: [
-          "Klinefelter-Syndrom (47,XXY) ist weiblich.",
-          "Turner-Syndrom (45,X) ist männlich.",
-          "Klinefelter-Syndrom (47,XXY) ist männlich (Y vorhanden), klinische Merkmale sind Hypogonadismus (kleine Hoden), Infertilität (Azoospermie), Gynäkomastie und hoher Wuchs. Turner-Syndrom (45,X) ist weiblich, klinische Merkmale sind Kleinwuchs, Pterygium colli (Flügelfell Nacken), Ovarial-Dysgenesie (Streak-Gonaden, Infertilität) und normale Intelligenz.",
-          "Turner-Syndrom ist fertil mit normaler Ovar-Funktion.",
-          "Triple-X-Syndrom (47,XXX) ist letal."
+            "Klinefelter-Syndrom (47,XXY) ist weiblich.",
+            "Turner-Syndrom (45,X) ist männlich.",
+            "Klinefelter-Syndrom (47,XXY) ist männlich (Y vorhanden), klinische Merkmale sind Hypogonadismus (kleine Hoden), Infertilität (Azoospermie), Gynäkomastie und hoher Wuchs. Turner-Syndrom (45,X) ist weiblich, klinische Merkmale sind Kleinwuchs, Pterygium colli (Flügelfell Nacken), Ovarial-Dysgenesie (Streak-Gonaden, Infertilität) und normale Intelligenz.",
+            "Turner-Syndrom ist fertil mit normaler Ovar-Funktion.",
+            "Triple-X-Syndrom (47,XXX) ist letal.",
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **Gonosomen-Aberrationen:**\n\n**Klinefelter-Syndrom:**\n- **Karyotyp:** **47,XXY** (häufigste Form), 48,XXXY, 48,XXYY\n- **Phänotyp:** **Männlich** (Y-Chromosom vorhanden → SRY-Gen → Hoden)\n- **Klinische Merkmale:**\n  - **Hypogonadismus:** Kleine Hoden (Testosteron ↓)\n  - **Infertilität:** Azoospermie (keine Spermien)\n  - **Gynäkomastie:** Brustentwicklung\n  - **Hoher Wuchs:** Lange Gliedmaßen\n  - **Kognitive Defizite:** Leicht (variabel, Sprach-/Lernprobleme)\n- **Häufigkeit:** 1:500 männliche Geburten\n\n**Turner-Syndrom:**\n- **Karyotyp:** **45,X** (Monosomie X)\n- **Phänotyp:** **Weiblich** (kein Y-Chromosom)\n- **Klinische Merkmale:**\n  - **Kleinwuchs:** ~140–150 cm (Wachstumshormon-Therapie möglich)\n  - **Pterygium colli:** Flügelfell am Nacken (Lymphödem fetal → Hautfalte)\n  - **Herzfehler:** Aortenisthmusstenose (40%)\n  - **Nierenfehlbildungen:** Hufeisennicre\n  - **Ovarial-Dysgenesie:** **Streak-Gonaden** (Bindegewebe, keine Eizellen) → **Infertilität**, **primäre Amenorrhö** (keine Menstruation), Östrogen ↓\n  - **Intelligenz:** **Normal** (keine geistige Behinderung)\n- **Häufigkeit:** 1:2.500 weibliche Geburten\n\n**Triple-X-Syndrom (47,XXX):**\n- **Phänotyp:** Weiblich\n- **Klinisch:** Meist **unauffällig**, hoher Wuchs, leichte Lern-/Verhaltensprobleme (variabel), Fertilität meist **normal**\n\n**XYY-Syndrom (47,XYY):**\n- **Phänotyp:** Männlich\n- **Klinisch:** Meist **unauffällig**, hoher Wuchs, leichte Lern-/Verhaltensprobleme, Fertilität meist **normal**\n\n**Falsch (A):** Klinefelter (47,XXY) = **männlich** (Y vorhanden), nicht weiblich.\n\n**Falsch (B):** Turner (45,X) = **weiblich** (kein Y), nicht männlich.\n\n**Falsch (D):** Turner = **infertil** (Streak-Gonaden, keine Eizellen), nicht fertil.\n\n**Falsch (E):** Triple-X (47,XXX) = meist **unauffällig** (nicht letal), Fertilität meist normal.",
+          explanation:
+            "**Richtig (C):** **Gonosomen-Aberrationen:**\n\n**Klinefelter-Syndrom:**\n- **Karyotyp:** **47,XXY** (häufigste Form), 48,XXXY, 48,XXYY\n- **Phänotyp:** **Männlich** (Y-Chromosom vorhanden → SRY-Gen → Hoden)\n- **Klinische Merkmale:**\n  - **Hypogonadismus:** Kleine Hoden (Testosteron ↓)\n  - **Infertilität:** Azoospermie (keine Spermien)\n  - **Gynäkomastie:** Brustentwicklung\n  - **Hoher Wuchs:** Lange Gliedmaßen\n  - **Kognitive Defizite:** Leicht (variabel, Sprach-/Lernprobleme)\n- **Häufigkeit:** 1:500 männliche Geburten\n\n**Turner-Syndrom:**\n- **Karyotyp:** **45,X** (Monosomie X)\n- **Phänotyp:** **Weiblich** (kein Y-Chromosom)\n- **Klinische Merkmale:**\n  - **Kleinwuchs:** ~140–150 cm (Wachstumshormon-Therapie möglich)\n  - **Pterygium colli:** Flügelfell am Nacken (Lymphödem fetal → Hautfalte)\n  - **Herzfehler:** Aortenisthmusstenose (40%)\n  - **Nierenfehlbildungen:** Hufeisennicre\n  - **Ovarial-Dysgenesie:** **Streak-Gonaden** (Bindegewebe, keine Eizellen) → **Infertilität**, **primäre Amenorrhö** (keine Menstruation), Östrogen ↓\n  - **Intelligenz:** **Normal** (keine geistige Behinderung)\n- **Häufigkeit:** 1:2.500 weibliche Geburten\n\n**Triple-X-Syndrom (47,XXX):**\n- **Phänotyp:** Weiblich\n- **Klinisch:** Meist **unauffällig**, hoher Wuchs, leichte Lern-/Verhaltensprobleme (variabel), Fertilität meist **normal**\n\n**XYY-Syndrom (47,XYY):**\n- **Phänotyp:** Männlich\n- **Klinisch:** Meist **unauffällig**, hoher Wuchs, leichte Lern-/Verhaltensprobleme, Fertilität meist **normal**\n\n**Falsch (A):** Klinefelter (47,XXY) = **männlich** (Y vorhanden), nicht weiblich.\n\n**Falsch (B):** Turner (45,X) = **weiblich** (kein Y), nicht männlich.\n\n**Falsch (D):** Turner = **infertil** (Streak-Gonaden, keine Eizellen), nicht fertil.\n\n**Falsch (E):** Triple-X (47,XXX) = meist **unauffällig** (nicht letal), Fertilität meist normal.",
           difficulty: 3,
-          tags: ['klinefelter', 'turner', 'gonosomenaberrationen'],
+          tags: ["klinefelter", "turner", "gonosomenaberrationen"],
         },
         {
           question: "Welche Aussage über Deletion-Syndrome ist korrekt?",
           options: [
-          "Cri-du-chat-Syndrom entsteht durch Deletion von Chromosom 21.",
-          "Williams-Beuren-Syndrom ist eine Duplikation von Chromosom 7.",
-          "Cri-du-chat-Syndrom (5p-Deletion, kurzer Arm von Chromosom 5) zeigt charakteristischen Katzenschrei (Larynx-Hypoplasie), Mikrozephalie und geistige Behinderung. Williams-Beuren-Syndrom (7q11.23-Deletion, Elastin-Gen) zeigt Elfengesicht, supravalvuläre Aortenstenose und hypersozialen Charakter. DiGeorge-Syndrom (22q11-Deletion, CATCH-22) zeigt Herzfehler, Thymus-Hypoplasie und Hypokalzämie.",
-          "DiGeorge-Syndrom ist eine Trisomie von Chromosom 22.",
-          "Deletion-Syndrome sind immer balanciert und klinisch unauffällig."
+            "Cri-du-chat-Syndrom entsteht durch Deletion von Chromosom 21.",
+            "Williams-Beuren-Syndrom ist eine Duplikation von Chromosom 7.",
+            "Cri-du-chat-Syndrom (5p-Deletion, kurzer Arm von Chromosom 5) zeigt charakteristischen Katzenschrei (Larynx-Hypoplasie), Mikrozephalie und geistige Behinderung. Williams-Beuren-Syndrom (7q11.23-Deletion, Elastin-Gen) zeigt Elfengesicht, supravalvuläre Aortenstenose und hypersozialen Charakter. DiGeorge-Syndrom (22q11-Deletion, CATCH-22) zeigt Herzfehler, Thymus-Hypoplasie und Hypokalzämie.",
+            "DiGeorge-Syndrom ist eine Trisomie von Chromosom 22.",
+            "Deletion-Syndrome sind immer balanciert und klinisch unauffällig.",
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **Deletion-Syndrome:**\n\n**Cri-du-chat-Syndrom** (Katzenschrei-Syndrom):\n- **Deletion:** **5p-** (kurzer Arm [p-Arm] von Chromosom 5)\n- **Klinische Merkmale:**\n  - **Charakteristischer Schrei:** Katzenartig, schrill (Larynx-Hypoplasie)\n  - **Mikrozephalie** (kleiner Kopf)\n  - **Faziale Dysmorphie** (rundes Gesicht, Hypertelorismus [weiter Augenabstand])\n  - **Geistige Behinderung** (schwer)\n- **Häufigkeit:** 1:50.000\n\n**Williams-Beuren-Syndrom:**\n- **Deletion:** **7q11.23** (langer Arm [q-Arm] von Chromosom 7)\n- **Gen:** **Elastin-Gen-Deletion** (ELN) → Gefäß-/Bindegewebs-Störung\n- **Klinische Merkmale:**\n  - **Elfengesicht** (kleine Nase, volle Lippen, breite Stirn)\n  - **Supravalvuläre Aortenstenose** (oberhalb der Aortenklappe, Elastin-Mangel)\n  - **Hyperkalzämie** (infancy)\n  - **Geistige Behinderung** (leicht-mittel)\n  - **Hypersozialer Charakter** (extrem freundlich, vertrauensselig)\n- **Häufigkeit:** 1:10.000\n\n**DiGeorge-Syndrom** (22q11-Deletions-Syndrom, Velocardiofaciales Syndrom):\n- **Deletion:** **22q11** (langer Arm von Chromosom 22)\n- **Merkspruch:** **CATCH-22**:\n  - **C**ardiac defects (Herzfehler: Fallot-Tetralogie, Truncus arteriosus)\n  - **A**bnormal face (faziale Dysmorphie)\n  - **T**hymus-Hypoplasie (T-Zell-Defizienz, Immunschwäche)\n  - **C**left palate (Gaumenspalte)\n  - **H**ypokalzämie (Nebenschilddrüsen-Hypoplasie, PTH ↓)\n  - **22** (Chromosom 22)\n- **Häufigkeit:** 1:4.000\n\n**Falsch (A):** Cri-du-chat = **5p-Deletion** (nicht Chromosom 21). Chromosom 21 → Trisomie 21 (Down-Syndrom).\n\n**Falsch (B):** Williams-Beuren = **Deletion** (nicht Duplikation) von 7q11.23.\n\n**Falsch (D):** DiGeorge = **22q11-Deletion** (nicht Trisomie 22). Trisomie 22 ist meist letal (Fehlgeburt).\n\n**Falsch (E):** Deletion-Syndrome sind **unbalanciert** (Materialverlust) → klinisch **auffällig** (nicht unauffällig). **Balancierte** Translokation/Inversion → meist unauffällig.",
+          explanation:
+            "**Richtig (C):** **Deletion-Syndrome:**\n\n**Cri-du-chat-Syndrom** (Katzenschrei-Syndrom):\n- **Deletion:** **5p-** (kurzer Arm [p-Arm] von Chromosom 5)\n- **Klinische Merkmale:**\n  - **Charakteristischer Schrei:** Katzenartig, schrill (Larynx-Hypoplasie)\n  - **Mikrozephalie** (kleiner Kopf)\n  - **Faziale Dysmorphie** (rundes Gesicht, Hypertelorismus [weiter Augenabstand])\n  - **Geistige Behinderung** (schwer)\n- **Häufigkeit:** 1:50.000\n\n**Williams-Beuren-Syndrom:**\n- **Deletion:** **7q11.23** (langer Arm [q-Arm] von Chromosom 7)\n- **Gen:** **Elastin-Gen-Deletion** (ELN) → Gefäß-/Bindegewebs-Störung\n- **Klinische Merkmale:**\n  - **Elfengesicht** (kleine Nase, volle Lippen, breite Stirn)\n  - **Supravalvuläre Aortenstenose** (oberhalb der Aortenklappe, Elastin-Mangel)\n  - **Hyperkalzämie** (infancy)\n  - **Geistige Behinderung** (leicht-mittel)\n  - **Hypersozialer Charakter** (extrem freundlich, vertrauensselig)\n- **Häufigkeit:** 1:10.000\n\n**DiGeorge-Syndrom** (22q11-Deletions-Syndrom, Velocardiofaciales Syndrom):\n- **Deletion:** **22q11** (langer Arm von Chromosom 22)\n- **Merkspruch:** **CATCH-22**:\n  - **C**ardiac defects (Herzfehler: Fallot-Tetralogie, Truncus arteriosus)\n  - **A**bnormal face (faziale Dysmorphie)\n  - **T**hymus-Hypoplasie (T-Zell-Defizienz, Immunschwäche)\n  - **C**left palate (Gaumenspalte)\n  - **H**ypokalzämie (Nebenschilddrüsen-Hypoplasie, PTH ↓)\n  - **22** (Chromosom 22)\n- **Häufigkeit:** 1:4.000\n\n**Falsch (A):** Cri-du-chat = **5p-Deletion** (nicht Chromosom 21). Chromosom 21 → Trisomie 21 (Down-Syndrom).\n\n**Falsch (B):** Williams-Beuren = **Deletion** (nicht Duplikation) von 7q11.23.\n\n**Falsch (D):** DiGeorge = **22q11-Deletion** (nicht Trisomie 22). Trisomie 22 ist meist letal (Fehlgeburt).\n\n**Falsch (E):** Deletion-Syndrome sind **unbalanciert** (Materialverlust) → klinisch **auffällig** (nicht unauffällig). **Balancierte** Translokation/Inversion → meist unauffällig.",
           difficulty: 3,
-          tags: ['deletion', 'cri-du-chat', 'digeorge'],
+          tags: ["deletion", "cri-du-chat", "digeorge"],
         },
       ],
     },
     {
-      id: 'bio-5-03',
+      id: "bio-5-03",
       title: "Geninteraktion",
       content: `## Einleitung
 
@@ -683,7 +699,8 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         {
           heading: "Polygenie und Pleiotropie",
           text: "Polygenie: Mehrere Gene beeinflussen ein Merkmal additiv (z. B. Hautfarbe), was zu kontinuierlicher Variation und glockenförmiger Verteilung führt. Pleiotropie: Ein Gen beeinflusst mehrere Merkmale (z. B. HbS → Sichelzellen, Anämie, Gefäßverschlüsse und Malaria-Resistenz bei Heterozygoten).",
-          merksatz: "Polygenie: viele Gene → ein Merkmal (glockenförmig). Pleiotropie: ein Gen → viele Merkmale (z. B. Sichelzellanämie).",
+          merksatz:
+            "Polygenie: viele Gene → ein Merkmal (glockenförmig). Pleiotropie: ein Gen → viele Merkmale (z. B. Sichelzellanämie).",
         },
         {
           heading: "Komplementierung und modifizierte Verhältnisse",
@@ -697,82 +714,87 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         "Pleiotropie: Ein Gen → viele Merkmale. Sichelzellanämie (HbS): Sichelzellen + Anämie + Gefäßverschlüsse + Malaria-Resistenz (Heterozygoten-Vorteil).",
         "Komplementierung: Zwei rezessive Mutationen in verschiedenen Genen (aaBB × AAbb) → F₁ AaBb normal. F₂-Verhältnis 9:7.",
       ],
-      diagram: 'blood-groups',
+      diagram: "blood-groups",
       selfTest: [
         {
           question: "Welche Aussage über Epistase ist korrekt?",
           options: [
-          "Epistase bedeutet, dass ein Gen mehrere Merkmale beeinflusst.",
-          "Bei Epistase zeigt die F₂-Generation eines dihybriden Erbgangs immer ein 9:3:3:1-Verhältnis.",
-          "Epistase bedeutet, dass ein Gen (epistatisches Gen) die Wirkung eines anderen Gens (hypostatisches Gen) überdeckt. Beispiel: Bei Mäusen ist cc (Albino) epistatisch über den B-Locus (Fellfarbe). Die Kreuzung BbCc × BbCc ergibt ein 9:3:4-Verhältnis (9 schwarz, 3 braun, 4 weiß), da cc immer weiß ist, unabhängig vom B-Genotyp.",
-          "Epistatische Gene liegen immer auf demselben Chromosom wie hypostatische Gene.",
-          "Das epistatische Gen wird immer durch das hypostatische Gen überdeckt."
+            "Epistase bedeutet, dass ein Gen mehrere Merkmale beeinflusst.",
+            "Bei Epistase zeigt die F₂-Generation eines dihybriden Erbgangs immer ein 9:3:3:1-Verhältnis.",
+            "Epistase bedeutet, dass ein Gen (epistatisches Gen) die Wirkung eines anderen Gens (hypostatisches Gen) überdeckt. Beispiel: Bei Mäusen ist cc (Albino) epistatisch über den B-Locus (Fellfarbe). Die Kreuzung BbCc × BbCc ergibt ein 9:3:4-Verhältnis (9 schwarz, 3 braun, 4 weiß), da cc immer weiß ist, unabhängig vom B-Genotyp.",
+            "Epistatische Gene liegen immer auf demselben Chromosom wie hypostatische Gene.",
+            "Das epistatische Gen wird immer durch das hypostatische Gen überdeckt.",
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **Epistase:**\n\n**Definition:** Ein Gen (**epistatisches Gen**) **überdeckt** (maskiert) die Wirkung eines anderen Gens (**hypostatisches Gen**)\n\n**Beispiel: Fellfarbe bei Mäusen**\n\n**Gene:**\n- **B-Locus:** B (schwarz, dominant), b (braun, rezessiv)\n- **C-Locus:** C (Farbbildung, dominant), c (keine Farbbildung [Albino], rezessiv)\n\n**Interaktion:**\n- **C_ (C vorhanden):** Farbbildung möglich → **B-Locus** bestimmt Farbe:\n  - B_C_ (B vorhanden, C vorhanden): **Schwarz**\n  - bbC_ (bb, C vorhanden): **Braun**\n- **cc (homozygot rezessiv):** **Keine Farbbildung** → **Weiß (Albino)**, **unabhängig** von B-Locus:\n  - B_cc: Weiß (c epistatisch, überdeckt B)\n  - bbcc: Weiß\n\n**Kreuzung:** BbCc × BbCc (dihybrider Erbgang)\n\n**Erwartetes Mendel-Verhältnis (keine Epistase):** 9:3:3:1\n\n**Tatsächliches Verhältnis (mit Epistase):**\n- **9/16** Schwarz (B_C_)\n- **3/16** Braun (bbC_)\n- **3/16** Weiß (B_cc)\n- **1/16** Weiß (bbcc)\n- **Gesamt:** 9 schwarz : 3 braun : **4 weiß** (3+1)\n- **Verhältnis:** **9:3:4**\n\n**Erklärung:** **cc** ist **epistatisch** über **B/b** (hypostatisch). cc maskiert die Wirkung von B → immer weiß, unabhängig von B-Genotyp.\n\n**Falsch (A):** **Pleiotropie** (nicht Epistase) = ein Gen → mehrere Merkmale. Epistase = Gen-Gen-Interaktion (Überdeckung).\n\n**Falsch (B):** Bei Epistase weicht das Verhältnis von 9:3:3:1 ab (z. B. **9:3:4**). 9:3:3:1 = keine Geninteraktion.\n\n**Falsch (D):** Epistatische + hypostatische Gene können auf **verschiedenen Chromosomen** liegen (wie B und C). Lokalisation ist nicht definierend.\n\n**Falsch (E):** **Epistatisches** Gen überdeckt **hypostatisches** (nicht umgekehrt). Epistatisch = überdeckend, hypostatisch = überdeckt.",
+          explanation:
+            "**Richtig (C):** **Epistase:**\n\n**Definition:** Ein Gen (**epistatisches Gen**) **überdeckt** (maskiert) die Wirkung eines anderen Gens (**hypostatisches Gen**)\n\n**Beispiel: Fellfarbe bei Mäusen**\n\n**Gene:**\n- **B-Locus:** B (schwarz, dominant), b (braun, rezessiv)\n- **C-Locus:** C (Farbbildung, dominant), c (keine Farbbildung [Albino], rezessiv)\n\n**Interaktion:**\n- **C_ (C vorhanden):** Farbbildung möglich → **B-Locus** bestimmt Farbe:\n  - B_C_ (B vorhanden, C vorhanden): **Schwarz**\n  - bbC_ (bb, C vorhanden): **Braun**\n- **cc (homozygot rezessiv):** **Keine Farbbildung** → **Weiß (Albino)**, **unabhängig** von B-Locus:\n  - B_cc: Weiß (c epistatisch, überdeckt B)\n  - bbcc: Weiß\n\n**Kreuzung:** BbCc × BbCc (dihybrider Erbgang)\n\n**Erwartetes Mendel-Verhältnis (keine Epistase):** 9:3:3:1\n\n**Tatsächliches Verhältnis (mit Epistase):**\n- **9/16** Schwarz (B_C_)\n- **3/16** Braun (bbC_)\n- **3/16** Weiß (B_cc)\n- **1/16** Weiß (bbcc)\n- **Gesamt:** 9 schwarz : 3 braun : **4 weiß** (3+1)\n- **Verhältnis:** **9:3:4**\n\n**Erklärung:** **cc** ist **epistatisch** über **B/b** (hypostatisch). cc maskiert die Wirkung von B → immer weiß, unabhängig von B-Genotyp.\n\n**Falsch (A):** **Pleiotropie** (nicht Epistase) = ein Gen → mehrere Merkmale. Epistase = Gen-Gen-Interaktion (Überdeckung).\n\n**Falsch (B):** Bei Epistase weicht das Verhältnis von 9:3:3:1 ab (z. B. **9:3:4**). 9:3:3:1 = keine Geninteraktion.\n\n**Falsch (D):** Epistatische + hypostatische Gene können auf **verschiedenen Chromosomen** liegen (wie B und C). Lokalisation ist nicht definierend.\n\n**Falsch (E):** **Epistatisches** Gen überdeckt **hypostatisches** (nicht umgekehrt). Epistatisch = überdeckend, hypostatisch = überdeckt.",
           difficulty: 2,
-          tags: ['epistase', 'geninteraktion', 'phänotyp'],
+          tags: ["epistase", "geninteraktion", "phänotyp"],
         },
         {
           question: "Welche Aussage über Polygenie (polygenetische Vererbung) ist korrekt?",
           options: [
-          "Bei Polygenie beeinflusst ein Gen mehrere Merkmale.",
-          "Polygenetische Merkmale zeigen diskrete Kategorien ohne Zwischenstufen.",
-          "Polygenie bedeutet, dass mehrere Gene (Polygene) ein Merkmal beeinflussen. Die Allele wirken additiv, was zu einer kontinuierlichen Variation führt (z. B. Hautfarbe, Körpergröße). Bei zwei Genen (AaBb × AaBb) entsteht eine glockenförmige Verteilung mit einem 1:4:6:4:1-Phänotyp-Verhältnis, wobei die Anzahl dominanter Allele die Merkmalsausprägung bestimmt.",
-          "Polygenetische Vererbung folgt immer einem 9:3:3:1-Verhältnis.",
-          "Polygenie ist identisch mit Pleiotropie."
+            "Bei Polygenie beeinflusst ein Gen mehrere Merkmale.",
+            "Polygenetische Merkmale zeigen diskrete Kategorien ohne Zwischenstufen.",
+            "Polygenie bedeutet, dass mehrere Gene (Polygene) ein Merkmal beeinflussen. Die Allele wirken additiv, was zu einer kontinuierlichen Variation führt (z. B. Hautfarbe, Körpergröße). Bei zwei Genen (AaBb × AaBb) entsteht eine glockenförmige Verteilung mit einem 1:4:6:4:1-Phänotyp-Verhältnis, wobei die Anzahl dominanter Allele die Merkmalsausprägung bestimmt.",
+            "Polygenetische Vererbung folgt immer einem 9:3:3:1-Verhältnis.",
+            "Polygenie ist identisch mit Pleiotropie.",
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **Polygenie** (Polygenetische Vererbung):\n\n**Definition:** **Mehrere Gene** (Polygene) beeinflussen **ein Merkmal** → **kontinuierliche Variation** (viele Abstufungen)\n\n**Prinzip:**\n- **Additive Wirkung:** Jedes dominante/großbuchstabige Allel (A, B, C, ...) trägt zur Merkmalsausprägung bei\n- **Anzahl dominanter Allele** bestimmt Intensität des Merkmals\n- **Kontinuierliches Spektrum:** Viele Zwischenstufen (nicht diskrete Kategorien)\n\n**Beispiel: Hautfarbe (vereinfacht, 2 Gene)**\n\n**Kreuzung:** AaBb × AaBb\n\n**Phänotyp-Verteilung:**\n- **AABB** (4 dominante Allele): Dunkelste Hautfarbe (1/16)\n- **AABb, AaBB** (3 dominante Allele): Dunkel (4/16)\n- **AAbb, AaBb, aaBB** (2 dominante Allele): Mittel (6/16)\n- **Aabb, aaBb** (1 dominantes Allel): Hell (4/16)\n- **aabb** (0 dominante Allele): Hellste Hautfarbe (1/16)\n\n**Verhältnis:** **1:4:6:4:1** (glockenförmige Verteilung)\n\n**Realität:** Hautfarbe wird von 3–6+ Genen beeinflusst → noch mehr Abstufungen, noch glattere Glockenform\n\n**Weitere Beispiele:**\n- **Körpergröße:** 100+ Gene + Umweltfaktoren (Ernährung)\n- **Intelligenz:** Viele Gene + Umwelt\n- **Blutdruck**\n\n**Merkmale polygenetischer Vererbung:**\n- **Kontinuierliche Variation** (fließende Übergänge)\n- **Glockenförmige Verteilung** (Normalverteilung)\n- **Umwelteinfluss** (oft erheblich)\n\n**Falsch (A):** **Pleiotropie** (nicht Polygenie) = ein Gen → mehrere Merkmale. **Polygenie** = viele Gene → ein Merkmal.\n\n**Falsch (B):** Polygenetische Merkmale zeigen **kontinuierliche Variation** (viele Zwischenstufen), nicht diskrete Kategorien.\n\n**Falsch (D):** Polygenetische Vererbung → **1:4:6:4:1** (2 Gene) oder glattere Glockenform (mehr Gene), nicht 9:3:3:1. 9:3:3:1 = dihybrider Erbgang ohne Geninteraktion.\n\n**Falsch (E):** Polygenie ≠ Pleiotropie. **Polygenie:** Viele Gene → ein Merkmal. **Pleiotropie:** Ein Gen → viele Merkmale.",
+          explanation:
+            "**Richtig (C):** **Polygenie** (Polygenetische Vererbung):\n\n**Definition:** **Mehrere Gene** (Polygene) beeinflussen **ein Merkmal** → **kontinuierliche Variation** (viele Abstufungen)\n\n**Prinzip:**\n- **Additive Wirkung:** Jedes dominante/großbuchstabige Allel (A, B, C, ...) trägt zur Merkmalsausprägung bei\n- **Anzahl dominanter Allele** bestimmt Intensität des Merkmals\n- **Kontinuierliches Spektrum:** Viele Zwischenstufen (nicht diskrete Kategorien)\n\n**Beispiel: Hautfarbe (vereinfacht, 2 Gene)**\n\n**Kreuzung:** AaBb × AaBb\n\n**Phänotyp-Verteilung:**\n- **AABB** (4 dominante Allele): Dunkelste Hautfarbe (1/16)\n- **AABb, AaBB** (3 dominante Allele): Dunkel (4/16)\n- **AAbb, AaBb, aaBB** (2 dominante Allele): Mittel (6/16)\n- **Aabb, aaBb** (1 dominantes Allel): Hell (4/16)\n- **aabb** (0 dominante Allele): Hellste Hautfarbe (1/16)\n\n**Verhältnis:** **1:4:6:4:1** (glockenförmige Verteilung)\n\n**Realität:** Hautfarbe wird von 3–6+ Genen beeinflusst → noch mehr Abstufungen, noch glattere Glockenform\n\n**Weitere Beispiele:**\n- **Körpergröße:** 100+ Gene + Umweltfaktoren (Ernährung)\n- **Intelligenz:** Viele Gene + Umwelt\n- **Blutdruck**\n\n**Merkmale polygenetischer Vererbung:**\n- **Kontinuierliche Variation** (fließende Übergänge)\n- **Glockenförmige Verteilung** (Normalverteilung)\n- **Umwelteinfluss** (oft erheblich)\n\n**Falsch (A):** **Pleiotropie** (nicht Polygenie) = ein Gen → mehrere Merkmale. **Polygenie** = viele Gene → ein Merkmal.\n\n**Falsch (B):** Polygenetische Merkmale zeigen **kontinuierliche Variation** (viele Zwischenstufen), nicht diskrete Kategorien.\n\n**Falsch (D):** Polygenetische Vererbung → **1:4:6:4:1** (2 Gene) oder glattere Glockenform (mehr Gene), nicht 9:3:3:1. 9:3:3:1 = dihybrider Erbgang ohne Geninteraktion.\n\n**Falsch (E):** Polygenie ≠ Pleiotropie. **Polygenie:** Viele Gene → ein Merkmal. **Pleiotropie:** Ein Gen → viele Merkmale.",
           difficulty: 1,
-          tags: ['polygenie', 'quantitative merkmale', 'kontinuierliche variabilität'],
+          tags: ["polygenie", "quantitative merkmale", "kontinuierliche variabilität"],
         },
         {
           question: "Welche Aussage über Pleiotropie ist korrekt?",
           options: [
-          "Pleiotropie bedeutet, dass mehrere Gene ein Merkmal beeinflussen.",
-          "Bei Pleiotropie zeigen alle Merkmale denselben Phänotyp.",
-          "Pleiotropie bedeutet, dass ein Gen mehrere Merkmale (phänotypische Effekte) beeinflusst. Beispiel: Sichelzellanämie (HbS-Mutation) führt zu Sichelzellen, Hämolyse (Anämie), Gefäßverschlüssen (Schmerzkrisen, Organschäden) und Malaria-Resistenz bei Heterozygoten (HbA/HbS). Dies ist ein Beispiel für balancing selection (Heterozygoten-Vorteil).",
-          "Pleiotropie tritt nur bei X-chromosomaler Vererbung auf.",
-          "Sichelzellanämie ist ein Beispiel für Polygenie."
+            "Pleiotropie bedeutet, dass mehrere Gene ein Merkmal beeinflussen.",
+            "Bei Pleiotropie zeigen alle Merkmale denselben Phänotyp.",
+            "Pleiotropie bedeutet, dass ein Gen mehrere Merkmale (phänotypische Effekte) beeinflusst. Beispiel: Sichelzellanämie (HbS-Mutation) führt zu Sichelzellen, Hämolyse (Anämie), Gefäßverschlüssen (Schmerzkrisen, Organschäden) und Malaria-Resistenz bei Heterozygoten (HbA/HbS). Dies ist ein Beispiel für balancing selection (Heterozygoten-Vorteil).",
+            "Pleiotropie tritt nur bei X-chromosomaler Vererbung auf.",
+            "Sichelzellanämie ist ein Beispiel für Polygenie.",
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **Pleiotropie:**\n\n**Definition:** **Ein Gen** beeinflusst **mehrere Merkmale** (phänotypische Effekte)\n\n**Beispiel: Sichelzellanämie (HbS)**\n\n**Gen:** β-Globin-Gen (Hämoglobin)\n- **Mutation:** Glu → Val (Position 6, GAG → GTG) → **HbS** (Sichelzell-Hämoglobin)\n\n**Ein Gen (HbS) → Viele Effekte:**\n\n1. **Erythrozyten:** Sichelform bei Hypoxie (niedrig O₂, desoxygeniert)\n2. **Hämolyse:** Vorzeitiger Erythrozyten-Abbau → **Anämie** (Hb ↓)\n3. **Gefäßverschlüsse:** Sichelzellen blockieren Kapillaren → **Schmerzkrisen** (Knochen, Abdomen), **Organschäden** (Milz-Infarkte, Nierenschäden, Schlaganfall)\n4. **Malaria-Resistenz:** Heterozygote (**HbA/HbS**) → partielle Resistenz gegen *Plasmodium falciparum* (Malaria-Parasit)\n   - **Mechanismus:** Parasit kann in Sichelzellen schlechter überleben\n   - **Balancing Selection:** Heterozygoten-Vorteil in Malaria-Gebieten (Afrika, Mittelmeer) → HbS-Allel bleibt in Population (trotz Nachteil bei Homozygoten)\n\n**Genotyp → Phänotyp:**\n- **HbA/HbA:** Normal, keine Sichelzellen, Malaria-anfällig\n- **HbA/HbS:** Heterozygot (**Sichelzellträger**, Sickle Cell Trait), meist asymptomatisch (leichte Anämie nur bei extremer Hypoxie), **Malaria-Resistenz**\n- **HbS/HbS:** Homozygot, **Sichelzellanämie** (schwer), Schmerzkrisen, Organschäden, frühe Mortalität (ohne Behandlung)\n\n**Weitere Beispiele:**\n- **Marfan-Syndrom:** Fibrillin-1-Mutation → Aortenerweiterung (Dissektions-Risiko), Linsenluxation (Auge), langes Skelett, Arachnodaktylie (Spinnenfinger)\n- **Phenylketonurie (PKU):** Phenylalanin-Hydroxylase-Mangel → Geistige Behinderung (Phenylalanin toxisch fürs ZNS), helle Haut/Haare (Melanin ↓, Tyrosin-Mangel)\n\n**Falsch (A):** **Polygenie** (nicht Pleiotropie) = mehrere Gene → ein Merkmal. **Pleiotropie** = ein Gen → mehrere Merkmale.\n\n**Falsch (B):** Bei Pleiotropie zeigen Merkmale **verschiedene** Phänotypen (z. B. Sichelzellen + Anämie + Schmerzkrisen), nicht denselben.\n\n**Falsch (D):** Pleiotropie kann bei **allen Vererbungstypen** auftreten (autosomal, X-chromosomal), nicht nur X-chromosomal.\n\n**Falsch (E):** Sichelzellanämie = **Pleiotropie** (ein Gen → viele Merkmale), nicht Polygenie (viele Gene → ein Merkmal).",
+          explanation:
+            "**Richtig (C):** **Pleiotropie:**\n\n**Definition:** **Ein Gen** beeinflusst **mehrere Merkmale** (phänotypische Effekte)\n\n**Beispiel: Sichelzellanämie (HbS)**\n\n**Gen:** β-Globin-Gen (Hämoglobin)\n- **Mutation:** Glu → Val (Position 6, GAG → GTG) → **HbS** (Sichelzell-Hämoglobin)\n\n**Ein Gen (HbS) → Viele Effekte:**\n\n1. **Erythrozyten:** Sichelform bei Hypoxie (niedrig O₂, desoxygeniert)\n2. **Hämolyse:** Vorzeitiger Erythrozyten-Abbau → **Anämie** (Hb ↓)\n3. **Gefäßverschlüsse:** Sichelzellen blockieren Kapillaren → **Schmerzkrisen** (Knochen, Abdomen), **Organschäden** (Milz-Infarkte, Nierenschäden, Schlaganfall)\n4. **Malaria-Resistenz:** Heterozygote (**HbA/HbS**) → partielle Resistenz gegen *Plasmodium falciparum* (Malaria-Parasit)\n   - **Mechanismus:** Parasit kann in Sichelzellen schlechter überleben\n   - **Balancing Selection:** Heterozygoten-Vorteil in Malaria-Gebieten (Afrika, Mittelmeer) → HbS-Allel bleibt in Population (trotz Nachteil bei Homozygoten)\n\n**Genotyp → Phänotyp:**\n- **HbA/HbA:** Normal, keine Sichelzellen, Malaria-anfällig\n- **HbA/HbS:** Heterozygot (**Sichelzellträger**, Sickle Cell Trait), meist asymptomatisch (leichte Anämie nur bei extremer Hypoxie), **Malaria-Resistenz**\n- **HbS/HbS:** Homozygot, **Sichelzellanämie** (schwer), Schmerzkrisen, Organschäden, frühe Mortalität (ohne Behandlung)\n\n**Weitere Beispiele:**\n- **Marfan-Syndrom:** Fibrillin-1-Mutation → Aortenerweiterung (Dissektions-Risiko), Linsenluxation (Auge), langes Skelett, Arachnodaktylie (Spinnenfinger)\n- **Phenylketonurie (PKU):** Phenylalanin-Hydroxylase-Mangel → Geistige Behinderung (Phenylalanin toxisch fürs ZNS), helle Haut/Haare (Melanin ↓, Tyrosin-Mangel)\n\n**Falsch (A):** **Polygenie** (nicht Pleiotropie) = mehrere Gene → ein Merkmal. **Pleiotropie** = ein Gen → mehrere Merkmale.\n\n**Falsch (B):** Bei Pleiotropie zeigen Merkmale **verschiedene** Phänotypen (z. B. Sichelzellen + Anämie + Schmerzkrisen), nicht denselben.\n\n**Falsch (D):** Pleiotropie kann bei **allen Vererbungstypen** auftreten (autosomal, X-chromosomal), nicht nur X-chromosomal.\n\n**Falsch (E):** Sichelzellanämie = **Pleiotropie** (ein Gen → viele Merkmale), nicht Polygenie (viele Gene → ein Merkmal).",
           difficulty: 3,
-          tags: ['pleiotropie', 'ein-gen-mehrere-merkmale', 'geninteraktion'],
+          tags: ["pleiotropie", "ein-gen-mehrere-merkmale", "geninteraktion"],
         },
         {
           question: "Welche Aussage über Komplementierung ist korrekt?",
           options: [
-          "Bei Komplementierung haben beide Eltern denselben genetischen Defekt.",
-          "Komplementierung führt zu einem 3:1-Phänotyp-Verhältnis in der F₂-Generation.",
-          "Komplementierung bedeutet, dass zwei rezessive Mutationen in verschiedenen Genen sich gegenseitig kompensieren, sodass die F₁-Generation einen Wildtyp-Phänotyp (normal) zeigt. In der F₂-Generation (F₁ × F₁) ergibt sich ein 9:7-Verhältnis: 9/16 zeigen den Wildtyp-Phänotyp (A_B_), 7/16 den mutanten Phänotyp (A_bb + aaB_ + aabb), da beide funktionale Gene für den normalen Phänotyp erforderlich sind.",
-          "Komplementierung kann nur bei monohybriden Erbgängen auftreten.",
-          "Bei Komplementierung sind alle F₁-Nachkommen mutant."
+            "Bei Komplementierung haben beide Eltern denselben genetischen Defekt.",
+            "Komplementierung führt zu einem 3:1-Phänotyp-Verhältnis in der F₂-Generation.",
+            "Komplementierung bedeutet, dass zwei rezessive Mutationen in verschiedenen Genen sich gegenseitig kompensieren, sodass die F₁-Generation einen Wildtyp-Phänotyp (normal) zeigt. In der F₂-Generation (F₁ × F₁) ergibt sich ein 9:7-Verhältnis: 9/16 zeigen den Wildtyp-Phänotyp (A_B_), 7/16 den mutanten Phänotyp (A_bb + aaB_ + aabb), da beide funktionale Gene für den normalen Phänotyp erforderlich sind.",
+            "Komplementierung kann nur bei monohybriden Erbgängen auftreten.",
+            "Bei Komplementierung sind alle F₁-Nachkommen mutant.",
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **Komplementierung:**\n\n**Definition:** **Zwei rezessive Mutationen** in **verschiedenen Genen** → **komplementieren** sich → **Wildtyp-Phänotyp** (normal) in F₁\n\n**Prinzip:**\n- **Elternteil 1:** Gen A defekt (aa), Gen B funktional (BB) → mutanter Phänotyp (Produkt A fehlt)\n- **Elternteil 2:** Gen A funktional (AA), Gen B defekt (bb) → mutanter Phänotyp (Produkt B fehlt)\n- **F₁:** AaBb → **beide Gene funktional** (A von Elter 2, B von Elter 1) → **Wildtyp-Phänotyp** (normal)\n\n**Beispiel: Blütenfarbe (vereinfacht)**\n\n**Gene:**\n- **Gen A:** Enzym A (Vorstufe → Zwischenprodukt)\n- **Gen B:** Enzym B (Zwischenprodukt → Pigment [Farbe])\n\n**Kreuzung:** aaBB (weiß, Enzym A defekt) × AAbb (weiß, Enzym B defekt)\n- **F₁:** AaBb → **Farbe** (beide Enzyme funktional, Biosynthese-Weg komplett)\n\n**F₁ × F₁:** AaBb × AaBb\n\n**F₂-Phänotyp:**\n- **9/16 A_B_** (beide Enzyme funktional): **Farbe** (Wildtyp)\n- **3/16 A_bb** (Enzym B defekt): Weiß (kein Pigment)\n- **3/16 aaB_** (Enzym A defekt): Weiß (kein Zwischenprodukt)\n- **1/16 aabb** (beide Enzyme defekt): Weiß\n- **Verhältnis:** **9:7** (9 Farbe : 7 weiß)\n\n**Erklärung:** Nur wenn **beide** Enzyme funktional (A_B_) → Biosynthese-Weg vollständig → Pigment → Farbe. Fehlt mindestens eines → kein Pigment → weiß.\n\n**Komplementations-Test:**\n- **Zweck:** Bestimmen, ob zwei Mutationen im **gleichen Gen** (keine Komplementierung) oder in **verschiedenen Genen** (Komplementierung) liegen\n- **F₁ Wildtyp:** Verschiedene Gene (Komplementierung)\n- **F₁ mutant:** Gleiches Gen (keine Komplementierung, beide Allele des gleichen Gens defekt)\n\n**Falsch (A):** Bei Komplementierung haben Eltern **verschiedene** genetische Defekte (Gen A vs. Gen B), nicht denselben.\n\n**Falsch (B):** Komplementierung → **9:7** (nicht 3:1). 3:1 = monohybrider Erbgang (Aa × Aa).\n\n**Falsch (D):** Komplementierung ist typischerweise **dihybrider** Erbgang (2 Gene, AaBb × AaBb), nicht monohybrid.\n\n**Falsch (E):** Bei Komplementierung sind alle **F₁** Nachkommen **Wildtyp** (normal, AaBb), nicht mutant.",
+          explanation:
+            "**Richtig (C):** **Komplementierung:**\n\n**Definition:** **Zwei rezessive Mutationen** in **verschiedenen Genen** → **komplementieren** sich → **Wildtyp-Phänotyp** (normal) in F₁\n\n**Prinzip:**\n- **Elternteil 1:** Gen A defekt (aa), Gen B funktional (BB) → mutanter Phänotyp (Produkt A fehlt)\n- **Elternteil 2:** Gen A funktional (AA), Gen B defekt (bb) → mutanter Phänotyp (Produkt B fehlt)\n- **F₁:** AaBb → **beide Gene funktional** (A von Elter 2, B von Elter 1) → **Wildtyp-Phänotyp** (normal)\n\n**Beispiel: Blütenfarbe (vereinfacht)**\n\n**Gene:**\n- **Gen A:** Enzym A (Vorstufe → Zwischenprodukt)\n- **Gen B:** Enzym B (Zwischenprodukt → Pigment [Farbe])\n\n**Kreuzung:** aaBB (weiß, Enzym A defekt) × AAbb (weiß, Enzym B defekt)\n- **F₁:** AaBb → **Farbe** (beide Enzyme funktional, Biosynthese-Weg komplett)\n\n**F₁ × F₁:** AaBb × AaBb\n\n**F₂-Phänotyp:**\n- **9/16 A_B_** (beide Enzyme funktional): **Farbe** (Wildtyp)\n- **3/16 A_bb** (Enzym B defekt): Weiß (kein Pigment)\n- **3/16 aaB_** (Enzym A defekt): Weiß (kein Zwischenprodukt)\n- **1/16 aabb** (beide Enzyme defekt): Weiß\n- **Verhältnis:** **9:7** (9 Farbe : 7 weiß)\n\n**Erklärung:** Nur wenn **beide** Enzyme funktional (A_B_) → Biosynthese-Weg vollständig → Pigment → Farbe. Fehlt mindestens eines → kein Pigment → weiß.\n\n**Komplementations-Test:**\n- **Zweck:** Bestimmen, ob zwei Mutationen im **gleichen Gen** (keine Komplementierung) oder in **verschiedenen Genen** (Komplementierung) liegen\n- **F₁ Wildtyp:** Verschiedene Gene (Komplementierung)\n- **F₁ mutant:** Gleiches Gen (keine Komplementierung, beide Allele des gleichen Gens defekt)\n\n**Falsch (A):** Bei Komplementierung haben Eltern **verschiedene** genetische Defekte (Gen A vs. Gen B), nicht denselben.\n\n**Falsch (B):** Komplementierung → **9:7** (nicht 3:1). 3:1 = monohybrider Erbgang (Aa × Aa).\n\n**Falsch (D):** Komplementierung ist typischerweise **dihybrider** Erbgang (2 Gene, AaBb × AaBb), nicht monohybrid.\n\n**Falsch (E):** Bei Komplementierung sind alle **F₁** Nachkommen **Wildtyp** (normal, AaBb), nicht mutant.",
           difficulty: 3,
-          tags: ['komplementierung', 'zwei-gen-modell', 'komplementäre gene'],
+          tags: ["komplementierung", "zwei-gen-modell", "komplementäre gene"],
         },
         {
           question: "Welche Aussage über modifizierte Mendel-Verhältnisse ist korrekt?",
           options: [
-          "Ein 9:3:3:1-Verhältnis zeigt immer Geninteraktion an.",
-          "Ein 9:3:4-Verhältnis entsteht durch Komplementierung.",
-          "Bei dihybridem Erbgang (AaBb × AaBb) entstehen verschiedene Phänotyp-Verhältnisse je nach Geninteraktion: 9:3:3:1 (keine Interaktion), 9:3:4 (Epistase, z. B. cc epistatisch), 9:7 (Komplementierung, beide Gene erforderlich), 12:3:1 (dominant epistatisch). Abweichungen von 9:3:3:1 zeigen Geninteraktion an.",
-          "Ein 9:7-Verhältnis zeigt keine Geninteraktion.",
-          "Alle Geninteraktionen führen zum gleichen Phänotyp-Verhältnis."
+            "Ein 9:3:3:1-Verhältnis zeigt immer Geninteraktion an.",
+            "Ein 9:3:4-Verhältnis entsteht durch Komplementierung.",
+            "Bei dihybridem Erbgang (AaBb × AaBb) entstehen verschiedene Phänotyp-Verhältnisse je nach Geninteraktion: 9:3:3:1 (keine Interaktion), 9:3:4 (Epistase, z. B. cc epistatisch), 9:7 (Komplementierung, beide Gene erforderlich), 12:3:1 (dominant epistatisch). Abweichungen von 9:3:3:1 zeigen Geninteraktion an.",
+            "Ein 9:7-Verhältnis zeigt keine Geninteraktion.",
+            "Alle Geninteraktionen führen zum gleichen Phänotyp-Verhältnis.",
           ],
           correctIndex: 2,
-          explanation: "**Richtig (C):** **Modifizierte Mendel-Verhältnisse:**\n\n**Dihybrider Erbgang:** AaBb × AaBb (2 Gene, je 2 Allele)\n\n**Standard-Mendel (keine Geninteraktion):**\n- **Verhältnis:** **9:3:3:1**\n- **Phänotypen:** 9 A_B_, 3 A_bb, 3 aaB_, 1 aabb\n- **Interpretation:** Gene vererben **unabhängig**, keine Interaktion\n\n**Geninteraktion → Abweichungen von 9:3:3:1:**\n\n1. **Epistase (9:3:4):**\n   - **Beispiel:** Fellfarbe Maus (cc epistatisch über B/b)\n   - **Phänotypen:** 9 schwarz (B_C_), 3 braun (bbC_), 4 weiß (B_cc + bbcc)\n   - **Erklärung:** cc überdeckt B/b → immer weiß\n\n2. **Komplementierung (9:7):**\n   - **Beispiel:** Blütenfarbe (beide Enzyme A + B nötig)\n   - **Phänotypen:** 9 Farbe (A_B_), 7 weiß (A_bb + aaB_ + aabb)\n   - **Erklärung:** Mindestens ein Gen defekt → kein Pigment → weiß\n\n3. **Dominant epistatisch (12:3:1):**\n   - **Beispiel:** Gen A (A_) epistatisch über B/b\n   - **Phänotypen:** 12 (A_B_ + A_bb), 3 (aaB_), 1 (aabb)\n   - **Erklärung:** A_ maskiert B/b → gleicher Phänotyp\n\n4. **Doppelt-rezessiv epistatisch (9:7):**\n   - Wie Komplementierung (beide Gene nötig)\n\n**Regel:** **Abweichung von 9:3:3:1** → **Geninteraktion** (Epistase, Komplementierung, etc.)\n\n**Falsch (A):** **9:3:3:1** zeigt **keine** Geninteraktion (unabhängige Vererbung, 3. Mendelsche Regel). **Abweichungen** (9:3:4, 9:7, 12:3:1) zeigen Geninteraktion.\n\n**Falsch (B):** **9:3:4** = **Epistase** (nicht Komplementierung). **9:7** = Komplementierung.\n\n**Falsch (D):** **9:7** zeigt **Geninteraktion** (Komplementierung, beide Gene erforderlich für Wildtyp), nicht keine Geninteraktion.\n\n**Falsch (E):** Verschiedene Geninteraktionen → **verschiedene** Verhältnisse (9:3:4, 9:7, 12:3:1), nicht gleich.",
+          explanation:
+            "**Richtig (C):** **Modifizierte Mendel-Verhältnisse:**\n\n**Dihybrider Erbgang:** AaBb × AaBb (2 Gene, je 2 Allele)\n\n**Standard-Mendel (keine Geninteraktion):**\n- **Verhältnis:** **9:3:3:1**\n- **Phänotypen:** 9 A_B_, 3 A_bb, 3 aaB_, 1 aabb\n- **Interpretation:** Gene vererben **unabhängig**, keine Interaktion\n\n**Geninteraktion → Abweichungen von 9:3:3:1:**\n\n1. **Epistase (9:3:4):**\n   - **Beispiel:** Fellfarbe Maus (cc epistatisch über B/b)\n   - **Phänotypen:** 9 schwarz (B_C_), 3 braun (bbC_), 4 weiß (B_cc + bbcc)\n   - **Erklärung:** cc überdeckt B/b → immer weiß\n\n2. **Komplementierung (9:7):**\n   - **Beispiel:** Blütenfarbe (beide Enzyme A + B nötig)\n   - **Phänotypen:** 9 Farbe (A_B_), 7 weiß (A_bb + aaB_ + aabb)\n   - **Erklärung:** Mindestens ein Gen defekt → kein Pigment → weiß\n\n3. **Dominant epistatisch (12:3:1):**\n   - **Beispiel:** Gen A (A_) epistatisch über B/b\n   - **Phänotypen:** 12 (A_B_ + A_bb), 3 (aaB_), 1 (aabb)\n   - **Erklärung:** A_ maskiert B/b → gleicher Phänotyp\n\n4. **Doppelt-rezessiv epistatisch (9:7):**\n   - Wie Komplementierung (beide Gene nötig)\n\n**Regel:** **Abweichung von 9:3:3:1** → **Geninteraktion** (Epistase, Komplementierung, etc.)\n\n**Falsch (A):** **9:3:3:1** zeigt **keine** Geninteraktion (unabhängige Vererbung, 3. Mendelsche Regel). **Abweichungen** (9:3:4, 9:7, 12:3:1) zeigen Geninteraktion.\n\n**Falsch (B):** **9:3:4** = **Epistase** (nicht Komplementierung). **9:7** = Komplementierung.\n\n**Falsch (D):** **9:7** zeigt **Geninteraktion** (Komplementierung, beide Gene erforderlich für Wildtyp), nicht keine Geninteraktion.\n\n**Falsch (E):** Verschiedene Geninteraktionen → **verschiedene** Verhältnisse (9:3:4, 9:7, 12:3:1), nicht gleich.",
           difficulty: 2,
-          tags: ['modifizierte mendel-verhältnisse', 'epistase', 'phänotyp-verhältnis'],
-        }
+          tags: ["modifizierte mendel-verhältnisse", "epistase", "phänotyp-verhältnis"],
+        },
       ],
     },
     {
-      id: 'bio-5-04',
+      id: "bio-5-04",
       title: "Geschlechtsgebundene Vererbung",
       content: `## Einleitung
 
@@ -918,17 +940,20 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         {
           heading: "X-chromosomal rezessive Vererbung",
           text: "Bei X-chromosomal rezessiver Vererbung sind Männer (X^a Y, hemizygot) häufiger krank, da sie nur ein X-Chromosom besitzen. Frauen sind als Konduktorinnen (X^A X^a) meist gesund. Es gibt keine Vater-Sohn-Übertragung (Vater gibt Y an Söhne). Klinische Beispiele: Hämophilie A, Rot-Grün-Blindheit, Muskeldystrophie Duchenne.",
-          merksatz: "Männer häufiger krank (hemizygot, X^a Y). Töchter meist gesund (Konduktorin). Keine Vater-Sohn-Übertragung.",
+          merksatz:
+            "Männer häufiger krank (hemizygot, X^a Y). Töchter meist gesund (Konduktorin). Keine Vater-Sohn-Übertragung.",
         },
         {
           heading: "X-chromosomal dominante Vererbung und X-Inaktivierung",
           text: "Bei X-chromosomal dominanter Vererbung gibt ein kranker Vater (X^A Y) sein X^A an alle Töchter (100% krank) und sein Y an alle Söhne (100% gesund). Die X-Inaktivierung (Lyon-Hypothese) inaktiviert in weiblichen Zellen zufällig eines der beiden X-Chromosomen (Barr-Körperchen), was ein Mosaik-Muster erzeugt (z. B. Kaliko-Katzen).",
-          merksatz: "Kranker Vater (X^A Y) → 100% Töchter krank, 100% Söhne gesund. X-Inaktivierung = Barr-Körperchen, Mosaik-Muster.",
+          merksatz:
+            "Kranker Vater (X^A Y) → 100% Töchter krank, 100% Söhne gesund. X-Inaktivierung = Barr-Körperchen, Mosaik-Muster.",
         },
         {
           heading: "Y-chromosomale Vererbung",
           text: "Y-chromosomale Gene betreffen ausschließlich Männer. Die Übertragung erfolgt zu 100% vom Vater auf alle Söhne, Töchter sind nie betroffen. Wichtige Gene: SRY (Hoden-Entwicklung → männlicher Phänotyp), AZF (Spermatogenese; Deletion → Infertilität).",
-          merksatz: "Y-chromosomal: Nur Männer, Vater → 100% Söhne. SRY = Hoden, AZF = Spermatogenese.",
+          merksatz:
+            "Y-chromosomal: Nur Männer, Vater → 100% Söhne. SRY = Hoden, AZF = Spermatogenese.",
         },
       ],
       merksätze: [
@@ -937,82 +962,92 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         "X-Inaktivierung: Weibliche Zellen (XX) → 1 X inaktiviert (zufällig, Barr-Körperchen, XIST). Mosaik-Muster (Kaliko-Katzen: X^O X^B → Orange + Schwarz, nur bei Weibchen).",
         "Y-chromosomal: Nur Männer betroffen. Vater → 100% Söhne. SRY (Hoden-Entwicklung → männlich), AZF (Spermatogenese, Deletion → Infertilität).",
       ],
-      diagram: 'meiosis-overview',
+      diagram: "meiosis-overview",
       selfTest: [
         {
-          question: "Ein Junge leidet an Hämophilie A. Seine Mutter und Großmutter väterlicherseits sind gesund, sein Vater und Großvater mütterlicherseits sind ebenfalls gesund. Welche Aussage zum Erbgang ist korrekt?",
+          question:
+            "Ein Junge leidet an Hämophilie A. Seine Mutter und Großmutter väterlicherseits sind gesund, sein Vater und Großvater mütterlicherseits sind ebenfalls gesund. Welche Aussage zum Erbgang ist korrekt?",
           options: [
-          "Der Junge hat das defekte F8-Gen von seinem Vater geerbt, da Hämophilie A Y-chromosomal vererbt wird",
-          "Die Mutter ist Konduktorin (X^A X^a) und hat das defekte Allel mit 50% Wahrscheinlichkeit an den Sohn weitergegeben",
-          "Der Junge ist heterozygot für das F8-Gen und zeigt eine inkomplette Dominanz",
-          "Beide Eltern müssen homozygot rezessiv (X^a X^a bzw. X^a Y) sein, damit der Sohn erkrankt",
-          "Eine Vater-Sohn-Übertragung ist bei Hämophilie A der häufigste Vererbungsweg"
+            "Der Junge hat das defekte F8-Gen von seinem Vater geerbt, da Hämophilie A Y-chromosomal vererbt wird",
+            "Die Mutter ist Konduktorin (X^A X^a) und hat das defekte Allel mit 50% Wahrscheinlichkeit an den Sohn weitergegeben",
+            "Der Junge ist heterozygot für das F8-Gen und zeigt eine inkomplette Dominanz",
+            "Beide Eltern müssen homozygot rezessiv (X^a X^a bzw. X^a Y) sein, damit der Sohn erkrankt",
+            "Eine Vater-Sohn-Übertragung ist bei Hämophilie A der häufigste Vererbungsweg",
           ],
           correctIndex: 1,
-          explanation: "Hämophilie A ist **X-chromosomal rezessiv** vererbt. Der Junge ist **hemizygot** (X^a Y) und hat das defekte F8-Gen auf dem X-Chromosom. Da der **Vater sein Y-Chromosom an den Sohn** gibt (nicht X), muss die **Mutter Konduktorin** (X^A X^a) sein und hat das X^a-Allel mit 50% Wahrscheinlichkeit weitergegeben. Wichtig: **Keine Vater-Sohn-Übertragung** bei X-chromosomalen Merkmalen!",
+          explanation:
+            "Hämophilie A ist **X-chromosomal rezessiv** vererbt. Der Junge ist **hemizygot** (X^a Y) und hat das defekte F8-Gen auf dem X-Chromosom. Da der **Vater sein Y-Chromosom an den Sohn** gibt (nicht X), muss die **Mutter Konduktorin** (X^A X^a) sein und hat das X^a-Allel mit 50% Wahrscheinlichkeit weitergegeben. Wichtig: **Keine Vater-Sohn-Übertragung** bei X-chromosomalen Merkmalen!",
           difficulty: 2,
-          tags: ['hämophilie', 'x-chromosomal rezessiv', 'blutgerinnungsstörung'],
+          tags: ["hämophilie", "x-chromosomal rezessiv", "blutgerinnungsstörung"],
         },
         {
-          question: "Bei einer Stammbaumanalyse fällt auf, dass ein kranker Vater **ausschließlich kranke Töchter** hat, während **alle Söhne gesund** sind. Die gesunde Mutter hat sowohl gesunde als auch kranke Kinder. Welcher Erbgang liegt vor?",
+          question:
+            "Bei einer Stammbaumanalyse fällt auf, dass ein kranker Vater **ausschließlich kranke Töchter** hat, während **alle Söhne gesund** sind. Die gesunde Mutter hat sowohl gesunde als auch kranke Kinder. Welcher Erbgang liegt vor?",
           options: [
-          "X-chromosomal rezessiv, da Männer häufiger betroffen sind und keine Vater-Sohn-Übertragung stattfindet",
-          "Y-chromosomal (holandrisch), da der Vater das Y-Chromosom an alle Söhne weitergibt",
-          "X-chromosomal dominant, da der kranke Vater (X^A Y) sein X^A-Chromosom an alle Töchter weitergibt",
-          "Autosomal dominant, da sowohl Töchter als auch Söhne betroffen sein können",
-          "Mitochondrial, da die Vererbung über die mütterliche Linie erfolgt"
+            "X-chromosomal rezessiv, da Männer häufiger betroffen sind und keine Vater-Sohn-Übertragung stattfindet",
+            "Y-chromosomal (holandrisch), da der Vater das Y-Chromosom an alle Söhne weitergibt",
+            "X-chromosomal dominant, da der kranke Vater (X^A Y) sein X^A-Chromosom an alle Töchter weitergibt",
+            "Autosomal dominant, da sowohl Töchter als auch Söhne betroffen sein können",
+            "Mitochondrial, da die Vererbung über die mütterliche Linie erfolgt",
           ],
           correctIndex: 2,
-          explanation: "Das Muster **kranker Vater → 100% kranke Töchter, 100% gesunde Söhne** ist **pathognomonisch für X-chromosomal dominante Vererbung**. Der Vater (X^A Y) gibt sein **X^A-Chromosom an alle Töchter** (→ X^A X^- krank) und sein **Y-Chromosom an alle Söhne** (→ X^- Y gesund). Die gesunde Mutter (X^- X^-) kann nur X^- weitergeben. Beispiel: Hypophosphatämische Rachitis (PHEX-Gen).",
+          explanation:
+            "Das Muster **kranker Vater → 100% kranke Töchter, 100% gesunde Söhne** ist **pathognomonisch für X-chromosomal dominante Vererbung**. Der Vater (X^A Y) gibt sein **X^A-Chromosom an alle Töchter** (→ X^A X^- krank) und sein **Y-Chromosom an alle Söhne** (→ X^- Y gesund). Die gesunde Mutter (X^- X^-) kann nur X^- weitergeben. Beispiel: Hypophosphatämische Rachitis (PHEX-Gen).",
           difficulty: 2,
-          tags: ['x-chromosomal dominant', 'erbgang', 'töchter betroffen'],
+          tags: ["x-chromosomal dominant", "erbgang", "töchter betroffen"],
         },
         {
-          question: "Eine Frau ist heterozygot für ein X-chromosomal rezessives Merkmal (z.B. Rot-Grün-Blindheit, X^A X^a). Welche Aussage zur **X-Inaktivierung** (Lyon-Hypothese) ist korrekt?",
+          question:
+            "Eine Frau ist heterozygot für ein X-chromosomal rezessives Merkmal (z.B. Rot-Grün-Blindheit, X^A X^a). Welche Aussage zur **X-Inaktivierung** (Lyon-Hypothese) ist korrekt?",
           options: [
-          "In allen Zellen der Frau wird dasselbe X-Chromosom (entweder väterlich oder mütterlich) inaktiviert",
-          "Die X-Inaktivierung erfolgt zufällig in jeder Zelle (~Tag 16), sodass ein Mosaik-Muster entsteht (Barr-Körperchen)",
-          "Das inaktivierte X-Chromosom wird vollständig abgebaut und ist im Karyotyp nicht mehr sichtbar",
-          "Die Frau ist immer symptomatisch, da in 50% der Zellen das defekte X^a-Chromosom aktiv ist",
-          "X-Inaktivierung findet nur bei homozygot rezessiven Frauen (X^a X^a) statt, nicht bei Konduktorinnen"
+            "In allen Zellen der Frau wird dasselbe X-Chromosom (entweder väterlich oder mütterlich) inaktiviert",
+            "Die X-Inaktivierung erfolgt zufällig in jeder Zelle (~Tag 16), sodass ein Mosaik-Muster entsteht (Barr-Körperchen)",
+            "Das inaktivierte X-Chromosom wird vollständig abgebaut und ist im Karyotyp nicht mehr sichtbar",
+            "Die Frau ist immer symptomatisch, da in 50% der Zellen das defekte X^a-Chromosom aktiv ist",
+            "X-Inaktivierung findet nur bei homozygot rezessiven Frauen (X^a X^a) statt, nicht bei Konduktorinnen",
           ],
           correctIndex: 1,
-          explanation: "**X-Inaktivierung** (Lyon-Hypothese): Bei weiblichen Zellen (XX) wird **1 X-Chromosom zufällig inaktiviert** (~Tag 16, Blastozyste) → **Dosiskompensation**. Das inaktivierte X bildet ein **Barr-Körperchen** (heterochromatisch, am Kernrand). Die Inaktivierung ist **zufällig** (50:50 väterlich/mütterlich) → **Mosaik-Muster** (z.B. Kaliko-Katzen: X^O X^B → Orange + Schwarz, nur ♀). Konduktorinnen sind **meist asymptomatisch**, da das gesunde X kompensiert.",
+          explanation:
+            "**X-Inaktivierung** (Lyon-Hypothese): Bei weiblichen Zellen (XX) wird **1 X-Chromosom zufällig inaktiviert** (~Tag 16, Blastozyste) → **Dosiskompensation**. Das inaktivierte X bildet ein **Barr-Körperchen** (heterochromatisch, am Kernrand). Die Inaktivierung ist **zufällig** (50:50 väterlich/mütterlich) → **Mosaik-Muster** (z.B. Kaliko-Katzen: X^O X^B → Orange + Schwarz, nur ♀). Konduktorinnen sind **meist asymptomatisch**, da das gesunde X kompensiert.",
           difficulty: 2,
-          tags: ['x-inaktivierung', 'lyon-hypothese', 'barr-körper'],
+          tags: ["x-inaktivierung", "lyon-hypothese", "barr-körper"],
         },
         {
-          question: "Ein 5-jähriger Junge zeigt progressive Muskelschwäche (Beginn ~3 Jahre), Gowers-Zeichen beim Aufstehen und Wadenpseudohypertrophie. Die CPK (Creatinkinase) ist stark erhöht. Die Familienanamnese ergibt, dass ein Bruder der Mutter ebenfalls betroffen war. Welche Diagnose ist am wahrscheinlichsten?",
+          question:
+            "Ein 5-jähriger Junge zeigt progressive Muskelschwäche (Beginn ~3 Jahre), Gowers-Zeichen beim Aufstehen und Wadenpseudohypertrophie. Die CPK (Creatinkinase) ist stark erhöht. Die Familienanamnese ergibt, dass ein Bruder der Mutter ebenfalls betroffen war. Welche Diagnose ist am wahrscheinlichsten?",
           options: [
-          "Hämophilie A – X-chromosomal rezessive Gerinnungsstörung mit Blutungsneigung",
-          "Muskeldystrophie Duchenne – X-chromosomal rezessive Dystrophin-Mutation (DMD-Gen)",
-          "Hypophosphatämische Rachitis – X-chromosomal dominante PHEX-Mutation",
-          "Trisomie 21 (Down-Syndrom) – numerische Chromosomenaberration mit Muskelhypotonie",
-          "Y-chromosomale Myopathie – holandrische Vererbung mit Vater-Sohn-Übertragung"
+            "Hämophilie A – X-chromosomal rezessive Gerinnungsstörung mit Blutungsneigung",
+            "Muskeldystrophie Duchenne – X-chromosomal rezessive Dystrophin-Mutation (DMD-Gen)",
+            "Hypophosphatämische Rachitis – X-chromosomal dominante PHEX-Mutation",
+            "Trisomie 21 (Down-Syndrom) – numerische Chromosomenaberration mit Muskelhypotonie",
+            "Y-chromosomale Myopathie – holandrische Vererbung mit Vater-Sohn-Übertragung",
           ],
           correctIndex: 1,
-          explanation: "**Muskeldystrophie Duchenne** (DMD): **X-chromosomal rezessive** Dystrophin-Mutation. Klinisch: Progressive Muskelschwäche (Beginn ~3–5 Jahre), **Gowers-Zeichen** (Aufstehen über Hände → Knie → Hüfte), **Wadenpseudohypertrophie** (Fett-/Bindegewebe ersetzt Muskel), **CPK ↑↑↑** (massiv erhöht). Rollstuhl ~12 Jahre, frühe Mortalität (~20–30 Jahre, Herz-/Ateminsuffizienz). Inzidenz: 1:3.500 ♂. Betroffener Bruder der Mutter → Mutter ist Konduktorin.",
+          explanation:
+            "**Muskeldystrophie Duchenne** (DMD): **X-chromosomal rezessive** Dystrophin-Mutation. Klinisch: Progressive Muskelschwäche (Beginn ~3–5 Jahre), **Gowers-Zeichen** (Aufstehen über Hände → Knie → Hüfte), **Wadenpseudohypertrophie** (Fett-/Bindegewebe ersetzt Muskel), **CPK ↑↑↑** (massiv erhöht). Rollstuhl ~12 Jahre, frühe Mortalität (~20–30 Jahre, Herz-/Ateminsuffizienz). Inzidenz: 1:3.500 ♂. Betroffener Bruder der Mutter → Mutter ist Konduktorin.",
           difficulty: 3,
-          tags: ['duchenne', 'muskeldystrophie', 'x-chromosomal rezessiv'],
+          tags: ["duchenne", "muskeldystrophie", "x-chromosomal rezessiv"],
         },
         {
-          question: "Welche Aussage zur **Y-chromosomalen Vererbung** (holandrische Vererbung) ist korrekt?",
+          question:
+            "Welche Aussage zur **Y-chromosomalen Vererbung** (holandrische Vererbung) ist korrekt?",
           options: [
-          "Das SRY-Gen auf dem Y-Chromosom kodiert für Dystrophin und ist essentiell für die Muskelentwicklung",
-          "Y-chromosomale Merkmale werden von Vätern auf **alle Söhne** übertragen, während Töchter nicht betroffen sind",
-          "Deletionen im AZF-Bereich (Azoospermie-Faktor) des Y-Chromosoms führen zu Rot-Grün-Blindheit",
-          "Y-chromosomale Vererbung ist die häufigste Ursache für Hämophilie A und Muskeldystrophie Duchenne",
-          "Frauen können ebenfalls Y-chromosomale Merkmale erben, wenn die Mutter Konduktorin ist"
+            "Das SRY-Gen auf dem Y-Chromosom kodiert für Dystrophin und ist essentiell für die Muskelentwicklung",
+            "Y-chromosomale Merkmale werden von Vätern auf **alle Söhne** übertragen, während Töchter nicht betroffen sind",
+            "Deletionen im AZF-Bereich (Azoospermie-Faktor) des Y-Chromosoms führen zu Rot-Grün-Blindheit",
+            "Y-chromosomale Vererbung ist die häufigste Ursache für Hämophilie A und Muskeldystrophie Duchenne",
+            "Frauen können ebenfalls Y-chromosomale Merkmale erben, wenn die Mutter Konduktorin ist",
           ],
           correctIndex: 1,
-          explanation: "**Y-chromosomale Vererbung** (holandrisch): Gene auf **Y-Chromosom** → nur **Männer** betroffen. **Vater-Sohn-Übertragung** (100% der Söhne erben Y vom Vater), **keine Töchter betroffen** (erhalten X vom Vater). **SRY** (Sex-determining Region Y) → Hoden-Entwicklung → männlich. **AZF** (Azoospermie-Faktor) → Spermatogenese (Deletion → Infertilität, Azoospermie/Oligospermie). Beispiel: Männliche Infertilität durch AZF-Deletionen.",
+          explanation:
+            "**Y-chromosomale Vererbung** (holandrisch): Gene auf **Y-Chromosom** → nur **Männer** betroffen. **Vater-Sohn-Übertragung** (100% der Söhne erben Y vom Vater), **keine Töchter betroffen** (erhalten X vom Vater). **SRY** (Sex-determining Region Y) → Hoden-Entwicklung → männlich. **AZF** (Azoospermie-Faktor) → Spermatogenese (Deletion → Infertilität, Azoospermie/Oligospermie). Beispiel: Männliche Infertilität durch AZF-Deletionen.",
           difficulty: 1,
-          tags: ['y-chromosomale vererbung', 'holandrisch', 'vater-sohn'],
+          tags: ["y-chromosomale vererbung", "holandrisch", "vater-sohn"],
         },
       ],
     },
     {
-      id: 'bio-5-05',
+      id: "bio-5-05",
       title: "Stammbaumanalyse",
       content: `## Einleitung
 
@@ -1181,20 +1216,23 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         {
           heading: "Stammbaumsymbole und Erbgangserkennung",
           text: "Quadrate symbolisieren Männer, Kreise Frauen; ausgefüllte Symbole zeigen Betroffene, halbe Symbole Konduktoren. Die Doppellinie kennzeichnet Konsanguinität. Autosomal-dominante Erbgänge zeigen vertikale Transmission (jede Generation betroffen), autosomal-rezessive zeigen Generationensprünge mit gesunden Eltern und kranken Geschwistern.",
-          merksatz: "Autosomal-dominant: jede Generation betroffen. Autosomal-rezessiv: Generationensprünge, gesunde Eltern, Doppellinie = Konsanguinität.",
+          merksatz:
+            "Autosomal-dominant: jede Generation betroffen. Autosomal-rezessiv: Generationensprünge, gesunde Eltern, Doppellinie = Konsanguinität.",
         },
         {
           heading: "Gonosomale Erbgänge im Stammbaum",
           text: "X-chromosomal rezessiv: Männer häufiger betroffen, kein Vater-Sohn-Übertragung, Diagonal-Muster (Großvater → Tochter als Konduktorin → Enkel). X-chromosomal dominant: kranker Vater → 100% Töchter krank, 100% Söhne gesund. Y-chromosomal: nur Männer betroffen, Vater-Sohn-Übertragung zu 100%.",
-          merksatz: "X-rez.: kein Vater-Sohn, diagonal. X-dom.: kranker Vater → alle Töchter krank. Y-chr.: nur Männer, Vater-Sohn 100%.",
+          merksatz:
+            "X-rez.: kein Vater-Sohn, diagonal. X-dom.: kranker Vater → alle Töchter krank. Y-chr.: nur Männer, Vater-Sohn 100%.",
         },
         {
           heading: "Wahrscheinlichkeitsberechnung",
           text: "Bei Aa × Aa beträgt P(aa, krank) = 1/4, P(gesund) = 3/4. Jede Geburt ist unabhängig. Die bedingte Wahrscheinlichkeit P(Aa | gesund) = 2/3 ergibt sich über das Bayes-Theorem, da von drei möglichen gesunden Genotypen zwei heterozygot sind.",
-          merksatz: "Aa × Aa: 1/4 krank, 3/4 gesund. P(Aa | gesund) = 2/3. Jede Geburt ist unabhängig!",
+          merksatz:
+            "Aa × Aa: 1/4 krank, 3/4 gesund. P(Aa | gesund) = 2/3. Jede Geburt ist unabhängig!",
         },
       ],
-      diagram: 'pedigree-analysis',
+      diagram: "pedigree-analysis",
 
       merksätze: [
         "Autosomal-dominant: Jede Generation betroffen (vertikale Linie I → II → III). Männer = Frauen. Betroffene Eltern (Aa) → ~50% Kinder krank. Beispiel: Marfan, Achondroplasie.",
@@ -1204,79 +1242,89 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
       ],
       selfTest: [
         {
-          question: "In einem Stammbaum sind Generation I (Eltern) gesund, Generation II zeigt 2 von 4 Geschwistern betroffen (1 Bruder, 1 Schwester), Generation III ist noch nicht vorhanden. Die Eltern in Generation I sind durch eine Doppellinie (=) verbunden. Welcher Erbgang ist am wahrscheinlichsten?",
+          question:
+            "In einem Stammbaum sind Generation I (Eltern) gesund, Generation II zeigt 2 von 4 Geschwistern betroffen (1 Bruder, 1 Schwester), Generation III ist noch nicht vorhanden. Die Eltern in Generation I sind durch eine Doppellinie (=) verbunden. Welcher Erbgang ist am wahrscheinlichsten?",
           options: [
-          "Autosomal-dominant, da beide Geschlechter gleich häufig betroffen sind",
-          "Autosomal-rezessiv mit Konsanguinität (Verwandtenehe), da gesunde Eltern betroffene Kinder haben",
-          "X-chromosomal rezessiv, da sowohl Männer als auch Frauen betroffen sind",
-          "Y-chromosomal (holandrisch), da eine Vater-Sohn-Übertragung vorliegt",
-          "X-chromosomal dominant, da mehr Frauen als Männer betroffen sind"
+            "Autosomal-dominant, da beide Geschlechter gleich häufig betroffen sind",
+            "Autosomal-rezessiv mit Konsanguinität (Verwandtenehe), da gesunde Eltern betroffene Kinder haben",
+            "X-chromosomal rezessiv, da sowohl Männer als auch Frauen betroffen sind",
+            "Y-chromosomal (holandrisch), da eine Vater-Sohn-Übertragung vorliegt",
+            "X-chromosomal dominant, da mehr Frauen als Männer betroffen sind",
           ],
           correctIndex: 1,
-          explanation: "**Autosomal-rezessiv mit Konsanguinität**: **Generationensprung** (gesunde Eltern → kranke Kinder) ist typisch für rezessiven Erbgang (Aa × Aa → aa). Die **Doppellinie (=)** kennzeichnet **Konsanguinität** (Verwandtenehe, z.B. Cousin-Cousine) → erhöhtes Risiko für gemeinsame rezessive Allele (IBD). **Beide Geschlechter gleich häufig** betroffen (autosomal, nicht gonosomal). Beispiele: PKU, Mukoviszidose.",
+          explanation:
+            "**Autosomal-rezessiv mit Konsanguinität**: **Generationensprung** (gesunde Eltern → kranke Kinder) ist typisch für rezessiven Erbgang (Aa × Aa → aa). Die **Doppellinie (=)** kennzeichnet **Konsanguinität** (Verwandtenehe, z.B. Cousin-Cousine) → erhöhtes Risiko für gemeinsame rezessive Allele (IBD). **Beide Geschlechter gleich häufig** betroffen (autosomal, nicht gonosomal). Beispiele: PKU, Mukoviszidose.",
           difficulty: 2,
-          tags: ['stammbaumanalyse', 'autosomal rezessiv', 'konsanguinität'],
+          tags: ["stammbaumanalyse", "autosomal rezessiv", "konsanguinität"],
         },
         {
-          question: "Ein Stammbaum zeigt folgendes Muster: Generation I (Großvater betroffen, Großmutter gesund), Generation II (alle 3 Töchter gesund, 2 Söhne gesund), Generation III (1 Enkel betroffen, 2 Enkelinnen gesund). Der betroffene Enkel ist der Sohn einer Tochter aus Generation II. Welcher Erbgang liegt vor?",
+          question:
+            "Ein Stammbaum zeigt folgendes Muster: Generation I (Großvater betroffen, Großmutter gesund), Generation II (alle 3 Töchter gesund, 2 Söhne gesund), Generation III (1 Enkel betroffen, 2 Enkelinnen gesund). Der betroffene Enkel ist der Sohn einer Tochter aus Generation II. Welcher Erbgang liegt vor?",
           options: [
-          "Autosomal-dominant, da der Großvater betroffen ist und das Merkmal weitervererbt wird",
-          "X-chromosomal rezessiv mit diagonal-Übertragung (Großvater → Tochter als Konduktorin → Enkel)",
-          "Y-chromosomal, da nur männliche Individuen (Großvater und Enkel) betroffen sind",
-          "Autosomal-rezessiv, da ein Generationensprung von Generation I nach Generation III vorliegt",
-          "X-chromosomal dominant, da die Töchter des Großvaters alle betroffen sein müssten"
+            "Autosomal-dominant, da der Großvater betroffen ist und das Merkmal weitervererbt wird",
+            "X-chromosomal rezessiv mit diagonal-Übertragung (Großvater → Tochter als Konduktorin → Enkel)",
+            "Y-chromosomal, da nur männliche Individuen (Großvater und Enkel) betroffen sind",
+            "Autosomal-rezessiv, da ein Generationensprung von Generation I nach Generation III vorliegt",
+            "X-chromosomal dominant, da die Töchter des Großvaters alle betroffen sein müssten",
           ],
           correctIndex: 1,
-          explanation: "**X-chromosomal rezessiv mit diagonal-Übertragung** (\"Springer-Generation\"): Großvater (X^a Y, betroffen) → Töchter (X^A X^a, Konduktorinnen, gesund) → Enkel (X^a Y, betroffen, 50% Risiko). **Keine Vater-Sohn-Übertragung** (Großvater hat keine betroffenen Söhne → Y-chromosomal ausgeschlossen). Das **diagonale Muster** (Generation I → III, II übersprungen) ist **pathognomonisch** für X-chromosomal rezessiv. Beispiele: Hämophilie A, Duchenne.",
+          explanation:
+            '**X-chromosomal rezessiv mit diagonal-Übertragung** ("Springer-Generation"): Großvater (X^a Y, betroffen) → Töchter (X^A X^a, Konduktorinnen, gesund) → Enkel (X^a Y, betroffen, 50% Risiko). **Keine Vater-Sohn-Übertragung** (Großvater hat keine betroffenen Söhne → Y-chromosomal ausgeschlossen). Das **diagonale Muster** (Generation I → III, II übersprungen) ist **pathognomonisch** für X-chromosomal rezessiv. Beispiele: Hämophilie A, Duchenne.',
           difficulty: 3,
-          tags: ['x-chromosomal rezessiv', 'mütterliche linie', 'stammbaumanalyse'],
+          tags: ["x-chromosomal rezessiv", "mütterliche linie", "stammbaumanalyse"],
         },
         {
-          question: "Zwei heterozygote Eltern (Aa × Aa) für eine autosomal-rezessive Erkrankung haben bereits 2 gesunde Kinder. Wie hoch ist die Wahrscheinlichkeit, dass das **3. Kind ebenfalls gesund** ist?",
+          question:
+            "Zwei heterozygote Eltern (Aa × Aa) für eine autosomal-rezessive Erkrankung haben bereits 2 gesunde Kinder. Wie hoch ist die Wahrscheinlichkeit, dass das **3. Kind ebenfalls gesund** ist?",
           options: [
-          "100%, da bereits 2 gesunde Kinder geboren wurden und das kranke Allel \"verbraucht\" ist",
-          "75% (3/4), da jede Geburt unabhängig ist und P(gesund) = P(AA) + P(Aa) = 3/4",
-          "50% (1/2), da die Eltern heterozygot sind und das Risiko bei jedem Kind gleich ist",
-          "25% (1/4), da die Wahrscheinlichkeit für aa (krank) bei Aa × Aa immer 1/4 ist",
-          "67% (2/3), da bereits 2 gesunde Kinder geboren wurden (bedingte Wahrscheinlichkeit)"
+            '100%, da bereits 2 gesunde Kinder geboren wurden und das kranke Allel "verbraucht" ist',
+            "75% (3/4), da jede Geburt unabhängig ist und P(gesund) = P(AA) + P(Aa) = 3/4",
+            "50% (1/2), da die Eltern heterozygot sind und das Risiko bei jedem Kind gleich ist",
+            "25% (1/4), da die Wahrscheinlichkeit für aa (krank) bei Aa × Aa immer 1/4 ist",
+            "67% (2/3), da bereits 2 gesunde Kinder geboren wurden (bedingte Wahrscheinlichkeit)",
           ],
           correctIndex: 1,
-          explanation: "**Jede Geburt ist unabhängig** (kein Einfluss früherer Kinder). Bei **Aa × Aa** (autosomal-rezessiv): P(AA) = 1/4, P(Aa) = 2/4, P(aa) = 1/4. **P(gesund) = P(AA) + P(Aa) = 1/4 + 2/4 = 3/4 = 75%**. Die vorherigen 2 gesunden Kinder ändern nichts an der Wahrscheinlichkeit für das 3. Kind. **Wichtig:** Genetische Wahrscheinlichkeiten sind **unabhängig** bei jeder Konzeption!",
+          explanation:
+            "**Jede Geburt ist unabhängig** (kein Einfluss früherer Kinder). Bei **Aa × Aa** (autosomal-rezessiv): P(AA) = 1/4, P(Aa) = 2/4, P(aa) = 1/4. **P(gesund) = P(AA) + P(Aa) = 1/4 + 2/4 = 3/4 = 75%**. Die vorherigen 2 gesunden Kinder ändern nichts an der Wahrscheinlichkeit für das 3. Kind. **Wichtig:** Genetische Wahrscheinlichkeiten sind **unabhängig** bei jeder Konzeption!",
           difficulty: 2,
-          tags: ['wahrscheinlichkeit', 'autosomal rezessiv', 'mendel'],
+          tags: ["wahrscheinlichkeit", "autosomal rezessiv", "mendel"],
         },
         {
-          question: "Ein Stammbaum zeigt: Vater betroffen (Generation I), Mutter gesund. In Generation II sind **alle 3 Töchter betroffen**, aber **beide Söhne gesund**. Welcher Erbgang ist am wahrscheinlichsten?",
+          question:
+            "Ein Stammbaum zeigt: Vater betroffen (Generation I), Mutter gesund. In Generation II sind **alle 3 Töchter betroffen**, aber **beide Söhne gesund**. Welcher Erbgang ist am wahrscheinlichsten?",
           options: [
-          "Autosomal-dominant, da das Merkmal von einer Generation zur nächsten weitergegeben wird",
-          "X-chromosomal rezessiv, da keine Vater-Sohn-Übertragung stattfindet",
-          "X-chromosomal dominant, da der kranke Vater (X^A Y) sein X^A-Chromosom an alle Töchter weitergibt",
-          "Y-chromosomal, da der Vater betroffen ist und nur männliche Nachkommen betroffen sein sollten",
-          "Autosomal-rezessiv mit Konsanguinität, da Geschwister betroffen sind"
+            "Autosomal-dominant, da das Merkmal von einer Generation zur nächsten weitergegeben wird",
+            "X-chromosomal rezessiv, da keine Vater-Sohn-Übertragung stattfindet",
+            "X-chromosomal dominant, da der kranke Vater (X^A Y) sein X^A-Chromosom an alle Töchter weitergibt",
+            "Y-chromosomal, da der Vater betroffen ist und nur männliche Nachkommen betroffen sein sollten",
+            "Autosomal-rezessiv mit Konsanguinität, da Geschwister betroffen sind",
           ],
           correctIndex: 2,
-          explanation: "**X-chromosomal dominant**: Das Muster **kranker Vater → 100% Töchter krank, 100% Söhne gesund** ist **pathognomonisch**. Der Vater (X^A Y) gibt sein **X^A-Chromosom an alle Töchter** (→ X^A X^- krank) und sein **Y-Chromosom an alle Söhne** (→ X^- Y gesund). Die gesunde Mutter (X^- X^-) gibt nur X^- weiter. Beispiele: Hypophosphatämische Rachitis (PHEX-Gen), Rett-Syndrom.",
+          explanation:
+            "**X-chromosomal dominant**: Das Muster **kranker Vater → 100% Töchter krank, 100% Söhne gesund** ist **pathognomonisch**. Der Vater (X^A Y) gibt sein **X^A-Chromosom an alle Töchter** (→ X^A X^- krank) und sein **Y-Chromosom an alle Söhne** (→ X^- Y gesund). Die gesunde Mutter (X^- X^-) gibt nur X^- weiter. Beispiele: Hypophosphatämische Rachitis (PHEX-Gen), Rett-Syndrom.",
           difficulty: 1,
-          tags: ['x-chromosomal dominant', 'töchter betroffen', 'erbgang'],
+          tags: ["x-chromosomal dominant", "töchter betroffen", "erbgang"],
         },
         {
-          question: "Eltern Aa × Aa (autosomal-rezessiv) haben ein **gesundes** Kind. Wie hoch ist die Wahrscheinlichkeit, dass dieses Kind **Konduktor** (Aa) ist?",
+          question:
+            "Eltern Aa × Aa (autosomal-rezessiv) haben ein **gesundes** Kind. Wie hoch ist die Wahrscheinlichkeit, dass dieses Kind **Konduktor** (Aa) ist?",
           options: [
-          "25% (1/4), da P(Aa) bei Aa × Aa immer 1/4 ist",
-          "50% (1/2), da heterozygote Eltern zu 50% Aa-Nachkommen führen",
-          "67% (2/3), da von 3 gesunden Genotypen (AA, Aa, Aa) zwei Aa sind (bedingte Wahrscheinlichkeit)",
-          "75% (3/4), da P(gesund) = 3/4 ist und davon alle Aa sein könnten",
-          "100%, da gesunde Kinder von Aa × Aa immer heterozygot sind"
+            "25% (1/4), da P(Aa) bei Aa × Aa immer 1/4 ist",
+            "50% (1/2), da heterozygote Eltern zu 50% Aa-Nachkommen führen",
+            "67% (2/3), da von 3 gesunden Genotypen (AA, Aa, Aa) zwei Aa sind (bedingte Wahrscheinlichkeit)",
+            "75% (3/4), da P(gesund) = 3/4 ist und davon alle Aa sein könnten",
+            "100%, da gesunde Kinder von Aa × Aa immer heterozygot sind",
           ],
           correctIndex: 2,
-          explanation: "**Bedingte Wahrscheinlichkeit** (Bayes-Theorem): **Gegeben:** Kind ist gesund (AA oder Aa, nicht aa). Bei **Aa × Aa**: P(AA) = 1/4, P(Aa) = 2/4, P(aa) = 1/4. **P(gesund) = 3/4** (AA oder Aa). **P(Aa | gesund) = P(Aa) / P(gesund) = (2/4) / (3/4) = 2/3 = 67%**. Von den 3 gesunden Genotypen (1× AA, 2× Aa) sind **2 von 3 Konduktoren**. Wichtig für genetische Beratung!",
+          explanation:
+            "**Bedingte Wahrscheinlichkeit** (Bayes-Theorem): **Gegeben:** Kind ist gesund (AA oder Aa, nicht aa). Bei **Aa × Aa**: P(AA) = 1/4, P(Aa) = 2/4, P(aa) = 1/4. **P(gesund) = 3/4** (AA oder Aa). **P(Aa | gesund) = P(Aa) / P(gesund) = (2/4) / (3/4) = 2/3 = 67%**. Von den 3 gesunden Genotypen (1× AA, 2× Aa) sind **2 von 3 Konduktoren**. Wichtig für genetische Beratung!",
           difficulty: 3,
-          tags: ['konduktor', 'träger', 'heterozygot'],
+          tags: ["konduktor", "träger", "heterozygot"],
         },
       ],
     },
     {
-      id: 'bio-5-06',
+      id: "bio-5-06",
       title: "Populationsgenetik",
       content: `## Einleitung
 
@@ -1447,17 +1495,20 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         {
           heading: "Hardy-Weinberg-Gleichgewicht",
           text: "Das Hardy-Weinberg-Gleichgewicht beschreibt stabile Allelfrequenzen unter idealen Bedingungen: keine Mutation, zufällige Paarung, keine Selektion, große Population, keine Migration. Die Formel p² + 2pq + q² = 1 verbindet Allel- und Genotypfrequenzen (p² = AA, 2pq = Aa, q² = aa). Bei seltenen rezessiven Erkrankungen (q² = 1/10.000) sind Konduktoren (2pq ≈ 2%) viel häufiger als Betroffene.",
-          merksatz: "p² + 2pq + q² = 1, p + q = 1. q = √(Erkrankungsfrequenz). Konduktoren (2pq) viel häufiger als Betroffene (q²).",
+          merksatz:
+            "p² + 2pq + q² = 1, p + q = 1. q = √(Erkrankungsfrequenz). Konduktoren (2pq) viel häufiger als Betroffene (q²).",
         },
         {
           heading: "Selektion und Heterozygoten-Vorteil",
           text: "Selektion verändert Allelfrequenzen durch unterschiedliche Fitness der Genotypen. Beim Heterozygoten-Vorteil (Balancing Selection) haben Heterozygote den höchsten Reproduktionserfolg. Das HbS-Allel bleibt in Malaria-Gebieten erhalten, weil HbA/HbS-Heterozygote Malaria-resistent sind (höhere Fitness als beide Homozygoten).",
-          merksatz: "Heterozygoten-Vorteil (Sichelzellanämie): HbA/HbS → Malaria-Resistenz, Fitness am höchsten. HbS-Allel bleibt erhalten (Balancing Selection).",
+          merksatz:
+            "Heterozygoten-Vorteil (Sichelzellanämie): HbA/HbS → Malaria-Resistenz, Fitness am höchsten. HbS-Allel bleibt erhalten (Balancing Selection).",
         },
         {
           heading: "Genetischer Drift und Migration",
           text: "Genetischer Drift bezeichnet zufällige Frequenzänderungen in kleinen Populationen. Gründereffekt: kleine Gründerpopulation trägt zufällige Allelfrequenzen. Flaschenhals-Effekt: drastische Populationsreduktion führt zu Allelverlust. Migration (Genfluss) gleicht Allelfrequenzen zwischen Populationen an. Inzucht erhöht Homozygotie, ändert aber nicht die Allelfrequenzen p und q.",
-          merksatz: "Drift: Zufällige Frequenzänderungen in kleinen Populationen. Flaschenhals → Allelverlust (Geparden). Inzucht → Homozygotie ↑, aber p/q unverändert.",
+          merksatz:
+            "Drift: Zufällige Frequenzänderungen in kleinen Populationen. Flaschenhals → Allelverlust (Geparden). Inzucht → Homozygotie ↑, aber p/q unverändert.",
         },
       ],
       merksätze: [
@@ -1466,82 +1517,92 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         "Selektion (Sichelzellanämie): Heterozygoten-Vorteil in Malaria-Gebieten. HbA/HbS → Malaria-Resistenz, Fitness ↑. HbS-Allel bleibt erhalten (Balancing Selection).",
         "Genetischer Drift: Zufällige Frequenzänderungen in kleinen Populationen. Gründereffekt, Flaschenhals → Allelverlust, Fixierung. Beispiel: Geparden.",
       ],
-      diagram: 'meiosis-overview',
+      diagram: "meiosis-overview",
       selfTest: [
         {
-          question: "Eine Population befindet sich im Hardy-Weinberg-Gleichgewicht. Die Frequenz des rezessiven Allels **a** beträgt **q = 0,2**. Wie hoch ist die Frequenz der **heterozygoten Individuen** (Aa)?",
+          question:
+            "Eine Population befindet sich im Hardy-Weinberg-Gleichgewicht. Die Frequenz des rezessiven Allels **a** beträgt **q = 0,2**. Wie hoch ist die Frequenz der **heterozygoten Individuen** (Aa)?",
           options: [
-          "4% (0,04), da q² = 0,2² = 0,04",
-          "20% (0,2), da die Frequenz von Aa gleich q ist",
-          "32% (0,32), da 2pq = 2 × 0,8 × 0,2 = 0,32",
-          "64% (0,64), da p² = 0,8² = 0,64",
-          "40% (0,4), da 2q = 2 × 0,2 = 0,4"
+            "4% (0,04), da q² = 0,2² = 0,04",
+            "20% (0,2), da die Frequenz von Aa gleich q ist",
+            "32% (0,32), da 2pq = 2 × 0,8 × 0,2 = 0,32",
+            "64% (0,64), da p² = 0,8² = 0,64",
+            "40% (0,4), da 2q = 2 × 0,2 = 0,4",
           ],
           correctIndex: 2,
-          explanation: "**Hardy-Weinberg-Formel:** p² + 2pq + q² = 1. Gegeben: **q = 0,2** → **p = 1 - q = 0,8**. **Heterozygote Frequenz (2pq):** 2 × 0,8 × 0,2 = **0,32 = 32%**. Wichtig: **2pq** ist die Formel für Heterozygote (Aa), nicht q oder q². Kontrolle: p² (AA) = 0,64, 2pq (Aa) = 0,32, q² (aa) = 0,04 → Summe = 1 ✓",
+          explanation:
+            "**Hardy-Weinberg-Formel:** p² + 2pq + q² = 1. Gegeben: **q = 0,2** → **p = 1 - q = 0,8**. **Heterozygote Frequenz (2pq):** 2 × 0,8 × 0,2 = **0,32 = 32%**. Wichtig: **2pq** ist die Formel für Heterozygote (Aa), nicht q oder q². Kontrolle: p² (AA) = 0,64, 2pq (Aa) = 0,32, q² (aa) = 0,04 → Summe = 1 ✓",
           difficulty: 2,
-          tags: ['hardy-weinberg', 'heterozygotfrequenz', 'allelfrequenz'],
+          tags: ["hardy-weinberg", "heterozygotfrequenz", "allelfrequenz"],
         },
         {
-          question: "In einer Population von 100 Individuen gibt es 49 AA, 42 Aa und 9 aa. Wie hoch ist die Frequenz des **Allels a** (q)?",
+          question:
+            "In einer Population von 100 Individuen gibt es 49 AA, 42 Aa und 9 aa. Wie hoch ist die Frequenz des **Allels a** (q)?",
           options: [
-          "9% (0,09), da 9 von 100 Individuen aa sind",
-          "21% (0,21), da die Hälfte der Aa-Individuen a-Allele haben",
-          "30% (0,3), da (9 × 2 + 42 × 1) / 200 = 60/200 = 0,3",
-          "42% (0,42), da 42 Aa-Individuen vorhanden sind",
-          "51% (0,51), da 9 aa + 42 Aa = 51 Individuen a tragen"
+            "9% (0,09), da 9 von 100 Individuen aa sind",
+            "21% (0,21), da die Hälfte der Aa-Individuen a-Allele haben",
+            "30% (0,3), da (9 × 2 + 42 × 1) / 200 = 60/200 = 0,3",
+            "42% (0,42), da 42 Aa-Individuen vorhanden sind",
+            "51% (0,51), da 9 aa + 42 Aa = 51 Individuen a tragen",
           ],
           correctIndex: 2,
-          explanation: "**Allele zählen:** Gesamt-Allele = 100 Individuen × 2 = 200 Allele. **a-Allele:** (9 aa × 2) + (42 Aa × 1) = 18 + 42 = **60 a-Allele**. **q = 60/200 = 0,3 = 30%**. Alternativ: q² = 9/100 = 0,09 → q = √0,09 = 0,3. Wichtig: **Jedes Individuum hat 2 Allele** (diploid), daher × 2!",
+          explanation:
+            "**Allele zählen:** Gesamt-Allele = 100 Individuen × 2 = 200 Allele. **a-Allele:** (9 aa × 2) + (42 Aa × 1) = 18 + 42 = **60 a-Allele**. **q = 60/200 = 0,3 = 30%**. Alternativ: q² = 9/100 = 0,09 → q = √0,09 = 0,3. Wichtig: **Jedes Individuum hat 2 Allele** (diploid), daher × 2!",
           difficulty: 2,
-          tags: ['allelfrequenz', 'q-berechnung', 'hardy-weinberg'],
+          tags: ["allelfrequenz", "q-berechnung", "hardy-weinberg"],
         },
         {
-          question: "Mukoviszidose (Cystic Fibrosis) ist autosomal-rezessiv und tritt bei 1 von 2.500 Neugeborenen auf (q² = 1/2.500). Wie hoch ist die **Konduktor-Frequenz** (Träger, Aa) in der Bevölkerung?",
+          question:
+            "Mukoviszidose (Cystic Fibrosis) ist autosomal-rezessiv und tritt bei 1 von 2.500 Neugeborenen auf (q² = 1/2.500). Wie hoch ist die **Konduktor-Frequenz** (Träger, Aa) in der Bevölkerung?",
           options: [
-          "1/2.500 (0,04%), da die Konduktor-Frequenz gleich der Erkrankungsfrequenz ist",
-          "1/50 (2%), da q = √(1/2.500) = 0,02, p ≈ 0,98, 2pq ≈ 2 × 0,98 × 0,02 ≈ 0,04 = 4%",
-          "1/25 (4%), da q = 0,02, p = 0,98, 2pq = 2 × 0,98 × 0,02 = 0,0392 ≈ 4%",
-          "1/100 (1%), da die Konduktor-Frequenz immer viel niedriger als die Erkrankungsfrequenz ist",
-          "1/10 (10%), da Konduktoren sehr häufig sind bei rezessiven Erkrankungen"
+            "1/2.500 (0,04%), da die Konduktor-Frequenz gleich der Erkrankungsfrequenz ist",
+            "1/50 (2%), da q = √(1/2.500) = 0,02, p ≈ 0,98, 2pq ≈ 2 × 0,98 × 0,02 ≈ 0,04 = 4%",
+            "1/25 (4%), da q = 0,02, p = 0,98, 2pq = 2 × 0,98 × 0,02 = 0,0392 ≈ 4%",
+            "1/100 (1%), da die Konduktor-Frequenz immer viel niedriger als die Erkrankungsfrequenz ist",
+            "1/10 (10%), da Konduktoren sehr häufig sind bei rezessiven Erkrankungen",
           ],
           correctIndex: 2,
-          explanation: "**Konduktor-Berechnung:** Gegeben: **q² = 1/2.500 = 0,0004**. **q = √0,0004 = 0,02**. **p = 1 - q = 0,98**. **Konduktor-Frequenz (2pq):** 2 × 0,98 × 0,02 = **0,0392 ≈ 4% = 1/25**. Wichtig: Bei **seltenen rezessiven Erkrankungen** sind **Konduktoren viel häufiger** als Betroffene (4% vs. 0,04%)! Beispiel: ~1 von 25 ist Träger von Mukoviszidose.",
+          explanation:
+            "**Konduktor-Berechnung:** Gegeben: **q² = 1/2.500 = 0,0004**. **q = √0,0004 = 0,02**. **p = 1 - q = 0,98**. **Konduktor-Frequenz (2pq):** 2 × 0,98 × 0,02 = **0,0392 ≈ 4% = 1/25**. Wichtig: Bei **seltenen rezessiven Erkrankungen** sind **Konduktoren viel häufiger** als Betroffene (4% vs. 0,04%)! Beispiel: ~1 von 25 ist Träger von Mukoviszidose.",
           difficulty: 3,
-          tags: ['mukoviszidose', 'konduktorfrequenz', 'hardy-weinberg'],
+          tags: ["mukoviszidose", "konduktorfrequenz", "hardy-weinberg"],
         },
         {
-          question: "Welche der folgenden Bedingungen ist **KEINE** Voraussetzung für das Hardy-Weinberg-Gleichgewicht?",
+          question:
+            "Welche der folgenden Bedingungen ist **KEINE** Voraussetzung für das Hardy-Weinberg-Gleichgewicht?",
           options: [
-          "Keine Mutation (keine neuen Allele entstehen)",
-          "Zufällige Paarung (Random Mating, keine Präferenz für bestimmte Genotypen)",
-          "Dominante Allele sind immer häufiger als rezessive Allele in der Population",
-          "Keine Selektion (alle Genotypen haben gleiche Fitness)",
-          "Große Population (kein genetischer Drift)"
+            "Keine Mutation (keine neuen Allele entstehen)",
+            "Zufällige Paarung (Random Mating, keine Präferenz für bestimmte Genotypen)",
+            "Dominante Allele sind immer häufiger als rezessive Allele in der Population",
+            "Keine Selektion (alle Genotypen haben gleiche Fitness)",
+            "Große Population (kein genetischer Drift)",
           ],
           correctIndex: 2,
-          explanation: "**HWE-Bedingungen:** (1) Keine Mutation, (2) Zufällige Paarung, (3) **Keine Selektion**, (4) Große Population, (5) Keine Migration. **Aussage C ist falsch:** Dominante Allele müssen **nicht häufiger** sein als rezessive! Die Frequenzen (p, q) können **beliebig** sein (z.B. p = 0,2, q = 0,8), solange die 5 Bedingungen erfüllt sind. HWE beschreibt **stabile Frequenzen**, nicht deren absolute Werte.",
+          explanation:
+            "**HWE-Bedingungen:** (1) Keine Mutation, (2) Zufällige Paarung, (3) **Keine Selektion**, (4) Große Population, (5) Keine Migration. **Aussage C ist falsch:** Dominante Allele müssen **nicht häufiger** sein als rezessive! Die Frequenzen (p, q) können **beliebig** sein (z.B. p = 0,2, q = 0,8), solange die 5 Bedingungen erfüllt sind. HWE beschreibt **stabile Frequenzen**, nicht deren absolute Werte.",
           difficulty: 1,
-          tags: ['hardy-weinberg-gleichgewicht', 'voraussetzungen', 'zufallspaarung'],
+          tags: ["hardy-weinberg-gleichgewicht", "voraussetzungen", "zufallspaarung"],
         },
         {
-          question: "In Malaria-Gebieten Afrikas hat das **HbS-Allel** (Sichelzell-Allel) eine hohe Frequenz (~10–20%), obwohl homozygote HbS/HbS-Individuen an schwerer Sichelzellanämie leiden. Welches evolutionäre Prinzip erklärt dies am besten?",
+          question:
+            "In Malaria-Gebieten Afrikas hat das **HbS-Allel** (Sichelzell-Allel) eine hohe Frequenz (~10–20%), obwohl homozygote HbS/HbS-Individuen an schwerer Sichelzellanämie leiden. Welches evolutionäre Prinzip erklärt dies am besten?",
           options: [
-          "Genetischer Drift – zufällige Frequenzerhöhung in kleinen Populationen",
-          "Heterozygoten-Vorteil (Balancing Selection) – HbA/HbS-Individuen haben Malaria-Resistenz (höhere Fitness)",
-          "Positive Selektion für HbS/HbS-Homozygote, da Sichelzellanämie Schutz vor Malaria bietet",
-          "Migration – Einwanderung von HbS-Trägern aus anderen Regionen",
-          "Mutation – hohe Mutationsrate von HbA zu HbS in Malaria-Gebieten"
+            "Genetischer Drift – zufällige Frequenzerhöhung in kleinen Populationen",
+            "Heterozygoten-Vorteil (Balancing Selection) – HbA/HbS-Individuen haben Malaria-Resistenz (höhere Fitness)",
+            "Positive Selektion für HbS/HbS-Homozygote, da Sichelzellanämie Schutz vor Malaria bietet",
+            "Migration – Einwanderung von HbS-Trägern aus anderen Regionen",
+            "Mutation – hohe Mutationsrate von HbA zu HbS in Malaria-Gebieten",
           ],
           correctIndex: 1,
-          explanation: "**Heterozygoten-Vorteil (Balancing Selection):** In Malaria-Gebieten: **HbA/HbA** (normal) → Malaria-anfällig (Fitness ↓), **HbA/HbS** (Heterozygot) → **Malaria-Resistenz** (Fitness ↑, Vorteil!), **HbS/HbS** (homozygot) → Sichelzellanämie (Fitness ↓↓). **HbS-Allel bleibt erhalten**, da Heterozygote den höchsten reproduktiven Erfolg haben. Dies erklärt die hohe HbS-Frequenz trotz nachteiliger Homozygotie. Wichtig: **Selektion**, nicht Drift!",
+          explanation:
+            "**Heterozygoten-Vorteil (Balancing Selection):** In Malaria-Gebieten: **HbA/HbA** (normal) → Malaria-anfällig (Fitness ↓), **HbA/HbS** (Heterozygot) → **Malaria-Resistenz** (Fitness ↑, Vorteil!), **HbS/HbS** (homozygot) → Sichelzellanämie (Fitness ↓↓). **HbS-Allel bleibt erhalten**, da Heterozygote den höchsten reproduktiven Erfolg haben. Dies erklärt die hohe HbS-Frequenz trotz nachteiliger Homozygotie. Wichtig: **Selektion**, nicht Drift!",
           difficulty: 2,
-          tags: ['sichelzellanämie', 'heterozygotenvorteil', 'balancing-selection'],
+          tags: ["sichelzellanämie", "heterozygotenvorteil", "balancing-selection"],
         },
       ],
     },
     {
-      id: 'bio-5-07',
+      id: "bio-5-07",
       title: "Mutationen",
       content: `## Einleitung
 
@@ -1725,12 +1786,14 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         {
           heading: "Genmutationen: Substitutionen",
           text: "Stille Mutationen ändern ein Codon, ohne die Aminosäure zu verändern (genetische Degeneration). Missense-Mutationen führen zu einem Aminosäureaustausch (z. B. GAG → GTG: Glu → Val bei Sichelzellanämie). Nonsense-Mutationen erzeugen ein vorzeitiges Stopp-Codon und führen zu einem verkürzten, meist nicht-funktionalen Protein.",
-          merksatz: "Still = gleiche AS. Missense = andere AS (Sichelzelle: Glu → Val). Nonsense = Stopp-Codon, verkürztes Protein.",
+          merksatz:
+            "Still = gleiche AS. Missense = andere AS (Sichelzelle: Glu → Val). Nonsense = Stopp-Codon, verkürztes Protein.",
         },
         {
           heading: "Insertionen, Deletionen und Reparaturmechanismen",
           text: "Frameshift-Mutationen entstehen, wenn Insertionen oder Deletionen kein Vielfaches von 3 Nukleotiden umfassen — der Leserahmen verschiebt sich, alle nachfolgenden Codons werden falsch gelesen. In-Frame-Indels (Vielfaches von 3) entfernen oder fügen Aminosäuren ein, ohne den Leserahmen zu verschieben (z. B. ΔF508 bei Mukoviszidose). Defekte DNA-Reparatur prädisponiert zu Krebs: MMR-Defekt → Lynch-Syndrom, NER-Defekt → Xeroderma pigmentosum, BRCA1/2-Defekt → Brustkrebs.",
-          merksatz: "Frameshift ≠ 3n Nukleotide → Leserahmen verschoben. In-Frame = 3n, Aminosäure fehlt (ΔF508). MMR-Defekt → Lynch, NER-Defekt → Xeroderma pigmentosum.",
+          merksatz:
+            "Frameshift ≠ 3n Nukleotide → Leserahmen verschoben. In-Frame = 3n, Aminosäure fehlt (ΔF508). MMR-Defekt → Lynch, NER-Defekt → Xeroderma pigmentosum.",
         },
       ],
       merksätze: [
@@ -1738,84 +1801,94 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         "Frameshift-Mutation: Insertion/Deletion ungleich 3n Nukleotide → Leserahmen verschoben. Alle nachfolgenden Codons falsch → komplett anderes Protein. In-Frame (3n): Aminosäure fehlt, Leserahmen OK (z. B. ΔF508 Mukoviszidose).",
         "DNA-Reparatur-Defekte: MMR-Defekt → Lynch-Syndrom (Darmkrebs ↑). NER-Defekt → Xeroderma pigmentosum (Hautkrebs ↑, UV-Sensitivität). BRCA1/2-Mutation → Brustkrebs ↑.",
       ],
-      diagram: 'dna-helix',
+      diagram: "dna-helix",
       selfTest: [
         {
-          question: "Eine Punktmutation im β-Globin-Gen führt zur Veränderung des Codons GAG (Glutamat) zu GTG (Valin) an Position 6. Welcher Mutationstyp liegt vor, und welche Erkrankung entsteht?",
+          question:
+            "Eine Punktmutation im β-Globin-Gen führt zur Veränderung des Codons GAG (Glutamat) zu GTG (Valin) an Position 6. Welcher Mutationstyp liegt vor, und welche Erkrankung entsteht?",
           options: [
-          "Stille Mutation (Silent Mutation) – keine Proteinveränderung, keine klinische Relevanz",
-          "Missense-Mutation – Aminosäure-Austausch (Glu → Val), führt zu Sichelzellanämie (HbS)",
-          "Nonsense-Mutation – vorzeitiger Stopp-Codon, verkürztes β-Globin-Protein",
-          "Frameshift-Mutation – Leserahmen verschoben, komplett anderes Protein",
-          "In-Frame-Deletion – Phenylalanin 508 fehlt, führt zu Mukoviszidose"
+            "Stille Mutation (Silent Mutation) – keine Proteinveränderung, keine klinische Relevanz",
+            "Missense-Mutation – Aminosäure-Austausch (Glu → Val), führt zu Sichelzellanämie (HbS)",
+            "Nonsense-Mutation – vorzeitiger Stopp-Codon, verkürztes β-Globin-Protein",
+            "Frameshift-Mutation – Leserahmen verschoben, komplett anderes Protein",
+            "In-Frame-Deletion – Phenylalanin 508 fehlt, führt zu Mukoviszidose",
           ],
           correctIndex: 1,
-          explanation: "**Missense-Mutation:** Codon-Änderung → **andere Aminosäure**. GAG (Glu) → GTG (Val) an Position 6 des β-Globins → **HbS (Sichelzell-Hämoglobin)**. Folge: **Sichelzellanämie** (Erythrozyten sichelförmig bei Hypoxie, Hämolyse, Gefäßverschlüsse). Vererbung: Autosomal-kodominant (HbA/HbS Träger meist asymptomatisch, HbS/HbS schwere Anämie). Wichtig: **Einzelne Aminosäure-Änderung** kann massive klinische Folgen haben!",
+          explanation:
+            "**Missense-Mutation:** Codon-Änderung → **andere Aminosäure**. GAG (Glu) → GTG (Val) an Position 6 des β-Globins → **HbS (Sichelzell-Hämoglobin)**. Folge: **Sichelzellanämie** (Erythrozyten sichelförmig bei Hypoxie, Hämolyse, Gefäßverschlüsse). Vererbung: Autosomal-kodominant (HbA/HbS Träger meist asymptomatisch, HbS/HbS schwere Anämie). Wichtig: **Einzelne Aminosäure-Änderung** kann massive klinische Folgen haben!",
           difficulty: 2,
-          tags: ['punktmutation', 'missense', 'sichelzellanämie'],
+          tags: ["punktmutation", "missense", "sichelzellanämie"],
         },
         {
-          question: "Ein Gen hat die Sequenz **AUG-UCC-GAA-GUU**. Durch Deletion eines einzelnen Nukleotids (C an Position 5) entsteht **AUG-UCG-AAG-UU**. Welcher Mutationstyp liegt vor, und was ist die Folge?",
+          question:
+            "Ein Gen hat die Sequenz **AUG-UCC-GAA-GUU**. Durch Deletion eines einzelnen Nukleotids (C an Position 5) entsteht **AUG-UCG-AAG-UU**. Welcher Mutationstyp liegt vor, und was ist die Folge?",
           options: [
-          "Stille Mutation – gleiche Aminosäuresequenz, keine Proteinveränderung",
-          "Missense-Mutation – eine Aminosäure geändert, Protein leicht verändert",
-          "Frameshift-Mutation – Leserahmen verschoben, alle nachfolgenden Codons falsch gelesen",
-          "In-Frame-Deletion – eine Aminosäure fehlt, Leserahmen erhalten",
-          "Nonsense-Mutation – vorzeitiger Stopp-Codon, Translationsabbruch"
+            "Stille Mutation – gleiche Aminosäuresequenz, keine Proteinveränderung",
+            "Missense-Mutation – eine Aminosäure geändert, Protein leicht verändert",
+            "Frameshift-Mutation – Leserahmen verschoben, alle nachfolgenden Codons falsch gelesen",
+            "In-Frame-Deletion – eine Aminosäure fehlt, Leserahmen erhalten",
+            "Nonsense-Mutation – vorzeitiger Stopp-Codon, Translationsabbruch",
           ],
           correctIndex: 2,
-          explanation: "**Frameshift-Mutation:** Deletion von **1 Nukleotid** (≠ Vielfaches von 3) → **Leserahmen verschoben**. Original: AUG (Met) - UCC (Ser) - GAA (Glu) - GUU (Val). Nach Deletion: AUG (Met) - **UCG (Ser)** - **AAG (Lys)** - ... → alle **nachfolgenden Codons falsch**. Folge: **Komplett anderes Protein** (meist nicht-funktional, oft vorzeitiges Stopp-Codon). Wichtig: **In-Frame** (3n Nukleotide) → Aminosäure fehlt, **Frameshift** (≠ 3n) → komplett falsch!",
+          explanation:
+            "**Frameshift-Mutation:** Deletion von **1 Nukleotid** (≠ Vielfaches von 3) → **Leserahmen verschoben**. Original: AUG (Met) - UCC (Ser) - GAA (Glu) - GUU (Val). Nach Deletion: AUG (Met) - **UCG (Ser)** - **AAG (Lys)** - ... → alle **nachfolgenden Codons falsch**. Folge: **Komplett anderes Protein** (meist nicht-funktional, oft vorzeitiges Stopp-Codon). Wichtig: **In-Frame** (3n Nukleotide) → Aminosäure fehlt, **Frameshift** (≠ 3n) → komplett falsch!",
           difficulty: 3,
-          tags: ['frameshift', 'deletion', 'leserasterverschiebung'],
+          tags: ["frameshift", "deletion", "leserasterverschiebung"],
         },
         {
-          question: "Die häufigste Mutation bei Mukoviszidose (Cystic Fibrosis) ist **ΔF508** (Deletion von 3 Nukleotiden im CFTR-Gen). Welche Aussage ist korrekt?",
+          question:
+            "Die häufigste Mutation bei Mukoviszidose (Cystic Fibrosis) ist **ΔF508** (Deletion von 3 Nukleotiden im CFTR-Gen). Welche Aussage ist korrekt?",
           options: [
-          "Frameshift-Mutation – der Leserahmen ist verschoben, das CFTR-Protein ist komplett verändert",
-          "In-Frame-Deletion – Phenylalanin an Position 508 fehlt, Leserahmen bleibt erhalten, CFTR fehlgefaltet",
-          "Nonsense-Mutation – vorzeitiger Stopp-Codon an Position 508, verkürztes CFTR-Protein",
-          "Missense-Mutation – Phenylalanin 508 wird zu Valin ausgetauscht, CFTR funktional verändert",
-          "Stille Mutation – keine Proteinveränderung, Mukoviszidose entsteht durch regulatorische Mutation"
+            "Frameshift-Mutation – der Leserahmen ist verschoben, das CFTR-Protein ist komplett verändert",
+            "In-Frame-Deletion – Phenylalanin an Position 508 fehlt, Leserahmen bleibt erhalten, CFTR fehlgefaltet",
+            "Nonsense-Mutation – vorzeitiger Stopp-Codon an Position 508, verkürztes CFTR-Protein",
+            "Missense-Mutation – Phenylalanin 508 wird zu Valin ausgetauscht, CFTR funktional verändert",
+            "Stille Mutation – keine Proteinveränderung, Mukoviszidose entsteht durch regulatorische Mutation",
           ],
           correctIndex: 1,
-          explanation: "**ΔF508 (In-Frame-Deletion):** Deletion von **3 Nukleotiden** (Vielfaches von 3) → **Phenylalanin an Position 508 fehlt**, aber **Leserahmen erhalten**. CFTR-Protein ist **fehlgefaltet** → ER-assoziierte Degradation (Abbau) → Chlorid-Transport ↓ → zähes Sekret (Lunge, Pankreas). Wichtig: **In-Frame** (3n) vs. **Frameshift** (≠ 3n)! Vererbung: Autosomal-rezessiv. ~70% der Mukoviszidose-Fälle haben ΔF508.",
+          explanation:
+            "**ΔF508 (In-Frame-Deletion):** Deletion von **3 Nukleotiden** (Vielfaches von 3) → **Phenylalanin an Position 508 fehlt**, aber **Leserahmen erhalten**. CFTR-Protein ist **fehlgefaltet** → ER-assoziierte Degradation (Abbau) → Chlorid-Transport ↓ → zähes Sekret (Lunge, Pankreas). Wichtig: **In-Frame** (3n) vs. **Frameshift** (≠ 3n)! Vererbung: Autosomal-rezessiv. ~70% der Mukoviszidose-Fälle haben ΔF508.",
           difficulty: 2,
-          tags: ['deltaF508', 'mukoviszidose', 'fehlende aminosäure'],
+          tags: ["deltaF508", "mukoviszidose", "fehlende aminosäure"],
         },
         {
-          question: "UV-Strahlung führt zur Bildung von **Thymin-Dimeren** (benachbarte Thymidine vernetzen sich). Welcher DNA-Reparaturmechanismus behebt diesen Schaden, und welche Erkrankung entsteht bei Defekt?",
+          question:
+            "UV-Strahlung führt zur Bildung von **Thymin-Dimeren** (benachbarte Thymidine vernetzen sich). Welcher DNA-Reparaturmechanismus behebt diesen Schaden, und welche Erkrankung entsteht bei Defekt?",
           options: [
-          "Mismatch-Reparatur (MMR) – Defekt führt zu Lynch-Syndrom (Darmkrebs ↑)",
-          "Basenexzisionsreparatur (BER) – Defekt führt zu allgemeiner Mutationshäufung",
-          "Nukleotidexzisionsreparatur (NER) – Defekt führt zu Xeroderma pigmentosum (Hautkrebs ↑, UV-Sensitivität)",
-          "Doppelstrangbruch-Reparatur (NHEJ/HR) – Defekt führt zu BRCA-assoziiertem Brustkrebs",
-          "Direkte Reparatur (O6-Methylguanin-DNA-Methyltransferase) – Defekt führt zu Gliomen"
+            "Mismatch-Reparatur (MMR) – Defekt führt zu Lynch-Syndrom (Darmkrebs ↑)",
+            "Basenexzisionsreparatur (BER) – Defekt führt zu allgemeiner Mutationshäufung",
+            "Nukleotidexzisionsreparatur (NER) – Defekt führt zu Xeroderma pigmentosum (Hautkrebs ↑, UV-Sensitivität)",
+            "Doppelstrangbruch-Reparatur (NHEJ/HR) – Defekt führt zu BRCA-assoziiertem Brustkrebs",
+            "Direkte Reparatur (O6-Methylguanin-DNA-Methyltransferase) – Defekt führt zu Gliomen",
           ],
           correctIndex: 2,
-          explanation: "**Nukleotidexzisionsreparatur (NER):** Behebt **Thymin-Dimere** (UV-Schäden) und große DNA-Addukte. **Defekt → Xeroderma pigmentosum (XP):** Autosomal-rezessive Erkrankung, **extreme UV-Sensitivität** → **Hautkrebs ↑** (Basalzellkarzinom, Melanom), Photodermatitis, neurologische Störungen. Wichtig: **NER entfernt UV-Schäden**, MMR korrigiert Basenfehlpaarungen (Lynch-Syndrom), BRCA repariert Doppelstrangbrüche (Brustkrebs).",
+          explanation:
+            "**Nukleotidexzisionsreparatur (NER):** Behebt **Thymin-Dimere** (UV-Schäden) und große DNA-Addukte. **Defekt → Xeroderma pigmentosum (XP):** Autosomal-rezessive Erkrankung, **extreme UV-Sensitivität** → **Hautkrebs ↑** (Basalzellkarzinom, Melanom), Photodermatitis, neurologische Störungen. Wichtig: **NER entfernt UV-Schäden**, MMR korrigiert Basenfehlpaarungen (Lynch-Syndrom), BRCA repariert Doppelstrangbrüche (Brustkrebs).",
           difficulty: 2,
-          tags: ['thymin-dimer', 'nukleotid-exzisionsreparatur', 'xeroderma pigmentosum'],
+          tags: ["thymin-dimer", "nukleotid-exzisionsreparatur", "xeroderma pigmentosum"],
         },
         {
-          question: "Eine Mutation führt zur Veränderung des Codons **CAA** (Glutamin) zu **UAA** (Stopp-Codon). Welcher Mutationstyp liegt vor, und was ist die wahrscheinlichste Folge?",
+          question:
+            "Eine Mutation führt zur Veränderung des Codons **CAA** (Glutamin) zu **UAA** (Stopp-Codon). Welcher Mutationstyp liegt vor, und was ist die wahrscheinlichste Folge?",
           options: [
-          "Stille Mutation – gleiche Aminosäure (Glutamin), keine Proteinveränderung",
-          "Missense-Mutation – Glutamin wird zu einer anderen Aminosäure ausgetauscht",
-          "Nonsense-Mutation – vorzeitiger Translationsabbruch, verkürztes, meist nicht-funktionales Protein",
-          "Frameshift-Mutation – Leserahmen verschoben, alle nachfolgenden Codons falsch",
-          "In-Frame-Insertion – zusätzliche Aminosäure eingefügt, Protein verlängert"
+            "Stille Mutation – gleiche Aminosäure (Glutamin), keine Proteinveränderung",
+            "Missense-Mutation – Glutamin wird zu einer anderen Aminosäure ausgetauscht",
+            "Nonsense-Mutation – vorzeitiger Translationsabbruch, verkürztes, meist nicht-funktionales Protein",
+            "Frameshift-Mutation – Leserahmen verschoben, alle nachfolgenden Codons falsch",
+            "In-Frame-Insertion – zusätzliche Aminosäure eingefügt, Protein verlängert",
           ],
           correctIndex: 2,
-          explanation: "**Nonsense-Mutation:** Codon-Änderung → **Stopp-Codon** (UAA, UAG, UGA). CAA (Glutamin) → UAA (Stopp) → **vorzeitiger Translationsabbruch**. Folge: **Verkürztes Protein** (meist **nicht-funktional**, da C-Terminus fehlt). Klinische Beispiele: ~10–15% der Duchenne-Muskeldystrophie-Fälle (Nonsense-Mutationen im DMD-Gen). Wichtig: **Stopp-Codon** statt Aminosäure → Translation endet vorzeitig!",
+          explanation:
+            "**Nonsense-Mutation:** Codon-Änderung → **Stopp-Codon** (UAA, UAG, UGA). CAA (Glutamin) → UAA (Stopp) → **vorzeitiger Translationsabbruch**. Folge: **Verkürztes Protein** (meist **nicht-funktional**, da C-Terminus fehlt). Klinische Beispiele: ~10–15% der Duchenne-Muskeldystrophie-Fälle (Nonsense-Mutationen im DMD-Gen). Wichtig: **Stopp-Codon** statt Aminosäure → Translation endet vorzeitig!",
           difficulty: 1,
-          tags: ['nonsense-mutation', 'stopp-codon', 'trunkiertes protein'],
+          tags: ["nonsense-mutation", "stopp-codon", "trunkiertes protein"],
         },
       ],
     },
 
     // === from kap6-molekulargenetik ===
     {
-      id: 'bio-6-01',
+      id: "bio-6-01",
       title: "DNA Struktur",
       content: `# DNA-Struktur und Replikation – Biologie Kapitel 6 (Molekulare Genetik)
 
@@ -1937,140 +2010,156 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         {
           heading: "DNA-Struktur (Doppelhelix)",
           text: "Die DNA besteht aus Nukleotiden (Phosphat + Desoxyribose + Base). Purine (A, G) paaren mit Pyrimidinen (C, T): A-T mit 2 H-Brücken, G-C mit 3 H-Brücken. Die Doppelhelix ist antiparallel (5'→3' und 3'→5') und rechtsgängig.",
-          merksatz: "A = T (2 H-Brücken), G ≡ C (3 H-Brücken, stärker). Purine (A, G, 2 Ringe) paaren mit Pyrimidinen (C, T, 1 Ring). A + G = C + T (Purine = Pyrimidine).",
+          merksatz:
+            "A = T (2 H-Brücken), G ≡ C (3 H-Brücken, stärker). Purine (A, G, 2 Ringe) paaren mit Pyrimidinen (C, T, 1 Ring). A + G = C + T (Purine = Pyrimidine).",
         },
         {
           heading: "DNA-Replikation (Verdopplung)",
           text: "Replikation verläuft semikonservativ: jeder Tochterstrang enthält einen alten und einen neuen Strang. Helicase öffnet die Gabel, Primase liefert RNA-Primer, DNA-Polymerase synthetisiert 5'→3'. Der Leitstrang wird kontinuierlich, der Folgestrang diskontinuierlich (Okazaki-Fragmente) synthetisiert.",
-          merksatz: "Leitstrang (Leading): Kontinuierlich (5'→3' in Richtung Gabel), 1× Primer. Folgestrang (Lagging): Diskontinuierlich (Okazaki-Fragmente, 5'→3' weg von Gabel), viele Primer. DNA-Polymerase nur 5'→3'.",
+          merksatz:
+            "Leitstrang (Leading): Kontinuierlich (5'→3' in Richtung Gabel), 1× Primer. Folgestrang (Lagging): Diskontinuierlich (Okazaki-Fragmente, 5'→3' weg von Gabel), viele Primer. DNA-Polymerase nur 5'→3'.",
         },
         {
           heading: "Enzyme der Replikation",
           text: "Helicase entwirrt, Topoisomerase entspannt Supercoiling, Primase synthetisiert RNA-Primer, DNA-Polymerase III/δ/ε verlängert mit Proofreading (3'→5'-Exonuklease), DNA-Ligase verbindet Fragmente. Telomerase verlängert Telomere (TTAGGG) in Keimbahn-, Stamm- und Krebszellen.",
-          merksatz: "Telomerase verlängert Telomere (TTAGGG-Repeats). Aktiv in Keimbahn, Stammzellen, Krebszellen (Immortalisierung). Ohne Telomerase → Telomer-Verkürzung → Seneszenz (Hayflick-Limit ~50 Teilungen).",
+          merksatz:
+            "Telomerase verlängert Telomere (TTAGGG-Repeats). Aktiv in Keimbahn, Stammzellen, Krebszellen (Immortalisierung). Ohne Telomerase → Telomer-Verkürzung → Seneszenz (Hayflick-Limit ~50 Teilungen).",
         },
         {
           heading: "Prokaryotische vs. Eukaryotische Replikation",
           text: "Prokaryoten haben 1 Origin (oriC), eukaryotische Chromosomen haben viele Origins. Prokaryoten replizieren schneller (~1.000 nt/s), Okazaki-Fragmente sind länger. Eukaryoten benötigen Telomerase für lineare Chromosomen; Prokaryoten haben zirkuläre DNA ohne Telomere.",
-          merksatz: "Semikonservativ: Jeder Tochterstrang = 1 alter Strang (Matrize) + 1 neuer Strang. Meselson & Stahl (1958): N15-schwer + N14-leicht → Hybrid-DNA. Antiparallel: 5'→3' und 3'→5'.",
+          merksatz:
+            "Semikonservativ: Jeder Tochterstrang = 1 alter Strang (Matrize) + 1 neuer Strang. Meselson & Stahl (1958): N15-schwer + N14-leicht → Hybrid-DNA. Antiparallel: 5'→3' und 3'→5'.",
         },
       ],
-      diagram: 'dna-helix',
+      diagram: "dna-helix",
 
       merksätze: [],
       selfTest: [
         {
-          question: "In einem DNA-Doppelstrang beträgt der Anteil von Adenin (A) **30%**. Wie hoch ist der Anteil von Cytosin (C) gemäß den Chargaff-Regeln?",
+          question:
+            "In einem DNA-Doppelstrang beträgt der Anteil von Adenin (A) **30%**. Wie hoch ist der Anteil von Cytosin (C) gemäß den Chargaff-Regeln?",
           options: [
-          "30%, da A = C nach den Chargaff-Regeln",
-          "20%, da A = T = 30%, Rest (40%) = G + C, also C = 20%",
-          "15%, da der Anteil von Pyrimidinen immer geringer ist als der von Purinen",
-          "40%, da C mit G paart und G die häufigste Base ist",
-          "70%, da C den Rest der Basen ausmacht (100% - 30% A = 70%)"
+            "30%, da A = C nach den Chargaff-Regeln",
+            "20%, da A = T = 30%, Rest (40%) = G + C, also C = 20%",
+            "15%, da der Anteil von Pyrimidinen immer geringer ist als der von Purinen",
+            "40%, da C mit G paart und G die häufigste Base ist",
+            "70%, da C den Rest der Basen ausmacht (100% - 30% A = 70%)",
           ],
           correctIndex: 1,
-          explanation: "**Chargaff-Regeln:** **A = T** (Adenin paart mit Thymin), **G = C** (Guanin paart mit Cytosin). Wenn **A = 30%** → **T = 30%**. Rest: 100% - 60% = **40%** für G + C. Da **G = C** → **C = 20%, G = 20%**. Wichtig: **A = T**, **G = C**, **A + G = C + T** (Purine = Pyrimidine). G≡C hat 3 H-Brücken (stärker als A-T mit 2 H-Brücken).",
+          explanation:
+            "**Chargaff-Regeln:** **A = T** (Adenin paart mit Thymin), **G = C** (Guanin paart mit Cytosin). Wenn **A = 30%** → **T = 30%**. Rest: 100% - 60% = **40%** für G + C. Da **G = C** → **C = 20%, G = 20%**. Wichtig: **A = T**, **G = C**, **A + G = C + T** (Purine = Pyrimidine). G≡C hat 3 H-Brücken (stärker als A-T mit 2 H-Brücken).",
           hints: [
             "Laut Chargaff-Regeln paart A immer mit T und G immer mit C — daher müssen deren Prozentanteile jeweils gleich sein.",
             "Berechne zuerst A + T (= 60 %), dann teile den Rest gleichmäßig auf G und C auf.",
           ],
           difficulty: 2,
-          tags: ['chargaff-regeln', 'adenin cytosin', 'basenpaarung'],
+          tags: ["chargaff-regeln", "adenin cytosin", "basenpaarung"],
         },
         {
-          question: "Welche Aussage zur **antiparallelen Struktur** der DNA-Doppelhelix ist korrekt?",
+          question:
+            "Welche Aussage zur **antiparallelen Struktur** der DNA-Doppelhelix ist korrekt?",
           options: [
-          "Beide DNA-Stränge verlaufen in dieselbe Richtung (5'→3' parallel zueinander)",
-          "Ein Strang verläuft 5'→3', der komplementäre Strang 3'→5' (antiparallel)",
-          "Die antiparallele Struktur bedeutet, dass Purine mit Pyrimidinen paaren (A-T, G-C)",
-          "DNA-Polymerase kann beide Stränge in dieselbe Richtung synthetisieren, da sie parallel sind",
-          "Antiparallel bedeutet, dass DNA und RNA in entgegengesetzten Richtungen synthetisiert werden"
+            "Beide DNA-Stränge verlaufen in dieselbe Richtung (5'→3' parallel zueinander)",
+            "Ein Strang verläuft 5'→3', der komplementäre Strang 3'→5' (antiparallel)",
+            "Die antiparallele Struktur bedeutet, dass Purine mit Pyrimidinen paaren (A-T, G-C)",
+            "DNA-Polymerase kann beide Stränge in dieselbe Richtung synthetisieren, da sie parallel sind",
+            "Antiparallel bedeutet, dass DNA und RNA in entgegengesetzten Richtungen synthetisiert werden",
           ],
           correctIndex: 1,
-          explanation: "**Antiparallel:** Die beiden DNA-Stränge verlaufen in **entgegengesetzten Richtungen**. Ein Strang **5'→3'** (5'-Phosphat → 3'-OH), der komplementäre Strang **3'→5'**. Dies ist **entscheidend für die Replikation**, da DNA-Polymerase nur in **5'→3'-Richtung** synthetisieren kann → Leitstrang (kontinuierlich) vs. Folgestrang (diskontinuierlich, Okazaki-Fragmente). Wichtig: **5'-Ende** = Phosphat, **3'-Ende** = OH-Gruppe!",
+          explanation:
+            "**Antiparallel:** Die beiden DNA-Stränge verlaufen in **entgegengesetzten Richtungen**. Ein Strang **5'→3'** (5'-Phosphat → 3'-OH), der komplementäre Strang **3'→5'**. Dies ist **entscheidend für die Replikation**, da DNA-Polymerase nur in **5'→3'-Richtung** synthetisieren kann → Leitstrang (kontinuierlich) vs. Folgestrang (diskontinuierlich, Okazaki-Fragmente). Wichtig: **5'-Ende** = Phosphat, **3'-Ende** = OH-Gruppe!",
           hints: [
             "Das 5'-Ende eines DNA-Strangs trägt eine freie Phosphatgruppe, das 3'-Ende eine freie OH-Gruppe — beide Stränge liegen einander gegenüber.",
             "DNA-Polymerase verlängert ausschließlich in 5'→3'-Richtung — überlege, was das für die Synthese beider Stränge bedeutet.",
           ],
           difficulty: 1,
-          tags: ['antiparallel', 'doppelhelix', 'dna-strang'],
+          tags: ["antiparallel", "doppelhelix", "dna-strang"],
         },
         {
-          question: "Das Meselson-Stahl-Experiment (1958) bewies, dass die DNA-Replikation **semikonservativ** ist. Was bedeutet \"semikonservativ\"?",
+          question:
+            'Das Meselson-Stahl-Experiment (1958) bewies, dass die DNA-Replikation **semikonservativ** ist. Was bedeutet "semikonservativ"?',
           options: [
-          "Beide Tochterstränge bestehen aus komplett neu synthetisierter DNA (konservativ)",
-          "Jeder Tochterstrang enthält einen alten (Matrize) und einen neuen DNA-Strang",
-          "Die DNA wird nur teilweise repliziert, der Rest bleibt unverändert (partiell konservativ)",
-          "Alte DNA-Stränge werden komplett abgebaut und durch neue ersetzt (dispersiv)",
-          "DNA-Replikation findet nur in der S-Phase des Zellzyklus statt (zeitlich konservativ)"
+            "Beide Tochterstränge bestehen aus komplett neu synthetisierter DNA (konservativ)",
+            "Jeder Tochterstrang enthält einen alten (Matrize) und einen neuen DNA-Strang",
+            "Die DNA wird nur teilweise repliziert, der Rest bleibt unverändert (partiell konservativ)",
+            "Alte DNA-Stränge werden komplett abgebaut und durch neue ersetzt (dispersiv)",
+            "DNA-Replikation findet nur in der S-Phase des Zellzyklus statt (zeitlich konservativ)",
           ],
           correctIndex: 1,
-          explanation: "**Semikonservativ:** Jeder Tochterstrang besteht aus **1 altem (parentalen) Strang** (Matrize) + **1 neu synthetisierten Strang**. **Meselson & Stahl (1958):** N15-schwere DNA → Replikation in N14-Medium → 1. Generation: Hybrid-DNA (1 schwer, 1 leicht) → bewies semikonservative Replikation. Alternativen: **Konservativ** (1 Doppelstrang alt, 1 komplett neu), **Dispersiv** (alte + neue Abschnitte gemischt). Wichtig: **Semikonservativ** ist korrekt!",
+          explanation:
+            "**Semikonservativ:** Jeder Tochterstrang besteht aus **1 altem (parentalen) Strang** (Matrize) + **1 neu synthetisierten Strang**. **Meselson & Stahl (1958):** N15-schwere DNA → Replikation in N14-Medium → 1. Generation: Hybrid-DNA (1 schwer, 1 leicht) → bewies semikonservative Replikation. Alternativen: **Konservativ** (1 Doppelstrang alt, 1 komplett neu), **Dispersiv** (alte + neue Abschnitte gemischt). Wichtig: **Semikonservativ** ist korrekt!",
           hints: [
             "'Semi' bedeutet 'halb' — überlege, welcher Teil des Tochtermoleküls erhalten bleibt und welcher neu gebildet wird.",
             "Im Meselson-Stahl-Experiment zeigte sich nach einer Replikationsrunde ausschließlich Hybrid-DNA (mittlere Dichte) — was sagt das über den Verbleib der alten Stränge aus?",
           ],
           difficulty: 2,
-          tags: ['semikonservativ', 'replikation', 'meselson-stahl'],
+          tags: ["semikonservativ", "replikation", "meselson-stahl"],
         },
         {
-          question: "Während der DNA-Replikation wird der **Leitstrang (Leading Strand)** kontinuierlich, der **Folgestrang (Lagging Strand)** diskontinuierlich synthetisiert. Welche Aussage ist korrekt?",
+          question:
+            "Während der DNA-Replikation wird der **Leitstrang (Leading Strand)** kontinuierlich, der **Folgestrang (Lagging Strand)** diskontinuierlich synthetisiert. Welche Aussage ist korrekt?",
           options: [
-          "Der Leitstrang wird 3'→5' synthetisiert, der Folgestrang 5'→3'",
-          "Der Leitstrang benötigt viele RNA-Primer, der Folgestrang nur einen Primer",
-          "Der Leitstrang wird in Richtung der Replikationsgabel synthetisiert (5'→3'), der Folgestrang weg von der Gabel (5'→3', Okazaki-Fragmente)",
-          "Beide Stränge werden kontinuierlich synthetisiert, da DNA-Polymerase in beide Richtungen arbeiten kann",
-          "Der Folgestrang wird von DNA-Polymerase I synthetisiert, der Leitstrang von DNA-Polymerase III"
+            "Der Leitstrang wird 3'→5' synthetisiert, der Folgestrang 5'→3'",
+            "Der Leitstrang benötigt viele RNA-Primer, der Folgestrang nur einen Primer",
+            "Der Leitstrang wird in Richtung der Replikationsgabel synthetisiert (5'→3'), der Folgestrang weg von der Gabel (5'→3', Okazaki-Fragmente)",
+            "Beide Stränge werden kontinuierlich synthetisiert, da DNA-Polymerase in beide Richtungen arbeiten kann",
+            "Der Folgestrang wird von DNA-Polymerase I synthetisiert, der Leitstrang von DNA-Polymerase III",
           ],
           correctIndex: 2,
-          explanation: "**Leitstrang (Leading Strand):** **Kontinuierliche Synthese** in **5'→3'-Richtung** (in Richtung der Replikationsgabel), benötigt **1× RNA-Primer**. **Folgestrang (Lagging Strand):** **Diskontinuierliche Synthese** (5'→3' **weg** von der Gabel) → **Okazaki-Fragmente** (~100–200 nt bei Eukaryoten), benötigt **viele Primer** (für jedes Fragment). **DNA-Polymerase kann nur 5'→3'** synthetisieren → Folgestrang = \"rückwärts\" in Fragmenten. DNA-Ligase verbindet Fragmente.",
+          explanation:
+            "**Leitstrang (Leading Strand):** **Kontinuierliche Synthese** in **5'→3'-Richtung** (in Richtung der Replikationsgabel), benötigt **1× RNA-Primer**. **Folgestrang (Lagging Strand):** **Diskontinuierliche Synthese** (5'→3' **weg** von der Gabel) → **Okazaki-Fragmente** (~100–200 nt bei Eukaryoten), benötigt **viele Primer** (für jedes Fragment). **DNA-Polymerase kann nur 5'→3'** synthetisieren → Folgestrang = \"rückwärts\" in Fragmenten. DNA-Ligase verbindet Fragmente.",
           hints: [
             "DNA-Polymerase kann nur in 5'→3'-Richtung synthetisieren — betrachte, welcher Strang der Replikationsgabel entgegenläuft.",
             "Der Folgestrang wird in kleinen Fragmenten synthetisiert, die jedes Mal einen neuen Primer brauchen — diese heißen Okazaki-Fragmente.",
           ],
           difficulty: 3,
-          tags: ['leitstrang', 'folgestrang', 'okazaki-fragmente'],
+          tags: ["leitstrang", "folgestrang", "okazaki-fragmente"],
         },
         {
-          question: "DNA-Polymerase hat **3'→5' Exonuklease-Aktivität** (Korrekturlesen, Proofreading). Welche Funktion hat diese Aktivität?",
+          question:
+            "DNA-Polymerase hat **3'→5' Exonuklease-Aktivität** (Korrekturlesen, Proofreading). Welche Funktion hat diese Aktivität?",
           options: [
-          "Entfernung von RNA-Primern nach der Synthese (Ersatz durch DNA)",
-          "Korrektur von fehlerhaft eingebauten Nukleotiden während der Replikation (Fehlerrate ↓ auf ~10⁻⁹)",
-          "Synthese von DNA in 3'→5'-Richtung (zusätzlich zur 5'→3'-Synthese)",
-          "Entspannung von Supercoiling (Überdrehung) vor der Replikationsgabel",
-          "Verlängerung der Telomere (TTAGGG-Repeats) an Chromosomenenden"
+            "Entfernung von RNA-Primern nach der Synthese (Ersatz durch DNA)",
+            "Korrektur von fehlerhaft eingebauten Nukleotiden während der Replikation (Fehlerrate ↓ auf ~10⁻⁹)",
+            "Synthese von DNA in 3'→5'-Richtung (zusätzlich zur 5'→3'-Synthese)",
+            "Entspannung von Supercoiling (Überdrehung) vor der Replikationsgabel",
+            "Verlängerung der Telomere (TTAGGG-Repeats) an Chromosomenenden",
           ],
           correctIndex: 1,
-          explanation: "**3'→5' Exonuklease-Aktivität (Proofreading):** DNA-Polymerase **erkennt fehlerhaft eingebaute Nukleotide** und **entfernt** sie (3'→5'-Richtung, rückwärts), dann **korrekt wieder eingefügt** (5'→3'-Synthese). **Fehlerrate:** Ohne Korrektur ~10⁻⁶, **mit Proofreading ~10⁻⁹** (sehr niedrig!). Wichtig: **Synthese 5'→3'**, **Korrektur 3'→5'**. RNA-Primer-Entfernung: DNA-Pol I (Prokaryoten) oder RNase H (Eukaryoten), nicht 3'→5' Exonuklease!",
+          explanation:
+            "**3'→5' Exonuklease-Aktivität (Proofreading):** DNA-Polymerase **erkennt fehlerhaft eingebaute Nukleotide** und **entfernt** sie (3'→5'-Richtung, rückwärts), dann **korrekt wieder eingefügt** (5'→3'-Synthese). **Fehlerrate:** Ohne Korrektur ~10⁻⁶, **mit Proofreading ~10⁻⁹** (sehr niedrig!). Wichtig: **Synthese 5'→3'**, **Korrektur 3'→5'**. RNA-Primer-Entfernung: DNA-Pol I (Prokaryoten) oder RNase H (Eukaryoten), nicht 3'→5' Exonuklease!",
           hints: [
             "'Exonuklease' schneidet Nukleotide vom Ende eines Strangs ab — hier rückwärts (3'→5'), also gegen die Syntheserichtung.",
             "Stell dir vor, die Polymerase bemerkt einen falschen Baustein und macht einen Schritt zurück, um ihn zu entfernen — was verbessert das?",
           ],
           difficulty: 2,
-          tags: ['proofreading', 'dna-polymerase', 'exonuklease'],
+          tags: ["proofreading", "dna-polymerase", "exonuklease"],
         },
         {
-          question: "**Telomerase** ist ein Ribonukleoprotein-Enzym, das Telomere (TTAGGG-Repeats) an Chromosomenenden verlängert. In welchen Zellen ist Telomerase **aktiv**, und welche klinische Bedeutung hat dies?",
+          question:
+            "**Telomerase** ist ein Ribonukleoprotein-Enzym, das Telomere (TTAGGG-Repeats) an Chromosomenenden verlängert. In welchen Zellen ist Telomerase **aktiv**, und welche klinische Bedeutung hat dies?",
           options: [
-          "In allen somatischen Zellen, um DNA-Schäden zu reparieren und Alterung zu verhindern",
-          "In Keimbahn-Zellen, Stammzellen und Krebszellen (Immortalisierung); inaktiv in den meisten somatischen Zellen",
-          "Nur in Prokaryoten, da Eukaryoten keine Telomere benötigen (zirkuläre Chromosomen)",
-          "In allen Zellen während der S-Phase, um DNA-Replikation zu ermöglichen",
-          "Telomerase ist nur in Bakterien aktiv, da diese keine DNA-Polymerase I haben"
+            "In allen somatischen Zellen, um DNA-Schäden zu reparieren und Alterung zu verhindern",
+            "In Keimbahn-Zellen, Stammzellen und Krebszellen (Immortalisierung); inaktiv in den meisten somatischen Zellen",
+            "Nur in Prokaryoten, da Eukaryoten keine Telomere benötigen (zirkuläre Chromosomen)",
+            "In allen Zellen während der S-Phase, um DNA-Replikation zu ermöglichen",
+            "Telomerase ist nur in Bakterien aktiv, da diese keine DNA-Polymerase I haben",
           ],
           correctIndex: 1,
-          explanation: "**Telomerase aktiv in:** **Keimbahn-Zellen** (Spermien, Eizellen), **Stammzellen** (hämatopoetische, embryonale), **Krebszellen** (Immortalisierung, ~85–90% der Tumoren). **Inaktiv in:** Meisten somatischen Zellen → **Telomer-Verkürzung** bei jeder Teilung → **Seneszenz** (Hayflick-Limit ~50 Teilungen). **Klinisch:** Krebszellen reaktivieren Telomerase → unbegrenzte Teilung (Immortalisierung) → Therapieziel (Telomerase-Inhibitoren). Wichtig: **Telomerase = Krebs-Marker** (Diagnostik/Therapie)!",
+          explanation:
+            "**Telomerase aktiv in:** **Keimbahn-Zellen** (Spermien, Eizellen), **Stammzellen** (hämatopoetische, embryonale), **Krebszellen** (Immortalisierung, ~85–90% der Tumoren). **Inaktiv in:** Meisten somatischen Zellen → **Telomer-Verkürzung** bei jeder Teilung → **Seneszenz** (Hayflick-Limit ~50 Teilungen). **Klinisch:** Krebszellen reaktivieren Telomerase → unbegrenzte Teilung (Immortalisierung) → Therapieziel (Telomerase-Inhibitoren). Wichtig: **Telomerase = Krebs-Marker** (Diagnostik/Therapie)!",
           hints: [
             "Telomere werden bei jeder Replikation kürzer — welche Zellen müssen sich dauerhaft teilen und dürfen daher nicht seneszent werden?",
             "Krebszellen teilen sich unbegrenzt — überlege, welches Enzym sie reaktivieren müssen, um die Telomere nicht zu verlieren.",
           ],
           difficulty: 2,
-          tags: ['telomerase', 'telomere', 'seneszenz'],
-        }
+          tags: ["telomerase", "telomere", "seneszenz"],
+        },
       ],
     },
     {
-      id: 'bio-6-02',
+      id: "bio-6-02",
       title: "Transkription",
       content: `# Transkription und RNA-Prozessierung – Biologie Kapitel 6 (Molekulare Genetik)
 
@@ -2235,140 +2324,155 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         {
           heading: "Grundprinzip der Transkription",
           text: "RNA unterscheidet sich von DNA durch Ribose (statt Desoxyribose), Uracil (statt Thymin) und ist einzelsträngig. Bei der Transkription liest RNA-Polymerase den Template Strand (3'→5') und synthetisiert RNA in 5'→3'-Richtung — ohne Primer.",
-          merksatz: "RNA: Ribose (2'-OH), Uracil (U statt T), Einzelstrang. DNA: Desoxyribose, Thymin (T), Doppelstrang. Basenpaarung: A-U (RNA), A-T (DNA), G-C (beide). RNA weniger stabil (2'-OH anfällig für Hydrolyse).",
+          merksatz:
+            "RNA: Ribose (2'-OH), Uracil (U statt T), Einzelstrang. DNA: Desoxyribose, Thymin (T), Doppelstrang. Basenpaarung: A-U (RNA), A-T (DNA), G-C (beide). RNA weniger stabil (2'-OH anfällig für Hydrolyse).",
         },
         {
           heading: "Ablauf der Transkription",
           text: "Bei Prokaryoten erkennt der Sigma-Faktor den Promotor (-10 Pribnow-Box, -35-Box). Bei Eukaryoten bindet TFIID (TBP) an die TATA-Box und rekrutiert RNA-Pol II. Termination erfolgt prokaryotisch durch Haarnadelstrukturen oder Rho-Protein; eukaryotisch durch Polyadenylierungssignal (AAUAAA).",
-          merksatz: "RNA-Pol II (mRNA): TATA-Box (Promotor), TFIID (TBP bindet TATA), weitere TFs (TFIIB, E, F, H) rekrutieren RNA-Pol II. Syntheserichtung 5'→3', KEIN Primer. Template Strand 3'→5' (Matrize), Coding Strand 5'→3' (= mRNA, T → U).",
+          merksatz:
+            "RNA-Pol II (mRNA): TATA-Box (Promotor), TFIID (TBP bindet TATA), weitere TFs (TFIIB, E, F, H) rekrutieren RNA-Pol II. Syntheserichtung 5'→3', KEIN Primer. Template Strand 3'→5' (Matrize), Coding Strand 5'→3' (= mRNA, T → U).",
         },
         {
           heading: "RNA-Prozessierung (nur Eukaryoten!)",
           text: "Drei Schritte: 5'-Capping (m7G-Kappe: Schutz, Ribosom-Erkennung, Kernexport), 3'-Polyadenylierung (~200 Adenine: Stabilität, Schutz), Splicing (Spliceosom entfernt Introns GU...AG, verbindet Exons). Alternatives Splicing erzeugt Proteom-Diversität.",
-          merksatz: "3 Schritte: (1) 5'-Capping (m7G-Kappe, Schutz + Ribosom-Erkennung), (2) 3'-Poly-A-Tail (~200 A, Stabilität), (3) Splicing (Spliceosom entfernt Introns GU...AG, Exons verbunden). Alternatives Splicing → viele Proteine von 1 Gen.",
+          merksatz:
+            "3 Schritte: (1) 5'-Capping (m7G-Kappe, Schutz + Ribosom-Erkennung), (2) 3'-Poly-A-Tail (~200 A, Stabilität), (3) Splicing (Spliceosom entfernt Introns GU...AG, Exons verbunden). Alternatives Splicing → viele Proteine von 1 Gen.",
         },
         {
           heading: "Prokaryoten vs. Eukaryoten",
           text: "Prokaryoten haben 1 RNA-Polymerase, keine Introns, keine RNA-Prozessierung und gekoppelte Transkription/Translation. Eukaryoten haben 3 RNA-Polymerasen, Introns, alle drei Prozessierungsschritte und räumlich getrennte Transkription (Kern) und Translation (Cytoplasma).",
-          merksatz: "Prokaryoten: KEINE Introns, KEINE RNA-Prozessierung, gekoppelte Transkription/Translation. Eukaryoten: Introns + Exons, RNA-Prozessierung (Capping/Poly-A/Splicing), getrennte Transkription (Kern) + Translation (Cytoplasma).",
+          merksatz:
+            "Prokaryoten: KEINE Introns, KEINE RNA-Prozessierung, gekoppelte Transkription/Translation. Eukaryoten: Introns + Exons, RNA-Prozessierung (Capping/Poly-A/Splicing), getrennte Transkription (Kern) + Translation (Cytoplasma).",
         },
       ],
-      diagram: 'transcription-translation',
+      diagram: "transcription-translation",
 
       merksätze: [],
       selfTest: [
         {
           question: "Welcher der folgenden Unterschiede zwischen **RNA** und **DNA** ist korrekt?",
           options: [
-          "RNA enthält Thymin (T), DNA enthält Uracil (U) als Pyrimidin-Base",
-          "RNA enthält Ribose (mit 2'-OH), DNA enthält Desoxyribose (ohne 2'-OH, nur H)",
-          "RNA ist immer doppelsträngig (Doppelhelix), DNA ist einzelsträngig",
-          "RNA ist stabiler als DNA, da die 2'-OH-Gruppe vor Hydrolyse schützt",
-          "RNA und DNA verwenden beide Thymin (T) als Pyrimidin-Base"
+            "RNA enthält Thymin (T), DNA enthält Uracil (U) als Pyrimidin-Base",
+            "RNA enthält Ribose (mit 2'-OH), DNA enthält Desoxyribose (ohne 2'-OH, nur H)",
+            "RNA ist immer doppelsträngig (Doppelhelix), DNA ist einzelsträngig",
+            "RNA ist stabiler als DNA, da die 2'-OH-Gruppe vor Hydrolyse schützt",
+            "RNA und DNA verwenden beide Thymin (T) als Pyrimidin-Base",
           ],
           correctIndex: 1,
-          explanation: "**RNA vs. DNA:** **RNA** = **Ribose** (Zucker mit 2'-OH), **Uracil (U)** statt Thymin, **Einzelstrang**. **DNA** = **Desoxyribose** (ohne 2'-OH, nur H an 2'-Position), **Thymin (T)**, **Doppelstrang**. Die **2'-OH-Gruppe** in RNA macht sie **weniger stabil** (anfällig für Hydrolyse), nicht stabiler! Basenpaarung: A-U (RNA), A-T (DNA), G-C (beide). Wichtig: **U in RNA**, **T in DNA**!",
+          explanation:
+            "**RNA vs. DNA:** **RNA** = **Ribose** (Zucker mit 2'-OH), **Uracil (U)** statt Thymin, **Einzelstrang**. **DNA** = **Desoxyribose** (ohne 2'-OH, nur H an 2'-Position), **Thymin (T)**, **Doppelstrang**. Die **2'-OH-Gruppe** in RNA macht sie **weniger stabil** (anfällig für Hydrolyse), nicht stabiler! Basenpaarung: A-U (RNA), A-T (DNA), G-C (beide). Wichtig: **U in RNA**, **T in DNA**!",
           hints: [
             "Der Zucker in RNA heißt Ribose (daher der Name) — was unterscheidet ihn strukturell von der Desoxyribose der DNA?",
             "Denke an die vier Unterschiede: Zucker, Base (T vs. U), Stranganzahl und chemische Stabilität.",
           ],
           difficulty: 1,
-          tags: ['rna dna unterschied', 'ribose', 'uracil'],
+          tags: ["rna dna unterschied", "ribose", "uracil"],
         },
         {
-          question: "RNA-Polymerase synthetisiert RNA während der Transkription. Welche Aussage über RNA-Polymerase ist korrekt?",
+          question:
+            "RNA-Polymerase synthetisiert RNA während der Transkription. Welche Aussage über RNA-Polymerase ist korrekt?",
           options: [
-          "RNA-Polymerase benötigt einen RNA-Primer (wie DNA-Polymerase) zum Starten der Synthese",
-          "RNA-Polymerase kann de novo (ohne Primer) starten und synthetisiert in 5'→3'-Richtung",
-          "RNA-Polymerase synthetisiert in 3'→5'-Richtung, während DNA-Polymerase in 5'→3'-Richtung arbeitet",
-          "RNA-Polymerase kann nur Okazaki-Fragmente synthetisieren, nicht kontinuierlich",
-          "RNA-Polymerase benötigt Telomerase zur Verlängerung von RNA-Enden"
+            "RNA-Polymerase benötigt einen RNA-Primer (wie DNA-Polymerase) zum Starten der Synthese",
+            "RNA-Polymerase kann de novo (ohne Primer) starten und synthetisiert in 5'→3'-Richtung",
+            "RNA-Polymerase synthetisiert in 3'→5'-Richtung, während DNA-Polymerase in 5'→3'-Richtung arbeitet",
+            "RNA-Polymerase kann nur Okazaki-Fragmente synthetisieren, nicht kontinuierlich",
+            "RNA-Polymerase benötigt Telomerase zur Verlängerung von RNA-Enden",
           ],
           correctIndex: 1,
-          explanation: "**RNA-Polymerase:** Kann **de novo** (ohne Primer) starten (Unterschied zu DNA-Polymerase, die Primer benötigt!). **Syntheserichtung: 5'→3'** (wie DNA-Pol). Die DNA-Matrize (**Template Strand**) wird in **3'→5'-Richtung** gelesen → RNA entsteht 5'→3'. **Wichtig:** DNA-Pol benötigt **Primer** (RNA, ~10 nt), RNA-Pol **nicht**! RNA-Pol öffnet DNA-Doppelhelix (Transkriptionsblase) und verlängert RNA kontinuierlich.",
+          explanation:
+            "**RNA-Polymerase:** Kann **de novo** (ohne Primer) starten (Unterschied zu DNA-Polymerase, die Primer benötigt!). **Syntheserichtung: 5'→3'** (wie DNA-Pol). Die DNA-Matrize (**Template Strand**) wird in **3'→5'-Richtung** gelesen → RNA entsteht 5'→3'. **Wichtig:** DNA-Pol benötigt **Primer** (RNA, ~10 nt), RNA-Pol **nicht**! RNA-Pol öffnet DNA-Doppelhelix (Transkriptionsblase) und verlängert RNA kontinuierlich.",
           hints: [
             "Welches Enzym benötigt einen Primer zum Starten — RNA-Polymerase oder DNA-Polymerase? Das ist der Schlüsselunterschied.",
             "Beide Polymerasen arbeiten in derselben Richtung (5'→3') — prüfe jede Antwort auf Richtungsangaben.",
           ],
           difficulty: 2,
-          tags: ['rna-polymerase', 'transkription', 'promotor'],
+          tags: ["rna-polymerase", "transkription", "promotor"],
         },
         {
-          question: "Bei der Transkription wird der **Template Strand (Antisense Strand)** als Matrize verwendet. Welche Aussage ist korrekt?",
+          question:
+            "Bei der Transkription wird der **Template Strand (Antisense Strand)** als Matrize verwendet. Welche Aussage ist korrekt?",
           options: [
-          "Der Template Strand verläuft 5'→3' und wird von RNA-Polymerase in derselben Richtung gelesen",
-          "Der Template Strand verläuft 3'→5' und wird als Matrize verwendet; die RNA wird 5'→3' synthetisiert",
-          "Der Coding Strand (Sense Strand) wird als Matrize verwendet, nicht der Template Strand",
-          "Template Strand und Coding Strand haben identische Sequenzen (außer T → U)",
-          "Der Template Strand codiert direkt für Proteine, der Coding Strand ist nicht-codierend"
+            "Der Template Strand verläuft 5'→3' und wird von RNA-Polymerase in derselben Richtung gelesen",
+            "Der Template Strand verläuft 3'→5' und wird als Matrize verwendet; die RNA wird 5'→3' synthetisiert",
+            "Der Coding Strand (Sense Strand) wird als Matrize verwendet, nicht der Template Strand",
+            "Template Strand und Coding Strand haben identische Sequenzen (außer T → U)",
+            "Der Template Strand codiert direkt für Proteine, der Coding Strand ist nicht-codierend",
           ],
           correctIndex: 1,
-          explanation: "**Template Strand (Antisense):** Verläuft **3'→5'**, wird als **DNA-Matrize** verwendet → RNA wird **5'→3'** synthetisiert (komplementär + antiparallel). **Coding Strand (Sense):** Verläuft **5'→3'**, hat **gleiche Sequenz wie mRNA** (außer T → U), wird **nicht** als Matrize verwendet. **Beispiel:** Coding 5'-ATG-TCC-3', Template 3'-TAC-AGG-5', mRNA 5'-AUG-UCC-3' (wie Coding, T → U). Wichtig: **Template = Matrize**, **Coding = wie mRNA**!",
+          explanation:
+            "**Template Strand (Antisense):** Verläuft **3'→5'**, wird als **DNA-Matrize** verwendet → RNA wird **5'→3'** synthetisiert (komplementär + antiparallel). **Coding Strand (Sense):** Verläuft **5'→3'**, hat **gleiche Sequenz wie mRNA** (außer T → U), wird **nicht** als Matrize verwendet. **Beispiel:** Coding 5'-ATG-TCC-3', Template 3'-TAC-AGG-5', mRNA 5'-AUG-UCC-3' (wie Coding, T → U). Wichtig: **Template = Matrize**, **Coding = wie mRNA**!",
           hints: [
             "RNA-Polymerase liest die Matrize in 3'→5'-Richtung und baut die RNA in 5'→3'-Richtung — welcher Strang muss also 3'→5' verlaufen?",
             "Der Coding Strand hat die gleiche Sequenz wie die mRNA (nur T statt U) — er ist demnach nicht die Matrize, sondern der 'Informationsstrang'.",
           ],
           difficulty: 3,
-          tags: ['template strand', 'antisense', 'transkription'],
+          tags: ["template strand", "antisense", "transkription"],
         },
         {
-          question: "Bei Eukaryoten bindet der Transkriptionsfaktor **TFIID** an die **TATA-Box** im Promotor. Welche Aussage ist korrekt?",
+          question:
+            "Bei Eukaryoten bindet der Transkriptionsfaktor **TFIID** an die **TATA-Box** im Promotor. Welche Aussage ist korrekt?",
           options: [
-          "TFIID bindet an die -10-Box (Pribnow-Box) und rekrutiert den Sigma-Faktor bei Prokaryoten",
-          "TFIID enthält TBP (TATA-Binding Protein) und bindet an die TATA-Box (~25 bp vor Transkriptionsstart)",
-          "TFIID ist eine RNA-Polymerase, die mRNA direkt synthetisiert (ohne weitere Faktoren)",
-          "TFIID entfernt Introns während der Transkription (Splicing-Funktion)",
-          "TFIID fügt die Poly-A-Tail an das 3'-Ende der mRNA an (Polyadenylierung)"
+            "TFIID bindet an die -10-Box (Pribnow-Box) und rekrutiert den Sigma-Faktor bei Prokaryoten",
+            "TFIID enthält TBP (TATA-Binding Protein) und bindet an die TATA-Box (~25 bp vor Transkriptionsstart)",
+            "TFIID ist eine RNA-Polymerase, die mRNA direkt synthetisiert (ohne weitere Faktoren)",
+            "TFIID entfernt Introns während der Transkription (Splicing-Funktion)",
+            "TFIID fügt die Poly-A-Tail an das 3'-Ende der mRNA an (Polyadenylierung)",
           ],
           correctIndex: 1,
-          explanation: "**TFIID (Transkriptionsfaktor II D):** Bindet an **TATA-Box** (TATAAA, ~25 bp vor Transkriptionsstart) über **TBP** (TATA-Binding Protein). Weitere TFs (TFIIB, TFIIE, TFIIF, TFIIH) rekrutieren **RNA-Polymerase II** (mRNA-Synthese). **Prokaryoten:** -10-Box (Pribnow-Box, TATAAT), -35-Box, **Sigma-Faktor** (σ) hilft RNA-Pol, Promotor zu erkennen (nicht TFIID!). Wichtig: **TFIID = Eukaryoten**, **Sigma-Faktor = Prokaryoten**!",
+          explanation:
+            "**TFIID (Transkriptionsfaktor II D):** Bindet an **TATA-Box** (TATAAA, ~25 bp vor Transkriptionsstart) über **TBP** (TATA-Binding Protein). Weitere TFs (TFIIB, TFIIE, TFIIF, TFIIH) rekrutieren **RNA-Polymerase II** (mRNA-Synthese). **Prokaryoten:** -10-Box (Pribnow-Box, TATAAT), -35-Box, **Sigma-Faktor** (σ) hilft RNA-Pol, Promotor zu erkennen (nicht TFIID!). Wichtig: **TFIID = Eukaryoten**, **Sigma-Faktor = Prokaryoten**!",
           hints: [
             "TFIID ist ein eukaryotischer Transkriptionsfaktor — für Prokaryoten gibt es das analoge Sigma-Faktor-System.",
             "TBP (TATA-Binding Protein) ist eine Untereinheit von TFIID — es erkennt die TATA-Box und leitet die Bildung des Präinitiationskomplexes ein.",
           ],
           difficulty: 2,
-          tags: ['tfiid', 'tata-box', 'promotor'],
+          tags: ["tfiid", "tata-box", "promotor"],
         },
         {
-          question: "Während der **RNA-Prozessierung** bei Eukaryoten werden drei Modifikationen vorgenommen: 5'-Capping, 3'-Polyadenylierung und Splicing. Welche Aussage zur **5'-Capping** ist korrekt?",
+          question:
+            "Während der **RNA-Prozessierung** bei Eukaryoten werden drei Modifikationen vorgenommen: 5'-Capping, 3'-Polyadenylierung und Splicing. Welche Aussage zur **5'-Capping** ist korrekt?",
           options: [
-          "5'-Capping fügt ~200 Adenine (Poly-A-Tail) an das 5'-Ende der mRNA an",
-          "5'-Capping fügt eine 7-Methylguanosin-Kappe (m7G) an das 5'-Ende an, was Schutz vor Abbau und Ribosom-Erkennung bietet",
-          "5'-Capping entfernt Introns aus der pre-mRNA (Splicing-Funktion)",
-          "5'-Capping findet nur bei tRNA statt, nicht bei mRNA",
-          "5'-Capping ist ein prokaryotischer Prozess, der bei Eukaryoten nicht vorkommt"
+            "5'-Capping fügt ~200 Adenine (Poly-A-Tail) an das 5'-Ende der mRNA an",
+            "5'-Capping fügt eine 7-Methylguanosin-Kappe (m7G) an das 5'-Ende an, was Schutz vor Abbau und Ribosom-Erkennung bietet",
+            "5'-Capping entfernt Introns aus der pre-mRNA (Splicing-Funktion)",
+            "5'-Capping findet nur bei tRNA statt, nicht bei mRNA",
+            "5'-Capping ist ein prokaryotischer Prozess, der bei Eukaryoten nicht vorkommt",
           ],
           correctIndex: 1,
-          explanation: "**5'-Capping (nur Eukaryoten):** **7-Methylguanosin-Kappe (m7G)** wird an **5'-Ende** der mRNA angefügt (während Transkription). **Funktionen:** (1) **Schutz vor Abbau** (Exonukleasen), (2) **Ribosom-Erkennung** (Translation-Initiation), (3) **Kern-Export** (Transport-Signal). **3'-Polyadenylierung:** ~200 Adenine (Poly-A-Tail) an **3'-Ende** (nicht 5'!). **Splicing:** Entfernt Introns. Wichtig: **Capping = 5'-Ende**, **Poly-A = 3'-Ende**, **nur Eukaryoten**!",
+          explanation:
+            "**5'-Capping (nur Eukaryoten):** **7-Methylguanosin-Kappe (m7G)** wird an **5'-Ende** der mRNA angefügt (während Transkription). **Funktionen:** (1) **Schutz vor Abbau** (Exonukleasen), (2) **Ribosom-Erkennung** (Translation-Initiation), (3) **Kern-Export** (Transport-Signal). **3'-Polyadenylierung:** ~200 Adenine (Poly-A-Tail) an **3'-Ende** (nicht 5'!). **Splicing:** Entfernt Introns. Wichtig: **Capping = 5'-Ende**, **Poly-A = 3'-Ende**, **nur Eukaryoten**!",
           hints: [
             "Die Kappe sitzt am 5'-Ende der mRNA — denke an ihre drei Schutz- und Signalfunktionen.",
             "Unterscheide 5'-Capping (m7G-Kappe, Schutz/Erkennung) von 3'-Polyadenylierung (Poly-A-Schwanz) — beides sind verschiedene Enden!",
           ],
           difficulty: 1,
-          tags: ['5-capping', 'rna-prozessierung', 'mrna'],
+          tags: ["5-capping", "rna-prozessierung", "mrna"],
         },
         {
-          question: "**Splicing** bei Eukaryoten entfernt Introns aus der pre-mRNA. Welche Aussage zum Splicing ist korrekt?",
+          question:
+            "**Splicing** bei Eukaryoten entfernt Introns aus der pre-mRNA. Welche Aussage zum Splicing ist korrekt?",
           options: [
-          "Introns sind codierende Sequenzen, Exons sind nicht-codierend; Splicing entfernt Exons",
-          "Das Spliceosom (snRNPs: U1, U2, U4, U5, U6) entfernt Introns (GU...AG) und verbindet Exons",
-          "Prokaryoten haben Introns und verwenden das Spliceosom zur RNA-Prozessierung",
-          "Alternatives Splicing führt immer zu einem einzigen Protein pro Gen (keine Diversität)",
-          "Splicing findet während der Translation im Cytoplasma statt, nicht im Zellkern"
+            "Introns sind codierende Sequenzen, Exons sind nicht-codierend; Splicing entfernt Exons",
+            "Das Spliceosom (snRNPs: U1, U2, U4, U5, U6) entfernt Introns (GU...AG) und verbindet Exons",
+            "Prokaryoten haben Introns und verwenden das Spliceosom zur RNA-Prozessierung",
+            "Alternatives Splicing führt immer zu einem einzigen Protein pro Gen (keine Diversität)",
+            "Splicing findet während der Translation im Cytoplasma statt, nicht im Zellkern",
           ],
           correctIndex: 1,
-          explanation: "**Splicing (nur Eukaryoten):** **Spliceosom** (Ribonukleoprotein-Komplex: U1, U2, U4, U5, U6 snRNPs) erkennt **Splice-Stellen** (5'-GU, Branch Point A, 3'-AG) und entfernt **Introns** (nicht-codierend). **Exons** (codierend) werden verbunden → reife mRNA. **Alternatives Splicing:** Verschiedene Exon-Kombinationen → **viele Proteine von 1 Gen** (Proteom-Diversität, Mensch: ~20.000 Gene → >100.000 Proteine). **Prokaryoten:** KEINE Introns, KEIN Splicing! Splicing findet im **Kern** statt, nicht Cytoplasma.",
+          explanation:
+            "**Splicing (nur Eukaryoten):** **Spliceosom** (Ribonukleoprotein-Komplex: U1, U2, U4, U5, U6 snRNPs) erkennt **Splice-Stellen** (5'-GU, Branch Point A, 3'-AG) und entfernt **Introns** (nicht-codierend). **Exons** (codierend) werden verbunden → reife mRNA. **Alternatives Splicing:** Verschiedene Exon-Kombinationen → **viele Proteine von 1 Gen** (Proteom-Diversität, Mensch: ~20.000 Gene → >100.000 Proteine). **Prokaryoten:** KEINE Introns, KEIN Splicing! Splicing findet im **Kern** statt, nicht Cytoplasma.",
           hints: [
             "Merkhilfe: Introns werden 'herausgespleißt' (entfernt), Exons werden 'exprimiert' (behalten) — daher die Namen.",
             "Das Spliceosom erkennt die Konsensussequenzen GU am Intronbeginn und AG am Intronende — was bedeutet das für die Häufigkeit dieser Dinukleotide?",
           ],
           difficulty: 2,
-          tags: ['splicing', 'introns', 'spleißosom'],
-        }
+          tags: ["splicing", "introns", "spleißosom"],
+        },
       ],
     },
     {
-      id: 'bio-6-03',
+      id: "bio-6-03",
       title: "Translation",
       content: `# Translation (Proteinbiosynthese) – Biologie Kapitel 6 (Molekulare Genetik)
 
@@ -2516,144 +2620,158 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         {
           heading: "Genetischer Code",
           text: "Der genetische Code ist ein Triplett-Code: je 3 Basen (Codon) codieren für 1 Aminosäure. 64 Codons für 20 Aminosäuren + 3 Stopp → der Code ist degeneriert (mehrere Codons pro Aminosäure). Start-Codon ist AUG (Met), Stopp-Codons sind UAA, UAG, UGA.",
-          merksatz: "Triplett-Code (3 Basen → 1 AS), degeneriert (viele Codons → 1 AS, z.B. Leucin 6 Codons), universell. Start-Codon AUG (Met), Stopp-Codons UAA/UAG/UGA. 64 Codons (4³) → 20 AS + 3 Stopp.",
+          merksatz:
+            "Triplett-Code (3 Basen → 1 AS), degeneriert (viele Codons → 1 AS, z.B. Leucin 6 Codons), universell. Start-Codon AUG (Met), Stopp-Codons UAA/UAG/UGA. 64 Codons (4³) → 20 AS + 3 Stopp.",
         },
         {
           heading: "Wobble-Hypothese und tRNA",
           text: "Die Wobble-Hypothese erklärt, warum ~45 tRNAs für 61 Codons ausreichen: die 3. Codon-Base (Wobble-Position) erlaubt nicht-Watson-Crick-Paarung (z.B. G-U). tRNAs haben Kleeblattstruktur mit Anticodon-Arm und CCA-3'-Ende zur Aminosäure-Bindung. Aminoacyl-tRNA-Synthetasen (20 Enzyme) beladen tRNAs ATP-abhängig.",
-          merksatz: "tRNA: Kleeblatt-Struktur, Anticodon (paart mit mRNA-Codon), CCA-3'-Ende (Aminosäure-Bindung). Aminoacyl-tRNA-Synthetase (spezifisch für jede AS) belädt tRNA (ATP-abhängig). Wobble: 1 tRNA für mehrere Codons (3. Base flexibel).",
+          merksatz:
+            "tRNA: Kleeblatt-Struktur, Anticodon (paart mit mRNA-Codon), CCA-3'-Ende (Aminosäure-Bindung). Aminoacyl-tRNA-Synthetase (spezifisch für jede AS) belädt tRNA (ATP-abhängig). Wobble: 1 tRNA für mehrere Codons (3. Base flexibel).",
         },
         {
           heading: "Ribosom",
           text: "Prokaryotische Ribosomen sind 70S (30S + 50S), eukaryotische 80S (40S + 60S). Die drei Bindungsstellen A-Site (neue Aminoacyl-tRNA), P-Site (Peptidkette) und E-Site (entladene tRNA) ermöglichen die schrittweise Peptidbindung durch die Peptidyl-Transferase (ein Ribozym).",
-          merksatz: "Prokaryoten 70S (30S + 50S), Eukaryoten 80S (40S + 60S). A-Site (neue Aminoacyl-tRNA), P-Site (Peptidkette), E-Site (entladene tRNA). Peptidyl-Transferase (rRNA-katalysiert = Ribozym) → Peptidbindung.",
+          merksatz:
+            "Prokaryoten 70S (30S + 50S), Eukaryoten 80S (40S + 60S). A-Site (neue Aminoacyl-tRNA), P-Site (Peptidkette), E-Site (entladene tRNA). Peptidyl-Transferase (rRNA-katalysiert = Ribozym) → Peptidbindung.",
         },
         {
           heading: "Ablauf der Translation",
           text: "Bei Prokaryoten erkennt die Shine-Dalgarno-Sequenz das Ribosom (fMet-Start). Eukaryoten scannen von der m7G-Kappe bis zum ersten AUG (Kozak-Sequenz, Met-Start). Elongation: Codon-Erkennung (A-Site) → Peptidbindung → Translokation (GTP). Stopp-Codons rekrutieren Release-Faktoren → Protein freigesetzt.",
-          merksatz: "Prokaryoten: Shine-Dalgarno (AGGAGGU vor AUG), fMet-tRNA (formyliert), IF1/2/3. Eukaryoten: 5'-Capping (m7G), Kozak-Sequenz (GCCRCCAUGG), Met-tRNA (nicht formyliert), eIF1/2/3/4.",
+          merksatz:
+            "Prokaryoten: Shine-Dalgarno (AGGAGGU vor AUG), fMet-tRNA (formyliert), IF1/2/3. Eukaryoten: 5'-Capping (m7G), Kozak-Sequenz (GCCRCCAUGG), Met-tRNA (nicht formyliert), eIF1/2/3/4.",
         },
         {
           heading: "Antibiotika (hemmen Translation)",
           text: "Antibiotika nutzen den Unterschied zwischen 70S (Prokaryoten) und 80S (Eukaryoten) aus. Tetracyclin blockiert die A-Site (30S), Chloramphenicol hemmt die Peptidyl-Transferase (50S), Erythromycin blockiert die Translokation (50S). Mitochondrien (70S-Ribosomen) können ebenfalls betroffen sein.",
         },
       ],
-      diagram: 'transcription-translation',
+      diagram: "transcription-translation",
 
       merksätze: [],
       selfTest: [
         {
           question: "Der genetische Code ist **degeneriert**. Was bedeutet dies?",
           options: [
-          "Jedes Codon (3 Basen) codiert für mehrere verschiedene Aminosäuren (1 Codon → viele AS)",
-          "Mehrere Codons können für dieselbe Aminosäure codieren (viele Codons → 1 AS, z.B. Leucin hat 6 Codons)",
-          "Der genetische Code ist bei verschiedenen Organismen unterschiedlich (nicht universell)",
-          "Codons überlappen sich, sodass ein Nukleotid zu mehreren Codons gehört",
-          "Es gibt Pausen (Kommas) zwischen Codons, die nicht codierend sind"
+            "Jedes Codon (3 Basen) codiert für mehrere verschiedene Aminosäuren (1 Codon → viele AS)",
+            "Mehrere Codons können für dieselbe Aminosäure codieren (viele Codons → 1 AS, z.B. Leucin hat 6 Codons)",
+            "Der genetische Code ist bei verschiedenen Organismen unterschiedlich (nicht universell)",
+            "Codons überlappen sich, sodass ein Nukleotid zu mehreren Codons gehört",
+            "Es gibt Pausen (Kommas) zwischen Codons, die nicht codierend sind",
           ],
           correctIndex: 1,
-          explanation: "**Degeneriert (Degeneration):** **Mehrere Codons** → **1 Aminosäure**. Beispiel: **Leucin** wird von **6 Codons** codiert (UUA, UUG, CUU, CUC, CUA, CUG). **Grund:** 64 Codons (4³) → 20 Aminosäuren + 3 Stopp → viele Codons pro AS. **Vorteil:** Mutationen oft \"stille Mutationen\" (gleiche AS trotz Codon-Änderung). Wichtig: **1 Codon → 1 AS** (eindeutig), aber **1 AS → viele Codons** (degeneriert)!",
+          explanation:
+            '**Degeneriert (Degeneration):** **Mehrere Codons** → **1 Aminosäure**. Beispiel: **Leucin** wird von **6 Codons** codiert (UUA, UUG, CUU, CUC, CUA, CUG). **Grund:** 64 Codons (4³) → 20 Aminosäuren + 3 Stopp → viele Codons pro AS. **Vorteil:** Mutationen oft "stille Mutationen" (gleiche AS trotz Codon-Änderung). Wichtig: **1 Codon → 1 AS** (eindeutig), aber **1 AS → viele Codons** (degeneriert)!',
           hints: [
             "Es gibt 64 mögliche Codons (4³), aber nur 20 Aminosäuren plus 3 Stopp-Codons — was folgt daraus für die Zuordnung?",
             "'Degeneriert' heißt hier nicht 'kaputt', sondern 'redundant' — mehrere Codons zeigen auf dasselbe Ziel.",
           ],
           difficulty: 1,
-          tags: ['genetischer code', 'degeneriertheit', 'codons'],
+          tags: ["genetischer code", "degeneriertheit", "codons"],
         },
         {
           question: "Welches der folgenden Codons ist ein **Stopp-Codon** (Nonsense-Codon)?",
           options: [
-          "AUG (codiert Methionin, Start-Codon)",
-          "UUU (codiert Phenylalanin)",
-          "UAA (Stopp-Codon, keine Aminosäure, Termination)",
-          "GCU (codiert Alanin)",
-          "CAU (codiert Histidin)"
+            "AUG (codiert Methionin, Start-Codon)",
+            "UUU (codiert Phenylalanin)",
+            "UAA (Stopp-Codon, keine Aminosäure, Termination)",
+            "GCU (codiert Alanin)",
+            "CAU (codiert Histidin)",
           ],
           correctIndex: 2,
-          explanation: "**Stopp-Codons (Nonsense-Codons):** **UAA, UAG, UGA** → **keine Aminosäure**, beenden Translation. **Start-Codon:** **AUG** (Methionin, Met) → Translations-Start (1. Aminosäure). Wichtig: **3 Stopp-Codons** (UAA \"Ochre\", UAG \"Amber\", UGA \"Opal\"), **1 Start-Codon** (AUG). Bei Stopp-Codon: **Release-Faktoren** (RF1/2 Prokaryoten, eRF1 Eukaryoten) binden → Protein freigesetzt.",
+          explanation:
+            '**Stopp-Codons (Nonsense-Codons):** **UAA, UAG, UGA** → **keine Aminosäure**, beenden Translation. **Start-Codon:** **AUG** (Methionin, Met) → Translations-Start (1. Aminosäure). Wichtig: **3 Stopp-Codons** (UAA "Ochre", UAG "Amber", UGA "Opal"), **1 Start-Codon** (AUG). Bei Stopp-Codon: **Release-Faktoren** (RF1/2 Prokaryoten, eRF1 Eukaryoten) binden → Protein freigesetzt.',
           hints: [
             "Es gibt genau drei Stopp-Codons: UAA, UAG und UGA — keines davon codiert eine Aminosäure.",
             "AUG ist das einzige Start-Codon und codiert Methionin — alle anderen Optionen außer den Stopp-Codons codieren reguläre Aminosäuren.",
           ],
           difficulty: 1,
-          tags: ['stopp-codon', 'nonsense-codon', 'uaa'],
+          tags: ["stopp-codon", "nonsense-codon", "uaa"],
         },
         {
-          question: "Die **Wobble-Hypothese** (Crick, 1966) erklärt, warum **45 tRNAs** ausreichen, um **61 codierende Codons** zu erkennen. Welche Aussage ist korrekt?",
+          question:
+            "Die **Wobble-Hypothese** (Crick, 1966) erklärt, warum **45 tRNAs** ausreichen, um **61 codierende Codons** zu erkennen. Welche Aussage ist korrekt?",
           options: [
-          "Jede tRNA kann nur ein einziges spezifisches Codon erkennen (61 tRNAs für 61 Codons)",
-          "Die Wobble-Position (3. Base des Codons, 1. Base des Anticodons) erlaubt Nicht-Watson-Crick-Paarung (z.B. G-U)",
-          "Die Wobble-Hypothese besagt, dass Codons überlappen und mehrere Aminosäuren gleichzeitig codieren",
-          "Wobble bedeutet, dass tRNAs falsch geladen werden und fehlerhafte Aminosäuren einbauen",
-          "Wobble-Paarung findet nur bei Stopp-Codons statt, nicht bei codierenden Codons"
+            "Jede tRNA kann nur ein einziges spezifisches Codon erkennen (61 tRNAs für 61 Codons)",
+            "Die Wobble-Position (3. Base des Codons, 1. Base des Anticodons) erlaubt Nicht-Watson-Crick-Paarung (z.B. G-U)",
+            "Die Wobble-Hypothese besagt, dass Codons überlappen und mehrere Aminosäuren gleichzeitig codieren",
+            "Wobble bedeutet, dass tRNAs falsch geladen werden und fehlerhafte Aminosäuren einbauen",
+            "Wobble-Paarung findet nur bei Stopp-Codons statt, nicht bei codierenden Codons",
           ],
           correctIndex: 1,
-          explanation: "**Wobble-Hypothese:** **3. Base des Codons** (5'-Ende der mRNA) paart mit **1. Base des Anticodons** (5'-Ende der tRNA) → **Wobble-Position**. **Nicht-Watson-Crick-Paarung** möglich (z.B. **G-U** statt G-C). **Folge:** **1 tRNA** kann **mehrere Codons** erkennen (v.a. wenn 3. Base unterschiedlich). Beispiel: Codon UUU + UUC (beide Phe) → 1 tRNA-Phe (Anticodon AAG, Wobble G-U möglich). Wichtig: **45 tRNAs** für **61 Codons** (nicht 61 tRNAs!)!",
+          explanation:
+            "**Wobble-Hypothese:** **3. Base des Codons** (5'-Ende der mRNA) paart mit **1. Base des Anticodons** (5'-Ende der tRNA) → **Wobble-Position**. **Nicht-Watson-Crick-Paarung** möglich (z.B. **G-U** statt G-C). **Folge:** **1 tRNA** kann **mehrere Codons** erkennen (v.a. wenn 3. Base unterschiedlich). Beispiel: Codon UUU + UUC (beide Phe) → 1 tRNA-Phe (Anticodon AAG, Wobble G-U möglich). Wichtig: **45 tRNAs** für **61 Codons** (nicht 61 tRNAs!)!",
           hints: [
             "'Wobble' (Wackeln) beschreibt die flexible Basenpaarung an der 3. Codon-Position — dort sind auch Nicht-Watson-Crick-Paare erlaubt.",
             "Wenn 45 tRNAs für 61 Codons ausreichen, muss jede tRNA im Schnitt mehr als ein Codon lesen können — wie ist das möglich?",
           ],
           difficulty: 2,
-          tags: ['wobble-hypothese', 'trna', 'anticodon'],
+          tags: ["wobble-hypothese", "trna", "anticodon"],
         },
         {
-          question: "**Aminoacyl-tRNA-Synthetase** ist ein Enzym, das tRNA mit der passenden Aminosäure belädt. Welche Aussage ist korrekt?",
+          question:
+            "**Aminoacyl-tRNA-Synthetase** ist ein Enzym, das tRNA mit der passenden Aminosäure belädt. Welche Aussage ist korrekt?",
           options: [
-          "Es gibt nur 1 Aminoacyl-tRNA-Synthetase für alle 20 Aminosäuren (universelles Enzym)",
-          "Es gibt 20 Aminoacyl-tRNA-Synthetasen (1 pro Aminosäure), jede spezifisch für eine AS und ihre tRNAs",
-          "Aminoacyl-tRNA-Synthetase katalysiert die Peptidbindung zwischen Aminosäuren (Peptidyl-Transferase)",
-          "Aminoacyl-tRNA-Synthetase entfernt Introns aus pre-mRNA (Splicing-Funktion)",
-          "Aminoacyl-tRNA-Synthetase ist eine Untereinheit des Ribosoms (50S/60S)"
+            "Es gibt nur 1 Aminoacyl-tRNA-Synthetase für alle 20 Aminosäuren (universelles Enzym)",
+            "Es gibt 20 Aminoacyl-tRNA-Synthetasen (1 pro Aminosäure), jede spezifisch für eine AS und ihre tRNAs",
+            "Aminoacyl-tRNA-Synthetase katalysiert die Peptidbindung zwischen Aminosäuren (Peptidyl-Transferase)",
+            "Aminoacyl-tRNA-Synthetase entfernt Introns aus pre-mRNA (Splicing-Funktion)",
+            "Aminoacyl-tRNA-Synthetase ist eine Untereinheit des Ribosoms (50S/60S)",
           ],
           correctIndex: 1,
-          explanation: "**Aminoacyl-tRNA-Synthetase:** **20 Enzyme** (1 pro Aminosäure), jedes **spezifisch** für 1 AS und ihre tRNAs (kann mehrere tRNAs beladen, da Wobble). **Funktion:** Bindet Aminosäure an CCA-3'-Ende der tRNA (**Aminoacyl-tRNA**, ATP-abhängig). **Fehlerrate:** ~10⁻⁴ (sehr niedrig, Korrektur-Mechanismus). Wichtig: **1 Synthetase pro AS**, aber **mehrere tRNAs pro AS** (Wobble!). **Peptidyl-Transferase** = rRNA-katalysiert (Ribozym), nicht Synthetase!",
+          explanation:
+            "**Aminoacyl-tRNA-Synthetase:** **20 Enzyme** (1 pro Aminosäure), jedes **spezifisch** für 1 AS und ihre tRNAs (kann mehrere tRNAs beladen, da Wobble). **Funktion:** Bindet Aminosäure an CCA-3'-Ende der tRNA (**Aminoacyl-tRNA**, ATP-abhängig). **Fehlerrate:** ~10⁻⁴ (sehr niedrig, Korrektur-Mechanismus). Wichtig: **1 Synthetase pro AS**, aber **mehrere tRNAs pro AS** (Wobble!). **Peptidyl-Transferase** = rRNA-katalysiert (Ribozym), nicht Synthetase!",
           hints: [
             "Es gibt 20 proteinogene Aminosäuren — wie viele Synthetasen werden daher benötigt?",
             "Die Aminoacyl-tRNA-Synthetase 'belädt' die tRNA am CCA-3'-Ende — verwechsle sie nicht mit der Peptidyl-Transferase, die die Peptidbindung knüpft.",
           ],
           difficulty: 2,
-          tags: ['aminoacyl-trna-synthetase', 'trna-beladung', 'aminosäure'],
+          tags: ["aminoacyl-trna-synthetase", "trna-beladung", "aminosäure"],
         },
         {
-          question: "Bei Prokaryoten bindet das Ribosom an die **Shine-Dalgarno-Sequenz**. Bei Eukaryoten erfolgt die Initiation über die **5'-Capping** und **Kozak-Sequenz**. Welche Aussage ist korrekt?",
+          question:
+            "Bei Prokaryoten bindet das Ribosom an die **Shine-Dalgarno-Sequenz**. Bei Eukaryoten erfolgt die Initiation über die **5'-Capping** und **Kozak-Sequenz**. Welche Aussage ist korrekt?",
           options: [
-          "Prokaryoten: Shine-Dalgarno (AGGAGGU, ~10 bp vor AUG) erkennt 16S rRNA, Initiator-tRNA ist fMet-tRNA (formyliert)",
-          "Eukaryoten: Shine-Dalgarno-Sequenz vor AUG, Initiator-tRNA ist fMet-tRNA (wie Prokaryoten)",
-          "Prokaryoten und Eukaryoten verwenden beide die Kozak-Sequenz zur Ribosom-Bindung",
-          "Eukaryoten benötigen keine 5'-Capping, da Ribosomen direkt an AUG binden (wie Prokaryoten)",
-          "Prokaryoten verwenden Met-tRNA (nicht formyliert), Eukaryoten fMet-tRNA (formyliert)"
+            "Prokaryoten: Shine-Dalgarno (AGGAGGU, ~10 bp vor AUG) erkennt 16S rRNA, Initiator-tRNA ist fMet-tRNA (formyliert)",
+            "Eukaryoten: Shine-Dalgarno-Sequenz vor AUG, Initiator-tRNA ist fMet-tRNA (wie Prokaryoten)",
+            "Prokaryoten und Eukaryoten verwenden beide die Kozak-Sequenz zur Ribosom-Bindung",
+            "Eukaryoten benötigen keine 5'-Capping, da Ribosomen direkt an AUG binden (wie Prokaryoten)",
+            "Prokaryoten verwenden Met-tRNA (nicht formyliert), Eukaryoten fMet-tRNA (formyliert)",
           ],
           correctIndex: 0,
-          explanation: "**Prokaryoten:** **Shine-Dalgarno-Sequenz** (AGGAGGU, ~10 bp vor AUG) → **16S rRNA** (30S) erkennt → Ribosom bindet. **Initiator-tRNA:** **fMet-tRNA** (N-Formylmethionin, **formyliert**). **Eukaryoten:** **5'-Capping** (m7G) → Ribosom erkennt Kappe, scannt mRNA bis AUG. **Kozak-Sequenz** (GCCRCCAUGG, Konsensus um AUG) → optimale Translation. **Initiator-tRNA:** **Met-tRNA** (**nicht** formyliert). Wichtig: **fMet (Prokaryoten)**, **Met (Eukaryoten)**!",
+          explanation:
+            "**Prokaryoten:** **Shine-Dalgarno-Sequenz** (AGGAGGU, ~10 bp vor AUG) → **16S rRNA** (30S) erkennt → Ribosom bindet. **Initiator-tRNA:** **fMet-tRNA** (N-Formylmethionin, **formyliert**). **Eukaryoten:** **5'-Capping** (m7G) → Ribosom erkennt Kappe, scannt mRNA bis AUG. **Kozak-Sequenz** (GCCRCCAUGG, Konsensus um AUG) → optimale Translation. **Initiator-tRNA:** **Met-tRNA** (**nicht** formyliert). Wichtig: **fMet (Prokaryoten)**, **Met (Eukaryoten)**!",
           hints: [
             "Prokaryoten nutzen die Shine-Dalgarno-Sequenz zur Ribosom-Anlagerung — Eukaryoten hingegen 'scannen' von der m7G-Kappe aus bis zum ersten AUG.",
             "Merke: fMet (formyliertes Methionin) ist der Starter bei Prokaryoten — bei Eukaryoten ist es unformyliertes Met.",
           ],
           difficulty: 3,
-          tags: ['ribosomale initiation', 'shine-dalgarno', 'kozak-sequenz'],
+          tags: ["ribosomale initiation", "shine-dalgarno", "kozak-sequenz"],
         },
         {
-          question: "**Tetracyclin** ist ein Antibiotikum, das die bakterielle Proteinbiosynthese hemmt. Welcher Mechanismus liegt zugrunde?",
+          question:
+            "**Tetracyclin** ist ein Antibiotikum, das die bakterielle Proteinbiosynthese hemmt. Welcher Mechanismus liegt zugrunde?",
           options: [
-          "Tetracyclin hemmt DNA-Replikation durch Blockierung der DNA-Polymerase",
-          "Tetracyclin bindet an die 30S-Untereinheit (Prokaryoten) und blockiert die A-Site → Aminoacyl-tRNA kann nicht binden",
-          "Tetracyclin bindet an die 50S-Untereinheit und hemmt die Peptidyl-Transferase (Peptidbindung ↓)",
-          "Tetracyclin hemmt Transkription durch Blockierung der RNA-Polymerase",
-          "Tetracyclin bindet an die 80S-Ribosomen (Eukaryoten) und hemmt Translation (keine selektive Toxizität)"
+            "Tetracyclin hemmt DNA-Replikation durch Blockierung der DNA-Polymerase",
+            "Tetracyclin bindet an die 30S-Untereinheit (Prokaryoten) und blockiert die A-Site → Aminoacyl-tRNA kann nicht binden",
+            "Tetracyclin bindet an die 50S-Untereinheit und hemmt die Peptidyl-Transferase (Peptidbindung ↓)",
+            "Tetracyclin hemmt Transkription durch Blockierung der RNA-Polymerase",
+            "Tetracyclin bindet an die 80S-Ribosomen (Eukaryoten) und hemmt Translation (keine selektive Toxizität)",
           ],
           correctIndex: 1,
-          explanation: "**Tetracyclin:** Bindet an **30S-Untereinheit** (kleine, prokaryotische Ribosom-Untereinheit) → **blockiert A-Site** → **Aminoacyl-tRNA kann nicht binden** → **Elongation ↓**. **Selektive Toxizität:** Prokaryoten (70S = 30S + 50S), Eukaryoten (80S = 40S + 60S) → Tetracyclin wirkt nur auf 70S! **Andere Antibiotika:** Chloramphenicol (50S, Peptidyl-Transferase ↓), Erythromycin (50S, Translokation ↓), Streptomycin (30S, Codon-Erkennung fehlerhaft). Wichtig: **Mitochondrien = 70S** → Tetracyclin kann mitochondriale Translation hemmen (Nebenwirkung)!",
+          explanation:
+            "**Tetracyclin:** Bindet an **30S-Untereinheit** (kleine, prokaryotische Ribosom-Untereinheit) → **blockiert A-Site** → **Aminoacyl-tRNA kann nicht binden** → **Elongation ↓**. **Selektive Toxizität:** Prokaryoten (70S = 30S + 50S), Eukaryoten (80S = 40S + 60S) → Tetracyclin wirkt nur auf 70S! **Andere Antibiotika:** Chloramphenicol (50S, Peptidyl-Transferase ↓), Erythromycin (50S, Translokation ↓), Streptomycin (30S, Codon-Erkennung fehlerhaft). Wichtig: **Mitochondrien = 70S** → Tetracyclin kann mitochondriale Translation hemmen (Nebenwirkung)!",
           hints: [
             "Bakterien haben 70S-Ribosomen (30S + 50S), Menschen 80S (40S + 60S) — diese Differenz erklärt die selektive Toxizität von Tetracyclin.",
             "An welcher Stelle des Ribosoms bindet die neu eintreffende Aminoacyl-tRNA? Das ist die A-Site — Tetracyclin blockiert genau diese.",
           ],
           difficulty: 2,
-          tags: ['tetracyclin', 'proteinsynthese', 'antibiotikum'],
-        }
+          tags: ["tetracyclin", "proteinsynthese", "antibiotikum"],
+        },
       ],
     },
     {
-      id: 'bio-6-04',
+      id: "bio-6-04",
       title: "Genregulation",
       content: `# Genregulation – Biologie Kapitel 6 (Molekulare Genetik)
 
@@ -2817,135 +2935,151 @@ Die **Klassische Genetik** (Mendelsche Genetik) untersucht:
         {
           heading: "Prokaryotische Genregulation: Operon-Modell",
           text: "Das lac-Operon (induzierbares Operon) wird durch Allolaktose (Induktor) aktiviert: ohne Laktose blockiert der Repressor den Operator (Gene AUS), mit Laktose ist der Repressor inaktiv (Gene AN). Glukosemangel steigert cAMP → CAP-cAMP verstärkt Transkription zusätzlich. Das trp-Operon (reprimierbares Operon) funktioniert umgekehrt: Tryptophan als Corepressor aktiviert den Repressor → Gene AUS (Feedback-Hemmung).",
-          merksatz: "lac-Operon: Induzierbares Operon! OHNE Laktose: Repressor AN → Gene AUS. MIT Laktose: Allolaktose → Repressor inaktiv → Gene AN. CAP-cAMP (Glukose ↓): Transkription ↑↑. trp-Operon: MIT Tryptophan (Corepressor) → Repressor aktiv → Gene AUS.",
+          merksatz:
+            "lac-Operon: Induzierbares Operon! OHNE Laktose: Repressor AN → Gene AUS. MIT Laktose: Allolaktose → Repressor inaktiv → Gene AN. CAP-cAMP (Glukose ↓): Transkription ↑↑. trp-Operon: MIT Tryptophan (Corepressor) → Repressor aktiv → Gene AUS.",
         },
         {
           heading: "Eukaryotische Genregulation",
           text: "Eukaryoten regulieren Gene über Transkriptionsfaktoren: basale TFs (TFIID/TBP an TATA-Box), Aktivatoren (an Enhancer) und Repressoren (an Silencer). Enhancer können Millionen Basenpaare vom Promotor entfernt liegen und wirken via DNA-Looping (Mediator-Komplex). Kein Operon-Prinzip.",
-          merksatz: "Enhancer können weit entfernt vom Promotor sein (bis 1 Mio. bp) → DNA-Looping bringt Enhancer + Promotor zusammen. Aktivatoren (Enhancer → Transkription ↑), Repressoren (Silencer → Transkription ↓).",
+          merksatz:
+            "Enhancer können weit entfernt vom Promotor sein (bis 1 Mio. bp) → DNA-Looping bringt Enhancer + Promotor zusammen. Aktivatoren (Enhancer → Transkription ↑), Repressoren (Silencer → Transkription ↓).",
         },
         {
           heading: "Epigenetische Regulation",
           text: "DNA-Methylierung (5mC an CpG-Inseln) stillegt Gene ohne Sequenzänderung — vererbbar und reversibel. Histon-Acetylierung (HAT) lockert Chromatin → Euchromatin → Transkription ↑; Deacetylierung (HDAC) verdichtet → Heterochromatin → Transkription ↓. Beispiele: X-Inaktivierung, Genomic Imprinting.",
-          merksatz: "DNA-Methylierung (CpG-Inseln, 5mC): Promotor methyliert → Gen AUS. HAT (Acetylierung) → Euchromatin → Transkription ↑. HDAC (Deacetylierung) → Heterochromatin → Transkription ↓.",
+          merksatz:
+            "DNA-Methylierung (CpG-Inseln, 5mC): Promotor methyliert → Gen AUS. HAT (Acetylierung) → Euchromatin → Transkription ↑. HDAC (Deacetylierung) → Heterochromatin → Transkription ↓.",
         },
         {
           heading: "RNA-Interferenz (RNAi): miRNA und siRNA",
           text: "miRNA (endogen, ~22 nt) bindet unvollständig an die 3'-UTR der Ziel-mRNA → Translations-Repression oder Abbau. siRNA (exogen/künstlich, ~21–23 nt) bindet vollständig komplementär → mRNA-Abbau via RISC-Komplex. Beide nutzen Dicer zur Prozessierung; miRNA zusätzlich Drosha im Kern.",
-          merksatz: "miRNA: Endogen, ~22 nt, 3'-UTR-Bindung (nicht vollständig komplementär), Translations-Repression/Abbau. siRNA: Exogen, ~21–23 nt, vollständig komplementär, mRNA-Abbau (RISC, Argonaute), therapeutisch (Patisiran).",
+          merksatz:
+            "miRNA: Endogen, ~22 nt, 3'-UTR-Bindung (nicht vollständig komplementär), Translations-Repression/Abbau. siRNA: Exogen, ~21–23 nt, vollständig komplementär, mRNA-Abbau (RISC, Argonaute), therapeutisch (Patisiran).",
         },
       ],
       merksätze: [],
-      diagram: 'dna-helix',
+      diagram: "dna-helix",
       selfTest: [
         {
-          question: "E. coli wächst in einem Medium mit **Laktose** als einziger Kohlenstoffquelle (keine Glukose). Welche Aussage zum **lac-Operon** ist korrekt?",
+          question:
+            "E. coli wächst in einem Medium mit **Laktose** als einziger Kohlenstoffquelle (keine Glukose). Welche Aussage zum **lac-Operon** ist korrekt?",
           options: [
-          "Der Repressor bindet an den Operator → Transkription ist blockiert, Gene sind AUS",
-          "Allolaktose (aus Laktose) bindet an den Repressor → Repressor inaktiviert → Gene AN, maximale Transkription (CAP-cAMP vorhanden)",
-          "Das lac-Operon ist ein reprimierbares Operon (wie trp-Operon), Laktose wirkt als Corepressor",
-          "CAP-cAMP kann nicht binden, da Glukose fehlt → Transkription ist blockiert trotz Laktose",
-          "Laktose hemmt die RNA-Polymerase direkt → keine Transkription möglich"
+            "Der Repressor bindet an den Operator → Transkription ist blockiert, Gene sind AUS",
+            "Allolaktose (aus Laktose) bindet an den Repressor → Repressor inaktiviert → Gene AN, maximale Transkription (CAP-cAMP vorhanden)",
+            "Das lac-Operon ist ein reprimierbares Operon (wie trp-Operon), Laktose wirkt als Corepressor",
+            "CAP-cAMP kann nicht binden, da Glukose fehlt → Transkription ist blockiert trotz Laktose",
+            "Laktose hemmt die RNA-Polymerase direkt → keine Transkription möglich",
           ],
           correctIndex: 1,
-          explanation: "**lac-Operon (induzierbares Operon):** **MIT Laktose:** **Allolaktose** (Induktor, aus Laktose) bindet an **Repressor** → Repressor **inaktiviert** → löst sich von Operator ab → **RNA-Polymerase** kann binden → **Gene AN** (lacZ, lacY, lacA). **Glukose fehlt** → **cAMP ↑** → **CAP-cAMP-Komplex** bindet an Promotor → **maximale Transkription ↑↑** (positive Regulation). **Ohne Laktose:** Repressor aktiv → Gene AUS. Wichtig: **Laktose = Induktor**, **Glukose ↓ = CAP-cAMP ↑**!",
+          explanation:
+            "**lac-Operon (induzierbares Operon):** **MIT Laktose:** **Allolaktose** (Induktor, aus Laktose) bindet an **Repressor** → Repressor **inaktiviert** → löst sich von Operator ab → **RNA-Polymerase** kann binden → **Gene AN** (lacZ, lacY, lacA). **Glukose fehlt** → **cAMP ↑** → **CAP-cAMP-Komplex** bindet an Promotor → **maximale Transkription ↑↑** (positive Regulation). **Ohne Laktose:** Repressor aktiv → Gene AUS. Wichtig: **Laktose = Induktor**, **Glukose ↓ = CAP-cAMP ↑**!",
           hints: [
             "Laktose wird zu Allolaktose umgewandelt, das als Induktor fungiert und den Repressor vom Operator löst — welcher Zustand der Gene ergibt sich daraus?",
             "Wenn Glukose fehlt, steigt cAMP — das CAP-cAMP-System verstärkt die Transkription zusätzlich (positive Regulation).",
           ],
           difficulty: 2,
-          tags: ['lac-operon', 'genregulation', 'induktion'],
+          tags: ["lac-operon", "genregulation", "induktion"],
         },
         {
-          question: "Das **trp-Operon** reguliert die Tryptophan-Biosynthese in E. coli. Welche Aussage ist korrekt?",
+          question:
+            "Das **trp-Operon** reguliert die Tryptophan-Biosynthese in E. coli. Welche Aussage ist korrekt?",
           options: [
-          "Tryptophan ist ein Induktor → bindet an Repressor → Repressor inaktiviert → Gene AN (Biosynthese ↑)",
-          "Tryptophan ist ein Corepressor → bindet an Repressor → Repressor aktiv → Gene AUS (Feedback-Hemmung)",
-          "Ohne Tryptophan bindet der Repressor an den Operator → Gene AUS (keine Biosynthese)",
-          "Das trp-Operon ist ein induzierbares Operon (wie lac-Operon), Tryptophan aktiviert Transkription",
-          "CAP-cAMP ist erforderlich für trp-Operon-Aktivierung (wie bei lac-Operon)"
+            "Tryptophan ist ein Induktor → bindet an Repressor → Repressor inaktiviert → Gene AN (Biosynthese ↑)",
+            "Tryptophan ist ein Corepressor → bindet an Repressor → Repressor aktiv → Gene AUS (Feedback-Hemmung)",
+            "Ohne Tryptophan bindet der Repressor an den Operator → Gene AUS (keine Biosynthese)",
+            "Das trp-Operon ist ein induzierbares Operon (wie lac-Operon), Tryptophan aktiviert Transkription",
+            "CAP-cAMP ist erforderlich für trp-Operon-Aktivierung (wie bei lac-Operon)",
           ],
           correctIndex: 1,
-          explanation: "**trp-Operon (reprimierbares Operon):** **MIT Tryptophan:** **Tryptophan** = **Corepressor** → bindet an **Repressor** (trpR) → **Repressor aktiv** → bindet an Operator → **Gene AUS** (keine Biosynthese nötig, **Feedback-Hemmung**: Produkt hemmt eigene Synthese). **OHNE Tryptophan:** Repressor inaktiv → Gene AN (Biosynthese ↑). **Vergleich:** **lac-Operon** = induzierbares Operon (Substrat → Gene AN), **trp-Operon** = reprimierbares Operon (Produkt → Gene AUS).",
+          explanation:
+            "**trp-Operon (reprimierbares Operon):** **MIT Tryptophan:** **Tryptophan** = **Corepressor** → bindet an **Repressor** (trpR) → **Repressor aktiv** → bindet an Operator → **Gene AUS** (keine Biosynthese nötig, **Feedback-Hemmung**: Produkt hemmt eigene Synthese). **OHNE Tryptophan:** Repressor inaktiv → Gene AN (Biosynthese ↑). **Vergleich:** **lac-Operon** = induzierbares Operon (Substrat → Gene AN), **trp-Operon** = reprimierbares Operon (Produkt → Gene AUS).",
           hints: [
             "Das trp-Operon ist ein reprimierbares Operon — die Zelle produziert Tryptophan nur, wenn es gebraucht wird (Feedback-Hemmung).",
             "Wenn Tryptophan vorhanden ist, bindet es als Corepressor an den Repressor und schaltet die Gene ab — das ist das Gegenteil des lac-Operons.",
           ],
           difficulty: 2,
-          tags: ['trp-operon', 'repression', 'tryptophan'],
+          tags: ["trp-operon", "repression", "tryptophan"],
         },
         {
-          question: "Bei Eukaryoten können **Enhancer** (verstärkende Sequenzen) die Transkription erhöhen. Welche Aussage ist korrekt?",
+          question:
+            "Bei Eukaryoten können **Enhancer** (verstärkende Sequenzen) die Transkription erhöhen. Welche Aussage ist korrekt?",
           options: [
-          "Enhancer müssen direkt neben dem Promotor liegen (~10 bp entfernt, wie Pribnow-Box)",
-          "Enhancer können weit vom Promotor entfernt sein (bis zu 1 Mio. bp) und wirken durch DNA-Looping",
-          "Enhancer sind nur bei Prokaryoten vorhanden (nicht bei Eukaryoten)",
-          "Enhancer hemmen die Transkription (wie Silencer), nicht erhöhen",
-          "Enhancer codieren für Repressor-Proteine, die an den Operator binden"
+            "Enhancer müssen direkt neben dem Promotor liegen (~10 bp entfernt, wie Pribnow-Box)",
+            "Enhancer können weit vom Promotor entfernt sein (bis zu 1 Mio. bp) und wirken durch DNA-Looping",
+            "Enhancer sind nur bei Prokaryoten vorhanden (nicht bei Eukaryoten)",
+            "Enhancer hemmen die Transkription (wie Silencer), nicht erhöhen",
+            "Enhancer codieren für Repressor-Proteine, die an den Operator binden",
           ],
           correctIndex: 1,
-          explanation: "**Enhancer (Eukaryoten):** **Verstärkende Sequenzen**, an die **Aktivatoren** (Transkriptionsfaktoren) binden → **Transkription ↑**. **Wichtig:** Enhancer können **weit entfernt** vom Promotor sein (bis zu **1 Mio. bp**!) → **DNA-Looping** (Schleifenbildung) bringt Enhancer + Promotor zusammen (**Mediator-Komplex** vermittelt). **Silencer:** Unterdrückende Sequenzen → Transkription ↓ (Repressoren binden). Prokaryoten haben **keine Enhancer** (Operons statt Enhancer/Silencer).",
+          explanation:
+            "**Enhancer (Eukaryoten):** **Verstärkende Sequenzen**, an die **Aktivatoren** (Transkriptionsfaktoren) binden → **Transkription ↑**. **Wichtig:** Enhancer können **weit entfernt** vom Promotor sein (bis zu **1 Mio. bp**!) → **DNA-Looping** (Schleifenbildung) bringt Enhancer + Promotor zusammen (**Mediator-Komplex** vermittelt). **Silencer:** Unterdrückende Sequenzen → Transkription ↓ (Repressoren binden). Prokaryoten haben **keine Enhancer** (Operons statt Enhancer/Silencer).",
           hints: [
             "Enhancer können sich tausende von Basenpaaren vom Promotor entfernt befinden — wie kann ein so weit entferntes Element den Promotor dennoch beeinflussen?",
             "Das Gegenteil eines Enhancers ist ein Silencer — Enhancer erhöhen, Silencer senken die Transkription.",
           ],
           difficulty: 1,
-          tags: ['enhancer', 'transkriptionsfaktoren', 'eukaryoten'],
+          tags: ["enhancer", "transkriptionsfaktoren", "eukaryoten"],
         },
         {
-          question: "**DNA-Methylierung** an CpG-Inseln (Cytosin-Guanin-Dinukleotide) ist ein wichtiger epigenetischer Mechanismus. Welche Aussage ist korrekt?",
+          question:
+            "**DNA-Methylierung** an CpG-Inseln (Cytosin-Guanin-Dinukleotide) ist ein wichtiger epigenetischer Mechanismus. Welche Aussage ist korrekt?",
           options: [
-          "DNA-Methylierung (5-Methylcytosin, 5mC) am Promotor führt zu erhöhter Genexpression (Transkription ↑)",
-          "DNA-Methylierung am Promotor führt zu Gen-Stilllegung (Transkription ↓), z.B. bei X-Inaktivierung",
-          "DNA-Methylierung ist keine vererbbare Modifikation (geht bei Zellteilung verloren)",
-          "DNA-Methylierung ändert die DNA-Sequenz (Mutation) und ist irreversibel",
-          "DNA-Methylierung findet nur bei Prokaryoten statt (nicht bei Eukaryoten)"
+            "DNA-Methylierung (5-Methylcytosin, 5mC) am Promotor führt zu erhöhter Genexpression (Transkription ↑)",
+            "DNA-Methylierung am Promotor führt zu Gen-Stilllegung (Transkription ↓), z.B. bei X-Inaktivierung",
+            "DNA-Methylierung ist keine vererbbare Modifikation (geht bei Zellteilung verloren)",
+            "DNA-Methylierung ändert die DNA-Sequenz (Mutation) und ist irreversibel",
+            "DNA-Methylierung findet nur bei Prokaryoten statt (nicht bei Eukaryoten)",
           ],
           correctIndex: 1,
-          explanation: "**DNA-Methylierung (Epigenetik):** **CpG-Inseln** (Cytosin-Guanin) → Methylierung an Cytosin (**5-Methylcytosin, 5mC**) → **Genexpression ↓** (Promotor-Methylierung → Gen **stillgelegt**). **Beispiele:** **X-Inaktivierung** (inaktiviertes X hypermethyliert, Barr-Körperchen), **Genomic Imprinting** (eltern-spezifisch, z.B. IGF2-Gen: paternal exprimiert, maternal methyliert/stillgelegt). **Wichtig:** **Vererbbar** (bleibt bei Zellteilung erhalten), **keine Sequenz-Änderung** (epigenetisch!), **reversibel** (Demethylasen).",
+          explanation:
+            "**DNA-Methylierung (Epigenetik):** **CpG-Inseln** (Cytosin-Guanin) → Methylierung an Cytosin (**5-Methylcytosin, 5mC**) → **Genexpression ↓** (Promotor-Methylierung → Gen **stillgelegt**). **Beispiele:** **X-Inaktivierung** (inaktiviertes X hypermethyliert, Barr-Körperchen), **Genomic Imprinting** (eltern-spezifisch, z.B. IGF2-Gen: paternal exprimiert, maternal methyliert/stillgelegt). **Wichtig:** **Vererbbar** (bleibt bei Zellteilung erhalten), **keine Sequenz-Änderung** (epigenetisch!), **reversibel** (Demethylasen).",
           hints: [
             "Methylierung an CpG-Inseln im Promotor 'verstummt' ein Gen — denke an X-Inaktivierung als klassisches Beispiel.",
             "Epigenetische Veränderungen ändern nicht die DNA-Sequenz selbst, sind aber vererbbar — wie unterscheidet sich das von einer Mutation?",
           ],
           difficulty: 2,
-          tags: ['dna-methylierung', 'epigenetik', 'cpg-inseln'],
+          tags: ["dna-methylierung", "epigenetik", "cpg-inseln"],
         },
         {
-          question: "**Histon-Acetylierung** durch Histon-Acetyltransferasen (HAT) ist ein wichtiger epigenetischer Mechanismus. Welche Aussage ist korrekt?",
+          question:
+            "**Histon-Acetylierung** durch Histon-Acetyltransferasen (HAT) ist ein wichtiger epigenetischer Mechanismus. Welche Aussage ist korrekt?",
           options: [
-          "Histon-Acetylierung entfernt Acetyl-Gruppen von Lysinen → DNA dichter gepackt (Heterochromatin) → Transkription ↓",
-          "Histon-Acetylierung fügt Acetyl-Gruppen an Lysine → DNA lockerer (Euchromatin) → Transkription ↑",
-          "Histon-Deacetylasen (HDAC) acetylieren Histone → Transkription ↑",
-          "Histon-Acetylierung ist irreversibel und ändert die DNA-Sequenz (Mutation)",
-          "Histon-Acetylierung findet nur bei Prokaryoten statt (Prokaryoten haben Histone)"
+            "Histon-Acetylierung entfernt Acetyl-Gruppen von Lysinen → DNA dichter gepackt (Heterochromatin) → Transkription ↓",
+            "Histon-Acetylierung fügt Acetyl-Gruppen an Lysine → DNA lockerer (Euchromatin) → Transkription ↑",
+            "Histon-Deacetylasen (HDAC) acetylieren Histone → Transkription ↑",
+            "Histon-Acetylierung ist irreversibel und ändert die DNA-Sequenz (Mutation)",
+            "Histon-Acetylierung findet nur bei Prokaryoten statt (Prokaryoten haben Histone)",
           ],
           correctIndex: 1,
-          explanation: "**Histon-Acetylierung (HAT):** **Acetyl-Gruppen** (COCH₃) werden an **Lysine** (K) der Histone angefügt → Lysin-NH₃⁺ (positiv) → Lysin-NHCOCH₃ (neutral) → **DNA-Histon-Interaktion ↓** → **DNA lockerer** (**Euchromatin**) → **Transkription ↑**. **Histon-Deacetylasen (HDAC):** **Entfernen** Acetyl-Gruppen → DNA dichter (**Heterochromatin**) → **Transkription ↓**. **Wichtig:** **HAT = Acetylierung = Transkription ↑**, **HDAC = Deacetylierung = Transkription ↓**. Prokaryoten haben **keine Histone** (Nukleoid, nicht Chromatin)!",
+          explanation:
+            "**Histon-Acetylierung (HAT):** **Acetyl-Gruppen** (COCH₃) werden an **Lysine** (K) der Histone angefügt → Lysin-NH₃⁺ (positiv) → Lysin-NHCOCH₃ (neutral) → **DNA-Histon-Interaktion ↓** → **DNA lockerer** (**Euchromatin**) → **Transkription ↑**. **Histon-Deacetylasen (HDAC):** **Entfernen** Acetyl-Gruppen → DNA dichter (**Heterochromatin**) → **Transkription ↓**. **Wichtig:** **HAT = Acetylierung = Transkription ↑**, **HDAC = Deacetylierung = Transkription ↓**. Prokaryoten haben **keine Histone** (Nukleoid, nicht Chromatin)!",
           hints: [
             "Acetylierung neutralisiert die positive Ladung der Histone — warum führt das zu einer lockereren DNA-Verpackung?",
             "Merke: HAT (Acetyltransferase) acetyliert → Transkription hoch; HDAC (Deacetylase) deacetyliert → Transkription runter.",
           ],
           difficulty: 2,
-          tags: ['histon-acetylierung', 'epigenetik', 'chromatinstruktur'],
+          tags: ["histon-acetylierung", "epigenetik", "chromatinstruktur"],
         },
         {
-          question: "**miRNA** und **siRNA** sind kleine nicht-codierende RNAs, die die Genexpression regulieren. Welche Aussage ist korrekt?",
+          question:
+            "**miRNA** und **siRNA** sind kleine nicht-codierende RNAs, die die Genexpression regulieren. Welche Aussage ist korrekt?",
           options: [
-          "miRNA ist exogen (von außen eingebracht), siRNA ist endogen (von Zelle produziert)",
-          "miRNA ist endogen (~22 nt), bindet an 3'-UTR (nicht vollständig komplementär) → Translations-Repression/Abbau",
-          "siRNA bindet an 5'-Capping der mRNA → verhindert Ribosom-Bindung (Translations-Blockierung)",
-          "miRNA und siRNA haben identische Wirkmechanismen und Herkunft (keine Unterschiede)",
-          "siRNA wird von Drosha prozessiert (im Kern), miRNA von Dicer (im Cytoplasma)"
+            "miRNA ist exogen (von außen eingebracht), siRNA ist endogen (von Zelle produziert)",
+            "miRNA ist endogen (~22 nt), bindet an 3'-UTR (nicht vollständig komplementär) → Translations-Repression/Abbau",
+            "siRNA bindet an 5'-Capping der mRNA → verhindert Ribosom-Bindung (Translations-Blockierung)",
+            "miRNA und siRNA haben identische Wirkmechanismen und Herkunft (keine Unterschiede)",
+            "siRNA wird von Drosha prozessiert (im Kern), miRNA von Dicer (im Cytoplasma)",
           ],
           correctIndex: 1,
-          explanation: "**miRNA (microRNA):** **Endogen** (von Zelle produziert), **~22 nt**, bindet an **3'-UTR** der Ziel-mRNA (**nicht vollständig komplementär**) → **Translations-Repression** oder **mRNA-Abbau** (RISC, Argonaute). **Biogenese:** pri-miRNA → **Drosha** (Kern) → pre-miRNA → **Dicer** (Cytoplasma) → reife miRNA. **siRNA (small interfering RNA):** **Exogen** (z.B. virale dsRNA) oder künstlich, **~21–23 nt**, bindet an mRNA (**vollständig komplementär**) → **mRNA-Abbau** (RISC). **Wichtig:** **miRNA = endogen**, **siRNA = exogen**, beide via Dicer!",
+          explanation:
+            "**miRNA (microRNA):** **Endogen** (von Zelle produziert), **~22 nt**, bindet an **3'-UTR** der Ziel-mRNA (**nicht vollständig komplementär**) → **Translations-Repression** oder **mRNA-Abbau** (RISC, Argonaute). **Biogenese:** pri-miRNA → **Drosha** (Kern) → pre-miRNA → **Dicer** (Cytoplasma) → reife miRNA. **siRNA (small interfering RNA):** **Exogen** (z.B. virale dsRNA) oder künstlich, **~21–23 nt**, bindet an mRNA (**vollständig komplementär**) → **mRNA-Abbau** (RISC). **Wichtig:** **miRNA = endogen**, **siRNA = exogen**, beide via Dicer!",
           hints: [
             "miRNA stammt aus der Zelle selbst (endogen) und bindet nur partiell komplementär — siRNA kommt von außen (exogen) und bindet vollständig.",
             "Beide RNA-Typen wirken über den RISC-Komplex — der entscheidende Unterschied liegt in ihrer Herkunft und der Vollständigkeit der Komplementarität.",
           ],
           difficulty: 3,
-          tags: ['mirna', 'sirna', 'genexpression'],
-        }
+          tags: ["mirna", "sirna", "genexpression"],
+        },
       ],
     },
 
@@ -4600,7 +4734,6 @@ Nach dem DSB wird die Zelle repariert — zwei konkurrierende Wege:
         },
       ],
     },
-  
 
     // === from kap8-humangenetik ===
     {
@@ -5261,6 +5394,5 @@ Der **Ultraschall** ist die wichtigste nicht-invasive Methode. Im ersten Trimest
         },
       ],
     },
-  
   ],
 };
