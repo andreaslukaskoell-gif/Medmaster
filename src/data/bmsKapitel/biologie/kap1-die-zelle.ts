@@ -1212,5 +1212,791 @@ Der **Nucleolus** ist eine membranlose Substruktur im Kern (~1–5 µm), die dur
       ],
       diagram: "animal-cell",
     },
+
+    // ─── UK6 ────────────────────────────────────────────────────────────────
+    {
+      id: "bio-1-06",
+      title: "Zellteilung — Mitose und Meiose",
+      stichworte: [
+        "Mitose",
+        "Meiose",
+        "Zellzyklus",
+        "Crossing-over",
+        "Diploid",
+        "Haploid",
+        "Non-disjunction",
+        "Checkpoints",
+        "Cycline",
+        "Trisomie",
+      ],
+      content: `## Überblick
+
+Der Zellzyklus und die Zellteilung sind fundamentale Prozesse des Lebens: Sie ermöglichen Wachstum, Gewebereparatur und Fortpflanzung. Zwei Formen der Kernteilung existieren: die **Mitose** (für somatische Zellen) und die **Meiose** (für Keimzellen). Ihr Unterschied ist für die MedAT-Prüfung zentral.
+
+**Das Wichtigste auf einen Blick:**
+- Zellzyklus: G1 → S (DNA-Verdopplung) → G2 → M (Mitose) → Zytokinese
+- Mitose: 1 Mutterzelle → 2 identische diploide Tochterzellen (2n → 2n)
+- Meiose: 1 Mutterzelle → 4 genetisch verschiedene haploide Keimzellen (2n → n)
+- Crossing-over in Meiose I = genetische Rekombination
+- Fehler (Non-disjunction) → Trisomien (Down-Syndrom) oder Monosomien
+
+---
+
+## Der Zellzyklus
+
+Der Zellzyklus beschreibt den gesamten Lebenszyklus einer sich teilenden Zelle. Er gliedert sich in die **Interphase** (G1, S, G2) und die **M-Phase** (Mitose + Zytokinese).
+
+**G1-Phase (Gap 1, erste Wachstumsphase):**
+Proteinsynthese, Zellwachstum, Erfüllung der Voraussetzungen für DNA-Replikation. Zellen, die dauerhaft nicht teilen (differenzierte Zellen wie Neuronen, Muskelzellen), verlassen den Zyklus in die **G0-Phase** (Ruhephase). Der **G1/S-Checkpoint** (Restriktionspunkt) überwacht, ob die Zelle groß genug ist und ob die DNA intakt ist. Schlüsselmolekül: **Cyclin D / CDK4** → Phosphorylierung von Rb (Retinoblastom-Protein) → Freigabe von E2F → Transkription von S-Phase-Genen. Bei Krebszellen ist dieser Checkpoint oft defekt (Rb-Mutation, Cyclin-D-Überexpression).
+
+**S-Phase (Synthese-Phase):**
+DNA-Replikation: Der haploide DNA-Gehalt verdoppelt sich. Aus 2n-DNA-Menge wird 4n-DNA-Menge (die Chromosomenzahl bleibt 2n, aber jedes Chromosom besteht nun aus 2 Schwesterchromatiden). Histon-Synthese läuft parallel zur DNA-Replikation. Dauert 6–8 h beim Menschen.
+
+**G2-Phase (Gap 2):**
+Kontrolle der replizierten DNA, weitere Zellvergrößerung. **G2/M-Checkpoint**: Wird die DNA-Replikation vollständig abgeschlossen? Ist alles repariert? Schlüsselmolekül: **Cyclin B / CDK1** (MPF, Maturation Promoting Factor) → löst Mitose aus.
+
+**M-Phase (Mitose + Zytokinese):**
+Kernspaltung + Zellteilung. Kontrolliert durch den **Spindel-Checkpoint** (Kinetochor-Komplex prüft, ob alle Chromosomen an Spindelfasern angehängt sind → sonst kein Anaphase-Beginn).
+
+> **Merke:** G0 = Ruhephase, G1/S = Tumor-Checkpoint (Rb/E2F), G2/M = CDK1/CyclinB. Tumorzellen überwinden Checkpoints durch Mutationen in p53, Rb, Cyclin-Genen.
+
+---
+
+## Mitose — Somatische Zellteilung
+
+Die Mitose ist die Standardform der Zellteilung für Körperzellen. Sie erzeugt zwei genetisch identische Tochterzellen.
+
+**Prophase:**
+Chromosomen kondensieren (werden sichtbar durch Histon-H3-Phosphorylierung). Das **Zentrosom** dupliziert sich und wandert zu den Polen. Die **Kernhülle löst sich auf**. Der **Spindelapparat** (Mikrotubuli aus Zentrosomen) beginnt sich zu bilden.
+
+**Prometaphase:**
+Kernhülle vollständig aufgelöst. Spindelmikrotubuli heften sich an die **Kinetochore** der Chromosomen (Proteinstruktur am Zentromer). Chromosomen bewegen sich chaotisch.
+
+**Metaphase:**
+Alle Chromosomen sind an der **Metaphasenplatte** (Äquatorialplatte) ausgerichtet. **Spindel-Checkpoint** aktiv: Erst wenn alle Kinetochore besetzt sind → Signal für Anaphase.
+
+**Anaphase:**
+**Schwesterchromatiden trennen sich** (Protease Separase spaltet Cohesin, das die Chromatiden zusammenhält). Die Chromatiden werden zu entgegengesetzten Polen gezogen (Motorproteine: Kinesin, Dynein). Ergebnis: 46 Chromosomen pro Pol.
+
+**Telophase:**
+Chromosomen dekondensieren. **Kernhülle bildet sich neu** (aus ER-Membranen). Nukleolus taucht wieder auf.
+
+**Zytokinese:**
+Zellteilung durch **Kontraktilen Ring** (Aktin + Myosin II) → Einschnürung → 2 Tochterzellen. In Pflanzenzellen: Zellplatte (Phragmoplast aus Golgi-Vesikeln).
+
+> **Merke:** Anaphase = Schwesterchromatiden trennen sich (Cohesin gespalten). NICHT die homologen Chromosomen! Das ist Meiose I.
+
+---
+
+## Meiose — Keimzellteilung
+
+Die Meiose ist eine spezialisierte Teilungsform zur Bildung von Keimzellen (Spermatozoen, Oozyten). Sie besteht aus zwei aufeinanderfolgenden Teilungen (Meiose I + Meiose II).
+
+**Meiose I — Reduktionsteilung:**
+Reduziert den Chromosomensatz von diploid (2n) auf haploid (n).
+
+*Prophase I (am längsten, Unterst.: Leptotän → Zygotän → Pachytän → Diplotän → Diakinese):*
+- **Zygotän:** Homologe Chromosomen lagern sich zusammen (**synapsis**) und bilden **Bivalente** (Tetraden: 4 Chromatiden)
+- **Pachytän:** **Crossing-over** findet statt! Am **Synaptonemalcomplex** tauschen homologe Chromosomen DNA-Segmente aus (Rekombination). Erzeugt neue Allel-Kombinationen → genetische Vielfalt!
+- **Diplotän:** Homologe beginnen, sich zu trennen. Sichtbar werden **Chiasmata** (physische Kreuzungspunkte des Crossing-overs)
+
+*Metaphase I:*
+**Bivalente** (nicht einzelne Chromosomen wie in der Mitose) richten sich an der Metaphasenplatte aus. **Zufällige Ausrichtung der Bivalente** → weitere Quelle genetischer Variabilität (bei 23 Bivalenten: 2²³ = 8,4 Millionen verschiedene Kombinationen).
+
+*Anaphase I:*
+**Homologe Chromosomen trennen sich** (nicht die Schwesterchromatiden!). Jeder Pol erhält ein Chromosom pro homologem Paar (jeweils aus 2 Schwesterchromatiden bestehend). Das Cohesin an Zentromerregionen bleibt intakt (Schutzmechanismus durch Shugoshin).
+
+*Telophase I + Zytokinese I:*
+2 haploide Zellen mit je n Chromosomen (jedes Chromosom = 2 Schwesterchromatiden).
+
+**Meiose II — Äquationsteilung (wie Mitose):**
+Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide Zellen (n), genetisch verschieden.
+
+> **Merke:** Meiose I = homologe Chromosomen trennen sich (Reduktion). Meiose II = Schwesterchromatiden trennen sich (wie Mitose). Crossing-over passiert NUR in Prophase I!
+
+---
+
+## Vergleichstabelle: Mitose vs. Meiose
+
+| Merkmal | Mitose | Meiose |
+|---------|--------|--------|
+| Zelltyp | Somatische Zellen | Keimzellen (Gonaden) |
+| Teilungen | 1 | 2 (I + II) |
+| Tochterzellen | 2 | 4 |
+| Chromosomensatz | Diploid (2n → 2n) | Haploid (2n → n) |
+| Genetische Identität | Identisch | Genetisch verschieden |
+| Crossing-over | Nein (praktisch nie) | Ja (Prophase I) |
+| Bivalente | Nein | Ja (Meiose I) |
+| Funktion | Wachstum, Reparatur | Gametenbildung |
+
+---
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Wann trennen sich Schwesterchromatiden?" → Anaphase (Mitose) und Anaphase II (Meiose)
+- "Wann trennen sich homologe Chromosomen?" → Anaphase I (nur Meiose)
+- "Was ist ein Bivalent?" → 2 homologe Chromosomen (mit je 2 Schwesterchromatiden = 4 Chromatiden)
+- "Was passiert beim Crossing-over?" → DNA-Austausch zwischen homologen Chromosomen in Prophase I → neue Allelkombinationen
+
+**Achtung — typische Verwechslungen:**
+- Mitose Anaphase: Schwesterchromatiden trennen sich (NICHT homologe Chromosomen!)
+- Meiose I Anaphase: Homologe Chromosomen trennen sich (Schwesterchromatiden bleiben verbunden!)
+- "Haploid" vs. "1 Chromatide": Nach Meiose I haben die Zellen n Chromosomen, aber jedes besteht noch aus 2 Schwesterchromatiden (technisch: haploid aber mit verdoppelter DNA)
+- G0 ≠ G1: G0 ist eine Ruhephase außerhalb des aktiven Zellzyklus
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Mensch: 46 Chromosomen (2n=46), 23 Chromosomenpaare
+- Mitose-Ergebnis: 2 Zellen mit je 46 Chromosomen (2n)
+- Meiose-Ergebnis: 4 Zellen mit je 23 Chromosomen (n)
+- G0: Neuronen, Herzmuskelzellen (posimitotisch, kein Zellzyklus mehr)
+- S-Phase: DNA-Gehalt steigt von 2n auf 4n (Chromatidenzahl steigt, nicht Chromosomenzahl!)
+- Non-disjunction in Meiose I → alle 4 Tochterzellen betroffen; in Meiose II → 2 von 4 betroffen
+
+**Klinische Relevanz:**
+- **Non-disjunction** (Fehltrennung): Trisomie 21 (Down-Syndrom, Risiko mit Alter der Mutter steigt), Trisomie 18 (Edwards), Trisomie 13 (Patau)
+- Monosomie X: Turner-Syndrom (45,X0)
+- XXY: Klinefelter-Syndrom (47,XXY)
+- Kontrollpunktverlust → Onkogenese: p53-Mutation (häufigste Krebsmutation, ~50% aller Tumoren), Rb-Verlust (Retinoblastom)`,
+      merksätze: [
+        "Mitose: 2n → 2 × 2n (identisch). Meiose: 2n → 4 × n (genetisch verschieden). Der Schlüssel: Meiose hat 2 Teilungen!",
+        "Crossing-over: Austausch von DNA-Segmenten zwischen homologen Chromosomen in der Prophase I. Erzeugt genetische Vielfalt.",
+        "Anaphase Mitose/Meiose II: Schwesterchromatiden trennen sich. Anaphase I (Meiose): Homologe Chromosomen trennen sich.",
+        "Spindel-Checkpoint: Erst wenn ALLE Kinetochore besetzt sind, beginnt die Anaphase. Fehler → Non-disjunction.",
+        "Non-disjunction → Trisomie (47 Chromosomen) oder Monosomie (45). Trisomie 21 = Down-Syndrom.",
+        "G0-Phase: Ruhephase, aus der Zellen nicht mehr in den Zellzyklus zurückkehren (Neurone, Herzmuskelzellen).",
+        "Cyclin D/CDK4 → G1/S-Checkpoint. Cyclin B/CDK1 → G2/M-Checkpoint. Cycline schwanken; CDKs sind konstant.",
+      ],
+      selfTest: [
+        {
+          question: "Eine Zelle tritt in die S-Phase ein. Was passiert mit dem DNA-Gehalt?",
+          options: [
+            "Der DNA-Gehalt bleibt unverändert bei 2n",
+            "Der DNA-Gehalt verdoppelt sich von 2n auf 4n (Chromosomenzahl bleibt 2n)",
+            "Die Chromosomenzahl verdoppelt sich von 2n auf 4n",
+            "Der DNA-Gehalt halbiert sich von 2n auf n",
+            "Nur die mitochondriale DNA wird repliziert",
+          ],
+          correctIndex: 1,
+          explanation:
+            "In der S-Phase wird die gesamte DNA repliziert: Jedes Chromosom besteht danach aus 2 Schwesterchromatiden, die am Zentromer verbunden sind. Der DNA-Gehalt (Menge) steigt von 2n auf 4n, aber die Chromosomenzahl bleibt 2n — die Chromosomen sind nur verdoppelt (jedes = 2 Chromatiden). Erst die Anaphase trennt die Schwesterchromatiden.",
+          hints: [
+            "S-Phase = Synthese, also DNA-Synthese. Was passiert mit der DNA-Menge?",
+            "Chromosomenzahl ≠ DNA-Gehalt. Ein Chromosom kann aus 1 oder 2 Chromatiden bestehen.",
+          ],
+          difficulty: 2,
+          tags: ["s-phase", "dna-replikation", "zellzyklus"],
+        },
+        {
+          question: "Was unterscheidet die Anaphase I der Meiose von der Anaphase der Mitose?",
+          options: [
+            "In der Anaphase I trennen sich Schwesterchromatiden; in der Mitose-Anaphase homologe Chromosomen",
+            "In der Anaphase I trennen sich homologe Chromosomen; in der Mitose-Anaphase Schwesterchromatiden",
+            "Beide Anaphasen sind identisch — es trennen sich immer Schwesterchromatiden",
+            "In der Anaphase I entstehen neue Chromosomen durch Crossing-over",
+            "Die Anaphase I findet im Zytoplasma statt, die Mitose-Anaphase im Kern",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Dies ist der entscheidende Unterschied: In der Mitose-Anaphase (und Meiose II-Anaphase) trennen sich Schwesterchromatiden, nachdem Cohesin durch Separase gespalten wird. In der Meiose-I-Anaphase trennen sich die homologen Chromosomen voneinander — die Schwesterchromatiden bleiben am Zentromer verbunden (Shugoshin schützt das zentromere Cohesin). Das Crossing-over findet in der Prophase I statt, nicht in der Anaphase.",
+          hints: [
+            "Meiose I = Reduktionsteilung. Was wird reduziert? Der Chromosomensatz!",
+            "Homologe Chromosomen = väterliches + mütterliches Chromosom des gleichen Paares.",
+          ],
+          difficulty: 2,
+          tags: ["meiose", "mitose", "anaphase", "schwesterchromatiden"],
+        },
+        {
+          question:
+            "Beim Crossing-over in der Prophase I tauschen homologe Chromosomen DNA-Abschnitte aus. Was ist die genetische Konsequenz?",
+          options: [
+            "Es entstehen Chromosomen mit neuen Allelkombinationen (Rekombination)",
+            "Es entstehen Chromosomen mit verdoppeltem DNA-Gehalt",
+            "Crossing-over repariert Mutationen in der DNA",
+            "Das Crossing-over verhindert Trisomien",
+            "Es entstehen haploide Chromosomen direkt nach dem Crossing-over",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Crossing-over ist der physische Austausch von DNA-Segmenten zwischen homologen Chromatiden am Synaptonemalcomplex (Pachytän der Prophase I). Dadurch entstehen Rekombinanten-Chromosomen mit neuen Allelkombinationen, die weder dem väterlichen noch dem mütterlichen Chromosom exakt entsprechen. Dies ist die wichtigste Quelle genetischer Variabilität (neben der zufälligen Ausrichtung der Bivalente). Pro Bivalent gibt es mindestens ein Chiasmata (physische Kreuzungsstelle).",
+          hints: [
+            "Crossing-over = Rekombination. Was ist das Ergebnis der Rekombination?",
+            "Neue Kombination väterlicher + mütterlicher Allele = neue genetische Variante.",
+          ],
+          difficulty: 2,
+          tags: ["crossing-over", "rekombination", "prophase-i", "meiose"],
+        },
+        {
+          question:
+            "Ein Ei und ein Spermium mit je einem zusätzlichen Chromosom 21 vereinigen sich. Welcher Chromosomensatz hat das Zygote?",
+          options: [
+            "45,X0 (Turner-Syndrom)",
+            "47,XXY (Klinefelter-Syndrom)",
+            "47,+21 (Trisomie 21, Down-Syndrom)",
+            "46,XX (normal)",
+            "48,XXXX (Tetra-X-Syndrom)",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Wenn sowohl Ei als auch Spermium durch Non-disjunction je ein zusätzliches Chromosom 21 erhalten haben, hat das Zygote 47 Chromosomen mit drei Kopien von Chromosom 21 → Trisomie 21 = Down-Syndrom. Non-disjunction kann in Meiose I (beide Gameten aus einer Keimzelle betroffen) oder Meiose II (nur 2 von 4 Gameten betroffen) auftreten. Das Risiko für Trisomie 21 steigt stark mit dem Alter der Mutter (v.a. >35 Jahre).",
+          hints: [
+            "2 Chromosomen 21 (normal) + 1 extra = 3 Chromosomen 21 = Trisomie 21.",
+            "Trisomie = 47 Chromosomen. Welches Syndrom ist am häufigsten?",
+          ],
+          difficulty: 2,
+          tags: ["trisomie-21", "non-disjunction", "down-syndrom"],
+        },
+        {
+          question: "Der G1/S-Checkpoint wird hauptsächlich durch welches Molekül kontrolliert?",
+          options: [
+            "Cyclin B / CDK1 (MPF)",
+            "Cyclin D / CDK4 → Rb-Phosphorylierung → E2F-Freigabe",
+            "Separase / Securin",
+            "Shugoshin / PP2A",
+            "Importin-alpha / RanGTP",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Am G1/S-Checkpoint: Wachstumssignale (Mitogene) induzieren Cyclin-D-Expression → Cyclin D bindet CDK4/6 → Komplex phosphoryliert Rb (Retinoblastom-Protein) → Rb lässt Transkriptionsfaktor E2F frei → E2F aktiviert Gene für S-Phase-Eintritt (Cyclin E, DNA-Polymerase). Rb ist ein Tumorsuppressor — bei Rb-Verlust (Retinoblastom-Mutation) kann die Zelle unkontrolliert in die S-Phase eintreten. Cyclin B/CDK1 kontrolliert den G2/M-Checkpoint. Separase spaltet Cohesin in der Anaphase.",
+          hints: [
+            "G1 → S: Zelle entscheidet, ob sie teilt. Welches Cyclin ist in G1 aktiv?",
+            "Rb ist ein Tumorsuppressor — wenn er phosphoryliert wird, lässt er E2F frei.",
+          ],
+          difficulty: 3,
+          tags: ["g1-s-checkpoint", "cyclin-d", "cdk4", "rb", "e2f"],
+        },
+      ],
+      altfragen: [
+        {
+          question:
+            "Eine Zelle in der Metaphase I der Meiose unterscheidet sich von einer Zelle in der Metaphase der Mitose dadurch, dass...",
+          options: [
+            {
+              id: "A",
+              text: "...in der Metaphase I Einzelchromosomen an der Äquatorialplatte ausgerichtet sind",
+            },
+            {
+              id: "B",
+              text: "...in der Metaphase I Bivalente (Tetraden aus 4 Chromatiden) an der Äquatorialplatte ausgerichtet sind",
+            },
+            {
+              id: "C",
+              text: "...in der Metaphase I keine Spindelfasern vorhanden sind",
+            },
+            {
+              id: "D",
+              text: "...in der Metaphase I die Chromosomenzahl bereits haploid ist",
+            },
+            {
+              id: "E",
+              text: "...in der Metaphase I Crossing-over stattfindet",
+            },
+          ],
+          correctOptionId: "B",
+          explanation:
+            "In der Mitose-Metaphase richten sich Einzelchromosomen (mit 2 Schwesterchromatiden) an der Äquatorialplatte aus. In der Meiose-I-Metaphase richten sich Bivalente aus (= 2 homologe Chromosomen, je mit 2 Schwesterchromatiden = 4 Chromatiden pro Bivalent, auch 'Tetrade' genannt). Crossing-over fand bereits in der Prophase I statt — nicht in der Metaphase.",
+        },
+        {
+          question: "Welche Aussage zur G0-Phase des Zellzyklus ist korrekt?",
+          options: [
+            {
+              id: "A",
+              text: "G0 ist ein Stadium zwischen S-Phase und G2, in dem DNA repariert wird",
+            },
+            {
+              id: "B",
+              text: "G0-Zellen haben weniger DNA als G1-Zellen",
+            },
+            {
+              id: "C",
+              text: "G0 ist eine Ruhephase, in der differenzierte Zellen (z.B. Neuronen) den Zellzyklus verlassen haben",
+            },
+            {
+              id: "D",
+              text: "G0-Zellen sind immer maligne transformiert",
+            },
+            {
+              id: "E",
+              text: "G0 kommt ausschließlich in embryonalen Stammzellen vor",
+            },
+          ],
+          correctOptionId: "C",
+          explanation:
+            "G0 ist eine Ruhephase, in die hochdifferenzierte Zellen (Neurone, Herzmuskelzellen, Skelettmuskelzellen) dauerhaft austreten. Sie teilen sich nicht mehr, haben aber einen normalen (2n) DNA-Gehalt. G0 liegt 'neben' G1, nicht zwischen S und G2. Nicht G0-Zellen sind maligne — im Gegenteil: unkontrollierte Proliferation (Verlassen von G0 / Checkpoint-Defekte) ist Kennzeichen maligner Zellen.",
+        },
+        {
+          question: "Welche der folgenden Aussagen zur Meiose I ist FALSCH?",
+          options: [
+            {
+              id: "A",
+              text: "In der Prophase I findet Crossing-over zwischen homologen Chromosomen statt",
+            },
+            {
+              id: "B",
+              text: "In der Anaphase I trennen sich die Schwesterchromatiden",
+            },
+            {
+              id: "C",
+              text: "In der Metaphase I sind Bivalente an der Äquatorialplatte ausgerichtet",
+            },
+            {
+              id: "D",
+              text: "Nach Meiose I sind die Tochterzellen haploid (n Chromosomen)",
+            },
+            {
+              id: "E",
+              text: "Meiose I wird auch als Reduktionsteilung bezeichnet",
+            },
+          ],
+          correctOptionId: "B",
+          explanation:
+            "FALSCH ist B: In der Anaphase I trennen sich NICHT die Schwesterchromatiden, sondern die homologen Chromosomen! Die Schwesterchromatiden bleiben am Zentromer verbunden (durch Shugoshin-geschütztes Cohesin). Erst in der Anaphase II (oder Mitose-Anaphase) trennen sich die Schwesterchromatiden. Alle anderen Aussagen sind korrekt: Crossing-over in Prophase I (A), Bivalente in Metaphase I (C), haploide Tochterzellen nach Meiose I (D), Meiose I = Reduktionsteilung (E).",
+        },
+        {
+          question:
+            "Eine Frau mit Trisomie 21 (Down-Syndrom) hat 47 Chromosomen. In welchem Stadium der Meiose trat die Non-disjunction am wahrscheinlichsten auf?",
+          options: [
+            {
+              id: "A",
+              text: "S-Phase (DNA-Replikation)",
+            },
+            {
+              id: "B",
+              text: "Prophase II (Meiose II)",
+            },
+            {
+              id: "C",
+              text: "Anaphase I (Meiose I) — Fehltrennung der homologen Chromosomen 21",
+            },
+            {
+              id: "D",
+              text: "Telophase der Mitose",
+            },
+            {
+              id: "E",
+              text: "G2-Phase (Checkpoint-Versagen)",
+            },
+          ],
+          correctOptionId: "C",
+          explanation:
+            "Non-disjunction bei Trisomie 21 tritt am häufigsten in der Meiose I auf — die homologen Chromosomen 21 trennen sich nicht, sodass eine Eizelle beide Chromosomen 21 erhält. Nach Befruchtung mit einem normalen Spermium (1× Chromosom 21) hat die Zygote 3× Chromosom 21. Non-disjunction in Meiose II betrifft Schwesterchromatiden (dann erhalten 2 von 4 Gameten 2 Kopien). Der Bezug zur mütterlichen Alterung liegt darin, dass primäre Oozyten seit der Geburt in einem prolongierten Diplotän (Prophase I) sistieren — bis zu 50 Jahre! Das Risiko für Fehler steigt.",
+        },
+        {
+          question:
+            "Welche Protease spaltet Cohesin zwischen Schwesterchromatiden und löst damit die Anaphase aus?",
+          options: [
+            {
+              id: "A",
+              text: "Caspase-3",
+            },
+            {
+              id: "B",
+              text: "Separase (nach Securin-Abbau durch APC/C)",
+            },
+            {
+              id: "C",
+              text: "Ubiquitin-Ligase",
+            },
+            {
+              id: "D",
+              text: "Shugoshin",
+            },
+            {
+              id: "E",
+              text: "CDK1 / Cyclin B",
+            },
+          ],
+          correctOptionId: "B",
+          explanation:
+            "Separase ist eine Protease, die Cohesin (den Proteinkomplex, der Schwesterchromatiden verbindet) spaltet und damit die Anaphase einleitet. Normalerweise ist Separase durch Securin (Inhibitor) inaktiviert. Wenn der Spindel-Checkpoint bestätigt ist, aktiviert der APC/C (Anaphase Promoting Complex/Cyclosome, eine Ubiquitin-Ligase) die Ubiquitinierung und den Abbau von Securin → Separase wird frei → Cohesin-Spaltung → Chromatiden trennen sich. Shugoshin schützt das zentromere Cohesin in der Meiose I vor vorzeitiger Spaltung.",
+        },
+      ],
+      klinischerBezug:
+        "Trisomie 21 (Down-Syndrom): Non-disjunction in Meiose I (häufiger) oder II → Eizelle mit 2× Chromosom 21 → Trisomie 47,XX/XY,+21. Häufigste chromosomale Ursache geistiger Behinderung. Risiko bei Mutter >35 J.: ~1:350, bei >45 J.: ~1:20. Zusätzlich: Herzfehler (ASD/VSD, ~40%), Leukämierisiko erhöht, Alzheimer-Risiko (Chr. 21 trägt APP-Gen). Turner-Syndrom (45,X0): meist Non-disjunction im väterlichen Spermium. Klinefelter (47,XXY): Non-disjunction maternal oder paternal. Krebsentstehung durch Checkpoint-Defekte: TP53 (kodiert p53, 'Wächter des Genoms') ist in ~50% aller menschlichen Tumoren mutiert — ohne p53 kein Zellzyklus-Arrest nach DNA-Schäden → Tumorzellen akkumulieren weitere Mutationen.",
+    },
+
+    // ─── UK7 ────────────────────────────────────────────────────────────────
+    {
+      id: "bio-1-07",
+      title: "Energiestoffwechsel — Glykolyse, Citratzyklus & Atmungskette",
+      stichworte: [
+        "Glykolyse",
+        "Citratzyklus",
+        "Atmungskette",
+        "ATP",
+        "NADH",
+        "Pyruvat",
+        "Acetyl-CoA",
+        "Oxidative Phosphorylierung",
+        "Chemiosmose",
+        "Anaerober Stoffwechsel",
+      ],
+      content: `## Überblick
+
+Der zelluläre Energiestoffwechsel wandelt chemische Energie aus Nährstoffen in ATP um — die universelle Energiewährung der Zelle. Der aerobe Abbau einer Glucosemolekül liefert ~30–32 ATP in drei aufeinanderfolgenden Prozessen.
+
+**Das Wichtigste auf einen Blick:**
+- Glykolyse: Glucose → 2 Pyruvat (Zytoplasma, 2 ATP netto, 2 NADH)
+- Pyruvat-Dehydrogenase: Pyruvat → Acetyl-CoA (Mitochondrien-Matrix, Brückenschritt)
+- Citratzyklus: Acetyl-CoA → CO₂ + Reduktionsäquivalente (Matrix, 2 GTP, 6 NADH, 2 FADH₂ pro Glucose)
+- Atmungskette: NADH/FADH₂ → ATP via Protonengradient (innere Mitochondrienmembran, ~26 ATP)
+- Anaerob (ohne O₂): nur 2 ATP + Laktat
+
+---
+
+## Glykolyse — Der erste Schritt
+
+Die Glykolyse ist eine Sequenz von 10 enzymatischen Reaktionen im **Zytoplasma**, die Glucose (C₆) in 2 Pyruvat (C₃) spaltet. Sie ist sowohl aerob als auch anaerob möglich und liefert sofort verfügbares ATP.
+
+**Die 10 Schritte in drei Phasen:**
+
+*Phase 1 — Energieinvestitionsphase (Schritte 1–5):*
+Glucose wird phosphoryliert (Verbrauch von 2 ATP) und aktiviert. Glucose (6C) → Fructose-1,6-bisphosphat → Spaltung in 2 Triosen (Glycerinaldehyd-3-Phosphat, G3P).
+
+*Phase 2 — Energiekonversionsphase (Schritte 6–10):*
+Aus 2 G3P entstehen 2 Pyruvat. Pro Triose: 2 ATP + 1 NADH. Für beide Triosen: 4 ATP + 2 NADH.
+
+**Nettobilanz der Glykolyse:**
+- 1 Glucose → 2 Pyruvat
+- 2 ATP (netto: 4 gebildet − 2 investiert)
+- 2 NADH (im Zytoplasma)
+
+**Schlüsselenzyme der Glykolyse:**
+- **Hexokinase** (Schritt 1): Glucose + ATP → Glucose-6-Phosphat + ADP. Fängt Glucose in der Zelle "ein" (Phosphorylierung verhindert Rücktransport durch GLUT-Transporter). Isoform in der Leber: Glukokinase (niedrigere Affinität, nicht durch G6P gehemmt → funktioniert als Glucosesensor).
+- **Phosphofructokinase-1 (PFK-1)** (Schritt 3, Schlüsselenzym!): Fructose-6-Phosphat → Fructose-1,6-bisphosphat. **Wichtigstes Regulationsenzym der Glykolyse.** Gehemmt durch ATP (hohe Energie → Glykolyse bremsen) und Citrat (Citratzyklus läuft bereits). Aktiviert durch AMP/ADP (niedrige Energie → Glykolyse beschleunigen) und Fructose-2,6-bisphosphat (Insulin-Signal). Irreversible Reaktion!
+- **Pyruvat-Kinase** (Schritt 10): Phosphoenolpyruvat → Pyruvat + ATP. Gehemmt durch ATP und Alanin (Glukoneogenese-Signal).
+
+> **Merke:** PFK-1 = das wichtigste Regulationsenzym der Glykolyse. ATP hemmt, AMP aktiviert. Insulin aktiviert über Fructose-2,6-bisphosphat. Merke: "ATP bremst, wenn Energie da ist."
+
+---
+
+## Pyruvat-Dehydrogenase — Der Brückenschritt
+
+Der **Pyruvat-Dehydrogenase-Komplex (PDH)** ist ein riesiger Multi-Enzymkomplex (3 Enzyme, 5 Cofaktoren) in der **Mitochondrien-Matrix**. Er katalysiert die oxidative Decarboxylierung von Pyruvat:
+
+**Reaktion:** Pyruvat + CoA + NAD⁺ → Acetyl-CoA + CO₂ + NADH
+
+Pro Glucose (2 Pyruvat): 2 Acetyl-CoA + 2 CO₂ + 2 NADH
+
+**Cofaktoren des PDH:** Thiaminpyrophosphat (TPP, aus Vitamin B1/Thiamin!), Liponsäure, CoA (aus Pantothensäure/B5), FAD (aus Riboflavin/B2), NAD⁺ (aus Niacin/B3).
+
+**Regulation:** PDH-Kinase phosphoryliert und inaktiviert PDH (bei hohem ATP, NADH, Acetyl-CoA). PDH-Phosphatase aktiviert PDH (bei Calcium, Insulin). **Klinisch wichtig:** Thiamin (B1)-Mangel → PDH-Funktionsverlust → Pyruvat akkumuliert → Laktat ↑. Bei Alkoholismus: Wernicke-Enzephalopathie (Thiamin-Mangel → PDH-Defekt → Glukosestoffwechsel im Gehirn zusammengebrochen).
+
+> **Merke:** Brückenschritt = Pyruvat → Acetyl-CoA. Findet in Mitochondrien statt. Thiamin-Mangel → PDH-Defekt → Wernicke-Enzephalopathie!
+
+---
+
+## Citratzyklus (Krebszyklus) — Vollständige Oxidation
+
+Der Citratzyklus (auch Krebszyklus nach Hans Krebs, Nobelpreis 1953) findet in der **Mitochondrien-Matrix** statt. In jedem Zyklus werden 2 Kohlenstoffatome (als Acetyl-CoA) vollständig zu CO₂ oxidiert.
+
+**Die 8 Schritte (vereinfacht):**
+1. Acetyl-CoA (C2) + Oxalacetat (C4) → **Citrat** (C6) [Citrat-Synthase]
+2. Citrat → Isocitrat (Umstrukturierung)
+3. Isocitrat → α-Ketoglutarat + CO₂ + **NADH** [Isocitrat-Dehydrogenase, reguliert!]
+4. α-Ketoglutarat → Succinyl-CoA + CO₂ + **NADH** [α-Ketoglutarat-DH, Thiamin-abhängig!]
+5. Succinyl-CoA → Succinat + **GTP** [Succinyl-CoA-Synthetase — Substratkettenphosphorylierung]
+6. Succinat → Fumarat + **FADH₂** [Succinat-Dehydrogenase — einziges Membranenzym, Komplex II!]
+7. Fumarat → Malat (Hydratisierung)
+8. Malat → Oxalacetat + **NADH** [Malat-Dehydrogenase → Oxalacetat regeneriert]
+
+**Bilanz pro Acetyl-CoA (1 Durchgang):**
+3 NADH + 1 FADH₂ + 1 GTP + 2 CO₂
+
+**Bilanz pro Glucose (2 Durchgänge):**
+6 NADH + 2 FADH₂ + 2 GTP + 4 CO₂
+
+**Regulationsenzyme:** Citrat-Synthase (gehemmt durch NADH, Succinyl-CoA, ATP; aktiviert durch AMP), Isocitrat-DH (gehemmt durch NADH, ATP; aktiviert durch ADP, Ca²⁺), α-Ketoglutarat-DH (gehemmt durch NADH, Succinyl-CoA).
+
+**Amphibolismus:** Der Citratzyklus liefert auch Vorläufer für Biosynthesen: α-Ketoglutarat → Glutamat (Aminosäure), Oxalacetat → Aspartat, Succinyl-CoA → Häm-Synthese, Citrat (im Zytoplasma) → Fettsäure-Synthese.
+
+> **Merke:** Pro Acetyl-CoA: 3 NADH, 1 FADH₂, 1 GTP. Citrat-Synthase + Isocitrat-DH = Hauptregulationspunkte. Succinat-DH = Komplex II der Atmungskette.
+
+---
+
+## Atmungskette und Oxidative Phosphorylierung
+
+Die Atmungskette überträgt die in NADH und FADH₂ gespeicherte Energie auf ATP. Sie befindet sich in der **inneren Mitochondrienmembran**.
+
+**Die 4 Komplexe:**
+- **Komplex I (NADH-Dehydrogenase):** NADH → NAD⁺ + 2e⁻ → pumpt 4 H⁺ in Intermembranraum. Hemmer: Rotenon (Insektizid), Metformin (schwacher Komplex-I-Inhibitor).
+- **Ubichinon (Coenzym Q10):** Mobiler Elektronenträger in der Membran. Verbindet Komplex I und II mit Komplex III.
+- **Komplex II (Succinat-Dehydrogenase):** FADH₂ → FAD + 2e⁻ → Ubichinon. Pumpt **keine** H⁺ (deshalb weniger ATP als NADH).
+- **Komplex III (Cytochrom-bc1-Komplex):** Überträgt Elektronen von Ubichinol auf Cytochrom c → pumpt 4 H⁺. Hemmer: Antimycin A.
+- **Cytochrom c:** Kleines, mobiles Häm-Protein im Intermembranraum. Überträgt Elektronen von Komplex III zu Komplex IV. **Bei Apoptose: wird aus Mitochondrien ins Zytoplasma freigesetzt → Caspase-9-Aktivierung!**
+- **Komplex IV (Cytochrom-c-Oxidase):** Überträgt Elektronen auf O₂ → H₂O. Pumpt 2 H⁺. **O₂ ist der finale Elektronenakzeptor!** Hemmer: Cyanid (CN⁻), Kohlenmonoxid (CO) blockieren Komplex IV → kein O₂-Verbrauch → Atmungskette stoppt.
+- **ATP-Synthase (Komplex V):** H⁺ fließen zurück durch die ATP-Synthase in die Matrix (Protonenkanal + Motorprotein) → Konformationsänderung → ADP + Pᵢ → ATP. **Chemiosmose (Mitchell-Hypothese, Nobelpreis 1978).** Hemmer: Oligomycin (schließt H⁺-Kanal), Dinitrophenol (DNP, Entkoppler: H⁺ leaken durch Membran ohne ATP-Synthese → Energie als Wärme).
+
+**P/O-Verhältnis (ATP pro Sauerstoffatom):**
+- NADH: ~2,5 ATP pro NADH (frühere Angabe: 3 ATP)
+- FADH₂: ~1,5 ATP pro FADH₂ (frühere Angabe: 2 ATP)
+
+> **Merke:** NADH → Komplex I → Q → Komplex III → Cyt c → Komplex IV → O₂ → H₂O. FADH₂ → Komplex II → Q (kein H⁺-Pumpen → weniger ATP). O₂ = finale Elektronenakzeptor. Cyanid blockiert Komplex IV!
+
+---
+
+## Gesamtbilanz des aeroben Glucoseabbaus
+
+| Phase | ATP (direkt) | NADH | FADH₂ | ATP aus OXPHOS |
+|-------|-------------|------|-------|----------------|
+| Glykolyse | 2 | 2 | 0 | ~5 |
+| Pyruvat-DH | 0 | 2 | 0 | ~5 |
+| Citratzyklus (×2) | 2 | 6 | 2 | ~19 |
+| **Gesamt** | **4** | **10** | **2** | **~26** |
+| **Gesamtnetto** | | | | **~30–32 ATP** |
+
+*(Ältere Lehrbücher: 36–38 ATP; neuere Berechnungen: 30–32 ATP durch realistischere P/O-Verhältnisse)*
+
+---
+
+## Anaerober Stoffwechsel
+
+Ohne Sauerstoff (Hypoxie) kann die Atmungskette nicht funktionieren. NADH muss regeneriert werden, damit die Glykolyse weiterlaufen kann.
+
+**Laktatgärung (im Muskel, Erythrozyten):**
+Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
+- Nur 2 ATP pro Glucose (keine Atmungskette!)
+- Regeneriert NAD⁺ für weitere Glykolyse
+- Laktat kann in der Leber zu Glucose rückumgewandelt werden (Cori-Zyklus)
+
+**Klinisch:** Laktatazidose bei Hypoxie (Sepsis, Herzstillstand, Schock), Metformin-Überdosierung (Komplex-I-Hemmung → mehr Laktat), Thiamin-Mangel (PDH-Ausfall → Pyruvat → Laktat).
+
+**Ethanolgärung** (nur Hefen, nicht im Menschen): Pyruvat → Acetaldehyd → Ethanol.
+
+---
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Wo findet Glykolyse statt?" → Zytoplasma (nicht Mitochondrien!)
+- "Was ist der finale Elektronenakzeptor der Atmungskette?" → O₂ (Wasser entsteht)
+- "Warum stirbt man an Cyanidvergiftung?" → Komplex IV blockiert → keine Atmungskette → kein ATP → Zelluntergang
+- "Was ist der Unterschied zwischen Substratkettenphosphorylierung und oxidativer Phosphorylierung?" → Substrat (direkt, ATP aus Glykolyse/Citratzyklus); oxidativ (indirekt, via Protonengradient, ATP-Synthase)
+
+**Achtung — typische Verwechslungen:**
+- Glykolyse findet im Zytoplasma statt (nicht im Mitochondrium!)
+- Citratzyklus und Atmungskette sind in Mitochondrien, aber in verschiedenen Kompartimenten: Citratzyklus = Matrix, Atmungskette = innere Membran
+- FADH₂ liefert weniger ATP als NADH (weil es Komplex II eingibt, der keine H⁺ pumpt)
+- "30–32 ATP" ist die moderne Zahl (alte Bücher: 36–38 ATP)
+- Succinat-Dehydrogenase = Komplex II der Atmungskette UND Citratzyklus-Enzym (Verbindung!)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Glykolyse: 2 ATP netto, 2 NADH, 2 Pyruvat
+- Pyruvat-DH: 1 CO₂, 1 NADH, 1 Acetyl-CoA pro Pyruvat (×2 pro Glucose)
+- Citratzyklus pro Acetyl-CoA: 3 NADH, 1 FADH₂, 1 GTP, 2 CO₂
+- Gesamt aerob: ~30–32 ATP
+- Gesamt anaerob: 2 ATP (Laktatgärung)
+- NADH → ~2,5 ATP; FADH₂ → ~1,5 ATP
+- PFK-1: aktiviert durch AMP/ADP; gehemmt durch ATP/Citrat`,
+      merksätze: [
+        "Glykolyse = Zytoplasma, 2 ATP netto, 2 NADH. PFK-1 = Schlüsselenzym, ATP hemmt, AMP aktiviert.",
+        "Pyruvat-DH: Pyruvat → Acetyl-CoA + CO₂ + NADH. Brückenschritt! Thiamin (B1) nötig. Wernicke bei B1-Mangel.",
+        "Citratzyklus pro Acetyl-CoA: 3 NADH + 1 FADH₂ + 1 GTP + 2 CO₂.",
+        "Atmungskette: NADH → Komplex I, FADH₂ → Komplex II, Cytochrom c → Komplex IV → O₂ → H₂O. ATP-Synthase via Chemiosmose.",
+        "Cyanid blockiert Komplex IV → keine Atmungskette → kein ATP → Zytotoxizität.",
+        "Anaerob: Pyruvat → Laktat (LDH) + NAD⁺ regeneriert. Nur 2 ATP. Laktatazidose bei Hypoxie/Sepsis.",
+        "Gesamt aerob: ~30–32 ATP pro Glucose. NADH = ~2,5 ATP, FADH₂ = ~1,5 ATP.",
+      ],
+      selfTest: [
+        {
+          question: "Warum liefert FADH₂ weniger ATP als NADH in der Atmungskette?",
+          options: [
+            "FADH₂ enthält weniger Elektronen als NADH",
+            "FADH₂ gibt Elektronen in Komplex II ein, der keine Protonen pumpt — damit geringerer Protonengradient → weniger ATP",
+            "FADH₂ wird im Zytoplasma produziert und muss erst transportiert werden",
+            "FADH₂ ist ein Hemmstoff der ATP-Synthase",
+            "FADH₂ reagiert direkt mit O₂ ohne ATP-Synthase",
+          ],
+          correctIndex: 1,
+          explanation:
+            "NADH gibt Elektronen in Komplex I ein, der dabei 4 H⁺ in den Intermembranraum pumpt. FADH₂ gibt Elektronen in Komplex II (Succinat-Dehydrogenase) ein, der KEINE Protonen pumpt. Da weniger H⁺ in den Intermembranraum transportiert werden, fließen auch weniger H⁺ durch die ATP-Synthase zurück → weniger ATP. Deshalb: NADH ~2,5 ATP; FADH₂ ~1,5 ATP. Succinat-Dehydrogenase = Komplex II ist das einzige Enzym, das sowohl im Citratzyklus als auch als Teil der Atmungskette fungiert.",
+          hints: [
+            "Wo 'landen' die Elektronen von FADH₂ in der Atmungskette?",
+            "Komplex II pumpt keine Protonen — was bedeutet das für den Gradienten?",
+          ],
+          difficulty: 3,
+          tags: ["fadh2", "nadh", "atmungskette", "komplex-ii", "atp"],
+        },
+        {
+          question:
+            "Ein Patient mit Cyanidvergiftung kollabiert trotz normaler Sauerstoffsättigung. Warum?",
+          options: [
+            "Cyanid blockiert die Hämoglobin-Bindung an O₂",
+            "Cyanid hemmt PFK-1 und stoppt die Glykolyse",
+            "Cyanid blockiert Komplex IV (Cytochrom-c-Oxidase) → O₂ kann nicht als Elektronenakzeptor dienen → Atmungskette stoppt",
+            "Cyanid aktiviert die Laktatdehydrogenase → Laktatazidose",
+            "Cyanid löst die innere Mitochondrienmembran auf",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Cyanid (CN⁻) bindet irreversibel an Fe³⁺ im Häm-Zentrum der Cytochrom-c-Oxidase (Komplex IV) und blockiert die Übertragung von Elektronen auf O₂. Die Atmungskette kommt zum Stillstand: kein Protonengradient → kein ATP. O₂ ist zwar im Blut vorhanden (normale Sättigung!), kann aber nicht verwertet werden. Venöses Blut erscheint kirschrot (hohe O₂-Sättigung). Behandlung: Hydroxocobalamin (bindet CN⁻), Natriumthiosulfat (CN⁻ → Thiocyanat), Amylnitrit (erzeugt Met-Hb, das CN⁻ bindet).",
+          hints: [
+            "Komplex IV = Cytochrom-c-Oxidase. Was ist seine Funktion?",
+            "Cyanid bindet an Eisen. Welches Eisen ist in Komplex IV?",
+          ],
+          difficulty: 2,
+          tags: ["cyanid", "komplex-iv", "atmungskette", "vergiftung"],
+        },
+        {
+          question: "Welches Enzym ist das wichtigste Regulationsenzym der Glykolyse?",
+          options: [
+            "Hexokinase",
+            "Glukokinase",
+            "Phosphofructokinase-1 (PFK-1)",
+            "Pyruvat-Kinase",
+            "Aldolase",
+          ],
+          correctIndex: 2,
+          explanation:
+            "PFK-1 (Phosphofructokinase-1) ist das wichtigste Regulationsenzym der Glykolyse. Sie katalysiert eine irreversible Reaktion (Fructose-6-Phosphat → Fructose-1,6-bisphosphat) und ist der erste zyklus-spezifische Schritt der Glykolyse. Regulation: Gehemmt durch ATP (hohe Energie → Glykolyse bremsen), Citrat (Citratzyklus läuft → Energie vorhanden). Aktiviert durch AMP/ADP (Energiemangel → Glykolyse beschleunigen), Fructose-2,6-bisphosphat (Insulin-Signal → Glykolyse stimulieren). Hexokinase phosphoryliert Glucose (Schritt 1), ist aber durch G6P reguliert (Produkt-Hemmung), nicht das Hauptregulationsenzym.",
+          hints: [
+            "Das Schlüsselenzym reguliert den 'point of no return' der Glykolyse.",
+            "ATP hemmt, AMP aktiviert — welches Enzym reagiert so auf den Energiestatus?",
+          ],
+          difficulty: 1,
+          tags: ["pfk-1", "glykolyse", "regulation", "schlüsselenzym"],
+        },
+        {
+          question:
+            "Was geschieht mit Pyruvat in der Skelettmuskulatur bei intensiver Belastung ohne ausreichend Sauerstoff?",
+          options: [
+            "Pyruvat wird direkt in ATP umgewandelt",
+            "Pyruvat wird zu Acetyl-CoA in der Mitochondrien-Matrix umgewandelt",
+            "Pyruvat wird durch Laktat-Dehydrogenase (LDH) zu Laktat reduziert → NAD⁺ wird regeneriert",
+            "Pyruvat verlässt die Zelle und wird in der Leber abgebaut",
+            "Pyruvat wird zu Glucose rückumgewandelt (Glukoneogenese im Muskel)",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Bei Sauerstoffmangel (intensiver Belastung) kann Pyruvat nicht in die Mitochondrien eingeschleust werden (Pyruvat-DH bremst). Die Glykolyse muss aber weiterlaufen, um auch anaerob ATP zu produzieren. Dafür muss NAD⁺ regeneriert werden: LDH reduziert Pyruvat zu Laktat und oxidiert NADH → NAD⁺ wieder verfügbar. Das Laktat wird ins Blut abgegeben und in der Leber (Cori-Zyklus) zu Glucose rückumgewandelt. Glukoneogenese im Muskel findet nicht statt — der Muskel besitzt nicht das nötige Enzym Glucose-6-Phosphatase.",
+          hints: [
+            "Ohne O₂: keine Atmungskette. Was blockiert? NADH kann nicht oxidiert werden.",
+            "LDH = Laktat-Dehydrogenase. Was macht sie mit Pyruvat?",
+          ],
+          difficulty: 2,
+          tags: ["pyruvat", "laktat", "ldh", "anaerob", "cori-zyklus"],
+        },
+        {
+          question: "Welche Funktion hat die Mitchell-Chemiosmose-Hypothese erklärt?",
+          options: [
+            "Dass Glucose direkt zu ATP phosphoryliert wird",
+            "Dass ein Protonengradient über der inneren Mitochondrienmembran die ATP-Synthase antreibt",
+            "Dass Elektronen direkt von NADH auf ADP übertragen werden",
+            "Dass die Atmungskette ausschließlich in der äußeren Mitochondrienmembran lokalisiert ist",
+            "Dass Sauerstoff direkt mit NADH reagiert und dabei ATP freigesetzt wird",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Peter Mitchell erhielt 1978 den Nobelpreis für die Chemiosmose-Hypothese: Die Komplexe I, III und IV pumpen H⁺ aus der Matrix in den Intermembranraum → elektrochemischer Protonengradient (ΔpH + ΔΨ = Protonenmotivkraft). H⁺ fließen energetisch abwärts durch die ATP-Synthase (F₀F₁-ATPase) zurück in die Matrix → Rotation der F₀-Untereinheit → Konformationsänderung der F₁-Untereinheit → ADP + Pᵢ → ATP. Entkoppler (Dinitrophenol, DNP) dissipieren den Protonengradient als Wärme ohne ATP-Synthese → Körperwärme steigt (historisch als 'Diätmittel' missbraucht, tödlich!).",
+          hints: [
+            "Mitchell = Chemiosmose. Was ist das Kernprinzip?",
+            "H⁺-Gradient über eine Membran → Energie → was wird damit gemacht?",
+          ],
+          difficulty: 2,
+          tags: ["chemiosmose", "mitchell", "atp-synthase", "protonengradient"],
+        },
+      ],
+      altfragen: [
+        {
+          question: "Welche Aussage zum Citratzyklus (Krebszyklus) ist korrekt?",
+          options: [
+            {
+              id: "A",
+              text: "Der Citratzyklus findet in der inneren Mitochondrienmembran statt",
+            },
+            {
+              id: "B",
+              text: "Im Citratzyklus wird pro Acetyl-CoA: 3 NADH, 1 FADH₂, 1 GTP und 2 CO₂ produziert",
+            },
+            {
+              id: "C",
+              text: "Der Citratzyklus produziert ATP direkt durch oxidative Phosphorylierung",
+            },
+            {
+              id: "D",
+              text: "Succinat-Dehydrogenase ist ausschließlich ein Citratzyklus-Enzym",
+            },
+            {
+              id: "E",
+              text: "Der Citratzyklus läuft auch vollständig unter anaeroben Bedingungen ab",
+            },
+          ],
+          correctOptionId: "B",
+          explanation:
+            "Der Citratzyklus findet in der Mitochondrien-Matrix statt (A falsch — innere Membran = Atmungskette). Pro Acetyl-CoA-Durchgang werden 3 NADH, 1 FADH₂, 1 GTP (via Substratkettenphosphorylierung) und 2 CO₂ erzeugt (B korrekt). Die ATP-Synthese erfolgt in der Atmungskette (oxidative Phosphorylierung), nicht direkt im Citratzyklus (C falsch). Succinat-Dehydrogenase ist gleichzeitig Citratzyklus-Enzym und Komplex II der Atmungskette (D falsch). Ohne O₂ stoppt die Atmungskette → NAD⁺/FAD können nicht regeneriert werden → Citratzyklus kommt zum Stillstand (E falsch).",
+        },
+        {
+          question: "Welche der folgenden Verbindungen hemmt die Phosphofructokinase-1 (PFK-1)?",
+          options: [
+            { id: "A", text: "AMP (Adenosinmonophosphat)" },
+            { id: "B", text: "Fructose-2,6-bisphosphat" },
+            { id: "C", text: "ADP (Adenosindiphosphat)" },
+            { id: "D", text: "ATP (Adenosintriphosphat) und Citrat" },
+            { id: "E", text: "Insulin via AMPK-Aktivierung" },
+          ],
+          correctOptionId: "D",
+          explanation:
+            "PFK-1 wird gehemmt durch: ATP (hohe Energie → Glykolyse bremsen — allosterische Hemmung) und Citrat (Citratzyklus läuft bereits → Energie vorhanden). PFK-1 wird aktiviert durch: AMP und ADP (Energiemangel → Signal für mehr Glykolyse), Fructose-2,6-bisphosphat (F2,6-BP, gebildet durch PFK-2 unter Insulinstimulation → Insulin aktiviert Glykolyse). AMPK ist eine Energiesensorkinase, die bei hohem AMP/ATP-Verhältnis aktiv wird und die Glykolyse indirekt fördert — aber AMPK hemmt PFK-2 nicht, sondern ist eher in Fettsäureoxidation und Glucoseaufnahme involviert.",
+        },
+        {
+          question:
+            "Ein Patient mit Thiamin (Vitamin B1)-Mangel (Wernicke-Enzephalopathie) hat erhöhte Laktatwerte. Welcher biochemische Mechanismus erklärt dies?",
+          options: [
+            {
+              id: "A",
+              text: "Thiamin ist Cofaktor der Lactat-Dehydrogenase — ohne Thiamin kein Laktatabbau",
+            },
+            {
+              id: "B",
+              text: "Thiamin ist Cofaktor des Pyruvat-Dehydrogenase-Komplexes (als TPP) — PDH-Defekt → Pyruvat akkumuliert → Laktat steigt",
+            },
+            {
+              id: "C",
+              text: "Thiamin hemmt normalerweise die Glykolyse — ohne Thiamin läuft Glykolyse unkontrolliert",
+            },
+            {
+              id: "D",
+              text: "Thiamin-Mangel aktiviert die Atmungskette → überschüssiger Elektronenfluss → Laktat",
+            },
+            {
+              id: "E",
+              text: "Thiamin ist Bestandteil der Zellmembran — Defekt → Glucose kann nicht aufgenommen werden",
+            },
+          ],
+          correctOptionId: "B",
+          explanation:
+            "Thiamin (Vitamin B1) ist als Thiaminpyrophosphat (TPP) ein essenzieller Cofaktor des Pyruvat-Dehydrogenase-Komplexes (PDH) und der α-Ketoglutarat-Dehydrogenase. Bei Thiamin-Mangel ist PDH inaktiv → Pyruvat kann nicht zu Acetyl-CoA umgewandelt werden → Pyruvat akkumuliert → Laktat-Dehydrogenase (LDH) reduziert Pyruvat zu Laktat → Laktatazidose. Das Gehirn ist besonders betroffen (kein Fettabbau, kein Glukoseeintritt in Citratzyklus → Energiemangel). Klinik: Wernicke-Enzephalopathie (Ophthalmoplegie, Ataxie, Bewusstseinsänderung). Therapie: IV Thiamin sofort!",
+        },
+        {
+          question: "Welcher Komplex der Atmungskette ist gleichzeitig ein Enzym des Citratzyklus?",
+          options: [
+            { id: "A", text: "Komplex I (NADH-Dehydrogenase)" },
+            { id: "B", text: "Komplex II (Succinat-Dehydrogenase)" },
+            { id: "C", text: "Komplex III (Cytochrom-bc1-Komplex)" },
+            { id: "D", text: "Komplex IV (Cytochrom-c-Oxidase)" },
+            { id: "E", text: "ATP-Synthase (Komplex V)" },
+          ],
+          correctOptionId: "B",
+          explanation:
+            "Komplex II (Succinat-Dehydrogenase) ist das einzige Enzym, das sowohl Teil der Atmungskette als auch des Citratzyklus ist. Im Citratzyklus: Succinat → Fumarat + FADH₂. Als Komplex II: FADH₂ → FAD + Elektronen → Ubichinon. Wichtig: Komplex II pumpt KEINE Protonen in den Intermembranraum (deshalb weniger ATP aus FADH₂ als aus NADH). Mutationen in Succinat-Dehydrogenase-Untereinheiten (SDHA, SDHB, SDHC, SDHD) → Paragangliom, Phäochromozytom (seltene neuroendokrine Tumoren).",
+        },
+        {
+          question:
+            "Welche Gesamtausbeute an ATP entsteht beim vollständigen aeroben Abbau von 1 Mol Glucose (moderne Berechnung)?",
+          options: [
+            { id: "A", text: "2 ATP (nur aus Glykolyse)" },
+            { id: "B", text: "8 ATP (Glykolyse + Citratzyklus)" },
+            { id: "C", text: "~30–32 ATP (Glykolyse + PDH + Citratzyklus + Atmungskette)" },
+            { id: "D", text: "~36–38 ATP (alte Berechnung, veraltet)" },
+            { id: "E", text: "~50–60 ATP (inklusive Wärmeproduktion)" },
+          ],
+          correctOptionId: "C",
+          explanation:
+            "Die moderne Berechnung (P/O-Verhältnisse: NADH ~2,5 ATP, FADH₂ ~1,5 ATP) ergibt ~30–32 ATP pro Glucose. Aufschlüsselung: Glykolyse 2 ATP + 2 NADH (~5 ATP aus OX-PHOS), Pyruvat-DH 2 NADH (~5 ATP), Citratzyklus 2 GTP + 6 NADH (~15 ATP) + 2 FADH₂ (~3 ATP). Alte Lehrbücher nutzten P/O-Ratio 3 (NADH) und 2 (FADH₂) → 36–38 ATP. Die alten Werte sind veraltet und sollten beim MedAT nicht mehr verwendet werden. Bei Prüfungsfragen gilt: ~30–32 ATP als korrekte Antwort, außer explizit anders angegeben.",
+        },
+      ],
+      klinischerBezug:
+        "Laktatazidose: Anstieg des Blutlaktats >2 mmol/L bei Gewebehypoxie (Sepsis, kardiogener Schock, CO-Vergiftung) oder Medikamenten (Metformin → schwache Komplex-I-Hemmung → Laktat). Serum-Laktat ist ein Prognosemarker. Wernicke-Enzephalopathie: B1-Mangel (Alkoholismus, Hyperemesis gravidarum, parenterale Ernährung ohne B1) → PDH-Defekt → Gehirn kann Glucose nicht mehr aerob verwerten → Ophthalmoplegie, Ataxie, Bewusstseinsänderung. Sofort IV Thiamin! Cyanidvergiftung (Industrieunfall, Rauchgas): Blockade Komplex IV → keine ATP-Synthese → Gewebehypoxie trotz normaler O₂-Sättigung (Venenblut kirschrot!). Antidot: Hydroxocobalamin. MELAS-Syndrom: mitochondriale Myopathie, Laktatazidose, Schlaganfall-ähnliche Episoden — mtDNA-Mutation → Atmungskettendefekt → Laktatazidose + Neurodegeneration.",
+    },
   ],
 };

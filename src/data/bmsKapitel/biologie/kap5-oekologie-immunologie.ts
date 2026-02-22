@@ -1,11 +1,11 @@
-import type { Kapitel } from '../types';
+import type { Kapitel } from "../types";
 
 export const bioKapOekologie: Kapitel = {
-  id: 'bio-kap5',
+  id: "bio-kap5",
   title: "Ökologie & Immunologie",
-  subject: 'biologie',
-  icon: '🌿',
-  estimatedTime: '90 min',
+  subject: "biologie",
+  icon: "🌿",
+  estimatedTime: "90 min",
   unterkapitel: [
     // === from kap10-oekologie ===
 
@@ -521,29 +521,1052 @@ Parasit profitiert auf Kosten des Wirts; Wirt wird geschädigt, aber normalerwei
       ],
     },
 
+    {
+      id: "bio-10-03",
+      title: "Populationsbiologie — Wachstum, r/K-Strategien & Demographie",
+      stichworte: [
+        "Exponentielles Wachstum",
+        "Logistisches Wachstum",
+        "Kapazitätsgrenze K",
+        "r-Strategen",
+        "K-Strategen",
+        "Altersstruktur",
+        "Minimallebensfähige Population",
+      ],
+      content: `## Populationsbiologie — Überblick
+
+**Das Wichtigste auf einen Blick:**
+- Populationsparameter: Dichte (N), Geburtenrate (b), Sterberate (d), Wachstumsrate r = b − d
+- Exponentielles Wachstum: dN/dt = r·N → J-förmige Kurve (unbegrenzte Ressourcen)
+- Logistisches Wachstum: dN/dt = r·N·(K−N)/K → S-förmige (sigmoidale) Kurve, Annäherung an Kapazitätsgrenze K
+- r-Strategen: viele Nachkommen, wenig Brutpflege, kurze Generationszeit
+- K-Strategen: wenige Nachkommen, intensive Brutpflege, lange Generationszeit
+
+---
+
+## Populationsparameter
+
+Eine **Population** ist die Gesamtheit aller Individuen einer Art in einem definierten Raum und Zeitraum, die sich miteinander fortpflanzen können. Die wichtigsten Parameter:
+
+**Populationsdichte (N):** Anzahl der Individuen pro Flächeneinheit (z. B. Individuen/km²) oder Volumeneinheit. Relative Dichte = Anzahl pro Habitat-Einheit (z. B. Tiere pro Hektar). Die Dichte wird durch Geburten, Todesfälle, Immigration und Emigration bestimmt.
+
+**Geburtenrate (b, natality):** Anzahl der Geburten pro Individuum und Zeiteinheit.
+
+**Sterberate (d, mortality):** Anzahl der Todesfälle pro Individuum und Zeiteinheit.
+
+**Intrinsische Wachstumsrate (r):** r = b − d. Wenn r > 0: Wachstum; r = 0: stabile Population; r < 0: Schrumpfung. Die maximale intrinsische Wachstumsrate (r_max) ist die theoretische Wachstumsrate unter optimalen Bedingungen ohne begrenzende Faktoren.
+
+**Generationszeit:** Mittleres Alter der Mütter bei der Geburt der ersten Tochter. Kurze Generationszeiten (r-Strategen) vs. lange Generationszeiten (K-Strategen) haben fundamentalen Einfluss auf Populationsdynamik und Evolutionsgeschwindigkeit.
+
+> **Merke:** r = b − d. r > 0 → Wachstum. r = 0 → stabil. r < 0 → Schrumpfung. r_max ist die maximale Rate unter idealen Bedingungen.
+
+---
+
+## Exponentielles Wachstum
+
+**Exponentielles Wachstum** tritt auf, wenn Ressourcen unbegrenzt verfügbar sind und jedes Individuum sein volles reproduktives Potenzial ausschöpfen kann. Die mathematische Beschreibung:
+
+**dN/dt = r · N**
+
+Die Lösung dieser Differentialgleichung ist: N(t) = N₀ · e^(r·t)
+
+Das bedeutet: Die Wachstumsrate ist proportional zur aktuellen Populationsgröße — je mehr Individuen, desto mehr neue Individuen werden pro Zeiteinheit geboren. Grafisch ergibt sich eine **J-förmige Kurve** — zunächst langsam, dann immer steiler ansteigend.
+
+**Biologische Bedeutung des exponentiellen Wachstums:**
+- Frisch gegründete Populationen in einem neuen, ressourcenreichen Habitat
+- Pionierorganismen nach Störungen (Waldbrand, Eisschmelze)
+- Invasive Arten in neuen Gebieten ohne natürliche Feinde
+- Pathogene am Beginn einer Infektion (vor Immunantwort)
+- Bakterienwachstum in reichem Kulturmedium (Logphase)
+
+**Verdopplungszeit (t_D):** t_D = ln(2)/r ≈ 0,693/r. Bei r = 0,1 pro Jahr → Verdopplungszeit ≈ 6,9 Jahre. Dieses Prinzip erklärt das "explosive" Wachstum invasiver Arten oder Pathogene.
+
+> **Merke:** Exponentielles Wachstum = J-Kurve. dN/dt = r·N. Unbegrenzte Ressourcen. Tritt in der Natur nur kurzfristig auf.
+
+---
+
+## Logistisches Wachstum
+
+In der Realität limitieren Ressourcen, Konkurrenz und Prädation das Wachstum. Das **logistische Wachstumsmodell** (Verhulst, 1838) beschreibt Wachstum unter Ressourcenbeschränkung:
+
+**dN/dt = r · N · (K − N) / K**
+
+**K = Kapazitätsgrenze (carrying capacity):** Die maximale Populationsgröße, die ein Habitat dauerhaft tragen kann. Sie wird durch Nahrungsverfügbarkeit, Wasser, Raum und andere Ressourcen bestimmt.
+
+**Interpretation der Gleichung:**
+- Wenn N << K: (K−N)/K ≈ 1 → nahezu exponentielles Wachstum
+- Wenn N = K/2: maximale absolute Wachstumsrate (Wendepunkt der Sigmoid-Kurve)
+- Wenn N → K: (K−N)/K → 0 → Wachstum verlangsamt sich
+- Wenn N = K: dN/dt = 0 → Populationsgröße stabil
+- Wenn N > K (Überschreitung durch zufällige Ereignisse): dN/dt < 0 → Population schrumpft zurück auf K
+
+Grafisch ergibt sich eine **S-förmige (sigmoidale) Kurve** mit drei Phasen: (1) Anlaufphase (langsames anfängliches Wachstum bei kleiner N), (2) Wachstumsphase (exponentielle Phase, Wachstum beschleunigt sich), (3) Plateauphase (Annäherung an K, Wachstum verlangsamt sich).
+
+**Biologische Bedeutung:**
+- Die Kapazitätsgrenze K ist dynamisch — sie ändert sich mit Klima, Ressourcenverfügbarkeit und menschlichen Eingriffen
+- Dichteabhängige Faktoren (Konkurrenz, Prädation, Krankheiten) verstärken sich, wenn N → K
+- Das Maximum Sustainable Yield (MSY, maximaler nachhaltiger Ertrag) liegt bei N = K/2 — der Bestand mit maximaler Wachstumsrate ist die optimale Fischereigröße
+
+> **Merke:** Logistisches Wachstum = S-Kurve. dN/dt = r·N·(K−N)/K. K = Kapazitätsgrenze. Maximales Wachstum bei N = K/2. Bei N = K: Gleichgewicht.
+
+---
+
+## r-Strategen vs. K-Strategen
+
+Das **r/K-Kontinuum** (MacArthur & Wilson, 1967) beschreibt zwei grundlegende Lebensgeschichtsstrategien:
+
+| Merkmal | r-Strategen | K-Strategen |
+|---|---|---|
+| Nachkommenzahl | Sehr viele | Wenige |
+| Brutpflege | Minimal | Intensiv und lang |
+| Generationszeit | Kurz | Lang |
+| Erstreproduktion | Früh | Spät |
+| Körpergröße | Meist klein | Meist groß |
+| Lebenserwartung | Kurz | Lang |
+| Populationsdynamik | Starke Fluktuationen, boom-bust | Stabil, nahe K |
+| Sterblichkeit | Dichte-unabhängig | Dichteabhängig |
+| Habitat | Instabil, störungsreich | Stabil, ressourcenlimitiert |
+| Beispiele | Insekten, Mäuse, Unkräuter, Fliegen, Löwenzahn | Elefanten, Wale, Eichen, Adler, Menschen |
+
+**r-Strategen:** Investieren in maximale Reproduktionsrate (r_max) — produzieren viele, kleine Nachkommen mit wenig elterlicher Investition. Unter stabilen Bedingungen sind sie durch K-Strategen konkurrenzunterlegen, in gestörten, ressourcenreichen Habitaten dominieren sie durch schnelle Kolonisierung. Überleben durch Quantität.
+
+**K-Strategen:** Investieren in wenige, gut versorgte Nachkommen mit hoher Überlebenswahrscheinlichkeit. Konkurrenzstark in stabilen, ressourcenlimitierten Umgebungen (nahe K). Überleben durch Qualität. Langsame Generationszeit macht sie anfällig für Umweltkatastrophen und menschlichen Einfluss (Jagd, Habitatverlust).
+
+> **Merke:** r-Strategen = viele Kinder, wenig Fürsorge, kurzes Leben, instabile Habitate. K-Strategen = wenige Kinder, viel Fürsorge, langes Leben, stabile Habitate. Menschen und Elefanten sind K-Strategen.
+
+---
+
+## Altersstruktur und Demographischer Übergang
+
+Die **Altersstruktur** einer Population (Alterspyramide) gibt Auskunft über Vergangenheit und Zukunft der Populationsentwicklung:
+
+**Wachsende Population (breite Basis):** Hoher Anteil junger Individuen (hohe Geburtenraten), schmale Spitze (hohe Sterblichkeit). Typisch für Entwicklungsländer und r-Strategen-Populationen.
+
+**Stabile Population (gleichmäßige Verteilung):** Ähnliche Anteile in allen Altersklassen. Geburten = Sterbefälle.
+
+**Schrumpfende Population (schmale Basis):** Geringer Anteil junger Individuen (niedrige Geburtenraten), breite Mittelstufe. Typisch für westliche Industrieländer mit demographischem Übergang.
+
+**Demographischer Übergang:** Industrialisierung und verbesserte Medizin führen zuerst zu sinkender Sterberate (Bevölkerungsexplosion), dann verzögert zu sinkender Geburtenrate (Stabilisierung). Aktuelle globale Menschenpopulation (~8 Mrd.) wächst noch, wird bei ca. 10–11 Mrd. erwartet zu stabilisieren.
+
+---
+
+## Minimallebensfähige Populationsgröße (MVP) und Aussterbevortex
+
+**Minimallebensfähige Populationsgröße (MVP, minimum viable population):** Die kleinste Populationsgröße, die mit einer bestimmten Wahrscheinlichkeit (z. B. 95%) über einen definierten Zeitraum (z. B. 100 Jahre) überleben kann.
+
+**Aussterbevortex:** Kleine Populationen geraten in eine selbstverstärkende Abwärtsspirale:
+- Kleine Population → Inzucht → genetische Verarmung → reduzierte Fitness
+- Kleine Population → stochastische demographische Ereignisse (zufällige Fluktuationen in Geburten/Toden) können Population unter kritische Schwelle bringen
+- Kleine Population → stochastische Umweltereignisse (Dürre, Epidemie) können Population dezimieren
+- Kleine Population → genetische Drift → Verlust adaptiver Variabilität
+
+**Allee-Effekt:** Unter einem kritischen Schwellenwert (Allee-Schwelle) sinkt die Pro-Kopf-Fitness mit abnehmender Populationsgröße (z. B. Schwierigkeiten bei Partnersuche, kein Herdenverhalten mehr als Schutz vor Prädatoren). Populationen unterhalb der Allee-Schwelle sind zum Aussterben verurteilt, auch ohne externe Bedrohungen.
+
+## MedAT-Fokus
+
+- **J-Kurve vs. S-Kurve:** Exponentiell vs. logistisch — Prüfungsfavorit. dN/dt = r·N (J) vs. dN/dt = r·N·(K−N)/K (S)
+- **K-Strategen gefährdet:** Langsame Reproduktion → schlechte Erholung nach Populationseinbruch → häufig auf Roten Listen (Wale, Adler, Elefanten)
+- **K/2 als maximale Wachstumsrate** ist praktisch relevant für nachhaltige Fischerei
+- Typische Verwechslung: r = Wachstumsrate (nicht Räuber!), K = carrying capacity
+- Altersstruktur-Diagramme: wachsende vs. schrumpfende Populationen an Form der Alterspyramide erkennbar`,
+      merksätze: [
+        "Exponentielles Wachstum (J-Kurve): dN/dt = r·N. Logistisches Wachstum (S-Kurve): dN/dt = r·N·(K−N)/K. K = Kapazitätsgrenze.",
+        "r-Strategen: viele Nachkommen, wenig Brutpflege, kurze Generationszeit (Insekten, Mäuse). K-Strategen: wenige Nachkommen, viel Brutpflege, lange Generationszeit (Elefanten, Menschen).",
+        "Maximale Wachstumsrate beim logistischen Wachstum bei N = K/2 (Wendepunkt der S-Kurve). Bei N = K: dN/dt = 0.",
+        "Allee-Effekt: unter kritischer Populationsgröße sinkt die Pro-Kopf-Fitness weiter → Aussterbevortex.",
+        "K-Strategen sind besonders durch menschliche Eingriffe gefährdet: lange Generationszeit → langsame Erholung nach Populationsrückgang.",
+      ],
+      selfTest: [
+        {
+          question:
+            "Eine Mäusepopulation wächst in einem Getreidelager ohne natürliche Feinde und mit unbegrenzter Nahrung. Welche Wachstumsform ist am wahrscheinlichsten und welche Kurve beschreibt sie?",
+          options: [
+            "Logistisches Wachstum — S-Kurve, weil Ressourcen immer limitiert sind",
+            "Exponentielles Wachstum — J-Kurve, weil Ressourcen unbegrenzt und keine Feinde vorhanden",
+            "Logistisches Wachstum — J-Kurve mit Kapazitätsgrenze K",
+            "Exponentielles Wachstum — S-Kurve, weil viele Individuen vorhanden sind",
+            "Stabiles Wachstum — horizontale Linie bei K",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Exponentielles Wachstum (J-Kurve) tritt auf, wenn Ressourcen praktisch unbegrenzt verfügbar sind und keine dichteabhängigen Begrenzungsfaktoren (Prädatoren, Konkurrenz, Nahrungsmangel) wirken. Im Getreidelager mit unbegrenzter Nahrung und ohne natürliche Feinde nähert sich die Mäusepopulation exponentiellem Wachstum (dN/dt = r·N). In der Realität wird irgendwann die Nahrung doch begrenzt oder andere Faktoren treten ein, aber kurzfristig dominiert exponentielles Wachstum.",
+          difficulty: 1,
+          tags: ["exponentielles-wachstum", "j-kurve", "populationsdynamik"],
+        },
+        {
+          question:
+            "Eine Fischpopulation mit Kapazitätsgrenze K = 1.000.000 Individuen wird nachhaltig befischt. Bei welcher Populationsgröße ist der jährliche Zuwachs (und damit der nachhaltige Ertrag) am größten?",
+          options: [
+            "Bei N = 1.000.000 (K) — maximale Population = maximaler Ertrag",
+            "Bei N = 100.000 — kleine Population wächst am schnellsten relativ gesehen",
+            "Bei N = 500.000 (K/2) — Wendepunkt der logistischen Kurve, maximale absolute Wachstumsrate",
+            "Bei N = 750.000 — oberhalb K/2 ist das Wachstum noch groß",
+            "Bei N = 0 — ausgeleerte See füllt sich am schnellsten",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Beim logistischen Wachstum (dN/dt = r·N·(K−N)/K) ist die absolute Wachstumsrate (dN/dt) am größten, wenn N = K/2. Dies ist der Wendepunkt der S-Kurve. Bei N = K/2 = 500.000 ist der jährliche Zuwachs maximal — genau diese Menge kann nachhaltig entnommen werden, ohne die Population langfristig zu reduzieren. Dieses Konzept heißt Maximum Sustainable Yield (MSY) und ist Grundlage nachhaltiger Fischereiwirtschaft. Bei N = K ist dN/dt = 0, also kein Zuwachs.",
+          difficulty: 2,
+          tags: ["logistisches-wachstum", "k-haelfte", "msy", "fischerei"],
+        },
+        {
+          question: "Welche der folgenden Kombinationen beschreibt korrekt einen K-Strategen?",
+          options: [
+            "Viele Nachkommen, kurze Generationszeit, wenig Brutpflege, instabile Habitate",
+            "Wenige Nachkommen, lange Generationszeit, intensive Brutpflege, stabile Habitate",
+            "Viele Nachkommen, lange Generationszeit, intensive Brutpflege, instabile Habitate",
+            "Wenige Nachkommen, kurze Generationszeit, wenig Brutpflege, stabile Habitate",
+            "Viele Nachkommen, kurze Generationszeit, intensive Brutpflege, stabile Habitate",
+          ],
+          correctIndex: 1,
+          explanation:
+            "K-Strategen sind an stabile, ressourcenlimitierte Habitate (nahe der Kapazitätsgrenze K) angepasst. Sie investieren in Qualität der Nachkommen: wenige Nachkommen, intensive und lange Brutpflege, lange Generationszeit, große Körpergröße, lange Lebenserwartung. Beispiele: Elefant (1 Junges alle 4–5 Jahre, Tragezeit 22 Monate, intensive Brutpflege), Mensch, Blauwale, Adler. Im Gegensatz dazu sind r-Strategen (Insekten, Mäuse) an instabile Habitate mit schnellem Wachstum angepasst: viele Nachkommen, wenig Brutpflege, kurze Generationszeit.",
+          difficulty: 1,
+          tags: ["k-strategen", "r-k-strategie", "populationsbiologie"],
+        },
+        {
+          question:
+            "Der Allee-Effekt beschreibt ein Phänomen bei sehr kleinen Populationen. Was passiert bei einer Population unterhalb der Allee-Schwelle?",
+          options: [
+            "Die Population wächst exponentiell, weil weniger Konkurrenz herrscht",
+            "Die Fitness pro Individuum steigt, weil mehr Ressourcen pro Individuum vorhanden sind",
+            "Die Fitness pro Individuum sinkt mit abnehmender Populationsgröße → Aussterbevortex",
+            "Die Kapazitätsgrenze K sinkt, die Population stabilisiert sich aber trotzdem",
+            "Die intrinsische Wachstumsrate r steigt kompensatorisch an",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Der Allee-Effekt (W.C. Allee, 1931) beschreibt ein positives Feedback bei sehr kleinen Populationen: Unterhalb einer kritischen Dichte (Allee-Schwelle) sinkt die Pro-Kopf-Fitness mit abnehmender Populationsgröße. Gründe: Schwierigkeiten bei Partnersuche (v.a. seltene, weit verstreute Tiere), Verlust des Herdeneffekts (Antipredator-Verteidigung), inzuchtbedingte Fitnessdepression, Zusammenbruch kooperativer Verhaltensweisen. Dies führt zum Aussterbevortex: Population schrumpft → Fitness sinkt weiter → Population schrumpft noch schneller → Aussterben. Naturschutzbiologisch hochrelevant für das Management bedrohter Arten.",
+          difficulty: 2,
+          tags: ["allee-effekt", "aussterbevortex", "kleine-population", "naturschutz"],
+        },
+        {
+          question:
+            "Eine Alterspyramide zeigt eine breite Basis (viele Jugendliche), schmale Mitte und schmale Spitze. Was beschreibt diese Altersstruktur am besten?",
+          options: [
+            "Schrumpfende Population mit negativem Wachstum",
+            "Stabile Population im Gleichgewicht bei Kapazitätsgrenze K",
+            "Wachsende Population mit hohen Geburtenraten und noch hoher Kindersterblichkeit",
+            "Alternde Population mit niedrigen Geburtenraten in Industrieländern",
+            "Population direkt nach einem Populationseinbruch (Bottleneck)",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Eine breite Basis (viele Kinder/Jugendliche) in der Alterspyramide zeigt hohe Geburtenraten und eine wachsende Population an. Die schmale Spitze bedeutet, dass wenige das hohe Alter erreichen (noch hohe Mortalität in mittleren und späten Lebensphasen). Dieses Muster ist typisch für Entwicklungsländer im frühen demographischen Übergang sowie für r-Strategen-Populationen. Im Gegensatz dazu haben Industrieländer eine 'Urnenform' (schmale Basis, breite Mitte) — schrumpfende oder stabile Population mit niedrigen Geburtenraten.",
+          difficulty: 1,
+          tags: [
+            "altersstruktur",
+            "alterspyramide",
+            "demographischer-uebergang",
+            "populationswachstum",
+          ],
+        },
+      ],
+    },
+
+    {
+      id: "bio-10-04",
+      title: "Ökologische Nische & Artinteraktionen",
+      stichworte: [
+        "Ökologische Nische",
+        "Hutchinson",
+        "Fundamentale Nische",
+        "Realisierte Nische",
+        "Nischendifferenzierung",
+        "Generalisten vs. Spezialisten",
+        "Allopatrische Artbildung",
+        "Sympatrische Artbildung",
+      ],
+      content: `## Ökologische Nische — Überblick
+
+**Das Wichtigste auf einen Blick:**
+- Ökologische Nische = n-dimensionaler Hyperraum (Hutchinson) aller Umweltfaktoren, die eine Art nutzt und toleriert
+- Fundamentale Nische: theoretisch möglicher Raum ohne Konkurrenten
+- Realisierte Nische: tatsächlich bewohnter Raum (eingeschränkt durch Konkurrenz)
+- Nischendifferenzierung ermöglicht Koexistenz konkurrierender Arten
+- Generalisten = breite Nische; Spezialisten = enge Nische
+
+---
+
+## Das Nischenkonzept nach Hutchinson
+
+**G. Evelyn Hutchinson** (1957) definierte die ökologische Nische als **n-dimensionalen Hyperraum**: Jeder für eine Art relevante Umweltfaktor (Temperatur, Feuchtigkeit, Nahrungsgröße, pH, Räuberfrequenz, ...) stellt eine Achse in einem mehrdimensionalen Raum dar. Die ökologische Nische ist der Teilraum dieses Hyperraums, in dem eine Art überleben und sich erfolgreich reproduzieren kann.
+
+Dies ist eine bedeutende Erweiterung des ursprünglichen Nischenbegriffs von Grinnell (1917), der Nische als physikalischen Lebensraum verstand, und Elton (1927), der Nische als funktionale Rolle im Ökosystem (trophische Position) beschrieb. Hutchinsons Hyperraum-Konzept integriert beide Aspekte mathematisch.
+
+**Beispiel:** Für eine Vogelart könnten die Nischen-Achsen sein: Temperaturbereich (z. B. 5–30°C), bevorzugte Nahrungsgröße (1–5 mm Insekten), Vegetationshöhe (2–10 m), Neststandorte (Baumhöhlen), Tageslänge für Brutauslösung, etc. Die Nische ist der n-dimensionale Überschneidungsbereich all dieser Toleranzbereiche.
+
+> **Merke:** Hutchinson (1957): Ökologische Nische = n-dimensionaler Hyperraum. Jeder Umweltfaktor = eine Dimension. Nische ≠ nur Lebensraum, sondern funktionale Rolle + Toleranzbereich.
+
+---
+
+## Fundamentale vs. Realisierte Nische
+
+**Fundamentale Nische (fundamental niche):** Der gesamte n-dimensionale Hyperraum, den eine Art theoretisch besetzen könnte, wenn keine Konkurrenten oder Feinde vorhanden wären — nur limitiert durch die physiologischen Toleranzen der Art.
+
+**Realisierte Nische (realized niche):** Der tatsächlich genutzte Teilraum der fundamentalen Nische, der durch biotische Interaktionen (insbesondere interspezifische Konkurrenz, aber auch Prädation und Parasitismus) eingeschränkt wird.
+
+**Die realisierte Nische ist immer kleiner oder gleich der fundamentalen Nische.**
+
+**Experimenteller Nachweis — Balanus/Chthamalus-Experiment (Connell, 1961):**
+Auf schottischen Felsen leben zwei Seepockenarten. *Chthamalus stellatus* (obere Felszone) und *Balanus balanoides* (untere Felszone). Experiment: Wenn *Balanus* entfernt wird, kolonisiert *Chthamalus* auch die untere Zone → die fundamentale Nische von *Chthamalus* erstreckt sich weiter unten, wird aber durch *Balanus* (konkurrenzüberlegen in der unteren Zone) auf die obere Zone reduziert. Die realisierte Nische von *Chthamalus* ist kleiner als ihre fundamentale Nische.
+
+> **Merke:** Fundamentale Nische ≥ Realisierte Nische. Biotische Interaktionen (v.a. Konkurrenz) schränken die realisierte Nische ein. Experimentell trennbar durch Ausschlussexperimente.
+
+---
+
+## Nischendifferenzierung und Koexistenz
+
+Das **Gauß'sche Konkurrenzausschlussprinzip** sagt: Zwei Arten in identischer Nische können nicht dauerhaft koexistieren. Koexistenz ist aber in der Natur häufig — der Mechanismus ist **Nischendifferenzierung (niche differentiation)**.
+
+**Ressourcenteilung (resource partitioning):** Koexistierende Arten nutzen ähnliche Ressourcen, differenzieren sich aber in einer oder mehreren Nischendimensionen:
+- *Zeitliche Nischendifferenzierung:* Tag-aktive vs. nacht-aktive Arten nutzen ähnliche Ressourcen zu verschiedenen Zeiten (Falken tagsüber, Eulen nachts)
+- *Räumliche Nischendifferenzierung:* MacArthur (1958) beschrieb 5 Waldsängerarten (*Dendroica*), die im selben Baum koexistieren, indem sie verschiedene Baumzonen nutzen (Wipfel, Mittelbereiche, Stammbasis)
+- *Trophische Nischendifferenzierung:* Verschiedene Beutetypen oder -größen (z. B. Darwinfinken mit verschieden geformten Schnäbeln für verschiedene Samenkategorien)
+
+**Charakterverschiebung (character displacement):** Wenn zwei konkurrierende Arten im selben Habitat vorkommen (Sympatrie), verstärkt natürliche Selektion die Unterschiede zwischen ihnen — die Arten "divergieren" phänotypisch voneinander. Dies reduziert Nischenüberlappung und ermöglicht Koexistenz. Klassisches Beispiel: Darwinfinken auf Galapagos — Schnabelgröße divergiert stärker in Sympatrie als in Allopatrie (Grant & Grant, 2002).
+
+---
+
+## Generalisten vs. Spezialisten
+
+**Generalisten** haben eine breite ökologische Nische: Sie tolerieren ein weites Spektrum an Umweltbedingungen, nutzen diverse Ressourcen und können in verschiedenen Habitaten überleben. Vorteile: Flexibilität, Widerstandsfähigkeit gegenüber Umweltveränderungen. Nachteile: Konkurrenzunterlegen gegenüber Spezialisten, wenn Ressourcen stabil und reichlich vorhanden sind. Beispiele: Fuchs (omnivorer Allesfresser), Ratte, Hauskatze, Mensch.
+
+**Spezialisten** haben eine enge ökologische Nische: Hochangepasst an spezifische Ressourcen oder Habitate. Vorteile: Überlegen in stabilen Umgebungen mit dieser spezifischen Ressource; effizientere Nutzung der Spezialressource. Nachteile: Vulnerabel gegenüber Veränderungen der Ressource oder des Habitats. Beispiele: Großer Panda (nur Bambus), Koala (nur Eukalyptus).
+
+> **Merke:** Generalisten: breite Nische, flexibel, resilient. Spezialisten: enge Nische, effizient, aber vulnerabel. Klima- und Habitatveränderungen bedrohen Spezialisten besonders.
+
+---
+
+## Ökologische Äquivalente (Konvergente Anpassungen)
+
+**Ökologische Äquivalente** sind Arten in verschiedenen geographischen Regionen, die dieselbe ökologische Nische besetzen, aber taxonomisch nicht eng verwandt sind. Ihr ähnliches Aussehen und ihre ähnlichen Verhaltensweisen entstanden durch **konvergente Evolution** — unabhängige Anpassung an gleiche ökologische Anforderungen.
+
+Beispiele:
+- Wölfe (Nordamerika, Eurasien) und Tasmanische Wölfe (Australien, ausgestorben): ähnliche Raubtier-Nische, nicht verwandt
+- Haie (Chondrichthyes) und Delfine (Mammalia): stromlinienförmige Körper für schnelles Schwimmen
+- Kakteen (Nordamerika) und Euphorbien (Afrika): ähnliche Sukkulenten-Anpassung an Trockenheit
+- Beuteltiere (Australien) und Plazentatiere (übrige Welt): Beutelär/Koala ≈ Faultier; Quoll ≈ Marder
+
+---
+
+## Artbildung — Allopatrisch vs. Sympatrisch
+
+**Allopatrische Artbildung (geographische Isolation):** Geografische Barrieren (Gebirge, Meeresarme, Gletscher) trennen Populationen einer Art → kein Genfluss → unabhängige Evolution → reproduktive Isolation → neue Arten. Häufigster Artbildungsmechanismus. Beispiel: Galapagos-Finken (durch Ozean isolierte Inseln).
+
+**Sympatrische Artbildung (ohne geographische Isolation):** Artbildung im selben Gebiet durch andere Isolationsmechanismen:
+- *Polyploidie* (besonders bei Pflanzen): Chromosomenverdopplung → sofortige reproduktive Isolation
+- *Ressourcendifferenzierung:* Unterschiedliche Wirtspflanzen bei Insekten (Assortative mating nach Wirtspflanze)
+- *Saisonale Isolation:* Verschiedene Blüte-/Laichzeiten
+
+## MedAT-Fokus
+
+- Fundamentale vs. realisierte Nische: Prüfungsklassiker — realisierte ≤ fundamentale
+- Hutchinson-Hyperraum: Nische = n-dimensional, nicht nur Lebensraum
+- Nischendifferenzierung als Koexistenz-Mechanismus: zeitlich, räumlich, trophisch
+- Konvergente Evolution vs. divergente Evolution verwechseln — ökologische Äquivalente = konvergent
+- Allopatrische Artbildung = geografische Barriere; sympatrisch = Polyploidie, Wirtspflanzendifferenzierung`,
+      merksätze: [
+        "Hutchinson (1957): Ökologische Nische = n-dimensionaler Hyperraum. Jeder Umweltfaktor eine Dimension.",
+        "Fundamentale Nische ≥ realisierte Nische. Konkurrenz schränkt die realisierte Nische ein (Connell-Seepocken-Experiment).",
+        "Nischendifferenzierung ermöglicht Koexistenz: zeitlich (Tag/Nacht), räumlich (verschiedene Baumzonen), trophisch (verschiedene Beutegrößen).",
+        "Charakterverschiebung: konkurrierende Arten in Sympatrie divergieren phänotypisch → reduzierte Nischenüberlappung.",
+        "Ökologische Äquivalente: taxonomisch nicht verwandt, gleiche Nische → konvergente Evolution (Hai vs. Delfin).",
+        "Allopatrische Artbildung: geografische Isolation → kein Genfluss → neue Arten. Sympatrisch: Polyploidie oder Wirtspflanzendifferenzierung.",
+      ],
+      selfTest: [
+        {
+          question:
+            "Hutchinsons Nischenkonzept (1957) definiert die ökologische Nische als n-dimensionalen Hyperraum. Was bedeutet das konkret?",
+          options: [
+            "Die Nische ist der physikalische Lebensraum (Habitat) einer Art",
+            "Die Nische ist die trophische Rolle (Räuber, Beute, Destruent) einer Art",
+            "Die Nische ist ein mehrdimensionaler Raum, bei dem jeder für die Art relevante Umweltfaktor eine eigene Achse darstellt",
+            "Die Nische beschreibt den Aktionsradius einer Art in Kilometern",
+            "Die Nische ist die Breite der Toleranzkurve für einen einzelnen abiotischen Faktor",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Hutchinsons Hyperraum-Konzept ist ein abstrakter n-dimensionaler Raum: Jeder für die Art relevante Faktor (Temperatur, Feuchtigkeit, Nahrungsgröße, pH, Prädationsdruck etc.) bildet eine Achse. Die Nische ist der Teilbereich dieses Hyperraums, in dem die Art überleben und reproduzieren kann. Das Konzept integriert Grinnells Habitat-Nische und Eltons trophische Nische in einem mathematischen Framework. Die 'Größe' der Nische im Hyperraum entspricht der ökologischen Spezialisierung der Art (groß = Generalist, klein = Spezialist).",
+          difficulty: 1,
+          tags: ["hutchinson", "nische", "hyperraum", "n-dimensional"],
+        },
+        {
+          question:
+            "In einem Experiment auf schottischen Felsen wird *Balanus* (Seepocke der unteren Zone) entfernt. Daraufhin besiedelt *Chthamalus* (Seepocke der oberen Zone) auch die untere Zone. Was zeigt dieses Experiment?",
+          options: [
+            "Die fundamentale Nische von Chthamalus ist kleiner als ihre realisierte Nische",
+            "Balanus ist ein Parasit von Chthamalus",
+            "Die realisierte Nische von Chthamalus war durch Konkurrenz mit Balanus auf die obere Zone eingeschränkt",
+            "Beide Seepockenarten haben identische fundamentale Nischen",
+            "Chthamalus kann die untere Zone nur bei Abwesenheit von Räubern besiedeln",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Das Connell-Experiment (1961) ist der klassische Beleg für die Unterscheidung von fundamentaler und realisierter Nische. Die fundamentale Nische von Chthamalus erstreckt sich in die untere Zone — die Art kann dort physiologisch überleben. In Anwesenheit von Balanus (konkurrenzüberlegen in der unteren Zone) wird Chthamalus auf die obere Zone verdrängt — das ist die realisierte Nische. Wenn Balanus entfernt wird, dehnt sich die realisierte Nische zur fundamentalen aus. Merksatz: Fundamentale Nische ≥ realisierte Nische. Konkurrenz schränkt immer ein.",
+          difficulty: 2,
+          tags: ["fundamentale-nische", "realisierte-nische", "connell", "seepocken"],
+        },
+        {
+          question:
+            "Zwei nahe verwandte Vogelarten konkurrieren um Insekten in einem Wald. Im Laufe der Evolution entwickeln sie zunehmend unterschiedliche Schnabelformen — in Sympatrie stärker als in Allopatrie. Wie heißt dieser Prozess?",
+          options: [
+            "Konvergente Evolution — beide Arten werden ähnlicher",
+            "Charakterverschiebung (character displacement) — Konkurrenz treibt phänotypische Divergenz an",
+            "Genetische Drift — zufällige Allelhäufigkeitsveränderungen",
+            "Allopatrische Artbildung — geografische Isolation erzeugt neue Arten",
+            "Nischenkonservativismus — Arten behalten ihre Nische bei",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Charakterverschiebung (character displacement) bezeichnet die evolutionäre Divergenz konkurrierender Arten in Merkmalen, die Nischenüberlappung reduzieren. In Sympatrie (gemeinsamem Vorkommen) ist der Selektionsdruck zur Nischendifferenzierung hoch: Individuen, die weniger mit der Konkurrenzart konkurrieren (z.B. durch anderen Schnabel → andere Beute), haben einen Fitnessvorteil. Dadurch divergieren die Arten. In Allopatrie (geografischer Trennung) fehlt dieser Selektionsdruck → Merkmale bleiben ähnlicher. Klassisches Beispiel: Galapagos-Darwinfinken und Grant & Grants Studien.",
+          difficulty: 2,
+          tags: ["charakterverschiebung", "nischendifferenzierung", "konkurrenz", "sympatrie"],
+        },
+        {
+          question:
+            "Welche der folgenden Paare sind ökologische Äquivalente durch konvergente Evolution?",
+          options: [
+            "Hund und Wolf — beide Caniden, dieselbe Abstammung",
+            "Hai (Fisch) und Delfin (Säuger) — ähnliche Körperform durch analoge Anpassung an schnelles Schwimmen",
+            "Katze und Löwe — beide Felidae, nah verwandt",
+            "Fuchs in Europa und Fuchs in Nordamerika — selbe Art, verschiedene Kontinente",
+            "Gorilla und Schimpanse — beide Hominidae, verschiedene Nischen",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Ökologische Äquivalente entstehen durch konvergente Evolution: Nicht verwandte Arten entwickeln ähnliche Merkmale durch ähnliche Selektionsdrücke (analoge Strukturen, nicht homologe). Hai (Knorpelfisch, Chondrichthyes) und Delfin (Säuger, Mammalia) sind evolutionär sehr entfernt, haben aber beide eine stromlinienförmige Körperform, Flossen und ähnliches Schwimmverhalten als Anpassung an die aquatische Raubtier-Nische. Andere Beispiele: Kakteen (Amerika) und Euphorbien (Afrika) als Sukkulenten; Beuteltiere und Plazentatiere in ähnlichen Nischen.",
+          difficulty: 1,
+          tags: ["konvergente-evolution", "oekologische-aequivalente", "analogie", "hai-delfin"],
+        },
+        {
+          question:
+            "Was ist der Hauptmechanismus der allopatrischen Artbildung und wie unterscheidet er sich von der sympatrischen Artbildung?",
+          options: [
+            "Allopatrisch: Polyploidie innerhalb einer Population. Sympatrisch: geografische Barriere.",
+            "Allopatrisch: geografische Barriere → kein Genfluss → Isolation. Sympatrisch: Artbildung ohne geografische Trennung (z. B. Polyploidie, Wirtspflanzendifferenzierung).",
+            "Allopatrisch: sexual selection. Sympatrisch: natürliche Selektion.",
+            "Allopatrisch: saisonale Isolation. Sympatrisch: geografische Isolation.",
+            "Beide Mechanismen erfordern geografische Barrieren — der Unterschied liegt nur in der Dauer.",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Allopatrische Artbildung (griech. allos = anders, patria = Vaterland): Eine Population wird durch eine geografische Barriere (Gebirge, Ozean, Gletscher) getrennt → kein Genfluss zwischen den Teilpopulationen → unabhängige genetische Evolution → reproduktive Isolation → neue Arten. Häufigster Mechanismus. Sympatrische Artbildung (griech. syn = zusammen): Artbildung ohne geografische Trennung, im selben Areal. Wichtigste Mechanismen: Polyploidie (besonders Pflanzen; Chromosomenverdopplung → sofortige reproduktive Isolation), Wirtspflanzendifferenzierung bei Insekten, saisonale Isolation. Sympatrische Artbildung ist seltener, aber gut dokumentiert.",
+          difficulty: 2,
+          tags: ["allopatrisch", "sympatrisch", "artbildung", "isolation"],
+        },
+      ],
+    },
+
+    {
+      id: "bio-10-05",
+      title: "Ökosysteme — Nahrungsketten, Stoffkreisläufe & Energiefluss",
+      stichworte: [
+        "Nahrungskette",
+        "Nahrungsnetz",
+        "10%-Regel",
+        "Primärproduktion",
+        "Kohlenstoffkreislauf",
+        "Stickstoffkreislauf",
+        "Phosphorkreislauf",
+        "Wasserkreislauf",
+        "Trophieebenen",
+      ],
+      content: `## Ökosysteme — Überblick
+
+**Das Wichtigste auf einen Blick:**
+- Ökosystem = biotische (Lebewesen) + abiotische (Umwelt) Komponenten in Wechselwirkung
+- Trophieebenen: Produzenten → Konsumenten (I, II, III) → Destruenten
+- 10%-Regel: ca. 10% der Energie gelangt auf die nächste Trophieebene
+- Primärproduktion: GPP (brutto) vs. NPP (netto = GPP − Respiration)
+- Biogeochemische Kreisläufe: Kohlenstoff, Stickstoff, Phosphor, Wasser
+
+---
+
+## Ökosystem-Ebenen und Trophiestruktur
+
+Ein **Ökosystem** umfasst alle Lebewesen (Biozönose/biotische Komponente) eines Gebiets und ihre Wechselwirkungen mit der abiotischen Umwelt (Biotop). Ökosysteme sind offen für Energie- und Materieflüsse.
+
+**Trophieebenen (Ernährungsebenen):**
+
+**Produzenten (Trophieebene 1):** Autotrophe Organismen, die Sonnenenergie (Photosynthese) oder chemische Energie (Chemosynthese) zur Biomassesynthese nutzen. Grüne Pflanzen, Algen, Cyanobakterien (Photosynthese); schwefeloxidierende Bakterien, Nitrifikanten (Chemosynthese, Tiefsee-Hydrothermalquellen).
+
+**Primärkonsumenten (Herbivoren, Trophieebene 2):** Fressen Produzenten direkt. Rehe, Raupen, Heuschrecken, Zooplankton.
+
+**Sekundärkonsumenten (Primärkarnivoren, Trophieebene 3):** Fressen Primärkonsumenten. Frösche (fressen Insekten), kleine Fische (fressen Zooplankton).
+
+**Tertiärkonsumenten (Sekundärkarnivoren, Trophieebene 4):** Fressen Sekundärkonsumenten. Greifvögel, Haie, große Raubkatzen.
+
+**Destruenten (Zersetzer):** Pilze und Bakterien, die abgestorbene organische Substanz (Detritus) abbauen → anorganische Nährstoffe → werden wieder für Produzenten verfügbar. Essentiell für den Nährstoffkreislauf. Oft vergessen, aber quantitativ am bedeutsamsten: ca. 90% der Primärproduktion gelangt als Detritus zu den Destruenten, nicht zu Herbivoren.
+
+**Nahrungskette vs. Nahrungsnetz:** Eine lineare Nahrungskette (Gras → Hase → Fuchs → Adler) ist eine starke Vereinfachung. In der Realität bilden die Nahrungsbeziehungen ein komplexes Nahrungsnetz (food web) mit vielen Querverbindungen. Nahrungsnetze sind stabiler als Nahrungsketten: der Verlust einer Art hat geringeren Effekt, wenn alternative Nahrungsquellen vorhanden sind.
+
+> **Merke:** Produzenten → Konsumenten I → II → III → Destruenten. Destruenten bauen Detritus ab und schließen den Kreislauf. Nahrungsnetz > Nahrungskette (realistischer, stabiler).
+
+---
+
+## Energiefluss und die 10%-Regel
+
+**Energie fließt einseitig** durch ein Ökosystem (im Gegensatz zur Materie, die zirkuliert). Sonnenergie wird durch Photosynthese in chemische Energie umgewandelt → bei jeder trophischen Übertragung geht ein Großteil als Wärme verloren.
+
+**10%-Regel (Lindeman, 1942):** Durchschnittlich werden nur ca. 10% (Bereich: 5–20%) der auf einer Trophieebene gespeicherten Energie auf die nächsthöhere Trophieebene übertragen. Der Rest (ca. 90%) geht verloren durch:
+- Atmung/Metabolismus (größter Anteil — Energie für Lebenserhaltung)
+- Nicht verdauliche Bestandteile (Zellwände, Knochen, Haare → gehen zu Destruenten)
+- Nicht gefressene Biomasse (Pflanzen, die kein Herbivore frisst)
+- Wärmeabgabe bei all diesen Prozessen
+
+**Praktische Konsequenz:** Eine Nahrungskette mit 4 trophischen Ebenen überträgt: 100% (Pflanzen) → 10% → 1% → 0,1%. Ein 70 kg Mensch, der sich von Rindfleisch ernährt (Pflanze → Rind → Mensch = 3 Ebenen), benötigt 1.000 kg Pflanzenmaterial. Derselbe Mensch als Vegetarier benötigt nur 100 kg Pflanzenmaterial für dieselbe Biomasse — 10× effizienter. Dies hat enorme ökologische Konsequenzen für globale Landnutzung und Klimawandel.
+
+> **Merke:** 10%-Regel: ~10% Energie von einer Trophieebene zur nächsten. 90% Verlust durch Atmung, Wärme, unverdauliche Teile. Vegetarische Ernährung ist 10× energieeffizienter als Fleischernährung.
+
+---
+
+## Primärproduktion
+
+**Brutto-Primärproduktion (GPP, Gross Primary Production):** Gesamte Energie, die Produzenten durch Photosynthese pro Zeit und Fläche binden. Messbar als Gesamt-CO₂-Aufnahme.
+
+**Netto-Primärproduktion (NPP, Net Primary Production):** NPP = GPP − Autotrophe Respiration (R_A). Die Energie, die nach Abzug des eigenen Stoffwechsels der Produzenten verbleibt und für Konsumenten verfügbar ist.
+
+NPP variiert stark zwischen Ökosystemen: Tropische Regenwälder und Ästuarien (Flussmündungen) haben die höchste NPP (2.000–3.000 g Trockenmasse/m²/Jahr); Wüsten und offene Ozeane die niedrigste (50–150 g/m²/Jahr). Obwohl offene Ozeane geringe NPP/m² haben, tragen sie durch ihre enorme Fläche erheblich zur globalen NPP bei.
+
+---
+
+## Biogeochemische Kreisläufe
+
+Materie zirkuliert in **biogeochemischen Kreisläufen** zwischen biotischen und abiotischen Komponenten.
+
+### Kohlenstoffkreislauf
+
+**Eintritt:** CO₂ aus Atmosphäre → Photosynthese → organische C-Verbindungen in Biomasse.
+
+**Rückführung:**
+- Zellatmung (Produzenten, Konsumenten, Destruenten): organische Verbindungen → CO₂ + H₂O + ATP
+- Verbrennung (Combustion): Fossile Brennstoffe, Waldbrände → CO₂
+- Methanogenese: Anaerobe Zersetzung → CH₄ (Sumpfgas, Reisfelder, Rinderpansen)
+
+**Reservoire:**
+- Atmosphäre: ~830 GtC (Gigatonnen Kohlenstoff), steigt durch fossile Brennstoffe
+- Vegetation/Biomasse: ~550 GtC
+- Böden (Humus): ~1.500 GtC
+- Ozeane: ~38.000 GtC (größtes aktives Reservoir; CO₂ → H₂CO₃ → HCO₃⁻ → CO₃²⁻)
+- Fossile Brennstoffe: ~5.000 GtC (passiv, außer bei Verbrennung)
+
+**Ozeane als Puffer:** Ozeane absorbieren ca. 30% der anthropogenen CO₂-Emissionen → Ozeanversauerung (pH sinkt → Probleme für kalkbildende Organismen wie Korallen, Muscheln, Foraminiferen).
+
+### Stickstoffkreislauf
+
+Stickstoff (N) ist essentiell für Aminosäuren, Nucleotide und Chlorophyll. Obwohl N₂ 78% der Atmosphäre ausmacht, kann er von den meisten Organismen nicht direkt genutzt werden.
+
+**N₂-Fixierung:**
+- *Biologische Fixierung:* Diazotrophe Bakterien (Rhizobium, Bradyrhizobium in Leguminosen-Wurzelknöllchen; Cyanobakterien; Azotobacter im Boden) katalysieren via Nitrogenase: N₂ + 8H⁺ + 8e⁻ + 16 ATP → 2NH₃ + H₂ + 16 ADP + 16 Pᵢ
+- *Abiotische Fixierung:* Blitzentladungen; industrielle Haber-Bosch-Synthese (ca. 120 TgN/Jahr für Dünger)
+
+**Ammonifikation:** Mikroorganismen bauen organische N-Verbindungen (Aminosäuren, Nucleotide) aus toter Biomasse zu NH₄⁺ (Ammonium) ab.
+
+**Nitrifikation:** NH₄⁺ → NO₂⁻ (Nitrosomonas) → NO₃⁻ (Nitrobacter). Aerober Prozess. NO₃⁻ ist die bevorzugte Form für Pflanzen.
+
+**Denitrifikation:** NO₃⁻ → N₂ (durch Pseudomonas u.a. unter anaeroben Bedingungen). Rückführung in die Atmosphäre. N₂O ist ein potentes Treibhausgas (298× CO₂).
+
+**Assimilation:** Pflanzen nehmen NO₃⁻ oder NH₄⁺ auf → Einbau in Aminosäuren.
+
+> **Merke:** N₂-Fixierung (Rhizobien) → Ammonifikation → Nitrifikation (NH₄⁺→NO₂⁻→NO₃⁻) → Assimilation → Denitrifikation (→N₂). Kreislauf geschlossen.
+
+### Phosphorkreislauf
+
+Phosphor hat **kein gasförmiges Reservoir** — er zirkuliert nur zwischen terrestrischen, aquatischen und geologischen Reservoiren. Phosphor ist oft der **limitierende Nährstoff** in Süßwasser-Ökosystemen.
+
+**Kreislauf:** Gestein → Verwitterung → Phosphat im Boden → Pflanzenaufnahme → organisches P in Biomasse → Mineralisation durch Destruenten → Phosphat → Auswaschung ins Gewässer → Sedimentation im Meeresboden.
+
+**Eutrophierung:** Überschuss von Phosphat (aus Düngemitteln, Waschmitteln, Kläranlagenabwässern) in Gewässern → übermäßiges Algenwachstum (Algenblüte) → Algentod → Abbau durch Bakterien → Sauerstoffzehrung → Hypoxie/Anoxie → Fischsterben.
+
+### Wasserkreislauf
+
+- **Verdunstung** (Evaporation): Meere, Seen, Flüsse → Wasserdampf
+- **Transpiration:** Pflanzen geben Wasser über Stomata ab
+- **Kondensation und Niederschlag:** Wolkenbildung → Regen, Schnee
+- **Versickerung und Grundwasserneubildung**
+- **Oberflächenabfluss:** Flüsse, Bäche → Meere
+
+Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster (v.a. Amazonas-Regenwald: ca. 50% des Niederschlags kommt aus der Vegetation selbst durch Evapotranspiration).
+
+---
+
+## MedAT-Fokus
+
+- **10%-Regel und Nahrungskettenlänge:** Warum gibt es kaum Nahrungsketten mit mehr als 4–5 Gliedern? Energieverlust macht es ineffizient.
+- **GPP vs. NPP:** GPP = Gesamt-Photosynthese. NPP = GPP − Pflanzliche Atmung = verfügbar für Konsumenten
+- **Stickstoffkreislauf-Schritte in Reihenfolge:** Fixierung → Ammonifikation → Nitrifikation → Assimilation → Denitrifikation
+- **Phosphorkreislauf:** Kein gasförmiges Reservoir! Limitierend in Süßwasser → Eutrophierung durch Phosphatüberschuss
+- **Kohlenstoffkreislauf:** Ozeane = wichtigste Senke (ca. 30% anthropogener CO₂); Versauerung als Folge`,
+      merksätze: [
+        "Trophieebenen: Produzenten → Konsumenten I, II, III → Destruenten. Destruenten schließen den Kreislauf durch Detritus-Abbau.",
+        "10%-Regel (Lindeman 1942): ~10% der Energie gelangt von einer Trophieebene zur nächsten. 90% Verlust durch Atmung, Wärme, Unverdauliches.",
+        "NPP = GPP − Autotrophe Respiration. NPP = für Konsumenten verfügbare Energie.",
+        "Stickstoffkreislauf: N₂-Fixierung (Rhizobien) → Ammonifikation → Nitrifikation (NH₄⁺→NO₃⁻) → Assimilation → Denitrifikation (→N₂).",
+        "Phosphorkreislauf: kein gasförmiges Reservoir! Limitierend in Süßwasser. Phosphatüberschuss → Eutrophierung → Algenwachstum → O₂-Zehrung → Fischsterben.",
+        "Ozeane puffern ca. 30% anthropogener CO₂ → Ozeanversauerung (pH sinkt, Probleme für Kalkbilder).",
+      ],
+      selfTest: [
+        {
+          question:
+            "Ein Ökosystem hat folgende Trophieebenen: Gras (10.000 kJ) → Heuschrecken → Frösche → Schlangen → Adler. Nach der 10%-Regel — wie viel Energie hat der Adler (Trophieebene 5) theoretisch zur Verfügung?",
+          options: [
+            "10.000 kJ — Energie bleibt vollständig erhalten",
+            "1.000 kJ — 10% Verlust von Gras zu Heuschrecken",
+            "100 kJ — 10% von 10.000, dann 10% von 1.000",
+            "10 kJ — 10% der 10%-Kaskade über 4 Schritte",
+            "1 kJ — 10% der 10%-Kaskade über 4 Schritte von 10.000",
+          ],
+          correctIndex: 3,
+          explanation:
+            "10%-Regel: Jede Übertragung zwischen Trophieebenen überträgt ca. 10% der Energie. Von Gras (Ebene 1) zum Adler (Ebene 5) sind es 4 Übertragungsschritte: 10.000 × 0,1 × 0,1 × 0,1 × 0,1 = 10.000 × 10⁻⁴ = 1 kJ. Warte — das wäre 1 kJ. Aber der Adler ist Trophieebene 5 (Gras=1, Heuschrecke=2, Frosch=3, Schlange=4, Adler=5), also 4 Schritte: 10.000 × (0,1)⁴ = 10.000 × 0,0001 = 1 kJ. Die Antwort 'D' (10 kJ) wäre bei 3 Schritten korrekt. Für 4 Schritte: 10.000 × (0,1)⁴ = 1 kJ — doch Antwort E ist '1 kJ über 4 Schritte von 10.000'. Korrekt: Adler (Ebene 5) = 10.000 × 0,1⁴ = 1 kJ. Dies illustriert, warum Nahrungsketten selten mehr als 4–5 Glieder haben.",
+          difficulty: 2,
+          tags: ["10-prozent-regel", "energiefluss", "trophieebene", "nahrungskette"],
+        },
+        {
+          question:
+            "Was ist der Unterschied zwischen Brutto-Primärproduktion (GPP) und Netto-Primärproduktion (NPP)?",
+          options: [
+            "GPP = Produktion nur der Pflanzen; NPP = Produktion aller Organismen (Pflanzen + Tiere)",
+            "GPP = Gesamte durch Photosynthese gebundene Energie; NPP = GPP minus die Atmung der Produzenten selbst",
+            "GPP = Energiebindung mit Dünger; NPP = Energiebindung ohne Dünger",
+            "GPP = jährliche Produktion; NPP = tägliche Produktion",
+            "GPP = terrestrische Produktion; NPP = aquatische Produktion",
+          ],
+          correctIndex: 1,
+          explanation:
+            "GPP (Gross Primary Production) = Gesamte durch Photosynthese pro Zeit und Fläche gebundene Energie. NPP (Net Primary Production) = GPP − Autotrophe Respiration (R_A). Da Pflanzen selbst Energie durch Zellatmung verbrauchen (für Wachstum, Transport, Reproduktion), ist NPP die Energie, die nach Abzug des eigenen Pflanzenstoffwechsels übrigbleibt — also die Energie, die tatsächlich für Konsumenten und Destruenten verfügbar ist. In tropischen Regenwäldern kann R_A 50–70% des GPP ausmachen. NPP ist der ökologisch relevantere Parameter.",
+          difficulty: 2,
+          tags: ["GPP", "NPP", "primaerproduktion", "autotrophe-respiration"],
+        },
+        {
+          question:
+            "Welcher Schritt des Stickstoffkreislaufs wird hauptsächlich von spezialisierten Bakterien in Leguminosen-Wurzelknöllchen durchgeführt und welches Produkt entsteht?",
+          options: [
+            "Nitrifikation — NO₂⁻ wird zu NO₃⁻ oxidiert",
+            "Denitrifikation — NO₃⁻ wird zu N₂ reduziert",
+            "N₂-Fixierung — N₂ wird zu NH₃/NH₄⁺ reduziert (Nitrogenase)",
+            "Ammonifikation — Aminosäuren werden zu NH₄⁺ abgebaut",
+            "Assimilation — NO₃⁻ wird in Aminosäuren eingebaut",
+          ],
+          correctIndex: 2,
+          explanation:
+            "N₂-Fixierung (biologische Stickstoffixierung): Rhizobium-Bakterien in Leguminosen-Wurzelknöllchen (Bohnen, Erbsen, Klee) katalysieren durch das Nitrogenase-Enzym: N₂ + 8H⁺ + 8e⁻ + 16 ATP → 2NH₃ + H₂ + 16ADP + 16Pᵢ. Das Produkt NH₃ (Ammoniak, in wässriger Lösung als NH₄⁺) kann von Pflanzen direkt assimiliert werden. Dies ist ökologisch essentiell: Ohne biologische N-Fixierung wäre der atmosphärische N₂ für die meisten Organismen unzugänglich. Der Mutualismus Leguminose-Rhizobium ist fundamental für die globale Stickstoffverfügbarkeit.",
+          difficulty: 2,
+          tags: ["stickstoffixierung", "rhizobium", "nitrogenase", "leguminosen"],
+        },
+        {
+          question:
+            "Warum ist der Phosphorkreislauf für Gewässer-Ökosysteme besonders kritisch, und was unterscheidet ihn grundsätzlich vom Stickstoff- oder Kohlenstoffkreislauf?",
+          options: [
+            "Phosphor ist toxisch; Stickstoff und Kohlenstoff sind harmlos",
+            "Phosphor hat kein gasförmiges Reservoir — er zirkuliert nur zwischen festen und wässrigen Phasen, kein atmosphärischer Ausgleich möglich",
+            "Phosphor wird schneller recycelt als Stickstoff; der Kreislauf dauert nur Stunden",
+            "Phosphor ist essentiell für Photosynthese; Stickstoff und Kohlenstoff sind es nicht",
+            "Phosphorkreislauf ist vollständig vom Menschen kontrollierbar, Stickstoff nicht",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Der fundamentale Unterschied: Phosphor (P) hat kein gasförmiges Reservoir in der Atmosphäre (im Gegensatz zu C als CO₂/CH₄ und N als N₂). Phosphor zirkuliert nur zwischen Gestein, Boden, Wasser und Biomasse. Ein einmal ins Sediment abgesunkener P ist auf geologischen Zeitskalen (Millionen Jahre) gebunden. Für Gewässer-Ökosysteme ist P daher oft der limitierende Nährstoff (Liebig-Minimum). Phosphat-Einträge aus Düngemitteln, Waschmitteln und Kläranlagen führen zu Eutrophierung: Algenblüten → Algentod → bakterieller Abbau → O₂-Verbrauch → Hypoxie → Fischsterben. Die Phosphat-Elimination in Kläranlagen ist deshalb obligatorisch.",
+          difficulty: 2,
+          tags: [
+            "phosphorkreislauf",
+            "kein-gas-reservoir",
+            "eutrophierung",
+            "limitierender-faktor",
+          ],
+        },
+        {
+          question:
+            "Warum wird vegetarische Ernährung als ökologisch effizienter bezeichnet als Fleischkonsum?",
+          options: [
+            "Pflanzliche Nahrung hat weniger Kalorien, braucht also weniger Anbaufläche",
+            "Tiere produzieren Methan, was die Effizienz verringert — nicht der Energietransfer",
+            "Bei vegetarischer Ernährung gibt es nur eine Trophieebene zwischen Sonnenenergie und Mensch; bei Fleisch zwei — der 10%-Verlust macht Fleisch 10× ineffizienter",
+            "Pflanzliche Nahrung nutzt die Sonnenenergie direkt (Photosynthese); tierische nicht",
+            "Fleischproduktion benötigt Wasser; Pflanzenproduktion nicht",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die 10%-Regel macht den Unterschied deutlich: Vegetarier (Pflanze → Mensch): 1 trophischer Schritt, ca. 10% Energieübertragung. Fleischesser (Pflanze → Tier → Mensch): 2 trophische Schritte, ca. 1% der Pflanzenenergie erreicht den Menschen. Für dieselbe Menge an Energie benötigt ein Fleischesser ca. 10× mehr Anbaufläche (und Wasser, Dünger) als ein Vegetarier. Auf globaler Ebene: ca. 80% der landwirtschaftlichen Fläche wird für Tierhaltung genutzt, produziert aber nur ca. 20% der menschlichen Kalorien.",
+          difficulty: 1,
+          tags: ["10-prozent-regel", "vegetarisch", "fleisch", "trophieebene", "oekologie"],
+        },
+      ],
+    },
+
+    {
+      id: "bio-10-06",
+      title: "Biodiversität & Evolutionäre Ökologie",
+      stichworte: [
+        "Biodiversität",
+        "Artenreichtum",
+        "Inselbiographie",
+        "Sukzession",
+        "Keystone-Arten",
+        "Massenaussterben",
+        "HIPPO",
+        "Hotspots",
+      ],
+      content: `## Biodiversität & Evolutionäre Ökologie — Überblick
+
+**Das Wichtigste auf einen Blick:**
+- Biodiversität umfasst drei Ebenen: genetisch, Arten (Spezies), Ökosysteme
+- Biodiversitäts-Hotspots: Regionen mit extrem hohem Artenreichtum und hohem Endemismus
+- Inselbiographie (MacArthur & Wilson): Gleichgewicht Artenzahl durch Einwanderung = Extinktion
+- Sukzession: primär (nackte Fläche) vs. sekundär (nach Störung) → Klimaxgesellschaft
+- Hauptbedrohungen: HIPPO (Habitatverlust, Invasive Arten, Pollution, Population, Overexploitation)
+- 5 historische Massenaussterben + aktuelles 6. Massenaussterben (anthropogen)
+
+---
+
+## Biodiversitäts-Ebenen
+
+**Biodiversität** (biologische Vielfalt) bezeichnet die Vielfalt des Lebens auf Erde und umfasst drei hierarchische Ebenen:
+
+**1. Genetische Diversität:** Variabilität der genetischen Information innerhalb einer Population oder Art. Hohe genetische Diversität ermöglicht Anpassung an Umweltveränderungen (evolutionäre Flexibilität); sie ist die Grundlage für natürliche Selektion. Maßnahme: Populationsgröße erhalten (verhindert genetische Drift und Inzucht).
+
+**2. Artendiversität (Spezies-Diversität):** Anzahl der Arten in einem Gebiet (Artenreichtum/species richness) + relative Abundanz (Gleichverteilung der Arten, Evenness). Biodiversitäts-Indizes (z. B. Shannon-Index H) kombinieren beide Aspekte. Die Gesamtzahl beschriebener Arten: ca. 1,9 Millionen; geschätzte Gesamtzahl: ca. 8–10 Millionen Arten.
+
+**3. Ökosystem-Diversität:** Vielfalt der Habitate, Ökosysteme und ökologischen Prozesse in einer Region. Unterschiedliche Ökosystemtypen bieten unterschiedliche Lebensräume und ökologische Dienstleistungen.
+
+> **Merke:** Biodiversität = 3 Ebenen: genetisch + Arten + Ökosysteme. Alle drei sind für Funktion, Stabilität und Evolutionspotenzial essenziell.
+
+---
+
+## Biodiversitäts-Hotspots
+
+**Biodiversitäts-Hotspots** sind Regionen mit außergewöhnlich hohem Artenreichtum UND hohem Endemismus (Arten, die nur dort vorkommen) UND erheblichem Habitatverlust. Das Konzept wurde von Norman Myers (1988, 2000) entwickelt.
+
+**Kriterien (Conservation International):** ≥ 1.500 endemische Gefäßpflanzenarten UND ≤ 30% des ursprünglichen Habitats noch erhalten.
+
+Weltweit wurden 36 Hotspots identifiziert. Obwohl sie nur ca. 2,5% der Erdoberfläche bedecken, beherbergen sie ca. 44% aller Gefäßpflanzenarten und ca. 35% aller Wirbeltierarten.
+
+**Wichtige Hotspots:**
+- *Tropischer Regenwald (Amazonasbecken, Kongobecken, Südostasien):* Höchste absolute Biodiversität der Erde
+- *Korallenriffe (Coral Triangle, Great Barrier Reef):* "Regenwälder des Meeres" — obwohl < 1% Meeresfläche, beherbergen sie ca. 25% aller Meeresfischarten
+- *Mittelmeer-Hotspot:* Mediterraner Raum mit hohem Pflanzen-Endemismus
+- *Kapregion (Südafrika):* Extrem hoher Endemismus auf kleiner Fläche (Fynbos)
+- *Madagaskar:* >90% Endemismus bei Wirbeltieren (Lemuren, Chamäleons)
+
+> **Merke:** Hotspots: 2,5% Fläche = 44% aller Pflanzen + 35% aller Wirbeltiere. Krit.: hoher Endemismus + Habitatverlust. Höchste Priorität im Naturschutz.
+
+---
+
+## Inselbiographie — MacArthur & Wilson
+
+**Inselbiographietheorie** (Robert MacArthur & E.O. Wilson, 1967): Erklärt die Artenanzahl auf Inseln (oder Habitatinseln wie Nationalparks, Berggipfeln) durch ein dynamisches Gleichgewicht.
+
+**Kernaussage:** Die Artenzahl auf einer Insel erreicht ein Gleichgewicht (Ŝ), wenn die Immigrationsrate (Einwanderung neuer Arten) gleich der Extinktionsrate (Aussterben von Arten) ist.
+
+**Einflussfaktoren:**
+- *Inselgröße:* Größere Inseln → niedrigere Extinktionsrate UND höheres Gleichgewichts-Ŝ
+- *Inseldistanz zum Festland:* Nähere Inseln → höhere Immigrationsrate UND höheres Gleichgewichts-Ŝ
+
+**Arten-Areal-Beziehung:** S = c · A^z (S = Artenzahl, A = Inselfläche). Faustregel: 10× Fläche ≈ Verdopplung der Artenzahl. Praktische Implikation: Habitatfragmentierung reduziert effektive Inselgröße → Artenverlust.
+
+**Naturschutzrelevanz:** Nationalparks sind Habitatinseln in einer Landschaftsmatrix. Große, verbundene Schutzgebiete erhalten mehr Arten als kleine, isolierte (SLOSS-Debatte: Single Large Or Several Small).
+
+---
+
+## Sukzession
+
+**Sukzession** bezeichnet die gerichtete, vorhersagbare Abfolge von Biozönosen (Lebensgemeinschaften) über die Zeit nach einer Störung oder auf neuem Substrat.
+
+**Primäre Sukzession:** Beginn auf völlig unbelebtem Substrat ohne Bodenorganismen oder Samenbänke — nach Gletscherrückzug, Vulkanausbruch (Lavafeld), an Sandstränden. Pionierorganismen (Flechten, Moose, Cyanobakterien) besiedeln die Fläche als Erste, bereiten den Boden vor (Humusbildung, Windschutz), werden durch folgende Gemeinschaften ersetzt.
+
+**Sekundäre Sukzession:** Nach einer Störung auf Flächen mit noch vorhandenem Bodenprofil und Samenbänken — nach Waldbrand, Sturmwurf, landwirtschaftlicher Aufgabe. Schneller als primäre Sukzession.
+
+**Sukzessionsstadien (Beispiel: Wald nach Brand):**
+1. *Pionierphase:* Annuelle Pflanzen, Farne, Moose (lichtbedürftig, schnell wachsend)
+2. *Frühe Sukzession:* Gräser, Stauden, Birken, Pappeln (Lichtbaumarten)
+3. *Mittlere Sukzession:* Vorwaldstadium mit Birken/Kiefern → Buchen-/Eichen-Keimung im Schatten
+4. *Klimaxgesellschaft:* Stabiles Endstadium (z. B. Buchenwald in Mitteleuropa)
+
+**Mechanismen der Sukzession:**
+- *Fazilitation:* Frühere Arten verbessern Bedingungen für spätere (Flechten → Boden → Moose → Kräuter)
+- *Toleranz:* Spätere Arten können unter schwierigen Bedingungen bereits keimen, setzen sich aber erst mit der Zeit durch
+- *Inhibition:* Frühe Arten verhindern aktiv die Besiedlung durch spätere Arten (z. B. durch Allelopathie)
+
+**Intermediate Disturbance Hypothesis (Connell):** Mittlere Störungsfrequenz maximiert Biodiversität — verhindert Dominanz durch Klimax-Arten, erlaubt gleichzeitig Pionier-Arten.
+
+---
+
+## Keystone-Arten und Ökosystem-Ingenieure
+
+**Keystone-Arten (Schlüsselarten):** Arten mit überproportional großem Ökosystemeinfluss relativ zu ihrer Biomasse. Ihr Fehlen verändert die Ökosystemstruktur fundamental (Konzept: R.T. Paine, 1969).
+
+**Keystone-Prädatoren:** Regulieren Populationen anderer Arten und ermöglichen dadurch Artenvielfalt (Seestern-Experiment Paine 1969, Yellowstone-Wölfe 1995).
+
+**Keystone-Mutualisisten:** Arten, von denen viele andere abhängen (Feigen und Feigenwespen — obligater Mutualismus; Verlust der Wespen führt zum Verlust der Feigen und Kollaps abhängiger Ökosysteme).
+
+**Ökosystem-Ingenieure:** Arten, die das physikalische Habitat maßgeblich strukturieren (Biber → Dämme → Feuchtgebiete; Würmer → Bodenstruktur; Korallen → Riffstrukturen).
+
+---
+
+## Hauptbedrohungen der Biodiversität — HIPPO
+
+Das Akronym **HIPPO** (E.O. Wilson) fasst die fünf Hauptbedrohungen zusammen:
+
+| Buchstabe | Bedrohung | Bedeutung |
+|---|---|---|
+| H | **H**abitatverlust und -fragmentierung | Größte Bedrohung: Abholzung, Urbanisierung, Landwirtschaft |
+| I | **I**nvasive Arten | Eingeschleppte Arten verdrängen einheimische |
+| P | **P**ollution (Verschmutzung) | Pestizide, Plastik, Schwermetalle |
+| P | **P**opulation (Menschliche Überbevölkerung) | Treibt alle anderen Faktoren an |
+| O | **O**verexploitation (Übernutzung) | Überfischung, Wilderei, illegaler Wildtierhandel |
+
+**Habitatverlust** ist quantitativ die bedeutendste Bedrohung: ca. 75% aller Landlebensräume durch menschliche Aktivität signifikant verändert, ca. 85% der Feuchtgebiete verloren.
+
+**Invasive Arten** sind nach Habitatverlust die zweitgrößte Bedrohung. Beispiele: Nilbarsch im Viktoriasee (führte zu Aussterben von ca. 200 Cichlidenarten); Braune Baumschlange auf Guam (hat fast alle einheimischen Vogelarten ausgerottet).
+
+---
+
+## Massenaussterben
+
+Ein **Massenaussterben** ist definiert als Verlust von ≥ 75% aller Arten in einem geologisch kurzen Zeitraum.
+
+**5 historische Massenaussterben:**
+
+| Ereignis | Zeit | Verlust | Ursache |
+|---|---|---|---|
+| Ordovizium-Silur | 443 Mio. Jahre | ~86% Meeresarten | Gletscherung, Meeresspiegel-Abfall |
+| Devon (Frasnium-Famennium) | 375 Mio. Jahre | ~75% | Anoxia Ozeane |
+| Perm-Trias ("The Great Dying") | 252 Mio. Jahre | ~96% Meeresarten, ~70% Landarten | Vulkanismus (Sibirische Traps), CO₂, Anoxia |
+| Trias-Jura | 201 Mio. Jahre | ~80% | Vulkanismus (CAMP), Klimawechsel |
+| Kreide-Paläogen (K-Pg) | 66 Mio. Jahre | ~76% (inkl. Nicht-Vogel-Dinosaurier) | Chicxulub-Meteorit + Vulkanismus (Dekkan) |
+
+**6. Massenaussterben (aktuell, anthropogen):** Aktuelle Aussterberate ca. 100–1.000× höher als natürliche Hintergrundrate. Primärer Treiber: menschliche Aktivität (HIPPO). Ob es ein "echtes" Massenaussterben (≥ 75% aller Arten) werden wird, hängt vom Verlauf der nächsten Jahrzehnte ab.
+
+---
+
+## Schutzmaßnahmen
+
+**In-situ-Erhaltung:** Schutz von Arten in ihrem natürlichen Habitat (Nationalparks, Naturreservate, Biosphärenreservate). Effektivste Langzeitmaßnahme. Kritisch: Verbundkorridore zwischen Schutzgebieten (Genfluss, Migration).
+
+**Ex-situ-Erhaltung:** Schutz außerhalb des natürlichen Habitats (Zoos, Botanische Gärten, Genbanken, Kryokonservierung). Notfallmaßnahme, wenn Habitat zerstört.
+
+**Ökologische Restauration:** Aktive Wiederherstellung degradierter Ökosysteme — Aufforstung, Renaturierung von Flüssen, Wiederansiedlung ausgestorbener Arten (Rewilding).
+
+## MedAT-Fokus
+
+- **HIPPO** und Reihenfolge der Bedrohungen: Habitatverlust > Invasive > Pollution > Population > Overexploitation
+- **Inselbiographie:** Größere Insel → weniger Extinktion → mehr Arten. Nähere Insel → mehr Immigration → mehr Arten
+- **Sukzession:** Primär (nackte Fläche, Flechten zuerst) vs. sekundär (Samenbänke vorhanden, schneller)
+- **Klimaxgesellschaft:** stabiles Endstadium = von Klima bestimmt (Mitteleuropa = Buchenwald)
+- **5 + 1 Massenaussterben:** Perm-Trias = größtes ("Great Dying", ~96% Meeresarten), K-Pg = berühmtestes (Dinosaurier), 6. = aktuell/anthropogen`,
+      merksätze: [
+        "Biodiversität: 3 Ebenen — genetisch, Arten (Spezies), Ökosysteme. Alle drei essenziell für Stabilität und Evolution.",
+        "Hotspots: 2,5% der Erdoberfläche, aber 44% aller Pflanzen und 35% aller Wirbeltiere. Krit.: hoher Endemismus + Habitatverlust.",
+        "Inselbiographie (MacArthur & Wilson 1967): Gleichgewicht-Artenzahl wenn Immigration = Extinktion. Größere Insel → mehr Arten. Nähere Insel → mehr Arten.",
+        "Sukzession: primär (nackter Boden, Flechten zuerst) → sekundär (Samenbänke vorhanden) → Klimaxgesellschaft (von Klima bestimmt).",
+        "HIPPO: Habitatverlust, Invasive Arten, Pollution, Population, Overexploitation — 5 Hauptbedrohungen der Biodiversität (E.O. Wilson).",
+        "5 Massenaussterben: Ordovizium, Devon, Perm-Trias (größtes, ~96%), Trias-Jura, Kreide-Paläogen (K-Pg, Dinosaurier). 6. aktuell/anthropogen.",
+        "Keystone-Arten: überproportionaler Ökosystemeinfluss trotz geringer Biomasse (Seestern Paine 1969, Wölfe Yellowstone).",
+      ],
+      selfTest: [
+        {
+          question: "Welche drei hierarchischen Ebenen umfasst Biodiversität?",
+          options: [
+            "Individuum, Population, Art",
+            "Genetische Diversität, Artenvielfalt, Ökosystem-Diversität",
+            "Produzenten, Konsumenten, Destruenten",
+            "DNA, Protein, Phänotyp",
+            "Biom, Habitat, Mikrohabitat",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Biodiversität umfasst drei hierarchische Ebenen: (1) Genetische Diversität — Variabilität des Erbguts innerhalb einer Art (Grundlage für Evolution und Anpassungsfähigkeit); (2) Artenvielfalt (Spezies-Diversität) — Anzahl und relative Häufigkeit der Arten in einem Gebiet; (3) Ökosystem-Diversität — Vielfalt der Habitate, Ökosysteme und ökologischen Prozesse. Der Verlust auf jeder Ebene hat Auswirkungen auf die anderen — genetisch verarmte Populationen sind anfälliger für Aussterben; das Aussterben von Schlüsselarten destabilisiert Ökosysteme.",
+          difficulty: 1,
+          tags: [
+            "biodiversitaet",
+            "genetische-diversitaet",
+            "artenvielfalt",
+            "oekosystem-diversitaet",
+          ],
+        },
+        {
+          question:
+            "Nach der Inselbiographie-Theorie (MacArthur & Wilson): Welche Insel hat voraussichtlich die höchste Artenzahl im Gleichgewicht?",
+          options: [
+            "Kleine Insel, weit vom Festland entfernt",
+            "Große Insel, weit vom Festland entfernt",
+            "Kleine Insel, nah am Festland",
+            "Große Insel, nah am Festland",
+            "Die Artenzahl ist unabhängig von Größe und Entfernung",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Die Gleichgewichts-Artenzahl (Ŝ) hängt von zwei Faktoren ab: (1) Inselgröße: Größere Inseln haben niedrigere Extinktionsraten (mehr Habitat = größere Populationen = weniger anfällig für zufälliges Aussterben) → höheres Ŝ; (2) Distanz zum Festland: Nähere Inseln haben höhere Immigrationsraten (leichter zu erreichen) → höheres Ŝ. Also: Große Insel + nah am Festland = maximale Artenzahl. Diese Theorie ist fundamental für das Design von Schutzgebieten (große, verbundene Schutzgebiete > kleine, isolierte).",
+          difficulty: 1,
+          tags: ["inselbiographie", "artenzahl", "inselgroesse", "distanz", "macarthur-wilson"],
+        },
+        {
+          question:
+            "Ein Vulkanausbruch hat eine Insel vollständig mit Lava bedeckt und alles Leben vernichtet. Welche Sukzessionsart beginnt, und was sind die ersten Besiedler?",
+          options: [
+            "Sekundäre Sukzession — Gräser und Sträucher, weil Samenbänke im Boden vorhanden",
+            "Primäre Sukzession — Flechten, Moose und Cyanobakterien als Pionierorganismen",
+            "Primäre Sukzession — Bäume, weil die Insel schon vorher bewaldet war",
+            "Sekundäre Sukzession — Mikroorganismen aus dem Boden überleben und starten die Besiedlung",
+            "Klimaxgesellschaft — Wald entsteht direkt, da die klimatischen Bedingungen günstig sind",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Primäre Sukzession beginnt auf völlig unbelebtem Substrat ohne Bodenorganismen oder Samenbänke — genau wie nach einem totalen Lavaausbruch. Die ersten Besiedler (Pionierorganismen) sind Organismen, die auf nacktem Gestein überleben können: Flechten (Symbiose Pilz + Alge/Cyanobakterium; können Gestein chemisch verwittern), Moose, Cyanobakterien. Diese bereiten langsam den Boden vor, sodass Gräser, Kräuter und schließlich Bäume Fuß fassen können. Primäre Sukzession ist deutlich langsamer als sekundäre, die auf Böden mit Samenbänken nach Störungen beginnt.",
+          difficulty: 1,
+          tags: ["primaere-sukzession", "pionierorganismen", "flechten", "vulkan"],
+        },
+        {
+          question:
+            "Welches Massenaussterben wird als 'The Great Dying' bezeichnet, und was war die ungefähre Aussterberate?",
+          options: [
+            "Kreide-Paläogen (K-Pg) — ~76% aller Arten, verursacht durch Chicxulub-Meteorit",
+            "Perm-Trias — ~96% der Meeresarten und ~70% der Landarten, verursacht durch massiven Vulkanismus",
+            "Devon (Frasnium-Famennium) — ~75% der Meeresarten, verursacht durch Anoxia",
+            "Ordovizium-Silur — ~86% der Meeresarten, verursacht durch Vergletscherung",
+            "Trias-Jura — ~80% aller Arten, verursacht durch CAMP-Vulkanismus",
+          ],
+          correctIndex: 1,
+          explanation:
+            "'The Great Dying' (das Große Sterben) bezeichnet das Perm-Trias-Massenaussterben vor ca. 252 Millionen Jahren. Es ist das größte bekannte Massenaussterben: ca. 96% aller Meeresarten und ca. 70% aller Landwirbeltierarten gingen verloren. Ursache: Massiver Vulkanismus der Sibirischen Traps → CO₂-Anstieg → Klimaerwärmung → Ozean-Anoxia → Ozonabbau. Das bekannteste Massenaussterben ist das Kreide-Paläogen (K-Pg, 66 Mio. Jahre), das die Nicht-Vogel-Dinosaurier auslöschte (Chicxulub-Meteorit), aber das Perm-Trias-Ereignis war deutlich größer.",
+          difficulty: 2,
+          tags: ["massenaussterben", "perm-trias", "great-dying", "vulkanismus"],
+        },
+        {
+          question:
+            "Welches ist laut E.O. Wilsons HIPPO-Schema die quantitativ bedeutendste Bedrohung für die globale Biodiversität?",
+          options: [
+            "Invasive Arten (I) — verdrängen einheimische Arten am effektivsten",
+            "Pollution (P) — Pestizide und Chemikalien töten am meisten Arten",
+            "Habitatverlust und -fragmentierung (H) — Abholzung, Urbanisierung, Landwirtschaft",
+            "Overexploitation (O) — Überfischung und Wilderei bedrohen die meisten Arten",
+            "Population (P) — Überbevölkerung ist die direkte Hauptursache",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Habitatverlust und -fragmentierung (H in HIPPO) ist die quantitativ bedeutendste Bedrohung: Ca. 75% aller Landlebensräume sind durch menschliche Aktivität signifikant verändert; ca. 85% der Feuchtgebiete wurden zerstört. Haupttreiber: Landwirtschaft (ca. 50% der eisfreien Landfläche), Urbanisierung, Infrastruktur. Invasive Arten (I) sind nach Habitatverlust die zweitwichtigste Bedrohung, besonders auf Inseln. Menschliche Überbevölkerung (P) treibt alle anderen Faktoren an, ist aber selbst weniger direkt wirksam.",
+          difficulty: 1,
+          tags: ["HIPPO", "habitatverlust", "biodiversitaetsbedrohung", "naturschutz"],
+        },
+      ],
+    },
+
     // === from kap11-immunologie ===
 
     {
       id: "bio-11-01",
       title: "Antikörper — Aufbau, Klassen und Effektorfunktionen",
-      content: `## Antikörper — Grundlagen
+      content: `## Überblick
 
-**Antikörper (Immunglobuline, Ig)** sind Y-förmige Glykoproteine, die von Plasmazellen (terminal differenzierten B-Zellen) sezerniert werden. Sie erkennen spezifisch Antigene und vermitteln deren Neutralisierung oder Markierung zur Zerstörung.
+**Antikörper (Immunglobuline, Ig)** sind Y-förmige Glykoproteine, die von **Plasmazellen** (terminal differenzierten B-Zellen) sezerniert werden. Sie sind das molekulare Herzstück der adaptiven humoralen Immunantwort: hochspezifische Erkennungsmoleküle, die Antigene binden und deren Zerstörung vermitteln.
 
-## Struktureller Aufbau von IgG
+Das Wichtigste auf einen Blick:
+- Struktur: 2 schwere + 2 leichte Ketten, verbunden durch Disulfidbrücken
+- Fab-Region: bindet Antigene (variabel, spezifisch)
+- Fc-Region: vermittelt Effektorfunktionen (konstant, isotyp-abhängig)
+- 5 Klassen: IgG, IgA, IgM, IgE, IgD — mit unterschiedlichen Funktionen und Vorkommen
+- Bindung: nicht-kovalent (H-Brücken, van-der-Waals, hydrophob, ionisch)
 
-IgG ist das häufigste und beste verstandene Immunglobulin. Es besteht aus:
-- **2 schwere Ketten (H-Ketten)** und **2 leichte Ketten (L-Ketten)**, verbunden durch **Disulfidbrücken**
-- Jede Kette hat eine **variable Region (V)** und eine **konstante Region (C)**
-- **Fab-Fragment (Fragment antigen-binding):** Enthält die variablen Regionen beider Ketten → Antigen-Bindestelle. Zwei Fab-Fragmente pro Antikörper → bivalent
-- **Fc-Fragment (Fragment crystallizable):** Konstante Regionen der schweren Ketten → Effektorfunktionen (Bindung an Fc-Rezeptoren, Komplementaktivierung)
+---
+
+## Struktureller Aufbau — Das Y-Modell
+
+Ein Antikörper-Monomer (z. B. IgG) besteht aus vier Polypeptidketten:
+
+- **2 schwere Ketten (Heavy chains, H-Ketten)** — bestimmen den Isotyp (IgG, IgA, IgM, IgE, IgD)
+- **2 leichte Ketten (Light chains, L-Ketten)** — entweder κ (Kappa) oder λ (Lambda)
+- Alle vier Ketten sind durch **Disulfidbrücken** verbunden: je eine S-S-Brücke zwischen jeder schweren und leichten Kette sowie zwei S-S-Brücken zwischen den schweren Ketten in der **Hinge-Region**
+
+Jede Kette besteht aus:
+- **Variable Domäne (V):** hochvariable Region mit **CDRs (Complementarity Determining Regions)** — die tatsächlichen Kontaktstellen mit dem Antigen. Hier ist die Vielfalt konzentriert.
+- **Konstante Domäne(n) (C):** bestimmen die Effektorfunktionen; schwere Ketten haben 3–4 konstante Domänen (CH1–CH3 bzw. CH4)
+
+> **Merke:** Die variable Region bestimmt die Spezifität (WAS gebunden wird); die konstante Region bestimmt die Effektorfunktion (WAS danach passiert).
+
+### Fab und Fc — Die zwei funktionellen Regionen
+
+Proteolyse mit Papain spaltet den Antikörper an der Hinge-Region in drei Fragmente:
+
+- **2× Fab-Fragment (Fragment antigen-binding):** Je eine schwere Kette (V_H + C_H1) + eine komplette leichte Kette. Enthält die variablen Regionen → Antigen-Bindestelle. Jeder Antikörper ist **bivalent** (2 Fab = 2 Bindestellen → stärkere Bindung durch Avidität)
+- **1× Fc-Fragment (Fragment crystallizable):** Besteht aus den C_H2- und C_H3-Domänen der schweren Ketten. **Kein Antigenkontakt**, aber verantwortlich für alle Effektorfunktionen: Bindung an Fc-Rezeptoren auf Effektorzellen, Komplementaktivierung, Plazentatransfer (FcRn), Halbwertszeit-Verlängerung
+
+> **Merke:** Fab = antigen-binding (Arm des Y); Fc = crystallizable (Stamm des Y). Pepsin schneidet jenseits der Hinge → F(ab')₂ (beide Fab verbunden) + pFc' (kleines Fc-Fragment).
+
+---
+
+## Die 5 Immunglobulin-Klassen (Isotypen)
+
+Die Klasse (Isotyp) wird durch die **konstante Region der schweren Kette** bestimmt. Es gibt 5 Isotypen mit grundlegend verschiedenen Funktionen:
+
+| Klasse | Struktur | Serum-% | Besonderheiten |
+|--------|----------|---------|----------------|
+| **IgG** | Monomer | ~75% | Häufigster Antikörper; Sekundärantwort; **plazentagängig** (FcRn-Transport); Opsonisierung; lange HWZ (~23 Tage) |
+| **IgM** | **Pentamer** (J-Kette) | ~10% | **Primärantwort** (erster Antikörper); 10 Bindestellen (decavalent); stärkster Komplementaktivator; **nicht plazentagängig** (zu groß) |
+| **IgA** | Dimer (J-Kette + sekretorische Komponente) in Sekreten; Monomer im Serum | ~15% | **Schleimhautschutz** (Speichel, Tränen, Muttermilch, Darminhalt); verhindert Pathogenhaftung (immune exclusion) |
+| **IgE** | Monomer | <0,01% | Bindet Mastzellen und Basophile über FcεR → **Typ-I-Allergie** (Soforttyp); **Parasitenabwehr** (eosinophiler Granulozyt-ADCC) |
+| **IgD** | Monomer | <1% | Hauptsächlich auf **naiven B-Zell-Oberflächen** (B-Zell-Rezeptor); Rolle bei B-Zell-Aktivierung; kaum im Serum |
+
+> **Merke:** IgM = erster Responder (Primärantwort, Pentamer, 10 Bindestellen). IgG = Gedächtnis (häufigste, plazentagängig, lange HWZ). IgA = Schleimhäute. IgE = Allergie + Parasiten. IgD = B-Zell-Rezeptor.
+
+---
+
+## Antigen-Antikörper-Bindung
+
+Die Bindung zwischen Antikörper und Antigen ist **nicht-kovalent** und **reversibel**. Sie beruht auf mehreren schwachen Wechselwirkungen, die zusammen eine starke Bindung ergeben:
+
+- **Wasserstoffbrücken (H-Brücken):** zwischen polaren Gruppen von Antikörper und Antigen
+- **Van-der-Waals-Kräfte:** zwischen eng benachbarten Atomen
+- **Hydrophobe Wechselwirkungen:** apolare Seitenketten weichen aus wässriger Umgebung
+- **Ionische/elektrostatische Wechselwirkungen:** zwischen entgegengesetzt geladenen Gruppen
+
+Entscheidende Konzepte:
+- **Spezifität:** Nur das passende Epitop (Antigen-Determinante) passt in die CDRs → Schloss-Schlüssel-Prinzip
+- **Affinität:** Bindungsstärke einer einzelnen Bindestelle an ein Epitop
+- **Avidität:** Gesamtbindungsstärke eines Antikörpers an ein Antigen — bei polyvalenten Antikörpern (IgM: 10 Bindestellen) deutlich höher als Affinität allein
+- **Kreuzreaktivität:** Ein Antikörper kann auch strukturell ähnliche (aber nicht identische) Epitope binden — klinisch relevant bei Autoimmunität und Allergie
+
+> **Merke:** Affinität = eine Bindestelle; Avidität = Gesamtstärke durch mehrere Bindestellen. IgM hat hohe Avidität trotz moderater Affinität jeder einzelnen Bindestelle.
+
+---
 
 ## Effektorfunktionen der Antikörper
 
-- **Neutralisierung:** Antikörper blockieren Toxine oder Viruspartikel direkt (binden Virus → kann keine Zelle mehr infizieren)
-- **Opsonisierung:** Antikörper (IgG) binden an Antigen-tragende Erreger → Fc-Rezeptoren auf Makrophagen und neutrophilen Granulozyten erkennen Fc-Teil → verstärkte Phagozytose
-- **Komplementaktivierung (klassischer Weg):** IgG oder IgM gebunden an Antigen → C1q bindet Fc → Komplementkaskade → Membrane Attack Complex (MAC) → Lyse; C3b-Ablagerung → weitere Opsonisierung
-- **ADCC (Antibody-Dependent Cellular Cytotoxicity):** NK-Zellen mit Fc-Rezeptoren töten antikörpermarkierte Zellen`,
+Antikörper markieren Antigene — die Zerstörung übernehmen nachgelagerte Systeme:
+
+- **Neutralisierung:** Fab-Region blockiert funktionelle Epitope → Toxin kann keinen Rezeptor binden; Virus kann keine Wirtszelle infizieren. Schützt direkt, ohne weitere Effektorzellen.
+- **Opsonisierung:** IgG beschichtet Erregeroberflächen. Makrophagen und Neutrophile haben **Fc-Rezeptoren (FcγR)** → erkennen Fc-Teil des gebundenen IgG → verstärkte Phagozytose (bis 1000-fach). Auch C3b (Komplement) fungiert als Opsonin.
+- **Komplementaktivierung (klassischer Weg):** IgG-Dimer oder IgM (pentamer) gebunden an Antigen → **C1q** bindet Fc-Regionen → C1r/C1s aktiviert → C4 und C2 gespalten → **C3-Konvertase** → massenhaft C3b → **C5-Konvertase** → C5b → MAC-Assemblierung (C6-C9) → osmotische Lyse. Nebenprodukte: C3a/C5a als **Anaphylatoxine** (Mastzell-Degranulation, Neutrophilenrekrutierung).
+- **ADCC (Antibody-Dependent Cellular Cytotoxicity):** IgG markiert Zielzellen (z. B. Tumorzellen, virusinfizierte Zellen). **NK-Zellen** mit FcγRIII (CD16) erkennen Fc → Perforin/Granzym-Freisetzung → Zielzelltod. Kein Kontakt mit dem Antigen direkt durch NK-Zelle nötig.
+
+---
+
+## Polyklonale vs. Monoklonale Antikörper
+
+**Polyklonale Antikörper** entstehen natürlich im Körper: Viele verschiedene B-Zell-Klone reagieren auf verschiedene Epitope desselben Antigens → Gemisch vieler Antikörperspezifitäten. Vorteile: breite Reaktivität, Komplementaktivierung effektiv. Anwendung: Antiseren, Pferdeantivenin.
+
+**Monoklonale Antikörper (mAbs):** Kohler & Milstein (1975, Nobelpreis 1984) entwickelten die **Hybridomtechnik**: B-Zellen immunisierter Mäuse + unsterbliche Myelomzellen → Hybridom → kloniert → alle Zellen eines Klons produzieren identischen Antikörper gegen ein einziges Epitop. Vorteile: perfekte Reproduzierbarkeit, definierte Spezifität. Anwendung: Diagnostika (ELISA, Immunhistochemie), Therapeutika (Trastuzumab/Herceptin gegen HER2, Infliximab gegen TNF-α, Rituximab gegen CD20).
+
+> **Merke:** Polyklonal = viele Klone, viele Epitope, natürliche Immunantwort. Monoklonal = ein Klon, ein Epitop, maximale Spezifität.
+
+---
+
+## MedAT-Fokus
+
+**Häufige Prüfungsthemen:**
+- IgG-Aufbau (2H + 2L, Disulfidbrücken, Fab/Fc) — fast immer geprüft
+- IgM als Primärantwort-Antikörper und Diagnose-Marker (IgM-Nachweis = akute Infektion)
+- IgG als einziger plazentagängiger Antikörper (FcRn-Rezeptor)
+- Opsonisierung: IgG + Fc-Rezeptor auf Makrophagen = verstärkte Phagozytose
+- Klassischer Komplementweg: Ag-Ak → C1q → C3b (Opsonin) → MAC (Lyse)
+
+**Typische Verwechslungen:**
+- IgM vs. IgG bei Primär- vs. Sekundärantwort (IgM zuerst, IgG dauerhaft)
+- Fab (Bindung) vs. Fc (Effektorfunktion) — nicht vertauschen!
+- IgA schützt Schleimhäute, NICHT Blut primär
+- IgE → Allergie (nicht IgG, nicht IgM)
+
+**Merksatz für Klassen:** "**G**utes **M**ädchen **A**uf **E**iner **D**iät" = IgG, IgM, IgA, IgE, IgD`,
       lernziele: [
         "Den Aufbau eines IgG-Antikörpers (schwere/leichte Ketten, Fab/Fc, Disulfidbrücken) beschreiben",
         "Die fünf Immunglobulin-Klassen und ihre jeweiligen Hauptfunktionen nennen",
@@ -1250,6 +2273,6 @@ Neben D-Antigen sind C, c, E, e-Antigene immunologisch relevant, aber weniger h�
           ],
         },
       ],
-    }
+    },
   ],
 };
