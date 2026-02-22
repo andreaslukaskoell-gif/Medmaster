@@ -1,12 +1,681 @@
 import type { Kapitel } from '../types';
 
-export const bioKap3: Kapitel = {
-  id: 'bio-kap3',
-  title: "Anatomie & Physiologie",
+export const bioKapAnatomieGewebe: Kapitel = {
+  id: 'bio-kap2',
+  title: "Gewebe, Anatomie & Physiologie",
   subject: 'biologie',
-  icon: '🫀',
-  estimatedTime: '180 min',
+  icon: '🔬',
+  estimatedTime: '120 min',
   unterkapitel: [
+    // === from kap2-gewebe ===
+    {
+      id: 'bio-2-01',
+      title: "Epithelgewebe — Formen, Schichtungen und Funktionen",
+      content: `# Epithelgewebe — Formen, Schichtungen und Funktionen
+
+## Einleitung
+
+**Epithelgewebe** (Epithelien) sind flächenhafte Zellverbände, die alle inneren und äußeren Körperoberflächen auskleiden. Sie bedecken die Haut, kleiden Hohlorgane aus und bilden Drüsen. Charakteristisch ist ihre **Polarität**: Die apikale Seite zeigt zum Lumen oder zur Außenwelt, die basale Seite liegt der **Basalmembran** auf. Epithelien sind **avaskulär** — ihre Versorgung erfolgt durch Diffusion aus dem darunter liegenden Bindegewebe. Epithelien regenerieren sich schnell, da Stammzellen in der Basalschicht proliferieren.
+
+## Klassifikation
+
+Epithelien werden nach **Form** und **Schichtung** eingeteilt. Nach Form unterscheidet man Plattenepithel (flache Zellen), kubisches Epithel (würfelförmig) und Zylinderepithel (säulenförmig). Nach Schichtung gibt es einschichtiges, mehrreihiges (pseudostratifiziertes) und mehrschichtiges Epithel.
+
+**Einschichtiges Plattenepithel** findet sich als Endothel in Blutgefäßen und als Mesothel in Körperhöhlen — es ermöglicht rasche Diffusion. **Einschichtiges Zylinderepithel** kleidet den Dünndarm aus; apikale Mikrovilli (Bürstensaum) vergrößern die Resorptionsfläche enorm. Das **mehrreihige Flimmerepithel** in Trachea und Bronchien trägt Kinozilien (9+2-Struktur), die zusammen mit Becherzellen für die mukoziliäre Clearance sorgen.
+
+**Mehrschichtiges verhorntes Plattenepithel** bildet die Epidermis; keratingefüllte Korneozyten bilden die äußere Schutzschicht. **Übergangsepithel (Urothel)** in Harnblase und Ureteren kann sich dehnen: Bei Blasenfüllung flachen die obersten Zellen (Schirmzellen) ab.
+
+## Drüsenepithel
+
+**Exokrine Drüsen** leiten ihr Sekret über Ausführungsgänge nach außen (z. B. Speicheldrüsen, Schweißdrüsen). **Endokrine Drüsen** sezernieren Hormone direkt ins Blut (z. B. Schilddrüse, Nebenniere). Nach Sekretionsmechanismus unterscheidet man merokrine (Exozytose, z. B. Pankreas), apokrine (Membranabschnürung, z. B. Schweißdrüsen) und holokrine Sekretion (Zellzerfall, z. B. Talgdrüsen).
+
+## Zellkontakte
+
+**Tight Junctions** (Zonulae occludentes) versiegeln den Interzellularspalt apikal, verhindern parazelluläre Diffusion und trennen apikale von basolateraler Membranzone. **Adherens Junctions** und **Desmosomen** vermitteln mechanischen Zusammenhalt. **Gap Junctions** ermöglichen direkten Ionenaustausch zwischen Zellen (wichtig für Herzmuskel, glatte Muskulatur). **Hemidesmosomen** verankern die basale Zellmembran an der Basalmembran (Integrin → Laminin/Kollagen IV).
+
+## Klinische Bedeutung
+
+Karzinome (Krebserkrankungen) entstehen zu ca. 85 % aus Epithelgewebe. Die Zilienstruktur ist bei **Primärer Ziliendy­skinesie** (Kartagener-Syndrom) gestört: Betroffene leiden unter chronischen Atemwegsinfektionen, Infertilität und Situs inversus. Defekte in Hemidesmosomen (z. B. Bullöses Pemphigoid) führen zu blasenbildenden Autoimmundermatosen.`,
+      lernziele: [
+        "Epitheltypen nach Form und Schichtung benennen und ihren Vorkommen zuordnen",
+        "Polarität des Epithels, Basalmembran und wichtige Zellkontakte erklären",
+        "Drüsentypen nach Sekretionsmechanismus unterscheiden und klinische Beispiele nennen",
+      ],
+      sections: [
+        {
+          heading: "Einschichtige Epithelien im Überblick",
+          text: "Einschichtige Epithelien besitzen nur eine Zelllage; alle Zellen berühren die Basalmembran. Einschichtiges Plattenepithel (Endothel, Mesothel) erlaubt rasche Diffusion. Einschichtiges kubisches Epithel findet sich in Schilddrüsenfollikeln und Nierentubuli. Einschichtiges Zylinderepithel kleidet den Dünndarm und Magen aus — Mikrovilli des Dünndarms erhöhen die Resorptionsfläche auf ca. 200 m². Das mehrreihige Flimmerepithel der Atemwege ist zwar einschichtig (alle Zellen auf Basalmembran), erscheint aber durch versetzt angeordnete Kerne mehrschichtig (pseudostratifiziert). Kinozilien (Länge ca. 6 µm, 9+2-Axonemstruktur) schlagen rhythmisch und transportieren Schleim mit eingeschlossenen Partikeln rachenwärts.",
+          merksatz: "Pseudostratifiziert = alle Zellen auf Basalmembran, aber Kerne auf verschiedenen Höhen.",
+        },
+        {
+          heading: "Mehrschichtige Epithelien und Übergangsepithel",
+          text: "Mehrschichtiges verhorntes Plattenepithel (Epidermis) schützt mechanisch: Stratum basale (Stammzellen, Mitose) → Stratum spinosum (Desmosomen) → Stratum granulosum (Keratohyalin) → Stratum corneum (tote Korneozyten, Keratin). Mehrschichtiges unverhorntes Plattenepithel (Ösophagus, Vagina) bleibt feucht; Kerne bleiben in obersten Schichten erhalten. Das Urothel der Harnblase ist ein Sonderfall: Bei leerer Blase sind die Schirmzellen kuppelförmig gewölbt; bei Dehnung flachen sie ab, die Uroplakin-reiche Membran faltet sich aus Vesikeln ein — das Epithel verdünnt sich, ohne zu reißen.",
+          merksatz: "Verhorntes Plattenepithel (Haut) = Schutz; Urothel = Dehnbarkeit durch Schirmzellen.",
+        },
+        {
+          heading: "Tight Junctions und Barrierefunktion",
+          text: "Tight Junctions (Zonulae occludentes) bestehen aus transmembranen Proteinen (Claudine, Occludin), die den apikalen Interzellularspalt vollständig verschließen. Sie erfüllen zwei Aufgaben: Erstens verhindern sie den parazellulären Transport (Barriere), zweitens teilen sie die Plasmamembran in einen apikalen und basolateralen Abschnitt (Fence-Funktion). Dadurch können Transporter (z. B. SGLT1 apikal, GLUT2 basolateral) gezielt für gerichtete Resorption sortiert werden. Im Darm, in den Nierentubuli und in der Blut-Hirn-Schranke sind besonders dichte Tight Junctions essentiell. Störungen (z. B. Zonulin bei Zöliakie) erhöhen die intestinale Permeabilität ('leaky gut').",
+          merksatz: "Tight Junctions = apikal, verschließen Interzellularspalt, ermöglichen gerichteten Transport.",
+        },
+      ],
+      merksätze: [
+        "Epithelien sind polar, avaskulär und sitzen auf einer Basalmembran.",
+        "Klassifikation nach Form (Platten, kubisch, zylindrisch) UND Schichtung (ein- vs. mehrschichtig).",
+        "Tight Junctions versiegeln apikal; Desmosomen halten mechanisch zusammen.",
+      ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
+      altfrage: {
+        question: "Welches Epithel kleidet die Trachea aus und welche Funktion erfüllt es?",
+        answer: "Mehrreihiges (pseudostratifiziertes) Flimmerepithel mit Kinozilien und Becherzellen. Die Kinozilien transportieren Schleimfilm mit eingeschlossenen Fremdpartikeln rachenwärts (mukoziliäre Clearance).",
+      },
+      klinischerBezug: "Bei Kartagener-Syndrom (Primäre Ziliendyskinesie) sind die Dynein-Arme der Kinozilien defekt — Betroffene leiden unter chronischer Bronchitis, Bronchiektasen, Infertilität und häufig Situs inversus. Karzinome entstehen zu ca. 85 % aus entartetem Epithelgewebe.",
+      selfTest: [
+        {
+          question: "Welche Aussage über Tight Junctions ist korrekt?",
+          options: [
+            "Sie verbinden Epithelzellen basal mit der Basalmembran.",
+            "Sie ermöglichen direkten Ionenaustausch zwischen benachbarten Zellen.",
+            "Sie versiegeln den apikalen Interzellularspalt und trennen apikale von basolateraler Membrandom­äne.",
+            "Sie bestehen hauptsächlich aus Kollagen Typ IV.",
+            "Sie sind nur in mehrschichtigen Epithelien zu finden.",
+          ],
+          correctIndex: 2,
+          explanation: "Tight Junctions (Claudine, Occludin) schließen den Interzellularspalt apikal und wirken als Fence, der apikale und basolaterale Membranproteine voneinander trennt. Gap Junctions (nicht Tight Junctions) ermöglichen Ionenaustausch; Hemidesmosomen verankern Zellen an der Basalmembran.",
+          hints: [
+            "Denk an die Lage: Tight Junctions sitzen ganz oben, apikal — was sperren sie ab?",
+            "Der Begriff 'Fence-Funktion' beschreibt, was sie zusätzlich zur Barriere leisten.",
+          ],
+          difficulty: 2,
+          tags: ['tight junctions', 'epithel', 'barrierefunktion'],
+        },
+        {
+          question: "Welches Epithel findet sich in der Harnblase und ermöglicht deren Dehnung?",
+          options: [
+            "Mehrschichtiges verhorntes Plattenepithel",
+            "Einschichtiges Zylinderepithel mit Mikrovilli",
+            "Mehrreihiges Flimmerepithel",
+            "Übergangsepithel (Urothel) mit Schirmzellen",
+            "Einschichtiges kubisches Epithel",
+          ],
+          correctIndex: 3,
+          explanation: "Das Urothel besitzt Schirmzellen, die sich bei Blasenfüllung abflachen und deren Uroplakin-reiche Membran aus intrazellulären Vesikeln eingefaltet wird. So kann die Harnblase ihr Volumen stark vergrößern, ohne zu reißen.",
+          hints: [
+            "Welches Epithel hat seinen Namen von der Funktion 'Übergang' zwischen verschiedenen Dehnungszuständen?",
+            "Die obersten Zellen dieses Epithels sind charakteristisch gewölbt und haben einen eigenen Namen.",
+          ],
+          difficulty: 1,
+          tags: ['urothel', 'harnblase', 'schirmzellen'],
+        },
+        {
+          question: "Ein Arzt untersucht ein Gewebe: Die Zellen sind säulenförmig, sitzen auf einer Basalmembran und tragen apikale Mikrovilli. In welchem Organ befindet man sich wahrscheinlich?",
+          options: [
+            "Trachea",
+            "Harnblase",
+            "Dünndarm",
+            "Epidermis der Haut",
+            "Ösophagus",
+          ],
+          correctIndex: 2,
+          explanation: "Einschichtiges Zylinderepithel mit apikalen Mikrovilli (Bürstensaum) ist typisch für den Dünndarm. Die Mikrovilli erhöhen die Resorptionsfläche massiv. Die Trachea hat Flimmerepithel; Harnblase hat Urothel; Haut hat verhorntes Plattenepithel; Ösophagus hat unverhorntes Plattenepithel.",
+          hints: [
+            "Mikrovilli = Bürstensaum — welches Organ ist für Resorption von Nährstoffen spezialisiert?",
+            "Säulenförmige Zellen + Mikrovilli + einschichtig: Das ist das Paradebeispiel eines Resorptionsepithels.",
+          ],
+          difficulty: 1,
+          tags: ['zylinderepithel', 'dünndarm', 'mikrovilli'],
+        },
+        {
+          question: "Was kennzeichnet ein 'mehrreihiges' (pseudostratifiziertes) Epithel gegenüber einem echten mehrschichtigen Epithel?",
+          options: [
+            "Mehrere Zelllagen liegen übereinander, nur die unterste berührt die Basalmembran.",
+            "Alle Zellen berühren die Basalmembran, aber die Kerne liegen auf verschiedenen Höhen.",
+            "Es ist nur in Drüsen zu finden.",
+            "Die Zellen sind immer verhornt.",
+            "Es trägt ausschließlich Mikrovilli, keine Zilien.",
+          ],
+          correctIndex: 1,
+          explanation: "Beim pseudostratifizierten Epithel berühren alle Zellen die Basalmembran (einschichtig!), aber da die Kerne auf unterschiedlichen Höhen liegen, sieht es unter dem Mikroskop mehrschichtig aus. Ein echtes mehrschichtiges Epithel hat mehrere Zelllagen, von denen nur die unterste die Basalmembran berührt.",
+          hints: [
+            "'Pseudo' bedeutet 'scheinbar' — was ist der scheinbare Eindruck, und was ist die Realität?",
+            "Die entscheidende Frage ist: Welche Zellen berühren die Basalmembran?",
+          ],
+          difficulty: 2,
+          tags: ['mehrreihiges epithel', 'pseudostratifiziert', 'basalmembran'],
+        },
+        {
+          question: "Welcher Sekretionsmechanismus ist charakteristisch für Talgdrüsen?",
+          options: [
+            "Merokrin (Exozytose ohne Zellverlust)",
+            "Apokrin (Abschnürung des apikalen Zytoplasmas)",
+            "Holokrin (Zerfall der gesamten Sekretionszelle)",
+            "Endokrin (Abgabe ins Blut)",
+            "Parakrin (Abgabe in den Interzellularspalt)",
+          ],
+          correctIndex: 2,
+          explanation: "Talgdrüsen sezernieren holokrin: Die gesamte Zelle füllt sich mit Lipiden und zerfällt dann — das Sekret (Talg/Sebum) ist der Zellinhalt selbst. Merokrine Sekretion (Exozytose) ist der häufigste Mechanismus (Speicheldrüsen, Pankreas). Apokrin (Membranabschnürung) findet sich z. B. in bestimmten Schweißdrüsen.",
+          hints: [
+            "'Holo-' bedeutet 'ganz' — was passiert mit der gesamten Zelle?",
+            "Denke an den Talg: Er ist sehr öl-reich. Wie könnte eine Zelle so viel Lipid abgeben?",
+          ],
+          difficulty: 3,
+          tags: ['holokrin', 'talgdrüsen', 'sekretionsmechanismus'],
+        },
+      ],
+    },
+    {
+      id: 'bio-2-02',
+      title: "Binde- und Stützgewebe — Kollagen, Knochen und Knorpel",
+      content: `# Binde- und Stützgewebe — Kollagen, Knochen und Knorpel
+
+## Einleitung
+
+**Bindegewebe** ist das vielfältigste Gewebe des Körpers. Im Gegensatz zu Epithelgewebe besteht es zu einem großen Teil aus **extrazellulärer Matrix (EZM)** — ein Gerüst aus Fasern und Grundsubstanz, in das Zellen eingebettet sind. Das Bindegewebe verbindet, stützt und ernährt andere Gewebe; es ist reichlich vaskularisiert. Man unterscheidet **lockeres Bindegewebe** (viele Zellen, wenige Fasern, füllt Räume), **straffes Bindegewebe** (viele Fasern, wenige Zellen, mechanische Belastung), **Fettgewebe**, **Knorpel** und **Knochen**.
+
+## Kollagen — das häufigste Protein des Körpers
+
+**Kollagen** ist das häufigste Strukturprotein (ca. 30 % des Gesamtproteins). Es bildet rechtsgedrehte Tripelhelices aus drei Polypeptidketten (Gly-X-Y-Wiederholungen). Es gibt über 28 Kollagentypen, von denen drei für den MedAT zentral sind:
+
+- **Kollagen Typ I:** Häufigster Typ. Dicke Fibrillen. Vorkommen: Knochen, Sehnen, Haut, Kornea. Zugfest.
+- **Kollagen Typ II:** Dünne Fibrillen. Vorkommen: Hyalinknorpel, Gelenkknorpel. Druckresistent.
+- **Kollagen Typ III:** Dünne Fibrillen (Retikulinfasern). Vorkommen: Embryonales Bindegewebe, Wundheilung, Wände von Blutgefäßen und Darm. Elastisch.
+
+Kollagensynthese: Fibroblasten → Pre-Prokollagen (raues ER) → Prokollagen (Golgi, Hydroxylierung von Pro/Lys via Vitamin C) → Tripelhelix (extrazellulär) → Fibrillen.
+
+## Knorpel
+
+Knorpel ist **avaskulär** (Ernährung via Diffusion) und besitzt keine Nerven. Die einzigen Zellen sind **Chondrozyten** (in Lakunen). Die EZM enthält Kollagen und Proteoglykane (Aggrekan bindet Wasser → Druckresistenz).
+
+- **Hyalinknorpel:** Kollagen Typ II, glatte Oberfläche. Vorkommen: Gelenkknorpel, Rippenknorpel, Trachealringe, fetaler Knochen. Häufigster Knorpeltyp.
+- **Faserknorpel:** Kollagen Typ I dominiert, sehr zugfest. Vorkommen: Bandscheiben (Anulus fibrosus), Menisci, Symphysis pubica.
+- **Elastischer Knorpel:** Elastin-Fasern dominant. Vorkommen: Ohrmuschel, Epiglottis. Formwiederherstell­bar.
+
+## Knochen — Aufbau und Umbau
+
+Knochen bestehen aus organischer Matrix (Osteoid: Kollagen Typ I, ca. 35 %) und anorganischen Mineralien (Hydroxylapatit: Ca₁₀(PO₄)₆(OH)₂, ca. 65 %). Diese Kombination macht Knochen hart UND biegsam.
+
+**Knochenaufbau:** Äußere Kompakta (Kortikalis) mit Havers-Systemen (Osteonen: konzentrischen Lamellen um Havers-Kanal mit Gefäß/Nerv) und innere Spongiosa (Trabekel-Netzwerk, Knochenmark).
+
+**Zellen des Knochens:**
+- **Osteoblasten:** Bilden neue Knochenmatrix (Osteoid), mineralisieren sie. Kommen aus mesenchymalen Stammzellen.
+- **Osteozyten:** Ehemalige Osteoblasten, eingemauert in Lakunen; verbunden durch Canaliculi (Gap Junctions). Mechanosensoren.
+- **Osteoklasten:** Mehrkernige Riesenzellen (aus Monozyten/Makrophagen-Linie). Bauen Knochen ab (sezernieren H⁺ und Kathepsin K in Howship-Lakunen). RANK-RANKL-System reguliert Osteoklastenaktivierung.
+
+**Knochenumbau:** ~10 % des Skeletts werden jährlich umgebaut (Remodeling). Balance zwischen Osteoblasten (Aufbau) und Osteoklasten (Abbau). Östrogen hemmt Osteoklasten → Postmenopausale Osteoporose bei Östrogenmangel.
+
+## Fettgewebe
+
+**Weißes Fettgewebe:** Energiespeicher (Triglyzeride), Wärmeisolierung, mechanischer Schutz. Adipozyten haben große zentrale Lipidvakuole → Kern an den Rand gedrängt (Siegelringzellen). Endokrines Organ: sezerniert Leptin, Adiponektin.
+
+**Braunes Fettgewebe:** Thermogenese (UCP-1/Thermogenin entkoppelt Atmungskette → Wärme). Bei Neugeborenen und Winterschläfern aktiv.`,
+      lernziele: [
+        "Kollagentypen I, II, III nach Vorkommen und Funktion unterscheiden",
+        "Drei Knorpeltypen (Hyalin, Faser, elastisch) sowie Knochenumbau durch Osteoblasten und Osteoklasten erklären",
+        "Binde- und Fettgewebetypen strukturell und funktionell einordnen",
+      ],
+      sections: [
+        {
+          heading: "Kollagentypen und ihre Vorkommen",
+          text: "Kollagen ist das häufigste Protein im menschlichen Körper (ca. 30 % des Gesamtproteins). Die Tripelhelix entsteht aus drei Polypeptidketten mit Gly-X-Y-Wiederholungen. Vitamin C ist für die Hydroxylierung von Prolin und Lysin essentiell — bei Vitamin-C-Mangel (Skorbut) entstehen instabile Kollagenfibrillen. Kollagen Typ I ist zugfest und findet sich in Knochen und Sehnen. Kollagen Typ II ist druckresistent (Knorpel). Kollagen Typ III (Retikulinfasern) ist dehnbar und findet sich in Gefäßwänden und früher Wundheilung. Fibroblasten sind die Hauptproduzenten im lockeren und straffen Bindegewebe; Chondroblasten produzieren Knorpelkollagen; Osteoblasten synthetisieren Knochen-Kollagen Typ I.",
+          merksatz: "Kollagen I = Knochen/Sehnen (Typ 1 = überall); Kollagen II = Knorpel (II wie Zwei-mal drücken); Kollagen III = Retikulin (IIImmobilien-Gerüst).",
+        },
+        {
+          heading: "Knochenumbau: Osteoblasten vs. Osteoklasten",
+          text: "Knochen ist dynamisches Gewebe: Ca. 10 % werden jährlich neu gebaut. Osteoblasten (mesenchymaler Ursprung) synthetisieren Osteoid (Kollagen I + Nicht-Kollagen-Proteine wie Osteocalcin) und mineralisieren es durch Hydroxylapatit-Einlagerung. Wenn Osteoblasten vollständig eingemauert sind, werden sie zu Osteozyten, die über Canaliculi kommunizieren und als Mechano­sensoren wirken. Osteoklasten (hämatopoetischer Ursprung, Makrophagen-Linie, RANKL-Signal) resorbieren Knochen: Sie versiegeln ihre 'Ruffled Border' gegen die Knochenoberfläche und sezernieren HCl (pH ~4,5) und Kathepsin K. Osteoporose entsteht, wenn die Osteoklastenaktivität die Osteoblastenaktivität überwiegt — z. B. durch Östrogenmangel nach der Menopause.",
+          merksatz: "Osteoblasten BAUEN auf; Osteoklasten KLAUBEN weg (resorbieren). RANKL aktiviert Osteoklasten.",
+        },
+        {
+          heading: "Knorpeltypen im Vergleich",
+          text: "Alle drei Knorpeltypen sind avaskulär und haben nur Chondrozyten als Zellen. Hyalinknorpel (Kollagen II, blau-weißlich, glatt) überzieht Gelenkflächen und bildet das fetale Skelett; er ist druckresistent, aber bei Arthrose gefährdet. Faserknorpel (Kollagen I dominiert, weißlich, zäh) ist am zugfestesten: Er bildet Bandscheiben-Anulus und Menisci — bei Trauma kann er reißen (Meniskusriss). Elastischer Knorpel (Elastin-Fasern, gelblich) ist biegsam und kehr in seine Form zurück: Ohrmuschel und Epiglottis müssen Verformungen überstehen. Im Gegensatz zu Knochen hat Knorpel kein Periost — Reparatur ist daher limitiert.",
+          merksatz: "Hyalin = Gelenk; Faser = Bandscheibe/Meniskus; Elastisch = Ohr/Epiglottis.",
+        },
+      ],
+      merksätze: [
+        "Kollagen I (Knochen, Sehnen), II (Knorpel), III (Retikulin, Gefäße) — Vitamin C für Hydroxylierung essentiell.",
+        "Osteoblasten (aufbauend, mesenchymal) vs. Osteoklasten (abbauend, hämatopoetisch, RANKL).",
+        "Knorpel ist avaskulär — daher schlechte Heilung; Knochen hat Blutgefäße und heilt gut.",
+      ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
+      altfrage: {
+        question: "Welche Zellen bauen Knochen ab, und aus welcher Zelllinie stammen sie?",
+        answer: "Osteoklasten bauen Knochen ab. Sie entstammen der hämatopoetischen Linie (Monozyten/Makrophagen-Vorläufer). Sie sind mehrkernig und resorbieren Knochenmatrix durch Säure (HCl) und Kathepsin K in der Howship-Lakune.",
+      },
+      klinischerBezug: "Osteoporose entsteht durch Ungleichgewicht zugunsten der Osteoklasten, häufig durch Östrogenmangel nach der Menopause. Therapeutisch werden Bisphosphonate (hemmen Osteoklasten) oder RANKL-Antikörper (Denosumab) eingesetzt. Bei Skorbut (Vitamin-C-Mangel) ist die Kollagensynthese gestört — Knochen, Zahnfleisch und Gefäßwände werden brüchig.",
+      selfTest: [
+        {
+          question: "Welcher Kollagentyp ist der häufigste in Sehnen und Knochen?",
+          options: [
+            "Kollagen Typ II",
+            "Kollagen Typ III",
+            "Kollagen Typ IV",
+            "Kollagen Typ I",
+            "Kollagen Typ V",
+          ],
+          correctIndex: 3,
+          explanation: "Kollagen Typ I ist das häufigste Kollagen im Körper und dominiert in Knochen, Sehnen, Haut und Kornea. Es bildet dicke Fibrillen mit hoher Zugfestigkeit. Kollagen Typ II findet sich im Knorpel; Typ III in dehnbaren Strukturen wie Gefäßwänden.",
+          hints: [
+            "Das häufigste Kollagen hat die kleinste Zahl — welche Nummer ist das?",
+            "Sehnen müssen extrem zugfest sein: Welcher Kollagentyp ist für Zugfestigkeit bekannt?",
+          ],
+          difficulty: 1,
+          tags: ['kollagen', 'kollagen typ i', 'sehnen'],
+        },
+        {
+          question: "Welches Merkmal unterscheidet Faserknorpel von Hyalinknorpel?",
+          options: [
+            "Faserknorpel enthält Elastinfasern statt Kollagen.",
+            "Faserknorpel enthält reichlich Kollagen Typ I und ist besonders zugfest.",
+            "Faserknorpel ist vaskularisiert, Hyalinknorpel nicht.",
+            "Hyalinknorpel enthält Kollagen Typ I, Faserknorpel Kollagen Typ II.",
+            "Faserknorpel findet sich ausschließlich in der Ohrmuschel.",
+          ],
+          correctIndex: 1,
+          explanation: "Faserknorpel enthält hauptsächlich Kollagen Typ I (wie Sehnen) und ist daher besonders zugfest. Er findet sich in Bandscheiben (Anulus fibrosus), Menisci und der Symphysis pubica — Strukturen, die hohen Zug- und Druckkräften ausgesetzt sind. Hyalinknorpel enthält Kollagen Typ II und ist druckresistent.",
+          hints: [
+            "Faser-Knorpel: Der Name verrät es — was sind 'Fasern' im bindegewebigen Sinne?",
+            "Bandscheiben müssen sowohl Druck als auch Zug widerstehen — welcher Knorpeltyp kann das?",
+          ],
+          difficulty: 2,
+          tags: ['faserknorpel', 'hyalinknorpel', 'bandscheibe'],
+        },
+        {
+          question: "Was ist die Funktion von UCP-1 (Thermogenin) im braunen Fettgewebe?",
+          options: [
+            "Es speichert Triglyzeride in großen Lipidtröpfchen.",
+            "Es entkoppelt die mitochondriale Atmungskette, sodass Energie als Wärme freigesetzt wird.",
+            "Es stimuliert Osteoblasten zur Knochenbildung.",
+            "Es hemmt die Lipolyse bei Kälte.",
+            "Es aktiviert Osteoklasten über das RANKL-System.",
+          ],
+          correctIndex: 1,
+          explanation: "UCP-1 (Uncoupling Protein 1 / Thermogenin) ist ein Kanalprotein in der inneren Mitochondrienmembran des braunen Fettgewebes. Es ermöglicht den Rückfluss von Protonen (H⁺) in die Mitochondrienmatrix, ohne ATP zu synthetisieren — die Energie wird stattdessen als Wärme freigesetzt (Thermogenese). Dies ist besonders bei Neugeborenen und Winterschläfern wichtig.",
+          hints: [
+            "'Entkoppeln' bedeutet: Was wird von was getrennt?",
+            "Braunes Fettgewebe erzeugt Wärme — wie kann ein Protein das bewerkstelligen?",
+          ],
+          difficulty: 3,
+          tags: ['ucp-1', 'braunes fettgewebe', 'thermogenese'],
+        },
+        {
+          question: "Vitamin C ist für die Kollagensynthese notwendig, weil es...",
+          options: [
+            "...die Glykosylierung von Prolin katalysiert.",
+            "...für die Hydroxylierung von Prolin und Lysin in der Prokollagen-Tripelhelix benötigt wird.",
+            "...Osteoklasten hemmt und damit Knochenstabilität fördert.",
+            "...die Quervernetzung (Crosslinking) von Kollagenfibrillen extrazellulär ermöglicht.",
+            "...als Cofaktor bei der Transkription des Kollagen-Gens dient.",
+          ],
+          correctIndex: 1,
+          explanation: "Vitamin C (Ascorbinsäure) ist Cofaktor der Prolyl- und Lysylhydroxylase, die Prolin und Lysin in der Prokollagenkette hydroxylieren. Diese Hydroxylierungen sind essentiell für die Stabilität der Tripelhelix. Ohne Vitamin C entstehen instabile Kollagenfibrillen — klinisch resultiert Skorbut mit Zahnfleischbluten, Wundheilungsstörungen und brüchigen Gefäßen.",
+          hints: [
+            "Skorbut war eine Mangelkrankheit der Seefahrer — was fehlte ihnen, und was brach zusammen?",
+            "Prolylhydroxylase braucht Vitamin C als Cofaktor — welcher Schritt der Kollagensynthese wird dadurch ermöglicht?",
+          ],
+          difficulty: 2,
+          tags: ['vitamin c', 'kollagensynthese', 'hydroxylierung'],
+        },
+        {
+          question: "Warum heilt Knorpel nach Verletzungen so schlecht?",
+          options: [
+            "Chondrozyten sind posimitotisch und können sich nicht teilen.",
+            "Knorpel enthält keine Grundsubstanz.",
+            "Knorpel ist avaskulär — ohne Blutgefäße können Reparaturzellen und Nährstoffe schlecht einwandern.",
+            "Knorpel besitzt zu viele Osteoklasten, die neu gebildetes Gewebe sofort abbauen.",
+            "Knorpel wird durch Immunzellen aktiv abgebaut.",
+          ],
+          correctIndex: 2,
+          explanation: "Knorpel ist avaskulär (keine Blutgefäße) und aneural. Reparaturzellen (Fibroblasten, Stammzellen) und Nährstoffe können nicht über den Blutweg einwandern. Chondrozyten teilen sich zwar prinzipiell, aber langsam. Daher ist die Regenerationskapazität sehr gering, und Knorpelschäden (z. B. Gelenkknorpel bei Arthrose) heilen kaum spontan.",
+          hints: [
+            "Was ist die Voraussetzung für jeden Heilungsprozess — was muss zuerst an den Schadensort gelangen?",
+            "Knorpel wird durch Diffusion ernährt — was bedeutet das für die Zufuhr von Reparaturzellen?",
+          ],
+          difficulty: 2,
+          tags: ['knorpel', 'avaskularität', 'heilung'],
+        },
+      ],
+    },
+    {
+      id: 'bio-2-03',
+      title: "Muskelgewebe — Vom Sarkomer zur Kontraktion",
+      content: `# Muskelgewebe — Vom Sarkomer zur Kontraktion
+
+## Einleitung
+
+Muskelgewebe ist auf **Kontraktion** spezialisiert. Es gibt drei Typen: **Glatte Muskulatur** (unwillkürlich, Hohlorgane), **quergestreifte Skelettmuskulatur** (willkürlich, Bewegung) und **Herzmuskulatur** (quergestreift, unwillkürlich, Sonderstellung). Das zentrale kontraktile Element aller Muskeltypen sind Aktin- und Myosinfilamente; in der Skelett- und Herzmuskulatur sind sie hochgeordnet → sichtbare Querstreifung.
+
+## Sarkomer — die kontraktile Einheit
+
+Das **Sarkomer** ist die funktionelle Grundeinheit der Skelettmuskulatur. Es liegt zwischen zwei **Z-Scheiben** (Z = Zwischen). Innerhalb eines Sarkomers:
+
+- **A-Bande** (anisotrop, dunkel): Region mit Myosinfilamenten (dick) inkl. überlappender Aktinfilamente. Bleibt bei Kontraktion gleich breit.
+- **I-Bande** (isotrop, hell): Nur Aktinfilamente (dünn), ohne Myosin. Wird bei Kontraktion kürzer.
+- **H-Zone:** Mittelteil der A-Bande, nur Myosin (kein Aktin). Wird bei Kontraktion kürzer (kann verschwinden).
+- **M-Linie:** Mitte des Sarkomers, verankert Myosinfilamente.
+- **Titin:** Elastisches Riesenprotein, verbindet Myosin mit Z-Scheibe → Ruhespannung, verhindert Überdehnung.
+
+## Gleitfilamenttheorie
+
+Bei Kontraktion gleiten Aktin- und Myosinfilamente aneinander vorbei — die Filamente selbst verkürzen sich nicht. Schritte:
+
+1. **Calciumfreisetzung** aus dem sarkoplasmatischen Retikulum (SR) nach Aktionspotential.
+2. **Ca²⁺ bindet Troponin C** → Konformationsänderung des Troponin-Tropomyosin-Komplexes → Myosin-Bindungsstellen auf Aktin freigegeben.
+3. **Kreuzbrückenbildung:** Myosinkopf (ADP+Pi) bindet Aktin.
+4. **Kraftschlag (Power Stroke):** Pi wird freigesetzt → Myosinkopf kippt → Aktin wird Richtung M-Linie gezogen.
+5. **ATP-Bindung** → Myosinkopf löst sich von Aktin.
+6. **ATP-Hydrolyse** → Myosinkopf wird wiedergespannt → Zyklus beginnt neu.
+
+## Regulation durch Troponin und Tropomyosin
+
+Im Ruhezustand bedeckt **Tropomyosin** die Myosin-Bindungsstellen auf Aktin. **Troponin** ist ein Komplex aus drei Untereinheiten: **Troponin T** (bindet Tropomyosin), **Troponin I** (inhibiert Myosin-Aktin-Interaktion) und **Troponin C** (bindet Ca²⁺). Ca²⁺-Bindung an Troponin C verschiebt Tropomyosin → Bindungsstellen frei.
+
+**Klinisch:** Troponin I und T sind herzspezifische Isoformen → **kardiale Marker** bei Herzinfarkt (Troponin-Test).
+
+## Motorische Einheit
+
+Eine **motorische Einheit** besteht aus einem Alpha-Motoneuron und allen von ihm innervierten Muskelfasern. Kleine Einheiten (wenige Fasern, z. B. Augenmuskeln) ermöglichen feine Bewegungen; große Einheiten (hunderte Fasern, z. B. M. quadriceps) erzeugen Kraft. **Rekrutierung** mehr motorischer Einheiten steigert die Muskelkraft (**Spatial Summation**). **Frequenzsummation** (schnelle Reizfolge) führt zu Tetanus (maximale Kontraktion).
+
+## Herzmuskel vs. Skelettmuskel
+
+**Herzmuskulatur:** Quergestreift wie Skelettmuskel, aber einkernig, mit Glanzstreifen (Intercalated Discs mit Gap Junctions für elektrische Kopplung). Das Herz kontrahiert als funktionelles Synzytium. Ca²⁺-induzierte Ca²⁺-Freisetzung (CICR) aus SR durch L-Typ-Ca²⁺-Kanäle. Keine tetanische Kontraktion möglich (lange Refraktärzeit).
+
+**Glatte Muskulatur:** Kein Sarkomer, keine Z-Scheiben. Regulation über Ca²⁺-Calmodulin → Myosin-Leichtketten-Kinase (MLCK). Langsame, anhaltende Kontraktion. Nervöse und hormonelle Kontrolle (Autonomes NS, Hormone).`,
+      lernziele: [
+        "Sarkomerstruktur (Z-Scheibe, A-Bande, I-Bande, H-Zone) und Veränderungen bei Kontraktion beschreiben",
+        "Gleitfilamenttheorie mit Rolle von Ca²⁺, Troponin und Tropomyosin erklären",
+        "Die drei Muskeltypen strukturell und funktionell vergleichen",
+      ],
+      sections: [
+        {
+          heading: "Sarkomerstruktur und Banden",
+          text: "Das Sarkomer erstreckt sich von Z-Scheibe zu Z-Scheibe und misst in Ruhe ca. 2,2 µm. Die A-Bande (dunkel) enthält Myosin-Dickfilamente samt überlappenden Aktin-Dünnfilamenten und bleibt bei der Kontraktion konstant breit — denn die Myosinfilamente selbst verkürzen sich nicht. Die I-Bande (hell) besteht nur aus Aktin und wird kürzer, weil Aktin tiefer in die A-Bande hineingezogen wird. Die H-Zone (nur Myosin, kein Aktin) verschwindet bei maximaler Kontraktion. Die Z-Scheiben rücken zusammen. Titin wirkt als molekulare Feder: Es verbindet Myosin mit der Z-Scheibe und sorgt für Ruhespannung sowie den Schutz vor Überdehnung. Nebulin (parallel zu Aktin) legt die Länge der Aktinfilamente fest.",
+          merksatz: "Bei Kontraktion werden I-Bande und H-Zone kürzer; A-Bande bleibt gleich.",
+        },
+        {
+          heading: "Troponin-Tropomyosin-Schalter",
+          text: "Im Ruhezustand liegt Tropomyosin in der Furche des Aktindoppelstrangs und blockiert sterisch die Myosin-Bindungsstellen. Der Troponin-Komplex fixiert Tropomyosin in dieser Blockierposition: Troponin I hemmt direkt, Troponin T verankert an Tropomyosin, Troponin C bindet Ca²⁺. Wenn ein Aktionspotential das sarkoplasmatische Retikulum (SR) erreicht, öffnen spannungsgesteuerte RyR1-Kanäle (Ryanodin-Rezeptoren), Ca²⁺ strömt aus dem SR ins Zytosol (Konzentration steigt von 0,1 µM auf ~10 µM). Ca²⁺ bindet Troponin C → Konformationsänderung des Troponin-Tropomyosin-Komplexes → Tropomyosin verschiebt sich → Myosinbindungsstellen auf Aktin freigelegt → Kreuzbrückenbildung möglich. Nach dem Aktionspotential pumpt die SR-Ca²⁺-ATPase (SERCA) Ca²⁺ zurück → Erschlaffung.",
+          merksatz: "Ca²⁺ + Troponin C → Tropomyosin verschiebt sich → Myosin kann Aktin binden → Kontraktion.",
+        },
+        {
+          heading: "Motorische Einheit und Kraftregulation",
+          text: "Ein Alpha-Motoneuron bildet mit all seinen Muskelfasern eine motorische Einheit. Kleine motorische Einheiten (z. B. M. interossei: ~10 Fasern/Einheit) ermöglichen feinmotorische Kontrolle (Schreiben, Augenbe­wegungen). Große motorische Einheiten (M. gastrocnemius: bis zu 2000 Fasern) erzeugen große Kraft. Kraftsteigerung erfolgt durch zwei Mechanismen: Rekrutierung (mehr Einheiten aktivieren = Spatial Summation) und Frequenzerhöhung (Temporal/Rate Summation → Tetanus). Das NMJ (neuromuskuläre Endplatte) nutzt Acetylcholin als Neurotransmitter: ACh bindet nicotinerge Rezeptoren → Endplattenpotential → Aktionspotential → Ca²⁺-Freisetzung aus SR.",
+          merksatz: "Motorische Einheit = 1 Alpha-Motoneuron + seine Muskelfasern; Kraft durch Rekrutierung und Frequenz.",
+        },
+      ],
+      diagram: 'sarcomere',
+
+      merksätze: [
+        "Sarkomer: Z-Z-Grenzen; bei Kontraktion kürzer werden I-Bande und H-Zone; A-Bande bleibt konstant.",
+        "Ca²⁺ → Troponin C → Tropomyosin weg → Myosin bindet Aktin → Kraftschlag nach ATP-Hydrolyse.",
+        "Herzmuskel: quergestreift, einkernig, Gap Junctions in Glanzstreifen, kein Tetanus möglich.",
+      ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
+      altfrage: {
+        question: "Warum kann der Herzmuskel im Gegensatz zur Skelettmuskulatur keinen Tetanus entwickeln?",
+        answer: "Das Herzmyokard hat eine sehr lange absolute Refraktärzeit (ca. 200–300 ms), die fast so lang ist wie die mechanische Kontraktion. Dadurch kann kein neues Aktionspotential ausgelöst werden, bevor sich der Herzmuskel nicht vollständig erschlafft hat — tetanische Dauerkontrak­tion wäre für die Pumpfunktion fatal.",
+      },
+      klinischerBezug: "Kardiales Troponin I und T (herzspezifische Isoformen) werden bei Herzinfarkt (Myokardinfarkt) aus geschädigten Kardiomyozyten freigesetzt und sind die sensitivsten und spezifischsten Marker für myokardialen Schaden. Erhöhte Troponin-Spiegel sind innerhalb von 3–6 Stunden nach Infarkt nachweisbar.",
+      selfTest: [
+        {
+          question: "Welche Banden des Sarkomers werden bei Muskelkontraktion kürzer?",
+          options: [
+            "A-Bande und I-Bande",
+            "Nur die A-Bande",
+            "I-Bande und H-Zone",
+            "H-Zone und A-Bande",
+            "Nur die Z-Scheiben-Abstände bleiben gleich",
+          ],
+          correctIndex: 2,
+          explanation: "Bei der Kontraktion gleiten Aktin- und Myosinfilamente aneinander vorbei, ohne sich selbst zu verkürzen. Die I-Bande (nur Aktin) wird kürzer, weil Aktin tiefer in die A-Bande rutscht. Die H-Zone (nur Myosin) wird kürzer oder verschwindet, weil Aktin nun bis in die H-Zone reicht. Die A-Bande (Myosinlänge) bleibt konstant.",
+          hints: [
+            "Die A-Bande wird durch die Myosinfilamente definiert — verändert sich die Länge der Myosinfilamente?",
+            "I-Bande = nur Aktin. Was passiert mit der I-Bande, wenn Aktin in Richtung Mitte gezogen wird?",
+          ],
+          difficulty: 2,
+          tags: ['sarkomer', 'a-bande', 'i-bande'],
+        },
+        {
+          question: "Welcher Schritt der Kreuzbrücken-Kontraktion erfordert ATP?",
+          options: [
+            "Bindung des Myosinkopfes an Aktin",
+            "Der Kraftschlag (Power Stroke) selbst",
+            "Die Freisetzung des Myosinkopfes von Aktin nach dem Kraftschlag",
+            "Calciumfreisetzung aus dem sarkoplasmatischen Retikulum",
+            "Die Bindung von Ca²⁺ an Troponin C",
+          ],
+          correctIndex: 2,
+          explanation: "ATP bindet an den Myosinkopf, nachdem der Kraftschlag vollzogen wurde — dadurch löst sich der Kopf vom Aktin (Loslassen). ATP wird dann durch ATPase zu ADP + Pi hydrolysiert, was den Myosinkopf in den gespannten Zustand zurückversetzt (Wiederaufspannen). Ohne ATP (z. B. nach dem Tod) bleibt Myosin fest an Aktin gebunden → Totenstarre (Rigor mortis).",
+          hints: [
+            "Was passiert bei Rigor mortis — was fehlt nach dem Tod, und warum verkrampfen die Muskeln?",
+            "ATP ist nicht für den Kraftschlag nötig, sondern für das ... was danach kommt.",
+          ],
+          difficulty: 3,
+          tags: ['kreuzbrückenzyklus', 'atp', 'myosin'],
+        },
+        {
+          question: "Was unterscheidet Herzmuskulatur von Skelettmuskulatur?",
+          options: [
+            "Herzmuskulatur ist glatt (keine Querstreifung) und unwillkürlich.",
+            "Herzmuskulatur ist quergestreift, einkernig, und Zellen sind über Gap Junctions in Glanzstreifen verbunden.",
+            "Herzmuskulatur verwendet Myosin, aber kein Aktin.",
+            "Herzmuskulatur wird durch Troponin nicht reguliert.",
+            "Herzmuskulatur kann tetanisch kontrahieren, Skelettmuskulatur nicht.",
+          ],
+          correctIndex: 1,
+          explanation: "Herzmuskulatur ist quergestreift (wie Skelettmuskel) aber einkernig (im Gegensatz zu mehrkernigen Skelettmuskelfasern). Kardiomyozyten sind über Glanzstreifen (Intercalated Discs) mit Gap Junctions verbunden, die elektrische Kopplung ermöglichen — das Herz kontrahiert als funktionelles Synzytium. Tetanus ist durch die lange Refraktärzeit unmöglich.",
+          hints: [
+            "Was ist das besondere Merkmal der Glanzstreifen im Herzmuskel?",
+            "Herzmuskel ist quergestreift — aber was unterscheidet ihn vom Skelettmuskel in Bezug auf Kerne und Kopplung?",
+          ],
+          difficulty: 2,
+          tags: ['herzmuskel', 'skelettmuskel', 'glanzstreifen'],
+        },
+        {
+          question: "Warum tritt Rigor mortis (Totenstarre) nach dem Tod ein?",
+          options: [
+            "Troponin C bindet kein Calcium mehr, sodass Kontraktion unmöglich wird.",
+            "ATP fehlt, sodass Myosinköpfe nicht von Aktin gelöst werden können.",
+            "Das sarkoplasmatische Retikulum setzt unbegrenzt Calcium frei.",
+            "Myosin wird nach dem Tod enzymatisch abgebaut und kann nicht kontrahieren.",
+            "Totenstarre entsteht durch Oxidation der Z-Scheibe.",
+          ],
+          correctIndex: 1,
+          explanation: "Nach dem Tod fehlt ATP-Produktion (keine Mitochondrienfunktion). ATP wird für das Lösen des Myosinkopfes von Aktin benötigt. Ohne ATP bleiben alle Myosinköpfe dauerhaft an Aktin gebunden → Rigor mortis. Gleichzeitig steigt die zytosolische Ca²⁺-Konzentration an (SR-Pumpen fallen aus), was die Kontraktion begünstigt. Nach 24–48 h löst sich der Rigor durch Proteolyse.",
+          hints: [
+            "Denk an den Kreuzbrückenzyklus: Welcher Schritt braucht ATP — Binden oder Lösen?",
+            "Nach dem Tod fällt der Energiestoffwechsel aus. Was geschieht mit aktiven Querbrücken ohne ATP?",
+          ],
+          difficulty: 2,
+          tags: ['rigor mortis', 'atp', 'myosin aktin'],
+        },
+        {
+          question: "Warum werden bei Herzinfarkt Troponin-Werte im Blut gemessen?",
+          options: [
+            "Troponin reguliert den Herzrhythmus und steigt bei Arrhythmien an.",
+            "Herzspezifische Isoformen von Troponin I und T werden aus geschädigten Kardiomyozyten freigesetzt.",
+            "Troponin ist ein Hormon, das bei Ischämie vermehrt sezerniert wird.",
+            "Troponin stimuliert Osteoklasten, was zu Knochenschmerzen beim Infarkt führt.",
+            "Troponin-Werte steigen bei allen Muskelschäden gleichmäßig an.",
+          ],
+          correctIndex: 1,
+          explanation: "Troponin I und T haben herzspezifische Isoformen (cTnI, cTnT), die sich strukturell von skelettmuskulären Isoformen unterscheiden. Bei Myokardinfarkt werden Kardiomyozyten geschädigt und geben cTnI/cTnT ins Blut ab. Diese steigen 3–6 h nach Infarkt an und bleiben bis zu 14 Tage erhöht — sie sind hochsensitiv und hochspezifisch für myokardialen Schaden.",
+          hints: [
+            "Troponin ist intrazellulär in Myozyten — warum wäre es im Blut erhöht?",
+            "Was passiert mit dem Zellinhalt, wenn Kardiomyozyten absterben (nekrotisch werden)?",
+          ],
+          difficulty: 1,
+          tags: ['troponin', 'herzinfarkt', 'kardiomyozyten'],
+        },
+      ],
+    },
+    {
+      id: 'bio-2-04',
+      title: "Nervengewebe — Neuronen, Gliazellen und Myelinisierung",
+      content: `# Nervengewebe — Neuronen, Gliazellen und Myelinisierung
+
+## Einleitung
+
+**Nervengewebe** besteht aus zwei Zelltypen: **Neuronen** (erregbare Zellen, die elektrische Signale erzeugen und weiterleiten) und **Gliazellen** (unterstützende Zellen, Myelinisierung, Ernährung, Schutz). Das Nervensystem kommuniziert über Aktionspotentiale und chemische Synapsen. Neuronen sind **postmitotisch** — sie teilen sich nach der Entwicklung praktisch nicht mehr, können aber Axone regenerieren (PNS besser als ZNS).
+
+## Neuronenstruktur
+
+Ein Neuron besteht aus:
+- **Soma** (Zellkörper): Enthält Zellkern und Ribosomen (raues ER = Nissl-Substanz). Metabolisches Zentrum.
+- **Dendriten:** Verästelte Fortsätze, die afferente Signale empfangen. Kurzreich­weitig, zahlreich.
+- **Axon:** Einziger langer Fortsatz, leitet Aktionspotentiale vom Soma zum Endknöpfchen. Beginnt am **Axonhügel** (niedrigste Reizschwelle → Ort der Aktionspotential-Initiierung).
+- **Endknöpfchen (Synapsen­terminals):** Präsynaptisch, enthalten synaptische Vesikel mit Neurotransmittern.
+
+**Klassifikation** nach Anzahl der Fortsätze: Multipolar (meiste Motoneurone, Interneurone), Bipolar (Retina, Riechschleimhaut), Pseudounipolar (Spinalganglion, Schmerz-/Berührungsafferenzen).
+
+## Gliazellen
+
+### Im ZNS:
+- **Astrozyten:** Häufigste Gliazellen. Blut-Hirn-Schranke (perivaskuläre Endfüße), Ionenpuffer (K⁺), Glutamat-Reuptake, metabolische Unterstützung. Narbenbildung nach ZNS-Verletzung (reaktive Gliose).
+- **Oligodendrozyten:** Bilden Myelinscheiden im ZNS. Ein Oligodendrozyt kann bis zu 50 Axonsegmente myelinisieren. Zerstörung bei Multipler Sklerose.
+- **Mikroglia:** Immunzellen des ZNS (= Makrophagen des Gehirns, aus Monozyten-Linie). Phagozytose von Zelltrümmern, Pathogenen. Aktivierung bei Neuroinflammation.
+- **Ependymzellen:** Auskleidung der Hirnventrikel und des Zentralkanals; bilden und zirkulieren Liquor cerebrospinalis.
+
+### Im PNS:
+- **Schwann-Zellen:** Myelinisieren Axone im PNS. Eine Schwann-Zelle = ein Axonsegment. Bei Axonschäden regenerieren sie die Myelinscheide und leiten Axonwachstum.
+- **Satellitenzellen:** Umhüllen Soma der peripheren Ganglienzellen.
+
+## Myelinscheide und saltatorische Erregungsleitung
+
+Die **Myelinscheide** ist eine Lipid-reiche Membranwicklung um das Axon. Sie besteht aus konzentrisch aufgerollten Schwann-Zell- (PNS) oder Oligodendrozyten-Membranen (ZNS). Zwischen benachbarten Myelinsegmenten liegen die **Ranvier-Schnürringe** (Nodes of Ranvier), wo die Axonmembran frei liegt und Na⁺-Kanäle hochkonzentriert sind.
+
+**Saltatorische Erregungsleitung:** Das Aktionspotential "springt" von Schnürring zu Schnürring (saltare = springen). Vorteile: 1) Viel schneller als kontinuierliche Leitung (myelinisiert: bis 120 m/s; unmyelinisiert: 0,5–2 m/s). 2) Energieeffizienter (Na⁺/K⁺-ATPase nur an Schnürringen aktiv). **Elektrischer Widerstand** der Myelinscheide ist hoch (kein Ionenfluss); **Kapazität** ist niedrig → Depolarisation springt elektrotonisch schnell zum nächsten Schnürring.
+
+## Axonaler Transport
+
+**Antegrader Transport** (Soma → Synapse): Kinesin transportiert Organellen, Vesikel, Proteine entlang Mikrotubuli. **Retrograder Transport** (Synapse → Soma): Dynein transportiert Signalmoleküle, Recyclingmaterialien, auch Viren (Herpes, Tollwut) zurück. Axontransport ist für neuronale Funktion essentiell — Störungen führen zu neuro­degenerativen Erkrankungen (z. B. Amyloid-Ansammlungen bei Alzheimer).`,
+      lernziele: [
+        "Aufbau des Neurons (Soma, Axon, Dendriten, Axonhügel) und seine Funktion erklären",
+        "Gliazellen des ZNS und PNS benennen und ihre Aufgaben (besonders Myelinisierung) beschreiben",
+        "Saltatorische Erregungsleitung erklären und ihren Vorteil gegenüber kontinuierlicher Leitung benennen",
+      ],
+      sections: [
+        {
+          heading: "Oligodendrozyten vs. Schwann-Zellen",
+          text: "Beide Zelltypen bilden Myelinscheiden, unterscheiden sich aber fundamental: Schwann-Zellen (PNS) myelinisieren jeweils ein einziges Axonsegment zwischen zwei Ranvier-Schnürringen. Bei Axonverletzung im PNS können Schwann-Zellen das Axonwachstum durch neurotrophe Faktoren (BDNF, NGF) und Leitstrukturen (Büngner-Bänder) aktiv fördern — daher regenerieren periphere Nerven besser. Oligodendrozyten (ZNS) können bis zu 50 Axonsegmente verschiedener Axone gleichzeitig myelinisieren. Im ZNS gibt es keine Büngner-Bänder und inhibierende Faktoren (Nogo-A, MAG) hemmen Axonwachstum. Bei Multipler Sklerose greifen T-Zellen Oligodendrozyten an → Demyelinisierung → Leitungsverlangsamung oder -block.",
+          merksatz: "Schwann-Zelle (PNS) = 1 Segment; Oligodendrozyt (ZNS) = bis zu 50 Segmente.",
+        },
+        {
+          heading: "Saltatorische Erregungsleitung im Detail",
+          text: "Unmyelinisierte Axone leiten das Aktionspotential kontinuierlich: Jeder Punkt der Membran muss depolarisiert werden. Das ist langsam (0,5–2 m/s) und energieintensiv. Myelinisierte Axone nutzen die hohe elektrische Isolation der Myelinscheide: Zwischen den Ranvier-Schnürringen ist die Membran abgedeckt, Na⁺-Kanäle fehlen. Das Aktionspotential springt elektrotonisch (passiv, schnell) zum nächsten Schnürring, wo Na⁺-Kanäle hochkonzentriert sind und ein neues Aktionspotential auslösen. Geschwindigkeit bis 120 m/s bei großen myelinisierten Fasern (Aα-Fasern, motorisch). Die Na⁺/K⁺-ATPase muss nur an den Schnürringen pumpen — erheblich energiesparender. Bei Demyelinisierung (Multiple Sklerose) verlangsamt oder unterbricht sich die Leitung.",
+          merksatz: "Saltatorisch = springen von Schnürring zu Schnürring; schneller und energiesparender.",
+        },
+        {
+          heading: "Astrozyten und Blut-Hirn-Schranke",
+          text: "Astrozyten sind die häufigsten Gliazellen und multifunktional: Ihre perivaskulären Endfüße umhüllen Hirnkapillaren vollständig und induzieren die Tight Junctions zwischen Endothelzellen — das ist die strukturelle Basis der Blut-Hirn-Schranke (BHS). Die BHS reguliert selektiv, was ins Hirngewebe gelangt (Glukose via GLUT1, viele Medikamente können nicht passieren). Astrozyten puffern extrazelluläres K⁺ (nach Aktionspotentialen angestiegen), nehmen Glutamat via EAAT-Transporter auf (verhindert exzitotoxische Schäden), recyceln es zu Glutamin und geben es an Neurone zurück (Glutamin-Glutamat-Zyklus). Bei ZNS-Verletzung bilden reaktive Astrozyten eine Glianarbe, die Axonregeneration behindert.",
+          merksatz: "Astrozyten: BHS-Induktion, K⁺-Puffer, Glutamat-Reuptake, Glianarbe nach Verletzung.",
+        },
+      ],
+      diagram: 'action-potential',
+
+      merksätze: [
+        "Oligodendrozyten (ZNS) vs. Schwann-Zellen (PNS): Beide myelinisieren; Schwann-Zellen fördern PNS-Regeneration.",
+        "Saltatorische Leitung: Aktionspotential springt von Ranvier-Schnürring zu Schnürring — 100× schneller als kontinuierlich.",
+        "Astrozyten: Blut-Hirn-Schranke, K⁺-Puffer, Glutamat-Reuptake; Mikroglia = Makrophagen des ZNS.",
+      ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
+      altfrage: {
+        question: "Worin unterscheiden sich Schwann-Zellen und Oligodendrozyten hinsichtlich Anzahl der myelinisierten Axonsegmente?",
+        answer: "Eine Schwann-Zelle myelinisiert genau ein Axonsegment (zwischen zwei Ranvier-Schnürringen) eines einzigen Axons. Ein Oligodendrozyt kann hingegen bis zu 50 Axonsegmente verschiedener Axone gleichzeitig myelinisieren.",
+      },
+      klinischerBezug: "Bei Multipler Sklerose (MS) zerstören autoreaktive T-Zellen die Oligodendrozyten und Myelinscheiden im ZNS. Die resultierende Demyelinisierung verlangsamt oder blockiert die Impulsleitung und führt zu wechselnden neurologischen Ausfällen (Sehstörungen, Paresen, Sensibilitätsstörungen). Da ZNS-Regeneration limitiert ist, kommt es mit der Zeit zu dauerhaften Defiziten.",
+      selfTest: [
+        {
+          question: "An welcher Stelle des Neurons wird ein Aktionspotential initiiert?",
+          options: [
+            "Am Dendritenstamm",
+            "Im Soma (Zellkörper)",
+            "Am Axonhügel (Axon Initial Segment)",
+            "Am präsynaptischen Endknöpfchen",
+            "An den Ranvier-Schnürringen",
+          ],
+          correctIndex: 2,
+          explanation: "Der Axonhügel (Axon Initial Segment) besitzt die höchste Dichte an spannungsgesteuerten Na⁺-Kanälen und die niedrigste Reizschwelle — hier werden eintreffende Potentiale aus Dendriten und Soma summiert. Wenn der Schwellenwert (ca. -55 mV) überschritten wird, entsteht das Aktionspotential und breitet sich das Axon entlang aus.",
+          hints: [
+            "Welcher Teil des Neurons ist die 'Entscheidungsstelle', ob ein Aktionspotential ausgelöst wird?",
+            "Am Axon beginnt die Weiterleitung — genau an seiner Basis gibt es eine spezialisierte Zone mit vielen Na⁺-Kanälen.",
+          ],
+          difficulty: 2,
+          tags: ['axonhügel', 'aktionspotential', 'na-kanäle'],
+        },
+        {
+          question: "Welche Gliazellen bilden die Myelinscheide im zentralen Nervensystem (ZNS)?",
+          options: [
+            "Astrozyten",
+            "Schwann-Zellen",
+            "Mikroglia",
+            "Oligodendrozyten",
+            "Ependymzellen",
+          ],
+          correctIndex: 3,
+          explanation: "Im ZNS myelinisieren Oligodendrozyten die Axone. Ein einziger Oligodendrozyt kann bis zu 50 verschiedene Axonsegmente myelinisieren. Schwann-Zellen myelinisieren im peripheren Nervensystem (PNS). Mikroglia sind Immunzellen, Astrozyten stützen und bilden die BHS, Ependymzellen kleiden Hirnventrikel aus.",
+          hints: [
+            "Es gibt eine einfache Eselsbrücke: ZNS → die Zellen haben 'Dendro-' oder 'Oligo-' im Namen.",
+            "Schwann-Zellen vs. Oligodendrozyten: Welche sind im peripheren, welche im zentralen NS?",
+          ],
+          difficulty: 1,
+          tags: ['oligodendrozyten', 'myelinscheide', 'zns'],
+        },
+        {
+          question: "Was ist der Hauptvorteil der saltatorischen Erregungsleitung?",
+          options: [
+            "Sie erhöht die Kapazität der Axonmembran.",
+            "Sie ermöglicht bidirektionale Signalweiterleitung.",
+            "Sie erhöht die Leitungsgeschwindigkeit und reduziert den Energiebedarf.",
+            "Sie verhindert, dass das Aktionspotential sich zurückausbreitet.",
+            "Sie ermöglicht chemische Signalweiterleitung ohne Synapsen.",
+          ],
+          correctIndex: 2,
+          explanation: "Saltatorische Leitung (Springen von Schnürring zu Schnürring) ist erheblich schneller als kontinuierliche Leitung (bis 120 m/s vs. 0,5–2 m/s). Gleichzeitig ist sie energieeffizienter, da die Na⁺/K⁺-ATPase nur an den Ranvier-Schnürringen aktiv sein muss, um das Membranpotential wiederherzustellen — nicht entlang des gesamten Axons.",
+          hints: [
+            "Was bedeutet 'saltare' (lateinisch springen) für die Leitungsgeschwindigkeit?",
+            "Wenn die ATPase nur an wenigen Stellen (Schnürringen) pumpen muss, was spart das?",
+          ],
+          difficulty: 1,
+          tags: ['saltatorische leitung', 'ranvier-schnürringe', 'leitungsgeschwindigkeit'],
+        },
+        {
+          question: "Bei Multipler Sklerose wird die Myelinscheide zerstört. Welche direkte Konsequenz hat das für die Erregungsleitung?",
+          options: [
+            "Neuronen können keine Aktionspotentiale mehr generieren.",
+            "Die Erregungsleitung verlangsamt sich oder bricht ab, weil saltatorische Leitung nicht mehr möglich ist.",
+            "Astrozyten übernehmen die Myelinisierung und kompensieren den Verlust.",
+            "Die Synaptische Übertragung wird unterbrochen.",
+            "Die Ranvier-Schnürringe verschwinden vollständig.",
+          ],
+          correctIndex: 1,
+          explanation: "Ohne Myelinscheide kann das Aktionspotential nicht saltatorisch von Schnürring zu Schnürring springen. Stattdessen müsste es kontinuierlich geleitet werden — was extrem langsam ist. In vielen Fällen bricht die Leitung ganz ab (Leitungsblock), weil die Membrankapazität erhöht ist und die depolarisierende Strömung 'versickert' anstatt zum nächsten Schnürring zu springen. Das erklärt die neurologischen Defizite bei MS.",
+          hints: [
+            "Was ist die Funktion der Myelinscheide für die saltatorische Leitung? Was passiert, wenn diese fehlt?",
+            "Denk an den elektrischen Widerstand: Ohne Myelin steigt die Kapazität der Membran — was geschieht mit dem Ionenstrom?",
+          ],
+          difficulty: 2,
+          tags: ['multiple sklerose', 'demyelinisierung', 'erregungsleitung'],
+        },
+        {
+          question: "Welche Funktion haben Astrozyten an der Blut-Hirn-Schranke?",
+          options: [
+            "Sie bilden die Tight Junctions direkt zwischen Blutgefäß-Endothelzellen.",
+            "Sie myelinisieren die Axone nahe den Blutgefäßen.",
+            "Sie induzieren mit ihren perivaskulären Endfüßen die BHS-Eigenschaften des Endothels.",
+            "Sie phagozytieren Pathogene, die die BHS überwinden.",
+            "Sie synthetisieren Myelin für die perivaskulären Nervenfasern.",
+          ],
+          correctIndex: 2,
+          explanation: "Astrozyten umhüllen Hirnkapillaren mit perivaskulären Endfüßen und sezernieren Faktoren, die das Endothel zur Bildung dichter Tight Junctions induzieren. Ohne diese Induktion würden die Tight Junctions zwischen Endothelzellen nicht so dicht sein. Die Tight Junctions selbst befinden sich im Endothel, nicht in den Astrozyten — aber die Astrozyten sind entscheidend für ihre Ausbildung.",
+          hints: [
+            "Die BHS-Tight Junctions liegen im Endothel — welche Zellen 'flüstern' dem Endothel zu, diese zu bilden?",
+            "Astrozyten haben spezialisierte Endfüße, die Blutgefäße umhüllen — was könnte das funktionell bedeuten?",
+          ],
+          difficulty: 3,
+          tags: ['astrozyten', 'blut-hirn-schranke', 'tight junctions'],
+        },
+      ],
+    },
+
+    // === from kap3-anatomie-physiologie ===
     {
       id: 'bio-3-01',
       title: "Nervensystem",
@@ -256,7 +925,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
           text: "Der Reflexbogen besteht aus Rezeptor, afferenter Faser, (Interneuron), efferenter Faser und Effektor. Der monosynaptische Eigenreflex (z.B. Patellarsehnenreflex) verbindet Ia-Faser direkt mit dem α-Motoneuron ohne Interneuron. Polysynaptische Fremdreflexe (z.B. Fluchtreflex) schalten mehrere Interneurone ein.",
         },
       ],
-      diagram: 'nervensystem-übersicht',
+      diagram: 'nervous-system',
 
       merksätze: [
         "**Sympathikus** (fight-or-flight, thorakolumbal [T1-L2], Noradrenalin, α/β-Rezeptoren): Herz ↑ (β1, Frequenz/Kontraktilität), Bronchodilatation (β2), Mydriasis (α1, Pupille), Peristaltik ↓ (α2), Glykogenolyse ↑ (β2), Lipolyse ↑ (β3). **Parasympathikus** (rest-and-digest, kraniosakral [Hirnnerven III/VII/IX/X, S2-S4], Acetylcholin, M2/M3): Herz ↓ (M2, Vagus), Bronchokonstriktion (M3), Miosis (M3), Peristaltik ↑ (M3), Miktion (M3).",
@@ -277,7 +946,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
           correctIndex: 1,
           explanation: "B ist korrekt: **SYMPATHIKUS** und **PARASYMPATHIKUS** sind antagonistische Systeme des autonomen Nervensystems (unwillkürlich, innere Organe). **SYMPATHIKUS (fight-or-flight):** (1) **URSPRUNG:** Thorakolumbal (Seitenhorn, T1-L2). (2) **GANGLIEN:** Grenzstrang (paravertebral, entlang Wirbelsäule) + prävertebral (Ganglion coeliacum, mesentericum superius/inferius). (3) **NEUROTRANSMITTER:** **Noradrenalin** (postganglionär, an Effektor), **Acetylcholin** (präganglionär, im Ganglion, nikotinische Rezeptoren). (4) **REZEPTOREN (Effektor):** **α1** (Gq, Vasokonstriktion, Mydriasis), **α2** (Gi, Peristaltik ↓), **β1** (Gs, Herz: Frequenz ↑, Kontraktilität ↑), **β2** (Gs, Bronchodilatation, Vasodilatation Skelettmuskulatur, Glykogenolyse Leber), **β3** (Gs, Lipolyse Fettgewebe). (5) **EFFEKTE:** Herz ↑ (β1, SA-Knoten), Bronchodilatation (β2, glatte Muskulatur relaxiert), Mydriasis (α1, M. dilatator pupillae), Peristaltik ↓ (α2, β2), Sphinkter-Kontraktion (α1, Blase/Darm), Vasokonstriktion (α1, Haut/Splanchnikus), Glykogenolyse ↑ (β2, Leber → Glukose), Lipolyse ↑ (β3, Fettgewebe → freie Fettsäuren), Adrenalin-Freisetzung (Nebennierenmark, chromaffine Zellen). **PARASYMPATHIKUS (rest-and-digest):** (1) **URSPRUNG:** Kraniosakral (Hirnnerven III [N. oculomotorius, Pupille], VII [N. facialis, Speichel-/Tränendrüsen], IX [N. glossopharyngeus, Parotis], **X [N. vagus, Herz/Lunge/Magen-Darm bis linke Kolonflexur]**, + S2-S4 [Blase, Rektum, Genitalien]). (2) **GANGLIEN:** Organnah oder in Organwand (z.B. Plexus myentericus [Meissner, Auerbach], Ganglion ciliare). (3) **NEUROTRANSMITTER:** **Acetylcholin** (prä- + postganglionär). (4) **REZEPTOREN (Effektor):** **M2** (Gi, Herz: Frequenz ↓, SA-Knoten, K⁺-Kanäle ↑, cAMP ↓), **M3** (Gq, Bronchien: Konstriktion, Speicheldrüsen: Sekretion ↑, Magen-Darm: Peristaltik ↑, Blase: Miktion [Detrusor kontrahiert], Pupille: Miosis [M. sphincter pupillae]). (5) **EFFEKTE:** Herz ↓ (M2, Vagus), Bronchokonstriktion (M3), Miosis (M3, Nahakkommodation), Speichelsekretion ↑ (M3, dünnflüssig), Peristaltik ↑ (M3), Miktion (M3), Insulinsekretion ↑ (M3, Pankreas-β-Zellen). A ist falsch. C, D, E sind falsch.",
           difficulty: 1,
-          tags: [],
+          tags: ['sympathikus', 'parasympathikus', 'vegetatives nervensystem'],
         },
         {
           question: "Wie funktioniert die synaptische Transmission an einer chemischen Synapse?",
@@ -291,7 +960,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
           correctIndex: 1,
           explanation: "B ist korrekt: **CHEMISCHE SYNAPSE** überträgt Signale via Neurotransmitter (häufigster Typ, im Gegensatz zu elektrischer Synapse [Gap Junctions, selten, z.B. Herzmuskel]). **ABLAUF (synaptische Transmission):** (1) **AKTIONSPOTENTIAL** erreicht präsynaptisches **Axonterminale** (Depolarisation). (2) Spannungsgesteuerte **CA²⁺-KANÄLE öffnen** (P/Q-Typ [Ca_v2.1, häufigste in ZNS-Synapsen], N-Typ [Ca_v2.2, PNS], L-Typ [Ca_v1.x, Herz]). (3) **Ca²⁺ strömt ein** (von ~0.1 μM → ~10-100 μM, hochgradig lokalisiert an aktiven Zonen). (4) Ca²⁺ bindet **SYNAPTOTAGMIN** (Ca²⁺-Sensor, Protein in Vesikel-Membran, bindet 5 Ca²⁺). (5) **SNARE-KOMPLEX** (v-SNARE [Vesikel]: **Synaptobrevin/VAMP** + t-SNARE [Plasmamembran]: **Syntaxin** + **SNAP-25**) → Reißverschluss-Mechanismus → Membranen fusionieren. (6) **NEUROTRANSMITTER-FREISETZUNG** (Exozytose, **Quantal Release**: 1 Vesikel = 1 Quantum = ~5000 Moleküle). (7) Neurotransmitter diffundieren durch **synaptischen Spalt** (~20-40 nm, ~0.5 ms). (8) Binden **POSTSYNAPTISCHE REZEPTOREN:** (a) **IONOTROPE REZEPTOREN** (ligandengesteuerte Ionenkanäle, SCHNELL [ms]): **AMPA** (Glutamat → Na⁺/K⁺, Depolarisation), **NMDA** (Glutamat → Na⁺/Ca²⁺, Mg²⁺-Block bei -70 mV), **GABA_A** (GABA → Cl⁻, Hyperpolarisation), **nikotinisch** (Acetylcholin → Na⁺, neuromuskuläre Endplatte). (b) **METABOTROPE REZEPTOREN** (G-Protein-gekoppelt, LANGSAM [Sekunden-Minuten]): **D1/D2** (Dopamin), **5-HT1-7** (Serotonin), **α1/α2, β1/β2** (Noradrenalin), **M1-M5** (Acetylcholin). (9) **POSTSYNAPTISCHES POTENTIAL:** **EPSP** (Exzitatorisches PSP, Depolarisation, Schwelle näher) ODER **IPSP** (Inhibitorisches PSP, Hyperpolarisation, Schwelle ferner). Summation: Temporal (zeitlich) + Spatial (räumlich) → Schwelle (-55 mV) überschritten → Aktionspotential. (10) **NEUROTRANSMITTER-INAKTIVIERUNG:** Wiederaufnahme (SERT, DAT, NET, EAAT, GAT), enzymatischer Abbau (Acetylcholinesterase, MAO, COMT), Diffusion. **KLINISCH:** Botulinustoxin (spaltet SNARE → KEINE Vesikel-Fusion → Muskelparalyse), Tetanospasmin (hemmt GABA/Glycin-Freisetzung → Dauererregung → Krämpfe). A, C, D, E sind falsch.",
           difficulty: 2,
-          tags: [],
+          tags: ['synapse', 'neurotransmitter', 'synaptische transmission'],
         },
         {
           question: "Welche Neurotransmitter sind exzitatorisch und welche inhibitorisch im ZNS?",
@@ -305,7 +974,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
           correctIndex: 1,
           explanation: "B ist korrekt: Neurotransmitter im ZNS sind entweder **EXZITATORISCH** (Depolarisation, EPSP, Aktionspotential-Wahrscheinlichkeit ↑) oder **INHIBITORISCH** (Hyperpolarisation, IPSP, Aktionspotential-Wahrscheinlichkeit ↓). **EXZITATORISCH: GLUTAMAT** (häufigster exzitatorischer Neurotransmitter, ~90% aller exzitatorischen Synapsen im ZNS). **Rezeptoren:** (1) **AMPA-Rezeptor** (ionotrop, ligandengesteuert): Glutamat → **Na⁺ rein, K⁺ raus** → Depolarisation (schnell, ms) → EPSP. (2) **NMDA-Rezeptor** (ionotrop): Glutamat + **Glycin** (Ko-Agonist, Glycin-Bindungsstelle) → **Na⁺/Ca²⁺ rein** → Depolarisation. **Mg²⁺-Block** (bei Ruhepotential -70 mV blockiert Mg²⁺ Kanal, wird bei Depolarisation [~-40 mV] entfernt) → Koinzidenzdetektor (erfordert Depolarisation [AMPA] + Glutamat [präsynaptisch]). Ca²⁺-Einstrom → **LTP** (Long-Term Potentiation, synaptische Plastizität, Lernen/Gedächtnis). (3) **Kainate-Rezeptor** (ionotrop, Na⁺). (4) **mGluR** (metabotrop, mGluR1-8, G-Protein-gekoppelt). **Wiederaufnahme:** **EAAT1/2** (Excitatory Amino Acid Transporter, Astrozyten) → Glutamin-Synthetase (Glutamat → Glutamin) → Glutamin zu Neuronen (Glutaminase → Glutamat) → Glutamat-Glutamin-Zyklus. **KLINISCH:** Exzitotoxizität (Schlaganfall, Ischämie → Glutamat ↑ → NMDA-Rezeptor-Überaktivierung → Ca²⁺-Überladung → Neuronen-Tod), Memantin (NMDA-Rezeptor-Antagonist, Alzheimer), Ketamin (NMDA-Antagonist, Anästhesie, Antidepressivum). **INHIBITORISCH: GABA (γ-Aminobuttersäure) + GLYCIN.** (1) **GABA** (~20% aller Synapsen im ZNS, Interneurone, Cortex, Basalganglien). **Rezeptoren:** **GABA_A** (ionotrop, ligandengesteuert): GABA → **Cl⁻ rein** → Hyperpolarisation (IPSP). **Benzodiazepine** (Diazepam, Lorazepam) binden allosterische Stelle → verstärken GABA-Wirkung (Anxiolytika, Sedierung, Antikonvulsiva). **Barbiturate** (Phenobarbital) = GABA_A-Agonisten (längere Kanalöffnung). **GABA_B** (metabotrop, Gi): K⁺-Kanäle ↑ → Hyperpolarisation. **Wiederaufnahme:** **GAT** (GABA-Transporter). **Synthese:** Glutamat + Glutamat-Decarboxylase (GAD, Vitamin B6-abhängig) → GABA. (2) **GLYCIN** (häufigster inhibitorischer Neurotransmitter in Rückenmark/Hirnstamm). **Rezeptor:** Glycin-Rezeptor (ionotrop, Cl⁻) → Hyperpolarisation. **STRYCHNIN** (Gift) blockiert Glycin-Rezeptor → KEINE Inhibition → Krämpfe (Tetanus-ähnlich). **KLINISCH:** Epilepsie (GABA ↓ → Exzitations-Inhibitions-Ungleichgewicht → Anfälle, Therapie: Valproat [GABA ↑], Benzodiazepine), Angststörungen (GABA ↓, Benzodiazepine), Tetanus/Strychnin (Glycin-Blockade → Dauererregung). A, C, D, E sind falsch.",
           difficulty: 2,
-          tags: [],
+          tags: ['neurotransmitter', 'exzitatorisch', 'inhibitorisch'],
         },
         {
           question: "Was passiert während eines Aktionspotentials auf molekularer Ebene?",
@@ -319,7 +988,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
           correctIndex: 1,
           explanation: "B ist korrekt: **AKTIONSPOTENTIAL** ist eine schnelle, vorübergehende Depolarisation der Membran (alles-oder-nichts-Prinzip), Grundlage der Informationsweiterleitung in Neuronen. **RUHEPOTENTIAL (~-70 mV):** (1) **Na⁺/K⁺-ATPase:** 3 Na⁺ raus, 2 K⁺ rein (ATP-abhängig, elektrogen ~-10 mV). (2) **K⁺-Leckkanäle** (Kir2.1, immer offen): K⁺ strömt aus (Konzentrationsgradient: innen 140 mM, außen 4 mM) → Membran negativ. (3) Nernst-Gleichung: E_K = -90 mV (K⁺-Gleichgewichtspotential), E_Na = +60 mV (Na⁺-Gleichgewichtspotential). (4) Goldman-Gleichung (berücksichtigt Permeabilität aller Ionen) → Ruhepotential ~-70 mV. **AKTIONSPOTENTIAL-ABLAUF:** (1) **SCHWELLENREIZUNG:** Membran depolarisiert (z.B. EPSP, synaptische Transmission) → **Schwellenpotential** (~-55 mV) erreicht. (2) **DEPOLARISATION (Aufstrich):** **Spannungsgesteuerte Na⁺-Kanäle** (Nav1.1-1.9, Aktivierungstor öffnet ab ~-55 mV) → Na⁺ strömt ein (Treibkraft: Konzentrationsgradient [außen 145 mM, innen 12 mM] + elektrischer Gradient [innen negativ]) → Membran depolarisiert SCHNELL (~1 ms) → **Overshoot** (~+40 mV, nahe E_Na = +60 mV). **Alles-oder-Nichts-Prinzip:** Schwelle überschritten → vollständiges AP (~100 mV Amplitude), unterschwellig → kein AP. (3) **REPOLARISATION (Abstrich):** (a) **Na⁺-Kanäle INAKTIVIEREN** (Inaktivierungstor schließt, spannungsabhängig, ~1-2 ms nach Öffnung). (b) **Spannungsgesteuerte K⁺-Kanäle** (Kv1.1-1.9) öffnen (verzögert, ~0.5-1 ms nach Depolarisation). (c) K⁺ strömt aus → Membran repolarisiert (Richtung -70 mV, ~2 ms). (4) **HYPERPOLARISATION (Undershoot):** K⁺-Kanäle bleiben kurz offen → Membran hyperpolarisiert (kurzzeitig < -70 mV, ~-80 mV, ~2-4 ms). (5) **RÜCKKEHR zu Ruhepotential:** K⁺-Kanäle schließen → Ruhepotential -70 mV (Na⁺/K⁺-ATPase restauriert Gradienten langsam, über viele APs). **REFRAKTÄRZEIT:** (1) **ABSOLUT** (~1-2 ms): Na⁺-Kanäle inaktiviert (Inaktivierungstor geschlossen) → KEIN AP auslösbar. (2) **RELATIV** (~3-4 ms): Na⁺-Kanäle erholen sich (einige offen) + K⁺-Kanäle noch offen (Hyperpolarisation) → AP nur bei überschwelligem Reiz auslösbar. **BEDEUTUNG:** Begrenzt AP-Frequenz (~1000 Hz maximal), verhindert Rückwärtspropagation (AP läuft nur vorwärts). A, C, D, E sind falsch.",
           difficulty: 3,
-          tags: [],
+          tags: ['aktionspotential', 'na-kanäle', 'k-kanäle'],
         },
         {
           question: "Was ist ein monosynaptischer Reflex und wie unterscheidet er sich von einem polysynaptischen Reflex?",
@@ -333,7 +1002,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
           correctIndex: 1,
           explanation: "B ist korrekt: Reflexbogen-Typen unterscheiden sich in Anzahl der Synapsen (1 vs. mehrere) und Komplexität. **MONOSYNAPTISCHER REFLEX (Eigenreflex, Dehnungsreflex):** **EINE SYNAPSE** zwischen sensorischem Neuron und Motoneuron (einfachster Reflex). **Beispiel: PATELLARSEHNENREFLEX (Kniesehnenreflex):** (1) **STIMULUS:** Schlag auf Patellarsehne (unterhalb Kniescheibe). (2) **REZEPTOR:** **Muskelspindel** (Dehnungsrezeptor im M. quadriceps femoris, intrafusale Muskelfasern mit Ia-Faser-Innervation). Dehnung → Ia-Faser erregt. (3) **AFFERENZ:** **Ia-Faser** (große myelinisierte Faser, ~120 m/s, schnellste) → Hinterwurzel (Spinalganglion) → Rückenmark (L2-L4). (4) **SYNAPSE (EINE!):** Ia-Faser synapsiert **DIREKT** auf **α-Motoneuron** (im Vorderhorn, KEINE Interneurone dazwischen) → monosynaptisch. (5) **EFFERENZ:** α-Motoneuron → Vorderwurzel → N. femoralis → M. quadriceps. (6) **EFFEKTOR:** M. quadriceps **kontrahiert** → Beinstreckung (kick). (7) **GLEICHZEITIG (reziproke Hemmung):** Ia-Faser aktiviert **Interneuron (Ia-Interneuron, inhibitorisch)** → hemmt α-Motoneuron des **Antagonisten** (M. biceps femoris [Beuger]) → Antagonist relaxiert (verhindert Widerstand). **FUNKTION:** Haltungskontrolle (schnelle Korrektur bei Dehnung, propriozeptive Rückkopplung), Muskeltonus-Aufrechterhaltung. **KLINISCH:** Areflexie (fehlende Reflexe): Periphere Nervenschädigung (Ia-Faser, α-Motoneuron), Rückenmarkläsion (Hinterwurzel), Guillain-Barré. Hyperreflexie (gesteigerte Reflexe): Pyramidenbahnläsion (Schlaganfall, MS, obere Motoneurone geschädigt → keine Hemmung → α-Motoneurone überaktiv), Spastik. **POLYSYNAPTISCHER REFLEX (Fremdreflex, Schutzreflex):** **MEHRERE SYNAPSEN** (Interneurone eingeschaltet) → komplexer. **Beispiel: FLUCHTREFLEX (Beugereflex, Schmerzreflex):** (1) **STIMULUS:** Schmerz (Tritt auf Nagel). (2) **REZEPTOR:** **Nozizeptoren** (freie Nervenendigungen, Aδ-Fasern [schneller Schmerz, myelinisiert, ~20 m/s] + C-Fasern [langsamer Schmerz, unmyelinisiert, ~1 m/s]). (3) **AFFERENZ:** Aδ-/C-Faser → Hinterwurzel → Rückenmark (Hinterhorn). (4) **SYNAPSEN (MEHRERE!):** (a) Aδ-Faser → **Interneuron 1 (exzitatorisch)** → α-Motoneuron (Beugemuskulatur). (b) Aδ-Faser → **Interneuron 2 (inhibitorisch)** → α-Motoneuron (Streckmuskulatur) → reziproke Hemmung (Strecker relaxiert). (c) **Gekreuzte Streckreaktion:** Aδ-Faser → **Interneuron 3 (kontralaterales Bein, kommissural)** → α-Motoneuron (Strecker kontralateral) → Gegenbein streckt (stützt Körper, verhindert Umfallen). (5) **EFFEKTOR:** Beugemuskulatur kontrahiert (M. biceps femoris, M. semitendinosus, M. semimembranosus) → Bein wird **hochgezogen** (weg von Schmerzquelle). **FUNKTION:** Schutzreaktion (schnelle Flucht vor Schmerz/Verletzung). A, C, D, E sind falsch.",
           difficulty: 3,
-          tags: [],
+          tags: ['monosynaptischer reflex', 'polysynaptischer reflex', 'reflexbogen'],
         },
         {
           question: "Welche Neurotransmitter und Rezeptoren sind bei Sympathikus und Parasympathikus beteiligt?",
@@ -347,7 +1016,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
           correctIndex: 1,
           explanation: "B ist korrekt: **SYMPATHIKUS** und **PARASYMPATHIKUS** nutzen unterschiedliche Neurotransmitter/Rezeptoren, besonders **POSTGANGLIONÄR** (an Effektor-Organen). **SYMPATHIKUS:** (1) **PRÄGANGLIONÄR** (Seitenhorn T1-L2 → Ganglion): **Acetylcholin** → **nikotinische Rezeptoren** (ionotrop, Na⁺-Kanäle, ligandengesteuert, schnelle Erregung). Ganglien: Grenzstrang (paravertebral, entlang Wirbelsäule) + prävertebral (Ganglion coeliacum, mesentericum). (2) **POSTGANGLIONÄR** (Ganglion → Effektor-Organ): **NORADRENALIN** (Ausnahme: Schweißdrüsen [ekkrines: Acetylcholin → M3], Nebennierenmark). **Rezeptoren (Effektor):** (a) **α1-Rezeptoren** (Gq → IP₃ → Ca²⁺ ↑): **Vasokonstriktion** (glatte Muskulatur Arterien/Venen, Haut/Splanchnikus), **Mydriasis** (M. dilatator pupillae), Sphinkter-Kontraktion (Blase, Darm), Uterus-Kontraktion (schwanger). (b) **α2-Rezeptoren** (Gi → cAMP ↓): Peristaltik ↓ (Darm, präsynaptisch auch negative Rückkopplung [Noradrenalin-Freisetzung ↓]). (c) **β1-Rezeptoren** (Gs → cAMP ↑): **Herz** (Frequenz ↑ [SA-Knoten], Kontraktilität ↑ [Ventrikel], AV-Knoten-Leitung ↑), Renin-Freisetzung ↑ (Niere). (d) **β2-Rezeptoren** (Gs → cAMP ↑): **Bronchodilatation** (glatte Muskulatur Bronchien relaxiert), **Vasodilatation** (Skelettmuskulatur, Herz, Koronararterien), **Glykogenolyse ↑** (Leber → Glukose), Uterus-Relaxation (nicht-schwanger), Tremor (Skelettmuskulatur). (e) **β3-Rezeptoren** (Gs → cAMP ↑): **Lipolyse ↑** (Fettgewebe → freie Fettsäuren), Blasenwand-Relaxation (Detrusor). (3) **NEBENNIERENMARK (chromaffine Zellen):** Präganglionäre sympathische Fasern (Acetylcholin → nikotinische Rezeptoren) → **Adrenalin-Freisetzung** (80%) + Noradrenalin (20%) → systemische Wirkung (verstärkt Sympathikus-Effekte, Adrenalin bindet β1/β2 >> α). **PARASYMPATHIKUS:** (1) **PRÄGANGLIONÄR** (Hirnnerven III/VII/IX/X + S2-S4 → Ganglion): **Acetylcholin** → **nikotinische Rezeptoren** (wie Sympathikus im Ganglion). Ganglien: Organnah (z.B. Ganglion ciliare [Pupille], Ganglion submandibulare [Speicheldrüsen]) oder in Organwand (Plexus myentericus [Meissner, Auerbach]). (2) **POSTGANGLIONÄR** (Ganglion → Effektor-Organ): **ACETYLCHOLIN** → **muskarinische Rezeptoren** (metabotrop, G-Protein-gekoppelt, LANGSAM). **Rezeptoren (Effektor):** (a) **M2-Rezeptoren** (Gi → cAMP ↓, K⁺-Kanäle ↑): **Herz** (Frequenz ↓ [SA-Knoten, Vagus], AV-Knoten-Leitung ↓, Kontraktilität ↓ [Vorhöfe]). (b) **M3-Rezeptoren** (Gq → IP₃ → Ca²⁺ ↑): **Bronchokonstriktion** (glatte Muskulatur Bronchien), **Speichelsekretion ↑** (dünnflüssig, Parotis/Submandibularis/Sublingualis), **Peristaltik ↑** (Magen-Darm, glatte Muskulatur), **Miktion** (Detrusor [Blasenwand] kontrahiert, Sphinkter relaxiert), **Miosis** (M. sphincter pupillae [Pupille verengt], Akkommodation [Ziliarmuskel kontrahiert → Linse gewölbt, Nahsicht]), Tränenfluss ↑, Insulinsekretion ↑ (Pankreas-β-Zellen). **INAKTIVIERUNG:** Acetylcholin → **Acetylcholinesterase** (AChE, in synaptischem Spalt) → Acetat + Cholin (Cholin-Wiederaufnahme → Acetyl-CoA + Cholin → Acetylcholin [via Cholin-Acetyltransferase]). Noradrenalin → **Wiederaufnahme** (NET [Noradrenalin-Transporter]), **MAO** (Monoaminoxidase, Mitochondrien), **COMT** (Catechol-O-Methyltransferase). A, C, D, E sind falsch.",
           difficulty: 3,
-          tags: [],
+          tags: ['acetylcholin', 'noradrenalin', 'rezeptoren'],
           hints: [
             "Überlege: Welche Neurotransmitter nutzt jedes System prä- vs. postganglionär?",
             "Merke: Beide Systeme nutzen präganglionär Acetylcholin – der Unterschied liegt postganglionär (Sympathikus: Noradrenalin; Parasympathikus: Acetylcholin)."
@@ -612,7 +1281,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
           text: "Die Haut besteht aus Epidermis (verhorntes Plattenepithel, Keratinozyten), Dermis (Bindegewebe, Kollagen I, Elastin) und Subcutis (Fettgewebe). Hautrezeptoren umfassen Meissner-Körperchen (Berührung, schnell adaptierend), Pacini-Körperchen (Vibration, schnell), Merkel-Zellen (Druck, langsam), Ruffini-Körperchen (Dehnung, langsam) und freie Nervenendigungen (Schmerz/Temperatur, Aδ/C-Fasern).",
         },
       ],
-      diagram: 'sinnesorgane',
+      diagram: 'sense-organs',
 
       merksätze: [
         "**Photorezeptoren:** **Stäbchen** (skotopisch [Dämmerung], Rhodopsin [11-cis-Retinal + Opsin, λ_max ~500 nm], ~120 Mio., peripher, hohe Empfindlichkeit, niedrige Auflösung). **Zapfen** (photopisch [Tageslicht, Farben], 3 Opsine [S-blau ~420 nm, M-grün ~530 nm, L-rot ~560 nm], ~6 Mio., Fovea centralis, niedrige Empfindlichkeit, hohe Auflösung [1:1 Ganglienzelle]).",
@@ -633,7 +1302,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
           correctIndex: 1,
           explanation: "B ist korrekt: **STÄBCHEN** (Rods) und **ZAPFEN** (Cones) sind die beiden Photorezeptor-Typen in der Retina, spezialisiert für unterschiedliche Lichtbedingungen und Funktionen. **STÄBCHEN:** (1) **ANZAHL:** ~120 Millionen pro Retina. (2) **VERTEILUNG:** **PERIPHER** (außerhalb Fovea centralis, Dichte ↑ ~20° von Fovea, KEINE Stäbchen in Fovea selbst). (3) **FUNKTION:** **SKOTOPISCHES SEHEN** (Dämmerung, Nachtsicht, schwaches Licht). (4) **PHOTOPIGMENT:** **Rhodopsin** (11-cis-Retinal + Opsin, Absorptionsmaximum λ_max ~500 nm [grün-blau]). (5) **EMPFINDLICHKEIT:** **HOCH** (1 Photon kann Reaktion auslösen, Amplifikation via Transducin/PDE-Kaskade). (6) **AUFLÖSUNG:** **NIEDRIG** (viele Stäbchen konvergieren auf 1 Ganglienzelle [Konvergenz ~100:1] → räumliche Summation → hohe Empfindlichkeit, aber geringe Schärfe). (7) **ADAPTATION:** Dunkeladaptation langsam (~30 Min, Rhodopsin-Regeneration). **ZAPFEN:** (1) **ANZAHL:** ~6 Millionen pro Retina. (2) **VERTEILUNG:** **FOVEA CENTRALIS** (Sehgrube, höchste Dichte ~200.000/mm², NUR Zapfen, KEINE Stäbchen), Dichte ↓ peripher. (3) **FUNKTION:** **PHOTOPISCHES SEHEN** (Tageslicht, helles Licht, **FARBENSEHEN**). (4) **PHOTOPIGMENTE (3 TYPEN):** **S-Zapfen** (short, blau, λ_max ~420 nm, ~10%), **M-Zapfen** (medium, grün, λ_max ~530 nm, ~50%), **L-Zapfen** (long, rot, λ_max ~560 nm, ~40%). Farbwahrnehmung via Vergleich der 3 Signale (trichromatische Theorie). (5) **EMPFINDLICHKEIT:** **NIEDRIG** (viele Photonen nötig). (6) **AUFLÖSUNG:** **HOCH** (besonders Fovea: 1 Zapfen → 1 Bipolare Zelle → 1 Ganglienzelle [1:1:1, KEINE Konvergenz] → höchste Sehschärfe). (7) **ADAPTATION:** Helladaptation schnell (~5 Min). **KLINISCH:** Nachtblindheit (Stäbchen-Dysfunktion, Vitamin A-Mangel [Rhodopsin-Synthese ↓], Retinitis pigmentosa [genetisch, Stäbchen sterben]). Farbblindheit (Zapfen-Dysfunktion: Rot-Grün-Schwäche [häufigste, X-chromosomal, M-/L-Opsin-Defekt], Blau-Gelb-Schwäche [selten, S-Opsin], Achromatopsie [keine Farben, alle Zapfen defekt]). A, C, D, E sind falsch.",
           difficulty: 1,
-          tags: [],
+          tags: ['stäbchen', 'zapfen', 'retina'],
         },
         {
           question: "Wie funktioniert die Fototransduktion in Stäbchen?",
@@ -647,7 +1316,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
           correctIndex: 1,
           explanation: "B ist korrekt: **FOTOTRANSDUKTION** ist der Prozess, durch den Photorezeptoren (Stäbchen/Zapfen) Licht in elektrisches Signal umwandeln (ungewöhnlich: Licht → HYPERPOLARISATION, nicht Depolarisation!). **DUNKELHEIT (Ruhezustand, DEPOLARISIERT):** (1) **cGMP hoch** (Guanylatzyklase aktiv, GTP → cGMP). (2) cGMP bindet **cGMP-gesteuerte Na⁺-Kanäle** (CNG-Kanäle, im Außensegment [Membranscheiben]) → Kanäle OFFEN → **Na⁺ strömt ein** → **DEPOLARISATION** (~-40 mV, ungewöhnlich für Rezeptor!). (3) Spannungsgesteuerte Ca²⁺-Kanäle (synaptische Terminale) offen → **Glutamat-Freisetzung** (tonisch, kontinuierlich) → Bipolare Zellen (ON-Bipolare hyperpolarisiert, OFF-Bipolare depolarisiert). **LICHT (Phototransduktion, HYPERPOLARISIERT):** (1) **PHOTON** trifft **Rhodopsin** (11-cis-Retinal + Opsin). (2) **PHOTOISOMERISIERUNG:** **11-cis-Retinal → all-trans-Retinal** (cis-trans-Konformationsänderung, einziger lichtabhängiger Schritt!). (3) Rhodopsin → **Metarhodopsin II** (R*, aktivierte Form, Konformationsänderung des Opsins). (4) Metarhodopsin II aktiviert **Transducin** (G-Protein, Gt, α-Untereinheit dissoziiert, bindet GTP) → **AMPLIFIKATION** (1 R* aktiviert ~100 Transducin). (5) Transducin-α-GTP aktiviert **Phosphodiesterase (PDE)** (cGMP-spezifische PDE, γ-Untereinheit dissoziiert) → **AMPLIFIKATION** (~100 PDE pro Transducin). (6) PDE hydrolysiert **cGMP → GMP** (cGMP-Konzentration ↓↓↓, ~1000-fach in ms). (7) cGMP-gesteuerte Na⁺-Kanäle **SCHLIESSEN** (cGMP löst sich von Kanal) → **Na⁺-Einstrom ↓**. (8) **HYPERPOLARISATION** (~-70 mV, von -40 mV) → K⁺-Kanäle (immer offen) dominieren. (9) Ca²⁺-Kanäle (synaptisch) schließen → **Glutamat-Freisetzung ↓** (Signal! ON-Bipolare depolarisieren, OFF-Bipolare hyperpolarisieren). **AMPLIFIKATION GESAMT:** 1 Photon → ~100.000 cGMP hydrolysiert → ~1 pA Stromänderung → detektierbar! **ADAPTATION/ERHOLUNG:** (1) **Rhodopsin-Kinase** phosphoryliert Metarhodopsin II → **Arrestin** bindet → inaktiviert. (2) All-trans-Retinal → all-trans-Retinol (Retinol-Dehydrogenase) → Pigmentepithel (RPE) → **11-cis-Retinal** (Retinal-Isomerase, Vitamin A-Zyklus) → zurück zu Photorezeptor → Rhodopsin regeneriert. (3) **Recoverin** (Ca²⁺-Sensor): Ca²⁺ ↓ (Hyperpolarisation) → Guanylatzyklase-aktivierendes Protein (GCAP) → Guanylatzyklase ↑ → cGMP-Synthese ↑ → Dunkelzustand wiederhergestellt. **KLINISCH:** Nachtblindheit (Vitamin A-Mangel → Rhodopsin-Synthese ↓, 11-cis-Retinal ↓), Retinitis pigmentosa (genetisch, Rhodopsin-Mutation → Stäbchen sterben → Nachtblindheit, Tunnelblick). A, C, D, E sind falsch.",
           difficulty: 2,
-          tags: [],
+          tags: ['fototransduktion', 'rhodopsin', 'stäbchen'],
         },
         {
           question: "Wie funktioniert die Akkommodation des Auges?",
@@ -661,7 +1330,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
           correctIndex: 1,
           explanation: "B ist korrekt: **AKKOMMODATION** ist die Anpassung der Linsen-Brechkraft für Nahsicht (junge Menschen: ~10 cm Nahpunkt, ältere: ~100 cm [Presbyopie]). **FERNEINSTELLUNG (Ruhe, KEINE Akkommodation):** (1) **Ziliarmuskel RELAXIERT** (ringförmiger glatter Muskel im Ziliarkörper, parasympathische Innervation [M3], aber in Ruhe entspannt). (2) **Zonulafasern (Zinn-Fasern) GESPANNT** (Kollagenfasern, Ziliarkörper → Linsenkapsel, radialer Zug). (3) Linse **FLACH** (geringste Brechkraft ~20 dpt, Linse wird gedehnt durch Zonulafasern-Spannung). (4) **Fernpunkt im Unendlichen scharf** (parallele Lichtstrahlen fokussiert auf Retina). **NAHEINSTELLUNG (Akkommodation, aktiver Prozess):** (1) **ZILIARMUSKEL KONTRAHIERT** (Parasympathikus, **M3-Rezeptoren**, **N. oculomotorius [III]**, Edinger-Westphal-Kern → Ganglion ciliare → postganglionäre Fasern → Ziliarmuskel). (2) Ziliarmuskel-Ring (kreisförmig) **VERKLEINERT** sich → Abstand Ziliarmuskel-Linse ↓. (3) **ZONULAFASERN ENTSPANNEN** (Spannung ↓, radialer Zug auf Linse ↓). (4) Linse **WÖLBT SICH** (elastische Rückstellkraft der Linsenkapsel, Linse ist natürlich konvex) → **Brechkraft ↑** (~24 dpt maximal bei Kindern/jungen Erwachsenen, ~22 dpt bei 30-Jährigen, ~20 dpt bei 60-Jährigen [Presbyopie, Altersweitsichtigkeit, Linse verliert Elastizität]). (5) **Nahpunkt scharf** (~10 cm bei Kindern, ~25 cm bei Erwachsenen, ~100 cm bei 60-Jährigen). **NAHAKKOMMODATIONSTRIAS** (3 simultane Reaktionen bei Nahsicht): (1) **AKKOMMODATION** (Ziliarmuskel kontrahiert, Linse wölbt). (2) **KONVERGENZ** (Augen nach innen, M. rectus medialis [N. oculomotorius III], beide Augen fixieren Nahpunkt). (3) **MIOSIS** (Pupille verengt, M. sphincter pupillae [Parasympathikus, M3, N. oculomotorius III] → Tiefenschärfe ↑ [kleinere Pupille → weniger chromatische Aberration]). **KLINISCH:** **Presbyopie** (Altersweitsichtigkeit, ~45 Jahre): Linse verliert Elastizität (Kristalline vernetzen, wasserarm) → Akkommodation ↓ → Nahpunkt ↑ (~100 cm) → Lesebrille nötig (Konvexlinse/Pluslinse, z.B. +2 dpt). **Myopie** (Kurzsichtigkeit): Bulbus zu lang → Fernpunkt vor Retina → Fernsicht unscharf → Korrektur: Konkavlinse (Minuslinse, z.B. -3 dpt). **Hyperopie** (Weitsichtigkeit): Bulbus zu kurz → Nahpunkt hinter Retina → Nahsicht unscharf (Akkommodation kompensiert teilweise) → Korrektur: Konvexlinse (Pluslinse). A, C, D, E sind falsch.",
           difficulty: 2,
-          tags: [],
+          tags: ['akkommodation', 'linse', 'ziliarmuskeln'],
         },
         {
           question: "Wie funktioniert die Schallübertragung im Ohr?",
@@ -675,7 +1344,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
           correctIndex: 1,
           explanation: "B ist korrekt: **SCHALLÜBERTRAGUNG** im Ohr erfolgt in 3 Stufen (Außenohr, Mittelohr, Innenohr), mit **Impedanzanpassung** (Luft → Flüssigkeit) im Mittelohr. **ABLAUF:** (1) **SCHALLWELLEN** (Luftdruckschwankungen) → Ohrmuschel (Schallsammlung) → äußerer Gehörgang (~2.5 cm). (2) **TROMMELFELL** (Membrana tympani) schwingt (Auslenkung ~1 nm bei Hörschwelle!). (3) **GEHÖRKNÖCHELCHEN** (kleinste Knochen, Mittelohr, luftgefüllt): **Hammer** (Malleus, an Trommelfell) → **Amboss** (Incus) → **Steigbügel** (Stapes, Fußplatte an Oval-Fenster). **IMPEDANZANPASSUNG (~22-fach Druckverstärkung):** (a) **Hebelwirkung** (Hammer-Amboss, ~1.3-fach). (b) **Flächenreduktion** (Trommelfell 55 mm² → Oval-Fenster 3.2 mm², ~17-fach Druckerhöhung [Druck = Kraft/Fläche]). Ohne Impedanzanpassung: 99.9% Schallenergie würde reflektiert werden (Luft-Flüssigkeit-Grenze)! (4) **OVAL-FENSTER** (membranbedeckte Öffnung zu Innenohr) → Steigbügel-Fußplatte drückt → **Perilymphe** (Na⁺-reich, wie EZF) in **Scala vestibuli** (oberer Gang in Cochlea) bewegt sich. (5) **WANDERWELLE** auf **BASILARMEMBRAN** (trennt Scala media [Endolymphe, K⁺-reich] von Scala tympani [Perilymphe]). **TONOTOPIE** (Frequenz-Orts-Kodierung): Basilarmembran ist **NICHT uniform** → **Basis** (nahe Oval-Fenster): schmal (~0.1 mm), steif → **hohe Frequenzen** (~20.000 Hz) → **Apex** (Spitze): breit (~0.5 mm), flexibel → **niedrige Frequenzen** (~20 Hz). Wanderwelle erreicht Maximum bei Resonanzfrequenz. (6) **CORTI-ORGAN** (auf Basilarmembran): Basilarmembran bewegt sich → **Stereozilien** (Haarzellen) biegen gegen **Tektorialmembran** (gelartig, darüber). (7) **MECHANO-TRANSDUKTION:** **Tip-Links** (Cadherin 23, verbinden Stereozilien) spannen → **Mechano-sensitive K⁺-Kanäle** (TMC1/2, direkt mechanisch, KEIN Second Messenger!) **ÖFFNEN**. (8) **K⁺ strömt EIN** (Endolymphe ist K⁺-reich [~150 mM] + positiv [+80 mV, Endocochleäres Potential, via Stria vascularis], Treibkraft ~120 mV!) → **DEPOLARISATION** (Haarzelle, von -70 mV → -40 mV). (9) Spannungsgesteuerte **Ca²⁺-Kanäle** (Ca_v1.3) öffnen → Ca²⁺ rein → **Glutamat-Freisetzung** (Synapse, Ribbon-Synapse [spezielle Struktur für schnelle/tonische Freisetzung]). (10) **N. cochlearis** (Spiralganglion-Neuronen, bipolar) → Aktionspotential → Hirnstamm (Nucleus cochlearis) → auditorischer Kortex (Gyrus temporalis superior, Heschl-Querwindungen). (11) **RUNDES FENSTER** (membranbedeckte Öffnung, Scala tympani) wölbt sich aus (Druckausgleich, da Perilymphe inkompressibel). **KLINISCH:** Schwerhörigkeit (Schallleitungsschwerhörigkeit [Mittelohr: Otosklerose, Trommelfell-Perforation] vs. Schallempfindungsschwerhörigkeit [Innenohr: Haarzellen-Schädigung durch Lärm/Alter/Ototoxika: Aminoglykoside, Cisplatin, Furosemid]). A, C, D, E sind falsch.",
           difficulty: 3,
-          tags: [],
+          tags: ['schallübertragung', 'innenohr', 'cochlea'],
         },
         {
           question: "Welche Hautrezeptoren gibt es und was ist ihre Funktion?",
@@ -689,7 +1358,7 @@ Das **Nervensystem** ist das zentrale Informationsverarbeitungs- und Steuerungss
           correctIndex: 1,
           explanation: "B ist korrekt: Die Haut enthält spezialisierte **MECHANOREZEPTOREN** (Berührung, Druck, Vibration, Dehnung), **THERMOREZEPTOREN** (Temperatur) und **NOZIZEPTOREN** (Schmerz), die verschiedene Reize codieren. **MECHANOREZEPTOREN:** (1) **MEISSNER-KÖRPERCHEN** (Corpuscula tactus): **Lokalisation:** Dermis-Papillen (oberflächlich), besonders Fingerbeeren, Lippen, Zunge (hohe Dichte). **Modalität:** **Berührung** (leicht, sanft), **Textur**. **Adaptation:** **SCHNELL** (phasisch, reagiert auf Änderung, nicht auf konstanten Reiz). **Frequenz:** Niedrig (10-50 Hz, dynamisch). **Funktion:** Feine Textur-Diskrimination (z.B. Braille-Lesen). (2) **PACINI-KÖRPERCHEN** (Corpuscula lamellosa): **Lokalisation:** Tiefe Dermis, Subcutis (Fettgewebe), Faszien, Gelenke. **Modalität:** **Vibration** (hochfrequent). **Adaptation:** **SCHNELL** (sehr schnell, phasisch). **Frequenz:** Hoch (200-300 Hz). **Struktur:** Zwiebelschalen-artig (Lamellen, filtern niederfrequente Reize). **Funktion:** Vibration (z.B. Werkzeug-Nutzung), Oberflächentextur bei Bewegung. (3) **MERKEL-ZELLEN** (Merkel-Tastscheiben): **Lokalisation:** **Epidermis** (Stratum basale), besonders Fingerbeeren, Lippen. **Modalität:** **Druck** (statisch, kontinuierlich). **Adaptation:** **LANGSAM** (tonisch, reagiert auf konstanten Reiz). **Frequenz:** Niedrig (0.3-3 Hz, statisch). **Funktion:** **Feine Details** (Kanten, Formen, Buchstaben-Erkennung), höchste räumliche Auflösung (~1 mm). **Neurotransmitter:** Merkel-Zellen setzen Serotonin/Substanz P frei (ungewöhnlich für Nicht-Neuron). (4) **RUFFINI-KÖRPERCHEN** (Corpuscula bulboidea): **Lokalisation:** Dermis (tief), Gelenkkapseln, Sehnen. **Modalität:** **Dehnung** (Hautdehnung, Gelenkstellung). **Adaptation:** **LANGSAM** (tonisch). **Frequenz:** Niedrig (15-400 Hz). **Funktion:** Propriozeption (Gelenkstellung), Hautdehnung (z.B. Greifen). **THERMOREZEPTOREN (freie Nervenendigungen):** (1) **KÄLTEREZEPTOREN:** **TRPM8** (Transient Receptor Potential Melastatin 8, aktiviert bei ~25°C, auch Menthol). **Fasern:** **Aδ-Fasern** (myelinisiert, schnell ~20 m/s, \"kalt\"). (2) **WÄRMEREZEPTOREN:** **TRPV1** (Vanilloid 1, aktiviert bei ~43°C, auch **Capsaicin** [Chili]). **TRPV3/4** (warmere Temperaturen 30-40°C). **Fasern:** **C-Fasern** (unmyelinisiert, langsam ~1 m/s, \"warm/heiß\"). **NOZIZEPTOREN (Schmerzrezeptoren, freie Nervenendigungen):** **KEINE spezialisierten Strukturen** (im Gegensatz zu Mechanorezeptoren). **Lokalisation:** Epidermis, Dermis, Periost, Meningen (überall, NICHT Gehirnparenchym). **Fasern:** (1) **Aδ-Fasern** (myelinisiert, ~20 m/s): **Schneller Schmerz** (scharf, lokalisierbar, \"first pain\"). (2) **C-Fasern** (unmyelinisiert, ~1 m/s): **Langsamer Schmerz** (brennend, dumpf, diffus, \"second pain\"). **Aktivierung:** Mechanisch (Verletzung, hoher Druck), thermisch (Hitze >43°C [TRPV1], Kälte <15°C), **chemisch** (Bradykinin [Entzündung], **Prostaglandine** [PGE₂, Entzündung, NSAID-Target], Substanz P, H⁺ [Azidose], ATP [Zellschädigung], Capsaicin [TRPV1]). A, C, D, E sind falsch.",
           difficulty: 3,
-          tags: [],
+          tags: ['hautrezeptoren', 'meissner', 'pacini'],
           hints: [
             "Überlege: Welche Rezeptoren reagieren auf Capsaicin (Chili) und welcher Kanal ist verantwortlich?",
             "TRPV1 (Transient Receptor Potential Vanilloid 1) wird sowohl durch Wärme (>43°C) als auch durch Capsaicin aktiviert – Schmerz und Wärme teilen sich denselben Rezeptor."
@@ -970,7 +1639,7 @@ Das endokrine System nutzt **negative Rückkopplung** zur Homöostase:
           correctIndex: 2,
           explanation: "**Richtig (C):** Peptidhormone (z. B. Insulin, Glukagon, ACTH) sind **hydrophil** und können die Zellmembran nicht passieren → wirken über **Membranrezeptoren** (G-Protein oder Tyrosinkinase) → **Second Messenger** (cAMP, IP₃, Ca²⁺) → schnelle Wirkung (Minuten). Steroidhormone (z. B. Cortisol, Östrogen, Testosteron) sind **lipophil** → passieren Membran → binden an **intrazelluläre Rezeptoren** im Zellkern → Hormon-Rezeptor-Komplex → DNA-Bindung → **Genexpression** ↑/↓ → langsame Wirkung (Stunden).\n\n**Falsch (A):** Insulin ist ein Peptidhormom und wirkt über **Membranrezeptoren** (Tyrosinkinase), nicht intrazellulär.\n\n**Falsch (B):** Cortisol ist **lipophil**, nicht hydrophil, und wirkt über **intrazelluläre Rezeptoren**, nicht Membranrezeptoren.\n\n**Falsch (D):** T₃/T₄ sind **lipophile** Aminosäurederivate und wirken über **intrazelluläre Rezeptoren** (wie Steroidhormone), nicht über G-Protein-gekoppelte Rezeptoren. Adrenalin ist hydrophil und wirkt über G-Protein-gekoppelte Rezeptoren.\n\n**Falsch (E):** Steroidhormone wirken **langsamer** (Stunden), da Genexpression Zeit benötigt. Peptidhormone wirken **schneller** (Minuten) über Second Messenger.",
           difficulty: 1,
-          tags: [],
+          tags: ['hormone', 'steroidhormone', 'peptidhormone'],
         },
         {
           question: "Ein Patient mit Hypothyreose zeigt erhöhte TSH-Werte und erniedrigte T₃/T₄-Werte. Welche Aussage über die zugrundeliegende Störung trifft zu?",
@@ -984,7 +1653,7 @@ Das endokrine System nutzt **negative Rückkopplung** zur Homöostase:
           correctIndex: 1,
           explanation: "**Richtig (B):** Bei **primärer Hypothyreose** ist die **Schilddrüse** selbst geschädigt (z. B. Hashimoto-Thyreoiditis, Jodmangel, chirurgische Entfernung) → T₃/T₄ ↓ → **negative Rückkopplung fällt weg** → Hypothalamus/Hypophyse produzieren kompensatorisch **TRH ↑, TSH ↑**. Typische Laborkonstellation: **TSH ↑, T₃/T₄ ↓**.\n\n**Falsch (A):** Bei **sekundärer Hypothyreose** ist die Hypophyse geschädigt (z. B. Tumor, Hypophysitis) → **TSH ↓** → T₃/T₄ ↓. Die Hypophyse ist **nicht** überaktiv, sondern **unteraktiv**. Konstellation: **TSH ↓, T₃/T₄ ↓**.\n\n**Falsch (C):** Erhöhte TSH-Werte und erniedrigte T₃/T₄-Werte sprechen für **Hypothyreose**, nicht Hyperthyreose. Bei Morbus Basedow (TSH-Rezeptor-Antikörper) → T₃/T₄ ↑, TSH ↓.\n\n**Falsch (D):** Die negative Rückkopplung ist **nicht** intakt, da T₃/T₄ ↓ sind und TSH ↑ ist (keine Hemmung).\n\n**Falsch (E):** TRH-Mangel (tertiäre Hypothyreose, Hypothalamus-Störung) führt zu **TSH ↓** (nicht ↑), da der Stimulus für die Hypophyse fehlt. Konstellation: **TRH ↓, TSH ↓, T₃/T₄ ↓**.",
           difficulty: 2,
-          tags: [],
+          tags: ['hypothyreose', 'tsh', 'schilddrüse'],
         },
         {
           question: "Welche Aussage über die Biosynthese und Wirkung von Schilddrüsenhormonen ist korrekt?",
@@ -998,7 +1667,7 @@ Das endokrine System nutzt **negative Rückkopplung** zur Homöostase:
           correctIndex: 1,
           explanation: "**Richtig (B):** Die **Biosynthese** erfolgt in mehreren Schritten:\n1. Jodid-Aufnahme (NIS)\n2. **Thyreoperoxidase (TPO)** oxidiert Jodid → Jod → **jodiert Tyrosin-Reste** in Thyreoglobulin (TG) → **Monojodtyrosin (MIT)** und **Dijodtyrosin (DIT)**\n3. **Kopplung:** **2×DIT → T₄** (4 Jod-Atome), **MIT + DIT → T₃** (3 Jod-Atome)\n4. TG-Endozytose → Proteolyse → T₃/T₄-Freisetzung.\n\n**Falsch (A):** **T₃** ist 3–5× **potenter** (biologisch aktiver) als T₄. T₄ ist das **Prohormon** und wird peripher durch Dejodierung zu T₃ konvertiert.\n\n**Falsch (C):** T₃/T₄ sind **lipophile** Aminosäurederivate und wirken über **intrazelluläre Rezeptoren** im Zellkern (ähnlich Steroidhormonen) → Genexpression ↑. Sie wirken **nicht** über Membranrezeptoren/cAMP.\n\n**Falsch (D):** Bei **Jodmangel** → T₃/T₄ ↓ → **TSH ↑** (kompensatorisch, negative Rückkopplung fällt weg) → **Struma** (Kropf durch TSH-Stimulation).\n\n**Falsch (E):** Schilddrüsenhormone **steigern** den Grundumsatz (Stoffwechsel ↑, Sauerstoffverbrauch ↑, Wärmeproduktion ↑) und **erhöhen** die Herzfrequenz durch **β-Rezeptor-Upregulation** (nicht Downregulation).",
           difficulty: 2,
-          tags: [],
+          tags: ['schilddrüsenhormone', 't3 t4', 'jod'],
         },
         {
           question: "Ein Patient unter chronischer Corticosteroid-Therapie entwickelt ein Cushing-Syndrom. Welche der folgenden Aussagen über Cortisol trifft zu?",
@@ -1012,7 +1681,7 @@ Das endokrine System nutzt **negative Rückkopplung** zur Homöostase:
           correctIndex: 1,
           explanation: "**Richtig (B):** Cortisol hat vielfältige Wirkungen:\n\n**Metabolisch:**\n- **Leber:** **Glukoneogenese ↑** → Blutzucker ↑ (diabetogene Wirkung)\n- **Muskel/Fett:** Proteinkatabolismus ↑, Lipolyse ↑\n\n**Immunsuppressiv/antiinflammatorisch:**\n- **Phospholipase A₂ ↓** → Arachidonsäure ↓ → **Prostaglandine ↓, Leukotriene ↓** → Entzündung ↓\n- Lymphozyten ↓, Zytokine ↓\n\n**Knochen:**\n- **Osteoblasten ↓** → Knochenaufbau ↓ → **Osteoporose-Risiko ↑** (bei chronischer Therapie)\n\n**Klinisch (Cushing-Syndrom):** Stammfettsucht, Vollmondgesicht, Striae, Hyperglykämie, Osteoporose, Immunsuppression.\n\n**Falsch (A):** Cortisol **steigert** die Glukoneogenese (nicht hemmt) und **erhöht** den Blutzucker (diabetogene Wirkung).\n\n**Falsch (C):** Cortisol ist ein **Glukokortikoid** und wird in der **Nebennierenrinde (Zona fasciculata)** aus Cholesterin synthetisiert, **nicht** im Mark. **Adrenalin** (nicht Cortisol) wird im Nebennierenmark durch PNMT aus Noradrenalin synthetisiert.\n\n**Falsch (D):** Bei chronischer Cortisol-Substitution (exogen) → **CRH ↓, ACTH ↓** (negative Rückkopplung intakt). Langfristig kann dies zur **Nebennierenrinden-Atrophie** führen.\n\n**Falsch (E):** Cortisol ist **immunsuppressiv** und **antiinflammatorisch** (hemmt Prostaglandine, nicht fördert). Es wird therapeutisch bei Autoimmunerkrankungen, Allergien und Transplantationen eingesetzt.",
           difficulty: 2,
-          tags: [],
+          tags: ['cortisol', 'cushing-syndrom', 'kortikosteroide'],
         },
         {
           question: "Welche Aussage über die Regulation des Blutzuckerspiegels durch Insulin und Glukagon ist korrekt?",
@@ -1026,7 +1695,7 @@ Das endokrine System nutzt **negative Rückkopplung** zur Homöostase:
           correctIndex: 2,
           explanation: "**Richtig (C):** **Insulin** (β-Zellen, 65–80% der Langerhans-Inseln) senkt den Blutzucker durch:\n\n**1. Glukoseaufnahme ↑:**\n- **Skelettmuskel + Fettgewebe:** Insulin → **GLUT4-Translokation** zur Zellmembran → Glukoseaufnahme ↑\n- (Leber hat GLUT2, insulinunabhängig)\n\n**2. Glykogensynthese ↑:**\n- **Leber:** Insulin → **Glykogensynthase ↑** → Glukose → Glykogen (Speicherung)\n- Glukoneogenese ↓\n\n**3. Anabole Wirkungen:**\n- Fettgewebe: Lipogenese ↑, Lipolyse ↓\n- Muskel: Proteinsynthese ↑\n\n**Falsch (A):** Insulin wird von **β-Zellen** (nicht α-Zellen) freigesetzt. α-Zellen produzieren **Glukagon**. Insulin **hemmt** die Glykogenolyse (nicht fördert), Glukagon fördert sie.\n\n**Falsch (B):** **Glukagon** (nicht Insulin) wirkt hauptsächlich auf die **Leber** (nicht Muskel/Fett) und fördert **Glykogenolyse + Glukoneogenese** (nicht GLUT4-Translokation). Glukagon **erhöht** den Blutzucker.\n\n**Falsch (D):** Glukagon **erhöht** den Blutzucker (nicht senkt) durch:\n- **Glykogenolyse ↑** (Glykogenphosphorylase ↑)\n- **Glukoneogenese ↑** (PEPCK ↑, F-1,6-BP ↑)\n- Glykogensynthase wird **gehemmt** (nicht aktiviert).\n\n**Falsch (E):** Insulin-Freisetzung ist **ATP-abhängig**:\n1. Glukose ↑ → GLUT2 → β-Zelle\n2. Glykolyse → **ATP ↑**\n3. **ATP-sensitive K⁺-Kanäle schließen** → Depolarisation\n4. Ca²⁺-Kanäle öffnen → Ca²⁺ ↑ → Exozytose.",
           difficulty: 2,
-          tags: [],
+          tags: ['insulin', 'glukagon', 'blutzucker'],
         },
         {
           question: "Ein Patient mit Morbus Addison zeigt Hypotonie, Hyperpigmentierung und Hyponatriämie. Welche endokrine Störung liegt zugrunde, und welcher Regelkreis ist betroffen?",
@@ -1040,14 +1709,14 @@ Das endokrine System nutzt **negative Rückkopplung** zur Homöostase:
           correctIndex: 2,
           explanation: "**Richtig (C):** **Morbus Addison** = primäre Nebennierenrinden-Insuffizienz (Autoimmun-Zerstörung, Tuberkulose, Blutung)\n\n**Pathophysiologie:**\n- **Nebennierenrinde** zerstört → **Cortisol ↓, Aldosteron ↓**\n- Cortisol ↓ → **negative Rückkopplung fällt weg** → Hypothalamus/Hypophyse: **CRH ↑, ACTH ↑↑** (kompensatorisch)\n- **ACTH** hat strukturelle Ähnlichkeit mit **MSH** (Melanozyten-stimulierendes Hormon) → ACTH ↑↑ → **Melanozyten-Stimulation** → **Hyperpigmentierung** (v. a. Hautfalten, Narben, Schleimhäute)\n\n**Klinik:**\n- **Hypotonie:** Cortisol ↓ (Gefäßtonus ↓), Aldosteron ↓ (Volumen ↓)\n- **Hyponatriämie:** Aldosteron ↓ → Na⁺-Verlust\n- **Hyperkaliämie:** Aldosteron ↓ → K⁺-Retention\n- **Hypoglykämie:** Cortisol ↓ → Glukoneogenese ↓\n- **Hyperpigmentierung:** ACTH ↑↑ → MSH-Effekt\n\n**Falsch (A):** Bei primärer NNR-Insuffizienz ist **ACTH erhöht** (nicht erniedrigt), da die negative Rückkopplung wegfällt. ACTH ↓ wäre bei **sekundärer** Insuffizienz (Hypophysen-Störung).\n\n**Falsch (B):** Bei **sekundärer** NNR-Insuffizienz (Hypophysen-Tumor, -Nekrose) ist **ACTH ↓** (nicht ↑) → Cortisol ↓, aber Aldosteron meist **normal** (RAAS-reguliert). **Keine Hyperpigmentierung**, da ACTH ↓.\n\n**Falsch (D):** **Conn-Syndrom** (Aldosteron-produzierendes Adenom) → Aldosteron ↑ → **Hypernatriämie, Hypertonie** (nicht Hypotonie/Hyponatriämie), Hypokaliämie.\n\n**Falsch (E):** **Phäochromozytom** (Nebennierenmark-Tumor) → Adrenalin/Noradrenalin ↑↑ → **Hypertonie** (nicht Hypotonie), Tachykardie, Hyperglykämie (Glykogenolyse ↑).",
           difficulty: 3,
-          tags: [],
+          tags: ['addison', 'aldosteron', 'nebenniere'],
           hints: [
             "Denke an die Nebennierenrinde: Welche Hormone fehlen bei Morbus Addison und welche Rückkopplungsfolge hat das?",
             "Cortisol-Mangel hebt die negative Rückkopplung auf → ACTH steigt kompensatorisch → ACTH ähnelt strukturell MSH → Hyperpigmentierung entsteht."
           ],
         }
       ],
-      diagram: 'hormonsystem',
+      diagram: 'hormone-system',
 
       merksätze: [
         "**Hormonklassen & Rezeptoren:** Peptidhormone (Insulin, GH, ACTH) = hydrophil → Membranrezeptoren (Tyrosinkinase, G-Protein) → Second Messenger (cAMP, IP₃, Ca²⁺) → schnelle Wirkung (Minuten). Steroidhormone (Cortisol, Testosteron, Östrogen) + T₃/T₄ = lipophil → intrazelluläre Rezeptoren → Genexpression → langsame Wirkung (Stunden).",
@@ -1320,7 +1989,7 @@ Das Herz-Kreislauf-System besteht aus **2 in Serie geschalteten Kreisläufen:**
           correctIndex: 1,
           explanation: "**Richtig (B):** Der **linke Ventrikel (LV)** hat eine ~**10–15 mm dicke Wand** (ca. **3× dicker** als der rechte Ventrikel mit ~3–5 mm), da er gegen den **hohen Systemwiderstand** des großen Kreislaufs (~120 mmHg systolisch) pumpen muss. Der rechte Ventrikel pumpt nur gegen den niedrigen Pulmonalwiderstand (~25 mmHg).\n\n**Falsch (A):** Der **linke** Ventrikel (nicht rechte) hat die dickere Wand, da er gegen den Systemwiderstand arbeitet.\n\n**Falsch (C):** Die korrekte Reihenfolge von **innen nach außen** ist: **Endokard** (Endothel, glatte Oberfläche) → **Myokard** (Herzmuskulatur, Kontraktion) → **Epikard** (viszerales Blatt des Perikards, Gleitfläche).\n\n**Falsch (D):** Das **Endokard** (nicht Perikard) ist die innerste Schicht. Das **Perikard** ist der Herzbeutel (Epikard + parietales Blatt mit Perikardhöhle dazwischen).\n\n**Falsch (E):** Die Ventrikel pumpen gegen **unterschiedliche Widerstände**: LV gegen Systemwiderstand (~120 mmHg, hoher Druck), RV gegen Pulmonalwiderstand (~25 mmHg, niedriger Druck) → unterschiedliche Wanddicke.",
           difficulty: 1,
-          tags: [],
+          tags: ['herzanatomie', 'vorhöfe', 'ventrikel'],
         },
         {
           question: "Welche Aussage über die Herzklappen trifft zu?",
@@ -1334,7 +2003,7 @@ Das Herz-Kreislauf-System besteht aus **2 in Serie geschalteten Kreisläufen:**
           correctIndex: 2,
           explanation: "**Richtig (C):** Die **Mitralklappe** (Bikuspidalklappe) ist eine **AV-Klappe** (Atrioventrikularklappe) mit **2 Segeln**, die zwischen linkem Vorhof (LA) und linkem Ventrikel (LV) liegt. Sie besitzt **Sehnenfäden (Chordae tendineae)**, die an **Papillarmuskeln** befestigt sind und einen **Prolaps** (Umstülpung in den Vorhof) während der LV-Systole verhindern. Bei LV-Kontraktion schließt sich die Mitralklappe → verhindert Rückfluss in LA.\n\n**Falsch (A):** Die **Trikuspidalklappe** ist eine **AV-Klappe** (nicht Taschenklappe) mit **3 Segeln** (nicht Taschen) und liegt zwischen rechtem Vorhof und rechtem Ventrikel (nicht Pulmonalarterie). Die **Pulmonalklappe** (Taschenklappe) verhindert den Rückfluss aus der Pulmonalarterie.\n\n**Falsch (B):** **Aortenklappe** und **Pulmonalklappe** sind **Taschenklappen** (nicht AV-Klappen) und besitzen **keine Sehnenfäden**. Sie öffnen/schließen passiv durch Druckgradienten. **AV-Klappen** (Trikuspidal, Mitral) haben Sehnenfäden.\n\n**Falsch (D):** Die **Pulmonalklappe** öffnet sich **passiv** durch den Druckgradienten (RV-Druck > Pulmonalarterie-Druck) während der Systole. **Papillarmuskeln** sind nur bei AV-Klappen vorhanden (nicht bei Taschenklappen).\n\n**Falsch (E):** Nur die **AV-Klappen** (Trikuspidal, Mitral) besitzen Sehnenfäden. Die **Taschenklappen** (Pulmonal, Aorta) haben **keine** Sehnenfäden.",
           difficulty: 2,
-          tags: [],
+          tags: ['herzklappen', 'mitralklappe', 'aortenklappe'],
         },
         {
           question: "Welche Aussage über die Erregungsleitung im Herzen ist korrekt?",
@@ -1348,7 +2017,7 @@ Das Herz-Kreislauf-System besteht aus **2 in Serie geschalteten Kreisläufen:**
           correctIndex: 1,
           explanation: "**Richtig (B):** Die Erregungsleitung verläuft:\n\n1. **SA-Knoten** (Sinusknoten, rechter Vorhof) = **primärer Schrittmacher** mit Eigenfrequenz **60–80/min** → spontane Depolarisation\n2. Vorhöfe kontrahieren (P-Welle)\n3. **AV-Knoten** (atrioventrikulärer Knoten) = **Verzögerung ~100 ms** (einzige elektrische Verbindung zwischen Vorhöfen und Kammern), Eigenfrequenz 40–60/min (Backup)\n4. **His-Bündel** → **Tawara-Schenkel** (re/li) → **Purkinje-Fasern** (schnellste Leitung ~4 m/s) → Erregung von **Herzspitze → Basis** → synchrone Ventrikelkontraktion (QRS-Komplex)\n\nDie Verzögerung im AV-Knoten ermöglicht **vollständige Vorhof-Entleerung**, bevor die Kammern kontrahieren.\n\n**Falsch (A):** Der **SA-Knoten** (nicht AV-Knoten) ist der primäre Schrittmacher (60–80/min). Der AV-Knoten leitet nicht direkt zu Purkinje-Fasern, sondern über His-Bündel → Tawara-Schenkel.\n\n**Falsch (C):** Das Herz besitzt ein **autonomes Erregungssystem** (SA-/AV-Knoten, His, Tawara, Purkinje) und kann **ohne Nervenversorgung** schlagen (Autonomie). Das autonome Nervensystem (Sympathikus/Parasympathikus) **moduliert** nur die Frequenz, ist aber nicht essentiell.\n\n**Falsch (D):** Die **Tawara-Schenkel** leiten die Erregung **schnell** entlang des Septums zur Herzspitze (keine Verzögerung). Die **Verzögerung** erfolgt im **AV-Knoten**, um Vorhof-Entleerung vor Kammer-Kontraktion zu ermöglichen.\n\n**Falsch (E):** Bei **AV-Block III°** (kompletter Block) schlagen Vorhöfe (SA-Knoten, 60–80/min) und Kammern **unabhängig**. Die Kammern werden von einem **Ersatzrhythmus** (AV-Knoten ~40/min oder ventrikulär ~20–40/min) erregt → **Bradykardie**, Symptome (Schwindel, Synkope) → **Schrittmacher-Indikation**.",
           difficulty: 2,
-          tags: [],
+          tags: ['erregungsleitung', 'sinusknoten', 'av-knoten'],
         },
         {
           question: "Welche Aussage über den kleinen und großen Kreislauf ist korrekt?",
@@ -1362,7 +2031,7 @@ Das Herz-Kreislauf-System besteht aus **2 in Serie geschalteten Kreisläufen:**
           correctIndex: 1,
           explanation: "**Richtig (B):** Der **kleine Kreislauf** (Lungenkreislauf, Pulmonalkreislauf) dient dem **Gasaustausch**:\n\n**Verlauf:**\n- **Rechter Ventrikel** → **Truncus pulmonalis** → **Lungenarterien** (re/li, führen **O₂-armes Blut**!) → **Lungenkapillaren** (Gasaustausch in Alveolen: CO₂ ↓, O₂ ↑) → **Lungenvenen** (führen **O₂-reiches Blut**!) → **Linker Vorhof**\n\n⭐ **Wichtig:** \"Arterie\" = Gefäß vom Herzen **weg**, \"Vene\" = Gefäß zum Herzen **hin** (unabhängig von O₂-Gehalt!). **Lungenarterien** sind die einzigen Arterien mit **O₂-armem Blut**, **Lungenvenen** die einzigen Venen mit **O₂-reichem Blut**.\n\n**Druck:** ~25/10 mmHg (systolisch/diastolisch), niedriger Druck, da Lungenkapillaren dünnwandig (Diffusion).\n\n**Falsch (A):** **Umgekehrt!** Lungenarterien führen **O₂-armes** Blut (vom RV zur Lunge), Lungenvenen führen **O₂-reiches** Blut (von Lunge zum LA).\n\n**Falsch (C):** Der **große Kreislauf** beginnt im **linken Ventrikel** (nicht rechten). Der **rechte Ventrikel** pumpt in den kleinen Kreislauf. Verlauf: **LV** → Aorta → Körper → Venen → **RA**.\n\n**Falsch (D):** Die Kreisläufe sind **in Serie geschaltet** (nicht parallel). Blut fließt **zwingend** durch beide: RV → Lunge (klein) → LA → LV → Körper (groß) → RA → RV. Bei Parallelschaltung würde Blut entweder-oder fließen.\n\n**Falsch (E):** Der **große Kreislauf** hat einen **höheren Druck** (~120/80 mmHg) als der kleine Kreislauf (~25/10 mmHg), da der LV gegen hohen Systemwiderstand pumpt. Körpergefäße sind dickwandig (Aorta ~2 mm Wanddicke).",
           difficulty: 2,
-          tags: [],
+          tags: ['lungenkreislauf', 'körperkreislauf', 'blutdruck'],
         },
         {
           question: "Welche Aussage über Blutgefäße und ihre Funktionen ist korrekt?",
@@ -1376,7 +2045,7 @@ Das Herz-Kreislauf-System besteht aus **2 in Serie geschalteten Kreisläufen:**
           correctIndex: 1,
           explanation: "**Richtig (B):** Die **Windkesselfunktion der Aorta** nutzt die elastische Wand der Aorta:\n\n**Systole:**\n- Linker Ventrikel kontrahiert → Blut wird in Aorta gepumpt\n- Aorta **dehnt sich** (elastische Wand) → speichert Energie\n\n**Diastole:**\n- Aortenklappe schließt (Rückfluss verhindert)\n- Aorta zieht sich **elastisch zurück** → gespeicherte Energie wird freigesetzt\n- Blut wird **kontinuierlich** in die Peripherie gedrückt\n\n**Ergebnis:** Pulsatiler Fluss (intermittierend) aus dem Herzen wird in **kontinuierlichen Fluss** in der Peripherie umgewandelt.\n\n**Falsch (A):** **Kapillaren** (nicht Arteriolen) sind die Hauptorte des Stoffaustauschs. Kapillaren haben eine **einschichtige Endothelwand + Basalmembran** (Ø ~5–10 µm, dünnwandig, hohe Oberfläche ~600 m²). **Arteriolen** sind **Widerstandsgefäße** (glatte Muskulatur, regulieren peripheren Widerstand, Sympathikus α₁ → Vasokonstriktion).\n\n**Falsch (C):** Venen haben **dünnere Wände** als Arterien (Niederdrucksystem) und transportieren **überwiegend O₂-armes Blut** zum Herzen (Ausnahme: Lungenvenen → O₂-reich). Venen sind **Kapazitätsgefäße** (~70% des Blutvolumens).\n\n**Falsch (D):** Kapillaren haben nur **eine Schicht** (Endothel + Basalmembran), **keine** Media oder Adventitia. Die 3 Schichten (Intima, Media, Adventitia) sind typisch für **Arterien** und **Venen**.\n\n**Falsch (E):** Venenklappen sind besonders wichtig in **Beinvenen** (nicht Armen), da sie gegen die Schwerkraft arbeiten. Klappen öffnen/schließen **passiv** durch Druckunterschiede (nicht aktiv). Die **Muskel-Venen-Pumpe** (Skelettmuskel-Kontraktion komprimiert Venen → Blut nach oben, Klappen verhindern Rückfluss) unterstützt den venösen Rückfluss.",
           difficulty: 2,
-          tags: [],
+          tags: ['arterien', 'venen', 'kapillaren'],
         },
         {
           question: "Ein Patient mit akuter Hypotonie aktiviert den Barorezeptor-Reflex. Welche physiologische Reaktion folgt?",
@@ -1390,14 +2059,14 @@ Das Herz-Kreislauf-System besteht aus **2 in Serie geschalteten Kreisläufen:**
           correctIndex: 1,
           explanation: "**Richtig (B):** **Barorezeptor-Reflex** (wichtigster kurzfristiger Mechanismus, Sekunden–Minuten):\n\n**Bei Hypotonie (Blutdruck ↓):**\n1. **Barorezeptoren** (Dehnungsrezeptoren in Aortenbogen und Karotis-Sinus) werden **weniger gedehnt** → **weniger Signale** an Medulla oblongata\n2. **Sympathikus ↑** (Aktivierung):\n   - **Herz:** Noradrenalin → **β₁-Rezeptoren** → **Herzfrequenz ↑, Kontraktilität ↑** → HZV ↑\n   - **Gefäße:** Noradrenalin → **α₁-Rezeptoren** → **Vasokonstriktion** → TPR ↑\n3. **Parasympathikus ↓** (Hemmung) → Vagus-Tonus ↓ → HF ↑\n4. **Ergebnis:** Blutdruck ↑ (MAP = HZV × TPR)\n\n**Bei Hypertonie (Blutdruck ↑):** Umgekehrt → Barorezeptoren ↑ → **Parasympathikus ↑** (Vagus → M2-Rezeptor → HF ↓), **Sympathikus ↓** → Blutdruck ↓.\n\n**Falsch (A):** Bei Blutdruck ↓ senden Barorezeptoren **weniger** Signale (nicht mehr), und der **Sympathikus** (nicht Parasympathikus) wird aktiviert → HF ↑ (nicht ↓).\n\n**Falsch (C):** **RAAS** ist ein **langfristiger** Mechanismus (Stunden–Tage), nicht sofort. Angiotensin II führt zu **Vasokonstriktion** (nicht Vasodilatation) und Aldosteron ↑ (Na⁺-Retention → Volumen ↑).\n\n**Falsch (D):** **ANP** wird bei **Volumenüberlastung** (Vorhof-Dehnung ↑) freigesetzt und führt zu **Natrium-Ausscheidung** (nicht Retention) → Blutdruck ↓ (nicht ↑). Bei Hypotonie würde ANP ↓.\n\n**Falsch (E):** **Barorezeptoren** messen **Druck/Dehnung** (nicht O₂-Gehalt). **Chemorezeptoren** (Aortenbogen, Karotis-Körper) messen O₂ ↓, CO₂ ↑, pH ↓ → Sympathikus ↑.",
           difficulty: 3,
-          tags: [],
+          tags: ['barorezeptor', 'hypotonie', 'herzfrequenz'],
           hints: [
             "Denke: Barorezeptoren reagieren auf Dehnung. Bei Hypotonie → weniger Dehnung → weniger Signal → was wird aktiviert?",
             "Weniger Barorezeptor-Signal → Hemmung des Parasympathikus fällt weg + Sympathikus wird aktiviert → Herzfrequenz ↑, Vasokonstriktion ↑ → Blutdruck steigt."
           ],
         }
       ],
-      diagram: 'blutkreislauf',
+      diagram: 'blood-circulation',
 
       merksätze: [
         "**Herzaufbau:** 4 Kammern (RA, RV, LA, LV), 3 Wandschichten (Endokard, Myokard, Epikard). LV-Wand ~10–15 mm (3× dicker als RV ~3–5 mm) → Systemwiderstand (~120 mmHg). Perikard = Herzbeutel (Perikardhöhle, ~50 mL Flüssigkeit). Koronararterien versorgen Herzmuskel (LCA: R. interventricularis anterior/RIVA, R. circumflexus; RCA: R. nodi sinuatrialis, R. interventricularis posterior).",
@@ -1670,7 +2339,7 @@ Blut besteht aus **Plasma** (flüssiger Anteil, ~55%) und **Blutzellen** (zellul
           correctIndex: 1,
           explanation: "**Richtig (B):** Der **Hämatokrit (Hkt)** ist der **Volumenanteil der Erythrozyten** (nicht aller Blutzellen) am Gesamtblutvolumen:\n- **Männer:** ~45% (höher wegen Testosteron → Erythropoese ↑)\n- **Frauen:** ~42% (niedriger wegen Menstruation, weniger Testosteron)\n\n**Serum vs. Plasma:**\n- **Plasma:** Flüssiger Anteil des Blutes **mit Fibrinogen** (Gerinnungsfaktor I). Gewinnung: Blut + Antikoagulans (z. B. Heparin, EDTA) → Zentrifugation.\n- **Serum:** Plasma **ohne Fibrinogen** (und andere Gerinnungsfaktoren). Gewinnung: Blut gerinnen lassen → Zentrifugation → Überstand = Serum.\n\n**Falsch (A):** Hämatokrit misst nur **Erythrozyten**, nicht Leukozyten oder Thrombozyten (diese machen <1% des Volumens aus).\n\n**Falsch (C):** **Umgekehrt!** **Plasma** enthält Fibrinogen, **Serum** nicht (da Fibrinogen → Fibrin bei Gerinnung).\n\n**Falsch (D):** Albumin macht ~60% (nicht 90%) der Plasmaproteine aus. Funktion: **Onkotischer Druck** (hält Wasser im Gefäß), Transport (Hormone, Fettsäuren, Bilirubin). **Immunabwehr** ist Aufgabe der **Globuline** (Antikörper, Immunglobuline).\n\n**Falsch (E):** Hkt ↑ (>50%) deutet auf **Polyglobulie** (zu viele Erythrozyten) oder Dehydratation hin, **nicht** auf Anämie. **Anämie** = Hkt ↓, Hb ↓ (zu wenige Erythrozyten).",
           difficulty: 1,
-          tags: [],
+          tags: ['blutbestandteile', 'hämatokrit', 'erythrozyten'],
         },
         {
           question: "Welche Aussage über Hämoglobin und den Sauerstofftransport trifft zu?",
@@ -1684,7 +2353,7 @@ Blut besteht aus **Plasma** (flüssiger Anteil, ~55%) und **Blutzellen** (zellul
           correctIndex: 1,
           explanation: "**Richtig (B):** Der **Bohr-Effekt** beschreibt, wie metabolische Parameter die O₂-Affinität von Hämoglobin beeinflussen:\n\n**Rechtverschiebung der O₂-Bindungskurve** (O₂-Affinität ↓, O₂-Abgabe ↑):\n- **CO₂ ↑** (metabolisch aktives Gewebe produziert CO₂)\n- **pH ↓** (Azidose, H⁺ ↑)\n- **Temperatur ↑** (erhöhter Stoffwechsel, Muskelarbeit)\n- **2,3-BPG ↑** (bei chronischer Hypoxie, Höhenanpassung)\n\n**Physiologische Bedeutung:** In metabolisch aktivem Gewebe (Muskel, Hirn) wird mehr O₂ benötigt → lokale Bedingungen (CO₂ ↑, pH ↓, Temp ↑) → O₂-Abgabe ↑.\n\n**Falsch (A):** Hämoglobin ist ein **Tetramer** (nicht Monomer) mit **4 Untereinheiten** (2α, 2β), jede mit **einer Häm-Gruppe** (insgesamt 4 Häm-Gruppen). Eisen muss in der **Fe²⁺-Form** sein (nicht Fe³⁺), um O₂ zu binden. Fe³⁺ = Methämoglobin (kann kein O₂ binden).\n\n**Falsch (C):** Biliverdin entsteht aus Häm-Abbau (in Milz/Leber) → **Bilirubin** (gelb) → Leber (Konjugation) → Galle → Darm → **Sterkobilin** (Stuhlfarbe braun). Ein Teil wird zu **Urobilin** umgewandelt → Niere → **Urinfarbe gelb**. Biliverdin selbst wird **nicht** direkt ausgeschieden.\n\n**Falsch (D):** 2,3-BPG verschiebt die Kurve nach **rechts** (nicht links) → O₂-Affinität ↓ → **O₂-Abgabe ↑**. Linksverschiebung würde O₂-Affinität ↑ bedeuten (z. B. fetales Hb, CO-Vergiftung).\n\n**Falsch (E):** Erythrozyten haben eine Lebensdauer von **~120 Tagen** (nicht 30) und werden hauptsächlich in der **Milz** (nicht Leber) abgebaut (Retikuloendotheliales System, RES).",
           difficulty: 2,
-          tags: [],
+          tags: ['hämoglobin', 'sauerstofftransport', 'sauerstoffbindungskurve'],
         },
         {
           question: "Welche Aussage über Leukozyten ist korrekt?",
@@ -1698,7 +2367,7 @@ Blut besteht aus **Plasma** (flüssiger Anteil, ~55%) und **Blutzellen** (zellul
           correctIndex: 2,
           explanation: "**Richtig (C):** **Neutrophile Granulozyten** sind die häufigsten Leukozyten:\n\n**Anteil:** 50–70% der Leukozyten\n\n**Morphologie:**\n- **Segmentkernig** (3–5 Segmente)\n- **Granula** enthalten lysosomale Enzyme (Proteasen, Elastase) und **Myeloperoxidase** (MPO)\n\n**Funktion:**\n- **Phagozytose** von Bakterien (erste Verteidigungslinie bei akuten bakteriellen Infektionen)\n- **Respiratory Burst:** NADPH-Oxidase → O₂⁻, H₂O₂ (mit MPO → HOCl, stark bakterizid)\n\n**Klinisch:**\n- **Neutropenie** (<1.500/µL) → erhöhtes Infektionsrisiko (Chemotherapie, aplastische Anämie)\n- **Neutrophilie** → bakterielle Infektion, Entzündung\n\n**Falsch (A):** **Lymphozyten** (nicht Neutrophile) machen 20–40% aus und produzieren Antikörper (B-Zellen). Neutrophile machen 50–70% aus und sind Phagozyten.\n\n**Falsch (B):** **Lymphozyten** machen 20–40% (nicht 50–70%) aus. **Neutrophile** (50–70%) sind die erste Verteidigungslinie bei bakteriellen Infektionen durch Phagozytose. Lymphozyten sind für **adaptive Immunität** zuständig (T-Zellen: zellulär, B-Zellen: Antikörper).\n\n**Falsch (D):** **Eosinophile** sind wichtig bei **Parasiten-Abwehr** und **allergischen Reaktionen** (nicht viralen Infektionen) und machen nur **1–5%** (nicht >10%) der Leukozyten aus.\n\n**Falsch (E):** **Linksverschiebung** bedeutet Anstieg **unreifer** Neutrophiler (**Stabkernige**, Metamyelozyten) → deutet auf **akute** (nicht chronische) bakterielle Infektion hin. Rechtsverschiebung = reife segmentkernige Neutrophile ↑.",
           difficulty: 2,
-          tags: [],
+          tags: ['leukozyten', 'granulozyten', 'lymphozyten'],
         },
         {
           question: "Welche Aussage über die Blutgerinnung (Hämostase) ist korrekt?",
@@ -1712,7 +2381,7 @@ Blut besteht aus **Plasma** (flüssiger Anteil, ~55%) und **Blutzellen** (zellul
           correctIndex: 1,
           explanation: "**Richtig (B):** Der **von-Willebrand-Faktor (vWF)** ist essentiell für die **primäre Hämostase**:\n\n**Funktion:**\n1. **Thrombozytenadhäsion:** Bei Gefäßverletzung wird Kollagen (Subendothel) freigelegt → vWF bindet an Kollagen **und** an Thrombozyten (GPIb-Rezeptor) → Brückenmolekül → Adhäsion\n2. **Stabilisierung von Faktor VIII:** vWF schützt Faktor VIII vor Abbau\n\n**Von-Willebrand-Syndrom (vWS):**\n- **Häufigste hereditäre Blutungsstörung** (~1% der Bevölkerung)\n- vWF ↓ oder dysfunktional → Thrombozytenadhäsion ↓, Faktor VIII ↓\n- **Symptome:** Schleimhautblutungen (Epistaxis, Menorrhagie), verlängerte Blutungszeit\n\n**Falsch (A):** Die **primäre Hämostase** erfolgt durch **Thrombozyten** (Adhäsion → Aktivierung → Aggregation → Thrombozyten-Pfropf). Die **sekundäre Hämostase** ist die Gerinnungskaskade (Fibrinogen → Fibrin).\n\n**Falsch (C):** Vitamin K ist Kofaktor für die Synthese der Faktoren **II, VII, IX, X** (nicht I, V, VIII, XII). Merkhilfe: \"1972\" → II, VII, IX, X. Diese werden in der **Leber** synthetisiert. Vitamin-K-Mangel oder Antagonisten (Marcumar) → Faktoren ↓ → Blutungsneigung.\n\n**Falsch (D):** Der **extrinsische Weg** beginnt mit **Tissue Factor (TF) + Faktor VII** (nicht XII) und ist **schnell** (Sekunden). Der **intrinsische Weg** beginnt mit **Faktor XII** und ist **langsam** (Minuten).\n\n**Falsch (E):** **Hämophilie A** ist durch Mangel an **Faktor VIII** (nicht IX) gekennzeichnet. **Hämophilie B** = Faktor IX-Mangel. Beide stören den **intrinsischen Weg** (nicht extrinsischen). Beide sind X-chromosomal rezessiv.",
           difficulty: 2,
-          tags: [],
+          tags: ['blutgerinnung', 'thrombozyten', 'hämostase'],
         },
         {
           question: "Welche Aussage über das AB0-Blutgruppensystem ist korrekt?",
@@ -1726,7 +2395,7 @@ Blut besteht aus **Plasma** (flüssiger Anteil, ~55%) und **Blutzellen** (zellul
           correctIndex: 2,
           explanation: "**Richtig (C):** Das AB0-System basiert auf **Antigenen** (auf Erythrozyten) und **Antikörpern** (im Plasma):\n\n| Blutgruppe | Antigene | Antikörper | Transfusion möglich von |\n|------------|----------|------------|------------------------|\n| **A** | A | Anti-B | A, 0 |\n| **B** | B | Anti-A | B, 0 |\n| **AB** | A + B | Keine | A, B, AB, 0 (**Universalempfänger**) |\n| **0** | Keine | Anti-A + Anti-B | nur 0 (aber **Universalspender**) |\n\n⭐ **Wichtig:**\n- **AB** hat **keine Antikörper** → kann alle Blutgruppen empfangen (Universalempfänger)\n- **0** hat **keine Antigene** → kann an alle Blutgruppen gespendet werden (Universalspender)\n\n**Falsch (A):** Blutgruppe A hat **Antigen A** (nicht B) auf Erythrozyten und **Anti-B** (nicht Anti-A) im Plasma. (A gegen B, B gegen A).\n\n**Falsch (B):** Blutgruppe **AB** (nicht 0) ist der Universalempfänger (keine Antikörper). Blutgruppe 0 hat **Anti-A + Anti-B** im Plasma und ist der **Universalspender** (keine Antigene auf Erythrozyten).\n\n**Falsch (D):** AB0-Antikörper sind **natürlich vorhanden** (ohne vorherige Sensibilisierung) ab dem 6. Lebensmonat. Grund: Kreuzreaktivität mit ähnlichen Antigenen auf Bakterien (intestinale Flora). Im Gegensatz dazu entstehen **Rhesus-Antikörper** erst nach Sensibilisierung.\n\n**Falsch (E):** Bei inkompatiblen Transfusionen (z. B. B-Blut an A-Empfänger → Anti-B bindet B-Antigene) kommt es zu einer **akuten hämolytischen Transfusionsreaktion**:\n- Hämolyse (intravaskulär, IgM-vermittelt)\n- **Symptome:** Fieber, Schüttelfrost, Rückenschmerzen, Dyspnoe, Hypotonie, Schock\n- **Komplikationen:** Nierenversagen (Hb-Zylinder), DIC (Disseminierte intravasale Gerinnung)\n- **Notfall!**",
           difficulty: 2,
-          tags: [],
+          tags: ['ab0-system', 'blutgruppen', 'antigene'],
         },
         {
           question: "Eine Rh-negative Mutter bringt ein Rh-positives Kind zur Welt. Welche Aussage über die Rhesus-Inkompatibilität und ihre Folgen ist korrekt?",
@@ -1740,14 +2409,14 @@ Blut besteht aus **Plasma** (flüssiger Anteil, ~55%) und **Blutzellen** (zellul
           correctIndex: 1,
           explanation: "**Richtig (B):** **Rhesus-Inkompatibilität** (Rh− Mutter + Rh+ Fetus):\n\n**1. Schwangerschaft:**\n- Bei Geburt (oder Abort, Amniozentese) → fetale Erythrozyten (Rh+) gelangen ins mütterliche Blut\n- Mutter (Rh−) wird **sensibilisiert** → bildet **Anti-D-Antikörper** (IgG, dauerhaft)\n- **Erstes Kind ist in der Regel NICHT betroffen**, da Sensibilisierung erst bei/nach Geburt erfolgt\n\n**2. Schwangerschaft (und folgende):**\n- Fetus Rh+ → mütterliche **Anti-D (IgG)** passieren Plazenta (IgG ist plazentagängig!)\n- Anti-D bindet fetale Erythrozyten (Rh+) → **Hämolyse**\n- **Morbus haemolyticus neonatorum:**\n  - Anämie (Erythrozyten-Abbau)\n  - Ikterus (Bilirubin ↑ → Kernikterus-Risiko)\n  - Hydrops fetalis (schwere Form: Herzinsuffizienz, Ödeme, intrauteriner Fruchttod)\n\n**Prophylaxe:** Anti-D-Immunglobulin (Rhesogam) bei Rh− Mutter **nach Geburt** eines Rh+ Kindes → bindet fetale Erythrozyten → verhindert mütterliche Sensibilisierung.\n\n**Falsch (A):** Das **erste Kind** ist in der Regel **nicht betroffen**, da die Sensibilisierung erst bei/nach der Geburt erfolgt. **Zweite (und folgende) Schwangerschaften** sind gefährdet.\n\n**Falsch (C):** Rhesus-Antikörper (Anti-D) sind **NICHT natürlich** vorhanden, sondern entstehen erst nach **Sensibilisierung** (Transfusion, Schwangerschaft). Im Gegensatz zu AB0-Antikörpern (IgM, natürlich vorhanden).\n\n**Falsch (D):** Anti-D-Prophylaxe wird **nach der Geburt** (innerhalb 72 Stunden) gegeben, nicht vor. Zusätzlich kann sie bei Risikosituationen während der Schwangerschaft gegeben werden (Amniozentese, Trauma, Abort). Wichtig: **nach Geburt** des ersten Rh+ Kindes, um Sensibilisierung für zukünftige Schwangerschaften zu verhindern.\n\n**Falsch (E):** Morbus haemolyticus neonatorum tritt typischerweise bei **Rhesus-Inkompatibilität** auf (zweite Schwangerschaft). AB0-Inkompatibilität kann auch zu Hämolyse führen, ist aber meist milder (da AB0-Antikörper [IgM] weniger plazentagängig sind, nur IgG passiert gut).",
           difficulty: 3,
-          tags: [],
+          tags: ['rhesus-inkompatibilität', 'rh-faktor', 'morbus haemolyticus'],
           hints: [
             "Denke: Anti-D ist ein IgG-Antikörper. Welche Eigenschaft von IgG ist für die Plazenta-Passage wichtig?",
             "IgG ist der einzige Antikörper, der die Plazentaschranke überqueren kann → mütterliche IgG-Antikörper können den Fetus schädigen, erst ab der 2. Schwangerschaft relevant."
           ],
         }
       ],
-      diagram: 'blutbestandteile',
+      diagram: 'blood-components',
 
       merksätze: [
         "**Hämatopoese:** Alle Blutzellen entstammen der pluripotenten hämatopoetischen Stammzelle (Knochenmark). Myeloische Linie: Erythrozyten, Thrombozyten, Granulozyten (Neutrophile, Eosinophile, Basophile), Monozyten/Makrophagen. Lymphoide Linie: T-Zellen (Thymus), B-Zellen (Knochenmark), NK-Zellen. EPO (Niere) → Erythropoese ↑. G-CSF → Neutrophilen-Produktion ↑.",
@@ -2047,7 +2716,7 @@ Die **erworbene Immunität** entwickelt sich nach Erstkontakt mit einem Antigen 
           correctIndex: 0,
           explanation: "**Richtig (A):** Die beiden Immunsysteme unterscheiden sich fundamental:\n\n**Angeborene (unspezifische) Immunität:**\n- **Reaktionszeit:** Sofort (~Minuten bis Stunden)\n- **Spezifität:** Unspezifisch (erkennt allgemeine Pathogen-Muster, PAMPs)\n- **Gedächtnis:** **KEIN** Gedächtnis (gleiche Reaktion bei erneutem Kontakt)\n- **Komponenten:** Physikalische Barrieren (Haut, Schleimhäute), Phagozyten (Neutrophile, Makrophagen), NK-Zellen, Komplementsystem, Interferone\n\n**Erworbene (adaptive, spezifische) Immunität:**\n- **Reaktionszeit:** Langsam (~Tage, klonale Expansion benötigt Zeit)\n- **Spezifität:** Hochspezifisch (erkennt spezifische Antigene über TCR/BCR)\n- **Gedächtnis:** **Gedächtnisbildung** (Gedächtnis-T/B-Zellen → schnellere, stärkere Sekundärantwort)\n- **Komponenten:** B-Zellen (Antikörper, humoral), T-Zellen (CD4⁺, CD8⁺, zellulär)\n\n**Falsch (B):** Physikalische Barrieren (Haut, Schleimhäute) gehören zur **angeborenen** Immunität. Antikörper (B-Zellen) und T-Zellen gehören zur **erworbenen** Immunität.\n\n**Falsch (C):** Die **angeborene** Immunität bildet **kein Gedächtnis**. Nur die **erworbene** Immunität bildet Gedächtniszellen (B- und T-Gedächtniszellen) → schnellere Sekundärantwort.\n\n**Falsch (D):** **Umgekehrt!** B- und T-Zellen sind Teil der **erworbenen** Immunität. Makrophagen und Neutrophile (Phagozyten) sind Teil der **angeborenen** Immunität.\n\n**Falsch (E):** Die **erworbene** Immunität kann sehr wohl zwischen \"selbst\" und \"fremd\" unterscheiden (Selbsttoleranz durch zentrale [Thymus, Knochenmark] und periphere Toleranz [Treg]). Autoimmunerkrankungen entstehen, wenn diese Selbsttoleranz versagt.",
           difficulty: 1,
-          tags: [],
+          tags: ['angeborene immunität', 'erworbene immunität', 'immunabwehr'],
         },
         {
           question: "Welche Aussage über NK-Zellen (Natural Killer) und das Komplementsystem ist korrekt?",
@@ -2061,7 +2730,7 @@ Die **erworbene Immunität** entwickelt sich nach Erstkontakt mit einem Antigen 
           correctIndex: 1,
           explanation: "**Richtig (B):** **NK-Zellen** (Natural Killer) sind Teil der **angeborenen Immunität** und töten Zielzellen ohne vorherige Sensibilisierung:\n\n**Erkennungsmechanismus (\"Missing Self\"):**\n- **Gesunde Zellen:** Exprimieren **MHC-I** → NK-Zellen erkennen \"Selbst\" → **keine Lyse**\n- **Virusinfizierte Zellen/Tumorzellen:** Unterdrücken oft MHC-I (Immunevasion) → NK-Zellen erkennen **fehlendes MHC-I** → **Aktivierung** → Lyse\n\n**Mechanismus:**\n- **Perforin:** Bildet Poren in Zielzell-Membran\n- **Granzyme:** Proteasen → diffundieren durch Poren → aktivieren Caspasen → **Apoptose**\n\n**Funktion:** Schutz vor Viren (v. a. Herpesviren, CMV), Tumor-Surveillance\n\n**Falsch (A):** **Umgekehrt!** NK-Zellen töten Zellen **ohne MHC-I** (\"Missing Self\") und verschonen Zellen **mit MHC-I**.\n\n**Falsch (C):** Die Funktionen sind **vertauscht**:\n- **C3b:** **Opsonierung** (markiert Pathogene → Phagozytose ↑)\n- **C5a:** **Chemotaxis** (lockt Neutrophile/Makrophagen an)\n- **C5b-C9 (MAC):** **Lyse** (Membran-Angriffs-Komplex → Zellmembran-Perforation → Bakterien-Lyse)\n\n**Falsch (D):** Der **MAC** besteht aus **C5b-C9** (nicht C1-C3) und führt zur **Lyse** (nicht Phagozytose). C3b führt zur Opsonierung → Phagozytose.\n\n**Falsch (E):** NK-Zellen sind Teil der **angeborenen** Immunität (nicht erworbenen) und benötigen **keine vorherige Sensibilisierung** (reagieren sofort).",
           difficulty: 2,
-          tags: [],
+          tags: ['nk-zellen', 'komplementsystem', 'immunabwehr'],
         },
         {
           question: "Welche Aussage über Antikörper (Immunglobuline) ist korrekt?",
@@ -2075,7 +2744,7 @@ Die **erworbene Immunität** entwickelt sich nach Erstkontakt mit einem Antigen 
           correctIndex: 1,
           explanation: "**Richtig (B):** **IgM** und **IgG** unterscheiden sich in Struktur, Zeitpunkt und Funktion:\n\n**IgM:**\n- **Struktur:** **Pentamer** (5 Monomere, größter Antikörper)\n- **Zeitpunkt:** **Primärantwort** (erste Infektion, akute Phase)\n- **Funktion:** Starke **Komplement-Aktivierung** (10 Bindungsstellen), Agglutination\n- **Diagnostik:** IgM ↑ → **akute Infektion**\n\n**IgG:**\n- **Struktur:** Monomer\n- **Zeitpunkt:** **Sekundärantwort** (nach IgM, Gedächtnis)\n- **Halbwertszeit:** ~21 Tage (**längste** unter allen Ig)\n- **Funktion:** Opsonierung, Komplement-Aktivierung, Neutralisation, **plazentagängig** (einziger Antikörper!) → **Nestschutz**\n- **Diagnostik:** IgG ↑ → abgelaufene Infektion, Impfung, Immunität\n\n**Falsch (A):** **IgM** (nicht IgG) ist der erste Antikörper bei Primärinfektion. IgG hat eine **lange** Halbwertszeit (~21 Tage, nicht 3 Tage).\n\n**Falsch (C):** **IgA** wird hauptsächlich in **Sekreten** gefunden (Speichel, Tränen, Muttermilch, Darm) als **Dimer** (nicht im Serum). Funktion: **Schleimhautschutz**, Neutralisation (nicht Opsonierung). **IgG** ist für Opsonierung verantwortlich.\n\n**Falsch (D):** **IgG** (nicht IgE) macht ~75% der Serum-Immunglobuline aus. **IgE** macht <1% aus und ist für **Allergie** (Typ-I-Hypersensitivität) und Parasiten-Abwehr zuständig (bindet an Mastzellen/Basophile).\n\n**Falsch (E):** Nur **IgG** kann die Plazenta passieren. IgM, IgA, IgE, IgD können **nicht** die Plazenta passieren. Nestschutz erfolgt durch mütterliches IgG (transplazentar) und IgA (Muttermilch, oral).",
           difficulty: 2,
-          tags: [],
+          tags: ['antikörper', 'immunglobuline', 'igg'],
         },
         {
           question: "Welche Aussage über T-Zellen und MHC-Moleküle ist korrekt?",
@@ -2089,7 +2758,7 @@ Die **erworbene Immunität** entwickelt sich nach Erstkontakt mit einem Antigen 
           correctIndex: 2,
           explanation: "**Richtig (C):** Die **MHC-Präsentation** ist zentral für die T-Zell-Aktivierung:\n\n**MHC-I:**\n- **Exprimiert auf:** **Alle kernhaltigen Zellen** (nicht nur APCs!)\n- **Präsentiert:** **Intrazelluläre Antigene** (Viren, Tumorantigene, eigene Proteine)\n- **Erkannt von:** **CD8⁺ T-Zellen** (zytotoxische T-Zellen, CTL)\n- **Folge:** CD8⁺ töten infizierte/Tumor-Zellen durch Perforin/Granzyme → Apoptose\n\n**MHC-II:**\n- **Exprimiert auf:** **Nur APCs** (Dendritische Zellen, Makrophagen, B-Zellen)\n- **Präsentiert:** **Extrazelluläre Antigene** (Bakterien, Parasiten, phagozytiert)\n- **Erkannt von:** **CD4⁺ T-Zellen** (T-Helfer-Zellen, Th)\n- **Folge:** CD4⁺ koordinieren Immunantwort (Th1 → Makrophagen-Aktivierung, Th2 → B-Zell-Aktivierung)\n\n⭐ **Merkhilfe:** MHC **I** → CD**8**⁺ (intrazellulär, Viren), MHC **II** → CD**4**⁺ (extrazellulär, Bakterien).\n\n**Falsch (A):** MHC-I wird auf **allen kernhaltigen Zellen** (nicht nur APCs) exprimiert und präsentiert **intrazelluläre** (nicht extrazelluläre) Antigene an CD8⁺.\n\n**Falsch (B):** **CD8⁺** (nicht CD4⁺) erkennen MHC-I und töten infizierte Zellen. **CD4⁺** erkennen **MHC-II** (nicht MHC-I) und **koordinieren** (töten nicht selbst).\n\n**Falsch (D):** **CD4⁺ T-Helfer-Zellen** (nicht CD8⁺) koordinieren durch Zytokine (Th1: IFN-γ, Th2: IL-4/IL-5). **CD8⁺** töten Zellen (Perforin/Granzyme).\n\n**Falsch (E):** **Treg** (regulatorische T-Zellen) **supprimieren** die Immunantwort (IL-10, TGF-β) und **verhindern** Autoimmunität (Selbsttoleranz). Sie **fördern keine** Autoimmunreaktionen.",
           difficulty: 2,
-          tags: [],
+          tags: ['t-zellen', 'mhc', 'zytotoxische t-zellen'],
         },
         {
           question: "Welche Aussage über Impfungen ist korrekt?",
@@ -2103,7 +2772,7 @@ Die **erworbene Immunität** entwickelt sich nach Erstkontakt mit einem Antigen 
           correctIndex: 2,
           explanation: "**Richtig (C):** **Aktive** und **passive** Immunisierung unterscheiden sich fundamental:\n\n**Aktive Immunisierung:**\n- **Prinzip:** **Antigen-Gabe** (attenuiert, inaktiviert, Toxoid, mRNA) → Immunsystem bildet **eigene Antikörper + Gedächtniszellen**\n- **Beispiele:**\n  - Lebendimpfstoff: Masern, Mumps, Röteln (MMR), Varizellen\n  - Totimpfstoff: Influenza, Polio (Salk), Hepatitis A\n  - Toxoid: Tetanus, Diphtherie\n  - mRNA: COVID-19\n- **Vorteile:** **Langfristiger Schutz** (Jahre–Jahrzehnte), **Gedächtnis**\n- **Nachteile:** **Langsamer Wirkeintritt** (Wochen), Kontraindikation bei Immunsuppression (Lebendimpfstoff!)\n\n**Passive Immunisierung:**\n- **Prinzip:** Gabe von **fertigen Antikörpern** (Immunglobuline, meist IgG)\n- **Beispiele:**\n  - Tetanus-Immunglobulin (nach Verletzung, kein Impfschutz)\n  - Hepatitis-B-Immunglobulin (Nadelstich)\n  - Anti-D-Immunglobulin (Rhesus-Prophylaxe)\n- **Vorteile:** **Sofortiger Schutz** (Stunden)\n- **Nachteile:** **Kurze Wirkdauer** (~3 Monate, Antikörper werden abgebaut), **kein Gedächtnis**\n\n**Falsch (A):** **Passive** Immunisierung (nicht aktive) verwendet fertige Antikörper. **Aktive** Immunisierung verwendet Antigene.\n\n**Falsch (B):** **Aktive** Immunisierung (nicht passive) verwendet Antigene. **Passive** Immunisierung verwendet fertige Antikörper.\n\n**Falsch (D):** **Lebendimpfstoffe** sind **kontraindiziert** bei Immunsuppression (z. B. HIV, Chemotherapie, Kortikosteroide), da attenuierte Erreger sich vermehren können → Infektion-Risiko. Bei Immunsupprimierten: **Totimpfstoffe** bevorzugt.\n\n**Falsch (E):** **Aktive** Immunisierung (nicht passive) ist die Methode für **langfristigen Schutz** und wird bei Kinderimpfungen eingesetzt (z. B. MMR, DTaP). Passive Immunisierung ist **kurzfristig** und nur für spezielle Situationen (Postexpositionsprophylaxe).",
           difficulty: 2,
-          tags: [],
+          tags: ['impfung', 'immunisierung', 'schutzimpfung'],
         },
         {
           question: "Ein Patient entwickelt nach einem Bienenstich eine Anaphylaxie mit Hypotonie, Bronchospasmus und Urtikaria. Welche Aussage über den zugrundeliegenden Mechanismus und die Therapie ist korrekt?",
@@ -2117,7 +2786,7 @@ Die **erworbene Immunität** entwickelt sich nach Erstkontakt mit einem Antigen 
           correctIndex: 1,
           explanation: "**Richtig (B):** **Anaphylaxie** ist eine **Typ-I-Hypersensitivitätsreaktion** (IgE-vermittelt):\n\n**Mechanismus:**\n\n**1. Sensibilisierung (Erstkontakt):**\n- Allergen (Bienengift, Erdnüsse, Penicillin) → Aufnahme durch APCs\n- **Th2-Zellen** aktiviert → IL-4 → B-Zellen → **IgE-Produktion**\n- **IgE** bindet an **Fc-Rezeptoren** auf Mastzellen/Basophilen (sensibilisiert, bereit zur Degranulation)\n\n**2. Re-Exposition (erneuter Kontakt):**\n- Allergen bindet IgE (Kreuzvernetzung) → **Mastzell-Degranulation**\n- **Sofortige Freisetzung:** **Histamin** (Vasodilatation, Bronchospasmus, erhöhte Gefäßpermeabilität)\n- **Späte Phase:** Leukotriene, Prostaglandine (Entzündung)\n\n**Klinische Manifestation:**\n- **Systemisch:** Hypotonie (Vasodilatation), Tachykardie, Schock\n- **Respiratorisch:** Bronchospasmus (Dyspnoe, Giemen), Larynxödem (Stridor)\n- **Kutan:** Urtikaria (Quaddeln), Angioödem, Flush\n- **Gastrointestinal:** Übelkeit, Erbrechen, Durchfall\n\n**Therapie (Notfall!):**\n1. **Adrenalin (Epinephrin) i.m.** (z. B. EpiPen®, 0,3–0,5 mg)\n   - **β₂-Rezeptoren:** Bronchodilatation\n   - **α₁-Rezeptoren:** Vasokonstriktion → Blutdruck ↑\n   - **β₁-Rezeptoren:** HF ↑, Kontraktilität ↑\n2. **Antihistaminika** (symptomatisch, nicht lebensrettend)\n3. **Glukokortikoide** (verhindern Spätphase)\n4. **O₂**, **Volumen** (i.v. Flüssigkeit)\n5. **β₂-Agonisten** (Salbutamol bei Bronchospasmus)\n\n**Falsch (A):** Die Reaktion wird durch **IgE** (nicht IgG) vermittelt. IgE bindet an Mastzellen → Histamin (nicht Interferone).\n\n**Falsch (C):** Anaphylaxie ist eine **Typ-I-Hypersensitivität** (sofort, IgE-vermittelt), **nicht Typ IV** (verzögert, T-Zell-vermittelt, z. B. Kontaktdermatitis, Tuberkulin-Test).\n\n**Falsch (D):** **Adrenalin i.m.** (nicht Antihistaminika) ist die **erste Wahl** bei Anaphylaxie (lebensrettend). Antihistaminika sind **symptomatisch** (Urtikaria, Juckreiz), aber nicht ausreichend bei schwerer Anaphylaxie.\n\n**Falsch (E):** **Hyposensibilisierung** (spezifische Immuntherapie) ist eine **Langzeit-Prophylaxe** (Monate–Jahre), **nicht** eine Akut-Therapie. Sie wird **zwischen** allergischen Reaktionen durchgeführt, um Toleranz aufzubauen (Allergen-Gabe in steigender Dosis → IgG ↑, Treg ↑, Th2 ↓).",
           difficulty: 3,
-          tags: [],
+          tags: ['anaphylaxie', 'ige', 'mastzellen'],
           hints: [
             "Welche Immunglobulin-Klasse aktiviert Mastzellen durch Fc-Rezeptor-Bindung?",
             "IgE bindet an Mastzellen → Sensibilisierung. Bei Re-Exposition: Allergen vernetzt IgE → Degranulation → Histamin. Therapie: Adrenalin i.m. (α₁: Vasokonstriktion, β₂: Bronchodilatation)."
@@ -2345,7 +3014,7 @@ Das **lymphatische System** ist ein Netzwerk aus **Lymphgefäßen** und **lympha
           correctIndex: 1,
           explanation: "**Richtig (B):** Das lymphatische System hat wichtige Funktionen:\n\n**Flüssigkeitsrücktransport:**\n- ~10% der Kapillarfiltrat-Flüssigkeit (~**2–4 L/Tag**) wird **nicht** von Kapillaren reabsorbiert (Starling-Kräfte)\n- Diese Flüssigkeit → **Lymphkapillaren** → **Lymphe** → **Ductus thoracicus** (größter Lymphstamm) → mündet in **linken Venenwinkel** (V. subclavia + V. jugularis interna) → zurück ins Blut\n- **Ductus lymphaticus dexter** (rechte obere Körperhälfte) → rechter Venenwinkel\n\nOhne Lymphsystem → Flüssigkeitsansammlung im Gewebe → **Ödem**.\n\n**Falsch (A):** Lymphe ist **proteinärmer** (nicht proteinreicher) als Plasma (~30–40 g/L vs. ~70 g/L im Plasma). Lymphe enthält hauptsächlich **Lymphozyten** (nicht Erythrozyten).\n\n**Falsch (C):** Lymphkapillaren haben **keine Basalmembran** (hohe Permeabilität, blind endend) und **keine Klappen** (Klappen sind erst in größeren Lymphkollektoren vorhanden). Stattdessen haben sie **überlappende Endothelzellen** (Einlassventile).\n\n**Falsch (D):** Lymphtransport erfolgt **nicht** durch Herzpumpfunktion (Lymphgefäße sind nicht direkt mit dem Herzen verbunden). Hauptmechanismen:\n1. **Muskel-Kontraktion** (Skelettmuskel-Pump-Mechanismus, wichtigster Faktor)\n2. Atmung (Thorax-Unterdruck)\n3. Arterielle Pulsation (unterstützend)\n4. Glatte Muskulatur (intrinsische Kontraktion)\n5. Klappen (Rückfluss-Schutz)\n\n**Falsch (E):** Lymphgefäße sind **nicht** in ZNS, Knochen und Knorpel vorhanden (avaskuläre/alymphatische Gewebe). Sie sind in den meisten anderen Geweben vorhanden.",
           difficulty: 1,
-          tags: [],
+          tags: ['lymphknoten', 'lymphsystem', 'lymphfluss'],
         },
         {
           question: "Welche Aussage über die Struktur und Funktion von Lymphknoten ist korrekt?",
@@ -2359,7 +3028,7 @@ Das **lymphatische System** ist ein Netzwerk aus **Lymphgefäßen** und **lympha
           correctIndex: 1,
           explanation: "**Richtig (B):** Lymphknoten haben eine charakteristische **zonale Architektur**:\n\n**Struktur:**\n\n1. **Rinde (Cortex):**\n   - **B-Zellen** in **Follikeln** (Primärfollikel: ruhend, Sekundärfollikel: Keimzentrum mit aktivierten B-Zellen, Plasmazellen)\n   - **Humorale Immunität** (Antikörper-Produktion)\n\n2. **Paracortex:**\n   - **T-Zellen** (CD4⁺, CD8⁺)\n   - **Dendritische Zellen** (APCs, Antigen-Präsentation)\n   - **Zelluläre Immunität** (T-Zell-Aktivierung)\n\n3. **Mark (Medulla):**\n   - **Plasmazellen** (Antikörper-Sekretion)\n   - **Makrophagen** (Phagozytose)\n   - Markstränge + Marksinus\n\n**Funktion:** Filtration der **Lymphe** (nicht Blut!), Antigen-Präsentation, Aktivierung von T-/B-Zellen, Antikörper-Produktion.\n\n**Falsch (A):** **Umgekehrt!** Lymphknoten haben **mehrere afferente Lymphgefäße** (Lymphe fließt **ein**) und **ein efferentes Lymphgefäß** (Lymphe fließt **aus**). Lymphe → afferent → Randsinus → Cortex/Paracortex → Marksinus → efferent.\n\n**Falsch (C):** Lymphknoten filtern **Lymphe** (nicht Blut). Die **Milz** (nicht Lymphknoten) filtert **Blut** und entfernt alte Erythrozyten in der **roten Pulpa**.\n\n**Falsch (D):** Der **Sentinel-Lymphknoten** ist der **erste** (nicht letzte) Lymphknoten im Abflussgebiet eines Tumors → wird bei Biopsie **untersucht** (nicht ignoriert) für Tumor-Staging (z. B. Mammakarzinom, Melanom). Metastasen im Sentinel-Lymphknoten → weitere Lymphknoten betroffen.\n\n**Falsch (E):** **Knochenmark** (nicht Lymphknoten) ist für Hämatopoese (Erythrozyten, Thrombozyten, Leukozyten) zuständig. Lymphknoten sind für **Immunabwehr** (Filtration, Antigen-Präsentation, Lymphozyten-Aktivierung) zuständig.",
           difficulty: 2,
-          tags: [],
+          tags: ['lymphknoten struktur', 'b-zellen', 't-zellen'],
         },
         {
           question: "Welche Aussage über die Milz (Splen) ist korrekt?",
@@ -2373,7 +3042,7 @@ Das **lymphatische System** ist ein Netzwerk aus **Lymphgefäßen** und **lympha
           correctIndex: 2,
           explanation: "**Richtig (C):** Die Milz hat zwei funktionelle Kompartimente:\n\n**Rote Pulpa (~80%):**\n- **Farbe:** Rot (viele Erythrozyten)\n- **Funktionen:**\n  1. **Erythrozyten-Abbau:** Alte/defekte Erythrozyten (~120 Tage) → Makrophagen → Hämolyse → Hb → Häm (Fe²⁺ recycelt) + Bilirubin (→ Leber)\n  2. **Thrombozytenspeicherung:** ~**30% aller Thrombozyten** gespeichert (bei Bedarf freigegeben)\n  3. **Blut-Reservoir:** ~40 mL Blut\n\n**Weiße Pulpa (~20%):**\n- **Farbe:** Weiß (Lymphozyten)\n- **Funktion:** **Immunabwehr** (Filtration des **Blutes**, nicht Lymphe!)\n  - Lymphfollikel (B-Zellen)\n  - PALS (periarteriolar lymphoid sheaths, T-Zellen)\n  - Antigen-Präsentation, Aktivierung von B-/T-Zellen\n\n**Falsch (A):** Die **rote Pulpa** (nicht weiße) macht ~80% aus und ist für Erythrozyten-Abbau verantwortlich. Die **weiße Pulpa** (~20%) ist für Immunabwehr zuständig.\n\n**Falsch (B):** Die Milz filtert **Blut** (nicht Lymphe). Lymphknoten filtern Lymphe. Die Milz ist das größte **lymphatische Organ** (korrekt), aber filtert eben Blut.\n\n**Falsch (D):** Nach Splenektomie ist das Risiko für **bakterielle** Infektionen (nicht virale) erhöht, insbesondere durch **bekapselte Bakterien** (Pneumokokken, Meningokokken, H. influenzae) → **OPSI** (Overwhelming Post-Splenectomy Infection). Prophylaxe: Impfung + Antibiotika (Penicillin).\n\n**Falsch (E):** **Howell-Jolly-Körperchen** (DNA-Reste in Erythrozyten) sind ein Zeichen für **Asplenie** (fehlende/dysfunktionale Milz), **nicht** überaktive Milz. Normalerweise entfernt die Milz diese Reste. Nach Splenektomie → Howell-Jolly-Körperchen sichtbar.",
           difficulty: 2,
-          tags: [],
+          tags: ['milz', 'rote pulpa', 'weiße pulpa'],
         },
         {
           question: "Welche Aussage über den Thymus ist korrekt?",
@@ -2387,7 +3056,7 @@ Das **lymphatische System** ist ein Netzwerk aus **Lymphgefäßen** und **lympha
           correctIndex: 1,
           explanation: "**Richtig (B):** Der **Thymus** ist das zentrale Organ der **T-Zell-Reifung** (zentrale Toleranz):\n\n**T-Zell-Reifung:**\n\n1. **Unreife Thymozyten** (Knochenmark) → Thymus-Rinde (Cortex)\n2. **Positive Selektion (Cortex):**\n   - Thymozyten, die **MHC I/II erkennen** können → **Überleben**\n   - Thymozyten, die MHC **nicht** erkennen → **Apoptose** (nutzlos)\n   - Differentierung: CD4⁺CD8⁺ (doppelt-positiv) → CD4⁺ **oder** CD8⁺ (einfach-positiv)\n3. **Negative Selektion (Mark/Medulla):**\n   - Thymozyten, die **Selbst-Antigene** (körpereigene Antigene) **stark binden** → **Apoptose** (verhindert Autoimmunität)\n   - Thymozyten, die Selbst-Antigene **nicht/schwach** binden → **Überleben**\n4. **Emigration:** Nur ~**5%** überleben → reifen zu **CD4⁺** (T-Helfer) oder **CD8⁺** (zytotoxisch) → periphere Lymphorgane (Lymphknoten, Milz)\n\n**Zentrale Toleranz:** Verhindert Autoimmunität durch Elimination autoreaktiver T-Zellen.\n\n**Falsch (A):** Der Thymus erreicht seine maximale Größe bei **Geburt bis Pubertät** (~35 g), danach **Involution** (Rückbildung, Fettgewebe-Ersatz, bei Erwachsenen ~10–15 g). Der Thymus ist für **T-Zell-Reifung** (nicht B-Zell) zuständig. B-Zellen reifen im **Knochenmark**.\n\n**Falsch (C):** Der Thymus befindet sich im **oberen Mediastinum** (hinter Sternum), **nicht** im Abdomen. Er **verkleinert sich** (Involution) nach der Pubertät, nicht vergrößert.\n\n**Falsch (D):** Nur ~**5%** (nicht 95%) der Thymozyten überleben die Selektion. ~95% sterben durch Apoptose (positive + negative Selektion).\n\n**Falsch (E):** **DiGeorge-Syndrom** (22q11-Deletion) ist durch **Thymus-Aplasie** (nicht Hyperplasie) gekennzeichnet → **T-Zell-Mangel** (nicht Überproduktion) → schwere Infektionen, Hypokalzämie (Nebenschilddrüsen-Aplasie), Herzfehler.",
           difficulty: 2,
-          tags: [],
+          tags: ['thymus', 't-zell-reifung', 'selektion'],
           hints: [
             "Wo reifen T-Zellen? Und welche zwei Selektionsschritte sichern, dass T-Zellen funktionsfähig aber nicht autoreaktiv sind?",
             "Positive Selektion (Cortex): T-Zellen müssen MHC erkennen können, sonst Apoptose. Negative Selektion (Mark): T-Zellen, die Selbst-Antigene stark erkennen → Apoptose → nur ~5% überleben."
@@ -2524,7 +3193,7 @@ Das **Atmungssystem** (Respirationssystem) ermöglicht den **Gasaustausch** zwis
 
 ### 4. ⭐ Gasaustausch (Diffusion)
 
-**Fick''sches Diffusionsgesetz:**
+**Ficksches Diffusionsgesetz:**
 
 **Diffusionsrate ∝ (Oberfläche × Partialdruckdifferenz) / (Diffusionsstrecke × √Molekulargewicht)**
 
@@ -2680,7 +3349,7 @@ Das **Atmungssystem** (Respirationssystem) ermöglicht den **Gasaustausch** zwis
           correctIndex: 1,
           explanation: "**Richtig (B):** **Surfactant** ist essentiell für die Lungenfunktion:\n\n**Produktion:**\n- **Typ-II-Pneumozyten** (~5% der Alveolaroberfläche) produzieren und sezernieren Surfactant\n\n**Zusammensetzung:**\n- ~**90% Phospholipide** (hauptsächlich **Dipalmitoylphosphatidylcholin, DPPC**)\n- ~10% Proteine (Surfactant-Proteine A, B, C, D)\n\n**Funktion:**\n1. **Senkung der Oberflächenspannung** an der Luft-Flüssigkeits-Grenze in Alveolen\n2. **Verhindert Alveolarkollaps (Atelektase):**\n   - Laplace-Gesetz: **P = 2T/r** (Druck = 2 × Oberflächenspannung / Radius)\n   - Ohne Surfactant: Kleine Alveolen (kleiner Radius r) → hoher Druck P → Kollaps\n   - Mit Surfactant: T ↓ → Druck gleicht sich an → Stabilisierung\n3. **Erleichtert Inspiration** (weniger Kraft nötig)\n\n**Klinisch:**\n- **Neonatales RDS (Frühgeborene <28 Wochen):** Surfactant-Mangel (Typ-II-Pneumozyten unreif) → Atelektase → Hypoxie\n- **Therapie:** Surfactant-Gabe (endotracheal), Beatmung\n- **Prophylaxe:** Betamethason/Dexamethason (Mutter antenatal → Lungenreifung ↑)\n\n**Falsch (A):** **Typ-II-Pneumozyten** (nicht Typ-I) produzieren Surfactant. Typ-I-Pneumozyten (~95% der Oberfläche) sind dünn und für **Gasaustausch** zuständig. Surfactant besteht zu ~90% aus **Phospholipiden** (nicht Proteinen).\n\n**Falsch (C):** Surfactant **senkt** (nicht erhöht) die Oberflächenspannung → verhindert Kollaps.\n\n**Falsch (D):** RDS wird durch **Surfactant-Mangel** (nicht Überschuss) verursacht.\n\n**Falsch (E):** Surfactant-Mangel → hohe Oberflächenspannung → **erschwerte Inspiration** (mehr Kraft nötig, Atelektase-Risiko ↑).",
           difficulty: 1,
-          tags: [],
+          tags: ['surfactant', 'alveolen', 'atemnotsyndrom'],
         },
         {
           question: "Welche Aussage über die Atemmechanik ist korrekt?",
@@ -2694,7 +3363,7 @@ Das **Atmungssystem** (Respirationssystem) ermöglicht den **Gasaustausch** zwis
           correctIndex: 1,
           explanation: "**Richtig (B):** **Inspiration in Ruhe** ist **aktiv** (Muskelarbeit erforderlich):\n\n**Mechanismus:**\n1. **Diaphragma** (Zwerchfell, wichtigster Atemmuskel) kontrahiert → senkt sich (~10 cm) → Thoraxvolumen ↑ (vertikal)\n2. **Mm. intercostales externi** (äußere Interkostalmuskeln) kontrahieren → Rippen heben sich → Thoraxvolumen ↑ (anterior-posterior + lateral)\n3. **Lungenvolumen ↑** → **Intrapulmonaler Druck ↓** (~−1 mmHg, subatmosphärisch)\n4. **Druckgradient:** Atmosphärisch (0 mmHg) → Pulmonal (−1 mmHg) → Luft strömt ein\n\n**Exspiration in Ruhe** ist **passiv** (keine Muskelarbeit):\n- Diaphragma + Interkostalmuskeln entspannen → elastische Rückstellung → Thoraxvolumen ↓ → intrapulmonaler Druck ↑ (~+1 mmHg) → Luft strömt aus\n\n**Falsch (A):** Inspiration in Ruhe ist **aktiv** (nicht passiv). **Exspiration** in Ruhe ist passiv (elastische Rückstellung).\n\n**Falsch (C):** Der **intrapleurale Druck** ist **immer negativ** (~−5 mmHg in Ruhe, ~−8 mmHg bei Inspiration). Dies ist essentiell, um die Lunge entfaltet zu halten (negative Traktion). Positiver intrapleuraler Druck → Lungenkollaps.\n\n**Falsch (D):** Bei **Pneumothorax** (Luft im Pleuraspalt) wird der intrapleurale Druck **0 oder positiv** (nicht negativ) → Lunge verliert negative Traktion → **Kollaps** (nicht Entfaltung).\n\n**Falsch (E):** Exspiration in Ruhe ist **passiv**. **Forcierte Exspiration** (aktiv, z. B. bei Husten, Sport) erfordert Bauchmuskeln (M. rectus abdominis, M. obliquus) + Mm. intercostales interni.",
           difficulty: 2,
-          tags: [],
+          tags: ['atemmechanik', 'inspiration', 'exspiration'],
         },
         {
           question: "Welche Aussage über den Gasaustausch in der Lunge ist korrekt?",
@@ -2708,7 +3377,7 @@ Das **Atmungssystem** (Respirationssystem) ermöglicht den **Gasaustausch** zwis
           correctIndex: 2,
           explanation: "**Richtig (C):** Der **Gasaustausch** in der Lunge erfolgt durch **Diffusion** entlang von Partialdruckgradienten:\n\n**O₂-Diffusion:**\n- **Alveolen:** pO₂ ~**100 mmHg**\n- **Venöses Blut** (aus Gewebe): pO₂ ~**40 mmHg**\n- **Gradient:** 100 − 40 = **60 mmHg** → O₂ diffundiert ins Blut\n- **Arterielles Blut** (nach Gasaustausch): pO₂ ~100 mmHg\n\n**CO₂-Diffusion:**\n- **Venöses Blut:** pCO₂ ~**46 mmHg**\n- **Alveolen:** pCO₂ ~**40 mmHg**\n- **Gradient:** 46 − 40 = **6 mmHg** (viel kleiner als O₂-Gradient!)\n- **Aber:** CO₂ ist ~**20× diffusibler** als O₂ (höhere Löslichkeit in Membranen) → trotz kleinerem Gradienten effizient\n\n**Fick'sches Diffusionsgesetz:** Diffusionsrate ∝ Gradient × Löslichkeit × Oberfläche / Diffusionsstrecke\n\n**Falsch (A):** **Umgekehrt!** Alveolen: pO₂ ~100 mmHg, venöses Blut: pO₂ ~40 mmHg (nicht andersherum).\n\n**Falsch (B):** CO₂ diffundiert **schneller** (nicht langsamer) als O₂ (~20× schneller), obwohl es ein größeres Molekül ist. Grund: **höhere Löslichkeit** in Lipidmembranen.\n\n**Falsch (D):** Die **Blut-Luft-Schranke** beträgt ~**0,5 µm** (nicht 5 mm)! Sie ist extrem dünn:\n1. Alveoläres Epithel (Typ-I-Pneumozyten)\n2. Fusionierte Basalmembran\n3. Kapillar-Endothel\n\n**Falsch (E):** O₂ und CO₂ haben **unterschiedliche Diffusionsraten**. CO₂ diffundiert ~20× schneller (höhere Löslichkeit), kompensiert den kleineren Gradienten.",
           difficulty: 2,
-          tags: [],
+          tags: ['gasaustausch', 'sauerstoff', 'co2'],
         },
         {
           question: "Welche Aussage über den Bohr-Effekt und die Hämoglobin-Sauerstoffbindung ist korrekt?",
@@ -2722,7 +3391,7 @@ Das **Atmungssystem** (Respirationssystem) ermöglicht den **Gasaustausch** zwis
           correctIndex: 1,
           explanation: "**Richtig (B):** Der **Bohr-Effekt** beschreibt, wie metabolische Parameter die O₂-Affinität von Hämoglobin beeinflussen:\n\n**Bedingungen in metabolisch aktivem Gewebe:**\n- **CO₂ ↑** (Stoffwechselprodukt)\n- **pH ↓** (Azidose, H⁺ ↑ aus CO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻)\n- **Temperatur ↑** (Muskelarbeit, Entzündung)\n- **2,3-BPG ↑** (2,3-Bisphosphoglycerat, bei chronischer Hypoxie, Höhenanpassung)\n\n**Effekt:**\n- **Rechtverschiebung** der O₂-Bindungskurve\n- **O₂-Affinität ↓** (Hb bindet O₂ schwächer)\n- **O₂-Abgabe ↑** (mehr O₂ wird ans Gewebe abgegeben)\n\n**Physiologische Bedeutung:** Gewebe mit hohem Stoffwechsel (Muskel, Hirn) brauchen mehr O₂ → lokale Bedingungen (CO₂ ↑, pH ↓, Temp ↑) → Hb gibt mehr O₂ ab.\n\n**In der Lunge (umgekehrt):**\n- CO₂ ↓ (wird abgeatmet), pH ↑, Temp normal\n- **Linksverschiebung** → O₂-Affinität ↑ → **O₂-Aufnahme ↑**\n\n**Falsch (A):** **Rechtverschiebung** (nicht Links) bei CO₂ ↑, pH ↓, Temp ↑. Linksverschiebung wäre bei CO₂ ↓, pH ↑ (Lunge).\n\n**Falsch (C):** Hämoglobin ist ein **Tetramer** (4 Untereinheiten: 2α, 2β), jede mit einer Häm-Gruppe (insgesamt 4). Bindung ist **kooperativ** (sigmoid, nicht linear) → Bindung des 1. O₂ erleichtert Bindung des 2./3./4. O₂.\n\n**Falsch (D):** 2,3-BPG verschiebt die Kurve nach **rechts** (nicht links) → O₂-Affinität ↓ → O₂-Abgabe ↑. Entsteht bei Hypoxie (Höhenanpassung, Anämie) → kompensatorisch.\n\n**Falsch (E):** In der Lunge (CO₂ ↓, pH ↑) → **Linksverschiebung** (nicht rechts) → O₂-Affinität ↑ → **O₂-Aufnahme erleichtert** (nicht erschwert).",
           difficulty: 2,
-          tags: [],
+          tags: ['bohr-effekt', 'hämoglobin', 'sauerstoffbindung'],
         },
         {
           question: "Welche Aussage über den CO₂-Transport im Blut ist korrekt?",
@@ -2736,7 +3405,7 @@ Das **Atmungssystem** (Respirationssystem) ermöglicht den **Gasaustausch** zwis
           correctIndex: 1,
           explanation: "**Richtig (B):** CO₂-Transport im Blut erfolgt über **3 Mechanismen**:\n\n**1. Bikarbonat (HCO₃⁻) — ~70% (wichtigster Mechanismus):**\n- In Erythrozyten: CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻ (katalysiert durch **Carboanhydrase**)\n- **HCO₃⁻** diffundiert aus Erythrozyten ins Plasma\n- **Chlorid-Shift:** Cl⁻ diffundiert ins Erythrozyt (Cl⁻/HCO₃⁻-Austauscher), um Ladungsausgleich zu wahren\n\n**2. Carbaminohämoglobin — ~23%:**\n- CO₂ bindet direkt an **Aminogruppen der Globin-Ketten** (nicht an Häm-Gruppe!)\n- Formel: Hb-NH₂ + CO₂ ⇌ Hb-NH-COO⁻ + H⁺\n\n**3. Physikalisch gelöst — ~7%:**\n- CO₂ gelöst im Plasma (bestimmt pCO₂)\n\n**Falsch (A):** Nur ~7% (nicht 70%) des CO₂ werden physikalisch gelöst transportiert. ~70% werden als **HCO₃⁻** transportiert.\n\n**Falsch (C):** Carboanhydrase katalysiert die Reaktion **in Erythrozyten** (nicht Alveolen), um CO₂ → HCO₃⁻ umzuwandeln (Transport). In der Lunge läuft die Reaktion **rückwärts** (HCO₃⁻ → CO₂), um CO₂ abzuatmen.\n\n**Falsch (D):** Der **Chlorid-Shift** (Hamburger-Shift) beschreibt den Austausch von **Cl⁻** (ins Erythrozyt) gegen **HCO₃⁻** (aus Erythrozyt), **nicht** Na⁺ gegen Cl⁻. Zweck: Ladungsausgleich.\n\n**Falsch (E):** **Haldane-Effekt:** **Umgekehrt!** **Desoxygeniertes Hb** bindet **mehr CO₂** (und mehr H⁺) als oxygeniertes Hb.\n- **Gewebe:** O₂ ↓ → Hb desaturiert → CO₂-Bindung ↑ (fördert CO₂-Aufnahme)\n- **Lunge:** O₂ ↑ → Hb saturiert → CO₂-Abgabe ↑ (erleichtert CO₂-Elimination)",
           difficulty: 3,
-          tags: [],
+          tags: ['co2-transport', 'bikarbonat', 'carboanhydrase'],
         },
         {
           question: "Welche Aussage über die Regulation der Atmung ist korrekt?",
@@ -2750,14 +3419,14 @@ Das **Atmungssystem** (Respirationssystem) ermöglicht den **Gasaustausch** zwis
           correctIndex: 1,
           explanation: "**Richtig (B):** Die **Atemregulation** erfolgt hauptsächlich über **zentrale Chemorezeptoren**:\n\n**Zentrale Chemorezeptoren (Medulla oblongata, Hirnstamm):**\n- Messen **pCO₂** und **pH** (indirekt über **H⁺-Konzentration im Liquor**)\n- **pCO₂ ↑** (Hyperkapnie) → CO₂ diffundiert in Liquor → H₂CO₃ → **H⁺ ↑** (Azidose) → Atemzentrum stimuliert\n- **Reaktion:** **Atemfrequenz ↑, Atemtiefe ↑** → Ventilation ↑ → CO₂-Elimination ↑ → pCO₂ ↓\n- ⭐ **Wichtigster Atemantrieb:** CO₂/pH (nicht O₂!)\n\n**Periphere Chemorezeptoren (Karotis-Körper, Aortenbogen):**\n- Messen pO₂, pCO₂, pH\n- **pO₂ ↓** (<60 mmHg, schwere Hypoxie) → Atemzentrum stimuliert → Ventilation ↑\n- **Sekundär wichtig** (hypoxischer Atemantrieb)\n\n**Falsch (A):** Der wichtigste Atemantrieb ist **pCO₂/pH** (nicht pO₂). **pO₂** wird von **peripheren** Chemorezeptoren (Karotis-Körper) gemessen, nicht zentralen.\n\n**Falsch (C):** Periphere Chemorezeptoren reagieren auf **pO₂** (wichtigster Stimulus für periphere Rezeptoren), **pCO₂** und **pH**. Sie sind besonders sensitiv für **Hypoxie** (pO₂ <60 mmHg).\n\n**Falsch (D):** Der **Hering-Breuer-Reflex** führt bei Überdehnung der Lunge (Dehnungsrezeptoren) zu einem **Stopp der Inspiration** (nicht Verlängerung) → verhindert Überdehnung → Exspiration beginnt.\n\n**Falsch (E):** Bei **COPD mit chronischer Hyperkapnie** (CO₂-Retention) adaptieren zentrale Chemorezeptoren → **hypoxischer Atemantrieb** (periphere Rezeptoren) wird wichtiger. **Hochdosierter O₂** (>FiO₂ 0,4, >40%) kann:\n- Hypoxischen Atemantrieb eliminieren → **Atemfrequenz ↓**\n- **CO₂-Retention ↑** → CO₂-Narkose (Bewusstseinsstörung)\n- **Vorsicht:** Kontrollierte O₂-Gabe (niedrige FiO₂, z. B. 24–28%, Venturi-Maske), Zielsättigung ~88–92% (nicht >95%).",
           difficulty: 3,
-          tags: [],
+          tags: ['atemregulation', 'chemorezeptoren', 'co2'],
           hints: [
             "Zentrale vs. periphere Chemorezeptoren: Welche messen primär CO₂ und welche O₂? Welcher Stimulus ist wichtiger?",
             "Zentrale (Medulla): CO₂/pH – wichtigster Atemantrieb. Periphere (Karotis-Körper): O₂ (<60 mmHg), sekundär. Bei COPD+Hyperkapnie: O₂ ↑↑ → hypoxischer Antrieb eliminiert → Apnoe-Risiko."
           ],
         }
       ],
-      diagram: 'atmungssystem',
+      diagram: 'respiratory-system',
 
       merksätze: [
         "**Atemwege-Anatomie:** Obere Atemwege: Nase (Filtration, Befeuchtung, Erwärmung), Nasennebenhöhlen, Pharynx. Untere Atemwege: Larynx (Stimmbildung, Epiglottis), Trachea (C-Knorpel, 16–20 Spangen), Bronchien (Knorpel + Flimmerepithel) → Bronchiolen (KEIN Knorpel, glatte Muskulatur) → Alveolen (~300 Mio., ~80–140 m², Typ-I [Gasaustausch] + Typ-II [Surfactant]).",
@@ -3045,7 +3714,7 @@ Das **Verdauungssystem** (Gastrointestinaltrakt, GIT) dient der **mechanischen +
           correctIndex: 2,
           explanation: "**Richtig (C):** **Belegzellen (Parietalzellen)** im Corpus/Fundus produzieren:\n- **HCl** (Magensäure, pH ~1–2) via H⁺/K⁺-ATPase (Protonenpumpe)\n- **Intrinsic Factor (IF)**: Bindet Vitamin B₁₂ → Resorption im Ileum\n\n**HCl-Funktionen:** Denaturierung von Proteinen, Aktivierung Pepsinogen → **Pepsin**, bakterizid.\n\n**Pepsin:** Protease, spaltet Proteine → Peptide.\n\n**Falsch (A):** **Hauptzellen** (nicht Belegzellen) produzieren **Pepsinogen**. **Nebenzellen** produzieren Mukus.\n\n**Falsch (B):** **Belegzellen** (nicht Hauptzellen) produzieren HCl + IF.\n\n**Falsch (D):** **Gastrin** (G-Zellen, Antrum) **stimuliert** HCl-Sekretion (nicht hemmt). **Somatostatin** (D-Zellen) hemmt HCl bei pH <3.\n\n**Falsch (E):** **PPI** (Omeprazol) **hemmen** (nicht aktivieren) die H⁺/K⁺-ATPase → HCl ↓.",
           difficulty: 1,
-          tags: [],
+          tags: ['magensekretion', 'salzsäure', 'pepsinogen'],
         },
         {
           question: "Welche Aussage über Pankreasenzyme ist korrekt?",
@@ -3059,7 +3728,7 @@ Das **Verdauungssystem** (Gastrointestinaltrakt, GIT) dient der **mechanischen +
           correctIndex: 1,
           explanation: "**Richtig (B):** **Pankreasenzyme** (exokrine Funktion):\n\n**Trypsinogen** (Proenzym) → **Enterokinase** (Dünndarmmukosa) → **Trypsin** (aktiv)\n- **Trypsin:** Protease, spaltet Proteine → Peptide\n- Trypsin aktiviert weitere Enzyme: Chymotrypsinogen → Chymotrypsin, Procarboxypeptidase → Carboxypeptidase\n\n**Andere Enzyme:**\n- **Pankreas-Amylase:** Stärke → Maltose\n- **Pankreas-Lipase:** Triglyzeride → Fettsäuren + Monoglyzeride (benötigt Gallensalze)\n\n**Falsch (A):** **Umgekehrt!** Lipase spaltet **Fette**, Trypsin spaltet **Proteine**.\n\n**Falsch (C):** Pankreas-Amylase spaltet **Kohlenhydrate** (Stärke → Maltose), nicht Proteine.\n\n**Falsch (D):** Bikarbonat **erhöht** (nicht senkt) den pH im Duodenum (pH ~8) → neutralisiert Magensäure (pH ~2).\n\n**Falsch (E):** **CCK** (I-Zellen, Duodenum) **stimuliert** (nicht hemmt) Enzym-Sekretion. Trigger: Fett/Protein.",
           difficulty: 2,
-          tags: [],
+          tags: ['pankreasenzyme', 'lipase', 'amylase'],
         },
         {
           question: "Welche Aussage über die Nährstoffresorption im Dünndarm ist korrekt?",
@@ -3073,7 +3742,7 @@ Das **Verdauungssystem** (Gastrointestinaltrakt, GIT) dient der **mechanischen +
           correctIndex: 1,
           explanation: "**Richtig (B):** **Resorption im Dünndarm**:\n\n**Glukose:**\n- **SGLT1** (Na⁺-Glukose-Symport): **Sekundär-aktiv** (nutzt Na⁺-Gradient)\n- **GLUT2** (basolateral): Passive Diffusion ins Blut\n- **Fructose:** GLUT5 (passiv)\n\n**Fette:**\n1. Pankreas-Lipase + **Gallensalze** (Emulgierung) → Fettsäuren + Monoglyzeride\n2. **Mizellen** (mit Gallensalzen) → passive Diffusion ins Enterozyt\n3. Enterozyt: Re-Veresterung → **Chylomikronen** (Triglyzeride + Apolipoprotein B-48)\n4. **Lymphe** (Ductus thoracicus) → Blut (nicht Pfortader!)\n\n**Falsch (A):** Glukose wird **aktiv** (SGLT1, sekundär-aktiv), nicht passiv resorbiert.\n\n**Falsch (C):** Fette gehen über **Lymphe** (nicht Pfortader). Kohlenhydrate/Proteine gehen über Pfortader.\n\n**Falsch (D):** Vitamin B₁₂ wird im **Ileum** (nicht Duodenum) resorbiert und benötigt **Intrinsic Factor** (Magen) → IF-B₁₂-Komplex → Rezeptor-vermittelte Endozytose.\n\n**Falsch (E):** Laktase-Mangel → Laktose **nicht** resorbiert → Dickdarm → Bakterien fermentieren → Diarrhö, Blähungen.",
           difficulty: 2,
-          tags: [],
+          tags: ['nährstoffresorption', 'dünndarm', 'mikrovilli'],
         },
         {
           question: "Welche Aussage über die Leberfunktion ist korrekt?",
@@ -3087,7 +3756,7 @@ Das **Verdauungssystem** (Gastrointestinaltrakt, GIT) dient der **mechanischen +
           correctIndex: 1,
           explanation: "**Richtig (B):** **Leber-Funktionen**:\n\n**Blutversorgung (doppelt):**\n1. **A. hepatica** (~25%): O₂-reich\n2. **V. portae** (~75%): Nährstoffreich aus GIT (Dünndarm, Dickdarm, Milz, Pankreas, Magen)\n\n**Proteinsynthese:**\n- **Albumin** (wichtigstes Plasmaprotein, onkotischer Druck)\n- **Gerinnungsfaktoren:** I (Fibrinogen), II, V, VII, IX, X, XI, XII\n  - **Vitamin-K-abhängig:** **II, VII, IX, X** (\"1972\")\n\n**Harnstoffzyklus:**\n- **Ammoniak (NH₃)** (toxisch, aus Aminosäure-Abbau) → **Harnstoff** (weniger toxisch) → Niere → Urin\n- **Hepatische Enzephalopathie:** Leberzirrhose → NH₃ ↑ → ZNS-Symptome (Verwirrtheit, Asterixis)\n\n**Falsch (A):** Leber hat **doppelte** Blutversorgung (A. hepatica + V. portae).\n\n**Falsch (C):** Bilirubin wird **glukuronidiert** (nicht oxidiert) → konjugiert (wasserlöslich) → Galle → Darm → Urobilinogen → Sterkobilin (Stuhl) + Urobilin (Urin). **Nicht** direkt über Niere.\n\n**Falsch (D):** **Gilbert-Syndrom:** Milde UGT1A1-Mangel → unkonjugiertes Bilirubin ↑ → **harmlos** (keine Behandlung nötig, bei Stress/Fasten ↑).\n\n**Falsch (E):** **Albumin** wird in der **Leber** (nicht Pankreas) produziert.",
           difficulty: 2,
-          tags: [],
+          tags: ['leber', 'hepatozyten', 'leberenzyme'],
         },
         {
           question: "Welche Aussage über den Bilirubin-Stoffwechsel ist korrekt?",
@@ -3101,7 +3770,7 @@ Das **Verdauungssystem** (Gastrointestinaltrakt, GIT) dient der **mechanischen +
           correctIndex: 1,
           explanation: "**Richtig (B):** **Bilirubin-Stoffwechsel**:\n\n1. **Hb-Abbau** (Milz, RES) → **Häm** → Biliverdin → **Bilirubin (unkonjugiert, lipophil)**\n2. Bilirubin + **Albumin** (Transport im Blut) → Leber\n3. **Glukuronidierung** (UGT1A1): Bilirubin + Glukuronsäure → **Bilirubin-Diglukuronid (konjugiert, wasserlöslich)**\n4. **Galle** → Darm → Bakterien → **Urobilinogen**\n5. **Sterkobilin** (Stuhl, braun) + **Urobilin** (Urin, gelb)\n\n**Ikterus-Typen:**\n- **Prähepatisch:** Hämolyse → **unkonjugiert ↑**\n- **Hepatisch:** Leberschaden → beide ↑\n- **Posthepatisch:** Cholestase (Gallensteine, Pankreaskopf-Ca) → **konjugiert ↑**, **heller Stuhl** (kein Sterkobilin), **dunkler Urin** (Bilirubin)\n\n**Falsch (A):** **Unkonjugiertes** Bilirubin (nicht konjugiertes) ist lipophil und wird an Albumin gebunden. **Konjugiertes** Bilirubin ist wasserlöslich.\n\n**Falsch (C):** Posthepatischer Ikterus → **konjugiertes** (nicht unkonjugiertes) Bilirubin ↑, **heller** (nicht dunkler) Stuhl (kein Sterkobilin).\n\n**Falsch (D):** Prähepatischer Ikterus = **Hämolyse** (nicht Gallensteine). Gallensteine = **posthepatisch**.\n\n**Falsch (E):** **Urobilin** (nicht Sterkobilin) färbt Urin gelb. **Sterkobilin** färbt Stuhl braun.",
           difficulty: 3,
-          tags: [],
+          tags: ['bilirubin', 'hämoglobinabbau', 'ikterus'],
         },
         {
           question: "Welche Aussage über die Dickdarm-Funktion ist korrekt?",
@@ -3115,14 +3784,14 @@ Das **Verdauungssystem** (Gastrointestinaltrakt, GIT) dient der **mechanischen +
           correctIndex: 1,
           explanation: "**Richtig (B):** **Dickdarm-Funktionen**:\n\n**Wasser-Resorption:**\n- **Dünndarm:** ~8,5 L/Tag resorbiert (von 9 L total)\n- **Dickdarm:** ~**0,4 L/Tag** resorbiert\n- **Stuhl:** ~0,1–0,2 L/Tag\n\n**Darmflora (Mikrobiom):**\n- ~10¹⁴ Bakterien (Bacteroides, Firmicutes)\n- **Funktionen:**\n  1. **Fermentation** von Ballaststoffen → **kurzkettige Fettsäuren** (SCFA: Butyrat, Propionat, Acetat) → Energiequelle für Kolonozyten\n  2. **Vitamin K-Synthese**\n  3. **Immunmodulation**, Barriere gegen Pathogene\n\n**Falsch (A):** Dickdarm resorbiert ~0,4 L (nicht 9 L). **Dünndarm** resorbiert ~8,5 L.\n\n**Falsch (C):** **Morbus Crohn** (nicht Colitis ulcerosa) ist transmural und kann alle GIT-Abschnitte betreffen (v. a. terminales Ileum). **Colitis ulcerosa:** Nur **Mukosa** (Schleimhaut), nur **Kolon**, kontinuierlich von **Rektum** aufsteigend.\n\n**Falsch (D):** **Colitis ulcerosa** (nicht Morbus Crohn) betrifft nur Kolon und beginnt vom Rektum. **Morbus Crohn:** Alle GIT-Abschnitte, diskontinuierlich (Skip Lesions), transmural.\n\n**Falsch (E):** Darmflora: ~**10¹⁴** Bakterien (nicht 10⁶), 10× mehr als menschliche Zellen.",
           difficulty: 2,
-          tags: [],
+          tags: ['dickdarm', 'wasserresorption', 'darmbewegung'],
           hints: [
             "Dickdarm vs. Dünndarm: Wer resorbiert wie viel Wasser? Was macht die Darmflora mit Ballaststoffen?",
             "Dünndarm: ~8,5 L Wasser/Tag. Dickdarm: ~0,4 L. Darmflora fermentiert Ballaststoffe → SCFA (Butyrat, Propionat, Acetat) = Energiequelle für Kolonozyten + Vitamin-K-Synthese."
           ],
         }
       ],
-      diagram: 'verdauungssystem',
+      diagram: 'digestive-system',
 
       merksätze: [
         "**GI-Anatomie & Wandschichten:** GIT: Mund → Speiseröhre → Magen → Dünndarm (Duodenum, Jejunum, Ileum) → Dickdarm (Colon) → Rektum → Anus. Wandschichten: Mukosa (Epithel, Lamina propria, Muscularis mucosae) → Submukosa → Muscularis propria (Längs + Zirkular) → Serosa/Adventitia. Plexus myentericus (Auerbach, zwischen Muskelschichten) + Plexus submucosus (Meissner).",
@@ -3363,7 +4032,7 @@ Das **Harnsystem** (Niere + ableitende Harnwege) reguliert:
           correctIndex: 1,
           explanation: "**Richtig (B):** **GFR** (glomeruläre Filtrationsrate):\n- ~**120 mL/min** (~7,2 L/h, ~**180 L/Tag** Primärharn)\n- Davon ~1,5 L/Tag Urin (99% resorbiert!)\n\n**Filtrationsbarriere (3 Schichten):**\n1. **Fenestriertes Endothel** (Poren ~70 nm)\n2. **Glomeruläre Basalmembran** (negativ geladen, blockiert große/negative Proteine)\n3. **Podozyten** (Fußfortsätze, Schlitzmembran)\n\n**Filtrat:** Plasmaultrafiltrat (ohne Zellen, fast ohne Proteine <69 kDa).\n\n**Falsch (A):** GFR ~120 mL/min (nicht 12), ~180 L/Tag (nicht 18).\n\n**Falsch (C):** Proteine >69 kDa werden **nicht** filtriert (zu groß). Normalerweise <0,1 g/Tag Protein im Urin.\n\n**Falsch (D):** Kreatinin wird filtriert, aber **nicht resorbiert** (teilweise sezerniert) → GFR-Marker (Kreatinin-Clearance).\n\n**Falsch (E):** Bei Glomerulonephritis ist die Barriere **geschädigt** → Proteinurie, Hämaturie.",
           difficulty: 1,
-          tags: [],
+          tags: ['glomeruläre filtration', 'gfr', 'glomerulus'],
         },
         {
           question: "Welche Aussage über den proximalen Tubulus ist korrekt?",
@@ -3377,7 +4046,7 @@ Das **Harnsystem** (Niere + ableitende Harnwege) reguliert:
           correctIndex: 1,
           explanation: "**Richtig (B):** **Proximaler Tubulus** (größter Rückresorber, ~65%):\n\n**Substanzen:**\n- **Na⁺:** Sekundär-aktiv (SGLT2 [mit Glukose], NHE3 [Na⁺/H⁺-Austauscher])\n- **Glukose:** **100% Rückresorption** (normal!) via **SGLT2** (luminal, mit Na⁺) → GLUT2 (basolateral) → Blut\n- **Aminosäuren:** **100% Rückresorption** (Na⁺-gekoppelt)\n- **H₂O:** Osmose (folgt Na⁺), **Aquaporin-1** (konstitutiv, immer offen)\n- **HCO₃⁻:** ~80–90% (pH-Regulation)\n\n**Falsch (A):** Proximaler Tubulus resorbiert ~**65%** (nicht 10%) des Filtrats.\n\n**Falsch (C):** Glukose wird **resorbiert** (100%, nicht sezerniert). Bei Blutzucker <180 mg/dL → 100% Rückresorption, >180 mg/dL → Glukosurie (Diabetes).\n\n**Falsch (D):** **Nierenschwelle** für Glukose: ~**180 mg/dL** (nicht 50). Darüber → SGLT2 gesättigt → Glukosurie.\n\n**Falsch (E):** **SGLT2-Hemmer** (Empagliflozin, Dapagliflozin) **blockieren** SGLT2 → Glukose-Rückresorption ↓ → Glukosurie → Blutzucker ↓ (Diabetes-Therapie).",
           difficulty: 2,
-          tags: [],
+          tags: ['proximaler tubulus', 'reabsorption', 'natrium'],
         },
         {
           question: "Welche Aussage über das Gegenstromprinzip in der Henle-Schleife ist korrekt?",
@@ -3391,7 +4060,7 @@ Das **Harnsystem** (Niere + ableitende Harnwege) reguliert:
           correctIndex: 1,
           explanation: "**Richtig (B):** **Gegenstromprinzip** (Henle-Schleife, ~20% Rückresorption):\n\n**Absteigender Schenkel:**\n- **Wasserdurchlässig** (Aquaporin-1)\n- **NaCl-undurchlässig**\n- **Wasser** diffundiert raus (osmotischer Gradient) → Filtrat wird **hyperton** (konzentriert, bis ~1.200 mOsm/L im Mark)\n\n**Aufsteigender Schenkel:**\n- **Wasserundurchlässig** (keine Aquaporine!)\n- **NaCl-Rückresorption** (Na⁺/K⁺/2Cl⁻-Symporter, **NKCC2**)\n- **NaCl** diffundiert raus → Filtrat wird **hypoton** (verdünnt, ~100 mOsm/L)\n\n**Ergebnis:** Osmotischer Gradient (Rinde ~300 mOsm/L → Mark ~1.200 mOsm/L) → ermöglicht **Harnkonzentrierung** im Sammelrohr (ADH-abhängig).\n\n**Falsch (A):** Absteigend = **wasserdurchlässig** (nicht wasserdicht), resorbiert **kein NaCl**.\n\n**Falsch (C):** Aufsteigend = **wasserundurchlässig** (nicht wasserdurchlässig), resorbiert **NaCl** (nicht Wasser).\n\n**Falsch (D):** Gegenstromprinzip = **Harnkonzentrierung** (osmotischer Gradient), nicht Glukose-Rückresorption (proximaler Tubulus, SGLT2).\n\n**Falsch (E):** Henle-Schleife: ~20% (nicht 80%). **Proximaler Tubulus:** ~65%.",
           difficulty: 2,
-          tags: [],
+          tags: ['henle-schleife', 'gegenstromprinzip', 'harnkonzentrierung'],
         },
         {
           question: "Welche Aussage über ADH (Antidiuretisches Hormon) ist korrekt?",
@@ -3405,7 +4074,7 @@ Das **Harnsystem** (Niere + ableitende Harnwege) reguliert:
           correctIndex: 1,
           explanation: "**Richtig (B):** **ADH** (Vasopressin, Hypophysenhinterlappen):\n\n**Trigger:**\n- **Osmolalität ↑** (>295 mOsm/kg, Hypothalamus-Osmorezeptoren)\n- **Volumen ↓** (Hypovolämie, Barorezeptoren)\n\n**Wirkung (Sammelrohr):**\n1. ADH → **V₂-Rezeptor** (basolateral)\n2. cAMP ↑ → **Aquaporin-2-Insertion** (luminal)\n3. **Wasserdurchlässigkeit ↑** → Wasser folgt osmotischem Gradienten (Mark ~1.200 mOsm/L)\n4. **Konzentrierter Harn** (~1.200 mOsm/L, Volumen ↓)\n\n**Ohne ADH:** Aquaporin-2 im Zytoplasma → wasserundurchlässig → **verdünnter Harn** (~50 mOsm/L, Polyurie).\n\n**Diabetes insipidus:**\n- **Zentral:** ADH-Mangel (Hypophyse) → Polyurie (>3 L/Tag), Polydipsie\n- **Nephrogen:** ADH-Resistenz (V₂-Rezeptor-Defekt) → Polyurie\n- **Therapie:** Desmopressin (synthetisches ADH, zentral)\n\n**Falsch (A):** ADH wird bei **hoher Osmolalität** (nicht niedriger) und **niedrigem Volumen** (nicht hohem) freigesetzt.\n\n**Falsch (C):** ADH **erhöht** (nicht vermindert) Wasser-Rückresorption.\n\n**Falsch (D):** **Aquaporin-1** (proximal, Henle absteigend) ist **konstitutiv** (immer offen, nicht ADH-gesteuert). **Aquaporin-2** (Sammelrohr) ist ADH-gesteuert.\n\n**Falsch (E):** **SIADH** → ADH ↑ → H₂O-Retention → **Hyponatriämie** (nicht Hypernatriämie, Verdünnungseffekt).",
           difficulty: 2,
-          tags: [],
+          tags: ['adh', 'antidiuretisches hormon', 'sammelrohr'],
         },
         {
           question: "Welche Aussage über das Renin-Angiotensin-Aldosteron-System (RAAS) ist korrekt?",
@@ -3419,7 +4088,7 @@ Das **Harnsystem** (Niere + ableitende Harnwege) reguliert:
           correctIndex: 2,
           explanation: "**Richtig (C):** **RAAS-Kaskade**:\n\n**Trigger:** Blutdruck ↓, Na⁺ ↓, Sympathikus ↑\n\n**Ablauf:**\n1. **Renin** (juxtaglomeruläre Zellen, Niere) → Angiotensinogen (Leber) → **Angiotensin I**\n2. **ACE** (Angiotensin-Converting-Enzyme, Lunge) → **Angiotensin II**\n3. **Angiotensin II** (potentester Vasokonstriktor):\n   - **Vasokonstriktion** (v. a. Vas efferens) → TPR ↑ → Blutdruck ↑\n   - **Aldosteron ↑** (Nebenniere) → distaler Tubulus: Na⁺-Rückresorption ↑ (ENaC), K⁺-Sekretion ↑ → H₂O ↑ → Volumen ↑ → Blutdruck ↑\n   - **ADH ↑** (Hypophyse) → Sammelrohr: H₂O-Rückresorption ↑\n   - **Durst ↑** (Hypothalamus)\n\n**Therapeutisch:**\n- **ACE-Hemmer** (Ramipril, Enalapril) → Angiotensin II ↓ → Vasodilatation, Aldosteron ↓ → Blutdruck ↓\n- **AT₁-Blocker** (Losartan, Valsartan) → blockiert Angiotensin-II-Rezeptor → Blutdruck ↓\n\n**Falsch (A):** **Renin** wird in **juxtaglomerulären Zellen** (Niere, nicht Leber) produziert. **Angiotensinogen** wird in der Leber produziert.\n\n**Falsch (B):** Angiotensin II → **Vasokonstriktion** (nicht Vasodilatation) → Blutdruck **↑** (nicht ↓).\n\n**Falsch (D):** **ACE-Hemmer** **blockieren** ACE → Angiotensin II ↓ (nicht ↑).\n\n**Falsch (E):** Aldosteron → **Na⁺-Rückresorption** (nicht Sekretion), **K⁺-Sekretion** (nicht Rückresorption) → Hyperaldosteronismus: Hypertonie + **Hypokaliämie**.",
           difficulty: 3,
-          tags: [],
+          tags: ['raas', 'renin', 'aldosteron'],
         },
         {
           question: "Ein Patient mit Hyperaldosteronismus zeigt Hypertonie und Hypokaliämie. Welche Aussage über die zugrunde liegende Pathophysiologie ist korrekt?",
@@ -3433,7 +4102,7 @@ Das **Harnsystem** (Niere + ableitende Harnwege) reguliert:
           correctIndex: 1,
           explanation: "**Richtig (B):** **Aldosteron** (Mineralokortikoid, Nebenniere, Zona glomerulosa):\n\n**Wirkung (distaler Tubulus + Sammelrohr, Hauptzellen):**\n1. **Na⁺-Rückresorption ↑** via **ENaC** (Epithelial Sodium Channel, luminal)\n2. **K⁺-Sekretion ↑** via **ROMK** (K⁺-Kanal, luminal)\n3. **H⁺-Sekretion ↑** (Säure-Basen-Regulation)\n\n**Hyperaldosteronismus (primär: Adenom [Conn-Syndrom], sekundär: RAAS ↑):**\n- Na⁺-Retention → **H₂O-Retention** → Volumen ↑ → **Hypertonie**\n- K⁺-Verlust → **Hypokaliämie** (Muskelschwäche, Arrhythmien, metabolische Alkalose)\n\n**Hypoaldosteronismus (z. B. Morbus Addison, NNR-Insuffizienz):**\n- Na⁺-Verlust → **Hyponatriämie**, Hypovolämie, **Hypotonie**\n- K⁺-Retention → **Hyperkaliämie**\n\n**Therapeutisch:**\n- **Aldosteron-Antagonisten** (Spironolacton, Eplerenon) → ENaC ↓ → Na⁺-Retention ↓ → Blutdruck ↓, **K⁺-sparend** (Hyperkaliämie-Risiko!)\n\n**Falsch (A):** Aldosteron **fördert** (nicht hemmt) Na⁺-Rückresorption, **fördert K⁺-Sekretion** (nicht Rückresorption).\n\n**Falsch (C):** Aldosteron-Antagonisten **blockieren** (nicht verstärken) Aldosteron-Rezeptoren.\n\n**Falsch (D):** Hyperaldosteronismus → **Hypernatriämie** (nicht Hypo-), **Hypokaliämie** (nicht Hyper-).\n\n**Falsch (E):** Aldosteron wird in der **Nebenniere** (Zona glomerulosa, nicht Sammelrohr) produziert.",
           difficulty: 3,
-          tags: [],
+          tags: ['hyperaldosteronismus', 'hypokaliämie', 'hypertonie'],
         }
       ],
       diagram: 'nephron',
@@ -3646,7 +4315,7 @@ Das **Skelettsystem** (Skelett + Muskulatur) ermöglicht:
           correctIndex: 2,
           explanation: "**Richtig (C):** **Osteoblasten** (Knochenaufbau):\n- **Synthese** von Kollagen Typ I (organische Matrix)\n- **Mineralisierung** mit Ca²⁺ und PO₄³⁻ (anorganische Matrix)\n- **Alkalische Phosphatase ↑** (Marker für Knochenaufbau)\n- **Regulation:** PTH ↓, Calcitonin ↑, Vitamin D, Östrogen\n\n**Osteoklasten** (Knochenabbau):\n- **Mehrkernig** (Fusion von Monozyten/Makrophagen)\n- **Resorption:** H⁺ (Ansäuerung → Mineralauflösung) + Proteasen (Kollagenabbau)\n- **Regulation:** RANKL (von Osteoblasten) → aktiviert Osteoklasten via RANK-Rezeptor\n\n**Falsch (A):** **Osteoklasten** (nicht Osteoblasten) sind mehrkernig und bauen Knochen ab.\n\n**Falsch (B):** **Osteoblasten** (nicht Osteoklasten) synthetisieren Kollagen I und mineralisieren.\n\n**Falsch (D):** PTH **stimuliert indirekt Osteoklasten** (über RANKL ↑ von Osteoblasten) → Knochenabbau → Ca²⁺ ↑ im Blut.\n\n**Falsch (E):** Alkalische Phosphatase ist Marker für **Knochenaufbau** (Osteoblasten), nicht Abbau.",
           difficulty: 1,
-          tags: [],
+          tags: ['osteoblasten', 'osteoklasten', 'knochenumbau'],
         },
         {
           question: "Welche Aussage über das RANKL/OPG-System ist korrekt?",
@@ -3660,7 +4329,7 @@ Das **Skelettsystem** (Skelett + Muskulatur) ermöglicht:
           correctIndex: 1,
           explanation: "**Richtig (B):** **RANKL/OPG-System** reguliert Knochenabbau:\n\n**RANKL** (Receptor Activator of NF-κB Ligand):\n- **Produziert von Osteoblasten** (und Stromazellen)\n- Bindet an **RANK-Rezeptor** auf Osteoklasten\n- **Aktiviert Osteoklasten** → Knochenabbau ↑\n\n**OPG** (Osteoprotegerin):\n- **Löslicher Rezeptor**, produziert von Osteoblasten\n- **Bindet RANKL** → verhindert RANKL-RANK-Interaktion\n- **Hemmt Osteoklasten-Aktivierung** → Knochenabbau ↓\n\n**RANKL/OPG-Ratio** bestimmt Knochenumbau:\n- RANKL/OPG ↑ → Knochenabbau ↑ (z. B. Menopause: Östrogen ↓ → RANKL ↑, OPG ↓)\n- RANKL/OPG ↓ → Knochenaufbau ↑\n\n**Therapeutisch:** **Denosumab** = **Anti-RANKL-Antikörper** → blockiert RANKL → Osteoklasten ↓ → Osteoporose-Therapie\n\n**Falsch (A):** RANKL wird von **Osteoblasten** (nicht Osteoklasten) produziert und aktiviert **Osteoklasten** (nicht Osteoblasten).\n\n**Falsch (C):** OPG wird von **Osteoblasten** produziert und **hemmt** (nicht fördert) RANKL.\n\n**Falsch (D):** Denosumab ist **Anti-RANKL** (nicht Anti-OPG).\n\n**Falsch (E):** RANKL/OPG-Ratio ist **zentral** für Knochenumbau-Regulation.",
           difficulty: 2,
-          tags: [],
+          tags: ['rankl', 'opg', 'osteoklasten'],
         },
         {
           question: "Welche Aussage über Osteoporose ist korrekt?",
@@ -3674,7 +4343,7 @@ Das **Skelettsystem** (Skelett + Muskulatur) ermöglicht:
           correctIndex: 1,
           explanation: "**Richtig (B):** **Osteoporose** = Knochenmasse ↓ (Osteoblasten < Osteoklasten), Frakturrisiko ↑\n\n**Ursachen:**\n- **Postmenopausal:** Östrogen ↓ → RANKL ↑, OPG ↓ → **Osteoklasten ↑** → Knochenabbau > Aufbau\n- **Alter:** Knochenumbau ↓, Vitamin D/Ca²⁺-Absorption ↓\n- **Weitere:** Vitamin D/Ca²⁺-Mangel, Immobilisation, Kortikosteroide, Rauchen\n\n**Frakturlokalisationen:**\n- **Wirbelkörper** (Kompressionsfrakturen)\n- **Femur** (proximaler Femur, Schenkelhals)\n- **Radius** (distaler Radius, Colles-Fraktur)\n\n**Therapie:**\n- **Bisphosphonate** (z. B. Alendronat): Hemmen Osteoklasten → Knochenabbau ↓\n- **Denosumab:** Anti-RANKL-Antikörper → blockiert RANKL → Osteoklasten ↓\n- **Weitere:** Östrogen (postmenopausal), Vitamin D/Ca²⁺-Supplementation\n\n**Falsch (A):** Beschreibt **Rachitis** (Kinder) bzw. **Osteomalazie** (Erwachsene) = Vitamin D-Mangel → Mineralisierung ↓ → weiche Knochen (nicht Osteoporose).\n\n**Falsch (C):** Bisphosphonate **hemmen** (nicht stimulieren) Osteoklasten.\n\n**Falsch (D):** **Morbus Paget:** **Übermäßiger** (nicht verminderter) Knochenumbau → deformierte, vergrößerte Knochen.\n\n**Falsch (E):** Osteoporose betrifft v. a. **postmenopausale Frauen** und **ältere Erwachsene** (>50 Jahre).",
           difficulty: 2,
-          tags: [],
+          tags: ['osteoporose', 'knochendichte', 'bisphosphonate'],
         },
         {
           question: "Welche Aussage über Knorpeltypen ist korrekt?",
@@ -3688,7 +4357,7 @@ Das **Skelettsystem** (Skelett + Muskulatur) ermöglicht:
           correctIndex: 1,
           explanation: "**Richtig (B):** **Knorpeltypen:**\n\n| Typ | Kollagen | Lokalisation | Eigenschaften |\n|-----|----------|--------------|---------------|\n| **Hyaliner Knorpel** | **Kollagen II** | Gelenkflächen, Rippen, Trachea, Nasenseptum | Glatt, glänzend, **häufigster Typ** |\n| **Elastischer Knorpel** | **Kollagen II + Elastin** | **Ohrmuschel, Epiglottis** | **Flexibel** (durch Elastin) |\n| **Faserknorpel** | **Kollagen I** | Bandscheiben, Meniskus, Symphyse | **Zugfest** (durch Kollagen I) |\n\n**Knorpel-Eigenschaften:**\n- **Gefäßfrei** (avaskulär) → Ernährung durch **Diffusion** (aus Perichondrium oder Synovia)\n- **Chondrozyten** (Knorpelzellen) in Lakunen\n- **Matrix:** Kollagen + Proteoglykane (Wasser-Bindung, Druckresistenz)\n\n**Klinisch:** **Arthrose** = Gelenkknorpel-**Abbau** (Verschleiß, nicht Entzündung) → Schmerz, Bewegungseinschränkung, Gelenkspaltverschmälerung (Röntgen), Osteophyten (Knochenanbauten)\n\n**Falsch (A):** Hyaliner Knorpel enthält **Kollagen II** (nicht I) und ist in **Gelenken** (nicht Bandscheiben). Bandscheiben = **Faserknorpel** (Kollagen I).\n\n**Falsch (C):** Faserknorpel enthält **Kollagen I** (nicht II). **Häufigster Typ** = **hyaliner Knorpel**.\n\n**Falsch (D):** Knorpel ist **gefäßfrei** (avaskulär) → Ernährung durch Diffusion (nicht Blutgefäße).\n\n**Falsch (E):** Arthrose = **Verschleiß** (degenerativ, nicht bakteriell). Bakterielle Gelenkentzündung = **septische Arthritis**.",
           difficulty: 2,
-          tags: [],
+          tags: ['knorpeltypen', 'hyalinknorpel', 'faserknorpel'],
         },
         {
           question: "Welche Aussage über Gelenke ist korrekt?",
@@ -3702,7 +4371,7 @@ Das **Skelettsystem** (Skelett + Muskulatur) ermöglicht:
           correctIndex: 1,
           explanation: "**Richtig (B):** **Gelenktypen:**\n\n**Synarthrose (unecht):**\n- **Kein Gelenkspalt**\n- **Unbeweglich/wenig beweglich**\n- Beispiele: Schädelnähte (fibrös), Symphyse (Faserknorpel)\n\n**Diarthrose (echt):**\n- **Gelenkspalt**, **Gelenkkapsel**, **Synovia**\n- **Frei beweglich**\n- Komponenten: Gelenkknorpel (hyalin), Gelenkkapsel (Kapsel fibrosa + Membrana synovialis), Synovia (Schmierung, Ernährung), Bänder (Stabilität)\n\n**Gelenkformen:**\n- **Kugelgelenk** (Schulter, Hüfte): **3 Achsen**, größte Beweglichkeit\n- **Scharniergelenk** (Knie, Ellenbogen): **1 Achse** (Flexion/Extension)\n- **Sattelgelenk** (Daumen): 2 Achsen\n- **Drehgelenk** (Atlas-Axis): Rotation\n\n**Synovia:** Gelenkflüssigkeit, produziert von **Membrana synovialis** (nicht Chondrozyten), enthält Hyaluronsäure + Proteine → Schmierung + Ernährung des Knorpels\n\n**Falsch (A):** **Diarthrosen** (nicht Synarthrosen) sind echte Gelenke mit Gelenkspalt und hoher Beweglichkeit. Synarthrosen = unecht, kein Gelenkspalt, kaum beweglich.\n\n**Falsch (C):** Synovia wird von **Membrana synovialis** (Gelenkkapsel-Innenschicht) produziert, nicht von Chondrozyten.\n\n**Falsch (D):** **Sehnen** (nicht Bänder) verbinden Muskel mit Knochen. **Bänder** verbinden Knochen mit Knochen (Stabilität).\n\n**Falsch (E):** Knie = **Scharniergelenk** (1 Achse: Flexion/Extension), nicht Kugelgelenk.",
           difficulty: 1,
-          tags: [],
+          tags: ['gelenke', 'synovialflüssigkeit', 'gelenkknorpel'],
           hints: [
             "Was ist der Unterschied zwischen Synarthrose und Diarthrose? Welche Gelenkform erlaubt Bewegung in 3 Ebenen?",
             "Synarthrose: kein Gelenkspalt, unbeweglich (Schädelnähte). Diarthrose: Gelenkspalt + Synovia + Kapsel = echt beweglich. Kugelgelenk (Schulter, Hüfte) = 3 Achsen; Scharniergelenk (Knie) = 1 Achse."
@@ -3913,7 +4582,7 @@ Das **Fortpflanzungssystem** (reproduktives System) ermöglicht:
           correctIndex: 2,
           explanation: "**Richtig (C):** **Hodenzellen:**\n\n**Sertoli-Zellen** (Tubuli seminiferi, somatisch):\n- **Lokalisation:** In den Tubuli seminiferi (Keimepithel)\n- **Funktion:**\n  - **Spermatogenese-Unterstützung:** Ernährung, Phagozytose von degeneriertem Material\n  - **Blut-Hoden-Schranke:** Schützt Keimzellen vor Immunsystem\n  - **Inhibin:** Hemmt FSH (negative Rückkopplung)\n  - **ABP** (Androgen-Binding-Protein): Bindet Testosteron → hohe lokale Konzentration → Spermatogenese ↑\n- **Regulation:** **FSH** → Spermatogenese ↑\n\n**Leydig-Zellen** (Interstitium, endokrin):\n- **Lokalisation:** Im Interstitium (zwischen Tubuli)\n- **Funktion:** **Testosteron-Produktion** (aus Cholesterin)\n- **Regulation:** **LH** → Testosteron ↑\n\n**Testosteron-Wirkung:** Spermatogenese (lokal), sekundäre Geschlechtsmerkmale, negative Rückkopplung (→ GnRH ↓, LH ↓)\n\n**Falsch (A):** **Leydig-Zellen** (nicht Sertoli) produzieren Testosteron und liegen im Interstitium.\n\n**Falsch (B):** **Sertoli-Zellen** (nicht Leydig) unterstützen Spermatogenese und produzieren Inhibin.\n\n**Falsch (D):** **LH** (nicht FSH) stimuliert Leydig-Zellen. **FSH** stimuliert Sertoli-Zellen.\n\n**Falsch (E):** **ABP** wird von **Sertoli-Zellen** produziert und **fördert** (nicht hemmt) Spermatogenese durch Testosteron-Bindung.",
           difficulty: 1,
-          tags: [],
+          tags: ['sertoli-zellen', 'leydig-zellen', 'hoden'],
         },
         {
           question: "Welche Aussage über die Spermatogenese ist korrekt?",
@@ -3927,7 +4596,7 @@ Das **Fortpflanzungssystem** (reproduktives System) ermöglicht:
           correctIndex: 2,
           explanation: "**Richtig (C):** **Spermatogenese** (~74 Tage):\n\n1. **Spermatogonien** (2n, diploid, Stammzellen) → **Mitose** → primäre Spermatozyten (2n)\n2. **Meiose I:** Primäre Spermatozyten (2n) → 2 **sekundäre Spermatozyten** (n, haploid)\n3. **Meiose II:** Sekundäre Spermatozyten (n) → **4 Spermatiden** (n)\n4. **Spermiogenese:** Spermatiden → **Spermien** (reif):\n   - **Akrosom** (Kopf): Enzyme (Hyaluronidase, Akrosin) → durchdringt Zona pellucida\n   - **Flagellum** (Schwanz): Beweglichkeit\n   - **Mitochondrien** (Mittelstück): ATP für Bewegung\n\n**Lokalisation:**\n- **Tubuli seminiferi** (Hoden): Spermatogenese (Sertoli-Zellen)\n- **Nebenhoden:** Reifung (Motilität ↑), Speicherung\n\n**Ergebnis:** **4 funktionsfähige Spermien** (n) aus 1 Spermatogonium (2n) – im Gegensatz zu Oogenese (1 Eizelle + 3 Polkörperchen)\n\n**Falsch (A):** Aus 1 Spermatogonium entstehen **4** (nicht 2) funktionsfähige Spermien.\n\n**Falsch (B):** Dauer ~**74 Tage** (nicht 28), Lokalisation **Tubuli seminiferi** (nicht Nebenhoden). Nebenhoden = Reifung/Speicherung.\n\n**Falsch (D):** Spermien erhalten Beweglichkeit während **Reifung im Nebenhoden** (nicht nach Befruchtung).\n\n**Falsch (E):** **Akrosom** enthält **Enzyme** (nicht Mitochondrien). **Mitochondrien** sind im Mittelstück (Energieversorgung).",
           difficulty: 2,
-          tags: [],
+          tags: ['spermatogenese', 'spermien', 'meiose'],
         },
         {
           question: "Welche Aussage über die Oogenese ist korrekt?",
@@ -3941,7 +4610,7 @@ Das **Fortpflanzungssystem** (reproduktives System) ermöglicht:
           correctIndex: 2,
           explanation: "**Richtig (C):** **Oogenese:**\n\n**Pränatale Entwicklung:**\n1. **Primordiale Keimzellen** → Oogonien (2n) → Mitose\n2. **Primäre Oozyten** (2n): Meiose I **gestartet**, aber **Arrest in Prophase I** (bis Pubertät)\n3. **~400.000 primordiale Follikel** bei Geburt (vs. 6–7 Mio. im 5. Monat intrauterin, 99% degenerieren)\n\n**Ab Pubertät (jeden Zyklus):**\n1. **Meiose I abgeschlossen:** Primäre Oozyte (2n) → **sekundäre Oozyte** (n, haploid) + **1. Polkörperchen** (n, degeneriert)\n2. **Ovulation** (Tag 14): Sekundäre Oozyte (n) freigesetzt, **Arrest in Metaphase II**\n3. **Meiose II** (nur bei Befruchtung): Sekundäre Oozyte (n) → **Eizelle** (n) + **2. Polkörperchen** (n, degeneriert)\n\n**Ergebnis:** **1 funktionsfähige Eizelle** (n) + **3 Polkörperchen** (degenerieren) – im Gegensatz zu Spermatogenese (4 Spermien)\n\n**Falsch (A):** Aus 1 primären Oozyte entsteht **1** (nicht 4) funktionsfähige Eizelle + 3 Polkörperchen (degenerieren).\n\n**Falsch (B):** Meiose II wird **nur bei Befruchtung** abgeschlossen. Ohne Befruchtung bleibt sekundäre Oozyte in Metaphase II arretiert.\n\n**Falsch (D):** Primäre Oozyten werden **pränatal** (nicht ab Pubertät) gebildet. Menopause (Ende Oogenese) ~50 Jahre (nicht 40).\n\n**Falsch (E):** Bei Geburt ~**400.000** (nicht 6–7 Mio.) primordiale Follikel. 6–7 Mio. im **5. Monat intrauterin**, dann Degeneration.",
           difficulty: 3,
-          tags: [],
+          tags: ['oogenese', 'eizelle', 'meiose'],
         },
         {
           question: "Welche Aussage über den Menstruationszyklus ist korrekt?",
@@ -3955,7 +4624,7 @@ Das **Fortpflanzungssystem** (reproduktives System) ermöglicht:
           correctIndex: 2,
           explanation: "**Richtig (C):** **Menstruationszyklus** (~28 Tage):\n\n| Phase | Tage | Ovar | Endometrium | Hormone |\n|-------|------|------|-------------|----------|\n| **Menstruation** | 1–5 | Follikel-Degeneration | Abstoßung | Progesteron ↓, Östrogen ↓ |\n| **Follikelphase** | 6–14 | **FSH** → Follikelwachstum → **Östrogen ↑** (Granulosa) | Proliferation (Aufbau) | **FSH**, **Östrogen ↑** |\n| **Ovulation** | 14 | **LH-Peak** → Follikelruptur → Oozyte (n) freigesetzt | (Übergang) | **LH-Peak** |\n| **Lutealphase** | 15–28 | **Corpus luteum** (LH) → **Progesteron ↑** + Östrogen | Sekretion (Drüsen, Glykogen) | **Progesteron ↑** |\n\n**Hormonelle Regulation:**\n- **Follikelphase:** FSH → Follikel → **Östrogen ↑** (Granulosa-Zellen, via Aromatase aus Androgenen der Theka-Zellen)\n- **Ovulation:** Östrogen ↑↑ (hoch, >2 Tage) → **positive Rückkopplung** → **LH-Peak** → Ovulation (~24–36 h später)\n- **Lutealphase:** LH → **Corpus luteum** → **Progesteron ↑** (sekretorisches Endometrium, Vorbereitung auf Implantation)\n- **Ohne Befruchtung:** Corpus luteum degeneriert → Progesteron ↓ → Menstruation\n\n**Falsch (A):** Follikelphase wird durch **FSH** (nicht LH) gesteuert und führt zu **Östrogen ↑** (nicht Progesteron). **Progesteron ↑** in Lutealphase.\n\n**Falsch (B):** Ovulation findet am **Tag 14** (Zyklusmitte) statt, nicht am letzten Tag der Menstruation (Tag 5).\n\n**Falsch (D):** **Progesteron** ist in der **Lutealphase** (nicht Follikelphase) am höchsten.\n\n**Falsch (E):** Corpus luteum wird durch **LH** (nicht FSH) aufrechterhalten. Bei Befruchtung: **hCG** (Trophoblast) erhält Corpus luteum.",
           difficulty: 2,
-          tags: [],
+          tags: ['menstruationszyklus', 'fsh', 'lh'],
         },
         {
           question: "Welche Aussage über den LH-Peak und die Ovulation ist korrekt?",
@@ -3969,7 +4638,7 @@ Das **Fortpflanzungssystem** (reproduktives System) ermöglicht:
           correctIndex: 2,
           explanation: "**Richtig (C):** **LH-Peak und Ovulation:**\n\n**Östrogen-Rückkopplung (biphasisch):**\n\n1. **Follikelphase (früh/mittel):** Östrogen **niedrig/mittel** → **negative Rückkopplung** → GnRH ↓, FSH ↓, LH ↓\n\n2. **Follikelphase (spät):** Östrogen **hoch** (>200 pg/mL, >2 Tage) → **positive Rückkopplung** → GnRH ↑ → **LH-Peak** + FSH-Peak (Hypophyse)\n\n3. **Ovulation:** **LH-Peak** (Tag 14) → Follikelruptur → Freisetzung der **sekundären Oozyte** (n, Arrest Metaphase II) → ~**24–36 h** nach LH-Peak\n\n4. **Nach Ovulation:** Follikel → **Corpus luteum** (Gelbkörper):\n   - **LH** → Corpus luteum → **Progesteron ↑** + Östrogen\n   - **Progesteron** → negative Rückkopplung → GnRH ↓, LH ↓, FSH ↓\n   - **Progesteron** → Endometrium sekretorisch (Implantations-Vorbereitung)\n\n**Mit Befruchtung:** **hCG** (humanes Choriongonadotropin, Trophoblast) → erhält Corpus luteum → Progesteron ↑ → Schwangerschaft\n\n**Ohne Befruchtung:** Corpus luteum degeneriert (Tag 28) → Progesteron ↓ → Menstruation (Tag 1)\n\n**Falsch (A):** **Hohe** (nicht niedrige) Östrogen-Spiegel führen zu positiver Rückkopplung → LH-Peak. Niedrige Östrogen-Spiegel → negative Rückkopplung.\n\n**Falsch (B):** **Östrogen** (nicht Progesteron) löst LH-Peak aus. Progesteron → negative Rückkopplung (Lutealphase).\n\n**Falsch (D):** LH-Peak **löst Ovulation aus** (nicht hemmt). Follikel rupturiert, wandelt sich zu Corpus luteum um.\n\n**Falsch (E):** Östrogen hat **biphasische** Rückkopplung: niedrig/mittel → negativ, hoch (>2 Tage) → positiv → LH-Peak.",
           difficulty: 3,
-          tags: [],
+          tags: ['lh-peak', 'ovulation', 'eisprung'],
         },
         {
           question: "Welche Aussage über das Corpus luteum ist korrekt?",
@@ -3983,7 +4652,7 @@ Das **Fortpflanzungssystem** (reproduktives System) ermöglicht:
           correctIndex: 2,
           explanation: "**Richtig (C):** **Corpus luteum** (Gelbkörper):\n\n**Entstehung:** **Nach Ovulation** (Tag 14) aus rupturiertem Follikel (Granulosa-Zellen + Theka-Zellen → luteinisiert)\n\n**Funktion:**\n- **Hormonproduktion:** **Progesteron ↑** (primär) + Östrogen (sekundär)\n- **Stimulation:** **LH** (nicht FSH) → Corpus luteum → Progesteron ↑\n- **Progesteron-Wirkung:**\n  - **Endometrium:** Sekretorischer Umbau (Drüsen, Glykogen) → Implantations-Vorbereitung\n  - **Negative Rückkopplung:** GnRH ↓, LH ↓, FSH ↓\n  - **Basaltemperatur ↑** (~0,5 °C, Lutealphase)\n\n**Schicksal:**\n\n1. **Ohne Befruchtung:**\n   - Corpus luteum degeneriert am **Zyklusende** (Tag 28, ~14 Tage Lebensdauer)\n   - Progesteron ↓ → **Menstruation** (Tag 1)\n\n2. **Mit Befruchtung:**\n   - **hCG** (humanes Choriongonadotropin, **vom Trophoblast** der Blastozyste produziert, ab Tag 6–7 nach Befruchtung)\n   - **hCG** → **erhält Corpus luteum** → Progesteron ↑ → Endometrium erhalten → **Schwangerschaft**\n   - Ab 12. SSW: Plazenta übernimmt Progesteron-Produktion → Corpus luteum nicht mehr essenziell\n\n**Falsch (A):** Corpus luteum entsteht **nach** (nicht vor) Ovulation. Produziert primär **Progesteron** (nicht Östrogen).\n\n**Falsch (B):** Corpus luteum wird durch **LH** (nicht FSH) stimuliert und produziert **Progesteron** (nicht Testosteron). Testosteron → Theka-Zellen (Follikel) → Aromatase → Östrogen.\n\n**Falsch (D):** Corpus luteum degeneriert am **Zyklusende** (Tag 28, ~14 Tage nach Ovulation), nicht sofort.\n\n**Falsch (E):** **hCG** wird vom **Trophoblast** (Blastozyste, nicht Corpus luteum) produziert, um Corpus luteum zu erhalten.",
           difficulty: 2,
-          tags: [],
+          tags: ['corpus luteum', 'progesteron', 'gelbkörper'],
           hints: [
             "Wann entsteht das Corpus luteum und was produziert es? Was hält es bei Befruchtung am Leben?",
             "Corpus luteum entsteht nach Ovulation (aus rupturiertem Follikel), produziert Progesteron (LH-stimuliert). Bei Befruchtung: hCG (vom Trophoblast, nicht Corpus luteum!) erhält das Corpus luteum → Progesteron ↑ → Endometrium erhalten."

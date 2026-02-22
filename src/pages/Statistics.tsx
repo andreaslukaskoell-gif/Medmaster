@@ -26,16 +26,41 @@ import { Progress } from "@/components/ui/progress";
 const COLORS = ["#0f766e", "#14b8a6", "#2dd4bf", "#5eead4", "#99f6e4"];
 
 const fachColors: Record<string, { bg: string; text: string; bar: string }> = {
-  biologie: { bg: "bg-emerald-50 dark:bg-emerald-900/20", text: "text-emerald-700 dark:text-emerald-400", bar: "[&>div]:bg-emerald-500" },
-  chemie: { bg: "bg-red-50 dark:bg-red-900/20", text: "text-red-700 dark:text-red-400", bar: "[&>div]:bg-red-500" },
-  physik: { bg: "bg-blue-50 dark:bg-blue-900/20", text: "text-blue-700 dark:text-blue-400", bar: "[&>div]:bg-blue-500" },
-  mathematik: { bg: "bg-violet-50 dark:bg-violet-900/20", text: "text-violet-700 dark:text-violet-400", bar: "[&>div]:bg-violet-500" },
+  biologie: {
+    bg: "bg-emerald-50 dark:bg-emerald-900/20",
+    text: "text-emerald-700 dark:text-emerald-400",
+    bar: "[&>div]:bg-emerald-500",
+  },
+  chemie: {
+    bg: "bg-red-50 dark:bg-red-900/20",
+    text: "text-red-700 dark:text-red-400",
+    bar: "[&>div]:bg-red-500",
+  },
+  physik: {
+    bg: "bg-blue-50 dark:bg-blue-900/20",
+    text: "text-blue-700 dark:text-blue-400",
+    bar: "[&>div]:bg-blue-500",
+  },
+  mathematik: {
+    bg: "bg-violet-50 dark:bg-violet-900/20",
+    text: "text-violet-700 dark:text-violet-400",
+    bar: "[&>div]:bg-violet-500",
+  },
 };
 
 const confidenceLabel: Record<string, { text: string; className: string }> = {
-  sicher: { text: "Sicher", className: "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300" },
-  unsicher: { text: "Unsicher", className: "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300" },
-  unbekannt: { text: "Unbekannt", className: "bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400" },
+  sicher: {
+    text: "Sicher",
+    className: "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300",
+  },
+  unsicher: {
+    text: "Unsicher",
+    className: "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300",
+  },
+  unbekannt: {
+    text: "Unbekannt",
+    className: "bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400",
+  },
 };
 
 export default function Statistics() {
@@ -49,7 +74,9 @@ export default function Statistics() {
   const totalQuestions = quizResults.reduce((sum, r) => sum + r.total, 0);
   const avgPct = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
 
-  const byType = quizResults.reduce<Record<string, { correct: number; total: number; count: number }>>((acc, r) => {
+  const byType = quizResults.reduce<
+    Record<string, { correct: number; total: number; count: number }>
+  >((acc, r) => {
     const key = r.type.toUpperCase();
     if (!acc[key]) acc[key] = { correct: 0, total: 0, count: 0 };
     acc[key].correct += r.score;
@@ -112,11 +139,21 @@ export default function Statistics() {
 
       {totalQuizzes === 0 ? (
         <Card>
-          <CardContent className="p-12 text-center">
-            <p className="text-muted">
-              Noch keine Quizze absolviert. Starte mit dem Lernen, um hier deine
-              Statistiken zu sehen!
+          <CardContent className="p-12 text-center space-y-4">
+            <div className="text-5xl">📊</div>
+            <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+              Noch keine Statistiken
             </p>
+            <p className="text-sm text-muted max-w-xs mx-auto">
+              Absolviere deinen ersten Test, um hier deine Lernstatistiken und Fortschritte zu
+              sehen.
+            </p>
+            <a
+              href="/simulation"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-600 text-white text-sm font-medium hover:bg-primary-700 transition-colors"
+            >
+              Erste Simulation starten →
+            </a>
           </CardContent>
         </Card>
       ) : (
@@ -213,7 +250,9 @@ export default function Statistics() {
                           <td className="py-2 px-3">{r.date}</td>
                           <td className="py-2 px-3 uppercase font-medium">{r.type}</td>
                           <td className="py-2 px-3">{r.subject || "-"}</td>
-                          <td className="py-2 px-3 text-right">{r.score}/{r.total}</td>
+                          <td className="py-2 px-3 text-right">
+                            {r.score}/{r.total}
+                          </td>
                           <td className="py-2 px-3 text-right font-bold text-primary-700">
                             {Math.round((r.score / r.total) * 100)}%
                           </td>
@@ -248,7 +287,10 @@ export default function Statistics() {
         };
         const entries = Object.entries(bySubject)
           .filter(([key]) => key in subjectMeta)
-          .sort(([, a], [, b]) => (b.total > 0 ? b.correct / b.total : 0) - (a.total > 0 ? a.correct / a.total : 0));
+          .sort(
+            ([, a], [, b]) =>
+              (b.total > 0 ? b.correct / b.total : 0) - (a.total > 0 ? a.correct / a.total : 0)
+          );
         if (entries.length === 0) return null;
         return (
           <Card>
@@ -263,8 +305,12 @@ export default function Statistics() {
                   return (
                     <div key={subj}>
                       <div className="flex items-center justify-between mb-1">
-                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{meta?.label || subj}</span>
-                        <span className="text-xs text-muted">{data.correct}/{data.total} richtig ({pct}%)</span>
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                          {meta?.label || subj}
+                        </span>
+                        <span className="text-xs text-muted">
+                          {data.correct}/{data.total} richtig ({pct}%)
+                        </span>
                       </div>
                       <Progress value={pct} className={meta?.color || ""} />
                     </div>
@@ -309,9 +355,12 @@ export default function Statistics() {
             const unpracticed = withStats.filter((x) => !x.stat || x.stat.totalAttempts === 0);
             const totalSw = stichworte.length;
             const practicedCount = practiced.length;
-            const avgRate = practiced.length > 0
-              ? Math.round(practiced.reduce((s, x) => s + x.stat!.successRate, 0) / practiced.length)
-              : 0;
+            const avgRate =
+              practiced.length > 0
+                ? Math.round(
+                    practiced.reduce((s, x) => s + x.stat!.successRate, 0) / practiced.length
+                  )
+                : 0;
             const sicherCount = practiced.filter((x) => x.stat!.confidence === "sicher").length;
             const unsicherCount = practiced.filter((x) => x.stat!.confidence === "unsicher").length;
 
@@ -320,7 +369,9 @@ export default function Statistics() {
                 {/* Summary */}
                 <div className="grid grid-cols-4 gap-3 text-center text-sm">
                   <div>
-                    <p className="text-lg font-bold text-primary-700">{practicedCount}/{totalSw}</p>
+                    <p className="text-lg font-bold text-primary-700">
+                      {practicedCount}/{totalSw}
+                    </p>
                     <p className="text-[10px] text-muted">Geübt</p>
                   </div>
                   <div>
@@ -343,15 +394,20 @@ export default function Statistics() {
                     {practiced
                       .sort((a, b) => a.stat!.successRate - b.stat!.successRate)
                       .map(({ sw, stat }) => (
-                        <div key={sw.id} className="flex items-center gap-2 py-1.5 px-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50">
+                        <div
+                          key={sw.id}
+                          className="flex items-center gap-2 py-1.5 px-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                        >
                           <div className="flex-1 min-w-0">
                             <span className="text-xs font-medium text-gray-900 dark:text-gray-100 truncate block">
                               {sw.thema}
                             </span>
                           </div>
-                          <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
-                            confidenceLabel[stat!.confidence]?.className || ""
-                          }`}>
+                          <span
+                            className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
+                              confidenceLabel[stat!.confidence]?.className || ""
+                            }`}
+                          >
                             {confidenceLabel[stat!.confidence]?.text || stat!.confidence}
                           </span>
                           <span className="text-[10px] text-muted w-12 text-right">
@@ -360,10 +416,15 @@ export default function Statistics() {
                           <div className="w-16">
                             <Progress value={stat!.successRate} className="h-1.5" />
                           </div>
-                          <span className={`text-xs font-bold w-10 text-right ${
-                            stat!.successRate >= 80 ? "text-green-600" :
-                            stat!.successRate >= 50 ? "text-amber-600" : "text-red-600"
-                          }`}>
+                          <span
+                            className={`text-xs font-bold w-10 text-right ${
+                              stat!.successRate >= 80
+                                ? "text-green-600"
+                                : stat!.successRate >= 50
+                                  ? "text-amber-600"
+                                  : "text-red-600"
+                            }`}
+                          >
                             {stat!.successRate}%
                           </span>
                         </div>

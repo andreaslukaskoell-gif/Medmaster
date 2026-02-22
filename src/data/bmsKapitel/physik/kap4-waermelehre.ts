@@ -140,7 +140,7 @@ Fiebermessung nutzt die Temperaturausdehnung (Quecksilber/Alkohol-Thermometer) o
             "Die Umrechnungsformel verbindet Kelvin und Celsius durch eine einfache Addition bzw. Subtraktion.",
             "T[°C] = T[K] − 273,15 — setze T = 310 K ein.",
           ],
-          tags: [],
+          tags: ['temperatur', 'kelvin', 'celsius'],
           difficulty: 1,
         },
         {
@@ -158,7 +158,7 @@ Fiebermessung nutzt die Temperaturausdehnung (Quecksilber/Alkohol-Thermometer) o
             "Formel: Q = m · c · ΔT. Achte auf die korrekte Einheit von m (kg, nicht g).",
             "ΔT = 80 °C − 20 °C = 60 K. Dann m = 0,5 kg einsetzen.",
           ],
-          tags: [],
+          tags: ['wärmekapazität', 'kalorimetrie', 'energie'],
           difficulty: 1,
         },
         {
@@ -176,7 +176,7 @@ Fiebermessung nutzt die Temperaturausdehnung (Quecksilber/Alkohol-Thermometer) o
             "Formel: ΔL = α · L₀ · ΔT. ΔT = 120 °C − 20 °C = 100 K.",
             "Einheiten prüfen: α ist in /K, L₀ in m, ΔT in K → ΔL in m. Dann in mm umrechnen.",
           ],
-          tags: [],
+          tags: ['wärmedehnung', 'ausdehnungskoeffizient', 'länge'],
           difficulty: 2,
         },
         {
@@ -194,7 +194,7 @@ Fiebermessung nutzt die Temperaturausdehnung (Quecksilber/Alkohol-Thermometer) o
             "Energieerhaltung: abgegebene Wärme = aufgenommene Wärme. Da c gleich, kürzt es sich heraus.",
             "T_m = (m₁·T₁ + m₂·T₂)/(m₁ + m₂) — Massen in gleicher Einheit (g oder kg), Temperaturen in °C.",
           ],
-          tags: [],
+          tags: ['mischtemperatur', 'kalorimetrie', 'wärmekapazität'],
           difficulty: 2,
         },
         {
@@ -212,7 +212,7 @@ Fiebermessung nutzt die Temperaturausdehnung (Quecksilber/Alkohol-Thermometer) o
             "Denke an die Wasserstoffbrückenstruktur des Eises: offenes hexagonales Gitter, weniger dicht als flüssiges Wasser.",
             "Zwischen 0 und 4 °C nimmt die Netzwerkbildung zu → Volumen steigt → Dichte sinkt.",
           ],
-          tags: [],
+          tags: ['wasser', 'dichteanomalie', 'wasserstoffbrücke'],
           difficulty: 2,
         },
         {
@@ -230,7 +230,7 @@ Fiebermessung nutzt die Temperaturausdehnung (Quecksilber/Alkohol-Thermometer) o
             "Formel: T[°F] = T[°C] × 1,8 + 32.",
             "39,5 × 1,8 = 71,1; dann 71,1 + 32 berechnen.",
           ],
-          tags: [],
+          tags: ['temperatur', 'fahrenheit', 'celsius'],
           difficulty: 1,
         },
         {
@@ -248,7 +248,7 @@ Fiebermessung nutzt die Temperaturausdehnung (Quecksilber/Alkohol-Thermometer) o
             "Spezifische Wärmekapazität: je höher c, desto mehr Energie braucht man pro kg und Kelvin.",
             "Vergleichswerte: Wasser 4180, Eis 2090, Eisen 450, Aluminium 900 J/(kg·K).",
           ],
-          tags: [],
+          tags: ['wärmekapazität', 'wasser', 'spezifisch'],
           difficulty: 1,
         },
       ],
@@ -400,7 +400,7 @@ Bei Fieber wird der Hypothalamus-Sollwert durch Pyrogene (z. B. IL-1, Prostaglan
             "Fouriersches Gesetz: Q̇ = λ · A · ΔT / d. Einheiten prüfen: λ in W/(m·K), A in m², ΔT in K, d in m → Ergebnis in W.",
             "ΔT = 37 − 33 = 4 K, d = 2 cm = 0,02 m einsetzen.",
           ],
-          tags: [],
+          tags: ['wärmeleitung', 'fouriergesetz', 'wärmestrom'],
           difficulty: 2,
         },
         {
@@ -418,7 +418,7 @@ Bei Fieber wird der Hypothalamus-Sollwert durch Pyrogene (z. B. IL-1, Prostaglan
             "Niedrige Wärmeleitfähigkeit λ = gute Isolation. Was enthält viel eingeschlossene Luft?",
             "Luft hat λ ≈ 0,026 W/(m·K) — die niedrigste aller gängigen Stoffe. Materialien, die Luft einschließen, isolieren gut.",
           ],
-          tags: [],
+          tags: ['isolation', 'wärmeleitfähigkeit', 'verbände'],
           difficulty: 1,
         },
         {
@@ -436,7 +436,7 @@ Bei Fieber wird der Hypothalamus-Sollwert durch Pyrogene (z. B. IL-1, Prostaglan
             "Stefan-Boltzmann: P ∝ T⁴. Wichtig: T muss in Kelvin angegeben werden.",
             "P₂/P₁ = (T₂/T₁)⁴ = (315/310)⁴ berechnen. (315/310) ≈ 1,016.",
           ],
-          tags: [],
+          tags: ['wärmestrahlung', 'stefan-boltzmann', 'temperatur'],
           difficulty: 3,
         },
         {
@@ -454,7 +454,7 @@ Bei Fieber wird der Hypothalamus-Sollwert durch Pyrogene (z. B. IL-1, Prostaglan
             "Schweißverdunstung: Wasser braucht Energie zum Phasenwechsel (flüssig → gasförmig) — diese Energie stammt aus dem Körper.",
             "Latente Wärme/Verdampfungsenthalpie des Wassers bei 37 °C ≈ 2440 J/g.",
           ],
-          tags: [],
+          tags: ['verdunstungskühlung', 'schwitzen', 'thermoregulation'],
           difficulty: 1,
         },
         {
@@ -472,7 +472,7 @@ Bei Fieber wird der Hypothalamus-Sollwert durch Pyrogene (z. B. IL-1, Prostaglan
             "Denke an das Oberfläche/Volumen-Verhältnis: kleine Körper haben relativ mehr Oberfläche.",
             "Wärmeabgabe ∝ Oberfläche A; Wärmeerzeugung ∝ Volumen V. Frühgeborene haben weniger Fett (Isolation).",
           ],
-          tags: [],
+          tags: ['thermoregulation', 'frühgeborene', 'oberfläche-volumen'],
           difficulty: 2,
         },
         {
@@ -490,7 +490,7 @@ Bei Fieber wird der Hypothalamus-Sollwert durch Pyrogene (z. B. IL-1, Prostaglan
             "Natürlich = Auftrieb durch Dichteunterschiede (warm leichter, kalt schwerer).",
             "Erzwungen = externe Pumpe oder Gebläse treibt die Strömung an.",
           ],
-          tags: [],
+          tags: ['konvektion', 'wärmeübertragung', 'strömung'],
           difficulty: 2,
         },
         {
@@ -508,7 +508,7 @@ Bei Fieber wird der Hypothalamus-Sollwert durch Pyrogene (z. B. IL-1, Prostaglan
             "Stefan-Boltzmann: Jeder Körper strahlt elektromagnetische Wellen ab, deren Intensität mit T⁴ steigt.",
             "Wien: Bei 37 °C (310 K) liegt das Maximum der Emission im Infrarotbereich bei λ ≈ 9,4 μm.",
           ],
-          tags: [],
+          tags: ['thermografie', 'infrarotstrahlung', 'diagnostik'],
           difficulty: 2,
         },
       ],
@@ -646,7 +646,7 @@ Beim absoluten Nullpunkt (0 K) ist die Entropie eines perfekten Kristalls null: 
             "Isochor: V = const → Volumenänderung ΔV = 0 → Arbeit W = p·ΔV = 0.",
             "1. Hauptsatz: ΔU = Q + W. Wenn W = 0, dann ΔU = Q.",
           ],
-          tags: [],
+          tags: ['thermodynamik', 'isochor', 'erster-hauptsatz'],
           difficulty: 1,
         },
         {
@@ -664,7 +664,7 @@ Beim absoluten Nullpunkt (0 K) ist die Entropie eines perfekten Kristalls null: 
             "Carnot: η = 1 − T_kalt/T_warm. T muss in Kelvin angegeben sein.",
             "Beide Temperaturen sind schon in Kelvin: η = 1 − 250/500.",
           ],
-          tags: [],
+          tags: ['carnot', 'wirkungsgrad', 'wärmekraftmaschine'],
           difficulty: 1,
         },
         {
@@ -682,7 +682,7 @@ Beim absoluten Nullpunkt (0 K) ist die Entropie eines perfekten Kristalls null: 
             "Adiabatisch: Q = 0. Kompression: Arbeit wird am Gas verrichtet → W > 0.",
             "ΔU = Q + W = 0 + W > 0 → innere Energie steigt → Temperatur steigt.",
           ],
-          tags: [],
+          tags: ['adiabatisch', 'kompression', 'temperatur'],
           difficulty: 2,
         },
         {
@@ -700,7 +700,7 @@ Beim absoluten Nullpunkt (0 K) ist die Entropie eines perfekten Kristalls null: 
             "Energie kann nicht erzeugt oder vernichtet werden — nur umgewandelt (1. Hauptsatz).",
             "Der Körper nutzt chemische Energie der Nahrung (Glucose, Fette) als Quelle.",
           ],
-          tags: [],
+          tags: ['energieerhaltung', 'erster-hauptsatz', 'thermodynamik'],
           difficulty: 1,
         },
         {
@@ -718,7 +718,7 @@ Beim absoluten Nullpunkt (0 K) ist die Entropie eines perfekten Kristalls null: 
             "Wirkungsgrad 38 % bedeutet: Von 100 % Nahrungsenergie werden 38 % nutzbar (ATP), der Rest?",
             "Thermodynamisches Prinzip: Nicht nutzbare Energie wird als Wärme abgegeben (2. Hauptsatz).",
           ],
-          tags: [],
+          tags: ['atp-synthese', 'wirkungsgrad', 'thermodynamik'],
           difficulty: 2,
         },
         {
@@ -736,7 +736,7 @@ Beim absoluten Nullpunkt (0 K) ist die Entropie eines perfekten Kristalls null: 
             "ΔS ≥ 0 für abgeschlossene Systeme — Entropie kann nicht abnehmen.",
             "Wärme fließt spontan von warm nach kalt (nicht umgekehrt) — das ist die Clausius-Formulierung des 2. Hauptsatzes.",
           ],
-          tags: [],
+          tags: ['entropie', 'zweiter-hauptsatz', 'irreversibilität'],
           difficulty: 2,
         },
         {
@@ -754,7 +754,7 @@ Beim absoluten Nullpunkt (0 K) ist die Entropie eines perfekten Kristalls null: 
             "Nutzarbeit: W = Q_warm − Q_kalt. Wirkungsgrad: η = W/Q_warm.",
             "W = 800 − 500 = 300 J. η = 300/800.",
           ],
-          tags: [],
+          tags: ['wärmekraftmaschine', 'wirkungsgrad', 'thermodynamik'],
           difficulty: 2,
         },
       ],
@@ -905,7 +905,7 @@ Konsequenzen:
             "Isochor: V = const. Aus pV = nRT folgt p/T = const, also p₁/T₁ = p₂/T₂.",
             "Temperaturen in Kelvin umrechnen: T₁ = 300 K, T₂ = 400 K. Dann p₂ berechnen.",
           ],
-          tags: [],
+          tags: ['ideales-gas', 'isochor', 'zustandsänderung'],
           difficulty: 2,
         },
         {
@@ -923,7 +923,7 @@ Konsequenzen:
             "Latentwärme beim Schmelzen: Q = m · L_f. m = 200 g = 0,2 kg einsetzen.",
             "L_f = 334 kJ/kg = 334 000 J/kg. Berechnen: 0,2 × 334 000.",
           ],
-          tags: [],
+          tags: ['schmelzwärme', 'phasenübergang', 'eis'],
           difficulty: 1,
         },
         {
@@ -941,7 +941,7 @@ Konsequenzen:
             "Henry-Gesetz: mehr Druck → mehr Gas löst sich. Bei Druckabfall: Was passiert mit dem gelösten Gas?",
             "Analogie: Öffnet man eine Sprudelflasche langsam oder schnell — was passiert mit dem gelösten CO₂?",
           ],
-          tags: [],
+          tags: ['henry-gesetz', 'tauchen', 'dekompression'],
           difficulty: 2,
         },
         {
@@ -959,7 +959,7 @@ Konsequenzen:
             "Siedepunkt des Wassers hängt vom Außendruck ab: höherer Druck → höherer Siedepunkt.",
             "Warum reicht 100 °C nicht zur Sterilisation? Bakteriensporen überleben kochendes Wasser.",
           ],
-          tags: [],
+          tags: ['siedepunkt', 'autoklav', 'dampfdruck'],
           difficulty: 2,
         },
         {
@@ -977,7 +977,7 @@ Konsequenzen:
             "V = nRT/p. n = 1 mol, T = 273,15 K (0 °C in Kelvin!), p = 101 325 Pa.",
             "Ergebnis in m³ → Umrechnung in Liter: 1 m³ = 1000 L.",
           ],
-          tags: [],
+          tags: ['ideales-gas', 'molvolumen', 'normzustand'],
           difficulty: 1,
         },
         {
@@ -995,7 +995,7 @@ Konsequenzen:
             "Sieden: Dampfdruck = Außendruck. Bei kleinerem Außendruck ist schon bei niedrigerer Temperatur p_D = p_Außen.",
             "Auf Höhe ist der Luftdruck niedriger → Wasser siedet bei niedrigerer Temperatur.",
           ],
-          tags: [],
+          tags: ['siedepunkt', 'dampfdruck', 'höhe'],
           difficulty: 1,
         },
         {
@@ -1013,7 +1013,7 @@ Konsequenzen:
             "Verdampfungswärme: Q = m · L_v. Einheit von L_v beachten: J/kg oder kJ/kg.",
             "m = 1 kg, L_v = 2 260 000 J/kg (oder 2260 kJ/kg).",
           ],
-          tags: [],
+          tags: ['verdampfungswärme', 'phasenübergang', 'wasser'],
           difficulty: 1,
         },
       ],

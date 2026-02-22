@@ -1,7 +1,7 @@
 import { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, BookOpen, CheckCircle2, Flame } from "lucide-react";
+import { Search, BookOpen, CheckCircle2, Flame, Clock } from "lucide-react";
 import { alleKapitel } from "@/data/bmsKapitel";
 import type { Kapitel, Unterkapitel } from "@/data/bmsKapitel/types";
 import { pathForChapter } from "@/lib/bmsRoutes";
@@ -41,14 +41,16 @@ const searchIndex = buildSearchIndex();
 function filterItems(query: string): SearchItem[] {
   const q = query.trim().toLowerCase();
   if (!q) return searchIndex.slice(0, 30);
-  return searchIndex.filter((item) => {
-    if (item.type === "chapter") {
-      return item.kapitel.title.toLowerCase().includes(q);
-    }
-    const titleMatch = item.unterkapitel.title.toLowerCase().includes(q);
-    const chapterMatch = item.kapitel.title.toLowerCase().includes(q);
-    return titleMatch || chapterMatch;
-  }).slice(0, 40);
+  return searchIndex
+    .filter((item) => {
+      if (item.type === "chapter") {
+        return item.kapitel.title.toLowerCase().includes(q);
+      }
+      const titleMatch = item.unterkapitel.title.toLowerCase().includes(q);
+      const chapterMatch = item.kapitel.title.toLowerCase().includes(q);
+      return titleMatch || chapterMatch;
+    })
+    .slice(0, 40);
 }
 
 interface CommandPaletteProps {
@@ -64,6 +66,21 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
   const listRef = useRef<HTMLDivElement>(null);
   const { completedChapters, streak } = useStore();
   const setResumeToUnterkapitelId = useAdaptiveStore((s) => s.setResumeToUnterkapitelId);
+  const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
+  const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
+
+  const lastViewedItem = useMemo<SearchItem | null>(() => {
+    if (!lastViewedKapitelId) return null;
+    const kap = alleKapitel.find((k) => k.id === lastViewedKapitelId);
+    if (!kap) return null;
+    if (lastViewedUnterkapitelId) {
+      const uks = kap.unterkapitel && Array.isArray(kap.unterkapitel) ? kap.unterkapitel : [];
+      const idx = uks.findIndex((u) => u.id === lastViewedUnterkapitelId);
+      if (idx >= 0)
+        return { type: "unterkapitel", kapitel: kap, unterkapitel: uks[idx], index: idx };
+    }
+    return { type: "chapter", kapitel: kap };
+  }, [lastViewedKapitelId, lastViewedUnterkapitelId]);
 
   const results = useMemo(() => filterItems(query), [query]);
 
@@ -160,13 +177,31 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
               className="flex-1 bg-transparent text-sm outline-none text-midnight dark:text-slate-100 placeholder:text-slate-400"
               aria-label="Suche"
             />
-            <kbd className="hidden sm:inline text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-500 px-2 py-1 rounded">Esc</kbd>
+            <kbd className="hidden sm:inline text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-500 px-2 py-1 rounded">
+              Esc
+            </kbd>
           </div>
 
           <div ref={listRef} className="max-h-[min(60vh,320px)] overflow-y-auto p-2">
+            {/* Zuletzt besucht — shown only when query is empty */}
+            {!query.trim() && lastViewedItem && (
+              <div className="mb-1">
+                <p className="flex items-center gap-1.5 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+                  <Clock className="w-3 h-3" /> Zuletzt besucht
+                </p>
+                <ResultRow
+                  key="last-viewed"
+                  item={lastViewedItem}
+                  isSelected={false}
+                  completedChapters={completedChapters}
+                  onSelect={() => selectItem(lastViewedItem)}
+                />
+                <div className="my-1 border-t border-slate-100 dark:border-slate-800" />
+              </div>
+            )}
             {results.length === 0 ? (
               <div className="py-8 text-center text-sm text-slate-500 dark:text-slate-400">
-                {query.trim() ? "Keine Treffer. Tippe z.B. einen Kapitel- oder Unterkapitel-Titel." : "Tippe mindestens ein Zeichen zum Suchen."}
+                Keine Treffer. Tippe z.B. einen Kapitel- oder Unterkapitel-Titel.
               </div>
             ) : (
               results.map((item, i) => (
@@ -213,7 +248,8 @@ function ResultRow({
   let progressBadge: "done" | "partial" | null = null;
 
   if (isChapter) {
-    const uks = kapitel.unterkapitel && Array.isArray(kapitel.unterkapitel) ? kapitel.unterkapitel : [];
+    const uks =
+      kapitel.unterkapitel && Array.isArray(kapitel.unterkapitel) ? kapitel.unterkapitel : [];
     const total = uks.length;
     const done = uks.filter((u) => u?.id && completedChapters.includes(u.id)).length;
     if (total > 0) {
@@ -237,7 +273,9 @@ function ResultRow({
       whileHover={{ scale: 1.005 }}
       whileTap={{ scale: 0.995 }}
       className={`w-full text-left px-3 py-2.5 rounded-xl flex items-center gap-3 cursor-pointer transition-colors ${
-        isSelected ? "bg-primary-500/10 dark:bg-primary-500/20 text-midnight dark:text-slate-100" : "hover:bg-slate-50 dark:hover:bg-slate-800/50"
+        isSelected
+          ? "bg-primary-500/10 dark:bg-primary-500/20 text-midnight dark:text-slate-100"
+          : "hover:bg-slate-50 dark:hover:bg-slate-800/50"
       }`}
       onClick={onSelect}
     >
@@ -256,7 +294,9 @@ function ResultRow({
               : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400"
           }`}
         >
-          {progressBadge === "done" && !progressLabel.includes("/") ? <CheckCircle2 className="w-3 h-3 inline mr-1 -mt-0.5" /> : null}
+          {progressBadge === "done" && !progressLabel.includes("/") ? (
+            <CheckCircle2 className="w-3 h-3 inline mr-1 -mt-0.5" />
+          ) : null}
           {progressLabel}
         </span>
       )}

@@ -51,43 +51,43 @@ export const glossaryEntries: GlossaryEntry[] = [
   { term: "Bindegewebe", chapterId: "bio-kap2", subject: "biologie", description: "Stützgewebe mit Kollagen; verbindet andere Gewebe." },
 
   // ============= BIOLOGIE – Anatomie & Physiologie (bio-kap3) =============
-  { term: "Neurotransmitter", chapterId: "bio-kap3", subject: "biologie", description: "Botenstoffe zur chemischen Signalübertragung an Synapsen." },
-  { term: "Hämoglobin", chapterId: "bio-kap3", subject: "biologie", description: "Sauerstofftransportprotein in roten Blutkörperchen." },
-  { term: "Aktionspotential", chapterId: "bio-kap3", subject: "biologie", description: "Elektrischer Impuls entlang einer Nervenzelle." },
-  { term: "Synapse", chapterId: "bio-kap3", subject: "biologie", description: "Kontaktstelle zwischen zwei Neuronen oder Neuron und Muskel." },
+  { term: "Neurotransmitter", chapterId: "bio-kap2", subject: "biologie", description: "Botenstoffe zur chemischen Signalübertragung an Synapsen." },
+  { term: "Hämoglobin", chapterId: "bio-kap2", subject: "biologie", description: "Sauerstofftransportprotein in roten Blutkörperchen." },
+  { term: "Aktionspotential", chapterId: "bio-kap2", subject: "biologie", description: "Elektrischer Impuls entlang einer Nervenzelle." },
+  { term: "Synapse", chapterId: "bio-kap2", subject: "biologie", description: "Kontaktstelle zwischen zwei Neuronen oder Neuron und Muskel." },
 
   // ============= BIOLOGIE – Klassische Genetik (bio-kap5) =============
-  { term: "Phänotyp", chapterId: "bio-kap5", subject: "biologie", description: "Äußeres Erscheinungsbild; resultiert aus Genotyp + Umwelt." },
-  { term: "Genotyp", chapterId: "bio-kap5", subject: "biologie", description: "Gesamtheit der genetischen Anlagen eines Organismus." },
-  { term: "Allele", chapterId: "bio-kap5", subject: "biologie", description: "Alternative Formen eines Gens; bestimmen das Phänotyp." },
-  { term: "Allel", chapterId: "bio-kap5", subject: "biologie", description: "Alternative Form eines Gens; dominant oder rezessiv." },
+  { term: "Phänotyp", chapterId: "bio-kap4", subject: "biologie", description: "Äußeres Erscheinungsbild; resultiert aus Genotyp + Umwelt." },
+  { term: "Genotyp", chapterId: "bio-kap4", subject: "biologie", description: "Gesamtheit der genetischen Anlagen eines Organismus." },
+  { term: "Allele", chapterId: "bio-kap4", subject: "biologie", description: "Alternative Formen eines Gens; bestimmen das Phänotyp." },
+  { term: "Allel", chapterId: "bio-kap4", subject: "biologie", description: "Alternative Form eines Gens; dominant oder rezessiv." },
 
   // ============= BIOLOGIE – Molekulargenetik (bio-kap6) =============
-  { term: "Transkription", chapterId: "bio-kap6", subject: "biologie", description: "Umschreibung von DNA in mRNA im Zellkern." },
-  { term: "Translation", chapterId: "bio-kap6", subject: "biologie", description: "Synthese eines Proteins nach mRNA-Vorlage am Ribosom." },
-  { term: "mRNA", chapterId: "bio-kap6", subject: "biologie", description: "Boten-RNA; überträgt genetische Info vom Kern zu den Ribosomen." },
-  { term: "RNA", chapterId: "bio-kap6", subject: "biologie", description: "Ribonukleinsäure; vermittelt zwischen DNA und Protein." },
-  { term: "DNA", chapterId: "bio-kap6", subject: "biologie", description: "Desoxyribonukleinsäure; Träger der genetischen Information." },
-  { term: "Codon", chapterId: "bio-kap6", subject: "biologie", description: "Drei-Basen-Folge der mRNA, die eine Aminosäure codiert." },
-  { term: "Mutation", chapterId: "bio-kap6", subject: "biologie", description: "Dauerhafte Veränderung der DNA-Sequenz." },
+  { term: "Transkription", chapterId: "bio-kap4", subject: "biologie", description: "Umschreibung von DNA in mRNA im Zellkern." },
+  { term: "Translation", chapterId: "bio-kap4", subject: "biologie", description: "Synthese eines Proteins nach mRNA-Vorlage am Ribosom." },
+  { term: "mRNA", chapterId: "bio-kap4", subject: "biologie", description: "Boten-RNA; überträgt genetische Info vom Kern zu den Ribosomen." },
+  { term: "RNA", chapterId: "bio-kap4", subject: "biologie", description: "Ribonukleinsäure; vermittelt zwischen DNA und Protein." },
+  { term: "DNA", chapterId: "bio-kap4", subject: "biologie", description: "Desoxyribonukleinsäure; Träger der genetischen Information." },
+  { term: "Codon", chapterId: "bio-kap4", subject: "biologie", description: "Drei-Basen-Folge der mRNA, die eine Aminosäure codiert." },
+  { term: "Mutation", chapterId: "bio-kap4", subject: "biologie", description: "Dauerhafte Veränderung der DNA-Sequenz." },
 
   // ============= BIOLOGIE – Entwicklungsbiologie (bio-kap4) =============
-  { term: "Entwicklungsbiologie", chapterId: "bio-kap4", subject: "biologie", description: "Lehre von der Individualentwicklung und Ontogenese." },
+  { term: "Entwicklungsbiologie", chapterId: "bio-kap3", subject: "biologie", description: "Lehre von der Individualentwicklung und Ontogenese." },
 
   // ============= BIOLOGIE – Methoden der Genetik (bio-kap7) =============
-  { term: "PCR-Verfahren", chapterId: "bio-kap7", subject: "biologie", description: "Polymerase-Kettenreaktion zur DNA-Vervielfältigung." },
+  { term: "PCR-Verfahren", chapterId: "bio-kap4", subject: "biologie", description: "Polymerase-Kettenreaktion zur DNA-Vervielfältigung." },
 
   // ============= BIOLOGIE – Humangenetik (bio-kap8) =============
-  { term: "Humangenetik", chapterId: "bio-kap8", subject: "biologie", description: "Genetik des Menschen; Analyse menschlicher Erbanlagen." },
+  { term: "Humangenetik", chapterId: "bio-kap4", subject: "biologie", description: "Genetik des Menschen; Analyse menschlicher Erbanlagen." },
 
   // ============= BIOLOGIE – Evolution (bio-kap9) =============
-  { term: "Evolution", chapterId: "bio-kap9", subject: "biologie", description: "Veränderung von Organismen über Generationen hinweg." },
+  { term: "Evolution", chapterId: "bio-kap3", subject: "biologie", description: "Veränderung von Organismen über Generationen hinweg." },
 
   // ============= BIOLOGIE – Ökologie (bio-kap10) =============
-  { term: "Ökologie", chapterId: "bio-kap10", subject: "biologie", description: "Lehre von Organismen und ihrer Umwelt." },
+  { term: "Ökologie", chapterId: "bio-kap5", subject: "biologie", description: "Lehre von Organismen und ihrer Umwelt." },
 
   // ============= BIOLOGIE – Immunologie (bio-kap11) =============
-  { term: "Antikörper", chapterId: "bio-kap11", subject: "biologie", description: "Immunoglobuline; Proteine zur Antigen-Erkennung." },
+  { term: "Antikörper", chapterId: "bio-kap5", subject: "biologie", description: "Immunoglobuline; Proteine zur Antigen-Erkennung." },
 
   // ============= CHEMIE – Atombau (chem-kap1) =============
   { term: "Elektronen", chapterId: "chem-kap1", subject: "chemie", description: "Negativ geladene Teilchen; bilden die Atomhülle." },
@@ -96,41 +96,41 @@ export const glossaryEntries: GlossaryEntry[] = [
   { term: "Neutron", chapterId: "chem-kap1", subject: "chemie", description: "Ungeladenes Teilchen im Atomkern; bestimmt Isotope." },
 
   // ============= CHEMIE – Mikrokosmos (chem-kap2) =============
-  { term: "Mikrokosmos", chapterId: "chem-kap2", subject: "chemie", description: "Die Welt der kleinsten Teilchen und Atome." },
+  { term: "Mikrokosmos", chapterId: "chem-kap1", subject: "chemie", description: "Die Welt der kleinsten Teilchen und Atome." },
 
   // ============= CHEMIE – Gasgesetze (chem-kap3) =============
-  { term: "Gasgesetze", chapterId: "chem-kap3", subject: "chemie", description: "Gesetze der idealen Gase; Boyle, Charles, Gay-Lussac." },
+  { term: "Gasgesetze", chapterId: "chem-kap2", subject: "chemie", description: "Gesetze der idealen Gase; Boyle, Charles, Gay-Lussac." },
 
   // ============= CHEMIE – Aggregatzustände (chem-kap4) =============
-  { term: "Aggregatzustände", chapterId: "chem-kap4", subject: "chemie", description: "Fest, flüssig, gasförmig; Phasenzustände der Materie." },
+  { term: "Aggregatzustände", chapterId: "chem-kap2", subject: "chemie", description: "Fest, flüssig, gasförmig; Phasenzustände der Materie." },
 
   // ============= CHEMIE – Periodensystem (chem-kap5) =============
-  { term: "Periodensystem", chapterId: "chem-kap5", subject: "chemie", description: "Systematische Ordnung aller chemischen Elemente." },
+  { term: "Periodensystem", chapterId: "chem-kap1", subject: "chemie", description: "Systematische Ordnung aller chemischen Elemente." },
 
   // ============= CHEMIE – Chemische Bindung (chem-kap6) =============
-  { term: "Ionenbindung", chapterId: "chem-kap6", subject: "chemie", description: "Elektrostatische Anziehung zwischen Kation und Anion." },
-  { term: "Kovalente Bindung", chapterId: "chem-kap6", subject: "chemie", description: "Chemische Bindung durch gemeinsame Elektronenpaare." },
+  { term: "Ionenbindung", chapterId: "chem-kap3", subject: "chemie", description: "Elektrostatische Anziehung zwischen Kation und Anion." },
+  { term: "Kovalente Bindung", chapterId: "chem-kap3", subject: "chemie", description: "Chemische Bindung durch gemeinsame Elektronenpaare." },
 
   // ============= CHEMIE – Chemische Reaktionen (chem-kap7) =============
-  { term: "Katalysator", chapterId: "chem-kap7", subject: "chemie", description: "Stoff, der die Aktivierungsenergie einer Reaktion senkt." },
+  { term: "Katalysator", chapterId: "chem-kap4", subject: "chemie", description: "Stoff, der die Aktivierungsenergie einer Reaktion senkt." },
 
   // ============= CHEMIE – Chemisches Gleichgewicht (chem-kap8) =============
-  { term: "Gleichgewicht", chapterId: "chem-kap8", subject: "chemie", description: "Dynamisches chemisches Gleichgewicht; Hin- und Rückreaktion." },
+  { term: "Gleichgewicht", chapterId: "chem-kap4", subject: "chemie", description: "Dynamisches chemisches Gleichgewicht; Hin- und Rückreaktion." },
 
   // ============= CHEMIE – Säure-Base (chem-kap10) =============
-  { term: "pH-Wert", chapterId: "chem-kap10", subject: "chemie", description: "Maß für den Säure- oder Basencharakter einer Lösung." },
-  { term: "Säure", chapterId: "chem-kap10", subject: "chemie", description: "Protonendonator; gibt H⁺-Ionen ab." },
-  { term: "Base", chapterId: "chem-kap10", subject: "chemie", description: "Protonenakzeptor; nimmt H⁺-Ionen auf." },
+  { term: "pH-Wert", chapterId: "chem-kap5", subject: "chemie", description: "Maß für den Säure- oder Basencharakter einer Lösung." },
+  { term: "Säure", chapterId: "chem-kap5", subject: "chemie", description: "Protonendonator; gibt H⁺-Ionen ab." },
+  { term: "Base", chapterId: "chem-kap5", subject: "chemie", description: "Protonenakzeptor; nimmt H⁺-Ionen auf." },
 
   // ============= CHEMIE – Redox-Reaktionen (chem-kap11) =============
-  { term: "Reduktion", chapterId: "chem-kap11", subject: "chemie", description: "Aufnahme von Elektronen oder Abgabe von Sauerstoff." },
-  { term: "Oxidation", chapterId: "chem-kap11", subject: "chemie", description: "Abgabe von Elektronen oder Aufnahme von Sauerstoff." },
+  { term: "Reduktion", chapterId: "chem-kap5", subject: "chemie", description: "Aufnahme von Elektronen oder Abgabe von Sauerstoff." },
+  { term: "Oxidation", chapterId: "chem-kap5", subject: "chemie", description: "Abgabe von Elektronen oder Aufnahme von Sauerstoff." },
 
   // ============= CHEMIE – Naturstoffe (chem-kap13) =============
-  { term: "Proteine", chapterId: "chem-kap13", subject: "chemie", description: "Makromoleküle aus Aminosäuren; Struktur- und Funktionsmoleküle." },
-  { term: "Protein", chapterId: "chem-kap13", subject: "chemie", description: "Makromolekül aus Aminosäuren; vielfältige Zellfunktionen." },
-  { term: "Aminosäuren", chapterId: "chem-kap13", subject: "chemie", description: "Grundbausteine der Proteine; 20 proteinogene AS." },
-  { term: "Aminosäure", chapterId: "chem-kap13", subject: "chemie", description: "Grundbaustein der Proteine; enthält Amino- und Carboxylgruppe." },
+  { term: "Proteine", chapterId: "chem-kap6", subject: "chemie", description: "Makromoleküle aus Aminosäuren; Struktur- und Funktionsmoleküle." },
+  { term: "Protein", chapterId: "chem-kap6", subject: "chemie", description: "Makromolekül aus Aminosäuren; vielfältige Zellfunktionen." },
+  { term: "Aminosäuren", chapterId: "chem-kap6", subject: "chemie", description: "Grundbausteine der Proteine; 20 proteinogene AS." },
+  { term: "Aminosäure", chapterId: "chem-kap6", subject: "chemie", description: "Grundbaustein der Proteine; enthält Amino- und Carboxylgruppe." },
 
   // ============= PHYSIK – Größen und Einheiten (phys-kap1) =============
   { term: "Größen", chapterId: "phys-kap1", subject: "physik", description: "Physikalische Größen; messbare Eigenschaften der Natur." },
@@ -181,13 +181,13 @@ export const glossaryEntries: GlossaryEntry[] = [
   { term: "Vektor", chapterId: "math-kap6", subject: "mathematik", description: "Mathematisches Objekt mit Betrag und Richtung." },
 
   // ============= BIOLOGIE – Zellteilung (Mitose/Meiose) =============
-  { term: "Zentromere", chapterId: "bio-kap5", subject: "biologie", description: "Engstellen der Chromosomen; Ansatzpunkte der Spindelfasern." },
-  { term: "Zentromer", chapterId: "bio-kap5", subject: "biologie", description: "Engstelle des Chromosoms; Ansatzpunkt der Spindelfasern." },
-  { term: "Chromatin", chapterId: "bio-kap5", subject: "biologie", description: "Unkondensiertes DNA-Protein-Gemisch im Zellkern." },
-  { term: "Chromosomen", chapterId: "bio-kap5", subject: "biologie", description: "DNA-Protein-Komplexe; Träger der Erbinformation." },
-  { term: "Chromosom", chapterId: "bio-kap5", subject: "biologie", description: "DNA-Protein-Komplex; Träger der Erbinformation." },
-  { term: "Meiose", chapterId: "bio-kap5", subject: "biologie", description: "Reifeteilung zur Bildung von Keimzellen (Haploidie)." },
-  { term: "Mitose", chapterId: "bio-kap5", subject: "biologie", description: "Kernteilung mit Bildung zweier identischer Tochterzellen." },
+  { term: "Zentromere", chapterId: "bio-kap4", subject: "biologie", description: "Engstellen der Chromosomen; Ansatzpunkte der Spindelfasern." },
+  { term: "Zentromer", chapterId: "bio-kap4", subject: "biologie", description: "Engstelle des Chromosoms; Ansatzpunkt der Spindelfasern." },
+  { term: "Chromatin", chapterId: "bio-kap4", subject: "biologie", description: "Unkondensiertes DNA-Protein-Gemisch im Zellkern." },
+  { term: "Chromosomen", chapterId: "bio-kap4", subject: "biologie", description: "DNA-Protein-Komplexe; Träger der Erbinformation." },
+  { term: "Chromosom", chapterId: "bio-kap4", subject: "biologie", description: "DNA-Protein-Komplex; Träger der Erbinformation." },
+  { term: "Meiose", chapterId: "bio-kap4", subject: "biologie", description: "Reifeteilung zur Bildung von Keimzellen (Haploidie)." },
+  { term: "Mitose", chapterId: "bio-kap4", subject: "biologie", description: "Kernteilung mit Bildung zweier identischer Tochterzellen." },
 
   // ============= BIOLOGIE – Stoffwechsel =============
   { term: "Photosynthese", chapterId: "bio-kap1", subject: "biologie", description: "Umwandlung von Lichtenergie in chemische Energie (Glukose)." },
