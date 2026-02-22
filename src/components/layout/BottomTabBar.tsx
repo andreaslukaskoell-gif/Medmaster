@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import { LayoutDashboard, BookOpen, User } from "lucide-react";
+import { LayoutDashboard, BookOpen, Timer, BarChart3 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const tabs = [
   { to: "/", label: "Home", icon: LayoutDashboard },
-  { to: "/bms", label: "Training", icon: BookOpen },
-  { to: "/performance", label: "Profil", icon: User },
+  { to: "/bms", label: "Lernen", icon: BookOpen },
+  { to: "/simulation", label: "Test", icon: Timer },
+  { to: "/performance", label: "Stats", icon: BarChart3 },
 ] as const;
 
 export function BottomTabBar() {
@@ -16,7 +17,7 @@ export function BottomTabBar() {
       aria-label="Hauptnavigation"
     >
       <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border-t border-slate-200/80 dark:border-slate-700/50 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] dark:shadow-[0_-4px_20px_rgba(0,0,0,0.2)] pb-[env(safe-area-inset-bottom)]">
-        <div className="grid grid-cols-3 h-14 max-w-lg mx-auto">
+        <div className="grid grid-cols-4 h-14 max-w-lg mx-auto">
           {tabs.map(({ to, label, icon: Icon }) => (
             <NavLink
               key={to}

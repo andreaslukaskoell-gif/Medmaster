@@ -33,6 +33,8 @@ import {
   Calculator,
   Settings,
   Sparkles,
+  Dumbbell,
+  BookMarked,
   Lock,
   Trophy,
 } from "lucide-react";
@@ -85,10 +87,13 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
     id: "training",
     title: "TRAINING",
     items: [
-      { to: "/ai-tutor",     icon: MessageCircle, label: "AI-Tutor",    iconColor: "text-purple-500", highlight: true, requiredLevel: 5 },
-      { to: "/simulation",   icon: Timer,         label: "Simulation",  iconColor: "text-orange-500", requiredLevel: 15 },
+      { to: "/ai-tutor",     icon: MessageCircle, label: "AI-Tutor",    iconColor: "text-purple-500", highlight: true, requiredLevel: 0 },
+      { to: "/simulation",   icon: Timer,         label: "Simulation",  iconColor: "text-orange-500", requiredLevel: 0 },
       { to: "/wissencheck",  icon: BookOpen,      label: "Wissenscheck", iconColor: "text-[var(--accent-bio)]" },
       { to: "/stichwortliste", icon: ListChecks,  label: "Stichwortliste", iconColor: "text-[var(--accent-bio)]" },
+      { to: "/karteikarten", icon: Layers, label: "Karteikarten", iconColor: "text-emerald-500" },
+      { to: "/fragen-trainer", icon: Dumbbell, label: "Fragen-Trainer", iconColor: "text-violet-500" },
+      { to: "/formelsammlung", icon: BookMarked, label: "Formelsammlung", iconColor: "text-teal-500" },
       { to: "/notizen",      icon: StickyNote,    label: "Notizen" },
     ],
   },
@@ -100,7 +105,7 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
       { to: "/prognose",     icon: TrendingUp, label: "Prognose" },
       { to: "/statistik",    icon: BarChart3,  label: "Statistik" },
       { to: "/analyse",      icon: Radar,      label: "Analyse" },
-      { to: "/schwachstellen", icon: Target,   label: "Schwachstellen", iconColor: "text-rose-500", requiredLevel: 10 },
+      { to: "/schwachstellen", icon: Target,   label: "Schwachstellen", iconColor: "text-rose-500", requiredLevel: 0 },
     ],
   },
   {

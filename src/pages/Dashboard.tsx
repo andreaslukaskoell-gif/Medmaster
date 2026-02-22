@@ -1,7 +1,7 @@
 import { useMemo, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Award, Flame, BookOpen, Sparkles, ArrowRight, Target, CheckCircle2, Clock, Share2 } from "lucide-react";
+import { Award, Flame, BookOpen, Sparkles, ArrowRight, Target, CheckCircle2, Clock, Share2, Timer, TrendingUp, Layers, AlertCircle } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -49,6 +49,7 @@ export default function Dashboard() {
     goalAchievedByDate,
     smartAdjustDismissedUntil,
     dismissSmartAdjust,
+    spacedRepetition,
   } = useStore();
   const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
   const todayStr = useMemo(() => new Date().toISOString().split("T")[0], []);
@@ -84,6 +85,12 @@ export default function Dashboard() {
     !!lernplanConfig &&
     consecutiveGoalMissed >= 3 &&
     (!smartAdjustDismissedUntil || todayStr > smartAdjustDismissedUntil);
+
+  // Calculate due chapters count
+  const dueCount = useMemo(() => {
+    const sr = spacedRepetition ?? {};
+    return Object.values(sr).filter((item) => item?.nextDue <= todayStr).length;
+  }, [spacedRepetition, todayStr]);
 
   useEffect(() => {
     if (dailyGoalState.hasPlan && dailyGoalState.isPrimaryComplete) {
@@ -253,6 +260,64 @@ export default function Dashboard() {
                 </div>
               </Link>
             )}
+          </motion.section>
+
+          {/* Smart Recommendation Card: "Heute für dich" */}
+          <motion.section
+            variants={tileMotion}
+            className="sm:col-span-2 lg:col-span-4"
+            aria-label="Heute für dich"
+          >
+            <div className={cn(glassClass, "relative overflow-hidden border-l-4 border-l-blue-500")}>
+              <div className="absolute inset-0 bg-linear-to-r from-blue-500/5 to-transparent pointer-events-none" />
+              <CardContent className="relative p-5">
+                <div className="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 className="font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
+                      <Sparkles className="w-4 h-4 text-blue-500" />
+                      Heute für dich
+                    </h3>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Basierend auf deinem Fortschritt</p>
+                  </div>
+                  {dueCount > 0 && (
+                    <div className="flex items-center gap-1 text-xs font-semibold text-amber-700 dark:text-amber-300 bg-amber-100 dark:bg-amber-900/40 px-2.5 py-1 rounded-full">
+                      <AlertCircle className="w-3 h-3" />
+                      {dueCount} fällig
+                    </div>
+                  )}
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                  <Link to="/simulation">
+                    <div className="bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50">
+                      <Timer className="w-4 h-4 text-orange-500 mb-1.5" />
+                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">Testsimulation</p>
+                      <p className="text-[10px] text-slate-500 dark:text-slate-400">Gesamtstand</p>
+                    </div>
+                  </Link>
+                  <Link to="/schwachstellen">
+                    <div className="bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50">
+                      <Target className="w-4 h-4 text-rose-500 mb-1.5" />
+                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">Schwachstellen</p>
+                      <p className="text-[10px] text-slate-500 dark:text-slate-400">Gezielt üben</p>
+                    </div>
+                  </Link>
+                  <Link to="/prognose">
+                    <div className="bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50">
+                      <TrendingUp className="w-4 h-4 text-green-500 mb-1.5" />
+                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">Prognose</p>
+                      <p className="text-[10px] text-slate-500 dark:text-slate-400">Punktestand</p>
+                    </div>
+                  </Link>
+                  <Link to="/bms?filter=due">
+                    <div className={cn("bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50", dueCount > 0 && "border-amber-300 dark:border-amber-600/50")}>
+                      <Layers className="w-4 h-4 text-emerald-500 mb-1.5" />
+                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">Wiederholen</p>
+                      <p className="text-[10px] text-slate-500 dark:text-slate-400">Fällige Kapitel</p>
+                    </div>
+                  </Link>
+                </div>
+              </CardContent>
+            </div>
           </motion.section>
 
           {/* Kachel 1: XP / Level + Progress */}

@@ -20,9 +20,9 @@ export const LEVEL_NAMES: string[] = [
 
 /** Feature-Pfade und das Level, ab dem sie freigeschaltet sind */
 export const FEATURE_REQUIRED_LEVEL: Record<string, number> = {
-  "/ai-tutor": 5,
-  "/schwachstellen": 10,
-  "/simulation": 15,
+  "/ai-tutor": 0,
+  "/schwachstellen": 0,
+  "/simulation": 0,
 };
 
 export function getLevelFromXP(xp: number | undefined | null): number {
