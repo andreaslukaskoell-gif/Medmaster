@@ -252,12 +252,6 @@ Lewis-Schreibweise: Einfachbindung (—), Doppelbindung (=), Dreifachbindung (�
 
 **Elektronegativität (EN)** ist das Maß für die Fähigkeit eines Atoms, Bindungselektronen anzuziehen (Pauling-Skala: F = 4,0; O = 3,5; N = 3,0; Cl = 3,0; C = 2,5; H = 2,1; Na = 0,9).
 
-| EN-Differenz | Bindungstyp |
-|---|---|
-| < 0,4 | Unpolare kovalente Bindung (z. B. H₂, C–C) |
-| 0,4–1,7 | Polare kovalente Bindung (z. B. H₂O, HCl) |
-| > 1,7 | Ionenbindung (z. B. NaCl, EN-Diff = 2,1) |
-
 Bei polaren kovalenten Bindungen sind die Elektronen zum elektronegativeren Atom hin verschoben → **Partialladungen** (δ+ und δ−) → **Dipolmoment** μ = q · d (in Debye, D).
 
 ## Molekülpolarität
@@ -274,17 +268,6 @@ Polar: „Gleiches löst Gleiches" — polare Moleküle lösen sich in polaren L
 ## VSEPR-Modell (Valence Shell Electron Pair Repulsion)
 
 Das VSEPR-Modell sagt die **Molekülgeometrie** voraus: Elektronenpaare (bindende und freie) stoßen sich ab und nehmen die Anordnung mit maximalem Abstand ein. Freie Elektronenpaare nehmen mehr Raum ein als bindende → verringern die Bindungswinkel stärker.
-
-| Elektronenpaare gesamt | Freie EP | Geometrie | Beispiel | Winkel |
-|---|---|---|---|---|
-| 2 | 0 | linear | BeCl₂, CO₂ | 180° |
-| 3 | 0 | trigonal planar | BF₃ | 120° |
-| 3 | 1 | gewinkelt | SO₂ | ~119° |
-| 4 | 0 | tetraedrisch | CH₄ | 109,5° |
-| 4 | 1 | trigonal pyramidal | NH₃ | 107° |
-| 4 | 2 | gewinkelt | H₂O | 104,5° |
-| 5 | 0 | trigonal bipyramidal | PCl₅ | 90°/120° |
-| 6 | 0 | oktaedrisch | SF₆ | 90° |
 
 ## Hybridisierung
 
@@ -344,6 +327,35 @@ Delokalisierung stabilisiert Moleküle (Resonanzenergie). Aromatizität ist ein 
           heading: 'Sigma- und Pi-Bindungen',
           text: 'Jede kovalente Einfachbindung ist eine σ-Bindung (axiale Überlappung). Doppelbindungen bestehen aus 1 σ + 1 π, Dreifachbindungen aus 1 σ + 2 π. Die π-Bindung entsteht durch laterale Überlappung paralleler p-Orbitale und ist schwächer als σ. Sie verhindert die freie Rotation um die Bindungsachse und ist damit der Grund für Cis-Trans-Isomerie bei Alkenen und die Rigidität aromatischer Ringe und der Peptidbindung.',
           merksatz: 'Einfachbindung = σ; Doppelbindung = σ + π; π verhindert freie Rotation.',
+        },
+        {
+          heading: 'EN-Differenz und Bindungstyp',
+          text: 'Die Elektronegativitätsdifferenz zwischen zwei Atomen bestimmt den Bindungscharakter.',
+          table: {
+            headers: ['EN-Differenz', 'Bindungstyp'],
+            rows: [
+              ['< 0,4', 'Unpolare kovalente Bindung (z. B. H₂, C–C)'],
+              ['0,4–1,7', 'Polare kovalente Bindung (z. B. H₂O, HCl)'],
+              ['> 1,7', 'Ionenbindung (z. B. NaCl, EN-Diff = 2,1)'],
+            ],
+          },
+        },
+        {
+          heading: 'VSEPR-Modell: Elektronenpaare und Geometrie',
+          text: 'Das VSEPR-Modell sagt Molekülgeometrien anhand der Elektronenpaar-Abstoßung voraus.',
+          table: {
+            headers: ['Elektronenpaare gesamt', 'Freie EP', 'Geometrie', 'Beispiel', 'Winkel'],
+            rows: [
+              ['2', '0', 'linear', 'BeCl₂, CO₂', '180°'],
+              ['3', '0', 'trigonal planar', 'BF₃', '120°'],
+              ['3', '1', 'gewinkelt', 'SO₂', '~119°'],
+              ['4', '0', 'tetraedrisch', 'CH₄', '109,5°'],
+              ['4', '1', 'trigonal pyramidal', 'NH₃', '107°'],
+              ['4', '2', 'gewinkelt', 'H₂O', '104,5°'],
+              ['5', '0', 'trigonal bipyramidal', 'PCl₅', '90°/120°'],
+              ['6', '0', 'oktaedrisch', 'SF₆', '90°'],
+            ],
+          },
         },
       ],
 
@@ -569,15 +581,7 @@ Wasser siedet bei 100 °C (H₂O, MM = 18 g/mol), während H₂S bei −60 °C s
 
 **Legierungen:** Mischungen von Metallen (oder Metall + Nichtmetall, z. B. Stahl = Fe + C). Eigenschaften können gezielt verändert werden (Härte, Korrosionsresistenz).
 
-## Vergleich intermolekularer Kräfte
-
-| Wechselwirkung | Stärke (kJ/mol) | Voraussetzung | Beispiele |
-|---|---|---|---|
-| London-Dispersion | 0,1–10 | Alle Moleküle | CH₄, Edelgase, Lipide |
-| Dipol-Dipol | 1–5 | Polare Moleküle | HCl, Aceton |
-| Wasserstoffbrücke | 10–40 | D–H mit N,O,F; Akzeptor N,O,F | H₂O, DNA, Proteine |
-| Ionisch | 200–1000 | Entgegengesetzte Ionen | NaCl, KCl |
-| Kovalent | 150–1000 | Elektronenpaare | C–C, C=O |`,
+`,
 
       lernziele: [
         'Die drei Arten von van-der-Waals-Kräften unterscheiden und deren Abhängigkeit von Polarisierbarkeit und Molekülgeometrie erklären.',
@@ -607,6 +611,20 @@ Wasser siedet bei 100 °C (H₂O, MM = 18 g/mol), während H₂S bei −60 °C s
           heading: 'Metallbindung und Elektronengas-Modell',
           text: 'Im Metall sind Valenzelektronen über das gesamte Gitter delokalisiert (Elektronengas). Diese Delokalisierung erklärt alle charakteristischen Metalleigenschaften: elektrische und thermische Leitfähigkeit (freie Elektronen), Duktilität (Gleiten ohne Bruch, weil Elektronengas die Schichten zusammenhält), metallischer Glanz (freie Elektronen reflektieren alle sichtbaren Wellenlängen). Dies unterscheidet Metalle fundamental von Ionenkristallen (spröde) und Molekülkristallen.',
           merksatz: 'Elektronengas = frei bewegliche Valenzelektronen → Leitfähigkeit + Duktilität + Glanz.',
+        },
+        {
+          heading: 'Vergleich intermolekularer Kräfte',
+          text: 'Übersicht der intermolekularen Wechselwirkungen nach Stärke, Voraussetzung und Beispielen.',
+          table: {
+            headers: ['Wechselwirkung', 'Stärke (kJ/mol)', 'Voraussetzung', 'Beispiele'],
+            rows: [
+              ['London-Dispersion', '0,1–10', 'Alle Moleküle', 'CH₄, Edelgase, Lipide'],
+              ['Dipol-Dipol', '1–5', 'Polare Moleküle', 'HCl, Aceton'],
+              ['Wasserstoffbrücke', '10–40', 'D–H mit N,O,F; Akzeptor N,O,F', 'H₂O, DNA, Proteine'],
+              ['Ionisch', '200–1000', 'Entgegengesetzte Ionen', 'NaCl, KCl'],
+              ['Kovalent', '150–1000', 'Elektronenpaare', 'C–C, C=O'],
+            ],
+          },
         },
       ],
 

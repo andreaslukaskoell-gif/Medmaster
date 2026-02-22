@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Brain, ListChecks, BookOpen, Sparkles, ArrowRight, GraduationCap, Shield, Zap, LayoutGrid, RefreshCw, TrendingUp, Users } from "lucide-react";
 import { supabase } from "@/lib/supabase";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const MEDICAL_BLUE = "#0055ff";
 
@@ -47,14 +48,15 @@ const features = [
 
 const pricingPlans = [
   { name: "Starter", price: "Gratis", period: "", features: ["50 BMS-Fragen", "1 Simulationstest", "Grundstatistiken"], cta: "Kostenlos starten", highlight: false },
-  { name: "Standard", price: "€12.90", period: "/Monat", features: ["Alle 1.000+ BMS-Fragen", "KI-adaptives Lernsystem", "Unbegrenzte Simulationen", "Stichwortlisten-Tracking", "Schwachstellen-Trainer"], cta: "Jetzt starten", highlight: true },
-  { name: "Pro", price: "€19.90", period: "/Monat", features: ["Alles aus Standard", "KI-Tutor Chat", "Prüfungstag-Prognose", "Prioritärer Support", "Lernplan-Generator"], cta: "Pro wählen", highlight: false },
+  { name: "Standard", price: "€12.90", period: "/Monat", features: ["Alle 1.200+ BMS-Fragen", "Adaptives Lernsystem", "Unbegrenzte Simulationen", "Stichwortlisten-Tracking", "Schwachstellen-Trainer"], cta: "Jetzt starten", highlight: true },
+  { name: "Pro", price: "€19.90", period: "/Monat", features: ["Alles aus Standard", "KFF & TV Vollzugang", "Prüfungstag-Prognose", "Prioritärer Support", "Lernplan-Generator"], cta: "Pro wählen", highlight: false },
 ];
 
 const container = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.06 } } };
 const item = { hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0 } };
 
 export default function LandingPage() {
+  usePageTitle();
   const [userCount, setUserCount] = useState<number | null>(null);
 
   useEffect(() => {
@@ -111,7 +113,7 @@ export default function LandingPage() {
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-20 sm:pb-28 text-center">
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-8 shadow-sm border border-primary-100 dark:border-primary-800/50 bg-white/80 dark:bg-gray-900/80" style={{ color: MEDICAL_BLUE }}>
             <Sparkles className="w-4 h-4" />
-            Neu: KI-Tutor jetzt verfügbar
+            MedAT 2026 — Jetzt früh starten
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -167,7 +169,7 @@ export default function LandingPage() {
             className="grid grid-cols-3 gap-6 sm:gap-8 max-w-lg mx-auto mt-16 sm:mt-20"
           >
             {[
-              { value: "1.000+", label: "Übungsfragen" },
+              { value: "1.200+", label: "Übungsfragen" },
               { value: "106", label: "Stichworte" },
               { value: "4", label: "MedAT-Bereiche" },
             ].map((stat, i) => (

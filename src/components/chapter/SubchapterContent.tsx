@@ -175,7 +175,7 @@ function DisclosableSection({
   scrollToNextSection,
   sectionRef,
   colors,
-  isDieZelle,
+  enhancedFormatting,
   hinterfragMode,
   keywordLinkEntries,
 }: {
@@ -188,7 +188,7 @@ function DisclosableSection({
   scrollToNextSection: (() => void) | null;
   sectionRef: (el: HTMLDivElement | null) => void;
   colors: { border: string; text: string; bg: string };
-  isDieZelle: boolean;
+  enhancedFormatting?: boolean;
   hinterfragMode: boolean;
   keywordLinkEntries?: KeywordLinkEntry[];
 }) {
@@ -218,6 +218,8 @@ function DisclosableSection({
     },
     [sectionRef]
   );
+
+  const isDieZelle = enhancedFormatting ?? false;
 
   return (
     <div
@@ -306,6 +308,7 @@ interface Props {
   uk: Unterkapitel;
   subject: string;
   chapterId?: string; // Optional: to check if this is "Die Zelle" (bio-kap1)
+  enhancedFormatting?: boolean; // If true: larger text, more spacing, numbered headings
   /** Aktiviert Active Recall: [? Frage | Antwort ]-Stellen als Frage anzeigen, Antwort bei Klick/Hover. */
   hinterfragMode?: boolean;
   /** Progressive Disclosure: Untersektionen erst bei Scroll oder „Verstanden“ voll anzeigen. */
@@ -314,7 +317,7 @@ interface Props {
   keywordLinkEntries?: KeywordLinkEntry[];
 }
 
-export function SubchapterContent({ uk, subject, chapterId, hinterfragMode = false, progressiveDisclosure = true, keywordLinkEntries }: Props) {
+export function SubchapterContent({ uk, subject, chapterId, enhancedFormatting, hinterfragMode = false, progressiveDisclosure = true, keywordLinkEntries }: Props) {
   const colors = SUBJECT_COLORS[subject] || SUBJECT_COLORS.biologie;
   const [lernzieleOpen, setLernzieleOpen] = useState(false);
 
@@ -331,7 +334,7 @@ export function SubchapterContent({ uk, subject, chapterId, hinterfragMode = fal
   }, []);
 
   // Check if this is "Die Zelle" chapter for enhanced formatting
-  const isDieZelle = chapterId === "bio-kap1";
+  const isDieZelle = enhancedFormatting ?? false;
 
   // Extract Kontrollfragen from content if they exist as free text
   const cleanedContent = useMemo(() => {
@@ -346,6 +349,18 @@ export function SubchapterContent({ uk, subject, chapterId, hinterfragMode = fal
 
     return (
       <div className="space-y-6">
+        {/* Full content shown first when both content and sections are present */}
+        {uk.content && cleanedContent && (
+          <div className={`${isDieZelle ? "text-base" : "text-sm"} text-gray-700 dark:text-gray-300 leading-relaxed space-y-3`}>
+            <MarkdownContent text={cleanedContent} size={isDieZelle ? "base" : "sm"} hinterfragMode={hinterfragMode} keywordLinkEntries={keywordLinkEntries} />
+          </div>
+        )}
+
+        {/* Section divider when both content and sections exist */}
+        {uk.content && cleanedContent && (
+          <hr className="my-6 border-t-2 border-gray-200 dark:border-gray-700" />
+        )}
+
         {/* Lernziele */}
         {uk.lernziele && uk.lernziele.length > 0 && (
           <div className={`${colors.bg} ${isDieZelle ? "rounded-xl shadow-sm border-2" : "rounded-xl border"} ${colors.border} ${isDieZelle ? "border-opacity-50" : "border-opacity-30"} overflow-hidden mb-6`}>
@@ -390,7 +405,7 @@ export function SubchapterContent({ uk, subject, chapterId, hinterfragMode = fal
                   scrollToNextSection={scrollToNext}
                   sectionRef={(el) => { sectionRefs.current[i] = el; }}
                   colors={colors}
-                  isDieZelle={isDieZelle}
+                  enhancedFormatting={isDieZelle}
                   hinterfragMode={hinterfragMode}
                   keywordLinkEntries={keywordLinkEntries}
                 />

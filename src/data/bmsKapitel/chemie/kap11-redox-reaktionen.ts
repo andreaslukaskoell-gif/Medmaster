@@ -252,20 +252,6 @@ Die **Salzbrücke** (z. B. mit gesättigter KCl-Lösung) sorgt für Ladungsausgl
 
 Das Standardelektrodenpotenzial E° beschreibt die Tendenz eines Redox-Paares, Elektronen aufzunehmen (Reduktion), gemessen gegen die Standard-Wasserstoff-Elektrode (SHE, E° = 0,00 V per Definition) bei 25 °C, 1 atm, allen Ionen in 1 mol/L Konzentration.
 
-**Ausgewählte Standardpotenziale (Reduktionspotenziale):**
-| Redox-Paar | E° (V) |
-|---|---|
-| F₂ + 2e⁻ → 2F⁻ | +2,87 |
-| MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O | +1,51 |
-| Cl₂ + 2e⁻ → 2Cl⁻ | +1,36 |
-| O₂ + 4H⁺ + 4e⁻ → 2H₂O | +1,23 |
-| Cu²⁺ + 2e⁻ → Cu | +0,34 |
-| 2H⁺ + 2e⁻ → H₂ | 0,00 (Referenz) |
-| Fe²⁺ + 2e⁻ → Fe | −0,44 |
-| Zn²⁺ + 2e⁻ → Zn | −0,76 |
-| Na⁺ + e⁻ → Na | −2,71 |
-| Li⁺ + e⁻ → Li | −3,04 |
-
 **Regeln zur Verwendung:**
 - Höheres E° = stärkeres Oxidationsmittel (nimmt lieber Elektronen auf)
 - Niedrigeres E° = stärkeres Reduktionsmittel (gibt lieber Elektronen ab)
@@ -332,6 +318,25 @@ Bei der Elektrolyse wird eine nicht-spontane Redox-Reaktion durch externe elektr
           heading: "Akkumulatoren in der Medizin",
           text: "Medizinische Geräte (Herzschrittmacher, implantierbare Defibrillatoren, Insulinpumpen) verwenden Lithium-Primär- oder Lithium-Ionen-Akkus wegen hoher Energiedichte, langer Lebensdauer und stabiler Spannungsabgabe. Der Blei-Akkumulator liefert hohe Ströme für Startermotoren. Die Grundprinzipien aller Batterien sind identisch: Spontane Redox-Reaktionen erzeugen elektrischen Strom.",
           merksatz: "Primärzelle = nicht aufladbar (irreversibel); Sekundärzelle/Akku = aufladbar (reversibel).",
+        },
+        {
+          heading: "Ausgewählte Standardelektrodenpotenziale (Reduktionspotenziale)",
+          text: "Die elektrochemische Spannungsreihe geordnet nach absteigendem E°:",
+          table: {
+            headers: ["Redox-Paar", "E° (V)"],
+            rows: [
+              ["F₂ + 2e⁻ → 2F⁻", "+2,87"],
+              ["MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O", "+1,51"],
+              ["Cl₂ + 2e⁻ → 2Cl⁻", "+1,36"],
+              ["O₂ + 4H⁺ + 4e⁻ → 2H₂O", "+1,23"],
+              ["Cu²⁺ + 2e⁻ → Cu", "+0,34"],
+              ["2H⁺ + 2e⁻ → H₂", "0,00 (Referenz)"],
+              ["Fe²⁺ + 2e⁻ → Fe", "−0,44"],
+              ["Zn²⁺ + 2e⁻ → Zn", "−0,76"],
+              ["Na⁺ + e⁻ → Na", "−2,71"],
+              ["Li⁺ + e⁻ → Li", "−3,04"],
+            ]
+          }
         },
       ],
       merksätze: [

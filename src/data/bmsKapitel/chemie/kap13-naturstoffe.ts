@@ -243,12 +243,6 @@ Monosaccharide sind nicht weiter hydrolysierbare Zucker mit der allgemeinen Form
 
 Zwei Monosaccharide verbinden sich unter Abspaltung von Wasser durch eine **glykosidische Bindung** (O-glykosidisch) zwischen dem anomeren C und einer OH-Gruppe des anderen Zuckers.
 
-| Disaccharid | Bestandteile | Bindungstyp | Reduzierend? |
-|---|---|---|---|
-| **Maltose** | Glc + Glc | α-1→4 | ja |
-| **Saccharose** | Glc + Frc | α-1→β-2 | **nein** |
-| **Laktose** | Gal + Glc | β-1→4 | ja |
-
 Saccharose ist **nicht reduzierend**, da beide anomeren OH-Gruppen an der Bindung beteiligt sind und keine freie Halbacetalgruppe mehr vorliegt.
 
 ## Polysaccharide
@@ -282,6 +276,18 @@ Saccharose ist **nicht reduzierend**, da beide anomeren OH-Gruppen an der Bindun
           heading: "HbA1c: Biochemie und klinische Bedeutung",
           text: "HbA1c entsteht durch nicht-enzymatische Glykierung (Maillard-Reaktion): Glucose reagiert spontan mit der freien Aminogruppe am N-terminalen Valin der β-Globinkette über eine Schiff-Base zur stabilen Amadori-Verbindung. Da Erythrozyten keine Membranproteine erneuern (kernlos, keine Proteinsynthese), spiegelt HbA1c die durchschnittliche Blutglukose der letzten ~8–12 Wochen wider. Therapieziel bei Typ-2-Diabetes meist HbA1c < 7% (53 mmol/mol). Beachte: Anämie oder Hämolysezustände verfälschen den HbA1c-Wert.",
           merksatz: "HbA1c = Glykiertes Hämoglobin = 8–12 Wochen Glukosegedächtnis.",
+        },
+        {
+          heading: "Wichtige Disaccharide im Überblick",
+          text: "Maltose, Saccharose und Laktose im Vergleich:",
+          table: {
+            headers: ["Disaccharid", "Bestandteile", "Bindungstyp", "Reduzierend?"],
+            rows: [
+              ["Maltose", "Glc + Glc", "α-1→4", "ja"],
+              ["Saccharose", "Glc + Frc", "α-1→β-2", "nein"],
+              ["Laktose", "Gal + Glc", "β-1→4", "ja"],
+            ]
+          }
         },
       ],
       merksätze: [
@@ -461,17 +467,6 @@ Phospholipide (v.a. Glycerophospholipide) ähneln Triglyceriden, aber eine Fetts
 
 Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): drei kondensierte Sechsringe (A, B, C) + ein Fünfring (D). Alle Steroide sind von **Cholesterin** abgeleitet:
 
-| Steroid | Funktion |
-|---|---|
-| **Cholesterin** | Membrankomponente (reguliert Fluidität), Ausgangsstoff für alle Steroide |
-| **Cortisol** | Glucocorticoid; Stressreaktion, Gluconeogenese, Antiinflammation |
-| **Aldosteron** | Mineralocorticoid; Na⁺/K⁺-Regulation in Niere |
-| **Testosteron** | Androgen; Virilisierung, Spermatogenese |
-| **Östradiol** | Östrogen; Feminisierung, Menstruationszyklus |
-| **Progesteron** | Gelbkörperhormon; Schwangerschaft |
-| **Vitamin D₃** | Calcitriol (aktiv); Calcium- und Phosphathomöostase |
-| **Gallensäuren** | Cholsäure etc.; Fettemulgierung im Darm |
-
 ## Klinischer Bezug
 
 **Hypercholesterinämie**: LDL > 160 mg/dL (4,1 mmol/L) → Atheroskleroserisiko steigt. **Atherosklerose**: LDL-Oxidation, Schaumzellbildung, Plaques in Arterienwand. **Statine** hemmen **HMG-CoA-Reduktase** (Schlüsselenzym der Cholesterinbiosynthese → Mevalonat-Weg) → LDL-Senkung. **Omega-3-Fettsäuren** (EPA, DHA): antiinflammatorisch, senken Triglyceride. **Ketonkörper** (Acetoacetat, β-Hydroxybutyrat, Aceton) entstehen bei hepatischer Fettsäureoxidation (Diabetes Typ 1, Fasten) → Ketoazidose bei unkontrolliertem Diabetes.`,
@@ -497,6 +492,23 @@ Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): d
           heading: "Cholesterin und Statine",
           text: "Cholesterin wird in der Leber aus Acetyl-CoA über den Mevalonat-Weg synthetisiert; das Schlüsselenzym ist HMG-CoA-Reduktase. Im Blut wird Cholesterin in Lipoproteinen transportiert: LDL transportiert Cholesterin zu peripheren Geweben (hohes LDL = 'schlechtes' Cholesterin → Atherosklerose), HDL holt Cholesterin aus Geweben zurück zur Leber. Statine (Atorvastatin, Simvastatin) hemmen kompetitiv HMG-CoA-Reduktase → weniger endogene Cholesterinsynthese → Hochregulation der LDL-Rezeptoren in Hepatozyten → mehr LDL-Aufnahme aus Blut → LDL-Senkung um 30–50%.",
           merksatz: "Statine hemmen HMG-CoA-Reduktase → weniger Cholesterinsynthese → LDL-Rezeptor-Hochregulation → LDL-Senkung.",
+        },
+        {
+          heading: "Wichtige Steroide und ihre Funktionen",
+          text: "Alle Steroide leiten sich vom Cholesterin ab:",
+          table: {
+            headers: ["Steroid", "Funktion"],
+            rows: [
+              ["Cholesterin", "Membrankomponente (reguliert Fluidität), Ausgangsstoff für alle Steroide"],
+              ["Cortisol", "Glucocorticoid; Stressreaktion, Gluconeogenese, Antiinflammation"],
+              ["Aldosteron", "Mineralocorticoid; Na⁺/K⁺-Regulation in Niere"],
+              ["Testosteron", "Androgen; Virilisierung, Spermatogenese"],
+              ["Östradiol", "Östrogen; Feminisierung, Menstruationszyklus"],
+              ["Progesteron", "Gelbkörperhormon; Schwangerschaft"],
+              ["Vitamin D₃", "Calcitriol (aktiv); Calcium- und Phosphathomöostase"],
+              ["Gallensäuren", "Cholsäure etc.; Fettemulgierung im Darm"],
+            ]
+          }
         },
       ],
       merksätze: [
@@ -686,13 +698,6 @@ In doppelsträngiger DNA gilt:
 
 ## RNA-Typen
 
-| RNA-Typ | Funktion |
-|---|---|
-| **mRNA** (messenger) | Überträgt genetische Information vom Kern zum Ribosom; wird translatiert |
-| **tRNA** (transfer) | Transportiert Aminosäuren zum Ribosom; Anticodon paart mit mRNA-Codon |
-| **rRNA** (ribosomale) | Strukturkomponente des Ribosoms (28S, 18S, 5.8S, 5S beim Eukaryoten); katalytisch aktiv (Ribozym: Peptidyltransferase der großen Untereinheit) |
-| **miRNA / siRNA** | Regulieren Genexpression durch mRNA-Abbau oder Translationshemmung (RNA-Interferenz) |
-
 ## Nukleosid-Analoga in der Therapie
 
 **Aciclovir** (Acycloguanosin): Guanosin-Analogon ohne 3'-OH → keine Kettenverlängerung nach Einbau → Kettenabbruch → hemmt virale DNA-Polymerase (Herpesviren). **Tenofovir**: Adenosinmonophosphat-Analogon → hemmt HIV-Reverse Transkriptase. **Remdesivir**: Adenosin-Analogon → hemmt SARS-CoV-2-RNA-abhängige RNA-Polymerase.
@@ -722,6 +727,19 @@ DNA-Methylierung (Methylierung von Cytosin an CpG-Dinukleotiden durch DNA-Methyl
           heading: "RNA-Typen und Nukleosid-Analoga",
           text: "mRNA überträgt die genetische Information und enthält 5'-Cap, Poly-A-Schwanz und kodierenden Bereich (Codons = Tripletts). tRNA trägt die Aminosäuren und hat ein Anticodon, das komplementär zum mRNA-Codon ist. rRNA bildet das Ribosom und katalysiert als Ribozym die Peptidbindungsbildung. miRNA reguliert die Genexpression posttranskriptionell. Nukleosid-Analoga (Aciclovir, Tenofovir) nutzen die Ähnlichkeit zu natürlichen Nukleosiden: Nach Phosphorylierung durch virale Kinasen werden sie von viralen Polymerasen eingebaut, terminieren aber die Kettenverlängerung (Fehlen des 3'-OH → kein nächstes Nukleotid kann angehängt werden).",
           merksatz: "Aciclovir: kein 3'-OH → Kettenabbruch → hemmt virale DNA-Synthese. Wirksam gegen Herpes simplex.",
+        },
+        {
+          heading: "RNA-Typen und ihre Funktionen",
+          text: "Die vier wichtigsten RNA-Typen im Überblick:",
+          table: {
+            headers: ["RNA-Typ", "Funktion"],
+            rows: [
+              ["mRNA (messenger)", "Überträgt genetische Information vom Kern zum Ribosom; wird translatiert"],
+              ["tRNA (transfer)", "Transportiert Aminosäuren zum Ribosom; Anticodon paart mit mRNA-Codon"],
+              ["rRNA (ribosomale)", "Strukturkomponente des Ribosoms (28S, 18S, 5.8S, 5S beim Eukaryoten); katalytisch aktiv (Ribozym)"],
+              ["miRNA / siRNA", "Regulieren Genexpression durch mRNA-Abbau oder Translationshemmung (RNA-Interferenz)"],
+            ]
+          }
         },
       ],
       merksätze: [

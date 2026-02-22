@@ -54,11 +54,32 @@ function OnboardingGuard() {
   return <Onboarding />;
 }
 
+function AdminGuard({ children }: { children: React.ReactNode }) {
+  const isDev = import.meta.env.DEV;
+  if (!isDev) {
+    return <Navigate to="/" replace />;
+  }
+  return <>{children}</>;
+}
+
 function BMSQuizWrapper() {
   const { fach } = useParams<{ fach: string }>();
   const navigate = useNavigate();
   if (!fach) return <Navigate to="/bms" replace />;
   return <BMSQuiz subject={fach} onBack={() => navigate("/bms")} />;
+}
+
+function NotFound404() {
+  return (
+    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
+      <div className="text-center space-y-4">
+        <h1 className="text-6xl font-bold text-gray-900 dark:text-white">404</h1>
+        <p className="text-lg text-gray-600 dark:text-gray-400">Seite nicht gefunden</p>
+        <p className="text-sm text-gray-500 dark:text-gray-500">Diese Seite existiert nicht oder wurde verschoben.</p>
+        <Navigate to="/" replace />
+      </div>
+    </div>
+  );
 }
 
 export default function App() {
@@ -102,10 +123,10 @@ export default function App() {
             <Route path="/schwachstellen" element={<LevelGate requiredLevel={10} featureLabel="Schwachstellen-Analyse"><SchwachstellenTrainer /></LevelGate>} />
             <Route path="/schwachstellen/recovery" element={<SmartRecoveryPage />} />
             <Route path="/preise" element={<Pricing />} />
-            <Route path="/admin/kapitel-editor" element={<KapitelEditor />} />
-            <Route path="/admin/audit" element={<ContentAudit />} />
-            <Route path="/admin/preview" element={<AdminPreview />} />
-            <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            <Route path="/admin/kapitel-editor" element={<AdminGuard><KapitelEditor /></AdminGuard>} />
+            <Route path="/admin/audit" element={<AdminGuard><ContentAudit /></AdminGuard>} />
+            <Route path="/admin/preview" element={<AdminGuard><AdminPreview /></AdminGuard>} />
+            <Route path="/admin/dashboard" element={<AdminGuard><AdminDashboard /></AdminGuard>} />
             <Route path="/wissencheck" element={<WissenCheck />} />
             <Route path="/wissencheck/:fach" element={<WissenCheck />} />
             <Route path="/prognose" element={<Prognose />} />
@@ -113,7 +134,13 @@ export default function App() {
             <Route path="/fragen-trainer" element={<FragenTrainer />} />
             <Route path="/daily" element={<DailyChallenge />} />
             <Route path="/wrapped" element={<BMSWrapped />} />
+            
+            {/* 404 Catch-all for protected routes */}
+            <Route path="*" element={<NotFound404 />} />
           </Route>
+
+          {/* 404 Catch-all for public routes (fallback) */}
+          <Route path="*" element={<NotFound404 />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

@@ -291,19 +291,6 @@ Das Internationale Einheitensystem (SI) definiert eine Reihe von standardisierte
 
 SI-Präfixe sind eindeutige, unveränderliche Abkürzungen für Potenzen von 10. Sie können vor jede SI-Einheit gesetzt werden: Meter (m), Gramm (g), Liter (L), Mol (mol), Sekunde (s), Pascal (Pa), Volt (V) usw. Die Präfixe sind in Dreierschritten (10³) angeordnet, was dem menschlichen Bedürfnis nach handlichen Zahlen zwischen 1 und 1.000 entspricht.
 
-| Präfix | Symbol | Faktor            | Zehnerpotenz |
-|--------|--------|-------------------|--------------|
-| Tera   | T      | 1.000.000.000.000 | 10¹²         |
-| Giga   | G      | 1.000.000.000     | 10⁹          |
-| Mega   | M      | 1.000.000         | 10⁶          |
-| Kilo   | k      | 1.000             | 10³          |
-| (kein) | —      | 1                 | 10⁰          |
-| Milli  | m      | 0,001             | 10⁻³         |
-| Mikro  | µ      | 0,000 001         | 10⁻⁶         |
-| Nano   | n      | 0,000 000 001     | 10⁻⁹         |
-| Piko   | p      | 0,000 000 000 001 | 10⁻¹²        |
-| Femto  | f      | —                 | 10⁻¹⁵        |
-
 Für die Medizin sind die Bereiche von Femto (10⁻¹⁵) bis Tera (10¹²) relevant, wobei der Alltag hauptsächlich die mittleren Präfixe Milli (10⁻³), Mikro (10⁻⁶) und Nano (10⁻⁹) umfasst.
 
 ## Medizinisch relevante Präfixe im Detail
@@ -376,6 +363,25 @@ Beispiel aus der Praxis: Ein Arzt verordnet 0,025 mg Levothyroxin. Apothekenprä
         'Das Prinzip der Dreiersprünge (10³ pro Präfixstufe) nutzen, um Umrechnungen im Kopf durchzuführen.',
       ],
       sections: [
+        {
+          heading: 'Die Systematik der SI-Präfixe',
+          text: 'SI-Präfixe sind eindeutige, unveränderliche Abkürzungen für Potenzen von 10. Sie sind in Dreierschritten (10³) angeordnet.',
+          table: {
+            headers: ["Präfix", "Symbol", "Faktor", "Zehnerpotenz"],
+            rows: [
+              ["Tera", "T", "1.000.000.000.000", "10¹²"],
+              ["Giga", "G", "1.000.000.000", "10⁹"],
+              ["Mega", "M", "1.000.000", "10⁶"],
+              ["Kilo", "k", "1.000", "10³"],
+              ["(kein)", "—", "1", "10⁰"],
+              ["Milli", "m", "0,001", "10⁻³"],
+              ["Mikro", "µ", "0,000 001", "10⁻⁶"],
+              ["Nano", "n", "0,000 000 001", "10⁻⁹"],
+              ["Piko", "p", "0,000 000 000 001", "10⁻¹²"],
+              ["Femto", "f", "—", "10⁻¹⁵"],
+            ],
+          },
+        },
         {
           heading: 'Von Femto bis Tera: die Präfix-Leiter',
           text: 'SI-Präfixe folgen einem regelmäßigen Muster: Jede Stufe entspricht einem Faktor 10³ = 1.000 gegenüber der benachbarten Stufe. Von Nano (10⁻⁹) zu Mikro (10⁻⁶) sind es 10³, von Mikro zu Milli (10⁻³) ebenfalls 10³, von Milli zur Basiseinheit (10⁰) wieder 10³, und so weiter aufwärts bis Kilo, Mega, Giga, Tera. Diese Regelmäßigkeit ist kein Zufall, sondern gewollte Konstruktion des SI-Systems. In der Medizin nutzt man hauptsächlich die Stufen Femto, Piko, Nano, Mikro, Milli und Kilo — aber auch Mega (MBq in der Nuklearmedizin) und Giga (Anzahl der Erythrozyten: ~5 × 10¹²/L) sind relevant.',

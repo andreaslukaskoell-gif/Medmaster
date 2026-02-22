@@ -1,11 +1,13 @@
 import { useState, useMemo } from "react";
-import { ArrowLeft, BookOpen, Play, Send, CheckCircle2, XCircle, ArrowRight, Clock, FileText } from "lucide-react";
+import { ArrowLeft, BookOpen, Play, Send, CheckCircle2, XCircle, ArrowRight, Clock, FileText, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
+import { usePageTitle } from "@/hooks/usePageTitle";
+import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { tvStrategyGuide, tvTexts } from "@/data/tvData";
 import { tvTextSets } from "@/data/tvTextsExpanded";
 import { tvTextSets2 } from "@/data/tvTextsExpanded2";
@@ -19,6 +21,7 @@ type TvView = "overview" | "strategy" | "legacy-quiz" | "legacy-results" | "set-
 const LABELS = ["A", "B", "C", "D", "E"];
 
 export default function TV() {
+  usePageTitle("TV – Textverständnis");
   const [view, setView] = useState<TvView>("overview");
   // Legacy mode
   const [selectedTextIndex, setSelectedTextIndex] = useState(0);
@@ -27,6 +30,8 @@ export default function TV() {
   const [selectedSetIndex, setSelectedSetIndex] = useState(0);
   const [textIndex, setTextIndex] = useState(0);
   const [mcAnswers, setMcAnswers] = useState<Record<string, number>>({});
+  // Mobile
+  const [showAllLegacy, setShowAllLegacy] = useState(false);
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
   const tvText = tvTexts[selectedTextIndex];
@@ -86,20 +91,7 @@ export default function TV() {
 
   // ===== STRATEGY =====
   if (view === "strategy") {
-    return (
-      <div className="max-w-3xl mx-auto space-y-6">
-        <Button variant="ghost" size="sm" onClick={() => setView("overview")}>
-          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
-        </Button>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{tvStrategyGuide.title}</h1>
-        {tvStrategyGuide.sections.map((s, i) => (
-          <Card key={i}><CardContent className="p-6">
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">{s.heading}</h2>
-            <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">{s.content}</div>
-          </CardContent></Card>
-        ))}
-      </div>
-    );
+    return <StrategyGuideView guide={tvStrategyGuide} onBack={() => setView("overview")} />;
   }
 
   // ===== LEGACY RESULTS =====
@@ -230,9 +222,9 @@ export default function TV() {
 
     return (
       <div className="max-w-3xl mx-auto space-y-6">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
           <Button variant="ghost" size="sm" onClick={() => setView("overview")}><ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen</Button>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
             <Badge variant="info">Text {textIndex + 1}/{currentSet.texts.length}</Badge>
             <span className="text-sm text-muted">{totalQuestionsAnswered}/{allSetQuestions.length} beantwortet</span>
           </div>
@@ -242,10 +234,10 @@ export default function TV() {
         </div>
 
         {/* Text tabs */}
-        <div className="flex gap-1 overflow-x-auto pb-1">
+        <div className="flex gap-1 overflow-x-auto pb-2 -mx-1 px-1">
           {currentSet.texts.map((t, ti) => (
             <button key={t.id} onClick={() => setTextIndex(ti)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors cursor-pointer ${
+              className={`px-3 py-2 rounded-lg text-xs font-medium whitespace-nowrap transition-colors cursor-pointer ${
                 ti === textIndex ? "bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400" : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
               }`}>
               {ti + 1}. {t.title.slice(0, 20)}{t.title.length > 20 ? "..." : ""}
@@ -269,7 +261,7 @@ export default function TV() {
               <div className="space-y-2">
                 {q.options.map((opt, oi) => (
                   <button key={oi} onClick={() => setMcAnswers((p) => ({ ...p, [q.id]: oi }))}
-                    className={`w-full text-left px-3 py-2 rounded-lg border text-sm transition-colors cursor-pointer ${
+                    className={`w-full text-left px-3 py-2.5 rounded-lg border text-sm transition-colors cursor-pointer ${
                       mcAnswers[q.id] === oi
                         ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
                         : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
@@ -282,16 +274,16 @@ export default function TV() {
           ))}
         </div>
 
-        <div className="flex justify-between">
-          <Button variant="outline" onClick={() => setTextIndex((i) => i - 1)} disabled={textIndex === 0}>
-            <ArrowLeft className="w-4 h-4 mr-1" /> Voriger Text
+        <div className="flex flex-col sm:flex-row justify-between gap-2">
+          <Button variant="outline" onClick={() => setTextIndex((i) => i - 1)} disabled={textIndex === 0} className="w-full sm:w-auto">
+            <ArrowLeft className="w-4 h-4 mr-1" /> Voriger
           </Button>
           {textIndex < currentSet.texts.length - 1 ? (
-            <Button onClick={() => setTextIndex((i) => i + 1)}>
-              Nächster Text <ArrowRight className="w-4 h-4 ml-1" />
+            <Button onClick={() => setTextIndex((i) => i + 1)} className="w-full sm:w-auto">
+              Nächster <ArrowRight className="w-4 h-4 ml-1" />
             </Button>
           ) : (
-            <Button onClick={handleSubmitSet} disabled={!allAnswered}>
+            <Button onClick={handleSubmitSet} disabled={!allAnswered} className="w-full sm:w-auto">
               <Send className="w-4 h-4 mr-1" /> Auswertung
             </Button>
           )}
@@ -308,6 +300,8 @@ export default function TV() {
     schwer: "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400",
   };
 
+  const displayedLegacyTexts = showAllLegacy ? tvTexts : tvTexts.slice(0, 3);
+
   return (
     <div className="max-w-5xl mx-auto space-y-6">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "TV" }]} />
@@ -315,35 +309,42 @@ export default function TV() {
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">TV — Textverständnis</h1>
         <p className="text-muted mt-1">5 Texte lesen, 12 Fragen beantworten — wie im echten MedAT.</p>
       </div>
+
+      {/* Strategy Guide Card */}
       <Card>
-        <CardContent className="p-5 flex items-center justify-between">
+        <CardContent className="p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
             <h3 className="font-semibold text-gray-900 dark:text-gray-100">Strategie-Guide</h3>
             <p className="text-sm text-muted">Lerne die beste Vorgehensweise für Textverständnis-Aufgaben</p>
           </div>
-          <Button variant="outline" onClick={() => setView("strategy")}>
+          <Button variant="outline" onClick={() => setView("strategy")} className="w-full sm:w-auto">
             <BookOpen className="w-4 h-4 mr-2" /> Lesen
           </Button>
         </CardContent>
       </Card>
 
-      {/* MC Text Sets */}
+      {/* MC Text Sets - NEW/PRIMARY */}
       {allTextSets.length > 0 && (
         <>
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Testsets (5 Texte + 12 Fragen)</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+              Testsets <Badge className="ml-2 bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">Neu</Badge>
+            </h2>
+            <p className="text-sm text-muted mb-3">Moderne Multiple-Choice Sets mit 5 Texten und 12 Fragen — wie im echten MedAT</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {allTextSets.map((set, i) => {
               const totalQ = set.texts.reduce((sum, t) => sum + t.questions.length, 0);
               return (
                 <Card key={set.id} className="hover:shadow-md transition-shadow">
                   <CardContent className="p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">{set.name}</h3>
-                      <Badge className={`text-[10px] ${difficultyColors[set.difficulty] || ""}`}>{set.difficulty}</Badge>
+                    <div className="flex items-start justify-between gap-2 mb-2">
+                      <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm flex-1">{set.name}</h3>
+                      <Badge className={`text-[10px] shrink-0 ${difficultyColors[set.difficulty] || ""}`}>{set.difficulty}</Badge>
                     </div>
-                    <div className="flex items-center gap-3 text-xs text-muted mb-3">
-                      <span className="flex items-center gap-1"><FileText className="w-3 h-3" /> {set.texts.length} Texte</span>
-                      <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {totalQ} Fragen</span>
+                    <div className="flex flex-col gap-2 text-xs text-muted mb-3">
+                      <span className="flex items-center gap-1"><FileText className="w-3 h-3 shrink-0" /> {set.texts.length} Texte</span>
+                      <span className="flex items-center gap-1"><Clock className="w-3 h-3 shrink-0" /> {totalQ} Fragen</span>
                     </div>
                     <Button size="sm" className="w-full" onClick={() => handleStartSet(i)}>
                       <Play className="w-4 h-4 mr-1" /> Starten
@@ -356,21 +357,45 @@ export default function TV() {
         </>
       )}
 
-      {/* Legacy single texts */}
-      <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Einzeltexte (Ableitbar/Nicht ableitbar)</h2>
+      {/* Separator */}
+      <div className="border-t border-border my-6"></div>
+
+      {/* Legacy single texts - SECONDARY */}
+      <div>
+        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-1">Klassischer Modus</h2>
+        <p className="text-sm text-muted mb-3">Einzelne Texte mit Ableitbar/Nicht-Ableitbar Aussagen (Legacy Format)</p>
+      </div>
       <div className="space-y-3">
-        {tvTexts.map((t, i) => (
+        {displayedLegacyTexts.map((t, i) => (
           <Card key={t.id} className="hover:shadow-md transition-shadow">
-            <CardContent className="p-5 flex items-center justify-between">
-              <div>
-                <h3 className="font-semibold text-gray-900 dark:text-gray-100">{t.title}</h3>
-                <p className="text-sm text-muted">{t.statements.length} Aussagen zu bewerten</p>
+            <CardContent className="p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+              <div className="flex-1">
+                <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">{t.title}</h3>
+                <p className="text-xs text-muted mt-1">{t.statements.length} Aussagen zu bewerten</p>
               </div>
-              <Button onClick={() => handleStartLegacy(i)}><Play className="w-4 h-4 mr-2" /> Starten</Button>
+              <Button size="sm" onClick={() => handleStartLegacy(i)} className="w-full sm:w-auto">
+                <Play className="w-4 h-4 mr-1" /> Starten
+              </Button>
             </CardContent>
           </Card>
         ))}
       </div>
+
+      {/* Show more toggle */}
+      {tvTexts.length > 3 && !showAllLegacy && (
+        <div className="flex justify-center pt-2">
+          <button onClick={() => setShowAllLegacy(true)} className="flex items-center gap-2 text-sm text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
+            <ChevronDown className="w-4 h-4" /> Alle {tvTexts.length} Texte anzeigen
+          </button>
+        </div>
+      )}
+      {showAllLegacy && tvTexts.length > 3 && (
+        <div className="flex justify-center pt-2">
+          <button onClick={() => setShowAllLegacy(false)} className="text-sm text-muted hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+            Weniger anzeigen
+          </button>
+        </div>
+      )}
     </div>
   );
 }

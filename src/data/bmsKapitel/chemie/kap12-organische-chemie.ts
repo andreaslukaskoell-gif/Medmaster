@@ -23,20 +23,6 @@ Die organische Chemie befasst sich mit Verbindungen des Kohlenstoffs. Der Kohlen
 
 Alkane besitzen ausschließlich C-C-Einfachbindungen (σ-Bindungen). Sie sind gesättigt, das heißt, sie können keine weiteren Atome aufnehmen. Alle Kohlenstoffatome sind sp³-hybridisiert und bilden eine tetraederförmige Anordnung mit einem Bindungswinkel von 109,5°.
 
-**IUPAC-Namen der ersten 10 Alkane (auswendig lernen!):**
-| n | Name | Formel |
-|---|------|--------|
-| 1 | Methan | CH₄ |
-| 2 | Ethan | C₂H₆ |
-| 3 | Propan | C₃H₈ |
-| 4 | Butan | C₄H₁₀ |
-| 5 | Pentan | C₅H₁₂ |
-| 6 | Hexan | C₆H₁₄ |
-| 7 | Heptan | C₇H₁₆ |
-| 8 | Octan | C₈H₁₈ |
-| 9 | Nonan | C₉H₂₀ |
-| 10 | Decan | C₁₀H₂₂ |
-
 **Eigenschaften:**
 Alkane sind unpolare Moleküle. Die einzigen intermolekularen Wechselwirkungen sind schwache van-der-Waals-Kräfte (London-Dispersionskräfte). Mit steigender Molekülgröße wächst die Kontaktfläche und damit die Stärke dieser Kräfte — der Siedepunkt steigt. Methan ist bei Raumtemperatur gasförmig, Pentan ist flüssig, Heptan und größere Alkane sind ölige Flüssigkeiten.
 
@@ -97,6 +83,25 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform,
           heading: "Homologe Reihe und Siedepunkte",
           text: "Eine homologe Reihe ist eine Gruppe organischer Verbindungen, die sich durch eine CH₂-Gruppe unterscheiden. In der Alkan-Reihe steigen die Siedepunkte pro CH₂-Einheit um ca. 20-30°C. Die Siedepunkte hängen von den van-der-Waals-Kräften ab: Methan (-162°C), Ethan (-89°C), Propan (-42°C), Butan (-1°C), Pentan (36°C), Hexan (69°C), Heptan (98°C), Octan (126°C).",
           merksatz: "Mehr C-Atome → größere Moleküloberfläche → stärkere van-der-Waals-Kräfte → höherer Siedepunkt. Verzweigung verkleinert die Oberfläche und senkt den Siedepunkt.",
+        },
+        {
+          heading: "IUPAC-Namen der ersten 10 Alkane",
+          text: "Die Homologe Reihe der Alkane (auswendig lernen!):",
+          table: {
+            headers: ["n", "Name", "Formel"],
+            rows: [
+              ["1", "Methan", "CH₄"],
+              ["2", "Ethan", "C₂H₆"],
+              ["3", "Propan", "C₃H₈"],
+              ["4", "Butan", "C₄H₁₀"],
+              ["5", "Pentan", "C₅H₁₂"],
+              ["6", "Hexan", "C₆H₁₄"],
+              ["7", "Heptan", "C₇H₁₆"],
+              ["8", "Octan", "C₈H₁₈"],
+              ["9", "Nonan", "C₉H₂₀"],
+              ["10", "Decan", "C₁₀H₂₂"],
+            ]
+          }
         },
       ],
       diagram: 'functional-groups',

@@ -426,12 +426,13 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
 
       {/* Main content: im Fluss (relative), kein Overlap mit Header */}
       <Card className="relative">
-        <CardContent className={`relative ${kapitel?.id === 'bio-kap1' ? 'p-8' : 'p-6'}`}>
+        <CardContent className={`relative ${kapitel?.enhancedFormatting ? 'p-8' : 'p-6'}`}>
           <ContentErrorBoundary context={`${kapitel?.id ?? "chapter"}-${uk?.id ?? "uk"}`}>
             <ContentVisualizer
               uk={uk}
               subject={kapitel?.subject ?? "biologie"}
               chapterId={kapitel?.id}
+              enhancedFormatting={kapitel?.enhancedFormatting}
               hinterfragMode={hinterfragMode}
               progressiveDisclosure={progressiveDisclosure}
             />
@@ -439,35 +440,41 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
         </CardContent>
       </Card>
 
-      {/* Merksätze - im Content-Fluss (relative), keine Überlagerung */}
-      {(uk.merksätze && Array.isArray(uk.merksätze) && uk.merksätze.length > 0) && (
-        <div className={`relative ${kapitel.id === 'bio-kap1' ? 'space-y-4 my-8' : 'space-y-4'}`}>
-          {kapitel.id === 'bio-kap1' && (
-            <div className="mb-2 pb-2 border-b-2 border-gray-300 dark:border-gray-600">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-                💡 Prüfungsrelevante Merksätze
+      {/* Merksätze - collapsible when more than 3 */}
+      {(uk.merksätze && Array.isArray(uk.merksätze) && uk.merksätze.length > 0) && (() => {
+        const merksätze = uk.merksätze;
+        const SHOW_DIRECTLY = 3;
+        const hasMore = merksätze.length > SHOW_DIRECTLY;
+        const [merkeExpanded, setMerkeExpanded] = React.useState(false);
+        const visible = hasMore && !merkeExpanded ? merksätze.slice(0, SHOW_DIRECTLY) : merksätze;
+
+        return (
+          <div className="space-y-3">
+            <div className="flex items-center justify-between pb-1 border-b border-gray-200 dark:border-gray-700">
+              <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                💡 Merksätze
+                <span className="text-xs font-normal text-gray-400 dark:text-gray-500">({merksätze.length})</span>
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                Diese Kernaussagen solltest du dir merken
-              </p>
             </div>
-          )}
-          {uk.merksätze.map((merksatz, i) => (
-            <div key={i} className="relative">
-              {kapitel.id === 'bio-kap1' ? (
-                <div className="relative bg-amber-50 dark:bg-amber-900/30 border-l-4 border-amber-500 shadow-md p-5 rounded-r-lg">
-                  <p className="font-bold text-base text-amber-800 dark:text-amber-300 flex items-center gap-2 mb-2">
-                    <span className="text-xl">💡</span> Merke
-                  </p>
-                  <p className="text-base text-amber-900 dark:text-amber-200 leading-relaxed" dangerouslySetInnerHTML={{ __html: merksatz.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold">$1</strong>') }} />
-                </div>
-              ) : (
-                <MerksatzBox text={merksatz} type="merke" />
-              )}
-            </div>
-          ))}
-        </div>
-      )}
+            {visible.map((merksatz, i) => (
+              <div key={i} className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-400 p-4 rounded-r-lg">
+                <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: merksatz.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold">$1</strong>') }} />
+              </div>
+            ))}
+            {hasMore && (
+              <button
+                onClick={() => setMerkeExpanded(!merkeExpanded)}
+                className="w-full text-sm text-amber-700 dark:text-amber-400 hover:text-amber-900 dark:hover:text-amber-200 py-2 border border-amber-200 dark:border-amber-800 rounded-lg transition-colors"
+              >
+                {merkeExpanded
+                  ? `▲ Weniger anzeigen`
+                  : `▼ ${merksätze.length - SHOW_DIRECTLY} weitere Merksätze anzeigen`}
+              </button>
+            )}
+          </div>
+        );
+      })()}
 
       {/* Altfrage */}
       {uk.altfrage && (
@@ -533,16 +540,16 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
         };
 
         return (
-          <div className={kapitel.id === 'bio-kap1' ? 'mt-8' : ''}>
-            {kapitel.id === 'bio-kap1' ? (
+          <div className={kapitel.enhancedFormatting ? 'mt-8' : ''}>
+            {kapitel.enhancedFormatting ? (
               <InteractiveQuiz questions={allQuestions} {...kontrollProps} />
             ) : (
               <>
-                <div className={kapitel.id === 'bio-kap1' ? 'mb-4 pb-3 border-b-2 border-gray-300 dark:border-gray-600' : ''}>
-                  <h2 className={`${kapitel.id === 'bio-kap1' ? 'text-2xl font-bold' : 'text-xl font-semibold'} text-gray-900 dark:text-gray-100`}>
-                    {kapitel.id === 'bio-kap1' && '📝 '}Kontrollfragen
+                <div className={kapitel.enhancedFormatting ? 'mb-4 pb-3 border-b-2 border-gray-300 dark:border-gray-600' : ''}>
+                  <h2 className={`${kapitel.enhancedFormatting ? 'text-2xl font-bold' : 'text-xl font-semibold'} text-gray-900 dark:text-gray-100`}>
+                    {kapitel.enhancedFormatting && '📝 '}Kontrollfragen
                   </h2>
-                  {kapitel.id === 'bio-kap1' && (
+                  {kapitel.enhancedFormatting && (
                     <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                       Teste dein Wissen mit diesen Fragen
                     </p>
@@ -556,12 +563,12 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
       }, [uk.selfTest, uk.content, kapitel.id, uk.id])}
 
       {/* Gelesen-Markierung: triggert Fortschrittsbalken in der Sidebar */}
-      <Card className="border-emerald-200 dark:border-emerald-800 bg-emerald-50/50 dark:bg-emerald-900/10">
+      <Card className="border-gray-200 dark:border-gray-700 bg-gray-50/80 dark:bg-gray-800/40">
         <CardContent className="p-4 flex items-center gap-3">
           {isCompleted ? (
-            <span className="flex items-center gap-2 text-sm font-medium text-emerald-700 dark:text-emerald-400">
+            <span className="flex items-center gap-2 text-sm font-medium text-green-700 dark:text-green-400">
               <CheckCircle2 className="w-5 h-5 shrink-0" />
-              Bereits gelesen
+              Bereits gelesen ✓
             </span>
           ) : (
             <label className="flex items-center gap-3 cursor-pointer">

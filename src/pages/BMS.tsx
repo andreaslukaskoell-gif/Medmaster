@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { usePageTitle } from "@/hooks/usePageTitle";
 import { BlurFade } from "@/components/ui/blur-fade";
 import {
   Dna,
@@ -101,6 +102,7 @@ const subjects = [
 ] as const;
 
 export default function BMS() {
+  usePageTitle("BMS – Biomedizinische Grundlagen");
   const navigate = useNavigate();
   const { fach: fachParam, kapitel: kapitelParam } = useParams<{ fach?: string; kapitel?: string }>();
   const [searchParams] = useSearchParams();
@@ -157,15 +159,15 @@ export default function BMS() {
     (window as any).listChapters = listAllChapters;
     // Migration Funktion
     (window as any).migrateBMSChapters = async () => {
-      console.log('🚀 Starte Migration von localStorage zu Supabase...');
+      if (import.meta.env.DEV) console.log('🚀 Starte Migration von localStorage zu Supabase...');
       try {
         const result = await migrateBMSChaptersToSupabase();
         if (result.success) {
-          console.log(`✅ Migration erfolgreich! ${result.chaptersMigrated} Kapitel, ${result.subchaptersMigrated} Unterkapitel migriert.`);
+          if (import.meta.env.DEV) console.log(`✅ Migration erfolgreich! ${result.chaptersMigrated} Kapitel, ${result.subchaptersMigrated} Unterkapitel migriert.`);
           if (result.errors.length > 0) {
             console.warn('⚠️ Einige Fehler:', result.errors);
           }
-          console.log('🔄 Seite neu laden, um aus Supabase zu laden...');
+          if (import.meta.env.DEV) console.log('🔄 Seite neu laden, um aus Supabase zu laden...');
           setTimeout(() => window.location.reload(), 1000);
         } else {
           console.error('❌ Migration fehlgeschlagen:', result.errors);
@@ -179,7 +181,7 @@ export default function BMS() {
     // Migration Status prüfen
     (window as any).checkMigrationStatus = async () => {
       const status = await checkMigrationStatus();
-      console.log('📊 Migration Status:', status);
+      if (import.meta.env.DEV) console.log('📊 Migration Status:', status);
       return status;
     };
     
@@ -197,9 +199,9 @@ export default function BMS() {
         setSupabaseChapters(chapters);
         setIsLoading(false);
         if (source === 'cache') {
-          console.log('📦 Showing cached chapters (revalidating in background)');
+          if (import.meta.env.DEV) console.log('📦 Showing cached chapters (revalidating in background)');
         } else {
-          console.log('✅ Loaded', chapters.length, 'chapters from Supabase');
+          if (import.meta.env.DEV) console.log('✅ Loaded', chapters.length, 'chapters from Supabase');
         }
       },
       (err) => {
@@ -481,7 +483,8 @@ export default function BMS() {
       );
     }
 
-    const kapitel = Array.isArray(sortedChapters) ? sortedChapters : [];
+    // Use only sequenced (official BMS) chapters to avoid Supabase ghost entries
+    const kapitel = Array.isArray(roadmapChapters) ? roadmapChapters : [];
 
     const subjectUK = kapitel.reduce((sum, k) => {
       if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;

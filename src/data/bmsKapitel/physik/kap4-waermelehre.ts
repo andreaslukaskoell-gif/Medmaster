@@ -53,16 +53,6 @@ Die **spezifische Wärmekapazität c** gibt an, wie viel Energie nötig ist, um 
 
 **Q = m · c · ΔT**
 
-Wichtige Werte:
-| Stoff | c [J/(kg·K)] |
-|-------|-------------|
-| Wasser (flüssig) | 4180 |
-| Eis | 2090 |
-| Ethanol | 2440 |
-| Aluminium | 900 |
-| Eisen/Stahl | 450 |
-| Luft | 1005 |
-
 Wasser hat die höchste spezifische Wärmekapazität aller gängigen Flüssigkeiten – ein biologisch zentraler Fakt. Der menschliche Körper (≈ 60 % Wasser) kann große Wärmemengen aufnehmen/abgeben ohne starke Temperaturschwankungen.
 
 **Mischungstemperatur**: Werden zwei Wassermengen vermischt, gilt Energieerhaltung:
@@ -82,6 +72,21 @@ Fiebermessung nutzt die Temperaturausdehnung (Quecksilber/Alkohol-Thermometer) o
       ],
 
       sections: [
+        {
+          heading: "Spezifische Wärmekapazitäten wichtiger Stoffe",
+          text: "Die spezifische Wärmekapazität c gibt an, wie viel Energie nötig ist, um 1 kg eines Stoffes um 1 K zu erwärmen (Formel: Q = m · c · ΔT). Wasser hat mit Abstand die höchste Wärmekapazität unter den gängigen Stoffen.",
+          table: {
+            headers: ["Stoff", "c [J/(kg·K)]"],
+            rows: [
+              ["Wasser (flüssig)", "4180"],
+              ["Eis", "2090"],
+              ["Ethanol", "2440"],
+              ["Aluminium", "900"],
+              ["Eisen/Stahl", "450"],
+              ["Luft", "1005"],
+            ],
+          },
+        },
         {
           heading: "Temperaturskalen im Vergleich",
           text: "Celsius und Kelvin unterscheiden sich nur im Nullpunkt: 0 K = −273,15 °C. Kelvin ist die thermodynamisch korrekte Skala, da sie immer positiv ist und direkt proportional zur mittleren kinetischen Energie der Teilchen ist (E_kin ∝ T). Fahrenheit teilt den Bereich zwischen Gefrieren und Sieden des Wassers in 180 Teile (vs. 100 bei Celsius). Im medizinischen Alltag begegnet man allen drei Skalen: deutsche Klinik nutzt Celsius, US-Literatur Fahrenheit, Physik und Biochemie Kelvin.",
@@ -270,18 +275,6 @@ Bei der Wärmeleitung wird Energie durch direkte Wechselwirkung benachbarter Tei
 - ΔT: Temperaturdifferenz [K]
 - d: Schichtdicke [m]
 
-Typische Wärmeleitfähigkeiten:
-| Material | λ [W/(m·K)] |
-|----------|-------------|
-| Kupfer | 380 |
-| Stahl | 50 |
-| Glas | 1,0 |
-| Körperfett | 0,2 |
-| Muskelgewebe | 0,5 |
-| Luft (ruhend) | 0,026 |
-| Wasser | 0,6 |
-| Wollgewebe | 0,04 |
-
 Metalle leiten Wärme gut (hohe λ), Gase und Isolatoren schlecht. Körperfett wirkt als Wärmeisolator (niedrige λ). Verbände aus Wolle oder Schaumstoff halten Körperwärme, weil eingeschlossene Luft (λ ≈ 0,026) schlecht leitet.
 
 Der **Widerstand** R_th = d/(λ·A) ist das thermische Analogon zum elektrischen Widerstand; Schichten können wie Widerstände in Reihe addiert werden (Bauphysik, Kleidung).
@@ -336,6 +329,23 @@ Bei Fieber wird der Hypothalamus-Sollwert durch Pyrogene (z. B. IL-1, Prostaglan
       ],
 
       sections: [
+        {
+          heading: "Typische Wärmeleitfähigkeiten",
+          text: "Die Wärmeleitfähigkeit λ [W/(m·K)] ist eine materialspezifische Größe, die angibt, wie gut ein Stoff Wärme leitet. Metalle leiten gut (hohes λ), Gase und Fett isolieren (niedriges λ).",
+          table: {
+            headers: ["Material", "λ [W/(m·K)]"],
+            rows: [
+              ["Kupfer", "380"],
+              ["Stahl", "50"],
+              ["Glas", "1,0"],
+              ["Körperfett", "0,2"],
+              ["Muskelgewebe", "0,5"],
+              ["Luft (ruhend)", "0,026"],
+              ["Wasser", "0,6"],
+              ["Wollgewebe", "0,04"],
+            ],
+          },
+        },
         {
           heading: "Wärmeleitung: Fouriersches Gesetz",
           text: "Der Wärmestrom Q̇ durch eine Schicht ist proportional zur Temperaturdifferenz ΔT, zur Fläche A und umgekehrt proportional zur Dicke d. Der Proportionalitätsfaktor ist die materialspezifische Wärmeleitfähigkeit λ in W/(m·K). Metalle (Kupfer λ = 380) leiten exzellent, Körperfett (λ = 0,2) und Luft (λ = 0,026) isolieren. Verbände und Kleidung wirken durch eingeschlossene Luft als thermische Isolatoren. In der Bauphysik werden Schichten wie Widerstände in Reihe geschaltet: R_th = d/(λ·A).",
@@ -798,13 +808,6 @@ Bei Phasenübergängen ändert sich die Temperatur nicht, obwohl Wärme zu- oder
 **Schmelzwärme (Enthalpie der Fusion):** Q = m · L_f
 **Verdampfungswärme (Enthalpie der Vaporisation):** Q = m · L_v
 
-Werte für Wasser:
-| Übergang | Temperatur | L [J/kg] |
-|----------|-----------|---------|
-| Schmelzen (Eis → Wasser) | 0 °C | 334 000 |
-| Verdampfen (Wasser → Dampf) | 100 °C | 2 260 000 |
-| Verdunsten bei 37 °C | 37 °C | 2 430 000 |
-
 Die Verdampfungswärme ist etwa 7-mal größer als die Schmelzwärme!
 
 ## Dampfdruck und Siedepunkt
@@ -833,6 +836,18 @@ Konsequenzen:
       ],
 
       sections: [
+        {
+          heading: "Latentwärmen von Wasser",
+          text: "Bei Phasenübergängen ändert sich die Temperatur nicht, obwohl Wärme zu- oder abgeführt wird. Die spezifische Latentwärme L gibt die Energiemenge pro Kilogramm an (Q = m · L). Die Verdampfungswärme ist deutlich größer als die Schmelzwärme.",
+          table: {
+            headers: ["Übergang", "Temperatur", "L [J/kg]"],
+            rows: [
+              ["Schmelzen (Eis → Wasser)", "0 °C", "334 000"],
+              ["Verdampfen (Wasser → Dampf)", "100 °C", "2 260 000"],
+              ["Verdunsten bei 37 °C", "37 °C", "2 430 000"],
+            ],
+          },
+        },
         {
           heading: "Ideales Gasgesetz und Spezialfälle",
           text: "pV = nRT verknüpft alle vier Zustandsgrößen des idealen Gases. Bei zwei konstanten Größen ergeben sich die klassischen Gasgesetze: Boyle-Mariotte (T = const: p₁V₁ = p₂V₂), Gay-Lussac (p = const: V₁/T₁ = V₂/T₂) und Charles (V = const: p₁/T₁ = p₂/T₂). Das Molvolumen bei Normzustand beträgt 22,4 L/mol. MedAT-Aufgaben kombinieren häufig zwei der Größen und fragen die dritte. Wichtig: T immer in Kelvin einsetzen!",

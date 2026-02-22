@@ -12,12 +12,6 @@ export const bioKap6: Kapitel = {
       title: "DNA Struktur",
       content: `# DNA-Struktur und Replikation – Biologie Kapitel 6 (Molekulare Genetik)
 
-**Priorität:** HOCH
-**Geschätzte Lesezeit:** 15 Minuten
-**Stichwortliste-Abdeckung:** 10/10 Stichwörter
-
----
-
 ## Einleitung
 
 **DNA (Desoxyribonukleinsäure)** ist:
@@ -25,11 +19,7 @@ export const bioKap6: Kapitel = {
 2. **Molekulare Struktur:** Doppelhelix (Watson & Crick, 1953)
 3. **Funktion:** Speicherung, Replikation, Expression (Transkription → Translation)
 
----
-
-## Kerninhalt
-
-### 1. ⭐ DNA-Struktur (Doppelhelix)
+## DNA-Struktur (Doppelhelix)
 
 **Baustein:** **Nukleotid** = Phosphat + Zucker (Desoxyribose) + Base
 
@@ -40,7 +30,7 @@ export const bioKap6: Kapitel = {
 | **Purine** (2 Ringe) | **Adenin (A), Guanin (G)** | Größer (Doppelring) |
 | **Pyrimidine** (1 Ring) | **Cytosin (C), Thymin (T)** | Kleiner (Einzelring) |
 
-⭐ **Chargaff-Regeln (Basenpaarung):**
+**Chargaff-Regeln (Basenpaarung):**
 - **A = T** (Adenin paart mit Thymin, 2 Wasserstoffbrücken)
 - **G ≡ C** (Guanin paart mit Cytosin, **3** Wasserstoffbrücken → **stärkere Bindung**)
 - **A + G = C + T** (Purine = Pyrimidine)
@@ -49,55 +39,48 @@ export const bioKap6: Kapitel = {
 
 | Merkmal | Beschreibung |
 |---------|--------------|
-| **Doppelstrang** | 2 DNA-Stränge, antiparallel (5''→3'' und 3''→5'') |
+| **Doppelstrang** | 2 DNA-Stränge, antiparallel (5'→3' und 3'→5') |
 | **Helix** | Rechtsgängige Spirale, 1 Windung = 10 Basenpaare, 3,4 nm |
 | **Komplementär** | A-T, G-C (Basenpaarung) |
-| **Antiparallel** | Ein Strang 5''→3'', anderer 3''→5'' (wichtig für Replikation!) |
+| **Antiparallel** | Ein Strang 5'→3', anderer 3'→5' (wichtig für Replikation!) |
 | **Große/kleine Furche** | Zugänglichkeit für Proteine (z.B. Transkriptionsfaktoren) |
 
 **Wichtig:**
-- **5''-Ende:** Phosphatgruppe frei
-- **3''-Ende:** OH-Gruppe (Hydroxylgruppe) frei → **DNA-Polymerase verlängert hier** (5''→3''-Richtung)
+- **5'-Ende:** Phosphatgruppe frei
+- **3'-Ende:** OH-Gruppe (Hydroxylgruppe) frei → **DNA-Polymerase verlängert hier** (5'→3'-Richtung)
 
----
-
-### 2. ⭐ DNA-Replikation (Verdopplung)
+## DNA-Replikation (Verdopplung)
 
 **Prinzip:** **Semikonservativ** (Watson & Crick, 1953; Meselson & Stahl, 1958)
 - Jeder Tochterstrang = **1 alter Strang** (Matrize) + **1 neuer Strang**
 
 **Ablauf:**
 
-#### 2a. ⭐ Initiation (Start)
-
+**Initiation (Start):**
 1. **Origin of Replication (Ori):** Startpunkt (Prokaryoten: 1× oriC, Eukaryoten: viele Oris)
 2. **Helicase:** Entwindet Doppelhelix → **Replikationsgabel** (Y-förmig)
 3. **Einzelstrang-bindende Proteine (SSB):** Stabilisieren Einzelstränge (verhindern Rückfaltung)
 4. **Topoisomerase (Gyrase):** Entspannt Supercoiling (Überdrehung vor Replikationsgabel)
 
----
-
-#### 2b. ⭐ Elongation (Verlängerung)
+**Elongation (Verlängerung):**
 
 **DNA-Polymerase III** (Prokaryoten) bzw. **DNA-Polymerase δ/ε** (Eukaryoten):
-- **Syntheserichtung:** **5''→3''** (Nukleotide werden an 3''-OH angefügt)
-- **Matrize:** 3''→5'' (komplementär)
+- **Syntheserichtung:** **5'→3'** (Nukleotide werden an 3'-OH angefügt)
+- **Matrize:** 3'→5' (komplementär)
 - **Benötigt:** Primer (RNA, ~10 Nukleotide, von **Primase** synthetisiert)
 
-⭐ **Leitstrang (Leading Strand):**
-- **Kontinuierliche Synthese** (5''→3'' in Richtung der Replikationsgabel)
+**Leitstrang (Leading Strand):**
+- **Kontinuierliche Synthese** (5'→3' in Richtung der Replikationsgabel)
 - **1× Primer** → durchgehende Synthese
 
-⭐ **Folgestrang (Lagging Strand):**
-- **Diskontinuierliche Synthese** (5''→3'' **weg** von Replikationsgabel)
+**Folgestrang (Lagging Strand):**
+- **Diskontinuierliche Synthese** (5'→3' **weg** von Replikationsgabel)
 - **Okazaki-Fragmente** (~1.000–2.000 nt bei Prokaryoten, ~100–200 nt bei Eukaryoten)
 - **Viele Primer** (für jedes Fragment)
 
-**Wichtig:** DNA-Polymerase kann **nicht de novo** starten → **benötigt 3''-OH (Primer)**
+**Wichtig:** DNA-Polymerase kann **nicht de novo** starten → **benötigt 3'-OH (Primer)**
 
----
-
-#### 2c. ⭐ Termination (Abschluss)
+**Termination (Abschluss):**
 
 **Prokaryoten:**
 - **Ter-Sequenzen** (Termination): Replikationsgabeln treffen sich → Abschluss
@@ -109,27 +92,23 @@ export const bioKap6: Kapitel = {
 
 **Weitere Schritte:**
 1. **DNA-Polymerase I** (Prokaryoten) bzw. **RNase H + DNA-Polymerase δ** (Eukaryoten): Entfernt RNA-Primer, ersetzt mit DNA
-2. **DNA-Ligase:** Verbindet Okazaki-Fragmente (Phosphodiesterbindung zwischen 3''-OH und 5''-Phosphat)
+2. **DNA-Ligase:** Verbindet Okazaki-Fragmente (Phosphodiesterbindung zwischen 3'-OH und 5'-Phosphat)
 
----
-
-### 3. ⭐ Enzyme der Replikation
+## Enzyme der Replikation
 
 | Enzym | Funktion | Wichtig |
 |-------|----------|---------|
 | **Helicase** | Entwindet Doppelhelix | Öffnet Replikationsgabel |
 | **Topoisomerase (Gyrase)** | Entspannt Supercoiling (Überdrehung) | Verhindert Knoten vor Replikationsgabel |
-| **Primase** | Synthetisiert RNA-Primer (~10 nt) | DNA-Polymerase benötigt 3''-OH zum Starten |
-| **DNA-Polymerase III (δ/ε)** | Hauptsynthese (5''→3''), Korrekturlesen (3''→5'' Exonuklease) | Leit- + Folgestrang |
+| **Primase** | Synthetisiert RNA-Primer (~10 nt) | DNA-Polymerase benötigt 3'-OH zum Starten |
+| **DNA-Polymerase III (δ/ε)** | Hauptsynthese (5'→3'), Korrekturlesen (3'→5' Exonuklease) | Leit- + Folgestrang |
 | **DNA-Polymerase I** | Entfernt Primer, ersetzt mit DNA | Nur Prokaryoten (Eukaryoten: RNase H + Pol δ) |
 | **DNA-Ligase** | Verbindet DNA-Fragmente (Okazaki) | Schließt Lücken (Phosphodiesterbindung) |
 | **Telomerase** | Verlängert Telomere (TTAGGG) | Nur Eukaryoten (Keimbahn, Stammzellen, Krebszellen) |
 
-**Wichtig:** DNA-Polymerase hat **3''→5'' Exonuklease-Aktivität** (Korrekturlesen, Proofreading) → Fehlerrate ~10⁻⁹ (nach Korrektur)
+**Wichtig:** DNA-Polymerase hat **3'→5' Exonuklease-Aktivität** (Korrekturlesen, Proofreading) → Fehlerrate ~10⁻⁹ (nach Korrektur)
 
----
-
-### 4. Prokaryotische vs. Eukaryotische Replikation
+## Prokaryotische vs. Eukaryotische Replikation
 
 | Merkmal | Prokaryoten (E. coli) | Eukaryoten (Mensch) |
 |---------|----------------------|---------------------|
@@ -139,41 +118,40 @@ export const bioKap6: Kapitel = {
 | **DNA-Polymerase** | Pol III (Hauptsynthese), Pol I (Primer-Ersatz) | Pol δ (Folgestrang), Pol ε (Leitstrang), Pol α (Primase-Komplex) |
 | **Telomere** | Zirkuläres Chromosom (keine Telomere) | Lineare Chromosomen → **Telomerase** (TTAGGG) |
 | **Histone** | Nein (Nukleoid, keine Histone) | Ja (Chromatin, Nukleosomen) |
-
----
-
-## 📌 Prüfungsfokus
-
-1. **Basenpaarung:** A-T (2 H-Brücken), G≡C (3 H-Brücken, stärker), Chargaff-Regeln (A=T, G=C)
-2. **Antiparallel:** Ein Strang 5''→3'', anderer 3''→5'' (wichtig für Replikation!)
-3. **Semikonservativ:** Jeder Tochterstrang = 1 alter + 1 neuer Strang (Meselson & Stahl)
-4. **Leitstrang:** Kontinuierlich (5''→3'' in Richtung Replikationsgabel), 1× Primer
-5. **Folgestrang:** Diskontinuierlich (Okazaki-Fragmente, viele Primer), 5''→3'' weg von Gabel
-6. **DNA-Polymerase:** Syntheserichtung 5''→3'', benötigt Primer (3''-OH), Korrekturlesen (3''→5'' Exonuklease)
-7. **Telomerase:** Verlängert Telomere (TTAGGG), aktiv in Keimbahn, Stammzellen, Krebszellen (Immortalisierung)
-
----
-
-## Merksätze
-
->>>> **Basenpaarung (Chargaff):** „A = T (2 H-Brücken), G ≡ C (3 H-Brücken, stärker!). Purine (A, G, 2 Ringe) paaren mit Pyrimidinen (C, T, 1 Ring). A + G = C + T (Purine = Pyrimidine)!"
-
->>>> **Replikation semikonservativ:** „Jeder Tochterstrang = 1 alter Strang (Matrize) + 1 neuer Strang. Meselson & Stahl (1958): N15-schwer + N14-leicht → Hybrid-DNA (1 schwer, 1 leicht). Antiparallel: 5''→3'' und 3''→5''!"
-
->>>> **Leit- vs. Folgestrang:** „Leitstrang (Leading): Kontinuierlich (5''→3'' in Richtung Gabel), 1× Primer. Folgestrang (Lagging): Diskontinuierlich (Okazaki-Fragmente, 5''→3'' weg von Gabel), viele Primer. DNA-Polymerase nur 5''→3''!"
-
->>>> **Telomerase:** „Verlängert Telomere (TTAGGG-Repeats, Chromosomenenden). Aktiv in Keimbahn, Stammzellen, Krebszellen (Immortalisierung!). Ohne Telomerase → Telomer-Verkürzung → Seneszenz (Alterung, Hayflick-Limit ~50 Teilungen)!"
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 5 UK07 – Mutationen](../Bio_Kap5_UK07_Mutationen.md) | [Weiter: Bio Kap 6 UK02 – Transkription](Bio_Kap6_UK02_Transkription.md) →
 `,
-      lernziele: [],
-      sections: [],
+      lernziele: [
+        "Den Aufbau der DNA-Doppelhelix und die Chargaff-Regeln (A=T, G≡C) erklären können.",
+        "Das semikonservative Prinzip der DNA-Replikation beschreiben und das Meselson-Stahl-Experiment interpretieren können.",
+        "Den Unterschied zwischen Leitstrang (kontinuierlich) und Folgestrang (diskontinuierlich, Okazaki-Fragmente) erläutern können.",
+        "Die Enzyme der Replikation (Helicase, Primase, DNA-Polymerase, Ligase, Telomerase) und ihre Funktionen nennen können.",
+        "Die Rolle der Telomerase bei Seneszenz und Krebsentstehung erklären können.",
+      ],
+      sections: [
+        {
+          heading: "DNA-Struktur (Doppelhelix)",
+          text: "Die DNA besteht aus Nukleotiden (Phosphat + Desoxyribose + Base). Purine (A, G) paaren mit Pyrimidinen (C, T): A-T mit 2 H-Brücken, G-C mit 3 H-Brücken. Die Doppelhelix ist antiparallel (5'→3' und 3'→5') und rechtsgängig.",
+          merksatz: "A = T (2 H-Brücken), G ≡ C (3 H-Brücken, stärker). Purine (A, G, 2 Ringe) paaren mit Pyrimidinen (C, T, 1 Ring). A + G = C + T (Purine = Pyrimidine).",
+        },
+        {
+          heading: "DNA-Replikation (Verdopplung)",
+          text: "Replikation verläuft semikonservativ: jeder Tochterstrang enthält einen alten und einen neuen Strang. Helicase öffnet die Gabel, Primase liefert RNA-Primer, DNA-Polymerase synthetisiert 5'→3'. Der Leitstrang wird kontinuierlich, der Folgestrang diskontinuierlich (Okazaki-Fragmente) synthetisiert.",
+          merksatz: "Leitstrang (Leading): Kontinuierlich (5'→3' in Richtung Gabel), 1× Primer. Folgestrang (Lagging): Diskontinuierlich (Okazaki-Fragmente, 5'→3' weg von Gabel), viele Primer. DNA-Polymerase nur 5'→3'.",
+        },
+        {
+          heading: "Enzyme der Replikation",
+          text: "Helicase entwirrt, Topoisomerase entspannt Supercoiling, Primase synthetisiert RNA-Primer, DNA-Polymerase III/δ/ε verlängert mit Proofreading (3'→5'-Exonuklease), DNA-Ligase verbindet Fragmente. Telomerase verlängert Telomere (TTAGGG) in Keimbahn-, Stamm- und Krebszellen.",
+          merksatz: "Telomerase verlängert Telomere (TTAGGG-Repeats). Aktiv in Keimbahn, Stammzellen, Krebszellen (Immortalisierung). Ohne Telomerase → Telomer-Verkürzung → Seneszenz (Hayflick-Limit ~50 Teilungen).",
+        },
+        {
+          heading: "Prokaryotische vs. Eukaryotische Replikation",
+          text: "Prokaryoten haben 1 Origin (oriC), eukaryotische Chromosomen haben viele Origins. Prokaryoten replizieren schneller (~1.000 nt/s), Okazaki-Fragmente sind länger. Eukaryoten benötigen Telomerase für lineare Chromosomen; Prokaryoten haben zirkuläre DNA ohne Telomere.",
+        },
+      ],
       diagram: 'dna-helix',
 
-      merksätze: [],
+      merksätze: [
+        "Semikonservativ: Jeder Tochterstrang = 1 alter Strang (Matrize) + 1 neuer Strang. Meselson & Stahl (1958): N15-schwer + N14-leicht → Hybrid-DNA. Antiparallel: 5'→3' und 3'→5'.",
+      ],
       selfTest: [
         {
           question: "In einem DNA-Doppelstrang beträgt der Anteil von Adenin (A) **30%**. Wie hoch ist der Anteil von Cytosin (C) gemäß den Chargaff-Regeln?",
@@ -290,12 +268,6 @@ export const bioKap6: Kapitel = {
       title: "Transkription",
       content: `# Transkription und RNA-Prozessierung – Biologie Kapitel 6 (Molekulare Genetik)
 
-**Priorität:** HOCH
-**Geschätzte Lesezeit:** 16 Minuten
-**Stichwortliste-Abdeckung:** 11/11 Stichwörter
-
----
-
 ## Einleitung
 
 **Transkription** = Synthese von **RNA** aus **DNA-Matrize**
@@ -309,20 +281,16 @@ export const bioKap6: Kapitel = {
 - **rRNA** (ribosomale RNA): Bestandteil der Ribosomen
 - **tRNA** (Transfer-RNA): Bringt Aminosäuren zur Translation
 
----
-
-## Kerninhalt
-
-### 1. ⭐ Grundprinzip der Transkription
+## Grundprinzip der Transkription
 
 **Unterschiede DNA ↔ RNA:**
 
 | Merkmal | DNA | RNA |
 |---------|-----|-----|
-| **Zucker** | Desoxyribose (ohne OH an 2''-Position) | **Ribose** (mit OH an 2''-Position) |
+| **Zucker** | Desoxyribose (ohne OH an 2'-Position) | **Ribose** (mit OH an 2'-Position) |
 | **Basen** | A, T, G, C | A, **U** (Uracil statt Thymin), G, C |
 | **Stränge** | Doppelstrang (Doppelhelix) | **Einzelstrang** (kann Sekundärstrukturen bilden) |
-| **Stabilität** | Sehr stabil (2''-H statt OH) | Weniger stabil (2''-OH anfällig für Hydrolyse) |
+| **Stabilität** | Sehr stabil (2'-H statt OH) | Weniger stabil (2'-OH anfällig für Hydrolyse) |
 
 **Basenpaarung bei Transkription:**
 - DNA-Matrize: **T → A** (RNA)
@@ -330,11 +298,9 @@ export const bioKap6: Kapitel = {
 - DNA-Matrize: **G → C** (RNA)
 - DNA-Matrize: **C → G** (RNA)
 
----
+## Ablauf der Transkription
 
-### 2. ⭐ Ablauf der Transkription
-
-#### 2a. ⭐ Initiation (Start)
+**Initiation (Start):**
 
 **Promotor:** DNA-Sequenz, an die **RNA-Polymerase** bindet (stromaufwärts vom Gen)
 
@@ -355,28 +321,24 @@ export const bioKap6: Kapitel = {
 - **RNA-Pol II:** **mRNA**, miRNA, lncRNA (meiste Genexpression)
 - **RNA-Pol III:** tRNA, 5S rRNA, U6 snRNA
 
----
-
-#### 2b. Elongation (Verlängerung)
+**Elongation (Verlängerung):**
 
 **RNA-Polymerase:**
-- **Syntheserichtung:** **5''→3''** (wie DNA-Polymerase)
-- **Matrize:** DNA-Strang (3''→5'', **Template Strand/Antisense Strand**)
+- **Syntheserichtung:** **5'→3'** (wie DNA-Polymerase)
+- **Matrize:** DNA-Strang (3'→5', **Template Strand/Antisense Strand**)
 - **Benötigt KEINEN Primer** (kann de novo starten, Unterschied zu DNA-Polymerase!)
 - **Transkriptionsblase:** RNA-Polymerase öffnet DNA (~10–20 bp), RNA verlängert sich
 
 **Codogener Strang vs. Matrize:**
-- **Template Strand (Antisense):** 3''→5'', DNA-Matrize für RNA
-- **Coding Strand (Sense):** 5''→3'', **gleiche Sequenz wie mRNA** (außer T → U)
+- **Template Strand (Antisense):** 3'→5', DNA-Matrize für RNA
+- **Coding Strand (Sense):** 5'→3', **gleiche Sequenz wie mRNA** (außer T → U)
 
 **Beispiel:**
-- **Coding Strand:** 5''-ATG-TCC-GAA-3''
-- **Template Strand:** 3''-TAC-AGG-CTT-5''
-- **mRNA:** 5''-AUG-UCC-GAA-3'' (wie Coding Strand, T → U)
+- **Coding Strand:** 5'-ATG-TCC-GAA-3'
+- **Template Strand:** 3'-TAC-AGG-CTT-5'
+- **mRNA:** 5'-AUG-UCC-GAA-3' (wie Coding Strand, T → U)
 
----
-
-#### 2c. ⭐ Termination (Abschluss)
+**Termination (Abschluss):**
 
 **Prokaryoten:**
 - **Rho-unabhängig:** GC-reiche Sequenz (Palindrom) → Haarnadelstruktur (Stem-Loop) → RNA-Polymerase löst sich ab
@@ -387,35 +349,25 @@ export const bioKap6: Kapitel = {
 - **Spaltung** + **Poly-A-Tail** (~200 Adenine) wird angefügt (Post-Transkription)
 - RNA-Polymerase II wird freigesetzt
 
----
-
-### 3. ⭐ RNA-Prozessierung (nur Eukaryoten!)
+## RNA-Prozessierung (nur Eukaryoten!)
 
 **Primärtranskript (pre-mRNA)** → **reife mRNA** (3 Schritte):
 
-#### 3a. ⭐ 5''-Capping
-
-**Prozess:**
-- **7-Methylguanosin-Kappe** (m7G) wird an **5''-Ende** angefügt (während Transkription)
+**5'-Capping:**
+- **7-Methylguanosin-Kappe** (m7G) wird an **5'-Ende** angefügt (während Transkription)
 - **Funktion:**
   - Schutz vor Abbau (Exonukleasen)
   - Erkennung durch Ribosom (Translation)
   - Transport aus Kern (Export-Signal)
 
----
-
-#### 3b. ⭐ 3''-Polyadenylierung
-
-**Prozess:**
-- **Poly-A-Tail** (~200 Adenine) wird an **3''-Ende** angefügt (nach AAUAAA-Signal)
+**3'-Polyadenylierung:**
+- **Poly-A-Tail** (~200 Adenine) wird an **3'-Ende** angefügt (nach AAUAAA-Signal)
 - **Funktion:**
   - Schutz vor Abbau
   - Translation-Effizienz ↑
   - mRNA-Stabilität
 
----
-
-#### 3c. ⭐ Splicing (Spleißen)
+**Splicing (Spleißen):**
 
 **Problem:** Eukaryotische Gene haben **Introns** (nicht-codierende Sequenzen) + **Exons** (codierende Sequenzen)
 
@@ -424,22 +376,20 @@ export const bioKap6: Kapitel = {
 - **Exons** werden verbunden → reife mRNA (nur Exons)
 
 **Splice-Stellen:**
-- **5''-Splice-Stelle:** GU (Intron-Beginn)
+- **5'-Splice-Stelle:** GU (Intron-Beginn)
 - **Branch Point:** Adenin (A, innerhalb Intron)
-- **3''-Splice-Stelle:** AG (Intron-Ende)
+- **3'-Splice-Stelle:** AG (Intron-Ende)
 
 **Beispiel:**
 - **pre-mRNA:** Exon 1 - Intron - Exon 2 - Intron - Exon 3
 - **Reife mRNA:** Exon 1 - Exon 2 - Exon 3 (Introns entfernt)
 
-⭐ **Alternatives Splicing:**
+**Alternatives Splicing:**
 - **Verschiedene Kombinationen** von Exons → **mehrere Proteine** von 1 Gen
 - **Beispiel:** Titin-Gen (TTN): 363 Exons → viele Isoformen (Muskel-Varianten)
 - **Bedeutung:** Proteom-Diversität (Mensch: ~20.000 Gene → >100.000 Proteine)
 
----
-
-### 4. Prokaryoten vs. Eukaryoten
+## Prokaryoten vs. Eukaryoten
 
 | Merkmal | Prokaryoten | Eukaryoten |
 |---------|-------------|------------|
@@ -447,64 +397,56 @@ export const bioKap6: Kapitel = {
 | **Promotor** | -10-Box (Pribnow), -35-Box, Sigma-Faktor | TATA-Box, Transkriptionsfaktoren (TFIID, etc.) |
 | **Introns** | **Keine** | Ja (Introns + Exons) |
 | **Splicing** | **Nein** | Ja (Spliceosom) |
-| **5''-Capping** | **Nein** | Ja (m7G-Kappe) |
+| **5'-Capping** | **Nein** | Ja (m7G-Kappe) |
 | **Poly-A-Tail** | **Nein** | Ja (~200 A) |
 | **Translation** | **Gekoppelt** (während Transkription, Polysom) | **Getrennt** (Transkription in Kern, Translation in Cytoplasma) |
 
 **Wichtig:** Prokaryoten haben **keine RNA-Prozessierung** (keine Introns, keine Capping/Poly-A)!
 
----
+## Klinische Relevanz
 
-### 5. Klinische Relevanz
-
-#### 5a. β-Thalassämie (Splicing-Defekt)
+**β-Thalassämie (Splicing-Defekt):**
 
 **Gen:** β-Globin (HBB)
 - **Mutation:** Splice-Stelle-Mutation (z.B. IVS1-110 G→A) → **Intron nicht entfernt** → fehlerhaftes β-Globin
 - **Folge:** β-Globin ↓ oder fehlt → Anämie (Hämoglobin ↓)
+- **Vererbung:** Autosomal-rezessiv
 
-**Vererbung:** Autosomal-rezessiv
-
----
-
-#### 5a. α-Amanitin (Transkriptions-Inhibitor)
+**α-Amanitin (Transkriptions-Inhibitor):**
 
 **Quelle:** Grüner Knollenblätterpilz (*Amanita phalloides*)
 - **Wirkung:** **Hemmt RNA-Polymerase II** (mRNA-Synthese ↓) → Proteinbiosynthese ↓ → Lebernekrose, Nierenversagen
 - **Klinisch:** Tödlich (Mortalität ~20–30%), keine spezifische Therapie (Lebertransplantation)
-
----
-
-## 📌 Prüfungsfokus
-
-1. **RNA vs. DNA:** RNA = Ribose (2''-OH), Uracil (statt Thymin), Einzelstrang; DNA = Desoxyribose, Thymin, Doppelstrang
-2. **Promotor:** Prokaryoten (-10 Pribnow, -35, Sigma-Faktor), Eukaryoten (TATA-Box, TFIID/TBP, RNA-Pol II)
-3. **RNA-Polymerase:** Syntheserichtung 5''→3'', benötigt KEINEN Primer (DNA-Pol benötigt Primer!)
-4. **Template Strand:** 3''→5'' DNA-Matrize → RNA 5''→3''; Coding Strand = gleiche Sequenz wie mRNA (T → U)
-5. **5''-Capping:** m7G-Kappe (Schutz, Ribosom-Erkennung, Export)
-6. **Poly-A-Tail:** ~200 A (Schutz, Stabilität)
-7. **Splicing:** Spliceosom entfernt Introns (GU...AG), Exons verbunden, alternatives Splicing → Proteom-Diversität
-8. **Prokaryoten:** Keine Introns, keine RNA-Prozessierung, gekoppelte Transkription/Translation
-
----
-
-## Merksätze
-
->>>> **RNA vs. DNA:** „RNA: Ribose (2''-OH), Uracil (U statt T), Einzelstrang. DNA: Desoxyribose, Thymin (T), Doppelstrang. Basenpaarung: A-U (RNA), A-T (DNA), G-C (beide). RNA weniger stabil (2''-OH anfällig für Hydrolyse)!"
-
->>>> **Transkription (Eukaryoten):** „RNA-Pol II (mRNA): TATA-Box (Promotor), TFIID (TBP bindet TATA), weitere TFs (TFIIB, E, F, H) rekrutieren RNA-Pol II. Syntheserichtung 5''→3'', KEIN Primer! Template Strand 3''→5'' (Matrize), Coding Strand 5''→3'' (= mRNA, T → U)!"
-
->>>> **RNA-Prozessierung (Eukaryoten):** „3 Schritte: (1) 5''-Capping (m7G-Kappe, Schutz + Ribosom-Erkennung), (2) 3''-Poly-A-Tail (~200 A, Stabilität), (3) Splicing (Spliceosom entfernt Introns GU...AG, Exons verbunden). Alternatives Splicing → viele Proteine von 1 Gen!"
-
->>>> **Prokaryoten vs. Eukaryoten:** „Prokaryoten: KEINE Introns, KEINE RNA-Prozessierung (Capping/Poly-A/Splicing), gekoppelte Transkription/Translation (Polysom). Eukaryoten: Introns + Exons, RNA-Prozessierung (Capping/Poly-A/Splicing), getrennte Transkription (Kern) + Translation (Cytoplasma)!"
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 6 UK01 – DNA-Struktur und Replikation](Bio_Kap6_UK01_DNA_Struktur.md) | [Weiter: Bio Kap 6 UK03 – Translation](Bio_Kap6_UK03_Translation.md) →
 `,
-      lernziele: [],
-      sections: [],
+      lernziele: [
+        "Den Unterschied zwischen DNA und RNA (Zucker, Basen, Strangigkeit) erklären können.",
+        "Die drei Phasen der Transkription (Initiation, Elongation, Termination) bei Pro- und Eukaryoten beschreiben können.",
+        "Die drei RNA-Prozessierungsschritte bei Eukaryoten (5'-Capping, Poly-A-Tail, Splicing) und ihre Funktion erläutern können.",
+        "Den Unterschied zwischen Template Strand und Coding Strand sowie die Syntheserichtung der RNA-Polymerase erklären können.",
+        "Klinische Bedeutung von Splicing-Defekten (β-Thalassämie) und Transkriptionshemmung (α-Amanitin) benennen können.",
+      ],
+      sections: [
+        {
+          heading: "Grundprinzip der Transkription",
+          text: "RNA unterscheidet sich von DNA durch Ribose (statt Desoxyribose), Uracil (statt Thymin) und ist einzelsträngig. Bei der Transkription liest RNA-Polymerase den Template Strand (3'→5') und synthetisiert RNA in 5'→3'-Richtung — ohne Primer.",
+          merksatz: "RNA: Ribose (2'-OH), Uracil (U statt T), Einzelstrang. DNA: Desoxyribose, Thymin (T), Doppelstrang. Basenpaarung: A-U (RNA), A-T (DNA), G-C (beide). RNA weniger stabil (2'-OH anfällig für Hydrolyse).",
+        },
+        {
+          heading: "Ablauf der Transkription",
+          text: "Bei Prokaryoten erkennt der Sigma-Faktor den Promotor (-10 Pribnow-Box, -35-Box). Bei Eukaryoten bindet TFIID (TBP) an die TATA-Box und rekrutiert RNA-Pol II. Termination erfolgt prokaryotisch durch Haarnadelstrukturen oder Rho-Protein; eukaryotisch durch Polyadenylierungssignal (AAUAAA).",
+          merksatz: "RNA-Pol II (mRNA): TATA-Box (Promotor), TFIID (TBP bindet TATA), weitere TFs (TFIIB, E, F, H) rekrutieren RNA-Pol II. Syntheserichtung 5'→3', KEIN Primer. Template Strand 3'→5' (Matrize), Coding Strand 5'→3' (= mRNA, T → U).",
+        },
+        {
+          heading: "RNA-Prozessierung (nur Eukaryoten!)",
+          text: "Drei Schritte: 5'-Capping (m7G-Kappe: Schutz, Ribosom-Erkennung, Kernexport), 3'-Polyadenylierung (~200 Adenine: Stabilität, Schutz), Splicing (Spliceosom entfernt Introns GU...AG, verbindet Exons). Alternatives Splicing erzeugt Proteom-Diversität.",
+          merksatz: "3 Schritte: (1) 5'-Capping (m7G-Kappe, Schutz + Ribosom-Erkennung), (2) 3'-Poly-A-Tail (~200 A, Stabilität), (3) Splicing (Spliceosom entfernt Introns GU...AG, Exons verbunden). Alternatives Splicing → viele Proteine von 1 Gen.",
+        },
+        {
+          heading: "Prokaryoten vs. Eukaryoten",
+          text: "Prokaryoten haben 1 RNA-Polymerase, keine Introns, keine RNA-Prozessierung und gekoppelte Transkription/Translation. Eukaryoten haben 3 RNA-Polymerasen, Introns, alle drei Prozessierungsschritte und räumlich getrennte Transkription (Kern) und Translation (Cytoplasma).",
+          merksatz: "Prokaryoten: KEINE Introns, KEINE RNA-Prozessierung, gekoppelte Transkription/Translation. Eukaryoten: Introns + Exons, RNA-Prozessierung (Capping/Poly-A/Splicing), getrennte Transkription (Kern) + Translation (Cytoplasma).",
+        },
+      ],
       diagram: 'transcription-translation',
 
       merksätze: [],
@@ -624,12 +566,6 @@ export const bioKap6: Kapitel = {
       title: "Translation",
       content: `# Translation (Proteinbiosynthese) – Biologie Kapitel 6 (Molekulare Genetik)
 
-**Priorität:** HOCH
-**Geschätzte Lesezeit:** 17 Minuten
-**Stichwortliste-Abdeckung:** 12/12 Stichwörter
-
----
-
 ## Einleitung
 
 **Translation** = Synthese von **Proteinen** aus **mRNA**
@@ -640,15 +576,11 @@ export const bioKap6: Kapitel = {
 
 **Ort:** **Ribosomen** (Cytoplasma, raues ER)
 
----
-
-## Kerninhalt
-
-### 1. ⭐ Genetischer Code
+## Genetischer Code
 
 **Codon** = 3 Nukleotide (Triplett) → 1 Aminosäure
 
-⭐ **Eigenschaften:**
+**Eigenschaften:**
 
 | Eigenschaft | Beschreibung |
 |-------------|--------------|
@@ -666,51 +598,32 @@ export const bioKap6: Kapitel = {
 
 **Wichtig:** **64 Codons** (4³) → **20 Aminosäuren** + 3 Stopp → Degeneration (viele Codons pro Aminosäure)
 
----
+## Wobble-Hypothese und tRNA
 
-### 2. ⭐ Wobble-Hypothese (Wobble Base Pairing)
+**Wobble-Hypothese (Crick, 1966):**
 
 **Problem:** 61 codierende Codons, aber nur ~45 tRNAs (nicht 61!)
 
-**Lösung (Crick, 1966):** **Wobble-Position** (3. Base des Codons, 1. Base des Anticodons)
+**Lösung:** **Wobble-Position** (3. Base des Codons, 1. Base des Anticodons)
 - **Nicht-Watson-Crick-Paarung** möglich (z.B. G-U statt G-C)
 - **1 tRNA** kann **mehrere Codons** erkennen (v.a. wenn 3. Base unterschiedlich)
 
-**Beispiel:**
-- **Codon:** UUU, UUC (beide codieren Phenylalanin, Phe)
-- **Anticodon:** AAG (tRNA-Phe) paart mit UUU + UUC (Wobble: G-U möglich)
-
----
-
-### 3. ⭐ tRNA (Transfer-RNA)
-
-**Struktur:**
+**tRNA-Struktur:**
 - **Kleeblatt-Struktur** (2D) → **L-förmig** (3D)
 - **Anticodon-Arm:** 3 Basen (Anticodon, komplementär zum mRNA-Codon)
-- **Akzeptor-Arm:** CCA-3''-Ende → Aminosäure wird hier gebunden (Aminoacyl-tRNA)
-- **D-Arm, T-Arm:** Zusätzliche Loops (Dihydrouridin, Pseudouridin)
+- **Akzeptor-Arm:** CCA-3'-Ende → Aminosäure wird hier gebunden (Aminoacyl-tRNA)
 
-**Funktion:**
-- **Bringt Aminosäure** zum Ribosom
-- **Anticodon paart mit mRNA-Codon** → korrekte Aminosäure-Einbau
-
-⭐ **Aminoacyl-tRNA-Synthetase:**
-- **Enzym** (spezifisch für jede Aminosäure)
-- **Belädt tRNA** mit passender Aminosäure (ATP-abhängig)
+**Aminoacyl-tRNA-Synthetase:**
+- **20 Enzyme** (1 pro Aminosäure), belädt tRNA mit passender Aminosäure (ATP-abhängig)
 - **Fehlerrate:** ~10⁻⁴ (sehr niedrig, Korrektur-Mechanismus)
 
-**Wichtig:** 1 Aminoacyl-tRNA-Synthetase pro Aminosäure (20 Enzyme), aber mehrere tRNAs pro Aminosäure (Wobble!)
-
----
-
-### 4. ⭐ Ribosom
+## Ribosom
 
 **Struktur:** 2 Untereinheiten (große + kleine)
 
 **Prokaryoten (70S):**
 - **Kleine Untereinheit:** 30S (16S rRNA + Proteine)
 - **Große Untereinheit:** 50S (23S + 5S rRNA + Proteine)
-- **S** = Svedberg (Sedimentationskoeffizient)
 
 **Eukaryoten (80S):**
 - **Kleine Untereinheit:** 40S (18S rRNA + Proteine)
@@ -718,16 +631,14 @@ export const bioKap6: Kapitel = {
 
 **Funktion:** Katalysiert Peptidbindung (Peptidyl-Transferase, rRNA-katalysiert = **Ribozym**)
 
-⭐ **Bindungsstellen:**
+**Bindungsstellen:**
 - **A-Site (Aminoacyl):** Neue Aminoacyl-tRNA bindet hier
 - **P-Site (Peptidyl):** tRNA mit wachsender Peptidkette
 - **E-Site (Exit):** Entladene tRNA verlässt Ribosom
 
----
+## Ablauf der Translation
 
-### 5. ⭐ Ablauf der Translation
-
-#### 5a. ⭐ Initiation (Start)
+**Initiation (Start):**
 
 **Prokaryoten:**
 1. **Shine-Dalgarno-Sequenz** (AGGAGGU, ~10 bp vor AUG) → 16S rRNA erkennt, Ribosom bindet
@@ -735,50 +646,34 @@ export const bioKap6: Kapitel = {
 3. **Initiationsfaktoren (IF1, IF2, IF3):** Helfen Ribosom-Assemblierung
 
 **Eukaryoten:**
-1. **5''-Capping (m7G):** Ribosom erkennt Kappe, scannt mRNA bis zum **Start-AUG**
+1. **5'-Capping (m7G):** Ribosom erkennt Kappe, scannt mRNA bis zum **Start-AUG**
 2. **Kozak-Sequenz:** GCCRCCAUGG (Konsensus-Sequenz um AUG) → optimale Translation
 3. **Initiator-tRNA:** Met-tRNA (Methionin, **nicht** formyliert wie Prokaryoten)
 4. **Initiationsfaktoren (eIF1, eIF2, eIF3, eIF4, etc.):** Helfen Ribosom-Rekrutierung
 
 **Wichtig:** Prokaryoten = **fMet** (formyliert), Eukaryoten = **Met** (nicht formyliert)
 
----
-
-#### 5b. Elongation (Verlängerung)
-
-**Schritte:**
+**Elongation (Verlängerung):**
 
 1. **Codon-Erkennung:** Aminoacyl-tRNA bindet an A-Site (passend zum Codon)
-   - **Elongationsfaktor EF-Tu** (Prokaryoten) bzw. **eEF1A** (Eukaryoten): Bringt Aminoacyl-tRNA zur A-Site (GTP-abhängig)
+   - **EF-Tu** (Prokaryoten) bzw. **eEF1A** (Eukaryoten): Bringt Aminoacyl-tRNA zur A-Site (GTP-abhängig)
 
 2. **Peptidbindung:** **Peptidyl-Transferase** (rRNA-katalysiert, Ribozym) → Aminosäure von P-Site wird an A-Site-Aminosäure gebunden
-   - **Peptidkette wächst** (jetzt an A-Site)
 
-3. **Translokation:** Ribosom bewegt sich **1 Codon weiter** (5''→3'' auf mRNA)
+3. **Translokation:** Ribosom bewegt sich **1 Codon weiter** (5'→3' auf mRNA)
    - **EF-G** (Prokaryoten) bzw. **eEF2** (Eukaryoten): Katalysiert Translokation (GTP-abhängig)
    - **tRNA-Bewegung:** A → P → E (entladene tRNA verlässt E-Site)
 
-**Zykluszeit:** ~0,05 s pro Aminosäure (Prokaryoten schneller als Eukaryoten)
-
----
-
-#### 5c. ⭐ Termination (Abschluss)
+**Termination (Abschluss):**
 
 **Stopp-Codon** (UAA, UAG, UGA) erreicht A-Site:
 - **Keine passende tRNA** (kein Anticodon für Stopp-Codons)
 - **Release-Faktoren (RF):**
-  - **Prokaryoten:** RF1 (UAA, UAG), RF2 (UAA, UGA), RF3 (GTP-abhängig, hilft RF1/2)
+  - **Prokaryoten:** RF1 (UAA, UAG), RF2 (UAA, UGA), RF3 (GTP-abhängig)
   - **Eukaryoten:** eRF1 (alle 3 Stopp-Codons), eRF3 (GTP-abhängig)
+- **Protein freigesetzt**, Ribosom disassembliert
 
-**Folge:**
-- **Peptidyl-Transferase** hydrolysiert Bindung zwischen Peptid + tRNA (P-Site)
-- **Protein freigesetzt**, Ribosom disassembliert (30S + 50S bzw. 40S + 60S)
-
----
-
-### 6. Post-translationale Modifikation (PTM)
-
-**Modifikationen nach Translation:**
+## Post-translationale Modifikation (PTM)
 
 | Modifikation | Beispiel | Funktion |
 |--------------|----------|----------|
@@ -791,9 +686,7 @@ export const bioKap6: Kapitel = {
 
 **Wichtig:** Viele Proteine sind **erst nach PTM funktional** (z.B. Insulin, Kollagen)
 
----
-
-### 7. ⭐ Antibiotika (hemmen Translation)
+## Antibiotika (hemmen Translation)
 
 **Ziel:** Prokaryotische Ribosomen (70S), **nicht** eukaryotische (80S) → selektive Toxizität
 
@@ -805,39 +698,40 @@ export const bioKap6: Kapitel = {
 | **Streptomycin (Aminoglykosid)** | 30S | Fehlerhafte Codon-Erkennung → falsche Aminosäuren |
 
 **Wichtig:** Mitochondrien haben **70S-Ribosomen** (prokaryotischen Ursprung) → Antibiotika können mitochondriale Translation hemmen (Nebenwirkung!)
-
----
-
-## 📌 Prüfungsfokus
-
-1. **Genetischer Code:** Triplett-Code (3 Basen → 1 AS), degeneriert (viele Codons → 1 AS), universell, Start-Codon AUG (Met), Stopp-Codons UAA/UAG/UGA
-2. **Wobble-Hypothese:** 3. Base des Codons (1. Base des Anticodons) → Wobble-Paarung (z.B. G-U), 1 tRNA für mehrere Codons
-3. **tRNA:** Kleeblatt-Struktur, Anticodon (paart mit mRNA-Codon), CCA-3''-Ende (Aminosäure-Bindung), Aminoacyl-tRNA-Synthetase (belädt tRNA)
-4. **Ribosom:** Prokaryoten 70S (30S + 50S), Eukaryoten 80S (40S + 60S), A/P/E-Sites, Peptidyl-Transferase (rRNA-katalysiert = Ribozym)
-5. **Initiation:** Prokaryoten (Shine-Dalgarno, fMet), Eukaryoten (5''-Capping, Kozak-Sequenz, Met)
-6. **Elongation:** Codon-Erkennung (A-Site), Peptidbindung (Peptidyl-Transferase), Translokation (EF-G/eEF2, GTP)
-7. **Termination:** Stopp-Codon (UAA/UAG/UGA), Release-Faktoren (RF1/2/3), Protein freigesetzt
-8. **Antibiotika:** Tetracyclin (30S, A-Site), Chloramphenicol (50S, Peptidyl-Transferase), Erythromycin (50S, Translokation)
-
----
-
-## Merksätze
-
->>>> **Genetischer Code:** „Triplett-Code (3 Basen → 1 AS), degeneriert (viele Codons → 1 AS, z.B. Leucin 6 Codons), universell. Start-Codon AUG (Met), Stopp-Codons UAA/UAG/UGA (Nonsense). 64 Codons (4³) → 20 AS + 3 Stopp!"
-
->>>> **tRNA + Aminoacyl-tRNA-Synthetase:** „tRNA: Kleeblatt-Struktur, Anticodon (paart mit mRNA-Codon), CCA-3''-Ende (Aminosäure-Bindung). Aminoacyl-tRNA-Synthetase (spezifisch für jede AS) belädt tRNA (ATP-abhängig), Fehlerrate ~10⁻⁴. Wobble: 1 tRNA für mehrere Codons (3. Base flexibel)!"
-
->>>> **Ribosom + A/P/E-Sites:** „Prokaryoten 70S (30S + 50S), Eukaryoten 80S (40S + 60S). A-Site (neue Aminoacyl-tRNA), P-Site (Peptidkette), E-Site (entladene tRNA). Peptidyl-Transferase (rRNA-katalysiert = Ribozym) → Peptidbindung!"
-
->>>> **Initiation (Prokaryoten vs. Eukaryoten):** „Prokaryoten: Shine-Dalgarno (AGGAGGU vor AUG), fMet-tRNA (formyliert), IF1/2/3. Eukaryoten: 5''-Capping (m7G, Ribosom-Erkennung), Kozak-Sequenz (GCCRCCAUGG), Met-tRNA (nicht formyliert), eIF1/2/3/4!"
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 6 UK02 – Transkription](Bio_Kap6_UK02_Transkription.md) | [Weiter: Bio Kap 6 UK04 – Genregulation](Bio_Kap6_UK04_Genregulation.md) →
 `,
-      lernziele: [],
-      sections: [],
+      lernziele: [
+        "Die Eigenschaften des genetischen Codes (Triplett, universell, degeneriert, kommafrei) erklären können.",
+        "Start- und Stopp-Codons sowie die Wobble-Hypothese und die Rolle der tRNA beschreiben können.",
+        "Den Aufbau prokaryotischer (70S) und eukaryotischer (80S) Ribosomen und die A/P/E-Sites erläutern können.",
+        "Die drei Phasen der Translation (Initiation, Elongation, Termination) mit Unterschieden Pro-/Eukaryoten beschreiben können.",
+        "Den Wirkmechanismus der wichtigsten Antibiotika (Tetracyclin, Chloramphenicol, Erythromycin) auf die Translation erklären können.",
+      ],
+      sections: [
+        {
+          heading: "Genetischer Code",
+          text: "Der genetische Code ist ein Triplett-Code: je 3 Basen (Codon) codieren für 1 Aminosäure. 64 Codons für 20 Aminosäuren + 3 Stopp → der Code ist degeneriert (mehrere Codons pro Aminosäure). Start-Codon ist AUG (Met), Stopp-Codons sind UAA, UAG, UGA.",
+          merksatz: "Triplett-Code (3 Basen → 1 AS), degeneriert (viele Codons → 1 AS, z.B. Leucin 6 Codons), universell. Start-Codon AUG (Met), Stopp-Codons UAA/UAG/UGA. 64 Codons (4³) → 20 AS + 3 Stopp.",
+        },
+        {
+          heading: "Wobble-Hypothese und tRNA",
+          text: "Die Wobble-Hypothese erklärt, warum ~45 tRNAs für 61 Codons ausreichen: die 3. Codon-Base (Wobble-Position) erlaubt nicht-Watson-Crick-Paarung (z.B. G-U). tRNAs haben Kleeblattstruktur mit Anticodon-Arm und CCA-3'-Ende zur Aminosäure-Bindung. Aminoacyl-tRNA-Synthetasen (20 Enzyme) beladen tRNAs ATP-abhängig.",
+          merksatz: "tRNA: Kleeblatt-Struktur, Anticodon (paart mit mRNA-Codon), CCA-3'-Ende (Aminosäure-Bindung). Aminoacyl-tRNA-Synthetase (spezifisch für jede AS) belädt tRNA (ATP-abhängig). Wobble: 1 tRNA für mehrere Codons (3. Base flexibel).",
+        },
+        {
+          heading: "Ribosom",
+          text: "Prokaryotische Ribosomen sind 70S (30S + 50S), eukaryotische 80S (40S + 60S). Die drei Bindungsstellen A-Site (neue Aminoacyl-tRNA), P-Site (Peptidkette) und E-Site (entladene tRNA) ermöglichen die schrittweise Peptidbindung durch die Peptidyl-Transferase (ein Ribozym).",
+          merksatz: "Prokaryoten 70S (30S + 50S), Eukaryoten 80S (40S + 60S). A-Site (neue Aminoacyl-tRNA), P-Site (Peptidkette), E-Site (entladene tRNA). Peptidyl-Transferase (rRNA-katalysiert = Ribozym) → Peptidbindung.",
+        },
+        {
+          heading: "Ablauf der Translation",
+          text: "Bei Prokaryoten erkennt die Shine-Dalgarno-Sequenz das Ribosom (fMet-Start). Eukaryoten scannen von der m7G-Kappe bis zum ersten AUG (Kozak-Sequenz, Met-Start). Elongation: Codon-Erkennung (A-Site) → Peptidbindung → Translokation (GTP). Stopp-Codons rekrutieren Release-Faktoren → Protein freigesetzt.",
+          merksatz: "Prokaryoten: Shine-Dalgarno (AGGAGGU vor AUG), fMet-tRNA (formyliert), IF1/2/3. Eukaryoten: 5'-Capping (m7G), Kozak-Sequenz (GCCRCCAUGG), Met-tRNA (nicht formyliert), eIF1/2/3/4.",
+        },
+        {
+          heading: "Antibiotika (hemmen Translation)",
+          text: "Antibiotika nutzen den Unterschied zwischen 70S (Prokaryoten) und 80S (Eukaryoten) aus. Tetracyclin blockiert die A-Site (30S), Chloramphenicol hemmt die Peptidyl-Transferase (50S), Erythromycin blockiert die Translokation (50S). Mitochondrien (70S-Ribosomen) können ebenfalls betroffen sein.",
+        },
+      ],
       diagram: 'transcription-translation',
 
       merksätze: [],
@@ -957,12 +851,6 @@ export const bioKap6: Kapitel = {
       title: "Genregulation",
       content: `# Genregulation – Biologie Kapitel 6 (Molekulare Genetik)
 
-**Priorität:** HOCH
-**Geschätzte Lesezeit:** 18 Minuten
-**Stichwortliste-Abdeckung:** 12/12 Stichwörter
-
----
-
 ## Einleitung
 
 **Genregulation** = Kontrolle der **Genexpression** (wann, wo, wie viel ein Gen abgelesen wird)
@@ -975,15 +863,11 @@ export const bioKap6: Kapitel = {
 
 **Wichtig:** Nicht alle Gene sind immer aktiv → **Differenzierung** (Zelltypen trotz gleicher DNA)
 
----
-
-## Kerninhalt
-
-### 1. ⭐ Prokaryotische Genregulation: Operon-Modell
+## Prokaryotische Genregulation: Operon-Modell
 
 **Operon** (Jacob & Monod, 1961): Gruppe von Genen, gemeinsam reguliert
 
-#### 1a. ⭐ lac-Operon (induzierbares Operon)
+**lac-Operon (induzierbares Operon):**
 
 **Funktion:** **Laktose-Abbau** (E. coli)
 
@@ -994,11 +878,11 @@ export const bioKap6: Kapitel = {
 
 **Regulation:**
 
-⭐ **Ohne Laktose (Repression):**
+**Ohne Laktose (Repression):**
 1. **Repressor** (lacI-Gen) bindet an **Operator** (O) → **Transkription blockiert**
 2. **RNA-Polymerase** kann nicht an Promotor (P) binden → **Gene AUS**
 
-⭐ **Mit Laktose (Induktion):**
+**Mit Laktose (Induktion):**
 1. **Allolaktose** (aus Laktose) = **Induktor** → bindet an Repressor
 2. **Repressor inaktiviert** → löst sich von Operator ab
 3. **RNA-Polymerase** bindet an Promotor → **Transkription ↑**, **Gene AN**
@@ -1013,9 +897,7 @@ export const bioKap6: Kapitel = {
 - **Laktose + Glukose ↑:** Geringe Transkription (Induktor, aber kein CAP-cAMP)
 - **Keine Laktose:** Keine Transkription (Repressor aktiv)
 
----
-
-#### 1b. ⭐ trp-Operon (reprimierbares Operon)
+**trp-Operon (reprimierbares Operon):**
 
 **Funktion:** **Tryptophan-Biosynthese** (E. coli)
 
@@ -1023,11 +905,11 @@ export const bioKap6: Kapitel = {
 
 **Regulation:**
 
-⭐ **Ohne Tryptophan (Derepression):**
+**Ohne Tryptophan (Derepression):**
 1. **Repressor** (trpR-Gen) **inaktiv** (benötigt Corepressor)
 2. **RNA-Polymerase** bindet an Promotor → **Transkription ↑**, **Gene AN**
 
-⭐ **Mit Tryptophan (Repression):**
+**Mit Tryptophan (Repression):**
 1. **Tryptophan** = **Corepressor** → bindet an Repressor
 2. **Repressor aktiv** → bindet an Operator → **Transkription blockiert**, **Gene AUS**
 
@@ -1037,17 +919,13 @@ export const bioKap6: Kapitel = {
 - **lac-Operon:** Induzierbares Operon (Substrat → Gene AN)
 - **trp-Operon:** Reprimierbares Operon (Produkt → Gene AUS)
 
----
-
-### 2. ⭐ Eukaryotische Genregulation
+## Eukaryotische Genregulation
 
 **Komplexer** als Prokaryoten (keine Operons, Chromatin-Struktur, Transkriptionsfaktoren)
 
-#### 2a. ⭐ Transkriptionsfaktoren (TFs)
+**Transkriptionsfaktoren (TFs):**
 
 **Funktion:** Proteine, die an DNA binden → Transkription ↑/↓
-
-**Typen:**
 
 | Typ | Funktion | Beispiel |
 |-----|----------|----------|
@@ -1059,45 +937,40 @@ export const bioKap6: Kapitel = {
 - **Weit entfernt** vom Promotor (können 1 Mio. bp entfernt sein)
 - **DNA-Looping:** Enhancer/Silencer bildet Schleife → interagiert mit Promotor (Mediator-Komplex)
 
----
-
-#### 2b. ⭐ Epigenetische Regulation
+## Epigenetische Regulation
 
 **Definition:** Vererbbare Veränderungen der Genexpression **ohne DNA-Sequenz-Änderung**
 
-⭐ **DNA-Methylierung:**
+**DNA-Methylierung:**
 - **CpG-Inseln** (Cytosin-Guanin-Dinukleotide): Methylierung (5-Methylcytosin, 5mC) an Cytosin
 - **Funktion:** **Genexpression ↓** (Promotor-Methylierung → Gen stillgelegt)
 - **Beispiele:**
   - **X-Inaktivierung:** Inaktiviertes X-Chromosom (Barr-Körperchen) ist hypermethyliert
   - **Genomic Imprinting:** Eltern-spezifische Methylierung (z.B. IGF2-Gen: paternal exprimiert, maternal stillgelegt)
 
-⭐ **Histone-Modifikationen:**
+**Histone-Modifikationen:**
 - **Histone:** Proteine, um die DNA gewickelt ist (Nukleosom)
-- **Modifikationen:** Acetylierung, Methylierung, Phosphorylierung (an Lysin, Arginin)
 
 **Histon-Acetylierung:**
 - **Acetylierung (Acetyltransferase, HAT):** Lysin-NH₃⁺ → Lysin-NHCOCH₃ (neutral) → **DNA lockerer** → **Transkription ↑** (Euchromatin)
 - **Deacetylierung (Deacetylase, HDAC):** Entfernt Acetyl-Gruppen → **DNA dichter** → **Transkription ↓** (Heterochromatin)
 
 **Histon-Methylierung:**
-- **Kontext-abhängig:** H3K4me3 (Histon H3, Lysin 4, Trimethylierung) → **Aktivierung**, H3K9me3 → **Repression**
+- **Kontext-abhängig:** H3K4me3 → **Aktivierung**, H3K9me3 → **Repression**
 
 **Chromatin-Zustand:**
 - **Euchromatin:** Locker, acetyliert → **Genexpression ↑** (aktive Gene)
 - **Heterochromatin:** Dicht, deacetyliert, methyliert → **Genexpression ↓** (inaktive Gene)
 
----
-
-#### 2c. ⭐ RNA-Interferenz (RNAi): miRNA und siRNA
+## RNA-Interferenz (RNAi): miRNA und siRNA
 
 **Funktion:** **Post-transkriptionelle Genregulation** (mRNA-Abbau oder Translations-Blockierung)
 
 **miRNA (microRNA):**
 - **Endogen** (von Zelle selbst produziert)
-- **Biogenese:** pri-miRNA (Primärtranskript) → Drosha (Kern) → pre-miRNA → Dicer (Cytoplasma) → **reife miRNA** (~22 nt)
-- **Funktion:** Bindet an **3''-UTR** der Ziel-mRNA (nicht vollständig komplementär) → **Translations-Repression** oder **mRNA-Abbau**
-- **Beispiel:** let-7 (Entwicklungskontrolle, Tumorsu ppressor)
+- **Biogenese:** pri-miRNA → Drosha (Kern) → pre-miRNA → Dicer (Cytoplasma) → **reife miRNA** (~22 nt)
+- **Funktion:** Bindet an **3'-UTR** der Ziel-mRNA (nicht vollständig komplementär) → **Translations-Repression** oder **mRNA-Abbau**
+- **Beispiel:** let-7 (Entwicklungskontrolle, Tumorsuppressor)
 
 **siRNA (small interfering RNA):**
 - **Exogen** (z.B. virale doppelsträngige RNA) oder künstlich
@@ -1109,60 +982,53 @@ export const bioKap6: Kapitel = {
 - **miRNA:** Endogen, nicht vollständig komplementär, Translations-Repression/Abbau
 - **siRNA:** Exogen/künstlich, vollständig komplementär, mRNA-Abbau
 
----
+## Klinische Relevanz
 
-### 3. Klinische Relevanz
-
-#### 3a. Rett-Syndrom (Transkriptionsfaktor-Defekt)
+**Rett-Syndrom (Transkriptionsfaktor-Defekt):**
 
 **Gen:** MECP2 (Methyl-CpG-Binding Protein 2)
 - **Funktion:** Bindet an methylierte CpG-Inseln → Transkriptions-Repression
 - **Mutation:** MECP2-Defekt → aberrante Genexpression → neurologische Störungen
 - **Phänotyp:** Mädchen (X-chromosomal dominant, **letal bei ♂**), normale Entwicklung bis ~6–18 Monate → Regression (Handbewegungen, geistige Behinderung, Autismus-Symptome)
 
----
-
-#### 3b. Fragiles-X-Syndrom (Trinukleotid-Expansion)
+**Fragiles-X-Syndrom (Trinukleotid-Expansion):**
 
 **Gen:** FMR1 (Fragile X Mental Retardation 1)
 - **Normal:** CGG-Repeats (~5–50)
 - **Prämutation:** 55–200 Repeats (Träger, meist asymptomatisch)
 - **Vollmutation:** >200 Repeats → **Hypermethylierung** des FMR1-Promotors → **Gen stillgelegt** → kein FMRP-Protein
-- **Phänotyp:** Geistige Behinderung (häufigste erbliche Ursache bei ♂), langes Gesicht, große Ohren, Makroorchidie (große Hoden)
-
-**Vererbung:** X-chromosomal (♂ schwerer betroffen), **Antizipation** (Repeat-Expansion in Generationen)
-
----
-
-## 📌 Prüfungsfokus
-
-1. **lac-Operon:** Induzierbares Operon (Laktose = Induktor, Allolaktose bindet Repressor → Gene AN), CAP-cAMP (Glukose ↓ → Transkription ↑↑)
-2. **trp-Operon:** Reprimierbares Operon (Tryptophan = Corepressor, bindet Repressor → Gene AUS, Feedback-Hemmung)
-3. **Transkriptionsfaktoren:** Basale TFs (TFIID/TBP), Aktivatoren (Enhancer → Transkription ↑), Repressoren (Silencer → Transkription ↓)
-4. **DNA-Methylierung:** CpG-Inseln (5mC) → Genexpression ↓ (Promotor-Methylierung), X-Inaktivierung, Genomic Imprinting
-5. **Histon-Acetylierung:** HAT (Acetylierung → Euchromatin → Transkription ↑), HDAC (Deacetylierung → Heterochromatin → Transkription ↓)
-6. **miRNA:** Endogen, ~22 nt, 3''-UTR-Bindung (nicht vollständig komplementär), Translations-Repression/Abbau
-7. **siRNA:** Exogen, ~21–23 nt, vollständig komplementär, mRNA-Abbau (RISC, Argonaute), therapeutisch (Gen-Silencing)
-
----
-
-## Merksätze
-
->>>> **lac-Operon:** „Induzierbares Operon! OHNE Laktose: Repressor bindet Operator → Gene AUS. MIT Laktose: Allolaktose (Induktor) bindet Repressor → Repressor inaktiv → Gene AN. CAP-cAMP (Glukose ↓): Transkription ↑↑ (Katabol-Repression: Glukose bevorzugt)!"
-
->>>> **trp-Operon:** „Reprimierbares Operon! OHNE Tryptophan: Repressor inaktiv → Gene AN (Biosynthese). MIT Tryptophan: Tryptophan (Corepressor) bindet Repressor → Repressor aktiv → Gene AUS (Feedback-Hemmung: Produkt hemmt eigene Synthese)!"
-
->>>> **DNA-Methylierung + Histon-Acetylierung:** „DNA-Methylierung (CpG-Inseln, 5mC): Promotor methyliert → Gen AUS (X-Inaktivierung, Imprinting). Histon-Acetylierung (HAT): Acetyl-Gruppen → DNA locker (Euchromatin) → Transkription ↑. HDAC (Deacetylase): Acetyl weg → DNA dicht (Heterochromatin) → Transkription ↓!"
-
->>>> **miRNA vs. siRNA:** „miRNA: Endogen, ~22 nt, 3''-UTR-Bindung (nicht vollständig komplementär), Translations-Repression/Abbau (let-7). siRNA: Exogen, ~21–23 nt, vollständig komplementär, mRNA-Abbau (RISC, Argonaute), therapeutisch (Patisiran: Transthyretin-Amyloidose)!"
-
----
-
-**Navigation:**
-← [Zurück: Bio Kap 6 UK03 – Translation](Bio_Kap6_UK03_Translation.md) | [Weiter: Bio Kap 8 UK01 – Humangenetik (Diagnostik)](../Bio_Kap8_UK01_Humangenetik_Diagnostik.md) →
+- **Phänotyp:** Geistige Behinderung (häufigste erbliche Ursache bei ♂), langes Gesicht, große Ohren, Makroorchidie
+- **Vererbung:** X-chromosomal (♂ schwerer betroffen), **Antizipation** (Repeat-Expansion in Generationen)
 `,
-      lernziele: [],
-      sections: [],
+      lernziele: [
+        "Das lac- und trp-Operon als Beispiele für induzierbare und reprimierbare Operons erklären können.",
+        "Die Rolle von Transkriptionsfaktoren, Enhancern und Silencern bei der eukaryotischen Genregulation beschreiben können.",
+        "Epigenetische Mechanismen (DNA-Methylierung, Histon-Acetylierung) und ihre Auswirkungen auf die Genexpression erläutern können.",
+        "Den Unterschied zwischen miRNA und siRNA (Herkunft, Komplementarität, Wirkmechanismus) erklären können.",
+        "Klinische Bedeutung gestörter Genregulation (Rett-Syndrom, Fragiles-X-Syndrom) benennen können.",
+      ],
+      sections: [
+        {
+          heading: "Prokaryotische Genregulation: Operon-Modell",
+          text: "Das lac-Operon (induzierbares Operon) wird durch Allolaktose (Induktor) aktiviert: ohne Laktose blockiert der Repressor den Operator (Gene AUS), mit Laktose ist der Repressor inaktiv (Gene AN). Glukosemangel steigert cAMP → CAP-cAMP verstärkt Transkription zusätzlich. Das trp-Operon (reprimierbares Operon) funktioniert umgekehrt: Tryptophan als Corepressor aktiviert den Repressor → Gene AUS (Feedback-Hemmung).",
+          merksatz: "lac-Operon: Induzierbares Operon! OHNE Laktose: Repressor AN → Gene AUS. MIT Laktose: Allolaktose → Repressor inaktiv → Gene AN. CAP-cAMP (Glukose ↓): Transkription ↑↑. trp-Operon: MIT Tryptophan (Corepressor) → Repressor aktiv → Gene AUS.",
+        },
+        {
+          heading: "Eukaryotische Genregulation",
+          text: "Eukaryoten regulieren Gene über Transkriptionsfaktoren: basale TFs (TFIID/TBP an TATA-Box), Aktivatoren (an Enhancer) und Repressoren (an Silencer). Enhancer können Millionen Basenpaare vom Promotor entfernt liegen und wirken via DNA-Looping (Mediator-Komplex). Kein Operon-Prinzip.",
+          merksatz: "Enhancer können weit entfernt vom Promotor sein (bis 1 Mio. bp) → DNA-Looping bringt Enhancer + Promotor zusammen. Aktivatoren (Enhancer → Transkription ↑), Repressoren (Silencer → Transkription ↓).",
+        },
+        {
+          heading: "Epigenetische Regulation",
+          text: "DNA-Methylierung (5mC an CpG-Inseln) stillegt Gene ohne Sequenzänderung — vererbbar und reversibel. Histon-Acetylierung (HAT) lockert Chromatin → Euchromatin → Transkription ↑; Deacetylierung (HDAC) verdichtet → Heterochromatin → Transkription ↓. Beispiele: X-Inaktivierung, Genomic Imprinting.",
+          merksatz: "DNA-Methylierung (CpG-Inseln, 5mC): Promotor methyliert → Gen AUS. HAT (Acetylierung) → Euchromatin → Transkription ↑. HDAC (Deacetylierung) → Heterochromatin → Transkription ↓.",
+        },
+        {
+          heading: "RNA-Interferenz (RNAi): miRNA und siRNA",
+          text: "miRNA (endogen, ~22 nt) bindet unvollständig an die 3'-UTR der Ziel-mRNA → Translations-Repression oder Abbau. siRNA (exogen/künstlich, ~21–23 nt) bindet vollständig komplementär → mRNA-Abbau via RISC-Komplex. Beide nutzen Dicer zur Prozessierung; miRNA zusätzlich Drosha im Kern.",
+          merksatz: "miRNA: Endogen, ~22 nt, 3'-UTR-Bindung (nicht vollständig komplementär), Translations-Repression/Abbau. siRNA: Exogen, ~21–23 nt, vollständig komplementär, mRNA-Abbau (RISC, Argonaute), therapeutisch (Patisiran).",
+        },
+      ],
       merksätze: [],
       selfTest: [
         {

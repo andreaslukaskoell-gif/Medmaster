@@ -152,6 +152,7 @@ export default function AdminPreview() {
                       uk={uk}
                       subject={subject}
                       chapterId={chapterId}
+                      enhancedFormatting={chapterId === 'bio-kap1'}
                     />
                   </CardContent>
                 </Card>

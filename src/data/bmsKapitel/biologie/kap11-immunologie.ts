@@ -22,16 +22,6 @@ IgG ist das häufigste und beste verstandene Immunglobulin. Es besteht aus:
 - **Fab-Fragment (Fragment antigen-binding):** Enthält die variablen Regionen beider Ketten → Antigen-Bindestelle. Zwei Fab-Fragmente pro Antikörper → bivalent
 - **Fc-Fragment (Fragment crystallizable):** Konstante Regionen der schweren Ketten → Effektorfunktionen (Bindung an Fc-Rezeptoren, Komplementaktivierung)
 
-## Immunglobulin-Klassen (Isotypen)
-
-| Klasse | Vorkommen | Besonderheiten |
-|--------|-----------|----------------|
-| **IgG** | Serum (75%), plazentagängig | Häufigster Antikörper, Sekundärantwort, überwindet Plazenta (maternaler Schutz) |
-| **IgA** | Sekrete (Speichel, Muttermilch, Tränen), Serum | Schützt Schleimhäute, dimerisch in Sekreten |
-| **IgM** | Serum | Pentamer (10 Bindestellen), erste Reaktion (Primärantwort), starker Komplementaktivator |
-| **IgE** | Sehr wenig im Serum | Bindet Mastzellen und Basophile → Allergie (Typ I), Parasitenabwehr |
-| **IgD** | B-Zell-Oberfläche | B-Zell-Aktivierung (Signalübertragung), selten im Serum |
-
 ## Effektorfunktionen der Antikörper
 
 - **Neutralisierung:** Antikörper blockieren Toxine oder Viruspartikel direkt (binden Virus → kann keine Zelle mehr infizieren)
@@ -44,6 +34,20 @@ IgG ist das häufigste und beste verstandene Immunglobulin. Es besteht aus:
         "Die Effektorfunktionen von Antikörpern (Neutralisierung, Opsonisierung, Komplementaktivierung) erläutern",
       ],
       sections: [
+        {
+          heading: "Immunglobulin-Klassen (Isotypen)",
+          text: "Das Immunsystem produziert fünf Klassen von Immunglobulinen (Isotypen), die sich in Struktur, Vorkommen und Funktion unterscheiden.",
+          table: {
+            headers: ["Klasse", "Vorkommen", "Besonderheiten"],
+            rows: [
+              ["IgG", "Serum (75%), plazentagängig", "Häufigster Antikörper, Sekundärantwort, überwindet Plazenta (maternaler Schutz)"],
+              ["IgA", "Sekrete (Speichel, Muttermilch, Tränen), Serum", "Schützt Schleimhäute, dimerisch in Sekreten"],
+              ["IgM", "Serum", "Pentamer (10 Bindestellen), erste Reaktion (Primärantwort), starker Komplementaktivator"],
+              ["IgE", "Sehr wenig im Serum", "Bindet Mastzellen und Basophile → Allergie (Typ I), Parasitenabwehr"],
+              ["IgD", "B-Zell-Oberfläche", "B-Zell-Aktivierung (Signalübertragung), selten im Serum"],
+            ],
+          },
+        },
         {
           heading: "IgM — Der erste Responder",
           text: "IgM ist das erste Immunglobulin, das bei einer Immunantwort produziert wird (Primärantwort) und ein wichtiger diagnostischer Marker für akute Infektionen. IgM ist ein Pentamer aus fünf Ig-Monomeren, verbunden durch eine J-Kette — es hat daher 10 Antigenbindestellen (decavalent). Dies kompensiert die etwas geringere Affinität jeder einzelnen Bindestelle durch Avididtät (Gesamtbindungsstärke durch viele schwache Bindungen). IgM ist ein besonders starker Komplementaktivator, da pro Antikörper zwei benachbarte Fc-Stücke nötig sind, um C1q zu binden — und IgM bietet viele Fc-Stücke in räumlicher Nähe. IgM kann die Plazenta nicht überwinden (zu groß). Im Serum: IgM-Nachweis → akute Infektion; IgG-Nachweis → durchgemachte Infektion oder Impfung.",
@@ -333,15 +337,6 @@ Das **AB0-Blutgruppensystem** wird durch das ABO-Gen auf Chromosom 9 bestimmt. D
 - I^A und I^B sind **kodominant** zueinander (beide werden exprimiert)
 - I^A und I^B sind beide **dominant** über i⁰ (rezessiv)
 
-## Genotypen und Phänotypen
-
-| Blutgruppe | Genotypen | Antigen | Antikörper im Serum |
-|------------|-----------|---------|---------------------|
-| A | I^A I^A oder I^A i⁰ | A | Anti-B |
-| B | I^B I^B oder I^B i⁰ | B | Anti-A |
-| AB | I^A I^B | A + B | Keiner |
-| 0 | i⁰ i⁰ | Keines | Anti-A + Anti-B |
-
 ## Iso-Hämagglutinine (natürliche Antikörper)
 
 **Anti-A und Anti-B** sind **natürliche Antikörper** (primär IgM), die auch ohne vorherigen Antigenkontakt vorhanden sind. Bildung wahrscheinlich durch Reaktion auf A- und B-ähnliche Antigene auf Bakterien und Nahrungsmitteln in den ersten Lebensmonaten.
@@ -367,6 +362,19 @@ Das Rhesus-System (D-Antigen) ist das wichtigste nach AB0. Rh-positiv = D-Antige
         "Die klinische Relevanz des AB0-Systems bei Transfusionen erläutern",
       ],
       sections: [
+        {
+          heading: "Genotypen und Phänotypen",
+          text: "Die vier AB0-Blutgruppen werden durch drei Allele (I^A, I^B, i⁰) bestimmt. Jede Blutgruppe hat charakteristische Genotypen, Antigene auf Erythrozyten und natürliche Antikörper im Serum.",
+          table: {
+            headers: ["Blutgruppe", "Genotypen", "Antigen", "Antikörper im Serum"],
+            rows: [
+              ["A", "I^A I^A oder I^A i⁰", "A", "Anti-B"],
+              ["B", "I^B I^B oder I^B i⁰", "B", "Anti-A"],
+              ["AB", "I^A I^B", "A + B", "Keiner"],
+              ["0", "i⁰ i⁰", "Keines", "Anti-A + Anti-B"],
+            ],
+          },
+        },
         {
           heading: "Kodominanz — Beide Allele werden exprimiert",
           text: "Kodominanz bedeutet, dass beide Allele eines heterozygoten Individuums vollständig exprimiert werden und im Phänotyp erkennbar sind. Dies unterscheidet sich von dominanter/rezessiver Vererbung (ein Allel unterdrückt das andere) und von unvollständiger Dominanz (Intermediärphänotyp). Bei Blutgruppe AB werden sowohl A- als auch B-Antigen auf den roten Blutkörperchen exprimiert — beide Allele I^A und I^B sind aktiv und produzieren ihre jeweilige Glykosyltransferase. Wichtig für forensische Genetik und Vaterschaftstests: Eine Person mit Blutgruppe AB kann nicht Blutgruppe 0-Eltern haben (da keiner das AB-Kind-Allel weitergeben kann). Blutgruppen-Mismatch kann Vaterschaft ausschließen, aber nie beweisen.",
