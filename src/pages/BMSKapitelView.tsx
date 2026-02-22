@@ -1,6 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, CheckCircle2, Clock, BookOpen, ChevronRight, Play, ArrowRight } from "lucide-react";
+import {
+  ChevronLeft,
+  CheckCircle2,
+  Clock,
+  BookOpen,
+  ChevronRight,
+  Play,
+  ArrowRight,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,8 +19,8 @@ import { useLocation } from "react-router-dom";
 import { useBreadcrumb } from "@/contexts/BreadcrumbContext";
 import { pathForSubject, pathForChapter } from "@/lib/bmsRoutes";
 import type { Kapitel } from "@/data/bmsKapitel/types";
-import { getSubjectColors } from '@/data/bmsKapitel/colors';
-import { getKapitelById } from '@/data/bmsKapitel';
+import { getSubjectColors } from "@/data/bmsKapitel/colors";
+import { getKapitelById } from "@/data/bmsKapitel";
 import BMSUnterkapitel from "./BMSUnterkapitel";
 import { ChapterSRSBadge } from "@/components/chapter/ChapterSRSBadge";
 
@@ -38,7 +46,14 @@ const subjectLabels: Record<string, string> = {
 
 const CHAPTER_SCROLL_KEY = "bms-chapter-scroll";
 
-export default function BMSKapitelView({ kapitel, initialUkIndex, onBack, chaptersInSubject = [], currentChapterIndex = 0, onGoToChapter }: Props) {
+export default function BMSKapitelView({
+  kapitel,
+  initialUkIndex,
+  onBack,
+  chaptersInSubject = [],
+  currentChapterIndex = 0,
+  onGoToChapter,
+}: Props) {
   // Get subject-specific colors from centralized color system
   const subjectColors = getSubjectColors(kapitel.subject as any);
   const location = useLocation();
@@ -53,15 +68,23 @@ export default function BMSKapitelView({ kapitel, initialUkIndex, onBack, chapte
     setBreadcrumbs([
       { label: "Dashboard", href: "/" },
       { label: "BMS", href: "/bms" },
-      { label: subjectLabels[kapitel.subject] ?? kapitel.subject, href: pathForSubject(kapitel.subject) },
+      {
+        label: subjectLabels[kapitel.subject] ?? kapitel.subject,
+        href: pathForSubject(kapitel.subject),
+      },
       { label: kapitel.title, href: pathForChapter(kapitel.subject, kapitel.id) },
     ]);
   }, [kapitel, setBreadcrumbs]);
 
   // URL ?uk= or "Fortsetzen" resume
   useEffect(() => {
-    if (initialUkIndex !== undefined && Number.isFinite(initialUkIndex) && kapitel?.unterkapitel?.length) {
-      const idx = initialUkIndex >= 0 && initialUkIndex < kapitel.unterkapitel.length ? initialUkIndex : null;
+    if (
+      initialUkIndex !== undefined &&
+      Number.isFinite(initialUkIndex) &&
+      kapitel?.unterkapitel?.length
+    ) {
+      const idx =
+        initialUkIndex >= 0 && initialUkIndex < kapitel.unterkapitel.length ? initialUkIndex : null;
       setActiveUKIndex(idx);
       return;
     }
@@ -86,14 +109,8 @@ export default function BMSKapitelView({ kapitel, initialUkIndex, onBack, chapte
     return () => cancelAnimationFrame(id);
   }, [activeUKIndex, kapitel?.id]);
 
-  // Safe store access with fallback
-  let completedChapters: string[] = [];
-  try {
-    const store = useStore();
-    completedChapters = store.completedChapters || [];
-  } catch (e) {
-    console.error('Error accessing store:', e);
-  }
+  const { completedChapters: storeCompleted } = useStore();
+  const completedChapters = storeCompleted || [];
 
   // Defensive checks for chapter data
   if (!kapitel || !kapitel.id) {
@@ -107,24 +124,27 @@ export default function BMSKapitelView({ kapitel, initialUkIndex, onBack, chapte
             <p className="text-sm text-red-800 dark:text-red-400 mb-4">
               Die Kapitel-Daten konnten nicht geladen werden.
             </p>
-            <Button onClick={onBack}>
-              Zurück zur Übersicht
-            </Button>
+            <Button onClick={onBack}>Zurück zur Übersicht</Button>
           </CardContent>
         </Card>
       </div>
     );
   }
 
-  const unterkapitel = (kapitel.unterkapitel && Array.isArray(kapitel.unterkapitel)) ? kapitel.unterkapitel : [];
-  const completedUK = unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length;
+  const unterkapitel =
+    kapitel.unterkapitel && Array.isArray(kapitel.unterkapitel) ? kapitel.unterkapitel : [];
+  const completedUK = unterkapitel.filter(
+    (u) => u && u.id && completedChapters.includes(u.id)
+  ).length;
   const totalUK = unterkapitel.length;
   const isKapitelDone = completedChapters.includes(kapitel.id);
 
   const prevChapter = chaptersInSubject[currentChapterIndex - 1];
   const nextChapter = chaptersInSubject[currentChapterIndex + 1];
-  const hasPrevChapter = prevChapter?.unterkapitel?.length != null && prevChapter.unterkapitel.length > 0;
-  const hasNextChapter = nextChapter?.unterkapitel?.length != null && nextChapter.unterkapitel.length > 0;
+  const hasPrevChapter =
+    prevChapter?.unterkapitel?.length != null && prevChapter.unterkapitel.length > 0;
+  const hasNextChapter =
+    nextChapter?.unterkapitel?.length != null && nextChapter.unterkapitel.length > 0;
 
   if (activeUKIndex !== null) {
     return (
@@ -139,9 +159,7 @@ export default function BMSKapitelView({ kapitel, initialUkIndex, onBack, chapte
             : undefined
         }
         onNextChapter={
-          onGoToChapter && hasNextChapter
-            ? () => onGoToChapter(nextChapter.id, 0)
-            : undefined
+          onGoToChapter && hasNextChapter ? () => onGoToChapter(nextChapter.id, 0) : undefined
         }
       />
     );
@@ -154,12 +172,14 @@ export default function BMSKapitelView({ kapitel, initialUkIndex, onBack, chapte
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
-      <BreadcrumbNav items={[
-        { label: "Dashboard", href: "/" },
-        { label: "BMS", href: "/bms" },
-        { label: subjectLabels[kapitel.subject], href: "#" },
-        { label: kapitel.title },
-      ]} />
+      <BreadcrumbNav
+        items={[
+          { label: "Dashboard", href: "/" },
+          { label: "BMS", href: "/bms" },
+          { label: subjectLabels[kapitel.subject], href: "#" },
+          { label: kapitel.title },
+        ]}
+      />
 
       <Button variant="ghost" size="sm" onClick={onBack}>
         <ChevronLeft className="w-4 h-4 mr-1" />
@@ -191,7 +211,9 @@ export default function BMSKapitelView({ kapitel, initialUkIndex, onBack, chapte
           </div>
         </div>
         {isKapitelDone && (
-          <Badge variant="success" className="shrink-0">Abgeschlossen</Badge>
+          <Badge variant="success" className="shrink-0">
+            Abgeschlossen
+          </Badge>
         )}
       </div>
 
@@ -230,9 +252,7 @@ export default function BMSKapitelView({ kapitel, initialUkIndex, onBack, chapte
 
       {/* Unterkapitel list */}
       <div className="space-y-2">
-        <h2 className="text-lg font-semibold text-midnight dark:text-slate-100">
-          Unterkapitel
-        </h2>
+        <h2 className="text-lg font-semibold text-midnight dark:text-slate-100">Unterkapitel</h2>
         {unterkapitel.length === 0 ? (
           <Card className={`border-l-4 ${subjectColors.border}`}>
             <CardContent className="p-6 text-center">
@@ -245,7 +265,8 @@ export default function BMSKapitelView({ kapitel, initialUkIndex, onBack, chapte
           unterkapitel.map((uk, index) => {
             if (!uk || !uk.id) return null; // Skip invalid subchapters
             const isDone = completedChapters.includes(uk.id);
-            const selfTestCount = (uk.selfTest && Array.isArray(uk.selfTest)) ? uk.selfTest.length : 0;
+            const selfTestCount =
+              uk.selfTest && Array.isArray(uk.selfTest) ? uk.selfTest.length : 0;
             return (
               <motion.div
                 key={uk.id}
@@ -257,7 +278,10 @@ export default function BMSKapitelView({ kapitel, initialUkIndex, onBack, chapte
                   className={`hover:shadow-md transition-shadow cursor-pointer border-l-4 ${subjectColors.border} ${isDone ? "bg-slate-50/80 dark:bg-slate-900/30" : ""}`}
                   onClick={() => {
                     if (typeof sessionStorage !== "undefined") {
-                      sessionStorage.setItem(`${CHAPTER_SCROLL_KEY}:${kapitel.id}`, String(window.scrollY));
+                      sessionStorage.setItem(
+                        `${CHAPTER_SCROLL_KEY}:${kapitel.id}`,
+                        String(window.scrollY)
+                      );
                     }
                     setActiveUKIndex(index);
                   }}
@@ -278,7 +302,9 @@ export default function BMSKapitelView({ kapitel, initialUkIndex, onBack, chapte
                       </div>
                     )}
                     <div className="flex-1 min-w-0">
-                      <h3 className={`font-medium text-sm relative inline-block ${isDone ? "text-slate-500 dark:text-slate-400" : "text-midnight dark:text-slate-100"}`}>
+                      <h3
+                        className={`font-medium text-sm relative inline-block ${isDone ? "text-slate-500 dark:text-slate-400" : "text-midnight dark:text-slate-100"}`}
+                      >
                         <span className="relative z-1">{uk.title || "Untitled Subchapter"}</span>
                         {isDone && (
                           <span
@@ -303,39 +329,41 @@ export default function BMSKapitelView({ kapitel, initialUkIndex, onBack, chapte
       </div>
 
       {/* Smart-Links to Related Chapters - Phase 4: STRUCT-05 */}
-      {kapitel.linkedChapters && kapitel.linkedChapters.length > 0 && (() => {
-        const colors = getSubjectColors(kapitel.subject);
-        const linkedKapitelList = kapitel.linkedChapters
-          .map(id => getKapitelById(id))
-          .filter((k): k is Kapitel => k !== undefined);
+      {kapitel.linkedChapters &&
+        kapitel.linkedChapters.length > 0 &&
+        (() => {
+          const colors = getSubjectColors(kapitel.subject);
+          const linkedKapitelList = kapitel.linkedChapters
+            .map((id) => getKapitelById(id))
+            .filter((k): k is Kapitel => k !== undefined);
 
-        if (linkedKapitelList.length === 0) return null;
+          if (linkedKapitelList.length === 0) return null;
 
-        return (
-          <div className="space-y-3 mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
-            <h3 className="font-semibold text-midnight dark:text-slate-100 flex items-center gap-2">
-              <ArrowRight className={`w-5 h-5 ${colors.icon}`} />
-              Verwandte Kapitel
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {linkedKapitelList.map(linkedKap => (
-                <button
-                  key={linkedKap.id}
-                  onClick={() => onGoToChapter?.(linkedKap.id, 0)}
-                  className={`text-left p-4 rounded-lg border-l-4 ${colors.border} ${colors.bg} ${colors.bgDark} hover:shadow-md transition-all duration-200`}
-                >
-                  <div className={`font-medium ${colors.text} ${colors.textDark}`}>
-                    {linkedKap.sequenceTitle || linkedKap.title}
-                  </div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                    {linkedKap.subject} • {linkedKap.estimatedTime}
-                  </div>
-                </button>
-              ))}
+          return (
+            <div className="space-y-3 mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
+              <h3 className="font-semibold text-midnight dark:text-slate-100 flex items-center gap-2">
+                <ArrowRight className={`w-5 h-5 ${colors.icon}`} />
+                Verwandte Kapitel
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {linkedKapitelList.map((linkedKap) => (
+                  <button
+                    key={linkedKap.id}
+                    onClick={() => onGoToChapter?.(linkedKap.id, 0)}
+                    className={`text-left p-4 rounded-lg border-l-4 ${colors.border} ${colors.bg} ${colors.bgDark} hover:shadow-md transition-all duration-200`}
+                  >
+                    <div className={`font-medium ${colors.text} ${colors.textDark}`}>
+                      {linkedKap.sequenceTitle || linkedKap.title}
+                    </div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                      {linkedKap.subject} • {linkedKap.estimatedTime}
+                    </div>
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
-        );
-      })()}
+          );
+        })()}
     </div>
   );
 }

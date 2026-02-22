@@ -53,10 +53,10 @@ const subjectConfig: Record<
   "biologie" | "chemie" | "physik" | "mathematik",
   { label: string; icon: typeof Microscope; dotColor: string }
 > = {
-  biologie:   { label: "Biologie",    icon: Microscope,   dotColor: "bg-[var(--accent-bio)]" },
-  chemie:     { label: "Chemie",      icon: FlaskConical, dotColor: "bg-[var(--accent-chem)]" },
-  physik:     { label: "Physik",      icon: Zap,          dotColor: "bg-[var(--accent-phys)]" },
-  mathematik: { label: "Mathematik",  icon: Calculator,   dotColor: "bg-[var(--accent-math)]" },
+  biologie: { label: "Biologie", icon: Microscope, dotColor: "bg-[var(--accent-bio)]" },
+  chemie: { label: "Chemie", icon: FlaskConical, dotColor: "bg-[var(--accent-chem)]" },
+  physik: { label: "Physik", icon: Zap, dotColor: "bg-[var(--accent-phys)]" },
+  mathematik: { label: "Mathematik", icon: Calculator, dotColor: "bg-[var(--accent-math)]" },
 };
 
 /* ── Nav config ─────────────────────────────────────────────────────── */
@@ -76,47 +76,92 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
     id: "lernen",
     title: "LERNEN",
     items: [
-      { to: "/daily", icon: Trophy,     label: "Daily", iconColor: "text-amber-500", highlight: true },
-      { to: "/bms", icon: BookOpen,     label: "BMS",  iconColor: "text-[var(--accent-bio)]",   hasChildren: true },
-      { to: "/kff", icon: Brain,        label: "KFF",  iconColor: "text-amber-500" },
-      { to: "/tv",  icon: FileText,     label: "TV",   iconColor: "text-indigo-500" },
-      { to: "/sek", icon: Heart,        label: "SEK",  iconColor: "text-rose-500" },
+      { to: "/daily", icon: Trophy, label: "Daily", iconColor: "text-amber-500", highlight: true },
+      {
+        to: "/bms",
+        icon: BookOpen,
+        label: "BMS",
+        iconColor: "text-[var(--accent-bio)]",
+        hasChildren: true,
+      },
+      { to: "/kff", icon: Brain, label: "KFF", iconColor: "text-amber-500" },
+      { to: "/tv", icon: FileText, label: "TV", iconColor: "text-indigo-500" },
+      { to: "/sek", icon: Heart, label: "SEK", iconColor: "text-rose-500" },
     ],
   },
   {
     id: "training",
     title: "TRAINING",
     items: [
-      { to: "/ai-tutor",     icon: MessageCircle, label: "AI-Tutor",    iconColor: "text-purple-500", highlight: true, requiredLevel: 0 },
-      { to: "/simulation",   icon: Timer,         label: "Simulation",  iconColor: "text-orange-500", requiredLevel: 0 },
-      { to: "/wissencheck",  icon: BookOpen,      label: "Wissenscheck", iconColor: "text-[var(--accent-bio)]" },
-      { to: "/stichwortliste", icon: ListChecks,  label: "Stichwortliste", iconColor: "text-[var(--accent-bio)]" },
+      {
+        to: "/ai-tutor",
+        icon: MessageCircle,
+        label: "AI-Tutor",
+        iconColor: "text-purple-500",
+        highlight: true,
+        requiredLevel: 0,
+      },
+      {
+        to: "/simulation",
+        icon: Timer,
+        label: "Simulation",
+        iconColor: "text-orange-500",
+        requiredLevel: 0,
+      },
+      {
+        to: "/wissencheck",
+        icon: BookOpen,
+        label: "Wissenscheck",
+        iconColor: "text-[var(--accent-bio)]",
+      },
+      {
+        to: "/stichwortliste",
+        icon: ListChecks,
+        label: "Stichwortliste",
+        iconColor: "text-[var(--accent-bio)]",
+      },
       { to: "/karteikarten", icon: Layers, label: "Karteikarten", iconColor: "text-emerald-500" },
-      { to: "/fragen-trainer", icon: Dumbbell, label: "Fragen-Trainer", iconColor: "text-violet-500" },
-      { to: "/formelsammlung", icon: BookMarked, label: "Formelsammlung", iconColor: "text-teal-500" },
-      { to: "/notizen",      icon: StickyNote,    label: "Notizen" },
+      {
+        to: "/fragen-trainer",
+        icon: Dumbbell,
+        label: "Fragen-Trainer",
+        iconColor: "text-violet-500",
+      },
+      {
+        to: "/formelsammlung",
+        icon: BookMarked,
+        label: "Formelsammlung",
+        iconColor: "text-teal-500",
+      },
+      { to: "/notizen", icon: StickyNote, label: "Notizen" },
     ],
   },
   {
     id: "performance",
     title: "PERFORMANCE",
     items: [
-      { to: "/performance",  icon: Award,     label: "Erfolge" },
-      { to: "/prognose",     icon: TrendingUp, label: "Prognose" },
-      { to: "/statistik",    icon: BarChart3,  label: "Statistik" },
-      { to: "/analyse",      icon: Radar,      label: "Analyse" },
-      { to: "/schwachstellen", icon: Target,   label: "Schwachstellen", iconColor: "text-rose-500", requiredLevel: 0 },
+      { to: "/performance", icon: Award, label: "Erfolge" },
+      { to: "/prognose", icon: TrendingUp, label: "Prognose" },
+      { to: "/statistik", icon: BarChart3, label: "Statistik" },
+      { to: "/analyse", icon: Radar, label: "Analyse" },
+      {
+        to: "/schwachstellen",
+        icon: Target,
+        label: "Schwachstellen",
+        iconColor: "text-rose-500",
+        requiredLevel: 0,
+      },
     ],
   },
   {
     id: "system",
     title: "SYSTEM",
     items: [
-      { to: "/preise",    icon: CreditCard,  label: "Preise" },
-      { to: "/community", icon: Users,       label: "Community" },
-      { to: "/duell",     icon: Swords,      label: "Duell" },
-      { to: "/lernplan",  icon: CalendarDays, label: "Lernplan" },
-      { to: "/",          icon: Settings,    label: "Einstellungen" },
+      { to: "/preise", icon: CreditCard, label: "Preise" },
+      { to: "/community", icon: Users, label: "Community" },
+      { to: "/duell", icon: Swords, label: "Duell" },
+      { to: "/lernplan", icon: CalendarDays, label: "Lernplan" },
+      { to: "/preise", icon: Settings, label: "Einstellungen" },
     ],
   },
 ];
@@ -141,10 +186,11 @@ function CollapsibleSection({
         onClick={onToggle}
         className="flex items-center gap-1.5 w-full py-1.5 px-2 text-[10px] font-semibold uppercase tracking-widest text-[var(--muted)] hover:text-[var(--foreground)] transition-colors cursor-pointer"
       >
-        {open
-          ? <ChevronDown className="w-3 h-3 shrink-0" />
-          : <ChevronRight className="w-3 h-3 shrink-0" />
-        }
+        {open ? (
+          <ChevronDown className="w-3 h-3 shrink-0" />
+        ) : (
+          <ChevronRight className="w-3 h-3 shrink-0" />
+        )}
         {title}
       </button>
       <AnimatePresence initial={false}>
@@ -229,17 +275,21 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
   // Lazy-load BMS chapter metadata to keep it out of the main bundle
   const [bmsModule, setBmsModule] = useState<{
     alleKapitel: Kapitel[];
-    findChapterByUnterkapitelId: (id: string) => { kapitel: Kapitel; index: number } | null | undefined;
+    findChapterByUnterkapitelId: (
+      id: string
+    ) => { kapitel: Kapitel; index: number } | null | undefined;
     getKapitelById: (id: string) => Kapitel | undefined;
     getKapitelBySubject: (s: string) => Kapitel[];
   } | null>(null);
   useEffect(() => {
-    import("@/data/bmsKapitel").then((m) => setBmsModule({
-      alleKapitel: m.alleKapitel,
-      findChapterByUnterkapitelId: m.findChapterByUnterkapitelId,
-      getKapitelById: m.getKapitelById,
-      getKapitelBySubject: m.getKapitelBySubject,
-    }));
+    import("@/data/bmsKapitel").then((m) =>
+      setBmsModule({
+        alleKapitel: m.alleKapitel,
+        findChapterByUnterkapitelId: m.findChapterByUnterkapitelId,
+        getKapitelById: m.getKapitelById,
+        getKapitelBySubject: m.getKapitelBySubject,
+      })
+    );
   }, []);
 
   const lastPath = useAdaptiveStore((s) => s.lastPath);
@@ -269,7 +319,9 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
     const totalUK = kapitel.reduce((sum, k) => sum + (k?.unterkapitel?.length ?? 0), 0);
     if (totalUK === 0) return 0;
     const completedUK = kapitel.reduce(
-      (sum, k) => sum + (k?.unterkapitel?.filter((u) => u?.id && completedChapters.includes(u.id)).length ?? 0),
+      (sum, k) =>
+        sum +
+        (k?.unterkapitel?.filter((u) => u?.id && completedChapters.includes(u.id)).length ?? 0),
       0
     );
     return Math.round((completedUK / totalUK) * 100);
@@ -281,14 +333,26 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
       const found = bmsModule.findChapterByUnterkapitelId(lastViewedUnterkapitelId);
       if (found) {
         const uk = found.kapitel.unterkapitel?.[found.index];
-        const subj: Record<string, string> = { biologie: "Bio", chemie: "Chemie", physik: "Physik", mathematik: "Mathe" };
-        return uk ? `${subj[found.kapitel.subject]} · ${uk.title}` : `${subj[found.kapitel.subject]} · ${found.kapitel.title}`;
+        const subj: Record<string, string> = {
+          biologie: "Bio",
+          chemie: "Chemie",
+          physik: "Physik",
+          mathematik: "Mathe",
+        };
+        return uk
+          ? `${subj[found.kapitel.subject]} · ${uk.title}`
+          : `${subj[found.kapitel.subject]} · ${found.kapitel.title}`;
       }
     }
     if (lastViewedKapitelId && bmsModule) {
       const kap = bmsModule.getKapitelById(lastViewedKapitelId);
       if (kap) {
-        const subj: Record<string, string> = { biologie: "Bio", chemie: "Chemie", physik: "Physik", mathematik: "Mathe" };
+        const subj: Record<string, string> = {
+          biologie: "Bio",
+          chemie: "Chemie",
+          physik: "Physik",
+          mathematik: "Mathe",
+        };
         return `${subj[kap.subject]} · ${kap.title}`;
       }
     }
@@ -363,7 +427,6 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
 
       {/* Nav */}
       <nav className="flex-1 min-h-0 overflow-y-auto px-3 py-3 space-y-0.5 sidebar-scroll">
-
         {/* Resume last path */}
         {lastPathLabel && lastPath && lastPath !== "/" && (
           <div ref={lastPathRef} className="mb-3">
@@ -388,11 +451,7 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
         {/* Dashboard */}
         <NavLink to="/" end onClick={onClose} className="block mb-2">
           {({ isActive: active }) => (
-            <NavItemRow
-              icon={LayoutDashboard}
-              label="Dashboard"
-              active={active}
-            />
+            <NavItemRow icon={LayoutDashboard} label="Dashboard" active={active} />
           )}
         </NavLink>
 
@@ -412,7 +471,8 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                 const active = isActive(to);
                 const isBmsActive = pathname === "/bms" || pathname.startsWith("/bms/");
 
-                const requiredLevel = "requiredLevel" in item ? item.requiredLevel : getRequiredLevelForPath(to);
+                const requiredLevel =
+                  "requiredLevel" in item ? item.requiredLevel : getRequiredLevelForPath(to);
                 const isDev = process.env.NODE_ENV === "development";
                 const wouldBeLocked = requiredLevel != null && currentLevel < requiredLevel;
                 const isLocked = wouldBeLocked && !isDev;
@@ -444,12 +504,7 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                             : "text-[var(--muted)] hover:text-[var(--foreground)]"
                         )}
                       >
-                        <NavLink
-                          to="/bms"
-                          end={false}
-                          onClick={onClose}
-                          className="flex-1 min-w-0"
-                        >
+                        <NavLink to="/bms" end={false} onClick={onClose} className="flex-1 min-w-0">
                           <div
                             className={cn(
                               "flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer relative",
@@ -461,7 +516,12 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                             {isBmsActive && (
                               <span className="absolute left-0 top-1/2 -translate-y-1/2 w-[3px] h-5 bg-[var(--color-primary-500)] rounded-full" />
                             )}
-                            <item.icon className={cn("w-4 h-4 shrink-0", isBmsActive ? undefined : item.iconColor)} />
+                            <item.icon
+                              className={cn(
+                                "w-4 h-4 shrink-0",
+                                isBmsActive ? undefined : item.iconColor
+                              )}
+                            />
                             <span className="truncate flex-1">{item.label}</span>
                           </div>
                         </NavLink>
@@ -474,17 +534,20 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                           className="flex items-center gap-1 px-2 py-2 rounded-lg hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer shrink-0"
                         >
                           {(bmsProgress ?? 0) > 0 && (
-                            <span className="text-[10px] font-medium text-[var(--muted)]">{bmsProgress}%</span>
+                            <span className="text-[10px] font-medium text-[var(--muted)]">
+                              {bmsProgress}%
+                            </span>
                           )}
                           {(dueCount ?? 0) > 0 && (
                             <span className="bg-orange-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
                               {dueCount}
                             </span>
                           )}
-                          {bmsExpanded
-                            ? <ChevronDown className="w-3.5 h-3.5" />
-                            : <ChevronRight className="w-3.5 h-3.5" />
-                          }
+                          {bmsExpanded ? (
+                            <ChevronDown className="w-3.5 h-3.5" />
+                          ) : (
+                            <ChevronRight className="w-3.5 h-3.5" />
+                          )}
                         </button>
                       </div>
 
@@ -503,81 +566,106 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                               {dueChapterIds.length > 0 && (
                                 <div className="px-2 py-1">
                                   {filterDue ? (
-                                    <RouterLink to="/bms" onClick={onClose} className="text-xs text-[var(--color-primary-500)] hover:underline">
+                                    <RouterLink
+                                      to="/bms"
+                                      onClick={onClose}
+                                      className="text-xs text-[var(--color-primary-500)] hover:underline"
+                                    >
                                       Alle anzeigen
                                     </RouterLink>
                                   ) : (
-                                    <RouterLink to="/bms?filter=due" onClick={onClose} className="text-xs text-amber-600 dark:text-amber-400 hover:underline">
+                                    <RouterLink
+                                      to="/bms?filter=due"
+                                      onClick={onClose}
+                                      className="text-xs text-amber-600 dark:text-amber-400 hover:underline"
+                                    >
                                       Fällig ({dueChapterIds.length})
                                     </RouterLink>
                                   )}
                                 </div>
                               )}
 
-                              {(["biologie", "chemie", "physik", "mathematik"] as const).map((subjectId) => {
-                                const config = subjectConfig[subjectId];
-                                const chapters = chaptersBySubject(subjectId);
-                                const filteredChapters = filterDue
-                                  ? chapters.filter((k) => dueChapterIds.includes(k.id))
-                                  : chapters;
-                                const isSubjectOpen = openBmsSubject === subjectId;
-                                const SubjectIcon = config.icon;
+                              {(["biologie", "chemie", "physik", "mathematik"] as const).map(
+                                (subjectId) => {
+                                  const config = subjectConfig[subjectId];
+                                  const chapters = chaptersBySubject(subjectId);
+                                  const filteredChapters = filterDue
+                                    ? chapters.filter((k) => dueChapterIds.includes(k.id))
+                                    : chapters;
+                                  const isSubjectOpen = openBmsSubject === subjectId;
+                                  const SubjectIcon = config.icon;
 
-                                return (
-                                  <div key={subjectId}>
-                                    <button
-                                      type="button"
-                                      onClick={() => setOpenBmsSubject(isSubjectOpen ? null : subjectId)}
-                                      className="flex items-center gap-2 w-full py-1.5 px-2 text-xs font-medium text-[var(--muted)] hover:text-[var(--foreground)] rounded-md transition-colors cursor-pointer"
-                                    >
-                                      {/* Subject dot */}
-                                      <span className={cn("w-2 h-2 rounded-full shrink-0", config.dotColor)} />
-                                      <SubjectIcon className="w-3.5 h-3.5 shrink-0 opacity-70" />
-                                      <span>{config.label}</span>
-                                      <span className="text-[10px] text-[var(--muted)] opacity-60">({filteredChapters.length})</span>
-                                      {isSubjectOpen
-                                        ? <ChevronDown className="w-3 h-3 ml-auto" />
-                                        : <ChevronRight className="w-3 h-3 ml-auto" />
-                                      }
-                                    </button>
+                                  return (
+                                    <div key={subjectId}>
+                                      <button
+                                        type="button"
+                                        onClick={() =>
+                                          setOpenBmsSubject(isSubjectOpen ? null : subjectId)
+                                        }
+                                        className="flex items-center gap-2 w-full py-1.5 px-2 text-xs font-medium text-[var(--muted)] hover:text-[var(--foreground)] rounded-md transition-colors cursor-pointer"
+                                      >
+                                        {/* Subject dot */}
+                                        <span
+                                          className={cn(
+                                            "w-2 h-2 rounded-full shrink-0",
+                                            config.dotColor
+                                          )}
+                                        />
+                                        <SubjectIcon className="w-3.5 h-3.5 shrink-0 opacity-70" />
+                                        <span>{config.label}</span>
+                                        <span className="text-[10px] text-[var(--muted)] opacity-60">
+                                          ({filteredChapters.length})
+                                        </span>
+                                        {isSubjectOpen ? (
+                                          <ChevronDown className="w-3 h-3 ml-auto" />
+                                        ) : (
+                                          <ChevronRight className="w-3 h-3 ml-auto" />
+                                        )}
+                                      </button>
 
-                                    <AnimatePresence initial={false}>
-                                      {isSubjectOpen && (
-                                        <motion.div
-                                          initial={{ height: 0, opacity: 0 }}
-                                          animate={{ height: "auto", opacity: 1 }}
-                                          exit={{ height: 0, opacity: 0 }}
-                                          transition={{ duration: 0.15 }}
-                                          className="overflow-hidden pl-5"
-                                          style={{ contain: "layout" }}
-                                        >
-                                          <div className="py-0.5 space-y-0.5">
-                                            {filteredChapters.map((kap) => {
-                                              const href = pathForChapter(subjectId, kap?.id ?? "");
-                                              const chapterActive = pathname === href;
-                                              return (
-                                                <NavLink
-                                                  key={kap.id}
-                                                  to={href}
-                                                  onClick={onClose}
-                                                  className={cn(
-                                                    "block py-1.5 px-2 rounded-md text-xs transition-colors border-l-2 -ml-px pl-3",
-                                                    chapterActive
-                                                      ? "border-[var(--color-primary-500)] bg-[var(--color-primary-500)]/8 text-[var(--foreground)] font-medium"
-                                                      : "border-transparent text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5"
-                                                  )}
-                                                >
-                                                  <span className="truncate block">{kap.title}</span>
-                                                </NavLink>
-                                              );
-                                            })}
-                                          </div>
-                                        </motion.div>
-                                      )}
-                                    </AnimatePresence>
-                                  </div>
-                                );
-                              })}
+                                      <AnimatePresence initial={false}>
+                                        {isSubjectOpen && (
+                                          <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: "auto", opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.15 }}
+                                            className="overflow-hidden pl-5"
+                                            style={{ contain: "layout" }}
+                                          >
+                                            <div className="py-0.5 space-y-0.5">
+                                              {filteredChapters.map((kap) => {
+                                                const href = pathForChapter(
+                                                  subjectId,
+                                                  kap?.id ?? ""
+                                                );
+                                                const chapterActive = pathname === href;
+                                                return (
+                                                  <NavLink
+                                                    key={kap.id}
+                                                    to={href}
+                                                    onClick={onClose}
+                                                    className={cn(
+                                                      "block py-1.5 px-2 rounded-md text-xs transition-colors border-l-2 -ml-px pl-3",
+                                                      chapterActive
+                                                        ? "border-[var(--color-primary-500)] bg-[var(--color-primary-500)]/8 text-[var(--foreground)] font-medium"
+                                                        : "border-transparent text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5"
+                                                    )}
+                                                  >
+                                                    <span className="truncate block">
+                                                      {kap.title}
+                                                    </span>
+                                                  </NavLink>
+                                                );
+                                              })}
+                                            </div>
+                                          </motion.div>
+                                        )}
+                                      </AnimatePresence>
+                                    </div>
+                                  );
+                                }
+                              )}
                             </div>
                           </motion.div>
                         )}

@@ -39,6 +39,7 @@ const SmartRecoveryPage = lazy(() => import("@/pages/SmartRecoveryPage"));
 const FragenTrainer = lazy(() => import("@/pages/FragenTrainer"));
 const DailyChallenge = lazy(() => import("@/pages/DailyChallenge"));
 const BMSWrapped = lazy(() => import("@/pages/BMSWrapped"));
+const Formelsammlung = lazy(() => import("@/pages/Formelsammlung"));
 
 function LoadingSpinner() {
   return (
@@ -71,12 +72,19 @@ function BMSQuizWrapper() {
 
 function NotFound404() {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-linear-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
       <div className="text-center space-y-4">
         <h1 className="text-6xl font-bold text-gray-900 dark:text-white">404</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">Seite nicht gefunden</p>
-        <p className="text-sm text-gray-500 dark:text-gray-500">Diese Seite existiert nicht oder wurde verschoben.</p>
-        <Navigate to="/" replace />
+        <p className="text-sm text-gray-500 dark:text-gray-500">
+          Diese Seite existiert nicht oder wurde verschoben.
+        </p>
+        <a
+          href="/"
+          className="inline-block mt-2 text-sm text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          → Zurück zum Dashboard
+        </a>
       </div>
     </div>
   );
@@ -110,8 +118,8 @@ export default function App() {
             <Route path="/kff" element={<KFF />} />
             <Route path="/tv" element={<TV />} />
             <Route path="/sek" element={<SEK />} />
-            <Route path="/simulation" element={<LevelGate requiredLevel={15} featureLabel="Simulationen"><Simulation /></LevelGate>} />
-            <Route path="/ai-tutor" element={<LevelGate requiredLevel={5} featureLabel="AI-Tutor"><AITutor /></LevelGate>} />
+            <Route path="/simulation" element={<Simulation />} />
+            <Route path="/ai-tutor" element={<AITutor />} />
             <Route path="/lernplan" element={<Lernplan />} />
             <Route path="/analyse" element={<Analysis />} />
             <Route path="/community" element={<Community />} />
@@ -120,13 +128,41 @@ export default function App() {
             <Route path="/karteikarten" element={<Flashcards />} />
             <Route path="/duell" element={<Duel />} />
             <Route path="/stichwortliste" element={<StichwortlistePage />} />
-            <Route path="/schwachstellen" element={<LevelGate requiredLevel={10} featureLabel="Schwachstellen-Analyse"><SchwachstellenTrainer /></LevelGate>} />
+            <Route path="/schwachstellen" element={<SchwachstellenTrainer />} />
             <Route path="/schwachstellen/recovery" element={<SmartRecoveryPage />} />
             <Route path="/preise" element={<Pricing />} />
-            <Route path="/admin/kapitel-editor" element={<AdminGuard><KapitelEditor /></AdminGuard>} />
-            <Route path="/admin/audit" element={<AdminGuard><ContentAudit /></AdminGuard>} />
-            <Route path="/admin/preview" element={<AdminGuard><AdminPreview /></AdminGuard>} />
-            <Route path="/admin/dashboard" element={<AdminGuard><AdminDashboard /></AdminGuard>} />
+            <Route
+              path="/admin/kapitel-editor"
+              element={
+                <AdminGuard>
+                  <KapitelEditor />
+                </AdminGuard>
+              }
+            />
+            <Route
+              path="/admin/audit"
+              element={
+                <AdminGuard>
+                  <ContentAudit />
+                </AdminGuard>
+              }
+            />
+            <Route
+              path="/admin/preview"
+              element={
+                <AdminGuard>
+                  <AdminPreview />
+                </AdminGuard>
+              }
+            />
+            <Route
+              path="/admin/dashboard"
+              element={
+                <AdminGuard>
+                  <AdminDashboard />
+                </AdminGuard>
+              }
+            />
             <Route path="/wissencheck" element={<WissenCheck />} />
             <Route path="/wissencheck/:fach" element={<WissenCheck />} />
             <Route path="/prognose" element={<Prognose />} />
@@ -134,7 +170,8 @@ export default function App() {
             <Route path="/fragen-trainer" element={<FragenTrainer />} />
             <Route path="/daily" element={<DailyChallenge />} />
             <Route path="/wrapped" element={<BMSWrapped />} />
-            
+            <Route path="/formelsammlung" element={<Formelsammlung />} />
+
             {/* 404 Catch-all for protected routes */}
             <Route path="*" element={<NotFound404 />} />
           </Route>

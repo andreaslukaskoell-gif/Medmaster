@@ -38,6 +38,53 @@ import { getReviewDaysFromStreak } from "../lib/utils";
 import { useAdaptiveStore } from "../store/adaptiveLearning";
 import type { Kapitel } from "../data/bmsKapitel/types";
 
+// BUG-2 fix: standalone component so useState is called at top level
+function MerksätzeSection({ merksätze }: { merksätze: string[] }) {
+  const SHOW_DIRECTLY = 3;
+  const hasMore = merksätze.length > SHOW_DIRECTLY;
+  const [merkeExpanded, setMerkeExpanded] = useState(false);
+  const visible = hasMore && !merkeExpanded ? merksätze.slice(0, SHOW_DIRECTLY) : merksätze;
+
+  return (
+    <div className="space-y-3">
+      <div className="flex items-center justify-between pb-1 border-b border-gray-200 dark:border-gray-700">
+        <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2">
+          💡 Merksätze
+          <span className="text-xs font-normal text-gray-400 dark:text-gray-500">
+            ({merksätze.length})
+          </span>
+        </h3>
+      </div>
+      {visible.map((merksatz, i) => (
+        <div
+          key={i}
+          className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-400 p-4 rounded-r-lg"
+        >
+          <p
+            className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed"
+            dangerouslySetInnerHTML={{
+              __html: merksatz.replace(
+                /\*\*(.*?)\*\*/g,
+                '<strong class="font-semibold">$1</strong>'
+              ),
+            }}
+          />
+        </div>
+      ))}
+      {hasMore && (
+        <button
+          onClick={() => setMerkeExpanded(!merkeExpanded)}
+          className="w-full text-sm text-amber-700 dark:text-amber-400 hover:text-amber-900 dark:hover:text-amber-200 py-2 border border-amber-200 dark:border-amber-800 rounded-lg transition-colors"
+        >
+          {merkeExpanded
+            ? `▲ Weniger anzeigen`
+            : `▼ ${merksätze.length - SHOW_DIRECTLY} weitere Merksätze anzeigen`}
+        </button>
+      )}
+    </div>
+  );
+}
+
 interface Props {
   kapitel: Kapitel;
   unterkapitelIndex: number;
@@ -91,6 +138,52 @@ export default function BMSUnterkapitel({
       ? kapitel.unterkapitel[unterkapitelIndex]
       : null;
   const ukId = ukFromIndex?.id;
+
+  // BUG-1 fix: useStore called unconditionally at the top level, before any early returns
+  const store = useStore();
+  const completedChapters = store.completedChapters || [];
+  const completeChapter = store.completeChapter || (() => {});
+  const addXP = store.addXP || (() => {});
+  const checkStreak = store.checkStreak || (() => {});
+  const notes = store.notes || {};
+  const setNote = store.setNote || (() => {});
+  const bookmarks = store.bookmarks || { chapters: [] };
+  const toggleBookmarkChapter = store.toggleBookmarkChapter || (() => {});
+  const saveQuizResult = store.saveQuizResult ?? (() => {});
+  const logActivity = store.logActivity ?? (() => {});
+
+  // Derive safe values that don't depend on uk being valid yet
+  const unterkapitel =
+    kapitel?.unterkapitel && Array.isArray(kapitel.unterkapitel) ? kapitel.unterkapitel : [];
+  const total = unterkapitel.length;
+  const uk =
+    unterkapitelIndex >= 0 && unterkapitelIndex < unterkapitel.length
+      ? unterkapitel[unterkapitelIndex]
+      : null;
+
+  // BUG-4 fix: isFirst / isLast declared before the keyboard useEffect that uses them
+  const isLast = unterkapitelIndex === total - 1;
+  const isFirst = unterkapitelIndex === 0;
+
+  // Additional state — all useState calls unconditionally at top level
+  const [noteText, setNoteText] = useState(notes[uk?.id || ""] || "");
+  const [showNotes, setShowNotes] = useState(false);
+  const [bridgeOpen, setBridgeOpen] = useState(false);
+  const [hinterfragMode, setHinterfragMode] = useState(false);
+  const [progressiveDisclosure, setProgressiveDisclosure] = useState(true);
+  const [quickReviewMode, setQuickReviewMode] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [selfTestDone, setSelfTestDone] = useState(false);
+  const allCompleteFired = useRef(false);
+  /** Sammelt Kontrollfragen-Antworten für Einspeisung in Analyse (quizResults). */
+  const kontrollResultsRef = useRef<{ questionIndex: number; correct: boolean }[]>([]);
+
+  // Reading time: ~200 words/minute — useMemo unconditionally at top level
+  const readingTimeMin = useMemo(() => {
+    const text = [uk?.content ?? "", ...(uk?.sections?.map((s) => s.text ?? "") ?? [])].join(" ");
+    const words = text.trim().split(/\s+/).filter(Boolean).length;
+    return Math.max(1, Math.round(words / 200));
+  }, [uk?.content, uk?.sections]);
 
   useEffect(() => {
     if (kapitelId && ukId) useAdaptiveStore.getState().setLastViewed(kapitelId, ukId);
@@ -161,116 +254,8 @@ export default function BMSUnterkapitel({
     }
   }, [kapitel, ukFromIndex]);
 
-  // Defensive checks for chapter and subchapter data
-  if (!kapitel || !kapitel.id) {
-    return (
-      <div className="max-w-3xl mx-auto space-y-6 p-6">
-        <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
-          <CardContent className="p-6 text-center">
-            <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
-              Ungültiges Kapitel
-            </h3>
-            <p className="text-sm text-red-800 dark:text-red-400 mb-4">
-              Die Kapitel-Daten konnten nicht geladen werden.
-            </p>
-            <Button onClick={onBack}>Zurück zur Übersicht</Button>
-          </CardContent>
-        </Card>
-      </div>
-    );
-  }
-
-  const unterkapitel =
-    kapitel.unterkapitel && Array.isArray(kapitel.unterkapitel) ? kapitel.unterkapitel : [];
-
-  // Validate index
-  if (unterkapitelIndex < 0 || unterkapitelIndex >= unterkapitel.length) {
-    return (
-      <div className="max-w-3xl mx-auto space-y-6 p-6">
-        <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
-          <CardContent className="p-6 text-center">
-            <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
-              Ungültiges Unterkapitel
-            </h3>
-            <p className="text-sm text-red-800 dark:text-red-400 mb-4">
-              Das angeforderte Unterkapitel konnte nicht gefunden werden.
-            </p>
-            <Button onClick={onBack}>Zurück zur Übersicht</Button>
-          </CardContent>
-        </Card>
-      </div>
-    );
-  }
-
-  const uk = unterkapitel[unterkapitelIndex];
-
-  // Validate subchapter
-  if (!uk || !uk.id) {
-    return (
-      <div className="max-w-3xl mx-auto space-y-6 p-6">
-        <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
-          <CardContent className="p-6 text-center">
-            <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
-              Ungültige Unterkapitel-Daten
-            </h3>
-            <p className="text-sm text-red-800 dark:text-red-400 mb-4">
-              Die Unterkapitel-Daten konnten nicht geladen werden.
-            </p>
-            <Button onClick={onBack}>Zurück zur Übersicht</Button>
-          </CardContent>
-        </Card>
-      </div>
-    );
-  }
-
-  // Safe store access with fallback
-  let completedChapters: string[] = [];
-  let completeChapter: (id: string) => void = () => {};
-  let addXP: (amount: number) => void = () => {};
-  let checkStreak: () => void = () => {};
-  let notes: Record<string, string> = {};
-  let setNote: (id: string, text: string) => void = () => {};
-  let bookmarks: { chapters: string[] } = { chapters: [] };
-  let toggleBookmarkChapter: (id: string) => void = () => {};
-
-  let saveQuizResult: (result: import("../store/useStore").QuizResult) => void = () => {};
-  let logActivity: (questions: number) => void = () => {};
-  try {
-    const store = useStore();
-    completedChapters = store.completedChapters || [];
-    completeChapter = store.completeChapter || (() => {});
-    addXP = store.addXP || (() => {});
-    checkStreak = store.checkStreak || (() => {});
-    notes = store.notes || {};
-    setNote = store.setNote || (() => {});
-    bookmarks = store.bookmarks || { chapters: [] };
-    toggleBookmarkChapter = store.toggleBookmarkChapter || (() => {});
-    saveQuizResult = store.saveQuizResult ?? (() => {});
-    logActivity = store.logActivity ?? (() => {});
-  } catch (e) {
-    console.error("Error accessing store:", e);
-  }
-
-  const [noteText, setNoteText] = useState(notes[uk.id] || "");
-  const [showNotes, setShowNotes] = useState(false);
-  const [bridgeOpen, setBridgeOpen] = useState(false);
-  const [hinterfragMode, setHinterfragMode] = useState(false);
-  const [progressiveDisclosure, setProgressiveDisclosure] = useState(true);
-  const [quickReviewMode, setQuickReviewMode] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const isBookmarked = bookmarks.chapters.includes(uk.id);
-  const isCompleted = completedChapters.includes(uk.id);
-  const [selfTestDone, setSelfTestDone] = useState(false);
-  const allCompleteFired = useRef(false);
-
-  // Reading time: ~200 words/minute
-  const readingTimeMin = useMemo(() => {
-    const text = [uk.content ?? "", ...(uk.sections?.map((s) => s.text ?? "") ?? [])].join(" ");
-    const words = text.trim().split(/\s+/).filter(Boolean).length;
-    return Math.max(1, Math.round(words / 200));
-  }, [uk.content, uk.sections]);
-
   // Keyboard navigation: ← → for prev/next UK, R to toggle Quick Review
+  // BUG-4 fix: isFirst/isLast are now declared above this useEffect
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement)?.tagName;
@@ -283,17 +268,18 @@ export default function BMSUnterkapitel({
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [unterkapitelIndex, isFirst, isLast]); // eslint-disable-line react-hooks/exhaustive-deps
-  /** Sammelt Kontrollfragen-Antworten für Einspeisung in Analyse (quizResults). */
-  const kontrollResultsRef = useRef<{ questionIndex: number; correct: boolean }[]>([]);
 
-  const total = unterkapitel.length;
   const completedCount = unterkapitel.filter(
     (u) => u && u.id && completedChapters.includes(u.id)
   ).length;
-  const isLast = unterkapitelIndex === total - 1;
-  const isFirst = unterkapitelIndex === 0;
 
+  // Derived booleans — computed defensively (uk may be null before early returns)
+  const isBookmarked = uk ? bookmarks.chapters.includes(uk.id) : false;
+  const isCompleted = uk ? completedChapters.includes(uk.id) : false;
+
+  // All event handlers before early returns so they're in scope for selfTestBlock useMemo
   const handleComplete = () => {
+    if (!uk || !kapitel) return;
     if (!isCompleted) {
       completeChapter(uk.id);
       addXP(5);
@@ -311,6 +297,7 @@ export default function BMSUnterkapitel({
     correct: boolean,
     secondTry?: boolean
   ): void | { nextReviewDays: number; name: string } => {
+    if (!uk) return;
     kontrollResultsRef.current.push({ questionIndex, correct });
     const stichwortId = `${uk.id}-kontroll-${questionIndex}`;
     updateStichwortProgress(stichwortId, correct, 30);
@@ -323,35 +310,37 @@ export default function BMSUnterkapitel({
     }
   };
 
+  // useStore selector called unconditionally at top level (not inside handler)
   const updateChapterSRS = useStore((s) => s.updateChapterSRS);
-  const handleAllKontrollfragenComplete = (correctCount?: number, total?: number) => {
+
+  const handleAllKontrollfragenComplete = (correctCount?: number, totalArg?: number) => {
     if (allCompleteFired.current) return;
     allCompleteFired.current = true;
-    if (typeof correctCount === "number" && typeof total === "number" && total > 0) {
-      const scorePct = (correctCount / total) * 100;
-      updateChapterSRS(kapitel.id, scorePct);
+    if (typeof correctCount === "number" && typeof totalArg === "number" && totalArg > 0) {
+      const scorePct = (correctCount / totalArg) * 100;
+      if (kapitel) updateChapterSRS(kapitel.id, scorePct);
       const collected = kontrollResultsRef.current;
       const byIndex = new Map<number, boolean>();
       collected.forEach((r) => byIndex.set(r.questionIndex, r.correct));
       const answers = Array.from(byIndex.entries())
         .sort((a, b) => a[0] - b[0])
         .map(([i, correct]) => ({
-          questionId: `kontroll-${uk.id}-${i}`,
+          questionId: `kontroll-${uk?.id}-${i}`,
           selectedAnswer: "",
           correct,
         }));
       if (answers.length > 0) {
         saveQuizResult({
-          id: `kontroll-${uk.id}-${Date.now()}`,
+          id: `kontroll-${uk?.id}-${Date.now()}`,
           type: "bms",
-          subject: kapitel.subject,
+          subject: kapitel?.subject ?? "",
           score: correctCount,
-          total,
+          total: totalArg,
           date: new Date().toLocaleDateString("de-AT"),
           timestamp: new Date().toISOString(),
           answers,
         });
-        logActivity(total);
+        logActivity(totalArg);
       }
       kontrollResultsRef.current = [];
     }
@@ -385,10 +374,117 @@ export default function BMSUnterkapitel({
 
   const canGoPrev = !isFirst || !!onPrevChapter;
 
+  // BUG-3 fix: selfTestBlock useMemo before all early returns, guarded for null uk
+  const selfTestBlock = useMemo(() => {
+    if (!uk || !uk.id) return null;
+    const questionsFromArray =
+      uk.selfTest && Array.isArray(uk.selfTest) && uk.selfTest.length > 0 ? uk.selfTest : [];
+    const extractedFromContent = uk.content ? extractKontrollfragen(uk.content).questions : [];
+    const allQuestions =
+      extractedFromContent.length > 0 ? extractedFromContent : questionsFromArray;
+
+    if (allQuestions.length === 0) return null;
+
+    const kontrollProps = {
+      unterkapitelId: uk.id,
+      onAnswer: handleKontrollfragenAnswer,
+      onAllComplete: handleAllKontrollfragenComplete,
+    };
+
+    return (
+      <div className={kapitel?.enhancedFormatting ? "mt-8" : ""}>
+        {kapitel?.enhancedFormatting ? (
+          <InteractiveQuiz questions={allQuestions} {...kontrollProps} />
+        ) : (
+          <>
+            <div
+              className={
+                kapitel?.enhancedFormatting
+                  ? "mb-4 pb-3 border-b-2 border-gray-300 dark:border-gray-600"
+                  : ""
+              }
+            >
+              <h2
+                className={`${kapitel?.enhancedFormatting ? "text-2xl font-bold" : "text-xl font-semibold"} text-gray-900 dark:text-gray-100`}
+              >
+                {kapitel?.enhancedFormatting && "📝 "}Kontrollfragen
+              </h2>
+              {kapitel?.enhancedFormatting && (
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  Teste dein Wissen mit diesen Fragen
+                </p>
+              )}
+            </div>
+            <SelbstTest questions={allQuestions} {...kontrollProps} />
+          </>
+        )}
+      </div>
+    );
+  }, [uk?.selfTest, uk?.content, kapitel?.id, uk?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Defensive checks for chapter and subchapter data
+  if (!kapitel || !kapitel.id) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6 p-6">
+        <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
+          <CardContent className="p-6 text-center">
+            <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
+              Ungültiges Kapitel
+            </h3>
+            <p className="text-sm text-red-800 dark:text-red-400 mb-4">
+              Die Kapitel-Daten konnten nicht geladen werden.
+            </p>
+            <Button onClick={onBack}>Zurück zur Übersicht</Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  // Validate index
+  if (unterkapitelIndex < 0 || unterkapitelIndex >= unterkapitel.length) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6 p-6">
+        <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
+          <CardContent className="p-6 text-center">
+            <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
+              Ungültiges Unterkapitel
+            </h3>
+            <p className="text-sm text-red-800 dark:text-red-400 mb-4">
+              Das angeforderte Unterkapitel konnte nicht gefunden werden.
+            </p>
+            <Button onClick={onBack}>Zurück zur Übersicht</Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  // Validate subchapter
+  if (!uk || !uk.id) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6 p-6">
+        <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
+          <CardContent className="p-6 text-center">
+            <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
+              Ungültige Unterkapitel-Daten
+            </h3>
+            <p className="text-sm text-red-800 dark:text-red-400 mb-4">
+              Die Unterkapitel-Daten konnten nicht geladen werden.
+            </p>
+            <Button onClick={onBack}>Zurück zur Übersicht</Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  // After early returns, uk is guaranteed non-null and uk.id is valid
+
   return (
     <div className="max-w-3xl mx-auto space-y-6 pb-12 relative">
       {/* Reading progress bar — fixed at top */}
-      <div className="fixed top-0 left-0 right-0 z-50 h-0.5 bg-transparent pointer-events-none">
+      <div className="fixed top-0 left-0 right-0 z-[200] h-0.5 bg-transparent pointer-events-none">
         <div
           className={`h-full transition-all duration-100 ${subjectProgressColors[kapitel.subject] || "bg-primary-600"}`}
           style={{ width: `${scrollProgress}%` }}
@@ -563,56 +659,9 @@ export default function BMSUnterkapitel({
         )}
 
         {/* Merksätze - collapsible when more than 3 */}
-        {uk.merksätze &&
-          Array.isArray(uk.merksätze) &&
-          uk.merksätze.length > 0 &&
-          (() => {
-            const merksätze = uk.merksätze;
-            const SHOW_DIRECTLY = 3;
-            const hasMore = merksätze.length > SHOW_DIRECTLY;
-            const [merkeExpanded, setMerkeExpanded] = React.useState(false);
-            const visible =
-              hasMore && !merkeExpanded ? merksätze.slice(0, SHOW_DIRECTLY) : merksätze;
-
-            return (
-              <div className="space-y-3">
-                <div className="flex items-center justify-between pb-1 border-b border-gray-200 dark:border-gray-700">
-                  <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2">
-                    💡 Merksätze
-                    <span className="text-xs font-normal text-gray-400 dark:text-gray-500">
-                      ({merksätze.length})
-                    </span>
-                  </h3>
-                </div>
-                {visible.map((merksatz, i) => (
-                  <div
-                    key={i}
-                    className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-400 p-4 rounded-r-lg"
-                  >
-                    <p
-                      className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: merksatz.replace(
-                          /\*\*(.*?)\*\*/g,
-                          '<strong class="font-semibold">$1</strong>'
-                        ),
-                      }}
-                    />
-                  </div>
-                ))}
-                {hasMore && (
-                  <button
-                    onClick={() => setMerkeExpanded(!merkeExpanded)}
-                    className="w-full text-sm text-amber-700 dark:text-amber-400 hover:text-amber-900 dark:hover:text-amber-200 py-2 border border-amber-200 dark:border-amber-800 rounded-lg transition-colors"
-                  >
-                    {merkeExpanded
-                      ? `▲ Weniger anzeigen`
-                      : `▼ ${merksätze.length - SHOW_DIRECTLY} weitere Merksätze anzeigen`}
-                  </button>
-                )}
-              </div>
-            );
-          })()}
+        {uk.merksätze && Array.isArray(uk.merksätze) && uk.merksätze.length > 0 && (
+          <MerksätzeSection merksätze={uk.merksätze} />
+        )}
 
         {/* Altfrage */}
         {uk.altfrage && (
@@ -674,53 +723,7 @@ export default function BMSUnterkapitel({
         )}
 
         {/* Self-Test - Now includes questions extracted from content */}
-        {useMemo(() => {
-          const questionsFromArray =
-            uk.selfTest && Array.isArray(uk.selfTest) && uk.selfTest.length > 0 ? uk.selfTest : [];
-          const extractedFromContent = uk.content
-            ? extractKontrollfragen(uk.content).questions
-            : [];
-          const allQuestions =
-            extractedFromContent.length > 0 ? extractedFromContent : questionsFromArray;
-
-          if (allQuestions.length === 0) return null;
-
-          const kontrollProps = {
-            unterkapitelId: uk.id,
-            onAnswer: handleKontrollfragenAnswer,
-            onAllComplete: handleAllKontrollfragenComplete,
-          };
-
-          return (
-            <div className={kapitel.enhancedFormatting ? "mt-8" : ""}>
-              {kapitel.enhancedFormatting ? (
-                <InteractiveQuiz questions={allQuestions} {...kontrollProps} />
-              ) : (
-                <>
-                  <div
-                    className={
-                      kapitel.enhancedFormatting
-                        ? "mb-4 pb-3 border-b-2 border-gray-300 dark:border-gray-600"
-                        : ""
-                    }
-                  >
-                    <h2
-                      className={`${kapitel.enhancedFormatting ? "text-2xl font-bold" : "text-xl font-semibold"} text-gray-900 dark:text-gray-100`}
-                    >
-                      {kapitel.enhancedFormatting && "📝 "}Kontrollfragen
-                    </h2>
-                    {kapitel.enhancedFormatting && (
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                        Teste dein Wissen mit diesen Fragen
-                      </p>
-                    )}
-                  </div>
-                  <SelbstTest questions={allQuestions} {...kontrollProps} />
-                </>
-              )}
-            </div>
-          );
-        }, [uk.selfTest, uk.content, kapitel.id, uk.id])}
+        {selfTestBlock}
 
         {/* Gelesen-Markierung: triggert Fortschrittsbalken in der Sidebar */}
         <Card className="border-gray-200 dark:border-gray-700 bg-gray-50/80 dark:bg-gray-800/40">
