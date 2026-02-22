@@ -12,7 +12,11 @@ export async function pullFromSupabase(userId: string): Promise<void> {
   if (!client) return;
   try {
     const [profileRes, quizRes, srRes, notesRes, bookmarksRes, activityRes] = await Promise.all([
-      client.from("profiles").select("xp, level, streak_days, last_active_date, onboarding_completed").eq("id", userId).single(),
+      client
+        .from("profiles")
+        .select("xp, level, streak_days, last_active_date, onboarding_completed")
+        .eq("id", userId)
+        .maybeSingle(),
       client.from("quiz_results").select("*").eq("user_id", userId),
       client.from("spaced_repetition").select("*").eq("user_id", userId),
       client.from("user_notes").select("chapter_id, content").eq("user_id", userId),
@@ -126,13 +130,16 @@ export async function pushToSupabase(userId: string): Promise<void> {
     const level = Math.floor(s.xp / 100) + 1;
 
     await Promise.all([
-      client.from("profiles").update({
-        xp: s.xp,
-        level,
-        streak_days: s.streak,
-        last_active_date: s.lastActiveDate || null,
-        onboarding_completed: s.onboardingCompleted,
-      }).eq("id", userId),
+      client
+        .from("profiles")
+        .update({
+          xp: s.xp,
+          level,
+          streak_days: s.streak,
+          last_active_date: s.lastActiveDate || null,
+          onboarding_completed: s.onboardingCompleted,
+        })
+        .eq("id", userId),
 
       pushQuizResults(client, userId, s.quizResults),
       pushSpacedRepetition(client, userId, Object.values(s.spacedRepetition)),
@@ -160,7 +167,9 @@ async function pushQuizResults(client: SupabaseClient, userId: string, results: 
     created_at: r.timestamp || r.date,
   }));
   for (let i = 0; i < rows.length; i += 200) {
-    const { error } = await client.from("quiz_results").upsert(rows.slice(i, i + 200), { onConflict: "id" });
+    const { error } = await client
+      .from("quiz_results")
+      .upsert(rows.slice(i, i + 200), { onConflict: "id" });
     if (error) throw error;
   }
 }
@@ -177,7 +186,9 @@ async function pushSpacedRepetition(client: SupabaseClient, userId: string, item
     repetitions: item.repetitions,
   }));
   for (let i = 0; i < rows.length; i += 200) {
-    const { error } = await client.from("spaced_repetition").upsert(rows.slice(i, i + 200), { onConflict: "user_id,question_id" });
+    const { error } = await client
+      .from("spaced_repetition")
+      .upsert(rows.slice(i, i + 200), { onConflict: "user_id,question_id" });
     if (error) throw error;
   }
 }
@@ -192,16 +203,24 @@ async function pushNotes(client: SupabaseClient, userId: string, notes: Record<s
     updated_at: new Date().toISOString(),
   }));
   for (let i = 0; i < rows.length; i += 200) {
-    const { error } = await client.from("user_notes").upsert(rows.slice(i, i + 200), { onConflict: "user_id,chapter_id" });
+    const { error } = await client
+      .from("user_notes")
+      .upsert(rows.slice(i, i + 200), { onConflict: "user_id,chapter_id" });
     if (error) throw error;
   }
 }
 
-async function pushBookmarks(client: SupabaseClient, userId: string, bookmarks: { chapters: string[]; questions: string[] }) {
+async function pushBookmarks(
+  client: SupabaseClient,
+  userId: string,
+  bookmarks: { chapters: string[]; questions: string[] }
+) {
   await client.from("user_bookmarks").delete().eq("user_id", userId);
   const rows: { user_id: string; item_type: string; item_id: string }[] = [];
-  for (const id of bookmarks.chapters) rows.push({ user_id: userId, item_type: "chapter", item_id: id });
-  for (const id of bookmarks.questions) rows.push({ user_id: userId, item_type: "question", item_id: id });
+  for (const id of bookmarks.chapters)
+    rows.push({ user_id: userId, item_type: "chapter", item_id: id });
+  for (const id of bookmarks.questions)
+    rows.push({ user_id: userId, item_type: "question", item_id: id });
   if (rows.length > 0) {
     for (let i = 0; i < rows.length; i += 200) {
       const { error } = await client.from("user_bookmarks").insert(rows.slice(i, i + 200));
@@ -210,7 +229,11 @@ async function pushBookmarks(client: SupabaseClient, userId: string, bookmarks: 
   }
 }
 
-async function pushActivityLog(client: SupabaseClient, userId: string, log: Record<string, { minutes: number; questions: number }>) {
+async function pushActivityLog(
+  client: SupabaseClient,
+  userId: string,
+  log: Record<string, { minutes: number; questions: number }>
+) {
   const entries = Object.entries(log);
   if (entries.length === 0) return;
   const rows = entries.map(([date, data]) => ({
@@ -220,7 +243,9 @@ async function pushActivityLog(client: SupabaseClient, userId: string, log: Reco
     questions: data.questions,
   }));
   for (let i = 0; i < rows.length; i += 200) {
-    const { error } = await client.from("activity_log").upsert(rows.slice(i, i + 200), { onConflict: "user_id,date" });
+    const { error } = await client
+      .from("activity_log")
+      .upsert(rows.slice(i, i + 200), { onConflict: "user_id,date" });
     if (error) throw error;
   }
 }
@@ -243,9 +268,12 @@ export function startMainSync(userId: string) {
   pullFromSupabase(userId);
 
   // Periodic Push alle 2 Minuten
-  syncInterval = setInterval(() => {
-    if (currentUserId) pushToSupabase(currentUserId);
-  }, 2 * 60 * 1000);
+  syncInterval = setInterval(
+    () => {
+      if (currentUserId) pushToSupabase(currentUserId);
+    },
+    2 * 60 * 1000
+  );
 
   // Subscribe: debounced Push bei Store-Änderungen (500ms)
   unsubscribeStore = useStore.subscribe(() => {
@@ -261,9 +289,18 @@ export function startMainSync(userId: string) {
 }
 
 export function stopMainSync() {
-  if (syncInterval) { clearInterval(syncInterval); syncInterval = null; }
-  if (unsubscribeStore) { unsubscribeStore(); unsubscribeStore = null; }
-  if (debounceTimer) { clearTimeout(debounceTimer); debounceTimer = null; }
+  if (syncInterval) {
+    clearInterval(syncInterval);
+    syncInterval = null;
+  }
+  if (unsubscribeStore) {
+    unsubscribeStore();
+    unsubscribeStore = null;
+  }
+  if (debounceTimer) {
+    clearTimeout(debounceTimer);
+    debounceTimer = null;
+  }
   window.removeEventListener("beforeunload", handleUnload);
   currentUserId = null;
 }
