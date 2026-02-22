@@ -25,7 +25,7 @@ Alle Lebewesen teilen sieben fundamentale Eigenschaften, die zusammen das Phäno
 
 **Reizbarkeit (Irritabilität):** Lebewesen erkennen Veränderungen in ihrer Umwelt (Reize) und reagieren darauf. Die Reaktion kann einfach sein (Chemotaxis bei Bakterien, die zu Nährstoffquellen schwimmen) oder komplex (Reflex, kognitive Entscheidung beim Menschen). Reizbarkeit erfordert Rezeptoren (Reizaufnahme), Signalübertragung und Effektor-Organe. Signalmoleküle wie Hormone, Neurotransmitter und Second Messenger (cAMP, IP3, Ca2+) vermitteln die intrazelluläre Signalweiterleitung.
 
-**Fortpflanzung:** Lebewesen erzeugen Nachkommen und geben genetische Information weiter. Sexuelle Fortpflanzung (Meiose + Befruchtung) erzeugt genetische Vielfalt durch Rekombination. Asexuelle Fortpflanzung (binäre Teilung, Knospung, Klonierung) ist schneller, aber ohne Rekombination. Fortpflanzung ist die Voraussetzung für Evolution – ohne Nachkommen keine Selektion.
+**Fortpflanzung:** Lebewesen erzeugen Nachkommen und geben genetische Information weiter. Sexülle Fortpflanzung (Meiose + Befruchtung) erzeugt genetische Vielfalt durch Rekombination. Asexülle Fortpflanzung (binäre Teilung, Knospung, Klonierung) ist schneller, aber ohne Rekombination. Fortpflanzung ist die Voraussetzung für Evolution – ohne Nachkommen keine Selektion.
 
 **Wachstum und Entwicklung:** Lebewesen nehmen an Größe und Komplexität zu. Wachstum erfolgt durch Zellteilung (Hyperplasie) und Zellvergrößerung (Hypertrophie). Entwicklung meint die geordnete Differenzierung einer totipotenten Zygote zu einem vielzelligen Organismus mit hunderten von Zelltypen – gesteuert durch differentielle Genexpression, Transkriptionsfaktoren und epigenetische Mechanismen.
 
@@ -61,7 +61,7 @@ Die Systembiologie ist ein interdisziplinäres Feld, das mathematische Modellier
       sections: [
         {
           heading: "Die sieben Kennzeichen des Lebens",
-          text: "Alle Lebewesen teilen sieben grundlegende Eigenschaften: Stoffwechsel (Katabolismus + Anabolismus, Zentralwährung ATP), Reizbarkeit (Wahrnehmung und Reaktion auf Umweltreize via Rezeptoren und Signalkaskaden), Fortpflanzung (sexuell mit Rekombination oder asexuell), Wachstum und Entwicklung (Zellteilung und differentielle Genexpression), Evolution (Anpassung über Generationen durch Mutation und Selektion), Bewegung (aktiv oder intern) sowie Homöostase (Aufrechterhaltung innerer Gleichgewichte durch negative Rückkopplungskreise). Kein einzelnes Merkmal allein definiert Leben – erst ihre Kombination kennzeichnet ein lebendes System. Viren sind ein Grenzfall: Sie zeigen Fortpflanzung (in Wirtszellen) und Evolution (z.B. Antigendrift bei Influenza), haben aber keinen eigenständigen Stoffwechsel, keine Zellstruktur und keine Ribosomen.",
+          text: "Alle Lebewesen teilen sieben grundlegende Eigenschaften: Stoffwechsel (Katabolismus + Anabolismus, Zentralwährung ATP), Reizbarkeit (Wahrnehmung und Reaktion auf Umweltreize via Rezeptoren und Signalkaskaden), Fortpflanzung (sexüll mit Rekombination oder asexüll), Wachstum und Entwicklung (Zellteilung und differentielle Genexpression), Evolution (Anpassung über Generationen durch Mutation und Selektion), Bewegung (aktiv oder intern) sowie Homöostase (Aufrechterhaltung innerer Gleichgewichte durch negative Rückkopplungskreise). Kein einzelnes Merkmal allein definiert Leben – erst ihre Kombination kennzeichnet ein lebendes System. Viren sind ein Grenzfall: Sie zeigen Fortpflanzung (in Wirtszellen) und Evolution (z.B. Antigendrift bei Inflünza), haben aber keinen eigenständigen Stoffwechsel, keine Zellstruktur und keine Ribosomen.",
           merksatz:
             "StReForWaEvoBeHo: Stoffwechsel – Reizbarkeit – Fortpflanzung – Wachstum – Evolution – Bewegung – Homöostase.",
         },
@@ -88,7 +88,7 @@ Die Systembiologie ist ein interdisziplinäres Feld, das mathematische Modellier
       ],
       klinischerBezug:
         "Diabetes mellitus Typ 2 ist die prototypische Homöostase-Störung: Der Blutzuckerregelkreis versagt durch Insulinresistenz und relative Insulininsuffizienz. Die Folge ist chronische Hyperglykämie mit Glykation von Proteinen (HbA1c als Laborparameter), Endothelschäden und Mikroangiopathie. Klinische Konsequenzen: diabetische Retinopathie (häufigste Erblindungsursache im Erwachsenenalter), Nephropathie (häufigste Ursache terminaler Niereninsuffizienz), Polyneuropathie und kardiovaskuläre Erkrankungen. Systembiologisches Denken hat hier zur Entwicklung personalisierter Therapieansätze (CGM, Insulinpumpen, SGLT2-Inhibitoren mit kardioprotektiver Wirkung) geführt.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
+      // TODO: echte MedAT-Altfrage prüfen – aktüll Übungsformat
       altfrage: {
         question: "Warum gelten Viren nicht als Lebewesen im klassischen Sinne?",
         answer:
@@ -182,7 +182,7 @@ Die Systembiologie ist ein interdisziplinäres Feld, das mathematische Modellier
           ],
           correctIndex: 1,
           explanation:
-            "Viren besitzen keine Ribosomen, keine Mitochondrien und keine Enzyme für den Energiestoffwechsel. Sie können sich nur vermehren, indem sie den Stoffwechsel einer Wirtszelle kapern. Ohne Wirt sind sie metabolisch inaktiv. Da ein eigenständiger Stoffwechsel zu den grundlegenden Kennzeichen des Lebens gehört, gelten Viren als Grenzfall. Sie besitzen Nukleinsäuren (Option A falsch), pflanzen sich fort (C falsch) und unterliegen Evolution – Antigendrift bei Influenza ist ein klassisches Beispiel (D falsch).",
+            "Viren besitzen keine Ribosomen, keine Mitochondrien und keine Enzyme für den Energiestoffwechsel. Sie können sich nur vermehren, indem sie den Stoffwechsel einer Wirtszelle kapern. Ohne Wirt sind sie metabolisch inaktiv. Da ein eigenständiger Stoffwechsel zu den grundlegenden Kennzeichen des Lebens gehört, gelten Viren als Grenzfall. Sie besitzen Nukleinsäuren (Option A falsch), pflanzen sich fort (C falsch) und unterliegen Evolution – Antigendrift bei Inflünza ist ein klassisches Beispiel (D falsch).",
           hints: [
             "Was braucht ein Virus, um sich zu vermehren?",
             "Kann ein Virus außerhalb einer Wirtszelle Energie gewinnen?",
@@ -252,21 +252,21 @@ Die Systembiologie ist ein interdisziplinäres Feld, das mathematische Modellier
       title: "Prokaryoten vs. Eukaryoten",
       content: `## Historischer und evolutionärer Kontext
 
-Die Unterscheidung zwischen Prokaryoten und Eukaryoten wurde im 20. Jahrhundert durch Elektronenmikroskopie und molekulare Phylogenetik etabliert. Édouard Chatton prägte 1925 die Begriffe "procaryote" und "eucaryote". Carl Woese revolutionierte 1977 unser Verständnis des Lebens durch rRNA-Sequenzanalysen: Er entdeckte, dass Archaeen eine eigenständige Domäne bilden – das Drei-Domänen-Modell (Bacteria, Archaea, Eukarya) ersetzte die alte Zweiteilung. Die Endosymbiontentheorie (Lynn Margulis, 1967) erklärt die Entstehung der Eukaryoten: Mitochondrien und Chloroplasten stammen von endosymbiontischen Prokaryoten ab – ein der wichtigsten evolutionären Übergänge in der Geschichte des Lebens.
+Die Unterscheidung zwischen Prokaryoten und Eukaryoten wurde im 20. Jahrhundert durch Elektronenmikroskopie und molekulare Phylogenetik etabliert. Édouard Chatton prägte 1925 die Begriffe "procaryote" und "eucaryote". Carl Wöse revolutionierte 1977 unser Verständnis des Lebens durch rRNA-Sequenzanalysen: Er entdeckte, dass Archäen eine eigenständige Domäne bilden – das Drei-Domänen-Modell (Bacteria, Archäa, Eukarya) ersetzte die alte Zweiteilung. Die Endosymbiontentheorie (Lynn Margulis, 1967) erklärt die Entstehung der Eukaryoten: Mitochondrien und Chloroplasten stammen von endosymbiontischen Prokaryoten ab – ein der wichtigsten evolutionären Übergänge in der Geschichte des Lebens.
 
 ## Grundlagen: Prokaryoten
 
-Der Begriff "Prokaryot" stammt vom Griechischen "pro" (vor) und "karyon" (Kern) – "vor dem Kern". Prokaryoten besitzen keinen membranumschlossenen Zellkern. Ihre DNA liegt als zirkuläres Chromosom frei im **Nukleoid**, einer Region im Zytoplasma ohne Membrangrenze. Prokaryoten umfassen zwei Domänen: **Bakterien** und **Archaeen**.
+Der Begriff "Prokaryot" stammt vom Griechischen "pro" (vor) und "karyon" (Kern) – "vor dem Kern". Prokaryoten besitzen keinen membranumschlossenen Zellkern. Ihre DNA liegt als zirkuläres Chromosom frei im **Nukleoid**, einer Region im Zytoplasma ohne Membrangrenze. Prokaryoten umfassen zwei Domänen: **Bakterien** und **Archäen**.
 
 **Strukturmerkmale der Prokaryoten:**
 - Kein membranumschlossener Zellkern; DNA frei im Nukleoid
-- Zirkuläre, supercoiled DNA (kein Histon-umhülltes Chromatin wie Eukaryoten, aber archaeale Histone existieren)
+- Zirkuläre, supercoiled DNA (kein Histon-umhülltes Chromatin wie Eukaryoten, aber archäale Histone existieren)
 - Keine membranumschlossenen Organellen (keine Mitochondrien, kein ER, kein Golgi-Apparat)
-- Kleinere Ribosomen: **70S** (30S-Untereinheit + 50S-Untereinheit; Sedimentationskoeffizienten addieren sich nicht linear)
-- Zellwand: bei Bakterien aus **Peptidoglykan (Murein)** – N-Acetylglucosamin und N-Acetylmuraminsäure, quervernetzt durch kurze Peptide. Bei Archaeen andere Polymere (kein Peptidoglykan!)
+- Kleinere Ribosomen: **70S** (30S-Untereinheit + 50S-Untereinheit; Sedimentationsköffizienten addieren sich nicht linear)
+- Zellwand: bei Bakterien aus **Peptidoglykan (Murein)** – N-Acetylglucosamin und N-Acetylmuraminsäure, quervernetzt durch kurze Peptide. Bei Archäen andere Polymere (kein Peptidoglykan!)
 - Kleiner als Eukaryoten: typisch 1–10 µm
 - Plasmide: kleine, zirkuläre extrachromosomale DNA (Antibiotikaresistenzgene, Virulenzfaktoren)
-- Fortpflanzung durch **binäre Teilung** (asexuell, schnell: E. coli 20 min unter Optimalbedingungen)
+- Fortpflanzung durch **binäre Teilung** (asexüll, schnell: E. coli 20 min unter Optimalbedingungen)
 - Geißeln aus **Flagellin** (strukturell grundverschieden von eukaryotischen Flagellen/Zilien)
 - Keine Zell-Zell-Junctions, kein Zytoskelett im eukaryotischen Sinne (aber MreB als Aktin-Homolog, FtsZ als Tubulin-Homolog)
 
@@ -333,15 +333,15 @@ Die strukturellen Unterschiede zwischen Prokaryoten und Eukaryoten sind die mole
         },
         {
           heading: "Medizinische Relevanz: Antibiotika und Ribosomen",
-          text: "Die unterschiedliche Ribosomengröße (Prokaryoten: 70S; Eukaryoten: 80S) ist die molekulare Grundlage vieler Antibiotika. Aminoglykoside (z.B. Streptomycin), Tetracycline, Makrolide (z.B. Erythromycin) und Chloramphenicol binden spezifisch an prokaryotische 70S-Ribosomen und hemmen die bakterielle Proteinsynthese. Menschliche 80S-Ribosomen werden nicht gebunden – daher geringe Toxizität für den Patienten. Ausnahme: Mitochondrien haben 70S-Ribosomen (Endosymbiontentheorie), weshalb manche Antibiotika in hohen Dosen mitochondriale Nebenwirkungen zeigen können (Chloramphenicol → aplastische Anämie durch Hemmung mitochondrialer Proteinsynthese in hämatopoetischen Vorläuferzellen).",
+          text: "Die unterschiedliche Ribosomengröße (Prokaryoten: 70S; Eukaryoten: 80S) ist die molekulare Grundlage vieler Antibiotika. Aminoglykoside (z.B. Streptomycin), Tetracycline, Makrolide (z.B. Erythromycin) und Chloramphenicol binden spezifisch an prokaryotische 70S-Ribosomen und hemmen die bakterielle Proteinsynthese. Menschliche 80S-Ribosomen werden nicht gebunden – daher geringe Toxizität für den Patienten. Ausnahme: Mitochondrien haben 70S-Ribosomen (Endosymbiontentheorie), weshalb manche Antibiotika in hohen Dosen mitochondriale Nebenwirkungen zeigen können (Chloramphenicol → aplastische Anämie durch Hemmung mitochondrialer Proteinsynthese in hämatopötischen Vorläuferzellen).",
           merksatz:
             "70S (Prokaryoten) vs. 80S (Eukaryoten): Dieser Unterschied ist die Zielstruktur vieler Antibiotika.",
         },
         {
-          heading: "Archaeen – die dritte Domäne",
-          text: "Archaeen sind Prokaryoten, unterscheiden sich aber biochemisch erheblich von Bakterien. Ihre Zellmembranen bestehen aus Isoprenoid-Etherlipiden (nicht Fettsäure-Esterlipiden wie bei Bakterien und Eukaryoten), und ihre Zellwand enthält kein Peptidoglykan – deshalb sind sie resistent gegen Penicilline. Archaeen besiedeln oft Extremstandorte: Thermophile (Sulfolobus bis 121°C), Halophile (Halobacterium in gesättigten Salzlösungen), Methanogene (Methanobacterium im Darm und Sumpfböden). Trotz prokaryotischem Grundbauplan zeigen Archaeen in Geneexpression (TATA-Box, Transkriptionsfaktoren) und DNA-Replikation (Orc1, MCM-Helikasen) mehr Ähnlichkeit mit Eukaryoten – was sie zum evolutionären Bindeglied macht.",
+          heading: "Archäen – die dritte Domäne",
+          text: "Archäen sind Prokaryoten, unterscheiden sich aber biochemisch erheblich von Bakterien. Ihre Zellmembranen bestehen aus Isoprenoid-Etherlipiden (nicht Fettsäure-Esterlipiden wie bei Bakterien und Eukaryoten), und ihre Zellwand enthält kein Peptidoglykan – deshalb sind sie resistent gegen Penicilline. Archäen besiedeln oft Extremstandorte: Thermophile (Sulfolobus bis 121°C), Halophile (Halobacterium in gesättigten Salzlösungen), Methanogene (Methanobacterium im Darm und Sumpfböden). Trotz prokaryotischem Grundbauplan zeigen Archäen in Geneexpression (TATA-Box, Transkriptionsfaktoren) und DNA-Replikation (Orc1, MCM-Helikasen) mehr Ähnlichkeit mit Eukaryoten – was sie zum evolutionären Bindeglied macht.",
           merksatz:
-            "Archaeen: kein Peptidoglykan, Ether-Lipide – deshalb Penicillin-resistent. Extremophile Lebensweise.",
+            "Archäen: kein Peptidoglykan, Ether-Lipide – deshalb Penicillin-resistent. Extremophile Lebensweise.",
         },
       ],
       merksätze: [
@@ -354,12 +354,12 @@ Die strukturellen Unterschiede zwischen Prokaryoten und Eukaryoten sind die mole
       ],
       klinischerBezug:
         "Penicillin hemmt die Synthese der bakteriellen Peptidoglykan-Zellwand (PBP-Hemmung) – menschliche Zellen besitzen keine solche Zellwand und sind daher unempfindlich. Bei Gram-negativen Bakterien muss Penicillin die äußere Membran überwinden (schlechterer Zugang → Resistenzproblem). MRSA (Methicillin-resistenter Staphylococcus aureus) hat ein verändertes PBP2a, an das Beta-Laktame nicht binden. Therapie: Vancomycin, Linezolid, Daptomycin. LPS gram-negativer Bakterien aktiviert TLR4 auf Immunzellen → Cytokinausschüttung → septischer Schock. Therapie: antibiotische Eradikation, hämodynamische Stabilisierung (Noradrenalin), Organschutz.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
+      // TODO: echte MedAT-Altfrage prüfen – aktüll Übungsformat
       altfrage: {
         question:
           "Ein Patient erhält Chloramphenicol. Warum ist dieses Antibiotikum für Prokaryoten toxisch, nicht aber für menschliche Zellen?",
         answer:
-          "Chloramphenicol bindet spezifisch an die 50S-Untereinheit des prokaryotischen 70S-Ribosoms und blockiert die Peptidyltransferase-Reaktion. Menschliche 80S-Ribosomen (Untereinheiten: 40S + 60S) werden nicht gebunden. Da menschliche Mitochondrien jedoch 70S-Ribosomen besitzen, kann Chloramphenicol in hohen Dosen mitochondriale Toxizität verursachen – besonders in hämatopoetischen Vorläuferzellen (aplastische Anämie als seltene, aber schwere Nebenwirkung).",
+          "Chloramphenicol bindet spezifisch an die 50S-Untereinheit des prokaryotischen 70S-Ribosoms und blockiert die Peptidyltransferase-Reaktion. Menschliche 80S-Ribosomen (Untereinheiten: 40S + 60S) werden nicht gebunden. Da menschliche Mitochondrien jedoch 70S-Ribosomen besitzen, kann Chloramphenicol in hohen Dosen mitochondriale Toxizität verursachen – besonders in hämatopötischen Vorläuferzellen (aplastische Anämie als seltene, aber schwere Nebenwirkung).",
       },
       selfTest: [
         {
@@ -392,10 +392,10 @@ Die strukturellen Unterschiede zwischen Prokaryoten und Eukaryoten sind die mole
           ],
           correctIndex: 2,
           explanation:
-            "Prokaryotische Ribosomen haben einen Sedimentationskoeffizient von 70S, zusammengesetzt aus einer kleinen 30S- und einer großen 50S-Untereinheit. Eukaryotische Ribosomen sind 80S (40S + 60S). Sedimentationskoeffizienten addieren sich nicht linear. Diese Unterschiede sind die Zielstruktur zahlreicher Antibiotika: Aminoglykoside binden an 30S, Makrolide und Chloramphenicol an 50S.",
+            "Prokaryotische Ribosomen haben einen Sedimentationsköffizient von 70S, zusammengesetzt aus einer kleinen 30S- und einer großen 50S-Untereinheit. Eukaryotische Ribosomen sind 80S (40S + 60S). Sedimentationsköffizienten addieren sich nicht linear. Diese Unterschiede sind die Zielstruktur zahlreicher Antibiotika: Aminoglykoside binden an 30S, Makrolide und Chloramphenicol an 50S.",
           hints: [
             "Prokaryoten haben kleinere Ribosomen als Eukaryoten.",
-            "70S = 30S + 50S (Sedimentationskoeffizienten addieren sich nicht linear).",
+            "70S = 30S + 50S (Sedimentationsköffizienten addieren sich nicht linear).",
           ],
           difficulty: 2,
           tags: ["ribosomen", "70S", "antibiotika"],
@@ -434,23 +434,23 @@ Die strukturellen Unterschiede zwischen Prokaryoten und Eukaryoten sind die mole
           tags: ["endosymbiontentheorie", "mitochondrien", "zirkuläre dna"],
         },
         {
-          question: "Zu welcher Domäne gehören Archaeen?",
+          question: "Zu welcher Domäne gehören Archäen?",
           options: [
             "Bakterien",
             "Eukaryoten",
-            "Sie bilden eine eigene Domäne (Archaea)",
+            "Sie bilden eine eigene Domäne (Archäa)",
             "Protisten",
             "Pilze",
           ],
           correctIndex: 2,
           explanation:
-            "Das Leben ist in drei Domänen eingeteilt: Bacteria, Archaea und Eukarya (Carl Woese, 1977). Archaeen sind Prokaryoten (kein membranumschlossener Kern), bilden aber eine eigenständige Domäne, die sich biochemisch deutlich von Bakterien unterscheidet (Ether-Lipide, kein Peptidoglykan). Archaeen zeigen in der Genregulation und DNA-Replikation mehr Ähnlichkeit mit Eukaryoten als mit Bakterien.",
+            "Das Leben ist in drei Domänen eingeteilt: Bacteria, Archäa und Eukarya (Carl Wöse, 1977). Archäen sind Prokaryoten (kein membranumschlossener Kern), bilden aber eine eigenständige Domäne, die sich biochemisch deutlich von Bakterien unterscheidet (Ether-Lipide, kein Peptidoglykan). Archäen zeigen in der Genregulation und DNA-Replikation mehr Ähnlichkeit mit Eukaryoten als mit Bakterien.",
           hints: [
-            "Carl Woese entdeckte auf Basis der rRNA-Sequenzanalyse, dass Archaeen eigenständig sind.",
-            "Drei Domänen des Lebens: Bacteria, Archaea, Eukarya.",
+            "Carl Wöse entdeckte auf Basis der rRNA-Sequenzanalyse, dass Archäen eigenständig sind.",
+            "Drei Domänen des Lebens: Bacteria, Archäa, Eukarya.",
           ],
           difficulty: 2,
-          tags: ["archaeen", "drei-domänen-modell", "carl woese"],
+          tags: ["archäen", "drei-domänen-modell", "carl wöse"],
         },
         {
           question: "Welches Antibiotikum hemmt die Quervernetzung von Peptidoglykan?",
@@ -488,16 +488,16 @@ Die strukturellen Unterschiede zwischen Prokaryoten und Eukaryoten sind die mole
         {
           question:
             "Welche Domäne des Lebens zeigt in ihrer Genregulation die größte Ähnlichkeit zu Eukaryoten?",
-          options: ["Bacteria", "Archaea", "Protista", "Fungi", "Animalia"],
+          options: ["Bacteria", "Archäa", "Protista", "Fungi", "Animalia"],
           correctIndex: 1,
           explanation:
-            "Archaeen (Domäne Archaea) zeigen trotz prokaryotischem Zellbau in molekularer Hinsicht starke Ähnlichkeiten zu Eukaryoten: TATA-Box im Promotor, ähnliche Transkriptionsfaktoren (TBP, TFIIB-Homologe), ähnliche DNA-Replikationsmaschinerie (ORC, MCM-Helikasen). Dies spiegelt die evolutionäre Verwandtschaft wider: Eukaryoten sollen aus einem Archaeen-ähnlichen Vorfahren durch Endosymbiose entstanden sein (Hydrogen-Hypothesis, Lokiarchaeota).",
+            "Archäen (Domäne Archäa) zeigen trotz prokaryotischem Zellbau in molekularer Hinsicht starke Ähnlichkeiten zu Eukaryoten: TATA-Box im Promotor, ähnliche Transkriptionsfaktoren (TBP, TFIIB-Homologe), ähnliche DNA-Replikationsmaschinerie (ORC, MCM-Helikasen). Dies spiegelt die evolutionäre Verwandtschaft wider: Eukaryoten sollen aus einem Archäen-ähnlichen Vorfahren durch Endosymbiose entstanden sein (Hydrogen-Hypothesis, Lokiarchäota).",
           hints: [
-            "Archaeen = prokaryotischer Bau, aber eukaryotenähnliche Molekularbiologie.",
-            "Wer ist evolutionär näher am Eukaryoten – Bacteria oder Archaea?",
+            "Archäen = prokaryotischer Bau, aber eukaryotenähnliche Molekularbiologie.",
+            "Wer ist evolutionär näher am Eukaryoten – Bacteria oder Archäa?",
           ],
           difficulty: 3,
-          tags: ["archaeen", "genregulation", "evolution"],
+          tags: ["archäen", "genregulation", "evolution"],
         },
       ],
       diagram: "prokaryote-vs-eukaryote",
@@ -598,7 +598,7 @@ Cholesterin stabilisiert **Lipid-Rafts** – geordnete, cholesterin- und sphingo
       ],
       klinischerBezug:
         "Statine (z.B. Atorvastatin) hemmen die HMG-CoA-Reduktase und senken den Blutcholesterinspiegel. Überschüssiges LDL-Cholesterin oxidiert und wird von Makrophagen als Schaumzellen gespeichert → Atherosklerose → Myokardinfarkt und Schlaganfall. Das ABO-Blutgruppensystem basiert auf Glykoproteinen und Glykolipiden der Erythrozytenoberfläche: falsche Blutgruppe → Hämolyse durch präformierte Antikörper → hämolytische Transfusionsreaktion (ABO-Inkompatibilität). CFTR-Mutationen (deltaF508) → Mukoviszidose: keine funktionsfähigen Cl--Kanäle in der apikalen Membran von Atemwegs- und Darmepithel → visköser Schleim → chronische Pseudomonas-Infektionen → Lungenversagen.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
+      // TODO: echte MedAT-Altfrage prüfen – aktüll Übungsformat
       altfrage: {
         question: "Warum können Ionen wie Na+ und K+ die Lipiddoppelschicht nicht frei passieren?",
         answer:
@@ -774,7 +774,7 @@ Die systematische Erforschung der Zellorganellen wurde durch die Entwicklung der
 3. **Citratzyklus** (Matrix): Acetyl-CoA → CO₂ + 3 NADH + 1 FADH₂ + 1 GTP
 4. **Atmungskette** (innere Membran): NADH + FADH₂ → Elektronen → Protonengradient → ATP-Synthase → ATP
 
-Pro Glucose: ~30–32 ATP (aerob) vs. 2 ATP (anaerob).
+Pro Glucose: ~30–32 ATP (ärob) vs. 2 ATP (anärob).
 
 **Besonderheiten (Endosymbiontentheorie):**
 - Eigene **zirkuläre mtDNA** (maternale Vererbung!) codiert ~13 Proteine
@@ -844,6 +844,23 @@ Pro Glucose: ~30–32 ATP (aerob) vs. 2 ATP (anaerob).
 
 Zusammensetzung in Eukaryoten: 80S = 40S (kleine UE) + 60S (große UE). Unterschied zu Prokaryoten: 70S = 30S + 50S. Klinische Relevanz: Antibiotika-Targets (Aminoglykoside, Tetracycline, Makrolide, Chloramphenicol).
 
+## Proteasomen
+
+**Proteasomen** sind zytoplasmatische Multiproteasekomplexe zum Abbau fehlgefalteter, beschädigter oder regulatorisch überflüssiger Proteine. Keine Membranorganellen — reine Proteinkomplexe mit enzymatischer Funktion.
+
+**Aufbau:**
+- **20S-Kernkomplex:** Fassförmige Struktur aus 4 gestapelten Ringen (α-β-β-α). Die β-Untereinheiten tragen die katalytischen Zentren (Chymotrypsin-, Trypsin- und Caspase-ähnliche Aktivität).
+- **26S-Proteasom:** 20S-Kern + 2× 19S-regulatorische Partikel (Kappen). Die 19S-Kappe erkennt Ubiquitin-Ketten, entfaltet das Substrat (AAA⁺-ATPasen) und öffnet den 20S-Kanal.
+
+**Ubiquitin-Proteasom-System (UPS):**
+Proteine werden durch eine Polyubiquitin-Kette (≥4 Ubiquitin über Lys48) für den Abbau markiert. Drei Enzymklassen: E1 (Ubiquitin-aktivierend), E2 (konjugierend), E3 (Ligase, substratspezifisch). Das Proteasom zerlegt das Protein in kurze Peptide (~8 AS).
+
+**Klinische Bedeutung:**
+- **Immunologie:** MHC-I-Präsentation — intrazelluläre Peptide für zytotoxische T-Zellen werden im Immunoproteasom (IFN-γ-induzierbar) generiert
+- **ERAD:** Fehlgefaltete ER-Proteine werden via Ubiquitin markiert und proteasomal abgebaut (ΔF508-CFTR bei Mukoviszidose → ERAD → kein Cl⁻-Kanal → Mukoviszidose)
+- **Krebstherapie:** Proteasom-Inhibitoren (Bortezomib) beim multiplen Myelom → Akkumulation fehlgefalteter Proteine → Apoptose von Tumorzellen
+- **Zellzyklus:** Cyclin-Abbau durch APC/C (E3-Ubiquitin-Ligase) → Proteasom → Phasenwechsel; Securin-Abbau → Separase-Aktivierung → Anaphase
+
 ## Zytoskelett-assoziierte Strukturen
 
 **Zentrosom:** Aus 2 Zentriolen (9+0 Mikrotubuli-Triplets) + PCM (Pericentrioläres Material). Funktion: Organisiert Mikrotubuli-Spindelapparat bei Mitose. Fehlt in reifen Erythrozyten und Thrombozyten.
@@ -856,15 +873,18 @@ Zusammensetzung in Eukaryoten: 80S = 40S (kleine UE) + 60S (große UE). Untersch
         "Lysosomen",
         "Peroxisomen",
         "Ribosomen",
+        "Proteasomen",
         "Endosymbiontentheorie",
         "Lysosomale Speicherkrankheiten",
         "ER-Stress",
         "Autophagie",
+        "Ubiquitin-Proteasom-System",
       ],
       merksätze: [
         "Mitochondrien = Doppelmembran, Cristae, eigene DNA (70S), maternale Vererbung",
         "rER = Ribosomen + Proteinsynthese + Glykosylierung; gER = Lipidbiosynthese + Detox + Ca²⁺",
         "Golgi: Cis→Medial→Trans. Mannose-6-Phosphat = Lysosom-Adresse",
+        "Proteasom = 26S (20S-Kern + 19S-Kappen). Ubiquitin-Lys48-Kette → proteasomaler Abbau. Bortezomib = Proteasom-Inhibitor (Myelom-Therapie)",
         "Lysosomen: pH 4,5 durch H⁺-ATPase. Fehlende Hydrolase → Speicherkrankheit (Gaucher, Tay-Sachs)",
         "Peroxisomen: VLCFA-Abbau + Katalase. Zellweger = Peroxisom-Biogenese-Defekt",
         "Ribosomen 80S (Eukaryoten) vs. 70S (Prokaryoten + Mitochondrien) = Antibiotika-Target",
@@ -990,7 +1010,7 @@ Die humane DNA (~3,2 Milliarden Basenpaare pro haploidem Satz = ~1 m Länge) mus
 **Euchromatin vs. Heterochromatin:**
 - Euchromatin: wenig verdichtet, transkriptionell aktiv, acetylierte Histone (offene Chromatinstruktur), liegt im Kerninnern
 - Heterochromatin: stark verdichtet, transkriptionell inaktiv, methylierte Histone (H3K9me3, H3K27me3), liegt an der Kernperipherie und um den Nucleolus
-- Barr-Körper: kondensiertes inaktives X-Chromosom bei XX-Individuen (Lyon-Hypothese: in jeder somatischen Zelle ist zufällig ein X-Chromosom inaktiviert)
+- Barr-Körper: kondensiertes inaktives X-Chromosom bei XX-Individün (Lyon-Hypothese: in jeder somatischen Zelle ist zufällig ein X-Chromosom inaktiviert)
 - Konstitutives Heterochromatin: immer kondensiert (Zentromere, Telomere)
 - Fakultatives Heterochromatin: kontextabhängig kondensiert (inaktives X, imprinted regions)
 
@@ -1055,7 +1075,7 @@ Der **Nucleolus** ist eine membranlose Substruktur im Kern (~1–5 µm), die dur
       ],
       klinischerBezug:
         "Progeria (Hutchinson-Gilford-Syndrom): LMNA-Mutation c.1824C>T erzeugt Progerin, das die Kernlamina destabilisiert. Klinisch: vorzeitige Arteriosklerose, Lipodystrophie, Minderwuchs, Alopezie, Tod mit ~13 Jahren. Lonafarnib (Farnesyltransferase-Hemmer) verhindert die Farnesylierung von Progerin und verlängert das Leben um ~2,5 Jahre. HIV nutzt Importin-alpha/beta für den Kerntransport des Preintegrationskomplexes – LEDGF/p75 als Kofaktor der Integration. HIV-Integrase-Hemmer (Dolutegravir) = Standardtherapie. Prominente Nucleoli in Tumorbiopsien = Hinweis auf hohe Proliferationsaktivität, wichtiges histopathologisches Kriterium bei Prostata-, Nierenzell- und Lymphomdiagnose.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
+      // TODO: echte MedAT-Altfrage prüfen – aktüll Übungsformat
       altfrage: {
         question: "Warum führt ein defekter Kernporenkomplex zur Katastrophe für die Zelle?",
         answer:
@@ -1127,7 +1147,7 @@ Der **Nucleolus** ist eine membranlose Substruktur im Kern (~1–5 µm), die dur
           ],
           correctIndex: 2,
           explanation:
-            "Heterochromatin ist stark kompaktiertes Chromatin, das transkriptionell inaktiv ist (methylierte Histone: H3K9me3, H3K27me3). Es erscheint im Mikroskop als dunkle Bereiche (Toluidinblau). Das Barr-Körperchen (inaktives X-Chromosom bei XX-Individuen) ist ein klassisches Beispiel. Euchromatin (Option A) ist weniger kompakt, acetylierte Histone, transkriptionell aktiv. HDAC-Inhibitoren wandeln Heterochromatin in Euchromatin um (epigenetische Therapie).",
+            "Heterochromatin ist stark kompaktiertes Chromatin, das transkriptionell inaktiv ist (methylierte Histone: H3K9me3, H3K27me3). Es erscheint im Mikroskop als dunkle Bereiche (Toluidinblau). Das Barr-Körperchen (inaktives X-Chromosom bei XX-Individün) ist ein klassisches Beispiel. Euchromatin (Option A) ist weniger kompakt, acetylierte Histone, transkriptionell aktiv. HDAC-Inhibitoren wandeln Heterochromatin in Euchromatin um (epigenetische Therapie).",
           hints: [
             "Hetero = anders, dichter. Eu = gut, zugänglich.",
             "Barr-Körperchen in weiblichen Zellen – was ist das?",
@@ -1290,7 +1310,7 @@ Zellteilung durch **Kontraktilen Ring** (Aktin + Myosin II) → Einschnürung �
 
 ## Meiose — Keimzellteilung
 
-Die Meiose ist eine spezialisierte Teilungsform zur Bildung von Keimzellen (Spermatozoen, Oozyten). Sie besteht aus zwei aufeinanderfolgenden Teilungen (Meiose I + Meiose II).
+Die Meiose ist eine spezialisierte Teilungsform zur Bildung von Keimzellen (Spermatozön, Oozyten). Sie besteht aus zwei aufeinanderfolgenden Teilungen (Meiose I + Meiose II).
 
 **Meiose I — Reduktionsteilung:**
 Reduziert den Chromosomensatz von diploid (2n) auf haploid (n).
@@ -1629,24 +1649,24 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
         "Acetyl-CoA",
         "Oxidative Phosphorylierung",
         "Chemiosmose",
-        "Anaerober Stoffwechsel",
+        "Anärober Stoffwechsel",
       ],
       content: `## Überblick
 
-Der zelluläre Energiestoffwechsel wandelt chemische Energie aus Nährstoffen in ATP um — die universelle Energiewährung der Zelle. Der aerobe Abbau einer Glucosemolekül liefert ~30–32 ATP in drei aufeinanderfolgenden Prozessen.
+Der zelluläre Energiestoffwechsel wandelt chemische Energie aus Nährstoffen in ATP um — die universelle Energiewährung der Zelle. Der ärobe Abbau einer Glucosemolekül liefert ~30–32 ATP in drei aufeinanderfolgenden Prozessen.
 
 **Das Wichtigste auf einen Blick:**
 - Glykolyse: Glucose → 2 Pyruvat (Zytoplasma, 2 ATP netto, 2 NADH)
 - Pyruvat-Dehydrogenase: Pyruvat → Acetyl-CoA (Mitochondrien-Matrix, Brückenschritt)
 - Citratzyklus: Acetyl-CoA → CO₂ + Reduktionsäquivalente (Matrix, 2 GTP, 6 NADH, 2 FADH₂ pro Glucose)
 - Atmungskette: NADH/FADH₂ → ATP via Protonengradient (innere Mitochondrienmembran, ~26 ATP)
-- Anaerob (ohne O₂): nur 2 ATP + Laktat
+- Anärob (ohne O₂): nur 2 ATP + Laktat
 
 ---
 
 ## Glykolyse — Der erste Schritt
 
-Die Glykolyse ist eine Sequenz von 10 enzymatischen Reaktionen im **Zytoplasma**, die Glucose (C₆) in 2 Pyruvat (C₃) spaltet. Sie ist sowohl aerob als auch anaerob möglich und liefert sofort verfügbares ATP.
+Die Glykolyse ist eine Sequenz von 10 enzymatischen Reaktionen im **Zytoplasma**, die Glucose (C₆) in 2 Pyruvat (C₃) spaltet. Sie ist sowohl ärob als auch anärob möglich und liefert sofort verfügbares ATP.
 
 **Die 10 Schritte in drei Phasen:**
 
@@ -1664,7 +1684,7 @@ Aus 2 G3P entstehen 2 Pyruvat. Pro Triose: 2 ATP + 1 NADH. Für beide Triosen: 4
 **Schlüsselenzyme der Glykolyse:**
 - **Hexokinase** (Schritt 1): Glucose + ATP → Glucose-6-Phosphat + ADP. Fängt Glucose in der Zelle "ein" (Phosphorylierung verhindert Rücktransport durch GLUT-Transporter). Isoform in der Leber: Glukokinase (niedrigere Affinität, nicht durch G6P gehemmt → funktioniert als Glucosesensor).
 - **Phosphofructokinase-1 (PFK-1)** (Schritt 3, Schlüsselenzym!): Fructose-6-Phosphat → Fructose-1,6-bisphosphat. **Wichtigstes Regulationsenzym der Glykolyse.** Gehemmt durch ATP (hohe Energie → Glykolyse bremsen) und Citrat (Citratzyklus läuft bereits). Aktiviert durch AMP/ADP (niedrige Energie → Glykolyse beschleunigen) und Fructose-2,6-bisphosphat (Insulin-Signal). Irreversible Reaktion!
-- **Pyruvat-Kinase** (Schritt 10): Phosphoenolpyruvat → Pyruvat + ATP. Gehemmt durch ATP und Alanin (Glukoneogenese-Signal).
+- **Pyruvat-Kinase** (Schritt 10): Phosphönolpyruvat → Pyruvat + ATP. Gehemmt durch ATP und Alanin (Glukoneogenese-Signal).
 
 > **Merke:** PFK-1 = das wichtigste Regulationsenzym der Glykolyse. ATP hemmt, AMP aktiviert. Insulin aktiviert über Fructose-2,6-bisphosphat. Merke: "ATP bremst, wenn Energie da ist."
 
@@ -1735,7 +1755,7 @@ Die Atmungskette überträgt die in NADH und FADH₂ gespeicherte Energie auf AT
 
 ---
 
-## Gesamtbilanz des aeroben Glucoseabbaus
+## Gesamtbilanz des äroben Glucoseabbaus
 
 | Phase | ATP (direkt) | NADH | FADH₂ | ATP aus OXPHOS |
 |-------|-------------|------|-------|----------------|
@@ -1749,7 +1769,7 @@ Die Atmungskette überträgt die in NADH und FADH₂ gespeicherte Energie auf AT
 
 ---
 
-## Anaerober Stoffwechsel
+## Anärober Stoffwechsel
 
 Ohne Sauerstoff (Hypoxie) kann die Atmungskette nicht funktionieren. NADH muss regeneriert werden, damit die Glykolyse weiterlaufen kann.
 
@@ -1784,8 +1804,8 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
 - Glykolyse: 2 ATP netto, 2 NADH, 2 Pyruvat
 - Pyruvat-DH: 1 CO₂, 1 NADH, 1 Acetyl-CoA pro Pyruvat (×2 pro Glucose)
 - Citratzyklus pro Acetyl-CoA: 3 NADH, 1 FADH₂, 1 GTP, 2 CO₂
-- Gesamt aerob: ~30–32 ATP
-- Gesamt anaerob: 2 ATP (Laktatgärung)
+- Gesamt ärob: ~30–32 ATP
+- Gesamt anärob: 2 ATP (Laktatgärung)
 - NADH → ~2,5 ATP; FADH₂ → ~1,5 ATP
 - PFK-1: aktiviert durch AMP/ADP; gehemmt durch ATP/Citrat`,
       merksätze: [
@@ -1794,8 +1814,8 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
         "Citratzyklus pro Acetyl-CoA: 3 NADH + 1 FADH₂ + 1 GTP + 2 CO₂.",
         "Atmungskette: NADH → Komplex I, FADH₂ → Komplex II, Cytochrom c → Komplex IV → O₂ → H₂O. ATP-Synthase via Chemiosmose.",
         "Cyanid blockiert Komplex IV → keine Atmungskette → kein ATP → Zytotoxizität.",
-        "Anaerob: Pyruvat → Laktat (LDH) + NAD⁺ regeneriert. Nur 2 ATP. Laktatazidose bei Hypoxie/Sepsis.",
-        "Gesamt aerob: ~30–32 ATP pro Glucose. NADH = ~2,5 ATP, FADH₂ = ~1,5 ATP.",
+        "Anärob: Pyruvat → Laktat (LDH) + NAD⁺ regeneriert. Nur 2 ATP. Laktatazidose bei Hypoxie/Sepsis.",
+        "Gesamt ärob: ~30–32 ATP pro Glucose. NADH = ~2,5 ATP, FADH₂ = ~1,5 ATP.",
       ],
       selfTest: [
         {
@@ -1868,13 +1888,13 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
           ],
           correctIndex: 2,
           explanation:
-            "Bei Sauerstoffmangel (intensiver Belastung) kann Pyruvat nicht in die Mitochondrien eingeschleust werden (Pyruvat-DH bremst). Die Glykolyse muss aber weiterlaufen, um auch anaerob ATP zu produzieren. Dafür muss NAD⁺ regeneriert werden: LDH reduziert Pyruvat zu Laktat und oxidiert NADH → NAD⁺ wieder verfügbar. Das Laktat wird ins Blut abgegeben und in der Leber (Cori-Zyklus) zu Glucose rückumgewandelt. Glukoneogenese im Muskel findet nicht statt — der Muskel besitzt nicht das nötige Enzym Glucose-6-Phosphatase.",
+            "Bei Sauerstoffmangel (intensiver Belastung) kann Pyruvat nicht in die Mitochondrien eingeschleust werden (Pyruvat-DH bremst). Die Glykolyse muss aber weiterlaufen, um auch anärob ATP zu produzieren. Dafür muss NAD⁺ regeneriert werden: LDH reduziert Pyruvat zu Laktat und oxidiert NADH → NAD⁺ wieder verfügbar. Das Laktat wird ins Blut abgegeben und in der Leber (Cori-Zyklus) zu Glucose rückumgewandelt. Glukoneogenese im Muskel findet nicht statt — der Muskel besitzt nicht das nötige Enzym Glucose-6-Phosphatase.",
           hints: [
             "Ohne O₂: keine Atmungskette. Was blockiert? NADH kann nicht oxidiert werden.",
             "LDH = Laktat-Dehydrogenase. Was macht sie mit Pyruvat?",
           ],
           difficulty: 2,
-          tags: ["pyruvat", "laktat", "ldh", "anaerob", "cori-zyklus"],
+          tags: ["pyruvat", "laktat", "ldh", "anärob", "cori-zyklus"],
         },
         {
           question: "Welche Funktion hat die Mitchell-Chemiosmose-Hypothese erklärt?",
@@ -1918,7 +1938,7 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
             },
             {
               id: "E",
-              text: "Der Citratzyklus läuft auch vollständig unter anaeroben Bedingungen ab",
+              text: "Der Citratzyklus läuft auch vollständig unter anäroben Bedingungen ab",
             },
           ],
           correctOptionId: "B",
@@ -1978,11 +1998,11 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
           ],
           correctOptionId: "B",
           explanation:
-            "Komplex II (Succinat-Dehydrogenase) ist das einzige Enzym, das sowohl Teil der Atmungskette als auch des Citratzyklus ist. Im Citratzyklus: Succinat → Fumarat + FADH₂. Als Komplex II: FADH₂ → FAD + Elektronen → Ubichinon. Wichtig: Komplex II pumpt KEINE Protonen in den Intermembranraum (deshalb weniger ATP aus FADH₂ als aus NADH). Mutationen in Succinat-Dehydrogenase-Untereinheiten (SDHA, SDHB, SDHC, SDHD) → Paragangliom, Phäochromozytom (seltene neuroendokrine Tumoren).",
+            "Komplex II (Succinat-Dehydrogenase) ist das einzige Enzym, das sowohl Teil der Atmungskette als auch des Citratzyklus ist. Im Citratzyklus: Succinat → Fumarat + FADH₂. Als Komplex II: FADH₂ → FAD + Elektronen → Ubichinon. Wichtig: Komplex II pumpt KEINE Protonen in den Intermembranraum (deshalb weniger ATP aus FADH₂ als aus NADH). Mutationen in Succinat-Dehydrogenase-Untereinheiten (SDHA, SDHB, SDHC, SDHD) → Paragangliom, Phäochromozytom (seltene neuröndokrine Tumoren).",
         },
         {
           question:
-            "Welche Gesamtausbeute an ATP entsteht beim vollständigen aeroben Abbau von 1 Mol Glucose (moderne Berechnung)?",
+            "Welche Gesamtausbeute an ATP entsteht beim vollständigen äroben Abbau von 1 Mol Glucose (moderne Berechnung)?",
           options: [
             { id: "A", text: "2 ATP (nur aus Glykolyse)" },
             { id: "B", text: "8 ATP (Glykolyse + Citratzyklus)" },
@@ -1996,7 +2016,7 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
         },
       ],
       klinischerBezug:
-        "Laktatazidose: Anstieg des Blutlaktats >2 mmol/L bei Gewebehypoxie (Sepsis, kardiogener Schock, CO-Vergiftung) oder Medikamenten (Metformin → schwache Komplex-I-Hemmung → Laktat). Serum-Laktat ist ein Prognosemarker. Wernicke-Enzephalopathie: B1-Mangel (Alkoholismus, Hyperemesis gravidarum, parenterale Ernährung ohne B1) → PDH-Defekt → Gehirn kann Glucose nicht mehr aerob verwerten → Ophthalmoplegie, Ataxie, Bewusstseinsänderung. Sofort IV Thiamin! Cyanidvergiftung (Industrieunfall, Rauchgas): Blockade Komplex IV → keine ATP-Synthese → Gewebehypoxie trotz normaler O₂-Sättigung (Venenblut kirschrot!). Antidot: Hydroxocobalamin. MELAS-Syndrom: mitochondriale Myopathie, Laktatazidose, Schlaganfall-ähnliche Episoden — mtDNA-Mutation → Atmungskettendefekt → Laktatazidose + Neurodegeneration.",
+        "Laktatazidose: Anstieg des Blutlaktats >2 mmol/L bei Gewebehypoxie (Sepsis, kardiogener Schock, CO-Vergiftung) oder Medikamenten (Metformin → schwache Komplex-I-Hemmung → Laktat). Serum-Laktat ist ein Prognosemarker. Wernicke-Enzephalopathie: B1-Mangel (Alkoholismus, Hyperemesis gravidarum, parenterale Ernährung ohne B1) → PDH-Defekt → Gehirn kann Glucose nicht mehr ärob verwerten → Ophthalmoplegie, Ataxie, Bewusstseinsänderung. Sofort IV Thiamin! Cyanidvergiftung (Industrieunfall, Rauchgas): Blockade Komplex IV → keine ATP-Synthese → Gewebehypoxie trotz normaler O₂-Sättigung (Venenblut kirschrot!). Antidot: Hydroxocobalamin. MELAS-Syndrom: mitochondriale Myopathie, Laktatazidose, Schlaganfall-ähnliche Episoden — mtDNA-Mutation → Atmungskettendefekt → Laktatazidose + Neurodegeneration.",
     },
   ],
 };
