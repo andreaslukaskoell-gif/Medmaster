@@ -67,16 +67,16 @@ Die Systembiologie ist ein interdisziplinäres Feld, das mathematische Modellier
         {
           heading: 'Systembiologie und Emergenz',
           text: 'Die Systembiologie analysiert Lebewesen als vernetzte Systeme. Emergenz beschreibt Eigenschaften, die auf höherer Organisationsebene entstehen und aus den Eigenschaften der einzelnen Komponenten nicht direkt vorhersagbar sind. Klassische Beispiele: Bewusstsein aus Nervenzellen, Krebs aus gestörten Regulationsnetzwerken, Sepsis aus unkontrollierter Immunreaktion. Biologische Systeme werden durch Regelkreise (Rückkopplungsschleifen) stabilisiert. Negative Rückkopplung wirkt dem auslösenden Reiz entgegen und hält Parameter wie Körpertemperatur oder Blut-pH im physiologischen Bereich. Positive Rückkopplung verstärkt Signale (Blutgerinnung, Wehen, Aktionspotential).',
+          merksatz: 'Emergenz: Das Ganze ist mehr als die Summe seiner Teile – neue Eigenschaften entstehen auf höherer Organisationsebene.',
         },
         {
           heading: 'Hierarchische Organisation des Lebens',
           text: 'Leben ist hierarchisch organisiert: von Atomen über Moleküle, Organellen, Zellen, Gewebe, Organe und Organsysteme bis zum Organismus, Populationen, Ökosystemen und der Biosphäre. Auf jeder Ebene entstehen neue emergente Eigenschaften. Diese Hierarchie erklärt, warum Medizin auf mehreren Ebenen gleichzeitig operiert: Molekularbiologie (Gentherapie, targeted therapy), Zellbiologie (Krebsbiologie), Physiologie (Organsysteme) und Epidemiologie (Populationen). Reduktionismus (Zerlegung in Bestandteile) und Systemdenken (Netzwerke, Emergenz) ergänzen sich gegenseitig.',
+          merksatz: 'Homöostase durch negative Rückkopplung: Der Effekt wirkt dem auslösenden Reiz entgegen und stabilisiert das System.',
         },
       ],
       merksätze: [
         'StReForWaEvoBeHo: Stoffwechsel – Reizbarkeit – Fortpflanzung – Wachstum – Evolution – Bewegung – Homöostase.',
-        'Emergenz: Das Ganze ist mehr als die Summe seiner Teile – neue Eigenschaften entstehen auf höherer Organisationsebene.',
-        'Homöostase durch negative Rückkopplung: Der Effekt wirkt dem auslösenden Reiz entgegen und stabilisiert das System.',
         'Positive Rückkopplung verstärkt – Blutgerinnung, Wehen, Aktionspotential sind Beispiele physiologischer positiver Rückkopplung.',
         'Viren erfüllen nicht alle Kennzeichen des Lebens: kein eigenständiger Stoffwechsel, keine Zellstruktur.',
         'Diabetes mellitus = Homöostasestörung des Blutzuckerregelkreises (Typ 1: Insulinmangel, Typ 2: Insulinresistenz).',
@@ -84,6 +84,7 @@ Die Systembiologie ist ein interdisziplinäres Feld, das mathematische Modellier
         'Systembiologie verbindet Genomik, Proteomik und Metabolomik zu einem integrativen Verständnis des Lebens.',
       ],
       klinischerBezug: 'Diabetes mellitus Typ 2 ist die prototypische Homöostase-Störung: Der Blutzuckerregelkreis versagt durch Insulinresistenz und relative Insulininsuffizienz. Die Folge ist chronische Hyperglykämie mit Glykation von Proteinen (HbA1c als Laborparameter), Endothelschäden und Mikroangiopathie. Klinische Konsequenzen: diabetische Retinopathie (häufigste Erblindungsursache im Erwachsenenalter), Nephropathie (häufigste Ursache terminaler Niereninsuffizienz), Polyneuropathie und kardiovaskuläre Erkrankungen. Systembiologisches Denken hat hier zur Entwicklung personalisierter Therapieansätze (CGM, Insulinpumpen, SGLT2-Inhibitoren mit kardioprotektiver Wirkung) geführt.',
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Warum gelten Viren nicht als Lebewesen im klassischen Sinne?',
         answer: 'Viren zeigen zwar Fortpflanzung und Evolution, besitzen aber keinen eigenständigen Stoffwechsel und keine Zellstruktur. Sie sind auf den Stoffwechsel einer Wirtszelle angewiesen, um sich zu replizieren. Da sie nicht alle Kennzeichen des Lebens erfüllen – insbesondere keinen autonomen Metabolismus – werden sie als Grenzfall zwischen belebter und unbelebter Welt betrachtet.',
@@ -323,23 +324,24 @@ Die strukturellen Unterschiede zwischen Prokaryoten und Eukaryoten sind die mole
         {
           heading: 'Medizinische Relevanz: Antibiotika und Ribosomen',
           text: 'Die unterschiedliche Ribosomengröße (Prokaryoten: 70S; Eukaryoten: 80S) ist die molekulare Grundlage vieler Antibiotika. Aminoglykoside (z.B. Streptomycin), Tetracycline, Makrolide (z.B. Erythromycin) und Chloramphenicol binden spezifisch an prokaryotische 70S-Ribosomen und hemmen die bakterielle Proteinsynthese. Menschliche 80S-Ribosomen werden nicht gebunden – daher geringe Toxizität für den Patienten. Ausnahme: Mitochondrien haben 70S-Ribosomen (Endosymbiontentheorie), weshalb manche Antibiotika in hohen Dosen mitochondriale Nebenwirkungen zeigen können (Chloramphenicol → aplastische Anämie durch Hemmung mitochondrialer Proteinsynthese in hämatopoetischen Vorläuferzellen).',
+          merksatz: '70S (Prokaryoten) vs. 80S (Eukaryoten): Dieser Unterschied ist die Zielstruktur vieler Antibiotika.',
         },
         {
           heading: 'Archaeen – die dritte Domäne',
           text: 'Archaeen sind Prokaryoten, unterscheiden sich aber biochemisch erheblich von Bakterien. Ihre Zellmembranen bestehen aus Isoprenoid-Etherlipiden (nicht Fettsäure-Esterlipiden wie bei Bakterien und Eukaryoten), und ihre Zellwand enthält kein Peptidoglykan – deshalb sind sie resistent gegen Penicilline. Archaeen besiedeln oft Extremstandorte: Thermophile (Sulfolobus bis 121°C), Halophile (Halobacterium in gesättigten Salzlösungen), Methanogene (Methanobacterium im Darm und Sumpfböden). Trotz prokaryotischem Grundbauplan zeigen Archaeen in Geneexpression (TATA-Box, Transkriptionsfaktoren) und DNA-Replikation (Orc1, MCM-Helikasen) mehr Ähnlichkeit mit Eukaryoten – was sie zum evolutionären Bindeglied macht.',
+          merksatz: 'Archaeen: kein Peptidoglykan, Ether-Lipide – deshalb Penicillin-resistent. Extremophile Lebensweise.',
         },
       ],
       merksätze: [
         'Pro = kein Kern: Prokaryoten haben kein membranumschlossenes Nukleoplasma, die DNA liegt frei im Nukleoid.',
-        '70S (Prokaryoten) vs. 80S (Eukaryoten): Dieser Unterschied ist die Zielstruktur vieler Antibiotika.',
         'Endosymbiontentheorie: 5 Belege – zirkuläre DNA, 70S-Ribosomen, Doppelmembran, binäre Fission, Antibiotika-Empfindlichkeit.',
         'Gram-positiv: dicke Peptidoglykan-Schicht, violett (Staph, Strep). Gram-negativ: LPS-Außenmembran, rosa (E. coli, Salmonella).',
         'Peptidoglykan (Murein): N-Acetylglucosamin + N-Acetylmuraminsäure + Peptidbrücken. Penicillin hemmt Quervernetzung.',
-        'Archaeen: kein Peptidoglykan, Ether-Lipide – deshalb Penicillin-resistent. Extremophile Lebensweise.',
         'Mitochondrien = α-Proteobakterium-Endosymbiont; Chloroplasten = Cyanobakterium-Endosymbiont.',
         'Cave: Mitochondrien haben 70S-Ribosomen → Chloramphenicol in hoher Dosis → aplastische Anämie.',
       ],
       klinischerBezug: 'Penicillin hemmt die Synthese der bakteriellen Peptidoglykan-Zellwand (PBP-Hemmung) – menschliche Zellen besitzen keine solche Zellwand und sind daher unempfindlich. Bei Gram-negativen Bakterien muss Penicillin die äußere Membran überwinden (schlechterer Zugang → Resistenzproblem). MRSA (Methicillin-resistenter Staphylococcus aureus) hat ein verändertes PBP2a, an das Beta-Laktame nicht binden. Therapie: Vancomycin, Linezolid, Daptomycin. LPS gram-negativer Bakterien aktiviert TLR4 auf Immunzellen → Cytokinausschüttung → septischer Schock. Therapie: antibiotische Eradikation, hämodynamische Stabilisierung (Noradrenalin), Organschutz.',
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Ein Patient erhält Chloramphenicol. Warum ist dieses Antibiotikum für Prokaryoten toxisch, nicht aber für menschliche Zellen?',
         answer: 'Chloramphenicol bindet spezifisch an die 50S-Untereinheit des prokaryotischen 70S-Ribosoms und blockiert die Peptidyltransferase-Reaktion. Menschliche 80S-Ribosomen (Untereinheiten: 40S + 60S) werden nicht gebunden. Da menschliche Mitochondrien jedoch 70S-Ribosomen besitzen, kann Chloramphenicol in hohen Dosen mitochondriale Toxizität verursachen – besonders in hämatopoetischen Vorläuferzellen (aplastische Anämie als seltene, aber schwere Nebenwirkung).',
@@ -566,6 +568,7 @@ Cholesterin stabilisiert **Lipid-Rafts** – geordnete, cholesterin- und sphingo
         {
           heading: 'Membranproteine: Tore, Transporter und Signalempfänger',
           text: 'Integrale Transmembranproteine durchspannen die Lipiddoppelschicht mit hydrophoben Helices (z.B. GPCRs: 7 Transmembranhelices) und sind nicht ohne Detergenzien löslich. Ionenkanäle (Na+, K+, Ca2+, Cl-) ermöglichen selektive, schnelle Ionenflüsse. Carrier/Transporter (GLUT1-4 für Glucose, LAT1 für Aminosäuren) sind langsamer und sättigbar. Rezeptoren (EGFR, Insulinrezeptor) koppeln extrazelluläre Signale an intrazelluläre Kaskaden. Periphere Proteine sind an der Membranoberfläche verankert (Myristylierung, GPI-Anker) und leichter ablösbar. Glykoproteine auf der Außenseite bilden die Glykokalix für Zellerkennung, Blutgruppenantigene und Immunschutz. CFTR als integrales Membranprotein ist das Paradebeispiel: Fehlfaltung → kein Membraneinbau → Mukoviszidose.',
+          merksatz: 'CFTR = integrales Membranprotein (Cl--Kanal); deltaF508-Mutation → Fehlfaltung → Mukoviszidose.',
         },
         {
           heading: 'Cholesterin und Membranfluidität',
@@ -579,11 +582,11 @@ Cholesterin stabilisiert **Lipid-Rafts** – geordnete, cholesterin- und sphingo
         'Cholesterin reguliert Fluidität bidirektional: Bei Wärme versteift es, bei Kälte verflüssigt es die Membran.',
         'Ungesättigte Fettsäuren (Doppelbindungen → Knicke) erhöhen Fluidität; gesättigte Fettsäuren (gerade Ketten) senken sie.',
         'Glykokalix = Zuckerschicht auf Außenseite; ABO-Blutgruppenantigene sind Glykolipide/Glykoproteine der Erythrozyten.',
-        'CFTR = integrales Membranprotein (Cl--Kanal); deltaF508-Mutation → Fehlfaltung → Mukoviszidose.',
         'Lipid-Rafts: Cholesterin + Sphingolipide → geordnete Mikrodomänen → Konzentration von Signalproteinen.',
         'Phosphatidylserin-Flip-Flop bei Apoptose = "Eat me"-Signal für Makrophagen → phagozytäre Clearance.',
       ],
       klinischerBezug: 'Statine (z.B. Atorvastatin) hemmen die HMG-CoA-Reduktase und senken den Blutcholesterinspiegel. Überschüssiges LDL-Cholesterin oxidiert und wird von Makrophagen als Schaumzellen gespeichert → Atherosklerose → Myokardinfarkt und Schlaganfall. Das ABO-Blutgruppensystem basiert auf Glykoproteinen und Glykolipiden der Erythrozytenoberfläche: falsche Blutgruppe → Hämolyse durch präformierte Antikörper → hämolytische Transfusionsreaktion (ABO-Inkompatibilität). CFTR-Mutationen (deltaF508) → Mukoviszidose: keine funktionsfähigen Cl--Kanäle in der apikalen Membran von Atemwegs- und Darmepithel → visköser Schleim → chronische Pseudomonas-Infektionen → Lungenversagen.',
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Warum können Ionen wie Na+ und K+ die Lipiddoppelschicht nicht frei passieren?',
         answer: 'Das Innere der Lipiddoppelschicht ist stark hydrophob (Fettsäureketten). Ionen wie Na+ und K+ sind geladen und von einer Hydrathülle aus Wassermolekülen umgeben. Der Übertritt in die hydrophobe Phase würde die Hydrathülle entfernen, was eine hohe Energiebarriere (>40 kJ/mol) darstellt. Deshalb benötigen Ionen spezifische Membranproteine – Ionenkanäle (selektiv, schnell) oder aktive Transporter (gegen Gradienten, ATP-verbrauchend) – um die Membran zu überqueren.',
@@ -816,6 +819,7 @@ Der **Nucleolus** ist eine membranlose Substruktur im Kern (~1–5 µm), die dur
         {
           heading: 'Chromatin: DNA verpackt und reguliert',
           text: 'Das menschliche Genom (3,2 Milliarden Basenpaare pro haploidem Satz) würde ausgestreckt ca. 2 Meter messen. Es muss in einen ~6 µm großen Zellkern passen – Kompaktierung ~10.000-fach. Hierarchische Verpackung: Nukleosom (DNA um Histon-Oktamer, ~10 nm) → 30 nm-Faser → Schleifen → Chromatin-Kompartimente (Hi-C-Daten). Histon-Modifikationen (Azetylierung durch HATs → offenes Euchromatin → aktive Transkription; Deazetylierung durch HDACs → Heterochromatin → Stille) regulieren die Zugänglichkeit für Transkriptionsfaktoren (Epigenetik). HDAC-Inhibitoren (Vorinostat) werden therapeutisch eingesetzt.',
+          merksatz: 'Nukleosom = 147 bp DNA um Histon-Oktamer (H2A, H2B, H3, H4, je 2×). Grundeinheit der Chromatinverpackung.',
         },
         {
           heading: 'Nucleolus und Ribosomensynthese',
@@ -825,7 +829,6 @@ Der **Nucleolus** ist eine membranlose Substruktur im Kern (~1–5 µm), die dur
       ],
       merksätze: [
         'Zellkern = Ort der Transkription; Zytoplasma = Ort der Translation. Räumliche Trennung ermöglicht ausgedehnte mRNA-Prozessierung.',
-        'Nukleosom = 147 bp DNA um Histon-Oktamer (H2A, H2B, H3, H4, je 2×). Grundeinheit der Chromatinverpackung.',
         'Nucleolus = Fabrik für ribosomale RNA (RNA-Pol I) und Ribosomenuntereinheiten.',
         'NPC-Transport: NLS → Importin-alpha/beta → aktiver Import. NES → Exportin → aktiver Export. RanGTP-Gradient als Triebkraft.',
         'Euchromatin = acetylierte Histone, aktive Transkription, peripher. Heterochromatin = methylierte Histone, inaktiv, an Kernhülle.',
@@ -834,6 +837,7 @@ Der **Nucleolus** ist eine membranlose Substruktur im Kern (~1–5 µm), die dur
         'HDAC-Inhibitoren (Vorinostat) = Epigenetische Krebstherapie: Histon-Azetylierung erhöhen → Chromatin öffnen → Tumorsuppressor-Gene reaktivieren.',
       ],
       klinischerBezug: 'Progeria (Hutchinson-Gilford-Syndrom): LMNA-Mutation c.1824C>T erzeugt Progerin, das die Kernlamina destabilisiert. Klinisch: vorzeitige Arteriosklerose, Lipodystrophie, Minderwuchs, Alopezie, Tod mit ~13 Jahren. Lonafarnib (Farnesyltransferase-Hemmer) verhindert die Farnesylierung von Progerin und verlängert das Leben um ~2,5 Jahre. HIV nutzt Importin-alpha/beta für den Kerntransport des Preintegrationskomplexes – LEDGF/p75 als Kofaktor der Integration. HIV-Integrase-Hemmer (Dolutegravir) = Standardtherapie. Prominente Nucleoli in Tumorbiopsien = Hinweis auf hohe Proliferationsaktivität, wichtiges histopathologisches Kriterium bei Prostata-, Nierenzell- und Lymphomdiagnose.',
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Warum führt ein defekter Kernporenkomplex zur Katastrophe für die Zelle?',
         answer: 'Der NPC reguliert alle Transportprozesse zwischen Kern und Zytoplasma. Ein defekter NPC würde den Import von Transkriptionsfaktoren, Histonen und DNA-Reparaturproteinen in den Kern blockieren und gleichzeitig den Export von mRNA und Ribosomenuntereinheiten verhindern. Konsequenz: keine Genregulation, keine mRNA-Ausleitung, keine Proteinsynthese, keine DNA-Reparatur. Viren (HIV, HSV) nutzen NPCs aktiv, Arzneistoff-Targets sind Importine.',

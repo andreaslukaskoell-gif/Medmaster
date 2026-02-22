@@ -62,6 +62,7 @@ Karzinome (Krebserkrankungen) entstehen zu ca. 85 % aus Epithelgewebe. Die Zilie
         "Klassifikation nach Form (Platten, kubisch, zylindrisch) UND Schichtung (ein- vs. mehrschichtig).",
         "Tight Junctions versiegeln apikal; Desmosomen halten mechanisch zusammen.",
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Welches Epithel kleidet die Trachea aus und welche Funktion erfüllt es?",
         answer: "Mehrreihiges (pseudostratifiziertes) Flimmerepithel mit Kinozilien und Becherzellen. Die Kinozilien transportieren Schleimfilm mit eingeschlossenen Fremdpartikeln rachenwärts (mukoziliäre Clearance).",
@@ -232,6 +233,7 @@ Knochen bestehen aus organischer Matrix (Osteoid: Kollagen Typ I, ca. 35 %) und 
         "Osteoblasten (aufbauend, mesenchymal) vs. Osteoklasten (abbauend, hämatopoetisch, RANKL).",
         "Knorpel ist avaskulär — daher schlechte Heilung; Knochen hat Blutgefäße und heilt gut.",
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Welche Zellen bauen Knochen ab, und aus welcher Zelllinie stammen sie?",
         answer: "Osteoklasten bauen Knochen ab. Sie entstammen der hämatopoetischen Linie (Monozyten/Makrophagen-Vorläufer). Sie sind mehrkernig und resorbieren Knochenmatrix durch Säure (HCl) und Kathepsin K in der Howship-Lakune.",
@@ -404,6 +406,7 @@ Eine **motorische Einheit** besteht aus einem Alpha-Motoneuron und allen von ihm
         "Ca²⁺ → Troponin C → Tropomyosin weg → Myosin bindet Aktin → Kraftschlag nach ATP-Hydrolyse.",
         "Herzmuskel: quergestreift, einkernig, Gap Junctions in Glanzstreifen, kein Tetanus möglich.",
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Warum kann der Herzmuskel im Gegensatz zur Skelettmuskulatur keinen Tetanus entwickeln?",
         answer: "Das Herzmyokard hat eine sehr lange absolute Refraktärzeit (ca. 200–300 ms), die fast so lang ist wie die mechanische Kontraktion. Dadurch kann kein neues Aktionspotential ausgelöst werden, bevor sich der Herzmuskel nicht vollständig erschlafft hat — tetanische Dauerkontrak­tion wäre für die Pumpfunktion fatal.",
@@ -571,6 +574,7 @@ Die **Myelinscheide** ist eine Lipid-reiche Membranwicklung um das Axon. Sie bes
         "Saltatorische Leitung: Aktionspotential springt von Ranvier-Schnürring zu Schnürring — 100× schneller als kontinuierlich.",
         "Astrozyten: Blut-Hirn-Schranke, K⁺-Puffer, Glutamat-Reuptake; Mikroglia = Makrophagen des ZNS.",
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Worin unterscheiden sich Schwann-Zellen und Oligodendrozyten hinsichtlich Anzahl der myelinisierten Axonsegmente?",
         answer: "Eine Schwann-Zelle myelinisiert genau ein Axonsegment (zwischen zwei Ranvier-Schnürringen) eines einzigen Axons. Ein Oligodendrozyt kann hingegen bis zu 50 Axonsegmente verschiedener Axone gleichzeitig myelinisieren.",
