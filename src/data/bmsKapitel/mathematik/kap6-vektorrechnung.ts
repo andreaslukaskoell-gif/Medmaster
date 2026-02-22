@@ -108,7 +108,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
             "Denken Sie an den Satz des Pythagoras: In einem rechtwinkligen Dreieck gilt a² + b² = c².",
             "Kennen Sie das pythagoräische Tripel 3-4-? — es handelt sich um ein sehr klassisches Beispiel.",
           ],
-          tags: [],
+          tags: ['vektorbetrag', 'pythagoras', 'vektorrechnung'],
           difficulty: 1,
         },
         {
@@ -126,7 +126,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
             "Addieren Sie die Komponenten jeweils getrennt: erste Komponente für sich, zweite Komponente für sich.",
             "Achten Sie auf das Vorzeichen: Die zweite Komponente von b ist −1, nicht +1.",
           ],
-          tags: [],
+          tags: ['vektoraddition', 'komponentenweise', 'vektor'],
           difficulty: 1,
         },
         {
@@ -144,7 +144,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
             "Berechnen Sie zuerst den Betrag |v| mit dem Satz des Pythagoras.",
             "Der Einheitsvektor ist ê = v / |v| — dividieren Sie jede Komponente durch den Betrag.",
           ],
-          tags: [],
+          tags: ['einheitsvektor', 'vektorbetrag', 'normierung'],
           difficulty: 2,
         },
         {
@@ -162,7 +162,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
             "Orthogonale Vektoren haben Skalarprodukt 0: a₁·b₁ + a₂·b₂ = 0.",
             "Setzen Sie die bekannten Werte ein und lösen Sie die entstehende lineare Gleichung nach x auf.",
           ],
-          tags: [],
+          tags: ['skalarprodukt', 'orthogonalität', 'vektorrechnung'],
           difficulty: 2,
         },
         {
@@ -180,7 +180,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
             "Der Betrag im 3D-Raum: |v| = √(v₁² + v₂² + v₃²) — alle drei Komponenten werden quadriert und addiert.",
             "Achtung: (−2)² = +4. Das Quadrat einer negativen Zahl ist immer positiv.",
           ],
-          tags: [],
+          tags: ['vektorbetrag', '3d-vektor', 'pythagoras'],
           difficulty: 2,
         },
         {
@@ -198,7 +198,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
             "Linear abhängig bedeutet: einer der Vektoren lässt sich als skalares Vielfaches des anderen darstellen: a = k·b.",
             "Prüfen Sie, ob b = k·a für ein reelles k gilt, indem Sie die Komponenten vergleichen: k = a₁/b₁ = ?",
           ],
-          tags: [],
+          tags: ['lineare-abhängigkeit', 'parallele-vektoren', 'vektor'],
           difficulty: 3,
         },
         {
@@ -216,7 +216,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
             "Erinnern Sie sich: Die Komponenten eines Vektors der Länge r mit Winkel α zur x-Achse sind (r·cos α, r·sin α).",
             "sin(60°) = √3/2 ≈ 0,866. Multiplizieren Sie mit dem Betrag 10.",
           ],
-          tags: [],
+          tags: ['vektorkomponenten', 'trigonometrie', 'winkel'],
           difficulty: 3,
         },
       ],
@@ -332,7 +332,7 @@ Das **Drehmoment** $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist das Kreuzprodukt a
             "Skalarprodukt: a₁·b₁ + a₂·b₂ + a₃·b₃ — multiplizieren Sie die entsprechenden Komponenten und addieren Sie.",
             "Beachten Sie die Vorzeichen: (−2)·4 = −8 und 1·(−2) = −2.",
           ],
-          tags: [],
+          tags: ['skalarprodukt', 'vektorrechnung', 'rechnen'],
           difficulty: 2,
         },
         {
@@ -350,7 +350,7 @@ Das **Drehmoment** $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist das Kreuzprodukt a
             "Berechnen Sie cos θ = (a·b) / (|a|·|b|) und bestimmen Sie daraus den Winkel.",
             "cos(45°) = √2/2 ≈ 0,707; cos(60°) = 0,5; cos(30°) = √3/2 ≈ 0,866.",
           ],
-          tags: [],
+          tags: ['winkel', 'skalarprodukt', 'trigonometrie'],
           difficulty: 2,
         },
         {
@@ -368,7 +368,7 @@ Das **Drehmoment** $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist das Kreuzprodukt a
             "Was ist das Ergebnis des Kreuzprodukts — Skalar oder Vektor? In welchem Raum ist es definiert?",
             "Denken Sie an die Antikommutativität: Das Vertauschen der Reihenfolge ändert das Vorzeichen.",
           ],
-          tags: [],
+          tags: ['kreuzprodukt', 'antikommutativität', 'vektor'],
           difficulty: 1,
         },
         {
@@ -386,7 +386,7 @@ Das **Drehmoment** $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist das Kreuzprodukt a
             "Verwenden Sie die Formel: a×b = (a₂b₃−a₃b₂, a₃b₁−a₁b₃, a₁b₂−a₂b₁).",
             "Denken Sie an die Rechte-Hand-Regel: e₁×e₂ = e₃ (x-Achse × y-Achse = z-Achse).",
           ],
-          tags: [],
+          tags: ['kreuzprodukt', 'rechte-hand-regel', 'basisvektoren'],
           difficulty: 2,
         },
         {
@@ -404,7 +404,7 @@ Das **Drehmoment** $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist das Kreuzprodukt a
             "Drehmoment M = r × F. Berechnen Sie das Kreuzprodukt komponentenweise.",
             "Da r und F senkrecht stehen (x- und y-Richtung), gilt |M| = |r|·|F|·sin(90°) = |r|·|F|·1.",
           ],
-          tags: [],
+          tags: ['drehmoment', 'kreuzprodukt', 'biomechanik'],
           difficulty: 2,
         },
         {
@@ -422,7 +422,7 @@ Das **Drehmoment** $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist das Kreuzprodukt a
             "Ist b ein skalares Vielfaches von a? Wenn ja, sind die Vektoren parallel.",
             "Parallele Vektoren schließen einen Winkel von 0° (oder 180°) ein. Was ergibt sin(0°)?",
           ],
-          tags: [],
+          tags: ['kreuzprodukt', 'parallele-vektoren', 'lineare-abhängigkeit'],
           difficulty: 3,
         },
         {
@@ -440,7 +440,7 @@ Das **Drehmoment** $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist das Kreuzprodukt a
             "Berechnen Sie cos θ = (a·b) / (|a|·|b|). Das negative Ergebnis deutet auf einen stumpfen Winkel hin.",
             "cos(120°) = −½. Denken Sie an den Einheitskreis: Im zweiten Quadrant ist der Kosinus negativ.",
           ],
-          tags: [],
+          tags: ['winkel', 'skalarprodukt', 'kosinus'],
           difficulty: 3,
         },
       ],
@@ -557,7 +557,7 @@ In der **CT-Bildrekonstruktion** werden die gemessenen Absorptionswerte durch ei
             "Setzen Sie verschiedene Werte für t ein: t=0 gibt den Stützvektor selbst, t=1 gibt r₀ + d, t=2 gibt r₀ + 2d.",
             "Überprüfen Sie jede Antwortoption: Gibt es ein t, sodass (1,2,3) + t·(1,0,−1) = Antwortoption?",
           ],
-          tags: [],
+          tags: ['geradengleichung', 'parameterform', 'vektorrechnung'],
           difficulty: 2,
         },
         {
@@ -575,7 +575,7 @@ In der **CT-Bildrekonstruktion** werden die gemessenen Absorptionswerte durch ei
             "In der Koordinatenform ax + by + cz = d sind die Koeffizienten a, b, c direkt die Komponenten des Normalenvektors.",
             "Der Normalenvektor steht senkrecht auf der Ebene — er ergibt mit jedem Ebenenvektor das Skalarprodukt 0.",
           ],
-          tags: [],
+          tags: ['normalenvektor', 'ebenengleichung', 'koordinatenform'],
           difficulty: 1,
         },
         {
@@ -593,7 +593,7 @@ In der **CT-Bildrekonstruktion** werden die gemessenen Absorptionswerte durch ei
             "Dimensionsregel: A ist (2×2), B ist (2×1). Das Ergebnis ist (2×1).",
             "Zeile 1 von A mal Spalte von B: 1·1 + 2·0 = 1. Zeile 2 von A mal Spalte von B: 3·1 + 4·0 = 3.",
           ],
-          tags: [],
+          tags: ['matrizenmultiplikation', 'dimensionsregel', 'matrix'],
           difficulty: 2,
         },
         {
@@ -611,7 +611,7 @@ In der **CT-Bildrekonstruktion** werden die gemessenen Absorptionswerte durch ei
             "Determinante 2×2: det(A) = a·d − b·c (Hauptdiagonale minus Nebendiagonale).",
             "Hier: a=3, b=5, c=1, d=2. Also: 3·2 − 5·1 = ?",
           ],
-          tags: [],
+          tags: ['determinante', 'matrix', 'algebra'],
           difficulty: 1,
         },
         {
@@ -629,7 +629,7 @@ In der **CT-Bildrekonstruktion** werden die gemessenen Absorptionswerte durch ei
             "det(A) = 0 bedeutet, dass die Vektoren, die die Zeilen (oder Spalten) bilden, linear abhängig sind.",
             "Eine nicht invertierbare (singuläre) Matrix ergibt kein eindeutig lösbares LGS.",
           ],
-          tags: [],
+          tags: ['determinante', 'lineare-abhängigkeit', 'lgs'],
           difficulty: 2,
         },
         {
@@ -647,7 +647,7 @@ In der **CT-Bildrekonstruktion** werden die gemessenen Absorptionswerte durch ei
             "Merkhilfe: (m×n)·(n×p) = (m×p). Die 'innere' Dimension n muss übereinstimmen und 'verschwindet'.",
             "Nehmen Sie die äußeren Dimensionen: 3 (Zeilen von A) und 2 (Spalten von B).",
           ],
-          tags: [],
+          tags: ['matrizenmultiplikation', 'dimensionsregel', 'matrix'],
           difficulty: 1,
         },
         {
@@ -665,7 +665,7 @@ In der **CT-Bildrekonstruktion** werden die gemessenen Absorptionswerte durch ei
             "CT misst Absorptionswerte aus verschiedenen Winkeln. Wie wird daraus ein Bild berechnet?",
             "Das Schlüsselwort ist 'Rückprojektion' — mathematisch entspricht dies einer Matrizenoperation auf den Messdaten.",
           ],
-          tags: [],
+          tags: ['ct-rekonstruktion', 'matrizenrechnung', 'bildgebung'],
           difficulty: 3,
         },
       ],

@@ -160,7 +160,7 @@ Die KOF wird in der Onkologie für Chemotherapiedosierungen und in der Intensivm
           explanation: '1 m = 100 cm. Bei Flächen wird der Faktor quadriert: 1 m² = (100 cm)² = 10.000 cm². Das ist der häufigste MedAT-Irrtum — viele denken 100 cm², aber der Faktor 100 muss quadriert werden: 100² = 10.000. Anschaulich: In ein 1 m × 1 m Quadrat passen 100 × 100 = 10.000 Quadrate von je 1 cm × 1 cm. Diese Frage wird regelmäßig am MedAT gestellt und ebenso regelmäßig falsch beantwortet.',
           hints: ['1 m = 100 cm. Was ist 100 zum Quadrat?', 'In ein 1 m × 1 m Quadrat passen 100 × 100 = ? Zentimeterquadrate.'],
           difficulty: 1,
-          tags: [],
+          tags: ['flächeneinheiten', 'umrechnung', 'quadrat'],
         },
         {
           question: 'Wie viele mL sind 2,5 L?',
@@ -169,7 +169,7 @@ Die KOF wird in der Onkologie für Chemotherapiedosierungen und in der Intensivm
           explanation: '1 L = 1.000 mL. Daher: 2,5 L = 2,5 × 1.000 mL = 2.500 mL. Diese Umrechnung ist in der klinischen Praxis täglich relevant: Infusionsflaschen haben meist 250 mL, 500 mL oder 1.000 mL. Täglicher Flüssigkeitsbedarf eines Erwachsenen: ~2.500 mL = 2,5 L. Für die Intensivstation: stündliche Flüssigkeitsbilanz in mL/h erfordert die sichere Umrechnung.',
           hints: ['1 L = 1.000 mL. Multipliziere 2,5 mit 1.000.', '2,5 × 1.000 = 2.500.'],
           difficulty: 1,
-          tags: [],
+          tags: ['volumeneinheiten', 'umrechnung', 'liter'],
         },
         {
           question: '1 m³ entspricht wie viel cm³?',
@@ -178,7 +178,7 @@ Die KOF wird in der Onkologie für Chemotherapiedosierungen und in der Intensivm
           explanation: '1 m = 100 cm. Bei Volumen wird der Faktor kubiert: 1 m³ = (100 cm)³ = 100³ cm³ = 1.000.000 cm³ = 10⁶ cm³. Anschaulich: 1 m³ = 1.000 L (da 1 L = 1 dm³ und 1 m = 10 dm, also 1 m³ = 10³ dm³ = 1.000 L). Ein Badewannenvollbad fasst etwa 150–200 L = 0,15–0,20 m³. Merke: 100³ = 100 × 100 × 100 = 1.000.000.',
           hints: ['1 m = 100 cm. Was ist 100 hoch 3 (kubiert)?', '100 × 100 × 100 = ?'],
           difficulty: 2,
-          tags: [],
+          tags: ['volumeneinheiten', 'umrechnung', 'kubikmeter'],
         },
         {
           question: 'Ein Injektionsvolumen beträgt 2 mL. Wie viel cm³ ist das?',
@@ -187,7 +187,7 @@ Die KOF wird in der Onkologie für Chemotherapiedosierungen und in der Intensivm
           explanation: '1 mL = 1 cm³ — diese Gleichheit gilt exakt per Definition: 1 L = 1 dm³ → 1 mL = 1/1.000 L = 1/1.000 dm³ = 1 cm³. Daher: 2 mL = 2 cm³. In der Medizin sind mL und cm³ vollständig austauschbar. Spritzen werden in mL angegeben (1-mL, 5-mL, 10-mL-Spritze), und das Volumen entspricht der Angabe in cm³. Injektionen i.m. sind typischerweise 1–5 mL.',
           hints: ['1 mL = 1 cm³ ist eine exakte Gleichheit per Definition.', 'Keine Umrechnung nötig: 2 mL = 2 cm³.'],
           difficulty: 1,
-          tags: [],
+          tags: ['volumeneinheiten', 'milliliter', 'klinisch'],
         },
         {
           question: 'Eine rechteckige Wundauflage misst 5 cm × 8 cm. Wie groß ist die Fläche in mm²?',
@@ -196,7 +196,7 @@ Die KOF wird in der Onkologie für Chemotherapiedosierungen und in der Intensivm
           explanation: 'Schritt 1: Fläche in cm²: A = 5 cm × 8 cm = 40 cm². Schritt 2: Umrechnung: 1 cm = 10 mm → 1 cm² = 10² mm² = 100 mm². A = 40 cm² × 100 = 4.000 mm². Alternativ: 5 cm = 50 mm; 8 cm = 80 mm → A = 50 mm × 80 mm = 4.000 mm². Beide Wege liefern das gleiche Ergebnis — immer auch durch Direktrechnung in der Zieleinheit prüfen.',
           hints: ['Zuerst Fläche in cm², dann 1 cm² = 100 mm² anwenden.', '5 × 8 = 40 cm²; 40 × 100 = 4.000 mm².'],
           difficulty: 2,
-          tags: [],
+          tags: ['flächeneinheiten', 'umrechnung', 'wundfläche'],
         },
         {
           question: 'Welches Volumen in Liter hat ein Würfel mit Kantenlänge 2 dm?',
@@ -205,7 +205,7 @@ Die KOF wird in der Onkologie für Chemotherapiedosierungen und in der Intensivm
           explanation: 'V = a³ = (2 dm)³ = 8 dm³. Da 1 dm³ = 1 L: V = 8 L. Ein Würfel mit Kantenlänge 2 dm hat das 8-fache Volumen des Einheitswürfels (1 dm Kante = 1 L). Verdoppelung der Kantenlänge → 2³ = 8-faches Volumen. Klinische Analogie: Verdoppelung des Gefäßradius → 16-facher Fluss (Hagen-Poiseuille-Gesetz: Q ∝ r⁴). Kubisches Skalieren erklärt biologische Wachstumsphänomene.',
           hints: ['V = a³ = (2 dm)³ = ? dm³. Und 1 dm³ = 1 L.', '2³ = 8; also 8 dm³ = 8 L.'],
           difficulty: 2,
-          tags: [],
+          tags: ['volumeneinheiten', 'würfel', 'dezimeter'],
         },
         {
           question: '1 mm² entspricht wie viel μm²?',
@@ -214,7 +214,7 @@ Die KOF wird in der Onkologie für Chemotherapiedosierungen und in der Intensivm
           explanation: '1 mm = 1.000 μm = 10³ μm. Für Flächen wird der Faktor quadriert: 1 mm² = (10³ μm)² = 10⁶ μm² = 1.000.000 μm². Anwendung: Ein Erythrozyt hat eine Fläche von ~140 μm² (bikonkave Scheibe, ~8 μm Durchmesser). In 1 mm² = 10⁶ μm² Blutausstrich-Fläche passen theoretisch viele tausend Erythrozyten — diese Größenordnung hilft bei Zellzählaufgaben.',
           hints: ['1 mm = 10³ μm. Bei Flächen: Faktor quadrieren: (10³)² = ?', '(10³)² = 10⁶ = 1.000.000.'],
           difficulty: 3,
-          tags: [],
+          tags: ['flächeneinheiten', 'mikrometer', 'umrechnung'],
         },
         {
           question: 'Wie viel dL entsprechen 350 mL?',
@@ -223,7 +223,7 @@ Die KOF wird in der Onkologie für Chemotherapiedosierungen und in der Intensivm
           explanation: '1 dL = 100 mL. Daher: 350 mL ÷ 100 = 3,5 dL. Der Deziliter ist in der Labormedizin wichtig: Blutglukose wird in mg/dL angegeben (Normwert nüchtern: 70–100 mg/dL), Hämoglobin in g/dL (Frauen 12–16 g/dL, Männer 13–17 g/dL). Umrechnung Glukose 100 mg/dL in mmol/L: 100 mg/dL = 1.000 mg/L = 1 g/L → in mmol/L: 1.000 mg/L ÷ 180 g/mol = 5,56 mmol/L (Molmasse Glukose: 180 g/mol).',
           hints: ['1 dL = 100 mL. Teile 350 durch 100.', '350 ÷ 100 = 3,5 dL.'],
           difficulty: 1,
-          tags: [],
+          tags: ['volumeneinheiten', 'deziliter', 'umrechnung'],
         },
       ],
     },
@@ -374,7 +374,7 @@ In der Notfallmedizin beschreibt der Traumamechanismus die Energieübertragung a
           explanation: 'v [m/s] = v [km/h] / 3,6. Also: 72 / 3,6 = 20 m/s. Merkhilfe: 36 km/h = 10 m/s → 72 km/h = 20 m/s (doppelter Wert). Alternativ: 72 km/h = 72.000 m / 3.600 s = 20 m/s. Diese Umrechnung ist am MedAT häufig gefragt. 20 m/s entspricht auch der Größenordnung der Nervenleitgeschwindigkeit von A-delta-Fasern (5–30 m/s). Der Faktor 3,6 verbindet die beiden wichtigsten Geschwindigkeitseinheiten im Alltag und in der Physik.',
           hints: ['m/s = km/h ÷ 3,6. Merke: 36 km/h = 10 m/s.', '72 ÷ 3,6 = 72 × 10 / 36 = 720 / 36 = 20.'],
           difficulty: 1,
-          tags: [],
+          tags: ['geschwindigkeit', 'umrechnung', 'physik'],
         },
         {
           question: 'Ein Körper fällt aus dem Stand (v₀ = 0) für 4 Sekunden (g ≈ 10 m/s²). Welche Fallhöhe?',
@@ -383,7 +383,7 @@ In der Notfallmedizin beschreibt der Traumamechanismus die Energieübertragung a
           explanation: 's = ½ × g × t² = ½ × 10 × 4² = ½ × 10 × 16 = 80 m. Die Aufprallgeschwindigkeit: v = g × t = 10 × 4 = 40 m/s = 144 km/h. In der Notfallmedizin gilt Sturz aus mehr als 6 m als schweres Hochrasanztrauma — aus 80 m ist das Überleben ohne Fallschirm nicht möglich. Die Falltiefe skaliert quadratisch mit der Zeit: doppelte Zeit bedeutet vierfache Fallhöhe.',
           hints: ['Freier Fall mit v₀ = 0: s = ½ × g × t². t = 4 s, g = 10 m/s².', '½ × 10 × 16 = 5 × 16 = 80 m.'],
           difficulty: 2,
-          tags: [],
+          tags: ['freier-fall', 'kinematik', 'mechanik'],
         },
         {
           question: 'Wie viele Sekunden hat ein Tag?',
@@ -392,7 +392,7 @@ In der Notfallmedizin beschreibt der Traumamechanismus die Energieübertragung a
           explanation: '1 Tag = 24 h × 60 min/h × 60 s/min = 24 × 3.600 = 86.400 s. Rechenweg: 24 × 3.600 = (20 + 4) × 3.600 = 72.000 + 14.400 = 86.400 s. Klinisch: Langzeit-EKG (Holter) zeichnet 24 Stunden auf. Tagesbilanzen auf der Intensivstation (Flüssigkeit, Elektrolyte) beziehen sich auf 86.400 Sekunden. Medikamenten-Halbwertszeiten in Tagen bedeuten 86.400 s pro Tag.',
           hints: ['1 Stunde = 3.600 s. Ein Tag hat 24 Stunden.', '24 × 3.600 = ?'],
           difficulty: 1,
-          tags: [],
+          tags: ['zeiteinheiten', 'umrechnung', 'sekunden'],
         },
         {
           question: 'Ein Zug beschleunigt gleichmäßig von 0 auf 72 km/h in 10 s. Wie groß ist die Beschleunigung in m/s²?',
@@ -401,7 +401,7 @@ In der Notfallmedizin beschreibt der Traumamechanismus die Energieübertragung a
           explanation: 'Schritt 1: 72 km/h = 72/3,6 = 20 m/s. Schritt 2: a = Δv/Δt = 20 m/s / 10 s = 2 m/s². Diese Beschleunigung (2 m/s² ≈ 0,2 g) ist für Fahrgäste spürbar aber komfortabel. Ein Sportwagen beschleunigt mit ~5 m/s² (0 auf 100 km/h in ~5,5 s). Erdbeschleunigung g = 9,81 m/s² ≈ 10 m/s² als Referenz.',
           hints: ['Erst 72 km/h in m/s umrechnen (÷ 3,6 = 20 m/s).', 'a = Δv / Δt = 20 m/s / 10 s = ?'],
           difficulty: 2,
-          tags: [],
+          tags: ['beschleunigung', 'kinematik', 'mechanik'],
         },
         {
           question: 'Die Herzfrequenz beträgt 75 Schläge/min. Was ist die Periodendauer eines Herzschlags in ms?',
@@ -410,7 +410,7 @@ In der Notfallmedizin beschreibt der Traumamechanismus die Energieübertragung a
           explanation: 'f = 75/min = 75/60 Hz = 1,25 Hz. Periodendauer T = 1/f = 1/1,25 s = 0,8 s = 800 ms. In diesen 800 ms: Systole ~300 ms, Diastole ~500 ms. Bei Tachykardie (150/min → T = 400 ms) verkürzt sich vor allem die Diastole — weniger Zeit zur Koronardurchblutung und Ventrikelfüllung, was zu Ischämie führen kann. EKG-Mess-Formel für die QT-Zeit: QTc = QT / √RR (Bazett-Formel).',
           hints: ['f = 75/60 Hz = 1,25 Hz. T = 1/f.', 'T = 1/1,25 = 0,8 s = 800 ms.'],
           difficulty: 2,
-          tags: [],
+          tags: ['herzfrequenz', 'periodendauer', 'frequenz'],
         },
         {
           question: 'Welche Geschwindigkeit (m/s) hat ein Körper nach 5 s freiem Fall (v₀ = 0, g = 10 m/s²)?',
@@ -419,7 +419,7 @@ In der Notfallmedizin beschreibt der Traumamechanismus die Energieübertragung a
           explanation: 'v = v₀ + g × t = 0 + 10 × 5 = 50 m/s = 180 km/h nach nur 5 Sekunden! Die zurückgelegte Strecke: s = ½ × 10 × 25 = 125 m. Kinetische Energie beim Aufprall: E = ½mv² = ½ × 70 × 50² = 87.500 J = 87,5 kJ für einen 70-kg-Menschen. Diese Energie erklärt die verheerenden Verletzungsmuster bei Hochrasanztraumen und Stürzen aus großer Höhe.',
           hints: ['v = v₀ + g × t. v₀ = 0, g = 10 m/s², t = 5 s.', 'v = 0 + 10 × 5 = 50 m/s.'],
           difficulty: 1,
-          tags: [],
+          tags: ['freier-fall', 'geschwindigkeit', 'kinematik'],
         },
         {
           question: 'Aus welcher Höhe muss ein Körper fallen, damit er mit 20 m/s aufprallt? (g = 10 m/s²)',
@@ -428,7 +428,7 @@ In der Notfallmedizin beschreibt der Traumamechanismus die Energieübertragung a
           explanation: 'Formel: v² = 2 × g × h → h = v² / (2 × g) = 400 / (2 × 10) = 400/20 = 20 m. Aufprallgeschwindigkeit 20 m/s = 72 km/h aus 20 m Höhe (ca. 6-stöckiges Gebäude). In der Traumatologie gilt Sturz aus mehr als 3 m als Hochrasanztrauma; aus 20 m ist Polytrauma mit hoher Letalität zu erwarten. Die Formel v² = 2gh kommt aus der Energieerhaltung: mgh = ½mv².',
           hints: ['v² = 2gh → h = v²/(2g). v = 20 m/s, g = 10 m/s².', 'h = 400/(2×10) = 400/20 = 20 m.'],
           difficulty: 2,
-          tags: [],
+          tags: ['freier-fall', 'mechanik', 'energie'],
         },
         {
           question: 'Wie lange braucht ein Nervenimpuls (NLG = 60 m/s) vom Fuß (~1 m Weg) bis zum Rückenmark?',
@@ -437,7 +437,7 @@ In der Notfallmedizin beschreibt der Traumamechanismus die Energieübertragung a
           explanation: 't = s/v = 1 m / 60 m/s ≈ 0,0167 s ≈ 17 ms. Diese Laufzeit ist neurophysiologisch bedeutsam: Reflexlatenzen (monosynaptischer Eigenreflex) betragen normal 20–30 ms. Bei verlangsamter NLG (Polyneuropathie) verlängert sich die Latenz — klinisch erkennbar als verzögerte oder fehlende Reflexe (Areflexie bei ausgeprägter Neuropathie). Beim Monosynaptischen Patellarsehnenreflex (PSR) legt das Signal ~50 cm zurück, Latenz bei NLG 60 m/s: t = 0,5/60 ≈ 8 ms.',
           hints: ['t = s/v = 1 m / 60 m/s. Ergebnis in s, dann × 1.000 für ms.', '1/60 s ≈ 0,0167 s = 16,7 ms ≈ 17 ms.'],
           difficulty: 2,
-          tags: [],
+          tags: ['nervenleitgeschwindigkeit', 'neurologie', 'zeiteinheiten'],
         },
       ],
     },
@@ -593,7 +593,7 @@ Klinische Konzentrationseinheiten im Labor:
           explanation: 'Mol (mol) ist die SI-Grundeinheit der Stoffmenge. 1 mol enthält die Avogadro-Zahl N_A = 6,022 × 10²³ Teilchen. Gramm (g) ist keine SI-Grundeinheit (die Grundeinheit der Masse ist kg!). Liter ist keine SI-Grundeinheit (Volumen-SI-Einheit ist m³). Dalton ist keine SI-Einheit. Laborwerte in mmol/L: Kalium 3,5–5,0 mmol/L; Natrium 135–145 mmol/L; Glukose 3,9–6,1 mmol/L.',
           hints: ['Welche der 7 SI-Grundeinheiten quantifiziert die Teilchenanzahl in chemischen Reaktionen?', 'Mol wird in Reaktionsgleichungen und für Laborkonzentrationen verwendet.'],
           difficulty: 1,
-          tags: [],
+          tags: ['si-einheiten', 'stoffmenge', 'mol'],
         },
         {
           question: 'Welche Einheit hat Druck im SI-System?',
@@ -602,7 +602,7 @@ Klinische Konzentrationseinheiten im Labor:
           explanation: 'Druck = Kraft/Fläche. SI-Einheit: Pascal (Pa) = N/m² = kg/(m·s²). Newton ist die Einheit der Kraft. Joule ist die Einheit der Energie. Watt ist die Einheit der Leistung. Bar ist keine SI-Einheit (toleriert): 1 bar = 10⁵ Pa. Klinisch: Blutdruck 120 mmHg = 15.960 Pa; Augeninnendruck normal 10–21 mmHg = 1.330–2.800 Pa; Liquordruck im Liegen normal 7–18 cmH₂O = 686–1.765 Pa.',
           hints: ['Druck = Kraft / Fläche. Einheit der Kraft ist N, der Fläche ist m².', 'N/m² = Pa.'],
           difficulty: 1,
-          tags: [],
+          tags: ['si-einheiten', 'druck', 'pascal'],
         },
         {
           question: 'Wie viel Pa entsprechen 760 mmHg (= 1 atm)? (1 mmHg = 133 Pa)',
@@ -611,7 +611,7 @@ Klinische Konzentrationseinheiten im Labor:
           explanation: '760 mmHg × 133 Pa/mmHg = 101.080 Pa ≈ 101.325 Pa (exakter Wert). 1 Atmosphäre = normaler Luftdruck auf Meereshöhe. Klinisch: Arterieller pO₂ ~100 mmHg = 13.300 Pa; pCO₂ ~40 mmHg = 5.320 Pa. Bei Hyperventilation sinkt pCO₂ → respiratorische Alkalose → Hypokalzämie-Symptome (Karpopedalspasmen). Berechnung: 760 × 133 = 760 × 130 + 760 × 3 = 98.800 + 2.280 = 101.080 Pa.',
           hints: ['1 mmHg = 133 Pa. 760 × 133 = ?', '760 × 130 + 760 × 3 = 98.800 + 2.280.'],
           difficulty: 2,
-          tags: [],
+          tags: ['druckeinheiten', 'mmhg', 'pascal'],
         },
         {
           question: 'Welche Einheit hat Leistung im SI-System?',
@@ -620,7 +620,7 @@ Klinische Konzentrationseinheiten im Labor:
           explanation: 'Leistung P = Energie/Zeit. SI-Einheit: Watt (W) = J/s = kg·m²/s³. Joule ist die Einheit der Energie/Arbeit, nicht der Leistung. 1 kW = 1.000 W. Herzleistung in Ruhe ~1 W; menschlicher Grundumsatz ~80–100 W (der Körper gibt so viel Wärme ab wie eine Glühbirne!); bei körperlicher Maximalbelastung bis ~1.000 W kurzzeitig möglich. Ein Ausdauersportler kann über 1 h ~300–400 W aufrechterhalten.',
           hints: ['Leistung = Energie / Zeit. Energie in J, Zeit in s.', 'J/s = W (Watt).'],
           difficulty: 1,
-          tags: [],
+          tags: ['si-einheiten', 'leistung', 'watt'],
         },
         {
           question: 'Die Körpertemperatur beträgt 37°C. Was ist das in Kelvin?',
@@ -629,7 +629,7 @@ Klinische Konzentrationseinheiten im Labor:
           explanation: 'T [K] = T [°C] + 273 = 37 + 273 = 310 K. Absolutnullpunkt 0 K = −273°C; Gefrierpunkt Wasser 0°C = 273 K; Siedepunkt Wasser 100°C = 373 K; Körpertemperatur 37°C = 310 K; Fieber >38°C = >311 K. In der Biochemie (Arrhenius-Gleichung k = A × exp(−Ea/RT), R = 8,314 J/(mol·K)): Q10-Regel — Temperaturerhöhung um 10 K (≈ 10°C) verdoppelt Reaktionsgeschwindigkeit, erklärt erhöhten Metabolismus bei Fieber.',
           hints: ['T [K] = T [°C] + 273.', '37 + 273 = 310 K.'],
           difficulty: 1,
-          tags: [],
+          tags: ['temperatureinheiten', 'kelvin', 'celsius'],
         },
         {
           question: 'Welche Einheit hat Energie in SI-Grundeinheiten ausgedrückt?',
@@ -638,7 +638,7 @@ Klinische Konzentrationseinheiten im Labor:
           explanation: 'Energie = Kraft × Weg: [E] = [F] × [s] = N × m = (kg·m/s²) × m = kg·m²/s² = J. Falsche Optionen: kg·m/s² ist Newton (Kraft); kg/m·s² = kg/(m·s²) ist Pascal (Druck: Pa = N/m² = kg·m/s² / m² = kg/(m·s²)); kg·m²/s ist Drehimpuls; kg·m²·s hat keine Standardbedeutung. Die Dimensionsanalyse: Energie = Leistung × Zeit = W × s = (kg·m²/s³) × s = kg·m²/s².',
           hints: ['Energie = Kraft × Weg. Kraft in SI = N = kg·m/s². Mal Meter = ?', 'kg·m/s² × m = kg·m²/s².'],
           difficulty: 3,
-          tags: [],
+          tags: ['si-einheiten', 'energie', 'joule'],
         },
         {
           question: 'Welche Molekülmasse hat Hämoglobin (64 kDa) in g/mol?',
@@ -647,7 +647,7 @@ Klinische Konzentrationseinheiten im Labor:
           explanation: '1 Da = 1 g/mol. 1 kDa = 1.000 Da = 1.000 g/mol. 64 kDa = 64.000 g/mol = 64 kg/mol. Hämoglobin ist ein Tetramer aus 4 Untereinheiten (je ~16 kDa = 16.000 g/mol), jede mit einer Häm-Gruppe und einem Fe²⁺-Ion. Molare Hb-Konzentration im Blut: ca. 150 g/L Hb; 150 g/L ÷ 64.000 g/mol ≈ 2,34 mmol/L (als Tetramer). Jede Hb-Einheit bindet bis zu 4 O₂-Moleküle (an den 4 Häm-Gruppen).',
           hints: ['1 kDa = 1.000 Da = 1.000 g/mol. 64 kDa = 64 × 1.000 g/mol.', '64 × 1.000 = 64.000 g/mol.'],
           difficulty: 2,
-          tags: [],
+          tags: ['molmasse', 'hämoglobin', 'dalton'],
         },
         {
           question: 'Was ist der korrekte Ausdruck für 1 Gy (Gray, Strahlendosis) in SI-Grundeinheiten?',
@@ -656,7 +656,7 @@ Klinische Konzentrationseinheiten im Labor:
           explanation: '1 Gy = 1 J/kg (absorbierte Energie pro Kilogramm Gewebe). In Grundeinheiten: J/kg = (kg·m²/s²)/kg = m²/s². Sievert: 1 Sv = Gy × Wichtungsfaktor w_R. Für Röntgen/Gamma: w_R = 1 → 1 Sv = 1 Gy. Für Alphastrahlung: w_R = 20 → 1 Gy Alpha-Strahlung = 20 Sv biologische Wirkung. Klinisch: Ganzkörperbestrahlung >1 Gy → Strahlenkrankheit; >6 Gy → letal ohne KMT; Strahlentherapie Karzinom: 60–70 Gy in 30 Fraktionen à 2 Gy.',
           hints: ['1 Gy = 1 J/kg. Joule in Grundeinheiten: J = kg·m²/s².', 'J/kg = kg·m²/s² / kg = m²/s².'],
           difficulty: 3,
-          tags: [],
+          tags: ['strahlendosis', 'gray', 'si-einheiten'],
         },
       ],
     },

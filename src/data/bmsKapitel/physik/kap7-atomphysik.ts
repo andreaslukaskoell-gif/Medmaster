@@ -12,6 +12,7 @@ export const physKap7: Kapitel = {
     // ─────────────────────────────────────────────────────────────────────────
     {
       id: 'ph-7-01',
+      diagram: 'em-spectrum',
       title: 'Atommodelle und Spektroskopie',
       content: `# Atommodelle und Spektroskopie
 
@@ -117,7 +118,7 @@ Klinisch relevant: **Hämoglobin-Absorptionsspektrum**. Oxygeniertes Hämoglobin
             'Denke daran: Welches Experiment schoss geladene Teilchen auf eine Metallfolie und beobachtete unerwartete Rückstreuung?',
             'Das Ergebnis überraschte Rutherford selbst: "Als würde man eine Artilleriegranate auf Seidenpapier schießen und sie springt zurück."',
           ],
-          tags: [],
+          tags: ['rutherford', 'kernmodell', 'streuexperiment'],
           difficulty: 1,
         },
         {
@@ -135,7 +136,7 @@ Klinisch relevant: **Hämoglobin-Absorptionsspektrum**. Oxygeniertes Hämoglobin
             'Formel: λ = hc/E. Wandle zuerst eV in Joule um: 1 eV = 1,6×10⁻¹⁹ J.',
             'Balmer-Serie liegt im sichtbaren Bereich (380–750 nm). Die 4→2-Linie ist die Hβ-Linie.',
           ],
-          tags: [],
+          tags: ['balmer-serie', 'spektrallinien', 'photonenenergie'],
           difficulty: 3,
         },
         {
@@ -153,7 +154,7 @@ Klinisch relevant: **Hämoglobin-Absorptionsspektrum**. Oxygeniertes Hämoglobin
             'Stelle A = ε·c·d nach c um: c = A/(ε·d).',
             'Achte auf die Einheiten: ε in L·mol⁻¹·cm⁻¹, d in cm, c kommt in mol/L heraus.',
           ],
-          tags: [],
+          tags: ['lambert-beer', 'photometrie', 'konzentration'],
           difficulty: 2,
         },
         {
@@ -171,7 +172,7 @@ Klinisch relevant: **Hämoglobin-Absorptionsspektrum**. Oxygeniertes Hämoglobin
             'Spektrallinien entstehen durch Elektronenübergänge. Was ist elementspezifisch – die Kernladung bestimmt die Energieniveaus.',
             'Wasserstoff (Z=1) hat andere Energieniveaus als Natrium (Z=11) – daher andere Spektrallinien.',
           ],
-          tags: [],
+          tags: ['emissionsspektrum', 'quantenzahlen', 'energieniveaus'],
           difficulty: 2,
         },
         {
@@ -189,7 +190,7 @@ Klinisch relevant: **Hämoglobin-Absorptionsspektrum**. Oxygeniertes Hämoglobin
             'Das Lambert-Beer-Gesetz gilt: A = ε·c·d. Was unterscheidet Hb von HbO₂?',
             'Bei 660 nm (rotes Licht): Hb absorbiert stark → venöses Blut sieht dunkelrot aus. HbO₂ absorbiert schwächer → arterielles Blut ist hellrot.',
           ],
-          tags: [],
+          tags: ['pulsoximetrie', 'hämoglobin', 'spektroskopie'],
           difficulty: 2,
         },
         {
@@ -207,7 +208,7 @@ Klinisch relevant: **Hämoglobin-Absorptionsspektrum**. Oxygeniertes Hämoglobin
             'Das quantenmechanische Modell ersetzt feste Bahnen durch Wahrscheinlichkeitsverteilungen – Stichwort Unschärferelation.',
             's-Orbital: kugelsymmetrisch. p-Orbital: hantelförmig. Orbitalform ≠ Elektronenbahn.',
           ],
-          tags: [],
+          tags: ['quantenmechanik', 'orbital', 'wellenfunktion'],
           difficulty: 2,
         },
         {
@@ -225,7 +226,7 @@ Klinisch relevant: **Hämoglobin-Absorptionsspektrum**. Oxygeniertes Hämoglobin
             'Formel: E = hf = hc/λ. Zuerst E in Joule, dann Umrechnung: 1 eV = 1,6×10⁻¹⁹ J.',
             'Kürzere Wellenlänge = höhere Frequenz = höhere Energie. 400 nm ist violett/UV-nahe.',
           ],
-          tags: [],
+          tags: ['photonenenergie', 'wellenlänge', 'elektronenvolt'],
           difficulty: 3,
         },
       ],
@@ -236,6 +237,7 @@ Klinisch relevant: **Hämoglobin-Absorptionsspektrum**. Oxygeniertes Hämoglobin
     // ─────────────────────────────────────────────────────────────────────────
     {
       id: 'ph-7-02',
+      diagram: 'em-spectrum',
       title: 'Radioaktivität – Strahlenarten und Zerfallsgesetze',
       content: `# Radioaktivität – Strahlenarten und Zerfallsgesetze
 
@@ -366,7 +368,7 @@ Strahlendosen werden in **Gray (Gy)** (absorbierte Energie J/kg) und **Sievert (
             'Berechne zuerst n = t/T½ = 24h/6h = 4 Halbwertszeiten.',
             'Nach n Halbwertszeiten: A = A₀ · (½)ⁿ.',
           ],
-          tags: [],
+          tags: ['radioaktivität', 'halbwertszeit', 'aktivitätsabfall'],
           difficulty: 1,
         },
         {
@@ -384,7 +386,7 @@ Strahlendosen werden in **Gray (Gy)** (absorbierte Energie J/kg) und **Sievert (
             'β⁻-Zerfall: Ein Neutron wird zu einem Proton. Was passiert mit Z (Protonenzahl) und A (Nukleonenzahl)?',
             'Massenzahl A = Protonen + Neutronen. Wenn n zu p wird, ändert sich A nicht.',
           ],
-          tags: [],
+          tags: ['beta-zerfall', 'kernumwandlung', 'ordnungszahl'],
           difficulty: 1,
         },
         {
@@ -402,7 +404,7 @@ Strahlendosen werden in **Gray (Gy)** (absorbierte Energie J/kg) und **Sievert (
             'Formel: T½ = ln2/λ = 0,693/λ.',
             'Einheiten beachten: λ in h⁻¹ → T½ in Stunden.',
           ],
-          tags: [],
+          tags: ['zerfallskonstante', 'halbwertszeit', 'radioaktivität'],
           difficulty: 2,
         },
         {
@@ -420,7 +422,7 @@ Strahlendosen werden in **Gray (Gy)** (absorbierte Energie J/kg) und **Sievert (
             'Außerhalb des Körpers: Haut stoppt Alpha-Strahlung. Im Körper: Es gibt keine schützende Barriere mehr.',
             'Hohe Ionisierungsdichte bedeutet: viel Energie wird auf kurzer Strecke abgegeben → schwere lokale Schäden.',
           ],
-          tags: [],
+          tags: ['alpha-strahlung', 'interne-kontamination', 'ionisierungsdichte'],
           difficulty: 2,
         },
         {
@@ -438,7 +440,7 @@ Strahlendosen werden in **Gray (Gy)** (absorbierte Energie J/kg) und **Sievert (
             'Für Diagnostik: Man will sehen, nicht heilen → Strahlung sollte den Körper verlassen können (γ) und die Dosis gering sein (kurze T½).',
             '⁹⁹ᵐTc "m" = metastabil; reiner γ-Strahler; T½ = 6h → ideal für Bildgebung.',
           ],
-          tags: [],
+          tags: ['technetium-99m', 'nuklearmedizin', 'gamma-strahler'],
           difficulty: 2,
         },
         {
@@ -456,7 +458,7 @@ Strahlendosen werden in **Gray (Gy)** (absorbierte Energie J/kg) und **Sievert (
             'Stelle A = A₀·(½)ⁿ nach n um, dann t = n·T½.',
             'Wieviel mal muss man 800 halbieren, bis man 100 erhält? 800 → 400 → 200 → 100 (3 Schritte).',
           ],
-          tags: [],
+          tags: ['jod-131', 'halbwertszeit', 'aktivitätsabfall'],
           difficulty: 2,
         },
         {
@@ -474,7 +476,7 @@ Strahlendosen werden in **Gray (Gy)** (absorbierte Energie J/kg) und **Sievert (
             'Gray = physikalische Größe (J/kg). Sievert = biologisch gewichtete Größe.',
             'Gleichung: H [Sv] = D [Gy] × w_R. Für α-Strahlung: w_R = 20, also besonders schädlich.',
           ],
-          tags: [],
+          tags: ['gray', 'sievert', 'strahlendosis'],
           difficulty: 2,
         },
       ],
@@ -485,6 +487,7 @@ Strahlendosen werden in **Gray (Gy)** (absorbierte Energie J/kg) und **Sievert (
     // ─────────────────────────────────────────────────────────────────────────
     {
       id: 'ph-7-03',
+      diagram: 'em-spectrum',
       title: 'Röntgenstrahlung und Strahlenwirkung',
       content: `# Röntgenstrahlung und Strahlenwirkung
 
@@ -594,7 +597,7 @@ Typische effektive Dosen: Röntgen Thorax ≈ 0,02–0,1 mSv; Mammographie ≈ 0
             'Bremsstrahlung = "Abbremsung" von Elektronen. Welches Spektrum entsteht bei stufenloser Abbremsung?',
             'Charakteristische Strahlung = Linienspektrum (elementspezifisch). Bremsstrahlung = kontinuierliches Spektrum.',
           ],
-          tags: [],
+          tags: ['bremsstrahlung', 'röntgenröhre', 'spektrum'],
           difficulty: 2,
         },
         {
@@ -612,7 +615,7 @@ Typische effektive Dosen: Röntgen Thorax ≈ 0,02–0,1 mSv; Mammographie ≈ 0
             'Hell im Röntgenbild = viel Absorption (wenig Strahlung kommt durch). Welches Material absorbiert mehr?',
             'Schwächungskoeffizient μ hängt von Ordnungszahl und Dichte ab. Ca (Z=20) > C/H/O (Z=6-8).',
           ],
-          tags: [],
+          tags: ['röntgenbild', 'knochen', 'weichgewebe'],
           difficulty: 1,
         },
         {
@@ -630,7 +633,7 @@ Typische effektive Dosen: Röntgen Thorax ≈ 0,02–0,1 mSv; Mammographie ≈ 0
             '12,5 % = 1/8: Wieviel Halbierungen brauche ich, um von 100 % auf 12,5 % zu gelangen?',
             'HVL ist die Dicke für Halbierung. Für n Halbierungen: n × HVL Gesamtdicke.',
           ],
-          tags: [],
+          tags: ['halbwertsschichtdicke', 'abschirmung', 'blei'],
           difficulty: 2,
         },
         {
@@ -648,7 +651,7 @@ Typische effektive Dosen: Röntgen Thorax ≈ 0,02–0,1 mSv; Mammographie ≈ 0
             'Bei einem Einzelstrangbruch: Der andere Strang dient als Reparaturmatrize. Bei einem Doppelstrangbruch?',
             'DSB = beide DNA-Stränge gebrochen → keine Matrize → fehleranfällige Reparatur → Chromosomenaberrationen.',
           ],
-          tags: [],
+          tags: ['dna-schäden', 'doppelstrangbruch', 'strahlenbiologie'],
           difficulty: 2,
         },
         {
@@ -666,7 +669,7 @@ Typische effektive Dosen: Röntgen Thorax ≈ 0,02–0,1 mSv; Mammographie ≈ 0
             'Stochastisch = zufällig (Krebs: auch bei niedriger Dosis möglich, aber unwahrscheinlicher).',
             'Deterministisch = vorhersagbar ab einer Schwelle (z.B. Strahlenkatarrh erst ab ~1 Gy).',
           ],
-          tags: [],
+          tags: ['strahleneffekte', 'schwellendosis', 'strahlenschutz'],
           difficulty: 2,
         },
         {
@@ -684,7 +687,7 @@ Typische effektive Dosen: Röntgen Thorax ≈ 0,02–0,1 mSv; Mammographie ≈ 0
             'Abstandsgesetz: I ∝ 1/r². Abstand verdoppelt → Intensität geviertelt.',
             'Verhältnis: (r₁/r₂)² = (2m/4m)² = 1/4. Neue Leistung = alte × 1/4.',
           ],
-          tags: [],
+          tags: ['abstandsgesetz', 'strahlenschutz', 'dosisleistung'],
           difficulty: 2,
         },
         {
@@ -702,7 +705,7 @@ Typische effektive Dosen: Röntgen Thorax ≈ 0,02–0,1 mSv; Mammographie ≈ 0
             'Bergonié-Tribondeau: Hohe Teilungsrate = hohe Strahlenempfindlichkeit. Welche Zellen teilen sich am meisten?',
             'Lymphozyten und Knochenmark teilen sich ständig (Blutbildung). Nervenzellen und Muskelzellen kaum.',
           ],
-          tags: [],
+          tags: ['strahlensensitivität', 'knochenmark', 'lymphozyten'],
           difficulty: 2,
         },
       ],
@@ -713,6 +716,7 @@ Typische effektive Dosen: Röntgen Thorax ≈ 0,02–0,1 mSv; Mammographie ≈ 0
     // ─────────────────────────────────────────────────────────────────────────
     {
       id: 'ph-7-04',
+      diagram: 'em-spectrum',
       title: 'Nuklearmedizin und Quantenphänomene',
       content: `# Nuklearmedizin und Quantenphänomene
 
@@ -814,7 +818,7 @@ Emission tritt nur auf, wenn hf ≥ φ, d.h. f ≥ f_Grenz = φ/h. Unterhalb der
             'Annihilation: e⁺ + e⁻ → 2γ. Die Energie der Photonen kommt aus der Ruhemasse beider Teilchen: E = m_e·c².',
             'm_e·c² = 0,511 MeV = 511 keV. Da zwei Teilchen annihilieren, entstehen zwei Photonen mit je 511 keV.',
           ],
-          tags: [],
+          tags: ['pet', 'annihilation', 'ruhemasse'],
           difficulty: 2,
         },
         {
@@ -832,7 +836,7 @@ Emission tritt nur auf, wenn hf ≥ φ, d.h. f ≥ f_Grenz = φ/h. Unterhalb der
             'FDG = Desoxyglukose. "Desoxy" bedeutet: eine OH-Gruppe fehlt. Was passiert nach der Phosphorylierung durch Hexokinase?',
             'Tumorzellen: Warburg-Effekt = hoher Glukosestoffwechsel. FDG: wird aufgenommen, aber metabolisch blockiert → Akkumulation.',
           ],
-          tags: [],
+          tags: ['fdg', 'warburg-effekt', 'tumorstoffwechsel'],
           difficulty: 2,
         },
         {
@@ -850,7 +854,7 @@ Emission tritt nur auf, wenn hf ≥ φ, d.h. f ≥ f_Grenz = φ/h. Unterhalb der
             'Larmorgleichung: f = γ·B₀. Einsetzen: γ_H = 42,58 MHz/T, B₀ = 3,0 T.',
             'Einheiten: MHz/T × T = MHz.',
           ],
-          tags: [],
+          tags: ['larmor-frequenz', 'mrt', 'kernspinresonanz'],
           difficulty: 1,
         },
         {
@@ -868,7 +872,7 @@ Emission tritt nur auf, wenn hf ≥ φ, d.h. f ≥ f_Grenz = φ/h. Unterhalb der
             'Klassische Wellentheorie würde sagen: Mehr Intensität → mehr Energie → irgendwann Emission. Was beobachtet man wirklich?',
             'Photoeffekt: E_kin = hf − φ. Emission nur wenn hf ≥ φ. Intensität beeinflusst die Anzahl, nicht die Energie der Elektronen.',
           ],
-          tags: [],
+          tags: ['photoeffekt', 'grenzfrequenz', 'photon'],
           difficulty: 2,
         },
         {
@@ -886,7 +890,7 @@ Emission tritt nur auf, wenn hf ≥ φ, d.h. f ≥ f_Grenz = φ/h. Unterhalb der
             'Was unterscheidet MRT grundlegend von CT und Röntgen hinsichtlich der Strahlungsart?',
             'Kinder sind strahlenempfindlicher als Erwachsene. MRT = keine ionisierende Strahlung = kein strahleninduziertes Krebsrisiko.',
           ],
-          tags: [],
+          tags: ['mrt', 'ionisierende-strahlung', 'pädiatrie'],
           difficulty: 1,
         },
         {
@@ -904,7 +908,7 @@ Emission tritt nur auf, wenn hf ≥ φ, d.h. f ≥ f_Grenz = φ/h. Unterhalb der
             'T1: Fett hell, Wasser dunkel. T2: Wasser hell (langes T2 = "leuchtet nach"). Eselsbrücke: T2 = "Wasser leuchtet".',
             'Kurze Relaxationszeit → Signal ist bei Messung noch groß → hell im Bild. Langes T1 = Signal noch nicht erholt → dunkel.',
           ],
-          tags: [],
+          tags: ['mrt-kontrast', 't1-t2', 'relaxation'],
           difficulty: 2,
         },
         {
@@ -922,7 +926,7 @@ Emission tritt nur auf, wenn hf ≥ φ, d.h. f ≥ f_Grenz = φ/h. Unterhalb der
             'Zwei 511-keV-Photonen entstehen unter 180°. Wenn beide gleichzeitig auf gegenüberliegenden Detektoren ankommen…',
             'Das Ereignis liegt irgendwo auf der geraden Linie zwischen den beiden Detektoren – das ist die LOR.',
           ],
-          tags: [],
+          tags: ['pet', 'koinzidenzdetektion', 'lor'],
           difficulty: 2,
         },
       ],

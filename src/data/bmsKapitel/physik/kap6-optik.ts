@@ -135,7 +135,7 @@ Mehrere dünne Linsen eng beieinander können als Gesamtsystem behandelt werden:
             'Snellius-Formel: n₁·sin α₁ = n₂·sin α₂ – stelle nach sin α₂ um.',
             'Beim Übergang in ein optisch dichteres Medium (größeres n) wird der Winkel kleiner.',
           ],
-          tags: [],
+          tags: ['brechungsgesetz', 'snellius', 'brechungswinkel'],
           difficulty: 2,
         },
         {
@@ -153,7 +153,7 @@ Mehrere dünne Linsen eng beieinander können als Gesamtsystem behandelt werden:
             'Formel: sin α_grenz = n₂/n₁ – hier ist n₁=1,5 (Glas) und n₂=1,0 (Luft).',
             'Totalreflexion geht nur vom dichteren ins dünnere Medium, nicht umgekehrt.',
           ],
-          tags: [],
+          tags: ['totalreflexion', 'brechungsgesetz', 'snellius'],
           difficulty: 2,
         },
         {
@@ -171,7 +171,7 @@ Mehrere dünne Linsen eng beieinander können als Gesamtsystem behandelt werden:
             'Stelle die Linsengleichung nach 1/b um: 1/b = 1/f − 1/g.',
             'Positives b bedeutet reelles Bild auf der Rückseite der Linse.',
           ],
-          tags: [],
+          tags: ['sammellinse', 'linsengleichung', 'bildweite'],
           difficulty: 2,
         },
         {
@@ -189,7 +189,7 @@ Mehrere dünne Linsen eng beieinander können als Gesamtsystem behandelt werden:
             'Formel: f = 1/D mit f in Metern – wandle dann in Zentimeter um.',
             'Negatives f (und negatives D) kennzeichnet eine Zerstreuungslinse.',
           ],
-          tags: [],
+          tags: ['brechkraft', 'dioptrien', 'zerstreuungslinse'],
           difficulty: 1,
         },
         {
@@ -207,7 +207,7 @@ Mehrere dünne Linsen eng beieinander können als Gesamtsystem behandelt werden:
             'Totalreflexion erfordert n_Kern > n_Mantel und Einfallswinkel > Grenzwinkel.',
             'Der Effekt ist verlustfrei – kein Licht verlässt die Faser durch die Seite.',
           ],
-          tags: [],
+          tags: ['glasfaser', 'endoskopie', 'totalreflexion'],
           difficulty: 1,
         },
         {
@@ -225,7 +225,7 @@ Mehrere dünne Linsen eng beieinander können als Gesamtsystem behandelt werden:
             'Brechkräfte dünner Linsen im Kontakt addieren sich direkt: D_ges = D₁ + D₂.',
             'f = 1/D_ges (in Metern) – dann in Zentimeter umrechnen.',
           ],
-          tags: [],
+          tags: ['linsensystem', 'brechkraft', 'dioptrien'],
           difficulty: 2,
         },
         {
@@ -243,7 +243,7 @@ Mehrere dünne Linsen eng beieinander können als Gesamtsystem behandelt werden:
             'Setze α₁ = 0° in die Snellius-Gleichung ein und löse nach α₂.',
             'Totalreflexion erfordert einen Mindesteinfallswinkel (den Grenzwinkel) – bei 0° ist das nie erfüllt.',
           ],
-          tags: [],
+          tags: ['brechung', 'snellius', 'senkrechter-einfall'],
           difficulty: 1,
         },
       ],
@@ -377,7 +377,7 @@ wobei **NA = n · sin α** die **numerische Apertur** des Objektivs ist (n = Bre
             'Formel: Δy = λ·L/d – alle Größen in SI-Einheiten (Meter) einsetzen.',
             'Lasse auf Einheiten achten: λ in Metern (1 nm = 10⁻⁹ m), d in Metern.',
           ],
-          tags: [],
+          tags: ['doppelspalt', 'streifenabstand', 'interferenz'],
           difficulty: 2,
         },
         {
@@ -395,7 +395,7 @@ wobei **NA = n · sin α** die **numerische Apertur** des Objektivs ist (n = Bre
             'Destruktiv bedeutet Auslöschung: Berg trifft Tal – was muss der Gangunterschied sein?',
             'Ein halbes λ Versatz bringt die Phasen genau entgegengesetzt.',
           ],
-          tags: [],
+          tags: ['interferenz', 'gangunterschied', 'wellenoptik'],
           difficulty: 1,
         },
         {
@@ -413,7 +413,7 @@ wobei **NA = n · sin α** die **numerische Apertur** des Objektivs ist (n = Bre
             'NA = n·sin α – bei Luft ist n = 1, also NA = sin α.',
             'sin 70° ≈ 0,94 – du kannst sin 60° = 0,866 und sin 90° = 1 als Grenzwerte nutzen.',
           ],
-          tags: [],
+          tags: ['numerische-apertur', 'mikroskop', 'auflösung'],
           difficulty: 2,
         },
         {
@@ -431,7 +431,7 @@ wobei **NA = n · sin α** die **numerische Apertur** des Objektivs ist (n = Bre
             'Formel direkt anwenden: d_min = λ/(2·NA) – Einheiten konsistent halten (nm).',
             'NA = 1,3 ist ein realistischer Wert für Ölimmersionsobjektive.',
           ],
-          tags: [],
+          tags: ['abbe-kriterium', 'auflösungsgrenze', 'mikroskop'],
           difficulty: 2,
         },
         {
@@ -449,7 +449,7 @@ wobei **NA = n · sin α** die **numerische Apertur** des Objektivs ist (n = Bre
             'Interferenz und Beugung sind klassische Welleneigenschaften – welche Option beschreibt das?',
             'Denke daran: Der Photoeffekt beweist den Teilchencharakter, nicht den Wellencharakter.',
           ],
-          tags: [],
+          tags: ['wellencharakter', 'interferenz', 'photoeffekt'],
           difficulty: 1,
         },
         {
@@ -467,7 +467,7 @@ wobei **NA = n · sin α** die **numerische Apertur** des Objektivs ist (n = Bre
             'Δy = λ·L/d – wie ändert sich Δy, wenn λ verdoppelt wird?',
             'Δy ist direkt proportional zu λ bei konstantem L und d.',
           ],
-          tags: [],
+          tags: ['doppelspalt', 'interferenz', 'wellenlänge'],
           difficulty: 2,
         },
         {
@@ -485,7 +485,7 @@ wobei **NA = n · sin α** die **numerische Apertur** des Objektivs ist (n = Bre
             'OCT = Optische Kohärenztomographie – "Kohärenz" ist der Schlüsselbegriff.',
             'Das Prinzip ähnelt dem Ultraschall-Echo, aber mit Licht statt Schall.',
           ],
-          tags: [],
+          tags: ['oct', 'kohärenz', 'interferometrie'],
           difficulty: 3,
         },
       ],
@@ -496,6 +496,7 @@ wobei **NA = n · sin α** die **numerische Apertur** des Objektivs ist (n = Bre
     // ─────────────────────────────────────────────────────────────────────────
     {
       id: 'ph-6-03',
+      diagram: 'lens-imaging',
       title: 'Optische Instrumente',
       content: `# Optische Instrumente
 
@@ -615,7 +616,7 @@ Die **Spaltlampe** ist ein spezielles Auflichtmikroskop mit Spaltbeleuchtung. Si
             'Formel: M = S/f mit S = 25 cm (deutliche Sehweite des Auges).',
             'f = 5 cm einsetzen: M = 25/5 = ?',
           ],
-          tags: [],
+          tags: ['lupe', 'vergrößerung', 'brennweite'],
           difficulty: 1,
         },
         {
@@ -633,7 +634,7 @@ Die **Spaltlampe** ist ein spezielles Auflichtmikroskop mit Spaltbeleuchtung. Si
             'M_ges = M_Obj × M_Ok – Multiplikation, nicht Addition.',
             'Abbe: d_min = λ/(2·NA) – λ in nm einsetzen, Ergebnis in nm.',
           ],
-          tags: [],
+          tags: ['mikroskop', 'vergrößerung', 'ölimmersion'],
           difficulty: 2,
         },
         {
@@ -651,7 +652,7 @@ Die **Spaltlampe** ist ein spezielles Auflichtmikroskop mit Spaltbeleuchtung. Si
             'M = f_Objektiv / f_Okular – kurze Brennweite im Okular, lange im Objektiv.',
             '800/20 = ?',
           ],
-          tags: [],
+          tags: ['teleskop', 'vergrößerung', 'brennweite'],
           difficulty: 1,
         },
         {
@@ -669,7 +670,7 @@ Die **Spaltlampe** ist ein spezielles Auflichtmikroskop mit Spaltbeleuchtung. Si
             'Video- = digitaler Bildgeber am Ende; Faseroptik = Bildübertragung durch Faserbündel.',
             'CCD ist ein lichtempfindlicher Chip, kein Faserbündel.',
           ],
-          tags: [],
+          tags: ['endoskopie', 'videoendoskop', 'faseroptik'],
           difficulty: 2,
         },
         {
@@ -687,7 +688,7 @@ Die **Spaltlampe** ist ein spezielles Auflichtmikroskop mit Spaltbeleuchtung. Si
             'Spaltlampe = Biomikroskop mit Spaltbeleuchtung – was sieht man damit besonders gut?',
             'Die transparenten Augenstrukturen wie Hornhaut und Linse können optisch "geschnitten" werden.',
           ],
-          tags: [],
+          tags: ['spaltlampe', 'augenheilkunde', 'biomikroskopie'],
           difficulty: 2,
         },
         {
@@ -705,7 +706,7 @@ Die **Spaltlampe** ist ein spezielles Auflichtmikroskop mit Spaltbeleuchtung. Si
             'M_ok = S/f_ok = 25 cm / f_ok (f_ok in cm).',
             'M_ges = M_ob × M_ok – Multiplikation der beiden Einzelvergrößerungen.',
           ],
-          tags: [],
+          tags: ['mikroskop', 'gesamtvergrößerung', 'okular'],
           difficulty: 2,
         },
         {
@@ -723,7 +724,7 @@ Die **Spaltlampe** ist ein spezielles Auflichtmikroskop mit Spaltbeleuchtung. Si
             'Konfokale = mit Fokus; die Lochblende blockt Licht aus anderen Tiefen.',
             'Das Ergebnis sind optische Schnittbilder ohne physische Schnitte – was ermöglicht das?',
           ],
-          tags: [],
+          tags: ['konfokalmikroskopie', 'lochblende', 'optischer-schnitt'],
           difficulty: 3,
         },
       ],
@@ -734,6 +735,7 @@ Die **Spaltlampe** ist ein spezielles Auflichtmikroskop mit Spaltbeleuchtung. Si
     // ─────────────────────────────────────────────────────────────────────────
     {
       id: 'ph-6-04',
+      diagram: 'lens-imaging',
       title: 'Optik des Auges und Sehfehler',
       content: `# Optik des Auges und Sehfehler
 
@@ -876,7 +878,7 @@ Das **Glaukom** (grüner Star) ist eine Erkrankung, bei der erhöhter intraokula
             'Fernpunkt endlich → Myopie. Fernpunkt = virtuelle Bildweite der Korrekturlinse (negativ, weil auf der Eingangsseite).',
             'D = 1/f_korrektur = 1/(–Fernpunktdistanz in Metern).',
           ],
-          tags: [],
+          tags: ['myopie', 'fernpunkt', 'zerstreuungslinse'],
           difficulty: 2,
         },
         {
@@ -894,7 +896,7 @@ Das **Glaukom** (grüner Star) ist eine Erkrankung, bei der erhöhter intraokula
             'Merkhilfe: Ziliarmuskel kontrahiert RINGFÖRMIG → Ring wird enger → Zonulafasern erschlaffen → Linse wölbt sich.',
             'Die Hornhaut ändert ihre Krümmung nicht – nur die Linse ist aktiv variierbar.',
           ],
-          tags: [],
+          tags: ['akkommodation', 'ziliarmuskel', 'augenlinse'],
           difficulty: 2,
         },
         {
@@ -912,7 +914,7 @@ Das **Glaukom** (grüner Star) ist eine Erkrankung, bei der erhöhter intraokula
             'Alterndes Auge: welche Struktur verliert ihre Elastizität?',
             'Fernsicht normal, Nahsicht schlechter mit Alter = Presbyopie (nicht Myopie).',
           ],
-          tags: [],
+          tags: ['presbyopie', 'altersweitsichtigkeit', 'linsenelastizität'],
           difficulty: 1,
         },
         {
@@ -930,7 +932,7 @@ Das **Glaukom** (grüner Star) ist eine Erkrankung, bei der erhöhter intraokula
             'sph positiv → Sammellinse → Hyperopie/Presbyopie. cyl-Wert → Astigmatismus.',
             'Achsangabe ist immer ein Zeichen für Astigmatismus-Korrektur.',
           ],
-          tags: [],
+          tags: ['brillenrezept', 'astigmatismus', 'hyperopie'],
           difficulty: 2,
         },
         {
@@ -948,7 +950,7 @@ Das **Glaukom** (grüner Star) ist eine Erkrankung, bei der erhöhter intraokula
             'LASIK = Laser-Operation – welcher Laser, und was tut er mit der Hornhaut?',
             'Excimer-Laser: 193 nm UV-Licht, Photoablation – kein Wärme, hohe Präzision.',
           ],
-          tags: [],
+          tags: ['lasik', 'excimer-laser', 'hornhaut'],
           difficulty: 2,
         },
         {
@@ -966,7 +968,7 @@ Das **Glaukom** (grüner Star) ist eine Erkrankung, bei der erhöhter intraokula
             'Myope Fernpunkt: z. B. bei 33 cm. Lesedistanz: ~33–40 cm. Was folgt daraus für die nötige Akkommodation?',
             'Presbyopie = Akkommodationsverlust für Nähe. Was hilft, wenn der Fokus schon nah ist?',
           ],
-          tags: [],
+          tags: ['myopie', 'presbyopie', 'akkommodation'],
           difficulty: 3,
         },
         {
@@ -984,7 +986,7 @@ Das **Glaukom** (grüner Star) ist eine Erkrankung, bei der erhöhter intraokula
             'Astigmatismus = ungleichmäßige Krümmung → verschiedene Fokuspunkte je nach Meridian.',
             'Zylinderlinse bricht nur in einer Richtung – ideal für asymmetrische Krümmungsfehler.',
           ],
-          tags: [],
+          tags: ['astigmatismus', 'zylinderlinse', 'hornhautkrümmung'],
           difficulty: 2,
         },
       ],

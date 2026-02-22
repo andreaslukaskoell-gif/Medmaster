@@ -12,6 +12,7 @@ export const mathKap3: Kapitel = {
     // ──────────────────────────────────────────────────────────────
     {
       id: 'ma-3-01',
+      diagram: 'coordinate-system',
       title: 'Ebene Figuren — Flächen und Umfang',
       content: `# Ebene Figuren — Flächen und Umfang
 
@@ -153,7 +154,7 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
             'Die Trapezformel verwendet den Mittelwert der beiden parallelen Seiten.',
             'A = ½ · (Summe der parallelen Seiten) · Höhe.',
           ],
-          tags: [],
+          tags: ['trapez', 'fläche', 'geometrie'],
           difficulty: 1,
         },
         {
@@ -171,7 +172,7 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
             '45° ist genau ein Achtel des Vollkreises (360° / 45° = 8).',
             'Bogenlänge = Anteil des Vollkreisumfangs entsprechend dem Winkelanteil.',
           ],
-          tags: [],
+          tags: ['kreissektor', 'bogenlänge', 'kreisgeometrie'],
           difficulty: 2,
         },
         {
@@ -189,7 +190,7 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
             'Flächen skalieren mit k², nicht mit k.',
             'k = 4 bedeutet k² = 16 für die Fläche.',
           ],
-          tags: [],
+          tags: ['ähnlichkeit', 'skalierung', 'flächenverhältnis'],
           difficulty: 2,
         },
         {
@@ -207,7 +208,7 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
             'Für Heron: s = (a+b+c)/2; alle drei Seiten sind gleich lang.',
             'A = √(s · (s−a)³) bei gleichseitigem Dreieck.',
           ],
-          tags: [],
+          tags: ['heron', 'dreieck', 'fläche'],
           difficulty: 3,
         },
         {
@@ -225,7 +226,7 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
             'Gesamtdosis = Dosierung × KOF (die KOF ist gegeben).',
             '50 mg/m² × 1,84 m² = ?',
           ],
-          tags: [],
+          tags: ['kof', 'zytostatikum', 'dosierung'],
           difficulty: 1,
         },
         {
@@ -243,7 +244,7 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
             'Setze b als Breite und l = 3b als Länge in die Umfangsformel ein.',
             'U = 2(l+b) = 2(3b+b) = 8b; löse nach b auf und berechne dann A = l·b = 3b².',
           ],
-          tags: [],
+          tags: ['rechteck', 'umfang', 'gleichung'],
           difficulty: 2,
         },
         {
@@ -261,7 +262,7 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
             'Flächen skalieren quadratisch: k → k² für Flächen.',
             'Alle Kreise sind untereinander ähnlich; alle gleichseitigen Dreiecke sind untereinander ähnlich.',
           ],
-          tags: [],
+          tags: ['ähnlichkeit', 'ähnlichkeitsfaktor', 'geometrie'],
           difficulty: 2,
         },
       ],
@@ -403,7 +404,7 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
             'Gesamtoberfläche = Mantelfläche + 2 × Grundkreisfläche.',
             'O = 2πr·h + 2·π·r² = 2πr(h + r).',
           ],
-          tags: [],
+          tags: ['zylinder', 'oberfläche', 'körpergeometrie'],
           difficulty: 2,
         },
         {
@@ -421,7 +422,7 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
             'Ellipsoid-Formel: V = (π/6) · a · b · c ≈ 0,524 · a · b · c.',
             'Zuerst das Produkt a · b · c berechnen, dann mit π/6 multiplizieren.',
           ],
-          tags: [],
+          tags: ['ellipsoid', 'tumorvolumen', 'ct'],
           difficulty: 2,
         },
         {
@@ -439,7 +440,7 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
             'Hagen-Poiseuille: Fluss ~ r⁴.',
             'r wird halbiert → r⁴ wird (1/2)⁴ = 1/16 des ursprünglichen Wertes.',
           ],
-          tags: [],
+          tags: ['hagen-poiseuille', 'stenose', 'blutfluss'],
           difficulty: 2,
         },
         {
@@ -457,7 +458,7 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
             'V = (4/3)·π·r³ nach r³ auflösen: r³ = 3V / (4π).',
             '6³ = 216 — welche glatten Kubikzahlen kennst du?',
           ],
-          tags: [],
+          tags: ['kugel', 'volumen', 'wurzel'],
           difficulty: 2,
         },
         {
@@ -475,7 +476,7 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
             'Mantellinie s = √(r² + h²) nach dem Satz des Pythagoras.',
             'Erkenne das pythagoräische Tripel: 3² + 4² = ?',
           ],
-          tags: [],
+          tags: ['kegel', 'pythagoras', 'mantellinie'],
           difficulty: 1,
         },
         {
@@ -493,7 +494,7 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
             'Berechne zuerst die Kantensumme des Quaders (12 Kanten: 4 von jeder Richtung).',
             'Ein Würfel mit dieser Kantensumme hat die Kantenlänge a = Kantensumme/12.',
           ],
-          tags: [],
+          tags: ['quader', 'würfel', 'volumenvergleich'],
           difficulty: 3,
         },
         {
@@ -511,7 +512,7 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
             'Diffusionsstrom ist proportional zur Austauschfläche (Ficksches Gesetz).',
             'Kleine Alveolen haben ein großes Oberfläche-Volumen-Verhältnis (O/V = 3/r).',
           ],
-          tags: [],
+          tags: ['lunge', 'gasaustausch', 'oberfläche-volumen'],
           difficulty: 3,
         },
       ],
@@ -674,7 +675,7 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
             'd = √((Δx)² + (Δy)²); berechne Δx = x₂ − x₁ und Δy = y₂ − y₁.',
             'Erkenne das pythagoräische Tripel (3, 4, 5).',
           ],
-          tags: [],
+          tags: ['abstandsformel', 'koordinaten', 'pythagoras'],
           difficulty: 1,
         },
         {
@@ -692,7 +693,7 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
             'm = (y₂−y₁)/(x₂−x₁); bei x = 0 (Punkt A) ist b direkt ablesbar.',
             'Steigung = „Anstieg pro Einheit in x-Richtung".',
           ],
-          tags: [],
+          tags: ['gerade', 'steigung', 'lineare-funktion'],
           difficulty: 1,
         },
         {
@@ -710,7 +711,7 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
             'Kreisgleichung: (x − x₀)² + (y − y₀)² = r²; r² = 16, nicht r = 16.',
             'x₀ = −2 führt zu (x − (−2))² = (x + 2)².',
           ],
-          tags: [],
+          tags: ['kreis', 'kreisgleichung', 'koordinaten'],
           difficulty: 2,
         },
         {
@@ -728,7 +729,7 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
             'x = r · cos φ; y = r · sin φ.',
             'r = 5, cos 53° ≈ 0,6, sin 53° ≈ 0,8.',
           ],
-          tags: [],
+          tags: ['polarkoordinaten', 'koordinatenumrechnung', 'trigonometrie'],
           difficulty: 2,
         },
         {
@@ -746,7 +747,7 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
             'Für Senkrechtstehen: m₁ · m₂ = −1.',
             '3 · (−1/3) = ?',
           ],
-          tags: [],
+          tags: ['geraden', 'senkrecht', 'steigung'],
           difficulty: 2,
         },
         {
@@ -764,7 +765,7 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
             'Bias = Mittelwert aller (A − B)-Differenzen.',
             'Berechne zuerst alle fünf Differenzen, dann den Durchschnitt.',
           ],
-          tags: [],
+          tags: ['bland-altman', 'bias', 'methodenvergleich'],
           difficulty: 3,
         },
         {
@@ -782,7 +783,7 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
             'Setze x = 6 in y = 8x − 10 ein.',
             '8 × 6 = 48; 48 − 10 = ?',
           ],
-          tags: [],
+          tags: ['regression', 'cholesterin', 'lineare-funktion'],
           difficulty: 1,
         },
       ],
@@ -793,6 +794,7 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
     // ──────────────────────────────────────────────────────────────
     {
       id: 'ma-3-04',
+      diagram: 'vector-addition',
       title: 'Vektoren und räumliche Geometrie',
       content: `# Vektoren und räumliche Geometrie
 
@@ -937,7 +939,7 @@ Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren)
             'Vektoren werden komponentenweise addiert: (a₁+b₁, a₂+b₂, a₃+b₃).',
             'x: 2+(−1) = ?; y: −1+4 = ?; z: 3+2 = ?',
           ],
-          tags: [],
+          tags: ['vektoraddition', 'komponentenweise', 'vektor'],
           difficulty: 1,
         },
         {
@@ -955,7 +957,7 @@ Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren)
             'a · b = a₁b₁ + a₂b₂ + a₃b₃.',
             '3·1 = 3; 0·5 = 0; (−2)·3 = −6; Summe?',
           ],
-          tags: [],
+          tags: ['skalarprodukt', 'vektor', 'algebra'],
           difficulty: 1,
         },
         {
@@ -973,7 +975,7 @@ Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren)
             'a · b = |a| · |b| · cos θ; wenn das Produkt = 0, was muss gelten?',
             'cos 90° = 0.',
           ],
-          tags: [],
+          tags: ['skalarprodukt', 'orthogonalität', 'senkrecht'],
           difficulty: 2,
         },
         {
@@ -991,7 +993,7 @@ Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren)
             '|M| = |r| · |F| · sin θ; bei senkrechter Kraft ist θ = 90°, sin 90° = 1.',
             '0,05 m × 200 N = ?',
           ],
-          tags: [],
+          tags: ['drehmoment', 'kreuzprodukt', 'biomechanik'],
           difficulty: 2,
         },
         {
@@ -1009,7 +1011,7 @@ Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren)
             'Senkrecht ↔ Skalarprodukt n · v = 0.',
             'Berechne n · v für jeden Optionsvektor.',
           ],
-          tags: [],
+          tags: ['skalarprodukt', 'orthogonalität', 'vektor'],
           difficulty: 2,
         },
         {
@@ -1027,7 +1029,7 @@ Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren)
             'arctan(6/6) = arctan(1) = 45°.',
             'Normotyp: Herzachse zwischen 0° und +90°.',
           ],
-          tags: [],
+          tags: ['ekg', 'herzachse', 'normotyp'],
           difficulty: 3,
         },
         {
@@ -1045,7 +1047,7 @@ Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren)
             '|a| = √(a₁² + a₂² + a₃²); a₁ = 0.',
             '3² + 4² = 9 + 16 = 25; √25 = ?',
           ],
-          tags: [],
+          tags: ['vektorbetrag', 'pythagoras', 'vektor'],
           difficulty: 1,
         },
       ],

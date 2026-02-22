@@ -9,6 +9,7 @@ export const physKap5: Kapitel = {
   unterkapitel: [
     {
       id: 'ph-5-01',
+      diagram: 'circuit',
       title: 'Elektrische Ladung, Feld und Coulomb-Gesetz',
       content: `## Elektrische Ladung
 
@@ -109,7 +110,7 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
             'Ungleichnamige Ladungen (+ und −) ziehen sich immer an.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['coulomb', 'elektrostatik', 'ladung'],
         },
         {
           question: 'Das elektrische Feld im Innern eines metallischen Hohlkörpers (Faraday-Käfig) beträgt:',
@@ -127,7 +128,7 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
             'Stichwort Influenz: Elektronen verschieben sich bis zum Kräftegleichgewicht.',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['faraday-käfig', 'elektrostatik', 'influenz'],
         },
         {
           question: 'Welche Einheit ist äquivalent zu V/m (Volt pro Meter)?',
@@ -145,7 +146,7 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
             '1 V = 1 J/C = 1 N·m/C → 1 V/m = 1 N·m/(C·m) = 1 N/C.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['feldstärke', 'einheiten', 'elektrisches-feld'],
         },
         {
           question: 'Ein Plattenkondensator hat einen Plattenabstand von 2 mm und liegt an einer Spannung von 400 V. Wie groß ist das elektrische Feld zwischen den Platten?',
@@ -163,7 +164,7 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
             'd = 2 mm = 2 × 10⁻³ m. Teile die Spannung durch den Abstand.',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['plattenkondensator', 'elektrisches-feld', 'spannung'],
         },
         {
           question: 'Warum sind elektrostatische Wechselwirkungen zwischen Ionen in wässriger Lösung viel schwächer als im Vakuum?',
@@ -181,7 +182,7 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
             'Polare Moleküle wie Wasser richten sich im elektrischen Feld aus und schwächen es ab.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['permittivität', 'wasser', 'ionenlösung'],
         },
         {
           question: 'Das Ruhemembranpotential einer Nervenzelle beträgt −70 mV. Bei welchem Wert öffnen sich spannungsgesteuerte Na⁺-Kanäle typischerweise (Schwellenpotential)?',
@@ -199,7 +200,7 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
             'Spannungsgesteuerte Na⁺-Kanäle brauchen eine Depolarisation (weniger negativ) zum Öffnen.',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['membranpotential', 'aktionspotential', 'ionenkanäle'],
         },
         {
           question: 'Welcher Effekt erklärt, warum Ladungen auf leitenden Körpern bevorzugt an spitzen Stellen (geringer Krümmungsradius) konzentriert sind?',
@@ -217,7 +218,7 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
             'Denke an den Blitzableiter: Warum ist er spitz?',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['spitzenentladung', 'blitzableiter', 'ladungsverteilung'],
         },
         {
           question: 'Welche der folgenden Größen beschreibt die potentielle Energie pro Ladungseinheit an einem Punkt im elektrischen Feld?',
@@ -235,7 +236,7 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
             'Einheit des Potentials: J/C = V (Volt).',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['elektrisches-potential', 'spannung', 'potential'],
         },
       ],
     },
@@ -349,7 +350,7 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
             'Alternativ: Berechne erst I = U/R, dann P = U·I.',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['leistung', 'ohmsches-gesetz', 'widerstand'],
         },
         {
           question: 'Welche Aussage zum spezifischen Widerstand von Körpergewebe im Vergleich zu Kupfer ist korrekt?',
@@ -367,7 +368,7 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
             'Gewebe leitet ionisch (viel langsamer und schwächer als metallische Leitung).',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['spezifischer-widerstand', 'körpergewebe', 'leitfähigkeit'],
         },
         {
           question: 'Eine Nervenfaser mit Myelinisierung leitet Impulse schneller als eine unmyelinisierte. Was ist der physikalische Grund?',
@@ -385,7 +386,7 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
             'Saltatorisch = springend. Wo springt das Aktionspotential hin?',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['myelin', 'saltatorische-erregungsleitung', 'ranvier'],
         },
         {
           question: 'Wie ändert sich der Widerstand eines Drahtes, wenn man ihn bei gleichem Volumen doppelt so lang zieht (Querschnitt halbiert sich dabei)?',
@@ -403,7 +404,7 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
             'R = ρ·L/A. Setze L_neu = 2L und A_neu = A/2 ein.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['widerstand', 'geometrie', 'querschnitt'],
         },
         {
           question: 'Welche Stromstärke ist ab ca. 100 mA durch den menschlichen Körper typischerweise lebensbedrohlich?',
@@ -421,7 +422,7 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
             '10 mA → Loslasssperre, 100 mA → Kammerflimmern, 1 A → Verbrennung.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['kammerflimmern', 'elektrounfall', 'strom'],
         },
         {
           question: 'Was beschreibt das Nernst-Potential für ein Ion an einer biologischen Membran?',
@@ -439,7 +440,7 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
             'Gleichgewicht: elektrischer Drift = Diffusion. Kein Nettostrom mehr für dieses Ion.',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['nernst-potential', 'membranpotential', 'elektrochemie'],
         },
         {
           question: 'Welche der folgenden medizinischen Anwendungen nutzt primär den Effekt der Jouleschen Wärme (I²·R)?',
@@ -457,7 +458,7 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
             'Ablation = Veröden von Gewebe. Welche physikalische Energie steckt dahinter?',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['ablation', 'joulesche-wärme', 'elektrochirurgie'],
         },
         {
           question: 'Bei einem Supraleiter verschwindet der elektrische Widerstand unterhalb der kritischen Temperatur T_c. Welche Konsequenz hat das für MRT-Scanner?',
@@ -475,7 +476,7 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
             'Einmal eingekoppelter Strom bleibt ohne Verlust — deshalb persistenter Strom.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['supraleitung', 'mrt', 'widerstand'],
         },
       ],
     },
@@ -600,7 +601,7 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
             'Parallelwiderstand ist immer kleiner als der kleinste Einzelwiderstand. Welche Antwort ist < 10 Ω?',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['parallelschaltung', 'widerstand', 'schaltkreis'],
         },
         {
           question: 'Ein Kondensator (C = 100 µF) wird über einen Widerstand (R = 1000 Ω) geladen. Nach welcher Zeit ist er auf ca. 63 % seiner Endspannung geladen?',
@@ -618,7 +619,7 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
             '100 µF = 100 × 10⁻⁶ F = 10⁻⁴ F. 1000 × 10⁻⁴ = 0,1 s = 100 ms.',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['kondensator', 'zeitkonstante', 'rc-glied'],
         },
         {
           question: 'Welches Kirchhoffsche Gesetz basiert physikalisch auf der Energieerhaltung?',
@@ -636,7 +637,7 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
             'Beim Umlauf durch eine Masche ist die Gesamtspannung null — was steckt dahinter?',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['kirchhoff', 'maschenregel', 'knotenregel'],
         },
         {
           question: 'In welchem Schaltungselement fließt bei Gleichstrom (DC, f = 0) kein Strom im stationären Zustand?',
@@ -654,7 +655,7 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
             'Nach dem Laden: U_C = U_Quelle → keine Potentialdifferenz → kein Strom.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['kondensator', 'gleichstrom', 'reaktanz'],
         },
         {
           question: 'Ein Defibrillator wird auf 2000 V geladen (C = 150 µF). Welche Energie ist gespeichert?',
@@ -672,7 +673,7 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
             '½ × 150 × 10⁻⁶ × 4 × 10⁶ = ½ × 600 = 300 J.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['defibrillator', 'kondensator', 'energie'],
         },
         {
           question: 'Die Wheatstone-Brücke ist im Gleichgewicht (kein Strom durch das Galvanometer), wenn gilt:',
@@ -690,7 +691,7 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
             'Kreuzprodukt: R₁·R₄ = R₂·R₃.',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['wheatstone-brücke', 'spannungsteiler', 'widerstandsmessung'],
         },
         {
           question: 'Warum modelliert man die Zellmembran als RC-Parallelglied statt als reinen Widerstand?',
@@ -708,7 +709,7 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
             'Ionenkanäle lassen Ionen durch → parallele Widerstände/Leitfähigkeiten.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['zellmembran', 'rc-modell', 'membrankapazität'],
         },
         {
           question: 'Welche Kapazität hat ein Plattenkondensator mit A = 0,01 m², d = 1 mm und εᵣ = 4?',
@@ -726,12 +727,13 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
             'Zähler: 8,854×10⁻¹² × 4 × 0,01 = 3,54×10⁻¹³. Nenner: 10⁻³. Division ergibt C in Farad.',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['kapazität', 'plattenkondensator', 'permittivität'],
         },
       ],
     },
     {
       id: 'ph-5-04',
+      diagram: 'em-spectrum',
       title: 'Magnetismus und elektromagnetische Induktion',
       content: `## Grundlagen des Magnetismus
 
@@ -843,7 +845,7 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
             'Zähler: 1,67×10⁻²⁷ × 10⁶ = 1,67×10⁻²¹. Nenner: 1,6×10⁻¹⁹ × 0,5 = 8×10⁻²⁰.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['zyklotronradius', 'lorentz-kraft', 'magnetfeld'],
         },
         {
           question: 'Was beschreibt die Lenzsche Regel im Zusammenhang mit der elektromagnetischen Induktion?',
@@ -861,7 +863,7 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
             'Lenz: Induktion ist immer bremsend — sie wirkt der Ursache entgegen.',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['lenzsche-regel', 'induktion', 'energieerhaltung'],
         },
         {
           question: 'Bei welcher Larmor-Frequenz präzedieren ¹H-Protonen in einem MRT-Gerät mit B₀ = 3 T? (γ/2π = 42,58 MHz/T)',
@@ -879,7 +881,7 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
             '42,58 MHz/T × 3 T = ?',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['larmor-frequenz', 'mrt', 'kernspinresonanz'],
         },
         {
           question: 'Welcher Effekt erklärt das charakteristische Klopfen und Hämmern während einer MRT-Untersuchung?',
@@ -897,7 +899,7 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
             'Gradientenspulen werden schnell ein- und ausgeschaltet → wechselnde Kraft → Vibration → Schall.',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['mrt-klopfen', 'lorentz-kraft', 'gradientenspulen'],
         },
         {
           question: 'Ein Transformator hat 200 Windungen in der Primärspule und 2000 in der Sekundärspule. Bei 230 V Primärspannung: Welche Sekundärspannung ergibt sich (idealer Transformator)?',
@@ -915,7 +917,7 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
             '230 V × (2000/200) = 230 × 10 = ?',
           ],
           difficulty: 1,
-          tags: [],
+          tags: ['transformator', 'induktion', 'windungszahl'],
         },
         {
           question: 'Die Transkranielle Magnetstimulation (TMS) nutzt welches physikalische Prinzip zur Nervenreizung?',
@@ -933,7 +935,7 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
             'Faraday: Ein zeitlich veränderliches Magnetfeld induziert ein elektrisches Feld — auch ohne Leiter.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['tms', 'faraday', 'neurostimulation'],
         },
         {
           question: 'Welche Aussage zum elektromagnetischen Spektrum in der Medizin ist korrekt?',
@@ -951,7 +953,7 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
             'Ionisierende Strahlung: E über 12 eV → UV-C, Röntgen, Gamma. MRT: Radiowellen → nicht ionisierend.',
           ],
           difficulty: 2,
-          tags: [],
+          tags: ['em-spektrum', 'radiowellen', 'ionisierende-strahlung'],
         },
         {
           question: 'Welchen T₁- vs. T₂-Bildkontrast würde man für freies Wasser (z. B. Liquor) im MRT erwarten?',
@@ -969,7 +971,7 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
             'Langes T₁ → wenig Signal in T₁-Bild (dunkel). Langes T₂ → viel Signal in T₂-Bild (hell).',
           ],
           difficulty: 3,
-          tags: [],
+          tags: ['mrt', 't1-t2-kontrast', 'relaxation'],
         },
       ],
     },
