@@ -1,6 +1,6 @@
 // =============================================================================
 // tvTextsExpanded.ts - MedAT Textverständnis (TV) Expanded Data
-// 5 Sets x 5 Texte x 5 Fragen pro Text = 125 Fragen (Ziel)
+// 5 Sets x 5 Texte x 12 Fragen pro Set = 60 Fragen insgesamt
 // =============================================================================
 
 export interface TVTextMC {
@@ -95,6 +95,34 @@ const set1: TVTextSet = {
           explanation:
             "Der Text besagt: \u201EKonzentration, Reaktionszeit und Entscheidungsfähigkeit nehmen bereits nach einer einzigen Nacht mit weniger als sechs Stunden Schlaf messbar ab.\u201C",
         },
+        {
+          id: "tv1-t1-q4",
+          question: "Welche Quellen für Mikroplastik im Meer nennt der Text?",
+          options: [
+            "Nur industrielle Abwässer aus Kunststofffabriken",
+            "Ausschließlich der Reifenabrieb von Kraftfahrzeugen",
+            "Zerfall größerer Kunststoffteile durch UV-Strahlung und mechanische Einwirkung sowie synthetische Textilfasern beim Waschen",
+            "Vor allem Kosmetikprodukte mit Microbeads und Kläranlagenausflüsse",
+            "Primär landwirtschaftliche Düngemittel mit Kunststoffzusatzstoffen",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text nennt als Quellen: „Große Kunststoffteile zerfallen durch UV-Strahlung und mechanische Einwirkung in immer kleinere Partikel. Zusätzlich gelangen synthetische Fasern aus Textilien beim Waschen ins Abwasser.“",
+        },
+        {
+          id: "tv1-t1-q5",
+          question: "Welche Auswirkung von Mikroplastik auf Meerestiere beschreibt der Text?",
+          options: [
+            "Mikroplastik führt bei Fischen zu einer erhöhten Fortpflanzungsrate",
+            "Meerestiere verwechseln Mikroplastik mit Nahrung, was zu Verletzungen des Verdauungstrakts und Anreicherung von Schadstoffen führt",
+            "Mikroplastik verbessert die Schwimmfähigkeit von Meerestieren durch geringere Wasserreibung",
+            "Fische nutzen Mikroplastikpartikel als Orientierungshilfe bei der Migration",
+            "Mikroplastik hat laut Text keine nachgewiesene Wirkung auf Meerestiere",
+          ],
+          correctOption: 1,
+          explanation:
+            "Im Text heißt es: „Meerestiere verwechseln die winzigen Partikel häufig mit Nahrung. Dies kann zu Verletzungen des Verdauungstrakts führen und Schadstoffe, die sich an Mikroplastik anlagern, können sich in der Nahrungskette anreichern.“",
+        }
       ],
     },
     {
@@ -157,6 +185,34 @@ const set1: TVTextSet = {
           explanation:
             "Der Text besagt: \u201ESie war auch ein Kanal für den Austausch von Ideen, Religionen, Technologien und kulturellen Praktiken.\u201C",
         },
+        {
+          id: "tv1-t2-q4",
+          question: "Wie weißen Astronomen laut Text nach, dass Dunkle Materie existiert, ohne sie direkt zu sehen?",
+          options: [
+            "Sie haben Dunkle Materie mit Hilfe von Röntgensatelliten fotografiert",
+            "Sie messen die Wärmeabstrahlung der Dunklen Materie im Infrarotbereich",
+            "Sie beobachten ihre Gravitationswirkung auf sichtbare Materie, z. B. durch die Rotation von Galaxien und Gravitationslinseneffekte",
+            "Sie analysieren die chemische Zusammensetzung des Universums durch Spektroskopie",
+            "Sie berechnen die Dunkle Materie anhand der kosmischen Hintergrundstrahlung direkt",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text erklärt: „Obwohl Dunkle Materie nicht direkt beobachtet werden kann, zeigen ihre Gravitationswirkungen – etwa in der Rotationsgeschwindigkeit von Galaxien oder dem Gravitationslinseneffekt – dass sie existieren muss.“",
+        },
+        {
+          id: "tv1-t2-q5",
+          question: "Was sagt der Text über den Anteil Dunkler Materie am Universum?",
+          options: [
+            "Dunkle Materie macht etwa 5 Prozent des Universums aus",
+            "Dunkle Materie macht etwa 27 Prozent des Universums aus, während gewöhnliche Materie nur etwa 5 Prozent ausmacht",
+            "Dunkle Materie und Dunkle Energie zusammen machen etwa 27 Prozent aus",
+            "Dunkle Materie macht über 70 Prozent des Universums aus",
+            "Der genaue Anteil Dunkler Materie ist noch vollständig unbekannt",
+          ],
+          correctOption: 1,
+          explanation:
+            "Im Text steht: „Wissenschaftler schätzen, dass Dunkle Materie etwa 27 Prozent des gesamten Universums ausmacht, während die gewöhnliche, sichtbare Materie nur etwa 5 Prozent umfasst.“",
+        }
       ],
     },
     {
@@ -201,6 +257,48 @@ const set1: TVTextSet = {
           explanation:
             "Im Text wird der Einspänner beschrieben als \u201Eein Mokka im Glas mit Schlagobers\u201C.",
         },
+        {
+          id: "tv1-t3-q3",
+          question: "Wie funktioniert CRISPR-Cas9 laut Text?",
+          options: [
+            "Ein Enzym durchsucht das Erbgut zufällig und entfernt fehlerhafte Abschnitte",
+            "Ein RNA-Molekül führt das Cas9-Enzym zu einer bestimmten DNA-Sequenz, wo es den DNA-Strang durchtrennt",
+            "Ein Protein bindet an die Zellmembran und verhindert Mutationen",
+            "Ein Virus trägt gesunde Gene in die Zelle ein und ersetzt kranke Abschnitte",
+            "Ein chemischer Wirkstoff löst die Wasserstoffbrückenbindungen der DNA auf",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text erklärt: „Ein RNA-Molekül führt das Cas9-Enzym zu einer ganz bestimmten Stelle im Erbgut, wo es den DNA-Strang präzise durchtrennt.“",
+        },
+        {
+          id: "tv1-t3-q4",
+          question: "Welche medizinische Anwendung von CRISPR wird im Text als Beispiel genannt?",
+          options: [
+            "Die Heilung von Krebs durch Entfernung von Tumorzellen",
+            "Die Behandlung von Alzheimer durch Reparatur von Nervenzellen",
+            "Die Korrektur von Erbkrankheiten wie Sichelzellanämie oder Mukoviszidose",
+            "Die Entwicklung von Impfstoffen gegen Viruserkrankungen",
+            "Die Verbesserung der Insulinproduktion bei Diabetes",
+          ],
+          correctOption: 2,
+          explanation:
+            "Im Text steht: „In der Medizin könnte CRISPR-Cas9 genutzt werden, um Erbkrankheiten wie Sichelzellanämie oder Mukoviszidose zu heilen, indem fehlerhafte Genabschnitte korrigiert werden.“",
+        },
+        {
+          id: "tv1-t3-q5",
+          question: "Welche ethische Bedenken gegenüber CRISPR werden im Text geäußert?",
+          options: [
+            "Die Technologie ist zu teuer und damit nicht für alle Menschen zugänglich",
+            "Eingriffe in die Keimbahn könnten vererbbare Veränderungen erzeugen und es bestehe das Risiko sogenannter Designer-Babys",
+            "Die Methode ist zu unpräzise und erzeugt zu viele unbeabsichtigte Mutationen",
+            "CRISPR könnte von Regierungen zur Massenmanipulation der Bevölkerung eingesetzt werden",
+            "Die Technologie zerstört die Biodiversität durch genetisch veränderte Organismen",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text formuliert als ethische Bedenken: „Insbesondere Eingriffe in die Keimbahn – also in Eizellen, Spermien oder frühe Embryonen – sind umstritten, da solche Veränderungen an alle Nachkommen weitergegeben werden. Kritiker warnen vor dem Risiko sogenannter Designer-Babys.“",
+        }
       ],
     },
     {
@@ -251,6 +349,48 @@ const set1: TVTextSet = {
           explanation:
             "Im Text heißt es: \u201EJeder Satellit sendet kontinuierlich Signale aus, die seine genaue Position und die aktülle Uhrzeit enthalten.\u201C",
         },
+        {
+          id: "tv1-t4-q3",
+          question: "Was bezeichnet der Text als 'Trilateration'?",
+          options: [
+            "Die Berechnung der Satellitengeschwindigkeit aus der Erdumlaufbahn",
+            "Das Prinzip, durch Messung der Signallaufzeit zu mindestens vier Satelliten die Position zu bestimmen",
+            "Die Synchronisierung aller 24 Satelliten untereinander",
+            "Den Vorgang der Signalverstärkung durch DGPS",
+            "Die Umwandlung von Radiosignalen in GPS-Koordinaten",
+          ],
+          correctOption: 1,
+          explanation:
+            "Im Text wird Trilateration als das Prinzip der Positionsbestimmung beschrieben, bei dem der Empfänger Signale von mindestens vier Satelliten empfängt und daraus Längengrad, Breitengrad und Höhe berechnet.",
+        },
+        {
+          id: "tv1-t4-q4",
+          question: "Auf welche Genauigkeit kann GPS laut Text durch DGPS verbessert werden?",
+          options: [
+            "Auf wenige Millimeter",
+            "Auf wenige Zentimeter",
+            "Auf wenige Dezimeter",
+            "Auf wenige Meter",
+            "DGPS verbessert die Genauigkeit nicht weiter",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text besagt: „kann jedoch durch ergänzende Systeme wie DGPS (Differential GPS) auf wenige Zentimeter verbessert werden.“",
+        },
+        {
+          id: "tv1-t4-q5",
+          question: "Welches ursprüngliche Entwicklungsziel von GPS wird im Text genannt?",
+          options: [
+            "Die zivile Nutzung für Autonavigation",
+            "Die Vermessung von Kontinenten und Ozeanen",
+            "Die militärische Nutzung durch das US-Militär",
+            "Die Wettervorhersage durch Satellitendaten",
+            "Die Erforschung des Weltraums",
+          ],
+          correctOption: 2,
+          explanation:
+            "Im Text steht: „das ursprünglich vom US-Militär entwickelt wurde und seit den 1990er-Jahren auch zivil genutzt werden kann.“",
+        }
       ],
     },
     {
@@ -301,6 +441,48 @@ const set1: TVTextSet = {
           explanation:
             "Im Text heißt es: \u201EDieses Verhalten wird mit Empathie in Verbindung gebracht \u2013 Studien zeigen, dass ansteckendes Gähnen bei Menschen mit höherer Empathiefähigkeit häufiger auftritt.\u201C",
         },
+        {
+          id: "tv1-t5-q3",
+          question: "Bei welchen Personengruppen tritt ansteckendes Gähnen laut Text seltener auf?",
+          options: [
+            "Bei älteren Menschen über 70 Jahren",
+            "Bei Kindern unter vier Jahren und Menschen mit bestimmten neurologischen Störungen",
+            "Bei Frauen im Vergleich zu Männern",
+            "Bei Menschen in wärmeren Klimazonen",
+            "Bei Menschen mit besonders hoher Intelligenz",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text nennt: „bei Kindern unter vier Jahren sowie bei Menschen mit bestimmten neurologischen Störungen seltener beobachtet wird.“",
+        },
+        {
+          id: "tv1-t5-q4",
+          question: "Was belegt laut Text die Thermoregulationshypothese des Gähnens?",
+          options: [
+            "Menschen gähnen nach körperlicher Anstrengung häufiger",
+            "Gähnen tritt ausschließlich vor dem Einschlafen auf",
+            "Menschen in wärmeren Umgebungen gähnen häufiger als in kühlen",
+            "Fische und Vögel gähnen nicht, nur Säugetiere",
+            "Gähnen erhöht den Sauerstoffgehalt im Blut messbar",
+          ],
+          correctOption: 2,
+          explanation:
+            "Im Text heißt es: „Diese Thermoregulationshypothese wird durch die Beobachtung gestützt, dass Menschen in wärmeren Umgebungen häufiger gähnen als in kühlen.“",
+        },
+        {
+          id: "tv1-t5-q5",
+          question: "Welche verbreitete Hypothese über das Gähnen gilt laut Text als weitgehend widerlegt?",
+          options: [
+            "Gähnen dient der Kühlung des Gehirns",
+            "Gähnen ist ein soziales Signal zur Kommunikation von Erschöpfung",
+            "Gähnen dient dazu, den Sauerstoffgehalt im Blut zu erhöhen",
+            "Gähnen tritt bei allen Wirbeltieren auf",
+            "Ansteckendes Gähnen ist mit Empathie verbunden",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text beschreibt: „Eine weit verbreitete, aber inzwischen weitgehend widerlegte Hypothese besagt, dass Gähnen dazu dient, den Sauerstoffgehalt im Blut zu erhöhen.“",
+        }
       ],
     },
   ],
@@ -376,6 +558,34 @@ const set2: TVTextSet = {
           explanation:
             "Der Text nennt: „das AB0-System, das 1901 vom österreichischen Arzt Karl Landsteiner entdeckt wurde“.",
         },
+        {
+          id: "tv2-t1-q4",
+          question: "Welche Antikörper besitzt laut Text eine Person mit Blutgruppe AB?",
+          options: [
+            "Nur Anti-A-Antikörper",
+            "Nur Anti-B-Antikörper",
+            "Sowohl Anti-A- als auch Anti-B-Antikörper",
+            "Weder Anti-A- noch Anti-B-Antikörper",
+            "Anti-AB-Antikörper als Kombinationsmolekül",
+          ],
+          correctOption: 3,
+          explanation:
+            "Der Text besagt: „Blutgruppe AB hat keine [Antikörper]“, da sie beide Antigene (A und B) trägt und dementsprechend keine Antikörper gegen eigene Antigene bildet.",
+        },
+        {
+          id: "tv2-t1-q5",
+          question: "Welche besondere Rolle spielt der Rhesusfaktor laut Text?",
+          options: [
+            "Er bestimmt, welche Blutgruppe jemand hat",
+            "Er verhindert das Verklumpen bei Bluttransfusionen",
+            "Er spielt bei Schwangerschaften eine besondere Rolle, wenn Mutter und Kind unterschiedliche Rhesusfaktoren haben",
+            "Er wurde erst 1950 entdeckt und ist wichtiger als das AB0-System",
+            "Er bestimmt die Farbe der roten Blutkörperchen",
+          ],
+          correctOption: 2,
+          explanation:
+            "Im Text steht: „der ebenfalls von Landsteiner mitentdeckt wurde und bei Schwangerschaften eine besondere Rolle spielt, wenn Mutter und Kind unterschiedliche Rhesusfaktoren haben.“",
+        }
       ],
     },
     {
@@ -426,6 +636,48 @@ const set2: TVTextSet = {
           explanation:
             "Im Text steht: \u201EEtwa 75 Prozent der weltweit wichtigsten Nutzpflanzen sind zumindest teilweise auf die Bestäubung durch Insekten angewiesen.\u201C",
         },
+        {
+          id: "tv2-t2-q3",
+          question: "Welche Wirkung haben Neonicotinoide laut Text auf Bienen?",
+          options: [
+            "Sie töten die Bienenkönigin direkt",
+            "Sie verhindern die Honigproduktion vollständig",
+            "Sie schädigen das Nervensystem und beeinträchtigen die Orientierungsfähigkeit der Bienen",
+            "Sie fördern die Verbreitung der Varroamilbe",
+            "Sie zerstören die Blühflächen, von denen Bienen abhängig sind",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text erklärt: „Pestizide aus der Landwirtschaft, insbesondere Neonicotinoide, schädigen das Nervensystem der Bienen und beeinträchtigen ihre Orientierungsfähigkeit.“",
+        },
+        {
+          id: "tv2-t2-q4",
+          question: "Wie schädigt die Varroamilbe laut Text die Bienenvolker?",
+          options: [
+            "Sie zerstört die Waben und vernichtet damit die Honigvorräte",
+            "Sie tötet die Bienenkönigin durch Giftstoffe",
+            "Sie ernährt sich von der Körperflüssigkeit der Bienen und überträgt Viren",
+            "Sie verstopft die Atemwege der Bienen",
+            "Sie befällt ausschließlich die Larven und verhindert deren Entwicklung",
+          ],
+          correctOption: 2,
+          explanation:
+            "Im Text heißt es: „Parasiten wie die Varroamilbe schwächen die Bienenvolker zusätzlich, indem sie sich von der Körperflüssigkeit der Bienen ernähren und Viren übertragen.“",
+        },
+        {
+          id: "tv2-t2-q5",
+          question: "Welche Auswirkung des Klimawandels auf Bienen wird im Text beschrieben?",
+          options: [
+            "Der Klimawandel erhöht die Temperatur und tötet Bienen direkt durch Hitzestress",
+            "Der Klimawandel verschiebt die Blühzeiten von Pflanzen, sodass sie nicht mehr mit den Aktivitätszyklen der Bienen übereinstimmen",
+            "Der Klimawandel führt zu mehr Stürmen, die Bienenstöcke zerstören",
+            "Der Klimawandel fördert das Wachstum der Varroamilbe durch wärmere Winter",
+            "Der Klimawandel erhöht den Pestizideinsatz in der Landwirtschaft",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text besagt: „der Klimawandel verschiebt die Blühzeiten von Pflanzen, sodass sie nicht mehr mit den Aktivitätszyklen der Bienen übereinstimmen.“",
+        }
       ],
     },
     {
@@ -477,6 +729,48 @@ const set2: TVTextSet = {
           explanation:
             "Im Text heißt es: \u201EDie sogenannte Wortschatzexplosion \u2026 setzt typischerweise zwischen dem 18. und 24. Lebensmonat ein.\u201C",
         },
+        {
+          id: "tv2-t3-q3",
+          question: "Wann erscheinen laut Text bei Kindern typischerweise die ersten verständlichen Wörter?",
+          options: [
+            "Zwischen dem sechsten und achten Lebensmonat",
+            "Zwischen dem zehnten und vierzehnten Lebensmonat",
+            "Zwischen dem 18. und 24. Lebensmonat",
+            "Erst nach dem zweiten Geburtstag",
+            "Ab dem dritten Lebensmonat als Lautimitationen",
+          ],
+          correctOption: 1,
+          explanation:
+            "Im Text steht: „Die ersten verständlichen Wörter erscheinen typischerweise zwischen dem zehnten und vierzehnten Lebensmonat.“",
+        },
+        {
+          id: "tv2-t3-q4",
+          question: "Was stellt der Text über den kindlichen Grammatikerwerb bis zum Schuleintritt fest?",
+          options: [
+            "Die meisten Kinder beherrschen bis zum Schuleintritt nur einfache Sätze",
+            "Die Grammatik muss durch formalen Unterricht erworben werden",
+            "Die meisten Kinder beherrschen die grundlegende Grammatik ihrer Muttersprache weitgehend fehlerfrei, ohne je formalen Grammatikunterricht erhalten zu haben",
+            "Kinder lernen Grammatik hauptsächlich durch das Lesen von Büchern",
+            "Die Grammatikentwicklung ist erst mit dem 10. Lebensjahr abgeschlossen",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text besagt: „Bis zum Schuleintritt beherrschen die meisten Kinder die grundlegende Grammatik ihrer Muttersprache weitgehend fehlerfrei, obwohl sie nie formalen Grammatikunterricht erhalten haben.“",
+        },
+        {
+          id: "tv2-t3-q5",
+          question: "Was können Föten laut Text bereits im Mutterleib?",
+          options: [
+            "Sie können Licht und Dunkel wahrnehmen",
+            "Sie können Sprachlaute wahrnehmen und zeigen nach der Geburt eine Präferenz für die Stimme der Mutter",
+            "Sie können einfache Melodien von komplexen unterscheiden",
+            "Sie können bereits auf bestimmte Wörter mit Bewegungen reagieren",
+            "Sie können ihre eigene Muttersprache von Fremdsprachen unterscheiden",
+          ],
+          correctOption: 1,
+          explanation:
+            "Im Text heißt es: „Bereits im Mutterleib können Föten Sprachlaute wahrnehmen und zeigen nach der Geburt eine Präferenz für die Stimme der Mutter.“",
+        }
       ],
     },
     {
@@ -543,6 +837,34 @@ const set2: TVTextSet = {
           explanation:
             "Der Text sagt: \u201Edie Vereinten Nationen prognostizieren, dass bis 2050 fast 70 Prozent der Menschen in urbanen Räumen wohnen werden\u201C.",
         },
+        {
+          id: "tv2-t4-q4",
+          question: "Welcher Anteil der Weltbevölkerung lebte laut Text im Jahr 1950 in Städten?",
+          options: [
+            "Etwa 10 Prozent",
+            "Etwa 20 Prozent",
+            "Etwa 30 Prozent",
+            "Etwa 50 Prozent",
+            "Etwa 70 Prozent",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text besagt: „Im Jahr 1950 lebten nur etwa 30 Prozent der Weltbevölkerung in Städten.“",
+        },
+        {
+          id: "tv2-t4-q5",
+          question: "Welche Probleme entstehen laut Text durch schnelles Stadtwachstum in Entwicklungsländern?",
+          options: [
+            "Unmäßiger Ausbau des öffentlichen Nahverkehrs",
+            "Zu viele Grünflächen und Parks verdrängen Wohnraum",
+            "Informelle Siedlungen ohne Zugang zu sauberem Wasser, Abwasserentsorgung und Elektrizität",
+            "Überangebot an Arbeitsplätzen führt zu Inflation",
+            "Zu hohe Bildungsausgaben belasten die Staatskassen",
+          ],
+          correctOption: 2,
+          explanation:
+            "Im Text steht: „In vielen Entwicklungsländern wachsen Städte schneller als die Infrastruktur, was zur Entstehung informeller Siedlungen führt, in denen Menschen ohne Zugang zu sauberem Wasser, Abwasserentsorgung und Elektrizität leben.“",
+        }
       ],
     },
     {
@@ -592,6 +914,48 @@ const set2: TVTextSet = {
           explanation:
             "Im Text heißt es: \u201Eda er die Gesetze der Stadt nicht brechen wollte\u201C.",
         },
+        {
+          id: "tv2-t5-q3",
+          question: "Wie ist Sokrates' Werk laut Text überliefert?",
+          options: [
+            "In seinen eigenen Schriften, die nach seinem Tod veröffentlicht wurden",
+            "Durch die Dialoge seines Schülers Platon",
+            "Durch lateinische Übersetzungen römischer Philosophen",
+            "Durch archäologische Funde in Athen",
+            "Durch mündliche Überlieferungen seiner Familie",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text erklärt: „Sein Denken ist hauptsächlich durch die Dialoge seines Schülers Platon überliefert.“",
+        },
+        {
+          id: "tv2-t5-q4",
+          question: "Womit verglich Sokrates laut Text seine eigene Methode?",
+          options: [
+            "Mit einem Schmied, der rohes Eisen in wertvolles Metall verwandelt",
+            "Mit einer Hebamme, die nicht selbst gebärt, sondern anderen bei der Geburt hilft",
+            "Mit einem Gärtner, der Samen pflanzt und auf ihre Entfaltung wartet",
+            "Mit einem Richter, der Wahrheit von Lüge unterscheidet",
+            "Mit einem Arzt, der Krankheiten durch Fragen diagnostiziert",
+          ],
+          correctOption: 1,
+          explanation:
+            "Im Text heißt es: „Er verglich sich dabei mit einer Hebamme, die nicht selbst gebärt, sondern anderen bei der Geburt hilft.“",
+        },
+        {
+          id: "tv2-t5-q5",
+          question: "Wessen wesentliches Merkmal sah Sokrates laut Text als Vorteil an?",
+          options: [
+            "Sein umfassendes Wissen über Naturphilosophie",
+            "Seine politischen Verbindungen in Athen",
+            "Das Bewusstsein seines eigenen Nicht-Wissens gegenüber jenen, die fälschlich glaubten, im Besitz sicherer Wahrheiten zu sein",
+            "Seine rhetorische Überlegenheit in öffentlichen Debatten",
+            "Seine Fähigkeit, Schüler schnell zu bekehren",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text besagt: „Sokrates behauptete von sich selbst, nichts zu wissen, und sah gerade in diesem Bewusstsein des eigenen Nicht-Wissens einen Vorteil gegenüber jenen, die fälschlich glaubten, im Besitz sicherer Wahrheiten zu sein.“",
+        }
       ],
     },
   ],
@@ -656,6 +1020,48 @@ const set3: TVTextSet = {
           explanation:
             "Im Text heißt es: \u201EInjektionen wirken stärker als Tabletten, teure Placebos stärker als billige, und auch die Farbe von Kapseln spielt eine Rolle.\u201C",
         },
+        {
+          id: "tv3-t1-q3",
+          question: "Was wird im Text über Endorphine im Zusammenhang mit Placebos beschrieben?",
+          options: [
+            "Endorphine verstärken den Placebo-Effekt durch externe Zufuhr",
+            "Placebos können die Ausschüttung körpereigener Schmerzmittel – Endorphine – anregen",
+            "Endorphine werden ausschließlich durch echte Medikamente freigesetzt",
+            "Placebos hemmen die natürliche Endorphinproduktion",
+            "Endorphine sind für den Placebo-Effekt vollständig irrelevant",
+          ],
+          correctOption: 1,
+          explanation:
+            "Im Text heißt es: „Neurowissenschaftliche Untersuchungen haben gezeigt, dass Placebos tatsächlich die Ausschüttung körpereigener Schmerzmittel – sogenannter Endorphine – anregen können.“",
+        },
+        {
+          id: "tv3-t1-q4",
+          question: "Welcher Anteil der Placebo-Empfänger berichtet laut Text bei Schmerzstudien über eine deutliche Schmerzlinderung?",
+          options: [
+            "Bis zu 5 Prozent",
+            "Bis zu 15 Prozent",
+            "Bis zu 30 Prozent",
+            "Bis zu 50 Prozent",
+            "Bis zu 70 Prozent",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text nennt: „Bei Schmerzstudien berichten bis zu 30 Prozent der Placebo-Empfänger über eine deutliche Schmerzlinderung.“",
+        },
+        {
+          id: "tv3-t1-q5",
+          question: "Welche allgemeine Definition des Placebo-Effekts gibt der Text?",
+          options: [
+            "Die schädliche Wirkung eines Scheinmedikaments auf den Patienten",
+            "Die messbare Verbesserung des Gesundheitszustands, die auf Erwartungshaltung und Glauben an die Wirksamkeit zurückzuführen ist, nicht auf pharmakologische Wirkung",
+            "Die Wirksamkeit billiger Medikamente im Vergleich zu teuren",
+            "Die Reaktion des Immunsystems auf inaktive Substanzen",
+            "Ein statistischer Fehler in klinischen Studien",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text definiert: „Der Placebo-Effekt bezeichnet die messbare Verbesserung des Gesundheitszustands eines Patienten, die nicht auf die pharmakologische Wirkung eines Medikaments zurückzuführen ist, sondern auf die Erwartungshaltung und den Glauben an die Wirksamkeit einer Behandlung.“",
+        }
       ],
     },
     {
@@ -724,6 +1130,34 @@ const set3: TVTextSet = {
           explanation:
             "Der Text nennt explizit \u201Edie Simulation von Molekülen für die Medikamentenentwicklung\u201C als Anwendungsfeld.",
         },
+        {
+          id: "tv3-t2-q4",
+          question: "Was versteht man laut Text unter dem Prinzip der Verschränkung bei Quantencomputern?",
+          options: [
+            "Dass Qubits physisch miteinander verdrahtet werden müssen",
+            "Zwei verschränkte Qubits sind so verbunden, dass der Zustand des einen den Zustand des anderen unmittelbar beeinflusst, unabhängig von der räumlichen Entfernung",
+            "Dass alle Qubits gleichzeitig denselben Zustand annehmen",
+            "Die mechanische Verbindung mehrerer Quantenprozessoren",
+            "Dass Quantencomputer nur bei verschränkten Temperaturen funktionieren",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text erklärt: „Zwei verschränkte Qubits sind so miteinander verbunden, dass der Zustand des einen den Zustand des anderen unmittelbar beeinflusst, unabhängig von der räumlichen Entfernung.“",
+        },
+        {
+          id: "tv3-t2-q5",
+          question: "Bei welcher Temperatur müssen Quantencomputer laut Text in der Regel betrieben werden?",
+          options: [
+            "Bei Raumtemperatur (etwa 20 Grad Celsius)",
+            "Bei 0 Grad Celsius (Gefrierpunkt)",
+            "Bei minus 100 Grad Celsius",
+            "Bei Temperaturen nahe dem absoluten Nullpunkt (etwa minus 273 Grad Celsius)",
+            "Bei minus 196 Grad Celsius (flüssiger Stickstoff)",
+          ],
+          correctOption: 3,
+          explanation:
+            "Im Text steht: „weshalb sie in der Regel bei Temperaturen nahe dem absoluten Nullpunkt – also bei etwa minus 273 Grad Celsius – betrieben werden müssen.“",
+        }
       ],
     },
     {
@@ -778,6 +1212,48 @@ const set3: TVTextSet = {
           explanation:
             "Der Text nennt: \u201EEntzündungsreaktionen auslösen, Schadstoffe wie Weichmacher und Schwermetalle binden und transportieren und möglicherweise das Hormonsystem beeinflussen.\u201C",
         },
+        {
+          id: "tv3-t3-q3",
+          question: "In welchen Bereichen wurde Mikroplastik laut Text beim Menschen gefunden?",
+          options: [
+            "Nur im Magen-Darm-Trakt",
+            "Nur in der Lunge durch eingeatmete Partikel",
+            "Im Blut, in der Plazenta schwangerer Frauen und in der Muttermilch",
+            "Ausschließlich in der Haut durch Kontakt mit Kosmetikprodukten",
+            "Nur in der Leber, wo Giftstoffe gefiltert werden",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text nennt: „Studien haben Mikroplastik in menschlichem Blut, in der Plazenta schwangerer Frauen und in der Muttermilch gefunden.“",
+        },
+        {
+          id: "tv3-t3-q4",
+          question: "Welche Maßnahme der Europäischen Union gegen Mikroplastik wird im Text beschrieben?",
+          options: [
+            "Ein sofortiges Totalverbot aller Kunststoffprodukte",
+            "Die Einführung einer Mikroplastiksteuer für Produzenten",
+            "Ein schrittweises Verbot von absichtlich zugesetztem Mikroplastik in Produkten, das ab 2023 stufenweise in Kraft tritt",
+            "Die Verpflichtung zur vollständigen Beseitigung von Mikroplastik aus Ozeanen bis 2030",
+            "Ein Importverbot für Kosmetikprodukte mit Mikroplastik aus Drittländern",
+          ],
+          correctOption: 2,
+          explanation:
+            "Im Text steht: „Die Europäische Union hat auf diese Erkenntnisse reagiert und ein schrittweises Verbot von absichtlich zugesetztem Mikroplastik in Produkten beschlossen, das ab 2023 stufenweise in Kraft tritt.“",
+        },
+        {
+          id: "tv3-t3-q5",
+          question: "Wie gelangt Mikroplastik laut Text in Ökosysteme, die keine direkten Kunststoffabfälle aufnehmen?",
+          options: [
+            "Durch Tiefseevulkane, die Plastikpartikel in die Meere schleudern",
+            "Wind, Wellen und UV-Strahlung zersetzen Plastikabfälle in immer kleinere Fragmente",
+            "Durch spezielle Bakterien, die Plastik in Mikropartikel aufspalten",
+            "Durch die natürliche Verrottung von Plastik innerhalb von zehn Jahren",
+            "Durch chemische Reaktionen zwischen Plastik und Salzwasser",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text erklärt: „Wind, Wellen und UV-Strahlung zersetzen Plastikabfälle in immer kleinere Fragmente, ohne sie chemisch vollständig abzubauen.“",
+        }
       ],
     },
     {
@@ -846,6 +1322,34 @@ const set3: TVTextSet = {
           explanation:
             "Der Text verwendet das Wort \u201Eambivalent\u201C und beschreibt sowohl positive Aspekte (Produktivitätsanstieg) als auch negative (soziale Kosten).",
         },
+        {
+          id: "tv3-t4-q4",
+          question: "Welche Arbeitsbedingungen herrschten laut Text in den frühen Fabriken der Industriellen Revolution?",
+          options: [
+            "Kurze Arbeitszeiten und gute Löhne für alle Arbeiter",
+            "Arbeitstage von 14 bis 16 Stunden, Kinderarbeit und fehlender Arbeitsschutz",
+            "Strenge Sicherheitsstandards und staatlich garantierte Mindestlöhne",
+            "Ausschließlich erwachsene Männer arbeiteten in den Fabriken",
+            "Die Arbeitsbedingungen waren besser als in der Landwirtschaft",
+          ],
+          correctOption: 1,
+          explanation:
+            "Im Text heißt es: „Arbeitstage von 14 bis 16 Stunden, Kinderarbeit und fehlender Arbeitsschutz waren die Regel.“",
+        },
+        {
+          id: "tv3-t4-q5",
+          question: "Welchen doppelten historischen Grundstein legte die Industrielle Revolution laut dem letzten Satz des Textes?",
+          options: [
+            "Den Grundstein für die moderne Chemie und die Physik",
+            "Den Grundstein für Demokratie und Menschenrechte",
+            "Den Grundstein für die moderne Wirtschaft und den modernen Sozialstaat",
+            "Den Grundstein für Kolonialismus und Globalisierung",
+            "Den Grundstein für Bildungssysteme und Universitäten",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text schließt: „Die Industrielle Revolution legte damit nicht nur den Grundstein für die moderne Wirtschaft, sondern auch für den modernen Sozialstaat.“",
+        }
       ],
     },
     {
@@ -898,6 +1402,48 @@ const set3: TVTextSet = {
           explanation:
             "Der Text beschreibt musikalische Höhepunkte als \u201EMomente, in denen eine Melodie eine erwartete Auflösung erreicht oder eine unerwartete harmonische Wendung nimmt\u201C.",
         },
+        {
+          id: "tv3-t5-q3",
+          question: "Welcher Neurotransmitter wird laut Text beim Musikhören ausgeschüttet?",
+          options: [
+            "Serotonin",
+            "Adrenalin",
+            "Cortisol",
+            "Dopamin",
+            "Acetylcholin",
+          ],
+          correctOption: 3,
+          explanation:
+            "Der Text besagt: „Dabei wird der Neurotransmitter Dopamin ausgeschüttet, was das Glücksgefühl erklärt, das viele Menschen beim Musikhören empfinden.“",
+        },
+        {
+          id: "tv3-t5-q4",
+          question: "Welche Gehirnstruktur wird laut Text beim Hören angenehmer Musik aktiviert?",
+          options: [
+            "Die Amygdala, die für Angstreaktionen zuständig ist",
+            "Der Hippocampus, der für das Langzeitgedächtnis verantwortlich ist",
+            "Der Nucleus accumbens, der Teil des Belohnungssystems ist",
+            "Der Präfrontale Kortex, der für rationale Entscheidungen zuständig ist",
+            "Das Kleinhirn, das die motorische Koordination steuert",
+          ],
+          correctOption: 2,
+          explanation:
+            "Im Text heißt es: „dass beim Hören von als angenehm empfundener Musik das Belohnungssystem des Gehirns aktiviert wird, insbesondere der Nucleus accumbens.“",
+        },
+        {
+          id: "tv3-t5-q5",
+          question: "Welches Schlüsselelement der emotionalen Wirkung von Musik beschreibt der Text?",
+          options: [
+            "Die Lautstärke und Intensität der Musik",
+            "Das Wechselspiel aus Erwartung und Überraschung",
+            "Die Länge der Komposition und ihre Wiederholungen",
+            "Die Anzahl der beteiligten Instrumente",
+            "Das Tempo und den Rhythmus der Musik",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text erklärt: „Dieses Wechselspiel aus Erwartung und Überraschung scheint ein Schlüsselelement der emotionalen Wirkung von Musik zu sein.“",
+        }
       ],
     },
   ],
@@ -976,6 +1522,34 @@ const set4: TVTextSet = {
           explanation:
             "Der Text nennt: \u201EFehlregulierte epigenetische Mechanismen werden mit der Entstehung von Krebs, Autoimmunerkrankungen und psychischen Störungen in Verbindung gebracht.\u201C",
         },
+        {
+          id: "tv4-t1-q4",
+          question: "Welche Umweltfaktoren können laut Text epigenetische Veränderungen hervorrufen?",
+          options: [
+            "Nur radioaktive Strahlung und chemische Mutagene",
+            "Ausschließlich Viren und Bakterien",
+            "Ernährung, Stress, Schadstoffbelastung und soziale Erfahrungen",
+            "Nur physische Traumen wie Knochenbürche",
+            "Epigenetische Veränderungen entstehen ausschließlich zufällig",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text nennt: „Umweltfaktoren wie Ernährung, Stress, Schadstoffbelastung und soziale Erfahrungen epigenetische Veränderungen hervorrufen können.“",
+        },
+        {
+          id: "tv4-t1-q5",
+          question: "Was zeigte der Tierversuch mit trächtigen Mäusen laut Text?",
+          options: [
+            "Dass Stress bei Mäusen deren eigene Stressreaktion verbessert",
+            "Dass Stress bei trächtigen Mäusen epigenetische Veränderungen im Nachwuchs bewirken kann, die dessen Stressreaktion dauerhaft beeinflusst",
+            "Dass epigenetische Veränderungen ausschließlich bei Nagetieren auftreten",
+            "Dass Stress keinen messbaren Einfluss auf die nächste Generation hat",
+            "Dass trächtige Tiere grundsätzlich immun gegen Stress sind",
+          ],
+          correctOption: 1,
+          explanation:
+            "Im Text steht: „Tierversuche haben gezeigt, dass Stress bei trächtigen Mäusen epigenetische Veränderungen im Nachwuchs bewirken kann, die dessen Stressreaktion dauerhaft beeinflusst.“",
+        }
       ],
     },
     {
@@ -1029,6 +1603,48 @@ const set4: TVTextSet = {
           explanation:
             "Der Text besagt: \u201Eindem sie nicht einzelne Handlungen, sondern allgemeine Handlungsregeln nach ihrem Nutzen bewerten\u201C.",
         },
+        {
+          id: "tv4-t2-q3",
+          question: "Was ist laut Text das Grundprinzip des Utilitarismus?",
+          options: [
+            "Eine Handlung ist moralisch richtig, wenn sie den Handelnden selbst glücklich macht",
+            "Eine Handlung ist moralisch richtig, wenn sie Gottes Geboten entspricht",
+            "Eine Handlung ist moralisch richtig, wenn sie das größtmögliche Glück für die größtmögliche Zahl von Menschen hervorbringt",
+            "Eine Handlung ist moralisch richtig, wenn sie einer universellen Pflicht entspricht",
+            "Eine Handlung ist moralisch richtig, wenn sie die Tugend der handelnden Person fördert",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text beschreibt: „Ihr Grundprinzip lautet, dass eine Handlung dann moralisch richtig ist, wenn sie das größtmögliche Glück für die größtmögliche Zahl von Menschen hervorbringt.“",
+        },
+        {
+          id: "tv4-t2-q4",
+          question: "Welche Kritik am Utilitarismus wird im Text vorgebracht?",
+          options: [
+            "Der Utilitarismus ist zu religiös orientiert",
+            "Der Utilitarismus könnte individuelle Rechte zugunsten des Gesamtwohls opfern – etwa wenn Folter das Leid vieler verhindert",
+            "Der Utilitarismus ist zu kompliziert, um in der Praxis angewendet zu werden",
+            "Der Utilitarismus bevorzugt immer die wohlhabende Mehrheit",
+            "Der Utilitarismus vernachlässigt ökonomische Faktoren",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text bringt vor: „dass die Theorie individuelle Rechte zugunsten des Gesamtwohls opfern könnte: Wenn die Folter eines Einzelnen das Leid vieler verhindert, wäre sie nach streng utilitaristischer Logik gerechtfertigt.“",
+        },
+        {
+          id: "tv4-t2-q5",
+          question: "Nach welchen Kriterien versuchte Bentham laut Text Glück zu messen?",
+          options: [
+            "Nach sozialem Status, Reichtum und Bildung",
+            "Nach Intensität, Dauer, Gewissheit und Nähe eines Vergnügens",
+            "Nach dem Nutzen für die Gesellschaft im Ganzen",
+            "Nach dem Grad der Übereinstimmung mit moralischen Normen",
+            "Nach der Häufigkeit positiver sozialer Interaktionen",
+          ],
+          correctOption: 1,
+          explanation:
+            "Im Text heißt es: „Bentham formulierte das Prinzip der Nützlichkeit und versuchte, Glück quantitativ zu messen – anhand von Kriterien wie Intensität, Dauer, Gewissheit und Nähe eines Vergnügens.“",
+        }
       ],
     },
     {
@@ -1082,6 +1698,48 @@ const set4: TVTextSet = {
           explanation:
             "Im Text wird erklärt: \u201Ebei der das Gehirn eine aktülle Wahrnehmung fälschlicherweise als Erinnerung einstuft\u201C.",
         },
+        {
+          id: "tv4-t3-q3",
+          question: "Was bedeutet der Begriff 'Déjà-vu' wörtlich laut Text?",
+          options: [
+            "Bereits gehört",
+            "Schon gesehen",
+            "Wieder erlebt",
+            "Schon gewusst",
+            "Bereits gespürt",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text erklärt: „Der Begriff stammt aus dem Französischen und bedeutet wörtlich 'schon gesehen'.“",
+        },
+        {
+          id: "tv4-t3-q4",
+          question: "Welche alternative Theorie zu Déjà-vus wird im Text neben dem GedächtnisFehler-Modell vorgestellt?",
+          options: [
+            "Déjà-vus entstehen durch kurze Bewusstseinspausen während des Schlafs",
+            "Déjà-vus sind Erinnerungen an vergangene Leben",
+            "Déjà-vus treten auf, wenn die aktuelle Umgebung einer früheren ähnelt, die nicht mehr bewusst erinnert wird",
+            "Déjà-vus werden durch bestimmte Duftstoffe ausgelöst",
+            "Déjà-vus entstehen durch einen Kurzschluss im visuellen Kortex",
+          ],
+          correctOption: 2,
+          explanation:
+            "Im Text steht: „Eine andere Theorie besagt, dass Déjà-vus auftreten, wenn die aktülle Umgebung einer früheren ähnelt, die nicht mehr bewusst erinnert wird.“",
+        },
+        {
+          id: "tv4-t3-q5",
+          question: "Welcher Befund bei Epilepsiepatienten weist laut Text auf eine Beteiligung des Temporallappens hin?",
+          options: [
+            "Epilepsiepatienten haben deutlich schlechtere Erinnerungen an Déjà-vus",
+            "Déjà-vus treten bei Temporallappenepilepsie deutlich häufiger auf und können als Vorboten eines epileptischen Anfalls gelten",
+            "Epilepsiepatienten erleben keine echten Déjà-vus, nur Halluzinationen",
+            "Der Temporallappen ist der einzige Teil des Gehirns, der beim Déjà-vu aktiv ist",
+            "Epilepsiepatienten können Déjà-vus durch Konzentration unterdrücken",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text besagt: „Déjà-vus bei Epilepsiepatienten mit Temporallappenepilepsie deutlich häufiger auftreten und dort sogar als Vorboten eines epileptischen Anfalls gelten können, was die Beteiligung des Temporallappens an diesem Phänomen nahelegt.“",
+        }
       ],
     },
     {
@@ -1135,6 +1793,48 @@ const set4: TVTextSet = {
           explanation:
             "Im Text steht: \u201EStrukturierte Interviews und standardisierte Bewertungskriterien werden als Maßnahmen empfohlen.\u201C",
         },
+        {
+          id: "tv4-t4-q3",
+          question: "Wer beschrieb laut Text den Halo-Effekt erstmals und wann?",
+          options: [
+            "Sigmund Freud im Jahr 1900",
+            "Jean Piaget im Jahr 1945",
+            "Der amerikanische Psychologe Edward Thorndike im Jahr 1920",
+            "Carl Jung im Jahr 1935",
+            "B.F. Skinner im Jahr 1950",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text besagt: „Der Halo-Effekt, erstmals 1920 vom amerikanischen Psychologen Edward Thorndike beschrieben.“",
+        },
+        {
+          id: "tv4-t4-q4",
+          question: "Welche Auswirkung des Halo-Effekts auf die Markenwahrnehmung beschreibt der Text?",
+          options: [
+            "Ein erfolgreiches Produkt verdrängt alle anderen Produkte derselben Marke",
+            "Ein erfolgreiches Produkt eines Unternehmens kann die Bewertung aller anderen Produkte derselben Marke positiv beeinflussen",
+            "Eine starke Marke schützt schlechte Produkte vor Kritik",
+            "Der Halo-Effekt führt dazu, dass Kunden immer das teuerste Produkt kaufen",
+            "Marken mit bekannten Logos profitieren mehr vom Halo-Effekt",
+          ],
+          correctOption: 1,
+          explanation:
+            "Im Text heißt es: „ein erfolgreiches Produkt eines Unternehmens kann die Bewertung aller anderen Produkte derselben Marke positiv beeinflussen.“",
+        },
+        {
+          id: "tv4-t4-q5",
+          question: "Welches klassische Beispiel für den Halo-Effekt nennt der Text?",
+          options: [
+            "Reiche Menschen werden als intelligenter eingestuft als ärmere",
+            "Attraktive Menschen werden häufig auch als intelligenter, kompetenter und vertrauenswürdiger eingeschätzt",
+            "Große Menschen werden als autoritärer wahrgenommen als kleinere",
+            "Menschen mit tiefer Stimme gelten als vertrauenswürdiger",
+            "Gut gekleidete Menschen werden als fleißiger beurteilt",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text nennt: „Attraktive Menschen werden häufig auch als intelligenter, kompetenter und vertrauenswürdiger eingeschätzt, obwohl es keinen objektiven Zusammenhang zwischen Aussehen und diesen Eigenschaften gibt.“",
+        }
       ],
     },
     {
@@ -1201,6 +1901,34 @@ const set4: TVTextSet = {
           explanation:
             "Im Text heißt es: \u201EIn betroffenen Regionen werden Gebäude, Straßen und Pipelines destabilisiert, da der Untergrund seine Festigkeit verliert.\u201C",
         },
+        {
+          id: "tv4-t5-q4",
+          question: "Wie viel Fläche der Landoberüfläche der Nordhalbkugel bedeckt Permafrost laut Text?",
+          options: [
+            "Etwa ein Zehntel",
+            "Etwa ein Sechstel",
+            "Etwa ein Viertel",
+            "Etwa ein Drittel",
+            "Etwa die Hälfte",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text besagt: „Er bedeckt etwa ein Viertel der Landoberüfläche der Nordhalbkugel.“",
+        },
+        {
+          id: "tv4-t5-q5",
+          question: "Warum ist Methan als Treibhausgas laut Text besonders relevant?",
+          options: [
+            "Weil Methan 10-mal häufiger im Permafrost vorkommt als CO₂",
+            "Weil Methan über einen Zeitraum von 20 Jahren etwa 80-mal wirksamer als CO₂ als Treibhausgas ist",
+            "Weil Methan langfristig stabiler in der Atmosphäre bleibt als CO₂",
+            "Weil Methan ausschließlich aus dem auftauenden Permafrost stammt",
+            "Weil Methan direkte gesundheitliche Schäden beim Menschen verursacht",
+          ],
+          correctOption: 1,
+          explanation:
+            "Im Text steht: „Methan ist als Treibhausgas etwa 80-mal wirksamer als CO₂ über einen Zeitraum von 20 Jahren.“",
+        }
       ],
     },
   ],
@@ -1282,6 +2010,34 @@ const set5: TVTextSet = {
           explanation:
             "Der Text beschreibt: \u201EDiejenigen, die ausführlich über mögliche Kopfschmerzen informiert wurden, berichteten dreimal häufiger über Kopfschmerzen \u2026 obwohl beide Gruppen in Wirklichkeit ein Placebo bekamen.\u201C",
         },
+        {
+          id: "tv5-t1-q4",
+          question: "Was schlagen laut Text einige Forscher als Lösung des ethischen Dilemmas vor?",
+          options: [
+            "Die vollständige Abschaffung der Aufklärungspflicht für Ärzte",
+            "Die generelle Verschreibung von Placebos statt echter Medikamente",
+            "Eine kontextsensitive Aufklärung, die Risiken nennt, ohne negative Erwartungen übermäßig zu verstärken",
+            "Die Durchführung von Nocebo-Studien an allen Patienten vor der Behandlung",
+            "Das Verbot der Aufklärung über seltene Nebenwirkungen",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text besagt: „Einige Forscher plädieren daher für eine kontextsensitive Aufklärung, die Risiken nennt, ohne negative Erwartungen übermäßig zu verstärken.“",
+        },
+        {
+          id: "tv5-t1-q5",
+          question: "Was bedeutet der Begriff 'Nocebo' laut Text wörtlich?",
+          options: [
+            "Ich werde heilen",
+            "Ich werde schaden",
+            "Ich werde helfen",
+            "Ich werde leiden",
+            "Ich werde täuschen",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text erklärt: „Der Begriff leitet sich vom Lateinischen ‘nocebo’ ab, was ‘ich werde schaden’ bedeutet.“",
+        }
       ],
     },
     {
@@ -1336,6 +2092,48 @@ const set5: TVTextSet = {
           explanation:
             "Der Text schildert: \u201EKritiker wenden ein, dass solche Unterschiede \u2026 möglicherweise auf kulturelle Praktiken und Umweltbedingungen zurückzuführen sind, die sowohl die Sprache als auch die kognitiven Fähigkeiten unabhängig voneinander formen.\u201C",
         },
+        {
+          id: "tv5-t2-q3",
+          question: "Welches Beispiel aus der Sprache Kuuk Thaayorre führt der Text an?",
+          options: [
+            "Diese Sprache hat keine Pluralformen für Substantive",
+            "Diese Sprache kennt keine Begriffe für 'links' und 'rechts', verwendet stattdessen Himmelsrichtungen, und ihre Sprecher haben einen bemerkenswert präzisen inneren Kompass",
+            "Diese Sprache hat über 50 Wörter für Farbnuancen",
+            "Diese Sprache unterscheidet nicht zwischen Vergangenheit und Gegenwart",
+            "Diese Sprache hat keine Zahlen über fünf",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text beschreibt: „In der australischen Sprache Kuuk Thaayorre gibt es keine Begriffe für 'links' und 'rechts'; stattdessen werden absolute Himmelsrichtungen verwendet. Sprecher dieser Sprache verfügen über einen bemerkenswert präzisen inneren Kompass.“",
+        },
+        {
+          id: "tv5-t2-q4",
+          question: "Welche empirische Beobachtung unterstützt laut Text den linguistischen Relativismus?",
+          options: [
+            "Alle Menschen denken in derselben logischen Struktur, unabhängig von der Sprache",
+            "Sprecher von Sprachen mit vielen Farbwörtern unterscheiden bestimmte Farbnuancen schneller als Sprecher mit weniger Farbbezeichnungen",
+            "Kinder aller Kulturen erwerben Sprache in denselben Phasen",
+            "Übersetzungen zwischen Sprachen sind immer verlustfrei möglich",
+            "Grammatikstrukturen aller Sprachen sind universell gleich",
+          ],
+          correctOption: 1,
+          explanation:
+            "Im Text heißt es: „So unterscheiden Sprecher von Sprachen mit vielen Farbwörtern bestimmte Farbnuancen schneller als Sprecher von Sprachen mit weniger Farbbezeichnungen.“",
+        },
+        {
+          id: "tv5-t2-q5",
+          question: "Welche Version der Sapir-Whorf-Hypothese gilt laut Text heute als widerlegt und warum?",
+          options: [
+            "Die schwache Version, weil es keine empirischen Belege gibt",
+            "Die starke Version (linguistischer Determinismus), weil Menschen offensichtlich auch Gedanken haben, für die ihnen Worte fehlen",
+            "Beide Versionen, weil Sprache und Denken vollständig unabhängig sind",
+            "Die starke Version, weil sie nur für westliche Sprachen entwickelt wurde",
+            "Die schwache Version, weil kognitive Unterschiede immer auf kulturelle Faktoren zurückzuführen sind",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text stellt fest: „Diese starke Version gilt heute als widerlegt, da Menschen offensichtlich auch Gedanken haben, für die ihnen Worte fehlen.“",
+        }
       ],
     },
     {
@@ -1405,6 +2203,34 @@ const set5: TVTextSet = {
           explanation:
             "Der Text nennt: \u201EDie Europäische Union hat mit dem AI Act einen Rechtsrahmen geschaffen, der risikoreiche KI-Anwendungen strengeren Anforderungen an Transparenz und Fairness unterwirft.\u201C",
         },
+        {
+          id: "tv5-t3-q4",
+          question: "Welches konkrete Beispiel für algorithmische Diskriminierung nennt der Text?",
+          options: [
+            "Ein Navigationssystem, das bestimmte Stadtteile bevorzugt",
+            "Ein Einstellungsprogramm eines Technologieunternehmens, das männliche Bewerber systematisch bevorzugte",
+            "Ein Kreditbewertungssystem, das reiche Kunden bevorzugt",
+            "Ein Newsalgorithmus, der bestimmte politische Meinungen verstärkt",
+            "Ein Gesichtserkennungsprogramm mit hoher Fehlerrate bei bestimmten Ethnien",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text nennt: „Ein bekanntes Beispiel betrifft ein Einstellungsprogramm eines großen Technologieunternehmens, das männliche Bewerber systematisch bevorzugte, weil es auf Daten trainiert worden war, die den überwiegend männlichen Einstellungserfolg der Vergangenheit widerspiegelten.“",
+        },
+        {
+          id: "tv5-t3-q5",
+          question: "Was versteht der Text unter 'Explainable AI' (XAI)?",
+          options: [
+            "KI-Systeme, die ausschließlich von Experten bedient werden können",
+            "Methoden zur Erklärbarkeit von KI-Entscheidungen, damit diese nachvollziehbar werden",
+            "Eine spezielle Programmiersprache für transparente Algorithmen",
+            "Das Recht der Nutzer, Erklärungen zu verlangen",
+            "Ein EU-weites Zertifizierungsverfahren für KI-Produkte",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text nennt als Lösungsansatz: „die Entwicklung von Methoden zur Erklärbarkeit von KI-Entscheidungen (Explainable AI)“, damit algorithmische Entscheidungen nachvollziehbar werden.",
+        }
       ],
     },
     {
@@ -1457,6 +2283,48 @@ const set5: TVTextSet = {
           explanation:
             "Im Text heißt es: \u201EGesellschaftlich sind Spättypen oft benachteiligt, da Schul- und Arbeitszeiten typischerweise frühe Anfangszeiten vorsehen.\u201C",
         },
+        {
+          id: "tv5-t4-q3",
+          question: "Wo befindet sich laut Text der zentrale Taktgeber der inneren Uhr?",
+          options: [
+            "Im Kleinhirn, direkt neben dem Stammhirn",
+            "Im suprachiasmatischen Nucleus (SCN) im Hypothalamus, direkt oberhalb der Kreuzung der Sehnerven",
+            "In der Zirbeldrüse, die Melatonin produziert",
+            "Im Hippocampus, der für zeitliche Orientierung zuständig ist",
+            "In der Amygdala, die emotionale Reaktionen steuert",
+          ],
+          correctOption: 1,
+          explanation:
+            "Im Text steht: „Der zentrale Taktgeber befindet sich im suprachiasmatischen Nucleus (SCN), einer winzigen Ansammlung von etwa 20.000 Nervenzellen im Hypothalamus, direkt oberhalb der Kreuzung der Sehnerven.“",
+        },
+        {
+          id: "tv5-t4-q4",
+          question: "Wie wird der SCN laut Text mit dem Tag-Nacht-Rhythmus synchronisiert?",
+          options: [
+            "Durch Temperaturveränderungen des Körpers im Tagesverlauf",
+            "Durch Licht, das über die Netzhaut aufgenommen wird",
+            "Durch Mahlzeiten und Schlafenszeiten",
+            "Durch das Hormonsystem, insbesondere Cortisol",
+            "Durch körperliche Aktivität und Ruhephasen",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text erklärt: „Licht, das über die Netzhaut aufgenommen wird, synchronisiert den SCN mit dem Tag-Nacht-Rhythmus der Umwelt.“",
+        },
+        {
+          id: "tv5-t4-q5",
+          question: "Welchen Beleg für den praktischen Nutzen der Chronobiologie nennt der Text?",
+          options: [
+            "Chronotypen können durch Lichttherapie vollständig umgeändert werden",
+            "Bestimmte Blutdruckmedikamente wirken abends besser als morgens, weil der Blutdruck einem zirkadianen Muster folgt",
+            "Frühtypen leben statistisch länger als Spättypen",
+            "Alle Medikamente wirken morgens nach dem Aufstehen am stärksten",
+            "Der Chronotyp kann durch Schlaftraining innerhalb einer Woche verändert werden",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text besagt: „So wirken bestimmte Blutdruckmedikamente effektiver, wenn sie abends statt morgens eingenommen werden, weil der Blutdruck einem zirkadianen Muster folgt.“",
+        }
       ],
     },
     {
@@ -1511,6 +2379,48 @@ const set5: TVTextSet = {
           explanation:
             "Der Text empfiehlt: \u201Edirekt eine bestimmte Person um Hilfe zu bitten, anstatt allgemein um Hilfe zu rufen \u2013 denn wird eine Einzelperson direkt angesprochen, wird die Verantwortungsdiffusion aufgehoben.\u201C",
         },
+        {
+          id: "tv5-t5-q3",
+          question: "Was ist laut Text die 'pluralistische Ignoranz'?",
+          options: [
+            "Die Annahme, dass niemand sonst um Hilfe bitten wird",
+            "Das Phänomen, dass Menschen in mehrdeutigen Situationen das Verhalten anderer beobachten und – wenn niemand reagiert – die Situation als nicht bedrohlich interpretieren",
+            "Die Überzeugung, dass in einer großen Gruppe immer jemand anderes helfen wird",
+            "Die kollektive Ignoranz einer Gruppe gegenüber gesellschaftlichen Problemen",
+            "Die Tendenz, bei offensichtlichen Notfällen trotzdem nicht einzugreifen",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text erklärt: „In mehrdeutigen Situationen beobachten Menschen das Verhalten anderer, um die Lage einzuschätzen. Wenn niemand reagiert, interpretieren alle die Situation als nicht bedrohlich.“",
+        },
+        {
+          id: "tv5-t5-q4",
+          question: "Welchen historischen Fall inspirierte laut Text die Erforschung des Bystander-Effekts?",
+          options: [
+            "Den Fall eines Kindes, das im Straßenverkehr verungltückte",
+            "Die Ermordung von Kitty Genovese in New York, bei der Medienberichte behaupteten, 38 Nachbarn hätten ohne einzugreifen zugesehen",
+            "Ein Laborexperiment mit elektrischen Schocks",
+            "Eine Überschwemmungskatastrophe ohne Helfer",
+            "Eine Studie über Kinder auf Schulhöfen",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text beschreibt: „Im Jahr 1964 wurde die junge New Yorkerin Kitty Genovese vor ihrem Wohnhaus ermordet. Medienberichte behaupteten, 38 Nachbarn hätten den Angriff beobachtet, ohne einzugreifen.“",
+        },
+        {
+          id: "tv5-t5-q5",
+          question: "Was ist laut Text die 'Bewertungsangst' als Mechanismus des Bystander-Effekts?",
+          options: [
+            "Die Angst vor körperlicher Verletzung beim Eingreifen",
+            "Die Sorge, durch Eingreifen in einer Nicht-Notfallsituation sich zu blamieren",
+            "Die Angst, von der Polizei als Täter verdächtigt zu werden",
+            "Die Befürchtung, die notleidende Person durch Hilfe zu verletzen",
+            "Die Angst vor sozialen Konsequenzen durch Nicht-Helfen",
+          ],
+          correctOption: 1,
+          explanation:
+            "Im Text heißt es: „Drittens die Bewertungsangst: Menschen fürchten, sich durch unangemessenes Eingreifen in einer Nicht-Notfallsituation zu blamieren.“",
+        }
       ],
     },
   ],
