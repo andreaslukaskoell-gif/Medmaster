@@ -1,5 +1,16 @@
 import { useState, useEffect, useRef } from "react";
-import { ArrowLeft, Swords, Play, Trophy, User, Bot, Clock, Zap, Target, Lightbulb } from "lucide-react";
+import {
+  ArrowLeft,
+  Swords,
+  Play,
+  Trophy,
+  User,
+  Bot,
+  Clock,
+  Zap,
+  Target,
+  Lightbulb,
+} from "lucide-react";
 import { AiTutorChat, AiTutorButton } from "@/components/AiTutorChat";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -22,10 +33,22 @@ async function getQuestions(): Promise<Question[]> {
 }
 
 const OPPONENT_NAMES = [
-  "MedGenie_2026", "BioNerd99", "ChemieKönig", "PhysikFuchs",
-  "StudyHero_AT", "BrainMaster", "MedAT_Pro", "WissenBlitz",
-  "LernTiger", "QuizChamp", "Medizin_Star", "FlashBrain",
-  "TopStudentin", "NeuroNinja", "ZellMeister", "FormelHeld",
+  "MedGenie_2026",
+  "BioNerd99",
+  "ChemieKönig",
+  "PhysikFuchs",
+  "StudyHero_AT",
+  "BrainMaster",
+  "MedAT_Pro",
+  "WissenBlitz",
+  "LernTiger",
+  "QuizChamp",
+  "Medizin_Star",
+  "FlashBrain",
+  "TopStudentin",
+  "NeuroNinja",
+  "ZellMeister",
+  "FormelHeld",
 ];
 
 type DuelMode = "random" | "adaptive" | "schwachstellen";
@@ -59,7 +82,8 @@ export default function Duel() {
   const [aiTutorQ, setAiTutorQ] = useState<{ question: Question; userAnswer: string } | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval>>(null);
   const { addXP, checkStreak, saveQuizResult } = useStore();
-  const { recordAnswer, getWeakestTopics, getAdaptiveQuestions, getMedATReadiness } = useAdaptiveStore();
+  const { recordAnswer, getWeakestTopics, getAdaptiveQuestions, getMedATReadiness } =
+    useAdaptiveStore();
 
   useEffect(() => {
     getQuestions().then((q) => setQuestions(q));
@@ -133,7 +157,9 @@ export default function Duel() {
       });
     }, 1000);
 
-    return () => { if (timerRef.current) clearInterval(timerRef.current); };
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
   }, [duel?.phase, duel?.currentIndex]);
 
   // Simulate opponent answer
@@ -243,20 +269,37 @@ export default function Duel() {
                 <p className="text-xs text-muted">pro Frage</p>
               </div>
               <div className="bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-lg">
-                <p className="font-semibold text-gray-900 dark:text-gray-100">{Math.round(readiness)}%</p>
+                <p className="font-semibold text-gray-900 dark:text-gray-100">
+                  {Math.round(readiness)}%
+                </p>
                 <p className="text-xs text-muted">Bereitschaft</p>
               </div>
             </div>
 
             <div className="grid gap-3 max-w-md mx-auto">
-              <Button size="lg" onClick={() => startDuel("random")} disabled={questions.length === 0}>
+              <Button
+                size="lg"
+                onClick={() => startDuel("random")}
+                disabled={questions.length === 0}
+              >
                 <Play className="w-5 h-5 mr-2" /> Zufälliges Duell
               </Button>
-              <Button size="lg" variant="outline" onClick={() => startDuel("adaptive")} disabled={questions.length === 0}>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => startDuel("adaptive")}
+                disabled={questions.length === 0}
+              >
                 <Target className="w-5 h-5 mr-2" /> Adaptives Duell
               </Button>
               {weakTopics.length > 0 && (
-                <Button size="lg" variant="outline" className="border-red-300 text-red-700 dark:border-red-700 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20" onClick={() => startDuel("schwachstellen")} disabled={questions.length === 0}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-red-300 text-red-700 dark:border-red-700 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20"
+                  onClick={() => startDuel("schwachstellen")}
+                  disabled={questions.length === 0}
+                >
                   <Zap className="w-5 h-5 mr-2" /> Schwachstellen-Duell
                 </Button>
               )}
@@ -266,7 +309,10 @@ export default function Duel() {
               <div className="text-xs text-muted space-y-1">
                 <p className="font-medium">Deine Schwachstellen:</p>
                 {weakTopics.map((t) => (
-                  <span key={t.stichwortId} className="inline-block bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 px-2 py-0.5 rounded mr-1">
+                  <span
+                    key={t.stichwortId}
+                    className="inline-block bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 px-2 py-0.5 rounded mr-1"
+                  >
                     {t.thema} ({Math.round(t.rate * 100)}%)
                   </span>
                 ))}
@@ -280,8 +326,12 @@ export default function Duel() {
 
   // ── Results ────────────────────────────────────────────
   if (duel.phase === "result") {
-    const playerScore = duel.questions.filter((q) => duel.playerAnswers[q.id] === q.correctOptionId).length;
-    const opponentScore = duel.questions.filter((q) => duel.opponentAnswers[q.id]?.answer === q.correctOptionId).length;
+    const playerScore = duel.questions.filter(
+      (q) => duel.playerAnswers[q.id] === q.correctOptionId
+    ).length;
+    const opponentScore = duel.questions.filter(
+      (q) => duel.opponentAnswers[q.id]?.answer === q.correctOptionId
+    ).length;
     const playerWon = playerScore > opponentScore;
     const draw = playerScore === opponentScore;
 
@@ -309,15 +359,22 @@ export default function Duel() {
       <div className="max-w-3xl mx-auto space-y-6">
         <Card>
           <CardContent className="p-8 text-center space-y-6">
-            <div className={`w-20 h-20 rounded-2xl flex items-center justify-center mx-auto ${playerWon ? "bg-yellow-100 dark:bg-yellow-900/30" : draw ? "bg-gray-100 dark:bg-gray-800" : "bg-red-100 dark:bg-red-900/30"}`}>
-              <Trophy className={`w-10 h-10 ${playerWon ? "text-yellow-600" : draw ? "text-gray-500" : "text-red-500"}`} />
+            <div
+              className={`w-20 h-20 rounded-2xl flex items-center justify-center mx-auto ${playerWon ? "bg-yellow-100 dark:bg-yellow-900/30" : draw ? "bg-gray-100 dark:bg-gray-800" : "bg-red-100 dark:bg-red-900/30"}`}
+            >
+              <Trophy
+                className={`w-10 h-10 ${playerWon ? "text-yellow-600" : draw ? "text-gray-500" : "text-red-500"}`}
+              />
             </div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
               {playerWon ? "Du hast gewonnen!" : draw ? "Unentschieden!" : "Knapp verloren!"}
             </h2>
 
             {duel.mode !== "random" && (
-              <Badge variant={duel.mode === "schwachstellen" ? "danger" : "info"} className="text-xs">
+              <Badge
+                variant={duel.mode === "schwachstellen" ? "danger" : "info"}
+                className="text-xs"
+              >
                 {duel.mode === "schwachstellen" ? "Schwachstellen-Duell" : "Adaptives Duell"}
               </Badge>
             )}
@@ -327,7 +384,9 @@ export default function Duel() {
                 <div className="w-14 h-14 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center mx-auto mb-2">
                   <User className="w-7 h-7 text-primary-700 dark:text-primary-400" />
                 </div>
-                <p className="font-bold text-2xl text-primary-700 dark:text-primary-400">{playerScore}</p>
+                <p className="font-bold text-2xl text-primary-700 dark:text-primary-400">
+                  {playerScore}
+                </p>
                 <p className="text-xs text-muted">Du</p>
               </div>
               <div className="text-2xl font-bold text-gray-400">vs</div>
@@ -352,24 +411,44 @@ export default function Duel() {
                 const isExpanded = showExplanation === q.id;
 
                 return (
-                  <div key={q.id} className="border-b border-gray-100 dark:border-gray-800 last:border-0 pb-2">
+                  <div
+                    key={q.id}
+                    className="border-b border-gray-100 dark:border-gray-800 last:border-0 pb-2"
+                  >
                     <button
                       onClick={() => setShowExplanation(isExpanded ? null : q.id)}
                       className="flex items-center gap-3 py-2 w-full text-left hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded px-1 -mx-1 cursor-pointer"
                     >
                       <span className="text-xs text-muted w-5">{i + 1}.</span>
-                      <div className="flex-1 text-sm text-gray-700 dark:text-gray-300 truncate">{q.text}</div>
+                      <div className="flex-1 text-sm text-gray-700 dark:text-gray-300 truncate">
+                        {q.text}
+                      </div>
                       <div className="flex gap-2 shrink-0">
-                        <Badge variant={playerCorrect ? "success" : "danger"} className="text-[10px]">Du</Badge>
-                        <Badge variant={opponentCorrect ? "success" : "danger"} className="text-[10px]">KI</Badge>
+                        <Badge
+                          variant={playerCorrect ? "success" : "danger"}
+                          className="text-[10px]"
+                        >
+                          Du
+                        </Badge>
+                        <Badge
+                          variant={opponentCorrect ? "success" : "danger"}
+                          className="text-[10px]"
+                        >
+                          KI
+                        </Badge>
                       </div>
                     </button>
 
                     {isExpanded && (
                       <div className="ml-8 mt-1 space-y-2 text-sm">
                         <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3">
-                          <p className="font-medium text-green-800 dark:text-green-300 mb-1">Richtige Antwort: {q.correctOptionId.toUpperCase()}) {q.options.find((o) => o.id === q.correctOptionId)?.text}</p>
-                          <p className="text-green-700 dark:text-green-400 text-xs">{q.explanation}</p>
+                          <p className="font-medium text-green-800 dark:text-green-300 mb-1">
+                            Richtige Antwort: {q.correctOptionId.toUpperCase()}){" "}
+                            {q.options.find((o) => o.id === q.correctOptionId)?.text}
+                          </p>
+                          <p className="text-green-700 dark:text-green-400 text-xs">
+                            {q.explanation}
+                          </p>
                         </div>
                         {tipp && (
                           <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-3 flex gap-2">
@@ -378,7 +457,14 @@ export default function Duel() {
                           </div>
                         )}
                         {!playerCorrect && (
-                          <AiTutorButton onClick={() => setAiTutorQ({ question: q, userAnswer: duel.playerAnswers[q.id] || "" })} />
+                          <AiTutorButton
+                            onClick={() =>
+                              setAiTutorQ({
+                                question: q,
+                                userAnswer: duel.playerAnswers[q.id] || "",
+                              })
+                            }
+                          />
                         )}
                       </div>
                     )}
@@ -388,7 +474,9 @@ export default function Duel() {
             </div>
 
             <div className="flex gap-3 justify-center pt-4">
-              <Button variant="outline" onClick={() => setDuel(null)}>Zurück</Button>
+              <Button variant="outline" onClick={() => setDuel(null)}>
+                Zurück
+              </Button>
               <Button onClick={() => startDuel(duel.mode)}>
                 <Swords className="w-4 h-4 mr-1" /> Neues Duell
               </Button>
@@ -422,15 +510,21 @@ export default function Duel() {
           <span className="text-sm font-medium text-gray-900 dark:text-gray-100">Du</span>
         </div>
 
-        <div className={`flex items-center gap-2 px-4 py-2 rounded-lg ${duel.timeLeft <= 10 ? "bg-red-50 dark:bg-red-900/20" : "bg-gray-100 dark:bg-gray-800"}`}>
+        <div
+          className={`flex items-center gap-2 px-4 py-2 rounded-lg ${duel.timeLeft <= 10 ? "bg-red-50 dark:bg-red-900/20" : "bg-gray-100 dark:bg-gray-800"}`}
+        >
           <Clock className={`w-4 h-4 ${duel.timeLeft <= 10 ? "text-red-500" : "text-muted"}`} />
-          <span className={`text-lg font-mono font-bold ${duel.timeLeft <= 10 ? "text-red-600" : "text-gray-900 dark:text-gray-100"}`}>
+          <span
+            className={`text-lg font-mono font-bold ${duel.timeLeft <= 10 ? "text-red-600" : "text-gray-900 dark:text-gray-100"}`}
+          >
             {duel.timeLeft}s
           </span>
         </div>
 
         <div className="flex items-center gap-2">
-          <span className="text-sm font-medium text-gray-900 dark:text-gray-100">{duel.opponentName}</span>
+          <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+            {duel.opponentName}
+          </span>
           <div className="w-8 h-8 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center">
             <Bot className="w-4 h-4 text-red-600 dark:text-red-400" />
           </div>
@@ -439,7 +533,10 @@ export default function Duel() {
 
       {duel.mode !== "random" && (
         <div className="flex justify-center">
-          <Badge variant={duel.mode === "schwachstellen" ? "danger" : "info"} className="text-[10px]">
+          <Badge
+            variant={duel.mode === "schwachstellen" ? "danger" : "info"}
+            className="text-[10px]"
+          >
             {duel.mode === "schwachstellen" ? "Schwachstellen" : "Adaptiv"}
           </Badge>
         </div>
@@ -451,12 +548,18 @@ export default function Duel() {
         </span>
         <span className="text-sm text-muted self-center">Frage {duel.currentIndex + 1}/5</span>
         <span className="text-xl font-bold text-red-600 dark:text-red-400">
-          {duel.questions.filter((q) => duel.opponentAnswers[q.id]?.answer === q.correctOptionId).length}
+          {
+            duel.questions.filter((q) => duel.opponentAnswers[q.id]?.answer === q.correctOptionId)
+              .length
+          }
         </span>
       </div>
 
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-        <div className="bg-primary-600 h-2 rounded-full transition-all" style={{ width: `${((duel.currentIndex + 1) / 5) * 100}%` }} />
+        <div
+          className="bg-primary-600 h-2 rounded-full transition-all"
+          style={{ width: `${((duel.currentIndex + 1) / 5) * 100}%` }}
+        />
       </div>
 
       <Card>
@@ -490,7 +593,9 @@ export default function Duel() {
                 <Zap className="w-3 h-3 mr-1" /> {duel.opponentName} hat geantwortet
               </Badge>
             ) : (
-              <span className="text-xs text-muted animate-pulse">{duel.opponentName} denkt nach...</span>
+              <span className="text-xs text-muted animate-pulse">
+                {duel.opponentName} denkt nach...
+              </span>
             )}
           </div>
         </CardContent>

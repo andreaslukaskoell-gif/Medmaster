@@ -36,19 +36,19 @@ function Seite1() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-          Aufgabenformat
-        </h2>
+        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">Aufgabenformat</h2>
         <p className="text-sm text-muted">
-          Seit 2015 im MedAT. Du bekommst ein soziales Dilemma und bewertest
-          8 Handlungsoptionen auf einer Skala von 1 bis 6.
+          Seit 2015 im MedAT. Du bekommst ein soziales Dilemma und bewertest 8 Handlungsoptionen auf
+          einer Skala von 1 bis 6.
         </p>
       </div>
 
       {/* Format */}
       <Card>
         <CardContent className="p-5 space-y-4">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">So sieht eine Aufgabe aus</h3>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+            So sieht eine Aufgabe aus
+          </h3>
           <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border-l-4 border-teal-400">
             <p className="text-sm text-muted mb-1">Szenario:</p>
             <p className="text-sm italic text-gray-700 dark:text-gray-300">
@@ -97,12 +97,42 @@ function Seite1() {
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
           {[
-            { value: 1, label: "Sehr unangemessen", color: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300 border-red-200 dark:border-red-800" },
-            { value: 2, label: "Unangemessen", color: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 border-orange-200 dark:border-orange-800" },
-            { value: 3, label: "Eher unangemessen", color: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300 border-amber-200 dark:border-amber-800" },
-            { value: 4, label: "Eher angemessen", color: "bg-lime-100 text-lime-800 dark:bg-lime-900/30 dark:text-lime-300 border-lime-200 dark:border-lime-800" },
-            { value: 5, label: "Angemessen", color: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 border-green-200 dark:border-green-800" },
-            { value: 6, label: "Sehr angemessen", color: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800" },
+            {
+              value: 1,
+              label: "Sehr unangemessen",
+              color:
+                "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300 border-red-200 dark:border-red-800",
+            },
+            {
+              value: 2,
+              label: "Unangemessen",
+              color:
+                "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 border-orange-200 dark:border-orange-800",
+            },
+            {
+              value: 3,
+              label: "Eher unangemessen",
+              color:
+                "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300 border-amber-200 dark:border-amber-800",
+            },
+            {
+              value: 4,
+              label: "Eher angemessen",
+              color:
+                "bg-lime-100 text-lime-800 dark:bg-lime-900/30 dark:text-lime-300 border-lime-200 dark:border-lime-800",
+            },
+            {
+              value: 5,
+              label: "Angemessen",
+              color:
+                "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 border-green-200 dark:border-green-800",
+            },
+            {
+              value: 6,
+              label: "Sehr angemessen",
+              color:
+                "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800",
+            },
           ].map((item) => (
             <div key={item.value} className={`${item.color} border rounded-lg p-3 text-center`}>
               <p className="text-lg font-bold">{item.value}</p>
@@ -129,12 +159,14 @@ function Seite2() {
           Die ärztliche Perspektive
         </h2>
         <p className="text-sm text-muted">
-          IMMER aus der Sicht eines &quot;guten Arztes&quot; bewerten — nicht aus deiner persönlichen Perspektive.
+          IMMER aus der Sicht eines &quot;guten Arztes&quot; bewerten — nicht aus deiner
+          persönlichen Perspektive.
         </p>
       </div>
 
       <Merksatz>
-        Frage dich bei jeder Option: &quot;Würde ein empathischer, professioneller Arzt das tun?&quot;
+        Frage dich bei jeder Option: &quot;Würde ein empathischer, professioneller Arzt das
+        tun?&quot;
       </Merksatz>
 
       {/* 4 Bewertungsdimensionen */}
@@ -205,9 +237,7 @@ function Seite2() {
                 </div>
                 <h4 className="font-semibold text-gray-900 dark:text-gray-100">Ethik</h4>
               </div>
-              <p className="text-sm text-muted">
-                Ist die Handlung ethisch vertretbar?
-              </p>
+              <p className="text-sm text-muted">Ist die Handlung ethisch vertretbar?</p>
               <div className="mt-2 text-xs">
                 <span className="text-green-600 dark:text-green-400">Hoch bewertet:</span>
                 <span className="text-muted ml-1">Gerecht, transparent, verantwortungsvoll</span>
@@ -220,7 +250,9 @@ function Seite2() {
       {/* Extreme Bewertungen */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="bg-green-50 dark:bg-green-900/15 border border-green-200 dark:border-green-800 rounded-lg p-4">
-          <h4 className="font-semibold text-green-800 dark:text-green-300 mb-2">Wann 5 oder 6 geben?</h4>
+          <h4 className="font-semibold text-green-800 dark:text-green-300 mb-2">
+            Wann 5 oder 6 geben?
+          </h4>
           <ul className="space-y-1 text-sm text-green-700 dark:text-green-400">
             <li>• Patientenwohl steht im Zentrum</li>
             <li>• Empathisch UND professionell</li>
@@ -229,7 +261,9 @@ function Seite2() {
           </ul>
         </div>
         <div className="bg-red-50 dark:bg-red-900/15 border border-red-200 dark:border-red-800 rounded-lg p-4">
-          <h4 className="font-semibold text-red-800 dark:text-red-300 mb-2">Wann 1 oder 2 geben?</h4>
+          <h4 className="font-semibold text-red-800 dark:text-red-300 mb-2">
+            Wann 1 oder 2 geben?
+          </h4>
           <ul className="space-y-1 text-sm text-red-700 dark:text-red-400">
             <li>• Patientenwohl wird gefährdet</li>
             <li>• Unprofessionelles Verhalten</li>
@@ -260,12 +294,16 @@ function Seite3() {
         <Card>
           <CardContent className="p-5 space-y-2">
             <div className="flex items-center gap-3">
-              <span className="bg-teal-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">1</span>
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">Szenario lesen &amp; Perspektive einnehmen</h3>
+              <span className="bg-teal-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+                1
+              </span>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+                Szenario lesen &amp; Perspektive einnehmen
+              </h3>
             </div>
             <p className="text-sm text-muted pl-11">
-              Versetze dich in einen jungen Arzt/eine junge Ärztin. Was ist das Kernproblem?
-              Wer ist betroffen?
+              Versetze dich in einen jungen Arzt/eine junge Ärztin. Was ist das Kernproblem? Wer ist
+              betroffen?
             </p>
           </CardContent>
         </Card>
@@ -273,12 +311,16 @@ function Seite3() {
         <Card>
           <CardContent className="p-5 space-y-2">
             <div className="flex items-center gap-3">
-              <span className="bg-teal-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">2</span>
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">Alle 8 Optionen lesen</h3>
+              <span className="bg-teal-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+                2
+              </span>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+                Alle 8 Optionen lesen
+              </h3>
             </div>
             <p className="text-sm text-muted pl-11">
-              Lies zuerst ALLE Optionen, bevor du bewertest.
-              Das gibt dir einen Überblick über das Spektrum der Möglichkeiten.
+              Lies zuerst ALLE Optionen, bevor du bewertest. Das gibt dir einen Überblick über das
+              Spektrum der Möglichkeiten.
             </p>
           </CardContent>
         </Card>
@@ -286,8 +328,12 @@ function Seite3() {
         <Card>
           <CardContent className="p-5 space-y-2">
             <div className="flex items-center gap-3">
-              <span className="bg-teal-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">3</span>
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">4 Dimensionen durchgehen</h3>
+              <span className="bg-teal-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+                3
+              </span>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+                4 Dimensionen durchgehen
+              </h3>
             </div>
             <p className="text-sm text-muted pl-11">
               Pro Option: Empathie ✓/✗ | Professionalität ✓/✗ | Patientenwohl ✓/✗ | Ethik ✓/✗
@@ -298,12 +344,16 @@ function Seite3() {
         <Card>
           <CardContent className="p-5 space-y-2">
             <div className="flex items-center gap-3">
-              <span className="bg-teal-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">4</span>
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">Extreme nur bei klaren Fällen</h3>
+              <span className="bg-teal-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+                4
+              </span>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+                Extreme nur bei klaren Fällen
+              </h3>
             </div>
             <p className="text-sm text-muted pl-11">
-              1 und 6 nur vergeben, wenn die Option EINDEUTIG unangemessen oder angemessen ist.
-              Im Zweifel: 2-3 oder 4-5 wählen.
+              1 und 6 nur vergeben, wenn die Option EINDEUTIG unangemessen oder angemessen ist. Im
+              Zweifel: 2-3 oder 4-5 wählen.
             </p>
           </CardContent>
         </Card>
@@ -317,16 +367,28 @@ function Seite3() {
         </p>
         <div className="space-y-2">
           <div className="flex items-center gap-2 text-sm">
-            <span className="bg-green-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">0</span>
-            <span className="text-gray-700 dark:text-gray-300">Perfekt! Deine Bewertung = Idealbewertung</span>
+            <span className="bg-green-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
+              0
+            </span>
+            <span className="text-gray-700 dark:text-gray-300">
+              Perfekt! Deine Bewertung = Idealbewertung
+            </span>
           </div>
           <div className="flex items-center gap-2 text-sm">
-            <span className="bg-amber-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">1</span>
-            <span className="text-gray-700 dark:text-gray-300">Knapp daneben — 1 Punkt Abweichung</span>
+            <span className="bg-amber-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
+              1
+            </span>
+            <span className="text-gray-700 dark:text-gray-300">
+              Knapp daneben — 1 Punkt Abweichung
+            </span>
           </div>
           <div className="flex items-center gap-2 text-sm">
-            <span className="bg-red-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">2+</span>
-            <span className="text-gray-700 dark:text-gray-300">Deutliche Abweichung — Punkte gehen verloren</span>
+            <span className="bg-red-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
+              2+
+            </span>
+            <span className="text-gray-700 dark:text-gray-300">
+              Deutliche Abweichung — Punkte gehen verloren
+            </span>
           </div>
         </div>
       </div>
@@ -336,21 +398,26 @@ function Seite3() {
         <div className="bg-red-50 dark:bg-red-900/15 border-l-4 border-red-500 p-4 rounded-r-lg space-y-2">
           <div className="flex items-center gap-2">
             <AlertTriangle className="w-4 h-4 text-red-500" />
-            <h3 className="font-semibold text-red-800 dark:text-red-300">Falle: Aus eigener Perspektive bewerten</h3>
+            <h3 className="font-semibold text-red-800 dark:text-red-300">
+              Falle: Aus eigener Perspektive bewerten
+            </h3>
           </div>
           <p className="text-sm text-red-700 dark:text-red-400">
-            Nicht &quot;Was würde ICH tun?&quot; — sondern &quot;Was SOLLTE ein guter Arzt tun?&quot;
+            Nicht &quot;Was würde ICH tun?&quot; — sondern &quot;Was SOLLTE ein guter Arzt
+            tun?&quot;
           </p>
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/15 border-l-4 border-red-500 p-4 rounded-r-lg space-y-2">
           <div className="flex items-center gap-2">
             <AlertTriangle className="w-4 h-4 text-red-500" />
-            <h3 className="font-semibold text-red-800 dark:text-red-300">Falle: Alle Optionen mit 3-4 bewerten</h3>
+            <h3 className="font-semibold text-red-800 dark:text-red-300">
+              Falle: Alle Optionen mit 3-4 bewerten
+            </h3>
           </div>
           <p className="text-sm text-red-700 dark:text-red-400">
-            Trau dich, klare Bewertungen zu geben! Wer alles mit 3-4 bewertet,
-            bekommt bei den extremen Idealwerten (1, 2, 5, 6) viele Abweichungspunkte.
+            Trau dich, klare Bewertungen zu geben! Wer alles mit 3-4 bewertet, bekommt bei den
+            extremen Idealwerten (1, 2, 5, 6) viele Abweichungspunkte.
           </p>
         </div>
       </div>
@@ -364,15 +431,24 @@ function Seite3() {
         <ul className="space-y-2 text-sm text-teal-700 dark:text-teal-400">
           <li className="flex items-start gap-2">
             <span className="text-teal-500 mt-0.5">1.</span>
-            <span>Optionen, die &quot;mit dem Patienten reden&quot;, &quot;zuhören&quot; oder &quot;Verständnis zeigen&quot; beinhalten, werden fast immer hoch bewertet (5-6).</span>
+            <span>
+              Optionen, die &quot;mit dem Patienten reden&quot;, &quot;zuhören&quot; oder
+              &quot;Verständnis zeigen&quot; beinhalten, werden fast immer hoch bewertet (5-6).
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-teal-500 mt-0.5">2.</span>
-            <span>Optionen, die &quot;ignorieren&quot;, &quot;Verantwortung abgeben&quot; oder &quot;geheim halten&quot; beinhalten, werden fast immer niedrig bewertet (1-2).</span>
+            <span>
+              Optionen, die &quot;ignorieren&quot;, &quot;Verantwortung abgeben&quot; oder
+              &quot;geheim halten&quot; beinhalten, werden fast immer niedrig bewertet (1-2).
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-teal-500 mt-0.5">3.</span>
-            <span>Öffentliche Konfrontation ist fast immer schlecht bewertet — konstruktives Feedback unter vier Augen ist besser.</span>
+            <span>
+              Öffentliche Konfrontation ist fast immer schlecht bewertet — konstruktives Feedback
+              unter vier Augen ist besser.
+            </span>
           </li>
         </ul>
       </div>

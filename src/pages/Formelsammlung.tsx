@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
+import { usePageTitle } from "@/hooks/usePageTitle";
 import { formeln, type Formel } from "@/data/formeln";
 import {
   Search,
@@ -57,9 +58,7 @@ function FormelCard({ f }: { f: Formel }) {
       <CardContent className="p-5">
         {/* Header */}
         <div className="flex items-start gap-3 mb-3">
-          <div
-            className={`w-9 h-9 ${cfg.bg} rounded-lg flex items-center justify-center shrink-0`}
-          >
+          <div className={`w-9 h-9 ${cfg.bg} rounded-lg flex items-center justify-center shrink-0`}>
             <Icon className={`w-4 h-4 ${cfg.color}`} />
           </div>
           <div className="min-w-0 flex-1">
@@ -67,10 +66,7 @@ function FormelCard({ f }: { f: Formel }) {
               <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm leading-tight">
                 {f.name}
               </h3>
-              <Badge
-                variant="default"
-                className="text-[10px] shrink-0"
-              >
+              <Badge variant="default" className="text-[10px] shrink-0">
                 {f.kapitel}
               </Badge>
             </div>
@@ -101,11 +97,7 @@ function FormelCard({ f }: { f: Formel }) {
         >
           <BookOpen className="w-3.5 h-3.5" />
           Beispiel
-          {open ? (
-            <ChevronUp className="w-3.5 h-3.5" />
-          ) : (
-            <ChevronDown className="w-3.5 h-3.5" />
-          )}
+          {open ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
         </button>
         {open && (
           <div className="mt-2 text-sm text-gray-700 dark:text-gray-300 bg-primary-50 dark:bg-primary-900/20 rounded-md px-3 py-2">
@@ -118,9 +110,9 @@ function FormelCard({ f }: { f: Formel }) {
 }
 
 export default function Formelsammlung() {
+  usePageTitle("Formelsammlung");
   const { fach } = useParams<{ fach?: string }>();
-  const initialFilter: FachFilter =
-    fach && fach in fachConfig ? (fach as FachFilter) : "alle";
+  const initialFilter: FachFilter = fach && fach in fachConfig ? (fach as FachFilter) : "alle";
 
   const [filter, setFilter] = useState<FachFilter>(initialFilter);
   const [search, setSearch] = useState("");
@@ -156,18 +148,11 @@ export default function Formelsammlung() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <BreadcrumbNav
-        items={[
-          { label: "Dashboard", href: "/" },
-          { label: "Formelsammlung" },
-        ]}
-      />
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Formelsammlung" }]} />
 
       {/* Header */}
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-          Formelsammlung
-        </h1>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Formelsammlung</h1>
         <p className="text-muted mt-1">
           {formeln.length} Formeln für Physik, Chemie und Mathematik
         </p>
@@ -204,9 +189,7 @@ export default function Formelsammlung() {
 
       {/* Formeln grouped by chapter */}
       {filtered.length === 0 ? (
-        <div className="text-center py-12 text-muted">
-          Keine Formeln gefunden.
-        </div>
+        <div className="text-center py-12 text-muted">Keine Formeln gefunden.</div>
       ) : (
         Array.from(grouped.entries()).map(([chapter, items]) => (
           <div key={chapter}>

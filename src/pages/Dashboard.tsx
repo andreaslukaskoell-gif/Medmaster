@@ -1,7 +1,21 @@
 import { useMemo, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Award, Flame, BookOpen, Sparkles, ArrowRight, Target, CheckCircle2, Clock, Share2, Timer, TrendingUp, Layers, AlertCircle } from "lucide-react";
+import {
+  Award,
+  Flame,
+  BookOpen,
+  Sparkles,
+  ArrowRight,
+  Target,
+  CheckCircle2,
+  Clock,
+  Share2,
+  Timer,
+  TrendingUp,
+  Layers,
+  AlertCircle,
+} from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -98,7 +112,7 @@ export default function Dashboard() {
     }
   }, [dailyGoalState.hasPlan, dailyGoalState.isPrimaryComplete, todayStr, setGoalAchievedToday]);
 
-  const xp = profile.hasData ? profile.xp : (Number.isFinite(storeXp) ? storeXp : 0);
+  const xp = profile.hasData ? profile.xp : Number.isFinite(storeXp) ? storeXp : 0;
   const level = getLevelFromXP(xp);
   const levelProgress = getLevelProgressPercent(xp);
   useLevelUpSound(xp);
@@ -113,11 +127,18 @@ export default function Dashboard() {
   }, [getFachReadiness, unlockedFachMilestones, unlockFachMilestone, faecherIds]);
 
   const badgeState = useMemo(
-    () => ({ completedChapters, maxConsecutiveCorrectEver, smartRecoveryCount, firstActivityTimeByDay }),
+    () => ({
+      completedChapters,
+      maxConsecutiveCorrectEver,
+      smartRecoveryCount,
+      firstActivityTimeByDay,
+    }),
     [completedChapters, maxConsecutiveCorrectEver, smartRecoveryCount, firstActivityTimeByDay]
   );
   const earnedBadges = useMemo(() => {
-    return BADGE_DEFINITIONS.filter((b) => getBadgeProgress(b.id, badgeState, alleKapitel).earned).slice(-3);
+    return BADGE_DEFINITIONS.filter(
+      (b) => getBadgeProgress(b.id, badgeState, alleKapitel).earned
+    ).slice(-3);
   }, [badgeState]);
 
   const questProgress = dailyGoalState.hasPlan ? dailyGoalState.primaryProgressPct : 0;
@@ -219,7 +240,12 @@ export default function Dashboard() {
           >
             {dailyResult ? (
               <Link to="/daily">
-                <div className={cn(glassClass, "relative overflow-hidden border-l-4 border-emerald-500")}>
+                <div
+                  className={cn(
+                    glassClass,
+                    "relative overflow-hidden border-l-4 border-emerald-500"
+                  )}
+                >
                   <div className="absolute inset-0 bg-linear-to-r from-emerald-500/5 to-transparent pointer-events-none" />
                   <CardContent className="relative p-4 sm:p-5 flex items-center justify-between gap-4">
                     <div className="flex items-center gap-3">
@@ -227,7 +253,9 @@ export default function Dashboard() {
                         <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-slate-900 dark:text-white">✅ BMS des Tages gelöst!</p>
+                        <p className="text-sm font-semibold text-slate-900 dark:text-white">
+                          ✅ BMS des Tages gelöst!
+                        </p>
                         <p className="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1 mt-0.5">
                           <Clock className="w-3 h-3" /> Nächste Frage morgen
                         </p>
@@ -241,7 +269,12 @@ export default function Dashboard() {
               </Link>
             ) : (
               <Link to="/daily">
-                <div className={cn(glassClass, "relative overflow-hidden border-l-4 border-amber-400 hover:border-amber-500 cursor-pointer")}>
+                <div
+                  className={cn(
+                    glassClass,
+                    "relative overflow-hidden border-l-4 border-amber-400 hover:border-amber-500 cursor-pointer"
+                  )}
+                >
                   <div className="absolute inset-0 bg-linear-to-r from-amber-500/8 to-transparent pointer-events-none" />
                   <CardContent className="relative p-4 sm:p-5 flex items-center justify-between gap-4">
                     <div className="flex items-center gap-3">
@@ -249,8 +282,12 @@ export default function Dashboard() {
                         <Target className="w-5 h-5 text-amber-600 dark:text-amber-400" />
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-slate-900 dark:text-white">🎯 BMS des Tages wartet!</p>
-                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Täglich eine Frage — bis zu 100 XP</p>
+                        <p className="text-sm font-semibold text-slate-900 dark:text-white">
+                          🎯 BMS des Tages wartet!
+                        </p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                          Täglich eine Frage — bis zu 100 XP
+                        </p>
                       </div>
                     </div>
                     <span className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-amber-700 dark:text-amber-300 bg-amber-100 dark:bg-amber-900/40 px-3 py-1.5 rounded-full">
@@ -268,7 +305,9 @@ export default function Dashboard() {
             className="sm:col-span-2 lg:col-span-4"
             aria-label="Heute für dich"
           >
-            <div className={cn(glassClass, "relative overflow-hidden border-l-4 border-l-blue-500")}>
+            <div
+              className={cn(glassClass, "relative overflow-hidden border-l-4 border-l-blue-500")}
+            >
               <div className="absolute inset-0 bg-linear-to-r from-blue-500/5 to-transparent pointer-events-none" />
               <CardContent className="relative p-5">
                 <div className="flex items-center justify-between mb-4">
@@ -277,7 +316,9 @@ export default function Dashboard() {
                       <Sparkles className="w-4 h-4 text-blue-500" />
                       Heute für dich
                     </h3>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Basierend auf deinem Fortschritt</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                      Basierend auf deinem Fortschritt
+                    </p>
                   </div>
                   {dueCount > 0 && (
                     <div className="flex items-center gap-1 text-xs font-semibold text-amber-700 dark:text-amber-300 bg-amber-100 dark:bg-amber-900/40 px-2.5 py-1 rounded-full">
@@ -290,29 +331,44 @@ export default function Dashboard() {
                   <Link to="/simulation">
                     <div className="bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50">
                       <Timer className="w-4 h-4 text-orange-500 mb-1.5" />
-                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">Testsimulation</p>
+                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">
+                        Testsimulation
+                      </p>
                       <p className="text-[10px] text-slate-500 dark:text-slate-400">Gesamtstand</p>
                     </div>
                   </Link>
                   <Link to="/schwachstellen">
                     <div className="bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50">
                       <Target className="w-4 h-4 text-rose-500 mb-1.5" />
-                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">Schwachstellen</p>
+                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">
+                        Schwachstellen
+                      </p>
                       <p className="text-[10px] text-slate-500 dark:text-slate-400">Gezielt üben</p>
                     </div>
                   </Link>
                   <Link to="/prognose">
                     <div className="bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50">
                       <TrendingUp className="w-4 h-4 text-green-500 mb-1.5" />
-                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">Prognose</p>
+                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">
+                        Prognose
+                      </p>
                       <p className="text-[10px] text-slate-500 dark:text-slate-400">Punktestand</p>
                     </div>
                   </Link>
                   <Link to="/bms?filter=due">
-                    <div className={cn("bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50", dueCount > 0 && "border-amber-300 dark:border-amber-600/50")}>
+                    <div
+                      className={cn(
+                        "bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50",
+                        dueCount > 0 && "border-amber-300 dark:border-amber-600/50"
+                      )}
+                    >
                       <Layers className="w-4 h-4 text-emerald-500 mb-1.5" />
-                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">Wiederholen</p>
-                      <p className="text-[10px] text-slate-500 dark:text-slate-400">Fällige Kapitel</p>
+                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">
+                        Wiederholen
+                      </p>
+                      <p className="text-[10px] text-slate-500 dark:text-slate-400">
+                        Fällige Kapitel
+                      </p>
                     </div>
                   </Link>
                 </div>
@@ -329,12 +385,18 @@ export default function Dashboard() {
                     <Award className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-slate-900 dark:text-white">Level {level}</p>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">{xp.toLocaleString()} XP</p>
+                    <p className="text-2xl font-bold text-slate-900 dark:text-white">
+                      Level {level}
+                    </p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400">
+                      {xp.toLocaleString()} XP
+                    </p>
                   </div>
                 </div>
                 <Progress value={levelProgress} className="h-2 rounded-full" />
-                <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">Zum nächsten Level</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                  Zum nächsten Level
+                </p>
               </CardContent>
             </div>
           </motion.section>
@@ -351,9 +413,7 @@ export default function Dashboard() {
                     <p className="text-2xl font-bold text-slate-900 dark:text-white">{streak}</p>
                     <p className="text-xs text-slate-500 dark:text-slate-400">Tage Streak</p>
                   </div>
-                  {streak > 0 && (
-                    <StreakShareButton streak={streak} />
-                  )}
+                  {streak > 0 && <StreakShareButton streak={streak} />}
                 </div>
               </CardContent>
             </div>
@@ -363,7 +423,9 @@ export default function Dashboard() {
           <motion.section variants={tileMotion} aria-label="Letzte Badges">
             <div className={cn(glassClass, "h-full")}>
               <CardContent className="p-5">
-                <p className="text-xs font-medium text-slate-500 dark:text-slate-400 mb-3">Letzte Badges</p>
+                <p className="text-xs font-medium text-slate-500 dark:text-slate-400 mb-3">
+                  Letzte Badges
+                </p>
                 {earnedBadges.length > 0 ? (
                   <div className="space-y-2">
                     {earnedBadges.map((badge) => (
@@ -394,10 +456,16 @@ export default function Dashboard() {
           </motion.section>
 
           {/* Kachel 4: Wochen-Aktivität */}
-          <motion.section variants={tileMotion} className="sm:col-span-2" aria-label="Wochen-Aktivität">
+          <motion.section
+            variants={tileMotion}
+            className="sm:col-span-2"
+            aria-label="Wochen-Aktivität"
+          >
             <div className={cn(glassClass, "h-full")}>
               <CardContent className="p-5">
-                <p className="text-xs font-medium text-slate-500 dark:text-slate-400 mb-3">Wochen-Aktivität</p>
+                <p className="text-xs font-medium text-slate-500 dark:text-slate-400 mb-3">
+                  Wochen-Aktivität
+                </p>
                 <Heatmap />
               </CardContent>
             </div>
@@ -415,14 +483,21 @@ export default function Dashboard() {
               className="relative w-full max-w-md rounded-2xl border border-white/10 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-xl p-6"
               onClick={(e) => e.stopPropagation()}
             >
-              <h2 id="smart-adjust-title" className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+              <h2
+                id="smart-adjust-title"
+                className="text-lg font-semibold text-slate-900 dark:text-white mb-2"
+              >
                 Tagesziel öfter verfehlt
               </h2>
               <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
                 Sollen wir das Pensum für die nächsten Tage anpassen?
               </p>
               <div className="flex gap-3">
-                <Button variant="outline" className="flex-1" onClick={() => dismissSmartAdjust(false)}>
+                <Button
+                  variant="outline"
+                  className="flex-1"
+                  onClick={() => dismissSmartAdjust(false)}
+                >
                   Nein, dranbleiben
                 </Button>
                 <Button className="flex-1" onClick={() => dismissSmartAdjust(true)}>
@@ -451,7 +526,11 @@ function StreakShareButton({ streak }: { streak: number }) {
       aria-label="Streak teilen"
       title="Streak teilen"
     >
-      {copied ? <CheckCircle2 className="w-4 h-4 text-emerald-500" /> : <Share2 className="w-4 h-4" />}
+      {copied ? (
+        <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+      ) : (
+        <Share2 className="w-4 h-4" />
+      )}
     </button>
   );
 }

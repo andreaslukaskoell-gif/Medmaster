@@ -32,6 +32,7 @@ import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { getQuestionSubject } from "@/lib/bmsLookup";
 import { allBmsQuestions } from "@/data/bms";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const tabs = [
   { id: "alle" as const, label: "Alle", icon: BookOpen },
@@ -41,22 +42,52 @@ const tabs = [
   { id: "mathematik" as const, label: "Mathematik", icon: Calculator },
 ] as const;
 
-const fachColors: Record<string, { bg: string; text: string; border: string; progress: string; badge: string }> = {
-  biologie: { bg: "bg-emerald-50 dark:bg-emerald-900/20", text: "text-emerald-700 dark:text-emerald-400", border: "border-emerald-500", progress: "bg-emerald-500", badge: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300" },
-  chemie: { bg: "bg-red-50 dark:bg-red-900/20", text: "text-red-700 dark:text-red-400", border: "border-red-500", progress: "bg-red-500", badge: "bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300" },
-  physik: { bg: "bg-blue-50 dark:bg-blue-900/20", text: "text-blue-700 dark:text-blue-400", border: "border-blue-500", progress: "bg-blue-500", badge: "bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300" },
-  mathematik: { bg: "bg-violet-50 dark:bg-violet-900/20", text: "text-violet-700 dark:text-violet-400", border: "border-violet-500", progress: "bg-violet-500", badge: "bg-violet-100 text-violet-800 dark:bg-violet-900/40 dark:text-violet-300" },
+const fachColors: Record<
+  string,
+  { bg: string; text: string; border: string; progress: string; badge: string }
+> = {
+  biologie: {
+    bg: "bg-emerald-50 dark:bg-emerald-900/20",
+    text: "text-emerald-700 dark:text-emerald-400",
+    border: "border-emerald-500",
+    progress: "bg-emerald-500",
+    badge: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300",
+  },
+  chemie: {
+    bg: "bg-red-50 dark:bg-red-900/20",
+    text: "text-red-700 dark:text-red-400",
+    border: "border-red-500",
+    progress: "bg-red-500",
+    badge: "bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300",
+  },
+  physik: {
+    bg: "bg-blue-50 dark:bg-blue-900/20",
+    text: "text-blue-700 dark:text-blue-400",
+    border: "border-blue-500",
+    progress: "bg-blue-500",
+    badge: "bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300",
+  },
+  mathematik: {
+    bg: "bg-violet-50 dark:bg-violet-900/20",
+    text: "text-violet-700 dark:text-violet-400",
+    border: "border-violet-500",
+    progress: "bg-violet-500",
+    badge: "bg-violet-100 text-violet-800 dark:bg-violet-900/40 dark:text-violet-300",
+  },
 };
 
 function getStatusForStichwort(
   sw: Stichwort,
   quizResults: ReturnType<typeof useStore.getState>["quizResults"]
-): { status: "gelernt" | "in-bearbeitung" | "nicht-begonnen"; successRate: number; questionCount: number; lastPracticed: string | null } {
+): {
+  status: "gelernt" | "in-bearbeitung" | "nicht-begonnen";
+  successRate: number;
+  questionCount: number;
+  lastPracticed: string | null;
+} {
   // Count questions linked to this stichwort
   const linkedQuestions = allBmsQuestions.filter(
-    (q) =>
-      q.subject === sw.fach &&
-      sw.linkedQuestionTags?.some((tag) => q.tags?.includes(tag))
+    (q) => q.subject === sw.fach && sw.linkedQuestionTags?.some((tag) => q.tags?.includes(tag))
   );
   const questionCount = linkedQuestions.length;
 
@@ -88,6 +119,7 @@ function getStatusForStichwort(
 }
 
 export default function StichwortlistePage() {
+  usePageTitle("Stichwortliste");
   const [activeTab, setActiveTab] = useState<string>("alle");
   const [searchQuery, setSearchQuery] = useState("");
   const [priorityFilter, setPriorityFilter] = useState<string>("alle");
@@ -175,9 +207,7 @@ export default function StichwortlistePage() {
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
           BMS-Stichwortliste 2025/2026
         </h1>
-        <p className="text-muted mt-1">
-          Offizielle Prüfungsthemen mit Lernfortschritt-Tracking
-        </p>
+        <p className="text-muted mt-1">Offizielle Prüfungsthemen mit Lernfortschritt-Tracking</p>
       </div>
 
       {/* Abdeckungs-Dashboard */}
@@ -188,15 +218,15 @@ export default function StichwortlistePage() {
             <Card
               key={fs.fach}
               className={`cursor-pointer transition-all hover:shadow-md ${
-                activeTab === fs.fach ? `ring-2 ring-offset-1 ${colors.border.replace("border-", "ring-")}` : ""
+                activeTab === fs.fach
+                  ? `ring-2 ring-offset-1 ${colors.border.replace("border-", "ring-")}`
+                  : ""
               }`}
               onClick={() => setActiveTab(fs.fach)}
             >
               <CardContent className="p-4">
                 <div className="flex items-center justify-between mb-2">
-                  <span className={`text-sm font-semibold ${colors.text}`}>
-                    {fs.config.label}
-                  </span>
+                  <span className={`text-sm font-semibold ${colors.text}`}>{fs.config.label}</span>
                   <span className={`text-xs font-bold ${colors.text}`}>{fs.prozent}%</span>
                 </div>
                 <Progress value={fs.prozent} className="h-2" />
@@ -342,14 +372,20 @@ export default function StichwortlistePage() {
                               const as = adaptiveProfile.stichwortStats[sw.id];
                               if (as && as.totalAttempts >= 3) {
                                 return (
-                                  <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
-                                    as.confidence === "sicher"
-                                      ? "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300"
+                                  <span
+                                    className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
+                                      as.confidence === "sicher"
+                                        ? "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300"
+                                        : as.confidence === "unsicher"
+                                          ? "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300"
+                                          : "bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400"
+                                    }`}
+                                  >
+                                    {as.confidence === "sicher"
+                                      ? "Sicher"
                                       : as.confidence === "unsicher"
-                                        ? "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300"
-                                        : "bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400"
-                                  }`}>
-                                    {as.confidence === "sicher" ? "Sicher" : as.confidence === "unsicher" ? "Unsicher" : "?"}
+                                        ? "Unsicher"
+                                        : "?"}
                                   </span>
                                 );
                               }

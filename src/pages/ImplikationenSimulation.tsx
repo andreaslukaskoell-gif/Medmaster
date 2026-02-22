@@ -1,5 +1,14 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from "react";
-import { Timer, CheckCircle2, XCircle, ChevronRight, RotateCcw, Trophy, Clock, BarChart3 } from "lucide-react";
+import {
+  Timer,
+  CheckCircle2,
+  XCircle,
+  ChevronRight,
+  RotateCcw,
+  Trophy,
+  Clock,
+  BarChart3,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { implikationenTasks, type ImplikationTask } from "@/data/kffImplikationen";
@@ -173,14 +182,18 @@ export default function ImplikationenSimulation() {
               Simulation starten
             </h2>
             <p className="text-sm text-muted max-w-md mx-auto">
-              {TASK_COUNT} zufällige Aufgaben in {TIME_LIMIT / 60} Minuten — genau wie im echten MedAT.
-              Keine Tipps, keine Lösungswege während der Simulation.
+              {TASK_COUNT} zufällige Aufgaben in {TIME_LIMIT / 60} Minuten — genau wie im echten
+              MedAT. Keine Tipps, keine Lösungswege während der Simulation.
             </p>
           </div>
           <div className="flex flex-col items-center gap-2 text-sm text-muted">
             <div className="flex items-center gap-4">
-              <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {TIME_LIMIT / 60}:00 min</span>
-              <span className="flex items-center gap-1"><BarChart3 className="w-4 h-4" /> {TASK_COUNT} Aufgaben</span>
+              <span className="flex items-center gap-1">
+                <Clock className="w-4 h-4" /> {TIME_LIMIT / 60}:00 min
+              </span>
+              <span className="flex items-center gap-1">
+                <BarChart3 className="w-4 h-4" /> {TASK_COUNT} Aufgaben
+              </span>
             </div>
           </div>
           <button
@@ -216,12 +229,20 @@ export default function ImplikationenSimulation() {
                 </h2>
                 <p className="text-sm text-muted">
                   {scorePercent}% richtig —{" "}
-                  {scorePercent >= 80 ? "Ausgezeichnet!" : scorePercent >= 60 ? "Gut gemacht!" : scorePercent >= 40 ? "Weiter üben!" : "Mehr Übung nötig!"}
+                  {scorePercent >= 80
+                    ? "Ausgezeichnet!"
+                    : scorePercent >= 60
+                      ? "Gut gemacht!"
+                      : scorePercent >= 40
+                        ? "Weiter üben!"
+                        : "Mehr Übung nötig!"}
                 </p>
               </div>
               <div className="flex justify-center gap-6 text-sm">
                 <div className="text-center">
-                  <p className="text-lg font-bold text-gray-900 dark:text-gray-100">{formatTime(TIME_LIMIT - timeLeft)}</p>
+                  <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                    {formatTime(TIME_LIMIT - timeLeft)}
+                  </p>
                   <p className="text-xs text-muted">Gesamtzeit</p>
                 </div>
                 <div className="text-center">
@@ -234,7 +255,11 @@ export default function ImplikationenSimulation() {
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
                   <div
                     className={`h-3 rounded-full transition-all ${
-                      scorePercent >= 80 ? "bg-green-500" : scorePercent >= 50 ? "bg-amber-500" : "bg-red-500"
+                      scorePercent >= 80
+                        ? "bg-green-500"
+                        : scorePercent >= 50
+                          ? "bg-amber-500"
+                          : "bg-red-500"
                     }`}
                     style={{ width: `${scorePercent}%` }}
                   />
@@ -258,11 +283,13 @@ export default function ImplikationenSimulation() {
                     onClick={() => setExpandedResult(isExpanded ? null : i)}
                     className="w-full text-left p-4 flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
                   >
-                    <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-                      result.correct
-                        ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400"
-                        : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400"
-                    }`}>
+                    <span
+                      className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+                        result.correct
+                          ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400"
+                          : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400"
+                      }`}
+                    >
                       {i + 1}
                     </span>
                     <div className="flex-1 min-w-0">
@@ -296,10 +323,16 @@ export default function ImplikationenSimulation() {
                           const isCorrectOpt = j === result.task.correctAnswer;
                           const isUserChoice = j === result.userAnswer;
                           return (
-                            <div key={j} className={`text-sm px-3 py-2 rounded ${
-                              isCorrectOpt ? "bg-green-50 dark:bg-green-900/15 text-green-800 dark:text-green-300 font-medium" :
-                              isUserChoice ? "bg-red-50 dark:bg-red-900/15 text-red-800 dark:text-red-300" : "text-muted"
-                            }`}>
+                            <div
+                              key={j}
+                              className={`text-sm px-3 py-2 rounded ${
+                                isCorrectOpt
+                                  ? "bg-green-50 dark:bg-green-900/15 text-green-800 dark:text-green-300 font-medium"
+                                  : isUserChoice
+                                    ? "bg-red-50 dark:bg-red-900/15 text-red-800 dark:text-red-300"
+                                    : "text-muted"
+                              }`}
+                            >
                               <span className="font-bold mr-2">{optionLabels[j]}</span>
                               {opt}
                               {isCorrectOpt && " ✓"}
@@ -309,8 +342,12 @@ export default function ImplikationenSimulation() {
                         })}
                       </div>
                       <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
-                        <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Lösungsweg:</p>
-                        <p className="text-sm text-gray-700 dark:text-gray-300">{result.task.explanation}</p>
+                        <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
+                          Lösungsweg:
+                        </p>
+                        <p className="text-sm text-gray-700 dark:text-gray-300">
+                          {result.task.explanation}
+                        </p>
                       </div>
                     </div>
                   )}
@@ -342,7 +379,9 @@ export default function ImplikationenSimulation() {
     <div className="space-y-4">
       {/* Timer bar */}
       <div className="flex items-center gap-3">
-        <Timer className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-purple-500"}`} />
+        <Timer
+          className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-purple-500"}`}
+        />
         <div className="flex-1">
           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
             <div
@@ -351,14 +390,18 @@ export default function ImplikationenSimulation() {
             />
           </div>
         </div>
-        <span className={`text-sm font-mono font-bold min-w-[48px] text-right ${isUrgent ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}>
+        <span
+          className={`text-sm font-mono font-bold min-w-[48px] text-right ${isUrgent ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}
+        >
           {formatTime(timeLeft)}
         </span>
       </div>
 
       {/* Progress */}
       <div className="flex items-center justify-between text-sm text-muted">
-        <span>Aufgabe {currentIndex + 1} von {TASK_COUNT}</span>
+        <span>
+          Aufgabe {currentIndex + 1} von {TASK_COUNT}
+        </span>
         <div className="flex gap-1">
           {Array.from({ length: TASK_COUNT }, (_, i) => (
             <div
@@ -411,7 +454,9 @@ export default function ImplikationenSimulation() {
                 }`}
               >
                 <div className="flex items-start gap-3">
-                  <span className={`text-sm font-bold mt-0.5 ${selectedAnswer === i ? "text-purple-600" : "text-gray-400"}`}>
+                  <span
+                    className={`text-sm font-bold mt-0.5 ${selectedAnswer === i ? "text-purple-600" : "text-gray-400"}`}
+                  >
                     {optionLabels[i]}
                   </span>
                   <span className="text-sm text-gray-900 dark:text-gray-100">{option}</span>

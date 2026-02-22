@@ -37,7 +37,9 @@ export default function Legal() {
   useEffect(() => {
     // Check for missing placeholders in the document
     const pageContent = document.body.innerText;
-    const hasMissing = REQUIRED_PLACEHOLDERS.some(placeholder => pageContent.includes(placeholder));
+    const hasMissing = REQUIRED_PLACEHOLDERS.some((placeholder) =>
+      pageContent.includes(placeholder)
+    );
     setHasMissingPlaceholders(hasMissing);
   }, [tab]);
 
@@ -49,7 +51,9 @@ export default function Legal() {
           <div className="flex gap-3">
             <AlertTriangle className="w-5 h-5 text-yellow-600 shrink-0 mt-0.5" />
             <div className="flex-1">
-              <p className="text-sm font-semibold text-yellow-800">DEV MODE: Gesetzliche Angaben unvollständig</p>
+              <p className="text-sm font-semibold text-yellow-800">
+                DEV MODE: Gesetzliche Angaben unvollständig
+              </p>
               <p className="text-xs text-yellow-700 mt-1">
                 Bitte alle [PLATZHALTER] mit echten Daten ausfüllen, bevor die Seite live geht:
                 Name, Adresse, UID-Nummer
@@ -62,7 +66,9 @@ export default function Legal() {
           <div className="flex gap-3">
             <AlertTriangle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
             <div className="flex-1">
-              <p className="text-sm font-semibold text-red-800">FEHLER: Gesetzliche Angaben unvollständig</p>
+              <p className="text-sm font-semibold text-red-800">
+                FEHLER: Gesetzliche Angaben unvollständig
+              </p>
               <p className="text-xs text-red-700 mt-1">
                 Diese Seite enthält noch Platzhalter. Bitte kontaktieren Sie den Administrator.
               </p>
@@ -165,18 +171,18 @@ function Impressum() {
 
       <h2>Haftungsausschluss</h2>
       <p>
-        Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt.
-        Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen
-        wir jedoch keine Gewähr. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 ECG
-        für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+        Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit,
+        Vollständigkeit und Aktualität der Inhalte übernehmen wir jedoch keine Gewähr. Als
+        Diensteanbieter sind wir gemäß § 7 Abs. 1 ECG für eigene Inhalte auf diesen Seiten nach den
+        allgemeinen Gesetzen verantwortlich.
       </p>
 
       <h2>Urheberrecht</h2>
       <p>
-        Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
-        unterliegen dem österreichischen Urheberrecht. Die Vervielfältigung, Bearbeitung,
-        Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts
-        bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+        Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem
+        österreichischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art
+        der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung
+        des jeweiligen Autors bzw. Erstellers.
       </p>
 
       <div className="mt-8 p-4 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-800">
@@ -199,26 +205,39 @@ function Datenschutz() {
 
       <h2>1. Verantwortlicher</h2>
       <p>
-        [DEIN NAME]<br />
-        [ADRESSE]<br />
+        [DEIN NAME]
+        <br />
+        [ADRESSE]
+        <br />
         E-Mail: <a href="mailto:support@medmaster.at">support@medmaster.at</a>
       </p>
 
       <h2>2. Erhobene Daten</h2>
       <p>Wir erheben und verarbeiten folgende personenbezogene Daten:</p>
       <ul>
-        <li><strong>Kontodaten:</strong> E-Mail-Adresse, Name (bei Registrierung)</li>
-        <li><strong>Lernfortschritt:</strong> Abgeschlossene Kapitel, Spaced-Repetition-Daten</li>
-        <li><strong>Quiz-Ergebnisse:</strong> Antworten, Scores, Zeitstempel</li>
-        <li><strong>Nutzungsdaten:</strong> Aktivitätsprotokoll (Lernminuten, Fragen pro Tag)</li>
-        <li><strong>Zahlungsdaten:</strong> Werden ausschließlich von Stripe verarbeitet (siehe Abschnitt 6)</li>
+        <li>
+          <strong>Kontodaten:</strong> E-Mail-Adresse, Name (bei Registrierung)
+        </li>
+        <li>
+          <strong>Lernfortschritt:</strong> Abgeschlossene Kapitel, Spaced-Repetition-Daten
+        </li>
+        <li>
+          <strong>Quiz-Ergebnisse:</strong> Antworten, Scores, Zeitstempel
+        </li>
+        <li>
+          <strong>Nutzungsdaten:</strong> Aktivitätsprotokoll (Lernminuten, Fragen pro Tag)
+        </li>
+        <li>
+          <strong>Zahlungsdaten:</strong> Werden ausschließlich von Stripe verarbeitet (siehe
+          Abschnitt 6)
+        </li>
       </ul>
 
       <h2>3. Rechtsgrundlage</h2>
       <p>
         Die Verarbeitung personenbezogener Daten erfolgt auf Grundlage von{" "}
-        <strong>Art. 6 Abs. 1 lit. b DSGVO</strong> (Vertragserfüllung). Die Datenverarbeitung
-        ist erforderlich, um die Funktionalität der Lernplattform bereitzustellen und den
+        <strong>Art. 6 Abs. 1 lit. b DSGVO</strong> (Vertragserfüllung). Die Datenverarbeitung ist
+        erforderlich, um die Funktionalität der Lernplattform bereitzustellen und den
         Lernfortschritt zu speichern.
       </p>
 
@@ -226,14 +245,14 @@ function Datenschutz() {
       <p>
         Ihre Daten werden auf Servern von <strong>Supabase</strong> gespeichert, die sich in der
         EU-Region <strong>Frankfurt (eu-west)</strong> befinden. Supabase entspricht den
-        Anforderungen der DSGVO. Die Daten werden für die Dauer der Nutzung des Dienstes
-        gespeichert und nach Löschung des Kontos innerhalb von 30 Tagen endgültig entfernt.
+        Anforderungen der DSGVO. Die Daten werden für die Dauer der Nutzung des Dienstes gespeichert
+        und nach Löschung des Kontos innerhalb von 30 Tagen endgültig entfernt.
       </p>
 
       <h2>5. Cookies und lokale Speicherung</h2>
       <p>
-        MedMaster verwendet <strong>keine Tracking-Cookies</strong> und keine
-        Analyse-Tools von Drittanbietern. Wir setzen ausschließlich{" "}
+        MedMaster verwendet <strong>keine Tracking-Cookies</strong> und keine Analyse-Tools von
+        Drittanbietern. Wir setzen ausschließlich{" "}
         <strong>technisch notwendige lokale Speicherung</strong> (localStorage) ein, um den
         App-Zustand (z.B. Lernfortschritt, Theme-Einstellung) lokal auf Ihrem Gerät
         zwischenzuspeichern. Diese Daten werden nicht an Dritte übermittelt.
@@ -241,13 +260,14 @@ function Datenschutz() {
 
       <h2>6. Weitergabe an Dritte</h2>
       <p>
-        Eine Weitergabe Ihrer Daten an Dritte erfolgt <strong>nicht</strong>, mit folgender Ausnahme:
+        Eine Weitergabe Ihrer Daten an Dritte erfolgt <strong>nicht</strong>, mit folgender
+        Ausnahme:
       </p>
       <ul>
         <li>
-          <strong>Stripe, Inc.</strong> — Für die Abwicklung von Zahlungen und Abonnements.
-          Stripe verarbeitet Zahlungsdaten (Kreditkartendaten, Rechnungsadresse) direkt
-          und unterliegt eigenen Datenschutzrichtlinien:{" "}
+          <strong>Stripe, Inc.</strong> — Für die Abwicklung von Zahlungen und Abonnements. Stripe
+          verarbeitet Zahlungsdaten (Kreditkartendaten, Rechnungsadresse) direkt und unterliegt
+          eigenen Datenschutzrichtlinien:{" "}
           <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">
             stripe.com/privacy
           </a>
@@ -257,12 +277,25 @@ function Datenschutz() {
       <h2>7. Ihre Rechte</h2>
       <p>Sie haben gemäß DSGVO folgende Rechte:</p>
       <ul>
-        <li><strong>Auskunft</strong> (Art. 15 DSGVO) — Welche Daten über Sie gespeichert sind</li>
-        <li><strong>Berichtigung</strong> (Art. 16 DSGVO) — Korrektur unrichtiger Daten</li>
-        <li><strong>Löschung</strong> (Art. 17 DSGVO) — Entfernung Ihrer Daten</li>
-        <li><strong>Einschränkung</strong> (Art. 18 DSGVO) — Einschränkung der Verarbeitung</li>
-        <li><strong>Datenportabilität</strong> (Art. 20 DSGVO) — Export Ihrer Daten in maschinenlesbarem Format</li>
-        <li><strong>Widerspruch</strong> (Art. 21 DSGVO) — Widerspruch gegen die Verarbeitung</li>
+        <li>
+          <strong>Auskunft</strong> (Art. 15 DSGVO) — Welche Daten über Sie gespeichert sind
+        </li>
+        <li>
+          <strong>Berichtigung</strong> (Art. 16 DSGVO) — Korrektur unrichtiger Daten
+        </li>
+        <li>
+          <strong>Löschung</strong> (Art. 17 DSGVO) — Entfernung Ihrer Daten
+        </li>
+        <li>
+          <strong>Einschränkung</strong> (Art. 18 DSGVO) — Einschränkung der Verarbeitung
+        </li>
+        <li>
+          <strong>Datenportabilität</strong> (Art. 20 DSGVO) — Export Ihrer Daten in
+          maschinenlesbarem Format
+        </li>
+        <li>
+          <strong>Widerspruch</strong> (Art. 21 DSGVO) — Widerspruch gegen die Verarbeitung
+        </li>
       </ul>
       <p>
         Zur Ausübung Ihrer Rechte kontaktieren Sie uns unter{" "}
@@ -270,14 +303,16 @@ function Datenschutz() {
       </p>
 
       <h2>8. Beschwerderecht</h2>
+      <p>Sie haben das Recht, eine Beschwerde bei der zuständigen Aufsichtsbehörde einzureichen:</p>
       <p>
-        Sie haben das Recht, eine Beschwerde bei der zuständigen Aufsichtsbehörde einzureichen:
-      </p>
-      <p>
-        <strong>Österreichische Datenschutzbehörde</strong><br />
-        Barichgasse 40–42, 1030 Wien<br />
-        Telefon: +43 1 52 152-0<br />
-        E-Mail: dsb@dsb.gv.at<br />
+        <strong>Österreichische Datenschutzbehörde</strong>
+        <br />
+        Barichgasse 40–42, 1030 Wien
+        <br />
+        Telefon: +43 1 52 152-0
+        <br />
+        E-Mail: dsb@dsb.gv.at
+        <br />
         Website:{" "}
         <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer">
           www.dsb.gv.at
@@ -286,14 +321,14 @@ function Datenschutz() {
 
       <h2>9. Änderungen</h2>
       <p>
-        Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie
-        an geänderte Rechtslagen oder bei Änderungen des Dienstes anzupassen. Die aktuelle
-        Fassung finden Sie stets auf dieser Seite.
+        Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie an geänderte
+        Rechtslagen oder bei Änderungen des Dienstes anzupassen. Die aktuelle Fassung finden Sie
+        stets auf dieser Seite.
       </p>
 
       <div className="mt-8 p-4 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-800">
-        <strong>Hinweis:</strong> Bitte ersetze die Platzhalter [DEIN NAME] und [ADRESSE]
-        mit deinen echten Daten bevor die Seite live geht.
+        <strong>Hinweis:</strong> Bitte ersetze die Platzhalter [DEIN NAME] und [ADRESSE] mit deinen
+        echten Daten bevor die Seite live geht.
       </div>
     </article>
   );

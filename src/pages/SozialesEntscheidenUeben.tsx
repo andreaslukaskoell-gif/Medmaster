@@ -2,7 +2,10 @@ import { useState, useCallback } from "react";
 import { ChevronRight, RotateCcw, Shuffle, CheckCircle2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
-import { sozialesEntscheidenScenarios, type SozialesEntscheidenScenario } from "@/data/kffSozialesEntscheiden";
+import {
+  sozialesEntscheidenScenarios,
+  type SozialesEntscheidenScenario,
+} from "@/data/kffSozialesEntscheiden";
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -32,8 +35,10 @@ function getDeviationColor(deviation: number): string {
 }
 
 function getDeviationBg(deviation: number): string {
-  if (deviation === 0) return "bg-green-50 dark:bg-green-900/15 border-green-200 dark:border-green-800";
-  if (deviation === 1) return "bg-amber-50 dark:bg-amber-900/15 border-amber-200 dark:border-amber-800";
+  if (deviation === 0)
+    return "bg-green-50 dark:bg-green-900/15 border-green-200 dark:border-green-800";
+  if (deviation === 1)
+    return "bg-amber-50 dark:bg-amber-900/15 border-amber-200 dark:border-amber-800";
   return "bg-red-50 dark:bg-red-900/15 border-red-200 dark:border-red-800";
 }
 
@@ -50,10 +55,13 @@ export default function SozialesEntscheidenUeben() {
 
   const currentScenario: SozialesEntscheidenScenario | undefined = scenarios[currentIndex];
 
-  const handleRating = useCallback((optionIndex: number, value: number) => {
-    if (isSubmitted) return;
-    setRatings((prev) => ({ ...prev, [optionIndex]: value }));
-  }, [isSubmitted]);
+  const handleRating = useCallback(
+    (optionIndex: number, value: number) => {
+      if (isSubmitted) return;
+      setRatings((prev) => ({ ...prev, [optionIndex]: value }));
+    },
+    [isSubmitted]
+  );
 
   const allRated = currentScenario
     ? currentScenario.handlungsoptionen.every((_, i) => ratings[i] !== undefined)
@@ -122,7 +130,11 @@ export default function SozialesEntscheidenUeben() {
       {/* Top bar */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          <button onClick={handleShuffle} className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer" title="Zufällige Reihenfolge">
+          <button
+            onClick={handleShuffle}
+            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            title="Zufällige Reihenfolge"
+          >
             <Shuffle className="w-4 h-4" />
           </button>
           <span className="text-sm text-muted">
@@ -134,11 +146,15 @@ export default function SozialesEntscheidenUeben() {
             <span className="text-sm text-muted">
               <span className="font-medium text-green-600 dark:text-green-400">
                 {Math.round((totalScore / totalMaxScore) * 100)}%
-              </span>
-              {" "}Übereinstimmung ({scenariosCompleted} Szenarien)
+              </span>{" "}
+              Übereinstimmung ({scenariosCompleted} Szenarien)
             </span>
           )}
-          <button onClick={handleReset} className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer" title="Zurücksetzen">
+          <button
+            onClick={handleReset}
+            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            title="Zurücksetzen"
+          >
             <RotateCcw className="w-4 h-4" />
           </button>
         </div>
@@ -158,7 +174,9 @@ export default function SozialesEntscheidenUeben() {
           {/* Scenario */}
           <div className="bg-gray-50 dark:bg-gray-800 p-6 border-b border-gray-200 dark:border-gray-700">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-medium text-teal-600 dark:text-teal-400">{currentScenario.id}</span>
+              <span className="text-xs font-medium text-teal-600 dark:text-teal-400">
+                {currentScenario.id}
+              </span>
               <span className="text-xs text-muted">Szenario</span>
             </div>
             <p className="text-sm text-gray-900 dark:text-gray-100 leading-relaxed">
@@ -169,25 +187,32 @@ export default function SozialesEntscheidenUeben() {
           {/* Options with sliders */}
           <div className="p-6 space-y-4">
             <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-              Bewerte jede Handlungsoption auf der Skala von 1 (sehr unangemessen) bis 6 (sehr angemessen):
+              Bewerte jede Handlungsoption auf der Skala von 1 (sehr unangemessen) bis 6 (sehr
+              angemessen):
             </p>
 
             <div className="space-y-4">
               {currentScenario.handlungsoptionen.map((option, i) => {
                 const userRating = ratings[i];
-                const deviation = isSubmitted ? Math.abs((userRating || 0) - option.idealRating) : 0;
+                const deviation = isSubmitted
+                  ? Math.abs((userRating || 0) - option.idealRating)
+                  : 0;
                 const isExpanded = showExplanations[i];
 
                 return (
                   <div
                     key={i}
                     className={`rounded-lg border p-4 space-y-3 transition-colors ${
-                      isSubmitted ? getDeviationBg(deviation) : "border-gray-200 dark:border-gray-700"
+                      isSubmitted
+                        ? getDeviationBg(deviation)
+                        : "border-gray-200 dark:border-gray-700"
                     }`}
                   >
                     {/* Option text */}
                     <div className="flex items-start gap-2">
-                      <span className="text-sm font-bold text-teal-500 mt-0.5 shrink-0">{i + 1}.</span>
+                      <span className="text-sm font-bold text-teal-500 mt-0.5 shrink-0">
+                        {i + 1}.
+                      </span>
                       <p className="text-sm text-gray-900 dark:text-gray-100">{option.text}</p>
                     </div>
 
@@ -224,7 +249,9 @@ export default function SozialesEntscheidenUeben() {
                           );
                         })}
                       </div>
-                      <span className="text-[10px] text-muted w-20 text-right shrink-0">angemessen</span>
+                      <span className="text-[10px] text-muted w-20 text-right shrink-0">
+                        angemessen
+                      </span>
                     </div>
 
                     {/* Result */}
@@ -238,7 +265,9 @@ export default function SozialesEntscheidenUeben() {
                               : `Abweichung: ${deviation}`}
                         </span>
                         <button
-                          onClick={() => setShowExplanations((prev) => ({ ...prev, [i]: !prev[i] }))}
+                          onClick={() =>
+                            setShowExplanations((prev) => ({ ...prev, [i]: !prev[i] }))
+                          }
                           className="text-teal-600 dark:text-teal-400 hover:underline cursor-pointer"
                         >
                           {isExpanded ? "Verbergen" : "Erklärung"}
@@ -280,9 +309,13 @@ export default function SozialesEntscheidenUeben() {
                   </button>
                   <button
                     onClick={() => {
-                      const allShown = Object.keys(showExplanations).length === currentScenario.handlungsoptionen.length;
+                      const allShown =
+                        Object.keys(showExplanations).length ===
+                        currentScenario.handlungsoptionen.length;
                       const newState: Record<number, boolean> = {};
-                      currentScenario.handlungsoptionen.forEach((_, i) => { newState[i] = !allShown; });
+                      currentScenario.handlungsoptionen.forEach((_, i) => {
+                        newState[i] = !allShown;
+                      });
                       setShowExplanations(newState);
                     }}
                     className="px-4 py-2.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"

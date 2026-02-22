@@ -30,18 +30,23 @@ function parseUnterkapitel(jsonStr: string): { data: Unterkapitel | null; error:
     const merksätze = Array.isArray(raw.merksätze)
       ? (raw.merksätze as string[]).filter((m): m is string => typeof m === "string")
       : [];
-    const selfTest = Array.isArray(raw.selfTest)
-      ? (raw.selfTest as Unterkapitel["selfTest"])
-      : [];
-    const sections = Array.isArray(raw.sections) ? raw.sections as Unterkapitel["sections"] : undefined;
+    const selfTest = Array.isArray(raw.selfTest) ? (raw.selfTest as Unterkapitel["selfTest"]) : [];
+    const sections = Array.isArray(raw.sections)
+      ? (raw.sections as Unterkapitel["sections"])
+      : undefined;
     const imageUrl = typeof raw.imageUrl === "string" ? raw.imageUrl : undefined;
     const quiz = Array.isArray(raw.quiz) ? (raw.quiz as Unterkapitel["quiz"]) : undefined;
-    const additionalNotes = typeof raw.additionalNotes === "string" ? raw.additionalNotes : undefined;
+    const additionalNotes =
+      typeof raw.additionalNotes === "string" ? raw.additionalNotes : undefined;
     const altfrage =
-      raw.altfrage && typeof raw.altfrage === "object" && "question" in raw.altfrage && "answer" in raw.altfrage
+      raw.altfrage &&
+      typeof raw.altfrage === "object" &&
+      "question" in raw.altfrage &&
+      "answer" in raw.altfrage
         ? (raw.altfrage as Unterkapitel["altfrage"])
         : undefined;
-    const klinischerBezug = typeof raw.klinischerBezug === "string" ? raw.klinischerBezug : undefined;
+    const klinischerBezug =
+      typeof raw.klinischerBezug === "string" ? raw.klinischerBezug : undefined;
     const lernziele = Array.isArray(raw.lernziele) ? (raw.lernziele as string[]) : undefined;
     const diagram = typeof raw.diagram === "string" ? raw.diagram : undefined;
 
@@ -72,10 +77,7 @@ function parseUnterkapitel(jsonStr: string): { data: Unterkapitel | null; error:
 export default function AdminPreview() {
   const [inputText, setInputText] = useState(DEFAULT_JSON);
 
-  const { data: uk, error } = useMemo(
-    () => parseUnterkapitel(inputText),
-    [inputText]
-  );
+  const { data: uk, error } = useMemo(() => parseUnterkapitel(inputText), [inputText]);
 
   const subject = "biologie";
   const chapterId = "bio-kap1";
@@ -152,7 +154,7 @@ export default function AdminPreview() {
                       uk={uk}
                       subject={subject}
                       chapterId={chapterId}
-                      enhancedFormatting={chapterId === 'bio-kap1'}
+                      enhancedFormatting={chapterId === "bio-kap1"}
                     />
                   </CardContent>
                 </Card>
@@ -166,14 +168,20 @@ export default function AdminPreview() {
                       </h3>
                     </div>
                     {uk.merksätze.map((merksatz, i) => (
-                      <div key={i} className="bg-amber-50 dark:bg-amber-900/30 border-l-4 border-amber-500 shadow-sm p-5 rounded-r-lg">
+                      <div
+                        key={i}
+                        className="bg-amber-50 dark:bg-amber-900/30 border-l-4 border-amber-500 shadow-sm p-5 rounded-r-lg"
+                      >
                         <p className="font-bold text-base text-amber-800 dark:text-amber-300 flex items-center gap-2 mb-2">
                           <span className="text-lg">💡</span> Merke
                         </p>
                         <p
                           className="text-base text-amber-900 dark:text-amber-200 leading-relaxed"
                           dangerouslySetInnerHTML={{
-                            __html: merksatz.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold">$1</strong>'),
+                            __html: merksatz.replace(
+                              /\*\*(.*?)\*\*/g,
+                              '<strong class="font-semibold">$1</strong>'
+                            ),
                           }}
                         />
                       </div>

@@ -39,7 +39,15 @@ function Merksatz({ children }: { children: ReactNode }) {
   );
 }
 
-function AussagenBox({ label, description, children }: { label: string; description: string; children: ReactNode }) {
+function AussagenBox({
+  label,
+  description,
+  children,
+}: {
+  label: string;
+  description: string;
+  children: ReactNode;
+}) {
   return (
     <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
       <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">{label}</h4>
@@ -58,8 +66,8 @@ function Seite1() {
           Die 4 Grundaussagen
         </h2>
         <p className="text-sm text-muted">
-          Jede Implikationsaufgabe besteht aus Aussagen mit den Quantoren &quot;Alle&quot; und &quot;Einige&quot;.
-          Es gibt genau 4 mögliche Grundaussagen.
+          Jede Implikationsaufgabe besteht aus Aussagen mit den Quantoren &quot;Alle&quot; und
+          &quot;Einige&quot;. Es gibt genau 4 mögliche Grundaussagen.
         </p>
       </div>
 
@@ -104,8 +112,8 @@ function Seite1() {
       </div>
 
       <Merksatz>
-        &quot;Einige&quot; bedeutet &quot;mindestens eines&quot; — das schließt &quot;alle&quot; mit ein!
-        Wenn alle Katzen Haustiere sind, dann sind auch einige Katzen Haustiere.
+        &quot;Einige&quot; bedeutet &quot;mindestens eines&quot; — das schließt &quot;alle&quot; mit
+        ein! Wenn alle Katzen Haustiere sind, dann sind auch einige Katzen Haustiere.
       </Merksatz>
     </div>
   );
@@ -120,26 +128,39 @@ function Seite2() {
           Die 5 goldenen Regeln
         </h2>
         <p className="text-sm text-muted">
-          Mit diesen 5 Regeln kannst du die meisten Optionen sofort eliminieren — ohne ein Diagramm zeichnen zu müssen.
+          Mit diesen 5 Regeln kannst du die meisten Optionen sofort eliminieren — ohne ein Diagramm
+          zeichnen zu müssen.
         </p>
       </div>
 
       {/* Regel 1 */}
       <div className="bg-red-50 dark:bg-red-900/15 border-l-4 border-red-500 p-4 rounded-r-lg space-y-3">
         <div className="flex items-center gap-2">
-          <span className="bg-red-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">1</span>
-          <h3 className="font-semibold text-red-800 dark:text-red-300">Zwei &times; &quot;einige&quot; → KEINE Schlussfolgerung</h3>
+          <span className="bg-red-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
+            1
+          </span>
+          <h3 className="font-semibold text-red-800 dark:text-red-300">
+            Zwei &times; &quot;einige&quot; → KEINE Schlussfolgerung
+          </h3>
         </div>
         <p className="text-sm text-red-700 dark:text-red-400">
-          Wenn beide Aussagen &quot;einige&quot; enthalten, kann man nichts Zwingendes schließen. → Antwort E
+          Wenn beide Aussagen &quot;einige&quot; enthalten, kann man nichts Zwingendes schließen. →
+          Antwort E
         </p>
         <div className="bg-white dark:bg-gray-800 rounded-lg p-3">
           <p className="text-xs text-muted mb-1">Beispiel:</p>
           <p className="text-sm italic">&quot;Einige Ärzte sind Sportler&quot;</p>
           <p className="text-sm italic">&quot;Einige Sportler sind Vegetarier&quot;</p>
-          <p className="text-sm font-medium text-red-600 dark:text-red-400 mt-2">→ Keine zwingende Schlussfolgerung</p>
+          <p className="text-sm font-medium text-red-600 dark:text-red-400 mt-2">
+            → Keine zwingende Schlussfolgerung
+          </p>
           <div className="flex justify-center mt-2">
-            <EulerThreeCircles labels={["Ärzte", "Sportler", "Vegetarier"]} layout="chain" width={240} height={130} />
+            <EulerThreeCircles
+              labels={["Ärzte", "Sportler", "Vegetarier"]}
+              layout="chain"
+              width={240}
+              height={130}
+            />
           </div>
         </div>
       </div>
@@ -147,19 +168,31 @@ function Seite2() {
       {/* Regel 2 */}
       <div className="bg-red-50 dark:bg-red-900/15 border-l-4 border-red-500 p-4 rounded-r-lg space-y-3">
         <div className="flex items-center gap-2">
-          <span className="bg-red-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">2</span>
-          <h3 className="font-semibold text-red-800 dark:text-red-300">Zwei &times; &quot;keine&quot; → KEINE Schlussfolgerung</h3>
+          <span className="bg-red-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
+            2
+          </span>
+          <h3 className="font-semibold text-red-800 dark:text-red-300">
+            Zwei &times; &quot;keine&quot; → KEINE Schlussfolgerung
+          </h3>
         </div>
         <p className="text-sm text-red-700 dark:text-red-400">
-          Wenn beide Aussagen &quot;keine&quot; enthalten, kann man nichts Zwingendes schließen. → Antwort E
+          Wenn beide Aussagen &quot;keine&quot; enthalten, kann man nichts Zwingendes schließen. →
+          Antwort E
         </p>
         <div className="bg-white dark:bg-gray-800 rounded-lg p-3">
           <p className="text-xs text-muted mb-1">Beispiel:</p>
           <p className="text-sm italic">&quot;Alle Katzen sind keine Vögel&quot;</p>
           <p className="text-sm italic">&quot;Alle Fische sind keine Vögel&quot;</p>
-          <p className="text-sm font-medium text-red-600 dark:text-red-400 mt-2">→ Keine zwingende Schlussfolgerung</p>
+          <p className="text-sm font-medium text-red-600 dark:text-red-400 mt-2">
+            → Keine zwingende Schlussfolgerung
+          </p>
           <div className="flex justify-center mt-2">
-            <EulerThreeCircles labels={["Katzen", "Vögel", "Fische"]} layout="all-separated" width={240} height={130} />
+            <EulerThreeCircles
+              labels={["Katzen", "Vögel", "Fische"]}
+              layout="all-separated"
+              width={240}
+              height={130}
+            />
           </div>
         </div>
       </div>
@@ -167,19 +200,31 @@ function Seite2() {
       {/* Regel 3 */}
       <div className="bg-blue-50 dark:bg-blue-900/15 border-l-4 border-blue-500 p-4 rounded-r-lg space-y-3">
         <div className="flex items-center gap-2">
-          <span className="bg-blue-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">3</span>
-          <h3 className="font-semibold text-blue-800 dark:text-blue-300">Kein &quot;keine&quot; in den Aussagen → Schluss OHNE &quot;keine&quot;</h3>
+          <span className="bg-blue-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
+            3
+          </span>
+          <h3 className="font-semibold text-blue-800 dark:text-blue-300">
+            Kein &quot;keine&quot; in den Aussagen → Schluss OHNE &quot;keine&quot;
+          </h3>
         </div>
         <p className="text-sm text-blue-700 dark:text-blue-400">
-          Wenn keine der Aussagen das Wort &quot;keine&quot; enthält, dann kann auch die Schlussfolgerung kein &quot;keine&quot; enthalten.
+          Wenn keine der Aussagen das Wort &quot;keine&quot; enthält, dann kann auch die
+          Schlussfolgerung kein &quot;keine&quot; enthalten.
         </p>
         <div className="bg-white dark:bg-gray-800 rounded-lg p-3">
           <p className="text-xs text-muted mb-1">Beispiel:</p>
           <p className="text-sm italic">&quot;Alle Hunde sind Säugetiere&quot;</p>
           <p className="text-sm italic">&quot;Alle Säugetiere sind Wirbeltiere&quot;</p>
-          <p className="text-sm font-medium text-blue-600 dark:text-blue-400 mt-2">→ &quot;Alle Hunde sind Wirbeltiere&quot; (ohne &quot;keine&quot;)</p>
+          <p className="text-sm font-medium text-blue-600 dark:text-blue-400 mt-2">
+            → &quot;Alle Hunde sind Wirbeltiere&quot; (ohne &quot;keine&quot;)
+          </p>
           <div className="flex justify-center mt-2">
-            <EulerThreeCircles labels={["Hunde", "Säugetiere", "Wirbeltiere"]} layout="a-in-b-in-c" width={240} height={130} />
+            <EulerThreeCircles
+              labels={["Hunde", "Säugetiere", "Wirbeltiere"]}
+              layout="a-in-b-in-c"
+              width={240}
+              height={130}
+            />
           </div>
         </div>
       </div>
@@ -187,19 +232,31 @@ function Seite2() {
       {/* Regel 4 */}
       <div className="bg-amber-50 dark:bg-amber-900/15 border-l-4 border-amber-500 p-4 rounded-r-lg space-y-3">
         <div className="flex items-center gap-2">
-          <span className="bg-amber-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">4</span>
-          <h3 className="font-semibold text-amber-800 dark:text-amber-300">Eine Aussage mit &quot;keine&quot; → Schluss MUSS &quot;keine&quot; enthalten</h3>
+          <span className="bg-amber-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
+            4
+          </span>
+          <h3 className="font-semibold text-amber-800 dark:text-amber-300">
+            Eine Aussage mit &quot;keine&quot; → Schluss MUSS &quot;keine&quot; enthalten
+          </h3>
         </div>
         <p className="text-sm text-amber-700 dark:text-amber-400">
-          Kommt &quot;keine&quot; in genau einer Aussage vor, muss die Schlussfolgerung ebenfalls &quot;keine&quot; enthalten.
+          Kommt &quot;keine&quot; in genau einer Aussage vor, muss die Schlussfolgerung ebenfalls
+          &quot;keine&quot; enthalten.
         </p>
         <div className="bg-white dark:bg-gray-800 rounded-lg p-3">
           <p className="text-xs text-muted mb-1">Beispiel:</p>
           <p className="text-sm italic">&quot;Alle Rosen sind Pflanzen&quot;</p>
           <p className="text-sm italic">&quot;Alle Pflanzen sind keine Tiere&quot;</p>
-          <p className="text-sm font-medium text-amber-600 dark:text-amber-400 mt-2">→ &quot;Alle Rosen sind keine Tiere&quot; (mit &quot;keine&quot;)</p>
+          <p className="text-sm font-medium text-amber-600 dark:text-amber-400 mt-2">
+            → &quot;Alle Rosen sind keine Tiere&quot; (mit &quot;keine&quot;)
+          </p>
           <div className="flex justify-center mt-2">
-            <EulerThreeCircles labels={["Rosen", "Pflanzen", "Tiere"]} layout="a-in-b-separated-c" width={240} height={130} />
+            <EulerThreeCircles
+              labels={["Rosen", "Pflanzen", "Tiere"]}
+              layout="a-in-b-separated-c"
+              width={240}
+              height={130}
+            />
           </div>
         </div>
       </div>
@@ -207,19 +264,31 @@ function Seite2() {
       {/* Regel 5 */}
       <div className="bg-green-50 dark:bg-green-900/15 border-l-4 border-green-500 p-4 rounded-r-lg space-y-3">
         <div className="flex items-center gap-2">
-          <span className="bg-green-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">5</span>
-          <h3 className="font-semibold text-green-800 dark:text-green-300">Eine Aussage mit &quot;einige&quot; → Schluss MUSS &quot;einige&quot; enthalten</h3>
+          <span className="bg-green-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
+            5
+          </span>
+          <h3 className="font-semibold text-green-800 dark:text-green-300">
+            Eine Aussage mit &quot;einige&quot; → Schluss MUSS &quot;einige&quot; enthalten
+          </h3>
         </div>
         <p className="text-sm text-green-700 dark:text-green-400">
-          Enthält genau eine Aussage &quot;einige&quot;, muss die Schlussfolgerung ebenfalls &quot;einige&quot; enthalten.
+          Enthält genau eine Aussage &quot;einige&quot;, muss die Schlussfolgerung ebenfalls
+          &quot;einige&quot; enthalten.
         </p>
         <div className="bg-white dark:bg-gray-800 rounded-lg p-3">
           <p className="text-xs text-muted mb-1">Beispiel:</p>
           <p className="text-sm italic">&quot;Alle Lehrer sind Akademiker&quot;</p>
           <p className="text-sm italic">&quot;Einige Lehrer sind Musiker&quot;</p>
-          <p className="text-sm font-medium text-green-600 dark:text-green-400 mt-2">→ &quot;Einige Akademiker sind Musiker&quot; (mit &quot;einige&quot;)</p>
+          <p className="text-sm font-medium text-green-600 dark:text-green-400 mt-2">
+            → &quot;Einige Akademiker sind Musiker&quot; (mit &quot;einige&quot;)
+          </p>
           <div className="flex justify-center mt-2">
-            <EulerThreeCircles labels={["Lehrer", "Akademiker", "Musiker"]} layout="a-in-b-overlap-c" width={240} height={130} />
+            <EulerThreeCircles
+              labels={["Lehrer", "Akademiker", "Musiker"]}
+              layout="a-in-b-overlap-c"
+              width={240}
+              height={130}
+            />
           </div>
         </div>
       </div>
@@ -249,17 +318,26 @@ function Seite3() {
       <Card>
         <CardContent className="p-5 space-y-3">
           <div className="flex items-center gap-3">
-            <span className="bg-purple-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">1</span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">Goldene Regeln anwenden</h3>
+            <span className="bg-purple-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+              1
+            </span>
+            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+              Goldene Regeln anwenden
+            </h3>
           </div>
           <p className="text-sm text-muted pl-11">
-            Prüfe zuerst, ob die Regeln 1-2 greifen (→ sofort E).
-            Dann verwende Regeln 3-5, um unmögliche Optionen zu streichen.
+            Prüfe zuerst, ob die Regeln 1-2 greifen (→ sofort E). Dann verwende Regeln 3-5, um
+            unmögliche Optionen zu streichen.
           </p>
           <div className="pl-11 bg-gray-50 dark:bg-gray-800 rounded-lg p-3 text-sm">
             <p className="font-medium text-gray-700 dark:text-gray-300 mb-1">Beispiel:</p>
-            <p className="italic text-muted">&quot;Alle Äpfel sind Obst&quot; + &quot;Alle Äpfel sind keine Gemüse&quot;</p>
-            <p className="mt-1">Regel 4: Eine Aussage enthält &quot;keine&quot; → Schluss muss &quot;keine&quot; enthalten</p>
+            <p className="italic text-muted">
+              &quot;Alle Äpfel sind Obst&quot; + &quot;Alle Äpfel sind keine Gemüse&quot;
+            </p>
+            <p className="mt-1">
+              Regel 4: Eine Aussage enthält &quot;keine&quot; → Schluss muss &quot;keine&quot;
+              enthalten
+            </p>
             <p>→ Streiche alle Optionen OHNE &quot;keine&quot;</p>
           </div>
         </CardContent>
@@ -269,11 +347,16 @@ function Seite3() {
       <Card>
         <CardContent className="p-5 space-y-3">
           <div className="flex items-center gap-3">
-            <span className="bg-purple-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">2</span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">Erste Aussage als Euler-Diagramm</h3>
+            <span className="bg-purple-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+              2
+            </span>
+            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+              Erste Aussage als Euler-Diagramm
+            </h3>
           </div>
           <p className="text-sm text-muted pl-11">
-            Zeichne die erste Aussage als Kreise. &quot;Alle X sind Y&quot; = X-Kreis komplett im Y-Kreis.
+            Zeichne die erste Aussage als Kreise. &quot;Alle X sind Y&quot; = X-Kreis komplett im
+            Y-Kreis.
           </p>
           <div className="flex justify-center">
             <EulerTwoCircles labels={["X", "Y"]} overlap="contained" />
@@ -285,12 +368,17 @@ function Seite3() {
       <Card>
         <CardContent className="p-5 space-y-3">
           <div className="flex items-center gap-3">
-            <span className="bg-purple-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">3</span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">Zweite Aussage einzeichnen</h3>
+            <span className="bg-purple-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+              3
+            </span>
+            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+              Zweite Aussage einzeichnen
+            </h3>
           </div>
           <p className="text-sm text-muted pl-11">
-            Zeichne den dritten Kreis ein. Bei &quot;einige&quot; gibt es mehrere mögliche Positionen —
-            bedenke alle Möglichkeiten! Nur was in ALLEN Fällen gilt, ist eine zwingende Schlussfolgerung.
+            Zeichne den dritten Kreis ein. Bei &quot;einige&quot; gibt es mehrere mögliche
+            Positionen — bedenke alle Möglichkeiten! Nur was in ALLEN Fällen gilt, ist eine
+            zwingende Schlussfolgerung.
           </p>
         </CardContent>
       </Card>
@@ -299,12 +387,16 @@ function Seite3() {
       <Card>
         <CardContent className="p-5 space-y-3">
           <div className="flex items-center gap-3">
-            <span className="bg-purple-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">4</span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">Schlussfolgerung ablesen</h3>
+            <span className="bg-purple-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+              4
+            </span>
+            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+              Schlussfolgerung ablesen
+            </h3>
           </div>
           <p className="text-sm text-muted pl-11">
-            Lies aus dem Diagramm ab, welche Beziehung zwischen den äußeren Begriffen
-            (den Begriffen, die nicht in beiden Aussagen vorkommen) in jedem Fall gilt.
+            Lies aus dem Diagramm ab, welche Beziehung zwischen den äußeren Begriffen (den
+            Begriffen, die nicht in beiden Aussagen vorkommen) in jedem Fall gilt.
           </p>
         </CardContent>
       </Card>
@@ -318,15 +410,16 @@ function Seite3() {
           <div className="bg-red-50 dark:bg-red-900/15 border border-red-200 dark:border-red-800 rounded-lg p-4">
             <h4 className="font-semibold text-red-800 dark:text-red-300 mb-2">Widerspruch</h4>
             <p className="text-sm text-red-700 dark:text-red-400">
-              Wenn sich die Aussagen widersprechen (z.B. &quot;Alle X sind Y&quot; und &quot;Alle X sind keine Y&quot;
-              mit gleichen Begriffen), ist die Antwort immer <strong>E</strong>.
+              Wenn sich die Aussagen widersprechen (z.B. &quot;Alle X sind Y&quot; und &quot;Alle X
+              sind keine Y&quot; mit gleichen Begriffen), ist die Antwort immer <strong>E</strong>.
             </p>
           </div>
           <div className="bg-amber-50 dark:bg-amber-900/15 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
             <h4 className="font-semibold text-amber-800 dark:text-amber-300 mb-2">Abschwächung</h4>
             <p className="text-sm text-amber-700 dark:text-amber-400">
-              Wenn sowohl &quot;Alle X sind Z&quot; als auch &quot;Einige X sind Z&quot; möglich wären,
-              ist die <strong>schwächere</strong> Aussage (&quot;Einige&quot;) die richtige Antwort.
+              Wenn sowohl &quot;Alle X sind Z&quot; als auch &quot;Einige X sind Z&quot; möglich
+              wären, ist die <strong>schwächere</strong> Aussage (&quot;Einige&quot;) die richtige
+              Antwort.
             </p>
           </div>
         </div>
@@ -336,24 +429,38 @@ function Seite3() {
       <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4 space-y-3">
         <div className="flex items-center gap-2">
           <BookOpen className="w-5 h-5 text-purple-500" />
-          <h3 className="font-semibold text-purple-800 dark:text-purple-300">Expert-Tipps für die Prüfung</h3>
+          <h3 className="font-semibold text-purple-800 dark:text-purple-300">
+            Expert-Tipps für die Prüfung
+          </h3>
         </div>
         <ul className="space-y-2 text-sm text-purple-700 dark:text-purple-400">
           <li className="flex items-start gap-2">
             <span className="text-purple-500 mt-0.5">1.</span>
-            <span>Regeln 1-2 zuerst prüfen — das spart bei ca. 30% der Aufgaben die Euler-Diagramme komplett.</span>
+            <span>
+              Regeln 1-2 zuerst prüfen — das spart bei ca. 30% der Aufgaben die Euler-Diagramme
+              komplett.
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-purple-500 mt-0.5">2.</span>
-            <span>Du hast 1 Minute pro Aufgabe. Übe, bis die Regeln automatisch sitzen — dann reicht die Zeit locker.</span>
+            <span>
+              Du hast 1 Minute pro Aufgabe. Übe, bis die Regeln automatisch sitzen — dann reicht die
+              Zeit locker.
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-purple-500 mt-0.5">3.</span>
-            <span>Finde den Mittelbegriff (der in beiden Aussagen vorkommt). Die Schlussfolgerung verbindet die beiden anderen Begriffe.</span>
+            <span>
+              Finde den Mittelbegriff (der in beiden Aussagen vorkommt). Die Schlussfolgerung
+              verbindet die beiden anderen Begriffe.
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-purple-500 mt-0.5">4.</span>
-            <span>Im Zweifel: E wählen. Lieber eine richtige E-Antwort als eine falsche Schlussfolgerung raten.</span>
+            <span>
+              Im Zweifel: E wählen. Lieber eine richtige E-Antwort als eine falsche Schlussfolgerung
+              raten.
+            </span>
           </li>
         </ul>
       </div>

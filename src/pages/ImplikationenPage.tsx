@@ -18,9 +18,7 @@ export default function ImplikationenPage() {
   const [activeTab, setActiveTab] = useState<TabKey>("lernen");
   const progress = useKFFStore((s) => s.progress.implikationen);
   const pct =
-    progress && progress.total > 0
-      ? Math.round((progress.correct / progress.total) * 100)
-      : 0;
+    progress && progress.total > 0 ? Math.round((progress.correct / progress.total) * 100) : 0;
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">

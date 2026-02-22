@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Target,
   Share2,
@@ -10,9 +10,9 @@ import {
   Trophy,
   ChevronRight,
   ArrowLeft,
-} from 'lucide-react';
-import { useStore } from '@/store/useStore';
-import { Button } from '@/components/ui/button';
+} from "lucide-react";
+import { useStore } from "@/store/useStore";
+import { Button } from "@/components/ui/button";
 import {
   getDailyQuestion,
   getTodaysResult,
@@ -22,28 +22,30 @@ import {
   getCountdownToMidnight,
   type DailyChallenge,
   type DailyChallengeResult,
-} from '@/lib/dailyChallenge';
-import { cn } from '@/lib/utils';
+} from "@/lib/dailyChallenge";
+import { cn } from "@/lib/utils";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 // Map subject IDs to German display labels
 const FACH_LABELS: Record<string, string> = {
-  biologie: 'Biologie',
-  chemie: 'Chemie',
-  physik: 'Physik',
-  mathematik: 'Mathematik',
+  biologie: "Biologie",
+  chemie: "Chemie",
+  physik: "Physik",
+  mathematik: "Mathematik",
 };
 
 // Map subject IDs to color classes
 const FACH_COLORS: Record<string, string> = {
-  biologie: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300',
-  chemie: 'bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300',
-  physik: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300',
-  mathematik: 'bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300',
+  biologie: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300",
+  chemie: "bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300",
+  physik: "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
+  mathematik: "bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300",
 };
 
-type AnswerState = 'idle' | 'wrong' | 'correct';
+type AnswerState = "idle" | "wrong" | "correct";
 
 export default function DailyChallengePage() {
+  usePageTitle("Tagesaufgabe");
   const navigate = useNavigate();
   const addXP = useStore((s) => s.addXP);
 
@@ -55,7 +57,7 @@ export default function DailyChallengePage() {
   // Which option index the user selected on the current attempt
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   // Current answer state feedback
-  const [answerState, setAnswerState] = useState<AnswerState>('idle');
+  const [answerState, setAnswerState] = useState<AnswerState>("idle");
   // Whether the game is fully over (correct or 3 wrong)
   const [isFinished, setIsFinished] = useState(false);
   // Final result after finishing
@@ -63,7 +65,7 @@ export default function DailyChallengePage() {
   // Countdown string
   const [countdown, setCountdown] = useState(getCountdownToMidnight());
   // Share feedback message
-  const [shareMsg, setShareMsg] = useState('');
+  const [shareMsg, setShareMsg] = useState("");
 
   // Load question and check for existing result on mount
   useEffect(() => {
@@ -92,7 +94,7 @@ export default function DailyChallengePage() {
 
       if (index === challenge.correctIndex) {
         // Correct!
-        setAnswerState('correct');
+        setAnswerState("correct");
         const xp = getXPForAttempt(attempt);
         const result: DailyChallengeResult = {
           date: challenge.date,
@@ -106,7 +108,7 @@ export default function DailyChallengePage() {
         setIsFinished(true);
       } else {
         // Wrong
-        setAnswerState('wrong');
+        setAnswerState("wrong");
 
         if (attempt >= 3) {
           // Out of attempts
@@ -126,7 +128,7 @@ export default function DailyChallengePage() {
           setTimeout(() => {
             setAttempt((a) => a + 1);
             setSelectedIndex(null);
-            setAnswerState('idle');
+            setAnswerState("idle");
           }, 900);
         }
       }
@@ -143,8 +145,8 @@ export default function DailyChallengePage() {
         await navigator.share({ text });
       } else {
         await navigator.clipboard.writeText(text);
-        setShareMsg('In die Zwischenablage kopiert!');
-        setTimeout(() => setShareMsg(''), 2500);
+        setShareMsg("In die Zwischenablage kopiert!");
+        setTimeout(() => setShareMsg(""), 2500);
       }
     } catch {
       // user cancelled share or clipboard failed
@@ -152,10 +154,10 @@ export default function DailyChallengePage() {
   }, [finalResult, existingResult]);
 
   // Format date for display
-  const displayDate = new Date().toLocaleDateString('de-AT', {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
+  const displayDate = new Date().toLocaleDateString("de-AT", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
   });
 
   // --- Already completed today ---
@@ -165,7 +167,7 @@ export default function DailyChallengePage() {
         <div className="max-w-2xl mx-auto w-full px-4 py-8 flex flex-col gap-6">
           {/* Back */}
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
             className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors w-fit"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -197,19 +199,18 @@ export default function DailyChallengePage() {
 
             <div>
               <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-                {existingResult.solved ? 'Heute bereits gelöst!' : 'Heute nicht geschafft'}
+                {existingResult.solved ? "Heute bereits gelöst!" : "Heute nicht geschafft"}
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
                 {existingResult.solved
                   ? `In ${existingResult.correctOnAttempt}/3 Versuchen`
-                  : 'Morgen wieder!'}
+                  : "Morgen wieder!"}
               </p>
             </div>
 
             {/* XP badge */}
             <div className="inline-flex items-center gap-1.5 bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold">
-              <Sparkles className="w-4 h-4" />
-              +{existingResult.xpEarned} XP verdient
+              <Sparkles className="w-4 h-4" />+{existingResult.xpEarned} XP verdient
             </div>
 
             {/* Countdown */}
@@ -224,17 +225,11 @@ export default function DailyChallengePage() {
             </div>
 
             {/* Share */}
-            <Button
-              onClick={handleShare}
-              variant="outline"
-              className="gap-2 w-full"
-            >
+            <Button onClick={handleShare} variant="outline" className="gap-2 w-full">
               <Share2 className="w-4 h-4" />
               Ergebnis teilen
             </Button>
-            {shareMsg && (
-              <p className="text-sm text-green-600 dark:text-green-400">{shareMsg}</p>
-            )}
+            {shareMsg && <p className="text-sm text-green-600 dark:text-green-400">{shareMsg}</p>}
           </div>
         </div>
       </div>
@@ -251,8 +246,8 @@ export default function DailyChallengePage() {
   }
 
   const fachLabel = FACH_LABELS[challenge.fach] ?? challenge.fach;
-  const fachColorClass = FACH_COLORS[challenge.fach] ?? 'bg-gray-100 text-gray-700';
-  const letterLabels = ['A', 'B', 'C', 'D', 'E'];
+  const fachColorClass = FACH_COLORS[challenge.fach] ?? "bg-gray-100 text-gray-700";
+  const letterLabels = ["A", "B", "C", "D", "E"];
 
   // --- Finished state ---
   if (isFinished && finalResult) {
@@ -261,7 +256,7 @@ export default function DailyChallengePage() {
         <div className="max-w-2xl mx-auto w-full px-4 py-8 flex flex-col gap-6">
           {/* Back */}
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
             className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors w-fit"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -282,10 +277,10 @@ export default function DailyChallengePage() {
             {/* Status banner */}
             <div
               className={cn(
-                'px-6 py-4 flex items-center gap-3',
+                "px-6 py-4 flex items-center gap-3",
                 finalResult.solved
-                  ? 'bg-green-50 dark:bg-green-900/20 border-b border-green-100 dark:border-green-900/30'
-                  : 'bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-900/30'
+                  ? "bg-green-50 dark:bg-green-900/20 border-b border-green-100 dark:border-green-900/30"
+                  : "bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-900/30"
               )}
             >
               {finalResult.solved ? (
@@ -294,27 +289,38 @@ export default function DailyChallengePage() {
                 <XCircle className="w-6 h-6 text-red-500 flex-shrink-0" />
               )}
               <div>
-                <p className={cn('font-bold', finalResult.solved ? 'text-green-700 dark:text-green-300' : 'text-red-700 dark:text-red-300')}>
+                <p
+                  className={cn(
+                    "font-bold",
+                    finalResult.solved
+                      ? "text-green-700 dark:text-green-300"
+                      : "text-red-700 dark:text-red-300"
+                  )}
+                >
                   {finalResult.solved
                     ? `Richtig! In ${finalResult.correctOnAttempt}/3 Versuchen`
-                    : 'Leider nicht richtig'}
+                    : "Leider nicht richtig"}
                 </p>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   {finalResult.solved
-                    ? 'Gut gemacht — weiter so!'
+                    ? "Gut gemacht — weiter so!"
                     : `Die richtige Antwort war: ${letterLabels[challenge.correctIndex]}`}
                 </p>
               </div>
               {/* XP badge */}
               <div className="ml-auto flex-shrink-0 inline-flex items-center gap-1 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                <Sparkles className="w-3.5 h-3.5" />
-                +{finalResult.xpEarned} XP
+                <Sparkles className="w-3.5 h-3.5" />+{finalResult.xpEarned} XP
               </div>
             </div>
 
             <div className="p-6 space-y-5">
               {/* Fach label */}
-              <span className={cn('inline-block text-xs font-semibold px-2.5 py-1 rounded-full uppercase tracking-wide', fachColorClass)}>
+              <span
+                className={cn(
+                  "inline-block text-xs font-semibold px-2.5 py-1 rounded-full uppercase tracking-wide",
+                  fachColorClass
+                )}
+              >
                 {fachLabel}
               </span>
 
@@ -332,18 +338,22 @@ export default function DailyChallengePage() {
                     <div
                       key={i}
                       className={cn(
-                        'flex items-start gap-3 px-4 py-3 rounded-xl border text-sm',
+                        "flex items-start gap-3 px-4 py-3 rounded-xl border text-sm",
                         isCorrect
-                          ? 'bg-green-50 border-green-300 dark:bg-green-900/20 dark:border-green-700 text-green-800 dark:text-green-200'
+                          ? "bg-green-50 border-green-300 dark:bg-green-900/20 dark:border-green-700 text-green-800 dark:text-green-200"
                           : isWrongSelected
-                          ? 'bg-red-50 border-red-300 dark:bg-red-900/20 dark:border-red-700 text-red-800 dark:text-red-200'
-                          : 'bg-gray-50 border-gray-200 dark:bg-gray-800/50 dark:border-gray-700 text-gray-600 dark:text-gray-400'
+                            ? "bg-red-50 border-red-300 dark:bg-red-900/20 dark:border-red-700 text-red-800 dark:text-red-200"
+                            : "bg-gray-50 border-gray-200 dark:bg-gray-800/50 dark:border-gray-700 text-gray-600 dark:text-gray-400"
                       )}
                     >
                       <span className="font-bold flex-shrink-0 mt-0.5">{letterLabels[i]}.</span>
                       <span>{opt}</span>
-                      {isCorrect && <CheckCircle2 className="w-4 h-4 ml-auto flex-shrink-0 mt-0.5 text-green-500" />}
-                      {isWrongSelected && <XCircle className="w-4 h-4 ml-auto flex-shrink-0 mt-0.5 text-red-500" />}
+                      {isCorrect && (
+                        <CheckCircle2 className="w-4 h-4 ml-auto flex-shrink-0 mt-0.5 text-green-500" />
+                      )}
+                      {isWrongSelected && (
+                        <XCircle className="w-4 h-4 ml-auto flex-shrink-0 mt-0.5 text-red-500" />
+                      )}
                     </div>
                   );
                 })}
@@ -372,18 +382,11 @@ export default function DailyChallengePage() {
 
               {/* Actions */}
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button
-                  onClick={handleShare}
-                  variant="outline"
-                  className="gap-2 flex-1"
-                >
+                <Button onClick={handleShare} variant="outline" className="gap-2 flex-1">
                   <Share2 className="w-4 h-4" />
                   Ergebnis teilen
                 </Button>
-                <Button
-                  onClick={() => navigate('/bms')}
-                  className="gap-2 flex-1"
-                >
+                <Button onClick={() => navigate("/bms")} className="gap-2 flex-1">
                   Weiter lernen
                   <ChevronRight className="w-4 h-4" />
                 </Button>
@@ -404,7 +407,7 @@ export default function DailyChallengePage() {
       <div className="max-w-2xl mx-auto w-full px-4 py-8 flex flex-col gap-6">
         {/* Back */}
         <button
-          onClick={() => navigate('/')}
+          onClick={() => navigate("/")}
           className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors w-fit"
         >
           <ArrowLeft className="w-4 h-4" />
@@ -424,7 +427,12 @@ export default function DailyChallengePage() {
         <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
           {/* Top meta bar */}
           <div className="px-6 py-4 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between">
-            <span className={cn('text-xs font-semibold px-2.5 py-1 rounded-full uppercase tracking-wide', fachColorClass)}>
+            <span
+              className={cn(
+                "text-xs font-semibold px-2.5 py-1 rounded-full uppercase tracking-wide",
+                fachColorClass
+              )}
+            >
               {fachLabel}
             </span>
             {/* Attempt dots */}
@@ -434,12 +442,12 @@ export default function DailyChallengePage() {
                 <div
                   key={n}
                   className={cn(
-                    'w-2.5 h-2.5 rounded-full transition-colors',
+                    "w-2.5 h-2.5 rounded-full transition-colors",
                     n < attempt
-                      ? 'bg-red-400 dark:bg-red-500'
+                      ? "bg-red-400 dark:bg-red-500"
                       : n === attempt
-                      ? 'bg-amber-400 dark:bg-amber-500 ring-2 ring-amber-200 dark:ring-amber-800'
-                      : 'bg-gray-200 dark:bg-gray-700'
+                        ? "bg-amber-400 dark:bg-amber-500 ring-2 ring-amber-200 dark:ring-amber-800"
+                        : "bg-gray-200 dark:bg-gray-700"
                   )}
                 />
               ))}
@@ -462,8 +470,8 @@ export default function DailyChallengePage() {
               {challenge.options.map((opt, i) => {
                 const isSelected = selectedIndex === i;
                 const isCorrect = i === challenge.correctIndex;
-                const isWrong = isSelected && answerState === 'wrong';
-                const isCorrectSelected = isSelected && answerState === 'correct';
+                const isWrong = isSelected && answerState === "wrong";
+                const isCorrectSelected = isSelected && answerState === "correct";
 
                 return (
                   <button
@@ -471,32 +479,32 @@ export default function DailyChallengePage() {
                     onClick={() => handleSelect(i)}
                     disabled={selectedIndex !== null || isFinished}
                     className={cn(
-                      'w-full text-left flex items-start gap-3 px-4 py-3.5 rounded-xl border-2 text-sm font-medium transition-all duration-200',
+                      "w-full text-left flex items-start gap-3 px-4 py-3.5 rounded-xl border-2 text-sm font-medium transition-all duration-200",
                       // Base style
                       selectedIndex === null
-                        ? 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:border-blue-400 hover:bg-blue-50 dark:hover:border-blue-500 dark:hover:bg-blue-900/20 cursor-pointer'
+                        ? "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:border-blue-400 hover:bg-blue-50 dark:hover:border-blue-500 dark:hover:bg-blue-900/20 cursor-pointer"
                         : isCorrectSelected
-                        ? 'border-green-400 bg-green-50 dark:bg-green-900/20 dark:border-green-600 text-green-800 dark:text-green-200 cursor-default'
-                        : isWrong
-                        ? 'border-red-400 bg-red-50 dark:bg-red-900/20 dark:border-red-600 text-red-800 dark:text-red-200 cursor-default animate-shake'
-                        : isCorrect && answerState !== 'idle'
-                        ? 'border-green-300 bg-green-50/50 dark:bg-green-900/10 dark:border-green-800 text-green-700 dark:text-green-300 cursor-default'
-                        : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-400 dark:text-gray-500 cursor-default opacity-60'
+                          ? "border-green-400 bg-green-50 dark:bg-green-900/20 dark:border-green-600 text-green-800 dark:text-green-200 cursor-default"
+                          : isWrong
+                            ? "border-red-400 bg-red-50 dark:bg-red-900/20 dark:border-red-600 text-red-800 dark:text-red-200 cursor-default animate-shake"
+                            : isCorrect && answerState !== "idle"
+                              ? "border-green-300 bg-green-50/50 dark:bg-green-900/10 dark:border-green-800 text-green-700 dark:text-green-300 cursor-default"
+                              : "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-400 dark:text-gray-500 cursor-default opacity-60"
                     )}
                   >
                     {/* Letter badge */}
                     <span
                       className={cn(
-                        'flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mt-0.5',
+                        "flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mt-0.5",
                         selectedIndex === null
-                          ? 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300'
+                          ? "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300"
                           : isCorrectSelected
-                          ? 'bg-green-500 text-white'
-                          : isWrong
-                          ? 'bg-red-500 text-white'
-                          : isCorrect && answerState !== 'idle'
-                          ? 'bg-green-400 text-white'
-                          : 'bg-gray-100 dark:bg-gray-700 text-gray-400 dark:text-gray-500'
+                            ? "bg-green-500 text-white"
+                            : isWrong
+                              ? "bg-red-500 text-white"
+                              : isCorrect && answerState !== "idle"
+                                ? "bg-green-400 text-white"
+                                : "bg-gray-100 dark:bg-gray-700 text-gray-400 dark:text-gray-500"
                       )}
                     >
                       {letterLabels[i]}
@@ -515,10 +523,10 @@ export default function DailyChallengePage() {
             </div>
 
             {/* Attempt feedback message (shown while waiting for next attempt) */}
-            {answerState === 'wrong' && !isFinished && (
+            {answerState === "wrong" && !isFinished && (
               <div className="flex items-center gap-2 text-red-600 dark:text-red-400 text-sm font-medium animate-pulse">
                 <XCircle className="w-4 h-4" />
-                Nicht richtig — noch {3 - attempt} {3 - attempt === 1 ? 'Versuch' : 'Versuche'}
+                Nicht richtig — noch {3 - attempt} {3 - attempt === 1 ? "Versuch" : "Versuche"}
               </div>
             )}
 
@@ -535,15 +543,21 @@ export default function DailyChallengePage() {
         <div className="flex items-center justify-center gap-6 text-xs text-gray-500 dark:text-gray-500">
           <div className="flex items-center gap-1.5">
             <div className="w-2.5 h-2.5 rounded-full bg-amber-500" />
-            <span>1. Versuch: <strong className="text-gray-700 dark:text-gray-300">100 XP</strong></span>
+            <span>
+              1. Versuch: <strong className="text-gray-700 dark:text-gray-300">100 XP</strong>
+            </span>
           </div>
           <div className="flex items-center gap-1.5">
             <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
-            <span>2. Versuch: <strong className="text-gray-700 dark:text-gray-300">75 XP</strong></span>
+            <span>
+              2. Versuch: <strong className="text-gray-700 dark:text-gray-300">75 XP</strong>
+            </span>
           </div>
           <div className="flex items-center gap-1.5">
             <div className="w-2.5 h-2.5 rounded-full bg-amber-300" />
-            <span>3. Versuch: <strong className="text-gray-700 dark:text-gray-300">50 XP</strong></span>
+            <span>
+              3. Versuch: <strong className="text-gray-700 dark:text-gray-300">50 XP</strong>
+            </span>
           </div>
         </div>
       </div>

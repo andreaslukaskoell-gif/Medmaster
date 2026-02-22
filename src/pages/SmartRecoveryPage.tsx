@@ -25,10 +25,26 @@ import { getDirectStichwortId } from "@/data/questions/index";
 import { alleStichworteListe } from "@/data/stichwortliste";
 
 const fachColors: Record<string, { bg: string; text: string; label: string }> = {
-  biologie: { bg: "bg-emerald-50 dark:bg-emerald-900/20", text: "text-emerald-700 dark:text-emerald-400", label: "Biologie" },
-  chemie: { bg: "bg-red-50 dark:bg-red-900/20", text: "text-red-700 dark:text-red-400", label: "Chemie" },
-  physik: { bg: "bg-blue-50 dark:bg-blue-900/20", text: "text-blue-700 dark:text-blue-400", label: "Physik" },
-  mathematik: { bg: "bg-violet-50 dark:bg-violet-900/20", text: "text-violet-700 dark:text-violet-400", label: "Mathematik" },
+  biologie: {
+    bg: "bg-emerald-50 dark:bg-emerald-900/20",
+    text: "text-emerald-700 dark:text-emerald-400",
+    label: "Biologie",
+  },
+  chemie: {
+    bg: "bg-red-50 dark:bg-red-900/20",
+    text: "text-red-700 dark:text-red-400",
+    label: "Chemie",
+  },
+  physik: {
+    bg: "bg-blue-50 dark:bg-blue-900/20",
+    text: "text-blue-700 dark:text-blue-400",
+    label: "Physik",
+  },
+  mathematik: {
+    bg: "bg-violet-50 dark:bg-violet-900/20",
+    text: "text-violet-700 dark:text-violet-400",
+    label: "Mathematik",
+  },
 };
 
 type Step = "reentry" | "question" | "feedback" | "result";
@@ -36,12 +52,22 @@ type Step = "reentry" | "question" | "feedback" | "result";
 export default function SmartRecoveryPage() {
   const navigate = useNavigate();
   const quizResults = useStore((s) => s.quizResults);
-  const { saveQuizResult, addXP, checkStreak, logActivity, updateSpacedRepetition, incrementSmartRecoveryCount } = useStore();
+  const {
+    saveQuizResult,
+    addXP,
+    checkStreak,
+    logActivity,
+    updateSpacedRepetition,
+    incrementSmartRecoveryCount,
+  } = useStore();
   const adaptive = useAdaptiveStore();
 
   const session = useMemo(() => getRecoverySession(quizResults), [quizResults]);
   const questions = useMemo(
-    () => session.map((s) => getQuestionById(s.questionId)).filter(Boolean) as ReturnType<typeof getQuestionById>[],
+    () =>
+      session.map((s) => getQuestionById(s.questionId)).filter(Boolean) as ReturnType<
+        typeof getQuestionById
+      >[],
     [session]
   );
 
@@ -63,7 +89,9 @@ export default function SmartRecoveryPage() {
   const tipp = currentQuestion ? getStrategieTipp(currentQuestion.id) : null;
   const sw = currentQuestion
     ? alleStichworteListe.find(
-        (s) => s.id === (getDirectStichwortId(currentQuestion.id) || getStichwortForQuestion(currentQuestion.id))
+        (s) =>
+          s.id ===
+          (getDirectStichwortId(currentQuestion.id) || getStichwortForQuestion(currentQuestion.id))
       )
     : null;
 
@@ -77,7 +105,8 @@ export default function SmartRecoveryPage() {
     const correct = answers[currentQuestion!.id] === currentQuestion!.correctOptionId;
     setResults((prev) => [...prev, correct]);
     if (correct) playCorrectAnswerSound();
-    const swId = getDirectStichwortId(currentQuestion!.id) || getStichwortForQuestion(currentQuestion!.id);
+    const swId =
+      getDirectStichwortId(currentQuestion!.id) || getStichwortForQuestion(currentQuestion!.id);
     if (swId) adaptive.recordAnswer(swId, correct, 30);
     updateSpacedRepetition(currentQuestion!.id, correct);
   };
@@ -107,11 +136,17 @@ export default function SmartRecoveryPage() {
       score,
       total,
       date: new Date().toISOString().split("T")[0],
-      answers: questions.map((q) => (q ? {
-        questionId: q.id,
-        selectedAnswer: answers[q.id] ?? "",
-        correct: answers[q.id] === q.correctOptionId,
-      } : null)).filter(Boolean) as { questionId: string; selectedAnswer: string; correct: boolean }[],
+      answers: questions
+        .map((q) =>
+          q
+            ? {
+                questionId: q.id,
+                selectedAnswer: answers[q.id] ?? "",
+                correct: answers[q.id] === q.correctOptionId,
+              }
+            : null
+        )
+        .filter(Boolean) as { questionId: string; selectedAnswer: string; correct: boolean }[],
     });
     addXP(score * 10);
     checkStreak();
@@ -129,11 +164,19 @@ export default function SmartRecoveryPage() {
     const pct = total > 0 ? Math.round((score / total) * 100) : 0;
     return (
       <div className="max-w-2xl mx-auto space-y-6">
-        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Schwachstellen", href: "/schwachstellen" }, { label: "Smart-Recovery" }]} />
+        <BreadcrumbNav
+          items={[
+            { label: "Dashboard", href: "/" },
+            { label: "Schwachstellen", href: "/schwachstellen" },
+            { label: "Smart-Recovery" },
+          ]}
+        />
         <Card className="border-2 border-primary-200 dark:border-primary-800">
           <CardContent className="p-8 text-center space-y-4">
             <Trophy className="w-14 h-14 mx-auto text-primary-500" />
-            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">Smart-Recovery abgeschlossen</h2>
+            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+              Smart-Recovery abgeschlossen
+            </h2>
             <p className="text-3xl font-bold text-primary-600 dark:text-primary-400">
               {score} / {total} richtig ({pct}%)
             </p>
@@ -158,7 +201,13 @@ export default function SmartRecoveryPage() {
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
-      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Schwachstellen", href: "/schwachstellen" }, { label: "Smart-Recovery" }]} />
+      <BreadcrumbNav
+        items={[
+          { label: "Dashboard", href: "/" },
+          { label: "Schwachstellen", href: "/schwachstellen" },
+          { label: "Smart-Recovery" },
+        ]}
+      />
 
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={() => navigate("/schwachstellen")}>
@@ -199,7 +248,9 @@ export default function SmartRecoveryPage() {
         <>
           {sw && (
             <div className="flex items-center gap-2">
-              <span className={`text-xs font-medium px-2 py-1 rounded ${fachColors[sw.fach]?.bg} ${fachColors[sw.fach]?.text}`}>
+              <span
+                className={`text-xs font-medium px-2 py-1 rounded ${fachColors[sw.fach]?.bg} ${fachColors[sw.fach]?.text}`}
+              >
                 {fachColors[sw.fach]?.label ?? sw.fach}
               </span>
               <span className="text-xs text-muted">{sw.thema}</span>
@@ -214,11 +265,19 @@ export default function SmartRecoveryPage() {
                 {currentQuestion.options.map((opt) => {
                   const isSelected = answers[currentQuestion.id] === opt.id;
                   const isCorrectOpt = showResult && opt.id === currentQuestion.correctOptionId;
-                  const isWrongSelected = showResult && isSelected && opt.id !== currentQuestion.correctOptionId;
-                  let classes = "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300";
-                  if (isCorrectOpt) classes = "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300";
-                  else if (isWrongSelected) classes = "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300";
-                  else if (isSelected) classes = "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300";
+                  const isWrongSelected =
+                    showResult && isSelected && opt.id !== currentQuestion.correctOptionId;
+                  let classes =
+                    "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300";
+                  if (isCorrectOpt)
+                    classes =
+                      "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300";
+                  else if (isWrongSelected)
+                    classes =
+                      "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300";
+                  else if (isSelected)
+                    classes =
+                      "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300";
 
                   return (
                     <button
@@ -237,7 +296,9 @@ export default function SmartRecoveryPage() {
           </Card>
 
           {isFeedback && (
-            <Card className={`border-l-4 ${answers[currentQuestion.id] === currentQuestion.correctOptionId ? "border-l-green-500" : "border-l-red-500"}`}>
+            <Card
+              className={`border-l-4 ${answers[currentQuestion.id] === currentQuestion.correctOptionId ? "border-l-green-500" : "border-l-red-500"}`}
+            >
               <CardContent className="p-4">
                 <div className="flex items-center gap-2 mb-2">
                   {answers[currentQuestion.id] === currentQuestion.correctOptionId ? (
@@ -246,7 +307,9 @@ export default function SmartRecoveryPage() {
                     <XCircle className="w-5 h-5 text-red-500" />
                   )}
                   <span className="font-medium text-sm">
-                    {answers[currentQuestion.id] === currentQuestion.correctOptionId ? "Richtig!" : "Leider falsch"}
+                    {answers[currentQuestion.id] === currentQuestion.correctOptionId
+                      ? "Richtig!"
+                      : "Leider falsch"}
                   </span>
                 </div>
                 <p className="text-sm text-muted">{currentQuestion.explanation}</p>
@@ -263,9 +326,13 @@ export default function SmartRecoveryPage() {
             ) : (
               <Button onClick={handleNext}>
                 {currentIndex < questions.length - 1 ? (
-                  <>Weiter <ArrowRight className="w-4 h-4 ml-1" /></>
+                  <>
+                    Weiter <ArrowRight className="w-4 h-4 ml-1" />
+                  </>
                 ) : (
-                  <>Ergebnis <Trophy className="w-4 h-4 ml-1" /></>
+                  <>
+                    Ergebnis <Trophy className="w-4 h-4 ml-1" />
+                  </>
                 )}
               </Button>
             )}

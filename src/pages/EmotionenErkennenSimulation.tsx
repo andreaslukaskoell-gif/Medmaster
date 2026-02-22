@@ -1,8 +1,20 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Timer, CheckCircle2, XCircle, ChevronRight, RotateCcw, Trophy, Clock, BarChart3 } from "lucide-react";
+import {
+  Timer,
+  CheckCircle2,
+  XCircle,
+  ChevronRight,
+  RotateCcw,
+  Trophy,
+  Clock,
+  BarChart3,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
-import { emotionenErkennenScenarios, type EmotionenErkennenScenario } from "@/data/kffEmotionenErkennen";
+import {
+  emotionenErkennenScenarios,
+  type EmotionenErkennenScenario,
+} from "@/data/kffEmotionenErkennen";
 
 const SCENARIO_COUNT = 5;
 const TIME_LIMIT = 600; // 10 minutes
@@ -54,7 +66,10 @@ export default function EmotionenErkennenSimulation() {
     if (phase !== "running") return;
     const interval = setInterval(() => {
       setTimeLeft((t) => {
-        if (t <= 1) { clearInterval(interval); return 0; }
+        if (t <= 1) {
+          clearInterval(interval);
+          return 0;
+        }
         return t - 1;
       });
     }, 1000);
@@ -173,7 +188,15 @@ export default function EmotionenErkennenSimulation() {
       });
       setPhase("results");
     }
-  }, [selectedAnswer, scenarios, currentScenarioIndex, currentQuestionIndex, timeLeft, results, recordSimulation]);
+  }, [
+    selectedAnswer,
+    scenarios,
+    currentScenarioIndex,
+    currentQuestionIndex,
+    timeLeft,
+    results,
+    recordSimulation,
+  ]);
 
   const optionLabels = ["A", "B", "C", "D", "E"];
   const timePercent = (timeLeft / TIME_LIMIT) * 100;
@@ -187,17 +210,26 @@ export default function EmotionenErkennenSimulation() {
             <Timer className="w-8 h-8 text-amber-500" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">Simulation starten</h2>
+            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+              Simulation starten
+            </h2>
             <p className="text-sm text-muted max-w-md mx-auto">
               {SCENARIO_COUNT} zufällige Szenarien mit je 4-5 Fragen in {TIME_LIMIT / 60} Minuten.
               Keine Erklärungen während der Simulation.
             </p>
           </div>
           <div className="flex items-center justify-center gap-4 text-sm text-muted">
-            <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {TIME_LIMIT / 60}:00 min</span>
-            <span className="flex items-center gap-1"><BarChart3 className="w-4 h-4" /> {SCENARIO_COUNT} Szenarien</span>
+            <span className="flex items-center gap-1">
+              <Clock className="w-4 h-4" /> {TIME_LIMIT / 60}:00 min
+            </span>
+            <span className="flex items-center gap-1">
+              <BarChart3 className="w-4 h-4" /> {SCENARIO_COUNT} Szenarien
+            </span>
           </div>
-          <button onClick={startSimulation} className="px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-semibold transition-colors cursor-pointer">
+          <button
+            onClick={startSimulation}
+            className="px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-semibold transition-colors cursor-pointer"
+          >
             Simulation starten
           </button>
         </CardContent>
@@ -219,14 +251,25 @@ export default function EmotionenErkennenSimulation() {
               <Trophy className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{correctCount}/{results.length}</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                {correctCount}/{results.length}
+              </h2>
               <p className="text-sm text-muted">
-                {scorePercent}% richtig — {scorePercent >= 80 ? "Ausgezeichnet!" : scorePercent >= 60 ? "Gut gemacht!" : scorePercent >= 40 ? "Weiter üben!" : "Mehr Übung nötig!"}
+                {scorePercent}% richtig —{" "}
+                {scorePercent >= 80
+                  ? "Ausgezeichnet!"
+                  : scorePercent >= 60
+                    ? "Gut gemacht!"
+                    : scorePercent >= 40
+                      ? "Weiter üben!"
+                      : "Mehr Übung nötig!"}
               </p>
             </div>
             <div className="flex justify-center gap-6 text-sm">
               <div className="text-center">
-                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">{formatTime(TIME_LIMIT - timeLeft)}</p>
+                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                  {formatTime(TIME_LIMIT - timeLeft)}
+                </p>
                 <p className="text-xs text-muted">Gesamtzeit</p>
               </div>
               <div className="text-center">
@@ -236,14 +279,19 @@ export default function EmotionenErkennenSimulation() {
             </div>
             <div className="w-full max-w-xs mx-auto">
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                <div className={`h-3 rounded-full transition-all ${scorePercent >= 80 ? "bg-green-500" : scorePercent >= 50 ? "bg-amber-500" : "bg-red-500"}`} style={{ width: `${scorePercent}%` }} />
+                <div
+                  className={`h-3 rounded-full transition-all ${scorePercent >= 80 ? "bg-green-500" : scorePercent >= 50 ? "bg-amber-500" : "bg-red-500"}`}
+                  style={{ width: `${scorePercent}%` }}
+                />
               </div>
             </div>
           </CardContent>
         </Card>
 
         <div className="space-y-2">
-          <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Aufgabenübersicht</h3>
+          <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+            Aufgabenübersicht
+          </h3>
           {results.map((result, i) => (
             <Card key={i}>
               <CardContent className="p-0">
@@ -251,18 +299,32 @@ export default function EmotionenErkennenSimulation() {
                   onClick={() => setExpandedResult(expandedResult === i ? null : i)}
                   className="w-full text-left p-4 flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
                 >
-                  <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${result.correct ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400" : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400"}`}>{i + 1}</span>
-                  <p className="text-sm text-gray-900 dark:text-gray-100 flex-1 truncate">{result.question}</p>
+                  <span
+                    className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${result.correct ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400" : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400"}`}
+                  >
+                    {i + 1}
+                  </span>
+                  <p className="text-sm text-gray-900 dark:text-gray-100 flex-1 truncate">
+                    {result.question}
+                  </p>
                   <div className="flex items-center gap-2 shrink-0">
                     <span className="text-xs text-muted">{result.timeSpent}s</span>
-                    {result.correct ? <CheckCircle2 className="w-4 h-4 text-green-500" /> : <XCircle className="w-4 h-4 text-red-500" />}
+                    {result.correct ? (
+                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                    ) : (
+                      <XCircle className="w-4 h-4 text-red-500" />
+                    )}
                   </div>
                 </button>
                 {expandedResult === i && (
                   <div className="px-4 pb-4 space-y-1 border-t border-gray-100 dark:border-gray-800 pt-3">
                     {result.options.map((opt, j) => (
-                      <div key={j} className={`text-sm px-3 py-2 rounded ${j === result.correctAnswer ? "bg-green-50 dark:bg-green-900/15 text-green-800 dark:text-green-300 font-medium" : j === result.userAnswer ? "bg-red-50 dark:bg-red-900/15 text-red-800 dark:text-red-300" : "text-muted"}`}>
-                        <span className="font-bold mr-2">{optionLabels[j]}</span>{opt}
+                      <div
+                        key={j}
+                        className={`text-sm px-3 py-2 rounded ${j === result.correctAnswer ? "bg-green-50 dark:bg-green-900/15 text-green-800 dark:text-green-300 font-medium" : j === result.userAnswer ? "bg-red-50 dark:bg-red-900/15 text-red-800 dark:text-red-300" : "text-muted"}`}
+                      >
+                        <span className="font-bold mr-2">{optionLabels[j]}</span>
+                        {opt}
                         {j === result.correctAnswer && " ✓"}
                         {j === result.userAnswer && j !== result.correctAnswer && " ✗"}
                       </div>
@@ -275,7 +337,10 @@ export default function EmotionenErkennenSimulation() {
         </div>
 
         <div className="flex justify-center">
-          <button onClick={startSimulation} className="flex items-center gap-2 px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-medium transition-colors cursor-pointer">
+          <button
+            onClick={startSimulation}
+            className="flex items-center gap-2 px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-medium transition-colors cursor-pointer"
+          >
             <RotateCcw className="w-4 h-4" /> Neue Simulation
           </button>
         </div>
@@ -291,22 +356,35 @@ export default function EmotionenErkennenSimulation() {
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-3">
-        <Timer className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-amber-500"}`} />
+        <Timer
+          className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-amber-500"}`}
+        />
         <div className="flex-1">
           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-            <div className={`h-2.5 rounded-full transition-all ${isUrgent ? "bg-red-500" : "bg-amber-500"}`} style={{ width: `${timePercent}%` }} />
+            <div
+              className={`h-2.5 rounded-full transition-all ${isUrgent ? "bg-red-500" : "bg-amber-500"}`}
+              style={{ width: `${timePercent}%` }}
+            />
           </div>
         </div>
-        <span className={`text-sm font-mono font-bold min-w-[48px] text-right ${isUrgent ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}>
+        <span
+          className={`text-sm font-mono font-bold min-w-[48px] text-right ${isUrgent ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}
+        >
           {formatTime(timeLeft)}
         </span>
       </div>
 
       <div className="flex items-center justify-between text-sm text-muted">
-        <span>Szenario {currentScenarioIndex + 1}/{scenarios.length} — Frage {currentQuestionIndex + 1}/{currentScenario.questions.length}</span>
+        <span>
+          Szenario {currentScenarioIndex + 1}/{scenarios.length} — Frage {currentQuestionIndex + 1}/
+          {currentScenario.questions.length}
+        </span>
         <div className="flex gap-1">
           {Array.from({ length: totalQuestions }, (_, i) => (
-            <div key={i} className={`w-2 h-2 rounded-full ${i < answeredCount ? (results[i]?.correct ? "bg-green-500" : "bg-red-500") : i === answeredCount ? "bg-amber-500" : "bg-gray-300 dark:bg-gray-600"}`} />
+            <div
+              key={i}
+              className={`w-2 h-2 rounded-full ${i < answeredCount ? (results[i]?.correct ? "bg-green-500" : "bg-red-500") : i === answeredCount ? "bg-amber-500" : "bg-gray-300 dark:bg-gray-600"}`}
+            />
           ))}
         </div>
       </div>
@@ -314,10 +392,14 @@ export default function EmotionenErkennenSimulation() {
       <Card>
         <CardContent className="p-0">
           <div className="bg-gray-50 dark:bg-gray-800 p-6 border-b border-gray-200 dark:border-gray-700">
-            <p className="text-sm text-gray-900 dark:text-gray-100 leading-relaxed">{currentScenario.scenario}</p>
+            <p className="text-sm text-gray-900 dark:text-gray-100 leading-relaxed">
+              {currentScenario.scenario}
+            </p>
           </div>
           <div className="p-6 space-y-4">
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{currentQuestion.question}</p>
+            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+              {currentQuestion.question}
+            </p>
             <div className="space-y-2">
               {currentQuestion.options.map((option, i) => (
                 <button
@@ -330,7 +412,11 @@ export default function EmotionenErkennenSimulation() {
                   }`}
                 >
                   <div className="flex items-start gap-3">
-                    <span className={`text-sm font-bold mt-0.5 ${selectedAnswer === i ? "text-amber-600" : "text-gray-400"}`}>{optionLabels[i]}</span>
+                    <span
+                      className={`text-sm font-bold mt-0.5 ${selectedAnswer === i ? "text-amber-600" : "text-gray-400"}`}
+                    >
+                      {optionLabels[i]}
+                    </span>
                     <span className="text-sm text-gray-900 dark:text-gray-100">{option}</span>
                   </div>
                 </button>

@@ -139,9 +139,7 @@ export default function ZahlenfolgenSimulation() {
   const handleSubmitAnswer = useCallback(() => {
     if (selectedAnswer === null) return;
     const task = tasks[currentIndex];
-    const timeSpent = Math.round(
-      (Date.now() - taskStartTime.current) / 1000
-    );
+    const timeSpent = Math.round((Date.now() - taskStartTime.current) / 1000);
     const correct = selectedAnswer === task.correctAnswer;
     const result: TaskResult = { task, userAnswer: selectedAnswer, correct, timeSpent };
     const newResults = [...results, result];
@@ -173,9 +171,8 @@ export default function ZahlenfolgenSimulation() {
               Simulation starten
             </h2>
             <p className="text-sm text-muted max-w-md mx-auto">
-              {TASK_COUNT} zuf&auml;llige Zahlenfolgen in{" "}
-              {Math.floor(TIME_LIMIT / 60)} Minuten — genau wie im echten
-              MedAT. Keine Tipps, keine L&ouml;sungswege w&auml;hrend der
+              {TASK_COUNT} zuf&auml;llige Zahlenfolgen in {Math.floor(TIME_LIMIT / 60)} Minuten —
+              genau wie im echten MedAT. Keine Tipps, keine L&ouml;sungswege w&auml;hrend der
               Simulation.
             </p>
           </div>
@@ -205,8 +202,7 @@ export default function ZahlenfolgenSimulation() {
   if (phase === "results") {
     const correctCount = results.filter((r) => r.correct).length;
     const totalTime = results.reduce((sum, r) => sum + r.timeSpent, 0);
-    const avgTime =
-      results.length > 0 ? Math.round(totalTime / results.length) : 0;
+    const avgTime = results.length > 0 ? Math.round(totalTime / results.length) : 0;
     const scorePercent = Math.round((correctCount / TASK_COUNT) * 100);
 
     // Pattern statistics
@@ -253,9 +249,7 @@ export default function ZahlenfolgenSimulation() {
                   <p className="text-xs text-muted">Gesamtzeit</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
-                    {avgTime}s
-                  </p>
+                  <p className="text-lg font-bold text-gray-900 dark:text-gray-100">{avgTime}s</p>
                   <p className="text-xs text-muted">&Oslash; pro Aufgabe</p>
                 </div>
               </div>
@@ -321,9 +315,7 @@ export default function ZahlenfolgenSimulation() {
               <Card key={i}>
                 <CardContent className="p-0">
                   <button
-                    onClick={() =>
-                      setExpandedResult(isExpanded ? null : i)
-                    }
+                    onClick={() => setExpandedResult(isExpanded ? null : i)}
                     className="w-full text-left p-4 flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
                   >
                     <span
@@ -338,18 +330,12 @@ export default function ZahlenfolgenSimulation() {
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-mono text-gray-900 dark:text-gray-100 truncate">
                         {result.task.sequence
-                          .map((v, j) =>
-                            result.task.missingIndices.includes(j)
-                              ? "?"
-                              : v
-                          )
+                          .map((v, j) => (result.task.missingIndices.includes(j) ? "?" : v))
                           .join(", ")}
                       </p>
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
-                      <span className="text-xs text-muted">
-                        {result.timeSpent}s
-                      </span>
+                      <span className="text-xs text-muted">{result.timeSpent}s</span>
                       {result.correct ? (
                         <CheckCircle2 className="w-4 h-4 text-green-500" />
                       ) : (
@@ -361,13 +347,10 @@ export default function ZahlenfolgenSimulation() {
                     <div className="px-4 pb-4 space-y-3 border-t border-gray-100 dark:border-gray-800 pt-3">
                       {/* Full sequence */}
                       <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                        <p className="text-xs text-muted mb-2">
-                          Vollst&auml;ndige Folge:
-                        </p>
+                        <p className="text-xs text-muted mb-2">Vollst&auml;ndige Folge:</p>
                         <div className="flex flex-wrap gap-1.5 font-mono text-base">
                           {result.task.sequence.map((val, j) => {
-                            const isMissing =
-                              result.task.missingIndices.includes(j);
+                            const isMissing = result.task.missingIndices.includes(j);
                             return (
                               <span
                                 key={j}
@@ -386,8 +369,7 @@ export default function ZahlenfolgenSimulation() {
                       {/* Options */}
                       <div className="space-y-1">
                         {result.task.options.map((opt, j) => {
-                          const isCorrectOpt =
-                            j === result.task.correctAnswer;
+                          const isCorrectOpt = j === result.task.correctAnswer;
                           const isUserChoice = j === result.userAnswer;
                           return (
                             <div
@@ -400,9 +382,7 @@ export default function ZahlenfolgenSimulation() {
                                     : "text-muted"
                               }`}
                             >
-                              <span className="font-bold mr-2 font-sans">
-                                {optionLabels[j]}
-                              </span>
+                              <span className="font-bold mr-2 font-sans">{optionLabels[j]}</span>
                               {opt}
                               {isCorrectOpt && " ✓"}
                               {isUserChoice && !isCorrectOpt && " ✗"}
@@ -449,9 +429,7 @@ export default function ZahlenfolgenSimulation() {
     <div className="space-y-4">
       {/* Timer bar */}
       <div className="flex items-center gap-3">
-        <Timer
-          className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-blue-500"}`}
-        />
+        <Timer className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-blue-500"}`} />
         <div className="flex-1">
           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
             <div

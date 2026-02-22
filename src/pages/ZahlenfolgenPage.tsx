@@ -18,9 +18,7 @@ export default function ZahlenfolgenPage() {
   const [activeTab, setActiveTab] = useState<TabKey>("lernen");
   const progress = useKFFStore((s) => s.progress.zahlenfolgen);
   const pct =
-    progress && progress.total > 0
-      ? Math.round((progress.correct / progress.total) * 100)
-      : 0;
+    progress && progress.total > 0 ? Math.round((progress.correct / progress.total) * 100) : 0;
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
@@ -38,9 +36,7 @@ export default function ZahlenfolgenPage() {
           <Hash className="w-6 h-6 text-blue-600 dark:text-blue-400" />
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-            Zahlenfolgen
-          </h1>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Zahlenfolgen</h1>
           <div className="flex items-center gap-3 mt-1">
             <span className="text-sm text-muted">KFF</span>
             {progress && progress.total > 0 && (

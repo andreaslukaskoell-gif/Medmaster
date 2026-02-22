@@ -1,5 +1,13 @@
 import { useState, useMemo } from "react";
-import { ArrowLeft, ArrowRight, CheckCircle2, XCircle, Send, Flag, SkipForward } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  CheckCircle2,
+  XCircle,
+  Send,
+  Flag,
+  SkipForward,
+} from "lucide-react";
 import { AiTutorChat, AiTutorButton } from "@/components/AiTutorChat";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,7 +16,11 @@ import { Confetti } from "@/components/ui/confetti";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { allBmsQuestions, getQuestionsBySubject as getNewQuestions } from "@/data/bms/index";
-import { bmsQuestions as legacyQuestions, getQuestionsBySubject as getLegacyQuestions, type Question } from "@/data/bmsQuestions";
+import {
+  bmsQuestions as legacyQuestions,
+  getQuestionsBySubject as getLegacyQuestions,
+  type Question,
+} from "@/data/bmsQuestions";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
 import { getStrategieTipp, getDirectStichwortId } from "@/data/questions/index";
@@ -21,10 +33,26 @@ function getQuestionsBySubject(subject: string) {
 }
 
 const subjectColors: Record<string, { bg: string; text: string; label: string }> = {
-  biologie: { bg: "bg-emerald-100 dark:bg-emerald-900/30", text: "text-emerald-700 dark:text-emerald-400", label: "Biologie" },
-  chemie: { bg: "bg-red-100 dark:bg-red-900/30", text: "text-red-700 dark:text-red-400", label: "Chemie" },
-  physik: { bg: "bg-blue-100 dark:bg-blue-900/30", text: "text-blue-700 dark:text-blue-400", label: "Physik" },
-  mathematik: { bg: "bg-violet-100 dark:bg-violet-900/30", text: "text-violet-700 dark:text-violet-400", label: "Mathematik" },
+  biologie: {
+    bg: "bg-emerald-100 dark:bg-emerald-900/30",
+    text: "text-emerald-700 dark:text-emerald-400",
+    label: "Biologie",
+  },
+  chemie: {
+    bg: "bg-red-100 dark:bg-red-900/30",
+    text: "text-red-700 dark:text-red-400",
+    label: "Chemie",
+  },
+  physik: {
+    bg: "bg-blue-100 dark:bg-blue-900/30",
+    text: "text-blue-700 dark:text-blue-400",
+    label: "Physik",
+  },
+  mathematik: {
+    bg: "bg-violet-100 dark:bg-violet-900/30",
+    text: "text-violet-700 dark:text-violet-400",
+    label: "Mathematik",
+  },
 };
 
 function shuffleArray<T>(arr: T[]): T[] {
@@ -68,8 +96,19 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
-  const [aiTutorQ, setAiTutorQ] = useState<{ question: typeof questions[0]; userAnswer: string } | null>(null);
-  const { addXP, checkStreak, saveQuizResult, logActivity, flaggedQuestions, toggleFlagQuestion, updateSpacedRepetition } = useStore();
+  const [aiTutorQ, setAiTutorQ] = useState<{
+    question: (typeof questions)[0];
+    userAnswer: string;
+  } | null>(null);
+  const {
+    addXP,
+    checkStreak,
+    saveQuizResult,
+    logActivity,
+    flaggedQuestions,
+    toggleFlagQuestion,
+    updateSpacedRepetition,
+  } = useStore();
   const { recordAnswer } = useAdaptiveStore();
 
   const currentQuestion = questions[currentIndex];
@@ -95,8 +134,12 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
         }
       }
     },
-    onNext: () => { if (currentIndex < questions.length - 1) setCurrentIndex((i) => i + 1); },
-    onPrev: () => { if (currentIndex > 0) setCurrentIndex((i) => i - 1); },
+    onNext: () => {
+      if (currentIndex < questions.length - 1) setCurrentIndex((i) => i + 1);
+    },
+    onPrev: () => {
+      if (currentIndex > 0) setCurrentIndex((i) => i - 1);
+    },
   });
 
   const handleSelect = (optionId: string) => {
@@ -157,51 +200,67 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
               {score}/{questions.length}
             </div>
             <p className="text-muted mt-1">{pct}% richtig</p>
-            <p className="text-sm text-green-600 dark:text-green-400 font-medium mt-2">+{score * 10} XP erhalten</p>
+            <p className="text-sm text-green-600 dark:text-green-400 font-medium mt-2">
+              +{score * 10} XP erhalten
+            </p>
             {pct >= 90 && <p className="text-sm text-yellow-600 font-bold mt-1">Hervorragend!</p>}
           </CardContent>
         </Card>
 
-        {subject === "gemischt" && (() => {
-          const bySubject: Record<string, { correct: number; total: number }> = {};
-          questions.forEach((q) => {
-            const s = q.subject;
-            if (!bySubject[s]) bySubject[s] = { correct: 0, total: 0 };
-            bySubject[s].total += 1;
-            if (answers[q.id] === q.correctOptionId) bySubject[s].correct += 1;
-          });
-          return (
-            <Card>
-              <CardContent className="p-5">
-                <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-3">Ergebnis nach Fach</h3>
-                <div className="grid grid-cols-2 gap-3">
-                  {Object.entries(bySubject).map(([subj, data]) => {
-                    const c = subjectColors[subj];
-                    const subjPct = Math.round((data.correct / data.total) * 100);
-                    return (
-                      <div key={subj} className={`${c?.bg || ""} rounded-lg p-3`}>
-                        <div className="flex items-center justify-between mb-1">
-                          <span className={`text-sm font-medium ${c?.text || ""}`}>{c?.label || subj}</span>
-                          <Badge variant={subjPct >= 70 ? "success" : subjPct >= 50 ? "warning" : "danger"}>
-                            {subjPct}%
-                          </Badge>
+        {subject === "gemischt" &&
+          (() => {
+            const bySubject: Record<string, { correct: number; total: number }> = {};
+            questions.forEach((q) => {
+              const s = q.subject;
+              if (!bySubject[s]) bySubject[s] = { correct: 0, total: 0 };
+              bySubject[s].total += 1;
+              if (answers[q.id] === q.correctOptionId) bySubject[s].correct += 1;
+            });
+            return (
+              <Card>
+                <CardContent className="p-5">
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                    Ergebnis nach Fach
+                  </h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {Object.entries(bySubject).map(([subj, data]) => {
+                      const c = subjectColors[subj];
+                      const subjPct = Math.round((data.correct / data.total) * 100);
+                      return (
+                        <div key={subj} className={`${c?.bg || ""} rounded-lg p-3`}>
+                          <div className="flex items-center justify-between mb-1">
+                            <span className={`text-sm font-medium ${c?.text || ""}`}>
+                              {c?.label || subj}
+                            </span>
+                            <Badge
+                              variant={
+                                subjPct >= 70 ? "success" : subjPct >= 50 ? "warning" : "danger"
+                              }
+                            >
+                              {subjPct}%
+                            </Badge>
+                          </div>
+                          <p className="text-xs text-muted">
+                            {data.correct}/{data.total} richtig
+                          </p>
                         </div>
-                        <p className="text-xs text-muted">{data.correct}/{data.total} richtig</p>
-                      </div>
-                    );
-                  })}
-                </div>
-              </CardContent>
-            </Card>
-          );
-        })()}
+                      );
+                    })}
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })()}
 
         <div className="space-y-4">
           {questions.map((q: Question, i: number) => {
             const userAnswer = answers[q.id];
             const isCorrect = userAnswer === q.correctOptionId;
             return (
-              <Card key={q.id} className={`border-l-4 ${isCorrect ? "border-l-green-500" : "border-l-red-500"}`}>
+              <Card
+                key={q.id}
+                className={`border-l-4 ${isCorrect ? "border-l-green-500" : "border-l-red-500"}`}
+              >
                 <CardContent className="p-5">
                   <div className="flex items-start gap-3 mb-3">
                     {isCorrect ? (
@@ -209,7 +268,9 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
                     ) : (
                       <XCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
                     )}
-                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">{i + 1}. {q.text}</p>
+                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                      {i + 1}. {q.text}
+                    </p>
                   </div>
                   <div className="ml-8 space-y-2 mb-3">
                     {q.options.map((opt: { id: string; text: string }) => {
@@ -227,20 +288,34 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
                           }`}
                         >
                           {opt.id.toUpperCase()}) {opt.text}
-                          {isCorrectOpt && <Badge variant="success" className="ml-2">Richtig</Badge>}
-                          {isSelected && !isCorrectOpt && <Badge variant="danger" className="ml-2">Deine Antwort</Badge>}
+                          {isCorrectOpt && (
+                            <Badge variant="success" className="ml-2">
+                              Richtig
+                            </Badge>
+                          )}
+                          {isSelected && !isCorrectOpt && (
+                            <Badge variant="danger" className="ml-2">
+                              Deine Antwort
+                            </Badge>
+                          )}
                         </div>
                       );
                     })}
                   </div>
                   <div className="ml-8 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
-                    <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-1">Erklärung:</p>
+                    <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-1">
+                      Erklärung:
+                    </p>
                     <p className="text-xs text-blue-700 dark:text-blue-400">{q.explanation}</p>
                   </div>
                   {getStrategieTipp(q.id) && (
                     <div className="ml-8 mt-2 bg-amber-50 dark:bg-amber-900/20 p-3 rounded-lg">
-                      <p className="text-xs font-semibold text-amber-800 dark:text-amber-300 mb-1">Strategie-Tipp:</p>
-                      <p className="text-xs text-amber-700 dark:text-amber-400">{getStrategieTipp(q.id)}</p>
+                      <p className="text-xs font-semibold text-amber-800 dark:text-amber-300 mb-1">
+                        Strategie-Tipp:
+                      </p>
+                      <p className="text-xs text-amber-700 dark:text-amber-400">
+                        {getStrategieTipp(q.id)}
+                      </p>
                     </div>
                   )}
                   {!isCorrect && (
@@ -299,7 +374,9 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
 
       <Card>
         <CardContent className="p-6">
-          <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">{currentQuestion.text}</p>
+          <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">
+            {currentQuestion.text}
+          </p>
           <div className="space-y-3">
             {currentQuestion.options.map((opt, i) => (
               <button
@@ -313,7 +390,9 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
               >
                 <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>
                 {opt.text}
-                <kbd className="float-right text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded text-muted">{i + 1}</kbd>
+                <kbd className="float-right text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded text-muted">
+                  {i + 1}
+                </kbd>
               </button>
             ))}
           </div>
@@ -332,7 +411,12 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
 
         <div className="flex gap-2">
           {currentIndex < questions.length - 1 && (
-            <Button variant="ghost" size="sm" onClick={() => setCurrentIndex((i) => i + 1)} title="Überspringen (S)">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setCurrentIndex((i) => i + 1)}
+              title="Überspringen (S)"
+            >
               <SkipForward className="w-4 h-4" />
             </Button>
           )}

@@ -1,12 +1,5 @@
 import { useState, useMemo, useCallback } from "react";
-import {
-  CheckCircle2,
-  XCircle,
-  Lightbulb,
-  ChevronRight,
-  Filter,
-  RotateCcw,
-} from "lucide-react";
+import { CheckCircle2, XCircle, Lightbulb, ChevronRight, Filter, RotateCcw } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import {
@@ -15,10 +8,7 @@ import {
   type ZahlenfolgenPattern,
 } from "@/data/kffZahlenfolgen";
 
-const difficultyLabels: Record<
-  number,
-  { label: string; color: string; bg: string }
-> = {
+const difficultyLabels: Record<number, { label: string; color: string; bg: string }> = {
   1: {
     label: "Leicht",
     color: "text-green-700 dark:text-green-400",
@@ -47,24 +37,15 @@ const patternLabels: Record<ZahlenfolgenPattern, string> = {
 
 const patternColors: Record<ZahlenfolgenPattern, string> = {
   simple: "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300",
-  zweiersprung:
-    "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300",
-  dreiersprung:
-    "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300",
-  vierersprung:
-    "bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300",
-  rekursiv:
-    "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300",
-  komplex:
-    "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300",
+  zweiersprung: "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300",
+  dreiersprung: "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300",
+  vierersprung: "bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300",
+  rekursiv: "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300",
+  komplex: "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300",
 };
 
 /** Color class for a sequence position based on pattern type */
-function getPositionColor(
-  task: ZahlenfolgenTask,
-  index: number,
-  showColors: boolean
-): string {
+function getPositionColor(task: ZahlenfolgenTask, index: number, showColors: boolean): string {
   if (!showColors) return "";
   const p = task.pattern;
   if (p === "zweiersprung") {
@@ -148,9 +129,7 @@ export default function ZahlenfolgenUeben() {
     return (
       <Card>
         <CardContent className="p-8 text-center">
-          <p className="text-muted">
-            Keine Aufgaben f&uuml;r diesen Filter verf&uuml;gbar.
-          </p>
+          <p className="text-muted">Keine Aufgaben f&uuml;r diesen Filter verf&uuml;gbar.</p>
         </CardContent>
       </Card>
     );
@@ -212,10 +191,7 @@ export default function ZahlenfolgenUeben() {
               {correctCount} richtig
             </span>
             {totalAnswered > 0 && (
-              <span>
-                {" "}
-                ({Math.round((correctCount / totalAnswered) * 100)}%)
-              </span>
+              <span> ({Math.round((correctCount / totalAnswered) * 100)}%)</span>
             )}
           </span>
           <button
@@ -260,17 +236,11 @@ export default function ZahlenfolgenUeben() {
 
           {/* Number sequence display */}
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
-            <p className="text-xs text-muted mb-3 text-center">
-              Finde die fehlenden Werte:
-            </p>
+            <p className="text-xs text-muted mb-3 text-center">Finde die fehlenden Werte:</p>
             <div className="flex items-center justify-center gap-2 flex-wrap font-mono text-2xl">
               {currentTask.sequence.map((val, i) => {
                 const isMissing = currentTask.missingIndices.includes(i);
-                const posColor = getPositionColor(
-                  currentTask,
-                  i,
-                  showPatternColors
-                );
+                const posColor = getPositionColor(currentTask, i, showPatternColors);
 
                 if (isMissing && !isChecked) {
                   return (
@@ -314,8 +284,7 @@ export default function ZahlenfolgenUeben() {
               const isSelected = selectedAnswer === i;
               const isCorrectOption = i === currentTask.correctAnswer;
               let borderClass = "border-gray-200 dark:border-gray-700";
-              let bgClass =
-                "hover:bg-blue-50 dark:hover:bg-blue-900/10";
+              let bgClass = "hover:bg-blue-50 dark:hover:bg-blue-900/10";
 
               if (isChecked) {
                 if (isCorrectOption) {
@@ -378,9 +347,7 @@ export default function ZahlenfolgenUeben() {
                   &Uuml;berpr&uuml;fen
                 </button>
                 <button
-                  onClick={() =>
-                    setHintLevel((l) => Math.min(3, l + 1))
-                  }
+                  onClick={() => setHintLevel((l) => Math.min(3, l + 1))}
                   disabled={hintLevel >= 3}
                   className="flex items-center gap-1.5 px-4 py-2.5 border border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-400 rounded-lg text-sm font-medium hover:bg-amber-50 dark:hover:bg-amber-900/20 transition-colors cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
                 >
@@ -401,9 +368,7 @@ export default function ZahlenfolgenUeben() {
                   onClick={() => setShowExplanation(!showExplanation)}
                   className="px-4 py-2.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
                 >
-                  {showExplanation
-                    ? "L&ouml;sung verbergen"
-                    : "L&ouml;sungsweg anzeigen"}
+                  {showExplanation ? "L&ouml;sung verbergen" : "L&ouml;sungsweg anzeigen"}
                 </button>
               </>
             )}

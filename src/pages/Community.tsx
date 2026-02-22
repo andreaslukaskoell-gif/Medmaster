@@ -5,6 +5,7 @@ import { Progress } from "@/components/ui/progress";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
 import { Leaderboard } from "@/components/community/Leaderboard";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 function getScoreBewertung(score: number): string {
   if (score >= 80) return "Stark!";
@@ -13,6 +14,7 @@ function getScoreBewertung(score: number): string {
 }
 
 export default function Community() {
+  usePageTitle("Community");
   const { quizResults } = useStore();
   const [activeTab, setActiveTab] = useState<"vergleich" | "leaderboard">("vergleich");
 
@@ -66,7 +68,9 @@ export default function Community() {
             <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center mx-auto mb-2">
               <Trophy className="w-6 h-6 text-primary-700 dark:text-primary-400" />
             </div>
-            <p className="text-3xl font-bold text-primary-700 dark:text-primary-400">{totalQuizzes}</p>
+            <p className="text-3xl font-bold text-primary-700 dark:text-primary-400">
+              {totalQuizzes}
+            </p>
             <p className="text-xs text-muted">Abgeschlossene Quizze</p>
           </CardContent>
         </Card>

@@ -1,8 +1,19 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Timer, CheckCircle2, ChevronRight, RotateCcw, Trophy, Clock, BarChart3 } from "lucide-react";
+import {
+  Timer,
+  CheckCircle2,
+  ChevronRight,
+  RotateCcw,
+  Trophy,
+  Clock,
+  BarChart3,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
-import { sozialesEntscheidenScenarios, type SozialesEntscheidenScenario } from "@/data/kffSozialesEntscheiden";
+import {
+  sozialesEntscheidenScenarios,
+  type SozialesEntscheidenScenario,
+} from "@/data/kffSozialesEntscheiden";
 
 const SCENARIO_COUNT = 5;
 const TIME_LIMIT = 900; // 15 minutes
@@ -57,7 +68,13 @@ export default function SozialesEntscheidenSimulation() {
   useEffect(() => {
     if (phase !== "running") return;
     const interval = setInterval(() => {
-      setTimeLeft((t) => { if (t <= 1) { clearInterval(interval); return 0; } return t - 1; });
+      setTimeLeft((t) => {
+        if (t <= 1) {
+          clearInterval(interval);
+          return 0;
+        }
+        return t - 1;
+      });
     }, 1000);
     return () => clearInterval(interval);
   }, [phase]);
@@ -81,13 +98,18 @@ export default function SozialesEntscheidenSimulation() {
   const finishSimulation = useCallback(() => {
     setResults((prev) => {
       const answeredIds = new Set(prev.map((r) => r.scenario.id));
-      const remaining = scenarios.filter((s) => !answeredIds.has(s.id)).map((scenario) => ({
-        scenario,
-        ratings: {},
-        totalDeviation: scenario.handlungsoptionen.reduce((sum, opt) => sum + Math.abs(3 - opt.idealRating), 0),
-        maxDeviation: scenario.handlungsoptionen.length * 5,
-        timeSpent: 0,
-      }));
+      const remaining = scenarios
+        .filter((s) => !answeredIds.has(s.id))
+        .map((scenario) => ({
+          scenario,
+          ratings: {},
+          totalDeviation: scenario.handlungsoptionen.reduce(
+            (sum, opt) => sum + Math.abs(3 - opt.idealRating),
+            0
+          ),
+          maxDeviation: scenario.handlungsoptionen.length * 5,
+          timeSpent: 0,
+        }));
       const allResults = [...prev, ...remaining];
 
       const totalDeviation = allResults.reduce((sum, r) => sum + r.totalDeviation, 0);
@@ -123,11 +145,18 @@ export default function SozialesEntscheidenSimulation() {
     if (!allRated || !currentScenario) return;
     const timeSpent = Math.round((Date.now() - taskStartTime.current) / 1000);
     const totalDeviation = currentScenario.handlungsoptionen.reduce(
-      (sum, opt, i) => sum + Math.abs((ratings[i] || 0) - opt.idealRating), 0
+      (sum, opt, i) => sum + Math.abs((ratings[i] || 0) - opt.idealRating),
+      0
     );
     const maxDeviation = currentScenario.handlungsoptionen.length * 5;
 
-    const result: ScenarioResult = { scenario: currentScenario, ratings: { ...ratings }, totalDeviation, maxDeviation, timeSpent };
+    const result: ScenarioResult = {
+      scenario: currentScenario,
+      ratings: { ...ratings },
+      totalDeviation,
+      maxDeviation,
+      timeSpent,
+    };
     setResults((prev) => [...prev, result]);
 
     if (currentIndex + 1 < scenarios.length) {
@@ -158,7 +187,16 @@ export default function SozialesEntscheidenSimulation() {
       });
       setPhase("results");
     }
-  }, [allRated, currentScenario, ratings, currentIndex, scenarios.length, results, timeLeft, recordSimulation]);
+  }, [
+    allRated,
+    currentScenario,
+    ratings,
+    currentIndex,
+    scenarios.length,
+    results,
+    timeLeft,
+    recordSimulation,
+  ]);
 
   const timePercent = (timeLeft / TIME_LIMIT) * 100;
   const isUrgent = timeLeft <= 60;
@@ -171,17 +209,26 @@ export default function SozialesEntscheidenSimulation() {
             <Timer className="w-8 h-8 text-teal-500" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">Simulation starten</h2>
+            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+              Simulation starten
+            </h2>
             <p className="text-sm text-muted max-w-md mx-auto">
-              {SCENARIO_COUNT} zufällige Szenarien mit je 8 Handlungsoptionen in {TIME_LIMIT / 60} Minuten.
-              Bewerte jede Option auf der Skala 1-6.
+              {SCENARIO_COUNT} zufällige Szenarien mit je 8 Handlungsoptionen in {TIME_LIMIT / 60}{" "}
+              Minuten. Bewerte jede Option auf der Skala 1-6.
             </p>
           </div>
           <div className="flex items-center justify-center gap-4 text-sm text-muted">
-            <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {TIME_LIMIT / 60}:00 min</span>
-            <span className="flex items-center gap-1"><BarChart3 className="w-4 h-4" /> {SCENARIO_COUNT} Szenarien</span>
+            <span className="flex items-center gap-1">
+              <Clock className="w-4 h-4" /> {TIME_LIMIT / 60}:00 min
+            </span>
+            <span className="flex items-center gap-1">
+              <BarChart3 className="w-4 h-4" /> {SCENARIO_COUNT} Szenarien
+            </span>
           </div>
-          <button onClick={startSimulation} className="px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-lg font-semibold transition-colors cursor-pointer">
+          <button
+            onClick={startSimulation}
+            className="px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-lg font-semibold transition-colors cursor-pointer"
+          >
             Simulation starten
           </button>
         </CardContent>
@@ -204,14 +251,25 @@ export default function SozialesEntscheidenSimulation() {
               <Trophy className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{scorePercent}%</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                {scorePercent}%
+              </h2>
               <p className="text-sm text-muted">
-                Übereinstimmung — {scorePercent >= 80 ? "Ausgezeichnet!" : scorePercent >= 60 ? "Gut gemacht!" : scorePercent >= 40 ? "Weiter üben!" : "Mehr Übung nötig!"}
+                Übereinstimmung —{" "}
+                {scorePercent >= 80
+                  ? "Ausgezeichnet!"
+                  : scorePercent >= 60
+                    ? "Gut gemacht!"
+                    : scorePercent >= 40
+                      ? "Weiter üben!"
+                      : "Mehr Übung nötig!"}
               </p>
             </div>
             <div className="flex justify-center gap-6 text-sm">
               <div className="text-center">
-                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">{formatTime(TIME_LIMIT - timeLeft)}</p>
+                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                  {formatTime(TIME_LIMIT - timeLeft)}
+                </p>
                 <p className="text-xs text-muted">Gesamtzeit</p>
               </div>
               <div className="text-center">
@@ -221,16 +279,23 @@ export default function SozialesEntscheidenSimulation() {
             </div>
             <div className="w-full max-w-xs mx-auto">
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                <div className={`h-3 rounded-full transition-all ${scorePercent >= 80 ? "bg-green-500" : scorePercent >= 50 ? "bg-amber-500" : "bg-red-500"}`} style={{ width: `${scorePercent}%` }} />
+                <div
+                  className={`h-3 rounded-full transition-all ${scorePercent >= 80 ? "bg-green-500" : scorePercent >= 50 ? "bg-amber-500" : "bg-red-500"}`}
+                  style={{ width: `${scorePercent}%` }}
+                />
               </div>
             </div>
           </CardContent>
         </Card>
 
         <div className="space-y-2">
-          <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Szenarien-Übersicht</h3>
+          <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+            Szenarien-Übersicht
+          </h3>
           {results.map((result, i) => {
-            const scenarioPercent = Math.round((1 - result.totalDeviation / result.maxDeviation) * 100);
+            const scenarioPercent = Math.round(
+              (1 - result.totalDeviation / result.maxDeviation) * 100
+            );
             return (
               <Card key={i}>
                 <CardContent className="p-0">
@@ -238,11 +303,19 @@ export default function SozialesEntscheidenSimulation() {
                     onClick={() => setExpandedResult(expandedResult === i ? null : i)}
                     className="w-full text-left p-4 flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
                   >
-                    <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${scenarioPercent >= 70 ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400" : "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400"}`}>{i + 1}</span>
-                    <p className="text-sm text-gray-900 dark:text-gray-100 flex-1 truncate">{result.scenario.scenario.slice(0, 80)}...</p>
+                    <span
+                      className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${scenarioPercent >= 70 ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400" : "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400"}`}
+                    >
+                      {i + 1}
+                    </span>
+                    <p className="text-sm text-gray-900 dark:text-gray-100 flex-1 truncate">
+                      {result.scenario.scenario.slice(0, 80)}...
+                    </p>
                     <div className="flex items-center gap-2 shrink-0">
                       <span className="text-xs text-muted">{result.timeSpent}s</span>
-                      <span className={`text-xs font-medium ${scenarioPercent >= 70 ? "text-green-600 dark:text-green-400" : "text-amber-600 dark:text-amber-400"}`}>
+                      <span
+                        className={`text-xs font-medium ${scenarioPercent >= 70 ? "text-green-600 dark:text-green-400" : "text-amber-600 dark:text-amber-400"}`}
+                      >
                         {scenarioPercent}%
                       </span>
                     </div>
@@ -251,13 +324,23 @@ export default function SozialesEntscheidenSimulation() {
                     <div className="px-4 pb-4 space-y-2 border-t border-gray-100 dark:border-gray-800 pt-3">
                       {result.scenario.handlungsoptionen.map((opt, j) => {
                         const userRating = result.ratings[j];
-                        const deviation = userRating !== undefined ? Math.abs(userRating - opt.idealRating) : 0;
+                        const deviation =
+                          userRating !== undefined ? Math.abs(userRating - opt.idealRating) : 0;
                         return (
-                          <div key={j} className="text-sm px-3 py-2 rounded bg-gray-50 dark:bg-gray-800 space-y-1">
-                            <p className="text-gray-900 dark:text-gray-100">{j + 1}. {opt.text}</p>
+                          <div
+                            key={j}
+                            className="text-sm px-3 py-2 rounded bg-gray-50 dark:bg-gray-800 space-y-1"
+                          >
+                            <p className="text-gray-900 dark:text-gray-100">
+                              {j + 1}. {opt.text}
+                            </p>
                             <div className="flex items-center gap-3 text-xs">
-                              <span className="text-muted">Deine Bewertung: <strong>{userRating ?? "—"}</strong></span>
-                              <span className="text-muted">Ideal: <strong>{opt.idealRating}</strong></span>
+                              <span className="text-muted">
+                                Deine Bewertung: <strong>{userRating ?? "—"}</strong>
+                              </span>
+                              <span className="text-muted">
+                                Ideal: <strong>{opt.idealRating}</strong>
+                              </span>
                               <span className={`font-medium ${getDeviationColor(deviation)}`}>
                                 {deviation === 0 ? "Perfekt!" : `Abweichung: ${deviation}`}
                               </span>
@@ -274,7 +357,10 @@ export default function SozialesEntscheidenSimulation() {
         </div>
 
         <div className="flex justify-center">
-          <button onClick={startSimulation} className="flex items-center gap-2 px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-lg font-medium transition-colors cursor-pointer">
+          <button
+            onClick={startSimulation}
+            className="flex items-center gap-2 px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-lg font-medium transition-colors cursor-pointer"
+          >
             <RotateCcw className="w-4 h-4" /> Neue Simulation
           </button>
         </div>
@@ -291,19 +377,29 @@ export default function SozialesEntscheidenSimulation() {
         <Timer className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-teal-500"}`} />
         <div className="flex-1">
           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-            <div className={`h-2.5 rounded-full transition-all ${isUrgent ? "bg-red-500" : "bg-teal-500"}`} style={{ width: `${timePercent}%` }} />
+            <div
+              className={`h-2.5 rounded-full transition-all ${isUrgent ? "bg-red-500" : "bg-teal-500"}`}
+              style={{ width: `${timePercent}%` }}
+            />
           </div>
         </div>
-        <span className={`text-sm font-mono font-bold min-w-[48px] text-right ${isUrgent ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}>
+        <span
+          className={`text-sm font-mono font-bold min-w-[48px] text-right ${isUrgent ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}
+        >
           {formatTime(timeLeft)}
         </span>
       </div>
 
       <div className="flex items-center justify-between text-sm text-muted">
-        <span>Szenario {currentIndex + 1} von {scenarios.length}</span>
+        <span>
+          Szenario {currentIndex + 1} von {scenarios.length}
+        </span>
         <div className="flex gap-1">
           {Array.from({ length: scenarios.length }, (_, i) => (
-            <div key={i} className={`w-3 h-3 rounded-full ${i < results.length ? "bg-teal-500" : i === currentIndex ? "bg-teal-300" : "bg-gray-300 dark:bg-gray-600"}`} />
+            <div
+              key={i}
+              className={`w-3 h-3 rounded-full ${i < results.length ? "bg-teal-500" : i === currentIndex ? "bg-teal-300" : "bg-gray-300 dark:bg-gray-600"}`}
+            />
           ))}
         </div>
       </div>
@@ -311,7 +407,9 @@ export default function SozialesEntscheidenSimulation() {
       <Card>
         <CardContent className="p-0">
           <div className="bg-gray-50 dark:bg-gray-800 p-6 border-b border-gray-200 dark:border-gray-700">
-            <p className="text-sm text-gray-900 dark:text-gray-100 leading-relaxed">{currentScenario.scenario}</p>
+            <p className="text-sm text-gray-900 dark:text-gray-100 leading-relaxed">
+              {currentScenario.scenario}
+            </p>
           </div>
           <div className="p-6 space-y-4">
             <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -319,7 +417,10 @@ export default function SozialesEntscheidenSimulation() {
             </p>
             <div className="space-y-4">
               {currentScenario.handlungsoptionen.map((option, i) => (
-                <div key={i} className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 space-y-2">
+                <div
+                  key={i}
+                  className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 space-y-2"
+                >
                   <p className="text-sm text-gray-900 dark:text-gray-100">
                     <span className="font-bold text-teal-500 mr-1">{i + 1}.</span>
                     {option.text}
@@ -341,7 +442,9 @@ export default function SozialesEntscheidenSimulation() {
                         </button>
                       ))}
                     </div>
-                    <span className="text-[10px] text-muted w-20 text-right shrink-0">angemessen</span>
+                    <span className="text-[10px] text-muted w-20 text-right shrink-0">
+                      angemessen
+                    </span>
                   </div>
                 </div>
               ))}
@@ -351,7 +454,9 @@ export default function SozialesEntscheidenSimulation() {
               disabled={!allRated}
               className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-sm font-semibold disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer"
             >
-              {currentIndex + 1 < scenarios.length ? "Bestätigen & Weiter" : "Bestätigen & Auswerten"}
+              {currentIndex + 1 < scenarios.length
+                ? "Bestätigen & Weiter"
+                : "Bestätigen & Auswerten"}
               <ChevronRight className="w-4 h-4" />
             </button>
           </div>

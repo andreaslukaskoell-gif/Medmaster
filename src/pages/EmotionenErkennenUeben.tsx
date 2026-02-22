@@ -31,7 +31,9 @@ export default function EmotionenErkennenUeben() {
     [scenarios]
   );
   const questionsBeforeCurrent = useMemo(
-    () => scenarios.slice(0, currentScenarioIndex).reduce((sum, s) => sum + s.questions.length, 0) + currentQuestionIndex,
+    () =>
+      scenarios.slice(0, currentScenarioIndex).reduce((sum, s) => sum + s.questions.length, 0) +
+      currentQuestionIndex,
     [scenarios, currentScenarioIndex, currentQuestionIndex]
   );
 
@@ -100,19 +102,32 @@ export default function EmotionenErkennenUeben() {
       {/* Top bar */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          <button onClick={handleShuffle} className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer" title="Zufällige Reihenfolge">
+          <button
+            onClick={handleShuffle}
+            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            title="Zufällige Reihenfolge"
+          >
             <Shuffle className="w-4 h-4" />
           </button>
           <span className="text-sm text-muted">
-            Szenario {currentScenarioIndex + 1}/{scenarios.length} — Frage {currentQuestionIndex + 1}/{currentScenario.questions.length}
+            Szenario {currentScenarioIndex + 1}/{scenarios.length} — Frage{" "}
+            {currentQuestionIndex + 1}/{currentScenario.questions.length}
           </span>
         </div>
         <div className="flex items-center gap-3">
           <span className="text-sm text-muted">
-            <span className="font-medium text-green-600 dark:text-green-400">{correctCount} richtig</span>
-            {totalAnswered > 0 && <span> ({Math.round((correctCount / totalAnswered) * 100)}%)</span>}
+            <span className="font-medium text-green-600 dark:text-green-400">
+              {correctCount} richtig
+            </span>
+            {totalAnswered > 0 && (
+              <span> ({Math.round((correctCount / totalAnswered) * 100)}%)</span>
+            )}
           </span>
-          <button onClick={handleReset} className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer" title="Zurücksetzen">
+          <button
+            onClick={handleReset}
+            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            title="Zurücksetzen"
+          >
             <RotateCcw className="w-4 h-4" />
           </button>
         </div>
@@ -132,7 +147,9 @@ export default function EmotionenErkennenUeben() {
           {/* Scenario */}
           <div className="bg-gray-50 dark:bg-gray-800 p-6 border-b border-gray-200 dark:border-gray-700">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-medium text-amber-600 dark:text-amber-400">{currentScenario.id}</span>
+              <span className="text-xs font-medium text-amber-600 dark:text-amber-400">
+                {currentScenario.id}
+              </span>
               <span className="text-xs text-muted">Szenario</span>
             </div>
             <p className="text-sm text-gray-900 dark:text-gray-100 leading-relaxed">
@@ -177,12 +194,18 @@ export default function EmotionenErkennenUeben() {
                     className={`w-full text-left p-3 rounded-lg border-2 ${borderClass} ${bgClass} transition-all cursor-pointer disabled:cursor-default`}
                   >
                     <div className="flex items-start gap-3">
-                      <span className={`text-sm font-bold mt-0.5 ${isChecked && isCorrectOption ? "text-green-600" : isChecked && isSelected ? "text-red-600" : "text-amber-500"}`}>
+                      <span
+                        className={`text-sm font-bold mt-0.5 ${isChecked && isCorrectOption ? "text-green-600" : isChecked && isSelected ? "text-red-600" : "text-amber-500"}`}
+                      >
                         {optionLabels[i]}
                       </span>
                       <span className="text-sm text-gray-900 dark:text-gray-100">{option}</span>
-                      {isChecked && isCorrectOption && <CheckCircle2 className="w-4 h-4 text-green-500 ml-auto shrink-0 mt-0.5" />}
-                      {isChecked && isSelected && !isCorrectOption && <XCircle className="w-4 h-4 text-red-500 ml-auto shrink-0 mt-0.5" />}
+                      {isChecked && isCorrectOption && (
+                        <CheckCircle2 className="w-4 h-4 text-green-500 ml-auto shrink-0 mt-0.5" />
+                      )}
+                      {isChecked && isSelected && !isCorrectOption && (
+                        <XCircle className="w-4 h-4 text-red-500 ml-auto shrink-0 mt-0.5" />
+                      )}
                     </div>
                   </button>
                 );
@@ -205,7 +228,9 @@ export default function EmotionenErkennenUeben() {
                     onClick={handleNext}
                     className="flex items-center gap-1.5 px-5 py-2.5 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-sm font-medium transition-colors cursor-pointer"
                   >
-                    {currentQuestionIndex + 1 < currentScenario.questions.length ? "Nächste Frage" : "Nächstes Szenario"}
+                    {currentQuestionIndex + 1 < currentScenario.questions.length
+                      ? "Nächste Frage"
+                      : "Nächstes Szenario"}
                     <ChevronRight className="w-4 h-4" />
                   </button>
                   <button
@@ -220,15 +245,21 @@ export default function EmotionenErkennenUeben() {
 
             {/* Result feedback */}
             {isChecked && (
-              <div className={`rounded-lg p-4 ${isCorrect ? "bg-green-50 dark:bg-green-900/15 border border-green-200 dark:border-green-800" : "bg-red-50 dark:bg-red-900/15 border border-red-200 dark:border-red-800"}`}>
+              <div
+                className={`rounded-lg p-4 ${isCorrect ? "bg-green-50 dark:bg-green-900/15 border border-green-200 dark:border-green-800" : "bg-red-50 dark:bg-red-900/15 border border-red-200 dark:border-red-800"}`}
+              >
                 <div className="flex items-center gap-2">
                   {isCorrect ? (
                     <CheckCircle2 className="w-5 h-5 text-green-500" />
                   ) : (
                     <XCircle className="w-5 h-5 text-red-500" />
                   )}
-                  <span className={`font-semibold text-sm ${isCorrect ? "text-green-800 dark:text-green-300" : "text-red-800 dark:text-red-300"}`}>
-                    {isCorrect ? "Richtig!" : `Falsch — Richtige Antwort: ${optionLabels[currentQuestion.correctAnswer]}`}
+                  <span
+                    className={`font-semibold text-sm ${isCorrect ? "text-green-800 dark:text-green-300" : "text-red-800 dark:text-red-300"}`}
+                  >
+                    {isCorrect
+                      ? "Richtig!"
+                      : `Falsch — Richtige Antwort: ${optionLabels[currentQuestion.correctAnswer]}`}
                   </span>
                 </div>
               </div>
@@ -237,8 +268,12 @@ export default function EmotionenErkennenUeben() {
             {/* Explanation */}
             {showExplanation && isChecked && (
               <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-                <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">Erklärung</h4>
-                <p className="text-sm text-gray-700 dark:text-gray-300">{currentQuestion.explanation}</p>
+                <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                  Erklärung
+                </h4>
+                <p className="text-sm text-gray-700 dark:text-gray-300">
+                  {currentQuestion.explanation}
+                </p>
               </div>
             )}
           </div>

@@ -1,8 +1,18 @@
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
 import {
-  Target, Flame, ArrowLeft, ArrowRight, CheckCircle2, XCircle,
-  Send, Lightbulb, Zap, Trophy, RotateCcw, Play,
+  Target,
+  Flame,
+  ArrowLeft,
+  ArrowRight,
+  CheckCircle2,
+  XCircle,
+  Send,
+  Lightbulb,
+  Zap,
+  Trophy,
+  RotateCcw,
+  Play,
 } from "lucide-react";
 import { AiTutorChat, AiTutorButton } from "@/components/AiTutorChat";
 import { Button } from "@/components/ui/button";
@@ -20,6 +30,7 @@ import { getStrategieTipp, getDirectStichwortId } from "@/data/questions/index";
 import { getStichwortForQuestion } from "@/store/adaptiveLearning";
 import { playCorrectAnswerSound } from "@/lib/sounds";
 import { SchwachstellenAnalyse } from "@/components/schwachstellen/SchwachstellenAnalyse";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 // ============================================================
 // Types & Helpers
@@ -28,10 +39,30 @@ import { SchwachstellenAnalyse } from "@/components/schwachstellen/Schwachstelle
 type Mode = "overview" | "daily" | "focused";
 
 const fachColors: Record<string, { bg: string; text: string; label: string; accent: string }> = {
-  biologie: { bg: "bg-emerald-50 dark:bg-emerald-900/20", text: "text-emerald-700 dark:text-emerald-400", label: "Biologie", accent: "bg-emerald-500" },
-  chemie: { bg: "bg-red-50 dark:bg-red-900/20", text: "text-red-700 dark:text-red-400", label: "Chemie", accent: "bg-red-500" },
-  physik: { bg: "bg-blue-50 dark:bg-blue-900/20", text: "text-blue-700 dark:text-blue-400", label: "Physik", accent: "bg-blue-500" },
-  mathematik: { bg: "bg-violet-50 dark:bg-violet-900/20", text: "text-violet-700 dark:text-violet-400", label: "Mathematik", accent: "bg-violet-500" },
+  biologie: {
+    bg: "bg-emerald-50 dark:bg-emerald-900/20",
+    text: "text-emerald-700 dark:text-emerald-400",
+    label: "Biologie",
+    accent: "bg-emerald-500",
+  },
+  chemie: {
+    bg: "bg-red-50 dark:bg-red-900/20",
+    text: "text-red-700 dark:text-red-400",
+    label: "Chemie",
+    accent: "bg-red-500",
+  },
+  physik: {
+    bg: "bg-blue-50 dark:bg-blue-900/20",
+    text: "text-blue-700 dark:text-blue-400",
+    label: "Physik",
+    accent: "bg-blue-500",
+  },
+  mathematik: {
+    bg: "bg-violet-50 dark:bg-violet-900/20",
+    text: "text-violet-700 dark:text-violet-400",
+    label: "Mathematik",
+    accent: "bg-violet-500",
+  },
 };
 
 function shuffle<T>(arr: T[]): T[] {
@@ -58,6 +89,7 @@ function getQuestionsForStichwort(stichwortId: string, count = 10) {
 // ============================================================
 
 export default function SchwachstellenTrainer() {
+  usePageTitle("Schwachstellen-Trainer");
   const [mode, setMode] = useState<Mode>("overview");
   const [focusStichwortId, setFocusStichwortId] = useState<string | null>(null);
   const [quizQuestions, setQuizQuestions] = useState<typeof allBmsQuestions>([]);
@@ -65,7 +97,10 @@ export default function SchwachstellenTrainer() {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [showResult, setShowResult] = useState(false);
   const [showTipp, setShowTipp] = useState<string | null>(null);
-  const [aiTutorQ, setAiTutorQ] = useState<{ question: typeof allBmsQuestions[0]; userAnswer: string } | null>(null);
+  const [aiTutorQ, setAiTutorQ] = useState<{
+    question: (typeof allBmsQuestions)[0];
+    userAnswer: string;
+  } | null>(null);
 
   const [searchParams, setSearchParams] = useSearchParams();
   const adaptive = useAdaptiveStore();
@@ -188,7 +223,9 @@ export default function SchwachstellenTrainer() {
       if (showResult) handleNext();
       else if (answers[quizQuestions[currentIndex]?.id]) handleCheck();
     },
-    onNext: () => { if (showResult) handleNext(); },
+    onNext: () => {
+      if (showResult) handleNext();
+    },
   });
 
   // ============================================================
@@ -240,20 +277,22 @@ export default function SchwachstellenTrainer() {
 
         <Card>
           <CardContent className="p-6">
-            <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">
-              {q.text}
-            </p>
+            <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">{q.text}</p>
             <div className="space-y-3">
               {q.options.map((opt) => {
-                let classes = "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300";
+                let classes =
+                  "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300";
                 if (showResult) {
                   if (opt.id === q.correctOptionId) {
-                    classes = "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300";
+                    classes =
+                      "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300";
                   } else if (opt.id === userAnswer && !isCorrect) {
-                    classes = "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300";
+                    classes =
+                      "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300";
                   }
                 } else if (userAnswer === opt.id) {
-                  classes = "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300";
+                  classes =
+                    "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300";
                 }
 
                 return (
@@ -304,7 +343,9 @@ export default function SchwachstellenTrainer() {
               </Card>
             )}
             {!isCorrect && (
-              <AiTutorButton onClick={() => setAiTutorQ({ question: q, userAnswer: userAnswer || "" })} />
+              <AiTutorButton
+                onClick={() => setAiTutorQ({ question: q, userAnswer: userAnswer || "" })}
+              />
             )}
           </div>
         )}
@@ -318,9 +359,13 @@ export default function SchwachstellenTrainer() {
           ) : (
             <Button onClick={handleNext} className="ml-auto">
               {currentIndex < quizQuestions.length - 1 ? (
-                <>Weiter <ArrowRight className="w-4 h-4 ml-1" /></>
+                <>
+                  Weiter <ArrowRight className="w-4 h-4 ml-1" />
+                </>
               ) : (
-                <>Ergebnis <Trophy className="w-4 h-4 ml-1" /></>
+                <>
+                  Ergebnis <Trophy className="w-4 h-4 ml-1" />
+                </>
               )}
             </Button>
           )}
@@ -347,14 +392,18 @@ export default function SchwachstellenTrainer() {
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
-      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Schwachstellen-Trainer" }]} />
+      <BreadcrumbNav
+        items={[{ label: "Dashboard", href: "/" }, { label: "Schwachstellen-Trainer" }]}
+      />
 
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 bg-red-100 dark:bg-red-900/30 rounded-xl flex items-center justify-center">
           <Target className="w-5 h-5 text-red-600 dark:text-red-400" />
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Schwachstellen-Trainer</h1>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+            Schwachstellen-Trainer
+          </h1>
           <p className="text-sm text-muted">Gezielt schwache Themen trainieren</p>
         </div>
       </div>
@@ -366,7 +415,9 @@ export default function SchwachstellenTrainer() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
           <CardContent className="p-5 text-center">
-            <div className="text-3xl font-bold text-primary-700 dark:text-primary-400">{readiness}%</div>
+            <div className="text-3xl font-bold text-primary-700 dark:text-primary-400">
+              {readiness}%
+            </div>
             <p className="text-xs text-muted mt-1">MedAT Readiness</p>
             <Progress value={readiness} className="mt-3" />
           </CardContent>
@@ -422,7 +473,9 @@ export default function SchwachstellenTrainer() {
             <Target className="w-5 h-5 text-red-500" />
             Deine Schwachstellen
             {weakTopics.length === 0 && (
-              <Badge variant="default" className="ml-2 text-xs">Noch keine Daten</Badge>
+              <Badge variant="default" className="ml-2 text-xs">
+                Noch keine Daten
+              </Badge>
             )}
           </CardTitle>
         </CardHeader>
@@ -448,9 +501,7 @@ export default function SchwachstellenTrainer() {
                 >
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className={`text-sm font-medium ${fc?.text || ""}`}>
-                        {topic.thema}
-                      </span>
+                      <span className={`text-sm font-medium ${fc?.text || ""}`}>{topic.thema}</span>
                       <Badge variant="default" className="text-[10px]">
                         {fc?.label || topic.fach}
                       </Badge>
@@ -498,7 +549,9 @@ export default function SchwachstellenTrainer() {
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-green-500" />
                     <span className="text-sm">{topic.thema}</span>
-                    <Badge variant="default" className="text-[10px]">{fc?.label}</Badge>
+                    <Badge variant="default" className="text-[10px]">
+                      {fc?.label}
+                    </Badge>
                   </div>
                   <Badge variant="success">{topic.rate}%</Badge>
                 </div>
@@ -516,7 +569,9 @@ export default function SchwachstellenTrainer() {
           return (
             <Card key={fach}>
               <CardContent className="p-4 text-center">
-                <div className={`w-8 h-8 ${fc.accent} rounded-lg mx-auto mb-2 flex items-center justify-center`}>
+                <div
+                  className={`w-8 h-8 ${fc.accent} rounded-lg mx-auto mb-2 flex items-center justify-center`}
+                >
                   <span className="text-white text-xs font-bold">{r}%</span>
                 </div>
                 <p className="text-xs font-medium">{fc.label}</p>

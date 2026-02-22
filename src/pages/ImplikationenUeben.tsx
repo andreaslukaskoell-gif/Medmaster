@@ -5,9 +5,21 @@ import { useKFFResults } from "@/hooks/useKFFResults";
 import { implikationenTasks, type ImplikationTask } from "@/data/kffImplikationen";
 
 const difficultyLabels: Record<number, { label: string; color: string; bg: string }> = {
-  1: { label: "Leicht", color: "text-green-700 dark:text-green-400", bg: "bg-green-100 dark:bg-green-900/30" },
-  2: { label: "Mittel", color: "text-amber-700 dark:text-amber-400", bg: "bg-amber-100 dark:bg-amber-900/30" },
-  3: { label: "Schwer", color: "text-red-700 dark:text-red-400", bg: "bg-red-100 dark:bg-red-900/30" },
+  1: {
+    label: "Leicht",
+    color: "text-green-700 dark:text-green-400",
+    bg: "bg-green-100 dark:bg-green-900/30",
+  },
+  2: {
+    label: "Mittel",
+    color: "text-amber-700 dark:text-amber-400",
+    bg: "bg-amber-100 dark:bg-amber-900/30",
+  },
+  3: {
+    label: "Schwer",
+    color: "text-red-700 dark:text-red-400",
+    bg: "bg-red-100 dark:bg-red-900/30",
+  },
 };
 
 const ruleDescriptions: Record<number, string> = {
@@ -92,9 +104,17 @@ export default function ImplikationenUeben() {
           <Filter className="w-4 h-4 text-muted" />
           <div className="flex gap-1">
             <button
-              onClick={() => { setDifficultyFilter(null); setCurrentIndex(0); setIsChecked(false); setSelectedAnswer(null); setShowHint(false); }}
+              onClick={() => {
+                setDifficultyFilter(null);
+                setCurrentIndex(0);
+                setIsChecked(false);
+                setSelectedAnswer(null);
+                setShowHint(false);
+              }}
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
-                difficultyFilter === null ? "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 font-medium" : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                difficultyFilter === null
+                  ? "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 font-medium"
+                  : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
               }`}
             >
               Alle
@@ -102,9 +122,17 @@ export default function ImplikationenUeben() {
             {[1, 2, 3].map((d) => (
               <button
                 key={d}
-                onClick={() => { setDifficultyFilter(d); setCurrentIndex(0); setIsChecked(false); setSelectedAnswer(null); setShowHint(false); }}
+                onClick={() => {
+                  setDifficultyFilter(d);
+                  setCurrentIndex(0);
+                  setIsChecked(false);
+                  setSelectedAnswer(null);
+                  setShowHint(false);
+                }}
                 className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
-                  difficultyFilter === d ? `${difficultyLabels[d].bg} ${difficultyLabels[d].color} font-medium` : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                  difficultyFilter === d
+                    ? `${difficultyLabels[d].bg} ${difficultyLabels[d].color} font-medium`
+                    : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
                 }`}
               >
                 {difficultyLabels[d].label}
@@ -114,10 +142,19 @@ export default function ImplikationenUeben() {
         </div>
         <div className="flex items-center gap-3">
           <span className="text-sm text-muted">
-            Aufgabe {currentIndex + 1} von {filteredTasks.length} — <span className="font-medium text-green-600 dark:text-green-400">{correctCount} richtig</span>
-            {totalAnswered > 0 && <span> ({Math.round((correctCount / totalAnswered) * 100)}%)</span>}
+            Aufgabe {currentIndex + 1} von {filteredTasks.length} —{" "}
+            <span className="font-medium text-green-600 dark:text-green-400">
+              {correctCount} richtig
+            </span>
+            {totalAnswered > 0 && (
+              <span> ({Math.round((correctCount / totalAnswered) * 100)}%)</span>
+            )}
           </span>
-          <button onClick={handleReset} className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer" title="Zurücksetzen">
+          <button
+            onClick={handleReset}
+            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            title="Zurücksetzen"
+          >
             <RotateCcw className="w-4 h-4" />
           </button>
         </div>
@@ -193,12 +230,18 @@ export default function ImplikationenUeben() {
                   className={`w-full text-left p-3 rounded-lg border-2 ${borderClass} ${bgClass} transition-all cursor-pointer disabled:cursor-default`}
                 >
                   <div className="flex items-start gap-3">
-                    <span className={`text-sm font-bold mt-0.5 ${isChecked && isCorrectOption ? "text-green-600" : isChecked && isSelected ? "text-red-600" : "text-purple-500"}`}>
+                    <span
+                      className={`text-sm font-bold mt-0.5 ${isChecked && isCorrectOption ? "text-green-600" : isChecked && isSelected ? "text-red-600" : "text-purple-500"}`}
+                    >
                       {optionLabels[i]}
                     </span>
                     <span className="text-sm text-gray-900 dark:text-gray-100">{option}</span>
-                    {isChecked && isCorrectOption && <CheckCircle2 className="w-4 h-4 text-green-500 ml-auto shrink-0 mt-0.5" />}
-                    {isChecked && isSelected && !isCorrectOption && <XCircle className="w-4 h-4 text-red-500 ml-auto shrink-0 mt-0.5" />}
+                    {isChecked && isCorrectOption && (
+                      <CheckCircle2 className="w-4 h-4 text-green-500 ml-auto shrink-0 mt-0.5" />
+                    )}
+                    {isChecked && isSelected && !isCorrectOption && (
+                      <XCircle className="w-4 h-4 text-red-500 ml-auto shrink-0 mt-0.5" />
+                    )}
                   </div>
                 </button>
               );
@@ -248,11 +291,16 @@ export default function ImplikationenUeben() {
             <div className="bg-amber-50 dark:bg-amber-900/15 border border-amber-200 dark:border-amber-800 rounded-lg p-4 space-y-2">
               <div className="flex items-center gap-2">
                 <Lightbulb className="w-4 h-4 text-amber-500" />
-                <h4 className="text-sm font-semibold text-amber-800 dark:text-amber-300">Tipp — Goldene Regeln</h4>
+                <h4 className="text-sm font-semibold text-amber-800 dark:text-amber-300">
+                  Tipp — Goldene Regeln
+                </h4>
               </div>
               <ul className="space-y-1">
                 {currentTask.rulesApplied.map((rule) => (
-                  <li key={rule} className="text-sm text-amber-700 dark:text-amber-400 flex items-start gap-2">
+                  <li
+                    key={rule}
+                    className="text-sm text-amber-700 dark:text-amber-400 flex items-start gap-2"
+                  >
                     <span className="bg-amber-200 dark:bg-amber-800 text-amber-800 dark:text-amber-200 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                       {rule}
                     </span>
@@ -274,15 +322,21 @@ export default function ImplikationenUeben() {
 
           {/* Result feedback */}
           {isChecked && (
-            <div className={`rounded-lg p-4 ${isCorrect ? "bg-green-50 dark:bg-green-900/15 border border-green-200 dark:border-green-800" : "bg-red-50 dark:bg-red-900/15 border border-red-200 dark:border-red-800"}`}>
+            <div
+              className={`rounded-lg p-4 ${isCorrect ? "bg-green-50 dark:bg-green-900/15 border border-green-200 dark:border-green-800" : "bg-red-50 dark:bg-red-900/15 border border-red-200 dark:border-red-800"}`}
+            >
               <div className="flex items-center gap-2 mb-1">
                 {isCorrect ? (
                   <CheckCircle2 className="w-5 h-5 text-green-500" />
                 ) : (
                   <XCircle className="w-5 h-5 text-red-500" />
                 )}
-                <span className={`font-semibold text-sm ${isCorrect ? "text-green-800 dark:text-green-300" : "text-red-800 dark:text-red-300"}`}>
-                  {isCorrect ? "Richtig!" : `Falsch — Richtige Antwort: ${optionLabels[currentTask.correctAnswer]}`}
+                <span
+                  className={`font-semibold text-sm ${isCorrect ? "text-green-800 dark:text-green-300" : "text-red-800 dark:text-red-300"}`}
+                >
+                  {isCorrect
+                    ? "Richtig!"
+                    : `Falsch — Richtige Antwort: ${optionLabels[currentTask.correctAnswer]}`}
                 </span>
               </div>
             </div>
@@ -297,13 +351,18 @@ export default function ImplikationenUeben() {
                   <p className="text-xs text-muted mb-1">Angewandte Regeln:</p>
                   <div className="flex flex-wrap gap-1">
                     {currentTask.rulesApplied.map((rule) => (
-                      <span key={rule} className="inline-flex items-center gap-1 text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 px-2 py-1 rounded-full">
+                      <span
+                        key={rule}
+                        className="inline-flex items-center gap-1 text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 px-2 py-1 rounded-full"
+                      >
                         Regel {rule}
                       </span>
                     ))}
                   </div>
                 </div>
-                <p className="text-sm text-gray-700 dark:text-gray-300">{currentTask.explanation}</p>
+                <p className="text-sm text-gray-700 dark:text-gray-300">
+                  {currentTask.explanation}
+                </p>
               </div>
             </div>
           )}

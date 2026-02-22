@@ -25,20 +25,49 @@ import { BADGE_DEFINITIONS } from "@/data/badges";
 import { getBadgeProgress } from "@/data/badges";
 import { BadgeIcon } from "@/components/badges/BadgeIcon";
 import { cn } from "@/lib/utils";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
-function ProgressRing({ value, size = 48, stroke = 4 }: { value: number; size?: number; stroke?: number }) {
+function ProgressRing({
+  value,
+  size = 48,
+  stroke = 4,
+}: {
+  value: number;
+  size?: number;
+  stroke?: number;
+}) {
   const radius = (size - stroke) / 2;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (value / 100) * circumference;
   return (
     <svg width={size} height={size} className="transform -rotate-90">
-      <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke="currentColor" strokeWidth={stroke} className="text-gray-200 dark:text-gray-700" />
-      <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke="currentColor" strokeWidth={stroke} strokeDasharray={circumference} strokeDashoffset={offset} strokeLinecap="round" className="text-primary-600 transition-all duration-500" />
+      <circle
+        cx={size / 2}
+        cy={size / 2}
+        r={radius}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={stroke}
+        className="text-gray-200 dark:text-gray-700"
+      />
+      <circle
+        cx={size / 2}
+        cy={size / 2}
+        r={radius}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={stroke}
+        strokeDasharray={circumference}
+        strokeDashoffset={offset}
+        strokeLinecap="round"
+        className="text-primary-600 transition-all duration-500"
+      />
     </svg>
   );
 }
 
 export default function PerformanceOverview() {
+  usePageTitle("Performance");
   const mounted = useIsMounted();
   const { quizResults, completedChapters, streak, unlockedFachMilestones } = useStore();
   const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
@@ -75,13 +104,33 @@ export default function PerformanceOverview() {
   const milestones = useMemo(
     () => [
       { id: "first-quiz", label: "Erstes Quiz", icon: Star, check: totalQuizzes >= 1 },
-      { id: "100-fragen", label: "100 Fragen", icon: BookOpen, check: totalQuestionsAnswered >= 100 },
+      {
+        id: "100-fragen",
+        label: "100 Fragen",
+        icon: BookOpen,
+        check: totalQuestionsAnswered >= 100,
+      },
       { id: "500-fragen", label: "500 Fragen", icon: Brain, check: totalQuestionsAnswered >= 500 },
-      { id: "1000-fragen", label: "1.000 Fragen", icon: Trophy, check: totalQuestionsAnswered >= 1000 },
-      { id: "streak-7", label: "7-Tage-Streak", icon: Flame, check: streak >= 7 || dailyChallengeStreak >= 7 },
+      {
+        id: "1000-fragen",
+        label: "1.000 Fragen",
+        icon: Trophy,
+        check: totalQuestionsAnswered >= 1000,
+      },
+      {
+        id: "streak-7",
+        label: "7-Tage-Streak",
+        icon: Flame,
+        check: streak >= 7 || dailyChallengeStreak >= 7,
+      },
       { id: "readiness-50", label: "50% Bereitschaft", icon: Target, check: readiness >= 50 },
       { id: "readiness-80", label: "80% Bereitschaft", icon: Award, check: readiness >= 80 },
-      { id: "duell-held", label: "Duell-Held", icon: Swords, check: quizResults.filter((r) => r.subject === "Duell").length >= 10 },
+      {
+        id: "duell-held",
+        label: "Duell-Held",
+        icon: Swords,
+        check: quizResults.filter((r) => r.subject === "Duell").length >= 10,
+      },
     ],
     [totalQuizzes, totalQuestionsAnswered, streak, dailyChallengeStreak, readiness, quizResults]
   );
@@ -89,24 +138,35 @@ export default function PerformanceOverview() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-8 pb-12">
-      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Erfolge & Wissensstand" }]} />
+      <BreadcrumbNav
+        items={[{ label: "Dashboard", href: "/" }, { label: "Erfolge & Wissensstand" }]}
+      />
 
       <div className="flex items-center gap-4">
-        <Link to="/" className="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+        <Link
+          to="/"
+          className="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+        >
           <ArrowLeft className="w-5 h-5" />
         </Link>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-slate-100">Erfolge & Wissensstand</h1>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-slate-100">
+          Erfolge & Wissensstand
+        </h1>
       </div>
 
       {/* Wissenszustand (Heatmap) */}
       <section>
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">Wissenszustand pro Fach</h2>
+        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+          Wissenszustand pro Fach
+        </h2>
         <MemoryHeatmapOrbits />
       </section>
 
       {/* Prüfungs-Readiness */}
       <section>
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">Prüfungs-Readiness</h2>
+        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+          Prüfungs-Readiness
+        </h2>
         {!mounted ? (
           <Card className="border-0 shadow-none bg-transparent dark:bg-transparent">
             <CardContent className="p-5">
@@ -126,11 +186,17 @@ export default function PerformanceOverview() {
                 <div className="flex items-center gap-4 mb-4">
                   <div className="relative flex items-center justify-center">
                     <ProgressRing value={readiness} size={72} stroke={6} />
-                    <span className="absolute text-lg font-bold text-primary-700 dark:text-primary-400">{readiness}%</span>
+                    <span className="absolute text-lg font-bold text-primary-700 dark:text-primary-400">
+                      {readiness}%
+                    </span>
                   </div>
                   <div>
-                    <p className="text-base font-bold text-gray-900 dark:text-gray-100">MedAT-Bereitschaft</p>
-                    <p className="text-xs text-muted">{totalQuestionsAnswered} Fragen, {totalCorrect} richtig</p>
+                    <p className="text-base font-bold text-gray-900 dark:text-gray-100">
+                      MedAT-Bereitschaft
+                    </p>
+                    <p className="text-xs text-muted">
+                      {totalQuestionsAnswered} Fragen, {totalCorrect} richtig
+                    </p>
                     {dailyChallengeStreak > 0 && (
                       <div className="flex items-center gap-1 text-xs text-orange-600 dark:text-orange-400 mt-1">
                         <Flame className="w-3 h-3" />
@@ -145,11 +211,18 @@ export default function PerformanceOverview() {
                     return (
                       <div key={f.id}>
                         <div className="flex items-center justify-between mb-1">
-                          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">{f.label}</span>
-                          <span className="text-xs font-bold text-gray-600 dark:text-gray-400">{Math.round(fachReady)}%</span>
+                          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                            {f.label}
+                          </span>
+                          <span className="text-xs font-bold text-gray-600 dark:text-gray-400">
+                            {Math.round(fachReady)}%
+                          </span>
                         </div>
                         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                          <div className={cn(f.color, "h-2 rounded-full transition-all duration-500")} style={{ width: `${Math.min(100, fachReady)}%` }} />
+                          <div
+                            className={cn(f.color, "h-2 rounded-full transition-all duration-500")}
+                            style={{ width: `${Math.min(100, fachReady)}%` }}
+                          />
                         </div>
                       </div>
                     );
@@ -164,16 +237,29 @@ export default function PerformanceOverview() {
                   <CardContent className="p-4">
                     <div className="flex items-center gap-2 mb-2">
                       <AlertTriangle className="w-4 h-4 text-orange-500" />
-                      <p className="text-xs font-semibold text-gray-900 dark:text-gray-100">Fokus-Themen</p>
+                      <p className="text-xs font-semibold text-gray-900 dark:text-gray-100">
+                        Fokus-Themen
+                      </p>
                     </div>
                     <div className="space-y-1.5">
                       {weakTopics.map((t) => (
                         <div key={t.stichwortId} className="flex items-center justify-between">
                           <div className="flex items-center gap-1.5 min-w-0">
-                            <span className={cn("text-[9px] font-medium px-1 py-0.5 rounded", fachColorMap[t.fach] || "")}>{t.fach.slice(0, 3).toUpperCase()}</span>
-                            <span className="text-[11px] text-gray-700 dark:text-gray-300 truncate">{t.thema}</span>
+                            <span
+                              className={cn(
+                                "text-[9px] font-medium px-1 py-0.5 rounded",
+                                fachColorMap[t.fach] || ""
+                              )}
+                            >
+                              {t.fach.slice(0, 3).toUpperCase()}
+                            </span>
+                            <span className="text-[11px] text-gray-700 dark:text-gray-300 truncate">
+                              {t.thema}
+                            </span>
                           </div>
-                          <span className="text-[11px] font-medium text-orange-600 dark:text-orange-400 shrink-0">{t.rate}%</span>
+                          <span className="text-[11px] font-medium text-orange-600 dark:text-orange-400 shrink-0">
+                            {t.rate}%
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -185,16 +271,29 @@ export default function PerformanceOverview() {
                   <CardContent className="p-4">
                     <div className="flex items-center gap-2 mb-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                      <p className="text-xs font-semibold text-gray-900 dark:text-gray-100">Starke Themen</p>
+                      <p className="text-xs font-semibold text-gray-900 dark:text-gray-100">
+                        Starke Themen
+                      </p>
                     </div>
                     <div className="space-y-1.5">
                       {strongTopics.map((t) => (
                         <div key={t.stichwortId} className="flex items-center justify-between">
                           <div className="flex items-center gap-1.5 min-w-0">
-                            <span className={cn("text-[9px] font-medium px-1 py-0.5 rounded", fachColorMap[t.fach] || "")}>{t.fach.slice(0, 3).toUpperCase()}</span>
-                            <span className="text-[11px] text-gray-700 dark:text-gray-300 truncate">{t.thema}</span>
+                            <span
+                              className={cn(
+                                "text-[9px] font-medium px-1 py-0.5 rounded",
+                                fachColorMap[t.fach] || ""
+                              )}
+                            >
+                              {t.fach.slice(0, 3).toUpperCase()}
+                            </span>
+                            <span className="text-[11px] text-gray-700 dark:text-gray-300 truncate">
+                              {t.thema}
+                            </span>
                           </div>
-                          <span className="text-[11px] font-medium text-emerald-600 dark:text-emerald-400 shrink-0">{t.rate}%</span>
+                          <span className="text-[11px] font-medium text-emerald-600 dark:text-emerald-400 shrink-0">
+                            {t.rate}%
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -216,19 +315,37 @@ export default function PerformanceOverview() {
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-0">
-            <p className="text-xs text-muted mb-3">{unlockedCount}/{milestones.length} erreicht</p>
+            <p className="text-xs text-muted mb-3">
+              {unlockedCount}/{milestones.length} erreicht
+            </p>
             <div className="grid grid-cols-4 sm:grid-cols-8 gap-2">
               {milestones.map((m) => (
                 <div
                   key={m.id}
                   className={cn(
                     "flex flex-col items-center gap-1 p-2 rounded-lg transition-colors",
-                    m.check ? "bg-yellow-50 dark:bg-yellow-900/20" : "bg-gray-50 dark:bg-gray-800/50 opacity-40"
+                    m.check
+                      ? "bg-yellow-50 dark:bg-yellow-900/20"
+                      : "bg-gray-50 dark:bg-gray-800/50 opacity-40"
                   )}
                   title={m.label}
                 >
-                  <m.icon className={cn("w-5 h-5", m.check ? "text-yellow-500" : "text-gray-400 dark:text-gray-600")} />
-                  <span className={cn("text-[9px] text-center leading-tight", m.check ? "text-yellow-700 dark:text-yellow-400 font-medium" : "text-gray-400 dark:text-gray-600")}>{m.label}</span>
+                  <m.icon
+                    className={cn(
+                      "w-5 h-5",
+                      m.check ? "text-yellow-500" : "text-gray-400 dark:text-gray-600"
+                    )}
+                  />
+                  <span
+                    className={cn(
+                      "text-[9px] text-center leading-tight",
+                      m.check
+                        ? "text-yellow-700 dark:text-yellow-400 font-medium"
+                        : "text-gray-400 dark:text-gray-600"
+                    )}
+                  >
+                    {m.label}
+                  </span>
                 </div>
               ))}
             </div>
@@ -246,7 +363,9 @@ export default function PerformanceOverview() {
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-0">
-            <p className="text-sm text-muted mb-4">Sammle Badges durch Lernen, Streaks und besondere Leistungen.</p>
+            <p className="text-sm text-muted mb-4">
+              Sammle Badges durch Lernen, Streaks und besondere Leistungen.
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {BADGE_DEFINITIONS.map((badge) => {
                 const { earned, progress } = getBadgeProgress(badge.id, {
@@ -260,14 +379,31 @@ export default function PerformanceOverview() {
                     key={badge.id}
                     className={cn(
                       "flex items-center gap-3 p-3 rounded-xl border transition-colors",
-                      earned ? "bg-amber-50/50 dark:bg-amber-900/20 border-amber-200 dark:border-amber-800" : "bg-slate-50/50 dark:bg-slate-800/30 border-slate-200 dark:border-white/10"
+                      earned
+                        ? "bg-amber-50/50 dark:bg-amber-900/20 border-amber-200 dark:border-amber-800"
+                        : "bg-slate-50/50 dark:bg-slate-800/30 border-slate-200 dark:border-white/10"
                     )}
                   >
                     <BadgeIcon tier={badge.tier} earned={earned} size="sm" />
                     <div className="min-w-0 flex-1">
-                      <p className={cn("text-sm font-medium", earned ? "text-amber-900 dark:text-amber-100" : "text-slate-600 dark:text-slate-400")}>{badge.name}</p>
-                      <p className="text-xs text-muted truncate" title={badge.description}>{badge.description}</p>
-                      {!earned && progress && <p className="text-[10px] text-slate-500 dark:text-slate-500 mt-0.5">{progress}</p>}
+                      <p
+                        className={cn(
+                          "text-sm font-medium",
+                          earned
+                            ? "text-amber-900 dark:text-amber-100"
+                            : "text-slate-600 dark:text-slate-400"
+                        )}
+                      >
+                        {badge.name}
+                      </p>
+                      <p className="text-xs text-muted truncate" title={badge.description}>
+                        {badge.description}
+                      </p>
+                      {!earned && progress && (
+                        <p className="text-[10px] text-slate-500 dark:text-slate-500 mt-0.5">
+                          {progress}
+                        </p>
+                      )}
                     </div>
                   </div>
                 );
@@ -288,16 +424,26 @@ export default function PerformanceOverview() {
               </CardTitle>
             </CardHeader>
             <CardContent className="pt-0">
-              <p className="text-sm text-muted mb-3">Du hast in mindestens einem Fach 50 % erreicht – Vergleichsstatistik (simuliert).</p>
+              <p className="text-sm text-muted mb-3">
+                Du hast in mindestens einem Fach 50 % erreicht – Vergleichsstatistik (simuliert).
+              </p>
               <ul className="space-y-2">
                 {unlockedFachMilestones.map((fach) => {
                   const fachReadiness = getFachReadiness(fach);
                   const betterThanPercent = Math.min(95, 30 + Math.round(fachReadiness * 0.65));
-                  const label = { biologie: "Biologie", chemie: "Chemie", physik: "Physik", mathematik: "Mathematik" }[fach] ?? fach;
+                  const label =
+                    {
+                      biologie: "Biologie",
+                      chemie: "Chemie",
+                      physik: "Physik",
+                      mathematik: "Mathematik",
+                    }[fach] ?? fach;
                   return (
                     <li key={fach} className="flex items-center justify-between text-sm">
                       <span className="font-medium text-gray-900 dark:text-gray-100">{label}</span>
-                      <span className="text-amber-700 dark:text-amber-300 font-semibold">Besser als {betterThanPercent} % der Bewerber</span>
+                      <span className="text-amber-700 dark:text-amber-300 font-semibold">
+                        Besser als {betterThanPercent} % der Bewerber
+                      </span>
                     </li>
                   );
                 })}

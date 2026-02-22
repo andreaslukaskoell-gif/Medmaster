@@ -39,10 +39,22 @@ export default function FlashcardsPage() {
   };
 
   const categoryColors: Record<string, { badge: string; stripe: string }> = {
-    bio: { badge: "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400", stripe: "bg-emerald-500" },
-    chemie: { badge: "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400", stripe: "bg-red-500" },
-    physik: { badge: "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400", stripe: "bg-blue-500" },
-    mathe: { badge: "bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400", stripe: "bg-violet-500" },
+    bio: {
+      badge: "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400",
+      stripe: "bg-emerald-500",
+    },
+    chemie: {
+      badge: "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400",
+      stripe: "bg-red-500",
+    },
+    physik: {
+      badge: "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400",
+      stripe: "bg-blue-500",
+    },
+    mathe: {
+      badge: "bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400",
+      stripe: "bg-violet-500",
+    },
   };
 
   return (
@@ -93,12 +105,17 @@ export default function FlashcardsPage() {
               <Card
                 key={deck.id}
                 className="hover:shadow-md transition-all duration-200 cursor-pointer overflow-hidden"
-                onClick={() => { setActiveDeck(deck.id); setView("study"); }}
+                onClick={() => {
+                  setActiveDeck(deck.id);
+                  setView("study");
+                }}
               >
                 <div className={`h-1.5 ${categoryColors[category]?.stripe || "bg-gray-400"}`} />
                 <CardContent className="p-4">
                   <div className="flex items-center justify-between mb-2">
-                    <Badge className={categoryColors[category]?.badge}>{categoryLabels[category]}</Badge>
+                    <Badge className={categoryColors[category]?.badge}>
+                      {categoryLabels[category]}
+                    </Badge>
                     <span className="text-xs text-muted">{deck.count} Karten</span>
                   </div>
                   <h3 className="font-semibold text-gray-900 dark:text-gray-100">{deck.label}</h3>
@@ -112,7 +129,15 @@ export default function FlashcardsPage() {
   );
 }
 
-function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flashcard[]; onBack: () => void }) {
+function FlashcardStudy({
+  deckId,
+  cards,
+  onBack,
+}: {
+  deckId: string;
+  cards: Flashcard[];
+  onBack: () => void;
+}) {
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [results, setResults] = useState<Record<number, "again" | "hard" | "good" | "easy">>({});
@@ -135,7 +160,10 @@ function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flas
   };
 
   const handleRate = (rating: "again" | "hard" | "good" | "easy") => {
-    if (!flipped) { setFlipped(true); return; }
+    if (!flipped) {
+      setFlipped(true);
+      return;
+    }
     setResults((r) => ({ ...r, [index]: rating }));
     updateSpacedRepetition(card.id, rating !== "again");
     advance();
@@ -143,7 +171,10 @@ function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flas
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if (e.key === " " || e.key === "Enter") { e.preventDefault(); setFlipped((f) => !f); }
+      if (e.key === " " || e.key === "Enter") {
+        e.preventDefault();
+        setFlipped((f) => !f);
+      }
       if (flipped) {
         if (e.key === "1") handleRate("again");
         if (e.key === "2") handleRate("hard");
@@ -183,17 +214,36 @@ function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flas
         <Card>
           <CardContent className="p-8 text-center space-y-4">
             <div className="text-5xl font-bold text-primary-700 dark:text-primary-400">{pct}%</div>
-            <p className="text-lg text-muted">{correct} von {total} gewusst</p>
+            <p className="text-lg text-muted">
+              {correct} von {total} gewusst
+            </p>
             <div className="flex justify-center gap-4 text-sm">
-              {ratingCounts.again > 0 && <span className="text-red-600">Nochmal: {ratingCounts.again}</span>}
-              {ratingCounts.hard > 0 && <span className="text-orange-600">Schwer: {ratingCounts.hard}</span>}
-              {ratingCounts.good > 0 && <span className="text-blue-600">Gut: {ratingCounts.good}</span>}
-              {ratingCounts.easy > 0 && <span className="text-green-600">Leicht: {ratingCounts.easy}</span>}
+              {ratingCounts.again > 0 && (
+                <span className="text-red-600">Nochmal: {ratingCounts.again}</span>
+              )}
+              {ratingCounts.hard > 0 && (
+                <span className="text-orange-600">Schwer: {ratingCounts.hard}</span>
+              )}
+              {ratingCounts.good > 0 && (
+                <span className="text-blue-600">Gut: {ratingCounts.good}</span>
+              )}
+              {ratingCounts.easy > 0 && (
+                <span className="text-green-600">Leicht: {ratingCounts.easy}</span>
+              )}
             </div>
             <p className="text-sm text-green-600 dark:text-green-400">+{correct * 5} XP</p>
             <div className="flex gap-3 justify-center pt-4">
-              <Button variant="outline" onClick={onBack}>Zurück zu Stapeln</Button>
-              <Button onClick={() => { setIndex(0); setFlipped(false); setResults({}); setFinished(false); }}>
+              <Button variant="outline" onClick={onBack}>
+                Zurück zu Stapeln
+              </Button>
+              <Button
+                onClick={() => {
+                  setIndex(0);
+                  setFlipped(false);
+                  setResults({});
+                  setFinished(false);
+                }}
+              >
                 <RotateCcw className="w-4 h-4 mr-1" /> Nochmal
               </Button>
             </div>
@@ -209,11 +259,16 @@ function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flas
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
         </Button>
-        <span className="text-sm text-muted">{index + 1} / {total}</span>
+        <span className="text-sm text-muted">
+          {index + 1} / {total}
+        </span>
       </div>
 
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-        <div className="bg-primary-600 h-2 rounded-full transition-all" style={{ width: `${((index + 1) / total) * 100}%` }} />
+        <div
+          className="bg-primary-600 h-2 rounded-full transition-all"
+          style={{ width: `${((index + 1) / total) * 100}%` }}
+        />
       </div>
 
       <div
@@ -222,12 +277,17 @@ function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flas
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        <div className={`relative [transition:transform_0.5s_ease-in-out] [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""}`} style={{ minHeight: "320px" }}>
+        <div
+          className={`relative [transition:transform_0.5s_ease-in-out] [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
+          style={{ minHeight: "320px" }}
+        >
           {/* Front */}
           <Card className="absolute inset-0 [backface-visibility:hidden] shadow-lg">
             <CardContent className="p-10 flex flex-col items-center justify-center min-h-[320px]">
               <Badge className="mb-5">{card.topic}</Badge>
-              <p className="text-xl font-semibold text-gray-900 dark:text-gray-100 text-center leading-relaxed">{card.front}</p>
+              <p className="text-xl font-semibold text-gray-900 dark:text-gray-100 text-center leading-relaxed">
+                {card.front}
+              </p>
               <p className="text-xs text-muted mt-8">Tippe zum Umdrehen</p>
             </CardContent>
           </Card>
@@ -235,8 +295,12 @@ function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flas
           {/* Back */}
           <Card className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] shadow-lg">
             <CardContent className="p-10 flex flex-col items-center justify-center min-h-[320px]">
-              <Badge variant="success" className="mb-5">Antwort</Badge>
-              <p className="text-base text-gray-700 dark:text-gray-300 text-center whitespace-pre-line leading-relaxed">{card.back}</p>
+              <Badge variant="success" className="mb-5">
+                Antwort
+              </Badge>
+              <p className="text-base text-gray-700 dark:text-gray-300 text-center whitespace-pre-line leading-relaxed">
+                {card.back}
+              </p>
             </CardContent>
           </Card>
         </div>
@@ -287,15 +351,39 @@ function FlashcardStudy({ deckId, cards, onBack }: { deckId: string; cards: Flas
         </div>
       ) : (
         <div className="flex justify-center">
-          <p className="text-sm text-muted">Tippe auf die Karte oder drücke <kbd className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-[10px] font-mono">Space</kbd> zum Umdrehen</p>
+          <p className="text-sm text-muted">
+            Tippe auf die Karte oder drücke{" "}
+            <kbd className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-[10px] font-mono">
+              Space
+            </kbd>{" "}
+            zum Umdrehen
+          </p>
         </div>
       )}
 
       <div className="flex justify-center gap-4">
-        <button onClick={() => { if (index > 0) { setIndex((i) => i - 1); setFlipped(false); } }} disabled={index === 0} className="p-2 text-muted hover:text-gray-700 dark:hover:text-gray-300 disabled:opacity-30 cursor-pointer">
+        <button
+          onClick={() => {
+            if (index > 0) {
+              setIndex((i) => i - 1);
+              setFlipped(false);
+            }
+          }}
+          disabled={index === 0}
+          className="p-2 text-muted hover:text-gray-700 dark:hover:text-gray-300 disabled:opacity-30 cursor-pointer"
+        >
           <ChevronLeft className="w-5 h-5" />
         </button>
-        <button onClick={() => { if (index < total - 1) { setIndex((i) => i + 1); setFlipped(false); } }} disabled={index >= total - 1} className="p-2 text-muted hover:text-gray-700 dark:hover:text-gray-300 disabled:opacity-30 cursor-pointer">
+        <button
+          onClick={() => {
+            if (index < total - 1) {
+              setIndex((i) => i + 1);
+              setFlipped(false);
+            }
+          }}
+          disabled={index >= total - 1}
+          className="p-2 text-muted hover:text-gray-700 dark:hover:text-gray-300 disabled:opacity-30 cursor-pointer"
+        >
           <ChevronRight className="w-5 h-5" />
         </button>
       </div>

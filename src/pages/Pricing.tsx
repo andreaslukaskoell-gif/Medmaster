@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const plans = [
   {
@@ -62,13 +63,16 @@ const plans = [
 ];
 
 export default function Pricing() {
+  usePageTitle("Preise");
   return (
     <div className="max-w-6xl mx-auto space-y-8">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Preise" }]} />
 
       <div className="text-center">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Wähle deinen Plan</h1>
-        <p className="text-muted mt-2 max-w-lg mx-auto">Investiere in deine Zukunft. Alle Pläne sind jederzeit kündbar.</p>
+        <p className="text-muted mt-2 max-w-lg mx-auto">
+          Investiere in deine Zukunft. Alle Pläne sind jederzeit kündbar.
+        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -90,10 +94,16 @@ export default function Pricing() {
                 <span className="text-4xl font-bold text-gray-900 dark:text-gray-100">
                   {plan.price === "0" ? "Gratis" : `€${plan.price}`}
                 </span>
-                {plan.price !== "0" && <span className="text-sm text-muted ml-1">/ {plan.period}</span>}
+                {plan.price !== "0" && (
+                  <span className="text-sm text-muted ml-1">/ {plan.period}</span>
+                )}
               </div>
 
-              <Button variant={plan.highlighted ? "primary" : "outline"} className="w-full mb-6" size="lg">
+              <Button
+                variant={plan.highlighted ? "primary" : "outline"}
+                className="w-full mb-6"
+                size="lg"
+              >
                 {plan.price === "0" ? "Kostenlos starten" : "Jetzt upgraden"}
               </Button>
 
@@ -105,7 +115,9 @@ export default function Pricing() {
                     ) : (
                       <X className="w-4 h-4 text-gray-300 dark:text-gray-600 mt-0.5 shrink-0" />
                     )}
-                    <span className={`text-sm ${f.included ? "text-gray-700 dark:text-gray-300" : "text-gray-400 dark:text-gray-500"}`}>
+                    <span
+                      className={`text-sm ${f.included ? "text-gray-700 dark:text-gray-300" : "text-gray-400 dark:text-gray-500"}`}
+                    >
                       {f.text}
                     </span>
                   </div>
@@ -118,7 +130,12 @@ export default function Pricing() {
 
       <div className="text-center text-sm text-muted space-y-2">
         <p>Alle Preise inkl. MwSt. Jederzeit kündbar.</p>
-        <p>Fragen? Schreib uns an <span className="text-primary-700 dark:text-primary-400 font-medium">support@medmaster.at</span></p>
+        <p>
+          Fragen? Schreib uns an{" "}
+          <span className="text-primary-700 dark:text-primary-400 font-medium">
+            support@medmaster.at
+          </span>
+        </p>
       </div>
     </div>
   );

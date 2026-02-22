@@ -1,8 +1,20 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Timer, CheckCircle2, XCircle, ChevronRight, RotateCcw, Trophy, Clock, BarChart3 } from "lucide-react";
+import {
+  Timer,
+  CheckCircle2,
+  XCircle,
+  ChevronRight,
+  RotateCcw,
+  Trophy,
+  Clock,
+  BarChart3,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
-import { emotionenRegulierenScenarios, type EmotionenRegulierenScenario } from "@/data/kffEmotionenRegulieren";
+import {
+  emotionenRegulierenScenarios,
+  type EmotionenRegulierenScenario,
+} from "@/data/kffEmotionenRegulieren";
 
 const TASK_COUNT = 10;
 const TIME_LIMIT = 600; // 10 minutes
@@ -30,11 +42,12 @@ function formatTime(seconds: number): string {
 }
 
 const strategyColors: Record<string, string> = {
-  "Situationsauswahl": "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
-  "Situationsmodifikation": "bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300",
-  "Aufmerksamkeitslenkung": "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300",
+  Situationsauswahl: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
+  Situationsmodifikation: "bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300",
+  Aufmerksamkeitslenkung:
+    "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300",
   "Kognitive Veränderung": "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300",
-  "Reaktionsmodulation": "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300",
+  Reaktionsmodulation: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300",
 };
 
 type SimPhase = "start" | "running" | "results";
@@ -53,7 +66,13 @@ export default function EmotionenRegulierenSimulation() {
   useEffect(() => {
     if (phase !== "running") return;
     const interval = setInterval(() => {
-      setTimeLeft((t) => { if (t <= 1) { clearInterval(interval); return 0; } return t - 1; });
+      setTimeLeft((t) => {
+        if (t <= 1) {
+          clearInterval(interval);
+          return 0;
+        }
+        return t - 1;
+      });
     }, 1000);
     return () => clearInterval(interval);
   }, [phase]);
@@ -77,7 +96,9 @@ export default function EmotionenRegulierenSimulation() {
   const finishSimulation = useCallback(() => {
     setResults((prev) => {
       const answered = new Set(prev.map((r) => r.task.id));
-      const remaining = tasks.filter((t) => !answered.has(t.id)).map((task) => ({ task, userAnswer: null, correct: false, timeSpent: 0 }));
+      const remaining = tasks
+        .filter((t) => !answered.has(t.id))
+        .map((task) => ({ task, userAnswer: null, correct: false, timeSpent: 0 }));
       const allResults = [...prev, ...remaining];
       const correctCount = allResults.filter((r) => r.correct).length;
       recordSimulation({
@@ -147,16 +168,26 @@ export default function EmotionenRegulierenSimulation() {
             <Timer className="w-8 h-8 text-pink-500" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">Simulation starten</h2>
+            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+              Simulation starten
+            </h2>
             <p className="text-sm text-muted max-w-md mx-auto">
-              {TASK_COUNT} zufällige Aufgaben in {TIME_LIMIT / 60} Minuten. Wähle die effektivste Regulationsstrategie.
+              {TASK_COUNT} zufällige Aufgaben in {TIME_LIMIT / 60} Minuten. Wähle die effektivste
+              Regulationsstrategie.
             </p>
           </div>
           <div className="flex items-center justify-center gap-4 text-sm text-muted">
-            <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {TIME_LIMIT / 60}:00 min</span>
-            <span className="flex items-center gap-1"><BarChart3 className="w-4 h-4" /> {TASK_COUNT} Aufgaben</span>
+            <span className="flex items-center gap-1">
+              <Clock className="w-4 h-4" /> {TIME_LIMIT / 60}:00 min
+            </span>
+            <span className="flex items-center gap-1">
+              <BarChart3 className="w-4 h-4" /> {TASK_COUNT} Aufgaben
+            </span>
           </div>
-          <button onClick={startSimulation} className="px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-semibold transition-colors cursor-pointer">
+          <button
+            onClick={startSimulation}
+            className="px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-semibold transition-colors cursor-pointer"
+          >
             Simulation starten
           </button>
         </CardContent>
@@ -178,14 +209,25 @@ export default function EmotionenRegulierenSimulation() {
               <Trophy className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{correctCount}/{TASK_COUNT}</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                {correctCount}/{TASK_COUNT}
+              </h2>
               <p className="text-sm text-muted">
-                {scorePercent}% richtig — {scorePercent >= 80 ? "Ausgezeichnet!" : scorePercent >= 60 ? "Gut gemacht!" : scorePercent >= 40 ? "Weiter üben!" : "Mehr Übung nötig!"}
+                {scorePercent}% richtig —{" "}
+                {scorePercent >= 80
+                  ? "Ausgezeichnet!"
+                  : scorePercent >= 60
+                    ? "Gut gemacht!"
+                    : scorePercent >= 40
+                      ? "Weiter üben!"
+                      : "Mehr Übung nötig!"}
               </p>
             </div>
             <div className="flex justify-center gap-6 text-sm">
               <div className="text-center">
-                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">{formatTime(TIME_LIMIT - timeLeft)}</p>
+                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                  {formatTime(TIME_LIMIT - timeLeft)}
+                </p>
                 <p className="text-xs text-muted">Gesamtzeit</p>
               </div>
               <div className="text-center">
@@ -195,14 +237,19 @@ export default function EmotionenRegulierenSimulation() {
             </div>
             <div className="w-full max-w-xs mx-auto">
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                <div className={`h-3 rounded-full transition-all ${scorePercent >= 80 ? "bg-green-500" : scorePercent >= 50 ? "bg-amber-500" : "bg-red-500"}`} style={{ width: `${scorePercent}%` }} />
+                <div
+                  className={`h-3 rounded-full transition-all ${scorePercent >= 80 ? "bg-green-500" : scorePercent >= 50 ? "bg-amber-500" : "bg-red-500"}`}
+                  style={{ width: `${scorePercent}%` }}
+                />
               </div>
             </div>
           </CardContent>
         </Card>
 
         <div className="space-y-2">
-          <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Aufgabenübersicht</h3>
+          <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+            Aufgabenübersicht
+          </h3>
           {results.map((result, i) => (
             <Card key={i}>
               <CardContent className="p-0">
@@ -210,11 +257,21 @@ export default function EmotionenRegulierenSimulation() {
                   onClick={() => setExpandedResult(expandedResult === i ? null : i)}
                   className="w-full text-left p-4 flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
                 >
-                  <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${result.correct ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400" : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400"}`}>{i + 1}</span>
-                  <p className="text-sm text-gray-900 dark:text-gray-100 flex-1 truncate">{result.task.scenario.slice(0, 80)}...</p>
+                  <span
+                    className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${result.correct ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400" : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400"}`}
+                  >
+                    {i + 1}
+                  </span>
+                  <p className="text-sm text-gray-900 dark:text-gray-100 flex-1 truncate">
+                    {result.task.scenario.slice(0, 80)}...
+                  </p>
                   <div className="flex items-center gap-2 shrink-0">
                     <span className="text-xs text-muted">{result.timeSpent}s</span>
-                    {result.correct ? <CheckCircle2 className="w-4 h-4 text-green-500" /> : <XCircle className="w-4 h-4 text-red-500" />}
+                    {result.correct ? (
+                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                    ) : (
+                      <XCircle className="w-4 h-4 text-red-500" />
+                    )}
                   </div>
                 </button>
                 {expandedResult === i && (
@@ -222,12 +279,21 @@ export default function EmotionenRegulierenSimulation() {
                     <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
                       <p className="text-xs text-muted mb-1">Szenario:</p>
                       <p className="text-sm">{result.task.scenario}</p>
-                      <p className="text-xs text-pink-600 dark:text-pink-400 mt-1">Unerwünschte Emotion: {result.task.unwantedEmotion}</p>
+                      <p className="text-xs text-pink-600 dark:text-pink-400 mt-1">
+                        Unerwünschte Emotion: {result.task.unwantedEmotion}
+                      </p>
                     </div>
                     <div className="space-y-1">
                       {result.task.options.map((opt, j) => (
-                        <div key={j} className={`text-sm px-3 py-2 rounded ${j === result.task.correctAnswer ? "bg-green-50 dark:bg-green-900/15 text-green-800 dark:text-green-300 font-medium" : j === result.userAnswer ? "bg-red-50 dark:bg-red-900/15 text-red-800 dark:text-red-300" : "text-muted"}`}>
-                          <span className={`inline-block text-xs font-medium px-1.5 py-0.5 rounded mr-2 ${strategyColors[opt.strategy] || ""}`}>{opt.strategy}</span>
+                        <div
+                          key={j}
+                          className={`text-sm px-3 py-2 rounded ${j === result.task.correctAnswer ? "bg-green-50 dark:bg-green-900/15 text-green-800 dark:text-green-300 font-medium" : j === result.userAnswer ? "bg-red-50 dark:bg-red-900/15 text-red-800 dark:text-red-300" : "text-muted"}`}
+                        >
+                          <span
+                            className={`inline-block text-xs font-medium px-1.5 py-0.5 rounded mr-2 ${strategyColors[opt.strategy] || ""}`}
+                          >
+                            {opt.strategy}
+                          </span>
                           {opt.description}
                           {j === result.task.correctAnswer && " ✓"}
                           {j === result.userAnswer && j !== result.task.correctAnswer && " ✗"}
@@ -235,8 +301,12 @@ export default function EmotionenRegulierenSimulation() {
                       ))}
                     </div>
                     <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
-                      <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Erklärung:</p>
-                      <p className="text-sm text-gray-700 dark:text-gray-300">{result.task.explanation}</p>
+                      <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
+                        Erklärung:
+                      </p>
+                      <p className="text-sm text-gray-700 dark:text-gray-300">
+                        {result.task.explanation}
+                      </p>
                     </div>
                   </div>
                 )}
@@ -246,7 +316,10 @@ export default function EmotionenRegulierenSimulation() {
         </div>
 
         <div className="flex justify-center">
-          <button onClick={startSimulation} className="flex items-center gap-2 px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-medium transition-colors cursor-pointer">
+          <button
+            onClick={startSimulation}
+            className="flex items-center gap-2 px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-medium transition-colors cursor-pointer"
+          >
             <RotateCcw className="w-4 h-4" /> Neue Simulation
           </button>
         </div>
@@ -264,19 +337,29 @@ export default function EmotionenRegulierenSimulation() {
         <Timer className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-pink-500"}`} />
         <div className="flex-1">
           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-            <div className={`h-2.5 rounded-full transition-all ${isUrgent ? "bg-red-500" : "bg-pink-500"}`} style={{ width: `${timePercent}%` }} />
+            <div
+              className={`h-2.5 rounded-full transition-all ${isUrgent ? "bg-red-500" : "bg-pink-500"}`}
+              style={{ width: `${timePercent}%` }}
+            />
           </div>
         </div>
-        <span className={`text-sm font-mono font-bold min-w-[48px] text-right ${isUrgent ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}>
+        <span
+          className={`text-sm font-mono font-bold min-w-[48px] text-right ${isUrgent ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}
+        >
           {formatTime(timeLeft)}
         </span>
       </div>
 
       <div className="flex items-center justify-between text-sm text-muted">
-        <span>Aufgabe {currentIndex + 1} von {TASK_COUNT}</span>
+        <span>
+          Aufgabe {currentIndex + 1} von {TASK_COUNT}
+        </span>
         <div className="flex gap-1">
           {Array.from({ length: TASK_COUNT }, (_, i) => (
-            <div key={i} className={`w-2 h-2 rounded-full ${i < results.length ? (results[i].correct ? "bg-green-500" : "bg-red-500") : i === currentIndex ? "bg-pink-500" : "bg-gray-300 dark:bg-gray-600"}`} />
+            <div
+              key={i}
+              className={`w-2 h-2 rounded-full ${i < results.length ? (results[i].correct ? "bg-green-500" : "bg-red-500") : i === currentIndex ? "bg-pink-500" : "bg-gray-300 dark:bg-gray-600"}`}
+            />
           ))}
         </div>
       </div>
@@ -284,11 +367,17 @@ export default function EmotionenRegulierenSimulation() {
       <Card>
         <CardContent className="p-0">
           <div className="bg-gray-50 dark:bg-gray-800 p-6 border-b border-gray-200 dark:border-gray-700">
-            <p className="text-xs text-pink-600 dark:text-pink-400 mb-2">Unerwünschte Emotion: {currentTask.unwantedEmotion}</p>
-            <p className="text-sm text-gray-900 dark:text-gray-100 leading-relaxed">{currentTask.scenario}</p>
+            <p className="text-xs text-pink-600 dark:text-pink-400 mb-2">
+              Unerwünschte Emotion: {currentTask.unwantedEmotion}
+            </p>
+            <p className="text-sm text-gray-900 dark:text-gray-100 leading-relaxed">
+              {currentTask.scenario}
+            </p>
           </div>
           <div className="p-6 space-y-4">
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">Welche Strategie wäre am effektivsten?</p>
+            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+              Welche Strategie wäre am effektivsten?
+            </p>
             <div className="space-y-2">
               {currentTask.options.map((option, i) => (
                 <button
@@ -301,10 +390,14 @@ export default function EmotionenRegulierenSimulation() {
                   }`}
                 >
                   <div className="flex items-start gap-3">
-                    <span className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full shrink-0 mt-0.5 ${strategyColors[option.strategy] || "bg-gray-100 text-gray-700"}`}>
+                    <span
+                      className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full shrink-0 mt-0.5 ${strategyColors[option.strategy] || "bg-gray-100 text-gray-700"}`}
+                    >
                       {option.strategy}
                     </span>
-                    <span className="text-sm text-gray-900 dark:text-gray-100">{option.description}</span>
+                    <span className="text-sm text-gray-900 dark:text-gray-100">
+                      {option.description}
+                    </span>
                   </div>
                 </button>
               ))}

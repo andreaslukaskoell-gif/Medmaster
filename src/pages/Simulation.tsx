@@ -22,10 +22,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
-import { allBmsQuestions as newBmsQuestions, getQuestionsBySubject as getNewQuestions } from "@/data/bms/index";
+import {
+  allBmsQuestions as newBmsQuestions,
+  getQuestionsBySubject as getNewQuestions,
+} from "@/data/bms/index";
 import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
 import { getDirectStichwortId } from "@/data/questions/index";
-import { bmsQuestions as legacyQuestions, getQuestionsBySubject as getLegacyQuestions } from "@/data/bmsQuestions";
+import {
+  bmsQuestions as legacyQuestions,
+  getQuestionsBySubject as getLegacyQuestions,
+} from "@/data/bmsQuestions";
 import { tvTexts } from "@/data/tvData";
 import {
   generateZahlenfolgenSet,
@@ -34,7 +40,12 @@ import {
   generateWortflüssigkeitSet,
   generateSyllogismSet,
 } from "@/data/kffGenerators";
-import type { AllergyCard, MemoryQuestion, ZahlenfolgeGenerated, WortflüssigkeitQuestion } from "@/data/kffGenerators";
+import type {
+  AllergyCard,
+  MemoryQuestion,
+  ZahlenfolgeGenerated,
+  WortflüssigkeitQuestion,
+} from "@/data/kffGenerators";
 import { figurenAufgaben } from "@/data/figurenGenerator";
 import type { FZAufgabe } from "@/data/figurenGenerator";
 import { emotionQuestions } from "@/data/sekData";
@@ -42,19 +53,25 @@ import type { EmotionQuestion } from "@/data/sekData";
 import type { TVText } from "@/data/tvData";
 import type { ImplikationQuestion } from "@/data/kffData";
 import { useStore } from "@/store/useStore";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 // ============================================================
 // BMS QUESTION RESOLUTION
 // ============================================================
 
-const bmsQuestions = newBmsQuestions.length > 0
-  ? newBmsQuestions
-  : legacyQuestions.map((q) => ({ ...q, difficulty: "mittel" as const, tags: [] }));
+const bmsQuestions =
+  newBmsQuestions.length > 0
+    ? newBmsQuestions
+    : legacyQuestions.map((q) => ({ ...q, difficulty: "mittel" as const, tags: [] }));
 
 function getQuestionsBySubject(subject: string) {
   const newQ = getNewQuestions(subject);
   if (newQ.length > 0) return newQ;
-  return getLegacyQuestions(subject).map((q) => ({ ...q, difficulty: "mittel" as const, tags: [] }));
+  return getLegacyQuestions(subject).map((q) => ({
+    ...q,
+    difficulty: "mittel" as const,
+    tags: [],
+  }));
 }
 
 // ============================================================
@@ -182,27 +199,92 @@ const BMS_FULL_SECTIONS: SimSection[] = [
 ];
 
 const TV_FULL_SECTIONS: SimSection[] = [
-  { id: "tv", label: "Textverständnis", sectionType: "tv", questionCount: 12, timeLimitMinutes: 35 },
+  {
+    id: "tv",
+    label: "Textverständnis",
+    sectionType: "tv",
+    questionCount: 12,
+    timeLimitMinutes: 35,
+  },
 ];
 
 const KFF_FULL_SECTIONS: SimSection[] = [
-  { id: "kff-zf", label: "Zahlenfolgen", sectionType: "kff-zahlenfolgen", questionCount: 10, timeLimitMinutes: 25, parentGroup: "KFF" },
-  { id: "kff-ged", label: "Gedächtnis & Merkfähigkeit", sectionType: "kff-gedaechtnis", questionCount: 25, timeLimitMinutes: 15, parentGroup: "KFF", learnPhaseMinutes: 8 },
-  { id: "kff-imp", label: "Implikationen", sectionType: "kff-implikationen", questionCount: 10, timeLimitMinutes: 10, parentGroup: "KFF" },
-  { id: "kff-wf", label: "Wortflüssigkeit", sectionType: "kff-wortfluessigkeit", questionCount: 20, timeLimitMinutes: 20, parentGroup: "KFF" },
-  { id: "kff-fig", label: "Figuren zusammensetzen", sectionType: "kff-figuren", questionCount: 10, timeLimitMinutes: 15, parentGroup: "KFF" },
+  {
+    id: "kff-zf",
+    label: "Zahlenfolgen",
+    sectionType: "kff-zahlenfolgen",
+    questionCount: 10,
+    timeLimitMinutes: 25,
+    parentGroup: "KFF",
+  },
+  {
+    id: "kff-ged",
+    label: "Gedächtnis & Merkfähigkeit",
+    sectionType: "kff-gedaechtnis",
+    questionCount: 25,
+    timeLimitMinutes: 15,
+    parentGroup: "KFF",
+    learnPhaseMinutes: 8,
+  },
+  {
+    id: "kff-imp",
+    label: "Implikationen",
+    sectionType: "kff-implikationen",
+    questionCount: 10,
+    timeLimitMinutes: 10,
+    parentGroup: "KFF",
+  },
+  {
+    id: "kff-wf",
+    label: "Wortflüssigkeit",
+    sectionType: "kff-wortfluessigkeit",
+    questionCount: 20,
+    timeLimitMinutes: 20,
+    parentGroup: "KFF",
+  },
+  {
+    id: "kff-fig",
+    label: "Figuren zusammensetzen",
+    sectionType: "kff-figuren",
+    questionCount: 10,
+    timeLimitMinutes: 15,
+    parentGroup: "KFF",
+  },
 ];
 
 const SEK_FULL_SECTIONS: SimSection[] = [
-  { id: "sek-erk", label: "Emotionen erkennen", sectionType: "sek-erkennen", questionCount: 10, timeLimitMinutes: 15, parentGroup: "SEK" },
-  { id: "sek-reg", label: "Emotionen regulieren", sectionType: "sek-regulieren", questionCount: 10, timeLimitMinutes: 15, parentGroup: "SEK" },
-  { id: "sek-ent", label: "Soziales Entscheiden", sectionType: "sek-entscheiden", questionCount: 10, timeLimitMinutes: 15, parentGroup: "SEK" },
+  {
+    id: "sek-erk",
+    label: "Emotionen erkennen",
+    sectionType: "sek-erkennen",
+    questionCount: 10,
+    timeLimitMinutes: 15,
+    parentGroup: "SEK",
+  },
+  {
+    id: "sek-reg",
+    label: "Emotionen regulieren",
+    sectionType: "sek-regulieren",
+    questionCount: 10,
+    timeLimitMinutes: 15,
+    parentGroup: "SEK",
+  },
+  {
+    id: "sek-ent",
+    label: "Soziales Entscheiden",
+    sectionType: "sek-entscheiden",
+    questionCount: 10,
+    timeLimitMinutes: 15,
+    parentGroup: "SEK",
+  },
 ];
 
 // Vollsimulation: all sections sequentially with breaks between major groups
 function buildFullSimulation(): SimSection[] {
   const bms = BMS_FULL_SECTIONS.map((s, i, arr) =>
-    i === arr.length - 1 ? { ...s, breakAfterMinutes: 5, parentGroup: "BMS" } : { ...s, parentGroup: "BMS" }
+    i === arr.length - 1
+      ? { ...s, breakAfterMinutes: 5, parentGroup: "BMS" }
+      : { ...s, parentGroup: "BMS" }
   );
   const tv = TV_FULL_SECTIONS.map((s) => ({ ...s, breakAfterMinutes: 5, parentGroup: "TV" }));
   const kff = KFF_FULL_SECTIONS.map((s, i, arr) =>
@@ -214,11 +296,41 @@ function buildFullSimulation(): SimSection[] {
 
 // BMS Kurztest options
 const BMS_KURZTEST_OPTIONS = [
-  { id: "bio-kurz", label: "Biologie", sectionType: "bms" as SectionType, questionCount: 10, timeLimitMinutes: 8 },
-  { id: "chem-kurz", label: "Chemie", sectionType: "bms" as SectionType, questionCount: 10, timeLimitMinutes: 8 },
-  { id: "phys-kurz", label: "Physik", sectionType: "bms" as SectionType, questionCount: 10, timeLimitMinutes: 8 },
-  { id: "math-kurz", label: "Mathematik", sectionType: "bms" as SectionType, questionCount: 10, timeLimitMinutes: 8 },
-  { id: "mix-kurz", label: "Gemischt", sectionType: "bms" as SectionType, questionCount: 20, timeLimitMinutes: 15 },
+  {
+    id: "bio-kurz",
+    label: "Biologie",
+    sectionType: "bms" as SectionType,
+    questionCount: 10,
+    timeLimitMinutes: 8,
+  },
+  {
+    id: "chem-kurz",
+    label: "Chemie",
+    sectionType: "bms" as SectionType,
+    questionCount: 10,
+    timeLimitMinutes: 8,
+  },
+  {
+    id: "phys-kurz",
+    label: "Physik",
+    sectionType: "bms" as SectionType,
+    questionCount: 10,
+    timeLimitMinutes: 8,
+  },
+  {
+    id: "math-kurz",
+    label: "Mathematik",
+    sectionType: "bms" as SectionType,
+    questionCount: 10,
+    timeLimitMinutes: 8,
+  },
+  {
+    id: "mix-kurz",
+    label: "Gemischt",
+    sectionType: "bms" as SectionType,
+    questionCount: 20,
+    timeLimitMinutes: 15,
+  },
 ];
 
 // ============================================================
@@ -227,15 +339,22 @@ const BMS_KURZTEST_OPTIONS = [
 
 function generateBmsQuestions(section: SimSection, variant?: number): UnifiedQuestion[] {
   const subjectMap: Record<string, string> = {
-    bio: "biologie", chem: "chemie", phys: "physik", math: "mathematik",
-    "bio-kurz": "biologie", "chem-kurz": "chemie", "phys-kurz": "physik", "math-kurz": "mathematik",
+    bio: "biologie",
+    chem: "chemie",
+    phys: "physik",
+    math: "mathematik",
+    "bio-kurz": "biologie",
+    "chem-kurz": "chemie",
+    "phys-kurz": "physik",
+    "math-kurz": "mathematik",
     "mix-kurz": "all",
   };
   const subject = subjectMap[section.id] || "all";
   const rawPool = subject === "all" ? bmsQuestions : getQuestionsBySubject(subject);
-  const pool = variant != null
-    ? seededShuffle(rawPool, variant * 10000 + section.questionCount + section.id.charCodeAt(0))
-    : shuffle(rawPool);
+  const pool =
+    variant != null
+      ? seededShuffle(rawPool, variant * 10000 + section.questionCount + section.id.charCodeAt(0))
+      : shuffle(rawPool);
   return pool.slice(0, section.questionCount).map((q) => ({
     id: q.id,
     sectionId: section.id,
@@ -269,10 +388,16 @@ function generateTvQuestions(section: SimSection): UnifiedQuestion[] {
   return questions.slice(0, section.questionCount);
 }
 
-function mixDifficulties<T>(gen: (n: number, d: "leicht" | "mittel" | "schwer") => T[], count: number): T[] {
+function mixDifficulties<T>(
+  gen: (n: number, d: "leicht" | "mittel" | "schwer") => T[],
+  count: number
+): T[] {
   const p = Math.ceil(count / 3);
   const all = [...gen(p, "leicht"), ...gen(p, "mittel"), ...gen(p, "schwer")].slice(0, count);
-  for (let i = all.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [all[i], all[j]] = [all[j], all[i]]; }
+  for (let i = all.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [all[i], all[j]] = [all[j], all[i]];
+  }
   return all;
 }
 
@@ -292,7 +417,10 @@ function generateZahlenfolgenQuestions(section: SimSection): UnifiedQuestion[] {
 
 let _allergyCards: AllergyCard[] = [];
 
-function generateGedaechtnisQuestions(section: SimSection): { cards: AllergyCard[]; questions: UnifiedQuestion[] } {
+function generateGedaechtnisQuestions(section: SimSection): {
+  cards: AllergyCard[];
+  questions: UnifiedQuestion[];
+} {
   const cards = generateAllergyCards(8);
   _allergyCards = cards;
   const memQ = generateMemoryQuestions(cards, section.questionCount);
@@ -349,29 +477,44 @@ function generateSekQuestions(section: SimSection): UnifiedQuestion[] {
   // 'regulieren' have "Welche Reaktion" pattern
   // For soziales entscheiden, we reuse whatever is left
   const allSek = shuffle([...emotionQuestions]);
-  const erkennen = allSek.filter((q) =>
-    q.question.includes("Welche Emotion") || q.question.includes("emotion")
+  const erkennen = allSek.filter(
+    (q) => q.question.includes("Welche Emotion") || q.question.includes("emotion")
   );
-  const regulieren = allSek.filter((q) =>
-    q.question.includes("Reaktion") || q.question.includes("reagieren") || q.question.includes("angemessen")
+  const regulieren = allSek.filter(
+    (q) =>
+      q.question.includes("Reaktion") ||
+      q.question.includes("reagieren") ||
+      q.question.includes("angemessen")
   );
 
   let pool: EmotionQuestion[];
   if (section.sectionType === "sek-erkennen") {
-    pool = erkennen.length >= section.questionCount
-      ? erkennen.slice(0, section.questionCount)
-      : [...erkennen, ...shuffle(allSek.filter((q) => !erkennen.includes(q)))].slice(0, section.questionCount);
+    pool =
+      erkennen.length >= section.questionCount
+        ? erkennen.slice(0, section.questionCount)
+        : [...erkennen, ...shuffle(allSek.filter((q) => !erkennen.includes(q)))].slice(
+            0,
+            section.questionCount
+          );
   } else if (section.sectionType === "sek-regulieren") {
-    pool = regulieren.length >= section.questionCount
-      ? regulieren.slice(0, section.questionCount)
-      : [...regulieren, ...shuffle(allSek.filter((q) => !regulieren.includes(q)))].slice(0, section.questionCount);
+    pool =
+      regulieren.length >= section.questionCount
+        ? regulieren.slice(0, section.questionCount)
+        : [...regulieren, ...shuffle(allSek.filter((q) => !regulieren.includes(q)))].slice(
+            0,
+            section.questionCount
+          );
   } else {
     // soziales entscheiden - use whatever remains or all mixed
-    const used = new Set([...erkennen.slice(0, 10).map((q) => q.id), ...regulieren.slice(0, 10).map((q) => q.id)]);
+    const used = new Set([
+      ...erkennen.slice(0, 10).map((q) => q.id),
+      ...regulieren.slice(0, 10).map((q) => q.id),
+    ]);
     const remaining = allSek.filter((q) => !used.has(q.id));
-    pool = remaining.length >= section.questionCount
-      ? remaining.slice(0, section.questionCount)
-      : [...remaining, ...shuffle(allSek)].slice(0, section.questionCount);
+    pool =
+      remaining.length >= section.questionCount
+        ? remaining.slice(0, section.questionCount)
+        : [...remaining, ...shuffle(allSek)].slice(0, section.questionCount);
   }
 
   return pool.map((q) => ({
@@ -385,7 +528,10 @@ function generateSekQuestions(section: SimSection): UnifiedQuestion[] {
   }));
 }
 
-function generateQuestionsForSection(section: SimSection, variant?: number): { questions: UnifiedQuestion[]; cards?: AllergyCard[] } {
+function generateQuestionsForSection(
+  section: SimSection,
+  variant?: number
+): { questions: UnifiedQuestion[]; cards?: AllergyCard[] } {
   switch (section.sectionType) {
     case "bms":
       return { questions: generateBmsQuestions(section, variant) };
@@ -490,7 +636,14 @@ function getUserAnswerDisplay(q: UnifiedQuestion, answer: string): string {
 }
 
 function getQuestionExplanation(q: UnifiedQuestion): string {
-  return q.explanation || q.tvExplanation || q.zfExplanation || q.impExplanation || q.figurenAufgabe?.explanation || "";
+  return (
+    q.explanation ||
+    q.tvExplanation ||
+    q.zfExplanation ||
+    q.impExplanation ||
+    q.figurenAufgabe?.explanation ||
+    ""
+  );
 }
 
 function getQuestionDisplayText(q: UnifiedQuestion): string {
@@ -534,12 +687,15 @@ function getSectionGroupLabel(sectionType: SectionType): string {
 // ============================================================
 
 export default function Simulation() {
+  usePageTitle("MedAT Simulation");
   const [mode, setMode] = useState<Mode>("select");
   const [simType, setSimType] = useState<"full" | "bms" | "tv" | "kff" | "sek" | "kurz">("full");
   const [sections, setSections] = useState<SimSection[]>([]);
   const [currentSectionIdx, setCurrentSectionIdx] = useState(0);
   const [sectionQuestions, setSectionQuestions] = useState<UnifiedQuestion[]>([]);
-  const [allSectionQuestions, setAllSectionQuestions] = useState<Map<string, UnifiedQuestion[]>>(new Map());
+  const [allSectionQuestions, setAllSectionQuestions] = useState<Map<string, UnifiedQuestion[]>>(
+    new Map()
+  );
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [timeLeft, setTimeLeft] = useState(0);
@@ -570,97 +726,108 @@ export default function Simulation() {
   // SIMULATION START
   // ============================================================
 
-  const startSimulation = useCallback((type: "full" | "bms" | "tv" | "kff" | "sek" | "kurz", sectionId?: string, variant?: number) => {
-    setSimType(type);
-    setSimVariant(variant);
+  const startSimulation = useCallback(
+    (
+      type: "full" | "bms" | "tv" | "kff" | "sek" | "kurz",
+      sectionId?: string,
+      variant?: number
+    ) => {
+      setSimType(type);
+      setSimVariant(variant);
 
-    let secs: SimSection[];
+      let secs: SimSection[];
 
-    switch (type) {
-      case "full":
-        secs = buildFullSimulation();
-        break;
-      case "bms":
-        secs = BMS_FULL_SECTIONS.map((s) => ({ ...s, parentGroup: "BMS" }));
-        break;
-      case "tv":
-        secs = TV_FULL_SECTIONS.map((s) => ({ ...s, parentGroup: "TV" }));
-        break;
-      case "kff":
-        secs = KFF_FULL_SECTIONS;
-        break;
-      case "sek":
-        secs = SEK_FULL_SECTIONS;
-        break;
-      case "kurz": {
-        const opt = BMS_KURZTEST_OPTIONS.find((o) => o.id === sectionId) || BMS_KURZTEST_OPTIONS[4];
-        secs = [{ ...opt, parentGroup: "BMS" }];
-        break;
+      switch (type) {
+        case "full":
+          secs = buildFullSimulation();
+          break;
+        case "bms":
+          secs = BMS_FULL_SECTIONS.map((s) => ({ ...s, parentGroup: "BMS" }));
+          break;
+        case "tv":
+          secs = TV_FULL_SECTIONS.map((s) => ({ ...s, parentGroup: "TV" }));
+          break;
+        case "kff":
+          secs = KFF_FULL_SECTIONS;
+          break;
+        case "sek":
+          secs = SEK_FULL_SECTIONS;
+          break;
+        case "kurz": {
+          const opt =
+            BMS_KURZTEST_OPTIONS.find((o) => o.id === sectionId) || BMS_KURZTEST_OPTIONS[4];
+          secs = [{ ...opt, parentGroup: "BMS" }];
+          break;
+        }
+        default:
+          secs = [];
       }
-      default:
-        secs = [];
-    }
 
-    setSections(secs);
+      setSections(secs);
 
-    // Pre-generate questions for all sections
-    const questionMap = new Map<string, UnifiedQuestion[]>();
-    let cardsForGedaechtnis: AllergyCard[] = [];
+      // Pre-generate questions for all sections
+      const questionMap = new Map<string, UnifiedQuestion[]>();
+      let cardsForGedaechtnis: AllergyCard[] = [];
 
-    for (const sec of secs) {
-      const result = generateQuestionsForSection(sec, variant);
-      questionMap.set(sec.id, result.questions);
-      if (result.cards) cardsForGedaechtnis = result.cards;
-    }
+      for (const sec of secs) {
+        const result = generateQuestionsForSection(sec, variant);
+        questionMap.set(sec.id, result.questions);
+        if (result.cards) cardsForGedaechtnis = result.cards;
+      }
 
-    setAllSectionQuestions(questionMap);
-    setAllergyCards(cardsForGedaechtnis);
-    setSectionTimeData([]);
+      setAllSectionQuestions(questionMap);
+      setAllergyCards(cardsForGedaechtnis);
+      setSectionTimeData([]);
 
-    // Load first section
-    const firstSec = secs[0];
-    const firstQ = questionMap.get(firstSec.id) || [];
-    setSectionQuestions(firstQ);
-    setCurrentSectionIdx(0);
-    setIndex(0);
-    setAnswers({});
-    setSectionStartTime(Date.now());
+      // Load first section
+      const firstSec = secs[0];
+      const firstQ = questionMap.get(firstSec.id) || [];
+      setSectionQuestions(firstQ);
+      setCurrentSectionIdx(0);
+      setIndex(0);
+      setAnswers({});
+      setSectionStartTime(Date.now());
 
-    // If first section is gedaechtnis, go to learn mode
-    if (firstSec.sectionType === "kff-gedaechtnis" && firstSec.learnPhaseMinutes) {
-      setLearnTimeLeft(firstSec.learnPhaseMinutes * 60);
-      setMode("gedaechtnis-learn");
-    } else {
-      setTimeLeft(firstSec.timeLimitMinutes * 60);
-      setMode("playing");
-    }
-  }, []);
+      // If first section is gedaechtnis, go to learn mode
+      if (firstSec.sectionType === "kff-gedaechtnis" && firstSec.learnPhaseMinutes) {
+        setLearnTimeLeft(firstSec.learnPhaseMinutes * 60);
+        setMode("gedaechtnis-learn");
+      } else {
+        setTimeLeft(firstSec.timeLimitMinutes * 60);
+        setMode("playing");
+      }
+    },
+    []
+  );
 
   // ============================================================
   // SECTION ADVANCEMENT
   // ============================================================
 
-  const recordSectionTime = useCallback((sectionIdx: number, secs: SimSection[], timeRemaining: number) => {
-    const sec = secs[sectionIdx];
-    if (!sec) return;
-    const allocated = sec.timeLimitMinutes * 60;
-    const used = allocated - timeRemaining;
-    const questions = allSectionQuestions.get(sec.id) || [];
-    const score = questions.filter((q) => isQuestionCorrect(q, answers[q.id] || "")).length;
+  const recordSectionTime = useCallback(
+    (sectionIdx: number, secs: SimSection[], timeRemaining: number) => {
+      const sec = secs[sectionIdx];
+      if (!sec) return;
+      const allocated = sec.timeLimitMinutes * 60;
+      const used = allocated - timeRemaining;
+      const questions = allSectionQuestions.get(sec.id) || [];
+      const score = questions.filter((q) => isQuestionCorrect(q, answers[q.id] || "")).length;
 
-    setSectionTimeData((prev) => [
-      ...prev,
-      {
-        sectionId: sec.id,
-        label: sec.label,
-        parentGroup: sec.parentGroup,
-        allocated,
-        used: Math.max(0, used),
-        score,
-        total: questions.length,
-      },
-    ]);
-  }, [allSectionQuestions, answers]);
+      setSectionTimeData((prev) => [
+        ...prev,
+        {
+          sectionId: sec.id,
+          label: sec.label,
+          parentGroup: sec.parentGroup,
+          allocated,
+          used: Math.max(0, used),
+          score,
+          total: questions.length,
+        },
+      ]);
+    },
+    [allSectionQuestions, answers]
+  );
 
   const finishSimulation = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
@@ -684,12 +851,17 @@ export default function Simulation() {
     }
 
     const subjectLabel =
-      simType === "full" ? "MedAT-H Vollsimulation" :
-      simType === "bms" ? "BMS Simulation" :
-      simType === "tv" ? "TV Simulation" :
-      simType === "kff" ? "KFF Simulation" :
-      simType === "sek" ? "SEK Simulation" :
-      sections[0]?.label || "Kurztest";
+      simType === "full"
+        ? "MedAT-H Vollsimulation"
+        : simType === "bms"
+          ? "BMS Simulation"
+          : simType === "tv"
+            ? "TV Simulation"
+            : simType === "kff"
+              ? "KFF Simulation"
+              : simType === "sek"
+                ? "SEK Simulation"
+                : sections[0]?.label || "Kurztest";
 
     saveQuizResult({
       id: `sim-${Date.now()}`,
@@ -704,7 +876,8 @@ export default function Simulation() {
 
     // Record BMS answers in adaptive store
     allAnswerEntries.forEach((entry) => {
-      const swId = getDirectStichwortId(entry.questionId) || getStichwortForQuestion(entry.questionId);
+      const swId =
+        getDirectStichwortId(entry.questionId) || getStichwortForQuestion(entry.questionId);
       if (swId) recordAdaptive(swId, entry.correct, 30);
     });
 
@@ -713,30 +886,46 @@ export default function Simulation() {
     logActivity(totalQuestions);
     setMode("result");
     setIndex(0);
-  }, [answers, allSectionQuestions, sections, currentSectionIdx, timeLeft, simType, recordSectionTime, saveQuizResult, addXP, checkStreak, logActivity, recordAdaptive]);
+  }, [
+    answers,
+    allSectionQuestions,
+    sections,
+    currentSectionIdx,
+    timeLeft,
+    simType,
+    recordSectionTime,
+    saveQuizResult,
+    addXP,
+    checkStreak,
+    logActivity,
+    recordAdaptive,
+  ]);
 
-  const loadNextSectionAt = useCallback((idx: number) => {
-    if (idx >= sections.length) {
-      finishSimulation();
-      return;
-    }
+  const loadNextSectionAt = useCallback(
+    (idx: number) => {
+      if (idx >= sections.length) {
+        finishSimulation();
+        return;
+      }
 
-    const sec = sections[idx];
-    const q = allSectionQuestions.get(sec.id) || [];
-    setSectionQuestions(q);
-    setCurrentSectionIdx(idx);
-    setIndex(0);
-    setSectionStartTime(Date.now());
+      const sec = sections[idx];
+      const q = allSectionQuestions.get(sec.id) || [];
+      setSectionQuestions(q);
+      setCurrentSectionIdx(idx);
+      setIndex(0);
+      setSectionStartTime(Date.now());
 
-    // If gedaechtnis with learn phase
-    if (sec.sectionType === "kff-gedaechtnis" && sec.learnPhaseMinutes) {
-      setLearnTimeLeft(sec.learnPhaseMinutes * 60);
-      setMode("gedaechtnis-learn");
-    } else {
-      setTimeLeft(sec.timeLimitMinutes * 60);
-      setMode("playing");
-    }
-  }, [sections, allSectionQuestions, finishSimulation]);
+      // If gedaechtnis with learn phase
+      if (sec.sectionType === "kff-gedaechtnis" && sec.learnPhaseMinutes) {
+        setLearnTimeLeft(sec.learnPhaseMinutes * 60);
+        setMode("gedaechtnis-learn");
+      } else {
+        setTimeLeft(sec.timeLimitMinutes * 60);
+        setMode("playing");
+      }
+    },
+    [sections, allSectionQuestions, finishSimulation]
+  );
 
   const loadNextSection = useCallback(() => {
     loadNextSectionAt(currentSectionIdx + 1);
@@ -763,7 +952,14 @@ export default function Simulation() {
     } else {
       loadNextSectionAt(nextIdx);
     }
-  }, [currentSectionIdx, sections, timeLeft, recordSectionTime, finishSimulation, loadNextSectionAt]);
+  }, [
+    currentSectionIdx,
+    sections,
+    timeLeft,
+    recordSectionTime,
+    finishSimulation,
+    loadNextSectionAt,
+  ]);
 
   const startGedaechtnisQuiz = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
@@ -790,7 +986,9 @@ export default function Simulation() {
           return t - 1;
         });
       }, 1000);
-      return () => { if (timerRef.current) clearInterval(timerRef.current); };
+      return () => {
+        if (timerRef.current) clearInterval(timerRef.current);
+      };
     }
 
     if (mode === "break" && breakTimeLeft > 0) {
@@ -803,7 +1001,9 @@ export default function Simulation() {
           return t - 1;
         });
       }, 1000);
-      return () => { if (timerRef.current) clearInterval(timerRef.current); };
+      return () => {
+        if (timerRef.current) clearInterval(timerRef.current);
+      };
     }
 
     if (mode === "gedaechtnis-learn" && learnTimeLeft > 0) {
@@ -816,7 +1016,9 @@ export default function Simulation() {
           return t - 1;
         });
       }, 1000);
-      return () => { if (timerRef.current) clearInterval(timerRef.current); };
+      return () => {
+        if (timerRef.current) clearInterval(timerRef.current);
+      };
     }
   }, [mode, timeLeft > 0, breakTimeLeft > 0, learnTimeLeft > 0]);
 
@@ -827,7 +1029,10 @@ export default function Simulation() {
   if (mode === "select") {
     const fullSections = buildFullSimulation();
     const totalFullQuestions = fullSections.reduce((s, x) => s + x.questionCount, 0);
-    const totalFullMinutes = fullSections.reduce((s, x) => s + x.timeLimitMinutes + (x.breakAfterMinutes || 0) + (x.learnPhaseMinutes || 0), 0);
+    const totalFullMinutes = fullSections.reduce(
+      (s, x) => s + x.timeLimitMinutes + (x.breakAfterMinutes || 0) + (x.learnPhaseMinutes || 0),
+      0
+    );
 
     return (
       <div className="max-w-4xl mx-auto space-y-6">
@@ -845,7 +1050,9 @@ export default function Simulation() {
                 <Clock className="w-7 h-7 text-orange-600 dark:text-orange-400" />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">MedAT-H Vollsimulation</h2>
+                <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                  MedAT-H Vollsimulation
+                </h2>
                 <p className="text-sm text-muted">Alle 4 Testteile mit exaktem Timing und Pausen</p>
               </div>
             </div>
@@ -855,7 +1062,9 @@ export default function Simulation() {
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
                 <div className="flex items-center gap-2 mb-2">
                   <BookOpen className="w-4 h-4 text-teal-600 dark:text-teal-400" />
-                  <span className="font-semibold text-sm text-gray-900 dark:text-gray-100">BMS</span>
+                  <span className="font-semibold text-sm text-gray-900 dark:text-gray-100">
+                    BMS
+                  </span>
                   <span className="text-xs text-muted">94 Fragen, 75 Min</span>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
@@ -870,7 +1079,9 @@ export default function Simulation() {
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
                 <div className="flex items-center gap-2">
                   <FileText className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                  <span className="font-semibold text-sm text-gray-900 dark:text-gray-100">Textverständnis</span>
+                  <span className="font-semibold text-sm text-gray-900 dark:text-gray-100">
+                    Textverständnis
+                  </span>
                   <span className="text-xs text-muted">12 Aussagen, 35 Min</span>
                 </div>
               </div>
@@ -878,7 +1089,9 @@ export default function Simulation() {
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
                 <div className="flex items-center gap-2 mb-2">
                   <Brain className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-                  <span className="font-semibold text-sm text-gray-900 dark:text-gray-100">KFF</span>
+                  <span className="font-semibold text-sm text-gray-900 dark:text-gray-100">
+                    KFF
+                  </span>
                   <span className="text-xs text-muted">5 Untertests, ~93 Min</span>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-2 text-xs text-muted">
@@ -893,7 +1106,9 @@ export default function Simulation() {
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
                 <div className="flex items-center gap-2 mb-2">
                   <Heart className="w-4 h-4 text-rose-600 dark:text-rose-400" />
-                  <span className="font-semibold text-sm text-gray-900 dark:text-gray-100">SEK</span>
+                  <span className="font-semibold text-sm text-gray-900 dark:text-gray-100">
+                    SEK
+                  </span>
                   <span className="text-xs text-muted">3 Untertests, 45 Min</span>
                 </div>
                 <div className="grid grid-cols-3 gap-2 text-xs text-muted">
@@ -917,7 +1132,11 @@ export default function Simulation() {
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
                 {[1, 2, 3, 4, 5].map((v) => (
-                  <Button key={v} variant={v === 1 ? "primary" : "outline"} onClick={() => startSimulation("full", undefined, v)}>
+                  <Button
+                    key={v}
+                    variant={v === 1 ? "primary" : "outline"}
+                    onClick={() => startSimulation("full", undefined, v)}
+                  >
                     <Play className="w-4 h-4 mr-1" /> Simulation {v}
                   </Button>
                 ))}
@@ -1010,7 +1229,9 @@ export default function Simulation() {
                 <Timer className="w-7 h-7 text-blue-600 dark:text-blue-400" />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">Kurztest (BMS)</h2>
+                <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                  Kurztest (BMS)
+                </h2>
                 <p className="text-sm text-muted">Schnelles Ueben eines einzelnen Fachs</p>
               </div>
             </div>
@@ -1023,7 +1244,9 @@ export default function Simulation() {
                   className="bg-gray-50 dark:bg-gray-800 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg p-4 text-left transition-colors cursor-pointer border border-transparent hover:border-blue-200 dark:hover:border-blue-800"
                 >
                   <p className="font-semibold text-gray-900 dark:text-gray-100">{opt.label}</p>
-                  <p className="text-xs text-muted">{opt.questionCount} Fragen / {opt.timeLimitMinutes} Min</p>
+                  <p className="text-xs text-muted">
+                    {opt.questionCount} Fragen / {opt.timeLimitMinutes} Min
+                  </p>
                 </button>
               ))}
             </div>
@@ -1055,8 +1278,9 @@ export default function Simulation() {
               {currentGroup}: {currentSec.label} abgeschlossen!
               {nextSec && (
                 <span>
-                  {" "}Nächster Teil: {nextGroup !== currentGroup ? `${nextGroup} - ` : ""}{nextSec.label}
-                  {" "}({nextSec.questionCount} Fragen, {nextSec.timeLimitMinutes} Min)
+                  {" "}
+                  Nächster Teil: {nextGroup !== currentGroup ? `${nextGroup} - ` : ""}
+                  {nextSec.label} ({nextSec.questionCount} Fragen, {nextSec.timeLimitMinutes} Min)
                 </span>
               )}
             </p>
@@ -1084,16 +1308,22 @@ export default function Simulation() {
             <Badge variant="info">Gedächtnis & Merkfähigkeit</Badge>
             <span className="text-sm text-muted ml-2">Lernphase - Präge dir die Ausweise ein!</span>
           </div>
-          <div className={`flex items-center gap-2 px-3 py-1.5 rounded-lg ${learnTimeLeft < 120 ? "bg-red-50 dark:bg-red-900/20" : "bg-gray-100 dark:bg-gray-800"}`}>
+          <div
+            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg ${learnTimeLeft < 120 ? "bg-red-50 dark:bg-red-900/20" : "bg-gray-100 dark:bg-gray-800"}`}
+          >
             <Eye className="w-4 h-4 text-muted" />
-            <span className={`text-sm font-mono font-bold ${learnTimeLeft < 120 ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}>
+            <span
+              className={`text-sm font-mono font-bold ${learnTimeLeft < 120 ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}
+            >
               {formatTime(learnTimeLeft)}
             </span>
           </div>
         </div>
 
         <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3 text-sm text-blue-800 dark:text-blue-300">
-          <strong>Aufgabe:</strong> Präge dir die folgenden 8 Allergieausweise ein. Du wirst anschließend Fragen zu den Personen, Blutgruppen, Allergien und weiteren Details beantworten müssen.
+          <strong>Aufgabe:</strong> Präge dir die folgenden 8 Allergieausweise ein. Du wirst
+          anschließend Fragen zu den Personen, Blutgruppen, Allergien und weiteren Details
+          beantworten müssen.
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1105,16 +1335,30 @@ export default function Simulation() {
                   <Badge variant="default">#{i + 1}</Badge>
                 </div>
                 <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
-                  <div><span className="text-muted">Geburtsdatum:</span></div>
+                  <div>
+                    <span className="text-muted">Geburtsdatum:</span>
+                  </div>
                   <div className="text-gray-900 dark:text-gray-100">{card.geburtsdatum}</div>
-                  <div><span className="text-muted">Blutgruppe:</span></div>
-                  <div className="font-semibold text-red-600 dark:text-red-400">{card.blutgruppe}</div>
-                  <div><span className="text-muted">Ausweisnr.:</span></div>
+                  <div>
+                    <span className="text-muted">Blutgruppe:</span>
+                  </div>
+                  <div className="font-semibold text-red-600 dark:text-red-400">
+                    {card.blutgruppe}
+                  </div>
+                  <div>
+                    <span className="text-muted">Ausweisnr.:</span>
+                  </div>
                   <div className="text-gray-900 dark:text-gray-100">{card.ausweisnummer}</div>
-                  <div><span className="text-muted">Land:</span></div>
+                  <div>
+                    <span className="text-muted">Land:</span>
+                  </div>
                   <div className="text-gray-900 dark:text-gray-100">{card.land}</div>
-                  <div><span className="text-muted">Medikamente:</span></div>
-                  <div className="text-gray-900 dark:text-gray-100">{card.medikamente ? "Ja" : "Nein"}</div>
+                  <div>
+                    <span className="text-muted">Medikamente:</span>
+                  </div>
+                  <div className="text-gray-900 dark:text-gray-100">
+                    {card.medikamente ? "Ja" : "Nein"}
+                  </div>
                 </div>
                 <div>
                   <span className="text-sm text-muted">Allergien: </span>
@@ -1149,7 +1393,8 @@ export default function Simulation() {
     }
 
     const totalScore = allQuestions.filter((q) => isQuestionCorrect(q, answers[q.id] || "")).length;
-    const totalPct = allQuestions.length > 0 ? Math.round((totalScore / allQuestions.length) * 100) : 0;
+    const totalPct =
+      allQuestions.length > 0 ? Math.round((totalScore / allQuestions.length) * 100) : 0;
 
     // Group scores by parent group
     const groupScores = new Map<string, { score: number; total: number; label: string }>();
@@ -1158,14 +1403,23 @@ export default function Simulation() {
       const q = allSectionQuestions.get(sec.id) || [];
       const score = q.filter((qq) => isQuestionCorrect(qq, answers[qq.id] || "")).length;
       const existing = groupScores.get(group) || { score: 0, total: 0, label: group };
-      groupScores.set(group, { score: existing.score + score, total: existing.total + q.length, label: group });
+      groupScores.set(group, {
+        score: existing.score + score,
+        total: existing.total + q.length,
+        label: group,
+      });
     }
 
     // Per-section scores
     const sectionScores = sections.map((sec) => {
       const q = allSectionQuestions.get(sec.id) || [];
       const score = q.filter((qq) => isQuestionCorrect(qq, answers[qq.id] || "")).length;
-      return { sec, score, total: q.length, pct: q.length > 0 ? Math.round((score / q.length) * 100) : 0 };
+      return {
+        sec,
+        score,
+        total: q.length,
+        pct: q.length > 0 ? Math.round((score / q.length) * 100) : 0,
+      };
     });
 
     // Find weakest areas (lowest percentage, min 3 questions)
@@ -1179,16 +1433,28 @@ export default function Simulation() {
 
     return (
       <div className="max-w-3xl mx-auto space-y-6">
-        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Simulation", href: "/simulation" }, { label: "Ergebnis" }]} />
+        <BreadcrumbNav
+          items={[
+            { label: "Dashboard", href: "/" },
+            { label: "Simulation", href: "/simulation" },
+            { label: "Ergebnis" },
+          ]}
+        />
 
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Simulationsergebnis</h1>
 
         {/* Overall score */}
         <Card>
           <CardContent className="p-6 text-center">
-            <div className="text-5xl font-bold text-primary-700 dark:text-primary-400">{totalPct}%</div>
-            <p className="text-lg text-muted mt-1">{totalScore} von {allQuestions.length} richtig</p>
-            <p className="text-sm text-green-600 dark:text-green-400 font-medium mt-2">+{totalScore * 15} XP erhalten</p>
+            <div className="text-5xl font-bold text-primary-700 dark:text-primary-400">
+              {totalPct}%
+            </div>
+            <p className="text-lg text-muted mt-1">
+              {totalScore} von {allQuestions.length} richtig
+            </p>
+            <p className="text-sm text-green-600 dark:text-green-400 font-medium mt-2">
+              +{totalScore * 15} XP erhalten
+            </p>
           </CardContent>
         </Card>
 
@@ -1200,9 +1466,15 @@ export default function Simulation() {
               return (
                 <Card key={key}>
                   <CardContent className="p-4 text-center">
-                    <p className="text-2xl font-bold text-primary-700 dark:text-primary-400">{pct}%</p>
-                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">{data.label}</p>
-                    <p className="text-xs text-muted">{data.score}/{data.total}</p>
+                    <p className="text-2xl font-bold text-primary-700 dark:text-primary-400">
+                      {pct}%
+                    </p>
+                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                      {data.label}
+                    </p>
+                    <p className="text-xs text-muted">
+                      {data.score}/{data.total}
+                    </p>
                   </CardContent>
                 </Card>
               );
@@ -1217,22 +1489,31 @@ export default function Simulation() {
               <BarChart3 className="w-4 h-4" /> Detaillierte Aufschlüsselung
             </h3>
             {sectionScores.map((s) => (
-              <div key={s.sec.id} className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-800 last:border-b-0">
+              <div
+                key={s.sec.id}
+                className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-800 last:border-b-0"
+              >
                 <div>
-                  <span className="text-sm font-medium text-gray-900 dark:text-gray-100">{s.sec.label}</span>
+                  <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                    {s.sec.label}
+                  </span>
                   {s.sec.parentGroup && (
                     <span className="text-xs text-muted ml-2">({s.sec.parentGroup})</span>
                   )}
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-sm text-muted">{s.score}/{s.total}</span>
+                  <span className="text-sm text-muted">
+                    {s.score}/{s.total}
+                  </span>
                   <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                     <div
                       className={`h-2 rounded-full ${s.pct >= 70 ? "bg-green-500" : s.pct >= 50 ? "bg-yellow-500" : "bg-red-500"}`}
                       style={{ width: `${s.pct}%` }}
                     />
                   </div>
-                  <span className={`text-sm font-bold ${s.pct >= 70 ? "text-green-600 dark:text-green-400" : s.pct >= 50 ? "text-yellow-600 dark:text-yellow-400" : "text-red-600 dark:text-red-400"}`}>
+                  <span
+                    className={`text-sm font-bold ${s.pct >= 70 ? "text-green-600 dark:text-green-400" : s.pct >= 50 ? "text-yellow-600 dark:text-yellow-400" : "text-red-600 dark:text-red-400"}`}
+                  >
                     {s.pct}%
                   </span>
                 </div>
@@ -1249,13 +1530,21 @@ export default function Simulation() {
                 <Clock className="w-4 h-4" /> Zeitnutzung
               </h3>
               {timeEntries.map((entry) => {
-                const usedPct = entry.allocated > 0 ? Math.round((entry.used / entry.allocated) * 100) : 0;
+                const usedPct =
+                  entry.allocated > 0 ? Math.round((entry.used / entry.allocated) * 100) : 0;
                 return (
-                  <div key={entry.sectionId} className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-800 last:border-b-0">
+                  <div
+                    key={entry.sectionId}
+                    className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-800 last:border-b-0"
+                  >
                     <span className="text-sm text-gray-900 dark:text-gray-100">{entry.label}</span>
                     <div className="flex items-center gap-2 text-sm text-muted">
-                      <span>{formatTime(entry.used)} / {formatTime(entry.allocated)}</span>
-                      <span className={`font-medium ${usedPct > 90 ? "text-red-600 dark:text-red-400" : "text-gray-600 dark:text-gray-400"}`}>
+                      <span>
+                        {formatTime(entry.used)} / {formatTime(entry.allocated)}
+                      </span>
+                      <span
+                        className={`font-medium ${usedPct > 90 ? "text-red-600 dark:text-red-400" : "text-gray-600 dark:text-gray-400"}`}
+                      >
                         ({usedPct}%)
                       </span>
                     </div>
@@ -1274,18 +1563,28 @@ export default function Simulation() {
                 <AlertTriangle className="w-4 h-4 text-amber-500" /> Schwächen-Analyse
               </h3>
               <p className="text-sm text-muted">
-                Die folgenden Bereiche haben die niedrigsten Ergebnisse. Wir empfehlen, diese Themen gezielt zu wiederholen:
+                Die folgenden Bereiche haben die niedrigsten Ergebnisse. Wir empfehlen, diese Themen
+                gezielt zu wiederholen:
               </p>
               <div className="space-y-2">
-                {weakAreas.filter((a) => a.pct < 70).map((area) => (
-                  <div key={area.sec.id} className="flex items-center gap-3 bg-amber-50 dark:bg-amber-900/10 rounded-lg p-3">
-                    <XCircle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
-                    <div>
-                      <span className="text-sm font-medium text-gray-900 dark:text-gray-100">{area.sec.label}</span>
-                      <span className="text-xs text-muted ml-2">{area.pct}% ({area.score}/{area.total})</span>
+                {weakAreas
+                  .filter((a) => a.pct < 70)
+                  .map((area) => (
+                    <div
+                      key={area.sec.id}
+                      className="flex items-center gap-3 bg-amber-50 dark:bg-amber-900/10 rounded-lg p-3"
+                    >
+                      <XCircle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+                      <div>
+                        <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                          {area.sec.label}
+                        </span>
+                        <span className="text-xs text-muted ml-2">
+                          {area.pct}% ({area.score}/{area.total})
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </CardContent>
           </Card>
@@ -1302,26 +1601,37 @@ export default function Simulation() {
               const correct = isQuestionCorrect(q, ans);
               const explanation = getQuestionExplanation(q);
               return (
-                <Card key={q.id} className={`border-l-4 ${correct ? "border-l-green-500" : "border-l-red-500"}`}>
+                <Card
+                  key={q.id}
+                  className={`border-l-4 ${correct ? "border-l-green-500" : "border-l-red-500"}`}
+                >
                   <CardContent className="p-4">
                     <div className="flex items-start gap-2 mb-2">
-                      {correct
-                        ? <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
-                        : <XCircle className="w-4 h-4 text-red-500 mt-0.5 shrink-0" />
-                      }
+                      {correct ? (
+                        <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
+                      ) : (
+                        <XCircle className="w-4 h-4 text-red-500 mt-0.5 shrink-0" />
+                      )}
                       <div className="flex-1">
                         <div className="flex items-center gap-2 flex-wrap">
                           <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                            {i + 1}. {getQuestionDisplayText(q).slice(0, 120)}{getQuestionDisplayText(q).length > 120 ? "..." : ""}
+                            {i + 1}. {getQuestionDisplayText(q).slice(0, 120)}
+                            {getQuestionDisplayText(q).length > 120 ? "..." : ""}
                           </span>
-                          <Badge variant="info" className="shrink-0">{getSectionGroupLabel(q.sectionType)}</Badge>
+                          <Badge variant="info" className="shrink-0">
+                            {getSectionGroupLabel(q.sectionType)}
+                          </Badge>
                         </div>
                       </div>
                     </div>
                     {!correct && (
                       <div className="ml-6 space-y-1 text-sm">
-                        <p className="text-red-600 dark:text-red-400">Deine Antwort: {getUserAnswerDisplay(q, ans)}</p>
-                        <p className="text-green-700 dark:text-green-400">Richtig: {getCorrectAnswerDisplay(q)}</p>
+                        <p className="text-red-600 dark:text-red-400">
+                          Deine Antwort: {getUserAnswerDisplay(q, ans)}
+                        </p>
+                        <p className="text-green-700 dark:text-green-400">
+                          Richtig: {getCorrectAnswerDisplay(q)}
+                        </p>
                       </div>
                     )}
                     {explanation && (
@@ -1337,8 +1647,12 @@ export default function Simulation() {
         </details>
 
         <div className="flex justify-center gap-3 pb-8">
-          <Button variant="outline" onClick={() => setMode("select")}>Zurück zur Auswahl</Button>
-          <Button onClick={() => startSimulation(simType, undefined, simVariant)}>Neue Simulation</Button>
+          <Button variant="outline" onClick={() => setMode("select")}>
+            Zurück zur Auswahl
+          </Button>
+          <Button onClick={() => startSimulation(simType, undefined, simVariant)}>
+            Neue Simulation
+          </Button>
         </div>
       </div>
     );
@@ -1370,7 +1684,8 @@ export default function Simulation() {
                   : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
               }`}
             >
-              <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>{opt.text}
+              <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>
+              {opt.text}
             </button>
           ))}
         </div>
@@ -1435,10 +1750,13 @@ export default function Simulation() {
         <div className="flex items-center gap-3 mb-6 flex-wrap">
           {q.sequence?.map((n, i) => (
             <span key={i} className="text-2xl font-mono font-bold text-gray-900 dark:text-gray-100">
-              {n}{i < (q.sequence?.length || 0) - 1 ? "," : ""}
+              {n}
+              {i < (q.sequence?.length || 0) - 1 ? "," : ""}
             </span>
           ))}
-          <span className="text-2xl font-mono font-bold text-primary-600 dark:text-primary-400">?, ?</span>
+          <span className="text-2xl font-mono font-bold text-primary-600 dark:text-primary-400">
+            ?, ?
+          </span>
         </div>
         <p className="text-sm text-muted mb-4">Welche zwei Zahlen folgen als nächstes?</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -1452,7 +1770,8 @@ export default function Simulation() {
                   : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
               }`}
             >
-              <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>{opt}
+              <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>
+              {opt}
             </button>
           ))}
         </div>
@@ -1489,17 +1808,22 @@ export default function Simulation() {
         <div className="space-y-4 mb-6">
           <div>
             <p className="text-xs text-muted uppercase tracking-wider mb-1">Prämisse 1</p>
-            <p className="text-base font-medium text-gray-900 dark:text-gray-100 border-l-4 border-purple-400 pl-3">{q.premise1}</p>
+            <p className="text-base font-medium text-gray-900 dark:text-gray-100 border-l-4 border-purple-400 pl-3">
+              {q.premise1}
+            </p>
           </div>
           <div>
             <p className="text-xs text-muted uppercase tracking-wider mb-1">Prämisse 2</p>
-            <p className="text-base font-medium text-gray-900 dark:text-gray-100 border-l-4 border-purple-400 pl-3">{q.premise2}</p>
+            <p className="text-base font-medium text-gray-900 dark:text-gray-100 border-l-4 border-purple-400 pl-3">
+              {q.premise2}
+            </p>
           </div>
         </div>
         <p className="text-sm text-muted mb-3">Welche Schlussfolgerung ist korrekt?</p>
         <div className="space-y-2">
           {q.sylOptions?.map((opt, oi) => (
-            <button key={oi}
+            <button
+              key={oi}
               onClick={() => setAnswers((p) => ({ ...p, [q.id]: String(oi) }))}
               className={`w-full text-left px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                 answers[q.id] === String(oi)
@@ -1507,7 +1831,8 @@ export default function Simulation() {
                   : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
               }`}
             >
-              <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>{opt}
+              <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>
+              {opt}
             </button>
           ))}
         </div>
@@ -1549,7 +1874,9 @@ export default function Simulation() {
     return (
       <Card>
         <CardContent className="p-6">
-          <p className="text-sm text-muted mb-4">Welche Figur entsteht, wenn man alle Teile zusammensetzt?</p>
+          <p className="text-sm text-muted mb-4">
+            Welche Figur entsteht, wenn man alle Teile zusammensetzt?
+          </p>
 
           {/* Puzzle pieces */}
           <div className="bg-white dark:bg-gray-900 rounded-lg p-4 mb-6">
@@ -1578,7 +1905,9 @@ export default function Simulation() {
                 }`}
               >
                 {opt.text ? (
-                  <p className="text-sm text-gray-500 dark:text-gray-400 py-2 text-center">{opt.text}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 py-2 text-center">
+                    {opt.text}
+                  </p>
                 ) : (
                   <svg viewBox="0 0 200 200" className="w-full h-auto">
                     {opt.paths.map((p, i) => (
@@ -1586,7 +1915,9 @@ export default function Simulation() {
                     ))}
                   </svg>
                 )}
-                <p className="text-xs text-center font-bold text-gray-700 dark:text-gray-300 mt-1">{opt.id.toUpperCase()}</p>
+                <p className="text-xs text-center font-bold text-gray-700 dark:text-gray-300 mt-1">
+                  {opt.id.toUpperCase()}
+                </p>
               </button>
             ))}
           </div>
@@ -1620,7 +1951,8 @@ export default function Simulation() {
                     : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
                 }`}
               >
-                <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>{opt.text}
+                <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>
+                {opt.text}
               </button>
             ))}
           </div>
@@ -1664,12 +1996,17 @@ export default function Simulation() {
             <span className="text-xs text-muted ml-1">({currentSec.parentGroup})</span>
           )}
           <span className="text-sm text-muted ml-2">
-            Teil {currentSectionIdx + 1}/{sections.length} / Frage {index + 1}/{sectionQuestions.length}
+            Teil {currentSectionIdx + 1}/{sections.length} / Frage {index + 1}/
+            {sectionQuestions.length}
           </span>
         </div>
-        <div className={`flex items-center gap-2 px-3 py-1.5 rounded-lg ${timeLeft < 300 ? "bg-red-50 dark:bg-red-900/20" : "bg-gray-100 dark:bg-gray-800"}`}>
+        <div
+          className={`flex items-center gap-2 px-3 py-1.5 rounded-lg ${timeLeft < 300 ? "bg-red-50 dark:bg-red-900/20" : "bg-gray-100 dark:bg-gray-800"}`}
+        >
           <Clock className={`w-4 h-4 ${timeLeft < 300 ? "text-red-500" : "text-muted"}`} />
-          <span className={`text-sm font-mono font-bold ${timeLeft < 300 ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}>
+          <span
+            className={`text-sm font-mono font-bold ${timeLeft < 300 ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}
+          >
             {formatTime(timeLeft)}
           </span>
         </div>
@@ -1700,11 +2037,13 @@ export default function Simulation() {
             <Send className="w-4 h-4 mr-1" /> Nächster Teil
           </Button>
         ) : (
-          <Button onClick={() => {
-            // Record current section time before finishing
-            recordSectionTime(currentSectionIdx, sections, timeLeft);
-            finishSimulation();
-          }}>
+          <Button
+            onClick={() => {
+              // Record current section time before finishing
+              recordSectionTime(currentSectionIdx, sections, timeLeft);
+              finishSimulation();
+            }}
+          >
             <Send className="w-4 h-4 mr-1" /> Auswertung
           </Button>
         )}

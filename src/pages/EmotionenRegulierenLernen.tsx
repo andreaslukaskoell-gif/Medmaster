@@ -41,8 +41,10 @@ const strategies = [
     descColor: "text-blue-700 dark:text-blue-400",
     when: "VOR der Situation",
     description: "Die Situation bewusst vermeiden oder aufsuchen.",
-    example: "Markus weiß, dass ihn die Party seiner Ex-Freundin traurig machen würde → er geht nicht hin.",
-    procon: "Effektiv bei vermeidbaren Situationen, aber oft nicht realistisch (Prüfungen kann man nicht dauerhaft vermeiden).",
+    example:
+      "Markus weiß, dass ihn die Party seiner Ex-Freundin traurig machen würde → er geht nicht hin.",
+    procon:
+      "Effektiv bei vermeidbaren Situationen, aber oft nicht realistisch (Prüfungen kann man nicht dauerhaft vermeiden).",
   },
   {
     name: "Situationsmodifikation",
@@ -53,7 +55,8 @@ const strategies = [
     descColor: "text-teal-700 dark:text-teal-400",
     when: "IN der Situation",
     description: "Die Situation aktiv so verändern, dass die unerwünschte Emotion reduziert wird.",
-    example: "Lisa hat Angst vor dem Referat → sie bittet die Dozentin, zu zweit vortragen zu dürfen.",
+    example:
+      "Lisa hat Angst vor dem Referat → sie bittet die Dozentin, zu zweit vortragen zu dürfen.",
     procon: "Gut wenn die Situation veränderbar ist. Nicht immer möglich.",
   },
   {
@@ -64,7 +67,8 @@ const strategies = [
     textColor: "text-indigo-800 dark:text-indigo-300",
     descColor: "text-indigo-700 dark:text-indigo-400",
     when: "IN der Situation",
-    description: "Die Aufmerksamkeit bewusst von der emotionsauslösenden Situation weg lenken (Ablenkung) oder auf positive Aspekte konzentrieren.",
+    description:
+      "Die Aufmerksamkeit bewusst von der emotionsauslösenden Situation weg lenken (Ablenkung) oder auf positive Aspekte konzentrieren.",
     example: "Tom ist nervös im Wartezimmer → er liest ein Buch, um sich abzulenken.",
     procon: "Gut für kurzfristige Emotionsregulation. Löst das Problem nicht langfristig.",
   },
@@ -77,7 +81,8 @@ const strategies = [
     descColor: "text-green-700 dark:text-green-400",
     when: "IN der Situation",
     description: "Die Bedeutung der Situation umdeuten (Reframing/Umbewertung).",
-    example: 'Sarah bekommt kritisches Feedback → sie denkt: "Das ist eine Chance, besser zu werden."',
+    example:
+      'Sarah bekommt kritisches Feedback → sie denkt: "Das ist eine Chance, besser zu werden."',
     procon: "Die EFFEKTIVSTE Langzeitstrategie! Verändert die emotionale Reaktion an der Wurzel.",
   },
   {
@@ -89,8 +94,10 @@ const strategies = [
     descColor: "text-orange-700 dark:text-orange-400",
     when: "NACH der Emotion",
     description: "Den körperlichen Ausdruck der Emotion unterdrücken oder bewusst steuern.",
-    example: "Der Arzt ist traurig über den Tod eines Patienten → er hält seine Tränen zurück, um die Angehörigen zu informieren.",
-    procon: "Kurzfristig notwendig in professionellen Situationen. Langfristig belastend und oft kontraproduktiv.",
+    example:
+      "Der Arzt ist traurig über den Tod eines Patienten → er hält seine Tränen zurück, um die Angehörigen zu informieren.",
+    procon:
+      "Kurzfristig notwendig in professionellen Situationen. Langfristig belastend und oft kontraproduktiv.",
   },
 ];
 
@@ -103,8 +110,8 @@ function Seite1() {
           Das Prozessmodell nach Gross
         </h2>
         <p className="text-sm text-muted">
-          Seit 2023 im MedAT: Du musst die 5 Regulationsstrategien kennen und anwenden können.
-          Sie beschreiben, WO im Emotionsprozess man regulierend eingreifen kann.
+          Seit 2023 im MedAT: Du musst die 5 Regulationsstrategien kennen und anwenden können. Sie
+          beschreiben, WO im Emotionsprozess man regulierend eingreifen kann.
         </p>
       </div>
 
@@ -117,7 +124,9 @@ function Seite1() {
           {strategies.map((s, i) => (
             <div key={i} className="flex items-center shrink-0">
               <div className="text-center">
-                <div className={`${s.badgeColor} text-white text-xs font-bold w-7 h-7 rounded-full flex items-center justify-center mx-auto`}>
+                <div
+                  className={`${s.badgeColor} text-white text-xs font-bold w-7 h-7 rounded-full flex items-center justify-center mx-auto`}
+                >
                   {s.number}
                 </div>
                 <p className="text-[10px] text-muted mt-1 max-w-[80px] leading-tight">{s.name}</p>
@@ -139,11 +148,15 @@ function Seite1() {
         {strategies.map((s) => (
           <div key={s.number} className={`${s.color} border-l-4 p-4 rounded-r-lg space-y-2`}>
             <div className="flex items-center gap-2">
-              <span className={`${s.badgeColor} text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center`}>
+              <span
+                className={`${s.badgeColor} text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center`}
+              >
                 {s.number}
               </span>
               <h3 className={`font-semibold ${s.textColor}`}>{s.name}</h3>
-              <span className="text-[10px] bg-white/50 dark:bg-black/20 px-2 py-0.5 rounded-full text-muted">{s.when}</span>
+              <span className="text-[10px] bg-white/50 dark:bg-black/20 px-2 py-0.5 rounded-full text-muted">
+                {s.when}
+              </span>
             </div>
             <p className={`text-sm ${s.descColor}`}>{s.description}</p>
             <div className="bg-white dark:bg-gray-800 rounded-lg p-3">
@@ -166,14 +179,13 @@ function Seite2() {
           Kognitive Veränderung — Die Königsstrategie
         </h2>
         <p className="text-sm text-muted">
-          Diese Strategie ist im MedAT FAST IMMER die richtige Antwort.
-          Lerne sie im Detail!
+          Diese Strategie ist im MedAT FAST IMMER die richtige Antwort. Lerne sie im Detail!
         </p>
       </div>
 
       <Merksatz>
-        Kognitive Veränderung (Reframing/Umbewertung) ist die effektivste Langzeitstrategie,
-        weil sie die emotionale Reaktion an der Wurzel verändert — nicht nur die Symptome bekämpft.
+        Kognitive Veränderung (Reframing/Umbewertung) ist die effektivste Langzeitstrategie, weil
+        sie die emotionale Reaktion an der Wurzel verändert — nicht nur die Symptome bekämpft.
       </Merksatz>
 
       {/* Reframing-Techniken */}
@@ -184,44 +196,68 @@ function Seite2() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Card>
             <CardContent className="p-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">1. Perspektivenwechsel</h4>
-              <p className="text-sm text-muted mb-2">Die Situation aus der Sicht einer anderen Person betrachten.</p>
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
+                1. Perspektivenwechsel
+              </h4>
+              <p className="text-sm text-muted mb-2">
+                Die Situation aus der Sicht einer anderen Person betrachten.
+              </p>
               <div className="bg-green-50 dark:bg-green-900/15 rounded-lg p-3">
                 <p className="text-xs text-muted">Beispiel:</p>
-                <p className="text-sm italic text-gray-700 dark:text-gray-300">&quot;Der Prof hat es nicht persönlich gemeint — er steht selbst unter Druck.&quot;</p>
+                <p className="text-sm italic text-gray-700 dark:text-gray-300">
+                  &quot;Der Prof hat es nicht persönlich gemeint — er steht selbst unter
+                  Druck.&quot;
+                </p>
               </div>
             </CardContent>
           </Card>
 
           <Card>
             <CardContent className="p-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">2. Lernchance sehen</h4>
-              <p className="text-sm text-muted mb-2">Negative Erfahrungen als Wachstumsmöglichkeit umdeuten.</p>
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
+                2. Lernchance sehen
+              </h4>
+              <p className="text-sm text-muted mb-2">
+                Negative Erfahrungen als Wachstumsmöglichkeit umdeuten.
+              </p>
               <div className="bg-green-50 dark:bg-green-900/15 rounded-lg p-3">
                 <p className="text-xs text-muted">Beispiel:</p>
-                <p className="text-sm italic text-gray-700 dark:text-gray-300">&quot;Durch diesen Fehler weiß ich jetzt, worauf ich achten muss.&quot;</p>
+                <p className="text-sm italic text-gray-700 dark:text-gray-300">
+                  &quot;Durch diesen Fehler weiß ich jetzt, worauf ich achten muss.&quot;
+                </p>
               </div>
             </CardContent>
           </Card>
 
           <Card>
             <CardContent className="p-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">3. Relativierung</h4>
-              <p className="text-sm text-muted mb-2">Die Situation in einen größeren Kontext einordnen.</p>
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
+                3. Relativierung
+              </h4>
+              <p className="text-sm text-muted mb-2">
+                Die Situation in einen größeren Kontext einordnen.
+              </p>
               <div className="bg-green-50 dark:bg-green-900/15 rounded-lg p-3">
                 <p className="text-xs text-muted">Beispiel:</p>
-                <p className="text-sm italic text-gray-700 dark:text-gray-300">&quot;In fünf Jahren werde ich darüber lachen. Es ist nicht das Ende der Welt.&quot;</p>
+                <p className="text-sm italic text-gray-700 dark:text-gray-300">
+                  &quot;In fünf Jahren werde ich darüber lachen. Es ist nicht das Ende der
+                  Welt.&quot;
+                </p>
               </div>
             </CardContent>
           </Card>
 
           <Card>
             <CardContent className="p-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">4. Uminterpretation</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
+                4. Uminterpretation
+              </h4>
               <p className="text-sm text-muted mb-2">Körperliche Symptome positiv umdeuten.</p>
               <div className="bg-green-50 dark:bg-green-900/15 rounded-lg p-3">
                 <p className="text-xs text-muted">Beispiel:</p>
-                <p className="text-sm italic text-gray-700 dark:text-gray-300">&quot;Mein Herzklopfen ist Aufregung, nicht Angst — mein Körper ist bereit!&quot;</p>
+                <p className="text-sm italic text-gray-700 dark:text-gray-300">
+                  &quot;Mein Herzklopfen ist Aufregung, nicht Angst — mein Körper ist bereit!&quot;
+                </p>
               </div>
             </CardContent>
           </Card>
@@ -236,15 +272,22 @@ function Seite2() {
         <ul className="space-y-2 text-sm text-orange-700 dark:text-orange-400">
           <li className="flex items-start gap-2">
             <span className="text-orange-500 mt-0.5 font-bold">•</span>
-            <span>Wenn die Situation <strong>konkret veränderbar</strong> ist → Situationsmodifikation</span>
+            <span>
+              Wenn die Situation <strong>konkret veränderbar</strong> ist → Situationsmodifikation
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-orange-500 mt-0.5 font-bold">•</span>
-            <span>Wenn die Situation <strong>vermeidbar und unnötig</strong> ist → Situationsauswahl</span>
+            <span>
+              Wenn die Situation <strong>vermeidbar und unnötig</strong> ist → Situationsauswahl
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-orange-500 mt-0.5 font-bold">•</span>
-            <span>Wenn <strong>sofortige professionelle Kontrolle</strong> nötig ist (z.B. Arzt vor Patient) → Reaktionsmodulation</span>
+            <span>
+              Wenn <strong>sofortige professionelle Kontrolle</strong> nötig ist (z.B. Arzt vor
+              Patient) → Reaktionsmodulation
+            </span>
           </li>
         </ul>
       </div>
@@ -294,8 +337,12 @@ function Seite3() {
         <Card>
           <CardContent className="p-5 space-y-2">
             <div className="flex items-center gap-3">
-              <span className="bg-pink-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">1</span>
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">Situation analysieren</h3>
+              <span className="bg-pink-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+                1
+              </span>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+                Situation analysieren
+              </h3>
             </div>
             <p className="text-sm text-muted pl-11">
               Ist die Situation veränderbar? Vermeidbar? Oder muss die Person damit umgehen?
@@ -306,12 +353,14 @@ function Seite3() {
         <Card>
           <CardContent className="p-5 space-y-2">
             <div className="flex items-center gap-3">
-              <span className="bg-pink-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">2</span>
+              <span className="bg-pink-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+                2
+              </span>
               <h3 className="font-semibold text-gray-900 dark:text-gray-100">Zeitpunkt beachten</h3>
             </div>
             <p className="text-sm text-muted pl-11">
-              Ist die Person NOCH NICHT in der Situation? → Situationsauswahl prüfen.
-              Ist sie MITTENDRIN? → Kognitive Veränderung als Standard prüfen.
+              Ist die Person NOCH NICHT in der Situation? → Situationsauswahl prüfen. Ist sie
+              MITTENDRIN? → Kognitive Veränderung als Standard prüfen.
             </p>
           </CardContent>
         </Card>
@@ -319,12 +368,16 @@ function Seite3() {
         <Card>
           <CardContent className="p-5 space-y-2">
             <div className="flex items-center gap-3">
-              <span className="bg-pink-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">3</span>
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">Langfristig vs. kurzfristig</h3>
+              <span className="bg-pink-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+                3
+              </span>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+                Langfristig vs. kurzfristig
+              </h3>
             </div>
             <p className="text-sm text-muted pl-11">
-              Die Frage fragt nach der &quot;effektivsten&quot; Strategie — damit ist LANGFRISTIG gemeint.
-              Kognitive Veränderung ist fast immer langfristig am effektivsten.
+              Die Frage fragt nach der &quot;effektivsten&quot; Strategie — damit ist LANGFRISTIG
+              gemeint. Kognitive Veränderung ist fast immer langfristig am effektivsten.
             </p>
           </CardContent>
         </Card>
@@ -339,19 +392,29 @@ function Seite3() {
         <ul className="space-y-2 text-sm text-pink-700 dark:text-pink-400">
           <li className="flex items-start gap-2">
             <span className="text-pink-500 mt-0.5">1.</span>
-            <span>Im Zweifel: Kognitive Veränderung wählen. Sie ist in ~65% der Fälle richtig.</span>
+            <span>
+              Im Zweifel: Kognitive Veränderung wählen. Sie ist in ~65% der Fälle richtig.
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-pink-500 mt-0.5">2.</span>
-            <span>Reaktionsmodulation ist FAST NIE die beste Wahl — sie unterdrückt nur die Symptome.</span>
+            <span>
+              Reaktionsmodulation ist FAST NIE die beste Wahl — sie unterdrückt nur die Symptome.
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-pink-500 mt-0.5">3.</span>
-            <span>Situationsauswahl ist nur richtig, wenn die Situation tatsächlich vermeidbar UND unnötig ist.</span>
+            <span>
+              Situationsauswahl ist nur richtig, wenn die Situation tatsächlich vermeidbar UND
+              unnötig ist.
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-pink-500 mt-0.5">4.</span>
-            <span>Lies die konkreten Beschreibungen der Optionen genau — manchmal klingt eine Strategie gut, ist aber schlecht formuliert.</span>
+            <span>
+              Lies die konkreten Beschreibungen der Optionen genau — manchmal klingt eine Strategie
+              gut, ist aber schlecht formuliert.
+            </span>
           </li>
         </ul>
       </div>

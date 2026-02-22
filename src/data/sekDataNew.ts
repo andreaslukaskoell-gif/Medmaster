@@ -6,6 +6,8 @@
 export interface EmotionenErkennenTask {
   id: string;
   situation: string;
+  /** 1=leicht (eindeutige Emotionen), 2=mittel (2 plausible Interpretationen), 3=schwer (ambivalente/gemischte Emotionen) */
+  difficulty?: 1 | 2 | 3;
   emotionen: { name: string; correct: "wahrscheinlich" | "unwahrscheinlich" }[];
 }
 
@@ -15,6 +17,8 @@ export interface EmotionenRegulierenTask {
   situation: string;
   emotion: string;
   ziel: string;
+  /** 1=leicht, 2=mittel, 3=schwer */
+  difficulty?: 1 | 2 | 3;
   strategien: { text: string; score: number }[];
 }
 
@@ -22,6 +26,8 @@ export interface EmotionenRegulierenTask {
 export interface SozialesEntscheidenTask {
   id: string;
   dilemma: string;
+  /** 1=leicht (klare Priorität), 2=mittel (2 vertretbare Optionen), 3=schwer (echtes ethisches Dilemma) */
+  difficulty?: 1 | 2 | 3;
   aussagen: { text: string; idealRank: number }[];
 }
 
@@ -32,6 +38,7 @@ export interface SozialesEntscheidenTask {
 const emotionenErkennenSet1: EmotionenErkennenTask[] = [
   {
     id: "ee-1-01",
+    difficulty: 1,
     situation:
       "Eine Medizinstudentin erfährt, dass sie die schwierige Anatomieprüfung beim ersten Antritt bestanden hat, obwohl sie während der Lernphase mit einer schweren Erkältung zu kämpfen hatte.",
     emotionen: [
@@ -44,6 +51,7 @@ const emotionenErkennenSet1: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-1-02",
+    difficulty: 1,
     situation:
       "Ein junger Assistenzarzt muss einem Patienten mitteilen, dass die Biopsie-Ergebnisse auf eine bösartige Erkrankung hindeuten. Es ist das erste Mal, dass er ein solches Gespräch führen muss.",
     emotionen: [
@@ -56,6 +64,7 @@ const emotionenErkennenSet1: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-1-03",
+    difficulty: 1,
     situation:
       "Eine Patientin wartet seit drei Stunden in der Notaufnahme, obwohl sie starke Schmerzen hat. Sie sieht, wie Patienten, die nach ihr gekommen sind, vor ihr behandelt werden.",
     emotionen: [
@@ -68,6 +77,7 @@ const emotionenErkennenSet1: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-1-04",
+    difficulty: 1,
     situation:
       "Ein Chirurg bemerkt während einer Routine-Operation, dass er versehentlich ein Blutgefäß verletzt hat. Die Blutung kann schnell gestillt werden, aber der Patient benötigt nun eine Transfusion.",
     emotionen: [
@@ -80,6 +90,7 @@ const emotionenErkennenSet1: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-1-05",
+    difficulty: 1,
     situation:
       "Eine Krankenschwester beobachtet, wie eine Kollegin von einem Patienten beschimpft und rassistisch beleidigt wird. Die Stationsleitung steht daneben und greift nicht ein.",
     emotionen: [
@@ -92,6 +103,7 @@ const emotionenErkennenSet1: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-1-06",
+    difficulty: 2,
     situation:
       "Ein Student erfährt, dass sein bester Freund den begehrten Forschungsplatz im Labor bekommen hat, für den er sich selbst ebenfalls beworben hatte. Der Freund erzählt ihm begeistert davon.",
     emotionen: [
@@ -104,6 +116,7 @@ const emotionenErkennenSet1: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-1-07",
+    difficulty: 1,
     situation:
       "Eine Ärztin behandelt ein Kind, das offensichtliche Zeichen von Vernachlässigung aufweist. Die Mutter behauptet, das Kind sei einfach ungeschickt und falle oft hin.",
     emotionen: [
@@ -116,6 +129,7 @@ const emotionenErkennenSet1: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-1-08",
+    difficulty: 1,
     situation:
       "Ein älterer Patient, der seit Wochen auf der Intensivstation lag, kann zum ersten Mal wieder selbstständig einige Schritte gehen. Das gesamte Pflegeteam schaut zu.",
     emotionen: [
@@ -128,6 +142,7 @@ const emotionenErkennenSet1: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-1-09",
+    difficulty: 2,
     situation:
       "Ein Medizinstudent hält sein erstes Referat vor dem gesamten Jahrgang. Mitten im Vortrag verliert er den Faden und steht stumm vor dem Publikum. Einige Kommilitonen beginnen zu tuscheln.",
     emotionen: [
@@ -140,6 +155,7 @@ const emotionenErkennenSet1: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-1-10",
+    difficulty: 2,
     situation:
       "Eine Hausärztin erfährt, dass ein langjähriger Patient, den sie gut kannte und mochte, während der Nacht unerwartet zu Hause verstorben ist. Die Familie ruft sie an, um ihr die Nachricht mitzuteilen.",
     emotionen: [
@@ -152,6 +168,7 @@ const emotionenErkennenSet1: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-1-11",
+    difficulty: 1,
     situation:
       "Ein Pharmaziestudent bemerkt bei einem Praktikum, dass ein erfahrener Apotheker einem Kunden ein falsches Medikament aushändigt. Als er ihn darauf anspricht, wird er schroff abgewiesen.",
     emotionen: [
@@ -164,6 +181,7 @@ const emotionenErkennenSet1: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-1-12",
+    difficulty: 1,
     situation:
       "Nach einem langen Arbeitstag in der Kinderchirurgie gelingt es einer Ärztin, ein Neugeborenes mit einer seltenen Fehlbildung erfolgreich zu operieren. Die Eltern weinen vor Freude.",
     emotionen: [
@@ -176,6 +194,7 @@ const emotionenErkennenSet1: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-1-13",
+    difficulty: 2,
     situation:
       "Ein Pflegehelfer wird von seinem Vorgesetzten vor dem gesamten Team kritisiert, weil er angeblich eine Medikamentendosis falsch dokumentiert hat. Später stellt sich heraus, dass der Fehler beim Vorgesetzten selbst lag.",
     emotionen: [
@@ -188,6 +207,7 @@ const emotionenErkennenSet1: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-1-14",
+    difficulty: 3,
     situation:
       "Eine Studentin, die eigentlich Zahnmedizin studieren wollte, wird beim MedAT nur für Humanmedizin zugelassen. Ihre Familie feiert das Ergebnis begeistert, aber sie ist unsicher, ob sie den richtigen Weg einschlägt.",
     emotionen: [
@@ -207,6 +227,7 @@ const emotionenErkennenSet1: EmotionenErkennenTask[] = [
 const emotionenErkennenSet2: EmotionenErkennenTask[] = [
   {
     id: "ee-2-01",
+    difficulty: 1,
     situation:
       "Ein Rettungssanitäter wird zu einem schweren Verkehrsunfall gerufen. Am Unfallort erkennt er, dass eines der Opfer ein enger Freund aus seiner Schulzeit ist.",
     emotionen: [
@@ -219,6 +240,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-2-02",
+    difficulty: 1,
     situation:
       "Eine Hebamme begleitet eine Erstgebärende durch eine lange und schwierige Geburt. Nach 18 Stunden kommt das Kind gesund zur Welt, und die Mutter hält ihr Baby zum ersten Mal im Arm.",
     emotionen: [
@@ -231,6 +253,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-2-03",
+    difficulty: 1,
     situation:
       "Ein Oberarzt stellt fest, dass ein Kollege regelmäßig während der Nachtdienste Alkohol trinkt. Die Krankenhausleitung wurde bereits informiert, hat aber bisher nichts unternommen.",
     emotionen: [
@@ -243,6 +266,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-2-04",
+    difficulty: 1,
     situation:
       "Eine alleinerziehende Mutter erfährt in der Onkologie, dass ihre Chemotherapie angeschlagen hat und der Tumor sich deutlich verkleinert hat. Ihre Kinder warten im Wartezimmer auf sie.",
     emotionen: [
@@ -255,6 +279,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-2-05",
+    difficulty: 1,
     situation:
       "Ein Medizinstudent im Praktischen Jahr wird von einer erfahrenen Oberärztin vor dem gesamten OP-Team gelobt: 'So eine saubere Naht habe ich von einem PJler noch nie gesehen.'",
     emotionen: [
@@ -267,6 +292,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-2-06",
+    difficulty: 1,
     situation:
       "Eine junge Frau wird von ihrer Gynäkologin über eine ungewollte Schwangerschaft informiert. Sie befindet sich gerade mitten im Studium und hat keinen festen Partner.",
     emotionen: [
@@ -279,6 +305,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-2-07",
+    difficulty: 1,
     situation:
       "Ein Physiotherapeut arbeitet seit Monaten mit einem querschnittsgelähmten Patienten. Eines Tages spürt der Patient zum ersten Mal ein Kribbeln in seinen Zehen.",
     emotionen: [
@@ -291,6 +318,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-2-08",
+    difficulty: 2,
     situation:
       "Ein Pfleger entdeckt, dass ein demenzkranker Patient die ganze Nacht allein und verängstigt im dunklen Zimmer lag, weil die Nachtschwester vergessen hatte, das Nachtlicht einzuschalten.",
     emotionen: [
@@ -303,6 +331,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-2-09",
+    difficulty: 1,
     situation:
       "Ein Hausarzt wird von einem Patienten, den er 15 Jahre lang betreut hat, darüber informiert, dass dieser zu einem anderen Arzt wechseln möchte, weil ihm die Wartezeiten zu lang seien.",
     emotionen: [
@@ -315,6 +344,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-2-10",
+    difficulty: 2,
     situation:
       "Eine Studentin sitzt in einer Vorlesung über Pathologie. Der Dozent zeigt detaillierte Bilder von schweren Verbrennungen und erklärt den Fall dabei sachlich und routiniert.",
     emotionen: [
@@ -327,6 +357,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-2-11",
+    difficulty: 2,
     situation:
       "Ein Arzt im Bereitschaftsdienst erhält um 3 Uhr nachts den fünften Anruf wegen Beschwerden, die eindeutig kein Notfall sind. Der Anrufer besteht trotzdem auf einem Hausbesuch.",
     emotionen: [
@@ -339,6 +370,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-2-12",
+    difficulty: 1,
     situation:
       "Eine Medizinstudentin, die ihr Famulatur in einer Palliativstation absolviert, begleitet zum ersten Mal einen Patienten in seinen letzten Stunden. Die Familie des Patienten bittet sie, zu bleiben.",
     emotionen: [
@@ -351,6 +383,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-2-13",
+    difficulty: 1,
     situation:
       "Ein Patient mit chronischen Rückenschmerzen wird nach jahrelanger Odyssee durch verschiedene Arztpraxen endlich von einem Spezialisten ernst genommen, der eine seltene Ursache für seine Beschwerden findet.",
     emotionen: [
@@ -363,6 +396,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
   },
   {
     id: "ee-2-14",
+    difficulty: 3,
     situation:
       "Eine Laborantin wird bei der Beförderung übergangen, obwohl sie die längste Betriebszugehörigkeit und die beste Qualifikation hat. Die Stelle bekommt ein jüngerer Kollege, der mit dem Chef privat befreundet ist.",
     emotionen: [
@@ -382,6 +416,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
 const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
   {
     id: "er-1-01",
+    difficulty: 1,
     situation:
       "Du bist Medizinstudent und hast gerade erfahren, dass du eine wichtige Biochemie-Prüfung nicht bestanden hast. Es war dein zweiter Antritt.",
     emotion: "Enttäuschung und Angst",
@@ -407,6 +442,7 @@ const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-1-02",
+    difficulty: 1,
     situation:
       "Du arbeitest als Krankenpflegerin und ein Patient hat dich söben grundlos angeschrien und beleidigt. Deine Kolleginnen haben alles mitbekommen.",
     emotion: "Ärger und Scham",
@@ -432,6 +468,7 @@ const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-1-03",
+    difficulty: 1,
     situation:
       "Du bist in deinem ersten Praktikum auf der Chirurgie und hast bei einer Blutabnahme die Vene nicht getroffen. Der Oberarzt verdreht vor allen die Augen und übernimmt selbst.",
     emotion: "Scham und Unsicherheit",
@@ -457,6 +494,7 @@ const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-1-04",
+    difficulty: 2,
     situation:
       "Du hast gerade erfahren, dass dein bester Freund aus dem Studium den heiß begehrten Erasmus-Platz in Stockholm bekommen hat — du selbst wurdest abgelehnt.",
     emotion: "Neid und Enttäuschung",
@@ -482,6 +520,7 @@ const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-1-05",
+    difficulty: 2,
     situation:
       "Du bist Turnusarzt in einer Kinderstation. Ein 5-jähriges Kind mit Leukämie weint bitter, weil es nicht nach Hause darf. Du spürst, dass dich die Situation emotional stark mitnimmt.",
     emotion: "Trauer und Hilflosigkeit",
@@ -507,6 +546,7 @@ const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-1-06",
+    difficulty: 1,
     situation:
       "Dein Mitbewohner hat sich dein teures Stethoskop ohne zu fragen ausgeliehen und es beschädigt zurückgebracht. Er entschuldigt sich beiläufig.",
     emotion: "Ärger",
@@ -532,6 +572,7 @@ const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-1-07",
+    difficulty: 1,
     situation:
       "Du bist als Assistenzarzt bei einer Teambesprechung und eine ältere Kollegin weist deinen Verbesserungsvorschlag vor allen anderen als 'naiv und realitätsfern' zurück.",
     emotion: "Ärger und Scham",
@@ -557,6 +598,7 @@ const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-1-08",
+    difficulty: 1,
     situation:
       "Du hast versehentlich eine vertrauliche Patientenakte auf dem Drucker im allgemein zugänglichen Bereich liegen lassen. Eine Kollegin hat sie gefunden und dich darauf angesprochen.",
     emotion: "Schuld und Angst",
@@ -582,6 +624,7 @@ const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-1-09",
+    difficulty: 2,
     situation:
       "Du bist Medizinstudentin und deine Lerngruppe hat sich ohne dich zu einem intensiven Lernwochenende verabredet. Du erfährst erst davon, als alle schon dort sind.",
     emotion: "Trauer und Eifersucht",
@@ -607,6 +650,7 @@ const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-1-10",
+    difficulty: 1,
     situation:
       "Du bist Assistenzarzt und musst am Wochenende einen Nachtdienst übernehmen, obwohl du eigentlich zur Hochzeit deines besten Freundes eingeladen bist. Der Dienstplan ist nicht mehr änderbar.",
     emotion: "Enttäuschung und Ärger",
@@ -632,6 +676,7 @@ const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-1-11",
+    difficulty: 1,
     situation:
       "Du bist in einer mündlichen Prüfung und der Prüfer stellt dir eine Frage zu einem Thema, das laut Fragenkatalog gar nicht prüfungsrelevant sein sollte. Du weißt die Antwort nicht.",
     emotion: "Angst und Ärger",
@@ -657,6 +702,7 @@ const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-1-12",
+    difficulty: 1,
     situation:
       "Du bist Ärztin und hast einer Patientin versehentlich eine falsche Diagnose mitgeteilt, bevor alle Laborergebnisse vorlagen. Die Patientin hat sich große Sorgen gemacht.",
     emotion: "Schuld und Scham",
@@ -689,6 +735,7 @@ const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
 const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
   {
     id: "er-2-01",
+    difficulty: 2,
     situation:
       "Du bist Pflegekraft und ein Angehöriger eines verstorbenen Patienten gibt dir die Schuld am Tod seines Vaters, obwohl du alles korrekt gemacht hast.",
     emotion: "Ärger und Trauer",
@@ -714,6 +761,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-2-02",
+    difficulty: 1,
     situation:
       "Du lernst seit Wochen intensiv für den MedAT und hast das Gefühl, dass du trotzdem nicht genug weißt. Die Prüfung ist in drei Tagen.",
     emotion: "Angst und Überforderung",
@@ -739,6 +787,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-2-03",
+    difficulty: 1,
     situation:
       "Du bist Assistenzarzt und wirst zum zweiten Mal in Folge für die unbeliebte Weihnachtsschicht eingeteilt, obwohl andere Kolleg:innen noch nie an Feiertagen arbeiten mussten.",
     emotion: "Ärger und Frustration",
@@ -764,6 +813,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-2-04",
+    difficulty: 3,
     situation:
       "Du bist Studentin und hast gerade eine Nachricht erhalten, dass dein Vater ins Krankenhaus eingeliefert wurde. Du sitzt aber gerade in einer wichtigen Prüfung.",
     emotion: "Angst und Hilflosigkeit",
@@ -789,6 +839,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-2-05",
+    difficulty: 3,
     situation:
       "Du bist Krankenpfleger und musst einen aggressiven Patienten mit psychiatrischer Vorgeschichte fixieren. Der Patient weint und fleht dich an, es nicht zu tun.",
     emotion: "Mitgefühl und innerer Konflikt",
@@ -814,6 +865,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-2-06",
+    difficulty: 1,
     situation:
       "Du bist Ärztin und eine Patientin, die du lange betreut hast, bricht die Chemotherapie ab, weil sie sich auf eine Alternativbehandlung mit Heilsteinen verlassen möchte.",
     emotion: "Frustration und Sorge",
@@ -839,6 +891,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-2-07",
+    difficulty: 1,
     situation:
       "Du hast als Medizinstudent in einem Referat einen schwerwiegenden fachlichen Fehler gemacht. Ein Kommilitone korrigiert dich vor der ganzen Gruppe auf eine herablassende Art.",
     emotion: "Scham und Ärger",
@@ -864,6 +917,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-2-08",
+    difficulty: 2,
     situation:
       "Du bist Hausärztin und ein Patient kommt zum wiederholten Mal, ohne die besprochenen Lebensstiländerungen umgesetzt zu haben. Sein Blutdruck ist weiterhin gefährlich hoch.",
     emotion: "Frustration und Sorge",
@@ -889,6 +943,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-2-09",
+    difficulty: 2,
     situation:
       "Du bist Medizinstudentin und deine Mutter ruft dich jeden Abend an, um sich über dein Studium zu erkundigen. Du fühlst dich kontrolliert und unter Druck gesetzt.",
     emotion: "Ärger und Schuldgefühle",
@@ -914,6 +969,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-2-10",
+    difficulty: 3,
     situation:
       "Du bist Pfleger und sollst eine Patientin waschen, die sich vehement weigert und dabei weint. Sie hat einen kulturellen Hintergrund, in dem es ihr unangemessen erscheint, von einem männlichen Pfleger gewaschen zu werden.",
     emotion: "Unsicherheit und Mitgefühl",
@@ -939,6 +995,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-2-11",
+    difficulty: 2,
     situation:
       "Du bist Assistenzärztin und hast nach 24 Stunden Dienst einen schwerwiegenden Dokumentationsfehler gemacht, weil du erschöpft warst. Dein Oberarzt hat dich darauf angesprochen.",
     emotion: "Schuld und Erschöpfung",
@@ -964,6 +1021,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
   },
   {
     id: "er-2-12",
+    difficulty: 1,
     situation:
       "Du bist ein erfahrener Pfleger und ein neuer, junger Arzt gibt dir eine Anweisung, die du für fachlich falsch hältst. Sie betrifft die Medikamentendosis eines Patienten.",
     emotion: "Ärger und Besorgnis",
@@ -996,6 +1054,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
 const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
   {
     id: "se-1-01",
+    difficulty: 1,
     dilemma:
       "Ein Arzt behandelt in einer überfüllten Notaufnahme gleichzeitig mehrere Patienten. Ein älterer Mann mit Brustschmerzen wartet seit einer Stunde, als ein prominenter Politiker mit leichten Schürfwunden gebracht wird. Der Klinikdirektor ruft an und bittet, den Politiker bevorzugt zu behandeln.",
     aussagen: [
@@ -1023,6 +1082,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-1-02",
+    difficulty: 3,
     dilemma:
       "Eine Ärztin stellt fest, dass ein 16-jähriger Patient regelmäßig Cannabis konsumiert. Der Patient bittet sie eindringlich, seinen Eltern nichts davon zu sagen. Er versichert, den Konsum reduzieren zu wollen.",
     aussagen: [
@@ -1050,6 +1110,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-1-03",
+    difficulty: 3,
     dilemma:
       "In einem kleinen Krankenhaus steht nur eine Beatmungsmaschine zur Verfügung. Zwei Patienten benötigen sie gleichzeitig: eine 80-jährige Frau mit Lungenversagen und ein 35-jähriger Familienvater mit COVID-19-Pneumonie.",
     aussagen: [
@@ -1077,6 +1138,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-1-04",
+    difficulty: 1,
     dilemma:
       "Ein Kollege auf der Chirurgie riecht regelmäßig nach Alkohol, wirkt aber bei der Arbeit unauffällig. Andere Kolleg:innen scheinen es ebenfalls bemerkt zu haben, sagen aber nichts.",
     aussagen: [
@@ -1104,6 +1166,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-1-05",
+    difficulty: 3,
     dilemma:
       "Eine Patientin mit einer unheilbaren Krankheit im Endstadium bittet ihren Arzt, ihr beim Sterben zu helfen. In Österreich ist aktive Sterbehilfe verboten, seit 2022 gibt es aber die Möglichkeit des assistierten Suizids.",
     aussagen: [
@@ -1131,6 +1194,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-1-06",
+    difficulty: 3,
     dilemma:
       "Eine Ärztin erfährt bei einem Routinecheck, dass eine Patientin, die als Busfahrerin arbeitet, an unkontrollierten epileptischen Anfällen leidet. Die Patientin weigert sich, ihren Arbeitgeber zu informieren, aus Angst, ihren Job zu verlieren.",
     aussagen: [
@@ -1158,6 +1222,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-1-07",
+    difficulty: 1,
     dilemma:
       "Ein Medizinstudent beobachtet, wie ein älterer Arzt bei einer Untersuchung die Grenzen der körperlichen Untersuchung überschreitet und eine Patientin unangemessen berührt. Die Patientin wirkt verstört, sagt aber nichts.",
     aussagen: [
@@ -1185,6 +1250,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-1-08",
+    difficulty: 1,
     dilemma:
       "Ein Pharmaunternehmen bietet einem Arzt eine gesponserte Luxusreise zu einer Konferenz an, wenn er ihr neues Medikament häufiger verschreibt. Das Medikament ist zugelassen, aber nicht besser als bestehende günstigere Alternativen.",
     aussagen: [
@@ -1212,6 +1278,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-1-09",
+    difficulty: 3,
     dilemma:
       "Ein Ehepaar kommt in die genetische Beratung. Die Frau ist in der 12. Woche schwanger. Ein Gentest zeigt, dass das Kind mit hoher Wahrscheinlichkeit das Down-Syndrom haben wird. Das Paar ist uneinig: Sie will das Kind behalten, er möchte einen Abbruch.",
     aussagen: [
@@ -1239,6 +1306,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-1-10",
+    difficulty: 2,
     dilemma:
       "Ein Arzt in einer ländlichen Gegend ist der einzige Mediziner weit und breit. Er möchte in die Stadt ziehen, um bessere Karrieremöglichkeiten wahrzunehmen. Die Gemeinde hat ihn gebeten zu bleiben.",
     aussagen: [
@@ -1266,6 +1334,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-1-11",
+    difficulty: 1,
     dilemma:
       "Eine Krankenschwester erfährt, dass das Krankenhaus, in dem sie arbeitet, aus Kostengründen billigere, aber qualitativ schlechtere Materialien für Operationen bestellt hat. Der Chefarzt hat dies genehmigt.",
     aussagen: [
@@ -1293,6 +1362,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-1-12",
+    difficulty: 3,
     dilemma:
       "Ein Arzt soll einen Organtransplantationsbericht für einen Patienten schreiben. Er weiß, dass der Patient schwerer Alkoholiker ist und bei der Transplantationskommission keine Chance hätte, wenn dies bekannt wird. Der Patient hat eine Familie mit drei kleinen Kindern.",
     aussagen: [
@@ -1320,6 +1390,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-1-13",
+    difficulty: 1,
     dilemma:
       "Während einer Pandemie werden Impfstoffe knapp. Ein Arzt hat die Möglichkeit, seine eigene Familie bevorzugt impfen zu lassen, obwohl sie nicht zur priorisierten Risikogruppe gehört.",
     aussagen: [
@@ -1347,6 +1418,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-1-14",
+    difficulty: 1,
     dilemma:
       "Eine Ärztin behandelt in ihrer Privatpraxis eine wohlhabende Patientin. Die Patientin möchte ein medizinisch nicht notwendiges Antibiotikum-Rezept für ihre Reise. Sie droht, die Praxis zu wechseln, wenn sie es nicht bekommt.",
     aussagen: [
@@ -1381,6 +1453,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
 const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
   {
     id: "se-2-01",
+    difficulty: 3,
     dilemma:
       "Ein Krankenhaus hat ein begrenztes Budget für neue Geräte. Es kann entweder ein modernes MRT-Gerät kaufen, das vielen Patienten zugutekäme, oder ein spezielles Beatmungsgerät für die Kinderintensivstation, das wenigen, aber schwer kranken Kindern das Leben retten könnte.",
     aussagen: [
@@ -1408,6 +1481,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-2-02",
+    difficulty: 2,
     dilemma:
       "Ein Arzt hat einen Patienten mit einer seltenen genetischen Krankheit. Ein Pharmaunternehmen bietet ein experimentelles Medikament an, das aber erst in Phase II der klinischen Studien ist. Der Patient hat keine andere Behandlungsmöglichkeit mehr.",
     aussagen: [
@@ -1435,6 +1509,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-2-03",
+    difficulty: 3,
     dilemma:
       "Eine Ärztin behandelt einen Patienten, der regelmäßig häusliche Gewalt gegen seine Partnerin ausübt. Der Patient vertraut sich ihr an und bittet um Hilfe bei seiner Wutproblematik. Die Ärztin weiß, dass die Partnerin ebenfalls Patientin in ihrer Praxis ist.",
     aussagen: [
@@ -1462,6 +1537,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-2-04",
+    difficulty: 1,
     dilemma:
       "Ein junger Assistenzarzt wird von seinem Oberarzt systematisch gemobbt: Er bekommt die schlechtesten Dienste, wird vor dem Team bloßgestellt und von Fortbildungen ausgeschlossen. Wenn er sich beschwert, riskiert er eine schlechte Beurteilung.",
     aussagen: [
@@ -1489,6 +1565,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-2-05",
+    difficulty: 2,
     dilemma:
       "Eine 15-jährige Patientin bittet ihre Gynäkologin um die Pille. Sie möchte nicht, dass ihre Eltern davon erfahren. Die Ärztin hält sie für reif genug, die Entscheidung selbst zu treffen.",
     aussagen: [
@@ -1516,6 +1593,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-2-06",
+    difficulty: 1,
     dilemma:
       "Ein Forscher an einer Universität hat vielversprechende Ergebnisse bei einer Studie über ein neues Krebsmedikament. Allerdings hat er festgestellt, dass einige Datenpunkte fehlerhaft sind. Wenn er die fehlerhaften Daten korrigiert, werden die Ergebnisse weniger beeindruckend und die Studie wird möglicherweise nicht publiziert.",
     aussagen: [
@@ -1543,6 +1621,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-2-07",
+    difficulty: 2,
     dilemma:
       "Eine Gruppe von Medizinstudenten bemerkt, dass ein Kommilitone bei einer Online-Prüfung schummelt, indem er ein Smartphone benutzt. Der Kommilitone hat finanzielle Probleme und würde bei Nichtbestehen sein Stipendium verlieren.",
     aussagen: [
@@ -1570,6 +1649,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-2-08",
+    difficulty: 1,
     dilemma:
       "Ein Kinderarzt behandelt ein Kind einer Familie, die aus religiösen Gründen eine Bluttransfusion ablehnt. Das Kind hat nach einem Unfall viel Blut verloren und braucht dringend die Transfusion, um zu überleben.",
     aussagen: [
@@ -1597,6 +1677,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-2-09",
+    difficulty: 2,
     dilemma:
       "Ein Pflegeheim hat nicht genug Personal, um alle Bewohner angemessen zu versorgen. Die Pflegedienstleitung steht vor der Entscheidung, ob sie die Situation gegenüber den Angehörigen und der Öffentlichkeit transparent macht, was dem Ruf des Heims schaden könnte.",
     aussagen: [
@@ -1624,6 +1705,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-2-10",
+    difficulty: 2,
     dilemma:
       "Eine Ärztin wird von einem Patienten gebeten, ein Gutachten zu erstellen, in dem seine Arbeitsunfähigkeit bestätigt wird. Sie hat den Verdacht, dass der Patient simuliert, kann es aber nicht definitiv beweisen.",
     aussagen: [
@@ -1651,6 +1733,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-2-11",
+    difficulty: 3,
     dilemma:
       "Während einer klinischen Studie stellt ein Forscher fest, dass das Medikament in der Kontrollgruppe (Placebo) weniger wirksam ist als erwartet, was bedeutet, dass einige Patienten in der Placebo-Gruppe eine weniger wirksame Behandlung erhalten. Die Studie ist aber noch nicht abgeschlossen.",
     aussagen: [
@@ -1678,6 +1761,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-2-12",
+    difficulty: 3,
     dilemma:
       "Ein Arzt arbeitet in einem Krisengebiet für eine Hilfsorganisation. Er hat nur begrenzte Medikamente und muss entscheiden, ob er sie an die vielen leicht Erkrankten verteilt oder an die wenigen Schwerkranken, die ohne Medikamente sterben werden.",
     aussagen: [
@@ -1705,6 +1789,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-2-13",
+    difficulty: 1,
     dilemma:
       "Eine Psychologin, die in einer psychiatrischen Klinik arbeitet, erfährt von einem Patienten, dass er plant, nach seiner Entlassung eine bestimmte Person zu verletzen. Der Patient wirkt bei der Aussage ruhig und gefasst.",
     aussagen: [
@@ -1732,6 +1817,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
   },
   {
     id: "se-2-14",
+    difficulty: 1,
     dilemma:
       "Ein Krankenhaus plant, kostenintensive Behandlungen für ältere Patienten über 85 Jahren einzuschränken, um das Budget für andere Bereiche verwenden zu können. Ein Ethikkomitee soll darüber beraten.",
     aussagen: [

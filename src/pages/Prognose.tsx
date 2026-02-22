@@ -5,6 +5,7 @@ import { useStore, type QuizResult } from "@/store/useStore";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { usePageTitle } from "@/hooks/usePageTitle";
 import {
   TrendingUp,
   Target,
@@ -66,10 +67,38 @@ const SECTION_META: {
   icon: ReactNode;
   link: string;
 }[] = [
-  { key: "bms", label: "BMS", weight: 0.4, maxPoints: 122.4, icon: <BookOpen className="w-5 h-5" />, link: "/bms" },
-  { key: "kff", label: "KFF", weight: 0.4, maxPoints: 122.4, icon: <Brain className="w-5 h-5" />, link: "/kff" },
-  { key: "tv", label: "TV", weight: 0.1, maxPoints: 30.6, icon: <MessageSquare className="w-5 h-5" />, link: "/tv" },
-  { key: "sek", label: "SEK", weight: 0.1, maxPoints: 30.6, icon: <Heart className="w-5 h-5" />, link: "/sek" },
+  {
+    key: "bms",
+    label: "BMS",
+    weight: 0.4,
+    maxPoints: 122.4,
+    icon: <BookOpen className="w-5 h-5" />,
+    link: "/bms",
+  },
+  {
+    key: "kff",
+    label: "KFF",
+    weight: 0.4,
+    maxPoints: 122.4,
+    icon: <Brain className="w-5 h-5" />,
+    link: "/kff",
+  },
+  {
+    key: "tv",
+    label: "TV",
+    weight: 0.1,
+    maxPoints: 30.6,
+    icon: <MessageSquare className="w-5 h-5" />,
+    link: "/tv",
+  },
+  {
+    key: "sek",
+    label: "SEK",
+    weight: 0.1,
+    maxPoints: 30.6,
+    icon: <Heart className="w-5 h-5" />,
+    link: "/sek",
+  },
 ];
 
 const UNI_CUTOFFS: { name: string; cutoff: number }[] = [
@@ -85,8 +114,7 @@ function ScoreGauge({ score, max, pct }: { score: number; max: number; pct: numb
   const r = 80;
   const circumference = 2 * Math.PI * r;
   const offset = circumference - (pct / 100) * circumference;
-  const color =
-    pct >= 80 ? "text-green-500" : pct >= 60 ? "text-yellow-500" : "text-red-500";
+  const color = pct >= 80 ? "text-green-500" : pct >= 60 ? "text-yellow-500" : "text-red-500";
   const bgColor =
     pct >= 80 ? "stroke-green-500" : pct >= 60 ? "stroke-yellow-500" : "stroke-red-500";
 
@@ -118,13 +146,33 @@ function ScoreGauge({ score, max, pct }: { score: number; max: number; pct: numb
           style={{ transition: "stroke-dashoffset 1s ease-out" }}
         />
         {/* Score text */}
-        <text x="100" y="90" textAnchor="middle" className={`fill-current ${color} text-3xl font-bold`} fontSize="32" fontWeight="700">
+        <text
+          x="100"
+          y="90"
+          textAnchor="middle"
+          className={`fill-current ${color} text-3xl font-bold`}
+          fontSize="32"
+          fontWeight="700"
+        >
           {Math.round(score)}
         </text>
-        <text x="100" y="112" textAnchor="middle" className="fill-gray-500 dark:fill-gray-400" fontSize="14">
+        <text
+          x="100"
+          y="112"
+          textAnchor="middle"
+          className="fill-gray-500 dark:fill-gray-400"
+          fontSize="14"
+        >
           von {max}
         </text>
-        <text x="100" y="134" textAnchor="middle" className={`fill-current ${color} font-semibold`} fontSize="18" fontWeight="600">
+        <text
+          x="100"
+          y="134"
+          textAnchor="middle"
+          className={`fill-current ${color} font-semibold`}
+          fontSize="18"
+          fontWeight="600"
+        >
           {pct.toFixed(1)}%
         </text>
       </svg>
@@ -136,8 +184,7 @@ function ScoreGauge({ score, max, pct }: { score: number; max: number; pct: numb
 
 function UniCard({ uni, scorePct }: { uni: { name: string; cutoff: number }; scorePct: number }) {
   const diff = scorePct - uni.cutoff;
-  const status: UniChance["status"] =
-    diff > 5 ? "green" : diff >= -5 ? "yellow" : "red";
+  const status: UniChance["status"] = diff > 5 ? "green" : diff >= -5 ? "yellow" : "red";
 
   const statusConfig = {
     green: {
@@ -185,10 +232,8 @@ function UniCard({ uni, scorePct }: { uni: { name: string; cutoff: number }; sco
 /* ── Section Card ─────────────────────────────── */
 
 function SectionCard({ s }: { s: SectionScore }) {
-  const color =
-    s.pct >= 80 ? "text-green-600" : s.pct >= 60 ? "text-yellow-600" : "text-red-500";
-  const barClass =
-    s.pct >= 80 ? "bg-green-500" : s.pct >= 60 ? "bg-yellow-500" : "bg-red-500";
+  const color = s.pct >= 80 ? "text-green-600" : s.pct >= 60 ? "text-yellow-600" : "text-red-500";
+  const barClass = s.pct >= 80 ? "bg-green-500" : s.pct >= 60 ? "bg-yellow-500" : "bg-red-500";
 
   // What would 90% give?
   const potentialPoints = s.weight * 0.9 * MAX_TOTAL;
@@ -208,7 +253,8 @@ function SectionCard({ s }: { s: SectionScore }) {
               <span className={`text-xl font-bold ${color}`}>{s.pct.toFixed(0)}%</span>
             </div>
             <div className="text-xs text-gray-500 dark:text-gray-400">
-              {s.points.toFixed(1)} / {s.maxPoints.toFixed(1)} Punkte (Gewicht {(s.weight * 100).toFixed(0)}%)
+              {s.points.toFixed(1)} / {s.maxPoints.toFixed(1)} Punkte (Gewicht{" "}
+              {(s.weight * 100).toFixed(0)}%)
             </div>
           </div>
         </div>
@@ -262,6 +308,7 @@ function EmptyState() {
 /* ── Main Component ───────────────────────────── */
 
 export default function Prognose() {
+  usePageTitle("Prognose");
   const { quizResults } = useStore();
 
   const totalAnswered = useMemo(
@@ -283,10 +330,7 @@ export default function Prognose() {
     });
   }, [quizResults]);
 
-  const totalScore = useMemo(
-    () => sections.reduce((sum, s) => sum + s.points, 0),
-    [sections]
-  );
+  const totalScore = useMemo(() => sections.reduce((sum, s) => sum + s.points, 0), [sections]);
   const totalPct = (totalScore / MAX_TOTAL) * 100;
 
   const weakest = useMemo(() => {
@@ -383,9 +427,7 @@ export default function Prognose() {
               <strong>{weakest.pct.toFixed(0)}%</strong>. Hier liegt dein größtes
               Verbesserungspotenzial.
             </p>
-            <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-              {tips[weakest.key]}
-            </p>
+            <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{tips[weakest.key]}</p>
             <Link
               to={weakest.link}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-600 text-white hover:bg-primary-700 transition font-medium text-sm"

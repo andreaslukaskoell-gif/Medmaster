@@ -28,7 +28,15 @@ function Merksatz({ children }: { children: ReactNode }) {
   );
 }
 
-function LetterExample({ letters, solution, description }: { letters: string; solution: string; description: string }) {
+function LetterExample({
+  letters,
+  solution,
+  description,
+}: {
+  letters: string;
+  solution: string;
+  description: string;
+}) {
   return (
     <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
       <div className="flex items-center gap-2 mb-2 flex-wrap">
@@ -59,9 +67,9 @@ function Seite1() {
           Was ist Wortfl&uuml;ssigkeit?
         </h2>
         <p className="text-sm text-muted">
-          Im Untertest &quot;Wortfl&uuml;ssigkeit&quot; des MedAT bekommst du eine Gruppe von durchmischten
-          Buchstaben. Deine Aufgabe: Bilde daraus ein sinnvolles deutsches Wort. Nicht alle
-          Buchstaben m&uuml;ssen verwendet werden!
+          Im Untertest &quot;Wortfl&uuml;ssigkeit&quot; des MedAT bekommst du eine Gruppe von
+          durchmischten Buchstaben. Deine Aufgabe: Bilde daraus ein sinnvolles deutsches Wort. Nicht
+          alle Buchstaben m&uuml;ssen verwendet werden!
         </p>
       </div>
 
@@ -69,16 +77,31 @@ function Seite1() {
         <h3 className="font-semibold text-orange-800 dark:text-orange-300 mb-3">Aufgabenformat</h3>
         <ul className="space-y-2 text-sm text-orange-700 dark:text-orange-400">
           <li className="flex items-start gap-2">
-            <span className="bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">1</span>
-            <span>Du siehst eine Buchstabengruppe, z.B. <span className="font-mono font-bold">R T E G A N</span></span>
+            <span className="bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+              1
+            </span>
+            <span>
+              Du siehst eine Buchstabengruppe, z.B.{" "}
+              <span className="font-mono font-bold">R T E G A N</span>
+            </span>
           </li>
           <li className="flex items-start gap-2">
-            <span className="bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">2</span>
-            <span>Du bildest daraus ein sinnvolles Wort: <span className="font-bold text-green-600 dark:text-green-400">GARTEN</span></span>
+            <span className="bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+              2
+            </span>
+            <span>
+              Du bildest daraus ein sinnvolles Wort:{" "}
+              <span className="font-bold text-green-600 dark:text-green-400">GARTEN</span>
+            </span>
           </li>
           <li className="flex items-start gap-2">
-            <span className="bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">3</span>
-            <span>Bei schwierigen Aufgaben sind 1-2 <span className="font-bold">Extra-Buchstaben</span> dabei, die nicht zum Wort geh&ouml;ren</span>
+            <span className="bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+              3
+            </span>
+            <span>
+              Bei schwierigen Aufgaben sind 1-2 <span className="font-bold">Extra-Buchstaben</span>{" "}
+              dabei, die nicht zum Wort geh&ouml;ren
+            </span>
           </li>
         </ul>
       </div>
@@ -89,22 +112,41 @@ function Seite1() {
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <span className="inline-block text-xs font-medium px-2 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 mb-2">Leicht</span>
-            <LetterExample letters="UAMB" solution="BAUM" description="4 Buchstaben, alle werden verwendet" />
+            <span className="inline-block text-xs font-medium px-2 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 mb-2">
+              Leicht
+            </span>
+            <LetterExample
+              letters="UAMB"
+              solution="BAUM"
+              description="4 Buchstaben, alle werden verwendet"
+            />
           </div>
           <div>
-            <span className="inline-block text-xs font-medium px-2 py-1 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 mb-2">Mittel</span>
-            <LetterExample letters="RTEGAN" solution="GARTEN" description="6 Buchstaben, alle werden verwendet" />
+            <span className="inline-block text-xs font-medium px-2 py-1 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 mb-2">
+              Mittel
+            </span>
+            <LetterExample
+              letters="RTEGAN"
+              solution="GARTEN"
+              description="6 Buchstaben, alle werden verwendet"
+            />
           </div>
           <div>
-            <span className="inline-block text-xs font-medium px-2 py-1 rounded-full bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 mb-2">Schwer</span>
-            <LetterExample letters="HCSSIENASWFTK" solution="WISSENSCHAFT" description="13 Buchstaben, davon 1 Extra (K)" />
+            <span className="inline-block text-xs font-medium px-2 py-1 rounded-full bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 mb-2">
+              Schwer
+            </span>
+            <LetterExample
+              letters="HCSSIENASWFTK"
+              solution="WISSENSCHAFT"
+              description="13 Buchstaben, davon 1 Extra (K)"
+            />
           </div>
         </div>
       </div>
 
       <Merksatz>
-        Im echten MedAT hast du ca. 20 Sekunden pro Wort. Schnelligkeit und Mustererkennung sind entscheidend!
+        Im echten MedAT hast du ca. 20 Sekunden pro Wort. Schnelligkeit und Mustererkennung sind
+        entscheidend!
       </Merksatz>
     </div>
   );
@@ -119,41 +161,68 @@ function Seite2() {
           Strategien f&uuml;r Wortfl&uuml;ssigkeit
         </h2>
         <p className="text-sm text-muted">
-          Mit den richtigen Strategien l&ouml;st du Wortfl&uuml;ssigkeit-Aufgaben schnell und sicher.
+          Mit den richtigen Strategien l&ouml;st du Wortfl&uuml;ssigkeit-Aufgaben schnell und
+          sicher.
         </p>
       </div>
 
       {/* Strategy 1 */}
       <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
-          <span className="bg-orange-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">1</span>
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">H&auml;ufige Anfangs- und Endsilben suchen</h3>
+          <span className="bg-orange-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+            1
+          </span>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+            H&auml;ufige Anfangs- und Endsilben suchen
+          </h3>
         </div>
         <p className="text-sm text-muted pl-11">
-          Suche zuerst nach typischen deutschen Wortanf&auml;ngen und -endungen. Das schr&auml;nkt die M&ouml;glichkeiten sofort ein.
+          Suche zuerst nach typischen deutschen Wortanf&auml;ngen und -endungen. Das schr&auml;nkt
+          die M&ouml;glichkeiten sofort ein.
         </p>
         <div className="pl-11 grid grid-cols-2 gap-3">
           <div className="bg-orange-50 dark:bg-orange-900/15 rounded-lg p-3">
-            <p className="text-xs font-semibold text-orange-700 dark:text-orange-400 mb-1.5">Typische Anfangssilben</p>
+            <p className="text-xs font-semibold text-orange-700 dark:text-orange-400 mb-1.5">
+              Typische Anfangssilben
+            </p>
             <div className="flex flex-wrap gap-1">
-              {["VER-", "BE-", "GE-", "ER-", "AN-", "AUF-", "AUS-", "EIN-", "UM-", "UN-"].map(s => (
-                <span key={s} className="text-xs font-mono bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 px-1.5 py-0.5 rounded">{s}</span>
-              ))}
+              {["VER-", "BE-", "GE-", "ER-", "AN-", "AUF-", "AUS-", "EIN-", "UM-", "UN-"].map(
+                (s) => (
+                  <span
+                    key={s}
+                    className="text-xs font-mono bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 px-1.5 py-0.5 rounded"
+                  >
+                    {s}
+                  </span>
+                )
+              )}
             </div>
           </div>
           <div className="bg-orange-50 dark:bg-orange-900/15 rounded-lg p-3">
-            <p className="text-xs font-semibold text-orange-700 dark:text-orange-400 mb-1.5">Typische Endsilben</p>
+            <p className="text-xs font-semibold text-orange-700 dark:text-orange-400 mb-1.5">
+              Typische Endsilben
+            </p>
             <div className="flex flex-wrap gap-1">
-              {["-UNG", "-KEIT", "-HEIT", "-LICH", "-TION", "-ISCH", "-SCHAFT", "-MENT"].map(s => (
-                <span key={s} className="text-xs font-mono bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 px-1.5 py-0.5 rounded">{s}</span>
-              ))}
+              {["-UNG", "-KEIT", "-HEIT", "-LICH", "-TION", "-ISCH", "-SCHAFT", "-MENT"].map(
+                (s) => (
+                  <span
+                    key={s}
+                    className="text-xs font-mono bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 px-1.5 py-0.5 rounded"
+                  >
+                    {s}
+                  </span>
+                )
+              )}
             </div>
           </div>
         </div>
         <div className="pl-11 bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3 text-sm">
-          <p className="font-mono">Buchstaben: <span className="font-bold">G N U D L H A N B E</span></p>
+          <p className="font-mono">
+            Buchstaben: <span className="font-bold">G N U D L H A N B E</span>
+          </p>
           <p className="mt-1 text-orange-600 dark:text-orange-400">
-            &rarr; Du siehst BE- und -UNG &rarr; <span className="font-bold text-green-600 dark:text-green-400">BEHANDLUNG</span>
+            &rarr; Du siehst BE- und -UNG &rarr;{" "}
+            <span className="font-bold text-green-600 dark:text-green-400">BEHANDLUNG</span>
           </p>
         </div>
       </div>
@@ -161,8 +230,12 @@ function Seite2() {
       {/* Strategy 2 */}
       <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
-          <span className="bg-orange-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">2</span>
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">Vokale zuerst identifizieren</h3>
+          <span className="bg-orange-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+            2
+          </span>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+            Vokale zuerst identifizieren
+          </h3>
         </div>
         <p className="text-sm text-muted pl-11">
           Markiere zuerst alle Vokale (A, E, I, O, U). Die Vokal-Konsonant-Struktur gibt dir einen
@@ -170,24 +243,31 @@ function Seite2() {
         </p>
         <div className="pl-11 bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3 text-sm">
           <p className="font-mono">
-            Buchstaben: <span className="text-orange-600 dark:text-orange-400 font-bold">E</span> R K{" "}
-            <span className="text-orange-600 dark:text-orange-400 font-bold">A</span> N H{" "}
+            Buchstaben: <span className="text-orange-600 dark:text-orange-400 font-bold">E</span> R
+            K <span className="text-orange-600 dark:text-orange-400 font-bold">A</span> N H{" "}
             <span className="text-orange-600 dark:text-orange-400 font-bold">U</span> S K N{" "}
             <span className="text-orange-600 dark:text-orange-400 font-bold">A</span>
           </p>
-          <p className="mt-1">Vokale: E, A, U, A &rarr; Muster _A__E__AU_ &rarr; <span className="font-bold text-green-600 dark:text-green-400">KRANKENHAUS</span></p>
+          <p className="mt-1">
+            Vokale: E, A, U, A &rarr; Muster _A__E__AU_ &rarr;{" "}
+            <span className="font-bold text-green-600 dark:text-green-400">KRANKENHAUS</span>
+          </p>
         </div>
       </div>
 
       {/* Strategy 3 */}
       <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
-          <span className="bg-orange-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">3</span>
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">H&auml;ufige Buchstabenkombinationen erkennen</h3>
+          <span className="bg-orange-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+            3
+          </span>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+            H&auml;ufige Buchstabenkombinationen erkennen
+          </h3>
         </div>
         <p className="text-sm text-muted pl-11">
-          Bestimmte Buchstabenkombinationen kommen im Deutschen extrem h&auml;ufig vor.
-          Wenn du sie siehst, bilde daraus den Kern des Worts.
+          Bestimmte Buchstabenkombinationen kommen im Deutschen extrem h&auml;ufig vor. Wenn du sie
+          siehst, bilde daraus den Kern des Worts.
         </p>
         <div className="pl-11 grid grid-cols-3 gap-2">
           {[
@@ -219,7 +299,9 @@ function Seite2() {
           </li>
           <li className="flex items-start gap-2">
             <span className="text-orange-500 mt-0.5">2.</span>
-            <span>Bei Blockade: sofort weiter zum n&auml;chsten Wort, am Ende zur&uuml;ckkommen.</span>
+            <span>
+              Bei Blockade: sofort weiter zum n&auml;chsten Wort, am Ende zur&uuml;ckkommen.
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-orange-500 mt-0.5">3.</span>
@@ -241,7 +323,10 @@ function Seite2() {
         <ul className="space-y-2 text-sm text-orange-700 dark:text-orange-400">
           <li className="flex items-start gap-2">
             <span className="text-orange-500 mt-0.5">1.</span>
-            <span>Lies die Buchstaben laut vor — manchmal &quot;h&ouml;rst&quot; du das Wort schneller als du es siehst.</span>
+            <span>
+              Lies die Buchstaben laut vor — manchmal &quot;h&ouml;rst&quot; du das Wort schneller
+              als du es siehst.
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-orange-500 mt-0.5">2.</span>
@@ -249,18 +334,23 @@ function Seite2() {
           </li>
           <li className="flex items-start gap-2">
             <span className="text-orange-500 mt-0.5">3.</span>
-            <span>Bei Extra-Buchstaben: Streiche unwahrscheinliche Kombinationen mental durch.</span>
+            <span>
+              Bei Extra-Buchstaben: Streiche unwahrscheinliche Kombinationen mental durch.
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-orange-500 mt-0.5">4.</span>
-            <span>Trainiere t&auml;glich 10-15 Minuten — Wortfl&uuml;ssigkeit verbessert sich durch &Uuml;bung enorm!</span>
+            <span>
+              Trainiere t&auml;glich 10-15 Minuten — Wortfl&uuml;ssigkeit verbessert sich durch
+              &Uuml;bung enorm!
+            </span>
           </li>
         </ul>
       </div>
 
       <Merksatz>
-        Goldene Regel: &quot;Silben zuerst!&quot; — Suche immer nach bekannten Anfangs- und Endsilben.
-        In 80% der F&auml;lle findest du das Wort so in unter 10 Sekunden.
+        Goldene Regel: &quot;Silben zuerst!&quot; — Suche immer nach bekannten Anfangs- und
+        Endsilben. In 80% der F&auml;lle findest du das Wort so in unter 10 Sekunden.
       </Merksatz>
     </div>
   );

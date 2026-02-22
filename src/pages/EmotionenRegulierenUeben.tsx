@@ -2,20 +2,36 @@ import { useState, useMemo, useCallback } from "react";
 import { CheckCircle2, XCircle, ChevronRight, Filter, RotateCcw, Shuffle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
-import { emotionenRegulierenScenarios, type EmotionenRegulierenScenario } from "@/data/kffEmotionenRegulieren";
+import {
+  emotionenRegulierenScenarios,
+  type EmotionenRegulierenScenario,
+} from "@/data/kffEmotionenRegulieren";
 
 const difficultyLabels: Record<number, { label: string; color: string; bg: string }> = {
-  1: { label: "Leicht", color: "text-green-700 dark:text-green-400", bg: "bg-green-100 dark:bg-green-900/30" },
-  2: { label: "Mittel", color: "text-amber-700 dark:text-amber-400", bg: "bg-amber-100 dark:bg-amber-900/30" },
-  3: { label: "Schwer", color: "text-red-700 dark:text-red-400", bg: "bg-red-100 dark:bg-red-900/30" },
+  1: {
+    label: "Leicht",
+    color: "text-green-700 dark:text-green-400",
+    bg: "bg-green-100 dark:bg-green-900/30",
+  },
+  2: {
+    label: "Mittel",
+    color: "text-amber-700 dark:text-amber-400",
+    bg: "bg-amber-100 dark:bg-amber-900/30",
+  },
+  3: {
+    label: "Schwer",
+    color: "text-red-700 dark:text-red-400",
+    bg: "bg-red-100 dark:bg-red-900/30",
+  },
 };
 
 const strategyColors: Record<string, string> = {
-  "Situationsauswahl": "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
-  "Situationsmodifikation": "bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300",
-  "Aufmerksamkeitslenkung": "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300",
+  Situationsauswahl: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
+  Situationsmodifikation: "bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300",
+  Aufmerksamkeitslenkung:
+    "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300",
   "Kognitive Veränderung": "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300",
-  "Reaktionsmodulation": "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300",
+  Reaktionsmodulation: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300",
 };
 
 function shuffle<T>(arr: T[]): T[] {
@@ -101,9 +117,16 @@ export default function EmotionenRegulierenUeben() {
           <Filter className="w-4 h-4 text-muted" />
           <div className="flex gap-1">
             <button
-              onClick={() => { setDifficultyFilter(null); setCurrentIndex(0); setIsChecked(false); setSelectedAnswer(null); }}
+              onClick={() => {
+                setDifficultyFilter(null);
+                setCurrentIndex(0);
+                setIsChecked(false);
+                setSelectedAnswer(null);
+              }}
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
-                difficultyFilter === null ? "bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 font-medium" : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                difficultyFilter === null
+                  ? "bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 font-medium"
+                  : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
               }`}
             >
               Alle
@@ -111,9 +134,16 @@ export default function EmotionenRegulierenUeben() {
             {[1, 2, 3].map((d) => (
               <button
                 key={d}
-                onClick={() => { setDifficultyFilter(d); setCurrentIndex(0); setIsChecked(false); setSelectedAnswer(null); }}
+                onClick={() => {
+                  setDifficultyFilter(d);
+                  setCurrentIndex(0);
+                  setIsChecked(false);
+                  setSelectedAnswer(null);
+                }}
                 className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
-                  difficultyFilter === d ? `${difficultyLabels[d].bg} ${difficultyLabels[d].color} font-medium` : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                  difficultyFilter === d
+                    ? `${difficultyLabels[d].bg} ${difficultyLabels[d].color} font-medium`
+                    : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
                 }`}
               >
                 {difficultyLabels[d].label}
@@ -121,7 +151,10 @@ export default function EmotionenRegulierenUeben() {
             ))}
           </div>
           <button
-            onClick={() => { setShuffled(!shuffled); handleReset(); }}
+            onClick={() => {
+              setShuffled(!shuffled);
+              handleReset();
+            }}
             className={`text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer ${shuffled ? "text-pink-500" : ""}`}
             title="Zufällige Reihenfolge"
           >
@@ -130,10 +163,19 @@ export default function EmotionenRegulierenUeben() {
         </div>
         <div className="flex items-center gap-3">
           <span className="text-sm text-muted">
-            Aufgabe {currentIndex + 1} von {filteredTasks.length} — <span className="font-medium text-green-600 dark:text-green-400">{correctCount} richtig</span>
-            {totalAnswered > 0 && <span> ({Math.round((correctCount / totalAnswered) * 100)}%)</span>}
+            Aufgabe {currentIndex + 1} von {filteredTasks.length} —{" "}
+            <span className="font-medium text-green-600 dark:text-green-400">
+              {correctCount} richtig
+            </span>
+            {totalAnswered > 0 && (
+              <span> ({Math.round((correctCount / totalAnswered) * 100)}%)</span>
+            )}
           </span>
-          <button onClick={handleReset} className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer" title="Zurücksetzen">
+          <button
+            onClick={handleReset}
+            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            title="Zurücksetzen"
+          >
             <RotateCcw className="w-4 h-4" />
           </button>
         </div>
@@ -154,7 +196,9 @@ export default function EmotionenRegulierenUeben() {
           <div className="bg-gray-50 dark:bg-gray-800 p-6 border-b border-gray-200 dark:border-gray-700">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-2">
-                <span className={`text-xs font-medium px-2 py-1 rounded-full ${diff.bg} ${diff.color}`}>
+                <span
+                  className={`text-xs font-medium px-2 py-1 rounded-full ${diff.bg} ${diff.color}`}
+                >
                   {diff.label}
                 </span>
                 <span className="text-xs bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 font-medium px-2 py-1 rounded-full">
@@ -205,13 +249,21 @@ export default function EmotionenRegulierenUeben() {
                   >
                     <div className="flex items-start gap-3">
                       <div className="shrink-0 mt-0.5">
-                        <span className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full ${strategyColors[option.strategy] || "bg-gray-100 text-gray-700"}`}>
+                        <span
+                          className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full ${strategyColors[option.strategy] || "bg-gray-100 text-gray-700"}`}
+                        >
                           {option.strategy}
                         </span>
                       </div>
-                      <span className="text-sm text-gray-900 dark:text-gray-100 flex-1">{option.description}</span>
-                      {isChecked && isCorrectOption && <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />}
-                      {isChecked && isSelected && !isCorrectOption && <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />}
+                      <span className="text-sm text-gray-900 dark:text-gray-100 flex-1">
+                        {option.description}
+                      </span>
+                      {isChecked && isCorrectOption && (
+                        <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+                      )}
+                      {isChecked && isSelected && !isCorrectOption && (
+                        <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                      )}
                     </div>
                   </button>
                 );
@@ -249,11 +301,21 @@ export default function EmotionenRegulierenUeben() {
 
             {/* Result */}
             {isChecked && (
-              <div className={`rounded-lg p-4 ${isCorrect ? "bg-green-50 dark:bg-green-900/15 border border-green-200 dark:border-green-800" : "bg-red-50 dark:bg-red-900/15 border border-red-200 dark:border-red-800"}`}>
+              <div
+                className={`rounded-lg p-4 ${isCorrect ? "bg-green-50 dark:bg-green-900/15 border border-green-200 dark:border-green-800" : "bg-red-50 dark:bg-red-900/15 border border-red-200 dark:border-red-800"}`}
+              >
                 <div className="flex items-center gap-2">
-                  {isCorrect ? <CheckCircle2 className="w-5 h-5 text-green-500" /> : <XCircle className="w-5 h-5 text-red-500" />}
-                  <span className={`font-semibold text-sm ${isCorrect ? "text-green-800 dark:text-green-300" : "text-red-800 dark:text-red-300"}`}>
-                    {isCorrect ? "Richtig!" : `Falsch — Richtig: ${currentTask.options[currentTask.correctAnswer].strategy}`}
+                  {isCorrect ? (
+                    <CheckCircle2 className="w-5 h-5 text-green-500" />
+                  ) : (
+                    <XCircle className="w-5 h-5 text-red-500" />
+                  )}
+                  <span
+                    className={`font-semibold text-sm ${isCorrect ? "text-green-800 dark:text-green-300" : "text-red-800 dark:text-red-300"}`}
+                  >
+                    {isCorrect
+                      ? "Richtig!"
+                      : `Falsch — Richtig: ${currentTask.options[currentTask.correctAnswer].strategy}`}
                   </span>
                 </div>
               </div>
@@ -262,11 +324,17 @@ export default function EmotionenRegulierenUeben() {
             {/* Explanation */}
             {showExplanation && isChecked && (
               <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 space-y-3">
-                <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Erklärung</h4>
-                <p className="text-sm text-gray-700 dark:text-gray-300">{currentTask.explanation}</p>
+                <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                  Erklärung
+                </h4>
+                <p className="text-sm text-gray-700 dark:text-gray-300">
+                  {currentTask.explanation}
+                </p>
                 <div>
                   <p className="text-xs text-muted mb-1">Richtige Strategie:</p>
-                  <span className={`inline-block text-xs font-medium px-2 py-1 rounded-full ${strategyColors[currentTask.options[currentTask.correctAnswer].strategy] || "bg-gray-100 text-gray-700"}`}>
+                  <span
+                    className={`inline-block text-xs font-medium px-2 py-1 rounded-full ${strategyColors[currentTask.options[currentTask.correctAnswer].strategy] || "bg-gray-100 text-gray-700"}`}
+                  >
                     {currentTask.options[currentTask.correctAnswer].strategy}
                   </span>
                 </div>

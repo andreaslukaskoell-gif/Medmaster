@@ -4,8 +4,10 @@ import { Mail, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 export default function ForgotPasswordPage() {
+  usePageTitle("Passwort vergessen");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
@@ -37,11 +39,16 @@ export default function ForgotPasswordPage() {
                 <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center mx-auto">
                   <Mail className="w-8 h-8 text-green-600" />
                 </div>
-                <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">E-Mail gesendet!</h2>
+                <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                  E-Mail gesendet!
+                </h2>
                 <p className="text-sm text-muted">
-                  Falls ein Konto mit <strong>{email}</strong> existiert, haben wir dir einen Link zum Zurücksetzen geschickt.
+                  Falls ein Konto mit <strong>{email}</strong> existiert, haben wir dir einen Link
+                  zum Zurücksetzen geschickt.
                 </p>
-                <Link to="/login"><Button variant="outline">Zurück zum Login</Button></Link>
+                <Link to="/login">
+                  <Button variant="outline">Zurück zum Login</Button>
+                </Link>
               </div>
             ) : (
               <>
@@ -52,7 +59,9 @@ export default function ForgotPasswordPage() {
                 )}
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">E-Mail</label>
+                    <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">
+                      E-Mail
+                    </label>
                     <div className="relative">
                       <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" />
                       <input
@@ -69,7 +78,10 @@ export default function ForgotPasswordPage() {
                     {loading ? "Wird gesendet..." : "Link senden"}
                   </Button>
                 </form>
-                <Link to="/login" className="flex items-center justify-center gap-1 text-sm text-primary-600 dark:text-primary-400 hover:underline">
+                <Link
+                  to="/login"
+                  className="flex items-center justify-center gap-1 text-sm text-primary-600 dark:text-primary-400 hover:underline"
+                >
                   <ArrowLeft className="w-3 h-3" /> Zurück zum Login
                 </Link>
               </>

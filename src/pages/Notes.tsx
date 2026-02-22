@@ -1,10 +1,26 @@
 import { useState } from "react";
-import { Search, StickyNote, Trash2, Edit3, Eye, Pencil, Bold, Italic, Code, List, Heading, Quote, Minus, Link } from "lucide-react";
+import {
+  Search,
+  StickyNote,
+  Trash2,
+  Edit3,
+  Eye,
+  Pencil,
+  Bold,
+  Italic,
+  Code,
+  List,
+  Heading,
+  Quote,
+  Minus,
+  Link,
+} from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
 import { alleKapitel } from "@/data/bmsKapitel";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 // ---------------------------------------------------------------------------
 // Lightweight Markdown parser -- no external dependencies
@@ -12,11 +28,7 @@ import { alleKapitel } from "@/data/bmsKapitel";
 function parseMarkdown(text: string): string {
   // Escape HTML entities to prevent injection
   const escapeHtml = (s: string): string =>
-    s
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
+    s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
   const lines = text.split("\n");
   const htmlParts: string[] = [];
@@ -27,7 +39,10 @@ function parseMarkdown(text: string): string {
     let result = escapeHtml(line);
 
     // Inline code (must come before bold/italic to avoid conflicts)
-    result = result.replace(/`([^`]+)`/g, '<code class="bg-gray-100 dark:bg-gray-800 font-mono text-sm rounded px-1">$1</code>');
+    result = result.replace(
+      /`([^`]+)`/g,
+      '<code class="bg-gray-100 dark:bg-gray-800 font-mono text-sm rounded px-1">$1</code>'
+    );
 
     // Bold
     result = result.replace(/\*\*(.+?)\*\*/g, '<strong class="font-semibold">$1</strong>');
@@ -106,7 +121,9 @@ function parseMarkdown(text: string): string {
         i++;
       }
       const listHtml = items.map((item) => `<li>${item}</li>`).join("");
-      htmlParts.push(`<ul class="list-disc ml-4 my-2 space-y-0.5 text-sm text-gray-700 dark:text-gray-300">${listHtml}</ul>`);
+      htmlParts.push(
+        `<ul class="list-disc ml-4 my-2 space-y-0.5 text-sm text-gray-700 dark:text-gray-300">${listHtml}</ul>`
+      );
       continue;
     }
 
@@ -118,7 +135,9 @@ function parseMarkdown(text: string): string {
         i++;
       }
       const listHtml = items.map((item) => `<li>${item}</li>`).join("");
-      htmlParts.push(`<ol class="list-decimal ml-4 my-2 space-y-0.5 text-sm text-gray-700 dark:text-gray-300">${listHtml}</ol>`);
+      htmlParts.push(
+        `<ol class="list-decimal ml-4 my-2 space-y-0.5 text-sm text-gray-700 dark:text-gray-300">${listHtml}</ol>`
+      );
       continue;
     }
 
@@ -173,6 +192,7 @@ const toolbarHints: { icon: React.ElementType; label: string; syntax: string; in
 // Component
 // ---------------------------------------------------------------------------
 export default function Notes() {
+  usePageTitle("Notizen");
   const { notes, setNote } = useStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -182,13 +202,14 @@ export default function Notes() {
   const allNotes = Object.entries(notes)
     .filter(([, content]) => content.trim().length > 0)
     .map(([chapterId, content]) => {
-      const chapter = alleKapitel.find((c) => c.id === chapterId) ||
+      const chapter =
+        alleKapitel.find((c) => c.id === chapterId) ||
         alleKapitel.flatMap((k) => k.unterkapitel).find((u) => u.id === chapterId);
       return {
         chapterId,
         content,
         chapterTitle: chapter?.title || chapterId,
-        subject: (chapter && 'subject' in chapter ? chapter.subject : undefined) || "Sonstige",
+        subject: (chapter && "subject" in chapter ? chapter.subject : undefined) || "Sonstige",
       };
     })
     .filter(
@@ -224,9 +245,7 @@ export default function Notes() {
   };
 
   const insertSyntax = (syntax: string) => {
-    const textarea = document.querySelector<HTMLTextAreaElement>(
-      "[data-markdown-editor]"
-    );
+    const textarea = document.querySelector<HTMLTextAreaElement>("[data-markdown-editor]");
     if (!textarea) return;
 
     const start = textarea.selectionStart;
@@ -240,34 +259,24 @@ export default function Notes() {
     if (["**", "*", "`"].includes(syntax)) {
       if (selectedText) {
         newText =
-          editContent.slice(0, start) +
-          syntax +
-          selectedText +
-          syntax +
-          editContent.slice(end);
+          editContent.slice(0, start) + syntax + selectedText + syntax + editContent.slice(end);
         cursorPos = end + syntax.length * 2;
       } else {
-        newText =
-          editContent.slice(0, start) + syntax + syntax + editContent.slice(end);
+        newText = editContent.slice(0, start) + syntax + syntax + editContent.slice(end);
         cursorPos = start + syntax.length;
       }
     } else if (syntax === "[](url)") {
       // Link
       if (selectedText) {
-        newText =
-          editContent.slice(0, start) +
-          `[${selectedText}](url)` +
-          editContent.slice(end);
+        newText = editContent.slice(0, start) + `[${selectedText}](url)` + editContent.slice(end);
         cursorPos = start + selectedText.length + 3; // position on "url"
       } else {
-        newText =
-          editContent.slice(0, start) + "[text](url)" + editContent.slice(end);
+        newText = editContent.slice(0, start) + "[text](url)" + editContent.slice(end);
         cursorPos = start + 1; // position on "text"
       }
     } else {
       // Line-start tokens: # , - , > , ---
-      newText =
-        editContent.slice(0, start) + syntax + editContent.slice(end);
+      newText = editContent.slice(0, start) + syntax + editContent.slice(end);
       cursorPos = start + syntax.length;
     }
 
@@ -286,12 +295,9 @@ export default function Notes() {
 
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-            Meine Notizen
-          </h1>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Meine Notizen</h1>
           <p className="text-muted mt-1">
-            {allNotes.length} Notiz{allNotes.length !== 1 ? "en" : ""}{" "}
-            gespeichert
+            {allNotes.length} Notiz{allNotes.length !== 1 ? "en" : ""} gespeichert
           </p>
         </div>
       </div>
@@ -330,12 +336,8 @@ export default function Notes() {
                 <CardHeader className="pb-2">
                   <div className="flex items-center justify-between">
                     <div>
-                      <CardTitle className="text-base">
-                        {n.chapterTitle}
-                      </CardTitle>
-                      <p className="text-xs text-muted capitalize mt-0.5">
-                        {n.subject}
-                      </p>
+                      <CardTitle className="text-base">{n.chapterTitle}</CardTitle>
+                      <p className="text-xs text-muted capitalize mt-0.5">{n.subject}</p>
                     </div>
                     <div className="flex gap-1">
                       {!isEditing && (
@@ -414,9 +416,7 @@ export default function Notes() {
                                   className="inline-flex items-center gap-1 px-1.5 py-1 text-xs text-gray-500 dark:text-gray-400 hover:text-primary-700 dark:hover:text-primary-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
                                 >
                                   <Icon className="w-3.5 h-3.5" />
-                                  <span className="hidden sm:inline">
-                                    {hint.label}
-                                  </span>
+                                  <span className="hidden sm:inline">{hint.label}</span>
                                 </button>
                               );
                             })}
@@ -434,11 +434,7 @@ export default function Notes() {
 
                       {/* ---- Action buttons ---- */}
                       <div className="flex gap-2 justify-end">
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          onClick={handleCancel}
-                        >
+                        <Button variant="outline" size="sm" onClick={handleCancel}>
                           Abbrechen
                         </Button>
                         <Button size="sm" onClick={handleSave}>

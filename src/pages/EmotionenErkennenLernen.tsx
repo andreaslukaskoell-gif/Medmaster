@@ -32,26 +32,106 @@ function Merksatz({ children }: { children: ReactNode }) {
 }
 
 const emotionsList = [
-  { name: "Freude", category: "positiv", color: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" },
-  { name: "Stolz", category: "positiv", color: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" },
-  { name: "Dankbarkeit", category: "positiv", color: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" },
-  { name: "Erleichterung", category: "positiv", color: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" },
-  { name: "Hoffnung", category: "positiv", color: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" },
-  { name: "Bewunderung", category: "positiv", color: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" },
-  { name: "Liebe", category: "positiv", color: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" },
-  { name: "Trauer", category: "negativ", color: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300" },
-  { name: "Wut/Ärger", category: "negativ", color: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300" },
-  { name: "Angst", category: "negativ", color: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300" },
-  { name: "Ekel", category: "negativ", color: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300" },
-  { name: "Scham", category: "negativ", color: "bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-300" },
-  { name: "Schuld", category: "negativ", color: "bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-300" },
-  { name: "Neid", category: "negativ", color: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300" },
-  { name: "Eifersucht", category: "negativ", color: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300" },
-  { name: "Enttäuschung", category: "negativ", color: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300" },
-  { name: "Verachtung", category: "negativ", color: "bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300" },
-  { name: "Überraschung", category: "neutral", color: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300" },
-  { name: "Mitleid/Mitgefühl", category: "prosozial", color: "bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-300" },
-  { name: "Sehnsucht", category: "neutral", color: "bg-violet-100 text-violet-800 dark:bg-violet-900/30 dark:text-violet-300" },
+  {
+    name: "Freude",
+    category: "positiv",
+    color: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
+  },
+  {
+    name: "Stolz",
+    category: "positiv",
+    color: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
+  },
+  {
+    name: "Dankbarkeit",
+    category: "positiv",
+    color: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
+  },
+  {
+    name: "Erleichterung",
+    category: "positiv",
+    color: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
+  },
+  {
+    name: "Hoffnung",
+    category: "positiv",
+    color: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
+  },
+  {
+    name: "Bewunderung",
+    category: "positiv",
+    color: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
+  },
+  {
+    name: "Liebe",
+    category: "positiv",
+    color: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
+  },
+  {
+    name: "Trauer",
+    category: "negativ",
+    color: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
+  },
+  {
+    name: "Wut/Ärger",
+    category: "negativ",
+    color: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300",
+  },
+  {
+    name: "Angst",
+    category: "negativ",
+    color: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300",
+  },
+  {
+    name: "Ekel",
+    category: "negativ",
+    color: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300",
+  },
+  {
+    name: "Scham",
+    category: "negativ",
+    color: "bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-300",
+  },
+  {
+    name: "Schuld",
+    category: "negativ",
+    color: "bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-300",
+  },
+  {
+    name: "Neid",
+    category: "negativ",
+    color: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300",
+  },
+  {
+    name: "Eifersucht",
+    category: "negativ",
+    color: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300",
+  },
+  {
+    name: "Enttäuschung",
+    category: "negativ",
+    color: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
+  },
+  {
+    name: "Verachtung",
+    category: "negativ",
+    color: "bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300",
+  },
+  {
+    name: "Überraschung",
+    category: "neutral",
+    color: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300",
+  },
+  {
+    name: "Mitleid/Mitgefühl",
+    category: "prosozial",
+    color: "bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-300",
+  },
+  {
+    name: "Sehnsucht",
+    category: "neutral",
+    color: "bg-violet-100 text-violet-800 dark:bg-violet-900/30 dark:text-violet-300",
+  },
 ];
 
 // === SEITE 1: Aufgabenformat & Emotionsliste ===
@@ -74,7 +154,9 @@ function Seite1() {
       {/* Format explanation */}
       <Card>
         <CardContent className="p-5 space-y-3">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">So sieht eine Aufgabe aus</h3>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+            So sieht eine Aufgabe aus
+          </h3>
           <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border-l-4 border-amber-400">
             <p className="text-sm text-muted mb-1">Situationsbeschreibung:</p>
             <p className="text-sm italic text-gray-700 dark:text-gray-300">
@@ -89,7 +171,10 @@ function Seite1() {
             </p>
             <div className="mt-2 space-y-1">
               {["A) Erleichterung", "B) Frustration ✓", "C) Freude", "D) Angst"].map((opt) => (
-                <p key={opt} className={`text-sm ${opt.includes("✓") ? "text-green-600 dark:text-green-400 font-medium" : "text-muted"}`}>
+                <p
+                  key={opt}
+                  className={`text-sm ${opt.includes("✓") ? "text-green-600 dark:text-green-400 font-medium" : "text-muted"}`}
+                >
                   {opt}
                 </p>
               ))}
@@ -137,8 +222,8 @@ function Seite1() {
       </div>
 
       <Merksatz>
-        Lerne die Emotionsliste auswendig! Im Test musst du Emotionen benennen können —
-        wer die Begriffe nicht kennt, kann sie nicht zuordnen.
+        Lerne die Emotionsliste auswendig! Im Test musst du Emotionen benennen können — wer die
+        Begriffe nicht kennt, kann sie nicht zuordnen.
       </Merksatz>
     </div>
   );
@@ -161,12 +246,16 @@ function Seite2() {
       <Card>
         <CardContent className="p-5 space-y-3">
           <div className="flex items-center gap-3">
-            <span className="bg-amber-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">1</span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">Situation lesen &amp; verstehen</h3>
+            <span className="bg-amber-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+              1
+            </span>
+            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+              Situation lesen &amp; verstehen
+            </h3>
           </div>
           <p className="text-sm text-muted pl-11">
-            Lies die Situationsbeschreibung aufmerksam. Achte auf Schlüsselwörter
-            wie &quot;unerwartet&quot;, &quot;jahrelang&quot;, &quot;zum ersten Mal&quot;.
+            Lies die Situationsbeschreibung aufmerksam. Achte auf Schlüsselwörter wie
+            &quot;unerwartet&quot;, &quot;jahrelang&quot;, &quot;zum ersten Mal&quot;.
           </p>
         </CardContent>
       </Card>
@@ -175,12 +264,16 @@ function Seite2() {
       <Card>
         <CardContent className="p-5 space-y-3">
           <div className="flex items-center gap-3">
-            <span className="bg-amber-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">2</span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">Beteiligte Personen identifizieren</h3>
+            <span className="bg-amber-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+              2
+            </span>
+            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+              Beteiligte Personen identifizieren
+            </h3>
           </div>
           <p className="text-sm text-muted pl-11">
-            Wer ist beteiligt? Welche Rollen haben sie? Ein Patient fühlt anders als ein Arzt,
-            ein Freund anders als ein Vorgesetzter.
+            Wer ist beteiligt? Welche Rollen haben sie? Ein Patient fühlt anders als ein Arzt, ein
+            Freund anders als ein Vorgesetzter.
           </p>
         </CardContent>
       </Card>
@@ -189,12 +282,16 @@ function Seite2() {
       <Card>
         <CardContent className="p-5 space-y-3">
           <div className="flex items-center gap-3">
-            <span className="bg-amber-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">3</span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">Kontext + Erwartung → Emotion ableiten</h3>
+            <span className="bg-amber-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+              3
+            </span>
+            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+              Kontext + Erwartung → Emotion ableiten
+            </h3>
           </div>
           <p className="text-sm text-muted pl-11">
-            Für jede Person: Was hat sie erwartet? Was ist tatsächlich passiert?
-            Die Diskrepanz zwischen Erwartung und Realität bestimmt die Emotion.
+            Für jede Person: Was hat sie erwartet? Was ist tatsächlich passiert? Die Diskrepanz
+            zwischen Erwartung und Realität bestimmt die Emotion.
           </p>
           <div className="pl-11 bg-gray-50 dark:bg-gray-800 rounded-lg p-3 text-sm space-y-1">
             <p className="font-medium text-gray-700 dark:text-gray-300">Formel:</p>
@@ -211,19 +308,24 @@ function Seite2() {
       <Card>
         <CardContent className="p-5 space-y-3">
           <div className="flex items-center gap-3">
-            <span className="bg-amber-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">4</span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">&quot;Einige&quot; vs. &quot;Alle&quot; beachten</h3>
+            <span className="bg-amber-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+              4
+            </span>
+            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+              &quot;Einige&quot; vs. &quot;Alle&quot; beachten
+            </h3>
           </div>
           <p className="text-sm text-muted pl-11">
-            Achte auf die Frageformulierung: &quot;Am ehesten&quot; fragt nach der dominanten Emotion.
-            &quot;Welche Emotionen könnte X empfinden?&quot; kann mehrere richtige Antworten haben.
+            Achte auf die Frageformulierung: &quot;Am ehesten&quot; fragt nach der dominanten
+            Emotion. &quot;Welche Emotionen könnte X empfinden?&quot; kann mehrere richtige
+            Antworten haben.
           </p>
         </CardContent>
       </Card>
 
       <Merksatz>
-        Versetze dich nicht in die Person hinein — analysiere die Situation objektiv!
-        Was würde die MEHRHEIT der Menschen in dieser Situation empfinden?
+        Versetze dich nicht in die Person hinein — analysiere die Situation objektiv! Was würde die
+        MEHRHEIT der Menschen in dieser Situation empfinden?
       </Merksatz>
     </div>
   );
@@ -247,21 +349,26 @@ function Seite3() {
         <div className="bg-red-50 dark:bg-red-900/15 border-l-4 border-red-500 p-4 rounded-r-lg space-y-2">
           <div className="flex items-center gap-2">
             <AlertTriangle className="w-4 h-4 text-red-500" />
-            <h3 className="font-semibold text-red-800 dark:text-red-300">Falle 1: Eigene Gefühle projizieren</h3>
+            <h3 className="font-semibold text-red-800 dark:text-red-300">
+              Falle 1: Eigene Gefühle projizieren
+            </h3>
           </div>
           <p className="text-sm text-red-700 dark:text-red-400">
-            Du projizierst deine eigenen Reaktionen auf die beschriebene Person.
-            Nicht jeder reagiert gleich! Gehe von der &quot;durchschnittlichen&quot; Reaktion aus.
+            Du projizierst deine eigenen Reaktionen auf die beschriebene Person. Nicht jeder
+            reagiert gleich! Gehe von der &quot;durchschnittlichen&quot; Reaktion aus.
           </p>
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/15 border-l-4 border-red-500 p-4 rounded-r-lg space-y-2">
           <div className="flex items-center gap-2">
             <AlertTriangle className="w-4 h-4 text-red-500" />
-            <h3 className="font-semibold text-red-800 dark:text-red-300">Falle 2: Ähnliche Emotionen verwechseln</h3>
+            <h3 className="font-semibold text-red-800 dark:text-red-300">
+              Falle 2: Ähnliche Emotionen verwechseln
+            </h3>
           </div>
           <p className="text-sm text-red-700 dark:text-red-400">
-            Neid vs. Eifersucht, Scham vs. Schuld, Trauer vs. Enttäuschung — achte auf die feinen Unterschiede!
+            Neid vs. Eifersucht, Scham vs. Schuld, Trauer vs. Enttäuschung — achte auf die feinen
+            Unterschiede!
           </p>
           <div className="bg-white dark:bg-gray-800 rounded-lg p-3 space-y-2">
             <div className="text-sm">
@@ -270,7 +377,9 @@ function Seite3() {
             </div>
             <div className="text-sm">
               <span className="font-medium text-gray-700 dark:text-gray-300">Eifersucht:</span>
-              <span className="text-muted ml-1">Jemand BEDROHT eine Beziehung, die mir wichtig ist</span>
+              <span className="text-muted ml-1">
+                Jemand BEDROHT eine Beziehung, die mir wichtig ist
+              </span>
             </div>
             <div className="text-sm">
               <span className="font-medium text-gray-700 dark:text-gray-300">Scham:</span>
@@ -278,7 +387,9 @@ function Seite3() {
             </div>
             <div className="text-sm">
               <span className="font-medium text-gray-700 dark:text-gray-300">Schuld:</span>
-              <span className="text-muted ml-1">Ich habe etwas FALSCHES GETAN (Handlungsbewertung)</span>
+              <span className="text-muted ml-1">
+                Ich habe etwas FALSCHES GETAN (Handlungsbewertung)
+              </span>
             </div>
             <div className="text-sm">
               <span className="font-medium text-gray-700 dark:text-gray-300">Trauer:</span>
@@ -294,11 +405,13 @@ function Seite3() {
         <div className="bg-red-50 dark:bg-red-900/15 border-l-4 border-red-500 p-4 rounded-r-lg space-y-2">
           <div className="flex items-center gap-2">
             <AlertTriangle className="w-4 h-4 text-red-500" />
-            <h3 className="font-semibold text-red-800 dark:text-red-300">Falle 3: Sekundäre Emotionen übersehen</h3>
+            <h3 className="font-semibold text-red-800 dark:text-red-300">
+              Falle 3: Sekundäre Emotionen übersehen
+            </h3>
           </div>
           <p className="text-sm text-red-700 dark:text-red-400">
-            Manchmal fragt die Aufgabe nach einer nicht-offensichtlichen Emotion.
-            Z.B. kann Wut eine Sekundäremotionen von Angst oder Scham sein.
+            Manchmal fragt die Aufgabe nach einer nicht-offensichtlichen Emotion. Z.B. kann Wut eine
+            Sekundäremotionen von Angst oder Scham sein.
           </p>
         </div>
       </div>
@@ -307,24 +420,36 @@ function Seite3() {
       <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 space-y-3">
         <div className="flex items-center gap-2">
           <BookOpen className="w-5 h-5 text-amber-500" />
-          <h3 className="font-semibold text-amber-800 dark:text-amber-300">Expert-Tipps für die Prüfung</h3>
+          <h3 className="font-semibold text-amber-800 dark:text-amber-300">
+            Expert-Tipps für die Prüfung
+          </h3>
         </div>
         <ul className="space-y-2 text-sm text-amber-700 dark:text-amber-400">
           <li className="flex items-start gap-2">
             <span className="text-amber-500 mt-0.5">1.</span>
-            <span>Lies die Frage VOR den Antwortoptionen — überlege zuerst selbst, welche Emotion passt.</span>
+            <span>
+              Lies die Frage VOR den Antwortoptionen — überlege zuerst selbst, welche Emotion passt.
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-amber-500 mt-0.5">2.</span>
-            <span>Eliminiere zuerst eindeutig falsche Optionen, dann wähle aus den verbleibenden.</span>
+            <span>
+              Eliminiere zuerst eindeutig falsche Optionen, dann wähle aus den verbleibenden.
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-amber-500 mt-0.5">3.</span>
-            <span>Bei &quot;am ehesten&quot;-Fragen: Die spezifischere Emotion ist meist richtiger als die allgemeine.</span>
+            <span>
+              Bei &quot;am ehesten&quot;-Fragen: Die spezifischere Emotion ist meist richtiger als
+              die allgemeine.
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-amber-500 mt-0.5">4.</span>
-            <span>Beachte den KONTEXT: Die gleiche Situation kann je nach Person unterschiedliche Emotionen auslösen.</span>
+            <span>
+              Beachte den KONTEXT: Die gleiche Situation kann je nach Person unterschiedliche
+              Emotionen auslösen.
+            </span>
           </li>
         </ul>
       </div>

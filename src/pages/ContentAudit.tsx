@@ -2,7 +2,15 @@ import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { alleKapitel } from "@/data/bmsKapitel";
 import type { Kapitel, Unterkapitel } from "@/data/bmsKapitel/types";
-import { ArrowLeft, AlertCircle, AlertTriangle, CheckCircle2, FileText, HelpCircle, Quote } from "lucide-react";
+import {
+  ArrowLeft,
+  AlertCircle,
+  AlertTriangle,
+  CheckCircle2,
+  FileText,
+  HelpCircle,
+  Quote,
+} from "lucide-react";
 
 const MIN_CHARS = 300;
 
@@ -41,16 +49,20 @@ function getStatus(details: UkAudit[]): Status {
   const shortText = details.filter((d) => !d.hasEnoughText).length;
   const noMerksatz = details.filter((d) => !d.hasMerksatz).length;
   const total = details.length;
-  const gapsPerUk = details.map((d) => [d.hasQuiz, d.hasEnoughText, d.hasMerksatz].filter(Boolean).length);
+  const gapsPerUk = details.map(
+    (d) => [d.hasQuiz, d.hasEnoughText, d.hasMerksatz].filter(Boolean).length
+  );
   const anyCritical = noQuiz > 0 || shortText > 0 || noMerksatz > 0;
-  const manyGaps = noQuiz === total || noMerksatz === total || (noQuiz + shortText + noMerksatz) >= total * 2;
+  const manyGaps =
+    noQuiz === total || noMerksatz === total || noQuiz + shortText + noMerksatz >= total * 2;
   if (manyGaps || (noQuiz > 0 && (shortText > 0 || noMerksatz > 0))) return "red";
   if (anyCritical) return "yellow";
   return "green";
 }
 
 function auditChapter(kapitel: Kapitel): ChapterAudit {
-  const uks = (kapitel.unterkapitel && Array.isArray(kapitel.unterkapitel)) ? kapitel.unterkapitel : [];
+  const uks =
+    kapitel.unterkapitel && Array.isArray(kapitel.unterkapitel) ? kapitel.unterkapitel : [];
   const details = uks.map((uk) => auditUnterkapitel(uk));
   const status = getStatus(details);
   const noQuiz = details.filter((d) => !d.hasQuiz).length;
@@ -110,14 +122,13 @@ export default function ContentAudit() {
           Zurück
         </Link>
         <span className="text-slate-400 dark:text-slate-500">|</span>
-        <h1 className="text-2xl font-bold text-midnight dark:text-slate-100">
-          Content-Audit
-        </h1>
+        <h1 className="text-2xl font-bold text-midnight dark:text-slate-100">Content-Audit</h1>
       </div>
 
       <p className="text-slate-600 dark:text-slate-400 text-sm">
-        Checkliste für Qualität: Alle Kapitel aus <code className="bg-slate-100 dark:bg-slate-800 px-1 rounded">bmsKapitel</code>.
-        Pro Unterkapitel: Quizfragen vorhanden, mind. {MIN_CHARS} Zeichen Text, mind. ein Merksatz.
+        Checkliste für Qualität: Alle Kapitel aus{" "}
+        <code className="bg-slate-100 dark:bg-slate-800 px-1 rounded">bmsKapitel</code>. Pro
+        Unterkapitel: Quizfragen vorhanden, mind. {MIN_CHARS} Zeichen Text, mind. ein Merksatz.
       </p>
 
       <div className="flex gap-4 flex-wrap text-sm">
@@ -139,10 +150,7 @@ export default function ContentAudit() {
         {audits.map((a) => {
           const Icon = statusIcon[a.status];
           return (
-            <li
-              key={a.kapitel.id}
-              className={`rounded-xl border p-4 ${statusStyles[a.status]}`}
-            >
+            <li key={a.kapitel.id} className={`rounded-xl border p-4 ${statusStyles[a.status]}`}>
               <div className="flex items-start gap-3">
                 <Icon
                   className={`w-5 h-5 shrink-0 mt-0.5 ${
@@ -178,18 +186,15 @@ export default function ContentAudit() {
                       <Quote className="w-3.5 h-3.5" />
                       {a.noMerksatz} ohne Merksatz
                     </span>
-                    {a.totalUk > 0 && (
-                      <span>
-                        {a.totalUk} Unterkapitel
-                      </span>
-                    )}
+                    {a.totalUk > 0 && <span>{a.totalUk} Unterkapitel</span>}
                   </div>
                   {a.details.length > 0 && (
                     <ul className="mt-3 space-y-1.5 pl-2 border-l-2 border-slate-200 dark:border-slate-700">
                       {a.details.map((d, i) => {
                         const issues: string[] = [];
                         if (!d.hasQuiz) issues.push("Kein Quiz");
-                        if (!d.hasEnoughText) issues.push(`&lt;${MIN_CHARS} Zeichen (${d.charCount})`);
+                        if (!d.hasEnoughText)
+                          issues.push(`&lt;${MIN_CHARS} Zeichen (${d.charCount})`);
                         if (!d.hasMerksatz) issues.push("Kein Merksatz");
                         return (
                           <li key={d.uk.id} className="text-xs text-slate-600 dark:text-slate-400">

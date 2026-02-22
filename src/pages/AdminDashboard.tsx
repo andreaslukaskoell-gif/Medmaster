@@ -72,7 +72,12 @@ export default function AdminDashboard() {
       <header className="sticky top-0 z-10 border-b border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 backdrop-blur supports-backdrop-filter:bg-white/80">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm" onClick={() => navigate("/admin/audit")} className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => navigate("/admin/audit")}
+              className="flex items-center gap-2"
+            >
               <ArrowLeft className="w-4 h-4" />
               Zurück
             </Button>
@@ -92,12 +97,24 @@ export default function AdminDashboard() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-800/80">
-                  <th className="text-left p-3 font-semibold text-slate-700 dark:text-slate-300">Fach</th>
-                  <th className="text-left p-3 font-semibold text-slate-700 dark:text-slate-300">Kapitel</th>
-                  <th className="text-left p-3 font-semibold text-slate-700 dark:text-slate-300">Unterkapitel</th>
-                  <th className="text-left p-3 font-semibold text-slate-700 dark:text-slate-300 w-24">Text</th>
-                  <th className="text-left p-3 font-semibold text-slate-700 dark:text-slate-300 w-24">Quiz</th>
-                  <th className="text-left p-3 font-semibold text-slate-700 dark:text-slate-300 w-20">Image</th>
+                  <th className="text-left p-3 font-semibold text-slate-700 dark:text-slate-300">
+                    Fach
+                  </th>
+                  <th className="text-left p-3 font-semibold text-slate-700 dark:text-slate-300">
+                    Kapitel
+                  </th>
+                  <th className="text-left p-3 font-semibold text-slate-700 dark:text-slate-300">
+                    Unterkapitel
+                  </th>
+                  <th className="text-left p-3 font-semibold text-slate-700 dark:text-slate-300 w-24">
+                    Text
+                  </th>
+                  <th className="text-left p-3 font-semibold text-slate-700 dark:text-slate-300 w-24">
+                    Quiz
+                  </th>
+                  <th className="text-left p-3 font-semibold text-slate-700 dark:text-slate-300 w-20">
+                    Image
+                  </th>
                 </tr>
               </thead>
               <tbody>

@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Bot, Send, Sparkles } from "lucide-react";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 interface Message {
   id: number;
@@ -17,6 +18,7 @@ const SUGGESTIONS = [
 ];
 
 export default function AITutor() {
+  usePageTitle("KI-Tutor");
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [typing, setTyping] = useState(false);
@@ -70,7 +72,8 @@ export default function AITutor() {
             <div>
               <h2 className="text-lg font-semibold mb-1">Stelle eine Frage</h2>
               <p className="text-sm text-muted-foreground max-w-sm">
-                Der AI-Tutor hilft dir bei allen MedAT-Themen — von BMS über KFF bis zur Testsimulation.
+                Der AI-Tutor hilft dir bei allen MedAT-Themen — von BMS über KFF bis zur
+                Testsimulation.
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-2">
