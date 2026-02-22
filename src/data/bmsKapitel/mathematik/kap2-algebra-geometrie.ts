@@ -873,7 +873,9 @@ Beispiel: (3 mal 10 hoch 4) mal (2 mal 10 hoch 3) = 6 mal 10 hoch 7.`,
           hints: ['Welches Potenzgesetz gilt fuer ein Produkt? (a mal b) hoch n = ?', 'Prüfe alle anderen Optionen: Was sind die richtigen Formeln?'],
           difficulty: 3,
           tags: ['potenzgesetze', 'regelprüfung', 'algebra'],
-        },,
+        },
+      ],
+    },
 
     // === from kap3-geometrie ===
     // ──────────────────────────────────────────────────────────────
@@ -1918,6 +1920,8 @@ Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren)
           ],
           tags: ['vektorbetrag', 'pythagoras', 'vektor'],
           difficulty: 1,
-        },,
+        },
+      ],
+    },
   ],
 };
