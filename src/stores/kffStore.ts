@@ -38,13 +38,13 @@ const defaultProgress: SubtestProgress = {
 const ALL_SUBTESTS: KFFSubtestType[] = [
   "implikationen",
   "zahlenfolgen",
-  "wortfluessigkeit",
-  "merkfaehigkeit",
+  "wortflüssigkeit",
+  "merkfähigkeit",
   "figuren",
   "emotionen-regulieren",
   "soziales-entscheiden",
   "emotionen-erkennen",
-  "textverstaendnis",
+  "textverständnis",
 ];
 
 function createDefaultProgress(): Record<KFFSubtestType, SubtestProgress> {

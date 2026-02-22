@@ -1,22 +1,26 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
-import {
-  CheckCircle2,
-  XCircle,
-  ChevronRight,
-  Filter,
-  RotateCcw,
-  Shuffle,
-  Eye,
-} from "lucide-react";
+import { CheckCircle2, XCircle, ChevronRight, Filter, RotateCcw, Shuffle, Eye } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Confetti } from "@/components/ui/confetti";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { wortfluessigkeitWords, type WortfluessigkeitWord } from "@/data/kffWortfluessigkeit";
 
 const difficultyLabels: Record<number, { label: string; color: string; bg: string }> = {
-  1: { label: "Leicht", color: "text-green-700 dark:text-green-400", bg: "bg-green-100 dark:bg-green-900/30" },
-  2: { label: "Mittel", color: "text-amber-700 dark:text-amber-400", bg: "bg-amber-100 dark:bg-amber-900/30" },
-  3: { label: "Schwer", color: "text-red-700 dark:text-red-400", bg: "bg-red-100 dark:bg-red-900/30" },
+  1: {
+    label: "Leicht",
+    color: "text-green-700 dark:text-green-400",
+    bg: "bg-green-100 dark:bg-green-900/30",
+  },
+  2: {
+    label: "Mittel",
+    color: "text-amber-700 dark:text-amber-400",
+    bg: "bg-amber-100 dark:bg-amber-900/30",
+  },
+  3: {
+    label: "Schwer",
+    color: "text-red-700 dark:text-red-400",
+    bg: "bg-red-100 dark:bg-red-900/30",
+  },
 };
 
 const categoryColors: Record<string, string> = {
@@ -91,7 +95,7 @@ export default function WortfluessigkeitUeben() {
       setTimeout(() => setShowConfetti(false), 100);
     }
 
-    recordResult("wortfluessigkeit", {
+    recordResult("wortflüssigkeit", {
       exerciseId: currentWord.id,
       userAnswer: normalized,
       correct,
@@ -159,7 +163,13 @@ export default function WortfluessigkeitUeben() {
           <Filter className="w-4 h-4 text-muted" />
           <div className="flex gap-1">
             <button
-              onClick={() => { setDifficultyFilter(null); setCurrentIndex(0); setIsChecked(false); setUserInput(""); setShowSolution(false); }}
+              onClick={() => {
+                setDifficultyFilter(null);
+                setCurrentIndex(0);
+                setIsChecked(false);
+                setUserInput("");
+                setShowSolution(false);
+              }}
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 difficultyFilter === null
                   ? "bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 font-medium"
@@ -171,7 +181,13 @@ export default function WortfluessigkeitUeben() {
             {[1, 2, 3].map((d) => (
               <button
                 key={d}
-                onClick={() => { setDifficultyFilter(d); setCurrentIndex(0); setIsChecked(false); setUserInput(""); setShowSolution(false); }}
+                onClick={() => {
+                  setDifficultyFilter(d);
+                  setCurrentIndex(0);
+                  setIsChecked(false);
+                  setUserInput("");
+                  setShowSolution(false);
+                }}
                 className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                   difficultyFilter === d
                     ? `${difficultyLabels[d].bg} ${difficultyLabels[d].color} font-medium`
@@ -186,13 +202,25 @@ export default function WortfluessigkeitUeben() {
         <div className="flex items-center gap-3">
           <span className="text-sm text-muted">
             {currentIndex + 1}/{orderedWords.length} —{" "}
-            <span className="font-medium text-green-600 dark:text-green-400">{correctCount} richtig</span>
-            {totalAnswered > 0 && <span> ({Math.round((correctCount / totalAnswered) * 100)}%)</span>}
+            <span className="font-medium text-green-600 dark:text-green-400">
+              {correctCount} richtig
+            </span>
+            {totalAnswered > 0 && (
+              <span> ({Math.round((correctCount / totalAnswered) * 100)}%)</span>
+            )}
           </span>
-          <button onClick={handleShuffle} className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer" title="Mischen">
+          <button
+            onClick={handleShuffle}
+            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            title="Mischen"
+          >
             <Shuffle className="w-4 h-4" />
           </button>
-          <button onClick={handleReset} className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer" title="Zurücksetzen">
+          <button
+            onClick={handleReset}
+            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            title="Zurücksetzen"
+          >
             <RotateCcw className="w-4 h-4" />
           </button>
         </div>
@@ -212,10 +240,14 @@ export default function WortfluessigkeitUeben() {
           {/* Badges */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span className={`text-xs font-medium px-2 py-1 rounded-full ${diff.bg} ${diff.color}`}>
+              <span
+                className={`text-xs font-medium px-2 py-1 rounded-full ${diff.bg} ${diff.color}`}
+              >
                 {diff.label}
               </span>
-              <span className={`text-xs font-medium px-2 py-1 rounded-full ${categoryColors[currentWord.category] || "bg-gray-100 text-gray-600"}`}>
+              <span
+                className={`text-xs font-medium px-2 py-1 rounded-full ${categoryColors[currentWord.category] || "bg-gray-100 text-gray-600"}`}
+              >
                 {currentWord.category}
               </span>
             </div>
@@ -224,7 +256,9 @@ export default function WortfluessigkeitUeben() {
 
           {/* Letter tiles */}
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
-            <p className="text-xs text-muted mb-4 text-center">Bilde ein sinnvolles deutsches Wort:</p>
+            <p className="text-xs text-muted mb-4 text-center">
+              Bilde ein sinnvolles deutsches Wort:
+            </p>
             <div className="flex items-center justify-center gap-2 flex-wrap">
               {currentWord.letters.split("").map((letter, i) => (
                 <div
@@ -332,7 +366,10 @@ export default function WortfluessigkeitUeben() {
                 <span className="font-semibold">L&ouml;sung:</span>{" "}
                 <span className="font-mono font-bold">{currentWord.solution}</span>
                 {currentWord.alternativeSolutions?.length ? (
-                  <span className="text-amber-600 dark:text-amber-400"> (auch: {currentWord.alternativeSolutions.join(", ")})</span>
+                  <span className="text-amber-600 dark:text-amber-400">
+                    {" "}
+                    (auch: {currentWord.alternativeSolutions.join(", ")})
+                  </span>
                 ) : null}
               </p>
             </div>

@@ -16,11 +16,9 @@ const tabs: { key: TabKey; label: string; icon: React.ElementType }[] = [
 
 export default function TextverstaendnisPage() {
   const [activeTab, setActiveTab] = useState<TabKey>("lernen");
-  const progress = useKFFStore((s) => s.progress.textverstaendnis);
+  const progress = useKFFStore((s) => s.progress["textverständnis"]);
   const pct =
-    progress && progress.total > 0
-      ? Math.round((progress.correct / progress.total) * 100)
-      : 0;
+    progress && progress.total > 0 ? Math.round((progress.correct / progress.total) * 100) : 0;
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">

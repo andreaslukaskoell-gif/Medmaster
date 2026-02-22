@@ -1,11 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from "react";
-import {
-  Flame,
-  Trophy,
-  ChevronRight,
-  RotateCcw,
-  Zap,
-} from "lucide-react";
+import { Flame, Trophy, ChevronRight, RotateCcw, Zap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Confetti } from "@/components/ui/confetti";
 import { useKFFResults } from "@/hooks/useKFFResults";
@@ -21,9 +15,21 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 const difficultyLabels: Record<number, { label: string; color: string; bg: string }> = {
-  1: { label: "Leicht", color: "text-green-700 dark:text-green-400", bg: "bg-green-100 dark:bg-green-900/30" },
-  2: { label: "Mittel", color: "text-amber-700 dark:text-amber-400", bg: "bg-amber-100 dark:bg-amber-900/30" },
-  3: { label: "Schwer", color: "text-red-700 dark:text-red-400", bg: "bg-red-100 dark:bg-red-900/30" },
+  1: {
+    label: "Leicht",
+    color: "text-green-700 dark:text-green-400",
+    bg: "bg-green-100 dark:bg-green-900/30",
+  },
+  2: {
+    label: "Mittel",
+    color: "text-amber-700 dark:text-amber-400",
+    bg: "bg-amber-100 dark:bg-amber-900/30",
+  },
+  3: {
+    label: "Schwer",
+    color: "text-red-700 dark:text-red-400",
+    bg: "bg-red-100 dark:bg-red-900/30",
+  },
 };
 
 type EndlosPhase = "start" | "playing" | "gameover";
@@ -83,7 +89,7 @@ export default function WortfluessigkeitEndlos() {
 
     setTotalAnswered((c) => c + 1);
 
-    recordResult("wortfluessigkeit", {
+    recordResult("wortflüssigkeit", {
       exerciseId: currentWord.id,
       userAnswer: answer,
       correct,
@@ -136,7 +142,16 @@ export default function WortfluessigkeitEndlos() {
         setPhase("gameover");
       }, 1500);
     }
-  }, [userInput, currentWord, streak, bestStreak, currentIndex, queue, generateQueue, recordResult]);
+  }, [
+    userInput,
+    currentWord,
+    streak,
+    bestStreak,
+    currentIndex,
+    queue,
+    generateQueue,
+    recordResult,
+  ]);
 
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
@@ -183,15 +198,18 @@ export default function WortfluessigkeitEndlos() {
               Endlos-Modus
             </h2>
             <p className="text-sm text-muted max-w-md mx-auto">
-              Trainiere bis du nicht mehr kannst! Zuf&auml;llige W&ouml;rter, endlos.
-              Ein Fehler beendet das Spiel. Wie weit kommst du?
+              Trainiere bis du nicht mehr kannst! Zuf&auml;llige W&ouml;rter, endlos. Ein Fehler
+              beendet das Spiel. Wie weit kommst du?
             </p>
           </div>
           {bestStreak > 0 && (
             <div className="flex items-center justify-center gap-2 text-sm">
               <Trophy className="w-4 h-4 text-amber-500" />
               <span className="text-muted">
-                Dein Rekord: <span className="font-bold text-amber-600 dark:text-amber-400">{bestStreak} W&ouml;rter</span>
+                Dein Rekord:{" "}
+                <span className="font-bold text-amber-600 dark:text-amber-400">
+                  {bestStreak} W&ouml;rter
+                </span>
               </span>
             </div>
           )}
@@ -245,7 +263,9 @@ export default function WortfluessigkeitEndlos() {
                 <p className="text-xs text-muted">Streak</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl font-bold text-amber-600 dark:text-amber-400">{bestStreak}</p>
+                <p className="text-2xl font-bold text-amber-600 dark:text-amber-400">
+                  {bestStreak}
+                </p>
                 <p className="text-xs text-muted">Rekord</p>
               </div>
             </div>
@@ -285,9 +305,7 @@ export default function WortfluessigkeitEndlos() {
           )}
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-sm text-muted">
-            {totalCorrect} gel&ouml;st
-          </span>
+          <span className="text-sm text-muted">{totalCorrect} gel&ouml;st</span>
           <div className="flex items-center gap-1 text-xs text-muted">
             <Trophy className="w-3.5 h-3.5 text-amber-500" />
             {bestStreak}
@@ -299,7 +317,9 @@ export default function WortfluessigkeitEndlos() {
       <Card>
         <CardContent className="p-6 space-y-5">
           <div className="flex items-center gap-2">
-            <span className={`text-xs font-medium px-2 py-1 rounded-full ${difficultyLabels[currentWord.difficulty].bg} ${difficultyLabels[currentWord.difficulty].color}`}>
+            <span
+              className={`text-xs font-medium px-2 py-1 rounded-full ${difficultyLabels[currentWord.difficulty].bg} ${difficultyLabels[currentWord.difficulty].color}`}
+            >
               {difficultyLabels[currentWord.difficulty].label}
             </span>
           </div>

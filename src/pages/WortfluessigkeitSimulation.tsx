@@ -18,9 +18,21 @@ const TASK_COUNT = 15;
 const TIME_LIMIT = 300; // 5 minutes
 
 const difficultyLabels: Record<number, { label: string; color: string; bg: string }> = {
-  1: { label: "Leicht", color: "text-green-700 dark:text-green-400", bg: "bg-green-100 dark:bg-green-900/30" },
-  2: { label: "Mittel", color: "text-amber-700 dark:text-amber-400", bg: "bg-amber-100 dark:bg-amber-900/30" },
-  3: { label: "Schwer", color: "text-red-700 dark:text-red-400", bg: "bg-red-100 dark:bg-red-900/30" },
+  1: {
+    label: "Leicht",
+    color: "text-green-700 dark:text-green-400",
+    bg: "bg-green-100 dark:bg-green-900/30",
+  },
+  2: {
+    label: "Mittel",
+    color: "text-amber-700 dark:text-amber-400",
+    bg: "bg-amber-100 dark:bg-amber-900/30",
+  },
+  3: {
+    label: "Schwer",
+    color: "text-red-700 dark:text-red-400",
+    bg: "bg-red-100 dark:bg-red-900/30",
+  },
 };
 
 interface TaskResult {
@@ -87,7 +99,7 @@ export default function WortfluessigkeitSimulation() {
       const correctCount = allResults.filter((r) => r.correct).length;
       recordSimulation({
         id: `sim-wf-${Date.now()}`,
-        subtestType: "wortfluessigkeit",
+        subtestType: "wortflüssigkeit",
         score: correctCount,
         maxScore: TASK_COUNT,
         timeUsed: TIME_LIMIT - timeLeft,
@@ -269,7 +281,11 @@ export default function WortfluessigkeitSimulation() {
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
                   <div
                     className={`h-3 rounded-full transition-all ${
-                      scorePercent >= 80 ? "bg-green-500" : scorePercent >= 50 ? "bg-amber-500" : "bg-red-500"
+                      scorePercent >= 80
+                        ? "bg-green-500"
+                        : scorePercent >= 50
+                          ? "bg-amber-500"
+                          : "bg-red-500"
                     }`}
                     style={{ width: `${scorePercent}%` }}
                   />
@@ -287,7 +303,10 @@ export default function WortfluessigkeitSimulation() {
             </h3>
             <div className="grid grid-cols-3 gap-3">
               {diffStats.map((s) => (
-                <div key={s.difficulty} className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 text-center">
+                <div
+                  key={s.difficulty}
+                  className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 text-center"
+                >
                   <p className="text-xs text-muted mb-1">{difficultyLabels[s.difficulty].label}</p>
                   <p
                     className={`text-lg font-bold ${
@@ -349,7 +368,9 @@ export default function WortfluessigkeitSimulation() {
                         <span className="text-muted">Deine Antwort:</span>
                         <span
                           className={`font-mono font-bold ${
-                            result.correct ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"
+                            result.correct
+                              ? "text-green-600 dark:text-green-400"
+                              : "text-red-600 dark:text-red-400"
                           }`}
                         >
                           {result.userAnswer || "(keine)"}
@@ -396,7 +417,9 @@ export default function WortfluessigkeitSimulation() {
 
       {/* Timer bar */}
       <div className="flex items-center gap-3">
-        <Timer className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-orange-500"}`} />
+        <Timer
+          className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-orange-500"}`}
+        />
         <div className="flex-1">
           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
             <div
@@ -441,7 +464,9 @@ export default function WortfluessigkeitSimulation() {
       <Card>
         <CardContent className="p-6 space-y-5">
           <div className="flex items-center gap-2">
-            <span className={`text-xs font-medium px-2 py-1 rounded-full ${difficultyLabels[currentWord.difficulty].bg} ${difficultyLabels[currentWord.difficulty].color}`}>
+            <span
+              className={`text-xs font-medium px-2 py-1 rounded-full ${difficultyLabels[currentWord.difficulty].bg} ${difficultyLabels[currentWord.difficulty].color}`}
+            >
               {difficultyLabels[currentWord.difficulty].label}
             </span>
           </div>

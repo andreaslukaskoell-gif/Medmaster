@@ -1,19 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import {
-  Brain,
-  Hash,
-  Type,
-  Database,
-  Puzzle,
-  Heart,
-  Users,
-  Eye,
-  FileText,
-} from "lucide-react";
+import { Brain, Hash, Type, Database, Puzzle, Heart, Users, Eye, FileText } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useKFFStore } from "@/stores/kffStore";
 import type { KFFSubtestType } from "@/data/kffTypes";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 interface SubtestCard {
   id: KFFSubtestType;
@@ -51,7 +42,7 @@ const subtests: SubtestCard[] = [
     categoryLabel: "KFF",
   },
   {
-    id: "wortfluessigkeit",
+    id: "wortflüssigkeit",
     name: "Wortflüssigkeit",
     path: "/kff",
     icon: Type,
@@ -62,7 +53,7 @@ const subtests: SubtestCard[] = [
     categoryLabel: "KFF",
   },
   {
-    id: "merkfaehigkeit",
+    id: "merkfähigkeit",
     name: "Merkfähigkeit",
     path: "/kff",
     icon: Database,
@@ -117,7 +108,7 @@ const subtests: SubtestCard[] = [
     categoryLabel: "SEK",
   },
   {
-    id: "textverstaendnis",
+    id: "textverständnis",
     name: "Textverständnis",
     path: "/kff",
     icon: FileText,
@@ -136,25 +127,17 @@ const categoryColors: Record<string, string> = {
 };
 
 export default function KFFAcademy() {
+  usePageTitle("KFF Akademie");
   const navigate = useNavigate();
   const progress = useKFFStore((s) => s.progress);
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <BreadcrumbNav
-        items={[
-          { label: "Dashboard", href: "/" },
-          { label: "KFF Academy" },
-        ]}
-      />
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "KFF Academy" }]} />
 
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-          KFF Academy
-        </h1>
-        <p className="text-muted mt-1">
-          Kognitive Fähigkeiten und Fertigkeiten — 40% des MedAT
-        </p>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">KFF Academy</h1>
+        <p className="text-muted mt-1">Kognitive Fähigkeiten und Fertigkeiten — 40% des MedAT</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -194,9 +177,7 @@ export default function KFFAcademy() {
                 <div className="space-y-1.5">
                   <div className="flex items-center justify-between text-xs">
                     <span className="text-muted">Fortschritt</span>
-                    <span className="font-medium text-gray-900 dark:text-gray-100">
-                      {pct}%
-                    </span>
+                    <span className="font-medium text-gray-900 dark:text-gray-100">{pct}%</span>
                   </div>
                   <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
                     <div
@@ -213,14 +194,9 @@ export default function KFFAcademy() {
                     />
                   </div>
                   <div className="flex items-center justify-between text-[10px] text-muted">
-                    <span>
-                      {p?.total ?? 0} Übungen absolviert
-                    </span>
+                    <span>{p?.total ?? 0} Übungen absolviert</span>
                     {p?.lastPracticed && (
-                      <span>
-                        Zuletzt:{" "}
-                        {new Date(p.lastPracticed).toLocaleDateString("de-AT")}
-                      </span>
+                      <span>Zuletzt: {new Date(p.lastPracticed).toLocaleDateString("de-AT")}</span>
                     )}
                   </div>
                 </div>

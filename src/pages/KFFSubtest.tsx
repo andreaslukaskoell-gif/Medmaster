@@ -49,7 +49,7 @@ const subtestConfigs: Record<string, SubtestConfig> = {
     category: "KFF",
   },
   wortfluessigkeit: {
-    id: "wortfluessigkeit",
+    id: "wortflüssigkeit",
     name: "Wortflüssigkeit",
     icon: Type,
     color: "text-orange-600 dark:text-orange-400",
@@ -57,7 +57,7 @@ const subtestConfigs: Record<string, SubtestConfig> = {
     category: "KFF",
   },
   merkfaehigkeit: {
-    id: "merkfaehigkeit",
+    id: "merkfähigkeit",
     name: "Merkfähigkeit",
     icon: Database,
     color: "text-green-600 dark:text-green-400",
@@ -97,7 +97,7 @@ const subtestConfigs: Record<string, SubtestConfig> = {
     category: "SEK",
   },
   textverstaendnis: {
-    id: "textverstaendnis",
+    id: "textverständnis",
     name: "Textverständnis",
     icon: FileText,
     color: "text-indigo-600 dark:text-indigo-400",
@@ -116,9 +116,7 @@ export default function KFFSubtest() {
   const { subtestId } = useParams<{ subtestId: string }>();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<TabKey>("lernen");
-  const progress = useKFFStore((s) =>
-    subtestId ? s.progress[subtestId as KFFSubtestType] : null
-  );
+  const progress = useKFFStore((s) => (subtestId ? s.progress[subtestId as KFFSubtestType] : null));
 
   const config = subtestId ? subtestConfigs[subtestId] : null;
 
@@ -139,9 +137,7 @@ export default function KFFSubtest() {
 
   const Icon = config.icon;
   const pct =
-    progress && progress.total > 0
-      ? Math.round((progress.correct / progress.total) * 100)
-      : 0;
+    progress && progress.total > 0 ? Math.round((progress.correct / progress.total) * 100) : 0;
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
@@ -161,9 +157,7 @@ export default function KFFSubtest() {
           <Icon className={`w-6 h-6 ${config.color}`} />
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-            {config.name}
-          </h1>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{config.name}</h1>
           <div className="flex items-center gap-3 mt-1">
             <span className="text-sm text-muted">{config.category}</span>
             {progress && progress.total > 0 && (
@@ -211,8 +205,8 @@ export default function KFFSubtest() {
               Strategie-Inhalte folgen
             </h2>
             <p className="text-sm text-muted max-w-md mx-auto">
-              Die Lern- und Strategie-Inhalte für &quot;{config.name}&quot;
-              werden in einem nächsten Update hinzugefügt.
+              Die Lern- und Strategie-Inhalte für &quot;{config.name}&quot; werden in einem nächsten
+              Update hinzugefügt.
             </p>
           </CardContent>
         </Card>
@@ -228,8 +222,8 @@ export default function KFFSubtest() {
               Übungsmodus
             </h2>
             <p className="text-sm text-muted max-w-md mx-auto">
-              Der Übungsmodus ohne Zeitdruck für &quot;{config.name}&quot;
-              wird in einem nächsten Update freigeschaltet.
+              Der Übungsmodus ohne Zeitdruck für &quot;{config.name}&quot; wird in einem nächsten
+              Update freigeschaltet.
             </p>
           </CardContent>
         </Card>
@@ -245,8 +239,8 @@ export default function KFFSubtest() {
               Simulationsmodus
             </h2>
             <p className="text-sm text-muted max-w-md mx-auto">
-              Der Simulationsmodus mit Timer und Auswertung für &quot;{config.name}&quot;
-              wird in einem nächsten Update freigeschaltet.
+              Der Simulationsmodus mit Timer und Auswertung für &quot;{config.name}&quot; wird in
+              einem nächsten Update freigeschaltet.
             </p>
           </CardContent>
         </Card>

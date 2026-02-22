@@ -16,13 +16,13 @@ import type { KFFSubtestType, KFFResult, SimulationResult } from "@/data/kffType
 const KFF_SUBTEST_LABELS: Record<string, string> = {
   implikationen: "Implikationen",
   zahlenfolgen: "Zahlenfolgen",
-  wortfluessigkeit: "Wortflüssigkeit",
-  merkfaehigkeit: "Merkfähigkeit",
+  wortflüssigkeit: "Wortflüssigkeit",
+  merkfähigkeit: "Merkfähigkeit",
   figuren: "Figuren",
   "emotionen-regulieren": "Emotionen regulieren",
   "soziales-entscheiden": "Soziales Entscheiden",
   "emotionen-erkennen": "Emotionen erkennen",
-  textverstaendnis: "Textverständnis",
+  textverständnis: "Textverständnis",
 };
 
 export function useKFFResults() {

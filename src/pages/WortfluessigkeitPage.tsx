@@ -18,18 +18,16 @@ const tabs: { key: TabKey; label: string; icon: React.ElementType }[] = [
 
 export default function WortfluessigkeitPage() {
   const [activeTab, setActiveTab] = useState<TabKey>("lernen");
-  const progress = useKFFStore((s) => s.progress.wortfluessigkeit);
+  const progress = useKFFStore((s) => s.progress["wortflüssigkeit"]);
   const pct =
-    progress && progress.total > 0
-      ? Math.round((progress.correct / progress.total) * 100)
-      : 0;
+    progress && progress.total > 0 ? Math.round((progress.correct / progress.total) * 100) : 0;
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
       <BreadcrumbNav
         items={[
-{ label: "Dashboard", href: "/" },
-  { label: "KFF Academy", href: "/kff" },
+          { label: "Dashboard", href: "/" },
+          { label: "KFF Academy", href: "/kff" },
           { label: "Wortflüssigkeit" },
         ]}
       />

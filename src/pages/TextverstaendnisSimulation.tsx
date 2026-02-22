@@ -73,7 +73,7 @@ export default function TextverstaendnisSimulation() {
     if (phase === "running" && timeLeft === 0) {
       finishSimulation();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft, phase]);
 
   const startSimulation = useCallback(() => {
@@ -104,7 +104,7 @@ export default function TextverstaendnisSimulation() {
 
     recordSimulation({
       id: `sim-tv-${Date.now()}`,
-      subtestType: "textverstaendnis",
+      subtestType: "textverständnis",
       score: correctCount,
       maxScore: selectedText.questions.length,
       timeUsed: TIME_LIMIT - timeLeft,
@@ -114,7 +114,7 @@ export default function TextverstaendnisSimulation() {
     });
 
     setPhase("results");
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedText, answers, timeLeft, recordSimulation]);
 
   const handleSelectOption = useCallback(
@@ -141,8 +141,8 @@ export default function TextverstaendnisSimulation() {
               TV-Simulation starten
             </h2>
             <p className="text-sm text-muted max-w-md mx-auto">
-              Du bekommst 1 zuf&auml;lligen wissenschaftlichen Text mit 5 MC-Fragen.
-              Beantworte alle Fragen innerhalb von {Math.floor(TIME_LIMIT / 60)} Minuten.
+              Du bekommst 1 zuf&auml;lligen wissenschaftlichen Text mit 5 MC-Fragen. Beantworte alle
+              Fragen innerhalb von {Math.floor(TIME_LIMIT / 60)} Minuten.
             </p>
           </div>
           <div className="flex flex-col items-center gap-2 text-sm text-muted">
@@ -174,9 +174,7 @@ export default function TextverstaendnisSimulation() {
     const correctCount = selectedText.questions.filter(
       (q, i) => answers[i] === q.correctAnswer
     ).length;
-    const scorePercent = Math.round(
-      (correctCount / selectedText.questions.length) * 100
-    );
+    const scorePercent = Math.round((correctCount / selectedText.questions.length) * 100);
 
     return (
       <div className="space-y-6">
@@ -246,7 +244,10 @@ export default function TextverstaendnisSimulation() {
             <div
               className="prose prose-sm dark:prose-invert max-w-none text-base leading-relaxed"
               dangerouslySetInnerHTML={{
-                __html: highlightText(selectedText.text, highlightedPassage).replace(/\n/g, "<br/>"),
+                __html: highlightText(selectedText.text, highlightedPassage).replace(
+                  /\n/g,
+                  "<br/>"
+                ),
               }}
             />
           </div>
@@ -276,8 +277,10 @@ export default function TextverstaendnisSimulation() {
                         const isSelected = selected === optIdx;
                         const isCorrectOpt = optIdx === q.correctAnswer;
                         let cls = "text-xs text-muted";
-                        if (isCorrectOpt) cls = "text-xs font-medium text-green-700 dark:text-green-400";
-                        if (isSelected && !isCorrectOpt) cls = "text-xs font-medium text-red-600 dark:text-red-400 line-through";
+                        if (isCorrectOpt)
+                          cls = "text-xs font-medium text-green-700 dark:text-green-400";
+                        if (isSelected && !isCorrectOpt)
+                          cls = "text-xs font-medium text-red-600 dark:text-red-400 line-through";
 
                         return (
                           <div key={optIdx} className="flex items-start gap-1.5">
@@ -353,9 +356,7 @@ export default function TextverstaendnisSimulation() {
         </div>
         <span
           className={`text-sm font-mono font-bold min-w-[48px] text-right ${
-            isUrgent
-              ? "text-red-600 dark:text-red-400"
-              : "text-gray-900 dark:text-gray-100"
+            isUrgent ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"
           }`}
         >
           {formatTime(timeLeft)}
@@ -372,9 +373,7 @@ export default function TextverstaendnisSimulation() {
             <div
               key={i}
               className={`w-2 h-2 rounded-full ${
-                answers[i] !== undefined
-                  ? "bg-indigo-500"
-                  : "bg-gray-300 dark:bg-gray-600"
+                answers[i] !== undefined ? "bg-indigo-500" : "bg-gray-300 dark:bg-gray-600"
               }`}
             />
           ))}
@@ -425,9 +424,7 @@ export default function TextverstaendnisSimulation() {
                             <span className="font-bold text-xs mt-0.5 shrink-0 w-5">
                               {String.fromCharCode(65 + optIdx)}.
                             </span>
-                            <span className="flex-1 text-gray-800 dark:text-gray-200">
-                              {opt}
-                            </span>
+                            <span className="flex-1 text-gray-800 dark:text-gray-200">{opt}</span>
                           </div>
                         </button>
                       );

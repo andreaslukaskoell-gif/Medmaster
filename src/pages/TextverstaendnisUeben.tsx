@@ -15,9 +15,21 @@ import { useKFFResults } from "@/hooks/useKFFResults";
 import { tvTexte, type TVText, type TVQuestion } from "@/data/kffTextverstaendnis";
 
 const difficultyLabels: Record<number, { label: string; bg: string; color: string }> = {
-  1: { label: "Leicht", bg: "bg-green-100 dark:bg-green-900/30", color: "text-green-700 dark:text-green-400" },
-  2: { label: "Mittel", bg: "bg-amber-100 dark:bg-amber-900/30", color: "text-amber-700 dark:text-amber-400" },
-  3: { label: "Schwer", bg: "bg-red-100 dark:bg-red-900/30", color: "text-red-700 dark:text-red-400" },
+  1: {
+    label: "Leicht",
+    bg: "bg-green-100 dark:bg-green-900/30",
+    color: "text-green-700 dark:text-green-400",
+  },
+  2: {
+    label: "Mittel",
+    bg: "bg-amber-100 dark:bg-amber-900/30",
+    color: "text-amber-700 dark:text-amber-400",
+  },
+  3: {
+    label: "Schwer",
+    bg: "bg-red-100 dark:bg-red-900/30",
+    color: "text-red-700 dark:text-red-400",
+  },
 };
 
 function shuffle<T>(arr: T[]): T[] {
@@ -82,7 +94,7 @@ export default function TextverstaendnisUeben() {
       setHighlightedPassage(question.relevantPassage);
 
       // Record result
-      recordResult("textverstaendnis", {
+      recordResult("textverständnis", {
         exerciseId: `${currentText.id}-q${qIdx}`,
         userAnswer: question.options[selected],
         correct,
@@ -137,7 +149,9 @@ export default function TextverstaendnisUeben() {
   }
 
   const allRevealed = currentText.questions.every((_, i) => revealed[i]);
-  const correctCount = currentText.questions.filter((q, i) => revealed[i] && answers[i] === q.correctAnswer).length;
+  const correctCount = currentText.questions.filter(
+    (q, i) => revealed[i] && answers[i] === q.correctAnswer
+  ).length;
 
   // Determine which passage to highlight
   const textHtml = highlightText(currentText.text, highlightedPassage);
@@ -151,9 +165,17 @@ export default function TextverstaendnisUeben() {
         <div className="flex items-center gap-2">
           <Filter className="w-4 h-4 text-muted" />
           <button
-            onClick={() => { setDifficultyFilter(null); setTextIndex(0); setAnswers({}); setRevealed({}); setHighlightedPassage(undefined); }}
+            onClick={() => {
+              setDifficultyFilter(null);
+              setTextIndex(0);
+              setAnswers({});
+              setRevealed({});
+              setHighlightedPassage(undefined);
+            }}
             className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
-              difficultyFilter === null ? "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 font-medium" : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+              difficultyFilter === null
+                ? "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 font-medium"
+                : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
             }`}
           >
             Alle
@@ -161,9 +183,17 @@ export default function TextverstaendnisUeben() {
           {[1, 2, 3].map((d) => (
             <button
               key={d}
-              onClick={() => { setDifficultyFilter(d); setTextIndex(0); setAnswers({}); setRevealed({}); setHighlightedPassage(undefined); }}
+              onClick={() => {
+                setDifficultyFilter(d);
+                setTextIndex(0);
+                setAnswers({});
+                setRevealed({});
+                setHighlightedPassage(undefined);
+              }}
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
-                difficultyFilter === d ? `${difficultyLabels[d].bg} ${difficultyLabels[d].color} font-medium` : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                difficultyFilter === d
+                  ? `${difficultyLabels[d].bg} ${difficultyLabels[d].color} font-medium`
+                  : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
               }`}
             >
               {difficultyLabels[d].label}
@@ -174,7 +204,9 @@ export default function TextverstaendnisUeben() {
           <button
             onClick={handleShuffle}
             className={`flex items-center gap-1 text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
-              shuffled ? "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600" : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+              shuffled
+                ? "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600"
+                : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
             }`}
           >
             <Shuffle className="w-3 h-3" />
@@ -197,7 +229,9 @@ export default function TextverstaendnisUeben() {
           <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
             Text {textIndex + 1} von {filteredTexts.length}
           </span>
-          <span className={`text-xs px-2 py-0.5 rounded-full ${difficultyLabels[currentText.difficulty].bg} ${difficultyLabels[currentText.difficulty].color}`}>
+          <span
+            className={`text-xs px-2 py-0.5 rounded-full ${difficultyLabels[currentText.difficulty].bg} ${difficultyLabels[currentText.difficulty].color}`}
+          >
             {difficultyLabels[currentText.difficulty].label}
           </span>
           <span className="text-xs text-muted">{currentText.topic}</span>
@@ -314,7 +348,8 @@ function QuestionCard({
           {question.options.map((opt, optIdx) => {
             const isSelected = selected === optIdx;
             const isCorrect = optIdx === question.correctAnswer;
-            let optClass = "border-gray-200 dark:border-gray-700 hover:border-indigo-300 dark:hover:border-indigo-600";
+            let optClass =
+              "border-gray-200 dark:border-gray-700 hover:border-indigo-300 dark:hover:border-indigo-600";
 
             if (isRevealed) {
               if (isCorrect) {
