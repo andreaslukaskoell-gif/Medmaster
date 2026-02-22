@@ -2,7 +2,7 @@
 import type { Kapitel } from "../types";
 
 export const chemKap6: Kapitel = {
-  id: "chem-kap6",
+  id: "chem-kap3",
   title: "Chemische Bindung",
   subject: "chemie",
   icon: "🔗",
