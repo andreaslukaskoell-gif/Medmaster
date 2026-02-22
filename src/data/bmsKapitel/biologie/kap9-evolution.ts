@@ -61,6 +61,7 @@ Belege:
         "Endosymbiontentheorie (Margulis): Mitochondrien ← Alphaproteobakterien; Chloroplasten ← Cyanobakterien. Belege: eigenes Genom, 70S-Ribosomen, Doppelmembran.",
       ],
       klinischerBezug: "Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität mancher Antibiotika (z. B. Chloramphenicol hemmt 70S-Ribosomen von Bakterien UND Mitochondrien → aplastische Anämie als Nebenwirkung). Mutationen im mitochondrialen Genom (maternal vererbt) verursachen mitochondriale Erkrankungen wie das MELAS-Syndrom.",
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Nennen Sie drei Belege für die Endosymbiontentheorie (dass Mitochondrien aus Prokaryoten entstanden).",
         answer: "1. Eigenes ringförmiges DNA-Genom ohne Histone (wie Bakterien). 2. Eigene 70S-Ribosomen (wie Bakterien, nicht 80S wie eukaryotische Cytoplasma-Ribosomen). 3. Doppelmembran (innere Membran entspricht der ehemaligen Bakterienmembran, äußere dem phagozytischen Vesikel). 4. Vermehrung durch binäre Teilung unabhängig vom Zellzyklus. 5. Antibiotika hemmen mitochondriale Ribosomen (wie bei Bakterien). 6. Phylogenetische Ähnlichkeit zu Alphaproteobakterien.",
@@ -212,6 +213,7 @@ Durch Vergleich von DNA-Sequenzen (z. B. 16S-rRNA bei Bakterien, Cytochrom c, Hi
         "Cladistik: Klassifikation nach Synapomorphien (gemeinsamen abgeleiteten Merkmalen). Monophyletisch = gemeinsamer Vorfahre + alle Nachkommen.",
       ],
       klinischerBezug: "Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische Analysen von Virussequenzen (z. B. HIV, SARS-CoV-2) rekonstruieren Ausbreitungswege von Epidemien (Genomic Epidemiology) und identifizieren Ursprungsorte von Pandemien. Bei SARS-CoV-2 konnte die phylogenetische Analyse zeigen, dass das Virus einmalig in Menschen eingetreten ist und sich danach weltweit verbreitet hat.",
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Erklären Sie den Unterschied zwischen homologen und analogen Strukturen und nennen Sie je ein Beispiel.",
         answer: "Homologe Strukturen sind auf gemeinsame Abstammung zurückzuführen — sie haben denselben evolutionären Ursprung und oft einen ähnlichen Grundbauplan, obwohl die Funktion verschieden sein kann. Beispiel: Arm des Menschen und Vorderflosse des Wals (beide haben Humerus, Radius, Ulna — gemeinsamer Vorfahre). Analoge Strukturen entstanden durch konvergente Evolution unabhängig voneinander als Anpassung an ähnliche Umweltbedingungen — sie haben verschiedenen Ursprung, erfüllen aber dieselbe Funktion. Beispiel: Flügel des Vogels (modifizierter Knochenarm) und Flügel des Insekts (Exoskelett-Ausstülpung).",
@@ -367,6 +369,7 @@ Die **Synthetische Evolutionstheorie** (1930–1950er, Fisher, Dobzhansky, Mayr,
         "Synthetische Theorie: Evolution = Veränderung der Allelfrequenzen. Faktoren: Mutation, Selektion, Gendrift, Genfluss.",
       ],
       klinischerBezug: "Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selektiert resistente Bakterienstämme (MRSA, multiresistente Tuberkulose). Das Verständnis der Selektionsdynamik ist essenziell für die Entwicklung von Resistenz-Präventionsstrategien (Antibiotic Stewardship, Therapierotation).",
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Was versteht Darwin unter 'natürlicher Selektion'? Erläutern Sie die vier Voraussetzungen.",
         answer: "Natürliche Selektion setzt vier Bedingungen voraus: (1) Variation: Individuen einer Population unterscheiden sich in vererbbaren Merkmalen. (2) Erblichkeit: Diese Merkmale werden an Nachkommen weitergegeben. (3) Überproduktion: Es werden mehr Individuen geboren als die Umwelt tragen kann (Kampf ums Dasein). (4) Differential-Reproduktion: Individuen mit vorteilhaften Merkmalen überleben und reproduzieren sich häufiger. Das Ergebnis: Vorteilhafte Merkmale nehmen in der Population über Generationen zu — die Population verändert sich (Evolution).",
@@ -525,6 +528,7 @@ Beispiel: Weizen (*Triticum aestivum*, hexaploid 6n=42) durch Kreuzung dreier di
         "Allopatrisch = geografische Isolation; sympatrisch = keine geografische Isolation (z. B. Polyploidie bei Pflanzen).",
       ],
       klinischerBezug: "Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide Embryonen sind nicht lebensfähig und führen zu Frühaborten. In der Krebsbiologie sind viele Tumorzellen aneuplooid oder polyplooid — Chromosomeninstabilität ist ein Hallmark of Cancer.",
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Was unterscheidet allopatrische von sympatrischer Artbildung?",
         answer: "Allopatrische Artbildung erfolgt durch geografische Trennung einer Population durch eine Barriere (Gebirge, Ozean). Die getrennten Populationen divergieren durch Mutation, Selektion und Gendrift, bis sie reproduktiv isoliert sind. Sympatrische Artbildung erfolgt im selben geografischen Gebiet ohne physische Trennung. Bei Pflanzen ist Polyploidie der häufigste Mechanismus: Ein polyploider Organismus kann sich nicht mehr mit den Elterndiploiden fortpflanzen, wohl aber mit anderen Polyploiden derselben Art — eine neue Art entsteht in einer Generation.",
@@ -683,6 +687,7 @@ Im Hardy-Weinberg-Gleichgewicht ändert sich die Allelfrequenz nicht. Abweichung
         "Hardy-Weinberg: p²+2pq+q²=1. Im Gleichgewicht = keine Evolution. Abweichungen zeigen aktive evolutionäre Kräfte.",
       ],
       klinischerBezug: "Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkrankungen in isolierten Gemeinschaften: Tay-Sachs bei aschkenasischen Juden, Ellis-van-Creveld-Syndrom bei Amischen. In der Pharmakogenetik erklärt der Gründereffekt populationsspezifische Häufigkeiten von Medikamentenmetabolismus-Varianten (z. B. CYP2D6-Allele).",
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Erklären Sie den Unterschied zwischen Flaschenhals-Effekt und Gründereffekt.",
         answer: "Beide sind Sonderformen des Gendrifts. Der Flaschenhals-Effekt tritt auf, wenn eine große bestehende Population durch ein katastrophales Ereignis (Seuche, Naturkatastrophe) auf wenige Individuen reduziert wird. Die überlebenden Individuen repräsentieren nur einen zufälligen Ausschnitt der ursprünglichen genetischen Variation — Allelfrequenzen ändern sich zufällig, Diversität geht verloren. Der Gründereffekt tritt auf, wenn eine kleine Gruppe von Individuen aus einer großen Population eine neue Population gründet (z. B. auf einer neuen Insel). Die zufälligen Allele der Gründer sind in der neuen Population überrepräsentiert.",
@@ -838,6 +843,7 @@ Im Hardy-Weinberg-Gleichgewicht ändert sich die Allelfrequenz nicht. Abweichung
         "Out-of-Africa: H. sapiens entstand in Afrika, migrierte vor ~60.000–70.000 Jahren. Neanderthaler-DNA in modernen Menschen (1–4%).",
       ],
       klinischerBezug: "Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderthaler zeigte, dass bestimmte neanderthalische Allele das COVID-19-Schwereverlaufsrisiko erhöhen (Chromosom 3-Risikohaplotyp). Dies verbindet prähistorische Homininen-Forschung direkt mit klinisch relevanten Fragestellungen der modernen Medizin.",
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Was sagt die Out-of-Africa-Theorie aus und welche genetischen Belege stützen sie?",
         answer: "Die Out-of-Africa-Theorie besagt, dass Homo sapiens in Afrika entstand (vor ca. 300.000 Jahren) und dann vor ca. 60.000–70.000 Jahren aus Afrika in den Rest der Welt migrierte. Genetische Belege: (1) Maximale genetische Diversität bei afrikanischen Populationen (alle anderen Populationen sind Teilmengen dieser Diversität — Gründereffekt bei Auswanderung). (2) Mitochondriale DNA (maternale Linie) und Y-Chromosom (paternale Linie) konvergieren auf afrikanische Ursprünge (Mitochondrielle Eva, Chromosomaler Adam). (3) 1–4% neanderthalische DNA in Nicht-Afrikanern belegt Hybridisierung nach der afrikanischen Migration.",

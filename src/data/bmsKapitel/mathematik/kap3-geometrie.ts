@@ -131,6 +131,7 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
         'KOF nach DuBois: 0,007184 · Gewicht^0,425 · Größe^0,725 (Gewicht kg, Größe cm).',
         'Im EKG ist die ST-Fläche (Amplitude × Zeit) ein Maß für das ischämische Myokardareal.',
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Ein Dreieck hat die Seitenlängen a = 5 cm, b = 7 cm und c = 8 cm. Berechnen Sie die Fläche des Dreiecks mithilfe der Heronschen Formel.',
         answer: 'Zuerst wird der Halbumfang s bestimmt: s = (a + b + c) / 2 = (5 + 7 + 8) / 2 = 20 / 2 = 10 cm. Dann werden die Differenzen berechnet: s − a = 10 − 5 = 5 cm, s − b = 10 − 7 = 3 cm, s − c = 10 − 8 = 2 cm. Die Heronsche Formel lautet: A = √(s · (s−a) · (s−b) · (s−c)) = √(10 · 5 · 3 · 2) = √300. Da 300 = 100 · 3, ergibt sich A = 10 · √3 ≈ 10 · 1,732 ≈ 17,32 cm². Zur Überprüfung: Das Dreieck mit Seiten 5, 7, 8 ist ein stumpfwinkliges Dreieck; die Fläche erscheint plausibel. Eine alternative Methode wäre, zunächst die Höhe über die Zerlegung in zwei rechtwinklige Dreiecke zu bestimmen, was bei diesem Dreieck aber aufwendiger ist. Die Heronsche Formel ist daher besonders praktisch, wenn alle drei Seiten bekannt, die Höhe jedoch nicht direkt gegeben ist.',
@@ -380,6 +381,7 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
         'Harnblasenvolumen (US): V = 0,52·a·b·c; Restharn > 100 ml ist klinisch relevant.',
         'RECIST-Tumorvolumen: Ellipsoid-Näherung ermöglicht Verlaufskontrolle unter Therapie.',
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Erläutern Sie, warum das Hagen-Poiseuille-Gesetz für das Verständnis von Gefäßstenosen klinisch von zentraler Bedeutung ist. Gehen Sie auf die mathematische r⁴-Abhängigkeit ein.',
         answer: 'Das Hagen-Poiseuille-Gesetz beschreibt den laminaren Volumenstrom durch ein zylindrisches Rohr: V̇ = (π · r⁴ · ΔP) / (8 · η · l). Der Volumenstrom ist proportional zur vierten Potenz des Radius r. Diese r⁴-Abhängigkeit hat dramatische klinische Konsequenzen: Wird der Gefäßradius durch eine atherosklerotische Plaque halbiert, reduziert sich der Blutfluss auf (1/2)⁴ = 1/16 des Ausgangswertes — also auf etwa 6 % — bei gleichem Druckgradienten. Umgekehrt bedeutet eine Verdoppelung des Radius (z. B. nach PTCA) einen 16-fach erhöhten Fluss. In der klinischen Praxis wird die Stenose oft als prozentualer Durchmesserverlust angegeben. Eine hämodynamisch signifikante Stenose liegt üblicherweise bei > 50 % Lumenreduktion vor. Bei 70 % Stenose (Radius auf 30 % reduziert) fällt der Fluss auf 0,3⁴ ≈ 0,008, also unter 1 % des Normwerts. Dies erklärt, warum hochgradige Koronarstenosen zu Angina pectoris und Myokardinfarkt führen und warum eine Revaskularisierung (Stent, Bypass) den Fluss drastisch verbessert.',
@@ -650,6 +652,7 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
         'Bland-Altman-Plot: Methodenvergleich durch Differenz vs. Mittelwert.',
         'Vierfelder-Tafel: 2×2-Matrix für Sensitivität (TP/(TP+FN)) und Spezifität (TN/(TN+FP)).',
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Zwei Geraden g₁: y = 3x − 2 und g₂: y = −x + 6 schneiden sich in einem Punkt. Bestimmen Sie den Schnittpunkt und geben Sie an, ob die Geraden senkrecht zueinander stehen.',
         answer: 'Für den Schnittpunkt werden die Gleichungen gleichgesetzt: 3x − 2 = −x + 6. Umformen: 3x + x = 6 + 2 → 4x = 8 → x = 2. y-Wert einsetzen: y = 3 · 2 − 2 = 6 − 2 = 4. Der Schnittpunkt liegt bei P(2, 4). Überprüfung mit g₂: y = −2 + 6 = 4. Stimmt überein. Zur Prüfung auf Orthogonalität: m₁ = 3, m₂ = −1. Das Produkt der Steigungen: m₁ · m₂ = 3 · (−1) = −3 ≠ −1. Da m₁ · m₂ ≠ −1, stehen die Geraden nicht senkrecht zueinander. Für Senkrechtstehen wäre beispielsweise m₂ = −1/3 erforderlich. Die Geraden schneiden sich also in P(2, 4) unter einem spitzen Winkel.',
@@ -912,6 +915,7 @@ Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren)
         'Drehmoment M = r × F; maximal wenn Kraft senkrecht zum Hebelarm.',
         '3D-MRT-Schichten: jede Schichtebene hat einen Normalenvektor (Schichtorientierung).',
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Die Vektoren **a** = (2, 1, −1) und **b** = (1, −1, 2) sind gegeben. Berechnen Sie das Skalarprodukt und bestimmen Sie den Winkel zwischen den Vektoren (cos⁻¹ angeben). Sind die Vektoren senkrecht zueinander?',
         answer: 'Das Skalarprodukt berechnet sich komponentenweise: a · b = a₁·b₁ + a₂·b₂ + a₃·b₃ = 2·1 + 1·(−1) + (−1)·2 = 2 − 1 − 2 = −1. Die Beträge der Vektoren: |a| = √(2² + 1² + (−1)²) = √(4 + 1 + 1) = √6; |b| = √(1² + (−1)² + 2²) = √(1 + 1 + 4) = √6. Der Kosinus des Winkels: cos θ = (a · b) / (|a| · |b|) = −1 / (√6 · √6) = −1/6 ≈ −0,167. Der Winkel: θ = arccos(−0,167) ≈ 99,6°. Da das Skalarprodukt −1 ≠ 0 ist, sind die Vektoren nicht senkrecht zueinander; sie schließen einen stumpfen Winkel von ca. 100° ein. Senkrecht wären sie nur, wenn das Skalarprodukt exakt null wäre.',

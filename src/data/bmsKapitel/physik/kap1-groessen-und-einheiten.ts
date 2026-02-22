@@ -96,6 +96,7 @@ Ein häufiger Irrtum im Alltag: Die Masse eines Menschen (in kg) und seine Gewic
               ["Lichtstärke", "Iv", "Candela", "cd"],
             ],
           },
+          merksatz: 'Die 7 SI-Basisgrößen: Länge (m), Masse (kg), Zeit (s), Stromstärke (A), Temperatur (K), Stoffmenge (mol), Lichtstärke (cd)',
         },
         {
           heading: 'Die sieben SI-Basisgrößen',
@@ -120,7 +121,6 @@ Ein häufiger Irrtum im Alltag: Die Masse eines Menschen (in kg) und seine Gewic
       ],
 
       merksätze: [
-        'Die 7 SI-Basisgrößen: Länge (m), Masse (kg), Zeit (s), Stromstärke (A), Temperatur (K), Stoffmenge (mol), Lichtstärke (cd)',
         'Merkhilfe: "Luise Mag Zwei Alte Katzen Mit Charme" → L, M, Z(eit), A, K, M(ol), C(andela)',
         'Abgeleitete Einheit = Kombination von Basiseinheiten: N = kg·m·s⁻², Pa = N/m², J = N·m, W = J/s',
         'Jede physikalische Größe G = Zahlenwert {G} × Einheit [G] — Zahlenwert allein ist bedeutungslos!',
@@ -132,6 +132,7 @@ Ein häufiger Irrtum im Alltag: Die Masse eines Menschen (in kg) und seine Gewic
         '1 mol enthält genau 6,022 × 10²³ Teilchen (Avogadro-Konstante) — definiert seit SI-Reform 2019',
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Erläutern Sie das SI-Einheitensystem und erklären Sie, warum ein einheitliches Messsystem in der Medizin unverzichtbar ist. Gehen Sie dabei auf mindestens drei Basisgrößen und zwei abgeleitete Einheiten ein.',
         answer: `Das Internationale Einheitensystem (SI) ist das weltweit gültige Messsystem, das auf sieben unabhängigen Basisgrößen beruht. Diese sieben Größen — Länge (Meter, m), Masse (Kilogramm, kg), Zeit (Sekunde, s), elektrische Stromstärke (Ampere, A), thermodynamische Temperatur (Kelvin, K), Stoffmenge (Mol, mol) und Lichtstärke (Candela, cd) — sind so fundamental, dass alle anderen physikalischen Größen aus ihnen abgeleitet werden können.
@@ -402,6 +403,7 @@ Das Beherrschen dieser Größenordnungen ermöglicht eine schnelle Plausibilitä
               ["Femto", "f", "10⁻¹⁵", "10⁻¹⁵"],
             ],
           },
+          merksatz: 'Präfixe von groß zu klein: Tera(T)-Giga(G)-Mega(M)-Kilo(k) — Einheit — Milli(m)-Mikro(µ)-Nano(n)-Piko(p)-Femto(f)',
         },
         {
           heading: 'SI-Präfixe: Vom Femto zum Tera',
@@ -421,7 +423,6 @@ Das Beherrschen dieser Größenordnungen ermöglicht eine schnelle Plausibilitä
       ],
 
       merksätze: [
-        'Präfixe von groß zu klein: Tera(T)-Giga(G)-Mega(M)-Kilo(k) — Einheit — Milli(m)-Mikro(µ)-Nano(n)-Piko(p)-Femto(f)',
         'Faustformel: Je drei Stellen → ein Präfix. 1 km = 1 000 m, 1 mm = 0,001 m, 1 µm = 0,001 mm',
         'Wissenschaftliche Notation: immer eine Stelle vor dem Komma — 3,5 × 10⁴, nicht 35 × 10³',
         'Exponentenregeln: Mult → addieren (10³·10⁴=10⁷), Div → subtrahieren (10⁷/10³=10⁴), Potenz → multiplizieren ((10³)²=10⁶)',
@@ -433,6 +434,7 @@ Das Beherrschen dieser Größenordnungen ermöglicht eine schnelle Plausibilitä
         'Lichtgeschwindigkeit c ≈ 3 × 10⁸ m/s; Avogadro NA ≈ 6 × 10²³ mol⁻¹ — wichtige Naturkonstanten',
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Erläutern Sie das System der SI-Präfixe und die wissenschaftliche Notation. Warum sind korrekte Präfixkenntnisse in der Medizin sicherheitsrelevant? Geben Sie zwei konkrete klinische Beispiele.',
         answer: `Das SI-Präfixsystem ermöglicht es, physikalische Größen über viele Größenordnungen hinweg kompakt und eindeutig auszudrücken. Präfixe sind Vorsätze vor die Einheit, die einen Multiplikationsfaktor (Zehnerpotenz) angeben. Die medizinisch bedeutsamsten Präfixe sind Kilo (k, 10³), Milli (m, 10⁻³), Mikro (µ, 10⁻⁶), Nano (n, 10⁻⁹) und Femto (f, 10⁻¹⁵).
@@ -748,6 +750,7 @@ Der **Wirkungsgrad** η (eta) = nutzbarer Energieoutput / zugeführter Energiein
         'pH-Wert, Wirkungsgrad, Brechungsindex, Reynolds-Zahl: dimensionslose Größen ohne Einheit',
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Erklären Sie das Prinzip der Dimensionsanalyse und zeigen Sie am Beispiel der kinetischen Energie und des Blutdrucks, wie man Formeln prüft und Einheiten korrekt umrechnet.',
         answer: `Die Dimensionsanalyse beruht auf dem Prinzip der **dimensionalen Homogenität**: In jeder physikalisch korrekten Gleichung müssen beide Seiten dieselbe Dimension aufweisen. Dimensionen beschreiben die physikalische Natur einer Größe in Form der sieben Basisdimensionen Länge (L), Masse (M), Zeit (T), elektrische Stromstärke (I), Temperatur (Θ), Stoffmenge (N) und Lichtstärke (J).

@@ -80,6 +80,7 @@ Das **elektrische Potential φ** an einem Punkt gibt die potentielle Energie pro
         'Potential φ [V = J/C]: potentielle Energie pro Ladungseinheit.',
         'Äquipotentialflächen stehen immer senkrecht auf Feldlinien.',
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Erläutern Sie das Coulombsche Gesetz und seine Bedeutung für biologische Systeme. Gehen Sie dabei auf die Rolle des Mediums und den Vergleich zur Gravitationskraft ein.',
         answer: `Das Coulombsche Gesetz beschreibt die elektrostatische Kraft zwischen zwei ruhenden Punktladungen q₁ und q₂ im Abstand r: F = k·|q₁·q₂|/r², wobei k = 8,99 × 10⁹ N·m²/C². Die Kraft ist proportional zum Produkt der Ladungen und nimmt mit dem Quadrat des Abstands ab (inverses Quadratgesetz). Sie ist repulsiv bei gleichnamigen, attraktiv bei ungleichnamigen Ladungen.
@@ -319,6 +320,7 @@ Eine **Spannungsquelle** (Batterie, Akkumulator) erzeugt durch chemische Reaktio
         'Leitwert G = 1/R [S = Siemens] — bevorzugt bei Ionenkanälen.',
         'Nernst-Potential: E = (RT/zF)·ln([außen]/[innen]) — Gleichgewichtsspannung für Ionen.',
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Ein Patient erleidet einen Elektrounfall mit 230 V Wechselspannung. Erläutern Sie, welche physikalischen Größen den Schaden bestimmen, und welche Faktoren den Körperwiderstand beeinflussen. Gehen Sie auch auf den Unterschied zwischen Gleich- und Wechselstrom ein.',
         answer: `Der biologische Schaden durch elektrischen Strom hängt primär von der Stromstärke I ab, nicht von der Spannung. Nach dem Ohmschen Gesetz gilt: I = U/R. Der Körperwiderstand R bestimmt also, welcher Strom bei 230 V durch den Körper fließt.
@@ -571,6 +573,7 @@ Der **Spannungsteiler** teilt eine Spannung U₀ proportional zu den Widerständ
         'Zellmembran als RC-Glied: C_m ≈ 1 µF/cm², R_m = Kanalwiderstand.',
         'Defibrillator: Kondensatorentladung ~200 J in ms → terminiert Kammerflimmern.',
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Beschreiben Sie das elektrische Ersatzschaltbild der Zellmembran und erläutern Sie, wie die Kirchhoffschen Gesetze und das RC-Verhalten die Entstehung und Fortleitung von Aktionspotentialen erklären.',
         answer: `Die Zellmembran lässt sich als RC-Parallelglied modellieren: Die Lipiddoppelschicht ist ein Plattenkondensator mit Kapazität C_m ≈ 1 µF/cm². Ionenkanäle wirken als variable Widerstände (oder Leitfähigkeiten g = 1/R) für Na⁺, K⁺, Cl⁻ und Leck-Ionen. Das Hodgkin-Huxley-Modell (1952) beschreibt den Membranapparatstrom als: I_ges = C_m·dU/dt + g_Na·(U−E_Na) + g_K·(U−E_K) + g_L·(U−E_L).
@@ -809,6 +812,7 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
         'Larmor-Frequenz: f_L = γ·B₀/2π — bei 1,5 T für ¹H: ~64 MHz.',
         'TMS: Magnetfeldpuls induziert (Faraday) Strom im Kortex → Neuronenreizung.',
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Erläutern Sie das physikalische Prinzip der Magnetresonanztomographie (MRT). Gehen Sie dabei auf das statische Magnetfeld, die Larmor-Präzession, HF-Pulse, Relaxation und die Signaldetektion via Faraday-Induktion ein.',
         answer: `1. Statisches Hauptmagnetfeld B₀ (1,5–7 T): Supraleitende Solenoide (Nb-Ti, 4 K) erzeugen ein starkes, homogenes Feld. Wasserstoffkerne (¹H-Protonen) mit Kernspin 1/2 können sich parallel oder antiparallel zu B₀ ausrichten. Bei Körpertemperatur ist die Parallelausrichtung (niedrigere Energie) leicht bevorzugt → netto-Magnetisierung M₀ parallel zu B₀.

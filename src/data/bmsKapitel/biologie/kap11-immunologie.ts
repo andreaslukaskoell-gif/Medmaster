@@ -37,6 +37,7 @@ IgG ist das häufigste und beste verstandene Immunglobulin. Es besteht aus:
         {
           heading: "Immunglobulin-Klassen (Isotypen)",
           text: "Das Immunsystem produziert fünf Klassen von Immunglobulinen (Isotypen), die sich in Struktur, Vorkommen und Funktion unterscheiden.",
+          merksatz: "Ig-Klassen: IgG (häufig, plazentagängig), IgA (Sekrete), IgM (Primär, Pentamer), IgE (Allergie), IgD (B-Zell-Signal).",
           table: {
             headers: ["Klasse", "Vorkommen", "Besonderheiten"],
             rows: [
@@ -63,10 +64,10 @@ IgG ist das häufigste und beste verstandene Immunglobulin. Es besteht aus:
 
       merksätze: [
         "IgG-Aufbau: 2H + 2L Ketten, Disulfidbrücken, Fab (Antigen) + Fc (Effektur). Y-Form.",
-        "Ig-Klassen: IgG (häufig, plazentagängig), IgA (Sekrete), IgM (Primär, Pentamer), IgE (Allergie), IgD (B-Zell-Signal).",
         "Effektorfunktionen: Neutralisierung, Opsonisierung (→ Phagozytose), Komplementaktivierung (klassischer Weg → MAC).",
       ],
       klinischerBezug: "Der serologische Nachweis von IgM vs. IgG ist klinisch essenziell: IgM zeigt eine akute Infektion an (z. B. IgM gegen CMV, EBV, Hepatitis A), IgG zeigt eine abgelaufene Infektion oder Immunität nach Impfung (z. B. Hepatitis-B-Oberflächenantikörper IgG nach Impfung). Bei SARS-CoV-2 werden IgG-Antikörper zur Bestimmung des Immunstatus eingesetzt.",
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Erklären Sie den Unterschied zwischen Fab- und Fc-Fragment eines Antikörpers und deren jeweilige Funktion.",
         answer: "Das Fab-Fragment (Fragment antigen-binding) enthält die variablen Regionen sowohl der schweren als auch der leichten Kette. Diese variablen Regionen bilden die hochspezifische Antigenbindestelle (CDRs, Complementarity Determining Regions). Die Spezifität des Antikörpers wird durch die Fab-Region bestimmt. Das Fc-Fragment (Fragment crystallizable) enthält die konstanten Regionen der schweren Ketten und vermittelt Effektorfunktionen: Bindung an Fc-Rezeptoren auf Makrophagen und NK-Zellen (Opsonisierung, ADCC), Aktivierung des Komplementsystems (klassischer Weg über C1q), Bindung an die neonatalen Fc-Rezeptoren (Plazentatransfer bei IgG) und Halbwertszeit-Verlängerung (Recycling über FcRn).",
@@ -224,6 +225,7 @@ Aktivierte B-Zellen differenzieren auch zu langlebigen **Gedächtnis-B-Zellen**.
         "Affinitätsreifung: somatische Hypermutation (AID) in Keimzentren + Selektion → höhere Affinität der Sekundärantikörper.",
       ],
       klinischerBezug: "V(D)J-Rekombinationsfehler sind pathologisch relevant: Fehlerhaftes Rearrangement kann Proto-Onkogene in die Nähe aktiver Immungenpromotoren bringen → Lymphome (z. B. t(8;14) bei Burkitt-Lymphom: c-Myc unter IgH-Promotor). Nachweis von klonalen V(D)J-Rearrangements per PCR wird in der Diagnostik von B-Zell-Lymphomen genutzt (Klonalitätsnachweis).",
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Welche drei Hauptquellen der Antikörperdiversität gibt es und wie viele verschiedene Antikörperspezifitäten können theoretisch erzeugt werden?",
         answer: "1. Kombinatorische Diversität: Zufällige Auswahl der V-, D- und J-Gensegmente für schwere und leichte Ketten sowie deren zufällige Paarung — ergibt bis zu ~18 Millionen Kombinationen. 2. Junctionale Diversität: An den Verbindungsstellen der Segmente werden zufällige Nukleotide (N-Nukleotide durch TdT) eingefügt oder durch Exonukleasen entfernt — erhöht die Diversität auf über 10¹⁰. 3. Somatische Hypermutation: In Keimzentren nach Antigenaktivierung mutieren V-Regionen hochfrequent → Affinitätsreifung. Insgesamt können mehr als 10¹⁰ verschiedene Antikörperspezifitäten erzeugt werden.",
@@ -365,6 +367,7 @@ Das Rhesus-System (D-Antigen) ist das wichtigste nach AB0. Rh-positiv = D-Antige
         {
           heading: "Genotypen und Phänotypen",
           text: "Die vier AB0-Blutgruppen werden durch drei Allele (I^A, I^B, i⁰) bestimmt. Jede Blutgruppe hat charakteristische Genotypen, Antigene auf Erythrozyten und natürliche Antikörper im Serum.",
+          merksatz: "AB0-System: 3 Allele (I^A, I^B, i⁰). I^A und I^B kodominant. Blutgruppe 0 = ii⁰ (homozygot rezessiv).",
           table: {
             headers: ["Blutgruppe", "Genotypen", "Antigen", "Antikörper im Serum"],
             rows: [
@@ -389,11 +392,11 @@ Das Rhesus-System (D-Antigen) ist das wichtigste nach AB0. Rh-positiv = D-Antige
       diagram: 'blood-groups',
 
       merksätze: [
-        "AB0-System: 3 Allele (I^A, I^B, i⁰). I^A und I^B kodominant. Blutgruppe 0 = ii⁰ (homozygot rezessiv).",
         "Antikörper: Blutgruppe A → Anti-B; B → Anti-A; AB → keine; 0 → Anti-A und Anti-B.",
         "Transfusion: AB0-kompatibel wählen. 0- = universeller Spender (Notfall). Inkompatibilität → Hämolyse.",
       ],
       klinischerBezug: "AB0-Inkompatibilität bei Transfusion führt zur schwerwiegenden akuten hämolytischen Transfusionsreaktion (ABO-Fehltransfusion): innerhalb von Minuten Hämolyse, DIC (disseminierte intravasale Koagulation), Nierenversagen und Schock. Dies ist einer der häufigsten vermeidbaren Transfusionstode. Konsequenz: Strenge Identifikationsverfahren (Bedside-Test, Kreuzprobe) vor jeder Transfusion.",
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Welche Blutgruppen können Eltern mit den Blutgruppen A und B haben, wenn sie ein Kind mit Blutgruppe 0 bekommen?",
         answer: "Das Kind mit Blutgruppe 0 hat den Genotyp i⁰ i⁰ — es hat je ein i⁰-Allel von jedem Elternteil geerbt. Also müssen beide Elternteile mindestens ein i⁰-Allel tragen. Vater Blutgruppe A: muss den Genotyp I^A i⁰ haben (heterozygot). Mutter Blutgruppe B: muss den Genotyp I^B i⁰ haben (heterozygot). Hätte ein Elternteil den Genotyp I^A I^A (homozygot A) oder I^B I^B (homozygot B), könnte kein i⁰-Allel weitergegeben werden und das Kind könnte keine Blutgruppe 0 haben.",
@@ -552,6 +555,7 @@ Neben D-Antigen sind C, c, E, e-Antigene immunologisch relevant, aber weniger h�
         "Anti-D-Prophylaxe: 28. SSW und <72h post partum. Verhindert Sensibilisierung durch schnelle Elimination fetaler Rh+ Erythrozyten.",
       ],
       klinischerBezug: "Dank universeller Anti-D-Prophylaxe ist der Morbus haemolyticus neonatorum durch Rh-Inkompatibilität in Industrieländern selten geworden. Restrisiken bestehen bei nicht erkannten Sensibilisierungen (z. B. stille fetomaternale Transfusionen frühzeitig) oder bei nicht-D Rh-Antigenen (Kell, Kidd) ohne verfügbare Prophylaxe.",
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Erklären Sie, warum das erste Kind einer Rh-negativen Mutter mit einem Rh-positiven Vater meist nicht vom Morbus haemolyticus neonatorum betroffen ist, das zweite Kind jedoch gefährdet ist.",
         answer: "Beim ersten Kind findet die Sensibilisierung der Rh-negativen Mutter erst am Ende der Schwangerschaft oder bei der Geburt statt (fetomaternale Blutung). In dieser ersten Schwangerschaft bildet die Mutter zunächst Anti-D-IgM-Antikörper, die die Plazenta nicht passieren können (zu groß). Das erste Kind ist daher kaum betroffen. Nach der Geburt entwickelt die Mutter IgG-Anti-D-Antikörper (Gedächtnis-B-Zellen). Bei einer zweiten Schwangerschaft mit Rh+ Fetus können diese IgG-Anti-D die Plazenta passieren und fetale Erythrozyten lysieren → Morbus haemolyticus neonatorum.",

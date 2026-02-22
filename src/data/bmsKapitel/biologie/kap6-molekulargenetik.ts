@@ -145,13 +145,12 @@ export const bioKap6: Kapitel = {
         {
           heading: "Prokaryotische vs. Eukaryotische Replikation",
           text: "Prokaryoten haben 1 Origin (oriC), eukaryotische Chromosomen haben viele Origins. Prokaryoten replizieren schneller (~1.000 nt/s), Okazaki-Fragmente sind länger. Eukaryoten benötigen Telomerase für lineare Chromosomen; Prokaryoten haben zirkuläre DNA ohne Telomere.",
+          merksatz: "Semikonservativ: Jeder Tochterstrang = 1 alter Strang (Matrize) + 1 neuer Strang. Meselson & Stahl (1958): N15-schwer + N14-leicht → Hybrid-DNA. Antiparallel: 5'→3' und 3'→5'.",
         },
       ],
       diagram: 'dna-helix',
 
-      merksätze: [
-        "Semikonservativ: Jeder Tochterstrang = 1 alter Strang (Matrize) + 1 neuer Strang. Meselson & Stahl (1958): N15-schwer + N14-leicht → Hybrid-DNA. Antiparallel: 5'→3' und 3'→5'.",
-      ],
+      merksätze: [],
       selfTest: [
         {
           question: "In einem DNA-Doppelstrang beträgt der Anteil von Adenin (A) **30%**. Wie hoch ist der Anteil von Cytosin (C) gemäß den Chargaff-Regeln?",

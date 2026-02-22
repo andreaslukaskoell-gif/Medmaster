@@ -139,6 +139,7 @@ Mehrere Primerpaare in einem einzigen Reaktionsansatz — gleichzeitige Amplifik
 
       klinischerBezug: 'PCR ist Goldstandard für Infektionsdiagnostik (COVID-19, HIV-VL), Genotypisierung und pränatale Diagnostik.',
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Welche Temperatur wird beim Annealing-Schritt der PCR typischerweise verwendet, und welche molekulare Reaktion findet dabei statt?',
         answer: 'Beim Annealing wird die Temperatur auf 50–68 °C gesenkt. In diesem Schritt lagern sich die kurzen synthetischen Primer (18–25 nt Oligonukleotide) spezifisch an komplementäre Sequenzen der einzelsträngigen Ziel-DNA an (Hybridisierung durch Wasserstoffbrückenbindungen). Die genaue Temperatur hängt vom Schmelzpunkt (Tm) der Primer ab und liegt typischerweise 5 °C darunter. Zu hohe Annealing-Temperatur verhindert Primerbindung, zu niedrige führt zu unspezifischer Amplifikation falscher Sequenzen.',
@@ -391,6 +392,7 @@ Jedes Sequenzierungsexperiment produziert massive Datenmengen (Exom: ~5 GB, Gesa
         'Human Genome Project (abgeschlossen 2003): 3 Milliarden USD, 13 Jahre. Heute: komplettes Genom in 24 h für ~300 €.',
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Erklären Sie das Prinzip der Sanger-Sequenzierung. Welche Rolle spielen ddNTPs, und wie unterscheidet sich das Verfahren von der NGS (Illumina)?',
         answer: 'Die Sanger-Sequenzierung nutzt Didesoxynukleosidtriphosphate (ddNTPs), die im Gegensatz zu normalen dNTPs keine 3\'-OH-Gruppe besitzen. Wird ein ddNTP von der DNA-Polymerase eingebaut, kann keine weitere Phosphodiesterbindung geknüpft werden — die Kettensynthese bricht ab. In einem Ansatz mit allen vier ddNTPs (fluoreszenzmarkiert je Base) entstehen Fragmente jeder möglichen Länge, wobei das 3\'-Ende jeweils ein farbiges ddNTP trägt. Kapillarelektrophorese trennt die Fragmente nach Größe; ein Laser liest die Farbensequenz und leitet daraus die Basensequenz ab. Reads: 500–1.000 bp, sehr hohe Genauigkeit. Im Gegensatz dazu sequenziert Illumina-NGS Millionen kurze Fragmente (150–300 bp) gleichzeitig (massiv parallel) durch reversibel blockierte Fluoreszenz-dNTPs — viel höherer Durchsatz, aber kürzere Reads und Bedarf an bioinformatischer Auswertung.',
@@ -643,6 +645,7 @@ Ablauf:
         'RFLP: Punktmutation in Erkennungssequenz → Enzym schneidet nicht → anderes Bandenmuster → genetischer Marker.',
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Ein Arzt möchte einen HIV-positiven ELISA-Befund bestätigen. Erklären Sie das Prinzip des HIV-Western-Blots und was ein positives Ergebnis bedeutet.',
         answer: 'Der HIV-Western-Blot ist ein Bestätigungstest nach positivem ELISA-Screening. HIV-Proteine (aus inaktivierten Viren) werden zunächst per SDS-PAGE nach Molekulargewicht getrennt und auf eine Membran transferiert. Die Patientenprobe (Serum) wird aufgetragen — enthält das Serum HIV-spezifische Antikörper (bei HIV-Infektion), binden diese an die entsprechenden Virusproteine auf der Membran. Ein enzymkonjugierter Sekundärantikörper detektiert die Bindung. Ein positiver Western Blot zeigt Banden bei spezifischen Molekulargewichten: gp120 (Hüllglykoprotein, 120 kDa), gp41 (Transmembranprotein, 41 kDa), p24 (Kapsidprotein, 24 kDa). Die WHO-Kriterien verlangen mindestens zwei positive Banden (inkl. einer Hüllbande) für ein positives Ergebnis. Heute wird in vielen Leitlinien der HIV-1/2-Differenzierungsimmunoassay bevorzugt, da er schneller und sensitiver ist.',
@@ -881,6 +884,7 @@ Nachteile:
         'VNTR (Variable Number Tandem Repeats): 10–100 bp, historische Basis des DNA-Fingerprints (Jeffreys 1984) — heute durch STR ersetzt.',
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Ein Forensiker analysiert eine Blutprobe vom Tatort. Erklären Sie das Prinzip der STR-Analyse und warum 20 STR-Loci für eine eindeutige Identifikation ausreichen.',
         answer: 'STRs (Short Tandem Repeats) sind 2–6 bp-Wiederholungseinheiten, die im Genom variabel viele Male hintereinander wiederholt vorliegen. Die Anzahl der Wiederholungen (Allel) ist zwischen Individuen hochpolymorph. Jedes Individuum trägt an jedem STR-Locus zwei Allele (mütterlich + väterlich). Per Multiplex-PCR mit fluoreszenzmarkierten Primern werden 20 CODIS-Loci gleichzeitig amplifikiert; Kapillarelektrophorese trennt die PCR-Produkte nach Fragmentlänge, und Software erkennt die Allele als Peaks im Elektropherogramm. Die Random Match Probability bei 20 unabhängigen Loci ergibt sich als Produkt der Einzelwahrscheinlichkeiten: Wenn ein Locus eine Übereinstimmungswahrscheinlichkeit von 1:100 hat, ergibt das Produkt über 20 Loci etwa 1:10⁴⁰ — in der Praxis ~1:10²⁶ wegen tatsächlicher Allelhäufigkeiten. Das bedeutet, dass statistisch kein zweites Individuum auf der Erde dasselbe Profil trägt (Erdbevölkerung: ~8 × 10⁹). Der Vergleich mit einer Referenzprobe (z. B. Wangenabstrich vom Verdächtigen) erlaubt eine Identifikation mit richterlich anerkannter Sicherheit.',
@@ -1132,6 +1136,7 @@ Weitere rekombinante Proteine in der Medizin: Erythropoetin (EPO, Nierenversagen
         'Monoklonale Antikörper: Hybridomtechnologie (Köhler/Milstein 1975) → heute Phagen-Display für humane mAbs. CHO-Zellen für Produktion.',
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Erklären Sie, wie rekombinantes Humaninsulin hergestellt wird. Welche molekularbiologischen Schritte sind nötig, und warum wird cDNA statt genomischer DNA verwendet?',
         answer: 'Die Herstellung von rekombinantem Humaninsulin umfasst folgende Schritte: (1) Gewinnung der Insulin-cDNA: Aus Pankreas-B-Zellen wird mRNA der Insulinvorstufe (Proinsulin) isoliert; Reverse Transkriptase schreibt die mRNA in cDNA um. Alternativ wird das Insulingen synthetisch nach der bekannten Aminosäuresequenz synthetisiert (codon-optimiert für E. coli). cDNA (nicht genomische DNA) wird verwendet, da E. coli keine Introns spleißen kann — genomische DNA enthält Introns, die nicht entfernt würden, was zu einem nicht-funktionellen Protein führte. (2) Klonierung in Expressionsvektor: Die Insulin-cDNA wird in einen E.-coli-Expressionsvektor mit starkem Promotor (T7 oder tac), Ribosom-Bindestelle und Antibiotikaresistenz-Gen kloniert. (3) Transformation und Expression: Kompetente E.-coli-Zellen werden transformiert; nach Selektion auf Ampicillin-Platten werden Kolonien in Fermentern vermehrt; Insulinsynthese wird durch IPTG induziert. (4) Aufreinigung: Zelllyse → Inclusion Bodies auflösen → In-vitro-Faltung → chromatographische Aufreinigung → Aktivierung (Abspaltung des C-Peptids). Das Produkt (Humulin, Novolin) ist seit 1982 klinisch zugelassen.',
@@ -1382,6 +1387,7 @@ Nach dem DSB wird die Zelle repariert — zwei konkurrierende Wege:
         'Base Editing: Nickase-Cas9 + Deaminase → C→T oder A→G ohne DSB. Prime Editing: pegRNA + RT → präziseste Einfügung.',
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Erklären Sie, wie CRISPR-Cas9 funktioniert und welche Reparaturwege nach dem Doppelstrangbruch zu unterschiedlichen Ergebnissen führen. Geben Sie ein klinisches Anwendungsbeispiel.',
         answer: 'CRISPR-Cas9 ist ein RNA-geführtes Endonuklease-System. Die single guide RNA (sgRNA) besteht aus einem 20-Nukleotid-Spacer, der komplementär zur Zielsequenz in der genomischen DNA ist, und einem Scaffold, der an Cas9 bindet. Cas9 sucht das Genom nach PAM-Motiven (5\'-NGG-3\') ab; bei Erkennung öffnet es die Doppelhelix und prüft Komplementarität des Spacers — bei Übereinstimmung schneiden beide Nuklease-Domänen (RuvC und HNH) je einen Strang → doppelsträngiger Bruch (DSB) 3 bp vor dem PAM. Nach dem DSB gibt es zwei Reparaturwege: NHEJ (Non-Homologous End Joining) ligiert die Enden fehleranfällig → Insertionen/Deletionen (Indels) → oft Frameshift → Genknockout. HDR (Homology-Directed Repair) nutzt ein bereitgestelltes Donor-Template → präzise Sequenzkorrektur, aber ineffizienter. Klinisches Beispiel: Casgevy (Exa-cel) für Sichelzellanämie — CRISPR-Cas9 knockt per NHEJ den BCL11A-Repressor in hämatopoetischen Stammzellen aus → Reaktivierung des fetalen Hämoglobins (HbF) → kein pathologisches HbS mehr gebildet. FDA-Zulassung Dezember 2023.',

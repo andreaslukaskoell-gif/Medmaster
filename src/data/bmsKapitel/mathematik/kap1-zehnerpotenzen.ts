@@ -120,6 +120,7 @@ Richtig: 3 × 10³ + 0,2 × 10³ = 3,2 × 10³
         'Normalisierte Form: Vorfaktor zwischen 1 (inklusiv) und 10 (exklusiv), z. B. 1,2 × 10³.',
         'Im Blut: ~5 × 10¹² Erythrozyten/L — ohne Zehnerpotenzen nicht handhabbar.',
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Erklären Sie, warum Zehnerpotenzen in der Medizin unverzichtbar sind, und beschreiben Sie an drei konkreten medizinischen Beispielen, wie Größenordnungen durch die Exponenten verglichen werden.',
         answer: `Zehnerpotenzen sind in der Medizin unverzichtbar, weil biologische und chemische Größen über einen Bereich von mehr als 30 Größenordnungen variieren — von subatomaren Abständen (10⁻¹⁵ m, Atomkernradius) bis zu makroskopischen Maßstäben. Ohne eine kompakte Exponentialschreibweise würden Zahlen mit Dutzenden von Nullen die Kommunikation und Berechnung unmöglich machen.
@@ -381,6 +382,7 @@ Beispiel aus der Praxis: Ein Arzt verordnet 0,025 mg Levothyroxin. Apothekenprä
               ["Femto", "f", "—", "10⁻¹⁵"],
             ],
           },
+          merksatz: 'Femto (f) = 10⁻¹⁵ | Piko (p) = 10⁻¹² | Nano (n) = 10⁻⁹ | Mikro (µ) = 10⁻⁶ | Milli (m) = 10⁻³.',
         },
         {
           heading: 'Von Femto bis Tera: die Präfix-Leiter',
@@ -399,7 +401,6 @@ Beispiel aus der Praxis: Ein Arzt verordnet 0,025 mg Levothyroxin. Apothekenprä
         },
       ],
       merksätze: [
-        'Femto (f) = 10⁻¹⁵ | Piko (p) = 10⁻¹² | Nano (n) = 10⁻⁹ | Mikro (µ) = 10⁻⁶ | Milli (m) = 10⁻³.',
         'Kilo (k) = 10³ | Mega (M) = 10⁶ | Giga (G) = 10⁹ | Tera (T) = 10¹².',
         'Jede Präfix-Stufe = Faktor 1.000 (10³) zur benachbarten Stufe.',
         '1 mg = 1.000 µg = 1.000.000 ng = 1.000.000.000 pg.',
@@ -410,6 +411,7 @@ Beispiel aus der Praxis: Ein Arzt verordnet 0,025 mg Levothyroxin. Apothekenprä
         'Steroidhormone im Nanomol-Bereich (nmol/L); Peptidhormone oft im Picomol-Bereich (pmol/L).',
         'Radioaktivität: MBq (Megabecquerel = 10⁶ Zerfälle/s) in der Nuklearmedizin.',
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Erläutern Sie das System der SI-Präfixe und erklären Sie anhand von vier medizinischen Beispielen, warum die korrekte Verwendung von Präfixen in der klinischen Praxis eine Patientensicherheitsfrage ist.',
         answer: `Das System der SI-Präfixe ist eine standardisierte, international verbindliche Erweiterung des metrischen Einheitensystems. Präfixe werden der jeweiligen Basiseinheit (g, m, L, mol, s) vorangestellt und stehen für Zehnerpotenzen in Dreierschritten (10³). Von klein nach groß: Femto (10⁻¹⁵), Piko (10⁻¹²), Nano (10⁻⁹), Mikro (10⁻⁶), Milli (10⁻³), Basis (10⁰), Kilo (10³), Mega (10⁶), Giga (10⁹), Tera (10¹²). Die Dreierstruktur erlaubt Umrechnungen durch einfache Multiplikation oder Division mit 1.000.
@@ -721,6 +723,7 @@ Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
         'Eine pH-Einheit Unterschied = zehnfacher Unterschied in der H⁺-Konzentration.',
         'Avogadro: 6,022 × 10²³ Teilchen pro Mol — die Brücke von Mol zu Teilchenzahl.',
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Erklären Sie das Konzept der wissenschaftlichen Notation und demonstrieren Sie an einem medizinischen Rechenbeispiel die vollständige Durchführung einer Multiplikation sowie einer Addition in dieser Notation. Erläutern Sie außerdem, warum der pH-Wert als Logarithmus definiert ist.',
         answer: `Die wissenschaftliche Notation ist eine Standarddarstellung von Zahlen als Produkt a × 10ⁿ, wobei der Vorfaktor a im Bereich 1 ≤ a < 10 liegt und n eine ganze Zahl ist. Diese Notation hat zwei Vorteile: (1) Sie komprimiert beliebig große oder kleine Zahlen auf eine handhabbare Form; (2) Sie macht die Größenordnung einer Zahl sofort ablesbar — der Exponent n gibt die Größenordnung direkt an.

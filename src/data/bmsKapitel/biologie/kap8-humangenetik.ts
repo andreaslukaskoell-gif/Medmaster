@@ -69,6 +69,7 @@ Beispiele: Hypophosphatämie (Vitamin-D-resistente Rachitis), Rett-Syndrom (MECP
         "XR: Männer betroffen (hemizygot), Frauen meist Konduktorin. Beispiele: Hämophilie A/B, Duchenne.",
       ],
       klinischerBezug: "Duchenne Muskeldystrophie (X-rezessiv) betrifft ca. 1:3.500 Knaben und führt unbehandelt zur Rollstuhlpflichtigkeit im zweiten Lebensjahrzehnt. Exon-Skipping-Therapien (Antisense-Oligonukleotide) und Gentherapien befinden sich in klinischen Studien und zeigen erste Erfolge in der Verlangsamung der Progression.",
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Ein Stammbaum zeigt, dass ausschließlich Söhne erkrankt sind, erkrankte Väter keine erkrankten Söhne haben, und Töchter von erkrankten Vätern alle Konduktorinnen sind. Welcher Erbgang liegt vor?",
         answer: "Es liegt ein X-chromosomal rezessiver Erbgang vor. Da erkrankte Väter ihr X-Chromosom nur an Töchter (nicht an Söhne) weitergeben, erkranken Söhne betroffener Väter nicht. Töchter betroffener Väter erhalten das pathogene X-Allel sicher und sind obligate Konduktorinnen. Das Muster — nur Söhne betroffen, Übertragung durch klinisch gesunde Frauen — ist charakteristisch für X-chromosomal rezessiv.",
@@ -227,6 +228,7 @@ Ursachen für variable Penetranz/Expressivität: modifizierende Gene, Umweltfakt
         "Penetranz: Anteil erkrankter Träger (vollständig 100% vs. unvollständig). Expressivität: Schwere bei Betroffenen (variabel).",
       ],
       klinischerBezug: "BRCA1/2-Mutationen zeigen unvollständige Penetranz: Das Lebenszeitrisiko für Brustkrebs beträgt ca. 70% (nicht 100%). Das prädiktive Testen und prophylaktische Operationen (Mastektomie, Salpingo-Oophorektomie) werden im Rahmen der Genberatung diskutiert. Die variable Expressivität des Marfan-Syndroms kann dazu führen, dass mildere Fälle jahrelang undiagnostiziert bleiben.",
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Was ist der Unterschied zwischen Penetranz und Expressivität? Erläutern Sie an einem Beispiel.",
         answer: "Penetranz bezeichnet den Anteil der Genträger, die den zugehörigen Phänotyp zeigen (prozentual). Vollständige Penetranz bedeutet, dass 100% der Träger erkranken. Expressivität beschreibt die Schwere des Phänotyps bei denjenigen, die bereits betroffen sind. Beispiel: Neurofibromatose Typ 1 hat nahezu vollständige Penetranz (fast alle Träger zeigen Symptome), aber variable Expressivität (von minimalen Hautveränderungen bis zu multiplen Tumoren und kognitiven Einschränkungen).",
@@ -380,6 +382,7 @@ Anwendung: Mukoviszidose-Trägerfrequenz: Erkrankungshäufigkeit q² = 1/2.500, 
         "Bayessche Analyse: Prior × Likelihood → Posterior; aktualisiert Wahrscheinlichkeit mit neuer Information.",
       ],
       klinischerBezug: "Im Rahmen der präkonzeptionellen Beratung bei Risikofamilien (z. B. bekannte BRCA-Mutation, Mukoviszidose-Träger) wird genetische Beratung angeboten. In Österreich regelt das Genanalysegesetz (GAG) die Rahmenbedingungen für prädiktive Gentests: Beratungspflicht vor und nach dem Test, kein Testen von Minderjährigen ohne therapeutischen Nutzen.",
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Die Häufigkeit der Mukoviszidose beträgt in der europäischen Bevölkerung etwa 1:2.500. Berechnen Sie die Trägerfrequenz mithilfe des Hardy-Weinberg-Gesetzes.",
         answer: "Gegeben: q² = 1/2.500 (Erkrankungshäufigkeit). Daraus folgt: q = 1/50 (Häufigkeit des pathogenen CFTR-Allels). Da p + q = 1 gilt: p = 49/50. Trägerfrequenz = 2pq = 2 × (49/50) × (1/50) = 98/2.500 ≈ 1/25. Etwa jede 25. Person in der europäischen Bevölkerung ist heterozygoter Träger des CFTR-Allels.",
@@ -535,6 +538,7 @@ Der **Ultraschall** ist die wichtigste nicht-invasive Methode. Im ersten Trimest
         "PID: Diagnostik VOR Einsetzen des IVF-Embryos → nur bei hohem Risiko für schwere Erbkrankheiten erlaubt.",
       ],
       klinischerBezug: "NIPT hat in vielen europäischen Ländern das Erstrimester-Screening als Erstlinienmethode abgelöst. In Österreich ist NIPT seit 2020 im Mutter-Kind-Pass-Programm vorgesehen. Bei Trisomie 21 (Down-Syndrom, Häufigkeit ca. 1:700–1:800 Geburten) ist eine nicht-direktive Beratung essenziell, da Betroffene ein breites Spektrum an Lebensqualität zeigen.",
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Was ist der Unterschied zwischen PID und PND, und wann wird jede Methode eingesetzt?",
         answer: "PID (Präimplantationsdiagnostik) untersucht Embryonen vor der Einpflanzung in die Gebärmutter im Rahmen einer IVF — sie findet also vor der Schwangerschaft statt. PND (Pränataldiagnostik) untersucht den Feten während einer bestehenden Schwangerschaft. PID wird eingesetzt, wenn Paare ein hohes genetisches Risiko haben und IVF bereit sind — sie vermeidet den Schwangerschaftsabbruch. PND wird routinemäßig oder bei Risikofaktoren während der Schwangerschaft angeboten.",

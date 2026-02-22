@@ -128,6 +128,7 @@ Die Verdünnungsformel c1 mal V1 = c2 mal V2 ist ebenfalls eine lineare Gleichun
         'Verdünnungsformel: c1 mal V1 = c2 mal V2 ist eine lineare Gleichung.',
         'Doppelte Ungleichung: alle Operationen auf alle drei Teile anwenden.',
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Ein Intensivpatient (80 kg) soll mit Noradrenalin behandelt werden. Die Laufrate beträgt 0,1 µg/kg/min. Eine Fertigspritze enthält 4 mg Noradrenalin in 40 mL NaCl. Berechnen Sie die nötige Infusionsrate in mL/h. Wie lange reicht eine Fertigspritze?',
         answer: 'Schritt 1 — Dosierung: 0,1 µg/kg/min mal 80 kg = 8 µg/min. Schritt 2 — Konzentration der Spritze: 4 mg in 40 mL = 4000 µg in 40 mL = 100 µg/mL. Schritt 3 — Volumenrate: 8 µg/min geteilt durch 100 µg/mL = 0,08 mL/min. Umrechnung: 0,08 mal 60 = 4,8 mL/h. Schritt 4 — Laufzeit: 40 mL geteilt durch 4,8 mL/h ergibt ungefähr 8,33 h, also rund 8 Stunden 20 Minuten. Jeder Schritt ist eine lineare Gleichung in einer Unbekannten. Im klinischen Alltag müssen diese Berechnungen rasch und fehlerfrei ausgeführt werden, da Fehler bei vasoaktiven Substanzen lebensbedrohliche Folgen haben können. Die Formalisierung als Gleichungskette reduziert die Fehlerrate erheblich und ermöglicht systematische Plausibilitätsprüfung.',
@@ -339,6 +340,7 @@ Clearance-Formel: Clearance [mL/min] = (U mal V) / P, wobei U = Harnkonzentratio
         'Bruch kürzen: Zähler und Nenner durch denselben Faktor dividieren — Wert bleibt gleich.',
         'Mehrfache Verdünnung 1:n multipliziert: 1:10 gefolgt von 1:10 ergibt 1:100 Gesamtverdünnung.',
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Ein Labor führt eine 1:4-Verdünnung durch, indem es 1 Teil Serum mit 3 Teilen Puffer mischt. Der gemessene Antikörper-Titer in der Verdünnung beträgt 256 AU/mL. Wie hoch ist der Titer der unverdünnten Probe? Ein anderer Patient hat einen Hämatokrit von 27% (Normwert Frau: 38%). Um wie viel Prozent ist sein Hämatokrit relativ erniedrigt, und wie viele Prozentpunkte beträgt die absolute Erniedrigung?',
         answer: 'Aufgabe 1 — Titer der Originalprobe: Bei einer 1:4-Verdünnung ist die Konzentration auf 1/4 des Originalwerts gesunken. Originalkonzentration = gemessener Wert mal Verdünnungsfaktor = 256 mal 4 = 1024 AU/mL. Allgemein: bei 1:n-Verdünnung gilt c_original = c_verdünnt mal n. Aufgabe 2 — Hämatokrit: Absolute Erniedrigung: 38% minus 27% = 11 Prozentpunkte. Relative Erniedrigung: 11/38 mal 100 = 28,9%. Der Hämatokrit ist also um 11 Prozentpunkte (absolut) bzw. um etwa 29% (relativ) erniedrigt. Diese Unterscheidung ist klinisch bedeutsam: Eine relative Senkung von 29% klingt dramatischer als 11 Prozentpunkte, beschreibt aber denselben Befund aus unterschiedlicher Perspektive. Im klinischen Bericht sollten immer beide Angaben gemacht werden, um Missverständnisse zu vermeiden.',
@@ -555,6 +557,7 @@ Die Vieta'schen Formeln ermöglichen auch die Prüfung von Ergebnissen: Summe un
         'Mentale Arithmetik: 97 mal 103 = (100 minus 3)(100 + 3) = 10000 minus 9 = 9991.',
         'Diskriminante D > 0: Parabel schneidet x-Achse zweimal. D = 0: berührt x-Achse. D < 0: schneidet nicht.',
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Eine kreisförmige Wundfläche vergrößert sich täglich. Am Morgen hat der Wundrand Radius (x+3) cm, am Abend Radius (x+7) cm. Die Abend-Fläche beträgt das 4-Fache der Morgen-Fläche. Bestimmen Sie x und die Radien. Welche Beziehung zwischen Radius und Fläche liegt vor?',
         answer: 'Kreisfläche A = pi mal r hoch zwei. Morgens: A1 = pi mal (x+3) hoch zwei. Abends: A2 = pi mal (x+7) hoch zwei. Bedingung: A2 = 4 mal A1. Einsetzen: pi mal (x+7) hoch zwei = 4 mal pi mal (x+3) hoch zwei. Kürze pi: (x+7) hoch zwei = 4 mal (x+3) hoch zwei. Wurzel ziehen: x+7 = 2(x+3) oder x+7 = minus 2(x+3). Fall 1: x+7 = 2x+6, also x = 1. Fall 2: x+7 = minus 2x minus 6, also 3x = minus 13, x = minus 13/3 (ergibt negativen Radius, ausgeschlossen). Lösung: x = 1. Radius morgens: 4 cm. Radius abends: 8 cm. Probe: A1 = pi mal 16, A2 = pi mal 64 = 4 mal pi mal 16. Korrekt. Der Zusammenhang zwischen Radius und Fläche ist quadratisch: Bei Verdopplung des Radius vervierfacht sich die Fläche. Dies ist keine lineare Proportionalität, sondern eine quadratische Beziehung.',
@@ -791,6 +794,7 @@ Beispiel: (3 mal 10 hoch 4) mal (2 mal 10 hoch 3) = 6 mal 10 hoch 7.`,
         'Wissenschaftliche Notation: a mal 10 hoch n mit 1 kleiner-gleich a kleiner 10.',
         'ln(x) ungefaehr 2,303 mal lg(x); ln(2) ungefaehr 0,693; ln(10) ungefaehr 2,303.',
       ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Ein Patient erhält eine Chemotherapie mit einem Wirkstoff der Halbwertszeit 12 Stunden. Die Initialdosis beträgt 800 mg. (a) Wie viel mg sind nach 36 Stunden noch im Körper? (b) Nach wie vielen Stunden ist die Konzentration auf unter 50 mg gefallen? (c) Wie hängen Halbwertszeit und Zerfallskonstante lambda zusammen?',
         answer: 'Teil a: 36 Stunden entsprechen 36 / 12 = 3 Halbwertszeiten. N(36) = 800 mal (1/2) hoch 3 = 800 mal 1/8 = 100 mg. Nach 36 Stunden sind noch 100 mg vorhanden. Teil b: Gesucht ist t, sodass N(t) < 50 mg. Also 800 mal (1/2) hoch (t/12) < 50. Dividiere durch 800: (1/2) hoch (t/12) < 1/16. Da 1/16 = (1/2) hoch 4, folgt t/12 > 4, also t > 48 Stunden. Logarithmisch: (t/12) mal ln(1/2) < ln(1/16), also minus (t/12) mal ln(2) < minus 4 mal ln(2), also t/12 > 4. Genau bei t = 48 Stunden sind 800 mal (1/2) hoch 4 = 50 mg vorhanden, also fällt die Konzentration nach mehr als 48 Stunden unter 50 mg. Teil c: T(1/2) = ln(2) / lambda ungefähr 0,693 / lambda. Hergeleitet aus N(T(1/2)) = N0/2 = N0 mal e hoch (minus lambda mal T(1/2)). Kürze N0 und logarithmiere: minus lambda mal T(1/2) = ln(1/2) = minus ln(2). Damit T(1/2) = ln(2) / lambda.',

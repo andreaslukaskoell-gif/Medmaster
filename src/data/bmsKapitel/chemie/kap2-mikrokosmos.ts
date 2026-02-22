@@ -72,6 +72,7 @@ Die Wasserlöslichkeit von Pharmaka hängt direkt von intermolekularen Wechselwi
         {
           heading: 'Stärkeranking der Bindungen und Wechselwirkungen',
           text: 'Ionenbindung > Kovalente Bindung > Wasserstoffbrücken > Dipol–Dipol (Keesom) > London-Dispersion',
+          merksatz: 'Stärkeranking: Ionenbindung > kovalent > H-Brücken > Dipol–Dipol > London.',
           table: {
             headers: ['Wechselwirkung', 'Energie'],
             rows: [
@@ -93,11 +94,11 @@ Die Wasserlöslichkeit von Pharmaka hängt direkt von intermolekularen Wechselwi
         'Wasser kann 4 H-Brücken bilden → außergewöhnlich hoher Siedepunkt (100 °C).',
         'DNA: A–T = 2 H-Brücken; G–C = 3 H-Brücken → GC-reich = höhere Schmelztemperatur.',
         'α-Helix und β-Faltblatt in Proteinen werden durch H-Brücken stabilisiert.',
-        'Stärkeranking: Ionenbindung > kovalent > H-Brücken > Dipol–Dipol > London.',
         'Denaturierung = Zerstörung nicht-kovalenter Wechselwirkungen (H-Brücken, hydrophob) → Entfaltung.',
         'PCR-Denaturierungsschritt (94 °C) bricht H-Brücken zwischen DNA-Strängen auf.',
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Erläutern Sie die Wasserstoffbrückenbindung am Beispiel des Wassers und der DNA. Erklären Sie dabei die strukturellen Voraussetzungen, typische Energiewerte und klinisch relevante Konsequenzen.',
         answer: `Eine Wasserstoffbrückenbindung entsteht, wenn ein Wasserstoffatom, das an ein stark elektronegatives Atom X (N, O oder F) gebunden ist, mit dem freien Elektronenpaar eines weiteren elektronegativen Atoms Y (ebenfalls N, O oder F) wechselwirkt. Das H-Atom ist durch die Elektronegativität von X elektropositiv polarisiert und wird daher elektrostatisch von Y angezogen. Die Bindungsenergie liegt bei 10–40 kJ/mol, also deutlich geringer als kovalente Bindungen (~350 kJ/mol für C–C), aber erheblich stärker als gewöhnliche van-der-Waals-Kräfte.
@@ -319,6 +320,7 @@ Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechne
         {
           heading: 'Konzentrationsbegriffe',
           text: 'Übersicht der wichtigsten Konzentrationsmaße und ihrer klinischen Anwendung.',
+          merksatz: 'Molarität c [mol/L] = n/V; Massenkonzentration β [g/L] = c × M.',
           table: {
             headers: ['Begriff', 'Formel', 'Einheit', 'Anwendung'],
             rows: [
@@ -335,7 +337,6 @@ Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechne
 
       merksätze: [
         '"Similia similibus solvuntur" — polar löst polar, unpolar löst unpolar.',
-        'Molarität c [mol/L] = n/V; Massenkonzentration β [g/L] = c × M.',
         '0,9 % NaCl = 154 mmol/L NaCl = 308 mOsmol/L ≈ isotonisch.',
         '5 % Glukose = 278 mOsmol/L ≈ isotonisch; nach Metabolisierung wirkt es wie hypotones Wasser.',
         'Osmose: Wasser wandert immer vom geringen zum hohen osmotischen Druck (semipermeable Membran).',
@@ -346,6 +347,7 @@ Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechne
         'Hypoalbuminämie (Leberzirrhose, nephrotisches Syndrom) → Ödeme durch verminderten onkotischen Druck.',
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Ein Patient mit nephrotischem Syndrom (starker Proteinverlust im Urin) entwickelt ausgeprägte periphere Ödeme trotz normalem Blutdruck. Erläutern Sie den pathophysiologischen Mechanismus und die zugrundeliegenden physikalisch-chemischen Prinzipien.',
         answer: `Das nephrotische Syndrom ist durch eine massive Proteinurie (>3,5 g/Tag) gekennzeichnet, die zur Hypoalbuminämie führt (Serumalbumin < 30 g/L, normal 35–50 g/L). Albumin ist das mengenmäßig wichtigste Plasmaprotein und mit einem Molekulargewicht von ca. 66 kDa zu groß, um unter normalen Bedingungen die Kapillarmembran zu passieren.
@@ -576,6 +578,7 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
         {
           heading: 'Aggregatzustände im Vergleich',
           text: 'Vergleich der drei Aggregatzustände nach ihren charakteristischen Eigenschaften.',
+          merksatz: 'Schmelzen und Verdampfen sind endotherm; Erstarren und Kondensieren sind exotherm.',
           table: {
             headers: ['Eigenschaft', 'Fest', 'Flüssig', 'Gasförmig'],
             rows: [
@@ -590,6 +593,7 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
         {
           heading: 'Klassifikation nach Dispersionsmedium und -phase',
           text: 'Kolloidtypen nach dem Aggregatzustand der dispersen Phase und des Dispersionsmediums.',
+          merksatz: 'Emulsion = Flüssig-in-Flüssig-Kolloid; Emulgator stabilisiert (z. B. Lecithin in Milch).',
           table: {
             headers: ['Typ', 'Disperse Phase', 'Dispersionsmedium', 'Beispiel'],
             rows: [
@@ -605,18 +609,17 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
       ],
 
       merksätze: [
-        'Schmelzen und Verdampfen sind endotherm; Erstarren und Kondensieren sind exotherm.',
         'Sublimation: fest → gasförmig (direkt); Desublimation: gasförmig → fest. Beide überspringen die Flüssigphase.',
         'Siedepunkt = Temperatur, bei der Dampfdruck = äußerer Druck; im Gebirge niedriger als bei Normaldruck.',
         'Siedepunktserhöhung: ΔTb = Kb × m × i; kolligative Eigenschaft abhängig von Teilchenzahl.',
         'Kolloide: Partikelgröße 1 nm – 1 μm; Tyndall-Effekt; Brownsche Bewegung; keine Sedimentation.',
         'Echte Lösungen: <1 nm; kein Tyndall-Effekt. Suspensionen: >1 μm; sedimentieren.',
-        'Emulsion = Flüssig-in-Flüssig-Kolloid; Emulgator stabilisiert (z. B. Lecithin in Milch).',
         'Blutplasma enthält kolloidale Proteine (Albumin ~7 nm) → onkotischer Druck.',
         'HAES und Gelatine als kolloidale Volumenersatzmittel bleiben länger intravaskulär als kristalloide.',
         'Surfactant (DPPC) senkt Alveolären-Oberflächenspannung; Mangel → Atemnotsyndrom (RDS) bei Frühgeborenen.',
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: 'Erklären Sie den Tyndall-Effekt und die Brownsche Bewegung in kolloidalen Systemen. Erläutern Sie dann die klinische Bedeutung der kolloidalen Eigenschaften des Blutes am Beispiel des onkotischen Drucks und kolloidaler Infusionslösungen.',
         answer: `Der **Tyndall-Effekt** bezeichnet die Streuung von Licht durch kolloidale Partikel (Durchmesser 1 nm–1 μm). Wenn ein Lichtstrahl ein kolloidales System passiert, wird er an den Partikeloberflächen nach allen Seiten gestreut (Rayleigh-Streuung für Partikel < λ; Mie-Streuung für größere). Der Lichtstrahl wird dadurch seitlich sichtbar, obwohl das Kolloid optisch klar oder leicht opaleszent erscheint. In echten Lösungen (Partikel <1 nm, z. B. NaCl, Glukose) ist der Effekt nicht sichtbar, weil die gelösten Teilchen viel kleiner als die Lichtwellenlänge sind. Suspensionen (>1 μm) trüben das Licht diffus. Der Tyndall-Effekt ist damit ein einfaches diagnostisches Kriterium zur Unterscheidung echter Lösungen von Kolloiden.

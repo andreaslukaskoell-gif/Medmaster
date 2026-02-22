@@ -104,6 +104,7 @@ Die Packungsgeometrie hängt vom **Radienverhältnis** r⁺/r⁻ ab:
         'Klinisch: Na⁺, K⁺, Ca²⁺, Cl⁻ sind essentielle Elektrolyte mit engen Normalbereichen.',
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         frage: 'Erläutern Sie die Ionenbindung am Beispiel von Magnesiumoxid (MgO). Gehen Sie dabei auf die Entstehung, die Gitterenergie und die daraus resultierenden Eigenschaften ein und vergleichen Sie mit NaCl.',
         antwort: `Magnesiumoxid entsteht durch vollständige Elektronenübertragung von Magnesium auf Sauerstoff. Magnesium (Gruppe 2) gibt 2 Valenzelektronen ab und wird zum Mg²⁺-Kation (Elektronenkonfiguration von Neon). Sauerstoff (Gruppe 16) nimmt 2 Elektronen auf und wird zum O²⁻-Anion (ebenfalls Neon-Konfiguration).
@@ -375,6 +376,7 @@ Delokalisierung stabilisiert Moleküle (Resonanzenergie). Aromatizität ist ein 
         'Dreifachbindung (C≡C) ≠ 3× Einfachbindung: σ stark, π schwächer.',
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         frage: 'Erklären Sie anhand von Wasser (H₂O) und Kohlendioxid (CO₂) den Unterschied zwischen Bindungspolarität und Molekülpolarität. Welche Folgen hat dies für die physikalischen und biologischen Eigenschaften dieser Moleküle?',
         antwort: `Sowohl H₂O als auch CO₂ enthalten polare kovalente Bindungen: In H₂O beträgt die EN-Differenz O–H ≈ 1,4 (O: 3,5; H: 2,1), in CO₂ beträgt die EN-Differenz C=O ≈ 1,0 (O: 3,5; C: 2,5). Beide Moleküle besitzen also polare Bindungen.
@@ -641,6 +643,7 @@ Wasser siedet bei 100 °C (H₂O, MM = 18 g/mol), während H₂S bei −60 °C s
         'H-Brücken: 10–40 kJ/mol; schwächer als kovalent, aber kollektiv enorm wichtig in Biomolekülen.',
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         frage: 'Erklären Sie die Bedeutung der Wasserstoffbrückenbindungen für die Struktur und Funktion der DNA-Doppelhelix. Warum ist GC-reiche DNA thermisch stabiler als AT-reiche DNA?',
         antwort: `Die DNA-Doppelhelix wird durch Wasserstoffbrücken zwischen den komplementären Basenpaaren auf den gegenüberliegenden Strängen zusammengehalten. Adenin (A) paart mit Thymin (T) über 2 Wasserstoffbrücken, Guanin (G) paart mit Cytosin (C) über 3 Wasserstoffbrücken. Die H-Brücken folgen der spezifischen Geometrie der Basenpaare: Donoren (N–H oder O–H) wechselwirken mit Akzeptoren (N oder O mit freiem Elektronenpaar) in präzise ausgerichteter Weise, was die Basenpaarspezifität garantiert.
@@ -901,6 +904,7 @@ Lipinski's Rule of Five für orale Bioverfügbarkeit: MW ≤ 500, logP ≤ 5, H-
         'Lipinski Rule of Five: MW ≤ 500, logP ≤ 5, HBD ≤ 5, HBA ≤ 10 → orale Bioverfügbarkeit.',
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         frage: 'Beschreiben Sie die Kräfte, die zur Proteinfaltung und Stabilisierung der Tertiärstruktur von Proteinen beitragen. Welche Rolle spielen kovalente und nichtkovalente Wechselwirkungen, und was passiert bei der Denaturierung?',
         antwort: `Die Tertiärstruktur eines Proteins — seine einzigartige dreidimensionale Faltung — wird durch ein komplexes Zusammenspiel verschiedener Bindungstypen stabilisiert:

@@ -96,6 +96,7 @@ Die **Übergangszustandstheorie (Eyring)** verfeinert dieses Bild: Edukte bilden
         "Denaturierung von Enzymen bei T > T_opt führt zum Verlust der Katalyseaktivität."
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         frage: "Erläutern Sie, wie Temperatur und Aktivierungsenergie die Reaktionsgeschwindigkeit beeinflussen, und diskutieren Sie die klinische Bedeutung dieser Zusammenhänge am Beispiel von Fieber und therapeutischer Hypothermie.",
         antwort: `Die Reaktionsgeschwindigkeit hängt eng mit der Aktivierungsenergie E_A zusammen: Nur Molekülkollisionen, bei denen die kinetische Energie die Barriere E_A übersteigt, führen zu einer Reaktion. Die Arrhenius-Gleichung k = A·e^(−E_A/RT) zeigt mathematisch, dass die Geschwindigkeitskonstante k exponentiell mit der Temperatur steigt. Praktisch gilt die RGT-Regel: Eine Temperaturerhöhung um 10 °C verdoppelt bis verdreifacht die Reaktionsgeschwindigkeit (Q₁₀ ≈ 2–3).
@@ -341,6 +342,7 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
         "Hämoglobin-O₂-Bindung folgt MWG: pO₂ steuert die Lage des Gleichgewichts."
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         frage: "Formulieren Sie das Massenwirkungsgesetz für die Reaktion N₂(g) + 3H₂(g) ⇌ 2NH₃(g) und erläutern Sie, was ein K_c von 6×10² bei 500 °C über die Lage des Gleichgewichts aussagt. Wie ändert sich K_c, wenn die Reaktion endotherm wäre?",
         antwort: `Das Massenwirkungsgesetz für N₂ + 3H₂ ⇌ 2NH₃ lautet:
@@ -586,6 +588,7 @@ CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
         "Blutpuffer (CO₂/HCO₃⁻) funktioniert nach Le Chatelier: pH-Stabilisierung."
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         frage: "Erläutern Sie anhand der Reaktion N₂(g) + 3H₂(g) ⇌ 2NH₃(g) (ΔH = −92 kJ/mol), wie sich Druckerhöhung, Temperaturerhöhung und Zugabe eines Eisenkatalysators jeweils auf die Gleichgewichtslage und K_c auswirken.",
         antwort: `Druckerhöhung: Die Reaktion hat Δn = 2 − (1+3) = −2. Nach Le Chatelier verschiebt sich das Gleichgewicht bei Druckerhöhung zur Seite mit weniger Gasmolekülen — also zur Produktseite (NH₃). Q sinkt kurz unter K_c, das System reagiert durch mehr NH₃-Bildung bis Q = K_c. K_c selbst ändert sich nicht durch Druckänderungen.
@@ -855,6 +858,7 @@ Der **Base Excess (BE)** gibt an, wie viel starke Säure oder Base nötig wäre,
         "pK_a(H₂CO₃) ≈ 6,1 (effektiv); pK_a(H₂PO₄⁻) ≈ 7,2 (intrazellulär)."
       ],
 
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         frage: "Ein Patient hat: pH 7,28, pCO₂ 55 mmHg (Norm: 40 mmHg), HCO₃⁻ 26 mmol/L (Norm: 24 mmol/L). Klassifizieren Sie die Störung und erklären Sie den Mechanismus mithilfe des Carbonat-Puffersystems.",
         antwort: `Klassifikation: pH 7,28 < 7,35 → Azidose. pCO₂ 55 mmHg erhöht → respiratorische Ursache (Hypoventilation, z. B. COPD). HCO₃⁻ 26 mmol/L leicht erhöht → beginnende metabolische Kompensation (renale HCO₃⁻-Retention).
