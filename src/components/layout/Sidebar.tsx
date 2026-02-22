@@ -10,7 +10,6 @@ import {
   Heart,
   Timer,
   BarChart3,
-  CreditCard,
   GraduationCap,
   CalendarDays,
   Radar,
@@ -157,7 +156,6 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
     id: "system",
     title: "SYSTEM",
     items: [
-      { to: "/preise", icon: CreditCard, label: "Preise" },
       { to: "/community", icon: Users, label: "Community" },
       { to: "/duell", icon: Swords, label: "Duell" },
       { to: "/lernplan", icon: CalendarDays, label: "Lernplan" },

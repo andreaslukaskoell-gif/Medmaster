@@ -713,7 +713,7 @@ export default function BMSUnterkapitel({
                     },
                   }}
                 >
-                  {processTextForSmartLinks(uk.additionalNotes, pathForChapter)}
+                  {processTextForSmartLinks(uk.additionalNotes)}
                 </ReactMarkdown>
               </div>
             </CardContent>

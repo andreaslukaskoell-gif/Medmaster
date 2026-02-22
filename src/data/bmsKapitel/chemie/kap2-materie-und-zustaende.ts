@@ -1,11 +1,11 @@
-import type { Kapitel } from '../types';
+import type { Kapitel } from "../types";
 
 export const chemKapMaterie: Kapitel = {
-  id: 'chem-kap2',
+  id: "chem-kap2",
   title: "Materie & Aggregatzustände",
-  subject: 'chemie',
-  icon: '🌡️',
-  estimatedTime: '90 min',
+  subject: "chemie",
+  icon: "🌡️",
+  estimatedTime: "90 min",
   unterkapitel: [
     // === from kap3-gasgesetze ===
     {
@@ -1152,6 +1152,7 @@ Die Blutosmolalität (normal: 280–300 mosmol/kg) kann durch Kryoskopie (Messun
         answer:
           "Ethylenglykol (Ethandiol, C₂H₆O₂, M = 62 g/mol) ist ein nicht-elektrolytischer, organischer Alkohol (i = 1 – er dissoziiert nicht in Ionen). Im Blutplasma erhöht er die Osmolalität, da jedes gelöste Molekül als ein Osmolyt zählt. Klinische Erkennung durch Osmolalitätslücke: Die gemessene Plasma-Osmolalität (durch Kryoskopie) übersteigt die berechnete Osmolalität (aus Na⁺, Glucose, Harnstoff) deutlich. Die Differenz – die Osmolalitätslücke – ist erhöht (>10 mosmol/kg, bei Vergiftung oft >30–50 mosmol/kg). Van't-Hoff-Faktor: Ethylenglykol ist kein Elektrolyt (i = 1), erzeugt also pro Mol nur eine Teilcheneinheit. NaCl hingegen ergibt i = 2 (Na⁺ + Cl⁻), was eine doppelt so starke Gefrierpunktserniedrigung pro Mol verursacht. Bei der Interpretation muss daher die Art des Gelösten berücksichtigt werden. Ethylenglykol wird zu toxischen Metaboliten (Glykolsäure, Oxalsäure → Hyperoxalurie, Nierenversagen durch Calciumoxalat-Kristalle) abgebaut. Therapie: Fomepizol oder Ethanol hemmen die Alkoholdehydrogenase kompetitiv und verhindern die Bildung der toxischen Metabolite. Frühzeitige Diagnose ist lebenswichtig.",
       },
+      selfTest: [],
     },
   ],
 };

@@ -1903,7 +1903,7 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
       ],
 
       diagram: "periodic-table",
-      merksaetze: [
+      merksätze: [
         "PSE: 7 Perioden (horizontal, = Schalenanzahl n), 18 Gruppen (vertikal, = Valenzelektronen)",
         "Mendelejew ordnete nach Atommasse; modernes PSE ordnet nach Kernladungszahl Z (Moseley, 1913)",
         "s-Block: Gr.1-2; p-Block: Gr.13-18; d-Block: Gr.3-12; f-Block: Lanthanoide/Actinoide",

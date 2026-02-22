@@ -20,12 +20,17 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import type { Kapitel } from "@/data/bmsKapitel/types";
-import { SUBJECT_COLORS } from '@/data/bmsKapitel/colors';
-import { FachRoadmap } from '@/components/chapter/FachRoadmap';
+import { SUBJECT_COLORS } from "@/data/bmsKapitel/colors";
+import { FachRoadmap } from "@/components/chapter/FachRoadmap";
 import BMSKapitelView from "./BMSKapitelView";
 import { printChapterOverview, listAllChapters } from "@/utils/listChapters";
 import { loadBMSChaptersSWR } from "@/lib/bmsChaptersLoader";
-import { subjectFromSlug, chapterIdFromParams, pathForSubject, pathForChapter } from "@/lib/bmsRoutes";
+import {
+  subjectFromSlug,
+  chapterIdFromParams,
+  pathForSubject,
+  pathForChapter,
+} from "@/lib/bmsRoutes";
 import { useBreadcrumb } from "@/contexts/BreadcrumbContext";
 import { migrateBMSChaptersToSupabase, checkMigrationStatus } from "@/scripts/migrateBMS";
 import { ChapterListSkeleton } from "@/components/chapter/ChapterListSkeleton";
@@ -34,7 +39,10 @@ import { useMRS } from "@/hooks/useFragenTrainer";
 
 // Safe imports with fallbacks - prevents "Failed to fetch dynamically imported module" errors
 // Fixed: Use proper ES6 imports with error handling
-import { getKapitelBySubject as _getKapitelBySubject, alleKapitel as _alleKapitel } from "@/data/bmsKapitel";
+import {
+  getKapitelBySubject as _getKapitelBySubject,
+  alleKapitel as _alleKapitel,
+} from "@/data/bmsKapitel";
 import { getStichworteByKapitel } from "@/data/stichwortliste";
 import { useStore as _useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
@@ -44,7 +52,7 @@ const getKapitelBySubject = (subject: string): Kapitel[] => {
   try {
     return _getKapitelBySubject ? _getKapitelBySubject(subject) : [];
   } catch (error) {
-    console.error('❌ Error in getKapitelBySubject:', error);
+    console.error("❌ Error in getKapitelBySubject:", error);
     return [];
   }
 };
@@ -53,7 +61,7 @@ const alleKapitel: Kapitel[] = (() => {
   try {
     return Array.isArray(_alleKapitel) ? _alleKapitel : [];
   } catch (error) {
-    console.error('❌ Error accessing alleKapitel:', error);
+    console.error("❌ Error accessing alleKapitel:", error);
     return [];
   }
 })();
@@ -64,7 +72,7 @@ function useSafeStore() {
     // Always call hook unconditionally (React rule - hooks must be called in same order)
     return _useStore ? _useStore() : { completedChapters: [] };
   } catch (error) {
-    console.error('❌ Error accessing store:', error);
+    console.error("❌ Error accessing store:", error);
     // Return fallback with same structure
     return { completedChapters: [] };
   }
@@ -76,51 +84,55 @@ const subjects = [
     label: "Biologie",
     icon: Dna,
     colors: SUBJECT_COLORS.biologie,
-    description: "Lebewesen, Zellen, Genetik, Evolution"
+    description: "Lebewesen, Zellen, Genetik, Evolution",
   },
   {
     id: "chemie" as const,
     label: "Chemie",
     icon: Atom,
     colors: SUBJECT_COLORS.chemie,
-    description: "Periodensystem, Bindungen, Reaktionen"
+    description: "Periodensystem, Bindungen, Reaktionen",
   },
   {
     id: "physik" as const,
     label: "Physik",
     icon: Zap,
     colors: SUBJECT_COLORS.physik,
-    description: "Mechanik, Elektrizität, Wellen, Optik"
+    description: "Mechanik, Elektrizität, Wellen, Optik",
   },
   {
     id: "mathematik" as const,
     label: "Mathematik",
     icon: Calculator,
     colors: SUBJECT_COLORS.mathematik,
-    description: "Algebra, Analysis, Geometrie, Trigonometrie"
+    description: "Algebra, Analysis, Geometrie, Trigonometrie",
   },
 ] as const;
 
 export default function BMS() {
   usePageTitle("BMS – Biomedizinische Grundlagen");
   const navigate = useNavigate();
-  const { fach: fachParam, kapitel: kapitelParam } = useParams<{ fach?: string; kapitel?: string }>();
+  const { fach: fachParam, kapitel: kapitelParam } = useParams<{
+    fach?: string;
+    kapitel?: string;
+  }>();
   const [searchParams] = useSearchParams();
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [activeKapitel, setActiveKapitel] = useState<Kapitel | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [supabaseChapters, setSupabaseChapters] = useState<Kapitel[]>([]);
-  
+
   // Safe store access with fallback
   const store = useSafeStore();
-  const completedChapters = (store?.completedChapters && Array.isArray(store.completedChapters)) 
-    ? store.completedChapters 
-    : [];
+  const completedChapters =
+    store?.completedChapters && Array.isArray(store.completedChapters)
+      ? store.completedChapters
+      : [];
   const stichwortStats = useAdaptiveStore((s) => s.profile.stichwortStats);
   const setLastPath = useAdaptiveStore((s) => s.setLastPath);
   const { setBreadcrumbs } = useBreadcrumb();
-  const userId = localStorage.getItem('medmaster-local-uid') ?? null;
+  const userId = localStorage.getItem("medmaster-local-uid") ?? null;
   const { mrs, loading: mrsLoading } = useMRS(userId);
 
   useEffect(() => {
@@ -144,7 +156,7 @@ export default function BMS() {
     setIsLoading(false); // Mark as loaded after mount
 
     // Make chapter listing and optimization functions available in console for debugging
-    // Usage: 
+    // Usage:
     //   window.showChapters() - zeigt Übersicht
     //   window.listChapters() - gibt Daten zurück
     //   window.optimizeChapters() - optimiert alle Kapitel
@@ -153,32 +165,35 @@ export default function BMS() {
     (window as any).listChapters = listAllChapters;
     // Migration Funktion
     (window as any).migrateBMSChapters = async () => {
-      if (import.meta.env.DEV) console.log('🚀 Starte Migration von localStorage zu Supabase...');
+      if (import.meta.env.DEV) console.log("🚀 Starte Migration von localStorage zu Supabase...");
       try {
         const result = await migrateBMSChaptersToSupabase();
         if (result.success) {
-          if (import.meta.env.DEV) console.log(`✅ Migration erfolgreich! ${result.chaptersMigrated} Kapitel, ${result.subchaptersMigrated} Unterkapitel migriert.`);
+          if (import.meta.env.DEV)
+            console.log(
+              `✅ Migration erfolgreich! ${result.chaptersMigrated} Kapitel, ${result.subchaptersMigrated} Unterkapitel migriert.`
+            );
           if (result.errors.length > 0) {
-            console.warn('⚠️ Einige Fehler:', result.errors);
+            console.warn("⚠️ Einige Fehler:", result.errors);
           }
-          if (import.meta.env.DEV) console.log('🔄 Seite neu laden, um aus Supabase zu laden...');
+          if (import.meta.env.DEV) console.log("🔄 Seite neu laden, um aus Supabase zu laden...");
           setTimeout(() => window.location.reload(), 1000);
         } else {
-          console.error('❌ Migration fehlgeschlagen:', result.errors);
+          console.error("❌ Migration fehlgeschlagen:", result.errors);
         }
         return result;
       } catch (error) {
-        console.error('❌ Fehler bei Migration:', error);
+        console.error("❌ Fehler bei Migration:", error);
         throw error;
       }
     };
     // Migration Status prüfen
     (window as any).checkMigrationStatus = async () => {
       const status = await checkMigrationStatus();
-      if (import.meta.env.DEV) console.log('📊 Migration Status:', status);
+      if (import.meta.env.DEV) console.log("📊 Migration Status:", status);
       return status;
     };
-    
+
     // Auto-show chapters overview on load (can be commented out)
     // printChapterOverview();
   }, []);
@@ -192,16 +207,19 @@ export default function BMS() {
       (chapters, source) => {
         setSupabaseChapters(chapters);
         setIsLoading(false);
-        if (source === 'cache') {
-          if (import.meta.env.DEV) console.log('📦 Showing cached chapters (revalidating in background)');
+        if (source === "cache") {
+          if (import.meta.env.DEV)
+            console.log("📦 Showing cached chapters (revalidating in background)");
         } else {
-          if (import.meta.env.DEV) console.log('✅ Loaded', chapters.length, 'chapters from Supabase');
+          if (import.meta.env.DEV)
+            console.log("✅ Loaded", chapters.length, "chapters from Supabase");
         }
       },
       (err) => {
         setError(err);
         setIsLoading(false);
       },
+      () => {}
     );
   }, []);
 
@@ -242,8 +260,8 @@ export default function BMS() {
       }
 
       // POST-PROCESSING: BMS learning path chapters get their static content back
-      const staticById = new Map(staticChapters.map(c => [c.id, c]));
-      return merged.map(chapter => {
+      const staticById = new Map(staticChapters.map((c) => [c.id, c]));
+      return merged.map((chapter) => {
         const staticChap = staticById.get(chapter.id);
         if (staticChap?.sequence !== undefined) {
           // BMS sequenced chapter: static content takes precedence
@@ -261,7 +279,7 @@ export default function BMS() {
         return chapter; // Normal chapter: keep Supabase content
       });
     } catch (error) {
-      console.error('❌ Error computing chapters for subject:', error);
+      console.error("❌ Error computing chapters for subject:", error);
       return [];
     }
   }, [selectedSubject, supabaseChapters]);
@@ -278,7 +296,7 @@ export default function BMS() {
 
   // Filter for roadmap: only chapters with sequence metadata (BMS learning path)
   const roadmapChapters = useMemo(() => {
-    return sortedChapters.filter(c => c.sequence !== undefined);
+    return sortedChapters.filter((c) => c.sequence !== undefined);
   }, [sortedChapters]);
 
   // Compute merged chapters for all subjects (only Supabase)
@@ -299,8 +317,8 @@ export default function BMS() {
       }
 
       // POST-PROCESSING: BMS learning path chapters get their static content back
-      const staticById = new Map(staticChapters.map(c => [c.id, c]));
-      return merged.map(chapter => {
+      const staticById = new Map(staticChapters.map((c) => [c.id, c]));
+      return merged.map((chapter) => {
         const staticChap = staticById.get(chapter.id);
         if (staticChap?.sequence !== undefined) {
           // BMS sequenced chapter: static content takes precedence
@@ -318,7 +336,7 @@ export default function BMS() {
         return chapter; // Normal chapter: keep Supabase content
       });
     } catch (error) {
-      console.error('❌ Error merging chapters:', error);
+      console.error("❌ Error merging chapters:", error);
       return [];
     }
   }, [supabaseChapters]);
@@ -331,12 +349,15 @@ export default function BMS() {
       return sum + k.unterkapitel.length;
     }, 0);
   }, [safeAlleKapitel]);
-  
+
   const completedUK = useMemo(() => {
     if (!safeAlleKapitel || !Array.isArray(safeAlleKapitel)) return 0;
     return safeAlleKapitel.reduce((sum, k) => {
       if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
-      return sum + (k.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length || 0);
+      return (
+        sum +
+        (k.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length || 0)
+      );
     }, 0);
   }, [safeAlleKapitel, completedChapters]);
 
@@ -366,12 +387,8 @@ export default function BMS() {
             <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
               Fehler beim Laden
             </h3>
-            <p className="text-sm text-red-800 dark:text-red-400 mb-4">
-              {error}
-            </p>
-            <Button onClick={() => window.location.reload()}>
-              Seite neu laden
-            </Button>
+            <p className="text-sm text-red-800 dark:text-red-400 mb-4">{error}</p>
+            <Button onClick={() => window.location.reload()}>Seite neu laden</Button>
           </CardContent>
         </Card>
       </div>
@@ -392,7 +409,10 @@ export default function BMS() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {Array.from({ length: 4 }).map((_, i) => (
-              <div key={i} className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 space-y-4">
+              <div
+                key={i}
+                className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 space-y-4"
+              >
                 <div className="h-6 w-32 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
                 <div className="h-4 w-full bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
                 <div className="h-4 w-2/3 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
@@ -415,9 +435,7 @@ export default function BMS() {
               <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
                 Ungültiges Kapitel
               </h3>
-              <Button onClick={() => setActiveKapitel(null)}>
-                Zurück zur Übersicht
-              </Button>
+              <Button onClick={() => setActiveKapitel(null)}>Zurück zur Übersicht</Button>
             </CardContent>
           </Card>
         </div>
@@ -442,13 +460,14 @@ export default function BMS() {
         initialUkIndex={validUkIndex}
         onBack={() => {
           setActiveKapitel(null);
-          navigate(selectedSubject ? pathForSubject(selectedSubject) : '/bms');
+          navigate(selectedSubject ? pathForSubject(selectedSubject) : "/bms");
         }}
         chaptersInSubject={chaptersInSubject}
         currentChapterIndex={currentChapterIndex >= 0 ? currentChapterIndex : 0}
         onGoToChapter={
           selectedSubject
-            ? (chapterId, ukIndex) => navigate(pathForChapter(selectedSubject, chapterId) + '?uk=' + ukIndex)
+            ? (chapterId, ukIndex) =>
+                navigate(pathForChapter(selectedSubject, chapterId) + "?uk=" + ukIndex)
             : undefined
         }
       />
@@ -466,9 +485,7 @@ export default function BMS() {
               <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
                 Ungültiges Fach
               </h3>
-              <Button onClick={() => setSelectedSubject(null)}>
-                Zurück zur Übersicht
-              </Button>
+              <Button onClick={() => setSelectedSubject(null)}>Zurück zur Übersicht</Button>
             </CardContent>
           </Card>
         </div>
@@ -485,16 +502,21 @@ export default function BMS() {
 
     const subjectCompletedUK = kapitel.reduce((sum, k) => {
       if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
-      return sum + (k.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length || 0);
+      return (
+        sum +
+        (k.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length || 0)
+      );
     }, 0);
 
     return (
       <div className="max-w-5xl mx-auto space-y-6 p-6">
-        <BreadcrumbNav items={[
-          { label: "Dashboard", href: "/" }, 
-          { label: "BMS", href: "/bms" },
-          { label: subjectData.label }
-        ]} />
+        <BreadcrumbNav
+          items={[
+            { label: "Dashboard", href: "/" },
+            { label: "BMS", href: "/bms" },
+            { label: subjectData.label },
+          ]}
+        />
 
         <div className="flex items-center gap-4 flex-wrap">
           <Button
@@ -502,7 +524,7 @@ export default function BMS() {
             size="sm"
             onClick={() => {
               setSelectedSubject(null);
-              navigate('/bms');
+              navigate("/bms");
             }}
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -537,7 +559,9 @@ export default function BMS() {
           <div className="space-y-1">
             <div className="flex justify-between text-xs text-[var(--muted)]">
               <span>Fortschritt</span>
-              <span>{subjectCompletedUK}/{subjectUK} Unterkapitel</span>
+              <span>
+                {subjectCompletedUK}/{subjectUK} Unterkapitel
+              </span>
             </div>
             <div className="w-full bg-[var(--border)] rounded-full h-1.5">
               <div
@@ -554,7 +578,7 @@ export default function BMS() {
             chapters={roadmapChapters}
             currentChapterId={undefined}
             onSelectChapter={(chapterId) => {
-              const chapter = kapitel.find(c => c.id === chapterId);
+              const chapter = kapitel.find((c) => c.id === chapterId);
               if (chapter) {
                 setActiveKapitel(chapter);
                 navigate(pathForChapter(selectedSubject, chapterId));
@@ -568,12 +592,14 @@ export default function BMS() {
             <BookOpen className="w-5 h-5 text-primary-500" />
             Kapitel
           </h2>
-          
+
           {kapitel.length === 0 ? (
             <Card className={`border-l-4 ${subjectData.colors.border}`}>
               <CardContent className="p-8 text-center">
                 <div className="mb-4 flex justify-center">
-                  <div className={`w-16 h-16 rounded-full ${subjectData.colors.bg} ${subjectData.colors.bgDark} ${subjectData.colors.text} ${subjectData.colors.textDark} flex items-center justify-center`}>
+                  <div
+                    className={`w-16 h-16 rounded-full ${subjectData.colors.bg} ${subjectData.colors.bgDark} ${subjectData.colors.text} ${subjectData.colors.textDark} flex items-center justify-center`}
+                  >
                     <subjectData.icon className="w-8 h-8" />
                   </div>
                 </div>
@@ -581,9 +607,10 @@ export default function BMS() {
                   Noch keine Kapitel vorhanden
                 </h3>
                 <p className="text-slate-600 dark:text-slate-400 mb-6">
-                  Es gibt noch keine {subjectData.label}-Kapitel. Du kannst neue Kapitel im Editor erstellen.
+                  Es gibt noch keine {subjectData.label}-Kapitel. Du kannst neue Kapitel im Editor
+                  erstellen.
                 </p>
-                <Button onClick={() => navigate('/admin/kapitel-editor')} className="gap-2">
+                <Button onClick={() => navigate("/admin/kapitel-editor")} className="gap-2">
                   <BookOpen className="w-4 h-4" />
                   Zum Kapitel-Editor
                 </Button>
@@ -591,23 +618,34 @@ export default function BMS() {
             </Card>
           ) : (
             kapitel.map((kap) => {
-              if (!kap || !kap.id || typeof kap.id !== 'string' || typeof kap.title !== 'string') {
+              if (!kap || !kap.id || typeof kap.id !== "string" || typeof kap.title !== "string") {
                 return null;
               }
-              const ukTotal = (kap.unterkapitel && Array.isArray(kap.unterkapitel)) ? kap.unterkapitel.length : 0;
-              const ukDone = (kap.unterkapitel && Array.isArray(kap.unterkapitel))
-                ? kap.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length
-                : 0;
-              const isCompleted = completedChapters.includes(kap.id) || (ukTotal > 0 && ukDone === ukTotal);
+              const ukTotal =
+                kap.unterkapitel && Array.isArray(kap.unterkapitel) ? kap.unterkapitel.length : 0;
+              const ukDone =
+                kap.unterkapitel && Array.isArray(kap.unterkapitel)
+                  ? kap.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id))
+                      .length
+                  : 0;
+              const isCompleted =
+                completedChapters.includes(kap.id) || (ukTotal > 0 && ukDone === ukTotal);
               const kapMatch = kap.id.match(/kap(\d+)/i);
               const kapitelNr = kapMatch ? parseInt(kapMatch[1], 10) : 0;
               const stichworte = getStichworteByKapitel(kap.subject, kapitelNr);
               const topicTotal = stichworte.length;
-              const topicLearned = topicTotal > 0
-                ? stichworte.filter((s) => (stichwortStats[s.id]?.streak ?? 0) > 0).length
-                : 0;
-              const hasMastery = topicTotal > 0 && stichworte.some((s) => (stichwortStats[s.id]?.streak ?? 0) >= 3);
-              const progressPct = topicTotal > 0 ? (topicLearned / topicTotal) * 100 : (ukTotal > 0 ? (ukDone / ukTotal) * 100 : 0);
+              const topicLearned =
+                topicTotal > 0
+                  ? stichworte.filter((s) => (stichwortStats[s.id]?.streak ?? 0) > 0).length
+                  : 0;
+              const hasMastery =
+                topicTotal > 0 && stichworte.some((s) => (stichwortStats[s.id]?.streak ?? 0) >= 3);
+              const progressPct =
+                topicTotal > 0
+                  ? (topicLearned / topicTotal) * 100
+                  : ukTotal > 0
+                    ? (ukDone / ukTotal) * 100
+                    : 0;
 
               return (
                 <Card
@@ -620,13 +658,20 @@ export default function BMS() {
                 >
                   <CardContent className="p-4">
                     <div className="flex items-center gap-3">
-                      <div className="text-2xl shrink-0">{kap.icon || '📚'}</div>
+                      <div className="text-2xl shrink-0">{kap.icon || "📚"}</div>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 flex-wrap">
-                          <h3 className="font-medium text-midnight dark:text-slate-100">{kap.title || 'Untitled Chapter'}</h3>
-                          {isCompleted && <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />}
+                          <h3 className="font-medium text-midnight dark:text-slate-100">
+                            {kap.title || "Untitled Chapter"}
+                          </h3>
+                          {isCompleted && (
+                            <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                          )}
                           {hasMastery && (
-                            <span className="inline-flex items-center text-amber-600 dark:text-amber-400" title="Mastery (Streak ≥ 3)">
+                            <span
+                              className="inline-flex items-center text-amber-600 dark:text-amber-400"
+                              title="Mastery (Streak ≥ 3)"
+                            >
                               <Award className="w-4 h-4 shrink-0" />
                             </span>
                           )}
@@ -641,7 +686,9 @@ export default function BMS() {
                           )}
                           {(topicTotal > 0 || ukTotal > 0) && (
                             <span className="text-primary-500 font-medium">
-                              {topicTotal > 0 ? `${topicLearned}/${topicTotal} gelernt` : `${ukDone}/${ukTotal}`}
+                              {topicTotal > 0
+                                ? `${topicLearned}/${topicTotal} gelernt`
+                                : `${ukDone}/${ukTotal}`}
                             </span>
                           )}
                         </div>
@@ -676,7 +723,9 @@ export default function BMS() {
         <div className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 text-yellow-800 dark:text-yellow-300 text-sm">
           <Clock className="w-4 h-4 shrink-0" />
           <span className="font-medium">Zeigt fällige Kapitel</span>
-          <span className="text-yellow-600 dark:text-yellow-400">— Wiederhole Kapitel, die zur Festigung bereit sind.</span>
+          <span className="text-yellow-600 dark:text-yellow-400">
+            — Wiederhole Kapitel, die zur Festigung bereit sind.
+          </span>
         </div>
       )}
 
@@ -719,8 +768,8 @@ export default function BMS() {
             }
 
             // POST-PROCESSING: BMS learning path chapters get their static content back
-            const staticById = new Map(staticChapters.map(c => [c.id, c]));
-            sKapitel = sKapitel.map(chapter => {
+            const staticById = new Map(staticChapters.map((c) => [c.id, c]));
+            sKapitel = sKapitel.map((chapter) => {
               const staticChap = staticById.get(chapter.id);
               if (staticChap?.sequence !== undefined) {
                 return {
@@ -748,16 +797,20 @@ export default function BMS() {
 
           const sDone = sKapitel.reduce((sum, k) => {
             if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
-            return sum + (k.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length || 0);
+            return (
+              sum +
+              (k.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length ||
+                0)
+            );
           }, 0);
 
           const progressPct = sTotal > 0 ? (sDone / sTotal) * 100 : 0;
 
           // Subject accent color via CSS variable
           const accentVars: Record<string, string> = {
-            biologie:   "var(--accent-bio)",
-            chemie:     "var(--accent-chem)",
-            physik:     "var(--accent-phys)",
+            biologie: "var(--accent-bio)",
+            chemie: "var(--accent-chem)",
+            physik: "var(--accent-phys)",
             mathematik: "var(--accent-math)",
           };
           const accentColor = accentVars[subject.id] ?? "var(--color-primary-500)";
@@ -836,7 +889,7 @@ export default function BMS() {
               <p className="text-sm text-[var(--muted)] mb-4">
                 Erstelle deine ersten Kapitel im Editor.
               </p>
-              <Button onClick={() => navigate('/admin/kapitel-editor')} className="gap-2">
+              <Button onClick={() => navigate("/admin/kapitel-editor")} className="gap-2">
                 <BookOpen className="w-4 h-4" />
                 Zum Kapitel-Editor
               </Button>
