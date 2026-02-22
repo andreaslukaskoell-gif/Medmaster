@@ -1,17 +1,17 @@
-import type { Kapitel } from '../types';
+import type { Kapitel } from "../types";
 
 export const chemKap12: Kapitel = {
-  id: 'chem-kap12',
+  id: "chem-kap12",
   title: "Organische Chemie",
-  subject: 'chemie',
-  icon: '🫧',
-  estimatedTime: '75 min',
+  subject: "chemie",
+  icon: "🫧",
+  estimatedTime: "75 min",
   unterkapitel: [
     // ─────────────────────────────────────────────────────────────────
     // UK 01 — Kohlenwasserstoffe: Alkane, Alkene, Alkine
     // ─────────────────────────────────────────────────────────────────
     {
-      id: 'ch-12-01',
+      id: "ch-12-01",
       title: "Kohlenwasserstoffe — Alkane, Alkene, Alkine",
       content: `# Kohlenwasserstoffe — Alkane, Alkene, Alkine
 
@@ -72,17 +72,20 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform,
         {
           heading: "Hybridisierung und Bindungswinkel",
           text: "Alkane: sp³-Hybridisierung, Tetraedergeometrie, Bindungswinkel 109,5°. Alkene: sp²-Hybridisierung, trigonal-planare Geometrie, Bindungswinkel 120°. Alkine: sp-Hybridisierung, lineare Geometrie, Bindungswinkel 180°. Die Hybridisierung bestimmt die Geometrie und die Reaktivität: mehr p-Charakter (sp > sp² > sp³) bedeutet kürzere, stärkere, aber reaktivere π-Bindungen.",
-          merksatz: "sp³ = gesättigt (Alkan), sp² = eine Doppelbindung (Alken), sp = Dreifachbindung (Alkin). Mehr π-Bindungen = mehr Reaktivität.",
+          merksatz:
+            "sp³ = gesättigt (Alkan), sp² = eine Doppelbindung (Alken), sp = Dreifachbindung (Alkin). Mehr π-Bindungen = mehr Reaktivität.",
         },
         {
           heading: "Radikalische Substitution vs. elektrophile Addition",
           text: "Alkane gehen radikalische Substitutionen ein, weil ihre C-H-Bindungen homolytisch gespalten werden können. Alkene und Alkine bevorzugen elektrophile Additionen, weil ihre π-Elektronen nucleophil wirken und Elektrophile angreifen. Diese grundlegenden Reaktionsprinzipien sind für den MedAT-H essentiell.",
-          merksatz: "Alkan + Halogen/UV → Substitution (ein H raus, Halogen rein). Alken + Br₂ → Addition (Bromwasser entfärbt sich). Merke: Gesättigte substituieren, ungesättigte addieren.",
+          merksatz:
+            "Alkan + Halogen/UV → Substitution (ein H raus, Halogen rein). Alken + Br₂ → Addition (Bromwasser entfärbt sich). Merke: Gesättigte substituieren, ungesättigte addieren.",
         },
         {
           heading: "Homologe Reihe und Siedepunkte",
           text: "Eine homologe Reihe ist eine Gruppe organischer Verbindungen, die sich durch eine CH₂-Gruppe unterscheiden. In der Alkan-Reihe steigen die Siedepunkte pro CH₂-Einheit um ca. 20-30°C. Die Siedepunkte hängen von den van-der-Waals-Kräften ab: Methan (-162°C), Ethan (-89°C), Propan (-42°C), Butan (-1°C), Pentan (36°C), Hexan (69°C), Heptan (98°C), Octan (126°C).",
-          merksatz: "Mehr C-Atome → größere Moleküloberfläche → stärkere van-der-Waals-Kräfte → höherer Siedepunkt. Verzweigung verkleinert die Oberfläche und senkt den Siedepunkt.",
+          merksatz:
+            "Mehr C-Atome → größere Moleküloberfläche → stärkere van-der-Waals-Kräfte → höherer Siedepunkt. Verzweigung verkleinert die Oberfläche und senkt den Siedepunkt.",
         },
         {
           heading: "IUPAC-Namen der ersten 10 Alkane",
@@ -100,11 +103,11 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform,
               ["8", "Octan", "C₈H₁₈"],
               ["9", "Nonan", "C₉H₂₀"],
               ["10", "Decan", "C₁₀H₂₂"],
-            ]
-          }
+            ],
+          },
         },
       ],
-      diagram: 'functional-groups',
+      diagram: "functional-groups",
 
       merksätze: [
         "Alkane: CₙH₂ₙ₊₂ — gesättigt, nur Einfachbindungen, reagieren durch radikalische Substitution.",
@@ -120,43 +123,43 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform,
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: "Erklären Sie die radikalische Halogenierung von Methan und beschreiben Sie die drei Phasen der Kettenreaktion.",
-        answer: "Die radikalische Halogenierung ist eine Substitutionsreaktion, bei der ein Wasserstoffatom eines Alkans durch ein Halogenatom ersetzt wird. Sie wird durch UV-Licht oder hohe Temperaturen initiiert und läuft als Kettenreaktion in drei Phasen ab. In der Startphase (Initiation) wird die Halogenmolekülbindung homolytisch gespalten: Cl₂ → 2 Cl•. Dabei entstehen hochreaktive Chlorradikale. In der Fortpflanzungsphase (Propagation) reagiert das Chlorradikal mit Methan: Cl• + CH₄ → •CH₃ + HCl (ein neues Methylradikal entsteht). Dann: •CH₃ + Cl₂ → CH₃Cl + Cl• (ein neues Chlorradikal regeneriert). Diese zwei Schritte wiederholen sich tausende Male, weshalb aus einem Cl•-Radikal viele Produktmoleküle entstehen. In der Abbruchphase (Termination) rekombinieren zwei Radikale miteinander: Cl• + Cl• → Cl₂; •CH₃ + Cl• → CH₃Cl; •CH₃ + •CH₃ → C₂H₆. Da Methan vier gleichwertige H-Atome hat, entsteht zunächst nur Chlormethan. Bei Überschuss an Cl₂ können auch Di-, Tri- und Tetrachlormethan entstehen (stufenweise Substitution). Die Reaktion ist für Alkane typisch, weil sie keine reaktiven π-Elektronen besitzen.",
+        question:
+          "Erklären Sie die radikalische Halogenierung von Methan und beschreiben Sie die drei Phasen der Kettenreaktion.",
+        answer:
+          "Die radikalische Halogenierung ist eine Substitutionsreaktion, bei der ein Wasserstoffatom eines Alkans durch ein Halogenatom ersetzt wird. Sie wird durch UV-Licht oder hohe Temperaturen initiiert und läuft als Kettenreaktion in drei Phasen ab. In der Startphase (Initiation) wird die Halogenmolekülbindung homolytisch gespalten: Cl₂ → 2 Cl•. Dabei entstehen hochreaktive Chlorradikale. In der Fortpflanzungsphase (Propagation) reagiert das Chlorradikal mit Methan: Cl• + CH₄ → •CH₃ + HCl (ein neues Methylradikal entsteht). Dann: •CH₃ + Cl₂ → CH₃Cl + Cl• (ein neues Chlorradikal regeneriert). Diese zwei Schritte wiederholen sich tausende Male, weshalb aus einem Cl•-Radikal viele Produktmoleküle entstehen. In der Abbruchphase (Termination) rekombinieren zwei Radikale miteinander: Cl• + Cl• → Cl₂; •CH₃ + Cl• → CH₃Cl; •CH₃ + •CH₃ → C₂H₆. Da Methan vier gleichwertige H-Atome hat, entsteht zunächst nur Chlormethan. Bei Überschuss an Cl₂ können auch Di-, Tri- und Tetrachlormethan entstehen (stufenweise Substitution). Die Reaktion ist für Alkane typisch, weil sie keine reaktiven π-Elektronen besitzen.",
       },
-      klinischerBezug: "Ethan und Pentan im Ausatemluft gelten als Biomarker für oxidativen Stress (Lipidperoxidation). Ethanol wird hepatisch über Acetaldehyd zur Essigsäure (Acetat) abgebaut; der Acetaldehyd ist für den Kater-Effekt verantwortlich.",
+      klinischerBezug:
+        "Ethan und Pentan im Ausatemluft gelten als Biomarker für oxidativen Stress (Lipidperoxidation). Ethanol wird hepatisch über Acetaldehyd zur Essigsäure (Acetat) abgebaut; der Acetaldehyd ist für den Kater-Effekt verantwortlich.",
       selfTest: [
         {
           question: "Was ist die allgemeine Summenformel der Alkane?",
-          options: [
-            "CₙH₂ₙ₊₂",
-            "CₙH₂ₙ",
-            "CₙH₂ₙ₋₂",
-            "CₙH₂ₙ₊₁",
-            "CₙHₙ",
-          ],
+          options: ["CₙH₂ₙ₊₂", "CₙH₂ₙ", "CₙH₂ₙ₋₂", "CₙH₂ₙ₊₁", "CₙHₙ"],
           correctIndex: 0,
-          explanation: "Alkane sind gesättigte Kohlenwasserstoffe mit ausschließlich C-C-Einfachbindungen. Jedes C-Atom bildet vier Bindungen. An einem endständigen C sitzen 3 H-Atome, an einem Mittel-C je 2 H-Atome. Die Ableitung: CₙH₂ₙ₊₂. Prüfung: Methan CH₄ (n=1: 2·1+2=4 ✓), Ethan C₂H₆ (n=2: 2·2+2=6 ✓), Propan C₃H₈ (n=3: 2·3+2=8 ✓).",
-          hints: ["Alkane sind gesättigt — denke an die maximale Anzahl H-Atome pro C.", "Methan CH₄ hat 1 C und 4 H: passt welche Formel?"],
+          explanation:
+            "Alkane sind gesättigte Kohlenwasserstoffe mit ausschließlich C-C-Einfachbindungen. Jedes C-Atom bildet vier Bindungen. An einem endständigen C sitzen 3 H-Atome, an einem Mittel-C je 2 H-Atome. Die Ableitung: CₙH₂ₙ₊₂. Prüfung: Methan CH₄ (n=1: 2·1+2=4 ✓), Ethan C₂H₆ (n=2: 2·2+2=6 ✓), Propan C₃H₈ (n=3: 2·3+2=8 ✓).",
+          hints: [
+            "Alkane sind gesättigt — denke an die maximale Anzahl H-Atome pro C.",
+            "Methan CH₄ hat 1 C und 4 H: passt welche Formel?",
+          ],
           difficulty: 1,
-          tags: [],
+          tags: ["alkane", "allgemeine-formel", "cn-h2n2"],
         },
         {
           question: "Welcher Name bezeichnet das Alkan mit 7 Kohlenstoffatomen?",
-          options: [
-            "Hexan",
-            "Octan",
-            "Heptan",
-            "Nonan",
-            "Pentan",
-          ],
+          options: ["Hexan", "Octan", "Heptan", "Nonan", "Pentan"],
           correctIndex: 2,
-          explanation: "Die IUPAC-Namen der Alkane: C1=Methan, C2=Ethan, C3=Propan, C4=Butan, C5=Pentan, C6=Hexan, C7=Heptan, C8=Octan, C9=Nonan, C10=Decan. Die griechischen Präfixe spiegeln die Kohlenstoffanzahl wider: Hepta- = 7. Heptan (C₇H₁₆) ist eine farblose Flüssigkeit (Siedepunkt 98°C) und Bestandteil von Benzin.",
-          hints: ["Die Namen basieren auf griechischen Zahlwörtern: hexa=6, hepta=7, okta=8.", "Merkhilfe: Met-Eth-Prop-But-Pent-Hex-Hept-Oct-Non-Dec"],
+          explanation:
+            "Die IUPAC-Namen der Alkane: C1=Methan, C2=Ethan, C3=Propan, C4=Butan, C5=Pentan, C6=Hexan, C7=Heptan, C8=Octan, C9=Nonan, C10=Decan. Die griechischen Präfixe spiegeln die Kohlenstoffanzahl wider: Hepta- = 7. Heptan (C₇H₁₆) ist eine farblose Flüssigkeit (Siedepunkt 98°C) und Bestandteil von Benzin.",
+          hints: [
+            "Die Namen basieren auf griechischen Zahlwörtern: hexa=6, hepta=7, okta=8.",
+            "Merkhilfe: Met-Eth-Prop-But-Pent-Hex-Hept-Oct-Non-Dec",
+          ],
           difficulty: 1,
-          tags: [],
+          tags: ["iupac", "alkan-namen", "heptan"],
         },
         {
-          question: "Wie wird der Nachweis einer C=C-Doppelbindung mit Bromwasser durchgeführt, und was ist das Ergebnis?",
+          question:
+            "Wie wird der Nachweis einer C=C-Doppelbindung mit Bromwasser durchgeführt, und was ist das Ergebnis?",
           options: [
             "Bromwasser wird zugegeben; bei Doppelbindung entsteht ein weißer Niederschlag",
             "Bromwasser wird zugegeben; bei Doppelbindung entfärbt sich die orange Lösung",
@@ -165,10 +168,14 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform,
             "Bromwasser wird zugegeben; bei Doppelbindung entsteht ein Gas",
           ],
           correctIndex: 1,
-          explanation: "Der Bromwassertest ist der klassische Nachweis für ungesättigte Verbindungen (Alkene, Alkine). Bromwasser ist eine orange-braune Lösung von Br₂ in Wasser. Bei Kontakt mit einem Alken addiert Br₂ an die C=C-Doppelbindung (elektrophile Addition): R-CH=CH-R + Br₂ → R-CHBr-CHBr-R. Da das Br₂ verbraucht wird, verschwindet die orange Farbe (Entfärbung). Gesättigte Verbindungen (Alkane) reagieren unter diesen Bedingungen nicht mit Bromwasser — keine Entfärbung.",
-          hints: ["Brom ist orange-braun. Was passiert, wenn es reagiert und verbraucht wird?", "Alkene reagieren durch Addition — das Br₂ wird in das Produkt eingebaut."],
+          explanation:
+            "Der Bromwassertest ist der klassische Nachweis für ungesättigte Verbindungen (Alkene, Alkine). Bromwasser ist eine orange-braune Lösung von Br₂ in Wasser. Bei Kontakt mit einem Alken addiert Br₂ an die C=C-Doppelbindung (elektrophile Addition): R-CH=CH-R + Br₂ → R-CHBr-CHBr-R. Da das Br₂ verbraucht wird, verschwindet die orange Farbe (Entfärbung). Gesättigte Verbindungen (Alkane) reagieren unter diesen Bedingungen nicht mit Bromwasser — keine Entfärbung.",
+          hints: [
+            "Brom ist orange-braun. Was passiert, wenn es reagiert und verbraucht wird?",
+            "Alkene reagieren durch Addition — das Br₂ wird in das Produkt eingebaut.",
+          ],
           difficulty: 2,
-          tags: [],
+          tags: ["bromwasser", "alken-nachweis", "elektrophile-addition"],
         },
         {
           question: "Welche Reaktion ist typisch für Alkane?",
@@ -180,28 +187,31 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform,
             "Elektrophile aromatische Substitution",
           ],
           correctIndex: 3,
-          explanation: "Alkane haben keine reaktiven Funktionalitäten (keine π-Elektronen, keine freien Elektronenpaare). Sie reagieren daher kaum. Die wichtigste Reaktion ist die radikalische Halogenierung unter UV-Licht oder hohen Temperaturen, bei der ein H-Atom durch ein Halogenatom ersetzt wird. Die Reaktion läuft über Radikale (homolytische Bindungsspaltung) in drei Phasen: Start, Fortpflanzung, Abbruch. Elektrophile Addition ist typisch für Alkene (π-Elektronen), nicht für Alkane.",
-          hints: ["Alkane haben nur σ-Bindungen — keine π-Elektronen. Was für eine Reaktion braucht keine Elektrophile?", "UV-Licht kann Bindungen homolytisch spalten und Radikale erzeugen."],
+          explanation:
+            "Alkane haben keine reaktiven Funktionalitäten (keine π-Elektronen, keine freien Elektronenpaare). Sie reagieren daher kaum. Die wichtigste Reaktion ist die radikalische Halogenierung unter UV-Licht oder hohen Temperaturen, bei der ein H-Atom durch ein Halogenatom ersetzt wird. Die Reaktion läuft über Radikale (homolytische Bindungsspaltung) in drei Phasen: Start, Fortpflanzung, Abbruch. Elektrophile Addition ist typisch für Alkene (π-Elektronen), nicht für Alkane.",
+          hints: [
+            "Alkane haben nur σ-Bindungen — keine π-Elektronen. Was für eine Reaktion braucht keine Elektrophile?",
+            "UV-Licht kann Bindungen homolytisch spalten und Radikale erzeugen.",
+          ],
           difficulty: 2,
-          tags: [],
+          tags: ["alkane", "radikalische-substitution", "uv-licht"],
         },
         {
           question: "Welche Hybridisierung haben die C-Atome in Ethen (C₂H₄)?",
-          options: [
-            "sp³",
-            "sp²",
-            "sp",
-            "sp³d",
-            "d²sp³",
-          ],
+          options: ["sp³", "sp²", "sp", "sp³d", "d²sp³"],
           correctIndex: 1,
-          explanation: "In Ethen (H₂C=CH₂) sind die C-Atome sp²-hybridisiert. Drei sp²-Hybridorbitale bilden die σ-Gerüstbindungen (120° Winkel, trigonal-planar). Das verbleibende unhybridisierte p-Orbital steht senkrecht zur Molekülebene und bildet mit dem benachbarten p-Orbital die π-Bindung. Zum Vergleich: sp³ (Alkan, Tetraeder, 109,5°), sp (Alkin, linear, 180°). Die sp²-Hybridisierung erklärt die planare Struktur der Doppelbindung und die cis/trans-Isomerie.",
-          hints: ["Zähle die σ-Bindungspartner + freie Elektronenpaare am C von Ethen: das gibt die Hybridisierung.", "sp³=4, sp²=3, sp=2 σ-Bindungsgruppen."],
+          explanation:
+            "In Ethen (H₂C=CH₂) sind die C-Atome sp²-hybridisiert. Drei sp²-Hybridorbitale bilden die σ-Gerüstbindungen (120° Winkel, trigonal-planar). Das verbleibende unhybridisierte p-Orbital steht senkrecht zur Molekülebene und bildet mit dem benachbarten p-Orbital die π-Bindung. Zum Vergleich: sp³ (Alkan, Tetraeder, 109,5°), sp (Alkin, linear, 180°). Die sp²-Hybridisierung erklärt die planare Struktur der Doppelbindung und die cis/trans-Isomerie.",
+          hints: [
+            "Zähle die σ-Bindungspartner + freie Elektronenpaare am C von Ethen: das gibt die Hybridisierung.",
+            "sp³=4, sp²=3, sp=2 σ-Bindungsgruppen.",
+          ],
           difficulty: 2,
-          tags: [],
+          tags: ["hybridisierung", "sp2", "ethen"],
         },
         {
-          question: "Das Alkan Butan (C₄H₁₀) hat zwei Konstitutionsisomere. Welches hat den niedrigeren Siedepunkt?",
+          question:
+            "Das Alkan Butan (C₄H₁₀) hat zwei Konstitutionsisomere. Welches hat den niedrigeren Siedepunkt?",
           options: [
             "n-Butan (unverzweigt), weil es größere Oberfläche hat",
             "2-Methylpropan (Isobutan), weil es größere Oberfläche hat",
@@ -210,13 +220,18 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform,
             "n-Butan, weil es leichter ist",
           ],
           correctIndex: 2,
-          explanation: "Beide Isomere (n-Butan und 2-Methylpropan/Isobutan) haben C₄H₁₀ und das gleiche Molekulargewicht. Der Siedepunkt wird durch die Stärke der van-der-Waals-Kräfte bestimmt, die von der Moleküloberfläche abhängt. n-Butan ist gestreckt (größere Oberfläche, Sdp. -1°C), 2-Methylpropan ist kompakter/kugelförmiger (kleinere Oberfläche, Sdp. -12°C). Mehr Verzweigung → kleinere Oberfläche → schwächere van-der-Waals-Kräfte → niedrigerer Siedepunkt. Dieser Effekt ist prüfungsrelevant!",
-          hints: ["Van-der-Waals-Kräfte sind oberflächenabhängig. Welches Molekül hat mehr Kontaktfläche?", "Streckt man ein Molekül aus, wird die Oberfläche größer — mehr Kontakt mit Nachbarmolekülen möglich."],
+          explanation:
+            "Beide Isomere (n-Butan und 2-Methylpropan/Isobutan) haben C₄H₁₀ und das gleiche Molekulargewicht. Der Siedepunkt wird durch die Stärke der van-der-Waals-Kräfte bestimmt, die von der Moleküloberfläche abhängt. n-Butan ist gestreckt (größere Oberfläche, Sdp. -1°C), 2-Methylpropan ist kompakter/kugelförmiger (kleinere Oberfläche, Sdp. -12°C). Mehr Verzweigung → kleinere Oberfläche → schwächere van-der-Waals-Kräfte → niedrigerer Siedepunkt. Dieser Effekt ist prüfungsrelevant!",
+          hints: [
+            "Van-der-Waals-Kräfte sind oberflächenabhängig. Welches Molekül hat mehr Kontaktfläche?",
+            "Streckt man ein Molekül aus, wird die Oberfläche größer — mehr Kontakt mit Nachbarmolekülen möglich.",
+          ],
           difficulty: 3,
-          tags: [],
+          tags: ["isomere", "van-der-waals", "siedepunkt"],
         },
         {
-          question: "Was ist das Hauptprodukt bei der Addition von HBr an Propen (CH₃-CH=CH₂) nach der Markovnikov-Regel?",
+          question:
+            "Was ist das Hauptprodukt bei der Addition von HBr an Propen (CH₃-CH=CH₂) nach der Markovnikov-Regel?",
           options: [
             "1-Brompropan (Br an C1)",
             "2-Brompropan (Br an C2)",
@@ -225,10 +240,14 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform,
             "Propin",
           ],
           correctIndex: 1,
-          explanation: "Die Markovnikov-Regel besagt: Bei der Addition von HX an ein asymmetrisches Alken addiert das H an das C-Atom mit den meisten H-Atomen (das elektronenreichere C), das X an das C-Atom mit weniger H-Atomen. Bei Propen (CH₃-CH=CH₂): C1 der Doppelbindung hat 2 H (=CH₂), C2 hat 1 H (-CH=). Nach Markovnikov: H an C1, Br an C2 → 2-Brompropan (CH₃-CHBr-CH₃). Mechanistisch entsteht das stabilere Carbokation (sekundär > primär) als Zwischenstufe.",
-          hints: ["Markovnikov: 'Das Reiche wird reicher' — H geht zur H-reichen Seite.", "Das stabilere Carbokation (sekundär > primär) bestimmt das Hauptprodukt."],
+          explanation:
+            "Die Markovnikov-Regel besagt: Bei der Addition von HX an ein asymmetrisches Alken addiert das H an das C-Atom mit den meisten H-Atomen (das elektronenreichere C), das X an das C-Atom mit weniger H-Atomen. Bei Propen (CH₃-CH=CH₂): C1 der Doppelbindung hat 2 H (=CH₂), C2 hat 1 H (-CH=). Nach Markovnikov: H an C1, Br an C2 → 2-Brompropan (CH₃-CHBr-CH₃). Mechanistisch entsteht das stabilere Carbokation (sekundär > primär) als Zwischenstufe.",
+          hints: [
+            "Markovnikov: 'Das Reiche wird reicher' — H geht zur H-reichen Seite.",
+            "Das stabilere Carbokation (sekundär > primär) bestimmt das Hauptprodukt.",
+          ],
           difficulty: 3,
-          tags: [],
+          tags: ["markovnikov", "hbr-addition", "carbokation"],
         },
       ],
     },
@@ -237,7 +256,7 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform,
     // UK 02 — Isomerie und Stereochemie
     // ─────────────────────────────────────────────────────────────────
     {
-      id: 'ch-12-02',
+      id: "ch-12-02",
       title: "Isomerie und Stereochemie",
       content: `# Isomerie und Stereochemie
 
@@ -317,17 +336,20 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
         {
           heading: "Typen der Isomerie — Überblick",
           text: "Isomerie teilt sich auf in: (1) Konstitutionsisomerie (verschiedene Konnektivität, z.B. n-Butan vs. Isobutan) und (2) Stereoisomerie (gleiche Konnektivität, verschiedene Raumanordnung). Stereoisomerie umfasst: (2a) cis/trans-Isomerie an C=C-Doppelbindungen; (2b) Enantiomerie (Spiegelbildisomerie, R/S, optisch aktiv); (2c) Diastereomerie (alle anderen Stereoisomere, die keine Enantiomere sind). Racemat = 1:1-Gemisch von Enantiomeren, optisch inaktiv.",
-          merksatz: "Gleiche Formel → Isomere. Verschiedene Konnektivität → Konstitutionsisomere. Gleiche Konnektivität, verschiedene Raumanordnung → Stereoisomere (cis/trans oder R/S).",
+          merksatz:
+            "Gleiche Formel → Isomere. Verschiedene Konnektivität → Konstitutionsisomere. Gleiche Konnektivität, verschiedene Raumanordnung → Stereoisomere (cis/trans oder R/S).",
         },
         {
           heading: "Das chirale Kohlenstoffatom",
           text: "Ein Kohlenstoffatom ist chiral, wenn es vier verschiedene Substituenten trägt (sp³-hybridisiert). Dann gibt es zwei nicht-superponierbare Spiegelbildformen (Enantiomere). Jedes Chiralitätszentrum verdoppelt theoretisch die Zahl der Stereoisomere (2ⁿ-Regel). In der Biochemie sind fast alle wichtigen Moleküle chiral: Aminosäuren, Monosaccharide, Nucleoside, Steroide. Biologische Systeme (Enzyme, Rezeptoren) sind stereoselektiv — sie erkennen oft nur ein Enantiomer.",
-          merksatz: "Vier verschiedene Gruppen am C → chirales Zentrum → Enantiomere möglich. Proteinogene Aminosäuren sind alle L-konfiguriert. Bei n Chiralitätszentren: maximal 2ⁿ Stereoisomere.",
+          merksatz:
+            "Vier verschiedene Gruppen am C → chirales Zentrum → Enantiomere möglich. Proteinogene Aminosäuren sind alle L-konfiguriert. Bei n Chiralitätszentren: maximal 2ⁿ Stereoisomere.",
         },
         {
           heading: "Klinischer Fall: Thalidomid — das Contergan-Desaster",
           text: "Thalidomid (Contergan) wurde in den 1950er-60er Jahren als Schlaf- und Beruhigungsmittel vermarktet. Es enthält ein Chiralitätszentrum. Das R-Enantiomer hat sedierende Wirkung. Das S-Enantiomer ist teratogen (löst Missbildungen aus — Phokomelie). Das tragische Problem: Im menschlichen Körper findet spontane Racemisierung statt — selbst reines R-Enantiomer wandelt sich in vivo ins S-Enantiomer um, sodass die teratogene Wirkung nicht durch Verabreichung nur des R-Isomers verhindert werden kann. Dieser Fall begründete die moderne Arzneimittelregulierung für chirale Wirkstoffe.",
-          merksatz: "Thalidomid: R=Sedativum, S=teratogen. Racemisierung in vivo macht Trennung klinisch unwirksam. Lehre: Chirale Arzneimittel müssen auf jedes Enantiomer einzeln geprüft werden.",
+          merksatz:
+            "Thalidomid: R=Sedativum, S=teratogen. Racemisierung in vivo macht Trennung klinisch unwirksam. Lehre: Chirale Arzneimittel müssen auf jedes Enantiomer einzeln geprüft werden.",
         },
       ],
       merksätze: [
@@ -344,10 +366,13 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: "Was versteht man unter Enantiomeren, und welche klinische Bedeutung hat die Chiralität bei Arzneimitteln? Erläutern Sie das Beispiel Thalidomid.",
-        answer: "Enantiomere sind zwei Stereoisomere, die sich wie Bild und nicht-superponiertes Spiegelbild verhalten. Sie entstehen an einem chiralen Kohlenstoffatom, das vier verschiedene Substituenten trägt. Enantiomere haben identische physikalische Eigenschaften (Schmelzpunkt, Siedepunkt, Löslichkeit) und identische Reaktivität in achiraler Umgebung. Sie unterscheiden sich ausschließlich in der optischen Aktivität (Drehung polarisierten Lichts in entgegengesetzte Richtungen: (+) rechtsdrehend, (−) linksdrehend) und in ihrem Verhalten gegenüber anderen chiralen Molekülen wie Enzymen und Rezeptoren. Die klinische Bedeutung der Chiralität liegt darin, dass biologische Zielmoleküle (Enzyme, Rezeptoren, Transporter) selbst chiral sind und zwei Enantiomere eines Arzneimittels komplett unterschiedliche biologische Wirkungen haben können. Das deutlichste Beispiel ist Thalidomid (Contergan), das in den späten 1950er Jahren als Racemat als Schlafmittel und Antiemetikum bei Schwangerschaftsübelkeit eingesetzt wurde. Das R-Enantiomer hat die therapeutisch gewünschte sedierende Wirkung. Das S-Enantiomer ist teratogen und verursachte schwere Gliedmaßenfehlbildungen (Phokomelie) bei Tausenden von Kindern. Besonders tragisch ist, dass selbst die Verabreichung des reinen R-Enantiomers die Teratogenität nicht verhindert hätte, da im menschlichen Körper spontane Racemisierung stattfindet (Interkonversion beider Formen). Dieser Fall war ein Wendepunkt in der Pharmakologie und führte zur Einführung strenger Zulassungsvorschriften, die heute die separate Prüfung jedes Enantiomers verlangen.",
+        question:
+          "Was versteht man unter Enantiomeren, und welche klinische Bedeutung hat die Chiralität bei Arzneimitteln? Erläutern Sie das Beispiel Thalidomid.",
+        answer:
+          "Enantiomere sind zwei Stereoisomere, die sich wie Bild und nicht-superponiertes Spiegelbild verhalten. Sie entstehen an einem chiralen Kohlenstoffatom, das vier verschiedene Substituenten trägt. Enantiomere haben identische physikalische Eigenschaften (Schmelzpunkt, Siedepunkt, Löslichkeit) und identische Reaktivität in achiraler Umgebung. Sie unterscheiden sich ausschließlich in der optischen Aktivität (Drehung polarisierten Lichts in entgegengesetzte Richtungen: (+) rechtsdrehend, (−) linksdrehend) und in ihrem Verhalten gegenüber anderen chiralen Molekülen wie Enzymen und Rezeptoren. Die klinische Bedeutung der Chiralität liegt darin, dass biologische Zielmoleküle (Enzyme, Rezeptoren, Transporter) selbst chiral sind und zwei Enantiomere eines Arzneimittels komplett unterschiedliche biologische Wirkungen haben können. Das deutlichste Beispiel ist Thalidomid (Contergan), das in den späten 1950er Jahren als Racemat als Schlafmittel und Antiemetikum bei Schwangerschaftsübelkeit eingesetzt wurde. Das R-Enantiomer hat die therapeutisch gewünschte sedierende Wirkung. Das S-Enantiomer ist teratogen und verursachte schwere Gliedmaßenfehlbildungen (Phokomelie) bei Tausenden von Kindern. Besonders tragisch ist, dass selbst die Verabreichung des reinen R-Enantiomers die Teratogenität nicht verhindert hätte, da im menschlichen Körper spontane Racemisierung stattfindet (Interkonversion beider Formen). Dieser Fall war ein Wendepunkt in der Pharmakologie und führte zur Einführung strenger Zulassungsvorschriften, die heute die separate Prüfung jedes Enantiomers verlangen.",
       },
-      klinischerBezug: "Chirale Arzneimittel (Enantiomere) können sehr unterschiedliche Wirkungen haben: Thalidomid (R=Sedativum, S=teratogen), L-Dopa (wirksam bei Parkinson, D-Dopa inaktiv), S-Ibuprofen (aktive Form).",
+      klinischerBezug:
+        "Chirale Arzneimittel (Enantiomere) können sehr unterschiedliche Wirkungen haben: Thalidomid (R=Sedativum, S=teratogen), L-Dopa (wirksam bei Parkinson, D-Dopa inaktiv), S-Ibuprofen (aktive Form).",
       selfTest: [
         {
           question: "Was ist die Grundbedingung für das Vorliegen eines chiralen Kohlenstoffatoms?",
@@ -359,13 +384,18 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
             "Das C-Atom trägt mindestens zwei gleiche Substituenten",
           ],
           correctIndex: 2,
-          explanation: "Ein Kohlenstoffatom ist chiral (stereogen), wenn es vier verschiedene Substituenten trägt — das können Atome oder Atomgruppen sein. Dann gibt es zwei Möglichkeiten, diese vier Substituenten räumlich anzuordnen: die zwei Anordnungen sind Spiegelbilder voneinander und nicht superponierbar (Enantiomere). Wenn zwei oder mehr Substituenten gleich sind, gibt es nur eine Anordnung (kein chirales Zentrum). Ein sp²-hybridisiertes C (z.B. in einer Doppelbindung) kann kein Chiralitätszentrum sein, da es nur drei Bindungspartner hat.",
-          hints: ["Denke an eine Hand: links und rechts sind Spiegelbilder. Was macht eine Hand chiral?", "Wenn zwei Substituenten gleich sind, kann man das Molekül durch Rotation in sein Spiegelbild überführen."],
+          explanation:
+            "Ein Kohlenstoffatom ist chiral (stereogen), wenn es vier verschiedene Substituenten trägt — das können Atome oder Atomgruppen sein. Dann gibt es zwei Möglichkeiten, diese vier Substituenten räumlich anzuordnen: die zwei Anordnungen sind Spiegelbilder voneinander und nicht superponierbar (Enantiomere). Wenn zwei oder mehr Substituenten gleich sind, gibt es nur eine Anordnung (kein chirales Zentrum). Ein sp²-hybridisiertes C (z.B. in einer Doppelbindung) kann kein Chiralitätszentrum sein, da es nur drei Bindungspartner hat.",
+          hints: [
+            "Denke an eine Hand: links und rechts sind Spiegelbilder. Was macht eine Hand chiral?",
+            "Wenn zwei Substituenten gleich sind, kann man das Molekül durch Rotation in sein Spiegelbild überführen.",
+          ],
           difficulty: 1,
-          tags: [],
+          tags: ["chiralität", "chiralitätszentrum", "vier-verschiedene-substituenten"],
         },
         {
-          question: "Zwei Verbindungen haben die Summenformel C₄H₈: But-1-en (CH₂=CH-CH₂-CH₃) und Cyclobutan (viergliedriger Ring). In welche Isomerieklasse fallen diese beiden?",
+          question:
+            "Zwei Verbindungen haben die Summenformel C₄H₈: But-1-en (CH₂=CH-CH₂-CH₃) und Cyclobutan (viergliedriger Ring). In welche Isomerieklasse fallen diese beiden?",
           options: [
             "Enantiomere",
             "Diastereomere",
@@ -374,10 +404,14 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
             "Meso-Verbindungen",
           ],
           correctIndex: 2,
-          explanation: "But-1-en und Cyclobutan haben beide die Summenformel C₄H₈, aber eine völlig unterschiedliche Konnektivität der Atome: But-1-en ist eine offenkettige Verbindung mit einer Doppelbindung, Cyclobutan ist ein gesättigter Ring. Verschiedene Konnektivität = Konstitutionsisomere (Strukturisomere). Enantiomere und Diastereomere sind Stereoisomere (gleiche Konnektivität, verschiedene Raumanordnung). cis/trans-Isomerie ist ein Spezialfall von Diastereomerie bei Doppelbindungen oder Ringen.",
-          hints: ["Konstitutionsisomere unterscheiden sich in der Reihenfolge der verbundenen Atome — vergleiche die Bindungspartner.", "Stereoisomere haben gleiche Konnektivität. Haben But-1-en und Cyclobutan gleiche Bindungspartner?"],
+          explanation:
+            "But-1-en und Cyclobutan haben beide die Summenformel C₄H₈, aber eine völlig unterschiedliche Konnektivität der Atome: But-1-en ist eine offenkettige Verbindung mit einer Doppelbindung, Cyclobutan ist ein gesättigter Ring. Verschiedene Konnektivität = Konstitutionsisomere (Strukturisomere). Enantiomere und Diastereomere sind Stereoisomere (gleiche Konnektivität, verschiedene Raumanordnung). cis/trans-Isomerie ist ein Spezialfall von Diastereomerie bei Doppelbindungen oder Ringen.",
+          hints: [
+            "Konstitutionsisomere unterscheiden sich in der Reihenfolge der verbundenen Atome — vergleiche die Bindungspartner.",
+            "Stereoisomere haben gleiche Konnektivität. Haben But-1-en und Cyclobutan gleiche Bindungspartner?",
+          ],
           difficulty: 2,
-          tags: [],
+          tags: ["konstitutionsisomere", "strukturisomere", "konnektivität"],
         },
         {
           question: "Welches Stereoisomerieverhältnis besteht zwischen L-Alanin und D-Alanin?",
@@ -389,10 +423,14 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
             "Mesomere",
           ],
           correctIndex: 2,
-          explanation: "L-Alanin und D-Alanin sind Enantiomere: Sie haben identische Summenformel (C₃H₇NO₂) und gleiche Konnektivität (je -NH₂, -COOH, -CH₃ und -H am α-C), unterscheiden sich aber in der räumlichen Anordnung (das α-C-Atom ist chiral). Sie verhalten sich wie Bild und Spiegelbild, sind nicht superponierbar. L-Alanin dreht polarisiertes Licht anders als D-Alanin. Im menschlichen Körper kommen ausschließlich L-Aminosäuren in Proteinen vor; D-Aminosäuren treten in Bakterienzellwänden auf.",
-          hints: ["L- und D-Aminosäuren: was unterscheidet sie strukturell, wenn sie gleiche Summenformel haben?", "Spiegelbildisomere, die nicht deckbar sind, heißen..."],
+          explanation:
+            "L-Alanin und D-Alanin sind Enantiomere: Sie haben identische Summenformel (C₃H₇NO₂) und gleiche Konnektivität (je -NH₂, -COOH, -CH₃ und -H am α-C), unterscheiden sich aber in der räumlichen Anordnung (das α-C-Atom ist chiral). Sie verhalten sich wie Bild und Spiegelbild, sind nicht superponierbar. L-Alanin dreht polarisiertes Licht anders als D-Alanin. Im menschlichen Körper kommen ausschließlich L-Aminosäuren in Proteinen vor; D-Aminosäuren treten in Bakterienzellwänden auf.",
+          hints: [
+            "L- und D-Aminosäuren: was unterscheidet sie strukturell, wenn sie gleiche Summenformel haben?",
+            "Spiegelbildisomere, die nicht deckbar sind, heißen...",
+          ],
           difficulty: 2,
-          tags: [],
+          tags: ["enantiomere", "l-aminosäuren", "optische-aktivität"],
         },
         {
           question: "Welche der folgenden Aussagen über ein racemisches Gemisch ist korrekt?",
@@ -404,13 +442,18 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
             "Ein Racemat enthält nur meso-Verbindungen",
           ],
           correctIndex: 2,
-          explanation: "Ein racemisches Gemisch (Racemat) enthält gleiche Mengen (1:1) des R- und S-Enantiomers einer chiralen Verbindung. Da beide Enantiomere polarisiertes Licht in entgegengesetzte Richtungen und im gleichen Ausmaß drehen, heben sich die Drehungen gegenseitig auf — das Racemat ist optisch inaktiv (Drehwert = 0). Das erklärt, warum chemisch synthetisierte chirale Verbindungen oft als Racemate anfallen (keine bevorzugte Reaktionsrichtung), während biologische Systeme stereoselektiv nur ein Enantiomer produzieren.",
-          hints: ["'Racemat' kommt von 'Traubensäure' (Racema = Traube), die als Gemisch gefunden wurde.", "Was passiert mit der optischen Drehung, wenn man gleiche Mengen (+) und (−) mischt?"],
+          explanation:
+            "Ein racemisches Gemisch (Racemat) enthält gleiche Mengen (1:1) des R- und S-Enantiomers einer chiralen Verbindung. Da beide Enantiomere polarisiertes Licht in entgegengesetzte Richtungen und im gleichen Ausmaß drehen, heben sich die Drehungen gegenseitig auf — das Racemat ist optisch inaktiv (Drehwert = 0). Das erklärt, warum chemisch synthetisierte chirale Verbindungen oft als Racemate anfallen (keine bevorzugte Reaktionsrichtung), während biologische Systeme stereoselektiv nur ein Enantiomer produzieren.",
+          hints: [
+            "'Racemat' kommt von 'Traubensäure' (Racema = Traube), die als Gemisch gefunden wurde.",
+            "Was passiert mit der optischen Drehung, wenn man gleiche Mengen (+) und (−) mischt?",
+          ],
           difficulty: 2,
-          tags: [],
+          tags: ["racemat", "optisch-inaktiv", "r-s-enantiomere"],
         },
         {
-          question: "Warum können cis- und trans-2-Buten nicht ineinander umgewandelt werden, ohne Bindungen zu brechen?",
+          question:
+            "Warum können cis- und trans-2-Buten nicht ineinander umgewandelt werden, ohne Bindungen zu brechen?",
           options: [
             "Weil ihre Molekulargewichte unterschiedlich sind",
             "Weil die C=C-Doppelbindung eine π-Bindung enthält, die freie Rotation verhindert",
@@ -419,40 +462,41 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
             "Weil beide Moleküle verschiedene Summenformeln haben",
           ],
           correctIndex: 1,
-          explanation: "Die C=C-Doppelbindung besteht aus einer σ-Bindung (Rotationsachse) und einer π-Bindung (seitliche Überlappung der p-Orbitale). Die π-Bindung kann nur bestehen, wenn die beiden p-Orbitale parallel ausgerichtet sind — eine freie Rotation um die C-C-Achse würde die p-Orbital-Überlappung und damit die π-Bindung zerstören. Das bedeutet: cis- und trans-Isomere sind durch eine Rotationsbarriere getrennt (Bindungsbruch nötig). Bei Einfachbindungen (σ) ist freie Rotation möglich → keine cis/trans-Isomerie.",
-          hints: ["Die π-Bindung in der Doppelbindung ist eine seitliche p-Orbital-Überlappung. Was passiert bei Rotation?", "Vergleiche: σ-Bindung erlaubt Rotation, π-Bindung nicht — warum?"],
+          explanation:
+            "Die C=C-Doppelbindung besteht aus einer σ-Bindung (Rotationsachse) und einer π-Bindung (seitliche Überlappung der p-Orbitale). Die π-Bindung kann nur bestehen, wenn die beiden p-Orbitale parallel ausgerichtet sind — eine freie Rotation um die C-C-Achse würde die p-Orbital-Überlappung und damit die π-Bindung zerstören. Das bedeutet: cis- und trans-Isomere sind durch eine Rotationsbarriere getrennt (Bindungsbruch nötig). Bei Einfachbindungen (σ) ist freie Rotation möglich → keine cis/trans-Isomerie.",
+          hints: [
+            "Die π-Bindung in der Doppelbindung ist eine seitliche p-Orbital-Überlappung. Was passiert bei Rotation?",
+            "Vergleiche: σ-Bindung erlaubt Rotation, π-Bindung nicht — warum?",
+          ],
           difficulty: 3,
-          tags: [],
+          tags: ["cis-trans-isomerie", "pi-bindung", "rotationsbarriere"],
         },
         {
           question: "Ein Molekül mit zwei Chiralitätszentren hat wie viele maximale Stereoisomere?",
-          options: [
-            "2",
-            "4",
-            "6",
-            "8",
-            "1",
-          ],
+          options: ["2", "4", "6", "8", "1"],
           correctIndex: 1,
-          explanation: "Die 2ⁿ-Regel gilt für die maximale Anzahl von Stereoisomeren, wobei n die Anzahl der Chiralitätszentren ist. Bei n=2: 2² = 4 maximale Stereoisomere. Bei zwei Chiralitätszentren gibt es die Konfigurationen (R,R), (S,S), (R,S) und (S,R). (R,R) und (S,S) sind Enantiomere; (R,S) und (S,R) sind Enantiomere; aber (R,R) und (R,S) sind Diastereomere. Sonderfall: Wenn die Verbindung eine innere Spiegelebene hat, ist (R,S) = (S,R) (meso-Form) → dann nur 3 Stereoisomere statt 4.",
-          hints: ["Mit jedem neuen Chiralitätszentrum verdoppelt sich die mögliche Anzahl der Stereoisomere.", "2ⁿ: n = Anzahl der Chiralitätszentren."],
+          explanation:
+            "Die 2ⁿ-Regel gilt für die maximale Anzahl von Stereoisomeren, wobei n die Anzahl der Chiralitätszentren ist. Bei n=2: 2² = 4 maximale Stereoisomere. Bei zwei Chiralitätszentren gibt es die Konfigurationen (R,R), (S,S), (R,S) und (S,R). (R,R) und (S,S) sind Enantiomere; (R,S) und (S,R) sind Enantiomere; aber (R,R) und (R,S) sind Diastereomere. Sonderfall: Wenn die Verbindung eine innere Spiegelebene hat, ist (R,S) = (S,R) (meso-Form) → dann nur 3 Stereoisomere statt 4.",
+          hints: [
+            "Mit jedem neuen Chiralitätszentrum verdoppelt sich die mögliche Anzahl der Stereoisomere.",
+            "2ⁿ: n = Anzahl der Chiralitätszentren.",
+          ],
           difficulty: 3,
-          tags: [],
+          tags: ["stereoisomere", "2-hoch-n-regel", "diastereomere"],
         },
         {
-          question: "Welches Arzneimittel wurde als Racemat vermarktet, wobei ein Enantiomer sedierend und das andere teratogen wirkt?",
-          options: [
-            "Ibuprofen",
-            "Aspirin",
-            "Thalidomid",
-            "L-Dopa",
-            "Penicillin",
-          ],
+          question:
+            "Welches Arzneimittel wurde als Racemat vermarktet, wobei ein Enantiomer sedierend und das andere teratogen wirkt?",
+          options: ["Ibuprofen", "Aspirin", "Thalidomid", "L-Dopa", "Penicillin"],
           correctIndex: 2,
-          explanation: "Thalidomid (Handelsname Contergan) wurde in den 1950er/60er Jahren als Racemat gegen Schlaflosigkeit und Schwangerschaftserbrechen eingesetzt. Das R-Enantiomer besitzt sedierende/hypnotische Wirkung. Das S-Enantiomer ist stark teratogen und verursacht bei der Embryonalentwicklung schwere Fehlbildungen der Gliedmaßen (Phokomelie). Das Desaster führte zu über 10.000 geschädigten Kindern und revolutionierte die Arzneimittelzulassung. Wichtig: Racemisierung im Körper macht selbst das 'sichere' R-Enantiomer allein nicht verwendbar.",
-          hints: ["Dieses Mittel führte Ende der 1950er/Anfang 1960er zu einem der größten Arzneimittelskandale.", "Der Handelsname war Contergan. Welche Substanz verbirgt sich dahinter?"],
+          explanation:
+            "Thalidomid (Handelsname Contergan) wurde in den 1950er/60er Jahren als Racemat gegen Schlaflosigkeit und Schwangerschaftserbrechen eingesetzt. Das R-Enantiomer besitzt sedierende/hypnotische Wirkung. Das S-Enantiomer ist stark teratogen und verursacht bei der Embryonalentwicklung schwere Fehlbildungen der Gliedmaßen (Phokomelie). Das Desaster führte zu über 10.000 geschädigten Kindern und revolutionierte die Arzneimittelzulassung. Wichtig: Racemisierung im Körper macht selbst das 'sichere' R-Enantiomer allein nicht verwendbar.",
+          hints: [
+            "Dieses Mittel führte Ende der 1950er/Anfang 1960er zu einem der größten Arzneimittelskandale.",
+            "Der Handelsname war Contergan. Welche Substanz verbirgt sich dahinter?",
+          ],
           difficulty: 1,
-          tags: [],
+          tags: ["thalidomid", "teratogenität", "racemat-klinik"],
         },
       ],
     },
@@ -461,7 +505,7 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
     // UK 03 — Funktionelle Gruppen der Organik
     // ─────────────────────────────────────────────────────────────────
     {
-      id: 'ch-12-03',
+      id: "ch-12-03",
       title: "Funktionelle Gruppen der Organik",
       content: `# Funktionelle Gruppen der Organischen Chemie
 
@@ -561,20 +605,23 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
         {
           heading: "Oxidationsstufen der Sauerstoff-Funktionen",
           text: "Die Oxidationsstufen im organischen C sind: Alkan (C-H, niedrig) → Alkohol (C-OH) → Aldehyd (C=O am Ende) → Carbonsäure (COOH, hoch) → CO₂ (max. oxidiert). Primäre Alkohole werden zu Aldehyden oxidiert, dann zu Carbonsäuren. Sekundäre Alkohole werden zu Ketonen oxidiert (keine weitere Oxidation ohne C-C-Spaltung). Tertiäre Alkohole werden unter normalen Bedingungen nicht oxidiert. Diese Stufenfolge ist für die Biochemie essentiell: z.B. Ethanolabbau (Ethanol → Acetaldehyd → Acetat).",
-          merksatz: "Oxidation: primärer Alkohol → Aldehyd → Carbonsäure. Sekundärer Alkohol → Keton (Sackgasse). Tertiärer Alkohol → keine Oxidation ohne C-C-Spaltung.",
+          merksatz:
+            "Oxidation: primärer Alkohol → Aldehyd → Carbonsäure. Sekundärer Alkohol → Keton (Sackgasse). Tertiärer Alkohol → keine Oxidation ohne C-C-Spaltung.",
         },
         {
           heading: "Veresterung und Hydrolyse — Gleichgewichtsreaktionen",
           text: "Die Veresterung (Carbonsäure + Alkohol → Ester + Wasser) ist eine reversible Gleichgewichtsreaktion. Das Gleichgewicht liegt oft auf Seite der Edukte, daher verwendet man Überschuss einer Komponente oder entfernt das Wasser (Le Chatelier). Katalysator: konz. Schwefelsäure (H⁺). Die Rückreaktion (Hydrolyse) kann sauer oder basisch katalysiert werden. Basische Hydrolyse (Verseifung): Ester + NaOH → Carboxylat (Seife) + Alkohol — irreversibel, weil das Carboxylat-Anion nicht zurück reagiert. Triglyceride (Fette) werden durch Lipasen hydrolysiert: Triglycerid + 3 H₂O → Glycerin + 3 Fettsäuren.",
-          merksatz: "Veresterung: Carbonsäure + Alkohol ⇌ Ester + Wasser (Gleichgewicht). Triglyceride = Glycerin + 3 Fettsäuren (verbunden durch Esterbindungen). Aspirin = Ester der Salicylsäure.",
+          merksatz:
+            "Veresterung: Carbonsäure + Alkohol ⇌ Ester + Wasser (Gleichgewicht). Triglyceride = Glycerin + 3 Fettsäuren (verbunden durch Esterbindungen). Aspirin = Ester der Salicylsäure.",
         },
         {
           heading: "Ketonkörper und klinische Relevanz",
           text: "Ketonkörper (Acetoacetat, β-Hydroxybutyrat, Aceton) entstehen in der Leber aus Acetyl-CoA, wenn Glucose mangelt (Fasten, Diabetes mellitus Typ 1). Sie werden von Muskel und Gehirn als alternativer Brennstoff verwendet. Bei übermäßiger Ketonkörperproduktion sinkt der Blut-pH (Ketoazidose, pH < 7,35). Symptome: Acetongeruch im Atem (Fruchteruch), Hyperventilation (Kussmaul-Atmung als respiratorische Kompensation), Übelkeit, Bewusstseinseintrübung. Im Labor: erhöhte Ketonkörper im Urin (Ketonurie) und Blut. Nachweis: Nitroprussid-Test (Urin-Stix).",
-          merksatz: "Ketonkörper bei Diabetes/Fasten: Aceton (Atemgeruch), Acetoacetat, β-Hydroxybutyrat. Ketoazidose: pH sinkt < 7,35. Kussmaul-Atmung = tiefe, schnelle Atemzüge als Kompensation.",
+          merksatz:
+            "Ketonkörper bei Diabetes/Fasten: Aceton (Atemgeruch), Acetoacetat, β-Hydroxybutyrat. Ketoazidose: pH sinkt < 7,35. Kussmaul-Atmung = tiefe, schnelle Atemzüge als Kompensation.",
         },
       ],
-      diagram: 'functional-groups',
+      diagram: "functional-groups",
 
       merksätze: [
         "Alkohole (-OH): polar, Wasserstoffbrücken, kleiner Siedepunkt-Boost. Primär → Aldehyd, sekundär → Keton bei Oxidation.",
@@ -590,10 +637,13 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: "Beschreiben Sie die Oxidationsreihe der Alkohole von der Alkanstufe bis zur Carbonsäure. Welche biochemische Reaktionskette entspricht dem Abbau von Ethanol im menschlichen Körper?",
-        answer: "Die Oxidationsreihe organischer Sauerstoffverbindungen verläuft stufenweise. Ausgehend vom Alkan steigt der Oxidationsgrad: Alkan (C-H-Bindungen) → Alkohol (Zugabe einer OH-Gruppe, Oxidation des C-Atoms von -2 auf -1) → Aldehyd (primärer Alkohol verliert ein H, C-Oxidation von -1 auf 0, Produkt: R-CHO) → Carbonsäure (weiterer Oxidationsschritt, C-Oxidation von 0 auf +1, Produkt: R-COOH) → Kohlendioxid (maximale Oxidation +4). Für sekundäre Alkohole endet die Oxidation beim Keton (R-CO-R'), da kein weiteres H am Carbonyl-C vorhanden ist. Der biochemische Ethanolabbau folgt genau dieser Stufenfolge: Ethanol (CH₃-CH₂-OH, primärer Alkohol) wird durch das Enzym Alkohol-Dehydrogenase (ADH) mit NAD⁺ als Elektronenakzeptor zu Acetaldehyd (CH₃-CHO, Ethanal) oxidiert. Acetaldehyd ist das toxische Zwischenprodukt, das für viele Symptome des Katers verantwortlich ist. Im zweiten Schritt oxidiert die Aldehyd-Dehydrogenase (ALDH) den Acetaldehyd zu Essigsäure (Acetat, CH₃-COO⁻). Das Acetat kann in den Citratzyklus eingeschleust werden (als Acetyl-CoA) und vollständig zu CO₂ und Wasser verbrannt werden. Genetische Varianten der ALDH (besonders ALDH2*2 in Ostasien) führen zur Ansammlung von Acetaldehyd und verursachen die Flush-Reaktion (Rötung, Übelkeit).",
+        question:
+          "Beschreiben Sie die Oxidationsreihe der Alkohole von der Alkanstufe bis zur Carbonsäure. Welche biochemische Reaktionskette entspricht dem Abbau von Ethanol im menschlichen Körper?",
+        answer:
+          "Die Oxidationsreihe organischer Sauerstoffverbindungen verläuft stufenweise. Ausgehend vom Alkan steigt der Oxidationsgrad: Alkan (C-H-Bindungen) → Alkohol (Zugabe einer OH-Gruppe, Oxidation des C-Atoms von -2 auf -1) → Aldehyd (primärer Alkohol verliert ein H, C-Oxidation von -1 auf 0, Produkt: R-CHO) → Carbonsäure (weiterer Oxidationsschritt, C-Oxidation von 0 auf +1, Produkt: R-COOH) → Kohlendioxid (maximale Oxidation +4). Für sekundäre Alkohole endet die Oxidation beim Keton (R-CO-R'), da kein weiteres H am Carbonyl-C vorhanden ist. Der biochemische Ethanolabbau folgt genau dieser Stufenfolge: Ethanol (CH₃-CH₂-OH, primärer Alkohol) wird durch das Enzym Alkohol-Dehydrogenase (ADH) mit NAD⁺ als Elektronenakzeptor zu Acetaldehyd (CH₃-CHO, Ethanal) oxidiert. Acetaldehyd ist das toxische Zwischenprodukt, das für viele Symptome des Katers verantwortlich ist. Im zweiten Schritt oxidiert die Aldehyd-Dehydrogenase (ALDH) den Acetaldehyd zu Essigsäure (Acetat, CH₃-COO⁻). Das Acetat kann in den Citratzyklus eingeschleust werden (als Acetyl-CoA) und vollständig zu CO₂ und Wasser verbrannt werden. Genetische Varianten der ALDH (besonders ALDH2*2 in Ostasien) führen zur Ansammlung von Acetaldehyd und verursachen die Flush-Reaktion (Rötung, Übelkeit).",
       },
-      klinischerBezug: "Ketonkörper (β-Hydroxybutyrat, Acetoacetat, Aceton) bei Diabetes/Fasten: Acetongeruch, Ketoazidose. Methanol-Vergiftung: Formaldehyd-Metabolit schädigt Retina. Aspirin = Acetylsalicylsäure (Ester).",
+      klinischerBezug:
+        "Ketonkörper (β-Hydroxybutyrat, Acetoacetat, Aceton) bei Diabetes/Fasten: Acetongeruch, Ketoazidose. Methanol-Vergiftung: Formaldehyd-Metabolit schädigt Retina. Aspirin = Acetylsalicylsäure (Ester).",
       selfTest: [
         {
           question: "Welche funktionelle Gruppe ist charakteristisch für Alkohole?",
@@ -605,28 +655,32 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
             "Estergruppe (-COO-)",
           ],
           correctIndex: 2,
-          explanation: "Alkohole sind definiert durch die Hydroxylgruppe (-OH), die an ein Kohlenstoffatom gebunden ist. Die -OH-Gruppe ist polar und ermöglicht Wasserstoffbrückenbindungen, was die Siedepunkte von Alkoholen im Vergleich zu entsprechenden Alkanen deutlich erhöht und die Wasserlöslichkeit kleiner Alkohole erklärt. Wichtig: Nicht alle -OH-Gruppen machen eine Verbindung zum Alkohol — in Carbonsäuren ist die -OH-Gruppe Teil der -COOH-Gruppe.",
-          hints: ["'Alkohol' enthält '-ol' — was bedeutet die Endung '-ol' in der IUPAC-Nomenklatur?", "Ethanol (C₂H₅OH): Was ist die charakteristische Gruppe?"],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: "Welches Zwischenprodukt entsteht beim Abbau von Ethanol zu Essigsäure (Acetat) im menschlichen Körper?",
-          options: [
-            "Propanol",
-            "Aceton",
-            "Acetaldehyd (Ethanal)",
-            "Formaldehyd",
-            "Milchsäure",
+          explanation:
+            "Alkohole sind definiert durch die Hydroxylgruppe (-OH), die an ein Kohlenstoffatom gebunden ist. Die -OH-Gruppe ist polar und ermöglicht Wasserstoffbrückenbindungen, was die Siedepunkte von Alkoholen im Vergleich zu entsprechenden Alkanen deutlich erhöht und die Wasserlöslichkeit kleiner Alkohole erklärt. Wichtig: Nicht alle -OH-Gruppen machen eine Verbindung zum Alkohol — in Carbonsäuren ist die -OH-Gruppe Teil der -COOH-Gruppe.",
+          hints: [
+            "'Alkohol' enthält '-ol' — was bedeutet die Endung '-ol' in der IUPAC-Nomenklatur?",
+            "Ethanol (C₂H₅OH): Was ist die charakteristische Gruppe?",
           ],
-          correctIndex: 2,
-          explanation: "Der hepatische Ethanolabbau verläuft zweistufig: (1) Ethanol → Acetaldehyd (Ethanal): katalysiert durch Alkohol-Dehydrogenase (ADH), NAD⁺ → NADH. (2) Acetaldehyd → Acetat (Essigsäure): katalysiert durch Aldehyd-Dehydrogenase (ALDH2), NAD⁺ → NADH. Acetaldehyd ist das toxische Zwischenprodukt, das für Flush-Reaktion, Kater-Symptome (Kopfschmerz, Übelkeit) und langfristige Leberschäden verantwortlich ist. Menschen mit ALDH2*2-Mutation bauen Acetaldehyd langsamer ab → stärkere Reaktionen.",
-          hints: ["Primärer Alkohol → bei Oxidation entsteht zuerst ein Aldehyd.", "ADH = Alkohol-Dehydrogenase; was oxidiert sie Ethanol zu?"],
-          difficulty: 2,
-          tags: [],
+          difficulty: 1,
+          tags: ["alkohole", "hydroxylgruppe", "funktionelle-gruppe"],
         },
         {
-          question: "Welche Reaktion entsteht aus Essigsäure (CH₃COOH) und Ethanol (C₂H₅OH) unter Katalyse mit konz. H₂SO₄?",
+          question:
+            "Welches Zwischenprodukt entsteht beim Abbau von Ethanol zu Essigsäure (Acetat) im menschlichen Körper?",
+          options: ["Propanol", "Aceton", "Acetaldehyd (Ethanal)", "Formaldehyd", "Milchsäure"],
+          correctIndex: 2,
+          explanation:
+            "Der hepatische Ethanolabbau verläuft zweistufig: (1) Ethanol → Acetaldehyd (Ethanal): katalysiert durch Alkohol-Dehydrogenase (ADH), NAD⁺ → NADH. (2) Acetaldehyd → Acetat (Essigsäure): katalysiert durch Aldehyd-Dehydrogenase (ALDH2), NAD⁺ → NADH. Acetaldehyd ist das toxische Zwischenprodukt, das für Flush-Reaktion, Kater-Symptome (Kopfschmerz, Übelkeit) und langfristige Leberschäden verantwortlich ist. Menschen mit ALDH2*2-Mutation bauen Acetaldehyd langsamer ab → stärkere Reaktionen.",
+          hints: [
+            "Primärer Alkohol → bei Oxidation entsteht zuerst ein Aldehyd.",
+            "ADH = Alkohol-Dehydrogenase; was oxidiert sie Ethanol zu?",
+          ],
+          difficulty: 2,
+          tags: ["ethanolabbau", "acetaldehyd", "aldehyd-dehydrogenase"],
+        },
+        {
+          question:
+            "Welche Reaktion entsteht aus Essigsäure (CH₃COOH) und Ethanol (C₂H₅OH) unter Katalyse mit konz. H₂SO₄?",
           options: [
             "Acetaldehyd und Wasser",
             "Diethylether und Wasser",
@@ -635,10 +689,14 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
             "Milchsäure und Wasser",
           ],
           correctIndex: 2,
-          explanation: "Die Veresterungsreaktion: Carbonsäure + Alkohol ⇌ Ester + Wasser. CH₃COOH (Essigsäure) + C₂H₅OH (Ethanol) → CH₃-COO-C₂H₅ (Ethylacetat, Essigsäureethylester) + H₂O. Ethylacetat riecht fruchtig und wird als Lösungsmittel verwendet (z.B. in Nagellackentferner). Katalysator: konz. H₂SO₄ oder andere starke Säuren. Die Reaktion ist reversibel (Gleichgewicht); Wasserentfernung verschiebt das Gleichgewicht zur Esterseite.",
-          hints: ["Veresterung = Carbonsäure + Alkohol. Welche Gruppe bleibt aus der Säure, welche aus dem Alkohol?", "Ester hat die Struktur R-COO-R'. Die Endung 'acetat' kommt von Essigsäure."],
+          explanation:
+            "Die Veresterungsreaktion: Carbonsäure + Alkohol ⇌ Ester + Wasser. CH₃COOH (Essigsäure) + C₂H₅OH (Ethanol) → CH₃-COO-C₂H₅ (Ethylacetat, Essigsäureethylester) + H₂O. Ethylacetat riecht fruchtig und wird als Lösungsmittel verwendet (z.B. in Nagellackentferner). Katalysator: konz. H₂SO₄ oder andere starke Säuren. Die Reaktion ist reversibel (Gleichgewicht); Wasserentfernung verschiebt das Gleichgewicht zur Esterseite.",
+          hints: [
+            "Veresterung = Carbonsäure + Alkohol. Welche Gruppe bleibt aus der Säure, welche aus dem Alkohol?",
+            "Ester hat die Struktur R-COO-R'. Die Endung 'acetat' kommt von Essigsäure.",
+          ],
           difficulty: 2,
-          tags: [],
+          tags: ["veresterung", "ester", "ethylacetat"],
         },
         {
           question: "Warum sind Amine basisch?",
@@ -650,28 +708,31 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
             "Weil ihre Kohlenstoffkette unpolar ist",
           ],
           correctIndex: 1,
-          explanation: "Amine sind organische Derivate des Ammoniaks (NH₃). Der Stickstoff in Aminen besitzt ein freies (nicht-bindendes) Elektronenpaar. Dieses Elektronenpaar kann ein Proton (H⁺) aufnehmen, was das Amin zur Base macht: R-NH₂ + H₂O ⇌ R-NH₃⁺ + OH⁻. Die Basenstärke von Aminen hängt von der Elektronendichte am N ab (aliphatische Amine sind basischer als aromatische Amine). Aminosäuren sind amphoter: die -NH₂-Gruppe ist basisch, die -COOH-Gruppe ist sauer.",
-          hints: ["Basen nehmen Protonen auf (Brønsted). Was am N-Atom ermöglicht das?", "NH₃ (Ammoniak) ist eine Base. Was haben Amine mit Ammoniak gemeinsam?"],
+          explanation:
+            "Amine sind organische Derivate des Ammoniaks (NH₃). Der Stickstoff in Aminen besitzt ein freies (nicht-bindendes) Elektronenpaar. Dieses Elektronenpaar kann ein Proton (H⁺) aufnehmen, was das Amin zur Base macht: R-NH₂ + H₂O ⇌ R-NH₃⁺ + OH⁻. Die Basenstärke von Aminen hängt von der Elektronendichte am N ab (aliphatische Amine sind basischer als aromatische Amine). Aminosäuren sind amphoter: die -NH₂-Gruppe ist basisch, die -COOH-Gruppe ist sauer.",
+          hints: [
+            "Basen nehmen Protonen auf (Brønsted). Was am N-Atom ermöglicht das?",
+            "NH₃ (Ammoniak) ist eine Base. Was haben Amine mit Ammoniak gemeinsam?",
+          ],
           difficulty: 2,
-          tags: [],
+          tags: ["amine", "freies-elektronenpaar", "brønsted-base"],
         },
         {
           question: "Welche Verbindungsklasse enthält die Carboxylgruppe (-COOH)?",
-          options: [
-            "Ester",
-            "Amine",
-            "Ketone",
-            "Carbonsäuren",
-            "Aldehyde",
-          ],
+          options: ["Ester", "Amine", "Ketone", "Carbonsäuren", "Aldehyde"],
           correctIndex: 3,
-          explanation: "Carbonsäuren sind charakterisiert durch die Carboxylgruppe -COOH, die eine Kombination aus Carbonylgruppe (C=O) und Hydroxylgruppe (-OH) darstellt. Sie sind Brønsted-Säuren und können ein Proton abgeben: R-COOH ⇌ R-COO⁻ + H⁺. Typische pKₐ-Werte: 4-5 (schwache Säuren). Wichtige Vertreter: Ameisensäure (pKₐ 3,75), Essigsäure (pKₐ 4,75), Milchsäure (pKₐ 3,86), Zitronensäure (pKₐ1 3,13). Carbonsäuren bilden Ester durch Reaktion mit Alkoholen.",
-          hints: ["Die Endsilbe '-säure' deutet auf welche Verbindungsklasse hin?", "-COOH = Carbonyl + Hydroxyl. Diese Kombination ist typisch für..."],
+          explanation:
+            "Carbonsäuren sind charakterisiert durch die Carboxylgruppe -COOH, die eine Kombination aus Carbonylgruppe (C=O) und Hydroxylgruppe (-OH) darstellt. Sie sind Brønsted-Säuren und können ein Proton abgeben: R-COOH ⇌ R-COO⁻ + H⁺. Typische pKₐ-Werte: 4-5 (schwache Säuren). Wichtige Vertreter: Ameisensäure (pKₐ 3,75), Essigsäure (pKₐ 4,75), Milchsäure (pKₐ 3,86), Zitronensäure (pKₐ1 3,13). Carbonsäuren bilden Ester durch Reaktion mit Alkoholen.",
+          hints: [
+            "Die Endsilbe '-säure' deutet auf welche Verbindungsklasse hin?",
+            "-COOH = Carbonyl + Hydroxyl. Diese Kombination ist typisch für...",
+          ],
           difficulty: 1,
-          tags: [],
+          tags: ["carbonsäuren", "carboxylgruppe", "schwache-säure"],
         },
         {
-          question: "Was sind Ketonkörper, und bei welcher Stoffwechsellage entstehen sie vermehrt?",
+          question:
+            "Was sind Ketonkörper, und bei welcher Stoffwechsellage entstehen sie vermehrt?",
           options: [
             "Aminosäuren; entstehen bei hohem Proteinkonsum",
             "Glucose-Abkömmlinge; entstehen nach Mahlzeiten",
@@ -680,10 +741,14 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
             "Triglyceride; entstehen bei hohem Insulinspiegel",
           ],
           correctIndex: 2,
-          explanation: "Ketonkörper (Acetoacetat, β-Hydroxybutyrat und Aceton) werden in der Leber aus Acetyl-CoA gebildet, wenn die β-Oxidation die Kapazität des Citratzyklus übersteigt — d.h. bei Glucose-Mangel (Fasten, Hunger) oder wenn Glucose nicht genutzt werden kann (Diabetes mellitus Typ 1, Insulinmangel). Ketonkörper dienen als alternativer Energieträger für Gehirn und Muskel. Bei exzessiver Produktion sinkt der Blut-pH (Ketoazidose, pH < 7,35). Aceton (flüchtig) verleiht dem Atem einen charakteristischen süßlich-fruchtigen Geruch.",
-          hints: ["Glucose-Mangel → Leber sucht Alternative. Was wird aus Acetyl-CoA wenn der Citratzyklus überlastet ist?", "Ketoazidose ist eine lebensbedrohliche Komplikation beim Typ-1-Diabetes. Welche Verbindungen verursachen den niedrigen pH?"],
+          explanation:
+            "Ketonkörper (Acetoacetat, β-Hydroxybutyrat und Aceton) werden in der Leber aus Acetyl-CoA gebildet, wenn die β-Oxidation die Kapazität des Citratzyklus übersteigt — d.h. bei Glucose-Mangel (Fasten, Hunger) oder wenn Glucose nicht genutzt werden kann (Diabetes mellitus Typ 1, Insulinmangel). Ketonkörper dienen als alternativer Energieträger für Gehirn und Muskel. Bei exzessiver Produktion sinkt der Blut-pH (Ketoazidose, pH < 7,35). Aceton (flüchtig) verleiht dem Atem einen charakteristischen süßlich-fruchtigen Geruch.",
+          hints: [
+            "Glucose-Mangel → Leber sucht Alternative. Was wird aus Acetyl-CoA wenn der Citratzyklus überlastet ist?",
+            "Ketoazidose ist eine lebensbedrohliche Komplikation beim Typ-1-Diabetes. Welche Verbindungen verursachen den niedrigen pH?",
+          ],
           difficulty: 2,
-          tags: [],
+          tags: ["ketonkörper", "ketoazidose", "diabetes-fasten"],
         },
         {
           question: "Welches der folgenden Medikamente ist chemisch gesehen ein Ester?",
@@ -695,10 +760,14 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
             "Metformin (Guanidin-Derivat)",
           ],
           correctIndex: 2,
-          explanation: "Aspirin (Acetylsalicylsäure) ist ein Ester: Es entsteht durch Reaktion der Hydroxylgruppe der Salicylsäure mit Essigsäureanhydrid (Veresterung). Die Estergruppe (-COO-) verbindet den Benzolring der Salicylsäure mit der Acetylgruppe. Im Körper wird Aspirin hydrolysiert (gespalten) zu Salicylsäure und Acetat. Aspirin hemmt irreversibel die Cyclooxygenase (COX-1 und COX-2) durch Acetylierung → Hemmung der Prostaglandinsynthese → analgetisch, antipyretisch, antiinflammatorisch, thrombozytenaggregationshemmend.",
-          hints: ["Aspirin = Acetylsalicylsäure. 'Acetyl-' deutet auf welche Verbindungsklasse hin, wenn es an -OH gebunden ist?", "Ester enthalten die Gruppe -COO-. Welches Mittel hat eine solche Gruppe in seiner Struktur?"],
+          explanation:
+            "Aspirin (Acetylsalicylsäure) ist ein Ester: Es entsteht durch Reaktion der Hydroxylgruppe der Salicylsäure mit Essigsäureanhydrid (Veresterung). Die Estergruppe (-COO-) verbindet den Benzolring der Salicylsäure mit der Acetylgruppe. Im Körper wird Aspirin hydrolysiert (gespalten) zu Salicylsäure und Acetat. Aspirin hemmt irreversibel die Cyclooxygenase (COX-1 und COX-2) durch Acetylierung → Hemmung der Prostaglandinsynthese → analgetisch, antipyretisch, antiinflammatorisch, thrombozytenaggregationshemmend.",
+          hints: [
+            "Aspirin = Acetylsalicylsäure. 'Acetyl-' deutet auf welche Verbindungsklasse hin, wenn es an -OH gebunden ist?",
+            "Ester enthalten die Gruppe -COO-. Welches Mittel hat eine solche Gruppe in seiner Struktur?",
+          ],
           difficulty: 2,
-          tags: [],
+          tags: ["aspirin", "ester", "cox-hemmung"],
         },
       ],
     },
@@ -707,7 +776,7 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
     // UK 04 — Aromate und biologisch relevante organische Verbindungen
     // ─────────────────────────────────────────────────────────────────
     {
-      id: 'ch-12-04',
+      id: "ch-12-04",
       title: "Aromate und biologisch relevante organische Verbindungen",
       content: `# Aromate und biologisch relevante organische Verbindungen
 
@@ -798,17 +867,20 @@ Phenylalanin, Tyrosin und Tryptophan sind aromatische Aminosäuren mit besondere
         {
           heading: "Hückel-Regel und Benzol-Struktur",
           text: "Benzol (C₆H₆) erfüllt alle Bedingungen der Aromatizität: (1) planarer Ring, (2) vollständige Konjugation, (3) 6 π-Elektronen (n=1, 4·1+2=6). Die sechs p-Orbitale der sp²-hybridisierten C-Atome überlappen seitlich zu einem durchgehenden π-System oberhalb und unterhalb der Ringebene. Alle C-C-Bindungen sind gleichlang (139 pm). Die Resonanzenergie (Mesomerie-Energie) von ca. 150 kJ/mol erklärt, warum Benzol Additionsreaktionen meidet — Addition würde das aromatische System zerstören. Benzol reagiert daher bevorzugt durch elektrophile Substitution (EAS), bei der das π-System erhalten bleibt.",
-          merksatz: "Hückel: 4n+2 π-Elektronen → aromatisch. Benzol: 6 π-Elektronen (n=1). Aromatisch = planar, konjugiert, stabil. EAS bevorzugt (nicht Addition!), um Aromatizität zu erhalten.",
+          merksatz:
+            "Hückel: 4n+2 π-Elektronen → aromatisch. Benzol: 6 π-Elektronen (n=1). Aromatisch = planar, konjugiert, stabil. EAS bevorzugt (nicht Addition!), um Aromatizität zu erhalten.",
         },
         {
           heading: "Aminosäuren — Struktur und Zwitterion",
           text: "Alle 20 proteinogenen Aminosäuren haben dasselbe Grundgerüst am α-C: -NH₂, -COOH, -H und eine variable R-Gruppe (Seitenkette). Das α-C ist sp³-hybridisiert und bei allen Aminosäuren (außer Glycin) chiral. Im physiologischen pH-Bereich liegt die Aminosäure als Zwitterion vor: die Aminogruppe ist protoniert (-NH₃⁺, positiv) und die Carboxylgruppe deprotoniert (-COO⁻, negativ) → Nettoladung 0 am isoelektrischen Punkt (pI). Die Seitenkette R bestimmt die besonderen Eigenschaften: hydrophob/polar/geladen. Essentielle Aminosäuren (9 beim Menschen) müssen mit der Nahrung zugeführt werden, da der Körper sie nicht selbst synthetisieren kann.",
-          merksatz: "Aminosäure = α-C mit -NH₂, -COOH, -H, -R. Alle L-konfiguriert in Proteinen. Zwitterion bei pH=pI: -NH₃⁺ und -COO⁻. Essenziell: 9 AA müssen über Nahrung aufgenommen werden.",
+          merksatz:
+            "Aminosäure = α-C mit -NH₂, -COOH, -H, -R. Alle L-konfiguriert in Proteinen. Zwitterion bei pH=pI: -NH₃⁺ und -COO⁻. Essenziell: 9 AA müssen über Nahrung aufgenommen werden.",
         },
         {
           heading: "Purinstoffwechsel — Harnsäure und Gicht",
           text: "Purinbasen (Adenin, Guanin) aus dem Nukleotidabbau werden zu Hypoxanthin und Xanthin abgebaut. Das Enzym Xanthinoxidase oxidiert Xanthin zu Harnsäure (Urat). Beim Menschen ist Harnsäure das Endprodukt (fehlende Uricase). Harnsäure hat geringe Wasserlöslichkeit; bei Hyperurikämie (> 6,8 mg/dl) präzipitieren Natriumurat-Kristalle in Gelenken (Gicht, Podagra) und Nieren (Urolithiasis). Allopurinol (Xanthinoxidase-Hemmer) verhindert die Harnsäureproduktion. Der Xanthin-Inhibitor Febuxostat ist eine neuere Alternative. Diät: purinreiche Nahrung meiden (Fleisch, Innereien, Bier).",
-          merksatz: "Purine → Xanthin → Harnsäure (Xanthinoxidase). Hyperurikämie → Gicht (Urat-Kristalle in Gelenken). Allopurinol hemmt Xanthinoxidase. Podagra = Gicht im Großzehengrundgelenk.",
+          merksatz:
+            "Purine → Xanthin → Harnsäure (Xanthinoxidase). Hyperurikämie → Gicht (Urat-Kristalle in Gelenken). Allopurinol hemmt Xanthinoxidase. Podagra = Gicht im Großzehengrundgelenk.",
         },
       ],
       merksätze: [
@@ -825,10 +897,13 @@ Phenylalanin, Tyrosin und Tryptophan sind aromatische Aminosäuren mit besondere
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: "Was versteht man unter elektrophiler aromatischer Substitution? Erklären Sie den Mechanismus am Beispiel der Nitrierung von Benzol und begründen Sie, warum Aromate bevorzugt Substitution statt Addition eingehen.",
-        answer: "Die elektrophile aromatische Substitution (EAS) ist die charakteristische Reaktion aromatischer Verbindungen. Bei dieser Reaktion wird ein Wasserstoffatom des Aromaten durch ein Elektrophil (elektronenarme Spezies) ersetzt, wobei das aromatische π-System erhalten bleibt. Der Mechanismus der Nitrierung von Benzol verläuft in zwei Schritten: Im ersten Schritt wird durch Reaktion von konzentrierter Salpetersäure (HNO₃) mit konzentrierter Schwefelsäure (H₂SO₄) das Nitroniumion (NO₂⁺) als reaktives Elektrophil gebildet: HNO₃ + H₂SO₄ → NO₂⁺ + HSO₄⁻ + H₂O. Im zweiten Schritt greift das Nitroniumion (NO₂⁺) das π-Elektronensystem des Benzols nucleophil an. Dabei entsteht ein kationischer Übergangszustand (Wheland-Intermediat oder Areniumion), in dem die aromatische Stabilität kurzzeitig verloren geht — der betroffene Kohlenstoff ist sp³-hybridisiert. Im dritten Schritt wird ein Proton (H⁺) abgespalten; die Aromatizität wird wiederhergestellt, das Proton wird von HSO₄⁻ aufgenommen. Produkt: Nitrobenzol. Aromate bevorzugen Substitution statt Addition aus thermodynamischen Gründen: Die Mesomerie-Energie (Resonanzenergie) des aromatischen Systems beträgt ca. 150 kJ/mol. Eine Additionsreaktion würde diese Resonanzenergie zerstören und ein nicht-aromatisches, energetisch ungünstigeres Produkt liefern. Die Substitution hingegen erhält das aromatische π-System — die 'Treibkraft' ist die Wiederherstellung der Aromatizität durch Protonenabspaltung. Dieses Prinzip erklärt auch die biologische Inertheit von aromatischen Ringen in Biomolekülen.",
+        question:
+          "Was versteht man unter elektrophiler aromatischer Substitution? Erklären Sie den Mechanismus am Beispiel der Nitrierung von Benzol und begründen Sie, warum Aromate bevorzugt Substitution statt Addition eingehen.",
+        answer:
+          "Die elektrophile aromatische Substitution (EAS) ist die charakteristische Reaktion aromatischer Verbindungen. Bei dieser Reaktion wird ein Wasserstoffatom des Aromaten durch ein Elektrophil (elektronenarme Spezies) ersetzt, wobei das aromatische π-System erhalten bleibt. Der Mechanismus der Nitrierung von Benzol verläuft in zwei Schritten: Im ersten Schritt wird durch Reaktion von konzentrierter Salpetersäure (HNO₃) mit konzentrierter Schwefelsäure (H₂SO₄) das Nitroniumion (NO₂⁺) als reaktives Elektrophil gebildet: HNO₃ + H₂SO₄ → NO₂⁺ + HSO₄⁻ + H₂O. Im zweiten Schritt greift das Nitroniumion (NO₂⁺) das π-Elektronensystem des Benzols nucleophil an. Dabei entsteht ein kationischer Übergangszustand (Wheland-Intermediat oder Areniumion), in dem die aromatische Stabilität kurzzeitig verloren geht — der betroffene Kohlenstoff ist sp³-hybridisiert. Im dritten Schritt wird ein Proton (H⁺) abgespalten; die Aromatizität wird wiederhergestellt, das Proton wird von HSO₄⁻ aufgenommen. Produkt: Nitrobenzol. Aromate bevorzugen Substitution statt Addition aus thermodynamischen Gründen: Die Mesomerie-Energie (Resonanzenergie) des aromatischen Systems beträgt ca. 150 kJ/mol. Eine Additionsreaktion würde diese Resonanzenergie zerstören und ein nicht-aromatisches, energetisch ungünstigeres Produkt liefern. Die Substitution hingegen erhält das aromatische π-System — die 'Treibkraft' ist die Wiederherstellung der Aromatizität durch Protonenabspaltung. Dieses Prinzip erklärt auch die biologische Inertheit von aromatischen Ringen in Biomolekülen.",
       },
-      klinischerBezug: "Purinstoffwechsel: Harnsäure (Gicht, Hyperurikämie). Aromatische AA: Phe→PKU bei Enzymdefekt; Tyr→Catecholamine (Dopamin, Adrenalin); Trp→Serotonin/Melatonin. Allopurinol hemmt Xanthinoxidase.",
+      klinischerBezug:
+        "Purinstoffwechsel: Harnsäure (Gicht, Hyperurikämie). Aromatische AA: Phe→PKU bei Enzymdefekt; Tyr→Catecholamine (Dopamin, Adrenalin); Trp→Serotonin/Melatonin. Allopurinol hemmt Xanthinoxidase.",
       selfTest: [
         {
           question: "Welche Aussage über Benzol ist korrekt?",
@@ -840,10 +915,14 @@ Phenylalanin, Tyrosin und Tryptophan sind aromatische Aminosäuren mit besondere
             "Benzol hat eine Formel C₆H₈",
           ],
           correctIndex: 2,
-          explanation: "Benzol (C₆H₆) ist die klassische aromatische Verbindung. Die sechs sp²-hybridisierten C-Atome bilden einen planaren hexagonalen Ring. Jedes C-Atom hat ein p-Orbital senkrecht zur Ringmembran; diese sechs p-Orbitale überlappen zu einem delokalisierten π-System mit 6 π-Elektronen. Die Hückel-Regel (4n+2 mit n=1 → 6 π-Elektronen) ist erfüllt. Alle C-C-Bindungen sind gleichlang (139 pm). Benzol reagiert bevorzugt durch EAS (Substitution), nicht durch Addition — um die Aromatizität und die damit verbundene Resonanzenergie zu erhalten.",
-          hints: ["Hückel-Regel: 4n+2 π-Elektronen. Für n=1: wie viele π-Elektronen?", "Aromatisch = planar, konjugiert, 4n+2 π-Elektronen. Was ist charakteristisch?"],
+          explanation:
+            "Benzol (C₆H₆) ist die klassische aromatische Verbindung. Die sechs sp²-hybridisierten C-Atome bilden einen planaren hexagonalen Ring. Jedes C-Atom hat ein p-Orbital senkrecht zur Ringmembran; diese sechs p-Orbitale überlappen zu einem delokalisierten π-System mit 6 π-Elektronen. Die Hückel-Regel (4n+2 mit n=1 → 6 π-Elektronen) ist erfüllt. Alle C-C-Bindungen sind gleichlang (139 pm). Benzol reagiert bevorzugt durch EAS (Substitution), nicht durch Addition — um die Aromatizität und die damit verbundene Resonanzenergie zu erhalten.",
+          hints: [
+            "Hückel-Regel: 4n+2 π-Elektronen. Für n=1: wie viele π-Elektronen?",
+            "Aromatisch = planar, konjugiert, 4n+2 π-Elektronen. Was ist charakteristisch?",
+          ],
           difficulty: 1,
-          tags: [],
+          tags: ["benzol", "hückel-regel", "aromatizität"],
         },
         {
           question: "Was unterscheidet Purinbasen von Pyrimidinbasen?",
@@ -855,10 +934,14 @@ Phenylalanin, Tyrosin und Tryptophan sind aromatische Aminosäuren mit besondere
             "Purine haben 4n+2 π-Elektronen, Pyrimidine nicht",
           ],
           correctIndex: 1,
-          explanation: "Stickstoffbasen der Nukleinsäuren werden nach ihrer Ringstruktur unterschieden: Purine bestehen aus einem Pyrimidin-Ring und einem Imidazol-Ring (Doppelring = Bicyclus, 9 Atome). Purine: Adenin (A) und Guanin (G) — kommen in DNA und RNA vor. Pyrimidine haben nur einen Sechsring (6 Atome, Monocyclus). Pyrimidine: Cytosin (C, in DNA und RNA), Thymin (T, nur DNA), Uracil (U, nur RNA). Eselsbrücke: 'CUT the Pyrimidine' (Cytosin, Uracil, Thymin sind Pyrimidine).",
-          hints: ["'Pyr-' kommt von Pyrexis/Pyrimidin (ein Ring). 'Pur-' (Purin) — wie viele Ringe?", "Denke an die Größe: Purine sind größer (zwei Ringe), Pyrimidine kleiner (ein Ring)."],
+          explanation:
+            "Stickstoffbasen der Nukleinsäuren werden nach ihrer Ringstruktur unterschieden: Purine bestehen aus einem Pyrimidin-Ring und einem Imidazol-Ring (Doppelring = Bicyclus, 9 Atome). Purine: Adenin (A) und Guanin (G) — kommen in DNA und RNA vor. Pyrimidine haben nur einen Sechsring (6 Atome, Monocyclus). Pyrimidine: Cytosin (C, in DNA und RNA), Thymin (T, nur DNA), Uracil (U, nur RNA). Eselsbrücke: 'CUT the Pyrimidine' (Cytosin, Uracil, Thymin sind Pyrimidine).",
+          hints: [
+            "'Pyr-' kommt von Pyrexis/Pyrimidin (ein Ring). 'Pur-' (Purin) — wie viele Ringe?",
+            "Denke an die Größe: Purine sind größer (zwei Ringe), Pyrimidine kleiner (ein Ring).",
+          ],
           difficulty: 2,
-          tags: [],
+          tags: ["purine", "pyrimidine", "nukleinsäuren"],
         },
         {
           question: "Welche Aussage zur Chargaff-Regel ist korrekt?",
@@ -870,13 +953,18 @@ Phenylalanin, Tyrosin und Tryptophan sind aromatische Aminosäuren mit besondere
             "Chargaff-Regel gilt nur für RNA, nicht für DNA",
           ],
           correctIndex: 1,
-          explanation: "Chargaff stellte fest, dass in doppelsträngiger DNA die Menge von Adenin immer gleich der Menge von Thymin ist (A = T), und die Menge von Guanin gleich der von Cytosin (G = C). Dies ergibt sich aus der Watson-Crick-Basenpaarung: A-T-Paar (2 Wasserstoffbrücken), G-C-Paar (3 Wasserstoffbrücken). Folgerung: Purine (A+G) = Pyrimidine (C+T). Diese Regel gilt für doppelsträngige DNA; für einzelsträngige RNA oder Einzelstrang-DNA nicht.",
-          hints: ["Chargaff: denke an komplementäre Basenpaarung in der Doppelhelix.", "A paart mit T (2 H-Brücken), G paart mit C (3 H-Brücken). Was folgt daraus quantitativ?"],
+          explanation:
+            "Chargaff stellte fest, dass in doppelsträngiger DNA die Menge von Adenin immer gleich der Menge von Thymin ist (A = T), und die Menge von Guanin gleich der von Cytosin (G = C). Dies ergibt sich aus der Watson-Crick-Basenpaarung: A-T-Paar (2 Wasserstoffbrücken), G-C-Paar (3 Wasserstoffbrücken). Folgerung: Purine (A+G) = Pyrimidine (C+T). Diese Regel gilt für doppelsträngige DNA; für einzelsträngige RNA oder Einzelstrang-DNA nicht.",
+          hints: [
+            "Chargaff: denke an komplementäre Basenpaarung in der Doppelhelix.",
+            "A paart mit T (2 H-Brücken), G paart mit C (3 H-Brücken). Was folgt daraus quantitativ?",
+          ],
           difficulty: 2,
-          tags: [],
+          tags: ["chargaff-regel", "basenpaarung", "dna-doppelhelix"],
         },
         {
-          question: "Welche Erkrankung entsteht durch Ablagerung von Natriumurat-Kristallen in Gelenken?",
+          question:
+            "Welche Erkrankung entsteht durch Ablagerung von Natriumurat-Kristallen in Gelenken?",
           options: [
             "Diabetes mellitus",
             "Phenylketonurie",
@@ -885,28 +973,32 @@ Phenylalanin, Tyrosin und Tryptophan sind aromatische Aminosäuren mit besondere
             "Homocystinurie",
           ],
           correctIndex: 2,
-          explanation: "Gicht (Arthritis urica, Hyperurikämie) ist eine Stoffwechselerkrankung des Purinstoffwechsels. Purine werden im Menschen zu Harnsäure abgebaut (letzter Schritt: Xanthinoxidase). Bei Überproduktion oder verminderter renaler Ausscheidung akkumuliert Harnsäure im Blut. Ab einer Konzentration von ca. 6,8 mg/dl ist die Löslichkeitsgrenze überschritten, Natriumurat kristallisiert aus und lagert sich in Gelenken (bevorzugt Großzehengrundgelenk = Podagra, aber auch Finger, Knie) und in der Niere (Nierensteine) ab. Die Kristalle lösen eine Entzündungsreaktion aus (akuter Gichtanfall mit starken Schmerzen). Therapie: Allopurinol (Xanthinoxidase-Hemmer).",
-          hints: ["Harnsäure ist das Endprodukt des Purinstoffwechsels. Was passiert, wenn sie zu hoch konzentriert ist?", "Natriumurat-Kristalle fallen aus und lagern sich ab. Wo verursacht das Schmerzen?"],
-          difficulty: 1,
-          tags: [],
-        },
-        {
-          question: "Welche Aminosäure dient als Vorläufer für Dopamin, Adrenalin und Noradrenalin (Catecholamine)?",
-          options: [
-            "Tryptophan",
-            "Histidin",
-            "Tyrosin",
-            "Glycin",
-            "Phenylalanin (direkt)",
+          explanation:
+            "Gicht (Arthritis urica, Hyperurikämie) ist eine Stoffwechselerkrankung des Purinstoffwechsels. Purine werden im Menschen zu Harnsäure abgebaut (letzter Schritt: Xanthinoxidase). Bei Überproduktion oder verminderter renaler Ausscheidung akkumuliert Harnsäure im Blut. Ab einer Konzentration von ca. 6,8 mg/dl ist die Löslichkeitsgrenze überschritten, Natriumurat kristallisiert aus und lagert sich in Gelenken (bevorzugt Großzehengrundgelenk = Podagra, aber auch Finger, Knie) und in der Niere (Nierensteine) ab. Die Kristalle lösen eine Entzündungsreaktion aus (akuter Gichtanfall mit starken Schmerzen). Therapie: Allopurinol (Xanthinoxidase-Hemmer).",
+          hints: [
+            "Harnsäure ist das Endprodukt des Purinstoffwechsels. Was passiert, wenn sie zu hoch konzentriert ist?",
+            "Natriumurat-Kristalle fallen aus und lagern sich ab. Wo verursacht das Schmerzen?",
           ],
-          correctIndex: 2,
-          explanation: "Die Catecholaminbiosynthese beginnt mit Tyrosin (einer aromatischen Aminosäure). Der Weg: Tyrosin → L-DOPA (durch Tyrosinhydroxylase, dem geschwindigkeitsbestimmenden Schritt) → Dopamin (durch DOPA-Decarboxylase) → Noradrenalin (durch Dopamin-β-Hydroxylase) → Adrenalin (durch PNMT). Phenylalanin ist der Vorläufer von Tyrosin (Phenylalanin-Hydroxylase); bei Phenylketonurie (PKU) ist diese Hydroxylase defekt. Tryptophan ist Vorläufer von Serotonin und Melatonin. Histidin ist Vorläufer von Histamin.",
-          hints: ["Catecholamine haben einen Catechol-Ring (Benzol mit zwei benachbarten OH-Gruppen). Welche AA hat bereits den Benzolring?", "L-DOPA (bei Parkinson eingesetzt) kommt von welcher Aminosäure?"],
-          difficulty: 2,
-          tags: [],
+          difficulty: 1,
+          tags: ["gicht", "harnsäure", "natriumurat"],
         },
         {
-          question: "Ein Patient hat erhöhte Harnsäurewerte (Hyperurikämie). Welcher Mechanismus liegt bei der Therapie mit Allopurinol zugrunde?",
+          question:
+            "Welche Aminosäure dient als Vorläufer für Dopamin, Adrenalin und Noradrenalin (Catecholamine)?",
+          options: ["Tryptophan", "Histidin", "Tyrosin", "Glycin", "Phenylalanin (direkt)"],
+          correctIndex: 2,
+          explanation:
+            "Die Catecholaminbiosynthese beginnt mit Tyrosin (einer aromatischen Aminosäure). Der Weg: Tyrosin → L-DOPA (durch Tyrosinhydroxylase, dem geschwindigkeitsbestimmenden Schritt) → Dopamin (durch DOPA-Decarboxylase) → Noradrenalin (durch Dopamin-β-Hydroxylase) → Adrenalin (durch PNMT). Phenylalanin ist der Vorläufer von Tyrosin (Phenylalanin-Hydroxylase); bei Phenylketonurie (PKU) ist diese Hydroxylase defekt. Tryptophan ist Vorläufer von Serotonin und Melatonin. Histidin ist Vorläufer von Histamin.",
+          hints: [
+            "Catecholamine haben einen Catechol-Ring (Benzol mit zwei benachbarten OH-Gruppen). Welche AA hat bereits den Benzolring?",
+            "L-DOPA (bei Parkinson eingesetzt) kommt von welcher Aminosäure?",
+          ],
+          difficulty: 2,
+          tags: ["tyrosin", "catecholamine", "dopamin-biosynthese"],
+        },
+        {
+          question:
+            "Ein Patient hat erhöhte Harnsäurewerte (Hyperurikämie). Welcher Mechanismus liegt bei der Therapie mit Allopurinol zugrunde?",
           options: [
             "Allopurinol erhöht die renale Ausscheidung von Harnsäure",
             "Allopurinol hemmt die Xanthinoxidase und reduziert so die Harnsäureproduktion",
@@ -915,13 +1007,18 @@ Phenylalanin, Tyrosin und Tryptophan sind aromatische Aminosäuren mit besondere
             "Allopurinol aktiviert die Uricase, die Harnsäure abbaut",
           ],
           correctIndex: 1,
-          explanation: "Allopurinol ist ein Strukturanalog des Hypoxanthins. Es hemmt kompetitiv die Xanthinoxidase, das Enzym, das Hypoxanthin → Xanthin → Harnsäure katalysiert. Durch Hemmung der Xanthinoxidase wird weniger Harnsäure gebildet; stattdessen akkumulieren Hypoxanthin und Xanthin (die löslicher als Harnsäure sind und leichter renal ausgeschieden werden). Die Harnsäurekonzentration im Blut sinkt. Allopurinol selbst wird durch die Xanthinoxidase zu Oxipurinol metabolisiert, das ebenfalls ein wirksamer Xanthinoxidase-Inhibitor ist. Menschen haben keine Uricase (anders als die meisten anderen Säugetiere), daher ist Harnsäure unser Endprodukt.",
-          hints: ["Allopurinol ist ein Strukturanalog des Hypoxanthin-Substrats der Xanthinoxidase — was macht ein Substratanalog?", "Harnsäure entsteht durch Xanthinoxidase. Wenn man dieses Enzym hemmt..."],
+          explanation:
+            "Allopurinol ist ein Strukturanalog des Hypoxanthins. Es hemmt kompetitiv die Xanthinoxidase, das Enzym, das Hypoxanthin → Xanthin → Harnsäure katalysiert. Durch Hemmung der Xanthinoxidase wird weniger Harnsäure gebildet; stattdessen akkumulieren Hypoxanthin und Xanthin (die löslicher als Harnsäure sind und leichter renal ausgeschieden werden). Die Harnsäurekonzentration im Blut sinkt. Allopurinol selbst wird durch die Xanthinoxidase zu Oxipurinol metabolisiert, das ebenfalls ein wirksamer Xanthinoxidase-Inhibitor ist. Menschen haben keine Uricase (anders als die meisten anderen Säugetiere), daher ist Harnsäure unser Endprodukt.",
+          hints: [
+            "Allopurinol ist ein Strukturanalog des Hypoxanthin-Substrats der Xanthinoxidase — was macht ein Substratanalog?",
+            "Harnsäure entsteht durch Xanthinoxidase. Wenn man dieses Enzym hemmt...",
+          ],
           difficulty: 3,
-          tags: [],
+          tags: ["allopurinol", "xanthinoxidase", "gicht-therapie"],
         },
         {
-          question: "Welche Verbindung ist nach der Hückel-Regel (4n+2 π-Elektronen) NICHT aromatisch?",
+          question:
+            "Welche Verbindung ist nach der Hückel-Regel (4n+2 π-Elektronen) NICHT aromatisch?",
           options: [
             "Benzol (C₆H₆, 6 π-Elektronen)",
             "Cyclooctatetraen (C₈H₈, 8 π-Elektronen)",
@@ -930,10 +1027,14 @@ Phenylalanin, Tyrosin und Tryptophan sind aromatische Aminosäuren mit besondere
             "Pyridin (C₅H₅N, 6 π-Elektronen)",
           ],
           correctIndex: 1,
-          explanation: "Cyclooctatetraen (COT, C₈H₈) hat 8 π-Elektronen. Nach der Hückel-Regel sind 4n+2 π-Elektronen für Aromatizität nötig. Prüfung: 4n+2 = 8 → 4n = 6 → n = 1,5 (kein ganzzahliges n!). Daher ist COT NICHT aromatisch — es ist antiaromatisch (4n π-Elektronen wären sogar destabilisierend). COT ist tatsächlich nicht planar, sondern wannenförmig, um die Antiaromatizität zu vermeiden. Im Gegensatz: Benzol (6, n=1 ✓), Naphthalin (10, n=2 ✓), Pyrrol und Pyridin (beide 6, n=1 ✓).",
-          hints: ["4n+2 für n=0,1,2,3 gibt: 2, 6, 10, 14 π-Elektronen. Welche Zahl ist nicht dabei?", "8 π-Elektronen: ist 8 = 4n+2 für ganzzahliges n lösbar?"],
+          explanation:
+            "Cyclooctatetraen (COT, C₈H₈) hat 8 π-Elektronen. Nach der Hückel-Regel sind 4n+2 π-Elektronen für Aromatizität nötig. Prüfung: 4n+2 = 8 → 4n = 6 → n = 1,5 (kein ganzzahliges n!). Daher ist COT NICHT aromatisch — es ist antiaromatisch (4n π-Elektronen wären sogar destabilisierend). COT ist tatsächlich nicht planar, sondern wannenförmig, um die Antiaromatizität zu vermeiden. Im Gegensatz: Benzol (6, n=1 ✓), Naphthalin (10, n=2 ✓), Pyrrol und Pyridin (beide 6, n=1 ✓).",
+          hints: [
+            "4n+2 für n=0,1,2,3 gibt: 2, 6, 10, 14 π-Elektronen. Welche Zahl ist nicht dabei?",
+            "8 π-Elektronen: ist 8 = 4n+2 für ganzzahliges n lösbar?",
+          ],
           difficulty: 3,
-          tags: [],
+          tags: ["hückel-regel", "antiaromatisch", "cyclooctatetraen"],
         },
       ],
     },
