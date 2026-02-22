@@ -254,6 +254,54 @@ export default function BMSUnterkapitel({
     }
   }, [kapitel, ukFromIndex]);
 
+  const completedCount = unterkapitel.filter(
+    (u) => u && u.id && completedChapters.includes(u.id)
+  ).length;
+
+  // Derived booleans — computed defensively (uk may be null before early returns)
+  const isBookmarked = uk ? bookmarks.chapters.includes(uk.id) : false;
+  const isCompleted = uk ? completedChapters.includes(uk.id) : false;
+
+  // All event handlers that keyboard useEffect depends on — declared BEFORE the useEffect
+  const handleComplete = () => {
+    if (!uk || !kapitel) return;
+    if (!isCompleted) {
+      completeChapter(uk.id);
+      addXP(5);
+      checkStreak();
+    }
+    const newCompletedCount = completedCount + (isCompleted ? 0 : 1);
+    if (newCompletedCount === total) {
+      completeChapter(kapitel.id);
+      addXP(50); // +50 XP beim Abschluss des gesamten Kapitels
+    }
+  };
+
+  const handleNext = () => {
+    handleComplete();
+    if (!isLast) {
+      onNavigate(unterkapitelIndex + 1);
+      window.scrollTo(0, 0);
+    } else if (onNextChapter) {
+      onNextChapter();
+      window.scrollTo(0, 0);
+    } else {
+      onBack();
+    }
+  };
+
+  const handlePrev = () => {
+    if (!isFirst) {
+      onNavigate(unterkapitelIndex - 1);
+      window.scrollTo(0, 0);
+    } else if (onPrevChapter) {
+      onPrevChapter();
+      window.scrollTo(0, 0);
+    }
+  };
+
+  const canGoPrev = !isFirst || !!onPrevChapter;
+
   // Keyboard navigation: ← → for prev/next UK, R to toggle Quick Review
   // BUG-4 fix: isFirst/isLast are now declared above this useEffect
   useEffect(() => {
@@ -268,29 +316,6 @@ export default function BMSUnterkapitel({
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [unterkapitelIndex, isFirst, isLast]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  const completedCount = unterkapitel.filter(
-    (u) => u && u.id && completedChapters.includes(u.id)
-  ).length;
-
-  // Derived booleans — computed defensively (uk may be null before early returns)
-  const isBookmarked = uk ? bookmarks.chapters.includes(uk.id) : false;
-  const isCompleted = uk ? completedChapters.includes(uk.id) : false;
-
-  // All event handlers before early returns so they're in scope for selfTestBlock useMemo
-  const handleComplete = () => {
-    if (!uk || !kapitel) return;
-    if (!isCompleted) {
-      completeChapter(uk.id);
-      addXP(5);
-      checkStreak();
-    }
-    const newCompletedCount = completedCount + (isCompleted ? 0 : 1);
-    if (newCompletedCount === total) {
-      completeChapter(kapitel.id);
-      addXP(50); // +50 XP beim Abschluss des gesamten Kapitels
-    }
-  };
 
   const handleKontrollfragenAnswer = (
     questionIndex: number,
@@ -348,31 +373,6 @@ export default function BMSUnterkapitel({
     setSelfTestDone(true);
     setTimeout(() => onBack(), 1200);
   };
-
-  const handleNext = () => {
-    handleComplete();
-    if (!isLast) {
-      onNavigate(unterkapitelIndex + 1);
-      window.scrollTo(0, 0);
-    } else if (onNextChapter) {
-      onNextChapter();
-      window.scrollTo(0, 0);
-    } else {
-      onBack();
-    }
-  };
-
-  const handlePrev = () => {
-    if (!isFirst) {
-      onNavigate(unterkapitelIndex - 1);
-      window.scrollTo(0, 0);
-    } else if (onPrevChapter) {
-      onPrevChapter();
-      window.scrollTo(0, 0);
-    }
-  };
-
-  const canGoPrev = !isFirst || !!onPrevChapter;
 
   // BUG-3 fix: selfTestBlock useMemo before all early returns, guarded for null uk
   const selfTestBlock = useMemo(() => {

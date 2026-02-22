@@ -54,7 +54,7 @@ export function FachRoadmap({ chapters, currentChapterId, onSelectChapter }: Fac
       <div className="relative">
         {/* Fade gradient to indicate scrollability */}
         {sorted.length > 3 && (
-          <div className="absolute right-0 top-0 bottom-2 w-16 bg-gradient-to-l from-white dark:from-slate-800 to-transparent pointer-events-none z-10" />
+          <div className="absolute right-0 top-0 bottom-2 w-16 bg-linear-to-l from-white dark:from-slate-800 to-transparent pointer-events-none z-10" />
         )}
 
         <div className="flex items-center gap-2 overflow-x-auto pb-2">

@@ -142,11 +142,6 @@ export default function BMS() {
 
   // Initialize and listen for localStorage changes
   useEffect(() => {
-    // Einmalig: localStorage leeren (vermeidet QuotaExceededError durch alte Backups)
-    if (!sessionStorage.getItem('bms-localStorage-cleared-once')) {
-      localStorage.clear();
-      sessionStorage.setItem('bms-localStorage-cleared-once', '1');
-    }
     setIsLoading(false); // Mark as loaded after mount
 
     // Make chapter listing and optimization functions available in console for debugging

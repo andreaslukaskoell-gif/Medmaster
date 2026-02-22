@@ -53,8 +53,11 @@ export default function KFF() {
   const [strategyKey, setStrategyKey] = useState<StrategyKey>("zahlenfolgen");
   const { user, loading: isLoading } = useAuth();
 
-  if (isLoading || !user) {
-    return <div className="p-8">Lade KFF-Module...</div>;
+  if (isLoading) {
+    return <div className="p-8 text-slate-500 dark:text-slate-400">Lade KFF-Module...</div>;
+  }
+  if (!user) {
+    return <div className="p-8 text-slate-500 dark:text-slate-400">Nicht eingeloggt.</div>;
   }
 
   if (view === "figuren-strategy") {

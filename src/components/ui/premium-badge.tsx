@@ -38,7 +38,7 @@ export function PremiumBadge({ size = "sm", variant = "inline" }: PremiumBadgePr
 
   if (variant === "overlay") {
     return (
-      <div className="absolute top-2 right-2 bg-gradient-to-r from-amber-500 to-yellow-500 text-white rounded-full px-3 py-1 text-xs font-bold shadow-md flex items-center gap-1 backdrop-blur-sm">
+      <div className="absolute top-2 right-2 bg-linear-to-r from-amber-500 to-yellow-500 text-white rounded-full px-3 py-1 text-xs font-bold shadow-md flex items-center gap-1 backdrop-blur-sm">
         <Crown className="w-3 h-3" />
         PRO
       </div>
@@ -46,7 +46,7 @@ export function PremiumBadge({ size = "sm", variant = "inline" }: PremiumBadgePr
   }
 
   return (
-    <span className={`inline-flex items-center ${sizeClasses[size]} bg-gradient-to-r from-amber-500 to-yellow-500 text-white rounded-full font-bold`}>
+    <span className={`inline-flex items-center ${sizeClasses[size]} bg-linear-to-r from-amber-500 to-yellow-500 text-white rounded-full font-bold`}>
       <Crown className={iconSizes[size]} />
       PRO
     </span>
