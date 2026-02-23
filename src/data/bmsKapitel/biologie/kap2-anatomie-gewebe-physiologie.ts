@@ -1719,7 +1719,7 @@ Das Herz ist eine Pumpe — aber eine bemerkenswert effiziente. Es schlägt ~100
 
 ## Herzaufbau und Klappen
 
-Das Herz hat 4 Kammern (RA, RV, LA, LV) und 3 Wandschichten: Endokard (Endothel, innen), Myokard (Herzmuskel, Kontraktion), Epikard (Gleitfläche). Der linke Ventrikel hat die dickste Wand (~10–15 mm vs. ~3–5 mm rechts), da er gegen den hohen Systemwiderstand pumpt. AV-Klappen (Trikuspidal: 3 Segel, Mitral: 2 Segel) haben Sehnenfäden an Papillarmuskeln; Taschenklappen (Pulmonal, Aorta: je 3 Taschen) öffnen passiv.
+Das Herz hat 4 Kammern (RA, RV, LA, LV) und 3 Wandschichten: Endokard (Endothel, innen), Myokard (Herzmuskel, Kontraktion), Epikard (Gleitfläche). Der linke Ventrikel hat die dickste Wand (~10–15 mm vs. ~3–5 mm rechts), da er gegen den hohen Systemwiderstand pumpt. AV-Klappen (Trikuspidal: 3 Segel, Mitral: 2 Segel) haben Sehnenfäden an Papillarmuskeln; Taschenklappen (Pulmonal, Aorta: je 3 Taschen) öffnen passiv. **Systole** (Kontraktionsphase: Ventrikel pumpen Blut aus) und **Diastole** (Relaxationsphase: Ventrikel füllen sich mit Blut). Die Auswurffraktion beträgt in Ruhe ~55–70 % des enddiastolischen Volumens.
 
 > **Merke:** **Herzklappen:** AV-Klappen haben Sehnenfäden (Trikuspidal 3, Mitral 2), Taschenklappen haben Taschen (Pulmonal, Aorta je 3) – beide stoppen Rückfluss! (AV = Atrioventrikulär, Sehnenfäden verhindern Prolaps; Taschenklappen öffnen/schließen passiv)
 
@@ -1746,12 +1746,6 @@ Arteriolen sind Widerstandsgefäße (regulieren TPR durch Sympathikus α₁); Ka
 Kurzfristig: Barorezeptor-Reflex (Aortenbogen, Karotis-Sinus) – Druck ↑ → Parasympathikus ↑ → HF ↓. Langfristig: RAAS – Druck ↓ → Renin → Angiotensin II → Vasokonstriktion + Aldosteron ↑ → Na⁺/H₂O-Retention → Volumen ↑. Formel: Blutdruck = HZV × TPR = (SV × HF) × TPR.
 
 > **Merke:** **Blutdruckregulation:** Barorezeptoren messen Druck (kurzfristig), RAAS rettet Salz und Wasser (langfristig) – Angiotensin II macht eng und Aldosteron speichert! (Barorezeptor-Reflex: Blutdruck ↑ → Parasympathikus ↑ → HF ↓; RAAS: Renin → Angiotensin II → Vasokonstriktion + Aldosteron ↑ → Na⁺/H₂O ↑)
-
----
-
-## Klinischer Bezug
-
-Herzinfarkt (STEMI/NSTEMI): koronare Plaqueruptur → Thrombus → Ischämie → Infarzierung (Troponin I/T als sensitiver Marker). EKG: ST-Hebung (STEMI), T-Negativierung, Q-Zacke (alter Infarkt). Therapie: sofortige PCI (Stent) innerhalb 90 min. Herzinsuffizienz betrifft >1 Mio. Menschen in Deutschland (systolisch EF <40% vs. diastolisch EF >50%); Therapie-Basis: ACE-Hemmer + Betablocker + Diuretika + Spironolacton. Hypertonie (>140/90 mmHg): primär (essenziell, 90%, multifaktoriell) vs. sekundär (NNR: Conn, Phäochromozytom; Niere: renovaskulär). Komplikationen: Schlaganfall, Herzinfarkt, Niereninsuffizienz, Retinopathie. Vorhofflimmern: häufigste Herzrhythmusstörung (1% der Bevölkerung), Schlaganfall-Risiko ↑ (Thromboembolie aus linkem Vorhofohr) → Antikoagulation (DOAKs).
 
 ---
 
@@ -1924,13 +1918,23 @@ Erythrozyten sind bikonkave Scheiben ohne Zellkern mit Hämoglobin (Tetramer 2α
 
 ## Leukozyten
 
-Leukozyten umfassen Neutrophile (50–70%, Phagozytose, erste Linie), Lymphozyten (20–40%, T- und B-Zellen), Monozyten (2–10%, Makrophagen-Vorläufer), Eosinophile (Parasiten, Allergie) und Basophile (<1%, Histamin). Leukozytose (>10.000/µL) deutet auf Infektion hin; Leukopenie kann Chemotherapie-Nebenwirkung sein.
+Leukozyten sind die Immunzellen des Blutes. Die 5 Typen im Differentialblutbild:
+
+| Zelltyp | Anteil | Hauptfunktion |
+|---|---|---|
+| **Neutrophile** | ~60% | Erste Linie gegen Bakterien; Phagozytose + Respiratory Burst |
+| **Lymphozyten** | ~25% | Adaptive Immunität: B-Zellen (Antikörper), T-Zellen (zellulär), NK-Zellen |
+| **Monozyten** | ~5% | Vorläufer von Makrophagen und dendritischen Zellen; Phagozytose |
+| **Eosinophile** | ~3% | Parasitenabwehr; Allergiereaktionen (Typ I/III) |
+| **Basophile** | ~1% | Histaminfreisetzung; Allergie und Entzündung |
+
+**Linksverschiebung** (↑ stabkernige Neutrophile) = Zeichen akuter Bakterieninfektion. Leukozytose (>10.000/µL) deutet auf Infektion hin; Leukopenie kann Chemotherapie-Nebenwirkung sein.
 
 ---
 
 ## Gerinnung und Hämostase
 
-Primäre Hämostase: Vasokonstriktion → Thrombozytenadhäsion (vWF-GPIb) → -aggregation (ADP, Thromboxan A₂, Fibrinogen-GPIIb/IIIa) → Plättchenpfropf. Sekundäre Hämostase (Koagulationskaskade): Extrinsisch (TF+VIIa, schnell) + Intrinsisch (XIIa, langsam) → Gemeinsam: Xa+Va → Thrombin → Fibrinogen → Fibrin. Vitamin K aktiviert Faktoren II, VII, IX, X.
+Primäre Hämostase: Vasokonstriktion → Thrombozytenadhäsion (vWF (von-Willebrand-Faktor)-GPIb) → -aggregation (ADP, Thromboxan A₂, Fibrinogen-GPIIb/IIIa) → Plättchenpfropf. Sekundäre Hämostase (Koagulationskaskade): Extrinsisch (TF+VIIa, schnell) + Intrinsisch (XIIa, langsam) → Gemeinsam: Xa+Va → Thrombin → Fibrinogen → Fibrin. Vitamin K aktiviert Faktoren II, VII, IX, X.
 
 > **Merke:** **Gerinnungskaskade:** Extrinsisch = TF+VII (schnell, Sekunden), Intrinsisch = XII (langsam, Minuten), Endstrecke = Xa+Va → Thrombin → Fibrin! (Beide Wege aktivieren Faktor X → Prothrombinase-Komplex → Thrombin → Fibrinogen → Fibrin)
 
@@ -1941,12 +1945,6 @@ Primäre Hämostase: Vasokonstriktion → Thrombozytenadhäsion (vWF-GPIb) → -
 AB0-System: Blutgruppe A (Antigen A, Anti-B IgM), B (Antigen B, Anti-A IgM), AB (A+B, keine AK, Universalempfänger), 0 (keine Antigene, Anti-A+B IgM, Universalspender). Rhesus-System: Rh+ (ca. 85% der Bevölkerung). Rh-Inkompatibilität: Rh−-Mutter + Rh+-Kind → 1. Geburt: Sensibilisierung → 2. Schwangerschaft: Anti-D (IgG) überquert Plazenta → fetale Hämolyse. Prophylaxe: Anti-D-Immunglobulin post partum.
 
 > **Merke:** **AB0-Blutgruppen:** 0 = Universalspender (keine Antigene), AB = Universalempfänger (keine Antikörper) – natürliche IgM-Antikörper! (A hat Anti-B, B hat Anti-A, AB hat keine, 0 hat Anti-A+B)
-
----
-
-## Klinischer Bezug
-
-Eisenmangelanämie: häufigste Anämie weltweit (Frauen im gebärfähigen Alter, Malnutrition, Blutung). Symptome: Müdigkeit, Blässe, Tachykardie, Pica (Eis/Erde essen), Koilonychie (Hohlnägel). Labor: Hb ↓, MCV ↓, Ferritin ↓. Therapie: Eisensulfat/Eisengluconat p.o. Leukämien: AML (kuratives Ziel: intensive Chemotherapie + allogene KMT), ALL (Kinder: beste Prognose ~90% Heilung), CML (Imatinib revolutionierte Therapie). Gerinnungsstörungen: Hämophilie A (Faktor VIII ↓, X-chromosomal) + B (Faktor IX ↓): PTT ↑, PT normal → Substitution. Von-Willebrand-Syndrom (häufigste hereditäre Blutungsstörung): Schleimhautblutungen, verlängerte Blutungszeit. Sepsis-assoziierte DIC ist lebensbedrohlich: simultane Mikrothromben + Blutungen erfordern sofortige Intensivtherapie.
 
 ---
 
@@ -2107,13 +2105,13 @@ Eisenmangelanämie: häufigste Anämie weltweit (Frauen im gebärfähigen Alter,
 
 Das Immunsystem löst eine fundamentale Aufgabe: es unterscheidet "selbst" von "fremd" — und zerstört das Fremde, ohne sich selbst anzugreifen. Es arbeitet auf zwei Ebenen: die **angeborene Immunität** (sofort, unspezifisch, kein Gedächtnis) mit Neutrophilen, Makrophagen, NK-Zellen und Komplement, und die **erworbene Immunität** (Tage, hochspezifisch, Gedächtnisbildung) mit T- und B-Zellen. Das Verbindungsglied: MHC-Moleküle präsentieren Antigene an T-Zellen und starten die zielgerichtete Immunantwort. Für die Medizin ist das Immunsystem allgegenwärtig: Infektionen, Impfungen, Allergien, Autoimmunerkrankungen, Transplantatabstoßung. MedAT-Klassiker: MHC I vs. II, Antikörperklassen, Allergie Typ I, aktiv vs. passiv.
 
-> **Merke:** **Angeborene vs. Erworbene:** Angeboren = schnell (Minuten), unspezifisch, kein Gedächtnis (Makrophagen, Neutrophile, Komplement). Erworben = langsam (Tage), spezifisch, Gedächtnis (T-/B-Zellen, Antikörper). (Angeborene Immunität reagiert sofort, erworbene braucht Zeit für klonale Expansion)
-
 ---
 
 ## Angeborene Immunität
 
-Zelluläre Komponenten: Neutrophile (Phagozytose, Respiratory Burst), Makrophagen (Phagozytose, Antigenpräsentation MHC II, IL-1/TNF-α), NK-Zellen (töten Zellen ohne MHC-I über Perforin/Granzyme), dendritische Zellen (Brücke zur adaptiven Immunität). Humorale Komponenten: Komplementsystem – C3b (Opsonierung), C5a (Chemotaxis), MAC/C5b-C9 (Lyse). Interferone hemmen Virusreplikation.
+Zelluläre Komponenten: Neutrophile (Phagozytose, Respiratory Burst), Makrophagen (Phagozytose, Antigenpräsentation MHC II, IL-1/TNF-α), NK-Zellen (töten Zellen ohne MHC-I über Perforin/Granzyme), dendritische Zellen (Brücke zur adaptiven Immunität). Das Komplementsystem kann über drei Wege aktiviert werden: **Klassischer Weg** (Antigen-Antikörper-Komplexe aktivieren C1q), **Lektin-Weg** (Mannose-bindendes Lektin/MBL erkennt Pathogenzucker), **Alternativer Weg** (spontane C3-Hydrolyse + Verstärkungsschleife auf Pathogenoberflächen). Alle drei Wege münden in C3-Spaltung → C3a (Anaphylatoxin) + C3b (Opsonin) → MAC-Bildung. Humorale Komponenten: Komplementsystem – C3b (Opsonierung), C5a (Chemotaxis), MAC/C5b-C9 (Lyse). Interferone hemmen Virusreplikation.
+
+> **Merke:** **Angeborene vs. Erworbene:** Angeboren = schnell (Minuten), unspezifisch, kein Gedächtnis (Makrophagen, Neutrophile, Komplement). Erworben = langsam (Tage), spezifisch, Gedächtnis (T-/B-Zellen, Antikörper). (Angeborene Immunität reagiert sofort, erworbene braucht Zeit für klonale Expansion)
 
 ---
 
@@ -2135,15 +2133,9 @@ IgM (Primärantwort, Pentamer, aktiviert Komplement); IgG (Sekundärantwort, mon
 
 ## Allergie und Autoimmunität
 
-Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf Mastzellen) → Re-Exposition (Allergen kreuzvernetzt IgE → Mastzell-Degranulation → Histamin, Leukotriene). Manifestationen: Rhinitis, Asthma, Urtikaria, Anaphylaxie. Notfalltherapie Anaphylaxie: Adrenalin i.m. (β₂ Bronchodilatation, α₁ Vasokonstriktion). Autoimmunerkrankungen entstehen durch Verlust der Selbsttoleranz.
+Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf Mastzellen) → Re-Exposition (Allergen kreuzvernetzt IgE → Mastzell-Degranulation → Histamin, Leukotriene). Manifestationen: Rhinitis, Asthma, Urtikaria, Anaphylaxie. Notfalltherapie Anaphylaxie: Adrenalin i.m. (β₂ Bronchodilatation, α₁ Vasokonstriktion). Allergie-Typen II–IV: Typ II (zytotoxisch: Antikörper gegen Zelloberflächenantigene, z.B. Autoimmunhämolyse); Typ III (Immunkomplexe: z.B. Serumkrankheit, SLE-Nephritis); Typ IV (verzögert/zellulär: T-Zell-vermittelt, z.B. Tuberkulin-Test, Kontaktdermatitis). Nur Typ I ist IgE-vermittelt und soforttyp. Autoimmunerkrankungen entstehen durch Verlust der Selbsttoleranz.
 
 > **Merke:** **Impfung:** Aktiv = Antigen → eigene Antikörper → Gedächtnis (Wochen, Jahre), Passiv = fertige Antikörper → sofort, kurz (Stunden, Monate, kein Gedächtnis)! (Aktiv: MMR, Tetanus; Passiv: Tetanus-Immunglobulin, Anti-D)
-
----
-
-## Klinischer Bezug
-
-HIV/AIDS ist eine der bedeutendsten Infektionskrankheiten weltweit: cART (kombinierte antiretrovirale Therapie) ermöglicht heute normale Lebenserwartung. Autoimmunerkrankungen: SLE (Lupusnephritis als schwerwiegendste Komplikation, Anti-dsDNA diagnostisch; Therapie: Hydroxychloroquin, MMF, Glukokortikoide). Rheumatoide Arthritis: TNF-α-Blocker (Adalimumab, Infliximab) revolutionierten Therapie. Anaphylaxie: medizinischer Notfall, Adrenalin-Autoinjektoren (EpiPen) für gefährdete Patienten, Reanimation bei Herz-Kreislauf-Stillstand. Allergien (Heuschnupfen, Asthma, Nahrungsmittelallergien): steigende Prävalenz in Industrienationen (Hygiene-Hypothese). Impfungen: Masern-Eradikation möglich durch MMR-Impfung (Herdenimmunität ab ~95% Durchimpfungsrate); Impfskepsis gefährdet Herdenimmunität. Primäre Immundefekte: X-chromosomale Agammaglobulinämie (BTK-Mutation, keine B-Zellen → keine Antikörper → rekurrierende Infektionen ab 6. Lebensmonat).
 
 ---
 
@@ -2324,13 +2316,15 @@ Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Archit
 1. **Positive Selektion** (Cortex): T-Zellen, die MHC-I oder MHC-II erkennen, überleben (~3–5 % aller Thymozyten)
 2. **Negative Selektion** (Mark): T-Zellen, die Selbst-Antigene zu stark erkennen → Apoptose (zentrale Toleranz → verhindert Autoimmunität)
 
+**B-Zell-Reifung** erfolgt im Knochenmark: Stammzelle → Pro-B → Prä-B → naive B-Zelle. Zentraltoleranzmechanismus: B-Zellen, deren BCR körpereigene Antigene zu stark binden, werden durch klonale Deletion (Apoptose) oder Rezeptorediting eliminiert, um Autoimmunität zu verhindern.
+
 > **Merke:** **Milz**: rote Pulpa (Ery-Abbau + Thrombozytenspeicher) vs. weiße Pulpa (Immunabwehr). **Splenektomie** = OPSI-Risiko → Impfung + Penicillin! **Thymus**: positive Selektion (MHC-Erkennung) + negative Selektion (Selbsttoleranz) → nur ~5 % der Thymozyten überleben.
 
 ---
 
 ## Lymphgefäße und Lymphtransport im Detail
 
-Lymphkapillaren beginnen als blind endende, basalmembranfreie Gefäße im Interstitium. Ihre Endothelzellen sind dachziegelartig angeordnet und über Ankerfilamente an das umliegende Bindegewebe fixiert. Bei steigendem Gewebedruck öffnen sich die Überlappungszonen wie Einwegventile und lassen interstitielle Flüssigkeit einströmen. Von den Kapillaren fließt die Lymphe über Präkollektoren in Kollektoren, die eine dreigeschichtete Wand (Intima, Media, Adventitia) mit glatter Muskulatur besitzen und rhythmische Kontraktionen (Lymphangion-Pumpe, ca. 6-10 Kontraktionen/min) durchführen. Taschenklappen verhindern den Rückfluss. Die Skelettmuskelpumpe und die Atembewegungen (Zwerchfell-Sogwirkung) unterstützen den Lymphtransport zusätzlich.
+Lymphkapillaren (blind endend, basalmembranfrei) → Lymphgefäße (mit Taschenklappen und Lymphangion-Pumpe aus glatter Muskulatur) → Ductus thoracicus / Ductus lymphaticus dexter → linke/rechte Vena subclavia. Die Skelettmuskelpumpe und Atembewegungen unterstützen den Lymphtransport zusätzlich.
 
 Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % des Körpers (beide Beine, linker Arm, linke Thoraxhälfte, Abdomen) und mündet in den linken Venenwinkel (Confluens der V. jugularis interna sinistra und V. subclavia sinistra). Der rechte **Ductus lymphaticus dexter** drainiert den rechten Arm, die rechte Thoraxhälfte und die rechte Kopfhälfte. Aus dem Darm transportieren Chylomikronen-beladene Lymphgefäße (Chylusgefäße, Vasa lactea) resorbierte Lipide direkt ins Blut, unter Umgehung der Leber-Erstpassage.
 
@@ -2688,7 +2682,7 @@ Die Magenschleimhaut enthält fünf spezialisierte Zelltypen mit klar definierte
 | **G-Zellen** (Antrum) | **Gastrin** | Peptide, Dehnung, ACh |
 | **D-Zellen** | **Somatostatin** (hemmt Gastrin + HCl) | niedriger pH, Fette |
 
-**HCl-Synthese** (Belegzellen): H⁺/K⁺-ATPase (Protonenpumpe) pumpt H⁺ gegen Gradient. Carboanhydrase liefert H⁺ aus CO₂ + H₂O. **Protonenpumpenhemmer** (PPI, z.B. Omeprazol) blockieren die H⁺/K⁺-ATPase irreversibel → HCl ↓ → Ulkustherapie.
+**HCl-Synthese** (Belegzellen): H⁺/K⁺-ATPase (Protonenpumpe) pumpt H⁺ gegen Gradient. Carboanhydrase liefert H⁺ aus CO₂ + H₂O. **Protonenpumpenhemmer** (PPI, z.B. Omeprazol) blockieren die H⁺/K⁺-ATPase irreversibel → HCl ↓ → Ulkustherapie. **Peristaltik** bezeichnet die koordinierte Kontraktion der Längsmuskulatur gefolgt von Ringmuskulatur — so wird der Bolus oral → aboral transportiert. Gesteuert wird sie vom enterischen Nervensystem (Plexus myentericus = Auerbach, Plexus submucosus = Meissner).
 
 **Aktivierungskaskade im Pankreas:** Trypsinogen wird im Dünndarm durch **Enterokinase** (= Enteropeptidase, auf Bürstensaum-Enterozyten) → Trypsin aktiviert. Trypsin aktiviert dann alle anderen Pankreasenzyme (Chymotrypsinogen, Proelastase, Phospholipase A₂). Gefährlich: Trypsin-Aktivierung schon im Pankreas → **akute Pankreatitis** (Autodigestion).
 
@@ -2714,6 +2708,12 @@ Die Magenschleimhaut enthält fünf spezialisierte Zelltypen mit klar definierte
 - → Galle → Darm → bakteriell → **Sterkobilin** (Stuhl braun) + Urobilinogen → Urin: **Urobilin** (gelb)
 
 > **Merke:** **Bilirubin-Weg**: Hb → unkonjugiertes Bilirubin (Milz, albumin-gebunden) → Leber (UGT1A1, Glukuronidierung) → konjugiert (wasserlöslich) → Galle → Sterkobilin (Stuhl braun) + Urobilin (Urin gelb). **Fett-Transport**: Mizellen → Chylomikronen → **Lymphe** (nicht Pfortader!).
+
+---
+
+## Dickdarm
+
+Der **Dickdarm** (Colon) ist ca. 1,5 m lang und besteht aus Caecum, Colon ascendens/transversum/descendens und Sigma. Hauptaufgabe: **Wasserrückresorption** (~1–1,5 L täglich) und Elektrolytabsorption. Die **Darmflora** (Mikrobiom, >1000 Spezies) fermentiert unverdauliche Ballaststoffe zu kurzkettigen Fettsäuren (Butyrat, Propionat) — wichtige Energiequelle der Colonozyten. Die Peristaltik im Dickdarm ist träger als im Dünndarm (Haustren-Segmentierung).
 
 ---
 
@@ -2872,6 +2872,8 @@ Die Magenschleimhaut enthält fünf spezialisierte Zelltypen mit klar definierte
       content: `## Einleitung
 
 Die Niere ist weit mehr als ein Abfallfilter: Sie reguliert Blutvolumen, Blutdruck, pH-Wert und Elektrolyte — und produziert Hormone (Erythropoetin, Renin). Jede Niere hat ~1 Million Nephrone, die täglich 180 Liter Primärharn filtrieren — durch Rückresorption werden davon >99% zurückgewonnen, nur 1–2 Liter werden als Endurin ausgeschieden. Das RAAS (Renin-Angiotensin-Aldosteron-System) ist zentraler Blutdruckregulator. Für die Medizin: Niereninsuffizienz ist häufig (diabetische Nephropathie als Hauptursache), renale Anämie durch EPO-Mangel, ACE-Hemmer als RAAS-Blocker. MedAT-Schwerpunkte: GFR, Tubulustransporte, ADH/Aldosteron, RAAS-Kaskade.
+
+Der **Harntrakt** besteht aus: Nieren (Urinbildung) → **Harnleiter** (Ureter, je 25–30 cm, peristaltischer Transport des Urins zur Blase) → **Harnblase** (Speicherung, 300–500 mL) → **Urethra** (Ausleitung). Die Harnleiter münden vesikoureteral ein; Reflux wird durch den schrägen Eintrittswinkel verhindert.
 
 ---
 
@@ -3321,6 +3323,8 @@ Beide Keimzellentwicklungen nutzen die Meiose, unterscheiden sich aber fundament
 4. Spermium penetriert → **Meiose II abgeschlossen** → reife Eizelle (n) + 2. Polkörperchen (+ 1. teilt sich → 3 Polkörperchen gesamt)
 
 > **Merke:** **Oogenese-Arrests**: primäre Oozyte = **Prophase I** (seit Embryonalzeit). sekundäre Oozyte = **Metaphase II** (seit Ovulation). Meiose II wird nur bei Befruchtung abgeschlossen. **Ergebnis: 1 Eizelle + 3 Polkörperchen**. **Sertoli** (FSH, Inhibin) vs. **Leydig** (LH, Testosteron).
+
+**Befruchtung** findet typischerweise im ampullären Teil des Eileiters statt. Die **Akrosom-Reaktion**: Das Akrosom (Vesikel am Spermienkopf) schüttet Hydrolasen aus, die die Zona pellucida (Glykoproteinmatrix der Eizelle) durchdringen. Nach Spermien-Eizell-Fusion löst die **Kortikalreaktion** aus (Cortical Granules verschmelzen mit Oolemma → Zona-Verhärtung → **Polyspermie-Block**). Gleichzeitig wird die Meiose II abgeschlossen und der zweite Polkörper abgeschnürt.
 
 ---
 

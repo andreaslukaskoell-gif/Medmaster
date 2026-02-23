@@ -400,6 +400,16 @@ Verdünnungsverhältnisse in der Medizin:
 
 Clearance-Formel: Clearance [mL/min] = (U mal V) / P, wobei U = Harnkonzentration, V = Harnfluss, P = Plasmakonzentration. Diese Proportion wird über direkten Dreisatz oder algebraische Umformung gelöst.
 
+## Epidemiologische Kennzahlen — ARR, RRR, NNT
+
+Diese Kennzahlen beschreiben den Nutzen einer Behandlung und kommen häufig im MedAT vor:
+
+- **ARR** (Absolute Risikoreduktion): ARR = Risiko_Kontrolle − Risiko_Behandlung. Gibt an, um wie viel Prozentpunkte das absolute Risiko sinkt.
+- **RRR** (Relative Risikoreduktion): RRR = ARR / Risiko_Kontrolle. Gibt die prozentuale Reduktion relativ zum Ausgangsrisiko an — wirkt größer als ARR.
+- **NNT** (Number Needed to Treat): NNT = 1 / ARR. Wie viele Patienten müssen behandelt werden, damit ein Ereignis verhindert wird? Niedrige NNT = wirksame Therapie.
+
+> **Merke:** ARR = absolut (ehrlich), RRR = relativ (wirkt eindrucksvoller), NNT = klinische Praxis. MedAT fragt meist: Berechne NNT aus gegebener Tabelle.
+
 ## Rechenbeispiele
 
 **Beispiel 1 — NNT (Number Needed to Treat):**

@@ -2167,7 +2167,7 @@ Der normale Blut-pH liegt bei **7,35–7,45**. Vier primäre Störungen sind zu 
 - **Kompensation:** Hypoventilation → CO₂ ↑
 - **Beispiele:** Erbrechen (HCl-Verlust), Diuretika-Einnahme, übermäßige NaHCO₃-Zufuhr
 
-## Zusammenfassung: Blutgasanalyse-Interpretation
+## Referenz: BGA-Interpretation
 
 | Störung | pH | pCO₂ | HCO₃⁻ |
 |---------|-----|------|--------|

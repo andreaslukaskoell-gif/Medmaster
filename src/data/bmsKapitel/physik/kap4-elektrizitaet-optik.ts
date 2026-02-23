@@ -353,7 +353,9 @@ Die im Widerstand dissipierte Wärmeenergie (Joulesche Wärme) pro Zeit: P = I²
 
 ## Elektrochemische Spannungsquellen und Nernst-Potential
 
-Eine **Spannungsquelle** (Batterie, Akkumulator) erzeugt durch chemische Reaktionen eine **elektromotorische Kraft (EMK) ε** [V]. Reale Quellen haben einen **Innenwiderstand r**: U_klemme = ε − I·r. Bei hoher Stromentnahme sinkt die Klemmenspannung. Das **Nernst-Potential** für einzelne Ionenarten ist die Gleichgewichtsspannung über einer semipermeablen Membran (z. B. E_K⁺ ≈ −90 mV, E_Na⁺ ≈ +60 mV) — berechnet mit der Nernst-Gleichung: E = (RT/zF) · ln([Ion]_außen / [Ion]_innen).
+**EMK (elektromotorische Kraft)**: Die Spannung, die eine Energiequelle (Batterie, Zelle) im Leerlauf — also ohne Stromfluss — an ihren Klemmen bereitstellt. Sie ist die treibende "Kraft" (eigentlich Energie pro Ladung) im Stromkreis.
+
+Eine **Spannungsquelle** (Batterie, Akkumulator) erzeugt durch chemische Reaktionen eine EMK **ε** [V]. Reale Quellen haben einen **Innenwiderstand r**: U_klemme = ε − I·r. Bei hoher Stromentnahme sinkt die Klemmenspannung. Das **Nernst-Potential** für einzelne Ionenarten ist die Gleichgewichtsspannung über einer semipermeablen Membran (z. B. E_K⁺ ≈ −90 mV, E_Na⁺ ≈ +60 mV) — berechnet mit der Nernst-Gleichung: E = (RT/zF) · ln([Ion]_außen / [Ion]_innen).
 
 ## Rechenbeispiele
 
@@ -870,7 +872,7 @@ Medizinische Anwendungen der Lorentz-Kraft: **Massenspektrometrie** (Ionen auf K
 
 **ε = −N · dΦ/dt = −N · d(B·A·cos α)/dt** [V]
 
-Das negative Vorzeichen folgt aus der **Lenzschen Regel**: Die induzierte Spannung ist so gerichtet, dass der induzierte Strom der Flussänderung entgegenwirkt (Energieerhaltung). Anwendungen: **Transformator** (Wechselspannung transformieren); **Induktionskochplatte** (Wirbelströme); **Generator** (mechanische → elektrische Energie); **MRT** (empfangende Spulen messen induzierte Spannungen durch präzedierende Protonenspins).
+Das negative Vorzeichen folgt aus der **Lenzschen Regel**: Die induzierte Spannung ist so gerichtet, dass der induzierte Strom der Flussänderung entgegenwirkt (Energieerhaltung). Anwendungen: **Transformator**: Wandelt Wechselspannungen um via elektromagnetischer Induktion. Transformationsformel: **U₁/U₂ = N₁/N₂** (Windungszahlverhältnis = Spannungsverhältnis). Bei idealem Transformator gilt zudem P₁ = P₂ → I₁/I₂ = N₂/N₁. Medizinisch: Trenntransformatoren in OP-Sälen (galvanische Trennung, Schutz vor Stromschlag); **Induktionskochplatte** (Wirbelströme); **Generator** (mechanische → elektrische Energie); **MRT** (empfangende Spulen messen induzierte Spannungen durch präzedierende Protonenspins).
 
 ## Selbstinduktion und Induktivität
 

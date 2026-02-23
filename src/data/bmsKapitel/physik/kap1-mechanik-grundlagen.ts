@@ -417,6 +417,21 @@ Beim Rechnen: Das Ergebnis hat so viele signifikante Stellen wie der ungenaueste
 
 > **Merke:** Klinische Relevanz: Ein Blutzuckerwert von 5,5 mmol/L hat 2 signifikante Stellen. Ihn als 5,500 mmol/L anzugeben würde eine Messgenauigkeit suggerieren, die das Gerät gar nicht liefert.
 
+## Rechenbeispiele
+
+**Beispiel 1 — Volumenumrechnung Blutprobe:**
+PCR-Ansatz: 25 µL Template-DNA + 12,5 µL Mastermix + 2,5 µL Primer = 40 µL Gesamtvolumen.
+In mL: 40 µL × 10⁻³ mL/µL = 0,040 mL.
+In m³: 40 µL = 40 × 10⁻⁶ L = 40 × 10⁻⁹ m³ = **4 × 10⁻⁸ m³**.
+
+**Beispiel 2 — Wirkstoffmenge aus Plasmakonzentration:**
+Gentamicin-Spitzenspiegel: 8 µg/mL. Verteilungsvolumen: 17,5 L (0,25 L/kg × 70 kg).
+Gesamtmenge = 8 µg/mL × 17 500 mL = 140 000 µg = 140 mg = **0,14 g**.
+Einheitenkette: µg/mL × mL = µg → ÷ 10³ = mg → ÷ 10³ = g.
+
+**Beispiel 3 — Röntgenstrahlung Frequenz in Wellenlänge:**
+Röntgenstrahlung f = 3 × 10¹⁸ Hz. Wellenlänge λ = c/f = (3 × 10⁸ m/s) / (3 × 10¹⁸ s⁻¹) = 10⁻¹⁰ m = **0,1 nm = 1 Å** (Ångström). Diese Wellenlänge liegt im Bereich atomarer Abstände — erklärt, warum Röntgenstrahlung Kristallstrukturen auflösen kann.
+
 ---
 ## MedAT-Fokus
 
@@ -441,21 +456,6 @@ Beim Rechnen: Das Ergebnis hat so viele signifikante Stellen wie der ungenaueste
 - Lichtgeschwindigkeit c ≈ 3 × 10⁸ m/s; Avogadro N_A ≈ 6 × 10²³ mol⁻¹
 
 ---
-## Rechenbeispiele
-
-**Beispiel 1 — Volumenumrechnung Blutprobe:**
-PCR-Ansatz: 25 µL Template-DNA + 12,5 µL Mastermix + 2,5 µL Primer = 40 µL Gesamtvolumen.
-In mL: 40 µL × 10⁻³ mL/µL = 0,040 mL.
-In m³: 40 µL = 40 × 10⁻⁶ L = 40 × 10⁻⁹ m³ = **4 × 10⁻⁸ m³**.
-
-**Beispiel 2 — Wirkstoffmenge aus Plasmakonzentration:**
-Gentamicin-Spitzenspiegel: 8 µg/mL. Verteilungsvolumen: 17,5 L (0,25 L/kg × 70 kg).
-Gesamtmenge = 8 µg/mL × 17 500 mL = 140 000 µg = 140 mg = **0,14 g**.
-Einheitenkette: µg/mL × mL = µg → ÷ 10³ = mg → ÷ 10³ = g.
-
-**Beispiel 3 — Röntgenstrahlung Frequenz in Wellenlänge:**
-Röntgenstrahlung f = 3 × 10¹⁸ Hz. Wellenlänge λ = c/f = (3 × 10⁸ m/s) / (3 × 10¹⁸ s⁻¹) = 10⁻¹⁰ m = **0,1 nm = 1 Å** (Ångström). Diese Wellenlänge liegt im Bereich atomarer Abstände — erklärt, warum Röntgenstrahlung Kristallstrukturen auflösen kann.
-
 ## Zusammenfassung
 
 - **Präfixe**: f (10⁻¹⁵), p (10⁻¹²), n (10⁻⁹), μ (10⁻⁶), m (10⁻³), c (10⁻²), k (10³), M (10⁶), G (10⁹), T (10¹²)
@@ -987,7 +987,7 @@ Die Kinematik beschreibt Bewegung rein geometrisch, ohne die Ursachen zu hinterf
 
 **Vektorielle Darstellung:** Geschwindigkeit und Beschleunigung sind Vektoren — sie haben Betrag (Skalar) und Richtung. Bei schiefer Wurf-Bewegung zerlegt man die Bewegung in horizontale (v_x = const) und vertikale Komponente (v_y = v₀y − g·t). Die Bahnkurve ist eine Parabel.
 
-**Relativbewegung:** Geschwindigkeiten addieren sich vektoriell. Wenn ein Läufer mit 4 m/s in einem Zug fährt, der selbst 30 m/s schnell fährt, ist seine Geschwindigkeit relativ zur Erde 34 m/s (in Fahrtrichtung) oder 26 m/s (entgegen). Dieses Superpositionsprinzip gilt für alle Bewegungsgrößen.
+**Relativbewegung:** Geschwindigkeiten addieren sich vektoriell. Wenn ein Läufer mit 4 m/s in einem Zug fährt, der selbst 30 m/s schnell fährt, ist seine Geschwindigkeit relativ zur Erde 34 m/s (in Fahrtrichtung) oder 26 m/s (entgegen). **Superpositionsprinzip**: Wirken mehrere Kräfte oder Bewegungen gleichzeitig auf einen Körper, addieren sich ihre Vektoren unabhängig voneinander. Das Gesamtergebnis ist die Vektorsumme aller Einzelbeiträge.
 
 ## Das erste Newtonsche Gesetz — Trägheitsgesetz
 

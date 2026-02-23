@@ -822,7 +822,7 @@ A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 · 0,04 
         },
         {
           question:
-            "Mit den Daten aus Frage 2 (TP=80, FP=90): Was ist der positive prädiktive Wert (PPV)?",
+            "Vierfeldertafel (n = 1.000 Personen, Prävalenz 10%, Sensitivität 80%, Spezifität 90%): TP = 80, FP = 90, FN = 20, TN = 810. Was ist der positive prädiktive Wert (PPV)?",
           options: [
             "80/170 ≈ 47%",
             "80/100 = 80%",

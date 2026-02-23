@@ -355,7 +355,7 @@ Wirkung W(d) = −0,4d² + 16d − 40 (d in mg). Optimale Dosis: d_opt = −b/(2
 Näherung p(t) = −200t² + 200t + 80 (mmHg, t in Sekunden). Maximum: t = −200/(2·(−200)) = **0,5 s**. p_max = −200·0,25 + 100 + 80 = **130 mmHg**. Pulsdauer (p = 80): −200t² + 200t = 0 → t(−200t + 200) = 0 → t = 0 und t = **1 s**.
 
 **Beispiel 3 — Herzminutenvolumen und Gefäßwiderstand:**
-HMV = RR / TPR. Wenn RR = −0,02·HMV² + 4·HMV (nicht-lineare Beziehung). Nullstellen: HMV·(−0,02·HMV + 4) = 0 → HMV = 0 oder **200 L/min** (physiologisches Limit). Maximum: HMV = −4/(2·(−0,02)) = **100 L/min** mit RR_max = **200 mmHg**. Realwerte: HMV ≈ 5 L/min bei RR ≈ 19 mmHg (auf der Kurve).
+HMV = RR / TPR. Wenn RR = −0,4·HMV² + 14·HMV (nicht-lineare Beziehung). Nullstellen: HMV·(−0,4·HMV + 14) = 0 → HMV = 0 oder **35 L/min** (physiologisches Limit bei Leistungssportlern). Maximum: HMV = −14/(2·(−0,4)) = **17,5 L/min** mit RR_max = −0,4·306,25 + 14·17,5 = **122,5 mmHg**. Realwerte: HMV ≈ 5 L/min bei RR ≈ 60 mmHg (Ruhewert auf der Kurve).
 
 **Beispiel 4 — Vieta-Schnellmethode:**
 x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ · x₂ = 28. Systematisch probieren: 4 + 7 = 11, 4 · 7 = 28 → **x₁ = 4, x₂ = 7**. Probe: f(4) = 16 − 44 + 28 = 0, f(7) = 49 − 77 + 28 = 0.

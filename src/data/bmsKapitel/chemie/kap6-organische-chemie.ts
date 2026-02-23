@@ -2358,18 +2358,6 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
 - **Basen-Exzisionsreparatur (BER)**: Entfernt oxidierte oder desaminierte Basen durch DNA-Glykosylasen
 - **Homologe Rekombination / NHEJ**: Reparatur von Doppelstrangbrüchen. BRCA1/BRCA2-Mutationen → gestörte homologe Rekombination → erhöhtes Brust-/Ovarialkarzinomrisiko
 
-## Zusammenfassung
-
-- **Nukleotid**: Base (Purin/Pyrimidin) + Pentose (Desoxyribose/Ribose) + Phosphat; Verknüpfung über Phosphodiesterbindung (3'→5')
-- **Chargaff-Regeln**: A=T (2 H-Brücken); G≡C (3 H-Brücken); %A=%T, %G=%C; GC-reiche DNA thermisch stabiler
-- **DNA-Doppelhelix**: antiparallel, rechtsgängig (B-DNA), 10,5 bp/Windung; Zucker-Phosphat-Gerüst außen, Basen innen
-- **RNA-Typen**: mRNA (Matrize), tRNA (Aminosäuretransport), rRNA (Ribosombestandteil), miRNA (post-transkriptionale Regulation)
-- **PCR**: Denaturierung (95°C) → Annealing → Elongation mit Taq-Polymerase; RT-PCR für RNA-Nachweis
-- **Nukleosid-Analoga**: Aciclovir (Herpes), Tenofovir (HIV), Remdesivir (COVID-19) → Kettenabbruch durch fehlendes 3'-OH
-- **DNA-Reparatur**: MMR (Fehlpaarungen, Lynch-Syndrom), NER (UV-Thymin-Dimere, Xeroderma pigmentosum), BER (oxidierte Basen)
-
----
-
 ## MedAT-Fokus
 
 **Häufige Fragen:**
@@ -2386,7 +2374,18 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
 - DNA-Helix (B-Form): 10,5 bp/Windung; 3,4 nm Steigung; antiparallel (5'→3' || 3'→5'); rechtsgängig
 - PCR: Denaturierung 95°C → Annealing ~55–65°C → Elongation 72°C (Taq-Polymerase); 30 Zyklen ≈ 10⁹-fache Vervielfältigung
 - DNA-Reparatur-Defekte: MMR-Defekt → Lynch-Syndrom (HNPCC); NER-Defekt → Xeroderma pigmentosum
-- GC-Berechnung: 60% GC bei 100 bp → 60×3 + 40×2 = 260 H-Brücken (Rechenaufgabe merken!)`,
+- GC-Berechnung: 60% GC bei 100 bp → 60×3 + 40×2 = 260 H-Brücken (Rechenaufgabe merken!)
+
+---
+## Zusammenfassung
+
+- **Nukleotid**: Base (Purin/Pyrimidin) + Pentose (Desoxyribose/Ribose) + Phosphat; Verknüpfung über Phosphodiesterbindung (3'→5')
+- **Chargaff-Regeln**: A=T (2 H-Brücken); G≡C (3 H-Brücken); %A=%T, %G=%C; GC-reiche DNA thermisch stabiler
+- **DNA-Doppelhelix**: antiparallel, rechtsgängig (B-DNA), 10,5 bp/Windung; Zucker-Phosphat-Gerüst außen, Basen innen
+- **RNA-Typen**: mRNA (Matrize), tRNA (Aminosäuretransport), rRNA (Ribosombestandteil), miRNA (post-transkriptionale Regulation)
+- **PCR**: Denaturierung (95°C) → Annealing → Elongation mit Taq-Polymerase; RT-PCR für RNA-Nachweis
+- **Nukleosid-Analoga**: Aciclovir (Herpes), Tenofovir (HIV), Remdesivir (COVID-19) → Kettenabbruch durch fehlendes 3'-OH
+- **DNA-Reparatur**: MMR (Fehlpaarungen, Lynch-Syndrom), NER (UV-Thymin-Dimere, Xeroderma pigmentosum), BER (oxidierte Basen)`,
       lernziele: [
         "Die drei Komponenten eines Nukleotids nennen und Nukleosid von Nukleotid unterscheiden",
         "Die Purin- und Pyrimidinbasen und ihre Paarungsregeln (Chargaff) mit Anzahl der Wasserstoffbrücken beschreiben",

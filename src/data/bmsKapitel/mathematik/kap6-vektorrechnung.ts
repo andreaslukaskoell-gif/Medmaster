@@ -850,9 +850,9 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
         },
         {
           heading: "Inverse Matrix, LGS und Eigenwerte",
-          text: "Die inverse Matrix $A^{-1}$ existiert nur bei $\\det(A) \\neq 0$. Fur 2×2: $A^{-1} = \\frac{1}{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$. Die Cramersche Regel lost ein LGS uber Determinanten: $x_i = \\det(A_i)/\\det(A)$, wobei $A_i$ die $i$-te Spalte durch den Losungsvektor ersetzt. Eigenwerte $\\lambda$ erfullen $\\det(A-\\lambda E)=0$; der zugehorige Eigenvektor wird nur gestreckt, nicht gedreht. Eigenwerte sind zentral fur PCA, Schwingungsanalyse und pharmakokinetische Kompartimentmodelle.",
+          text: "Die inverse Matrix $A^{-1}$ existiert nur bei $\\det(A) \\neq 0$. Fur 2×2: $A^{-1} = \\frac{1}{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$. Die Cramersche Regel löst ein LGS uber Determinanten: $x_i = \\det(A_i)/\\det(A)$, wobei $A_i$ die $i$-te Spalte durch den Losungsvektor ersetzt. Eigenwerte $\\lambda$ erfüllen $\\det(A-\\lambda E)=0$; der zugehorige Eigenvektor wird nur gestreckt, nicht gedreht. Eigenwerte sind zentral fur PCA, Schwingungsanalyse und pharmakokinetische Kompartimentmodelle.",
           merksatz:
-            "Inverse: A⁻¹ = (1/det)·adj(A). Cramer: xᵢ = det(Aᵢ)/det(A). Eigenwert: A·v = λ·v — Richtung bleibt, nur Betrag andert sich.",
+            "Inverse: A⁻¹ = (1/det)·adj(A). Cramer: xᵢ = det(Aᵢ)/det(A). Eigenwert: A·v = λ·v — Richtung bleibt, nur Betrag ändert sich.",
         },
       ],
       diagram: "vector-addition",

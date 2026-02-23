@@ -721,18 +721,6 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
 - **Gefahren**: Radon-222 (Alphazerfall, Inhalation → zweitgrößte Ursache von Lungenkrebs nach Rauchen in Europa); ionisierende Strahlung → DNA-Doppelstrangbrüche → Krebsrisiko (stochastisch, kein Schwellenwert nach LNT-Modell)
 - **Schutzmaßnahme nach Atomunfall**: Kaliumiodid (KI) sättigt die Schilddrüse mit stabilem Iod → verhindert Einbau von radioaktivem ¹³¹I. Besonders wichtig für Kinder (höherer Jodumsatz, längere Restlebenserwartung)
 
-## Zusammenfassung
-
-- **α-Zerfall**: Z−2, A−4; Teilchen = ⁴He; Reichweite nur cm in Luft → stoppt bei Papier; gefährlich bei Inhalation
-- **β⁻-Zerfall**: n → p + e⁻ + ν̄ₑ; Z+1, A gleich; Reichweite mm–cm; stoppt bei Aluminiumfolie
-- **β⁺-Zerfall**: p → n + e⁺ + νₑ; Z−1, A gleich; Positron + Elektron → 2×γ (511 keV, 180°) = **Basis der PET**
-- **γ-Strahlung**: elektromagnetisch (kein Teilchen), Z und A unverändert; sehr hohe Reichweite → Abschirmung: Blei/Beton
-- **Halbwertszeit T½**: N(t) = N₀ × (½)^(t/T½); nach n HWZ verbleiben N₀/2ⁿ
-- Wichtige Nuklide: **⁹⁹ᵐTc** (T½ 6 h, Szintigraphie), **¹⁸F** (110 min, PET), **¹³¹I** (8 d, Schilddrüsentherapie), **¹⁴C** (5730 a, Datierung)
-- Strahlenschutz: Abstand (Intensität ∝ 1/r²), Zeit minimieren, Material abschirmen
-- Einheiten: **Gray (Gy)** = absorbierte Dosis; **Sievert (Sv)** = biologisch gewichtete Dosis (α-Faktor: 20!)
-- Bei Kernatomunfall: **Kaliumiodid (KI)** sättigt Schilddrüse → verhindert ¹³¹I-Aufnahme
-
 ## MedAT-Fokus
 
 **Häufige Fragen:**
@@ -751,7 +739,18 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
 - Abschirmung: α → Papier; β → Aluminium (mm); γ/n → Blei/Beton
 - 1 Gy α-Strahlung = 20 Sv biologischer Wirkung (Wichtungsfaktor 20)
 
----`,
+---
+## Zusammenfassung
+
+- **α-Zerfall**: Z−2, A−4; Teilchen = ⁴He; Reichweite nur cm in Luft → stoppt bei Papier; gefährlich bei Inhalation
+- **β⁻-Zerfall**: n → p + e⁻ + ν̄ₑ; Z+1, A gleich; Reichweite mm–cm; stoppt bei Aluminiumfolie
+- **β⁺-Zerfall**: p → n + e⁺ + νₑ; Z−1, A gleich; Positron + Elektron → 2×γ (511 keV, 180°) = **Basis der PET**
+- **γ-Strahlung**: elektromagnetisch (kein Teilchen), Z und A unverändert; sehr hohe Reichweite → Abschirmung: Blei/Beton
+- **Halbwertszeit T½**: N(t) = N₀ × (½)^(t/T½); nach n HWZ verbleiben N₀/2ⁿ
+- Wichtige Nuklide: **⁹⁹ᵐTc** (T½ 6 h, Szintigraphie), **¹⁸F** (110 min, PET), **¹³¹I** (8 d, Schilddrüsentherapie), **¹⁴C** (5730 a, Datierung)
+- Strahlenschutz: Abstand (Intensität ∝ 1/r²), Zeit minimieren, Material abschirmen
+- Einheiten: **Gray (Gy)** = absorbierte Dosis; **Sievert (Sv)** = biologisch gewichtete Dosis (α-Faktor: 20!)
+- Bei Kernatomunfall: **Kaliumiodid (KI)** sättigt Schilddrüse → verhindert ¹³¹I-Aufnahme`,
 
       lernziele: [
         "Die drei Hauptarten der radioaktiven Strahlung (α, β, γ) hinsichtlich Natur, Reichweite, Abschirmung und Veränderung von Z und A beschreiben.",
@@ -1062,17 +1061,6 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
 
 **Limitierender Reaktand:** Liegt ein Edukt im Unterschuss vor, bestimmt es die maximale Produktmenge. Die übrigen Edukte verbleiben als Überschuss.
 
-## Zusammenfassung
-
-- **1 u** (atomare Masseneinheit) = 1/12 der Masse von ¹²C; Proton ≈ Neutron ≈ 1 u; Elektron vernachlässigbar (~1/2000 Protonmasse)
-- **Molare Masse M** [g/mol]: numerisch gleich der relativen Atommasse; M(H₂O) = 18 g/mol, M(NaCl) = 58,4 g/mol, M(Glukose) = 180 g/mol
-- **Avogadro-Konstante**: Nₐ = 6,022 × 10²³ mol⁻¹ — so viele Teilchen enthält 1 Mol
-- Formeln: **n = m/M** (mol = g ÷ g/mol); **n = N/Nₐ**; **c = n/V** (Molarität in mol/L)
-- **Osmolarität** [mosmol/L] = Summe aller Teilchenkonzentrationen; Ionen einzeln zählen (NaCl: i = 2)
-- Blutplasma-Osmolarität ≈ **290 mosmol/L**; 0,9 % NaCl ≈ 308 mosmol/L (klinisch als isoton verwendet)
-- **Verdünnungsformel**: c₁ × V₁ = c₂ × V₂ (Stoffmenge bleibt konstant)
-- **Stöchiometrie**: Koeffizienten in Reaktionsgleichungen = Mol-Verhältnisse; limitierender Reaktand bestimmt max. Ausbeute
-
 ## MedAT-Fokus
 
 **Häufige Fragen:**
@@ -1091,7 +1079,17 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
 - Blutplasma: ≈ 290 mosmol/L; 0,9 % NaCl ≈ 308 mosmol/L (klinisch als isoton verwendet)
 - Verdünnungsformel: c₁ × V₁ = c₂ × V₂ (Stoffmenge bleibt konstant)
 
----`,
+---
+## Zusammenfassung
+
+- **1 u** (atomare Masseneinheit) = 1/12 der Masse von ¹²C; Proton ≈ Neutron ≈ 1 u; Elektron vernachlässigbar (~1/2000 Protonmasse)
+- **Molare Masse M** [g/mol]: numerisch gleich der relativen Atommasse; M(H₂O) = 18 g/mol, M(NaCl) = 58,4 g/mol, M(Glukose) = 180 g/mol
+- **Avogadro-Konstante**: Nₐ = 6,022 × 10²³ mol⁻¹ — so viele Teilchen enthält 1 Mol
+- Formeln: **n = m/M** (mol = g ÷ g/mol); **n = N/Nₐ**; **c = n/V** (Molarität in mol/L)
+- **Osmolarität** [mosmol/L] = Summe aller Teilchenkonzentrationen; Ionen einzeln zählen (NaCl: i = 2)
+- Blutplasma-Osmolarität ≈ **290 mosmol/L**; 0,9 % NaCl ≈ 308 mosmol/L (klinisch als isoton verwendet)
+- **Verdünnungsformel**: c₁ × V₁ = c₂ × V₂ (Stoffmenge bleibt konstant)
+- **Stöchiometrie**: Koeffizienten in Reaktionsgleichungen = Mol-Verhältnisse; limitierender Reaktand bestimmt max. Ausbeute`,
 
       lernziele: [
         "Die atomare Masseneinheit u definieren und die Massen von Proton, Neutron und Elektron in u angeben.",
@@ -1331,17 +1329,6 @@ Die Wasserlöslichkeit von Pharmaka hängt direkt von intermolekularen Wechselwi
 
 Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydrophoben Wechselwirkungen und ionischen Kontakten — **Denaturierung** durch Hitze, Harnstoff oder pH-Änderung bricht dieses Netzwerk auf. Bei der **PCR** wird die DNA durch Erhitzen auf 94–98 °C (Denaturierungsschritt) vollständig aufgebrochen, weil alle H-Brücken zwischen den Basenpaaren überwunden werden, während die kovalenten Phosphodiesterbindungen intakt bleiben.
 
-## Zusammenfassung
-
-- **Van-der-Waals-Kräfte** (3 Typen): London (alle Moleküle, ∝ Molmasse), Keesom (Dipol–Dipol), Debye (Dipol–induzierter Dipol)
-- Stärkeranking: Ionenbindung > kovalent > **Wasserstoffbrücke** (10–40 kJ/mol) > Dipol–Dipol > London
-- **Wasserstoffbrücken**: X–H···Y mit X, Y ∈ {N, O, F}; Energie 10–40 kJ/mol; gerichtet, kooperativ
-- Wasser: 4 H-Brücken pro Molekül → hoher Siedepunkt (100 °C), hohe Verdampfungswärme (Thermoregulation)
-- **DNA**: A–T bildet 2 H-Brücken, G–C bildet 3 → GC-reiche DNA stabiler (höhere Schmelztemperatur)
-- Proteine: α-Helix und β-Faltblatt durch H-Brücken stabilisiert; Denaturierung bricht diese auf
-- **Hydrophober Effekt**: unpolare Gruppen lagern sich zusammen → Entropiegewinn; treibt Proteinfaltung und Membranbildung
-- Pharmaka: polar = wasserlöslich (renal eliminiert); unpolar = lipophil (hepatisch metabolisiert); Lipinski-Regel
-
 ## MedAT-Fokus
 
 **Häufige Fragen:**
@@ -1359,7 +1346,17 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
 - DNA: A=T (2 H-Brücken); G≡C (3 H-Brücken) → GC-reiche DNA thermisch stabiler (höhere Schmelztemperatur Tm)
 - PCR-Denaturierung: 94–98 °C bricht H-Brücken in DNA auf; kovalente Phosphodiesterbindungen bleiben intakt
 
----`,
+---
+## Zusammenfassung
+
+- **Van-der-Waals-Kräfte** (3 Typen): London (alle Moleküle, ∝ Molmasse), Keesom (Dipol–Dipol), Debye (Dipol–induzierter Dipol)
+- Stärkeranking: Ionenbindung > kovalent > **Wasserstoffbrücke** (10–40 kJ/mol) > Dipol–Dipol > London
+- **Wasserstoffbrücken**: X–H···Y mit X, Y ∈ {N, O, F}; Energie 10–40 kJ/mol; gerichtet, kooperativ
+- Wasser: 4 H-Brücken pro Molekül → hoher Siedepunkt (100 °C), hohe Verdampfungswärme (Thermoregulation)
+- **DNA**: A–T bildet 2 H-Brücken, G–C bildet 3 → GC-reiche DNA stabiler (höhere Schmelztemperatur)
+- Proteine: α-Helix und β-Faltblatt durch H-Brücken stabilisiert; Denaturierung bricht diese auf
+- **Hydrophober Effekt**: unpolare Gruppen lagern sich zusammen → Entropiegewinn; treibt Proteinfaltung und Membranbildung
+- Pharmaka: polar = wasserlöslich (renal eliminiert); unpolar = lipophil (hepatisch metabolisiert); Lipinski-Regel`,
 
       lernziele: [
         "Die drei Klassen der van-der-Waals-Kräfte (London, Keesom, Debye) und ihre Entstehungsmechanismen erklären können.",
@@ -1649,17 +1646,6 @@ Eigenschaften, die nur von der **Teilchenzahl**, nicht von der Art des Gelösten
 
 Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechnete Osmolalität: 2×[Na⁺] + [Glukose]/18 + [Harnstoff]/6 (Einheiten in mg/dL) bzw. vereinfacht 2×[Na] + [Glukose] + [Harnstoff] (Einheiten in mmol/L).
 
-## Zusammenfassung
-
-- **"Similia similibus solvuntur"**: Polar löst polar (Wasser → Ionen, OH-Gruppen); unpolar löst unpolar (Hexan → Fette, Steroide)
-- **Amphiphile Moleküle** (Phospholipide, Detergenzien, Gallensäuren): polarer Kopf + unpolarer Schwanz → Mizellen in Wasser
-- **Löslichkeitsprodukt Ksp**: BaSO₄ (Ksp ~10⁻¹⁰, sicheres Röntgenkontrastmittel), Ca-Oxalat (Nierensteine)
-- **Osmose**: Wasserbewegung durch semipermeable Membran von niedriger zu hoher Teilchenkonzentration
-- Osmotischer Druck π = i · c · R · T; van't-Hoff-Faktor i: Glukose = 1, NaCl = 2
-- **Blutplasma-Osmolarität**: 285–295 mOsmol/L → hypoton (<270): Hämolyse; hyperton (>310): Erythrozyten schrumpfen
-- **Onkotischer Druck**: Albumin (~25 mmHg) hält Wasser im Gefäß; Hypoalbuminämie → Ödeme
-- Kolligative Eigenschaften (abhängig nur von Teilchenzahl): Siedepunktserhöhung, Gefrierpunktserniedrigung, Osmose
-
 ## MedAT-Fokus
 
 **Häufige Fragen:**
@@ -1678,7 +1664,17 @@ Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechne
 - Van't-Hoff-Faktor i: NaCl = 2; CaCl₂ = 3; AlCl₃ = 4; Glukose = 1
 - Albumin: ≈ 25 mmHg onkotischer Druck; Hypoalbuminämie → Ödeme (nephrotisches Syndrom, Leberzirrhose)
 
----`,
+---
+## Zusammenfassung
+
+- **"Similia similibus solvuntur"**: Polar löst polar (Wasser → Ionen, OH-Gruppen); unpolar löst unpolar (Hexan → Fette, Steroide)
+- **Amphiphile Moleküle** (Phospholipide, Detergenzien, Gallensäuren): polarer Kopf + unpolarer Schwanz → Mizellen in Wasser
+- **Löslichkeitsprodukt Ksp**: BaSO₄ (Ksp ~10⁻¹⁰, sicheres Röntgenkontrastmittel), Ca-Oxalat (Nierensteine)
+- **Osmose**: Wasserbewegung durch semipermeable Membran von niedriger zu hoher Teilchenkonzentration
+- Osmotischer Druck π = i · c · R · T; van't-Hoff-Faktor i: Glukose = 1, NaCl = 2
+- **Blutplasma-Osmolarität**: 285–295 mOsmol/L → hypoton (<270): Hämolyse; hyperton (>310): Erythrozyten schrumpfen
+- **Onkotischer Druck**: Albumin (~25 mmHg) hält Wasser im Gefäß; Hypoalbuminämie → Ödeme
+- Kolligative Eigenschaften (abhängig nur von Teilchenzahl): Siedepunktserhöhung, Gefrierpunktserniedrigung, Osmose`,
 
       lernziele: [
         'Das Löslichkeitsprinzip "Similia similibus solvuntur" auf polare, unpolare und amphiphile Substanzen anwenden können.',
@@ -1980,17 +1976,6 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
 - **Lungenembolie durch Fettembolie:** Fetttröpfchen aus Knochenmarkschädigung (Fraktur) bilden Emulsion im Blut und können Lungenarterien verlegen
 - **Surfactant der Lunge:** Phospholipid-Gemisch (Dipalmitoylphosphatidylcholin, DPPC), das die Alveolen-Wasser-Grenzfläche stabilisiert und die Oberflächenspannung senkt → verhindert Alveolarkollaps; bei Frühgeborenen noch nicht ausgereift → **Atemnotsyndrom (RDS)**
 
-## Zusammenfassung
-
-- **3 Aggregatzustände**: fest (Gitter, definiertes Volumen), flüssig (Nahordnung, fließfähig), gasförmig (keine Ordnung, kompressibel)
-- Übergänge zu "freierem" Zustand sind **endotherm** (Energie nötig); zu "geordnetem" Zustand sind **exotherm** (Energie frei)
-- **Sublimation** (fest→gas, z.B. CO₂): endotherm; Gefriertrocknung (Impfstoffkonservierung) nutzt dieses Prinzip
-- Dampfverbrennungen = schlimmer als Wasserverbrennungen gleicher Temp. → Kondensation gibt zusätzlich Verdampfungswärme ab (exotherm)
-- **Siedepunkt** = wenn Dampfdruck = äußerer Druck; im Gebirge (↓ Luftdruck) → niedrigerer Siedepunkt
-- **Kolloide**: Partikel 1–1000 nm; zwischen echter Lösung und Suspension; zeigen Brownsche Bewegung und Tyndall-Effekt
-- Kolloide: Typen — Sol, Emulsion, Gel, Aerosol; medizinisch: HAES, Albumin als Volumenersatz
-- **Surfactant** (Dipalmitoylphosphatidylcholin): senkt Alveolen-Oberflächenspannung; Frühgeborene: fehlend → Atemnotsyndrom (RDS)
-
 ## MedAT-Fokus
 
 **Häufige Fragen:**
@@ -2009,7 +1994,17 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
 - Kolloide: 1 nm–1 μm; zeigen Tyndall-Effekt; Brownsche Bewegung verhindert Sedimentation
 - Surfactant (DPPC): fehlt bei Frühgeborenen (<34 SSW) → Alveolarkollaps → Atemnotsyndrom (RDS)
 
----`,
+---
+## Zusammenfassung
+
+- **3 Aggregatzustände**: fest (Gitter, definiertes Volumen), flüssig (Nahordnung, fließfähig), gasförmig (keine Ordnung, kompressibel)
+- Übergänge zu "freierem" Zustand sind **endotherm** (Energie nötig); zu "geordnetem" Zustand sind **exotherm** (Energie frei)
+- **Sublimation** (fest→gas, z.B. CO₂): endotherm; Gefriertrocknung (Impfstoffkonservierung) nutzt dieses Prinzip
+- Dampfverbrennungen = schlimmer als Wasserverbrennungen gleicher Temp. → Kondensation gibt zusätzlich Verdampfungswärme ab (exotherm)
+- **Siedepunkt** = wenn Dampfdruck = äußerer Druck; im Gebirge (↓ Luftdruck) → niedrigerer Siedepunkt
+- **Kolloide**: Partikel 1–1000 nm; zwischen echter Lösung und Suspension; zeigen Brownsche Bewegung und Tyndall-Effekt
+- Kolloide: Typen — Sol, Emulsion, Gel, Aerosol; medizinisch: HAES, Albumin als Volumenersatz
+- **Surfactant** (Dipalmitoylphosphatidylcholin): senkt Alveolen-Oberflächenspannung; Frühgeborene: fehlend → Atemnotsyndrom (RDS)`,
 
       lernziele: [
         "Die drei Aggregatzustände und ihre Eigenschaften kennen sowie alle Phasenübergänge mit Wärmetönung (endo-/exotherm) benennen können.",
@@ -2320,17 +2315,6 @@ Der **Metallcharakter** nimmt zu: in einer Periode von rechts nach links und in 
 
 Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insulinwirkung). Chrom(VI): stark karzinogen.
 
-## Zusammenfassung
-
-- **PSE**: 7 Perioden (Zeilen, Hauptquantenzahl n), 18 Gruppen (Spalten, Valenzelektronen), 4 Blöcke (s, p, d, f)
-- Perioden-Längen: 2 – 8 – 8 – 18 – 18 – 32 – 32 (Kapazität der Unterschalen)
-- **s-Block** (Gr. 1–2): Alkali- und Erdalkalimetalle; **p-Block** (Gr. 13–18): Nichtmetalle + Halbmetalle + Edelgase
-- **d-Block** (Gr. 3–12): Übergangsmetalle; **f-Block**: Lanthanoide/Actinoide (ausgelagert)
-- Gruppenposition im p-Block: Gruppennummer = 10 + Valenzelektronenzahl (z.B. Gr. 17 = 7 VE = Halogene)
-- **Metallcharakter**: in Periode von links→rechts abnehmend; in Gruppe von oben→unten zunehmend
-- Halbmetalle (Metalloide) entlang der Treppe: B, Si, Ge, As, Sb, Te, At
-- **Mendelejew** (1869): ordnete nach Atommasse, sagte Eigenschaften unbekannter Elemente vorher; **Moseley** (1913): Ordnung nach Kernladungszahl Z
-
 ## MedAT-Fokus
 
 **Häufige Fragen:**
@@ -2348,7 +2332,17 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
 - Halbmetalle (Treppenlinie): B, Si, Ge, As, Sb, Te, At — Halbleitereigenschaften
 - Mendelejew (1869): nach Atommasse, Vorhersage unentdeckter Elemente; Moseley (1913): nach Kernladungszahl Z (löst alle Anomalien)
 
----`,
+---
+## Zusammenfassung
+
+- **PSE**: 7 Perioden (Zeilen, Hauptquantenzahl n), 18 Gruppen (Spalten, Valenzelektronen), 4 Blöcke (s, p, d, f)
+- Perioden-Längen: 2 – 8 – 8 – 18 – 18 – 32 – 32 (Kapazität der Unterschalen)
+- **s-Block** (Gr. 1–2): Alkali- und Erdalkalimetalle; **p-Block** (Gr. 13–18): Nichtmetalle + Halbmetalle + Edelgase
+- **d-Block** (Gr. 3–12): Übergangsmetalle; **f-Block**: Lanthanoide/Actinoide (ausgelagert)
+- Gruppenposition im p-Block: Gruppennummer = 10 + Valenzelektronenzahl (z.B. Gr. 17 = 7 VE = Halogene)
+- **Metallcharakter**: in Periode von links→rechts abnehmend; in Gruppe von oben→unten zunehmend
+- Halbmetalle (Metalloide) entlang der Treppe: B, Si, Ge, As, Sb, Te, At
+- **Mendelejew** (1869): ordnete nach Atommasse, sagte Eigenschaften unbekannter Elemente vorher; **Moseley** (1913): Ordnung nach Kernladungszahl Z`,
 
       lernziele: [
         "Den Aufbau des PSE mit Perioden, Gruppen und Bloecken erklaeren und den Zusammenhang zur Quantenzahlsystematik herstellen",

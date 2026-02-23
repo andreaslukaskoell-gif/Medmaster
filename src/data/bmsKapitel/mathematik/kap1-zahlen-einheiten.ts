@@ -497,7 +497,7 @@ Lösung: 0,01 µg/mL = 10 ng/mL (da 1 µg = 1.000 ng → 0,01 × 1.000 = 10). Al
               ["Mikro", "µ", "0,000 001", "10⁻⁶"],
               ["Nano", "n", "0,000 000 001", "10⁻⁹"],
               ["Piko", "p", "0,000 000 000 001", "10⁻¹²"],
-              ["Femto", "f", "—", "10⁻¹⁵"],
+              ["Femto", "f", "0,000 000 000 000 001", "10⁻¹⁵"],
             ],
           },
           merksatz:
@@ -1210,7 +1210,7 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
 - **Länge**: 1 m = 100 cm = 1.000 mm = 10⁶ µm = 10⁹ nm; 1 km = 1.000 m
 - **Fläche**: 1 m² = 10.000 cm² = 10⁶ mm²; Umrechnungsfaktor wird quadriert!
 - **Volumen**: 1 m³ = 10⁶ cm³ = 10⁹ mm³; 1 L = 1 dm³ = 1.000 cm³ = 1.000 mL
-- **BSA (DuBois)**: BSA = 0,007184 × Größe^0,725 × Gewicht^0,425; Mosteller: √(Größe×Gewicht/3600)
+- **BSA (Mosteller)**: √(Größe[cm] × Gewicht[kg] / 3.600); Erwachsener ~1,73 m²
 - **Klinisch**: Hb 14 g/dL = 140 g/L; Hauttransplantation in cm² berechnen; Chemotherapiedosis in mg/m²`,
       lernziele: [
         "Längeneinheiten von km bis nm über die Zehnerpotenzen-Hierarchie korrekt umrechnen",

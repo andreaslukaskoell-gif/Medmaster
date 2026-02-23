@@ -65,7 +65,7 @@ Für kleine Winkel (< 5°, Kleinwinkelnäherung sin θ ≈ θ) verhält sich ein
 
 **T = 2π · √(l/g)**
 
-Die Periodendauer ist **unabhängig** von Masse und Amplitude (Isochronie). Praktische Konsequenz: Verdoppelt man die Länge, steigt T um den Faktor √2 ≈ 1,41. Auf dem Mond (g ≈ 1,62 m/s²) schwingt dasselbe Pendel etwa 2,45-mal langsamer.
+Die Periodendauer ist **unabhängig** von Masse und Amplitude (**Isochronie** = die Schwingungsdauer T ist unabhängig von der Amplitude, solange die Auslenkung klein bleibt; gilt für Faden- und Federpendel im Kleinwinkelbereich). Praktische Konsequenz: Verdoppelt man die Länge, steigt T um den Faktor √2 ≈ 1,41. Auf dem Mond (g ≈ 1,62 m/s²) schwingt dasselbe Pendel etwa 2,45-mal langsamer.
 
 > **Merke:** Beim Fadenpendel bestimmen nur Fadenlänge l und Erdbeschleunigung g die Periodendauer. Masse und Amplitude spielen keine Rolle (solange die Winkel klein bleiben).
 
@@ -422,6 +422,21 @@ Das EM-Spektrum umfasst (von niedrig nach hoch Frequenz):
 Diagnostischer Ultraschall nutzt Frequenzen von **2–20 MHz** (weit über menschliches Hören hinaus). Hochfrequenter Ultraschall hat kurze Wellenlänge → bessere Ortsauflösung, aber geringere Gewebeeindringtiefe. Ultraschall breitet sich in Geweben mit c ≈ 1540 m/s aus.
 
 Das **Impuls-Echo-Verfahren** (A-Mode, B-Mode) sendet kurze Ultraschallpulse und misst die Laufzeit des reflektierten Echos. Die Reflexionsstärke hängt vom Impedanzunterschied der Gewebe ab. Je grösser der Impedanzunterschied an einer Grenzfläche, desto stärker das Echo.
+
+## Akustische Impedanz — Widerstand gegen Schallausbreitung
+
+Die **akustische Impedanz** Z beschreibt, wie leicht sich Schall in einem Medium ausbreitet:
+
+**Z = ρ · c** (mit ρ = Dichte des Mediums in kg/m³, c = Schallgeschwindigkeit in m/s, Einheit: Pa·s/m = Rayl)
+
+Trifft eine Schallwelle auf eine Grenzfläche zwischen zwei Medien mit unterschiedlicher Impedanz (Z₁ ≠ Z₂), wird ein Teil reflektiert (Echographie nutzt dies) und ein Teil transmittiert.
+
+**Reflexionskoeffizient:** R = [(Z₂ − Z₁)/(Z₂ + Z₁)]²
+
+- Luft/Gewebe-Grenzfläche: R ≈ 0,998 → fast vollständige Reflexion → deshalb Ultraschall-Gel nötig
+- Weichteil/Knochen-Grenzfläche: R ≈ 0,4 → starke Reflexion
+
+> **Merke:** Große Impedanzdifferenz → starke Reflexion → schlechte Bildgebung. Gel beseitigt die Luft-Gewebe-Grenzfläche und ermöglicht optimale Schallkopplung.
 
 ## Rechenbeispiele
 

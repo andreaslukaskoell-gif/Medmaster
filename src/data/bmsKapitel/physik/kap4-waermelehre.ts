@@ -141,7 +141,7 @@ Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der 
 ## Zusammenfassung
 
 - **Temperaturskalen**: T[K] = T[°C] + 273,15; T[°F] = T[°C] · 9/5 + 32; 0 K = absoluter Nullpunkt
-- **Wärmemenge**: Q = m·c·ΔT; c(Wasser) = 4190 J/(kg·K) — höchste natürliche spez. Wärmekapazität
+- **Wärmemenge**: Q = m·c·ΔT; c(Wasser) = 4180 J/(kg·K) — höchste natürliche spez. Wärmekapazität
 - **Wärmekapazität des Körpers**: c ≈ 3500 J/(kg·K); Fieber 37→40 °C bei 70 kg = ~735 kJ
 - **Thermische Ausdehnung**: ΔL = α·L₀·ΔT; ΔV = γ·V₀·ΔT (γ ≈ 3α für isotrope Stoffe)
 - **Mischungstemperatur**: T_m = (m₁·c₁·T₁ + m₂·c₂·T₂) / (m₁·c₁ + m₂·c₂)
@@ -674,6 +674,9 @@ Die innere Energie U ist die Gesamtenergie aller Mikrozustände (Translation, Ro
 Spezielle Zustandsänderungen:
 - **Isochor** (V = const): W = 0 → ΔU = Q (gesamte Wärme erhöht innere Energie)
 - **Isobar** (p = const): W = −p·ΔV → ΔU = Q − p·ΔV
+
+Bei **isobaren Prozessen** (p = const) leistet das System Volumenarbeit gegen den konstanten Außendruck. Klinisch relevant: Lungenbelüftung bei Spontanatmung ist näherungsweise isobar (Atmosphärendruck bleibt konstant, Volumen ändert sich durch Diaphragmakontration).
+
 - **Isotherm** (T = const): ΔU = 0 → Q = −W (beim idealen Gas)
 - **Adiabatisch** (Q = 0): ΔU = W (alle Arbeit geht in innere Energie, Temperatur ändert sich)
 

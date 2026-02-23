@@ -178,9 +178,9 @@ Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gi
 
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        frage:
+        question:
           "Erläutern Sie die Ionenbindung am Beispiel von Magnesiumoxid (MgO). Gehen Sie dabei auf die Entstehung, die Gitterenergie und die daraus resultierenden Eigenschaften ein und vergleichen Sie mit NaCl.",
-        antwort: `Magnesiumoxid entsteht durch vollständige Elektronenübertragung von Magnesium auf Sauerstoff. Magnesium (Gruppe 2) gibt 2 Valenzelektronen ab und wird zum Mg²⁺-Kation (Elektronenkonfiguration von Neon). Sauerstoff (Gruppe 16) nimmt 2 Elektronen auf und wird zum O²⁻-Anion (ebenfalls Neon-Konfiguration).
+        answer: `Magnesiumoxid entsteht durch vollständige Elektronenübertragung von Magnesium auf Sauerstoff. Magnesium (Gruppe 2) gibt 2 Valenzelektronen ab und wird zum Mg²⁺-Kation (Elektronenkonfiguration von Neon). Sauerstoff (Gruppe 16) nimmt 2 Elektronen auf und wird zum O²⁻-Anion (ebenfalls Neon-Konfiguration).
 
 Die Gitterenergie von MgO beträgt etwa −3795 kJ/mol, verglichen mit −786 kJ/mol bei NaCl. Dieser enorme Unterschied erklärt sich durch das Coulombsche Gesetz: Die potenzielle Energie zwischen Ionen ist proportional zum Produkt der Ladungen (q₁·q₂) und umgekehrt proportional zum Abstand (r). Bei MgO wirken doppelt geladene Ionen mit zudem kleinerem Ionenradius (Mg²⁺: 72 pm, O²⁻: 140 pm vs. Na⁺: 102 pm, Cl⁻: 181 pm), was zu einem rund fünffach stärkeren Gitter führt.
 
@@ -550,9 +550,9 @@ Delokalisierung stabilisiert Moleküle (Resonanzenergie). Aromatizität ist ein 
 
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        frage:
+        question:
           "Erklären Sie anhand von Wasser (H₂O) und Kohlendioxid (CO₂) den Unterschied zwischen Bindungspolarität und Molekülpolarität. Welche Folgen hat dies für die physikalischen und biologischen Eigenschaften dieser Moleküle?",
-        antwort: `Sowohl H₂O als auch CO₂ enthalten polare kovalente Bindungen: In H₂O beträgt die EN-Differenz O–H ≈ 1,4 (O: 3,5; H: 2,1), in CO₂ beträgt die EN-Differenz C=O ≈ 1,0 (O: 3,5; C: 2,5). Beide Moleküle besitzen also polare Bindungen.
+        answer: `Sowohl H₂O als auch CO₂ enthalten polare kovalente Bindungen: In H₂O beträgt die EN-Differenz O–H ≈ 1,4 (O: 3,5; H: 2,1), in CO₂ beträgt die EN-Differenz C=O ≈ 1,0 (O: 3,5; C: 2,5). Beide Moleküle besitzen also polare Bindungen.
 
 Der entscheidende Unterschied liegt in der Geometrie: CO₂ ist linear (sp-hybridisierter Kohlenstoff, 180°), sodass sich die beiden C=O-Dipole exakt aufheben — Gesamtdipolmoment = 0, das Molekül ist unpolar. H₂O hingegen ist gewinkelt (sp³-hybridisierter Sauerstoff, 104,5°, zwei freie Elektronenpaare), sodass die beiden O–H-Dipole in die gleiche Richtung zeigen und sich addieren — Gesamtdipolmoment 1,85 D, das Molekül ist stark polar.
 
@@ -889,9 +889,9 @@ Wasser siedet bei 100 °C (H₂O, MM = 18 g/mol), während H₂S bei −60 °C s
 
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        frage:
+        question:
           "Erklären Sie die Bedeutung der Wasserstoffbrückenbindungen für die Struktur und Funktion der DNA-Doppelhelix. Warum ist GC-reiche DNA thermisch stabiler als AT-reiche DNA?",
-        antwort: `Die DNA-Doppelhelix wird durch Wasserstoffbrücken zwischen den komplementären Basenpaaren auf den gegenüberliegenden Strängen zusammengehalten. Adenin (A) paart mit Thymin (T) über 2 Wasserstoffbrücken, Guanin (G) paart mit Cytosin (C) über 3 Wasserstoffbrücken. Die H-Brücken folgen der spezifischen Geometrie der Basenpaare: Donoren (N–H oder O–H) wechselwirken mit Akzeptoren (N oder O mit freiem Elektronenpaar) in präzise ausgerichteter Weise, was die Basenpaarspezifität garantiert.
+        answer: `Die DNA-Doppelhelix wird durch Wasserstoffbrücken zwischen den komplementären Basenpaaren auf den gegenüberliegenden Strängen zusammengehalten. Adenin (A) paart mit Thymin (T) über 2 Wasserstoffbrücken, Guanin (G) paart mit Cytosin (C) über 3 Wasserstoffbrücken. Die H-Brücken folgen der spezifischen Geometrie der Basenpaare: Donoren (N–H oder O–H) wechselwirken mit Akzeptoren (N oder O mit freiem Elektronenpaar) in präzise ausgerichteter Weise, was die Basenpaarspezifität garantiert.
 
 GC-Paare sind thermisch stabiler als AT-Paare, weil sie 3 Wasserstoffbrücken bilden statt 2. Bei der Denaturierung (Schmelztemperatur Tm) der DNA werden diese H-Brücken aufgebrochen. Regionen mit hohem GC-Gehalt benötigen mehr thermische Energie (höheres Tm), da pro Basenpaar im Durchschnitt mehr H-Brücken zu lösen sind. Dies ist klinisch relevant: PCR-Primer-Design berücksichtigt GC-Gehalt zur Optimierung der Anlagerungstemperatur. Auch die Denaturierung von Pathogen-DNA durch Hitze (Sterilisation) basiert auf diesem Prinzip.
 
@@ -1263,9 +1263,9 @@ Lipinski's Rule of Five für orale Bioverfügbarkeit: MW ≤ 500, logP ≤ 5, H-
 
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        frage:
+        question:
           "Beschreiben Sie die Kräfte, die zur Proteinfaltung und Stabilisierung der Tertiärstruktur von Proteinen beitragen. Welche Rolle spielen kovalente und nichtkovalente Wechselwirkungen, und was passiert bei der Denaturierung?",
-        antwort: `Die Tertiärstruktur eines Proteins — seine einzigartige dreidimensionale Faltung — wird durch ein komplexes Zusammenspiel verschiedener Bindungstypen stabilisiert:
+        answer: `Die Tertiärstruktur eines Proteins — seine einzigartige dreidimensionale Faltung — wird durch ein komplexes Zusammenspiel verschiedener Bindungstypen stabilisiert:
 
 Kovalente Bindungen: Disulfidbrücken (–S–S–) zwischen Cystein-Resten sind die einzige kovalente (nicht-Rückgrat) Stabilisierungskraft der Tertiärstruktur. Sie sind besonders wichtig in Proteinen, die in oxidativen Umgebungen vorkommen (extrazelluläre Proteine, Antikörper, Insulin).
 
