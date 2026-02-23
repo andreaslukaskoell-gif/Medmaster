@@ -25,7 +25,11 @@ export const chemKap6: Kapitel = {
         "Coulombsches Gesetz",
         "NaCl-Gitter",
       ],
-      content: `## Entstehung der Ionenbindung
+      content: `## Einleitung
+
+Salz ist überall — im Blut, im Schweiß, im Knochen. Was hält Kochsalz (NaCl) zusammen? Natrium gibt ein Elektron ab, Chlor nimmt es auf — beide werden zu stabilen Ionen mit Edelgaskonfiguration. Die elektrostatische Anziehung zwischen entgegengesetzt geladenen Ionen heißt **Ionenbindung**. Für den MedAT sind Gitterenergie, Born-Haber-Kreisprozess, Eigenschaften von Ionenverbindungen (Schmelzpunkt, Sprödigkeit, Leitfähigkeit) und klinisch relevante Salze prüfungsrelevant.
+
+## Entstehung der Ionenbindung
 
 Die **Ionenbindung** (heteropolare Bindung) entsteht durch vollständige **Elektronenübertragung** von einem Metall auf ein Nichtmetall. Treibende Kraft ist das Bestreben beider Atome, die stabile Edelgaskonfiguration zu erreichen (Oktettregel). Metalle haben niedrige Ionisierungsenergien und geben Elektronen leicht ab; Nichtmetalle besitzen hohe Elektronenaffinitäten und nehmen Elektronen bereitwillig auf. Die Elektronegativitätsdifferenz (ΔEN) zwischen den Bindungspartnern beträgt typischerweise > 1,7 auf der Pauling-Skala.
 
@@ -97,7 +101,16 @@ Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gi
 - **CaF₂ (Calciumfluorid):** Zahnschmelzstruktur; Fluorid-Ionen ersetzen OH⁻ im Hydroxylapatit → stabileres Fluorapatit
 - **FeSO₄ (Eisensulfat):** Eisen(II)-Supplement bei Eisenmangelanämie
 - **BaSO₄ (Bariumsulfat):** Röntgenkontrastmittel (extrem geringe Löslichkeit → nicht resorbiert, ungiftig trotz toxischer Ba²⁺-Ionen)
-- **AgNO₃ (Silbernitrat):** Credé-Prophylaxe (historisch), antimikrobielle Wirkung`,
+- **AgNO₃ (Silbernitrat):** Credé-Prophylaxe (historisch), antimikrobielle Wirkung
+
+## Zusammenfassung
+
+- **Ionenbindung**: vollständige Elektronenübertragung Metall → Nichtmetall; beide erreichen Edelgaskonfiguration
+- **Triebkraft**: Gitterenergie überwiegt Ionisierungsenergie + Elektronenaffinität → Reaktion exotherm
+- **Gitterenergie ∝ q₁·q₂/r**: hohe Ladung + kleiner Radius → große Gitterenergie (MgO > NaCl)
+- **Born-Haber-Kreisprozess**: indirekte Berechnung der Gitterenergie aus messbaren Enthalpien
+- **Eigenschaften**: hohe Schmelzpunkte, spröde, im Festzustand Nichtleiter; in Lösung → Elektrolyte leiten Strom
+- **Klinisch**: Na⁺, K⁺, Ca²⁺, Cl⁻ sind essentielle Elektrolyte; Imbalancen → Arrhythmie, Muskelkrämpfe, Tetanie`,
 
       lernziele: [
         "Die Entstehung der Ionenbindung durch Elektronenübertragung und die Rolle der Edelgaskonfiguration erklären können.",
@@ -319,7 +332,11 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
         "Dipolmoment",
         "Resonanz",
       ],
-      content: `## Grundprinzip der kovalenten Bindung
+      content: `## Einleitung
+
+Wasser, CO₂, Glucose, DNA — all diese Moleküle werden durch **kovalente Bindungen** zusammengehalten. Im Gegensatz zur Ionenbindung werden Elektronen nicht übertragen, sondern geteilt. Das Resultat: stabile Moleküle mit definierter Geometrie und Polarität. Die Geometrie entscheidet über Enzymfunktionen, Membranstabilität und Wirkstoffbindung. Für den MedAT sind Hybridisierung (sp³, sp², sp), VSEPR-Geometrie, Polarität, σ- und π-Bindungen prüfungsrelevant.
+
+## Grundprinzip der kovalenten Bindung
 
 Die **kovalente Bindung** (homöopolare oder Elektronenpaar-Bindung) entsteht durch **gemeinsame Nutzung von Elektronenpaaren** zwischen Atomen ähnlicher oder gleicher Elektronegativität. Im Gegensatz zur Ionenbindung werden Elektronen nicht übertragen, sondern geteilt. Die bindenden Elektronen halten sich bevorzugt im Bereich zwischen den Atomkernen auf und senken dort die potenzielle Energie des Systems. Der Energiegewinn durch die Bindungsbildung beträgt typischerweise 150–1000 kJ/mol.
 
@@ -399,7 +416,17 @@ Manche Moleküle können nicht durch eine einzige Lewis-Struktur beschrieben wer
 - **Carboxylgruppe –COOH:** im Carboxylat-Anion –COO⁻ ist die negative Ladung über beide Sauerstoffe delokalisiert → Stabilisierung des Anions → erklärt die relativ hohe Acidität von Carbonsäuren.
 - **Peptidbindung (–CO–NH–):** Delokalisierung des N-Elektronenpaars ins C=O-π-System → partieller Doppelbindungscharakter → Planarität und eingeschränkte Rotation.
 
-Delokalisierung stabilisiert Moleküle (Resonanzenergie). Aromatizität ist ein Sonderfall mit besonderer Stabilität (Hückel-Regel: 4n+2 π-Elektronen).`,
+Delokalisierung stabilisiert Moleküle (Resonanzenergie). Aromatizität ist ein Sonderfall mit besonderer Stabilität (Hückel-Regel: 4n+2 π-Elektronen).
+
+## Zusammenfassung
+
+- **Kovalente Bindung**: Elektronenteilung (nicht Übertragung); ΔEN < 1,7; entsteht zwischen Nichtmetallen
+- **ΔEN-Skala**: < 0,4 unpolar; 0,4–1,7 polar kovalent; > 1,7 ionisch
+- **Molekülpolarität**: polare Bindungen + asymmetrische Geometrie = polares Molekül (H₂O ≠ CO₂!)
+- **VSEPR**: Elektronenpaare stoßen sich ab; freie EP > bindende EP → kleinere Winkel; sp³ = 109,5°, sp² = 120°, sp = 180°
+- **Hybridisierung**: sp³ (Tetraeder, Alkane, Cα-Atom), sp² (trigonal, Carbonyl, Peptidbindung), sp (linear, C≡N, CO₂)
+- **σ und π**: Einfachbindung = σ; Doppel = σ+π; Dreifach = σ+2π; π verhindert Rotation → Cis-Trans-Isomerie
+- **Peptidbindung**: sp²-hybridisiert, partieller Doppelbindungscharakter, planar → bestimmt Proteinsekundärstruktur`,
 
       lernziele: [
         "Den Unterschied zwischen Ionenbindung und kovalenter Bindung sowie den Zusammenhang mit der Elektronegativitätsdifferenz erklären.",
@@ -635,7 +662,11 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
         "Polarisierbarkeit",
         "Siedepunkt",
       ],
-      content: `## Überblick: Zwischenmolekulare Kräfte
+      content: `## Einleitung
+
+Warum siedet Wasser bei 100 °C, obwohl H₂S schon bei −60 °C siedet? Warum ist Fett wasserunlöslich? Warum ist DNA eine stabile Doppelhelix? All das erklären die **intermolekularen Kräfte** — die Anziehungskräfte zwischen Molekülen. Sie sind schwächer als Atombindungen, aber in ihrer Summe enorm wichtig. Für den MedAT sind Wasserstoffbrücken, Van-der-Waals-Kräfte, Dipol-Dipol-Wechselwirkungen, die Dichteanomalie des Wassers und der hydrophobe Effekt prüfungsrelevant.
+
+## Überblick: Zwischenmolekulare Kräfte
 
 Neben den intramolekularen Bindungen (Ionen-, kovalente, Metallbindung) bestimmen **intermolekulare Wechselwirkungen** (van-der-Waals-Kräfte, Wasserstoffbrücken, Dipol-Dipol) die physikalischen Eigenschaften von Stoffen: Aggregatszustand, Siedepunkt, Löslichkeit, Viskosität. In der Biologie sind sie ebenso fundamental — sie bestimmen Proteinstruktur, DNA-Doppelhelix und Enzym-Substrat-Wechselwirkungen. Entscheidend ist die Unterscheidung: **Intramolekulare** Bindungen halten Atome im Molekül zusammen; **intermolekulare** Kräfte wirken zwischen Molekülen und bestimmen die makroskopischen Eigenschaften.
 
@@ -716,7 +747,15 @@ Wasser siedet bei 100 °C (H₂O, MM = 18 g/mol), während H₂S bei −60 °C s
 
 **Legierungen:** Mischungen von Metallen (oder Metall + Nichtmetall, z. B. Stahl = Fe + C). Eigenschaften können gezielt verändert werden (Härte, Korrosionsresistenz). Medizinisch relevant: Titan-Legierungen für Implantate (biokompatibel), Amalgam (Hg + Ag/Sn/Cu) in der Zahnmedizin (historisch).
 
-`,
+## Zusammenfassung
+
+- **Van-der-Waals-Kräfte**: London (alle Moleküle) < Dipol-Dipol (polare) < H-Brücken (N/O/F); stärkere Kräfte → höhere Siedepunkte
+- **Wasserstoffbrücke**: H kovalent an N, O oder F → wechselwirkt mit freiem EP an N, O oder F; Stärke ~20 kJ/mol
+- **DNA**: A–T: 2 H-Brücken; G–C: 3 H-Brücken; GC-reiche DNA stabiler (höhere Schmelztemperatur)
+- **Proteinstruktur**: α-Helix (H-Brücke i→i+4), β-Faltblatt (Strang-zu-Strang); Sekundärstruktur = H-Brücken
+- **Dichteanomalie des Wassers**: Eis leichter als flüssiges Wasser (4 °C = dichtestes); Seen frieren von oben
+- **Metallbindung**: Elektronengas aus delokalisierten Valenzelektronen → Leitfähigkeit, Duktilität, Glanz
+- **London-Stärke**: ↑ Elektronenzahl, ↑ Kontaktfläche (unverzweigte > verzweigte Moleküle)`,
 
       lernziele: [
         "Die drei Arten von van-der-Waals-Kräften unterscheiden und deren Abhängigkeit von Polarisierbarkeit und Molekülgeometrie erklären.",
@@ -973,7 +1012,11 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
         "Salzbrücke",
         "Trans-Fettsäuren",
       ],
-      content: `## Bindungstypen in Biomolekülen
+      content: `## Einleitung
+
+Proteine falten sich in spezifische Strukturen, Enzyme erkennen genau ihr Substrat, DNA liegt als stabile Doppelhelix vor — all das ist nur möglich durch ein Zusammenspiel verschiedener Bindungstypen. **Kovalente Bindungen** bilden das stabile Gerüst (Peptidbindungen, glycosidische Bindungen, Esterbrücken). **Nichtkovalente Wechselwirkungen** (H-Brücken, hydrophober Effekt, Van-der-Waals, Salzbrücken) sorgen für Flexibilität und Reversibilität — sie ermöglichen das Auf- und Abfalten von Proteinen, die Enzym-Substrat-Bindung und die Replikation der DNA. Für den MedAT sind Peptidbindung, glycosidische Bindungen, Ester, hydrophober Effekt und nichtkovalente Wechselwirkungen in Biomolekülen prüfungsrelevant.
+
+## Bindungstypen in Biomolekülen
 
 Lebende Systeme sind chemische Systeme, die auf einer fein abgestimmten Hierarchie von Bindungen basieren. **Kovalente Bindungen** (stark, gerichtet, 150–1000 kJ/mol) bauen die Primärstruktur der Makromoleküle auf — sie werden bei der Biosynthese enzymatisch geknüpft und bleiben unter physiologischen Bedingungen stabil. **Nichtkovalente Wechselwirkungen** (schwächer, 0,1–40 kJ/mol, reversibel) bestimmen die dreidimensionale Struktur und Funktion. Das Zusammenspiel beider Klassen ermöglicht die molekulare Dynamik, die Leben ausmacht: Proteine falten sich, DNA wird repliziert, Enzyme katalysieren Reaktionen.
 
@@ -1069,16 +1112,15 @@ Arzneimittel wirken über **molekulare Erkennung** an Rezeptoren, Enzymen oder N
 
 Lipinski's Rule of Five für orale Bioverfügbarkeit: MW ≤ 500, logP ≤ 5, H-Brücken-Donoren ≤ 5, H-Brücken-Akzeptoren ≤ 10. Pharmaka müssen ausreichend polar für Löslichkeit und Transport, aber nicht zu polar, um Membranen zu durchqueren.
 
-## Zusammenfassung: Bindungstypen in biologischen Systemen
+## Zusammenfassung
 
-| Bindungstyp | Stärke (kJ/mol) | Beispiel in der Biologie | Reversibilität |
-|---|---|---|---|
-| Kovalent (C–C, C–N, C–O) | 150–1000 | Peptidbindung, Phosphodiester, glycosidisch | Enzymatisch spaltbar |
-| Disulfidbrücke (–S–S–) | ~250 | Antikörper, Insulin | Reduzierbar (DTT) |
-| Ionisch/Salzbrücke | 20–200 | Lys⁺–Asp⁻ in Proteinen | pH-abhängig |
-| Wasserstoffbrücke | 10–40 | DNA-Basenpaarung, α-Helix | Temperaturabhängig |
-| Hydrophober Effekt | 5–15 pro CH₂ | Proteinkern, Membran-Bilayer | Detergenzien |
-| Van-der-Waals | 0,1–10 | π-Stacking in DNA, Induced Fit | Abstandsabhängig |`,
+- **Kovalente Bindungen** (150–1000 kJ/mol): Gerüst der Biomoleküle — Peptidbindung, Phosphodiesterbindung (DNA/RNA), glycosidische Bindung; enzymatisch spaltbar
+- **Disulfidbrücke** (~250 kJ/mol): –SH + –SH → –S–S–; stabilisiert Proteinstruktur (Insulin, Antikörper); reduzierbar durch DTT/NADPH
+- **Salzbrücken** (20–200 kJ/mol): ionische Wechselwirkung z.B. Lys⁺···Asp⁻; pH-sensitiv
+- **Wasserstoffbrücken** (10–40 kJ/mol): DNA-Basenpaarung (A–T: 2; G–C: 3), α-Helix, β-Faltblatt; temperaturabhängig
+- **Hydrophober Effekt** (entropisch): unpolare Gruppen aggregieren → Wasser wird freigesetzt → Entropiegewinn → Proteinfaltung, Membranbildung
+- **Van-der-Waals** (0,1–10 kJ/mol): π-Stacking in DNA, Induced Fit; abstandsabhängig
+- **α vs. β glycosidisch**: α-1,4 (Stärke/Glykogen) = verdaulich; β-1,4 (Cellulose) = unverdaulich`,
 
       lernziele: [
         "Die Rolle kovalenter und nichtkovalenter Bindungen in biologischen Makromolekülen (Proteine, Nukleinsäuren, Lipide, Kohlenhydrate) erklären.",
