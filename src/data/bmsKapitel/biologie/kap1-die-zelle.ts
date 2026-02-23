@@ -578,7 +578,7 @@ Das Gerüst der Zellmembran sind **Phospholipide** — amphiphile (griech.: beid
 - **Frei**: kleine unpolare Moleküle (O₂, CO₂, Steroide, Ethanol, fettlösliche Vitamine)
 - **Via Aquaporine (AQP)**: Wasser (schnell, gerichtet)
 - **Via Ionenkanäle**: Na⁺, K⁺, Ca²⁺, Cl⁻ (schnell, selektiv)
-- **Via Transporter**: Glucose (GLUT), Aminosäuren, große polare Moleküle (langsam, sättigbar)
+- **Via Transporter**: Glucose (**GLUT** = Glucose Transporter, mehrere Isoformen), Aminosäuren, große polare Moleküle (langsam, sättigbar)
 - **Blockiert**: geladene Ionen ohne Kanal (Hydrathülle = hohe Energiebarriere)
 
 **Lipid-Asymmetrie:** Die beiden Schichten sind nicht gleich:
@@ -652,11 +652,15 @@ Die **Glykokalix** ist eine Schicht aus Kohlenhydratketten auf der Außenseite d
 
 ## Membrantransport — Wie Stoffe die Membran passieren
 
-Nicht alle Stoffe können die Membran gleich gut überwinden. Drei grundlegende Mechanismen sind zu unterscheiden — ohne ATP entlang dem Gradienten (passiv) oder gegen den Gradienten mit Energieeinsatz (aktiv).
+Nicht alle Stoffe können die Membran gleich gut überwinden. Grundsätzlich gilt: **passiver Transport** folgt dem Konzentrationsgradienten (kein ATP), **aktiver Transport** arbeitet dagegen an (ATP oder indirekter Energieeinsatz).
 
-**Einfache Diffusion (passiv, kein Protein nötig):** Kleine, unpolare (lipophile) Moleküle lösen sich direkt in der Lipiddoppelschicht und diffundieren entlang ihres Konzentrationsgradienten. Beispiele: O₂, CO₂, Ethanol, Steroide, fettlösliche Vitamine (A, D, E, K).
+---
 
-**Erleichterte Diffusion (passiv, Membranprotein nötig):** Polare oder geladene Moleküle passieren die Membran mithilfe von Membranproteinen — immer entlang des Gradienten, ohne ATP:
+## Passiver Transport — ohne ATP
+
+**Einfache Diffusion (kein Protein nötig):** Kleine, unpolare (lipophile) Moleküle lösen sich direkt in der Lipiddoppelschicht und diffundieren entlang ihres Konzentrationsgradienten. Beispiele: O₂, CO₂, Ethanol, Steroide, fettlösliche Vitamine (A, D, E, K).
+
+**Erleichterte Diffusion (Membranprotein nötig):** Polare oder geladene Moleküle passieren die Membran mithilfe von Membranproteinen — immer entlang des Gradienten, ohne ATP:
 - **Ionenkanäle** (z. B. Na⁺-, K⁺-, Ca²⁺-, Cl⁻-Kanäle): sehr schnell, ionenspezifisch, schaltbar (spannungs- oder ligandengesteuert)
 - **Carrier/Transporter** (z. B. GLUT1–4 für Glucose): langsamer, sättigbar, spezifisch (Michaelis-Menten-Kinetik)
 - **Aquaporine (AQP)**: ausschließlich Wasserkanäle; AQP2 in der Niere (ADH-reguliert → Wasserrückresorption)
@@ -670,6 +674,10 @@ Nicht alle Stoffe können die Membran gleich gut überwinden. Drei grundlegende 
 | **Hyperton** (> 290 mosmol/kg) | > Zytoplasma | aus der Zelle | Zelle schrumpft → **Krenation** (Erythrozyten) |
 
 > **Merke:** Osmose: Wasser folgt der Osmolalität. Hypoton → Hämolyse; hyperton → Krenation. Isotone NaCl 0,9 % ist die physiologische Kochsalzlösung.
+
+---
+
+## Aktiver Transport — gegen den Gradienten
 
 **Primär aktiver Transport (direkt ATP-verbrauchend):** Substanzen werden gegen ihren Gradienten gepumpt. Die **Na⁺/K⁺-ATPase** ist das zentrale Beispiel: Pro Zyklus (1 ATP) werden **3 Na⁺ nach außen** und **2 K⁺ nach innen** gepumpt. Folgen:
 - Aufbau des Ruhemembranpotenzials (~−70 mV): innen negativ, da netto eine positive Ladung aus der Zelle herausgepumpt wird
@@ -858,21 +866,6 @@ Stell dir eine Fabrik vor: Sie hat Produktionshallen (ER), eine Poststelle (Golg
 
 ---
 
-## Übersicht: Organellen auf einen Blick
-
-| Organell | Membran | Hauptfunktion | Klinischer Bezug |
-|---|---|---|---|
-| Mitochondrien | Doppel | ATP (OXPHOS), Apoptose | MELAS, Cytochrom-c |
-| Raues ER | Einfach | Proteinsynthese, N-Glykosylierung | ER-Stress → Diabetes |
-| Glattes ER | Einfach | Lipidsynthese, Detox, Ca²⁺-Speicher | CYP450 (Leber) |
-| Golgi-Apparat | Einfach | Sortierung (M6P), O-Glykosylierung | I-Zell-Krankheit |
-| Lysosomen | Einfach | Abbau (pH 4,5), Autophagie | Gaucher, Tay-Sachs |
-| Peroxisomen | Einfach | VLCFA-Abbau, H₂O₂-Abbau | Zellweger-Syndrom |
-| Proteasomen | Keine | Ubiquitin-markierte Proteine abbauen | Bortezomib (Myelom) |
-| Zentrosom | Keine | Spindelapparat bei Mitose | Ziliendyskinesie |
-
----
-
 ## Der sekretorische Weg: rER → Golgi → Ziel
 
 Proteine, die für Membranen, Lysosomen oder die Sekretion (Hormone, Antikörper) bestimmt sind, durchlaufen den **sekretorischen Weg** in drei Stationen:
@@ -960,6 +953,21 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
   - **CFTR-ΔF508** bei Mukoviszidose: fehlgefaltetes CFTR wird durch ERAD + Proteasom abgebaut → kein Cl⁻-Kanal in der Membran
 
 > **Merke:** Lysosom = saures Milieu pH 4,5, saure Hydrolasen. Fehlendes Lysosom-Enzym → Speicherkrankheit. Proteasom + Ubiquitin = Zellmüllentsorgung; Bortezomib blockiert das beim Myelom.
+
+---
+
+## Übersicht: Organellen auf einen Blick
+
+| Organell | Membran | Hauptfunktion | Klinischer Bezug |
+|---|---|---|---|
+| Mitochondrien | Doppel | ATP (OXPHOS), Apoptose | MELAS, Cytochrom-c |
+| Raues ER | Einfach | Proteinsynthese, N-Glykosylierung | ER-Stress → Diabetes |
+| Glattes ER | Einfach | Lipidsynthese, Detox, Ca²⁺-Speicher | CYP450 (Leber) |
+| Golgi-Apparat | Einfach | Sortierung (M6P), O-Glykosylierung | I-Zell-Krankheit |
+| Lysosomen | Einfach | Abbau (pH 4,5), Autophagie | Gaucher, Tay-Sachs |
+| Peroxisomen | Einfach | VLCFA-Abbau, H₂O₂-Abbau | Zellweger-Syndrom |
+| Proteasomen | Keine | Ubiquitin-markierte Proteine abbauen | Bortezomib (Myelom) |
+| Zentrosom | Keine | Spindelapparat bei Mitose | Ziliendyskinesie |
 
 ---
 
