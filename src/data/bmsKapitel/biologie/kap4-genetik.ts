@@ -891,6 +891,11 @@ Stammbaumanalyse ist das zentrale Werkzeug der klinischen Genetik. Bei hereditä
 - Jede Geburt ist ein unabhängiges Ereignis — vorherige Kinder ändern die Wahrscheinlichkeit nicht
 - Halbes Symbol = Konduktor/Träger, nicht halb betroffen
 
+**Penetranz und Expressivität:**
+Bei der Stammbaumanalyse ist die Unterscheidung zwischen Penetranz und Expressivität essenziell. **Penetranz** beschreibt den Anteil der Genträger, die den Phänotyp ausprägen (z. B. BRCA1: ~70% Penetranz = 70% der Trägerinnen entwickeln Brustkrebs). **Expressivität** beschreibt die Schwere der Ausprägung bei Betroffenen (z. B. Marfan-Syndrom: von milden Gelenkbeschwerden bis zu Aortendissektion). Unvollständige Penetranz kann autosomal-dominante Erbgänge verschleiern, da Generationssprünge auftreten, obwohl der Erbgang nicht rezessiv ist.
+
+> **Merke:** Penetranz = ob betroffen (Anteil der Genträger mit Phänotyp). Expressivität = wie stark betroffen (Schweregrad). Unvollständige Penetranz täuscht Generationssprünge vor.
+
 **Prüfungsrelevante Zahlen/Fakten:**
 - Aa × Aa: 25% krank (aa), 50% Carrier (Aa), 25% gesund (AA)
 - P(Aa | gesund) = 2/3 (von 3 gesunden Genotypen sind 2 heterozygot)
@@ -1320,7 +1325,7 @@ Mutagene werden nach ihrer Natur eingeteilt: **Physikalische Mutagene** (UV-Stra
 
 ## Zusammenfassung
 
-Mutationen sind dauerhafte DNA-Veränderungen, die von stillen Punktmutationen ohne funktionelle Konsequenz bis zu schwerwiegenden Frameshift-Mutationen reichen, die das gesamte nachfolgende Protein verändern. Die Sichelzellanämie entsteht durch eine einzelne Missense-Mutation (Glu → Val) in der β-Globinkette, während die Mukoviszidose auf einer In-Frame-Deletion (ΔF508) beruht, bei der der Leserahmen erhalten bleibt, aber ein kritisches Phenylalanin im CFTR-Protein fehlt. Defekte in DNA-Reparaturmechanismen prädisponieren zu Krebserkrankungen, wobei MMR-Defekte zum Lynch-Syndrom, NER-Defekte zu Xeroderma pigmentosum und BRCA1/2-Mutationen zu hereditärem Brust- und Eierstockkrebs führen. Die Unterscheidung zwischen Keimbahnmutationen und somatischen Mutationen ist für Therapieentscheidungen und genetische Beratung von zentraler Bedeutung.`,
+Mutationen sind dauerhafte DNA-Veränderungen, die von stillen Punktmutationen ohne funktionelle Konsequenz bis zu schwerwiegenden Frameshift-Mutationen reichen, die das gesamte nachfolgende Protein verändern. Die Sichelzellanämie entsteht durch eine einzelne Missense-Mutation (Glu → Val) in der β-Globinkette, während die Mukoviszidose auf einer In-Frame-Deletion (ΔF508) beruht, bei der der Leserahmen erhalten bleibt, aber ein kritisches Phenylalanin im CFTR-Protein fehlt. Defekte in DNA-Reparaturmechanismen prädisponieren zu Krebserkrankungen, wobei MMR-Defekte zum Lynch-Syndrom, NER-Defekte zu Xeroderma pigmentosum und BRCA1/2-Mutationen zu hereditärem Brust- und Eierstockkrebs führen. Die Unterscheidung zwischen Keimbahnmutationen und somatischen Mutationen ist für Therapieentscheidungen und genetische Beratung von zentraler Bedeutung. Transitionen (Purin zu Purin oder Pyrimidin zu Pyrimidin) sind dabei häufiger als Transversionen (Purin zu Pyrimidin oder umgekehrt).`,
       lernziele: [
         "Die drei Typen von Genmutationen (stille Mutation, Missense, Nonsense) unterscheiden und klinische Beispiele zuordnen können.",
         "Frameshift-Mutationen und In-Frame-Indels erklären und deren Folgen für das Protein beschreiben können.",
@@ -2446,7 +2451,7 @@ PCR ist Goldstandard für Infektionsdiagnostik (COVID-19, HIV-VL), Genotypisieru
 
 ## Zusammenfassung
 
-Die PCR vervielfältigt spezifische DNA-Abschnitte exponentiell durch zyklische Wiederholung von Denaturierung (94-95 °C), Primer-Annealing (50-68 °C) und Elongation (72 °C), wobei die hitzestabile Taq-Polymerase aus Thermus aquaticus die Automatisierung im Thermocycler ermöglicht. Nach 30 Zyklen entstehen aus einem einzigen DNA-Molekül etwa eine Milliarde Kopien (2³⁰ ≈ 10⁹), wobei die Spezifität durch kurze Oligonukleotid-Primer (18-25 nt) definiert wird. Die RT-PCR erweitert das Prinzip auf RNA-Vorlagen, indem zunächst mittels Reverser Transkriptase cDNA hergestellt wird, und die quantitative Variante RT-qPCR mit TaqMan-Sonden ist der Goldstandard der COVID-19-Diagnostik, bei der der CT-Wert invers mit der Viruslast korreliert. Mg²⁺ ist als essenzieller Cofaktor der Taq-Polymerase unverzichtbar, und für Anwendungen, die hohe Genauigkeit erfordern, wird die langsamere Pfu-Polymerase mit Proofreading-Funktion eingesetzt.`,
+Die PCR vervielfältigt spezifische DNA-Abschnitte exponentiell durch zyklische Wiederholung von Denaturierung (94-95 °C), Primer-Annealing (50-68 °C) und Elongation (72 °C), wobei die hitzestabile Taq-Polymerase aus Thermus aquaticus die Automatisierung im Thermocycler ermöglicht. Nach 30 Zyklen entstehen aus einem einzigen DNA-Molekül etwa eine Milliarde Kopien (2³⁰ ≈ 10⁹), wobei die Spezifität durch kurze Oligonukleotid-Primer (18-25 nt) definiert wird. Die RT-PCR erweitert das Prinzip auf RNA-Vorlagen, indem zunächst mittels Reverser Transkriptase cDNA hergestellt wird, und die quantitative Variante RT-qPCR mit TaqMan-Sonden ist der Goldstandard der COVID-19-Diagnostik, bei der der CT-Wert invers mit der Viruslast korreliert. Mg²⁺ ist als essenzieller Cofaktor der Taq-Polymerase unverzichtbar, und für Anwendungen, die hohe Genauigkeit erfordern, wird die langsamere Pfu-Polymerase mit Proofreading-Funktion eingesetzt. Weitere PCR-Varianten umfassen die Nested PCR (zwei aufeinanderfolgende Primerpaare für maximale Sensitivität), die Multiplex-PCR (gleichzeitige Amplifikation mehrerer Zielsequenzen) und die digitale PCR (ddPCR), die eine absolute Quantifizierung ohne Standardkurve ermöglicht und zunehmend in der Liquid-Biopsy-Diagnostik eingesetzt wird.`,
 
       lernziele: [
         "Die drei PCR-Schritte (Denaturierung, Annealing, Elongation) mit Temperaturen, Dauer und molekularen Vorgängen präzise erklären",
@@ -2906,7 +2911,7 @@ HIV-Western-Blot war jahrzehntelang Goldstandard zur Bestätigung positiver HIV-
 
 ## Zusammenfassung
 
-Die Agarosegel-Elektrophorese trennt negativ geladene DNA-Fragmente nach ihrer Größe im elektrischen Feld, wobei kleine Fragmente schneller zur Anode wandern als große. Restriktionsenzyme vom Typ II erkennen palindromische DNA-Sequenzen und erzeugen entweder sticky ends (komplementäre Überhänge für gerichtete Klonierung) oder blunt ends (stumpfe Enden), wobei EcoRI mit der Erkennungssequenz GAATTC das bekannteste Beispiel darstellt. Die drei Blot-Verfahren detektieren unterschiedliche Biomoleküle entlang des Zentraldogmas: Southern Blot weist DNA mittels markierter Sonden nach, Northern Blot analysiert RNA-Expression, und Western Blot identifiziert spezifische Proteine über Antikörperdetektion nach SDS-PAGE. Der HIV-Western-Blot war als Bestätigungstest nach positivem ELISA-Screening jahrzehntelang klinischer Standard und galt als positiv bei Nachweis von mindestens zwei spezifischen Banden gegen virale Proteine.`,
+Die Agarosegel-Elektrophorese trennt negativ geladene DNA-Fragmente nach ihrer Größe im elektrischen Feld, wobei kleine Fragmente schneller zur Anode wandern als große. Restriktionsenzyme vom Typ II erkennen palindromische DNA-Sequenzen und erzeugen entweder sticky ends (komplementäre Überhänge für gerichtete Klonierung) oder blunt ends (stumpfe Enden), wobei EcoRI mit der Erkennungssequenz GAATTC das bekannteste Beispiel darstellt. Die drei Blot-Verfahren detektieren unterschiedliche Biomoleküle entlang des Zentraldogmas: Southern Blot weist DNA mittels markierter Sonden nach, Northern Blot analysiert RNA-Expression, und Western Blot identifiziert spezifische Proteine über Antikörperdetektion nach SDS-PAGE. Der HIV-Western-Blot war als Bestätigungstest nach positivem ELISA-Screening jahrzehntelang klinischer Standard und galt als positiv bei Nachweis von mindestens zwei spezifischen Banden gegen virale Proteine. Moderne Alternativen wie DNA-Microarrays ermöglichen die gleichzeitige Analyse tausender Gene auf einem einzigen Chip und haben die Genexpressionsanalyse revolutioniert.`,
 
       lernziele: [
         "Das Prinzip der Agarosegel-Elektrophorese mit Wanderungsrichtung und Größentrennung erklären",
@@ -3115,6 +3120,11 @@ Genetischer Fingerabdruck per STR-Analyse ist Standard in Forensik, Vaterschafts
 - Allel-Dropout bei degradierter DNA (scheinbare Homozygotie) vs. echte Homozygotie
 - Random Match Probability (statistische Einzigartigkeit) vs. Identität (biologische Gewissheit)
 - Chimärismus (Spender + Empfänger nach SZT) vs. Mosaik (verschiedene Zelllinien im selben Individuum)
+
+**Y-STRs und X-STRs in der forensischen Genetik:**
+Neben autosomalen STRs werden auch geschlechtschromosomale Marker eingesetzt. Y-STRs (z. B. DYS391, DYS19) werden paternal vererbt ohne Rekombination und ermöglichen die Zuordnung zu einer väterlichen Linie — besonders nützlich bei Mischspuren mit männlicher und weiblicher DNA, da nur männliche DNA amplifiziert wird. X-STRs ergänzen die Analyse bei komplexen Verwandtschaftsfragen, etwa bei Halbgeschwister-Identifikation. Amelogenin (AMEL-X/Y-Längenunterschied) dient der Geschlechtsbestimmung in jedem forensischen STR-Kit.
+
+> **Merke:** Y-STRs: paternal vererbt, keine Rekombination, ideal für männliche Mischspuren. Amelogenin: Geschlechtsbestimmung (AMEL-X kürzer als AMEL-Y).
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - CODIS: 20 STR-Kernloci, Random Match Probability ca. 1:10²⁶
@@ -3585,6 +3595,11 @@ Casgevy ist die erste CRISPR-basierte Therapie (FDA Dez. 2023); AAV-Gentherapien
 - AAV-Kapazität: nur ca. 4,7 kb → begrenzt auf kleine Gene
 - Zolgensma (AAV9): Gentherapie für SMA, ca. 2,1 Mio. USD pro Behandlung
 - He Jiankui (2018): CCR5-Knockout in Embryo → internationaler Skandal
+
+**Base Editing und Prime Editing — nächste Generation der Genomeditierung:**
+Klassisches CRISPR-Cas9 erzeugt Doppelstrangbrüche (DSB), die zu unerwünschten Indels führen können. **Base Editing** umgeht den DSB: Eine katalytisch inaktive Cas9-Nickase ist mit einer Desaminase fusioniert, die einzelne Basen direkt umwandelt (Cytidin-Base-Editor: C→T; Adenin-Base-Editor: A→G), ohne den zweiten Strang zu schneiden. **Prime Editing** geht einen Schritt weiter: Eine Nickase-Cas9 ist mit einer Reversen Transkriptase fusioniert; die pegRNA (prime editing guide RNA) enthält sowohl die Zielsequenz als auch die gewünschte Editierung. Dies ermöglicht alle 12 möglichen Basenaustausche, kleine Insertionen und Deletionen ohne DSB und ohne Donor-Template.
+
+> **Merke:** Base Editing: Nickase + Desaminase → C→T oder A→G ohne DSB. Prime Editing: Nickase + RT + pegRNA → präziseste Editierung (alle Substitutionen + kleine Indels) ohne DSB.
 
 ---
 
