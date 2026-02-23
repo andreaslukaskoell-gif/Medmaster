@@ -25,7 +25,11 @@ export const chemKapMaterie: Kapitel = {
         "Kinetische Gastheorie",
         "Kompressibilitätsfaktor",
       ],
-      content: `## Die Ideale Gasgleichung
+      content: `## Einleitung
+
+Gase sind überall — in unserer Atemluft, in den Alveolen, im Beatmungsgerät. Um ihr Verhalten vorherzusagen, brauchen wir eine Gleichung, die Druck, Volumen, Temperatur und Stoffmenge miteinander verbindet: die **ideale Gasgleichung pV = nRT**. Sie fasst drei historische Gasgesetze (Boyle-Mariotte, Charles, Avogadro) zusammen und ist eine der wichtigsten Formeln in Chemie und Physik. Für den MedAT sind Rechenaufgaben mit der Gasgleichung, das Umrechnen zwischen verschiedenen Druckeinheiten und die klinische Anwendung in der Beatmungsmedizin prüfungsrelevant.
+
+## Die Ideale Gasgleichung
 
 Die ideale Gasgleichung **pV = nRT** ist eine der fundamentalsten Gleichungen der physikalischen Chemie. Sie beschreibt das Verhalten eines hypothetischen idealen Gases und verknüpft vier makroskopische Zustandsgrößen:
 
@@ -119,7 +123,18 @@ Die mikroskopische Erklärung liefert die **kinetische Gastheorie** (Maxwell, Bo
 - Mittlere kinetische Energie: E_kin = (3/2)·k_B·T, wobei k_B = 1,381 × 10⁻²³ J/K.
 - Quadratischer Mittelwert der Geschwindigkeit: v_rms = √(3·R·T/M).
 - Bei 25 °C hat N₂ (M = 0,028 kg/mol): v_rms = √(3 × 8,314 × 298 / 0,028) ≈ 515 m/s.
-- Die **Maxwell-Boltzmann-Verteilung** beschreibt die Geschwindigkeitsverteilung: Die meisten Moleküle bewegen sich nahe der wahrscheinlichsten Geschwindigkeit v_p = √(2RT/M), einige wenige sind deutlich schneller. Diese schnellen Moleküle ermöglichen die Verdunstung unterhalb des Siedepunkts.`,
+- Die **Maxwell-Boltzmann-Verteilung** beschreibt die Geschwindigkeitsverteilung: Die meisten Moleküle bewegen sich nahe der wahrscheinlichsten Geschwindigkeit v_p = √(2RT/M), einige wenige sind deutlich schneller. Diese schnellen Moleküle ermöglichen die Verdunstung unterhalb des Siedepunkts.
+
+## Zusammenfassung
+
+- **pV = nRT**: p [Pa oder bar], V [L oder m³], n [mol], R = 8,314 J/(mol·K), T [Kelvin!]
+- Herkunft: Boyle-Mariotte (p·V = const bei T,n = const), Charles (V/T = const bei p,n = const), Avogadro (V/n = const bei p,T = const)
+- **Molares Volumen** bei STP (0 °C, 1 bar): V_m = 22,4 L/mol
+- **Umrechnungen**: T[K] = T[°C] + 273,15; 1 atm = 101.325 Pa = 760 mmHg = 1,013 bar; **niemals Celsius direkt einsetzen!**
+- Kombiniertes Gasgesetz: p₁V₁/T₁ = p₂V₂/T₂ (bei konstanter Stoffmenge)
+- **Kinetische Gastheorie**: E_kin = ³⁄₂ k_B T; v_rms = √(3RT/M) → leichtere Gase sind schneller
+- **Reale Gase** weichen ab: van-der-Waals-Gleichung berücksichtigt Teilchenvolumen (b) und Wechselwirkungen (a)
+- Klinisch: **Beatmung** (pV-Zusammenhang), Druckausgleich beim Tauchen, CO₂-Abatmung`,
       lernziele: [
         "Die ideale Gasgleichung pV=nRT aus den Einzelgesetzen (Boyle-Mariotte, Charles, Avogadro) herleiten und auf Rechenaufgaben anwenden.",
         "Zustandsgrößen p, V, n, T mit korrekten Einheiten benennen und ineinander umrechnen (inkl. Druckeinheiten atm, bar, Pa, mmHg).",
@@ -335,7 +350,11 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
         "Tauchmedizin",
         "Heliox",
       ],
-      content: `## Das Daltonsche Partialdruck-Gesetz
+      content: `## Einleitung
+
+Die Luft, die wir einatmen, ist kein reines Gas — sie ist ein Gemisch aus Stickstoff (~78 %), Sauerstoff (~21 %), Argon, CO₂ und Wasserdampf. Jedes Gas übt dabei seinen eigenen **Partialdruck** aus, als wäre es allein. Das beschreibt das **Daltonsche Gesetz**: Der Gesamtdruck eines Gasgemisches ist die Summe aller Partialdrücke. In der Medizin sind Partialdrücke fundamental: Ob O₂ von der Alveole ins Blut diffundiert, hängt vom Druckgradienten zwischen Alveole und Kapillarblut ab. Auch das Verständnis von Hyperoxie, Sauerstofftoxizität und Höhenkrankheit basiert auf Partialdrücken.
+
+## Das Daltonsche Partialdruck-Gesetz
 
 Das Daltonsche Gesetz (John Dalton, 1801) beschreibt das Druckverhalten von Gasgemischen:
 
@@ -429,7 +448,18 @@ Zu hohe O₂-Partialdrücke sind schädlich! Bei F_IO₂ > 0,6 über längere Ze
 In der Klinik werden Blutgaswerte oft in mmHg angegeben, in der Physiologie häufig in kPa:
 - **1 kPa = 7,5 mmHg** (Faktor 7,5)
 - **1 mmHg = 0,1333 kPa** (Faktor 0,133)
-- Schnelle Umrechnung: kPa × 7,5 = mmHg; mmHg / 7,5 = kPa`,
+- Schnelle Umrechnung: kPa × 7,5 = mmHg; mmHg / 7,5 = kPa
+
+## Zusammenfassung
+
+- **Daltonsches Gesetz**: p_gesamt = Σ pᵢ; pᵢ = xᵢ × p_gesamt (xᵢ = Molenbruch)
+- Luft: 78 % N₂, 21 % O₂, ~0,04 % CO₂; p(O₂) in Raumluft ≈ 21,2 kPa (159 mmHg)
+- **Alveolarer O₂-Partialdruck**: ~13,3 kPa (100 mmHg); venös ~5,3 kPa → O₂ diffundiert ins Blut
+- **CO₂**: arteriell ~4,7–6,0 kPa; venös ~6,1 kPa → CO₂ diffundiert aus Blut in Alveole
+- **Wasserdampf** bei 37 °C: p(H₂O) = 6,27 kPa (47 mmHg) → muss von Gesamtdruck abgezogen werden
+- **Henry-Gesetz**: c_gas = k_H × p_gas; mehr Druck → mehr Gas gelöst → Druckkochtopf, Taucherkrankheit
+- **Hyperoxie-Risiken**: Pulmonaltoxizität (Lorrain-Smith), Zerebralkonvulsionen (Paul-Bert), Retinopathie bei Frühgeborenen
+- Umrechnung: 1 kPa = 7,5 mmHg; arterieller Ziel-pO₂: 8–13 kPa (60–100 mmHg)`,
       lernziele: [
         "Das Daltonsche Partialdruck-Gesetz formulieren und Partialdrücke aus Molenbrüchen berechnen.",
         "Die atmosphärische Zusammensetzung (N₂, O₂, CO₂, H₂O) in Partialdrücken angeben und ihre Bedeutung in der Atemphysiologie erklären.",
@@ -632,7 +662,11 @@ Das Henry-Gesetz (c = k_H · p) beschreibt die physikalische Löslichkeit: Im Bl
         "DLCO-Test",
         "Isotopentrennung",
       ],
-      content: `## Diffusion von Gasen
+      content: `## Einleitung
+
+Wie gelangt Sauerstoff von der Alveole ins Blut? Warum können Zellen nicht größer als ~50 μm sein? Die Antwort ist **Diffusion** — der passive Transport von Teilchen entlang eines Konzentrationsgradienten, angetrieben allein durch thermische Zufallsbewegung. Das **Ficksche Gesetz** beschreibt diesen Prozess quantitativ: Je größer der Konzentrationsunterschied und je größer die Fläche, desto schneller die Diffusion. Diese Physik erklärt, warum die Lunge ~70 m² Austauschfläche benötigt — und was passiert, wenn diese Fläche (Emphysem) oder die Dicke der Membran (Fibrose) sich verändert.
+
+## Diffusion von Gasen
 
 **Diffusion** ist der spontane, thermisch getriebene Transport von Gasteilchen von Orten höherer Konzentration zu Orten niedrigerer Konzentration. Der Antrieb ist die Entropiezunahme: Systeme streben zum Zustand maximaler Unordnung.
 
@@ -732,7 +766,18 @@ Der **DLCO-Test** (Transfer-Faktor für CO) ist die wichtigste klinische Messung
 **Erhöhter DLCO** bei:
 - Alveolärer Hämorrhagie (Blut in Alveolen bindet CO)
 - Polyzythämie (mehr Hb)
-- Links-Rechts-Shunt (erhöhtes pulmonales Blutvolumen)`,
+- Links-Rechts-Shunt (erhöhtes pulmonales Blutvolumen)
+
+## Zusammenfassung
+
+- **Diffusion**: spontaner Transport von hoher → niedriger Konzentration; Antrieb = Entropiezunahme
+- **1. Ficksches Gesetz**: J = −D · (dc/dx); J ∝ Fläche × Gradient / Strecke
+- **Grahamsches Gesetz**: r₁/r₂ = √(M₂/M₁) — leichtere Gase diffundieren schneller (CO₂ vs. O₂: CO₂ ca. 1,2× schneller)
+- **2. Ficksches Gesetz** für Lunge: V̇_gas = (A × D × ΔP) / d — Fläche A ↑ und Membrandicke d ↓ → bessere Diffusion
+- Diffusionskoeffizient in Wasser ~10.000× kleiner als in Luft → Zellen müssen klein sein (max. ~50 μm)
+- **Erniedrigter DLCO**: Emphysem (A ↓), Fibrose (d ↑), Pulmonale Hypertonie, Anämie
+- **Erhöhter DLCO**: Alveoläre Hämorrhagie, Polyzythämie, Links-Rechts-Shunt
+- CO hat 210× höhere Hb-Affinität als O₂ → p_Blut(CO) ≈ 0 → DLCO-Test misst reine Membraneigenschaften`,
       lernziele: [
         "Das Grahamsche Gesetz der Diffusion/Effusion formulieren und anwenden: r₁/r₂ = √(M₂/M₁).",
         "Das erste Ficksche Gesetz (J = −D·dc/dx) interpretieren und auf pulmonale Diffusion anwenden.",
@@ -936,7 +981,11 @@ D ist proportional zur Gaslöslichkeit und umgekehrt proportional zu √M: D ∝
         "Dichteanomalie Wasser",
         "Plasma",
       ],
-      content: `## Die vier Aggregatzustände der Materie
+      content: `## Einleitung
+
+Eis, Wasser und Dampf bestehen aus denselben Molekülen (H₂O) — doch sie sehen und verhalten sich vollständig unterschiedlich. Das liegt am **Aggregatzustand**: In welchem Zustand ein Stoff vorliegt, hängt davon ab, ob die Wärmebewegung der Teilchen die Anziehungskräfte zwischen ihnen überwindet. Es gibt vier Aggregatzustände (fest, flüssig, gasförmig, Plasma), und jede Substanz kann je nach Temperatur und Druck in verschiedenen Zuständen vorliegen. Für den MedAT sind die Eigenschaften von Wasser (Anomalie, Wasserstoffbrücken), Kristalltypen und der Zusammenhang zwischen intermolekularen Kräften und Siedepunkten wichtig.
+
+## Die vier Aggregatzustände der Materie
 
 Materie tritt in vier grundlegenden Aggregatzuständen auf, die sich durch Energie, Anordnung und Beweglichkeit ihrer Teilchen fundamental unterscheiden. Welcher Aggregatzustand vorliegt, hängt von der Bilanz zwischen der **kinetischen Energie der Teilchen** (Wärmebewegung) und der **potentiellen Energie** durch intermolekulare Wechselwirkungen ab.
 
@@ -1012,7 +1061,16 @@ Die Stärke der intermolekularen Kräfte bestimmt den Siedepunkt direkt. Folgend
 
 ## Amorphe Feststoffe vs. Kristalline Feststoffe
 
-Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunststoffe, Schokolade) besitzen keine Fernordnung im atomaren Aufbau. Sie haben keinen scharfen Schmelzpunkt, sondern einen **Glasübergangsbereich** (T_g), in dem sie graduell erweichen. Technisch und pharmazeutisch relevant: Viele Arzneistoffe können in amorpher Form vorliegen, die eine höhere Löslichkeitsrate aufweist als die kristalline Form – wichtig für die Bioverfügbarkeit.`,
+Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunststoffe, Schokolade) besitzen keine Fernordnung im atomaren Aufbau. Sie haben keinen scharfen Schmelzpunkt, sondern einen **Glasübergangsbereich** (T_g), in dem sie graduell erweichen. Technisch und pharmazeutisch relevant: Viele Arzneistoffe können in amorpher Form vorliegen, die eine höhere Löslichkeitsrate aufweist als die kristalline Form – wichtig für die Bioverfügbarkeit.
+
+## Zusammenfassung
+
+- **Aggregatzustände**: fest (Kristallgitter, definiertes V + Form), flüssig (Nahordnung, fließfähig), gasförmig (keine Ordnung, kompressibel), Plasma (ionisiert)
+- Kristalltypen: Ionenkristall (NaCl, hohe Smp.), Molekülkristall (Eis, niedrige Smp.), Netzwerkkristall (Diamant, extrem hart), Metallkristall (leitend, duktil)
+- **Anomalie des Wassers**: Dichtemaximum bei 4 °C; Eis weniger dicht als Wasser (H-Brücken-Netzwerk); biolog. wichtig: Seen frieren von oben → Leben bleibt am Grund erhalten
+- Siedepunkt ∝ Stärke der intermolekularen Kräfte: H₂O (100 °C) >> CH₄ (−162 °C) trotz ähnlicher Molmasse
+- Ionische > Wasserstoffbrücken > Dipol-Dipol > London; NaCl-Gitter 786 kJ/mol vs. H₂O-H-Brücke ~20 kJ/mol
+- **Amorphe Feststoffe**: kein scharfer Schmelzpunkt, Glasübergangstemperatur T_g; höhere Löslichkeit → relevant für Bioverfügbarkeit von Arzneistoffen`,
       lernziele: [
         "Die vier Aggregatzustände anhand von Teilchenanordnung, Energie und makroskopischen Eigenschaften beschreiben und vergleichen",
         "Die vier Typen intermolekularer Wechselwirkungen (Van-der-Waals, Dipol-Dipol, Wasserstoffbrücken, ionisch) in ihrer Stärke einordnen und Beispiele nennen",
@@ -1238,7 +1296,11 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
         "Sublimation",
         "Thermoregulation",
       ],
-      content: `## Phasenübergänge: Überblick und Nomenklatur
+      content: `## Einleitung
+
+Wenn Wasser zu Eis wird oder Eis zu Dampf — das ist ein **Phasenübergang**. Was passiert dabei mit der Energie? Bei jedem Übergang zu einem "freieren" Zustand (fest → flüssig → gasförmig) muss Energie **zugeführt** werden (endotherm), um die intermolekularen Bindungen aufzubrechen. Diese Energie bewirkt keine Temperaturänderung — sie steckt in der Umordnung der Teilchen. Auf der Heizkurve sieht man das als Plateau. Medizinisch zentral: Dampfverbrennungen sind schlimmer als Wasserverbrennungen (Kondensationswärme frei), Schwitzen kühlt durch Verdampfungswärme, und Gefriertrocknung von Impfstoffen nutzt Sublimation. Das Phasendiagramm zeigt zudem, wann Wasser sublimiert — das ist die Grundlage der Lyophilisation.
+
+## Phasenübergänge: Überblick und Nomenklatur
 
 Phasenübergänge sind Zustandsänderungen zwischen den Aggregatzuständen, die bei definierten Temperatur-Druck-Bedingungen stattfinden. Sie sind stets mit einer Enthalpieänderung verbunden (latente Wärme), die **nicht** zur Temperaturänderung, sondern zur Änderung der Molekülanordnung und der intermolekularen Abstände verwendet wird. Auf einer **Heizkurve** (Temperatur gegen Zeit bei konstanter Wärmezufuhr) erscheinen Phasenübergänge als **Plateaus** – die Temperatur bleibt konstant, obwohl weiterhin Energie zugeführt wird.
 
@@ -1329,7 +1391,18 @@ Der Sättigungsdampfdruck steigt exponentiell mit der Temperatur (Clausius-Clape
 
 **ln(p₂/p₁) = (ΔH_v/R) × (1/T₁ − 1/T₂)**
 
-Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gegebenem Druck siedet. Klinisch relevant: Bei Fieber (z.B. 40 °C statt 37 °C) steigt der Wasserdampfdruck der Atemluft – der Patient verliert mehr Wasser über die Atmung (**Perspiratio insensibilis** steigt um ca. 12 % pro °C Fieber).`,
+Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gegebenem Druck siedet. Klinisch relevant: Bei Fieber (z.B. 40 °C statt 37 °C) steigt der Wasserdampfdruck der Atemluft – der Patient verliert mehr Wasser über die Atmung (**Perspiratio insensibilis** steigt um ca. 12 % pro °C Fieber).
+
+## Zusammenfassung
+
+- **6 Phasenübergänge**: Schmelzen, Erstarren, Verdampfen, Kondensieren, Sublimieren, Resublimieren; Übergänge zu "freierem" Zustand = **endotherm**
+- Während Phasenübergang: Temperatur konstant (Plateau in Heizkurve) — Energie für Umordnung genutzt
+- **Schmelzenthalpie Wasser**: 333 J/g (6,01 kJ/mol); **Verdampfungsenthalpie**: 2257 J/g (40,7 kJ/mol)
+- Dampfverbrennungen schlimmer als Wasserverbrennungen: Kondensationswärme (2257 J/g) wird zusätzlich frei
+- **Schwitzen** kühlt durch Verdampfung (~2,4 kJ/g bei Körpertemp.) → Thermoregulation; Perspiratio insensibilis ↑ mit Fieber
+- **Sublimation**: fest → gasförmig ohne Flüssigphase; CO₂ (trockenes Eis), Iod, Naphthalin; Gefriertrocknung = Sublimation unter <611 Pa
+- **Tripelpunkt** Wasser: 0,01 °C, 611 Pa — alle 3 Phasen koexistieren; **kritischer Punkt**: 374 °C, 221 bar
+- Kolligative Eigenschaften: **Gefrierpunktserniedrigung** ΔT_f = K_f × b × i (K_f(H₂O) = 1,86 K·kg/mol)`,
       lernziele: [
         "Alle sechs Phasenübergänge benennen, in der Energetik (endo-/exotherm) einordnen und mit Beispielen illustrieren",
         "Die Schmelzenthalpie (333 J/g) und Verdampfungsenthalpie (2257 J/g) von Wasser kennen, den Unterschied erklären und einfache Berechnungen durchführen",
