@@ -29,10 +29,6 @@ export const mathKapAlgebra: Kapitel = {
 
 Wie viel Paracetamol für ein 12 kg schweres Kind? Wie schnell fällt eine Wirkstoffkonzentration? Antworten kommen aus Gleichungen. Ob Dosierungsformel, Clearance-Berechnung oder Mischungsaufgabe — das Lösen linearer und quadratischer Gleichungen ist die wichtigste Rechenoperation im MedAT-BMS. Für den MedAT sind lineare Gleichungen, Gleichungssysteme, Ungleichungen, Substitution/Elimination und medizinische Anwendungsaufgaben prüfungsrelevant.
 
-# Gleichungen und Ungleichungen
-
-Gleichungen sind das Herzstück der Algebra. Sie erlauben es, unbekannte Größen präzise zu bestimmen, und bilden das Werkzeug für nahezu jede quantitative Fragestellung in Naturwissenschaft und Medizin. Von der Dosierungsberechnung in der Anästhesie über die Bestimmung von Gleichgewichtskonzentrationen in der Biochemie bis hin zur Modellierung physiologischer Prozesse — das sichere Lösen von Gleichungen ist keine abstrakte Fähigkeit, sondern eine klinisch unverzichtbare Kompetenz.
-
 ## Grundprinzip der Gleichungsumformung
 
 Eine Gleichung ist eine Aussage der Form A = B, wobei A und B mathematische Ausdrücke sind. Das fundamentale Prinzip lautet: Eine Gleichung bleibt gültig, wenn man auf beiden Seiten dieselbe Operation durchführt. Erlaubte Operationen sind:
@@ -42,6 +38,8 @@ Eine Gleichung ist eine Aussage der Form A = B, wobei A und B mathematische Ausd
 - Anwenden einer Funktion auf beiden Seiten (z.B. Wurzelziehen, Logarithmieren — Definitionsbereich beachten)
 
 Ziel ist stets, die gesuchte Variable zu isolieren, d.h. allein auf einer Seite stehen zu haben.
+
+> **Merke:** Was links passiert, passiert auch rechts — jede Operation auf BEIDE Seiten der Gleichung anwenden, sonst verliert sie ihre Gültigkeit.
 
 ## Lineare Gleichungen
 
@@ -57,6 +55,8 @@ Gleichungen mit Brüchen: Mit dem Hauptnenner (kgV aller Nenner) multiplizieren,
 
 Gleichungen mit Klammern: Zuerst ausmultiplizieren (Distributivgesetz), dann wie gewohnt vorgehen. Beispiel: 3(2x minus 4) = 2(x + 5) ergibt 6x minus 12 = 2x + 10, dann 4x = 22, x = 5,5.
 
+> **Merke:** Schema für lineare Gleichungen: (1) Klammern ausmultiplizieren, (2) Brüche durch HN-Multiplikation eliminieren, (3) x-Terme auf eine Seite, Zahlen auf die andere, (4) durch Koeffizient dividieren, (5) Probe einsetzen.
+
 ## Gleichungssysteme mit zwei Unbekannten
 
 Ein lineares Gleichungssystem mit zwei Gleichungen und zwei Unbekannten (x, y) hat im Allgemeinen genau eine Lösung.
@@ -68,6 +68,8 @@ Beispiel: (I) x + y = 10 und (II) 3x minus y = 6. Aus (I): y = 10 minus x. Einse
 Additionsverfahren: Die Gleichungen mit Faktoren multiplizieren, sodass eine Variable eliminiert wird.
 
 Beispiel: (I) 2x + 3y = 12 und (II) 4x minus y = 10. Multipliziere (II) mit 3: 12x minus 3y = 30. Addiere mit (I): 14x = 42, x = 3. Einsetzen: 2(3) + 3y = 12, y = 2.
+
+> **Merke:** Substitution eignet sich, wenn eine Variable Koeffizient ±1 hat. Addition/Elimination eignet sich, wenn sich Koeffizienten durch Multiplikation leicht aufheben lassen. Immer Probe durch Einsetzen in BEIDE Originalgleichungen!
 
 ## Quadratische Gleichungen
 
@@ -86,6 +88,8 @@ Faktorisierung: Wenn Lösungen ganze Zahlen sind, kann man faktorisieren. Beispi
 
 Quadratisches Ergänzen: x hoch zwei + px + q = 0 wird zu (x + p/2) hoch zwei = (p/2) hoch zwei minus q, woraus x = minus p/2 +/- Wurzel aus ((p/2) hoch zwei minus q).
 
+> **Merke:** Diskriminante D = b² − 4ac: D > 0 → zwei reelle Lösungen, D = 0 → eine Doppellösung (x = −b/2a), D < 0 → keine reelle Lösung. Mitternachtsformel: x = (−b ± √D) / (2a).
+
 ## Ungleichungen
 
 Ungleichungen verwenden statt = eines der Zeichen <, >, kleiner-gleich, groesser-gleich. Die Umformungsregeln sind fast identisch zu Gleichungen, mit einer entscheidenden Ausnahme:
@@ -95,6 +99,8 @@ Bei Multiplikation oder Division mit einer negativen Zahl kehrt sich das Ungleic
 Beispiel: minus 3x + 6 > 12. Subtrahiere 6: minus 3x > 6. Dividiere durch minus 3 (Vorzeichen dreht um!): x < minus 2.
 
 Doppelte Ungleichungen: Alle Operationen auf alle drei Teile anwenden. Beispiel: 1 kleiner-gleich 2x minus 3 kleiner 7. Addiere 3 ueberall: 4 kleiner-gleich 2x kleiner 10. Dividiere durch 2: 2 kleiner-gleich x kleiner 5. Lösungsmenge: [2, 5).
+
+> **Merke:** Ungleichungs-Falle: Bei Multiplikation/Division mit einer NEGATIVEN Zahl dreht sich das Ungleichungszeichen um! Aus < wird >, aus ≥ wird ≤. Positive Zahlen → kein Umdrehen.
 
 ## Klinische Anwendung: Dosierungsberechnungen
 
@@ -118,6 +124,25 @@ Wirkstoffkonzentration c(t) = minus 2t hoch zwei + 20t (in mg/L, t in Stunden). 
 
 **Beispiel 3 — Gleichungssystem: Mischung zweier Infusionslösungen:**
 Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. System: V_A + V_B = 500 und 0,05 mal V_A + 0,20 mal V_B = 0,08 mal 500 = 40. Substitution: V_A = 500 minus V_B. Einsetzen: 0,05 mal (500 minus V_B) + 0,20 mal V_B = 40. 25 minus 0,05 V_B + 0,20 V_B = 40. 0,15 V_B = 15. V_B = **100 mL**, V_A = **400 mL**.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Löse 3x − 7 = 2(x + 1)" → 3x − 7 = 2x + 2, also x = 9
+- "Welche Lösungen hat x² − 5x + 6 = 0?" → Vieta: Summe 5, Produkt 6 → x₁ = 2, x₂ = 3
+- "Für welche x gilt −2x + 4 > 10?" → −2x > 6, Vorzeichen dreht um → x < −3
+
+**Achtung — typische Verwechslungen:**
+- Ungleichung: Division durch negative Zahl → Zeichen UMKEHREN (−2x > 6 → x < −3, nicht x > −3)
+- Diskriminante: D = b² − 4ac, NICHT b² − 2ac
+- Gleichungssystem: Ergebnis in BEIDE Gleichungen als Probe einsetzen
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Verdünnungsformel: c₁·V₁ = c₂·V₂
+- Dosierungsformel: Dosis [mg] = Dosierung [mg/kg] × Körpergewicht [kg]
+- Mitternachtsformel: x = (−b ± √(b² − 4ac)) / (2a)
+
+---
 
 ## Zusammenfassung
 
@@ -277,10 +302,6 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
 
 Hämatokrit 42%, SpO₂ 98%, Ejektionsfraktion >55%, Serumverdünnung 1:10 — Prozente und Brüche durchziehen den klinischen Alltag. Die häufigste MedAT-Falle: Verwechseln von absoluter und relativer Risikoreduktion. ARR und NNT sind Grundkonzepte der EbM (evidenzbasierte Medizin) und fast jährlich im MedAT. Für den MedAT sind Prozentrechnung (Prozentwert, Prozentsatz, Grundwert), Bruchrechnung, ARR/RRR/NNT und Serienverdünnungen prüfungsrelevant.
 
-# Prozent-, Bruch- und Schlussrechnung
-
-Prozentrechnung, Bruchrechnung und der Dreisatz sind in der Medizin allgegenwärtig. Kaum eine klinische Situation kommt ohne diese Grundkenntnisse aus: die Hämatokritzahl (42%), die Sauerstoffsättigung (SpO2 98%), die Ejektionsfraktion des Herzens (EF > 55%), die Serumverdünnung (1:10), die Berechnung von Infusionszeiten oder die Dosierung nach Körpergewicht. Diese scheinbar einfachen Rechenarten sind am MedAT häufige Fehlerquellen, weil sie unter Zeitdruck präzise angewendet werden müssen.
-
 ## Prozentrechnung — die drei Grundfragen
 
 Das Wort Prozent kommt von lateinisch pro centum, zu Deutsch je Hundert. Der Prozentsatz p gibt an, wie viele Teile von je 100 Teilen des Grundwerts gemeint sind.
@@ -303,6 +324,8 @@ Beispiel: 36 mg sind 12% von wie viel? G = 36 mal 100/12 = 300 mg.
 Frage 3 — Den Prozentsatz berechnen: p = P/G mal 100.
 Beispiel: 45 von 180 Patienten haben eine Komplikation. Wie viel Prozent? p = 45/180 mal 100 = 25%.
 
+> **Merke:** Drei Formeln aus einer: P = G·p/100; G = P·100/p; p = P/G·100. Rechentrick: 10% = G÷10; 5% = halbe 10%; 1% = G÷100 — schnell kombinierbar!
+
 ## Prozentuale Veränderungen — absolut vs. relativ
 
 Absolute Änderung: Der arithmetische Unterschied zweier Werte (in derselben Einheit).
@@ -314,6 +337,8 @@ Formel: relative Änderung = (Endwert minus Anfangswert) / Anfangswert mal 100%.
 Wichtige Asymmetrie: Eine Erhöhung um 50% gefolgt von einer Senkung um 50% ergibt nicht den Ausgangswert. Ausgangswert 100, nach +50%: 150, nach minus 50%: 75. Die 50% Senkung wird auf den neuen Grundwert 150 berechnet.
 
 Beispiel: Blutdruck sinkt von 160 auf 120 mmHg. Absolute Senkung: 40 mmHg. Relative Senkung: 40/160 mal 100 = 25%.
+
+> **Merke:** Absolute Änderung = Differenz der Werte (in Einheiten). Relative Änderung = Differenz/Ausgangswert × 100%. Von 40% auf 30% = 10 Prozentpunkte absolut, aber 25% relative Senkung — nicht dasselbe!
 
 ## Bruchrechnung — vollständige Regeln
 
@@ -331,6 +356,8 @@ Beispiel: 3/8 mal 4/9 = 12/72 = 1/6.
 Division — Kehrwert-Trick: a/b geteilt durch c/d = a/b mal d/c = (a mal d) / (b mal c).
 Man dividiert nie durch einen Bruch — man multipliziert mit dem Kehrwert.
 Beispiel: (3/4) geteilt durch (9/16) = 3/4 mal 16/9 = 48/36 = 4/3.
+
+> **Merke:** Bruchdivision: NIEMALS durch einen Bruch dividieren — immer mit dem KEHRWERT multiplizieren. Addition/Subtraktion: erst gleichnamig machen (kgV der Nenner), dann Zähler verrechnen.
 
 ## Dreisatz (Schlussrechnung)
 
@@ -355,6 +382,8 @@ Beispiel: 6 Schwestern versorgen Patienten in 4 Stunden. Wie lange brauchen 4 Sc
 Gesamtarbeit = 6 mal 4 = 24 Schwesternstunden. Mit 4 Schwestern: 24/4 = 6 Stunden.
 
 Gemischter Dreisatz: Zwei verschiedene Proportionalitätsverhältnisse werden kombiniert. Schrittweise auf Einheitsgröße zurückführen.
+
+> **Merke:** Erkennungsfrage: „Wenn A größer wird, wird B dann auch größer (direkt) oder kleiner (indirekt)?" Direkt: Konstanter Quotient A/B. Indirekt: Konstantes Produkt A·B.
 
 ## Verhältnisse und Proportionen
 
@@ -381,6 +410,25 @@ Ausgangstiter: 1:16. Dreifache 1:2-Verdünnung: 1:16 mal 2 mal 2 mal 2 = **1:128
 
 **Beispiel 3 — Kreatinin-Clearance (Dreisatz):**
 Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P = 1,5 mg/dL. Clearance = (U mal V) / P = (120 mal 1,2) / 1,5 = 144 / 1,5 = **96 mL/min**. Normwert: 80–120 mL/min → Patient im Normalbereich.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "32 sind X% von 400?" → p = 32/400 × 100 = 8%
+- "Hämatokrit sinkt von 42% auf 28% — wie viel % relativer Rückgang?" → (42−28)/42 × 100 = 33,3%
+- "Serumverdünnung 1:100 zeigt Titer 50 AU/mL — Originaltiter?" → 50 × 100 = 5000 AU/mL
+
+**Achtung — typische Verwechslungen:**
+- Prozentpunkte ≠ relative Änderung: Von 40% auf 30% sind 10 Prozentpunkte, aber 25% relative Senkung
+- Direkter vs. indirekter Dreisatz: Mehr Helfer → weniger Zeit (indirekt!), nicht mehr Zeit
+- NNT aus Prozent berechnen: ARR erst in Dezimalzahl umrechnen (3% → 0,03), dann NNT = 1/0,03 = 33
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- ARR = R_Kontrolle − R_Behandlung; RRR = ARR/R_Kontrolle; NNT = 1/ARR (ARR als Dezimalzahl)
+- Hämatokrit Normwerte: ♂ 40–52%, ♀ 37–47%; SpO₂ ≥ 95%
+- Serienverdünnung: n Schritte à 1:k → Gesamtverdünnung 1:kⁿ
+
+---
 
 ## Zusammenfassung
 
@@ -528,10 +576,6 @@ Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P
 
 BSA-Formel (Körperoberfläche), Parabelkurve der Pharmakokinetik, Faktorisieren von Termen — quadratische Gleichungen und binomische Formeln sind Grundwerkzeuge. Die drei binomischen Formeln ermöglichen schnelles Faktorisieren, was am MedAT Rechenzeit spart. Für den MedAT sind drei binomische Formeln, pq-Formel, Scheitelpunktform (Dosisoptimum), Vieta-Formeln und quadratische Gleichungen in medizinischen Kontexten prüfungsrelevant.
 
-# Quadratische Gleichungen und binomische Formeln
-
-Die binomischen Formeln gehören zu den nützlichsten algebraischen Identitäten. Sie erlauben die schnelle Umformung von Produkten und Quadraten bestimmter Ausdrücke und bilden die Grundlage für das Faktorisieren quadratischer Ausdrücke. Das sichere Beherrschen dieser Formeln — vorwärts wie rückwärts — ist eine echte Zeitersparnis bei Prüfungen und in der Anwendung.
-
 ## Die drei binomischen Formeln — Herleitung und Anwendung
 
 Alle drei binomischen Formeln entstehen durch einfaches Ausmultiplizieren. Ihre Gültigkeit kann jederzeit durch Ausmultiplizieren überprüft werden.
@@ -576,6 +620,8 @@ Beispiele:
 - (Wurzel aus 7 + Wurzel aus 3)(Wurzel aus 7 minus Wurzel aus 3) = 7 minus 3 = 4
 - 99 mal 101 = (100 minus 1)(100 + 1) = 10000 minus 1 = 9999 (mentale Arithmetik)
 
+> **Merke:** Die drei binomischen Formeln: (1) (a+b)² = a²+2ab+b²; (2) (a−b)² = a²−2ab+b²; (3) (a+b)(a−b) = a²−b². Häufigster Fehler: (a+b)² = a²+b² (der mittlere Term 2ab fehlt!).
+
 ## Rückwärtsanwendung — Faktorisieren
 
 Die binomischen Formeln rückwärts gelesen ermöglichen das Faktorisieren.
@@ -590,6 +636,8 @@ Vorgehen beim Faktorisieren:
 1. Liegt ein vollständiges Quadrat vor? (a hoch zwei +/- 2ab + b hoch zwei) — erste oder zweite binomische Formel.
 2. Liegt eine Differenz zweier Quadrate vor? (a hoch zwei minus b hoch zwei) — dritte binomische Formel.
 3. Sonst: Vieta'sche Formeln oder allgemeine Lösungsformel verwenden.
+
+> **Merke:** Faktorisier-Checkliste: (1) Vollständiges Quadrat? → 1./2. binomische Formel. (2) Differenz zweier Quadrate? → 3. binomische Formel. (3) Ganzzahlige Lösungen erkennbar? → Vieta. (4) Sonst → Mitternachtsformel.
 
 ## Rationalisierung von Nennern
 
@@ -636,6 +684,8 @@ Für allgemeine ax hoch zwei + bx + c = 0 gilt: x1+x2 = minus b/a und x1 mal x2 
 
 Die Vieta'schen Formeln ermöglichen auch die Prüfung von Ergebnissen: Summe und Produkt der gefundenen Lösungen müssen stimmen.
 
+> **Merke:** Vieta für x² + px + q = 0: Summe x₁+x₂ = −p; Produkt x₁·x₂ = q. Zwei Zahlen mit der richtigen Summe und dem richtigen Produkt finden → fertig. Funktioniert nur bei ganzzahligen/einfachen Lösungen schnell.
+
 ## Rechenbeispiele
 
 **Beispiel 1 — BSA-Berechnung (Körperoberfläche nach Mosteller):**
@@ -646,6 +696,25 @@ Runde Wunde mit Radius (r+2) cm am Morgen und (r+8) cm am Abend. Flächendiffere
 
 **Beispiel 3 — Parabel: Optimale Dosis (Scheitelpunkt):**
 Wirksamkeit E(d) = minus 0,5 d hoch zwei + 10d minus 12 (d = Dosis in mg). Scheitelpunkt: d_opt = minus b/(2a) = minus 10/(2 mal (minus 0,5)) = **10 mg**. E_max = minus 0,5 mal 100 + 100 minus 12 = **38 Einheiten**. Parabelform zeigt: zu wenig und zu viel Dosis reduzieren die Wirksamkeit.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "(x + 4)² = ?" → x² + 8x + 16 (mittlerer Term 2·x·4 = 8x nicht vergessen!)
+- "Faktorisiere x² − 36" → (x+6)(x−6) — dritte binomische Formel rückwärts
+- "Scheitelpunkt von f(x) = x² − 4x + 7?" → x_S = −(−4)/(2·1) = 2, y_S = f(2) = 4−8+7 = 3
+
+**Achtung — typische Verwechslungen:**
+- (a+b)² ≠ a² + b² — der mittlere Term 2ab wird häufig vergessen!
+- Vieta-Summe: x₁+x₂ = −p (MINUS p!), nicht +p, für x² + px + q = 0
+- Scheitelpunkt: x_S = −b/(2a), NICHT b/(2a) — das Minuszeichen gilt immer
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- BSA nach Mosteller: √(Größe[cm] × Gewicht[kg] / 3600) in m²
+- Durchschnittliche BSA: 1,7–1,9 m²; Zytostatikum-Dosierung in mg/m²
+- Scheitelpunkt einer Parabel = Optimum (Maximum der Wirkung bei optimaler Dosis)
+
+---
 
 ## Zusammenfassung
 
@@ -803,10 +872,6 @@ Wirksamkeit E(d) = minus 0,5 d hoch zwei + 10d minus 12 (d = Dosis in mg). Schei
 
 Bakterienwachstum verdoppelt sich alle 20 Minuten — nach 3 Stunden sind aus 1 Bakterium 2⁹ = 512 geworden. pH = −log₁₀([H⁺]) — der Logarithmus erlaubt, riesige Konzentrationsbereiche handhabbar zu machen. Potenz- und Logarithmengesetze sind überall in der Medizin. Für den MedAT sind Potenzgesetze (8 Regeln), Wurzeln als gebrochene Potenzen, Logarithmus (log₁₀, ln), pH-Berechnung und Dezibel prüfungsrelevant.
 
-# Potenz- und Wurzelgesetze
-
-Potenzen und Wurzeln sind in den Naturwissenschaften und der Medizin allgegenwärtig: Exponentialwachstum von Bakterien, radioaktiver Zerfall, Pharmakokinetik, pH-Berechnung, Schallpegel in Dezibel — all diese Konzepte basieren auf Potenz- und Logarithmengesetzen. Das sichere Fundament in diesen Rechenregeln ist für den MedAT unverzichtbar und bildet die Brücke zwischen elementarer Mathematik und naturwissenschaftlichen Anwendungen.
-
 ## Definition und Grundbegriffe
 
 Eine Potenz a hoch n ist das n-fache Produkt der Basis a mit sich selbst:
@@ -853,6 +918,8 @@ a hoch (1/n) = n-te Wurzel aus a.
 a hoch (m/n) = n-te Wurzel aus (a hoch m) = (n-te Wurzel aus a) hoch m.
 Beispiel: 8 hoch (2/3) = (Kubikwurzel aus 8) hoch 2 = 2 hoch 2 = 4.
 
+> **Merke:** Drei häufige Fallen: (1) (aⁿ)ᵐ = aⁿˣᵐ, NICHT aⁿ⁺ᵐ. (2) a⁻ⁿ = 1/aⁿ, NICHT −aⁿ. (3) (a+b)ⁿ ≠ aⁿ+bⁿ — das Potenzgesetz gilt NUR für Produkte, nicht für Summen!
+
 ## Wurzelgesetze
 
 Wurzeln sind spezielle Potenzen: n-te Wurzel aus a = a hoch (1/n). Die Wurzelgesetze folgen direkt aus den Potenzgesetzen.
@@ -867,6 +934,8 @@ Potenz und Wurzel: (Wurzel aus a) hoch 2 = a und Wurzel aus (a hoch 2) = Betrag 
 Wichtig: Wurzel aus (a hoch 2) = Betrag von a, denn Wurzel aus 9 = 3 = Betrag von 3 = Betrag von (minus 3). Die Quadratwurzel ist immer nicht-negativ.
 
 Rationalisierung: Wurzeln im Nenner sollten durch Erweitern mit der konjugierten Form (dritte binomische Formel) eliminiert werden.
+
+> **Merke:** Produktregel erlaubt: √(a·b) = √a·√b. VERBOTEN: √(a+b) ≠ √a+√b und √(a²) = |a| (nicht ±a — Wurzel ist immer nicht-negativ!).
 
 ## Logarithmengesetze
 
@@ -893,6 +962,8 @@ Beispiel: lg(1000) = lg(10 hoch 3) = 3 mal lg(10) = 3.
 Basiswechselformel: log_a(x) = log_b(x) / log_b(a).
 Wichtigste Anwendung: ln(x) = lg(x) / lg(e) ungefähr gleich lg(x) / 0,4343 ungefähr gleich 2,303 mal lg(x).
 
+> **Merke:** Drei Logarithmenregeln: log(a·b) = log a + log b; log(a/b) = log a − log b; log(aⁿ) = n·log a. Logarithmus verwandelt Multiplikation in Addition — deshalb so nützlich für Exponentialwachstum und pH-Rechnung.
+
 ## Der natürliche Logarithmus und die Euler'sche Zahl
 
 Die Euler'sche Zahl e ungefähr gleich 2,71828 ist eine fundamentale mathematische Konstante. Sie ist die natürliche Basis des Wachstums, weil die Ableitung von e hoch x gleich e hoch x ist — die Funktion wächst proportional zu ihrem eigenen Wert.
@@ -915,6 +986,8 @@ Beispiele:
 - Nach 3 Halbwertszeiten: 12,5%
 - Nach 5 Halbwertszeiten: 3,125% (klinisch: Medikament gilt als ausgewaschen)
 - Nach 10 Halbwertszeiten: unter 0,1%
+
+> **Merke:** Nach n Halbwertszeiten: Restmenge = (½)ⁿ der Ausgangsmenge. Nach 5 HWZ ≈ 3% → ausgewaschen. Zerfallskonstante λ = ln(2)/T½ ≈ 0,693/T½.
 
 pH-Rechnung: pH = minus log Basis 10 von [H+].
 Für pH 7,4: [H+] = 10 hoch (minus 7,4) ungefähr 4 mal 10 hoch (minus 8) mol/L.
@@ -944,6 +1017,25 @@ Schallintensität verdoppelt sich: Delta L = 10 mal lg(I_2/I_1) = 10 mal lg(2) =
 
 **Beispiel 3 — pH-Berechnung bei Pufferverschiebung:**
 Blut-pH 7,40: [H+] = 10 hoch (minus 7,40) = **3,98 mal 10 hoch (minus 8) mol/L**. Azidose pH 7,10: [H+] = 10 hoch (minus 7,10) = **7,94 mal 10 hoch (minus 8) mol/L**. Die H+-Konzentration verdoppelt sich bei pH-Abfall um nur 0,30 Einheiten (da lg(2) ungefähr 0,30). Klinisch bedeutsam: kleine pH-Änderungen = grosse Konzentrationsänderungen.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was ist 8^(2/3)?" → (∛8)² = 2² = 4
+- "Welchen pH hat [H⁺] = 10⁻⁵ mol/L?" → pH = −log(10⁻⁵) = 5
+- "Nach 3 Halbwertszeiten: wie viel % verbleiben?" → (½)³ = 1/8 = 12,5%
+
+**Achtung — typische Verwechslungen:**
+- (aⁿ)ᵐ = aⁿˣᵐ (Multiplikation der Exponenten!), NICHT aⁿ⁺ᵐ
+- a⁻ⁿ = 1/aⁿ, NICHT −aⁿ
+- √(a+b) ≠ √a + √b — häufigster Wurzelfehler!
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- pH-Normalbereich arteriell: 7,35–7,45; pH < 7,35 = Azidose; pH > 7,45 = Alkalose
+- ln(2) ≈ 0,693; lg(2) ≈ 0,301; ln(10) ≈ 2,303
+- Nach 5 Halbwertszeiten: ~3% der Ausgangsdosis → Medikament gilt als ausgewaschen
+
+---
 
 ## Zusammenfassung
 
@@ -1103,10 +1195,6 @@ Blut-pH 7,40: [H+] = 10 hoch (minus 7,40) = **3,98 mal 10 hoch (minus 8) mol/L**
 
 Wundfläche für Transplantationsplanung, Aortenklappenöffnungsfläche bei Stenose, Körperoberfläche für Zytostatika-Dosierung — ebene Figuren und ihre Flächen sind in der Medizin direkt anwendbar. Die Neuner-Regel nach Wallace teilt die Körperoberfläche in 9%-Segmente auf (Verbrennungsbeurteilung). Für den MedAT sind Rechteck, Dreieck, Kreis, Trapez, Heron-Formel, Kreisring und die klinischen Anwendungen prüfungsrelevant.
 
-# Ebene Figuren — Flächen und Umfang
-
-Die Berechnung von Flächen und Umfängen ebener geometrischer Figuren bildet die Grundlage der planaren Geometrie. Im MedAT werden Flächenformeln regelmäßig abgefragt — sowohl als reine Rechenaufgaben als auch in medizinisch eingekleideten Kontexten wie der Berechnung von Wundflächen, Klappenöffnungsflächen oder der Körperoberfläche für die Zytostatika-Dosierung. Die sichere Beherrschung aller Standardformeln ist daher unverzichtbar.
-
 ## Rechteck und Quadrat
 
 Beim Rechteck mit Länge l und Breite b gilt:
@@ -1215,6 +1303,25 @@ Gesunde Klappe: A = pi mal r hoch zwei mit d = 2,5 cm → A = pi mal 1,25 hoch z
 
 **Beispiel 4 — Kreisring als Gefäßwandquerschnitt:**
 Koronararterie: Außendurchmesser 4 mm (R = 2 mm), Wanddicke 0,5 mm (r = 1,5 mm). Lumen A_innen = pi mal 1,5 hoch zwei = **7,07 mm hoch zwei**. Gesamtquerschnitt A_aussen = pi mal 2 hoch zwei = 12,57 mm hoch zwei. Wandfläche = 12,57 minus 7,07 = **5,5 mm hoch zwei**.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Kreisförmige Verbrennung Ø 12 cm — Anteil an BSA 1,8 m²?" → A = π·36 ≈ 113 cm² = 0,0113 m² → ~0,63% KOF
+- "Tumor wächst von r = 1 cm auf r = 1,5 cm — Flächenzunahme?" → k = 1,5; Fläche × k² = 2,25 → +125%
+- "Dreieck: a=5, b=7, c=8 cm — Fläche?" → s=10, A = √(10·5·3·2) = √300 ≈ 17,3 cm²
+
+**Achtung — typische Verwechslungen:**
+- Kreisfläche A = π·r² (r im Quadrat!), Kreisumfang U = 2·π·r (r linear) — nicht vertauschen
+- Parallelogramm-Höhe ≠ Schrägseite — h ist die SENKRECHTE Höhe
+- Ähnlichkeit: Flächen skalieren mit k², nicht k (k=2 → Fläche ×4, nicht ×2)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Neuner-Regel (Verbrennung): Kopf 9%, Arm je 9%, Brust 9%, Bauch 9%, Rücken 18%, Bein je 18%, Genitale 1%
+- Aortenklappe: normal ~4,9 cm², schwere Stenose < 1 cm² (OP-Indikation)
+- KOF Erwachsene: ~1,7–1,9 m²
+
+---
 
 ## Zusammenfassung
 
@@ -1396,10 +1503,6 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
 
 Von der Berechnung des Herzvolumens (Ellipsoid) über die Medikamentendosierung nach Körpergewicht bis zur Planung eines Stents (Zylinder) — Körpergeometrie ist Medizin. Kugelförmige Gelenke, zylindrische Gefäße, kegelförmige Lungenzipfel: der Körper ist aus geometrischen Körpern zusammengesetzt. Für den MedAT sind Kugel, Zylinder, Quader, Kegel und deren Volumen- und Oberflächenformeln prüfungsrelevant.
 
-# Körper — Volumen und Oberfläche
-
-Die räumliche Geometrie beschäftigt sich mit Körpern im dreidimensionalen Raum. Im medizinischen Kontext sind Volumen- und Oberflächenberechnungen für die Beurteilung von Organen, Tumoren und Gefäßen unverzichtbar. Der MedAT fragt Volumen- und Oberflächenformeln sowohl in reiner Form als auch in klinischen Anwendungen ab — typische Aufgabentypen sind Tumorvolummetrie, Infusionsvolumen-Berechnungen und Hagen-Poiseuille-Aufgaben zur Gefäßstenose.
-
 ## Quader
 
 Ein Quader mit Länge l, Breite b und Höhe h:
@@ -1487,6 +1590,25 @@ Ultraschallmessung: a = 8 cm, b = 6 cm, c = 5 cm. V = 0,52 mal 8 mal 6 mal 5 = 0
 
 **Beispiel 4 — Zylinder vs. Kugel (Kapselvolumen):**
 Zylindrische Kapsel: r = 0,4 cm, h = 1,5 cm. V_Zyl = π · 0,16 · 1,5 = 0,24π ≈ 0,75 cm³ = **0,75 mL**. Kugelförmiges Granulat: r = 0,5 cm. V_Kugel = (4/3) · π · 0,125 = 0,524 cm³ ≈ **0,52 mL**. Die Kapselform fasst 44% mehr Volumen als die Kugel bei ähnlichen Abmessungen.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Zyste mit Ø 4 cm — Volumen?" → r = 2, V = (4/3)·π·8 ≈ 33,5 mL
+- "70%-Stenose (Radius auf 30%) — Flussreduktion?" → 0,3⁴ = 0,0081 → auf ~0,8% des Normalflusses
+- "Tumor 3×4×5 cm (Ellipsoid) — Volumen?" → 0,524·60 ≈ 31,4 cm³
+
+**Achtung — typische Verwechslungen:**
+- Kegel: V = ⅓·π·r²·h (DRITTEL, nicht ½!); Pyramide: V = ⅓·A_G·h
+- Hagen-Poiseuille: Fluss ~ r⁴, NICHT ~ r² (r² wäre nur der Querschnitt)
+- Mantelfläche Zylinder: M = 2πr·h (ohne Grundkreise); Gesamtoberfläche: O = 2πr(r+h)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Restharn > 100 mL = pathologisch (Ultraschall-Ellipsoid: V ≈ 0,52·a·b·c)
+- RECIST: > 20% Volumenzunahme = Progressive Disease
+- Alveolen: Radius ~0,15 mm, Gesamtoberfläche ~70 m² bei 6 L Volumen
+
+---
 
 ## Zusammenfassung
 
@@ -1673,10 +1795,6 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
 
 Eine EKG-Kurve ist eine Funktion über Zeit — Koordinatensystem. Eine Blutdruckkurve ebenfalls. Die Dosierungs-Wirkungskurve eines Medikaments ist ein Graph im Koordinatensystem. Analytische Geometrie verbindet algebraische Gleichungen mit geometrischen Objekten — Geraden, Kurven, Abstände. Für den MedAT sind kartesische Koordinaten, Geradengleichung (Steigung, Schnittpunkte), Abstände und lineare Interpolation prüfungsrelevant.
 
-# Koordinatensystem und analytische Geometrie
-
-Die analytische Geometrie verbindet algebraische Methoden mit geometrischen Inhalten. Punkte, Geraden und Kurven werden durch Gleichungen beschrieben, was präzise Berechnungen ermöglicht. Im MedAT werden Aufgaben zu Abstandsberechnungen, Geradengleichungen und Schnittpunkten häufig gestellt — oft auch im Kontext klinischer Diagramme wie Streudiagrammen oder Regressionsgeraden.
-
 ## Kartesisches Koordinatensystem
 
 Ein Punkt P im zweidimensionalen kartesischen Koordinatensystem wird durch ein geordnetes Paar (x, y) beschrieben. Die x-Achse (Abszisse) ist horizontal, die y-Achse (Ordinate) vertikal; der Ursprung O = (0, 0) liegt im Schnittpunkt.
@@ -1784,6 +1902,25 @@ Pupille als Kreis: normal d = 3 mm → r = 1,5 mm. A = π · 1,5² = **7,07 mm²
 
 **Beispiel 4 — Parallele und senkrechte Geraden:**
 g₁: y = ¾x + 2. Parallele Gerade durch P(4, 1): y = ¾x + b. Einsetzen: 1 = ¾ · 4 + b → b = 1 − 3 = −2. g₂: y = ¾x − 2. Senkrechte Gerade durch P(4, 1): m_perp = −1/(¾) = −4/3. y = −4/3 · x + b. Einsetzen: 1 = −4/3 · 4 + b → b = 1 + 16/3 = 19/3. g₃: y = −4/3 · x + 19/3.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Geradengleichung durch P(2,3) und P(6,11)?" → m = (11−3)/(6−2) = 2; b = 3−4 = −1 → y = 2x−1
+- "Schnittpunkt y=2x+1 und y=−x+7?" → 3x = 6, x = 2, y = 5 → Schnittpunkt (2, 5)
+- "Sind y = 3x+1 und y = −⅓x+5 senkrecht?" → 3·(−1/3) = −1 → ja!
+
+**Achtung — typische Verwechslungen:**
+- Kreisgleichung: (x−x₀)²+(y−y₀)² = r² — rechts steht r² (nicht r); Mittelpunkt bei (x+2)² ist x₀ = −2!
+- Parallele Geraden: gleiche Steigung, VERSCHIEDENER y-Abschnitt — kein Schnittpunkt
+- arctan: Bereich nur −90° bis +90° → im II./III. Quadranten +180° addieren
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Sensitivität = TP/(TP+FN); Spezifität = TN/(TN+FP); PPV = TP/(TP+FP)
+- EKG-Lagetypen: Normotyp 0°–90°, Linkstyp −30° bis 0°, Rechtstyp +90° bis +120°
+- Bland-Altman: Bias = mittlere Differenz; Limits of Agreement = Bias ± 1,96·SD
+
+---
 
 ## Zusammenfassung
 
@@ -1971,10 +2108,6 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
 
 Die EKG-Herzachse ist ein Vektor in der Frontalebene. Kräfte auf Gelenke werden als Vektoren berechnet. Blutströmung hat Richtung und Betrag — also ist sie ein Vektor. Vektoren beschreiben Größen mit Richtung und Betrag, im Gegensatz zu Skalaren (nur Betrag). Für den MedAT sind Vektoraddition, Skalarprodukt, Winkelberechnung, Betrag und 3D-Koordinaten prüfungsrelevant.
 
-# Vektoren und räumliche Geometrie
-
-Vektoren sind gerichtete Größen, die sowohl einen Betrag (Länge) als auch eine Richtung besitzen. Sie sind unverzichtbar für die Beschreibung von Kräften, Bewegungen und geometrischen Objekten im Raum. Im MedAT kommen Vektoraufgaben vor allem im Kontext der Kräftezerlegung, der EKG-Herzachse und der räumlichen Geometrie vor. Die Grundoperationen — Addition, Skalar- und Kreuzprodukt — müssen sicher beherrscht werden.
-
 ## Grundbegriffe
 
 Ein Vektor **a** in 3D wird durch seine Komponenten beschrieben: **a** = (a₁, a₂, a₃). Im 2D entsprechend: **a** = (a₁, a₂).
@@ -2080,6 +2213,25 @@ Zwei Bestrahlungsfelder mit Dosisanteil-Vektoren d₁ = (1,5; 0,8; 0,4) Gy und d
 
 **Beispiel 4 — Abstand Punkt-Ebene (Tumorrand zum Resektionsrand):**
 Resektionsebene: 2x − y + 2z = 10. Tumorzentrum bei T(3, 2, 4). Abstand: |2·3 − 2 + 2·4 − 10| / √(4+1+4) = |6 − 2 + 8 − 10| / 3 = |2| / 3 = **0,67 cm**. Sicherheitsabstand von 1 cm nicht erreicht → Nachresektion erforderlich.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Skalarprodukt a=(1,2,3) und b=(4,0,−2)?" → 4+0−6 = −2
+- "Sind a=(2,1) und b=(−1,2) senkrecht?" → 2·(−1)+1·2 = 0 → ja!
+- "Drehmoment: F=200N, r=6cm, θ=90°?" → |M| = 0,06·200·sin90° = 12 N·m
+
+**Achtung — typische Verwechslungen:**
+- Skalarprodukt = Zahl (Skalar!), Kreuzprodukt = Vektor — nicht verwechseln
+- Kreuzprodukt: a×b ≠ b×a (antikommutativ!) — Richtung kehrt sich um
+- EKG-Herzachse: Linkstyp = NEGATIVER Winkel (< 0°), Rechtstyp > +90°
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- EKG-Lagetypen: Normotyp 0°–90°, Linkstyp −30° bis 0°, Rechtstyp +90° bis +120°
+- Drehmoment maximal wenn θ = 90° (Kraft senkrecht zum Hebelarm; sin 90° = 1)
+- Abstand Punkt P von Ebene n₁x+n₂y+n₃z = d: |n₁xP+n₂yP+n₃zP−d| / |n|
+
+---
 
 ## Zusammenfassung
 
