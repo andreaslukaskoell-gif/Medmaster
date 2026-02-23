@@ -21,56 +21,72 @@ export const bioKapAnatomieGewebe: Kapitel = {
         "Flimmerepithel",
         "Apikale Polarität",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Epithelgewebe bedecken alle inneren und äußeren Körperoberflächen und bilden die erste Barriere zwischen Organismus und Umwelt. Sie sind polar aufgebaut (apikale vs. basolaterale Seite), avaskulär und sitzen stets auf einer Basalmembran. Die Klassifikation erfolgt nach Zellform (Platten-, kubisch, Zylinderepithel) und Schichtung (einschichtig, mehrschichtig, mehrreihig), wobei jede Kombination ein spezifisches funktionelles Profil besitzt. Für den MedAT ist dieses Thema ein Klassiker, da Epitheltypen häufig konkreten Organen zugeordnet werden müssen.
-
-**Das Wichtigste auf einen Blick:**
-- Einschichtiges Plattenepithel (Endothel, Mesothel) ermöglicht rasche Diffusion
-- Mehrreihiges Flimmerepithel der Atemwege ist pseudostratifiziert (alle Zellen auf Basalmembran)
-- Urothel (Übergangsepithel) erlaubt Dehnung der Harnblase durch Schirmzellen
-- Tight Junctions versiegeln den apikalen Interzellularspalt und ermöglichen gerichteten Transport
-- Drüsensekretion: merokrin (Exozytose), apokrin (Abschnürung), holokrin (Zellzerfall bei Talgdrüsen)
+Jede Oberfläche im Körper ist mit Epithel bedeckt — die Haut, die Darmschleimhaut, die Blutgefäßinnenwand, die Harnblase. Epithel ist die universelle Verkleidung und Barriere. Je nach Aufgabe unterscheidet sich der Typ radikal: Ein hauchdünnes Plattenepithel in der Lunge ermöglicht schnellen Gasaustausch, das Darmepithel saugt Nährstoffe auf, das Harnblasenepithel dehnt sich enorm. Grundprinzip: Alle Epithelien sind polar (Ober- vs. Unterseite), avaskulär (keine eigenen Blutgefäße) und sitzen auf einer Basalmembran. Für den MedAT ist die Zuordnung von Epitheltyp zu Organ prüfungsrelevant, ebenso Tight Junctions und Sekretionsmechanismen.
 
 ---
 
-## Einschichtige Epithelien im Überblick
+## Grundprinzip: Eigenschaften aller Epithelien
 
-Einschichtige Epithelien besitzen nur eine Zelllage; alle Zellen berühren die Basalmembran. Einschichtiges Plattenepithel (Endothel, Mesothel) erlaubt rasche Diffusion. Einschichtiges kubisches Epithel findet sich in Schilddrüsenfollikeln und Nierentubuli. Einschichtiges Zylinderepithel kleidet den Dünndarm und Magen aus — Mikrovilli des Dünndarms erhöhen die Resorptionsfläche auf ca. 200 m². Das mehrreihige Flimmerepithel der Atemwege ist zwar einschichtig (alle Zellen auf Basalmembran), erscheint aber durch versetzt angeordnete Kerne mehrschichtig (pseudostratifiziert). Kinozilien (Länge ca. 6 µm, 9+2-Axonemstruktur) schlagen rhythmisch und transportieren Schleim mit eingeschlossenen Partikeln rachenwärts.
+Alle Epithelien teilen drei Grundeigenschaften:
 
-> **Merke:** Pseudostratifiziert = alle Zellen auf Basalmembran, aber Kerne auf verschiedenen Höhen.
+1. **Polarität**: Die Zelle hat eine **apikale Seite** (zur Körperhöhle/Oberfläche hin) und eine **basolaterale Seite** (zur Basalmembran/Interstitium). Transporter sind ungleichmäßig verteilt → **gerichteter Transport** (z.B. SGLT1 apikal, GLUT2 basolateral im Dünndarm)
+
+2. **Basalmembran**: Alle Epithelzellen sitzen auf einer strukturierten Bindegewebsschicht (Kollagen IV, Laminin, Proteoglykane). Sie verankert das Epithel und stellt eine weitere selektive Barriere dar.
+
+3. **Avaskulär**: Epithelien haben keine eigenen Blutgefäße — Versorgung erfolgt durch Diffusion aus darunter liegenden Kapillaren. → Hohe Zellerneuerungsrate nötig (Dünndarm alle 3–5 Tage, Haut alle ~2 Wochen)
+
+**Zellkontakte in Epithelien:**
+- **Tight Junctions** (Zonula occludens): Versiegeln apikalen Interzellularspalt; Barriere- und Fence-Funktion (trennen apikale und basolaterale Membranproteine). Aus Claudinen und Occludin.
+- **Desmosomen**: Mechanischer Zusammenhalt (Cadherine + Intermediärfilamente). Knotenförmig, gürtelartig.
+- **Gap Junctions**: Direkter Ionenaustausch zwischen Zellen (Connexine). Wichtig für Herzmuskel, glatte Muskulatur.
+- **Hemidesmosomen**: Verankerung an Basalmembran (Integrine + Laminin).
+
+> **Merke:** Tight Junctions = apikal, Barriere + Fence. Desmosomen = mechanisch. Gap Junctions = Ionenaustausch. Hemidesmosomen = Basalmembran-Verankerung.
 
 ---
 
-## Mehrschichtige Epithelien und Übergangsepithel
+## Klassifikation der Epithelien
 
-Mehrschichtiges verhorntes Plattenepithel (Epidermis) schützt mechanisch: Stratum basale (Stammzellen, Mitose) → Stratum spinosum (Desmosomen) → Stratum granulosum (Keratohyalin) → Stratum corneum (tote Korneozyten, Keratin). Mehrschichtiges unverhorntes Plattenepithel (Ösophagus, Vagina) bleibt feucht; Kerne bleiben in obersten Schichten erhalten. Das Urothel der Harnblase ist ein Sonderfall: Bei leerer Blase sind die Schirmzellen kuppelförmig gewölbt; bei Dehnung flachen sie ab, die Uroplakin-reiche Membran faltet sich aus Vesikeln ein — das Epithel verdünnt sich, ohne zu reißen.
+Epithelien werden nach zwei Kriterien klassifiziert: **Zellform** und **Schichtung**:
 
-> **Merke:** Verhorntes Plattenepithel (Haut) = Schutz; Urothel = Dehnbarkeit durch Schirmzellen.
+| Epitheltyp | Vorkommen | Funktion |
+|---|---|---|
+| Einschichtiges **Plattenepithel** | Endothel (Blutgefäße), Mesothel (Serosa), Alveolen | Schnelle Diffusion |
+| Einschichtiges **kubisches** Epithel | Schilddrüsenfollikel, Nierentubuli, Gallengänge | Sekretion, Resorption |
+| Einschichtiges **Zylinderepithel** | Dünndarm (Mikrovilli!), Magen, Dickdarm | Resorption, Sekretion |
+| **Mehrreihiges** (pseudo-) Flimmerepithel | Trachea, Bronchien, Eileiter | Mukoziliäre Clearance |
+| Mehrschichtiges **verhorntes** Plattenepithel | Epidermis (Haut) | Mechanischer Schutz |
+| Mehrschichtiges **unverhorntes** Plattenepithel | Ösophagus, Vagina, Mundhöhle | Schutz, bleibt feucht |
+| **Urothel** (Übergangsepithel) | Harnblase, Ureter | Dehnbarkeit |
 
----
+**Wichtige Details:**
+- **Pseudostratifiziert** (mehrreihig): Alle Zellen berühren die Basalmembran, Kerne liegen auf verschiedenen Höhen → sieht mehrschichtig aus, ist es aber nicht! Kinozilien (9+2-Axonemstruktur, ~6 µm) transportieren Schleim rachenwärts.
+- **Urothel**: Schirmzellen (Umbrella cells) bei leerer Blase gewölbt → bei Dehnung abgeflacht + Uroplakin-Membranen aus Vesikeln eingefaltet → Epithel kann sich verdoppeln ohne zu reißen
+- **Verhorntes Plattenepithel**: 4 Schichten: Stratum basale (Mitose, Stammzellen) → spinosum (Desmosomen) → granulosum (Keratohyalin) → corneum (tote Korneozyten, Keratin)
 
-## Tight Junctions und Barrierefunktion
-
-Tight Junctions (Zonulae occludentes) bestehen aus transmembranen Proteinen (Claudine, Occludin), die den apikalen Interzellularspalt vollständig verschließen. Sie erfüllen zwei Aufgaben: Erstens verhindern sie den parazellulären Transport (Barriere), zweitens teilen sie die Plasmamembran in einen apikalen und basolateralen Abschnitt (Fence-Funktion). Dadurch können Transporter (z. B. SGLT1 apikal, GLUT2 basolateral) gezielt für gerichtete Resorption sortiert werden. Im Darm, in den Nierentubuli und in der Blut-Hirn-Schranke sind besonders dichte Tight Junctions essentiell. Störungen (z. B. Zonulin bei Zöliakie) erhöhen die intestinale Permeabilität ('leaky gut').
-
-> **Merke:** Tight Junctions = apikal, verschließen Interzellularspalt, ermöglichen gerichteten Transport.
+> **Merke:** Pseudostratifiziert ≠ mehrschichtig — alle Zellen berühren Basalmembran! Urothel = Schirmzellen. Trachea = mehrreihiges Flimmerepithel.
 
 ---
 
 ## Drüsenepithelien und Sekretionsarten
 
-Drüsenepithelien entwickeln sich durch Einstülpung von Oberflächenepithel und bilden exokrine (mit Ausführungsgang) oder endokrine (ohne Gang, Abgabe ins Blut) Drüsen. Exokrine Drüsen werden nach ihrem Sekretionsmechanismus klassifiziert: **Merokrine Sekretion** (Exozytose ohne Zellverlust, z. B. Schweißdrüsen, Pankreas, Speicheldrüsen) ist die häufigste Form. **Apokrine Sekretion** (Abschnürung des apikalen Zellpols mit Sekretanteilen, z. B. laktierende Brustdrüse, Duftdrüsen der Axilla) führt zu teilweisem Zellverlust. **Holokrine Sekretion** (Zelle geht vollständig zugrunde und wird selbst zum Sekret, z. B. Talgdrüsen/Glandulae sebaceae) erfordert ständige Zellerneuerung aus Stammzellen.
+**Exokrine Drüsen** (mit Ausführungsgang) vs. **endokrine Drüsen** (ohne Gang, direkt ins Blut).
 
-Morphologisch unterscheidet man tubulöse (röhrenförmig, z. B. Magendrüsen), azinöse (beerenförmig mit engem Lumen, z. B. Pankreas) und alveoläre (blasenförmig mit weitem Lumen, z. B. Talgdrüse) Endstücke. Gemischte tubuloazinöse Drüsen (z. B. Glandula submandibularis) besitzen sowohl seröse (dünnflüssiges, enzymreiches Sekret) als auch muköse (zähflüssiges, muzinreiches Sekret) Anteile. Seröse Endstücke werden häufig als Halbmonde (Ebner-Halbmonde) um muköse Tubuli angeordnet. Becherzellen im Darm- und Atemwegsepithel sind Einzelzell-Drüsen, die Muzin sezernieren und damit die Schleimhautoberfläche schützen.
+Sekretionsmechanismen exokriner Drüsen:
 
-> **Merke:** Merokrin = Exozytose (häufigste Form); apokrin = Zellspitze abgeschnürt; holokrin = gesamte Zelle wird zum Sekret (Talgdrüse).
+| Typ | Mechanismus | Beispiele |
+|---|---|---|
+| **Merokrin** | Exozytose (kein Zellverlust) | Schweißdrüsen, Pankreas, Speicheldrüsen — **häufigste Form** |
+| **Apokrin** | Abschnürung des apikalen Zellpols | Laktierende Brustdrüse, apokriner Schweiß (Axilla) |
+| **Holokrin** | Gesamte Zelle zerfällt und wird zum Sekret | **Talgdrüsen** (Glandulae sebaceae) |
 
----
+**Becherzellen:** Einzellige Schleimdrüsen im Darm- und Atemwegsepithel → sezernieren Muzin (merokrin) → Schleimfilm als Schutz und für mukoziliäre Clearance.
 
-## Klinischer Bezug
+**Klinisch — Kartagener-Syndrom (Primäre Ziliendyskinesie):** Defekte Dynein-Arme der Kinozilien → kein Zilienanschlag → kein Schlimtransport → chronische Bronchitis, Bronchiektasen, Infertilität. Situs inversus (Organe spiegelverkehrt) in 50% der Fälle (Links-Rechts-Bestimmung in der Embryonalentwicklung durch Nodal-Zilien gestört).
 
-Bei Kartagener-Syndrom (Primäre Ziliendyskinesie) sind die Dynein-Arme der Kinozilien defekt — Betroffene leiden unter chronischer Bronchitis, Bronchiektasen, Infertilität und häufig Situs inversus. Karzinome entstehen zu ca. 85 % aus entartetem Epithelgewebe.
+> **Merke:** Merokrin = Exozytose (häufig); apokrin = Zellspitze abgeschnürt; holokrin = ganze Zelle = Sekret (Talgdrüse). Kartagener: Dynein-Defekt → Zilien bewegungslos.
 
 ---
 
@@ -97,7 +113,12 @@ Bei Kartagener-Syndrom (Primäre Ziliendyskinesie) sind die Dynein-Arme der Kino
 
 ## Zusammenfassung
 
-Epithelgewebe kleiden als polare, avaskuläre Zellverbände alle Körperoberflächen aus und sitzen stets auf einer Basalmembran. Die Einteilung erfolgt nach Zellform und Schichtung, wobei das pseudostratifizierte Flimmerepithel der Atemwege trotz seiner Mehrkernigkeit einschichtig ist und das Urothel der Harnblase durch Schirmzellen eine einzigartige Dehnbarkeit besitzt. Tight Junctions versiegeln den apikalen Interzellularspalt und ermöglichen durch ihre Fence-Funktion gerichteten Transport, während Desmosomen und Hemidesmosomen für den mechanischen Zusammenhalt sorgen. Drüsenepithelien sezernieren nach drei Mechanismen: merokrin (Exozytose), apokrin (Abschnürung) und holokrin (Zellzerfall).`,
+- **Grundprinzip**: Epithel polar (apikal ↔ basolateral), avaskulär, auf Basalmembran
+- **Zellkontakte**: Tight Junctions (apikal, Barriere+Fence), Desmosomen (mechanisch), Gap Junctions (Ionenaustausch), Hemidesmosomen (Basalmembran)
+- **Typen**: einschichtig (Diffusion/Resorption) → mehrreihig pseudostratifiziert (Atemwege, alle auf BM!) → mehrschichtig (Schutz: Haut verhornt, Ösophagus unverhornt) → Urothel (Dehnbarkeit, Schirmzellen)
+- **Pseudostratifiziert ≠ mehrschichtig**: Alle Zellen berühren Basalmembran, Kerne nur auf verschiedenen Höhen
+- **Drüsen**: merokrin (Exozytose, häufig), apokrin (Zellspitze), holokrin (ganze Zelle = Talgdrüse)
+- **Klinisch**: Kartagener-Syndrom (Dynein-Defekt → Zilien starr → Bronchiektasen, Infertilität, Situs inversus)`,
       lernziele: [
         "Epitheltypen nach Form und Schichtung benennen und ihren Vorkommen zuordnen",
         "Polarität des Epithels, Basalmembran und wichtige Zellkontakte erklären",
@@ -224,56 +245,107 @@ Epithelgewebe kleiden als polare, avaskuläre Zellverbände alle Körperoberflä
         "Fibroblasten",
         "Straffes Bindegewebe",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Binde- und Stützgewebe bilden das strukturelle Gerüst des Körpers und zeichnen sich durch eine prominente extrazelluläre Matrix aus, die von spezialisierten Zellen (Fibroblasten, Chondroblasten, Osteoblasten) produziert wird. Kollagen als häufigstes Körperprotein ist dabei der zentrale Baustein, dessen verschiedene Typen für die mechanischen Eigenschaften von Sehnen, Knorpel und Knochen verantwortlich sind. Im MedAT werden regelmäßig Kollagentypen, Knorpelarten und die Osteoblasten-Osteoklasten-Balance abgefragt.
-
-**Das Wichtigste auf einen Blick:**
-- Kollagen Typ I (Knochen, Sehnen), Typ II (Knorpel), Typ III (Retikulin, Gefäße) -- Vitamin C für Hydroxylierung essentiell
-- Osteoblasten bauen Knochen auf (mesenchymal), Osteoklasten resorbieren (hämatopoetisch, RANKL)
-- Drei Knorpeltypen: Hyalin (Gelenke), Faser (Bandscheiben), Elastisch (Ohrmuschel)
-- Knorpel ist avaskulär -- daher sehr eingeschränkte Heilungskapazität
-- Braunes Fettgewebe: UCP-1 entkoppelt Atmungskette zur Thermogenese
+Knochen, Sehnen, Knorpel, Fettgewebe — all das ist Bindegewebe. Was diese Strukturen verbindet: Die eigentliche Masse ist nicht in den Zellen, sondern **außerhalb** — in der extrazellulären Matrix (EZM). Kollagen ist das häufigste Protein des Körpers und gibt dem Bindegewebe seine Festigkeit. Je nach Kollagentyp und Matrix entsteht zugfeste Sehne, druckresistenter Knorpel oder mineralisierter Knochen. Für die Medizin ist das täglich relevant: Osteoporose, Arthrose, Skorbut — alles Bindegewebserkrankungen. Im MedAT werden Kollagentypen, Knochenumbau und Knorpelarten regelmäßig abgefragt.
 
 ---
 
-## Kollagentypen und ihre Vorkommen
+## Grundprinzip: Die Extrazelluläre Matrix (EZM)
 
-Kollagen ist das häufigste Protein im menschlichen Körper (ca. 30 % des Gesamtproteins). Die Tripelhelix entsteht aus drei Polypeptidketten mit Gly-X-Y-Wiederholungen. Vitamin C ist für die Hydroxylierung von Prolin und Lysin essentiell — bei Vitamin-C-Mangel (Skorbut) entstehen instabile Kollagenfibrillen. Kollagen Typ I ist zugfest und findet sich in Knochen und Sehnen. Kollagen Typ II ist druckresistent (Knorpel). Kollagen Typ III (Retikulinfasern) ist dehnbar und findet sich in Gefäßwänden und früher Wundheilung. Fibroblasten sind die Hauptproduzenten im lockeren und straffen Bindegewebe; Chondroblasten produzieren Knorpelkollagen; Osteoblasten synthetisieren Knochen-Kollagen Typ I.
+Das Besondere am Bindegewebe: Viel **mehr Matrix als Zellen**. Die EZM besteht aus:
 
-> **Merke:** Kollagen I = Knochen/Sehnen (Typ 1 = überall); Kollagen II = Knorpel (II wie Zwei-mal drücken); Kollagen III = Retikulin (IIImmobilien-Gerüst).
+1. **Kollagenfasern** (strukturelle Festigkeit — Zugfestigkeit und Druckresistenz)
+2. **Elastinfasern** (Elastizität, Rückkehr in Ausgangsform)
+3. **Proteoglykane** (Hyaluronsäure, Chondroitinsulfat, Heparansulfat): negativ geladen → binden Wasser → verleihen Druckresistenz. Beispiel: Aggrecan im Knorpel.
+4. **Glykoproteine** (Fibronektin, Laminin): verknüpfen Zellen über **Integrine** mit der Matrix → Zelladhäsion, Wundheilung, Migration
+
+**Zellen des Bindegewebes:**
+- **Fibroblasten**: Hauptproduzenten der EZM in lockerem/straffem Bindegewebe
+- **Chondroblasten → Chondrozyten**: produzieren Knorpelmatrix
+- **Osteoblasten → Osteozyten → Osteoklasten**: Knochenumbau
+- **Mastzellen, Makrophagen**: Immunfunktionen
+
+> **Merke:** Bindegewebe = Matrix dominiert über Zellen. EZM aus Kollagen (Festigkeit) + Proteoglykane (Wasser/Druck) + Fibronektin (Adhäsion).
 
 ---
 
-## Knochenumbau: Osteoblasten vs. Osteoklasten
+## Kollagen — Struktur und Typen
 
-Knochen ist dynamisches Gewebe: Ca. 10 % werden jährlich neu gebaut. Osteoblasten (mesenchymaler Ursprung) synthetisieren Osteoid (Kollagen I + Nicht-Kollagen-Proteine wie Osteocalcin) und mineralisieren es durch Hydroxylapatit-Einlagerung. Wenn Osteoblasten vollständig eingemauert sind, werden sie zu Osteozyten, die über Canaliculi kommunizieren und als Mechano­sensoren wirken. Osteoklasten (hämatopoetischer Ursprung, Makrophagen-Linie, RANKL-Signal) resorbieren Knochen: Sie versiegeln ihre 'Ruffled Border' gegen die Knochenoberfläche und sezernieren HCl (pH ~4,5) und Kathepsin K. Osteoporose entsteht, wenn die Osteoklastenaktivität die Osteoblastenaktivität überwiegt — z. B. durch Östrogenmangel nach der Menopause.
+Kollagen ist das **häufigste Protein im Körper** (~30 % des Gesamtproteins). Aufbau: drei Polypeptidketten → Tripelhelix. Sequenz: **Gly-X-Y** (Glycin an jeder dritten Stelle, da kleinste Aminosäure im Zentrum).
 
-> **Merke:** Osteoblasten BAUEN auf; Osteoklasten KLAUBEN weg (resorbieren). RANKL aktiviert Osteoklasten.
+**Synthese:** Vitamin C ist Cofaktor der **Prolyl- und Lysylhydroxylase** → hydroxyliert Prolin und Lysin → stabilisiert Tripelhelix. Ohne Vitamin C → instabile Fibrillen → **Skorbut** (Zahnfleischbluten, Wundheilungsstörungen, Gefäßbrüchigkeit).
+
+**Wichtigste Kollagentypen:**
+
+| Typ | Eigenschaften | Vorkommen |
+|---|---|---|
+| **I** | Zugfest, dicke Fibrillen | Knochen, Sehnen, Haut, Kornea — **häufigster Typ** |
+| **II** | Druckresistent, dünne Fibrillen | Hyaliner Knorpel, Faserknorpel |
+| **III** | Dehnbar, Retikulinfasern | Gefäßwände, frühe Wundheilung, Leber, Milz |
+| **IV** | Netzartig, keine Fibrillen | **Basalmembran** (Nierenkörperchen, Alveolen) |
+
+> **Merke:** Kollagen I = Knochen/Sehnen (zugfest). Kollagen II = Knorpel (druckresistent). Kollagen III = Gefäße/Wundheilung (dehnbar). Kollagen IV = Basalmembran (Netz).
+
+---
+
+## Knochen: Aufbau und dynamischer Umbau
+
+**Aufbau:** Knochen = Kollagen I (30 %, Flexibilität) + **Hydroxyapatit** Ca₅(PO₄)₃OH (70 %, Härte). Diese Kombination macht Knochen einzigartig: weder zu spröde (wie reines Mineral) noch zu biegsam (wie reines Kollagen).
+
+**Knochenumbau (~10 % der Knochenmasse/Jahr):**
+
+| Zelle | Herkunft | Funktion | Marker |
+|---|---|---|---|
+| **Osteoblast** | Mesenchym (Stroma) | Baut Osteoid auf, mineralisiert | ALP ↑, Osteocalcin |
+| **Osteozyten** | Eingemauerter Osteoblast | Mechanorezeption, Signalgebung über Canaliculi | — |
+| **Osteoklasten** | Hämatopoetisch (Monozyten/Makrophagen) | Resorbiert Knochen über HCl (pH ~4,5) + Kathepsin K an Ruffled Border | TRAP ↑ |
+
+**Regulation — RANKL/OPG-System:**
+- Osteoblasten sezernieren **RANKL** → bindet an RANK auf Osteoklasten → aktiviert Resorption
+- Osteoblasten sezernieren auch **OPG** (Osteoprotegerin) → fängt RANKL ab → hemmt Osteoklasten
+- **Östrogen** ↑ OPG → weniger Resorption. Östrogenmangel (Menopause) → OPG ↓, RANKL dominiert → **Osteoporose**
+
+**Therapeutisch:** Bisphosphonate (hemmen Osteoklasten, direkt), Denosumab (RANKL-Antikörper).
+
+> **Merke:** OsteoBlast = Baut. OsteoKlast = Klaut (resorbiert). RANKL aktiviert Osteoklasten. Östrogen schützt Knochen.
 
 ---
 
 ## Knorpeltypen im Vergleich
 
-Alle drei Knorpeltypen sind avaskulär und haben nur Chondrozyten als Zellen. Hyalinknorpel (Kollagen II, blau-weißlich, glatt) überzieht Gelenkflächen und bildet das fetale Skelett; er ist druckresistent, aber bei Arthrose gefährdet. Faserknorpel (Kollagen I dominiert, weißlich, zäh) ist am zugfestesten: Er bildet Bandscheiben-Anulus und Menisci — bei Trauma kann er reißen (Meniskusriss). Elastischer Knorpel (Elastin-Fasern, gelblich) ist biegsam und kehr in seine Form zurück: Ohrmuschel und Epiglottis müssen Verformungen überstehen. Im Gegensatz zu Knochen hat Knorpel kein Periost — Reparatur ist daher limitiert.
+**Alle drei Knorpeltypen sind avaskulär** (keine Blutgefäße) → Ernährung nur über Diffusion → minimale Regenerationskapazität.
 
-> **Merke:** Hyalin = Gelenk; Faser = Bandscheibe/Meniskus; Elastisch = Ohr/Epiglottis.
+| Knorpeltyp | Zusammensetzung | Eigenschaften | Vorkommen |
+|---|---|---|---|
+| **Hyalin** | Kollagen II + viel Aggrecan | Druckresistent, glatt | Gelenkflächen, Trachealringe, fetales Skelett |
+| **Faser** | Kollagen I dominiert | Zugfest UND druckresistent | Bandscheiben (Anulus fibrosus), Menisci, Symphysis pubica |
+| **Elastisch** | Kollagen II + **Elastinfasern** | Biegsam, kehrt zurück | Ohrmuschel, Epiglottis, Auricula |
 
----
+**Klinisch:** Arthrose = Degeneration des Hyalinknorpels der Gelenke → da avaskulär, kaum Selbstheilung → Gelenkersatz. Bandscheibenvorfall = Prolaps des Nucleus pulposus (gallertartiger Kern aus Proteoglykanen) durch den Faserknorpel-Anulus.
 
-## Fettgewebe und Extrazellulärmatrix
-
-Fettgewebe ist eine spezialisierte Form des Bindegewebes mit zwei funktionell unterschiedlichen Typen: **Weißes Fettgewebe** (univakuolär) besitzt einen einzelnen großen Lipidtropfen, der den Zellkern an den Rand drängt (Siegelringform). Es dient als Energiespeicher (ca. 80 % des Gesamtfetts), mechanischer Schutz (perirenal, retroorbital) und Wärmeisolierung. Zudem ist es ein endokrines Organ und sezerniert Adipokine wie Leptin (Sättigungssignal, hemmt Hunger im Hypothalamus), Adiponektin (insulinsensibilisierend, antiinflammatorisch) und TNF-alpha (proinflammatorisch bei Adipositas). **Braunes Fettgewebe** (multivakuolär) enthält viele kleine Lipidtropfen und zahlreiche Mitochondrien mit Thermogenin (UCP1), das die oxidative Phosphorylierung entkoppelt und Wärme statt ATP produziert. Es kommt bei Neugeborenen vor allem interscapulär und paravertebral vor und nimmt mit dem Alter ab.
-
-Die Extrazellulärmatrix (EZM) des Bindegewebes besteht neben Kollagenfasern auch aus Proteoglykanen (z. B. Aggrecan im Knorpel) mit stark negativ geladenen Glykosaminoglykanen (GAGs: Hyaluronsäure, Chondroitinsulfat, Heparansulfat), die Wasser binden und so für Druckresistenz sorgen. Fibronektin verbindet Zellen über Integrine mit der EZM und ist essenziell für Zelladhäsion, Migration und Wundheilung.
-
-> **Merke:** Weißes Fett = Energiespeicher + Leptin; braunes Fett = Thermogenese via UCP1. Proteoglykane binden Wasser und sorgen für Druckresistenz.
+> **Merke:** Hyalin = Gelenk (Kollagen II). Faser = Bandscheibe/Meniskus (Kollagen I). Elastisch = Ohr/Epiglottis. Alle avaskulär = schlechte Heilung!
 
 ---
 
-## Klinischer Bezug
+## Fettgewebe — Energiespeicher und mehr
 
-Osteoporose entsteht durch Ungleichgewicht zugunsten der Osteoklasten, häufig durch Östrogenmangel nach der Menopause. Therapeutisch werden Bisphosphonate (hemmen Osteoklasten) oder RANKL-Antikörper (Denosumab) eingesetzt. Bei Skorbut (Vitamin-C-Mangel) ist die Kollagensynthese gestört — Knochen, Zahnfleisch und Gefäßwände werden brüchig.
+Fettgewebe ist spezialisiertes Bindegewebe:
+
+**Weißes Fettgewebe** (univakuolär):
+- Einzelner großer Lipidtropfen → Zellkern an Rand gedrängt (Siegelringform)
+- Energiespeicher (~80 % des Körperfetts), Schutzpolster (perirenal, retroorbital), Isolation
+- **Endokrines Organ**: sezerniert Adipokine:
+  - **Leptin** → Sättigungssignal an Hypothalamus (Hunger hemmen)
+  - **Adiponektin** → insulinsensibilisierend, antiinflammatorisch (↓ bei Adipositas!)
+  - **TNF-α** → proinflammatorisch (↑ bei Adipositas → chronische Inflammation → Insulinresistenz)
+
+**Braunes Fettgewebe** (multivakuolär):
+- Viele kleine Lipidtropfen + viele Mitochondrien (daher braun)
+- **UCP-1 (Thermogenin)**: Entkoppelt oxidative Phosphorylierung → Protonen fließen zurück ohne ATP zu machen → Energie als **Wärme** (Thermogenese)
+- Wichtig bei Neugeborenen (interscapulär) → nimmt mit Alter ab
+
+> **Merke:** Weißes Fett = Energiespeicher + Leptin (endokrin). Braunes Fett = Thermogenese via UCP-1 (entkoppelt Atmungskette).
 
 ---
 
@@ -301,7 +373,13 @@ Osteoporose entsteht durch Ungleichgewicht zugunsten der Osteoklasten, häufig d
 
 ## Zusammenfassung
 
-Kollagen ist das häufigste Protein des menschlichen Körpers und kommt in verschiedenen Typen vor, wobei Typ I in Knochen und Sehnen Zugfestigkeit verleiht, Typ II im Knorpel Druckbelastungen standhält und Typ III als Retikulinfaser dehnbare Gerüststrukturen bildet. Die Kollagensynthese erfordert Vitamin C für die Hydroxylierung von Prolin und Lysin, weshalb ein Mangel zu Skorbut führt. Im dynamischen Knochengewebe stehen aufbauende Osteoblasten mesenchymalen Ursprungs den abbauenden Osteoklasten hämatopoetischer Herkunft gegenüber, deren Gleichgewicht durch das RANKL-OPG-System reguliert wird. Knorpel hingegen ist avaskulär und besitzt daher eine stark eingeschränkte Regenerationskapazität, was Gelenkschäden bei Arthrose klinisch so problematisch macht.`,
+- **EZM** = Kollagenfasern (Festigkeit) + Proteoglykane (Wasser/Druck) + Fibronektin (Adhäsion) — dominiert über Zellen im Bindegewebe
+- **Kollagen I** (Sehnen/Knochen, zugfest) | **II** (Knorpel, druckresistent) | **III** (Gefäße/Wundheilung, dehnbar) | **IV** (Basalmembran)
+- **Vitamin C** → Prolyl-/Lysylhydroxylase → Tripelhelix-Stabilität; Mangel = Skorbut
+- **Knochenumbau**: Osteoblast (mesenchymal, baut auf) ↔ Osteoklast (hämatopoetisch, resorbiert via HCl + Kathepsin K); Gleichgewicht via RANKL/OPG
+- **Osteoporose**: Östrogenmangel → OPG ↓, RANKL dominiert → Osteoklasten > Osteoblasten → Knochenmasse ↓
+- **Knorpel avaskulär** → schlechte Heilung; 3 Typen: Hyalin (Gelenk), Faser (Bandscheibe, Kollagen I), Elastisch (Ohr, Elastin)
+- **Braunes Fett**: UCP-1 entkoppelt Atmungskette → Wärme statt ATP; **weißes Fett**: Leptin (Sättigung), Adiponektin (Insulinsensitivität)`,
       lernziele: [
         "Kollagentypen I, II, III nach Vorkommen und Funktion unterscheiden",
         "Drei Knorpeltypen (Hyalin, Faser, elastisch) sowie Knochenumbau durch Osteoblasten und Osteoklasten erklären",
@@ -432,60 +510,84 @@ Kollagen ist das häufigste Protein des menschlichen Körpers und kommt in versc
         "Myosin",
         "Querstreifung",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Muskelgewebe wandelt chemische Energie (ATP) in mechanische Arbeit um und ermöglicht Bewegung, Haltung und den Transport von Stoffen im Körper. Die drei Muskeltypen -- Skelettmuskulatur (quergestreift, willkürlich), Herzmuskulatur (quergestreift, unwillkürlich) und glatte Muskulatur (unwillkürlich) -- unterscheiden sich in Struktur und Steuerung grundlegend. Das Sarkomer als kleinste kontraktile Einheit der quergestreiften Muskulatur und die Gleitfilamenttheorie gehören zu den absoluten MedAT-Klassikern.
-
-**Das Wichtigste auf einen Blick:**
-- Sarkomer reicht von Z-Scheibe zu Z-Scheibe; bei Kontraktion werden I-Bande und H-Zone kürzer, A-Bande bleibt gleich
-- Ca²⁺ bindet Troponin C → Tropomyosin verschiebt sich → Myosin kann Aktin binden → Kraftschlag
-- ATP wird für das Lösen des Myosinkopfs von Aktin benötigt (Rigor mortis bei ATP-Mangel)
-- Herzmuskel: quergestreift, einkernig, Gap Junctions in Glanzstreifen, kein Tetanus möglich
-- Kardiales Troponin I/T als sensitiver Herzinfarkt-Marker
+Muskeln machen Bewegung möglich — aber das stimmt nur zu einem Drittel. Es gibt drei Muskeltypen: Skelettmuskel für willkürliche Bewegungen, Herzmuskel für den automatischen Blutpump, und glatte Muskulatur für alles im Inneren (Darm, Gefäße, Blase). Was alle verbindet: Kontraktion durch Aktin-Myosin-Interaktion, betrieben von ATP. Das Grundprinzip ist die **Gleitfilamenttheorie** — Filamente gleiten aneinander, das Sarkomer wird kürzer. Für den MedAT sind das Sarkomer, der Troponin/Ca²⁺-Schalter und die Unterschiede der drei Muskeltypen absolute Klassiker.
 
 ---
 
-## Sarkomerstruktur und Banden
+## Grundprinzip: Die drei Muskeltypen
 
-Das Sarkomer erstreckt sich von Z-Scheibe zu Z-Scheibe und misst in Ruhe ca. 2,2 µm. Die A-Bande (dunkel) enthält Myosin-Dickfilamente samt überlappenden Aktin-Dünnfilamenten und bleibt bei der Kontraktion konstant breit — denn die Myosinfilamente selbst verkürzen sich nicht. Die I-Bande (hell) besteht nur aus Aktin und wird kürzer, weil Aktin tiefer in die A-Bande hineingezogen wird. Die H-Zone (nur Myosin, kein Aktin) verschwindet bei maximaler Kontraktion. Die Z-Scheiben rücken zusammen. Titin wirkt als molekulare Feder: Es verbindet Myosin mit der Z-Scheibe und sorgt für Ruhespannung sowie den Schutz vor Überdehnung. Nebulin (parallel zu Aktin) legt die Länge der Aktinfilamente fest.
+| Merkmal | Skelettmuskel | Herzmuskel | Glatte Muskulatur |
+|---|---|---|---|
+| Streifung | Quergestreift | Quergestreift | Keine Sarkomere |
+| Steuerung | **Willkürlich** | Unwillkürlich | Unwillkürlich |
+| Kerne | Mehrkernig (peripher) | **1–2 (zentral)** | Einkernig (zentral) |
+| Kopplung | NMJ (ACh, Nikotin-R.) | **Gap Junctions** (Glanzstreifen) | Gap Junctions |
+| Ca²⁺-Schalter | **Troponin C** | **Troponin C** | **Calmodulin → MLCK** |
+| Tetanus | Möglich | **Unmöglich** (lange Refraktärzeit) | Tonisch möglich |
+| Biomarker | CK-MM | **Troponin I/T**, CK-MB | — |
 
-> **Merke:** Bei Kontraktion werden I-Bande und H-Zone kürzer; A-Bande bleibt gleich.
+> **Merke:** Herzmuskel = quergestreift (wie Skelett) + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur = kein Troponin → Calmodulin stattdessen.
 
 ---
 
-## Troponin-Tropomyosin-Schalter
+## Sarkomerstruktur: Grundprinzip der Querstreifung
 
-Im Ruhezustand liegt Tropomyosin in der Furche des Aktindoppelstrangs und blockiert sterisch die Myosin-Bindungsstellen. Der Troponin-Komplex fixiert Tropomyosin in dieser Blockierposition: Troponin I hemmt direkt, Troponin T verankert an Tropomyosin, Troponin C bindet Ca²⁺. Wenn ein Aktionspotential das sarkoplasmatische Retikulum (SR) erreicht, öffnen spannungsgesteuerte RyR1-Kanäle (Ryanodin-Rezeptoren), Ca²⁺ strömt aus dem SR ins Zytosol (Konzentration steigt von 0,1 µM auf ~10 µM). Ca²⁺ bindet Troponin C → Konformationsänderung des Troponin-Tropomyosin-Komplexes → Tropomyosin verschiebt sich → Myosinbindungsstellen auf Aktin freigelegt → Kreuzbrückenbildung möglich. Nach dem Aktionspotential pumpt die SR-Ca²⁺-ATPase (SERCA) Ca²⁺ zurück → Erschlaffung.
+Das **Sarkomer** ist die kleinste kontraktile Einheit — von **Z-Scheibe zu Z-Scheibe** (~2,2 µm in Ruhe):
 
-> **Merke:** Ca²⁺ + Troponin C → Tropomyosin verschiebt sich → Myosin kann Aktin binden → Kontraktion.
+**Aufbau (von Z zu Z):**
+- **I-Bande** (hell): Nur Aktin-Dünnfilamente → **wird bei Kontraktion kürzer**
+- **A-Bande** (dunkel): Myosin-Dickfilamente + überlappende Aktinfilamente → **bleibt konstant** (Myosinlänge ändert sich nicht!)
+- **H-Zone** (in der Mitte der A-Bande): Nur Myosin, kein Aktin → **verschwindet bei maximaler Kontraktion**
+- **M-Linie**: Verankert Myosinfilamente in der Mitte
+- **Z-Scheiben** rücken zusammen → Sarkomer wird kürzer
+
+**Strukturproteine:**
+- **Titin**: "Molekulare Feder" von Z-Scheibe zu M-Linie (via Myosin) → Ruhespannung + Schutz vor Überdehnung
+- **Nebulin**: Parallel zu Aktin, legt Filamentlänge fest
+
+> **Merke:** Bei Kontraktion: **I-Bande ↓, H-Zone ↓, A-Bande = konstant**. Filamente gleiten, nicht schrumpfen!
+
+---
+
+## Troponin-Tropomyosin-Schalter: Wie Ca²⁺ Kontraktion auslöst
+
+**Ruhezustand:** Tropomyosin liegt in der Furche des Aktinstrangs und **blockiert** die Myosin-Bindungsstellen.
+
+**Aktivierung — Schritt für Schritt:**
+1. Aktionspotential erreicht das T-Tubulus-System
+2. Spannungsgesteuerte Rezeptoren (DHPR) aktivieren **Ryanodin-Rezeptoren (RyR1)** im sarkoplasmatischen Retikulum (SR)
+3. **Ca²⁺ strömt aus SR** ins Zytosol (0,1 µM → ~10 µM)
+4. Ca²⁺ bindet **Troponin C** → Konformationsänderung des Troponin-Komplexes
+5. **Tropomyosin verschiebt sich** → Myosin-Bindungsstellen auf Aktin freigegeben
+6. **Kreuzbrückenbildung**: Myosinkopf bindet Aktin → Kraftschlag (Power Stroke)
+
+**Kreuzbrückenzyklus — ATP-Rolle:**
+- Kraftschlag: ADP + Pi werden freigesetzt (gespeicherte Energie → mechanische Arbeit)
+- **ATP bindet Myosinkopf → Lösen von Aktin** (Rigor mortis: kein ATP → Myosin bleibt haften!)
+- ATP-Hydrolyse → Myosinkopf wiederaufgespannt → neuer Zyklus
+
+**Entspannung:** SERCA (SR-Ca²⁺-ATPase) pumpt Ca²⁺ zurück ins SR → Troponin/Tropomyosin blockiert wieder.
+
+> **Merke:** Ca²⁺ → Troponin C → Tropomyosin weg → Myosin bindet Aktin → Kraftschlag. **ATP löst Myosin** (nicht für den Kraftschlag selbst!). Kein ATP = Rigor mortis.
 
 ---
 
 ## Motorische Einheit und Kraftregulation
 
-Ein Alpha-Motoneuron bildet mit all seinen Muskelfasern eine motorische Einheit. Kleine motorische Einheiten (z. B. M. interossei: ~10 Fasern/Einheit) ermöglichen feinmotorische Kontrolle (Schreiben, Augenbe­wegungen). Große motorische Einheiten (M. gastrocnemius: bis zu 2000 Fasern) erzeugen große Kraft. Kraftsteigerung erfolgt durch zwei Mechanismen: Rekrutierung (mehr Einheiten aktivieren = Spatial Summation) und Frequenzerhöhung (Temporal/Rate Summation → Tetanus). Das NMJ (neuromuskuläre Endplatte) nutzt Acetylcholin als Neurotransmitter: ACh bindet nicotinerge Rezeptoren → Endplattenpotential → Aktionspotential → Ca²⁺-Freisetzung aus SR.
+**Motorische Einheit** = 1 Alpha-Motoneuron + alle seine Muskelfasern. Übertragung am NMJ (neuromuskuläre Endplatte): ACh → nikotinerge Rezeptoren → Endplattenpotential → AP.
 
-> **Merke:** Motorische Einheit = 1 Alpha-Motoneuron + seine Muskelfasern; Kraft durch Rekrutierung und Frequenz.
+**Kraftregulation durch zwei Mechanismen:**
+1. **Rekrutierung** (Spatial Summation): Mehr motorische Einheiten aktivieren → mehr Kraft
+2. **Frequenzerhöhung** (Temporal Summation): Schnellere AP-Folge → Summation → Tetanus
 
----
+**Einheitsgröße und Funktion:**
+- Klein (M. interossei, Augenmuskel: ~10 Fasern) → feine Kraftdosierung (Schreiben, Blickbewegungen)
+- Groß (M. gastrocnemius: bis 2000 Fasern) → grobe Kraft
 
-## Klinischer Bezug
-
-Kardiales Troponin I und T (herzspezifische Isoformen) werden bei Herzinfarkt (Myokardinfarkt) aus geschädigten Kardiomyozyten freigesetzt und sind die sensitivsten und spezifischsten Marker für myokardialen Schaden. Erhöhte Troponin-Spiegel sind innerhalb von 3–6 Stunden nach Infarkt nachweisbar.
-
----
-
-## Vergleich der drei Muskeltypen
-
-| Merkmal | Skelettmuskel | Herzmuskel | Glatte Muskulatur |
-| --- | --- | --- | --- |
-| Streifung | Quergestreift | Quergestreift | Keine Sarkomere |
-| Steuerung | Willkürlich | Unwillkürlich | Unwillkürlich |
-| Kerne | Mehrkernig (peripher) | 1–2 (zentral) | Einkernig (zentral) |
-| Kopplung | NMJ (ACh) | Gap Junctions (Glanzstreifen) | Gap Junctions |
-| Ca²⁺-Schalter | Troponin C | Troponin C | Calmodulin → MLCK |
-| Tetanus | Möglich | Unmöglich (lange Refraktärzeit) | Tonisch möglich |
-| Marker | CK-MM | Troponin I/T, CK-MB | — |
+**Glatte Muskulatur — anderer Ca²⁺-Schalter:**
+Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leichtketten-Kinase) → phosphoryliert Myosin → Kontraktion. Gesteuert durch ANS, Hormone, Dehnung.
 
 ---
 
@@ -505,15 +607,21 @@ Kardiales Troponin I und T (herzspezifische Isoformen) werden bei Herzinfarkt (M
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - Sarkomerlänge in Ruhe: ca. 2,2 µm
-- Troponin I und T: Herzinfarkt-Marker, nachweisbar 3--6 h nach Infarkt
+- Troponin I und T: Herzinfarkt-Marker, nachweisbar 3–6 h nach Infarkt
 - Motorische Einheit: 10 Fasern (Feinmotorik) bis 2000 Fasern (Grobmotorik)
-- Rigor mortis löst sich nach 24--48 h durch Proteolyse
+- Rigor mortis löst sich nach 24–48 h durch Proteolyse
 
 ---
 
 ## Zusammenfassung
 
-Das Sarkomer als kleinste kontraktile Einheit der quergestreiften Muskulatur erstreckt sich von Z-Scheibe zu Z-Scheibe und verkürzt sich bei Kontraktion durch Gleiten der Aktin- und Myosinfilamente, wobei I-Bande und H-Zone schmaler werden, die A-Bande jedoch konstant bleibt. Calcium spielt die zentrale Schalterfunktion, indem es an Troponin C bindet und über die Tropomyosin-Verschiebung die Myosin-Bindungsstellen auf Aktin freilegt. Der Herzmuskel unterscheidet sich vom Skelettmuskel durch seine Einkernigkeit, die elektrische Kopplung über Gap Junctions in Glanzstreifen und die Unmöglichkeit einer tetanischen Dauerkontraktion aufgrund der langen absoluten Refraktärzeit.`,
+- **Grundprinzip**: Gleitfilamenttheorie — Aktin und Myosin gleiten aneinander, Sarkomer kürzer; Filamente selbst bleiben gleich lang
+- **Sarkomer**: Z–Z; **I-Bande** (Aktin, ↓) + **A-Bande** (Myosin, = konstant!) + **H-Zone** (Myosin, ↓ bis weg)
+- **Ca²⁺-Schalter**: Ca²⁺ → Troponin C → Tropomyosin verschiebt → Myosin bindet Aktin → Kraftschlag
+- **ATP**: Löst Myosinkopf nach Kraftschlag (nicht für den Schlag selbst). Fehlt ATP → **Rigor mortis**
+- **Herzmuskel**: quergestreift, einkernig, Gap Junctions (Glanzstreifen), kein Tetanus (lange Refraktärzeit)
+- **Glatte Muskulatur**: kein Troponin → Ca²⁺/Calmodulin → MLCK → Myosin-Phosphorylierung → Kontraktion
+- **Klinisch**: Kardiales Troponin I/T = sensitiver Herzinfarktmarker (3–6 h nach Infarkt)`,
       lernziele: [
         "Sarkomerstruktur (Z-Scheibe, A-Bande, I-Bande, H-Zone) und Veränderungen bei Kontraktion beschreiben",
         "Gleitfilamenttheorie mit Rolle von Ca²⁺, Troponin und Tropomyosin erklären",
@@ -647,56 +755,84 @@ Das Sarkomer als kleinste kontraktile Einheit der quergestreiften Muskulatur ers
         "Dendrit",
         "Ranvier-Schnürringe",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Nervengewebe besteht aus erregbaren Neuronen und unterstützenden Gliazellen, die gemeinsam die Grundlage der Informationsverarbeitung im Nervensystem bilden. Neuronen leiten elektrische Signale über Axone weiter, wobei die Myelinisierung durch Schwann-Zellen (PNS) und Oligodendrozyten (ZNS) die Leitungsgeschwindigkeit durch saltatorische Erregungsleitung um ein Vielfaches steigert. Gliazellen wie Astrozyten, Mikroglia und Ependymzellen übernehmen essenzielle Aufgaben von der Blut-Hirn-Schranke bis zur Immunabwehr im ZNS. Für den MedAT ist insbesondere der Vergleich Schwann-Zelle vs. Oligodendrozyt ein Prüfungsklassiker.
-
-**Das Wichtigste auf einen Blick:**
-- Schwann-Zelle (PNS): myelinisiert 1 Axonsegment; Oligodendrozyt (ZNS): bis zu 50 Segmente
-- Saltatorische Leitung: bis 120 m/s (vs. 0,5--2 m/s kontinuierlich)
-- Astrozyten induzieren die Blut-Hirn-Schranke und puffern K⁺ sowie Glutamat
-- PNS regeneriert besser als ZNS (Büngner-Bänder vs. Nogo-A-Hemmung)
-- Multiple Sklerose: Demyelinisierung im ZNS durch autoimmune T-Zell-Attacke
+Das Gehirn enthält ~86 Milliarden Neuronen — aber fast doppelt so viele Gliazellen. Gliazellen sind nicht bloß Stützzellen; sie bilden die Blut-Hirn-Schranke, isolieren Axone mit Myelin, räumen tote Zellen auf und regulieren Neurotransmitter. Das Nervensystem ist also ein Zusammenspiel aus **Neuronen** (Signalleitung) und **Gliazellen** (alles andere). Das wichtigste Prinzip: Myelin isoliert Axone → das Aktionspotential springt von Schnürring zu Schnürring (saltatorisch) → 100× schneller, 10× energiesparender. Für den MedAT sind der Vergleich Schwann-Zelle vs. Oligodendrozyt, saltatorische Leitung und Astrozyten/Mikroglia Prüfungsklassiker.
 
 ---
 
-## Oligodendrozyten vs. Schwann-Zellen
+## Grundprinzip: Aufbau eines Neurons
 
-Beide Zelltypen bilden Myelinscheiden, unterscheiden sich aber fundamental: Schwann-Zellen (PNS) myelinisieren jeweils ein einziges Axonsegment zwischen zwei Ranvier-Schnürringen. Bei Axonverletzung im PNS können Schwann-Zellen das Axonwachstum durch neurotrophe Faktoren (BDNF, NGF) und Leitstrukturen (Büngner-Bänder) aktiv fördern — daher regenerieren periphere Nerven besser. Oligodendrozyten (ZNS) können bis zu 50 Axonsegmente verschiedener Axone gleichzeitig myelinisieren. Im ZNS gibt es keine Büngner-Bänder und inhibierende Faktoren (Nogo-A, MAG) hemmen Axonwachstum. Bei Multipler Sklerose greifen T-Zellen Oligodendrozyten an → Demyelinisierung → Leitungsverlangsamung oder -block.
+**Neuron = Grundbaustein der Nervenleitung:**
+- **Soma** (Zellkörper): Zellkern, Synthese, Metabolismus
+- **Dendriten**: Kurze, stark verzweigte Fortsätze → empfangen Signale (Input)
+- **Axon**: Langer Fortsatz → leitet Signale weiter (Output), entspringt am Axonhügel
+- **Axonhügel** (Axon Initial Segment): Höchste Na⁺-Kanalddichte → hier wird das Aktionspotential initiiert (Schwellenwert ~-55 mV)
+- **Präsynaptische Endknöpfchen**: Vesikel mit Neurotransmittern → Synapse zum nächsten Neuron
 
-> **Merke:** Schwann-Zelle (PNS) = 1 Segment; Oligodendrozyt (ZNS) = bis zu 50 Segmente.
-
----
-
-## Saltatorische Erregungsleitung im Detail
-
-Unmyelinisierte Axone leiten das Aktionspotential kontinuierlich: Jeder Punkt der Membran muss depolarisiert werden. Das ist langsam (0,5–2 m/s) und energieintensiv. Myelinisierte Axone nutzen die hohe elektrische Isolation der Myelinscheide: Zwischen den Ranvier-Schnürringen ist die Membran abgedeckt, Na⁺-Kanäle fehlen. Das Aktionspotential springt elektrotonisch (passiv, schnell) zum nächsten Schnürring, wo Na⁺-Kanäle hochkonzentriert sind und ein neues Aktionspotential auslösen. Geschwindigkeit bis 120 m/s bei großen myelinisierten Fasern (Aα-Fasern, motorisch). Die Na⁺/K⁺-ATPase muss nur an den Schnürringen pumpen — erheblich energiesparender. Bei Demyelinisierung (Multiple Sklerose) verlangsamt oder unterbricht sich die Leitung.
-
-> **Merke:** Saltatorisch = springen von Schnürring zu Schnürring; schneller und energiesparender.
+**Neurontypen:** sensorisch (Input), motorisch (Output), Interneuron (Verarbeitung)
 
 ---
 
-## Astrozyten und Blut-Hirn-Schranke
+## Myelinisierung: Schwann-Zellen vs. Oligodendrozyten
 
-Astrozyten sind die häufigsten Gliazellen und multifunktional: Ihre perivaskulären Endfüße umhüllen Hirnkapillaren vollständig und induzieren die Tight Junctions zwischen Endothelzellen — das ist die strukturelle Basis der Blut-Hirn-Schranke (BHS). Die BHS reguliert selektiv, was ins Hirngewebe gelangt (Glukose via GLUT1, viele Medikamente können nicht passieren). Astrozyten puffern extrazelluläres K⁺ (nach Aktionspotentialen angestiegen), nehmen Glutamat via EAAT-Transporter auf (verhindert exzitotoxische Schäden), recyceln es zu Glutamin und geben es an Neurone zurück (Glutamin-Glutamat-Zyklus). Bei ZNS-Verletzung bilden reaktive Astrozyten eine Glianarbe, die Axonregeneration behindert.
+Die **Myelinscheide** ist eine Lipid-Protein-Isolationsschicht um das Axon. Zwischen Myelinsegmenten liegen die **Ranvier-Schnürringe** — unbedeckte Stellen mit hoher Na⁺-Kanaldichte (Nav1.6).
 
-> **Merke:** Astrozyten: BHS-Induktion, K⁺-Puffer, Glutamat-Reuptake, Glianarbe nach Verletzung.
+| Merkmal | **Schwann-Zelle** | **Oligodendrozyt** |
+|---|---|---|
+| Lokalisation | **PNS** | **ZNS** |
+| Segmente/Zelle | **1** (ein Segment, ein Axon) | **Bis zu 50** (verschiedene Axone!) |
+| Zellkern | Außerhalb der Myelinscheide | — |
+| Regeneration | **Gut** (Büngner-Bänder + BDNF/NGF) | **Schlecht** (Nogo-A, MAG hemmen) |
+| Klinisch | Guillain-Barré-Syndrom | **Multiple Sklerose** |
+
+**Klinisch — Multiple Sklerose (MS):** Autoreaktive T-Zellen zerstören Oligodendrozyten → Demyelinisierung im ZNS → Leitungsverlangsamung/-block → wechselnde neurologische Ausfälle (Sehstörungen, Paresen, Sensibilitätsverlust). Plaques (Vernarbungen) typischerweise periventrikular, im Corpus callosum und im Rückenmark.
+
+> **Merke:** Schwann-Zelle (PNS) = **1 Segment**. Oligodendrozyt (ZNS) = **bis 50 Segmente**. PNS regeneriert (Büngner-Bänder), ZNS nicht (Nogo-A).
 
 ---
 
-## Mikroglia und Ependymzellen
+## Saltatorische Erregungsleitung
 
-Neben Astrozyten und Oligodendrozyten enthält das ZNS zwei weitere wichtige Gliazelltypen: **Mikroglia** sind die residenten Immunzellen des Gehirns. Sie stammen als einzige Gliazellen nicht aus dem Neuroektoderm, sondern aus dem Mesoderm (Dottersack-Makrophagen, die während der Embryonalentwicklung ins ZNS einwandern). Im Ruhezustand besitzen sie einen ramifizierten (verzweigten) Phänotyp mit langen, dünnen Fortsätzen, die das Parenchym kontinuierlich überwachen. Bei Aktivierung durch Pathogene, Zelltrümmer oder entzündliche Signale (z. B. ATP, Komplementfaktoren) nehmen sie eine amöboide Form an, phagozytieren Gewebetrümmer und sezernieren Zytokine (IL-1beta, TNF-alpha, IL-6). Chronische Mikrogliaaktivierung wird mit neurodegenerativen Erkrankungen wie Alzheimer und Parkinson in Verbindung gebracht.
+**Kontinuierlich** (unmyelinisierte C-Fasern): Jede Membranstelle muss depolarisiert werden → 0,5–2 m/s, energieintensiv.
 
-**Ependymzellen** kleiden die Ventrikel des Gehirns und den Zentralkanal des Rückenmarks aus. Im Plexus choroideus bilden spezialisierte Ependymzellen zusammen mit fenestrierten Kapillaren die Blut-Liquor-Schranke und produzieren täglich ca. 500 mL Liquor cerebrospinalis, der kontinuierlich resorbiert wird (Gesamtvolumen ca. 150 mL). Ependymzellen tragen Kinozilien, die den Liquorfluss durch das Ventrikelsystem aufrechterhalten. Bei einem Verschluss der Liquorwege (z. B. Aquäduktstenose) entsteht ein Hydrozephalus.
+**Saltatorisch** (myelinisiert): Aktionspotential springt von Schnürring zu Schnürring:
+1. Zwischen Schnürringen: Myelin isoliert → kein Ionenstrom → Signal wird elektrotonisch (passiv) weitergegeben
+2. An Ranvier-Schnürring: Na⁺-Kanäle regenerieren das AP
+3. Na⁺/K⁺-ATPase muss nur an Schnürringen arbeiten → **energiesparend**
 
-> **Merke:** Mikroglia = mesodermale Makrophagen des ZNS (ramifiziert → amöboid bei Aktivierung). Ependymzellen = Liquorproduktion im Plexus choroideus (ca. 500 mL/Tag).
+**Geschwindigkeit nach Fasertyp:**
+- **Aα-Fasern** (motorisch, propriozeptiv, dick myelinisiert): **70–120 m/s**
+- **Aβ-Fasern** (Berührung, Vibration): 30–70 m/s
+- **Aδ-Fasern** (schneller Schmerz, Temperatur): 5–30 m/s
+- **C-Fasern** (langsamer Schmerz, Temperatur, unmyelinisiert): **0,5–2 m/s**
+
+> **Merke:** Saltatorisch = springt von Schnürring zu Schnürring: **120 m/s** vs. **2 m/s** kontinuierlich. Energiesparend, weil Na⁺/K⁺-ATPase nur an Schnürringen aktiv.
 
 ---
 
-## Klinischer Bezug
+## Gliazellen im ZNS — Übersicht und Funktionen
 
-Bei Multipler Sklerose (MS) zerstören autoreaktive T-Zellen die Oligodendrozyten und Myelinscheiden im ZNS. Die resultierende Demyelinisierung verlangsamt oder blockiert die Impulsleitung und führt zu wechselnden neurologischen Ausfällen (Sehstörungen, Paresen, Sensibilitätsstörungen). Da ZNS-Regeneration limitiert ist, kommt es mit der Zeit zu dauerhaften Defiziten.
+| Gliazelle | Herkunft | Hauptfunktion |
+|---|---|---|
+| **Astrozyten** | Neuroektoderm | BHS-Induktion, K⁺-Puffer, Glutamat-Reuptake, Glianarbe |
+| **Oligodendrozyten** | Neuroektoderm | Myelinisierung (bis 50 Segmente) |
+| **Mikroglia** | **Mesoderm** (Dottersack-Makrophagen!) | Immunabwehr, Phagozytose |
+| **Ependymzellen** | Neuroektoderm | Liquorproduktion (Plexus choroideus, ~500 mL/Tag) |
+
+**Astrozyten — Details:**
+- Perivaskuläre Endfüße umhüllen Kapillaren → **induzieren Tight Junctions** im Endothel → Blut-Hirn-Schranke (BHS). Astrozyten bilden Tight Junctions nicht selbst!
+- Puffern K⁺ nach Aktionspotentialen (verhindert Überexzitation)
+- **Glutamat-Reuptake** (EAAT-Transporter) → zu Glutamin → zurück an Neuron → verhindert Exzitotoxizität
+- Bei ZNS-Verletzung: reaktive Astrogliose → **Glianarbe** (behindert Axonregeneration)
+
+**Mikroglia — Details:**
+- Einzige Gliazelle **mesodermalen Ursprungs** (alle anderen neuroektodermal!)
+- Ruhezustand: ramifiziert (verzweigt), überwacht Parenchym
+- Aktiviert: amöboid → phagozytiert Trümmer, sezerniert IL-1β, TNF-α, IL-6
+- Chronische Aktivierung → neurodegenerativ (Alzheimer, Parkinson)
+
+> **Merke:** Mikroglia = **mesodermale Makrophagen** des ZNS — einzige nicht-neuroektodermale Gliazelle. Astrozyten: BHS-Induktion + Glutamat-Reuptake + K⁺-Puffer.
 
 ---
 
@@ -716,7 +852,7 @@ Bei Multipler Sklerose (MS) zerstören autoreaktive T-Zellen die Oligodendrozyte
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - Myelinisierte Aα-Fasern: bis 120 m/s Leitungsgeschwindigkeit
-- Unmyelinisierte C-Fasern: nur 0,5--2 m/s
+- Unmyelinisierte C-Fasern: nur 0,5–2 m/s
 - Ein Oligodendrozyt kann bis zu 50 Axonsegmente gleichzeitig myelinisieren
 - Na⁺-Kanaldichte an Ranvier-Schnürringen besonders hoch (Nav1.6)
 
@@ -724,7 +860,13 @@ Bei Multipler Sklerose (MS) zerstören autoreaktive T-Zellen die Oligodendrozyte
 
 ## Zusammenfassung
 
-Im Nervengewebe sorgen Schwann-Zellen im PNS und Oligodendrozyten im ZNS für die Myelinisierung von Axonen, wobei ein einzelner Oligodendrozyt bis zu 50 Segmente verschiedener Axone isolieren kann, während eine Schwann-Zelle jeweils nur ein Segment umhüllt. Die resultierende saltatorische Erregungsleitung ermöglicht Geschwindigkeiten von bis zu 120 m/s und spart durch die Begrenzung der Ionenpumpaktivität auf die Ranvier-Schnürringe erheblich Energie. Astrozyten induzieren mit ihren perivaskulären Endfüßen die Blut-Hirn-Schranke, puffern extrazelluläres Kalium und recyceln Glutamat im Glutamin-Glutamat-Zyklus, während Mikroglia als residente Makrophagen die Immunabwehr des ZNS übernehmen.`,
+- **Neuron**: Soma + Dendriten (Input) + Axon (Output); AP-Initiation am Axonhügel (höchste Na⁺-Kanaldichte)
+- **Myelinisierung**: Schwann-Zelle (PNS, **1 Segment**) vs. Oligodendrozyt (ZNS, **bis 50 Segmente**)
+- **Saltatorisch**: AP springt von Ranvier-Schnürring zu Schnürring → **70–120 m/s** vs. 0,5–2 m/s kontinuierlich; energiesparend
+- **PNS regeneriert** (Büngner-Bänder + neurotrophe Faktoren); **ZNS nicht** (Nogo-A, Glianarbe)
+- **Multiple Sklerose**: T-Zellen → Demyelinisierung von Oligodendrozyten → neurologische Ausfälle
+- **Astrozyten**: BHS-Induktion (Tight Junctions induzieren), K⁺-Puffer, Glutamat-Reuptake, Glianarbe
+- **Mikroglia**: Einzige mesodermale Gliazelle = Makrophagen des ZNS (ramifiziert → amöboid)`,
       lernziele: [
         "Aufbau des Neurons (Soma, Axon, Dendriten, Axonhügel) und seine Funktion erklären",
         "Gliazellen des ZNS und PNS benennen und ihre Aufgaben (besonders Myelinisierung) beschreiben",
@@ -861,23 +1003,9 @@ Im Nervengewebe sorgen Schwann-Zellen im PNS und Oligodendrozyten im ZNS für di
         "Neurotransmitter",
         "Reflexbogen",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Das Nervensystem ist das zentrale Steuerungs- und Kommunikationssystem des menschlichen Körpers, das Reize aufnimmt, verarbeitet und motorische sowie vegetative Antworten koordiniert. Es gliedert sich in das ZNS (Gehirn und Rückenmark) und das PNS (Spinal- und Hirnnerven), wobei das vegetative Nervensystem mit Sympathikus und Parasympathikus die unwillkürlichen Organfunktionen reguliert. Für den MedAT ist dieses Kapitel eines der umfangreichsten und prüfungsrelevantesten -- Aktionspotential, Synapse, vegetatives Nervensystem und Reflexbogen sind absolute Schwerpunktthemen.
-
-**Das Wichtigste auf einen Blick:**
-- Sympathikus (fight-or-flight, Noradrenalin, α/β-Rezeptoren) vs. Parasympathikus (rest-and-digest, ACh, M-Rezeptoren)
-- Aktionspotential: Schwelle -55 mV → Na⁺-Einstrom → Depolarisation → K⁺-Ausstrom → Repolarisation
-- Synapse: Ca²⁺ → SNARE-Komplex → Vesikel-Fusion → Neurotransmitter → Rezeptor → EPSP/IPSP
-- Saltatorische Erregungsleitung: bis 120 m/s durch Myelinisierung
-- Monosynaptischer Reflex (Patellarsehnenreflex) vs. polysynaptischer Fremdreflex (Fluchtreflex)
-- Glutamat = häufigster exzitatorischer, GABA = häufigster inhibitorischer Neurotransmitter
-
----
-
-## Einleitung
-
-Das Nervensystem ist das zentrale Informationsverarbeitungs- und Steuerungssystem des Körpers. Es gliedert sich in ZNS (Gehirn + Rückenmark) und PNS (Spinal-/Hirnnerven). Das vegetative Nervensystem reguliert unwillkürlich innere Organe und umfasst Sympathikus (fight-or-flight) und Parasympathikus (rest-and-digest).
+Das Nervensystem ist das schnellste Kommunikationssystem des Körpers — Signale können mit 120 m/s reisen. Es gliedert sich in **ZNS** (Gehirn + Rückenmark: Verarbeitung) und **PNS** (Spinal-/Hirnnerven: Weiterleitung). Das vegetative (autonome) Nervensystem steuert unwillkürlich innere Organe und ist in zwei Gegenspieler aufgeteilt: **Sympathikus** ("fight-or-flight") und **Parasympathikus** ("rest-and-digest"). Die Grundbausteine der Signalübertragung — Aktionspotential und Synapse — gehören zu den absoluten MedAT-Schwerpunktthemen dieses Kapitels.
 
 > **Merke:** **Sympathikus** (fight-or-flight, thorakolumbal [T1-L2], Noradrenalin, α/β-Rezeptoren): Herz ↑ (β1, Frequenz/Kontraktilität), Bronchodilatation (β2), Mydriasis (α1, Pupille), Peristaltik ↓ (α2), Glykogenolyse ↑ (β2), Lipolyse ↑ (β3). **Parasympathikus** (rest-and-digest, kraniosakral [Hirnnerven III/VII/IX/X, S2-S4], Acetylcholin, M2/M3): Herz ↓ (M2, Vagus), Bronchokonstriktion (M3), Miosis (M3), Peristaltik ↑ (M3), Miktion (M3).
 
@@ -951,7 +1079,14 @@ Das Nervensystem ist klinisch von zentraler Bedeutung: Multiple Sklerose (MS) ze
 
 ## Zusammenfassung
 
-Das Nervensystem gliedert sich in ZNS und PNS, wobei das vegetative Nervensystem mit Sympathikus und Parasympathikus als Antagonisten die unwillkürlichen Organfunktionen reguliert -- der Sympathikus steigert über Noradrenalin und α/β-Rezeptoren Herzfrequenz und Bronchodilatation, während der Parasympathikus über Acetylcholin und muskarinische Rezeptoren Herzfrequenz senkt und Peristaltik fördert. Das Aktionspotential entsteht durch sequenzielles Öffnen spannungsgesteuerter Na⁺- und K⁺-Kanäle und folgt dem Alles-oder-Nichts-Prinzip, wobei die absolute Refraktärzeit eine Rückwärtspropagation verhindert. Die synaptische Transmission erfolgt über Ca²⁺-abhängige Vesikel-Fusion (SNARE-Komplex) und Neurotransmitter-Freisetzung, die postsynaptisch über ionotrope oder metabotrope Rezeptoren entweder exzitatorische (EPSP) oder inhibitorische (IPSP) Potentiale erzeugt. Die saltatorische Erregungsleitung myelinisierter Axone steigert die Leitungsgeschwindigkeit auf bis zu 120 m/s und ist dabei erheblich energiesparender als die kontinuierliche Leitung.`,
+- **Sympathikus** (fight-or-flight, T1-L2, Noradrenalin): Herz ↑ (β1), Bronchodilatation (β2), Mydriasis (α1), Peristaltik ↓
+- **Parasympathikus** (rest-and-digest, kraniosakral, ACh): Herz ↓ (M2/Vagus), Bronchokonstriktion (M3), Miosis, Peristaltik ↑
+- **Aktionspotential**: Ruhepotential -70 mV → Schwelle -55 mV → Na⁺ rein (+40 mV) → K⁺ raus → Repolarisation. Alles-oder-Nichts!
+- **Refraktärzeit**: absolut (Na⁺-Kanäle inaktiviert, kein AP) + relativ (überschwelliger Reiz nötig)
+- **Synapse**: AP → Ca²⁺ rein → Synaptotagmin → SNARE-Komplex → Vesikel-Fusion → Neurotransmitter → EPSP (Glutamat) oder IPSP (GABA/Glycin)
+- **Saltatorisch**: AP springt von Ranvier-Schnürring zu Schnürring → 120 m/s (statt 1 m/s), energiesparend
+- **Reflexbogen**: mono- (Patellarsehne: Ia-Faser direkt auf α-Motoneuron) vs. polysynaptisch (Fluchtreflex: Interneurone)
+- **Klinisch**: MS (Demyelinisierung), Parkinson (Dopamin ↓, L-DOPA), Myasthenia gravis (AChR-Antikörper), Lidocain (Na⁺-Kanal-Blocker)`,
       lernziele: [
         "Das Nervensystem in ZNS und PNS (somatisch und autonom) gliedern und die Funktion jedes Teils beschreiben.",
         "Die Wirkungen von Sympathikus und Parasympathikus auf Herz, Bronchien, Pupille, Magen-Darm und Blase vergleichen und die jeweiligen Neurotransmitter und Rezeptoren benennen.",
@@ -1068,22 +1203,9 @@ Das Nervensystem gliedert sich in ZNS und PNS, wobei das vegetative Nervensystem
         "Epidermis",
         "Dermis",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Sinnesorgane wandeln physikalische oder chemische Reize in elektrische Signale um, die im Gehirn bewusste Wahrnehmung erzeugen. Das Auge nutzt Photorezeptoren (Stäbchen für Dämmerungs-, Zapfen für Farbsehen) mit einer bemerkenswerten Signalkaskade, bei der Licht paradoxerweise zur Hyperpolarisation führt. Das Ohr überträgt Schallwellen über Gehörknöchelchen mit Impedanzanpassung auf die Haarzellen des Corti-Organs. Die Haut als größtes Sinnesorgan enthält spezialisierte Mechano-, Thermo- und Nozizeptoren. Im MedAT werden Fototransduktion, Akkommodation und Tonotopie besonders häufig abgefragt.
-
-**Das Wichtigste auf einen Blick:**
-- Stäbchen: skotopisch, Rhodopsin, ~120 Mio., peripher; Zapfen: photopisch, 3 Opsine, ~6 Mio., Fovea
-- Fototransduktion: Licht → Rhodopsin → Transducin → PDE → cGMP ↓ → Na⁺-Kanäle schließen → Hyperpolarisation
-- Akkommodation: Ziliarmuskel kontrahiert → Zonulafasern entspannen → Linse wölbt sich
-- Corti-Organ: Tonotopie (Basis = hohe, Apex = niedrige Frequenzen), K⁺-Einstrom aus Endolymphe
-- Hautrezeptoren: Meissner (Berührung), Pacini (Vibration), Merkel (Druck), Ruffini (Dehnung), freie Nervenendigungen (Schmerz/Temperatur)
-
----
-
-## Einleitung
-
-Sinnesorgane wandeln Reize in elektrische Signale um. Das Auge nutzt Photorezeptoren (Stäbchen und Zapfen) für Sehen, das Ohr Haarzellen für Hören und Gleichgewicht. Geruch und Geschmack basieren auf Chemorezeptoren. Die Haut enthält spezialisierte Mechano-, Thermo- und Nozizeptoren.
+Ohne Sinnesorgane keine Wahrnehmung. Die verschiedenen Sinnesorgane lösen alle dasselbe grundlegende Problem: Wie wird ein physikalischer oder chemischer Reiz (Licht, Schall, Druck, Temperatur) in ein elektrisches Signal umgewandelt, das das Gehirn verarbeiten kann? Das nennt sich **Transduktion**. Bemerkenswert: Im Auge führt mehr Licht paradoxerweise zur **Hyperpolarisation** der Photorezeptoren — das ist MedAT-relevant. Im Ohr ermöglichen Gehörknöchelchen die Schallübertragung von Luft auf Flüssigkeit (Impedanzanpassung). In der Haut sind fünf verschiedene Rezeptortypen für Berührung, Vibration, Druck, Dehnung und Schmerz zuständig. MedAT-Schwerpunkte: Fototransduktion, Akkommodation, Tonotopie des Corti-Organs.
 
 ---
 
@@ -1146,7 +1268,12 @@ Glaukom (Grüner Star): erhöhter Augeninnendruck (>21 mmHg) durch gestörten Ka
 
 ## Zusammenfassung
 
-Das Auge wandelt Licht über die Fototransduktionskaskade in neuronale Signale um, wobei die Photoisomerisierung von 11-cis-Retinal zu all-trans-Retinal über die G-Protein-Kaskade (Transducin, PDE) zum Abbau von cGMP und damit zur paradoxen Hyperpolarisation der Photorezeptoren führt. Die Akkommodation für Nahsicht erfolgt aktiv durch Ziliarmuskel-Kontraktion, die über Zonulafaser-Entspannung die elastische Linse sich wölben lässt und zusammen mit Konvergenz und Miosis die Nahakkommodationstrias bildet. Im Ohr ermöglicht die Impedanzanpassung der Gehörknöchelchen die Übertragung von Schallwellen auf die Cochlea-Flüssigkeit, wo die tonotope Basilarmembran frequenzspezifisch Haarzellen stimuliert, deren Tip-Links mechanosensitive K⁺-Kanäle öffnen. Die Haut enthält mit Meissner- und Pacini-Körperchen, Merkel-Zellen, Ruffini-Körperchen und freien Nervenendigungen fünf spezialisierte Rezeptortypen für Berührung, Vibration, Druck, Dehnung sowie Schmerz und Temperatur.`,
+- **Stäbchen** (skotopisch, peripher, ~120 Mio., Rhodopsin) vs. **Zapfen** (photopisch, Fovea, ~6 Mio., 3 Opsine für Farbe)
+- **Fototransduktion**: Licht → Rhodopsin → Transducin → PDE → cGMP ↓ → Na⁺-Kanäle schließen → **Hyperpolarisation** (paradox!)
+- **Akkommodation (Nah)**: Ziliarmuskel kontrahiert → Zonulafasern entspannen → Linse wölbt sich. Trias: Akkommodation + Konvergenz + Miosis
+- **Ohr**: Schall → Trommelfell → Gehörknöchelchen (Impedanzanpassung ~22-fach) → Basilarmembran-Tonotopie (Basis = hoch, Apex = niedrig) → K⁺-Einstrom Haarzellen → Glutamat → N. cochlearis
+- **Hautrezeptoren**: Meissner (Berührung, schnell), Pacini (Vibration, schnell), Merkel (Druck, langsam), Ruffini (Dehnung, langsam), freie Nervenendigungen (Schmerz/Temp, Aδ/C-Fasern)
+- **Klinisch**: Glaukom (Augeninnendruck ↑), Katarakt (Linsentrübung), Schalltrauma (Haarzellverlust)`,
       lernziele: [
         "Den Aufbau des Auges beschreiben und die Fototransduktion in Stäbchen von der Lichtabsorption durch Rhodopsin bis zur Hyperpolarisation erklären.",
         "Stäbchen und Zapfen hinsichtlich Lokalisation, Funktion und Photopigment unterscheiden.",
@@ -1266,23 +1393,9 @@ Das Auge wandelt Licht über die Fototransduktionskaskade in neuronale Signale u
         "T3/T4",
         "Feedback-Regulation",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Das endokrine System reguliert als zweites großes Kommunikationssystem neben dem Nervensystem langfristige Prozesse wie Stoffwechsel, Wachstum und Reproduktion über Hormone, die über das Blut zu Zielorganen transportiert werden. Die Hypothalamus-Hypophyse-Achse koordiniert die meisten endokrinen Drüsen über hierarchische Regelkreise mit negativer Rückkopplung. Peptidhormone wirken schnell über Membranrezeptoren und Second Messenger, während lipophile Steroidhormone und Schilddrüsenhormone die Genexpression direkt beeinflussen. Im MedAT ist das Hormonsystem eines der meistgeprüften Themen -- besonders Insulin/Glukagon, Schilddrüsenhormone und die Regelkreis-Diagnostik.
-
-**Das Wichtigste auf einen Blick:**
-- Peptidhormone: hydrophil → Membranrezeptoren → Second Messenger → schnelle Wirkung (Minuten)
-- Steroidhormone + T₃/T₄: lipophil → intrazelluläre Rezeptoren → Genexpression → langsame Wirkung (Stunden)
-- Negative Rückkopplung: Peripheres Hormon hemmt Hypothalamus und Hypophyse
-- Primäre Hypothyreose: TSH ↑, T₃/T₄ ↓ (Schilddrüse geschädigt); sekundäre: TSH ↓, T₃/T₄ ↓
-- Insulin (β-Zellen) senkt Blutzucker (GLUT4); Glukagon (α-Zellen) hebt Blutzucker (Glykogenolyse)
-- Cortisol: Glukoneogenese ↑, Immunsuppression, Osteoblasten ↓
-
----
-
-## Einleitung
-
-Das Hormonsystem ist neben dem Nervensystem das zweite große Kommunikationssystem des Körpers. Es reguliert langfristige Prozesse wie Wachstum, Stoffwechsel und Reproduktion über chemische Botenstoffe (Hormone), die über das Blut zu Zielorganen transportiert werden. Die Hypothalamus-Hypophyse-Achse koordiniert viele endokrine Drüsen über hierarchische Regelkreise mit negativer Rückkopplung.
+Nervensystem = Blitz (Millisekunden). Hormonsystem = langsames Feuer (Minuten bis Tage). Beide kommunizieren, aber auf grundlegend verschiedene Weise. Hormone sind chemische Botenstoffe, die über das Blut zu Zielorganen gelangen. Die Schlüsselstruktur: die **Hypothalamus-Hypophyse-Achse** — ein hierarchischer Regelkreis, in dem Hypothalamus-Hormone die Hypophyse steuern, die wiederum periphere Drüsen steuert, die dann über negative Rückkopplung den Kreis schließen. Für die Medizin ist das enorm wichtig: Schilddrüsenerkrankungen, Diabetes, Cushing — fast alle endokrinen Diagnosen basieren auf diesem Prinzip. MedAT-Klassiker: Peptidhormone vs. Steroidhormone, Insulin/Glukagon, Schilddrüsen-Regelkreis.
 
 > **Merke:** **Hypothalamus-Hypophyse-Regelkreis:** Hypothalamus (TRH, CRH, GnRH, GHRH) → Hypophyse (TSH, ACTH, LH/FSH, GH) → periphere Drüse (T₃/T₄, Cortisol, Östrogen/Testosteron) → **negative Rückkopplung** hemmt Hypothalamus + Hypophyse. Primäre Insuffizienz: periphere Drüse ↓ → trophe Hormone ↑.
 
@@ -1349,7 +1462,13 @@ Diabetes mellitus ist die häufigste endokrine Erkrankung: Typ 1 (autoimmune β-
 
 ## Zusammenfassung
 
-Das Hormonsystem nutzt zwei grundlegende Wirkprinzipien: hydrophile Peptidhormone wie Insulin wirken über Membranrezeptoren und Second Messenger binnen Minuten, während lipophile Steroidhormone und Schilddrüsenhormone über intrazelluläre Rezeptoren die Genexpression regulieren und erst nach Stunden wirken. Die Hypothalamus-Hypophyse-Achse steuert über hierarchische Regelkreise mit negativer Rückkopplung die Schilddrüse (TRH → TSH → T₃/T₄), die Nebenniere (CRH → ACTH → Cortisol) und die Gonaden (GnRH → LH/FSH → Sexualhormone), wobei die Differenzierung zwischen primärer und sekundärer Insuffizienz anhand der trophen Hormonwerte erfolgt. Die Blutzuckerregulation basiert auf dem Antagonismus von Insulin (GLUT4-Translokation, Glykogensynthese) und Glukagon (Glykogenolyse, Glukoneogenese), ergänzt durch Cortisol und Adrenalin als katabole Stresshormone sowie die Kalziumhomöostase durch PTH, Calcitonin und Vitamin D.`,
+- **Peptidhormone** (Insulin, TSH, ACTH): hydrophil → Membranrezeptoren → Second Messenger (cAMP, Ca²⁺) → schnelle Wirkung (Minuten)
+- **Steroidhormone + T₃/T₄**: lipophil → intrazelluläre Rezeptoren → Genexpression → langsame Wirkung (Stunden)
+- **Hypothalamus-Hypophyse-Achse**: Hypothalamus (TRH, CRH, GnRH) → Hypophyse (TSH, ACTH, LH/FSH) → periphere Drüse → **negative Rückkopplung** hemmt zurück
+- **Primäre Hypothyreose**: Schilddrüse ↓ → TSH ↑ (Rückkopplung fällt weg). Sekundäre: Hypophyse ↓ → TSH ↓ + T₃/T₄ ↓
+- **Blutzucker**: Insulin (β-Zellen, GLUT4-Translokation, Glykogensynthese) senkt; Glukagon (α-Zellen, Glykogenolyse) hebt
+- **Cortisol**: Glukoneogenese ↑, Immunsuppression, Osteoporose-Risiko (Osteoblasten ↓)
+- **Klinisch**: DM Typ 1 (β-Zell-Zerstörung), Typ 2 (Insulinresistenz), Hashimoto (TSH ↑), Morbus Basedow (TSH ↓, TSH-R-AK)`,
       lernziele: [
         "Steroid- und Peptidhormone nach Löslichkeit, Rezeptorlokalisation und Wirkgeschwindigkeit unterscheiden und den Second-Messenger-Weg (cAMP) vs. Genexpressionsweg beschreiben.",
         "Die Hypothalamus-Hypophyse-Achse mit ihren Releasing-Hormonen (TRH, CRH, GnRH), trophen Hormonen (TSH, ACTH, LH/FSH) und peripheren Drüsenhormonen darstellen und das Prinzip der negativen Rückkopplung erklären.",
@@ -1475,22 +1594,9 @@ Das Hormonsystem nutzt zwei grundlegende Wirkprinzipien: hydrophile Peptidhormon
         "Diastole",
         "Systole",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Das Herz-Kreislauf-System ist ein geschlossenes Transportsystem, das über die Pumpfunktion des Herzens Sauerstoff, Nährstoffe, Hormone und Abfallprodukte im gesamten Körper verteilt. Das vierkammerige Herz treibt zwei in Serie geschaltete Kreisläufe an: den kleinen Lungenkreislauf (Gasaustausch) und den großen Körperkreislauf (Versorgung). Die Blutdruckregulation erfolgt kurzfristig über den Barorezeptorreflex und langfristig über das RAAS-System. Für den MedAT sind Erregungsleitung, Herzklappenvergleich, Kreislaufwege und Blutdruckregulation absolute Kernthemen.
-
-**Das Wichtigste auf einen Blick:**
-- Linker Ventrikel: 10--15 mm Wanddicke (3x dicker als rechts), pumpt gegen ~120 mmHg
-- AV-Klappen (Trikuspidal 3 Segel, Mitral 2) mit Sehnenfäden; Taschenklappen (Pulmonal, Aorta) ohne
-- Erregungsleitung: SA-Knoten (60--80/min) → AV-Knoten (Verzögerung) → His → Tawara → Purkinje
-- Kleiner Kreislauf: RV → Lungenarterien (O₂-arm!) → Lunge → Lungenvenen (O₂-reich!) → LA
-- Blutdruck = HZV × TPR; RAAS: Renin → Angiotensin II → Vasokonstriktion + Aldosteron
-
----
-
-## Einleitung
-
-Das Herz-Kreislauf-System ist ein geschlossenes Transportsystem, das Blut durch den Körper pumpt und Sauerstoff, Nährstoffe und Hormone verteilt. Das Herz (~300 g) pumpt in Ruhe ~5 L/min und unter Belastung bis zu ~25 L/min. Großer Kreislauf (LV → Körper → RA) und kleiner Kreislauf (RV → Lunge → LA) sind in Serie geschaltet.
+Das Herz ist eine Pumpe — aber eine bemerkenswert effiziente. Es schlägt ~100.000-mal pro Tag, pumpt 5–25 L Blut pro Minute und wird dabei durch ein präzises elektrisches System (SA-Knoten → AV-Knoten → Purkinje-Fasern) gesteuert, das vollständig autonom arbeitet. Zwei Kreisläufe in Serie: **großer Kreislauf** (Körperversorgung, hoher Druck) und **kleiner Kreislauf** (Lungenkreislauf, niedriger Druck). Der linke Ventrikel pumpt gegen dreifach höheren Widerstand → dreifach dickere Wand. Für die Medizin sind Herzerkrankungen die häufigste Todesursache in der westlichen Welt. MedAT-Klassiker: Erregungsleitung, Herzklappenvergleich, Kreislaufwege, Blutdruckregulation (RAAS).
 
 ---
 
@@ -1557,7 +1663,12 @@ Herzinfarkt (STEMI/NSTEMI): koronare Plaqueruptur → Thrombus → Ischämie →
 
 ## Zusammenfassung
 
-Das Herz pumpt als vierkammeriges Organ über zwei in Serie geschaltete Kreisläufe Blut durch den Körper, wobei der linke Ventrikel mit seiner dreifach dickeren Wand gegen den hohen Systemwiderstand des großen Kreislaufs arbeitet, während der rechte Ventrikel den niedrig druckigen Lungenkreislauf bedient. Die Erregung entsteht autonom im SA-Knoten, wird im AV-Knoten gezielt verzögert und erreicht über das His-Tawara-Purkinje-System die Ventrikel von der Spitze zur Basis, wobei der Vagus bremsend und der Sympathikus beschleunigend eingreift. Die Blutdruckregulation erfolgt kurzfristig über den Barorezeptorreflex und langfristig über das RAAS, das bei Druckabfall über Angiotensin II Vasokonstriktion und über Aldosteron Natriumretention bewirkt -- die Formel MAP = HZV x TPR beschreibt die zentrale Beziehung.`,
+- **Herzaufbau**: 4 Kammern; LV-Wand ~10–15 mm (3× dicker als RV), da gegen hohen Systemwiderstand (~120 mmHg)
+- **Klappen**: AV-Klappen (Trikuspidal 3 Segel, Mitral 2) mit Sehnenfäden; Taschenklappen (Pulmonal, Aorta je 3) ohne
+- **Kreisläufe**: Kleiner Kreislauf: RV → Lungenarterien (O₂-arm!) → Lunge → Lungenvenen (O₂-reich!) → LA. Großer: LV → Aorta → Körper → RA
+- **Erregungsleitung**: SA-Knoten (60–80/min) → AV-Knoten (Verzögerung ~100 ms) → His → Tawara → Purkinje (2–4 m/s)
+- **Blutdruck**: MAP = HZV × TPR = (SV × HF) × TPR. Kurzfristig: Barorezeptor-Reflex. Langfristig: RAAS (Renin → AII → Vasokonstriktion + Aldosteron → Na⁺/H₂O-Retention)
+- **Klinisch**: Herzinfarkt (Troponin!), Herzinsuffizienz (EF <40%), Hypertonie (>140/90 → Schlaganfall)`,
       lernziele: [
         "Den Aufbau des Herzens (4 Kammern, 3 Wandschichten Endokard/Myokard/Epikard, Perikard) und den Unterschied zwischen linkem und rechtem Ventrikel in Wanddicke und Arbeitsdruck beschreiben.",
         "Die vier Herzklappen (AV-Klappen mit Sehnenfäden vs. Taschenklappen ohne Sehnenfäden) nach Lage, Typ und Funktion unterscheiden.",
@@ -1680,23 +1791,9 @@ Das Herz pumpt als vierkammeriges Organ über zwei in Serie geschaltete Kreislä
         "Hämoglobin",
         "Blutplasma",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Blut ist ein flüssiges Gewebe mit ca. 5--6 Litern beim Erwachsenen, das Transport-, Immunabwehr-, Hämostase- und Pufferfunktionen erfüllt. Es besteht aus Plasma (ca. 55 %) mit Proteinen wie Albumin, Fibrinogen und Globulinen sowie zellulären Elementen (ca. 45 %, Hämatokrit), die Erythrozyten, Leukozyten und Thrombozyten umfassen. Im MedAT sind Hämoglobin und Bohr-Effekt, AB0-Blutgruppen mit Rhesus-System sowie die Gerinnungskaskade besonders prüfungsrelevante Themen.
-
-**Das Wichtigste auf einen Blick:**
-- Hämatokrit: Männer ca. 45 %, Frauen ca. 42 %; Serum = Plasma ohne Fibrinogen
-- Hämoglobin: Tetramer (2α2β), Fe²⁺; Bohr-Effekt: CO₂ ↑/pH ↓ → O₂-Abgabe ↑ (Rechtsverschiebung)
-- Primäre Hämostase: vWF-GPIb → Thrombozytenadhäsion; Sekundäre: Gerinnungskaskade → Fibrin
-- AB0: natürliche IgM-Antikörper; 0 = Universalspender, AB = Universalempfänger
-- Rhesus-Inkompatibilität: Rh⁻-Mutter + Rh⁺-Kind → 2. Schwangerschaft: Morbus haemolyticus neonatorum
-- Vitamin K aktiviert Faktoren II, VII, IX, X
-
----
-
-## Einleitung
-
-Blut ist ein flüssiges Gewebe (~5–6 L beim Erwachsenen) mit Transport-, Immunabwehr-, Hämostase- und Pufferfunktionen. Es besteht aus Plasma (~55%) und zellulären Elementen (~45%, Hämatokrit). Plasma enthält Wasser (~90%), Proteine (Albumin, Fibrinogen, Globuline) und Elektrolyte; Serum ist Plasma ohne Fibrinogen (nach Gerinnung).
+Blut ist das flüssige Transportmittel des Körpers — 5–6 Liter, die kontinuierlich durch alle Gewebe fließen. Es besteht aus **Plasma** (~55%) als flüssiger Phase und **zellulären Elementen** (~45%, Hämatokrit): Erythrozyten (O₂-Transport), Leukozyten (Immunabwehr) und Thrombozyten (Gerinnung). Alles wird im Knochenmark aus einer gemeinsamen hämatopoetischen Stammzelle gebildet. Für die Medizin ist Blut der direkte diagnostische Zugang: Hämoglobin (Anämie), Leukozytenzahl (Infektion), Thrombozytenzahl (Blutungsrisiko), Blutgruppe (Transfusion), Troponin (Herzinfarkt). MedAT-Schwerpunkte: Bohr-Effekt, AB0/Rhesus-System, Gerinnungskaskade.
 
 ---
 
@@ -1761,7 +1858,12 @@ Eisenmangelanämie: häufigste Anämie weltweit (Frauen im gebärfähigen Alter,
 
 ## Zusammenfassung
 
-Blut besteht aus Plasma mit Transportproteinen und zellulären Elementen, die alle von der pluripotenten hämatopoetischen Stammzelle im Knochenmark abstammen, wobei Erythrozyten als kernlose bikonkave Scheiben über Hämoglobin den Sauerstofftransport gewährleisten und der Bohr-Effekt die O₂-Abgabe in metabolisch aktivem Gewebe durch Rechtsverschiebung der Bindungskurve steigert. Die Hämostase verläuft in zwei Phasen: primär über Thrombozytenadhäsion (vWF-GPIb) und -aggregation, sekundär über die Gerinnungskaskade mit extrinsischem und intrinsischem Weg zur gemeinsamen Endstrecke Thrombin-Fibrin, wobei Vitamin K die Faktoren II, VII, IX und X aktiviert. Im AB0-System bestimmen Oberflächenantigene und natürliche IgM-Antikörper die Blutgruppenverträglichkeit, während im Rhesus-System erst eine Sensibilisierung Anti-D-Antikörper erzeugt, die bei Rh-Inkompatibilität in der zweiten Schwangerschaft als plazentagängiges IgG den Morbus haemolyticus neonatorum auslösen können. Die Fibrinolyse durch Plasmin löst den Thrombus nach der Wundheilung wieder auf und wird therapeutisch durch Fibrinolytika wie Alteplase (rt-PA) bei akutem Myokardinfarkt und Schlaganfall genutzt.`,
+- **Blut**: Plasma (55%, Albumin/Fibrinogen/Globuline) + zelluläre Elemente (45%); Serum = Plasma ohne Fibrinogen
+- **Erythrozyten**: kernlos, bikonkav, Hämoglobin (2α2β, Fe²⁺); **Bohr-Effekt**: CO₂↑/pH↓ → Rechtsverschiebung → O₂-Abgabe ↑ im Gewebe
+- **Hämostase**: primär (Vasokonstriktion + Thrombozytenadhäsion via vWF-GPIb) → sekundär (Gerinnungskaskade → Thrombin → Fibrin). Vitamin K aktiviert Faktoren II, VII, IX, X
+- **AB0-System**: Antigene auf Erythrozyten; natürliche IgM-Antikörper. Blutgruppe 0 = Universalspender, AB = Universalempfänger
+- **Rhesus**: Rh⁻-Mutter + Rh⁺-Kind → Sensibilisierung → 2. Schwangerschaft: IgG (plazentagängig!) → Morbus haemolyticus neonatorum → Anti-D-Prophylaxe
+- **Klinisch**: Anämie (Hb ↓), Hämophilie A (Faktor VIII-Mangel), vWF-Mangel, Thrombozytopenie`,
       lernziele: [
         "Die Zusammensetzung des Blutes (Plasma vs. zelluläre Elemente, Hämatokrit, Plasma vs. Serum) und die Hauptfunktionen der Plasmaproteine (Albumin, Fibrinogen, Globuline) beschreiben.",
         "Den Aufbau und die Funktion des Hämoglobins erklären sowie den Bohr-Effekt und die O₂-Bindungskurve (Rechtsverschiebung bei CO₂↑/pH↓) interpretieren.",
@@ -1884,23 +1986,9 @@ Blut besteht aus Plasma mit Transportproteinen und zellulären Elementen, die al
         "Allergie",
         "MHC",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Das Immunsystem schützt den Organismus vor Pathogenen, Tumorzellen und Fremdstoffen, indem es zwischen "selbst" und "fremd" unterscheidet. Es besteht aus der angeborenen Immunität (schnell, unspezifisch, kein Gedächtnis) mit Phagozyten, NK-Zellen und Komplement sowie der erworbenen Immunität (langsam, hochspezifisch, Gedächtnisbildung) mit T- und B-Zellen. Die MHC-Präsentation verbindet beide Systeme, indem sie den T-Zellen Antigene präsentiert und so die zielgerichtete Immunantwort einleitet. Für den MedAT sind insbesondere Antikörperklassen, MHC I vs. II, aktive vs. passive Immunisierung und die Allergie Typ I hochrelevant.
-
-**Das Wichtigste auf einen Blick:**
-- Angeboren: sofort, unspezifisch (Neutrophile, Makrophagen, NK-Zellen, Komplement); Erworben: Tage, spezifisch (T-/B-Zellen)
-- MHC I (alle kernhaltigen Zellen) → CD8⁺ (intrazelluläre Pathogene); MHC II (APCs) → CD4⁺ (extrazelluläre)
-- IgM = Primärantwort (Pentamer); IgG = Sekundärantwort (plazentagängig); IgA = Schleimhaut; IgE = Allergie
-- Aktive Impfung: Antigen → Gedächtnis; Passive: fertige Antikörper → sofort, kein Gedächtnis
-- Typ-I-Allergie: IgE auf Mastzellen → Histamin → Anaphylaxie; Therapie: Adrenalin i.m.
-- Komplement: C3b (Opsonierung), C5a (Chemotaxis), MAC (Lyse)
-
----
-
-## Einleitung
-
-Das Immunsystem schützt vor Pathogenen, Tumorzellen und Fremdstoffen durch Erkennung von 'selbst' vs. 'fremd'. Es besteht aus angeborener Immunität (schnell, unspezifisch, kein Gedächtnis) und erworbener Immunität (langsam, hochspezifisch, Gedächtnisbildung). Physikalische Barrieren (Haut, Schleimhäute, Magensäure) bilden die erste Abwehrlinie.
+Das Immunsystem löst eine fundamentale Aufgabe: es unterscheidet "selbst" von "fremd" — und zerstört das Fremde, ohne sich selbst anzugreifen. Es arbeitet auf zwei Ebenen: die **angeborene Immunität** (sofort, unspezifisch, kein Gedächtnis) mit Neutrophilen, Makrophagen, NK-Zellen und Komplement, und die **erworbene Immunität** (Tage, hochspezifisch, Gedächtnisbildung) mit T- und B-Zellen. Das Verbindungsglied: MHC-Moleküle präsentieren Antigene an T-Zellen und starten die zielgerichtete Immunantwort. Für die Medizin ist das Immunsystem allgegenwärtig: Infektionen, Impfungen, Allergien, Autoimmunerkrankungen, Transplantatabstoßung. MedAT-Klassiker: MHC I vs. II, Antikörperklassen, Allergie Typ I, aktiv vs. passiv.
 
 > **Merke:** **Angeborene vs. Erworbene:** Angeboren = schnell (Minuten), unspezifisch, kein Gedächtnis (Makrophagen, Neutrophile, Komplement). Erworben = langsam (Tage), spezifisch, Gedächtnis (T-/B-Zellen, Antikörper). (Angeborene Immunität reagiert sofort, erworbene braucht Zeit für klonale Expansion)
 
@@ -1967,7 +2055,12 @@ HIV/AIDS ist eine der bedeutendsten Infektionskrankheiten weltweit: cART (kombin
 
 ## Zusammenfassung
 
-Das Immunsystem arbeitet zweistufig: Die angeborene Immunität reagiert sofort und unspezifisch über Phagozyten, NK-Zellen und das Komplementsystem, während die erworbene Immunität über T- und B-Zellen hochspezifisch und mit Gedächtnisbildung reagiert, wobei MHC-I-Moleküle auf allen kernhaltigen Zellen intrazelluläre Antigene an CD8⁺-Zellen und MHC-II auf APCs extrazelluläre Antigene an CD4⁺-Helferzellen präsentieren. B-Zellen differenzieren zu Antikörper-produzierenden Plasmazellen, wobei IgM die Primärantwort dominiert, IgG als einziger plazentagängiger Antikörper die Sekundärantwort und den Nestschutz übernimmt und IgE über Mastzell-Degranulation die Typ-I-Allergie vermittelt. Aktive Immunisierung erzeugt durch Antigen-Gabe eigene Antikörper und Gedächtnis, passive Immunisierung bietet durch fertige Antikörper Sofortschutz ohne Gedächtnis, und bei Anaphylaxie als schwerster Allergiekomplikation ist Adrenalin i.m. die lebensrettende Erstmaßnahme.`,
+- **Angeboren** (sofort, unspezifisch, kein Gedächtnis): Neutrophile, Makrophagen, NK-Zellen, Komplement (C3b Opsonierung, C5a Chemotaxis, MAC Lyse)
+- **Erworben** (Tage, spezifisch, Gedächtnis): T-Zellen (zelluläre Immunität), B-Zellen → Plasmazellen → Antikörper
+- **MHC I** (alle kernhaltigen Zellen) → **CD8⁺**-T-Zellen (intrazelluläre Pathogene, Viren). **MHC II** (APCs: Makrophagen, DC, B-Zellen) → **CD4⁺**-T-Helferzellen (extrazelluläre Pathogene)
+- **Antikörper**: IgM (Primärantwort, Pentamer, erstes AK), IgG (Sekundärantwort, plazentagängig, Nestschutz), IgA (Schleimhaut, Dimere), IgE (Allergie, Mastzellen)
+- **Aktive Impfung**: Antigen → eigene Antikörper + Gedächtnis (langsam). Passive: fertige Antikörper → sofort, kein Gedächtnis (Tetanus-Immunglobulin)
+- **Allergie Typ I**: IgE auf Mastzellen → Re-Exposition → IgE-Quervernetzung → Histaminfreisetzung → Anaphylaxie → **Adrenalin i.m.!**`,
       lernziele: [
         "Die angeborene (unspezifische) und erworbene (adaptive, spezifische) Immunität nach Reaktionsgeschwindigkeit, Spezifität und Gedächtnisbildung unterscheiden und die wichtigsten Zelltypen jeder Linie benennen.",
         "Das Komplementsystem (klassischer, alternativer, Lektin-Weg) mit seinen Effekten (C3b Opsonierung, C5a Chemotaxis, MAC Lyse) beschreiben.",
@@ -2082,22 +2175,9 @@ Das Immunsystem arbeitet zweistufig: Die angeborene Immunität reagiert sofort u
       id: "bio-3-07",
       title: "Lymphsystem",
       stichworte: ["Lymphknoten", "Milz", "Thymus", "Lymphe", "Lymphgefäße", "Lymphozytenreifung"],
-      content: `## Überblick
+      content: `## Einleitung
 
-Das lymphatische System ist ein Netzwerk aus Lymphgefäßen und lymphatischen Organen, das drei Hauptfunktionen erfüllt: den Rücktransport von täglich 2--4 L interstitieller Flüssigkeit ins Blut, die Immunabwehr durch Antigenpräsentation und Lymphozytenaktivierung in Lymphknoten sowie den Transport von Chylomikronen aus dem Darm. Die lymphatischen Organe -- Lymphknoten, Milz und Thymus -- sind hochspezialisierte Strukturen mit charakteristischer Architektur und Funktion. Für den MedAT sind besonders die Lymphknoten-Zonierung, die Milz-Kompartimente und die T-Zell-Selektion im Thymus relevant.
-
-**Das Wichtigste auf einen Blick:**
-- Lymphknoten: Cortex (B-Zellen/Follikel), Paracortex (T-Zellen), Mark (Plasmazellen)
-- Milz: Weiße Pulpa (Immunabwehr), Rote Pulpa (Erythrozyten-Abbau, Thrombozytenspeicher)
-- Thymus: T-Zell-Reifung mit positiver (MHC-Erkennung) und negativer Selektion (Selbsttoleranz)
-- Nach Splenektomie: OPSI-Risiko durch bekapselte Bakterien → Impfung + Penicillin
-- Lymphgefäße: Einwegklappen, Einmündung über Ductus thoracicus in V. subclavia sinistra
-
----
-
-## Einleitung
-
-Das lymphatische System ist ein Netzwerk aus Lymphgefäßen und lymphatischen Organen, das täglich ~2–4 L interstitielle Flüssigkeit zurück ins Blut transportiert. Weitere Aufgaben sind Immunabwehr (Filtration und Antigen-Präsentation in Lymphknoten) und der Transport von Chylomikronen aus dem Darm.
+Das lymphatische System ist das unterschätzte dritte Kreislaufsystem. Es hat drei Hauptaufgaben: täglich ~2–4 L interstitielle Flüssigkeit zurück ins Blut transportieren (sonst Ödem), Immunabwehr durch Lymphknoten (filtern Lymphe, präsentieren Antigene) und Fettresorption (Chylomikronen aus dem Darm über die Lymphe, nicht über die Pfortader). Die zentralen lymphatischen Organe — Lymphknoten, Milz und Thymus — haben präzise Architekturen für unterschiedliche Aufgaben. MedAT-Relevanz: Lymphknoten-Zonierung, Milz-Kompartimente, T-Zell-Selektion im Thymus.
 
 ---
 
@@ -2157,7 +2237,11 @@ Lymphome sind häufige hämatologische Malignome: Hodgkin-Lymphom (Reed-Sternber
 
 ## Zusammenfassung
 
-Das lymphatische System übernimmt drei zentrale Aufgaben: den Rücktransport von täglich 2–4 L nicht reabsorbiertem Kapillarfiltrat ins Blut, die immunologische Überwachung in Lymphknoten und Milz sowie den Fetttransport aus dem Darm über Chylomikronen. Die Lymphe fließt über blind endende, basalmembranfreie Lymphkapillaren in Kollektoren und mündet schließlich über den Ductus thoracicus in den linken Venenwinkel. In den rund 600–700 Lymphknoten des Körpers filtern B-Zellen (Rinde), T-Zellen (Paracortex) und Makrophagen (Mark) die Lymphe, während die Milz als größtes lymphatisches Organ Blut filtert und im Thymus die T-Zell-Selektion (positive und negative) stattfindet, wobei nur etwa 5 % der Thymozyten überleben. Klinisch bedeutsam sind das OPSI-Risiko nach Splenektomie durch bekapselte Bakterien, Lymphödeme bei gestörtem Abfluss sowie Lymphome (Hodgkin mit Reed-Sternberg-Zellen, Non-Hodgkin mit DLBCL als häufigster Form), deren B-Symptome (Fieber, Nachtschweiß, Gewichtsverlust) wichtige Alarmsignale darstellen. Das MALT (Mucosa-Associated Lymphoid Tissue) mit den Peyer-Plaques im Ileum und dem Waldeyer-Rachenring bildet die immunologische Erstlinienverteidigung an Schleimhautoberflächen.`,
+- **3 Hauptfunktionen**: Flüssigkeitsrücktransport (2–4 L/Tag), Immunabwehr (Lymphknoten), Fetttransport (Chylomikronen → Ductus thoracicus, nicht Pfortader!)
+- **Lymphknoten**: Cortex (B-Zellen, Follikel), Paracortex (T-Zellen), Mark (Makrophagen, Plasmazellen). Lymphe fließt von Cortex → Mark
+- **Milz**: Weiße Pulpa (Immunabwehr, B/T-Zell-Areale) + Rote Pulpa (Erythrozyten-Abbau, Thrombozytenspeicher). Bei Splenektomie: **OPSI-Risiko** (bekapselte Bakterien: Pneumokokken, Meningokokken, H. influenzae) → Impfung + Penicillin-Prophylaxe
+- **Thymus**: positive Selektion (T-Zellen die MHC erkennen, überleben) + negative Selektion (T-Zellen die zu stark an Selbst-Ag binden, sterben) → nur ~5% überleben → zentrale Toleranz
+- **Klinisch**: Lymphödem (Abflussbehinderung), Lymphome: Hodgkin (Reed-Sternberg-Zellen, B-Symptome), Non-Hodgkin (DLBCL häufigste Form)`,
       lernziele: [
         "Die drei Hauptfunktionen des lymphatischen Systems (Flüssigkeitsrücktransport, Immunabwehr, Fetttransport) beschreiben.",
         "Den Aufbau und die Filterleistung eines Lymphknotens (Cortex, Paracortex, Mark) erklären.",
@@ -2264,23 +2348,9 @@ Das lymphatische System übernimmt drei zentrale Aufgaben: den Rücktransport vo
         "Zwerchfell",
         "Bronchien",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Das Atmungssystem gewährleistet den kontinuierlichen Gasaustausch zwischen Außenluft und Blut: Sauerstoff wird für die aerobe Zellatmung aufgenommen, Kohlendioxid als Stoffwechselendprodukt abgegeben. Vom Nasenraum über die Trachea bis zu den rund 300 Millionen Alveolen steigert sich die Gesamtoberfläche auf etwa 80–140 m², wobei die Blut-Luft-Schranke nur 0,5 µm misst. Die Atemmechanik, der Surfactant-Haushalt und die zentrale Atemregulation arbeiten eng zusammen, um den Gasaustausch effizient aufrechtzuerhalten.
-
-**Das Wichtigste auf einen Blick:**
-- Surfactant (Typ-II-Pneumozyten, DPPC) senkt die Oberflächenspannung und verhindert Alveolarkollaps (Laplace-Gesetz)
-- Inspiration ist aktiv (Diaphragma + Mm. intercostales externi), Exspiration in Ruhe passiv (elastische Rückstellung)
-- O₂-Gradient Alveole → Blut: 60 mmHg; CO₂ diffundiert 20× schneller trotz nur 6 mmHg Gradient
-- CO₂-Transport: 70 % Bikarbonat, 23 % Carbaminohämoglobin, 7 % gelöst
-- Wichtigster Atemantrieb: zentrale Chemorezeptoren (pCO₂/pH); peripherer O₂-Sensor erst bei pO₂ < 60 mmHg
-- Bohr-Effekt: Rechtsverschiebung der O₂-Bindungskurve bei CO₂ ↑, pH ↓, Temperatur ↑
-
----
-
-## Einleitung
-
-Das Atmungssystem ermöglicht den Gasaustausch zwischen Außenluft und Blut: O₂-Aufnahme für die Zellatmung und CO₂-Abgabe als Stoffwechselprodukt. Es besteht aus oberen Atemwegen (Nase, Pharynx) und unteren Atemwegen (Larynx, Trachea, Bronchien, Alveolen).
+Ohne Sauerstoff kein Leben — und ohne ein System, das O₂ aus der Luft ins Blut bringt und CO₂ zurückgibt, kein Sauerstoff. Das Atmungssystem löst dieses Problem elegant: ~300 Millionen Alveolen bieten 80–140 m² Austauschfläche, die Blut-Luft-Schranke ist nur 0,5 µm dünn. Surfactant verhindert, dass die winzigen Alveolen kollabieren. Die Atemansteuerung reagiert primär auf CO₂/pH (nicht auf O₂!) über zentrale Chemorezeptoren. Für die Medizin sind Atemwegserkrankungen (Asthma, COPD) die häufigsten Erkrankungen überhaupt. MedAT-Schwerpunkte: Surfactant, Atemmechanik, CO₂-Transport, Bohr-Effekt, Atemregulation.
 
 ---
 
@@ -2334,7 +2404,13 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
 
 ## Zusammenfassung
 
-Die Atemwege gliedern sich in obere (Nase, Pharynx) und untere Abschnitte (Larynx, Trachea, Bronchien, Alveolen), wobei die rund 300 Millionen Alveolen mit einer Gesamtoberfläche von 80–140 m² den eigentlichen Gasaustausch ermöglichen. Surfactant, das von Typ-II-Pneumozyten produziert wird und zu 90 % aus DPPC besteht, senkt die Oberflächenspannung nach dem Laplace-Gesetz und verhindert den Alveolarkollaps – ein Mangel bei Frühgeborenen führt zum neonatalen Atemnotsyndrom. Die aktive Inspiration durch Diaphragma und äußere Interkostalmuskeln erzeugt einen Unterdruck, der Luft einströmen lässt, während die Exspiration in Ruhe passiv durch elastische Rückstellung erfolgt. Der Gasaustausch an der nur 0,5 µm dünnen Blut-Luft-Schranke folgt Partialdruckgradienten (O₂: 60 mmHg, CO₂: 6 mmHg), wobei CO₂ dank höherer Löslichkeit 20-mal schneller diffundiert und zu 70 % als Bikarbonat, 23 % als Carbaminohämoglobin und 7 % gelöst transportiert wird. Die Atemregulation steuern zentrale Chemorezeptoren in der Medulla (pCO₂/pH als wichtigster Antrieb) und periphere Sensoren im Karotiskörper (pO₂ < 60 mmHg), während der Bohr-Effekt im metabolisch aktiven Gewebe die O₂-Abgabe durch Rechtsverschiebung der Bindungskurve steigert.`,
+- **Alveolen**: ~300 Mio., Oberfläche 80–140 m², Blut-Luft-Schranke 0,5 µm; Typ-I-Pneumozyten (Gasaustausch), Typ-II (Surfactant)
+- **Surfactant** (DPPC, ~90%): Senkt Oberflächenspannung → verhindert Alveolarkollaps (Laplace-Gesetz). Mangel bei Frühgeborenen → neonatales Atemnotsyndrom
+- **Atemmechanik**: Inspiration aktiv (Diaphragma + Mm. intercostales externi → Unterdruck). Ruhige Exspiration: passiv (elastische Rückstellung)
+- **Gasaustausch**: O₂-Gradient 60 mmHg (Alveole → Blut). CO₂ diffundiert 20× schneller (höhere Löslichkeit) trotz nur 6 mmHg Gradient
+- **CO₂-Transport**: 70% als Bikarbonat (HCO₃⁻), 23% Carbaminohämoglobin, 7% gelöst
+- **Atemregulation**: zentrale Chemorezeptoren (Medulla, pCO₂/pH = **Hauptantrieb**). Periphere (Karotiskörper): O₂ nur bei pO₂ < 60 mmHg. COPD-Hypoxieatem: O₂-Gabe → Atemantrieb kann sinken!
+- **Bohr-Effekt**: CO₂↑/pH↓/Temp↑ → Rechtsverschiebung → O₂-Abgabe ↑ im Gewebe`,
       lernziele: [
         "Die Funktion von Surfactant (Typ-II-Pneumozyten, DPPC) und seine Bedeutung zur Verhinderung von Atelektase erklären.",
         "Die Mechanismen der aktiven Inspiration (Diaphragma, Mm. intercostales externi) und passiven Exspiration beschreiben.",
@@ -2456,23 +2532,9 @@ Die Atemwege gliedern sich in obere (Nase, Pharynx) und untere Abschnitte (Laryn
         "Peristaltik",
         "Resorption",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Das Verdauungssystem zerlegt Nahrung mechanisch und chemisch, resorbiert Nährstoffe und Wasser und scheidet unverdauliche Reste aus. Der Gastrointestinaltrakt erstreckt sich über rund 9 m vom Mund bis zum Anus und wird von den akzessorischen Organen Leber, Gallenblase und Pankreas unterstützt. Hormonelle Signale wie Gastrin, Sekretin und CCK koordinieren Sekretion und Motilität, während die Dünndarmschleimhaut mit Zotten und Mikrovilli eine Resorptionsfläche von etwa 200 m² bereitstellt.
-
-**Das Wichtigste auf einen Blick:**
-- Belegzellen produzieren HCl (H⁺/K⁺-ATPase) und Intrinsic Factor; Hauptzellen Pepsinogen; G-Zellen Gastrin
-- Pankreas: Trypsinogen → Trypsin (via Enterokinase) aktiviert weitere Zymogene; Lipase benötigt Gallensalze
-- Glukose-Resorption über SGLT1 (sekundär-aktiv); Fette über Mizellen → Chylomikronen → Lymphe (nicht Pfortader!)
-- Vitamin B₁₂ benötigt Intrinsic Factor und wird im Ileum resorbiert
-- Bilirubin-Weg: unkonjugiert (lipophil, albumin-gebunden) → Leber (Glukuronidierung) → konjugiert → Galle → Sterkobilin/Urobilin
-- Leber: doppelte Blutversorgung (A. hepatica 25 %, V. portae 75 %), Harnstoffzyklus, Gerinnungsfaktoren (Vit-K-abhängig: II, VII, IX, X)
-
----
-
-## Einleitung
-
-Das Verdauungssystem (Gastrointestinaltrakt, GIT) dient der mechanischen und chemischen Verdauung von Nahrung, der Resorption von Nährstoffen/Wasser und der Exkretion unverdaulicher Reste. Der Verlauf reicht vom Mund (~9 m) über Ösophagus, Magen, Dünndarm (Duodenum, Jejunum, Ileum) bis zum Dickdarm. Akzessorische Organe: Leber, Gallenblase, Pankreas.
+Was wir essen, muss auf Molekülebene zerlegt werden, damit es ins Blut aufgenommen werden kann. Das Verdauungssystem zerlegt Nahrung (mechanisch + chemisch), resorbiert Nährstoffe, und scheidet den Rest aus. Der GI-Trakt ist ~9 m lang — vom Mund bis zum Anus. Besonderheit: Drei akzessorische Organe (Leber, Gallenblase, Pankreas) unterstützen die Verdauung durch Galle und Enzyme. Die Dünndarmschleimhaut (Kerckring-Falten + Zotten + Mikrovilli) hat ~200 m² Resorptionsfläche. Für die Medizin sind Erkrankungen des GI-Trakts (Gastritis, Ulkus, Pankreatitis, Ikterus) täglich relevant. MedAT-Schwerpunkte: Magenzelltypen, Trypsin-Aktivierungskaskade, Fett-/Glukoseresorption, Bilirubin-Weg.
 
 ---
 
@@ -2523,7 +2585,12 @@ Morbus Crohn und Colitis ulcerosa: chronische Erkrankungen mit erheblicher Morbi
 
 ## Zusammenfassung
 
-Der Gastrointestinaltrakt erstreckt sich vom Mund über Ösophagus, Magen, Dünndarm (Duodenum, Jejunum, Ileum) und Dickdarm bis zum Anus und wird von der Leber, Gallenblase und dem Pankreas als akzessorischen Organen unterstützt. Im Magen produzieren Belegzellen HCl und Intrinsic Factor, Hauptzellen Pepsinogen und G-Zellen Gastrin, während das exokrine Pankreas Zymogene (Trypsinogen → Trypsin via Enterokinase) und Bikarbonat sezerniert. Die Dünndarmschleimhaut vergrößert ihre Oberfläche durch Kerckring-Falten, Zotten und Mikrovilli auf rund 200 m² und resorbiert Glukose über SGLT1, Fette über Mizellen zu Chylomikronen, die über die Lymphe transportiert werden, sowie Vitamin B₁₂ im Ileum mittels Intrinsic Factor. Die Leber mit ihrer doppelten Blutversorgung (A. hepatica 25 %, V. portae 75 %) erfüllt zentrale Funktionen in der Proteinsynthese, Biotransformation, Bilirubin-Konjugation und im Harnstoffzyklus, wobei die Vitamin-K-abhängigen Gerinnungsfaktoren II, VII, IX und X klinisch besonders relevant sind. Das gastrointestinale Hormonsystem aus Gastrin, Sekretin, CCK und GLP-1 koordiniert Sekretion, Motilität und Sättigung und bildet die Grundlage moderner Therapien wie GLP-1-Analoga bei Diabetes und Adipositas. Der Dickdarm resorbiert zusätzlich Wasser und Elektrolyte, beherbergt das Darmmikrobiom mit ca. 10¹⁴ Bakterien und produziert kurzkettige Fettsäuren (Butyrat) als Energiequelle für Kolonozyten.`,
+- **Magen**: Belegzellen (HCl + Intrinsic Factor), Hauptzellen (Pepsinogen), G-Zellen (Gastrin). H⁺/K⁺-ATPase = Ziel für PPI (Omeprazol)
+- **Pankreas**: Trypsinogen → Trypsin via Enterokinase (im Duodenum). Trypsin aktiviert alle anderen Zymogene. Akute Pankreatitis = vorzeitige Aktivierung
+- **Dünndarm-Resorption**: Glukose via SGLT1 (apikal, sekundär-aktiv) → GLUT2 (basolateral). Fette: Mizellen → Enterozyt → Chylomikronen → **Lymphe** (nicht Pfortader!). Vitamin B₁₂: Intrinsic Factor → Ileum
+- **Bilirubin-Weg**: Hb → unkonjugiertes Bilirubin (lipophil, albumin-gebunden) → Leber (Glukuronidierung) → konjugiert → Galle → Sterkobilin (Stuhl) + Urobilin (Urin)
+- **Leber**: doppelte Blutversorgung (A. hepatica 25% + V. portae 75%), Harnstoffzyklus, Gerinnungsfaktoren (Vit-K-abhängig: II, VII, IX, X), Cholesterin, Albumin
+- **GI-Hormone**: Gastrin (HCl ↑), Sekretin (Bikarbonat ↑), CCK (Pankreasenzyme + Galleentleerung), GIP/GLP-1 (Inkretine)`,
       lernziele: [
         "Die Funktion der Magenzellen (Beleg-, Haupt-, Nebenzellen, G-Zellen, D-Zellen) und deren Sekrete benennen und erklären.",
         "Die wichtigsten Pankreasenzyme und deren Aktivierungskaskade (Trypsinogen → Trypsin via Enterokinase) darstellen.",
@@ -2645,23 +2712,9 @@ Der Gastrointestinaltrakt erstreckt sich vom Mund über Ösophagus, Magen, Dünn
         "Gegenstromprinzip",
         "Harnleiter",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Die Nieren regulieren den Wasser- und Elektrolythaushalt, den Säure-Basen-Status, den Blutdruck über das RAAS und die Ausscheidung harnpflichtiger Substanzen wie Harnstoff und Kreatinin. Mit rund einer Million Nephronen pro Niere werden täglich etwa 180 L Primärharn filtriert, von denen 99 % rückresorbiert werden, sodass nur 1,5 L Endharn entstehen. Die hormonelle Steuerung durch ADH, Aldosteron und das Renin-Angiotensin-Aldosteron-System macht die Niere zu einem zentralen Organ der Homöostase.
-
-**Das Wichtigste auf einen Blick:**
-- GFR ~120 mL/min → ~180 L/Tag Primärharn; Filtrationsbarriere: fenestriertes Endothel + GBM + Podozyten
-- Proximaler Tubulus: 65 % Rückresorption; 100 % Glukose (SGLT2), 100 % Aminosäuren, osmotische H₂O-Resorption (AQP1)
-- Gegenstromprinzip: absteigend H₂O raus (AQP1), aufsteigend NaCl raus (NKCC2) → Gradient 300–1.200 mOsm/L
-- ADH → V₂-Rezeptor → Aquaporin-2-Insertion im Sammelrohr → Harnkonzentrierung
-- RAAS: Renin → Angiotensin II → Vasokonstriktion + Aldosteron (ENaC) + ADH → Blutdruck ↑
-- Nierenschwelle Glukose: ~180 mg/dL; darüber Glukosurie (SGLT2-Hemmer nutzen diesen Mechanismus therapeutisch)
-
----
-
-## Einleitung
-
-Das Harnsystem reguliert Wasser-/Elektrolythaushalt, Säure-Basen-Haushalt (pH ~7,4), Blutdruck (RAAS) und Exkretion von Harnstoff, Kreatinin und Fremdstoffen. Die Niere (~1 Mio. Nephrone) filtert täglich ~180 L Primärharn, von dem ~99% rückresorbiert werden (~1,5 L Endharn).
+Die Niere ist weit mehr als ein Abfallfilter: Sie reguliert Blutvolumen, Blutdruck, pH-Wert und Elektrolyte — und produziert Hormone (Erythropoetin, Renin). Jede Niere hat ~1 Million Nephrone, die täglich 180 Liter Primärharn filtrieren — durch Rückresorption werden davon >99% zurückgewonnen, nur 1–2 Liter werden als Endurin ausgeschieden. Das RAAS (Renin-Angiotensin-Aldosteron-System) ist zentraler Blutdruckregulator. Für die Medizin: Niereninsuffizienz ist häufig (diabetische Nephropathie als Hauptursache), renale Anämie durch EPO-Mangel, ACE-Hemmer als RAAS-Blocker. MedAT-Schwerpunkte: GFR, Tubulustransporte, ADH/Aldosteron, RAAS-Kaskade.
 
 ---
 
@@ -2712,7 +2765,13 @@ Chronische Nierenerkrankung (CKD): betrifft ~10% der Weltbevölkerung; häufigst
 
 ## Zusammenfassung
 
-Jedes Nephron besteht aus dem Glomerulus mit seiner dreischichtigen Filtrationsbarriere (fenestriertes Endothel, GBM, Podozyten), gefolgt von proximalem Tubulus, Henle-Schleife, distalem Tubulus und Sammelrohr, wobei die GFR von 120 mL/min täglich rund 180 L Primärharn erzeugt. Der proximale Tubulus resorbiert 65 % des Filtrats einschließlich 100 % der Glukose über SGLT2, während das Gegenstromprinzip der Henle-Schleife durch wasserpermeablen absteigenden (AQP1) und NaCl-transportierenden aufsteigenden Schenkel (NKCC2) einen osmotischen Gradienten von 300 bis 1.200 mOsm/L im Mark aufbaut. ADH steuert die Feinregulation der Harnkonzentrierung über V₂-Rezeptor-vermittelte Aquaporin-2-Insertion im Sammelrohr, während das RAAS über die Kaskade Renin → Angiotensin II → Aldosteron/ADH den Blutdruck reguliert und therapeutische Angriffspunkte für ACE-Hemmer (Ramipril, Bradykinin-bedingte Husten-NW) und AT₁-Blocker (Losartan) bietet. Die Niere reguliert den pH-Wert über drei Mechanismen – HCO₃⁻-Rückresorption, H⁺-Sekretion und Ammonium-Bildung – und ist bei chronischer Insuffizienz (CKD Stadium V, GFR < 15 mL/min) auf Dialyse oder Transplantation als Nierenersatzverfahren angewiesen. Zusätzlich produziert die Niere Erythropoetin (EPO) bei Hypoxie, das die Erythropoese im Knochenmark stimuliert, und aktiviert Vitamin D₃ (Calcitriol) über die 1α-Hydroxylase, was die intestinale Kalziumresorption fördert und den Knochenstoffwechsel reguliert.`,
+- **GFR** ~120 mL/min = ~180 L/Tag Primärharn; Filtrationsbarriere: fenestriertes Endothel + GBM + Podozyten
+- **Proximaler Tubulus**: 65% Rückresorption; Glukose 100% via SGLT2; Aminosäuren 100%; H₂O via AQP1 (konstitutiv)
+- **Gegenstromprinzip**: absteigend H₂O raus (AQP1), aufsteigend NaCl raus (NKCC2) → Gradient 300–1200 mOsm/L
+- **ADH** (Vasopressin): V₂-Rezeptor → Aquaporin-2-Insertion im Sammelrohr → Harnkonzentrierung ↑. Mangel → Diabetes insipidus (Polyurie)
+- **RAAS-Kaskade**: Renin (Niere) → Angiotensin I → ACE (Lunge) → Angiotensin II → Vasokonstriktion + Aldosteron ↑ (Na⁺/K⁺ im Sammelrohr) + ADH ↑ → Blutdruck ↑
+- **Nierenschwelle Glukose**: ~180 mg/dL; darüber Glukosurie. SGLT2-Hemmer (Empagliflozin) = therapeutische Nutzung
+- **Niere produziert**: EPO (bei Hypoxie → Erythropoese ↑), Renin, Calcitriol (1α-Hydroxylase, Vitamin-D-Aktivierung)`,
       lernziele: [
         "Die vier Funktionen der Niere (Wasser-/Elektrolythaushalt, Säure-Basen-Haushalt, Blutdruckregulation, Exkretion) benennen.",
         "Die Filtrations- und Rückresorptionsvorgänge der Nephron-Abschnitte (GFR ~120 mL/min, SGLT2 im proximalen Tubulus, Gegenstromprinzip der Henle-Schleife) erklären.",
@@ -2833,23 +2892,9 @@ Jedes Nephron besteht aus dem Glomerulus mit seiner dreischichtigen Filtrationsb
         "Periost",
         "Ossifikation",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Das Skelettsystem mit seinen 206 Knochen beim Erwachsenen übernimmt Stütz-, Schutz- und Bewegungsfunktionen, dient als Mineralspeicher für Kalzium und Phosphat und beherbergt das rote Knochenmark für die Hämatopoese. Der Knochenumbau wird durch das dynamische Gleichgewicht zwischen Osteoblasten (Aufbau) und Osteoklasten (Abbau) gesteuert, wobei das RANKL/OPG-System eine zentrale Regulatorrolle einnimmt. Die drei Knorpeltypen (hyalin, elastisch, Faser) und verschiedenen Gelenkformen (Kugel-, Scharnier-, Sattelgelenk) ermöglichen ein breites Spektrum an Bewegungsmöglichkeiten.
-
-**Das Wichtigste auf einen Blick:**
-- Osteoblasten: Kollagen-I-Synthese, Mineralisierung (Ca²⁺/PO₄³⁻), ALP als Marker; produzieren RANKL und OPG
-- Osteoklasten: mehrkernig (Monozyten-Fusion), Knochenresorption via H⁺ und Proteasen, RANK-Rezeptor
-- RANKL/OPG-Ratio bestimmt Knochenumbau; Denosumab = Anti-RANKL-Antikörper
-- Knorpeltypen: hyalin (Kollagen II, Gelenkflächen), elastisch (Kollagen II + Elastin, Ohr/Epiglottis), Faser (Kollagen I, Bandscheibe)
-- Gelenktypen: Kugelgelenk (3 Achsen, Schulter/Hüfte), Scharniergelenk (1 Achse, Knie/Ellenbogen)
-- Osteoporose: Östrogen ↓ → RANKL ↑ → Knochenabbau; DXA T-Score ≤ −2,5; Therapie: Bisphosphonate, Denosumab
-
----
-
-## Einleitung
-
-Das Skelettsystem (206 Knochen beim Erwachsenen) erfüllt Stütz-, Schutz- und Bewegungsfunktionen, dient der Hämatopoese (rotes Knochenmark) und als Mineralspeicher (Ca²⁺, PO₄³⁻). Knochenzellen: Osteoblasten (Aufbau), Osteoklasten (Abbau), Osteozyten (eingemauert, Mechanorezeption).
+Das Skelett ist nicht statisch — es wird ständig umgebaut. 206 Knochen stützen, schützen und ermöglichen Bewegung. Das rote Knochenmark produziert täglich Milliarden Blutzellen (Hämatopoese). Die Mineralspeicherfunktion (Kalzium, Phosphat) macht den Knochen zum zentralen Partner des Ca²⁺-Haushalts. Knochenumbau ist ein Gleichgewicht zwischen Osteoblasten (Aufbau) und Osteoklasten (Abbau) — gesteuert durch RANKL/OPG, PTH, Calcitonin und Östrogen. MedAT-Schwerpunkte: Osteoblasten vs. Osteoklasten, RANKL/OPG-System, Knorpeltypen, Gelenktypen, Osteoporose-Pathophysiologie.
 
 ---
 
@@ -2900,7 +2945,12 @@ Osteoporose ist ein bedeutendes Public-Health-Problem: jährlich >200.000 osteop
 
 ## Zusammenfassung
 
-Das Skelett besteht aus 206 Knochen mit äußerer Kompakta (80 %, Havers-Systeme) und innerer Spongiosa (20 %, Hämatopoese im roten Mark), wobei die Matrix aus Kollagen I (30 %, Flexibilität) und Hydroxyapatit (70 %, Härte) zusammengesetzt ist. Osteoblasten bauen Knochen auf (Kollagen-I-Synthese, Mineralisierung, ALP als Marker) und regulieren über RANKL und OPG die Aktivität der mehrkernigen Osteoklasten, die Knochen mittels H⁺ und Proteasen abbauen – ein Gleichgewicht, das jährlich etwa 10 % des Skeletts erneuert. Die hormonelle Steuerung erfolgt über PTH (Ca²⁺ ↑ durch Osteoklastenaktivierung), Calcitonin (Ca²⁺ ↓) und Vitamin D (Ca²⁺/PO₄-Resorption im Darm ↑), wobei der Östrogenverlust in der Menopause über RANKL-Erhöhung zur postmenopausalen Osteoporose führt. Die drei Knorpeltypen – hyalin (Kollagen II, Gelenkflächen), elastisch (Kollagen II + Elastin, Ohr/Epiglottis) und Faser (Kollagen I, Bandscheiben) – sind alle avaskulär und werden durch Diffusion ernährt. Diarthrosen als echte Gelenke mit Gelenkspalt und Synovia ermöglichen je nach Form unterschiedliche Bewegungsfreiheit (Kugelgelenk 3 Achsen, Scharniergelenk 1 Achse), während die klinische Abgrenzung zwischen degenerativer Arthrose und entzündlicher rheumatoider Arthritis (Anti-CCP, Pannusgewebe, MTX-Therapie) prüfungsrelevant ist. Die enchondrale Ossifikation, bei der hyaliner Knorpel schrittweise durch Knochengewebe ersetzt wird, ist der Hauptmechanismus des Längenwachstums an den Epiphysenfugen, während die desmale Ossifikation (aus Bindegewebe direkt) für die Schädelknochen charakteristisch ist.`,
+- **Knochenstruktur**: Kompakta (80%, Havers-Systeme) + Spongiosa (20%, rotes Mark → Hämatopoese). Matrix: Kollagen I (30%, Flexibilität) + Hydroxyapatit (70%, Härte)
+- **Osteoblasten** (Aufbau): Kollagen-I-Synthese, Mineralisierung, ALP als Marker. Produzieren RANKL (Osteoklasten ↑) und OPG (Osteoklasten ↓)
+- **Osteoklasten** (Abbau): mehrkernig (Monozyten-Fusion), H⁺ + Proteasen, TRAP als Marker. Aktivierung durch RANKL; Denosumab = Anti-RANKL-Antikörper
+- **Ca²⁺-Regulation**: PTH (Osteoklasten ↑ → Ca²⁺ ↑), Calcitonin (Osteoklasten ↓ → Ca²⁺ ↓), Vitamin D (intestinale Ca²⁺-Resorption ↑)
+- **Knorpeltypen**: hyalin (Kollagen II, Gelenkflächen), elastisch (Kollagen II + Elastin, Ohr/Epiglottis), Faser (Kollagen I, Bandscheibe). Alle avaskulär → Ernährung durch Diffusion
+- **Osteoporose**: Östrogen ↓ (Menopause) → RANKL ↑ → Abbau > Aufbau → Schenkelhalsfraktur, Wirbelkörpersinterung. DXA T-Score ≤ −2,5. Therapie: Bisphosphonate, Denosumab`,
       lernziele: [
         "Den Unterschied zwischen Osteoblasten (Knochenaufbau, Kollagen I, Mineralisierung) und Osteoklasten (Knochenabbau, H⁺, mehrkernig) erklären.",
         "Das RANKL/OPG-System und seine Bedeutung für die Osteoklastenaktivierung und Osteoporose-Therapie (Denosumab) darstellen.",
@@ -3024,23 +3074,9 @@ Das Skelett besteht aus 206 Knochen mit äußerer Kompakta (80 %, Havers-Systeme
         "Progesteron",
         "Befruchtung",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Das Fortpflanzungssystem umfasst die Gametogenese (Bildung von Spermien und Eizellen durch Meiose), die hormonelle Regulation des Reproduktionszyklus und die Mechanismen der Befruchtung und Schwangerschaftserhaltung. Beim Mann steuern LH die Testosteronproduktion in den Leydig-Zellen und FSH die Spermatogenese über die Sertoli-Zellen, bei der Frau regulieren FSH und LH den Menstruationszyklus mit Follikelreifung, Ovulation und Corpus-luteum-Funktion. Die zeitliche Koordination dieser Prozesse durch positive und negative Rückkopplungsmechanismen macht das Fortpflanzungssystem zu einem der komplexesten Regelkreise des menschlichen Körpers.
-
-**Das Wichtigste auf einen Blick:**
-- Spermatogenese: Spermatogonium (2n) → Meiose I/II → 4 Spermien (n), ~74 Tage, kontinuierlich ab Pubertät
-- Oogenese: Arrest Prophase I (pränatal) → Meiose I bei Ovulation → Arrest Metaphase II → Meiose II nur bei Befruchtung → 1 Eizelle + 3 Polkörperchen
-- Sertoli-Zellen (FSH, Inhibin, ABP, Blut-Hoden-Schranke) vs. Leydig-Zellen (LH, Testosteron)
-- Menstruationszyklus: FSH → Östrogen ↑ (Follikelphase) → LH-Peak Tag 14 → Ovulation → Corpus luteum → Progesteron (Lutealphase)
-- LH-Peak: positive Rückkopplung durch hohes Östrogen (> 200 pg/mL, > 2 Tage)
-- hCG (Trophoblast) erhält Corpus luteum → Progesteron ↑ → Schwangerschaft; ab 12. SSW übernimmt Plazenta
-
----
-
-## Einleitung
-
-Das Fortpflanzungssystem ermöglicht Gametogenese (Spermien/Eizellen), Befruchtung und hormonelle Regulation (FSH, LH, Östrogen, Progesteron, Testosteron). Männlich: Hoden (Spermatogenese, Testosteron), Nebenhoden (Reifung), Samenleiter. Weiblich: Ovar (Oogenese, Hormone), Eileiter (Befruchtungsort), Uterus (Implantation).
+Fortpflanzung erfordert Gameten (Spermien + Eizellen), deren präzise hormonelle Steuerung und einen koordinierten Zyklus. FSH und LH (aus dem Hypophysenvorderlappen) steuern Gonadenentwicklung und Hormonsynthese. Die Besonderheit der Oogenese: Sie beginnt pränatal und ist erst bei Befruchtung abgeschlossen — dabei entstehen 1 Eizelle + 3 Polkörperchen aus einer Oozyte. Der Menstruationszyklus ist ein Paradebeispiel für positive und negative Rückkopplung. MedAT-Schwerpunkte: Sertoli vs. Leydig, 4 Spermien vs. 1 Eizelle, LH-Peak-Mechanismus, hCG-Funktion, Meiose-Arrests.
 
 ---
 
@@ -3091,7 +3127,12 @@ PCOS (Polyzystisches Ovarsyndrom) betrifft 5–15% der Frauen im gebärfähigen 
 
 ## Zusammenfassung
 
-Die Spermatogenese produziert in den Tubuli seminiferi aus einem diploiden Spermatogonium über Meiose I und II vier haploide Spermatiden, die in der Spermiogenese zu funktionsfähigen Spermien mit Akrosom, Flagellum und Mitochondrien-Mittelstück reifen – ein Prozess von etwa 74 Tagen, der ab der Pubertät kontinuierlich abläuft. Im Gegensatz dazu entsteht bei der Oogenese aus einer primären Oozyte, die seit der Embryonalzeit in der Prophase I arretiert ist, nach Meiose I eine sekundäre Oozyte (Arrest Metaphase II), deren Meiose II nur bei Befruchtung abgeschlossen wird, sodass letztlich eine Eizelle und drei Polkörperchen entstehen. Der 28-tägige Menstruationszyklus gliedert sich in die FSH-gesteuerte Follikelphase mit steigendem Östrogen, den LH-Peak am Tag 14 (ausgelöst durch positive Rückkopplung bei hohem Östrogen > 200 pg/mL) mit nachfolgender Ovulation sowie die Lutealphase, in der das Corpus luteum unter LH-Einfluss Progesteron produziert und das Endometrium sekretorisch umgebaut wird. Bei Befruchtung sezerniert der Trophoblast hCG ab Tag 6–7, um das Corpus luteum zu erhalten, bis ab der 12. SSW die Plazenta die Hormonproduktion übernimmt. Klinisch relevant sind das PCOS als häufigste endokrine Erkrankung bei Frauen (5–15 %, Rotterdam-Kriterien), die Endometriose mit Dysmenorrhö und Infertilität sowie die verschiedenen Kontrazeptionsmethoden von kombinierten OCP über IUP bis zu den Notfallkontrazeptiva Ulipristalacetat und Levonorgestrel.`,
+- **Spermatogenese**: Spermatogonium (2n) → Meiose I/II → **4 Spermien** (n), ~74 Tage, kontinuierlich ab Pubertät. Sertoli-Zellen (FSH-abhängig, Inhibin, Blut-Hoden-Schranke), Leydig-Zellen (LH → Testosteron)
+- **Oogenese**: Arrest **Prophase I** (seit Embryonalzeit bis Pubertät) → Meiose I bei Ovulation → Arrest **Metaphase II** → Meiose II nur bei Befruchtung → **1 Eizelle + 3 Polkörperchen**
+- **Menstruationszyklus**: FSH → Östrogen ↑ (Follikelphase) → Östrogen ↑↑ → **positive Rückkopplung → LH-Peak** (Tag 14) → Ovulation → Corpus luteum → Progesteron (Lutealphase)
+- **LH-Peak-Trigger**: Östrogen > 200 pg/mL über > 2 Tage → **positives Feedback** auf GnRH/LH. (Niedrig/mittel: negatives Feedback)
+- **hCG** (Trophoblast ab Tag 6–7): erhält Corpus luteum → Progesteron ↑ → Schwangerschaftserhalt. Basis des Schwangerschaftstests. Ab 12. SSW: Plazenta übernimmt
+- **Klinisch**: PCOS (anovulatorische Infertilität, LH/FSH-Ratio > 2), Endometriose (Dysmenorrhö, Infertilität), Mammakarzinom (70% ER+ → Tamoxifen/Aromatasehemmer)`,
       lernziele: [
         "Die Funktionen von Sertoli-Zellen (Spermatogenese-Unterstützung, Inhibin, Blut-Hoden-Schranke) und Leydig-Zellen (Testosteron unter LH) unterscheiden.",
         "Die Spermatogenese (Spermatogonien → 4 Spermien, ~74 Tage) mit Meiose I/II und Spermiogenese beschreiben.",
