@@ -113,6 +113,29 @@ Umrechnung: 1800 kcal × 4184 J/kcal = 7 531 200 J/Tag.
 Ein Tag = 86 400 s.
 Leistung P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glühbirne! Bei körperlicher Aktivität steigt der Energieumsatz auf 300–500 W.
 
+---
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was ist die SI-Einheit des Drucks?" → Pascal (Pa = N/m² = kg·m⁻¹·s⁻²)
+- "Wie viele SI-Basisgrößen gibt es, und welche?" → 7: Länge (m), Masse (kg), Zeit (s), Strom (A), Temperatur (K), Stoffmenge (mol), Lichtstärke (cd)
+- "Was ist der Unterschied zwischen Skalar und Vektor?" → Skalar: nur Betrag (z.B. Temperatur, Druck); Vektor: Betrag + Richtung (z.B. Kraft, Geschwindigkeit)
+- "Was ist 1 Watt in Basiseinheiten?" → W = J/s = kg·m²·s⁻³
+- "Was ist der Unterschied zwischen intensiver und extensiver Größe?" → Intensiv: unabhängig von der Menge (Konzentration, Temperatur); extensiv: proportional zur Menge (Masse, Volumen)
+
+**Achtung — typische Verwechslungen:**
+- Masse (kg) ≠ Gewichtskraft (N): Masse ist ortsunabhängig, Gewichtskraft F_G = m·g hängt von g ab
+- Newton ist KEINE Basiseinheit, sondern abgeleitet: N = kg·m/s²
+- Intensive Größen addieren sich NICHT beim Zusammenfügen: 2 × (20°C Wasser) = 20°C, nicht 40°C
+- "Körpergewicht 70 kg" ist physikalisch die Masse — die Gewichtskraft beträgt 70 × 9,81 ≈ 687 N
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- 1 mmHg ≈ 133 Pa; 120 mmHg ≈ 16 kPa (normaler systolischer Blutdruck in SI)
+- Grundumsatz Erwachsener ≈ 87 W (vergleichbar mit einer Glühbirne)
+- Gewichtskraft 70 kg: F_G = 70 × 9,81 ≈ 687 N
+- 7 SI-Basisgrößen — Kraft (Newton) ist KEINE Basisgröße!
+
+---
 ## Zusammenfassung
 
 - **7 SI-Basisgrößen**: Länge (m), Masse (kg), Zeit (s), Stromstärke (A), Temperatur (K), Stoffmenge (mol), Lichtstärke (cd)
@@ -394,15 +417,30 @@ Beim Rechnen: Das Ergebnis hat so viele signifikante Stellen wie der ungenaueste
 
 > **Merke:** Klinische Relevanz: Ein Blutzuckerwert von 5,5 mmol/L hat 2 signifikante Stellen. Ihn als 5,500 mmol/L anzugeben würde eine Messgenauigkeit suggerieren, die das Gerät gar nicht liefert.
 
-## Häufige Präfix-Fallen im MedAT
+---
+## MedAT-Fokus
 
-Beim MedAT werden regelmäßig Aufgaben gestellt, die gezielt Präfix-Verwechslungen prüfen. Die typischsten Fallen:
+**Häufige Fragen:**
+- "Was ist 0,000 045 m in wissenschaftlicher Notation?" → 4,5 × 10⁻⁵ m = 45 µm
+- "Wie viele µg sind 1 mg?" → 1000 µg (Faktor 10³)
+- "Was ist 1 cm² in m²?" → 10⁻⁴ m² (Exponent quadrieren: (10⁻²)² = 10⁻⁴)
+- "Was ist 5 mL in m³?" → 5 × 10⁻⁶ m³ (1 mL = 1 cm³ = 10⁻⁶ m³)
+- "Was bedeutet M (Mega) vs. m (Milli)?" → M = 10⁶; m = 10⁻³ — Unterschied Faktor 10⁹!
 
+**Achtung — typische Verwechslungen:**
 - **cm² vs. m²:** 1 cm² = 10⁻⁴ m² (nicht 10⁻² m²!) — der Exponent wird quadriert
-- **mL vs. L vs. m³:** 1 mL = 10⁻³ L = 10⁻⁶ m³ — zwei verschiedene Umrechnungsschritte
-- **ng vs. µg vs. mg:** ng → µg (÷ 1000), µg → mg (÷ 1000) — jeder Sprung ist Faktor 10³
-- **Verwechslung Mega/Milli:** M (groß) = 10⁶, m (klein) = 10⁻³ — Groß-/Kleinschreibung entscheidet über Faktor 10⁹!
+- **mL vs. m³:** 1 mL = 1 cm³ = 10⁻⁶ m³ (nicht 10⁻³ m³!)
+- **ng vs. µg vs. mg:** jeder Schritt ist Faktor 1000; ng → µg → mg (÷ 1000 je Schritt)
+- **Mega/Milli:** M (Groß) = 10⁶; m (Klein) = 10⁻³ — Groß-/Kleinschreibung entscheidet!
+- Mantisse in wissenschaftlicher Notation muss zwischen 1 und 10 liegen: 4,5 × 10⁻⁵ (korrekt), nicht 45 × 10⁻⁶
 
+**Prüfungsrelevante Zahlen/Fakten:**
+- Erythrozyt-Durchmesser: ~8 µm; DNA-Doppelhelix-Durchmesser: ~2 nm
+- Normalglukose: 3,9–6,1 mmol/L; Normalnatrium: 135–145 mmol/L
+- 1 mL = 1 cm³ = 10⁻⁶ m³; 1 L = 1 dm³ = 10⁻³ m³
+- Lichtgeschwindigkeit c ≈ 3 × 10⁸ m/s; Avogadro N_A ≈ 6 × 10²³ mol⁻¹
+
+---
 ## Rechenbeispiele
 
 **Beispiel 1 — Volumenumrechnung Blutprobe:**
@@ -720,6 +758,30 @@ Bei Grundumsatz ~7 500 kJ/d deckt diese Mahlzeit ~38,6 % des Tagesbedarfs.
 ρ_Blut = 1060 kg/m³, v = 0,5 m/s, d_Aorta = 0,025 m, η = 3,5 × 10⁻³ Pa·s.
 Re = (1060 × 0,5 × 0,025) / (3,5 × 10⁻³) = 13,25 / 0,0035 ≈ **3786** → Übergangsbereich (2300–4000), bei Belastung turbulent.
 
+---
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Welche Dimension hat Druck?" → M·L⁻¹·T⁻² (= kg·m⁻¹·s⁻² = Pa)
+- "Welche Dimension hat Energie?" → M·L²·T⁻² (= kg·m²·s⁻² = J)
+- "Was ist dimensionslos?" → Reynolds-Zahl, Wirkungsgrad, pH-Wert, Brechungsindex
+- "Wie rechnet man 72 km/h in m/s um?" → 72 ÷ 3,6 = 20 m/s (oder × 1000/3600)
+- "Was ist 2500 kcal in kJ?" → 2500 × 4,184 = 10 460 kJ ≈ 10,5 MJ
+
+**Achtung — typische Verwechslungen:**
+- [m·v] = M·L·T⁻¹ ist Impuls (kg·m/s), NICHT Energie! Energie = M·L²·T⁻² benötigt v²
+- [m·a] = N (Kraft), [m·v²] = J (Energie), [m·v] = kg·m/s (Impuls) — alle ähnlich, aber verschieden!
+- 1 mmHg ≠ 1 cmH₂O: 1 mmHg = 1,36 cmH₂O (Dichteverhältnis Hg/H₂O = 13,6)
+- Dimensionsanalyse bestätigt Formel, schließt aber nicht alle inhaltlichen Fehler aus
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- 1 mmHg = 133,3 Pa; 120 mmHg ≈ 16 kPa (normaler systolischer Blutdruck)
+- 1 kcal = 4,184 kJ; Grundumsatz ~1800 kcal/d ≈ 7500 kJ/d ≈ 87 W
+- 1 km/h = 1/3,6 m/s; 36 km/h = 10 m/s; 72 km/h = 20 m/s
+- Reynolds-Zahl Aorta: ~3800 (Übergangsbereich); Re < 2300 laminar; Re > 4000 turbulent
+- 1 g Kohlenhydrate: ~17 kJ; 1 g Fett: ~37 kJ; 1 g Protein: ~17 kJ
+
+---
 ## Zusammenfassung
 
 - **Dimensionsanalyse**: beide Seiten einer Gleichung müssen gleiche Dimension haben → Fehlerprüfung für Formeln
@@ -971,6 +1033,29 @@ Gleichmäßige Beschleunigung: s = ½at² → a = 2s/t² = 2 × 0,05 / 0,09 ≈ 
 Thoraxmasse ~20 kg: F = m × a = 20 × 1,11 ≈ **22 N** (dynamischer Anteil) + statische Last des Brustbeins.
 Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominiert über Trägheitskraft).
 
+---
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was besagt das 1. Newtonsche Gesetz?" → Kein Nettokraft → keine Zustandsänderung (Trägheit)
+- "Was ist die Einheit der Kraft?" → Newton: N = kg·m/s² (abgeleitet, keine Basiseinheit!)
+- "Wie groß ist g?" → 9,81 m/s² ≈ 10 m/s²; nach 1 s freiem Fall: v = 10 m/s, s = 5 m
+- "Was gilt für actio = reactio?" → Gleich groß, entgegengesetzt, verschiedene Körper — heben sich NICHT auf
+- "Wie berechnet man den Bremsweg?" → v² = v₀² − 2·a·s → a = v₀²/(2s)
+
+**Achtung — typische Verwechslungen:**
+- actio = reactio: Beide Kräfte wirken auf VERSCHIEDENE Körper — deshalb heben sie sich nicht auf!
+- v(t) = v₀ + at (Geschwindigkeit, linear) vs. s(t) = v₀t + ½at² (Weg, parabolisch) — nicht verwechseln
+- Freier Fall: a = g (Beschleunigung), nicht F = g (g ist keine Kraft, sondern m/s²)
+- Trägheitsgesetz: Körper im freien Weltraum ohne Krafteinwirkung bewegt sich GERADLINIG mit konstanter Geschwindigkeit — er bleibt nicht automatisch stehen
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- g = 9,81 m/s² ≈ 10 m/s²; freier Fall 1 s: v = 9,8 m/s, s = 4,9 m
+- CPR: ~400–500 N Druckkraft, 5–6 cm Kompressionstiefe erforderlich
+- Airbag-Prinzip: längere Bremsstrecke → kleinere Verzögerung a → kleinere Kraft F = m·a
+- Dezelerationstrauma: Aorta descendens besonders gefährdet (am Aortenbogen fixiert)
+
+---
 ## Zusammenfassung
 
 - **1. Newtonsches Gesetz (Trägheit)**: kein Nettokraft → kein Δv; Dezelerationstrauma: Organe bewegen sich weiter
@@ -1189,6 +1274,30 @@ Mechanische Leistung: P = W × f = 0,93 × 72/60 = **1,12 W**.
 Tagesarbeit: 0,93 × 72 × 60 × 24 = **96 422 J ≈ 96 kJ/Tag**.
 Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/Tag**.
 
+---
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was ist E_kin bei doppelter Geschwindigkeit?" → 4-fach (E_kin ~ v²)
+- "Welche Erhaltungsgröße gilt immer, auch beim inelastischen Stoß?" → Impuls (nicht kinetische Energie!)
+- "Wie viel Arbeit leistet das Herz pro Schlag?" → ~1 J; mechanische Leistung ~1 W; täglich ~96 kJ
+- "Was ist der Unterschied zwischen Arbeit und Leistung?" → Arbeit = F·s (J); Leistung = W/t (W = J/s)
+- "Wann leistet eine Kraft keine Arbeit?" → Wenn Kraft senkrecht zum Weg steht (cos 90° = 0)
+
+**Achtung — typische Verwechslungen:**
+- Impuls p = mv (Vektor, N·s) ≠ kinetische Energie E = ½mv² (Skalar, J) — verschiedene Größen!
+- Kraftstoß J = F·Δt = Δp, beschreibt Impulsänderung — NICHT Energieänderung
+- Elastischer Stoß: Impuls UND kinetische Energie erhalten; inelastischer: NUR Impuls erhalten
+- Arbeit W = F·s·cosα: senkrechte Kraft (α = 90°) → cos 90° = 0 → keine Arbeit geleistet (z.B. Zentripetalkraft)
+- Federkraft F = −k·x (negatives Vorzeichen = Rückstellkraft!); elastische Energie E_el = ½·k·x²
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- E_kin = ½mv²; E_pot = mgh; Aufprallgeschwindigkeit: v = √(2gh)
+- Herzarbeit: ~1 J/Schlag; P_mech ≈ 1 W; Wirkungsgrad η ≈ 17 % → metabolisch ~7 W nötig
+- Wirkungsgrad Mensch beim Laufen: ~20–25 % (Rest = Wärme)
+- Achillessehne speichert ~35 J elastische Energie pro Laufschritt
+
+---
 ## Zusammenfassung
 
 - **Kinetische Energie**: E_kin = ½mv²; **Potenzielle Energie**: E_pot = mgh; Erhaltung (ohne Reibung): E_kin + E_pot = const
@@ -1401,6 +1510,31 @@ Blutdruckdifferenz Kopf↔Fuß: Höhe h = 1,7 m, ρ_Blut = 1060 kg/m³.
 Am Fuß: 120 + 133 ≈ **253 mmHg** systolisch. Am Kopf: 120 - 25 ≈ **95 mmHg** (30 cm über Herz).
 Klinisch: Bei längerem Stehen → venöse Pooling in Beinen → orthostatische Hypotonie → Schwindel.
 
+---
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was besagt das Poiseuille-Gesetz?" → Q = π·r⁴·Δp/(8·η·l); Q ~ r⁴ — Radius ist der dominierende Parameter
+- "Was folgt aus der Kontinuitätsgleichung?" → A₁·v₁ = A₂·v₂; enger Querschnitt → höhere Strömungsgeschwindigkeit
+- "Was bedeutet Re < 2300?" → Laminare Strömung (geordnet, schichtenweise, geräuschlos)
+- "Wie berechnet man Bizepskraft für 10 kg Last (Hebelarm 35 cm, Ansatz 5 cm)?" → F_B × 5 = 100 × 35 → F_B = 700 N
+- "Was erklärt Bernoulli bei Stenosen?" → Enger Querschnitt → v↑ → p↓ (poststenotischer Druckabfall)
+
+**Achtung — typische Verwechslungen:**
+- Poiseuille: Q ~ r⁴ (4. Potenz!), NICHT Q ~ r²! Radius halbieren → Fluss auf 1/16 (nicht 1/4)
+- Bernoulli: Enge Stelle → Geschwindigkeit↑, Druck↓ — nicht umgekehrt!
+- Drehmoment M = F·d (d = senkrechter Hebelarm!) — wenn die Kraft nicht senkrecht zum Hebel steht, gilt nur die senkrechte Komponente
+- Turbulenz entsteht bei HOHEM Re (> 4000), nicht bei niedrigem
+- Archimedisches Prinzip: Auftrieb = Gewicht des VERDRÄNGTEN Fluids (nicht des Körpers!)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Poiseuille: 50 % Radiusreduktion → Fluss auf (0,5)⁴ = 6,25 %; 33 % Reduktion → (0,67)⁴ ≈ 20 %
+- Hydrostatischer Druckunterschied Kopf↔Fuß im Stehen: ~130 mmHg
+- Kapillaren: Gesamtquerschnitt ~1000× größer als Aorta → Blutfluss ~1000× langsamer
+- Bizeps-Hebel: Typ-3-Hebel, Kraftuntersetzung 1:7 → für 10 kg Last ~700 N Muskelkraft
+- Surfactant verhindert Alveolarkollaps; fehlt bei Frühgeborenen < 34. SSW → IRDS
+
+---
 ## Zusammenfassung
 
 - **Gleichgewicht**: ΣF = 0 UND ΣM = 0; **Drehmoment**: M = F·d (N·m)
@@ -1619,6 +1753,29 @@ Patient (h = 1,80 m, Schwerpunkt bei 0,56 × h = 1,01 m) steht auf Standfläche 
 Max. Neigungswinkel bis Kipp: tan(θ) = (0,125 m) / (1,01 m) → θ = arctan(0,124) ≈ **7,1°**.
 Mit Gehstock (effektive Standbreite ~60 cm): θ = arctan(0,30/1,01) ≈ **16,5°** → doppelte Kippstabilität.
 
+---
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was ist der Unterschied zwischen Masse und Gewichtskraft?" → Masse (kg): ortsunabhängig, Materieeigenschaft; Gewichtskraft (N) = m·g, ortsabhängig
+- "Was ist RCF?" → Relative Zentrifugalbeschleunigung = ω²·r/g (gibt an, wie oft größer als g)
+- "Was hält einen Satelliten auf seiner Bahn?" → Die Gravitationskraft dient als Zentripetalkraft — keine Scheinkraft!
+- "Was gilt für stabiles Gleichgewicht?" → Projektion des Schwerpunkts muss innerhalb der Standfläche liegen
+- "Wie berechnet man die Zentripetalbeschleunigung?" → a_z = v²/r = ω²·r
+
+**Achtung — typische Verwechslungen:**
+- Zentrifugalkraft ist eine SCHEINKRAFT im rotierenden System — sie existiert nicht im ruhenden (Inertial-)System der Erde
+- Im Weltraum (ISS): Gewichtskraft ≈ 0 (Schwerelosigkeit), aber die Masse des Körpers bleibt unverändert
+- Stabiles Gleichgewicht: die PROJEKTION (das Lot) des Schwerpunkts muss innerhalb der Standfläche liegen — nicht der Schwerpunkt selbst
+- ω in rad/s, nicht rpm: 3000 rpm = 3000/60 × 2π ≈ 314 rad/s (Umrechnung nicht vergessen!)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- g_Erde = 9,81 m/s²; g_Mond ≈ 1,62 m/s² (ca. 1/6 der Erde)
+- Zentrifuge 3000 rpm, r = 15 cm → RCF ≈ 1500 × g (ausreichend für Serumgewinnung)
+- Schwerelosigkeit (ISS): Knochenverlust ~1–2 % pro Monat ohne Gegenmaßnahmen
+- ISS-Umlaufgeschwindigkeit: ~7,7 km/s bei ~400 km Höhe; Umlaufzeit ~90 min
+
+---
 ## Zusammenfassung
 
 - **Gravitationsgesetz**: F_G = G·m₁·m₂/r²; auf Erde: F_G = m·g (g = 9,81 m/s²); **Masse** (kg) ≠ **Gewicht** (N)
