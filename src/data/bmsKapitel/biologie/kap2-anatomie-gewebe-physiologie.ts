@@ -1007,6 +1007,17 @@ Die **Myelinscheide** ist eine Lipid-Protein-Isolationsschicht um das Axon. Zwis
 
 Das Nervensystem ist das schnellste Kommunikationssystem des Körpers — Signale können mit 120 m/s reisen. Es gliedert sich in **ZNS** (Gehirn + Rückenmark: Verarbeitung) und **PNS** (Spinal-/Hirnnerven: Weiterleitung). Das vegetative (autonome) Nervensystem steuert unwillkürlich innere Organe und ist in zwei Gegenspieler aufgeteilt: **Sympathikus** ("fight-or-flight") und **Parasympathikus** ("rest-and-digest"). Die Grundbausteine der Signalübertragung — Aktionspotential und Synapse — gehören zu den absoluten MedAT-Schwerpunktthemen dieses Kapitels.
 
+---
+
+## Autonomes Nervensystem — Sympathikus und Parasympathikus
+
+Das vegetative Nervensystem (ANS) reguliert Herzfrequenz, Blutdruck, Atmung, Verdauung und Sekretion ohne bewusste Kontrolle. Beide Systeme besitzen eine **zweineuronalige Verschaltung**: präganglionäres Neuron → Ganglion → postganglionäres Neuron → Effektor. Der grundlegende Unterschied liegt in Ursprung, Ganglionlage, Neurotransmitter und Rezeptoren:
+
+- **Sympathikus** (thorakolumbal, T1–L2): kurze präganglionäre Fasern → para- oder prävertebrale Ganglien → lange postganglionäre Fasern. Postganglionärer NT: **Noradrenalin** (Ausnahme: Schweißdrüsen → ACh). Rezeptoren: α₁ (Vasokonstriktion, Mydriasis), α₂ (Peristaltik ↓), β₁ (Herz ↑), β₂ (Bronchodilatation, Glykogenolyse), β₃ (Lipolyse)
+- **Parasympathikus** (kraniosakral, CN III/VII/IX/X + S2–S4): lange präganglionäre Fasern → organnahe oder intramuralen Ganglien → kurze postganglionäre Fasern. NT: **Acetylcholin** (prä- und postganglionär). Rezeptoren: M₂ (Herz ↓ via K⁺-Kanäle), M₃ (Drüsen, glatte Muskulatur)
+
+**Wichtig:** Präganglionäre Fasern beider Systeme verwenden ACh an nikotinischen Rezeptoren (Ganglion). Der Unterschied liegt im postganglionären NT!
+
 > **Merke:** **Sympathikus** (fight-or-flight, thorakolumbal [T1-L2], Noradrenalin, α/β-Rezeptoren): Herz ↑ (β1, Frequenz/Kontraktilität), Bronchodilatation (β2), Mydriasis (α1, Pupille), Peristaltik ↓ (α2), Glykogenolyse ↑ (β2), Lipolyse ↑ (β3). **Parasympathikus** (rest-and-digest, kraniosakral [Hirnnerven III/VII/IX/X, S2-S4], Acetylcholin, M2/M3): Herz ↓ (M2, Vagus), Bronchokonstriktion (M3), Miosis (M3), Peristaltik ↑ (M3), Miktion (M3).
 
 | Organ | Sympathikus | Parasympathikus |
@@ -1022,6 +1033,21 @@ Das Nervensystem ist das schnellste Kommunikationssystem des Körpers — Signal
 ---
 
 ## Synaptische Transmission
+
+An einer **chemischen Synapse** wird ein elektrisches Signal (Aktionspotential) in ein chemisches Signal (Neurotransmitter-Freisetzung) umgewandelt und postsynaptisch wieder in ein elektrisches Signal (EPSP oder IPSP). Jede Synapse besteht aus präsynaptischem Endknöpfchen, synaptischem Spalt (~20–40 nm) und postsynaptischer Membran.
+
+**Ablauf der synaptischen Transmission:**
+1. AP erreicht das Axonterminal → spannungsgesteuerte **Ca²⁺-Kanäle** (P/Q-Typ im ZNS) öffnen
+2. Ca²⁺ strömt ein → bindet **Synaptotagmin** (Ca²⁺-Sensor an Vesikeln)
+3. **SNARE-Komplex** (Synaptobrevin/VAMP [vesikulär] + Syntaxin + SNAP-25 [Membran]) zieht Membranen zusammen → **Exozytose** (Quantal Release: ~5.000 NT-Moleküle/Vesikel)
+4. Neurotransmitter diffundiert durch Spalt → bindet postsynaptische **Rezeptoren**
+5. Postsynaptisches Potential: **EPSP** (Depolarisation; Glutamat/ACh → Na⁺ rein) oder **IPSP** (Hyperpolarisation; GABA → Cl⁻ rein)
+
+**Rezeptortypen:**
+- **Ionotrop** (ligandengesteuerte Ionenkanäle, schnell ms): AMPA (Glutamat → Na⁺), NMDA (Glutamat → Na⁺/Ca²⁺, Mg²⁺-Block!), GABA_A (→ Cl⁻), nikotinisch (ACh → Na⁺)
+- **Metabotrop** (G-Protein-gekoppelt, langsam Sek.–Min.): D1/D2 (Dopamin), mGluR, M1–M5 (ACh), α/β (Noradrenalin)
+
+**Klinisch:** Botulinum-Toxin spaltet SNARE (Synaptobrevin) → keine Exozytose → **schlaffe Lähmung**. Tetanus-Toxin hemmt GABA/Glycin-Freisetzung → **spastische Krämpfe**.
 
 > **Merke:** **Synapse:** Präsynaptisch (Ca²⁺-Kanäle, SNARE [Synaptobrevin + Syntaxin + SNAP-25], Synaptotagmin [Ca²⁺-Sensor]) → Vesikel-Fusion → Neurotransmitter-Freisetzung (Quantal Release) → Postsynaptisch (ionotrop [AMPA, NMDA, GABA_A, nikotinisch], metabotrop [D1/D2, 5-HT, α/β, M1-M5]). **EPSP** (Depolarisation, Glutamat/Acetylcholin) vs. **IPSP** (Hyperpolarisation, GABA/Glycin).
 
@@ -1047,11 +1073,11 @@ Myelinisierte Axone leiten Aktionspotentiale saltatorisch: Das Aktionspotential 
 
 Der Reflexbogen besteht aus Rezeptor, afferenter Faser, (Interneuron), efferenter Faser und Effektor. Der monosynaptische Eigenreflex (z.B. Patellarsehnenreflex) verbindet Ia-Faser direkt mit dem α-Motoneuron ohne Interneuron. Polysynaptische Fremdreflexe (z.B. Fluchtreflex) schalten mehrere Interneurone ein.
 
----
+**Vergleich Reflextypen:**
+- **Monosynaptisch** (Eigenreflex): 1 Synapse, sehr schnell. Rezeptor = Muskelspindel, Afferenz = Ia-Faser (~120 m/s), keine Interneurone. Gleichzeitig: reziproke Hemmung des Antagonisten (über Ia-Interneuron)
+- **Polysynaptisch** (Fremdreflex): mehrere Synapsen + Interneurone. Beispiel Fluchtreflex: Nozizeptor → Aδ-Faser → Interneurone → Beuger aktiviert + Strecker gehemmt + gekreuzte Streckreaktion (kontralateral)
 
-## Klinischer Bezug
-
-Das Nervensystem ist klinisch von zentraler Bedeutung: Multiple Sklerose (MS) zerstört Myelin (Oligodendrozyten) → saltatorische Leitung gestört → neurologische Ausfälle (Sehstörungen, Lähmungen, Sensibilitätsstörungen). Parkinson entsteht durch Dopamin-Mangel (Substantia nigra) → Tremor, Rigor, Akinese; Therapie: L-DOPA + Carbidopa. Alzheimer-Demenz zeigt Acetylcholin-Mangel + Amyloid-Plaques (β-Amyloid) + Tau-Fibrillen → Gedächtnisverlust; Therapie: Acetylcholinesterase-Hemmer (Donepezil). Epilepsie entsteht durch Glutamat/GABA-Ungleichgewicht → unkontrollierte neuronale Entladungen; Antiepileptika: Valproat (GABA ↑), Carbamazepin (Na⁺-Kanal-Blocker). Myasthenia gravis: Autoantikörper gegen nikotinische AChR → belastungsabhängige Muskelschwäche (Ptosis, Dysphagie); Therapie: Pyridostigmin. Lokalanästhetika (Lidocain) blockieren spannungsgesteuerte Na⁺-Kanäle → kein Aktionspotential → Analgesie ohne Bewusstlosigkeit.
+> **Merke:** **Monosynaptischer Eigenreflex** (Patellarsehne): Muskelspindel → Ia-Faser → **direkt** α-Motoneuron (1 Synapse, keine Interneurone). **Polysynaptischer Fremdreflex** (Fluchtreflex): Nozizeptor → mehrere Interneurone → komplexe motorische Antwort. Reflexe laufen spinal ab — **unabhängig vom Bewusstsein**!
 
 ---
 
@@ -2181,19 +2207,33 @@ Das lymphatische System ist das unterschätzte dritte Kreislaufsystem. Es hat dr
 
 ---
 
-## Kerninhalt
+## Lymphknoten — Architektur und Immunfunktion
 
-Das Kerninhalt-Kapitel behandelt Lymphe und Lymphgefäße, Lymphknoten (Cortex: B-Zellen, Paracortex: T-Zellen, Mark: Plasmazellen), Milz (weiße Pulpa: Immunabwehr, rote Pulpa: Erythrozyten-Abbau und Thrombozytenspeicher) sowie Thymus (T-Zell-Reifung, positive und negative Selektion).
+Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Architektur trennt B- und T-Zell-Areale präzise:
 
-> **Merke:** Lymphknoten-Architektur: Cortex = B-Zellen (Follikel, Antikörper), Paracortex = T-Zellen (zellulär), Mark = Plasmazellen (Sekretion).
+- **Cortex** (Rinde): **B-Zellen** in Follikeln (Primärfollikel: ruhend; Sekundärfollikel mit Keimzentrum: aktiv → Antikörper-Produktion). Hier entsteht die humorale Immunantwort
+- **Paracortex**: **T-Zellen** (CD4⁺ und CD8⁺) + dendritische Zellen. Hier werden T-Zellen via MHC-Antigen-Präsentation aktiviert → zelluläre Immunantwort
+- **Mark** (Medulla): **Plasmazellen** (sezernieren Antikörper) + Makrophagen. Markstränge + Marksinus
+
+**Lymphfluss:** Lymphe tritt über **mehrere afferente Gefäße** ein (Randsinus → Cortex → Paracortex → Marksinus) und verlässt den Knoten über **ein efferentes Gefäß** am Hilus.
+
+> **Merke:** Lymphknoten-Architektur: **Cortex** = B-Zellen (Follikel, Antikörper), **Paracortex** = T-Zellen + dendritische Zellen (zelluläre Immunität), **Mark** = Plasmazellen (Sekretion). Afferenz: mehrere Gefäße. Efferenz: ein Gefäß.
 
 ---
 
-## Prüfungsfokus
+## Milz und Thymus — Funktion und klinische Bedeutung
 
-Für den MedAT besonders wichtig: Lymphfunktionen (Rücktransport, Immunabwehr, Fetttransport), Lymphknoten-Architektur, Milz-Kompartimente sowie Thymus-Selektionsprozesse. Nach Splenektomie besteht OPSI-Risiko durch bekapselte Bakterien (Prophylaxe: Impfung + Penicillin).
+**Milz** (~150 g, filtert ~1 L Blut/min) hat zwei funktionelle Kompartimente:
+- **Rote Pulpa** (~80 %): Filtert alte/defekte Erythrozyten (Makrophagen), speichert ~30 % aller Thrombozyten
+- **Weiße Pulpa** (~20 %): Immunabwehr gegen Blutpathogene; PALS (T-Zellen, periarteriolär) + Follikel (B-Zellen, Marginalzone)
 
-> **Merke:** Splenektomie: Keine Milz = OPSI-Risiko → Impfung gegen Pneumokokken, Meningokokken, H. influenzae + Antibiotika-Prophylaxe (Penicillin).
+**Splenektomie-Risiko:** Milz filtert **bekapselte Bakterien** (Pneumokokken, Meningokokken, H. influenzae) besonders effektiv. Ohne Milz → **OPSI** (Overwhelming Post-Splenectomy Infection): perakute Sepsis mit hoher Letalität. Prophylaxe: Impfung + Penicillin-Prophylaxe.
+
+**Thymus** (oberes Mediastinum): Reifungsort der T-Zellen aus dem Knochenmark. Größte Aktivität vor der Pubertät, dann Involution:
+1. **Positive Selektion** (Cortex): T-Zellen, die MHC-I oder MHC-II erkennen, überleben (~3–5 % aller Thymozyten)
+2. **Negative Selektion** (Mark): T-Zellen, die Selbst-Antigene zu stark erkennen → Apoptose (zentrale Toleranz → verhindert Autoimmunität)
+
+> **Merke:** **Milz**: rote Pulpa (Ery-Abbau + Thrombozytenspeicher) vs. weiße Pulpa (Immunabwehr). **Splenektomie** = OPSI-Risiko → Impfung + Penicillin! **Thymus**: positive Selektion (MHC-Erkennung) + negative Selektion (Selbsttoleranz) → nur ~5 % der Thymozyten überleben.
 
 ---
 
@@ -2204,12 +2244,6 @@ Lymphkapillaren beginnen als blind endende, basalmembranfreie Gefäße im Inters
 Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % des Körpers (beide Beine, linker Arm, linke Thoraxhälfte, Abdomen) und mündet in den linken Venenwinkel (Confluens der V. jugularis interna sinistra und V. subclavia sinistra). Der rechte **Ductus lymphaticus dexter** drainiert den rechten Arm, die rechte Thoraxhälfte und die rechte Kopfhälfte. Aus dem Darm transportieren Chylomikronen-beladene Lymphgefäße (Chylusgefäße, Vasa lactea) resorbierte Lipide direkt ins Blut, unter Umgehung der Leber-Erstpassage.
 
 > **Merke:** Ductus thoracicus = 75 % der Körperlymphe → linker Venenwinkel. Lymphangion-Pumpe + Klappen + Muskelpumpe treiben den Lymphfluss an.
-
----
-
-## Klinischer Bezug
-
-Lymphome sind häufige hämatologische Malignome: Hodgkin-Lymphom (Reed-Sternberg-Zellen, bimodale Altersverteilung, gute Prognose mit ABVD-Chemotherapie ~80% 5-Jahres-Überleben). Non-Hodgkin-Lymphome: DLBCL (häufigste, R-CHOP: Rituximab + CHOP), Follikuläres Lymphom (t(14;18), bcl-2 translokation, indolent). B-Symptome (Fieber >38°C, Nachtschweiß, Gewichtsverlust >10% in 6 Monaten) als Alarmsymptome. Lymphödem nach Brustkrebsoperationen (axilläre Lymphknotenentfernung) sehr häufig: chronische Beschwerden, Therapie: physikalische Entstauungstherapie. OPSI (overwhelming post-splenectomy infection): lebensbedrohliche Sepsis durch bekapselte Bakterien nach Splenektomie → lebenslange Prophylaxe (Impfung + Penicillin) essenziell. Infektiöse Mononukleose (EBV, 'Kusskrankheit'): Lymphadenopathie, Splenomegalie, atypische Lymphozyten (Pfeiffer-Zellen), Amoxicillin kontraindiziert (Arzneimittelexanthem).
 
 ---
 
@@ -2354,25 +2388,38 @@ Ohne Sauerstoff kein Leben — und ohne ein System, das O₂ aus der Luft ins Bl
 
 ---
 
-## Kerninhalt
+## Surfactant und Alveolarstruktur
 
-Das Kapitel behandelt Atemwegsanatomie, Surfactant (Typ-II-Pneumozyten, DPPC, Atelektase-Prävention), Atemmechanik (Inspiration aktiv, Exspiration passiv), Gasaustausch (Partialdruckgradienten), Hämoglobin-Bindung (Bohr-Effekt, sigmoidale Kurve) sowie Atemregulation (zentrale und periphere Chemorezeptoren).
+Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. Ihre Wand besteht aus zwei Pneumozytentypen:
+- **Typ-I-Pneumozyten** (~95 % der Oberfläche): Hauchfein (0,2 µm), ermöglichen den Gasaustausch
+- **Typ-II-Pneumozyten** (~5 % der Oberfläche): Kubische Zellen, produzieren **Surfactant** (Dipalmitoylphosphatidylcholin/DPPC, ~90 % Phospholipide)
 
-> **Merke:** Surfactant: Typ-II-Pneumozyten machen Surfactant (DPPC, Phospholipid) → Oberflächenspannung ↓ → Alveolen bleiben offen (keine Atelektase). RDS bei Frühgeborenen: Surfactant-Mangel → Kollaps → Hypoxie → Betamethason antenatal.
+**Surfactant-Funktion:** Senkt die Oberflächenspannung an der Luft-Flüssigkeits-Grenze. Nach dem **Laplace-Gesetz** (P = 2T/r) würden kleine Alveolen kollabieren, weil höherer Druck als in großen. Surfactant verhindert das durch Spannungsreduktion → Alveolen bleiben offen.
 
----
+**Klinisch — RDS (Neonatales Atemnotsyndrom):** Frühgeborene (<28 SSW) haben unreife Typ-II-Pneumozyten → Surfactant-Mangel → Atelektase → Hypoxie. Prophylaxe: Betamethason/Dexamethason (Mutter antenatal → Lungenreifung ↑). Therapie: Surfactant-Instillation.
 
-## Prüfungsfokus
-
-Für den MedAT besonders wichtig: Surfactant-Funktion und RDS, aktive Inspiration vs. passive Exspiration, O₂/CO₂-Partialdruckgradienten (60 mmHg vs. 6 mmHg), Bohr-Effekt (Rechtverschiebung bei CO₂ ↑, pH ↓), CO₂-Transport (70% HCO₃⁻) und Atemantrieb (CO₂ wichtiger als O₂).
-
-> **Merke:** CO₂-Transport: 70% Bikarbonat (Carboanhydrase, Chlorid-Shift), 23% Carbamino-Hb, 7% gelöst. Haldane-Effekt: Desoxy-Hb bindet mehr CO₂.
+> **Merke:** **Surfactant**: Typ-II-Pneumozyten, DPPC (~90 % Phospholipide) → Oberflächenspannung ↓ → Alveolarkollaps (Atelektase) verhindert. **RDS** bei Frühgeborenen: Surfactant-Mangel → Betamethason antenatal (Prophylaxe).
 
 ---
 
-## Klinischer Bezug
+## Atemmechanik, Gasaustausch und Atemregulation
 
-COPD betrifft >250 Millionen Menschen weltweit (Hauptursache: Rauchen, auch Luftverschmutzung). Exazerbationen (AECOPD) durch Infekte → Systemglukokortikoide, Antibiotika, kontrollierte O₂-Gabe (Ziel-SpO₂ ~88–92%). Asthma bronchiale: 300 Millionen Betroffene; allergisches Asthma häufigste Form (IgE-vermittelt). Biologika (Omalizumab [Anti-IgE], Mepolizumab [Anti-IL-5], Dupilumab [Anti-IL-4/IL-13]) bei schwerem Asthma. Lungenkarzinom: häufigste krebsbedingte Todesursache weltweit. NSCLC (85%): Adenokarzinom (häufigste, EGFR-/ALK-Mutationen, targeted therapy), Plattenepithelkarzinom; SCLC (15%, paraneoplastisch, Cushing/SIADH). ARDS: diffuser alveolärer Schaden (Sepsis, Trauma, COVID-19) → lungenprotektive Beatmung (6 mL/kg, PEEP) reduziert Mortalität. Pulmonale Embolie: Thrombus aus tiefen Beinvenen → Pulmonalarterien → Atemnot, Tachykardie, pleuritischer Schmerz. Therapie: Antikoagulation (Heparin/DOAK), bei Massembolie Lyse/Embolektomie.
+**Atemmechanik:**
+- **Inspiration** (aktiv): Diaphragma + Mm. intercostales externi kontrahieren → Thoraxvolumen ↑ → intrapulmonaler Druck ↓ (~−1 mmHg) → Luft strömt ein. Intrapleuraler Druck immer **negativ** (~−5 mmHg Ruhe)
+- **Exspiration in Ruhe** (passiv): Muskelentspannung → elastische Rückstellung → Luft strömt aus. Nur bei forcierter Exspiration aktiv (Bauchmuskeln, Mm. intercostales interni)
+
+**Gasaustausch durch Diffusion:**
+- **O₂**: Alveolär ~100 mmHg → venöses Blut ~40 mmHg → **Gradient 60 mmHg** → O₂ diffundiert ins Blut
+- **CO₂**: Venöses Blut ~46 mmHg → Alveolen ~40 mmHg → **Gradient 6 mmHg** (klein!) → aber CO₂ diffundiert ~20× schneller (höhere Löslichkeit)
+
+**CO₂-Transport** im Blut:
+- **70 % Bikarbonat** (HCO₃⁻): Carboanhydrase in Erythrozyten: CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻. Chlorid-Shift (Cl⁻ rein, HCO₃⁻ raus). **Haldane-Effekt**: Desoxy-Hb bindet mehr CO₂
+- **23 % Carbaminohämoglobin**: CO₂ an Globin-Aminogruppen
+- **7 % gelöst** im Plasma (bestimmt pCO₂)
+
+**Atemregulation:** Zentrale Chemorezeptoren (Medulla oblongata) reagieren auf CO₂/pH → **Hauptantrieb**. Periphere Chemorezeptoren (Karotiskörper) reagieren auf O₂ (erst bei pO₂ <60 mmHg relevant). **COPD-Vorsicht**: Bei chronischer CO₂-Retention → Anpassung der CO₂-Sensitivität → O₂ wird Hauptantrieb → unkontrollierte O₂-Gabe kann Apnoe auslösen!
+
+> **Merke:** **CO₂-Transport**: 70 % Bikarbonat (Carboanhydrase, Chlorid-Shift), 23 % Carbamino-Hb, 7 % gelöst. **Haldane-Effekt**: Desoxy-Hb bindet mehr CO₂. **Atemantrieb**: primär CO₂/pH (zentral), O₂ erst bei pO₂ <60 mmHg (peripher).
 
 ---
 
@@ -2538,25 +2585,44 @@ Was wir essen, muss auf Molekülebene zerlegt werden, damit es ins Blut aufgenom
 
 ---
 
-## Kerninhalt
+## Magen — Sekretion und Regulation
 
-Der Magen produziert HCl (Belegzellen), Pepsinogen (Hauptzellen) und Mukus (Nebenzellen); HCl-Regulation über Gastrin (↑), Somatostatin (↓) und PPI. Pankreas: Trypsinogen → Trypsin (Enterokinase), Amylase, Lipase, Bikarbonat (Sekretin-Stimulus). Dünndarm-Resorption: Glukose via SGLT1, Fette via Mizellen → Chylomikronen → Lymphe. Leber: Bilirubin-Konjugation (UGT1A1), Harnstoffzyklus, Gerinnungsfaktoren.
+Die Magenschleimhaut enthält fünf spezialisierte Zelltypen mit klar definierten Aufgaben:
 
-> **Merke:** Magenzellen: Belegzellen = HCl + IF, Hauptzellen = Pepsinogen, Nebenzellen = Mukus, G-Zellen = Gastrin (↑HCl), D-Zellen = Somatostatin (↓HCl).
+| Zelltyp | Sekret | Stimulus |
+|---|---|---|
+| **Belegzellen** (Parietalzellen) | HCl + **Intrinsic Factor** (IF) | Gastrin (G-Zellen), ACh (N. vagus), Histamin |
+| **Hauptzellen** | **Pepsinogen** (→ Pepsin bei pH <3) | ACh, Gastrin |
+| **Nebenzellen** (Schleimzellen) | Mukus (Schutzschicht) | Prostaglandine |
+| **G-Zellen** (Antrum) | **Gastrin** | Peptide, Dehnung, ACh |
+| **D-Zellen** | **Somatostatin** (hemmt Gastrin + HCl) | niedriger pH, Fette |
+
+**HCl-Synthese** (Belegzellen): H⁺/K⁺-ATPase (Protonenpumpe) pumpt H⁺ gegen Gradient. Carboanhydrase liefert H⁺ aus CO₂ + H₂O. **Protonenpumpenhemmer** (PPI, z.B. Omeprazol) blockieren die H⁺/K⁺-ATPase irreversibel → HCl ↓ → Ulkustherapie.
+
+**Aktivierungskaskade im Pankreas:** Trypsinogen wird im Dünndarm durch **Enterokinase** (= Enteropeptidase, auf Bürstensaum-Enterozyten) → Trypsin aktiviert. Trypsin aktiviert dann alle anderen Pankreasenzyme (Chymotrypsinogen, Proelastase, Phospholipase A₂). Gefährlich: Trypsin-Aktivierung schon im Pankreas → **akute Pankreatitis** (Autodigestion).
+
+> **Merke:** **Magenzellen**: Belegzellen = HCl + IF, Hauptzellen = Pepsinogen, Nebenzellen = Mukus, G-Zellen = Gastrin (↑HCl), D-Zellen = Somatostatin (↓HCl). **Trypsinogen → Trypsin** via Enterokinase (Dünndarm) → aktiviert alle anderen Pankreas-Proenzyme.
 
 ---
 
-## Prüfungsfokus
+## Dünndarm-Resorption und Leber-Funktionen
 
-Für den MedAT besonders wichtig: Magenzellen und ihre Sekrete, Trypsinogen-Aktivierungskaskade (Enterokinase), SGLT1 (Glukose), Fett-Resorptionsweg (Mizellen → Chylomikronen → Lymphe, nicht Pfortader), Vitamin B₁₂ (IF, Ileum), Bilirubin-Stoffwechsel und Ikterus-Typen (prähepatisch/hepatisch/posthepatisch), Harnstoffzyklus und Gerinnungsfaktoren der Leber.
+**Resorptionsfläche Dünndarm** (~200 m²): Kerckring-Falten × Zotten × Mikrovilli (Bürstensaum). Spezialisierte Transporter:
 
-> **Merke:** Bilirubin-Weg: Hb (Milz) → Bilirubin unkonjugiert (albumin-gebunden) → Leber (Glukuronidierung) → konjugiert (wasserlöslich) → Galle → Darm → Sterkobilin (Stuhl braun) + Urobilin (Urin gelb).
+| Nährstoff | Transporter | Besonderheit |
+|---|---|---|
+| Glukose/Galaktose | **SGLT1** (apikal, Na⁺-gekoppelt) | GLUT2 basolateral → Pfortader |
+| Fruktose | GLUT5 (apikal) | passiv |
+| Aminosäuren | Na⁺-gekoppelte AA-Transporter | Pfortader |
+| **Fette** | Mizellen → Enterozyt → **Chylomikronen** | **Lymphe** (Ductus thoracicus) → **nicht Pfortader**! |
+| Vitamin B₁₂ | Cubam-Rezeptor (**IF notwendig**) | Nur Ileum (terminales) |
 
----
+**Bilirubin-Stoffwechsel** (wichtig für Ikterus-Typen):
+- Hämoglobin → Häm → **Biliverdin → Bilirubin unkonjugiert** (lipophil, albumin-gebunden, toxisch)
+- Leber: UDP-Glukuronosyltransferase (**UGT1A1**) konjugiert → **Bilirubin-Diglukuronid** (wasserlöslich)
+- → Galle → Darm → bakteriell → **Sterkobilin** (Stuhl braun) + Urobilinogen → Urin: **Urobilin** (gelb)
 
-## Klinischer Bezug
-
-Morbus Crohn und Colitis ulcerosa: chronische Erkrankungen mit erheblicher Morbidität. Morbus Crohn: Anti-TNF-α (Infliximab, Adalimumab) und Vedolizumab (Anti-Integrin) effektiv bei refraktären Fällen. Colitis ulcerosa: erhöhtes Kolorektalkarzinom-Risiko (Surveillanz-Koloskopie). Leberzirrhose: Endzustand vieler Lebererkrankungen (alkoholisch, viral [Hepatitis B/C], NASH). Komplikationen: Portale Hypertension (Ösophagusvarizen → Blutungsrisiko), Aszites, hepatische Enzephalopathie, hepatozelluläres Karzinom. MELD-Score für Transplantationsindikation. Pankreatitis: Schwere akute Form (nekrotisierende) → Intensivstation (Sepsis, MOV). Helicobacter pylori: Ulcus-Ursache (90% Ulcus duodeni, 70% Ulcus ventriculi); Eradikation mit Triple-Therapie (PPI + Clarithromycin + Amoxicillin). Kolorektales Karzinom: zweithäufigste krebsbedingte Todesursache; Prävention durch Vorsorge-Koloskopie ab 50 J.
+> **Merke:** **Bilirubin-Weg**: Hb → unkonjugiertes Bilirubin (Milz, albumin-gebunden) → Leber (UGT1A1, Glukuronidierung) → konjugiert (wasserlöslich) → Galle → Sterkobilin (Stuhl braun) + Urobilin (Urin gelb). **Fett-Transport**: Mizellen → Chylomikronen → **Lymphe** (nicht Pfortader!).
 
 ---
 
@@ -2718,25 +2784,42 @@ Die Niere ist weit mehr als ein Abfallfilter: Sie reguliert Blutvolumen, Blutdru
 
 ---
 
-## Kerninhalt
+## Nephron-Segmente und Rückresorption
 
-Nephron-Segmente: Glomerulus (Filtration, GFR ~120 mL/min), proximaler Tubulus (65%, SGLT2 [Glukose 100%], Na⁺, H₂O), Henle-Schleife (Gegenstromprinzip: absteigend H₂O raus, aufsteigend NaCl raus), distaler Tubulus/Sammelrohr (Aldosteron [ENaC, Na⁺/K⁺], ADH [Aquaporin-2, H₂O]). RAAS: Renin → Angiotensin II → Vasokonstriktion + Aldosteron ↑ + ADH ↑ → Blutdruck ↑.
+Das Nephron filtert täglich ~180 L Primärharn (GFR ~120 mL/min). Über 99 % werden rückresorbiert — nur ~1–2 L Endurin. Jedes Segment hat spezifische Transporter:
 
-> **Merke:** Nephron-Resorption: proximal 65% (alles), Henle 20% (NaCl), distal 10% (Aldosteron-abhängig), Sammelrohr 4% (ADH-abhängig). Gesamt: 99% → 1 L Urin.
+| Segment | Resorption | Wichtige Transporter |
+|---|---|---|
+| **Glomerulus** | Filtration (GFR ~120 mL/min) | Moleküle <70 kDa passieren |
+| **Proximaler Tubulus** | **65 %** (Na⁺, H₂O, HCO₃⁻, Glukose 100%) | **SGLT2** (Glukose + Na⁺), NHE3 (Na⁺/H⁺) |
+| **Henle-Schleife, absteigend** | H₂O raus (Aquaporin-1) | Für NaCl impermeabel |
+| **Henle-Schleife, aufsteigend** | **NaCl raus** (NKCC2), **kein H₂O** | Baut osmotischen Gradienten auf |
+| **Distaler Tubulus** | ~10 %, **Aldosteron-abhängig** | ENaC (Na⁺), ROMK (K⁺ raus) |
+| **Sammelrohr** | ~4 %, **ADH-abhängig** | **Aquaporin-2** (ADH-reguliert) |
+
+**Gegenstromprinzip (Henle-Schleife):** Die absteigende Schleife konzentriert den Tubulusharn (H₂O raus → NaCl konzentrierter). Die aufsteigende Schleife pumpt NaCl raus (wasserdicht) → schafft osmotischen Gradienten im Mark (bis ~1200 mOsm/L). Dieser Gradient wird dann von ADH genutzt: ADH → Aquaporin-2-Insertion im Sammelrohr → H₂O folgt dem Gradienten → konzentrierter Urin.
+
+**Glukose-Nierenschwelle:** Bis ~180 mg/dL Blutglukose resorbiert SGLT2 alles. Darüber: Glukosurie. **SGLT2-Hemmer** (Gliflozine) blockieren SGLT2 → Glukose im Urin → Blutzucker ↓ (Diabetes Typ 2 Therapie).
+
+> **Merke:** Nephron-Resorption: proximal **65 %** (alles, SGLT2), Henle **20 %** (NaCl), distal **10 %** (Aldosteron-ENaC), Sammelrohr **4 %** (ADH-AQP2). Gesamt: **99 %** zurück → ~1–2 L Urin.
 
 ---
 
-## Prüfungsfokus
+## ADH, Aldosteron und RAAS-Regulation
 
-Für den MedAT besonders wichtig: GFR-Zahl (~120 mL/min, ~180 L/Tag), SGLT2-Funktion (Glukose) und Nierenschwelle (~180 mg/dL), ADH → Aquaporin-2-Insertion (Sammelrohr), RAAS-Kaskade und Therapieangriffspunkte (ACE-Hemmer, AT₁-Blocker, Spironolacton), Diabetes insipidus (ADH-Mangel → Polyurie, Desmopressin-Therapie).
+**ADH (Vasopressin):** Synthetisiert in Hypothalamus, gespeichert in Neurohypophyse. Reiz: Osmolarität ↑ (>285 mOsm/L) oder Volumen ↓. Wirkung: V₂-Rezeptor (Sammelrohr) → cAMP → **Aquaporin-2** in apikale Membran eingebaut → H₂O-Resorption ↑ → verdünnter Urin → konzentrierter Urin (bis 1200 mOsm/L). **Diabetes insipidus**: ADH-Mangel (centralis) oder -Resistenz (renalis) → bis 15 L/Tag hypotoner Urin. Therapie centralis: Desmopressin (ADH-Analogon).
 
-> **Merke:** RAAS: Renin (Niere, bei Blutdruck ↓) → Angiotensin I → ACE (Lunge) → Angiotensin II → Vasokonstriktion + Aldosteron (Na⁺/H₂O↑) + ADH ↑ → Blutdruck ↑.
+**Aldosteron** (Zona glomerulosa, NNR): Reiz: Angiotensin II, Hyperkaliämie. Wirkung: **ENaC** (Na⁺-Einstrom) + **ROMK** (K⁺-Ausschüttung) + Na⁺/K⁺-ATPase ↑ → Na⁺/H₂O-Retention, K⁺ und H⁺ -Ausscheidung.
 
----
+**RAAS-Kaskade:**
+1. Blutdruck ↓ → juxtaglomeruläre Zellen → **Renin** ↑
+2. Renin spaltet Angiotensinogen → **Angiotensin I**
+3. ACE (Angiotensin-Converting Enzyme, **Lunge** + Endothel) → **Angiotensin II**
+4. Ang. II → a) direkte **Vasokonstriktion** (AT₁-Rezeptor) b) **Aldosteron**-Freisetzung (NNR) c) **ADH**-Freisetzung d) Durst
 
-## Klinischer Bezug
+**Therapieangriffspunkte:** ACE-Hemmer (Bradykinin ↑ → Husten-NW!) | AT₁-Blocker (kein Bradykinin) | Spironolacton (Aldosteron-Antagonist) | Aliskiren (Renin-Inhibitor)
 
-Chronische Nierenerkrankung (CKD): betrifft ~10% der Weltbevölkerung; häufigste Ursachen: diabetische Nephropathie (Kimmelstiel-Wilson-Läsion) und hypertensive Nephropathie. Frühdiagnostik durch Urin-Albumin-Kreatinin-Quotient (UACR) und eGFR entscheidend. Dialyse (Hämodialyse 3×/Woche, Peritonealdialyse, CRRT auf Intensivstation) bei terminaler Niereninsuffizienz. Nierentransplantation = beste Therapie (5-Jahres-Überleben ~80%). Akutes Nierenversagen (AKI) auf Intensivstation: häufig durch Sepsis und Nephrotoxine (Kontrastmittel → Kontrastmittel-NW; Aminoglykoside → proximale Tubulus-Schädigung). Urolithiasis: Kalziumoxalat (häufigste, 75%), Harnsäure (bei Gicht, Hyperurikämie), Struvit (Harnwegsinfekte). Kolikanfall: lösbarend (NSAIDs, α-Blocker zur Steinpassage).
+> **Merke:** **RAAS**: Renin (Niere, Druck ↓) → Ang. I → ACE (Lunge) → **Ang. II** → Vasokonstriktion + Aldosteron (Na⁺/H₂O ↑) + ADH ↑ → Blutdruck ↑. **ACE-Hemmer**: Bradykinin ↑ → Husten (häufigste NW).
 
 ---
 
@@ -2898,25 +2981,48 @@ Das Skelett ist nicht statisch — es wird ständig umgebaut. 206 Knochen stütz
 
 ---
 
-## Kerninhalt
+## Knochen — Umbau durch Osteoblasten und Osteoklasten
 
-Knochenzellen: Osteoblasten (Kollagen I-Synthese, Mineralisierung, RANKL-Produktion) und Osteoklasten (mehrkernig, H⁺ + Proteasen, RANK-Aktivierung durch RANKL). Knorpeltypen: hyalin (Gelenke, Kollagen II), elastisch (Ohr, Elastin), Faser (Bandscheibe, Kollagen I). Gelenke: Diarthrose (Gelenkspalt, Synovia), Kugelgelenk (3 Achsen), Scharniergelenk (1 Achse). Ca²⁺-Regulation: PTH (Osteoklasten ↑ → Ca²⁺ ↑), Vitamin D (Resorption ↑), Calcitonin (Osteoklasten ↓).
+Das Skelett ist kein statisches Gerüst — ~10 % der Knochenmasse werden jährlich umgebaut. Drei Zelltypen steuern diesen Prozess:
 
-> **Merke:** RANKL/OPG: Osteoblasten produzieren RANKL (aktiviert Osteoklasten via RANK → Abbau) und OPG (Decoy-Rezeptor, hemmt RANKL → schützt Knochen). Denosumab = monoklonaler Anti-RANKL-Antikörper.
+| Zelltyp | Herkunft | Funktion | Marker |
+|---|---|---|---|
+| **Osteoblasten** | Mesenchym (Stroma) | Osteoid (Kollagen I) aufbauen, mineralisieren, RANKL + OPG produzieren | ALP ↑, Osteocalcin |
+| **Osteozyten** | eingemauerter Osteoblast | Mechanorezeption, Signalgebung über Canaliculi | — |
+| **Osteoklasten** | hämatopoetisch (Monozyten/Makrophagen) | Knochen resorbieren (HCl pH ~4,5 + Kathepsin K, Ruffled Border) | TRAP ↑ |
+
+**RANKL/OPG-System** (zentraler Regulationsschalter):
+- Osteoblasten sezernieren **RANKL** → bindet RANK auf Osteoklasten → Resorption ↑
+- Osteoblasten sezernieren auch **OPG** (Osteoprotegerin, Decoy-Rezeptor) → fängt RANKL ab → Resorption ↓
+- **Östrogen** stimuliert OPG → Knochen geschützt. Östrogenmangel (Menopause) → OPG ↓, RANKL dominiert → **Osteoporose**
+
+**Therapeutisch:** Bisphosphonate (hemmen Osteoklastenrekrutierung/Apoptose), Denosumab (monoklonaler Anti-RANKL-Antikörper = OPG-Mimikry).
+
+> **Merke:** **OsteoBlast** = Baut auf (ALP ↑, mesenchymal). **OsteoKlast** = Klaut (TRAP ↑, hämatopoetisch). **RANKL** aktiviert Osteoklasten. **OPG** hemmt RANKL. **Östrogen ↓** → OPG ↓ → Knochenabbau ↑ → **Osteoporose**.
 
 ---
 
-## Prüfungsfokus
+## Knorpeltypen, Gelenke und Kalziumregulation
 
-Für den MedAT besonders wichtig: Osteoblasten vs. Osteoklasten (Aufgaben, Marker: ALP = Aufbau, TRAP = Abbau), RANKL/OPG-System, Knorpeltypen und ihre Kollagen-Typen, Gelenktypen und Achsenzahl, Osteoporose-Pathophysiologie und Therapie (Bisphosphonate, Denosumab), PTH/Calcitonin/Vitamin D bei Ca²⁺-Regulation.
+**Knorpeltypen** (alle avaskulär → schlechte Heilung!):
 
-> **Merke:** Osteoporose: Östrogen ↓ (Menopause) → RANKL ↑ → Osteoklasten ↑ → Knochenabbau > Aufbau → Sinterungsfrakturen (Wirbelkörper), Schenkelhalsfraktur. DXA-Messung (T-Score ≤-2,5). Bisphosphonate hemmen Osteoklasten-Apoptose.
+| Typ | Zusammensetzung | Eigenschaften | Vorkommen |
+|---|---|---|---|
+| **Hyalin** | Kollagen II + Aggrecan | Glatt, druckresistent | Gelenkflächen, Trachealringe, fetales Skelett |
+| **Faser** | Kollagen I dominiert | Zugfest + druckresistent | Bandscheiben (Anulus fibrosus), Menisci, Symphysis pubica |
+| **Elastisch** | Kollagen II + Elastinfasern | Biegsam, kehrt zurück | Ohrmuschel, Epiglottis |
 
----
+**Gelenktypen (Diarthrosen):**
+- **Kugelgelenk** (3 Achsen, 6 Freiheitsgrade): Schulter, Hüfte
+- **Scharniergelenk** (1 Achse): Ellenbogen, Knie (modifiziert), Fingergelenke
+- Synovialmembran produziert Gelenkflüssigkeit (Hyaluronsäure, Schmierfunktion)
 
-## Klinischer Bezug
+**Ca²⁺-Regulation** (Normalwert: 2,2–2,6 mmol/L):
+- **PTH** (Nebenschilddrüse, bei Ca²⁺ ↓): Osteoklasten ↑ → Ca²⁺ ↑; Vitamin D-Aktivierung (25-OH → 1,25-OH); Niere: Ca²⁺-Rückresorption ↑, Phosphat-Ausscheidung ↑
+- **Vitamin D** (1,25-OH, Calcitriol): Darm-Ca²⁺-Absorption ↑ (Calbindin), Niere-Ca²⁺-Retention ↑
+- **Calcitonin** (C-Zellen der Schilddrüse, bei Ca²⁺ ↑): Osteoklasten ↓ → Ca²⁺ ↓ (physiologisch weniger relevant)
 
-Osteoporose ist ein bedeutendes Public-Health-Problem: jährlich >200.000 osteoporotische Frakturen in Deutschland. Sinterungsfrakturen der Wirbelkörper (Rückenschmerzen, Größenabnahme, Kyphose) und Oberschenkelhalsfrakturen (Sterblichkeit im ersten Jahr ~20%) sind häufigste Folgen. DXA-Screening ab 65 Jahren (Frauen) empfohlen. Bisphosphonate (Alendronat, Zoledronat) sind Erstlinientherapie; Denosumab (subkutan halbjährlich) als Alternative. Rheumatoide Arthritis betrifft ~1% der Bevölkerung (Frauen 3× häufiger); frühzeitige Diagnose (Anti-CCP, Imaging) und Therapiebeginn (MTX ± Biologika) verhindern Gelenkzerstörung. Gicht (Hyperurikämie, Harnsäurekristalle): akuter Gichtanfall → Colchicin + NSAR + Kortison; Dauertherapie: Allopurinol (XO-Inhibitor, Harnsäure ↓). Bandscheibenvorfall: häufigste Ursache für Operationen an der Wirbelsäule; bei Kaudasyndrom (Blasen-/Mastdarm-Störung) → sofortiger Notfalleingriff.
+> **Merke:** **Knorpel avaskulär** → schlechte Heilung. Hyalin (Gelenk, Kollagen II) vs. Faser (Bandscheibe, Kollagen I) vs. Elastisch (Ohr, Elastin). **PTH** ↑ Ca²⁺ (Osteoklasten ↑, Vitamin D ↑, Niere ↑). **Calcitonin** ↓ Ca²⁺.
 
 ---
 
@@ -3080,25 +3186,52 @@ Fortpflanzung erfordert Gameten (Spermien + Eizellen), deren präzise hormonelle
 
 ---
 
-## Kerninhalt
+## Spermatogenese und Oogenese — Gametogenese im Vergleich
 
-Spermatogenese: Spermatogonien (2n) → Meiose I/II → 4 Spermien (n), ~74 Tage. Sertoli-Zellen: FSH-abhängig, Inhibin, Blut-Hoden-Schranke. Leydig-Zellen: LH → Testosteron. Oogenese: Arrest Prophase I (bis Pubertät) → Meiose I bei Ovulation → sekundäre Oozyte (Arrest Metaphase II) → Meiose II nur bei Befruchtung → 1 Eizelle + 3 Polkörperchen. Menstruationszyklus: FSH (Follikelphase) → LH-Peak (Ovulation Tag 14) → Corpus luteum/Progesteron (Lutealphase).
+Beide Keimzellentwicklungen nutzen die Meiose, unterscheiden sich aber fundamental in Ergebnis und Zeitplanung:
 
-> **Merke:** Oogenese-Arrests: primäre Oozyte = Prophase I (seit Embryonalzeit). sekundäre Oozyte = Metaphase II (seit Ovulation). Meiose II wird nur bei Befruchtung abgeschlossen. Ergebnis: 1 Eizelle + 3 Polkörperchen (degenerieren).
+| Merkmal | Spermatogenese | Oogenese |
+|---|---|---|
+| **Ergebnis** | **4 funktionsfähige Spermien** | **1 Eizelle + 3 Polkörperchen** |
+| **Beginn** | Ab Pubertät, kontinuierlich | Pränatal (7. Monat) → Meiose I gestartet |
+| **Dauer** | ~74 Tage | Monate bis Jahrzehnte |
+| **Ort** | Tubuli seminiferi | Ovar |
+
+**Spermatogenese** (Tubuli seminiferi):
+- Spermatogonium (2n) → Mitose → Primäre Spermatozyte (2n) → **Meiose I** → 2× Sekundäre Spermatozyten (n) → **Meiose II** → 4× Spermatiden (n) → Spermiogenese → **4 reife Spermien**
+- **Sertoli-Zellen** (in Tubuli, FSH-abhängig): Ernährung, Blut-Hoden-Schranke, Inhibin (→ FSH ↓), ABP (hält Testosteron-Konzentration lokal hoch)
+- **Leydig-Zellen** (Interstitium, LH-abhängig): Testosteron-Synthese
+
+**Oogenese** (mit zwei Meiose-Arrests!):
+1. **Arrest I** (Prophase I): Primäre Oozyte liegt pränatal still → bleibt so bis Pubertät (maximal ~50 Jahre!)
+2. LH-Peak → **Meiose I abgeschlossen** → sekundäre Oozyte (n) + 1. Polkörperchen
+3. **Arrest II** (Metaphase II): sekundäre Oozyte wartet auf Befruchtung
+4. Spermium penetriert → **Meiose II abgeschlossen** → reife Eizelle (n) + 2. Polkörperchen (+ 1. teilt sich → 3 Polkörperchen gesamt)
+
+> **Merke:** **Oogenese-Arrests**: primäre Oozyte = **Prophase I** (seit Embryonalzeit). sekundäre Oozyte = **Metaphase II** (seit Ovulation). Meiose II wird nur bei Befruchtung abgeschlossen. **Ergebnis: 1 Eizelle + 3 Polkörperchen**. **Sertoli** (FSH, Inhibin) vs. **Leydig** (LH, Testosteron).
 
 ---
 
-## Prüfungsfokus
+## Menstruationszyklus und Hormonregulation
 
-Für den MedAT besonders wichtig: Sertoli (FSH, Inhibin, ABP) vs. Leydig (LH, Testosteron), 4 Spermien aus 1 Spermatogonium vs. 1 Eizelle aus 1 Oozyte, Meiose-II-Arrest der sekundären Oozyte bis zur Befruchtung, LH-Peak-Mechanismus (positive Rückkopplung durch hohes Östrogen), hCG-Funktion (Corpus luteum erhalten → Schwangerschaftstest) und Plazenta-Permeabilität (IgG ja, Heparin/Insulin nein).
+Der 28-tägige Menstruationszyklus ist ein Musterbeispiel für negative und positive Rückkopplung:
 
-> **Merke:** Menstruationszyklus: FSH → Östrogen ↑ (Follikelphase) → Östrogen ↑↑ → positive Rückkopplung → LH-Peak (Tag 14) → Ovulation → Corpus luteum → Progesteron ↑ (Lutealphase). Keine Befruchtung → Corpus luteum degeneriert → Menstruation.
+**Follikelphase (Tag 1–14):**
+- FSH steigt → **Follikelreifung** → Granulosazellen produzieren **Östrogen ↑**
+- Östrogen (niedrig/mittel): negative Rückkopplung → FSH/LH moderat ↓ (Primärfollikel überleben nicht alle)
+- Östrogen steigt weiter → **dominanter Follikel** bildet sich (produziert am meisten Östrogen)
 
----
+**LH-Peak (Tag ~14) — positiver Feedback-Mechanismus:**
+- Östrogen > ~200 pg/mL über >2 Tage → **positive Rückkopplung** auf Hypophyse → GnRH ↑ → **massiver LH-Anstieg**
+- LH-Peak → Ovulation (24–36 h später)
 
-## Klinischer Bezug
+**Lutealphase (Tag 15–28):**
+- Follikelreste → **Corpus luteum** → **Progesteron** (+ Östrogen) ↑
+- Progesteron: Endometrium vorbereiten (sekretorisch), Cervixschleim eindicken, Basaltemperatur ↑ ~0,5 °C
+- Keine Befruchtung → Corpus luteum degeneriert (Tag ~25) → Hormonabfall → **Menstruation**
+- Befruchtung: Trophoblast → **hCG** → erhält Corpus luteum → Progesteron hoch → Schwangerschaft
 
-PCOS (Polyzystisches Ovarsyndrom) betrifft 5–15% der Frauen im gebärfähigen Alter und ist häufigste Ursache für ovulatorische Infertilität. Diagnose nach Rotterdam-Kriterien (2 von 3: Anovulation, Androgenisierung, polyzystische Ovarien). Metabolisches Syndrom und Typ-2-Diabetes häufig assoziiert. Endometriose: chronische, oft spät diagnostizierte Erkrankung (Diagnose-Verzögerung 7–10 Jahre!); betrifft ~10% der Frauen; Endometriome (Schokoladenzysten) können Ovarialreserve schädigen. Hormonelle Kontrazeption: OCP erhöht geringfügig das VTE-Risiko (besonders dritte/vierte Generation Gestagene); absolute Kontraindikationen: Migräne mit Aura, VTE-Vorgeschichte, schwere Hypertonie. Schwangerschaft: hCG-Nachweis im Schwangerschaftstest ab Tag 10 nach Befruchtung möglich; hCG-Anstieg verdoppelt sich alle 48 h in früher SS. Eklampsie/Präeklampsie: Hypertonie + Proteinurie in SS → magnesiumsulfat + frühzeitige Entbindung. Mammakarzinom: häufigstes Karzinom der Frau (~70% ER+, Hormonrezeptor-positiv → Tamoxifen oder Aromatasehemmer als Therapie).
+> **Merke:** **Menstruationszyklus**: FSH → Östrogen ↑ (Follikelphase) → Östrogen ↑↑ → **positive Rückkopplung → LH-Peak** (Tag 14) → Ovulation → Corpus luteum → Progesteron ↑ (Lutealphase). Keine Befruchtung → Corpus luteum degeneriert → Menstruation. **hCG** (Trophoblast ab Tag 6–7): erhält Corpus luteum → Basis des Schwangerschaftstests.
 
 ---
 
