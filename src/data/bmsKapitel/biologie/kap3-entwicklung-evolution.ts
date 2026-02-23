@@ -875,6 +875,14 @@ Das zentrale Paradoxon der Lebensentstehung: Proteine katalysieren die Synthese 
 
 ---
 
+## Protobionten — Erste Zell-ähnliche Strukturen
+
+Zwischen der Bildung organischer Moleküle und der ersten echten Zelle liegt ein entscheidender Schritt: die Entstehung von **Protobionten**. Protobionten sind abiotische, membranumhüllte Strukturen, die einfache Stoffwechselreaktionen durchführen können, ohne jedoch alle Kriterien des Lebens zu erfüllen. Experimentell wurden verschiedene Modelle realisiert: **Koazervate** (Oparin) — Tröpfchen aus Polymeren, die selektiv Substanzen aufnehmen und enzymatische Reaktionen katalysieren können; **Mikrosphären** (Fox) — proteinhaltige Vesikel, die durch Erhitzen und anschließendes Abkühlen von Aminosäuregemischen entstehen und eine primitive Membran-ähnliche Grenzschicht bilden. Die Bildung von **Lipid-Doppelschichten (Liposomen)** unter präbiotischen Bedingungen zeigt, dass die Selbstorganisation amphiphiler Moleküle zu Membranen ein spontaner physikochemischer Prozess ist. Der Übergang vom Protobionten zur echten Zelle erforderte die Integration von Replikation (RNA), Katalyse und einer selektiv permeablen Membran — ein Prozess, der vermutlich Hunderte Millionen Jahre dauerte.
+
+> **Merke:** Protobionten: erste membranumhüllte Strukturen mit primitivem Stoffwechsel, aber ohne vollständige Replikation. Koazervate (Oparin), Mikrosphären (Fox) und Liposomen als experimentelle Modelle.
+
+---
+
 ## Endosymbiontentheorie — Belege und Bedeutung
 
 Lynn Margulis' Theorie, die sie 1967 vorlegte und die zunächst stark kritisiert wurde, gilt heute als gesichert. Die Belege sind vielfältig und unabhängig voneinander: Mitochondrien haben ein eigenes ringförmiges Genom mit bakteriellen Merkmalen (keine Histone, kein Splicing). Ihre Ribosomen sedimentieren wie bakterielle (70S) und werden durch Antibiotika gehemmt, die auch Bakterien hemmen (z. B. Chloramphenicol, Tetracyclin). Phylogenetische Analysen zeigen, dass die mitochondriale 16S-rRNA am engsten mit Alphaproteobakterien (speziell Rickettsiales) verwandt ist. Für Chloroplasten gilt analoge Verwandtschaft mit Cyanobakterien. Die Theorie erklärt, warum eukaryotische Zellen so viel komplexer sind als prokaryotische — sie sind im Wesentlichen Chimären.
@@ -909,14 +917,6 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
 - Lynn Margulis: Endosymbiontentheorie erstmals 1967 publiziert
 - Mitochondrien verwandt mit Alphaproteobakterien (Rickettsiales)
 - Chloroplasten verwandt mit Cyanobakterien
-
----
-
-## Protobionten — Erste Zell-ähnliche Strukturen
-
-Zwischen der Bildung organischer Moleküle und der ersten echten Zelle liegt ein entscheidender Schritt: die Entstehung von Protobionten. Protobionten sind abiotische, membranumhüllte Strukturen, die einfache Stoffwechselreaktionen durchführen können, ohne jedoch alle Kriterien des Lebens zu erfüllen. Experimentell wurden verschiedene Modelle realisiert: Koazervate (Oparin) — Tröpfchen aus Polymeren, die selektiv Substanzen aufnehmen und enzymatische Reaktionen katalysieren können; Mikrosphären (Fox) — proteinhaltige Vesikel, die durch Erhitzen und anschließendes Abkühlen von Aminosäuregemischen entstehen und eine primitive Membran-ähnliche Grenzschicht bilden. Die Bildung von Lipid-Doppelschichten (Liposomen) unter präbiotischen Bedingungen zeigt, dass die Selbstorganisation amphiphiler Moleküle zu Membranen ein spontaner physikochemischer Prozess ist. Der Übergang vom Protobionten zur echten Zelle erforderte die Integration von Replikation (RNA), Katalyse und einer selektiv permeablen Membran — ein Prozess, der vermutlich Hunderte Millionen Jahre dauerte.
-
-> **Merke:** Protobionten: erste membranumhüllte Strukturen mit primitivem Stoffwechsel, aber ohne vollständige Replikation. Koazervate (Oparin), Mikrosphären (Fox) und Liposomen als experimentelle Modelle.
 
 ---
 
@@ -1092,6 +1092,20 @@ Homologie und Analogie werden häufig verwechselt. Der entscheidende Unterschied
 Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutationen in bestimmten Genen mit einer nahezu konstanten Rate akkumulieren. Je mehr Sequenzunterschiede zwischen zwei Arten, desto weiter sind ihre Abstammungslinien auseinander gelaufen (desto länger ist der gemeinsame Vorfahre her). Durch Kalibrierung mit datierten Fossilien können absolute Zeitpunkte berechnet werden. Beispiel: Der molekulare Vergleich von Cytochrom c zwischen Mensch und Schimpanse zeigt sehr wenige Unterschiede (beide divergierten vor ca. 6–7 Millionen Jahren). Molekulare Uhren haben Diskrepanzen zu fossilen Befunden aufgedeckt (z. B. die frühere Trennung von Wirbeltier-Klassen als bisher angenommen). Probleme: Mutationsraten sind nicht immer konstant (Generation Time Effect, unterschiedliche Selektionsdrücke).
 
 > **Merke:** Molekulare Uhr: neutrale Mutationen akkumulieren konstant → Sequenzunterschiede proportional zu Zeit seit Divergenz. Kalibrierung mit Fossilien.
+
+---
+
+## Kladistik und Stammbäume lesen
+
+Die **Kladistik** ist die moderne Methode der biologischen Systematik. Sie klassifiziert Organismen ausschließlich nach **Synapomorphien** — gemeinsamen, abgeleiteten (evoluierten) Merkmalen, die in der Linie nach dem letzten gemeinsamen Vorfahren neu entstanden sind. Im **Stammbaum (Kladogramm)**:
+- **Äste** = Evolutionslinien der abstammenden Taxa
+- **Knoten (Nodes)** = gemeinsame Vorfahren (Verzweigungspunkte)
+- **Terminale Taxa** = heute lebende (oder erforschte) Arten an den Astspitzen
+- **Wurzel** = letzter gemeinsamer Vorfahre aller dargestellten Gruppen
+
+Ein **Clade (Klade)** ist eine **monophyletische** Gruppe: ein gemeinsamer Vorfahre und **ALLE** seine Nachkommen. Die Cladistik akzeptiert nur monophyletische Gruppen. **Paraphyletische** Gruppen schließen gemeinsamen Vorfahren, aber nicht alle Nachkommen ein — sie sind in der modernen Systematik abgelehnt. Klassisches Beispiel: „Reptilien" ohne Vögel ist eine **paraphyletische** Gruppe, weil Vögel evolutionäre Nachkommen der Dinosaurier sind und daher zum selben Clade gehören. **Polyphyletische** Gruppen vereinen Organismen, die keinen gemeinsamen Vorfahren teilen — sie entstanden durch Analogie (konvergente Evolution).
+
+> **Merke:** Clade = monophyletisch = gemeinsamer Vorfahre + ALLE Nachkommen (kein Ausschluss). Paraphyletisch = nicht alle Nachkommen eingeschlossen. Kladistik verwendet nur Synapomorphien.
 
 ---
 
@@ -1272,6 +1286,23 @@ Warum sehen Giraffen lange Hälse? Warum werden Bakterien resistent gegen Antibi
 
 ---
 
+## Darwins 4 Kernprinzipien und Lamarck im Vergleich
+
+Bevor Darwin die **natürliche Selektion** formulierte, war die Theorie von **Jean-Baptiste de Lamarck** (1744–1829) einflussreich: Lamarck glaubte, dass Merkmale durch Gebrauch oder Nichtgebrauch verändert werden (*use and disuse*) und diese erworbenen Merkmale an Nachkommen weitergegeben werden. Beispiel: Giraffen strecken den Hals und vererben einen längeren Hals. Lamarcks Theorie ist **widerlegt** — erworbene Körperveränderungen werden nicht ins Erbmaterial übertragen.
+
+**Charles Darwin** formulierte 1859 in *On the Origin of Species* die natürliche Selektion auf Basis von vier Voraussetzungen:
+
+1. **Variation**: Individuen einer Population unterscheiden sich in vererbbaren Merkmalen (durch Mutation und Rekombination)
+2. **Erblichkeit**: Diese Merkmale werden an Nachkommen weitergegeben (genetische Vererbung)
+3. **Überproduktion**: Es werden mehr Individuen geboren, als die verfügbaren Ressourcen tragen können (Kampf ums Dasein — *struggle for existence*)
+4. **Differentialreproduktion**: Individuen mit vorteilhaften Merkmalen überleben und reproduzieren sich häufiger — vorteilhafte Merkmale nehmen in der Population über Generationen zu
+
+Das Ergebnis dieser vier Bedingungen ist **natürliche Selektion**: Populationen verändern sich, weil vorteilhafte Varianten mehr Nachkommen hinterlassen.
+
+> **Merke:** Lamarck = Vererbung erworbener Eigenschaften (widerlegt). Darwin = natürliche Selektion: Variation + Erblichkeit + Überproduktion + Differentialreproduktion.
+
+---
+
 ## Fitness — Was bedeutet 'Überleben des Tüchtigsten'?
 
 Der Begriff 'Survival of the Fittest' (Spencer, nicht Darwin) wird oft missverstanden. In der Evolutionsbiologie bedeutet Fitness nicht physische Stärke, sondern **reproduktive Fitness**: die Fähigkeit eines Individuums, überlebensfähige, fertile Nachkommen zu erzeugen. Ein schwächliches, aber besonders fertiles Individuum hat höhere Fitness als ein starkes, nicht-reproduktives Individuum. Inklusive Fitness (Hamilton) erweitert das Konzept: Indirekte Fitness durch Verwandtenunterstützung (Altruismus gegenüber genetisch verwandten Individuen). Beispiel: Eine Biene, die zugunsten der Königin auf eigene Reproduktion verzichtet, aber die gemeinsamen Gene durch die Königin weitervererbt (kin selection). Fitness ist immer relativ zur aktuellen Umwelt — was heute vorteilhaft ist, kann in veränderter Umwelt neutral oder nachteilig sein.
@@ -1285,6 +1316,20 @@ Der Begriff 'Survival of the Fittest' (Spencer, nicht Darwin) wird oft missverst
 Darwin kannte Mendels Arbeit nicht (obwohl sie 1866 veröffentlicht wurde). Die Neue Synthese der 1930–1950er Jahre integrierte beide: Mutationen im Mendelschen Sinne liefern die genetische Variation, auf der natürliche Selektion wirkt. R.A. Fisher (The Genetical Theory of Natural Selection, 1930) zeigte mathematisch, dass Darwinismus und Mendelsche Genetik kompatibel sind. Theodosius Dobzhansky ('Genetics and the Origin of Species', 1937) verknüpfte Populationsgenetik mit Evolutionsbiologie. Ernst Mayr definierte den biologischen Artbegriff und analysierte Artbildungsmechanismen. Das Ergebnis: Die Synthetische Evolutionstheorie definiert Evolution als Veränderung der Allelfrequenzen in einer Population — eine präzise, quantifizierbare Definition.
 
 > **Merke:** Neue Synthese = Darwin (Selektion) + Mendel (Genetik) + Populationsgenetik. Evolution = Veränderung der Allelfrequenzen in Populationen über Zeit.
+
+---
+
+## Die drei Selektionsarten
+
+Natürliche Selektion kann auf Merkmale einer Population auf drei verschiedene Weisen wirken:
+
+**Stabilisierende Selektion**: Der Mittelwert des Merkmals wird bevorzugt, Extreme werden benachteiligt. Die Varianz nimmt ab, der Mittelwert bleibt konstant. Beispiel: **Geburtsgewicht** beim Menschen — zu leichte Babys haben unreife Organe, zu schwere Babys verursachen Geburtskomplikationen; Babys mit mittlerem Gewicht überleben am besten.
+
+**Gerichtete Selektion**: Ein Extrem des Merkmalsspektrums wird bevorzugt; der Mittelwert verschiebt sich schrittweise in eine Richtung. Beispiel: **Antibiotikaresistenz** — Bakterien mit Resistenzgen überleben den Antibiotika-Einsatz und vermehren sich; der Anteil resistenter Stämme steigt von Generation zu Generation (MRSA).
+
+**Disruptive Selektion**: Beide Extreme werden bevorzugt, der Mittelwert wird benachteiligt. Die Merkmalsverteilung spaltet sich auf. Beispiel: Schnabelgröße bei Vögeln mit zwei verschiedenen Nahrungsquellen — sehr große Schnäbel (harte Samen) und sehr kleine Schnäbel (Insekten) sind vorteilhaft, mittlere nicht. Disruptive Selektion kann zur **Artaufspaltung** führen.
+
+> **Merke:** Stabilisierend = Mittelwert bleibt (Varianz ↓). Gerichtet = Mittelwert verschiebt sich. Disruptiv = Extreme bevorzugt → kann Artaufspaltung einleiten.
 
 ---
 
@@ -1472,6 +1517,25 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
       content: `## Einleitung
 
 Was macht eine Art zu einer Art? Das ist keine triviale Frage — und verschiedene Biologen haben verschiedene Antworten. Der im MedAT relevanteste ist der **biologische Artbegriff** von Ernst Mayr: Eine Art ist eine Gruppe von Populationen, die sich untereinander fortpflanzen können und von anderen Gruppen **reproduktiv isoliert** sind. Wenn zwei Gruppen nicht mehr miteinander Nachkommen zeugen können, gelten sie als verschiedene Arten. Die Mechanismen, die diese Isolierung bewirken — und damit die Entstehung neuer Arten (**Speziation**) ermöglichen — sind das Kernthema dieses Kapitels. Das Maultier als klassisches Beispiel für Hybridsterilität ist eine typische MedAT-Prüfungsfrage.
+
+---
+
+## Reproduktive Isolation — Präzygotisch und Postzygotisch
+
+**Reproduktive Isolation** verhindert den Genfluss zwischen zwei Populationen und ist die entscheidende Voraussetzung für Artbildung. Je nach Zeitpunkt unterscheidet man:
+
+**Präzygotische Isolation** (vor Bildung der Zygote) — verhindert die Befruchtung selbst:
+- **Geografische Isolation**: physische Barrieren (Gebirge, Ozean, Fluss) verhindern Kontakt
+- **Ökologische Isolation**: Populationen nutzen verschiedene Habitate im selben Gebiet
+- **Zeitliche Isolation**: verschiedene Paarungs- oder Blütezeiten (z. B. Frühjahrs- vs. Herbstblüher)
+- **Verhaltensisolation**: verschiedene Balzrituale oder Paarungsrufe, die keine Anziehung erzeugen
+- **Mechanische Inkompatibilität**: Genitalien oder Blütenstruktur passen morphologisch nicht zusammen
+
+**Postzygotische Isolation** (nach Befruchtung) — Zygote entsteht, hat aber verminderte Fitness:
+- **Hybridlethalität**: der Hybrid überlebt nicht (Embryo stirbt früh ab)
+- **Hybridsterilität**: der Hybrid lebt, kann sich aber nicht fortpflanzen — **Maultier** (Pferd × Esel; Pferd: 2n=64, Esel: 2n=62, Maultier: 2n=63 → keine reguläre Meiose möglich → steril)
+
+> **Merke:** Präzygotisch = vor Befruchtung (verhindert Energieverschwendung). Postzygotisch = nach Befruchtung; Hybridsterilität (Maultier) und Hybridlethalität sind die wichtigsten Formen.
 
 ---
 
@@ -1673,6 +1737,22 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
       content: `## Einleitung
 
 Evolution passiert nicht von allein — sie braucht **Antriebskräfte**. Vier solche Kräfte verändern, welche Gene (genauer: welche Allele) in einer Population häufig oder selten sind: Mutation schafft neue Varianten, Selektion bevorzugt vorteilhafte Varianten, Gendrift verändert Häufigkeiten durch puren Zufall (besonders in kleinen Gruppen), und Genfluss bringt Gene aus anderen Populationen hinein. Um zu verstehen, wann Evolution stattfindet und wann nicht, nutzt man das **Hardy-Weinberg-Gleichgewicht** — ein mathematisches Modell, das den Ausgangszustand ohne evolutionären Wandel beschreibt. Jede Abweichung von diesem Gleichgewicht verrät, dass einer der vier Faktoren aktiv ist.
+
+---
+
+## Die vier Evolutionsfaktoren
+
+Evolution bedeutet Veränderung der Allelfrequenzen in einer Population. Vier Kräfte können diese Veränderung antreiben:
+
+**1. Mutation** (Rohstoff der Evolution): Mutationen schaffen neue Allele durch Änderungen der DNA-Sequenz. Ohne Mutation gäbe es keine Variation und damit keine Evolution — Mutation ist die ultimative Quelle aller genetischen Vielfalt. Einzelne Mutationen sind zufällig und meist neutral oder schädlich; in seltenen Fällen vorteilhaft. Mutation allein verändert Allelfrequenzen sehr langsam (Mutationsrate ca. 10⁻⁵ bis 10⁻⁹ pro Gen und Generation).
+
+**2. Selektion** (gerichtet, fitnessbezogen): Selektion bevorzugt Allele, die mit höherer reproduktiver Fitness assoziiert sind. Sie ist die einzige **gerichtete** Kraft: Allelfrequenzveränderungen gehen systematisch in Richtung höherer Fitness. In großen Populationen dominiert Selektion über Gendrift.
+
+**3. Gendrift** (zufällig, stärker in kleinen Populationen): In endlichen Populationen gibt es zufällige Schwankungen der Allelfrequenzen von Generation zu Generation — durch die Stichprobennatur der Reproduktion. In **kleinen Populationen** sind diese Schwankungen stark und können zur zufälligen **Fixierung** (Allel bei 100 %) oder **Elimination** (Allel bei 0 %) eines Allels führen, unabhängig von der Fitness. Zwei Sonderfälle: Flaschenhals-Effekt und Gründereffekt (→ nächster Abschnitt).
+
+**4. Genfluss** (homogenisierend): Genfluss bezeichnet den Transfer von Allelen durch Migration von Individuen zwischen Populationen. Er gleicht Allelfrequenzunterschiede zwischen Populationen aus (**Homogenisierung**) und wirkt damit der Divergenz und Artbildung entgegen. Geografische Isolation unterbricht den Genfluss — das ist der erste Schritt allopatrischer Artbildung.
+
+> **Merke:** Mutation (Rohstoff, zufällig), Selektion (gerichtet, fitness-abhängig), Gendrift (zufällig, stark in kleinen Populationen), Genfluss (homogenisierend, wirkt Artbildung entgegen).
 
 ---
 
@@ -1892,6 +1972,22 @@ Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderth
 
 ---
 
+## Homo habilis — Der erste Werkzeugmacher
+
+**Homo habilis** (ca. 2,4–1,5 Mya) gilt als erster Vertreter der Gattung *Homo* und wurde wegen seiner Assoziation mit einfachen Steinwerkzeugen der **Oldowan-Kultur** als „geschickter Mensch" benannt. Sein Hirnvolumen lag bei ca. **630 ccm** — deutlich mehr als bei Australopithecus (~450 ccm), aber weit unter dem von H. erectus. Die Fähigkeit zur Werkzeugherstellung setzte kognitive Leistungen voraus, die bei früheren Homininen nicht nachweisbar sind: vorausschauendes Planen und präzise Feinmotorik. H. habilis lebte zeitlich überlappend mit späten Australopithecus-Populationen und frühen H. erectus-Gruppen in Ostafrika.
+
+> **Merke:** H. habilis: ~2,4 Mya; Hirnvolumen ~630 ccm; erster Steinwerkzeugbenutzer (Oldowan-Kultur); erster Vertreter der Gattung Homo.
+
+---
+
+## Homo erectus — Der erste Mensch außerhalb Afrikas
+
+**Homo erectus** (ca. 1,9 Mya–100.000 Jahre) war der erste Hominin, der den afrikanischen Kontinent verließ und weite Teile Asiens und Europas besiedelte. Fossilien wurden in **Java** (Java-Mensch, Dubois 1891), **China** (Peking-Mensch) und dem Nahen Osten gefunden. Sein Hirnvolumen lag bei ca. **900–1.100 ccm** — deutlich größer als bei H. habilis, aber noch unter dem des modernen Menschen (~1.350 ccm). H. erectus fertigte komplexere Steinwerkzeuge der **Acheuléen-Kultur** (symmetrische Faustkeile) und gilt als erster Hominin mit regelmäßiger **Feuernutzung**. Seine Körpergröße und Proportionen ähnelten bereits stark dem modernen Menschen. Die fast zwei Millionen Jahre umfassende Existenz macht H. erectus zu einem der erfolgreichsten Homininen.
+
+> **Merke:** H. erectus: ~1,9 Mya; erster Hominin außerhalb Afrikas; Hirnvolumen ~1.000 ccm; Feuer; Acheuléen-Werkzeuge.
+
+---
+
 ## MedAT-Fokus
 
 **Häufige Fragen:**
@@ -1912,12 +2008,6 @@ Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderth
 - H. erectus: ~1,9 Mya, Hirnvolumen ~1.000 ccm, erster Out-of-Africa
 - H. sapiens: ~300.000 Jahre, Hirnvolumen ~1.350 ccm
 - Svante Pääbo: Nobelpreis 2022 für Paläogenomik (Neanderthaler-DNA-Sequenzierung)
-
----
-
-## Homo habilis — Der erste Werkzeugmacher
-
-Homo habilis (ca. 2,4–1,5 Mya) gilt als erster Vertreter der Gattung Homo und wurde wegen seiner Assoziation mit einfachen Steinwerkzeugen der Oldowan-Kultur als "geschickter Mensch" benannt. Sein Hirnvolumen lag bei ca. 630 ccm — deutlich mehr als bei Australopithecus, aber weit unter dem von H. erectus. Die Fähigkeit zur Werkzeugherstellung setzte kognitive Leistungen voraus, die bei früheren Homininen nicht nachweisbar sind, darunter vorausschauendes Planen und präzise Feinmotorik. H. habilis lebte zeitlich mit Australopithecus und frühen H. erectus-Populationen überlappend in Ostafrika.
 
 ---
 
