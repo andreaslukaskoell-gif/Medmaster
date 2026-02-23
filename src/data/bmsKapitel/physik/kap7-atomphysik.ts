@@ -32,8 +32,6 @@ export const physKap7: Kapitel = {
 
 Warum leuchten Neonröhren orange-rot? Warum misst die Pulsoximetrie mit zwei bestimmten Wellenlängen? Die Antwort liegt in der Atomphysik: Elektronen können nur auf bestimmten Energieniveaus existieren, und beim Wechsel zwischen Niveaus wird Licht einer exakt definierten Wellenlänge emittiert oder absorbiert. Dieses Prinzip der **Spektroskopie** bildet die Basis für Pulsoximetrie, Photometrie, MRT-Resonanz und Lasertherapie. Für den MedAT sind Bohr'sches Atommodell, Photonenenergie E = hf = hc/λ, Emissionsspektren, Lambert-Beer-Gesetz und Pulsoximetrie prüfungsrelevant.
 
-# Atommodelle und Spektroskopie
-
 ## Entwicklung der Atommodelle
 
 Das **Thomsonsche Modell** (1904) stellte sich das Atom als eine gleichförmig positive Ladungsverteilung vor, in der Elektronen wie Rosinen in einem Kuchen eingebettet sind ("Plum-Pudding-Modell"). Es konnte keine diskreten Spektrallinien erklären und sagte keine Rückstreuung geladener Teilchen voraus.
@@ -110,6 +108,27 @@ c = A/(ε·d) = 0,85/11 300 = 7,52 × 10⁻⁵ mol/L = 75,2 μmol/L. Umrechnung:
 
 **Beispiel 3 — Ionisierungsenergie von Wasserstoff:**
 Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisierungsenergie: 13,6 eV = 13,6 × 1,602 × 10⁻¹⁹ J = 2,18 × 10⁻¹⁸ J. Welche Wellenlänge hat das Photon? λ = hc/E = (6,626 × 10⁻³⁴ × 3 × 10⁸) / (2,18 × 10⁻¹⁸) = 91,2 nm (tiefes UV, Lyman-Grenze).
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Welche Wellenlänge hat die Hα-Linie der Balmer-Serie?" → 656 nm (rot); Übergang n=3→2; ΔE = 1,89 eV
+- "Was besagt das Bohrsche Modell?" → Elektronen auf diskreten Schalen; Eₙ = −13,6 eV/n²; Emission/Absorption nur beim Schalensprung
+- "Formel Lambert-Beer?" → A = ε·c·d; A = log₁₀(I₀/I)
+- "Welche Wellenlängen nutzt die Pulsoximetrie?" → 660 nm (Hb absorbiert stark) + 940 nm (HbO₂ absorbiert stärker)
+
+**Achtung — typische Verwechslungen:**
+- Emissionsspektrum (helle Linien auf dunklem Hintergrund) ≠ Absorptionsspektrum (dunkle Linien im Kontinuum)
+- Lyman-Serie (UV, n→1) ≠ Balmer-Serie (sichtbar, n→2) ≠ Paschen-Serie (IR, n→3)
+- Bei Lambert-Beer: A ist nicht die Absorption in Prozent, sondern A = log₁₀(I₀/I); bei A = 1 gilt T = 10 %
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- h = 6,626 × 10⁻³⁴ J·s; c = 3 × 10⁸ m/s; 1 eV = 1,602 × 10⁻¹⁹ J
+- Ionisierungsenergie Wasserstoff: 13,6 eV (n=1 → n=∞)
+- Hα = 656 nm (rot), Hβ = 486 nm (blau-grün) — Balmer-Serie
+- Isobestischer Punkt Hb/HbO₂: 805 nm
+- SpO₂-Normwert ≥ 95 %; < 90 % = klinische Hypoxämie
+---
 
 ## Zusammenfassung
 
@@ -282,8 +301,6 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
 
 Radioaktive Strahlung ist unsichtbar, aber messbar — und in der Medizin sowohl gefährlich als auch heilsam. ⁹⁹ᵐTechnetium beleuchtet Schilddrüsen, ¹³¹Jod behandelt Schilddrüsenkrebs, Radon in Kellern verursacht Lungenkrebs. Das Zerfallsgesetz erklärt, wie schnell ein Radionuklid abklingt. Drei Strahlenarten mit sehr unterschiedlicher Reichweite und biologischer Wirkung sind zentral. Für den MedAT sind α/β/γ-Strahlung, Halbwertszeit, Zerfallsgesetz, Aktivität (Becquerel), Äquivalentdosis (Sievert) und Strahlenschutz prüfungsrelevant.
 
-# Radioaktivität – Strahlenarten und Zerfallsgesetze
-
 ## Alpha-Strahlung (α)
 
 Alpha-Teilchen sind identisch mit einem **Helium-4-Kern**: 2 Protonen + 2 Neutronen, Masse ≈ 4 u, Ladung +2e. Typische kinetische Energien: 4–8 MeV.
@@ -388,6 +405,28 @@ Absorbierte Dosis: D = 0,5 mGy. Für γ-Strahlung (w_R = 1): H = 0,5 mSv. Für �
 
 **Beispiel 4 — C-14-Datierung (Prinzip):**
 Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre. Eine Knochenprobe zeigt nur 25 % der normalen ¹⁴C-Aktivität: 25 % = (½)ⁿ → n = 2 Halbwertszeiten → Alter ≈ 2 × 5730 = 11 460 Jahre.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was ändert sich bei α-Zerfall?" → Z−2, A−4 (Tochterkern 2 Positionen links im PSE)
+- "Was ändert sich bei β⁻-Zerfall?" → Z+1, A gleich (Neutron → Proton + e⁻ + ν̄ₑ)
+- "Formel Halbwertszeit?" → T½ = ln2/λ = 0,693/λ; nach n Halbwertszeiten: N = N₀·(½)ⁿ
+- "Warum ist ⁹⁹ᵐTc ideal für Diagnostik?" → reiner γ-Strahler (140 keV), T½ = 6 h → niedrige Strahlendosis, gute Kameradetektion
+
+**Achtung — typische Verwechslungen:**
+- Gray (Gy) ≠ Sievert (Sv): Gy = absorbierte Energie (J/kg); Sv = Gy × w_R (biologische Wirksamkeit)
+- α äußerlich harmlos (Papier stoppt), aber innerlich extrem gefährlich (w_R = 20!)
+- β⁺-Zerfall (Positronenemitter, Z−1, für PET) ≠ β⁻-Zerfall (Elektronemitter, Z+1, für Therapie)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Strahlungs-Wichtungsfaktoren: α: w_R = 20; β, γ, e⁻: w_R = 1; Neutronen: w_R = 5–20
+- ⁹⁹ᵐTc: T½ = 6 h, γ 140 keV, Szintigraphie
+- ¹³¹I: T½ = 8 d, β⁻+γ, Schilddrüsentherapie
+- ¹⁸F: T½ = 110 min, β⁺, PET
+- C-14: T½ = 5730 Jahre, Altersbestimmung
+- Abschirmung: α → Papier; β → Aluminium; γ → Blei/Beton
+---
 
 ## Zusammenfassung
 
@@ -565,8 +604,6 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
 
 Röntgenstrahlung durchdringt Gewebe — härteres Gewebe absorbiert mehr, weicheres weniger — und erzeugt so kontrastreiche Bilder. Aber Röntgenstrahlung ionisiert auch DNA und kann Krebs verursachen. Dieser Dualismus — diagnostischer Nutzen vs. Strahlenrisiko — prägt den Alltag in der Radiologie. Das ALARA-Prinzip ("As Low As Reasonably Achievable") und das Schwächungsgesetz steuern den Umgang. Für den MedAT sind Bremsstrahlung, charakteristische Strahlung, Schwächungsgesetz, Strahlenschäden, deterministisch vs. stochastisch, Bergonié-Tribondeau und Abstandsquadratgesetz prüfungsrelevant.
 
-# Röntgenstrahlung und Strahlenwirkung
-
 ## Entstehung von Röntgenstrahlung
 
 In einer **Röntgenröhre** werden Elektronen aus einer Glühkathode emittiert und durch eine Hochspannung (typisch 30–150 kV) zur Anode (meist Wolfram) beschleunigt. Beim Auftreffen auf die Anode entstehen zwei Arten von Röntgenstrahlung:
@@ -649,6 +686,27 @@ Beschleunigungsspannung U = 80 kV: E_max = eU = 80 keV = 80 000 × 1,602 × 10�
 
 **Beispiel 3 — Abstandsquadratgesetz:**
 Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/9 = 1,1 μSv/h. Verdopplung des Abstands reduziert die Dosis auf 1/4. Wichtig im Strahlenschutz: Den Abstand zu einer Quelle zu verdoppeln ist eine einfache und effektive Schutzmaßnahme.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was ist Bremsstrahlung vs. charakteristische Strahlung?" → Bremsstrahlung: kontinuierliches Spektrum (Abbremsung im Coulomb-Feld); charakteristische Strahlung: diskrete Linien (elementspezifische Schalenübergänge)
+- "Warum erscheinen Knochen hell im Röntgenbild?" → höheres μ durch Ca (Z=20) → mehr Absorption → weniger Photonen erreichen Detektor
+- "Unterschied stochastisch vs. deterministisch?" → stochastisch: kein Schwellenwert, Krebsrisiko ∝ Dosis; deterministisch: Schwellendosis, Schwere wächst mit Dosis
+- "ALARA-Prinzip?" → Abstand ↑ (1/r²), Zeit ↓, Abschirmung ↑
+
+**Achtung — typische Verwechslungen:**
+- Bremsstrahlung (kontinuierlich) ≠ charakteristische Strahlung (Linienspektrum, elementspezifisch)
+- Stochastisch (kein Schwellenwert, Krebsinduktion) ≠ deterministisch (Schwellendosis, Strahlenkater)
+- Halbwertsschichtdicke HVL = ln2/μ — analog zur Halbwertszeit, aber für Röntgenabschirmung
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- λ_min [pm] ≈ 1240/U [kV] — Kurzregel für Röntgenröhre
+- Bergonié-Tribondeau: Lymphozyten (sensitiv) > Knochenmark > Darmepithel > Muskel > Nervenzellen (resistent)
+- Indirekte Strahlenwirkung (via OH•-Radikale): ≈ 70 %; direkte: ≈ 30 %
+- CT Abdomen ≈ 10 mSv; Röntgen Thorax ≈ 0,02–0,1 mSv; Natürliche Hintergrundstrahlung ≈ 2 mSv/Jahr
+- Berufsgrenzwert: ≤ 20 mSv/Jahr; Bevölkerungsgrenzwert: ≤ 1 mSv/Jahr
+---
 
 ## Zusammenfassung
 
@@ -821,8 +879,6 @@ Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/
 
 PET zeigt Tumormetastasen, die noch keinen Knochen zerstört haben — weil Tumorzellen mehr Glukose verbrennen (Warburg-Effekt). SPECT kariert Herzperfusion. MRT bildet Weichteile ohne Strahlung ab — mittels Kernspinresonanz. Und dahinter steckt Quantenphysik: Welle-Teilchen-Dualismus, Photoeffekt, Larmor-Frequenz. Für den MedAT sind PET (¹⁸F-FDG, Annihilation, Koinzidenz), SPECT (⁹⁹ᵐTc), MRT-Prinzip (Larmor, T1/T2), Photoeffekt und Welle-Teilchen-Dualismus prüfungsrelevant.
 
-# Nuklearmedizin und Quantenphänomene
-
 ## PET – Positronen-Emissions-Tomographie
 
 Bei der PET wird ein β⁺-strahlendes Radiopharmakon injiziert. Das emittierte Positron bewegt sich kurz durch das Gewebe (wenige mm) und trifft auf ein Elektron. Es kommt zur **Paarvernichtung (Annihilation)**:
@@ -894,6 +950,28 @@ Ruhemasse Elektron = Ruhemasse Positron = 0,511 MeV/c². Gesamte Ruheenergie: E 
 **Beispiel 3 — Photoelektrischer Effekt (Grenzfrequenz):**
 Austrittsarbeit von Zink: φ = 4,3 eV = 4,3 × 1,602 × 10⁻¹⁹ J = 6,89 × 10⁻¹⁹ J.
 Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 10¹⁵ Hz. Grenzwellenlänge: λ₀ = c/f₀ = 3 × 10⁸ / 1,04 × 10¹⁵ = 289 nm (UV). Sichtbares Licht (400–700 nm) hat zu niedrige Frequenz → kein Photoeffekt an Zink. UV-Licht (< 289 nm) löst Elektronen aus.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Warum 511 keV bei der PET?" → Ruheenergie eines Elektrons = m_e·c² = 0,511 MeV; Annihilation wandelt Ruhemasse beider Teilchen vollständig in Energie um
+- "Larmorfrequenz bei 1,5 T?" → f = 42,58 MHz/T × 1,5 T ≈ 64 MHz; bei 3,0 T ≈ 128 MHz
+- "T1 vs. T2?" → T1 = Längsrelaxation (Spin-Gitter, Fett hell); T2 = Querrelaxation (Spin-Spin, Wasser hell)
+- "Warum reichert FDG sich in Tumoren an?" → Warburg-Effekt: erhöhter Glukosestoffwechsel; FDG nach Phosphorylierung blockiert → metabolic trapping
+
+**Achtung — typische Verwechslungen:**
+- PET (β⁺-Strahler, kein Kollimator nötig, Koinzidenz, höhere Auflösung) ≠ SPECT (γ-Strahler, Kollimator nötig, günstiger)
+- T1 ≠ T2: T1 = Längsmagnetisierung erholt sich; T2 = Transversalmagnetisierung zerfällt durch Dephasierung
+- Photoeffekt: Intensität beeinflusst Anzahl der emittierten Elektronen — die kinetische Energie hängt nur von der Frequenz ab
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- PET: Annihilation → 2 × 511 keV γ unter 180°; Koinzidenzdetektion ohne Kollimator
+- ¹⁸F-FDG: T½ = 110 min; Warburg-Effekt → Tumoranreicherung
+- MRT: γ_H = 42,58 MHz/T; bei 1,5 T → 64 MHz; bei 3 T → 128 MHz
+- Gadolinium: paramagnetisch, verkürzt T1 → Enhancement (heller in T1-Bild); Cave NSF bei Niereninsuffizienz
+- MRT: keine ionisierende Strahlung; Kontraindikationen: ferromagnetische Implantate, alte Herzschrittmacher
+- Photoeffekt: E_kin = hf − φ; Emission nur wenn f ≥ f_Grenz = φ/h (Einstein, Nobelpreis 1921)
+---
 
 ## Zusammenfassung
 
