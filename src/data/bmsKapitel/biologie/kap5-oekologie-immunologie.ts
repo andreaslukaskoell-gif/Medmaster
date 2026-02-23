@@ -21,7 +21,7 @@ export const bioKapOekologie: Kapitel = {
         "Stenök",
         "Euryök",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Abiotische Faktoren bilden die physikalisch-chemische Grundlage jedes Ökosystems und bestimmen, welche Organismen in einem Lebensraum überleben, wachsen und sich fortpflanzen können. Für den MedAT ist dieses Thema besonders relevant, da Toleranzkurven, das Liebigsche Minimumgesetz und Bioindikatoren regelmäßig abgefragt werden und das Minimumprinzip auch in der klinischen Medizin (Intensivmedizin, Ernährungsmedizin) direkte Anwendung findet.
 
@@ -96,7 +96,12 @@ Das Minimumgesetz hat eine direkte klinische Entsprechung in der Intensiv- und E
 
 ## Zusammenfassung
 
-Die Toleranzkurve beschreibt die Leistungsfähigkeit eines Organismus in Abhängigkeit von einem Umweltfaktor, wobei das Optimum den Bereich maximaler Fitness markiert und die Todespunkte die letalen Grenzen definieren. Euryöke Generalisten tolerieren ein breites Spektrum an Umweltbedingungen und sind widerstandsfähig gegenüber Veränderungen, während stenöke Spezialisten mit enger ökologischer Amplitude als empfindliche Bioindikatoren für spezifische Umweltbedingungen dienen. Das Liebigsche Minimumgesetz besagt, dass der knappste essenzielle Faktor das Wachstum begrenzt, und Shelfords Toleranzgesetz erweitert dieses Prinzip um die Erkenntnis, dass auch ein Überangebot toxisch und damit limitierend wirken kann. Diese ökologischen Grundprinzipien finden direkte Anwendung in der klinischen Medizin, wo beispielsweise in der Intensivmedizin ein einzelner Mikronährstoffmangel trotz optimierter sonstiger Parameter das Outcome bestimmen kann.`,
+- **Toleranzkurve**: Leistung eines Organismus als Funktion eines Umweltfaktors; Optimum (max. Fitness), Pessimum, Todespunkte
+- **Ökologische Amplitude**: Toleranzbereich eines Organismus zwischen den Todespunkten
+- **Euryök** (Generalist): breite Amplitude → anpassungsfähig; **stenök** (Spezialist): enge Amplitude → empfindlich, guter Bioindikator
+- **Liebig'sches Minimumgesetz**: der knappste essenzielle Faktor begrenzt das Wachstum (nicht der reichlichste)
+- **Shelford'sches Toleranzgesetz**: sowohl Mangel ALS AUCH Überangebot eines Faktors sind limitierend
+- Klinische Analogie: auch in der Intensivmedizin bestimmt oft ein einzelner Mangelfaktor das Outcome`,
       lernziele: [
         "Abiotische Faktoren aufzählen und das Konzept der Toleranzkurve (Optimum, Pessimum, Todespunkt, ökologische Amplitude) erläutern",
         "Den Unterschied zwischen euryöken und stenöken Arten erklären und Beispiele nennen",
@@ -236,7 +241,7 @@ Die Toleranzkurve beschreibt die Leistungsfähigkeit eines Organismus in Abhäng
         "Kommensalismus",
         "Mutualismus",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Biotische Faktoren umfassen alle Wechselwirkungen zwischen Lebewesen und sind zentrale treibende Kräfte der Evolution sowie der Strukturierung von Lebensgemeinschaften. Für den MedAT sind insbesondere das Konkurrenzausschlussprinzip nach Gauß, die Lotka-Volterra-Räuber-Beute-Dynamik und die Unterscheidung der Symbioseformen (Mutualismus, Kommensalismus, Parasitismus) mit ihren Vorzeichen prüfungsrelevant. Medizinisch bedeutsam ist das Thema durch parasitäre Erkrankungen wie Malaria und die Koevolution von Wirt und Parasit.
 
@@ -303,7 +308,12 @@ Parasitismus ist eines der bedeutendsten medizinischen Themen weltweit. Malaria 
 
 ## Zusammenfassung
 
-Biotische Faktoren strukturieren Lebensgemeinschaften durch Konkurrenz, Prädation und verschiedene Symbioseformen, wobei das Konkurrenzausschlussprinzip nach Gauß besagt, dass zwei Arten mit identischer ökologischer Nische nicht dauerhaft koexistieren können und Koexistenz nur durch Nischendifferenzierung möglich wird. Räuber-Beute-Beziehungen folgen den Lotka-Volterra-Zyklen, bei denen die Räuberpopulation der Beutepopulation zeitlich nachhinkt, und Schlüsselprädatoren können über trophische Kaskaden alle Ebenen eines Ökosystems beeinflussen. Die Symbioseformen unterscheiden sich in ihrem Effekt auf die beteiligten Partner: Mutualismus nutzt beiden Partnern, Kommensalismus nutzt einem ohne den anderen zu schädigen, während Parasitismus und Prädation den geschädigten Partner unterschiedlich stark beeinträchtigen. Die Koevolution zwischen Wirt und Parasit zeigt sich eindrucksvoll am Beispiel der Sichelzellmutation, die Heterozygoten einen Überlebensvorteil in Malaria-Endemiegebieten verleiht und damit einen direkten Fingerabdruck natürlicher Selektion durch parasitären Druck darstellt.`,
+- **Konkurrenzausschlussprinzip** (Gauß): zwei Arten mit identischer Nische können nicht dauerhaft koexistieren → eine verdrängt die andere
+- **Nischendifferenzierung**: ermöglicht Koexistenz durch zeitliche, räumliche oder trophische Ressourcenteilung
+- **Lotka-Volterra-Zyklen**: Räuber-Beute-Populationen schwingen gegeneinander; Räuber hinkt Beutepopulation zeitlich hinterher
+- **Schlüsselprädator**: Entfernung hat überproportionalen Einfluss auf gesamte Lebensgemeinschaft (trophische Kaskade)
+- Symbiose-Formen: Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−)
+- Koevolution Wirt/Parasit: Sichelzellanämie-Heterozygote in Malariaregionen → Selektion durch parasitären Druck`,
       lernziele: [
         "Intraspezifische und interspezifische Konkurrenz unterscheiden und das Gauß'sche Konkurrenzausschlussprinzip mit experimentellem Beleg erläutern",
         "Das Lotka-Volterra-Modell der Räuber-Beute-Dynamik und trophische Kaskaden beschreiben",
@@ -446,7 +456,7 @@ Biotische Faktoren strukturieren Lebensgemeinschaften durch Konkurrenz, Prädati
         "Altersstruktur",
         "Minimallebensfähige Population",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Die Populationsbiologie untersucht, wie sich Populationen in Abhängigkeit von Ressourcen, Konkurrenz und Umweltfaktoren entwickeln, und liefert damit die Grundlage für Epidemiologie, Naturschutzbiologie und nachhaltige Ressourcennutzung. Für den MedAT sind exponentielles und logistisches Wachstum, die Unterscheidung von r- und K-Strategen sowie das Konzept der Kapazitätsgrenze K zentrale Prüfungsthemen, die auch in der Infektionsepidemiologie (Basisreproduktionszahl R0) direkte Anwendung finden.
 
@@ -602,7 +612,12 @@ Die **Altersstruktur** einer Population (Alterspyramide) gibt Auskunft über Ver
 
 ## Zusammenfassung
 
-Die Populationsbiologie beschreibt das Wachstum von Populationen durch zwei grundlegende Modelle: exponentielles Wachstum (J-Kurve, dN/dt = r·N) bei unbegrenzten Ressourcen und logistisches Wachstum (S-Kurve, dN/dt = r·N·(K−N)/K) unter Ressourcenbeschränkung, wobei die Kapazitätsgrenze K die maximal tragbare Populationsgröße darstellt. Die r/K-Strategien beschreiben ein Kontinuum von Lebensgeschichtsstrategien: r-Strategen investieren in viele Nachkommen mit wenig Brutpflege und kurzer Generationszeit (Insekten, Mäuse), während K-Strategen wenige, gut versorgte Nachkommen mit langer Generationszeit und intensiver Brutpflege hervorbringen (Elefanten, Menschen). Kleine Populationen sind durch den Allee-Effekt besonders gefährdet, da unterhalb einer kritischen Schwelle die Pro-Kopf-Fitness sinkt und ein Aussterbevortex aus Inzucht, genetischer Drift und stochastischen Ereignissen einsetzen kann. Diese Konzepte sind auch epidemiologisch relevant, da die Ausbreitung von Infektionskrankheiten dem exponentiellen Wachstumsmodell folgt und die Basisreproduktionszahl R0 das populationsbiologische r-Äquivalent für Pathogene darstellt.`,
+- **Exponentielles Wachstum** (J-Kurve): dN/dt = r·N; bei unbegrenzten Ressourcen; r = intrinsische Wachstumsrate
+- **Logistisches Wachstum** (S-Kurve): dN/dt = r·N·(K−N)/K; K = Kapazitätsgrenze (maximale Populationsgröße)
+- **r-Strategen**: viele Nachkommen, wenig Brutpflege, kurze Generationszeit (Insekten, Mäuse); schnell bei Ressourcen
+- **K-Strategen**: wenige Nachkommen, intensive Brutpflege, lange Generationszeit (Elefanten, Menschen); nahe K stable
+- **Allee-Effekt**: unter kritischer Populationsgröße sinkt Pro-Kopf-Fitness → Aussterbevortex (Inzucht + Drift + Stochastik)
+- Epidemiologische Analogie: Infektionsausbreitung folgt exponentiellem Modell; R₀ = populationsbiologisches r-Äquivalent`,
       merksätze: [
         "Exponentielles Wachstum (J-Kurve): dN/dt = r·N. Logistisches Wachstum (S-Kurve): dN/dt = r·N·(K−N)/K. K = Kapazitätsgrenze.",
         "r-Strategen: viele Nachkommen, wenig Brutpflege, kurze Generationszeit (Insekten, Mäuse). K-Strategen: wenige Nachkommen, viel Brutpflege, lange Generationszeit (Elefanten, Menschen).",
@@ -725,7 +740,7 @@ Die Populationsbiologie beschreibt das Wachstum von Populationen durch zwei grun
         "Allopatrische Artbildung",
         "Sympatrische Artbildung",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Das Konzept der ökologischen Nische nach Hutchinson ist eines der fundamentalsten Prinzipien der Ökologie und erklärt, wie Arten in Lebensgemeinschaften koexistieren oder sich gegenseitig verdrängen. Für den MedAT ist die Unterscheidung von fundamentaler und realisierter Nische ein Prüfungsklassiker, ebenso wie Nischendifferenzierung als Mechanismus der Koexistenz und die Grundlagen der Artbildung. Klinisch relevant ist das Nischenkonzept bei der Erklärung opportunistischer Infektionen nach Antibiotikatherapie.
 
@@ -834,7 +849,12 @@ Beispiele:
 
 ## Zusammenfassung
 
-Die ökologische Nische nach Hutchinson beschreibt einen n-dimensionalen Hyperraum, in dem jeder relevante Umweltfaktor eine eigene Achse bildet, und unterscheidet sich damit grundlegend vom einfachen Habitatbegriff. Die fundamentale Nische umfasst den gesamten physiologisch möglichen Lebensraum einer Art, während die realisierte Nische durch biotische Interaktionen — insbesondere interspezifische Konkurrenz — auf einen kleineren Teilraum eingeschränkt wird, wie das Connell-Experiment mit Seepocken eindrucksvoll belegt. Koexistenz konkurrierender Arten wird durch Nischendifferenzierung ermöglicht, wobei Arten ihre Ressourcennutzung zeitlich, räumlich oder trophisch aufteilen, und Charakterverschiebung diese Unterschiede in Sympatrie evolutionär verstärkt. Die Artbildung erfolgt entweder allopatrisch durch geografische Isolation und unterbrochenen Genfluss oder seltener sympatrisch durch Polyploidie oder Wirtspflanzendifferenzierung, wobei beide Mechanismen letztlich zu reproduktiver Isolation und damit neuen Arten führen.`,
+- **Ökologische Nische** (Hutchinson): n-dimensionaler Hyperraum; jeder Umweltfaktor = eine Achse
+- **Fundamentale Nische**: physiologisch möglicher Lebensraum; **Realisierte Nische**: durch Konkurrenz eingeschränkter tatsächlicher Lebensraum
+- **Connell-Experiment** (Seepocken): Entfernung des Konkurrenten → Ausweitung auf fundamentale Nische belegt
+- **Nischendifferenzierung**: zeitliche, räumliche oder trophische Ressourcenteilung → Koexistenz möglich
+- **Charakterverschiebung**: Merkmale divergieren in Sympatrie evolutionär → reduziert Konkurrenz
+- **Habitat**: physischer Ort (Adresse); **Nische**: Rolle im Ökosystem (Beruf) — wichtige Unterscheidung`,
       merksätze: [
         "Hutchinson (1957): Ökologische Nische = n-dimensionaler Hyperraum. Jeder Umweltfaktor eine Dimension.",
         "Fundamentale Nische ≥ realisierte Nische. Konkurrenz schränkt die realisierte Nische ein (Connell-Seepocken-Experiment).",
@@ -955,7 +975,7 @@ Die ökologische Nische nach Hutchinson beschreibt einen n-dimensionalen Hyperra
         "Wasserkreislauf",
         "Trophieebenen",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Ökosysteme sind die funktionellen Einheiten der Biosphäre, in denen Lebewesen und ihre abiotische Umwelt durch Energie- und Stoffflüsse miteinander verbunden sind. Für den MedAT sind die 10%-Regel des Energietransfers, die Unterscheidung von GPP und NPP sowie die biogeochemischen Kreisläufe von Kohlenstoff, Stickstoff und Phosphor zentrale Prüfungsthemen. Medizinisch relevant sind Bioakkumulation von Schadstoffen entlang der Nahrungskette sowie die Nitratbelastung des Trinkwassers als Ursache der Methämoglobinämie bei Säuglingen.
 
@@ -1101,7 +1121,12 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
 
 ## Zusammenfassung
 
-Ökosysteme bestehen aus der Gesamtheit aller Lebewesen (Biozönose) und ihrer abiotischen Umwelt (Biotop), wobei Energie einseitig durch die Trophieebenen fließt — von Produzenten über Konsumenten zu Destruenten — und nach der 10%-Regel bei jeder Stufe ca. 90% als Wärme verloren gehen. Die Primärproduktion unterscheidet zwischen GPP (gesamte Photosyntheseleistung) und NPP (nach Abzug der Eigenatmung der Produzenten), wobei NPP die tatsächlich für Konsumenten verfügbare Energie darstellt. Die biogeochemischen Kreisläufe von Kohlenstoff, Stickstoff und Phosphor zirkulieren Materie zwischen biotischen und abiotischen Reservoiren, wobei der Phosphorkreislauf als einziger kein gasförmiges Reservoir besitzt und Phosphor daher oft der limitierende Faktor in Süßwassersystemen ist. Menschliche Eingriffe in diese Kreisläufe — insbesondere die Verbrennung fossiler Brennstoffe (CO₂-Anstieg), industrielle Stickstoff-Fixierung (Haber-Bosch) und Phosphateinträge in Gewässer (Eutrophierung) — haben weitreichende Konsequenzen für die Stabilität globaler Ökosysteme.`,
+- **Ökosystem** = Biozönose (alle Lebewesen) + Biotop (abiotische Umwelt); Energie fließt einseitig, Materie kreist
+- **Trophiestufen**: Produzenten (Pflanzen) → Konsumenten I, II, III → Destruenten; **10%-Regel**: ~90% Energie geht als Wärme verloren
+- **GPP** (Bruttoprimärproduktion) = Gesamtphotosynthese; **NPP** = GPP − Eigenatmung = für Konsumenten verfügbar
+- **Phosphorkreislauf**: einziger biogeochemischer Kreislauf ohne gasförmiges Reservoir → Phosphor = limitierender Faktor in Süßwasser
+- **Eutrophierung**: Phosphatüberschuss (Dünger, Abwasser) → Algenblüte → O₂-Abbau → Fischsterben
+- CO₂-Anstieg (fossile Brennstoffe), Stickstoff-Fixierung (Haber-Bosch), Eutrophierung: drei wichtige menschliche Eingriffe in Biogeochemie`,
       merksätze: [
         "Trophieebenen: Produzenten → Konsumenten I, II, III → Destruenten. Destruenten schließen den Kreislauf durch Detritus-Abbau.",
         "10%-Regel (Lindeman 1942): ~10% der Energie gelangt von einer Trophieebene zur nächsten. 90% Verlust durch Atmung, Wärme, Unverdauliches.",
@@ -1225,7 +1250,7 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
         "HIPPO",
         "Hotspots",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Biodiversität beschreibt die Vielfalt des Lebens auf drei hierarchischen Ebenen — genetisch, Arten und Ökosysteme — und ist die Grundlage für Ökosystemstabilität, evolutionäre Anpassungsfähigkeit und zahlreiche medizinisch relevante Naturstoffe. Für den MedAT sind die Inselbiographie-Theorie, das Sukzessionskonzept, die HIPPO-Bedrohungsfaktoren und die historischen Massenaussterben regelmäßig abgeprüfte Themen. Die Pharmazie ist direkt von Biodiversität abhängig, da etwa 50% aller zugelassenen Medikamente auf Naturstoffen basieren.
 
@@ -1392,7 +1417,12 @@ Ein **Massenaussterben** ist definiert als Verlust von ≥ 75% aller Arten in ei
 
 ## Zusammenfassung
 
-Biodiversität umfasst drei hierarchische Ebenen — genetische Diversität, Artendiversität und Ökosystem-Diversität — und ist essenziell für die Stabilität und Anpassungsfähigkeit von Ökosystemen. Die Inselbiographie-Theorie nach MacArthur und Wilson erklärt die Artenzahl auf Inseln durch ein dynamisches Gleichgewicht zwischen Immigration und Extinktion, wobei große, festlandnahe Inseln die höchste Artenzahl aufweisen und dieses Prinzip direkt auf das Design von Naturschutzgebieten übertragbar ist. Sukzession beschreibt die gerichtete Abfolge von Lebensgemeinschaften nach einer Störung, wobei primäre Sukzession auf nacktem Substrat mit Flechten und Moosen beginnt und sekundäre Sukzession auf bereits vorhandenen Böden schneller verläuft, bis schließlich eine vom Klima bestimmte Klimaxgesellschaft erreicht wird. Die fünf historischen Massenaussterben und das aktuelle sechste, anthropogene Massenaussterben zeigen die Verwundbarkeit der Biodiversität, wobei heute Habitatverlust als größte Bedrohung die HIPPO-Faktoren anführt und die Aussterberate das 100- bis 1.000-Fache der natürlichen Hintergrundrate beträgt.`,
+- **Biodiversität**: 3 Ebenen — genetische Diversität, Artendiversität, Ökosystem-Diversität
+- **Inselbiographie** (MacArthur & Wilson): Artenzahl = Gleichgewicht aus Immigration und Extinktion; große, festlandnahe Inseln haben mehr Arten
+- Anwendung Naturschutz: größere Reservate, verbundene Habitate → höhere Artenvielfalt
+- **Primäre Sukzession**: nackte Fläche (Lava, Gletscher) → Flechten/Moose → Gräser → Gebüsch → Klimaxgesellschaft
+- **Sekundäre Sukzession**: vorhandener Boden → schneller, weil Samendepot und Nährstoffe vorhanden
+- **6. Massenaussterben** (anthropogen): Aussterberate 100–1.000× natürliche Hintergrundrate; Ursachen: HIPPO (Habitatverlust, Invasive Arten, Pollution, Popul.-Wachstum, Übernutzung)`,
       merksätze: [
         "Biodiversität: 3 Ebenen — genetisch, Arten (Spezies), Ökosysteme. Alle drei essenziell für Stabilität und Evolution.",
         "Hotspots: 2,5% der Erdoberfläche, aber 44% aller Pflanzen und 35% aller Wirbeltiere. Krit.: hoher Endemismus + Habitatverlust.",
@@ -1520,7 +1550,7 @@ Biodiversität umfasst drei hierarchische Ebenen — genetische Diversität, Art
         "Opsonisierung",
         "Neutralisierung",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Antikörper sind die zentralen Effektormoleküle der adaptiven humoralen Immunantwort und ermöglichen die hochspezifische Erkennung und Beseitigung von Pathogenen und Fremdstoffen. Für den MedAT sind der Aufbau des IgG-Antikörpers (Fab/Fc), die fünf Immunglobulin-Klassen mit ihren spezifischen Funktionen und die Effektormechanismen (Neutralisierung, Opsonisierung, Komplementaktivierung) prüfungsrelevante Kernthemen. Die klinische Bedeutung zeigt sich in der serologischen Diagnostik, bei der IgM-Nachweis auf akute und IgG-Nachweis auf durchgemachte Infektionen hinweist.
 
@@ -1597,7 +1627,14 @@ Der serologische Nachweis von IgM vs. IgG ist klinisch essenziell: IgM zeigt ein
 
 ## Zusammenfassung
 
-Antikörper sind Y-förmige Glykoproteine aus je zwei schweren und zwei leichten Ketten, deren Fab-Region die hochspezifische Antigenerkennung ermöglicht, während die Fc-Region die Effektorfunktionen wie Opsonisierung, Komplementaktivierung und Plazentratransfer vermittelt. Die fünf Immunglobulin-Klassen erfüllen unterschiedliche Aufgaben: IgG dominiert im Serum und ist als einziges Ig plazentagängig, IgM wird als Pentamer bei der Primärantwort zuerst gebildet und aktiviert das Komplement besonders effektiv, IgA schützt Schleimhäute in Sekreten, IgE vermittelt allergische Reaktionen über Mastzellen und IgD dient als B-Zell-Rezeptor. In der klinischen Diagnostik zeigt der IgM-Nachweis eine akute Infektion an, während IgG eine durchgemachte Infektion oder Impfimmunität belegt, und das Komplementsystem verstärkt die Antikörperwirkung durch Opsonisierung mit C3b und Lyse durch den Membrane Attack Complex.`,
+- Antikörper (Ig): Y-förmig; **Fab-Region** (variabel, Antigenerkennung) + **Fc-Region** (konstant, Effektorfunktionen)
+- **IgG**: dominiert Serum; einziges Ig das die Plazenta passiert → Nestschutz; Sekundärantwort
+- **IgM**: Pentamer; zuerst bei Primärantwort; effektivste Komplementaktivierung; Nachweis = akute Infektion
+- **IgA**: Schleimhäute und Sekrete (Tränen, Speichel, Muttermilch); Dimere in Sekreten
+- **IgE**: Mastzellen-Bindung; allergische Reaktionen (Typ I); Parasiten-Abwehr
+- **IgD**: B-Zell-Rezeptor; wenig im Serum
+- Klinische Serologie: IgM = akute Infektion; IgG = durchgemacht oder Impfimmunität
+- **Komplementsystem**: C3b → Opsonisierung; MAC → Lyse; klassischer Weg (IgG/IgM), alternativer Weg (direkt)`,
       lernziele: [
         "Den Aufbau eines IgG-Antikörpers (schwere/leichte Ketten, Fab/Fc, Disulfidbrücken) beschreiben",
         "Die fünf Immunglobulin-Klassen und ihre jeweiligen Hauptfunktionen nennen",
@@ -1723,7 +1760,7 @@ Antikörper sind Y-förmige Glykoproteine aus je zwei schweren und zwei leichten
         "Klonale Selektion",
         "Affinitätsreifung",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Die enorme Antikörperdiversität des menschlichen Immunsystems — über 10¹⁰ verschiedene Spezifitäten bei nur ca. 20.000 Genen — wird durch den eleganten Mechanismus der V(D)J-Rekombination erzeugt, bei dem Gensegmente zufällig kombiniert und durch zusätzliche Variabilität an den Verbindungsstellen erweitert werden. Für den MedAT sind die V(D)J-Rekombination, die klonale Selektionstheorie nach Burnet und die Affinitätsreifung in Keimzentren zentrale Prüfungsthemen, die das Verständnis von Immunantwort, Impfwirkung und B-Zell-Lymphomen voraussetzen.
 
@@ -1797,7 +1834,12 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
 
 ## Zusammenfassung
 
-Die V(D)J-Rekombination erzeugt die enorme Antikörperdiversität des Immunsystems, indem RAG1/RAG2 zufällig V-, D- und J-Gensegmente auswählt und ligiert, wobei TdT an den Verbindungsstellen zusätzliche N-Nukleotide einfügt und so die junctionale Diversität massiv erhöht. Nach der klonalen Selektionstheorie von Burnet trägt jede B-Zelle bereits vor dem Antigenkontakt einen einzigartigen B-Zell-Rezeptor, und das Antigen selektiert aus dieser vorbestehenden Bibliothek den passenden Klon zur Expansion und Differenzierung zu Plasmazellen. Die Affinitätsreifung in Keimzentren verfeinert die Antikörperqualität durch somatische Hypermutation mittels AID und anschließende Selektion auf höhere Antigenaffinität, sodass die Sekundärantwort durch langlebige Gedächtnis-B-Zellen schneller, stärker und mit deutlich höherer Affinität erfolgt als die Primärantwort.`,
+- **V(D)J-Rekombination** (B-Zellen): RAG1/RAG2 kombiniert V-, D- und J-Gensegmente zufällig → ~10¹¹ mögliche Antikörper-Varianten
+- **TdT**: fügt N-Nukleotide an Verbindungsstellen ein → erhöht Diversität (junctionale Diversität)
+- **Klonale Selektionstheorie** (Burnet): jede B-Zelle hat bereits vor Antigenkontakt einzigartigen BCR; Antigen selektiert passenden Klon
+- **Klonale Expansion**: selektierter Klon teilt sich → Differenzierung zu Plasmazellen (Antikörperproduktion) und Gedächtniszellen
+- **Affinitätsreifung** (Keimzentren): somatische Hypermutation durch AID + Selektion auf höhere Antigenaffinität → Antikörperqualität steigt
+- **Sekundärantwort**: schneller (Gedächtniszellen), stärker (mehr Antikörper), höhere Affinität; Basis der Impfung`,
       lernziele: [
         "Das Prinzip der V(D)J-Rekombination zur Erzeugung von Antikörperdiversität erklären",
         "Die Quellen der Antikörperdiversität (kombinatorisch, junctional, somatische Hypermutation) beschreiben",
@@ -1927,7 +1969,7 @@ Die V(D)J-Rekombination erzeugt die enorme Antikörperdiversität des Immunsyste
       id: "bio-11-03",
       title: "Blutgruppen-Vererbung — AB0-System und Kodominanz",
       stichworte: ["AB0-Vererbung", "Genotypen", "Phänotypen", "Kodominanz", "Multiple Allele"],
-      content: `## Überblick
+      content: `## Einleitung
 
 Das AB0-Blutgruppensystem ist eines der wichtigsten Beispiele für multiple Allelie und Kodominanz in der Genetik und hat gleichzeitig enorme klinische Bedeutung in der Transfusionsmedizin. Für den MedAT werden regelmäßig Kreuzungsschemata (Punnett-Quadrat) zu AB0-Blutgruppen abgefragt, weshalb die sichere Zuordnung von Genotypen zu Phänotypen und das Verständnis von Kodominanz essenziell sind. Die AB0-Inkompatibilität bei Transfusionen ist eine der häufigsten vermeidbaren Ursachen schwerer Zwischenfälle in der klinischen Praxis.
 
@@ -2023,7 +2065,12 @@ AB0-Inkompatibilität bei Transfusion führt zur schwerwiegenden akuten hämolyt
 
 ## Zusammenfassung
 
-Das AB0-Blutgruppensystem wird durch drei Allele eines Gens auf Chromosom 9 bestimmt, wobei I^A und I^B zueinander kodominant sind und beide über das rezessive i⁰-Allel dominieren, sodass sich sechs mögliche Genotypen auf vier Phänotypen (A, B, AB, 0) abbilden. Jede Person bildet natürliche Antikörper gegen diejenigen AB0-Antigene, die auf den eigenen Erythrozyten fehlen — Blutgruppe A hat Anti-B, Blutgruppe B hat Anti-A, Blutgruppe 0 hat Anti-A und Anti-B, und Blutgruppe AB hat keine AB0-Antikörper. Diese Antikörperregel ist die Grundlage der Transfusionsverträglichkeit: Blutgruppe 0 Rh-negativ gilt als universeller Spender, da keine A- oder B-Antigene vorhanden sind, während AB0-inkompatible Transfusionen eine potenziell tödliche akute hämolytische Reaktion mit Hämolyse, disseminierter intravasaler Koagulation und Nierenversagen auslösen können.`,
+- **AB0-System**: 3 Allele (I^A, I^B, i⁰); I^A und I^B kodominant, beide dominant über i⁰ → 4 Phänotypen (A, B, AB, 0)
+- Natürliche Antikörper: Blutgruppe A → Anti-B; B → Anti-A; AB → keine; 0 → Anti-A + Anti-B
+- **Regel**: Antikörper gegen fehlende AB0-Antigene; Basis der Transfusionsverträglichkeit
+- **Universeller Spender**: 0 Rh-negativ (keine A/B-Antigene, kein D-Antigen)
+- **Universeller Empfänger**: AB Rh-positiv (keine Anti-A/B-Antikörper, vertägt D-Antigen)
+- AB0-inkompatible Transfusion: akute hämolytische Reaktion → Hämolyse, DIC, Nierenversagen → lebensbedrohlich`,
       lernziele: [
         "Die genetische Grundlage des AB0-Systems (drei Allele, Kodominanz) erklären",
         "Genotypen der vier Blutgruppen aufzählen und Blutgruppenvererbung berechnen",
@@ -2156,7 +2203,7 @@ Das AB0-Blutgruppensystem wird durch drei Allele eines Gens auf Chromosom 9 best
         "Morbus haemolyticus neonatorum",
         "Anti-D-Prophylaxe",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Das Rhesus-System ist nach dem AB0-System das klinisch bedeutsamste Blutgruppensystem, wobei das D-Antigen durch seine starke Immunogenität bei Inkompatibilität zwischen Mutter und Kind den gefürchteten Morbus haemolyticus neonatorum auslösen kann. Für den MedAT sind die autosomal-dominante Vererbung des RhD-Faktors, der Zweiphasen-Mechanismus der Sensibilisierung (1. Schwangerschaft) und Reaktion (2. Schwangerschaft) sowie der Wirkmechanismus der Anti-D-Prophylaxe zentrale Prüfungsthemen. Die Einführung der Anti-D-Prophylaxe 1968 ist eine der großen Erfolgsgeschichten der pränatalen Medizin.
 
@@ -2235,7 +2282,12 @@ Dank universeller Anti-D-Prophylaxe ist der Morbus haemolyticus neonatorum durch
 
 ## Zusammenfassung
 
-Der Rhesusfaktor D wird autosomal dominant vererbt, wobei bereits ein funktionales RHD-Allel zur D-Antigen-Expression führt (Rh-positiv) und nur homozygote dd-Individuen Rh-negativ sind, was in Europa etwa 15% der Bevölkerung betrifft. Die Rhesus-Inkompatibilität entsteht in zwei Phasen: Bei der ersten Schwangerschaft einer Rh-negativen Mutter mit einem Rh-positiven Kind erfolgt die Sensibilisierung mit zunächst IgM-Antikörpern, die die Plazenta nicht passieren können, gefolgt von IgG-Anti-D-Bildung; bei einer erneuten Rh-positiven Schwangerschaft passieren diese IgG-Antikörper die Plazenta über den FcRn-Rezeptor und verursachen die Hämolyse fetaler Erythrozyten bis hin zum schweren Hydrops fetalis. Die Anti-D-Prophylaxe, verabreicht in der 28. Schwangerschaftswoche und innerhalb von 72 Stunden nach der Geburt, verhindert die mütterliche Sensibilisierung, indem die exogen zugeführten Anti-D-IgG-Antikörper die fetalen Rh-positiven Erythrozyten in der mütterlichen Zirkulation schnell eliminieren, bevor eine eigene Immunantwort aufgebaut werden kann.`,
+- **Rhesusfaktor D**: autosomal dominant; ein RHD-Allel reicht für Rh-positiv; nur dd = Rh-negativ (~15% Europa)
+- **Rh-Inkompatibilität** (2 Phasen): 1. Schwangerschaft → mütterliche Sensibilisierung (IgM, keine Gefahr); 2. Schwangerschaft → IgG-Anti-D passieren Plazenta → fetale Hämolyse
+- Schwere Folge: **Hydrops fetalis** (schwere fetale Anämie, Herzinsuffizienz, generalisiertes Ödem) bis Morbus haemolyticus neonatorum
+- **Anti-D-Prophylaxe**: exogene Anti-D-IgG eliminieren fetale Rh-pos. Erythrozyten schnell → keine eigene Immunisierung der Mutter
+- Zeitpunkte der Prophylaxe: SSW 28 + **innerhalb 72 h nach Geburt** (oder Blutung/Amniozentese)
+- Merke: IgG = plazentagängig (FcRn-Rezeptor); IgM = NICHT plazentagängig → 1. Schwangerschaft sicher`,
       lernziele: [
         "Die Vererbung des Rh-D-Antigens und die Bedeutung von Homozygotie/Heterozygotie erklären",
         "Den Mechanismus der Rhesus-Inkompatibilität und die Pathogenese des Morbus haemolyticus neonatorum beschreiben",
