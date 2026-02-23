@@ -41,11 +41,20 @@ Abiotische Faktoren bilden die physikalisch-chemische Grundlage jedes Ökosystem
 
 Abiotische Faktoren wirken dabei nicht unabhängig voneinander: hohe Temperatur erhöht die Evapotranspiration und kann Wassermangel verschärfen; niedriger pH kann die Löslichkeit von Schwermetallen erhöhen und diese toxisch wirken lassen. Die Ökologie analysiert diese Wechselwirkungen systematisch.
 
-**Lernziele:**
-- Abiotische Faktoren aufzählen und das Konzept der Toleranzkurve (Optimum, Pessimum, Todespunkt, ökologische Amplitude) erläutern
-- Den Unterschied zwischen euryöken und stenöken Arten erklären und Beispiele nennen
-- Das Liebigsche Minimumgesetz und Shelfords Toleranzgesetz erläutern und praktische Anwendungen beschreiben
-- Den Begriff Bioindikator erklären und konkrete Beispiele aus Pflanzen und Tieren nennen
+---
+
+## Toleranzkurve — Optimum, Pessimum und ökologische Amplitude
+
+Die **Toleranzkurve** zeigt die Leistungsfähigkeit (Wachstum, Reproduktionsrate, Aktivität) eines Organismus in Abhängigkeit von einem abiotischen Faktor. Sie hat eine Glockenkurven-Form mit klar definierten Bereichen:
+
+- **Optimum**: Bereich maximaler Leistung und Fitness (mittlere Faktorstufe)
+- **Pessimum**: Randbereiche mit stark verminderter, aber noch möglicher Leistung (physiologischer Stress)
+- **Todespunkte (letale Grenzen)**: Extremwerte, jenseits derer der Organismus stirbt
+- **Ökologische Amplitude**: Gesamtbereich zwischen beiden Todespunkten — die Toleranzbreite
+
+Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art: Breite Amplitude = **euryök** (Generalist), enge Amplitude = **stenök** (Spezialist, Bioindikator).
+
+> **Merke:** Toleranzkurve: Optimum (max. Fitness) → Pessimum (Stress, aber Überleben) → Todespunkt (letale Grenze). Ökologische Amplitude = Breite des Toleranzbereichs.
 
 ---
 
@@ -62,12 +71,6 @@ Die Unterscheidung zwischen euryöken und stenöken Arten ist für den Naturschu
 Das Minimumgesetz gilt weit über Pflanzenwachstum hinaus. In der Gewässerökologie: Phosphor ist in Süßwasserseen oft der limitierende Faktor (Redfield-Verhältnis C:N:P = 106:16:1 im Phytoplankton). Selbst bei viel Stickstoff und Licht wächst das Phytoplankton nicht ohne Phosphor. Wird Phosphor durch Kläranlagenabwässer zugeführt, explodiert das Algenwachstum (Eutrophierung). In Gewächshäusern der Hochleistungslandwirtschaft wird CO₂ künstlich erhöht — hier ist CO₂ nicht mehr der limitierende Faktor, Licht und Wasser sind es. Shelfords Erweiterung (Toleranzgesetz) ist ebenfalls wichtig: Zu viel Kupfer, Zink oder andere Schwermetalle sind toxisch, obwohl diese Elemente in Spurenmengen essenziell sind. In der Humanmedizin findet sich eine direkte Analogie: Ein Intensivpatient kann trotz optimaler Beatmung, Hämodynamik und Antibiose an einem Mikronährstoffmangel (Selen, Zink, Vitamin D) sterben — der limitierende Mangelfaktor bestimmt das Outcome.
 
 > **Merke:** Liebigs Gesetz gilt für alle Ökosystemebenen: der knappste essentielle Faktor begrenzt das System, nicht die reichlichen. Shelford: auch Überschuss kann limitieren.
-
----
-
-## Klinischer Bezug
-
-Das Minimumgesetz hat eine direkte klinische Entsprechung in der Intensiv- und Ernährungsmedizin: Wie in einem Ökosystem das Wachstum durch den knappsten Nährstoff limitiert wird, kann ein kritisch kranker Patient trotz optimaler Beatmung, Hämodynamik und antibiotischer Therapie an einem einzelnen Mikronährstoffmangel sterben. Selenium-Mangel beeinträchtigt die Glutathionperoxidase-Aktivität und damit den antioxidativen Schutz; Zinkmangel hemmt über 300 Enzyme und das Immunsystem. Das "Refeeding-Syndrom" nach längerer Mangelernährung demonstriert den Minimumsatz dramatisch: Beim Beginn der Ernährungstherapie werden Phosphat, Kalium und Magnesium rasch in Zellen aufgenommen (Anabolismus wird aktiviert) → akuter Mangel im Blut → potentiell letale Herzrhythmusstörungen und neuromuskuläre Störungen. Der klinisch limitierende Faktor muss zuerst identifiziert und behandelt werden.
 
 ---
 
@@ -261,6 +264,37 @@ Biotische Faktoren umfassen alle Wechselwirkungen zwischen Lebewesen und sind ze
 
 ---
 
+## Konkurrenz — Intraspezifisch vs. Interspezifisch
+
+**Konkurrenz** entsteht, wenn zwei Individuen dieselbe begrenzte Ressource benötigen. Man unterscheidet zwei Arten:
+
+- **Intraspezifische Konkurrenz** (innerhalb einer Art): Besonders intensiv, da vollständige Nischenüberlappung; dichteabhängige Regulation → führt zu logistischem Wachstum
+- **Interspezifische Konkurrenz** (zwischen Arten): Treibt Nischendifferenzierung und Evolution an
+
+**Konkurrenzausschlussprinzip (Gauß, 1934):** Zwei Arten in identischer ökologischer Nische können nicht dauerhaft koexistieren — eine verdrängt die andere. Koexistenz erfordert Nischendifferenzierung (zeitlich, räumlich oder trophisch). Klassischer Beleg: *Paramecium aurelia* verdrängt *P. caudatum* in Mischkultur.
+
+> **Merke:** Konkurrenzausschlussprinzip (Gauß): identische Nische → eine Art verdrängt die andere. Koexistenz nur durch Nischendifferenzierung.
+
+---
+
+## Symbioseformen — Wer profitiert, wer verliert?
+
+Biotische Wechselwirkungen werden durch die Wirkung auf jeden Partner klassifiziert:
+
+| Interaktionstyp | Partner 1 | Partner 2 | Beispiel |
+|---|---|---|---|
+| **Mutualismus** | + | + | Mykorrhiza (Pilz + Pflanze), Rhizobien in Leguminosen |
+| **Kommensalismus** | + | 0 | Epiphyten auf Ästen, Remoren an Haien |
+| **Parasitismus** | + | − | Plasmodium (Malaria), Taenia (Bandwurm) |
+| **Prädation** | + | − | Fuchs + Hase, Adler + Maus |
+| **Konkurrenz** | − | − | Zwei Arten um dieselbe Ressource |
+
+**Unterschied Parasitismus vs. Prädation:** Der Parasit tötet den Wirt normalerweise **nicht sofort** (ein toter Wirt = kein Lebensraum mehr → für den Parasiten nachteilig). Der Räuber tötet die Beute direkt. Beide haben das Vorzeichen (+/−).
+
+> **Merke:** Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−), Konkurrenz (−/−). Parasit tötet Wirt nicht sofort — Räuber schon.
+
+---
+
 ## Lotka-Volterra-Dynamik — Versetzte Zyklen als Naturgesetz
 
 Die Lotka-Volterra-Gleichungen beschreiben ein grundlegendes Muster in der Natur: Räuber- und Beutepopulationen oszillieren, wobei die Räuberpopulation der Beutepopulation zeitlich nachhinkt. Der Mechanismus: (1) Viel Beute → Räuber können sich gut ernähren → Räuberpopulation wächst. (2) Viele Räuber → Beutepopulation wird dezimiert → sinkt. (3) Wenig Beute → Räuber verhungern → Räuberpopulation sinkt. (4) Wenige Räuber → Beutepopulation erholt sich → Zyklus beginnt von vorn. Das Modell hat drei wichtige Aussagen: (A) Populationen oszillieren periodisch. (B) Räuber-Zyklus hinkt Beute-Zyklus nach. (C) Mittlere Populationsgrößen bleiben konstant (Lotka-Volterra-Invariante). In der Praxis sind die Zyklen selten rein sinusförmig — externe Störungen (El Niño, harte Winter) überlagern die endogene Dynamik. Das Yellowstone-Wolf-Experiment (1995) zeigte, dass Räuber durch Verhaltensveränderungen der Beute (Angst) sogar ohne direktes Fressen das Ökosystem strukturieren können.
@@ -274,12 +308,6 @@ Die Lotka-Volterra-Gleichungen beschreiben ein grundlegendes Muster in der Natur
 Das humane Darmmikrobiom umfasst ca. 3,8 × 10¹³ Bakterienzellen (ungefähr gleich viele wie menschliche Körperzellen) und ca. 1.000 Bakterienarten — ein hochkomplexes mutualistisches Ökosystem. Funktionen des Mikrobioms: (1) Verdauung unverdaulicher Polysaccharide (Ballaststoffe) → kurzkettige Fettsäuren (Butyrat = Colonozyten-Energiequelle). (2) Vitaminsynthese (K2, B12, Biotin, Folat). (3) Immunmodulation — ca. 70% der Immunzellen im Darm (MALT = mucosa-associated lymphoid tissue); Mikrobiom trainiert Immunsystem (Toleranz vs. Abwehr). (4) Colonisation Resistance: etabliertes Mikrobiom verhindert durch Konkurrenz (Nischendifferenzierung, Bacteriocine) das Ansiedeln von Pathogenen. Antibiotika-assoziierte Diarrhö und Clostridioides-difficile-Infektionen entstehen, wenn Antibiotika das mutualistisches Ökosystem stören und Pathogene die freien Nischen besetzen. Das Mikrobiom wird zunehmend als "vergessenes Organ" verstanden, das Metabolismus, Immunsystem und sogar Verhalten (Darm-Hirn-Achse via Nervus vagus und Serotonin-Produktion) beeinflusst.
 
 > **Merke:** Darmmikrobiom = mutualistisches Ökosystem: Bakterien liefern Vitamine, Butyrat, Immunmodulation; Mensch liefert Nahrung und Habitat. Antibiotika stören das Ökosystem → C. difficile.
-
----
-
-## Klinischer Bezug
-
-Parasitismus ist eines der bedeutendsten medizinischen Themen weltweit. Malaria (Plasmodium falciparum, P. vivax, P. malariae, P. ovale) ist die tödlichste parasitäre Erkrankung: ca. 600.000 Todesfälle/Jahr (WHO 2022), vorwiegend Kinder unter 5 Jahren in Afrika. Die Koevolution zwischen Wirt und Parasit zeigt sich in der Sichelzellmutation (HbS): Heterozygote (HbAS) haben einen Überlebensvorteil in Malaria-Endemiegebieten, weil parasitierte Erythrozyten bei niedrigem O₂ sicheln und phagozytiert werden. Die höchste Frequenz der HbS-Mutation findet sich in Regionen mit historisch hoher Malaria-Prävalenz (Subsahara-Afrika, Mittelmeerraum) — ein direkter Fingerabdruck der Parasit-Wirt-Koevolution. Lyme-Borreliose (Borrelia burgdorferi, übertragen durch Ixodes-Zecken) ist in Europa und Nordamerika die häufigste vektorbürtige Erkrankung, mit zunehmender Ausbreitung durch Klimawandel (mildere Winter → mehr Zecken). Das "One-Health"-Konzept (WHO) betrachtet Mensch-, Tier- und Umweltgesundheit als untrennbar verbunden — Parasitosen sind Paradebeispiele dieser Verknüpfung.
 
 ---
 
@@ -1563,6 +1591,32 @@ Antikörper sind die zentralen Effektormoleküle der adaptiven humoralen Immunan
 
 ---
 
+## IgG-Grundstruktur — Fab und Fc
+
+Ein **Antikörper (Immunglobulin, Ig)** ist ein Y-förmiges Glykoprotein. Der klassische IgG-Antikörper besteht aus:
+
+- **2 schwere Ketten (H = Heavy)** und **2 leichte Ketten (L = Light)**, je durch Disulfidbrücken verbunden
+- Jede Kette besitzt **variable (V) und konstante (C) Domänen**
+
+**Fab-Fragment (Fragment antigen-binding):**
+- Die zwei „Arme" des Y — enthält variable Regionen von H- und L-Kette
+- Bildet die **Antigenbindestelle** (CDRs, Complementarity Determining Regions)
+- Hochspezifisch: jeder Antikörper besitzt eine einzigartige Fab-Region
+
+**Fc-Fragment (Fragment crystallizable):**
+- Der „Stamm" des Y — enthält konstante Regionen der schweren Ketten
+- Vermittelt **Effektorfunktionen**: Fc-Rezeptoren auf Makrophagen (Opsonisierung), C1q-Bindung (Komplementaktivierung), FcRn (Plazentatransfer bei IgG)
+- Isotyp-spezifisch — bestimmt die Ig-Klasse (IgG, IgA, IgM, IgE, IgD)
+
+**Effektorfunktionen im Überblick:**
+- **Neutralisierung**: Fab blockiert Toxine oder Virusbindestellen direkt → Inaktivierung
+- **Opsonisierung**: IgG markiert Pathogene → Phagozytose durch Makrophagen/Neutrophile (via Fc-Rezeptoren)
+- **Komplementaktivierung (klassischer Weg)**: IgM/IgG + Antigen → C1q bindet Fc → Kaskade → MAC (Lyse)
+
+> **Merke:** IgG: 2 schwere + 2 leichte Ketten, Y-Form. Fab = variabel (Antigenerkennung). Fc = konstant (Effektorfunktionen: Opsonisierung, Komplementaktivierung, Plazentatransfer).
+
+---
+
 ## Immunglobulin-Klassen (Isotypen)
 
 Das Immunsystem produziert fünf Klassen von Immunglobulinen (Isotypen), die sich in Struktur, Vorkommen und Funktion unterscheiden.
@@ -1593,12 +1647,6 @@ IgM ist das erste Immunglobulin, das bei einer Immunantwort produziert wird (Pri
 Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, das bei der Abwehr von Pathogenen hilft. Der klassische Weg wird durch Antigen-Antikörper-Komplexe aktiviert: C1q bindet an Fc-Regionen von IgG oder IgM, die an Antigen gebunden sind. Aktiviertes C1 spaltet C4 und C2 → C3-Konvertase → spaltet massenhaft C3 → C3b-Ablagerung auf Pathogenoberfläche (Opsonin für Phagozytose) → C5-Konvertase → C5b → C6, C7, C8, C9 assemblieren den Membrane Attack Complex (MAC) → Lochbildung in bakterieller Membran → osmotische Lyse. Nebenprodukte: C3a und C5a sind Anaphylatoxine → Mastzell-Degranulation, Gefäßerweiterung, Neutrophilenrekrutierung (Entzündung).
 
 > **Merke:** Komplementklassischer Weg: Ag-Ak-Komplex → C1q → C3-Konvertase → C3b (Opsonin) → MAC (Lyse). C3a/C5a = Anaphylatoxine.
-
----
-
-## Klinischer Bezug
-
-Der serologische Nachweis von IgM vs. IgG ist klinisch essenziell: IgM zeigt eine akute Infektion an (z. B. IgM gegen CMV, EBV, Hepatitis A), IgG zeigt eine abgelaufene Infektion oder Immunität nach Impfung (z. B. Hepatitis-B-Oberflächenantikörper IgG nach Impfung). Bei SARS-CoV-2 werden IgG-Antikörper zur Bestimmung des Immunstatus eingesetzt.
 
 ---
 
@@ -1795,9 +1843,11 @@ Die Affinitätsreifung findet in Keimzentren der sekundären Lymphorgane (Lymphk
 
 ---
 
-## Klinischer Bezug
+## Klassenwechsel (Isotyp-Switch) — Funktionelle Anpassung
 
-V(D)J-Rekombinationsfehler sind pathologisch relevant: Fehlerhaftes Rearrangement kann Proto-Onkogene in die Nähe aktiver Immungenpromotoren bringen → Lymphome (z. B. t(8;14) bei Burkitt-Lymphom: c-Myc unter IgH-Promotor). Nachweis von klonalen V(D)J-Rearrangements per PCR wird in der Diagnostik von B-Zell-Lymphomen genutzt (Klonalitätsnachweis).
+Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Immunsystem über einen dritten Mechanismus zur Antikörperanpassung: den Klassenwechsel (Class Switch Recombination, CSR). Dabei wird die konstante Region der schweren Kette ausgetauscht, ohne die Antigenbindestelle zu verändern — die Spezifität bleibt erhalten, aber die Effektorfunktion ändert sich. Der Klassenwechsel wird durch Zytokine gesteuert: IL-4 induziert den Switch zu IgE (relevant bei Allergien und Parasitenabwehr), IFN-gamma fördert den Switch zu IgG (Opsonierung, Komplementaktivierung), TGF-beta fördert IgA (Schleimhautimmunität). Auch der Klassenwechsel erfordert das Enzym AID (Activation-Induced Cytidine Deaminase), das DNA-Brüche in den Switch-Regionen erzeugt. Fehlerhafte CSR kann ebenso wie fehlerhafte V(D)J-Rekombination zu chromosomalen Translokationen und damit zu Lymphomen beitragen.
+
+> **Merke:** Klassenwechsel (CSR): Austausch der konstanten Region (IgM → IgG, IgA, IgE) ohne Änderung der Antigenbindestelle. Gesteuert durch Zytokine, katalysiert durch AID.
 
 ---
 
@@ -1821,14 +1871,6 @@ V(D)J-Rekombinationsfehler sind pathologisch relevant: Fehlerhaftes Rearrangemen
 - AID (Activation-Induced Cytidine Deaminase): Mutationsrate 10⁵–10⁶× höher als normal
 - Burnet (1957): Klonale Selektionstheorie
 - t(8;14) bei Burkitt-Lymphom: c-Myc unter IgH-Promotor durch fehlerhafte V(D)J-Rekombination
-
----
-
-## Klassenwechsel (Isotyp-Switch) — Funktionelle Anpassung
-
-Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Immunsystem über einen dritten Mechanismus zur Antikörperanpassung: den Klassenwechsel (Class Switch Recombination, CSR). Dabei wird die konstante Region der schweren Kette ausgetauscht, ohne die Antigenbindestelle zu verändern — die Spezifität bleibt erhalten, aber die Effektorfunktion ändert sich. Der Klassenwechsel wird durch Zytokine gesteuert: IL-4 induziert den Switch zu IgE (relevant bei Allergien und Parasitenabwehr), IFN-gamma fördert den Switch zu IgG (Opsonierung, Komplementaktivierung), TGF-beta fördert IgA (Schleimhautimmunität). Auch der Klassenwechsel erfordert das Enzym AID (Activation-Induced Cytidine Deaminase), das DNA-Brüche in den Switch-Regionen erzeugt. Fehlerhafte CSR kann ebenso wie fehlerhafte V(D)J-Rekombination zu chromosomalen Translokationen und damit zu Lymphomen beitragen.
-
-> **Merke:** Klassenwechsel (CSR): Austausch der konstanten Region (IgM → IgG, IgA, IgE) ohne Änderung der Antigenbindestelle. Gesteuert durch Zytokine, katalysiert durch AID.
 
 ---
 
@@ -2031,12 +2073,6 @@ Kodominanz bedeutet, dass beide Allele eines heterozygoten Individuums vollstän
 In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als universeller Spender (keine A-, B- oder D-Antigene auf Erythrozyten → kein Angriff durch Empfänger-Antikörper). Blutgruppe AB Rh-positiv (AB+) als universeller Empfänger (keine Anti-A oder Anti-B im Serum → kein Angriff auf Spendererythrozyten). In der modernen Transfusionsmedizin wird diese Vereinfachung vermieden — durch weitere Blutgruppensysteme (Kell, Duffy, Kidd, Lewis etc.) sind auch 0- und AB+-Blut inkompatibel möglich. Dennoch werden 0-Präparate in Notfallsituationen ohne Kreuzprobe eingesetzt. Pro Jahr werden Millionen von Transfusionen durchgeführt — AB0-Fehler durch Verwechslung sind eine vermeidbare Hauptursache schwerer Transfusionszwischenfälle.
 
 > **Merke:** 0 Rh-: universeller Spender (keine Antigene). AB Rh+: universeller Empfänger (keine Anti-A/B). In der Praxis: immer blutgruppenidentisch transfundieren wenn möglich.
-
----
-
-## Klinischer Bezug
-
-AB0-Inkompatibilität bei Transfusion führt zur schwerwiegenden akuten hämolytischen Transfusionsreaktion (ABO-Fehltransfusion): innerhalb von Minuten Hämolyse, DIC (disseminierte intravasale Koagulation), Nierenversagen und Schock. Dies ist einer der häufigsten vermeidbaren Transfusionstode. Konsequenz: Strenge Identifikationsverfahren (Bedside-Test, Kreuzprobe) vor jeder Transfusion.
 
 ---
 
@@ -2248,12 +2284,6 @@ Der Pathomechanismus der Rhesus-Inkompatibilität verläuft in zwei Phasen. Phas
 Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medizin. Vor ihrer Einführung (1968) war Rhesusinkompatibilität eine der häufigsten Ursachen für perinatale Mortalität. Der Wirkmechanismus basiert auf dem Prinzip der Antikörper-vermittelten Suppression der Immunantwort: Exogen verabreichte Anti-D-IgG-Antikörper binden an Rh+ Erythrozyten in der mütterlichen Zirkulation und führen zu ihrer schnellen Clearance durch Makrophagen der Milz, bevor B-Zellen eine Primärantwort aufbauen können. Der genaue Mechanismus ist nicht vollständig geklärt — möglicherweise spielen auch FcgRIIb (inhibitorische Fc-Rezeptoren auf B-Zellen) eine Rolle. Die Prophylaxe wird in der 28. SSW (pränatale Prophylaxe, da 2% der Mütter sich bereits antepartum sensibilisieren) und innerhalb von 72 Stunden postpartal verabreicht.
 
 > **Merke:** Anti-D-Prophylaxe: verabreichte Anti-D-IgG → Phagozytose fetaler Rh+ Erythrozyten vor mütterlicher Immunantwort → keine Sensibilisierung. 28. SSW + <72h postpartal.
-
----
-
-## Klinischer Bezug
-
-Dank universeller Anti-D-Prophylaxe ist der Morbus haemolyticus neonatorum durch Rh-Inkompatibilität in Industrieländern selten geworden. Restrisiken bestehen bei nicht erkannten Sensibilisierungen (z. B. stille fetomaternale Transfusionen frühzeitig) oder bei nicht-D Rh-Antigenen (Kell, Kidd) ohne verfügbare Prophylaxe.
 
 ---
 
