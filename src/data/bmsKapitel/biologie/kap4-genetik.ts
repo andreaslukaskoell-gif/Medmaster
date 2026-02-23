@@ -35,8 +35,6 @@ Die klassische Genetik bildet das Fundament der Vererbungslehre und geht auf Gre
 
 ---
 
----
-
 ## Grundbegriffe der Genetik
 
 Gen, Allel, Genotyp und Phänotyp sind die Grundbegriffe der klassischen Genetik. Homozygote Individuen tragen zwei gleiche Allele (AA oder aa), heterozygote zwei verschiedene (Aa). Dominante Allele setzen sich auch im heterozygoten Zustand durch, rezessive nur bei Homozygotie.
@@ -61,35 +59,6 @@ Bei intermediärer Dominanz zeigt Aa einen Mischphänotyp (F₂-Verhältnis 1:2:
 
 ---
 
-## Klinischer Bezug
-
-Die Mendelschen Regeln bilden die Grundlage der genetischen Beratung. Bei autosomal rezessiven Erkrankungen wie Mukoviszidose (Aa × Aa → 25% Erkrankungsrisiko) ermöglicht das Spaltungsgesetz die Risikoberechnung für Nachkommen. Das Verständnis von Dominanz, Rezessivität und Heterozygotenfrequenz ist essenziell für Pränataldiagnostik und Carrier-Screening.
-
----
-
-## MedAT-Fokus
-
-**Häufige Fragen:**
-- Phänotyp-Verhältnis in F₂ bei dominant-rezessivem monohybridem Erbgang (3:1)
-- Berechnung von Genotyp-Verhältnissen bei dihybridem Erbgang (9:3:3:1)
-- Testkreuzung zur Unterscheidung von AA vs. Aa
-
-**Typische Verwechslungen:**
-- Genotyp-Verhältnis 1:2:1 vs. Phänotyp-Verhältnis 3:1 (bei dominant-rezessiv)
-- Intermediär (Mischphänotyp, z. B. rosa) vs. Kodominanz (beide exprimiert, z. B. AB)
-- 1. Regel (homozygote Eltern → F₁ uniform) vs. 2. Regel (heterozygote Eltern → F₂ spaltet)
-- Phänotyp-Verhältnis 3:1 gilt nur bei dominant-rezessiv, bei intermediär ist es 1:2:1
-- Unabhängigkeitsregel gilt nur bei Genen auf verschiedenen Chromosomen (nicht bei Kopplung)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- F₂-Spaltung monohybrid: 3:1 Phänotyp, 1:2:1 Genotyp
-- F₂-Spaltung dihybrid: 9:3:3:1 (bei Unabhängigkeit)
-- Testkreuzung: 100% dominant = AA; 1:1 = Aa
-- Aa × Aa bei autosomal-rezessiver Erkrankung: 25% krank, 50% Carrier, 25% gesund
-- AB0-System: I^A und I^B kodominant zueinander, beide dominant über i
-
----
-
 ## Das AB0-Blutgruppensystem als Modellbeispiel
 
 Das **AB0-Blutgruppensystem** ist ein klassisches Prüfungsbeispiel für multiple Allele und Kodominanz. Es existieren drei Allele: **I^A**, **I^B** und **i** (= I^O). I^A und I^B sind **kodominant** zueinander (Genotyp I^A I^B → Blutgruppe AB mit beiden Antigenen), während beide über **i** dominieren. Daraus ergeben sich sechs mögliche Genotypen für vier Phänotypen: Blutgruppe A (I^A I^A oder I^A i), Blutgruppe B (I^B I^B oder I^B i), Blutgruppe AB (I^A I^B) und Blutgruppe 0 (ii). Für die MedAT-Prüfung sind Kreuzungsaufgaben typisch: Welche Blutgruppen können die Kinder eines Elternpaares I^A i x I^B i haben? Antwort: alle vier Blutgruppen sind möglich (I^A I^B = AB, I^A i = A, I^B i = B, ii = 0, je 25%). Das **Rhesus-System** folgt einem einfachen dominant-rezessiven Erbgang: Rh-positiv (DD oder Dd) ist dominant über Rh-negativ (dd). Klinisch relevant ist die **Rhesus-Inkompatibilität** bei Rh-negativer Mutter und Rh-positivem Kind (Morbus haemolyticus neonatorum), die durch Anti-D-Prophylaxe verhindert wird.
@@ -103,6 +72,29 @@ Das **AB0-Blutgruppensystem** ist ein klassisches Prüfungsbeispiel für multipl
 Beim **dihybriden Erbgang** werden zwei unabhängige Gene gleichzeitig betrachtet. Die Kreuzung **RrGg x RrGg** ergibt über das **Punnett-Quadrat** (4x4 = 16 Felder) das F₂-Verhältnis **9:3:3:1** (9 R_G_, 3 R_gg, 3 rrG_, 1 rrgg). Voraussetzung ist die **Unabhängigkeitsregel** (3. Mendelsche Regel): Die Gene müssen auf verschiedenen Chromosomen liegen oder so weit entfernt auf demselben Chromosom, dass sie sich wie unabhängig verhalten. Ein häufiger MedAT-Fehler ist die Annahme von 9:3:3:1 bei **gekoppelten Genen** -- hier überwiegen die Parentaltypen, und Rekombinanten sind seltener. Die Wahrscheinlichkeitsberechnung nutzt die **Produktregel**: P(RrGg → rrgg) = P(rr) x P(gg) = 1/4 x 1/4 = 1/16. Bei drei unabhängigen Genen (trihybrid) ergeben sich 64 Kombinationen mit einem Verhältnis von 27:9:9:9:3:3:3:1.
 
 > **Merke:** Dihybrid 9:3:3:1 nur bei Unabhängigkeit. Punnett-Quadrat: 4x4 = 16 Felder. Produktregel: P(rrgg) = 1/4 x 1/4 = 1/16. Trihybrid: 64 Kombinationen.
+
+---
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- Phänotyp-Verhältnis in F₂ bei dominant-rezessivem monohybridem Erbgang (3:1)
+- Berechnung von Genotyp-Verhältnissen bei dihybridem Erbgang (9:3:3:1)
+- Testkreuzung zur Unterscheidung von AA vs. Aa
+
+**Achtung — typische Verwechslungen:**
+- Genotyp-Verhältnis 1:2:1 vs. Phänotyp-Verhältnis 3:1 (bei dominant-rezessiv)
+- Intermediär (Mischphänotyp, z. B. rosa) vs. Kodominanz (beide exprimiert, z. B. AB)
+- 1. Regel (homozygote Eltern → F₁ uniform) vs. 2. Regel (heterozygote Eltern → F₂ spaltet)
+- Phänotyp-Verhältnis 3:1 gilt nur bei dominant-rezessiv, bei intermediär ist es 1:2:1
+- Unabhängigkeitsregel gilt nur bei Genen auf verschiedenen Chromosomen (nicht bei Kopplung)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- F₂-Spaltung monohybrid: 3:1 Phänotyp, 1:2:1 Genotyp
+- F₂-Spaltung dihybrid: 9:3:3:1 (bei Unabhängigkeit)
+- Testkreuzung: 100% dominant = AA; 1:1 = Aa
+- Aa × Aa bei autosomal-rezessiver Erkrankung: 25% krank, 50% Carrier, 25% gesund
+- AB0-System: I^A und I^B kodominant zueinander, beide dominant über i
 
 ---
 
@@ -243,8 +235,6 @@ Chromosomen sind die strukturellen Träger der Erbinformation und bestehen aus D
 
 ---
 
----
-
 ## Chromosomenstruktur und Karyotyp
 
 Chromosomen bestehen aus DNA und Histonen. Das Zentromer verbindet die beiden Schwester-Chromatiden und dient als Ansatz für Spindelfasern. Telomere schützen die Chromosomenenden und verkürzen sich bei jeder Teilung. Der normale menschliche Karyotyp umfasst 46 Chromosomen (22 Autosomenpaare + XX/XY).
@@ -269,35 +259,6 @@ Deletion (Verlust), Duplikation (Verdopplung), Translokation (Verlagerung) und I
 
 ---
 
-## Klinischer Bezug
-
-Chromosomenaberrationen sind die häufigste Ursache für Spontanaborte (ca. 50% aller Fehlgeburten). Trisomie 21 (Down-Syndrom, 1:700 Lebendgeburten) wird im Rahmen der Pränataldiagnostik durch NIPT, Chorionzottenbiopsie oder Amniozentese diagnostiziert. Translokationen können familiär gehäuft auftreten und erfordern genetische Beratung bei Kinderwunsch.
-
----
-
-## MedAT-Fokus
-
-**Häufige Fragen:**
-- Karyotyp-Notation interpretieren (z. B. 47,XY,+21)
-- Klinische Merkmale von Trisomie 21, Klinefelter und Turner zuordnen
-- Unterscheidung numerische vs. strukturelle Chromosomenaberrationen
-
-**Typische Verwechslungen:**
-- Klinefelter (47,XXY, männlich) vs. Turner (45,X, weiblich) — Geschlecht durch Y-Chromosom bestimmt
-- p-Arm (kurz, petit) vs. q-Arm (lang) eines Chromosoms
-- Balancierte Translokation (Träger gesund) vs. unbalancierte (Phänotyp betroffen)
-- Trisomie (3 Kopien eines Chromosoms) vs. Triploidie (3n = 69 Chromosomen gesamt)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Trisomie 21: Häufigkeit 1:700, steigt mit mütterlichem Alter
-- Klinefelter (47,XXY): 1:600 männliche Neugeborene
-- Turner (45,X): 1:2.500 weibliche Neugeborene
-- Cri-du-chat: 5p-Deletion; DiGeorge: 22q11-Deletion (CATCH-22)
-- Ca. 50% aller Spontanaborte durch Chromosomenaberrationen
-- Robertsonsche Translokation: Fusion zweier akrozentrischer Chromosomen (z. B. rob(14;21) → Translokations-Trisomie 21)
-
----
-
 ## Genkopplung und Crossing-over
 
 Gene auf demselben Chromosom werden **gekoppelt vererbt** und folgen nicht der 3. Mendelschen Regel (Unabhängigkeit). Durch **Crossing-over** in der Prophase I der Meiose können homologe Chromosomen genetisches Material austauschen, wodurch **Rekombinanten** entstehen. Die **Rekombinationsfrequenz** gibt den Abstand zwischen zwei Genloci an und wird in **centiMorgan (cM)** gemessen: 1 cM entspricht 1% Rekombination. Gene mit einer Rekombinationsfrequenz von 50% verhalten sich wie unabhängige Gene (auf verschiedenen Chromosomen oder weit entfernt). Die Kopplungsanalyse war historisch die Grundlage der **Genkartierung** und wird heute noch in der LOD-Score-Analyse zur Identifikation von Krankheitsgenen eingesetzt.
@@ -311,6 +272,29 @@ Gene auf demselben Chromosom werden **gekoppelt vererbt** und folgen nicht der 3
 Chromosomenaberrationen werden pränatal durch verschiedene Methoden diagnostiziert. Das **Ersttrimester-Screening** (11.--14. SSW) kombiniert Nackentransparenz-Messung mit Serummarkern (PAPP-A, freies beta-hCG) zur Risikoabschätzung. Der **nicht-invasive Pränataltest (NIPT)** analysiert zellfreie fetale DNA aus mütterlichem Blut und erreicht für Trisomie 21 eine Sensitivität von >99% bei einer Falsch-positiv-Rate von <0,1%. Invasive Verfahren wie **Chorionzottenbiopsie** (10.--12. SSW) und **Amniozentese** (15.--17. SSW) ermöglichen die definitive Karyotypisierung, bergen aber ein Fehlgeburtsrisiko von 0,1--0,5%. Die **FISH-Analyse** (Fluoreszenz-in-situ-Hybridisierung) erlaubt den gezielten Nachweis spezifischer chromosomaler Regionen mittels fluoreszenzmarkierter DNA-Sonden und wird für Schnelldiagnostik bei Trisomie 13, 18, 21 eingesetzt. Die **Robertsonsche Translokation** ist eine Sonderform, bei der zwei akrozentrische Chromosomen (13, 14, 15, 21, 22) am Zentromer fusionieren; Träger einer rob(14;21) haben ein erhöhtes Risiko für Translokations-Trisomie 21 bei den Nachkommen, unabhängig vom mütterlichen Alter.
 
 > **Merke:** NIPT: zellfreie fetale DNA im Mutterblut, >99% Sensitivität für Trisomie 21. Chorionzottenbiopsie (10.--12. SSW) und Amniozentese (15.--17. SSW) = invasiv, definitiver Karyotyp. Robertsonsche Translokation rob(14;21) → altersunabhängiges Trisomie-21-Risiko.
+
+---
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- Karyotyp-Notation interpretieren (z. B. 47,XY,+21)
+- Klinische Merkmale von Trisomie 21, Klinefelter und Turner zuordnen
+- Unterscheidung numerische vs. strukturelle Chromosomenaberrationen
+
+**Achtung — typische Verwechslungen:**
+- Klinefelter (47,XXY, männlich) vs. Turner (45,X, weiblich) — Geschlecht durch Y-Chromosom bestimmt
+- p-Arm (kurz, petit) vs. q-Arm (lang) eines Chromosoms
+- Balancierte Translokation (Träger gesund) vs. unbalancierte (Phänotyp betroffen)
+- Trisomie (3 Kopien eines Chromosoms) vs. Triploidie (3n = 69 Chromosomen gesamt)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Trisomie 21: Häufigkeit 1:700, steigt mit mütterlichem Alter
+- Klinefelter (47,XXY): 1:600 männliche Neugeborene
+- Turner (45,X): 1:2.500 weibliche Neugeborene
+- Cri-du-chat: 5p-Deletion; DiGeorge: 22q11-Deletion (CATCH-22)
+- Ca. 50% aller Spontanaborte durch Chromosomenaberrationen
+- Robertsonsche Translokation: Fusion zweier akrozentrischer Chromosomen (z. B. rob(14;21) → Translokations-Trisomie 21)
 
 ---
 
@@ -448,8 +432,6 @@ Geninteraktionen beschreiben Phänomene, bei denen Gene nicht unabhängig vonein
 
 ---
 
----
-
 ## Epistase
 
 Epistase bedeutet, dass ein Gen (das epistatische) die Wirkung eines anderen (des hypostatischen) überdeckt. Beim klassischen Maus-Beispiel maskiert cc (Albino) die Fellfarbe des B-Locus vollständig. Die Kreuzung BbCc × BbCc ergibt statt 9:3:3:1 das Verhältnis 9:3:4 (schwarz:braun:weiß).
@@ -474,35 +456,6 @@ Komplementierung: Zwei rezessive Mutationen in verschiedenen Genen (aaBB × AAbb
 
 ---
 
-## Klinischer Bezug
-
-Geninteraktionen sind klinisch relevant bei der Pharmakogenetik: CYP2D6-Polymorphismen (Epistasie auf Medikamentenwirkung) beeinflussen die Metabolisierung von >25% aller Arzneimittel. Synthetische Letalität wird therapeutisch genutzt — PARP-Inhibitoren (Olaparib) sind bei BRCA1/2-mutierten Ovarial- und Mammakarzinomen zugelassen.
-
----
-
-## MedAT-Fokus
-
-**Häufige Fragen:**
-- Modifizierte F₂-Verhältnisse ableiten (9:3:4 bei Epistasie, 9:7 bei Komplementierung)
-- Polygenie vs. Pleiotropie unterscheiden und Beispiele nennen
-- Heterozygoten-Vorteil der Sichelzellanämie erklären
-
-**Typische Verwechslungen:**
-- Polygenie (viele Gene → ein Merkmal) vs. Pleiotropie (ein Gen → viele Merkmale)
-- Epistasie (Gen überdeckt anderes Gen) vs. Dominanz (Allel überdeckt anderes Allel desselben Gens)
-- Komplementierung (9:7) vs. Epistasie (9:3:4) — beide weichen von 9:3:3:1 ab
-- Additive Polygenie (glockenförmig) vs. dominant-rezessive Einzelgenvererbung (diskrete Klassen)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Epistasie-Verhältnis: 9:3:4 (statt 9:3:3:1)
-- Komplementierung-Verhältnis: 9:7 (statt 9:3:3:1)
-- Sichelzellanämie: HbA/HbS → Malaria-Resistenz (Heterozygoten-Vorteil)
-- Polygenie: glockenförmige Verteilung durch additive Genwirkung
-- CYP2D6-Polymorphismus beeinflusst Metabolisierung von >25% aller Arzneimittel
-- Duplicate dominant epistasis: 15:1; dominante Suppression: 12:3:1
-
----
-
 ## Weitere Formen der Geninteraktion
 
 Neben Epistasie und Komplementierung gibt es weitere Formen modifizierter Spaltungsverhältnisse. Bei **doppelt-dominanter Epistasie** (duplicate dominant epistasis) reicht ein dominantes Allel in einem der beiden Gene für den Phänotyp aus, was ein F₂-Verhältnis von **15:1** ergibt (z. B. Fruchtform bei Hirtentäschel). Bei **dominanter Suppression** unterdrückt ein dominantes Allel eines Gens die Ausprägung eines anderen Gens, Verhältnis **13:3** oder **12:3:1**. Die Unterscheidung verschiedener Geninteraktionen erfolgt in der Praxis durch Rückkreuzungsanalyse und statistische Chi-Quadrat-Tests. **Penetranz** (Anteil der Genotypträger mit Phänotyp) und **Expressivität** (Ausprägungsgrad) modifizieren ebenfalls die beobachteten Verhältnisse: Bei unvollständiger Penetranz zeigen nicht alle Träger eines dominanten Allels den erwarteten Phänotyp, was autosomal-dominante Erbgänge wie Retinoblastom oder BRCA1/2-assoziierte Tumoren betrifft. Variable Expressivität bedeutet, dass derselbe Genotyp unterschiedliche Schweregrade hervorruft (z. B. Neurofibromatose Typ 1 mit Spektrum von Café-au-lait-Flecken bis Plexiforme Neurofibrome).
@@ -516,6 +469,29 @@ Neben Epistasie und Komplementierung gibt es weitere Formen modifizierter Spaltu
 Ein Sonderfall der Geninteraktion ist die **mitochondriale (maternale) Vererbung**: Mitochondrien werden ausschließlich über die Eizelle vererbt (maternaler Erbgang). Mutationen in der mitochondrialen DNA (mtDNA, 16.569 bp, kodiert 37 Gene) verursachen Erkrankungen wie **MELAS** (Myopathie, Enzephalopathie, Laktatazidose, Schlaganfall-ähnliche Episoden) und **LHON** (Leber Hereditäre Optikus-Neuropathie). Charakteristisch ist die **Heteroplasmie**: In einer Zelle existieren normale und mutierte Mitochondrien nebeneinander; der Schwellenwert-Effekt bestimmt, ab welchem Anteil mutierter mtDNA Symptome auftreten. Epigenetische Mechanismen wie **DNA-Methylierung** und **Histon-Modifikation** regulieren die Genexpression ohne Änderung der DNA-Sequenz und können transgenerational weitergegeben werden. Genomisches **Imprinting** (elternspezifische Prägung) bewirkt, dass nur das mütterliche oder väterliche Allel exprimiert wird (z. B. Prader-Willi-Syndrom: väterliches 15q11 deletiert; Angelman-Syndrom: mütterliches 15q11 deletiert).
 
 > **Merke:** Maternale Vererbung: Mutter → alle Kinder, Vater nie. Heteroplasmie = Mischung normaler/mutierter Mitochondrien. Imprinting: Prader-Willi (väterlich) vs. Angelman (mütterlich), beide 15q11.
+
+---
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- Modifizierte F₂-Verhältnisse ableiten (9:3:4 bei Epistasie, 9:7 bei Komplementierung)
+- Polygenie vs. Pleiotropie unterscheiden und Beispiele nennen
+- Heterozygoten-Vorteil der Sichelzellanämie erklären
+
+**Achtung — typische Verwechslungen:**
+- Polygenie (viele Gene → ein Merkmal) vs. Pleiotropie (ein Gen → viele Merkmale)
+- Epistasie (Gen überdeckt anderes Gen) vs. Dominanz (Allel überdeckt anderes Allel desselben Gens)
+- Komplementierung (9:7) vs. Epistasie (9:3:4) — beide weichen von 9:3:3:1 ab
+- Additive Polygenie (glockenförmig) vs. dominant-rezessive Einzelgenvererbung (diskrete Klassen)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Epistasie-Verhältnis: 9:3:4 (statt 9:3:3:1)
+- Komplementierung-Verhältnis: 9:7 (statt 9:3:3:1)
+- Sichelzellanämie: HbA/HbS → Malaria-Resistenz (Heterozygoten-Vorteil)
+- Polygenie: glockenförmige Verteilung durch additive Genwirkung
+- CYP2D6-Polymorphismus beeinflusst Metabolisierung von >25% aller Arzneimittel
+- Duplicate dominant epistasis: 15:1; dominante Suppression: 12:3:1
 
 ---
 
@@ -654,8 +630,6 @@ Die geschlechtsgebundene Vererbung betrifft Gene auf den Geschlechtschromosomen 
 
 ---
 
----
-
 ## X-chromosomal rezessive Vererbung
 
 Bei X-chromosomal rezessiver Vererbung sind Männer (X^a Y, hemizygot) häufiger krank, da sie nur ein X-Chromosom besitzen. Frauen sind als Konduktorinnen (X^A X^a) meist gesund. Es gibt keine Vater-Sohn-Übertragung (Vater gibt Y an Söhne). Klinische Beispiele: Hämophilie A, Rot-Grün-Blindheit, Muskeldystrophie Duchenne.
@@ -690,9 +664,11 @@ Y-chromosomale Gene betreffen ausschließlich Männer. Die Übertragung erfolgt 
 
 ---
 
-## Klinischer Bezug
+## Sonderfälle und klinische Konsequenzen der X-Inaktivierung
 
-Hämophilie A betrifft ca. 1:5.000 männliche Neugeborene und erfordert lebenslange Faktor-VIII-Substitution. Moderne rekombinante Faktor-Konzentrate und Emicizumab (bispezifischer Antikörper) haben die Lebensqualität drastisch verbessert. Bei Duchenne-Muskeldystrophie zeigen Exon-Skipping-Therapien (Eteplirsen, Viltolarsen) und Gentherapien erste klinische Erfolge.
+Die X-Inaktivierung hat wichtige klinische Konsequenzen, die über das Kaliko-Katzen-Beispiel hinausgehen. Bei weiblichen Konduktorinnen von X-chromosomal rezessiven Erkrankungen kann eine **skewed X-inactivation** (ungleiche Inaktivierung) dazu führen, dass bevorzugt das gesunde X inaktiviert wird und die Trägerin milde Symptome zeigt. Dies erklärt, warum einige Konduktorinnen der Duchenne-Muskeldystrophie eine milde Muskelschwäche oder Kardiomyopathie entwickeln. Die Anzahl der **Barr-Körperchen** berechnet sich als Anzahl X-Chromosomen minus 1: XX = 1 Barr-Körperchen, XXX (Triple X) = 2, XXY (Klinefelter) = 1, X0 (Turner) = 0. Beim **Rett-Syndrom** (X-chromosomal dominant, MECP2-Gen) sind fast ausschließlich Mädchen betroffen, da die Mutation bei Jungen (hemizygot) meist letal ist. Die **pseudoautosomale Region** (PAR) an den Enden der Geschlechtschromosomen ermöglicht Crossing-over zwischen X und Y während der Meiose und enthält Gene, die nicht der geschlechtsgebundenen Vererbung unterliegen (z. B. SHOX-Gen für Körpergröße; Deletion → Kleinwuchs beim Turner-Syndrom).
+
+> **Merke:** Skewed X-Inaktivierung: Konduktorinnen können milde Symptome zeigen (z. B. Duchenne-Carrier mit Kardiomyopathie). Barr-Körperchen = X minus 1. Rett-Syndrom: X-dom., bei Jungen letal. PAR: X-Y-Crossing-over, SHOX-Gen.
 
 ---
 
@@ -703,7 +679,7 @@ Hämophilie A betrifft ca. 1:5.000 männliche Neugeborene und erfordert lebensla
 - Warum sind Männer bei X-rez. Erkrankungen häufiger betroffen als Frauen?
 - X-Inaktivierung und Barr-Körperchen erklären
 
-**Typische Verwechslungen:**
+**Achtung — typische Verwechslungen:**
 - X-chromosomal rezessiv (Männer häufiger krank) vs. X-chromosomal dominant (Frauen häufiger betroffen)
 - Konduktorin (heterozygot, gesund) vs. homozygot betroffene Frau (X^a X^a, sehr selten)
 - X-Inaktivierung (Dosiskompensation, zufällig) vs. Imprinting (elternspezifisch)
@@ -718,14 +694,6 @@ Hämophilie A betrifft ca. 1:5.000 männliche Neugeborene und erfordert lebensla
 - SRY-Gen auf Y-Chromosom: Schlüssel zur männlichen Geschlechtsdetermination
 - Obligate Konduktorin: Tochter eines betroffenen Vaters ist immer Trägerin (X^a vom Vater)
 - Barr-Körperchen-Anzahl = Anzahl X-Chromosomen minus 1
-
----
-
-## Sonderfälle und klinische Konsequenzen der X-Inaktivierung
-
-Die X-Inaktivierung hat wichtige klinische Konsequenzen, die über das Kaliko-Katzen-Beispiel hinausgehen. Bei weiblichen Konduktorinnen von X-chromosomal rezessiven Erkrankungen kann eine **skewed X-inactivation** (ungleiche Inaktivierung) dazu führen, dass bevorzugt das gesunde X inaktiviert wird und die Trägerin milde Symptome zeigt. Dies erklärt, warum einige Konduktorinnen der Duchenne-Muskeldystrophie eine milde Muskelschwäche oder Kardiomyopathie entwickeln. Die Anzahl der **Barr-Körperchen** berechnet sich als Anzahl X-Chromosomen minus 1: XX = 1 Barr-Körperchen, XXX (Triple X) = 2, XXY (Klinefelter) = 1, X0 (Turner) = 0. Beim **Rett-Syndrom** (X-chromosomal dominant, MECP2-Gen) sind fast ausschließlich Mädchen betroffen, da die Mutation bei Jungen (hemizygot) meist letal ist. Die **pseudoautosomale Region** (PAR) an den Enden der Geschlechtschromosomen ermöglicht Crossing-over zwischen X und Y während der Meiose und enthält Gene, die nicht der geschlechtsgebundenen Vererbung unterliegen (z. B. SHOX-Gen für Körpergröße; Deletion → Kleinwuchs beim Turner-Syndrom).
-
-> **Merke:** Skewed X-Inaktivierung: Konduktorinnen können milde Symptome zeigen (z. B. Duchenne-Carrier mit Kardiomyopathie). Barr-Körperchen = X minus 1. Rett-Syndrom: X-dom., bei Jungen letal. PAR: X-Y-Crossing-over, SHOX-Gen.
 
 ---
 
@@ -869,8 +837,6 @@ Die Stammbaumanalyse ist das zentrale Werkzeug der klinischen Genetik zur Identi
 
 ---
 
----
-
 ## Stammbaumsymbole und Erbgangserkennung
 
 Quadrate symbolisieren Männer, Kreise Frauen; ausgefüllte Symbole zeigen Betroffene, halbe Symbole Konduktoren. Die Doppellinie kennzeichnet Konsanguinität. Autosomal-dominante Erbgänge zeigen vertikale Transmission (jede Generation betroffen), autosomal-rezessive zeigen Generationensprünge mit gesunden Eltern und kranken Geschwistern.
@@ -895,9 +861,19 @@ Bei Aa × Aa beträgt P(aa, krank) = 1/4, P(gesund) = 3/4. Jede Geburt ist unabh
 
 ---
 
-## Klinischer Bezug
+## Penetranz und Expressivität
 
-Stammbaumanalyse ist das zentrale Werkzeug der klinischen Genetik. Bei hereditärem Brust-/Eierstockkrebs (BRCA1/2, autosomal dominant mit unvollständiger Penetranz) zeigt der Stammbaum typischerweise Erkrankungen in mehreren Generationen mit frühem Erkrankungsalter. Die korrekte Erbgangbestimmung entscheidet über Screeningempfehlungen und Gentestindikation.
+Bei der Stammbaumanalyse ist die Unterscheidung zwischen Penetranz und Expressivität essenziell. **Penetranz** beschreibt den Anteil der Genträger, die den Phänotyp ausprägen (z. B. BRCA1: ~70% Penetranz = 70% der Trägerinnen entwickeln Brustkrebs). **Expressivität** beschreibt die Schwere der Ausprägung bei Betroffenen (z. B. Marfan-Syndrom: von milden Gelenkbeschwerden bis zu Aortendissektion). Unvollständige Penetranz kann autosomal-dominante Erbgänge verschleiern, da Generationssprünge auftreten, obwohl der Erbgang nicht rezessiv ist.
+
+> **Merke:** Penetranz = ob betroffen (Anteil der Genträger mit Phänotyp). Expressivität = wie stark betroffen (Schweregrad). Unvollständige Penetranz täuscht Generationssprünge vor.
+
+---
+
+## Systematische Erbgangbestimmung und Ausschlusskriterien
+
+Die Erbgangbestimmung erfolgt systematisch durch Ausschlussprinzip. **Schritt 1:** Geschlechterverteilung prüfen -- sind beide Geschlechter betroffen, ist ein Y-chromosomaler Erbgang ausgeschlossen. **Schritt 2:** Generationenfolge analysieren -- Betroffene in jeder Generation sprechen für dominant, Generationensprünge für rezessiv. **Schritt 3:** Gonosomal vs. autosomal unterscheiden -- keine Vater-Sohn-Übertragung und Männer häufiger betroffen deuten auf X-chromosomal rezessiv hin. Wichtig ist die Erkennung von **Neumutationen** (de novo), die einen scheinbar sporadischen Fall bei autosomal-dominanten Erkrankungen erklären (z. B. Achondroplasie: >80% Neumutation). Bei autosomal-rezessiven Erkrankungen erhöht **Konsanguinität** (Identity by Descent, IBD) die Homozygotie-Wahrscheinlichkeit; der **Inzuchtkoeffizient F** beträgt bei Cousin-Cousine-Ehe 1/16. Für die MedAT-Prüfung ist die Kombination von Stammbaumanalyse mit Wahrscheinlichkeitsrechnung typisch: Produktregel bei unabhängigen Ereignissen (P(A und B) = P(A) x P(B)) und Summenregel bei sich gegenseitig ausschließenden Ereignissen (P(A oder B) = P(A) + P(B)).
+
+> **Merke:** Systematischer Ausschluss: Y-chr. → X-rez. → autosomal-dom./rez. Neumutation erklärt sporadische dominante Fälle. Konsanguinität: F = 1/16 bei Cousin-Cousine. Produktregel bei unabhängigen Ereignissen (jede Geburt unabhängig).
 
 ---
 
@@ -908,17 +884,12 @@ Stammbaumanalyse ist das zentrale Werkzeug der klinischen Genetik. Bei hereditä
 - Erkrankungswahrscheinlichkeit für ein bestimmtes Familienmitglied berechnen
 - Bedingte Wahrscheinlichkeit P(Aa | gesund) = 2/3 anwenden
 
-**Typische Verwechslungen:**
+**Achtung — typische Verwechslungen:**
 - Autosomal-dominant (jede Generation) vs. autosomal-rezessiv (Generationensprünge)
 - X-chromosomal rezessiv (Diagonal-Muster) vs. autosomal-rezessiv (Männer = Frauen betroffen)
 - Konsanguinität (Doppellinie) erhöht Risiko für autosomal-rezessiv, nicht für dominant
 - Jede Geburt ist ein unabhängiges Ereignis — vorherige Kinder ändern die Wahrscheinlichkeit nicht
 - Halbes Symbol = Konduktor/Träger, nicht halb betroffen
-
-**Penetranz und Expressivität:**
-Bei der Stammbaumanalyse ist die Unterscheidung zwischen Penetranz und Expressivität essenziell. **Penetranz** beschreibt den Anteil der Genträger, die den Phänotyp ausprägen (z. B. BRCA1: ~70% Penetranz = 70% der Trägerinnen entwickeln Brustkrebs). **Expressivität** beschreibt die Schwere der Ausprägung bei Betroffenen (z. B. Marfan-Syndrom: von milden Gelenkbeschwerden bis zu Aortendissektion). Unvollständige Penetranz kann autosomal-dominante Erbgänge verschleiern, da Generationssprünge auftreten, obwohl der Erbgang nicht rezessiv ist.
-
-> **Merke:** Penetranz = ob betroffen (Anteil der Genträger mit Phänotyp). Expressivität = wie stark betroffen (Schweregrad). Unvollständige Penetranz täuscht Generationssprünge vor.
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - Aa × Aa: 25% krank (aa), 50% Carrier (Aa), 25% gesund (AA)
@@ -927,14 +898,6 @@ Bei der Stammbaumanalyse ist die Unterscheidung zwischen Penetranz und Expressiv
 - X-rez.: Konduktorin × gesund → 50% Söhne krank
 - BRCA1/2: autosomal-dominant mit unvollständiger Penetranz
 - Obligate Konduktorin: Tochter eines X-rez. betroffenen Vaters ist immer Konduktorin
-
----
-
-## Systematische Erbgangbestimmung und Ausschlusskriterien
-
-Die Erbgangbestimmung erfolgt systematisch durch Ausschlussprinzip. **Schritt 1:** Geschlechterverteilung prüfen -- sind beide Geschlechter betroffen, ist ein Y-chromosomaler Erbgang ausgeschlossen. **Schritt 2:** Generationenfolge analysieren -- Betroffene in jeder Generation sprechen für dominant, Generationensprünge für rezessiv. **Schritt 3:** Gonosomal vs. autosomal unterscheiden -- keine Vater-Sohn-Übertragung und Männer häufiger betroffen deuten auf X-chromosomal rezessiv hin. Wichtig ist die Erkennung von **Neumutationen** (de novo), die einen scheinbar sporadischen Fall bei autosomal-dominanten Erkrankungen erklären (z. B. Achondroplasie: >80% Neumutation). Bei autosomal-rezessiven Erkrankungen erhöht **Konsanguinität** (Identity by Descent, IBD) die Homozygotie-Wahrscheinlichkeit; der **Inzuchtkoeffizient F** beträgt bei Cousin-Cousine-Ehe 1/16. Für die MedAT-Prüfung ist die Kombination von Stammbaumanalyse mit Wahrscheinlichkeitsrechnung typisch: Produktregel bei unabhängigen Ereignissen (P(A und B) = P(A) x P(B)) und Summenregel bei sich gegenseitig ausschließenden Ereignissen (P(A oder B) = P(A) + P(B)).
-
-> **Merke:** Systematischer Ausschluss: Y-chr. → X-rez. → autosomal-dom./rez. Neumutation erklärt sporadische dominante Fälle. Konsanguinität: F = 1/16 bei Cousin-Cousine. Produktregel bei unabhängigen Ereignissen (jede Geburt unabhängig).
 
 ---
 
@@ -1078,8 +1041,6 @@ Die Populationsgenetik untersucht die Verteilung und Veränderung von Allelfrequ
 
 ---
 
----
-
 ## Hardy-Weinberg-Gleichgewicht
 
 Das Hardy-Weinberg-Gleichgewicht beschreibt stabile Allelfrequenzen unter idealen Bedingungen: keine Mutation, zufällige Paarung, keine Selektion, große Population, keine Migration. Die Formel p² + 2pq + q² = 1 verbindet Allel- und Genotypfrequenzen (p² = AA, 2pq = Aa, q² = aa). Bei seltenen rezessiven Erkrankungen (q² = 1/10.000) sind Konduktoren (2pq ≈ 2%) viel häufiger als Betroffene.
@@ -1104,36 +1065,6 @@ Genetischer Drift bezeichnet zufällige Frequenzänderungen in kleinen Populatio
 
 ---
 
-## Klinischer Bezug
-
-Das Hardy-Weinberg-Gleichgewicht wird in der klinischen Genetik zur Berechnung von Trägerfrequenzen verwendet. Beispiel: Mukoviszidose-Inzidenz 1:2.500 → Trägerfrequenz 1:25 in europäischer Bevölkerung. Diese Berechnung ist Grundlage für die Risikoeinschätzung bei Carrier-Screening-Programmen und der genetischen Beratung von Kinderwunschpaaren.
-
----
-
-## MedAT-Fokus
-
-**Häufige Fragen:**
-- Aus Erkrankungshäufigkeit (q²) die Trägerfrequenz (2pq) berechnen
-- Voraussetzungen des Hardy-Weinberg-Gleichgewichts nennen
-- Heterozygoten-Vorteil am Beispiel Sichelzellanämie erklären
-
-**Typische Verwechslungen:**
-- q² (Erkrankungsfrequenz) vs. q (Allelfrequenz) vs. 2pq (Trägerfrequenz)
-- Allelfrequenz (p, q) vs. Genotypfrequenz (p², 2pq, q²)
-- Genetischer Drift (zufällig, kleine Populationen) vs. Selektion (gerichtet, Fitness)
-- Inzucht erhöht Homozygotie, ändert aber nicht die Allelfrequenzen p und q
-- Gründereffekt (kleine Gründerpopulation) vs. Flaschenhals-Effekt (Populationsreduktion)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Rezessive Erkrankung q² = 1/10.000 → q = 1/100 → 2pq ≈ 1/50 (2% Träger)
-- Mukoviszidose: Inzidenz 1:2.500 → Trägerfrequenz ca. 1:25 in Europa
-- 5 HWE-Voraussetzungen: keine Mutation, Panmixie, keine Selektion, große Population, keine Migration
-- Sichelzellanämie: HbS-Frequenz bis 20% in Malaria-Endemiegebieten
-- Geparden: Flaschenhals → geringe genetische Diversität
-- Mukoviszidose-Rechnung: q² = 1/2.500 → q = 1/50 → 2pq ≈ 2 × 49/50 × 1/50 ≈ 1/25
-
----
-
 ## Anwendung der Hardy-Weinberg-Formel: Rechenbeispiele
 
 Ein typisches MedAT-Rechenbeispiel: Die autosomal-rezessive Erkrankung **Phenylketonurie (PKU)** hat in Europa eine Inzidenz von ca. 1:10.000. Berechnung: q² = 1/10.000 → q = 1/100 = 0,01 → p = 0,99 → Heterozygotenfrequenz 2pq = 2 x 0,99 x 0,01 ≈ **0,02 = 1/50** (jede 50. Person ist Carrier). Bei **Mukoviszidose** (Inzidenz 1:2.500 in Europa): q² = 1/2.500 → q = 1/50 = 0,02 → 2pq ≈ 2 x 0,98 x 0,02 ≈ **0,04 = 1/25** (jede 25. Person ist Carrier). Für die Berechnung des Erkrankungsrisikos eines Kindes zweier nicht verwandter Carrier-Eltern gilt: P(beide Carrier) x P(Kind aa) = (1/25)² x 1/4 = 1/2.500 (entspricht der Populationsinzidenz, was die Konsistenz des Modells bestätigt). Bei **X-chromosomal rezessiven** Erkrankungen gilt eine modifizierte Anwendung: Männer (hemizygot) haben die Erkrankungsfrequenz q, Frauen q² -- daher ist z. B. Rot-Grün-Blindheit bei Männern ca. 8% (q ≈ 0,08), bei Frauen nur 0,64% (q² ≈ 0,0064).
@@ -1147,6 +1078,30 @@ Ein typisches MedAT-Rechenbeispiel: Die autosomal-rezessive Erkrankung **Phenylk
 Neben den fünf klassischen HWE-Voraussetzungen gibt es weitere Faktoren, die Allelfrequenzen verändern. **Assortative Paarung** (nicht-zufällige Partnerwahl) verändert Genotypfrequenzen, ohne die Allelfrequenzen selbst zu ändern (ähnlich wie Inzucht). **Gerichtete Selektion** verschiebt Allelfrequenzen systematisch in eine Richtung (z. B. Antibiotikaresistenz bei Bakterien). **Frequenzabhängige Selektion** begünstigt seltene Allele (negative Frequenzabhängigkeit, z. B. MHC-Diversität beim Immunsystem). Der **Genfluss** (Migration) gleicht Allelfrequenzen zwischen Populationen an und wirkt der genetischen Differenzierung entgegen. In der klinischen Genetik ist die Kenntnis dieser Kräfte relevant, um regionale Unterschiede in Erkrankungshäufigkeiten zu verstehen: Die hohe Mukoviszidose-Frequenz in Nordeuropa wird durch einen möglichen Heterozygoten-Vorteil gegen Cholera oder Typhus erklärt, ähnlich dem HbS-Malaria-Beispiel.
 
 > **Merke:** Assortative Paarung ändert Genotyp-, nicht Allelfrequenzen. Gerichtete Selektion verschiebt p/q. Frequenzabhängige Selektion erhält Diversität (MHC). CF-Häufigkeit in Europa: möglicher Heterozygoten-Vorteil.
+
+---
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- Aus Erkrankungshäufigkeit (q²) die Trägerfrequenz (2pq) berechnen
+- Voraussetzungen des Hardy-Weinberg-Gleichgewichts nennen
+- Heterozygoten-Vorteil am Beispiel Sichelzellanämie erklären
+
+**Achtung — typische Verwechslungen:**
+- q² (Erkrankungsfrequenz) vs. q (Allelfrequenz) vs. 2pq (Trägerfrequenz)
+- Allelfrequenz (p, q) vs. Genotypfrequenz (p², 2pq, q²)
+- Genetischer Drift (zufällig, kleine Populationen) vs. Selektion (gerichtet, Fitness)
+- Inzucht erhöht Homozygotie, ändert aber nicht die Allelfrequenzen p und q
+- Gründereffekt (kleine Gründerpopulation) vs. Flaschenhals-Effekt (Populationsreduktion)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Rezessive Erkrankung q² = 1/10.000 → q = 1/100 → 2pq ≈ 1/50 (2% Träger)
+- Mukoviszidose: Inzidenz 1:2.500 → Trägerfrequenz ca. 1:25 in Europa
+- 5 HWE-Voraussetzungen: keine Mutation, Panmixie, keine Selektion, große Population, keine Migration
+- Sichelzellanämie: HbS-Frequenz bis 20% in Malaria-Endemiegebieten
+- Geparden: Flaschenhals → geringe genetische Diversität
+- Mukoviszidose-Rechnung: q² = 1/2.500 → q = 1/50 → 2pq ≈ 2 × 49/50 × 1/50 ≈ 1/25
 
 ---
 
@@ -1293,8 +1248,6 @@ Mutationen sind dauerhafte Veränderungen der DNA-Sequenz und stellen die Grundl
 
 ---
 
----
-
 ## Genmutationen: Substitutionen
 
 Stille Mutationen ändern ein Codon, ohne die Aminosäure zu verändern (genetische Degeneration). Missense-Mutationen führen zu einem Aminosäureaustausch (z. B. GAG → GTG: Glu → Val bei Sichelzellanämie). Nonsense-Mutationen erzeugen ein vorzeitiges Stopp-Codon und führen zu einem verkürzten, meist nicht-funktionalen Protein.
@@ -1311,9 +1264,19 @@ Frameshift-Mutationen entstehen, wenn Insertionen oder Deletionen kein Vielfache
 
 ---
 
-## Klinischer Bezug
+## Chromosomenmutationen und Genommutationen
 
-Keimbahnmutationen verursachen erbliche Erkrankungen und Krebsprädispositionssyndrome (z. B. Li-Fraumeni: TP53-Mutation). Somatische Mutationen treiben die Tumorentstehung (Driver-Mutationen in Onkogenen und Tumorsuppressorgenen). Die Unterscheidung Keimbahn vs. somatisch ist für Therapie (Targeted Therapy) und Familienberatung essenziell.
+Neben Genmutationen (Einzelnukleotid-Ebene) unterscheidet man **Chromosomenmutationen** (strukturelle Veränderungen ganzer Chromosomenabschnitte) und **Genommutationen** (numerische Veränderungen der Chromosomenzahl). Chromosomenmutationen umfassen Deletionen (Verlust eines Abschnitts, z. B. Cri-du-chat bei 5p-Deletion), Duplikationen (Verdopplung), Inversionen (Drehung um 180°) und Translokationen (Verlagerung auf ein anderes Chromosom, z. B. Philadelphia-Chromosom t(9;22) bei CML). Genommutationen entstehen durch Nicht-Disjunktion in der Meiose: **Aneuploidie** bezeichnet die Abweichung um einzelne Chromosomen (Trisomie 21, Monosomie X beim Turner-Syndrom), **Polyploidie** die Vervielfachung des gesamten Chromosomensatzes (3n = Triploidie, beim Menschen letal).
+
+> **Merke:** Genmutation = Einzelnukleotid (Punkt). Chromosomenmutation = Abschnitt (Deletion, Translokation). Genommutation = Chromosomenzahl (Aneuploidie, Polyploidie). Philadelphia-Chromosom t(9;22) → BCR-ABL-Fusion → CML.
+
+---
+
+## Mutagene und Karzinogenese
+
+Mutagene werden nach ihrer Natur eingeteilt: **Physikalische Mutagene** (UV-Strahlung → Thymin-Dimere, ionisierende Strahlung → Doppelstrangbrüche), **chemische Mutagene** (Alkylanzien, Benzpyren aus Zigarettenrauch, Aflatoxin B1 → Leberkarzinom) und **biologische Mutagene** (Insertionsmutagenese durch Retroviren, Transposons). Die **Karzinogenese** ist ein Mehrstufenprozess (Initiation → Promotion → Progression), bei dem somatische Mutationen in **Onkogenen** (gain-of-function, z. B. RAS, MYC, HER2) und **Tumorsuppressorgenen** (loss-of-function, z. B. TP53, RB1, APC) akkumulieren. Die **Knudson-Hypothese** (Two-Hit-Modell) erklärt, warum bei hereditärem Retinoblastom bereits ein somatischer Hit ausreicht (erster Hit in der Keimbahn vererbt), während sporadische Fälle zwei unabhängige somatische Mutationen erfordern. Der **Ames-Test** nutzt Salmonella typhimurium-Stämme mit Histidin-Auxotrophie zum Nachweis mutagener Substanzen: Rückmutation zu Histidin-Prototrophie zeigt mutagene Potenz an.
+
+> **Merke:** Mehrstufenmodell der Karzinogenese: Initiation (DNA-Schaden) → Promotion (klonale Expansion) → Progression (Invasion/Metastase). Onkogene: dominant (ein Allel reicht). Tumorsuppressorgene: rezessiv (beide Allele müssen ausfallen, Knudson Two-Hit).
 
 ---
 
@@ -1324,7 +1287,7 @@ Keimbahnmutationen verursachen erbliche Erkrankungen und Krebsprädispositionssy
 - Auswirkung einer Frameshift-Mutation auf das Protein erklären
 - DNA-Reparaturdefekte den entsprechenden Krebssyndromen zuordnen
 
-**Typische Verwechslungen:**
+**Achtung — typische Verwechslungen:**
 - Frameshift (≠ 3n Nukleotide, Leserahmen verschoben) vs. In-Frame (3n, Leserahmen intakt)
 - Missense (Aminosäureaustausch) vs. Nonsense (Stopp-Codon) — beides Substitutionen
 - Genmutation (Einzelnukleotid) vs. Chromosomenmutation (Abschnitte) vs. Genommutation (Chromosomenzahl)
@@ -1340,22 +1303,6 @@ Keimbahnmutationen verursachen erbliche Erkrankungen und Krebsprädispositionssy
 - BRCA1/2-Mutation: Brustkrebsrisiko ca. 70% Lebenszeitrisiko
 - Knudson-Hypothese: Two-Hit-Modell bei Tumorsuppressorgenen (z. B. Retinoblastom: RB1)
 - Ames-Test: Nachweis mutagener Potenz chemischer Substanzen mittels Salmonellen
-
----
-
-## Chromosomenmutationen und Genommutationen
-
-Neben Genmutationen (Einzelnukleotid-Ebene) unterscheidet man **Chromosomenmutationen** (strukturelle Veränderungen ganzer Chromosomenabschnitte) und **Genommutationen** (numerische Veränderungen der Chromosomenzahl). Chromosomenmutationen umfassen Deletionen (Verlust eines Abschnitts, z. B. Cri-du-chat bei 5p-Deletion), Duplikationen (Verdopplung), Inversionen (Drehung um 180°) und Translokationen (Verlagerung auf ein anderes Chromosom, z. B. Philadelphia-Chromosom t(9;22) bei CML). Genommutationen entstehen durch Nicht-Disjunktion in der Meiose: **Aneuploidie** bezeichnet die Abweichung um einzelne Chromosomen (Trisomie 21, Monosomie X beim Turner-Syndrom), **Polyploidie** die Vervielfachung des gesamten Chromosomensatzes (3n = Triploidie, beim Menschen letal).
-
-> **Merke:** Genmutation = Einzelnukleotid (Punkt). Chromosomenmutation = Abschnitt (Deletion, Translokation). Genommutation = Chromosomenzahl (Aneuploidie, Polyploidie). Philadelphia-Chromosom t(9;22) → BCR-ABL-Fusion → CML.
-
----
-
-## Mutagene und Karzinogenese
-
-Mutagene werden nach ihrer Natur eingeteilt: **Physikalische Mutagene** (UV-Strahlung → Thymin-Dimere, ionisierende Strahlung → Doppelstrangbrüche), **chemische Mutagene** (Alkylanzien, Benzpyren aus Zigarettenrauch, Aflatoxin B1 → Leberkarzinom) und **biologische Mutagene** (Insertionsmutagenese durch Retroviren, Transposons). Die **Karzinogenese** ist ein Mehrstufenprozess (Initiation → Promotion → Progression), bei dem somatische Mutationen in **Onkogenen** (gain-of-function, z. B. RAS, MYC, HER2) und **Tumorsuppressorgenen** (loss-of-function, z. B. TP53, RB1, APC) akkumulieren. Die **Knudson-Hypothese** (Two-Hit-Modell) erklärt, warum bei hereditärem Retinoblastom bereits ein somatischer Hit ausreicht (erster Hit in der Keimbahn vererbt), während sporadische Fälle zwei unabhängige somatische Mutationen erfordern. Der **Ames-Test** nutzt Salmonella typhimurium-Stämme mit Histidin-Auxotrophie zum Nachweis mutagener Substanzen: Rückmutation zu Histidin-Prototrophie zeigt mutagene Potenz an.
-
-> **Merke:** Mehrstufenmodell der Karzinogenese: Initiation (DNA-Schaden) → Promotion (klonale Expansion) → Progression (Invasion/Metastase). Onkogene: dominant (ein Allel reicht). Tumorsuppressorgene: rezessiv (beide Allele müssen ausfallen, Knudson Two-Hit).
 
 ---
 
@@ -1504,8 +1451,6 @@ Die DNA-Doppelhelix speichert die gesamte genetische Information eines Organismu
 
 ---
 
----
-
 ## DNA-Struktur (Doppelhelix)
 
 Die DNA besteht aus Nukleotiden (Phosphat + Desoxyribose + Base). Purine (A, G) paaren mit Pyrimidinen (C, T): A-T mit 2 H-Brücken, G-C mit 3 H-Brücken. Die Doppelhelix ist antiparallel (5'→3' und 3'→5') und rechtsgängig.
@@ -1547,9 +1492,13 @@ Prokaryoten haben 1 Origin (oriC), eukaryotische Chromosomen haben viele Origins
 
 ---
 
-## Klinischer Bezug
+## DNA-Reparaturmechanismen
 
-Defekte der DNA-Replikation und -Reparatur sind mit schweren Erkrankungen assoziiert. Werner-Syndrom (Helicase-Defekt) verursacht vorzeitige Alterung. Bloom-Syndrom (BLM-Helicase) führt zu erhöhter Schwesterchromatid-Austauschrate und Krebsprädisposition. Telomerase-Reaktivierung ist ein Hallmark of Cancer — Telomerase-Inhibitoren (Imetelstat) werden als Krebstherapie erprobt.
+Die DNA-Replikation erreicht trotz Proofreading der DNA-Polymerase (3'→5'-Exonukleaseaktivität) eine Restfehlerrate von etwa 1 pro 10^9 Basenpaare pro Zellteilung. Zusätzliche Reparatursysteme korrigieren Schäden, die durch endogene (reaktive Sauerstoffspezies, Depurinierung, Desaminierung) und exogene Mutagene (UV-Strahlung, Chemikalien) entstehen. Das Mismatch-Repair-System (MMR) erkennt und korrigiert Fehlpaarungen nach der Replikation; Defekte in MMR-Genen (MLH1, MSH2) verursachen das Lynch-Syndrom (hereditäres nicht-polypöses Kolonkarzinom, HNPCC) mit Mikrosatelliteninstabilität. Die Nukleotid-Exzisionsreparatur (NER) entfernt sperrige Läsionen wie UV-induzierte Thymindimere — Defekte verursachen Xeroderma pigmentosum mit extremer UV-Empfindlichkeit und Hautkrebsrisiko. Die Basen-Exzisionsreparatur (BER) behebt kleine Basenschäden (oxidierte oder desaminierte Basen) durch Glykosylasen, die die beschädigte Base herausschneiden.
+
+Doppelstrangbrüche (DSB), die gefährlichste Schadensform, werden durch zwei Hauptwege repariert: Homologe Rekombination (HR, fehlerfrei, nutzt Schwesterchromatid als Matrize, erfordert BRCA1/BRCA2) und Non-Homologous End Joining (NHEJ, schnell, aber fehleranfällig, ligiert Bruchenden direkt). BRCA1/2-Mutationen beeinträchtigen die HR und prädisponieren für Brust- und Eierstockkrebs. PARP-Inhibitoren (Olaparib) nutzen diesen Defekt therapeutisch aus: Sie hemmen die BER, was in BRCA-defizienten Zellen zu letalen DSB führt (synthetische Letalität).
+
+> **Merke:** MMR-Defekt → Lynch-Syndrom (HNPCC). NER-Defekt → Xeroderma pigmentosum. BRCA1/2-Defekt → gestörte HR → Brust-/Eierstockkrebs. PARP-Inhibitoren: synthetische Letalität bei BRCA-Mutationen.
 
 ---
 
@@ -1560,7 +1509,7 @@ Defekte der DNA-Replikation und -Reparatur sind mit schweren Erkrankungen assozi
 - Leitstrang vs. Folgestrang: Syntheserichtung und Okazaki-Fragmente erklären
 - Funktion der Telomerase und Zusammenhang mit Krebs
 
-**Typische Verwechslungen:**
+**Achtung — typische Verwechslungen:**
 - A = T (2 H-Brücken) vs. G ≡ C (3 H-Brücken, stärker) — Verwechslung der Bindungsstärke
 - Leitstrang (kontinuierlich, 1 Primer) vs. Folgestrang (diskontinuierlich, viele Primer)
 - DNA-Polymerase synthetisiert nur 5'→3' — liest Template 3'→5'
@@ -1573,16 +1522,6 @@ Defekte der DNA-Replikation und -Reparatur sind mit schweren Erkrankungen assozi
 - Telomer-Repeat beim Menschen: TTAGGG
 - Okazaki-Fragmente: 100-200 nt (Eukaryoten), 1.000-2.000 nt (Prokaryoten)
 - Replikationsgeschwindigkeit: Prokaryoten ~1.000 nt/s, Eukaryoten ~50 nt/s
-
----
-
-## DNA-Reparaturmechanismen
-
-Die DNA-Replikation erreicht trotz Proofreading der DNA-Polymerase (3'→5'-Exonukleaseaktivität) eine Restfehlerrate von etwa 1 pro 10^9 Basenpaare pro Zellteilung. Zusätzliche Reparatursysteme korrigieren Schäden, die durch endogene (reaktive Sauerstoffspezies, Depurinierung, Desaminierung) und exogene Mutagene (UV-Strahlung, Chemikalien) entstehen. Das Mismatch-Repair-System (MMR) erkennt und korrigiert Fehlpaarungen nach der Replikation; Defekte in MMR-Genen (MLH1, MSH2) verursachen das Lynch-Syndrom (hereditäres nicht-polypöses Kolonkarzinom, HNPCC) mit Mikrosatelliteninstabilität. Die Nukleotid-Exzisionsreparatur (NER) entfernt sperrige Läsionen wie UV-induzierte Thymindimere — Defekte verursachen Xeroderma pigmentosum mit extremer UV-Empfindlichkeit und Hautkrebsrisiko. Die Basen-Exzisionsreparatur (BER) behebt kleine Basenschäden (oxidierte oder desaminierte Basen) durch Glykosylasen, die die beschädigte Base herausschneiden.
-
-Doppelstrangbrüche (DSB), die gefährlichste Schadensform, werden durch zwei Hauptwege repariert: Homologe Rekombination (HR, fehlerfrei, nutzt Schwesterchromatid als Matrize, erfordert BRCA1/BRCA2) und Non-Homologous End Joining (NHEJ, schnell, aber fehleranfällig, ligiert Bruchenden direkt). BRCA1/2-Mutationen beeinträchtigen die HR und prädisponieren für Brust- und Eierstockkrebs. PARP-Inhibitoren (Olaparib) nutzen diesen Defekt therapeutisch aus: Sie hemmen die BER, was in BRCA-defizienten Zellen zu letalen DSB führt (synthetische Letalität).
-
-> **Merke:** MMR-Defekt → Lynch-Syndrom (HNPCC). NER-Defekt → Xeroderma pigmentosum. BRCA1/2-Defekt → gestörte HR → Brust-/Eierstockkrebs. PARP-Inhibitoren: synthetische Letalität bei BRCA-Mutationen.
 
 ---
 
@@ -1750,8 +1689,6 @@ Die Transkription ist der erste Schritt der Genexpression, bei dem die genetisch
 
 ---
 
----
-
 ## Grundprinzip der Transkription
 
 RNA unterscheidet sich von DNA durch Ribose (statt Desoxyribose), Uracil (statt Thymin) und ist einzelsträngig. Bei der Transkription liest RNA-Polymerase den Template Strand (3'→5') und synthetisiert RNA in 5'→3'-Richtung — ohne Primer.
@@ -1784,9 +1721,13 @@ Prokaryoten haben 1 RNA-Polymerase, keine Introns, keine RNA-Prozessierung und g
 
 ---
 
-## Klinischer Bezug
+## Die drei eukaryotischen RNA-Polymerasen
 
-Alpha-Amanitin (Knollenblätterpilz-Gift) hemmt die RNA-Polymerase II → tödliche Leberschädigung. Rifampicin hemmt bakterielle RNA-Polymerase (Tuberkulose-Therapie) ohne eukaryotische Polymerase zu beeinträchtigen. Fehler beim Spleißen verursachen Erkrankungen: Spinal Muskelatrophie (SMA) beruht auf Spleißdefekt des SMN2-Gens — Nusinersen (Antisense-Oligonukleotid) korrigiert das Spleißen.
+Eukaryoten besitzen drei verschiedene RNA-Polymerasen mit unterschiedlichen Aufgaben: RNA-Polymerase I transkribiert im Nukleolus die ribosomale RNA (rRNA: 28S, 18S, 5,8S) als polycistronisches Vorläufertranskript (45S), das anschließend prozessiert wird. RNA-Polymerase II ist für alle proteincodierenden Gene (mRNA) sowie für die meisten kleinen nukleären RNAs (snRNAs) und microRNAs verantwortlich — sie wird durch alpha-Amanitin bereits in niedrigen Konzentrationen gehemmt. RNA-Polymerase III transkribiert tRNAs, die 5S-rRNA und weitere kleine RNAs. Die CTD (C-terminale Domäne) der RNA-Pol II ist essenziell für die Koordination der Transkription mit der mRNA-Prozessierung: Phosphorylierung an Serin 5 der CTD rekrutiert die Capping-Enzyme, Phosphorylierung an Serin 2 rekrutiert Spleißfaktoren und das Polyadenylierungssignal.
+
+Für das Verständnis der Splicing-Regulation ist die Zusammensetzung des Spliceosoms wichtig: Es besteht aus fünf snRNPs (U1, U2, U4, U5, U6), die zusammen mit über 200 Proteinen die präzise Erkennung der Spleißstellen (5'-Donor GU, Branch Point A, 3'-Akzeptor AG) und die zwei Transesterifizierungsreaktionen katalysieren. Fehler in diesem Prozess führen zu Spleißmutationen, die für etwa 15% aller humanen Punktmutationen verantwortlich sind. Beta-Thalassämie entsteht häufig durch Spleißmutationen im HBB-Gen, die entweder die normale Spleißstelle zerstören oder kryptische Spleißstellen aktivieren und so zu fehlerhaftem beta-Globin oder dessen Fehlen führen.
+
+> **Merke:** RNA-Pol I: rRNA (Nukleolus). RNA-Pol II: mRNA + snRNAs (alpha-Amanitin-sensitiv). RNA-Pol III: tRNA + 5S-rRNA. CTD der Pol II koordiniert Capping, Splicing und Polyadenylierung.
 
 ---
 
@@ -1797,7 +1738,7 @@ Alpha-Amanitin (Knollenblätterpilz-Gift) hemmt die RNA-Polymerase II → tödli
 - Die drei RNA-Prozessierungsschritte bei Eukaryoten erklären
 - Template Strand vs. Coding Strand unterscheiden
 
-**Typische Verwechslungen:**
+**Achtung — typische Verwechslungen:**
 - Template Strand (3'→5', Matrize) vs. Coding Strand (5'→3', mRNA-Sequenz mit T statt U)
 - RNA-Polymerase braucht KEINEN Primer (anders als DNA-Polymerase)
 - Prokaryoten: KEINE Introns, KEINE RNA-Prozessierung — direkt gekoppelt
@@ -1810,16 +1751,6 @@ Alpha-Amanitin (Knollenblätterpilz-Gift) hemmt die RNA-Polymerase II → tödli
 - α-Amanitin (Knollenblätterpilz): hemmt RNA-Pol II → tödliche Leberschädigung
 - Rifampicin: hemmt bakterielle RNA-Polymerase (Tuberkulose-Therapie)
 - Nusinersen (Spinraza): Antisense-Oligonukleotid korrigiert SMN2-Splicing bei SMA
-
----
-
-## Die drei eukaryotischen RNA-Polymerasen
-
-Eukaryoten besitzen drei verschiedene RNA-Polymerasen mit unterschiedlichen Aufgaben: RNA-Polymerase I transkribiert im Nukleolus die ribosomale RNA (rRNA: 28S, 18S, 5,8S) als polycistronisches Vorläufertranskript (45S), das anschließend prozessiert wird. RNA-Polymerase II ist für alle proteincodierenden Gene (mRNA) sowie für die meisten kleinen nukleären RNAs (snRNAs) und microRNAs verantwortlich — sie wird durch alpha-Amanitin bereits in niedrigen Konzentrationen gehemmt. RNA-Polymerase III transkribiert tRNAs, die 5S-rRNA und weitere kleine RNAs. Die CTD (C-terminale Domäne) der RNA-Pol II ist essenziell für die Koordination der Transkription mit der mRNA-Prozessierung: Phosphorylierung an Serin 5 der CTD rekrutiert die Capping-Enzyme, Phosphorylierung an Serin 2 rekrutiert Spleißfaktoren und das Polyadenylierungssignal.
-
-Für das Verständnis der Splicing-Regulation ist die Zusammensetzung des Spliceosoms wichtig: Es besteht aus fünf snRNPs (U1, U2, U4, U5, U6), die zusammen mit über 200 Proteinen die präzise Erkennung der Spleißstellen (5'-Donor GU, Branch Point A, 3'-Akzeptor AG) und die zwei Transesterifizierungsreaktionen katalysieren. Fehler in diesem Prozess führen zu Spleißmutationen, die für etwa 15% aller humanen Punktmutationen verantwortlich sind. Beta-Thalassämie entsteht häufig durch Spleißmutationen im HBB-Gen, die entweder die normale Spleißstelle zerstören oder kryptische Spleißstellen aktivieren und so zu fehlerhaftem beta-Globin oder dessen Fehlen führen.
-
-> **Merke:** RNA-Pol I: rRNA (Nukleolus). RNA-Pol II: mRNA + snRNAs (alpha-Amanitin-sensitiv). RNA-Pol III: tRNA + 5S-rRNA. CTD der Pol II koordiniert Capping, Splicing und Polyadenylierung.
 
 ---
 
@@ -1988,8 +1919,6 @@ Die Translation ist der zweite Schritt der Genexpression, bei dem die Nukleotids
 
 ---
 
----
-
 ## Genetischer Code
 
 Der genetische Code ist ein Triplett-Code: je 3 Basen (Codon) codieren für 1 Aminosäure. 64 Codons für 20 Aminosäuren + 3 Stopp → der Code ist degeneriert (mehrere Codons pro Aminosäure). Start-Codon ist AUG (Met), Stopp-Codons sind UAA, UAG, UGA.
@@ -2028,9 +1957,13 @@ Antibiotika nutzen den Unterschied zwischen 70S (Prokaryoten) und 80S (Eukaryote
 
 ---
 
-## Klinischer Bezug
+## Posttranslationale Modifikation und Proteinreifung
 
-Aminoglykoside (Gentamicin) hemmen die bakterielle 30S-Untereinheit → Fehlablesung. Chloramphenicol hemmt die Peptidyltransferase der 50S-Untereinheit. Diese Antibiotika nutzen die Strukturunterschiede zwischen prokaryotischen (70S) und eukaryotischen (80S) Ribosomen. Proteinfehlfaltung verursacht neurodegenerative Erkrankungen: Prionkrankheiten (CJK), Alzheimer (Amyloid-β), Parkinson (α-Synuclein).
+Nach der Translation durchlaufen die meisten Proteine posttranslationale Modifikationen (PTM), die für ihre Funktion, Lokalisation und Lebensdauer entscheidend sind. Wichtige PTMs sind: Phosphorylierung (Serin, Threonin, Tyrosin durch Kinasen — zentral in Signaltransduktion), Glykosylierung (Anheftung von Zuckerketten im ER und Golgi-Apparat — wichtig für Membranproteine und sekretierte Proteine), Ubiquitinierung (Markierung für den proteasomalen Abbau durch das Ubiquitin-Proteasom-System) und Proteolyse (Abspaltung von Signalpeptiden oder Aktivierung von Zymo­genen). Die Signalsequenz-Hypothese erklärt den cotranslationalen Transport: Ribosomen, die ein Protein mit N-terminalem Signalpeptid synthetisieren, werden über das Signal Recognition Particle (SRP) an die ER-Membran dirigiert, wo die Translation direkt ins ER-Lumen erfolgt.
+
+Die Proteinfaltung wird durch Chaperone (z. B. Hsp70, Hsp60/GroEL) unterstützt, die Fehlfaltungen verhindern. Fehlgefaltete Proteine werden durch die Unfolded Protein Response (UPR) im ER erkannt und über ERAD (ER-associated Degradation) dem Proteasom zugeführt. Versagt dieses Qualitätskontrollsystem, aggregieren fehlgefaltete Proteine und verursachen Proteinopathien: Prionkrankheiten (PrP^Sc), Alzheimer (Amyloid-beta-Plaques), Parkinson (alpha-Synuclein-Aggregate) und Huntington (Polyglutamin-Aggregate).
+
+> **Merke:** PTM: Phosphorylierung (Signaltransduktion), Glykosylierung (ER/Golgi), Ubiquitinierung (Proteasom-Abbau). SRP dirigiert Ribosomen mit Signalpeptid ans ER. Chaperone (Hsp70) verhindern Fehlfaltung.
 
 ---
 
@@ -2041,7 +1974,7 @@ Aminoglykoside (Gentamicin) hemmen die bakterielle 30S-Untereinheit → Fehlable
 - Ribosomenaufbau Pro- vs. Eukaryoten vergleichen (70S vs. 80S)
 - Antibiotika-Wirkmechanismen auf die Translation zuordnen
 
-**Typische Verwechslungen:**
+**Achtung — typische Verwechslungen:**
 - Degeneriert (mehrere Codons für 1 AS) vs. ambig (1 Codon für mehrere AS — das ist NICHT der Fall)
 - 70S Ribosomen (Prokaryoten) vs. 80S (Eukaryoten) — Mitochondrien haben auch 70S!
 - A-Site (neues Aminoacyl-tRNA) vs. P-Site (Peptidkette) vs. E-Site (Exit/entladen)
@@ -2054,16 +1987,6 @@ Aminoglykoside (Gentamicin) hemmen die bakterielle 30S-Untereinheit → Fehlable
 - Leucin: 6 Codons (am stärksten degeneriert), Met/Trp: je 1 Codon
 - Tetracyclin: blockiert A-Site (30S); Chloramphenicol: hemmt Peptidyl-Transferase (50S)
 - Erythromycin: blockiert Translokation (50S)
-
----
-
-## Posttranslationale Modifikation und Proteinreifung
-
-Nach der Translation durchlaufen die meisten Proteine posttranslationale Modifikationen (PTM), die für ihre Funktion, Lokalisation und Lebensdauer entscheidend sind. Wichtige PTMs sind: Phosphorylierung (Serin, Threonin, Tyrosin durch Kinasen — zentral in Signaltransduktion), Glykosylierung (Anheftung von Zuckerketten im ER und Golgi-Apparat — wichtig für Membranproteine und sekretierte Proteine), Ubiquitinierung (Markierung für den proteasomalen Abbau durch das Ubiquitin-Proteasom-System) und Proteolyse (Abspaltung von Signalpeptiden oder Aktivierung von Zymo­genen). Die Signalsequenz-Hypothese erklärt den cotranslationalen Transport: Ribosomen, die ein Protein mit N-terminalem Signalpeptid synthetisieren, werden über das Signal Recognition Particle (SRP) an die ER-Membran dirigiert, wo die Translation direkt ins ER-Lumen erfolgt.
-
-Die Proteinfaltung wird durch Chaperone (z. B. Hsp70, Hsp60/GroEL) unterstützt, die Fehlfaltungen verhindern. Fehlgefaltete Proteine werden durch die Unfolded Protein Response (UPR) im ER erkannt und über ERAD (ER-associated Degradation) dem Proteasom zugeführt. Versagt dieses Qualitätskontrollsystem, aggregieren fehlgefaltete Proteine und verursachen Proteinopathien: Prionkrankheiten (PrP^Sc), Alzheimer (Amyloid-beta-Plaques), Parkinson (alpha-Synuclein-Aggregate) und Huntington (Polyglutamin-Aggregate).
-
-> **Merke:** PTM: Phosphorylierung (Signaltransduktion), Glykosylierung (ER/Golgi), Ubiquitinierung (Proteasom-Abbau). SRP dirigiert Ribosomen mit Signalpeptid ans ER. Chaperone (Hsp70) verhindern Fehlfaltung.
 
 ---
 
@@ -2230,8 +2153,6 @@ Die Genregulation steuert, welche Gene in einer Zelle wann und wie stark exprimi
 
 ---
 
----
-
 ## Prokaryotische Genregulation: Operon-Modell
 
 Das lac-Operon (induzierbares Operon) wird durch Allolaktose (Induktor) aktiviert: ohne Laktose blockiert der Repressor den Operator (Gene AUS), mit Laktose ist der Repressor inaktiv (Gene AN). Glukosemangel steigert cAMP → CAP-cAMP verstärkt Transkription zusätzlich. Das trp-Operon (reprimierbares Operon) funktioniert umgekehrt: Tryptophan als Corepressor aktiviert den Repressor → Gene AUS (Feedback-Hemmung).
@@ -2264,9 +2185,13 @@ miRNA (endogen, ~22 nt) bindet unvollständig an die 3'-UTR der Ziel-mRNA → Tr
 
 ---
 
-## Klinischer Bezug
+## X-Inaktivierung und Genomic Imprinting
 
-Fehlregulation der Genexpression ist ein Kennzeichen von Krebs. Hypermethylierung von Tumorsuppressor-Promotoren (z. B. BRCA1, MLH1) silenced protektive Gene. Epigenetische Therapien: DNMT-Inhibitoren (Azacitidin, Decitabin) bei MDS und AML reaktivieren silenced Tumorsuppressorgene. HDAC-Inhibitoren (Vorinostat) öffnen Chromatin und reaktivieren Gene.
+Die X-Inaktivierung (Lyon-Hypothese) ist ein epigenetischer Dosiskompensationsmechanismus: In jeder somatischen Zelle einer Frau wird eines der beiden X-Chromosomen zufällig inaktiviert und als Barr-Körperchen (fakultatives Heterochromatin) sichtbar. Die Inaktivierung wird durch die nicht-codierende RNA XIST eingeleitet, die das zu inaktivierende X-Chromosom umhüllt und die Rekrutierung von Histon-Deacetylasen und DNA-Methyltransferasen bewirkt. Da die Inaktivierung zufällig und früh in der Embryonalentwicklung erfolgt, sind Frauen ein Mosaik aus Zellen mit unterschiedlichem aktivem X-Chromosom — sichtbar z. B. am Fellmuster von Schildpattkatzen.
+
+Genomic Imprinting (genomische Prägung) beschreibt die elternspezifische Stilllegung bestimmter Gene durch DNA-Methylierung in der Keimbahn. Das väterliche und mütterliche Allel sind funktionell nicht gleichwertig. Klinisch relevant sind das Prader-Willi-Syndrom (Deletion der väterlichen Kopie auf Chromosom 15q11-13, mütterliche Kopie ist geprägt/inaktiv) und das Angelman-Syndrom (Deletion der mütterlichen Kopie an derselben Stelle, väterliche Kopie ist geprägt). Beide Syndrome betreffen dieselbe Chromosomenregion, manifestieren sich aber völlig unterschiedlich, je nachdem welches elterliche Allel betroffen ist. Imprinting-Fehler können auch durch uniparentale Disomie (UPD) entstehen, bei der beide Kopien eines Chromosoms von einem Elternteil stammen.
+
+> **Merke:** X-Inaktivierung: XIST-RNA → Barr-Körperchen → Dosiskompensation bei Frauen. Genomic Imprinting: Elternspezifische Methylierung → Prader-Willi (väterlich deletiert) vs. Angelman (mütterlich deletiert), selbe Region 15q11-13.
 
 ---
 
@@ -2277,7 +2202,7 @@ Fehlregulation der Genexpression ist ein Kennzeichen von Krebs. Hypermethylierun
 - DNA-Methylierung und Histon-Acetylierung mit Genaktivierung/-stilllegung verknüpfen
 - miRNA vs. siRNA unterscheiden
 
-**Typische Verwechslungen:**
+**Achtung — typische Verwechslungen:**
 - lac-Operon (induzierbar, Laktose AN) vs. trp-Operon (reprimierbar, Tryptophan AUS)
 - DNA-Methylierung (CpG → Gen AUS) vs. Histon-Acetylierung (Euchromatin → Gen AN)
 - HAT (Acetylierung → offen) vs. HDAC (Deacetylierung → geschlossen)
@@ -2290,16 +2215,6 @@ Fehlregulation der Genexpression ist ein Kennzeichen von Krebs. Hypermethylierun
 - miRNA: ca. 22 Nukleotide lang, über 2.000 bekannte humane miRNAs
 - Patisiran (Onpattro): erste zugelassene siRNA-Therapie (2018, hATTR)
 - X-Inaktivierung und Genomic Imprinting: epigenetisch reguliert
-
----
-
-## X-Inaktivierung und Genomic Imprinting
-
-Die X-Inaktivierung (Lyon-Hypothese) ist ein epigenetischer Dosiskompensationsmechanismus: In jeder somatischen Zelle einer Frau wird eines der beiden X-Chromosomen zufällig inaktiviert und als Barr-Körperchen (fakultatives Heterochromatin) sichtbar. Die Inaktivierung wird durch die nicht-codierende RNA XIST eingeleitet, die das zu inaktivierende X-Chromosom umhüllt und die Rekrutierung von Histon-Deacetylasen und DNA-Methyltransferasen bewirkt. Da die Inaktivierung zufällig und früh in der Embryonalentwicklung erfolgt, sind Frauen ein Mosaik aus Zellen mit unterschiedlichem aktivem X-Chromosom — sichtbar z. B. am Fellmuster von Schildpattkatzen.
-
-Genomic Imprinting (genomische Prägung) beschreibt die elternspezifische Stilllegung bestimmter Gene durch DNA-Methylierung in der Keimbahn. Das väterliche und mütterliche Allel sind funktionell nicht gleichwertig. Klinisch relevant sind das Prader-Willi-Syndrom (Deletion der väterlichen Kopie auf Chromosom 15q11-13, mütterliche Kopie ist geprägt/inaktiv) und das Angelman-Syndrom (Deletion der mütterlichen Kopie an derselben Stelle, väterliche Kopie ist geprägt). Beide Syndrome betreffen dieselbe Chromosomenregion, manifestieren sich aber völlig unterschiedlich, je nachdem welches elterliche Allel betroffen ist. Imprinting-Fehler können auch durch uniparentale Disomie (UPD) entstehen, bei der beide Kopien eines Chromosoms von einem Elternteil stammen.
-
-> **Merke:** X-Inaktivierung: XIST-RNA → Barr-Körperchen → Dosiskompensation bei Frauen. Genomic Imprinting: Elternspezifische Methylierung → Prader-Willi (väterlich deletiert) vs. Angelman (mütterlich deletiert), selbe Region 15q11-13.
 
 ---
 
@@ -2694,8 +2609,6 @@ Die DNA-Sequenzierung bestimmt die exakte Basenfolge eines DNA-Abschnitts und is
 
 ---
 
----
-
 ## Sanger vs. NGS — Wann welche Methode?
 
 Die Sanger-Sequenzierung ist für gezielte Einzelgenanalysen nach wie vor die erste Wahl: hohe Genauigkeit, einfache Auswertung, keine aufwendige Bioinformatik. Typische Indikation: Bestätigung einer bereits bekannten Pathogenmutation (z. B. CFTR-Exon 10 bei Mukoviszidose-Verdacht) oder Sequenzierung eines kurzen Abschnitts (PCR-Produkt-Sequenzierung). NGS ist dann überlegen, wenn viele Gene gleichzeitig untersucht werden müssen: Gendiagnostikpanel (z. B. Kardiomyopathie-Panel mit 50+ Genen), Exomsequenzierung bei unklarem Syndrom, oder Tumorsequenzierung. Die Kosten für ein klinisches NGS-Panel (~500 Gene, ~200 €) sind heute deutlich günstiger als die sukzessive Sanger-Sequenzierung von 500 Einzelgenen.
@@ -2720,9 +2633,11 @@ Das Oxford Nanopore MinION-Gerät (USB-Stick-Format) hat die Point-of-Care-Seque
 
 ---
 
-## Klinischer Bezug
+## Sanger-Prinzip im Detail — ddNTPs und Kapillarelektrophorese
 
-Exomsequenzierung liefert bei unklaren genetischen Syndromen in ~30% einen Diagnosebefund; Tumor-NGS ermöglicht zielgerichtete Therapiewahl.
+Die Sanger-Methode (auch Kettenabbruchmethode oder Didesoxymethode) beruht auf dem kontrollierten Einbau von Didesoxynukleotiden (ddNTPs) während der DNA-Synthese. ddNTPs fehlt die 3'-OH-Gruppe, die für die Bildung der nächsten Phosphodiesterbindung nötig ist — sobald ein ddNTP eingebaut wird, bricht die Kettenverlängerung ab. In der Reaktion werden normale dNTPs und geringe Mengen fluoreszenzmarkierter ddNTPs (je eine Farbe für A, T, G, C) gemischt. Statistisch bricht die Synthese an jeder Position einmal ab, sodass ein Gemisch von Fragmenten unterschiedlicher Länge entsteht. Die Kapillarelektrophorese trennt diese Fragmente nach Größe auf (Einzelnukleotid-Auflösung), und ein Laserdetektor liest die Fluoreszenzfarbe am Ende jedes Fragments ab. Die resultierende Sequenz wird als Elektropherogramm (Chromatogramm) dargestellt, mit Peaks in vier Farben. Heterozygote Mutationen zeigen sich als überlappende Peaks an einer Position. Die Leselänge beträgt 500-1.000 bp pro Reaktion mit einer Fehlerrate unter 0,01%, was die Sanger-Sequenzierung zum Goldstandard für die Bestätigung einzelner Varianten macht.
+
+> **Merke:** Sanger-Prinzip: ddNTPs (kein 3'-OH) → statistischer Kettenabbruch → Fragmente aller Längen → Kapillarelektrophorese → Fluoreszenz-Detektion → Sequenz. Goldstandard für Einzelvarianten-Bestätigung.
 
 ---
 
@@ -2733,7 +2648,7 @@ Exomsequenzierung liefert bei unklaren genetischen Syndromen in ~30% einen Diagn
 - Sanger vs. NGS in Bezug auf Durchsatz und Anwendung vergleichen
 - Klinische Indikationen für Exomsequenzierung nennen
 
-**Typische Verwechslungen:**
+**Achtung — typische Verwechslungen:**
 - ddNTPs (kein 3'-OH → Kettenabbruch) vs. dNTPs (normale Verlängerung)
 - Sanger (1 Gen, hohe Genauigkeit) vs. NGS (viele Gene parallel, Bioinformatik nötig)
 - Nanopore (lange Reads, portabel, höhere Fehlerrate) vs. Illumina (Short Reads, niedrige Fehlerrate)
@@ -2746,14 +2661,6 @@ Exomsequenzierung liefert bei unklaren genetischen Syndromen in ~30% einen Diagn
 - Nanopore: Reads bis 2 Mb, Fehlerrate ca. 5%
 - Exom = ca. 1,5% des Genoms, enthält ca. 85% der krankheitsverursachenden Mutationen
 - Human Genome Project: 3 Mrd. USD, 13 Jahre; heute: Genom in 24 h für ca. 300 EUR
-
----
-
-## Sanger-Prinzip im Detail — ddNTPs und Kapillarelektrophorese
-
-Die Sanger-Methode (auch Kettenabbruchmethode oder Didesoxymethode) beruht auf dem kontrollierten Einbau von Didesoxynukleotiden (ddNTPs) während der DNA-Synthese. ddNTPs fehlt die 3'-OH-Gruppe, die für die Bildung der nächsten Phosphodiesterbindung nötig ist — sobald ein ddNTP eingebaut wird, bricht die Kettenverlängerung ab. In der Reaktion werden normale dNTPs und geringe Mengen fluoreszenzmarkierter ddNTPs (je eine Farbe für A, T, G, C) gemischt. Statistisch bricht die Synthese an jeder Position einmal ab, sodass ein Gemisch von Fragmenten unterschiedlicher Länge entsteht. Die Kapillarelektrophorese trennt diese Fragmente nach Größe auf (Einzelnukleotid-Auflösung), und ein Laserdetektor liest die Fluoreszenzfarbe am Ende jedes Fragments ab. Die resultierende Sequenz wird als Elektropherogramm (Chromatogramm) dargestellt, mit Peaks in vier Farben. Heterozygote Mutationen zeigen sich als überlappende Peaks an einer Position. Die Leselänge beträgt 500-1.000 bp pro Reaktion mit einer Fehlerrate unter 0,01%, was die Sanger-Sequenzierung zum Goldstandard für die Bestätigung einzelner Varianten macht.
-
-> **Merke:** Sanger-Prinzip: ddNTPs (kein 3'-OH) → statistischer Kettenabbruch → Fragmente aller Längen → Kapillarelektrophorese → Fluoreszenz-Detektion → Sequenz. Goldstandard für Einzelvarianten-Bestätigung.
 
 ---
 
