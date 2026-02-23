@@ -31,8 +31,6 @@ export const mathKap6: Kapitel = {
 
 Wo Physik auf Medizin trifft, treffen wir auf Vektoren: Blutflussrichtung und -geschwindigkeit, Herzachse im EKG, Muskelkräfte an Gelenken — all das sind gerichtete Größen. Ein Vektor hat Betrag und Richtung, im Gegensatz zu einem Skalar (nur Betrag, z.B. Temperatur). Für den MedAT sind Vektordefinition, Addition, Skalarmultiplikation, Betrag, Einheitsvektor und Zerlegung in Komponenten prüfungsrelevant.
 
-# Vektoren — Grundbegriffe und Operationen
-
 Ein **Vektor** ist eine gerichtete Größe: Er besitzt sowohl einen **Betrag** (Länge) als auch eine **Richtung**. Im Gegensatz dazu ist ein **Skalar** eine reine Zahlgröße ohne Richtung (z. B. Temperatur, Masse, Energie). Vektoren werden grafisch als Pfeile dargestellt und algebraisch als Spaltenvektoren geschrieben:
 
 $$\\vec{a} = \\begin{pmatrix} a_1 \\\\ a_2 \\\\ a_3 \\end{pmatrix}$$
@@ -122,6 +120,28 @@ Sind $\\vec{a} = (1, 2)$ und $\\vec{b} = (3, 6)$ linear unabhängig?
 ## Klinische Bedeutung
 
 Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** werden Muskelkräfte und Gelenkbelastungen als Vektoren zerlegt. Die resultierende Gelenkkraft ist die Vektorsumme aller angreifenden Kräfte — bei einem Kniegelenk wirken gleichzeitig Quadrizeps, hintere Kreuzbänder und Schwerkraft, deren Resultierende die tatsächliche Belastung bestimmt. Im **EKG** wird die elektrische Herzachse als Summenvektor der Erregungsausbreitung dargestellt; der Cabrera-Kreis visualisiert diese Achse in der Frontalebene. Eine Linksachsenabweichung (>−30°) kann auf eine linksventrikuläre Hypertrophie hinweisen. Der **Blutfluss** in Gefäßen besitzt sowohl eine Geschwindigkeit (Betrag) als auch eine Fließrichtung und wird daher vektoriell beschrieben. In der **Doppler-Sonographie** misst man die Blutflussgeschwindigkeit als Vektorkomponente entlang der Schallstrahlrichtung — der gemessene Wert hängt vom Winkel zwischen Schallstrahl und Gefäß ab (Doppler-Gleichung).
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- Betrag eines 2D- oder 3D-Vektors berechnen (Pythagoras-Formel anwenden)
+- Einheitsvektor bestimmen: Vektor durch seinen Betrag dividieren
+- Zwei Vektoren komponentenweise addieren oder subtrahieren
+- Lineare Abhängigkeit prüfen: Ist $\\vec{b} = k \\cdot \\vec{a}$ für ein skalares $k$?
+- Verbindungsvektor und Abstand zweier Punkte berechnen
+
+**Achtung — typische Verwechslungen:**
+- Skalar ≠ Vektor: Temperatur, Energie, Masse = Skalare; Kraft, Geschwindigkeit, Verschiebung = Vektoren
+- Betrag ≠ Komponentensumme: $|\\vec{v}| = \\sqrt{v_1^2+v_2^2}$, NICHT $v_1+v_2$
+- Verbindungsvektor: **immer Ziel minus Start** ($\\vec{AB} = B - A$, nicht $A - B$)
+- Einheitsvektor: durch den Betrag dividieren (nicht durch das Quadrat)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Pythagoräische Tripel: **3-4-5**, 5-12-13, 8-15-17 → Betrag sofort ablesen ohne Rechnen!
+- $\\sin(30°) = 0{,}5$, $\\cos(30°) = \\frac{\\sqrt{3}}{2}$; $\\sin(60°) = \\frac{\\sqrt{3}}{2}$, $\\cos(60°) = 0{,}5$
+- Standardbasis $\\mathbb{R}^3$: $\\vec{e_1}=(1,0,0)$, $\\vec{e_2}=(0,1,0)$, $\\vec{e_3}=(0,0,1)$
+
+---
 
 ## Zusammenfassung
 
@@ -309,8 +329,6 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
 
 Stehen zwei Kräfte senkrecht aufeinander, leisten sie keine Arbeit aneinander — denn das Skalarprodukt ist null. Das Drehmoment eines Muskels ist maximal, wenn Kraft und Hebelarm rechtwinklig sind — das Kreuzprodukt ist dort maximal. Skalar- und Kreuzprodukt sind die zwei Hauptoperationen mit Vektoren. Für den MedAT sind Skalarprodukt (Winkelberechnung, Orthogonalität), Kreuzprodukt (Drehmoment, senkrechte Richtung) und Projektion prüfungsrelevant.
 
-# Skalarprodukt und Kreuzprodukt
-
 ## Skalarprodukt
 
 Das **Skalarprodukt** (Dot-Produkt, inneres Produkt) zweier Vektoren $\\vec{a}$ und $\\vec{b}$ ist definiert als:
@@ -425,6 +443,29 @@ In der **MRT-Sicherheit** ist die Lorentz-Kraft $\\vec{F} = q(\\vec{v} \\times \
 Die **Orthogonalprojektion** findet klinische Anwendung bei der Zerlegung von Muskelkräften: Die Projektion einer Muskelkraft auf die Gelenkachse ergibt die Kompressionskraft, die senkrechte Komponente die Scherkraft. In der **Strahlentherapie** wird die Dosisverteilung als Projektion des Strahlenvektors auf die Gewebefläche berechnet.
 
 Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen eines Organsegments (z. B. Leberlappen in der CT) kann über drei Kantenvektoren des Segments approximiert werden. Ist das Spatprodukt null, liegen die Vektoren in einer Ebene — das Volumen ist dann null.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- Skalarprodukt berechnen und Orthogonalität prüfen: $\\vec{a} \\cdot \\vec{b} = 0$?
+- Winkel zwischen zwei Vektoren: $\\cos\\theta = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|}$ — dann $\\arccos$ anwenden
+- Kreuzprodukt komponentenweise berechnen: $(a_2b_3-a_3b_2,\\; a_3b_1-a_1b_3,\\; a_1b_2-a_2b_1)$
+- Betrag des Kreuzprodukts als Parallelogrammfläche interpretieren
+- Drehmoment: $|\\vec{M}| = |\\vec{r}| \\cdot |\\vec{F}| \\cdot \\sin\\theta$; maximal bei $\\theta = 90°$
+
+**Achtung — typische Verwechslungen:**
+- Skalarprodukt liefert **Skalar** (keine Richtung); Kreuzprodukt liefert **Vektor** (mit Richtung)
+- Kreuzprodukt ist **antikommutativ**: $\\vec{a}\\times\\vec{b} = -(\\vec{b}\\times\\vec{a})$ — Reihenfolge kritisch!
+- Kreuzprodukt nur im $\\mathbb{R}^3$ definiert — nicht im $\\mathbb{R}^2$!
+- Orthogonalität → Skalarprodukt $= 0$; Parallelität → Kreuzprodukt $= \\vec{0}$ (genau umgekehrt)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- $\\cos(90°) = 0$ → orthogonal; $\\cos(0°) = 1$ → parallel; $\\cos(180°) = -1$ → antiparallel
+- $\\sin(90°) = 1$ → Kreuzprodukt maximal bei senkrechter Stellung der Vektoren
+- Mechanische Arbeit: $W = \\vec{F} \\cdot \\vec{s}$ (Skalarprodukt); Drehmoment: $\\vec{M} = \\vec{r} \\times \\vec{F}$ (Kreuzprodukt)
+- Sarrus-Regel: Achtung auf das **Minuszeichen** vor der mittleren Komponente $-\\vec{e_2}(\\ldots)$
+
+---
 
 ## Zusammenfassung
 
@@ -628,8 +669,6 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
 
 Ein Strahlengang in der Radiologie ist eine Gerade im Raum. Eine CT-Schnittebene ist eine Ebene. Und die CT-Bildrekonstruktion löst ein gigantisches lineares Gleichungssystem — das sind Matrizen. Geraden, Ebenen und Matrizen beschreiben geometrische Objekte im 3D-Raum und ermöglichen systematische Lösungsverfahren. Für den MedAT sind Geradenparameter, Ebenengleichungen, LGS lösen (Gauß), Determinante und 2×2-Matrixinversion prüfungsrelevant.
 
-# Geraden, Ebenen und Matrizen
-
 ## Geradengleichung im Raum
 
 Eine Gerade im dreidimensionalen Raum wird durch die **Parameterform** beschrieben:
@@ -752,6 +791,28 @@ In der **CT-Bildrekonstruktion** werden die gemessenen Absorptionswerte durch ei
 In der **Bioinformatik** werden Genexpressionsdaten als Matrizen gespeichert (Zeilen = Gene, Spalten = Patientenproben). Die **Hauptkomponentenanalyse (PCA)** berechnet Eigenwerte und Eigenvektoren der Kovarianzmatrix und reduziert die Dimensionalität auf die wichtigsten Hauptkomponenten. So können z. B. Tumorsubtypen visuell getrennt und Biomarker identifiziert werden.
 
 In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Modell für Medikamentenverteilung) als Matrizendifferentialgleichungen formuliert. Die Eigenwerte der Systemmatrix bestimmen die Halbwertszeiten der Verteilungs- und Eliminationsphasen. Bei der **MRT-Bildgebung** werden die k-Raum-Daten durch Fourier-Transformation (ebenfalls Matrizenoperationen) in ein Bild umgerechnet.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- Normalenvektor aus Koordinatenform direkt ablesen: $ax+by+cz=d$ → $\\vec{n}=(a,b,c)$
+- Determinante einer 2×2-Matrix berechnen: $\\det = ad - bc$
+- Punkt auf Gerade prüfen: in Parameterform einsetzen, konsistentes $t$ suchen
+- Dimensionsregel bei Matrizenmultiplikation: $(m\\times n) \\cdot (n\\times p) = (m\\times p)$
+- Inverse 2×2-Matrix berechnen (Hauptdiag. tauschen, Nebendiag. negieren, durch det dividieren)
+
+**Achtung — typische Verwechslungen:**
+- Determinante $= 0$ → Matrix ist **singulär** (keine Inverse, kein eindeutiges LGS) — bei det $\\neq 0$ ist sie regulär
+- Matrizenmultiplikation ist **nicht kommutativ**: $A \\cdot B \\neq B \\cdot A$ im Allgemeinen
+- Normalenvektor steht **senkrecht** auf der Ebene — er liegt nicht in der Ebene!
+- Cramersche Regel: Die **$i$-te Spalte** von $A$ wird durch $\\vec{b}$ ersetzt (nicht die $i$-te Zeile)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Determinante 2×2: $\\det\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix} = ad - bc$ (Hauptdiag. minus Nebendiag.)
+- Inverse 2×2: $A^{-1} = \\frac{1}{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$ — nur bei $\\det \\neq 0$ definiert
+- CT-Rekonstruktion: Radon-Transformation + gefilterte Rückprojektion = Matrizenoperationen auf Sinogramm
+
+---
 
 ## Zusammenfassung
 
@@ -961,8 +1022,6 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
 
 "Wie weit ist der Tumor vom Rückenmark entfernt?" — diese Frage entscheidet über Bestrahlungsdosen und Schäden. Abstandsberechnungen im 3D-Raum sind in der Medizin direkt lebensrelevant. Ob Punkt zu Punkt, Punkt zu Gerade oder Punkt zu Ebene: die Vektorrechnung liefert präzise Abstände. Für den MedAT sind euklidischer Abstand, Punkt-Gerade-Abstand, Punkt-Ebene-Abstand und Schnittwinkel prüfungsrelevant.
 
-# Abstandsberechnungen und Anwendungen
-
 ## Abstand Punkt–Punkt
 
 Der Abstand zweier Punkte $A$ und $B$ im dreidimensionalen Raum ist der Betrag des Verbindungsvektors:
@@ -1074,6 +1133,27 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
 **Neurochirurgie:** Bei der **stereotaktischen Operation** wird ein Zielpunkt im Gehirn über 3D-Koordinaten definiert (aus CT/MRT). Der Abstand der Nadelspitze zum Zielpunkt muss minimal sein ($d < 1$ mm). Die Nadelrichtung wird als Geradengleichung im Raum modelliert, und der Punkt-Gerade-Abstand zu kritischen Strukturen (Gefäße, Hirnstamm) wird berechnet, um den sichersten Zugangsweg zu planen.
 
 **Bildgebung:** Abstände in CT/MRT-Schichtbildern werden über die euklidische Distanz berechnet, wobei die Schichtdicke als dritte Koordinate eingeht (anisotrope Voxel). Volumenmessungen nutzen die Abstandsformeln zur Bestimmung von Organgrößen, und der Punkt-Ebene-Abstand hilft bei der Beurteilung von Raumforderungen relativ zu anatomischen Leitstrukturen.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- Punkt-Ebene-Abstand mit der Hesseschen Normalform berechnen (4-Schritte-Vorgehen)
+- Euklidische Distanz zweier 3D-Punkte (verallgemeinerter Pythagoras)
+- Lagebeziehung zweier Geraden bestimmen: parallel / identisch / schneidend / windschief
+- Schnittwinkel zweier Geraden oder zweier Ebenen berechnen
+
+**Achtung — typische Verwechslungen:**
+- Gerade–Ebene-Winkel: **sin** verwenden ($\\sin\\alpha = \\frac{|\\vec{d}\\cdot\\vec{n}|}{|\\vec{d}||\\vec{n}|}$), NICHT cos!
+- Gerade–Gerade und Ebene–Ebene: **cos** mit Richtungsvektoren bzw. Normalenvektoren
+- Windschief gibt es nur im $\\mathbb{R}^3$ — in der Ebene ($\\mathbb{R}^2$) schneiden sich nicht-parallele Geraden immer
+- Abstandsformel Punkt–Ebene: Betrag des Zählers nehmen UND durch $|\\vec{n}|$ dividieren — beides nötig!
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Merkhilfe Schnittwinkel: **G↔G und E↔E: cos; G↔E: sin** (Gerade trifft Ebene → sin)
+- Strahlentherapie-Sicherheitsmarge: typisch **5–10 mm** Mindestabstand Risikorgan–Feldgrenze
+- Punkt-Ebene-Formel 4 Schritte: ① Koordinatenform, ② Einsetzen, ③ Betrag, ④ durch $\\sqrt{a^2+b^2+c^2}$ teilen
+
+---
 
 ## Zusammenfassung
 
