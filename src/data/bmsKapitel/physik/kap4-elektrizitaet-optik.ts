@@ -93,6 +93,28 @@ Gesamtladung q = 2000 · 1,6×10⁻¹⁹ C = 3,2×10⁻¹⁶ C.
 Kraft: F = q·E = 3,2×10⁻¹⁶ · 500 = **1,6×10⁻¹³ N ≈ 0,16 pN**.
 Die tatsächliche Wanderungsgeschwindigkeit hängt von Reibung im Gel ab (größere Fragmente langsamer → Größentrennung).
 
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Wie ändert sich die Coulombkraft, wenn der Abstand verdoppelt wird?" → Kraft wird auf ¼ reduziert (1/r²-Gesetz)
+- "In welchem Medium ist die Coulombkraft zwischen Ionen am schwächsten?" → Wasser (εᵣ ≈ 80 → Kraft 80× reduziert)
+- "Was ist das elektrische Feld im Innern eines Faraday-Käfigs?" → Exakt null
+- "Wie groß ist das Membranpotential einer Nervenzelle in Ruhe?" → ca. −70 mV (innen negativ)
+
+**Achtung — typische Verwechslungen:**
+- Spannung ≠ Feld: U [V] ist Potentialdifferenz, E [V/m] ist Feldstärke (E = U/d für Plattenkondensator)
+- Coulombkraft wirkt entlang der Verbindungslinie — Lorentz-Kraft hingegen senkrecht zur Bewegungsrichtung
+- Im Medium erscheint εᵣ im Nenner (Kraft wird geschwächt), nicht im Zähler
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Elementarladung: e = 1,602 × 10⁻¹⁹ C
+- Coulombkonstante: k = 8,99 × 10⁹ N·m²/C²
+- εᵣ(Wasser) ≈ 80; εᵣ(Vakuum) = 1
+- Membranpotential: −70 mV über ~7 nm → E ≈ 10⁷ V/m (stärker als Luftdurchschlag!)
+- Defibrillator: C ≈ 200 µF, U ≈ 1500 V → W = ½·C·U² ≈ 225 J
+
+---
+
 ## Zusammenfassung
 
 - **Coulombgesetz**: F = k·q₁·q₂/r²; k = 8,99×10⁹ N·m²/C²; in Medium: F_M = F/εᵣ (in Wasser 80× kleiner!)
@@ -349,6 +371,27 @@ Entladezeit (τ = R·C): 75 · 200×10⁻⁶ = **15 ms** — kurz genug für eff
 Unmyelinisiertes Axon: Radius r = 0,5 µm, Länge L = 1 mm, ρ_Axoplasma = 2 Ω·m.
 R = ρ·L/A = 2 · 10⁻³ / (π·(0,5×10⁻⁶)²) = 2×10⁻³ / (7,85×10⁻¹³) ≈ **2,5 GΩ**.
 Zum Vergleich: 1 mm Kupferdraht gleichen Querschnitts hätte R = 1,7×10⁻⁸ · 10⁻³ / 7,85×10⁻¹³ ≈ 22 Ω — der Faktor ~10⁸ erklärt, warum Nervenleitung auf Ionenkanäle und Aktionspotentiale angewiesen ist.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Welcher Strom ist ab ~100 mA durch den Körper lebensgefährlich?" → Kammerflimmern ab ~100 mA
+- "Wie ändert sich der Widerstand eines Drahtes bei Verdopplung der Länge?" → R verdoppelt sich (R = ρ·L/A)
+- "Warum ist nasse Haut gefährlicher bei Stromberührung?" → R sinkt von ~50 kΩ auf ~1 kΩ → Strom ~50× höher
+- "Welche Anwendung nutzt Joulesche Wärme therapeutisch?" → HF-Ablation, Elektrochirurgie
+
+**Achtung — typische Verwechslungen:**
+- P = U·I = I²·R = U²/R — alle drei Formen äquivalent, aber unterschiedliche Variablen nötig
+- Metalle: R steigt mit T; Halbleiter/NTC: R sinkt mit T (entgegengesetzt!)
+- Leitwert G = 1/R [Siemens] — wird bei Ionenkanälen statt R verwendet
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- 1–2 mA: wahrnehmbar; 10–20 mA: Loslasssperre; >100 mA: Kammerflimmern; >1 A: Verbrennungen
+- Spez. Widerstand: Kupfer ~1,7 × 10⁻⁸ Ω·m; Körpergewebe ~0,5–3 Ω·m
+- MRT-Magnete: Supraleiter (Nb-Ti) bei 4 K, R = 0
+- Nernst-Potential: E_K⁺ ≈ −90 mV, E_Na⁺ ≈ +60 mV
+
+---
 
 ## Zusammenfassung
 
@@ -612,12 +655,34 @@ Typisches Neuron: R_m = 10 kΩ·cm², C_m = 1 µF/cm².
 τ_m = R_m · C_m = 10.000 Ω·cm² × 10⁻⁶ F/cm² = **10 ms**.
 Bedeutung: Nach einem synaptischen Strompuls erreicht das Membranpotential in ~10 ms 63 % der Endspannung. Dünnere Axone (höheres R_m) haben längere τ → langsamere Antwort.
 
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Wie berechnet man den Gesamtwiderstand bei Parallelschaltung?" → 1/R_ges = 1/R₁ + 1/R₂ + ... (immer kleiner als kleinster Einzelwert)
+- "Nach welcher Zeit ist ein RC-Kondensator auf 63 % geladen?" → Nach einer Zeitkonstante τ = R·C
+- "Welche Energie speichert ein Defibrillator-Kondensator (200 µF, 1500 V)?" → W = ½·C·U² = 225 J
+- "Was besagt die Knotenregel?" → ΣI_ein = ΣI_aus (Ladungserhaltung)
+
+**Achtung — typische Verwechslungen:**
+- Kondensatoren in Reihe → 1/C_ges = 1/C₁ + 1/C₂ (umgekehrt zu Widerständen in Reihe!)
+- Kondensatoren parallel → C_ges = C₁ + C₂ (wie Widerstände in Reihe addieren sich)
+- Nach 1τ: 63 % geladen (nicht 50 %, nicht 100 %)
+- Knotenregel = Ladungserhaltung; Maschenregel = Energieerhaltung (nicht verwechseln!)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Defibrillator: C ≈ 200 µF, U ≈ 1000–2000 V, W ≈ 200–360 J, τ = R·C ≈ 10–15 ms
+- Membrankapazität: C_m ≈ 1 µF/cm²; Membranzeitkonstante τ_m = R_m·C_m ≈ 10 ms
+- Kapazitive Reaktanz: X_C = 1/(2π·f·C) — Kondensator sperrt Gleichstrom (f = 0 → X_C = ∞)
+- Wheatstone-Brücke Gleichgewicht: R₁·R₄ = R₂·R₃
+
+---
+
 ## Zusammenfassung
 
 - **Reihenschaltung**: R_ges = R₁+R₂+…; Strom gleich; Spannung teilt sich auf (Spannungsteiler)
 - **Parallelschaltung**: 1/R_ges = 1/R₁+1/R₂+…; R_ges < R_kleinst; Spannung gleich; Strom teilt sich auf
 - **Kirchhoff**: Knotenregel ΣI_ein = ΣI_aus; Maschenregel ΣU = 0
-- **RC-Glied**: Laden U_C(t) = U₀·(1−e^(−t/τ)); Entladen U_C(t) = U₀·e^(−t/τ); τ = R·C
+- **RC-Glied**: Laden U_C(t) = U₀·(1−e^(−t/τ)); Entladen U_C(t) = U₀·e^(−t/τ)); τ = R·C
 - **τ-Bedeutung**: nach 1τ: 63 % geladen/37 % übrig; nach 5τ: praktisch voll/leer
 - **Membranmodell**: Neuronen-Membran als RC-Glied; τ_m = R_m·C_m ≈ 10 ms → Integrationszeit synaptischer Signale`,
 
@@ -847,6 +912,29 @@ Induzierte EMK (einzelne Windung): |ε| = A · dB/dt = 25×10⁻⁴ · 10⁴ = *
 Induzierte Feldstärke im Gewebe (Radius ~2 cm): E ≈ ε/(2π·r) = 25/(2π·0,02) ≈ **200 V/m**.
 Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Schwelle.
 
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Welche Frequenz hat das MRT-Anregungssignal bei 1,5 T?" → f_L = 42,58 × 1,5 ≈ 64 MHz (Radiowellenbereich)
+- "Warum klopft ein MRT-Gerät?" → Lorentz-Kraft F = I·L×B auf stromführende Gradientenspulen im Hauptfeld B₀
+- "Was bewirkt die Lenzsche Regel?" → Induzierter Strom wirkt der Flussänderung entgegen (Energieerhaltung)
+- "Welche Wellenlängen hat sichtbares Licht?" → 380 nm (violett) bis 780 nm (rot)
+
+**Achtung — typische Verwechslungen:**
+- Lorentz-Kraft verrichtet keine Arbeit (senkrecht auf v), ändert aber die Richtung → Kreisbahn
+- Faraday-Induktion: ε ∝ Änderungsrate dΦ/dt, nicht dem Feld B selbst (konstantes B induziert nichts!)
+- MRT-Signal kommt von ¹H-Protonen (Wasser), nicht von anderen Atomkernen
+- Magnetfeld B [Tesla] ≠ Elektrisches Feld E [V/m] — Einheiten beachten!
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- μ₀ = 4π × 10⁻⁷ T·m/A (Permeabilität des Vakuums)
+- Larmor-Konstante ¹H: γ/2π = 42,58 MHz/T → bei 1,5 T: ~64 MHz; bei 3 T: ~128 MHz
+- Zyklotronradius: r = m·v/(q·B)
+- c = λ·f = 3 × 10⁸ m/s (alle EM-Wellen im Vakuum)
+- TMS: dB/dt bis 10⁴ T/s → induziertes Feld im Kortex ~200 V/m (100× über Depolarisationsschwelle)
+
+---
+
 ## Zusammenfassung
 
 - **Magnetfeld**: B [T]; Biot-Savart: B = μ₀·I/(2π·r) (Leiter); Solenoid: B = μ₀·μᵣ·n·I
@@ -1026,10 +1114,6 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
 
 Eine Brille korrigiert Fehlsichtigkeit — aber wie? Ein Endoskop leitet Licht durch biegsame Glasfasern ins Körperinnere — warum geht das Licht nicht verloren? Beides erklärt die **geometrische Optik**: Reflexion, Brechung und Linsengleichung. Licht ändert beim Übergang zwischen Medien seine Richtung (Brechung), und ab einem kritischen Winkel wird es vollständig reflektiert (Totalreflexion — Basis der Glasfaser). Für den MedAT sind Snellius'sches Brechungsgesetz, Brechungsindex, Totalreflexion, Linsengleichung, Brechkraft (Dioptrien) und Endoskopie prüfungsrelevant.
 
-# Geometrische Optik
-
-Die geometrische Optik beschreibt das Verhalten von Licht, indem sie es als Strahlen modelliert, die sich in geraden Linien ausbreiten. Dieses Modell gilt, solange die betrachteten Strukturen deutlich größer als die Lichtwellenlänge sind.
-
 ## Reflexionsgesetz
 
 Wenn Licht auf eine glatte Oberfläche trifft, wird es reflektiert. Das **Reflexionsgesetz** lautet:
@@ -1115,6 +1199,27 @@ Maximaler Einkoppelwinkel (Akzeptanzwinkel): θ_max = arcsin(NA) = arcsin(0,56) 
 f = 20 cm, Gegenstand bei g = 30 cm. 1/b = 1/f − 1/g = 1/20 − 1/30 = 3/60 − 2/60 = 1/60.
 b = **60 cm** (reelles Bild). Maßstab: m = b/g = 60/30 = **2** → Bild ist 2× so groß, umgekehrt.
 Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was ist der Grenzwinkel für Totalreflexion bei Glas (n=1,5) → Luft (n=1)?" → sin α_G = 1/1,5 → α_G ≈ 41,8°
+- "Wie berechnet man die Bildweite mit der Linsengleichung?" → 1/b = 1/f − 1/g
+- "Welche Brille korrigiert Kurzsichtigkeit?" → Zerstreuungslinse (negatives D)
+- "Wie addieren sich Brechkräfte mehrerer Linsen?" → D_ges = D₁ + D₂ + ...
+
+**Achtung — typische Verwechslungen:**
+- Totalreflexion nur vom dichteren zum dünneren Medium (n₁ > n₂), NICHT umgekehrt
+- Winkel werden immer gegen das Lot (Flächennormale) gemessen, nicht gegen die Oberfläche
+- Positives b → reelles Bild hinter der Linse; negatives b → virtuelles Bild auf der Gegenstandsseite
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Brechungsindizes: Vakuum = 1; Luft ≈ 1; Wasser = 1,33; Glas ≈ 1,5; Hornhaut = 1,376
+- Brechkraft Auge: ~60 dpt gesamt (Hornhaut ~43 dpt + Linse ~17 dpt variabel)
+- Glasfaser Grenzwinkel ≈ 70° (Kern n=1,62, Mantel n=1,52)
+- D = 1/f [m]: positive D = Sammellinse; negative D = Zerstreuungslinse
+
+---
 
 ## Zusammenfassung
 
@@ -1294,10 +1399,6 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
 
 Warum kann ein Lichtmikroskop keine Strukturen kleiner als ~200 nm auflösen? Warum leuchten Seifenblasen bunt? Warum kann OCT die Netzhautschichten schichtweise abbilden? Das Strahlmodell der geometrischen Optik reicht hier nicht — man muss Licht als **Welle** behandeln. Interferenz und Beugung bestimmen das Auflösungslimit (Abbe-Kriterium) und ermöglichen moderne Bildgebungsverfahren. Für den MedAT sind Interferenz, Abbe-Auflösungsgrenze, Numerische Apertur, Mikroskopie und OCT-Prinzip prüfungsrelevant.
 
-# Wellenoptik
-
-Die Wellenoptik behandelt Licht als elektromagnetische Welle und erklärt Phänomene wie Interferenz und Beugung, die mit dem Strahlmodell der geometrischen Optik nicht beschreibbar sind.
-
 ## Licht als elektromagnetische Welle
 
 Licht ist eine transversale elektromagnetische Welle, bei der elektrisches und magnetisches Feld senkrecht zur Ausbreitungsrichtung schwingen. Kenngrößen sind:
@@ -1379,6 +1480,27 @@ Trockenobjektiv (NA = 0,95), grün (λ = 520 nm): d_min = 520/(2·0,95) = **274 
 Spaltbreite b = 10 µm = 10⁻⁵ m, λ = 500 nm.
 sin α = λ/b = 500×10⁻⁹ / 10⁻⁵ = 0,05 → α ≈ **2,87°**.
 Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0,05 = **100 mm** (10 cm).
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was ist die Auflösungsgrenze eines Mikroskops mit NA = 1,3 bei λ = 520 nm?" → d_min = 520/(2·1,3) = 200 nm
+- "Wie verbessert Ölimmersion die Mikroskop-Auflösung?" → Erhöht NA = n·sin α (n_Öl ≈ 1,52 > n_Luft = 1)
+- "Welcher Gangunterschied bewirkt konstruktive Interferenz?" → Δ = n·λ (ganzzahliges Vielfaches)
+- "Wie groß ist der Streifenabstand beim Doppelspalt?" → Δy = λ·L/d
+
+**Achtung — typische Verwechslungen:**
+- Konstruktiv = ganzzahliges Vielfaches (Δ = nλ, hell); Destruktiv = halbzahliges (Δ = (n+½)λ, dunkel)
+- Beugung wird stärker (nicht schwächer) bei längerer Wellenlänge
+- OCT nutzt Interferenz (nicht Beugung) für Tiefenauflösung — axiale Auflösung durch Kohärenzlänge begrenzt
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Sichtbares Licht: λ = 380 nm (violett) bis 780 nm (rot)
+- Abbe-Limit: d_min = λ/(2·NA) ≈ 200 nm (Standard-Lichtmikroskop mit Ölimmersion)
+- Ölimmersion: n_Öl ≈ 1,52 → NA bis ~1,4
+- OCT: axiale Auflösung ~5–15 µm (nicht beugungsbegrenzt, sondern durch Kohärenzlänge)
+
+---
 
 ## Zusammenfassung
 
@@ -1547,10 +1669,6 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
 
 Ohne Lupe kann ein Dermatologe keine Melanommerkmale (ABCDE) erkennen. Ohne Mikroskop keine Histologie, keine Bakterienidentifikation. Ohne Endoskop keine minimalinvasive Chirurgie. Optische Instrumente erweitern das Sehen — sie alle kombinieren Linsen nach denselben physikalischen Gesetzen. Die entscheidenden Konzepte: Vergrößerung, Auflösungsgrenze und numerische Apertur. Für den MedAT sind Lupen-/Mikroskop-/Teleskopvergrößerung, Auflösungsgrenze und klinische Anwendungen prüfungsrelevant.
 
-# Optische Instrumente
-
-Optische Instrumente kombinieren Linsen, Spiegel und optische Elemente, um die natürlichen Grenzen des menschlichen Sehens zu überwinden. Für die Medizin sind Lupe, Mikroskop, Endoskop und Ophthalmoskop besonders relevant.
-
 ## Lupe
 
 Die Lupe ist die einfachste Sehhilfe – eine einzelne Sammellinse. Das menschliche Auge kann einen Gegenstand bei der **deutlichen Sehweite** (konventionell S = 25 cm) scharf sehen. Bringt man eine Sammellinse mit Brennweite f vor das Auge und platziert das Objekt nahe am Brennpunkt, entsteht ein aufrechtes, vergrößertes virtuelles Bild bei der deutlichen Sehweite.
@@ -1636,6 +1754,28 @@ Vergrößerung über M_leer = 500·NA/M_ges = 500·1,25/1000 = 0,625 (Nyquist: M
 f_ob = 1200 mm, f_ok = 30 mm → M = 1200/30 = **40-fach**.
 Monddurchmesser: 3474 km, Abstand 384.400 km → Winkeldurchmesser ≈ 0,52°.
 Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. Kleinster auflösbarer Krater bei Auflösung 2" (Seeing): 384.400 · tan(2/3600°) ≈ **3,7 km**.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Welche Vergrößerung hat eine Lupe mit f = 5 cm?" → M = 25/5 = 5-fach
+- "Wie berechnet sich die Gesamtvergrößerung eines Mikroskops?" → M_ges = M_Objektiv × M_Okular
+- "Welche Vergrößerung hat ein Teleskop mit f_ob = 1000 mm und f_ok = 25 mm?" → M = 1000/25 = 40-fach
+- "Wie wird Licht im Endoskop weitergeleitet?" → Totalreflexion in Glasfasern (Kaltlicht)
+
+**Achtung — typische Verwechslungen:**
+- Lupe: M = S/f mit S = 25 cm (deutliche Sehweite); f in cm einsetzen
+- Mikroskop: M_ges = M_ob × M_ok (Produkt, nicht Summe!)
+- Teleskop: M = f_ob/f_ok — langes Objektiv, kurzes Okular → hohe Vergrößerung
+- Konfokalmikroskop: Pinhole blockt Out-of-focus-Licht → optische Schnittbilder (verbessert nicht die Vergrößerung)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Deutliche Sehweite: S = 25 cm (Konvention für Vergrößerungsformeln)
+- Auflösungsgrenze Lichtmikroskop: ~200 nm (Abbe-Limit mit Ölimmersion)
+- Auflösungsgrenze Elektronenmikroskop: ~0,1 nm (De-Broglie-Wellenlänge bei 100 kV)
+- Typische Vergrößerungen: Dermatoskop ~10×; Histologie 40–400×; TEM bis 500.000×
+
+---
 
 ## Zusammenfassung
 
@@ -1803,10 +1943,6 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
 
 Weltweit sind Milliarden Menschen kurzsichtig — Myopie ist die häufigste Fehlsichtigkeit. Ein 20-Jähriger kann seinen Fokus um 10 Dioptrien verändern (Akkommodation); ein 50-Jähriger kaum noch 2 Dioptrien (Presbyopie). Das Auge ist ein biologisches Linsensystem: Hornhaut (~43 dpt) und Linse (~20 dpt) bündeln Licht auf der Fovea. Wenn Brechkraft und Augenlänge nicht passen, entsteht Fehlsichtigkeit — die mit Linsen oder LASIK korrigierbar ist. Für den MedAT sind Akkommodation, Myopie/Hyperopie/Presbyopie/Astigmatismus, Korrektionslinsen und Dioptrienrechnung prüfungsrelevant.
 
-# Optik des Auges und Sehfehler
-
-Das menschliche Auge ist ein hoch entwickeltes optisches Instrument, das Bilder auf der Netzhaut fokussiert und eine Vielzahl von Fehlsichtigkeiten durch aktive oder passive Korrekturen kompensieren kann.
-
 ## Anatomie und Optik des normalen Auges
 
 Das Auge besteht optisch aus mehreren brechenden Flächen:
@@ -1902,6 +2038,29 @@ Akkommodationsbreite: **10 dpt** (60 dpt → 70 dpt Gesamtbrechkraft).
 **Beispiel 3 — LASIK: Ablationstiefe (Munnerlyn-Formel):**
 Korrektur −3 dpt, optische Zone d = 6 mm. Ablationstiefe: t = D · d² / 3 = 3 · (6)² / 3 = 3 · 36 / 3 = **36 µm**.
 Bei −6 dpt: t = 6 · 36 / 3 = **72 µm**. Hornhautdicke ~550 µm, mind. 250 µm Restdicke → max. Ablation ~150 µm → ca. −12 dpt Obergrenze.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Welche Brille korrigiert Myopie?" → Zerstreuungslinse (negatives D); Myopie = Auge zu lang
+- "Was passiert beim Akkommodieren auf Nähe mit dem Ziliarmuskel?" → Kontrahiert → Linse wölbt sich → Brechkraft steigt
+- "Welche Korrektur benötigt Presbyopie?" → Sammellinse (+dpt) für Nahbereich (Lesebrille)
+- "Fernpunkt eines Patienten liegt bei 50 cm — welche Brillenstärke?" → D = −1/0,5 m = −2,0 dpt
+
+**Achtung — typische Verwechslungen:**
+- Myopie: Auge zu LANG (zu stark brechend) → Zerstreuungslinse (−dpt)
+- Hyperopie: Auge zu KURZ (zu schwach brechend) → Sammellinse (+dpt)
+- Presbyopie ≠ Hyperopie: gleiche Korrektur (Lesebrille +dpt), aber unterschiedliche Ursache (Elastizitätsverlust vs. kurzes Auge)
+- Akkommodation: Ziliarmuskel KONTRAHIERT → Linse wölbt sich (nicht flacher!)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Gesamtbrechkraft Auge: ~60 dpt (Hornhaut ~43 dpt + Linse ~17–27 dpt variabel)
+- Akkommodationsbreite: Jugendliche ~10 dpt; ab 50 Jahren nur noch ~2 dpt
+- Normaler IOP: 10–21 mmHg; Glaukom oft >21 mmHg
+- LASIK: Excimerlaser λ = 193 nm; Korrekturbereiche −10 bis +6 dpt
+- Nahpunkt: ~10 cm (20-jährig) → >100 cm (60-jährig, Presbyopie)
+
+---
 
 ## Zusammenfassung
 
