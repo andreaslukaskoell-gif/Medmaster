@@ -22,7 +22,9 @@ export const mathKapStochastik: Kapitel = {
         "mit Wiederholung",
         "ohne Wiederholung",
       ],
-      content: `## Überblick
+      content: `## Einleitung
+
+Wie viele Blutgruppen gibt es? Wie viele DNA-Codons sind möglich? Wie viele Wege gibt es, ein Medikamenten-Trio aus acht auszuwählen? Die Kombinatorik beantwortet genau diese Fragen — sie zählt systematisch, ohne alles aufzulisten. Kombinatorik ist das Fundament der Wahrscheinlichkeitsrechnung. Für den MedAT sind die vier Grundtypen (Permutation, Variation, Kombination, je mit/ohne Wiederholung) und der Binomialkoeffizient prüfungsrelevant.
 
 Die Kombinatorik beantwortet die Frage: Auf wie viele Arten lassen sich Objekte auswählen oder anordnen? Sie bildet das rechnerische Fundament der Wahrscheinlichkeitsrechnung. Das Wichtigste auf einen Blick:
 - **Permutation:** Alle n Objekte werden angeordnet — wie viele Reihenfolgen gibt es?
@@ -188,7 +190,15 @@ AB0 hat 4 Phänotypen (A, B, AB, 0), Rhesus hat 2 (Rh+ , Rh−). Jede Person hat
 In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig getestet werden (Reihenfolge egal, ohne Wiederholung). → Kombination: C(8,3) = (8 · 7 · 6) / (3 · 2 · 1) = 336 / 6 = **56 mögliche Dreier-Kombinationen**. Soll zusätzlich ein viertes Medikament als Reserve bestimmt werden (Reihenfolge der Reserve zählt): Variation V(8,4) = 8!/4! = 8 · 7 · 6 · 5 = **1.680**.
 
 **Beispiel 3 — DNA-Codons: Wie viele verschiedene Basentripletts gibt es?**
-4 Basen (A, U/T, G, C), je 3 Positionen, Wiederholung erlaubt, Reihenfolge zählt (AUG ≠ GUA). → Variation mit Wiederholung: V(4,3) = 4³ = **64 mögliche Codons**. Davon codieren 61 für Aminosäuren (3 Stopp-Codons). Mit 20 Aminosäuren → Code ist degeneriert (redundant): im Schnitt 61/20 ≈ 3 Codons pro Aminosäure.`,
+4 Basen (A, U/T, G, C), je 3 Positionen, Wiederholung erlaubt, Reihenfolge zählt (AUG ≠ GUA). → Variation mit Wiederholung: V(4,3) = 4³ = **64 mögliche Codons**. Davon codieren 61 für Aminosäuren (3 Stopp-Codons). Mit 20 Aminosäuren → Code ist degeneriert (redundant): im Schnitt 61/20 ≈ 3 Codons pro Aminosäure.
+
+## Zusammenfassung
+
+- **Permutation** (alle n, geordnet, ohne WH): P = n!; mit WH: P = n!/k₁!·k₂!·...
+- **Variation** (k aus n, geordnet, ohne WH): V = n!/(n−k)!; mit WH: V = nᵏ
+- **Kombination** (k aus n, ungeordnet, ohne WH): C = n!/(k!·(n−k)!) = C(n,k); mit WH: C = C(n+k−1,k)
+- **Entscheidung**: Reihenfolge zählt? → geordnet (Variation/Permutation); Wiederholung erlaubt? → mit WH
+- **Klinisch**: Blutgruppen (8 Kombinationen); DNA-Codons (64 = 4³); Studienrandomisierung (C(8,3) = 56)`,
       lernziele: [
         "Die vier kombinatorischen Grundtypen (Permutation/Variation/Kombination × mit/ohne Wiederholung) anhand der Entscheidungsfragen 'geordnet?' und 'Wiederholung?' korrekt zuordnen",
         "Permutationen ohne und mit Wiederholung berechnen und die Formel für identische Elemente anwenden",
@@ -314,7 +324,9 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
         "Baumdiagramm",
         "Binomialverteilung",
       ],
-      content: `## Überblick
+      content: `## Einleitung
+
+"Wie wahrscheinlich ist es, dass ein Kind von zwei CF-Trägern krank wird?" Solche Fragen beantwortet die Wahrscheinlichkeitsrechnung — sie quantifiziert Unsicherheit mit Zahlen zwischen 0 (unmöglich) und 1 (sicher). In der Medizin ist sie unverzichtbar: Erbkrankheiten (Mendel-Regeln), Nebenwirkungen, Testergebnisse. Für den MedAT sind Laplace-Experiment, Additionssatz, Komplementregel, Unabhängigkeit und Binomialverteilung prüfungsrelevant.
 
 Die Wahrscheinlichkeitsrechnung quantifiziert Unsicherheit. Im MedAT-Kontext bedeutet das: Wie wahrscheinlich ist ein bestimmtes Testergebnis? Wie oft tritt eine Mutation auf? Wie sicher ist eine Diagnose? Das Wichtigste auf einen Blick:
 - **Laplace-Experiment:** Alle Ergebnisse gleich wahrscheinlich → P(A) = |A| / |Ω|
@@ -472,7 +484,16 @@ Trägerfrequenz q ≈ 1/25 in Mitteleuropa (heterozygot Aa). Beide Eltern Carrie
 Ein Medikament verursacht pro Dosis mit P = 0,15 eine Nebenwirkung (unabhängig). P(mind. 1 Nebenwirkung in 5 Dosen) = 1 − P(keine) = 1 − 0,85⁵. 0,85⁵ = 0,85 · 0,85 · 0,85 · 0,85 · 0,85 ≈ 0,4437. P(mind. 1) = 1 − 0,4437 = **0,556 ≈ 55,6%**. Also: Mehr als jeder zweite Patient erlebt mindestens eine Nebenwirkung über 5 Dosen — obwohl die Einzelwahrscheinlichkeit nur 15% beträgt.
 
 **Beispiel 3 — Binomialverteilung: Impf-Wirksamkeit:**
-Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 geschützt) = C(6,6) · 0,92⁶ · 0,08⁰ = 1 · 0,92⁶ · 1 ≈ 0,92⁶. Rechnung: 0,92² = 0,8464; 0,92³ ≈ 0,7787; 0,92⁶ = (0,92³)² ≈ 0,7787² ≈ **0,606 ≈ 60,6%**. Erwartungswert: μ = 6 · 0,92 = **5,52** geschützte Personen.`,
+Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 geschützt) = C(6,6) · 0,92⁶ · 0,08⁰ = 1 · 0,92⁶ · 1 ≈ 0,92⁶. Rechnung: 0,92² = 0,8464; 0,92³ ≈ 0,7787; 0,92⁶ = (0,92³)² ≈ 0,7787² ≈ **0,606 ≈ 60,6%**. Erwartungswert: μ = 6 · 0,92 = **5,52** geschützte Personen.
+
+## Zusammenfassung
+
+- **Laplace**: P(A) = günstige/mögliche Ergebnisse; nur wenn alle Ergebnisse gleich wahrscheinlich
+- **Additionssatz**: P(A∪B) = P(A)+P(B)−P(A∩B); bei disjunkten Ereignissen: P(A∩B) = 0
+- **Komplementregel**: P(Ā) = 1−P(A); "mindestens einmal" = 1 − P(keinmal)
+- **Unabhängigkeit**: P(A∩B) = P(A)·P(B); Kettenregel: P(A∩B∩C) = P(A)·P(B)·P(C)
+- **Binomialverteilung**: P(X=k) = C(n,k)·pᵏ·(1−p)^(n−k); μ = n·p; σ² = n·p·(1−p)
+- **Klinisch**: Autosomal-rezessiv P(krank)=1/4; Nebenwirkungen kumulieren; Impfschutz C(6,6)·p⁶`,
       lernziele: [
         "Die klassische Wahrscheinlichkeit als P(A) = |A|/|Ω| berechnen und die Laplace-Bedingung prüfen",
         "Komplementregel, Additionssatz und Multiplikationssatz korrekt anwenden und dabei unvereinbare von unabhängigen Ereignissen unterscheiden",
@@ -595,7 +616,9 @@ Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 g
         "Prävalenz",
         "Positiver prädiktiver Wert",
       ],
-      content: `## Überblick
+      content: `## Einleitung
+
+Ein HIV-Test ist positiv — wie wahrscheinlich ist eine echte Infektion? Ohne Kenntnis der Prävalenz ist die Antwort überraschend: Bei niedriger Prävalenz können >80% der positiven Tests falsch-positiv sein. Das Bayes-Theorem rechnet um: aus P(positiv | krank) wird P(krank | positiv). Es ist das wichtigste Werkzeug zur Beurteilung medizinischer Tests. Für den MedAT sind bedingte Wahrscheinlichkeit, Satz von Bayes, Vierfeldertafel, PPV und NPV prüfungsrelevant.
 
 Das Bayes-Theorem ist eines der wichtigsten Konzepte der medizinischen Statistik. Es erklärt, warum ein positiver Test bei seltenen Erkrankungen oft trügerisch ist. Das Wichtigste auf einen Blick:
 - **Bedingte Wahrscheinlichkeit:** P(A|B) = "Wahrscheinlichkeit von A, gegeben dass B eingetreten ist"
@@ -735,7 +758,16 @@ Krank: 10.000 · 0,008 = 80. Gesund: 9.920. TP = 80 · 0,87 = 69,6 ≈ 70. FN = 
 Prävalenz 0,1% (Allgemeinbevölkerung). ELISA: Sens 99,7%, Spez 99,5%. n = 100.000. Krank: 100. TP = 99,7 ≈ 100. FP = 99.900 · 0,005 = 499,5 ≈ 500. PPV₁ = 100/600 ≈ 16,7%. Zweiter Test (Western Blot, Spez 99,99%) auf die 600 Positiven: TP₂ = 100 (echte bleiben positiv). FP₂ = 500 · 0,0001 = 0,05 ≈ 0. **PPV₂ ≈ 100/100 = ~100%**. Die 2-Stufen-Strategie hebt den PPV von 17% auf nahe 100%.
 
 **Beispiel 3 — Carrier-Test: P(Carrier | positiver Test) bei CF:**
-A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 · 0,04 + 0,01 · 0,96 = 0,036 + 0,0096 = 0,0456. P(Carrier|T+) = 0,036 / 0,0456 = **0,789 ≈ 79%**. Trotz 99% Spezifität: 1 von 5 positiv Getesteten ist kein Carrier. Bestätigungsdiagnostik (DNA-Analyse) nötig.`,
+A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 · 0,04 + 0,01 · 0,96 = 0,036 + 0,0096 = 0,0456. P(Carrier|T+) = 0,036 / 0,0456 = **0,789 ≈ 79%**. Trotz 99% Spezifität: 1 von 5 positiv Getesteten ist kein Carrier. Bestätigungsdiagnostik (DNA-Analyse) nötig.
+
+## Zusammenfassung
+
+- **Bedingte Wahrscheinlichkeit**: P(A|B) = P(A∩B)/P(B); "A gegeben B ist eingetreten"
+- **Satz von Bayes**: P(A|B) = P(B|A)·P(A) / P(B); kehrt die Bedingung um
+- **Totale Wahrscheinlichkeit**: P(B) = P(B|A₁)·P(A₁) + P(B|A₂)·P(A₂) + ...
+- **Vierfeldertafel**: TP, FP, FN, TN; Sens = TP/(TP+FN); Spez = TN/(TN+FP); PPV = TP/(TP+FP); NPV = TN/(TN+FN)
+- **Merkhilfe SpPin/SnNout**: Hohe Spezifität → positiver Test = krank (bestätigt); hohe Sensitivität → negativer Test = gesund (ausschließt)
+- **Klinisch**: Mammographie PPV ~12%; HIV-Screening 2-Stufen (ELISA + Western Blot); CF-Carrier-Test`,
       lernziele: [
         "Bedingte Wahrscheinlichkeit P(A|B) = P(A∩B)/P(B) berechnen und den Unterschied zu P(B|A) erklären",
         "Den Satz der totalen Wahrscheinlichkeit auf medizinische Testszenarien anwenden",
@@ -863,7 +895,9 @@ A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 · 0,04 
         "Spezifität",
         "p-Wert",
       ],
-      content: `## Überblick
+      content: `## Einleitung
+
+Nüchtern-Blutzucker 126 mg/dL: normal oder pathologisch? Um das zu beurteilen, braucht man den Mittelwert und die Standardabweichung der Bevölkerung — und die Normalverteilung. Statistik macht aus Datenmassen handhabbare Kennzahlen. Für den MedAT sind Mittelwert, Median, Modus, Standardabweichung, Normalverteilung (68-95-99,7-Regel), z-Transformation und Sensitivität/Spezifität prüfungsrelevant.
 
 Statistik beschreibt und analysiert Daten. Im MedAT werden Lagemaße, Streumaße und die Normalverteilung geprüft. Dazu kommen Sensitivität und Spezifität als Schlüsselbegriffe der medizinischen Diagnostik. Das Wichtigste auf einen Blick:
 - **Normalverteilung:** Symmetrische Glockenkurve, definiert durch μ (Mittelwert) und σ (Standardabweichung)
@@ -1067,7 +1101,16 @@ Gesamtcholesterin N(μ = 200, σ = 35) mg/dL. Referenzbereich = μ ± 2σ = 200 
 Population: N(μ = 90, σ = 12) mg/dL. Patient misst 126 mg/dL. z = (126 − 90) / 12 = 36/12 = **3,0**. Interpretation: 3 Standardabweichungen über dem Mittelwert → liegt außerhalb μ+3σ, also im obersten 0,15% der Bevölkerung. Klinisch: Nüchternglukose ≥ 126 mg/dL = Diabetes-Diagnosekriterium (WHO).
 
 **Beispiel 3 — Sens/Spez-Tradeoff: Troponin-Schwellenwert verschieben:**
-Troponin-Test für Herzinfarkt, aktueller Cutoff: Sens = 85%, Spez = 92%. Senkt man den Cutoff (empfindlicher): Sens steigt auf 95%, Spez sinkt auf 80%. In einer Notaufnahme (Prävalenz 10%, n = 1.000): Alter Cutoff: TP = 85, FP = 72, PPV = 85/157 ≈ **54%**. Neuer Cutoff: TP = 95, FP = 180, PPV = 95/275 ≈ **34,5%**. Klinische Entscheidung: höherer Sens-Cutoff in der Notaufnahme (kein Infarkt verpassen), dann Bestätigung mit spezifischerem Test.`,
+Troponin-Test für Herzinfarkt, aktueller Cutoff: Sens = 85%, Spez = 92%. Senkt man den Cutoff (empfindlicher): Sens steigt auf 95%, Spez sinkt auf 80%. In einer Notaufnahme (Prävalenz 10%, n = 1.000): Alter Cutoff: TP = 85, FP = 72, PPV = 85/157 ≈ **54%**. Neuer Cutoff: TP = 95, FP = 180, PPV = 95/275 ≈ **34,5%**. Klinische Entscheidung: höherer Sens-Cutoff in der Notaufnahme (kein Infarkt verpassen), dann Bestätigung mit spezifischerem Test.
+
+## Zusammenfassung
+
+- **Lagemaße**: Mittelwert x̄ = Σxᵢ/n; Median = mittlerer Wert (bei Ausreißern bevorzugt); Modus = häufigster Wert
+- **Streumaße**: Varianz s² = Σ(xᵢ−x̄)²/(n−1); Standardabweichung s = √s²; IQR = Q3−Q1
+- **Normalverteilung**: Glockenkurve; μ±1σ → 68%; μ±2σ → 95%; μ±3σ → 99,7%
+- **z-Transformation**: z = (x−μ)/σ; z = 2 bedeutet 97,7% der Daten sind darunter (2,3% oberhalb)
+- **Referenzbereich**: μ±2σ umfasst 95% → 5% gesunder Personen fallen heraus (falsch-positiv)
+- **ROC-Kurve**: Cutoff-Verschiebung → Sens↑ Spez↓ und umgekehrt; AUC = Trennfähigkeit des Tests`,
       lernziele: [
         "Mittelwert, Median und Modus aus einem gegebenen Datensatz berechnen und bei schiefer Verteilung den geeigneteren Lageparameter auswählen",
         "Varianz und Standardabweichung berechnen und interpretieren",
