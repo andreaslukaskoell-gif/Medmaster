@@ -30,7 +30,7 @@ Damit neues Leben entstehen kann, müssen Samenzelle und Eizelle zusammenfinden 
 
 ## Befruchtung
 
-Die **Befruchtung** (Fertilisation) findet im äußeren Drittel des **Eileiters (Tuba uterina), der Ampulle**, statt. Bevor ein Spermium die Eizelle erreichen kann, muss es die **Kapazitation** durchlaufen — eine biochemische Reifung im weiblichen Genitaltrakt (Dauer ca. 7 Stunden), bei der Cholesterin aus der Spermienmembran entfernt wird und intrazelluläres Ca²⁺ ansteigt, was die Motilität erhöht (**Hyperaktivierung**) und die Akrosomreaktion ermöglicht. Beim Kontakt eines Spermiums mit der Eizelle löst die Bindung an die **Zona pellucida** (speziell an das Glykoprotein ZP3) die **Akrosom-Reaktion** aus: Das Akrosom am Spermien-Kopf fusioniert mit der Plasmamembran und setzt Enzyme frei – insbesondere **Akrosin** (Serinprotease) und **Hyaluronidase** – die die Zona pellucida enzymatisch durchdringen. Nach der Fusion der Zellmembranen von Spermium und Eizelle erfolgt die **Kortikalreaktion**: kortikale Granula der Eizelle exozytieren und modifizieren die Zona pellucida (ZP2-Modifikation, Zona-Reaktion), sodass keine weiteren Spermien eindringen können (**Polyspermie-Block**). Gleichzeitig wird die durch die Ovulation arretierte sekundäre Oozyte (Arrest in **Metaphase II**) durch einen Ca²⁺-Anstieg zur Vollendung der Meiose II angetrieben: Es entsteht eine reife Eizelle (n) plus das 2. Polkörperchen (n). Die Vorkerne von Spermium und Eizelle verschmelzen im Schritt der **Syngamie** zur diploiden **Zygote** (2n). Wichtig: Erst bei der Syngamie wird das Geschlecht festgelegt — es wird durch das Spermium bestimmt (X oder Y-Chromosom).
+Die **Befruchtung** (Fertilisation) findet im äußeren Drittel des **Eileiters (Tuba uterina), der Ampulle**, statt. Bevor ein Spermium die Eizelle erreichen kann, muss es die **Kapazitation** durchlaufen — eine biochemische Reifung im weiblichen Genitaltrakt (Dauer ca. 7 Stunden), bei der Cholesterin aus der Spermienmembran entfernt wird und intrazelluläres Ca²⁺ ansteigt, was die Motilität erhöht (**Hyperaktivierung**) und die Akrosomreaktion ermöglicht. Dann durchdringt das Spermium mithilfe der **Akrosom-Reaktion** die Zona pellucida; die Eizelle setzt sofort den **Polyspermie-Block** über die Kortikalreaktion. Gleichzeitig vollendet die bis zur Ovulation in **Metaphase II** arretierte Oozyte die Meiose II → reife Eizelle (n) + 2. Polkörperchen. Abschließend verschmelzen die Vorkerne beider Zellen in der **Syngamie** zur diploiden **Zygote** (2n). Erst hier wird das Geschlecht festgelegt — durch das Spermium (X oder Y-Chromosom). Den molekularen Mechanismus von Akrosom- und Kortikalreaktion erklärt der folgende Abschnitt.
 
 ---
 
@@ -1272,13 +1272,6 @@ Warum sehen Giraffen lange Hälse? Warum werden Bakterien resistent gegen Antibi
 
 ---
 
-**Lernziele:**
-- Darwins vier Kernprinzipien der natürlichen Selektion nennen und erläutern
-- Die drei Selektionsarten (stabilisierend, gerichtet, disruptiv) unterscheiden und mit Beispielen belegen
-- Die Synthetische Evolutionstheorie und ihre Integration von Genetik und Darwinismus beschreiben
-
----
-
 ## Fitness — Was bedeutet 'Überleben des Tüchtigsten'?
 
 Der Begriff 'Survival of the Fittest' (Spencer, nicht Darwin) wird oft missverstanden. In der Evolutionsbiologie bedeutet Fitness nicht physische Stärke, sondern **reproduktive Fitness**: die Fähigkeit eines Individuums, überlebensfähige, fertile Nachkommen zu erzeugen. Ein schwächliches, aber besonders fertiles Individuum hat höhere Fitness als ein starkes, nicht-reproduktives Individuum. Inklusive Fitness (Hamilton) erweitert das Konzept: Indirekte Fitness durch Verwandtenunterstützung (Altruismus gegenüber genetisch verwandten Individuen). Beispiel: Eine Biene, die zugunsten der Königin auf eigene Reproduktion verzichtet, aber die gemeinsamen Gene durch die Königin weitervererbt (kin selection). Fitness ist immer relativ zur aktuellen Umwelt — was heute vorteilhaft ist, kann in veränderter Umwelt neutral oder nachteilig sein.
@@ -1479,13 +1472,6 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
       content: `## Einleitung
 
 Was macht eine Art zu einer Art? Das ist keine triviale Frage — und verschiedene Biologen haben verschiedene Antworten. Der im MedAT relevanteste ist der **biologische Artbegriff** von Ernst Mayr: Eine Art ist eine Gruppe von Populationen, die sich untereinander fortpflanzen können und von anderen Gruppen **reproduktiv isoliert** sind. Wenn zwei Gruppen nicht mehr miteinander Nachkommen zeugen können, gelten sie als verschiedene Arten. Die Mechanismen, die diese Isolierung bewirken — und damit die Entstehung neuer Arten (**Speziation**) ermöglichen — sind das Kernthema dieses Kapitels. Das Maultier als klassisches Beispiel für Hybridsterilität ist eine typische MedAT-Prüfungsfrage.
-
----
-
-**Lernziele:**
-- Den biologischen Artbegriff (Mayr) definieren und seine Grenzen benennen
-- Präzygotische von postzygotischen Isolationsmechanismen unterscheiden und Beispiele nennen
-- Allopatrische von sympatrischer Artbildung unterscheiden und je ein Beispiel nennen
 
 ---
 
@@ -1690,13 +1676,6 @@ Evolution passiert nicht von allein — sie braucht **Antriebskräfte**. Vier so
 
 ---
 
-**Lernziele:**
-- Die vier Evolutionsfaktoren (Mutation, Selektion, Gendrift, Genfluss) und ihre Wirkungsweisen beschreiben
-- Flaschenhals-Effekt und Gründereffekt als Formen des Gendrifts unterscheiden
-- Das Hardy-Weinberg-Gesetz formulieren und seine Bedingungen und Anwendungen erläutern
-
----
-
 ## Flaschenhals-Effekt vs. Gründereffekt
 
 Beide sind Formen des Gendrifts in kleinen Populationen, haben aber verschiedene Ursachen. Der Flaschenhals-Effekt entsteht, wenn eine bestehende große Population durch ein Ereignis (Epidemie, Naturkatastrophe) drastisch reduziert wird — die überlebenden wenigen Individuen repräsentieren nur einen Ausschnitt der ursprünglichen genetischen Vielfalt (genetische Verarmung). Der Gründereffekt tritt auf, wenn eine kleine Gruppe von Individuen eine neue Population kolonisiert — die Allele der Gründer (zufällig, nicht representativ) dominieren die neue Population. Beide können zur Fixierung seltener Allele führen (einschließlich Krankheitsallele) und genetische Vielfalt reduzieren. Das Northern Elephant Seal-Beispiel ist ein Flaschenhals; die Amischen mit hoher Ellis-van-Creveld-Häufigkeit sind ein Gründereffekt-Beispiel.
@@ -1888,13 +1867,6 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
       content: `## Einleitung
 
 Der Mensch ist das Ergebnis von Millionen Jahren Evolution. Aber: Der Mensch stammt **nicht** vom Schimpansen ab. Vielmehr haben Mensch und Schimpanse einen gemeinsamen Vorfahren, der vor ca. 6–7 Millionen Jahren existierte und von dem sich beide Linien unabhängig entwickelten. Die Entwicklung hin zum modernen Menschen — die sogenannte **Hominisation** — war ein schrittweiser Prozess, bei dem sich zunächst der aufrechte Gang (**Bipedie**) entwickelte, und erst danach das Gehirn zunehmend größer wurde. Im MedAT werden typischerweise die wichtigsten Homininen in zeitlicher Reihenfolge, ihre Hirnvolumina, die Out-of-Africa-Theorie und die neanderthalischen Gene im modernen Menschen abgefragt.
-
----
-
-**Lernziele:**
-- Die wichtigsten Homininen (Australopithecus afarensis, H. habilis, H. erectus, H. neanderthalensis, H. sapiens) in chronologische Reihenfolge bringen und ihre Merkmale nennen
-- Die Out-of-Africa-Theorie und genetische Belege (Neanderthaler-DNA) beschreiben
-- Wichtige Trends der Homininen-Evolution (Bipedie, Hirnvolumen, Werkzeuggebrauch) erläutern
 
 ---
 
