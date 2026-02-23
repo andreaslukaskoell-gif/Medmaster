@@ -26,7 +26,11 @@ export const physKapMechanik: Kapitel = {
         "Gewichtskraft",
       ],
       diagram: "coordinate-system",
-      content: `## Das Internationale Einheitensystem (SI)
+      content: `## Einleitung
+
+Wie misst man Blutdruck in mmHg, Körpermasse in kg und Herzleistung in Watt? Physik und Medizin teilen dieselbe Sprache: Einheiten. Das **Internationale Einheitensystem (SI)** stellt sicher, dass alle Messungen weltweit vergleichbar sind. Wer die Basisgrößen und abgeleiteten Einheiten kennt, kann Messwerte verstehen, Formeln anwenden und klinische Werte interpretieren. Für den MedAT sind SI-Einheiten, Präfixe, Vektoren vs. Skalare und Dimensionsanalyse prüfungsrelevant.
+
+## Das Internationale Einheitensystem (SI)
 
 Die Physik beschreibt die Natur mit Hilfe von **Größen** — messbaren Eigenschaften wie Länge, Masse oder Zeit. Um weltweit vergleichbare Messungen zu ermöglichen, haben sich Wissenschaftlerinnen und Wissenschaftler auf ein einheitliches System geeinigt: das **Internationale Einheitensystem** (SI, Système International d'unités). Es bildet das Fundament jeder exakten Naturwissenschaft und damit auch der Medizin.
 
@@ -107,7 +111,16 @@ Druckdifferenz (Pulsamplitude): 40 mmHg ≈ 5,3 kPa — diese Pulsamplitude trei
 Grundumsatz eines Erwachsenen: ~1800 kcal/Tag.
 Umrechnung: 1800 kcal × 4184 J/kcal = 7 531 200 J/Tag.
 Ein Tag = 86 400 s.
-Leistung P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glühbirne! Bei körperlicher Aktivität steigt der Energieumsatz auf 300–500 W.`,
+Leistung P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glühbirne! Bei körperlicher Aktivität steigt der Energieumsatz auf 300–500 W.
+
+## Zusammenfassung
+
+- **7 SI-Basisgrößen**: Länge (m), Masse (kg), Zeit (s), Stromstärke (A), Temperatur (K), Stoffmenge (mol), Lichtstärke (cd)
+- **Abgeleitete Einheiten**: Newton (N = kg·m/s²), Pascal (Pa = N/m²), Joule (J = N·m), Watt (W = J/s)
+- **Präfixe**: μ (10⁻⁶), m (10⁻³), k (10³), M (10⁶), G (10⁹) — wichtig für klinische Einheiten (mmHg, mL, μg)
+- **Skalare**: nur Betrag (Temperatur, Masse, Druck); **Vektoren**: Betrag + Richtung (Kraft, Geschwindigkeit, Beschleunigung)
+- **Dimensionsanalyse**: Einheiten beider Seiten einer Gleichung müssen identisch sein → überprüft Formeln
+- **Klinisch**: 1 mmHg ≈ 133 Pa; Grundumsatz ~87 W; Blutdruck 120/80 mmHg = 16/10,7 kPa`,
 
       lernziele: [
         "Die sieben SI-Basisgrößen mit ihren Einheiten und Formelzeichen nennen und erklären können",
@@ -284,7 +297,11 @@ Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrie
         "Größenordnungen",
         "Dosierungsfehler",
       ],
-      content: `## Warum brauchen wir Präfixe?
+      content: `## Einleitung
+
+Ein Wasserstoffatom ist 0,1 nm groß, ein Mensch 1,7 m und die Milchstraße 10²¹ m breit. Die Medizin arbeitet mit µg/mL (Plasmaspiegel), mmol/L (Elektrolyte) und kPa (Blutdruck) — alles Variationen von SI-Einheiten mit **Präfixen**. Wer Präfixe sicher beherrscht, vermeidet tödliche Dosierungsfehler (µg vs. mg = Faktor 1000!). Für den MedAT sind SI-Präfixe, wissenschaftliche Notation und Einheitenumrechnungen prüfungsrelevant.
+
+## Warum brauchen wir Präfixe?
 
 Die Natur operiert auf extrem unterschiedlichen Größenskalen. Ein Wasserstoffatom hat einen Durchmesser von etwa 0,000 000 000 106 m, während der Abstand von der Erde zur Sonne ca. 150 000 000 000 m beträgt. Das Herz schlägt in einer Frequenz von ca. 1,2 Hz, Röntgenstrahlung schwingt bei 10¹⁸ Hz, und radioaktive Isotope haben Halbwertszeiten von Millisekunden bis zu Milliarden Jahren. Um diese enormen Spannen handhabbar zu machen, gibt es zwei komplementäre Werkzeuge: **SI-Präfixe** und **wissenschaftliche Notation**.
 
@@ -399,7 +416,15 @@ Gesamtmenge = 8 µg/mL × 17 500 mL = 140 000 µg = 140 mg = **0,14 g**.
 Einheitenkette: µg/mL × mL = µg → ÷ 10³ = mg → ÷ 10³ = g.
 
 **Beispiel 3 — Röntgenstrahlung Frequenz in Wellenlänge:**
-Röntgenstrahlung f = 3 × 10¹⁸ Hz. Wellenlänge λ = c/f = (3 × 10⁸ m/s) / (3 × 10¹⁸ s⁻¹) = 10⁻¹⁰ m = **0,1 nm = 1 Å** (Ångström). Diese Wellenlänge liegt im Bereich atomarer Abstände — erklärt, warum Röntgenstrahlung Kristallstrukturen auflösen kann.`,
+Röntgenstrahlung f = 3 × 10¹⁸ Hz. Wellenlänge λ = c/f = (3 × 10⁸ m/s) / (3 × 10¹⁸ s⁻¹) = 10⁻¹⁰ m = **0,1 nm = 1 Å** (Ångström). Diese Wellenlänge liegt im Bereich atomarer Abstände — erklärt, warum Röntgenstrahlung Kristallstrukturen auflösen kann.
+
+## Zusammenfassung
+
+- **Präfixe**: f (10⁻¹⁵), p (10⁻¹²), n (10⁻⁹), μ (10⁻⁶), m (10⁻³), c (10⁻²), k (10³), M (10⁶), G (10⁹), T (10¹²)
+- **Groß-/Kleinschreibung**: M (Mega, 10⁶) ≠ m (Milli, 10⁻³) — Faktor 10⁹ Unterschied!
+- **Wissenschaftliche Notation**: a × 10ⁿ; Multiplikation: Mantissen multiplizieren, Exponenten addieren
+- **Flächenumrechnung**: 1 cm² = 10⁻⁴ m² (Quadrat!); 1 mL = 10⁻⁶ m³ (Kubik!)
+- **Klinisch**: µg/mL × mL = µg; Verwechslung mg/µg → 1000-fache Über-/Unterdosierung möglich`,
 
       lernziele: [
         "Die SI-Präfixe von Femto (10⁻¹⁵) bis Tera (10¹²) mit Symbolen und Faktoren nennen können",
@@ -579,7 +604,11 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
         "Temperaturumrechnung",
         "dimensionslose Größen",
       ],
-      content: `## Was ist Dimensionsanalyse?
+      content: `## Einleitung
+
+Eine falsche Einheit kann Leben kosten — eine bekannte Katastrophe ereignete sich, als eine Raumsonde zwischen Meilen und Kilometern verwechselt wurde. In der Medizin ist das Gleiche möglich: mg statt µg, mL/h statt µg/kg/min. **Dimensionsanalyse** ist die Methode, Formeln und Berechnungen auf Einheiten-Konsistenz zu prüfen: beide Seiten einer Gleichung müssen dieselbe Dimension haben. Sie dient auch als universelles Werkzeug zur Einheitenumrechnung. Für den MedAT sind Dimensionsanalyse, Einheitenumrechnungen (mmHg↔Pa, kcal↔kJ) und dimensionslose Größen prüfungsrelevant.
+
+## Was ist Dimensionsanalyse?
 
 Die **Dimensionsanalyse** (auch: Einheitenanalyse oder dimensionale Analyse) ist eine mächtige Technik, die auf folgender Grundaussage beruht: **Jede korrekte physikalische Gleichung muss auf beiden Seiten dieselbe Dimension haben.** Wenn man eine Formel aufschreibt und die Einheiten nicht übereinstimmen, ist die Formel falsch — oder es liegt ein Umrechnungsfehler vor. Diese Methode dient gleichzeitig als Werkzeug zur Einheitenumrechnung und als Überprüfungsinstrument für Formeln.
 
@@ -689,7 +718,16 @@ Bei Grundumsatz ~7 500 kJ/d deckt diese Mahlzeit ~38,6 % des Tagesbedarfs.
 
 **Beispiel 4 — Reynolds-Zahl der Aorta:**
 ρ_Blut = 1060 kg/m³, v = 0,5 m/s, d_Aorta = 0,025 m, η = 3,5 × 10⁻³ Pa·s.
-Re = (1060 × 0,5 × 0,025) / (3,5 × 10⁻³) = 13,25 / 0,0035 ≈ **3786** → Übergangsbereich (2300–4000), bei Belastung turbulent.`,
+Re = (1060 × 0,5 × 0,025) / (3,5 × 10⁻³) = 13,25 / 0,0035 ≈ **3786** → Übergangsbereich (2300–4000), bei Belastung turbulent.
+
+## Zusammenfassung
+
+- **Dimensionsanalyse**: beide Seiten einer Gleichung müssen gleiche Dimension haben → Fehlerprüfung für Formeln
+- **Basisdimensionen**: L (Länge), M (Masse), T (Zeit), I (Strom), Θ (Temperatur), N (Stoffmenge), J (Lichtstärke)
+- **Einheitenumrechnung**: Kettenmultiplikation — Umrechnungsfaktoren als Brüche (Einheit kürzt sich)
+- **Wichtige Umrechnungen**: 1 mmHg = 133,3 Pa; 1 kcal = 4,184 kJ; 1 km/h = 1/3,6 m/s
+- **Dimensionslose Größen**: Reynolds-Zahl (Re), Wirkungsgrad (η), pH — keine Einheit, reiner Zahlenwert
+- **Klinisch**: Reynolds-Zahl der Aorta ~3800 → Übergangsbereich; Herzwirkungsgrad ~20–25%`,
 
       lernziele: [
         "Die Methode der Dimensionsanalyse verstehen und zur Formelprüfung einsetzen können",
@@ -869,7 +907,11 @@ Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung u
         "gleichförmige Bewegung",
         "Vektoren",
       ],
-      content: `## Newtonsche Gesetze und Kinematik
+      content: `## Einleitung
+
+Warum bricht ein Knochen beim Sturz? Warum muss man für eine effektive Herzdruckmassage stark drücken? Die Antworten liefert die **Newtonsche Mechanik**: Drei Gesetze, die Bewegung unter Krafteinfluss vollständig beschreiben. Kinematik beschreibt die Bewegung (ohne Ursachen), Dynamik erklärt sie mit Kräften. Für den MedAT sind die drei Newtonschen Gesetze, freier Fall, Dezelerationstrauma und die Grundbegriffe der Kinematik prüfungsrelevant.
+
+## Newtonsche Gesetze und Kinematik
 
 Die klassische Mechanik ist das Fundament der Physik und beschreibt, wie sich Körper unter dem Einfluss von Kräften bewegen. Isaac Newton formulierte im 17. Jahrhundert drei Grundgesetze, die für Geschwindigkeiten weit unterhalb der Lichtgeschwindigkeit bis heute uneingeschränkt gültig sind. Diese Gesetze sind keine abstrakten Theorien — sie erklären, warum Knochen brechen, wie das Herz Blut pumpt und weshalb Venenpunktionen eine bestimmte Kraft erfordern.
 
@@ -927,7 +969,16 @@ Bremsstrecke bei Aufprall auf Rasen ~10 cm: a = 39,24/0,2 = **196 m/s² ≈ 20 g
 Kompressionstiefe s = 5 cm = 0,05 m, Kompressionsdauer Δt ≈ 0,3 s.
 Gleichmäßige Beschleunigung: s = ½at² → a = 2s/t² = 2 × 0,05 / 0,09 ≈ 1,11 m/s².
 Thoraxmasse ~20 kg: F = m × a = 20 × 1,11 ≈ **22 N** (dynamischer Anteil) + statische Last des Brustbeins.
-Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominiert über Trägheitskraft).`,
+Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominiert über Trägheitskraft).
+
+## Zusammenfassung
+
+- **1. Newtonsches Gesetz (Trägheit)**: kein Nettokraft → kein Δv; Dezelerationstrauma: Organe bewegen sich weiter
+- **2. Newtonsches Gesetz**: F = m·a; 1 N = 1 kg·m/s²; größere Masse → geringere Beschleunigung bei gleicher Kraft
+- **3. Newtonsches Gesetz**: actio = reactio; Kräfte immer paarweise an verschiedenen Körpern
+- **Gleichförmig beschleunigte Bewegung**: v(t) = v₀ + a·t; s(t) = v₀·t + ½·a·t²; freier Fall: a = g = 9,81 m/s²
+- **Freier Fall**: v = √(2gh); nach 1 s: v ≈ 9,8 m/s, s = 4,9 m
+- **Klinisch**: Airbag verlängert Bremsstrecke → a↓ → F↓; CPR: ~400–500 N Druckkraft erforderlich`,
       lernziele: [
         "Die drei Newtonschen Gesetze korrekt formulieren und auf biologische Beispiele anwenden",
         "Gleichförmige und gleichmäßig beschleunigte Bewegungen mathematisch beschreiben (v(t), s(t))",
@@ -1076,7 +1127,11 @@ Klinisches Beispiel 3 — Injektion und Venenpunktion: Um eine Kanüle in eine V
         "Herzarbeit",
       ],
       diagram: "coordinate-system",
-      content: `## Erhaltungssätze — Energie, Impuls, Drehimpuls
+      content: `## Einleitung
+
+Warum bricht ein Knochen beim Sturz aus einer bestimmten Höhe? Warum überträgt ein Projektil seine gesamte kinetische Energie auf Gewebe? Warum leistet das Herz täglich ~96 kJ mechanische Arbeit? All das erklären die **Erhaltungssätze**: Energie, Impuls und Drehimpuls bleiben in abgeschlossenen Systemen konstant. Diese Prinzipien sind universell und fundamental. Für den MedAT sind Energieerhaltung, kinetische/potenzielle Energie, Impuls, Herzarbeit und Wirkungsgrad prüfungsrelevant.
+
+## Erhaltungssätze — Energie, Impuls, Drehimpuls
 
 Erhaltungssätze gehören zu den tiefsten Prinzipien der Physik. Sie besagen, dass bestimmte physikalische Größen in einem abgeschlossenen System konstant bleiben — unabhängig von den internen Vorgängen. Die drei wichtigsten Erhaltungssätze der Mechanik sind: Energieerhaltung, Impulserhaltung und Drehimpulserhaltung. Sie folgen aus fundamentalen Symmetrieprinzipien (Noether-Theorem): Energieerhaltung aus Zeitsymmetrie, Impulserhaltung aus Translationssymmetrie, Drehimpulserhaltung aus Rotationssymmetrie.
 
@@ -1132,7 +1187,16 @@ Schlagvolumen SV = 70 mL, Herzfrequenz f = 72/min, mittlerer Aortendruck p = 100
 Arbeit pro Schlag: W = p × ΔV = 13 300 × 70 × 10⁻⁶ = **0,93 J**.
 Mechanische Leistung: P = W × f = 0,93 × 72/60 = **1,12 W**.
 Tagesarbeit: 0,93 × 72 × 60 × 24 = **96 422 J ≈ 96 kJ/Tag**.
-Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/Tag**.`,
+Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/Tag**.
+
+## Zusammenfassung
+
+- **Kinetische Energie**: E_kin = ½mv²; **Potenzielle Energie**: E_pot = mgh; Erhaltung (ohne Reibung): E_kin + E_pot = const
+- **Impuls**: p = m·v (Vektor, kg·m/s); **Kraftstoß**: J = F·Δt = Δp; Impulserhaltung in abgeschlossenen Systemen
+- **Elastischer Stoß**: kinetische Energie erhalten; **inelastischer Stoß**: Energie in Wärme/Deformation umgewandelt
+- **Arbeit**: W = F·s·cosα (J); **Leistung**: P = W/t (W = J/s); **Wirkungsgrad**: η = P_nutz/P_zu
+- **Herzarbeit**: W ≈ p·ΔV ≈ 0,93 J/Schlag; P_mech ≈ 1 W; η ≈ 17 % → metabolisch ~7 W
+- **Aufprallgeschwindigkeit**: v = √(2gh) (reibungsfreier Fall)`,
       lernziele: [
         "Impuls (p = mv) und Kraftstoß (J = FΔt) definieren und den Impulserhaltungssatz anwenden",
         "Mechanische Arbeit, kinetische und potenzielle Energie berechnen",
@@ -1275,7 +1339,11 @@ Klinisches Beispiel: Bei einem Sturz auf den Kopf (Schädel-Hirn-Trauma) trifft 
         "laminare Strömung",
       ],
       diagram: "newton-forces",
-      content: `## Statik, Druck und Hydrodynamik
+      content: `## Einleitung
+
+Warum braucht der Bizeps 700 N, um 10 kg zu heben? Warum kollabiert eine Koronarstenose den Blutfluss auf ein Sechzehntel? Warum ist der Blutdruck am Fuß im Stehen um 100 mmHg höher als am Herzen? Statik erklärt Kräftegleichgewichte (Hebelprinzip im Skelett), Hydrodynamik den Blutfluss. Für den MedAT sind Drehmoment, Hebelgesetz, Poiseuille-Gesetz (Q ~ r⁴), Bernoulli-Gleichung, Kontinuität und Reynolds-Zahl prüfungsrelevant.
+
+## Statik, Druck und Hydrodynamik
 
 Die Statik untersucht Körper und Systeme im Gleichgewicht, während die Hydrodynamik die Bewegung von Flüssigkeiten und Gasen beschreibt. Beide Gebiete sind für die Medizin von zentraler Bedeutung: Statik erklärt die Mechanik des Bewegungsapparates (Hebelprinzipien im Skelett), Hydrodynamik beschreibt den Blutfluss und die Funktion der Lunge.
 
@@ -1331,7 +1399,17 @@ Nur 33 % Radiusverengung → 80 % Flussreduktion. Bei 50 % Stenose: (0,5)⁴ = *
 Blutdruckdifferenz Kopf↔Fuß: Höhe h = 1,7 m, ρ_Blut = 1060 kg/m³.
 Δp = ρgh = 1060 × 9,81 × 1,7 = **17 677 Pa ≈ 133 mmHg**.
 Am Fuß: 120 + 133 ≈ **253 mmHg** systolisch. Am Kopf: 120 - 25 ≈ **95 mmHg** (30 cm über Herz).
-Klinisch: Bei längerem Stehen → venöse Pooling in Beinen → orthostatische Hypotonie → Schwindel.`,
+Klinisch: Bei längerem Stehen → venöse Pooling in Beinen → orthostatische Hypotonie → Schwindel.
+
+## Zusammenfassung
+
+- **Gleichgewicht**: ΣF = 0 UND ΣM = 0; **Drehmoment**: M = F·d (N·m)
+- **Hebelgesetz**: F₁·d₁ = F₂·d₂; Muskelansatz nahe Gelenk → große Muskelkraft erforderlich
+- **Druck**: p = F/A (Pa); **hydrostatisch**: p = ρ·g·h; am Fuß im Stehen +100 mmHg
+- **Poiseuille**: Q = π·r⁴·Δp/(8·η·l); **Q ~ r⁴** → Radius halbiert = Fluss auf 1/16
+- **Kontinuität**: A₁·v₁ = A₂·v₂; Kapillaren (großer Gesamtquerschnitt) → langsamer Fluss
+- **Bernoulli**: ½ρv² + ρgh + p = const; Stenose → v↑ → p↓ (Venturi-Effekt)
+- **Reynolds**: Re = ρvd/η; < 2300 laminar; > 4000 turbulent → Herzgeräusche bei Stenosen`,
       lernziele: [
         "Die zwei Gleichgewichtsbedingungen (Kräfte- und Momentengleichgewicht) anwenden",
         "Drehmomente berechnen und das Hebelgesetz auf den Bewegungsapparat anwenden",
@@ -1476,7 +1554,11 @@ Therapeutische Konsequenzen aus dem r⁴-Gesetz: (1) Perkutane transluminale Kor
         "Schwerpunkt",
       ],
       diagram: "coordinate-system",
-      content: `## Gravitation und Rotation
+      content: `## Einleitung
+
+Warum atrophieren Muskeln und Knochen im Weltraum? Warum trennt eine Zentrifuge Blut in Plasma und Blutzellen? Warum ist ein Gehstock so wertvoll gegen Sturzgefahr? Gravitation und Rotationsbewegung erklären es. Das Gravitationsgesetz und die Zentripetalkraft sind die Grundlagen — im Labor (Zentrifuge), in der Medizin (g-Kräfte bei Trauma) und im Körper (Standfläche, Schwerpunkt). Für den MedAT sind Gravitationsgesetz, Masse vs. Gewicht, Zentripetalkraft, RCF (Zentrifuge) und Schwerpunktlage prüfungsrelevant.
+
+## Gravitation und Rotation
 
 Gravitation und Rotation sind zwei der fundamentalsten Phänomene der Physik. Die Gravitation beschreibt die Anziehungskraft zwischen Massen, Rotation beschreibt die Kreisbewegung und die damit verbundenen Beschleunigungen und Kräfte. Beide sind in der Medizin präsent: von der Erdanziehung auf den menschlichen Körper (Blutverteilung, orthopädische Belastung) bis zur Zentrifugation in der Labormedizin.
 
@@ -1535,7 +1617,16 @@ r = **42 164 km** ≈ 35 786 km über der Erdoberfläche — dort kreisen TV- un
 **Beispiel 3 — Sturzsicherheit (Standfläche und Schwerpunkt):**
 Patient (h = 1,80 m, Schwerpunkt bei 0,56 × h = 1,01 m) steht auf Standfläche Breite 25 cm.
 Max. Neigungswinkel bis Kipp: tan(θ) = (0,125 m) / (1,01 m) → θ = arctan(0,124) ≈ **7,1°**.
-Mit Gehstock (effektive Standbreite ~60 cm): θ = arctan(0,30/1,01) ≈ **16,5°** → doppelte Kippstabilität.`,
+Mit Gehstock (effektive Standbreite ~60 cm): θ = arctan(0,30/1,01) ≈ **16,5°** → doppelte Kippstabilität.
+
+## Zusammenfassung
+
+- **Gravitationsgesetz**: F_G = G·m₁·m₂/r²; auf Erde: F_G = m·g (g = 9,81 m/s²); **Masse** (kg) ≠ **Gewicht** (N)
+- **Kreisbewegung**: v = ω·r; a_z = v²/r = ω²·r (Zentripetal-); F_z = m·ω²·r zeigt zur Kreismitte
+- **RCF**: RCF = ω²·r/g; bei 3000 rpm, r = 15 cm → ~1500 × g; trennt Blut (Plasma/Erythrozyten)
+- **Trägheitsmoment**: I = Σm·r²; Drehimpuls L = I·ω = const (ohne äußeres Drehmoment)
+- **Stabiles Gleichgewicht**: Schwerpunkt tief + Standfläche groß; Gehstock erweitert Standfläche → sicherer
+- **Klinisch**: Schwerelosigkeit → Muskelschwund, Osteoporose; g-Kräfte bei Trauma → Aortentranssektion`,
       lernziele: [
         "Das Newtonsche Gravitationsgesetz anwenden und zwischen Masse und Gewichtskraft unterscheiden",
         "Zentripetalbeschleunigung und Zentripetalkraft für gleichförmige Kreisbewegungen berechnen",
