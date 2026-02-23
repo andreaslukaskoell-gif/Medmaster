@@ -22,17 +22,9 @@ export const bioKapEntwicklung: Kapitel = {
         "Implantation",
         "Polyspermie-Block",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Die Befruchtung beim Menschen ist ein hochkoordinierter Prozess, der im Eileiter beginnt und über die Furchungsteilungen zur Blastozyste führt, die sich schließlich im Endometrium einnistet. Jeder Schritt — von der Kapazitation des Spermiums über die Akrosomreaktion bis zur Implantation — ist für das MedAT prüfungsrelevant und wird regelmäßig abgefragt. Fehler in diesem Ablauf sind klinisch bedeutsam, etwa bei der Extrauteringravidität oder beim Polyspermie-Block.
-
-**Das Wichtigste auf einen Blick:**
-- Befruchtung findet in der **Ampulle des Eileiters** statt
-- **Kapazitation** (ca. 7 h): biochemische Reifung des Spermiums im weiblichen Genitaltrakt
-- **Akrosomreaktion**: Enzymfreisetzung (Akrosin, Hyaluronidase) → Durchdringung der Zona pellucida
-- **Kortikalreaktion**: Ca²⁺-abhängiger Polyspermie-Block durch Zona-Modifikation
-- Blastozyste (Tag 5–6): **Trophoblast** (→ Plazenta) + **Embryoblast** (→ Embryo)
-- **Implantation** Tag 6–7; hCG erhält Corpus luteum → Progesteron-Produktion
+Damit neues Leben entstehen kann, müssen Samenzelle und Eizelle zusammenfinden und miteinander verschmelzen — das nennt man **Befruchtung**. Beim Menschen geschieht dies nicht in der Gebärmutter, sondern im **Eileiter**, einem engen Kanal zwischen Eierstock und Gebärmutter. Von dort entwickelt sich der befruchtete Keim in mehreren präzise getakteten Schritten: über einen Zellhaufen (Morula) zur hohlen Blastozyste, die sich schließlich in der Gebärmutterschleimhaut einnistet. Jede Stufe dieses Prozesses ist im MedAT prüfungsrelevant — von der Reifung der Samenzelle über die Zellverschmelzung bis zur Einnistung und der frühen Hormonsteuerung der Schwangerschaft.
 
 ---
 
@@ -102,7 +94,14 @@ Die Extrauteringravidität (ektope Schwangerschaft, 95 % im Eileiter) entsteht, 
 
 ## Zusammenfassung
 
-Die Befruchtung findet in der Ampulle des Eileiters statt, nachdem das Spermium die Kapazitation durchlaufen hat und durch die Akrosomreaktion die Zona pellucida durchdringen kann. Die Kortikalreaktion der Eizelle verhindert unmittelbar danach die Polyspermie durch biochemische Modifikation der Zona pellucida. Aus der befruchteten Zygote entsteht über Morula (Tag 3–4) die Blastozyste (Tag 5–6), deren Trophoblast die Plazenta bildet und hCG produziert, während der Embryoblast den eigentlichen Embryo liefert. Die Implantation im Endometrium erfolgt an Tag 6–7, wobei hCG das Corpus luteum erhält und so die Progesteronproduktion sichert, die das Endometrium stabilisiert und die Menstruation verhindert.
+- Befruchtung findet in der **Ampulle des Eileiters** statt — nicht im Uterus
+- **Kapazitation** (~7 h): biochemische Reifung der Samenzelle im weiblichen Genitaltrakt → notwendige Voraussetzung für die Akrosomreaktion
+- **Akrosomreaktion** (Spermium): Bindung an ZP3 der Zona pellucida → Freisetzung von Akrosin und Hyaluronidase → Zona wird durchdrungen
+- **Kortikalreaktion** (Eizelle): Ca²⁺-Anstieg → kortikale Granula exozytieren → Zona-Modifikation = **Polyspermie-Block**
+- Die Eizelle vollendet **Meiose II** erst nach Befruchtung → reife Eizelle (n) + 2. Polkörperchen
+- **Syngamie**: Vorkerne von Ei- und Samenzelle verschmelzen zur diploiden **Zygote** (2n); Geschlecht durch Spermium bestimmt
+- Furchung: Morula (Tag 3–4) → **Blastozyste** (Tag 5–6) mit Trophoblast (→ Plazenta, hCG) und Embryoblast (→ Embryo)
+- **Implantation** Tag 6–7: Synzytiotrophoblast produziert hCG → erhält Corpus luteum → Progesteron ↑ → keine Menstruation
 `,
       lernziele: [
         "Die Akrosom-Reaktion und Kortikalreaktion bei der Befruchtung erklären und voneinander abgrenzen.",
@@ -240,17 +239,9 @@ Die Befruchtung findet in der Ampulle des Eileiters statt, nachdem das Spermium 
         "Primitivstreifen",
         "Keimblätter",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Die Gastrulation und Neurulation sind die zentralen Prozesse der dritten Entwicklungswoche, in der aus einer zweischichtigen Keimscheibe die dreiblättrige Anlage des gesamten Körpers entsteht. Das Verständnis der Keimblattderivate — welches Organ aus welchem Keimblatt hervorgeht — gehört zu den am häufigsten geprüften Themen im MedAT-BMS. Gleichzeitig ist die Neurulation als Voraussetzung für die Entwicklung des Zentralnervensystems klinisch hochrelevant, da Störungen zu Neuralrohrdefekten wie Spina bifida führen.
-
-**Das Wichtigste auf einen Blick:**
-- **Gastrulation** (Woche 3): Primitivstreifen → aus dem Epiblast entstehen alle drei Keimblätter
-- **Ektoderm** → Epidermis, Nervensystem, Neuralleiste
-- **Mesoderm** → Muskulatur, Knochen, Herz, Niere, Bindegewebe
-- **Endoderm** → Darmepithel, Lunge, Leber, Pankreas, Schilddrüse
-- **Neurulation**: Notochord induziert Neuralplatte → Neuralrohr (ZNS)
-- Neuralleistenzellen: Melanozyten, Ganglien, Nebennierenmark, Kieferknorpel
+In der dritten Entwicklungswoche passiert etwas Entscheidendes: Aus einer flachen, zweischichtigen Zellscheibe — dem frühen Embryo — entstehen drei übereinanderliegende Schichten, die sogenannten **Keimblätter**. Aus diesen drei Schichten (Ektoderm, Mesoderm, Endoderm) entwickeln sich später alle Organe und Gewebe des Körpers. Gleichzeitig entsteht in diesem Stadium das **Nervensystem**: Eine Rinne faltet sich zum Neuralrohr zusammen, das später Gehirn und Rückenmark wird. Die Keimblattderivate — also welches Organ aus welchem Blatt entsteht — gehören zu den am häufigsten geprüften Themen im MedAT-BMS. Störungen der Neuralrohrbildung führen zu klinisch bedeutsamen Fehlbildungen wie Spina bifida.
 
 ---
 
@@ -331,7 +322,15 @@ Neuralrohrdefekte (Spina bifida, Anenzephalie) entstehen, wenn der posteriore od
 
 ## Zusammenfassung
 
-In der Gastrulation (3. Entwicklungswoche) wandern Epiblastzellen durch den Primitivstreifen ein und bilden die drei Keimblätter: Ektoderm (Haut, Nervensystem), Mesoderm (Muskulatur, Knochen, Herz, Nieren) und Endoderm (Darmepithel, Lunge, Leber, Drüsen) — alle gehen letztlich aus dem Epiblast hervor. Das vom Primitiv-Knoten gebildete Notochord induziert anschließend die Neurulation, bei der sich die ektodermale Neuralplatte über die Neuralrinne zum Neuralrohr schließt, das zum ZNS wird. Neuralleistenzellen emigrieren aus den Neuralwülsten und differenzieren zu einem breiten Spektrum von Geweben, darunter sensorische Ganglien, Melanozyten und das Nebennierenmark. Somiten segmentieren das paraxiale Mesoderm und liefern Sklerotom (Knochen), Myotom (Skelettmuskel) und Dermatom (dermales Bindegewebe).
+- **Gastrulation** (3. Woche, Tag 15–21): Epiblastzellen wandern durch den **Primitivstreifen** ein → alle drei Keimblätter entstehen aus dem Epiblast
+- **Ektoderm** → Epidermis, ZNS (Neuralrohr), Sinnesorgane, Zahnschmelz
+- **Mesoderm** → Skelett, Muskulatur, Herz, Nieren, Gonaden, Bindegewebe, Blut
+- **Endoderm** → Darmepithel, Lunge, Leber, Pankreas, Schilddrüse, Blase
+- **Notochord** (aus Primitiv-Knoten) induziert Neuralplatte → **Neurulation**: Neuralrinne → Neuralrohr (= ZNS)
+- Anteriorer Neuroporus schließt Tag 25, posteriorer Tag 27 — offen = Neuralrohrdefekt (Anenzephalie / Spina bifida)
+- **Neuralleiste** (Ektoderm-Derivat): Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark, Kieferknochen
+- **Somiten**: Sklerotom (Knochen), Myotom (Skelettmuskel), Dermatom (dermales Bindegewebe)
+- Folsäure (0,4 mg/Tag präkonzeptionell) senkt Neuralrohrdefektrisiko um ~70 %
 `,
       lernziele: [
         "Den Ablauf der Gastrulation (Primitivstreifen, drei Keimblätter) und die Herkunft jedes Keimblattes aus dem Epiblast erklären.",
@@ -459,17 +458,9 @@ In der Gastrulation (3. Entwicklungswoche) wandern Epiblastzellen durch den Prim
         "Kritische Perioden",
         "Scheitel-Steiß-Länge",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Die vorgeburtliche Entwicklung gliedert sich in die Embryonalperiode (Wochen 1–8), in der alle Organe angelegt werden, und die Fetalperiode (ab Woche 9), die von Wachstum und Reifung geprägt ist. Für das MedAT ist besonders das Konzept der kritischen Perioden zentral: In der Phase der aktivsten Differenzierung ist ein Organ am empfindlichsten gegenüber Teratogenen. Das Verständnis des Alles-oder-Nichts-Prinzips und wichtiger Entwicklungsmeilensteine wie der Lungenreife gehört zum Standardrepertoire der BMS-Prüfung.
-
-**Das Wichtigste auf einen Blick:**
-- **Embryonalperiode** (Wochen 1–8): Organogenese, höchste Vulnerabilität
-- **Fetalperiode** (ab Woche 9): Wachstum und Reifung bereits angelegter Organe
-- **Alles-oder-Nichts-Prinzip**: Woche 1–2 → Fruchttod oder normale Entwicklung
-- **Kritische Perioden**: organspezifisch, ZNS hat die längste (Woche 3 bis postnatal)
-- Surfactant-Produktion ab Woche 24 (Typ-II-Pneumozyten)
-- Herzschlag beginnt Tag 22–23; SSL Ende Woche 8 ca. 3 cm
+Nach der Einnistung beginnt eine neun Monate lange Entwicklung — doch nicht alle Phasen sind gleich wichtig. In den ersten acht Wochen (**Embryonalperiode**) werden alle Organe des Körpers von Grund auf neu angelegt. Das ist eine extrem empfindliche Phase: Schädliche Einflüsse wie Medikamente oder Viren können in dieser Zeit gezielt die gerade entstehenden Organe treffen und bleibende Fehlbildungen verursachen. Solche schädigenden Substanzen heißen **Teratogene**. Ab der 9. Woche beginnt die **Fetalperiode** — jetzt wachsen und reifen die vorhandenen Organe, aber es entstehen keine neuen mehr. Meilensteine wie die Lungenreife (ab Woche 24) entscheiden darüber, ob ein Frühgeborenes überleben kann.
 
 ---
 
@@ -539,7 +530,14 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
 
 ## Zusammenfassung
 
-Die Embryonalperiode (Wochen 1–8) umfasst die Organogenese, in der aus den drei Keimblättern alle primären Organsysteme angelegt werden, wobei der Embryo in dieser Phase besonders empfindlich gegenüber Teratogenen ist. Das Alles-oder-Nichts-Prinzip gilt ausschließlich für die Wochen 1–2: Schwere Noxen führen entweder zum Fruchttod oder zur vollständig normalen Weiterentwicklung dank der Totipotenz der Blastomere. Ab Woche 3 beginnen organspezifische kritische Perioden, in denen Teratogene gezielte Fehlbildungen verursachen können — das ZNS besitzt dabei die längste kritische Periode (Woche 3 bis postnatal). Die Fetalperiode ab Woche 9 ist durch Wachstum und Reifung gekennzeichnet, wobei die Surfactant-Produktion der Typ-II-Pneumozyten ab Woche 24 einen entscheidenden Meilenstein für die extrauterine Lebensfähigkeit darstellt.
+- **Embryonalperiode** (Wochen 1–8): Organogenese — alle Organe werden angelegt; höchste Empfindlichkeit gegenüber Teratogenen
+- **Fetalperiode** (ab Woche 9): Wachstum und Reifung der angelegten Organe; keine neue Organanlage
+- **Alles-oder-Nichts-Prinzip** (nur Woche 1–2): schwere Noxe → Fruchttod ODER normale Entwicklung (Totipotenz der Blastomere)
+- **Kritische Periode** = Phase der aktivsten Differenzierung eines Organs → größte Teratogen-Empfindlichkeit
+- Das **ZNS** hat die längste kritische Periode aller Organe (Woche 3 bis postnatal)
+- Wichtige Teratogene: Thalidomid (Extremitäten, Woche 3–8), Alkohol (ZNS, gesamte Schwangerschaft), Röteln (Herz, Augen, Gehör)
+- **Surfactant** (Typ-II-Pneumozyten) ab Woche 24 → entscheidend für Lungenreife und extrauterine Überlebensfähigkeit
+- Herzschlag beginnt Tag 22–23; Ende Woche 8: Embryo ~3 cm (Scheitel-Steiß-Länge)
 `,
       lernziele: [
         "Embryonal- und Fetalperiode zeitlich und inhaltlich abgrenzen sowie die Organogenese in der Embryonalperiode beschreiben.",
@@ -660,17 +658,9 @@ Die Embryonalperiode (Wochen 1–8) umfasst die Organogenese, in der aus den dre
         "Decidua",
         "Chorionzotten",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Die Plazenta ist das zentrale Organ der Schwangerschaft: Sie verbindet den Fötus über die Nabelschnur mit dem mütterlichen Kreislauf und übernimmt Gasaustausch, Nährstofftransport und Hormonsynthese. Im MedAT werden regelmäßig der Aufbau (fetaler vs. mütterlicher Anteil), die Plazentaschranke und die Nabelschnurgefäße abgefragt. Das Verständnis, dass mütterliches und fetales Blut sich nicht direkt mischen, ist ein häufiger Stolperstein in Prüfungsfragen.
-
-**Das Wichtigste auf einen Blick:**
-- **Fetaler Anteil**: Chorion frondosum (Chorionzotten des Trophoblasten)
-- **Mütterlicher Anteil**: Decidua basalis (transformiertes Endometrium)
-- Kein direkter Blut-Kontakt zwischen Mutter und Kind (intervillöse Räume)
-- **Nabelschnur**: 2 Arterien (O₂-arm, vom Kind) + 1 Vene (O₂-reich, zum Kind) — Merkhilfe AVA
-- Plazentaschranke: lipophile Stoffe passieren (Alkohol, Nikotin); nur **IgG** wird aktiv transferiert
-- hCG-Produktion durch Synzytiotrophoblast; ab Woche 8–10 plazentare Progesteronsynthese
+Der Fötus kann nicht selbst atmen, essen oder Hormone produzieren — all das übernimmt für ihn ein einzigartiges Organ: die **Plazenta**. Sie verbindet das Kind über die Nabelschnur mit dem mütterlichen Kreislauf und ist gleichzeitig Lunge, Darm, Niere und Hormondrüse des wachsenden Embryos. Dabei gilt eine wichtige Regel: Das Blut von Mutter und Kind mischt sich **niemals direkt** — der Austausch von Sauerstoff, Nährstoffen und Hormonen läuft über eine spezielle Trennschicht, die **Plazentaschranke**. Aufbau, Funktion und die Frage, was diese Schranke passiert und was nicht, werden im MedAT regelmäßig geprüft.
 
 ---
 
@@ -740,7 +730,14 @@ Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren 
 
 ## Zusammenfassung
 
-Die Plazenta besteht aus einem fetalen Anteil (Chorion frondosum mit Chorionzotten) und einem mütterlichen Anteil (Decidua basalis), wobei mütterliches und fetales Blut sich nie direkt mischen, sondern der Stoffaustausch über die Plazentaschranke in den intervillösen Räumen erfolgt. Die Nabelschnur enthält zwei Arterien (sauerstoffarm, vom Kind zur Plazenta) und eine Vene (sauerstoffreich, von der Plazenta zum Kind), was der systemischen Konvention entgegengesetzt ist. Die Plazenta ist endokrin aktiv: Der Synzytiotrophoblast produziert zunächst hCG zur Corpus-luteum-Erhaltung und übernimmt ab Woche 8–10 zunehmend die Progesteronsynthese. Die Plazentaschranke lässt lipophile Substanzen wie Alkohol und Nikotin passieren, während IgG als einziger Immunglobulin-Isotyp aktiv per Transzytose über FcRn-Rezeptoren transferiert wird und so den Nestschutz des Neugeborenen sichert.
+- Plazenta: **fetaler Anteil** = Chorion frondosum (Chorionzotten); **mütterlicher Anteil** = Decidua basalis
+- Mütterliches und fetales Blut mischen sich **niemals direkt** — Austausch über Plazentaschranke (Synzytiotrophoblast) in intervillösen Räumen
+- **Nabelschnur**: 2 Arterien (O₂-arm, Kind → Plazenta) + 1 Vene (O₂-reich, Plazenta → Kind) — Merkhilfe: AVA
+- **Plazentaschranke** lässt lipophile Stoffe frei passieren: Alkohol, Nikotin, viele Medikamente → teratogenes Risiko
+- **IgG** ist das einzige Immunglobulin, das aktiv per Transzytose (FcRn-Rezeptor) übertragen wird → Nestschutz des Neugeborenen
+- Synzytiotrophoblast produziert **hCG** (bis Woche 8–10) → erhält Corpus luteum → Progesteron
+- Ab Woche 8–10 übernimmt die **Plazenta** selbst die Progesteronsynthese (Corpus luteum nicht mehr nötig)
+- **Amnionflüssigkeit**: Schutzpuffer, Thermoregulation, Lungenreifung durch Schlucken; Fruchtwasseranalyse (Amniozentese) für pränatale Diagnostik
 `,
       lernziele: [
         "Den fetalen und mütterlichen Anteil der Plazenta, den Aufbau der Chorionzotten und der Plazentaschranke beschreiben.",
@@ -878,16 +875,9 @@ Die Plazenta besteht aus einem fetalen Anteil (Chorion frondosum mit Chorionzott
         "Chloroplasten",
         "Lynn Margulis",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Die Frage nach der Entstehung des Lebens gehört zu den grundlegenden Themen der Biologie und wird im MedAT regelmäßig abgefragt. Zentral sind drei Konzepte: das Miller-Urey-Experiment als Beweis für die abiotische Synthese organischer Moleküle, die RNA-Welt-Hypothese als Lösung des Henne-Ei-Problems zwischen DNA und Protein sowie die Endosymbiontentheorie, die den Ursprung von Mitochondrien und Chloroplasten erklärt. Besonders die Endosymbiontentheorie hat direkte medizinische Relevanz, da sie die mitochondriale Toxizität bestimmter Antibiotika erklärt.
-
-**Das Wichtigste auf einen Blick:**
-- **Miller-Urey** (1953): CH₄ + NH₃ + H₂ + H₂O + Energie → Aminosäuren (abiotisch)
-- **RNA-Welt**: RNA als erstes Informations- UND Katalysemolekül (Ribozyme)
-- **Endosymbiontentheorie** (Lynn Margulis, 1967): Mitochondrien ← Alphaproteobakterien; Chloroplasten ← Cyanobakterien
-- Belege: eigenes ringförmiges Genom, 70S-Ribosomen, Doppelmembran, binäre Teilung
-- Mitochondriale Vererbung: ausschließlich maternal
+Wie ist aus unbelebter Materie das erste Leben entstanden? Diese Frage beschäftigt Naturwissenschaftler seit Jahrhunderten — und es gibt heute plausible, experimentell gestützte Antworten. Ein Schlüsselexperiment war das **Miller-Urey-Experiment** (1953): Es bewies, dass sich die Bausteine des Lebens (z. B. Aminosäuren) spontan aus einfachen anorganischen Molekülen bilden können — ohne lebende Zellen. Aber wie entstand dann das erste Gen, das ersten Proteine? Die **RNA-Welt-Hypothese** liefert die eleganteste Antwort. Und wie erklären wir, dass unsere Zellen Kraftwerke (Mitochondrien) enthalten, die eigentlich einmal selbständige Bakterien waren? Dafür gibt es die **Endosymbiontentheorie** — und sie hat sogar direkte klinische Bedeutung für das Verständnis von Antibiotika-Nebenwirkungen.
 
 ---
 
@@ -952,7 +942,13 @@ Zwischen der Bildung organischer Moleküle und der ersten echten Zelle liegt ein
 
 ## Zusammenfassung
 
-Das Miller-Urey-Experiment (1953) zeigte, dass Aminosäuren und andere organische Moleküle unter den Bedingungen der frühen Erde spontan aus anorganischen Gasen entstehen können, und legte damit die experimentelle Grundlage für die Theorie der chemischen Evolution. Die RNA-Welt-Hypothese löst das zentrale Paradoxon der Lebensentstehung, indem sie zeigt, dass RNA als Ribozym sowohl genetische Information speichern als auch enzymatische Reaktionen katalysieren kann — ohne dass zunächst Proteine oder DNA nötig waren. Die von Lynn Margulis 1967 formulierte Endosymbiontentheorie erklärt den Ursprung von Mitochondrien (aus Alphaproteobakterien) und Chloroplasten (aus Cyanobakterien) und wird durch multiple unabhängige Belege gestützt: eigenes ringförmiges Genom ohne Histone, 70S-Ribosomen, Doppelmembran und Vermehrung durch binäre Teilung.`,
+- **Miller-Urey** (1953): CH₄ + NH₃ + H₂ + H₂O + elektrische Entladungen → Aminosäuren → abiotische Entstehung organischer Moleküle ist möglich
+- **RNA-Welt-Hypothese**: RNA kann als **Ribozym** Informationen speichern UND Reaktionen katalysieren → löst das Henne-Ei-Problem zwischen DNA und Protein
+- **Endosymbiontentheorie** (Lynn Margulis, 1967): Mitochondrien stammen von **Alphaproteobakterien**; Chloroplasten von **Cyanobakterien**
+- Belege für Endosymbiose: eigenes ringförmiges Genom (ohne Histone), 70S-Ribosomen, Doppelmembran, binäre Teilung, Antibiotikasensitivität, phylogenetische Ähnlichkeit zu Bakterien
+- Mitochondriale DNA wird **ausschließlich maternal** vererbt
+- Antibiotika (z. B. Chloramphenicol) hemmen bakterielle 70S-Ribosomen → hemmen auch mitochondriale Ribosomen → mitochondriale Toxizität
+- Erste Lebensformen (~3,8 Mrd. Jahre): Prokaryoten; Eukaryoten entstanden durch Endosymbiose (~1,5–2 Mrd. Jahre)`,
       lernziele: [
         "Das Miller-Urey-Experiment und seine Bedeutung für die chemische Evolution erläutern",
         "Die RNA-Welt-Hypothese und ihre Begründung beschreiben",
@@ -1088,16 +1084,9 @@ Das Miller-Urey-Experiment (1953) zeigte, dass Aminosäuren und andere organisch
         "Divergenz",
         "Kladistik",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Die Phylogenetik rekonstruiert die Verwandtschaftsbeziehungen zwischen Lebewesen anhand von morphologischen und molekularen Merkmalen. Im MedAT-BMS ist die Unterscheidung zwischen Homologie (gemeinsamer Ursprung) und Analogie (konvergente Evolution) ein Klassiker, der regelmäßig abgefragt wird. Darüber hinaus sind das Lesen phylogenetischer Stammbäume und das Verständnis der molekularen Uhr für die korrekte Beantwortung von Evolutionsfragen essenziell.
-
-**Das Wichtigste auf einen Blick:**
-- Stammbaum: Äste = Evolutionslinien; Nodes = gemeinsame Vorfahren; Wurzel = gemeinsamer Ursprung
-- Homologie: gleicher Ursprung, evtl. verschiedene Funktion (Wirbeltier-Vorderextremitäten)
-- Analogie: verschiedener Ursprung, gleiche Funktion (konvergente Evolution)
-- Cladistik: Klassifikation nur nach Synapomorphien; Clade = gemeinsamer Vorfahre + ALLE Nachkommen
-- Molekulare Phylogenie: DNA-Sequenzvergleiche (16S-rRNA, Cytochrom c) für präzise Verwandtschaft
+Wie rekonstruiert man die Geschichte des Lebens, wenn man nicht dabei war? Biologen lesen dazu in Fossilien, aber noch präziser in DNA-Sequenzen. Die **Phylogenetik** (griech. *phylon* = Stamm) untersucht die Verwandtschaft zwischen Lebewesen und stellt sie in **Stammbäumen** dar. Dabei sind zwei Begriffe wichtig: **Homologie** bedeutet, dass zwei Strukturen denselben evolutionären Ursprung haben — auch wenn sie heute unterschiedlich aussehen oder funktionieren. **Analogie** bedeutet, dass zwei ähnliche Strukturen unabhängig voneinander entstanden sind — eine Lösung, auf die die Evolution zweimal gestoßen ist. Diese Unterscheidung ist ein MedAT-Klassiker und wird regelmäßig geprüft.
 
 ---
 
@@ -1164,7 +1153,13 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
 
 ## Zusammenfassung
 
-Homologe Strukturen teilen denselben evolutionären Ursprung und weisen einen ähnlichen Grundbauplan auf, obwohl ihre Funktionen verschieden sein können — wie die Vorderextremitäten der Wirbeltiere (Menschenarm, Walflosse, Vogelflügel). Analoge Strukturen hingegen entstanden unabhängig in verschiedenen Abstammungslinien durch konvergente Evolution als Anpassung an ähnliche Umweltbedingungen, etwa Vogelflügel und Insektenflügel. Die Cladistik klassifiziert Organismen ausschließlich nach Synapomorphien (gemeinsamen abgeleiteten Merkmalen) in Clades — monophyletische Gruppen, die einen gemeinsamen Vorfahren und alle seine Nachkommen umfassen. Die molekulare Uhr nutzt die konstante Akkumulation neutraler Mutationen in konservierten Genen, um den Zeitpunkt der Divergenz zwischen Arten zu datieren, wobei die Kalibrierung mithilfe datierter Fossilien erfolgt. Besonders wichtig für die medizinische Forschung ist die phylogenetische Analyse von Pathogenen: Durch Vergleich der Genomsequenzen von Erregerstämmen lassen sich Transmissionsketten rekonstruieren, Mutationshotspots identifizieren und die Ausbreitung von Resistenzgenen verfolgen.`,
+- **Homologie**: gleicher evolutionärer Ursprung, ggf. verschiedene Funktion (Beispiel: Menschenarm, Walflosse, Vogelflügel = homologe Vorderextremitäten)
+- **Analogie**: verschiedener Ursprung, gleiche Funktion durch **konvergente Evolution** (Beispiel: Vogelflügel vs. Insektenflügel)
+- Im **Stammbaum**: Äste = Evolutionslinien, Knoten (Nodes) = gemeinsame Vorfahren, Wurzel = letzter gemeinsamer Vorfahre aller Gruppen
+- **Cladistik**: Klassifikation ausschließlich nach **Synapomorphien** (gemeinsame abgeleitete Merkmale); Clade = gemeinsamer Vorfahre + alle Nachkommen
+- **Monophyletische** Gruppe = gemeinsamer Vorfahre + ALLE Nachkommen (korrekte Klassifikation); paraphyletisch = ohne manche Nachkommen
+- **Molekulare Uhr**: neutrale Mutationen akkumulieren gleichmäßig → Kalibrierung mit Fossilien → Datierung von Artseparationen
+- Phylogenetische Analysen von Pathogenen rekonstruieren Transmissionsketten und ermöglichen die Verfolgung von Resistenzgen-Ausbreitung`,
       lernziele: [
         "Homologe von analogen Strukturen anhand von Beispielen unterscheiden",
         "Phylogenetische Stammbäume lesen und Verwandtschaftsbeziehungen ableiten",
@@ -1298,16 +1293,9 @@ Homologe Strukturen teilen denselben evolutionären Ursprung und weisen einen ä
         "Überproduktion",
         "Fitness",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Die Evolutionstheorie ist das zentrale Rahmenwerk der Biologie und erklärt die Vielfalt des Lebens durch natürliche Selektion, Mutation, Gendrift und Genfluss. Im MedAT werden Darwins vier Kernprinzipien, die drei Selektionsarten und der Fitness-Begriff regelmäßig abgefragt. Die Synthetische Evolutionstheorie, die Darwins Beobachtungen mit der Mendelschen Genetik vereint, definiert Evolution präzise als Veränderung der Allelfrequenzen in Populationen und bildet die Grundlage für das Verständnis moderner Konzepte wie Antibiotikaresistenz.
-
-**Das Wichtigste auf einen Blick:**
-- Darwin: 4 Prinzipien → natürliche Selektion: Variation, Erblichkeit, Überproduktion, Differentialreproduktion
-- 3 Selektionsarten: stabilisierend (Mittelwert bleibt), gerichtet (Mittelwert verschiebt sich), disruptiv (Extreme bevorzugt)
-- Sexuelle Selektion: intrasexuell (Konkurrenz) vs. intersexuell (Partnerwahl) → sexueller Dimorphismus
-- Fitness = reproduktiver Erfolg, NICHT physische Stärke
-- Neue Synthese: Evolution = Veränderung der Allelfrequenzen (Darwin + Mendel + Populationsgenetik)
+Warum sehen Giraffen lange Hälse? Warum werden Bakterien resistent gegen Antibiotika? Die Antwort lautet in beiden Fällen: **natürliche Selektion**. Charles Darwin erkannte als erster, dass Lebewesen, die besser an ihre Umwelt angepasst sind, mehr Nachkommen hinterlassen — und diese Eigenschaft vererben. Über viele Generationen verändert sich so das Erscheinungsbild einer Art. Dieses Grundprinzip — bekannt als **Darwinismus** — wurde im 20. Jahrhundert mit der Genetik zur **Synthetischen Evolutionstheorie** vereint. Sie definiert Evolution präzise als Veränderung von Allelfrequenzen in Populationen und ist das zentrale Rahmenwerk der modernen Biologie. Im MedAT werden Darwins vier Kernprinzipien, die drei Selektionsarten und der Begriff der biologischen Fitness geprüft.
 
 ---
 
@@ -1371,7 +1359,14 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
 
 ## Zusammenfassung
 
-Darwins Theorie der natürlichen Selektion beruht auf vier Prinzipien: Individuen variieren in vererbbaren Merkmalen, es werden mehr Nachkommen produziert als die Umwelt tragen kann, und Individuen mit vorteilhaften Merkmalen pflanzen sich häufiger fort, wodurch diese Merkmale über Generationen zunehmen. Die drei Selektionsarten unterscheiden sich in ihrer Wirkung auf die Merkmalsverteilung: stabilisierende Selektion bevorzugt den Mittelwert (Geburtsgewicht), gerichtete Selektion verschiebt den Mittelwert in eine Richtung (Antibiotikaresistenz), und disruptive Selektion begünstigt die Extreme (verschiedene Nahrungsnischen). Die Synthetische Evolutionstheorie der 1930–1950er Jahre vereinte Darwins Selektionsprinzip mit der Mendelschen Genetik und der Populationsgenetik zu einer präzisen Definition: Evolution ist die Veränderung der Allelfrequenzen in einer Population über Zeit, angetrieben durch Mutation, Selektion, Gendrift und Genfluss. Sexuelle Selektion als Sonderform erklärt die Entstehung von Merkmalen, die keinen offensichtlichen Überlebensvorteil bieten (z. B. das Pfauenrad), aber den Fortpflanzungserfolg steigern — entweder durch intrasexuelle Konkurrenz oder durch intersexuelle Partnerwahl, die zum sexuellen Dimorphismus führt.`,
+- Darwins **4 Kernprinzipien**: Variation (vererbbar) + Überproduktion (mehr Nachkommen als möglich überleben) + Differentialreproduktion → **natürliche Selektion**
+- **Fitness** = reproduktiver Erfolg (nicht körperliche Stärke); wer mehr überlebensfähige Nachkommen hat, ist fitter
+- **Stabilisierende Selektion**: Mittelwert wird bevorzugt, Extreme benachteiligt (Beispiel: Geburtsgewicht)
+- **Gerichtete Selektion**: Mittelwert verschiebt sich in eine Richtung (Beispiel: Antibiotikaresistenz)
+- **Disruptive Selektion**: Extreme werden bevorzugt, Mittelwert benachteiligt → kann zu Artaufspaltung führen
+- **Synthetische Evolutionstheorie** (1930–1950er): Darwin + Mendel + Populationsgenetik → Evolution = **Veränderung der Allelfrequenzen** in einer Population über Zeit
+- **Sexuelle Selektion**: intrasexuell (Kampf um Paarungspartner) vs. intersexuell (Partnerwahl) → sexueller Dimorphismus
+- Evolutionäre Medizin: Antibiotikaresistenz ist gerichtete Selektion in Echtzeit — dasselbe Prinzip wie bei Darwin`,
       lernziele: [
         "Darwins vier Kernprinzipien der natürlichen Selektion nennen und erläutern",
         "Die drei Selektionsarten (stabilisierend, gerichtet, disruptiv) unterscheiden und mit Beispielen belegen",
@@ -1508,16 +1503,9 @@ Darwins Theorie der natürlichen Selektion beruht auf vier Prinzipien: Individue
         "Speziation",
         "Isolationsmechanismen",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Der biologische Artbegriff und die Mechanismen der Artbildung (Speziation) sind fundamentale Konzepte der Evolutionsbiologie und gehören zum festen Repertoire des MedAT-BMS. Ernst Mayrs Definition — Populationen, die sich untereinander fortpflanzen und von anderen reproduktiv isoliert sind — ist die im Prüfungskontext relevanteste. Die Unterscheidung zwischen präzygotischen und postzygotischen Isolationsmechanismen sowie zwischen allopatrischer und sympatrischer Artbildung wird regelmäßig abgefragt, wobei das Maultier als Paradebeispiel für Hybridsterilität dient.
-
-**Das Wichtigste auf einen Blick:**
-- Biologischer Artbegriff (Mayr): Reproduktionsgemeinschaft + reproduktive Isolation von anderen
-- Isolationsmechanismen: präzygotisch (vor Befruchtung) vs. postzygotisch (nach Befruchtung)
-- Allopatrisch: geografische Trennung → unabhängige Divergenz → neue Arten
-- Sympatrisch: im selben Gebiet (v. a. durch Polyploidie bei Pflanzen)
-- Maultier = Hybridsterilität (postzygotisch); Eselhengst × Pferdestute möglich, aber steril
+Was macht eine Art zu einer Art? Das ist keine triviale Frage — und verschiedene Biologen haben verschiedene Antworten. Der im MedAT relevanteste ist der **biologische Artbegriff** von Ernst Mayr: Eine Art ist eine Gruppe von Populationen, die sich untereinander fortpflanzen können und von anderen Gruppen **reproduktiv isoliert** sind. Wenn zwei Gruppen nicht mehr miteinander Nachkommen zeugen können, gelten sie als verschiedene Arten. Die Mechanismen, die diese Isolierung bewirken — und damit die Entstehung neuer Arten (**Speziation**) ermöglichen — sind das Kernthema dieses Kapitels. Das Maultier als klassisches Beispiel für Hybridsterilität ist eine typische MedAT-Prüfungsfrage.
 
 ---
 
@@ -1583,7 +1571,13 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
 
 ## Zusammenfassung
 
-Der biologische Artbegriff nach Ernst Mayr definiert eine Art als Gruppe von Populationen, die sich tatsächlich oder potenziell untereinander fortpflanzen und von anderen Gruppen reproduktiv isoliert sind — er stößt allerdings bei asexuellen Organismen und Fossilien an seine Grenzen. Isolationsmechanismen werden in präzygotische (vor der Befruchtung: geografische, zeitliche, Verhaltens- und mechanische Isolation) und postzygotische (nach der Befruchtung: Hybridsterilität wie beim Maultier, Hybridlethalität) unterteilt. Allopatrische Artbildung durch geografische Trennung ist der häufigste Mechanismus und wird klassisch durch die Darwin-Finken illustriert, während sympatrische Artbildung vor allem bei Pflanzen durch Polyploidie erfolgt, wobei eine reproduktive Isolation in nur einer Generation entstehen kann. Polyploidie ist beim Menschen nicht mit dem Leben vereinbar und führt zu Frühaborten, weshalb die klinische Chromosomendiagnostik (Karyotypisierung) Polyploidie routinemäßig als Abortursache erfasst.`,
+- **Biologischer Artbegriff** (Ernst Mayr): Populationen, die sich tatsächlich oder potenziell untereinander fortpflanzen und von anderen reproduktiv isoliert sind; Grenzen: nicht anwendbar auf asexuelle Organismen oder Fossilien
+- **Präzygotische Isolation** (vor Befruchtung): geografisch, zeitlich (Blütezeit), Verhaltens- (Balzritual), mechanisch (Genitalien passen nicht)
+- **Postzygotische Isolation** (nach Befruchtung): Hybridsterilität (Maultier = steril) oder Hybridlethalität (Hybrid stirbt)
+- **Allopatrische Artbildung**: geografische Trennung → unabhängige Mutation/Selektion/Drift → reproduktive Isolation (häufigster Mechanismus; Beispiel: Darwin-Finken)
+- **Sympatrische Artbildung**: ohne geografische Trennung; v. a. durch **Polyploidie** bei Pflanzen (reproduktive Isolation in einer Generation möglich)
+- Polyploidie beim Menschen: nicht mit dem Leben vereinbar → führt zu Frühaborten
+- **Adaptive Radiation**: rasche Artaufspaltung in verschiedene Nischen aus einer Gründerpopulation (Darwin-Finken auf Galapagos)`,
       lernziele: [
         "Den biologischen Artbegriff (Mayr) definieren und seine Grenzen benennen",
         "Präzygotische von postzygotischen Isolationsmechanismen unterscheiden und Beispiele nennen",
@@ -1717,15 +1711,9 @@ Der biologische Artbegriff nach Ernst Mayr definiert eine Art als Gruppe von Pop
         "Allelfrequenz",
         "Flaschenhalseffekt",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Die vier Evolutionsfaktoren — Mutation, Selektion, Gendrift und Genfluss — sind die treibenden Kräfte, die Allelfrequenzen in Populationen verändern und damit Evolution bewirken. Das Hardy-Weinberg-Gleichgewicht dient als theoretischer Referenzzustand, bei dem keine Evolution stattfindet; jede Abweichung zeigt an, dass mindestens ein Evolutionsfaktor aktiv ist. Für das MedAT sind insbesondere die Unterscheidung von Flaschenhals-Effekt und Gründereffekt, die Hardy-Weinberg-Formel sowie der Heterozygotenvorteil am Beispiel der Sichelzellanämie prüfungsrelevant.
-
-**Das Wichtigste auf einen Blick:**
-- 4 Evolutionsfaktoren: Mutation (Rohstoff), Selektion (gerichtet), Gendrift (Zufall), Genfluss (homogenisierend)
-- Gendrift: besonders stark in kleinen Populationen; zwei Spezialformen: Flaschenhals und Gründereffekt
-- Hardy-Weinberg: p² + 2pq + q² = 1; Gleichgewicht ohne Evolution; Abweichung = Evolutionskraft aktiv
-- Heterozygotenvorteil: Sichelzell-Beispiel; balancierte Selektion hält beide Allele in der Population
+Evolution passiert nicht von allein — sie braucht **Antriebskräfte**. Vier solche Kräfte verändern, welche Gene (genauer: welche Allele) in einer Population häufig oder selten sind: Mutation schafft neue Varianten, Selektion bevorzugt vorteilhafte Varianten, Gendrift verändert Häufigkeiten durch puren Zufall (besonders in kleinen Gruppen), und Genfluss bringt Gene aus anderen Populationen hinein. Um zu verstehen, wann Evolution stattfindet und wann nicht, nutzt man das **Hardy-Weinberg-Gleichgewicht** — ein mathematisches Modell, das den Ausgangszustand ohne evolutionären Wandel beschreibt. Jede Abweichung von diesem Gleichgewicht verrät, dass einer der vier Faktoren aktiv ist.
 
 ---
 
@@ -1790,7 +1778,13 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
 
 ## Zusammenfassung
 
-Die vier Evolutionsfaktoren wirken auf unterschiedliche Weise auf die Allelfrequenzen einer Population: Mutation liefert den Rohstoff neuer genetischer Variation, Selektion wirkt gerichtet auf Fitness-relevante Merkmale, Gendrift verändert Allelfrequenzen zufällig (besonders stark in kleinen Populationen), und Genfluss homogenisiert Populationen durch den Austausch von Allelen zwischen ihnen. Flaschenhals-Effekt und Gründereffekt sind zwei Sonderformen des Gendrifts: Beim Flaschenhals wird eine bestehende Population drastisch reduziert, beim Gründereffekt kolonisiert eine kleine Gruppe eine neue Nische — in beiden Fällen geht genetische Vielfalt verloren und seltene Allele können fixiert werden. Das Hardy-Weinberg-Gleichgewicht (p² + 2pq + q² = 1) beschreibt den theoretischen Referenzzustand ohne Evolution; jede Abweichung in realen Populationen zeigt an, dass mindestens ein Evolutionsfaktor aktiv wirkt, wie etwa der Heterozygotenvorteil der Sichelzellanämie-Träger in Malariaregionen, der eine balancierte Selektion darstellt. In der klinischen Genetik wird die Hardy-Weinberg-Formel routinemäßig eingesetzt, um die Häufigkeit von Anlageträgern (Heterozygoten) für autosomal-rezessive Erkrankungen aus der bekannten Erkrankungshäufigkeit (q²) zu berechnen.`,
+- **4 Evolutionsfaktoren**: Mutation (Rohstoff neuer Varianten), Selektion (gerichtet, fitnessbezogen), **Gendrift** (zufällig, stark in kleinen Populationen), Genfluss (homogenisierend zwischen Populationen)
+- **Flaschenhals-Effekt**: bestehende Population wird drastisch reduziert → zufälliger Verlust genetischer Vielfalt
+- **Gründereffekt**: kleine Gruppe kolonisiert neue Nische → Allele der Gründer prägen die neue Population (Sonderfall des Gendrifts)
+- **Hardy-Weinberg-Gleichgewicht**: p² + 2pq + q² = 1; beschreibt Referenzzustand **ohne Evolution** (große Population, kein Genfluss, keine Selektion, keine Mutation, Random Mating)
+- Abweichung vom Hardy-Weinberg = mindestens ein Evolutionsfaktor ist aktiv
+- **Heterozygotenvorteil** (balancierte Selektion): Sichelzellanämie-Träger (HbAS) haben in Malariaregionen höhere Fitness als beide Homozygoten → beide Allele bleiben in der Population erhalten
+- Hardy-Weinberg klinisch: aus der Erkrankungshäufigkeit (q²) die Anlageträgerhäufigkeit (2pq) berechnen`,
       lernziele: [
         "Die vier Evolutionsfaktoren (Mutation, Selektion, Gendrift, Genfluss) und ihre Wirkungsweisen beschreiben",
         "Flaschenhals-Effekt und Gründereffekt als Formen des Gendrifts unterscheiden",
@@ -1918,16 +1912,9 @@ Die vier Evolutionsfaktoren wirken auf unterschiedliche Weise auf die Allelfrequ
         "Hominisation",
         "Aufrechter Gang",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Die Hominisation — die Evolution des Menschen — ist eines der am besten dokumentierten Beispiele für evolutionäre Entwicklung und wird im MedAT-BMS regelmäßig geprüft. Entscheidend ist das Verständnis, dass der Mensch nicht von modernen Affen abstammt, sondern beide gemeinsame Vorfahren teilen, die vor ca. 6–7 Millionen Jahren divergierten. Besonders prüfungsrelevant sind die chronologische Abfolge der Homininen, die Erkenntnis, dass Bipedie vor der Gehirnvergrößerung evolvierte, sowie die Out-of-Africa-Theorie und die genetische Vermischung mit Neanderthalern.
-
-**Das Wichtigste auf einen Blick:**
-- Hominiden = Menschenaffen + Mensch (Familie Hominidae); Hominini = Mensch + Schimpanse (Tribus)
-- Divergenz Mensch/Schimpanse: vor ca. 6–7 Millionen Jahren (kein gemeinsamer Schimpansen-Vorfahre!)
-- Bipedie evolvierte VOR der Gehirnvergrößerung (Lucy: aufrecht bei 3,9 Mya, Hirnvolumen ~450 ccm)
-- Hirnvolumen-Entwicklung: ~450 ccm (Australopithecus) → ~630 (H. habilis) → ~1.000 (H. erectus) → ~1.350 (H. sapiens)
-- Out-of-Africa: H. sapiens entstand in Afrika (~300.000 Jahre), migrierte vor ~60.000–70.000 Jahren
+Der Mensch ist das Ergebnis von Millionen Jahren Evolution. Aber: Der Mensch stammt **nicht** vom Schimpansen ab. Vielmehr haben Mensch und Schimpanse einen gemeinsamen Vorfahren, der vor ca. 6–7 Millionen Jahren existierte und von dem sich beide Linien unabhängig entwickelten. Die Entwicklung hin zum modernen Menschen — die sogenannte **Hominisation** — war ein schrittweiser Prozess, bei dem sich zunächst der aufrechte Gang (**Bipedie**) entwickelte, und erst danach das Gehirn zunehmend größer wurde. Im MedAT werden typischerweise die wichtigsten Homininen in zeitlicher Reihenfolge, ihre Hirnvolumina, die Out-of-Africa-Theorie und die neanderthalischen Gene im modernen Menschen abgefragt.
 
 ---
 
@@ -1991,7 +1978,14 @@ Homo habilis (ca. 2,4–1,5 Mya) gilt als erster Vertreter der Gattung Homo und 
 
 ## Zusammenfassung
 
-Die Evolution des Menschen verlief von frühen Homininen wie Australopithecus afarensis (Lucy, ca. 3,2 Mya), der bereits aufrecht ging, aber mit einem Hirnvolumen von nur ca. 450 ccm ein schimpansengroßes Gehirn besaß, über Homo habilis und Homo erectus — den ersten Homininen, der Afrika verließ — bis zum modernen Homo sapiens, der vor etwa 300.000 Jahren in Afrika entstand. Die zentrale Erkenntnis der Paläoanthropologie ist, dass Bipedie der Gehirnvergrößerung zeitlich vorausging und somit der erste evolutionäre Schritt der Hominisation war. Die Out-of-Africa-Theorie wird durch die maximale genetische Diversität afrikanischer Populationen gestützt, und Svante Pääbos bahnbrechende Paläogenomik (Nobelpreis 2022) bewies, dass moderne Menschen außerhalb Afrikas 1–4 % neanderthalische DNA tragen — ein Beleg für Hybridisierung nach der Migration vor ca. 60.000–70.000 Jahren.`,
+- **Bipedie ging der Gehirnvergrößerung voraus** — erster evolutionärer Schritt der Hominisation
+- **Australopithecus afarensis** (Lucy, ~3,2 Mya): bereits bipede, Hirnvolumen ~450 ccm (schimpansenähnlich)
+- **Homo habilis** (~2,4 Mya): erster Steinwerkzeugbenutzer (Oldowan-Kultur), Hirnvolumen ~630 ccm
+- **Homo erectus** (~1,9 Mya–70.000 Jahre): erster Hominine, der Afrika verließ; Feuernutzung; Hirnvolumen ~1.000 ccm
+- **Homo sapiens**: vor ~300.000 Jahren in Afrika entstanden; anatomisch modern; Hirnvolumen ~1.350 ccm
+- **Out-of-Africa-Theorie**: gestützt durch maximale genetische Diversität afrikanischer Populationen (Bottleneck bei Migration)
+- Moderne Menschen außerhalb Afrikas tragen **1–4 % neanderthalische DNA** → Beleg für Hybridisierung nach Migration (vor ~60.000–70.000 Jahren; Paläogenomik von Svante Pääbo, Nobelpreis 2022)
+- Divergenz Mensch/Schimpanse: vor ca. 6–7 Millionen Jahren — kein gemeinsamer Schimpansen-Vorfahre!`,
       lernziele: [
         "Die wichtigsten Homininen (Australopithecus afarensis, H. habilis, H. erectus, H. neanderthalensis, H. sapiens) in chronologische Reihenfolge bringen und ihre Merkmale nennen",
         "Die Out-of-Africa-Theorie und genetische Belege (Neanderthaler-DNA) beschreiben",
