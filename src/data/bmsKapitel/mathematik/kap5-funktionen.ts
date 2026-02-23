@@ -28,8 +28,6 @@ export const mathKap5: Kapitel = {
 
 Blutdruck steigt pro BMI-Punkt um 1,8 mmHg — das ist eine lineare Funktion. Medikamentenspiegel fällt nach Infusionsstopp gleichmäßig ab — ebenfalls linear. Lineare Funktionen beschreiben Zusammenhänge mit konstanter Veränderungsrate. Sie sind die einfachsten und häufigsten Funktionen in der Medizin. Für den MedAT sind Steigung, y-Achsenabschnitt, Geradengleichung (aus zwei Punkten), Schnittpunkte und klinische Interpretation prüfungsrelevant.
 
-# Lineare Funktionen
-
 ## Grundform und Begriffe
 
 Eine lineare Funktion hat die allgemeine Form **f(x) = mx + b**, wobei x die unabhängige Variable (Argument), f(x) der zugehörige Funktionswert (Bild), m die **Steigung** (Steigungskoeffizient) und b der **y-Achsenabschnitt** (Ordinatenabschnitt) ist. Der Name "linear" leitet sich davon ab, dass der Graph dieser Funktion stets eine **Gerade** ist.
@@ -104,6 +102,29 @@ Elimination: C(t) = C₀ − k₀ · t (Kinetik nullter Ordnung). k₀ = 10 mg/h
 
 **Beispiel 4 — Senkrechte Geraden bestimmen:**
 Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = −1/m₁ = −1/3. b₂ = y₀ − m₂·x₀ = 1 − (−1/3)·6 = 1 + 2 = 3. Also: **g₂: y = −(1/3)x + 3**. Probe: m₁·m₂ = 3·(−1/3) = −1.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- Geradengleichung aus 2 Punkten aufstellen (zuerst m, dann b)
+- Nullstelle berechnen: x₀ = −b/m
+- Schnittpunkt zweier Geraden: Gleichsetzen und nach x auflösen
+- Kalibrierkurve: Konzentration aus Absorption berechnen (Lambert-Beer: A = ε·c·d)
+- Steigung und y-Achsenabschnitt aus einem Graphen ablesen
+
+**Achtung — typische Verwechslungen:**
+- Nullstelle linearer Funktion: x₀ = −b/m (NICHT die Mitternachtsformel!)
+- Senkrechte Geraden: m₂ = −1/m₁ (nicht m₂ = −m₁)
+- Steigung m = Δy/Δx: Zähler ist y-Differenz, Nenner x-Differenz (nicht umgekehrt!)
+- b ist der y-Achsenabschnitt (Wert bei x = 0), nicht die Nullstelle
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Lambert-Beer: A = ε·c·d — nur im linearen Bereich gültig
+- Ethanolabbau: ca. 0,1–0,15 ‰/h (Kinetik 0. Ordnung = linearer Abfall)
+- Parallele Geraden: gleiche Steigung m, verschiedene b — kein Schnittpunkt
+- Senkrechte Geraden: m₁·m₂ = −1
+
+---
 
 ## Zusammenfassung
 
@@ -256,8 +277,6 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
 
 Der Blutdruck folgt während des Herzschlags einer parabolähnlichen Kurve — Maximum bei Systole, Minimum bei Diastole. Wurfbahnen, Schallausbreitung, optimale Dosierung: viele Phänomene folgen quadratischen Gesetzen. Quadratische Funktionen sind die einfachsten nicht-linearen Funktionen. Für den MedAT sind Scheitelpunktform, Diskriminante, Nullstellen (Formel, Vieta), Scheitelpunkt und Parabelöffnung prüfungsrelevant.
 
-# Quadratische Funktionen
-
 ## Allgemeine und Scheitelpunktform
 
 Eine quadratische Funktion hat die allgemeine Form **f(x) = ax² + bx + c** mit dem Leitkoeffizienten a ≠ 0. Der Graph ist eine **Parabel**. Ist a > 0, öffnet die Parabel nach oben (Minimum); ist a < 0, öffnet sie nach unten (Maximum). |a| bestimmt die "Breite" der Parabel: Großes |a| → schmale Parabel; kleines |a| → flache Parabel.
@@ -340,6 +359,29 @@ HMV = RR / TPR. Wenn RR = −0,02·HMV² + 4·HMV (nicht-lineare Beziehung). Nul
 
 **Beispiel 4 — Vieta-Schnellmethode:**
 x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ · x₂ = 28. Systematisch probieren: 4 + 7 = 11, 4 · 7 = 28 → **x₁ = 4, x₂ = 7**. Probe: f(4) = 16 − 44 + 28 = 0, f(7) = 49 − 77 + 28 = 0.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- Scheitelpunkt berechnen: xs = −b/(2a), ys = f(xs)
+- Diskriminante bestimmen und Anzahl der Nullstellen ableiten (D > 0 / D = 0 / D < 0)
+- Nullstellen mit Mitternachtsformel oder Satz von Vieta
+- Aus Scheitelpunktform: Öffnungsrichtung und Maximum/Minimum direkt ablesen
+- Optimale Dosis aus quadratischem Wirkungsmodell (Scheitelpunkt = Optimum)
+
+**Achtung — typische Verwechslungen:**
+- a < 0 → Maximum (nicht Minimum!); Parabel öffnet nach UNTEN
+- Scheitelpunktform f(x) = a(x − xs)² + ys: Vorzeichen beachten — (x − 2)² → xs = +2
+- pq-Formel gilt nur für normierte Form (x² + px + q = 0, Koeffizient vor x² muss 1 sein)
+- D < 0 bedeutet: KEINE reellen Nullstellen (Parabel berührt x-Achse nicht)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Mitternachtsformel: x₁₂ = (−b ± √(b²−4ac))/(2a)
+- Diskriminante D = b²−4ac; D > 0 → 2 Nullstellen; D = 0 → 1; D < 0 → keine
+- Vieta (normierte Form): x₁+x₂ = −p; x₁·x₂ = q
+- Hagen-Poiseuille: A = πr² → Halbierung des Radius = Viertelung der Querschnittsfläche
+
+---
 
 ## Zusammenfassung
 
@@ -503,8 +545,6 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ · x₂ = 28. Systematisch p
 
 Paracetamol hat eine Halbwertszeit von 2 Stunden — der Spiegel halbiert sich alle 2 h exponentiell. Bakterien verdoppeln sich alle 20 Minuten — exponentielles Wachstum. Radioaktiver Zerfall, Kapitalzins, Virusvermehrung: all das folgt der Exponentialfunktion. Exponentialfunktionen beschreiben Vorgänge, bei denen die Änderungsrate proportional zum aktuellen Wert ist. Für den MedAT sind Grundform, e-Funktion, Halbwertszeit, k-Wert und Steady-State prüfungsrelevant.
 
-# Exponentialfunktionen
-
 ## Grundform und Eigenschaften
 
 Die Exponentialfunktion hat die allgemeine Form **f(x) = a · bˣ** mit der Basis b > 0, b ≠ 1, und dem Vorfaktor a > 0. Die wichtigste Basis ist die **Eulersche Zahl e ≈ 2,71828...**, was zur natürlichen Exponentialfunktion f(x) = eˣ führt.
@@ -609,6 +649,29 @@ T½ = 6,01 h, Injektionsaktivität A₀ = 740 MBq. k = ln2/6,01 = 0,1153 h⁻¹.
 
 **Beispiel 4 — Steady-State-Aufbau:**
 Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n Dosen: 1 − (½)ⁿ. Nach 1 Dosis: 50 %, nach 2: 75 %, nach 3: 87,5 %, nach 4: 93,75 %, nach 5: 96,9 %. Klinische Faustregel: **Steady State nach 4–5 T½** (94–97 % erreicht).
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- Halbwertszeit berechnen: T½ = ln(2)/k ≈ 0,693/k
+- Restmenge nach n Halbwertszeiten: C = C₀ · (½)ⁿ
+- Wachstum (eᵏᵗ, k > 0) vs. Zerfall (e⁻ᵏᵗ, k > 0) unterscheiden
+- Steady-State-Zeitpunkt: nach 4–5 T½
+- Bakterienanzahl nach gegebener Zeit: N = N₀ · 2^(t/T₂)
+
+**Achtung — typische Verwechslungen:**
+- Exponentialfunktion erreicht NIEMALS den Wert 0 (nähert sich nur asymptotisch an)
+- Nach 5 T½ verbleiben ca. 3 % — nicht 0 %!
+- Kinetik 1. Ordnung (exponentiell) ≠ Kinetik 0. Ordnung (linear — Beispiel: Ethanol!)
+- e ≈ 2,718 (nicht 2,5 oder 3)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- ln(2) ≈ 0,693 (auswendig lernen!)
+- Nach 1 T½: 50 %; 2 T½: 25 %; 3 T½: 12,5 %; 4 T½: 6,25 %; 5 T½: 3,1 %
+- Paracetamol T½ ≈ 2 h; ⁹⁹ᵐTc T½ ≈ 6 h; Amiodaron T½ ≈ 40–55 Tage
+- Steady State: nach 4–5 T½ werden 94–97 % des Gleichgewichtsspiegels erreicht
+
+---
 
 ## Zusammenfassung
 
@@ -753,8 +816,6 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
 
 pH = −log₁₀([H⁺]): Eine der wichtigsten Formeln der Medizin basiert auf dem Logarithmus. Der Logarithmus macht aus riesigen Zahlenbereichen handhabbare Werte — [H⁺] reicht von 10⁻¹ bis 10⁻¹⁴ mol/L, der pH-Wert dafür von 1 bis 14. Der Logarithmus ist die Umkehrfunktion der Exponentialfunktion. Für den MedAT sind Logarithmengesetze, pH-Berechnung, Henderson-Hasselbalch, Dezibel-Formel und Basiswechsel prüfungsrelevant.
 
-# Logarithmusfunktionen
-
 ## Definition und Grundbegriffe
 
 Der Logarithmus ist die **Umkehrfunktion der Exponentialfunktion**. Für die Basis b > 0, b ≠ 1 gilt:
@@ -860,6 +921,29 @@ Normalgehör: 0 dB HL. Patient hört erst ab 40 dB HL (Schwerhörigkeit). Intens
 
 **Beispiel 4 — Logarithmengesetze zur Gleichungslösung:**
 Gesucht: x aus 5ˣ = 200. Logarithmieren: x · ln(5) = ln(200) → x = ln(200)/ln(5) = 5,298/1,609 = **3,29**. Alternativ: x = log(200)/log(5) = 2,301/0,699 = **3,29**. Basiswechsel liefert identische Ergebnisse.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- pH-Wert aus [H⁺] berechnen: pH = −log₁₀([H⁺])
+- Henderson-Hasselbalch anwenden: pH = pKₐ + log([A⁻]/[HA])
+- Logarithmengesetze anwenden (Produkt-, Quotienten-, Potenzregel)
+- Exponentialgleichung lösen durch Logarithmieren beider Seiten
+- Semilog-Plot: Steigung = −k aus ln C-vs-t-Gerade ablesen und T½ berechnen
+
+**Achtung — typische Verwechslungen:**
+- log(0) und log(negativer Zahl) sind NICHT definiert!
+- pH ↑ → [H⁺] ↓ (höherer pH = basischer = weniger Protonen)
+- ln ≠ log: ln hat Basis e, log hat Basis 10
+- pH-Änderung um 0,3 ≈ Faktor 2 bei [H⁺] (aus log(2) ≈ 0,301)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- ln(2) ≈ 0,693; log(2) ≈ 0,301; log(3) ≈ 0,477; ln(10) ≈ 2,303
+- Blut-pH: 7,35–7,45 (Azidose: < 7,35; Alkalose: > 7,45)
+- Bicarbonatpuffer: pH = 6,1 + log([HCO₃⁻]/(0,03·pCO₂)); Normal: HCO₃⁻ = 24, pCO₂ = 40 → pH 7,4
+- Dezibel: +10 dB → 10-fache Intensität; +3 dB → ca. 2-fache Intensität
+
+---
 
 ## Zusammenfassung
 
@@ -1021,8 +1105,6 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x · ln(5) = ln(200) → x = ln(200)/l
 
 Ein EKG ist ein Graph — wer ihn liest, interpretiert eine Funktion über Zeit. Eine Dosis-Wirkungs-Kurve im Semilog-Plot macht aus einer S-förmigen eine gerade Linie — leichter abzulesen. Im MedAT werden Graphen gelesen, Asymptoten erkannt und Transformationen verstanden. Für den MedAT sind Asymptoten (horizontal, vertikal), Monotonie, Extrempunkte, Semilog-Plots und Michaelis-Menten-Kurve prüfungsrelevant.
 
-# Grapheninterpretation, Asymptoten und Semilog-Plots
-
 ## Graphen und ihre Eigenschaften ablesen
 
 Das Lesen und Interpretieren von Funktionsgraphen ist eine zentrale mathematische Kompetenz — besonders im medizinischen Kontext, wo Kurven täglich auf Monitoren, in Laborbefunden und in der wissenschaftlichen Literatur zu interpretieren sind.
@@ -1140,6 +1222,29 @@ f(x) = (3x² + 6)/(x² − 4). Horizontale Asymptote: Grad Zähler = Grad Nenner
 
 **Beispiel 4 — Graphentransformation erkennen:**
 Gegeben: f(x) = eˣ. Wie sieht g(x) = 2·e^(−(x−3)) + 1 aus? Analyse: (1) x−3 → Verschiebung 3 nach rechts, (2) negatives Vorzeichen im Exponenten → Spiegelung an der y-Achse (Zerfall statt Wachstum), (3) Faktor 2 → Streckung in y-Richtung, (4) +1 → Verschiebung 1 nach oben. Neue Asymptote: **y = 1** (statt y = 0). y-Wert bei x = 3: g(3) = 2·e⁰ + 1 = **3**.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- Horizontale Asymptote aus Funktionsterm ablesen (Grenzwert x → ±∞)
+- Semilog-Plot: k und T½ aus Steigung berechnen (Steigung = −k; T½ = 0,693/k)
+- Michaelis-Menten: v bei gegebenem [S] berechnen; Km-Definition verstehen
+- Graphentyp aus Kurvenform erkennen (Gerade = linear, Parabel = quadratisch, S-Kurve = sigmoidal)
+- Graphentransformationen: Verschiebung, Streckung, Spiegelung
+
+**Achtung — typische Verwechslungen:**
+- Semilog-Plot: Gerade = Kinetik 1. Ordnung; Kurve = KEINE reine Kinetik 1. Ordnung
+- Michaelis-Menten: v = v_max/2 bei [S] = Km (NICHT bei [S] = v_max/2!)
+- Horizontale Asymptote ist keine Nullstelle — Graph nähert sich an, schneidet sie (meist) nicht
+- Wendepunkt ist kein Extremum (kein Maximum, kein Minimum)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Michaelis-Menten: v = v_max · [S]/(Km + [S]); Asymptote y = v_max
+- Semilog-Plot: Steigung = −k; y-Achsenabschnitt = ln C₀; T½ = 0,693/k
+- Kinetik 0. Ordnung: linear in C-vs-t (Gerade); Kinetik 1. Ordnung: linear in ln C-vs-t
+- EC₅₀: Dosis für halbe Maximalwirkung (entspricht Km bei Enzymen)
+
+---
 
 ## Zusammenfassung
 
