@@ -28,7 +28,11 @@ export const physKap7: Kapitel = {
         "Absorptionsspektrum",
         "Plancksches Wirkungsquantum",
       ],
-      content: `# Atommodelle und Spektroskopie
+      content: `## Einleitung
+
+Warum leuchten Neonröhren orange-rot? Warum misst die Pulsoximetrie mit zwei bestimmten Wellenlängen? Die Antwort liegt in der Atomphysik: Elektronen können nur auf bestimmten Energieniveaus existieren, und beim Wechsel zwischen Niveaus wird Licht einer exakt definierten Wellenlänge emittiert oder absorbiert. Dieses Prinzip der **Spektroskopie** bildet die Basis für Pulsoximetrie, Photometrie, MRT-Resonanz und Lasertherapie. Für den MedAT sind Bohr'sches Atommodell, Photonenenergie E = hf = hc/λ, Emissionsspektren, Lambert-Beer-Gesetz und Pulsoximetrie prüfungsrelevant.
+
+# Atommodelle und Spektroskopie
 
 ## Entwicklung der Atommodelle
 
@@ -105,7 +109,15 @@ A = 0,85 (gemessen); ε = 11 300 L/(mol·cm) für Hämoglobin bei 540 nm; d = 1 
 c = A/(ε·d) = 0,85/11 300 = 7,52 × 10⁻⁵ mol/L = 75,2 μmol/L. Umrechnung: 75,2 μmol/L × 64 500 g/mol (M_Hb) = 4,85 g/L. Klinischer Normwert Hb: 12–17 g/dL (120–170 g/L). Die Probe ist stark verdünnt — Verdünnungsfaktor einrechnen!
 
 **Beispiel 3 — Ionisierungsenergie von Wasserstoff:**
-Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisierungsenergie: 13,6 eV = 13,6 × 1,602 × 10⁻¹⁹ J = 2,18 × 10⁻¹⁸ J. Welche Wellenlänge hat das Photon? λ = hc/E = (6,626 × 10⁻³⁴ × 3 × 10⁸) / (2,18 × 10⁻¹⁸) = 91,2 nm (tiefes UV, Lyman-Grenze).`,
+Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisierungsenergie: 13,6 eV = 13,6 × 1,602 × 10⁻¹⁹ J = 2,18 × 10⁻¹⁸ J. Welche Wellenlänge hat das Photon? λ = hc/E = (6,626 × 10⁻³⁴ × 3 × 10⁸) / (2,18 × 10⁻¹⁸) = 91,2 nm (tiefes UV, Lyman-Grenze).
+
+## Zusammenfassung
+
+- **Bohr-Modell**: E_n = −13,6 eV/n²; Licht entsteht beim Übergang n_hoch → n_tief; E_Photon = |E_n2 − E_n1|
+- **Photonenenergie**: E = hf = hc/λ; h = 6,626×10⁻³⁴ J·s; Balmer-Serie (sichtbar), Lyman (UV), Paschen (IR)
+- **Lambert-Beer**: A = ε·c·d; A = log₁₀(I₀/I); Transmission T = I/I₀; Absorption ∝ Konzentration
+- **Pulsoximetrie**: 660 nm (Hb absorbiert) + 940 nm (HbO₂ absorbiert); isobestischer Punkt bei 805 nm
+- **Quantenmechanisches Modell**: Elektronen in Orbitalen (s, p, d, f); Heisenberg-Unschärfe: Δx·Δp ≥ ℏ/2`,
       lernziele: [
         "Die Entwicklung von Thomson über Rutherford zum Bohrschen Atommodell und das quantenmechanische Modell erklären.",
         "Die Photonenenergie E = hf = hc/λ berechnen und Spektrallinien auf Elektronenübergänge zurückführen.",
@@ -266,7 +278,11 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
         "Technetium-99m",
         "C-14-Datierung",
       ],
-      content: `# Radioaktivität – Strahlenarten und Zerfallsgesetze
+      content: `## Einleitung
+
+Radioaktive Strahlung ist unsichtbar, aber messbar — und in der Medizin sowohl gefährlich als auch heilsam. ⁹⁹ᵐTechnetium beleuchtet Schilddrüsen, ¹³¹Jod behandelt Schilddrüsenkrebs, Radon in Kellern verursacht Lungenkrebs. Das Zerfallsgesetz erklärt, wie schnell ein Radionuklid abklingt. Drei Strahlenarten mit sehr unterschiedlicher Reichweite und biologischer Wirkung sind zentral. Für den MedAT sind α/β/γ-Strahlung, Halbwertszeit, Zerfallsgesetz, Aktivität (Becquerel), Äquivalentdosis (Sievert) und Strahlenschutz prüfungsrelevant.
+
+# Radioaktivität – Strahlenarten und Zerfallsgesetze
 
 ## Alpha-Strahlung (α)
 
@@ -371,7 +387,16 @@ T½ = 8,02 Tage = 8,02 × 24 × 3600 s = 692 928 s.
 Absorbierte Dosis: D = 0,5 mGy. Für γ-Strahlung (w_R = 1): H = 0,5 mSv. Für α-Strahlung (w_R = 20): H = 0,5 × 20 = 10 mSv — 20-fach höhere biologische Wirksamkeit! Deshalb ist die interne Kontamination mit α-Strahlern (Radon, Polonium) besonders gefährlich.
 
 **Beispiel 4 — C-14-Datierung (Prinzip):**
-Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre. Eine Knochenprobe zeigt nur 25 % der normalen ¹⁴C-Aktivität: 25 % = (½)ⁿ → n = 2 Halbwertszeiten → Alter ≈ 2 × 5730 = 11 460 Jahre.`,
+Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre. Eine Knochenprobe zeigt nur 25 % der normalen ¹⁴C-Aktivität: 25 % = (½)ⁿ → n = 2 Halbwertszeiten → Alter ≈ 2 × 5730 = 11 460 Jahre.
+
+## Zusammenfassung
+
+- **α-Strahlung**: ⁴He-Kern; +2e; 4–8 MeV; Reichweite cm in Luft, µm in Gewebe; Abschirmung: Papier; w_R = 20
+- **β⁻-Strahlung**: Elektron; −e; bis MeV; Reichweite m in Luft, mm in Gewebe; Abschirmung: Aluminium; w_R = 1
+- **γ-Strahlung**: Photon; keine Ladung; hohe Energie; Reichweite m–km; Abschirmung: Blei; w_R = 1
+- **Zerfallsgesetz**: N(t) = N₀·e^(−λt); T½ = ln2/λ; A = λ·N [Becquerel = 1 Zerfall/s]
+- **Äquivalentdosis**: H = D·w_R [Sievert]; α 20× biologisch wirksamer als γ!
+- **Strahlenschutz**: Zeit ↓, Abstand ↑ (1/r²-Gesetz!), Abschirmung ↑`,
       lernziele: [
         "Die drei Strahlungsarten (α, β⁻, γ) hinsichtlich Teilchenart, Ladung, Reichweite und Abschirmung beschreiben.",
         "Das Zerfallsgesetz N(t) = N₀·e^(−λt) und die Halbwertszeit T½ = ln2/λ anwenden.",
@@ -536,7 +561,11 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
         "ALARA-Prinzip",
         "Bergonié-Tribondeau",
       ],
-      content: `# Röntgenstrahlung und Strahlenwirkung
+      content: `## Einleitung
+
+Röntgenstrahlung durchdringt Gewebe — härteres Gewebe absorbiert mehr, weicheres weniger — und erzeugt so kontrastreiche Bilder. Aber Röntgenstrahlung ionisiert auch DNA und kann Krebs verursachen. Dieser Dualismus — diagnostischer Nutzen vs. Strahlenrisiko — prägt den Alltag in der Radiologie. Das ALARA-Prinzip ("As Low As Reasonably Achievable") und das Schwächungsgesetz steuern den Umgang. Für den MedAT sind Bremsstrahlung, charakteristische Strahlung, Schwächungsgesetz, Strahlenschäden, deterministisch vs. stochastisch, Bergonié-Tribondeau und Abstandsquadratgesetz prüfungsrelevant.
+
+# Röntgenstrahlung und Strahlenwirkung
 
 ## Entstehung von Röntgenstrahlung
 
@@ -619,7 +648,17 @@ Beschleunigungsspannung U = 80 kV: E_max = eU = 80 keV = 80 000 × 1,602 × 10�
 μ_Blei ≈ 60 cm⁻¹ bei 100 keV. HVL = ln2/μ = 0,693/60 = 0,0116 cm ≈ 0,12 mm Blei. Um die Intensität auf 1/1000 zu reduzieren: 2¹⁰ ≈ 1024, also ~10 HVL = 1,2 mm Blei. In der Praxis: Bleischürzen sind 0,25–0,5 mm dick (reduzieren um Faktor 4–16 bei 100 keV).
 
 **Beispiel 3 — Abstandsquadratgesetz:**
-Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/9 = 1,1 μSv/h. Verdopplung des Abstands reduziert die Dosis auf 1/4. Wichtig im Strahlenschutz: Den Abstand zu einer Quelle zu verdoppeln ist eine einfache und effektive Schutzmaßnahme.`,
+Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/9 = 1,1 μSv/h. Verdopplung des Abstands reduziert die Dosis auf 1/4. Wichtig im Strahlenschutz: Den Abstand zu einer Quelle zu verdoppeln ist eine einfache und effektive Schutzmaßnahme.
+
+## Zusammenfassung
+
+- **Röntgenröhre**: Elektronen werden mit U beschleunigt → Wolfram-Anode; λ_min = hc/(eU) ≈ 1240/U[kV] pm
+- **Bremsstrahlung**: kontinuierliches Spektrum; **charakteristische Strahlung**: diskrete Linien (elementspezifisch)
+- **Schwächungsgesetz**: I = I₀·e^(−μx); HVL = ln2/μ; Blei 0,12 mm HVL bei 100 keV
+- **Deterministische Effekte**: Schwellendosis (z.B. Strahlenkater ab 1 Gy, Knochenmark ab 3–5 Gy)
+- **Stochastische Effekte**: kein Schwellenwert; Karzinogenese, Mutagenese; Risiko ∝ Dosis
+- **Bergonié-Tribondeau**: strahlensensitivste Zellen = schnell teilend, undifferenziert (Keimzellen, Knochen mark, Darmepithel)
+- **ALARA**: Abstand↑, Zeit↓, Abschirmung↑; Abstandsquadratgesetz: Dosis ∝ 1/r²`,
       lernziele: [
         "Die Entstehung von Bremsstrahlung und charakteristischer Strahlung in der Röntgenröhre erklären.",
         "Das Schwächungsgesetz I = I₀·e^(−μx) und die Halbwertsschichtdicke anwenden.",
@@ -778,7 +817,11 @@ Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/
         "Welle-Teilchen-Dualismus",
         "Warburg-Effekt",
       ],
-      content: `# Nuklearmedizin und Quantenphänomene
+      content: `## Einleitung
+
+PET zeigt Tumormetastasen, die noch keinen Knochen zerstört haben — weil Tumorzellen mehr Glukose verbrennen (Warburg-Effekt). SPECT kariert Herzperfusion. MRT bildet Weichteile ohne Strahlung ab — mittels Kernspinresonanz. Und dahinter steckt Quantenphysik: Welle-Teilchen-Dualismus, Photoeffekt, Larmor-Frequenz. Für den MedAT sind PET (¹⁸F-FDG, Annihilation, Koinzidenz), SPECT (⁹⁹ᵐTc), MRT-Prinzip (Larmor, T1/T2), Photoeffekt und Welle-Teilchen-Dualismus prüfungsrelevant.
+
+# Nuklearmedizin und Quantenphänomene
 
 ## PET – Positronen-Emissions-Tomographie
 
@@ -850,7 +893,16 @@ Ruhemasse Elektron = Ruhemasse Positron = 0,511 MeV/c². Gesamte Ruheenergie: E 
 
 **Beispiel 3 — Photoelektrischer Effekt (Grenzfrequenz):**
 Austrittsarbeit von Zink: φ = 4,3 eV = 4,3 × 1,602 × 10⁻¹⁹ J = 6,89 × 10⁻¹⁹ J.
-Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 10¹⁵ Hz. Grenzwellenlänge: λ₀ = c/f₀ = 3 × 10⁸ / 1,04 × 10¹⁵ = 289 nm (UV). Sichtbares Licht (400–700 nm) hat zu niedrige Frequenz → kein Photoeffekt an Zink. UV-Licht (< 289 nm) löst Elektronen aus.`,
+Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 10¹⁵ Hz. Grenzwellenlänge: λ₀ = c/f₀ = 3 × 10⁸ / 1,04 × 10¹⁵ = 289 nm (UV). Sichtbares Licht (400–700 nm) hat zu niedrige Frequenz → kein Photoeffekt an Zink. UV-Licht (< 289 nm) löst Elektronen aus.
+
+## Zusammenfassung
+
+- **PET**: β⁺-Zerfall → Positron + Elektron → Annihilation → 2 × 511 keV γ (antiparallel) → Koinzidenzdetektion
+- **¹⁸F-FDG**: T½ = 110 min; Glukoseanalogon → Anreicherung in Tumoren (Warburg-Effekt) und Gehirn
+- **SPECT**: γ-Strahler (⁹⁹ᵐTc, T½ = 6 h); Kollimator nötig; Auflösung 8–15 mm; Myokardperfusion, Szintigraphie
+- **MRT**: Larmor f = γ·B₀; ¹H: 42,58 MHz/T; RF-Puls kippt Spins; Relaxation (T1 = Längs-, T2 = Querrelaxation)
+- **Gadolinium**: paramagnetisches KM; verkürzt T1 → heller in T1-Bild; Ausscheidung über Niere
+- **Photoeffekt**: E_kin = hf − φ; kein Effekt unter Grenzfrequenz; belegte Quantennatur des Lichts (Einstein 1921)`,
       lernziele: [
         "Das Prinzip der Paarvernichtung und Koinzidenzdetektion beim PET erklären und ¹⁸F-FDG-Akkumulation begründen.",
         "SPECT und PET hinsichtlich verwendeter Radionuklide, Detektionsprinzip und Auflösung vergleichen.",
