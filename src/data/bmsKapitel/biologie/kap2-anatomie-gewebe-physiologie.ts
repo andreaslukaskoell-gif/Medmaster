@@ -970,10 +970,9 @@ Das Nervensystem gliedert sich in ZNS und PNS, wobei das vegetative Nervensystem
       ],
       // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
       altfrage: {
-        question:
-          "Welche Gewebeart kleidet die Alveolen der Lunge aus und warum ist dies funktionell bedeutsam?",
+        question: "Was versteht man unter dem Ruhepotenzial einer Nervenzelle?",
         answer:
-          "Einschichtiges Plattenepithel (Typ-I-Pneumozyten). Diese Zellen sind extrem flach (~0,1-0,2 µm), was eine minimale Diffusionsstrecke für den Gasaustausch gewährleistet. Die Blut-Luft-Schranke besteht aus: Alveolarepithel + Basalmembran + Kapillarendothel.",
+          "Das Ruhepotenzial (~-70 mV) entsteht durch ungleiche Ionenverteilung und die Na⁺/K⁺-ATPase (3 Na⁺ raus, 2 K⁺ rein). K⁺-Leckkanäle → K⁺ diffundiert nach außen → Innenseite negativ. Die Nernst-Gleichung beschreibt das Gleichgewichtspotenzial für einzelne Ionen.",
       },
       selfTest: [
         {
@@ -1166,10 +1165,9 @@ Das Auge wandelt Licht über die Fototransduktionskaskade in neuronale Signale u
       ],
       // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
       altfrage: {
-        question:
-          "Beschreiben Sie den Ablauf der Erregungsleitung am Herzen vom Sinusknoten bis zur Kammerkontraktion.",
+        question: "Was ist der Unterschied zwischen Stäbchen und Zapfen in der Netzhaut?",
         answer:
-          "Sinusknoten (60-80/min) → AV-Knoten (Verzögerung ~0,1s) → His-Bündel → Tawara-Schenkel → Purkinje-Fasern → Kammermuskulatur. Der AV-Knoten ist die einzige elektrische Verbindung zwischen Vorhöfen und Kammern.",
+          "Stäbchen: ~120 Mio., hochsensitiv, Hell-/Dunkel-Sehen (skotopisches Sehen), 1 Pigment (Rhodopsin), in der Peripherie. Zapfen: ~6 Mio., 3 Typen (S/M/L für blau/grün/rot), Farbsehen und Sehschärfe, konzentriert in der Fovea (photopisches Sehen). Dunkeladaptation dauert ~30 min durch Rhodopsin-Regeneration.",
       },
       selfTest: [
         {
@@ -1362,9 +1360,9 @@ Das Hormonsystem nutzt zwei grundlegende Wirkprinzipien: hydrophile Peptidhormon
       sections: [],
       // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
       altfrage: {
-        question: "Was beschreibt der Bohr-Effekt und welche klinische Bedeutung hat er?",
+        question: "Welche Hormone produziert die Schilddrüse und was bewirken sie?",
         answer:
-          "Niedriger pH verschiebt die O2-Bindungskurve nach rechts → erleichterte O2-Abgabe an das Gewebe. Hoher pH verschiebt nach links → erleichterte O2-Aufnahme in der Lunge. Klinisch relevant bei Azidose und Hyperventilation.",
+          "T3 (Triiodthyronin, biologisch aktiver) und T4 (Thyroxin, Prohormon). Wirkung: Grundumsatzsteigerung, Thermogenese, Wachstum/Entwicklung. Regulation: TRH (Hypothalamus) → TSH (Hypophyse) → T3/T4 → negative Rückkopplung auf TRH und TSH.",
       },
       selfTest: [
         {
@@ -1570,9 +1568,10 @@ Das Herz pumpt als vierkammeriges Organ über zwei in Serie geschaltete Kreislä
       sections: [],
       // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
       altfrage: {
-        question: "Welches Enzym spaltet Stärke und wo beginnt die Kohlenhydratverdauung?",
+        question:
+          "Beschreiben Sie den Ablauf der Erregungsleitung am Herzen vom Sinusknoten bis zur Kammerkontraktion.",
         answer:
-          "Die Kohlenhydratverdauung beginnt im Mund durch die Speichel-Amylase (Ptyalin), die Stärke in Maltose und Dextrine spaltet. Im Duodenum setzt die Pankreas-Amylase fort. Bürstensaum-Enzyme spalten Disaccharide zu Monosacchariden.",
+          "Sinusknoten (60-80/min, primärer Schrittmacher) → AV-Knoten (Verzögerung ~0,1s → Vorhöfe haben Zeit zu kontrahieren) → His-Bündel → Tawara-Schenkel → Purkinje-Fasern → Kammermuskulatur. Der AV-Knoten ist die einzige elektrische Verbindung zwischen Vorhöfen und Kammern.",
       },
       selfTest: [
         {
@@ -1773,9 +1772,9 @@ Blut besteht aus Plasma mit Transportproteinen und zellulären Elementen, die al
       sections: [],
       // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
       altfrage: {
-        question: "Was ist die funktionelle Einheit der Niere und welche Abschnitte hat sie?",
+        question: "Aus welchen Bestandteilen setzt sich Blut zusammen?",
         answer:
-          "Das Nephron: (1) Glomerulus (Filtration, ~180 L/Tag), (2) proximaler Tubulus (~65% Rückresorption), (3) Henle-Schleife (Harnkonzentrierung), (4) distaler Tubulus (Feinregulation), (5) Sammelrohr (ADH-abhängig). Endharn: ~1,5 L/Tag.",
+          "Plasma (~55%): Wasser, Proteine (Albumin, Globuline, Fibrinogen), Elektrolyte, Hormone. Zelluläre Bestandteile (~45%): Erythrozyten (O₂-Transport, kein Kern), Leukozyten (Immunabwehr) und Thrombozyten (Hämostase, Zellkernlos). Hämatokrit = Anteil zellulärer Bestandteile am Gesamtblutvolumen.",
       },
       selfTest: [
         {
@@ -1979,9 +1978,10 @@ Das Immunsystem arbeitet zweistufig: Die angeborene Immunität reagiert sofort u
       sections: [],
       // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
       altfrage: {
-        question: "Welche Hormone produziert die Schilddrüse und was bewirken sie?",
+        question:
+          "Was ist der Unterschied zwischen zytotoxischen T-Zellen (CD8⁺) und T-Helferzellen (CD4⁺)?",
         answer:
-          "T3 (Triiodthyronin, biologisch aktiver) und T4 (Thyroxin, Prohormon). Wirkung: Grundumsatzsteigerung, Thermogenese, Wachstum/Entwicklung. Regulation: TRH → TSH → T3/T4 → negative Rückkopplung.",
+          "CD8⁺-T-Zellen (zytotoxisch) erkennen via MHC I körpereigene, virusbefallene oder entartete Zellen und töten sie durch Perforin/Granzyme. CD4⁺-T-Helferzellen erkennen extrazelluläre Antigene via MHC II auf APCs und koordinieren die Immunantwort: Th1 (IFN-γ → Makrophagen-Aktivierung) und Th2 (IL-4/-5 → IgE-Produktion, Allergien).",
       },
       selfTest: [
         {
@@ -2168,9 +2168,9 @@ Das lymphatische System übernimmt drei zentrale Aufgaben: den Rücktransport vo
       sections: [],
       // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
       altfrage: {
-        question: "Aus welchen Bestandteilen setzt sich Blut zusammen?",
+        question: "Welche Aufgaben hat der Thymus bei der T-Zell-Reifung?",
         answer:
-          "Plasma (~55%) und zelluläre Bestandteile (~45%): Erythrozyten (O2-Transport), Leukozyten (Immunabwehr) und Thrombozyten (Hämostase). Hämatokrit = Anteil zellulärer Bestandteile am Gesamtblut.",
+          "Im Thymus reifen T-Lymphozyten aus dem Knochenmark. Positive Selektion: Nur T-Zellen, die MHC erkennen können, überleben. Negative Selektion: T-Zellen, die zu stark an körpereigene Antigene binden, werden durch Apoptose eliminiert (zentrale Toleranz). Nur ~2-5% überleben. Klinisch: DiGeorge-Syndrom = Thymusaplasie → schwerer T-Zell-Mangel.",
       },
       selfTest: [
         {
@@ -2345,9 +2345,9 @@ Die Atemwege gliedern sich in obere (Nase, Pharynx) und untere Abschnitte (Laryn
       sections: [],
       // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
       altfrage: {
-        question: "Was versteht man unter dem Ruhepotenzial einer Nervenzelle?",
+        question: "Was beschreibt der Bohr-Effekt und welche klinische Bedeutung hat er?",
         answer:
-          "Das Ruhepotenzial (~-70 mV) entsteht durch ungleiche Ionenverteilung und die Na+/K+-ATPase (3 Na+ raus, 2 K+ rein). K+-Leckkanäle → K+ diffundiert nach außen → Innenseite negativ. Nernst-Gleichung beschreibt Gleichgewichtspotenzial.",
+          "Der Bohr-Effekt beschreibt die pH-abhängige O₂-Affinität des Hämoglobins: Niedriger pH (Azidose, im Gewebe) → O₂-Bindungskurve verschiebt nach rechts → erleichterte O₂-Abgabe. Hoher pH (Lunge) → Kurve nach links → erleichterte O₂-Aufnahme. Klinisch relevant bei Azidose (mehr O₂-Abgabe) und Hyperventilation.",
       },
       selfTest: [
         {
@@ -2534,9 +2534,9 @@ Der Gastrointestinaltrakt erstreckt sich vom Mund über Ösophagus, Magen, Dünn
       sections: [],
       // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
       altfrage: {
-        question: "Welche Muskeltypen unterscheidet man und worin liegen die Hauptunterschiede?",
+        question: "Welches Enzym spaltet Stärke und wo beginnt die Kohlenhydratverdauung?",
         answer:
-          "Skelettmuskulatur (quergestreift, willkürlich), Herzmuskulatur (quergestreift, unwillkürlich, Glanzstreifen), Glatte Muskulatur (nicht quergestreift, unwillkürlich). Querstreifung entsteht durch regelmäßige Anordnung von Aktin und Myosin in Sarkomeren.",
+          "Die Kohlenhydratverdauung beginnt im Mund durch die Speichel-Amylase (Ptyalin), die Stärke in Maltose und Dextrine spaltet. Im Duodenum setzt die Pankreas-Amylase fort. Bürstensaum-Enzyme (Maltase, Lactase, Sucrase) spalten Disaccharide zu Monosacchariden, die dann resorbiert werden.",
       },
       selfTest: [
         {
@@ -2911,9 +2911,10 @@ Das Skelett besteht aus 206 Knochen mit äußerer Kompakta (80 %, Havers-Systeme
       sections: [],
       // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
       altfrage: {
-        question: "Was ist die Blut-Hirn-Schranke?",
+        question:
+          "Erklären Sie das Knochen-Remodeling und die Regulation durch Parathormon und Calcitonin.",
         answer:
-          "Tight Junctions der Kapillarendothelzellen, Basalmembran und Astrozyten-Endfüßchen. Lipophile Stoffe passieren frei, hydrophile benötigen Transporter (GLUT1 für Glukose). Klinisch: Viele Medikamente passieren schlecht → Meningitis-Therapie schwierig.",
+          "Osteoblasten (Aufbau: Kollagen I, Mineralisierung mit Ca²⁺/PO₄³⁻) und Osteoklasten (Abbau: mehrkernig, H⁺ + Proteasen, Monozyten-Ursprung) bauen Knochen ständig um. PTH: aktiviert Osteoklasten → Ca²⁺ ins Blut ↑. Calcitonin: hemmt Osteoklasten → Ca²⁺ ins Blut ↓. Vitamin D3: fördert Ca²⁺-Resorption im Darm. Klinisch: Osteoporose = Abbau > Aufbau → Frakturrisiko ↑.",
       },
       selfTest: [
         {
@@ -3101,9 +3102,9 @@ Die Spermatogenese produziert in den Tubuli seminiferi aus einem diploiden Sperm
       sections: [],
       // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
       altfrage: {
-        question: "Welche Funktion hat die Leber bei der Biotransformation?",
+        question: "Beschreiben Sie den Menstruationszyklus und seinen Auslöser für die Ovulation.",
         answer:
-          "Phase I: Oxidation durch CYP450-Enzyme. Phase II: Konjugation mit Glucuronsäure, Sulfat, Glutathion → Xenobiotika werden wasserlöslich und ausscheidbar. Weitere Funktionen: Glukoneogenese, Harnstoffzyklus, Albumin-/Gerinnungsfaktorsynthese.",
+          "Follikelphase (Tag 1-14): FSH → Follikelreifung → Östrogen ↑ → LH-Surge (positive Rückkopplung, Tag ~14) → Ovulation. Lutealphase (Tag 15-28): Corpus luteum → Progesteron + Östrogen. Ohne Befruchtung: Corpus luteum degeneriert → Hormonabfall → Menstruation. Mit Befruchtung: hCG erhält Corpus luteum → Progesteron für Schwangerschaftserhaltung.",
       },
       selfTest: [
         {
