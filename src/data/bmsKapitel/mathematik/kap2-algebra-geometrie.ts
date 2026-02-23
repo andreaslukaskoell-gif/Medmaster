@@ -25,7 +25,11 @@ export const mathKapAlgebra: Kapitel = {
         "Dosierungsberechnung",
         "Verdünnungsformel",
       ],
-      content: `# Gleichungen und Ungleichungen
+      content: `## Einleitung
+
+Wie viel Paracetamol für ein 12 kg schweres Kind? Wie schnell fällt eine Wirkstoffkonzentration? Antworten kommen aus Gleichungen. Ob Dosierungsformel, Clearance-Berechnung oder Mischungsaufgabe — das Lösen linearer und quadratischer Gleichungen ist die wichtigste Rechenoperation im MedAT-BMS. Für den MedAT sind lineare Gleichungen, Gleichungssysteme, Ungleichungen, Substitution/Elimination und medizinische Anwendungsaufgaben prüfungsrelevant.
+
+# Gleichungen und Ungleichungen
 
 Gleichungen sind das Herzstück der Algebra. Sie erlauben es, unbekannte Größen präzise zu bestimmen, und bilden das Werkzeug für nahezu jede quantitative Fragestellung in Naturwissenschaft und Medizin. Von der Dosierungsberechnung in der Anästhesie über die Bestimmung von Gleichgewichtskonzentrationen in der Biochemie bis hin zur Modellierung physiologischer Prozesse — das sichere Lösen von Gleichungen ist keine abstrakte Fähigkeit, sondern eine klinisch unverzichtbare Kompetenz.
 
@@ -113,7 +117,16 @@ Propofol-Dosis: 6 mg/kg/h, Patient 80 kg. Stammlösung: 10 mg/mL. Schritt 1: Dos
 Wirkstoffkonzentration c(t) = minus 2t hoch zwei + 20t (in mg/L, t in Stunden). Maximale Konzentration: t_max = minus b/(2a) = minus 20/(2 mal (minus 2)) = **5 h**. c_max = minus 2 mal 25 + 20 mal 5 = **50 mg/L**. Scheitelpunkt der Parabel bestimmt optimale Dosierungszeit.
 
 **Beispiel 3 — Gleichungssystem: Mischung zweier Infusionslösungen:**
-Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. System: V_A + V_B = 500 und 0,05 mal V_A + 0,20 mal V_B = 0,08 mal 500 = 40. Substitution: V_A = 500 minus V_B. Einsetzen: 0,05 mal (500 minus V_B) + 0,20 mal V_B = 40. 25 minus 0,05 V_B + 0,20 V_B = 40. 0,15 V_B = 15. V_B = **100 mL**, V_A = **400 mL**.`,
+Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. System: V_A + V_B = 500 und 0,05 mal V_A + 0,20 mal V_B = 0,08 mal 500 = 40. Substitution: V_A = 500 minus V_B. Einsetzen: 0,05 mal (500 minus V_B) + 0,20 mal V_B = 40. 25 minus 0,05 V_B + 0,20 V_B = 40. 0,15 V_B = 15. V_B = **100 mL**, V_A = **400 mL**.
+
+## Zusammenfassung
+
+- **Lineare Gleichung**: ax + b = 0 → x = −b/a; Äquivalenzumformungen: beidseitig +/−/×/÷
+- **Gleichungssystem**: Substitution (eine Variable ersetzen) oder Elimination (Gleichungen addieren/subtrahieren)
+- **Ungleichung**: wie Gleichung, aber bei Multiplikation/Division mit negativer Zahl Vorzeichen umkehren!
+- **Dreisatz**: direkte Proportion (mehr → mehr) oder inverse Proportion (mehr → weniger)
+- **Verdünnungsformel**: c₁·V₁ = c₂·V₂; Mischungsaufgabe als Gleichungssystem
+- **Klinisch**: Dosisberechnung mg/kg, Infusionsraten mL/h, Glukosemischung`,
       lernziele: [
         "Lineare Gleichungen durch systematische Umformung nach einer Variablen auflösen und die Lösung mit einer Probe überprüfen",
         "Lineare Gleichungssysteme mit zwei Unbekannten mithilfe des Substitutions- und des Additionsverfahrens lösen",
@@ -260,7 +273,11 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
         "Kreuzprodukt",
         "Verdünnungsreihe",
       ],
-      content: `# Prozent-, Bruch- und Schlussrechnung
+      content: `## Einleitung
+
+Hämatokrit 42%, SpO₂ 98%, Ejektionsfraktion >55%, Serumverdünnung 1:10 — Prozente und Brüche durchziehen den klinischen Alltag. Die häufigste MedAT-Falle: Verwechseln von absoluter und relativer Risikoreduktion. ARR und NNT sind Grundkonzepte der EbM (evidenzbasierte Medizin) und fast jährlich im MedAT. Für den MedAT sind Prozentrechnung (Prozentwert, Prozentsatz, Grundwert), Bruchrechnung, ARR/RRR/NNT und Serienverdünnungen prüfungsrelevant.
+
+# Prozent-, Bruch- und Schlussrechnung
 
 Prozentrechnung, Bruchrechnung und der Dreisatz sind in der Medizin allgegenwärtig. Kaum eine klinische Situation kommt ohne diese Grundkenntnisse aus: die Hämatokritzahl (42%), die Sauerstoffsättigung (SpO2 98%), die Ejektionsfraktion des Herzens (EF > 55%), die Serumverdünnung (1:10), die Berechnung von Infusionszeiten oder die Dosierung nach Körpergewicht. Diese scheinbar einfachen Rechenarten sind am MedAT häufige Fehlerquellen, weil sie unter Zeitdruck präzise angewendet werden müssen.
 
@@ -363,7 +380,16 @@ Studie: Medikament senkt Herzinfarktrisiko von 8% auf 5%. ARR (Absolute Risikore
 Ausgangstiter: 1:16. Dreifache 1:2-Verdünnung: 1:16 mal 2 mal 2 mal 2 = **1:128**. Gemessene Konzentration: 5 mg/dL. Original: 5 mal 128 = **640 mg/dL**. Alternativ: jede Stufe halbiert die Konzentration: 640 → 320 → 160 → 80 → 40 → 20 → 10 → 5 mg/dL (7 Stufen = 1:128).
 
 **Beispiel 3 — Kreatinin-Clearance (Dreisatz):**
-Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P = 1,5 mg/dL. Clearance = (U mal V) / P = (120 mal 1,2) / 1,5 = 144 / 1,5 = **96 mL/min**. Normwert: 80–120 mL/min → Patient im Normalbereich.`,
+Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P = 1,5 mg/dL. Clearance = (U mal V) / P = (120 mal 1,2) / 1,5 = 144 / 1,5 = **96 mL/min**. Normwert: 80–120 mL/min → Patient im Normalbereich.
+
+## Zusammenfassung
+
+- **Prozentrechnung**: P% = W/G×100; Prozentwert W = G×P/100; Grundwert G = W×100/P
+- **ARR**: Absoluter Risikountersch. = R_Kontrolle − R_Behandlung; **RRR** = ARR/R_Kontrolle; **NNT** = 1/ARR
+- **Bruchrechnung**: kürzen, erweitern; Mul: Zähler × Zähler / Nenner × Nenner; Div: × Kehrwert
+- **Dreisatz**: direkt: a/b = c/x → x = b·c/a; invers: a·b = c·x → x = a·b/c
+- **Serienverdünnung**: n Schritte 1:k → Gesamtverdünnung 1:kⁿ; Konzentration × Gesamtverdünnung = Original
+- **Klinisch**: Clearance = (U·V)/P; Hämatokrit als %; Ejektionsfraktion (EF) in %`,
       lernziele: [
         "Die drei Grundfragen der Prozentrechnung (Prozentwert, Grundwert, Prozentsatz) sicher und schnell lösen",
         "Absoluten und relativen Unterschied unterscheiden und im klinischen Kontext korrekt interpretieren",
@@ -498,7 +524,11 @@ Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P
         "Vieta-Satz",
         "Diskriminante",
       ],
-      content: `# Quadratische Gleichungen und binomische Formeln
+      content: `## Einleitung
+
+BSA-Formel (Körperoberfläche), Parabelkurve der Pharmakokinetik, Faktorisieren von Termen — quadratische Gleichungen und binomische Formeln sind Grundwerkzeuge. Die drei binomischen Formeln ermöglichen schnelles Faktorisieren, was am MedAT Rechenzeit spart. Für den MedAT sind drei binomische Formeln, pq-Formel, Scheitelpunktform (Dosisoptimum), Vieta-Formeln und quadratische Gleichungen in medizinischen Kontexten prüfungsrelevant.
+
+# Quadratische Gleichungen und binomische Formeln
 
 Die binomischen Formeln gehören zu den nützlichsten algebraischen Identitäten. Sie erlauben die schnelle Umformung von Produkten und Quadraten bestimmter Ausdrücke und bilden die Grundlage für das Faktorisieren quadratischer Ausdrücke. Das sichere Beherrschen dieser Formeln — vorwärts wie rückwärts — ist eine echte Zeitersparnis bei Prüfungen und in der Anwendung.
 
@@ -615,7 +645,15 @@ BSA = Wurzel aus (Größe [cm] mal Gewicht [kg] / 3600). Patient: 180 cm, 75 kg.
 Runde Wunde mit Radius (r+2) cm am Morgen und (r+8) cm am Abend. Flächendifferenz: pi mal ((r+8) hoch zwei minus (r+2) hoch zwei) = pi mal ((r+8)+(r+2)) mal ((r+8) minus (r+2)) = pi mal (2r+10) mal 6. Für r = 1: Delta A = pi mal 12 mal 6 = **72 pi ungefähr 226 cm hoch zwei**. Dritte binomische Formel vereinfacht die Berechnung erheblich.
 
 **Beispiel 3 — Parabel: Optimale Dosis (Scheitelpunkt):**
-Wirksamkeit E(d) = minus 0,5 d hoch zwei + 10d minus 12 (d = Dosis in mg). Scheitelpunkt: d_opt = minus b/(2a) = minus 10/(2 mal (minus 0,5)) = **10 mg**. E_max = minus 0,5 mal 100 + 100 minus 12 = **38 Einheiten**. Parabelform zeigt: zu wenig und zu viel Dosis reduzieren die Wirksamkeit.`,
+Wirksamkeit E(d) = minus 0,5 d hoch zwei + 10d minus 12 (d = Dosis in mg). Scheitelpunkt: d_opt = minus b/(2a) = minus 10/(2 mal (minus 0,5)) = **10 mg**. E_max = minus 0,5 mal 100 + 100 minus 12 = **38 Einheiten**. Parabelform zeigt: zu wenig und zu viel Dosis reduzieren die Wirksamkeit.
+
+## Zusammenfassung
+
+- **Binomische Formeln**: (a+b)² = a²+2ab+b²; (a−b)² = a²−2ab+b²; (a+b)(a−b) = a²−b²
+- **pq-Formel**: x² + px + q = 0 → x = −p/2 ± √(p²/4 − q); Diskriminante D = p²/4 − q
+- **Scheitelpunktform**: ax² + bx + c; Scheitelpunkt x_S = −b/(2a); Dosisoptimum → Scheitelpunkt
+- **Vieta**: x₁+x₂ = −p; x₁·x₂ = q (für x² + px + q = 0) — Ergebnisse prüfen!
+- **BSA (Mosteller)**: √(Größe·Gewicht/3600); Zytostatikum-Dosierung in mg/m²`,
       lernziele: [
         "Die drei binomischen Formeln auswendig kennen, herleiten und vorwärts sowie rückwärts (zum Faktorisieren) anwenden",
         "Quadratische Ausdrücke durch Erkennen des Musters faktorisieren (vollständige Quadrate und Differenz der Quadrate)",
@@ -761,7 +799,11 @@ Wirksamkeit E(d) = minus 0,5 d hoch zwei + 10d minus 12 (d = Dosis in mg). Schei
         "Logarithmus",
         "Wurzelziehen",
       ],
-      content: `# Potenz- und Wurzelgesetze
+      content: `## Einleitung
+
+Bakterienwachstum verdoppelt sich alle 20 Minuten — nach 3 Stunden sind aus 1 Bakterium 2⁹ = 512 geworden. pH = −log₁₀([H⁺]) — der Logarithmus erlaubt, riesige Konzentrationsbereiche handhabbar zu machen. Potenz- und Logarithmengesetze sind überall in der Medizin. Für den MedAT sind Potenzgesetze (8 Regeln), Wurzeln als gebrochene Potenzen, Logarithmus (log₁₀, ln), pH-Berechnung und Dezibel prüfungsrelevant.
+
+# Potenz- und Wurzelgesetze
 
 Potenzen und Wurzeln sind in den Naturwissenschaften und der Medizin allgegenwärtig: Exponentialwachstum von Bakterien, radioaktiver Zerfall, Pharmakokinetik, pH-Berechnung, Schallpegel in Dezibel — all diese Konzepte basieren auf Potenz- und Logarithmengesetzen. Das sichere Fundament in diesen Rechenregeln ist für den MedAT unverzichtbar und bildet die Brücke zwischen elementarer Mathematik und naturwissenschaftlichen Anwendungen.
 
@@ -901,7 +943,16 @@ T(1/2) = 2 h, Anfangsdosis 1000 mg. Nach t = 8 h: Anzahl HWZ = 8/2 = 4. Restmeng
 Schallintensität verdoppelt sich: Delta L = 10 mal lg(I_2/I_1) = 10 mal lg(2) = 10 mal 0,301 = **3,01 dB**. Verdopplung der Schallintensität entspricht plus 3 dB. Umgekehrt: 20 dB Unterschied = Faktor 10 hoch (20/10) = 10 hoch 2 = **100-fache Intensität**. In der Audiometrie: Hörschwelle 0 dB, Gespräch 60 dB (10 hoch 6-fach!).
 
 **Beispiel 3 — pH-Berechnung bei Pufferverschiebung:**
-Blut-pH 7,40: [H+] = 10 hoch (minus 7,40) = **3,98 mal 10 hoch (minus 8) mol/L**. Azidose pH 7,10: [H+] = 10 hoch (minus 7,10) = **7,94 mal 10 hoch (minus 8) mol/L**. Die H+-Konzentration verdoppelt sich bei pH-Abfall um nur 0,30 Einheiten (da lg(2) ungefähr 0,30). Klinisch bedeutsam: kleine pH-Änderungen = grosse Konzentrationsänderungen.`,
+Blut-pH 7,40: [H+] = 10 hoch (minus 7,40) = **3,98 mal 10 hoch (minus 8) mol/L**. Azidose pH 7,10: [H+] = 10 hoch (minus 7,10) = **7,94 mal 10 hoch (minus 8) mol/L**. Die H+-Konzentration verdoppelt sich bei pH-Abfall um nur 0,30 Einheiten (da lg(2) ungefähr 0,30). Klinisch bedeutsam: kleine pH-Änderungen = grosse Konzentrationsänderungen.
+
+## Zusammenfassung
+
+- **Potenzgesetze**: aᵐ·aⁿ = aᵐ⁺ⁿ; aᵐ/aⁿ = aᵐ⁻ⁿ; (aᵐ)ⁿ = aᵐⁿ; a⁰ = 1; a⁻ⁿ = 1/aⁿ; a^(1/n) = ⁿ√a
+- **Logarithmus**: log(a·b) = log a + log b; log(a/b) = log a − log b; log(aⁿ) = n·log a
+- **pH**: pH = −log₁₀([H⁺]); pH 7 = 10⁻⁷ mol/L; pH ↓ 0,3 → [H⁺] verdoppelt sich
+- **Dezibel**: L = 10·log(I/I₀); +3 dB → I×2; +10 dB → I×10; 60 dB = 10⁶-fache Intensität
+- **Halbwertszeit**: c(t) = c₀·(½)^(t/T½) = c₀·e^(−λt); Anzahl HWZ = t/T½
+- **Klinisch**: pH-Wert, Halbwertszeit Paracetamol 2h, Tc-99m 6h, ¹³¹I 8 Tage`,
       lernziele: [
         "Alle acht Potenzgesetze sicher anwenden, insbesondere negative und gebrochene Exponenten korrekt handhaben",
         "Wurzeln vereinfachen durch Erkennen quadratischer Teiler und Anwendung der Produktregel",
@@ -1048,7 +1099,11 @@ Blut-pH 7,40: [H+] = 10 hoch (minus 7,40) = **3,98 mal 10 hoch (minus 8) mol/L**
         "Körperoberfläche",
         "DuBois-Formel",
       ],
-      content: `# Ebene Figuren — Flächen und Umfang
+      content: `## Einleitung
+
+Wundfläche für Transplantationsplanung, Aortenklappenöffnungsfläche bei Stenose, Körperoberfläche für Zytostatika-Dosierung — ebene Figuren und ihre Flächen sind in der Medizin direkt anwendbar. Die Neuner-Regel nach Wallace teilt die Körperoberfläche in 9%-Segmente auf (Verbrennungsbeurteilung). Für den MedAT sind Rechteck, Dreieck, Kreis, Trapez, Heron-Formel, Kreisring und die klinischen Anwendungen prüfungsrelevant.
+
+# Ebene Figuren — Flächen und Umfang
 
 Die Berechnung von Flächen und Umfängen ebener geometrischer Figuren bildet die Grundlage der planaren Geometrie. Im MedAT werden Flächenformeln regelmäßig abgefragt — sowohl als reine Rechenaufgaben als auch in medizinisch eingekleideten Kontexten wie der Berechnung von Wundflächen, Klappenöffnungsflächen oder der Körperoberfläche für die Zytostatika-Dosierung. Die sichere Beherrschung aller Standardformeln ist daher unverzichtbar.
 
@@ -1159,7 +1214,15 @@ Dreiseitige Wunde: a = 5 cm, b = 7 cm, c = 8 cm. s = (5+7+8)/2 = 10. A = Wurzel 
 Gesunde Klappe: A = pi mal r hoch zwei mit d = 2,5 cm → A = pi mal 1,25 hoch zwei = **4,9 cm hoch zwei**. Schwere Aortenstenose: A = 0,8 cm hoch zwei. Reduktion: 4,9 minus 0,8 = 4,1 cm hoch zwei, also auf **16% der Normalfläche**. OP-Indikation bei A < 1,0 cm hoch zwei (schwere Stenose).
 
 **Beispiel 4 — Kreisring als Gefäßwandquerschnitt:**
-Koronararterie: Außendurchmesser 4 mm (R = 2 mm), Wanddicke 0,5 mm (r = 1,5 mm). Lumen A_innen = pi mal 1,5 hoch zwei = **7,07 mm hoch zwei**. Gesamtquerschnitt A_aussen = pi mal 2 hoch zwei = 12,57 mm hoch zwei. Wandfläche = 12,57 minus 7,07 = **5,5 mm hoch zwei**.`,
+Koronararterie: Außendurchmesser 4 mm (R = 2 mm), Wanddicke 0,5 mm (r = 1,5 mm). Lumen A_innen = pi mal 1,5 hoch zwei = **7,07 mm hoch zwei**. Gesamtquerschnitt A_aussen = pi mal 2 hoch zwei = 12,57 mm hoch zwei. Wandfläche = 12,57 minus 7,07 = **5,5 mm hoch zwei**.
+
+## Zusammenfassung
+
+- **Rechteck**: A = a·b; U = 2(a+b); **Dreieck**: A = ½·g·h; **Heron**: A = √(s·(s−a)·(s−b)·(s−c)); s = (a+b+c)/2
+- **Kreis**: A = π·r²; U = 2π·r; **Kreisring**: A = π(R²−r²); **Trapez**: A = ½·(a+c)·h
+- **Neuner-Regel (Verbrennung)**: Kopf 9%, Arm je 9%, Brust 9%, Bauch 9%, Rücken 18%, Bein je 18%, Genitale 1%
+- **Aortenklappe**: schwere Stenose < 1 cm²; normale Klappe ~4,9 cm²
+- **Hagen-Poiseuille**: V̇ ∝ r⁴ → 70% Stenose (r×0,3) → Fluss × 0,3⁴ = 0,81% des Normalflusses`,
       lernziele: [
         "Flächen und Umfänge von Rechteck, Dreieck, Kreis, Trapez und Parallelogramm korrekt berechnen.",
         "Die Heronsche Formel auf Dreiecke mit bekannten Seitenlängen anwenden.",
@@ -1329,7 +1392,11 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
         "Tumorvolummetrie",
         "Oberfläche-Volumen-Verhältnis",
       ],
-      content: `# Körper — Volumen und Oberfläche
+      content: `## Einleitung
+
+Von der Berechnung des Herzvolumens (Ellipsoid) über die Medikamentendosierung nach Körpergewicht bis zur Planung eines Stents (Zylinder) — Körpergeometrie ist Medizin. Kugelförmige Gelenke, zylindrische Gefäße, kegelförmige Lungenzipfel: der Körper ist aus geometrischen Körpern zusammengesetzt. Für den MedAT sind Kugel, Zylinder, Quader, Kegel und deren Volumen- und Oberflächenformeln prüfungsrelevant.
+
+# Körper — Volumen und Oberfläche
 
 Die räumliche Geometrie beschäftigt sich mit Körpern im dreidimensionalen Raum. Im medizinischen Kontext sind Volumen- und Oberflächenberechnungen für die Beurteilung von Organen, Tumoren und Gefäßen unverzichtbar. Der MedAT fragt Volumen- und Oberflächenformeln sowohl in reiner Form als auch in klinischen Anwendungen ab — typische Aufgabentypen sind Tumorvolummetrie, Infusionsvolumen-Berechnungen und Hagen-Poiseuille-Aufgaben zur Gefäßstenose.
 
@@ -1419,7 +1486,16 @@ Normale Koronararterie r = 2 mm. Nach 70%-Stenose: r_sten = 0,30 mal 2 = 0,6 mm.
 Ultraschallmessung: a = 8 cm, b = 6 cm, c = 5 cm. V = 0,52 mal 8 mal 6 mal 5 = 0,52 mal 240 = **125 mL**. Grenzwert Restharn: > 100 mL → **pathologisch**, Abklärung (BPH, neurogene Blasenentleerungsstörung). Therapeutischer Normwert: < 50 mL.
 
 **Beispiel 4 — Zylinder vs. Kugel (Kapselvolumen):**
-Zylindrische Kapsel: r = 0,4 cm, h = 1,5 cm. V_Zyl = π · 0,16 · 1,5 = 0,24π ≈ 0,75 cm³ = **0,75 mL**. Kugelförmiges Granulat: r = 0,5 cm. V_Kugel = (4/3) · π · 0,125 = 0,524 cm³ ≈ **0,52 mL**. Die Kapselform fasst 44% mehr Volumen als die Kugel bei ähnlichen Abmessungen.`,
+Zylindrische Kapsel: r = 0,4 cm, h = 1,5 cm. V_Zyl = π · 0,16 · 1,5 = 0,24π ≈ 0,75 cm³ = **0,75 mL**. Kugelförmiges Granulat: r = 0,5 cm. V_Kugel = (4/3) · π · 0,125 = 0,524 cm³ ≈ **0,52 mL**. Die Kapselform fasst 44% mehr Volumen als die Kugel bei ähnlichen Abmessungen.
+
+## Zusammenfassung
+
+- **Quader**: V = l·b·h; O = 2(lb+lh+bh); **Zylinder**: V = π·r²·h; M = 2π·r·h; **Kegel**: V = ⅓π·r²·h; M = π·r·s
+- **Kugel**: V = (4/3)π·r³; O = 4π·r²; O/V-Verhältnis = 3/r (je kleiner r, desto effizienter der Stoffaustausch)
+- **Ellipsoid (medizinisch)**: V = (π/6)·a·b·c ≈ 0,52·a·b·c → Tumor, Blase, Herz
+- **Alveolen**: r ≈ 0,15 mm → riesige Gesamtfläche ~70 m² bei nur 6 L Volumen (großes O/V)
+- **Harnblase**: Restharn > 100 mL → pathologisch; Messung per Ultraschall (Ellipsoid)
+- **Tumor-Volumetrie**: RECIST-Kriterien; Volumenprogredienz > 20% = Progressive Disease`,
       lernziele: [
         "Volumen und Oberfläche von Quader, Zylinder, Kegel und Kugel nach Formel berechnen.",
         "Die Ellipsoid-Näherungsformel für die medizinische Volumetrie korrekt anwenden.",
@@ -1593,7 +1669,11 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
         "Vierfelder-Tafel",
         "EKG-Herzachse",
       ],
-      content: `# Koordinatensystem und analytische Geometrie
+      content: `## Einleitung
+
+Eine EKG-Kurve ist eine Funktion über Zeit — Koordinatensystem. Eine Blutdruckkurve ebenfalls. Die Dosierungs-Wirkungskurve eines Medikaments ist ein Graph im Koordinatensystem. Analytische Geometrie verbindet algebraische Gleichungen mit geometrischen Objekten — Geraden, Kurven, Abstände. Für den MedAT sind kartesische Koordinaten, Geradengleichung (Steigung, Schnittpunkte), Abstände und lineare Interpolation prüfungsrelevant.
+
+# Koordinatensystem und analytische Geometrie
 
 Die analytische Geometrie verbindet algebraische Methoden mit geometrischen Inhalten. Punkte, Geraden und Kurven werden durch Gleichungen beschrieben, was präzise Berechnungen ermöglicht. Im MedAT werden Aufgaben zu Abstandsberechnungen, Geradengleichungen und Schnittpunkten häufig gestellt — oft auch im Kontext klinischer Diagramme wie Streudiagrammen oder Regressionsgeraden.
 
@@ -1703,7 +1783,15 @@ Gerade y = 28,7x − 46,7 (y = mittlerer BZ in mg/dL, x = HbA1c in %). Für HbA1
 Pupille als Kreis: normal d = 3 mm → r = 1,5 mm. A = π · 1,5² = **7,07 mm²**. Mydriasis d = 8 mm → r = 4 mm. A = π · 4² = **50,3 mm²**. Faktor: 50,3/7,07 = **7,1-fach** mehr Lichteinfall. Kreisgleichung: x² + y² = 16 (Mittelpunkt Ursprung, r = 4 mm).
 
 **Beispiel 4 — Parallele und senkrechte Geraden:**
-g₁: y = ¾x + 2. Parallele Gerade durch P(4, 1): y = ¾x + b. Einsetzen: 1 = ¾ · 4 + b → b = 1 − 3 = −2. g₂: y = ¾x − 2. Senkrechte Gerade durch P(4, 1): m_perp = −1/(¾) = −4/3. y = −4/3 · x + b. Einsetzen: 1 = −4/3 · 4 + b → b = 1 + 16/3 = 19/3. g₃: y = −4/3 · x + 19/3.`,
+g₁: y = ¾x + 2. Parallele Gerade durch P(4, 1): y = ¾x + b. Einsetzen: 1 = ¾ · 4 + b → b = 1 − 3 = −2. g₂: y = ¾x − 2. Senkrechte Gerade durch P(4, 1): m_perp = −1/(¾) = −4/3. y = −4/3 · x + b. Einsetzen: 1 = −4/3 · 4 + b → b = 1 + 16/3 = 19/3. g₃: y = −4/3 · x + 19/3.
+
+## Zusammenfassung
+
+- **Kartesische Koordinaten**: Punkt P(x,y); Abstand d = √((x₂−x₁)²+(y₂−y₁)²); Mittelpunkt M = ((x₁+x₂)/2, (y₁+y₂)/2)
+- **Geradengleichung**: y = m·x + b; m = Steigung (Δy/Δx); b = y-Achsenabschnitt; Schnittpunkt: Gleichungssystem
+- **Steigung**: m > 0 → steigend; m < 0 → fallend; m = 0 → waagrecht; Parallele: gleiche m; Senkrechte: m₁·m₂ = −1
+- **Kreisgleichung**: (x−a)² + (y−b)² = r²; Mittelpunkt M(a,b); Radius r
+- **Klinisch**: Regressionsgerade HbA1c–Blutzucker; EKG-Achse; Abstand von Lymphknoten im CT; Vierfelder-Tafel (Sensitivität/Spezifität)`,
       lernziele: [
         "Abstände und Mittelpunkte im kartesischen Koordinatensystem berechnen.",
         "Geradengleichungen aufstellen, Steigung und y-Achsenabschnitt interpretieren sowie Schnittpunkte zweier Geraden bestimmen.",
@@ -1879,7 +1967,11 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
         "Strahlentherapie",
         "Biomechanik",
       ],
-      content: `# Vektoren und räumliche Geometrie
+      content: `## Einleitung
+
+Die EKG-Herzachse ist ein Vektor in der Frontalebene. Kräfte auf Gelenke werden als Vektoren berechnet. Blutströmung hat Richtung und Betrag — also ist sie ein Vektor. Vektoren beschreiben Größen mit Richtung und Betrag, im Gegensatz zu Skalaren (nur Betrag). Für den MedAT sind Vektoraddition, Skalarprodukt, Winkelberechnung, Betrag und 3D-Koordinaten prüfungsrelevant.
+
+# Vektoren und räumliche Geometrie
 
 Vektoren sind gerichtete Größen, die sowohl einen Betrag (Länge) als auch eine Richtung besitzen. Sie sind unverzichtbar für die Beschreibung von Kräften, Bewegungen und geometrischen Objekten im Raum. Im MedAT kommen Vektoraufgaben vor allem im Kontext der Kräftezerlegung, der EKG-Herzachse und der räumlichen Geometrie vor. Die Grundoperationen — Addition, Skalar- und Kreuzprodukt — müssen sicher beherrscht werden.
 
@@ -1987,7 +2079,17 @@ Bizeps-Kraft F = 300 N, Hebelarm r = 4 cm = 0,04 m, Ansatzwinkel θ = 80°. |M| 
 Zwei Bestrahlungsfelder mit Dosisanteil-Vektoren d₁ = (1,5; 0,8; 0,4) Gy und d₂ = (0,4; 0,8; 1,5) Gy (Komponenten: Tumor, Normalgewebe links, Normalgewebe rechts). Gesamtdosis: d₁ + d₂ = **(1,9; 1,6; 1,9) Gy**. Tumordosis 1,9 Gy pro Fraktion, Normalgewebe max. 1,9 Gy — Ziel: Tumordosis >> Normalgewebe durch mehr Felder aus verschiedenen Richtungen.
 
 **Beispiel 4 — Abstand Punkt-Ebene (Tumorrand zum Resektionsrand):**
-Resektionsebene: 2x − y + 2z = 10. Tumorzentrum bei T(3, 2, 4). Abstand: |2·3 − 2 + 2·4 − 10| / √(4+1+4) = |6 − 2 + 8 − 10| / 3 = |2| / 3 = **0,67 cm**. Sicherheitsabstand von 1 cm nicht erreicht → Nachresektion erforderlich.`,
+Resektionsebene: 2x − y + 2z = 10. Tumorzentrum bei T(3, 2, 4). Abstand: |2·3 − 2 + 2·4 − 10| / √(4+1+4) = |6 − 2 + 8 − 10| / 3 = |2| / 3 = **0,67 cm**. Sicherheitsabstand von 1 cm nicht erreicht → Nachresektion erforderlich.
+
+## Zusammenfassung
+
+- **Vektor**: Größe mit Betrag und Richtung; |v| = √(x²+y²+z²); Einheitsvektor e = v/|v|
+- **Addition/Subtraktion**: komponentenweise; geometrisch: Parallelogramm- oder Dreiecksregel
+- **Skalarprodukt**: a·b = aₓbₓ+aᵧbᵧ+a_z·b_z = |a|·|b|·cos φ; a⊥b ↔ a·b = 0
+- **Winkelberechnung**: cos φ = (a·b)/(|a|·|b|); φ = arccos(...)
+- **EKG-Herzachse**: Vektor aus Ableitung I (x) und aVF (y); Normaltyp 0°–90°; Linkstyp < 0°; Rechtstyp > 90°
+- **Drehmoment**: M = r × F; |M| = r·F·sin θ; max. bei θ = 90°
+- **Abstand Punkt-Ebene**: |ax₀+by₀+cz₀+d|/√(a²+b²+c²) → Resektionsrand-Sicherheitsabstand`,
       lernziele: [
         "Betrag, Addition, Subtraktion und Skalierung von Vektoren berechnen.",
         "Das Skalarprodukt berechnen und zur Bestimmung von Winkeln und Orthogonalität nutzen.",
