@@ -27,7 +27,11 @@ export const physKap3: Kapitel = {
         "Energieerhaltung",
         "Schwingungsenergie",
       ],
-      content: `# Harmonische Schwingungen
+      content: `## Einleitung
+
+Pendel in einer Standuhr, Stimmgabel beim Stimmen eines Instruments, Herzschlag im EKG — all das sind periodische Schwingungen. Das Grundmodell dahinter ist die **harmonische Schwingung**: eine hin-und-hergehende Bewegung, bei der die Rückstellkraft proportional zur Auslenkung ist. Dieses Prinzip steckt auch im MRT (Protonenresonanz), in Ultraschallköpfen (Piezokristall) und im Innenohr. Für den MedAT sind Amplitude, Frequenz, Periodendauer, Kreisfrequenz, Resonanz und Dämpfung prüfungsrelevant.
+
+# Harmonische Schwingungen
 
 Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschreibt die zeitliche Auslenkung eines Körpers um eine Gleichgewichtslage. Die Rückstellkraft ist dabei stets proportional zur Auslenkung und dieser entgegengerichtet: **F = −k·x** (Hooke'sches Gesetz). Das mathematische Modell ist eine Sinus- oder Kosinusfunktion:
 
@@ -132,7 +136,16 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
 
 **Gelenkknorpel als Dämpfer:** Bei jedem Schritt wirken Stösse auf die Gelenke. Der viskoelastische Knorpel absorbiert diese Stösse (Dämpfung) und verhindert so Resonanzschäden am Knochen. Bei Arthrose ist diese Dämpfungsfunktion eingeschränkt.
 
-**Aperiodischer Grenzfall in der Medizin:** Die Federung eines Krankenwagens ist so abgestimmt, dass sie im aperiodischen Grenzfall schwingt — der schnellste Ausgleich ohne Nachschwingen, um den Patienten nicht zusätzlich zu belasten.`,
+**Aperiodischer Grenzfall in der Medizin:** Die Federung eines Krankenwagens ist so abgestimmt, dass sie im aperiodischen Grenzfall schwingt — der schnellste Ausgleich ohne Nachschwingen, um den Patienten nicht zusätzlich zu belasten.
+
+## Zusammenfassung
+
+- **Harmonische Schwingung**: x(t) = A·cos(ωt + φ₀); Rückstellkraft F = −k·x (Hooke)
+- **Kreisfrequenz**: ω = 2πf = 2π/T [rad/s] — verbindet alle Schwingungsparameter
+- **Fadenpendel**: T = 2π√(l/g) — unabhängig von Masse und Amplitude (Isochronie)
+- **Federpendel**: T = 2π√(m/k) — unabhängig von Amplitude; T steigt mit Masse, sinkt mit Federhärte
+- **Resonanz**: maximale Energieübertragung bei f_Anregung = f_Eigen; im MRT: Larmorfrequenz γ·B₀
+- **Dämpfung**: D < 1 → Schwingfall (Nachschwingen); D = 1 → aperiodischer Grenzfall (Krankenwagen); D > 1 → Kriechfall`,
 
       lernziele: [
         "Die Schwingungsgleichung x(t) = A·cos(ωt+φ) aufschreiben und Amplitude, Kreisfrequenz und Phase benennen.",
@@ -321,7 +334,11 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
         "Akustische Impedanz",
         "Medienwechsel",
       ],
-      content: `# Wellen — Grundgrößen und Typen
+      content: `## Einleitung
+
+Schall, Licht, Ultraschall, Röntgen, Radiowellen im MRT — all das sind Wellen. Sie transportieren Energie durch den Raum, ohne dabei Materie mitzubewegen. Das Grundprinzip: Ein Schwingender regt seinen Nachbarn an, dieser seinen Nachbarn — so pflanzt sich die Störung fort. Ob Schall im Körper oder elektromagnetische Strahlung in der Bildgebung: Die Wellengleichung c = f·λ und die Unterscheidung von Transversal- und Longitudinalwellen sind Schlüsselkonzepte. Für den MedAT sind Wellengleichung, Wellentypen, Schallgeschwindigkeit, elektromagnetisches Spektrum und akustische Impedanz prüfungsrelevant.
+
+# Wellen — Grundgrößen und Typen
 
 Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen transportieren **Energie, aber keine Materie** – die Teilchen des Mediums führen nur lokale Schwingungen aus, während die Störung weiterwandert. Dieser fundamentale Unterschied zu Teilchen ist entscheidend: Ein Korken auf einer Wasserwelle bewegt sich vertikal auf und ab, wandert aber nicht horizontal mit der Welle mit.
 
@@ -423,7 +440,16 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
 
 **Röntgen- vs. Ultraschall-Wellenlänge:** Röntgenstrahlen (λ ~ 0,01–10 nm) durchdringen Gewebe und werden je nach Dichte unterschiedlich absorbiert. Ultraschall (λ ~ 0,1–1 mm) wird an Impedanzgrenzen reflektiert. Beide Methoden nutzen Wellenphysik, aber fundamental unterschiedliche Mechanismen.
 
-**Temperaturabhängigkeit im Alltag:** In einem Konzertsaal erwärmt das Publikum die Luft. Die Schallgeschwindigkeit steigt dadurch leicht an – ein Grund, warum Instrumente vor und nach dem Konzert nachgestimmt werden müssen.`,
+**Temperaturabhängigkeit im Alltag:** In einem Konzertsaal erwärmt das Publikum die Luft. Die Schallgeschwindigkeit steigt dadurch leicht an – ein Grund, warum Instrumente vor und nach dem Konzert nachgestimmt werden müssen.
+
+## Zusammenfassung
+
+- **Wellengleichung**: c = f·λ; c hängt vom Medium ab (nicht von f oder λ)
+- **Transversal** (z.B. Licht): Schwingung ⊥ Ausbreitung → polarisierbar; **Longitudinal** (Schall): Schwingung ∥ Ausbreitung → nicht polarisierbar
+- **Schallgeschwindigkeit**: Luft ~340 m/s, Wasser ~1480 m/s, Gewebe ~1540 m/s, Knochen ~3500 m/s
+- **Elektromagnetisches Spektrum**: Radiowellen (MRT) → Mikrowellen → IR → sichtbares Licht → UV → Röntgen → Gamma
+- **Akustische Impedanz**: Z = ρ·c; R = ((Z₂−Z₁)/(Z₂+Z₁))²; große Impedanzdifferenz → starke Reflexion (Ultraschallgel nötig!)
+- **Klinisch**: Ultraschall 1–20 MHz; Impedanzanpassung mit Gel; A-Modus (Auge), B-Modus (2D-Bild)`,
 
       lernziele: [
         "Die Wellengleichung c = f·λ anwenden und die Rolle von Medium und Quelle erklären.",
@@ -620,7 +646,11 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
         "Doppler-Sonographie",
       ],
       diagram: "wave-types",
-      content: `# Wellenphänomene
+      content: `## Einleitung
+
+Warum klingt ein Krankenwagen höher, wenn er sich nähert? Warum leitet eine Glasfaser Licht um die Ecke? Warum entstehen Geisterbilder im Ultraschall? Hinter all dem stecken Wellenphänomene: Doppler-Effekt, Totalreflexion und Interferenz. Diese Phänomene sind keine Theorie-Kuriosität — sie bilden die physikalische Grundlage für Doppler-Sonographie, Endoskopie und Pulsoximetrie. Für den MedAT sind Interferenz, Doppler-Effekt (Anwendung in der Sonographie), Reflexion/Brechung, Totalreflexion und Polarisation prüfungsrelevant.
+
+# Wellenphänomene
 
 Wellen zeigen eine Reihe charakteristischer Phänomene, die sie von Teilchen unterscheiden: Interferenz, Beugung, Reflexion, Brechung und den Doppler-Effekt. Diese Phänomene sind in der modernen Medizintechnik allgegenwärtig und bilden die physikalische Grundlage für Ultraschall, MRT, Endoskopie und viele weitere diagnostische Verfahren.
 
@@ -732,7 +762,16 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
 
 **Laser in der Medizin:** LASER (Light Amplification by Stimulated Emission of Radiation) erzeugt kohärentes Licht durch stimulierte Emission in einem optischen Resonator (stehende Wellen!). Anwendungen: Augen-LASIK (Hornhaut-Remodelling), Laser-Koagulation (Retina), Laser-Lithotripsie (Nierensteine).
 
-**Farbdoppler-Sonographie:** In der klinischen Praxis wird der Doppler-Effekt farbkodiert dargestellt: Rot = Fluss auf den Schallkopf zu, Blau = Fluss vom Schallkopf weg. Turbulenzen (z. B. an Stenosen) erscheinen als Farbmosaik. Diese Methode ist essenziell in der Kardiologie und Gefässchirurgie.`,
+**Farbdoppler-Sonographie:** In der klinischen Praxis wird der Doppler-Effekt farbkodiert dargestellt: Rot = Fluss auf den Schallkopf zu, Blau = Fluss vom Schallkopf weg. Turbulenzen (z. B. an Stenosen) erscheinen als Farbmosaik. Diese Methode ist essenziell in der Kardiologie und Gefässchirurgie.
+
+## Zusammenfassung
+
+- **Interferenz**: konstruktiv (Δφ = 0, 2π, …) → Verstärkung; destruktiv (Δφ = π, 3π, …) → Auslöschung
+- **Doppler-Effekt**: f_beobachtet = f_Quelle · (c ± v_Beobachter)/(c ∓ v_Quelle); Annäherung → f↑; Entfernung → f↓
+- **Doppler-Sonographie**: Blutflussgeschwindigkeit aus Frequenzverschiebung; rot = Fluss zum Schallkopf, blau = weg
+- **Reflexion**: Einfallswinkel = Ausfallswinkel; **Brechung**: n₁·sin(α₁) = n₂·sin(α₂) (Snellius)
+- **Totalreflexion**: bei Übergang in optisch dünneres Medium; Grenzwinkel α_G = arcsin(n₂/n₁); Basis der Endoskopie
+- **Polarisation**: nur Transversalwellen polarisierbar; Pulsoximetrie nutzt wellenlängenspezifische Absorption`,
 
       lernziele: [
         "Konstruktive und destruktive Interferenz anhand des Gangunterschieds erklären und berechnen.",
@@ -925,7 +964,11 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
         "Lärmschwerhörigkeit",
       ],
       diagram: "doppler-effect",
-      content: `# Akustik und Hörphysiologie
+      content: `## Einleitung
+
+Warum ist die Dezibel-Skala logarithmisch? Weil das Ohr es so verlangt. Das menschliche Hörsystem ist ein biologisches Präzisionsinstrument: Es erkennt Druckschwankungen kleiner als ein Milliardstel des Atmosphärendrucks und spannt dennoch 6 Zehnerpotenzen im Dynamikbereich. Für Mediziner ist Akustik direkt relevant — Hörverlust, Lärmschwerhörigkeit, Audiometrie und die Unterscheidung von Schallleitungs- vs. Schallempfindungsschwerhörigkeit sind klinische Kernthemen. Für den MedAT sind Dezibel-Skala, Frequenzbereich des Hörens, Cochlea/Tonotopie und Lärmschutz prüfungsrelevant.
+
+# Akustik und Hörphysiologie
 
 Akustik ist die Lehre vom Schall und seinen physiologischen sowie psychophysischen Wirkungen. Die menschliche Hörbahn ist ein aussergewöhnliches Messsystem, das Druckschwankungen von weniger als einem Milliardstel des atmosphärischen Drucks wahrnehmen kann. Das Ohr deckt dabei einen Dynamikbereich von 10⁶ im Schalldruck ab – vom leisesten wahrnehmbaren Ton bis zur Schmerzgrenze.
 
@@ -1018,7 +1061,17 @@ Bei 85 dB sind 8 Stunden Exposition erlaubt. Pro +3 dB halbiert sich die Zeit: 8
 | +10 dB | Intensität × 10 | Doppelt so laut empfunden |
 | +20 dB | Schalldruck × 10 | 4× so laut empfunden |
 
-> **Merke:** 3-dB-Regel für Intensität, 6-dB-Regel für Schalldruck, 10-dB-Regel für subjektive Lautstärke. Diese drei Regeln sind MedAT-Klassiker!`,
+> **Merke:** 3-dB-Regel für Intensität, 6-dB-Regel für Schalldruck, 10-dB-Regel für subjektive Lautstärke. Diese drei Regeln sind MedAT-Klassiker!
+
+## Zusammenfassung
+
+- **Dezibel**: L = 20·log(p/p₀) = 10·log(I/I₀); p₀ = 2×10⁻⁵ Pa, I₀ = 10⁻¹² W/m²
+- **3-dB-Regel**: +3 dB → I×2; **6-dB-Regel**: +6 dB → p×2; **10-dB-Regel**: +10 dB → doppelt so laut empfunden
+- **Hörbereich**: 20 Hz – 20 000 Hz; Sprache 300–3400 Hz; maximale Empfindlichkeit ~1000–4000 Hz
+- **Cochlea/Tonotopie**: hohe Frequenzen am ovalen Fenster, tiefe Frequenzen am Apex; Haarzellen = Sensorepithel
+- **Schallleitungsschwerhörigkeit**: Mittelohr-Problem (Mittelohrentzündung, Tympanosklerose) → Rinne-Test negativ
+- **Schallempfindungsschwerhörigkeit**: Innenohr/Cochlea/Nerv (Lärm, Altersschwerhörigkeit) → C5-Senke bei 4 kHz
+- **Lärm**: 85 dB → max. 8h; pro +3 dB halbiert sich die zulässige Expositionszeit`,
 
       lernziele: [
         "Den Schalldruckpegel in Dezibel berechnen und die Skala mit klinisch relevanten Werten verknüpfen.",
