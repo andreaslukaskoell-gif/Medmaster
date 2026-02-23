@@ -29,7 +29,11 @@ export const chemKapReaktionen: Kapitel = {
         "OIL RIG",
         "Fällungsreaktion",
       ],
-      content: `## Grundbegriffe chemischer Reaktionen
+      content: `## Einleitung
+
+Chemie passiert überall im Körper: Hämoglobin bindet Sauerstoff, Enzyme spalten Nahrungsmoleküle, Muskeln verbrennen Glukose. All das sind **chemische Reaktionen** — Vorgänge, bei denen Atombindungen gebrochen und neu geknüpft werden. Im Unterschied zu physikalischen Vorgängen (z.B. Schmelzen, bei dem die Molekülstruktur erhalten bleibt) entstehen dabei neue Stoffe. Für den MedAT sind die verschiedenen Reaktionstypen, Katalyse und die Energiebilanz (exo-/endotherm, ΔG) prüfungsrelevant.
+
+## Grundbegriffe chemischer Reaktionen
 
 Eine **chemische Reaktion** ist ein Vorgang, bei dem Bindungen zwischen Atomen gebrochen und neu geknüpft werden — im Unterschied zu physikalischen Vorgängen (z. B. Schmelzen), bei denen die Molekülstruktur erhalten bleibt. Das Gesetz der Massenerhaltung (Lavoisier, 1789): Die Gesamtmasse der Edukte ist gleich der Gesamtmasse der Produkte. Atome werden dabei weder erzeugt noch vernichtet, nur umgeordnet.
 
@@ -125,7 +129,18 @@ Bei 46 g Ethanol (= 1 mol) werden 1367 kJ frei. Der physiologische Brennwert von
 
 **Satz von Hess:** Die Reaktionsenthalpie ist wegunabhängig — nur Anfangs- und Endzustand zählen. ΔH_gesamt = ΣΔH_Teilschritte. Dies erlaubt die Berechnung von ΔH aus Bildungsenthalpien.
 
-Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern von der freien Enthalpie **ΔG = ΔH − T·ΔS** (Gibbs-Energie). ΔG < 0 → spontan (exergon); ΔG > 0 → nicht spontan (endergon). Im Körper koppelt die Zelle exergone Reaktionen (ATP-Hydrolyse, ΔG° ≈ −30,5 kJ/mol) an endergone Biosynthesen, um thermodynamisch ungünstige Prozesse anzutreiben (energetische Kopplung).`,
+Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern von der freien Enthalpie **ΔG = ΔH − T·ΔS** (Gibbs-Energie). ΔG < 0 → spontan (exergon); ΔG > 0 → nicht spontan (endergon). Im Körper koppelt die Zelle exergone Reaktionen (ATP-Hydrolyse, ΔG° ≈ −30,5 kJ/mol) an endergone Biosynthesen, um thermodynamisch ungünstige Prozesse anzutreiben (energetische Kopplung).
+
+## Zusammenfassung
+
+- **Reaktionstypen**: Synthese (A+B→AB), Zersetzung (AB→A+B), Substitution (AB+C→AC+B), Metathese (Doppelsubstitution)
+- **Redoxreaktionen**: OIL RIG — Oxidation Is Loss (of e⁻), Reduction Is Gain; Oxidationsmittel wird reduziert, Reduktionsmittel wird oxidiert
+- **Säure-Base nach Brønsted**: Säure = H⁺-Donor; Base = H⁺-Akzeptor; nach Lewis: Elektronen-Akzeptor/-Donor
+- **Katalyse**: homogen (gleiche Phase), heterogen (verschiedene Phasen), enzymatisch — alle senken E_A, ändern nicht ΔH oder Gleichgewichtslage
+- **Exotherm** (ΔH < 0): Produkte energieärmer → Wärme frei (Verbrennung); **endotherm** (ΔH > 0): Energie wird aufgenommen (Photosynthese)
+- **ΔG = ΔH − T·ΔS**: ΔG < 0 → spontan (exergon); ΔG > 0 → nicht spontan (endergon)
+- **Energetische Kopplung**: ATP-Hydrolyse (ΔG° = −30,5 kJ/mol) treibt endergone Biosynthesen an
+- **Satz von Hess**: ΔH_gesamt = ΣΔH_Teilschritte (wegunabhängig)`,
 
       lernziele: [
         "Die vier klassischen Reaktionstypen (Synthese, Zersetzung, Substitution, Metathese) anhand von Beispielen unterscheiden.",
@@ -336,7 +351,11 @@ Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern vo
         "Geschwindigkeitskonstante",
         "Enzymkinetik",
       ],
-      content: `## Reaktionsgeschwindigkeit
+      content: `## Einleitung
+
+Warum funktioniert ein Medikament schnell und ein anderes langsam? Warum wirken Enzyme als "Beschleuniger" des Stoffwechsels? Die Antworten liegen in der **Reaktionskinetik** — der Wissenschaft davon, wie schnell Reaktionen ablaufen und was diese Geschwindigkeit beeinflusst. Temperatur, Konzentration, Enzyme und die Aktivierungsenergie spielen hier die entscheidenden Rollen. Für den MedAT sind besonders die Michaelis-Menten-Kinetik, Enzymhemmung und der Einfluss von Temperatur und pH auf Enzyme prüfungsrelevant.
+
+## Reaktionsgeschwindigkeit
 
 Die **Reaktionsgeschwindigkeit v** beschreibt, wie schnell sich Konzentrationen mit der Zeit ändern:
 
@@ -419,7 +438,17 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
 - Viele Pharmakokinetik-Modelle nutzen dies: Medikamentenspiegel, Dosierungsintervalle.
 - Faustregel: Nach 5 Halbwertszeiten ist der Wirkstoff praktisch eliminiert (< 3 % verbleibend).
 - Ethanol hingegen: 0. Ordnung wegen Enzymkapazitätssättigung → konstante Abnahme (~0,1–0,15 ‰/h).
-- Klinisch: Ibuprofen (t₁/₂ ≈ 2 h, häufige Gabe) vs. Amlodipin (t₁/₂ ≈ 35 h, 1× täglich). Dosierungsintervall ≈ 1–2 × t₁/₂.`,
+- Klinisch: Ibuprofen (t₁/₂ ≈ 2 h, häufige Gabe) vs. Amlodipin (t₁/₂ ≈ 35 h, 1× täglich). Dosierungsintervall ≈ 1–2 × t₁/₂.
+
+## Zusammenfassung
+
+- **v = k·[A]ᵐ·[B]ⁿ**: Geschwindigkeitsgesetz; k = Geschwindigkeitskonstante, m/n = Teilordnungen
+- **RGT-Regel**: 10 °C Temperaturerhöhung → v verdoppelt (Q₁₀ ≈ 2); erklärt Hypothermie-Neuroprotektion, Fieberanstieg
+- **Michaelis-Menten**: v = vₘₐₓ·[S] / (Kₘ + [S]); Kₘ = [S] bei v = vₘₐₓ/2; niedriger Kₘ = hohe Substrataffinität
+- **Enzymhemmung**: kompetitiv (Kₘ ↑, vₘₐₓ = const, überwindbar); nicht-kompetitiv (vₘₐₓ ↓, Kₘ = const); unkompetitiv (beide ↓)
+- Beispiele: Methotrexat hemmt DHFR kompetitiv; Schwermetalle nicht-kompetitiv; Lithium unkompetitiv (IMPase)
+- **Halbwertszeit t₁/₂**: 1. Ordnung: t₁/₂ = ln2/k (konzentrationsunabhängig!); 0. Ordnung (Ethanol): konstante Abnahme ~0,1–0,15 ‰/h
+- Nach **5 Halbwertszeiten** < 3 % verbleibend → Dosierungsintervall klinisch wichtig`,
 
       lernziele: [
         "Die Reaktionsgeschwindigkeit formal definieren und das Geschwindigkeitsgesetz v = k·[A]ᵐ·[B]ⁿ interpretieren.",
@@ -621,7 +650,11 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
         "Massenerhaltung",
         "Respirationsquotient",
       ],
-      content: `## Was ist Stöchiometrie?
+      content: `## Einleitung
+
+Wie viel Sauerstoff braucht der Körper, um 1 g Glukose zu verbrennen? Wie viel CO₂ entsteht dabei? Diese Fragen beantwortet die **Stöchiometrie** — sie ist die "Buchhaltung" der Chemie und beschreibt die exakten Mengenverhältnisse, in denen Stoffe miteinander reagieren. Sie bildet die Grundlage für Dosierungsberechnungen, Ausbeuten in der Synthese und klinische Berechnungen (z.B. Respirationsquotient). Für den MedAT sind stöchiometrische Mol-Berechnungen, Konzentrationsberechnungen und das Konzept des Grenzreaktants prüfungsrelevant.
+
+## Was ist Stöchiometrie?
 
 Die **Stöchiometrie** (von griech. stoicheion = Element, metron = Maß) beschreibt die quantitativen Verhältnisse der an einer chemischen Reaktion beteiligten Stoffe. Basis ist die ausgeglichene Reaktionsgleichung, die Atome, Ladungen und Massen erhält. Die Stöchiometrie ist das mathematische Fundament der Chemie und essenziell für Dosierungen in der Medizin.
 
@@ -719,7 +752,18 @@ Klinisch/industriell: Der Haber-Bosch-Prozess (N₂ + 3 H₂ ⇌ 2 NH₃) erreic
 | Proteine | ~0,8 | 4,1 kcal/g |
 | Ethanol | 0,67 | 7,1 kcal/g |
 
-Klinisch: RQ > 1,0 deutet auf Lipogenese hin (Umwandlung von Kohlenhydraten in Fett, vermehrte CO₂-Produktion). Bei Beatmungspatienten kann dies die CO₂-Elimination erschweren — relevant für die Ernährungstherapie bei ARDS.`,
+Klinisch: RQ > 1,0 deutet auf Lipogenese hin (Umwandlung von Kohlenhydraten in Fett, vermehrte CO₂-Produktion). Bei Beatmungspatienten kann dies die CO₂-Elimination erschweren — relevant für die Ernährungstherapie bei ARDS.
+
+## Zusammenfassung
+
+- **Stöchiometrie**: Koeffizienten = Mol-Verhältnisse (NICHT Massenverhältnisse!); Schema: m →(÷M)→ n →(×Koeff.)→ n →(×M)→ m
+- **Grundformeln**: n = m/M; m = n×M; c = n/V; V(Gas) = n × 22,4 L/mol (NTP)
+- **Reaktionsgleichung ausgleichen**: Erst Metalle/Nichtmetalle, zuletzt H und O; Atome und Ladungen auf beiden Seiten gleich
+- **Mangelreagenz** (limiting reagent): Quotient n/Koeffizient für alle Edukte berechnen → kleinster Quotient = Mangelreagenz
+- **Prozentuale Ausbeute** = (tatsächliche Ausbeute / theoretische Ausbeute) × 100 %
+- **Haber-Bosch-Prozess**: N₂ + 3 H₂ ⇌ 2 NH₃; Industriell wichtigste Reaktion; zeigt alle stöchiometrischen Konzepte
+- **Respirationsquotient** RQ = CO₂(prod.) / O₂(verbraucht): Glukose = 1,0; Fette ≈ 0,7; Proteine ≈ 0,8; RQ > 1 → Lipogenese
+- **Klinisch**: Phy. NaCl 0,9 % = 154 mmol/L; Infusionsberechnungen immer in Mol/L`,
 
       lernziele: [
         "Reaktionsgleichungen korrekt ausgleichen und stöchiometrische Koeffizienten als Mol-Verhältnisse interpretieren.",
@@ -905,7 +949,11 @@ Klinisch: RQ > 1,0 deutet auf Lipogenese hin (Umwandlung von Kohlenhydraten in F
         "Dynamisches Gleichgewicht",
         "Kc",
       ],
-      content: `## Das chemische Gleichgewicht
+      content: `## Einleitung
+
+Im Körper sind viele Reaktionen keine Einbahnstraße — sie laufen hin und zurück. Das CO₂ aus dem Stoffwechsel reagiert im Blut mit Wasser, der Puffer reguliert den pH, Hämoglobin bindet und gibt Sauerstoff ab: All das sind **dynamische Gleichgewichte**. Sie sind nie wirklich „fertig", sondern befinden sich in einem ständigen Fließgleichgewicht. Wenn sich etwas ändert (Druck, Temperatur, Konzentration), verschiebt sich das Gleichgewicht nach dem **Prinzip von Le Chatelier**. Für den MedAT sind das Massenwirkungsgesetz (Kc, Kp), Le Chatelier und die klinischen Anwendungen (Puffer, Bohr-Effekt, Haber-Bosch) prüfungsrelevant.
+
+## Das chemische Gleichgewicht
 
 Bei reversiblen Reaktionen (⇌) läuft die Reaktion in beide Richtungen. Der **Gleichgewichtszustand** ist erreicht, wenn die Geschwindigkeit der Hinreaktion gleich der Rückreaktion ist:
 
@@ -1009,7 +1057,18 @@ Die Gleichgewichtskonstante ist direkt mit der Standard-Gibbs-Energie verknüpft
 
 **Rechenbeispiel — ΔG° aus K berechnen:**
 Für die Ammoniaksynthese bei 500 °C (773 K): K = 600.
-ΔG° = −8,314 J/(mol·K) × 773 K × ln(600) = −8,314 × 773 × 6,40 = −41.100 J/mol ≈ −41,1 kJ/mol → stark exergon.`,
+ΔG° = −8,314 J/(mol·K) × 773 K × ln(600) = −8,314 × 773 × 6,40 = −41.100 J/mol ≈ −41,1 kJ/mol → stark exergon.
+
+## Zusammenfassung
+
+- **Dynamisches Gleichgewicht**: v_hin = v_rück; Konzentrationen konstant, aber Reaktion läuft weiter
+- **Massenwirkungsgesetz**: Kc = [Produkte]^Koeff / [Edukte]^Koeff; Feststoffe und H₂O(l) ausschließen
+- **Kc ≫ 1**: Produkte bevorzugt; **Kc ≪ 1**: Edukte bevorzugt; **Kc = 1**: ausgeglichen
+- **Le Chatelier**: System weicht Störungen aus — Konzentration ↑ → Gleichgewicht weg; Temp. ↑ → endotherme Seite bevorzugt; Druck ↑ → weniger Gasmole bevorzugt
+- **Haber-Bosch**: N₂ + 3H₂ ⇌ 2NH₃ — hoher Druck (200 atm), Fe-Katalysator, Kompromisstemperatur (~450 °C)
+- **Blutpuffer**: CO₂ + H₂O ⇌ H⁺ + HCO₃⁻; Henderson-Hasselbalch: pH = 6,1 + log([HCO₃⁻]/[CO₂]); Normal pH 7,4 → Verhältnis ~20:1
+- **Bohr-Effekt**: pH ↓ / pCO₂ ↑ → Hb-O₂-Affinität ↓ → mehr O₂-Abgabe ans Gewebe
+- **ΔG° = −RT·ln(K)**: ΔG° < 0 ↔ K > 1; Gleichgewicht und freie Enthalpie sind direkt verknüpft`,
 
       lernziele: [
         "Den Gleichgewichtszustand als dynamisches Gleichgewicht beschreiben und von statischen Zuständen abgrenzen.",
@@ -1220,7 +1279,11 @@ Für die Ammoniaksynthese bei 500 °C (773 K): K = 600.
         "Geschwindigkeitskonstante",
         "Therapeutische Hypothermie",
       ],
-      content: `## Reaktionsgeschwindigkeit
+      content: `## Einleitung
+
+Warum läuft ein Zündholz schneller ab als eine Kerze? Warum verbrennt Zucker langsam in Luft, aber explosionsartig in Sauerstoff? Die Antwort liegt in der **Aktivierungsenergie** — der Energiehürde, die eine Reaktion überwinden muss. Dieses Kapitel vertieft die Kinetik: Wie hängt die Reaktionsgeschwindigkeit von Temperatur und Aktivierungsenergie ab (Arrhenius-Gleichung)? Welche Rolle spielen Katalysatoren und der Übergangszustand? Im Unterschied zum vorherigen Kapitel (das Enzymkinetik und Michaelis-Menten behandelt) liegt der Fokus hier auf physikalisch-chemischen Grundlagen der Kinetik. Für den MedAT sind Arrhenius-Gleichung, Energieprofile und die klinische Bedeutung von Hypothermie und Katalyse prüfungsrelevant.
+
+## Reaktionsgeschwindigkeit
 
 Die Reaktionsgeschwindigkeit v beschreibt, wie schnell sich die Konzentration einer Substanz mit der Zeit ändert. Formal gilt:
 
@@ -1291,7 +1354,17 @@ Die **Übergangszustandstheorie (Eyring)** verfeinert dieses Bild: Edukte bilden
 | Hypothermie | 32–36 °C | v ↓ ~30–50 % | Neuroprotektion nach Herzstillstand |
 | Normal | 37 °C | v = Normalwert | Physiologischer Stoffwechsel |
 | Fieber | 40 °C | v ↑ ~30 % | Erhöhter O₂-Bedarf, Tachykardie |
-| Denaturierung | > 42 °C | v bricht ein | Enzymverlust, lebensbedrohlich |`,
+| Denaturierung | > 42 °C | v bricht ein | Enzymverlust, lebensbedrohlich |
+
+## Zusammenfassung
+
+- **v = Δc/Δt** [mol·L⁻¹·s⁻¹]; Reaktionsgeschwindigkeit nimmt mit der Zeit ab (Edukte verbraucht)
+- **Arrhenius-Gleichung**: k = A·e^(−E_A/RT) — höhere Temperatur → mehr Moleküle überschreiten E_A → k steigt exponentiell
+- **RGT-Regel**: +10 °C → ca. 2–3× schneller (Q₁₀ ≈ 2–3); relevant für Fieber, Hypothermie, Kühlketten
+- **Aktivierungsenergie E_A**: Energiebarriere zum Übergangszustand; ≠ ΔH; Katalysatoren senken E_A ohne ΔH zu ändern
+- **Energieprofil**: exotherm: Produkte tiefer als Edukte; endotherm: Produkte höher; E_A,hin ≠ E_A,rück
+- **Stoßtheorie**: Nur Stöße mit ausreichender Energie UND richtiger Orientierung → Reaktion
+- **Therapeutische Hypothermie**: 32–36 °C → v ↓ ~30–50 % → Neuroprotektion; Fieber > 42 °C → Enzymdenaturierung`,
 
       lernziele: [
         "Die Reaktionsgeschwindigkeit formal definieren und Einflussfaktoren (Konzentration, Temperatur, Oberfläche) erläutern.",
@@ -1517,7 +1590,11 @@ Therapeutische Hypothermie (Kühlung auf 32–36 °C nach Herzstillstand oder be
         "Michaelis-Konstante",
         "Guldberg-Waage",
       ],
-      content: `## Das dynamische Gleichgewicht
+      content: `## Einleitung
+
+Wenn du eine gesättigte Salzlösung betrachtest, sieht sie ruhig aus — und doch lösen sich ständig neue Salzkristalle auf, während andere auskristallisieren. Das ist das Wesen des **dynamischen Gleichgewichts**: Es sieht aus wie Stillstand, ist aber auf molekularer Ebene voller Aktivität. Dieses Kapitel vertieft das Konzept des chemischen Gleichgewichts mit Fokus auf das Massenwirkungsgesetz (Kc und Kp) und die verschiedenen Arten von Gleichgewichten (heterogen, homogen, Löslichkeitsprodukt). Im Unterschied zu ch-7-04 (das Gleichgewicht mit Le Chatelier und Puffer kombiniert) liegt der Schwerpunkt hier auf dem quantitativen Umgang mit Kc und Kp. Für den MedAT sind das Massenwirkungsgesetz, Löslichkeitsprodukt und die Unterscheidung Kc/Kp prüfungsrelevant.
+
+## Das dynamische Gleichgewicht
 
 Viele chemische Reaktionen sind reversibel: Die Produkte können wieder zu Edukten zurückreagieren. Man schreibt dies mit einem Doppelpfeil:
 
@@ -1593,7 +1670,18 @@ Diese Beziehung verbindet die Kinetik (über K) mit der Thermodynamik (über ΔG
 
 ## Hämoglobin und das MWG
 
-Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ ⇌ HbO₂. In der Lunge (hoher pO₂) liegt Q < K, das Gleichgewicht verschiebt sich zu HbO₂. Im Gewebe (niedriger pO₂) gilt Q > K, die Reaktion läuft rückwärts, O₂ wird abgegeben. Die Michaelis-Konstante K_M bei Enzymreaktionen ist ebenfalls eine Gleichgewichtskonstante und gibt die Substrataffinität von Enzymen an.`,
+Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ ⇌ HbO₂. In der Lunge (hoher pO₂) liegt Q < K, das Gleichgewicht verschiebt sich zu HbO₂. Im Gewebe (niedriger pO₂) gilt Q > K, die Reaktion läuft rückwärts, O₂ wird abgegeben. Die Michaelis-Konstante K_M bei Enzymreaktionen ist ebenfalls eine Gleichgewichtskonstante und gibt die Substrataffinität von Enzymen an.
+
+## Zusammenfassung
+
+- **Dynamisches Gleichgewicht**: v_hin = v_rück; Konzentrationen konstant, aber beide Reaktionen laufen weiter
+- **MWG**: Kc = [C]^c·[D]^d / ([A]^a·[B]^b); Feststoffe und H₂O(l) auslassen; Exponenten = Koeffizienten
+- **Kc ≫ 1**: Produktseite bevorzugt; **Kc ≪ 1**: Eduktseite; **Kc = 1**: ausgeglichen
+- **Kp = Kc·(RT)^Δn**: gilt für Gasreaktionen; bei Δn = 0 gilt Kp = Kc
+- **Reaktionsquotient Q**: wie Kc, aber aktuelle Konzentrationen; Q < K → vorwärts; Q > K → rückwärts
+- **ΔG° = −RT·ln(K)**: ΔG° < 0 ↔ K > 1 ↔ Reaktion thermodynamisch begünstigt
+- **K und Temperatur**: exotherm: K sinkt mit T; endotherm: K steigt mit T
+- **Hämoglobin**: Hb + O₂ ⇌ HbO₂; pO₂ steuert Gleichgewichtslage (Le Chatelier im Blut)`,
 
       lernziele: [
         "Das dynamische Gleichgewicht definieren und von einem statischen Zustand abgrenzen.",
@@ -1815,7 +1903,11 @@ Wäre die Reaktion endotherm (ΔH > 0), würde K_c mit steigender Temperatur zun
     {
       id: "ch-8-03",
       title: "Le Chatelier-Prinzip — Störung des Gleichgewichts",
-      content: `## Das Prinzip von Le Chatelier
+      content: `## Einleitung
+
+Stell dir vor, du drückst auf ein Gleichgewicht — es weicht aus. Genau das beschreibt das **Prinzip von Le Chatelier** (1884): Jedes Gleichgewicht reagiert auf Störungen (Konzentration, Druck, Temperatur), indem es sich in die Richtung verschiebt, die der Störung entgegenwirkt. Dieses Prinzip erklärt, warum das Blut bei CO₂-Anstieg saurer wird, warum der Haber-Bosch-Prozess unter hohem Druck optimiert wird, und warum Fieber den Stoffwechsel beschleunigt. Während ch-7-04 Le Chatelier mit dem Massenwirkungsgesetz und Puffer kombiniert, liegt der Fokus hier auf der systematischen Anwendung auf alle Störungstypen. Für den MedAT sind alle drei Störungsarten (Konzentration, Druck, Temperatur) und deren Vorhersage prüfungsrelevant.
+
+## Das Prinzip von Le Chatelier
 
 Das **Prinzip von Le Chatelier** (auch: Prinzip des kleinsten Zwangs, 1884) lautet:
 
@@ -1877,7 +1969,18 @@ CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
 
 **Sauerstofftransport:** Hb + O₂ ⇌ HbO₂. In der Lunge (hoher pO₂): Hinreaktion dominiert. Im Gewebe (niedriger pO₂): Rückreaktion dominiert — O₂ wird abgegeben. Le Chatelier reguliert die O₂-Abgabe automatisch dem Bedarf entsprechend.
 
-**Calciumstoffwechsel:** Ca²⁺ + HPO₄²⁻ ⇌ CaHPO₄(s). Beim Knochenbau wird CaHPO₄ ausgefällt — Produktentzug verschiebt das Gleichgewicht in Richtung Mineralisation. Parathormon und Calcitonin steuern die Gleichgewichtslage über [Ca²⁺] im Blut.`,
+**Calciumstoffwechsel:** Ca²⁺ + HPO₄²⁻ ⇌ CaHPO₄(s). Beim Knochenbau wird CaHPO₄ ausgefällt — Produktentzug verschiebt das Gleichgewicht in Richtung Mineralisation. Parathormon und Calcitonin steuern die Gleichgewichtslage über [Ca²⁺] im Blut.
+
+## Zusammenfassung
+
+- **Le Chatelier**: Störung → System verschiebt sich entgegen der Störung; gilt für Konzentration, Druck, Temperatur
+- **Konzentrationsänderung**: Edukt ↑ → Produkte; Produkt ↑ → Edukte; ändert Q, nicht Kc
+- **Druckänderung**: Druck ↑ → Seite mit weniger Gasmolen (kleinerem Δn); bei Δn = 0 kein Einfluss
+- **Temperaturänderung**: ändert Kc selbst! Exotherm: T ↑ → Kc ↓; Endotherm: T ↑ → Kc ↑
+- **Haber-Bosch** (N₂ + 3H₂ ⇌ 2NH₃, exotherm, Δn = −2): hoher Druck + moderates T (400–500 °C) + Fe-Katalysator + NH₃-Entnahme
+- **Blutpuffer**: CO₂ + H₂O ⇌ H⁺ + HCO₃⁻; Acidose → mehr CO₂ abatmen; Alkalose → HCO₃⁻-Reabsorption
+- **Sauerstofftransport**: Hb + O₂ ⇌ HbO₂; pO₂ steuert Gleichgewichtslage automatisch
+- **Katalysatoren**: verschieben das Gleichgewicht NICHT — nur die Einstellungsgeschwindigkeit`,
 
       lernziele: [
         "Das Prinzip von Le Chatelier präzise formulieren und auf Konzentrationsänderungen anwenden.",
@@ -2080,7 +2183,11 @@ Eisenkatalysator: Der Katalysator beeinflusst weder die Gleichgewichtslage noch 
     {
       id: "ch-8-04",
       title: "Puffersysteme und Säure-Base-Gleichgewichte",
-      content: `## Säure-Base-Gleichgewichte: Grundlagen
+      content: `## Einleitung
+
+Das Blut hat einen pH von 7,4 — weicht er auch nur um 0,2 Einheiten ab, drohen Krämpfe oder Atemlähmung. Wie hält der Körper den pH so präzise stabil? Die Antwort sind **Puffersysteme** — Gemische aus schwacher Säure und ihrer konjugierten Base, die sowohl Säure- als auch Basenzugaben abfangen. Dieses Kapitel behandelt die Grundlagen der Säure-Base-Gleichgewichte (Ka, pH, Henderson-Hasselbalch) und die klinisch wichtigsten Puffersysteme des Körpers. Für den MedAT sind pH-Berechnungen, Henderson-Hasselbalch, Pufferkapazität und das Carbonat-Puffersystem prüfungsrelevant.
+
+## Säure-Base-Gleichgewichte: Grundlagen
 
 In wässriger Lösung dissoziieren Säuren (HA) nach:
 
@@ -2185,7 +2292,18 @@ Ohne CA würde der CO₂-Transport im Blut und die pH-Regulierung zusammenbreche
 
 Die BGA bestimmt: pH, pCO₂, pO₂, HCO₃⁻, Base Excess (BE), O₂-Sättigung. Aus diesen Werten lassen sich alle Säure-Base-Störungen klassifizieren. Normalwerte arteriell: pH 7,35–7,45; pCO₂ 35–45 mmHg; HCO₃⁻ 22–26 mmol/L; BE ±2 mmol/L.
 
-Der **Base Excess (BE)** gibt an, wie viel starke Säure oder Base nötig wäre, um pH 7,4 bei 37 °C und pCO₂ 40 mmHg wiederherzustellen. BE < −2 = metabolische Azidose; BE > +2 = metabolische Alkalose.`,
+Der **Base Excess (BE)** gibt an, wie viel starke Säure oder Base nötig wäre, um pH 7,4 bei 37 °C und pCO₂ 40 mmHg wiederherzustellen. BE < −2 = metabolische Azidose; BE > +2 = metabolische Alkalose.
+
+## Zusammenfassung
+
+- **pH = −log[H₃O⁺]**; Kw = [H₃O⁺]·[OH⁻] = 10⁻¹⁴; pH + pOH = 14 (bei 25 °C)
+- **Ka** = Säurekonstante; pKa = −log(Ka); kleinerer pKa = stärkere Säure
+- **Henderson-Hasselbalch**: pH = pKa + log([A⁻]/[HA]); Pufferoptimum bei pH = pKa (Verhältnis 1:1)
+- **Carbonat-Puffer**: CO₂ + H₂O ⇌ H⁺ + HCO₃⁻; Normal: pH 7,4, pCO₂ 40 mmHg, [HCO₃⁻] 24 mmol/L; Verhältnis 20:1
+- **Lunge**: reguliert pCO₂ (schnell, Minuten); **Niere**: reguliert HCO₃⁻ (langsam, Stunden–Tage)
+- **Störungen**: Respiratorische Azidose: ↑pCO₂ → pH↓; Respiratorische Alkalose: ↓pCO₂ → pH↑; Metabolisch: über HCO₃⁻
+- **Bohr-Effekt**: HbO₂ + H⁺ ⇌ HHb⁺ + O₂; niedriger pH → mehr O₂-Abgabe ins Gewebe
+- **Carboanhydrase**: CO₂ + H₂O ⇌ H₂CO₃; Zn²⁺-Enzym; Hemmung durch Acetazolamid (Glaukom, Diurese)`,
 
       lernziele: [
         "Die Henderson-Hasselbalch-Gleichung formulieren und zur pH-Berechnung von Pufferlösungen anwenden.",
