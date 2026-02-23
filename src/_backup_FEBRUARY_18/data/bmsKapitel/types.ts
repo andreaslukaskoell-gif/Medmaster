@@ -34,7 +34,7 @@ export interface Unterkapitel {
 export interface Kapitel {
   id: string;
   title: string;
-  subject: 'biologie' | 'chemie' | 'physik' | 'mathematik';
+  subject: "biologie" | "chemie" | "physik" | "mathematik";
   icon: string;
   unterkapitel: Unterkapitel[];
   estimatedTime: string;

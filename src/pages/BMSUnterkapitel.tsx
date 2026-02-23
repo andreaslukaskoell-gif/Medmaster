@@ -11,7 +11,6 @@ import {
   CheckCircle2,
   Network,
   HelpCircle,
-  Layers,
   Zap,
   Clock,
 } from "lucide-react";
@@ -24,7 +23,6 @@ import { pathForSubject, pathForChapter } from "@/lib/bmsRoutes";
 import { processTextForSmartLinks } from "@/data/glossary";
 import { SmartLink } from "@/components/content/SmartLink";
 import { useStore } from "../store/useStore";
-import { MerksatzBox } from "../components/chapter/MerksatzBox";
 import { SelbstTest } from "../components/chapter/SelbstTest";
 import { InteractiveQuiz } from "../components/chapter/InteractiveQuiz";
 import { ContentVisualizer } from "../components/chapter/ContentVisualizer";
@@ -37,53 +35,6 @@ import { updateStichwortProgress } from "../lib/kontrollfragenProgress";
 import { getReviewDaysFromStreak } from "../lib/utils";
 import { useAdaptiveStore } from "../store/adaptiveLearning";
 import type { Kapitel } from "../data/bmsKapitel/types";
-
-// BUG-2 fix: standalone component so useState is called at top level
-function MerksätzeSection({ merksätze }: { merksätze: string[] }) {
-  const SHOW_DIRECTLY = 3;
-  const hasMore = merksätze.length > SHOW_DIRECTLY;
-  const [merkeExpanded, setMerkeExpanded] = useState(false);
-  const visible = hasMore && !merkeExpanded ? merksätze.slice(0, SHOW_DIRECTLY) : merksätze;
-
-  return (
-    <div className="space-y-3">
-      <div className="flex items-center justify-between pb-1 border-b border-gray-200 dark:border-gray-700">
-        <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2">
-          💡 Merksätze
-          <span className="text-xs font-normal text-gray-400 dark:text-gray-500">
-            ({merksätze.length})
-          </span>
-        </h3>
-      </div>
-      {visible.map((merksatz, i) => (
-        <div
-          key={i}
-          className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-400 p-4 rounded-r-lg"
-        >
-          <p
-            className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed"
-            dangerouslySetInnerHTML={{
-              __html: merksatz.replace(
-                /\*\*(.*?)\*\*/g,
-                '<strong class="font-semibold">$1</strong>'
-              ),
-            }}
-          />
-        </div>
-      ))}
-      {hasMore && (
-        <button
-          onClick={() => setMerkeExpanded(!merkeExpanded)}
-          className="w-full text-sm text-amber-700 dark:text-amber-400 hover:text-amber-900 dark:hover:text-amber-200 py-2 border border-amber-200 dark:border-amber-800 rounded-lg transition-colors"
-        >
-          {merkeExpanded
-            ? `▲ Weniger anzeigen`
-            : `▼ ${merksätze.length - SHOW_DIRECTLY} weitere Merksätze anzeigen`}
-        </button>
-      )}
-    </div>
-  );
-}
 
 interface Props {
   kapitel: Kapitel;
@@ -170,7 +121,6 @@ export default function BMSUnterkapitel({
   const [showNotes, setShowNotes] = useState(false);
   const [bridgeOpen, setBridgeOpen] = useState(false);
   const [hinterfragMode, setHinterfragMode] = useState(false);
-  const [progressiveDisclosure, setProgressiveDisclosure] = useState(true);
   const [quickReviewMode, setQuickReviewMode] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const allCompleteFired = useRef(false);
@@ -526,13 +476,6 @@ export default function BMSUnterkapitel({
             <HelpCircle className="w-4 h-4" />
           </button>
           <button
-            onClick={() => setProgressiveDisclosure(!progressiveDisclosure)}
-            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${progressiveDisclosure ? "bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300" : "text-muted hover:bg-gray-100 dark:hover:bg-white/5"}`}
-            title="Progressive Disclosure: Abschnitte nacheinander einblenden (Scroll oder Verstanden)"
-          >
-            <Layers className="w-4 h-4" />
-          </button>
-          <button
             onClick={() => setQuickReviewMode(!quickReviewMode)}
             className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${quickReviewMode ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300" : "text-muted hover:bg-gray-100 dark:hover:bg-white/5"}`}
             title="Quick Review: Nur Merksätze anzeigen (R)"
@@ -649,16 +592,10 @@ export default function BMSUnterkapitel({
                   chapterId={kapitel?.id}
                   enhancedFormatting={kapitel?.enhancedFormatting}
                   hinterfragMode={hinterfragMode}
-                  progressiveDisclosure={progressiveDisclosure}
                 />
               </ContentErrorBoundary>
             </CardContent>
           </Card>
-        )}
-
-        {/* Merksätze - collapsible when more than 3 */}
-        {uk.merksätze && Array.isArray(uk.merksätze) && uk.merksätze.length > 0 && (
-          <MerksätzeSection merksätze={uk.merksätze} />
         )}
 
         {/* Altfrage */}
@@ -666,7 +603,7 @@ export default function BMSUnterkapitel({
           <Card className="border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-900/10">
             <CardContent className="p-5">
               <h3 className="text-sm font-semibold text-red-800 dark:text-red-300 flex items-center gap-2 mb-2">
-                🎯 Altfragen-Klassiker
+                Altfragen-Klassiker
               </h3>
               <p className="text-sm font-medium text-red-900 dark:text-red-200 mb-2">
                 {uk.altfrage.question}
@@ -683,44 +620,7 @@ export default function BMSUnterkapitel({
           </Card>
         )}
 
-        {/* Klinischer Bezug */}
-        {uk.klinischerBezug && <MerksatzBox text={uk.klinischerBezug} type="klinisch" />}
-
-        {/* Optional additional notes – render only if present */}
-        {uk.additionalNotes && uk.additionalNotes.trim() && (
-          <Card className="border-slate-200 dark:border-slate-700">
-            <CardContent className="p-5">
-              <h3 className="text-sm font-semibold text-slate-800 dark:text-slate-200 mb-3">
-                Zusatznotizen
-              </h3>
-              <div className="prose prose-sm prose-slate dark:prose-invert max-w-none text-gray-700 dark:text-gray-300">
-                <ReactMarkdown
-                  remarkPlugins={[remarkGfm]}
-                  components={{
-                    a: ({ href, title, children }) => {
-                      if (href?.startsWith("/bms/") && href.length > 8 && title) {
-                        return (
-                          <SmartLink to={href} description={title}>
-                            {children}
-                          </SmartLink>
-                        );
-                      }
-                      return (
-                        <a href={href} title={title ?? undefined}>
-                          {children}
-                        </a>
-                      );
-                    },
-                  }}
-                >
-                  {processTextForSmartLinks(uk.additionalNotes)}
-                </ReactMarkdown>
-              </div>
-            </CardContent>
-          </Card>
-        )}
-
-        {/* Self-Test - Now includes questions extracted from content */}
+        {/* Kontrollfragen / Self-Test */}
         {selfTestBlock}
 
         {/* Gelesen-Markierung: triggert Fortschrittsbalken in der Sidebar */}

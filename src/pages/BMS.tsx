@@ -341,25 +341,29 @@ export default function BMS() {
     }
   }, [supabaseChapters]);
 
+  // Only count BMS learning-path chapters (with sequence) — filters out Supabase ghost entries
+  const bmsKapitel = useMemo(
+    () => safeAlleKapitel.filter((k) => k.sequence !== undefined),
+    [safeAlleKapitel]
+  );
+
   // Compute totals for main view - MUST be called unconditionally before any early returns
   const totalUK = useMemo(() => {
-    if (!safeAlleKapitel || !Array.isArray(safeAlleKapitel)) return 0;
-    return safeAlleKapitel.reduce((sum, k) => {
-      if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
+    return bmsKapitel.reduce((sum, k) => {
+      if (!k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
       return sum + k.unterkapitel.length;
     }, 0);
-  }, [safeAlleKapitel]);
+  }, [bmsKapitel]);
 
   const completedUK = useMemo(() => {
-    if (!safeAlleKapitel || !Array.isArray(safeAlleKapitel)) return 0;
-    return safeAlleKapitel.reduce((sum, k) => {
-      if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
+    return bmsKapitel.reduce((sum, k) => {
+      if (!k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
       return (
         sum +
         (k.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length || 0)
       );
     }, 0);
-  }, [safeAlleKapitel, completedChapters]);
+  }, [bmsKapitel, completedChapters]);
 
   // Update activeKapitel from post-processed chapters (after BMS override)
   // MUST come AFTER chaptersForSelectedSubject useMemo to avoid Temporal Dead Zone
@@ -733,7 +737,7 @@ export default function BMS() {
         <div>
           <h1 className="text-2xl font-semibold text-[var(--foreground)]">BMS</h1>
           <p className="text-sm text-[var(--muted)] mt-1">
-            {safeAlleKapitel.length} Kapitel · {totalUK} Unterkapitel
+            {bmsKapitel.length} Kapitel · {totalUK} Unterkapitel
             {totalUK > 0 && (
               <span className="text-[var(--color-primary-500)] font-medium ml-2">
                 {completedUK}/{totalUK} abgeschlossen
@@ -790,13 +794,16 @@ export default function BMS() {
             sKapitel = [];
           }
 
-          const sTotal = sKapitel.reduce((sum, k) => {
-            if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
+          // Only count sequenced (BMS learning-path) chapters
+          const sBmsKapitel = sKapitel.filter((k) => k.sequence !== undefined);
+
+          const sTotal = sBmsKapitel.reduce((sum, k) => {
+            if (!k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
             return sum + k.unterkapitel.length;
           }, 0);
 
-          const sDone = sKapitel.reduce((sum, k) => {
-            if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
+          const sDone = sBmsKapitel.reduce((sum, k) => {
+            if (!k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
             return (
               sum +
               (k.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length ||
@@ -848,7 +855,7 @@ export default function BMS() {
                     </p>
 
                     <div className="flex items-center gap-3 text-xs text-[var(--muted)] mb-2.5">
-                      <span>{sKapitel.length} Kapitel</span>
+                      <span>{sBmsKapitel.length} Kapitel</span>
                       {sTotal > 0 && (
                         <>
                           <span>·</span>
@@ -879,7 +886,7 @@ export default function BMS() {
         })}
       </div>
 
-      {safeAlleKapitel.length === 0 && (
+      {bmsKapitel.length === 0 && (
         <BlurFade delay={0.2} inView>
           <Card className="border-[var(--border)] bg-[var(--card)]">
             <CardContent className="p-6 text-center">

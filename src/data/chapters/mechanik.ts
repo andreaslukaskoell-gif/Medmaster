@@ -60,7 +60,7 @@ export const mechanikChapter: Chapter = {
       merke:
         "Freier Fall: Nach <strong>1 s</strong>: v = 10 m/s, s = 5 m. Nach <strong>2 s</strong>: v = 20 m/s, s = 20 m. Nach <strong>3 s</strong>: v = 30 m/s, s = 45 m. Strecke wächst <strong>quadratisch</strong>!",
       altfrage:
-        "\"Ein Stein fällt 3 Sekunden. Welche Strecke legt er zurück?\" → s = ½gt² = ½ × 10 × 9 = <strong>45 m</strong>. Geschwindigkeit: v = gt = 30 m/s.",
+        '"Ein Stein fällt 3 Sekunden. Welche Strecke legt er zurück?" → s = ½gt² = ½ × 10 × 9 = <strong>45 m</strong>. Geschwindigkeit: v = gt = 30 m/s.',
     },
 
     // ──────────────────────────────────────────────
@@ -80,7 +80,7 @@ export const mechanikChapter: Chapter = {
         "Übt ein Körper A eine Kraft auf Körper B aus (actio), so übt Körper B eine gleich große, aber entgegengesetzt gerichtete Kraft auf Körper A aus (reactio). Beide Kräfte greifen an verschiedenen Körpern an!\n\n" +
         "<strong>Wichtige Kräfte:</strong>\n\n" +
         "• <strong>Gewichtskraft:</strong> F_G = m · g (mit g ≈ 9,81 m/s² auf der Erdoberfläche). Wichtig: Gewicht ≠ Masse! Die Masse ist überall gleich, die Gewichtskraft hängt von g ab (auf dem Mond: g ≈ 1,6 m/s²).\n\n" +
-        "• <strong>Reibungskraft:</strong> F_R = μ · F_N, wobei μ der Reibungskoeffizient und F_N die Normalkraft ist. Haftreibung (μ_H) > Gleitreibung (μ_G) > Rollreibung (μ_R). Reibung ist unabhängig von der Auflagefläche und der Geschwindigkeit (vereinfacht).\n\n" +
+        "• <strong>Reibungskraft:</strong> F_R = μ · F_N, wobei μ der Reibungsköffizient und F_N die Normalkraft ist. Haftreibung (μ_H) > Gleitreibung (μ_G) > Rollreibung (μ_R). Reibung ist unabhängig von der Auflagefläche und der Geschwindigkeit (vereinfacht).\n\n" +
         "• <strong>Federkraft (Hooke'sches Gesetz):</strong> F = k · x, wobei k die Federkonstante [N/m] und x die Auslenkung aus der Ruhelage ist. Die Kraft ist proportional zur Auslenkung (lineares Verhalten im elastischen Bereich).\n\n" +
         "• <strong>Zentripetalkraft:</strong> F_Z = m · v² / r = m · ω² · r. Diese Kraft zeigt zum Mittelpunkt der Kreisbahn und hält den Körper auf der Bahn. Sie ist keine eigene Kraftart, sondern wird von anderen Kräften bereitgestellt (Gravitation, Seilkraft, Reibung etc.).\n\n" +
         "<strong>Schiefe Ebene:</strong>\n" +
@@ -165,8 +165,18 @@ export const mechanikChapter: Chapter = {
         rows: [
           ["Impuls", "Erhalten", "Erhalten", "Erhalten"],
           ["Kin. Energie", "Erhalten", "Teilweise verloren", "Maximal verloren"],
-          ["Verformung", "Keine (reversibel)", "Teilweise bleibend", "Maximal (Körper verschmelzen)"],
-          ["Beispiel", "Billardkugeln, Newton-Pendel", "Autounfall (teilelastisch)", "Knetmasse, Kupplung von Zügen"],
+          [
+            "Verformung",
+            "Keine (reversibel)",
+            "Teilweise bleibend",
+            "Maximal (Körper verschmelzen)",
+          ],
+          [
+            "Beispiel",
+            "Billardkugeln, Newton-Pendel",
+            "Autounfall (teilelastisch)",
+            "Knetmasse, Kupplung von Zügen",
+          ],
         ],
       },
       merke:
@@ -210,8 +220,18 @@ export const mechanikChapter: Chapter = {
         headers: ["Übertragung", "Mechanismus", "Medium nötig?", "Beispiel"],
         rows: [
           ["Wärmeleitung", "Kontakt (Teilchenschwingungen)", "Ja", "Metalllöffel in heißem Tee"],
-          ["Konvektion", "Strömung eines Fluids", "Ja (Flüssigkeit/Gas)", "Heizung erwärmt Raumluft, Golfstrom"],
-          ["Wärmestrahlung", "Elektromagnetische Strahlung (IR)", "Nein (auch im Vakuum)", "Sonnenstrahlung, Wärmebildkamera"],
+          [
+            "Konvektion",
+            "Strömung eines Fluids",
+            "Ja (Flüssigkeit/Gas)",
+            "Heizung erwärmt Raumluft, Golfstrom",
+          ],
+          [
+            "Wärmestrahlung",
+            "Elektromagnetische Strahlung (IR)",
+            "Nein (auch im Vakuum)",
+            "Sonnenstrahlung, Wärmebildkamera",
+          ],
         ],
       },
       merke:
@@ -266,11 +286,11 @@ export const mechanikChapter: Chapter = {
 
   selfTestQuestions: [
     {
-      question: "Ein Stein fällt 2 Sekunden im freien Fall (g ≈ 10 m/s²). Welche Strecke legt er zurück?",
+      question:
+        "Ein Stein fällt 2 Sekunden im freien Fall (g ≈ 10 m/s²). Welche Strecke legt er zurück?",
       options: ["10 m", "20 m", "30 m", "40 m", "5 m"],
       correctIndex: 1,
-      explanation:
-        "s = ½ · g · t² = ½ × 10 × 4 = 20 m. (Mit g ≈ 10 m/s²)",
+      explanation: "s = ½ · g · t² = ½ × 10 × 4 = 20 m. (Mit g ≈ 10 m/s²)",
     },
     {
       question: "Welche Größe ist bei ALLEN Stoßarten erhalten?",
@@ -283,8 +303,7 @@ export const mechanikChapter: Chapter = {
       question: "0 Kelvin entspricht...",
       options: ["−273,15°C", "0°C", "−100°C", "273,15°C", "−460°C"],
       correctIndex: 0,
-      explanation:
-        "0 K = −273,15°C ist der absolute Nullpunkt. Umrechnung: K = °C + 273,15.",
+      explanation: "0 K = −273,15°C ist der absolute Nullpunkt. Umrechnung: K = °C + 273,15.",
     },
     {
       question: "Auf der schiefen Ebene mit Winkel α ist die Hangabtriebskraft...",
@@ -297,8 +316,7 @@ export const mechanikChapter: Chapter = {
       question: "Wie viel Energie braucht man, um 1 kg Wasser um 10°C zu erwärmen?",
       options: ["4,18 kJ", "41,8 kJ", "418 kJ", "4180 kJ", "0,418 kJ"],
       correctIndex: 1,
-      explanation:
-        "Q = m · c · ΔT = 1 kg × 4,18 kJ/(kg·K) × 10 K = 41,8 kJ.",
+      explanation: "Q = m · c · ΔT = 1 kg × 4,18 kJ/(kg·K) × 10 K = 41,8 kJ.",
     },
   ],
 

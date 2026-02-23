@@ -68,7 +68,8 @@ const set1: TVTextSet = {
         },
         {
           id: "tv1-t1-q2",
-          question: "Warum wird empfohlen, vor dem Schlafengehen elektronische Geräte beiseitezulegen?",
+          question:
+            "Warum wird empfohlen, vor dem Schlafengehen elektronische Geräte beiseitezulegen?",
           options: [
             "Weil die Geräte elektromagnetische Strahlung abgeben, die den Tiefschlaf verhindert",
             "Weil das blaue Licht der Bildschirme die Melatoninproduktion hemmt",
@@ -129,7 +130,8 @@ const set1: TVTextSet = {
         },
         {
           id: "tv1-t2-q2",
-          question: "Welcher Grund wird im Text für den Bedeutungsverlust der Seidenstraße genannt?",
+          question:
+            "Welcher Grund wird im Text für den Bedeutungsverlust der Seidenstraße genannt?",
           options: [
             "Kriege zwischen China und dem Römischen Reich zerstörten die Routen",
             "Die Erfindung der Eisenbahn machte Karawanenhandel überflüssig",
@@ -180,13 +182,7 @@ const set1: TVTextSet = {
         {
           id: "tv1-t3-q1",
           question: "Seit wann zählt die Wiener Kaffeehauskultur laut Text zum UNESCO-Kulturerbe?",
-          options: [
-            "Seit 1683",
-            "Seit 1999",
-            "Seit 2003",
-            "Seit 2011",
-            "Seit 2017",
-          ],
+          options: ["Seit 1683", "Seit 1999", "Seit 2003", "Seit 2011", "Seit 2017"],
           correctOption: 3,
           explanation:
             "Der Text nennt das Jahr 2011 als den Zeitpunkt der Aufnahme ins immaterielle UNESCO-Kulturerbe Österreichs.",
@@ -228,7 +224,8 @@ const set1: TVTextSet = {
       questions: [
         {
           id: "tv1-t4-q1",
-          question: "Wie viele Satellitensignale benötigt ein GPS-Empfänger laut Text für eine dreidimensionale Positionsbestimmung?",
+          question:
+            "Wie viele Satellitensignale benötigt ein GPS-Empfänger laut Text für eine dreidimensionale Positionsbestimmung?",
           options: [
             "Mindestens zwei Satellitensignale",
             "Mindestens drei Satellitensignale",
@@ -416,7 +413,8 @@ const set2: TVTextSet = {
         },
         {
           id: "tv2-t2-q2",
-          question: "Welchen Prozentsatz der Nutzpflanzen nennt der Text als von Insektenbestäubung abhängig?",
+          question:
+            "Welchen Prozentsatz der Nutzpflanzen nennt der Text als von Insektenbestäubung abhängig?",
           options: [
             "Etwa 25 Prozent",
             "Etwa 50 Prozent",
@@ -452,7 +450,8 @@ const set2: TVTextSet = {
       questions: [
         {
           id: "tv2-t3-q1",
-          question: "Was wird im Text über die Fähigkeit von Säuglingen zur Lautunterscheidung gesagt?",
+          question:
+            "Was wird im Text über die Fähigkeit von Säuglingen zur Lautunterscheidung gesagt?",
           options: [
             "Sie können von Geburt an nur die Laute ihrer Muttersprache unterscheiden",
             "Sie können anfangs Laute aller Sprachen unterscheiden, verlieren diese Fähigkeit aber im ersten Lebensjahr",
@@ -517,7 +516,8 @@ const set2: TVTextSet = {
         },
         {
           id: "tv2-t4-q2",
-          question: "Welchen Anteil an den globalen CO\u2082-Emissionen schreibt der Text den Städten zu?",
+          question:
+            "Welchen Anteil an den globalen CO\u2082-Emissionen schreibt der Text den Städten zu?",
           options: [
             "Etwa 30 Prozent",
             "Etwa 40 Prozent",
@@ -697,7 +697,8 @@ const set3: TVTextSet = {
         },
         {
           id: "tv3-t2-q2",
-          question: "Welche technische Herausforderung bei Quantencomputern wird im Text NICHT genannt?",
+          question:
+            "Welche technische Herausforderung bei Quantencomputern wird im Text NICHT genannt?",
           options: [
             "Die Empfindlichkeit der Qubits gegenüber Umgebungseinflüssen",
             "Die Notwendigkeit extrem niedriger Betriebstemperaturen",
@@ -749,7 +750,8 @@ const set3: TVTextSet = {
       questions: [
         {
           id: "tv3-t3-q1",
-          question: "Was ist laut Text der Unterschied zwischen primärem und sekundärem Mikroplastik?",
+          question:
+            "Was ist laut Text der Unterschied zwischen primärem und sekundärem Mikroplastik?",
           options: [
             "Primäres Mikroplastik ist größer als fünf Millimeter, sekundäres kleiner",
             "Primäres wird industriell in kleiner Größe hergestellt, sekundäres entsteht durch Zerfall größerer Kunststoffteile",
@@ -763,7 +765,8 @@ const set3: TVTextSet = {
         },
         {
           id: "tv3-t3-q2",
-          question: "Welche möglichen gesundheitlichen Auswirkungen von Mikroplastik werden im Text genannt?",
+          question:
+            "Welche möglichen gesundheitlichen Auswirkungen von Mikroplastik werden im Text genannt?",
           options: [
             "Ausschließlich allergische Hautreaktionen",
             "Störungen des Sehvermögens und des Gehörs",
@@ -816,7 +819,8 @@ const set3: TVTextSet = {
         },
         {
           id: "tv3-t4-q2",
-          question: "Welche Reaktion auf die Missstände der Industrialisierung wird im Text beschrieben?",
+          question:
+            "Welche Reaktion auf die Missstände der Industrialisierung wird im Text beschrieben?",
           options: [
             "Die Rückkehr der Arbeiter in die Landwirtschaft",
             "Die Entstehung von Arbeiterbewegungen und Gewerkschaften, die Verbesserungen erkämpften",
@@ -867,7 +871,8 @@ const set3: TVTextSet = {
       questions: [
         {
           id: "tv3-t5-q1",
-          question: "Was zeigen laut Text die Studien mit Angehörigen isolierter Gemeinschaften über die Wahrnehmung von Dur und Moll?",
+          question:
+            "Was zeigen laut Text die Studien mit Angehörigen isolierter Gemeinschaften über die Wahrnehmung von Dur und Moll?",
           options: [
             "Dass alle Menschen Dur als fröhlich und Moll als traurig empfinden",
             "Dass die emotionale Interpretation von Dur und Moll kulturell erlernt und nicht angeboren ist",
@@ -930,7 +935,8 @@ const set4: TVTextSet = {
       questions: [
         {
           id: "tv4-t1-q1",
-          question: "Was versteht man laut Text unter transgenerationaler epigenetischer Vererbung?",
+          question:
+            "Was versteht man laut Text unter transgenerationaler epigenetischer Vererbung?",
           options: [
             "Die Weitergabe von Mutationen in der DNA-Sequenz an die nächste Generation",
             "Die Weitergabe epigenetischer Veränderungen über Generationen hinweg",
@@ -1010,7 +1016,8 @@ const set4: TVTextSet = {
         },
         {
           id: "tv4-t2-q2",
-          question: "Wie versucht der Regelutilitarismus laut Text die Probleme des klassischen Utilitarismus zu lösen?",
+          question:
+            "Wie versucht der Regelutilitarismus laut Text die Probleme des klassischen Utilitarismus zu lösen?",
           options: [
             "Indem er das Glücksprinzip durch ein Gerechtigkeitsprinzip ersetzt",
             "Indem er nicht einzelne Handlungen, sondern allgemeine Handlungsregeln nach ihrem Nutzen bewertet",
@@ -1062,7 +1069,8 @@ const set4: TVTextSet = {
         },
         {
           id: "tv4-t3-q2",
-          question: "Welche führende Hypothese zur Erklärung von Déjà-vus wird im Text vorgestellt?",
+          question:
+            "Welche führende Hypothese zur Erklärung von Déjà-vus wird im Text vorgestellt?",
           options: [
             "Déjà-vus sind Erinnerungen an Erlebnisse aus einem früheren Leben",
             "Déjà-vus entstehen durch einen Gedächtnisfehler, bei dem das Gehirn eine aktülle Wahrnehmung fälschlicherweise als Erinnerung einstuft",
@@ -1114,7 +1122,8 @@ const set4: TVTextSet = {
         },
         {
           id: "tv4-t4-q2",
-          question: "Welche Maßnahmen werden laut Text empfohlen, um den Halo-Effekt zu reduzieren?",
+          question:
+            "Welche Maßnahmen werden laut Text empfohlen, um den Halo-Effekt zu reduzieren?",
           options: [
             "Bewerbungsgespräche vollständig durch schriftliche Tests zu ersetzen",
             "Ausschließlich anonyme Bewerbungsverfahren einzusetzen",
@@ -1231,7 +1240,8 @@ const set5: TVTextSet = {
       questions: [
         {
           id: "tv5-t1-q1",
-          question: "Welches ethische Dilemma für Ärzte ergibt sich laut Text aus dem Nocebo-Effekt?",
+          question:
+            "Welches ethische Dilemma für Ärzte ergibt sich laut Text aus dem Nocebo-Effekt?",
           options: [
             "Ärzte müssen entscheiden, ob sie Placebos oder echte Medikamente verschreiben",
             "Die Pflicht zur Aufklärung über Nebenwirkungen kann durch den Nocebo-Effekt genau die Beschwerden hervorrufen, die sie benennt",
@@ -1245,7 +1255,8 @@ const set5: TVTextSet = {
         },
         {
           id: "tv5-t1-q2",
-          question: "Welche neurobiologischen Mechanismen des Nocebo-Effekts werden im Text genannt?",
+          question:
+            "Welche neurobiologischen Mechanismen des Nocebo-Effekts werden im Text genannt?",
           options: [
             "Eine verminderte Dopaminausschüttung im Nucleus accumbens",
             "Die Aktivierung der HPA-Achse, verstärkte Cortisolausschüttung und angstbedingte Verstärkung der Schmerzwahrnehmung",
@@ -1298,7 +1309,8 @@ const set5: TVTextSet = {
       questions: [
         {
           id: "tv5-t2-q1",
-          question: "Worin besteht laut Text der Unterschied zwischen der starken und der schwachen Fassung der Sapir-Whorf-Hypothese?",
+          question:
+            "Worin besteht laut Text der Unterschied zwischen der starken und der schwachen Fassung der Sapir-Whorf-Hypothese?",
           options: [
             "Die starke Fassung bezieht sich auf gesprochene, die schwache auf geschriebene Sprache",
             "Die starke Fassung behauptet, Sprache determiniere das Denken vollständig, die schwache sieht lediglich einen Einfluss",

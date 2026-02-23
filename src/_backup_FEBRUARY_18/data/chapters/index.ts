@@ -1,4 +1,10 @@
-export type { Chapter, ChapterSection, VergleichsTabelleData, SelbstTestQuestion, KeyFact } from "./types";
+export type {
+  Chapter,
+  ChapterSection,
+  VergleichsTabelleData,
+  SelbstTestQuestion,
+  KeyFact,
+} from "./types";
 
 // Biology
 import { zellbiologieChapter } from "./zellbiologie";

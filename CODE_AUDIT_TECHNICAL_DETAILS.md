@@ -1,4 +1,5 @@
 # MEDMASTER: TECHNISCHER CODE-AUDIT DEEP-DIVE
+
 **Fokus:** Spezifische Code-Locations, Implementierungsdetails, Integrationspunkte
 
 ---
@@ -8,6 +9,7 @@
 ### 1.1 Quiz[] Feld aktivieren
 
 **SCHRITT 1:** Daten hinzufügen
+
 ```typescript
 // /src/data/bmsKapitel/biologie/kap1-zelle.ts
 
@@ -30,6 +32,7 @@ export const unterkapitel1_1: Unterkapitel = {
 ```
 
 **SCHRITT 2:** In Kapitel-Index registrieren
+
 ```typescript
 // /src/data/bmsKapitel/biologie/index.ts
 
@@ -38,13 +41,14 @@ export const alleKapitelBiologie: Kapitel[] = [
     ...bioKap1,
     sequence: 1,
     sequenceTitle: "Zelle",
-    linkedChapters: ["bio-kap2"]
+    linkedChapters: ["bio-kap2"],
     // quiz wird automatisch in unterkapitel1_1 gerendert!
-  }
+  },
 ];
 ```
 
 **SCHRITT 3:** Rendering ist SCHON DA!
+
 ```typescript
 // /src/components/chapter/ContentVisualizer.tsx Zeile 61–83
 
@@ -69,6 +73,7 @@ export const alleKapitelBiologie: Kapitel[] = [
 ### 1.2 ImageUrl aktivieren
 
 **SCHRITT 1:** URL in Daten setzen
+
 ```typescript
 // /src/data/bmsKapitel/chemie/kap6-chemische-bindung.ts
 
@@ -82,13 +87,14 @@ export const unterkapitel6_2: Unterkapitel = {
 ```
 
 **SCHRITT 2:** Rendering ist BEREIT!
+
 ```typescript
 // /src/components/chapter/ContentVisualizer.tsx Zeile 48–55
 
 {uk?.imageUrl && (
   <figure className="my-6 text-center">
-    <img 
-      src={uk.imageUrl} 
+    <img
+      src={uk.imageUrl}
       alt={uk.title}
       className="max-w-full h-auto rounded-lg shadow-md mx-auto"
       loading="lazy"
@@ -107,6 +113,7 @@ export const unterkapitel6_2: Unterkapitel = {
 ### 1.3 Progressive Disclosure Mode verstehen
 
 **Wo ist der Toggle?**
+
 ```typescript
 // /src/pages/BMSUnterkapitel.tsx Zeile 225, 370
 
@@ -130,6 +137,7 @@ const [progressiveDisclosure, setProgressiveDisclosure] = useState(true);
 ```
 
 **Was passiert intern?**
+
 ```typescript
 // /src/components/chapter/SubchapterContent.tsx Zeile 348
 
@@ -153,7 +161,8 @@ if (useProgressive && sections && sections.length > 0) {
 }
 ```
 
-**Benutzer-Erlebnis:** 
+**Benutzer-Erlebnis:**
+
 - Toggle an = Nur Überschriften sichtbar, klick um zu expandieren
 - Toggle aus = Alles auf einmal sichtbar
 
@@ -186,8 +195,8 @@ if (useProgressive && sections && sections.length > 0) {
 // /src/components/chapter/QuizQuestion.tsx Zeile 25–57
 
 const [hintIndex, setHintIndex] = useState(0);
-const hints = question.hints && question.hints.length > 0 
-  ? question.hints 
+const hints = question.hints && question.hints.length > 0
+  ? question.hints
   : [FALLBACK_HINT];
 
 const hasMoreHints = hintIndex < hints.length;
@@ -204,8 +213,8 @@ function showNextHint() {
   disabled={!hasMoreHints}
   className="px-4 py-2 bg-amber-500 text-white rounded"
 >
-  {hintIndex === 0 
-    ? "Tipp anschauen" 
+  {hintIndex === 0
+    ? "Tipp anschauen"
     : `Tipp ${hintIndex}/${hints.length}`
   }
 </button>
@@ -218,6 +227,7 @@ function showNextHint() {
 ```
 
 **UX-Flow:**
+
 1. Benutzer versucht Frage ohne Hint
 2. Klick "Tipp" → erstes Hint angezeigt
 3. Klick "Tipp 2/3" → zweites Hint
@@ -241,28 +251,27 @@ recordAnswer: (stichwortId: string, correct: boolean, timeSeconds: number) => {
       successRate: 0,
       confidence: "unbekannt",
       streak: 0,
-      avgTimePerQuestion: 0
+      avgTimePerQuestion: 0,
     };
 
     const newStats = {
       ...existing,
       totalAttempts: existing.totalAttempts + 1,
       correctAttempts: existing.correctAttempts + (correct ? 1 : 0),
-      successRate: (existing.correctAttempts + (correct ? 1 : 0)) 
-                   / (existing.totalAttempts + 1),
-      streak: correct ? (existing.streak + 1) : 0,
-      avgTimePerQuestion: (existing.avgTimePerQuestion * existing.totalAttempts 
-                          + timeSeconds) 
-                          / (existing.totalAttempts + 1),
+      successRate: (existing.correctAttempts + (correct ? 1 : 0)) / (existing.totalAttempts + 1),
+      streak: correct ? existing.streak + 1 : 0,
+      avgTimePerQuestion:
+        (existing.avgTimePerQuestion * existing.totalAttempts + timeSeconds) /
+        (existing.totalAttempts + 1),
       // Confidence update basierend auf successRate
-      confidence: successRate > 0.7 ? "sicher" : (successRate > 0.4 ? "unsicher" : "unbekannt")
+      confidence: successRate > 0.7 ? "sicher" : successRate > 0.4 ? "unsicher" : "unbekannt",
     };
 
     return {
       profile: {
         ...s.profile,
-        stichwortStats: { ...s.profile.stichwortStats, [stichwortId]: newStats }
-      }
+        stichwortStats: { ...s.profile.stichwortStats, [stichwortId]: newStats },
+      },
     };
   });
 };
@@ -276,18 +285,18 @@ recordAnswer: (stichwortId: string, correct: boolean, timeSeconds: number) => {
 getDifficultyMultiplier: () => {
   const state = get();
   const recent = state.recentAnswers.slice(-3);
-  
+
   // Wenn letzte 3 Antworten < 10s oder falsch:
   const fast = recent.some((a) => a.timeSeconds < 10);
   const anyWrong = recent.some((a) => !a.correct);
-  
+
   if (fast || anyWrong) {
     set({ offerBridge: true, difficultyLevel: 1 });
     return 0.6; // Easy questions get 60% XP multiplier
   }
-  
+
   // Sonst: mittel bis schwer
-  return 1.0 + (state.difficultyLevel * 0.2); // 1.0 - 1.6
+  return 1.0 + state.difficultyLevel * 0.2; // 1.0 - 1.6
 };
 
 getShouldOfferBridge: () => {
@@ -330,23 +339,22 @@ if (get().getShouldOfferBridge?.()) {
 
 checkAndAwardBadges: async () => {
   const state = get();
-  const [{ BADGE_DEFINITIONS, getBadgeProgress }, { alleKapitel }] = 
-    await Promise.all([
-      import("@/data/badges"),
-      import("@/data/bmsKapitel"),
-    ]);
+  const [{ BADGE_DEFINITIONS, getBadgeProgress }, { alleKapitel }] = await Promise.all([
+    import("@/data/badges"),
+    import("@/data/bmsKapitel"),
+  ]);
 
   for (const badge of BADGE_DEFINITIONS) {
     // Skip if already earned
     if (state.earnedBadges.includes(badge.id)) continue;
-    
+
     const { earned } = getBadgeProgress(
-      badge.id, 
+      badge.id,
       {
         completedChapters: state.completedChapters,
         maxConsecutiveCorrectEver: state.maxConsecutiveCorrectEver,
         smartRecoveryCount: state.smartRecoveryCount,
-        firstActivityTimeByDay: state.firstActivityTimeByDay
+        firstActivityTimeByDay: state.firstActivityTimeByDay,
       },
       alleKapitel
     );
@@ -356,7 +364,7 @@ checkAndAwardBadges: async () => {
       return badge.id; // Return first earned badge
     }
   }
-  
+
   return null; // No new badge
 };
 ```
@@ -368,12 +376,14 @@ checkAndAwardBadges: async () => {
 
 // 1. Nach Chapter-Abschluss
 completeChapter: (chapterId) => {
-  set(s => ({
-    completedChapters: [...s.completedChapters, chapterId]
+  set((s) => ({
+    completedChapters: [...s.completedChapters, chapterId],
   }));
-  get().checkAndAwardBadges().then(badge => {
-    if (badge) set({ pendingBadgeId: badge });
-  });
+  get()
+    .checkAndAwardBadges()
+    .then((badge) => {
+      if (badge) set({ pendingBadgeId: badge });
+    });
 };
 
 // 2. Nach erstem Activity des Tages
@@ -384,7 +394,7 @@ recordFirstActivityOfDay: () => {
 
 // 3. Nach langer Streak
 setMaxConsecutiveCorrect: (n) => {
-  set(s => ({ maxConsecutiveCorrectEver: Math.max(s.maxConsecutiveCorrectEver, n) }));
+  set((s) => ({ maxConsecutiveCorrectEver: Math.max(s.maxConsecutiveCorrectEver, n) }));
   if (n >= 20) {
     get().checkAndAwardBadges(); // Prüfe Präzisions-König
   }
@@ -392,7 +402,7 @@ setMaxConsecutiveCorrect: (n) => {
 
 // 4. Nach Smart-Recovery
 incrementSmartRecoveryCount: () => {
-  set(s => ({ smartRecoveryCount: s.smartRecoveryCount + 1 }));
+  set((s) => ({ smartRecoveryCount: s.smartRecoveryCount + 1 }));
   get().checkAndAwardBadges(); // Prüfe Fehler-Fresser
 };
 ```
@@ -430,7 +440,7 @@ updateSpacedRepetition: (questionId, correct) => {
   set((s) => {
     const existing = s.spacedRepetition[questionId];
     const now = new Date().toISOString().split("T")[0];
-    
+
     let interval: number;
     let easeFactor: number;
     let repetitions: number;
@@ -444,7 +454,7 @@ updateSpacedRepetition: (questionId, correct) => {
       // Update easeFactor (SM-2 Formel)
       easeFactor = existing.easeFactor + (correct ? 0.1 : -0.3);
       if (easeFactor < 1.3) easeFactor = 1.3; // Min. 1.3
-      
+
       if (correct) {
         repetitions = existing.repetitions + 1;
         // Standard intervals
@@ -483,6 +493,7 @@ updateSpacedRepetition: (questionId, correct) => {
 ```
 
 **SM-2 Legende:**
+
 - `easeFactor`: Wie "leicht" ist diese Frage für diesen User? (1.3 = sehr schwer, 2.5 = sehr leicht)
 - `repetitions`: Wie oft korrekt hintereinander beantwortet?
 - `interval`: Tage bis zur nächsten Wiederholung
@@ -499,10 +510,10 @@ updateChapterSRS: (chapterId, scorePct) => {
     const today = new Date().toISOString().split("T")[0];
     const existing = s.userProgress[chapterId];
     const currentLevel = existing?.successCount ?? 0;
-    
+
     let nextLevel: number;
     let daysToAdd: number;
-    
+
     if (scorePct >= 80) {
       // Fördern: bessere Score
       nextLevel = Math.min(5, currentLevel + 1);
@@ -515,7 +526,7 @@ updateChapterSRS: (chapterId, scorePct) => {
     } else {
       // Halten: mittelmäßige Score
       nextLevel = currentLevel;
-      daysToAdd = currentLevel <= 0 ? 3 : [0, 3, 7, 14, 21, 30][currentLevel] ?? 3;
+      daysToAdd = currentLevel <= 0 ? 3 : ([0, 3, 7, 14, 21, 30][currentLevel] ?? 3);
     }
 
     const nextDate = new Date();
@@ -536,6 +547,7 @@ updateChapterSRS: (chapterId, scorePct) => {
 ```
 
 **Leitner-Boxen:**
+
 - Level 0: Noch nicht gelernt (interval = 0)
 - Level 1: Schwach (interval = 3 Tage)
 - Level 2: OK (interval = 7 Tage)
@@ -548,6 +560,7 @@ updateChapterSRS: (chapterId, scorePct) => {
 ## 6. QUELLEN: ALLE WICHTIGEN DATEIEN
 
 ### 6.1 Store-Dateien
+
 ```
 /src/store/
 ├── useStore.ts                  (Hauptstore — 592 Zeilen!)
@@ -557,6 +570,7 @@ updateChapterSRS: (chapterId, scorePct) => {
 ```
 
 ### 6.2 Komponenten-Dateien
+
 ```
 /src/components/
 ├── chapter/
@@ -575,6 +589,7 @@ updateChapterSRS: (chapterId, scorePct) => {
 ```
 
 ### 6.3 Data-Dateien
+
 ```
 /src/data/
 ├── bmsKapitel/
@@ -589,6 +604,7 @@ updateChapterSRS: (chapterId, scorePct) => {
 ```
 
 ### 6.4 Pages mit Integrationen
+
 ```
 /src/pages/
 ├── BMSUnterkapitel.tsx           (Progressive Disclosure Toggle — Zeile 370!)
@@ -641,6 +657,7 @@ Wenn neues Badge earned:
 ## 8. TESTBARE SZENARIEN
 
 ### Szenario 1: Quiz mit Progressive Disclosure
+
 1. Öffne BMSUnterkapitel
 2. Klick Toggle "Progressive Disclosure"
 3. Erwarte: Nur Überschriften sichtbar
@@ -648,6 +665,7 @@ Wenn neues Badge earned:
 5. Scrolle nach unten → quiz[] wird gerendert (wenn Daten vorhanden)
 
 ### Szenario 2: Hints anzeigen
+
 1. Beantworte Frage falsch
 2. Klick "Tipp"
 3. Erwarte: Erstes Hint angezeigt
@@ -655,11 +673,13 @@ Wenn neues Badge earned:
 5. Nach letztem Hint: Button deaktiviert
 
 ### Szenario 3: Hot Streak triggern
+
 1. Beantworte 5 Fragen hintereinander richtig
 2. Nach 5. korrekter Antwort: 🔥 Overlay 4.5 Sekunden
 3. Danach: Modal verschwindet automatisch
 
 ### Szenario 4: Badge verdienen
+
 1. Beantworte 20 Fragen in Folge richtig
 2. CheckAndAwardBadges() wird async getriggert
 3. Wenn verdient: "Präzisions-König" Badge-Modal angezeigt
@@ -668,21 +688,21 @@ Wenn neues Badge earned:
 
 ## ZUSAMMENFASSUNG: IMPLEMENTATION-READINESS
 
-| Feature | Code-Ready | Daten-Ready | Tested | Priorität |
-|---------|-----------|-----------|--------|-----------|
-| Quiz[] | ✅ 100% | ❌ 0% | ❓ | 🟢 High |
-| ImageUrl | ✅ 100% | ❌ 0% | ✅ | 🟡 Med |
-| Progressive Disclosure | ✅ 100% | ✅ 100% | ✅ | ✅ ACTIVE |
-| Hints System | ✅ 100% | ✅ 80% | ✅ | ✅ ACTIVE |
-| Adaptive Learning | ✅ 80% | ✅ 100% | ⚠️ | 🟡 Med |
-| Badge System | ✅ 100% | ✅ 100% | ✅ | ✅ ACTIVE |
-| SRS SM-2 | ✅ 100% | ✅ 100% | ✅ | ✅ ACTIVE |
-| Interleaving | ✅ 100% | ✅ 100% | ✅ | ✅ ACTIVE |
-| Hot Streak | ✅ 100% | ✅ 100% | ✅ | ✅ ACTIVE |
+| Feature                | Code-Ready | Daten-Ready | Tested | Priorität |
+| ---------------------- | ---------- | ----------- | ------ | --------- |
+| Quiz[]                 | ✅ 100%    | ❌ 0%       | ❓     | 🟢 High   |
+| ImageUrl               | ✅ 100%    | ❌ 0%       | ✅     | 🟡 Med    |
+| Progressive Disclosure | ✅ 100%    | ✅ 100%     | ✅     | ✅ ACTIVE |
+| Hints System           | ✅ 100%    | ✅ 80%      | ✅     | ✅ ACTIVE |
+| Adaptive Learning      | ✅ 80%     | ✅ 100%     | ⚠️     | 🟡 Med    |
+| Badge System           | ✅ 100%    | ✅ 100%     | ✅     | ✅ ACTIVE |
+| SRS SM-2               | ✅ 100%    | ✅ 100%     | ✅     | ✅ ACTIVE |
+| Interleaving           | ✅ 100%    | ✅ 100%     | ✅     | ✅ ACTIVE |
+| Hot Streak             | ✅ 100%    | ✅ 100%     | ✅     | ✅ ACTIVE |
 
 **Legende:**
+
 - ✅ = Fertig & produktionsbereit
 - ⚠️ = Fertig, aber nicht vollständig getestet
 - ❓ = Existiert, unklar ob getestet
 - ❌ = Nicht vorhanden
-

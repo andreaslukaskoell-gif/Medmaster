@@ -10,7 +10,10 @@ import { execSync } from "child_process";
 const files = execSync(
   'find src -name "*.tsx" -o -name "*.ts" | grep -v node_modules | grep -v ".d.ts"',
   { cwd: "/Users/Luki/medmaster", encoding: "utf-8" }
-).trim().split("\n").filter(Boolean);
+)
+  .trim()
+  .split("\n")
+  .filter(Boolean);
 
 // Comprehensive German word replacement map
 // Format: [pattern, replacement]
@@ -187,7 +190,7 @@ const replacements = [
   ["Ausloes", "Auslös"],
   ["ausloes", "auslös"],
   ["Anschluss", "Anschluss"], // stays as-is (short vowel)
-  ["Schluss", "Schluss"],      // stays as-is
+  ["Schluss", "Schluss"], // stays as-is
   ["Weiss", "Weiß"],
   ["weiss", "weiß"],
   ["Heiss", "Heiß"],
@@ -417,7 +420,7 @@ const replacements = [
   ["Nebenniere", "Nebenniere"], // correct already
   ["Auspraeg", "Auspräg"],
   ["auspraeg", "auspräg"],
-  ["Basenpaar", "Basenpaar"],  // correct already
+  ["Basenpaar", "Basenpaar"], // correct already
   ["Doppelmembran", "Doppelmembran"], // correct
   ["Chromosomenaberr", "Chromosomenaberr"], // correct
   ["Zellmembranab", "Zellmembranab"],
@@ -569,7 +572,9 @@ for (const relPath of files) {
 
   if (newContent !== content) {
     writeFileSync(fullPath, newContent, "utf-8");
-    const changes = content.split("\n").filter((line, i) => line !== newContent.split("\n")[i]).length;
+    const changes = content
+      .split("\n")
+      .filter((line, i) => line !== newContent.split("\n")[i]).length;
     changedFiles.push({ file: relPath, linesChanged: changes });
     totalChanges += changes;
   }

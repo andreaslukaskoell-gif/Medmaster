@@ -1,4 +1,5 @@
 # CLAUDE CODE — MedMaster Authentisch & Konkurrenz-Killer
+
 ## 100% verifiziert gegen das offizielle MedAT-Format
 
 Du bist ein Senior Full-Stack-Entwickler und MedAT-Experte. Dein Ziel: MedMaster zur BESTEN MedAT-Plattform machen — mit **exakt authentischen Aufgabenformaten**.
@@ -8,7 +9,9 @@ Du bist ein Senior Full-Stack-Entwickler und MedAT-Experte. Dein Ziel: MedMaster
 ---
 
 # ═══════════════════════════════════════════
+
 # TEIL 1: KRITISCHE BUG-FIXES (sofort)
+
 # ═══════════════════════════════════════════
 
 ## 1.1 Karteikarten Flip-Bug
@@ -16,6 +19,7 @@ Du bist ein Senior Full-Stack-Entwickler und MedAT-Experte. Dein Ziel: MedMaster
 Die Rückseite der Karteikarten zeigt Text **gespiegelt/rückwärts**.
 
 Finde die Flashcard-Komponente und fixe:
+
 - Die Rückseite (`.card-back`) braucht `transform: rotateY(180deg)` als DEFAULT
 - BEIDE Seiten: `backface-visibility: hidden`
 - Container: `transform-style: preserve-3d`
@@ -30,13 +34,17 @@ Im echten MedAT hat JEDE BMS-Frage **5 Antwortoptionen (A-E)**, nicht 4. Prüfe 
 ---
 
 # ═══════════════════════════════════════════
+
 # TEIL 2: BMS CONTENT-STRUKTUR
+
 # ═══════════════════════════════════════════
 
 ## Problem:
+
 Jedes Unterkapitel ist EIN riesiger Fließtext-Block ohne visuelle Gliederung.
 
 ## Lösung:
+
 Jedes Unterkapitel bekommt diese Struktur:
 
 ```
@@ -61,6 +69,7 @@ Jedes Unterkapitel bekommt diese Struktur:
 ```
 
 ### Implementierung:
+
 1. Teile bestehenden Fließtext in 2-4 Abschnitte mit eigenen `<h3>` Überschriften
 2. Styling: `border-l-4 pl-4` mit Fachfarbe an Überschriften
 3. Fachfarben: Bio=emerald, Chemie=red, Physik=blue, Mathe=violet
@@ -69,7 +78,9 @@ Jedes Unterkapitel bekommt diese Struktur:
 ---
 
 # ═══════════════════════════════════════════
+
 # TEIL 3: FRAGEN-DATENBANK (211 → 2.500+)
+
 # ═══════════════════════════════════════════
 
 ## KRITISCH: Alle BMS-Fragen müssen 5 Optionen (A-E) haben!
@@ -77,8 +88,8 @@ Jedes Unterkapitel bekommt diese Struktur:
 ```typescript
 interface Question {
   id: string;
-  type: 'single-choice';
-  category: 'biologie' | 'chemie' | 'physik' | 'mathematik';
+  type: "single-choice";
+  category: "biologie" | "chemie" | "physik" | "mathematik";
   chapter: string;
   subchapter: string;
   difficulty: 1 | 2 | 3;
@@ -91,6 +102,7 @@ interface Question {
 ```
 
 ### Ziele pro Fach:
+
 - **Biologie: 800 Fragen** (40 Fragen × 20 Themenbereiche)
 - **Chemie: 500 Fragen** (25 Fragen × 20 Themenbereiche)
 - **Physik: 400 Fragen** (20 Fragen × 20 Themenbereiche)
@@ -98,6 +110,7 @@ interface Question {
 - **TOTAL BMS: 2.000 Fragen**
 
 ### Beispiel-Frage (korrektes Format):
+
 ```typescript
 {
   id: 'bio-zelle-001',
@@ -123,12 +136,15 @@ interface Question {
 ---
 
 # ═══════════════════════════════════════════
+
 # TEIL 4: KFF — AUTHENTISCHE AUFGABENFORMATE
+
 # ═══════════════════════════════════════════
 
 ## 4.1 ZAHLENFOLGEN (exakt wie MedAT)
 
 ### Offizielles Format:
+
 - **10 Aufgaben in 15 Minuten** (~90 Sek pro Aufgabe)
 - Es werden **7 Zahlen** gezeigt
 - Gesucht: Die **nächsten 2 Zahlen** (8. und 9.)
@@ -138,6 +154,7 @@ interface Question {
 - Nur ganze Zahlen als Lösungen
 
 ### Implementierung:
+
 ```typescript
 interface ZahlenfolgeTask {
   sequence: number[];        // GENAU 7 Zahlen
@@ -166,6 +183,7 @@ interface ZahlenfolgeTask {
 ```
 
 ### Pattern-Typen (mindestens 15):
+
 1. Konstante Addition (+n): z.B. +3, +7, +11
 2. Konstante Multiplikation (×n): z.B. ×2, ×3
 3. Wachsende Addition (+1, +2, +3, +4...): Differenz steigt
@@ -183,8 +201,9 @@ interface ZahlenfolgeTask {
 15. Faktorielle Muster: ×1, ×2, ×3, ×4...
 
 ### Generator:
+
 ```typescript
-function generateZahlenfolge(difficulty: 1|2|3): ZahlenfolgeTask {
+function generateZahlenfolge(difficulty: 1 | 2 | 3): ZahlenfolgeTask {
   // 1. Wähle zufälliges Pattern basierend auf Schwierigkeit
   // 2. Generiere 9 Zahlen nach dem Pattern
   // 3. Zeige erste 7, verstecke letzte 2
@@ -200,12 +219,14 @@ function generateZahlenfolge(difficulty: 1|2|3): ZahlenfolgeTask {
 ## 4.2 GEDÄCHTNIS & MERKFÄHIGKEIT — Allergieausweise (exakt wie MedAT)
 
 ### Offizielles Format:
+
 - **8 Allergieausweise** zum Einprägen
 - **Lernphase: 8 Minuten** (Countdown-Timer)
 - **Pause: ~40 Minuten** (im echten Test werden andere Sektionen dazwischen gemacht)
 - **Abfragephase: 25 Fragen in 15 Minuten** (~36 Sek pro Frage)
 
 ### JEDER Ausweis enthält GENAU diese 8 Datenfelder:
+
 1. **Vorname + Nachname** (Fantasienamen, 2 Silben)
 2. **Geburtsdatum** (nur Tag + Monat, KEIN Jahr)
 3. **Medikamenteneinnahme** (Ja / Nein)
@@ -216,49 +237,150 @@ function generateZahlenfolge(difficulty: 1|2|3): ZahlenfolgeTask {
 8. **Passfoto** (Platzhalter-Avatar mit unterscheidbaren Merkmalen)
 
 ### Implementierung:
+
 ```typescript
 interface Allergieausweis {
   vorname: string;
   nachname: string;
-  geburtsdatum: string;     // z.B. "14. März"
-  medikamente: boolean;     // Ja/Nein
-  blutgruppe: string;       // z.B. "A+", "0-", "AB+"
-  allergien: string[];      // z.B. ["Penicillin", "Latex", "Nüsse"]
-  ausweisnummer: string;    // z.B. "48271"
+  geburtsdatum: string; // z.B. "14. März"
+  medikamente: boolean; // Ja/Nein
+  blutgruppe: string; // z.B. "A+", "0-", "AB+"
+  allergien: string[]; // z.B. ["Penicillin", "Latex", "Nüsse"]
+  ausweisnummer: string; // z.B. "48271"
   ausstellungsland: string; // z.B. "Österreich", "Deutschland", "Schweiz"
-  avatarId: number;         // Für visuelles Unterscheiden
+  avatarId: number; // Für visuelles Unterscheiden
 }
 
 // Daten-Pools:
-const VORNAMEN = ['Anna', 'Florian', 'Maria', 'Thomas', 'Katharina', 'Michael',
-  'Elisabeth', 'Johannes', 'Sophie', 'Maximilian', 'Laura', 'Daniel',
-  'Sarah', 'Lukas', 'Julia', 'Andreas', 'Nina', 'Stefan', 'Lisa', 'Markus',
-  'Eva', 'Martin', 'Petra', 'Christian', 'Barbara', 'Wolfgang',
-  'Claudia', 'Bernhard', 'Monika', 'Robert'];
+const VORNAMEN = [
+  "Anna",
+  "Florian",
+  "Maria",
+  "Thomas",
+  "Katharina",
+  "Michael",
+  "Elisabeth",
+  "Johannes",
+  "Sophie",
+  "Maximilian",
+  "Laura",
+  "Daniel",
+  "Sarah",
+  "Lukas",
+  "Julia",
+  "Andreas",
+  "Nina",
+  "Stefan",
+  "Lisa",
+  "Markus",
+  "Eva",
+  "Martin",
+  "Petra",
+  "Christian",
+  "Barbara",
+  "Wolfgang",
+  "Claudia",
+  "Bernhard",
+  "Monika",
+  "Robert",
+];
 
-const NACHNAMEN = ['Müller', 'Huber', 'Bauer', 'Wagner', 'Pichler',
-  'Steiner', 'Moser', 'Mayer', 'Hofer', 'Gruber', 'Fischer', 'Weber',
-  'Eder', 'Berger', 'Schwarz', 'Brunner', 'Winkler', 'Reiter', 'Maier',
-  'Leitner', 'Fuchs', 'Lang', 'Brandt', 'Koch', 'Weiß'];
+const NACHNAMEN = [
+  "Müller",
+  "Huber",
+  "Bauer",
+  "Wagner",
+  "Pichler",
+  "Steiner",
+  "Moser",
+  "Mayer",
+  "Hofer",
+  "Gruber",
+  "Fischer",
+  "Weber",
+  "Eder",
+  "Berger",
+  "Schwarz",
+  "Brunner",
+  "Winkler",
+  "Reiter",
+  "Maier",
+  "Leitner",
+  "Fuchs",
+  "Lang",
+  "Brandt",
+  "Koch",
+  "Weiß",
+];
 
-const ALLERGENE = ['Penicillin', 'Latex', 'Erdnüsse', 'Pollen', 'Hausstaubmilben',
-  'Bienengift', 'Katzenhaar', 'Nickel', 'Soja', 'Weizen', 'Eier', 'Milch',
-  'Fisch', 'Schimmelpilze', 'Gräser', 'Birke', 'Ambrosia', 'Roggen',
-  'Codein', 'ASS', 'Ibuprofen', 'Kontrastmittel', 'Meeresfrüchte',
-  'Sellerie', 'Sesam', 'Wespengift', 'Hundehaar', 'Pferdehaar',
-  'Haselnüsse', 'Walnüsse', 'Cashew', 'Gluten', 'Sulfonamide',
-  'Metamizol', 'Duftstoffe', 'Konservierungsstoffe', 'Formaldehyd',
-  'Chrom', 'Kobalt', 'Lokalanästhetika'];
+const ALLERGENE = [
+  "Penicillin",
+  "Latex",
+  "Erdnüsse",
+  "Pollen",
+  "Hausstaubmilben",
+  "Bienengift",
+  "Katzenhaar",
+  "Nickel",
+  "Soja",
+  "Weizen",
+  "Eier",
+  "Milch",
+  "Fisch",
+  "Schimmelpilze",
+  "Gräser",
+  "Birke",
+  "Ambrosia",
+  "Roggen",
+  "Codein",
+  "ASS",
+  "Ibuprofen",
+  "Kontrastmittel",
+  "Meeresfrüchte",
+  "Sellerie",
+  "Sesam",
+  "Wespengift",
+  "Hundehaar",
+  "Pferdehaar",
+  "Haselnüsse",
+  "Walnüsse",
+  "Cashew",
+  "Gluten",
+  "Sulfonamide",
+  "Metamizol",
+  "Duftstoffe",
+  "Konservierungsstoffe",
+  "Formaldehyd",
+  "Chrom",
+  "Kobalt",
+  "Lokalanästhetika",
+];
 
-const LAENDER = ['Österreich', 'Deutschland', 'Schweiz', 'Italien', 'Frankreich',
-  'Spanien', 'Ungarn', 'Tschechien', 'Slowenien', 'Kroatien',
-  'Polen', 'Niederlande', 'Belgien', 'Schweden', 'Dänemark'];
+const LAENDER = [
+  "Österreich",
+  "Deutschland",
+  "Schweiz",
+  "Italien",
+  "Frankreich",
+  "Spanien",
+  "Ungarn",
+  "Tschechien",
+  "Slowenien",
+  "Kroatien",
+  "Polen",
+  "Niederlande",
+  "Belgien",
+  "Schweden",
+  "Dänemark",
+];
 
-const BLUTGRUPPEN = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', '0+', '0-'];
+const BLUTGRUPPEN = ["A+", "A-", "B+", "B-", "AB+", "AB-", "0+", "0-"];
 ```
 
 ### Abfrage-Format (25 Fragen, 5 Optionen A-E):
+
 Verschiedene Fragetypen:
+
 - "Welche Blutgruppe hat [Name]?"
 - "An welchem Tag hat [Name] Geburtstag?"
 - "Welche Allergie hat [Name] NICHT?"
@@ -269,19 +391,23 @@ Verschiedene Fragetypen:
 - "Wer ist allergisch gegen Penicillin?"
 
 ### UI-Design:
+
 **Lernphase:**
+
 - 8 Ausweise als Karten nebeneinander/untereinander (scrollbar)
 - Jeder Ausweis sieht aus wie ein echter Allergiepass
 - Großer Countdown-Timer: "Noch 7:42 Minuten"
 - Kein Weiterblättern möglich bis Timer abläuft
 
 **Abfragephase:**
+
 - 25 MC-Fragen nacheinander
 - 5 Antwortoptionen (A-E)
 - Timer: 15 Minuten gesamt
 - Keine Rücknavigation (wie beim echten MedAT)
 
 **In unserer App:** Da wir keinen 40-Min-Gap einbauen können, biete 2 Modi:
+
 - **Übungsmodus:** Direkt nach dem Lernen abfragen
 - **Authentischer Modus:** Timer läuft 40 Min, User muss in der Zwischenzeit andere Sektionen üben
 
@@ -290,6 +416,7 @@ Verschiedene Fragetypen:
 ## 4.3 FIGUREN ZUSAMMENSETZEN (exakt wie MedAT)
 
 ### Offizielles Format:
+
 - **15 Aufgaben in 20 Minuten** (~80 Sek pro Aufgabe)
 - Oben: **3-7 einzelne Puzzleteile** (2D geometrische Formen)
 - Unten: **5 Antwortoptionen (A-E)** mit fertigen Figuren
@@ -300,11 +427,12 @@ Verschiedene Fragetypen:
 - Fertige Figur kann größer/kleiner dargestellt sein
 
 ### Implementierung mit SVG:
+
 ```typescript
 interface FigurenTask {
-  pieces: SVGPiece[];      // 3-7 Puzzleteile als SVG-Paths
-  options: SVGFigure[];    // 5 zusammengesetzte Figuren (A-E)
-  correctOption: number;   // 0-4
+  pieces: SVGPiece[]; // 3-7 Puzzleteile als SVG-Paths
+  options: SVGFigure[]; // 5 zusammengesetzte Figuren (A-E)
+  correctOption: number; // 0-4
   difficulty: 1 | 2 | 3;
 }
 
@@ -314,6 +442,7 @@ interface FigurenTask {
 ```
 
 ### Typische Lösungsfiguren:
+
 Pentagon, Hexagon, Heptagon, Oktagon, Viertelkreis, Halbkreis, Dreiviertelkreis, Vollkreis, zusammengesetzte Polygone
 
 ---
@@ -321,6 +450,7 @@ Pentagon, Hexagon, Heptagon, Oktagon, Viertelkreis, Halbkreis, Dreiviertelkreis,
 ## 4.4 WORTFLÜSSIGKEIT (exakt wie MedAT)
 
 ### Offizielles Format:
+
 - **15 Aufgaben in 20 Minuten** (~80 Sek pro Aufgabe)
 - Gezeigt: **Buchstabensalat** (6-10 Buchstaben durcheinander)
 - Gefragt: **"Mit welchem Buchstaben BEGINNT das gesuchte Wort?"**
@@ -329,6 +459,7 @@ Pentagon, Hexagon, Heptagon, Oktagon, Viertelkreis, Halbkreis, Dreiviertelkreis,
 - **KEINE Umlaute (ä, ö, ü) und kein ß im Test!**
 
 ### Implementierung:
+
 ```typescript
 interface WortfluessigkeitTask {
   scrambled: string;       // z.B. "IEZNIDM"
@@ -351,35 +482,89 @@ interface WortfluessigkeitTask {
 ```
 
 ### Wörter-Pool (500+ Wörter, OHNE Umlaute/ß):
+
 ```typescript
 const WOERTER = {
-  leicht: [ // 4-6 Buchstaben
-    'BLUME', 'SONNE', 'TIGER', 'WOLKE', 'STEIN', 'BIRNE', 'DECKE',
-    'FEUER', 'GABEL', 'HAFEN', 'INSEL', 'KARTE', 'LAMPE', 'MAUER',
-    'NADEL', 'OLIVE', 'PERLE', 'REGEN', 'STUHL', 'TISCH', 'WELLE',
-    'ZANGE', 'DRAHT', 'MILCH', 'KRAFT', 'GRUND', 'PFLUG', 'STROM',
+  leicht: [
+    // 4-6 Buchstaben
+    "BLUME",
+    "SONNE",
+    "TIGER",
+    "WOLKE",
+    "STEIN",
+    "BIRNE",
+    "DECKE",
+    "FEUER",
+    "GABEL",
+    "HAFEN",
+    "INSEL",
+    "KARTE",
+    "LAMPE",
+    "MAUER",
+    "NADEL",
+    "OLIVE",
+    "PERLE",
+    "REGEN",
+    "STUHL",
+    "TISCH",
+    "WELLE",
+    "ZANGE",
+    "DRAHT",
+    "MILCH",
+    "KRAFT",
+    "GRUND",
+    "PFLUG",
+    "STROM",
     // ... 100+ weitere
   ],
-  mittel: [ // 7-9 Buchstaben
-    'MEDIZIN', 'CHEMIKER', 'BIOLOGIE', 'ANATOMIE', 'DIAGNOSE',
-    'THERAPIE', 'CHIRURGE', 'SKELETT', 'MEMBRAN', 'PROTEIN',
-    'REAKTION', 'MOLEKUEL', 'ELEMENT', 'SPINDEL', 'HORMON',
-    'SYNAPSE', 'NEURITIS', 'PLANKTON', 'MINERAL', 'KRISTALL',
+  mittel: [
+    // 7-9 Buchstaben
+    "MEDIZIN",
+    "CHEMIKER",
+    "BIOLOGIE",
+    "ANATOMIE",
+    "DIAGNOSE",
+    "THERAPIE",
+    "CHIRURGE",
+    "SKELETT",
+    "MEMBRAN",
+    "PROTEIN",
+    "REAKTION",
+    "MOLEKUEL",
+    "ELEMENT",
+    "SPINDEL",
+    "HORMON",
+    "SYNAPSE",
+    "NEURITIS",
+    "PLANKTON",
+    "MINERAL",
+    "KRISTALL",
     // ... 200+ weitere
   ],
-  schwer: [ // 10+ Buchstaben
-    'PHOTOSYNTHESE', 'NEUROCHIRURGIE', 'ELEKTRIZITAET',
-    'CHROMOSOMEN', 'STOFFWECHSEL', 'THERMODYNAMIK',
-    'DOPPELHELIX', 'DIFFUSION', 'OSMOTISCH', 'KATALYSATOR',
-    'REDUKTION', 'OXIDATION', 'POLARISATION',
+  schwer: [
+    // 10+ Buchstaben
+    "PHOTOSYNTHESE",
+    "NEUROCHIRURGIE",
+    "ELEKTRIZITAET",
+    "CHROMOSOMEN",
+    "STOFFWECHSEL",
+    "THERMODYNAMIK",
+    "DOPPELHELIX",
+    "DIFFUSION",
+    "OSMOTISCH",
+    "KATALYSATOR",
+    "REDUKTION",
+    "OXIDATION",
+    "POLARISATION",
     // ... 100+ weitere
-  ]
+  ],
 };
 ```
 
 ### Generator:
+
 ```typescript
-function generateWortfluessigkeit(difficulty: 1|2|3): WortfluessigkeitTask {
+function generateWortfluessigkeit(difficulty: 1 | 2 | 3): WortfluessigkeitTask {
   // 1. Wähle zufälliges Wort aus Pool
   // 2. Mische die Buchstaben zufällig
   // 3. Generiere 4 falsche Anfangsbuchstaben (aus dem Wort, aber nicht der richtige)
@@ -393,18 +578,21 @@ function generateWortfluessigkeit(difficulty: 1|2|3): WortfluessigkeitTask {
 ## 4.5 IMPLIKATIONEN ERKENNEN (exakt wie MedAT — NUR MedAT-H!)
 
 ### Offizielles Format:
+
 - **10 Aufgaben in 10 Minuten** (60 Sek pro Aufgabe)
 - **Kategorische Syllogismen** (NICHT "Wenn-Dann"!)
 - Zwei Prämissen mit Quantoren
 - 5 Antwortoptionen (A-E)
 
 ### Die 4 Quantor-Formen:
+
 1. **"Alle A sind B"** — Universal bejahend (A)
 2. **"Einige A sind B"** — Partikulär bejahend (I)
 3. **"Alle A sind keine B"** = "Kein A ist B" — Universal verneinend (E)
 4. **"Einige A sind keine B"** — Partikulär verneinend (O)
 
 ### Die 5 Antwortoptionen (IMMER dieses Schema):
+
 - A) Alle C sind A / Einige C sind A / etc.
 - B) ...
 - C) ...
@@ -412,49 +600,51 @@ function generateWortfluessigkeit(difficulty: 1|2|3): WortfluessigkeitTask {
 - E) **Keine der Schlussfolgerungen ist richtig**
 
 ### Die 19 gültigen Modi:
+
 ```typescript
 const GUELTIGE_MODI = [
   // Figur 1 (M-P, S-M → S-P)
-  { p1: 'Alle M sind P', p2: 'Alle S sind M', conclusion: 'Alle S sind P' },        // Barbara
-  { p1: 'Alle M sind keine P', p2: 'Alle S sind M', conclusion: 'Alle S sind keine P' }, // Celarent
-  { p1: 'Alle M sind P', p2: 'Einige S sind M', conclusion: 'Einige S sind P' },    // Darii
-  { p1: 'Alle M sind keine P', p2: 'Einige S sind M', conclusion: 'Einige S sind keine P' }, // Ferio
+  { p1: "Alle M sind P", p2: "Alle S sind M", conclusion: "Alle S sind P" }, // Barbara
+  { p1: "Alle M sind keine P", p2: "Alle S sind M", conclusion: "Alle S sind keine P" }, // Celarent
+  { p1: "Alle M sind P", p2: "Einige S sind M", conclusion: "Einige S sind P" }, // Darii
+  { p1: "Alle M sind keine P", p2: "Einige S sind M", conclusion: "Einige S sind keine P" }, // Ferio
 
   // Figur 2 (P-M, S-M → S-P)
-  { p1: 'Alle P sind keine M', p2: 'Alle S sind M', conclusion: 'Alle S sind keine P' }, // Cesare
-  { p1: 'Alle P sind M', p2: 'Alle S sind keine M', conclusion: 'Alle S sind keine P' }, // Camestres
-  { p1: 'Alle P sind keine M', p2: 'Einige S sind M', conclusion: 'Einige S sind keine P' }, // Festino
-  { p1: 'Alle P sind M', p2: 'Einige S sind keine M', conclusion: 'Einige S sind keine P' }, // Baroco
+  { p1: "Alle P sind keine M", p2: "Alle S sind M", conclusion: "Alle S sind keine P" }, // Cesare
+  { p1: "Alle P sind M", p2: "Alle S sind keine M", conclusion: "Alle S sind keine P" }, // Camestres
+  { p1: "Alle P sind keine M", p2: "Einige S sind M", conclusion: "Einige S sind keine P" }, // Festino
+  { p1: "Alle P sind M", p2: "Einige S sind keine M", conclusion: "Einige S sind keine P" }, // Baroco
 
   // Figur 3 (M-P, M-S → S-P)
-  { p1: 'Alle M sind P', p2: 'Alle M sind S', conclusion: 'Einige S sind P' },      // Darapti
-  { p1: 'Alle M sind keine P', p2: 'Alle M sind S', conclusion: 'Einige S sind keine P' }, // Felapton
-  { p1: 'Einige M sind P', p2: 'Alle M sind S', conclusion: 'Einige S sind P' },    // Disamis
-  { p1: 'Alle M sind P', p2: 'Einige M sind S', conclusion: 'Einige S sind P' },    // Datisi
-  { p1: 'Einige M sind keine P', p2: 'Alle M sind S', conclusion: 'Einige S sind keine P' }, // Bocardo
-  { p1: 'Alle M sind keine P', p2: 'Einige M sind S', conclusion: 'Einige S sind keine P' }, // Ferison
+  { p1: "Alle M sind P", p2: "Alle M sind S", conclusion: "Einige S sind P" }, // Darapti
+  { p1: "Alle M sind keine P", p2: "Alle M sind S", conclusion: "Einige S sind keine P" }, // Felapton
+  { p1: "Einige M sind P", p2: "Alle M sind S", conclusion: "Einige S sind P" }, // Disamis
+  { p1: "Alle M sind P", p2: "Einige M sind S", conclusion: "Einige S sind P" }, // Datisi
+  { p1: "Einige M sind keine P", p2: "Alle M sind S", conclusion: "Einige S sind keine P" }, // Bocardo
+  { p1: "Alle M sind keine P", p2: "Einige M sind S", conclusion: "Einige S sind keine P" }, // Ferison
 
   // Figur 4 (P-M, M-S → S-P)
-  { p1: 'Alle P sind M', p2: 'Alle M sind S', conclusion: 'Einige S sind P' },      // Bramantip
-  { p1: 'Alle P sind keine M', p2: 'Alle M sind S', conclusion: 'Einige S sind keine P' }, // Fesapo
-  { p1: 'Alle P sind M', p2: 'Alle M sind keine S', conclusion: 'Alle S sind keine P' }, // Camenes
-  { p1: 'Einige P sind M', p2: 'Alle M sind S', conclusion: 'Einige S sind P' },    // Dimaris
-  { p1: 'Alle P sind keine M', p2: 'Einige M sind S', conclusion: 'Einige S sind keine P' }, // Fresison
+  { p1: "Alle P sind M", p2: "Alle M sind S", conclusion: "Einige S sind P" }, // Bramantip
+  { p1: "Alle P sind keine M", p2: "Alle M sind S", conclusion: "Einige S sind keine P" }, // Fesapo
+  { p1: "Alle P sind M", p2: "Alle M sind keine S", conclusion: "Alle S sind keine P" }, // Camenes
+  { p1: "Einige P sind M", p2: "Alle M sind S", conclusion: "Einige S sind P" }, // Dimaris
+  { p1: "Alle P sind keine M", p2: "Einige M sind S", conclusion: "Einige S sind keine P" }, // Fresison
 ];
 ```
 
 ### Generator:
+
 ```typescript
-function generateImplikation(difficulty: 1|2|3): ImplikationTask {
+function generateImplikation(difficulty: 1 | 2 | 3): ImplikationTask {
   // Pool von Begriffen (abstrakt, NICHT Alltagswissen!)
   const begriffe = [
-    ['Seen', 'Meere', 'Flüsse'],
-    ['Metalle', 'Elemente', 'Leiter'],
-    ['Säugetiere', 'Tiere', 'Warmblüter'],
-    ['Planeten', 'Himmelskörper', 'Sterne'],
-    ['Quadrate', 'Rechtecke', 'Parallelogramme'],
-    ['Rosen', 'Blumen', 'Pflanzen'],
-    ['Ärzte', 'Akademiker', 'Mediziner'],
+    ["Seen", "Meere", "Flüsse"],
+    ["Metalle", "Elemente", "Leiter"],
+    ["Säugetiere", "Tiere", "Warmblüter"],
+    ["Planeten", "Himmelskörper", "Sterne"],
+    ["Quadrate", "Rechtecke", "Parallelogramme"],
+    ["Rosen", "Blumen", "Pflanzen"],
+    ["Ärzte", "Akademiker", "Mediziner"],
     // ... 30+ Tripel
   ];
 
@@ -471,6 +661,7 @@ function generateImplikation(difficulty: 1|2|3): ImplikationTask {
 ```
 
 ### Beispielaufgabe:
+
 ```
 Prämisse 1: Alle Seen sind Meere.
 Prämisse 2: Einige Seen sind Flüsse.
@@ -483,6 +674,7 @@ E) Keine der Schlussfolgerungen ist richtig
 ```
 
 ### WICHTIG:
+
 - Prüflinge müssen Alltagswissen IGNORIEREN ("Seen sind KEINE Meere" — irrelevant!)
 - Die Prämissen gelten als WAHR, unabhängig von der Realität
 - Zeige nach jeder Aufgabe: Erklärung mit Venn-Diagramm welcher Modus vorliegt
@@ -490,10 +682,13 @@ E) Keine der Schlussfolgerungen ist richtig
 ---
 
 # ═══════════════════════════════════════════
+
 # TEIL 5: TV — TEXTVERSTÄNDNIS (MedAT-H)
+
 # ═══════════════════════════════════════════
 
 ### Offizielles Format:
+
 - **5 Texte** mit insgesamt **12 Fragen**
 - **35 Minuten** gesamt
 - **5 Antwortoptionen (A-E)** pro Frage
@@ -502,23 +697,29 @@ E) Keine der Schlussfolgerungen ist richtig
 - Antworten NUR basierend auf Textinhalt, NICHT Vorwissen
 
 ### Implementierung:
+
 Erstelle mindestens **10 verschiedene Textsets** (je 5 Texte mit 12 Fragen):
+
 - Set 1-3: Leicht (kürzere Texte, direkte Fragen)
 - Set 4-7: Mittel (längere Texte, Schlussfolgerungen nötig)
 - Set 8-10: Schwer (komplexe Texte, indirekte Fragen)
 
 ### Text-Themen (abwechslungsreich!):
+
 Naturwissenschaft, Geschichte, Kultur, Technologie, Philosophie, Medizin, Alltagsphänomene, Soziologie, Linguistik, Umwelt
 
 ---
 
 # ═══════════════════════════════════════════
+
 # TEIL 6: SEK — SOZIAL-EMOTIONALE KOMPETENZEN
+
 # ═══════════════════════════════════════════
 
 ## 6.1 EMOTIONEN ERKENNEN (exakt wie MedAT)
 
 ### Offizielles Format:
+
 - **14 Aufgaben in 21 Minuten** (~90 Sek pro Aufgabe)
 - Rein **textbasiert** (KEINE Bilder/Fotos!)
 - Situationsbeschreibung (1-3 Sätze)
@@ -527,29 +728,48 @@ Naturwissenschaft, Geschichte, Kultur, Technologie, Philosophie, Medizin, Alltag
 - **Alles-oder-Nichts:** Alle 5 richtig = 1 Punkt, sonst 0
 
 ### Implementierung:
+
 ```typescript
 interface EmotionenErkennenTask {
-  situation: string;  // "Maria erfährt, dass..."
+  situation: string; // "Maria erfährt, dass..."
   emotionen: {
-    name: string;     // z.B. "Freude", "Ärger", "Scham"
-    correct: 'wahrscheinlich' | 'unwahrscheinlich';
-  }[];  // GENAU 5 Emotionen
+    name: string; // z.B. "Freude", "Ärger", "Scham"
+    correct: "wahrscheinlich" | "unwahrscheinlich";
+  }[]; // GENAU 5 Emotionen
 }
 
 const EMOTIONEN_POOL = [
-  'Freude', 'Trauer', 'Ärger', 'Angst', 'Ekel', 'Überraschung',
-  'Scham', 'Schuld', 'Stolz', 'Neid', 'Eifersucht', 'Mitgefühl',
-  'Erleichterung', 'Enttäuschung', 'Hoffnung', 'Dankbarkeit',
-  'Verachtung', 'Bewunderung', 'Liebe', 'Langeweile'
+  "Freude",
+  "Trauer",
+  "Ärger",
+  "Angst",
+  "Ekel",
+  "Überraschung",
+  "Scham",
+  "Schuld",
+  "Stolz",
+  "Neid",
+  "Eifersucht",
+  "Mitgefühl",
+  "Erleichterung",
+  "Enttäuschung",
+  "Hoffnung",
+  "Dankbarkeit",
+  "Verachtung",
+  "Bewunderung",
+  "Liebe",
+  "Langeweile",
 ];
 ```
 
 ### Erstelle mindestens **50 Situationen** (14 pro Übungs-Set):
+
 - Medizinische Szenarien (Arzt-Patient, Prüfung, Diagnose)
 - Alltags-Szenarien (Arbeit, Beziehung, Familie, Freundschaft)
 - Ethische Dilemmata (Entscheidungskonflikte)
 
 ### UI:
+
 - Situation als Text oben
 - 5 Emotionen untereinander
 - Jede mit Toggle: "wahrscheinlich ↔ unwahrscheinlich"
@@ -560,6 +780,7 @@ const EMOTIONEN_POOL = [
 ## 6.2 EMOTIONEN REGULIEREN (exakt wie MedAT)
 
 ### Offizielles Format:
+
 - **12 Aufgaben in 18 Minuten** (~90 Sek pro Aufgabe)
 - Situation: Person erlebt eine **NEGATIVE Emotion**
 - Ziel der Person wird beschrieben
@@ -568,6 +789,7 @@ const EMOTIONEN_POOL = [
 - **Prozentuale Bewertung** (nicht Alles-oder-Nichts!)
 
 ### Implementierung:
+
 ```typescript
 interface EmotionenRegulierenTask {
   situation: string;       // Szenario mit negativer Emotion
@@ -600,6 +822,7 @@ interface EmotionenRegulierenTask {
 ## 6.3 SOZIALES ENTSCHEIDEN (exakt wie MedAT)
 
 ### Offizielles Format:
+
 - **14 Aufgaben in 21 Minuten** (~90 Sek pro Aufgabe)
 - Ethisches/moralisches Dilemma (oft medizinischer Kontext)
 - **5 Aussagen/Handlungen**
@@ -609,6 +832,7 @@ interface EmotionenRegulierenTask {
 - Postkonventionelles Denken (universelle Prinzipien) = höchste Punktzahl
 
 ### Implementierung:
+
 ```typescript
 interface SozialesEntscheidenTask {
   dilemma: string;         // Ethisches Szenario
@@ -633,6 +857,7 @@ interface SozialesEntscheidenTask {
 ```
 
 ### UI für Ranking:
+
 - Drag-and-Drop Interface: 5 Aussagen in die richtige Reihenfolge bringen
 - ODER: Dropdown A-E neben jeder Aussage (jeder Buchstabe nur einmal)
 - Visuelle Warnung wenn ein Rang doppelt vergeben wird
@@ -642,53 +867,56 @@ interface SozialesEntscheidenTask {
 ---
 
 # ═══════════════════════════════════════════
+
 # TEIL 7: TESTSIMULATIONEN (1 → 5)
+
 # ═══════════════════════════════════════════
 
 ### Authentische Simulationsstruktur:
+
 ```typescript
 const SIMULATION = {
-  name: 'MedAT-H Vollsimulation',
+  name: "MedAT-H Vollsimulation",
   sections: [
     {
-      name: 'BMS — Basiskenntnistest',
+      name: "BMS — Basiskenntnistest",
       subsections: [
-        { name: 'Biologie', questions: 40, time: 30 },
-        { name: 'Chemie', questions: 24, time: 18 },
-        { name: 'Physik', questions: 18, time: 16 },
-        { name: 'Mathematik', questions: 12, time: 11 },
+        { name: "Biologie", questions: 40, time: 30 },
+        { name: "Chemie", questions: 24, time: 18 },
+        { name: "Physik", questions: 18, time: 16 },
+        { name: "Mathematik", questions: 12, time: 11 },
       ],
       totalQuestions: 94,
       totalTime: 75, // Minuten
-      weight: 0.40,
+      weight: 0.4,
     },
     {
-      name: 'TV — Textverständnis',
+      name: "TV — Textverständnis",
       questions: 12, // aus 5 Texten
       time: 35,
-      weight: 0.10,
+      weight: 0.1,
     },
     {
-      name: 'KFF — Kognitive Fähigkeiten',
+      name: "KFF — Kognitive Fähigkeiten",
       subsections: [
-        { name: 'Zahlenfolgen', questions: 10, time: 15 },
-        { name: 'Gedächtnis & Merkfähigkeit — Lernphase', questions: 0, time: 8 },
+        { name: "Zahlenfolgen", questions: 10, time: 15 },
+        { name: "Gedächtnis & Merkfähigkeit — Lernphase", questions: 0, time: 8 },
         // === PAUSE / ANDERE SEKTIONEN DAZWISCHEN ===
-        { name: 'Figuren zusammensetzen', questions: 15, time: 20 },
-        { name: 'Gedächtnis & Merkfähigkeit — Abfrage', questions: 25, time: 15 },
-        { name: 'Wortflüssigkeit', questions: 15, time: 20 },
-        { name: 'Implikationen erkennen', questions: 10, time: 10 },
+        { name: "Figuren zusammensetzen", questions: 15, time: 20 },
+        { name: "Gedächtnis & Merkfähigkeit — Abfrage", questions: 25, time: 15 },
+        { name: "Wortflüssigkeit", questions: 15, time: 20 },
+        { name: "Implikationen erkennen", questions: 10, time: 10 },
       ],
-      weight: 0.40,
+      weight: 0.4,
     },
     {
-      name: 'SEK — Sozial-emotionale Kompetenzen',
+      name: "SEK — Sozial-emotionale Kompetenzen",
       subsections: [
-        { name: 'Emotionen erkennen', questions: 14, time: 21 },
-        { name: 'Emotionen regulieren', questions: 12, time: 18 },
-        { name: 'Soziales Entscheiden', questions: 14, time: 21 },
+        { name: "Emotionen erkennen", questions: 14, time: 21 },
+        { name: "Emotionen regulieren", questions: 12, time: 18 },
+        { name: "Soziales Entscheiden", questions: 14, time: 21 },
       ],
-      weight: 0.10,
+      weight: 0.1,
     },
   ],
   totalTime: 250, // ~4 Stunden
@@ -696,6 +924,7 @@ const SIMULATION = {
 ```
 
 ### Features:
+
 - **Authentischer Timer** mit Countdown pro Sektion
 - **Keine Rücknavigation** innerhalb einer Sektion
 - **Pause NUR zwischen Sektionen**
@@ -712,16 +941,20 @@ const SIMULATION = {
 ---
 
 # ═══════════════════════════════════════════
+
 # TEIL 8: KARTEIKARTEN UPGRADE
+
 # ═══════════════════════════════════════════
 
 ### 8.1 Mehr Karten (48 → 500+):
+
 - Biologie: 200 Karten
 - Chemie: 120 Karten
 - Physik: 100 Karten
 - Mathematik: 80 Karten
 
 ### 8.2 Vier Bewertungsstufen (wie Anki):
+
 - **Nochmal** (Intervall: < 1 Min)
 - **Schwer** (Intervall: < 10 Min)
 - **Gut** (Intervall: 1 Tag)
@@ -730,10 +963,13 @@ const SIMULATION = {
 ---
 
 # ═══════════════════════════════════════════
+
 # TEIL 9: SVG-DIAGRAMME OPTIMIEREN
+
 # ═══════════════════════════════════════════
 
 Für ALLE SVG-Diagramme:
+
 1. Text NEBEN Elementen, nicht AUF ihnen
 2. Leader Lines (dünne Linien) von Element zum Label
 3. Weißer Hintergrund hinter Labels
@@ -744,7 +980,9 @@ Für ALLE SVG-Diagramme:
 ---
 
 # ═══════════════════════════════════════════
+
 # TEIL 10: QUALITÄTSSICHERUNG
+
 # ═══════════════════════════════════════════
 
 Nach ALLEN Änderungen:
@@ -755,6 +993,7 @@ npm run dev     # App muss starten
 ```
 
 ### Checkliste:
+
 - [ ] Karteikarten flippen korrekt
 - [ ] BMS-Fragen: ALLE haben 5 Optionen (A-E)
 - [ ] BMS-Unterkapitel: 2+ Abschnitte mit Überschriften
@@ -775,6 +1014,7 @@ npm run dev     # App muss starten
 ---
 
 ## REIHENFOLGE:
+
 1. ⚡ Karteikarten Flip-Bug (5 Min)
 2. 📝 BMS Fragen auf 5 Optionen updaten
 3. 📝 BMS Content-Struktur (Textwände aufteilen)

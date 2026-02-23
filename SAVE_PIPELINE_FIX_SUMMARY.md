@@ -3,6 +3,7 @@
 ## Problem Identified
 
 After the subchapter overwrite fix, **BMS page was not updating** when chapters were saved because:
+
 1. BMS component loaded chapters only on initial render (not reactive)
 2. No localStorage change detection
 3. React didn't know when to re-render with new data
@@ -14,21 +15,23 @@ After the subchapter overwrite fix, **BMS page was not updating** when chapters 
 **File: `/Users/Luki/medmaster/src/pages/BMS.tsx`**
 
 **Added:**
+
 - `useState` for `storageVersion` to track localStorage changes
 - `useEffect` to listen for storage events and poll for changes every second
 - `useMemo` hooks to reactively compute chapters when storage changes
 
 **Key Code:**
+
 ```typescript
-const [storageVersion, setStorageVersion] = useState<string>('');
+const [storageVersion, setStorageVersion] = useState<string>("");
 
 useEffect(() => {
   // Listen for storage events (from other tabs/windows)
-  window.addEventListener('storage', handleStorageChange);
-  
+  window.addEventListener("storage", handleStorageChange);
+
   // Poll localStorage every second to detect changes
   const checkInterval = setInterval(() => {
-    const stored = localStorage.getItem('bms-chapters');
+    const stored = localStorage.getItem("bms-chapters");
     if (stored) {
       const parsed = JSON.parse(stored);
       if (parsed.lastUpdated !== storageVersion) {
@@ -36,9 +39,9 @@ useEffect(() => {
       }
     }
   }, 1000);
-  
+
   return () => {
-    window.removeEventListener('storage', handleStorageChange);
+    window.removeEventListener("storage", handleStorageChange);
     clearInterval(checkInterval);
   };
 }, [storageVersion]);
@@ -63,6 +66,7 @@ const chaptersForSelectedSubject = useMemo(() => {
 **File: `/Users/Luki/medmaster/src/lib/bmsStorage.ts`**
 
 **Key Features:**
+
 - ✅ Creates chapter if it doesn't exist
 - ✅ Appends new subchapters (doesn't replace array)
 - ✅ Updates existing subchapters by ID
@@ -70,32 +74,37 @@ const chaptersForSelectedSubject = useMemo(() => {
 - ✅ **Updates `lastUpdated` timestamp** (triggers BMS re-render)
 
 **Implementation:**
+
 ```typescript
-export function saveSubchapter(chapterId: string, subchapter: Unterkapitel, chapterData?: Partial<Kapitel>): void {
+export function saveSubchapter(
+  chapterId: string,
+  subchapter: Unterkapitel,
+  chapterData?: Partial<Kapitel>
+): void {
   // 1. Load all chapters
   const existing = loadAllChapters();
   let chapterIndex = existing.findIndex((c) => c.id === chapterId);
-  
+
   // 2. Create chapter if it doesn't exist
   if (chapterIndex < 0) {
     const newChapter: Kapitel = {
       id: chapterId,
-      title: chapterData.title || 'Untitled Chapter',
-      subject: chapterData.subject || 'biologie',
-      icon: chapterData.icon || '📚',
-      estimatedTime: chapterData.estimatedTime || '',
-      unterkapitel: [subchapter]
+      title: chapterData.title || "Untitled Chapter",
+      subject: chapterData.subject || "biologie",
+      icon: chapterData.icon || "📚",
+      estimatedTime: chapterData.estimatedTime || "",
+      unterkapitel: [subchapter],
     };
     existing.push(newChapter);
     chapterIndex = existing.length - 1;
   }
-  
+
   // 3. Get current subchapters (create copy)
   const subchapters = [...(chapter.unterkapitel || [])];
-  
+
   // 4. Find existing subchapter by ID
   const existingIndex = subchapters.findIndex((uk) => uk.id === subchapterWithId.id);
-  
+
   if (existingIndex >= 0) {
     // UPDATE: Replace only this subchapter
     subchapters[existingIndex] = subchapterWithId;
@@ -103,21 +112,21 @@ export function saveSubchapter(chapterId: string, subchapter: Unterkapitel, chap
     // APPEND: Add new subchapter to array
     subchapters.push(subchapterWithId);
   }
-  
+
   // 5. Update chapter with FULL subchapters array
   existing[chapterIndex] = {
     ...chapter,
     ...chapterData,
-    unterkapitel: subchapters // FULL array
+    unterkapitel: subchapters, // FULL array
   };
-  
+
   // 6. Persist with updated timestamp (triggers BMS re-render)
   const stored: StoredChapters = {
     version: STORAGE_VERSION,
     chapters: existing,
     lastUpdated: new Date().toISOString(), // ⚡ KEY: Triggers BMS re-render
   };
-  
+
   localStorage.setItem(STORAGE_KEY, JSON.stringify(stored));
 }
 ```
@@ -127,6 +136,7 @@ export function saveSubchapter(chapterId: string, subchapter: Unterkapitel, chap
 **File: `/Users/Luki/medmaster/src/pages/KapitelEditor.tsx`**
 
 **Flow:**
+
 1. Save subchapter to localStorage FIRST
 2. Reload chapter AFTER saving to get all subchapters
 3. Generate file code with ALL subchapters

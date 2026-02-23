@@ -44,21 +44,26 @@ export function useAuth() {
       return;
     }
 
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      setUser(session?.user ?? null);
-      if (session?.user) {
-        fetchProfile(session.user.id);
-        startAutoSync(session.user.id);
-        startMainSync(session.user.id);
-      } else {
+    supabase.auth
+      .getSession()
+      .then(({ data: { session } }) => {
+        setSession(session);
+        setUser(session?.user ?? null);
+        if (session?.user) {
+          fetchProfile(session.user.id);
+          startAutoSync(session.user.id);
+          startMainSync(session.user.id);
+        } else {
+          setLoading(false);
+        }
+      })
+      .catch(() => {
         setLoading(false);
-      }
-    }).catch(() => {
-      setLoading(false);
-    });
+      });
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
       setUser(session?.user ?? null);
       if (session?.user) {
@@ -165,8 +170,18 @@ export function useAuth() {
   const isPro = tier === "pro";
 
   return {
-    user, profile, session, loading,
-    isAuthenticated, tier, isPremium, isPro,
-    signUp, signIn, signInWithGoogle, signOut, resetPassword,
+    user,
+    profile,
+    session,
+    loading,
+    isAuthenticated,
+    tier,
+    isPremium,
+    isPro,
+    signUp,
+    signIn,
+    signInWithGoogle,
+    signOut,
+    resetPassword,
   };
 }

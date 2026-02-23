@@ -97,32 +97,33 @@ const set1: TVTextSet = {
         },
         {
           id: "tv1-t1-q4",
-          question: "Welche Quellen für Mikroplastik im Meer nennt der Text?",
+          question:
+            "Welche gesundheitlichen Folgen werden im Text mit chronischem Schlafmangel in Verbindung gebracht?",
           options: [
-            "Nur industrielle Abwässer aus Kunststofffabriken",
-            "Ausschließlich der Reifenabrieb von Kraftfahrzeugen",
-            "Zerfall größerer Kunststoffteile durch UV-Strahlung und mechanische Einwirkung sowie synthetische Textilfasern beim Waschen",
-            "Vor allem Kosmetikprodukte mit Microbeads und Kläranlagenausflüsse",
-            "Primär landwirtschaftliche Düngemittel mit Kunststoffzusatzstoffen",
-          ],
-          correctOption: 2,
-          explanation:
-            "Der Text nennt als Quellen: „Große Kunststoffteile zerfallen durch UV-Strahlung und mechanische Einwirkung in immer kleinere Partikel. Zusätzlich gelangen synthetische Fasern aus Textilien beim Waschen ins Abwasser.“",
-        },
-        {
-          id: "tv1-t1-q5",
-          question: "Welche Auswirkung von Mikroplastik auf Meerestiere beschreibt der Text?",
-          options: [
-            "Mikroplastik führt bei Fischen zu einer erhöhten Fortpflanzungsrate",
-            "Meerestiere verwechseln Mikroplastik mit Nahrung, was zu Verletzungen des Verdauungstrakts und Anreicherung von Schadstoffen führt",
-            "Mikroplastik verbessert die Schwimmfähigkeit von Meerestieren durch geringere Wasserreibung",
-            "Fische nutzen Mikroplastikpartikel als Orientierungshilfe bei der Migration",
-            "Mikroplastik hat laut Text keine nachgewiesene Wirkung auf Meerestiere",
+            "Nur Diabetes und Herzkrankheiten",
+            "Herz-Kreislauf-Erkrankungen, Diabetes, Adipositas und psychische St\u00F6rungen",
+            "Ausschlie\u00DFlich psychische Erkrankungen",
+            "Vor allem Erkrankungen des Immunsystems",
+            "Nur Schlaflosigkeit",
           ],
           correctOption: 1,
           explanation:
-            "Im Text heißt es: „Meerestiere verwechseln die winzigen Partikel häufig mit Nahrung. Dies kann zu Verletzungen des Verdauungstrakts führen und Schadstoffe, die sich an Mikroplastik anlagern, können sich in der Nahrungskette anreichern.“",
-        }
+            "Der Text nennt: Herz-Kreislauf-Erkrankungen, Diabetes, Adipositas und psychische St\u00F6rungen.",
+        },
+        {
+          id: "tv1-t1-q5",
+          question: "Welche Funktion schreibt der Text dem REM-Schlaf zu?",
+          options: [
+            "Aussch\u00FCttung von Wachstumshormonen",
+            "Hemmung der Melatoninproduktion",
+            "Verarbeitung von Erinnerungen und Lernen",
+            "Regulierung der K\u00F6rpertemperatur",
+            "St\u00E4rkung des Immunsystems",
+          ],
+          correctOption: 2,
+          explanation:
+            "Der Text: \u201EDer REM-Schlaf spielt eine zentrale Rolle bei der Verarbeitung von Erinnerungen und dem Lernen.\u201C",
+        },
       ],
     },
     {
@@ -187,32 +188,34 @@ const set1: TVTextSet = {
         },
         {
           id: "tv1-t2-q4",
-          question: "Wie weißen Astronomen laut Text nach, dass Dunkle Materie existiert, ohne sie direkt zu sehen?",
+          question:
+            "Welche Religionen verbreiteten sich laut Text \u00FCber die Seidenstra\u00DFe?",
           options: [
-            "Sie haben Dunkle Materie mit Hilfe von Röntgensatelliten fotografiert",
-            "Sie messen die Wärmeabstrahlung der Dunklen Materie im Infrarotbereich",
-            "Sie beobachten ihre Gravitationswirkung auf sichtbare Materie, z. B. durch die Rotation von Galaxien und Gravitationslinseneffekte",
-            "Sie analysieren die chemische Zusammensetzung des Universums durch Spektroskopie",
-            "Sie berechnen die Dunkle Materie anhand der kosmischen Hintergrundstrahlung direkt",
+            "Christentum und Judentum",
+            "Hinduismus und Zoroastrismus",
+            "Nur der Buddhismus von Indien nach China",
+            "Der Buddhismus von Indien nach China und Zentralasien sowie der Islam",
+            "Keine \u2013 die Route war rein wirtschaftlich",
           ],
-          correctOption: 2,
+          correctOption: 3,
           explanation:
-            "Der Text erklärt: „Obwohl Dunkle Materie nicht direkt beobachtet werden kann, zeigen ihre Gravitationswirkungen – etwa in der Rotationsgeschwindigkeit von Galaxien oder dem Gravitationslinseneffekt – dass sie existieren muss.“",
+            "Der Text nennt den Buddhismus (Indien\u2192China/Zentralasien) und den Islam.",
         },
         {
           id: "tv1-t2-q5",
-          question: "Was sagt der Text über den Anteil Dunkler Materie am Universum?",
+          question:
+            "Welche negative Rolle spielte die Seidenstra\u00DFe laut Text au\u00DFer dem Handel?",
           options: [
-            "Dunkle Materie macht etwa 5 Prozent des Universums aus",
-            "Dunkle Materie macht etwa 27 Prozent des Universums aus, während gewöhnliche Materie nur etwa 5 Prozent ausmacht",
-            "Dunkle Materie und Dunkle Energie zusammen machen etwa 27 Prozent aus",
-            "Dunkle Materie macht über 70 Prozent des Universums aus",
-            "Der genaue Anteil Dunkler Materie ist noch vollständig unbekannt",
+            "Sie verursachte politische Kriege zwischen Ost und West",
+            "Sie f\u00FChrte zur Verbreitung von Krankheitserregern, darunter mutma\u00DFlich die Pest im 14. Jahrhundert",
+            "Sie schw\u00E4chte die Wirtschaft der Anrainerstaaten",
+            "Sie verhinderte technologischen Fortschritt durch Handelsmonopole",
+            "Sie verbreitete ausschlie\u00DFlich religi\u00F6se Konflikte",
           ],
           correctOption: 1,
           explanation:
-            "Im Text steht: „Wissenschaftler schätzen, dass Dunkle Materie etwa 27 Prozent des gesamten Universums ausmacht, während die gewöhnliche, sichtbare Materie nur etwa 5 Prozent umfasst.“",
-        }
+            "Der Text: \u201EKrankheitserreger reisten ebenfalls entlang dieser Routen \u2013 die Pest gelangte vermutlich \u00FCber Handelswege aus Zentralasien nach Europa.\u201C",
+        },
       ],
     },
     {
@@ -259,46 +262,46 @@ const set1: TVTextSet = {
         },
         {
           id: "tv1-t3-q3",
-          question: "Wie funktioniert CRISPR-Cas9 laut Text?",
+          question:
+            "Welche ber\u00FChmten Pers\u00F6nlichkeiten nennt der Text als regelm\u00E4\u00DFige Kaffeehausg\u00E4ste?",
           options: [
-            "Ein Enzym durchsucht das Erbgut zufällig und entfernt fehlerhafte Abschnitte",
-            "Ein RNA-Molekül führt das Cas9-Enzym zu einer bestimmten DNA-Sequenz, wo es den DNA-Strang durchtrennt",
-            "Ein Protein bindet an die Zellmembran und verhindert Mutationen",
-            "Ein Virus trägt gesunde Gene in die Zelle ein und ersetzt kranke Abschnitte",
-            "Ein chemischer Wirkstoff löst die Wasserstoffbrückenbindungen der DNA auf",
+            "Mozart, Beethoven und Schubert",
+            "Karl der Gro\u00DFe, Maria Theresia und Joseph II",
+            "Sigmund Freud, Arthur Schnitzler und Stefan Zweig",
+            "Adolf Loos, Gustav Klimt und Egon Schiele",
+            "Karl Lueger, Victor Adler und Georg von Sch\u00F6nerer",
           ],
-          correctOption: 1,
-          explanation:
-            "Der Text erklärt: „Ein RNA-Molekül führt das Cas9-Enzym zu einer ganz bestimmten Stelle im Erbgut, wo es den DNA-Strang präzise durchtrennt.“",
+          correctOption: 2,
+          explanation: "Der Text nennt Sigmund Freud, Arthur Schnitzler und Stefan Zweig.",
         },
         {
           id: "tv1-t3-q4",
-          question: "Welche medizinische Anwendung von CRISPR wird im Text als Beispiel genannt?",
+          question: "Was zeichnet laut Text die Atmosph\u00E4re des Wiener Kaffeehauses aus?",
           options: [
-            "Die Heilung von Krebs durch Entfernung von Tumorzellen",
-            "Die Behandlung von Alzheimer durch Reparatur von Nervenzellen",
-            "Die Korrektur von Erbkrankheiten wie Sichelzellanämie oder Mukoviszidose",
-            "Die Entwicklung von Impfstoffen gegen Viruserkrankungen",
-            "Die Verbesserung der Insulinproduktion bei Diabetes",
-          ],
-          correctOption: 2,
-          explanation:
-            "Im Text steht: „In der Medizin könnte CRISPR-Cas9 genutzt werden, um Erbkrankheiten wie Sichelzellanämie oder Mukoviszidose zu heilen, indem fehlerhafte Genabschnitte korrigiert werden.“",
-        },
-        {
-          id: "tv1-t3-q5",
-          question: "Welche ethische Bedenken gegenüber CRISPR werden im Text geäußert?",
-          options: [
-            "Die Technologie ist zu teuer und damit nicht für alle Menschen zugänglich",
-            "Eingriffe in die Keimbahn könnten vererbbare Veränderungen erzeugen und es bestehe das Risiko sogenannter Designer-Babys",
-            "Die Methode ist zu unpräzise und erzeugt zu viele unbeabsichtigte Mutationen",
-            "CRISPR könnte von Regierungen zur Massenmanipulation der Bevölkerung eingesetzt werden",
-            "Die Technologie zerstört die Biodiversität durch genetisch veränderte Organismen",
+            "Schnelle Bedienung und g\u00FCnstige Preise",
+            "Marmortische, Thonet-St\u00FChle, Zeitungsst\u00E4nder und die Erlaubnis, stundenlang zu verweilen",
+            "Laute Musik und ein lebhaftes Nachtleben",
+            "Exklusive Mitgliedschaft und reservierte Sitzpl\u00E4tze",
+            "Moderne Technik und WLAN f\u00FCr Gesch\u00E4ftsreisende",
           ],
           correctOption: 1,
           explanation:
-            "Der Text formuliert als ethische Bedenken: „Insbesondere Eingriffe in die Keimbahn – also in Eizellen, Spermien oder frühe Embryonen – sind umstritten, da solche Veränderungen an alle Nachkommen weitergegeben werden. Kritiker warnen vor dem Risiko sogenannter Designer-Babys.“",
-        }
+            "Der Text beschreibt: Marmortische, Thonet-St\u00FChle, Zeitungsst\u00E4nder und die Tradition, stundenlang verweilen zu d\u00FCrfen.",
+        },
+        {
+          id: "tv1-t3-q5",
+          question: "Was besagt der Text \u00FCber die Herkunft der Wiener Kaffeehauskultur?",
+          options: [
+            "Sie wurde von italienischen H\u00E4ndlern im 16. Jahrhundert eingef\u00FChrt",
+            "Sie entstand nach der zweiten osmanischen Belagerung Wiens 1683, als angeblich Kaffeebohnen zur\u00FCckgelassen wurden",
+            "Sie geht auf kaiserliche Dekrete Maria Theresias zur\u00FCck",
+            "Sie wurde von Wiener B\u00FCrgerlichen als Gegenmodell zum Adel entwickelt",
+            "Sie entstand erst im fr\u00FChen 20. Jahrhundert als Reaktion auf die Industrialisierung",
+          ],
+          correctOption: 1,
+          explanation:
+            "Der Text: \u201EDie Tradition reicht bis ins sp\u00E4te 17. Jahrhundert zur\u00FCck, als nach der zweiten Belagerung Wiens durch die Osmanen 1683 angeblich S\u00E4cke mit Kaffeebohnen zur\u00FCckgelassen wurden.\u201C",
+        },
       ],
     },
     {
@@ -390,7 +393,7 @@ const set1: TVTextSet = {
           correctOption: 2,
           explanation:
             "Im Text steht: „das ursprünglich vom US-Militär entwickelt wurde und seit den 1990er-Jahren auch zivil genutzt werden kann.“",
-        }
+        },
       ],
     },
     {
@@ -471,7 +474,8 @@ const set1: TVTextSet = {
         },
         {
           id: "tv1-t5-q5",
-          question: "Welche verbreitete Hypothese über das Gähnen gilt laut Text als weitgehend widerlegt?",
+          question:
+            "Welche verbreitete Hypothese über das Gähnen gilt laut Text als weitgehend widerlegt?",
           options: [
             "Gähnen dient der Kühlung des Gehirns",
             "Gähnen ist ein soziales Signal zur Kommunikation von Erschöpfung",
@@ -482,7 +486,7 @@ const set1: TVTextSet = {
           correctOption: 2,
           explanation:
             "Der Text beschreibt: „Eine weit verbreitete, aber inzwischen weitgehend widerlegte Hypothese besagt, dass Gähnen dazu dient, den Sauerstoffgehalt im Blut zu erhöhen.“",
-        }
+        },
       ],
     },
   ],
@@ -585,7 +589,7 @@ const set2: TVTextSet = {
           correctOption: 2,
           explanation:
             "Im Text steht: „der ebenfalls von Landsteiner mitentdeckt wurde und bei Schwangerschaften eine besondere Rolle spielt, wenn Mutter und Kind unterschiedliche Rhesusfaktoren haben.“",
-        }
+        },
       ],
     },
     {
@@ -677,7 +681,7 @@ const set2: TVTextSet = {
           correctOption: 1,
           explanation:
             "Der Text besagt: „der Klimawandel verschiebt die Blühzeiten von Pflanzen, sodass sie nicht mehr mit den Aktivitätszyklen der Bienen übereinstimmen.“",
-        }
+        },
       ],
     },
     {
@@ -731,7 +735,8 @@ const set2: TVTextSet = {
         },
         {
           id: "tv2-t3-q3",
-          question: "Wann erscheinen laut Text bei Kindern typischerweise die ersten verständlichen Wörter?",
+          question:
+            "Wann erscheinen laut Text bei Kindern typischerweise die ersten verständlichen Wörter?",
           options: [
             "Zwischen dem sechsten und achten Lebensmonat",
             "Zwischen dem zehnten und vierzehnten Lebensmonat",
@@ -745,7 +750,8 @@ const set2: TVTextSet = {
         },
         {
           id: "tv2-t3-q4",
-          question: "Was stellt der Text über den kindlichen Grammatikerwerb bis zum Schuleintritt fest?",
+          question:
+            "Was stellt der Text über den kindlichen Grammatikerwerb bis zum Schuleintritt fest?",
           options: [
             "Die meisten Kinder beherrschen bis zum Schuleintritt nur einfache Sätze",
             "Die Grammatik muss durch formalen Unterricht erworben werden",
@@ -770,7 +776,7 @@ const set2: TVTextSet = {
           correctOption: 1,
           explanation:
             "Im Text heißt es: „Bereits im Mutterleib können Föten Sprachlaute wahrnehmen und zeigen nach der Geburt eine Präferenz für die Stimme der Mutter.“",
-        }
+        },
       ],
     },
     {
@@ -853,7 +859,8 @@ const set2: TVTextSet = {
         },
         {
           id: "tv2-t4-q5",
-          question: "Welche Probleme entstehen laut Text durch schnelles Stadtwachstum in Entwicklungsländern?",
+          question:
+            "Welche Probleme entstehen laut Text durch schnelles Stadtwachstum in Entwicklungsländern?",
           options: [
             "Unmäßiger Ausbau des öffentlichen Nahverkehrs",
             "Zu viele Grünflächen und Parks verdrängen Wohnraum",
@@ -864,7 +871,7 @@ const set2: TVTextSet = {
           correctOption: 2,
           explanation:
             "Im Text steht: „In vielen Entwicklungsländern wachsen Städte schneller als die Infrastruktur, was zur Entstehung informeller Siedlungen führt, in denen Menschen ohne Zugang zu sauberem Wasser, Abwasserentsorgung und Elektrizität leben.“",
-        }
+        },
       ],
     },
     {
@@ -955,7 +962,7 @@ const set2: TVTextSet = {
           correctOption: 2,
           explanation:
             "Der Text besagt: „Sokrates behauptete von sich selbst, nichts zu wissen, und sah gerade in diesem Bewusstsein des eigenen Nicht-Wissens einen Vorteil gegenüber jenen, die fälschlich glaubten, im Besitz sicherer Wahrheiten zu sein.“",
-        }
+        },
       ],
     },
   ],
@@ -1036,7 +1043,8 @@ const set3: TVTextSet = {
         },
         {
           id: "tv3-t1-q4",
-          question: "Welcher Anteil der Placebo-Empfänger berichtet laut Text bei Schmerzstudien über eine deutliche Schmerzlinderung?",
+          question:
+            "Welcher Anteil der Placebo-Empfänger berichtet laut Text bei Schmerzstudien über eine deutliche Schmerzlinderung?",
           options: [
             "Bis zu 5 Prozent",
             "Bis zu 15 Prozent",
@@ -1061,7 +1069,7 @@ const set3: TVTextSet = {
           correctOption: 1,
           explanation:
             "Der Text definiert: „Der Placebo-Effekt bezeichnet die messbare Verbesserung des Gesundheitszustands eines Patienten, die nicht auf die pharmakologische Wirkung eines Medikaments zurückzuführen ist, sondern auf die Erwartungshaltung und den Glauben an die Wirksamkeit einer Behandlung.“",
-        }
+        },
       ],
     },
     {
@@ -1132,7 +1140,8 @@ const set3: TVTextSet = {
         },
         {
           id: "tv3-t2-q4",
-          question: "Was versteht man laut Text unter dem Prinzip der Verschränkung bei Quantencomputern?",
+          question:
+            "Was versteht man laut Text unter dem Prinzip der Verschränkung bei Quantencomputern?",
           options: [
             "Dass Qubits physisch miteinander verdrahtet werden müssen",
             "Zwei verschränkte Qubits sind so verbunden, dass der Zustand des einen den Zustand des anderen unmittelbar beeinflusst, unabhängig von der räumlichen Entfernung",
@@ -1146,7 +1155,8 @@ const set3: TVTextSet = {
         },
         {
           id: "tv3-t2-q5",
-          question: "Bei welcher Temperatur müssen Quantencomputer laut Text in der Regel betrieben werden?",
+          question:
+            "Bei welcher Temperatur müssen Quantencomputer laut Text in der Regel betrieben werden?",
           options: [
             "Bei Raumtemperatur (etwa 20 Grad Celsius)",
             "Bei 0 Grad Celsius (Gefrierpunkt)",
@@ -1157,7 +1167,7 @@ const set3: TVTextSet = {
           correctOption: 3,
           explanation:
             "Im Text steht: „weshalb sie in der Regel bei Temperaturen nahe dem absoluten Nullpunkt – also bei etwa minus 273 Grad Celsius – betrieben werden müssen.“",
-        }
+        },
       ],
     },
     {
@@ -1228,7 +1238,8 @@ const set3: TVTextSet = {
         },
         {
           id: "tv3-t3-q4",
-          question: "Welche Maßnahme der Europäischen Union gegen Mikroplastik wird im Text beschrieben?",
+          question:
+            "Welche Maßnahme der Europäischen Union gegen Mikroplastik wird im Text beschrieben?",
           options: [
             "Ein sofortiges Totalverbot aller Kunststoffprodukte",
             "Die Einführung einer Mikroplastiksteuer für Produzenten",
@@ -1242,7 +1253,8 @@ const set3: TVTextSet = {
         },
         {
           id: "tv3-t3-q5",
-          question: "Wie gelangt Mikroplastik laut Text in Ökosysteme, die keine direkten Kunststoffabfälle aufnehmen?",
+          question:
+            "Wie gelangt Mikroplastik laut Text in Ökosysteme, die keine direkten Kunststoffabfälle aufnehmen?",
           options: [
             "Durch Tiefseevulkane, die Plastikpartikel in die Meere schleudern",
             "Wind, Wellen und UV-Strahlung zersetzen Plastikabfälle in immer kleinere Fragmente",
@@ -1253,7 +1265,7 @@ const set3: TVTextSet = {
           correctOption: 1,
           explanation:
             "Der Text erklärt: „Wind, Wellen und UV-Strahlung zersetzen Plastikabfälle in immer kleinere Fragmente, ohne sie chemisch vollständig abzubauen.“",
-        }
+        },
       ],
     },
     {
@@ -1324,7 +1336,8 @@ const set3: TVTextSet = {
         },
         {
           id: "tv3-t4-q4",
-          question: "Welche Arbeitsbedingungen herrschten laut Text in den frühen Fabriken der Industriellen Revolution?",
+          question:
+            "Welche Arbeitsbedingungen herrschten laut Text in den frühen Fabriken der Industriellen Revolution?",
           options: [
             "Kurze Arbeitszeiten und gute Löhne für alle Arbeiter",
             "Arbeitstage von 14 bis 16 Stunden, Kinderarbeit und fehlender Arbeitsschutz",
@@ -1338,7 +1351,8 @@ const set3: TVTextSet = {
         },
         {
           id: "tv3-t4-q5",
-          question: "Welchen doppelten historischen Grundstein legte die Industrielle Revolution laut dem letzten Satz des Textes?",
+          question:
+            "Welchen doppelten historischen Grundstein legte die Industrielle Revolution laut dem letzten Satz des Textes?",
           options: [
             "Den Grundstein für die moderne Chemie und die Physik",
             "Den Grundstein für Demokratie und Menschenrechte",
@@ -1349,7 +1363,7 @@ const set3: TVTextSet = {
           correctOption: 2,
           explanation:
             "Der Text schließt: „Die Industrielle Revolution legte damit nicht nur den Grundstein für die moderne Wirtschaft, sondern auch für den modernen Sozialstaat.“",
-        }
+        },
       ],
     },
     {
@@ -1405,13 +1419,7 @@ const set3: TVTextSet = {
         {
           id: "tv3-t5-q3",
           question: "Welcher Neurotransmitter wird laut Text beim Musikhören ausgeschüttet?",
-          options: [
-            "Serotonin",
-            "Adrenalin",
-            "Cortisol",
-            "Dopamin",
-            "Acetylcholin",
-          ],
+          options: ["Serotonin", "Adrenalin", "Cortisol", "Dopamin", "Acetylcholin"],
           correctOption: 3,
           explanation:
             "Der Text besagt: „Dabei wird der Neurotransmitter Dopamin ausgeschüttet, was das Glücksgefühl erklärt, das viele Menschen beim Musikhören empfinden.“",
@@ -1432,7 +1440,8 @@ const set3: TVTextSet = {
         },
         {
           id: "tv3-t5-q5",
-          question: "Welches Schlüsselelement der emotionalen Wirkung von Musik beschreibt der Text?",
+          question:
+            "Welches Schlüsselelement der emotionalen Wirkung von Musik beschreibt der Text?",
           options: [
             "Die Lautstärke und Intensität der Musik",
             "Das Wechselspiel aus Erwartung und Überraschung",
@@ -1443,7 +1452,7 @@ const set3: TVTextSet = {
           correctOption: 1,
           explanation:
             "Der Text erklärt: „Dieses Wechselspiel aus Erwartung und Überraschung scheint ein Schlüsselelement der emotionalen Wirkung von Musik zu sein.“",
-        }
+        },
       ],
     },
   ],
@@ -1524,7 +1533,8 @@ const set4: TVTextSet = {
         },
         {
           id: "tv4-t1-q4",
-          question: "Welche Umweltfaktoren können laut Text epigenetische Veränderungen hervorrufen?",
+          question:
+            "Welche Umweltfaktoren können laut Text epigenetische Veränderungen hervorrufen?",
           options: [
             "Nur radioaktive Strahlung und chemische Mutagene",
             "Ausschließlich Viren und Bakterien",
@@ -1549,7 +1559,7 @@ const set4: TVTextSet = {
           correctOption: 1,
           explanation:
             "Im Text steht: „Tierversuche haben gezeigt, dass Stress bei trächtigen Mäusen epigenetische Veränderungen im Nachwuchs bewirken kann, die dessen Stressreaktion dauerhaft beeinflusst.“",
-        }
+        },
       ],
     },
     {
@@ -1644,7 +1654,7 @@ const set4: TVTextSet = {
           correctOption: 1,
           explanation:
             "Im Text heißt es: „Bentham formulierte das Prinzip der Nützlichkeit und versuchte, Glück quantitativ zu messen – anhand von Kriterien wie Intensität, Dauer, Gewissheit und Nähe eines Vergnügens.“",
-        }
+        },
       ],
     },
     {
@@ -1714,7 +1724,8 @@ const set4: TVTextSet = {
         },
         {
           id: "tv4-t3-q4",
-          question: "Welche alternative Theorie zu Déjà-vus wird im Text neben dem GedächtnisFehler-Modell vorgestellt?",
+          question:
+            "Welche alternative Theorie zu Déjà-vus wird im Text neben dem GedächtnisFehler-Modell vorgestellt?",
           options: [
             "Déjà-vus entstehen durch kurze Bewusstseinspausen während des Schlafs",
             "Déjà-vus sind Erinnerungen an vergangene Leben",
@@ -1728,7 +1739,8 @@ const set4: TVTextSet = {
         },
         {
           id: "tv4-t3-q5",
-          question: "Welcher Befund bei Epilepsiepatienten weist laut Text auf eine Beteiligung des Temporallappens hin?",
+          question:
+            "Welcher Befund bei Epilepsiepatienten weist laut Text auf eine Beteiligung des Temporallappens hin?",
           options: [
             "Epilepsiepatienten haben deutlich schlechtere Erinnerungen an Déjà-vus",
             "Déjà-vus treten bei Temporallappenepilepsie deutlich häufiger auf und können als Vorboten eines epileptischen Anfalls gelten",
@@ -1739,7 +1751,7 @@ const set4: TVTextSet = {
           correctOption: 1,
           explanation:
             "Der Text besagt: „Déjà-vus bei Epilepsiepatienten mit Temporallappenepilepsie deutlich häufiger auftreten und dort sogar als Vorboten eines epileptischen Anfalls gelten können, was die Beteiligung des Temporallappens an diesem Phänomen nahelegt.“",
-        }
+        },
       ],
     },
     {
@@ -1809,7 +1821,8 @@ const set4: TVTextSet = {
         },
         {
           id: "tv4-t4-q4",
-          question: "Welche Auswirkung des Halo-Effekts auf die Markenwahrnehmung beschreibt der Text?",
+          question:
+            "Welche Auswirkung des Halo-Effekts auf die Markenwahrnehmung beschreibt der Text?",
           options: [
             "Ein erfolgreiches Produkt verdrängt alle anderen Produkte derselben Marke",
             "Ein erfolgreiches Produkt eines Unternehmens kann die Bewertung aller anderen Produkte derselben Marke positiv beeinflussen",
@@ -1834,7 +1847,7 @@ const set4: TVTextSet = {
           correctOption: 1,
           explanation:
             "Der Text nennt: „Attraktive Menschen werden häufig auch als intelligenter, kompetenter und vertrauenswürdiger eingeschätzt, obwohl es keinen objektiven Zusammenhang zwischen Aussehen und diesen Eigenschaften gibt.“",
-        }
+        },
       ],
     },
     {
@@ -1903,7 +1916,8 @@ const set4: TVTextSet = {
         },
         {
           id: "tv4-t5-q4",
-          question: "Wie viel Fläche der Landoberüfläche der Nordhalbkugel bedeckt Permafrost laut Text?",
+          question:
+            "Wie viel Fläche der Landoberüfläche der Nordhalbkugel bedeckt Permafrost laut Text?",
           options: [
             "Etwa ein Zehntel",
             "Etwa ein Sechstel",
@@ -1928,7 +1942,7 @@ const set4: TVTextSet = {
           correctOption: 1,
           explanation:
             "Im Text steht: „Methan ist als Treibhausgas etwa 80-mal wirksamer als CO₂ über einen Zeitraum von 20 Jahren.“",
-        }
+        },
       ],
     },
   ],
@@ -2037,7 +2051,7 @@ const set5: TVTextSet = {
           correctOption: 1,
           explanation:
             "Der Text erklärt: „Der Begriff leitet sich vom Lateinischen ‘nocebo’ ab, was ‘ich werde schaden’ bedeutet.“",
-        }
+        },
       ],
     },
     {
@@ -2108,7 +2122,8 @@ const set5: TVTextSet = {
         },
         {
           id: "tv5-t2-q4",
-          question: "Welche empirische Beobachtung unterstützt laut Text den linguistischen Relativismus?",
+          question:
+            "Welche empirische Beobachtung unterstützt laut Text den linguistischen Relativismus?",
           options: [
             "Alle Menschen denken in derselben logischen Struktur, unabhängig von der Sprache",
             "Sprecher von Sprachen mit vielen Farbwörtern unterscheiden bestimmte Farbnuancen schneller als Sprecher mit weniger Farbbezeichnungen",
@@ -2122,7 +2137,8 @@ const set5: TVTextSet = {
         },
         {
           id: "tv5-t2-q5",
-          question: "Welche Version der Sapir-Whorf-Hypothese gilt laut Text heute als widerlegt und warum?",
+          question:
+            "Welche Version der Sapir-Whorf-Hypothese gilt laut Text heute als widerlegt und warum?",
           options: [
             "Die schwache Version, weil es keine empirischen Belege gibt",
             "Die starke Version (linguistischer Determinismus), weil Menschen offensichtlich auch Gedanken haben, für die ihnen Worte fehlen",
@@ -2133,7 +2149,7 @@ const set5: TVTextSet = {
           correctOption: 1,
           explanation:
             "Der Text stellt fest: „Diese starke Version gilt heute als widerlegt, da Menschen offensichtlich auch Gedanken haben, für die ihnen Worte fehlen.“",
-        }
+        },
       ],
     },
     {
@@ -2230,7 +2246,7 @@ const set5: TVTextSet = {
           correctOption: 1,
           explanation:
             "Der Text nennt als Lösungsansatz: „die Entwicklung von Methoden zur Erklärbarkeit von KI-Entscheidungen (Explainable AI)“, damit algorithmische Entscheidungen nachvollziehbar werden.",
-        }
+        },
       ],
     },
     {
@@ -2324,7 +2340,7 @@ const set5: TVTextSet = {
           correctOption: 1,
           explanation:
             "Der Text besagt: „So wirken bestimmte Blutdruckmedikamente effektiver, wenn sie abends statt morgens eingenommen werden, weil der Blutdruck einem zirkadianen Muster folgt.“",
-        }
+        },
       ],
     },
     {
@@ -2395,7 +2411,8 @@ const set5: TVTextSet = {
         },
         {
           id: "tv5-t5-q4",
-          question: "Welchen historischen Fall inspirierte laut Text die Erforschung des Bystander-Effekts?",
+          question:
+            "Welchen historischen Fall inspirierte laut Text die Erforschung des Bystander-Effekts?",
           options: [
             "Den Fall eines Kindes, das im Straßenverkehr verungltückte",
             "Die Ermordung von Kitty Genovese in New York, bei der Medienberichte behaupteten, 38 Nachbarn hätten ohne einzugreifen zugesehen",
@@ -2409,7 +2426,8 @@ const set5: TVTextSet = {
         },
         {
           id: "tv5-t5-q5",
-          question: "Was ist laut Text die 'Bewertungsangst' als Mechanismus des Bystander-Effekts?",
+          question:
+            "Was ist laut Text die 'Bewertungsangst' als Mechanismus des Bystander-Effekts?",
           options: [
             "Die Angst vor körperlicher Verletzung beim Eingreifen",
             "Die Sorge, durch Eingreifen in einer Nicht-Notfallsituation sich zu blamieren",
@@ -2420,7 +2438,7 @@ const set5: TVTextSet = {
           correctOption: 1,
           explanation:
             "Im Text heißt es: „Drittens die Bewertungsangst: Menschen fürchten, sich durch unangemessenes Eingreifen in einer Nicht-Notfallsituation zu blamieren.“",
-        }
+        },
       ],
     },
   ],

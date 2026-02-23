@@ -60,7 +60,7 @@ export const geometrieChapter: Chapter = {
       merke:
         "<strong>Pythagoras</strong>: a² + b² = c² (c = Hypotenuse, gegenüber dem rechten Winkel). Funktioniert <strong>NUR bei rechtwinkligen Dreiecken</strong>! Für alle: Kosinussatz.",
       altfrage:
-        "\"Berechne die Fläche eines Kreises mit r = 5 cm.\" → A = π · r² = π · 25 ≈ <strong>78,5 cm²</strong>.",
+        '"Berechne die Fläche eines Kreises mit r = 5 cm." → A = π · r² = π · 25 ≈ <strong>78,5 cm²</strong>.',
     },
 
     // ──────────────────────────────────────────────
@@ -257,16 +257,13 @@ export const geometrieChapter: Chapter = {
 
   selfTestQuestions: [
     {
-      question:
-        "Wie groß ist das Volumen einer Kugel mit r = 3?",
+      question: "Wie groß ist das Volumen einer Kugel mit r = 3?",
       options: ["36π", "27π", "12π", "108π", "9π"],
       correctIndex: 0,
-      explanation:
-        "V = ⁴⁄₃ · π · r³ = ⁴⁄₃ · π · 27 = 36π.",
+      explanation: "V = ⁴⁄₃ · π · r³ = ⁴⁄₃ · π · 27 = 36π.",
     },
     {
-      question:
-        "Zwei Vektoren stehen senkrecht aufeinander, wenn...",
+      question: "Zwei Vektoren stehen senkrecht aufeinander, wenn...",
       options: [
         "Skalarprodukt = 1",
         "Skalarprodukt = 0",
@@ -282,34 +279,19 @@ export const geometrieChapter: Chapter = {
       question: "100 km/h in m/s?",
       options: ["10", "27,8", "36", "100", "360"],
       correctIndex: 1,
-      explanation:
-        "100 ÷ 3,6 ≈ 27,8 m/s. Merke: km/h → m/s = ÷ 3,6.",
+      explanation: "100 ÷ 3,6 ≈ 27,8 m/s. Merke: km/h → m/s = ÷ 3,6.",
     },
     {
       question: "Die Fläche eines Kreises mit d = 10 cm ist...",
-      options: [
-        "25π cm²",
-        "50π cm²",
-        "100π cm²",
-        "10π cm²",
-        "20π cm²",
-      ],
+      options: ["25π cm²", "50π cm²", "100π cm²", "10π cm²", "20π cm²"],
       correctIndex: 0,
-      explanation:
-        "d = 10 → r = 5. A = π · r² = π · 25 = 25π cm² ≈ 78,5 cm².",
+      explanation: "d = 10 → r = 5. A = π · r² = π · 25 = 25π cm² ≈ 78,5 cm².",
     },
     {
       question: "1 Mikrometer = ?",
-      options: [
-        "10⁻³ m",
-        "10⁻⁶ m",
-        "10⁻⁹ m",
-        "10⁻¹² m",
-        "10⁻² m",
-      ],
+      options: ["10⁻³ m", "10⁻⁶ m", "10⁻⁹ m", "10⁻¹² m", "10⁻² m"],
       correctIndex: 1,
-      explanation:
-        "Mikro (μ) = 10⁻⁶. Also 1 μm = 10⁻⁶ m = 0,000001 m.",
+      explanation: "Mikro (μ) = 10⁻⁶. Also 1 μm = 10⁻⁶ m = 0,000001 m.",
     },
   ],
 

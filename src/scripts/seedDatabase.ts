@@ -15,17 +15,17 @@
  *   npx ts-node --esm -r tsconfig-paths/register src/scripts/seedDatabase.ts
  */
 
-import { createClient } from '@supabase/supabase-js';
-import { alleKapitel } from '../data/bmsKapitel/index';
-import type { Kapitel } from '../data/bmsKapitel/types';
-import { wortfluessigkeitWords } from '../data/kffWortfluessigkeit';
-import { zahlenfolgenTasks } from '../data/kffZahlenfolgen';
-import { implikationenTasks } from '../data/kffImplikationen';
-import { figurenAufgaben } from '../data/figurenGenerator';
-import { emotionenErkennenScenarios } from '../data/kffEmotionenErkennen';
-import { emotionenRegulierenScenarios } from '../data/kffEmotionenRegulieren';
-import { sozialesEntscheidenScenarios } from '../data/kffSozialesEntscheiden';
-import { tvTexte } from '../data/kffTextverstaendnis';
+import { createClient } from "@supabase/supabase-js";
+import { alleKapitel } from "../data/bmsKapitel/index";
+import type { Kapitel } from "../data/bmsKapitel/types";
+import { wortfluessigkeitWords } from "../data/kffWortfluessigkeit";
+import { zahlenfolgenTasks } from "../data/kffZahlenfolgen";
+import { implikationenTasks } from "../data/kffImplikationen";
+import { figurenAufgaben } from "../data/figurenGenerator";
+import { emotionenErkennenScenarios } from "../data/kffEmotionenErkennen";
+import { emotionenRegulierenScenarios } from "../data/kffEmotionenRegulieren";
+import { sozialesEntscheidenScenarios } from "../data/kffSozialesEntscheiden";
+import { tvTexte } from "../data/kffTextverstaendnis";
 
 // Env: Service Role umgeht RLS (nur für dieses Skript, Key nie im Frontend nutzen)
 const supabaseUrl = process.env.VITE_SUPABASE_URL || process.env.SUPABASE_URL;
@@ -33,25 +33,25 @@ const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !serviceRoleKey) {
   console.error(
-    '❌ Fehlende Umgebungsvariablen. Bitte setzen:\n' +
-      '  VITE_SUPABASE_URL oder SUPABASE_URL\n' +
-      '  SUPABASE_SERVICE_ROLE_KEY (aus Supabase Dashboard → Settings → API)\n' +
-      'Beispiel: SUPABASE_SERVICE_ROLE_KEY=xxx npx tsx src/scripts/seedDatabase.ts'
+    "❌ Fehlende Umgebungsvariablen. Bitte setzen:\n" +
+      "  VITE_SUPABASE_URL oder SUPABASE_URL\n" +
+      "  SUPABASE_SERVICE_ROLE_KEY (aus Supabase Dashboard → Settings → API)\n" +
+      "Beispiel: SUPABASE_SERVICE_ROLE_KEY=xxx npx tsx src/scripts/seedDatabase.ts"
   );
   process.exit(1);
 }
 
 const supabase = createClient(supabaseUrl, serviceRoleKey);
 
-function difficultyNumToText(d: 1 | 2 | 3): 'leicht' | 'mittel' | 'schwer' {
-  return d === 1 ? 'leicht' : d === 2 ? 'mittel' : 'schwer';
+function difficultyNumToText(d: 1 | 2 | 3): "leicht" | "mittel" | "schwer" {
+  return d === 1 ? "leicht" : d === 2 ? "mittel" : "schwer";
 }
 
 // --- BMS Chapters ---
 async function seedBMSChapters(): Promise<{ chapters: number; subchapters: number }> {
   const chapters = alleKapitel as Kapitel[];
   if (chapters.length === 0) {
-    console.log('⚠️ Keine BMS-Kapitel in den TS-Daten gefunden (alleKapitel leer).');
+    console.log("⚠️ Keine BMS-Kapitel in den TS-Daten gefunden (alleKapitel leer).");
     return { chapters: 0, subchapters: 0 };
   }
 
@@ -62,13 +62,15 @@ async function seedBMSChapters(): Promise<{ chapters: number; subchapters: numbe
       id: ch.id,
       title: ch.title,
       subject: ch.subject,
-      icon: ch.icon || '📚',
-      estimated_time: ch.estimatedTime || '',
+      icon: ch.icon || "📚",
+      estimated_time: ch.estimatedTime || "",
       order_index: i,
       content: { unterkapitel: ch.unterkapitel || [] },
     };
 
-    const { error: chErr } = await supabase.from('bms_chapters').upsert(chapterRow, { onConflict: 'id' });
+    const { error: chErr } = await supabase
+      .from("bms_chapters")
+      .upsert(chapterRow, { onConflict: "id" });
     if (chErr) {
       console.error(`❌ bms_chapters ${ch.id}:`, chErr.message);
       continue;
@@ -81,14 +83,16 @@ async function seedBMSChapters(): Promise<{ chapters: number; subchapters: numbe
         id: uk.id,
         chapter_id: ch.id,
         title: uk.title,
-        content: uk.content || '',
+        content: uk.content || "",
         order_index: j,
         lernziele: uk.lernziele || [],
         sections: uk.sections || [],
         merksätze: uk.merksätze || [],
         self_test: uk.selfTest || [],
       };
-      const { error: subErr } = await supabase.from('bms_subchapters').upsert(subRow, { onConflict: 'id' });
+      const { error: subErr } = await supabase
+        .from("bms_subchapters")
+        .upsert(subRow, { onConflict: "id" });
       if (subErr) console.error(`❌ bms_subchapters ${uk.id}:`, subErr.message);
       else subcount++;
     }
@@ -105,7 +109,7 @@ async function seedKFFTasks(): Promise<number> {
   // Wortflüssigkeit
   for (const w of wortfluessigkeitWords) {
     rows.push({
-      category: 'wortfluessigkeit',
+      category: "wortfluessigkeit",
       difficulty: difficultyNumToText(w.difficulty),
       data_json: w,
     });
@@ -114,7 +118,7 @@ async function seedKFFTasks(): Promise<number> {
   // Zahlenfolgen
   for (const t of zahlenfolgenTasks) {
     rows.push({
-      category: 'zahlenfolgen',
+      category: "zahlenfolgen",
       difficulty: difficultyNumToText(t.difficulty),
       data_json: t,
     });
@@ -123,7 +127,7 @@ async function seedKFFTasks(): Promise<number> {
   // Implikationen
   for (const t of implikationenTasks) {
     rows.push({
-      category: 'implikationen',
+      category: "implikationen",
       difficulty: difficultyNumToText(t.difficulty),
       data_json: t,
     });
@@ -132,7 +136,7 @@ async function seedKFFTasks(): Promise<number> {
   // Figuren (FZAufgabe hat schon difficulty: leicht|mittel|schwer)
   for (const a of figurenAufgaben) {
     rows.push({
-      category: 'figuren',
+      category: "figuren",
       difficulty: a.difficulty,
       data_json: a,
     });
@@ -142,7 +146,7 @@ async function seedKFFTasks(): Promise<number> {
   for (const s of emotionenErkennenScenarios) {
     const d = (s as { difficulty?: number }).difficulty;
     rows.push({
-      category: 'emotionen-erkennen',
+      category: "emotionen-erkennen",
       difficulty: d ? difficultyNumToText(d as 1 | 2 | 3) : null,
       data_json: s,
     });
@@ -151,7 +155,7 @@ async function seedKFFTasks(): Promise<number> {
   // Emotionen Regulieren
   for (const s of emotionenRegulierenScenarios) {
     rows.push({
-      category: 'emotionen-regulieren',
+      category: "emotionen-regulieren",
       difficulty: s.difficulty ? difficultyNumToText(s.difficulty as 1 | 2 | 3) : null,
       data_json: s,
     });
@@ -161,7 +165,7 @@ async function seedKFFTasks(): Promise<number> {
   for (const s of sozialesEntscheidenScenarios) {
     const d = (s as { difficulty?: number }).difficulty;
     rows.push({
-      category: 'soziales-entscheiden',
+      category: "soziales-entscheiden",
       difficulty: d ? difficultyNumToText(d as 1 | 2 | 3) : null,
       data_json: s,
     });
@@ -170,14 +174,14 @@ async function seedKFFTasks(): Promise<number> {
   // Textverständnis (pro Text mit Fragen)
   for (const tv of tvTexte) {
     rows.push({
-      category: 'textverstaendnis',
+      category: "textverstaendnis",
       difficulty: tv.difficulty ? difficultyNumToText(tv.difficulty) : null,
       data_json: tv,
     });
   }
 
   if (rows.length === 0) {
-    console.log('⚠️ Keine KFF-Aufgaben zum Einfügen.');
+    console.log("⚠️ Keine KFF-Aufgaben zum Einfügen.");
     return 0;
   }
 
@@ -186,15 +190,15 @@ async function seedKFFTasks(): Promise<number> {
   let inserted = 0;
   for (let i = 0; i < rows.length; i += BATCH) {
     const chunk = rows.slice(i, i + BATCH);
-    const { data, error } = await supabase.from('kff_tasks').insert(chunk).select('id');
+    const { data, error } = await supabase.from("kff_tasks").insert(chunk).select("id");
     if (error) {
-      console.error('❌ kff_tasks batch insert:', error.message);
+      console.error("❌ kff_tasks batch insert:", error.message);
       for (const row of chunk) {
-        const { error: e } = await supabase.from('kff_tasks').insert(row);
+        const { error: e } = await supabase.from("kff_tasks").insert(row);
         if (!e) inserted++;
       }
     } else {
-      inserted += (data?.length ?? chunk.length);
+      inserted += data?.length ?? chunk.length;
     }
   }
 
@@ -203,17 +207,17 @@ async function seedKFFTasks(): Promise<number> {
 }
 
 async function main() {
-  console.log('🌱 Seed startet…\n');
+  console.log("🌱 Seed startet…\n");
 
   const bms = await seedBMSChapters();
   const kff = await seedKFFTasks();
 
-  console.log('\n🎉 Seed abgeschlossen.');
+  console.log("\n🎉 Seed abgeschlossen.");
   console.log(`   BMS: ${bms.chapters} Kapitel, ${bms.subchapters} Unterkapitel`);
   console.log(`   KFF: ${kff} Aufgaben`);
 }
 
 main().catch((err) => {
-  console.error('❌ Script-Fehler:', err);
+  console.error("❌ Script-Fehler:", err);
   process.exit(1);
 });

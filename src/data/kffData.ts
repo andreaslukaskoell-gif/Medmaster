@@ -162,7 +162,8 @@ export const zahlenfolgenQuestions: ZahlenfolgeQuestion[] = [
     sequence: [100, 95, 85, 70, 50],
     options: [35, 30, 25, 20],
     correctAnswer: 25,
-    explanation: "Differenzen: -5, -10, -15, -20, -25. Die Differenz nimmt jeweils um 5 zu. 50-25=25.",
+    explanation:
+      "Differenzen: -5, -10, -15, -20, -25. Die Differenz nimmt jeweils um 5 zu. 50-25=25.",
   },
   {
     id: "zf-6",
@@ -177,8 +178,7 @@ export const zahlenfolgenQuestions: ZahlenfolgeQuestion[] = [
     sequence: [1, 8, 27, 64, 125],
     options: [150, 196, 210, 216],
     correctAnswer: 216,
-    explanation:
-      "Kubikzahlen (dritte Potenzen): 1³=1, 2³=8, 3³=27, 4³=64, 5³=125, 6³=216.",
+    explanation: "Kubikzahlen (dritte Potenzen): 1³=1, 2³=8, 3³=27, 4³=64, 5³=125, 6³=216.",
   },
   {
     id: "zf-8",
@@ -426,12 +426,7 @@ export const gedaechtnisQuestionsSet2: GedaechtnisQuestion[] = [
   {
     id: "gq2-5",
     text: "Welche Allergie haben sowohl Florian Berger als auch Laura Schwarz gemeinsam (in ähnlicher Form)?",
-    options: [
-      "Wespengift",
-      "Hausstaubmilben",
-      "Eine Penicillin-artige Allergie",
-      "Latex",
-    ],
+    options: ["Wespengift", "Hausstaubmilben", "Eine Penicillin-artige Allergie", "Latex"],
     correctAnswer: "Eine Penicillin-artige Allergie",
   },
 ];
@@ -442,7 +437,13 @@ export interface ImplikationQuestion {
   conclusion: string;
   isValid: boolean;
   explanation: string;
-  type: 'modus_ponens' | 'modus_tollens' | 'affirmation_consequent' | 'denial_antecedent' | 'contraposition' | 'biconditional';
+  type:
+    | "modus_ponens"
+    | "modus_tollens"
+    | "affirmation_consequent"
+    | "denial_antecedent"
+    | "contraposition"
+    | "biconditional";
 }
 
 export const implikationQuestions: ImplikationQuestion[] = [
@@ -476,8 +477,10 @@ export const implikationQuestions: ImplikationQuestion[] = [
   },
   {
     id: "imp-4",
-    premise: "Wenn ein Medikament verschreibungspflichtig ist, dann darf es nur in der Apotheke verkauft werden.",
-    conclusion: "Aspirin ist nicht verschreibungspflichtig. Also darf es auch außerhalb der Apotheke verkauft werden.",
+    premise:
+      "Wenn ein Medikament verschreibungspflichtig ist, dann darf es nur in der Apotheke verkauft werden.",
+    conclusion:
+      "Aspirin ist nicht verschreibungspflichtig. Also darf es auch außerhalb der Apotheke verkauft werden.",
     isValid: false,
     explanation:
       "Verneinung des Antecedens (ungültig). Nicht verschreibungspflichtig heißt nicht, dass es überall verkauft werden darf - es kann trotzdem apothekenpflichtig sein.",
@@ -495,7 +498,8 @@ export const implikationQuestions: ImplikationQuestion[] = [
   {
     id: "imp-6",
     premise: "Wenn ein Patient eine bakterielle Infektion hat, dann hilft ein Antibiotikum.",
-    conclusion: "Dem Patienten hilft das Antibiotikum nicht. Also hat er keine bakterielle Infektion.",
+    conclusion:
+      "Dem Patienten hilft das Antibiotikum nicht. Also hat er keine bakterielle Infektion.",
     isValid: true,
     explanation:
       "Gültiger Modus Tollens: Wenn A -> B, und nicht-B, dann nicht-A. Antibiotikum hilft nicht (nicht-B), also keine bakterielle Infektion (nicht-A).",
@@ -503,7 +507,8 @@ export const implikationQuestions: ImplikationQuestion[] = [
   },
   {
     id: "imp-7",
-    premise: "Alle Studierenden, die die Prüfung bestanden haben, haben mindestens 60% der Punkte erreicht.",
+    premise:
+      "Alle Studierenden, die die Prüfung bestanden haben, haben mindestens 60% der Punkte erreicht.",
     conclusion: "Max hat 75% der Punkte erreicht. Also hat Max die Prüfung bestanden.",
     isValid: false,
     explanation:
@@ -530,8 +535,10 @@ export const implikationQuestions: ImplikationQuestion[] = [
   },
   {
     id: "imp-10",
-    premise: "Wenn ein Patient auf Penicillin allergisch reagiert, darf ihm kein Penicillin verabreicht werden.",
-    conclusion: "Dem Patienten wurde Penicillin verabreicht. Also ist er nicht allergisch auf Penicillin.",
+    premise:
+      "Wenn ein Patient auf Penicillin allergisch reagiert, darf ihm kein Penicillin verabreicht werden.",
+    conclusion:
+      "Dem Patienten wurde Penicillin verabreicht. Also ist er nicht allergisch auf Penicillin.",
     isValid: true,
     explanation:
       "Gültiger Modus Tollens: Wenn A (allergisch) -> B (kein Penicillin verabreichen), und nicht-B (Penicillin wurde verabreicht), dann nicht-A (nicht allergisch). Die Kontraposition ist logisch korrekt.",
@@ -551,7 +558,8 @@ export const implikationQuestions: ImplikationQuestion[] = [
   {
     id: "imp-12",
     premise: "Wenn eine Substanz ein Enzym hemmt, dann sinkt die Reaktionsgeschwindigkeit.",
-    conclusion: "Substanz X hemmt das Enzym Amylase. Also sinkt die Reaktionsgeschwindigkeit der Amylase-Reaktion.",
+    conclusion:
+      "Substanz X hemmt das Enzym Amylase. Also sinkt die Reaktionsgeschwindigkeit der Amylase-Reaktion.",
     isValid: true,
     explanation:
       "Gültiger Modus Ponens: Die Prämisse besagt A -> B (Enzymhemmung -> Reaktionsgeschwindigkeit sinkt). A ist erfüllt (Substanz X hemmt Amylase), also folgt B zwingend.",
@@ -577,7 +585,8 @@ export const implikationQuestions: ImplikationQuestion[] = [
   },
   {
     id: "imp-15",
-    premise: "Wenn eine Person unter 18 Jahre alt ist, dann gilt sie in Österreich als minderjährig.",
+    premise:
+      "Wenn eine Person unter 18 Jahre alt ist, dann gilt sie in Österreich als minderjährig.",
     conclusion: "Anna ist 15 Jahre alt. Also gilt sie in Österreich als minderjährig.",
     isValid: true,
     explanation:
@@ -587,7 +596,8 @@ export const implikationQuestions: ImplikationQuestion[] = [
   {
     id: "imp-16",
     premise: "Wenn ein Nerv durchtrennt wird, kann er keine Signale mehr weiterleiten.",
-    conclusion: "Der Nervus medianus des Patienten wurde durchtrennt. Also kann er keine Signale mehr weiterleiten.",
+    conclusion:
+      "Der Nervus medianus des Patienten wurde durchtrennt. Also kann er keine Signale mehr weiterleiten.",
     isValid: true,
     explanation:
       "Gültiger Modus Ponens: A (Nerv durchtrennt) ist gegeben, also folgt B (keine Signalweiterleitung). Wenn A -> B und A ist wahr, dann ist B wahr.",
@@ -607,7 +617,8 @@ export const implikationQuestions: ImplikationQuestion[] = [
   {
     id: "imp-18",
     premise: "Wenn ein Organismus photosynthetisch aktiv ist, dann enthält er Chlorophyll.",
-    conclusion: "Dieser Organismus enthält kein Chlorophyll. Also ist er nicht photosynthetisch aktiv.",
+    conclusion:
+      "Dieser Organismus enthält kein Chlorophyll. Also ist er nicht photosynthetisch aktiv.",
     isValid: true,
     explanation:
       "Gültiger Modus Tollens: Wenn A -> B (Photosynthese -> Chlorophyll), und nicht-B (kein Chlorophyll), dann nicht-A (keine Photosynthese). Die Verneinung des Konsequens erlaubt den Schluss auf die Verneinung des Antezedens.",
@@ -625,7 +636,8 @@ export const implikationQuestions: ImplikationQuestion[] = [
   {
     id: "imp-20",
     premise: "Wenn ein Medikament die Blut-Hirn-Schranke überwindet, dann ist es lipophil.",
-    conclusion: "Dieses Medikament ist nicht lipophil. Also überwindet es nicht die Blut-Hirn-Schranke.",
+    conclusion:
+      "Dieses Medikament ist nicht lipophil. Also überwindet es nicht die Blut-Hirn-Schranke.",
     isValid: true,
     explanation:
       "Gültiger Modus Tollens: Wenn A -> B (Blut-Hirn-Schranke überwinden -> lipophil), und nicht-B (nicht lipophil), dann nicht-A (überwindet BHS nicht).",
@@ -634,7 +646,8 @@ export const implikationQuestions: ImplikationQuestion[] = [
   {
     id: "imp-21",
     premise: "Wenn ein Protein denaturiert wird, verliert es seine biologische Funktion.",
-    conclusion: "Dieses Protein hat seine biologische Funktion nicht verloren. Also wurde es nicht denaturiert.",
+    conclusion:
+      "Dieses Protein hat seine biologische Funktion nicht verloren. Also wurde es nicht denaturiert.",
     isValid: true,
     explanation:
       "Gültiger Modus Tollens: A -> B (Denaturierung -> Funktionsverlust). Nicht-B (Funktion erhalten), also nicht-A (nicht denaturiert). Der Schluss von der Verneinung der Folge auf die Verneinung der Ursache ist logisch korrekt.",
@@ -643,7 +656,8 @@ export const implikationQuestions: ImplikationQuestion[] = [
   {
     id: "imp-22",
     premise: "Wenn der Kaliumspiegel im Blut stark ansteigt, treten Herzrhythmusstörungen auf.",
-    conclusion: "Der Patient zeigt keine Herzrhythmusstörungen. Also ist sein Kaliumspiegel nicht stark angestiegen.",
+    conclusion:
+      "Der Patient zeigt keine Herzrhythmusstörungen. Also ist sein Kaliumspiegel nicht stark angestiegen.",
     isValid: true,
     explanation:
       "Gültiger Modus Tollens: A -> B (Hyperkaliämie -> Herzrhythmusstörungen). Nicht-B (keine Rhythmusstörungen), also nicht-A (kein starker Kaliumanstieg).",
@@ -699,7 +713,8 @@ export const implikationQuestions: ImplikationQuestion[] = [
   {
     id: "imp-28",
     premise: "Wenn ein Patient einen Myokardinfarkt erleidet, steigt der Troponin-Wert im Blut.",
-    conclusion: "Der Troponin-Wert des Patienten ist erhöht. Also hat er einen Myokardinfarkt erlitten.",
+    conclusion:
+      "Der Troponin-Wert des Patienten ist erhöht. Also hat er einen Myokardinfarkt erlitten.",
     isValid: false,
     explanation:
       "Ungültige Bejahung des Konsequens: Troponin kann auch bei Myokarditis, Lungenembolie oder Niereninsuffizienz erhöht sein. Aus A -> B und B folgt nicht zwingend A.",
@@ -764,7 +779,8 @@ export const implikationQuestions: ImplikationQuestion[] = [
   {
     id: "imp-35",
     premise: "Wenn ein Enzym durch hohe Temperaturen denaturiert wird, verliert es seine Funktion.",
-    conclusion: "Das Enzym wurde nicht durch hohe Temperaturen denaturiert. Also hat es seine Funktion nicht verloren.",
+    conclusion:
+      "Das Enzym wurde nicht durch hohe Temperaturen denaturiert. Also hat es seine Funktion nicht verloren.",
     isValid: false,
     explanation:
       "Ungültige Verneinung des Antezedens: Das Enzym könnte seine Funktion auch durch andere Ursachen verloren haben (pH-Änderung, chemische Denaturierung, Schwermetalle). Aus A -> B und nicht-A folgt nicht nicht-B.",
@@ -772,8 +788,10 @@ export const implikationQuestions: ImplikationQuestion[] = [
   },
   {
     id: "imp-36",
-    premise: "Wenn ein Patient eine Bluttransfusion mit der falschen Blutgruppe erhält, kommt es zu einer Hämolyse.",
-    conclusion: "Der Patient hat keine falsche Bluttransfusion erhalten. Also liegt keine Hämolyse vor.",
+    premise:
+      "Wenn ein Patient eine Bluttransfusion mit der falschen Blutgruppe erhält, kommt es zu einer Hämolyse.",
+    conclusion:
+      "Der Patient hat keine falsche Bluttransfusion erhalten. Also liegt keine Hämolyse vor.",
     isValid: false,
     explanation:
       "Ungültige Verneinung des Antezedens: Hämolyse kann auch durch andere Ursachen entstehen (Autoimmunerkrankungen, Malaria, mechanische Schädigung der Erythrozyten). Aus A -> B und nicht-A folgt nicht nicht-B.",
@@ -792,7 +810,8 @@ export const implikationQuestions: ImplikationQuestion[] = [
   // === NEW QUESTIONS: CONTRAPOSITION (A -> B is equivalent to not-B -> not-A — VALID) ===
   {
     id: "imp-38",
-    premise: "Wenn eine Zelle keine Mitochondrien besitzt, kann sie keine ärobe Zellatmung durchführen.",
+    premise:
+      "Wenn eine Zelle keine Mitochondrien besitzt, kann sie keine ärobe Zellatmung durchführen.",
     conclusion: "Eine Zelle führt ärobe Zellatmung durch. Also besitzt sie Mitochondrien.",
     isValid: true,
     explanation:
@@ -829,7 +848,8 @@ export const implikationQuestions: ImplikationQuestion[] = [
   {
     id: "imp-42",
     premise: "Wenn ein Stoff elektrisch leitfähig ist, enthält er frei bewegliche Ladungsträger.",
-    conclusion: "Wenn ein Stoff keine frei beweglichen Ladungsträger enthält, ist er nicht elektrisch leitfähig.",
+    conclusion:
+      "Wenn ein Stoff keine frei beweglichen Ladungsträger enthält, ist er nicht elektrisch leitfähig.",
     isValid: true,
     explanation:
       "Gültige Kontraposition: A -> B (leitfähig -> frei bewegliche Ladungsträger) entspricht nicht-B -> nicht-A (keine Ladungsträger -> nicht leitfähig). Die Umformung zur Kontraposition bewahrt die logische Gültigkeit.",
@@ -839,8 +859,10 @@ export const implikationQuestions: ImplikationQuestion[] = [
   // === NEW QUESTIONS: BICONDITIONAL (A <-> B, special cases) ===
   {
     id: "imp-43",
-    premise: "Ein Patient hat genau dann Diabetes Typ 1, wenn seine Betazellen zerstört sind und er kein Insulin mehr produziert.",
-    conclusion: "Dieser Patient produziert kein Insulin und seine Betazellen sind zerstört. Also hat er Diabetes Typ 1.",
+    premise:
+      "Ein Patient hat genau dann Diabetes Typ 1, wenn seine Betazellen zerstört sind und er kein Insulin mehr produziert.",
+    conclusion:
+      "Dieser Patient produziert kein Insulin und seine Betazellen sind zerstört. Also hat er Diabetes Typ 1.",
     isValid: true,
     explanation:
       "Gültige Bikonditionale (Genau-dann-wenn): Bei einem Bikonditional (A <-> B) gilt sowohl A -> B als auch B -> A. Da die Bedingung 'Betazellen zerstört und kein Insulin' erfüllt ist, folgt zwingend 'Diabetes Typ 1'. Beide Richtungen der Implikation sind hier gültig.",
@@ -866,7 +888,8 @@ export const implikationQuestions: ImplikationQuestion[] = [
   },
   {
     id: "imp-46",
-    premise: "Ein Mensch gilt in Österreich genau dann als volljährig, wenn er mindestens 18 Jahre alt ist.",
+    premise:
+      "Ein Mensch gilt in Österreich genau dann als volljährig, wenn er mindestens 18 Jahre alt ist.",
     conclusion: "Frau Berger ist 25 Jahre alt. Also ist sie volljährig.",
     isValid: true,
     explanation:

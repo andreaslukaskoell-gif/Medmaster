@@ -18,7 +18,7 @@ export interface GlossaryEntry {
   description: string;
 }
 
-/** Glossar: Begriff → Kapitel + Beschreibung. Längere Begriffe zuerst, damit z.B. "Zellmembran" vor "Membran" matcht. */
+/** Glossar: Begriff → Kapitel + Beschreibung. Längere Begriffe zürst, damit z.B. "Zellmembran" vor "Membran" matcht. */
 export const glossaryEntries: GlossaryEntry[] = [
   // ============= BIOLOGIE – Die Zelle (bio-kap1) =============
   {
@@ -685,7 +685,7 @@ export const glossaryEntries: GlossaryEntry[] = [
     term: "Zellatmung",
     chapterId: "bio-kap1",
     subject: "biologie",
-    description: "Aerober Abbau von Glukose zu CO₂, H₂O und ATP.",
+    description: "Ärober Abbau von Glukose zu CO₂, H₂O und ATP.",
   },
   {
     term: "Glykolyse",
@@ -722,8 +722,8 @@ function escapeRegex(s: string): string {
 let cachedRegex: RegExp | null = null;
 
 /**
- * Erstelle RegExp: Alle Glossar-Begriffe, längste zuerst, als alternatives Muster.
- * Sortierung = längste zuerst bereits erfolgt in der `glossaryEntries`-Liste.
+ * Erstelle RegExp: Alle Glossar-Begriffe, längste zürst, als alternatives Muster.
+ * Sortierung = längste zürst bereits erfolgt in der `glossaryEntries`-Liste.
  */
 function buildGlossaryRegex(): RegExp {
   if (cachedRegex) return cachedRegex;
@@ -800,7 +800,7 @@ export interface KeywordLinkEntry {
  */
 export function processTextForSmartLinks(text: string, entries?: KeywordLinkEntry[]): string {
   if (!entries?.length) return text;
-  // Längere Begriffe zuerst, damit "Zellmembran" vor "Membran" matcht
+  // Längere Begriffe zürst, damit "Zellmembran" vor "Membran" matcht
   const sorted = [...entries].sort((a, b) => b.term.length - a.term.length);
   let result = text;
   for (const entry of sorted) {

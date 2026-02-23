@@ -37,8 +37,7 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
       {
         text: "Du sprichst den Oberarzt nach der Visite unter vier Augen respektvoll auf die Situation an.",
         idealRating: 5,
-        explanation:
-          "Professionelles Feedback unter vier Augen ist angemessen und konstruktiv.",
+        explanation: "Professionelles Feedback unter vier Augen ist angemessen und konstruktiv.",
       },
       {
         text: "Du meldest den Vorfall sofort der Krankenhausleitung.",
@@ -214,8 +213,7 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
       {
         text: "Du wechselst alle paar Minuten zwischen beiden Patienten hin und her.",
         idealRating: 2,
-        explanation:
-          "Ständiges Wechseln führt zu Zeitverlust und gefährdet beide Patienten.",
+        explanation: "Ständiges Wechseln führt zu Zeitverlust und gefährdet beide Patienten.",
       },
       {
         text: "Du stabilisierst beide Patienten kurz und organisierst dann einen schnellen Transport des einen in ein größeres Krankenhaus.",
@@ -324,8 +322,7 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
       {
         text: "Du machst dasselbe wie dein Freund, damit es fair ist.",
         idealRating: 1,
-        explanation:
-          "Eigene Regelverstöße sind keine Lösung und verschärfen das Problem.",
+        explanation: "Eigene Regelverstöße sind keine Lösung und verschärfen das Problem.",
       },
       {
         text: "Du recherchierst die Universitätsrichtlinien zu KI-Nutzung und teilst sie mit deinem Freund.",
@@ -746,8 +743,7 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
       {
         text: "Du bittest die Patientin, morgen wiederzukommen, wenn es nicht besser wird.",
         idealRating: 2,
-        explanation:
-          "Verschieben ohne Untersuchung ist riskant und verletzt die Sorgfaltspflicht.",
+        explanation: "Verschieben ohne Untersuchung ist riskant und verletzt die Sorgfaltspflicht.",
       },
       {
         text: "Du führst eine strukturierte Anamnese durch und entscheidest danach, ob weitere Diagnostik nötig ist.",

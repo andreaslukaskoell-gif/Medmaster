@@ -1,6 +1,13 @@
 import React, { useState, useMemo, useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { ArrowLeft, ArrowRight, ChevronLeft, Bookmark, StickyNote, CheckCircle2 } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  ChevronLeft,
+  Bookmark,
+  StickyNote,
+  CheckCircle2,
+} from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import { StickyBackButton } from "../components/ui/StickyBackButton";
@@ -53,7 +60,10 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
   const { setBreadcrumbs } = useBreadcrumb();
   const kapitelId = kapitel?.id;
   const ukFromIndex =
-    kapitel?.unterkapitel && Array.isArray(kapitel.unterkapitel) && unterkapitelIndex >= 0 && unterkapitelIndex < kapitel.unterkapitel.length
+    kapitel?.unterkapitel &&
+    Array.isArray(kapitel.unterkapitel) &&
+    unterkapitelIndex >= 0 &&
+    unterkapitelIndex < kapitel.unterkapitel.length
       ? kapitel.unterkapitel[unterkapitelIndex]
       : null;
   const ukId = ukFromIndex?.id;
@@ -71,7 +81,10 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
     setBreadcrumbs([
       { label: "Dashboard", href: "/" },
       { label: "BMS", href: "/bms" },
-      { label: subjectLabels[kapitel.subject] ?? kapitel.subject, href: pathForSubject(kapitel.subject) },
+      {
+        label: subjectLabels[kapitel.subject] ?? kapitel.subject,
+        href: pathForSubject(kapitel.subject),
+      },
       { label: kapitel.title, href: pathForChapter(kapitel.subject, kapitel.id) },
       { label: ukFromIndex.title },
     ]);
@@ -110,17 +123,16 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
             <p className="text-sm text-red-800 dark:text-red-400 mb-4">
               Die Kapitel-Daten konnten nicht geladen werden.
             </p>
-            <Button onClick={onBack}>
-              Zurück zur Übersicht
-            </Button>
+            <Button onClick={onBack}>Zurück zur Übersicht</Button>
           </CardContent>
         </Card>
       </div>
     );
   }
 
-  const unterkapitel = (kapitel.unterkapitel && Array.isArray(kapitel.unterkapitel)) ? kapitel.unterkapitel : [];
-  
+  const unterkapitel =
+    kapitel.unterkapitel && Array.isArray(kapitel.unterkapitel) ? kapitel.unterkapitel : [];
+
   // Validate index
   if (unterkapitelIndex < 0 || unterkapitelIndex >= unterkapitel.length) {
     return (
@@ -133,9 +145,7 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
             <p className="text-sm text-red-800 dark:text-red-400 mb-4">
               Das angeforderte Unterkapitel konnte nicht gefunden werden.
             </p>
-            <Button onClick={onBack}>
-              Zurück zur Übersicht
-            </Button>
+            <Button onClick={onBack}>Zurück zur Übersicht</Button>
           </CardContent>
         </Card>
       </div>
@@ -143,7 +153,7 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
   }
 
   const uk = unterkapitel[unterkapitelIndex];
-  
+
   // Validate subchapter
   if (!uk || !uk.id) {
     return (
@@ -156,9 +166,7 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
             <p className="text-sm text-red-800 dark:text-red-400 mb-4">
               Die Unterkapitel-Daten konnten nicht geladen werden.
             </p>
-            <Button onClick={onBack}>
-              Zurück zur Übersicht
-            </Button>
+            <Button onClick={onBack}>Zurück zur Übersicht</Button>
           </CardContent>
         </Card>
       </div>
@@ -186,7 +194,7 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
     bookmarks = store.bookmarks || { chapters: [] };
     toggleBookmarkChapter = store.toggleBookmarkChapter || (() => {});
   } catch (e) {
-    console.error('Error accessing store:', e);
+    console.error("Error accessing store:", e);
   }
 
   const [noteText, setNoteText] = useState(notes[uk.id] || "");
@@ -197,7 +205,9 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
   const allCompleteFired = useRef(false);
 
   const total = unterkapitel.length;
-  const completedCount = unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length;
+  const completedCount = unterkapitel.filter(
+    (u) => u && u.id && completedChapters.includes(u.id)
+  ).length;
   const isLast = unterkapitelIndex === total - 1;
   const isFirst = unterkapitelIndex === 0;
 
@@ -279,8 +289,12 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
       {/* Progress bar */}
       <div className="space-y-1">
         <div className="flex justify-between text-xs text-muted">
-          <span>Unterkapitel {unterkapitelIndex + 1} von {total}</span>
-          <span>{completedCount}/{total} abgeschlossen</span>
+          <span>
+            Unterkapitel {unterkapitelIndex + 1} von {total}
+          </span>
+          <span>
+            {completedCount}/{total} abgeschlossen
+          </span>
         </div>
         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
           <div
@@ -292,12 +306,12 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
 
       {/* Chapter number + title */}
       <div>
-        <p className={`text-sm font-medium ${subjectTextColors[kapitel.subject] || "text-primary-700 dark:text-primary-400"}`}>
+        <p
+          className={`text-sm font-medium ${subjectTextColors[kapitel.subject] || "text-primary-700 dark:text-primary-400"}`}
+        >
           {kapitel.title} — {unterkapitelIndex + 1}/{total}
         </p>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mt-1">
-          {uk.title}
-        </h1>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mt-1">{uk.title}</h1>
       </div>
 
       {/* Notes panel */}
@@ -314,22 +328,24 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
               placeholder="Notizen zu diesem Unterkapitel..."
               className="w-full h-24 p-3 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-yellow-50 dark:bg-yellow-900/10 text-sm text-gray-900 dark:text-gray-100 placeholder:text-muted outline-none focus:ring-2 focus:ring-yellow-400 resize-y"
             />
-            <Button size="sm" onClick={() => setNote(uk.id, noteText)}>Speichern</Button>
+            <Button size="sm" onClick={() => setNote(uk.id, noteText)}>
+              Speichern
+            </Button>
           </CardContent>
         </Card>
       )}
 
       {/* Main content */}
       <Card>
-        <CardContent className={`${kapitel.id === 'bio-kap1' ? 'p-8' : 'p-6'}`}>
+        <CardContent className={`${kapitel.id === "bio-kap1" ? "p-8" : "p-6"}`}>
           <SubchapterContent uk={uk} subject={kapitel.subject} chapterId={kapitel.id} />
         </CardContent>
       </Card>
 
       {/* Merksätze - Enhanced for "Die Zelle" */}
-      {(uk.merksätze && Array.isArray(uk.merksätze) && uk.merksätze.length > 0) && (
-        <div className={kapitel.id === 'bio-kap1' ? 'space-y-4 my-8' : 'space-y-4'}>
-          {kapitel.id === 'bio-kap1' && (
+      {uk.merksätze && Array.isArray(uk.merksätze) && uk.merksätze.length > 0 && (
+        <div className={kapitel.id === "bio-kap1" ? "space-y-4 my-8" : "space-y-4"}>
+          {kapitel.id === "bio-kap1" && (
             <div className="mb-2 pb-2 border-b-2 border-gray-300 dark:border-gray-600">
               <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
                 💡 Prüfungsrelevante Merksätze
@@ -341,13 +357,21 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
           )}
           {uk.merksätze.map((merksatz, i) => (
             <div key={i}>
-              {kapitel.id === 'bio-kap1' ? (
+              {kapitel.id === "bio-kap1" ? (
                 // Enhanced MerksatzBox for "Die Zelle"
                 <div className="bg-amber-50 dark:bg-amber-900/30 border-l-4 border-amber-500 shadow-md p-5 rounded-r-lg">
                   <p className="font-bold text-base text-amber-800 dark:text-amber-300 flex items-center gap-2 mb-2">
                     <span className="text-xl">💡</span> Merke
                   </p>
-                  <p className="text-base text-amber-900 dark:text-amber-200 leading-relaxed" dangerouslySetInnerHTML={{ __html: merksatz.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold">$1</strong>') }} />
+                  <p
+                    className="text-base text-amber-900 dark:text-amber-200 leading-relaxed"
+                    dangerouslySetInnerHTML={{
+                      __html: merksatz.replace(
+                        /\*\*(.*?)\*\*/g,
+                        '<strong class="font-semibold">$1</strong>'
+                      ),
+                    }}
+                  />
                 </div>
               ) : (
                 // Standard MerksatzBox for other chapters
@@ -365,7 +389,9 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
             <h3 className="text-sm font-semibold text-red-800 dark:text-red-300 flex items-center gap-2 mb-2">
               🎯 Altfragen-Klassiker
             </h3>
-            <p className="text-sm font-medium text-red-900 dark:text-red-200 mb-2">{uk.altfrage.question}</p>
+            <p className="text-sm font-medium text-red-900 dark:text-red-200 mb-2">
+              {uk.altfrage.question}
+            </p>
             <details className="group">
               <summary className="text-sm text-red-700 dark:text-red-400 cursor-pointer hover:underline">
                 Antwort anzeigen
@@ -379,15 +405,15 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
       )}
 
       {/* Klinischer Bezug */}
-      {uk.klinischerBezug && (
-        <MerksatzBox text={uk.klinischerBezug} type="klinisch" />
-      )}
+      {uk.klinischerBezug && <MerksatzBox text={uk.klinischerBezug} type="klinisch" />}
 
       {/* Self-Test - Now includes questions extracted from content */}
       {useMemo(() => {
-        const questionsFromArray = (uk.selfTest && Array.isArray(uk.selfTest) && uk.selfTest.length > 0) ? uk.selfTest : [];
+        const questionsFromArray =
+          uk.selfTest && Array.isArray(uk.selfTest) && uk.selfTest.length > 0 ? uk.selfTest : [];
         const extractedFromContent = uk.content ? extractKontrollfragen(uk.content).questions : [];
-        const allQuestions = extractedFromContent.length > 0 ? extractedFromContent : questionsFromArray;
+        const allQuestions =
+          extractedFromContent.length > 0 ? extractedFromContent : questionsFromArray;
 
         if (allQuestions.length === 0) return null;
 
@@ -398,16 +424,24 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
         };
 
         return (
-          <div className={kapitel.id === 'bio-kap1' ? 'mt-8' : ''}>
-            {kapitel.id === 'bio-kap1' ? (
+          <div className={kapitel.id === "bio-kap1" ? "mt-8" : ""}>
+            {kapitel.id === "bio-kap1" ? (
               <InteractiveQuiz questions={allQuestions} {...kontrollProps} />
             ) : (
               <>
-                <div className={kapitel.id === 'bio-kap1' ? 'mb-4 pb-3 border-b-2 border-gray-300 dark:border-gray-600' : ''}>
-                  <h2 className={`${kapitel.id === 'bio-kap1' ? 'text-2xl font-bold' : 'text-xl font-semibold'} text-gray-900 dark:text-gray-100`}>
-                    {kapitel.id === 'bio-kap1' && '📝 '}Kontrollfragen
+                <div
+                  className={
+                    kapitel.id === "bio-kap1"
+                      ? "mb-4 pb-3 border-b-2 border-gray-300 dark:border-gray-600"
+                      : ""
+                  }
+                >
+                  <h2
+                    className={`${kapitel.id === "bio-kap1" ? "text-2xl font-bold" : "text-xl font-semibold"} text-gray-900 dark:text-gray-100`}
+                  >
+                    {kapitel.id === "bio-kap1" && "📝 "}Kontrollfragen
                   </h2>
-                  {kapitel.id === 'bio-kap1' && (
+                  {kapitel.id === "bio-kap1" && (
                     <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                       Teste dein Wissen mit diesen Fragen
                     </p>
@@ -436,7 +470,9 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
                 onChange={() => completeChapter(uk.id)}
                 className="w-4 h-4 rounded border-slate-300 text-primary-500 focus:ring-primary-500"
               />
-              <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Als gelesen markieren</span>
+              <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                Als gelesen markieren
+              </span>
             </label>
           )}
         </CardContent>
@@ -446,7 +482,10 @@ export default function BMSUnterkapitel({ kapitel, unterkapitelIndex, onBack, on
       <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
         <Button
           variant="outline"
-          onClick={() => { onNavigate(unterkapitelIndex - 1); window.scrollTo(0, 0); }}
+          onClick={() => {
+            onNavigate(unterkapitelIndex - 1);
+            window.scrollTo(0, 0);
+          }}
           disabled={isFirst}
         >
           <ArrowLeft className="w-4 h-4 mr-1" />

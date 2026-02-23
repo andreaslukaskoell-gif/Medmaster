@@ -19,4 +19,4 @@
  *   TopBar (hamburger) → Sidebar as Drawer
  *   BottomTabBar for primary navigation
  */
-export { AppShell as AppLayout } from "@/components/layout/AppShell"
+export { AppShell as AppLayout } from "@/components/layout/AppShell";

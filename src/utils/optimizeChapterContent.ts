@@ -44,7 +44,7 @@ export function backupAndOptimizeChapters(chapters: Kapitel[]): Kapitel[] {
 /**
  * Optimiert ein Kapitel visuell und strukturell
  * WITHOUT changing the actual content - only visual/structural improvements
- * 
+ *
  * Rules:
  * - Split long paragraphs into shorter, readable ones
  * - Add clear headings where needed
@@ -53,15 +53,15 @@ export function backupAndOptimizeChapters(chapters: Kapitel[]): Kapitel[] {
  * - Create uniform structure across all chapters
  */
 export function optimizeChapterContent(content: string): string {
-  if (!content || typeof content !== 'string') {
+  if (!content || typeof content !== "string") {
     return content;
   }
 
   let optimized = content;
 
   // 1. Normalize line breaks (ensure consistent spacing)
-  optimized = optimized.replace(/\r\n/g, '\n');
-  optimized = optimized.replace(/\r/g, '\n');
+  optimized = optimized.replace(/\r\n/g, "\n");
+  optimized = optimized.replace(/\r/g, "\n");
 
   // 2. Split very long paragraphs into shorter ones
   optimized = splitLongParagraphs(optimized);
@@ -91,11 +91,11 @@ export function optimizeChapterContent(content: string): string {
   optimized = formatFormulas(optimized);
 
   // 11. Clean up excessive blank lines (max 2 consecutive)
-  optimized = optimized.replace(/\n{4,}/g, '\n\n\n');
+  optimized = optimized.replace(/\n{4,}/g, "\n\n\n");
 
   // 12. Trim excessive blank lines at start/end
-  optimized = optimized.replace(/^\n{2,}/, '\n');
-  optimized = optimized.replace(/\n{2,}$/, '\n');
+  optimized = optimized.replace(/^\n{2,}/, "\n");
+  optimized = optimized.replace(/\n{2,}$/, "\n");
 
   return optimized;
 }
@@ -109,7 +109,7 @@ export function optimizeChapterContent(content: string): string {
  * Preserves sentence boundaries - NO content changes, only structural
  */
 function splitLongParagraphs(text: string): string {
-  const lines = text.split('\n');
+  const lines = text.split("\n");
   const result: string[] = [];
 
   for (const line of lines) {
@@ -119,7 +119,7 @@ function splitLongParagraphs(text: string): string {
       line.match(/^[-*]\s/) ||
       line.match(/^\d+[.)]\s/) ||
       line.match(/^>\s/) ||
-      line.trim() === ''
+      line.trim() === ""
     ) {
       result.push(line);
       continue;
@@ -144,13 +144,13 @@ function splitLongParagraphs(text: string): string {
       }
 
       // Group sentences into paragraphs (2-3 sentences per paragraph)
-      let currentParagraph = '';
+      let currentParagraph = "";
       for (const sentence of sentences) {
         const trimmedSentence = sentence.trim();
         if (!trimmedSentence) continue;
 
         if (currentParagraph) {
-          currentParagraph += ' ' + trimmedSentence;
+          currentParagraph += " " + trimmedSentence;
         } else {
           currentParagraph = trimmedSentence;
         }
@@ -161,7 +161,7 @@ function splitLongParagraphs(text: string): string {
           currentParagraph.length > 150
         ) {
           result.push(currentParagraph);
-          currentParagraph = '';
+          currentParagraph = "";
         }
       }
 
@@ -173,7 +173,7 @@ function splitLongParagraphs(text: string): string {
     }
   }
 
-  return result.join('\n');
+  return result.join("\n");
 }
 
 /**
@@ -181,7 +181,7 @@ function splitLongParagraphs(text: string): string {
  * Preserves content, only adjusts heading levels for consistency
  */
 function normalizeHeadings(text: string): string {
-  const lines = text.split('\n');
+  const lines = text.split("\n");
   let hasMainHeading = false;
 
   for (let i = 0; i < lines.length; i++) {
@@ -194,11 +194,11 @@ function normalizeHeadings(text: string): string {
     }
     // Subsequent single # headings should be ##
     if (line.match(/^#\s+[^#]/) && hasMainHeading) {
-      lines[i] = line.replace(/^#\s+/, '## ');
+      lines[i] = line.replace(/^#\s+/, "## ");
     }
   }
 
-  return lines.join('\n');
+  return lines.join("\n");
 }
 
 /**
@@ -209,13 +209,19 @@ function formatMerksätze(text: string): string {
   let formatted = text;
 
   // Format: **Merksatz:** text (with bold)
-  formatted = formatted.replace(/\*\*Merksatz:\*\*\s*(.+?)(?=\n\n|\n#|\n---|$)/gs, '> **Merke:** $1');
+  formatted = formatted.replace(
+    /\*\*Merksatz:\*\*\s*(.+?)(?=\n\n|\n#|\n---|$)/gs,
+    "> **Merke:** $1"
+  );
 
   // Format: Merksatz: text (without bold, case insensitive)
-  formatted = formatted.replace(/Merksatz:\s*(.+?)(?=\n\n|\n#|\n---|$)/gi, '> **Merke:** $1');
+  formatted = formatted.replace(/Merksatz:\s*(.+?)(?=\n\n|\n#|\n---|$)/gi, "> **Merke:** $1");
 
   // Format: **Merke:** text (already formatted, ensure blockquote)
-  formatted = formatted.replace(/(?<!^>)\s*\*\*Merke:\*\*\s*(.+?)(?=\n\n|\n#|\n---|$)/g, '> **Merke:** $1');
+  formatted = formatted.replace(
+    /(?<!^>)\s*\*\*Merke:\*\*\s*(.+?)(?=\n\n|\n#|\n---|$)/g,
+    "> **Merke:** $1"
+  );
 
   return formatted;
 }
@@ -225,10 +231,10 @@ function formatMerksätze(text: string): string {
  * Preserves list content exactly as is
  */
 function formatLists(text: string): string {
-  const lines = text.split('\n');
+  const lines = text.split("\n");
   const result: string[] = [];
   let inList = false;
-  let listType: 'unordered' | 'ordered' | null = null;
+  let listType: "unordered" | "ordered" | null = null;
   let prevWasList = false;
 
   for (let i = 0; i < lines.length; i++) {
@@ -237,14 +243,14 @@ function formatLists(text: string): string {
 
     // Detect unordered list item
     if (/^[-*]\s/.test(trimmed)) {
-      if (!inList || listType !== 'unordered') {
-        if (inList && listType === 'ordered') {
-          result.push(''); // Space between different list types
+      if (!inList || listType !== "unordered") {
+        if (inList && listType === "ordered") {
+          result.push(""); // Space between different list types
         } else if (!inList && prevWasList) {
-          result.push(''); // Space before new list
+          result.push(""); // Space before new list
         }
         inList = true;
-        listType = 'unordered';
+        listType = "unordered";
       }
       result.push(line); // Preserve original indentation
       prevWasList = true;
@@ -253,14 +259,14 @@ function formatLists(text: string): string {
 
     // Detect ordered list item
     if (/^\d+[.)]\s/.test(trimmed)) {
-      if (!inList || listType !== 'ordered') {
-        if (inList && listType === 'unordered') {
-          result.push(''); // Space between different list types
+      if (!inList || listType !== "ordered") {
+        if (inList && listType === "unordered") {
+          result.push(""); // Space between different list types
         } else if (!inList && prevWasList) {
-          result.push(''); // Space before new list
+          result.push(""); // Space before new list
         }
         inList = true;
-        listType = 'ordered';
+        listType = "ordered";
       }
       result.push(line); // Preserve original indentation
       prevWasList = true;
@@ -269,11 +275,11 @@ function formatLists(text: string): string {
 
     // End list if we hit a non-list, non-empty line
     if (inList && trimmed && !trimmed.match(/^\s/) && !trimmed.match(/^>/)) {
-      result.push(''); // Add space after list
+      result.push(""); // Add space after list
       inList = false;
       listType = null;
       prevWasList = false;
-    } else if (inList && trimmed === '') {
+    } else if (inList && trimmed === "") {
       // Empty line within list - preserve it
       prevWasList = false;
     }
@@ -286,10 +292,10 @@ function formatLists(text: string): string {
 
   // Add final space if list ends document
   if (inList) {
-    result.push('');
+    result.push("");
   }
 
-  return result.join('\n');
+  return result.join("\n");
 }
 
 /**
@@ -300,26 +306,26 @@ function addSpacingAroundElements(text: string): string {
   let spaced = text;
 
   // Add blank line before headings (if not already present and not at start)
-  spaced = spaced.replace(/([^\n\s])\n(#{1,6}\s)/g, '$1\n\n$2');
+  spaced = spaced.replace(/([^\n\s])\n(#{1,6}\s)/g, "$1\n\n$2");
 
   // Add blank line after headings (if not already present)
-  spaced = spaced.replace(/(#{1,6}\s.+?)\n([^\n#\s])/g, '$1\n\n$2');
+  spaced = spaced.replace(/(#{1,6}\s.+?)\n([^\n#\s])/g, "$1\n\n$2");
 
   // Add blank line before blockquotes (Merksätze) if not already present
-  spaced = spaced.replace(/([^\n\s>])\n(>\s)/g, '$1\n\n$2');
+  spaced = spaced.replace(/([^\n\s>])\n(>\s)/g, "$1\n\n$2");
 
   // Add blank line after blockquotes if not already present
-  spaced = spaced.replace(/(>\s.+?)\n([^\n>\s#])/g, '$1\n\n$2');
+  spaced = spaced.replace(/(>\s.+?)\n([^\n>\s#])/g, "$1\n\n$2");
 
   // Ensure spacing around horizontal rules (---)
-  spaced = spaced.replace(/([^\n])\n(---)\n([^\n])/g, '$1\n\n$2\n\n$3');
+  spaced = spaced.replace(/([^\n])\n(---)\n([^\n])/g, "$1\n\n$2\n\n$3");
 
   // Clean up excessive blank lines (max 2 consecutive, except at document boundaries)
-  spaced = spaced.replace(/\n{4,}/g, '\n\n\n');
-  
+  spaced = spaced.replace(/\n{4,}/g, "\n\n\n");
+
   // Trim excessive blank lines at start/end
-  spaced = spaced.replace(/^\n{2,}/, '\n');
-  spaced = spaced.replace(/\n{2,}$/, '\n');
+  spaced = spaced.replace(/^\n{2,}/, "\n");
+  spaced = spaced.replace(/\n{2,}$/, "\n");
 
   return spaced;
 }
@@ -351,7 +357,7 @@ function formatDefinitions(text: string): string {
  */
 function formatTables(text: string): string {
   let formatted = text;
-  const lines = formatted.split('\n');
+  const lines = formatted.split("\n");
   const result: string[] = [];
   let inTable = false;
   let prevWasTable = false;
@@ -364,8 +370,8 @@ function formatTables(text: string): string {
     if (isTableRow || isTableSeparator) {
       if (!inTable) {
         // Start of table - add blank line before if needed
-        if (prevWasTable || (result.length > 0 && result[result.length - 1].trim() !== '')) {
-          result.push('');
+        if (prevWasTable || (result.length > 0 && result[result.length - 1].trim() !== "")) {
+          result.push("");
         }
         inTable = true;
         prevWasTable = false;
@@ -374,7 +380,7 @@ function formatTables(text: string): string {
     } else {
       if (inTable) {
         // End of table - add blank line after
-        result.push('');
+        result.push("");
         inTable = false;
         prevWasTable = true;
       }
@@ -387,10 +393,10 @@ function formatTables(text: string): string {
 
   // Add final blank line if table ends document
   if (inTable) {
-    result.push('');
+    result.push("");
   }
 
-  return result.join('\n');
+  return result.join("\n");
 }
 
 /**
@@ -401,10 +407,10 @@ function formatInlineCode(text: string): string {
 
   // Ensure spacing around inline code blocks (but not inside)
   // Pattern: `code` should have space before/after if not already present
-  formatted = formatted.replace(/([^\s`])(`[^`]+`)([^\s`])/g, '$1 $2 $3');
-  
+  formatted = formatted.replace(/([^\s`])(`[^`]+`)([^\s`])/g, "$1 $2 $3");
+
   // Ensure spacing around math expressions $...$
-  formatted = formatted.replace(/([^\s$])(\$[^$]+\$)([^\s$])/g, '$1 $2 $3');
+  formatted = formatted.replace(/([^\s$])(\$[^$]+\$)([^\s$])/g, "$1 $2 $3");
 
   return formatted;
 }
@@ -417,67 +423,68 @@ function formatFormulas(text: string): string {
 
   // Ensure formulas have blank lines before and after if they're standalone
   // Pattern: line with only formula-like content (e.g., "f(x) = x^2" or "$...$")
-  const lines = formatted.split('\n');
+  const lines = formatted.split("\n");
   const result: string[] = [];
-  
+
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim();
-    const isFormulaLine = line.match(/^[=∫∑∏√≤≥≠±∞αβγδ]/) || 
-                          line.match(/^\$[^$]+\$$/) ||
-                          (line.match(/[=∫∑∏√]/) && line.length < 100);
-    
+    const isFormulaLine =
+      line.match(/^[=∫∑∏√≤≥≠±∞αβγδ]/) ||
+      line.match(/^\$[^$]+\$$/) ||
+      (line.match(/[=∫∑∏√]/) && line.length < 100);
+
     if (isFormulaLine && line.length > 0) {
       // Add blank line before if not present
-      if (result.length > 0 && result[result.length - 1].trim() !== '') {
-        result.push('');
+      if (result.length > 0 && result[result.length - 1].trim() !== "") {
+        result.push("");
       }
       result.push(lines[i]); // Keep original formatting
       // Add blank line after
-      if (i < lines.length - 1 && lines[i + 1].trim() !== '') {
-        result.push('');
+      if (i < lines.length - 1 && lines[i + 1].trim() !== "") {
+        result.push("");
       }
     } else {
       result.push(lines[i]);
     }
   }
 
-  return result.join('\n');
+  return result.join("\n");
 }
 
 /**
  * Optimiert alle Kapitel automatisch und erstellt Backups
- * 
+ *
  * Diese Funktion:
  * 1. Lädt alle Kapitel aus localStorage
  * 2. Erstellt ein Backup der Original-Daten
  * 3. Optimiert alle Kapitel-Inhalte
  * 4. Speichert die optimierten Kapitel zurück
- * 
+ *
  * @returns Anzahl der optimierten Kapitel
  */
 export async function optimizeAllChapters(): Promise<number> {
   try {
-    console.log('🚀 [optimizeAllChapters] Starting optimization...');
+    console.log("🚀 [optimizeAllChapters] Starting optimization...");
 
     // 1. Lade alle Kapitel aus localStorage
     const chapters = loadAllChapters();
-    
+
     if (chapters.length === 0) {
-      console.log('⚠️ [optimizeAllChapters] No chapters found in storage');
+      console.log("⚠️ [optimizeAllChapters] No chapters found in storage");
       return 0;
     }
 
     console.log(`📚 [optimizeAllChapters] Found ${chapters.length} chapters to optimize`);
 
     // 2. Erstelle Backup in localStorage
-    const BACKUP_KEY = 'bms-chapters-backup-before-optimization';
+    const BACKUP_KEY = "bms-chapters-backup-before-optimization";
     const backupData = {
       timestamp: new Date().toISOString(),
       chapters: JSON.parse(JSON.stringify(chapters)), // Deep copy
-      version: '1.0.0'
+      version: "1.0.0",
     };
     localStorage.setItem(BACKUP_KEY, JSON.stringify(backupData));
-    console.log('💾 [optimizeAllChapters] Backup created:', BACKUP_KEY);
+    console.log("💾 [optimizeAllChapters] Backup created:", BACKUP_KEY);
 
     // 3. Optimiere alle Kapitel
     const optimizedChapters = backupAndOptimizeChapters(chapters);
@@ -487,29 +494,33 @@ export async function optimizeAllChapters(): Promise<number> {
     for (const chapter of optimizedChapters) {
       saveChapter(chapter);
       optimizedCount++;
-      console.log(`✅ [optimizeAllChapters] Optimized chapter: ${chapter.title} (${chapter.unterkapitel.length} subchapters)`);
+      console.log(
+        `✅ [optimizeAllChapters] Optimized chapter: ${chapter.title} (${chapter.unterkapitel.length} subchapters)`
+      );
     }
 
-    console.log(`🎉 [optimizeAllChapters] Optimization complete! Optimized ${optimizedCount} chapters`);
+    console.log(
+      `🎉 [optimizeAllChapters] Optimization complete! Optimized ${optimizedCount} chapters`
+    );
     return optimizedCount;
   } catch (error) {
-    console.error('❌ [optimizeAllChapters] Error during optimization:', error);
+    console.error("❌ [optimizeAllChapters] Error during optimization:", error);
     throw error;
   }
 }
 
 /**
  * Stellt die Original-Kapitel aus dem Backup wieder her
- * 
+ *
  * @returns true wenn Restore erfolgreich war
  */
 export function restoreChaptersFromBackup(): boolean {
   try {
-    const BACKUP_KEY = 'bms-chapters-backup-before-optimization';
+    const BACKUP_KEY = "bms-chapters-backup-before-optimization";
     const backupDataStr = localStorage.getItem(BACKUP_KEY);
-    
+
     if (!backupDataStr) {
-      console.warn('⚠️ [restoreChaptersFromBackup] No backup found');
+      console.warn("⚠️ [restoreChaptersFromBackup] No backup found");
       return false;
     }
 
@@ -524,7 +535,7 @@ export function restoreChaptersFromBackup(): boolean {
     console.log(`✅ [restoreChaptersFromBackup] Restored ${chapters.length} chapters from backup`);
     return true;
   } catch (error) {
-    console.error('❌ [restoreChaptersFromBackup] Error during restore:', error);
+    console.error("❌ [restoreChaptersFromBackup] Error during restore:", error);
     return false;
   }
 }

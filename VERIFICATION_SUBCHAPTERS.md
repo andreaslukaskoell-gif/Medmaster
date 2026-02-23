@@ -3,11 +3,12 @@
 ## Fixed Implementation
 
 ### Data Model
+
 ```typescript
 interface Kapitel {
   id: string;
   title: string;
-  subject: 'biologie' | 'chemie' | 'physik' | 'mathematik';
+  subject: "biologie" | "chemie" | "physik" | "mathematik";
   icon: string;
   estimatedTime: string;
   unterkapitel: Unterkapitel[]; // Array of subchapters
@@ -24,30 +25,36 @@ interface Unterkapitel {
 ### Save Logic (`saveSubchapter` in `bmsStorage.ts`)
 
 **Key Rules:**
+
 1. **If subchapter.id does NOT exist** → APPEND to `chapter.unterkapitel[]`
 2. **If subchapter.id DOES exist** → UPDATE only that subchapter in the array
 3. **NEVER replace the whole array** → Always merge/append
 
 **Implementation:**
+
 ```typescript
-export function saveSubchapter(chapterId: string, subchapter: Unterkapitel, chapterData?: Partial<Kapitel>): void {
+export function saveSubchapter(
+  chapterId: string,
+  subchapter: Unterkapitel,
+  chapterData?: Partial<Kapitel>
+): void {
   // 1. Load all chapters
   const existing = loadAllChapters();
   let chapterIndex = existing.findIndex((c) => c.id === chapterId);
-  
+
   // 2. Create chapter if it doesn't exist
   if (chapterIndex < 0) {
     // Create new chapter
     existing.push(newChapter);
     chapterIndex = existing.length - 1;
   }
-  
+
   // 3. Get current subchapters array (create copy)
   const subchapters = [...(chapter.unterkapitel || [])];
-  
+
   // 4. Find existing subchapter by ID
   const existingIndex = subchapters.findIndex((uk) => uk.id === subchapterWithId.id);
-  
+
   if (existingIndex >= 0) {
     // UPDATE: Replace only this subchapter
     subchapters[existingIndex] = subchapterWithId;
@@ -55,13 +62,13 @@ export function saveSubchapter(chapterId: string, subchapter: Unterkapitel, chap
     // APPEND: Add new subchapter to array
     subchapters.push(subchapterWithId);
   }
-  
+
   // 5. Update chapter with FULL subchapters array
   existing[chapterIndex] = {
     ...chapter,
-    unterkapitel: subchapters // Set FULL array
+    unterkapitel: subchapters, // Set FULL array
   };
-  
+
   // 6. Persist to localStorage
   localStorage.setItem(STORAGE_KEY, JSON.stringify(stored));
 }
@@ -70,6 +77,7 @@ export function saveSubchapter(chapterId: string, subchapter: Unterkapitel, chap
 ### Editor Logic (`KapitelEditor.tsx`)
 
 **Flow:**
+
 1. Check if chapter exists
 2. Save subchapter to localStorage FIRST
 3. Reload chapter AFTER saving to get all subchapters
@@ -89,20 +97,24 @@ const allSubchapters = updatedChapter.unterkapitel || [];
 ## Test Scenario
 
 ### Step 1: Create Chapter "Die Zelle"
+
 - Input: Chapter title "Die Zelle", Subchapter "Zellmembran"
 - Save
 - **Expected:** Chapter created with 1 subchapter
 
 ### Step 2: Add Second Subchapter "Zellkern"
+
 - Input: Same chapter title "Die Zelle", Subchapter "Zellkern"
 - Save
 - **Expected:** Chapter now has 2 subchapters: ["Zellmembran", "Zellkern"]
 
 ### Step 3: Reload Page
+
 - Reload browser
 - **Expected:** Both subchapters still exist
 
 ### Step 4: Edit "Zellmembran"
+
 - Edit content of "Zellmembran"
 - Save
 - **Expected:** "Zellmembran" updated, "Zellkern" unchanged

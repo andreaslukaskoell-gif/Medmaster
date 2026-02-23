@@ -77,26 +77,10 @@ Wenn eine Welle an einem festen Ende reflektiert wird und sich mit der einlaufen
       vergleichsTabelle: {
         headers: ["Eigenschaft", "Transversalwelle", "Longitudinalwelle"],
         rows: [
-          [
-            "Schwingungsrichtung",
-            "Senkrecht (⊥) zur Ausbreitung",
-            "Parallel (‖) zur Ausbreitung",
-          ],
-          [
-            "Beispiel",
-            "Licht, Seilwelle, Wasserwelle",
-            "Schall, Erdbebenwelle (P-Welle)",
-          ],
-          [
-            "Medium nötig?",
-            "Nicht immer (Licht: nein)",
-            "Ja, immer",
-          ],
-          [
-            "Polarisierbar?",
-            "Ja",
-            "Nein",
-          ],
+          ["Schwingungsrichtung", "Senkrecht (⊥) zur Ausbreitung", "Parallel (‖) zur Ausbreitung"],
+          ["Beispiel", "Licht, Seilwelle, Wasserwelle", "Schall, Erdbebenwelle (P-Welle)"],
+          ["Medium nötig?", "Nicht immer (Licht: nein)", "Ja, immer"],
+          ["Polarisierbar?", "Ja", "Nein"],
         ],
       },
       merke:
@@ -176,7 +160,7 @@ Anwendungen:
       merke:
         "<strong>Zum Lot</strong> = ins dichtere Medium. <strong>Vom Lot weg</strong> = ins dünnere Medium. Totalreflexion nur beim Übergang <strong>dicht → dünn</strong>! Anwendung: Glasfaser.",
       altfrage:
-        "\"Totalreflexion tritt auf, wenn...\" → Licht vom optisch <strong>dichteren</strong> ins <strong>dünnere</strong> Medium übergeht UND der Einfallswinkel den Grenzwinkel überschreitet.",
+        '"Totalreflexion tritt auf, wenn..." → Licht vom optisch <strong>dichteren</strong> ins <strong>dünnere</strong> Medium übergeht UND der Einfallswinkel den Grenzwinkel überschreitet.',
     },
 
     // ----------------------------------------------------------------
@@ -288,7 +272,7 @@ Die Fähigkeit des Auges, die Brechkraft der Linse zu verändern und so auf unte
       heading: "Doppler-Effekt & Kernphysik",
       content: `<strong>Doppler-Effekt</strong>
 
-Der Doppler-Effekt beschreibt die Änderung der wahrgenommenen <strong>Frequenz</strong> (und damit der Wellenlänge) einer Welle, wenn sich Quelle und Beobachter relativ zueinander bewegen.
+Der Doppler-Effekt beschreibt die Änderung der wahrgenommenen <strong>Frequenz</strong> (und damit der Wellenlänge) einer Welle, wenn sich Quelle und Beobachter relativ züinander bewegen.
 
 <strong>Quelle nähert sich dem Beobachter:</strong>
 • Die Wellenfronten werden <strong>gestaucht</strong>
@@ -445,40 +429,21 @@ N = 1000 · (½)³ = 1000 · 1/8 = <strong>125 Kerne</strong>
     },
     {
       question: "Kurzsichtigkeit wird korrigiert mit...",
-      options: [
-        "Sammellinse",
-        "Zerstreuungslinse",
-        "Prisma",
-        "Spiegel",
-        "Kontaktlinse",
-      ],
+      options: ["Sammellinse", "Zerstreuungslinse", "Prisma", "Spiegel", "Kontaktlinse"],
       correctIndex: 1,
       explanation:
         "Kurzsichtigkeit: Augapfel zu lang, Bild vor der Retina. Korrektur: Zerstreuungslinse (negative Dioptrien) verschiebt den Brennpunkt nach hinten.",
     },
     {
-      question:
-        "Wenn sich eine Schallquelle nähert, wird die Frequenz...",
-      options: [
-        "Niedriger",
-        "Höher",
-        "Bleibt gleich",
-        "Null",
-        "Unendlich",
-      ],
+      question: "Wenn sich eine Schallquelle nähert, wird die Frequenz...",
+      options: ["Niedriger", "Höher", "Bleibt gleich", "Null", "Unendlich"],
       correctIndex: 1,
       explanation:
         "Doppler-Effekt: Nähert sich die Quelle, werden die Wellenfronten gestaucht → kürzere Wellenlänge → höhere Frequenz.",
     },
     {
       question: "Welche Welle braucht KEIN Medium?",
-      options: [
-        "Schallwelle",
-        "Wasserwelle",
-        "Lichtwelle",
-        "Erdbebenwelle",
-        "Seilwelle",
-      ],
+      options: ["Schallwelle", "Wasserwelle", "Lichtwelle", "Erdbebenwelle", "Seilwelle"],
       correctIndex: 2,
       explanation:
         "Licht (elektromagnetische Welle) kann sich auch im Vakuum ausbreiten. Schall, Wasser- und Seilwellen brauchen ein Medium.",

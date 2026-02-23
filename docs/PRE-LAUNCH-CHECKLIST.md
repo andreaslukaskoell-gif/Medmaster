@@ -8,7 +8,8 @@ Priorisiert nach **Absturzrisiko** und **kritischen Fehlern**. Vor dem Live-Gang
 
 ### 1. ~~Supabase-Client ohne Env-Variablen~~ ✅ Erledigt
 
-**Datei:** `src/lib/supabase.ts`  
+**Datei:** `src/lib/supabase.ts`
+
 - Env-Check ergänzt: Fehlende Variablen werden in der Konsole ausgegeben (`[MedMaster] Supabase ist nicht konfiguriert. Bitte in .env setzen: VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY`).
 - `supabase` ist jetzt `SupabaseClient | null`; alle Aufrufer (useAuth, sync, syncService, useDashboardProfile, supabaseBMS, migrateBMS) prüfen auf `null` und brechen ab, sodass die App nicht crasht.
 
@@ -16,7 +17,8 @@ Priorisiert nach **Absturzrisiko** und **kritischen Fehlern**. Vor dem Live-Gang
 
 ### 2. ~~useAuth: Kein Fehler-Handling bei Profile-Fetch~~ ✅ Erledigt
 
-**Datei:** `src/hooks/useAuth.ts` – `fetchProfile()`  
+**Datei:** `src/hooks/useAuth.ts` – `fetchProfile()`
+
 - Abfrage auf `.maybeSingle()` umgestellt; `error` wird ausgewertet und geloggt.
 - Bei **keinem Profil** (neuer User): Es wird ein Standard-Profil (starter, xp/level 0) gesetzt, sodass die App einen Willkommen-Zustand anzeigen kann und nicht hängt.
 
@@ -24,14 +26,16 @@ Priorisiert nach **Absturzrisiko** und **kritischen Fehlern**. Vor dem Live-Gang
 
 ### 3. ~~Duell: Absturz bei nur einer Antwort-Option~~ ✅ Erledigt
 
-**Datei:** `src/pages/Duel.tsx`  
+**Datei:** `src/pages/Duel.tsx`
+
 - Falsche Optionen werden in `wrongOptions` gesammelt; die Gegner-Antwort wird nur aus `wrongOptions[Math.floor(Math.random() * wrongOptions.length)]` gewählt, wenn `wrongOptions.length > 0`, sonst Fallback auf `q.correctOptionId` (kein Crash).
 
 ---
 
 ### 4. ~~Main-Store-Sync beim Login fehlt~~ ✅ Erledigt
 
-**Datei:** `src/hooks/useAuth.ts`  
+**Datei:** `src/hooks/useAuth.ts`
+
 - Beim Login wird neben `startAutoSync(userId)` nun auch `startMainSync(userId)` aufgerufen.
 - Beim Logout wird `stopMainSync()` aufgerufen. XP, Quiz-Ergebnisse, Notizen etc. werden damit beim Gerätewechsel aus Supabase geladen.
 

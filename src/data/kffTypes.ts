@@ -4,13 +4,13 @@
 export type KFFSubtestType =
   | "implikationen"
   | "zahlenfolgen"
-  | "wortfluessigkeit"
-  | "merkfaehigkeit"
+  | "wortflüssigkeit"
+  | "merkfähigkeit"
   | "figuren"
   | "emotionen-regulieren"
   | "soziales-entscheiden"
   | "emotionen-erkennen"
-  | "textverstaendnis";
+  | "textverständnis";
 
 /** Einzelne Übungsaufgabe */
 export interface KFFExercise {
@@ -30,7 +30,7 @@ export interface KFFResult {
   userAnswer: string;
   correct: boolean;
   timeSpent: number; // Millisekunden
-  date: string;      // ISO-String
+  date: string; // ISO-String
 }
 
 /** Ergebnis einer Simulation */
@@ -39,9 +39,9 @@ export interface SimulationResult {
   subtestType: KFFSubtestType;
   score: number;
   maxScore: number;
-  timeUsed: number;  // Sekunden
-  timeLimit: number;  // Sekunden
-  date: string;       // ISO-String
+  timeUsed: number; // Sekunden
+  timeLimit: number; // Sekunden
+  date: string; // ISO-String
   details: KFFResult[];
 }
 

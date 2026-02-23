@@ -1,10 +1,10 @@
-export type { Kapitel, Unterkapitel, SelfTestQuestion } from './types';
+export type { Kapitel, Unterkapitel, SelfTestQuestion } from "./types";
 
-import { biologieKapitel } from './biologie/index';
-import { chemieKapitel } from './chemie/index';
-import { physikKapitel } from './physik/index';
-import { mathematikKapitel } from './mathematik/index';
-import type { Kapitel } from './types';
+import { biologieKapitel } from "./biologie/index";
+import { chemieKapitel } from "./chemie/index";
+import { physikKapitel } from "./physik/index";
+import { mathematikKapitel } from "./mathematik/index";
+import type { Kapitel } from "./types";
 
 // Safe array spreading with fallback to empty arrays
 export const alleKapitel: Kapitel[] = [
@@ -19,7 +19,7 @@ export function getKapitelBySubject(subject: string): Kapitel[] {
   try {
     return alleKapitel.filter((k) => !!(k && k.subject === subject));
   } catch (error) {
-    console.error('❌ Error filtering chapters by subject:', error);
+    console.error("❌ Error filtering chapters by subject:", error);
     return [];
   }
 }

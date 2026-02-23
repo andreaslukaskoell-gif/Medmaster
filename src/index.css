@@ -9,14 +9,15 @@
   --background: #fafafa;
   --foreground: #0a0a0a;
   --card: #ffffff;
-  --border: #e5e7eb;
-  --accent-bio: #22c55e;
-  --accent-chem: #ef4444;
-  --accent-phys: #3b82f6;
-  --accent-math: #a855f7;
+  --border: #82868c;
+  --accent-bio: #329556;
+  --accent-chem: #f0ff24;
+  --accent-phys: #2563eb;
+  --accent-math: #9333ea;
   --muted: #888888;
   --sidebar-bg: rgba(255, 255, 255, 0.92);
   --topbar-bg: rgba(250, 250, 250, 0.9);
+  --radius: 24px;
 }
 
 .dark {
@@ -30,24 +31,24 @@
 }
 
 @theme {
-  /* Medical UI: Med-Blue primary (#007AFF) */
-  --color-primary-50: #e6f2ff;
-  --color-primary-100: #cce5ff;
-  --color-primary-200: #99cbff;
-  --color-primary-300: #66b0ff;
-  --color-primary-400: #3396ff;
-  --color-primary-500: #007AFF;
-  --color-primary-600: #0062cc;
-  --color-primary-700: #004999;
-  --color-primary-800: #003166;
-  --color-primary-900: #001833;
-  --color-primary-950: #000c1a;
+  /* Medical UI: Deep Blue primary (#1b3ea7) */
+  --color-primary-50: #e8ecf7;
+  --color-primary-100: #c5cee9;
+  --color-primary-200: #8b9dd3;
+  --color-primary-300: #516cbd;
+  --color-primary-400: #3655b2;
+  --color-primary-500: #1b3ea7;
+  --color-primary-600: #163286;
+  --color-primary-700: #102564;
+  --color-primary-800: #0b1943;
+  --color-primary-900: #050c21;
+  --color-primary-950: #030611;
 
   --color-midnight: #1e293b;
   --color-soft-white: #f8fafc;
   --color-surface: #f8fafc;
   --color-card: #ffffff;
-  --color-border: #e2e8f0;
+  --color-border: #82868c;
   --color-muted: #64748b;
 
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -98,12 +99,16 @@ body.dark-body .card-glass {
   box-shadow: 0 4px 14px rgba(0, 122, 255, 0.25);
 }
 .btn-med {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 /* Progress bar fill animation */
 @keyframes progress-bar-enter {
-  from { width: 0; }
+  from {
+    width: 0;
+  }
 }
 .animate-progress-bar {
   animation: progress-bar-enter 0.8s ease-out forwards;
@@ -120,33 +125,68 @@ body.dark-body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(4px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes confetti-fall {
-  0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  20% { transform: translateX(-4px); }
-  40% { transform: translateX(4px); }
-  60% { transform: translateX(-4px); }
-  80% { transform: translateX(4px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
 }
 
 @keyframes glow-green {
-  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
-  50% { box-shadow: 0 0 12px 4px rgba(34, 197, 94, 0.2); }
-  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 12px 4px rgba(34, 197, 94, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
 }
 
 @keyframes glow-red {
-  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
-  50% { box-shadow: 0 0 12px 4px rgba(239, 68, 68, 0.2); }
-  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 12px 4px rgba(239, 68, 68, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
 }
 
 .animate-shake {
@@ -162,7 +202,9 @@ body.dark-body {
 }
 
 @keyframes progress-fill {
-  from { width: 0%; }
+  from {
+    width: 0%;
+  }
 }
 
 .animate-progress-fill {
@@ -171,8 +213,19 @@ body.dark-body {
 
 /* Hot-Streak: goldener Schimmer (5 richtige in Folge) */
 @keyframes hot-streak-glow {
-  0%, 100% { opacity: 0.7; box-shadow: inset 0 0 40px rgba(251, 191, 36, 0.12), 0 0 60px rgba(251, 191, 36, 0.15); }
-  50% { opacity: 1; box-shadow: inset 0 0 80px rgba(251, 191, 36, 0.2), 0 0 100px rgba(251, 191, 36, 0.25); }
+  0%,
+  100% {
+    opacity: 0.7;
+    box-shadow:
+      inset 0 0 40px rgba(251, 191, 36, 0.12),
+      0 0 60px rgba(251, 191, 36, 0.15);
+  }
+  50% {
+    opacity: 1;
+    box-shadow:
+      inset 0 0 80px rgba(251, 191, 36, 0.2),
+      0 0 100px rgba(251, 191, 36, 0.25);
+  }
 }
 .animate-hot-streak-glow {
   animation: hot-streak-glow 1.5s ease-in-out infinite;
@@ -180,8 +233,12 @@ body.dark-body {
 
 /* Task-List: durchgestrichener Text (Micro-Checklist) */
 @keyframes strikethrough-scale {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 .strikethrough-line {
   transform-origin: left;
@@ -219,19 +276,33 @@ textarea,
 select {
   @apply border border-slate-200 dark:border-white/10 rounded-lg;
 }
-input:focus, textarea:focus, [role="combobox"]:focus, select:focus {
+input:focus,
+textarea:focus,
+[role="combobox"]:focus,
+select:focus {
   @apply outline-none ring-2 ring-primary-500/50 border-primary-500 dark:border-primary-400;
 }
 
 /* Typography: Lesbarkeit langer medizinischer Texte */
-.prose, .content {
+.prose,
+.content {
   @apply leading-relaxed;
 }
-.prose h1, .prose h2, .prose h3, .prose h4,
-.text-midnight.dark .prose h1, .dark .prose h1, .dark .prose h2, .dark .prose h3, .dark .prose h4 {
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.text-midnight.dark .prose h1,
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4 {
   @apply text-slate-900 dark:text-white font-semibold;
 }
-.prose p, .prose li, .prose td, .prose th {
+.prose p,
+.prose li,
+.prose td,
+.prose th {
   @apply text-slate-700 dark:text-slate-100;
 }
 
@@ -265,8 +336,12 @@ input:focus, textarea:focus, [role="combobox"]:focus, select:focus {
 
 /* Skeleton: Shimmer von Dunkelblau zu hellerem Blau (links nach rechts) */
 @keyframes skeleton-shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 .skeleton-shimmer {
   background: linear-gradient(

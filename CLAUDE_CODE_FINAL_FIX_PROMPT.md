@@ -1,6 +1,7 @@
 # MedMaster — Finaler Fix-Prompt: Alle Fehler beheben + Content auf Lehrbuch-Niveau
 
 ## KONTEXT
+
 Die App läuft. Ich habe sie mir im Browser angeschaut und ALLE Probleme notiert. Dieser Prompt behebt ALLES auf einmal — Bugs, fehlende Inhalte, und Qualitätsprobleme.
 
 **WICHTIG:** Kein Backend! Kein Supabase! Alles bleibt Frontend-only mit localStorage/Zustand. Wir machen das Produkt erst PERFEKT, dann kommt das Backend.
@@ -10,9 +11,11 @@ Die App läuft. Ich habe sie mir im Browser angeschaut und ALLE Probleme notiert
 ## TEIL 1: KRITISCHE BUGS SOFORT BEHEBEN
 
 ### Bug 1: Umlaute werden nicht korrekt angezeigt (HÖCHSTE PRIORITÄT)
+
 Überall in der App stehen "ae", "ue", "oe", "ss" statt ä, ü, ö, ß.
 
 Beispiele die ich gesehen habe:
+
 - "Zurueck" → muss "Zurück" sein
 - "Uebungsfragen" → "Übungsfragen"
 - "Faehigkeiten" → "Fähigkeiten"
@@ -24,6 +27,7 @@ Beispiele die ich gesehen habe:
 - "Schwaechen" → "Schwächen"
 
 **FIX:** Durchsuche ALLE Dateien im Projekt nach Wörtern die "ae", "ue", "oe" enthalten und ersetze sie durch echte Umlaute (ä, ü, ö, ß). Stelle sicher dass alle Dateien UTF-8 kodiert sind. Prüfe:
+
 - Alle Komponenten-Dateien (.tsx)
 - Alle Daten-Dateien (.ts)
 - Router-Labels
@@ -35,7 +39,9 @@ Beispiele die ich gesehen habe:
 - Platzhalter
 
 ### Bug 2: SEK falsch benannt
+
 Die SEK-Seite zeigt "Soziales Entscheiden" als Haupttitel. Richtig ist:
+
 - Hauptbereich: **"Sozial-emotionale Kompetenzen (SEK)"**
 - Drei Untertests:
   1. **Emotionen erkennen (EE)** — Gefühle anhand von Fotos/Beschreibungen identifizieren
@@ -43,10 +49,12 @@ Die SEK-Seite zeigt "Soziales Entscheiden" als Haupttitel. Richtig ist:
   3. **Soziales Entscheiden (SE)** — Ethische Dilemmata, beste Handlung wählen
 
 ### Bug 3: KFF fehlt "Figuren zusammensetzen"
+
 Die KFF-Seite zeigt nur 4 Module (Zahlenfolgen, Allergieausweise merken, Implikationen erkennen, Wortflüssigkeit).
 Es FEHLT der 5. Untertest: **"Figuren zusammensetzen (FZ)"** — das ist einer der wichtigsten KFF-Untertests!
 
 **Was "Figuren zusammensetzen" ist:**
+
 - Man bekommt ausgeschnittene Puzzleteile (Dreiecke, Quadrate, Kreise, Vielecke)
 - Man muss herausfinden welche fertige Figur entsteht wenn man sie zusammensetzt
 - 5 Antwortmöglichkeiten (A-E), eine ist richtig
@@ -54,6 +62,7 @@ Es FEHLT der 5. Untertest: **"Figuren zusammensetzen (FZ)"** — das ist einer d
 - Erfordert räumliches Vorstellungsvermögen
 
 **Erstelle für FZ:**
+
 1. Strategie-Guide mit Tipps (Umrisse vergleichen, Fläche abschätzen, Ausschlussmethode)
 2. Mindestens 20 Übungsaufgaben als SVG-basierte Puzzles:
    - Zeige 3-5 Puzzleteile als SVGs
@@ -67,6 +76,7 @@ Es FEHLT der 5. Untertest: **"Figuren zusammensetzen (FZ)"** — das ist einer d
 ## TEIL 2: BMS-KAPITEL AUF LEHRBUCH-QUALITÄT BRINGEN
 
 ### Problem: Die aktuellen Kapitel sind zu dünn
+
 Ich habe das Zellbiologie-Kapitel angeschaut: 3 kurze Abschnitte mit reinem Fließtext, keine Grafiken, keine Merksätze, keine Lernziele. Das reicht NICHT für eine ernsthafte MedAT-Vorbereitung.
 
 ### Neue Kapitel-Struktur (für JEDES der 12 BMS-Kapitel):
@@ -201,8 +211,8 @@ interface LernzielBoxProps {
 
 // 2. MerksatzBox
 interface MerksatzBoxProps {
-  text: string;        // Der Merksatz-Text
-  type?: 'merke' | 'altfragen' | 'klinisch' | 'achtung' | 'tipp';
+  text: string; // Der Merksatz-Text
+  type?: "merke" | "altfragen" | "klinisch" | "achtung" | "tipp";
 }
 
 // 3. KeyFactsGrid
@@ -222,7 +232,7 @@ interface SelbstTestProps {
     question: string;
     options: string[];
     correctIndex: number;
-    explanation: string;  // Warum diese Antwort richtig ist
+    explanation: string; // Warum diese Antwort richtig ist
   }[];
 }
 
@@ -292,6 +302,7 @@ interface SelbstTestProps {
    - ALTFRAGE: "Wann findet Crossing-over statt?" → Prophase I der Meiose
 
 **Key Facts Zellbiologie:**
+
 - Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein pro ATP
 - Ribosomen: 80S (Eukaryoten) vs. 70S (Prokaryoten)
 - Lysosomen: pH 4,5-5,0
@@ -300,6 +311,7 @@ interface SelbstTestProps {
 - Mikrofilamente: 7nm, Intermediär: 10nm, Mikrotubuli: 25nm
 
 **5 Selbsttest-Fragen:**
+
 1. Welche Organelle hat eine Doppelmembran? (A) Lysosom (B) Golgi-Apparat (C) Mitochondrium (D) Glattes ER → C
 2. Wie viele Na⁺-Ionen pumpt die Na⁺/K⁺-ATPase pro Zyklus RAUS? (A) 2 (B) 3 (C) 4 (D) 1 → B
 3. Was ist das Ergebnis der Meiose? (A) 2 diploide Zellen (B) 4 diploide Zellen (C) 2 haploide Zellen (D) 4 haploide Zellen → D
@@ -376,6 +388,7 @@ interface SelbstTestProps {
    - Klinisch: Rhesus-Inkompatibilität bei Schwangerschaft (Anti-D-Prophylaxe)
 
 **Key Facts Genetik:**
+
 - A=T (2 H-Brücken), G≡C (3 H-Brücken)
 - Startcodon: AUG, Stopcodons: UAA, UAG, UGA
 - 64 Codons → 20 Aminosäuren + 3 Stopcodons
@@ -464,6 +477,7 @@ interface SelbstTestProps {
    - ALTFRAGE: "Woraus entwickelt sich das Nervensystem?" → Ektoderm
 
 **Key Facts Humanbiologie:**
+
 - Ruhepotential: -70 mV
 - Sinusknoten: 70/min (primärer Schrittmacher)
 - GFR: 120 mL/min, ~180 L Primärharn/Tag
@@ -480,6 +494,7 @@ interface SelbstTestProps {
 ### Kapitel 4: Allgemeine & Anorganische Chemie
 
 **Abschnitte:**
+
 1. **Atombau** — Protonen, Neutronen, Elektronen, Schalenmodell, Elektronenkonfiguration (1s² 2s² 2p⁶...), Ordnungszahl, Massenzahl
 2. **Periodensystem** — Gruppen (1-18), Perioden (1-7), Hauptgruppen (Alkalimetalle, Erdalkalimetalle, Halogene, Edelgase), Trends (Elektronegativität, Atomradius, Ionisierungsenergie)
 3. **Chemische Bindungen** — Ionenbindung (Elektronenübertragung, NaCl), Kovalente Bindung (Elektronenpaarbindung, H₂O), Metallische Bindung, Van-der-Waals, Wasserstoffbrücken
@@ -491,6 +506,7 @@ interface SelbstTestProps {
 ### Kapitel 5: Organische Chemie
 
 **Abschnitte:**
+
 1. **Kohlenwasserstoffe** — Alkane (Einfachbindung, -an), Alkene (Doppelbindung, -en), Alkine (Dreifachbindung, -in), Benennung (IUPAC), Isomerie (Struktur-, Stereoisomerie)
 2. **Funktionelle Gruppen** — Tabelle: Alkohol (-OH), Aldehyd (-CHO), Keton (>C=O), Carbonsäure (-COOH), Ester (-COO-), Amin (-NH₂), Amid (-CONH₂), Ether (-O-)
 3. **Biomoleküle** — Kohlenhydrate (Mono-/Di-/Polysaccharide: Glucose, Fructose, Saccharose, Stärke, Glykogen, Cellulose), Lipide (Triglyceride, Phospholipide, Steroide), Proteine (20 Aminosäuren, Peptidbindung, Primär-/Sekundär-/Tertiär-/Quartärstruktur), Nucleinsäuren
@@ -500,6 +516,7 @@ interface SelbstTestProps {
 ### Kapitel 6: Schwefel & Anorganische Spezialthemen (NEU seit 2024!)
 
 **Abschnitte:**
+
 1. **Schwefelchemie** — Schwefel (S, OZ 16), Allotrope, Schwefelsäure (H₂SO₄), Sulfate, Sulfide, Schwefeldioxid (SO₂), Vulkanismus-Bezug
 2. **Elektrochemie** — Galvanische Zelle, Elektrolyse, Standardpotentiale, Nernst-Gleichung (vereinfacht)
 3. **Chemisches Gleichgewicht** — Le Chatelier, Gleichgewichtskonstante K, Einfluss von Temperatur, Druck, Konzentration
@@ -511,6 +528,7 @@ interface SelbstTestProps {
 ### Kapitel 7: Mechanik & Wärmelehre
 
 **Abschnitte:**
+
 1. **Kinematik** — Gleichförmige Bewegung (v = s/t), Beschleunigung (a = Δv/Δt), Freier Fall (g = 9,81 m/s²), s = ½gt²
 2. **Kräfte & Newton** — 1. Trägheit, 2. F = m·a, 3. Actio = Reactio, Gewichtskraft: FG = m·g, Reibung, Schiefe Ebene
 3. **Energie & Arbeit** — W = F·s, Ekin = ½mv², Epot = mgh, Energieerhaltung, Leistung P = W/t
@@ -520,6 +538,7 @@ interface SelbstTestProps {
 ### Kapitel 8: Elektrizität & Magnetismus
 
 **Abschnitte:**
+
 1. **Elektrostatik** — Ladung (Coulomb), Coulomb-Gesetz: F = k·q₁·q₂/r², Elektrisches Feld, Spannung
 2. **Stromkreise** — U = R·I (Ohm), Reihen- vs. Parallelschaltung, Leistung: P = U·I, Kirchhoff-Regeln
 3. **Magnetismus** — Magnetfeld, Lorentzkraft, Rechte-Hand-Regel, Elektromagnet, Induktion (Faraday)
@@ -528,6 +547,7 @@ interface SelbstTestProps {
 ### Kapitel 9: Optik & Wellen
 
 **Abschnitte:**
+
 1. **Wellenphysik** — Transversal- vs. Longitudinalwellen, Amplitude, Frequenz, Wellenlänge, Schallgeschwindigkeit ~343 m/s (Luft)
 2. **Optik** — Reflexion, Brechung (Snellius: n₁·sinα = n₂·sinβ), Totalreflexion, Linsengleichung: 1/f = 1/g + 1/b
 3. **Doppler-Effekt** — Frequenzänderung bei Relativbewegung, SVG-Visualisierung
@@ -540,6 +560,7 @@ interface SelbstTestProps {
 ### Kapitel 10: Algebra & Zahlentheorie
 
 **Abschnitte:**
+
 1. **Grundrechenarten ohne Taschenrechner** — Kopfrechenstrategien, Überschlagsrechnen
 2. **Bruchrechnung** — Addition, Subtraktion, Multiplikation, Division, Doppelbrüche
 3. **Potenzen & Wurzeln** — Potenzgesetze (aⁿ·aᵐ = aⁿ⁺ᵐ, etc.), Wurzelgesetze
@@ -550,6 +571,7 @@ interface SelbstTestProps {
 ### Kapitel 11: Funktionen & Analysis
 
 **Abschnitte:**
+
 1. **Funktionstypen** — Linear (y = kx + d), Quadratisch (Parabel), Potenzfunktionen, Exponentialfunktionen, Logarithmus
 2. **Trigonometrie** — sin, cos, tan, Einheitskreis, Wichtige Werte (sin30°=0.5, sin45°=√2/2, sin60°=√3/2)
 3. **Folgen & Reihen** — Arithmetisch (d konstant), Geometrisch (q konstant), Summenformeln
@@ -558,12 +580,14 @@ interface SelbstTestProps {
 ### Kapitel 12: Geometrie & Vektoren
 
 **Abschnitte:**
+
 1. **Ebene Geometrie** — Dreiecke (Fläche, Pythagoras: a² + b² = c²), Kreis (U = 2πr, A = πr²), Vierecke
 2. **Körpergeometrie** — Quader (V = a·b·c), Zylinder (V = πr²h), Kugel (V = 4/3·πr³), Kegel (V = 1/3·πr²h)
 3. **Vektoren** — Addition, Subtraktion, Skalarprodukt (a⃗·b⃗ = |a|·|b|·cosφ), Kreuzprodukt, Länge/Betrag
 4. **Einheiten & Umrechnung** — SI-Einheiten, Vorsilben (Kilo, Mega, Milli, Mikro, Nano), Dimensionsanalyse
 
 ### Mathe-Tipp-Box (für JEDES Kapitel):
+
 ```
 ⚠️ ACHTUNG: Beim MedAT ist KEIN Taschenrechner erlaubt!
 Übe alle Berechnungen im Kopf oder auf Papier.
@@ -582,6 +606,7 @@ Nützliche Werte zum Auswendiglernen:
 Erstelle eine zentrale Datei `src/components/diagrams/` mit folgenden SVG-Diagrammen als React-Komponenten:
 
 **BIOLOGIE (10 Diagramme):**
+
 1. `AnimalCell.tsx` — Tierzelle mit allen Organellen (beschriftet, farbig)
 2. `PlantVsAnimalCell.tsx` — Vergleich nebeneinander
 3. `CellMembrane.tsx` — Lipiddoppelschicht mit Proteinen
@@ -593,21 +618,12 @@ Erstelle eine zentrale Datei `src/components/diagrams/` mit folgenden SVG-Diagra
 9. `SynapseTransmission.tsx` — Synapse mit Neurotransmittern
 10. `NephronStructure.tsx` — Nephron mit Filtration/Reabsorption
 
-**CHEMIE (5 Diagramme):**
-11. `PeriodicTableMini.tsx` — Kompaktes PSE mit Gruppen-Highlighting
-12. `pHScale.tsx` — pH-Skala mit Alltagsbeispielen
-13. `FunctionalGroups.tsx` — Übersicht aller funktionellen Gruppen
-14. `CellularRespiration.tsx` — Glykolyse → Citratzyklus → Atmungskette Flussdiagramm
-15. `BondTypes.tsx` — Ionen-, Kovalente, Metallische Bindung visuell
+**CHEMIE (5 Diagramme):** 11. `PeriodicTableMini.tsx` — Kompaktes PSE mit Gruppen-Highlighting 12. `pHScale.tsx` — pH-Skala mit Alltagsbeispielen 13. `FunctionalGroups.tsx` — Übersicht aller funktionellen Gruppen 14. `CellularRespiration.tsx` — Glykolyse → Citratzyklus → Atmungskette Flussdiagramm 15. `BondTypes.tsx` — Ionen-, Kovalente, Metallische Bindung visuell
 
-**PHYSIK (5 Diagramme):**
-16. `CircuitDiagram.tsx` — Reihen- vs. Parallelschaltung
-17. `LensOptics.tsx` — Sammel- und Zerstreuungslinse mit Strahlengang
-18. `EMSpectrum.tsx` — Elektromagnetisches Spektrum
-19. `WaveTypes.tsx` — Transversal vs. Longitudinal
-20. `NewtonForces.tsx` — Kräftediagramm Schiefe Ebene
+**PHYSIK (5 Diagramme):** 16. `CircuitDiagram.tsx` — Reihen- vs. Parallelschaltung 17. `LensOptics.tsx` — Sammel- und Zerstreuungslinse mit Strahlengang 18. `EMSpectrum.tsx` — Elektromagnetisches Spektrum 19. `WaveTypes.tsx` — Transversal vs. Longitudinal 20. `NewtonForces.tsx` — Kräftediagramm Schiefe Ebene
 
 **SVG-Design-Richtlinien:**
+
 - Farbpalette: Teal (#0D9488) als Hauptfarbe, Amber (#F59E0B) für Highlights, Red (#EF4444) für Warnungen, Blue (#3B82F6) für klinische Bezüge
 - viewBox für Responsivität
 - Beschriftungen auf Deutsch
@@ -624,26 +640,31 @@ Erstelle eine zentrale Datei `src/components/diagrams/` mit folgenden SVG-Diagra
 Aktuell haben wir viel zu wenig Fragen. Erstelle:
 
 **Biologie: 120 Fragen**
+
 - 40 × Zellbiologie (Organellen, Membrantransport, Zellteilung)
 - 40 × Genetik (DNA, Transkription, Erbgänge, Blutgruppen, Mutationen)
 - 40 × Humanbiologie (Herz, Blut, Immunsystem, Niere, Hormone, Nervensystem)
 
 **Chemie: 80 Fragen**
+
 - 30 × Allgemeine Chemie (Atombau, PSE, Bindungen, Stöchiometrie)
 - 30 × Organische Chemie (Funktionelle Gruppen, Biomoleküle, Enzyme)
 - 20 × Redox, Säure-Base, Nuklide
 
 **Physik: 60 Fragen**
+
 - 20 × Mechanik (Kräfte, Energie, Impuls)
 - 20 × Elektrizität (Stromkreise, Magnetismus)
 - 20 × Optik & Wellen (Brechung, Linsen, Schall)
 
 **Mathematik: 40 Fragen**
+
 - 15 × Algebra (Gleichungen, Brüche, Prozent)
 - 15 × Funktionen & Analysis
 - 10 × Geometrie & Vektoren
 
 **Format jeder Frage:**
+
 ```typescript
 {
   id: string,           // z.B. "bio-zell-001"
@@ -661,6 +682,7 @@ Aktuell haben wir viel zu wenig Fragen. Erstelle:
 ```
 
 **Qualitätskriterien:**
+
 - Jede Frage hat EINE eindeutig richtige Antwort
 - Distraktoren sind plausibel aber klar falsch
 - Erklärung erklärt WARUM richtig UND warum die anderen falsch sind
@@ -676,6 +698,7 @@ Aktuell haben wir viel zu wenig Fragen. Erstelle:
 Erstelle eine vollständige `FigurenZusammensetzen`-Seite mit:
 
 **1. Strategie-Guide:**
+
 ```
 Tipps für Figuren zusammensetzen:
 1. Umrisse zuerst vergleichen — passt die Außenform?
@@ -686,29 +709,32 @@ Tipps für Figuren zusammensetzen:
 ```
 
 **2. Aufgaben-Komponente:**
+
 ```tsx
 interface FZAufgabe {
   id: string;
-  pieces: SVGPiece[];     // Die Puzzleteile
-  options: SVGFigure[];   // 5 Antwortmöglichkeiten (A-E)
+  pieces: SVGPiece[]; // Die Puzzleteile
+  options: SVGFigure[]; // 5 Antwortmöglichkeiten (A-E)
   correctIndex: number;
   difficulty: 1 | 2 | 3;
   explanation: string;
 }
 
 interface SVGPiece {
-  path: string;          // SVG path data
-  fill: string;          // Farbe
-  transform?: string;    // Position/Rotation
+  path: string; // SVG path data
+  fill: string; // Farbe
+  transform?: string; // Position/Rotation
 }
 ```
 
 **3. Erstelle 20 Aufgaben:**
+
 - 7 × Leicht (2-3 einfache Teile, klar erkennbare Form)
 - 8 × Mittel (3-4 Teile, gedrehte Teile)
 - 5 × Schwer (4-5 Teile, ähnliche Antwortmöglichkeiten)
 
 **4. UI-Features:**
+
 - Timer (1:30 pro Aufgabe)
 - Teile können angeklickt werden zum Vergrößern
 - Bei Lösung: Zeige wie die Teile zusammenpassen
@@ -747,6 +773,7 @@ MedAT-H Teststruktur:
 ```
 
 **Implementiere:**
+
 - Wählbar: Volltest (gesamter MedAT, ~6 Stunden) oder Einzeltest (nur BMS, nur KFF, etc.)
 - Echte Timer pro Abschnitt
 - Keine Rückkehr zu vorherigen Abschnitten (wie beim echten Test)
@@ -764,6 +791,7 @@ MedAT-H Teststruktur:
 Erstelle ein vollständiges Karteikarten-System:
 
 **1. Vorinstallierte Decks:**
+
 - BMS Biologie Key Facts (50 Karten)
 - BMS Chemie Formeln (30 Karten)
 - BMS Physik Formeln (20 Karten)
@@ -771,6 +799,7 @@ Erstelle ein vollständiges Karteikarten-System:
 - Medizinische Fachbegriffe (40 Karten)
 
 **2. UI:**
+
 - Karte antippen → Rückseite zeigen (Flip-Animation)
 - Buttons: "Gewusst" / "Nicht gewusst" / "Teilweise"
 - Spaced Repetition: Karten die man nicht weiß kommen öfter
@@ -778,16 +807,17 @@ Erstelle ein vollständiges Karteikarten-System:
 - Eigene Karten erstellen können
 
 **3. Kartenformat:**
+
 ```typescript
 interface Karteikarte {
   id: string;
   deck: string;
-  front: string;        // Frage/Begriff
-  back: string;         // Antwort/Definition
+  front: string; // Frage/Begriff
+  back: string; // Antwort/Definition
   tags: string[];
-  nextReview: Date;      // Spaced Repetition
-  interval: number;      // Tage bis zur nächsten Wiederholung
-  easeFactor: number;    // SM-2 Algorithmus
+  nextReview: Date; // Spaced Repetition
+  interval: number; // Tage bis zur nächsten Wiederholung
+  easeFactor: number; // SM-2 Algorithmus
 }
 ```
 
@@ -796,29 +826,36 @@ interface Karteikarte {
 ## TEIL 12: KLEINE ABER WICHTIGE VERBESSERUNGEN
 
 ### 12a. Einstufungstest auf dem Dashboard
+
 Der "Einstufungstest starten" Banner auf dem Dashboard soll funktionieren:
+
 - 20 Fragen (5 Bio, 5 Chemie, 5 Physik, 5 Mathe) — schneller Querschnitt
 - Am Ende: Einstufung in Level (Anfänger/Fortgeschritten/Profi)
 - Empfehlung welche Kapitel zuerst gelernt werden sollten
 
 ### 12b. Lernplan-Generator
+
 - Eingabe: MedAT-Datum (Standard: 03.07.2026), Stunden pro Tag, Vorkenntnisse
 - Ausgabe: Wochenplan mit täglichen Lerneinheiten
 - Berücksichtigt Spaced Repetition
 - Priorität auf schwache Bereiche
 
 ### 12c. Analyse-Seite verbessern
+
 - Spinnennetz-Diagramm: Stärken/Schwächen über alle Bereiche
 - Zeitverlauf: Wie hat sich die Leistung verbessert?
 - Empfehlungen: "Du solltest mehr Chemie üben, deine Quote liegt bei 45%"
 
 ### 12d. Notizen-System
+
 - Markdown-Editor
 - Pro Kapitel eine Notiz möglich
 - Automatische Verknüpfung mit dem aktuellen Kapitel
 
 ### 12e. Preise-Seite anpassen
+
 Aktuelle 3 Preisstufen beibehalten aber realistisch:
+
 - **Kostenlos:** 3 BMS-Kapitel, 50 Übungsfragen, Karteikarten (Basic), 1 Simulationstest
 - **Premium (€14,99/Monat):** Alle Kapitel, Alle Fragen, Aufgabengeneratoren, Vollsimulation, Lernplan
 - **Ultimate (€24,99/Monat):** Alles + Schwächenanalyse, Prioritäts-Support, Duell-Modus, Offline-Modus
@@ -828,6 +865,7 @@ Aktuelle 3 Preisstufen beibehalten aber realistisch:
 ## ZUSAMMENFASSUNG DER PRIORITÄTEN
 
 **MUSS (sofort):**
+
 1. ✅ Umlaute fixen (alle Dateien)
 2. ✅ SEK richtig benennen (3 Untertests)
 3. ✅ Figuren zusammensetzen hinzufügen
@@ -835,16 +873,9 @@ Aktuelle 3 Preisstufen beibehalten aber realistisch:
 5. ✅ 300+ BMS-Fragen erstellen
 6. ✅ 20 SVG-Diagramme erstellen
 
-**SOLL (bald):**
-7. Testsimulation realistisch machen
-8. Karteikarten-System
-9. Einstufungstest
-10. Analyse-Seite verbessern
+**SOLL (bald):** 7. Testsimulation realistisch machen 8. Karteikarten-System 9. Einstufungstest 10. Analyse-Seite verbessern
 
-**KANN (später):**
-11. Lernplan-Generator
-12. Notizen-System
-13. Preise-Seite anpassen
+**KANN (später):** 11. Lernplan-Generator 12. Notizen-System 13. Preise-Seite anpassen
 
 ---
 

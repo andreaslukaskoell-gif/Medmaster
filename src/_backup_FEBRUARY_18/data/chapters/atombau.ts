@@ -139,7 +139,7 @@ Zusammengefasst: EN, IE und Nichtmetallcharakter steigen nach rechts oben; Atomr
       merke:
         "Alle Trends gehen <strong>nach rechts oben</strong> (außer Atomradius und Metallcharakter): EN, IE steigen von links unten nach rechts oben. Höchste EN: <strong>Fluor</strong> (3,98).",
       altfrage:
-        "\"Welches Element hat die höchste Elektronegativität?\" → <strong>Fluor</strong> (3,98). NICHT Sauerstoff (3,44) und NICHT Chlor (3,16).",
+        '"Welches Element hat die höchste Elektronegativität?" → <strong>Fluor</strong> (3,98). NICHT Sauerstoff (3,44) und NICHT Chlor (3,16).',
     },
 
     // ----------------------------------------------------------------
@@ -181,43 +181,23 @@ Das VSEPR-Modell sagt die räumliche Struktur von Molekülen vorher. Elektronenp
 Freie Elektronenpaare beanspruchen mehr Raum als bindende und drücken die Bindungswinkel zusammen.`,
       diagram: "ionic-bond",
       vergleichsTabelle: {
-        headers: [
-          "Eigenschaft",
-          "Ionenbindung",
-          "Kovalente Bindung",
-          "Metallbindung",
-        ],
+        headers: ["Eigenschaft", "Ionenbindung", "Kovalente Bindung", "Metallbindung"],
         rows: [
-          [
-            "Partner",
-            "Metall + Nichtmetall",
-            "Nichtmetall + Nichtmetall",
-            "Metall + Metall",
-          ],
+          ["Partner", "Metall + Nichtmetall", "Nichtmetall + Nichtmetall", "Metall + Metall"],
           [
             "Prinzip",
             "Elektronenübertragung",
             "Gemeinsame Elektronenpaare",
             "Elektronengas (delokalisiert)",
           ],
-          [
-            "Schmelzpunkt",
-            "Hoch",
-            "Niedrig bis mittel",
-            "Mittel bis hoch",
-          ],
+          ["Schmelzpunkt", "Hoch", "Niedrig bis mittel", "Mittel bis hoch"],
           [
             "Leitfähigkeit",
             "Nur in Lösung/Schmelze",
             "Keine (Ausn.: Graphit)",
             "Sehr gut (Elektronen)",
           ],
-          [
-            "Verformbarkeit",
-            "Spröde",
-            "Nicht verformbar",
-            "Gut verformbar (duktil)",
-          ],
+          ["Verformbarkeit", "Spröde", "Nicht verformbar", "Gut verformbar (duktil)"],
         ],
       },
       merke:
@@ -268,7 +248,7 @@ Ionische Wechselwirkung > Wasserstoffbrücken > Dipol-Dipol > Van-der-Waals
       merke:
         "Stärke: Ionenbindung > H-Brücken > Dipol-Dipol > Van-der-Waals. <strong>FON-Regel</strong>: H-Brücken nur bei F-H, O-H, N-H!",
       altfrage:
-        "\"Warum hat Wasser einen so hohen Siedepunkt?\" → <strong>Wasserstoffbrücken</strong> zwischen den H₂O-Molekülen. Ohne H-Brücken würde Wasser bei ca. -80°C sieden!",
+        '"Warum hat Wasser einen so hohen Siedepunkt?" → <strong>Wasserstoffbrücken</strong> zwischen den H₂O-Molekülen. Ohne H-Brücken würde Wasser bei ca. -80°C sieden!',
     },
 
     // ----------------------------------------------------------------
@@ -472,7 +452,7 @@ Beispiel: ¹⁴C hat eine Halbwertszeit von 5730 Jahren → nach 5730 Jahren ist
       merke:
         "<strong>OIL RIG</strong>: Oxidation Is Loss, Reduction Is Gain (von Elektronen). Das Oxidationsmittel wird selbst <strong>reduziert</strong>! Alpha: -4A/-2Z, Beta⁻: =A/+1Z, Gamma: keine Änderung.",
       altfrage:
-        "\"Was passiert bei einem Beta-minus-Zerfall?\" → Neutron → Proton + Elektron + Antineutrino. Massenzahl bleibt gleich, Ordnungszahl steigt um 1.",
+        '"Was passiert bei einem Beta-minus-Zerfall?" → Neutron → Proton + Elektron + Antineutrino. Massenzahl bleibt gleich, Ordnungszahl steigt um 1.',
     },
   ],
 
@@ -515,8 +495,7 @@ Beispiel: ¹⁴C hat eine Halbwertszeit von 5730 Jahren → nach 5730 Jahren ist
     },
     {
       label: "Kräfte-Reihenfolge",
-      value:
-        "Ionenbindung > H-Brücken > Dipol-Dipol > Van-der-Waals",
+      value: "Ionenbindung > H-Brücken > Dipol-Dipol > Van-der-Waals",
     },
   ],
 
@@ -529,8 +508,7 @@ Beispiel: ¹⁴C hat eine Halbwertszeit von 5730 Jahren → nach 5730 Jahren ist
         "Fluor hat mit 3,98 die höchste EN aller Elemente. Edelgase wie Neon haben per Definition keine EN (volle Außenschale).",
     },
     {
-      question:
-        "Was gilt für eine Ionenverbindung im festen Zustand?",
+      question: "Was gilt für eine Ionenverbindung im festen Zustand?",
       options: [
         "Leitet Strom",
         "Ist verformbar",
@@ -563,8 +541,7 @@ Beispiel: ¹⁴C hat eine Halbwertszeit von 5730 Jahren → nach 5730 Jahren ist
         "Beim Alpha-Zerfall wird ein Helium-4-Kern (2p + 2n) emittiert. Daher: Massenzahl sinkt um 4, Ordnungszahl sinkt um 2.",
     },
     {
-      question:
-        "Welche intermolekulare Kraft erklärt den hohen Siedepunkt von Wasser?",
+      question: "Welche intermolekulare Kraft erklärt den hohen Siedepunkt von Wasser?",
       options: [
         "Van-der-Waals-Kräfte",
         "Ionenbindung",

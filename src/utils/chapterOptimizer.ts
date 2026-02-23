@@ -1,6 +1,6 @@
 /**
  * Comprehensive Chapter Optimizer with Backup and Audit System
- * 
+ *
  * This module provides:
  * - Automatic backups before optimization
  * - Comprehensive content optimization (visual/structural only)
@@ -12,7 +12,7 @@ import type { Kapitel, Unterkapitel } from "@/data/bmsKapitel/types";
 import { loadAllChapters, saveChapter } from "@/lib/bmsStorage";
 import { optimizeChapterContent } from "./optimizeChapterContent";
 
-const BACKUP_INDEX_KEY = 'bms-backup-index';
+const BACKUP_INDEX_KEY = "bms-backup-index";
 
 export interface OptimizationAudit {
   chapterId: string;
@@ -70,13 +70,13 @@ export interface OptimizationReport {
  */
 export function createBackup(chapters: Kapitel[]): string {
   const now = new Date();
-  const timestamp = now.toISOString().replace(/[:.]/g, '-');
+  const timestamp = now.toISOString().replace(/[:.]/g, "-");
   const backupKey = `bms-chapters-backup-${timestamp}`;
   const backupData = {
     timestamp: now.toISOString(),
     chapters: JSON.parse(JSON.stringify(chapters)), // Deep copy
-    version: '1.0.0',
-    reason: 'pre-optimization-backup',
+    version: "1.0.0",
+    reason: "pre-optimization-backup",
     backupKey,
   };
 
@@ -89,7 +89,7 @@ export function createBackup(chapters: Kapitel[]): string {
     index.push({ key: backupKey, timestamp: now.toISOString() });
     localStorage.setItem(BACKUP_INDEX_KEY, JSON.stringify(index));
   } catch (e) {
-    console.warn('Could not update backup index', e);
+    console.warn("Could not update backup index", e);
   }
 
   console.log(`💾 Backup created: ${backupKey} (never overwritten)`);
@@ -109,21 +109,22 @@ function analyzeContent(content: string): {
   formulas: number;
   codeBlocks: number;
 } {
-  const lines = content.split('\n');
-  const paragraphs = content.split(/\n\s*\n/).filter(p => p.trim().length > 0);
+  const lines = content.split("\n");
+  const paragraphs = content.split(/\n\s*\n/).filter((p) => p.trim().length > 0);
   const headings = content.match(/^#{1,6}\s+.+$/gm)?.length || 0;
-  const merksätze = (content.match(/>\s*\*\*Merke?:\*\*/gi)?.length || 0) + 
-                     (content.match(/Merksatz:/gi)?.length || 0);
-  const lists = (content.match(/^[-*]\s+/gm)?.length || 0) + 
-                (content.match(/^\d+[.)]\s+/gm)?.length || 0);
+  const merksätze =
+    (content.match(/>\s*\*\*Merke?:\*\*/gi)?.length || 0) +
+    (content.match(/Merksatz:/gi)?.length || 0);
+  const lists =
+    (content.match(/^[-*]\s+/gm)?.length || 0) + (content.match(/^\d+[.)]\s+/gm)?.length || 0);
   const tables = content.match(/\|.+\|/gm)?.length || 0;
-  const formulas = (content.match(/\$[^$]+\$/g)?.length || 0) + 
-                   (content.match(/`[^`]+`/g)?.length || 0);
+  const formulas =
+    (content.match(/\$[^$]+\$/g)?.length || 0) + (content.match(/`[^`]+`/g)?.length || 0);
   const codeBlocks = content.match(/```[\s\S]*?```/g)?.length || 0;
-  
+
   const totalLength = paragraphs.reduce((sum, p) => sum + p.length, 0);
   const avgParagraphLength = paragraphs.length > 0 ? totalLength / paragraphs.length : 0;
-  
+
   return {
     paragraphs: paragraphs.length,
     avgParagraphLength,
@@ -132,62 +133,63 @@ function analyzeContent(content: string): {
     lists,
     tables,
     formulas,
-    codeBlocks
+    codeBlocks,
   };
 }
 
 /**
  * Counts specific optimizations in content
  */
-function countOptimizations(before: string, after: string): OptimizationAudit['changes'] {
-  const beforeLines = before.split('\n');
-  const afterLines = after.split('\n');
-  
+function countOptimizations(before: string, after: string): OptimizationAudit["changes"] {
+  const beforeLines = before.split("\n");
+  const afterLines = after.split("\n");
+
   // Count paragraph splits (more paragraphs in after)
-  const beforeParagraphs = before.split(/\n\s*\n/).filter(p => p.trim().length > 0).length;
-  const afterParagraphs = after.split(/\n\s*\n/).filter(p => p.trim().length > 0).length;
+  const beforeParagraphs = before.split(/\n\s*\n/).filter((p) => p.trim().length > 0).length;
+  const afterParagraphs = after.split(/\n\s*\n/).filter((p) => p.trim().length > 0).length;
   const paragraphsSplit = Math.max(0, afterParagraphs - beforeParagraphs);
-  
+
   // Count normalized headings
   const beforeHeadings = before.match(/^#{1,6}\s+.+$/gm)?.length || 0;
   const afterHeadings = after.match(/^#{1,6}\s+.+$/gm)?.length || 0;
   const headingsNormalized = afterHeadings > beforeHeadings ? afterHeadings - beforeHeadings : 0;
-  
+
   // Count formatted Merksätze (blockquote format)
-  const beforeMerksätze = (before.match(/Merksatz:/gi)?.length || 0) + 
-                           (before.match(/>\s*\*\*Merke?:\*\*/gi)?.length || 0);
+  const beforeMerksätze =
+    (before.match(/Merksatz:/gi)?.length || 0) +
+    (before.match(/>\s*\*\*Merke?:\*\*/gi)?.length || 0);
   const afterMerksätze = after.match(/>\s*\*\*Merke?:\*\*/gi)?.length || 0;
   const merksätzeFormatted = afterMerksätze > beforeMerksätze ? 1 : 0;
-  
+
   // Count formatted lists (better spacing)
-  const beforeLists = (before.match(/^[-*]\s+/gm)?.length || 0) + 
-                      (before.match(/^\d+[.)]\s+/gm)?.length || 0);
-  const afterLists = (after.match(/^[-*]\s+/gm)?.length || 0) + 
-                     (after.match(/^\d+[.)]\s+/gm)?.length || 0);
+  const beforeLists =
+    (before.match(/^[-*]\s+/gm)?.length || 0) + (before.match(/^\d+[.)]\s+/gm)?.length || 0);
+  const afterLists =
+    (after.match(/^[-*]\s+/gm)?.length || 0) + (after.match(/^\d+[.)]\s+/gm)?.length || 0);
   const listsFormatted = afterLists > beforeLists ? 1 : 0;
-  
+
   // Count tables (spacing around)
   const beforeTables = before.match(/\|.+\|/gm)?.length || 0;
   const afterTables = after.match(/\|.+\|/gm)?.length || 0;
   const tablesFormatted = beforeTables > 0 && afterTables === beforeTables ? 1 : 0;
-  
+
   // Count formulas (spacing around)
-  const beforeFormulas = (before.match(/\$[^$]+\$/g)?.length || 0) + 
-                         (before.match(/`[^`]+`/g)?.length || 0);
-  const afterFormulas = (after.match(/\$[^$]+\$/g)?.length || 0) + 
-                        (after.match(/`[^`]+`/g)?.length || 0);
+  const beforeFormulas =
+    (before.match(/\$[^$]+\$/g)?.length || 0) + (before.match(/`[^`]+`/g)?.length || 0);
+  const afterFormulas =
+    (after.match(/\$[^$]+\$/g)?.length || 0) + (after.match(/`[^`]+`/g)?.length || 0);
   const formulasFormatted = beforeFormulas > 0 && afterFormulas === beforeFormulas ? 1 : 0;
-  
+
   // Count spacing improvements (more blank lines in strategic places)
   const beforeBlankLines = before.match(/\n{2,}/g)?.length || 0;
   const afterBlankLines = after.match(/\n{2,}/g)?.length || 0;
   const spacingAdded = Math.max(0, afterBlankLines - beforeBlankLines);
-  
+
   // Count code blocks (formatting)
   const beforeCodeBlocks = before.match(/```[\s\S]*?```/g)?.length || 0;
   const afterCodeBlocks = after.match(/```[\s\S]*?```/g)?.length || 0;
   const codeBlocksFormatted = beforeCodeBlocks > 0 && afterCodeBlocks === beforeCodeBlocks ? 1 : 0;
-  
+
   return {
     paragraphsSplit,
     headingsNormalized,
@@ -196,7 +198,7 @@ function countOptimizations(before: string, after: string): OptimizationAudit['c
     tablesFormatted,
     formulasFormatted,
     spacingAdded,
-    codeBlocksFormatted
+    codeBlocksFormatted,
   };
 }
 
@@ -229,16 +231,16 @@ export function optimizeChapterWithAudit(chapter: Kapitel): OptimizationAudit {
       avgParagraphLength: 0,
     },
   };
-  
+
   // Analyze before state
   let totalBeforeLength = 0;
   let totalAfterLength = 0;
   let totalBeforeParagraphs = 0;
   let totalAfterParagraphs = 0;
-  
+
   // Optimize each subchapter (with per-subchapter error handling)
   const optimizedSubchapters = chapter.unterkapitel.map((uk) => {
-    const beforeContent = uk.content || '';
+    const beforeContent = uk.content || "";
     const beforeAnalysis = analyzeContent(beforeContent);
 
     totalBeforeLength += beforeContent.length;
@@ -248,7 +250,10 @@ export function optimizeChapterWithAudit(chapter: Kapitel): OptimizationAudit {
     try {
       optimizedContent = optimizeChapterContent(beforeContent);
     } catch (err) {
-      console.warn(`⚠️ Optimierung fehlgeschlagen für Unterkapitel "${uk.title}", Original beibehalten:`, err);
+      console.warn(
+        `⚠️ Optimierung fehlgeschlagen für Unterkapitel "${uk.title}", Original beibehalten:`,
+        err
+      );
       optimizedContent = beforeContent;
     }
 
@@ -287,18 +292,16 @@ export function optimizeChapterWithAudit(chapter: Kapitel): OptimizationAudit {
       sections: optimizedSections,
     };
   });
-  
+
   // Calculate stats
   audit.beforeStats.totalLength = totalBeforeLength;
-  audit.beforeStats.avgParagraphLength = totalBeforeParagraphs > 0 
-    ? totalBeforeLength / totalBeforeParagraphs 
-    : 0;
-  
+  audit.beforeStats.avgParagraphLength =
+    totalBeforeParagraphs > 0 ? totalBeforeLength / totalBeforeParagraphs : 0;
+
   audit.afterStats.totalLength = totalAfterLength;
-  audit.afterStats.avgParagraphLength = totalAfterParagraphs > 0 
-    ? totalAfterLength / totalAfterParagraphs 
-    : 0;
-  
+  audit.afterStats.avgParagraphLength =
+    totalAfterParagraphs > 0 ? totalAfterLength / totalAfterParagraphs : 0;
+
   return audit;
 }
 
@@ -310,13 +313,13 @@ export async function optimizeAllChaptersWithAudit(): Promise<{
   report: OptimizationReport;
   backupKey: string;
 }> {
-  console.log('🚀 [optimizeAllChaptersWithAudit] Starting comprehensive optimization...');
-  
+  console.log("🚀 [optimizeAllChaptersWithAudit] Starting comprehensive optimization...");
+
   // 1. Load all chapters
   const chapters = loadAllChapters();
-  
+
   if (chapters.length === 0) {
-    console.warn('⚠️ No chapters found to optimize');
+    console.warn("⚠️ No chapters found to optimize");
     return {
       optimizedChapters: [],
       report: {
@@ -324,7 +327,7 @@ export async function optimizeAllChaptersWithAudit(): Promise<{
         totalChapters: 0,
         totalSubchapters: 0,
         chaptersSkipped: 0,
-        backupKey: '',
+        backupKey: "",
         audits: [],
         summary: {
           totalParagraphsSplit: 0,
@@ -337,19 +340,21 @@ export async function optimizeAllChaptersWithAudit(): Promise<{
           totalCodeBlocksFormatted: 0,
         },
       },
-      backupKey: '',
+      backupKey: "",
     };
   }
-  
-  console.log(`📚 Found ${chapters.length} chapters with ${chapters.reduce((sum, ch) => sum + (ch.unterkapitel?.length || 0), 0)} subchapters`);
-  
+
+  console.log(
+    `📚 Found ${chapters.length} chapters with ${chapters.reduce((sum, ch) => sum + (ch.unterkapitel?.length || 0), 0)} subchapters`
+  );
+
   // 2. Create backup
   const backupKey = createBackup(chapters);
-  
+
   // 3. Optimize each chapter with audit
   const audits: OptimizationAudit[] = [];
   const optimizedChapters: Kapitel[] = [];
-  
+
   for (const chapter of chapters) {
     console.log(`🔄 Optimizing chapter: ${chapter.title}...`);
 
@@ -362,7 +367,7 @@ export async function optimizeAllChaptersWithAudit(): Promise<{
         ...chapter,
         unterkapitel: chapter.unterkapitel.map((uk) => {
           try {
-            const optimizedContent = optimizeChapterContent(uk.content || '');
+            const optimizedContent = optimizeChapterContent(uk.content || "");
             const optimizedSections = uk.sections?.map((section) => ({
               ...section,
               text: optimizeChapterContent(section.text),
@@ -377,7 +382,10 @@ export async function optimizeAllChaptersWithAudit(): Promise<{
       };
     } catch (err) {
       const errMsg = err instanceof Error ? err.message : String(err);
-      console.warn(`⚠️ Kapitel "${chapter.title}" übersprungen (Backup unverändert), Fehler:`, errMsg);
+      console.warn(
+        `⚠️ Kapitel "${chapter.title}" übersprungen (Backup unverändert), Fehler:`,
+        errMsg
+      );
       audit = {
         chapterId: chapter.id,
         chapterTitle: chapter.title,
@@ -404,9 +412,13 @@ export async function optimizeAllChaptersWithAudit(): Promise<{
 
     audits.push(audit);
     optimizedChapters.push(optimizedChapter);
-    console.log(audit.skipped ? `⏭️ Skipped ${chapter.title}` : `✅ Optimized ${chapter.title}: ${audit.subchaptersOptimized} subchapters`);
+    console.log(
+      audit.skipped
+        ? `⏭️ Skipped ${chapter.title}`
+        : `✅ Optimized ${chapter.title}: ${audit.subchaptersOptimized} subchapters`
+    );
   }
-  
+
   const chaptersSkipped = audits.filter((a) => a.skipped).length;
 
   // 4. Create summary report
@@ -428,10 +440,10 @@ export async function optimizeAllChaptersWithAudit(): Promise<{
       totalCodeBlocksFormatted: audits.reduce((sum, a) => sum + a.changes.codeBlocksFormatted, 0),
     },
   };
-  
+
   console.log(`🎉 Optimization complete! Optimized ${chapters.length} chapters`);
   console.log(`📊 Summary:`, report.summary);
-  
+
   return {
     optimizedChapters,
     report,
@@ -443,7 +455,7 @@ export async function optimizeAllChaptersWithAudit(): Promise<{
  * Generates a markdown audit report
  */
 export function generateAuditReportMarkdown(report: OptimizationReport, backupKey: string): string {
-  const timestamp = new Date(report.timestamp).toLocaleString('de-DE');
+  const timestamp = new Date(report.timestamp).toLocaleString("de-DE");
   const key = report.backupKey || backupKey;
 
   let markdown = `# MedMaster Kapitel-Optimierung Audit-Report\n\n`;
@@ -467,16 +479,16 @@ export function generateAuditReportMarkdown(report: OptimizationReport, backupKe
   markdown += `- **Abstände hinzugefügt:** ${report.summary.totalSpacingAdded}\n`;
   markdown += `- **Code-Blöcke formatiert:** ${report.summary.totalCodeBlocksFormatted}\n\n`;
   markdown += `---\n\n`;
-  
+
   // Detailed per-chapter
   markdown += `## Detaillierte Änderungen pro Kapitel\n\n`;
-  
+
   for (const audit of report.audits) {
     markdown += `### ${audit.chapterTitle} (${audit.chapterId})\n\n`;
-    markdown += `**Zeitstempel:** ${new Date(audit.timestamp).toLocaleString('de-DE')}\n\n`;
+    markdown += `**Zeitstempel:** ${new Date(audit.timestamp).toLocaleString("de-DE")}\n\n`;
     if (audit.skipped) {
       markdown += `**Status:** ⏭️ Übersprungen (Original unverändert)\n\n`;
-      markdown += `**Grund:** ${audit.error ?? 'Unbekannter Fehler'}\n\n`;
+      markdown += `**Grund:** ${audit.error ?? "Unbekannter Fehler"}\n\n`;
     } else {
       markdown += `**Unterkapitel:** ${audit.subchaptersOptimized} von ${audit.totalSubchapters}\n\n`;
     }
@@ -514,14 +526,14 @@ export function generateAuditReportMarkdown(report: OptimizationReport, backupKe
     if (audit.changes.codeBlocksFormatted > 0) {
       markdown += `- ✅ ${audit.changes.codeBlocksFormatted} Code-Blöcke formatiert\n`;
     }
-    
-    if (Object.values(audit.changes).every(v => v === 0)) {
+
+    if (Object.values(audit.changes).every((v) => v === 0)) {
       markdown += `- ℹ️ Keine strukturellen Änderungen erforderlich\n`;
     }
-    
+
     markdown += `\n---\n\n`;
   }
-  
+
   markdown += `## Hinweise\n\n`;
   markdown += `- Alle Änderungen sind **nur visuell/strukturell**, keine inhaltlichen Änderungen.\n`;
   markdown += `- Backups werden **niemals überschrieben** (eindeutiger Key mit Zeitstempel).\n`;

@@ -38,7 +38,7 @@ export const genetikChapter: Chapter = {
         "**DNA-Replikation:** Die Verdopplung der DNA erfolgt semikonservativ (Meselson & Stahl, 1958) — jeder neue Doppelstrang enthält einen alten und einen neu synthetisierten Strang. Ablauf: (1) Helicase entwindet die Doppelhelix und öffnet die Replikationsgabel. (2) Topoisomerase baut Torsionsspannungen ab. (3) Primase synthetisiert kurze RNA-Primer als Startpunkt. (4) DNA-Polymerase III synthetisiert den neuen Strang in 5'→3'-Richtung. Am Leitstrang (leading strand) erfolgt die Synthese kontinuierlich in Richtung der Replikationsgabel. Am Folgestrang (lagging strand) erfolgt die Synthese diskontinuierlich in Form von Okazaki-Fragmenten (je ca. 100–200 Nukleotide bei Eukaryoten). (5) DNA-Polymerase I ersetzt die RNA-Primer durch DNA. (6) DNA-Ligase verknüpft die Okazaki-Fragmente zu einem durchgängigen Strang.",
       diagram: "dna-helix",
       merke:
-        "A=T hat <strong>2</strong> H-Brücken, G≡C hat <strong>3</strong> H-Brücken. GC-reiche DNA ist thermisch stabiler (höhere Schmelztemperatur). Merke: \"Auf dem <strong>GC</strong> liegt's <strong>gut</strong> (3 Brücken = stärker)\"",
+        'A=T hat <strong>2</strong> H-Brücken, G≡C hat <strong>3</strong> H-Brücken. GC-reiche DNA ist thermisch stabiler (höhere Schmelztemperatur). Merke: "Auf dem <strong>GC</strong> liegt\'s <strong>gut</strong> (3 Brücken = stärker)"',
       klinik:
         "Die PCR (Polymerase-Kettenreaktion) nutzt die DNA-Replikation in vitro mit thermostabiler Taq-Polymerase — essenziell für COVID-Tests, Forensik und Gendiagnostik.",
     },
@@ -61,7 +61,11 @@ export const genetikChapter: Chapter = {
           ["Basen", "A, T, G, C", "A, U, G, C"],
           ["Stränge", "Doppelsträngig (Doppelhelix)", "Meist einzelsträngig"],
           ["Ort", "Zellkern (Eukaryoten)", "Zellkern & Cytoplasma"],
-          ["Funktion", "Langfristige Speicherung der Erbinformation", "Informationsübertragung, Proteinbiosynthese, Regulation"],
+          [
+            "Funktion",
+            "Langfristige Speicherung der Erbinformation",
+            "Informationsübertragung, Proteinbiosynthese, Regulation",
+          ],
         ],
       },
       merke:
@@ -105,7 +109,7 @@ export const genetikChapter: Chapter = {
         "3) Termination: Wenn ein Stoppcodon (UAA, UAG oder UGA) die A-Stelle erreicht, bindet kein tRNA, sondern ein Release-Faktor. Dieser löst die Freisetzung der fertigen Polypeptidkette aus. Das Ribosom dissoziiert in seine Untereinheiten.\n\n" +
         "Mehrere Ribosomen können gleichzeitig eine mRNA translatieren — diese Struktur nennt man Polysom (Polyribosom).",
       merke:
-        "Startcodon: <strong>AUG</strong> (Methionin). Stoppcodons: <strong>UAA, UAG, UGA</strong> — merke: \"<strong>U</strong> <strong>A</strong>re <strong>A</strong>way\", \"<strong>U</strong> <strong>A</strong>re <strong>G</strong>one\", \"<strong>U</strong> <strong>G</strong>o <strong>A</strong>way\"",
+        'Startcodon: <strong>AUG</strong> (Methionin). Stoppcodons: <strong>UAA, UAG, UGA</strong> — merke: "<strong>U</strong> <strong>A</strong>re <strong>A</strong>way", "<strong>U</strong> <strong>A</strong>re <strong>G</strong>one", "<strong>U</strong> <strong>G</strong>o <strong>A</strong>way"',
     },
 
     // ──────────────────────────────────────────────
@@ -125,7 +129,7 @@ export const genetikChapter: Chapter = {
       merke:
         "Der genetische Code ist <strong>degeneriert</strong> (mehrere Codons für eine AS), aber <strong>nicht mehrdeutig</strong> (jedes Codon codiert nur EINE AS). 4³ = 64 Codons > 20 Aminosäuren.",
       altfrage:
-        "\"Wie viele verschiedene Codons gibt es?\" → 64 (4³). Davon codieren 61 für Aminosäuren und 3 sind Stoppcodons (UAA, UAG, UGA).",
+        '"Wie viele verschiedene Codons gibt es?" → 64 (4³). Davon codieren 61 für Aminosäuren und 3 sind Stoppcodons (UAA, UAG, UGA).',
     },
 
     // ──────────────────────────────────────────────
@@ -199,7 +203,7 @@ export const genetikChapter: Chapter = {
         ],
       },
       altfrage:
-        "\"Rot-Grün-Schwäche ist...\" → <strong>X-chromosomal rezessiv</strong>. Deshalb sind ca. 8% der Männer, aber nur 0,5% der Frauen betroffen (Frauen bräuchten das Allel auf BEIDEN X-Chromosomen).",
+        '"Rot-Grün-Schwäche ist..." → <strong>X-chromosomal rezessiv</strong>. Deshalb sind ca. 8% der Männer, aber nur 0,5% der Frauen betroffen (Frauen bräuchten das Allel auf BEIDEN X-Chromosomen).',
       klinik:
         "Mukoviszidose ist die häufigste autosomal-rezessive Erkrankung bei Europäern. Ca. 1 von 25 Personen ist Konduktor (Aa). Wahrscheinlichkeit für ein krankes Kind bei zwei Konduktoren: 25%.",
     },
@@ -237,17 +241,37 @@ export const genetikChapter: Chapter = {
       vergleichsTabelle: {
         headers: ["Mutationstyp", "Ebene", "Beispiel"],
         rows: [
-          ["Punktmutation (Missense)", "Genmutation (einzelne Basen)", "Sichelzellanämie (GAG → GUG im β-Globin-Gen)"],
-          ["Insertion/Deletion (Frameshift)", "Genmutation (Leserahmenverschiebung)", "Bestimmte Formen der Mukoviszidose (ΔF508: 3-bp-Deletion)"],
-          ["Deletion (chromosomal)", "Chromosomenmutation (Strukturveränderung)", "Cri-du-Chat-Syndrom (Deletion 5p)"],
-          ["Translokation", "Chromosomenmutation (Strukturveränderung)", "Philadelphia-Chromosom t(9;22) bei CML"],
-          ["Trisomie", "Genommutation (numerische Aberration)", "Down-Syndrom (Trisomie 21, 47 Chromosomen)"],
+          [
+            "Punktmutation (Missense)",
+            "Genmutation (einzelne Basen)",
+            "Sichelzellanämie (GAG → GUG im β-Globin-Gen)",
+          ],
+          [
+            "Insertion/Deletion (Frameshift)",
+            "Genmutation (Leserahmenverschiebung)",
+            "Bestimmte Formen der Mukoviszidose (ΔF508: 3-bp-Deletion)",
+          ],
+          [
+            "Deletion (chromosomal)",
+            "Chromosomenmutation (Strukturveränderung)",
+            "Cri-du-Chat-Syndrom (Deletion 5p)",
+          ],
+          [
+            "Translokation",
+            "Chromosomenmutation (Strukturveränderung)",
+            "Philadelphia-Chromosom t(9;22) bei CML",
+          ],
+          [
+            "Trisomie",
+            "Genommutation (numerische Aberration)",
+            "Down-Syndrom (Trisomie 21, 47 Chromosomen)",
+          ],
         ],
       },
       merke:
         "Trisomie 21 ist eine <strong>Genommutation</strong> (NICHT Genmutation!) — die Gesamtzahl der Chromosomen ist verändert (47 statt 46). Non-Disjunction in der Meiose.",
       altfrage:
-        "\"Trisomie 21 ist eine...\" → <strong>Genommutation</strong> (numerische Chromosomenaberration). NICHT Genmutation (betrifft einzelne Gene) und NICHT Chromosomenmutation (strukturelle Veränderung).",
+        '"Trisomie 21 ist eine..." → <strong>Genommutation</strong> (numerische Chromosomenaberration). NICHT Genmutation (betrifft einzelne Gene) und NICHT Chromosomenmutation (strukturelle Veränderung).',
     },
 
     // ──────────────────────────────────────────────

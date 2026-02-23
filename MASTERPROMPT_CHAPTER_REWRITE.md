@@ -8,14 +8,18 @@ Das Projekt liegt in `src/data/bmsKapitel/`. Die TypeScript-Typen sind in `src/d
 ## SCHRITT 0 — LIES DAS ZUERST: GOLDSTANDARD vs. NEGATIVBEISPIEL
 
 ### ✅ GOLDSTANDARD: `src/data/bmsKapitel/biologie/kap1-die-zelle.ts`
+
 Öffne diese Datei und lies sie vollständig. Sie zeigt:
+
 - Reinen Fließtext (keine Tabellen, keine Bullet-Listen im `content`-Feld)
 - Korrekt gefüllte `lernziele`, `sections`, `merksätze`, `klinischerBezug`, `altfrage`
 - Keine Metadaten-Header, keine Navigationslinks, keine ⭐-Sterne
 - Max. 5 `selfTest`-Fragen mit `hints`
 
 ### ❌ NEGATIVBEISPIEL: `src/data/bmsKapitel/biologie/kap5-klassische-genetik.ts`
+
 Öffne diese Datei und erkenne die Fehler (die du in KEINER der neuen Dateien wiederholen darfst):
+
 1. `Mendel''sche` — Doppelter Apostroph in Template-Literals (falsch: `''`, richtig: `'`)
 2. Navigationslinks am Ende: `← [Zurück: Bio Kap 4 UK04 – Plazenta](Bio_Kap4_UK04_Plazenta.md)` → löschen
 3. Metadaten-Header im Content: `**Priorität:** HOCH`, `**Geschätzte Lesezeit:** 14 Minuten`, `**Stichwortliste-Abdeckung:** 9/9` → löschen
@@ -60,6 +64,7 @@ Datei: Finde die Komponente die selfTest-Fragen rendert (wahrscheinlich `src/com
 **Ziel:** Fragen sollen einzeln angezeigt werden — eine Frage auf einmal, mit "Weiter"-Button um zur nächsten zu kommen. Nach der letzten Frage: Zusammenfassung (X von Y richtig).
 
 **Implementierung:**
+
 - State: `currentQuestionIndex` (0-based), `answers: Record<number, number>`, `showResult: boolean`
 - Zeige immer nur Frage `currentQuestionIndex`
 - Nach Antwort: Zeige Erklärung + "Weiter"-Button (oder "Ergebnis" bei letzter Frage)
@@ -75,6 +80,7 @@ Die folgenden Kapitel haben durchschnittlich **unter 3.000 Zeichen pro Unterkapi
 ### ABSOLUTE PFLICHTREGELN FÜR ALLE INHALTE (VERLETZ DIESE NIEMALS):
 
 **VERBOTEN im `content`-Feld:**
+
 ```
 ❌ Tabellen mit | Spalte | Spalte | — NUR erlaubt wenn Vergleich von 3+ Einträgen zwingend notwendig (max. 1 Tabelle pro UK)
 ❌ Bullet-Listen als primäre Inhaltsstruktur (•, -, *, 1. 2. 3. am Zeilenanfang im Fließtext)
@@ -88,6 +94,7 @@ Die folgenden Kapitel haben durchschnittlich **unter 3.000 Zeichen pro Unterkapi
 ```
 
 **GEBOTEN im `content`-Feld:**
+
 ```
 ✅ Fließende Prosa-Absätze (mindestens 4–8 Sätze pro Absatz)
 ✅ ## Überschriften (maximal 3–4 pro UK, keine Unterüberschriften mit ###)
@@ -99,6 +106,7 @@ Die folgenden Kapitel haben durchschnittlich **unter 3.000 Zeichen pro Unterkapi
 ```
 
 **PFLICHTFELDER — ALLE müssen befüllt sein (nicht `[]` lassen):**
+
 ```typescript
 lernziele: [
   // 3–5 konkrete Lernziele als aktive Sätze
@@ -135,6 +143,7 @@ altfrage: {
 ```
 
 **FRAGEN-REGELN:**
+
 ```
 ✅ Max. 5 selfTest-Fragen pro UK
 ✅ Immer 5 Antwortoptionen (A–E)
@@ -152,6 +161,7 @@ altfrage: {
 Lies die Datei vollständig. Aktuelle Schwäche: ~2.200 Zeichen/UK, keine sections, keine lernziele.
 
 **Stichwortliste-Pflichtthemen** (alle müssen abgedeckt sein):
+
 - Antikörper (Struktur, IgG/IgM/IgA/IgE/IgD, Fab/Fc-Region)
 - Gene der Antikörper (V-D-J-Rekombination, somatische Hypermutation)
 - Blutgruppen-Vererbung (ABO-System: Allele I^A, I^B, i; Vererbungsmuster; welche Antikörper bei welcher Blutgruppe)
@@ -166,6 +176,7 @@ Schreibe alle UKs neu mit min. 5.000 Zeichen Fließtext. Kein UK darf unter 4.50
 Lies die Datei vollständig. Aktuelle Schwäche: ~2.400 Zeichen/UK.
 
 **Stichwortliste-Pflichtthemen:**
+
 - Gonosomale Vererbung (X-chromosomal dominant/rezessiv; Y-chromosomal; hemizygot beim Mann)
 - Blutgruppen-Vererbung (hier: Kodominanz I^A I^B, Epistase 0; Kreuzungsschemas mit realen Beispielen)
 - Stammbaumanalyse (autosomal-dominant, autosomal-rezessiv, X-chromosomal-rezessiv am Stammbaum erkennen)
@@ -178,6 +189,7 @@ Lies die Datei vollständig. Aktuelle Schwäche: ~2.400 Zeichen/UK.
 Lies die Datei vollständig. Aktuelle Schwäche: ~2.600 Zeichen/UK.
 
 **Stichwortliste-Pflichtthemen:**
+
 - Furchung (holoblastisch vs. meroblastisch; Blastula; Kompaktierung)
 - Gastrulation (Keimblätter: Ektoderm, Mesoderm, Entoderm; was wird woraus)
 - Embryonalentwicklung (Neurulation; Organogenese; Somiten; kritische Phasen = Teratogenität)
@@ -190,6 +202,7 @@ Lies die Datei vollständig. Aktuelle Schwäche: ~2.600 Zeichen/UK.
 Lies die Datei vollständig. Aktuelle Schwäche: ~2.500 Zeichen/UK.
 
 **Stichwortliste-Pflichtthemen:**
+
 - Synthetische Evolutionstheorie (Mutation + Rekombination + Selektion + Drift + Genfluss)
 - Selektionsarten (stabilisierende, direktionale, disruptive Selektion; Fitness)
 - Artbildung (allopatrisch, sympatrisch; Reproduktionsbarrieren prä- und postzygotisch)
@@ -205,17 +218,20 @@ Lies die Datei vollständig. Die ersten 2 UKs (Abiotische Faktoren, Biotische Fa
 Fehlende UKs hinzufügen:
 
 **Neues UK: `bio-10-03` — "Population und Ökologische Nische"**
+
 - Populationsdynamik (Wachstumsmodelle: exponentiell r-Strategen, logistisch K-Strategen; Kapazitätsgrenze)
 - Ökologische Nische (Hutchinsons n-dimensionaler Hyperraum; Fundamental- vs. Realnische; Konkurrenzausschluss-Prinzip)
 - Min. 5.000 Zeichen Fließtext
 
 **Neues UK: `bio-10-04` — "Ökosysteme und Stoffkreisläufe"**
+
 - Nahrungsketten und -netze (Produzenten, Konsumenten I/II/III, Destruenten; Energiefluss: 10%-Regel)
 - Biogeochemische Kreisläufe (Kohlenstoff-, Stickstoff-, Wasserkreislauf)
 - Primärproduktion (terrestrisch vs. aquatisch; Limitierungsfaktoren)
 - Min. 5.000 Zeichen Fließtext
 
 **Neues UK: `bio-10-05` — "Umweltschutz und Biodiversität"**
+
 - Biodiversität (alpha, beta, gamma; Messung; Hotspots)
 - Bedrohungen (Habitatverlust, invasive Arten, Klimawandel, Übernutzung — mit Zahlen)
 - Ökosystemdienstleistungen (provisioning, regulating, cultural, supporting)

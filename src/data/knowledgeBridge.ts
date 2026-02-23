@@ -17,38 +17,108 @@ export interface BridgeTopic {
 /** Schlagwort (lowercase) → verwandte Themen in anderen Fächern/Kapiteln */
 export const BRIDGE_BY_KEYWORD: Record<string, BridgeTopic[]> = {
   druck: [
-    { subject: "physik", chapterId: "phys-kap1", chapterTitle: "Mechanik & Druck", label: "Hydrostatischer Druck" },
-    { subject: "biologie", chapterId: "bio-kap1", chapterTitle: "Die Zelle", label: "Blutdruck & Kreislauf" },
+    {
+      subject: "physik",
+      chapterId: "phys-kap1",
+      chapterTitle: "Mechanik & Druck",
+      label: "Hydrostatischer Druck",
+    },
+    {
+      subject: "biologie",
+      chapterId: "bio-kap1",
+      chapterTitle: "Die Zelle",
+      label: "Blutdruck & Kreislauf",
+    },
   ],
   membran: [
     { subject: "biologie", chapterId: "bio-kap1", chapterTitle: "Die Zelle", label: "Zellmembran" },
-    { subject: "chemie", chapterId: "chem-kap1", chapterTitle: "Chemie Grundlagen", label: "Membranen & Diffusion" },
+    {
+      subject: "chemie",
+      chapterId: "chem-kap1",
+      chapterTitle: "Chemie Grundlagen",
+      label: "Membranen & Diffusion",
+    },
   ],
   zelle: [
     { subject: "biologie", chapterId: "bio-kap1", chapterTitle: "Die Zelle", label: "Zellaufbau" },
-    { subject: "biologie", chapterId: "bio-kap2", chapterTitle: "Zellkern und Ribosomen", label: "Zellkern" },
+    {
+      subject: "biologie",
+      chapterId: "bio-kap2",
+      chapterTitle: "Zellkern und Ribosomen",
+      label: "Zellkern",
+    },
   ],
   energie: [
-    { subject: "biologie", chapterId: "bio-kap1", chapterTitle: "Die Zelle", label: "ATP & Mitochondrien" },
-    { subject: "physik", chapterId: "phys-kap1", chapterTitle: "Energie", label: "Energieerhaltung" },
-    { subject: "chemie", chapterId: "chem-kap1", chapterTitle: "Chemie", label: "Chemische Energie" },
+    {
+      subject: "biologie",
+      chapterId: "bio-kap1",
+      chapterTitle: "Die Zelle",
+      label: "ATP & Mitochondrien",
+    },
+    {
+      subject: "physik",
+      chapterId: "phys-kap1",
+      chapterTitle: "Energie",
+      label: "Energieerhaltung",
+    },
+    {
+      subject: "chemie",
+      chapterId: "chem-kap1",
+      chapterTitle: "Chemie",
+      label: "Chemische Energie",
+    },
   ],
   diffusion: [
-    { subject: "biologie", chapterId: "bio-kap1", chapterTitle: "Die Zelle", label: "Membrantransport" },
-    { subject: "chemie", chapterId: "chem-kap1", chapterTitle: "Chemie", label: "Diffusion & Osmose" },
+    {
+      subject: "biologie",
+      chapterId: "bio-kap1",
+      chapterTitle: "Die Zelle",
+      label: "Membrantransport",
+    },
+    {
+      subject: "chemie",
+      chapterId: "chem-kap1",
+      chapterTitle: "Chemie",
+      label: "Diffusion & Osmose",
+    },
   ],
   protein: [
-    { subject: "biologie", chapterId: "bio-kap1", chapterTitle: "Die Zelle", label: "Proteinbiosynthese" },
-    { subject: "biologie", chapterId: "bio-kap2", chapterTitle: "Zellkern und Ribosomen", label: "Ribosomen" },
-    { subject: "chemie", chapterId: "chem-kap1", chapterTitle: "Chemie", label: "Aminosäuren & Proteine" },
+    {
+      subject: "biologie",
+      chapterId: "bio-kap1",
+      chapterTitle: "Die Zelle",
+      label: "Proteinbiosynthese",
+    },
+    {
+      subject: "biologie",
+      chapterId: "bio-kap2",
+      chapterTitle: "Zellkern und Ribosomen",
+      label: "Ribosomen",
+    },
+    {
+      subject: "chemie",
+      chapterId: "chem-kap1",
+      chapterTitle: "Chemie",
+      label: "Aminosäuren & Proteine",
+    },
   ],
   sauerstoff: [
     { subject: "biologie", chapterId: "bio-kap1", chapterTitle: "Die Zelle", label: "Zellatmung" },
-    { subject: "chemie", chapterId: "chem-kap1", chapterTitle: "Chemie", label: "Oxidation & Reduktion" },
+    {
+      subject: "chemie",
+      chapterId: "chem-kap1",
+      chapterTitle: "Chemie",
+      label: "Oxidation & Reduktion",
+    },
   ],
   konzentration: [
     { subject: "biologie", chapterId: "bio-kap1", chapterTitle: "Die Zelle", label: "Osmose" },
-    { subject: "chemie", chapterId: "chem-kap1", chapterTitle: "Chemie", label: "Konzentration & Lösungen" },
+    {
+      subject: "chemie",
+      chapterId: "chem-kap1",
+      chapterTitle: "Chemie",
+      label: "Konzentration & Lösungen",
+    },
   ],
 };
 
@@ -58,16 +128,46 @@ export const BRIDGE_BY_KEYWORD: Record<string, BridgeTopic[]> = {
  */
 export const DEEP_BRIDGE_BY_KEYWORD: Record<string, BridgeTopic[]> = {
   druck: [
-    { subject: "physik", chapterId: "phys-kap1", chapterTitle: "Mechanik & Druck", label: "Bernoulli-Gleichung & Strömungsdruck" },
-    { subject: "biologie", chapterId: "bio-kap1", chapterTitle: "Die Zelle", label: "Osmotischer Druck in Zellen" },
+    {
+      subject: "physik",
+      chapterId: "phys-kap1",
+      chapterTitle: "Mechanik & Druck",
+      label: "Bernoulli-Gleichung & Strömungsdruck",
+    },
+    {
+      subject: "biologie",
+      chapterId: "bio-kap1",
+      chapterTitle: "Die Zelle",
+      label: "Osmotischer Druck in Zellen",
+    },
   ],
   energie: [
-    { subject: "physik", chapterId: "phys-kap1", chapterTitle: "Energie", label: "Entropie & thermodynamische Potenziale" },
-    { subject: "chemie", chapterId: "chem-kap1", chapterTitle: "Chemie", label: "Aktivierungsenergie & Kinetik" },
+    {
+      subject: "physik",
+      chapterId: "phys-kap1",
+      chapterTitle: "Energie",
+      label: "Entropie & thermodynamische Potenziale",
+    },
+    {
+      subject: "chemie",
+      chapterId: "chem-kap1",
+      chapterTitle: "Chemie",
+      label: "Aktivierungsenergie & Kinetik",
+    },
   ],
   kraft: [
-    { subject: "physik", chapterId: "phys-kap1", chapterTitle: "Mechanik", label: "Kraft und Drehmoment" },
-    { subject: "biologie", chapterId: "bio-kap1", chapterTitle: "Die Zelle", label: "Motorproteine & Zytoskelett" },
+    {
+      subject: "physik",
+      chapterId: "phys-kap1",
+      chapterTitle: "Mechanik",
+      label: "Kraft und Drehmoment",
+    },
+    {
+      subject: "biologie",
+      chapterId: "bio-kap1",
+      chapterTitle: "Die Zelle",
+      label: "Motorproteine & Zytoskelett",
+    },
   ],
 };
 
@@ -89,8 +189,8 @@ export function findKeywordsInText(text: string): string[] {
 }
 
 /**
- * Gibt verwandte Themen zurück, die über Schlagworte im aktuellen Kapitel verknüpft sind.
- * Filtert das aktuelle Kapitel heraus und dedupliziert nach chapterId.
+ * Gibt verwandte Themen zurück, die über Schlagworte im aktüllen Kapitel verknüpft sind.
+ * Filtert das aktülle Kapitel heraus und dedupliziert nach chapterId.
  */
 export function getRelatedTopics(
   content: string,

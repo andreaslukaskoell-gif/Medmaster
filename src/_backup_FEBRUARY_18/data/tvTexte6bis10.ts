@@ -26,11 +26,13 @@ Die Konsequenzen dieser Veränderungen sind noch nicht vollständig absehbar. Ö
           "Er ist um 0,1 Einheiten gesunken",
           "Er ist um 30 Prozent gesunken",
           "Er ist um 280 ppm gestiegen",
-          "Er ist um 0,1 Einheiten gestiegen"
+          "Er ist um 0,1 Einheiten gestiegen",
         ],
         correctAnswer: 0,
-        explanation: "Der Text gibt explizit an, dass der pH-Wert um 0,1 Einheiten gesunken ist. Die 30 Prozent beziehen sich auf die Zunahme der Wasserstoffionenkonzentration, nicht auf den pH-Wert selbst. 280 ppm ist die historische CO₂-Konzentration, kein pH-Wert.",
-        relevantPassage: "Der pH-Wert der Meeresoberfläche ist bereits um 0,1 Einheiten gesunken, was einer Zunahme der Wasserstoffionenkonzentration um dreißig Prozent entspricht."
+        explanation:
+          "Der Text gibt explizit an, dass der pH-Wert um 0,1 Einheiten gesunken ist. Die 30 Prozent beziehen sich auf die Zunahme der Wasserstoffionenkonzentration, nicht auf den pH-Wert selbst. 280 ppm ist die historische CO₂-Konzentration, kein pH-Wert.",
+        relevantPassage:
+          "Der pH-Wert der Meeresoberfläche ist bereits um 0,1 Einheiten gesunken, was einer Zunahme der Wasserstoffionenkonzentration um dreißig Prozent entspricht.",
       },
       {
         question: "Welche Aussage über das Haber-Bosch-Verfahren trifft laut Text zu?",
@@ -38,11 +40,13 @@ Die Konsequenzen dieser Veränderungen sind noch nicht vollständig absehbar. Ö
           "Es reduziert die Eutrophierung von Gewässern",
           "Es wurde entwickelt, um Todeszonen zu bekämpfen",
           "Die Menschheit fixiert damit mehr Stickstoff als natürliche terrestrische Prozesse",
-          "Es wird hauptsächlich zur Bekämpfung invasiver Arten eingesetzt"
+          "Es wird hauptsächlich zur Bekämpfung invasiver Arten eingesetzt",
         ],
         correctAnswer: 2,
-        explanation: "Der Text besagt eindeutig, dass die Menschheit durch das Haber-Bosch-Verfahren mehr atmosphärischen Stickstoff fixiert als alle natürlichen terrestrischen Prozesse zusammen. Das Verfahren verursacht Eutrophierung, bekämpft sie nicht. Todeszonen sind eine Folge, kein Bekämpfungsziel. Invasive Arten werden im Text separat erwähnt.",
-        relevantPassage: "Durch die industrielle Produktion von Stickstoffdünger nach dem Haber-Bosch-Verfahren fixiert die Menschheit heute mehr atmosphärischen Stickstoff als alle natürlichen terrestrischen Prozesse zusammen."
+        explanation:
+          "Der Text besagt eindeutig, dass die Menschheit durch das Haber-Bosch-Verfahren mehr atmosphärischen Stickstoff fixiert als alle natürlichen terrestrischen Prozesse zusammen. Das Verfahren verursacht Eutrophierung, bekämpft sie nicht. Todeszonen sind eine Folge, kein Bekämpfungsziel. Invasive Arten werden im Text separat erwähnt.",
+        relevantPassage:
+          "Durch die industrielle Produktion von Stickstoffdünger nach dem Haber-Bosch-Verfahren fixiert die Menschheit heute mehr atmosphärischen Stickstoff als alle natürlichen terrestrischen Prozesse zusammen.",
       },
       {
         question: "Was kann aus dem Text über die derzeitige Aussterberate geschlossen werden?",
@@ -50,11 +54,13 @@ Die Konsequenzen dieser Veränderungen sind noch nicht vollständig absehbar. Ö
           "Sie entspricht der natürlichen Hintergrundrate",
           "Sie liegt unter der Rate früherer Massenaussterben",
           "Sie übertrifft die natürliche Rate um das Hundert- bis Tausendfache",
-          "Sie betrifft ausschließlich Arten in Regenwäldern"
+          "Sie betrifft ausschließlich Arten in Regenwäldern",
         ],
         correctAnswer: 2,
-        explanation: "Der Text stellt klar fest, dass Arten heute hundert- bis tausendfach schneller aussterben als die natürliche Hintergrundrate. Die aktuelle Rate übertrifft die natürliche also erheblich und betrifft verschiedene Ökosysteme, nicht nur Regenwälder.",
-        relevantPassage: "Schätzungen zufolge sterben Arten heute hundert- bis tausendfald schneller aus als die natürliche Hintergrundrate es erwarten ließe."
+        explanation:
+          "Der Text stellt klar fest, dass Arten heute hundert- bis tausendfach schneller aussterben als die natürliche Hintergrundrate. Die aktuelle Rate übertrifft die natürliche also erheblich und betrifft verschiedene Ökosysteme, nicht nur Regenwälder.",
+        relevantPassage:
+          "Schätzungen zufolge sterben Arten heute hundert- bis tausendfald schneller aus als die natürliche Hintergrundrate es erwarten ließe.",
       },
       {
         question: "Welche Folge der Lebensraumfragmentierung wird im Text NICHT erwähnt?",
@@ -62,25 +68,25 @@ Die Konsequenzen dieser Veränderungen sind noch nicht vollständig absehbar. Ö
           "Verhinderung des Genaustauschs zwischen Populationen",
           "Reduzierung der Lebensraumgröße unter kritische Schwellenwerte",
           "Erhöhung der Biodiversität durch Inseleffekte",
-          "Langfristiges Überleben vieler Arten wird unmöglich"
+          "Langfristiges Überleben vieler Arten wird unmöglich",
         ],
         correctAnswer: 2,
-        explanation: "Der Text erwähnt keine Erhöhung der Biodiversität durch Fragmentierung. Im Gegenteil: Fragmentierung wird als Bedrohung dargestellt, die Genaustausch verhindert, Lebensräume verkleinert und das Überleben gefährdet. Eine Erhöhung der Biodiversität widerspricht der Gesamtaussage des Textes.",
-        relevantPassage: "Diese Fragmentierung verhindert nicht nur den Genaustausch zwischen Populationen, sondern reduziert auch die Größe der verbliebenen Lebensräume unter kritische Schwellenwerte."
+        explanation:
+          "Der Text erwähnt keine Erhöhung der Biodiversität durch Fragmentierung. Im Gegenteil: Fragmentierung wird als Bedrohung dargestellt, die Genaustausch verhindert, Lebensräume verkleinert und das Überleben gefährdet. Eine Erhöhung der Biodiversität widerspricht der Gesamtaussage des Textes.",
+        relevantPassage:
+          "Diese Fragmentierung verhindert nicht nur den Genaustausch zwischen Populationen, sondern reduziert auch die Größe der verbliebenen Lebensräume unter kritische Schwellenwerte.",
       },
       {
-        question: "Laut dem Text beträgt die atmosphärische CO₂-Konzentration vor der Industrialisierung etwa:",
-        options: [
-          "420 ppm",
-          "280 ppm",
-          "0,1 ppm",
-          "3 Millionen ppm"
-        ],
+        question:
+          "Laut dem Text beträgt die atmosphärische CO₂-Konzentration vor der Industrialisierung etwa:",
+        options: ["420 ppm", "280 ppm", "0,1 ppm", "3 Millionen ppm"],
         correctAnswer: 1,
-        explanation: "Der Text gibt an, dass die CO₂-Konzentration seit Beginn der Industrialisierung von etwa 280 ppm auf über 420 ppm gestiegen ist. 280 ppm ist also der Wert vor der Industrialisierung, 420 ppm der aktuelle Wert. Die 3 Millionen beziehen sich auf Jahre, nicht auf ppm.",
-        relevantPassage: "Seit Beginn der Industrialisierung hat die Verbrennung fossiler Brennstoffe die atmosphärische CO₂-Konzentration von etwa 280 ppm auf über 420 ppm erhöht"
-      }
-    ]
+        explanation:
+          "Der Text gibt an, dass die CO₂-Konzentration seit Beginn der Industrialisierung von etwa 280 ppm auf über 420 ppm gestiegen ist. 280 ppm ist also der Wert vor der Industrialisierung, 420 ppm der aktuelle Wert. Die 3 Millionen beziehen sich auf Jahre, nicht auf ppm.",
+        relevantPassage:
+          "Seit Beginn der Industrialisierung hat die Verbrennung fossiler Brennstoffe die atmosphärische CO₂-Konzentration von etwa 280 ppm auf über 420 ppm erhöht",
+      },
+    ],
   },
   {
     id: "tv-7",
@@ -104,16 +110,19 @@ Ein weiteres Phänomen ist der Rückschaufehler (Hindsight Bias), der besonders 
 Interessanterweise schützt medizinische Expertise nicht vor diesen Verzerrungen – erfahrene Ärzte zeigen sie genauso wie Anfänger, allerdings in anderen Situationen. Während Novizen durch Wissensdefizite fehleranfällig sind, unterliegen Experten eher intuitiven Schnellurteilen, die auf musterbasierten Heuristiken beruhen. Diese sind in typischen Fällen hocheffizient, versagen aber bei atypischen Präsentationen.`,
     questions: [
       {
-        question: "Was charakterisiert laut Text den Ankerheuristik-Effekt in der medizinischen Diagnostik?",
+        question:
+          "Was charakterisiert laut Text den Ankerheuristik-Effekt in der medizinischen Diagnostik?",
         options: [
           "Ärzte verlassen sich zu stark auf die zuletzt erhaltene Information",
           "Die initiale Verdachtsdiagnose beeinflusst die weitere Informationssuche",
           "Statusinformationen von Patienten werden ignoriert",
-          "Widersprüchliche Befunde werden stärker gewichtet als bestätigende"
+          "Widersprüchliche Befunde werden stärker gewichtet als bestätigende",
         ],
         correctAnswer: 1,
-        explanation: "Der Text definiert den Ankerheuristik-Effekt explizit als Tendenz, sich auf die erste (nicht letzte) Information zu verlassen. In der Medizin manifestiert sich dies als 'Diagnosemomentum', bei dem die initiale Verdachtsdiagnose die weitere Informationssuche beeinflusst. Widersprüchliche Befunde werden schwächer gewichtet, nicht stärker.",
-        relevantPassage: "Der Ankerheuristik-Effekt beschreibt die Tendenz, sich zu stark auf die erste erhaltene Information zu verlassen. In der medizinischen Praxis manifestiert sich dies häufig als 'Diagnosemomentum': Die initiale Verdachtsdiagnose [...] wird zum kognitiven Anker, der die weitere Informationssuche und -interpretation beeinflusst."
+        explanation:
+          "Der Text definiert den Ankerheuristik-Effekt explizit als Tendenz, sich auf die erste (nicht letzte) Information zu verlassen. In der Medizin manifestiert sich dies als 'Diagnosemomentum', bei dem die initiale Verdachtsdiagnose die weitere Informationssuche beeinflusst. Widersprüchliche Befunde werden schwächer gewichtet, nicht stärker.",
+        relevantPassage:
+          "Der Ankerheuristik-Effekt beschreibt die Tendenz, sich zu stark auf die erste erhaltene Information zu verlassen. In der medizinischen Praxis manifestiert sich dies häufig als 'Diagnosemomentum': Die initiale Verdachtsdiagnose [...] wird zum kognitiven Anker, der die weitere Informationssuche und -interpretation beeinflusst.",
       },
       {
         question: "Welches Beispiel für den Repräsentativitätsfehler wird im Text genannt?",
@@ -121,23 +130,28 @@ Interessanterweise schützt medizinische Expertise nicht vor diesen Verzerrungen
           "Ein Arzt übersieht eine Meningitis nach medialer Berichterstattung",
           "Ein junger sportlicher Mann mit Brustschmerzen wird nicht als Herzinfarktpatient erkannt",
           "Ein Arzt sucht nur nach Informationen, die seine Hypothese bestätigen",
-          "Eine Diagnose wird als offensichtlich wahrgenommen, nachdem sie bekannt ist"
+          "Eine Diagnose wird als offensichtlich wahrgenommen, nachdem sie bekannt ist",
         ],
         correctAnswer: 1,
-        explanation: "Der Text nennt explizit den Fall eines zwanzigjährigen sportlichen Mannes mit Brustschmerzen, der nicht zum stereotypen Bild passt und dessen Herzinfarkt daher übersehen werden könnte. Meningitis ist ein Beispiel für Verfügbarkeitsheuristik, die Suche nach bestätigenden Informationen ist Bestätigungsfehler, und die nachträgliche Offensichtlichkeit ist Rückschaufehler.",
-        relevantPassage: "Ein zwanzigjähriger sportlicher Mann mit Brustschmerzen passt nicht zum stereotypen Bild eines Herzinfarktpatienten, obwohl auch junge Menschen Infarkte erleiden können."
+        explanation:
+          "Der Text nennt explizit den Fall eines zwanzigjährigen sportlichen Mannes mit Brustschmerzen, der nicht zum stereotypen Bild passt und dessen Herzinfarkt daher übersehen werden könnte. Meningitis ist ein Beispiel für Verfügbarkeitsheuristik, die Suche nach bestätigenden Informationen ist Bestätigungsfehler, und die nachträgliche Offensichtlichkeit ist Rückschaufehler.",
+        relevantPassage:
+          "Ein zwanzigjähriger sportlicher Mann mit Brustschmerzen passt nicht zum stereotypen Bild eines Herzinfarktpatienten, obwohl auch junge Menschen Infarkte erleiden können.",
       },
       {
-        question: "Was kann aus dem Text über die Beziehung zwischen Expertise und kognitiven Verzerrungen geschlossen werden?",
+        question:
+          "Was kann aus dem Text über die Beziehung zwischen Expertise und kognitiven Verzerrungen geschlossen werden?",
         options: [
           "Medizinische Expertise schützt vollständig vor kognitiven Verzerrungen",
           "Experten zeigen kognitive Verzerrungen genauso wie Anfänger, aber in anderen Situationen",
           "Nur Novizen unterliegen kognitiven Verzerrungen aufgrund von Wissensdefiziten",
-          "Erfahrene Ärzte sind anfälliger für kognitive Verzerrungen als Anfänger"
+          "Erfahrene Ärzte sind anfälliger für kognitive Verzerrungen als Anfänger",
         ],
         correctAnswer: 1,
-        explanation: "Der Text stellt explizit fest, dass Expertise nicht vor Verzerrungen schützt – erfahrene Ärzte zeigen sie genauso wie Anfänger, allerdings in anderen Situationen. Experten unterliegen eher intuitiven Schnellurteilen bei atypischen Fällen, während Novizen durch Wissensdefizite fehleranfällig sind. Die Aussage ist differenziert, nicht absolut.",
-        relevantPassage: "Interessanterweise schützt medizinische Expertise nicht vor diesen Verzerrungen – erfahrene Ärzte zeigen sie genauso wie Anfänger, allerdings in anderen Situationen."
+        explanation:
+          "Der Text stellt explizit fest, dass Expertise nicht vor Verzerrungen schützt – erfahrene Ärzte zeigen sie genauso wie Anfänger, allerdings in anderen Situationen. Experten unterliegen eher intuitiven Schnellurteilen bei atypischen Fällen, während Novizen durch Wissensdefizite fehleranfällig sind. Die Aussage ist differenziert, nicht absolut.",
+        relevantPassage:
+          "Interessanterweise schützt medizinische Expertise nicht vor diesen Verzerrungen – erfahrene Ärzte zeigen sie genauso wie Anfänger, allerdings in anderen Situationen.",
       },
       {
         question: "Laut Text führt die Verfügbarkeitsheuristik dazu, dass:",
@@ -145,11 +159,13 @@ Interessanterweise schützt medizinische Expertise nicht vor diesen Verzerrungen
           "Ärzte systematisch die Basisrate von Erkrankungen ignorieren",
           "Diagnosen für wahrscheinlicher gehalten werden, wenn sie leicht aus dem Gedächtnis abrufbar sind",
           "Der diagnostische Prozess vorzeitig abgeschlossen wird",
-          "Mehrere gleichzeitig vorliegende Erkrankungen übersehen werden"
+          "Mehrere gleichzeitig vorliegende Erkrankungen übersehen werden",
         ],
         correctAnswer: 1,
-        explanation: "Der Text definiert Verfügbarkeitsheuristik klar als Tendenz, dass Diagnosen für wahrscheinlicher gehalten werden, wenn sie leicht abrufbar sind (z.B. nach kürzlich behandeltem Fall oder medialer Berichterstattung). Die Ignorierung der Basisrate ist Repräsentativitätsfehler, vorzeitiger Abschluss ist Premature Closure, und das Übersehen mehrerer Erkrankungen wird bei Premature Closure erwähnt.",
-        relevantPassage: "Die Verfügbarkeitsheuristik führt dazu, dass Diagnosen für wahrscheinlicher gehalten werden, wenn sie leicht aus dem Gedächtnis abrufbar sind."
+        explanation:
+          "Der Text definiert Verfügbarkeitsheuristik klar als Tendenz, dass Diagnosen für wahrscheinlicher gehalten werden, wenn sie leicht abrufbar sind (z.B. nach kürzlich behandeltem Fall oder medialer Berichterstattung). Die Ignorierung der Basisrate ist Repräsentativitätsfehler, vorzeitiger Abschluss ist Premature Closure, und das Übersehen mehrerer Erkrankungen wird bei Premature Closure erwähnt.",
+        relevantPassage:
+          "Die Verfügbarkeitsheuristik führt dazu, dass Diagnosen für wahrscheinlicher gehalten werden, wenn sie leicht aus dem Gedächtnis abrufbar sind.",
       },
       {
         question: "Welche Auswirkung des Rückschaufehlers wird im Text beschrieben?",
@@ -157,13 +173,15 @@ Interessanterweise schützt medizinische Expertise nicht vor diesen Verzerrungen
           "Ärzte überschätzen die Häufigkeit spektakulärer Diagnosen",
           "Diagnostische Entscheidungen erscheinen rückblickend offensichtlich und Fehler vermeidbar",
           "Widersprüchliche Informationen werden selektiv ignoriert",
-          "Experten verlassen sich zu stark auf musterbasierte Heuristiken"
+          "Experten verlassen sich zu stark auf musterbasierte Heuristiken",
         ],
         correctAnswer: 1,
-        explanation: "Der Text beschreibt den Rückschaufehler (Hindsight Bias) explizit so, dass der Diagnoseweg rückblickend offensichtlich erscheint und Fehler als vermeidbar wahrgenommen werden. Die Überschätzung spektakulärer Diagnosen ist Verfügbarkeitsheuristik, selektive Ignorierung ist Bestätigungsfehler, und musterbasierte Heuristiken bei Experten sind ein separater Punkt.",
-        relevantPassage: "Nachdem die korrekte Diagnose bekannt ist, erscheint der Diagnoseweg rückblickend offensichtlich, und Fehler werden als vermeidbar wahrgenommen."
-      }
-    ]
+        explanation:
+          "Der Text beschreibt den Rückschaufehler (Hindsight Bias) explizit so, dass der Diagnoseweg rückblickend offensichtlich erscheint und Fehler als vermeidbar wahrgenommen werden. Die Überschätzung spektakulärer Diagnosen ist Verfügbarkeitsheuristik, selektive Ignorierung ist Bestätigungsfehler, und musterbasierte Heuristiken bei Experten sind ein separater Punkt.",
+        relevantPassage:
+          "Nachdem die korrekte Diagnose bekannt ist, erscheint der Diagnoseweg rückblickend offensichtlich, und Fehler werden als vermeidbar wahrgenommen.",
+      },
+    ],
   },
   {
     id: "tv-8",
@@ -192,15 +210,12 @@ Moderne MRT-Sequenzen nutzen ausgefeilte Pulssequenzen und k-Raum-Akquisitionsst
     questions: [
       {
         question: "Laut dem Text beträgt die Larmorfrequenz für Protonen bei 1,5 Tesla etwa:",
-        options: [
-          "30.000 Megahertz",
-          "64 Megahertz",
-          "1,5 Megahertz",
-          "180 Megahertz"
-        ],
+        options: ["30.000 Megahertz", "64 Megahertz", "1,5 Megahertz", "180 Megahertz"],
         correctAnswer: 1,
-        explanation: "Der Text gibt explizit an, dass die Larmorfrequenz für Protonen bei 1,5 Tesla etwa 64 Megahertz beträgt. 30.000 ist das Verhältnis zum Erdmagnetfeld, 1,5 ist die Feldstärke in Tesla, und 180 ist ein Kippwinkel in Grad.",
-        relevantPassage: "Für Protonen bei 1,5 Tesla beträgt diese Frequenz etwa 64 Megahertz, also im Radiowellenbereich."
+        explanation:
+          "Der Text gibt explizit an, dass die Larmorfrequenz für Protonen bei 1,5 Tesla etwa 64 Megahertz beträgt. 30.000 ist das Verhältnis zum Erdmagnetfeld, 1,5 ist die Feldstärke in Tesla, und 180 ist ein Kippwinkel in Grad.",
+        relevantPassage:
+          "Für Protonen bei 1,5 Tesla beträgt diese Frequenz etwa 64 Megahertz, also im Radiowellenbereich.",
       },
       {
         question: "Welche zwei Effekte bewirkt laut Text der Hochfrequenzpuls?",
@@ -208,11 +223,13 @@ Moderne MRT-Sequenzen nutzen ausgefeilte Pulssequenzen und k-Raum-Akquisitionsst
           "Er verstärkt das statische Magnetfeld und erzeugt Gradientenfelder",
           "Er kippt die Nettomagnetisierung und bringt Kernspins in Phase",
           "Er verkürzt T1-Zeiten und verlängert T2-Zeiten",
-          "Er aktiviert die Empfangsspule und startet die Fourier-Transformation"
+          "Er aktiviert die Empfangsspule und startet die Fourier-Transformation",
         ],
         correctAnswer: 1,
-        explanation: "Der Text beschreibt explizit zwei Effekte des Hochfrequenzpulses: Erstens kippt er die Nettomagnetisierung aus der Feldrichtung, zweitens bringt er die Kernspins in Phase. Die anderen Optionen vermischen verschiedene, unabhängige Konzepte der MRT.",
-        relevantPassage: "Dieser Radiofrequenzpuls bewirkt zwei Effekte: Erstens kippt er die Nettomagnetisierung aus der Richtung des statischen Felds [...]. Zweitens bringt er die individuellen Kernspins in Phase"
+        explanation:
+          "Der Text beschreibt explizit zwei Effekte des Hochfrequenzpulses: Erstens kippt er die Nettomagnetisierung aus der Feldrichtung, zweitens bringt er die Kernspins in Phase. Die anderen Optionen vermischen verschiedene, unabhängige Konzepte der MRT.",
+        relevantPassage:
+          "Dieser Radiofrequenzpuls bewirkt zwei Effekte: Erstens kippt er die Nettomagnetisierung aus der Richtung des statischen Felds [...]. Zweitens bringt er die individuellen Kernspins in Phase",
       },
       {
         question: "Was kann aus dem Text über T1- und T2-Relaxation geschlossen werden?",
@@ -220,11 +237,13 @@ Moderne MRT-Sequenzen nutzen ausgefeilte Pulssequenzen und k-Raum-Akquisitionsst
           "T1-Relaxation beschreibt den Verlust der Phasenkohärenz",
           "Beide Prozesse sind identisch und folgen denselben Zeitkonstanten",
           "T1-Relaxation beschreibt die Wiederherstellung der Magnetisierung in Feldrichtung",
-          "T2-Relaxation erfolgt durch Energieabgabe an die Umgebung"
+          "T2-Relaxation erfolgt durch Energieabgabe an die Umgebung",
         ],
         correctAnswer: 2,
-        explanation: "Der Text definiert T1-Relaxation klar als Wiederherstellung der Magnetisierung in Feldrichtung durch Energieabgabe. T2-Relaxation beschreibt den Verlust der Phasenkohärenz (nicht T1). Die Prozesse sind unabhängig mit unterschiedlichen, gewebespezifischen Zeitkonstanten.",
-        relevantPassage: "Die Längsrelaxation (T1-Relaxation) beschreibt die Wiederherstellung der Magnetisierung in Feldrichtung durch Energieabgabe an die Umgebung. Die Querrelaxation (T2-Relaxation) beschreibt den Verlust der Phasenkohärenz"
+        explanation:
+          "Der Text definiert T1-Relaxation klar als Wiederherstellung der Magnetisierung in Feldrichtung durch Energieabgabe. T2-Relaxation beschreibt den Verlust der Phasenkohärenz (nicht T1). Die Prozesse sind unabhängig mit unterschiedlichen, gewebespezifischen Zeitkonstanten.",
+        relevantPassage:
+          "Die Längsrelaxation (T1-Relaxation) beschreibt die Wiederherstellung der Magnetisierung in Feldrichtung durch Energieabgabe an die Umgebung. Die Querrelaxation (T2-Relaxation) beschreibt den Verlust der Phasenkohärenz",
       },
       {
         question: "Welche Funktion haben Gradientenfelder laut Text?",
@@ -232,11 +251,13 @@ Moderne MRT-Sequenzen nutzen ausgefeilte Pulssequenzen und k-Raum-Akquisitionsst
           "Sie erzeugen das statische Hauptmagnetfeld von 1,5 bis 3 Tesla",
           "Sie ermöglichen die räumliche Kodierung durch ortsabhängige Frequenzänderung",
           "Sie verkürzen die Relaxationszeiten pathologischer Gewebe",
-          "Sie verstärken das Signal-Rausch-Verhältnis bei höheren Feldstärken"
+          "Sie verstärken das Signal-Rausch-Verhältnis bei höheren Feldstärken",
         ],
         correctAnswer: 1,
-        explanation: "Der Text erklärt, dass Gradientenfelder für räumliche Kodierung eingesetzt werden: Sie ändern sich linear über den Raum und bewirken, dass Protonen an verschiedenen Orten mit unterschiedlichen Frequenzen präzedieren. Sie erzeugen nicht das Hauptfeld, verändern nicht direkt Relaxationszeiten und verbessern nicht das Signal-Rausch-Verhältnis.",
-        relevantPassage: "Für die räumliche Kodierung des Signals werden Gradientenfelder eingesetzt – schwächere Magnetfelder, die sich linear über den Raum ändern. Da die Larmorfrequenz vom Magnetfeld abhängt, bewirkt ein Gradient, dass Protonen an verschiedenen Orten mit unterschiedlichen Frequenzen präzedieren."
+        explanation:
+          "Der Text erklärt, dass Gradientenfelder für räumliche Kodierung eingesetzt werden: Sie ändern sich linear über den Raum und bewirken, dass Protonen an verschiedenen Orten mit unterschiedlichen Frequenzen präzedieren. Sie erzeugen nicht das Hauptfeld, verändern nicht direkt Relaxationszeiten und verbessern nicht das Signal-Rausch-Verhältnis.",
+        relevantPassage:
+          "Für die räumliche Kodierung des Signals werden Gradientenfelder eingesetzt – schwächere Magnetfelder, die sich linear über den Raum ändern. Da die Larmorfrequenz vom Magnetfeld abhängt, bewirkt ein Gradient, dass Protonen an verschiedenen Orten mit unterschiedlichen Frequenzen präzedieren.",
       },
       {
         question: "Laut Text zeigt wasserhaltiges Gewebe wie Liquor:",
@@ -244,13 +265,15 @@ Moderne MRT-Sequenzen nutzen ausgefeilte Pulssequenzen und k-Raum-Akquisitionsst
           "Kurze T1- und T2-Zeiten",
           "Lange T1- und T2-Zeiten",
           "Kurze T1-Zeiten und lange T2-Zeiten",
-          "Lange T1-Zeiten und kurze T2-Zeiten"
+          "Lange T1-Zeiten und kurze T2-Zeiten",
         ],
         correctAnswer: 1,
-        explanation: "Der Text gibt explizit an, dass wasserhaltiges Gewebe wie Liquor lange T1- und T2-Zeiten zeigt. Im Kontrast dazu wird erwähnt, dass fettreiches Gewebe kurze T1-Zeiten aufweist. Die Kombination 'lange T1 und T2' ist charakteristisch für wasserreiche Gewebe.",
-        relevantPassage: "Wasserhaltiges Gewebe wie Liquor zeigt lange T1- und T2-Zeiten, während fettreiches Gewebe kurze T1-Zeiten aufweist."
-      }
-    ]
+        explanation:
+          "Der Text gibt explizit an, dass wasserhaltiges Gewebe wie Liquor lange T1- und T2-Zeiten zeigt. Im Kontrast dazu wird erwähnt, dass fettreiches Gewebe kurze T1-Zeiten aufweist. Die Kombination 'lange T1 und T2' ist charakteristisch für wasserreiche Gewebe.",
+        relevantPassage:
+          "Wasserhaltiges Gewebe wie Liquor zeigt lange T1- und T2-Zeiten, während fettreiches Gewebe kurze T1-Zeiten aufweist.",
+      },
+    ],
   },
   {
     id: "tv-9",
@@ -276,16 +299,19 @@ Stammzellen von Patienten mit genetischen Erkrankungen ermöglichen die Modellie
 Die Stammzellnische – die lokale Mikroumgebung, die Stammzellen in vivo beherbergt – reguliert das Gleichgewicht zwischen Selbsterneuerung und Differenzierung. Diese Nische umfasst Nachbarzellen, extrazelluläre Matrix und lösliche Faktoren. Störungen der Nischenfunktion können zu Stammzellerschöpfung oder maligner Transformation beitragen. Das Verständnis der Nische könnte die Ex-vivo-Expansion therapeutisch relevanter Stammzellen verbessern und neue Ansatzpunkte für Krebstherapien liefern, da auch Krebsstammzellen in spezialisierten Nischen überdauern.`,
     questions: [
       {
-        question: "Welche vier Transkriptionsfaktoren nutzte Yamanaka laut Text zur Erzeugung von iPS-Zellen?",
+        question:
+          "Welche vier Transkriptionsfaktoren nutzte Yamanaka laut Text zur Erzeugung von iPS-Zellen?",
         options: [
           "DNA-Methylierung, Histon-Modifikationen, Pluripotenzgene und Differenzierungsgene",
           "Oct4, Sox2, Klf4 und c-Myc",
           "Fibroblasten, Neuronen, Kardiomyozyten und Leberzellen",
-          "Wachstumsfaktoren, Zytokine, morphogenetische Gradienten und kleine Moleküle"
+          "Wachstumsfaktoren, Zytokine, morphogenetische Gradienten und kleine Moleküle",
         ],
         correctAnswer: 1,
-        explanation: "Der Text nennt explizit Oct4, Sox2, Klf4 und c-Myc als die vier Transkriptionsfaktoren, die Yamanaka 2006 nutzte. Die erste Option listet epigenetische Mechanismen, die dritte verschiedene Zelltypen und die vierte Differenzierungssignale auf – keine davon sind die Yamanaka-Faktoren.",
-        relevantPassage: "Shinya Yamanaka gelang es, differenzierte Körperzellen durch Einbringen von nur vier Transkriptionsfaktoren – Oct4, Sox2, Klf4 und c-Myc – in einen pluripotenten Zustand zurückzuversetzen."
+        explanation:
+          "Der Text nennt explizit Oct4, Sox2, Klf4 und c-Myc als die vier Transkriptionsfaktoren, die Yamanaka 2006 nutzte. Die erste Option listet epigenetische Mechanismen, die dritte verschiedene Zelltypen und die vierte Differenzierungssignale auf – keine davon sind die Yamanaka-Faktoren.",
+        relevantPassage:
+          "Shinya Yamanaka gelang es, differenzierte Körperzellen durch Einbringen von nur vier Transkriptionsfaktoren – Oct4, Sox2, Klf4 und c-Myc – in einen pluripotenten Zustand zurückzuversetzen.",
       },
       {
         question: "Was unterscheidet laut Text totipotente von pluripotenten Stammzellen?",
@@ -293,11 +319,13 @@ Die Stammzellnische – die lokale Mikroumgebung, die Stammzellen in vivo beherb
           "Totipotente Zellen können nur Blutzellen bilden",
           "Pluripotente Zellen können einen vollständigen Organismus bilden",
           "Totipotente Zellen können extraembryonales Gewebe bilden, pluripotente nicht",
-          "Pluripotente Zellen sind effizienter in der Reprogrammierung"
+          "Pluripotente Zellen sind effizienter in der Reprogrammierung",
         ],
         correctAnswer: 2,
-        explanation: "Der Text erklärt klar, dass totipotente Zellen einen vollständigen Organismus einschließlich extraembryonaler Gewebe bilden können, während pluripotente Zellen sich in alle Zelltypen der drei Keimblätter differenzieren können, jedoch nicht in extraembryonales Gewebe. Dies ist der zentrale Unterschied.",
-        relevantPassage: "Totipotente Zellen – wie die befruchtete Eizelle und die ersten Teilungsprodukte – können einen vollständigen Organismus einschließlich extraembryonaler Gewebe bilden. Pluripotente Stammzellen können sich in alle Zelltypen der drei Keimblätter differenzieren, jedoch nicht in extraembryonales Gewebe."
+        explanation:
+          "Der Text erklärt klar, dass totipotente Zellen einen vollständigen Organismus einschließlich extraembryonaler Gewebe bilden können, während pluripotente Zellen sich in alle Zelltypen der drei Keimblätter differenzieren können, jedoch nicht in extraembryonales Gewebe. Dies ist der zentrale Unterschied.",
+        relevantPassage:
+          "Totipotente Zellen – wie die befruchtete Eizelle und die ersten Teilungsprodukte – können einen vollständigen Organismus einschließlich extraembryonaler Gewebe bilden. Pluripotente Stammzellen können sich in alle Zelltypen der drei Keimblätter differenzieren, jedoch nicht in extraembryonales Gewebe.",
       },
       {
         question: "Laut Text beträgt die Erfolgsrate der Reprogrammierung zu iPS-Zellen etwa:",
@@ -305,23 +333,28 @@ Die Stammzellnische – die lokale Mikroumgebung, die Stammzellen in vivo beherb
           "Nahezu 100 Prozent der behandelten Zellen",
           "Etwa 50 Prozent der behandelten Zellen",
           "Nur ein bis zwei Prozent der behandelten Zellen",
-          "Weniger als 0,01 Prozent der behandelten Zellen"
+          "Weniger als 0,01 Prozent der behandelten Zellen",
         ],
         correctAnswer: 2,
-        explanation: "Der Text gibt explizit an, dass nur ein bis zwei Prozent der behandelten Zellen erfolgreich reprogrammiert werden, was zeigt, dass der Prozess ineffizient ist. Alle anderen Prozentsätze werden im Text nicht genannt und sind falsch.",
-        relevantPassage: "Der Prozess ist ineffizient: Nur ein bis zwei Prozent der behandelten Zellen werden erfolgreich reprogrammiert."
+        explanation:
+          "Der Text gibt explizit an, dass nur ein bis zwei Prozent der behandelten Zellen erfolgreich reprogrammiert werden, was zeigt, dass der Prozess ineffizient ist. Alle anderen Prozentsätze werden im Text nicht genannt und sind falsch.",
+        relevantPassage:
+          "Der Prozess ist ineffizient: Nur ein bis zwei Prozent der behandelten Zellen werden erfolgreich reprogrammiert.",
       },
       {
-        question: "Was ist laut Text der Vorteil der direkten Reprogrammierung gegenüber dem Weg über iPS-Zellen?",
+        question:
+          "Was ist laut Text der Vorteil der direkten Reprogrammierung gegenüber dem Weg über iPS-Zellen?",
         options: [
           "Sie erfordert keine Transkriptionsfaktoren",
           "Sie überspringt den pluripotenten Zwischenzustand und vermeidet theoretisches Tumorrisiko",
           "Sie ist ethisch weniger problematisch als ES-Zellen",
-          "Sie ermöglicht die Bildung extraembryonaler Gewebe"
+          "Sie ermöglicht die Bildung extraembryonaler Gewebe",
         ],
         correctAnswer: 1,
-        explanation: "Der Text erklärt, dass direkte Reprogrammierung den langwierigen Differenzierungsprozess überspringt und das theoretische Tumorrisiko pluripotenter Zellen vermeidet, indem der pluripotente Zwischenzustand umgangen wird. Die ethischen Bedenken beziehen sich auf ES-Zellen, nicht auf den Vergleich iPS vs. direkte Reprogrammierung.",
-        relevantPassage: "Dies könnte therapeutisch vorteilhaft sein, da es den langwierigen Differenzierungsprozess überspringt und das theoretische Tumorrisiko pluripotenter Zellen vermeidet."
+        explanation:
+          "Der Text erklärt, dass direkte Reprogrammierung den langwierigen Differenzierungsprozess überspringt und das theoretische Tumorrisiko pluripotenter Zellen vermeidet, indem der pluripotente Zwischenzustand umgangen wird. Die ethischen Bedenken beziehen sich auf ES-Zellen, nicht auf den Vergleich iPS vs. direkte Reprogrammierung.",
+        relevantPassage:
+          "Dies könnte therapeutisch vorteilhaft sein, da es den langwierigen Differenzierungsprozess überspringt und das theoretische Tumorrisiko pluripotenter Zellen vermeidet.",
       },
       {
         question: "Welche Funktion der Stammzellnische wird im Text NICHT erwähnt?",
@@ -329,13 +362,15 @@ Die Stammzellnische – die lokale Mikroumgebung, die Stammzellen in vivo beherb
           "Regulation des Gleichgewichts zwischen Selbsterneuerung und Differenzierung",
           "Bereitstellung von Nachbarzellen, extrazellulärer Matrix und löslichen Faktoren",
           "Direkte Erzeugung von iPS-Zellen durch Transkriptionsfaktoren",
-          "Beherbergung von Stammzellen und Krebsstammzellen"
+          "Beherbergung von Stammzellen und Krebsstammzellen",
         ],
         correctAnswer: 2,
-        explanation: "Die Erzeugung von iPS-Zellen durch Transkriptionsfaktoren wird im Text beschrieben, aber nicht als Funktion der Stammzellnische. Die Nische reguliert Selbsterneuerung/Differenzierung, umfasst Nachbarzellen und Matrix, und beherbergt sowohl normale als auch Krebsstammzellen – all dies wird explizit erwähnt.",
-        relevantPassage: "Die Stammzellnische – die lokale Mikroumgebung, die Stammzellen in vivo beherbergt – reguliert das Gleichgewicht zwischen Selbsterneuerung und Differenzierung. Diese Nische umfasst Nachbarzellen, extrazelluläre Matrix und lösliche Faktoren."
-      }
-    ]
+        explanation:
+          "Die Erzeugung von iPS-Zellen durch Transkriptionsfaktoren wird im Text beschrieben, aber nicht als Funktion der Stammzellnische. Die Nische reguliert Selbsterneuerung/Differenzierung, umfasst Nachbarzellen und Matrix, und beherbergt sowohl normale als auch Krebsstammzellen – all dies wird explizit erwähnt.",
+        relevantPassage:
+          "Die Stammzellnische – die lokale Mikroumgebung, die Stammzellen in vivo beherbergt – reguliert das Gleichgewicht zwischen Selbsterneuerung und Differenzierung. Diese Nische umfasst Nachbarzellen, extrazelluläre Matrix und lösliche Faktoren.",
+      },
+    ],
   },
   {
     id: "tv-10",
@@ -363,40 +398,44 @@ Die Interpretierbarkeit ist eine weitere Herausforderung. Viele moderne KI-Syste
 Datenschutz und ethische Fragen sind ebenfalls zentral. Medizinische Daten sind hochsensibel, und ihr Schutz ist fundamental. Wer haftet, wenn ein KI-System einen Fehler macht? Wie stellen wir sicher, dass KI-Systeme fair sind und keine Bevölkerungsgruppen benachteiligen? Diese Fragen müssen beantwortet werden, bevor KI flächendeckend in der klinischen Praxis eingesetzt werden kann. Trotz dieser Herausforderungen ist das Potenzial von KI in der Medizin enorm und wird die Gesundheitsversorgung der Zukunft maßgeblich prägen.`,
     questions: [
       {
-        question: "Laut dem Text wurde ein KI-System zur Erkennung welcher Erkrankung von der FDA genehmigt?",
-        options: [
-          "Hautkrebs",
-          "Diabetische Retinopathie",
-          "Sepsis",
-          "Krebserkrankungen"
-        ],
+        question:
+          "Laut dem Text wurde ein KI-System zur Erkennung welcher Erkrankung von der FDA genehmigt?",
+        options: ["Hautkrebs", "Diabetische Retinopathie", "Sepsis", "Krebserkrankungen"],
         correctAnswer: 1,
-        explanation: "Der Text gibt explizit an, dass ein KI-System zur Erkennung diabetischer Retinopathie in Netzhautfotos von der FDA genehmigt wurde. Hautkrebs, Sepsis und Krebserkrankungen werden zwar erwähnt, aber nicht im Zusammenhang mit einer FDA-Genehmigung.",
-        relevantPassage: "Ein KI-System zur Erkennung diabetischer Retinopathie in Netzhautfotos wurde bereits von der US-amerikanischen Zulassungsbehörde FDA genehmigt."
+        explanation:
+          "Der Text gibt explizit an, dass ein KI-System zur Erkennung diabetischer Retinopathie in Netzhautfotos von der FDA genehmigt wurde. Hautkrebs, Sepsis und Krebserkrankungen werden zwar erwähnt, aber nicht im Zusammenhang mit einer FDA-Genehmigung.",
+        relevantPassage:
+          "Ein KI-System zur Erkennung diabetischer Retinopathie in Netzhautfotos wurde bereits von der US-amerikanischen Zulassungsbehörde FDA genehmigt.",
       },
       {
-        question: "Mit wie vielen Bildern wurde laut Text das neuronale Netzwerk für Hautkrebserkennung trainiert?",
+        question:
+          "Mit wie vielen Bildern wurde laut Text das neuronale Netzwerk für Hautkrebserkennung trainiert?",
         options: [
           "Über 13.000 Bildern",
           "Über 130.000 Bildern",
           "Über 1.300 Bildern",
-          "Über 1,3 Millionen Bildern"
+          "Über 1,3 Millionen Bildern",
         ],
         correctAnswer: 1,
-        explanation: "Der Text nennt die exakte Zahl: über 130.000 Bilder verschiedener Hautveränderungen. Alle anderen Zahlenangaben sind falsch.",
-        relevantPassage: "Ein neuronales Netzwerk für die Hautkrebserkennung wurde beispielsweise mit über 130.000 Bildern verschiedener Hautveränderungen trainiert."
+        explanation:
+          "Der Text nennt die exakte Zahl: über 130.000 Bilder verschiedener Hautveränderungen. Alle anderen Zahlenangaben sind falsch.",
+        relevantPassage:
+          "Ein neuronales Netzwerk für die Hautkrebserkennung wurde beispielsweise mit über 130.000 Bildern verschiedener Hautveränderungen trainiert.",
       },
       {
-        question: "Was kann aus dem Beispiel des fehlerhaften Röntgenbild-Algorithmus geschlossen werden?",
+        question:
+          "Was kann aus dem Beispiel des fehlerhaften Röntgenbild-Algorithmus geschlossen werden?",
         options: [
           "KI-Systeme sind grundsätzlich ungeeignet für die Medizin",
           "Die Qualität von KI-Systemen hängt von der Qualität und Relevanz der Trainingsdaten ab",
           "Röntgengeräte verschiedener Hersteller können nicht verglichen werden",
-          "Pathologien in Röntgenbildern sind für KI nicht erkennbar"
+          "Pathologien in Röntgenbildern sind für KI nicht erkennbar",
         ],
         correctAnswer: 1,
-        explanation: "Der Text nutzt dieses Beispiel, um zu illustrieren, dass die Qualität von KI-Systemen entscheidend von den Trainingsdaten abhängt. Sind diese verzerrt, kann das System irrelevante Merkmale lernen statt der eigentlichen Pathologien. Dies zeigt die Bedeutung guter Daten, nicht grundsätzliche Ungeeignetheit.",
-        relevantPassage: "Die Qualität von KI-Systemen hängt entscheidend von den Trainingsdaten ab. Sind diese verzerrt oder unvollständig, kann das System fehlerhafte Schlussfolgerungen ziehen. Ein berühmtes Beispiel ist ein Algorithmus, der Röntgenbilder analysieren sollte, aber tatsächlich die Röntgengeräte verschiedener Krankenhäuser erkannte statt der Pathologien."
+        explanation:
+          "Der Text nutzt dieses Beispiel, um zu illustrieren, dass die Qualität von KI-Systemen entscheidend von den Trainingsdaten abhängt. Sind diese verzerrt, kann das System irrelevante Merkmale lernen statt der eigentlichen Pathologien. Dies zeigt die Bedeutung guter Daten, nicht grundsätzliche Ungeeignetheit.",
+        relevantPassage:
+          "Die Qualität von KI-Systemen hängt entscheidend von den Trainingsdaten ab. Sind diese verzerrt oder unvollständig, kann das System fehlerhafte Schlussfolgerungen ziehen. Ein berühmtes Beispiel ist ein Algorithmus, der Röntgenbilder analysieren sollte, aber tatsächlich die Röntgengeräte verschiedener Krankenhäuser erkannte statt der Pathologien.",
       },
       {
         question: "Welcher Vorteil von KI in der Pathologie wird im Text erwähnt?",
@@ -404,11 +443,13 @@ Datenschutz und ethische Fragen sind ebenfalls zentral. Medizinische Daten sind 
           "Vollständiger Ersatz von Pathologen",
           "Schnellerer, objektiverer und reproduzierbarerer Diagnoseprozess",
           "Elimination aller diagnostischen Fehler",
-          "Kostenloses Screening für alle Patienten"
+          "Kostenloses Screening für alle Patienten",
         ],
         correctAnswer: 1,
-        explanation: "Der Text nennt drei konkrete Vorteile: Beschleunigung des Diagnoseprozesses, objektivere und reproduzierbarere Ergebnisse. Ein vollständiger Ersatz von Ärzten, Fehlerfreiheit oder kostenlose Screenings werden nicht erwähnt oder versprochen.",
-        relevantPassage: "Dies beschleunigt nicht nur den Diagnoseprozess, sondern ermöglicht auch objektivere und reproduzierbarere Ergebnisse."
+        explanation:
+          "Der Text nennt drei konkrete Vorteile: Beschleunigung des Diagnoseprozesses, objektivere und reproduzierbarere Ergebnisse. Ein vollständiger Ersatz von Ärzten, Fehlerfreiheit oder kostenlose Screenings werden nicht erwähnt oder versprochen.",
+        relevantPassage:
+          "Dies beschleunigt nicht nur den Diagnoseprozess, sondern ermöglicht auch objektivere und reproduzierbarere Ergebnisse.",
       },
       {
         question: "Laut Text ist ein Problem vieler moderner KI-Systeme:",
@@ -416,12 +457,14 @@ Datenschutz und ethische Fragen sind ebenfalls zentral. Medizinische Daten sind 
           "Sie sind zu langsam für klinische Anwendungen",
           "Sie funktionieren als 'Black Box' und ihre Entscheidungen sind schwer nachvollziehbar",
           "Sie benötigen zu wenig Trainingsdaten",
-          "Sie können keine Röntgenbilder analysieren"
+          "Sie können keine Röntgenbilder analysieren",
         ],
         correctAnswer: 1,
-        explanation: "Der Text beschreibt explizit die mangelnde Interpretierbarkeit als Herausforderung: Viele Systeme funktionieren als 'Black Box' und liefern Ergebnisse, deren Gründe unklar bleiben. Geschwindigkeit, zu wenig Daten oder fehlende Röntgenfähigkeit werden nicht als Probleme genannt.",
-        relevantPassage: "Die Interpretierbarkeit ist eine weitere Herausforderung. Viele moderne KI-Systeme, insbesondere tiefe neuronale Netzwerke, funktionieren als 'Black Box' – sie liefern Ergebnisse, aber die Gründe dafür bleiben unklar."
-      }
-    ]
-  }
+        explanation:
+          "Der Text beschreibt explizit die mangelnde Interpretierbarkeit als Herausforderung: Viele Systeme funktionieren als 'Black Box' und liefern Ergebnisse, deren Gründe unklar bleiben. Geschwindigkeit, zu wenig Daten oder fehlende Röntgenfähigkeit werden nicht als Probleme genannt.",
+        relevantPassage:
+          "Die Interpretierbarkeit ist eine weitere Herausforderung. Viele moderne KI-Systeme, insbesondere tiefe neuronale Netzwerke, funktionieren als 'Black Box' – sie liefern Ergebnisse, aber die Gründe dafür bleiben unklar.",
+      },
+    ],
+  },
 ];

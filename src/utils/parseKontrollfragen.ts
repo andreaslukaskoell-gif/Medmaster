@@ -2,35 +2,37 @@ import type { SelfTestQuestion } from "@/data/bmsKapitel/types";
 
 /**
  * Parse Kontrollfragen from free text format into structured SelfTestQuestion format
- * 
+ *
  * Expected format:
  * ## Kontrollfragen
- * 
+ *
  * 1. Question text?
  *    A) Option 1
  *    B) Option 2
  *    C) Option 3
  *    ...
- * 
+ *
  * 2. Next question...
- * 
+ *
  * Returns array of SelfTestQuestion objects with fallbacks for missing data
  */
 export function parseKontrollfragen(text: string): SelfTestQuestion[] {
-  if (!text || typeof text !== 'string') {
+  if (!text || typeof text !== "string") {
     return [];
   }
 
   // Remove the header "## Kontrollfragen" or similar (inkl. Quiz für ContentStructure)
-  const cleanedText = text.replace(/^#+\s*(Kontrollfragen|Übungsfragen|Selbsttest|Quiz)[\s\S]*?\n/i, '').trim();
-  
+  const cleanedText = text
+    .replace(/^#+\s*(Kontrollfragen|Übungsfragen|Selbsttest|Quiz)[\s\S]*?\n/i, "")
+    .trim();
+
   if (!cleanedText) {
     return [];
   }
 
   const questions: SelfTestQuestion[] = [];
-  const lines = cleanedText.split('\n');
-  
+  const lines = cleanedText.split("\n");
+
   let currentQuestion: Partial<SelfTestQuestion> | null = null;
   let currentOptions: string[] = [];
   let questionNumber = 0;
@@ -39,7 +41,7 @@ export function parseKontrollfragen(text: string): SelfTestQuestion[] {
     let line = lines[i];
     const originalLine = line;
     const trimmed = line.trim();
-    
+
     // Skip empty lines
     if (!trimmed) continue;
 
@@ -52,7 +54,7 @@ export function parseKontrollfragen(text: string): SelfTestQuestion[] {
           question: currentQuestion.question.trim(),
           options: currentOptions,
           correctIndex: currentQuestion.correctIndex ?? 0,
-          explanation: currentQuestion.explanation || "Erklärung folgt"
+          explanation: currentQuestion.explanation || "Erklärung folgt",
         });
       }
 
@@ -61,7 +63,7 @@ export function parseKontrollfragen(text: string): SelfTestQuestion[] {
       currentQuestion = {
         question: questionMatch[1],
         correctIndex: 0, // Default, should be set manually or detected
-        explanation: "Erklärung folgt"
+        explanation: "Erklärung folgt",
       };
       currentOptions = [];
       continue;
@@ -81,7 +83,7 @@ export function parseKontrollfragen(text: string): SelfTestQuestion[] {
     if (currentQuestion) {
       if (currentOptions.length === 0) {
         // Continuation of question text (multi-line question)
-        currentQuestion.question = (currentQuestion.question || '') + ' ' + trimmed;
+        currentQuestion.question = (currentQuestion.question || "") + " " + trimmed;
       } else {
         // Might be continuation of last option (multi-line option)
         // Or might be a new question/option starting
@@ -96,7 +98,7 @@ export function parseKontrollfragen(text: string): SelfTestQuestion[] {
       question: currentQuestion.question.trim(),
       options: currentOptions,
       correctIndex: currentQuestion.correctIndex ?? 0,
-      explanation: currentQuestion.explanation || "Erklärung folgt"
+      explanation: currentQuestion.explanation || "Erklärung folgt",
     });
   }
 
@@ -111,8 +113,8 @@ export function extractKontrollfragen(content: string): {
   cleanedContent: string;
   questions: SelfTestQuestion[];
 } {
-  if (!content || typeof content !== 'string') {
-    return { cleanedContent: content || '', questions: [] };
+  if (!content || typeof content !== "string") {
+    return { cleanedContent: content || "", questions: [] };
   }
 
   // Find Kontrollfragen section
@@ -132,6 +134,6 @@ export function extractKontrollfragen(content: string): {
 
   return {
     cleanedContent: mainContent,
-    questions
+    questions,
   };
 }

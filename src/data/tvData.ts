@@ -82,7 +82,8 @@ Besonders problematisch sind multiresistente Erreger wie MRSA (Methicillin-resis
         id: "tv-1-s3",
         text: "Antibiotika werden in der Tierhaltung teilweise zur Wachstumsförderung eingesetzt.",
         isDerivable: true,
-        explanation: "Im zweiten Absatz wird explizit erwähnt, dass Antibiotika 'prophylaktisch zur Wachstumsförderung' eingesetzt werden.",
+        explanation:
+          "Im zweiten Absatz wird explizit erwähnt, dass Antibiotika 'prophylaktisch zur Wachstumsförderung' eingesetzt werden.",
       },
       {
         id: "tv-1-s4",
@@ -95,7 +96,8 @@ Besonders problematisch sind multiresistente Erreger wie MRSA (Methicillin-resis
         id: "tv-1-s5",
         text: "Ein Mechanismus der Antibiotikaresistenz ist das aktive Herauspumpen des Wirkstoffs aus der Bakterienzelle.",
         isDerivable: true,
-        explanation: "Im dritten Absatz werden Effluxpumpen als einer der Resistenzmechanismen genannt.",
+        explanation:
+          "Im dritten Absatz werden Effluxpumpen als einer der Resistenzmechanismen genannt.",
       },
       {
         id: "tv-1-s6",
@@ -127,7 +129,8 @@ Die empfohlene Schlafdauer für Erwachsene beträgt laut der National Sleep Foun
         id: "tv-2-s2",
         text: "Wachstumshormone werden hauptsächlich während des REM-Schlafs ausgeschüttet.",
         isDerivable: false,
-        explanation: "Der Text sagt, dass Wachstumshormone im Tiefschlaf (N3) ausgeschüttet werden, NICHT im REM-Schlaf.",
+        explanation:
+          "Der Text sagt, dass Wachstumshormone im Tiefschlaf (N3) ausgeschüttet werden, NICHT im REM-Schlaf.",
       },
       {
         id: "tv-2-s3",
@@ -281,8 +284,7 @@ Antibiotika können das Darmmikrobiom erheblich schädigen, da sie nicht nur pat
         id: "tv-5-s1",
         text: "Im Darm leben schätzungsweise 100 Billionen Bakterien aus über 1.000 Arten.",
         isDerivable: true,
-        explanation:
-          "Steht direkt im ersten Absatz des Textes.",
+        explanation: "Steht direkt im ersten Absatz des Textes.",
       },
       {
         id: "tv-5-s2",
@@ -295,8 +297,7 @@ Antibiotika können das Darmmikrobiom erheblich schädigen, da sie nicht nur pat
         id: "tv-5-s3",
         text: "Etwa 70 Prozent der Immunzellen des Körpers befinden sich im darmassoziierten lymphatischen Gewebe.",
         isDerivable: true,
-        explanation:
-          "Steht direkt im dritten Absatz.",
+        explanation: "Steht direkt im dritten Absatz.",
       },
       {
         id: "tv-5-s4",

@@ -121,7 +121,8 @@ const set6: TVTextSet = {
       questions: [
         {
           id: "tv6-2-q1",
-          question: "Was unterscheidet laut dem Text embryonale Stammzellen von adulten Stammzellen?",
+          question:
+            "Was unterscheidet laut dem Text embryonale Stammzellen von adulten Stammzellen?",
           options: [
             "Embryonale Stammzellen können sich nicht selbst erneuern, adulte Stammzellen hingegen schon.",
             "Embryonale Stammzellen sind pluripotent und können sich in nahezu jeden Zelltyp differenzieren, während adulte Stammzellen in der Regel multipotent sind.",
@@ -135,7 +136,8 @@ const set6: TVTextSet = {
         },
         {
           id: "tv6-2-q2",
-          question: "Welchen Vorteil von iPS-Zellen nennt der Text gegenüber embryonalen Stammzellen?",
+          question:
+            "Welchen Vorteil von iPS-Zellen nennt der Text gegenüber embryonalen Stammzellen?",
           options: [
             "iPS-Zellen können sich schneller teilen als embryonale Stammzellen.",
             "iPS-Zellen sind totipotent und damit leistungsfähiger als embryonale Stammzellen.",
@@ -181,7 +183,8 @@ const set6: TVTextSet = {
       questions: [
         {
           id: "tv6-3-q1",
-          question: "Was macht Prionen laut dem Text im Vergleich zu anderen Krankheitserregern einzigartig?",
+          question:
+            "Was macht Prionen laut dem Text im Vergleich zu anderen Krankheitserregern einzigartig?",
           options: [
             "Sie enthalten sowohl DNA als auch RNA in besonders stabiler Form.",
             "Sie bestehen ausschließlich aus fehlgefalteten Proteinen und enthalten kein genetisches Material.",
@@ -195,7 +198,8 @@ const set6: TVTextSet = {
         },
         {
           id: "tv6-3-q2",
-          question: "Warum wird die pathologische Form PrPSc im Text als besonders widerstandsfähig beschrieben?",
+          question:
+            "Warum wird die pathologische Form PrPSc im Text als besonders widerstandsfähig beschrieben?",
           options: [
             "Weil sie von einer Lipidmembran umhüllt ist, die chemische Einwirkungen abwehrt.",
             "Weil sie über einen erhöhten Anteil an Beta-Faltblatt-Strukturen verfügt, die sie gegen Hitze, UV-Strahlung, Desinfektionsmittel und Proteasen resistent machen.",
@@ -258,7 +262,8 @@ const set6: TVTextSet = {
         },
         {
           id: "tv6-4-q2",
-          question: "Was versteht man laut dem Text unter horizontalem Gentransfer im Kontext der Antibiotikaresistenz?",
+          question:
+            "Was versteht man laut dem Text unter horizontalem Gentransfer im Kontext der Antibiotikaresistenz?",
           options: [
             "Die Weitergabe von Resistenzgenen von Elternzellen an Tochterzellen bei der Zellteilung.",
             "Die Übertragung von Resistenzgenen zwischen verschiedenen Bakterienarten.",
@@ -307,7 +312,8 @@ const set6: TVTextSet = {
       questions: [
         {
           id: "tv6-5-q1",
-          question: "Warum war die erste erfolgreiche Nierentransplantation 1954 laut dem Text komplikationsarm?",
+          question:
+            "Warum war die erste erfolgreiche Nierentransplantation 1954 laut dem Text komplikationsarm?",
           options: [
             "Weil der Empfänger zuvor mit Ciclosporin behandelt worden war.",
             "Weil die Niere zwischen eineiigen Zwillingen übertragen wurde, die genetisch identisch waren, sodass keine Abstoßungsreaktion auftrat.",
@@ -468,7 +474,8 @@ const set7: TVTextSet = {
       questions: [
         {
           id: "tv7-2-q1",
-          question: "Warum entspricht laut dem Text eine Absenkung des pH-Werts von 8,2 auf 8,1 einer Zunahme der Wasserstoff-Ionen-Konzentration um etwa 26 Prozent?",
+          question:
+            "Warum entspricht laut dem Text eine Absenkung des pH-Werts von 8,2 auf 8,1 einer Zunahme der Wasserstoff-Ionen-Konzentration um etwa 26 Prozent?",
           options: [
             "Weil die Wassertemperatur den pH-Wert exponentiell beeinflusst.",
             "Weil Kohlensäure sich bei niedrigem pH vollständig in Ionen auflöst.",
@@ -529,7 +536,8 @@ const set7: TVTextSet = {
       questions: [
         {
           id: "tv7-3-q1",
-          question: "Wie kommt es laut dem Text nach starken Vulkanausbrüchen zu einem globalen Kühlungseffekt?",
+          question:
+            "Wie kommt es laut dem Text nach starken Vulkanausbrüchen zu einem globalen Kühlungseffekt?",
           options: [
             "Vulkanische Asche bedeckt die Erdoberfläche und reflektiert Sonnenstrahlung.",
             "Schwefeldioxid bildet in der Stratosphäre Sulfatärosole, die Sonnenstrahlung ins Weltall zurückreflektieren.",
@@ -593,7 +601,8 @@ const set7: TVTextSet = {
       questions: [
         {
           id: "tv7-4-q1",
-          question: "Warum sind die Auswirkungen genetischer Drift laut dem Text in kleinen Populationen stärker?",
+          question:
+            "Warum sind die Auswirkungen genetischer Drift laut dem Text in kleinen Populationen stärker?",
           options: [
             "Weil kleine Populationen häufiger von natürlicher Selektion betroffen sind.",
             "Weil in kleinen Populationen mehr Mutationen auftreten als in großen.",
@@ -881,7 +890,8 @@ const set8: TVTextSet = {
       questions: [
         {
           id: "tv8-3-q1",
-          question: "Welche natürliche Funktion hat das CRISPR-Cas9-System laut dem Text in Bakterien?",
+          question:
+            "Welche natürliche Funktion hat das CRISPR-Cas9-System laut dem Text in Bakterien?",
           options: [
             "Es reguliert die Zellteilung und verhindert unkontrolliertes Wachstum.",
             "Es dient als Immunsystem gegen Viren, indem es deren DNA gezielt zerschneidet.",
@@ -895,7 +905,8 @@ const set8: TVTextSet = {
         },
         {
           id: "tv8-3-q2",
-          question: "Was versteht man laut dem Text unter Keimbahnedierung und warum ist sie umstritten?",
+          question:
+            "Was versteht man laut dem Text unter Keimbahnedierung und warum ist sie umstritten?",
           options: [
             "Die Veränderung von Körperzellen, die nicht vererbt wird, aber Nebenwirkungen haben kann.",
             "Die Veränderung von Genen in Ei- oder Samenzellen, die an künftige Generationen weitergegeben würden.",
@@ -944,7 +955,8 @@ const set8: TVTextSet = {
       questions: [
         {
           id: "tv8-4-q1",
-          question: "Welche vier Grundprinzipien der biomedizinischen Ethik werden im Text genannt?",
+          question:
+            "Welche vier Grundprinzipien der biomedizinischen Ethik werden im Text genannt?",
           options: [
             "Wahrheit, Freiheit, Gleichheit und Solidarität.",
             "Autonomie, Wohltätigkeit, Nichtschaden und Gerechtigkeit.",
@@ -1020,7 +1032,8 @@ const set8: TVTextSet = {
       questions: [
         {
           id: "tv8-5-q1",
-          question: "In welcher zeitlichen Reihenfolge beschreibt der Text das Auftreten der Totenstarre?",
+          question:
+            "In welcher zeitlichen Reihenfolge beschreibt der Text das Auftreten der Totenstarre?",
           options: [
             "Sie beginnt sofort nach dem Tod und löst sich nach sechs Stunden wieder.",
             "Sie beginnt nach 24 Stunden und bleibt dauerhaft bestehen.",
@@ -1090,7 +1103,8 @@ const set9: TVTextSet = {
       questions: [
         {
           id: "tv9-1-q1",
-          question: "Ab welchem Schwellenwert versagt laut dem Text die menschliche Thermoregulation?",
+          question:
+            "Ab welchem Schwellenwert versagt laut dem Text die menschliche Thermoregulation?",
           options: [
             "Ab einer Außentemperatur von 40 Grad Celsius bei niedriger Luftfeuchtigkeit.",
             "Ab einer Feuchtkugeltemperatur von über 35 Grad Celsius.",
@@ -1152,7 +1166,8 @@ const set9: TVTextSet = {
       questions: [
         {
           id: "tv9-2-q1",
-          question: "Warum lag die höchste Sterblichkeit bei der Spanischen Grippe laut dem Text bei jungen Erwachsenen?",
+          question:
+            "Warum lag die höchste Sterblichkeit bei der Spanischen Grippe laut dem Text bei jungen Erwachsenen?",
           options: [
             "Weil junge Erwachsene aufgrund von Mangelernährung ein geschwächtes Immunsystem hatten.",
             "Weil das H1N1-Virus eine besondere Vorliebe für junge Zellen zeigte.",
@@ -1456,7 +1471,8 @@ const set10: TVTextSet = {
         },
         {
           id: "tv10-1-q2",
-          question: "Warum wurde das Sichelzellgen laut dem Text trotz seiner negativen Auswirkungen nicht eliminiert?",
+          question:
+            "Warum wurde das Sichelzellgen laut dem Text trotz seiner negativen Auswirkungen nicht eliminiert?",
           options: [
             "Weil die Mutation erst kürzlich entstanden ist und die Selektion noch nicht genug Zeit hatte.",
             "Weil in heterozygoter Form ein Schutz gegen Malaria besteht, da sich der Erreger in verformten Blutkörperchen schlechter vermehrt.",
@@ -1506,7 +1522,8 @@ const set10: TVTextSet = {
       questions: [
         {
           id: "tv10-2-q1",
-          question: "Was ist laut dem Text die größte Herausforderung beim Bioprinting komplexer Organe?",
+          question:
+            "Was ist laut dem Text die größte Herausforderung beim Bioprinting komplexer Organe?",
           options: [
             "Die Herstellung einer geeigneten Biotinte aus lebenden Zellen.",
             "Die Abstoßungsreaktion des Immunsystems gegen das gedruckte Gewebe.",
@@ -1569,7 +1586,8 @@ const set10: TVTextSet = {
       questions: [
         {
           id: "tv10-3-q1",
-          question: "Warum werden Adeno-assoziierte Viren (AAV) laut dem Text bevorzugt als Vektoren eingesetzt?",
+          question:
+            "Warum werden Adeno-assoziierte Viren (AAV) laut dem Text bevorzugt als Vektoren eingesetzt?",
           options: [
             "Weil sie sich schnell vermehren und so große Mengen des therapeutischen Gens produzieren.",
             "Weil sie als besonders sicher gelten, da sie sich nicht in das menschliche Genom integrieren und verschiedene Zelltypen infizieren können.",
@@ -1583,7 +1601,8 @@ const set10: TVTextSet = {
         },
         {
           id: "tv10-3-q2",
-          question: "Welches Problem der Gentherapie wird am Beispiel von Zolgensma im Text thematisiert?",
+          question:
+            "Welches Problem der Gentherapie wird am Beispiel von Zolgensma im Text thematisiert?",
           options: [
             "Die geringe Wirksamkeit bei Erwachsenen im Vergleich zu Kindern.",
             "Die Notwendigkeit wiederholter Behandlungen über viele Jahre hinweg.",
@@ -1646,7 +1665,8 @@ const set10: TVTextSet = {
         },
         {
           id: "tv10-4-q2",
-          question: "Warum ist die langfristige Akzeptanz der CPAP-Therapie laut dem Text begrenzt?",
+          question:
+            "Warum ist die langfristige Akzeptanz der CPAP-Therapie laut dem Text begrenzt?",
           options: [
             "Weil die Therapie nur bei leichter Schlafapnoe wirksam ist.",
             "Weil die Geräte sehr teuer sind und nicht von Krankenkassen übernommen werden.",
@@ -1660,7 +1680,8 @@ const set10: TVTextSet = {
         },
         {
           id: "tv10-4-q3",
-          question: "Welche langfristigen Gesundheitsrisiken einer unbehandelten Schlafapnoe nennt der Text?",
+          question:
+            "Welche langfristigen Gesundheitsrisiken einer unbehandelten Schlafapnoe nennt der Text?",
           options: [
             "Nierenversagen, Lebererkrankungen und chronische Schmerzen.",
             "Bluthochdruck, Herzinfarkt, Schlaganfall und Typ-2-Diabetes.",
@@ -1739,7 +1760,8 @@ const set10: TVTextSet = {
         },
         {
           id: "tv10-5-q3",
-          question: "Welche philosophische Frage wirft die Tiefe Hirnstimulation laut dem Text auf?",
+          question:
+            "Welche philosophische Frage wirft die Tiefe Hirnstimulation laut dem Text auf?",
           options: [
             "Ob Maschinen ein Bewusstsein entwickeln können, wenn sie mit dem Gehirn verbunden werden.",
             "Ob die Behandlung neurologischer Erkrankungen grundsätzlich ethisch vertretbar ist.",

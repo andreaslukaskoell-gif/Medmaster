@@ -71,7 +71,7 @@ export function listAllChapters(): {
       title: chapter.title,
       subject: chapter.subject,
       subchapterCount,
-      subchapterTitles: chapter.unterkapitel?.map(uk => uk.title) || [],
+      subchapterTitles: chapter.unterkapitel?.map((uk) => uk.title) || [],
       hasContent,
       contentLength: totalContentLength,
     });
@@ -94,31 +94,35 @@ export function listAllChapters(): {
 export function printChapterOverview(): void {
   const { summary, chapters } = listAllChapters();
 
-  console.log('\n📚 === KAPITEL-ÜBERSICHT ===\n');
-  console.log(`Gesamt: ${summary.totalChapters} Kapitel mit ${summary.totalSubchapters} Unterkapiteln\n`);
+  console.log("\n📚 === KAPITEL-ÜBERSICHT ===\n");
+  console.log(
+    `Gesamt: ${summary.totalChapters} Kapitel mit ${summary.totalSubchapters} Unterkapiteln\n`
+  );
 
   // Nach Fächern gruppiert
-  console.log('📖 Nach Fächern:');
+  console.log("📖 Nach Fächern:");
   for (const [subject, data] of Object.entries(summary.bySubject)) {
     console.log(`  ${subject}: ${data.count} Kapitel, ${data.subchapters} Unterkapitel`);
   }
 
-  console.log('\n📋 Details:\n');
+  console.log("\n📋 Details:\n");
   for (const detail of summary.details) {
     console.log(`  ${detail.subject.toUpperCase()}: ${detail.title}`);
     console.log(`    ID: ${detail.id}`);
     console.log(`    Unterkapitel: ${detail.subchapterCount}`);
-    console.log(`    Content: ${detail.hasContent ? '✅' : '❌'} (${detail.contentLength} Zeichen)`);
+    console.log(
+      `    Content: ${detail.hasContent ? "✅" : "❌"} (${detail.contentLength} Zeichen)`
+    );
     if (detail.subchapterTitles.length > 0) {
       console.log(`    Liste:`);
       detail.subchapterTitles.forEach((title, idx) => {
         console.log(`      ${idx + 1}. ${title}`);
       });
     }
-    console.log('');
+    console.log("");
   }
 
-  console.log('=== ENDE ÜBERSICHT ===\n');
+  console.log("=== ENDE ÜBERSICHT ===\n");
 
   return;
 }
@@ -127,7 +131,7 @@ export function printChapterOverview(): void {
  * Macht die Funktionen global verfügbar für Browser-Konsole
  * Nutzung: window.showChapters() oder window.listChapters()
  */
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   (window as any).showChapters = printChapterOverview;
   (window as any).listChapters = listAllChapters;
 }

@@ -18,7 +18,7 @@ export interface BadgeDefinition {
 
 export const BADGE_DEFINITIONS: BadgeDefinition[] = [
   {
-    id: "fruehaufsteher",
+    id: "frühaufsteher",
     name: "Der Frühaufsteher",
     tier: "bronze",
     description: "Lerne 3 Tage in Folge vor 8 Uhr morgens.",
@@ -30,7 +30,7 @@ export const BADGE_DEFINITIONS: BadgeDefinition[] = [
     description: "Schließe alle Biologie-Module ab.",
   },
   {
-    id: "praezisions-koenig",
+    id: "präzisions-könig",
     name: "Präzisions-König",
     tier: "gold",
     description: "20 Quizfragen in Folge richtig (ohne Fehler).",
@@ -114,7 +114,7 @@ export function getBadgeProgress(
   kapitel: Kapitel[] = []
 ): { earned: boolean; progress?: string } {
   switch (badgeId) {
-    case "fruehaufsteher":
+    case "frühaufsteher":
       return { earned: checkEarlyBird(state.firstActivityTimeByDay) };
     case "bms-gigant": {
       const bioIds = getAllBiologyUnterkapitelIds(kapitel);
@@ -124,7 +124,7 @@ export function getBadgeProgress(
         progress: `${completed}/${bioIds.length} Biologie-Module`,
       };
     }
-    case "praezisions-koenig":
+    case "präzisions-könig":
       return {
         earned: state.maxConsecutiveCorrectEver >= PRECISION_TARGET,
         progress: `Beste Serie: ${state.maxConsecutiveCorrectEver}/${PRECISION_TARGET}`,

@@ -1,19 +1,19 @@
 /**
  * Hook to fetch BMS questions from Supabase (bms_subchapters.questions JSONB)
  */
-import { useState, useEffect } from 'react';
-import { supabase } from '@/lib/supabase';
+import { useState, useEffect } from "react";
+import { supabase } from "@/lib/supabase";
 
 export interface BMSQuestion {
   id: string;
   question: string;
   options: { id: string; text: string }[];
-  correct: string;        // "A" | "B" | "C" | "D" | "E"
+  correct: string; // "A" | "B" | "C" | "D" | "E"
   explanation: string;
-  difficulty: 'easy' | 'medium' | 'hard';
+  difficulty: "easy" | "medium" | "hard";
   tags: string[];
-  ukId: string;           // parent subchapter id
-  ukTitle: string;        // parent subchapter title
+  ukId: string; // parent subchapter id
+  ukTitle: string; // parent subchapter title
 }
 
 export interface BMSSubchapterMeta {
@@ -32,12 +32,16 @@ export function useBMSSubchapterList(chapterId: string | null) {
     if (!chapterId || !supabase) return;
     setLoading(true);
     supabase
-      .from('bms_subchapters')
-      .select('id, title, chapter_id, questions')
-      .eq('chapter_id', chapterId)
-      .order('order_index', { ascending: true })
+      .from("bms_subchapters")
+      .select("id, title, chapter_id, questions")
+      .eq("chapter_id", chapterId)
+      .order("order_index", { ascending: true })
       .then(({ data, error }) => {
-        if (error) { console.error(error); setLoading(false); return; }
+        if (error) {
+          console.error(error);
+          setLoading(false);
+          return;
+        }
         setSubchapters(
           (data || []).map((row) => ({
             id: row.id,
@@ -65,11 +69,15 @@ export function useBMSQuestions(subchapterIds: string[]) {
     setError(null);
 
     supabase
-      .from('bms_subchapters')
-      .select('id, title, questions')
-      .in('id', subchapterIds)
+      .from("bms_subchapters")
+      .select("id, title, questions")
+      .in("id", subchapterIds)
       .then(({ data, error: err }) => {
-        if (err) { setError(err.message); setLoading(false); return; }
+        if (err) {
+          setError(err.message);
+          setLoading(false);
+          return;
+        }
         const allQ: BMSQuestion[] = [];
         (data || []).forEach((row) => {
           if (!Array.isArray(row.questions)) return;
@@ -79,8 +87,8 @@ export function useBMSQuestions(subchapterIds: string[]) {
               question: q.question,
               options: q.options,
               correct: q.correct,
-              explanation: q.explanation || '',
-              difficulty: q.difficulty || 'medium',
+              explanation: q.explanation || "",
+              difficulty: q.difficulty || "medium",
               tags: q.tags || [],
               ukId: row.id,
               ukTitle: row.title,
@@ -90,7 +98,7 @@ export function useBMSQuestions(subchapterIds: string[]) {
         setQuestions(allQ);
         setLoading(false);
       });
-  }, [subchapterIds.join(',')]);
+  }, [subchapterIds.join(",")]);
 
   return { questions, loading, error };
 }

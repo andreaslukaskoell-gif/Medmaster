@@ -47,12 +47,15 @@ export function useDueReview(): {
           return;
         }
         const rows = Array.isArray(data) ? data : [];
-        const withNames: DueTopic[] = rows.slice(0, 3).map((row: { stichwort_id: string; next_review_at: string | null }) => {
-          const stichwortId = row.stichwort_id;
-          const sw = getStichwortById(stichwortId);
-          const name = sw?.thema ?? (stichwortId.includes("-kontroll-") ? "Kontrollfragen" : stichwortId);
-          return { stichwortId, name, nextReviewAt: row.next_review_at ?? null };
-        });
+        const withNames: DueTopic[] = rows
+          .slice(0, 3)
+          .map((row: { stichwort_id: string; next_review_at: string | null }) => {
+            const stichwortId = row.stichwort_id;
+            const sw = getStichwortById(stichwortId);
+            const name =
+              sw?.thema ?? (stichwortId.includes("-kontroll-") ? "Kontrollfragen" : stichwortId);
+            return { stichwortId, name, nextReviewAt: row.next_review_at ?? null };
+          });
         setDueTopics(withNames);
       } catch (err) {
         console.warn("[useDueReview]", err);

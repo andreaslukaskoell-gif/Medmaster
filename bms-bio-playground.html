@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedMaster BMS Biologie — Content Review Playground</title>
+<style>
+  :root {
+    --bg: #0f1117; --surface: #1a1d27; --surface2: #22263a; --border: #2d3148;
+    --text: #e4e6f0; --text-muted: #8b8fa5; --accent: #6c7cff; --accent2: #a78bfa;
+    --green: #34d399; --yellow: #fbbf24; --red: #f87171; --orange: #fb923c;
+    --blue: #60a5fa;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+  .layout { display: grid; grid-template-columns: 280px 1fr; grid-template-rows: auto 1fr auto; height: 100vh; }
+  header { grid-column: 1 / -1; padding: 16px 24px; background: var(--surface); border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 16px; }
+  header h1 { font-size: 18px; font-weight: 600; }
+  .stats { display: flex; gap: 16px; margin-left: auto; font-size: 13px; color: var(--text-muted); }
+  .stats span { display: flex; align-items: center; gap: 4px; }
+  .num { color: var(--accent); font-weight: 600; font-family: 'SF Mono', 'Fira Code', monospace; }
+  .sidebar { background: var(--surface); border-right: 1px solid var(--border); overflow-y: auto; padding: 12px; }
+  .sidebar h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin: 12px 0 8px 8px; }
+  .kap-header { display: flex; align-items: center; gap: 8px; padding: 8px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 600; transition: background .15s; }
+  .kap-header:hover { background: var(--surface2); }
+  .kap-header.active { background: var(--surface2); color: var(--accent); }
+  .badge { font-size: 10px; background: var(--surface2); padding: 2px 6px; border-radius: 10px; color: var(--text-muted); margin-left: auto; }
+  .uk-list { padding-left: 12px; display: none; }
+  .uk-list.open { display: block; }
+  .uk-item { display: flex; align-items: center; gap: 6px; padding: 5px 8px; border-radius: 4px; cursor: pointer; font-size: 12px; color: var(--text-muted); transition: all .15s; }
+  .uk-item:hover { background: var(--surface2); color: var(--text); }
+  .uk-item.active { background: rgba(108,124,255,0.15); color: var(--accent); }
+  .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .uk-id { font-family: monospace; font-size: 10px; opacity: 0.6; }
+  .main { overflow-y: auto; padding: 24px; }
+  .overview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-bottom: 24px; }
+  .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+  .stat-card .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 4px; }
+  .quality-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .quality-table th { text-align: left; padding: 8px 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); border-bottom: 2px solid var(--border); position: sticky; top: 0; background: var(--bg); }
+  .quality-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  .quality-table tr:hover { background: var(--surface); }
+  .quality-table tr.chapter-row { background: var(--surface2); font-weight: 600; }
+  .pill { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 500; }
+  .pill-green { background: rgba(52,211,153,0.15); color: var(--green); }
+  .pill-yellow { background: rgba(251,191,36,0.15); color: var(--yellow); }
+  .pill-red { background: rgba(248,113,113,0.15); color: var(--red); }
+  .check { color: var(--green); }
+  .cross { color: var(--red); }
+  .heatmap { display: grid; grid-template-columns: repeat(auto-fill, minmax(32px, 1fr)); gap: 3px; margin: 8px 0; }
+  .heatmap-cell { width: 100%; aspect-ratio: 1; border-radius: 4px; cursor: pointer; position: relative; }
+  .heatmap-cell:hover::after { content: attr(data-tip); position: absolute; bottom: 110%; left: 50%; transform: translateX(-50%); background: var(--surface2); border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px; font-size: 10px; white-space: nowrap; z-index: 10; }
+  .issues-list { list-style: none; }
+  .issues-list li { padding: 8px 12px; border-left: 3px solid; margin-bottom: 6px; border-radius: 0 4px 4px 0; background: var(--surface2); font-size: 12px; }
+  .issues-list li.critical { border-color: var(--red); }
+  .issues-list li.warning { border-color: var(--yellow); }
+  .issues-list li.info { border-color: var(--blue); }
+  .prompt-bar { grid-column: 1 / -1; background: var(--surface); border-top: 1px solid var(--border); padding: 12px 24px; display: flex; align-items: center; gap: 12px; }
+  .prompt-text { flex: 1; font-family: 'SF Mono', monospace; font-size: 12px; color: var(--text-muted); padding: 8px 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; max-height: 80px; overflow-y: auto; white-space: pre-wrap; }
+  .copy-btn { padding: 8px 16px; background: var(--accent); color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600; flex-shrink: 0; }
+  .copy-btn:hover { opacity: 0.9; }
+  .copy-btn.copied { background: var(--green); }
+  .filter-bar { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .filter-btn { padding: 5px 12px; border-radius: 14px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); font-size: 12px; cursor: pointer; transition: all .15s; }
+  .filter-btn:hover { border-color: var(--accent); color: var(--text); }
+  .filter-btn.active { background: rgba(108,124,255,0.15); border-color: var(--accent); color: var(--accent); }
+  .detail-panel { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+  .detail-section { margin-top: 16px; }
+  .detail-section h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 8px; }
+  .back-btn { background: var(--surface2); border: 1px solid var(--border); color: var(--text-muted); padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="layout">
+  <header>
+    <h1>BMS Biologie Content Review</h1>
+    <div class="stats" id="headerStats"></div>
+  </header>
+  <div class="sidebar" id="sidebar"></div>
+  <div class="main" id="main"></div>
+  <div class="prompt-bar">
+    <div class="prompt-text" id="promptOutput">Waehle ein Kapitel oder Unterkapitel aus...</div>
+    <button class="copy-btn" id="copyBtn" onclick="copyPrompt()">Kopieren</button>
+  </div>
+</div>
+<script>
+// Note: This is a local-only developer tool, not user-facing. All data is static/trusted.
+const DATA = [
+  {name:"Kap 1: Zellbiologie",file:"kap1-die-zelle",icon:"\u{1F52C}",uks:[
+    {id:"bio-1-01",title:"Kennzeichen des Lebens und Systembiologie",stichworte:11,contentWords:914,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:6},
+    {id:"bio-1-02",title:"Prokaryoten vs. Eukaryoten",stichworte:11,contentWords:1001,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:6},
+    {id:"bio-1-03",title:"Zellmembran und Zytoplasma",stichworte:12,contentWords:895,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:7},
+    {id:"bio-1-04",title:"Zellorganellen",stichworte:12,contentWords:1347,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:7},
+    {id:"bio-1-05",title:"Der Zellkern",stichworte:11,contentWords:945,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:7},
+    {id:"bio-1-06",title:"Zellteilung \u2014 Mitose und Meiose",stichworte:10,contentWords:1154,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:7},
+    {id:"bio-1-07",title:"Energiestoffwechsel",stichworte:10,contentWords:1442,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:7}
+  ]},
+  {name:"Kap 2: Humanbiologie",file:"kap2-anatomie-gewebe-physiologie",icon:"\u{1FAC0}",uks:[
+    {id:"bio-2-01",title:"Epithelgewebe",stichworte:8,contentWords:620,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:3},
+    {id:"bio-2-02",title:"Binde- und St\u00FCtzgewebe",stichworte:8,contentWords:692,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:3},
+    {id:"bio-2-03",title:"Muskelgewebe",stichworte:8,contentWords:812,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:3},
+    {id:"bio-2-04",title:"Nervengewebe",stichworte:8,contentWords:665,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:3},
+    {id:"bio-3-01",title:"Nervensystem",stichworte:8,contentWords:892,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:0},
+    {id:"bio-3-02",title:"Sinnesorgane Haut",stichworte:8,contentWords:831,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:0},
+    {id:"bio-3-03",title:"Hormonsystem",stichworte:8,contentWords:913,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:10},
+    {id:"bio-3-04",title:"Herz Kreislauf",stichworte:8,contentWords:869,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:10},
+    {id:"bio-3-05",title:"Blut",stichworte:8,contentWords:791,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:10},
+    {id:"bio-3-06",title:"Immunsystem",stichworte:8,contentWords:835,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:9},
+    {id:"bio-3-07",title:"Lymphsystem",stichworte:6,contentWords:603,selfTestQ:4,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:2},
+    {id:"bio-3-08",title:"Atmungssystem",stichworte:7,contentWords:728,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:0},
+    {id:"bio-3-09",title:"Verdauungssystem",stichworte:8,contentWords:753,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:2},
+    {id:"bio-3-10",title:"Harnsystem",stichworte:8,contentWords:737,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:9},
+    {id:"bio-3-11",title:"Skelettsystem",stichworte:7,contentWords:764,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:0},
+    {id:"bio-3-12",title:"Fortpflanzungssystem",stichworte:8,contentWords:911,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:7}
+  ]},
+  {name:"Kap 3: Entwicklung & Evolution",file:"kap3-entwicklung-evolution",icon:"\u{1F9EC}",uks:[
+    {id:"bio-4-01",title:"Befruchtung, Furchung und Implantation",stichworte:9,contentWords:983,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:0},
+    {id:"bio-4-02",title:"Gastrulation und Neurulation",stichworte:8,contentWords:1083,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:0},
+    {id:"bio-4-03",title:"Embryonal- und Fetalentwicklung",stichworte:6,contentWords:920,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:0},
+    {id:"bio-4-04",title:"Plazenta und Plazentaschranke",stichworte:7,contentWords:925,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:0},
+    {id:"bio-9-01",title:"Entstehung des Lebens",stichworte:9,contentWords:703,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:3},
+    {id:"bio-9-03",title:"Phylogenetik",stichworte:7,contentWords:770,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:3},
+    {id:"bio-9-04",title:"Evolutionstheorie",stichworte:7,contentWords:771,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:3},
+    {id:"bio-9-05",title:"Artbegriff und Artbildung",stichworte:6,contentWords:793,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:3},
+    {id:"bio-9-06",title:"Evolutionsfaktoren & Hardy-Weinberg",stichworte:7,contentWords:778,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:3},
+    {id:"bio-9-07",title:"Entwicklung des Menschen",stichworte:7,contentWords:758,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:3}
+  ]},
+  {name:"Kap 4: Genetik",file:"kap4-genetik",icon:"\u{1F9EA}",uks:[
+    {id:"bio-5-01",title:"Klassische Genetik",stichworte:9,contentWords:576,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:3},
+    {id:"bio-5-02",title:"Chromosomen",stichworte:8,contentWords:531,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:3},
+    {id:"bio-5-03",title:"Geninteraktion",stichworte:5,contentWords:528,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:4},
+    {id:"bio-5-04",title:"Geschlechtsgebundene Vererbung",stichworte:6,contentWords:631,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:4},
+    {id:"bio-5-05",title:"Stammbaumanalyse",stichworte:6,contentWords:555,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:4},
+    {id:"bio-5-06",title:"Populationsgenetik",stichworte:5,contentWords:574,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:4},
+    {id:"bio-5-07",title:"Mutationen",stichworte:9,contentWords:525,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:3},
+    {id:"bio-6-01",title:"DNA Struktur",stichworte:9,contentWords:709,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:0},
+    {id:"bio-6-02",title:"Transkription",stichworte:8,contentWords:657,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:0},
+    {id:"bio-6-03",title:"Translation",stichworte:8,contentWords:701,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:0},
+    {id:"bio-6-04",title:"Genregulation",stichworte:8,contentWords:678,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:0},
+    {id:"bio-7-01",title:"PCR",stichworte:7,contentWords:754,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:10},
+    {id:"bio-7-02",title:"DNA-Sequenzierung",stichworte:5,contentWords:700,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:10},
+    {id:"bio-7-03",title:"Gel-Elektrophorese & Blot",stichworte:6,contentWords:772,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:10},
+    {id:"bio-7-04",title:"Genetischer Fingerabdruck",stichworte:6,contentWords:715,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:10},
+    {id:"bio-7-05",title:"Gentechnik & Klonierung",stichworte:6,contentWords:870,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:10},
+    {id:"bio-7-06",title:"CRISPR-Cas9 & Gentherapie",stichworte:6,contentWords:739,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:10},
+    {id:"bio-8-01",title:"Stammbaumanalyse \u2014 4 Erbg\u00E4nge",stichworte:6,contentWords:600,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:3},
+    {id:"bio-8-03",title:"Erbg\u00E4nge vertieft",stichworte:5,contentWords:671,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:3},
+    {id:"bio-8-02",title:"Genetische Beratung",stichworte:4,contentWords:621,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:3},
+    {id:"bio-8-04",title:"PID, PND und Pr\u00E4nataldiagnostik",stichworte:7,contentWords:654,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:3}
+  ]},
+  {name:"Kap 5: \u00D6kologie & Immunologie",file:"kap5-oekologie-immunologie",icon:"\u{1F33F}",uks:[
+    {id:"bio-10-01",title:"Abiotische Faktoren",stichworte:7,contentWords:924,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:8},
+    {id:"bio-10-02",title:"Biotische Faktoren",stichworte:6,contentWords:874,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:9},
+    {id:"bio-10-03",title:"Populationsbiologie",stichworte:7,contentWords:1404,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:5},
+    {id:"bio-10-04",title:"\u00D6kologische Nische",stichworte:8,contentWords:1112,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:6},
+    {id:"bio-10-05",title:"\u00D6kosysteme & Stoffkreisl\u00E4ufe",stichworte:9,contentWords:1301,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:6},
+    {id:"bio-10-06",title:"Biodiversit\u00E4t",stichworte:8,contentWords:1434,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:7},
+    {id:"bio-11-01",title:"Antik\u00F6rper",stichworte:9,contentWords:813,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:2},
+    {id:"bio-11-02",title:"V(D)J-Rekombination",stichworte:4,contentWords:680,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:false,merksaetze:3},
+    {id:"bio-11-03",title:"Blutgruppen AB0",stichworte:5,contentWords:1025,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:2},
+    {id:"bio-11-04",title:"Rhesusfaktor",stichworte:5,contentWords:927,selfTestQ:5,hasAltfrage:true,hasKlinBezug:true,hasDiagram:true,merksaetze:3}
+  ]}
+];
+
+const TARGETS = {contentWords:{min:800,good:1000},stichworte:{min:6,good:8},selfTestQ:{min:5,good:5},merksaetze:{min:3,good:5}};
+const state = {selectedKap:null,selectedUk:null,filter:'all'};
+
+function allUks(){return DATA.flatMap(k=>k.uks)}
+function getScore(uk){
+  let s=0,max=7;
+  if(uk.contentWords>=TARGETS.contentWords.min)s++;
+  if(uk.contentWords>=TARGETS.contentWords.good)s++;
+  if(uk.stichworte>=TARGETS.stichworte.good)s++;
+  if(uk.selfTestQ>=TARGETS.selfTestQ.min)s++;
+  if(uk.merksaetze>=TARGETS.merksaetze.min)s++;
+  if(uk.hasAltfrage)s++;
+  if(uk.hasKlinBezug)s++;
+  return Math.round((s/max)*100);
+}
+function getIssues(uk){
+  const issues=[];
+  if(uk.merksaetze===0)issues.push({level:'critical',text:'Keine Merks\u00E4tze vorhanden'});
+  if(uk.contentWords<TARGETS.contentWords.min)issues.push({level:'critical',text:'Content zu kurz ('+uk.contentWords+' W\u00F6rter, Ziel: '+TARGETS.contentWords.min+'+)'});
+  if(!uk.hasDiagram)issues.push({level:'warning',text:'Kein Diagramm zugeordnet'});
+  if(uk.stichworte<TARGETS.stichworte.min)issues.push({level:'warning',text:'Wenig Stichworte ('+uk.stichworte+', Ziel: '+TARGETS.stichworte.min+'+)'});
+  if(uk.merksaetze>0&&uk.merksaetze<TARGETS.merksaetze.min)issues.push({level:'info',text:'Wenig Merks\u00E4tze ('+uk.merksaetze+', Ziel: '+TARGETS.merksaetze.min+'+)'});
+  return issues;
+}
+function scoreColor(s){return s>=85?'var(--green)':s>=70?'var(--yellow)':'var(--red)'}
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
+
+function render(){
+  renderHeader();renderSidebar();renderMain();updatePrompt();
+}
+
+function renderHeader(){
+  const all=allUks(),tw=all.reduce((s,u)=>s+u.contentWords,0),tq=all.reduce((s,u)=>s+u.selfTestQ,0);
+  const noMs=all.filter(u=>u.merksaetze===0).length,noDiag=all.filter(u=>!u.hasDiagram).length;
+  const avg=Math.round(all.reduce((s,u)=>s+getScore(u),0)/all.length);
+  const el=document.getElementById('headerStats');
+  el.textContent='';
+  [[all.length+' UKs'],[tw.toLocaleString()+' W\u00F6rter'],[tq+' selfTest-Fragen'],[noMs+' ohne Merks\u00E4tze',noMs>0?'var(--red)':'var(--green)'],[noDiag+' ohne Diagramm',noDiag>0?'var(--yellow)':'var(--green)'],['Score: '+avg+'%',scoreColor(avg)]].forEach(([t,c])=>{
+    const s=document.createElement('span');s.textContent=t;if(c)s.style.color=c;el.appendChild(s);
+  });
+}
+
+function renderSidebar(){
+  const sb=document.getElementById('sidebar');sb.textContent='';
+  const h3=document.createElement('h3');h3.textContent='Kapitel';sb.appendChild(h3);
+  DATA.forEach((kap,ki)=>{
+    const avg=Math.round(kap.uks.reduce((s,u)=>s+getScore(u),0)/kap.uks.length);
+    const isOpen=state.selectedKap===ki;
+    const grp=document.createElement('div');
+    const hdr=document.createElement('div');hdr.className='kap-header'+(isOpen?' active':'');
+    hdr.textContent=kap.icon+' '+kap.name;
+    const bdg=document.createElement('span');bdg.className='badge';bdg.style.color=scoreColor(avg);bdg.textContent=avg+'%';
+    hdr.appendChild(bdg);hdr.onclick=()=>selectKap(ki);grp.appendChild(hdr);
+
+    const list=document.createElement('div');list.className='uk-list'+(isOpen?' open':'');
+    kap.uks.forEach((uk,ui)=>{
+      const score=getScore(uk),isAct=state.selectedKap===ki&&state.selectedUk===ui;
+      const item=document.createElement('div');item.className='uk-item'+(isAct?' active':'');
+      const dot=document.createElement('span');dot.className='dot';dot.style.background=scoreColor(score);
+      const idSpan=document.createElement('span');idSpan.className='uk-id';idSpan.textContent=uk.id;
+      const titleSpan=document.createElement('span');titleSpan.style.cssText='flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap';titleSpan.textContent=uk.title;
+      item.appendChild(dot);item.appendChild(idSpan);item.appendChild(titleSpan);
+      item.onclick=()=>selectUk(ki,ui);list.appendChild(item);
+    });
+    grp.appendChild(list);sb.appendChild(grp);
+  });
+}
+
+function renderMain(){
+  const main=document.getElementById('main');main.textContent='';
+  if(state.selectedUk!==null)renderUkDetail(main);
+  else if(state.selectedKap!==null)renderKapOverview(main);
+  else renderGlobalOverview(main);
+}
+
+function makeEl(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text)e.textContent=text;return e}
+
+function renderGlobalOverview(main){
+  const all=allUks(),tw=all.reduce((s,u)=>s+u.contentWords,0);
+  const noMs=all.filter(u=>u.merksaetze===0),shortC=all.filter(u=>u.contentWords<TARGETS.contentWords.min),noDiag=all.filter(u=>!u.hasDiagram);
+
+  // Filter bar
+  const fb=makeEl('div','filter-bar');
+  [['all','Alle'],['issues','Nur Probleme'],['noMs','Ohne Merks\u00E4tze ('+noMs.length+')'],['short','Kurzer Content ('+shortC.length+')'],['noDiag','Ohne Diagramm ('+noDiag.length+')']].forEach(([f,l])=>{
+    const b=makeEl('button','filter-btn'+(state.filter===f?' active':''),l);b.onclick=()=>{state.filter=f;render()};fb.appendChild(b);
+  });
+  main.appendChild(fb);
+
+  // Stats grid
+  const grid=makeEl('div','overview-grid');
+  [[tw.toLocaleString(),'Gesamt W\u00F6rter','\u00D8 '+Math.round(tw/all.length)+' pro UK'],
+   [all.length,'Unterkapitel','5 Kapitel'],
+   [noMs.length+shortC.length,'Kritische Issues',noMs.length+' ohne Merks\u00E4tze, '+shortC.length+' zu kurz','var(--red)'],
+   [noDiag.length,'Diagramme fehlen','von '+all.length+' UKs','var(--yellow)']
+  ].forEach(([v,l,sub,col])=>{
+    const c=makeEl('div','stat-card');
+    c.appendChild(makeEl('div','label',l));
+    const val=makeEl('div','',v);val.style.cssText='font-size:28px;font-weight:700;font-family:monospace';if(col)val.style.color=col;
+    c.appendChild(val);c.appendChild(makeEl('div','',sub));c.lastChild.style.cssText='font-size:12px;color:var(--text-muted);margin-top:4px';
+    grid.appendChild(c);
+  });
+  main.appendChild(grid);
+
+  // Heatmap
+  main.appendChild(makeEl('h3','','Quality Heatmap'));main.lastChild.style.cssText='margin-bottom:8px;font-size:13px;color:var(--text-muted)';
+  const hm=makeEl('div','heatmap');
+  DATA.forEach(kap=>kap.uks.forEach(uk=>{
+    const score=getScore(uk),cell=makeEl('div','heatmap-cell');
+    cell.style.cssText='background:'+scoreColor(score)+';opacity:'+(0.3+score/100*0.7);
+    cell.setAttribute('data-tip',uk.id+': '+score+'%');hm.appendChild(cell);
+  }));
+  main.appendChild(hm);main.appendChild(document.createElement('br'));
+
+  // Table
+  const tbl=document.createElement('table');tbl.className='quality-table';
+  const thead=document.createElement('thead');const tr=document.createElement('tr');
+  ['ID','Unterkapitel','W\u00F6rter','Stichw.','SelfTest','Merks\u00E4tze','Altfr.','Klin.','Diag.','Score'].forEach(h=>{const th=document.createElement('th');th.textContent=h;tr.appendChild(th)});
+  thead.appendChild(tr);tbl.appendChild(thead);
+  const tbody=document.createElement('tbody');
+
+  DATA.forEach((kap,ki)=>{
+    const cr=document.createElement('tr');cr.className='chapter-row';cr.style.cursor='pointer';cr.onclick=()=>selectKap(ki);
+    const td=document.createElement('td');td.colSpan=10;td.textContent=kap.icon+' '+kap.name+' ('+kap.uks.length+' UKs)';cr.appendChild(td);tbody.appendChild(cr);
+
+    kap.uks.forEach((uk,ui)=>{
+      const issues=getIssues(uk),hasIss=issues.length>0,hasCrit=issues.some(i=>i.level==='critical');
+      if(state.filter==='issues'&&!hasIss)return;
+      if(state.filter==='noMs'&&uk.merksaetze>0)return;
+      if(state.filter==='short'&&uk.contentWords>=TARGETS.contentWords.min)return;
+      if(state.filter==='noDiag'&&uk.hasDiagram)return;
+
+      const row=document.createElement('tr');row.style.cursor='pointer';
+      if(hasCrit)row.style.background='rgba(248,113,113,0.05)';
+      row.onclick=()=>selectUk(ki,ui);
+
+      const mkPill=(v,cls)=>{const s=document.createElement('span');s.className='pill '+cls;s.textContent=v;return s};
+      const mkBool=(v)=>{const s=document.createElement('span');s.className=v?'check':'cross';s.textContent=v?'\u2713':'\u2717';return s};
+
+      const cells=[
+        ()=>{const c=document.createElement('code');c.style.fontSize='11px';c.textContent=uk.id;return c},
+        ()=>{const s=document.createElement('span');s.style.cssText='max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block';s.textContent=uk.title;return s},
+        ()=>mkPill(uk.contentWords,uk.contentWords>=TARGETS.contentWords.good?'pill-green':uk.contentWords>=TARGETS.contentWords.min?'pill-yellow':'pill-red'),
+        ()=>mkPill(uk.stichworte,uk.stichworte>=TARGETS.stichworte.good?'pill-green':'pill-yellow'),
+        ()=>mkPill(uk.selfTestQ,uk.selfTestQ>=5?'pill-green':'pill-red'),
+        ()=>mkPill(uk.merksaetze,uk.merksaetze>=TARGETS.merksaetze.good?'pill-green':uk.merksaetze>=TARGETS.merksaetze.min?'pill-yellow':uk.merksaetze===0?'pill-red':'pill-yellow'),
+        ()=>mkBool(uk.hasAltfrage),()=>mkBool(uk.hasKlinBezug),()=>mkBool(uk.hasDiagram),
+        ()=>{const s=document.createElement('span');s.style.cssText='color:'+scoreColor(getScore(uk))+';font-weight:600;font-family:monospace';s.textContent=getScore(uk)+'%';return s}
+      ];
+      cells.forEach(fn=>{const td=document.createElement('td');td.appendChild(fn());row.appendChild(td)});
+      tbody.appendChild(row);
+    });
+  });
+  tbl.appendChild(tbody);main.appendChild(tbl);
+}
+
+function renderKapOverview(main){
+  const kap=DATA[state.selectedKap],avg=Math.round(kap.uks.reduce((s,u)=>s+getScore(u),0)/kap.uks.length);
+  const tw=kap.uks.reduce((s,u)=>s+u.contentWords,0);
+  const allIssues=kap.uks.flatMap((uk,i)=>getIssues(uk).map(iss=>({...iss,uk,idx:i})));
+
+  const hdr=makeEl('div','');hdr.style.cssText='display:flex;align-items:center;gap:16px;margin-bottom:20px';
+  const icon=makeEl('span','',kap.icon);icon.style.fontSize='32px';hdr.appendChild(icon);
+  const info=makeEl('div','');
+  info.appendChild(makeEl('h2','',kap.name));info.lastChild.style.fontSize='20px';
+  const sub=makeEl('div','',kap.uks.length+' UKs \u2022 '+tw.toLocaleString()+' W\u00F6rter \u2022 Score: '+avg+'%');
+  sub.style.cssText='font-size:13px;color:var(--text-muted)';info.appendChild(sub);hdr.appendChild(info);
+  const back=makeEl('button','back-btn','\u2190 Zur\u00FCck');back.style.marginLeft='auto';back.onclick=()=>{state.selectedKap=null;state.selectedUk=null;render()};
+  hdr.appendChild(back);main.appendChild(hdr);
+
+  if(allIssues.length>0){
+    const sec=makeEl('div','');sec.style.marginBottom='20px';
+    sec.appendChild(makeEl('h4','','Issues ('+allIssues.length+')'));sec.lastChild.style.cssText='font-size:12px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px';
+    const ul=makeEl('ul','issues-list');
+    allIssues.forEach(iss=>{
+      const li=makeEl('li',iss.level,iss.uk.id+' '+iss.uk.title+': '+iss.text);
+      li.style.cursor='pointer';li.onclick=()=>selectUk(state.selectedKap,iss.idx);ul.appendChild(li);
+    });
+    sec.appendChild(ul);main.appendChild(sec);
+  }
+
+  // Bar chart
+  main.appendChild(makeEl('h4','','Wortanzahl pro Unterkapitel'));main.lastChild.style.cssText='font-size:12px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px';
+  const maxW=Math.max(...kap.uks.map(u=>u.contentWords));
+  kap.uks.forEach((uk,i)=>{
+    const pct=(uk.contentWords/maxW)*100;
+    const color=uk.contentWords>=TARGETS.contentWords.good?'var(--green)':uk.contentWords>=TARGETS.contentWords.min?'var(--yellow)':'var(--red)';
+    const row=makeEl('div','');row.style.cssText='display:flex;align-items:center;gap:8px;margin-bottom:4px;padding:4px 0;cursor:pointer';
+    row.onclick=()=>selectUk(state.selectedKap,i);
+    const idEl=makeEl('code','',uk.id);idEl.style.cssText='font-size:10px;width:70px;color:var(--text-muted)';
+    const barOuter=makeEl('div','');barOuter.style.cssText='flex:1;height:18px;background:var(--surface2);border-radius:3px;overflow:hidden';
+    const barInner=makeEl('div','');barInner.style.cssText='height:100%;width:'+pct+'%;background:'+color+';border-radius:3px';
+    barOuter.appendChild(barInner);
+    const num=makeEl('span','',String(uk.contentWords));num.style.cssText='font-size:11px;font-family:monospace;width:50px;text-align:right;color:'+color;
+    row.appendChild(idEl);row.appendChild(barOuter);row.appendChild(num);main.appendChild(row);
+  });
+}
+
+function renderUkDetail(main){
+  const kap=DATA[state.selectedKap],uk=kap.uks[state.selectedUk],score=getScore(uk),issues=getIssues(uk);
+
+  const nav=makeEl('div','');nav.style.cssText='display:flex;gap:8px;margin-bottom:16px';
+  const backBtn=makeEl('button','back-btn','\u2190 '+kap.name);backBtn.onclick=()=>{state.selectedUk=null;render()};nav.appendChild(backBtn);
+  if(state.selectedUk>0){const p=makeEl('button','back-btn','\u2190 Vorheriges');p.onclick=()=>selectUk(state.selectedKap,state.selectedUk-1);nav.appendChild(p)}
+  if(state.selectedUk<kap.uks.length-1){const n=makeEl('button','back-btn','N\u00E4chstes \u2192');n.onclick=()=>selectUk(state.selectedKap,state.selectedUk+1);nav.appendChild(n)}
+  main.appendChild(nav);
+
+  const panel=makeEl('div','detail-panel');
+  const top=makeEl('div','');top.style.cssText='display:flex;align-items:start;gap:16px';
+  const info=makeEl('div','');info.style.flex='1';
+  info.appendChild(makeEl('h2','',uk.title));info.lastChild.style.fontSize='16px';
+  const idTag=makeEl('div','',uk.id+' \u2022 '+kap.name);idTag.style.cssText='font-family:monospace;font-size:12px;color:var(--accent);margin-bottom:12px';
+  info.appendChild(idTag);top.appendChild(info);
+
+  // Score ring (SVG)
+  const ring=makeEl('div','');ring.style.cssText='width:48px;height:48px;position:relative';
+  const ns='http://www.w3.org/2000/svg';
+  const svg=document.createElementNS(ns,'svg');svg.setAttribute('width','48');svg.setAttribute('height','48');svg.setAttribute('viewBox','0 0 48 48');svg.style.transform='rotate(-90deg)';
+  const c1=document.createElementNS(ns,'circle');['cx','cy','r'].forEach((a,i)=>c1.setAttribute(a,['24','24','20'][i]));c1.setAttribute('fill','none');c1.setAttribute('stroke','var(--surface2)');c1.setAttribute('stroke-width','4');
+  const c2=document.createElementNS(ns,'circle');['cx','cy','r'].forEach((a,i)=>c2.setAttribute(a,['24','24','20'][i]));c2.setAttribute('fill','none');c2.setAttribute('stroke',scoreColor(score));c2.setAttribute('stroke-width','4');c2.setAttribute('stroke-dasharray',score*1.256+' 999');c2.setAttribute('stroke-linecap','round');
+  svg.appendChild(c1);svg.appendChild(c2);ring.appendChild(svg);
+  const scoreText=makeEl('div','',String(score));scoreText.style.cssText='position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;font-family:monospace;color:'+scoreColor(score);
+  ring.appendChild(scoreText);top.appendChild(ring);panel.appendChild(top);
+
+  // Metric cards
+  const metrics=makeEl('div','');metrics.style.cssText='display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px';
+  [['W\u00F6rter',uk.contentWords,uk.contentWords>=TARGETS.contentWords.good?'var(--green)':uk.contentWords>=TARGETS.contentWords.min?'var(--yellow)':'var(--red)'],
+   ['Stichworte',uk.stichworte,uk.stichworte>=TARGETS.stichworte.good?'var(--green)':'var(--yellow)'],
+   ['SelfTest',uk.selfTestQ,uk.selfTestQ>=5?'var(--green)':'var(--red)'],
+   ['Merks\u00E4tze',uk.merksaetze,uk.merksaetze>=TARGETS.merksaetze.good?'var(--green)':uk.merksaetze>=TARGETS.merksaetze.min?'var(--yellow)':uk.merksaetze===0?'var(--red)':'var(--yellow)']
+  ].forEach(([l,v,c])=>{
+    const card=makeEl('div','stat-card');card.style.padding='12px';
+    card.appendChild(makeEl('div','label',l));
+    const val=makeEl('div','',String(v));val.style.cssText='font-size:20px;font-weight:700;font-family:monospace;color:'+c;card.appendChild(val);
+    metrics.appendChild(card);
+  });
+  panel.appendChild(metrics);
+
+  // Booleans
+  const bools=makeEl('div','');bools.style.cssText='display:flex;gap:16px;margin-top:12px;font-size:12px';
+  [['Altfrage',uk.hasAltfrage],['Klinischer Bezug',uk.hasKlinBezug],['Diagramm',uk.hasDiagram]].forEach(([l,v])=>{
+    const s=makeEl('span','',l+': ');
+    const icon=makeEl('span',v?'check':'cross',v?'\u2713':'\u2717');s.appendChild(icon);bools.appendChild(s);
+  });
+  panel.appendChild(bools);
+
+  // Issues
+  if(issues.length>0){
+    const sec=makeEl('div','detail-section');sec.appendChild(makeEl('h4','','Issues'));sec.lastChild.style.cssText='font-size:12px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px';
+    const ul=makeEl('ul','issues-list');
+    issues.forEach(iss=>{ul.appendChild(makeEl('li',iss.level,iss.text))});
+    sec.appendChild(ul);panel.appendChild(sec);
+  }
+
+  main.appendChild(panel);
+}
+
+function selectKap(ki){state.selectedKap=ki;state.selectedUk=null;render()}
+function selectUk(ki,ui){state.selectedKap=ki;state.selectedUk=ui;render()}
+
+function updatePrompt(){
+  const el=document.getElementById('promptOutput');
+  if(state.selectedUk!==null){
+    const kap=DATA[state.selectedKap],uk=kap.uks[state.selectedUk],issues=getIssues(uk);
+    if(issues.length===0){el.textContent=uk.id+' "'+uk.title+'" hat keine offenen Issues. Score: '+getScore(uk)+'%.';return}
+    el.textContent='Verbessere Unterkapitel '+uk.id+' "'+uk.title+'" in src/data/bmsKapitel/biologie/'+kap.file+'.ts:\n'+issues.map(i=>'- '+i.text).join('\n')+'\n\nBitte halte die AMBOSS-Struktur bei. Ziel: 800-1200 W\u00F6rter Content, 3-6 Merks\u00E4tze, 5 selfTest-Fragen mit je 5 Optionen.';
+  }else if(state.selectedKap!==null){
+    const kap=DATA[state.selectedKap],allIssues=kap.uks.flatMap(uk=>getIssues(uk).map(i=>({...i,ukId:uk.id})));
+    const critical=allIssues.filter(i=>i.level==='critical');
+    if(critical.length===0){el.textContent=kap.name+': Keine kritischen Issues. '+allIssues.length+' kleinere Verbesserungen m\u00F6glich.';return}
+    el.textContent='Verbessere '+kap.name+' ('+kap.file+'.ts). Kritische Issues:\n'+critical.map(i=>'- '+i.ukId+': '+i.text).join('\n')+'\n\nAMBOSS-Struktur beibehalten. Ziel pro UK: 800-1200 W\u00F6rter, 3-6 Merks\u00E4tze, 5 selfTest-Fragen.';
+  }else{
+    const all=allUks(),noMs=all.filter(u=>u.merksaetze===0),short=all.filter(u=>u.contentWords<TARGETS.contentWords.min);
+    const parts=[];
+    if(noMs.length>0)parts.push(noMs.length+' UKs ohne Merks\u00E4tze ('+noMs.map(u=>u.id).join(', ')+')');
+    if(short.length>0)parts.push(short.length+' UKs mit zu kurzem Content ('+short.map(u=>u.id).join(', ')+')');
+    el.textContent=parts.length===0?'Alle Biologie-UKs erf\u00FCllen die Mindestanforderungen.':'BMS Biologie: '+parts.join('; ')+'.\n\nPriorisiere fehlende Merks\u00E4tze, dann Content-Erweiterung.';
+  }
+}
+
+function copyPrompt(){
+  navigator.clipboard.writeText(document.getElementById('promptOutput').textContent).then(()=>{
+    const btn=document.getElementById('copyBtn');btn.textContent='Kopiert!';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='Kopieren';btn.classList.remove('copied')},1500);
+  });
+}
+
+render();
+</script>
+</body>
+</html>

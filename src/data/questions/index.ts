@@ -50,21 +50,27 @@ export interface StichwortFrage {
 // ============================================================
 
 export const fragenBiologie: StichwortFrage[] = [
-  ...bioPart1, ...bioPart2, ...bioPart3, ...bioPart4,
-  ...bioPart5, ...bioPart6, ...bioPart7, ...bioPart8,
+  ...bioPart1,
+  ...bioPart2,
+  ...bioPart3,
+  ...bioPart4,
+  ...bioPart5,
+  ...bioPart6,
+  ...bioPart7,
+  ...bioPart8,
 ];
 
 export const fragenChemie: StichwortFrage[] = [
-  ...chPart1, ...chPart2, ...chPart3, ...chPart4, ...chPart5,
+  ...chPart1,
+  ...chPart2,
+  ...chPart3,
+  ...chPart4,
+  ...chPart5,
 ];
 
-export const fragenMathematik: StichwortFrage[] = [
-  ...maPart1, ...maPart2, ...maPart3,
-];
+export const fragenMathematik: StichwortFrage[] = [...maPart1, ...maPart2, ...maPart3];
 
-export const fragenPhysik: StichwortFrage[] = [
-  ...phPart1, ...phPart2, ...phPart3, ...phPart4,
-];
+export const fragenPhysik: StichwortFrage[] = [...phPart1, ...phPart2, ...phPart3, ...phPart4];
 
 export const alleStichwortFragen: StichwortFrage[] = [
   ...fragenBiologie,
@@ -80,9 +86,7 @@ export const alleStichwortFragen: StichwortFrage[] = [
 const optionLetters = ["a", "b", "c", "d", "e"];
 
 // Cache: stichwortId → Stichwort-Daten
-const stichwortMap = new Map(
-  alleStichworteListe.map((sw) => [sw.id, sw])
-);
+const stichwortMap = new Map(alleStichworteListe.map((sw) => [sw.id, sw]));
 
 export function convertToQuestion(frage: StichwortFrage): Question {
   const sw = stichwortMap.get(frage.stichwortId);
@@ -104,8 +108,7 @@ export function convertToQuestion(frage: StichwortFrage): Question {
 }
 
 // Alle Stichwort-Fragen im Question-Format (für Integration in allBmsQuestions)
-export const alleStichwortFragenConverted: Question[] =
-  alleStichwortFragen.map(convertToQuestion);
+export const alleStichwortFragenConverted: Question[] = alleStichwortFragen.map(convertToQuestion);
 
 // ============================================================
 // Direktes Mapping: questionId → stichwortId

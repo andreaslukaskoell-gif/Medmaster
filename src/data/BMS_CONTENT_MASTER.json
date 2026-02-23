@@ -20,12 +20,7 @@
       "quiz": [
         {
           "question": "Welches Organell ist primär für die ATP-Synthese zuständig?",
-          "options": [
-            "Ribosom",
-            "Golgi-Apparat",
-            "Mitochondrium",
-            "Zellkern"
-          ],
+          "options": ["Ribosom", "Golgi-Apparat", "Mitochondrium", "Zellkern"],
           "correctIndex": 2,
           "explanation": "Mitochondrien sind die Kraftwerke der Zelle und produzieren ATP in der Atmungskette (oxidative Phosphorylierung)."
         },

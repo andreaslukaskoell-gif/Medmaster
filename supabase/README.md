@@ -8,9 +8,11 @@
    - Notiere dir die Project URL und den Anon Key
 
 2. **Umgebungsvariablen konfigurieren**
+
    ```bash
    cp .env.local.example .env.local
    ```
+
    - Fülle `VITE_SUPABASE_URL` und `VITE_SUPABASE_ANON_KEY` aus
 
 3. **SQL Schema ausführen**

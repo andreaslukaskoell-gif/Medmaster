@@ -1,17 +1,17 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
 
 // Import components
-import Home from './pages/Home';
-import BMSKapitelView from './pages/BMSKapitelView';
-import Dashboard from './pages/Dashboard';
-import Lernplan from './pages/Lernplan';
-import Onboarding from './pages/Onboarding';
-import SEK from './pages/SEK';
-import Simulation from './pages/Simulation';
-import TV from './pages/TV';
-import Analysis from './pages/Analysis';
+import Home from "./pages/Home";
+import BMSKapitelView from "./pages/BMSKapitelView";
+import Dashboard from "./pages/Dashboard";
+import Lernplan from "./pages/Lernplan";
+import Onboarding from "./pages/Onboarding";
+import SEK from "./pages/SEK";
+import Simulation from "./pages/Simulation";
+import TV from "./pages/TV";
+import Analysis from "./pages/Analysis";
 
 function App() {
   return (

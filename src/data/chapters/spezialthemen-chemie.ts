@@ -56,21 +56,9 @@ export const spezialthemenChemieChapter: Chapter = {
             "Chemische → Elektrische Energie",
             "Elektrische → Chemische Energie",
           ],
-          [
-            "Anode",
-            "Minuspol (–), Oxidation",
-            "Pluspol (+), Oxidation",
-          ],
-          [
-            "Kathode",
-            "Pluspol (+), Reduktion",
-            "Minuspol (–), Reduktion",
-          ],
-          [
-            "Freiwilligkeit",
-            "Freiwillig (ΔG < 0)",
-            "Erzwungen (ΔG > 0, externe Spannung nötig)",
-          ],
+          ["Anode", "Minuspol (–), Oxidation", "Pluspol (+), Oxidation"],
+          ["Kathode", "Pluspol (+), Reduktion", "Minuspol (–), Reduktion"],
+          ["Freiwilligkeit", "Freiwillig (ΔG < 0)", "Erzwungen (ΔG > 0, externe Spannung nötig)"],
           [
             "Beispiel",
             "Daniell-Element (Zn/Cu), Batterie",
@@ -94,7 +82,7 @@ export const spezialthemenChemieChapter: Chapter = {
         "**Gleichgewichtskonstante K:**\n" +
         "Für eine allgemeine reversible Reaktion aA + bB ⇌ cC + dD lautet die Gleichgewichtskonstante:\n" +
         "K = [C]ᶜ · [D]ᵈ / ([A]ᵃ · [B]ᵇ)\n" +
-        "Die eckigen Klammern bezeichnen die Konzentrationen im Gleichgewicht, die Exponenten sind die stöchiometrischen Koeffizienten. Reine Feststoffe und reine Flüssigkeiten werden NICHT in den Ausdruck aufgenommen (ihre Aktivität ist per Definition 1).\n\n" +
+        "Die eckigen Klammern bezeichnen die Konzentrationen im Gleichgewicht, die Exponenten sind die stöchiometrischen Köffizienten. Reine Feststoffe und reine Flüssigkeiten werden NICHT in den Ausdruck aufgenommen (ihre Aktivität ist per Definition 1).\n\n" +
         "• K > 1: Das Gleichgewicht liegt auf der Produktseite → die Hinreaktion ist bevorzugt.\n" +
         "• K < 1: Das Gleichgewicht liegt auf der Eduktseite → die Rückreaktion ist bevorzugt.\n" +
         "• K = 1: Edukte und Produkte liegen in vergleichbaren Konzentrationen vor.\n" +
@@ -123,7 +111,7 @@ export const spezialthemenChemieChapter: Chapter = {
       merke:
         "Le Chatelier: Das System <strong>weicht dem Zwang aus</strong>. Druck↑ → Seite mit <strong>weniger Gasteilchen</strong>. Temperatur↑ → <strong>endotherme</strong> Richtung. Katalysator: schneller zum GG, aber <strong>ändert K nicht</strong>!",
       altfrage:
-        "\"Was passiert, wenn man zu einem System im Gleichgewicht einen Katalysator gibt?\" → Das Gleichgewicht wird <strong>schneller erreicht</strong>, aber die <strong>Lage des Gleichgewichts ändert sich NICHT</strong> (K bleibt gleich).",
+        '"Was passiert, wenn man zu einem System im Gleichgewicht einen Katalysator gibt?" → Das Gleichgewicht wird <strong>schneller erreicht</strong>, aber die <strong>Lage des Gleichgewichts ändert sich NICHT</strong> (K bleibt gleich).',
     },
 
     // ──────────────────────────────────────────────
@@ -162,18 +150,8 @@ export const spezialthemenChemieChapter: Chapter = {
             "–2",
             "Giftiges Gas, Geruch nach faulen Eiern, schwache Säure",
           ],
-          [
-            "Schwefeldioxid",
-            "SO₂",
-            "+4",
-            "Stechend riechendes Gas, verursacht sauren Regen",
-          ],
-          [
-            "Schwefeltrioxid",
-            "SO₃",
-            "+6",
-            "Reagiert heftig mit Wasser zu H₂SO₄",
-          ],
+          ["Schwefeldioxid", "SO₂", "+4", "Stechend riechendes Gas, verursacht sauren Regen"],
+          ["Schwefeltrioxid", "SO₃", "+6", "Reagiert heftig mit Wasser zu H₂SO₄"],
           [
             "Schwefelsäure",
             "H₂SO₄",
@@ -267,13 +245,7 @@ export const spezialthemenChemieChapter: Chapter = {
     },
     {
       question: "H₂S riecht nach...",
-      options: [
-        "Ammoniak",
-        "Chlor",
-        "Faulen Eiern",
-        "Essig",
-        "Ist geruchlos",
-      ],
+      options: ["Ammoniak", "Chlor", "Faulen Eiern", "Essig", "Ist geruchlos"],
       correctIndex: 2,
       explanation:
         "H₂S hat den charakteristischen Geruch nach faulen Eiern. Er ist schon in geringen Konzentrationen wahrnehmbar, aber in höheren Konzentrationen lähmt er den Geruchssinn — gefährlich!",

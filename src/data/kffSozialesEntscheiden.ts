@@ -37,8 +37,7 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
       {
         text: "Du sprichst den Oberarzt nach der Visite unter vier Augen respektvoll auf die Situation an.",
         idealRating: 5,
-        explanation:
-          "Professionelles Feedback unter vier Augen ist angemessen und konstruktiv.",
+        explanation: "Professionelles Feedback unter vier Augen ist angemessen und konstruktiv.",
       },
       {
         text: "Du meldest den Vorfall sofort der Krankenhausleitung.",
@@ -179,10 +178,10 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
   {
     id: "se-04",
     scenario:
-      "Du arbeitest als Turnusarzt in der Notaufnahme einer kleinen Klinik. Es ist Nacht, das Personal ist knapp. Gleichzeitig kommen ein schwer verletzter Motorradfahrer und eine ältere Frau mit Verdacht auf Herzinfarkt an. Du bist der einzige Arzt vor Ort und musst entscheiden, wen du zuerst behandelst. Beide Fälle sind zeitkritisch.",
+      "Du arbeitest als Turnusarzt in der Notaufnahme einer kleinen Klinik. Es ist Nacht, das Personal ist knapp. Gleichzeitig kommen ein schwer verletzter Motorradfahrer und eine ältere Frau mit Verdacht auf Herzinfarkt an. Du bist der einzige Arzt vor Ort und musst entscheiden, wen du zürst behandelst. Beide Fälle sind zeitkritisch.",
     handlungsoptionen: [
       {
-        text: "Du behandelst den Motorradfahrer zuerst, weil er jünger ist und mehr Lebensjahre vor sich hat.",
+        text: "Du behandelst den Motorradfahrer zürst, weil er jünger ist und mehr Lebensjahre vor sich hat.",
         idealRating: 1,
         explanation:
           "Alter darf kein Kriterium bei der Triage sein — das verstößt gegen das Gleichheitsprinzip.",
@@ -206,7 +205,7 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
           "Delegation an qualifiziertes Pflegepersonal ist sinnvoll, solange klare Anweisungen gegeben werden.",
       },
       {
-        text: "Du behandelst die ältere Frau zuerst, weil sie als Erste da war.",
+        text: "Du behandelst die ältere Frau zürst, weil sie als Erste da war.",
         idealRating: 2,
         explanation:
           "Das Prinzip first come, first served gilt nicht in der Notfallmedizin — die Dringlichkeit entscheidet.",
@@ -214,8 +213,7 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
       {
         text: "Du wechselst alle paar Minuten zwischen beiden Patienten hin und her.",
         idealRating: 2,
-        explanation:
-          "Ständiges Wechseln führt zu Zeitverlust und gefährdet beide Patienten.",
+        explanation: "Ständiges Wechseln führt zu Zeitverlust und gefährdet beide Patienten.",
       },
       {
         text: "Du stabilisierst beide Patienten kurz und organisierst dann einen schnellen Transport des einen in ein größeres Krankenhaus.",
@@ -243,10 +241,10 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
           "Eine strikte Ablehnung ignoriert die Dringlichkeit und die fortgeschrittene Reife des Jugendlichen.",
       },
       {
-        text: "Du führst ein ausführliches Beratungsgespräch und beurteilst seine Einwilligungsfähigkeit individuell.",
+        text: "Du führst ein ausführliches Beratungsgespräch und beurteilst seine Einwilligungsfähigkeit individüll.",
         idealRating: 6,
         explanation:
-          "Individuelle Beurteilung der Einwilligungsfähigkeit ist bei mündigen Minderjährigen der fachlich korrekte Weg.",
+          "Individülle Beurteilung der Einwilligungsfähigkeit ist bei mündigen Minderjährigen der fachlich korrekte Weg.",
       },
       {
         text: "Du gibst ihm das Rezept sofort ohne weitere Fragen, um keine Zeit zu verlieren.",
@@ -324,8 +322,7 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
       {
         text: "Du machst dasselbe wie dein Freund, damit es fair ist.",
         idealRating: 1,
-        explanation:
-          "Eigene Regelverstöße sind keine Lösung und verschärfen das Problem.",
+        explanation: "Eigene Regelverstöße sind keine Lösung und verschärfen das Problem.",
       },
       {
         text: "Du recherchierst die Universitätsrichtlinien zu KI-Nutzung und teilst sie mit deinem Freund.",
@@ -435,7 +432,7 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
         text: "Du dokumentierst das Gespräch und die Anweisung schriftlich für deine Unterlagen.",
         idealRating: 5,
         explanation:
-          "Schriftliche Dokumentation schützt dich und schafft Transparenz für eventuelle spätere Nachfragen.",
+          "Schriftliche Dokumentation schützt dich und schafft Transparenz für eventülle spätere Nachfragen.",
       },
       {
         text: "Du entfernst die Daten, behältst aber eine Kopie der Originaldaten für dich.",
@@ -499,7 +496,7 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
           "Der Sozialdienst hat Erfahrung mit solchen Fällen und kann professionelle Unterstützung koordinieren.",
       },
       {
-        text: "Du fragst die Patientin direkt, ob sie sexuell missbraucht wird.",
+        text: "Du fragst die Patientin direkt, ob sie sexüll missbraucht wird.",
         idealRating: 3,
         explanation:
           "Direkte Fragen sind wichtig, sollten aber behutsam und im richtigen Setting gestellt werden, nicht abrupt.",
@@ -674,7 +671,7 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
   {
     id: "se-13",
     scenario:
-      "Du absolvierst eine Famulatur in einer psychiatrischen Klinik. Ein Patient mit bekannter Schizophrenie vertraut dir an, dass er seine Medikamente seit Wochen nicht mehr nimmt, weil er sich davon kontrolliert fühle. Aktuell zeigt er keine akuten Symptome, wirkt aber zunehmend misstrauisch. Er bittet dich, seinem behandelnden Arzt nichts zu sagen, da er den Arzt nicht mehr möge.",
+      "Du absolvierst eine Famulatur in einer psychiatrischen Klinik. Ein Patient mit bekannter Schizophrenie vertraut dir an, dass er seine Medikamente seit Wochen nicht mehr nimmt, weil er sich davon kontrolliert fühle. Aktüll zeigt er keine akuten Symptome, wirkt aber zunehmend misstrauisch. Er bittet dich, seinem behandelnden Arzt nichts zu sagen, da er den Arzt nicht mehr möge.",
     handlungsoptionen: [
       {
         text: "Du hältst die Information geheim, da du sein Vertrauen nicht brechen möchtest.",
@@ -716,7 +713,7 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
         text: "Du liest in der Patientenakte nach, ob es Hinweise auf frühere Episoden nach Medikamentenabbruch gibt.",
         idealRating: 4,
         explanation:
-          "Recherche in der Akte hilft bei der Risikoeinschätzung, darf aber nicht das Handeln ersetzen.",
+          "Recherche in der Akte hilft bei der Risiköinschätzung, darf aber nicht das Handeln ersetzen.",
       },
       {
         text: "Du bietest dem Patienten an, beim nächsten Arztgespräch dabei zu sein und ihn zu unterstützen.",
@@ -746,8 +743,7 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
       {
         text: "Du bittest die Patientin, morgen wiederzukommen, wenn es nicht besser wird.",
         idealRating: 2,
-        explanation:
-          "Verschieben ohne Untersuchung ist riskant und verletzt die Sorgfaltspflicht.",
+        explanation: "Verschieben ohne Untersuchung ist riskant und verletzt die Sorgfaltspflicht.",
       },
       {
         text: "Du führst eine strukturierte Anamnese durch und entscheidest danach, ob weitere Diagnostik nötig ist.",

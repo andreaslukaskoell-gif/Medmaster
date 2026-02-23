@@ -1,7 +1,9 @@
 # MedMaster — Content-Aufwertung + Supabase Backend
 
 ## KONTEXT
+
 Die Basis-App steht (Mega-Prompt ist abgearbeitet). Jetzt müssen wir:
+
 1. Content auf Konkurrenz-Niveau bringen (StudyMed hat 15.000+ Aufgaben, 250+ Videos, Aufgabengenerator; MedGurus hat 6.000+ Fragen; get-to-med hat 16.000+ Übungen)
 2. Supabase Backend integrieren (Auth, Datenbank, echte Nutzerdaten)
 
@@ -31,6 +33,7 @@ Das ist unser DIFFERENZIERUNGSMERKMAL. Die Konkurrenz zeigt Text — wir zeigen 
 Erstelle React-Komponenten mit **inline SVG** für folgende Diagramme:
 
 **Biologie:**
+
 - Tierzelle mit beschrifteten Organellen (anklickbar → Detail-Info)
 - Pflanzenzelle vs. Tierzelle Vergleich
 - Zellmembran-Aufbau (Lipiddoppelschicht mit Proteinen)
@@ -49,6 +52,7 @@ Erstelle React-Komponenten mit **inline SVG** für folgende Diagramme:
 - Stammbaum-Analyse Beispiel (autosomal dominant/rezessiv)
 
 **Chemie:**
+
 - Periodensystem (interaktiv, Gruppen/Perioden hervorhebbar)
 - Atomorbitalmodell (s, p, d Orbitale)
 - Ionenbindung NaCl (Elektronenübergabe)
@@ -58,6 +62,7 @@ Erstelle React-Komponenten mit **inline SVG** für folgende Diagramme:
 - Enzym-Substrat-Komplex (Schlüssel-Schloss-Prinzip)
 
 **Physik:**
+
 - Newton Kräftediagramme
 - Stromkreis (Reihe vs. Parallel)
 - Wellentypen (Longitudinal vs. Transversal)
@@ -66,12 +71,14 @@ Erstelle React-Komponenten mit **inline SVG** für folgende Diagramme:
 - Doppler-Effekt Visualisierung
 
 **Mathematik:**
+
 - Koordinatensystem mit Funktionstypen
 - Einheitskreis mit sin/cos
 - Vektoraddition grafisch
 
 **Implementation:** Erstelle eine Komponente `<DiagramSVG type="cell" />` die den richtigen SVG-Code rendert.
 Jede Grafik soll:
+
 - Saubere, professionelle SVGs sein (keine Bilder, alles Code)
 - Beschriftungen auf Deutsch
 - Farbig aber nicht überladen (nutze unsere Teal-Farbpalette)
@@ -85,6 +92,7 @@ Aktuell haben wir ~120 Fragen. Ziel: **mindestens 500 BMS-Fragen**.
 Verteilung nach Fach UND Häufigkeit in echten Tests:
 
 **Biologie (200 Fragen):**
+
 - Zellbiologie: 30 Fragen (Organellen, Membrantransport, Zellzyklus)
 - Genetik: 40 Fragen (Mendel, DNA/RNA, Transkription, Translation, Mutationen)
 - Herz-Kreislauf: 25 Fragen (Aufbau, Erregungsleitung, Blutdruck, Blutgruppen)
@@ -97,6 +105,7 @@ Verteilung nach Fach UND Häufigkeit in echten Tests:
 - Fortpflanzung/Entwicklung: 15 Fragen
 
 **Chemie (120 Fragen):**
+
 - Atombau/PSE: 20 Fragen
 - Chemische Bindung: 15 Fragen
 - Stöchiometrie: 20 Fragen (Mol-Berechnungen!)
@@ -106,6 +115,7 @@ Verteilung nach Fach UND Häufigkeit in echten Tests:
 - Biochemie/Naturstoffe: 10 Fragen
 
 **Physik (100 Fragen):**
+
 - Mechanik: 30 Fragen (Newton, Energie, Impuls)
 - Elektrizität: 25 Fragen (Ohm, Kirchhoff, Magnetismus)
 - Optik: 15 Fragen
@@ -114,6 +124,7 @@ Verteilung nach Fach UND Häufigkeit in echten Tests:
 - Atomphysik: 5 Fragen
 
 **Mathematik (80 Fragen):**
+
 - Algebra/Gleichungen: 25 Fragen
 - Zehnerpotenzen/Einheiten: 15 Fragen
 - Funktionen: 15 Fragen
@@ -122,6 +133,7 @@ Verteilung nach Fach UND Häufigkeit in echten Tests:
 - Vektorrechnung: 5 Fragen
 
 **Jede Frage MUSS haben:**
+
 - 5 Antwortoptionen (A-E)
 - Detaillierte Erklärung warum die richtige Antwort richtig ist
 - Kurze Erklärung warum JEDE falsche Antwort falsch ist
@@ -133,9 +145,10 @@ Verteilung nach Fach UND Häufigkeit in echten Tests:
 StudyMed hat einen Aufgabengenerator für Zahlenfolgen und Allergieausweise. Das brauchen wir auch!
 
 **Zahlenfolgen-Generator:**
+
 ```typescript
 // Erstelle eine Funktion die zufällige Zahlenfolgen generiert
-function generateZahlenfolge(difficulty: 'leicht' | 'mittel' | 'schwer'): ZahlenfolgeQuestion {
+function generateZahlenfolge(difficulty: "leicht" | "mittel" | "schwer"): ZahlenfolgeQuestion {
   // Leicht: Einfache arithmetische/geometrische Folgen
   // Mittel: Verschachtelte Folgen, wechselnde Operationen
   // Schwer: Fibonacci-artig, Differenzenfolgen, Quadratfolgen
@@ -144,6 +157,7 @@ function generateZahlenfolge(difficulty: 'leicht' | 'mittel' | 'schwer'): Zahlen
 ```
 
 **Allergieausweis-Generator:**
+
 ```typescript
 // Generiert zufällige Allergieausweise für die Merkfähigkeit
 function generateAllergyCards(count: number): AllergyCard[] {
@@ -163,6 +177,7 @@ function generateMemoryQuestions(cards: AllergyCard[]): MemoryQuestion[] {
 ```
 
 **Wortflüssigkeit-Generator:**
+
 ```typescript
 // Pool von 500+ deutschen Substantiven (6-10 Buchstaben, kein Ü/Ö/Ä/ß)
 const WORD_POOL = ["HAUSTIER", "GESCHENK", "BRUNNEN", "PFLASTER", ...];
@@ -221,12 +236,12 @@ StudyMed hat 5.000+ Karteikarten. Erstelle ein Karteikarten-Feature:
 ```typescript
 interface Flashcard {
   id: string;
-  front: string;  // Frage
-  back: string;   // Antwort
-  category: 'bio' | 'chemie' | 'physik' | 'mathe';
+  front: string; // Frage
+  back: string; // Antwort
+  category: "bio" | "chemie" | "physik" | "mathe";
   topic: string;
-  difficulty: 'leicht' | 'mittel' | 'schwer';
-  nextReview: Date;  // Spaced Repetition
+  difficulty: "leicht" | "mittel" | "schwer";
+  nextReview: Date; // Spaced Repetition
   easeFactor: number; // SM-2
 }
 ```
@@ -245,11 +260,11 @@ Auch ohne echten Multiplayer simulierbar:
 interface DuelSession {
   id: string;
   category: string;
-  questions: BMSQuestion[];  // 5 zufällige Fragen
+  questions: BMSQuestion[]; // 5 zufällige Fragen
   playerScore: number;
-  opponentScore: number;    // KI-Gegner mit realistischer Fehlerquote
-  opponentName: string;     // Zufälliger Name
-  timePerQuestion: number;  // 30 Sekunden
+  opponentScore: number; // KI-Gegner mit realistischer Fehlerquote
+  opponentName: string; // Zufälliger Name
+  timePerQuestion: number; // 30 Sekunden
 }
 ```
 
@@ -271,15 +286,16 @@ npm install @supabase/supabase-js
 Erstelle eine Datei `src/lib/supabase.ts`:
 
 ```typescript
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 ```
 
 Erstelle `.env.example`:
+
 ```
 VITE_SUPABASE_URL=https://your-project.supabase.co
 VITE_SUPABASE_ANON_KEY=your-anon-key
@@ -529,6 +545,7 @@ Erstelle Custom Hooks die den Zustand zwischen localStorage und Supabase synchro
 ```
 
 **Offline-First Strategie:**
+
 - Primär: Daten in Supabase speichern
 - Fallback: localStorage wenn offline
 - Beim nächsten Online-Besuch: Sync localStorage → Supabase
@@ -542,14 +559,14 @@ Erstelle die Struktur (noch ohne echten Stripe-Key):
 // Pricing-Tabelle mit Stripe Price IDs (Platzhalter)
 export const PRICING = {
   standard: {
-    monthly: 'price_PLACEHOLDER_standard_monthly', // €14.99
-    yearly: 'price_PLACEHOLDER_standard_yearly',    // €119.88 (€9.99/mo)
+    monthly: "price_PLACEHOLDER_standard_monthly", // €14.99
+    yearly: "price_PLACEHOLDER_standard_yearly", // €119.88 (€9.99/mo)
   },
   pro: {
-    monthly: 'price_PLACEHOLDER_pro_monthly',       // €24.99
-    yearly: 'price_PLACEHOLDER_pro_yearly',          // €199.88 (€16.66/mo)
-  }
-}
+    monthly: "price_PLACEHOLDER_pro_monthly", // €24.99
+    yearly: "price_PLACEHOLDER_pro_yearly", // €199.88 (€16.66/mo)
+  },
+};
 ```
 
 Die Pricing-Seite soll einen Button haben der zur Checkout-Session weiterleitet.
@@ -559,31 +576,31 @@ Zeige auch einen **Jahresabo-Rabatt** an (20% günstiger als monatlich).
 
 ```typescript
 // src/utils/permissions.ts
-export function canAccess(tier: 'starter' | 'standard' | 'pro', feature: string): boolean {
+export function canAccess(tier: "starter" | "standard" | "pro", feature: string): boolean {
   const permissions = {
     starter: {
-      bms_questions: 10,       // 10 Fragen pro Fach
-      bms_chapters: 2,         // Erste 2 Kapitel pro Fach
-      kff_exercises: 5,        // 5 Übungen pro Untertest
-      tv_texts: 1,             // 1 Übungstext
-      sek_situations: 3,       // 3 Situationen
-      simulations: 0,          // Keine Simulation
-      flashcards: 50,          // 50 Karteikarten
+      bms_questions: 10, // 10 Fragen pro Fach
+      bms_chapters: 2, // Erste 2 Kapitel pro Fach
+      kff_exercises: 5, // 5 Übungen pro Untertest
+      tv_texts: 1, // 1 Übungstext
+      sek_situations: 3, // 3 Situationen
+      simulations: 0, // Keine Simulation
+      flashcards: 50, // 50 Karteikarten
       leaderboard: false,
       weakness_analysis: false,
       spaced_repetition: false,
       heatmap: false,
       notes: false,
-      duel_mode: true,         // Duell als Teaser
+      duel_mode: true, // Duell als Teaser
     },
     standard: {
-      bms_questions: 'unlimited',
-      bms_chapters: 'unlimited',
-      kff_exercises: 'unlimited',
-      tv_texts: 'unlimited',
-      sek_situations: 'unlimited',
+      bms_questions: "unlimited",
+      bms_chapters: "unlimited",
+      kff_exercises: "unlimited",
+      tv_texts: "unlimited",
+      sek_situations: "unlimited",
       simulations: 1,
-      flashcards: 'unlimited',
+      flashcards: "unlimited",
       leaderboard: true,
       weakness_analysis: true,
       spaced_repetition: true,
@@ -593,17 +610,18 @@ export function canAccess(tier: 'starter' | 'standard' | 'pro', feature: string)
     },
     pro: {
       // Alles aus standard plus:
-      simulations: 'unlimited',
+      simulations: "unlimited",
       advanced_analytics: true,
       priority_support: true,
       early_access: true,
-    }
+    },
   };
   return permissions[tier]?.[feature] ?? false;
 }
 ```
 
 Gesperrte Inhalte sollen einen **schönen Paywall-Overlay** anzeigen:
+
 - Unscharfer Hintergrund (blur)
 - Lock-Icon
 - "Upgrade auf Standard für alle BMS-Kapitel"
@@ -615,21 +633,21 @@ Gesperrte Inhalte sollen einen **schönen Paywall-Overlay** anzeigen:
 
 Was uns BESSER macht als die Konkurrenz:
 
-| Feature | StudyMed | MedGurus | get-to-med | MedMaster |
-|---------|----------|----------|------------|-----------|
-| Interaktive SVG-Grafiken | ❌ | ❌ | ❌ | ✅ |
-| Aufgabengenerator (unendlich) | ✅ (teilweise) | ❌ | ❌ | ✅ |
-| Spaced Repetition | ❌ | ❌ | ❌ | ✅ |
-| Schwächenanalyse pro Subtopic | ❌ | ❌ | ❌ | ✅ |
-| Dark Mode | ❌ | ❌ | ❌ | ✅ |
-| Keyboard Shortcuts | ❌ | ❌ | ❌ | ✅ |
-| Lernplan-Generator | ❌ | ❌ | ✅ (PDF) | ✅ (interaktiv) |
-| Karteikarten | ✅ (5000) | ❌ | ❌ | ✅ (auto-gen) |
-| Duell-Modus | ✅ (App) | ❌ | ❌ | ✅ (Web) |
-| GitHub-Heatmap | ❌ | ❌ | ❌ | ✅ |
-| Notizen pro Kapitel | ❌ | ❌ | ❌ | ✅ |
-| Videos | ✅ (250+) | ✅ | ✅ (60h) | ❌ (Phase 2) |
-| Preis | €59-169 | €150+ | €19.99/mo | €14.99/mo |
+| Feature                       | StudyMed       | MedGurus | get-to-med | MedMaster       |
+| ----------------------------- | -------------- | -------- | ---------- | --------------- |
+| Interaktive SVG-Grafiken      | ❌             | ❌       | ❌         | ✅              |
+| Aufgabengenerator (unendlich) | ✅ (teilweise) | ❌       | ❌         | ✅              |
+| Spaced Repetition             | ❌             | ❌       | ❌         | ✅              |
+| Schwächenanalyse pro Subtopic | ❌             | ❌       | ❌         | ✅              |
+| Dark Mode                     | ❌             | ❌       | ❌         | ✅              |
+| Keyboard Shortcuts            | ❌             | ❌       | ❌         | ✅              |
+| Lernplan-Generator            | ❌             | ❌       | ✅ (PDF)   | ✅ (interaktiv) |
+| Karteikarten                  | ✅ (5000)      | ❌       | ❌         | ✅ (auto-gen)   |
+| Duell-Modus                   | ✅ (App)       | ❌       | ❌         | ✅ (Web)        |
+| GitHub-Heatmap                | ❌             | ❌       | ❌         | ✅              |
+| Notizen pro Kapitel           | ❌             | ❌       | ❌         | ✅              |
+| Videos                        | ✅ (250+)      | ✅       | ✅ (60h)   | ❌ (Phase 2)    |
+| Preis                         | €59-169        | €150+    | €19.99/mo  | €14.99/mo       |
 
 ---
 

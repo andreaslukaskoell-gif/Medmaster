@@ -1,4 +1,5 @@
 # Claude Code Prompt 1 — selfTest auf 3–7 Fragen trimmen
+
 **Laufzeit:** ~20 Minuten | **Modus:** --dangerously-skip-permissions
 
 ## AUFGABE
@@ -16,6 +17,7 @@ Gehe durch ALLE TypeScript-Dateien in `src/data/bmsKapitel/` und trimme die `sel
 ## DATEIEN
 
 Alle Dateien in diesen Ordnern:
+
 ```
 src/data/bmsKapitel/biologie/     (kap1–kap11, alle .ts Dateien)
 src/data/bmsKapitel/chemie/       (kap1–kap13)
@@ -28,6 +30,7 @@ src/data/bmsKapitel/mathematik/   (kap1–kap6)
 Nach jeder Datei: TypeScript-Syntax korrekt? Kein Array mit < 3 oder > 7 Einträgen?
 
 Am Ende:
+
 ```bash
 npx tsc --noEmit
 ```

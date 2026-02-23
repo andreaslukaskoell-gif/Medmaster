@@ -1,15 +1,15 @@
-import type { Kapitel } from '../types';
+import type { Kapitel } from "../types";
 
 export const bioKap2: Kapitel = {
-  id: 'bio-kap2',
-  title: 'Zellkern und Ribosomen',
-  subject: 'biologie',
-  icon: '🔬',
-  estimatedTime: '',
+  id: "bio-kap2",
+  title: "Zellkern und Ribosomen",
+  subject: "biologie",
+  icon: "🔬",
+  estimatedTime: "",
   unterkapitel: [
     {
-      id: 'bio-kap2-uk01',
-      title: '1. Überblick und biologische Bedeutung',
+      id: "bio-kap2-uk01",
+      title: "1. Überblick und biologische Bedeutung",
       content: `# Zellkern und Ribosomen
 
 ## 1. Überblick und biologische Bedeutung
@@ -132,7 +132,7 @@ Damit ein Protein vom Proteasom erkannt wird, muss es zuvor markiert werden. Die
       lernziele: [],
       sections: [],
       merksätze: [],
-      selfTest: []
-    }
-  ]
+      selfTest: [],
+    },
+  ],
 };

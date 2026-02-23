@@ -1,4 +1,5 @@
 # CLAUDE CODE — QUALITY UPGRADE PROMPT
+
 ## MedMaster Lernplattform — Premium UI & Content Fix
 
 Du bist ein Senior Frontend-Entwickler und UX-Designer. Führe ALLE folgenden Aufgaben durch. Teste nach jeder größeren Änderung mit `npm run build` dass keine Fehler entstehen.
@@ -10,6 +11,7 @@ Du bist ein Senior Frontend-Entwickler und UX-Designer. Führe ALLE folgenden Au
 Die Karteikarten-Rückseite zeigt den Text **gespiegelt/rückwärts**. Das ist ein CSS `transform` Bug.
 
 ### Fix:
+
 Finde die Flashcard/Karteikarten-Komponente und fixe die CSS 3D-Flip-Animation:
 
 ```css
@@ -29,7 +31,8 @@ Finde die Flashcard/Karteikarten-Komponente und fixe die CSS 3D-Flip-Animation:
 }
 
 /* BEIDE Seiten brauchen backface-visibility */
-.card-front, .card-back {
+.card-front,
+.card-back {
   backface-visibility: hidden;
   position: absolute;
   width: 100%;
@@ -45,6 +48,7 @@ Finde die Flashcard/Karteikarten-Komponente und fixe die CSS 3D-Flip-Animation:
 **Der häufigste Fehler:** Die `.card-back` hat KEIN `transform: rotateY(180deg)` als Ausgangszustand. Dadurch wird beim Flip die Rückseite gespiegelt angezeigt.
 
 Wenn Tailwind-Klassen verwendet werden, stelle sicher dass:
+
 - `[backface-visibility:hidden]` auf BEIDEN Seiten ist
 - Die Rückseite `[transform:rotateY(180deg)]` als Default hat
 - `preserve-3d` auf dem Parent-Container ist
@@ -56,6 +60,7 @@ Teste: Öffne Karteikarten → klicke auf Karte → Rückseiten-Text muss normal
 ## TEIL 2: BMS UNTERKAPITEL — STRUKTURIERTE CONTENT-DARSTELLUNG
 
 ### Problem:
+
 Jedes Unterkapitel ist EIN großer Textblock ohne visuelle Gliederung. Das ist überwältigend und nicht lernförderlich.
 
 ### Lösung — Jedes Unterkapitel muss diese Struktur haben:
@@ -109,10 +114,11 @@ Jedes Unterkapitel ist EIN großer Textblock ohne visuelle Gliederung. Das ist �
 
 ```typescript
 interface ContentSection {
-  heading: string;       // z.B. "Grundlagen", "Aufbau", "Funktion"
-  text: string;          // 2-3 Absätze Fließtext
-  merksatz?: string;     // Optionaler Merksatz nach dem Abschnitt
-  table?: {              // Optionale Vergleichstabelle
+  heading: string; // z.B. "Grundlagen", "Aufbau", "Funktion"
+  text: string; // 2-3 Absätze Fließtext
+  merksatz?: string; // Optionaler Merksatz nach dem Abschnitt
+  table?: {
+    // Optionale Vergleichstabelle
     headers: string[];
     rows: string[][];
   };
@@ -121,12 +127,12 @@ interface ContentSection {
 interface SubchapterData {
   id: string;
   title: string;
-  lernziele: string[];              // 3-5 Lernziele
-  sections: ContentSection[];       // 2-4 strukturierte Abschnitte
-  diagram?: React.ComponentType;    // SVG-Diagramm Komponente
+  lernziele: string[]; // 3-5 Lernziele
+  sections: ContentSection[]; // 2-4 strukturierte Abschnitte
+  diagram?: React.ComponentType; // SVG-Diagramm Komponente
   altfrage?: { question: string; answer: string };
   klinischerBezug?: string;
-  selfTest: QuizQuestion[];         // 3 MC-Fragen
+  selfTest: QuizQuestion[]; // 3 MC-Fragen
 }
 ```
 
@@ -152,6 +158,7 @@ interface SubchapterData {
 **VORHER:** Ein Textblock mit 3 langen Absätzen
 
 **NACHHER:**
+
 ```
 📖 Lernziele
 - Unterschiede zwischen Prokaryoten und Eukaryoten benennen
@@ -187,6 +194,7 @@ interface SubchapterData {
 ## TEIL 3: SVG-DIAGRAMME OPTIMIEREN
 
 ### Probleme:
+
 - Text-Labels überlappen mit Grafik-Elementen
 - Schrift teilweise zu klein oder schlecht positioniert
 - Labels sitzen direkt AUF den Organellen statt daneben mit Linien
@@ -220,6 +228,7 @@ interface SubchapterData {
    - Aktive Organelle hervorheben mit `stroke-width` Änderung
 
 ### Überarbeite speziell diese SVG-Diagramme:
+
 - **Tierzelle** (`AnimalCellDiagram` o.ä.): Labels mit Leader Lines, Text nicht auf Organellen
 - **Pflanzenzelle**: Gleiche Verbesserungen
 - **DNA-Struktur**: Klare Beschriftung der Basen, Zucker-Phosphat-Rückgrat
@@ -238,37 +247,38 @@ Jedes BMS-Fach braucht eine eigene Akzentfarbe die durchgängig verwendet wird:
 ```typescript
 const SUBJECT_COLORS = {
   biologie: {
-    primary: '#059669',    // Emerald-600
-    light: '#d1fae5',      // Emerald-100
-    badge: 'bg-emerald-100 text-emerald-700',
-    border: 'border-emerald-500',
-    gradient: 'from-emerald-500 to-emerald-600',
+    primary: "#059669", // Emerald-600
+    light: "#d1fae5", // Emerald-100
+    badge: "bg-emerald-100 text-emerald-700",
+    border: "border-emerald-500",
+    gradient: "from-emerald-500 to-emerald-600",
   },
   chemie: {
-    primary: '#dc2626',    // Red-600
-    light: '#fee2e2',      // Red-100
-    badge: 'bg-red-100 text-red-700',
-    border: 'border-red-500',
-    gradient: 'from-red-500 to-red-600',
+    primary: "#dc2626", // Red-600
+    light: "#fee2e2", // Red-100
+    badge: "bg-red-100 text-red-700",
+    border: "border-red-500",
+    gradient: "from-red-500 to-red-600",
   },
   physik: {
-    primary: '#2563eb',    // Blue-600
-    light: '#dbeafe',      // Blue-100
-    badge: 'bg-blue-100 text-blue-700',
-    border: 'border-blue-500',
-    gradient: 'from-blue-500 to-blue-600',
+    primary: "#2563eb", // Blue-600
+    light: "#dbeafe", // Blue-100
+    badge: "bg-blue-100 text-blue-700",
+    border: "border-blue-500",
+    gradient: "from-blue-500 to-blue-600",
   },
   mathematik: {
-    primary: '#7c3aed',    // Violet-600
-    light: '#ede9fe',      // Violet-100
-    badge: 'bg-violet-100 text-violet-700',
-    border: 'border-violet-500',
-    gradient: 'from-violet-500 to-violet-600',
+    primary: "#7c3aed", // Violet-600
+    light: "#ede9fe", // Violet-100
+    badge: "bg-violet-100 text-violet-700",
+    border: "border-violet-500",
+    gradient: "from-violet-500 to-violet-600",
   },
 } as const;
 ```
 
 **Anwenden auf:**
+
 - BMS Kapitel-Karten: Farbiger linker Rand oder Top-Streifen
 - Unterkapitel-Überschriften: Farbige Akzentlinie
 - Progress-Bars: In Fachfarbe
@@ -320,12 +330,14 @@ const SUBJECT_COLORS = {
 Die Karteikarten-Decks und Lern-Ansicht upgraden:
 
 **Deck-Auswahl:**
+
 - Cards mit subtlem Schatten: `shadow-sm hover:shadow-md transition-shadow`
 - Farbiger Top-Streifen je nach Fach
 - Fortschrittsanzeige als Mini-Bar im Card
 - Anzahl neue/wiederholte Karten anzeigen
 
 **Lern-Ansicht:**
+
 - Größere Karte mit mehr Padding
 - Schönere Flip-Animation (0.5s ease-in-out)
 - Frage-Seite: Große, zentrierte Schrift
@@ -350,40 +362,55 @@ Die Karteikarten-Decks und Lern-Ansicht upgraden:
 Transformiere als Beweis mindestens diese 5 Unterkapitel vollständig in das neue Format mit Abschnitten:
 
 ### 5.1 "Prokaryoten vs. Eukaryoten" (Biologie > Die Zelle)
+
 Teile auf in:
+
 - **Grundlegender Unterschied** (Zellkern, Größe, Kompartimentierung)
 - **Genomorganisation** (DNA-Struktur, Chromosomen, Plasmide, Ribosomen 70S/80S)
 - **Zellteilung und Stoffwechsel** (Binäre Fission vs. Mitose, metabolische Vielseitigkeit)
-+ Vergleichstabelle Prokaryoten vs. Eukaryoten (6+ Merkmale)
+
+* Vergleichstabelle Prokaryoten vs. Eukaryoten (6+ Merkmale)
 
 ### 5.2 "Aufbau der Tierzelle" (Biologie > Die Zelle)
+
 Teile auf in:
+
 - **Zellkern und Erbinformation** (Nukleus, Chromatin, Nukleolus, Kernporen)
 - **Energieversorgung und Synthese** (Mitochondrien, ER, Golgi)
 - **Verdauung und Recycling** (Lysosomen, Peroxisomen, Proteasomen)
 - **Zytoskelett und Zellkontakte** (Mikrofilamente, Intermediärfilamente, Mikrotubuli, Desmosomen)
-+ Tabelle: Organellen und ihre Funktionen
+
+* Tabelle: Organellen und ihre Funktionen
 
 ### 5.3 "Atombau" (Chemie > Atombau)
+
 Teile auf in:
+
 - **Subatomare Teilchen** (Protonen, Neutronen, Elektronen, Ladungen, Massen)
 - **Schalenmodell und Orbitale** (Bohr, Quantenzahlen, s/p/d/f)
 - **Elektronenkonfiguration** (Aufbauprinzip, Hund, Pauli)
-+ Tabelle: Quantenzahlen und ihre Bedeutung
+
+* Tabelle: Quantenzahlen und ihre Bedeutung
 
 ### 5.4 "Mechanik: Kraft und Energie" (Physik)
+
 Teile auf in:
+
 - **Newton'sche Gesetze** (1., 2., 3. Gesetz mit Formeln)
 - **Arbeit, Energie und Leistung** (W=F·s, E_kin, E_pot, P=W/t)
 - **Impuls und Stoßprozesse** (elastisch, inelastisch)
-+ Formelübersicht als Tabelle
+
+* Formelübersicht als Tabelle
 
 ### 5.5 "Prozentrechnung und Dreisatz" (Mathematik)
+
 Teile auf in:
+
 - **Grundwert, Prozentwert, Prozentsatz** (Formeln, Eselsbrücken)
 - **Dreisatz und Verhältnisse** (proportional, antiproportional)
 - **Typische MedAT-Aufgaben** (Konzentrationen, Verdünnungen)
-+ Beispielrechnungen in Boxen
+
+* Beispielrechnungen in Boxen
 
 ---
 

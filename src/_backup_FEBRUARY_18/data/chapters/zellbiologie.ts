@@ -38,7 +38,11 @@ export const zellbiologieChapter: Chapter = {
       vergleichsTabelle: {
         headers: ["Merkmal", "Prokaryoten", "Eukaryoten"],
         rows: [
-          ["Zellkern", "Kein membranumhüllter Kern (Nukleoid)", "Echter Zellkern mit Doppelmembran"],
+          [
+            "Zellkern",
+            "Kein membranumhüllter Kern (Nukleoid)",
+            "Echter Zellkern mit Doppelmembran",
+          ],
           ["DNA-Form", "Ringförmig, frei im Zytoplasma", "Linear, mit Histonen assoziiert"],
           ["Ribosomen", "70S (50S + 30S)", "80S (60S + 40S)"],
           ["Membranorganellen", "Keine", "Vorhanden (ER, Golgi, Mitochondrien etc.)"],
@@ -103,13 +107,13 @@ export const zellbiologieChapter: Chapter = {
         "Chloroplasten sind der Ort der <strong>Fotosynthese</strong>. Sie besitzen ebenfalls eine Doppelmembran. Im Inneren befinden sich <strong>Thylakoide</strong> — flache Membranscheiben, die zu <strong>Grana</strong> (Stapel) angeordnet sind. In den Thylakoidmembranen finden die <strong>Lichtreaktionen</strong> statt (Fotosysteme I und II, Elektronentransportkette). Das <strong>Stroma</strong> (Grundsubstanz) enthält die Enzyme des <strong>Calvin-Zyklus</strong> (Dunkelreaktion/lichtunabhängige Reaktion). Auch Chloroplasten besitzen <strong>eigene ringförmige DNA</strong> und <strong>70S-Ribosomen</strong>.",
 
       altfrage:
-        "\"Welche Organellen besitzen eine Doppelmembran UND eigene DNA?\" → Zellkern, Mitochondrien, Chloroplasten. Alle drei! <strong>NICHT</strong> das ER oder der Golgi-Apparat!",
+        '"Welche Organellen besitzen eine Doppelmembran UND eigene DNA?" → Zellkern, Mitochondrien, Chloroplasten. Alle drei! <strong>NICHT</strong> das ER oder der Golgi-Apparat!',
 
       klinik:
         "Mitochondriale Erkrankungen werden <strong>maternal vererbt</strong>, da Mitochondrien aus der Eizelle stammen. Beispiel: <strong>MELAS-Syndrom</strong> (Myopathie, Enzephalopathie, Laktatazidose, Schlaganfall-ähnliche Episoden).",
 
       merke:
-        "Doppelmembran + eigene DNA: Zellkern, Mitochondrien, Chloroplasten. Merke: <strong>ZMC</strong> — wie \"Zu Mir Kommen\" die Prokaryoten (Endosymbiontentheorie).",
+        'Doppelmembran + eigene DNA: Zellkern, Mitochondrien, Chloroplasten. Merke: <strong>ZMC</strong> — wie "Zu Mir Kommen" die Prokaryoten (Endosymbiontentheorie).',
     },
 
     // ──────────────────────────────────────────────
@@ -133,7 +137,7 @@ export const zellbiologieChapter: Chapter = {
       diagram: "animal-cell",
 
       merke:
-        "Proteinweg: Raues ER → Golgi (cis→trans) → Vesikel → Zielort. Merke: <strong>R.E.G.V.Z.</strong> — \"Renn, Emil, Gib Vitamine Zurück!\"",
+        'Proteinweg: Raues ER → Golgi (cis→trans) → Vesikel → Zielort. Merke: <strong>R.E.G.V.Z.</strong> — "Renn, Emil, Gib Vitamine Zurück!"',
 
       klinik:
         "Lysosomale Speicherkrankheiten: Bei <strong>Morbus Gaucher</strong> fehlt die Glucocerebrosidase, bei <strong>Tay-Sachs</strong> die Hexosaminidase A — nicht abgebaute Stoffe akkumulieren in den Zellen.",
@@ -163,7 +167,7 @@ export const zellbiologieChapter: Chapter = {
         "Zytoskelett-Durchmesser: <strong>7-10-25 Regel</strong>: Aktin 7 nm, Intermediär 10 nm, Mikrotubuli 25 nm. Von dünn nach dick: A-I-M.",
 
       altfrage:
-        "\"Welche Ribosomenart findet man in Mitochondrien?\" → <strong>70S</strong> (wie bei Prokaryoten!) — ein Beleg für die Endosymbiontentheorie.",
+        '"Welche Ribosomenart findet man in Mitochondrien?" → <strong>70S</strong> (wie bei Prokaryoten!) — ein Beleg für die Endosymbiontentheorie.',
     },
 
     // ──────────────────────────────────────────────
@@ -439,19 +443,44 @@ Glukose, Galaktose, Fruktose, N-Acetyl-Glukosamin, N-Acetyl-Galaktosamin und N-A
       vergleichsTabelle: {
         headers: ["Transport", "Energie?", "Richtung", "Beispiel"],
         rows: [
-          ["Einfache Diffusion", "Nein (passiv)", "Mit dem Gradienten", "O₂, CO₂ durch die Membran"],
-          ["Osmose", "Nein (passiv)", "Wasser: niedrige → hohe Stoffkonz.", "Wasser durch Aquaporine"],
-          ["Erleichterte Diffusion", "Nein (passiv)", "Mit dem Gradienten", "Glucose über GLUT-Transporter"],
-          ["Primär aktiver Transport", "Ja (ATP direkt)", "Gegen den Gradienten", "Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein"],
-          ["Sekundär aktiver Transport", "Ja (indirekt, Ionengradient)", "Gegen den Gradienten", "Na⁺/Glucose-Symport (SGLT1)"],
+          [
+            "Einfache Diffusion",
+            "Nein (passiv)",
+            "Mit dem Gradienten",
+            "O₂, CO₂ durch die Membran",
+          ],
+          [
+            "Osmose",
+            "Nein (passiv)",
+            "Wasser: niedrige → hohe Stoffkonz.",
+            "Wasser durch Aquaporine",
+          ],
+          [
+            "Erleichterte Diffusion",
+            "Nein (passiv)",
+            "Mit dem Gradienten",
+            "Glucose über GLUT-Transporter",
+          ],
+          [
+            "Primär aktiver Transport",
+            "Ja (ATP direkt)",
+            "Gegen den Gradienten",
+            "Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein",
+          ],
+          [
+            "Sekundär aktiver Transport",
+            "Ja (indirekt, Ionengradient)",
+            "Gegen den Gradienten",
+            "Na⁺/Glucose-Symport (SGLT1)",
+          ],
         ],
       },
 
       merke:
-        "Na⁺/K⁺-ATPase: <strong>3 Na⁺ raus, 2 K⁺ rein</strong> pro ATP. Merke: 3 Buchstaben in \"Na+\" = 3 raus, 2 Buchstaben in \"K+\" = 2 rein.",
+        'Na⁺/K⁺-ATPase: <strong>3 Na⁺ raus, 2 K⁺ rein</strong> pro ATP. Merke: 3 Buchstaben in "Na+" = 3 raus, 2 Buchstaben in "K+" = 2 rein.',
 
       altfrage:
-        "\"Was ist KEIN passiver Transport?\" → <strong>Na⁺/K⁺-Pumpe</strong> (braucht ATP = aktiver Transport!)",
+        '"Was ist KEIN passiver Transport?" → <strong>Na⁺/K⁺-Pumpe</strong> (braucht ATP = aktiver Transport!)',
 
       klinik:
         "Mukoviszidose (Cystische Fibrose): Defekter <strong>CFTR-Chloridkanal</strong> → zähflüssiger Schleim in Lunge und Pankreas. Häufigste autosomal-rezessive Erkrankung bei Europäern.",
@@ -540,7 +569,7 @@ Glukose, Galaktose, Fruktose, N-Acetyl-Glukosamin, N-Acetyl-Galaktosamin und N-A
         "Meiose I: <strong>Homologe</strong> werden getrennt (Reduktion 2n→n). Meiose II: <strong>Chromatiden</strong> werden getrennt (wie Mitose). Crossing-Over nur in Prophase I!",
 
       altfrage:
-        "\"Wann findet Crossing-Over statt?\" → <strong>Prophase I der Meiose</strong>. NICHT in der Mitose und NICHT in Meiose II!",
+        '"Wann findet Crossing-Over statt?" → <strong>Prophase I der Meiose</strong>. NICHT in der Mitose und NICHT in Meiose II!',
 
       klinik:
         "<strong>Trisomie 21</strong> (Down-Syndrom) entsteht durch Non-Disjunction — meist in Meiose I der mütterlichen Eizelle. Risiko steigt mit dem Alter der Mutter.",
@@ -593,20 +622,13 @@ Glukose, Galaktose, Fruktose, N-Acetyl-Glukosamin, N-Acetyl-Galaktosamin und N-A
   selfTestQuestions: [
     {
       question: "Welche Organelle hat eine Doppelmembran?",
-      options: [
-        "Lysosom",
-        "Golgi-Apparat",
-        "Mitochondrium",
-        "Glattes ER",
-        "Peroxisom",
-      ],
+      options: ["Lysosom", "Golgi-Apparat", "Mitochondrium", "Glattes ER", "Peroxisom"],
       correctIndex: 2,
       explanation:
         "Mitochondrien haben eine Doppelmembran (innere + äußere Membran). Auch Zellkern und Chloroplasten haben eine Doppelmembran. Lysosomen, Golgi, glattes ER und Peroxisomen haben nur eine einfache Membran.",
     },
     {
-      question:
-        "Wie viele Na⁺-Ionen pumpt die Na⁺/K⁺-ATPase pro Zyklus RAUS?",
+      question: "Wie viele Na⁺-Ionen pumpt die Na⁺/K⁺-ATPase pro Zyklus RAUS?",
       options: ["1", "2", "3", "4", "5"],
       correctIndex: 2,
       explanation:
@@ -627,13 +649,7 @@ Glukose, Galaktose, Fruktose, N-Acetyl-Glukosamin, N-Acetyl-Galaktosamin und N-A
     },
     {
       question: "Welcher Transport benötigt KEINE Energie?",
-      options: [
-        "Na⁺/K⁺-Pumpe",
-        "Phagozytose",
-        "Osmose",
-        "Primär aktiver Transport",
-        "Exozytose",
-      ],
+      options: ["Na⁺/K⁺-Pumpe", "Phagozytose", "Osmose", "Primär aktiver Transport", "Exozytose"],
       correctIndex: 2,
       explanation:
         "Osmose ist die Diffusion von Wasser durch eine semipermeable Membran — ein passiver Vorgang ohne ATP-Verbrauch. Na⁺/K⁺-Pumpe und primär aktiver Transport brauchen direkt ATP, Phagozytose und Exozytose benötigen ebenfalls Energie.",

@@ -53,9 +53,7 @@ serve(async (req) => {
         // Get subscription to determine tier from price
         let tier: "standard" | "pro" = "standard";
         if (session.subscription) {
-          const subscription = await stripe.subscriptions.retrieve(
-            session.subscription as string
-          );
+          const subscription = await stripe.subscriptions.retrieve(session.subscription as string);
           const priceId = subscription.items.data[0]?.price.id;
           if (priceId) tier = tierFromPriceId(priceId);
         }
@@ -121,9 +119,8 @@ serve(async (req) => {
     });
   } catch (err) {
     console.error("Webhook error:", err);
-    return new Response(
-      `Webhook Error: ${err instanceof Error ? err.message : "Unknown"}`,
-      { status: 400 }
-    );
+    return new Response(`Webhook Error: ${err instanceof Error ? err.message : "Unknown"}`, {
+      status: 400,
+    });
   }
 });

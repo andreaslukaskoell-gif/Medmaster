@@ -25,14 +25,32 @@ export const MEDAT_SURPRISE_MESSAGES: SurpriseMessage[] = [
   // MedAT-Fun-Facts
   { type: "funfact", text: "MedAT-Fakt: Der BMS-Teil macht etwa 40 % der Gesamtpunktzahl aus." },
   { type: "funfact", text: "MedAT-Fakt: Biologie hat die meisten Fragen – lohnt sich besonders." },
-  { type: "funfact", text: "MedAT-Fakt: In Österreich gibt es vier Medizin-Unis mit eigenem Aufnahmetest." },
+  {
+    type: "funfact",
+    text: "MedAT-Fakt: In Österreich gibt es vier Medizin-Unis mit eigenem Aufnahmetest.",
+  },
   { type: "funfact", text: "MedAT-Fakt: Der Test findet einmal jährlich statt – meist im Juli." },
-  { type: "funfact", text: "MedAT-Fakt: KFF (kognitive Fähigkeiten) und BMS werden an einem Tag geprüft." },
+  {
+    type: "funfact",
+    text: "MedAT-Fakt: KFF (kognitive Fähigkeiten) und BMS werden an einem Tag geprüft.",
+  },
   { type: "funfact", text: "MedAT-Fakt: Gute Vorbereitung über Monate schlägt Kurz-Crash-Kurse." },
-  { type: "funfact", text: "MedAT-Fakt: Viele Bewerber unterschätzen Chemie und Physik – du nicht." },
-  { type: "funfact", text: "MedAT-Fakt: Textverständnis und Implikationen trainieren lohnt sich doppelt." },
-  { type: "funfact", text: "MedAT-Fakt: Ein konstanter Lernrhythmus hilft mehr als Mega-Sessions." },
-  { type: "funfact", text: "MedAT-Fakt: Wer 50 % eines Fachs sicher beherrscht, liegt oft vor vielen anderen." },
+  {
+    type: "funfact",
+    text: "MedAT-Fakt: Viele Bewerber unterschätzen Chemie und Physik – du nicht.",
+  },
+  {
+    type: "funfact",
+    text: "MedAT-Fakt: Textverständnis und Implikationen trainieren lohnt sich doppelt.",
+  },
+  {
+    type: "funfact",
+    text: "MedAT-Fakt: Ein konstanter Lernrhythmus hilft mehr als Mega-Sessions.",
+  },
+  {
+    type: "funfact",
+    text: "MedAT-Fakt: Wer 50 % eines Fachs sicher beherrscht, liegt oft vor vielen anderen.",
+  },
 ];
 
 const messages = MEDAT_SURPRISE_MESSAGES;

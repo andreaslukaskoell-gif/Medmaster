@@ -68,18 +68,8 @@ Beispiel: f(x) = ln(x - 2) → Definitionsbereich D = {x ∈ ℝ | x > 2} = (2, 
       vergleichsTabelle: {
         headers: ["Funktion", "Form", "Graph", "Besonderheit"],
         rows: [
-          [
-            "Linear",
-            "f(x) = kx + d",
-            "Gerade",
-            "Konstante Steigung k",
-          ],
-          [
-            "Quadratisch",
-            "f(x) = ax² + bx + c",
-            "Parabel",
-            "Scheitelpunkt bei x_s = -b/(2a)",
-          ],
+          ["Linear", "f(x) = kx + d", "Gerade", "Konstante Steigung k"],
+          ["Quadratisch", "f(x) = ax² + bx + c", "Parabel", "Scheitelpunkt bei x_s = -b/(2a)"],
           [
             "Exponential",
             "f(x) = a · bˣ",
@@ -246,7 +236,7 @@ Exponent wird zum Faktor, dann Exponent um 1 verringern.
       merke:
         "Extremstellen: <strong>f'(x) = 0</strong> setzen. Minimum wenn f''(x) > 0, Maximum wenn f''(x) < 0. <strong>(eˣ)' = eˣ</strong> — die einzige Funktion, die ihre eigene Ableitung ist!",
       altfrage:
-        "\"Was ist die Ableitung von f(x) = 3x⁴?\" → f'(x) = 4·3·x³ = <strong>12x³</strong> (Potenzregel: Exponent runter, Exponent minus 1).",
+        '"Was ist die Ableitung von f(x) = 3x⁴?" → f\'(x) = 4·3·x³ = <strong>12x³</strong> (Potenzregel: Exponent runter, Exponent minus 1).',
     },
 
     // ----------------------------------------------------------------
@@ -299,7 +289,7 @@ Der <strong>Hauptsatz der Differential- und Integralrechnung</strong> besagt:
 • Ableitung der Stammfunktion gibt die Ausgangsfunktion: (∫f(x)dx)' = f(x)
 • Integration der Ableitung gibt die Ausgangsfunktion (bis auf Konstante): ∫f'(x)dx = f(x) + C
 
-Ableitung und Integration sind also <strong>zueinander inverse Operationen</strong>.`,
+Ableitung und Integration sind also <strong>züinander inverse Operationen</strong>.`,
       merke:
         "Integration ist die <strong>Umkehrung</strong> der Ableitung. Stammfunktion von xⁿ ist <strong>xⁿ⁺¹/(n+1)</strong>. ACHTUNG: Bei x⁻¹ = 1/x ist die Stammfunktion <strong>ln|x|</strong> (nicht x⁰/0!).",
     },
@@ -316,8 +306,7 @@ Ableitung und Integration sind also <strong>zueinander inverse Operationen</stro
     },
     {
       label: "SOH-CAH-TOA",
-      value:
-        "Sin = Opposite/Hypotenuse, Cos = Adjacent/Hypotenuse, Tan = Opposite/Adjacent",
+      value: "Sin = Opposite/Hypotenuse, Cos = Adjacent/Hypotenuse, Tan = Opposite/Adjacent",
     },
     {
       label: "Potenzregel",
@@ -354,8 +343,7 @@ Ableitung und Integration sind also <strong>zueinander inverse Operationen</stro
       question: "Was ist die Ableitung von f(x) = x³?",
       options: ["x²", "3x²", "3x³", "x⁴/4", "1/3·x²"],
       correctIndex: 1,
-      explanation:
-        "Potenzregel: (xⁿ)' = n · xⁿ⁻¹. Also (x³)' = 3x².",
+      explanation: "Potenzregel: (xⁿ)' = n · xⁿ⁻¹. Also (x³)' = 3x².",
     },
     {
       question: "sin(30°) = ?",
@@ -381,12 +369,10 @@ Ableitung und Integration sind also <strong>zueinander inverse Operationen</stro
       question: "∫eˣ dx = ?",
       options: ["eˣ + C", "xeˣ + C", "eˣ/x + C", "ln(x) + C", "x + C"],
       correctIndex: 0,
-      explanation:
-        "eˣ ist seine eigene Ableitung UND seine eigene Stammfunktion: ∫eˣ dx = eˣ + C.",
+      explanation: "eˣ ist seine eigene Ableitung UND seine eigene Stammfunktion: ∫eˣ dx = eˣ + C.",
     },
     {
-      question:
-        "Der Scheitelpunkt von f(x) = x² - 4x + 3 liegt bei x = ?",
+      question: "Der Scheitelpunkt von f(x) = x² - 4x + 3 liegt bei x = ?",
       options: ["1", "2", "3", "4", "-2"],
       correctIndex: 1,
       explanation:

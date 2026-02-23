@@ -609,7 +609,7 @@ export const implikationenTasks: ImplikationTask[] = [
     ],
     correctAnswer: 4,
     explanation:
-      "Zwei 'keine'-Prämissen: Regel 2 greift. Pianisten und Sänger sind beide disjunkt zu Tänzern, aber ihr Verhältnis zueinander ist unbestimmt. Im Euler-Diagramm: Pianisten ∩ Tänzer = ∅ und Sänger ∩ Tänzer = ∅. Pianisten und Sänger könnten identisch, überlappend oder disjunkt sein. C klingt verlockend, ist aber nicht zwingend. Daher E.",
+      "Zwei 'keine'-Prämissen: Regel 2 greift. Pianisten und Sänger sind beide disjunkt zu Tänzern, aber ihr Verhältnis züinander ist unbestimmt. Im Euler-Diagramm: Pianisten ∩ Tänzer = ∅ und Sänger ∩ Tänzer = ∅. Pianisten und Sänger könnten identisch, überlappend oder disjunkt sein. C klingt verlockend, ist aber nicht zwingend. Daher E.",
     difficulty: 3,
     rulesApplied: [2],
   },
@@ -677,7 +677,7 @@ export const implikationenTasks: ImplikationTask[] = [
     ],
     correctAnswer: 4,
     explanation:
-      "Zwei 'einige'-Prämissen: Regel 1 greift. Die Schüler, die keine Sportler sind, und die Sportler, die keine Musiker sind, sind verschiedene Gruppen ohne zwingenden logischen Zusammenhang zwischen Schülern und Musikern. Im Euler-Diagramm: Die nicht-sportlichen Schüler und die nicht-musikalischen Sportler können in jeder denkbaren Relation zueinander stehen. Kein gültiger Schluss, daher E.",
+      "Zwei 'einige'-Prämissen: Regel 1 greift. Die Schüler, die keine Sportler sind, und die Sportler, die keine Musiker sind, sind verschiedene Gruppen ohne zwingenden logischen Zusammenhang zwischen Schülern und Musikern. Im Euler-Diagramm: Die nicht-sportlichen Schüler und die nicht-musikalischen Sportler können in jeder denkbaren Relation züinander stehen. Kein gültiger Schluss, daher E.",
     difficulty: 3,
     rulesApplied: [1],
   },

@@ -46,7 +46,7 @@ export const elektrizitaetChapter: Chapter = {
         "**Elektrische Energie E [Joule, J]:**\n" +
         "Die Energie ist das Produkt aus Leistung und Zeit: E = P · t. In der Praxis wird häufig die Kilowattstunde (kWh) als Energieeinheit verwendet: 1 kWh = 1000 W × 3600 s = 3,6 × 10⁶ J = 3,6 MJ.",
       merke:
-        "U = R·I (<strong>URI</strong>). Leistung: P = U·I = I²R = U²/R — drei Formen, eine Formel! Merke: <strong>\"URI P=UI\"</strong>.",
+        'U = R·I (<strong>URI</strong>). Leistung: P = U·I = I²R = U²/R — drei Formen, eine Formel! Merke: <strong>"URI P=UI"</strong>.',
     },
 
     // ──────────────────────────────────────────────
@@ -78,26 +78,14 @@ export const elektrizitaetChapter: Chapter = {
       vergleichsTabelle: {
         headers: ["Eigenschaft", "Reihenschaltung", "Parallelschaltung"],
         rows: [
-          [
-            "Strom I",
-            "Überall gleich: I_ges = I₁ = I₂",
-            "Teilt sich auf: I_ges = I₁ + I₂",
-          ],
-          [
-            "Spannung U",
-            "Teilt sich auf: U_ges = U₁ + U₂",
-            "Überall gleich: U_ges = U₁ = U₂",
-          ],
+          ["Strom I", "Überall gleich: I_ges = I₁ = I₂", "Teilt sich auf: I_ges = I₁ + I₂"],
+          ["Spannung U", "Teilt sich auf: U_ges = U₁ + U₂", "Überall gleich: U_ges = U₁ = U₂"],
           [
             "Widerstand R_ges",
             "Größer als jeder Einzelwiderstand",
             "Kleiner als der kleinste Einzelwiderstand",
           ],
-          [
-            "R_ges Formel",
-            "R_ges = R₁ + R₂ + R₃",
-            "1/R_ges = 1/R₁ + 1/R₂ + 1/R₃",
-          ],
+          ["R_ges Formel", "R_ges = R₁ + R₂ + R₃", "1/R_ges = 1/R₁ + 1/R₂ + 1/R₃"],
         ],
       },
       merke:
@@ -179,7 +167,7 @@ export const elektrizitaetChapter: Chapter = {
       merke:
         "Lenz'sche Regel: Der induzierte Strom <strong>wirkt seiner Ursache entgegen</strong> (Energieerhaltung!). Transformator: U₁/U₂ = N₁/N₂. Hohe Spannung → weniger Verluste bei Fernleitung.",
       altfrage:
-        "\"EM-Spektrum: Welche Strahlung hat die höchste Energie?\" → <strong>Gammastrahlung</strong> (höchste Frequenz, kürzeste Wellenlänge). E = h·f: Hohe Frequenz = hohe Energie.",
+        '"EM-Spektrum: Welche Strahlung hat die höchste Energie?" → <strong>Gammastrahlung</strong> (höchste Frequenz, kürzeste Wellenlänge). E = h·f: Hohe Frequenz = hohe Energie.',
     },
   ],
 
@@ -235,8 +223,7 @@ export const elektrizitaetChapter: Chapter = {
         "Das Ohm'sche Gesetz lautet U = R·I (Spannung = Widerstand × Stromstärke). P = U·I ist die Leistungsformel.",
     },
     {
-      question:
-        "Bei einer Parallelschaltung ist der Gesamtwiderstand...",
+      question: "Bei einer Parallelschaltung ist der Gesamtwiderstand...",
       options: [
         "Gleich der Summe",
         "Größer als alle",

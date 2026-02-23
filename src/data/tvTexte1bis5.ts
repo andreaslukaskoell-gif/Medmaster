@@ -16,7 +16,7 @@ Die Kommunikation zwischen Darmbakterien und Immunsystem erfolgt über verschied
 
 Auch die Produktion von Antikörpern wird durch die Darmmikrobiota beeinflusst. Insbesondere Immunglobulin A (IgA), das in großen Mengen im Darm vorkommt, wird durch bakterielle Signale reguliert. IgA bindet an potenziell schädliche Mikroorganismen und neutralisiert sie, ohne eine Entzündungsreaktion auszulösen.
 
-Die Zusammensetzung der Darmmikrobiota ist individuell verschieden und wird durch zahlreiche Faktoren beeinflusst: Ernährung, Medikamente (insbesondere Antibiotika), Stress und Umweltfaktoren spielen eine Rolle. Eine vielfältige Darmflora mit vielen verschiedenen Bakterienarten gilt als besonders gesundheitsfördernd. Monotone Ernährung oder häufige Antibiotika-Einnahmen können die Diversität verringern und das Immunsystem schwächen.
+Die Zusammensetzung der Darmmikrobiota ist individüll verschieden und wird durch zahlreiche Faktoren beeinflusst: Ernährung, Medikamente (insbesondere Antibiotika), Stress und Umweltfaktoren spielen eine Rolle. Eine vielfältige Darmflora mit vielen verschiedenen Bakterienarten gilt als besonders gesundheitsfördernd. Monotone Ernährung oder häufige Antibiotika-Einnahmen können die Diversität verringern und das Immunsystem schwächen.
 
 Besonders eindrucksvoll zeigt sich die Bedeutung der Darmmikrobiota in Tierversuchen mit keimfreien Mäusen, die ohne jegliche Bakterien aufwachsen. Diese Tiere haben ein unterentwickeltes Immunsystem und sind anfälliger für Infektionen und Entzündungen. Führt man ihnen gezielt bestimmte Bakterienstämme zu, normalisiert sich die Immunfunktion teilweise wieder.
 
@@ -30,11 +30,13 @@ Die Forschung zur Darmmikrobiota steht erst am Anfang. Viele Fragen sind noch of
           "Etwa 100 Millionen",
           "Etwa 100 Billionen",
           "Etwa 100 Milliarden",
-          "Genauso viele wie der Körper Zellen besitzt"
+          "Genauso viele wie der Körper Zellen besitzt",
         ],
         correctAnswer: 1,
-        explanation: "Der Text nennt explizit \"etwa 100 Billionen Bakterien\", was mehr ist als die Anzahl der Körperzellen. 100 Millionen und 100 Milliarden sind zu niedrig, und die letzte Option ist falsch, da der Text sagt, es seien MEHR als Körperzellen.",
-        relevantPassage: "Der menschliche Darm beherbergt etwa 100 Billionen Bakterien – mehr als der Körper Zellen besitzt."
+        explanation:
+          'Der Text nennt explizit "etwa 100 Billionen Bakterien", was mehr ist als die Anzahl der Körperzellen. 100 Millionen und 100 Milliarden sind zu niedrig, und die letzte Option ist falsch, da der Text sagt, es seien MEHR als Körperzellen.',
+        relevantPassage:
+          "Der menschliche Darm beherbergt etwa 100 Billionen Bakterien – mehr als der Körper Zellen besitzt.",
       },
       {
         question: "Welche Funktion haben regulatorische T-Zellen laut dem Text?",
@@ -42,11 +44,13 @@ Die Forschung zur Darmmikrobiota steht erst am Anfang. Viele Fragen sind noch of
           "Sie greifen alle fremden Bakterien an",
           "Sie produzieren kurzkettige Fettsäuren",
           "Sie verhindern überschießende Immunreaktionen",
-          "Sie verstärken die Darmbarriere"
+          "Sie verstärken die Darmbarriere",
         ],
         correctAnswer: 2,
-        explanation: "Der Text beschreibt regulatorische T-Zellen als \"Schiedsrichter\", die überschießende Reaktionen verhindern. Sie greifen nicht alle Bakterien an, produzieren keine Fettsäuren (das tun Bakterien), und verstärken nicht direkt die Darmbarriere.",
-        relevantPassage: "Diese Immunzellen wirken wie Schiedsrichter im Immunsystem: Sie verhindern überschießende Reaktionen gegen harmlose Substanzen und körpereigene Strukturen."
+        explanation:
+          'Der Text beschreibt regulatorische T-Zellen als "Schiedsrichter", die überschießende Reaktionen verhindern. Sie greifen nicht alle Bakterien an, produzieren keine Fettsäuren (das tun Bakterien), und verstärken nicht direkt die Darmbarriere.',
+        relevantPassage:
+          "Diese Immunzellen wirken wie Schiedsrichter im Immunsystem: Sie verhindern überschießende Reaktionen gegen harmlose Substanzen und körpereigene Strukturen.",
       },
       {
         question: "Was kann aus dem Text über keimfreie Mäuse geschlossen werden?",
@@ -54,11 +58,13 @@ Die Forschung zur Darmmikrobiota steht erst am Anfang. Viele Fragen sind noch of
           "Sie haben ein stärkeres Immunsystem als normale Mäuse",
           "Sie sind vollständig resistent gegen Infektionen",
           "Darmbakterien sind für die normale Entwicklung des Immunsystems notwendig",
-          "Sie können keine regulatorischen T-Zellen bilden"
+          "Sie können keine regulatorischen T-Zellen bilden",
         ],
         correctAnswer: 2,
-        explanation: "Keimfreie Mäuse haben ein unterentwickeltes Immunsystem und sind anfälliger für Infektionen, was zeigt, dass Darmbakterien für die normale Immunentwicklung notwendig sind. Sie haben kein stärkeres Immunsystem, sind nicht resistent, und der Text sagt nicht, dass sie GAR KEINE regulatorischen T-Zellen bilden können.",
-        relevantPassage: "Diese Tiere haben ein unterentwickeltes Immunsystem und sind anfälliger für Infektionen und Entzündungen."
+        explanation:
+          "Keimfreie Mäuse haben ein unterentwickeltes Immunsystem und sind anfälliger für Infektionen, was zeigt, dass Darmbakterien für die normale Immunentwicklung notwendig sind. Sie haben kein stärkeres Immunsystem, sind nicht resistent, und der Text sagt nicht, dass sie GAR KEINE regulatorischen T-Zellen bilden können.",
+        relevantPassage:
+          "Diese Tiere haben ein unterentwickeltes Immunsystem und sind anfälliger für Infektionen und Entzündungen.",
       },
       {
         question: "Laut dem Text, welche Substanzen produzieren Darmbakterien aus Ballaststoffen?",
@@ -66,11 +72,13 @@ Die Forschung zur Darmmikrobiota steht erst am Anfang. Viele Fragen sind noch of
           "Immunglobulin A",
           "Regulatorische T-Zellen",
           "Kurzkettige Fettsäuren",
-          "Probiotika"
+          "Probiotika",
         ],
         correctAnswer: 2,
-        explanation: "Der Text nennt explizit kurzkettige Fettsäuren wie Butyrat, die aus unverdaulichen Ballaststoffen entstehen. IgA ist ein Antikörper, T-Zellen sind Immunzellen, und Probiotika sind zugeführte Bakterienkulturen – keine Produkte der Bakterien.",
-        relevantPassage: "Bakterien produzieren kurzkettige Fettsäuren wie Butyrat, die aus unverdaulichen Ballaststoffen entstehen."
+        explanation:
+          "Der Text nennt explizit kurzkettige Fettsäuren wie Butyrat, die aus unverdaulichen Ballaststoffen entstehen. IgA ist ein Antikörper, T-Zellen sind Immunzellen, und Probiotika sind zugeführte Bakterienkulturen – keine Produkte der Bakterien.",
+        relevantPassage:
+          "Bakterien produzieren kurzkettige Fettsäuren wie Butyrat, die aus unverdaulichen Ballaststoffen entstehen.",
       },
       {
         question: "Was ist laut dem Text ein Merkmal einer gesunden Darmmikrobiota?",
@@ -78,13 +86,15 @@ Die Forschung zur Darmmikrobiota steht erst am Anfang. Viele Fragen sind noch of
           "Möglichst wenige verschiedene Bakterienarten",
           "Hohe Diversität mit vielen verschiedenen Bakterienarten",
           "Vollständige Abwesenheit von Clostridien",
-          "Keine Produktion von kurzkettigen Fettsäuren"
+          "Keine Produktion von kurzkettigen Fettsäuren",
         ],
         correctAnswer: 1,
-        explanation: "Der Text betont, dass \"eine vielfältige Darmflora mit vielen verschiedenen Bakterienarten als besonders gesundheitsfördernd\" gilt. Wenige Arten, fehlende Clostridien und keine Fettsäuren wären alle ungünstig.",
-        relevantPassage: "Eine vielfältige Darmflora mit vielen verschiedenen Bakterienarten gilt als besonders gesundheitsfördernd."
-      }
-    ]
+        explanation:
+          'Der Text betont, dass "eine vielfältige Darmflora mit vielen verschiedenen Bakterienarten als besonders gesundheitsfördernd" gilt. Wenige Arten, fehlende Clostridien und keine Fettsäuren wären alle ungünstig.',
+        relevantPassage:
+          "Eine vielfältige Darmflora mit vielen verschiedenen Bakterienarten gilt als besonders gesundheitsfördernd.",
+      },
+    ],
   },
   {
     id: "tv-2",
@@ -112,16 +122,18 @@ Meditation und Achtsamkeitstraining zeigen messbare Effekte auf die Gehirnstrukt
 Kritische Phasen in der Entwicklung bleiben wichtig. Im Kindesalter ist das Gehirn besonders formbar, was das Lernen erleichtert, aber auch Vulnerabilität für negative Einflüsse bedeutet. Dennoch belegen die Forschungen zur Neuroplastizität: Das erwachsene Gehirn bleibt veränderbar. Jede Erfahrung hinterlässt Spuren in unserer neuronalen Architektur. Das Gehirn ist kein statisches Organ, sondern ein dynamisches System, das sich kontinuierlich an die Anforderungen seiner Umwelt anpasst.`,
     questions: [
       {
-        question: "Laut dem Text, was bedeutet das Prinzip \"use it or lose it\"?",
+        question: 'Laut dem Text, was bedeutet das Prinzip "use it or lose it"?',
         options: [
           "Nervenzellen sterben ab, wenn sie nicht genutzt werden",
           "Häufig genutzte neuronale Verbindungen werden stärker, ungenutzte verkümmern",
           "Das Gehirn kann nur in der Kindheit lernen",
-          "Neue Nervenzellen entstehen nur bei Nutzung"
+          "Neue Nervenzellen entstehen nur bei Nutzung",
         ],
         correctAnswer: 1,
-        explanation: "Der Text erklärt, dass oft genutzte Verbindungen stärker werden, während ungenutzte verkümmern. Es geht um Verbindungen, nicht um Zelltod, und das Gehirn kann auch im Erwachsenenalter lernen. Neurogenese ist ein separater Prozess.",
-        relevantPassage: "Nach dem Prinzip \"use it or lose it\" werden oft genutzte Verbindungen stärker, während ungenutzte verkümmern."
+        explanation:
+          "Der Text erklärt, dass oft genutzte Verbindungen stärker werden, während ungenutzte verkümmern. Es geht um Verbindungen, nicht um Zelltod, und das Gehirn kann auch im Erwachsenenalter lernen. Neurogenese ist ein separater Prozess.",
+        relevantPassage:
+          'Nach dem Prinzip "use it or lose it" werden oft genutzte Verbindungen stärker, während ungenutzte verkümmern.',
       },
       {
         question: "Was zeigt sich laut dem Text bei Londoner Taxifahrern im Gehirn?",
@@ -129,11 +141,13 @@ Kritische Phasen in der Entwicklung bleiben wichtig. Im Kindesalter ist das Gehi
           "Vergrößerte Bereiche für Handbewegungen",
           "Ein vergrößerter Hippocampus",
           "Mehr Neuronen in der Amygdala",
-          "Verdünnte Bereiche für Aufmerksamkeit"
+          "Verdünnte Bereiche für Aufmerksamkeit",
         ],
         correctAnswer: 1,
-        explanation: "Der Text nennt explizit den vergrößerten Hippocampus bei Taxifahrern, der für räumliche Navigation wichtig ist. Vergrößerte Handbereiche werden bei Violinisten erwähnt. Amygdala und Aufmerksamkeitsbereiche werden in anderem Zusammenhang genannt.",
-        relevantPassage: "Bei Londoner Taxifahrern, die sich komplexe Stadtpläne merken müssen, ist der Hippocampus – eine für räumliche Navigation wichtige Struktur – messbar größer als bei Durchschnittsbürgern."
+        explanation:
+          "Der Text nennt explizit den vergrößerten Hippocampus bei Taxifahrern, der für räumliche Navigation wichtig ist. Vergrößerte Handbereiche werden bei Violinisten erwähnt. Amygdala und Aufmerksamkeitsbereiche werden in anderem Zusammenhang genannt.",
+        relevantPassage:
+          "Bei Londoner Taxifahrern, die sich komplexe Stadtpläne merken müssen, ist der Hippocampus – eine für räumliche Navigation wichtige Struktur – messbar größer als bei Durchschnittsbürgern.",
       },
       {
         question: "Welche Aussage über Neurogenese trifft laut dem Text zu?",
@@ -141,11 +155,13 @@ Kritische Phasen in der Entwicklung bleiben wichtig. Im Kindesalter ist das Gehi
           "Sie findet im erwachsenen Gehirn überhaupt nicht statt",
           "Sie ist nur im Kindesalter möglich",
           "Sie kann auch im erwachsenen Gehirn in bestimmten Regionen auftreten",
-          "Sie ist schädlich für die Gehirnfunktion"
+          "Sie ist schädlich für die Gehirnfunktion",
         ],
         correctAnswer: 2,
-        explanation: "Der Text erklärt, dass Neurogenese auch im erwachsenen Gehirn in bestimmten Regionen, insbesondere im Hippocampus, stattfinden kann. Die ersten beiden Optionen sind zu absolut und falsch, die letzte widerspricht dem Text.",
-        relevantPassage: "Heute wissen wir, dass auch im erwachsenen Gehirn in bestimmten Regionen neue Neuronen entstehen können, insbesondere im Hippocampus."
+        explanation:
+          "Der Text erklärt, dass Neurogenese auch im erwachsenen Gehirn in bestimmten Regionen, insbesondere im Hippocampus, stattfinden kann. Die ersten beiden Optionen sind zu absolut und falsch, die letzte widerspricht dem Text.",
+        relevantPassage:
+          "Heute wissen wir, dass auch im erwachsenen Gehirn in bestimmten Regionen neue Neuronen entstehen können, insbesondere im Hippocampus.",
       },
       {
         question: "Was kann aus dem Text über maladaptive Plastizität geschlossen werden?",
@@ -153,11 +169,13 @@ Kritische Phasen in der Entwicklung bleiben wichtig. Im Kindesalter ist das Gehi
           "Sie tritt nur bei Kindern auf",
           "Sie ist immer vorteilhaft für das Gehirn",
           "Sie kann zu negativen Folgen wie chronischen Schmerzen führen",
-          "Sie verhindert das Lernen neuer Fähigkeiten"
+          "Sie verhindert das Lernen neuer Fähigkeiten",
         ],
         correctAnswer: 2,
-        explanation: "Der Text nennt chronische Schmerzen und Sucht als Beispiele für maladaptive (schädliche) Plastizität. Sie ist also nicht vorteilhaft und nicht auf Kinder beschränkt. Ein Zusammenhang zum Lernverhindern wird nicht erwähnt.",
-        relevantPassage: "Allerdings hat Neuroplastizität auch eine Kehrseite. Chronische Schmerzen können durch maladaptive Plastizität entstehen: Das Nervensystem \"lernt\" Schmerz und reagiert überempfindlich auf Reize."
+        explanation:
+          "Der Text nennt chronische Schmerzen und Sucht als Beispiele für maladaptive (schädliche) Plastizität. Sie ist also nicht vorteilhaft und nicht auf Kinder beschränkt. Ein Zusammenhang zum Lernverhindern wird nicht erwähnt.",
+        relevantPassage:
+          'Allerdings hat Neuroplastizität auch eine Kehrseite. Chronische Schmerzen können durch maladaptive Plastizität entstehen: Das Nervensystem "lernt" Schmerz und reagiert überempfindlich auf Reize.',
       },
       {
         question: "Laut dem Text, welche Faktoren fördern die Neurogenese?",
@@ -165,13 +183,15 @@ Kritische Phasen in der Entwicklung bleiben wichtig. Im Kindesalter ist das Gehi
           "Stress und Schlafmangel",
           "Isolation und Ruhe",
           "Körperliche Bewegung, geistige Anregung und soziale Interaktionen",
-          "Meditation allein"
+          "Meditation allein",
         ],
         correctAnswer: 2,
-        explanation: "Der Text nennt explizit körperliche Bewegung, geistige Anregung und soziale Interaktionen als förderlich. Stress und Schlafmangel hemmen die Neurogenese. Meditation wird erwähnt, aber nicht als alleiniger Faktor für Neurogenese.",
-        relevantPassage: "Körperliche Bewegung, geistige Anregung und soziale Interaktionen fördern diesen Prozess. Stress und Schlafmangel hingegen hemmen die Neurogenese."
-      }
-    ]
+        explanation:
+          "Der Text nennt explizit körperliche Bewegung, geistige Anregung und soziale Interaktionen als förderlich. Stress und Schlafmangel hemmen die Neurogenese. Meditation wird erwähnt, aber nicht als alleiniger Faktor für Neurogenese.",
+        relevantPassage:
+          "Körperliche Bewegung, geistige Anregung und soziale Interaktionen fördern diesen Prozess. Stress und Schlafmangel hingegen hemmen die Neurogenese.",
+      },
+    ],
   },
   {
     id: "tv-3",
@@ -204,11 +224,13 @@ Trotz des enormen Potenzials bleiben viele Fragen offen. Wie stabil sind epigene
           "Sie verändert die DNA-Sequenz dauerhaft",
           "Sie aktiviert alle Gene gleichzeitig",
           "Stark methylierte Genabschnitte werden nicht abgelesen",
-          "Sie führt immer zu Krebserkrankungen"
+          "Sie führt immer zu Krebserkrankungen",
         ],
         correctAnswer: 2,
-        explanation: "Der Text erklärt, dass stark methylierte Genabschnitte in der Regel nicht abgelesen werden, die Gene bleiben stumm. Methylierung verändert nicht die DNA-Sequenz, aktiviert nicht alle Gene und führt nicht automatisch zu Krebs.",
-        relevantPassage: "Diese Methylierung wirkt wie ein molekularer Schalter: Stark methylierte Genabschnitte werden in der Regel nicht abgelesen, die Gene bleiben stumm."
+        explanation:
+          "Der Text erklärt, dass stark methylierte Genabschnitte in der Regel nicht abgelesen werden, die Gene bleiben stumm. Methylierung verändert nicht die DNA-Sequenz, aktiviert nicht alle Gene und führt nicht automatisch zu Krebs.",
+        relevantPassage:
+          "Diese Methylierung wirkt wie ein molekularer Schalter: Stark methylierte Genabschnitte werden in der Regel nicht abgelesen, die Gene bleiben stumm.",
       },
       {
         question: "Was kann aus dem Text über eineiige Zwillinge geschlossen werden?",
@@ -216,23 +238,28 @@ Trotz des enormen Potenzials bleiben viele Fragen offen. Wie stabil sind epigene
           "Sie haben identische epigenetische Muster",
           "Sie entwickeln niemals unterschiedliche Krankheiten",
           "Epigenetische Unterschiede können zu verschiedenen Eigenschaften führen",
-          "Ihre DNA unterscheidet sich durch Umwelteinflüsse"
+          "Ihre DNA unterscheidet sich durch Umwelteinflüsse",
         ],
         correctAnswer: 2,
-        explanation: "Der Text betont, dass eineiige Zwillinge trotz identischer DNA unterschiedliche Eigenschaften entwickeln können – aufgrund divergierender epigenetischer Muster. Ihre epigenetischen Muster sind nicht identisch, sie können unterschiedliche Krankheiten entwickeln, und ihre DNA-Sequenz bleibt gleich.",
-        relevantPassage: "Obwohl sie identische DNA besitzen, entwickeln sie oft unterschiedliche Eigenschaften und Krankheitsrisiken – besonders wenn sie in verschiedenen Umgebungen aufwachsen. Diese Unterschiede lassen sich auf divergierende epigenetische Muster zurückführen."
+        explanation:
+          "Der Text betont, dass eineiige Zwillinge trotz identischer DNA unterschiedliche Eigenschaften entwickeln können – aufgrund divergierender epigenetischer Muster. Ihre epigenetischen Muster sind nicht identisch, sie können unterschiedliche Krankheiten entwickeln, und ihre DNA-Sequenz bleibt gleich.",
+        relevantPassage:
+          "Obwohl sie identische DNA besitzen, entwickeln sie oft unterschiedliche Eigenschaften und Krankheitsrisiken – besonders wenn sie in verschiedenen Umgebungen aufwachsen. Diese Unterschiede lassen sich auf divergierende epigenetische Muster zurückführen.",
       },
       {
-        question: "Laut dem Text, was zeigt das Beispiel des niederländischen Hungerwinters 1944/45?",
+        question:
+          "Laut dem Text, was zeigt das Beispiel des niederländischen Hungerwinters 1944/45?",
         options: [
           "Hunger verändert die DNA-Sequenz der Nachkommen",
           "Epigenetische Veränderungen können über Generationen vererbt werden",
           "Nur Männer vererben epigenetische Markierungen",
-          "Hungersnöte haben keine langfristigen biologischen Folgen"
+          "Hungersnöte haben keine langfristigen biologischen Folgen",
         ],
         correctAnswer: 1,
-        explanation: "Der Text nutzt den Hungerwinter als Beispiel für transgenerationale Vererbung: Kinder von hungernden Müttern hatten später erhöhte Krankheitsraten – durch vererbte epigenetische Veränderungen. Die DNA-Sequenz wird nicht verändert, beide Geschlechter können vererben, und es gibt langfristige Folgen.",
-        relevantPassage: "Der niederländische Hungerwinter 1944/45 liefert ein dramatisches Beispiel: Kinder von Müttern, die während der Schwangerschaft Hunger litten, hatten Jahrzehnte später erhöhte Raten von Diabetes und Herzkrankheiten."
+        explanation:
+          "Der Text nutzt den Hungerwinter als Beispiel für transgenerationale Vererbung: Kinder von hungernden Müttern hatten später erhöhte Krankheitsraten – durch vererbte epigenetische Veränderungen. Die DNA-Sequenz wird nicht verändert, beide Geschlechter können vererben, und es gibt langfristige Folgen.",
+        relevantPassage:
+          "Der niederländische Hungerwinter 1944/45 liefert ein dramatisches Beispiel: Kinder von Müttern, die während der Schwangerschaft Hunger litten, hatten Jahrzehnte später erhöhte Raten von Diabetes und Herzkrankheiten.",
       },
       {
         question: "Welche Rolle spielen Histonmodifikationen laut dem Text?",
@@ -240,11 +267,13 @@ Trotz des enormen Potenzials bleiben viele Fragen offen. Wie stabil sind epigene
           "Sie verändern die Basensequenz der DNA",
           "Sie beeinflussen, wie zugänglich Gene für Transkription sind",
           "Sie verhindern alle Formen von Krebs",
-          "Sie haben keinen Einfluss auf die Genexpression"
+          "Sie haben keinen Einfluss auf die Genexpression",
         ],
         correctAnswer: 1,
-        explanation: "Der Text erklärt, dass Histonmodifikationen beeinflussen, wie dicht DNA gepackt ist – eng gepackt macht Gene unzugänglich, aufgelockert ermöglicht Genexpression. Sie verändern nicht die DNA-Sequenz, verhindern nicht alle Krebsformen und beeinflussen sehr wohl die Expression.",
-        relevantPassage: "Diese Modifikationen beeinflussen, wie dicht die DNA um die Histone gewickelt ist. Eng gepacktes Chromatin macht Gene unzugänglich für die Transkriptionsmaschinerie, während aufgelockertes Chromatin die Genexpression ermöglicht."
+        explanation:
+          "Der Text erklärt, dass Histonmodifikationen beeinflussen, wie dicht DNA gepackt ist – eng gepackt macht Gene unzugänglich, aufgelockert ermöglicht Genexpression. Sie verändern nicht die DNA-Sequenz, verhindern nicht alle Krebsformen und beeinflussen sehr wohl die Expression.",
+        relevantPassage:
+          "Diese Modifikationen beeinflussen, wie dicht die DNA um die Histone gewickelt ist. Eng gepacktes Chromatin macht Gene unzugänglich für die Transkriptionsmaschinerie, während aufgelockertes Chromatin die Genexpression ermöglicht.",
       },
       {
         question: "Laut dem Text, wie beeinflussen Umweltfaktoren die Epigenetik?",
@@ -252,13 +281,15 @@ Trotz des enormen Potenzials bleiben viele Fragen offen. Wie stabil sind epigene
           "Sie haben keinen Einfluss auf epigenetische Markierungen",
           "Nur chemische Gifte können epigenetische Veränderungen auslösen",
           "Ernährung, Stress, Schadstoffe und körperliche Aktivität hinterlassen epigenetische Spuren",
-          "Umweltfaktoren löschen alle epigenetischen Markierungen"
+          "Umweltfaktoren löschen alle epigenetischen Markierungen",
         ],
         correctAnswer: 2,
-        explanation: "Der Text nennt explizit Ernährung, Schadstoffe, Stress und körperliche Aktivität als Faktoren, die epigenetische Spuren hinterlassen. Umweltfaktoren haben also sehr wohl Einfluss, nicht nur Gifte, und sie löschen nicht alle Markierungen.",
-        relevantPassage: "Ernährung beeinflusst die Verfügbarkeit von Methyldonoren wie Folsäure, die für DNA-Methylierung benötigt werden. Schadstoffe, Stress und körperliche Aktivität hinterlassen ebenfalls epigenetische Spuren."
-      }
-    ]
+        explanation:
+          "Der Text nennt explizit Ernährung, Schadstoffe, Stress und körperliche Aktivität als Faktoren, die epigenetische Spuren hinterlassen. Umweltfaktoren haben also sehr wohl Einfluss, nicht nur Gifte, und sie löschen nicht alle Markierungen.",
+        relevantPassage:
+          "Ernährung beeinflusst die Verfügbarkeit von Methyldonoren wie Folsäure, die für DNA-Methylierung benötigt werden. Schadstoffe, Stress und körperliche Aktivität hinterlassen ebenfalls epigenetische Spuren.",
+      },
+    ],
   },
   {
     id: "tv-4",
@@ -271,9 +302,9 @@ Die verheerendste Pandemie der Geschichte war vermutlich der "Schwarze Tod" im 1
 
 Im 16. Jahrhundert erlebten die indigenen Völker Amerikas eine demografische Katastrophe. Europäische Eroberer brachten Krankheiten wie Pocken, Masern und Typhus mit, gegen die die einheimische Bevölkerung keine Immunität besaß. Schätzungen zufolge starben bis zu 90 Prozent der indigenen Bevölkerung – ein Genozid durch Mikroorganismen, der die koloniale Eroberung erleichterte.
 
-Die Spanische Grippe von 1918/19 war die tödlichste Pandemie der Neuzeit. Der H1N1-Influenzavirus infizierte etwa ein Drittel der Weltbevölkerung und forderte zwischen 50 und 100 Millionen Todesopfer – mehr als der Erste Weltkrieg. Bemerkenswert war die hohe Sterblichkeit bei jungen, gesunden Erwachsenen, vermutlich aufgrund eines "Zytokinsturms", einer überschießenden Immunreaktion. Die Pandemie traf auf eine kriegsgeschwächte Welt mit schlechter Ernährung und überfüllten Verhältnissen, was ihre Ausbreitung begünstigte.
+Die Spanische Grippe von 1918/19 war die tödlichste Pandemie der Neuzeit. Der H1N1-Inflünzavirus infizierte etwa ein Drittel der Weltbevölkerung und forderte zwischen 50 und 100 Millionen Todesopfer – mehr als der Erste Weltkrieg. Bemerkenswert war die hohe Sterblichkeit bei jungen, gesunden Erwachsenen, vermutlich aufgrund eines "Zytokinsturms", einer überschießenden Immunreaktion. Die Pandemie traf auf eine kriegsgeschwächte Welt mit schlechter Ernährung und überfüllten Verhältnissen, was ihre Ausbreitung begünstigte.
 
-Im 20. Jahrhundert veränderte die HIV/AIDS-Pandemie die Welt auf andere Weise. Seit ihrer Identifizierung in den 1980er Jahren hat HIV etwa 40 Millionen Menschen getötet. Anders als akute Infektionen wie Influenza entwickelt sich HIV zu einer chronischen Krankheit. Die Pandemie führte zu massiver sozialer Stigmatisierung, mobilisierte aber auch Patientenaktivismus und revolutionierte die Arzneimittelentwicklung. Heute ermöglichen antiretrovirale Therapien ein nahezu normales Leben mit HIV.
+Im 20. Jahrhundert veränderte die HIV/AIDS-Pandemie die Welt auf andere Weise. Seit ihrer Identifizierung in den 1980er Jahren hat HIV etwa 40 Millionen Menschen getötet. Anders als akute Infektionen wie Inflünza entwickelt sich HIV zu einer chronischen Krankheit. Die Pandemie führte zu massiver sozialer Stigmatisierung, mobilisierte aber auch Patientenaktivismus und revolutionierte die Arzneimittelentwicklung. Heute ermöglichen antiretrovirale Therapien ein nahezu normales Leben mit HIV.
 
 Die SARS-Epidemie 2003 und die H1N1-Pandemie 2009 waren moderne Warnsignale. SARS wurde durch rigorose Eindämmungsmaßnahmen gestoppt, bevor es sich global ausbreitete. Die H1N1-Pandemie verlief glimpflicher als befürchtet, offenbarte aber Schwächen in der globalen Pandemievorsorge. Beide Ausbrüche zeigten die Bedeutung schneller Reaktionen und internationaler Koordination.
 
@@ -286,16 +317,19 @@ Gleichzeitig verfügen wir über bessere Werkzeuge als je zuvor. Genomsequenzier
 Die Geschichte lehrt: Pandemien sind unvermeidlich, aber ihre Folgen hängen von unserer Vorbereitung ab. Investitionen in Gesundheitssysteme, Forschung und globale Kooperation sind keine Kosten, sondern Versicherungen gegen künftige Katastrophen. Die Frage ist nicht, ob die nächste Pandemie kommt, sondern wann – und wie gut wir darauf vorbereitet sind.`,
     questions: [
       {
-        question: "Laut dem Text, wie viele Menschen starben schätzungsweise an der Spanischen Grippe?",
+        question:
+          "Laut dem Text, wie viele Menschen starben schätzungsweise an der Spanischen Grippe?",
         options: [
           "Ein Drittel der europäischen Bevölkerung",
           "Zwischen 50 und 100 Millionen",
           "Etwa 40 Millionen",
-          "90 Prozent der Weltbevölkerung"
+          "90 Prozent der Weltbevölkerung",
         ],
         correctAnswer: 1,
-        explanation: "Der Text nennt 50-100 Millionen Todesopfer durch die Spanische Grippe. Ein Drittel der europäischen Bevölkerung bezieht sich auf die Pest, 40 Millionen auf HIV/AIDS, und 90% der Bevölkerung auf indigene Völker Amerikas.",
-        relevantPassage: "Der H1N1-Influenzavirus infizierte etwa ein Drittel der Weltbevölkerung und forderte zwischen 50 und 100 Millionen Todesopfer"
+        explanation:
+          "Der Text nennt 50-100 Millionen Todesopfer durch die Spanische Grippe. Ein Drittel der europäischen Bevölkerung bezieht sich auf die Pest, 40 Millionen auf HIV/AIDS, und 90% der Bevölkerung auf indigene Völker Amerikas.",
+        relevantPassage:
+          "Der H1N1-Inflünzavirus infizierte etwa ein Drittel der Weltbevölkerung und forderte zwischen 50 und 100 Millionen Todesopfer",
       },
       {
         question: "Was war laut dem Text bemerkenswert an der Spanischen Grippe?",
@@ -303,35 +337,43 @@ Die Geschichte lehrt: Pandemien sind unvermeidlich, aber ihre Folgen hängen von
           "Sie wurde durch Rattenflöhe übertragen",
           "Sie betraf nur ältere Menschen",
           "Sie hatte eine hohe Sterblichkeit bei jungen, gesunden Erwachsenen",
-          "Sie wurde durch Impfungen vollständig ausgerottet"
+          "Sie wurde durch Impfungen vollständig ausgerottet",
         ],
         correctAnswer: 2,
-        explanation: "Der Text hebt die hohe Sterblichkeit bei jungen, gesunden Erwachsenen hervor, vermutlich durch Zytokinsturm. Rattenflöhe übertrugen die Pest, nicht Influenza. Ältere waren nicht primär betroffen, und Impfungen gab es damals nicht.",
-        relevantPassage: "Bemerkenswert war die hohe Sterblichkeit bei jungen, gesunden Erwachsenen, vermutlich aufgrund eines \"Zytokinsturms\", einer überschießenden Immunreaktion."
+        explanation:
+          "Der Text hebt die hohe Sterblichkeit bei jungen, gesunden Erwachsenen hervor, vermutlich durch Zytokinsturm. Rattenflöhe übertrugen die Pest, nicht Inflünza. Ältere waren nicht primär betroffen, und Impfungen gab es damals nicht.",
+        relevantPassage:
+          'Bemerkenswert war die hohe Sterblichkeit bei jungen, gesunden Erwachsenen, vermutlich aufgrund eines "Zytokinsturms", einer überschießenden Immunreaktion.',
       },
       {
-        question: "Welche langfristige soziale Folge hatte die Pest im 14. Jahrhundert laut dem Text?",
+        question:
+          "Welche langfristige soziale Folge hatte die Pest im 14. Jahrhundert laut dem Text?",
         options: [
           "Stärkung des Feudalsystems",
           "Vollständige Entvölkerung Europas",
           "Stärkung der Position von Bauern und Handwerkern",
-          "Einführung der Impfpflicht"
+          "Einführung der Impfpflicht",
         ],
         correctAnswer: 2,
-        explanation: "Der Text erklärt, dass der Arbeitskräftemangel die Position von Bauern und Handwerkern stärkte und zum Niedergang (nicht Stärkung) des Feudalsystems beitrug. Europa wurde nicht vollständig entvölkert, und Impfungen gab es im 14. Jahrhundert nicht.",
-        relevantPassage: "Der Arbeitskräftemangel stärkte die Position von Bauern und Handwerkern und trug langfristig zum Niedergang des Feudalsystems bei."
+        explanation:
+          "Der Text erklärt, dass der Arbeitskräftemangel die Position von Bauern und Handwerkern stärkte und zum Niedergang (nicht Stärkung) des Feudalsystems beitrug. Europa wurde nicht vollständig entvölkert, und Impfungen gab es im 14. Jahrhundert nicht.",
+        relevantPassage:
+          "Der Arbeitskräftemangel stärkte die Position von Bauern und Handwerkern und trug langfristig zum Niedergang des Feudalsystems bei.",
       },
       {
-        question: "Was kann aus dem Text über moderne Faktoren für Pandemierisiken geschlossen werden?",
+        question:
+          "Was kann aus dem Text über moderne Faktoren für Pandemierisiken geschlossen werden?",
         options: [
           "Das Pandemierisiko ist heute geringer als je zuvor",
           "Nur globale Mobilität erhöht das Risiko",
           "Mehrere Faktoren wie Mobilität, Entwaldung und Massentierhaltung erhöhen das Risiko",
-          "Der Klimawandel hat keinen Einfluss auf Pandemien"
+          "Der Klimawandel hat keinen Einfluss auf Pandemien",
         ],
         correctAnswer: 2,
-        explanation: "Der Text nennt mehrere risikoerhöhende Faktoren: globale Mobilität, Entwaldung, Massentierhaltung und Klimawandel. Das Risiko ist nicht geringer, und es wird nicht nur ein Faktor genannt.",
-        relevantPassage: "Globale Mobilität ermöglicht rasche Erregerverbreitung. Entwaldung und Lebensraumzerstörung bringen Menschen in engeren Kontakt mit Wildtieren, Reservoir für viele Zoonosen. Massentierhaltung fördert die Entstehung und Ausbreitung von Krankheitserregern. Der Klimawandel verschiebt die Verbreitungsgebiete von Vektoren wie Mücken."
+        explanation:
+          "Der Text nennt mehrere risikörhöhende Faktoren: globale Mobilität, Entwaldung, Massentierhaltung und Klimawandel. Das Risiko ist nicht geringer, und es wird nicht nur ein Faktor genannt.",
+        relevantPassage:
+          "Globale Mobilität ermöglicht rasche Erregerverbreitung. Entwaldung und Lebensraumzerstörung bringen Menschen in engeren Kontakt mit Wildtieren, Reservoir für viele Zoonosen. Massentierhaltung fördert die Entstehung und Ausbreitung von Krankheitserregern. Der Klimawandel verschiebt die Verbreitungsgebiete von Vektoren wie Mücken.",
       },
       {
         question: "Laut dem Text, welche Rolle spielte HIV/AIDS in der medizinischen Entwicklung?",
@@ -339,13 +381,15 @@ Die Geschichte lehrt: Pandemien sind unvermeidlich, aber ihre Folgen hängen von
           "Es wurde durch Impfungen vollständig ausgerottet",
           "Es führte zu keinen medizinischen Fortschritten",
           "Es mobilisierte Patientenaktivismus und revolutionierte die Arzneimittelentwicklung",
-          "Es tötete mehr Menschen als die Spanische Grippe"
+          "Es tötete mehr Menschen als die Spanische Grippe",
         ],
         correctAnswer: 2,
-        explanation: "Der Text betont, dass HIV/AIDS Patientenaktivismus mobilisierte und die Arzneimittelentwicklung revolutionierte. Es gibt keine Impfung, die es ausrottet, es gab sehr wohl Fortschritte, und die Spanische Grippe hatte mehr Todesopfer (50-100 Mio vs. 40 Mio).",
-        relevantPassage: "Die Pandemie führte zu massiver sozialer Stigmatisierung, mobilisierte aber auch Patientenaktivismus und revolutionierte die Arzneimittelentwicklung."
-      }
-    ]
+        explanation:
+          "Der Text betont, dass HIV/AIDS Patientenaktivismus mobilisierte und die Arzneimittelentwicklung revolutionierte. Es gibt keine Impfung, die es ausrottet, es gab sehr wohl Fortschritte, und die Spanische Grippe hatte mehr Todesopfer (50-100 Mio vs. 40 Mio).",
+        relevantPassage:
+          "Die Pandemie führte zu massiver sozialer Stigmatisierung, mobilisierte aber auch Patientenaktivismus und revolutionierte die Arzneimittelentwicklung.",
+      },
+    ],
   },
   {
     id: "tv-5",
@@ -380,23 +424,28 @@ Wissenschaftler suchen nach alternativen Ansätzen: Bakteriophagen (Viren, die B
           "Durch systematische Suche nach antimikrobiellen Substanzen",
           "Durch einen Zufall mit einem kontaminierten Bakterienkulturgefäß",
           "Durch Experimente im Zweiten Weltkrieg",
-          "Durch Zusammenarbeit mit Howard Florey"
+          "Durch Zusammenarbeit mit Howard Florey",
         ],
         correctAnswer: 1,
-        explanation: "Der Text beschreibt die Entdeckung als Zufall: Fleming fand nach einem Urlaub eine vergessene Platte mit Schimmelpilz, um den herum keine Bakterien wuchsen. Es war keine systematische Suche, Florey kam später dazu, und der Weltkrieg spielte bei der Entdeckung keine Rolle.",
-        relevantPassage: "Fleming, bekannt für seine eher chaotische Labororganisation, kehrte nach einem Urlaub zurück und entdeckte auf einer vergessenen Bakterienkultur-Platte etwas Bemerkenswertes: Ein Schimmelpilz hatte sich auf der Platte ausgebreitet, und um ihn herum war eine Zone entstanden, in der keine Bakterien wuchsen."
+        explanation:
+          "Der Text beschreibt die Entdeckung als Zufall: Fleming fand nach einem Urlaub eine vergessene Platte mit Schimmelpilz, um den herum keine Bakterien wuchsen. Es war keine systematische Suche, Florey kam später dazu, und der Weltkrieg spielte bei der Entdeckung keine Rolle.",
+        relevantPassage:
+          "Fleming, bekannt für seine eher chaotische Labororganisation, kehrte nach einem Urlaub zurück und entdeckte auf einer vergessenen Bakterienkultur-Platte etwas Bemerkenswertes: Ein Schimmelpilz hatte sich auf der Platte ausgebreitet, und um ihn herum war eine Zone entstanden, in der keine Bakterien wuchsen.",
       },
       {
-        question: "Warum gewann Penicillin laut dem Text erst während des Zweiten Weltkriegs an Bedeutung?",
+        question:
+          "Warum gewann Penicillin laut dem Text erst während des Zweiten Weltkriegs an Bedeutung?",
         options: [
           "Fleming veröffentlichte seine Ergebnisse erst dann",
           "Bakterielle Infektionen töteten viele Soldaten, was zur Massenproduktion führte",
           "Vorher gab es keine bakteriellen Infektionen",
-          "Der Schimmelpilz wurde erst im Krieg entdeckt"
+          "Der Schimmelpilz wurde erst im Krieg entdeckt",
         ],
         correctAnswer: 1,
-        explanation: "Der Text erklärt, dass bakterielle Infektionen mehr Soldaten töteten als feindliches Feuer, was massive Investitionen in die Penicillin-Produktion auslöste. Fleming veröffentlichte bereits 1929, es gab vorher Infektionen, und der Pilz wurde 1928 entdeckt.",
-        relevantPassage: "Unter dem Druck des Krieges – bakterielle Infektionen töteten mehr Soldaten als feindliches Feuer – investierten die USA massiv in die Penicillin-Produktion."
+        explanation:
+          "Der Text erklärt, dass bakterielle Infektionen mehr Soldaten töteten als feindliches Feuer, was massive Investitionen in die Penicillin-Produktion auslöste. Fleming veröffentlichte bereits 1929, es gab vorher Infektionen, und der Pilz wurde 1928 entdeckt.",
+        relevantPassage:
+          "Unter dem Druck des Krieges – bakterielle Infektionen töteten mehr Soldaten als feindliches Feuer – investierten die USA massiv in die Penicillin-Produktion.",
       },
       {
         question: "Laut dem Text, wer erhielt 1945 den Nobelpreis für Medizin?",
@@ -404,11 +453,12 @@ Wissenschaftler suchen nach alternativen Ansätzen: Bakteriophagen (Viren, die B
           "Nur Alexander Fleming",
           "Fleming, Florey und Chain",
           "Nur Howard Florey und Ernst Boris Chain",
-          "Selman Waksman"
+          "Selman Waksman",
         ],
         correctAnswer: 1,
-        explanation: "Der Text nennt explizit Fleming, Florey und Chain als Nobelpreisträger 1945. Waksman entdeckte Streptomycin, wird aber nicht als Nobelpreisträger 1945 genannt (er erhielt ihn später 1952).",
-        relevantPassage: "Fleming, Florey und Chain erhielten 1945 den Nobelpreis für Medizin."
+        explanation:
+          "Der Text nennt explizit Fleming, Florey und Chain als Nobelpreisträger 1945. Waksman entdeckte Streptomycin, wird aber nicht als Nobelpreisträger 1945 genannt (er erhielt ihn später 1952).",
+        relevantPassage: "Fleming, Florey und Chain erhielten 1945 den Nobelpreis für Medizin.",
       },
       {
         question: "Was kann aus dem Text über Antibiotikaresistenzen geschlossen werden?",
@@ -416,11 +466,12 @@ Wissenschaftler suchen nach alternativen Ansätzen: Bakteriophagen (Viren, die B
           "Sie wurden erst in den 2000er Jahren entdeckt",
           "Fleming warnte bereits 1945 vor diesem Problem",
           "Sie entstehen nur durch genetische Manipulation im Labor",
-          "Sie sind heute kein relevantes Problem mehr"
+          "Sie sind heute kein relevantes Problem mehr",
         ],
         correctAnswer: 1,
-        explanation: "Der Text erklärt, dass Fleming bereits 1945 in seiner Nobelpreisrede vor Resistenzen warnte. Sie wurden also früh erkannt, entstehen durch natürliche Selektion und Genübertragung (nicht Labor-Manipulation), und sind heute eine globale Bedrohung.",
-        relevantPassage: "Bereits 1945 warnte Fleming in seiner Nobelpreisrede vor Resistenzen."
+        explanation:
+          "Der Text erklärt, dass Fleming bereits 1945 in seiner Nobelpreisrede vor Resistenzen warnte. Sie wurden also früh erkannt, entstehen durch natürliche Selektion und Genübertragung (nicht Labor-Manipulation), und sind heute eine globale Bedrohung.",
+        relevantPassage: "Bereits 1945 warnte Fleming in seiner Nobelpreisrede vor Resistenzen.",
       },
       {
         question: "Laut dem Text, warum ist die Entwicklung neuer Antibiotika ins Stocken geraten?",
@@ -428,12 +479,14 @@ Wissenschaftler suchen nach alternativen Ansätzen: Bakteriophagen (Viren, die B
           "Es gibt keine resistenten Bakterien mehr",
           "Die Forschung ist nicht mehr nötig, da alle Infektionen behandelbar sind",
           "Die Forschung ist aufwändig und teuer, mit geringen Gewinnmargen für Unternehmen",
-          "Bakteriophagen haben Antibiotika vollständig ersetzt"
+          "Bakteriophagen haben Antibiotika vollständig ersetzt",
         ],
         correctAnswer: 2,
-        explanation: "Der Text nennt explizit aufwändige und teure Forschung sowie geringe Gewinnmargen als Gründe. Resistente Bakterien sind ein wachsendes Problem, nicht alle Infektionen sind behandelbar, und Bakteriophagen sind nur eine erforschte Alternative, kein Ersatz.",
-        relevantPassage: "Die Forschung ist aufwändig und teuer, die Gewinnmargen für pharmazeutische Unternehmen gering, da Antibiotika meist nur kurzzeitig eingenommen werden."
-      }
-    ]
-  }
+        explanation:
+          "Der Text nennt explizit aufwändige und teure Forschung sowie geringe Gewinnmargen als Gründe. Resistente Bakterien sind ein wachsendes Problem, nicht alle Infektionen sind behandelbar, und Bakteriophagen sind nur eine erforschte Alternative, kein Ersatz.",
+        relevantPassage:
+          "Die Forschung ist aufwändig und teuer, die Gewinnmargen für pharmazeutische Unternehmen gering, da Antibiotika meist nur kurzzeitig eingenommen werden.",
+      },
+    ],
+  },
 ];

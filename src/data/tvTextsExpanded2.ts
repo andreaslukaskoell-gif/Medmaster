@@ -95,11 +95,13 @@ const set6: TVTextSet = {
             "Autoimmunerkrankungen häufigste Folge.",
           ],
           correctOption: 1,
-          explanation: "Der Text beschreibt das Immunsystem als zweigeteiltes System und zeigt, wie das immunologische Gedächtnis die Grundlage von Impfungen bildet.",
+          explanation:
+            "Der Text beschreibt das Immunsystem als zweigeteiltes System und zeigt, wie das immunologische Gedächtnis die Grundlage von Impfungen bildet.",
         },
         {
           id: "tv6-1-q5",
-          question: "Welche Schlussfolgerung lässt sich über B-Lymphozyten und zytotoxische T-Zellen ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über B-Lymphozyten und zytotoxische T-Zellen ziehen?",
           options: [
             "Beide gehören zum angeborenen System.",
             "Beide sind redundant.",
@@ -108,8 +110,9 @@ const set6: TVTextSet = {
             "B-Zellen nur beim Erstkontakt aktiv.",
           ],
           correctOption: 2,
-          explanation: "B-Lymphozyten markieren Erreger mit Antikörpern; zytotoxische T-Zellen töten infizierte Körperzellen. Beide gehören zum erworbenen Immunsystem.",
-        }
+          explanation:
+            "B-Lymphozyten markieren Erreger mit Antikörpern; zytotoxische T-Zellen töten infizierte Körperzellen. Beide gehören zum erworbenen Immunsystem.",
+        },
       ],
     },
     {
@@ -147,7 +150,8 @@ const set6: TVTextSet = {
       questions: [
         {
           id: "tv6-2-q1",
-          question: "Was unterscheidet laut dem Text embryonale Stammzellen von adulten Stammzellen?",
+          question:
+            "Was unterscheidet laut dem Text embryonale Stammzellen von adulten Stammzellen?",
           options: [
             "Embryonale Stammzellen können sich nicht selbst erneuern, adulte Stammzellen hingegen schon.",
             "Embryonale Stammzellen sind pluripotent und können sich in nahezu jeden Zelltyp differenzieren, während adulte Stammzellen in der Regel multipotent sind.",
@@ -161,7 +165,8 @@ const set6: TVTextSet = {
         },
         {
           id: "tv6-2-q2",
-          question: "Welchen Vorteil von iPS-Zellen nennt der Text gegenüber embryonalen Stammzellen?",
+          question:
+            "Welchen Vorteil von iPS-Zellen nennt der Text gegenüber embryonalen Stammzellen?",
           options: [
             "iPS-Zellen können sich schneller teilen als embryonale Stammzellen.",
             "iPS-Zellen sind totipotent und damit leistungsfähiger als embryonale Stammzellen.",
@@ -184,7 +189,8 @@ const set6: TVTextSet = {
             "Adulte Stammzellen wichtiger.",
           ],
           correctOption: 1,
-          explanation: "Der Text stellt verschiedene Stammzelltypen vor und weist auf Risiken sowie den frühen Stand vieler Therapien hin.",
+          explanation:
+            "Der Text stellt verschiedene Stammzelltypen vor und weist auf Risiken sowie den frühen Stand vieler Therapien hin.",
         },
         {
           id: "tv6-2-q4",
@@ -197,8 +203,9 @@ const set6: TVTextSet = {
             "Tumor nur bei adulten Stammzellen.",
           ],
           correctOption: 2,
-          explanation: "Der Text warnt, dass das Risiko unkontrollierter Zellteilung sorgfältig erforscht werden muss.",
-        }
+          explanation:
+            "Der Text warnt, dass das Risiko unkontrollierter Zellteilung sorgfältig erforscht werden muss.",
+        },
       ],
     },
     {
@@ -233,7 +240,8 @@ const set6: TVTextSet = {
       questions: [
         {
           id: "tv6-3-q1",
-          question: "Was macht Prionen laut dem Text im Vergleich zu anderen Krankheitserregern einzigartig?",
+          question:
+            "Was macht Prionen laut dem Text im Vergleich zu anderen Krankheitserregern einzigartig?",
           options: [
             "Sie enthalten sowohl DNA als auch RNA in besonders stabiler Form.",
             "Sie bestehen ausschließlich aus fehlgefalteten Proteinen und enthalten kein genetisches Material.",
@@ -247,7 +255,8 @@ const set6: TVTextSet = {
         },
         {
           id: "tv6-3-q2",
-          question: "Warum wird die pathologische Form PrPSc im Text als besonders widerstandsfähig beschrieben?",
+          question:
+            "Warum wird die pathologische Form PrPSc im Text als besonders widerstandsfähig beschrieben?",
           options: [
             "Weil sie von einer Lipidmembran umhüllt ist, die chemische Einwirkungen abwehrt.",
             "Weil sie über einen erhöhten Anteil an Beta-Faltblatt-Strukturen verfügt, die sie gegen Hitze, UV-Strahlung, Desinfektionsmittel und Proteasen resistent machen.",
@@ -270,11 +279,13 @@ const set6: TVTextSet = {
             "Prusiner sofort akzeptiert.",
           ],
           correctOption: 1,
-          explanation: "Der Text beschreibt den einzigartigen Mechanismus der Prionen und betont die lange Inkubationszeit.",
+          explanation:
+            "Der Text beschreibt den einzigartigen Mechanismus der Prionen und betont die lange Inkubationszeit.",
         },
         {
           id: "tv6-3-q4",
-          question: "Welche Schlussfolgerung lässt sich über die Ausbreitung von PrPSc im Gehirn ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über die Ausbreitung von PrPSc im Gehirn ziehen?",
           options: [
             "Über Blutgefäße in alle Organe.",
             "PrPSc faltet gesunde Prion-Proteine um, selbstverstärkende Kettenreaktion.",
@@ -283,8 +294,9 @@ const set6: TVTextSet = {
             "Ausbreitung verlangsamt sich ab kritischer Menge.",
           ],
           correctOption: 1,
-          explanation: "PrPSc faltet benachbarte normale Prion-Proteine um und löst eine selbstverstärkende Kettenreaktion aus.",
-        }
+          explanation:
+            "PrPSc faltet benachbarte normale Prion-Proteine um und löst eine selbstverstärkende Kettenreaktion aus.",
+        },
       ],
     },
     {
@@ -336,7 +348,8 @@ const set6: TVTextSet = {
         },
         {
           id: "tv6-4-q2",
-          question: "Was versteht man laut dem Text unter horizontalem Gentransfer im Kontext der Antibiotikaresistenz?",
+          question:
+            "Was versteht man laut dem Text unter horizontalem Gentransfer im Kontext der Antibiotikaresistenz?",
           options: [
             "Die Weitergabe von Resistenzgenen von Elternzellen an Tochterzellen bei der Zellteilung.",
             "Die Übertragung von Resistenzgenen zwischen verschiedenen Bakterienarten.",
@@ -363,7 +376,8 @@ const set6: TVTextSet = {
         },
         {
           id: "tv6-4-q4",
-          question: "Welche Schlussfolgerung lässt der Text zum Selektionsdruck durch Antibiotika zu?",
+          question:
+            "Welche Schlussfolgerung lässt der Text zum Selektionsdruck durch Antibiotika zu?",
           options: [
             "Antibiotika töten alle Bakterien.",
             "Selektionsdruck begünstigt resistente Stämme, da empfindliche absterben und resistente sich vermehren.",
@@ -372,8 +386,9 @@ const set6: TVTextSet = {
             "Nur durch horizontalen Gentransfer.",
           ],
           correctOption: 1,
-          explanation: "Selektionsdruck begünstigt resistente Stämme: empfindliche sterben ab, resistente überleben.",
-        }
+          explanation:
+            "Selektionsdruck begünstigt resistente Stämme: empfindliche sterben ab, resistente überleben.",
+        },
       ],
     },
     {
@@ -411,7 +426,8 @@ const set6: TVTextSet = {
       questions: [
         {
           id: "tv6-5-q1",
-          question: "Warum war die erste erfolgreiche Nierentransplantation 1954 laut dem Text komplikationsarm?",
+          question:
+            "Warum war die erste erfolgreiche Nierentransplantation 1954 laut dem Text komplikationsarm?",
           options: [
             "Weil der Empfänger zuvor mit Ciclosporin behandelt worden war.",
             "Weil die Niere zwischen eineiigen Zwillingen übertragen wurde, die genetisch identisch waren, sodass keine Abstoßungsreaktion auftrat.",
@@ -462,8 +478,9 @@ const set6: TVTextSet = {
             "Bereits 1954 eingesetzt.",
           ],
           correctOption: 1,
-          explanation: "Ciclosporin unterdrückt die Abstoßung durch T-Lymphozyten-Hemmung, erfordert aber lebenslange Einnahme.",
-        }
+          explanation:
+            "Ciclosporin unterdrückt die Abstoßung durch T-Lymphozyten-Hemmung, erfordert aber lebenslange Einnahme.",
+        },
       ],
     },
   ],
@@ -562,7 +579,8 @@ const set7: TVTextSet = {
         },
         {
           id: "tv7-1-q5",
-          question: "Welche Schlussfolgerung lässt sich über den Vorteil der C4-Photosynthese ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über den Vorteil der C4-Photosynthese ziehen?",
           options: [
             "C4 ohne Spaltöffnungen.",
             "C4 verzichtet auf Calvin-Zyklus.",
@@ -572,7 +590,7 @@ const set7: TVTextSet = {
           ],
           correctOption: 2,
           explanation: "C4-Pflanzen ermöglichen effizientere CO2-Fixierung bei Hitze.",
-        }
+        },
       ],
     },
     {
@@ -611,7 +629,8 @@ const set7: TVTextSet = {
       questions: [
         {
           id: "tv7-2-q1",
-          question: "Warum entspricht laut dem Text eine Absenkung des pH-Werts von 8,2 auf 8,1 einer Zunahme der Wasserstoff-Ionen-Konzentration um etwa 26 Prozent?",
+          question:
+            "Warum entspricht laut dem Text eine Absenkung des pH-Werts von 8,2 auf 8,1 einer Zunahme der Wasserstoff-Ionen-Konzentration um etwa 26 Prozent?",
           options: [
             "Weil die Wassertemperatur den pH-Wert exponentiell beeinflusst.",
             "Weil Kohlensäure sich bei niedrigem pH vollständig in Ionen auflöst.",
@@ -648,11 +667,13 @@ const set7: TVTextSet = {
             "Natürlicher Vorgang.",
           ],
           correctOption: 1,
-          explanation: "Der Text erklärt, wie CO2-Emissionen zur Versauerung führen, und betont die Bedrohung für marine Ökosysteme.",
+          explanation:
+            "Der Text erklärt, wie CO2-Emissionen zur Versauerung führen, und betont die Bedrohung für marine Ökosysteme.",
         },
         {
           id: "tv7-2-q4",
-          question: "Welche Schlussfolgerung lässt sich über die doppelte Bedrohung von Korallenriffen ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über die doppelte Bedrohung von Korallenriffen ziehen?",
           options: [
             "Entweder Versäuerung oder Erwärmung, nie beide.",
             "Korallenbleiche weniger gefährlich.",
@@ -661,8 +682,9 @@ const set7: TVTextSet = {
             "Korallen passen sich rasch an.",
           ],
           correctOption: 2,
-          explanation: "Korallenriffe sind durch Versäuerung und Meereswärmung gleichzeitig bedroht.",
-        }
+          explanation:
+            "Korallenriffe sind durch Versäuerung und Meereswärmung gleichzeitig bedroht.",
+        },
       ],
     },
     {
@@ -698,7 +720,8 @@ const set7: TVTextSet = {
       questions: [
         {
           id: "tv7-3-q1",
-          question: "Wie kommt es laut dem Text nach starken Vulkanausbrüchen zu einem globalen Kühlungseffekt?",
+          question:
+            "Wie kommt es laut dem Text nach starken Vulkanausbrüchen zu einem globalen Kühlungseffekt?",
           options: [
             "Vulkanische Asche bedeckt die Erdoberfläche und reflektiert Sonnenstrahlung.",
             "Schwefeldioxid bildet in der Stratosphäre Sulfatärosole, die Sonnenstrahlung ins Weltall zurückreflektieren.",
@@ -735,11 +758,13 @@ const set7: TVTextSet = {
             "Sulfataerosole wirken jahrzehntelang.",
           ],
           correctOption: 1,
-          explanation: "Der Text beschreibt den kühlenden Sulfataerosol-Effekt und den negativen Einfluss auf die Ozonschicht.",
+          explanation:
+            "Der Text beschreibt den kühlenden Sulfataerosol-Effekt und den negativen Einfluss auf die Ozonschicht.",
         },
         {
           id: "tv7-3-q4",
-          question: "Welche Schlussfolgerung lässt sich aus dem Vergleich von Tambora und Pinatubo ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich aus dem Vergleich von Tambora und Pinatubo ziehen?",
           options: [
             "Größere SO2-Mengen tendieren zu stärkerem Kühlungseffekt.",
             "Pinatubo stärker als Tambora.",
@@ -748,8 +773,9 @@ const set7: TVTextSet = {
             "Inselvulkane generell stärker.",
           ],
           correctOption: 0,
-          explanation: "Tambora setzte 60 Mio. Tonnen SO2 frei; Pinatubo 20 Mio. Größere SO2-Mengen tendieren zu stärkerem Kühlungseffekt.",
-        }
+          explanation:
+            "Tambora setzte 60 Mio. Tonnen SO2 frei; Pinatubo 20 Mio. Größere SO2-Mengen tendieren zu stärkerem Kühlungseffekt.",
+        },
       ],
     },
     {
@@ -788,7 +814,8 @@ const set7: TVTextSet = {
       questions: [
         {
           id: "tv7-4-q1",
-          question: "Warum sind die Auswirkungen genetischer Drift laut dem Text in kleinen Populationen stärker?",
+          question:
+            "Warum sind die Auswirkungen genetischer Drift laut dem Text in kleinen Populationen stärker?",
           options: [
             "Weil kleine Populationen häufiger von natürlicher Selektion betroffen sind.",
             "Weil in kleinen Populationen mehr Mutationen auftreten als in großen.",
@@ -825,11 +852,13 @@ const set7: TVTextSet = {
             "Flaschenhalseffekt einziger Mechanismus.",
           ],
           correctOption: 1,
-          explanation: "Genetische Drift ist ein zufälliger Mechanismus, stärker in kleinen Populationen.",
+          explanation:
+            "Genetische Drift ist ein zufälliger Mechanismus, stärker in kleinen Populationen.",
         },
         {
           id: "tv7-4-q4",
-          question: "Welche Schlussfolgerung lässt sich über die Krankheitsanfälligkeit der Geparden ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über die Krankheitsanfälligkeit der Geparden ziehen?",
           options: [
             "Körpergröße als Ursache.",
             "Geringe genetische Diversität durch Flaschenhals macht Geparden anfälliger und weniger anpassungsfähig.",
@@ -838,8 +867,9 @@ const set7: TVTextSet = {
             "Nur anfällig für Viren.",
           ],
           correctOption: 1,
-          explanation: "Die geringe genetische Diversität der Geparden geht auf einen Flaschenhals zurück.",
-        }
+          explanation:
+            "Die geringe genetische Diversität der Geparden geht auf einen Flaschenhals zurück.",
+        },
       ],
     },
     {
@@ -919,7 +949,8 @@ const set7: TVTextSet = {
         },
         {
           id: "tv7-5-q4",
-          question: "Welche Schlussfolgerung lässt sich über die ökologische Rolle von Parasiten ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über die ökologische Rolle von Parasiten ziehen?",
           options: [
             "Parasiten nur schädlich.",
             "Kein Einfluss auf Populationsdynamik.",
@@ -928,8 +959,9 @@ const set7: TVTextSet = {
             "Parasiten profitieren langfristig nicht.",
           ],
           correctOption: 2,
-          explanation: "Parasiten schaden dem Wirt, sind aber wichtige Bestandteile von Ökosystemen.",
-        }
+          explanation:
+            "Parasiten schaden dem Wirt, sind aber wichtige Bestandteile von Ökosystemen.",
+        },
       ],
     },
   ],
@@ -1003,7 +1035,8 @@ const set8: TVTextSet = {
         },
         {
           id: "tv8-1-q3",
-          question: "Welche Schlussfolgerung lässt sich über die Entfernung von Neurotransmittern ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über die Entfernung von Neurotransmittern ziehen?",
           options: [
             "Glutamat und GABA im Gleichgewicht.",
             "Alle Neurotransmitter werden nach Signal abgebaut.",
@@ -1012,7 +1045,8 @@ const set8: TVTextSet = {
             "Aktionspotenzial wird in Vesikel gespeichert.",
           ],
           correctOption: 2,
-          explanation: "Drei Mechanismen: enzymatischer Abbau, Wiederaufnahme durch Transporterproteine und Diffusion.",
+          explanation:
+            "Drei Mechanismen: enzymatischer Abbau, Wiederaufnahme durch Transporterproteine und Diffusion.",
         },
         {
           id: "tv8-1-q4",
@@ -1025,8 +1059,9 @@ const set8: TVTextSet = {
             "Dopamin hat keine Auswirkungen auf Bewegung.",
           ],
           correctOption: 2,
-          explanation: "Neurotransmitter als chemische Botenstoffe an Synapsen; Ungleichgewichte führen zu Erkrankungen.",
-        }
+          explanation:
+            "Neurotransmitter als chemische Botenstoffe an Synapsen; Ungleichgewichte führen zu Erkrankungen.",
+        },
       ],
     },
     {
@@ -1106,7 +1141,8 @@ const set8: TVTextSet = {
         },
         {
           id: "tv8-2-q4",
-          question: "Welche Schlussfolgerung lässt sich über die Herausforderungen der CAR-T-Therapie ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über die Herausforderungen der CAR-T-Therapie ziehen?",
           options: [
             "CAR-T-Zellen sind vollkommen risikofrei.",
             "CAR-T-Therapie hat keine Nebenwirkungen.",
@@ -1115,8 +1151,9 @@ const set8: TVTextSet = {
             "CAR-T-Zellen werden nach der Therapie vom Körper abgebaut.",
           ],
           correctOption: 2,
-          explanation: "Der Text nennt Zytokinsturm und hohe Kosten als zentrale Herausforderungen.",
-        }
+          explanation:
+            "Der Text nennt Zytokinsturm und hohe Kosten als zentrale Herausforderungen.",
+        },
       ],
     },
     {
@@ -1154,7 +1191,8 @@ const set8: TVTextSet = {
       questions: [
         {
           id: "tv8-3-q1",
-          question: "Welche natürliche Funktion hat das CRISPR-Cas9-System laut dem Text in Bakterien?",
+          question:
+            "Welche natürliche Funktion hat das CRISPR-Cas9-System laut dem Text in Bakterien?",
           options: [
             "Es reguliert die Zellteilung und verhindert unkontrolliertes Wachstum.",
             "Es dient als Immunsystem gegen Viren, indem es deren DNA gezielt zerschneidet.",
@@ -1168,7 +1206,8 @@ const set8: TVTextSet = {
         },
         {
           id: "tv8-3-q2",
-          question: "Was versteht man laut dem Text unter Keimbahnedierung und warum ist sie umstritten?",
+          question:
+            "Was versteht man laut dem Text unter Keimbahnedierung und warum ist sie umstritten?",
           options: [
             "Die Veränderung von Körperzellen, die nicht vererbt wird, aber Nebenwirkungen haben kann.",
             "Die Veränderung von Genen in Ei- oder Samenzellen, die an künftige Generationen weitergegeben würden.",
@@ -1191,11 +1230,13 @@ const set8: TVTextSet = {
             "Keimbahnedierung ist weltweit erlaubt.",
           ],
           correctOption: 2,
-          explanation: "CRISPR-Cas9: natürliches bakterielles Immunsystem, zu universalem Genomwerkzeug umfunktioniert.",
+          explanation:
+            "CRISPR-Cas9: natürliches bakterielles Immunsystem, zu universalem Genomwerkzeug umfunktioniert.",
         },
         {
           id: "tv8-3-q4",
-          question: "Welche Schlussfolgerung lässt sich über die Flexibilität von CRISPR-Cas9 ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über die Flexibilität von CRISPR-Cas9 ziehen?",
           options: [
             "Die Guide-RNA kann beliebige Zielsequenzen erkennen, weil Cas9 ohne sie nicht funktioniert.",
             "Da Cas9 die DNA an der Zielsequenz schneidet und zelleigene Reparaturmechanismen die Bearbeitung ermöglichen, lässt sich jedes Gen gezielt verändern.",
@@ -1204,8 +1245,9 @@ const set8: TVTextSet = {
             "Cas9 kann nur DNA schneiden, nicht reparieren.",
           ],
           correctOption: 1,
-          explanation: "Guide-RNA synthetisch für jede Zielsequenz entwerfbar → universell einsetzbares Werkzeug.",
-        }
+          explanation:
+            "Guide-RNA synthetisch für jede Zielsequenz entwerfbar → universell einsetzbares Werkzeug.",
+        },
       ],
     },
     {
@@ -1243,7 +1285,8 @@ const set8: TVTextSet = {
       questions: [
         {
           id: "tv8-4-q1",
-          question: "Welche vier Grundprinzipien der biomedizinischen Ethik werden im Text genannt?",
+          question:
+            "Welche vier Grundprinzipien der biomedizinischen Ethik werden im Text genannt?",
           options: [
             "Wahrheit, Freiheit, Gleichheit und Solidarität.",
             "Autonomie, Wohltätigkeit, Nichtschaden und Gerechtigkeit.",
@@ -1285,7 +1328,8 @@ const set8: TVTextSet = {
         },
         {
           id: "tv8-4-q4",
-          question: "Welche Schlussfolgerung lässt sich über die Bewertung von Sterbehilfe im Text ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über die Bewertung von Sterbehilfe im Text ziehen?",
           options: [
             "Nur aktive Sterbehilfe ist ethisch problematisch.",
             "Alle Sterbehilfeformen sind weltweit verboten.",
@@ -1294,8 +1338,9 @@ const set8: TVTextSet = {
             "Der Arzt entscheidet allein über Sterbehilfe.",
           ],
           correctOption: 2,
-          explanation: "Bewertung von Sterbehilfe variiert erheblich zwischen Ländern, was globale Standards erschwert.",
-        }
+          explanation:
+            "Bewertung von Sterbehilfe variiert erheblich zwischen Ländern, was globale Standards erschwert.",
+        },
       ],
     },
     {
@@ -1332,7 +1377,8 @@ const set8: TVTextSet = {
       questions: [
         {
           id: "tv8-5-q1",
-          question: "In welcher zeitlichen Reihenfolge beschreibt der Text das Auftreten der Totenstarre?",
+          question:
+            "In welcher zeitlichen Reihenfolge beschreibt der Text das Auftreten der Totenstarre?",
           options: [
             "Sie beginnt sofort nach dem Tod und löst sich nach sechs Stunden wieder.",
             "Sie beginnt nach 24 Stunden und bleibt dauerhaft bestehen.",
@@ -1369,11 +1415,13 @@ const set8: TVTextSet = {
             "Die Obduktion ist in Österreich verboten.",
           ],
           correctOption: 2,
-          explanation: "Forensische Medizin verbindet medizinisches Wissen mit rechtlichen Aufgaben.",
+          explanation:
+            "Forensische Medizin verbindet medizinisches Wissen mit rechtlichen Aufgaben.",
         },
         {
           id: "tv8-5-q4",
-          question: "Welche Schlussfolgerung lässt sich über Totenflecke als Todeszeitindikator ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über Totenflecke als Todeszeitindikator ziehen?",
           options: [
             "Totenflecke fixieren sich sofort nach dem Tod.",
             "Totenflecke entstehen durch Blutabsinken, sind anfänglich wegdrückbar und fixieren sich nach 12-24 Stunden.",
@@ -1382,8 +1430,9 @@ const set8: TVTextSet = {
             "Totenflecke und Totenstarre treten gleichzeitig auf.",
           ],
           correctOption: 1,
-          explanation: "Totenflecke fixieren sich nach 12-24 Stunden. Nützlicher Zeitindikator, aber kein präzises Instrument.",
-        }
+          explanation:
+            "Totenflecke fixieren sich nach 12-24 Stunden. Nützlicher Zeitindikator, aber kein präzises Instrument.",
+        },
       ],
     },
   ],
@@ -1428,7 +1477,8 @@ const set9: TVTextSet = {
       questions: [
         {
           id: "tv9-1-q1",
-          question: "Ab welchem Schwellenwert versagt laut dem Text die menschliche Thermoregulation?",
+          question:
+            "Ab welchem Schwellenwert versagt laut dem Text die menschliche Thermoregulation?",
           options: [
             "Ab einer Außentemperatur von 40 Grad Celsius bei niedriger Luftfeuchtigkeit.",
             "Ab einer Feuchtkugeltemperatur von über 35 Grad Celsius.",
@@ -1456,7 +1506,8 @@ const set9: TVTextSet = {
         },
         {
           id: "tv9-1-q3",
-          question: "Was ist die Hauptaussage des Textes über Klimawandel und menschliche Gesundheit?",
+          question:
+            "Was ist die Hauptaussage des Textes über Klimawandel und menschliche Gesundheit?",
           options: [
             "Klimawandel betrifft nur tropische Regionen.",
             "Nur Hitzewellen sind relevant.",
@@ -1465,11 +1516,13 @@ const set9: TVTextSet = {
             "Nur ältere Menschen sind durch Klimawandel gefährdet.",
           ],
           correctOption: 2,
-          explanation: "Der Text beschreibt direkte Auswirkungen wie Hitzestress und indirekte wie Ausbreitung von Vektoren.",
+          explanation:
+            "Der Text beschreibt direkte Auswirkungen wie Hitzestress und indirekte wie Ausbreitung von Vektoren.",
         },
         {
           id: "tv9-1-q4",
-          question: "Welche Schlussfolgerung lässt sich über die Ausbreitung von Tropenkrankheiten durch den Klimawandel ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über die Ausbreitung von Tropenkrankheiten durch den Klimawandel ziehen?",
           options: [
             "Dengue-Fieber ist in Europa endemisch.",
             "Die Tigermücke überträgt nur Malaria.",
@@ -1479,7 +1532,7 @@ const set9: TVTextSet = {
           ],
           correctOption: 2,
           explanation: "Erwärmung macht neue Gebiete für die Tigermücke geeignet.",
-        }
+        },
       ],
     },
     {
@@ -1516,7 +1569,8 @@ const set9: TVTextSet = {
       questions: [
         {
           id: "tv9-2-q1",
-          question: "Warum lag die höchste Sterblichkeit bei der Spanischen Grippe laut dem Text bei jungen Erwachsenen?",
+          question:
+            "Warum lag die höchste Sterblichkeit bei der Spanischen Grippe laut dem Text bei jungen Erwachsenen?",
           options: [
             "Weil junge Erwachsene aufgrund von Mangelernährung ein geschwächtes Immunsystem hatten.",
             "Weil das H1N1-Virus eine besondere Vorliebe für junge Zellen zeigte.",
@@ -1567,8 +1621,9 @@ const set9: TVTextSet = {
             "Der Schwarze Tod hatte keine sozialen Folgen.",
           ],
           correctOption: 2,
-          explanation: "Pandemien werden durch Zoonosen wahrscheinlicher; Ungleichheiten bei Impfstoffverteilung sind zentrale Hindernisse.",
-        }
+          explanation:
+            "Pandemien werden durch Zoonosen wahrscheinlicher; Ungleichheiten bei Impfstoffverteilung sind zentrale Hindernisse.",
+        },
       ],
     },
     {
@@ -1643,11 +1698,13 @@ const set9: TVTextSet = {
             "Das Immunsystem ist vollständig autonom.",
           ],
           correctOption: 2,
-          explanation: "PNI belegt die wechselseitige Verbindung von Psyche, Nervensystem und Immunsystem.",
+          explanation:
+            "PNI belegt die wechselseitige Verbindung von Psyche, Nervensystem und Immunsystem.",
         },
         {
           id: "tv9-3-q4",
-          question: "Welche Schlussfolgerung lässt sich über die Behandlung stressbedingter Immunschwäche ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über die Behandlung stressbedingter Immunschwäche ziehen?",
           options: [
             "Nur Cortisol vermittelt Stress-Immunverbindung.",
             "Chronischer Stress hat keinen Einfluss auf Impfansprechen.",
@@ -1656,8 +1713,9 @@ const set9: TVTextSet = {
             "Das autonome Nervensystem ist nicht mit lymphatischen Organen verbunden.",
           ],
           correctOption: 2,
-          explanation: "Da Stress das Immunsystem schwächt, sprechen PNI-Erkenntnisse für ganzheitliche Behandlungsansätze.",
-        }
+          explanation:
+            "Da Stress das Immunsystem schwächt, sprechen PNI-Erkenntnisse für ganzheitliche Behandlungsansätze.",
+        },
       ],
     },
     {
@@ -1748,11 +1806,13 @@ const set9: TVTextSet = {
             "Nanopartikel werden sofort vom Körper ausgeschieden.",
           ],
           correctOption: 2,
-          explanation: "Nanomedizin nutzt Nanoskala-Eigenschaften; Toxizitätsrisiken noch nicht vollständig verstanden.",
+          explanation:
+            "Nanomedizin nutzt Nanoskala-Eigenschaften; Toxizitätsrisiken noch nicht vollständig verstanden.",
         },
         {
           id: "tv9-4-q5",
-          question: "Welche Schlussfolgerung lässt sich über die Zielgerichtetheit von Nanopartikeln in der Krebstherapie ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über die Zielgerichtetheit von Nanopartikeln in der Krebstherapie ziehen?",
           options: [
             "Ligandfunktionalisierung ist bei Nanopartikeln unwirksam.",
             "Nanopartikel können nicht in Tumorgewebe eindringen.",
@@ -1761,8 +1821,9 @@ const set9: TVTextSet = {
             "Liganden erhöhen die Toxizität der Nanopartikel.",
           ],
           correctOption: 2,
-          explanation: "EPR-Effekt (passiv) + Ligand-Funktionalisierung (aktiv) = zweistufige Zielgerichtetheit.",
-        }
+          explanation:
+            "EPR-Effekt (passiv) + Ligand-Funktionalisierung (aktiv) = zweistufige Zielgerichtetheit.",
+        },
       ],
     },
     {
@@ -1836,11 +1897,13 @@ const set9: TVTextSet = {
             "Das mesolimbische System ist nicht an Sucht beteiligt.",
           ],
           correctOption: 2,
-          explanation: "Sucht ist eine chronische Hirnerkrankung; neuroadaptive Veränderungen erklären Kontrollverlust.",
+          explanation:
+            "Sucht ist eine chronische Hirnerkrankung; neuroadaptive Veränderungen erklären Kontrollverlust.",
         },
         {
           id: "tv9-5-q4",
-          question: "Welche Schlussfolgerung lässt sich über den Wirkmechanismus von Alkohol und Opiaten im Vergleich zu Kokain ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über den Wirkmechanismus von Alkohol und Opiaten im Vergleich zu Kokain ziehen?",
           options: [
             "Alkohol blockiert die Dopamin-Wiederaufnahme wie Kokain.",
             "Opioide steigern direkt die Dopaminfreisetzung aus Vesikeln.",
@@ -1849,8 +1912,9 @@ const set9: TVTextSet = {
             "Alkohol hat keine Wirkung auf das mesolimbische System.",
           ],
           correctOption: 2,
-          explanation: "Alkohol und Opioide wirken indirekt; Kokain blockiert Dopamin-Wiederaufnahme direkt.",
-        }
+          explanation:
+            "Alkohol und Opioide wirken indirekt; Kokain blockiert Dopamin-Wiederaufnahme direkt.",
+        },
       ],
     },
   ],
@@ -1911,7 +1975,8 @@ const set10: TVTextSet = {
         },
         {
           id: "tv10-1-q2",
-          question: "Warum wurde das Sichelzellgen laut dem Text trotz seiner negativen Auswirkungen nicht eliminiert?",
+          question:
+            "Warum wurde das Sichelzellgen laut dem Text trotz seiner negativen Auswirkungen nicht eliminiert?",
           options: [
             "Weil die Mutation erst kürzlich entstanden ist und die Selektion noch nicht genug Zeit hatte.",
             "Weil in heterozygoter Form ein Schutz gegen Malaria besteht, da sich der Erreger in verformten Blutkörperchen schlechter vermehrt.",
@@ -1934,11 +1999,13 @@ const set10: TVTextSet = {
             "Das Sichelzellgen ist global gleichmäßig verbreitet.",
           ],
           correctOption: 2,
-          explanation: "Mismatch-Hypothese, adaptive Funktion von Fieber und Malariaschutz des Sichelzellgens.",
+          explanation:
+            "Mismatch-Hypothese, adaptive Funktion von Fieber und Malariaschutz des Sichelzellgens.",
         },
         {
           id: "tv10-1-q4",
-          question: "Welche Schlussfolgerung lässt sich über die Behandlung von Fieber aus dem Text ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über die Behandlung von Fieber aus dem Text ziehen?",
           options: [
             "Fieber ist grundsätzlich gefährlich und sollte immer behandelt werden.",
             "Unterdrückung von Fieber reduziert Sterblichkeit bei Infektionen.",
@@ -1947,8 +2014,9 @@ const set10: TVTextSet = {
             "Fieber ist ausschließlich ein Nebenprodukt der Infektion.",
           ],
           correctOption: 2,
-          explanation: "Fieberunterdrückung kann Sterblichkeit erhöhen → differenzierte Behandlung sinnvoll.",
-        }
+          explanation:
+            "Fieberunterdrückung kann Sterblichkeit erhöhen → differenzierte Behandlung sinnvoll.",
+        },
       ],
     },
     {
@@ -1987,7 +2055,8 @@ const set10: TVTextSet = {
       questions: [
         {
           id: "tv10-2-q1",
-          question: "Was ist laut dem Text die größte Herausforderung beim Bioprinting komplexer Organe?",
+          question:
+            "Was ist laut dem Text die größte Herausforderung beim Bioprinting komplexer Organe?",
           options: [
             "Die Herstellung einer geeigneten Biotinte aus lebenden Zellen.",
             "Die Abstoßungsreaktion des Immunsystems gegen das gedruckte Gewebe.",
@@ -2024,11 +2093,13 @@ const set10: TVTextSet = {
             "Künstliche Organe sind günstiger als Transplantate.",
           ],
           correctOption: 2,
-          explanation: "Mechanische Ersatzsysteme existieren; Bioprinting scheitert noch an der Vaskularisierung.",
+          explanation:
+            "Mechanische Ersatzsysteme existieren; Bioprinting scheitert noch an der Vaskularisierung.",
         },
         {
           id: "tv10-2-q4",
-          question: "Welche Schlussfolgerung lässt sich über die Bedeutung der Vaskularisierung für das Bioprinting ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über die Bedeutung der Vaskularisierung für das Bioprinting ziehen?",
           options: [
             "Zellen können unbegrenzt weit von Blutgefäßen entfernt überleben.",
             "Wachstumsfaktoren sind für Bioprinting irrelevant.",
@@ -2037,8 +2108,9 @@ const set10: TVTextSet = {
             "Bioprinting-Organe benötigen keine Vaskularisierung.",
           ],
           correctOption: 2,
-          explanation: "Vaskularisierung ist die entscheidende Hürde für das Bioprinting funktionaler komplexer Organe.",
-        }
+          explanation:
+            "Vaskularisierung ist die entscheidende Hürde für das Bioprinting funktionaler komplexer Organe.",
+        },
       ],
     },
     {
@@ -2076,7 +2148,8 @@ const set10: TVTextSet = {
       questions: [
         {
           id: "tv10-3-q1",
-          question: "Warum werden Adeno-assoziierte Viren (AAV) laut dem Text bevorzugt als Vektoren eingesetzt?",
+          question:
+            "Warum werden Adeno-assoziierte Viren (AAV) laut dem Text bevorzugt als Vektoren eingesetzt?",
           options: [
             "Weil sie sich schnell vermehren und so große Mengen des therapeutischen Gens produzieren.",
             "Weil sie als besonders sicher gelten, da sie sich nicht in das menschliche Genom integrieren und verschiedene Zelltypen infizieren können.",
@@ -2090,7 +2163,8 @@ const set10: TVTextSet = {
         },
         {
           id: "tv10-3-q2",
-          question: "Welches Problem der Gentherapie wird am Beispiel von Zolgensma im Text thematisiert?",
+          question:
+            "Welches Problem der Gentherapie wird am Beispiel von Zolgensma im Text thematisiert?",
           options: [
             "Die geringe Wirksamkeit bei Erwachsenen im Vergleich zu Kindern.",
             "Die Notwendigkeit wiederholter Behandlungen über viele Jahre hinweg.",
@@ -2113,11 +2187,13 @@ const set10: TVTextSet = {
             "AAV-Vektoren integrieren sich ins menschliche Genom.",
           ],
           correctOption: 2,
-          explanation: "Gentherapie korrigiert Defekte durch virale Vektoren; beeindruckende Ergebnisse, aber hohe Kosten.",
+          explanation:
+            "Gentherapie korrigiert Defekte durch virale Vektoren; beeindruckende Ergebnisse, aber hohe Kosten.",
         },
         {
           id: "tv10-3-q4",
-          question: "Welche Schlussfolgerung lässt sich aus dem Beispiel Zolgensma über Gentherapie ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich aus dem Beispiel Zolgensma über Gentherapie ziehen?",
           options: [
             "Da Zolgensma über 2 Mio. USD kostet, können nicht alle Patienten auf lebensrettende Gentherapien zugreifen, was die Frage der Verteilungsgerechtigkeit aufwirft.",
             "Zolgensma ist weltweit kostenlos verfügbar.",
@@ -2127,7 +2203,7 @@ const set10: TVTextSet = {
           ],
           correctOption: 0,
           explanation: "Zolgensma kostet über 2 Mio. USD → Fragen der Zugangsgerechtigkeit.",
-        }
+        },
       ],
     },
     {
@@ -2179,7 +2255,8 @@ const set10: TVTextSet = {
         },
         {
           id: "tv10-4-q2",
-          question: "Warum ist die langfristige Akzeptanz der CPAP-Therapie laut dem Text begrenzt?",
+          question:
+            "Warum ist die langfristige Akzeptanz der CPAP-Therapie laut dem Text begrenzt?",
           options: [
             "Weil die Therapie nur bei leichter Schlafapnoe wirksam ist.",
             "Weil die Geräte sehr teuer sind und nicht von Krankenkassen übernommen werden.",
@@ -2193,7 +2270,8 @@ const set10: TVTextSet = {
         },
         {
           id: "tv10-4-q3",
-          question: "Welche langfristigen Gesundheitsrisiken einer unbehandelten Schlafapnoe nennt der Text?",
+          question:
+            "Welche langfristigen Gesundheitsrisiken einer unbehandelten Schlafapnoe nennt der Text?",
           options: [
             "Nierenversagen, Lebererkrankungen und chronische Schmerzen.",
             "Bluthochdruck, Herzinfarkt, Schlaganfall und Typ-2-Diabetes.",
@@ -2207,7 +2285,8 @@ const set10: TVTextSet = {
         },
         {
           id: "tv10-4-q4",
-          question: "Welche Schlussfolgerung lässt sich aus dem Text über die begrenzte CPAP-Akzeptanz ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich aus dem Text über die begrenzte CPAP-Akzeptanz ziehen?",
           options: [
             "CPAP ist nur für leichte Schlafapnoe geeignet.",
             "Schlafapnoe hat keine langfristigen Herzfolgen.",
@@ -2217,7 +2296,7 @@ const set10: TVTextSet = {
           ],
           correctOption: 2,
           explanation: "Da nur 50-70% CPAP akzeptieren, sind alternative Therapien wichtig.",
-        }
+        },
       ],
     },
     {
@@ -2285,7 +2364,8 @@ const set10: TVTextSet = {
         },
         {
           id: "tv10-5-q3",
-          question: "Welche philosophische Frage wirft die Tiefe Hirnstimulation laut dem Text auf?",
+          question:
+            "Welche philosophische Frage wirft die Tiefe Hirnstimulation laut dem Text auf?",
           options: [
             "Ob Maschinen ein Bewusstsein entwickeln können, wenn sie mit dem Gehirn verbunden werden.",
             "Ob die Behandlung neurologischer Erkrankungen grundsätzlich ethisch vertretbar ist.",
@@ -2299,7 +2379,8 @@ const set10: TVTextSet = {
         },
         {
           id: "tv10-5-q4",
-          question: "Welche Schlussfolgerung lässt sich über die ethische Problematik der Tiefen Hirnstimulation ziehen?",
+          question:
+            "Welche Schlussfolgerung lässt sich über die ethische Problematik der Tiefen Hirnstimulation ziehen?",
           options: [
             "Tiefe Hirnstimulation ist vollkommen risikolos.",
             "Persönlichkeit ändert sich nie durch medizinische Behandlung.",
@@ -2308,8 +2389,9 @@ const set10: TVTextSet = {
             "Persönlichkeitsveränderungen sind erwartete und erwünschte Nebenwirkungen.",
           ],
           correctOption: 2,
-          explanation: "Tiefe Hirnstimulation kann Persönlichkeit verändern → Frage nach Entscheidungskompetenz nach dem Eingriff.",
-        }
+          explanation:
+            "Tiefe Hirnstimulation kann Persönlichkeit verändern → Frage nach Entscheidungskompetenz nach dem Eingriff.",
+        },
       ],
     },
   ],

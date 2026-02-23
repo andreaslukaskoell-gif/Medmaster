@@ -4,14 +4,15 @@ Um zu sehen, welche Kapitel vorhanden sind, öffne die Browser-Konsole (F12) und
 
 ```javascript
 // Übersicht in der Konsole anzeigen
-window.showChapters()
+window.showChapters();
 
 // Oder Daten als Objekt erhalten
-const data = window.listChapters()
-console.log(data)
+const data = window.listChapters();
+console.log(data);
 ```
 
 Die Funktion zeigt:
+
 - Gesamtanzahl der Kapitel
 - Anzahl der Unterkapitel
 - Gruppierung nach Fächern

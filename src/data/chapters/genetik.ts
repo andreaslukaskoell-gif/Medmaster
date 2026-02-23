@@ -38,7 +38,7 @@ export const genetikChapter: Chapter = {
         "**DNA-Replikation:** Die Verdopplung der DNA erfolgt semikonservativ (Meselson & Stahl, 1958) — jeder neue Doppelstrang enthält einen alten und einen neu synthetisierten Strang. Ablauf: (1) Helicase entwindet die Doppelhelix und öffnet die Replikationsgabel. (2) Topoisomerase baut Torsionsspannungen ab. (3) Primase synthetisiert kurze RNA-Primer als Startpunkt. (4) DNA-Polymerase III synthetisiert den neuen Strang in 5'→3'-Richtung. Am Leitstrang (leading strand) erfolgt die Synthese kontinuierlich in Richtung der Replikationsgabel. Am Folgestrang (lagging strand) erfolgt die Synthese diskontinuierlich in Form von Okazaki-Fragmenten (je ca. 100–200 Nukleotide bei Eukaryoten). (5) DNA-Polymerase I ersetzt die RNA-Primer durch DNA. (6) DNA-Ligase verknüpft die Okazaki-Fragmente zu einem durchgängigen Strang.",
       diagram: "dna-helix",
       merke:
-        "A=T hat <strong>2</strong> H-Brücken, G≡C hat <strong>3</strong> H-Brücken. GC-reiche DNA ist thermisch stabiler (höhere Schmelztemperatur). Merke: \"Auf dem <strong>GC</strong> liegt's <strong>gut</strong> (3 Brücken = stärker)\"",
+        'A=T hat <strong>2</strong> H-Brücken, G≡C hat <strong>3</strong> H-Brücken. GC-reiche DNA ist thermisch stabiler (höhere Schmelztemperatur). Merke: "Auf dem <strong>GC</strong> liegt\'s <strong>gut</strong> (3 Brücken = stärker)"',
       klinik:
         "Die PCR (Polymerase-Kettenreaktion) nutzt die DNA-Replikation in vitro mit thermostabiler Taq-Polymerase — essenziell für COVID-Tests, Forensik und Gendiagnostik.",
     },
@@ -61,7 +61,11 @@ export const genetikChapter: Chapter = {
           ["Basen", "A, T, G, C", "A, U, G, C"],
           ["Stränge", "Doppelsträngig (Doppelhelix)", "Meist einzelsträngig"],
           ["Ort", "Zellkern (Eukaryoten)", "Zellkern & Cytoplasma"],
-          ["Funktion", "Langfristige Speicherung der Erbinformation", "Informationsübertragung, Proteinbiosynthese, Regulation"],
+          [
+            "Funktion",
+            "Langfristige Speicherung der Erbinformation",
+            "Informationsübertragung, Proteinbiosynthese, Regulation",
+          ],
         ],
       },
       merke:
@@ -105,7 +109,7 @@ export const genetikChapter: Chapter = {
         "3) Termination: Wenn ein Stoppcodon (UAA, UAG oder UGA) die A-Stelle erreicht, bindet kein tRNA, sondern ein Release-Faktor. Dieser löst die Freisetzung der fertigen Polypeptidkette aus. Das Ribosom dissoziiert in seine Untereinheiten.\n\n" +
         "Mehrere Ribosomen können gleichzeitig eine mRNA translatieren — diese Struktur nennt man Polysom (Polyribosom).",
       merke:
-        "Startcodon: <strong>AUG</strong> (Methionin). Stoppcodons: <strong>UAA, UAG, UGA</strong> — merke: \"<strong>U</strong> <strong>A</strong>re <strong>A</strong>way\", \"<strong>U</strong> <strong>A</strong>re <strong>G</strong>one\", \"<strong>U</strong> <strong>G</strong>o <strong>A</strong>way\"",
+        'Startcodon: <strong>AUG</strong> (Methionin). Stoppcodons: <strong>UAA, UAG, UGA</strong> — merke: "<strong>U</strong> <strong>A</strong>re <strong>A</strong>way", "<strong>U</strong> <strong>A</strong>re <strong>G</strong>one", "<strong>U</strong> <strong>G</strong>o <strong>A</strong>way"',
     },
 
     // ──────────────────────────────────────────────
@@ -125,7 +129,7 @@ export const genetikChapter: Chapter = {
       merke:
         "Der genetische Code ist <strong>degeneriert</strong> (mehrere Codons für eine AS), aber <strong>nicht mehrdeutig</strong> (jedes Codon codiert nur EINE AS). 4³ = 64 Codons > 20 Aminosäuren.",
       altfrage:
-        "\"Wie viele verschiedene Codons gibt es?\" → 64 (4³). Davon codieren 61 für Aminosäuren und 3 sind Stoppcodons (UAA, UAG, UGA).",
+        '"Wie viele verschiedene Codons gibt es?" → 64 (4³). Davon codieren 61 für Aminosäuren und 3 sind Stoppcodons (UAA, UAG, UGA).',
     },
 
     // ──────────────────────────────────────────────
@@ -145,7 +149,7 @@ export const genetikChapter: Chapter = {
         "• Kodominanz: Beide Allele exprimieren sich gleich stark (z.B. Blutgruppe AB: Iᴬ und Iᴮ)\n" +
         "• Intermediärer Erbgang: Heterozygote zeigen einen Mischphänotyp (z.B. rote × weiße Blüten → rosa)\n\n" +
         "**1. Uniformitätsregel (Uniformity Rule):**\n" +
-        "Kreuzt man zwei homozygote (reinerbige) Eltern, die sich in einem Merkmal unterscheiden (P: AA × aa), so sind alle Nachkommen der F1-Generation uniform (gleich) in Genotyp (Aa) und Phänotyp. Bei dominant-rezessivem Erbgang zeigen alle F1-Individuen den dominanten Phänotyp. Bei intermediärem Erbgang zeigen alle F1 eine Zwischenform.\n\n" +
+        "Kreuzt man zwei homozygote (reinerbige) Eltern, die sich in einem Merkmal unterscheiden (P: AA × aa), so sind alle Nachkommen der F1-Generation uniform (gleich) in Genotyp (Aa) und Phänotyp. Bei dominant-rezessivem Erbgang zeigen alle F1-Individün den dominanten Phänotyp. Bei intermediärem Erbgang zeigen alle F1 eine Zwischenform.\n\n" +
         "**2. Spaltungsregel (Segregation Rule):**\n" +
         "Kreuzt man die F1-Hybriden untereinander (Aa × Aa), so spalten sich die Merkmale in der F2-Generation in einem bestimmten Verhältnis auf:\n" +
         "• Genotypisches Spaltungsverhältnis: 1 AA : 2 Aa : 1 aa\n" +
@@ -168,7 +172,7 @@ export const genetikChapter: Chapter = {
         "**Autosomal-dominanter Erbgang:**\n" +
         "Das krankmachende Allel (A) liegt auf einem Autosom und ist dominant. Bereits ein mutiertes Allel reicht für die Erkrankung: Genotyp Aa oder AA → krank, aa → gesund. Merkmale: Die Erkrankung tritt in jeder Generation auf (keine Generation wird übersprungen). Jedes betroffene Kind hat mindestens einen betroffenen Elternteil. Männer und Frauen sind gleich häufig betroffen. Beispiele: Chorea Huntington, Marfan-Syndrom, familiäre Hypercholesterinämie.\n\n" +
         "**Autosomal-rezessiver Erbgang:**\n" +
-        "Das krankmachende Allel (a) liegt auf einem Autosom und ist rezessiv. Nur homozygote Individuen (aa) sind erkrankt. Heterozygote (Aa) sind phänotypisch gesund, aber Konduktoren (Anlageträger). Merkmale: Die Erkrankung überspringt häufig Generationen. Betroffene Kinder können gesunde Eltern haben (wenn beide Konduktoren sind). Konsanguinität (Verwandtenehe) erhöht das Risiko. Männer und Frauen sind gleich häufig betroffen. Beispiele: Mukoviszidose (Cystische Fibrose), Sichelzellanämie, Phenylketonurie (PKU), Albinismus.\n\n" +
+        "Das krankmachende Allel (a) liegt auf einem Autosom und ist rezessiv. Nur homozygote Individün (aa) sind erkrankt. Heterozygote (Aa) sind phänotypisch gesund, aber Konduktoren (Anlageträger). Merkmale: Die Erkrankung überspringt häufig Generationen. Betroffene Kinder können gesunde Eltern haben (wenn beide Konduktoren sind). Konsanguinität (Verwandtenehe) erhöht das Risiko. Männer und Frauen sind gleich häufig betroffen. Beispiele: Mukoviszidose (Cystische Fibrose), Sichelzellanämie, Phenylketonurie (PKU), Albinismus.\n\n" +
         "**X-chromosomal-rezessiver Erbgang:**\n" +
         "Das krankmachende Allel liegt auf dem X-Chromosom und ist rezessiv. Männer sind deutlich häufiger betroffen, da sie nur ein X-Chromosom besitzen (hemizygot: XᵃY → krank). Frauen erkranken nur bei Homozygotie (XᵃXᵃ → selten). Heterozygote Frauen (XᴬXᵃ) sind Konduktorinnen (klinisch gesund, aber Überträgerinnen). Merkmale: Vorwiegend Männer betroffen. Keine Vater-zu-Sohn-Übertragung (Vater gibt Y-Chromosom an Söhne). Betroffene Söhne erhalten das mutierte X von der Mutter (Konduktorin). Beispiele: Hämophilie A und B (Bluterkrankheit), Rot-Grün-Blindheit (Protanopie/Deuteranopie), Muskeldystrophie Duchenne, G6PD-Mangel (Favismus).\n\n" +
         "**X-chromosomal-dominanter Erbgang:**\n" +
@@ -199,7 +203,7 @@ export const genetikChapter: Chapter = {
         ],
       },
       altfrage:
-        "\"Rot-Grün-Schwäche ist...\" → <strong>X-chromosomal rezessiv</strong>. Deshalb sind ca. 8% der Männer, aber nur 0,5% der Frauen betroffen (Frauen bräuchten das Allel auf BEIDEN X-Chromosomen).",
+        '"Rot-Grün-Schwäche ist..." → <strong>X-chromosomal rezessiv</strong>. Deshalb sind ca. 8% der Männer, aber nur 0,5% der Frauen betroffen (Frauen bräuchten das Allel auf BEIDEN X-Chromosomen).',
       klinik:
         "Mukoviszidose ist die häufigste autosomal-rezessive Erkrankung bei Europäern. Ca. 1 von 25 Personen ist Konduktor (Aa). Wahrscheinlichkeit für ein krankes Kind bei zwei Konduktoren: 25%.",
     },
@@ -237,17 +241,37 @@ export const genetikChapter: Chapter = {
       vergleichsTabelle: {
         headers: ["Mutationstyp", "Ebene", "Beispiel"],
         rows: [
-          ["Punktmutation (Missense)", "Genmutation (einzelne Basen)", "Sichelzellanämie (GAG → GUG im β-Globin-Gen)"],
-          ["Insertion/Deletion (Frameshift)", "Genmutation (Leserahmenverschiebung)", "Bestimmte Formen der Mukoviszidose (ΔF508: 3-bp-Deletion)"],
-          ["Deletion (chromosomal)", "Chromosomenmutation (Strukturveränderung)", "Cri-du-Chat-Syndrom (Deletion 5p)"],
-          ["Translokation", "Chromosomenmutation (Strukturveränderung)", "Philadelphia-Chromosom t(9;22) bei CML"],
-          ["Trisomie", "Genommutation (numerische Aberration)", "Down-Syndrom (Trisomie 21, 47 Chromosomen)"],
+          [
+            "Punktmutation (Missense)",
+            "Genmutation (einzelne Basen)",
+            "Sichelzellanämie (GAG → GUG im β-Globin-Gen)",
+          ],
+          [
+            "Insertion/Deletion (Frameshift)",
+            "Genmutation (Leserahmenverschiebung)",
+            "Bestimmte Formen der Mukoviszidose (ΔF508: 3-bp-Deletion)",
+          ],
+          [
+            "Deletion (chromosomal)",
+            "Chromosomenmutation (Strukturveränderung)",
+            "Cri-du-Chat-Syndrom (Deletion 5p)",
+          ],
+          [
+            "Translokation",
+            "Chromosomenmutation (Strukturveränderung)",
+            "Philadelphia-Chromosom t(9;22) bei CML",
+          ],
+          [
+            "Trisomie",
+            "Genommutation (numerische Aberration)",
+            "Down-Syndrom (Trisomie 21, 47 Chromosomen)",
+          ],
         ],
       },
       merke:
         "Trisomie 21 ist eine <strong>Genommutation</strong> (NICHT Genmutation!) — die Gesamtzahl der Chromosomen ist verändert (47 statt 46). Non-Disjunction in der Meiose.",
       altfrage:
-        "\"Trisomie 21 ist eine...\" → <strong>Genommutation</strong> (numerische Chromosomenaberration). NICHT Genmutation (betrifft einzelne Gene) und NICHT Chromosomenmutation (strukturelle Veränderung).",
+        '"Trisomie 21 ist eine..." → <strong>Genommutation</strong> (numerische Chromosomenaberration). NICHT Genmutation (betrifft einzelne Gene) und NICHT Chromosomenmutation (strukturelle Veränderung).',
     },
 
     // ──────────────────────────────────────────────
@@ -258,7 +282,7 @@ export const genetikChapter: Chapter = {
       content:
         "Das Blutgruppensystem ist ein klassisches Beispiel für Kodominanz und hat große klinische Bedeutung bei Bluttransfusionen und in der Schwangerschaftsmedizin.\n\n" +
         "**ABO-System (Karl Landsteiner, 1901):**\n" +
-        "Das ABO-System wird durch ein Gen auf Chromosom 9 bestimmt, das drei Allele besitzt: Iᴬ, Iᴮ und i. Iᴬ und Iᴮ sind kodominant zueinander (beide werden im heterozygoten Zustand exprimiert → Blutgruppe AB). Das Allel i ist rezessiv gegenüber Iᴬ und Iᴮ.\n\n" +
+        "Das ABO-System wird durch ein Gen auf Chromosom 9 bestimmt, das drei Allele besitzt: Iᴬ, Iᴮ und i. Iᴬ und Iᴮ sind kodominant züinander (beide werden im heterozygoten Zustand exprimiert → Blutgruppe AB). Das Allel i ist rezessiv gegenüber Iᴬ und Iᴮ.\n\n" +
         "Die Allele codieren für Enzyme (Glykosyltransferasen), die bestimmte Zuckerreste an eine Grundstruktur (H-Antigen) auf der Oberfläche der Erythrozyten anfügen:\n" +
         "• Iᴬ → N-Acetylgalactosamin wird angehängt → Antigen A\n" +
         "• Iᴮ → Galactose wird angehängt → Antigen B\n" +

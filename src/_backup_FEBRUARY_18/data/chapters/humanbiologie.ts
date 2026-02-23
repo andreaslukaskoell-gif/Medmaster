@@ -43,37 +43,17 @@ export const humanbiologieChapter: Chapter = {
       vergleichsTabelle: {
         headers: ["Antik\u00F6rper", "Vorkommen", "Besonderheit"],
         rows: [
-          [
-            "IgM",
-            "Blut (intravaskul\u00E4r)",
-            "Erstreaktion, Pentamer, aktiviert Komplement",
-          ],
-          [
-            "IgG",
-            "Blut, Gewebe",
-            "H\u00E4ufigster Ak, plazentagängig, Sekund\u00E4rantwort",
-          ],
-          [
-            "IgA",
-            "Schleimh\u00E4ute, Sekrete",
-            "Schleimhautschutz, Dimer, in Muttermilch",
-          ],
-          [
-            "IgE",
-            "Gewebe (an Mastzellen)",
-            "Allergie, Parasitenabwehr, Histaminfreisetzung",
-          ],
-          [
-            "IgD",
-            "B-Zell-Oberfl\u00E4che",
-            "B-Zell-Rezeptor, Funktion teils unklar",
-          ],
+          ["IgM", "Blut (intravaskul\u00E4r)", "Erstreaktion, Pentamer, aktiviert Komplement"],
+          ["IgG", "Blut, Gewebe", "H\u00E4ufigster Ak, plazentagängig, Sekund\u00E4rantwort"],
+          ["IgA", "Schleimh\u00E4ute, Sekrete", "Schleimhautschutz, Dimer, in Muttermilch"],
+          ["IgE", "Gewebe (an Mastzellen)", "Allergie, Parasitenabwehr, Histaminfreisetzung"],
+          ["IgD", "B-Zell-Oberfl\u00E4che", "B-Zell-Rezeptor, Funktion teils unklar"],
         ],
       },
       merke:
-        "Antik\u00F6rper-Merkregel: <strong>MADGE</strong> \u2014 IgM (Erst), IgA (Schleimhaut), IgD (B-Zell), IgG (h\u00E4ufigst, Placenta), IgE (Allergie). IgG = \"lon<strong>G</strong>-lasting\", IgM = \"i<strong>M</strong>mediate\".",
+        'Antik\u00F6rper-Merkregel: <strong>MADGE</strong> \u2014 IgM (Erst), IgA (Schleimhaut), IgD (B-Zell), IgG (h\u00E4ufigst, Placenta), IgE (Allergie). IgG = "lon<strong>G</strong>-lasting", IgM = "i<strong>M</strong>mediate".',
       altfrage:
-        "\"Welcher Antik\u00F6rper ist plazentagängig?\" \u2192 <strong>IgG</strong> \u2014 der einzige Ak, der die Plazenta passiert und so den Nestschutz des Neugeborenen gew\u00E4hrleistet.",
+        '"Welcher Antik\u00F6rper ist plazentagängig?" \u2192 <strong>IgG</strong> \u2014 der einzige Ak, der die Plazenta passiert und so den Nestschutz des Neugeborenen gew\u00E4hrleistet.',
     },
 
     {
@@ -108,7 +88,7 @@ export const humanbiologieChapter: Chapter = {
         "Die chemische Synapse ist der wichtigste Mechanismus der Signal\u00FCbertragung zwischen Neuronen (oder zwischen Neuron und Effektorzelle). Der Ablauf der synaptischen \u00DCbertragung im Detail:\n\n1. Ein Aktionspotential erreicht die pr\u00E4synaptische Endigung (synaptisches Endkn\u00F6pfchen).\n2. Spannungsgesteuerte Ca2+-Kan\u00E4le \u00F6ffnen sich \u2192 Ca2+ str\u00F6mt in die Pr\u00E4synapse ein.\n3. Der Ca2+-Einstrom bewirkt die Fusion der synaptischen Vesikel (die Neurotransmitter enthalten) mit der pr\u00E4synaptischen Membran \u2192 Exozytose der Neurotransmitter in den synaptischen Spalt (~20\u201340 nm breit).\n4. Die Neurotransmitter diffundieren durch den synaptischen Spalt und binden an spezifische Rezeptoren auf der postsynaptischen Membran.\n5. Ionotrope Rezeptoren: Liganden-gesteuerte Ionenkan\u00E4le \u2192 direkter Ionenstrom \u2192 schnelle Antwort. Metabotrope Rezeptoren: G-Protein-gekoppelt \u2192 Second-Messenger-Kaskade \u2192 langsamere, modulierende Wirkung.\n6. Je nach Neurotransmitter und Rezeptor entsteht ein EPSP (exzitatorisches postsynaptisches Potential, Depolarisation, erregend) oder ein IPSP (inhibitorisches postsynaptisches Potential, Hyperpolarisation, hemmend).\n7. EPSPs und IPSPs werden am Axonh\u00FCgel r\u00E4umlich und zeitlich summiert. Wird das Schwellenpotential erreicht, entsteht ein neues AP.\n8. Die Signal\u00FCbertragung wird beendet durch: enzymatischen Abbau (z. B. Acetylcholinesterase spaltet ACh), Wiederaufnahme in die Pr\u00E4synapse (Reuptake, z. B. f\u00FCr Serotonin, Noradrenalin, Dopamin) oder Diffusion aus dem synaptischen Spalt.\n\nWichtige Neurotransmitter und ihre Funktionen:\n\u2022 Acetylcholin (ACh): neuromuskuläre Endplatte (Skelettmuskelkontraktion), Parasympathikus (postganglion\u00E4r), ZNS (Ged\u00E4chtnis, Aufmerksamkeit).\n\u2022 Noradrenalin (NA): Sympathikus (postganglion\u00E4r), ZNS (Wachheit, Aufmerksamkeit).\n\u2022 Dopamin (DA): Belohnungssystem (mesolimbisches System), Motorik (nigrostriatales System), Hormonregulation.\n\u2022 Serotonin (5-HT): Stimmung, Schlaf-Wach-Rhythmus, Appetit, Schmerzwahrnehmung.\n\u2022 GABA (Gamma-Aminobutters\u00E4ure): wichtigster hemmender Neurotransmitter im ZNS, Cl\u207B-Einstrom \u2192 Hyperpolarisation.\n\u2022 Glutamat: wichtigster erregender Neurotransmitter im ZNS, beteiligt an Lernen und Ged\u00E4chtnis (NMDA-Rezeptoren, LTP).\n\u2022 Glycin: hemmender NT, v. a. im R\u00FCckenmark und Hirnstamm.",
       diagram: "synapse",
       merke:
-        "Erregend: <strong>Glutamat</strong> (h\u00E4ufigster erregender NT), <strong>Acetylcholin</strong>. Hemmend: <strong>GABA</strong> (h\u00E4ufigster hemmender NT), Glycin. Merke: GABA = \"<strong>G</strong>oes <strong>A</strong>way, <strong>B</strong>locks <strong>A</strong>ctivity\".",
+        'Erregend: <strong>Glutamat</strong> (h\u00E4ufigster erregender NT), <strong>Acetylcholin</strong>. Hemmend: <strong>GABA</strong> (h\u00E4ufigster hemmender NT), Glycin. Merke: GABA = "<strong>G</strong>oes <strong>A</strong>way, <strong>B</strong>locks <strong>A</strong>ctivity".',
       klinik:
         "Parkinson: Dopaminmangel in der Substantia nigra \u2192 Rigor, Tremor, Akinese. Depression: oft mit Serotonin-/Noradrenalinmangel assoziiert \u2192 SSRI-Therapie.",
     },
@@ -120,7 +100,7 @@ export const humanbiologieChapter: Chapter = {
       merke:
         "GFR: <strong>~180 L Prim\u00E4rharn/Tag</strong>, aber nur <strong>~1,5 L Endharn</strong>. Das bedeutet: 99% werden r\u00FCckresorbiert! ADH = mehr Wasser zur\u00FCck, Aldosteron = mehr Na+ zur\u00FCck.",
       altfrage:
-        "\"Wie viel Prim\u00E4rharn wird pro Tag gebildet?\" \u2192 <strong>~180 Liter</strong>. NICHT 1,5 L (das ist der Endharn). NICHT 120 mL (das ist die GFR pro Minute).",
+        '"Wie viel Prim\u00E4rharn wird pro Tag gebildet?" \u2192 <strong>~180 Liter</strong>. NICHT 1,5 L (das ist der Endharn). NICHT 120 mL (das ist die GFR pro Minute).',
     },
 
     {
@@ -215,7 +195,7 @@ export const humanbiologieChapter: Chapter = {
       merke:
         "Keimbl\u00E4tter: <strong>E</strong>ktoderm = <strong>a</strong>u\u00DFen (Haut + Nervensystem). <strong>M</strong>esoderm = <strong>M</strong>itte (Muskeln, Skelett). <strong>En</strong>doderm = <strong>in</strong>nen (Darm, Lunge). Merke: EMS \u2014 von au\u00DFen nach innen.",
       altfrage:
-        "\"Woraus entwickelt sich das Nervensystem?\" \u2192 <strong>Ektoderm</strong>. Das Nervensystem entsteht aus der Neuralplatte des Ektoderms (Neurulation). Auch die Haut (Epidermis) stammt vom Ektoderm.",
+        '"Woraus entwickelt sich das Nervensystem?" \u2192 <strong>Ektoderm</strong>. Das Nervensystem entsteht aus der Neuralplatte des Ektoderms (Neurulation). Auch die Haut (Epidermis) stammt vom Ektoderm.',
       klinik:
         "Extrauteringravidit\u00E4t (Eileiterschwangerschaft): Implantation au\u00DFerhalb des Uterus, meist in der Tube. Akutes Abdomen bei Ruptur \u2014 gyn\u00E4kologischer Notfall!",
     },
@@ -276,26 +256,14 @@ export const humanbiologieChapter: Chapter = {
     },
     {
       question: "Woraus entwickelt sich das Nervensystem?",
-      options: [
-        "Endoderm",
-        "Mesoderm",
-        "Ektoderm",
-        "Trophoblast",
-        "Mesenchym",
-      ],
+      options: ["Endoderm", "Mesoderm", "Ektoderm", "Trophoblast", "Mesenchym"],
       correctIndex: 2,
       explanation:
         "Das Nervensystem entwickelt sich aus dem Ektoderm (\u00E4u\u00DFeres Keimblatt) durch Neurulation. Auch die Epidermis der Haut stammt vom Ektoderm. Mesoderm \u2192 Muskeln/Skelett, Endoderm \u2192 Darm/Lunge.",
     },
     {
       question: "Welches Hormon senkt den Blutzucker?",
-      options: [
-        "Glukagon",
-        "Cortisol",
-        "Insulin",
-        "Adrenalin",
-        "Wachstumshormon",
-      ],
+      options: ["Glukagon", "Cortisol", "Insulin", "Adrenalin", "Wachstumshormon"],
       correctIndex: 2,
       explanation:
         "Insulin ist das einzige blutzuckersenkende Hormon. Es wird von den B-Zellen (Beta-Zellen) der Langerhans-Inseln im Pankreas produziert. Alle anderen genannten Hormone erh\u00F6hen den Blutzucker.",

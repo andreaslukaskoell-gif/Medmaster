@@ -1,4 +1,5 @@
 # MASTERPROMPT: Chapter Content Quality Audit & Fix
+
 ## MedMaster — BMS Lerninhalt Qualitätssicherung
 
 Dieses Prompt basiert auf einem systematischen Audit von 152 Unterkapiteln (UKs) über alle 4 Fächer.
@@ -22,17 +23,21 @@ Read /sessions/.../src/pages/BMSUnterkapitel.tsx                          ← Re
 ### A. kap5-klassische-genetik.ts [DRINGEND]
 
 **10× doppeltes Apostroph** → im Browser sichtbar als `Mendel''sche`
+
 ```
 Mendel''sche → Mendelsche      (NICHT Mendel'sche!)
 ```
 
 **28× `>>>> ` Merksatz-Marker im content-Feld** → rendern als roher Text
+
 ```
 >>>> Dominanz: Das dominante Allel... → gehört in merksätze: ['Dominanz: ...']
 ```
+
 Alle `>>>>` Zeilen aus content extrahieren → in das `merksätze: []` Array übertragen.
 
 **Nav-Links am Ende von content-Feldern** → tote Links, entfernen:
+
 ```
 ← [Zurück: Bio Kap 4 UK04 – Plazenta](Bio_Kap4_UK04_Plazenta.md)
 ```
@@ -40,6 +45,7 @@ Alle `>>>>` Zeilen aus content extrahieren → in das `merksätze: []` Array üb
 **⭐ Sterne und `## 📌 Prüfungsfokus` Blöcke** → aus content entfernen.
 
 **Metadata-Header** → aus content entfernen:
+
 ```
 **Priorität:** HOCH
 **Geschätzte Lesezeit:** 14 Minuten
@@ -47,6 +53,7 @@ Alle `>>>>` Zeilen aus content extrahieren → in das `merksätze: []` Array üb
 ```
 
 **Strukturlose Datenfelder** → kap5 hat `lernziele: []`, `sections: []`, `merksätze: []` → befüllen!
+
 - Aus dem vorhandenen content die Lernziele ableiten
 - Aus den H2-Überschriften im content → `sections[]` anlegen
 - `>>>> ` Marker → `merksätze[]`
@@ -64,6 +71,7 @@ Die Tabellen rendern zwar (via ReactMarkdown + remarkGfm), aber ohne das schöne
 Aber wenn ein UK bereits `sections[]` hat, sollen Vergleichstabellen in das sections.table-Format überführt werden.
 
 **So geht's:**
+
 ```typescript
 // VORHER: Tabelle im content-Feld (markdown)
 content: `
@@ -73,7 +81,7 @@ content: `
 |---------|-------------|------------|
 | Kern | kein Kern | Kern vorhanden |
 | Ribosomen | 70S | 80S |
-`
+`;
 
 // NACHHER: Tabelle in sections[i].table
 sections: [
@@ -85,21 +93,22 @@ sections: [
       rows: [
         ["Kern", "kein Kern", "Kern vorhanden"],
         ["Ribosomen", "70S", "80S"],
-      ]
-    }
-  }
-]
+      ],
+    },
+  },
+];
 ```
 
 **Betroffene UKs (23 Stück):**
 biologie: bio-11-01, bio-11-03, bio-7-05
 chemie: ch-10-02, ch-11-02, ch-12-01, ch-12-02, ch-12-04, ch-13-02, ch-13-03, ch-13-04,
-        ch-2-01, ch-2-02, ch-2-03, ch-3-01, ch-3-02, ch-6-01, ch-6-02, ch-6-03,
-        ch-7-03
+ch-2-01, ch-2-02, ch-2-03, ch-3-01, ch-3-02, ch-6-01, ch-6-02, ch-6-03,
+ch-7-03
 physik: ph-1-01, ph-1-02, ph-1-03, ph-4-01, ph-4-02, ph-4-04, ph-7-02
 mathematik: ma-1-02, ma-3-04
 
 Vorgehen per UK:
+
 1. Markdown-Tabelle aus content entfernen
 2. Als sections[i].table Eintrag anlegen (mit passendem heading + text)
 3. content bleibt als sauberer Fließtext ohne Tabelle
@@ -112,12 +121,14 @@ Vorgehen per UK:
 **Gewünscht:** Merksätze direkt unter den relevanten Abschnitt — in `sections[i].merksatz`.
 
 **Vorgehen:**
+
 1. Für jedes UK mit sections[] + merksätze[]: Prüfe welcher Merksatz zu welcher Section gehört
 2. Passendes Merksatz → in `sections[i].merksatz: "..."` übertragen
 3. Wenn Merksatz zu keiner Section passt → bleibt in `merksätze[]`
 4. WICHTIG: `merksätze[]` darf danach leer sein (`[]`) — ist OK
 
 **Beispiel:**
+
 ```typescript
 // VORHER
 sections: [
@@ -154,6 +165,7 @@ merksätze: []
 **kap6-molekulargenetik.ts** (4 UKs): alle haben `sections: []`
 
 **Vorgehen:**
+
 1. H2-Überschriften (`## Heading`) aus content als section.heading verwenden
 2. Den Text nach jeder H2 bis zur nächsten H2 als section.text
 3. `## ` Prefix aus content entfernen (wird dann in section.heading übernommen)
@@ -180,6 +192,7 @@ Keine einzige ist als echte MedAT-Frage markiert oder im Multiple-Choice-Format.
    Lass `altfrage` als offene Prüfungsfrage stehen ODER entferne sie.
 
 3. **Markierung hinzufügen** — ergänze eine Quelle wenn bekannt:
+
    ```typescript
    altfrage: {
      question: 'Warum ist Chloramphenicol für Prokaryoten toxisch?',
@@ -188,6 +201,7 @@ Keine einzige ist als echte MedAT-Frage markiert oder im Multiple-Choice-Format.
      // source: 'MedAT 2022' ODER source: 'Übungsformat'
    }
    ```
+
    → HINWEIS an den Entwickler in einem Kommentar:
    `// TODO: echte MedAT-Altfrage einfügen, diese ist eine Übungsfrage`
 
@@ -199,6 +213,7 @@ Keine einzige ist als echte MedAT-Frage markiert oder im Multiple-Choice-Format.
 ### F. Diagramm-Felder ergänzen
 
 **Verfügbare SVG-Typen** (aus DiagramSVG.tsx DIAGRAM_MAP):
+
 ```
 Biologie: animal-cell, plant-vs-animal-cell, cell-membrane, mitosis, meiosis,
           dna-helix, transcription-translation, heart-anatomy, cardiac-conduction,
@@ -217,10 +232,12 @@ Mathe: coordinate-system, unit-circle, vector-addition
 ```
 
 **Vorgehen:** Für jedes UK das ein Diagramm-Thema behandelt:
+
 - `diagram: "passender-typ"` ergänzen wenn noch nicht vorhanden
 - Das Diagramm erscheint am Ende des sections-Blocks — gut als visueller Abschluss
 
 **Beispiele für fehlende Diagramme:**
+
 - bio-1-02 (Prokaryoten vs. Eukaryoten) → `diagram: "prokaryote-vs-eukaryote"` ✓ schon da?
 - bio-2-01 (Epithelgewebe) → evtl. noch kein passendes Diagramm vorhanden
 - ch-1-xx (Atombau) → `diagram: "atomic-orbitals"` prüfen
@@ -246,6 +263,7 @@ Falls sie identisch sind → content-H2 entfernen (section übernimmt das Headin
 ### H. Versteckte Features (quiz, imageUrl, additionalNotes)
 
 **Befund aus dem Audit:**
+
 - `quiz?: QuizItem[]` — in types.ts definiert, in BMSUnterkapitel.tsx NICHT gerendert
   (nur als Debug-Status "Vorhanden/Fehlt" angezeigt)
 - `imageUrl?: string` — in types.ts definiert, NICHT gerendert
@@ -253,6 +271,7 @@ Falls sie identisch sind → content-H2 entfernen (section übernimmt das Headin
   (aber kein UK nutzt es aktuell)
 
 **TODO für den Entwickler:**
+
 1. `quiz` und `imageUrl` entweder rendern ODER aus types.ts entfernen
 2. `additionalNotes` nutzen für "Weiterführende Hinweise" am Ende des UKs
 3. Empfehlung: `imageUrl` durch die vorhandene SVG-Diagram-Infrastruktur ersetzen
@@ -263,6 +282,7 @@ Falls sie identisch sind → content-H2 entfernen (section übernimmt das Headin
 ## AUSFÜHRUNGSPLAN
 
 ### Schritt 1: kap5 Quick-Fixes [~45 min]
+
 Datei: `src/data/bmsKapitel/biologie/kap5-klassische-genetik.ts`
 
 ```
@@ -278,7 +298,9 @@ Datei: `src/data/bmsKapitel/biologie/kap5-klassische-genetik.ts`
 ```
 
 ### Schritt 2: Tabellen aus content → sections.table [~90 min]
+
 Für die 23 betroffenen UKs:
+
 - Markdown-Tabelle identifizieren
 - Als sections[i].table konvertieren
 - Aus content-Fließtext entfernen
@@ -286,21 +308,26 @@ Für die 23 betroffenen UKs:
 **Priorität:** zuerst Bio (3 UKs), dann Chemie (17 UKs), dann Physik (6 UKs), dann Mathe (2 UKs)
 
 ### Schritt 3: Merksätze inline platzieren [~60 min]
+
 Für alle UKs mit sections[] + merksätze[]:
+
 - Zuordnung: welcher Merksatz gehört zu welcher Section?
 - sections[i].merksatz befüllen
 - merksätze[] leeren oder auf nicht-zuordenbare reduzieren
 
 ### Schritt 4: sections[] für kap3/kap5/kap6 anlegen [~90 min]
+
 - H2-Struktur aus content in sections[] überführen
 - Merksatz-Marker (`>>>>`) in sections[i].merksatz einbauen
 - content bereinigen (H2s entfernen, Einstiegsparagraph stehen lassen)
 
 ### Schritt 5: Diagramme ergänzen [~30 min]
+
 - Pro UK prüfen: gibt es ein passendes Diagramm in DIAGRAM_MAP?
 - Falls ja und noch nicht vorhanden: `diagram: "type"` ergänzen
 
 ### Schritt 6: Altfragen-Audit [~45 min]
+
 - TODO-Kommentare zu allen 127 Altfragen hinzufügen: `// Quelle: Übungsformat`
 - Altfragen die sich für MC eignen → als zusätzliche selfTest-Frage konvertieren
   (nur wenn selfTest < 5 Fragen hat)
@@ -336,6 +363,7 @@ Für alle UKs mit sections[] + merksätze[]:
 ## QUALITÄTSCHECKLISTE
 
 Nach jedem UK prüfen:
+
 - [ ] Kein `''` im content
 - [ ] Kein `>>>>` im content
 - [ ] Keine Nav-Links, Sterne, Metadata

@@ -1,4 +1,5 @@
 # MASTERPROMPT: Overnight Full Audit + Consolidation + Frontend Upgrade
+
 **Für Claude Code — autonome Ausführung über Nacht**
 
 ---
@@ -93,6 +94,7 @@ print(f"\nGesamt: {len(results)} Kapitel")
 Gehe jeden Kapitel-File durch und korrigiere folgende Probleme:
 
 **A) ÜBERSCHRIFTEN-STRUKTUR**
+
 - Das Kapitel selbst hat einen `title:` → das ist die H1
 - Sections haben `heading:` → das ist H2
 - Im `content:` Feld dürfen KEINE `##`-H2-Überschriften stehen die inhaltlich identisch mit sections sind
@@ -100,6 +102,7 @@ Gehe jeden Kapitel-File durch und korrigiere folgende Probleme:
 - Stelle sicher dass `sections[]` das primäre Strukturelement ist (nicht inline `##` im content)
 
 **B) MERKSÄTZE**
+
 - `merksatz:` darf NUR unter einer section stehen die direkt zu diesem Lernziel gehört
 - Kein Merksatz der allgemein ist und zu einer übergeordneten Einheit gehört
 - Format: `merksatz: "Kurzer, prägnanter Satz der exakt eine Kernaussage vermittelt."`
@@ -110,6 +113,7 @@ Gehe jeden Kapitel-File durch und korrigiere folgende Probleme:
 **C) FRAGEN (selfTest + altfragen) — MEDAT-KONFORM**
 
 Alle Fragen MÜSSEN diesem Format entsprechen:
+
 ```typescript
 {
   id: "bio-1-01-q1",
@@ -123,6 +127,7 @@ Alle Fragen MÜSSEN diesem Format entsprechen:
 ```
 
 Regeln für MedAT-konforme Fragen:
+
 - IMMER 5 Antwortoptionen (A-E)
 - Nur eine korrekte Antwort
 - Typische MedAT-Fragetypen: "Welche Aussage ist RICHTIG/FALSCH?", "Welche der folgenden...", "Was trifft auf X zu?"
@@ -131,6 +136,7 @@ Regeln für MedAT-konforme Fragen:
 - Schwierigkeitsgrad: 60% mittel, 25% schwer, 15% leicht (MedAT-Verteilung)
 
 Überprüfe JEDE bestehende Frage auf:
+
 - Hat sie 5 Optionen? (wenn nicht → ergänzen)
 - Ist sie MedAT-stil? (wenn nicht → umschreiben)
 - Ist die Erklärung präzise und lehrreich?
@@ -138,6 +144,7 @@ Regeln für MedAT-konforme Fragen:
 
 **D) DIAGRAMME / SVGs**
 Verfügbare DiagramTypes in DiagramSVG.tsx (alle diese sind implementiert):
+
 ```
 biologie: animal-cell, plant-vs-animal-cell, prokaryote-vs-eukaryote,
           cell-membrane, dna-helix, mitosis-phases, meiosis-overview,
@@ -160,6 +167,7 @@ mathematik: coordinate-system, vector-addition, unit-circle
 
 Füge `diagramType:` zu UKs hinzu wo es sinnvoll ist und noch kein Diagram vorhanden ist.
 Mapping-Empfehlungen:
+
 - Die Zelle → `animal-cell`, `prokaryote-vs-eukaryote`, `cell-membrane`
 - Mitose/Meiose → `mitosis-phases`, `meiosis-overview`
 - DNA/Genetik → `dna-helix`, `transcription-translation`
@@ -180,55 +188,56 @@ Mapping-Empfehlungen:
 
 **BIOLOGIE: 11 → 8 Kapitel**
 
-| Vorher | Nachher |
-|--------|---------|
-| kap1-die-zelle | kap1-die-zelle (behalten, Flagship) |
-| kap2-gewebe | → **in kap3-anatomie-physiologie integrieren** als neue erste Section |
-| kap3-anatomie-physiologie | kap2-anatomie-gewebe-physiologie (größer) |
-| kap4-entwicklungsbiologie | kap3-entwicklung-evolution (kap4+kap9 zusammen) |
-| kap5-klassische-genetik | kap4-genetik (kap5+kap6+kap7+kap8 zusammen) |
-| kap6-molekulargenetik | → in kap4-genetik |
-| kap7-methoden-der-genetik | → in kap4-genetik (als eigener UK-Block) |
-| kap8-humangenetik | → in kap4-genetik |
-| kap9-evolution | → in kap3-entwicklung-evolution |
-| kap10-oekologie | kap5-oekologie-immunologie (kap10+kap11) |
-| kap11-immunologie | → in kap5-oekologie-immunologie |
+| Vorher                    | Nachher                                                               |
+| ------------------------- | --------------------------------------------------------------------- |
+| kap1-die-zelle            | kap1-die-zelle (behalten, Flagship)                                   |
+| kap2-gewebe               | → **in kap3-anatomie-physiologie integrieren** als neue erste Section |
+| kap3-anatomie-physiologie | kap2-anatomie-gewebe-physiologie (größer)                             |
+| kap4-entwicklungsbiologie | kap3-entwicklung-evolution (kap4+kap9 zusammen)                       |
+| kap5-klassische-genetik   | kap4-genetik (kap5+kap6+kap7+kap8 zusammen)                           |
+| kap6-molekulargenetik     | → in kap4-genetik                                                     |
+| kap7-methoden-der-genetik | → in kap4-genetik (als eigener UK-Block)                              |
+| kap8-humangenetik         | → in kap4-genetik                                                     |
+| kap9-evolution            | → in kap3-entwicklung-evolution                                       |
+| kap10-oekologie           | kap5-oekologie-immunologie (kap10+kap11)                              |
+| kap11-immunologie         | → in kap5-oekologie-immunologie                                       |
 
 Neue Biologie-Struktur: **5-6 große Kapitel**
 
 **CHEMIE: 13 → 8 Kapitel**
 
-| Zusammenlegen | Neues Kapitel |
-|---------------|---------------|
-| kap1-atombau + kap2-mikrokosmos + kap5-periodensystem | kap1-atombau-periodensystem |
-| kap3-gasgesetze + kap4-aggregatzustaende | kap2-materie-und-zustaende |
-| kap6-chemische-bindung (behalten) | kap3-chemische-bindung |
-| kap7-chemische-reaktionen + kap8-chemisches-gleichgewicht | kap4-reaktionen-gleichgewicht |
-| kap9-elemente-und-verbindungen + kap10-saeure-base + kap11-redox | kap5-anorganische-chemie |
-| kap12-organische-chemie + kap13-naturstoffe | kap6-organische-chemie |
+| Zusammenlegen                                                    | Neues Kapitel                 |
+| ---------------------------------------------------------------- | ----------------------------- |
+| kap1-atombau + kap2-mikrokosmos + kap5-periodensystem            | kap1-atombau-periodensystem   |
+| kap3-gasgesetze + kap4-aggregatzustaende                         | kap2-materie-und-zustaende    |
+| kap6-chemische-bindung (behalten)                                | kap3-chemische-bindung        |
+| kap7-chemische-reaktionen + kap8-chemisches-gleichgewicht        | kap4-reaktionen-gleichgewicht |
+| kap9-elemente-und-verbindungen + kap10-saeure-base + kap11-redox | kap5-anorganische-chemie      |
+| kap12-organische-chemie + kap13-naturstoffe                      | kap6-organische-chemie        |
 
 **PHYSIK: 7 → 5 Kapitel**
 
-| Zusammenlegen | Neues Kapitel |
-|---------------|---------------|
-| kap1-groessen + kap2-mechanik | kap1-mechanik-grundlagen |
-| kap3-schwingungen-und-wellen (behalten) | kap2-wellen |
-| kap4-waermelehre (behalten) | kap3-waermelehre |
-| kap5-elektrizitaet + kap6-optik | kap4-elektrizitaet-optik |
-| kap7-atomphysik (behalten) | kap5-atomphysik |
+| Zusammenlegen                           | Neues Kapitel            |
+| --------------------------------------- | ------------------------ |
+| kap1-groessen + kap2-mechanik           | kap1-mechanik-grundlagen |
+| kap3-schwingungen-und-wellen (behalten) | kap2-wellen              |
+| kap4-waermelehre (behalten)             | kap3-waermelehre         |
+| kap5-elektrizitaet + kap6-optik         | kap4-elektrizitaet-optik |
+| kap7-atomphysik (behalten)              | kap5-atomphysik          |
 
 **MATHEMATIK: 6 → 4 Kapitel**
 
-| Zusammenlegen | Neues Kapitel |
-|---------------|---------------|
-| kap1-zehnerpotenzen + kap4-einheiten | kap1-zahlen-einheiten |
-| kap2-algebra + kap3-geometrie | kap2-algebra-geometrie |
-| kap5-funktionen (behalten, erweitern) | kap3-funktionen |
-| kap6-vektorrechnung (behalten) | kap4-vektoren |
+| Zusammenlegen                         | Neues Kapitel          |
+| ------------------------------------- | ---------------------- |
+| kap1-zehnerpotenzen + kap4-einheiten  | kap1-zahlen-einheiten  |
+| kap2-algebra + kap3-geometrie         | kap2-algebra-geometrie |
+| kap5-funktionen (behalten, erweitern) | kap3-funktionen        |
+| kap6-vektorrechnung (behalten)        | kap4-vektoren          |
 
 ### 2.2 Zusammenlegen-Prozess
 
 Für JEDE Zusammenlegung:
+
 1. Lese beide Quelldateien vollständig
 2. Erstelle neue zusammengelegte Datei mit:
    - Neuem `id` und `title`
@@ -251,12 +260,14 @@ Für JEDE Zusammenlegung:
 ### 3.1 Visuelle Hierarchie & Typography
 
 **BMSUnterkapitel.tsx** — Content-Bereich verbessern:
+
 - Überschriften mit klaren Größenhierarchien
 - `text-balance` für alle Headings (besserer Zeilenumbruch)
 - Subtile Separator-Linien zwischen Sektionen
 - Reading-progress-bar oben (schmale Linie die zeigt wie weit man gescrollt hat)
 
 **SubchapterContent.tsx** — Render-Qualität:
+
 - Inline-Code (`code`) mit monochromed Background
 - Mathematische Formeln (die mit $ stehen) kursiv + anderer Schrifttyp
 - Tabellen: sticky header beim Scrollen
@@ -265,6 +276,7 @@ Für JEDE Zusammenlegung:
 ### 3.2 Neues "UK Card" Design in der Kapitel-Übersicht
 
 In `BMSKapitelView.tsx` oder `BMS.tsx` — UK-Karten sollen zeigen:
+
 - Fortschritts-Ring (wie viel % des UK-Contents gelesen)
 - SRS-Status Badge (Neu / Gelernt / Fällig / Beherrscht)
 - Schwierigkeits-Indikator (1-3 Punkte)
@@ -273,6 +285,7 @@ In `BMSKapitelView.tsx` oder `BMS.tsx` — UK-Karten sollen zeigen:
 ### 3.3 "Quick Review" Modus
 
 Füge in `BMSUnterkapitel.tsx` einen neuen Button "Quick Review" hinzu:
+
 - Zeigt nur Merksätze aller Sektionen hintereinander (kein langer Text)
 - Perfekt für schnelle Wiederholung
 - Toggle-Button neben dem bestehenden "Hinterfrag-Modus"
@@ -290,6 +303,7 @@ Füge in `BMSUnterkapitel.tsx` einen neuen Button "Quick Review" hinzu:
 ```
 
 Im Quick-Review-Modus:
+
 - Zeige nur `section.merksatz` Felder in Cards
 - Zeige `section.heading` als Kontext
 - Kompaktes Layout, keine langen Texte
@@ -297,6 +311,7 @@ Im Quick-Review-Modus:
 ### 3.4 Dashboard-Widget: Lernstreak-Kalender
 
 In `Dashboard.tsx` — GitHub-style Contribution-Heatmap:
+
 - Zeige die letzten 12 Wochen als Grid
 - Grüner Punkt = Lerntag, Intensität = wie viel gelernt
 - Nutze die bestehende `heatmap.tsx` Komponente aus `/components/ui/heatmap.tsx`
@@ -306,15 +321,17 @@ In `Dashboard.tsx` — GitHub-style Contribution-Heatmap:
 
 Jedes Fach hat bereits Farben definiert (`--accent-bio`, `--accent-chem`, etc.).
 Stelle sicher dass:
+
 - Biologie-Karten: grüner Akzent
 - Chemie-Karten: blauer Akzent
 - Physik-Karten: oranger Akzent
 - Mathematik-Karten: violetter Akzent
-Konsistent in: Kapitel-Header, UK-Cards, Sidebar-Badges, Progress-Bars
+  Konsistent in: Kapitel-Header, UK-Cards, Sidebar-Badges, Progress-Bars
 
 ### 3.6 Smooth Page Transitions
 
 In `App.tsx` — füge AnimatePresence für Route-Wechsel hinzu:
+
 ```tsx
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -329,12 +346,13 @@ import { AnimatePresence, motion } from "framer-motion";
   >
     {children}
   </motion.div>
-</AnimatePresence>
+</AnimatePresence>;
 ```
 
 ### 3.7 Onboarding-Verbesserung
 
 Lies `Onboarding.tsx` und prüfe:
+
 - Zeigt es alle wichtigen Features? (Simulation, Schwachstellen, Prognose)
 - Hat es einen klaren "Wo soll ich anfangen?"-Flow?
 - Verbessere den letzten Schritt: zeige die 3 wichtigsten ersten Aktionen
@@ -342,6 +360,7 @@ Lies `Onboarding.tsx` und prüfe:
 ### 3.8 Empty States verbessern
 
 Überall wo eine Liste leer ist (keine Quiz-Ergebnisse, keine Notizen, etc.):
+
 - Motivierender Illustration-Text statt "Keine Daten"
 - CTA-Button zur relevanten Aktion
 - Beispiel: Prognose ohne Daten → "Mache deinen ersten Test um deine Prognose zu sehen" + Button zu `/simulation`
@@ -353,6 +372,7 @@ Lies `Onboarding.tsx` und prüfe:
 ### 4.1 Keyboard Navigation
 
 In `BMSUnterkapitel.tsx`:
+
 - `ArrowLeft` / `ArrowRight` → nächstes/vorheriges Unterkapitel
 - `Space` → nächste Section aufklappen
 - `R` → Quick-Review-Modus togglen
@@ -361,6 +381,7 @@ In `BMSUnterkapitel.tsx`:
 ### 4.2 Search/Jump-to Verbesserung
 
 In `CommandPalette.tsx` — prüfe ob BMS-Kapitel-Suche funktioniert:
+
 - User kann nach Kapitel-Titeln suchen und direkt springen
 - Zeige letzte 5 besuchte Kapitel als Vorschläge
 - Fuzzy-search falls noch nicht implementiert
@@ -368,6 +389,7 @@ In `CommandPalette.tsx` — prüfe ob BMS-Kapitel-Suche funktioniert:
 ### 4.3 Lernzeit-Tracker
 
 Füge `estimatedReadingTime` Anzeige hinzu:
+
 - Berechne basierend auf Wortanzahl im content (200 Wörter/Minute)
 - Zeige: "~12 min Lesezeit" im UK-Header
 - Zeige "Noch ~5 min" wenn User halb durch ist

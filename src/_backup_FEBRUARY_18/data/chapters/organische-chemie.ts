@@ -47,7 +47,7 @@ export const organischeChemieChapter: Chapter = {
       merke:
         "Homologe Reihe der Alkane: <strong>Me-Et-Prop-But-Pent-Hex-Hept-Oct-Non-Dec</strong> (1-10 C-Atome). Doppelbindung = keine freie Rotation → cis/trans-Isomerie möglich!",
       altfrage:
-        "\"Wie viele H-Atome hat ein Alkan mit 6 C-Atomen?\" → CₙH₂ₙ₊₂ = C₆H₁₄ = <strong>14</strong> H-Atome.",
+        '"Wie viele H-Atome hat ein Alkan mit 6 C-Atomen?" → CₙH₂ₙ₊₂ = C₆H₁₄ = <strong>14</strong> H-Atome.',
     },
 
     // ──────────────────────────────────────────────
@@ -121,10 +121,30 @@ export const organischeChemieChapter: Chapter = {
       vergleichsTabelle: {
         headers: ["Biomolekül", "Monomer", "Polymer", "Funktion"],
         rows: [
-          ["Kohlenhydrate", "Monosaccharide (z.B. Glucose)", "Polysaccharide (Stärke, Glykogen, Cellulose)", "Energielieferant, Strukturbaustein, Energiespeicher"],
-          ["Lipide", "Fettsäuren + Glycerin", "Triglyceride, Phospholipide", "Energiespeicher (9 kcal/g), Membranaufbau, Hormone"],
-          ["Proteine", "Aminosäuren (20 proteinogene)", "Polypeptide / Proteine", "Enzyme, Struktur, Transport, Immunabwehr, Signale"],
-          ["Nucleinsäuren", "Nukleotide (Zucker + Phosphat + Base)", "DNA, RNA", "Speicherung und Übertragung der Erbinformation"],
+          [
+            "Kohlenhydrate",
+            "Monosaccharide (z.B. Glucose)",
+            "Polysaccharide (Stärke, Glykogen, Cellulose)",
+            "Energielieferant, Strukturbaustein, Energiespeicher",
+          ],
+          [
+            "Lipide",
+            "Fettsäuren + Glycerin",
+            "Triglyceride, Phospholipide",
+            "Energiespeicher (9 kcal/g), Membranaufbau, Hormone",
+          ],
+          [
+            "Proteine",
+            "Aminosäuren (20 proteinogene)",
+            "Polypeptide / Proteine",
+            "Enzyme, Struktur, Transport, Immunabwehr, Signale",
+          ],
+          [
+            "Nucleinsäuren",
+            "Nukleotide (Zucker + Phosphat + Base)",
+            "DNA, RNA",
+            "Speicherung und Übertragung der Erbinformation",
+          ],
         ],
       },
       merke:
@@ -165,10 +185,18 @@ export const organischeChemieChapter: Chapter = {
       vergleichsTabelle: {
         headers: ["Eigenschaft", "Kompetitive Hemmung", "Nicht-kompetitive Hemmung"],
         rows: [
-          ["Angriffspunkt", "Aktives Zentrum (gleiche Stelle wie Substrat)", "Allosterische Stelle (andere Stelle als Substrat)"],
+          [
+            "Angriffspunkt",
+            "Aktives Zentrum (gleiche Stelle wie Substrat)",
+            "Allosterische Stelle (andere Stelle als Substrat)",
+          ],
           ["Km", "Erhöht (↑)", "Unverändert (=)"],
           ["Vmax", "Unverändert (=)", "Erniedrigt (↓)"],
-          ["Aufhebbar durch Substratüberschuss", "Ja (Substrat verdrängt Inhibitor)", "Nein (Inhibitor bindet unabhängig vom Substrat)"],
+          [
+            "Aufhebbar durch Substratüberschuss",
+            "Ja (Substrat verdrängt Inhibitor)",
+            "Nein (Inhibitor bindet unabhängig vom Substrat)",
+          ],
         ],
       },
       merke:
@@ -183,7 +211,7 @@ export const organischeChemieChapter: Chapter = {
       content:
         "Der zelluläre Energiestoffwechsel beschreibt die Prozesse, durch die Zellen Energie aus Nährstoffen (v.a. Glucose) gewinnen und in Form von <strong>ATP</strong> (Adenosintriphosphat) speichern. ATP ist die universelle Energiewährung der Zelle. Die ärobe Zellatmung umfasst vier Stufen: Glykolyse, Pyruvat-Dehydrogenase-Reaktion, Citratzyklus und Atmungskette.\n\n" +
         "<strong>1. Glykolyse (Cytoplasma):</strong>\n" +
-        "Die Glykolyse (griech. \"Zuckerspaltung\") ist der erste Schritt des Glucoseabbaus und findet im <strong>Cytoplasma</strong> statt. Sie läuft sowohl ärob als auch anärob ab und benötigt <strong>keinen Sauerstoff</strong>.\n\n" +
+        'Die Glykolyse (griech. "Zuckerspaltung") ist der erste Schritt des Glucoseabbaus und findet im <strong>Cytoplasma</strong> statt. Sie läuft sowohl ärob als auch anärob ab und benötigt <strong>keinen Sauerstoff</strong>.\n\n' +
         "Gesamtreaktion: <strong>Glucose → 2 Pyruvat + 2 ATP + 2 NADH</strong>\n\n" +
         "Die Glykolyse gliedert sich in zwei Phasen:\n" +
         "• Vorbereitungsphase (Investitionsphase): Glucose wird phosphoryliert und in 2 Moleküle Glycerinaldehyd-3-phosphat (G3P) gespalten. Verbrauch: 2 ATP.\n" +
@@ -221,7 +249,7 @@ export const organischeChemieChapter: Chapter = {
       merke:
         "ATP-Bilanz pro Glucose: Glykolyse <strong>2 ATP</strong>, Citratzyklus <strong>2 ATP</strong>, Atmungskette <strong>~34 ATP</strong> = Gesamt <strong>~38 ATP</strong>. Ohne Sauerstoff: nur 2 ATP (anärobe Glykolyse → Laktat).",
       altfrage:
-        "\"Wo findet die Atmungskette statt?\" → An der <strong>inneren Mitochondrienmembran</strong>. Glykolyse = Cytoplasma, Citratzyklus = Mitochondrien-Matrix.",
+        '"Wo findet die Atmungskette statt?" → An der <strong>inneren Mitochondrienmembran</strong>. Glykolyse = Cytoplasma, Citratzyklus = Mitochondrien-Matrix.',
       klinik:
         "Cyanid-Vergiftung: Cyanid blockiert Komplex IV der Atmungskette → kein O₂-Verbrauch → keine ATP-Produktion → rasch tödlich. Antidot: Hydroxocobalamin.",
     },
@@ -286,8 +314,7 @@ export const organischeChemieChapter: Chapter = {
         "Primärer Alkohol wird zum Aldehyd oxidiert (und weiter zur Carbonsäure). Sekundärer Alkohol → Keton.",
     },
     {
-      question:
-        "Welches Polysaccharid dient als Energiespeicher im Tier?",
+      question: "Welches Polysaccharid dient als Energiespeicher im Tier?",
       options: ["Stärke", "Cellulose", "Glykogen", "Chitin", "Saccharose"],
       correctIndex: 2,
       explanation:
@@ -308,13 +335,7 @@ export const organischeChemieChapter: Chapter = {
     },
     {
       question: "Bei kompetitiver Hemmung...",
-      options: [
-        "sinkt Vmax",
-        "steigt Km",
-        "sinkt Km",
-        "steigen Km und Vmax",
-        "ändert sich nichts",
-      ],
+      options: ["sinkt Vmax", "steigt Km", "sinkt Km", "steigen Km und Vmax", "ändert sich nichts"],
       correctIndex: 1,
       explanation:
         "Bei kompetitiver Hemmung konkurriert der Inhibitor mit dem Substrat um das aktive Zentrum. Km steigt (scheinbar geringere Affinität), aber Vmax bleibt gleich (genug Substrat verdrängt den Inhibitor).",

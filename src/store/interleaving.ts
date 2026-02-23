@@ -1,10 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import {
-  pathnameToLearningArea,
-  isTrackedArea,
-  type LearningArea,
-} from "@/lib/learningArea";
+import { pathnameToLearningArea, isTrackedArea, type LearningArea } from "@/lib/learningArea";
 
 const INTERLEAVE_THRESHOLD_MS = 45 * 60 * 1000; // 45 Minuten
 const SNOOZE_DURATION_MS = 15 * 60 * 1000; // 15 Min snooze

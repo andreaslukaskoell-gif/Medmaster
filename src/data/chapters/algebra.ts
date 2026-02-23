@@ -203,7 +203,7 @@ Subtraktion: 9y = 9 → y = 1, einsetzen: 2x + 3 = 7 → x = 2`,
       merke:
         "Diskriminante D = b²-4ac bestimmt die Lösungsanzahl. <strong>D > 0</strong>: 2 Lösungen, <strong>D = 0</strong>: 1 Lösung, <strong>D < 0</strong>: keine reelle Lösung. ACHTUNG bei Ungleichungen: <strong>Negative Zahl × dreht ≤ zu ≥!</strong>",
       altfrage:
-        "\"Löse x² - 5x + 6 = 0\" → p-q-Formel oder Vieta: x₁+x₂ = 5, x₁·x₂ = 6 → <strong>x₁ = 2, x₂ = 3</strong>.",
+        '"Löse x² - 5x + 6 = 0" → p-q-Formel oder Vieta: x₁+x₂ = 5, x₁·x₂ = 6 → <strong>x₁ = 2, x₂ = 3</strong>.',
     },
 
     // ----------------------------------------------------------------
@@ -454,36 +454,31 @@ A falsch, B falsch → A → B <strong>wahr</strong>
       question: "Wie viele reelle Lösungen hat x² + 2x + 5 = 0?",
       options: ["0", "1", "2", "3", "Unendlich"],
       correctIndex: 0,
-      explanation:
-        "D = b² - 4ac = 4 - 20 = -16 < 0 → keine reelle Lösung.",
+      explanation: "D = b² - 4ac = 4 - 20 = -16 < 0 → keine reelle Lösung.",
     },
     {
       question: "Was ist log₂(8)?",
       options: ["2", "3", "4", "8", "16"],
       correctIndex: 1,
-      explanation:
-        "log₂(8) = 3, denn 2³ = 8.",
+      explanation: "log₂(8) = 3, denn 2³ = 8.",
     },
     {
       question: "20 % von 250 ist...",
       options: ["25", "40", "50", "75", "100"],
       correctIndex: 2,
-      explanation:
-        "P = G · p/100 = 250 · 20/100 = 50.",
+      explanation: "P = G · p/100 = 250 · 20/100 = 50.",
     },
     {
       question: "Ist 123 durch 3 teilbar?",
       options: ["Ja", "Nein", "Nur durch 9", "Nur durch 6", "Unbestimmt"],
       correctIndex: 0,
-      explanation:
-        "Quersumme: 1 + 2 + 3 = 6, und 6 ist durch 3 teilbar → Ja.",
+      explanation: "Quersumme: 1 + 2 + 3 = 6, und 6 ist durch 3 teilbar → Ja.",
     },
     {
       question: "Was bedeutet A → B?",
       options: ["A und B", "A oder B", "Wenn A, dann B", "Nicht A", "A gleich B"],
       correctIndex: 2,
-      explanation:
-        "A → B bedeutet 'Wenn A, dann B' (Implikation). Kontraposition: ¬B → ¬A.",
+      explanation: "A → B bedeutet 'Wenn A, dann B' (Implikation). Kontraposition: ¬B → ¬A.",
     },
   ],
 

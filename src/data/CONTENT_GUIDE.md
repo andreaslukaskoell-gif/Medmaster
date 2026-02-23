@@ -34,8 +34,11 @@ Quizfragen **am Ende des Markdowns** werden automatisch erkannt und in die Quiz-
 
 ```markdown
 ## Übungsfragen
+
 ## Kontrollfragen
+
 ## Selbsttest
+
 ## Quiz
 ```
 
@@ -64,14 +67,14 @@ Verwende **GFM (GitHub Flavored Markdown)**. Eine Zeile pro Zeile, Spalten mit `
 **Beispiel:**
 
 ```markdown
-| Spalte A   | Spalte B   | Spalte C   |
-|------------|------------|------------|
-| Wert 1     | Wert 2     | Wert 3     |
-| Wert 4     | Wert 5     | Wert 6     |
+| Spalte A | Spalte B | Spalte C |
+| -------- | -------- | -------- |
+| Wert 1   | Wert 2   | Wert 3   |
+| Wert 4   | Wert 5   | Wert 6   |
 ```
 
 - Leerzeichen um die `|` sind optional, verbessern aber die Lesbarkeit in der Rohdatei.
-- **Fett** und *Kursiv* in Zellen sind erlaubt: `| **Fett** | *Kursiv* |`.
+- **Fett** und _Kursiv_ in Zellen sind erlaubt: `| **Fett** | *Kursiv* |`.
 - Breite Tabellen (z. B. 5+ Spalten) werden in der App horizontal scrollbar dargestellt – kein Umbau nötig.
 
 ---
@@ -90,12 +93,7 @@ Verwende **GFM (GitHub Flavored Markdown)**. Eine Zeile pro Zeile, Spalten mit `
 ```json
 {
   "question": "Deine Frage hier?",
-  "options": [
-    "Antwort A",
-    "Antwort B",
-    "Antwort C",
-    "Antwort D"
-  ],
+  "options": ["Antwort A", "Antwort B", "Antwort C", "Antwort D"],
   "correctIndex": 0,
   "explanation": "Kurze Erklärung, warum die richtige Antwort stimmt (und ggf. warum die anderen falsch sind)."
 }

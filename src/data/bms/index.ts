@@ -54,9 +54,7 @@ function buildAllBmsQuestions(): Question[] {
     for (const uk of uks) {
       const questions = uk.selfTest ?? [];
       questions.forEach((q, idx) => {
-        result.push(
-          transformSelfTest(q, uk.id, idx, kapitel.subject, kapitel.id)
-        );
+        result.push(transformSelfTest(q, uk.id, idx, kapitel.subject, kapitel.id));
       });
     }
   }

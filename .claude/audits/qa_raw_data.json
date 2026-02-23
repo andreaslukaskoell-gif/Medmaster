@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-02-22T10:35:21.920Z",
+  "url": "http://localhost:5175",
+  "immediate": {
+    "title": "MedMaster - Deine Lernplattform für die MedAT",
+    "bodyText": "",
+    "hasSpinner": null,
+    "rootContent": "\n      <div id=\"root-loader\">\n        <svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\">\n          <circle cx=\"20\" cy=\"20\" r=\"18\" stroke=\"#e2e8f0\" stroke-width=\"4\"></circle>\n          <path d=\"M20 2a18 18 0 0 1 18 18\" stroke=\"#3b82f6\" stroke-width=\"4\" stroke-linecap=\"round\"></path>\n       "
+  },
+  "after5s": {
+    "title": "MedMaster - Deine Lernplattform für die MedAT",
+    "bodyText": "",
+    "visibleText": {
+      "headings": [],
+      "buttons": [],
+      "errorEls": []
+    },
+    "hasSpinner": null
+  },
+  "consoleMessages": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting...",
+      "location": {
+        "url": "http://localhost:5175/@vite/client",
+        "lineNumber": 732,
+        "columnNumber": 8
+      }
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected.",
+      "location": {
+        "url": "http://localhost:5175/@vite/client",
+        "lineNumber": 826,
+        "columnNumber": 11
+      }
+    },
+    {
+      "type": "info",
+      "text": "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+      "location": {
+        "url": "http://localhost:5175/node_modules/.vite/deps/react-dom_client.js?v=aae754e5",
+        "lineNumber": 20102,
+        "columnNumber": 53
+      }
+    }
+  ],
+  "consoleErrors": [
+    {
+      "type": "pageerror",
+      "text": "Cannot read properties of undefined (reading 'selfTest')",
+      "stack": "TypeError: Cannot read properties of undefined (reading 'selfTest')\n    at buildAllBmsQuestions (http://localhost:5175/src/data/bms/index.ts:29:28)\n    at http://localhost:5175/src/data/bms/index.ts:37:32"
+    }
+  ],
+  "networkErrors": []
+}

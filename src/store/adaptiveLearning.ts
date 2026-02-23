@@ -68,14 +68,20 @@ interface AdaptiveState {
   recordAnswer: (stichwortId: string, correct: boolean, timeSeconds: number) => void;
   getRecommendation: () => DailyRecommendation;
   getAdaptiveQuestions: (count: number, fach?: string) => Question[];
-  getWeakestTopics: (limit?: number) => { stichwortId: string; thema: string; fach: string; rate: number }[];
-  getStrongestTopics: (limit?: number) => { stichwortId: string; thema: string; fach: string; rate: number }[];
+  getWeakestTopics: (
+    limit?: number
+  ) => { stichwortId: string; thema: string; fach: string; rate: number }[];
+  getStrongestTopics: (
+    limit?: number
+  ) => { stichwortId: string; thema: string; fach: string; rate: number }[];
   getMedATReadiness: () => number;
   getFachReadiness: (fach: string) => number;
   completeDailyChallenge: () => void;
   setLearningPhase: (phase: LearnerProfile["learningPhase"]) => void;
   setDaysUntilExam: (days: number) => void;
-  initializeFromQuizResults: (results: { answers: { questionId: string; correct: boolean }[] }[]) => void;
+  initializeFromQuizResults: (
+    results: { answers: { questionId: string; correct: boolean }[] }[]
+  ) => void;
   getDifficultyMultiplier: () => number;
   getShouldOfferBridge: () => boolean;
   clearOfferBridge: () => void;
@@ -178,7 +184,10 @@ export const useAdaptiveStore = create<AdaptiveState>()(
           let offerBridge = state.offerBridge;
 
           if (correct && timeSeconds < ADAPTIVE_FAST_SEC) {
-            if (recent.length >= ADAPTIVE_STREAK_LEN && recent.every((r) => r.correct && r.timeSeconds < ADAPTIVE_FAST_SEC)) {
+            if (
+              recent.length >= ADAPTIVE_STREAK_LEN &&
+              recent.every((r) => r.correct && r.timeSeconds < ADAPTIVE_FAST_SEC)
+            ) {
               newDifficulty = Math.min(MAX_DIFFICULTY_LEVEL, (state.difficultyLevel ?? 1) + 1);
               recent.length = 0;
             }
@@ -207,7 +216,8 @@ export const useAdaptiveStore = create<AdaptiveState>()(
 
           let confidence: StichwortStat["confidence"] = "unbekannt";
           if (totalAttempts >= 3) {
-            confidence = successRate >= 80 ? "sicher" : successRate >= 50 ? "unsicher" : "unbekannt";
+            confidence =
+              successRate >= 80 ? "sicher" : successRate >= 50 ? "unsicher" : "unbekannt";
           }
 
           stats[stichwortId] = {
@@ -228,7 +238,8 @@ export const useAdaptiveStore = create<AdaptiveState>()(
             const fachData = fachStichworte.map((s) => stats[s.id]).filter(Boolean);
             const totalAnswered = fachData.reduce((sum, d) => sum + d.totalAttempts, 0);
             const totalCorrectFach = fachData.reduce((sum, d) => sum + d.correctAttempts, 0);
-            const overallSuccessRate = totalAnswered > 0 ? Math.round((totalCorrectFach / totalAnswered) * 100) : 0;
+            const overallSuccessRate =
+              totalAnswered > 0 ? Math.round((totalCorrectFach / totalAnswered) * 100) : 0;
 
             const weak = fachStichworte
               .filter((s) => {
@@ -275,7 +286,12 @@ export const useAdaptiveStore = create<AdaptiveState>()(
         const weakest = get().getWeakestTopics(5);
 
         // Calculate per-fach breakdown
-        const breakdown: Record<string, number> = { biologie: 0, chemie: 0, physik: 0, mathematik: 0 };
+        const breakdown: Record<string, number> = {
+          biologie: 0,
+          chemie: 0,
+          physik: 0,
+          mathematik: 0,
+        };
         let totalQ = 0;
 
         for (const [fach, fstat] of Object.entries(profile.fachStats)) {
@@ -328,7 +344,7 @@ export const useAdaptiveStore = create<AdaptiveState>()(
         }
 
         // Shuffle each bucket
-        const shuffle = <T,>(arr: T[]) => {
+        const shuffle = <T>(arr: T[]) => {
           const a = [...arr];
           for (let i = a.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -365,7 +381,13 @@ export const useAdaptiveStore = create<AdaptiveState>()(
           .map((sw) => {
             const stat = profile.stichwortStats[sw.id];
             const rate = stat ? stat.successRate : -1;
-            return { stichwortId: sw.id, thema: sw.thema, fach: sw.fach, rate, attempts: stat?.totalAttempts ?? 0 };
+            return {
+              stichwortId: sw.id,
+              thema: sw.thema,
+              fach: sw.fach,
+              rate,
+              attempts: stat?.totalAttempts ?? 0,
+            };
           })
           .filter((x) => x.attempts >= 1)
           .sort((a, b) => a.rate - b.rate)
@@ -378,7 +400,13 @@ export const useAdaptiveStore = create<AdaptiveState>()(
           .map((sw) => {
             const stat = profile.stichwortStats[sw.id];
             const rate = stat ? stat.successRate : 0;
-            return { stichwortId: sw.id, thema: sw.thema, fach: sw.fach, rate, attempts: stat?.totalAttempts ?? 0 };
+            return {
+              stichwortId: sw.id,
+              thema: sw.thema,
+              fach: sw.fach,
+              rate,
+              attempts: stat?.totalAttempts ?? 0,
+            };
           })
           .filter((x) => x.attempts >= 3)
           .sort((a, b) => b.rate - a.rate)
@@ -388,7 +416,12 @@ export const useAdaptiveStore = create<AdaptiveState>()(
       getMedATReadiness: () => {
         const { profile } = get();
         // Weighted average: Bio 40%, Chemie 24%, Physik 18%, Mathe 12%
-        const weights: Record<string, number> = { biologie: 0.43, chemie: 0.26, physik: 0.19, mathematik: 0.12 };
+        const weights: Record<string, number> = {
+          biologie: 0.43,
+          chemie: 0.26,
+          physik: 0.19,
+          mathematik: 0.12,
+        };
         let readiness = 0;
         for (const [fach, weight] of Object.entries(weights)) {
           const stat = profile.fachStats[fach];

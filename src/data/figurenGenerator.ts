@@ -4,7 +4,10 @@
 
 // ─── Types ───────────────────────────────────────────────────────────
 
-export interface FZPiece { path: string; fill: string }
+export interface FZPiece {
+  path: string;
+  fill: string;
+}
 
 export interface FZOption {
   id: string;
@@ -28,13 +31,15 @@ const PI = Math.PI;
 const TAU = 2 * PI;
 const FILL = "#6b7280";
 
-function rd(n: number): number { return Math.round(n * 100) / 100; }
+function rd(n: number): number {
+  return Math.round(n * 100) / 100;
+}
 
 type Pt = [number, number];
 
 /** Park-Miller PRNG: s = (s * 16807) % 2147483647 */
 function createRng(seed: number): () => number {
-  let s = ((seed % 2147483646) + 2147483646) % 2147483646 + 1;
+  let s = (((seed % 2147483646) + 2147483646) % 2147483646) + 1;
   return () => {
     s = (s * 16807) % 2147483647;
     return (s - 1) / 2147483646;
@@ -50,23 +55,21 @@ function polygonPts(cx: number, cy: number, r: number, n: number): Pt[] {
 }
 
 function pts2path(pts: Pt[]): string {
-  return "M " + pts.map(p => `${p[0]} ${p[1]}`).join(" L ") + " Z";
+  return "M " + pts.map((p) => `${p[0]} ${p[1]}`).join(" L ") + " Z";
 }
 
 function rotatePts(pts: Pt[], angle: number, cx: number, cy: number): Pt[] {
-  const co = Math.cos(angle), si = Math.sin(angle);
-  return pts.map(([x, y]) => [
-    rd(cx + (x - cx) * co - (y - cy) * si),
-    rd(cy + (x - cx) * si + (y - cy) * co),
-  ] as Pt);
+  const co = Math.cos(angle),
+    si = Math.sin(angle);
+  return pts.map(
+    ([x, y]) =>
+      [rd(cx + (x - cx) * co - (y - cy) * si), rd(cy + (x - cx) * si + (y - cy) * co)] as Pt
+  );
 }
 
 function centroid(pts: Pt[]): Pt {
   const n = pts.length;
-  return [
-    rd(pts.reduce((s, p) => s + p[0], 0) / n),
-    rd(pts.reduce((s, p) => s + p[1], 0) / n),
-  ];
+  return [rd(pts.reduce((s, p) => s + p[0], 0) / n), rd(pts.reduce((s, p) => s + p[1], 0) / n)];
 }
 
 function midPt(a: Pt, b: Pt): Pt {
@@ -80,10 +83,10 @@ function circPath(cx: number, cy: number, r: number): string {
 /** Arc sector as polygon points (center + arc points), step count proportional to angle */
 function arcToPts(cx: number, cy: number, r: number, a1: number, a2: number): Pt[] {
   const span = Math.abs(a2 - a1);
-  const steps = Math.max(8, Math.round(span * 12 / PI));
+  const steps = Math.max(8, Math.round((span * 12) / PI));
   const pts: Pt[] = [[cx, cy]];
   for (let i = 0; i <= steps; i++) {
-    const a = a1 + (a2 - a1) * i / steps;
+    const a = a1 + ((a2 - a1) * i) / steps;
     pts.push([rd(cx + r * Math.cos(a)), rd(cy + r * Math.sin(a))]);
   }
   return pts;
@@ -91,9 +94,9 @@ function arcToPts(cx: number, cy: number, r: number, a1: number, a2: number): Pt
 
 /** Pick a quantized rotation angle based on difficulty */
 function quantizedAngle(diff: "leicht" | "mittel" | "schwer", rand: () => number): number {
-  if (diff === "leicht") return Math.floor(rand() * 4) * (PI / 2);        // 90° steps
-  if (diff === "mittel") return Math.floor(rand() * 8) * (PI / 4);        // 45° steps
-  return Math.floor(rand() * 24) * (PI / 12);                             // 15° steps
+  if (diff === "leicht") return Math.floor(rand() * 4) * (PI / 2); // 90° steps
+  if (diff === "mittel") return Math.floor(rand() * 8) * (PI / 4); // 45° steps
+  return Math.floor(rand() * 24) * (PI / 12); // 15° steps
 }
 
 /**
@@ -105,38 +108,61 @@ function transformPiece(pts: Pt[], angle: number): Pt[] {
   let result = rotatePts(pts, angle, c[0], c[1]);
 
   // Bounding box
-  let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+  let minX = Infinity,
+    maxX = -Infinity,
+    minY = Infinity,
+    maxY = -Infinity;
   for (const [x, y] of result) {
-    minX = Math.min(minX, x); maxX = Math.max(maxX, x);
-    minY = Math.min(minY, y); maxY = Math.max(maxY, y);
+    minX = Math.min(minX, x);
+    maxX = Math.max(maxX, x);
+    minY = Math.min(minY, y);
+    maxY = Math.max(maxY, y);
   }
   const maxDim = Math.max(maxX - minX, maxY - minY);
   const scale = maxDim > 0 ? Math.min(160 / maxDim, 2.8) : 1;
-  const bcx = (minX + maxX) / 2, bcy = (minY + maxY) / 2;
+  const bcx = (minX + maxX) / 2,
+    bcy = (minY + maxY) / 2;
 
-  return result.map(([x, y]) => [
-    rd(100 + (x - bcx) * scale),
-    rd(100 + (y - bcy) * scale),
-  ] as Pt);
+  return result.map(([x, y]) => [rd(100 + (x - bcx) * scale), rd(100 + (y - bcy) * scale)] as Pt);
 }
 
 // ─── 13 Lösungsfiguren (Antwort-Outlines, 200×200) ──────────────────
 
 type FK =
-  | "dreieck" | "quadrat" | "raute" | "parallelogramm" | "trapez"
-  | "fuenfeck" | "sechseck" | "siebeneck" | "achteck"
-  | "viertelkreis" | "halbkreis" | "dreiviertelkreis" | "vollkreis";
+  | "dreieck"
+  | "quadrat"
+  | "raute"
+  | "parallelogramm"
+  | "trapez"
+  | "fünfeck"
+  | "sechseck"
+  | "siebeneck"
+  | "achteck"
+  | "viertelkreis"
+  | "halbkreis"
+  | "dreiviertelkreis"
+  | "vollkreis";
 
 const ALL_FK: FK[] = [
-  "dreieck", "quadrat", "raute", "parallelogramm", "trapez",
-  "fuenfeck", "sechseck", "siebeneck", "achteck",
-  "viertelkreis", "halbkreis", "dreiviertelkreis", "vollkreis",
+  "dreieck",
+  "quadrat",
+  "raute",
+  "parallelogramm",
+  "trapez",
+  "fünfeck",
+  "sechseck",
+  "siebeneck",
+  "achteck",
+  "viertelkreis",
+  "halbkreis",
+  "dreiviertelkreis",
+  "vollkreis",
 ];
 
 const FIG: Record<FK, string> = {
   dreieck: pts2path(polygonPts(100, 118, 85, 3)),
   quadrat: pts2path(polygonPts(100, 100, 82, 4)),
-  fuenfeck: pts2path(polygonPts(100, 105, 80, 5)),
+  fünfeck: pts2path(polygonPts(100, 105, 80, 5)),
   sechseck: pts2path(polygonPts(100, 100, 80, 6)),
   siebeneck: pts2path(polygonPts(100, 100, 80, 7)),
   achteck: pts2path(polygonPts(100, 100, 78, 8)),
@@ -146,8 +172,11 @@ const FIG: Record<FK, string> = {
   viertelkreis: `M 50 155 L 50 35 A 120 120 0 0 1 170 155 Z`,
   halbkreis: `M 20 130 A 80 80 0 0 1 180 130 Z`,
   dreiviertelkreis: (() => {
-    const cx = 100, cy = 100, r = 80;
-    const g1 = -PI / 4, g2 = PI / 4;
+    const cx = 100,
+      cy = 100,
+      r = 80;
+    const g1 = -PI / 4,
+      g2 = PI / 4;
     return `M ${cx} ${cy} L ${rd(cx + r * Math.cos(g2))} ${rd(cy + r * Math.sin(g2))} A ${r} ${r} 0 1 1 ${rd(cx + r * Math.cos(g1))} ${rd(cy + r * Math.sin(g1))} Z`;
   })(),
   vollkreis: circPath(100, 100, 80),
@@ -159,7 +188,7 @@ const FIGNAME: Record<FK, string> = {
   raute: "eine Raute",
   parallelogramm: "ein Parallelogramm",
   trapez: "ein Trapez",
-  fuenfeck: "ein regelmäßiges Fünfeck",
+  fünfeck: "ein regelmäßiges Fünfeck",
   sechseck: "ein regelmäßiges Sechseck",
   siebeneck: "ein regelmäßiges Siebeneck",
   achteck: "ein regelmäßiges Achteck",
@@ -171,15 +200,15 @@ const FIGNAME: Record<FK, string> = {
 
 /** 3 similar distractors per figure (same visual category) */
 const SIMILAR: Record<FK, FK[]> = {
-  dreieck: ["fuenfeck", "raute", "trapez"],
+  dreieck: ["fünfeck", "raute", "trapez"],
   quadrat: ["raute", "parallelogramm", "trapez"],
   raute: ["quadrat", "parallelogramm", "trapez"],
   parallelogramm: ["trapez", "quadrat", "raute"],
   trapez: ["parallelogramm", "raute", "quadrat"],
-  fuenfeck: ["sechseck", "siebeneck", "achteck"],
-  sechseck: ["fuenfeck", "achteck", "siebeneck"],
-  siebeneck: ["sechseck", "achteck", "fuenfeck"],
-  achteck: ["siebeneck", "sechseck", "fuenfeck"],
+  fünfeck: ["sechseck", "siebeneck", "achteck"],
+  sechseck: ["fünfeck", "achteck", "siebeneck"],
+  siebeneck: ["sechseck", "achteck", "fünfeck"],
+  achteck: ["siebeneck", "sechseck", "fünfeck"],
   viertelkreis: ["halbkreis", "dreiviertelkreis", "vollkreis"],
   halbkreis: ["viertelkreis", "dreiviertelkreis", "vollkreis"],
   dreiviertelkreis: ["halbkreis", "vollkreis", "viertelkreis"],
@@ -188,7 +217,9 @@ const SIMILAR: Record<FK, FK[]> = {
 
 // ─── Piece Splitting (generated at CX=100, CY=100, R=65) ────────────
 
-const CX = 100, CY = 100, R = 65;
+const CX = 100,
+  CY = 100,
+  R = 65;
 
 /** Split polygon from centroid → vertices into numPieces sectors */
 function splitPoly(verts: Pt[], numPieces: number, rand: () => number): Pt[][] {
@@ -217,11 +248,15 @@ function splitPoly(verts: Pt[], numPieces: number, rand: () => number): Pt[][] {
   const pcs: Pt[][] = [];
   for (let i = 0; i < sides; i++) pcs.push([c, verts[i], verts[(i + 1) % sides]]);
   while (pcs.length < numPieces) {
-    let mx = 0, ma = 0;
+    let mx = 0,
+      ma = 0;
     for (let i = 0; i < pcs.length; i++) {
       const [a, b, cc] = pcs[i];
       const ar = Math.abs((b[0] - a[0]) * (cc[1] - a[1]) - (cc[0] - a[0]) * (b[1] - a[1]));
-      if (ar > ma) { ma = ar; mx = i; }
+      if (ar > ma) {
+        ma = ar;
+        mx = i;
+      }
     }
     const [cc, a, b] = pcs[mx];
     const m = midPt(a, b);
@@ -235,7 +270,7 @@ function splitCirc(totalAngle: number, startAngle: number, n: number, rand: () =
   // Slightly uneven slices for authentic look
   const raw = Array.from({ length: n }, () => 0.5 + rand());
   const sum = raw.reduce((a, b) => a + b, 0);
-  const slices = raw.map(v => totalAngle * v / sum);
+  const slices = raw.map((v) => (totalAngle * v) / sum);
   const pcs: Pt[][] = [];
   let a = startAngle;
   for (const sl of slices) {
@@ -247,13 +282,35 @@ function splitCirc(totalAngle: number, startAngle: number, n: number, rand: () =
 
 /** Quad-type figure vertices at piece scale */
 function quadVerts(key: "raute" | "parallelogramm" | "trapez"): Pt[] {
-  if (key === "raute") return [[CX, CY - 40], [CX + 30, CY], [CX, CY + 40], [CX - 30, CY]];
-  if (key === "parallelogramm") return [[CX - 15, CY - 28], [CX + 35, CY - 28], [CX + 15, CY + 28], [CX - 35, CY + 28]];
-  return [[CX - 18, CY - 28], [CX + 18, CY - 28], [CX + 38, CY + 28], [CX - 38, CY + 28]];
+  if (key === "raute")
+    return [
+      [CX, CY - 40],
+      [CX + 30, CY],
+      [CX, CY + 40],
+      [CX - 30, CY],
+    ];
+  if (key === "parallelogramm")
+    return [
+      [CX - 15, CY - 28],
+      [CX + 35, CY - 28],
+      [CX + 15, CY + 28],
+      [CX - 35, CY + 28],
+    ];
+  return [
+    [CX - 18, CY - 28],
+    [CX + 18, CY - 28],
+    [CX + 38, CY + 28],
+    [CX - 38, CY + 28],
+  ];
 }
 
 const POLY_SIDES: Partial<Record<FK, number>> = {
-  dreieck: 3, quadrat: 4, fuenfeck: 5, sechseck: 6, siebeneck: 7, achteck: 8,
+  dreieck: 3,
+  quadrat: 4,
+  fünfeck: 5,
+  sechseck: 6,
+  siebeneck: 7,
+  achteck: 8,
 };
 
 const CIRCLE_SPECS: Partial<Record<FK, [number, number]>> = {
@@ -264,7 +321,12 @@ const CIRCLE_SPECS: Partial<Record<FK, [number, number]>> = {
 };
 
 /** Generate piece SVG paths: split → rotate (quantized) → center+scale */
-function makePieces(fig: FK, numPieces: number, diff: "leicht" | "mittel" | "schwer", seed: number): string[] {
+function makePieces(
+  fig: FK,
+  numPieces: number,
+  diff: "leicht" | "mittel" | "schwer",
+  seed: number
+): string[] {
   const rand = createRng(seed);
 
   let rawPieces: Pt[][];
@@ -277,7 +339,7 @@ function makePieces(fig: FK, numPieces: number, diff: "leicht" | "mittel" | "sch
     rawPieces = splitCirc(tot, st, numPieces, rand);
   }
 
-  return rawPieces.map(pts => {
+  return rawPieces.map((pts) => {
     const angle = quantizedAngle(diff, rand);
     return pts2path(transformPiece(pts, angle));
   });
@@ -307,7 +369,7 @@ function makeOptionsE(correct: FK, seed: number): { options: FZOption[]; correct
   const rand = createRng(seed);
   const sim = [...SIMILAR[correct]];
   // 4th distractor from a different category
-  const extras = ALL_FK.filter(k => k !== correct && !sim.includes(k));
+  const extras = ALL_FK.filter((k) => k !== correct && !sim.includes(k));
   sim.push(extras[Math.floor(rand() * extras.length)]);
   // Shuffle
   for (let i = 3; i > 0; i--) {
@@ -337,40 +399,40 @@ interface TaskSpec {
 
 const TASKS: TaskSpec[] = [
   // ── Leicht: 10 tasks, 3–4 pieces, 90° rotation ──
-  { id: "fz-1",  fig: "vollkreis",        pc: 3, diff: "leicht", seed: 1001 },
-  { id: "fz-2",  fig: "quadrat",          pc: 3, diff: "leicht", seed: 1002 },
-  { id: "fz-3",  fig: "dreieck",          pc: 3, diff: "leicht", seed: 1003 },
-  { id: "fz-4",  fig: "halbkreis",        pc: 3, diff: "leicht", seed: 1004 },
-  { id: "fz-5",  fig: "raute",            pc: 3, diff: "leicht", seed: 1005, eCorrect: true },
-  { id: "fz-6",  fig: "sechseck",         pc: 4, diff: "leicht", seed: 1006 },
-  { id: "fz-7",  fig: "dreiviertelkreis", pc: 3, diff: "leicht", seed: 1007 },
-  { id: "fz-8",  fig: "quadrat",          pc: 4, diff: "leicht", seed: 1008, eCorrect: true },
-  { id: "fz-9",  fig: "vollkreis",        pc: 4, diff: "leicht", seed: 1009 },
-  { id: "fz-10", fig: "dreieck",          pc: 4, diff: "leicht", seed: 1010 },
+  { id: "fz-1", fig: "vollkreis", pc: 3, diff: "leicht", seed: 1001 },
+  { id: "fz-2", fig: "quadrat", pc: 3, diff: "leicht", seed: 1002 },
+  { id: "fz-3", fig: "dreieck", pc: 3, diff: "leicht", seed: 1003 },
+  { id: "fz-4", fig: "halbkreis", pc: 3, diff: "leicht", seed: 1004 },
+  { id: "fz-5", fig: "raute", pc: 3, diff: "leicht", seed: 1005, eCorrect: true },
+  { id: "fz-6", fig: "sechseck", pc: 4, diff: "leicht", seed: 1006 },
+  { id: "fz-7", fig: "dreiviertelkreis", pc: 3, diff: "leicht", seed: 1007 },
+  { id: "fz-8", fig: "quadrat", pc: 4, diff: "leicht", seed: 1008, eCorrect: true },
+  { id: "fz-9", fig: "vollkreis", pc: 4, diff: "leicht", seed: 1009 },
+  { id: "fz-10", fig: "dreieck", pc: 4, diff: "leicht", seed: 1010 },
 
   // ── Mittel: 12 tasks, 4–5 pieces, 45° rotation ──
-  { id: "fz-11", fig: "fuenfeck",         pc: 5, diff: "mittel", seed: 2001 },
-  { id: "fz-12", fig: "parallelogramm",   pc: 4, diff: "mittel", seed: 2002 },
-  { id: "fz-13", fig: "trapez",           pc: 4, diff: "mittel", seed: 2003 },
-  { id: "fz-14", fig: "sechseck",         pc: 5, diff: "mittel", seed: 2004 },
-  { id: "fz-15", fig: "halbkreis",        pc: 4, diff: "mittel", seed: 2005, eCorrect: true },
-  { id: "fz-16", fig: "raute",            pc: 4, diff: "mittel", seed: 2006 },
-  { id: "fz-17", fig: "viertelkreis",     pc: 4, diff: "mittel", seed: 2007 },
-  { id: "fz-18", fig: "siebeneck",        pc: 5, diff: "mittel", seed: 2008 },
-  { id: "fz-19", fig: "quadrat",          pc: 5, diff: "mittel", seed: 2009, eCorrect: true },
-  { id: "fz-20", fig: "vollkreis",        pc: 5, diff: "mittel", seed: 2010 },
-  { id: "fz-21", fig: "trapez",           pc: 5, diff: "mittel", seed: 2011 },
-  { id: "fz-22", fig: "parallelogramm",   pc: 5, diff: "mittel", seed: 2012 },
+  { id: "fz-11", fig: "fünfeck", pc: 5, diff: "mittel", seed: 2001 },
+  { id: "fz-12", fig: "parallelogramm", pc: 4, diff: "mittel", seed: 2002 },
+  { id: "fz-13", fig: "trapez", pc: 4, diff: "mittel", seed: 2003 },
+  { id: "fz-14", fig: "sechseck", pc: 5, diff: "mittel", seed: 2004 },
+  { id: "fz-15", fig: "halbkreis", pc: 4, diff: "mittel", seed: 2005, eCorrect: true },
+  { id: "fz-16", fig: "raute", pc: 4, diff: "mittel", seed: 2006 },
+  { id: "fz-17", fig: "viertelkreis", pc: 4, diff: "mittel", seed: 2007 },
+  { id: "fz-18", fig: "siebeneck", pc: 5, diff: "mittel", seed: 2008 },
+  { id: "fz-19", fig: "quadrat", pc: 5, diff: "mittel", seed: 2009, eCorrect: true },
+  { id: "fz-20", fig: "vollkreis", pc: 5, diff: "mittel", seed: 2010 },
+  { id: "fz-21", fig: "trapez", pc: 5, diff: "mittel", seed: 2011 },
+  { id: "fz-22", fig: "parallelogramm", pc: 5, diff: "mittel", seed: 2012 },
 
   // ── Schwer: 8 tasks, 5–7 pieces, 15° rotation ──
-  { id: "fz-23", fig: "achteck",          pc: 6, diff: "schwer", seed: 3001 },
-  { id: "fz-24", fig: "siebeneck",        pc: 7, diff: "schwer", seed: 3002 },
+  { id: "fz-23", fig: "achteck", pc: 6, diff: "schwer", seed: 3001 },
+  { id: "fz-24", fig: "siebeneck", pc: 7, diff: "schwer", seed: 3002 },
   { id: "fz-25", fig: "dreiviertelkreis", pc: 5, diff: "schwer", seed: 3003, eCorrect: true },
-  { id: "fz-26", fig: "fuenfeck",         pc: 6, diff: "schwer", seed: 3004 },
-  { id: "fz-27", fig: "vollkreis",        pc: 6, diff: "schwer", seed: 3005 },
-  { id: "fz-28", fig: "achteck",          pc: 7, diff: "schwer", seed: 3006, eCorrect: true },
-  { id: "fz-29", fig: "halbkreis",        pc: 5, diff: "schwer", seed: 3007 },
-  { id: "fz-30", fig: "sechseck",         pc: 6, diff: "schwer", seed: 3008 },
+  { id: "fz-26", fig: "fünfeck", pc: 6, diff: "schwer", seed: 3004 },
+  { id: "fz-27", fig: "vollkreis", pc: 6, diff: "schwer", seed: 3005 },
+  { id: "fz-28", fig: "achteck", pc: 7, diff: "schwer", seed: 3006, eCorrect: true },
+  { id: "fz-29", fig: "halbkreis", pc: 5, diff: "schwer", seed: 3007 },
+  { id: "fz-30", fig: "sechseck", pc: 6, diff: "schwer", seed: 3008 },
 ];
 
 // ─── Build & Export ──────────────────────────────────────────────────
@@ -388,7 +450,7 @@ function buildAufgabe(spec: TaskSpec): FZAufgabe {
 
   return {
     id: spec.id,
-    pieces: pieces.map(p => ({ path: p, fill: FILL })),
+    pieces: pieces.map((p) => ({ path: p, fill: FILL })),
     options,
     correctOptionId: correctId,
     difficulty: spec.diff,

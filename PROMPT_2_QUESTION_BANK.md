@@ -1,4 +1,5 @@
 # Claude Code Prompt 2 — Supabase bms_questions Hauptfragen-Bank
+
 **Laufzeit:** ~60–90 Minuten | **Modus:** --dangerously-skip-permissions
 
 ## AUFGABE
@@ -35,6 +36,7 @@ CREATE TABLE bms_questions (
 ## FRAGENTYPEN
 
 ### TYP A — Einfache Auswahl (Single Best Answer)
+
 - `stamm`: Frage oder Fallvignette
 - `optionen`: genau 5 Optionen [{key:'A',text:'...'}, {key:'B',...}, {key:'C',...}, {key:'D',...}, {key:'E',...}]
 - `korrekte_option`: 'A'|'B'|'C'|'D'|'E'
@@ -43,6 +45,7 @@ CREATE TABLE bms_questions (
 - `erklaerung`: Warum richtig/falsch (3–5 Sätze, alle Optionen addressieren)
 
 ### TYP K — Kombinationsfragen (Aussagen 1–5 → welche sind korrekt?)
+
 - `stamm`: "Welche der folgenden Aussagen zu [Thema] sind korrekt?"
 - `optionen`: '[]'::jsonb (leer)
 - `korrekte_option`: 'A'|'B'|'C'|'D'|'E' (Kombination mit 3 richtigen Aussagen)
@@ -66,6 +69,7 @@ Beispiele:
 ```
 
 Fach-Präfixe in uk_id:
+
 - Biologie: bio-1-01, bio-2-03, ... bio-11-04
 - Chemie: ch-1-01, ch-2-01, ... ch-13-01
 - Physik: ph-1-01, ph-2-01, ... ph-7-03
@@ -74,6 +78,7 @@ Fach-Präfixe in uk_id:
 ## QUALITÄTSSTANDARDS
 
 ### Inhalt
+
 1. **MedAT-Niveau**: Schwierigkeit 1 = Konzeptverständnis, 2 = Anwendung/Mechanismus, 3 = Fallanalyse/Ausnahmen
 2. **Keine Trivialfragen** wie "Was ist eine Zelle?" — mindestens mechanistisch oder anwendungsbezogen
 3. **Klinischer Bezug bevorzugt**: Symptome, Pathomechanismen, Pharmakologie wo sinnvoll
@@ -81,12 +86,14 @@ Fach-Präfixe in uk_id:
 5. **Distraktoren plausibel**: Falsche Optionen sind nicht offensichtlich falsch — typische Verwechslungen
 
 ### Verteilung pro UK
+
 - 3–5 TYP A Fragen
 - 2–3 TYP K Fragen
 - Gesamt: 5–8 Fragen pro UK (realistisch für einen autonomen Durchlauf)
 - Schwierigkeitsverteilung: ~30% Stufe 1, ~50% Stufe 2, ~20% Stufe 3
 
 ### Erklärungen
+
 - TYP A: Richtige Antwort begründen + kurz erklären warum die anderen falsch sind
 - TYP K: Jede der 5 Aussagen einzeln kommentieren (korrekt weil... / falsch weil...)
 
@@ -95,6 +102,7 @@ Fach-Präfixe in uk_id:
 Lies die folgenden TS-Dateien um UK-IDs und Inhalte zu ermitteln:
 
 ### Biologie (kap1–kap11)
+
 ```
 src/data/bmsKapitel/biologie/kap1-die-zelle.ts
 src/data/bmsKapitel/biologie/kap2-gewebe.ts
@@ -110,6 +118,7 @@ src/data/bmsKapitel/biologie/kap11-reproduktion.ts
 ```
 
 ### Chemie (kap1–kap13)
+
 ```
 src/data/bmsKapitel/chemie/kap1-atombau.ts
 src/data/bmsKapitel/chemie/kap2-periodensystem.ts
@@ -127,6 +136,7 @@ src/data/bmsKapitel/chemie/kap13-stoffwechsel.ts
 ```
 
 ### Physik (kap1–kap7)
+
 ```
 src/data/bmsKapitel/physik/kap1-mechanik.ts
 src/data/bmsKapitel/physik/kap2-thermodynamik.ts
@@ -138,6 +148,7 @@ src/data/bmsKapitel/physik/kap7-biomechanik.ts
 ```
 
 ### Mathematik (kap1–kap6)
+
 ```
 src/data/bmsKapitel/mathematik/kap1-grundlagen.ts
 src/data/bmsKapitel/mathematik/kap2-algebra.ts
@@ -150,12 +161,14 @@ src/data/bmsKapitel/mathematik/kap6-wahrscheinlichkeit.ts
 ## VORGEHEN (schrittweise)
 
 ### Schritt 1: UK-IDs sammeln
+
 Für jede TS-Datei: Extrahiere alle `id`-Felder der `unterkapitel`-Objekte.
 Erstelle intern eine Liste: `{uk_id, fach, title, content_summary}`.
 
 ### Schritt 2: Fragen generieren (Fach für Fach)
 
 Für jedes UK:
+
 1. Lies `title`, `content`, `sections` und `merksätze` des UKs
 2. Identifiziere 5–8 prüfungsrelevante Kernkonzepte
 3. Generiere 3–5 TYP A Fragen + 2–3 TYP K Fragen
@@ -164,6 +177,7 @@ Für jedes UK:
 ### Schritt 3: SQL aufbauen
 
 Struktur der Datei:
+
 ```sql
 -- ============================================================
 -- BMS Questions Main Bank — Seed Migration
@@ -204,6 +218,7 @@ ON CONFLICT (id) DO NOTHING;
 ### Schritt 4: Validierung
 
 Nach dem Schreiben der Datei:
+
 ```bash
 # Syntax-Check: Prüfe ob alle INSERT-Blöcke korrekt geschlossen sind
 grep -c "ON CONFLICT" supabase/migrations/20260221000000_seed_bms_questions_main.sql
@@ -220,6 +235,7 @@ grep -c "typk-ma" supabase/migrations/20260221000000_seed_bms_questions_main.sql
 ```
 
 Minimum-Checks:
+
 - Mindestens 400 Fragen gesamt
 - Jedes Fach hat mindestens 50 Fragen
 - Keine doppelten IDs (grep für duplikate IDs)
@@ -296,6 +312,7 @@ Mindestens **300 INSERT-Blöcke** (= 300 einzelne ON CONFLICT Zeilen).
 Ideal: 400–600 Fragen gesamt.
 
 Fertig wenn:
+
 - Datei existiert und nicht leer ist
 - Mindestens 300 ON CONFLICT Einträge
 - Kein offensichtlicher SQL-Syntaxfehler (Klammern ausgewogen prüfen)
