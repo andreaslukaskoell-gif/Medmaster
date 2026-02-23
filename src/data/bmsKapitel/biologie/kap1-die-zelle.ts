@@ -622,7 +622,7 @@ Membranproteine übernehmen alle aktiven Funktionen der Membran. Es gibt zwei Gr
   - **Pumpen** (Na⁺/K⁺-ATPase): aktiver Transport gegen Gradienten (ATP-verbrauchend)
 
 **Periphere Proteine:**
-- Sitzen an der Membranoberfl äche (innen oder außen), nicht durch die Membran
+- Sitzen an der Membranoberfläche (innen oder außen), nicht durch die Membran
 - Leichter ablösbar (ionische Wechselwirkungen)
 - Verankerung z.B. durch GPI-Anker (außen) oder Myristylierung (innen)
 
@@ -650,12 +650,50 @@ Die **Glykokalix** ist eine Schicht aus Kohlenhydratketten auf der Außenseite d
 
 ---
 
+## Membrantransport — Wie Stoffe die Membran passieren
+
+Nicht alle Stoffe können die Membran gleich gut überwinden. Drei grundlegende Mechanismen sind zu unterscheiden — ohne ATP entlang dem Gradienten (passiv) oder gegen den Gradienten mit Energieeinsatz (aktiv).
+
+**Einfache Diffusion (passiv, kein Protein nötig):** Kleine, unpolare (lipophile) Moleküle lösen sich direkt in der Lipiddoppelschicht und diffundieren entlang ihres Konzentrationsgradienten. Beispiele: O₂, CO₂, Ethanol, Steroide, fettlösliche Vitamine (A, D, E, K).
+
+**Erleichterte Diffusion (passiv, Membranprotein nötig):** Polare oder geladene Moleküle passieren die Membran mithilfe von Membranproteinen — immer entlang des Gradienten, ohne ATP:
+- **Ionenkanäle** (z. B. Na⁺-, K⁺-, Ca²⁺-, Cl⁻-Kanäle): sehr schnell, ionenspezifisch, schaltbar (spannungs- oder ligandengesteuert)
+- **Carrier/Transporter** (z. B. GLUT1–4 für Glucose): langsamer, sättigbar, spezifisch (Michaelis-Menten-Kinetik)
+- **Aquaporine (AQP)**: ausschließlich Wasserkanäle; AQP2 in der Niere (ADH-reguliert → Wasserrückresorption)
+
+**Osmose:** Wasser diffundiert durch eine semipermeable Membran von der Seite mit niedrigerer zu der mit höherer Osmolalität — also immer zur „konzentrierteren" Seite hin. Die **Tonizität** beschreibt, wie eine Lösung außerhalb der Zelle deren Volumen beeinflusst:
+
+| Tonizität | Osmolalität außen | Wasserbewegung | Folge |
+|---|---|---|---|
+| **Isoton** (~290 mosmol/kg) | = Zytoplasma | keine Nettobewegung | Volumen konstant |
+| **Hypoton** (< 290 mosmol/kg) | < Zytoplasma | in die Zelle | Zelle schwillt → **Hämolyse** (Erythrozyten) |
+| **Hyperton** (> 290 mosmol/kg) | > Zytoplasma | aus der Zelle | Zelle schrumpft → **Krenation** (Erythrozyten) |
+
+> **Merke:** Osmose: Wasser folgt der Osmolalität. Hypoton → Hämolyse; hyperton → Krenation. Isotone NaCl 0,9 % ist die physiologische Kochsalzlösung.
+
+**Primär aktiver Transport (direkt ATP-verbrauchend):** Substanzen werden gegen ihren Gradienten gepumpt. Die **Na⁺/K⁺-ATPase** ist das zentrale Beispiel: Pro Zyklus (1 ATP) werden **3 Na⁺ nach außen** und **2 K⁺ nach innen** gepumpt. Folgen:
+- Aufbau des Ruhemembranpotenzials (~−70 mV): innen negativ, da netto eine positive Ladung aus der Zelle herausgepumpt wird
+- Niedrige intrazelluläre Na⁺-Konzentration → Voraussetzung für sekundären aktiven Transport und Aktionspotential
+- Hohe intrazelluläre K⁺-Konzentration → wichtig für Zellvolumenregulation und Erregungsbildung
+
+**Klinisch — Herzglykoside:** Digitalis und Ouabain hemmen die Na⁺/K⁺-ATPase → intrazelluläres Na⁺ steigt → Na⁺/Ca²⁺-Austauscher (NCX) arbeitet weniger → Ca²⁺ akkumuliert intrazellulär → stärkere Herzkontraktion (**positiv inotrop**). Einsatz bei Herzinsuffizienz und Vorhofflimmern.
+
+**Sekundär aktiver Transport (nutzt Na⁺-Gradienten):** Die Na⁺/K⁺-ATPase baut einen Na⁺-Gradienten auf, den andere Transporter als Energiequelle nutzen — ohne direkten ATP-Verbrauch:
+- **Symport (Kotransport):** Na⁺ und Substrat strömen gemeinsam in dieselbe Richtung. Beispiel: **SGLT1/2** (Na⁺-Glucose-Kotransporter im Dünndarm und proximalen Nierentubulus) — Na⁺-Einstrom treibt Glucose gegen ihren Gradienten in die Zelle. **SGLT2-Inhibitoren** (Empagliflozin, Dapagliflozin) blockieren die Glucose-Rückresorption in der Niere → Glucosurie → Blutzuckersenkung bei Typ-2-Diabetes
+- **Antiport (Gegentransport):** Na⁺ strömt ein, Substrat strömt heraus. Beispiel: Na⁺/Ca²⁺-Austauscher im Herzmuskel (NCX)
+
+> **Merke:** Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein (1 ATP). Herzglykoside hemmen → Ca²⁺ ↑ → positiv inotrop. SGLT2-Hemmer blockieren Na⁺-Glucose-Kotransport → Glucosurie → Blutzuckersenkung.
+
+---
+
 ## MedAT-Fokus
 
 **Häufige Fragen:**
 - "Was beschreibt das Flüssig-Mosaik-Modell?" → Fluide Phospholipid-Doppelschicht mit lateral beweglichen Proteinen
 - "Warum können Ionen die Membran nicht frei passieren?" → Hydrophobes Membraninneres blockiert geladene Teilchen → Ionenkanäle/Transporter nötig
 - "Welche Funktion hat Cholesterin in der Membran?" → Bidirektionaler Fluiditätspuffer
+- "Was passiert mit Erythrozyten in einer hypotonen Lösung?" → Wasser strömt in die Zelle → Zelle schwillt → Hämolyse
+- "Was unterscheidet primär von sekundär aktivem Transport?" → Primär: direkt ATP-verbrauchend (Na⁺/K⁺-ATPase); sekundär: nutzt den Na⁺-Gradienten (SGLT)
 
 **Achtung — typische Verwechslungen:**
 - Cholesterin ist NICHT der Hauptbestandteil der Membran (das sind Phospholipide!)
@@ -663,11 +701,15 @@ Die **Glykokalix** ist eine Schicht aus Kohlenhydratketten auf der Außenseite d
 - Integrale Proteine durchspannen die Membran; periphere Proteine sitzen nur an der Oberfläche
 - Phosphatidylserin ist normalerweise INNEN — Flip nach außen = Apoptose-Signal
 - CFTR ist ein Chloridkanal (nicht ein Transporter!) — deltaF508-Mutation → Fehlfaltung → kein Membraneinbau
+- Osmose = Wassertransport (NICHT Transport gelöster Teilchen!); Wasser strömt zur höheren Osmolalität
+- Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein — NICHT umgekehrt!
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - CFTR-Mutation ΔF508: häufigste Mukoviszidose-Mutation (~70% in Europa)
 - ABO-Blutgruppen: basieren auf Glykolipiden/Glykoproteinen der Erythrozytenoberfläche
 - Ionenkanäle: schnell, selektiv; Carrier/Transporter: langsamer, sättigbar
+- Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein (1 ATP); Ruhemembranpotenzial ~−70 mV
+- Isotone NaCl: 0,9 % (~290 mosmol/kg); hypoton → Hämolyse; hyperton → Krenation
 
 ---
 
@@ -678,7 +720,10 @@ Die **Glykokalix** ist eine Schicht aus Kohlenhydratketten auf der Außenseite d
 - **Integrale Proteine**: durchspannen die Membran (Kanäle, Transporter, Rezeptoren, Pumpen); nicht ablösbar ohne Detergenzien
 - **Periphere Proteine**: nur an Oberfläche, leichter ablösbar (GPI-Anker, Myristylierung)
 - **Glykokalix**: Kohlenhydratschicht außen — ABO-Blutgruppenantigene (Glykolipide), Zellerkennung, Immunschutz
-- **Klinisch**: CFTR ΔF508 → Mukoviszidose (Fehlfaltung → kein Cl⁻-Kanal); ABO-Inkompatibilität → hämolytische Transfusionsreaktion; LDL → Atherosklerose`,
+- **Passiver Transport**: einfache Diffusion (O₂, CO₂, Steroide); erleichterte Diffusion (GLUT, Ionenkanäle, Aquaporine); Osmose = Wassertransport zur höheren Osmolalität
+- **Osmose/Tonizität**: hypoton → Hämolyse; hyperton → Krenation; isotone NaCl 0,9 % = physiologisch
+- **Aktiver Transport**: primär (Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein, 1 ATP → Ruhepotenzial −70 mV); sekundär (SGLT: Na⁺-Gradient treibt Glucose; Herzglykoside hemmen ATPase → Ca²⁺ ↑ → inotrop)
+- **Klinisch**: CFTR ΔF508 → Mukoviszidose; ABO-Inkompatibilität → Hämolyse; Herzglykoside → Na⁺/K⁺-ATPase-Hemmung → positiv inotrop; SGLT2-Hemmer → Glucosurie → Blutzuckersenkung`,
       lernziele: [
         "Das Flüssig-Mosaik-Modell mit allen Komponenten (Phospholipide, Cholesterin, Membranproteine, Glykokalix) erklären",
         "Die Rolle von Cholesterin und Fettsäurezusammensetzung für die Membranfluidität beschreiben",
@@ -1435,36 +1480,6 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
 
 ---
 
-## MedAT-Fokus
-
-**Häufige Fragen:**
-- "Wann trennen sich Schwesterchromatiden?" → Anaphase (Mitose) und Anaphase II (Meiose)
-- "Wann trennen sich homologe Chromosomen?" → Anaphase I (nur Meiose)
-- "Was ist ein Bivalent?" → 2 homologe Chromosomen (mit je 2 Schwesterchromatiden = 4 Chromatiden)
-- "Was passiert beim Crossing-over?" → DNA-Austausch zwischen homologen Chromosomen in Prophase I → neue Allelkombinationen
-
-**Achtung — typische Verwechslungen:**
-- Mitose Anaphase: Schwesterchromatiden trennen sich (NICHT homologe Chromosomen!)
-- Meiose I Anaphase: Homologe Chromosomen trennen sich (Schwesterchromatiden bleiben verbunden!)
-- "Haploid" vs. "1 Chromatide": Nach Meiose I haben die Zellen n Chromosomen, aber jedes besteht noch aus 2 Schwesterchromatiden (technisch: haploid aber mit verdoppelter DNA)
-- G0 ≠ G1: G0 ist eine Ruhephase außerhalb des aktiven Zellzyklus
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Mensch: 46 Chromosomen (2n=46), 23 Chromosomenpaare
-- Mitose-Ergebnis: 2 Zellen mit je 46 Chromosomen (2n)
-- Meiose-Ergebnis: 4 Zellen mit je 23 Chromosomen (n)
-- G0: Neuronen, Herzmuskelzellen (postmitotisch, kein Zellzyklus mehr)
-- S-Phase: DNA-Gehalt steigt von 2n auf 4n (Chromatidenzahl steigt, nicht Chromosomenzahl!)
-- Non-disjunction in Meiose I → alle 4 Tochterzellen betroffen; in Meiose II → 2 von 4 betroffen
-
-**Klinische Relevanz:**
-- **Non-disjunction** (Fehltrennung): Trisomie 21 (Down-Syndrom, Risiko mit Alter der Mutter steigt), Trisomie 18 (Edwards), Trisomie 13 (Patau)
-- Monosomie X: Turner-Syndrom (45,X0)
-- XXY: Klinefelter-Syndrom (47,XXY)
-- Kontrollpunktverlust → Onkogenese: p53-Mutation (häufigste Krebsmutation, ~50% aller Tumoren), Rb-Verlust (Retinoblastom)
-
----
-
 ## Non-disjunction und Chromosomenaberrationen
 
 **Non-disjunction** = fehlerhafte Chromosomentrennung → eine Tochterzelle erhält ein Chromosom zu viel, die andere zu wenig.
@@ -1486,6 +1501,30 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
 **Risikofaktoren:** Mütterliches Alter bei Trisomien (Oozyten werden in Prophase I arretiert und mit dem Alter schlechter kontrolliert). Pränatale Diagnostik: Amniozentese (15.–18. SSW), Chorionzottenbiopsie (10.–12. SSW), nichtinvasive Pränataldiagnostik (NIPD, cell-free fetal DNA ab 10. SSW).
 
 > **Merke:** Trisomie 21 = häufigste Chromosomenaberration Lebendgeborener; Non-disjunction in Meiose I: alle 4 Keimzellen betroffen; in Meiose II: 2 von 4.
+
+---
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Wann trennen sich Schwesterchromatiden?" → Anaphase (Mitose) und Anaphase II (Meiose)
+- "Wann trennen sich homologe Chromosomen?" → Anaphase I (nur Meiose)
+- "Was ist ein Bivalent?" → 2 homologe Chromosomen (mit je 2 Schwesterchromatiden = 4 Chromatiden)
+- "Was passiert beim Crossing-over?" → DNA-Austausch zwischen homologen Chromosomen in Prophase I → neue Allelkombinationen
+
+**Achtung — typische Verwechslungen:**
+- Mitose Anaphase: Schwesterchromatiden trennen sich (NICHT homologe Chromosomen!)
+- Meiose I Anaphase: Homologe Chromosomen trennen sich (Schwesterchromatiden bleiben verbunden!)
+- "Haploid" vs. "1 Chromatide": Nach Meiose I haben die Zellen n Chromosomen, aber jedes besteht noch aus 2 Schwesterchromatiden (technisch: haploid aber mit verdoppelter DNA)
+- G0 ≠ G1: G0 ist eine Ruhephase außerhalb des aktiven Zellzyklus
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Mensch: 46 Chromosomen (2n=46), 23 Chromosomenpaare
+- Mitose-Ergebnis: 2 Zellen mit je 46 Chromosomen (2n)
+- Meiose-Ergebnis: 4 Zellen mit je 23 Chromosomen (n)
+- G0: Neuronen, Herzmuskelzellen (postmitotisch, kein Zellzyklus mehr)
+- S-Phase: DNA-Gehalt steigt von 2n auf 4n (Chromatidenzahl steigt, nicht Chromosomenzahl!)
+- Non-disjunction in Meiose I → alle 4 Tochterzellen betroffen; in Meiose II → 2 von 4 betroffen
 
 ---
 
