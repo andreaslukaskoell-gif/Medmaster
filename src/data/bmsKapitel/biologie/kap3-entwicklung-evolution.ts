@@ -32,11 +32,6 @@ Damit neues Leben entstehen kann, müssen Samenzelle und Eizelle zusammenfinden 
 
 Die **Befruchtung** (Fertilisation) findet im äußeren Drittel des **Eileiters (Tuba uterina), der Ampulle**, statt. Bevor ein Spermium die Eizelle erreichen kann, muss es die **Kapazitation** durchlaufen — eine biochemische Reifung im weiblichen Genitaltrakt (Dauer ca. 7 Stunden), bei der Cholesterin aus der Spermienmembran entfernt wird und intrazelluläres Ca²⁺ ansteigt, was die Motilität erhöht (**Hyperaktivierung**) und die Akrosomreaktion ermöglicht. Beim Kontakt eines Spermiums mit der Eizelle löst die Bindung an die **Zona pellucida** (speziell an das Glykoprotein ZP3) die **Akrosom-Reaktion** aus: Das Akrosom am Spermien-Kopf fusioniert mit der Plasmamembran und setzt Enzyme frei – insbesondere **Akrosin** (Serinprotease) und **Hyaluronidase** – die die Zona pellucida enzymatisch durchdringen. Nach der Fusion der Zellmembranen von Spermium und Eizelle erfolgt die **Kortikalreaktion**: kortikale Granula der Eizelle exozytieren und modifizieren die Zona pellucida (ZP2-Modifikation, Zona-Reaktion), sodass keine weiteren Spermien eindringen können (**Polyspermie-Block**). Gleichzeitig wird die durch die Ovulation arretierte sekundäre Oozyte (Arrest in **Metaphase II**) durch einen Ca²⁺-Anstieg zur Vollendung der Meiose II angetrieben: Es entsteht eine reife Eizelle (n) plus das 2. Polkörperchen (n). Die Vorkerne von Spermium und Eizelle verschmelzen im Schritt der **Syngamie** zur diploiden **Zygote** (2n). Wichtig: Erst bei der Syngamie wird das Geschlecht festgelegt — es wird durch das Spermium bestimmt (X oder Y-Chromosom).
 
-**Lernziele:**
-- Die Akrosom-Reaktion und Kortikalreaktion bei der Befruchtung erklären und voneinander abgrenzen.
-- Die Furchungsstadien (Morula, Blastozyste) mit korrekten Zeitangaben und strukturellen Merkmalen beschreiben.
-- Den Ablauf der Implantation und die Rolle von hCG für die Corpus-luteum-Erhaltung erläutern.
-
 ---
 
 ## Akrosom-Reaktion und Kortikalreaktion
@@ -253,11 +248,6 @@ Epiblastzellen wandern zum Primitivstreifen, durchlaufen eine **epithelial-mesen
 
 Aus dem Primitiv-Knoten bildet sich zusätzlich das **Notochord** (Chorda dorsalis), eine transiente Achsenstruktur aus Mesoderm, die als Induktor der Neurulation wirkt und später zu den **Nuclei pulposi** der Bandscheiben wird.
 
-**Lernziele:**
-- Den Ablauf der Gastrulation (Primitivstreifen, drei Keimblätter) und die Herkunft jedes Keimblattes aus dem Epiblast erklären.
-- Die wichtigsten Derivate von Ektoderm, Mesoderm und Endoderm aufzählen und korrekt zuordnen.
-- Die Neurulation (Neuralplatte → Neuralrohr → ZNS) und die Entstehung der Neuralleiste beschreiben.
-
 ---
 
 ## Primitivstreifen und Keimblatt-Entstehung
@@ -468,11 +458,6 @@ Nach der Einnistung beginnt eine neun Monate lange Entwicklung — doch nicht al
 
 Die **Embryonalperiode** umfasst die ersten 8 Wochen nach der Befruchtung. In dieser Zeit findet die **Organogenese** (Organanlage) statt: Aus den drei Keimblättern entstehen alle primären Organanlagen. Die Entwicklung schreitet cephalo-caudal (vom Kopf zum Schwanz) und proximo-distal (von der Körpermitte zu den Extremitäten) fort. In Woche 3 bilden sich Neuralrohr und Herzschlauch; in Woche 4 beginnt das Herz zu schlagen (der erste funktionelle Schlag erfolgt um Tag 22–23). In Woche 4–8 entstehen Gliedmaßenleisten (Arm- und Beinleisten), Augenlinsengruben, Ohrgrübchen und Gesichtsgaumen. Am Ende der Woche 8 sind alle wesentlichen Organsysteme angelegt, wenn auch noch nicht ausgereift. Das Embryo ist ca. 3 cm groß (SSL – Scheitel-Steiß-Länge). Während dieser Periode ist der Embryo besonders **vulnerabel** gegenüber teratogenen Noxen.
 
-**Lernziele:**
-- Embryonal- und Fetalperiode zeitlich und inhaltlich abgrenzen sowie die Organogenese in der Embryonalperiode beschreiben.
-- Das Konzept der kritischen Perioden erklären und wichtige Teratogene mit ihren Zielorganen und -zeiträumen nennen.
-- Wichtige Entwicklungsmeilensteine der Fetalperiode (Kindsbewegungen, Lungenreife) den korrekten Schwangerschaftswochen zuordnen.
-
 ---
 
 ## Organogenese in der Embryonalperiode
@@ -667,11 +652,6 @@ Der Fötus kann nicht selbst atmen, essen oder Hormone produzieren — all das �
 ## Aufbau der Plazenta
 
 Die **Plazenta** ist ein temporäres Organ, das den Fötus mit der Mutter verbindet und aus zwei Anteilen besteht: dem **fetalen Anteil** (Chorion frondosum, bestehend aus **Chorionzotten** des Trophoblasten) und dem **mütterlichen Anteil** (Decidua basalis, umgebautes Endometrium). Chorionzotten tauchen in **intervillöse Räume** (Blutseen) ein, die mit mütterlichem Blut gefüllt sind. Fetales und mütterliches Blut **mischen sich nicht direkt**; der Austausch erfolgt durch Diffusion und aktiven Transport. Die voll entwickelte Plazenta (ab Woche 12–16) ist scheibenförmig, ca. 500 g schwer und 20 cm im Durchmesser. Die Decidua ist das transformierte Endometrium und gliedert sich in Decidua basalis (unter der Plazenta, mütterlicher Plazenta-Anteil), Decidua capsularis (über dem Embryo) und Decidua parietalis (restliches Endometrium).
-
-**Lernziele:**
-- Den fetalen und mütterlichen Anteil der Plazenta, den Aufbau der Chorionzotten und der Plazentaschranke beschreiben.
-- Die Hauptfunktionen der Plazenta (Gasaustausch, Nährstofftransfer, Hormonsynthese) erläutern und die Hormone hCG und Progesteron zeitlich korrekt einordnen.
-- Den Aufbau der Nabelschnur (2 Arterien, 1 Vene) und die Funktion der Eihäute (Amnion, Chorion) erklären.
 
 ---
 
@@ -1087,13 +1067,6 @@ Zwischen der Bildung organischer Moleküle und der ersten echten Zelle liegt ein
       content: `## Einleitung
 
 Wie rekonstruiert man die Geschichte des Lebens, wenn man nicht dabei war? Biologen lesen dazu in Fossilien, aber noch präziser in DNA-Sequenzen. Die **Phylogenetik** (griech. *phylon* = Stamm) untersucht die Verwandtschaft zwischen Lebewesen und stellt sie in **Stammbäumen** dar. Dabei sind zwei Begriffe wichtig: **Homologie** bedeutet, dass zwei Strukturen denselben evolutionären Ursprung haben — auch wenn sie heute unterschiedlich aussehen oder funktionieren. **Analogie** bedeutet, dass zwei ähnliche Strukturen unabhängig voneinander entstanden sind — eine Lösung, auf die die Evolution zweimal gestoßen ist. Diese Unterscheidung ist ein MedAT-Klassiker und wird regelmäßig geprüft.
-
----
-
-**Lernziele:**
-- Homologe von analogen Strukturen anhand von Beispielen unterscheiden
-- Phylogenetische Stammbäume lesen und Verwandtschaftsbeziehungen ableiten
-- Die Bedeutung molekularer Phylogenie für die Rekonstruktion von Evolutionsgeschichte erläutern
 
 ---
 
