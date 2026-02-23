@@ -131,6 +131,24 @@ Bei 46 g Ethanol (= 1 mol) werden 1367 kJ frei. Der physiologische Brennwert von
 
 Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern von der freien Enthalpie **ΔG = ΔH − T·ΔS** (Gibbs-Energie). ΔG < 0 → spontan (exergon); ΔG > 0 → nicht spontan (endergon). Im Körper koppelt die Zelle exergone Reaktionen (ATP-Hydrolyse, ΔG° ≈ −30,5 kJ/mol) an endergone Biosynthesen, um thermodynamisch ungünstige Prozesse anzutreiben (energetische Kopplung).
 
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- „Was ist der Unterschied zwischen Säure-Base- und Redoxreaktion?" → Säure-Base = H⁺-Transfer; Redox = e⁻-Transfer (OIL RIG)
+- „Was ändert ein Katalysator?" → Senkt E_A, ändert nicht ΔH, ΔG oder Gleichgewichtslage
+- „Wann ist eine Reaktion spontan?" → Wenn ΔG < 0 (exergon) — nicht allein durch ΔH bestimmbar
+
+**Achtung — typische Verwechslungen:**
+- Exotherm (ΔH < 0) ≠ spontan. Spontaneität wird durch ΔG = ΔH − T·ΔS bestimmt
+- Katalysator verändert die **Geschwindigkeit**, nicht die **Gleichgewichtslage** oder Thermodynamik
+- OIL RIG: **O**xidation **I**s **L**oss (von e⁻), **R**eduction **I**s **G**ain — nicht umdrehen!
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- ATP-Hydrolyse: ΔG° ≈ −30,5 kJ/mol (Standard-Gibbs-Energie)
+- Glucose-Verbrennung: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O; ΔH = −2803 kJ/mol
+- Katalase beschleunigt H₂O₂-Abbau ~10⁷-fach (enzymatische Katalyse)
+
+---
 ## Zusammenfassung
 
 - **Reaktionstypen**: Synthese (A+B→AB), Zersetzung (AB→A+B), Substitution (AB+C→AC+B), Metathese (Doppelsubstitution)
@@ -440,6 +458,24 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
 - Ethanol hingegen: 0. Ordnung wegen Enzymkapazitätssättigung → konstante Abnahme (~0,1–0,15 ‰/h).
 - Klinisch: Ibuprofen (t₁/₂ ≈ 2 h, häufige Gabe) vs. Amlodipin (t₁/₂ ≈ 35 h, 1× täglich). Dosierungsintervall ≈ 1–2 × t₁/₂.
 
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- „Wie berechnet man t₁/₂ bei 1. Ordnung?" → t₁/₂ = ln 2 / k ≈ 0,693/k — konzentrationsunabhängig
+- „Warum folgt Ethanolabbau einer 0. Ordnung?" → ADH/ALDH bei normalen Spiegeln gesättigt ([S] ≫ Kₘ) → v = vₘₐₓ = konstant
+- „Was ändert kompetitive Hemmung?" → Kₘ(app) ↑, vₘₐₓ unverändert — durch Substratüberschuss überwindbar
+
+**Achtung — typische Verwechslungen:**
+- Reaktionsordnungen folgen dem **Experiment**, nicht den stöchiometrischen Koeffizienten
+- 0. Ordnung: t₁/₂ = [A]₀/(2k) → konzentrationsabhängig (≠ 1. Ordnung!)
+- Kompetitiv (Kₘ ↑, vₘₐₓ gleich) ≠ nicht-kompetitiv (vₘₐₓ ↓, Kₘ gleich)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Ethanol-Abbaurate: ~0,1–0,15 ‰/h (0. Ordnung bei Enzymkapazitätssättigung)
+- Steady-State nach ~5 Halbwertszeiten (< 3 % Restsubstanz)
+- RGT-Regel: Q₁₀ ≈ 2–3 (gilt nur bis Denaturierungstemperatur ~42 °C)
+
+---
 ## Zusammenfassung
 
 - **v = k·[A]ᵐ·[B]ⁿ**: Geschwindigkeitsgesetz; k = Geschwindigkeitskonstante, m/n = Teilordnungen
@@ -754,6 +790,24 @@ Klinisch/industriell: Der Haber-Bosch-Prozess (N₂ + 3 H₂ ⇌ 2 NH₃) erreic
 
 Klinisch: RQ > 1,0 deutet auf Lipogenese hin (Umwandlung von Kohlenhydraten in Fett, vermehrte CO₂-Produktion). Bei Beatmungspatienten kann dies die CO₂-Elimination erschweren — relevant für die Ernährungstherapie bei ARDS.
 
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- „Wie findet man das Mangelreagenz?" → n/Koeffizient für jedes Edukt berechnen → kleinster Quotient = Mangelreagenz → Ausbeute nur daraus berechnen
+- „Was ist der Respirationsquotient von Glukose?" → RQ = CO₂(prod.)/O₂(verbraucht) = 6/6 = 1,0
+- „Wie lautet das Stöchiometrie-Schema?" → m →(÷M)→ n →(×Koeffizientverhältnis)→ n →(×M)→ m
+
+**Achtung — typische Verwechslungen:**
+- Koeffizienten = **Mol-Verhältnisse**, NICHT Massenverhältnisse!
+- Theoretische ≠ tatsächliche Ausbeute (Nebenreaktionen, Verluste bei der Aufarbeitung)
+- Beim Ausgleichen: erst Metalle/Nichtmetalle, **zuletzt H und O**
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Physiologische NaCl: 0,9 % (w/v) = 154 mmol/L Na⁺ + 154 mmol/L Cl⁻
+- RQ: Kohlenhydrate = 1,0; Fette ≈ 0,7; Proteine ≈ 0,8; RQ > 1 → Lipogenese
+- Avogadro-Zahl: N_A = 6,022 × 10²³ mol⁻¹; molares Gasvolumen (0 °C, 1 atm): 22,4 L/mol
+
+---
 ## Zusammenfassung
 
 - **Stöchiometrie**: Koeffizienten = Mol-Verhältnisse (NICHT Massenverhältnisse!); Schema: m →(÷M)→ n →(×Koeff.)→ n →(×M)→ m
@@ -1059,6 +1113,24 @@ Die Gleichgewichtskonstante ist direkt mit der Standard-Gibbs-Energie verknüpft
 Für die Ammoniaksynthese bei 500 °C (773 K): K = 600.
 ΔG° = −8,314 J/(mol·K) × 773 K × ln(600) = −8,314 × 773 × 6,40 = −41.100 J/mol ≈ −41,1 kJ/mol → stark exergon.
 
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- „Was ändert ein Katalysator am Gleichgewicht?" → Nichts — K und Gleichgewichtslage bleiben gleich, nur die Einstellungsgeschwindigkeit steigt
+- „Welche Störung ändert K selbst?" → Nur Temperatur; Konzentration und Druck ändern nur Q, nicht K
+- „Warum hoher Druck beim Haber-Bosch?" → N₂ + 3H₂ ⇌ 2NH₃: links 4, rechts 2 Gasmole → Δn = −2 → Druckerhöhung begünstigt Seite mit weniger Gasmolen
+
+**Achtung — typische Verwechslungen:**
+- Dynamisches Gleichgewicht ≠ statischer Stillstand — beide Reaktionen laufen weiter auf molekularer Ebene!
+- Kc ≠ Reaktionsgeschwindigkeit — Kc ist Thermodynamik, E_A ist Kinetik (unabhängig voneinander)
+- Le Chatelier für Temperatur: exotherm + T↑ → Kc sinkt (Eduktseite bevorzugt); endotherm + T↑ → Kc steigt
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Blut-pH: 7,35–7,45; pKa(H₂CO₃) = 6,1; [HCO₃⁻]/[CO₂] ≈ 20:1 → pH 7,4
+- ΔG° = −RT·ln(K): ΔG° < 0 ↔ K > 1 ↔ Produkte bevorzugt
+- Haber-Bosch: N₂ + 3H₂ ⇌ 2NH₃; 150–300 bar, 400–500 °C, Fe₃O₄-Katalysator
+
+---
 ## Zusammenfassung
 
 - **Dynamisches Gleichgewicht**: v_hin = v_rück; Konzentrationen konstant, aber Reaktion läuft weiter
@@ -1356,6 +1428,24 @@ Die **Übergangszustandstheorie (Eyring)** verfeinert dieses Bild: Edukte bilden
 | Fieber | 40 °C | v ↑ ~30 % | Erhöhter O₂-Bedarf, Tachykardie |
 | Denaturierung | > 42 °C | v bricht ein | Enzymverlust, lebensbedrohlich |
 
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- „Was ist die Aktivierungsenergie E_A?" → Energiebarriere zum Übergangszustand — nicht identisch mit ΔH!
+- „Was macht ein Katalysator laut Arrhenius-Gleichung?" → Senkt E_A → e^(−E_A/RT) wird größer → k steigt exponentiell
+- „Bei welcher Temperatur wird therapeutische Hypothermie eingesetzt?" → 32–36 °C — verlangsamt Zellstoffwechsel, reduziert O₂-Bedarf
+
+**Achtung — typische Verwechslungen:**
+- E_A ≠ ΔH: E_A = Höhe des Energiebergs über Eduktniveau; ΔH = Nettodifferenz Edukt → Produkt
+- RGT-Regel gilt NICHT über der Denaturierungstemperatur von Enzymen (~42 °C)
+- Katalysator ändert weder K noch ΔH noch ΔG — ausschließlich die Reaktionsgeschwindigkeit (Kinetik)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- RGT-Regel: Q₁₀ ≈ 2–3 (Faktor 2–3 pro 10 °C Temperaturerhöhung)
+- Therapeutische Hypothermie: 32–36 °C → ~30–50 % langsamerer Stoffwechsel → Neuroprotektion
+- Enzymdenaturierung beim Menschen: > 42 °C (Verlust der Katalyseaktivität)
+
+---
 ## Zusammenfassung
 
 - **v = Δc/Δt** [mol·L⁻¹·s⁻¹]; Reaktionsgeschwindigkeit nimmt mit der Zeit ab (Edukte verbraucht)
@@ -1672,6 +1762,24 @@ Diese Beziehung verbindet die Kinetik (über K) mit der Thermodynamik (über ΔG
 
 Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ ⇌ HbO₂. In der Lunge (hoher pO₂) liegt Q < K, das Gleichgewicht verschiebt sich zu HbO₂. Im Gewebe (niedriger pO₂) gilt Q > K, die Reaktion läuft rückwärts, O₂ wird abgegeben. Die Michaelis-Konstante K_M bei Enzymreaktionen ist ebenfalls eine Gleichgewichtskonstante und gibt die Substrataffinität von Enzymen an.
 
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- „Was bedeutet Q < Kc?" → Reaktion läuft vorwärts (Hinreaktion überwiegt) — System ist noch nicht im Gleichgewicht
+- „Erscheint H₂O im MWG bei wässrigen Reaktionen?" → Nein — Aktivität des reinen Lösungsmittels ≈ 1
+- „Wie berechnet sich Kp aus Kc?" → Kp = Kc · (RT)^Δn; bei Δn = 0 gilt Kp = Kc
+
+**Achtung — typische Verwechslungen:**
+- Großes K ≠ schnelle Reaktion — K ist Thermodynamik, E_A ist Kinetik (beide unabhängig!)
+- Kc ist temperaturabhängig, aber **nicht** konzentrations- oder druckabhängig
+- Q hat gleiche Form wie Kc, aber mit **aktuellen** (nicht Gleichgewichts-)Konzentrationen
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- ΔG° = −RT·ln(K): K > 1 → ΔG° < 0 → thermodynamisch begünstigt (exergon)
+- Kc ≫ 1 (z. B. 10⁶): Produkte dominieren; Kc ≪ 1 (z. B. 10⁻⁶): Edukte dominieren
+- Für Umkehrreaktion gilt: K'c = 1/Kc
+
+---
 ## Zusammenfassung
 
 - **Dynamisches Gleichgewicht**: v_hin = v_rück; Konzentrationen konstant, aber beide Reaktionen laufen weiter
@@ -1971,6 +2079,23 @@ CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
 
 **Calciumstoffwechsel:** Ca²⁺ + HPO₄²⁻ ⇌ CaHPO₄(s). Beim Knochenbau wird CaHPO₄ ausgefällt — Produktentzug verschiebt das Gleichgewicht in Richtung Mineralisation. Parathormon und Calcitonin steuern die Gleichgewichtslage über [Ca²⁺] im Blut.
 
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- „Was ist der Unterschied zwischen Temperatur- und Konzentrationseffekt auf das Gleichgewicht?" → Konzentration/Druck ändern Q (nicht K); Temperatur ändert K selbst!
+- „Welcher Druckeffekt beim Haber-Bosch?" → N₂ + 3H₂ ⇌ 2NH₃: links 4, rechts 2 Gasmole → Δn = −2 → hoher Druck begünstigt NH₃
+- „Warum 400–500 °C beim Haber-Bosch?" → Kompromiss: niedrige T → K groß (thermodynamisch gut), aber kinetisch zu langsam; 400–500 °C mit Fe-Katalysator
+
+**Achtung — typische Verwechslungen:**
+- Katalysatoren verschieben das Gleichgewicht **NICHT** — sie ändern nur die Einstellungsgeschwindigkeit
+- Inertgas bei **konstantem Volumen**: kein Effekt auf Gleichgewicht (Partialdrücke der Reaktanten unverändert)
+- Druck hat **keinen** Einfluss wenn Δn = 0 (z. B. H₂ + Cl₂ ⇌ 2 HCl)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Haber-Bosch: N₂ + 3H₂ ⇌ 2NH₃; ΔH = −92 kJ/mol (exotherm); Δn = −2; 150–300 bar; 400–500 °C; Fe₃O₄-Katalysator
+- Blutpuffer: CO₂ + H₂O ⇌ H⁺ + HCO₃⁻; Hyperventilation → ↓CO₂ → pH↑ (respiratorische Alkalose)
+
+---
 ## Zusammenfassung
 
 - **Le Chatelier**: Störung → System verschiebt sich entgegen der Störung; gilt für Konzentration, Druck, Temperatur
@@ -2294,6 +2419,24 @@ Die BGA bestimmt: pH, pCO₂, pO₂, HCO₃⁻, Base Excess (BE), O₂-Sättigun
 
 Der **Base Excess (BE)** gibt an, wie viel starke Säure oder Base nötig wäre, um pH 7,4 bei 37 °C und pCO₂ 40 mmHg wiederherzustellen. BE < −2 = metabolische Azidose; BE > +2 = metabolische Alkalose.
 
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- „Wie berechnet man pH mit Henderson-Hasselbalch?" → pH = pKa + log([A⁻]/[HA]); Pufferoptimum bei [A⁻] = [HA] → log(1) = 0 → pH = pKa
+- „Welcher pH ergibt sich bei [HCO₃⁻]/[CO₂] = 20:1 und pKa = 6,1?" → pH = 6,1 + log(20) = 6,1 + 1,3 = 7,4
+- „Was unterscheidet respiratorische von metabolischer Azidose?" → Respiratorisch: primär ↑pCO₂; Metabolisch: primär ↓HCO₃⁻
+
+**Achtung — typische Verwechslungen:**
+- pKa(H₂CO₃) = 6,1 (effektiv) — NICHT 7,4 (das ist der Ziel-pH des Blutes!)
+- Lunge reguliert CO₂ **schnell** (Minuten); Niere reguliert HCO₃⁻ **langsam** (Stunden–Tage)
+- Azidose: pH < 7,35; Alkalose: pH > 7,45 — Acidose und Azidose sind dasselbe, nicht verwechseln mit Azidämie vs. Alkalämie
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Blut-Normwerte: pH 7,40; pCO₂ 40 mmHg; [HCO₃⁻] 24 mmol/L; [HCO₃⁻]/[CO₂] ≈ 20:1
+- Carboanhydrase: Beschleunigung ~10⁶-fach; Cofaktor Zn²⁺; Hemmung durch Acetazolamid (Diuretikum, Glaukom)
+- Base Excess (BE): < −2 mmol/L = metabolische Azidose; > +2 mmol/L = metabolische Alkalose
+
+---
 ## Zusammenfassung
 
 - **pH = −log[H₃O⁺]**; Kw = [H₃O⁺]·[OH⁻] = 10⁻¹⁴; pH + pOH = 14 (bei 25 °C)
