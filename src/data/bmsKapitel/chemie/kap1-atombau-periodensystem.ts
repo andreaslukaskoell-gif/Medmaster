@@ -28,9 +28,9 @@ export const chemKapAtom: Kapitel = {
         "Massenzahl",
         "Ordnungszahl",
       ],
-      content: `# Atommodelle und Atomaufbau
+      content: `## Einleitung
 
-Die Geschichte der Atommodelle zeigt, wie wissenschaftliche Erkenntnisse schrittweise verfeinert wurden. Jedes Modell war ein Fortschritt gegenüber seinem Vorgänger, wurde aber durch neue Experimente ergänzt oder korrigiert. Für den MedAT ist das Verständnis der Modelle und ihrer Grenzen zentral.
+Alles, was uns umgibt — Luft, Wasser, unser Körper — besteht aus winzigen Teilchen: den **Atomen**. Sie sind so klein, dass auf einem Millimeter zehn Millionen nebeneinander passen würden. Doch was steckt im Inneren eines Atoms? Diese Frage beschäftigte Wissenschaftler über Jahrhunderte. Jede neue Entdeckung veränderte das Bild vom Atom grundlegend: vom unzerteilbaren Kugelmodell über den Rosinen-Kuchen bis hin zum modernen Orbitalmodell. Für den MedAT sind die wichtigsten Atommodelle, ihre Schlüsselexperimente, sowie die Begriffe Ordnungszahl, Massenzahl und Isotop prüfungsrelevant.
 
 ## Demokrit und Dalton — die Anfänge
 
@@ -93,7 +93,19 @@ Orbitaltypen und Kapazitäten:
 
 Beispiele: ¹H (Protium, 99,98 %), ²H (Deuterium, D, 0,02 %), ³H (Tritium, T, radioaktiv); ¹²C (98,9 %), ¹³C (1,1 %), ¹⁴C (Spuren, radioaktiv, T½ = 5730 a).
 
-**Stabile Isotope** haben ein günstiges N/Z-Verhältnis (bei leichten Elementen N ≈ Z; bei schwereren Elementen überwiegen Neutronen: bei Z = 82 ist N ≈ 1,5 × Z). Instabile Nuklide sind radioaktiv. Alle Elemente mit Z > 83 (Bismut) sind ausschließlich radioaktiv.`,
+**Stabile Isotope** haben ein günstiges N/Z-Verhältnis (bei leichten Elementen N ≈ Z; bei schwereren Elementen überwiegen Neutronen: bei Z = 82 ist N ≈ 1,5 × Z). Instabile Nuklide sind radioaktiv. Alle Elemente mit Z > 83 (Bismut) sind ausschließlich radioaktiv.
+
+## Zusammenfassung
+
+- Atom: **Kern** (Protonen + Neutronen, winzig: ~10⁻¹⁵ m) + **Hülle** (Elektronen, ~10⁻¹⁰ m); 99 % leerer Raum
+- **Ordnungszahl Z** = Protonenzahl = definiert das Element; **Massenzahl A** = Z + N; Neutronenzahl N = A − Z
+- **Thomson** (1904): Rosinenmodell — positive Kugel mit eingebetteten Elektronen
+- **Rutherford** (1911): Streuversuch an Goldfolie → dichten, positiven Kern entdeckt; Vergleich: Kern = Murmel, Atom = Fußballstadion
+- **Bohr** (1913): Elektronen auf festen Schalen (K, L, M...); max. 2n² e⁻ pro Schale; Übergänge erklären Spektrallinien
+- **Quantenmechanik**: Orbitale (s, p, d, f) = Aufenthaltswahrscheinlichkeitsräume; s:1, p:3, d:5, f:7 Orbitale; max. 2 e⁻ pro Orbital
+- **Isotope**: gleiche Z (gleiches Element), verschiedene N → verschiedene Massenzahl; chemisch identisch, physikalisch verschieden
+- **Nuklid-Notation**: ᴬ_Z X, z. B. ²³⁸₉₂U (92 Protonen, 146 Neutronen)
+- Alle Elemente mit Z > 83 (Bismut) sind radioaktiv`,
 
       lernziele: [
         "Die historische Entwicklung der Atommodelle (Thomson → Rutherford → Bohr → Quantenmechanik) erklären und die entscheidenden Experimente benennen.",
@@ -298,9 +310,9 @@ Beispiele: ¹H (Protium, 99,98 %), ²H (Deuterium, D, 0,02 %), ³H (Tritium, T, 
         "Elektronenkonfiguration",
         "Übergangsmetalle",
       ],
-      content: `# Elektronenkonfiguration und Quantenzahlen
+      content: `## Einleitung
 
-Die genaue Beschreibung der Elektronen in einem Atom erfolgt über vier Quantenzahlen. Sie legen fest, auf welchem Energieniveau sich jedes Elektron befindet und welchen Spin es trägt. Im MedAT wird regelmäßig nach den Prinzipien der Elektronenkonfiguration und nach Ausnahmen gefragt.
+Warum reagiert Natrium heftig mit Wasser, während Edelgase nahezu inert sind? Die Antwort liegt in der **Elektronenkonfiguration** — also darin, wie Elektronen um den Atomkern angeordnet sind. Vier Quantenzahlen beschreiben jeden Elektronen-"Wohnort" eindeutig: Etage (Schale), Zimmertyp (Orbital), Ausrichtung und Spin. Die Regeln, nach denen sich Elektronen anordnen (Aufbauprinzip, Pauliprinzip, Hundsche Regel), sind das Fundament für das Verständnis der Periodizität, der Bindungen und der biologischen Bedeutung von Spurenelementen — alles klassische MedAT-Themen.
 
 ## Die vier Quantenzahlen
 
@@ -376,7 +388,18 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
 - **Cu** ([Ar]3d¹⁰4s¹): Zytochrom-c-Oxidase, Ceruloplasmin, Superoxid-Dismutase
 - **Zn** ([Ar]3d¹⁰4s²): >300 Enzyme (Carboanhydrase, Alkohol-Dehydrogenase), Zinkfinger-Proteine (Transkriptionsfaktoren)
 - **Co** ([Ar]3d⁷4s²): Kern von Vitamin B12 (Cobalamin), essenziell für Methylierungsreaktionen
-- **Mn** ([Ar]3d⁵4s²): Mn-SOD (mitochondriale Superoxid-Dismutase), Arginase (Harnstoffzyklus)`,
+- **Mn** ([Ar]3d⁵4s²): Mn-SOD (mitochondriale Superoxid-Dismutase), Arginase (Harnstoffzyklus)
+
+## Zusammenfassung
+
+- **4 Quantenzahlen**: n (Schale), l (Orbitalform: 0=s, 1=p, 2=d, 3=f), mₗ (Raumausrichtung), mₛ (Spin ±½)
+- **Pauliprinzip**: kein Atom hat zwei Elektronen mit identischen vier Quantenzahlen → max. 2 e⁻ pro Orbital (entgegengesetzter Spin)
+- **Aufbauprinzip** (Madelung-Regel): 1s < 2s < 2p < 3s < 3p < 4s < 3d < 4p ... (kleineres n+l zuerst)
+- **Hundsche Regel**: entartete Orbitale zuerst einfach besetzen (paralleler Spin ↑↑), dann paaren
+- Ausnahmen: Cu [Ar]3d¹⁰4s¹ (volle d-Schale stabil) und Cr [Ar]3d⁵4s¹ (halbvolle d-Schale stabil)
+- **Valenzelektronen** = äußerste s- und p-Elektronen → bestimmen Reaktivität und Gruppennummer im PSE
+- **Paramagnetismus**: ungepaarte Elektronen → Fe³⁺ ([Ar]3d⁵) hat 5 ungepaarte e⁻; **Diamagnetismus**: alle Elektronen gepaart
+- Biologisch wichtige Übergangsmetalle: **Fe** (Hämoglobin), **Cu** (Zytochrom-c-Oxidase), **Zn** (>300 Enzyme), **Co** (Vitamin B12), **Mn** (SOD)`,
 
       lernziele: [
         "Die vier Quantenzahlen (n, l, mₗ, mₛ) und ihre möglichen Werte nennen und die damit beschriebene Eigenschaft des Elektrons erklären.",
@@ -573,9 +596,11 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
         "Nuklearmedizin",
         "Radon",
       ],
-      content: `# Radioaktivität und Kernreaktionen
+      content: `## Einleitung
 
-Radioaktivität bezeichnet die Eigenschaft instabiler Atomkerne, spontan Energie in Form von Strahlung abzugeben und dabei in stabilere Kerne umzuwandeln (Kernzerfall). Die Entdeckung erfolgte 1896 durch Antoine Henri Becquerel (Uransalze), wenig später durch Marie und Pierre Curie (Polonium, Radium).
+Manche Atomkerne sind instabil und wandeln sich spontan um — dabei geben sie **Strahlung** ab. Dieses Phänomen heißt **Radioaktivität**. Es gibt drei Haupttypen dieser Strahlung: Alpha (Heliumkerne), Beta (Elektronen oder Positronen) und Gamma (elektromagnetische Wellen). Sie unterscheiden sich in Durchdringungsvermögen und biologischer Wirkung erheblich. Medizinisch ist Radioaktivität unverzichtbar: Von der Tumordiagnostik mit PET über die Radiojodtherapie der Schilddrüse bis zum Strahlenschutz bei Kernunfällen — diese Themen sind klassischer MedAT-Stoff.
+
+Die Entdeckung erfolgte 1896 durch Antoine Henri Becquerel (Uransalze), wenig später durch Marie und Pierre Curie (Polonium, Radium).
 
 ## Arten der Strahlung
 
@@ -656,7 +681,19 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
 - **Diagnostisch**: Szintigraphie (⁹⁹ᵐTc), PET (¹⁸F-FDG), SPECT, Röntgen/CT (X-Strahlen, kein Kernzerfall)
 - **Therapeutisch**: ¹³¹I-Therapie (Schilddrüsenkarzinom, M. Basedow), ⁹⁰Y-Mikrosphären (hepatozelluläres Karzinom), ²²³Ra-Dichlorid (Xofigo, Knochenmetastasen), externe Strahlentherapie (Linearbeschleuniger, Gamma Knife)
 - **Gefahren**: Radon-222 (Alphazerfall, Inhalation → zweitgrößte Ursache von Lungenkrebs nach Rauchen in Europa); ionisierende Strahlung → DNA-Doppelstrangbrüche → Krebsrisiko (stochastisch, kein Schwellenwert nach LNT-Modell)
-- **Schutzmaßnahme nach Atomunfall**: Kaliumiodid (KI) sättigt die Schilddrüse mit stabilem Iod → verhindert Einbau von radioaktivem ¹³¹I. Besonders wichtig für Kinder (höherer Jodumsatz, längere Restlebenserwartung)`,
+- **Schutzmaßnahme nach Atomunfall**: Kaliumiodid (KI) sättigt die Schilddrüse mit stabilem Iod → verhindert Einbau von radioaktivem ¹³¹I. Besonders wichtig für Kinder (höherer Jodumsatz, längere Restlebenserwartung)
+
+## Zusammenfassung
+
+- **α-Zerfall**: Z−2, A−4; Teilchen = ⁴He; Reichweite nur cm in Luft → stoppt bei Papier; gefährlich bei Inhalation
+- **β⁻-Zerfall**: n → p + e⁻ + ν̄ₑ; Z+1, A gleich; Reichweite mm–cm; stoppt bei Aluminiumfolie
+- **β⁺-Zerfall**: p → n + e⁺ + νₑ; Z−1, A gleich; Positron + Elektron → 2×γ (511 keV, 180°) = **Basis der PET**
+- **γ-Strahlung**: elektromagnetisch (kein Teilchen), Z und A unverändert; sehr hohe Reichweite → Abschirmung: Blei/Beton
+- **Halbwertszeit T½**: N(t) = N₀ × (½)^(t/T½); nach n HWZ verbleiben N₀/2ⁿ
+- Wichtige Nuklide: **⁹⁹ᵐTc** (T½ 6 h, Szintigraphie), **¹⁸F** (110 min, PET), **¹³¹I** (8 d, Schilddrüsentherapie), **¹⁴C** (5730 a, Datierung)
+- Strahlenschutz: Abstand (Intensität ∝ 1/r²), Zeit minimieren, Material abschirmen
+- Einheiten: **Gray (Gy)** = absorbierte Dosis; **Sievert (Sv)** = biologisch gewichtete Dosis (α-Faktor: 20!)
+- Bei Kernatomunfall: **Kaliumiodid (KI)** sättigt Schilddrüse → verhindert ¹³¹I-Aufnahme`,
 
       lernziele: [
         "Die drei Hauptarten der radioaktiven Strahlung (α, β, γ) hinsichtlich Natur, Reichweite, Abschirmung und Veränderung von Z und A beschreiben.",
@@ -864,9 +901,9 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
         "Infusionslösung",
         "Laborwerte",
       ],
-      content: `# Massenzahl, Atommasse und Mol-Konzept
+      content: `## Einleitung
 
-Um mit Atomen und Molekülen rechnen zu können, braucht die Chemie eine Einheit für atomare Massen und ein Konzept, das die winzigen atomaren Teilchen mit wiegbaren, handhabbaren Substanzmengen verbindet: das **Mol-Konzept**. Im MedAT sind Berechnungen mit mol, Molarität und Osmolarität häufig.
+Einzelne Atome sind so winzig, dass man sie nicht wiegen kann. Trotzdem müssen Chemiker und Mediziner präzise mit Mengen rechnen — zum Beispiel: Wie viel Gramm Kochsalz braucht man für eine isotone Infusion? Dafür gibt es das **Mol-Konzept**: Ein Mol ist eine riesige, aber definierte Anzahl von Teilchen (6,022 × 10²³), die man tatsächlich abwiegen kann. Das Mol verbindet die winzige atomare Welt mit der wägbaren Laborwelt. Für den MedAT sind Berechnungen mit Molarität, Osmolarität und Stöchiometrie besonders häufig prüfungsrelevant.
 
 ## Atomare Masseneinheit u
 
@@ -965,7 +1002,18 @@ Beispiel in der Medizin:
 C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Glukose, ΔG° = −2870 kJ/mol)
 1 mol Glukose (180 g) reagiert mit 6 mol O₂ (192 g) und liefert 6 mol CO₂ + 6 mol H₂O.
 
-**Limitierender Reaktand:** Liegt ein Edukt im Unterschuss vor, bestimmt es die maximale Produktmenge. Die übrigen Edukte verbleiben als Überschuss.`,
+**Limitierender Reaktand:** Liegt ein Edukt im Unterschuss vor, bestimmt es die maximale Produktmenge. Die übrigen Edukte verbleiben als Überschuss.
+
+## Zusammenfassung
+
+- **1 u** (atomare Masseneinheit) = 1/12 der Masse von ¹²C; Proton ≈ Neutron ≈ 1 u; Elektron vernachlässigbar (~1/2000 Protonmasse)
+- **Molare Masse M** [g/mol]: numerisch gleich der relativen Atommasse; M(H₂O) = 18 g/mol, M(NaCl) = 58,4 g/mol, M(Glukose) = 180 g/mol
+- **Avogadro-Konstante**: Nₐ = 6,022 × 10²³ mol⁻¹ — so viele Teilchen enthält 1 Mol
+- Formeln: **n = m/M** (mol = g ÷ g/mol); **n = N/Nₐ**; **c = n/V** (Molarität in mol/L)
+- **Osmolarität** [mosmol/L] = Summe aller Teilchenkonzentrationen; Ionen einzeln zählen (NaCl: i = 2)
+- Blutplasma-Osmolarität ≈ **290 mosmol/L**; 0,9 % NaCl ≈ 308 mosmol/L (klinisch als isoton verwendet)
+- **Verdünnungsformel**: c₁ × V₁ = c₂ × V₂ (Stoffmenge bleibt konstant)
+- **Stöchiometrie**: Koeffizienten in Reaktionsgleichungen = Mol-Verhältnisse; limitierender Reaktand bestimmt max. Ausbeute`,
 
       lernziele: [
         "Die atomare Masseneinheit u definieren und die Massen von Proton, Neutron und Elektron in u angeben.",
@@ -1150,9 +1198,9 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
         "Denaturierung",
         "Polarisierbarkeit",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Zwischen Molekülen und Ionen wirken **nicht-kovalente Wechselwirkungen**, die zwar schwächer als kovalente Bindungen sind, aber gemeinsam physikalische Eigenschaften (Siedepunkte, Löslichkeit) und biologische Strukturen (Proteinfaltung, DNA-Doppelhelix) bestimmen. Man unterscheidet drei Hauptklassen van-der-Waals-Kräfte sowie die besonders starken **Wasserstoffbrückenbindungen**. Im MedAT wird das Stärkeranking und die biologische Bedeutung regelmäßig geprüft.
+Warum siedet Wasser bei 100 °C, obwohl Schwefelwasserstoff (H₂S) mit viel höherer Molmasse schon bei −60 °C siedet? Und warum löst sich Kochsalz in Wasser, aber nicht in Benzin? Die Antwort liegt in den **Kräften zwischen Molekülen** — den sogenannten intermolekularen Wechselwirkungen. Sie sind viel schwächer als kovalente Bindungen, aber sie bestimmen Siedepunkte, Löslichkeit und biologische Strukturen wie Proteinfaltung und die DNA-Doppelhelix. Für den MedAT sind das Stärkeranking und die biologische Bedeutung dieser Kräfte prüfungsrelevant.
 
 ## Van-der-Waals-Kräfte
 
@@ -1203,7 +1251,18 @@ Unpolare Moleküle in Wasser erzwingen eine geordnete Wasserstruktur um sich her
 
 Die Wasserlöslichkeit von Pharmaka hängt direkt von intermolekularen Wechselwirkungen ab: **polare, H-Brücken-bildende Moleküle** (Paracetamol, viele Antibiotika) sind wasserlöslich und renal eliminierbar; **unpolare Moleküle** (Anästhetika, Steroide) akkumulieren in Lipidphasen und werden hepatisch metabolisiert. Lipinski-Regel (Rule of Five): Gute orale Bioverfügbarkeit, wenn ≤5 H-Brücken-Donoren, ≤10 Akzeptoren, M ≤500 g/mol, logP ≤5.
 
-Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydrophoben Wechselwirkungen und ionischen Kontakten — **Denaturierung** durch Hitze, Harnstoff oder pH-Änderung bricht dieses Netzwerk auf. Bei der **PCR** wird die DNA durch Erhitzen auf 94–98 °C (Denaturierungsschritt) vollständig aufgebrochen, weil alle H-Brücken zwischen den Basenpaaren überwunden werden, während die kovalenten Phosphodiesterbindungen intakt bleiben.`,
+Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydrophoben Wechselwirkungen und ionischen Kontakten — **Denaturierung** durch Hitze, Harnstoff oder pH-Änderung bricht dieses Netzwerk auf. Bei der **PCR** wird die DNA durch Erhitzen auf 94–98 °C (Denaturierungsschritt) vollständig aufgebrochen, weil alle H-Brücken zwischen den Basenpaaren überwunden werden, während die kovalenten Phosphodiesterbindungen intakt bleiben.
+
+## Zusammenfassung
+
+- **Van-der-Waals-Kräfte** (3 Typen): London (alle Moleküle, ∝ Molmasse), Keesom (Dipol–Dipol), Debye (Dipol–induzierter Dipol)
+- Stärkeranking: Ionenbindung > kovalent > **Wasserstoffbrücke** (10–40 kJ/mol) > Dipol–Dipol > London
+- **Wasserstoffbrücken**: X–H···Y mit X, Y ∈ {N, O, F}; Energie 10–40 kJ/mol; gerichtet, kooperativ
+- Wasser: 4 H-Brücken pro Molekül → hoher Siedepunkt (100 °C), hohe Verdampfungswärme (Thermoregulation)
+- **DNA**: A–T bildet 2 H-Brücken, G–C bildet 3 → GC-reiche DNA stabiler (höhere Schmelztemperatur)
+- Proteine: α-Helix und β-Faltblatt durch H-Brücken stabilisiert; Denaturierung bricht diese auf
+- **Hydrophober Effekt**: unpolare Gruppen lagern sich zusammen → Entropiegewinn; treibt Proteinfaltung und Membranbildung
+- Pharmaka: polar = wasserlöslich (renal eliminiert); unpolar = lipophil (hepatisch metabolisiert); Lipinski-Regel`,
 
       lernziele: [
         "Die drei Klassen der van-der-Waals-Kräfte (London, Keesom, Debye) und ihre Entstehungsmechanismen erklären können.",
@@ -1433,7 +1492,11 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
         "Hämolyse",
         "Infusion",
       ],
-      content: `## Löslichkeit und das Prinzip "Similia similibus solvuntur"
+      content: `## Einleitung
+
+Warum löst sich Zucker in Wasser, aber Öl nicht? Und warum schieben sich Erythrozyten zusammen, wenn man sie in zu konzentrierte Kochsalzlösung gibt? Die Antworten liegen in zwei zentralen Prinzipien: **Löslichkeit** (welche Stoffe sich gegenseitig lösen) und **Osmose** (wie Wasser durch Membranen fließt). Beide Konzepte sind medizinisch fundamental — von der Berechnung von Infusionslösungen bis zur Erklärung von Ödemen bei Hypoalbuminämie. Im MedAT kommen Osmolaritätsberechnungen und Löslichkeitsprodukte regelmäßig vor.
+
+## Löslichkeit und das Prinzip "Similia similibus solvuntur"
 
 **Polare Lösungsmittel** (z. B. Wasser, ε = 80) lösen **polare und ionische** Substanzen: Wasser hydratisiert Ionen durch Ausbildung von Hydrathüllen (Ion-Dipol-Wechselwirkung) und bildet H-Brücken mit polaren Molekülen (OH, NH, C=O). Die Hydratationsenthalpie kompensiert die Gitterenergie.
 
@@ -1487,7 +1550,18 @@ Eigenschaften, die nur von der **Teilchenzahl**, nicht von der Art des Gelösten
 3. **Dampfdruckerniedrigung** (Raoult)
 4. **Osmose**
 
-Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechnete Osmolalität: 2×[Na⁺] + [Glukose]/18 + [Harnstoff]/6 (Einheiten in mg/dL) bzw. vereinfacht 2×[Na] + [Glukose] + [Harnstoff] (Einheiten in mmol/L).`,
+Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechnete Osmolalität: 2×[Na⁺] + [Glukose]/18 + [Harnstoff]/6 (Einheiten in mg/dL) bzw. vereinfacht 2×[Na] + [Glukose] + [Harnstoff] (Einheiten in mmol/L).
+
+## Zusammenfassung
+
+- **"Similia similibus solvuntur"**: Polar löst polar (Wasser → Ionen, OH-Gruppen); unpolar löst unpolar (Hexan → Fette, Steroide)
+- **Amphiphile Moleküle** (Phospholipide, Detergenzien, Gallensäuren): polarer Kopf + unpolarer Schwanz → Mizellen in Wasser
+- **Löslichkeitsprodukt Ksp**: BaSO₄ (Ksp ~10⁻¹⁰, sicheres Röntgenkontrastmittel), Ca-Oxalat (Nierensteine)
+- **Osmose**: Wasserbewegung durch semipermeable Membran von niedriger zu hoher Teilchenkonzentration
+- Osmotischer Druck π = i · c · R · T; van't-Hoff-Faktor i: Glukose = 1, NaCl = 2
+- **Blutplasma-Osmolarität**: 285–295 mOsmol/L → hypoton (<270): Hämolyse; hyperton (>310): Erythrozyten schrumpfen
+- **Onkotischer Druck**: Albumin (~25 mmHg) hält Wasser im Gefäß; Hypoalbuminämie → Ödeme
+- Kolligative Eigenschaften (abhängig nur von Teilchenzahl): Siedepunktserhöhung, Gefrierpunktserniedrigung, Osmose`,
 
       lernziele: [
         'Das Löslichkeitsprinzip "Similia similibus solvuntur" auf polare, unpolare und amphiphile Substanzen anwenden können.',
@@ -1721,7 +1795,11 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
         "Emulsion",
         "HAES",
       ],
-      content: `## Die drei Aggregatzustände
+      content: `## Einleitung
+
+Warum siedet Wasser im Gebirge schneller? Warum fühlen sich Dampfverbrennungen schlimmer an als Verbrennungen mit gleichtemperiertem Wasser? Und was hat Blut mit einer Milch-Emulsion gemeinsam? Hinter all diesen Fragen steckt die Physik der **Aggregatzustände** und der **Kolloide**. Der Zustand eines Stoffs (fest, flüssig, gasförmig) bestimmt seine Eigenschaften — und Phasenübergänge sind immer mit Energieumsatz verbunden. Kolloide sind Mischsysteme auf der Grenze zwischen echter Lösung und Suspension — klinisch wichtig bei Infusionslösungen, Lungenembolien und Surfactant. Für den MedAT sind besonders Phasenübergänge (endo/exotherm), Siedepunktänderungen und kolloidale Systeme relevant.
+
+## Die drei Aggregatzustände
 
 Materie existiert in drei klassischen Aggregatzuständen, deren Unterschiede auf Teilchenbewegung und intermolekularen Kräften beruhen:
 
@@ -1783,7 +1861,18 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
 **Emulsionen in der Medizin:**
 - **Parenterale Ernährung:** Fettemulsionen (Sojaöl/Wasser mit Phospholipid-Emulgator) liefern Energie ohne enterale Resorption
 - **Lungenembolie durch Fettembolie:** Fetttröpfchen aus Knochenmarkschädigung (Fraktur) bilden Emulsion im Blut und können Lungenarterien verlegen
-- **Surfactant der Lunge:** Phospholipid-Gemisch (Dipalmitoylphosphatidylcholin, DPPC), das die Alveolen-Wasser-Grenzfläche stabilisiert und die Oberflächenspannung senkt → verhindert Alveolarkollaps; bei Frühgeborenen noch nicht ausgereift → **Atemnotsyndrom (RDS)**`,
+- **Surfactant der Lunge:** Phospholipid-Gemisch (Dipalmitoylphosphatidylcholin, DPPC), das die Alveolen-Wasser-Grenzfläche stabilisiert und die Oberflächenspannung senkt → verhindert Alveolarkollaps; bei Frühgeborenen noch nicht ausgereift → **Atemnotsyndrom (RDS)**
+
+## Zusammenfassung
+
+- **3 Aggregatzustände**: fest (Gitter, definiertes Volumen), flüssig (Nahordnung, fließfähig), gasförmig (keine Ordnung, kompressibel)
+- Übergänge zu "freierem" Zustand sind **endotherm** (Energie nötig); zu "geordnetem" Zustand sind **exotherm** (Energie frei)
+- **Sublimation** (fest→gas, z.B. CO₂): endotherm; Gefriertrocknung (Impfstoffkonservierung) nutzt dieses Prinzip
+- Dampfverbrennungen = schlimmer als Wasserverbrennungen gleicher Temp. → Kondensation gibt zusätzlich Verdampfungswärme ab (exotherm)
+- **Siedepunkt** = wenn Dampfdruck = äußerer Druck; im Gebirge (↓ Luftdruck) → niedrigerer Siedepunkt
+- **Kolloide**: Partikel 1–1000 nm; zwischen echter Lösung und Suspension; zeigen Brownsche Bewegung und Tyndall-Effekt
+- Kolloide: Typen — Sol, Emulsion, Gel, Aerosol; medizinisch: HAES, Albumin als Volumenersatz
+- **Surfactant** (Dipalmitoylphosphatidylcholin): senkt Alveolen-Oberflächenspannung; Frühgeborene: fehlend → Atemnotsyndrom (RDS)`,
 
       lernziele: [
         "Die drei Aggregatzustände und ihre Eigenschaften kennen sowie alle Phasenübergänge mit Wärmetönung (endo-/exotherm) benennen können.",
@@ -2032,7 +2121,11 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
         "Metallcharakter",
         "Valenzelektron",
       ],
-      content: `## Geschichte und Entwicklung des Periodensystems
+      content: `## Einleitung
+
+Das **Periodensystem der Elemente (PSE)** ist der "Stadtplan der Chemie": Mit einem Blick sieht man, wie reaktiv ein Element ist, wie viele Bindungspartner es eingehen kann und ob es Metall, Nichtmetall oder Halbmetall ist. Die Elemente sind nach ihrer **Ordnungszahl** (Protonenzahl) angeordnet und wiederholen dabei ihre Eigenschaften in regelmäßigen Abständen — deshalb heißen die horizontalen Zeilen "Perioden". Elemente in derselben Spalte (Gruppe) haben die gleiche Anzahl an Valenzelektronen und daher ähnliche chemische Eigenschaften. Für den MedAT sind PSE-Trends, Gruppen-Merkmale und der Zusammenhang zwischen Position und Elektronenkonfiguration prüfungsrelevant.
+
+## Geschichte und Entwicklung des Periodensystems
 
 Das Periodensystem der Elemente (PSE) ist eines der fundamentalsten Ordnungssysteme der Naturwissenschaften. Im Jahr 1869 veröffentlichten **Dmitri Iwanowitsch Mendelejew** (Russland) und **Lothar Meyer** (Deutschland) unabhaengig Tabellen, die Elemente nach Atommasse anordneten und Periodizitaeten der Eigenschaften zeigten. Mendelejews geniale Leistung lag darin, Luecken fuer noch unentdeckte Elemente vorherzusagen: Eka-Aluminium (Gallium, 1875), Eka-Bor (Scandium, 1879), Eka-Silicium (Germanium, 1886) stimmten fast exakt mit seinen Vorhersagen ueberein.
 
@@ -2088,7 +2181,18 @@ Der **Metallcharakter** nimmt zu: in einer Periode von rechts nach links und in 
 - **Chrom (Z=24)**: Erwartet [Ar] 3d⁴ 4s², tatsaechlich **[Ar] 3d⁵ 4s¹** - halbgefuelltes d⁵ (maximale Austauschenergie nach Hund)
 - **Kupfer (Z=29)**: Erwartet [Ar] 3d⁹ 4s², tatsaechlich **[Ar] 3d¹⁰ 4s¹** - vollgefuelltes d¹⁰ ist besonders stabil
 
-Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insulinwirkung). Chrom(VI): stark karzinogen.`,
+Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insulinwirkung). Chrom(VI): stark karzinogen.
+
+## Zusammenfassung
+
+- **PSE**: 7 Perioden (Zeilen, Hauptquantenzahl n), 18 Gruppen (Spalten, Valenzelektronen), 4 Blöcke (s, p, d, f)
+- Perioden-Längen: 2 – 8 – 8 – 18 – 18 – 32 – 32 (Kapazität der Unterschalen)
+- **s-Block** (Gr. 1–2): Alkali- und Erdalkalimetalle; **p-Block** (Gr. 13–18): Nichtmetalle + Halbmetalle + Edelgase
+- **d-Block** (Gr. 3–12): Übergangsmetalle; **f-Block**: Lanthanoide/Actinoide (ausgelagert)
+- Gruppenposition im p-Block: Gruppennummer = 10 + Valenzelektronenzahl (z.B. Gr. 17 = 7 VE = Halogene)
+- **Metallcharakter**: in Periode von links→rechts abnehmend; in Gruppe von oben→unten zunehmend
+- Halbmetalle (Metalloide) entlang der Treppe: B, Si, Ge, As, Sb, Te, At
+- **Mendelejew** (1869): ordnete nach Atommasse, sagte Eigenschaften unbekannter Elemente vorher; **Moseley** (1913): Ordnung nach Kernladungszahl Z`,
 
       lernziele: [
         "Den Aufbau des PSE mit Perioden, Gruppen und Bloecken erklaeren und den Zusammenhang zur Quantenzahlsystematik herstellen",
@@ -2315,7 +2419,11 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
         "Pairing Penalty",
         "Fluorierte Arzneistoffe",
       ],
-      content: `## Effektive Kernladung: die treibende Kraft aller Trends
+      content: `## Einleitung
+
+Warum ist Fluor so viel reaktiver als Iod? Warum werden Metallatome zu Kationen und Nichtmetallatome zu Anionen? All diese Trends im PSE haben eine gemeinsame Ursache: die **effektive Kernladung** — also wie stark der Kern die Valenzelektronen tatsächlich anzieht, abzüglich der Abschirmung durch innere Elektronen. Je größer die effektive Kernladung, desto kleiner der Atomradius, desto höher die Ionisierungsenergie und Elektronegativität. Diese Trends bestimmen die gesamte Chemie eines Elements. Für den MedAT sind IE-Ausnahmen, EN-Werte, Atomradien und Bindungscharakter häufige Themen.
+
+## Effektive Kernladung: die treibende Kraft aller Trends
 
 Alle periodischen Trends lassen sich auf die **effektive Kernladung** (Z_eff) zurückführen. Ein Valenzelektron spürt nicht die volle Kernladung Z, weil innere Elektronen die Kernladung teilweise abschirmen:
 
@@ -2367,7 +2475,17 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
 **ΔEN und Bindungscharakter**:
 - ΔEN < 0,4: unpolare kovalente Bindung (H₂, Cl₂, C-C)
 - 0,4 ≤ ΔEN < 1,7: polare kovalente Bindung (H₂O: ΔEN=1,24; HCl: ΔEN=0,96)
-- ΔEN ≥ 1,7: überwiegend ionisch (NaCl: ΔEN=2,23; MgO: ΔEN=2,13)`,
+- ΔEN ≥ 1,7: überwiegend ionisch (NaCl: ΔEN=2,23; MgO: ΔEN=2,13)
+
+## Zusammenfassung
+
+- **Effektive Kernladung Z_eff** = Z − σ; steigt in Periode (links→rechts), bleibt in Gruppe ähnlich
+- **Atomradius**: in Periode ↓ (Z_eff steigt); in Gruppe ↑ (neue Schalen); Kationen < Neutralatom < Anionen
+- **Ionisierungsenergie IE₁**: in Periode ↑; in Gruppe ↓; Ausnahmen: IE(B) < IE(Be) (2p höher als 2s); IE(O) < IE(N) (Pairing Penalty)
+- **Elektronegativität (EN)** nach Pauling: F(4,0) > O(3,44) > Cl(3,16) > N(3,04) > Br(2,96) > S(2,58) > C(2,55)
+- **ΔEN → Bindungscharakter**: <0,4 unpolar; 0,4–1,7 polar kovalent; ≥1,7 ionisch
+- **C–F-Bindung** (ΔEN=1,45): stark polar, metabolisch stabil → fluorierte Arzneistoffe (Ciprofloxacin, 5-FU, Fluoxetin) haben längere Halbwertszeiten
+- Successive IE: großer Sprung nach n IE → n Valenzelektronen → Gruppen-Nummer bestimmen`,
 
       lernziele: [
         "Das Konzept der effektiven Kernladung (Z_eff) als gemeinsame Ursache aller periodischen Trends erklären",
@@ -2602,7 +2720,11 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
         "Hämoglobin",
         "Schilddrüse",
       ],
-      content: `## Alkalimetalle (Gruppe 1): Die reaktivsten Metalle
+      content: `## Einleitung
+
+Das Periodensystem wäre nur eine Tabelle mit Zahlen, wenn die Elemente nicht in charakteristischen Gruppen aufträten. Alkalimetalle (z.B. Na, K) reagieren heftig mit Wasser und sind im Körper unverzichtbare Elektrolyte. Halogene (F, Cl, I) sind aggressive Oxidationsmittel — und trotzdem essenziell für Schilddrüsenhormone und Desinfektion. Edelgase (He, Ar, Xe) sind inert — und doch in der Medizin nützlich. Übergangsmetalle wie Eisen, Zink und Kupfer sind mit ihren variablen Oxidationsstufen die "Motoren" der Biochemie. Für den MedAT sind die klinischen Folgen von Elektrolytstörungen und Spurenelementmängeln besonders wichtig.
+
+## Alkalimetalle (Gruppe 1): Die reaktivsten Metalle
 
 **Elemente**: Li (Z=3), Na (Z=11), K (Z=19), Rb (Z=37), Cs (Z=55), Fr (Z=87).
 
@@ -2664,7 +2786,18 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
 - **Co**: Zentralatom in Vitamin B12 (Co³⁺ im Corrin-Ring). Methylcobalamin (Methionin-Synthase: Homocystein → Methionin), Adenosylcobalamin (Methylmalonyl-CoA-Mutase). Mangel → megaloblastäre Anämie + funikuläre Myelose.
 - **Mn**: Mn-SOD (mitochondriale Superoxiddismutase, SOD2). Arginase (Harnstoffzyklus). Manganismus (Mn-Toxizität) → Parkinson-ähnliches Syndrom.
 - **Mo**: Xanthinoxidase (Hypoxanthin → Xanthin → Harnsäure). Gicht-Therapie: Allopurinol hemmt Xanthinoxidase.
-- **Pt**: Cisplatin, Carboplatin (Pt(II)-Komplexe) quervernetzen DNA (Guanin-Guanin intrastrand crosslinks) → Apoptose. Wichtige Zytostatika bei Hoden-, Ovarial-, Lungen-, Blasenkarzinomen.`,
+- **Pt**: Cisplatin, Carboplatin (Pt(II)-Komplexe) quervernetzen DNA (Guanin-Guanin intrastrand crosslinks) → Apoptose. Wichtige Zytostatika bei Hoden-, Ovarial-, Lungen-, Blasenkarzinomen.
+
+## Zusammenfassung
+
+- **Alkalimetalle** (Gr. 1): 1 VE, bilden +1-Ionen; **Na⁺** Hauptkation extrazellulär (140 mmol/L), **K⁺** intrazellulär (~150 mmol/L); Hypo-/Hyperkaliämie → Herzrhythmusstörungen
+- **Erdalkalimetalle** (Gr. 2): 2 VE, bilden +2-Ionen; **Ca²⁺** für Muskelkontraktion, Blutgerinnung, Knochen (99 % als Hydroxyapatit); **Mg²⁺** Kofaktor von >300 Enzymen
+- **Halogene** (Gr. 17): 7 VE, bilden −1-Ionen; hohe Elektronegativität und Oxidationskraft; Reaktivität F₂ > Cl₂ > Br₂ > I₂
+- **Jod (I)**: essenziell für Schilddrüsenhormone T3/T4; ¹³¹I für Schilddrüsentherapie; Jod-Kontrastmittel; Iodmangel → Struma
+- **Fluor (F)**: Fluorapatit (Karieschutz); fluorierte Arzneistoffe metabolisch stabil (C–F-Bindung stabil gegenüber CYP450)
+- **Edelgase** (Gr. 18): chemisch inert (vollständiges Oktett); Xe als Narkotikum; Rn → Lungenkrebs-Risiko
+- **Übergangsmetalle**: variable Oxidationsstufen → Katalyse; Fe (Hämoglobin, Zytochrome), Cu (Komplex IV), Zn (>300 Enzyme), Co (Vitamin B12), Pt (Cisplatin)
+- Haupt-Mengenelemente: **CHNOPS** (C, H, N, O, P, S — Grundbausteine des Lebens)`,
 
       lernziele: [
         "Die wichtigen Elementgruppen (Alkalimetalle, Erdalkalimetalle, Halogene, Edelgase, Übergangsmetalle) mit charakteristischen Eigenschaften beschreiben",
