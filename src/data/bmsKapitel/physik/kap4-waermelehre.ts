@@ -27,7 +27,11 @@ export const physKap4: Kapitel = {
         "Ausdehnungskoeffizient",
         "Absoluter Nullpunkt",
       ],
-      content: `# Temperatur und Wärme
+      content: `## Einleitung
+
+Fieber über 40 °C ist lebensgefährlich — aber warum? Hypothermie unter 35 °C ebenfalls. Die Körperkerntemperatur ist ein kritischer Vitalparameter, der physiologische Prozesse steuert. Dahinter steckt der Begriff **Temperatur**: ein Maß für die mittlere kinetische Energie der Teilchen. Wärme fließt immer von heiß nach kalt — bis zum Gleichgewicht. Für den MedAT sind Temperaturskalen (Celsius/Kelvin/Fahrenheit), spezifische Wärmekapazität, thermische Ausdehnung und Körpertemperaturregulation prüfungsrelevant.
+
+# Temperatur und Wärme
 
 ## Temperaturskalen
 
@@ -115,7 +119,16 @@ Patient (70 kg, c ≈ 3500 J/(kg·K)) von 34 °C auf 37 °C erwärmen (Hypotherm
 Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss der Körper durch Metabolismus, Wärmedecken oder Infusionserwärmer aufbringen.
 
 **Beispiel 5 — Verdunstungskühlung:**
-Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der Haut entzogen. Bei 1 Liter Schweiss = 1000 g: Q = 1000 · 2400 = 2,4 MJ. Das reicht, um den Metabolismus einer Stunde Sport (~600 W × 3600 s = 2,16 MJ) fast vollständig abzuleiten.`,
+Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der Haut entzogen. Bei 1 Liter Schweiss = 1000 g: Q = 1000 · 2400 = 2,4 MJ. Das reicht, um den Metabolismus einer Stunde Sport (~600 W × 3600 s = 2,16 MJ) fast vollständig abzuleiten.
+
+## Zusammenfassung
+
+- **Temperaturskalen**: T[K] = T[°C] + 273,15; T[°F] = T[°C] · 9/5 + 32; 0 K = absoluter Nullpunkt
+- **Wärmemenge**: Q = m·c·ΔT; c(Wasser) = 4190 J/(kg·K) — höchste natürliche spez. Wärmekapazität
+- **Wärmekapazität des Körpers**: c ≈ 3500 J/(kg·K); Fieber 37→40 °C bei 70 kg = ~735 kJ
+- **Thermische Ausdehnung**: ΔL = α·L₀·ΔT; ΔV = γ·V₀·ΔT (γ ≈ 3α für isotrope Stoffe)
+- **Mischungstemperatur**: T_m = (m₁·c₁·T₁ + m₂·c₂·T₂) / (m₁·c₁ + m₂·c₂)
+- **Klinisch**: Fieber = T > 38 °C; Hypothermie = T < 35 °C; Schwitzen (Verdunstungskühlung) ≈ 2400 J/g`,
 
       lernziele: [
         "Die drei Temperaturskalen (Celsius, Kelvin, Fahrenheit) ineinanderumrechnen können",
@@ -315,7 +328,11 @@ Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der 
         "Wiensches Verschiebungsgesetz",
         "Gegenstrom-Wärmeaustausch",
       ],
-      content: `# Wärmeübertragung
+      content: `## Einleitung
+
+Warum wärmt eine Wollmütze, obwohl Wolle keine Wärme produziert? Warum kühlt Schweiß die Haut? Warum wird Infrarotstrahlung zur Tiefenwärme in der Physikotherapie eingesetzt? Wärmeübertragung geschieht auf drei Wegen — **Konduktion, Konvektion und Strahlung** — und alle drei sind im Körper gleichzeitig aktiv. Das Fourier-Gesetz beschreibt den Wärmefluss durch Kleidung und Körpergewebe. Für den MedAT sind Wärmeleitfähigkeit, Fourier-Gesetz, Strahlung (Stefan-Boltzmann), Gegenstrom-Wärmeaustausch und klinische Wärmetherapie prüfungsrelevant.
+
+# Wärmeübertragung
 
 Wärme kann auf drei grundlegend verschiedene Arten übertragen werden: Wärmeleitung (Konduktion), Konvektion und Wärmestrahlung. Im biologischen System treten alle drei gleichzeitig auf.
 
@@ -403,7 +420,16 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
 
 **Wärmflasche vs. Rotlichtlampe:** Wärmflasche überträgt Wärme durch Konduktion (direkter Kontakt, λ_Wasser = 0,6 W/(m·K)) und Konvektion (Wasserströmung im Inneren). Rotlichtlampe überträgt durch Infrarotstrahlung (berührungslos, tiefere Gewebepenetration bei λ = 780–1400 nm). Die Infrarotlampe hat den Vorteil, dass sie Wärme direkt im Gewebe deponiert, ohne die Hautoberfläche zuerst maximal zu erwärmen — geringeres Verbrennungsrisiko.
 
-**Gegenstrom-Wärmeaustausch:** In den Extremitäten verlaufen Arterien und Venen eng beieinander. Das warme arterielle Blut gibt Wärme an das kühle venöse Blut ab, bevor es die Peripherie erreicht. Dies minimiert den Wärmeverlust über die Akren bei Kälte und ist ein wichtiger Überlebensmechanismus. Das gleiche Prinzip wird in der Dialyse (Bluterwärmung) und bei Herz-Lungen-Maschinen eingesetzt.`,
+**Gegenstrom-Wärmeaustausch:** In den Extremitäten verlaufen Arterien und Venen eng beieinander. Das warme arterielle Blut gibt Wärme an das kühle venöse Blut ab, bevor es die Peripherie erreicht. Dies minimiert den Wärmeverlust über die Akren bei Kälte und ist ein wichtiger Überlebensmechanismus. Das gleiche Prinzip wird in der Dialyse (Bluterwärmung) und bei Herz-Lungen-Maschinen eingesetzt.
+
+## Zusammenfassung
+
+- **Konduktion**: Q̇ = λ·A·ΔT/d [W]; λ(Luft) = 0,025, λ(Wasser) = 0,6, λ(Fett) = 0,2, λ(Knochen) = 0,3 W/(m·K)
+- **Konvektion**: erzwungen (Wind, Blutfluss) effektiver als freie; Kühlung durch Luftbewegung am Körper
+- **Strahlung**: P = ε·σ·A·T⁴ (Stefan-Boltzmann); Wien: λ_max = 2897/T; Körper (37 °C = 310 K) strahlt bei ~9,4 µm (Infrarot)
+- **Wärmeleitfähigkeit Haut-Fett**: schlechte Wärmeleiter → thermische Isolation; Adipositas → schlechtere Wärmeabgabe
+- **Gegenstrom-Wärmeaustausch**: Arterien-Venen-Bündel in Extremitäten; reduziert Wärmeverlust; Prinzip auch in Dialyse/HLM
+- **Klinisch**: therapeutische Hypothermie (32–34 °C); Winterjacke 50× weniger Wärmeverlust als T-Shirt`,
 
       lernziele: [
         "Das Fouriersche Gesetz der Wärmeleitung anwenden und die Bedeutung der Wärmeleitfähigkeit λ erklären",
@@ -591,7 +617,11 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
         "ATP-Synthese",
         "Perpetuum mobile",
       ],
-      content: `# Thermodynamische Hauptsätze
+      content: `## Einleitung
+
+Kein Perpetuum mobile, kein 100-prozentiger Wirkungsgrad, kein spontaner Wärmefluss von kalt nach warm — das sind die Aussagen der Thermodynamik. Die Hauptsätze stecken das Mögliche ab. Für Mediziner: ATP-Synthese ist ein Energieumwandlungsprozess (1. Hauptsatz), Entropie erklärt, warum biologische Ordnung Energieinput braucht (2. Hauptsatz), und Körperwärme erklärt sich aus dem Energieerhaltungssatz. Für den MedAT sind 1. bis 3. Hauptsatz, ΔU = Q + W, Carnot-Wirkungsgrad und Entropie prüfungsrelevant.
+
+# Thermodynamische Hauptsätze
 
 Die vier Hauptsätze der Thermodynamik beschreiben fundamentale Gesetzmäßigkeiten, die für alle physikalischen, chemischen und biologischen Prozesse gelten.
 
@@ -681,7 +711,16 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
 
 **Maligne Hyperthermie:** Eine pharmakogenetische Störung, bei der volatile Anästhetika (z. B. Halothan) und Succinylcholin eine unkontrollierte Calciumfreisetzung im Muskel auslösen → maximaler Metabolismus → Körpertemperatur steigt auf >40 °C in Minuten. Thermodynamisch betrachtet: Die metabolische Wärmeproduktion übersteigt die Wärmeabgabekapazität (Strahlung + Konvektion + Verdunstung) massiv. Therapie: Dantrolen (blockiert Ryanodinrezeptor) + aggressive Kühlung.
 
-**Kryotherapie und Kryochirurgie:** Kontrolliertes Einfrieren von Gewebe (−20 bis −196 °C mit flüssigem Stickstoff). Der Phasenübergang Wasser→Eis in den Zellen zerstört diese durch Eiskristallbildung und osmotischen Stress. Nutzung: Warzenentfernung, Tumortherapie (Leber, Prostata). Thermodynamisch: Dem Gewebe wird die Schmelzwärme entzogen (Q = m · L_f), die Temperatur bleibt während des Phasenübergangs konstant bei 0 °C.`,
+**Kryotherapie und Kryochirurgie:** Kontrolliertes Einfrieren von Gewebe (−20 bis −196 °C mit flüssigem Stickstoff). Der Phasenübergang Wasser→Eis in den Zellen zerstört diese durch Eiskristallbildung und osmotischen Stress. Nutzung: Warzenentfernung, Tumortherapie (Leber, Prostata). Thermodynamisch: Dem Gewebe wird die Schmelzwärme entzogen (Q = m · L_f), die Temperatur bleibt während des Phasenübergangs konstant bei 0 °C.
+
+## Zusammenfassung
+
+- **0. Hauptsatz**: Thermisches Gleichgewicht ist transitiv — Grundlage der Temperaturmessung
+- **1. Hauptsatz**: ΔU = Q + W (Energieerhaltung); Q > 0 = Wärme zugeführt, W > 0 = Arbeit am System
+- **Zustandsänderungen**: isochor (V=const, W=0), isobar (p=const), isotherm (T=const, ΔU=0), adiabatisch (Q=0)
+- **2. Hauptsatz**: Wärme fließt nie spontan von kalt nach warm; Entropie S nimmt in abgeschl. Systemen zu; kein Perpetuum mobile 2. Art
+- **Carnot-Wirkungsgrad**: η_max = 1 − T_kalt/T_warm; Körper (~37 °C) = keine Wärmekraftmaschine
+- **3. Hauptsatz**: S → 0 bei T → 0 K; absoluter Nullpunkt unerreichbar`,
 
       lernziele: [
         "Die vier thermodynamischen Hauptsätze mit Formeln und Formulierungen wiedergeben",
@@ -846,7 +885,11 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
         "Boyle-Mariotte",
         "Autoklav",
       ],
-      content: `# Phasenübergänge und Ideales Gas
+      content: `## Einleitung
+
+Der Autoklav sterilisiert bei 121 °C / 2 bar — möglich, weil Druck den Siedepunkt erhöht. Stickstoffnarkose beim Tauchen entsteht, weil Gase unter Druck mehr im Blut lösen (Henry-Gesetz). Blut-Sauerstoffsättigung hängt vom Partialdruck ab. Hinter all dem stecken das ideale Gasgesetz und die Physik der Phasenübergänge. Für den MedAT sind ideales Gasgesetz (pV = nRT), Boyle, Gay-Lussac, Charles, Phasendiagramm, Latentwärme und medizinische Anwendungen (Autoklav, Tauchmedizin) prüfungsrelevant.
+
+# Phasenübergänge und Ideales Gas
 
 ## Ideales Gasgesetz
 
@@ -934,7 +977,16 @@ V₂ = V₁ × T₂/T₁ = 500 × 310/293 = 529 mL. Die eingeatmete Luft expandi
 
 **Pulsoxymetrie und Gaspartialdrücke:** Die O₂-Sättigung des Hämoglobins hängt vom pO₂ ab (Sauerstoff-Bindungskurve). Nach dem Henry-Gesetz bestimmt der pO₂ auch die physikalisch gelöste O₂-Menge im Plasma (≈ 0,3 mL O₂ pro 100 mL Blut bei pO₂ = 100 mmHg). Bei hyperbarer Therapie (3 bar reiner O₂) steigt der physikalisch gelöste Anteil auf ≈ 6 mL/100 mL — genug, um Gewebe auch ohne Hämoglobin zu versorgen.
 
-**Sublimation in der Medizin (Gefriertrocknung):** Impfstoffe und Blutplasma werden durch Lyophilisation haltbar gemacht: Einfrieren → Druck senken unter den Tripelpunkt → Eis sublimiert direkt zu Dampf. Das Produkt behält seine Struktur (Proteine bleiben funktionsfähig) und ist bei Raumtemperatur lagerbar. Beim Rekonstituieren wird Wasser zugefügt — die ursprüngliche Lösung entsteht wieder.`,
+**Sublimation in der Medizin (Gefriertrocknung):** Impfstoffe und Blutplasma werden durch Lyophilisation haltbar gemacht: Einfrieren → Druck senken unter den Tripelpunkt → Eis sublimiert direkt zu Dampf. Das Produkt behält seine Struktur (Proteine bleiben funktionsfähig) und ist bei Raumtemperatur lagerbar. Beim Rekonstituieren wird Wasser zugefügt — die ursprüngliche Lösung entsteht wieder.
+
+## Zusammenfassung
+
+- **Ideales Gasgesetz**: pV = nRT; R = 8,314 J/(mol·K); Sonderfälle: Boyle (T=const), Gay-Lussac (V=const), Charles (p=const)
+- **Latentwärme**: Q = m·L; während Phasenübergang konstante Temperatur; L_Schmelz(Eis) = 334 kJ/kg, L_Verdampf(Wasser) = 2260 kJ/kg
+- **Phasendiagramm**: Tripelpunkt (alle 3 Phasen koexistieren); kritischer Punkt (flüssig und gasförmig ununterscheidbar)
+- **Henry-Gesetz**: c(gelöst) = k_H·p; N₂-Lösung im Blut bei 4 bar (30 m Tiefe) → 4× erhöht → Dekompressionspflicht
+- **Autoklav**: 121 °C bei 2 bar (Siedepunkt Wasser erhöht); 134 °C bei 3 bar für Prionen
+- **Gefriertrocknung (Lyophilisation)**: Unter Tripelpunkt-Druck → Eis sublimiert → Protein-/Impfstofferhalt bei RT`,
 
       lernziele: [
         "Die allgemeine Zustandsgleichung des idealen Gases pV = nRT anwenden und Sonderfälle ableiten",
