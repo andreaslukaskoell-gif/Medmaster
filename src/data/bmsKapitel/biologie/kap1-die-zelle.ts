@@ -995,9 +995,10 @@ Der Zellkern ist die Steuerzentrale der eukaryotischen Zelle — er enthält das
 Der Zellkern wurde 1831 von Robert Brown beschrieben. Die funktionelle Bedeutung als "Steuerzentrale" wurde erst im 20. Jahrhundert durch Kernübertragungsexperimente bewiesen: Ein enukleiertes Ei, dem ein fremder Kern eingesetzt wird, entwickelt sich gemäß dem transplantierten Kern (Gurdon, Nobelpreis 2012). Die Entdeckung der Kernporen als selektive Tore wurde durch Elektronenmikroskopie in den 1950er Jahren ermöglicht. Die Entdeckung von Laminen und ihre Rolle bei der Progeria (Hutchinson-Gilford-Syndrom) zeigte die medizinische Relevanz der Kernstruktur. HIV und andere Viren nutzen den Kernporenkomplex aktiv für den Import viraler DNA – ein therapeutisches Angriffsziel.
 
 **Lernziele:**
-- Die wichtigsten Zellorganellen (Mitochondrien, ER, Golgi, Lysosomen, Peroxisomen) mit Struktur und Funktion beschreiben
-- Endosymbiontenhypothese für Mitochondrien und Chloroplasten erläutern
-- Klinische Beispiele für Organell-Defekte (Mitochondriopathien, Speicherkrankheiten) nennen
+- Die Struktur des Zellkerns (Kernhülle, Kernporen, Kernlamina, Nucleolus) vollständig beschreiben
+- Chromatin-Kompaktierung hierarchisch erklären und Euchromatin/Heterochromatin unterscheiden
+- Den Import/Export durch Kernporen (NLS, NES, Importine, Ran-GTPase) beschreiben
+- Die Funktion des Nucleolus und klinische Relevanz von Kernstrukturen (Progeria, HIV) erläutern
 
 ---
 
