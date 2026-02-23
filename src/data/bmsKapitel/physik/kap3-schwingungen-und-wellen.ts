@@ -31,8 +31,6 @@ export const physKap3: Kapitel = {
 
 Pendel in einer Standuhr, Stimmgabel beim Stimmen eines Instruments, Herzschlag im EKG — all das sind periodische Schwingungen. Das Grundmodell dahinter ist die **harmonische Schwingung**: eine hin-und-hergehende Bewegung, bei der die Rückstellkraft proportional zur Auslenkung ist. Dieses Prinzip steckt auch im MRT (Protonenresonanz), in Ultraschallköpfen (Piezokristall) und im Innenohr. Für den MedAT sind Amplitude, Frequenz, Periodendauer, Kreisfrequenz, Resonanz und Dämpfung prüfungsrelevant.
 
-# Harmonische Schwingungen
-
 Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschreibt die zeitliche Auslenkung eines Körpers um eine Gleichgewichtslage. Die Rückstellkraft ist dabei stets proportional zur Auslenkung und dieser entgegengerichtet: **F = −k·x** (Hooke'sches Gesetz). Das mathematische Modell ist eine Sinus- oder Kosinusfunktion:
 
 **x(t) = A · cos(ωt + φ₀)**
@@ -138,6 +136,28 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
 
 **Aperiodischer Grenzfall in der Medizin:** Die Federung eines Krankenwagens ist so abgestimmt, dass sie im aperiodischen Grenzfall schwingt — der schnellste Ausgleich ohne Nachschwingen, um den Patienten nicht zusätzlich zu belasten.
 
+---
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Wie ändert sich T beim Fadenpendel, wenn die Länge vervierfacht wird?" → T verdoppelt sich (T ∝ √l; √4 = 2)
+- "Bei welcher Auslenkung sind E_kin und E_pot gleich?" → x = A/√2 ≈ 0,707·A
+- "Wovon hängt die Periodendauer des Fadenpendels ab?" → nur von l und g (nicht von Masse oder Amplitude)
+- "Was ist Resonanz?" → Anregungsfrequenz = Eigenfrequenz → maximale Amplitudenzunahme
+
+**Achtung — typische Verwechslungen:**
+- ω = 2πf (Kreisfrequenz, rad/s) ≠ f = 1/T (normale Frequenz, Hz) — beides beschreibt die Schwingungsrate, aber in verschiedenen Einheiten
+- E_ges ∝ A² (nicht ∝ A): doppelte Amplitude → **viermal** mehr Energie
+- Fadenpendel: T unabhängig von Masse; Federpendel: T abhängig von Masse — aber beide zeigen Isochronie
+- Aperiodischer Grenzfall (δ = ω₀, schnellste Rückkehr ohne Überschwingen) ≠ Kriechfall (δ > ω₀, schleichende Rückkehr)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Fadenpendel: T = 2π√(l/g); l = 1 m auf Erde → T ≈ 2,0 s; auf Mond (g/6) → T ≈ 4,9 s
+- Federpendel: T = 2π√(m/k); E_ges = ½·k·A²; v_max = A·ω in der Ruhelage
+- Isochronie gilt nur für kleine Auslenkungen (< 15°; Fehler bei 30° bereits ~2 %)
+- MRT-Resonanzfrequenz: f = γ·B₀; ¹H bei 1,5 T → f ≈ 64 MHz (Larmorfrequenz)
+
+---
 ## Zusammenfassung
 
 - **Harmonische Schwingung**: x(t) = A·cos(ωt + φ₀); Rückstellkraft F = −k·x (Hooke)
@@ -338,8 +358,6 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
 
 Schall, Licht, Ultraschall, Röntgen, Radiowellen im MRT — all das sind Wellen. Sie transportieren Energie durch den Raum, ohne dabei Materie mitzubewegen. Das Grundprinzip: Ein Schwingender regt seinen Nachbarn an, dieser seinen Nachbarn — so pflanzt sich die Störung fort. Ob Schall im Körper oder elektromagnetische Strahlung in der Bildgebung: Die Wellengleichung c = f·λ und die Unterscheidung von Transversal- und Longitudinalwellen sind Schlüsselkonzepte. Für den MedAT sind Wellengleichung, Wellentypen, Schallgeschwindigkeit, elektromagnetisches Spektrum und akustische Impedanz prüfungsrelevant.
 
-# Wellen — Grundgrößen und Typen
-
 Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen transportieren **Energie, aber keine Materie** – die Teilchen des Mediums führen nur lokale Schwingungen aus, während die Störung weiterwandert. Dieser fundamentale Unterschied zu Teilchen ist entscheidend: Ein Korken auf einer Wasserwelle bewegt sich vertikal auf und ab, wandert aber nicht horizontal mit der Welle mit.
 
 ## Grundgrößen der Welle
@@ -442,6 +460,28 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
 
 **Temperaturabhängigkeit im Alltag:** In einem Konzertsaal erwärmt das Publikum die Luft. Die Schallgeschwindigkeit steigt dadurch leicht an – ein Grund, warum Instrumente vor und nach dem Konzert nachgestimmt werden müssen.
 
+---
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was ändert sich beim Medienwechsel einer Welle?" → λ ändert sich, f bleibt gleich (c ist mediumspezifisch)
+- "Welche Wellenlänge hat Ultraschall (5 MHz) in Gewebe (c = 1540 m/s)?" → λ = 1540/5×10⁶ ≈ 0,3 mm
+- "Können Transversalwellen in Flüssigkeiten existieren?" → Nein, nur Longitudinalwellen (keine Scherkräfte)
+- "Warum braucht man Ultraschallgel?" → Luft-Haut-Impedanzsprung eliminieren (R ≈ 99,9 % ohne Gel)
+
+**Achtung — typische Verwechslungen:**
+- c gehört zum **Medium** (nicht zur Quelle); f gehört zur **Quelle** (nicht zum Medium)
+- Schall = Longitudinalwelle; Licht = Transversalwelle — nicht umgekehrt!
+- Höhere US-Frequenz → bessere Auflösung, **aber** geringere Eindringtiefe (Dämpfung ∝ f²)
+- Schall breitet sich in Festkörpern am schnellsten aus; im Vakuum existiert er gar nicht
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- c_Luft ≈ 340 m/s; c_Wasser ≈ 1480 m/s; c_Gewebe ≈ 1540 m/s; c_Licht = 3×10⁸ m/s
+- Hörbereich: 20 Hz – 20 kHz; Ultraschall > 20 kHz; diagnostischer Ultraschall: 2–20 MHz
+- Akustische Impedanz: Z = ρ·c; Reflexionskoeffizient: R = ((Z₂−Z₁)/(Z₂+Z₁))²
+- EM-Spektrum (niedrig → hoch): Radio → Mikrowelle → IR → Sichtbar → UV → Röntgen → Gamma
+
+---
 ## Zusammenfassung
 
 - **Wellengleichung**: c = f·λ; c hängt vom Medium ab (nicht von f oder λ)
@@ -650,8 +690,6 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
 
 Warum klingt ein Krankenwagen höher, wenn er sich nähert? Warum leitet eine Glasfaser Licht um die Ecke? Warum entstehen Geisterbilder im Ultraschall? Hinter all dem stecken Wellenphänomene: Doppler-Effekt, Totalreflexion und Interferenz. Diese Phänomene sind keine Theorie-Kuriosität — sie bilden die physikalische Grundlage für Doppler-Sonographie, Endoskopie und Pulsoximetrie. Für den MedAT sind Interferenz, Doppler-Effekt (Anwendung in der Sonographie), Reflexion/Brechung, Totalreflexion und Polarisation prüfungsrelevant.
 
-# Wellenphänomene
-
 Wellen zeigen eine Reihe charakteristischer Phänomene, die sie von Teilchen unterscheiden: Interferenz, Beugung, Reflexion, Brechung und den Doppler-Effekt. Diese Phänomene sind in der modernen Medizintechnik allgegenwärtig und bilden die physikalische Grundlage für Ultraschall, MRT, Endoskopie und viele weitere diagnostische Verfahren.
 
 ## Überlagerung und Interferenz
@@ -764,6 +802,28 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
 
 **Farbdoppler-Sonographie:** In der klinischen Praxis wird der Doppler-Effekt farbkodiert dargestellt: Rot = Fluss auf den Schallkopf zu, Blau = Fluss vom Schallkopf weg. Turbulenzen (z. B. an Stenosen) erscheinen als Farbmosaik. Diese Methode ist essenziell in der Kardiologie und Gefässchirurgie.
 
+---
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Wann ist Interferenz konstruktiv?" → Gangunterschied Δs = n·λ (ganzzahlige Vielfache der Wellenlänge)
+- "Wie berechnet man die Doppler-Frequenzverschiebung?" → Δf = 2·f₀·v·cos(θ)/c
+- "Warum muss der Schallkopf bei der Doppler-Sonographie schräg gehalten werden?" → Bei θ = 90° ist cos(90°) = 0 → kein Signal
+- "Wann tritt Totalreflexion auf?" → Übergang vom optisch dichteren ins dünnere Medium mit α > α_G; sin(α_G) = n₂/n₁
+
+**Achtung — typische Verwechslungen:**
+- Gangunterschied n·λ → **konstruktiv** (Verstärkung); (n+½)·λ → **destruktiv** (Auslöschung) — nicht umgekehrt!
+- Doppler: Quelle nähert sich → f_obs > f_Quelle (höherer Ton); entfernt sich → f_obs < f_Quelle (tieferer Ton)
+- Totalreflexion nur bei Übergang vom optisch **DICHTEREN** ins **DÜNNERE** Medium (nicht umgekehrt)
+- Brechung vom Lot weg = Übergang ins dünnere Medium (n₂ < n₁); zum Lot hin = ins dichtere Medium
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Grundschwingung (n=1): λ₁ = 2L; n-te Harmonische: λₙ = 2L/n; (n−1) innere Knoten
+- Doppler-Rettungswagen: f_obs = f_Q · c/(c − v_Q) bei bewegter Quelle; c_Schall = 340 m/s
+- Glasfaser (n_Glas ≈ 1,5, n_Luft = 1,0): Grenzwinkel ≈ 41,8° → Totalreflexion → Endoskopie
+- Brechungsindex wichtiger Augenmedien: Hornhaut ≈ 1,376; Linse ≈ 1,40; Gesamtbrechkraft Auge ≈ 60 D
+
+---
 ## Zusammenfassung
 
 - **Interferenz**: konstruktiv (Δφ = 0, 2π, …) → Verstärkung; destruktiv (Δφ = π, 3π, …) → Auslöschung
@@ -968,8 +1028,6 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
 
 Warum ist die Dezibel-Skala logarithmisch? Weil das Ohr es so verlangt. Das menschliche Hörsystem ist ein biologisches Präzisionsinstrument: Es erkennt Druckschwankungen kleiner als ein Milliardstel des Atmosphärendrucks und spannt dennoch 6 Zehnerpotenzen im Dynamikbereich. Für Mediziner ist Akustik direkt relevant — Hörverlust, Lärmschwerhörigkeit, Audiometrie und die Unterscheidung von Schallleitungs- vs. Schallempfindungsschwerhörigkeit sind klinische Kernthemen. Für den MedAT sind Dezibel-Skala, Frequenzbereich des Hörens, Cochlea/Tonotopie und Lärmschutz prüfungsrelevant.
 
-# Akustik und Hörphysiologie
-
 Akustik ist die Lehre vom Schall und seinen physiologischen sowie psychophysischen Wirkungen. Die menschliche Hörbahn ist ein aussergewöhnliches Messsystem, das Druckschwankungen von weniger als einem Milliardstel des atmosphärischen Drucks wahrnehmen kann. Das Ohr deckt dabei einen Dynamikbereich von 10⁶ im Schalldruck ab – vom leisesten wahrnehmbaren Ton bis zur Schmerzgrenze.
 
 ## Schallpegel und die Dezibel-Skala
@@ -1063,6 +1121,30 @@ Bei 85 dB sind 8 Stunden Exposition erlaubt. Pro +3 dB halbiert sich die Zeit: 8
 
 > **Merke:** 3-dB-Regel für Intensität, 6-dB-Regel für Schalldruck, 10-dB-Regel für subjektive Lautstärke. Diese drei Regeln sind MedAT-Klassiker!
 
+---
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Wie viel dB entspricht einer Verdopplung der Schallintensität?" → +3 dB (I×2 → 10·log 2 ≈ 3 dB)
+- "Wie viel dB entspricht einer Verdopplung des Schalldrucks?" → +6 dB (p×2 → 20·log 2 ≈ 6 dB)
+- "Welcher Pegel gilt als Gehörschaden-Grenzwert?" → 85 dB (> 8 Stunden täglich → irreversibler Haarzellschaden)
+- "Hohe Frequenzen in der Cochlea — wo?" → Basis (nahe ovalem Fenster, steife Membran); tiefe Frequenzen → Apex
+
+**Achtung — typische Verwechslungen:**
+- +3 dB ≠ +6 dB: Intensitätsverdopplung (+3 dB) vs. Schalldruckverdopplung (+6 dB) — I ∝ p², daher der Faktor 2
+- Schallleitungsschwerhörigkeit = **Mittelohrproblem** (Knochenleitung intakt!) — Weber lateralisiert zum kranken Ohr
+- Schallempfindungsschwerhörigkeit = **Innenohr/Haarzellproblem** (Knochen- und Luftleitung gleich gestört)
+- Tonotopie: HOHE Frequenzen → BASIS (steif/schmal); TIEFE Frequenzen → APEX (elastisch/breit)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Referenzwerte: p₀ = 2×10⁻⁵ Pa (Hörschwelle); I₀ = 10⁻¹² W/m²
+- Dezibel-Formeln: L = 20·log(p/p₀) = 10·log(I/I₀) — beide Formeln ergeben denselben Wert!
+- Grenzwerte: 0 dB (Hörschwelle) → 60 dB (Gespräch) → 85 dB (Lärm-Grenzwert!) → 120 dB (Schmerzgrenze)
+- Pro +3 dB halbiert sich die erlaubte Expositionszeit: 85 dB/8h → 88 dB/4h → 91 dB/2h → 94 dB/1h
+- C5-Senke bei 4 kHz im Audiogramm = pathognomonischer Befund der Lärmschwerhörigkeit
+- Hörbereich: 20 Hz – 20 kHz; grösste Empfindlichkeit 1–4 kHz (Sprachbereich)
+
+---
 ## Zusammenfassung
 
 - **Dezibel**: L = 20·log(p/p₀) = 10·log(I/I₀); p₀ = 2×10⁻⁵ Pa, I₀ = 10⁻¹² W/m²
