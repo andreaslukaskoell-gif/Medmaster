@@ -2837,8 +2837,6 @@ Gel-Elektrophorese, Restriktionsenzyme und Blot-Techniken gehören zu den klassi
 
 ---
 
----
-
 ## Restriktionsenzyme und ihre Erkennungssequenzen
 
 Restriktionsendonukleasen sind nach Typ I, II und III klassifiziert — für die Molekularbiologie sind **Typ-II-Enzyme** von Bedeutung (schneiden innerhalb oder nahe der Erkennungssequenz, definierte Fragmente). Bekannte Beispiele: EcoRI (aus E. coli, erkennt GAATTC, 4-nt-5'-Überhang), HindIII (AAGCTT, 4-nt-5'-Überhang), BamHI (GGATCC, 4-nt-5'-Überhang), NotI (GCGGCCGC, 8-bp-Erkennungssequenz, schneidet selten → für große Fragmente). Statistische Häufigkeit einer 4-bp-Sequenz: 1/4⁴ = 1/256 bp; 6-bp: 1/4096 bp; 8-bp: 1/65.536 bp. Sticky ends erleichtern die gerichtete Klonierung: kompatible Überhänge hybridisieren spontan und werden durch DNA-Ligase kovalent verknüpft.
@@ -3070,8 +3068,6 @@ Der genetische Fingerabdruck ermöglicht die eindeutige Identifizierung von Indi
 
 ---
 
----
-
 ## STR-Polymorphismus — Warum sind Menschen verschieden?
 
 Die hohe Variabilität von STR-Loci entsteht durch einen Mechanismus namens **Replication Slippage (Polymerase-Slippage)**: Während der DNA-Replikation kann die Polymerase bei repetitiven Sequenzen "ausrutschen" — der neusynthetisierte Strang bildet eine Haarnadelschleife, und beim Weitersyntetisieren entstehen mehr oder weniger Wiederholungen als im Elternstrang. Dies erklärt die hohe Mutationsrate von STRs (~0,1–0,2%/Generation/Locus). Ein Mensch mit 17 CA-Wiederholungen an Locus D3S1358 hat dort das Allel "17"; ein anderer mit 20 Wiederholungen hat "Allel 20". Die Kombination aus 20 Loci ergibt ein statistisch einzigartiges Profil. VNTR (Variable Number of Tandem Repeats, 10–100 bp) sind größer als STRs und wurden bei der ursprünglichen Alec-Jeffreys-Methode (1984) verwendet — heute durch STRs ersetzt.
@@ -3299,8 +3295,6 @@ Die molekulare Klonierung ermöglicht die Einbringung und Vermehrung spezifische
 - Vektorkapazität: Plasmid ~15 kb, BAC ~300 kb, YAC bis 2 Mb
 - cDNA-Bibliothek (nur Exons) vs. genomische Bibliothek (gesamtes Genom inkl. Introns)
 - Rekombinantes Insulin seit 1982 (erstes gentechnisch hergestelltes Medikament)
-
----
 
 ---
 
@@ -3547,8 +3541,6 @@ CRISPR-Cas9 ist das revolutionärste Werkzeug der Genomeditierung und ermöglich
 
 ---
 
----
-
 ## CRISPR-Cas9 vs. klassische Genomeditierungswerkzeuge
 
 Vor CRISPR-Cas9 gab es zwei Hauptwerkzeuge für gezielte Genomschnitte: **Zinkfinger-Nukleasen (ZFNs)** und **TALENs (Transcription Activator-Like Effector Nucleases)**. Beide erfordern für jede neue Zielsequenz die aufwendige Proteintechnik — neue Zinkfinger- oder TALE-Domänen müssen maßgeschneidert kloniert werden (Wochen bis Monate). CRISPR-Cas9 revolutionierte dies: Die Spezifität wird allein durch die 20-nt-sgRNA-Sequenz kodiert — eine neue Zielsequenz erfordert lediglich die Synthese einer neuen sgRNA (Tage, Kosten ~200 €). Dieses "Plug-and-play"-Prinzip macht CRISPR extrem zugänglich. Einschränkungen: SpCas9 benötigt das PAM-Motiv NGG — für Targets ohne passendes PAM wurden alternative Cas-Proteine (Cas12a/Cpf1 mit TTTV-PAM, SaCas9 mit NNGRRT-PAM) entwickelt.
@@ -3781,8 +3773,6 @@ Dieses Unterkapitel vertieft die Stammbaumanalyse mit Fokus auf die vier Haupter
 
 ---
 
----
-
 ## Der Begriff 'Konduktorin' beim X-chromosomal rezessiven Erbgang
 
 Eine Konduktorin (Überträgerin) ist eine Frau, die heterozygot für ein X-chromosomal rezessives Allel ist (X^A X^a). Sie ist selbst nicht klinisch krank (das zweite, gesunde X-Chromosom kompensiert), aber sie kann das pathogene Allel weitergeben. Söhne einer Konduktorin haben ein 50%iges Risiko, das Allel zu erben und zu erkranken (da sie hemizygot sind: X^a Y). Töchter haben ein 50%iges Risiko, selbst Konduktorin zu werden. Eine obligate Konduktorin ist eine Frau, bei der die Trägerschaft aufgrund des Stammbaums sicher feststeht (z. B. Mutter eines betroffenen Sohnes, Tochter eines betroffenen Vaters). Bei der Hämophilie war Victoria I. von England eine berühmte obligate Konduktorin.
@@ -3799,9 +3789,13 @@ Die Huntington-Krankheit zeigt mehrere Besonderheiten: Erstens vollständige Pen
 
 ---
 
-## Klinischer Bezug
+## Kreuzungsschemata und Wahrscheinlichkeitsberechnung
 
-Duchenne Muskeldystrophie (X-rezessiv) betrifft ca. 1:3.500 Knaben und führt unbehandelt zur Rollstuhlpflichtigkeit im zweiten Lebensjahrzehnt. Exon-Skipping-Therapien (Antisense-Oligonukleotide) und Gentherapien befinden sich in klinischen Studien und zeigen erste Erfolge in der Verlangsamung der Progression.
+Die sichere Beherrschung von Kreuzungsschemata ist im MedAT unerlässlich. Beim autosomal-dominanten Erbgang ergibt die Kreuzung eines heterozygoten Betroffenen (Aa) mit einem gesunden Partner (aa) eine 50%ige Erkrankungswahrscheinlichkeit in der Nachkommenschaft. Sind beide Eltern heterozygot betroffen (Aa x Aa), steigt das Risiko auf 75%, wobei 25% homozygot dominant (AA), 50% heterozygot (Aa) und 25% gesund (aa) sind. Beim autosomal-rezessiven Erbgang ist die klassische Konstellation zwei heterozygote Träger (Aa x Aa): 25% erkrankt (aa), 50% Träger (Aa), 25% homozygot gesund (AA). Wichtig ist das Konzept der bedingten Wahrscheinlichkeit: Ist ein Kind phänotypisch gesund, beträgt die Wahrscheinlichkeit, dass es Träger ist, 2/3 (nicht 1/2), da der Anteil aa bereits ausgeschlossen ist.
+
+Beim X-chromosomal rezessiven Erbgang muss zwischen mütterlicher und väterlicher Weitergabe unterschieden werden. Eine Konduktorin (X^A X^a) und ein gesunder Mann (X^A Y) haben folgende Nachkommen: 50% der Söhne erkrankt (X^a Y), 50% gesund (X^A Y); 50% der Töchter Konduktorin (X^A X^a), 50% homozygot gesund (X^A X^A). Ein betroffener Vater (X^a Y) und eine homozygot gesunde Mutter (X^A X^A) haben nur gesunde Söhne (X^A Y) und ausschließlich Konduktorinnen als Töchter (X^A X^a). Diese Asymmetrie — keine Vater-Sohn-Übertragung — ist das stärkste Kriterium zur Identifikation eines X-chromosomalen Erbgangs im Stammbaum.
+
+> **Merke:** Bedingte Wahrscheinlichkeit: Ein gesundes Kind zweier AR-Träger ist mit 2/3 Wahrscheinlichkeit selbst Träger (Aa), nicht mit 1/2. X-chromosomal: Keine Vater-Sohn-Übertragung — Väter geben ihr X nur an Töchter weiter.
 
 ---
 
@@ -3825,16 +3819,6 @@ Duchenne Muskeldystrophie (X-rezessiv) betrifft ca. 1:3.500 Knaben und führt un
 - AD: Aa × aa → 50% krank; AR: Aa × Aa → 25% krank
 - Konduktorin × gesund: 50% Söhne krank, 50% Töchter Konduktorin
 - Victoria I.: berühmteste obligate Konduktorin (Hämophilie)
-
----
-
-## Kreuzungsschemata und Wahrscheinlichkeitsberechnung
-
-Die sichere Beherrschung von Kreuzungsschemata ist im MedAT unerlässlich. Beim autosomal-dominanten Erbgang ergibt die Kreuzung eines heterozygoten Betroffenen (Aa) mit einem gesunden Partner (aa) eine 50%ige Erkrankungswahrscheinlichkeit in der Nachkommenschaft. Sind beide Eltern heterozygot betroffen (Aa x Aa), steigt das Risiko auf 75%, wobei 25% homozygot dominant (AA), 50% heterozygot (Aa) und 25% gesund (aa) sind. Beim autosomal-rezessiven Erbgang ist die klassische Konstellation zwei heterozygote Träger (Aa x Aa): 25% erkrankt (aa), 50% Träger (Aa), 25% homozygot gesund (AA). Wichtig ist das Konzept der bedingten Wahrscheinlichkeit: Ist ein Kind phänotypisch gesund, beträgt die Wahrscheinlichkeit, dass es Träger ist, 2/3 (nicht 1/2), da der Anteil aa bereits ausgeschlossen ist.
-
-Beim X-chromosomal rezessiven Erbgang muss zwischen mütterlicher und väterlicher Weitergabe unterschieden werden. Eine Konduktorin (X^A X^a) und ein gesunder Mann (X^A Y) haben folgende Nachkommen: 50% der Söhne erkrankt (X^a Y), 50% gesund (X^A Y); 50% der Töchter Konduktorin (X^A X^a), 50% homozygot gesund (X^A X^A). Ein betroffener Vater (X^a Y) und eine homozygot gesunde Mutter (X^A X^A) haben nur gesunde Söhne (X^A Y) und ausschließlich Konduktorinnen als Töchter (X^A X^a). Diese Asymmetrie — keine Vater-Sohn-Übertragung — ist das stärkste Kriterium zur Identifikation eines X-chromosomalen Erbgangs im Stammbaum.
-
-> **Merke:** Bedingte Wahrscheinlichkeit: Ein gesundes Kind zweier AR-Träger ist mit 2/3 Wahrscheinlichkeit selbst Träger (Aa), nicht mit 1/2. X-chromosomal: Keine Vater-Sohn-Übertragung — Väter geben ihr X nur an Töchter weiter.
 
 ---
 
@@ -3987,8 +3971,6 @@ Viele Merkmale und Erkrankungen folgen nicht den einfachen Mendelschen Regeln, s
 
 ---
 
----
-
 ## Penetranz vs. Expressivität — Ein klinisch wichtiger Unterschied
 
 Penetranz und Expressivität werden häufig verwechselt. Penetranz ist binär: Entweder zeigt der Genträger den Phänotyp oder nicht (Prozentsatz der Träger, die betroffen sind). Expressivität beschreibt die Schwere des Phänotyps bei denjenigen, die bereits betroffen sind (quantitatives Ausmaß). Beispiel: Bei der Neurofibromatose Typ 1 (NF1, autosomal dominant) beträgt die Penetranz fast 100% — fast alle Träger zeigen irgendein Symptom. Die Expressivität ist jedoch sehr variabel: Von minimalen Café-au-lait-Flecken bis zu multiplen Neurofibromen und kognitiven Beeinträchtigungen. Selbst innerhalb einer Familie können Eltern und Kinder sehr unterschiedlich stark betroffen sein.
@@ -4005,9 +3987,13 @@ Wenn viele Gene mit kleinen, additiven Effekten ein Merkmal beeinflussen, entste
 
 ---
 
-## Klinischer Bezug
+## Multifaktorielle Erkrankungen und Schwellenwertmodell
 
-BRCA1/2-Mutationen zeigen unvollständige Penetranz: Das Lebenszeitrisiko für Brustkrebs beträgt ca. 70% (nicht 100%). Das prädiktive Testen und prophylaktische Operationen (Mastektomie, Salpingo-Oophorektomie) werden im Rahmen der Genberatung diskutiert. Die variable Expressivität des Marfan-Syndroms kann dazu führen, dass mildere Fälle jahrelang undiagnostiziert bleiben.
+Multifaktorielle Erkrankungen wie Diabetes mellitus Typ 2, koronare Herzkrankheit, Schizophrenie und Neuralrohrdefekte entstehen durch das Zusammenspiel zahlreicher genetischer Varianten (jeweils mit kleinem Effekt) und Umweltfaktoren. Das Schwellenwertmodell erklärt, warum diese Erkrankungen nicht der Mendelschen Aufspaltung folgen: Die genetische Prädisposition ist kontinuierlich verteilt (Normalverteilung), aber erst bei Überschreiten eines bestimmten Schwellenwerts manifestiert sich die Erkrankung. Verwandte ersten Grades eines Betroffenen haben ein deutlich höheres Risiko als die Allgemeinbevölkerung, da ihre Prädispositionsverteilung nach rechts verschoben ist, ohne dass ein einzelnes ursächliches Gen identifiziert werden kann.
+
+Der Polygene Risikoscore (PRS) fasst die Effekte von Hunderten bis Tausenden Risikovarianten in einem Summenwert zusammen und wird zunehmend zur individuellen Risikoabschätzung eingesetzt. Für koronare Herzkrankheit identifiziert ein PRS im obersten Perzentil Personen mit einem dreifach erhöhten Risiko gegenüber dem Bevölkerungsdurchschnitt. Epigenetische Einflüsse (z. B. intrauterine Mangelernährung, mütterliches Rauchen) können die Genexpression dauerhaft verändern und über epigenetische Vererbung sogar nachfolgende Generationen beeinflussen — dies wird im Kontext der Dutch Hunger Winter-Studie als transgenerationale Epigenetik diskutiert.
+
+> **Merke:** Multifaktoriell: Viele Gene + Umwelt → Schwellenwertmodell. Polygener Risikoscore (PRS) summiert Effekte vieler Varianten. Familiäre Häufung ohne Mendelschen Erbgang.
 
 ---
 
@@ -4031,16 +4017,6 @@ BRCA1/2-Mutationen zeigen unvollständige Penetranz: Das Lebenszeitrisiko für B
 - BRCA1/2: ca. 70% Penetranz für Brustkrebs (nicht 100%)
 - Multifaktorielle Erkrankungen: Diabetes Typ 2, koronare Herzkrankheit, Schizophrenie
 - Zwillingsstudien: eineiige > zweieiige Konkordanz → genetische Komponente
-
----
-
-## Multifaktorielle Erkrankungen und Schwellenwertmodell
-
-Multifaktorielle Erkrankungen wie Diabetes mellitus Typ 2, koronare Herzkrankheit, Schizophrenie und Neuralrohrdefekte entstehen durch das Zusammenspiel zahlreicher genetischer Varianten (jeweils mit kleinem Effekt) und Umweltfaktoren. Das Schwellenwertmodell erklärt, warum diese Erkrankungen nicht der Mendelschen Aufspaltung folgen: Die genetische Prädisposition ist kontinuierlich verteilt (Normalverteilung), aber erst bei Überschreiten eines bestimmten Schwellenwerts manifestiert sich die Erkrankung. Verwandte ersten Grades eines Betroffenen haben ein deutlich höheres Risiko als die Allgemeinbevölkerung, da ihre Prädispositionsverteilung nach rechts verschoben ist, ohne dass ein einzelnes ursächliches Gen identifiziert werden kann.
-
-Der Polygene Risikoscore (PRS) fasst die Effekte von Hunderten bis Tausenden Risikovarianten in einem Summenwert zusammen und wird zunehmend zur individuellen Risikoabschätzung eingesetzt. Für koronare Herzkrankheit identifiziert ein PRS im obersten Perzentil Personen mit einem dreifach erhöhten Risiko gegenüber dem Bevölkerungsdurchschnitt. Epigenetische Einflüsse (z. B. intrauterine Mangelernährung, mütterliches Rauchen) können die Genexpression dauerhaft verändern und über epigenetische Vererbung sogar nachfolgende Generationen beeinflussen — dies wird im Kontext der Dutch Hunger Winter-Studie als transgenerationale Epigenetik diskutiert.
-
-> **Merke:** Multifaktoriell: Viele Gene + Umwelt → Schwellenwertmodell. Polygener Risikoscore (PRS) summiert Effekte vieler Varianten. Familiäre Häufung ohne Mendelschen Erbgang.
 
 ---
 
