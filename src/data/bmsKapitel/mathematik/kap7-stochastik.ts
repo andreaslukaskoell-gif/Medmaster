@@ -24,9 +24,8 @@ export const mathKapStochastik: Kapitel = {
       ],
       content: `## Einleitung
 
-Wie viele Blutgruppen gibt es? Wie viele DNA-Codons sind möglich? Wie viele Wege gibt es, ein Medikamenten-Trio aus acht auszuwählen? Die Kombinatorik beantwortet genau diese Fragen — sie zählt systematisch, ohne alles aufzulisten. Kombinatorik ist das Fundament der Wahrscheinlichkeitsrechnung. Für den MedAT sind die vier Grundtypen (Permutation, Variation, Kombination, je mit/ohne Wiederholung) und der Binomialkoeffizient prüfungsrelevant.
+Wie viele Blutgruppen gibt es? Wie viele DNA-Codons sind möglich? Wie viele Wege gibt es, ein Medikamenten-Trio aus acht auszuwählen? Die Kombinatorik beantwortet genau diese Fragen — sie zählt systematisch, ohne alles aufzulisten. Sie bildet das rechnerische Fundament der Wahrscheinlichkeitsrechnung und beantwortet die Frage: Auf wie viele Arten lassen sich Objekte auswählen oder anordnen? Für den MedAT sind die vier Grundtypen und der Binomialkoeffizient prüfungsrelevant:
 
-Die Kombinatorik beantwortet die Frage: Auf wie viele Arten lassen sich Objekte auswählen oder anordnen? Sie bildet das rechnerische Fundament der Wahrscheinlichkeitsrechnung. Das Wichtigste auf einen Blick:
 - **Permutation:** Alle n Objekte werden angeordnet — wie viele Reihenfolgen gibt es?
 - **Variation:** k Objekte aus n auswählen und anordnen (Reihenfolge zählt)
 - **Kombination:** k Objekte aus n auswählen, Reihenfolge spielt keine Rolle
@@ -326,9 +325,8 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
       ],
       content: `## Einleitung
 
-"Wie wahrscheinlich ist es, dass ein Kind von zwei CF-Trägern krank wird?" Solche Fragen beantwortet die Wahrscheinlichkeitsrechnung — sie quantifiziert Unsicherheit mit Zahlen zwischen 0 (unmöglich) und 1 (sicher). In der Medizin ist sie unverzichtbar: Erbkrankheiten (Mendel-Regeln), Nebenwirkungen, Testergebnisse. Für den MedAT sind Laplace-Experiment, Additionssatz, Komplementregel, Unabhängigkeit und Binomialverteilung prüfungsrelevant.
+"Wie wahrscheinlich ist es, dass ein Kind von zwei CF-Trägern krank wird?" Solche Fragen beantwortet die Wahrscheinlichkeitsrechnung — sie quantifiziert Unsicherheit mit Zahlen zwischen 0 (unmöglich) und 1 (sicher). In der Medizin ist sie unverzichtbar: Erbkrankheiten (Mendel-Regeln), Nebenwirkungen, Testergebnisse. Für den MedAT sind folgende Konzepte prüfungsrelevant:
 
-Die Wahrscheinlichkeitsrechnung quantifiziert Unsicherheit. Im MedAT-Kontext bedeutet das: Wie wahrscheinlich ist ein bestimmtes Testergebnis? Wie oft tritt eine Mutation auf? Wie sicher ist eine Diagnose? Das Wichtigste auf einen Blick:
 - **Laplace-Experiment:** Alle Ergebnisse gleich wahrscheinlich → P(A) = |A| / |Ω|
 - **Additionssatz:** P(A oder B) = P(A) + P(B) − P(A und B)
 - **Komplementregel:** P(nicht A) = 1 − P(A)
@@ -618,9 +616,8 @@ Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 g
       ],
       content: `## Einleitung
 
-Ein HIV-Test ist positiv — wie wahrscheinlich ist eine echte Infektion? Ohne Kenntnis der Prävalenz ist die Antwort überraschend: Bei niedriger Prävalenz können >80% der positiven Tests falsch-positiv sein. Das Bayes-Theorem rechnet um: aus P(positiv | krank) wird P(krank | positiv). Es ist das wichtigste Werkzeug zur Beurteilung medizinischer Tests. Für den MedAT sind bedingte Wahrscheinlichkeit, Satz von Bayes, Vierfeldertafel, PPV und NPV prüfungsrelevant.
+Ein HIV-Test ist positiv — wie wahrscheinlich ist eine echte Infektion? Ohne Kenntnis der Prävalenz ist die Antwort überraschend: Bei niedriger Prävalenz können >80% der positiven Tests falsch-positiv sein. Das Bayes-Theorem rechnet um: aus P(positiv | krank) wird P(krank | positiv) — es ist das wichtigste Werkzeug zur Beurteilung medizinischer Tests und erklärt, warum ein positiver Befund bei seltenen Erkrankungen oft trügerisch ist. Für den MedAT prüfungsrelevant:
 
-Das Bayes-Theorem ist eines der wichtigsten Konzepte der medizinischen Statistik. Es erklärt, warum ein positiver Test bei seltenen Erkrankungen oft trügerisch ist. Das Wichtigste auf einen Blick:
 - **Bedingte Wahrscheinlichkeit:** P(A|B) = "Wahrscheinlichkeit von A, gegeben dass B eingetreten ist"
 - **Satz von Bayes:** erlaubt die "Umkehr" der Bedingung: aus P(B|A) wird P(A|B)
 - **Totale Wahrscheinlichkeit:** Gesamtwahrscheinlichkeit aus bedingten Teilen zusammensetzen
@@ -897,9 +894,8 @@ A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 · 0,04 
       ],
       content: `## Einleitung
 
-Nüchtern-Blutzucker 126 mg/dL: normal oder pathologisch? Um das zu beurteilen, braucht man den Mittelwert und die Standardabweichung der Bevölkerung — und die Normalverteilung. Statistik macht aus Datenmassen handhabbare Kennzahlen. Für den MedAT sind Mittelwert, Median, Modus, Standardabweichung, Normalverteilung (68-95-99,7-Regel), z-Transformation und Sensitivität/Spezifität prüfungsrelevant.
+Nüchtern-Blutzucker 126 mg/dL: normal oder pathologisch? Um das zu beurteilen, braucht man den Mittelwert und die Standardabweichung der Bevölkerung — und die Normalverteilung. Statistik macht aus Datenmassen handhabbare Kennzahlen. Im MedAT werden Lagemaße, Streumaße, die Normalverteilung sowie Sensitivität und Spezifität als Schlüsselbegriffe der medizinischen Diagnostik geprüft:
 
-Statistik beschreibt und analysiert Daten. Im MedAT werden Lagemaße, Streumaße und die Normalverteilung geprüft. Dazu kommen Sensitivität und Spezifität als Schlüsselbegriffe der medizinischen Diagnostik. Das Wichtigste auf einen Blick:
 - **Normalverteilung:** Symmetrische Glockenkurve, definiert durch μ (Mittelwert) und σ (Standardabweichung)
 - **68-95-99,7-Regel:** μ±1σ umfasst 68%, μ±2σ umfasst 95%, μ±3σ umfasst 99,7% der Daten
 - **Lagemaße:** Mittelwert, Median, Modus
