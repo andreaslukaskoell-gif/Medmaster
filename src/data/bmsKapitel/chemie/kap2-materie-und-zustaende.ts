@@ -11,6 +11,20 @@ export const chemKapMaterie: Kapitel = {
     {
       id: "ch-3-01",
       title: "Ideale Gasgleichung pV=nRT",
+      stichworte: [
+        "Ideale Gasgleichung",
+        "Druck",
+        "Volumen",
+        "Stoffmenge",
+        "Gaskonstante",
+        "Boyle-Mariotte",
+        "Charles/Gay-Lussac",
+        "Avogadro",
+        "Molares Volumen",
+        "Van-der-Waals-Gleichung",
+        "Kinetische Gastheorie",
+        "Kompressibilitätsfaktor",
+      ],
       content: `## Die Ideale Gasgleichung
 
 Die ideale Gasgleichung **pV = nRT** ist eine der fundamentalsten Gleichungen der physikalischen Chemie. Sie beschreibt das Verhalten eines hypothetischen idealen Gases und verknüpft vier makroskopische Zustandsgrößen:
@@ -73,12 +87,39 @@ Die van-der-Waals-Gleichung (1873) korrigiert das ideale Gasgesetz für reale Ga
 
 Für H₂O: a = 5,537, b = 0,03049. Für He: a = 0,0346, b = 0,0238 (fast ideales Verhalten).
 
+## Rechenbeispiel: Gasvolumen nach Temperatur- und Druckänderung
+
+**Aufgabe:** 3 mol O₂ befinden sich in einem Behälter bei 27 °C und 1 bar. Welches Volumen nehmen sie ein? Was passiert bei Kompression auf 5 bar bei gleichzeitiger Erwärmung auf 227 °C?
+
+**Lösung Schritt 1:** V = nRT/p = 3 × 0,08314 × 300 / 1 = **74,8 L**
+
+**Lösung Schritt 2:** Kombinierte Gasgleichung: p₁V₁/T₁ = p₂V₂/T₂
+- T₁ = 300 K, T₂ = 500 K, p₁ = 1 bar, p₂ = 5 bar
+- V₂ = V₁ × (p₁/p₂) × (T₂/T₁) = 74,8 × (1/5) × (500/300) = 74,8 × 0,2 × 1,667 = **24,9 L**
+
+> **Merke:** Druckerhöhung (Boyle-Mariotte) verkleinert das Volumen, Temperaturerhöhung (Charles) vergrößert es. Beide Effekte müssen stets kombiniert werden. Celsius NIEMALS direkt einsetzen – immer erst in Kelvin umrechnen!
+
+## MedAT-relevante Zahlenwerte
+
+Für die MedAT-Prüfung sind folgende Werte auswendig zu lernen:
+- R = **8,314 J/(mol·K)** = 0,08314 L·bar/(mol·K)
+- V_m bei STP = **22,4 L/mol** (0 °C, 1 bar)
+- N_A = **6,022 × 10²³ mol⁻¹** (Avogadro-Zahl)
+- k_B = **1,381 × 10⁻²³ J/K** (Boltzmann-Konstante, R/N_A)
+- 0 °C = **273,15 K** (absoluter Nullpunkt bei 0 K = −273,15 °C)
+- 1 atm = **101.325 Pa** = 760 mmHg = 1,013 bar
+
+## Klinische Relevanz: Beatmungsmedizin
+
+In der Intensivmedizin ist die ideale Gasgleichung bei der maschinellen Beatmung direkt relevant. Bei der **Volumen-kontrollierten Beatmung** wird ein definiertes Tidalvolumen (V_T ≈ 6–8 ml/kg Idealgewicht) appliziert. Der resultierende Atemwegsdruck hängt von der Compliance (Dehnbarkeit) der Lunge ab: p = V_T / C_stat. Bei **ARDS** (Acute Respiratory Distress Syndrome) sinkt die Compliance drastisch – der gleiche Volumenhub erzeugt höhere Drücke, was Barotrauma verursachen kann. Zudem muss bei der Befeuchtung der Atemgase der Wasserdampfdruck bei 37 °C (6,27 kPa) berücksichtigt werden (Dalton).
+
 ## Kinetische Gastheorie
 
 Die mikroskopische Erklärung liefert die **kinetische Gastheorie** (Maxwell, Boltzmann):
 - Mittlere kinetische Energie: E_kin = (3/2)·k_B·T, wobei k_B = 1,381 × 10⁻²³ J/K.
 - Quadratischer Mittelwert der Geschwindigkeit: v_rms = √(3·R·T/M).
-- Bei 25 °C hat N₂ (M = 0,028 kg/mol): v_rms = √(3 × 8,314 × 298 / 0,028) ≈ 515 m/s.`,
+- Bei 25 °C hat N₂ (M = 0,028 kg/mol): v_rms = √(3 × 8,314 × 298 / 0,028) ≈ 515 m/s.
+- Die **Maxwell-Boltzmann-Verteilung** beschreibt die Geschwindigkeitsverteilung: Die meisten Moleküle bewegen sich nahe der wahrscheinlichsten Geschwindigkeit v_p = √(2RT/M), einige wenige sind deutlich schneller. Diese schnellen Moleküle ermöglichen die Verdunstung unterhalb des Siedepunkts.`,
       lernziele: [
         "Die ideale Gasgleichung pV=nRT aus den Einzelgesetzen (Boyle-Mariotte, Charles, Avogadro) herleiten und auf Rechenaufgaben anwenden.",
         "Zustandsgrößen p, V, n, T mit korrekten Einheiten benennen und ineinander umrechnen (inkl. Druckeinheiten atm, bar, Pa, mmHg).",
@@ -281,6 +322,19 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
     {
       id: "ch-3-02",
       title: "Dalton's Partialdruck-Gesetz",
+      stichworte: [
+        "Partialdruck",
+        "Dalton",
+        "Molenbruch",
+        "Gasgemisch",
+        "Alveolarer Gasaustausch",
+        "Henry-Gesetz",
+        "Gaslöslichkeit",
+        "Wasserdampfdruck",
+        "Sauerstofftherapie",
+        "Tauchmedizin",
+        "Heliox",
+      ],
       content: `## Das Daltonsche Partialdruck-Gesetz
 
 Das Daltonsche Gesetz (John Dalton, 1801) beschreibt das Druckverhalten von Gasgemischen:
@@ -335,7 +389,47 @@ wobei k_H die substanzspezifische Henry-Konstante ist. Bei erhöhtem O₂-Partia
 - **Sauerstofftherapie:** F_IO₂ = 0,4–1,0 → deutlich erhöhte p(O₂) → mehr physikalisch gelöstes O₂
 - **Lachgas/O₂ (Entonox®):** 50:50 N₂O/O₂ als Analgetikum
 - **Heliox (He/O₂):** Bei obstruktiver Atemwegserkrankung – He (leichter als N₂) senkt den Gasströmungswiderstand
-- **Tauchgas:** Komprimierte Luft → erhöhte Partialdrücke aller Gase → N₂-Narkose (Tiefenrausch) ab p(N₂) > 3–4 bar`,
+- **Tauchgas:** Komprimierte Luft → erhöhte Partialdrücke aller Gase → N₂-Narkose (Tiefenrausch) ab p(N₂) > 3–4 bar
+
+## Rechenbeispiel: Alveolärer O₂-Partialdruck
+
+**Aufgabe:** Ein Patient atmet Raumluft (21 % O₂) bei Normaldruck (101,3 kPa). Wie hoch ist der alveoläre O₂-Partialdruck unter Berücksichtigung des Wasserdampfdrucks (6,27 kPa bei 37 °C) und des CO₂-Partialdrucks (5,3 kPa)?
+
+**Lösung:** Vereinfachte Alveolargasgleichung:
+- p(O₂)_alv = F_IO₂ × (p_atm − p_H₂O) − p(CO₂)/RQ
+- Mit RQ (respiratorischer Quotient) ≈ 0,8:
+- p(O₂)_alv = 0,21 × (101,3 − 6,27) − 5,3/0,8
+- p(O₂)_alv = 0,21 × 95,03 − 6,625 = 19,96 − 6,63 = **13,3 kPa** (≈ 100 mmHg)
+
+> **Merke:** Die vollständige Alveolargasgleichung berücksichtigt Wasserdampf UND CO₂-Produktion. Der alveoläre p(O₂) von 13,3 kPa ist deutlich niedriger als der inspiratorische von 21 kPa – das wird in der MedAT-Prüfung gerne abgefragt!
+
+## MedAT-relevante Zahlenwerte für Partialdrücke
+
+| Parameter | Wert | Einheit |
+|-----------|------|---------|
+| p(O₂) Raumluft | 21,2 | kPa (159 mmHg) |
+| p(O₂) alveolär | 13,3 | kPa (100 mmHg) |
+| p(O₂) arteriell | 10,7–13,3 | kPa (80–100 mmHg) |
+| p(O₂) venös | 5,3 | kPa (40 mmHg) |
+| p(CO₂) arteriell | 4,7–6,0 | kPa (35–45 mmHg) |
+| p(CO₂) venös | 6,1 | kPa (46 mmHg) |
+| p(H₂O) bei 37 °C | 6,27 | kPa (47 mmHg) |
+
+## Sauerstofftoxizität und Hyperoxie
+
+Zu hohe O₂-Partialdrücke sind schädlich! Bei F_IO₂ > 0,6 über längere Zeit drohen:
+- **Lorrain-Smith-Effekt**: Pulmonale O₂-Toxizität – Entzündung der Alveolarepithelien, Surfactant-Schädigung, ARDS-ähnliches Bild
+- **Paul-Bert-Effekt**: Zerebrale O₂-Toxizität bei p(O₂) > 160 kPa (Tauchen mit reinem O₂ tiefer als 6 m) – Krampfanfälle
+- **Retinopathia praematurorum**: Bei Frühgeborenen führt hoher p(O₂) zu pathologischer Gefäßneubildung in der Retina → Erblindungsgefahr
+
+> **Merke:** Sauerstoff ist ein Medikament mit therapeutischer Breite! Zu wenig (Hypoxie) ist lebensbedrohlich, zu viel (Hyperoxie) schädigt Lunge, Gehirn und Retina. Zielwert: p(O₂)_art = 8–13 kPa (60–100 mmHg).
+
+## Umrechnung kPa und mmHg
+
+In der Klinik werden Blutgaswerte oft in mmHg angegeben, in der Physiologie häufig in kPa:
+- **1 kPa = 7,5 mmHg** (Faktor 7,5)
+- **1 mmHg = 0,1333 kPa** (Faktor 0,133)
+- Schnelle Umrechnung: kPa × 7,5 = mmHg; mmHg / 7,5 = kPa`,
       lernziele: [
         "Das Daltonsche Partialdruck-Gesetz formulieren und Partialdrücke aus Molenbrüchen berechnen.",
         "Die atmosphärische Zusammensetzung (N₂, O₂, CO₂, H₂O) in Partialdrücken angeben und ihre Bedeutung in der Atemphysiologie erklären.",
@@ -526,6 +620,18 @@ Das Henry-Gesetz (c = k_H · p) beschreibt die physikalische Löslichkeit: Im Bl
     {
       id: "ch-3-03",
       title: "Diffusion und Effusion (Graham'sches Gesetz)",
+      stichworte: [
+        "Diffusion",
+        "Effusion",
+        "Grahamsches Gesetz",
+        "Ficksches Gesetz",
+        "Konzentrationsgradient",
+        "Mittlere freie Weglänge",
+        "Diffusionskoeffizient",
+        "Alveolarer Gasaustausch",
+        "DLCO-Test",
+        "Isotopentrennung",
+      ],
       content: `## Diffusion von Gasen
 
 **Diffusion** ist der spontane, thermisch getriebene Transport von Gasteilchen von Orten höherer Konzentration zu Orten niedrigerer Konzentration. Der Antrieb ist die Entropiezunahme: Systeme streben zum Zustand maximaler Unordnung.
@@ -585,7 +691,48 @@ Das zweite Ficksche Gesetz beschreibt die zeitliche Konzentrationsänderung:
 
 **∂c/∂t = D · ∂²c/∂x²**
 
-Charakteristische Diffusionszeitskala: t ≈ x²/(2D). Diffusion ist über kurze Strecken (Zellmembran: nm) extrem schnell, über große Distanzen (Organe: cm) viel zu langsam – deshalb brauchen höhere Organismen Kreislaufsysteme.`,
+Charakteristische Diffusionszeitskala: t ≈ x²/(2D). Diffusion ist über kurze Strecken (Zellmembran: nm) extrem schnell, über große Distanzen (Organe: cm) viel zu langsam – deshalb brauchen höhere Organismen Kreislaufsysteme.
+
+## Rechenbeispiel: Grahamsches Gesetz
+
+**Aufgabe:** In einem Demonstrationsexperiment werden NH₃-Gas (M = 17 g/mol) und HCl-Gas (M = 36,5 g/mol) gleichzeitig an den gegenüberliegenden Enden eines 1 m langen Glasrohrs freigesetzt. Wo bildet sich der weiße NH₄Cl-Niederschlag?
+
+**Lösung:**
+- r(NH₃)/r(HCl) = √(36,5/17) = √2,147 ≈ **1,47**
+- NH₃ diffundiert 1,47× schneller als HCl
+- Entfernungsverhältnis: d(NH₃)/d(HCl) = 1,47
+- d(NH₃) + d(HCl) = 100 cm → 1,47·d(HCl) + d(HCl) = 100 → d(HCl) = 40,5 cm
+- Der weiße Ring bildet sich **59,5 cm von der NH₃-Quelle** (40,5 cm von der HCl-Quelle) – also näher an der HCl-Seite
+
+> **Merke:** Das leichtere Gas legt den größeren Weg zurück. Der Treffpunkt liegt NICHT in der Mitte, sondern verschoben zur Seite des schwereren Gases. Dies ist ein klassisches Prüfungsbeispiel für Grahams Gesetz!
+
+## Diffusionskoeffizienten: Vergleichswerte
+
+| Medium | D (m²/s) | Beispiel |
+|--------|----------|----------|
+| Gas in Gas | ~10⁻⁵ | O₂ in Luft: 2,1 × 10⁻⁵ |
+| Gas in Wasser | ~10⁻⁹ | O₂ in H₂O: 2,1 × 10⁻⁹ |
+| Protein in Wasser | ~10⁻¹¹ | Hämoglobin: 6,9 × 10⁻¹¹ |
+
+Der Diffusionskoeffizient in Wasser ist ca. **10.000× kleiner** als in Luft – dies hat fundamentale biologische Konsequenzen. Zellen müssen klein sein (typisch 10–50 μm), damit Nährstoffe per Diffusion alle Bereiche rechtzeitig erreichen. Größere Organismen benötigen konvektive Transportsysteme (Kreislauf, Atemwege).
+
+## Klinischer Bezug: DLCO-Test und Diffusionsstörungen
+
+Der **DLCO-Test** (Transfer-Faktor für CO) ist die wichtigste klinische Messung der Diffusionskapazität. Das Prinzip nutzt Ficks Gesetz direkt:
+- Patient atmet eine geringe CO-Konzentration (0,3 %) ein und hält 10 s die Luft an
+- CO hat eine **210× höhere Hb-Affinität als O₂** → p_Blut(CO) ≈ 0 → maximaler Gradient ist immer gewährleistet
+- Der gemessene CO-Uptake reflektiert ausschließlich die Membranparameter (A, d, D)
+
+**Erniedrigter DLCO** bei:
+- Lungenfibrose (d↑ → dickere Membran)
+- Emphysem (A↓ → zerstörte Alveolarfläche)
+- Pulmonale Hypertonie (Gefäßverdickung)
+- Anämie (weniger Hb zur CO-Bindung)
+
+**Erhöhter DLCO** bei:
+- Alveolärer Hämorrhagie (Blut in Alveolen bindet CO)
+- Polyzythämie (mehr Hb)
+- Links-Rechts-Shunt (erhöhtes pulmonales Blutvolumen)`,
       lernziele: [
         "Das Grahamsche Gesetz der Diffusion/Effusion formulieren und anwenden: r₁/r₂ = √(M₂/M₁).",
         "Das erste Ficksche Gesetz (J = −D·dc/dx) interpretieren und auf pulmonale Diffusion anwenden.",
@@ -775,6 +922,20 @@ D ist proportional zur Gaslöslichkeit und umgekehrt proportional zu √M: D ∝
     {
       id: "ch-4-01",
       title: "Aggregatzustände und molekulare Basis",
+      stichworte: [
+        "Aggregatzustände",
+        "Kristalltypen",
+        "Ionenkristall",
+        "Molekülkristall",
+        "Metallkristall",
+        "Netzwerkkristall",
+        "Wasserstoffbrücken",
+        "Van-der-Waals-Kräfte",
+        "Oberflächenspannung",
+        "Viskosität",
+        "Dichteanomalie Wasser",
+        "Plasma",
+      ],
       content: `## Die vier Aggregatzustände der Materie
 
 Materie tritt in vier grundlegenden Aggregatzuständen auf, die sich durch Energie, Anordnung und Beweglichkeit ihrer Teilchen fundamental unterscheiden. Welcher Aggregatzustand vorliegt, hängt von der Bilanz zwischen der **kinetischen Energie der Teilchen** (Wärmebewegung) und der **potentiellen Energie** durch intermolekulare Wechselwirkungen ab.
@@ -831,7 +992,27 @@ Die Art und Stärke der intermolekularen Wechselwirkungen bestimmt maßgeblich, 
 
 **Wasserstoffbrückenbindungen** (H-Brücken): Besonders starke Dipol-Dipol-Wechselwirkung zwischen H-Atom (gebunden an N, O oder F) und freiem Elektronenpaar von N, O oder F. Energie 10–40 kJ/mol. H₂O, HF und NH₃ haben anomal hohe Siedepunkte für ihre Molekülmasse.
 
-**Ionische Wechselwirkungen**: Elektrische Anziehung zwischen entgegengesetzt geladenen Ionen. Energie bis zu 1000 kJ/mol. Ionische Verbindungen haben extrem hohe Schmelzpunkte.`,
+**Ionische Wechselwirkungen**: Elektrische Anziehung zwischen entgegengesetzt geladenen Ionen. Energie bis zu 1000 kJ/mol. Ionische Verbindungen haben extrem hohe Schmelzpunkte.
+
+## MedAT-relevante Siedepunktvergleiche
+
+Die Stärke der intermolekularen Kräfte bestimmt den Siedepunkt direkt. Folgende Vergleiche werden im MedAT häufig abgefragt:
+
+| Substanz | M (g/mol) | Kp (°C) | Dominante Kraft |
+|----------|-----------|---------|-----------------|
+| He | 4 | −269 | London (minimal) |
+| CH₄ | 16 | −162 | London |
+| NH₃ | 17 | −33 | H-Brücken |
+| H₂O | 18 | +100 | H-Brücken (stark) |
+| C₂H₅OH | 46 | +78 | H-Brücken |
+| CH₃-O-CH₃ | 46 | −24 | Dipol-Dipol |
+| NaCl | 58 | +1413 | Ionisch |
+
+> **Merke:** H₂O siedet bei +100 °C, obwohl seine Molmasse (18 g/mol) kleiner ist als die von CH₄ (16 g/mol, Kp = −162 °C). Der Unterschied von 262 °C wird allein durch die Wasserstoffbrücken verursacht. Ethanol und Dimethylether haben identische Molmassen (46 g/mol), aber 102 °C Siedepunktdifferenz – Ethanol bildet H-Brücken, Dimethylether nicht.
+
+## Amorphe Feststoffe vs. Kristalline Feststoffe
+
+Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunststoffe, Schokolade) besitzen keine Fernordnung im atomaren Aufbau. Sie haben keinen scharfen Schmelzpunkt, sondern einen **Glasübergangsbereich** (T_g), in dem sie graduell erweichen. Technisch und pharmazeutisch relevant: Viele Arzneistoffe können in amorpher Form vorliegen, die eine höhere Löslichkeitsrate aufweist als die kristalline Form – wichtig für die Bioverfügbarkeit.`,
       lernziele: [
         "Die vier Aggregatzustände anhand von Teilchenanordnung, Energie und makroskopischen Eigenschaften beschreiben und vergleichen",
         "Die vier Typen intermolekularer Wechselwirkungen (Van-der-Waals, Dipol-Dipol, Wasserstoffbrücken, ionisch) in ihrer Stärke einordnen und Beispiele nennen",
@@ -1043,6 +1224,20 @@ Die Art und Stärke der intermolekularen Wechselwirkungen bestimmt maßgeblich, 
     {
       id: "ch-4-02",
       title: "Phasenübergänge – Energetik und Bedingungen",
+      stichworte: [
+        "Phasenübergänge",
+        "Schmelzenthalpie",
+        "Verdampfungsenthalpie",
+        "Heizkurve",
+        "Latente Wärme",
+        "Kolligative Eigenschaften",
+        "Gefrierpunktserniedrigung",
+        "Siedepunktserhöhung",
+        "Osmolalität",
+        "Van't-Hoff-Faktor",
+        "Sublimation",
+        "Thermoregulation",
+      ],
       content: `## Phasenübergänge: Überblick und Nomenklatur
 
 Phasenübergänge sind Zustandsänderungen zwischen den Aggregatzuständen, die bei definierten Temperatur-Druck-Bedingungen stattfinden. Sie sind stets mit einer Enthalpieänderung verbunden (latente Wärme), die **nicht** zur Temperaturänderung, sondern zur Änderung der Molekülanordnung und der intermolekularen Abstände verwendet wird. Auf einer **Heizkurve** (Temperatur gegen Zeit bei konstanter Wärmezufuhr) erscheinen Phasenübergänge als **Plateaus** – die Temperatur bleibt konstant, obwohl weiterhin Energie zugeführt wird.
@@ -1103,7 +1298,38 @@ Die Blutosmolalität (normal: 280–300 mosmol/kg) kann durch Kryoskopie (Messun
 
 **Sieden** tritt auf, wenn der Sättigungsdampfdruck der Flüssigkeit den Umgebungsdruck erreicht (Blasenbildung im Volumen).
 
-**Verdunstung** findet bei jeder Temperatur unterhalb des Siedepunkts an der **Oberfläche** statt. Gemäß der Maxwell-Boltzmann-Verteilung haben immer einige Oberflächenmoleküle genug kinetische Energie, um die intermolekularen Bindungen zu überwinden und zu entweichen. Verdunstung kühlt die Oberfläche (Abtransport energiereicher Moleküle) – dies ist der physikalische Grund für das Kältegefühl nach dem Schwimmen oder beim Auftragen von Desinfektionsmittel (Ethanol verdunstet schnell).`,
+**Verdunstung** findet bei jeder Temperatur unterhalb des Siedepunkts an der **Oberfläche** statt. Gemäß der Maxwell-Boltzmann-Verteilung haben immer einige Oberflächenmoleküle genug kinetische Energie, um die intermolekularen Bindungen zu überwinden und zu entweichen. Verdunstung kühlt die Oberfläche (Abtransport energiereicher Moleküle) – dies ist der physikalische Grund für das Kältegefühl nach dem Schwimmen oder beim Auftragen von Desinfektionsmittel (Ethanol verdunstet schnell).
+
+## Phasendiagramm und Tripelpunkt
+
+Das **Phasendiagramm** zeigt die Stabilitätsbereiche der Aggregatzustände als Funktion von Druck und Temperatur. Drei wichtige Punkte:
+
+- **Tripelpunkt**: Alle drei Phasen koexistieren im Gleichgewicht. Für Wasser: T = 0,01 °C, p = 611 Pa (= 6,11 hPa). Nur bei exakt diesen Bedingungen existieren Eis, flüssiges Wasser und Dampf gleichzeitig.
+- **Kritischer Punkt**: Oberhalb der kritischen Temperatur (T_c) und des kritischen Drucks (p_c) gibt es keinen Unterschied mehr zwischen Flüssigkeit und Gas → **überkritisches Fluid**. Für Wasser: T_c = 374 °C, p_c = 221 bar. Für CO₂: T_c = 31 °C, p_c = 74 bar (überkritisches CO₂ wird als Extraktionslösungsmittel für Koffein verwendet).
+- **Siedepunktskurve**: Verbindet Tripelpunkt und kritischen Punkt. Der Siedepunkt hängt vom Druck ab: Auf dem Mount Everest (ca. 340 hPa) siedet Wasser bei etwa 70 °C, im Schnellkochtopf (ca. 2 bar) bei etwa 120 °C.
+
+> **Merke:** Sublimation (fest → gasförmig ohne flüssige Phase) ist nur unterhalb des Tripelpunktdrucks möglich. Bei der Gefriertrocknung wird der Druck unter 611 Pa gesenkt, damit Eis direkt sublimiert.
+
+## Rechenbeispiel: Gefrierpunktserniedrigung
+
+**Aufgabe:** Wie stark senkt eine physiologische NaCl-Lösung (0,9 %, d.h. 9 g NaCl pro 1000 g H₂O) den Gefrierpunkt?
+
+**Lösung:**
+- M(NaCl) = 58,44 g/mol → n = 9/58,44 = 0,154 mol
+- b = 0,154 mol / 1,0 kg = 0,154 mol/kg
+- NaCl dissoziiert: Na⁺ + Cl⁻ → i = 2
+- ΔT_f = K_f × b × i = 1,86 × 0,154 × 2 = **0,573 K**
+- Gefrierpunkt: −0,573 °C (nahe dem gemessenen Wert für Blutplasma: −0,52 °C)
+
+> **Merke:** Die physiologische Kochsalzlösung (0,9 %) hat nahezu die gleiche Osmolalität wie Blutplasma (≈ 290 mosmol/kg) und einen Gefrierpunkt von ca. −0,52 °C. Diese Isotonie ist der Grund, warum 0,9 % NaCl als Infusionslösung verträglich ist.
+
+## Dampfdruck und Clausius-Clapeyron-Gleichung
+
+Der Sättigungsdampfdruck steigt exponentiell mit der Temperatur (Clausius-Clapeyron):
+
+**ln(p₂/p₁) = (ΔH_v/R) × (1/T₁ − 1/T₂)**
+
+Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gegebenem Druck siedet. Klinisch relevant: Bei Fieber (z.B. 40 °C statt 37 °C) steigt der Wasserdampfdruck der Atemluft – der Patient verliert mehr Wasser über die Atmung (**Perspiratio insensibilis** steigt um ca. 12 % pro °C Fieber).`,
       lernziele: [
         "Alle sechs Phasenübergänge benennen, in der Energetik (endo-/exotherm) einordnen und mit Beispielen illustrieren",
         "Die Schmelzenthalpie (333 J/g) und Verdampfungsenthalpie (2257 J/g) von Wasser kennen, den Unterschied erklären und einfache Berechnungen durchführen",

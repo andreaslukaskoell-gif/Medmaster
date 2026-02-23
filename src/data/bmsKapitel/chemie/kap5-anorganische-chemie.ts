@@ -1,16 +1,30 @@
-import type { Kapitel } from '../types';
+import type { Kapitel } from "../types";
 
 export const chemKapAnorganisch: Kapitel = {
-  id: 'chem-kap5',
+  id: "chem-kap5",
   title: "Anorganische Chemie",
-  subject: 'chemie',
-  icon: '🧪',
-  estimatedTime: '150 min',
+  subject: "chemie",
+  icon: "🧪",
+  estimatedTime: "150 min",
   unterkapitel: [
     // === from kap9-elemente-und-verbindungen ===
     {
       id: "ch-9-01",
       title: "Wasser — Eigenschaften und biologische Bedeutung",
+      stichworte: [
+        "Dipolmoment",
+        "Wasserstoffbrücken",
+        "Dichteanomalie",
+        "Siedepunkt",
+        "Wärmekapazität",
+        "Verdampfungsenthalpie",
+        "Autoprotolysé",
+        "Ionenprodukt Kw",
+        "Hydratation",
+        "Hydrophober Effekt",
+        "Oberflächenspannung",
+        "Amphoterie",
+      ],
       lernziele: [
         "Die Struktur des Wassermoleküls und den Ursprung seines Dipolcharakters erläutern können",
         "Die außergewöhnlichen physikalischen Eigenschaften von Wasser mit dem H-Brücken-Netzwerk begründen",
@@ -19,33 +33,72 @@ export const chemKapAnorganisch: Kapitel = {
       ],
       content: `## Struktur des Wassermoleküls
 
-Wasser (H₂O) ist das häufigste und biologisch bedeutsamste anorganische Molekül auf der Erde. Das zentrale Sauerstoffatom trägt vier Elektronenpaare: zwei bindende und zwei nichtbindende. Nach dem VSEPR-Modell komprimiert sich der Bindungswinkel von theoretisch 109,5° auf **104,5°**. Die Sauerstoff-Wasserstoff-Bindung ist stark polar (ΔEN = 1,24), woraus ein permanentes Dipolmoment von **μ = 1,85 Debye (D)** resultiert.
+Wasser (H₂O) ist das häufigste und biologisch bedeutsamste anorganische Molekül auf der Erde. Der menschliche Körper besteht zu **60–70 %** aus Wasser — es ist Lösungsmittel, Reaktionsmedium, Transportvehikel und Temperaturpuffer in einem. Das zentrale Sauerstoffatom trägt vier Elektronenpaare: zwei bindende (zu den H-Atomen) und zwei nichtbindende (freie Elektronenpaare). Nach dem **VSEPR-Modell** (Valence Shell Electron Pair Repulsion) komprimieren die freien Elektronenpaare den Bindungswinkel von theoretisch 109,5° (Tetraeder) auf **104,5°**. Die Sauerstoff-Wasserstoff-Bindung ist stark polar (ΔEN = 1,24 nach Pauling), woraus ein permanentes Dipolmoment von **μ = 1,85 Debye (D)** resultiert — einer der höchsten Werte kleiner Moleküle.
+
+> **Merke:** Wasser hat eine gewinkelte Geometrie (104,5°), nicht linear wie CO₂. Die freien Elektronenpaare am O komprimieren den Winkel unter den Tetraederwinkel.
 
 ## Wasserstoffbrückenbindungen
 
-Jedes Wassermolekül kann bis zu **vier H-Brücken** ausbilden: zwei als Donor (H-Atome, δ+) und zwei als Akzeptor (freie Elektronenpaare am O, δ−). Energie je H-Brücke: ~20 kJ/mol. Dieses kooperative Netzwerk erklärt:
+Jedes Wassermolekül kann bis zu **vier H-Brücken** ausbilden: zwei als Donor (H-Atome, δ+) und zwei als Akzeptor (freie Elektronenpaare am O, δ−). Energie je H-Brücke: ~20 kJ/mol (zum Vergleich: kovalente O-H-Bindung ~460 kJ/mol). Dieses kooperative Netzwerk erklärt sämtliche anomalen physikalischen Eigenschaften:
 
-**Hoher Siedepunkt:** 100 °C trotz MW 18 g/mol. H₂S (34 g/mol, keine H-Brücken) siedet bei −60 °C. Das Brechen des H-Brücken-Netzwerks beim Verdampfen kostet viel Energie.
+| Eigenschaft | Wert | Vergleich / Bedeutung |
+|---|---|---|
+| Siedepunkt | 100 °C | H₂S (34 g/mol): −60 °C; ohne H-Brücken wäre Sdp. ~−80 °C |
+| Spez. Wärmekapazität | 4182 J/(kg·K) | Höchste aller gängigen Flüssigkeiten; puffert Körpertemperatur |
+| Verdampfungsenthalpie | ~2430 kJ/kg (37 °C) | 1 mL Schweiß entzieht ~2,4 kJ → effiziente Thermoregulation |
+| Oberflächenspannung | 72 mN/m | Kapillarkräfte im Xylem (bis 100 m), Alveolarstabilität |
+| Schmelzwärme | 334 kJ/kg | Eis → Wasser: hoher Energiebedarf für Phasenübergang |
 
-**Hohe spezifische Wärmekapazität:** c = 4182 J/(kg·K). Ein Körper mit 70 kg Wasser puffert Temperaturschwankungen außerordentlich gut.
+**Hoher Siedepunkt:** 100 °C trotz MW 18 g/mol. H₂S (34 g/mol, keine H-Brücken) siedet bei −60 °C — eine Differenz von 160 °C, die ausschließlich auf das H-Brücken-Netzwerk zurückzuführen ist.
 
-**Hohe Verdampfungsenthalpie:** ~2430 kJ/kg bei 37 °C. 1 mL verdunstender Schweiß entzieht dem Körper ~2,4 kJ — entscheidend für Thermoregulation.
+**Hohe spezifische Wärmekapazität:** c = 4182 J/(kg·K). Ein 70 kg schwerer Mensch mit ~42 kg Körperwasser kann erhebliche Wärmeproduktion (z. B. Sport: bis 800 W) abpuffern. Rechenbeispiel: 800 J/s × 60 s = 48 kJ → ΔT = 48000 / (42 × 4182) ≈ 0,27 °C pro Minute.
 
-**Hohe Oberflächenspannung:** γ = 72 mN/m. Ermöglicht Kapillarkräfte im Xylem (Wassertransport bis 100 m Höhe) und schützt Lungenalveolen (Surfactant senkt γ).
+**Hohe Verdampfungsenthalpie:** ~2430 kJ/kg bei 37 °C. 1 mL verdunstender Schweiß entzieht dem Körper ~2,4 kJ — entscheidend für Thermoregulation. Bei maximaler Schweißproduktion (~2 L/h) können ~1300 W Wärme abgeführt werden.
+
+**Hohe Oberflächenspannung:** γ = 72 mN/m. Ermöglicht Kapillarkräfte im Xylem (Wassertransport bis 100 m Höhe in Mammutbäumen) und schützt Lungenalveolen. Pulmonales **Surfactant** (Dipalmitoylphosphatidylcholin, DPPC) senkt γ und verhindert Alveolarkollaps beim Ausatmen. Frühgeborenen-Atemnotsyndrom (IRDS) entsteht bei Surfactant-Mangel.
 
 ## Dichteanomalie — Eis schwimmt
 
-Wasser hat seine **maximale Dichte bei 4 °C** (ρ = 1,000 kg/L). Eis (hexagonale Gitterstruktur) ist ~9 % weniger dicht (ρ = 0,917 kg/L) und schwimmt. Biologisch: Seen frieren von der Oberfläche; das 4 °C-Wasser am Boden bleibt flüssig — Organismen überleben den Winter.
+Wasser hat seine **maximale Dichte bei 4 °C** (ρ = 1,000 kg/L). Unterhalb von 4 °C beginnen die Moleküle, die geordnete hexagonale Gitterstruktur des Eises auszubilden — diese beansprucht mehr Volumen. Eis ist daher ~9 % weniger dicht (ρ = 0,917 kg/L) und schwimmt.
+
+**Biologische Bedeutung:**
+- Seen kühlen im Herbst von der Oberfläche ab; das 4 °C-Wasser sinkt auf den Boden
+- Eis bildet sich an der Oberfläche und isoliert das darunterliegende Wasser
+- Fische, Amphibien und Mikroorganismen überleben im 4 °C-Wasser am Seegrund
+- Ohne diese Anomalie würden Gewässer von unten gefrieren → Ausrottung aquatischen Lebens
+
+> **Merke:** Dichtemaximum bei 4 °C → Eis schwimmt → Seen frieren von oben → aquatisches Leben überlebt den Winter.
 
 ## Autoprotolysé und pH-Wert
 
+Wasser reagiert mit sich selbst (Autoprotolysé):
+
 **2 H₂O ⇌ H₃O⁺ + OH⁻**
 
-Ionenprodukt: **K_w = [H₃O⁺] · [OH⁻] = 1,0 × 10⁻¹⁴** (25 °C). Neutrales Wasser: [H₃O⁺] = [OH⁻] = 10⁻⁷ mol/L → pH = 7,0. Bei 37 °C: K_w ≈ 2,4 × 10⁻¹⁴ → Neutralpunkt pH ≈ 6,8. Wasser ist amphoter — je nach Partner Säure oder Base.
+Ionenprodukt: **K_w = [H₃O⁺] · [OH⁻] = 1,0 × 10⁻¹⁴** (25 °C). In reinem Wasser: [H₃O⁺] = [OH⁻] = 10⁻⁷ mol/L → pH = 7,0 (neutral bei 25 °C).
+
+K_w ist **temperaturabhängig** (Autoprotolysé ist endotherm, ΔH > 0):
+- Bei 37 °C (Körpertemperatur): K_w ≈ 2,4 × 10⁻¹⁴ → [H₃O⁺] = √(2,4 × 10⁻¹⁴) ≈ 1,55 × 10⁻⁷ → pH ≈ 6,8
+- „Neutral" bedeutet nicht automatisch pH 7, sondern [H₃O⁺] = [OH⁻]
+
+Wasser ist **amphoter** (Ampholyt) — je nach Reaktionspartner Säure oder Base:
+- Als Säure: H₂O + NH₃ → NH₄⁺ + OH⁻ (gibt H⁺ ab)
+- Als Base: H₂O + HCl → H₃O⁺ + Cl⁻ (nimmt H⁺ auf)
 
 ## Hydratation und Löslichkeit
 
-Wasser solvatisiert Ionen (Ion-Dipol-Wechselwirkung) und polare Moleküle (H-Brücken). ΔH_hyd(Na⁺) ≈ −406 kJ/mol, ΔH_hyd(Cl⁻) ≈ −363 kJ/mol. Der **hydrophobe Effekt** — entropisch getrieben — aggregiert apolare Moleküle und treibt Protein-Faltung und Membranbildung.`,
+Wasser solvatisiert Ionen durch **Ion-Dipol-Wechselwirkungen**: Der δ⁻-Sauerstoff orientiert sich zu Kationen, die δ⁺-Wasserstoffe zu Anionen. Hydratationsenthalpien: ΔH_hyd(Na⁺) ≈ −406 kJ/mol, ΔH_hyd(Cl⁻) ≈ −363 kJ/mol. Die Summe (−769 kJ/mol) überwindet die NaCl-Gitterenergie (−787 kJ/mol); der leicht endotherme Lösungsprozess (+4 kJ/mol) wird durch Entropiegewinn kompensiert. Polare organische Moleküle (Glucose, Ethanol, Harnstoff) werden über H-Brücken und Dipol-Dipol-WW gelöst.
+
+## Hydrophober Effekt
+
+Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in Wasser erzwingen geordnete Wasserkäfige (Clathrate) — ΔS_Wasser < 0 (ungünstig). Aggregation apolarer Gruppen minimiert die Kontaktfläche → geordnete Wassermoleküle werden freigesetzt → ΔS_gesamt > 0 → spontan (ΔG < 0).
+
+**Biologisch fundamental:**
+- Phospholipid-Doppelschichten: hydrophile Köpfe außen, hydrophobe Schwänze innen
+- Proteinfaltung: hydrophobe Aminosäuren im Inneren, hydrophile außen
+- Mizellbildung von Gallensalzen und Detergenzien
+
+> **Merke:** Hydrophober Effekt = entropischer Antrieb — apolare Gruppen aggregieren, um geordnete Wasserkäfige zu minimieren. Treibkraft für Membranbildung und Proteinfaltung.`,
       sections: [
         {
           heading: "Dipolcharakter und H-Brücken",
@@ -258,6 +311,19 @@ Die Dichteanomalie (Maximum bei 4 °C) lässt Eis schwimmen (9 % weniger dicht) 
     {
       id: "ch-9-02",
       title: "Kohlenstoff und seine Verbindungen",
+      stichworte: [
+        "Katenation",
+        "Hybridisierung sp3 sp2 sp",
+        "Diamant",
+        "Graphit",
+        "Graphen",
+        "Fullerene",
+        "CO₂ Bicarbonat-Puffer",
+        "CO Hämoglobin",
+        "Carboanhydrase",
+        "Henderson-Hasselbalch",
+        "Acetyl-CoA",
+      ],
       lernziele: [
         "Die vier Bindungspartner des Kohlenstoffs und die Strukturvielfalt durch Katenation erklären können",
         "Allotrope des Kohlenstoffs (Diamant, Graphit, Fulleren, Graphen) und ihre Eigenschaften ableiten",
@@ -267,36 +333,69 @@ Die Dichteanomalie (Maximum bei 4 °C) lässt Eis schwimmen (9 % weniger dicht) 
       ],
       content: `## Kohlenstoff — das Element des Lebens
 
-Kohlenstoff (C, Atomnr. 6, [He] 2s² 2p²) kann mit seinen **vier Valenzelektronen** vier kovalente Bindungen eingehen. Zusammen mit der Fähigkeit zur **Katenation** (Verkettung von C-Atomen) entsteht eine nahezu unbegrenzte strukturelle Vielfalt: sp³ (Tetraeder, 109,5°), sp² (planar, 120°) und sp (linear, 180°) Hybridisierungen.
+Kohlenstoff (C, Atomnr. 6, Elektronenkonfiguration [He] 2s² 2p²) kann mit seinen **vier Valenzelektronen** vier kovalente Bindungen eingehen. Zusammen mit der Fähigkeit zur **Katenation** (Verkettung von C-Atomen zu Ketten, Ringen und Verzweigungen) entsteht eine nahezu unbegrenzte strukturelle Vielfalt — die Grundlage der gesamten organischen Chemie.
+
+**Hybridisierungstypen und ihre Geometrie:**
+
+| Hybridisierung | Geometrie | Winkel | Beispiele |
+|---|---|---|---|
+| sp³ | Tetraeder | 109,5° | CH₄, C₂H₆, Diamant |
+| sp² | Trigonal-planar | 120° | C₂H₄ (Ethen), Graphit, Benzol |
+| sp | Linear | 180° | CO₂, C₂H₂ (Ethin), HCN |
+
+Die C-C-Einfachbindung hat eine Bindungsenergie von ~347 kJ/mol und eine Länge von 154 pm. C=C: ~614 kJ/mol, 134 pm. C≡C: ~839 kJ/mol, 120 pm. Die hohe Stabilität und kinetische Inertheit der C-C-Bindung gegenüber Hydrolyse macht Kohlenstoff zum bevorzugten Gerüstelement des Lebens.
+
+> **Merke:** Kohlenstoff: 4 Valenzelektronen → tetravalent → Katenation + drei Hybridisierungstypen → enorme Strukturvielfalt.
 
 ## Allotrope des Kohlenstoffs
 
-**Diamant (sp³):** Dreidimensionales Tetraedernetzwerk — härtestes natürliches Material (Mohs 10), elektrischer Isolator (alle Elektronen in σ-Bindungen), transparent. Bindungslänge C-C: 154 pm.
+Kohlenstoff kommt in mehreren Allotropen vor, deren Eigenschaften sich dramatisch unterscheiden — allein durch die Hybridisierung:
 
-**Graphit (sp²):** Planare hexagonale Schichten mit delokalisiertem π-System — guter elektrischer Leiter (parallel zur Schicht), weich (Van-der-Waals zwischen Schichten, 3,35 Å Abstand), schwarz-glänzend. Verwendung: Elektroden, Schmiermittel.
+**Diamant (sp³):** Dreidimensionales Tetraedernetzwerk — härtestes natürliches Material (Mohs 10), elektrischer Isolator (alle 4 Valenzelektronen in σ-Bindungen lokalisiert), transparent, höchste Wärmeleitfähigkeit. Bindungslänge C-C: 154 pm. Thermodynamisch metastabil (Graphit ist stabiler; ΔG°f = +2,9 kJ/mol), aber Umwandlung kinetisch gehemmt.
 
-**Graphen:** Einzelne Graphitschicht — außergewöhnliche elektrische Leitfähigkeit, 200× zugfester als Stahl, transparent. Nobelpreis Physik 2010 (Geim, Novoselov).
+**Graphit (sp²):** Planare hexagonale Schichten mit delokalisiertem π-System — guter elektrischer Leiter parallel zur Schicht (mobile π-Elektronen), weich senkrecht dazu (nur Van-der-Waals zwischen Schichten, 3,35 Å Abstand), schwarz-glänzend. C-C in Ebene: 142 pm. Verwendung: Elektroden, Schmiermittel, Bleistiftminen.
 
-**Fullerene (C₆₀):** Sphärische Käfige aus Fünf- und Sechsringen. Potenzielle Nanomedizin-Anwendungen (Wirkstofftransport, freie-Radikal-Fänger).
+**Graphen:** Einzelne Graphitschicht — außergewöhnliche elektrische Leitfähigkeit, 200× zugfester als Stahl, transparent. Nobelpreis Physik 2010 (Geim, Novoselov). Potenzielle Anwendungen: flexible Elektronik, Biosensoren, Wasserfilter.
+
+**Fullerene (C₆₀, „Buckyballs"):** Sphärische Käfige aus 12 Fünf- und 20 Sechsringen. Potenzielle Nanomedizin-Anwendungen (Wirkstofftransport, freie-Radikal-Fänger).
 
 ## CO₂ — Kohlenstoffdioxid
 
-CO₂ ist linear (sp, 180°) und apolar (die beiden C=O-Dipole kompensieren sich). Es entsteht als Endprodukt der aeroben Zellatmung und reagiert im Blut mit Wasser — katalysiert durch **Carboanhydrase** (kcat ~10⁶ s⁻¹):
+CO₂ ist **sp-hybridisiert** (linear, 180°) und apolar (die beiden C=O-Dipole kompensieren sich, Gesamtdipolmoment = 0). CO₂ entsteht als Endprodukt der aeroben Zellatmung und reagiert im Blut mit Wasser — katalysiert durch **Carboanhydrase** (eines der schnellsten Enzyme, kcat ~10⁶ s⁻¹):
 
 **CO₂ + H₂O ⇌ H₂CO₃ ⇌ HCO₃⁻ + H⁺**
 
-Das Bicarbonat-Puffersystem hält den Blut-pH bei 7,4:
-pH = pKa + log([HCO₃⁻] / [H₂CO₃]) = 6,1 + log(24/1,2) = 6,1 + 1,3 = **7,4**
+Das Bicarbonat-Puffersystem hält den Blut-pH bei 7,4. Rechenbeispiel (Henderson-Hasselbalch):
+pH = pKa + log([HCO₃⁻] / [H₂CO₃]) = 6,1 + log(24/1,2) = 6,1 + log(20) = 6,1 + 1,3 = **7,4**
+
+**CO₂-Transport im Blut** erfolgt über drei Wege:
+- ~70 % als HCO₃⁻ (via Chloride-Shift durch Band-3-Protein ins Plasma)
+- ~23 % als Carbaminohämoglobin (CO₂ bindet an NH₂-Gruppen des Hb)
+- ~7 % physikalisch gelöst
 
 Bei Hypoventilation steigt CO₂ → pH sinkt (respiratorische Azidose); bei Hyperventilation sinkt CO₂ → pH steigt (respiratorische Alkalose).
 
+> **Merke:** pH_Blut = 6,1 + log(24/1,2) = 7,4. Lunge reguliert CO₂ (schnell), Niere reguliert HCO₃⁻ (langsam).
+
 ## CO — Kohlenstoffmonoxid
 
-CO ist farb-, geruch- und geschmacklos — **extrem toxisch**. Es bindet an Hämoglobin mit **250× höherer Affinität** als O₂. HbCO kann kein O₂ transportieren. Zusätzlich verschiebt CO die O₂-Bindungskurve nach links (erhöhte Affinität verbleibender Hb-Einheiten) → O₂-Abgabe ans Gewebe unmöglich → histotoxische Hypoxie. CO hemmt auch Cytochrom-c-Oxidase (Komplex IV). **Behandlung:** 100 % O₂ (hyperbar bei schwerer Vergiftung).
+CO ist farb-, geruch- und geschmacklos — **extrem toxisch**. Es bindet an Hämoglobin mit **250× höherer Affinität** als O₂ und bildet Carboxyhämoglobin (HbCO). HbCO kann kein O₂ transportieren (funktionelle Anämie). Zusätzlich verschiebt CO die O₂-Bindungskurve nach links → O₂-Abgabe ans Gewebe praktisch unmöglich → histotoxische Hypoxie. CO hemmt auch Cytochrom-c-Oxidase (Komplex IV).
+
+**Klinische Zeichen:** Kopfschmerz, Schwindel, Übelkeit; kirschrote Haut (HbCO — Spätzeichen). Diagnose: Co-Oximetrie.
+
+**Behandlung:** 100 % O₂ (Verdrängung durch Massenwirkungsgesetz); hyperbar bei schwerer Vergiftung. HWZ von HbCO: ~300 min (Raumluft), ~60 min (100 % O₂), ~20 min (hyperbar).
 
 ## Carbonate und Metabolismus
 
-CaCO₃ (Calciumcarbonat) bildet Knochen (zusammen mit Hydroxylapatit), Marmor und Muschelschalen. Metabolisch zentral: **Pyruvat** (Endprodukt Glykolyse → PDH → Acetyl-CoA), **Acetyl-CoA** (Schnittstelle: Glykolyse, β-Oxidation, Zitratzyklus), **Citrat** (Inhibitor der Phosphofructokinase), **Malonyl-CoA** (Fettsäuresynthese, inhibiert CPT-1).`,
+**CaCO₃ (Calciumcarbonat)** bildet zusammen mit Hydroxylapatit die mineralische Matrix der Knochen und Zähne. CaCO₃ findet sich auch in Marmor, Kalkstein und Muschelschalen.
+
+Metabolisch zentrale Kohlenstoffverbindungen:
+- **Pyruvat:** Endprodukt der Glykolyse → PDH-Komplex (irreversibel) → Acetyl-CoA
+- **Acetyl-CoA:** Zentrale Schnittstelle — Glykolyse, β-Oxidation, Aminosäureabbau → Zitratzyklus
+- **Citrat:** Erster Metabolit im Zitratzyklus; allosterischer Inhibitor der PFK-1
+- **Malonyl-CoA:** Substrat der Fettsäuresynthese; inhibiert CPT-1 (blockiert FA-Import ins Mitochondrium)
+
+> **Merke:** Acetyl-CoA = Drehkreuz des Energiestoffwechsels — Glykolyse, β-Oxidation und Aminosäureabbau münden hier ein.`,
       sections: [
         {
           heading: "Allotrope des Kohlenstoffs",
@@ -479,6 +578,19 @@ Das Bicarbonat-Puffersystem (pKa = 6,1) hält arteriellen Blut-pH bei 7,40: pH =
     {
       id: "ch-9-03",
       title: "Stickstoff, Schwefel und Halogene",
+      stichworte: [
+        "Haber-Bosch-Prozess",
+        "NO Stickstoffmonoxid",
+        "Nitrogenase",
+        "Disulfidbrücken",
+        "H₂S Toxizität",
+        "Kontaktverfahren H₂SO₄",
+        "Halogene Oxidationskraft",
+        "Fluorapatit Kariesprophylaxe",
+        "Iod Schilddrüse T3 T4",
+        "Königswasser",
+        "Salpetersäure HNO₃",
+      ],
       lernziele: [
         "Die industrielle Bedeutung des Stickstoffs (Haber-Bosch) und seine Rolle in Aminosäuren und Nukleotiden erklären",
         "Schwefelverbindungen (H₂S, SO₂, SO₃, H₂SO₄) beschreiben; Schwefel in biologischen Molekülen benennen",
@@ -488,37 +600,58 @@ Das Bicarbonat-Puffersystem (pKa = 6,1) hält arteriellen Blut-pH bei 7,40: pH =
       ],
       content: `## Stickstoff (N) — das häufigste Atmosphärengas
 
-Stickstoff macht **78 % der Erdatmosphäre** aus. Das N₂-Molekül besitzt eine Dreifachbindung (N≡N, 945 kJ/mol — eine der stärksten Bindungen überhaupt) und ist daher extrem reaktionsträge.
+Stickstoff macht **78 % der Erdatmosphäre** aus und ist damit das häufigste Gas. Das N₂-Molekül besitzt eine Dreifachbindung (N≡N, 945 kJ/mol — eine der stärksten Bindungen überhaupt) und ist daher extrem reaktionsträge. Stickstoff ist Bestandteil aller Aminosäuren, Nukleotide und zahlreicher Cofaktoren — ein unverzichtbares Bioelement.
 
-**Stickstoffixierung:**
-- **Biologisch:** Nitrogenase (Rhizobien in Leguminosen-Wurzelknöllchen): N₂ + 8H⁺ + 8e⁻ + 16 ATP → 2 NH₃ + H₂ + 16 ADP + 16 Pi
-- **Industriell (Haber-Bosch):** N₂ + 3 H₂ ⇌ 2 NH₃; 400–500 °C, 150–300 bar, Fe/K₂O/Al₂O₃-Katalysator; ~15–25 % Gleichgewichtsausbeute (Kompromiss: hoher Druck + mittlere T). Versorgt ~50 % der Weltbevölkerung mit Stickstoffdünger.
+**Stickstoffixierung — zwei Wege:**
+- **Biologisch:** Nitrogenase (Rhizobien in Leguminosen-Wurzelknöllchen): N₂ + 8H⁺ + 8e⁻ + 16 ATP → 2 NH₃ + H₂ + 16 ADP + 16 Pi. Der hohe ATP-Verbrauch spiegelt die Aktivierungsenergie wider, die zum Brechen der N≡N-Bindung nötig ist.
+- **Industriell (Haber-Bosch):** N₂ + 3 H₂ ⇌ 2 NH₃; 400–500 °C, 150–300 bar, Fe/K₂O/Al₂O₃-Katalysator; ~15–25 % Gleichgewichtsausbeute (Kompromiss zwischen Kinetik und Thermodynamik nach Le Chatelier). Versorgt ~50 % der Weltbevölkerung mit Stickstoffdünger — die wichtigste chemische Reaktion der Menschheitsgeschichte.
 
-**NO (Stickstoffmonoxid):** Endogener Signalstoff aus L-Arginin (NO-Synthase, NOS) → aktiviert lösliche Guanylatzyklase → cGMP → Vasodilatation. Pharmazeutisch: Nitrate (Glycerintrinitrat) → NO → Antiangina-Therapie. PDE5-Hemmer (Sildenafil) hemmen cGMP-Abbau → Verstärkung des NO-Effekts.
+> **Merke:** Haber-Bosch-Kompromiss: Exotherme Reaktion (ΔH = −92 kJ/mol) + Volumenabnahme (4 → 2 mol Gas) → niedrige T und hoher Druck begünstigen NH₃, aber niedrige T macht Reaktion zu langsam → 400–500 °C + 150–300 bar + Fe-Katalysator.
 
-**NH₃:** Pyramidale Geometrie (sp³), toxisch als NH₄⁺ im Blut; im Harnstoffzyklus entgiftet. Leberversagen → Hyperammonämie → hepatische Enzephalopathie.
+**NO (Stickstoffmonoxid):** Endogener Signalstoff, gebildet aus L-Arginin durch **NO-Synthase (NOS)** in drei Isoformen (nNOS/neuronal, eNOS/endothelial, iNOS/induzierbar). NO aktiviert lösliche Guanylatzyklase → cGMP ↑ → Proteinkinase G → Vasodilatation der glatten Muskulatur. Pharmazeutisch: Glycerintrinitrat (Nitroglyzerin) → NO → Antiangina-Therapie (Koronargefäßerweiterung, Vorlastsenkung). PDE5-Hemmer (Sildenafil, Tadalafil) hemmen cGMP-Abbau → Verstärkung des NO-Effekts → Einsatz bei erektiler Dysfunktion und pulmonaler arterieller Hypertonie.
 
-**Salpetersäure (HNO₃):** Starke Säure + starkes Oxidationsmittel. Konz. HNO₃ + Metall → NO₂ (braun); verd. HNO₃ + Metall → NO (farblos). Königswasser: 3 HCl + 1 HNO₃ → löst Au und Pt.
+**NH₃ (Ammoniak):** Pyramidale Geometrie (sp³, Bindungswinkel 107°), stark riechend. Im Blut toxisch als NH₄⁺: stört Glutamat/GABA-Gleichgewicht im ZNS. Entgiftung im **Harnstoffzyklus** (Leber): 2 NH₃ + CO₂ + 3 ATP → Harnstoff (H₂N-CO-NH₂) + H₂O + 3 ADP. Leberversagen → Hyperammonämie → hepatische Enzephalopathie (Bewusstseinsstörungen, Asterixis).
+
+**Salpetersäure (HNO₃):** Starke Säure (pKa ≈ −1,4) + starkes Oxidationsmittel (N in OZ +5). Konz. HNO₃ + Metall → NO₂ (braunes Gas, N: +4); verd. HNO₃ + Metall → NO (farbloses Gas, N: +2). **Königswasser:** 3 HCl + 1 HNO₃ → löst Au und Pt durch Bildung von [AuCl₄]⁻- und [PtCl₆]²⁻-Komplexen. Fe und Al werden durch konz. HNO₃ **passiviert** (schützende Oxidschicht).
 
 ## Schwefel (S) — das Bio-Element
 
-Schwefel ist ein wichtiges Bioelement in **Methionin** (Thioether, −S−) und **Cystein** (Thiol, −SH). Disulfidbrücken (Cys–S–S–Cys) stabilisieren Proteinstrukturen (Antikörper, Insulin, Keratin). Coenzym A trägt −SH als reaktives Zentrum für Acylübertragungen.
+Schwefel (Atomnr. 16, Gruppe 16) ist ein essenzielles Bioelement. Es kommt in zwei der 20 proteinogenen Aminosäuren vor:
+- **Methionin:** Thioether (−S−), Methyl-Donor als S-Adenosylmethionin (SAM)
+- **Cystein:** Thiol (−SH), bildet **Disulfidbrücken** (Cys–S–S–Cys) durch Oxidation
 
-**H₂S:** Faulende-Eier-Geruch bei niedrigen Konzentrationen; ab ~100 ppm Geruchslähmung (Olfaktorius-Paralyse) — tückische Warneigenschaft! Hemmt Cytochrom-c-Oxidase (Komplex IV) analog zu HCN → histotoxische Hypoxie. Endogen auch vasodilatatorisch.
+Disulfidbrücken stabilisieren die Tertiär- und Quartärstruktur von Proteinen (Antikörper, Insulin mit 3 S-S-Brücken, Keratin im Haar). **Coenzym A** trägt eine −SH-Gruppe als reaktives Zentrum für Acylübertragungen (Acetyl-CoA, Malonyl-CoA).
 
-**SO₂:** Reizgas, Luftschadstoff, Konservierungsmittel (E220), Asthmaprovokator; + H₂O → H₂SO₃.
+**H₂S (Schwefelwasserstoff):** Faulende-Eier-Geruch bei niedrigen Konzentrationen (0,01–10 ppm); ab **~100 ppm Geruchslähmung** (Olfaktorius-Paralyse) — extrem tückisch, weil die Warnung durch Geruch wegfällt! Hemmt **Cytochrom-c-Oxidase (Komplex IV)** analog zu HCN → histotoxische Hypoxie → Bewusstlosigkeit, Atemstillstand. Tückisch in Güllekellern und Kanalschächten. Endogen wirkt H₂S in niedrigen Konzentrationen vasodilatatorisch (gasförmiger Signalstoff neben NO und CO).
 
-**H₂SO₄ (Kontaktverfahren):** S → SO₂ → SO₃ (V₂O₅, 400–600 °C) → Oleum (SO₃ + H₂SO₄) → + H₂O → H₂SO₄. pKa1 <<0, pKa2 ≈ 1,99. Ausgeprägt hygroskopisch und dehydratisierend (konzentriert karbonisiert Zucker, verursacht schwere Verätzungen).
+**SO₂ (Schwefeldioxid):** Reizgas, Luftschadstoff (saurer Regen: SO₂ + H₂O → H₂SO₃), Konservierungsmittel (E220), **Asthmaprovokator** bei empfindlichen Personen.
+
+**H₂SO₄ (Schwefelsäure) — Kontaktverfahren:** Mengenmäßig wichtigste Industriechemikalie (~250 Mio. t/Jahr weltweit):
+1. S + O₂ → SO₂ (Schwefelverbrennung oder Pyrit-Röstung)
+2. 2 SO₂ + O₂ → 2 SO₃ (V₂O₅-Katalysator, 400–600 °C; >98 % Ausbeute)
+3. SO₃ + konz. H₂SO₄ → Oleum (H₂S₂O₇) — nicht direkt + H₂O (Aerosol-Problem!)
+4. Oleum + H₂O → 2 H₂SO₄
+
+pKa1 <<0 (starke erste Stufe), pKa2 ≈ 1,99. Konzentrierte H₂SO₄ ist **hygroskopisch** und **dehydratisierend** (karbonisiert Zucker zu schwarzem Kohlenstoff, verursacht schwere Verätzungen).
 
 ## Halogene — Gruppe 17
 
-**Oxidationskraft:** F₂ (E° +2,87 V) > Cl₂ (+1,36 V) > Br₂ (+1,07 V) > I₂ (+0,54 V) — abnehmend von oben nach unten.
+Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel mit abnehmender Oxidationskraft von oben nach unten:
 
-**Fluor (F):** Elektronegativstes Element (EN = 3,98). F⁻ ersetzt OH⁻ in Hydroxylapatit → Fluorapatit (Ca₁₀(PO₄)₆F₂) — säurefester → **Kariesprophylaxe**. Fluorose bei Überversorgung.
+| Halogen | E° (V) | Aggregatzustand (RT) | Medizinische Relevanz |
+|---|---|---|---|
+| F₂ | +2,87 | Gas (hellgelb) | Fluorapatit → Kariesprophylaxe |
+| Cl₂ | +1,36 | Gas (gelbgrün) | Desinfektion (HClO), Magensäure (HCl) |
+| Br₂ | +1,07 | Flüssigkeit (braun) | Bromide als Sedativa (historisch) |
+| I₂ | +0,54 | Feststoff (sublimiert violett) | Schilddrüsenhormone T₃/T₄ |
 
-**Chlor (Cl):** Gelbgrünes Gas. Cl₂ + H₂O → HCl + HClO (Hypochlorige Säure, starkes Oxidationsmittel) → **Desinfektion** (Trinkwasser, Schwimmbäder). NaOCl = Bleichmittel. Cl⁻: wichtigstes extrazelluläres Anion (~105 mmol/L), an Magensäure-Produktion beteiligt.
+**Fluor (F):** Elektronegativstes Element aller (EN = 3,98 nach Pauling). F⁻ ersetzt OH⁻ in Hydroxylapatit → **Fluorapatit** (Ca₁₀(PO₄)₆F₂) — säurefester als Hydroxylapatit (pH < 4,5 statt < 5,5 für Demineralisierung) → **Kariesprophylaxe**. Fluorose (weiße Flecken bis Braunverfärbung) bei chronischer Überversorgung.
 
-**Iod (I):** Sublimiert bei RT, violetter Dampf. I₂ + Stärke → blauviolett (Iod-Stärke-Nachweis). **Schilddrüse:** I⁻ wird durch Na⁺/I⁻-Symporter aufgenommen → Thyreoperoxidase (TPO) oxidiert I⁻ → I₂ (mit H₂O₂) → Iodierung von Thyreoglobulin-Tyrosinen → MIT (1 I), DIT (2 I) → Kopplung → T₃ (3 I, aktiv) und T₄ (4 I, Prohormon). Iodmangel → Struma, Kretinismus. Methimazol/PTU hemmen TPO — Thyreostatika.`,
+**Chlor (Cl):** Cl₂ + H₂O → HCl + HClO (Hypochlorige Säure) → starkes Oxidationsmittel → **Desinfektion** (Trinkwasser, Schwimmbäder, Wundreinigung). NaOCl = Bleichmittel (Eau de Javel). Cl⁻ ist das wichtigste extrazelluläre Anion (~105 mmol/L) und essenziell für die HCl-Produktion in Belegzellen des Magens (pH ≈ 1–2).
+
+**Iod (I):** Sublimiert bei Raumtemperatur zu violettem Dampf. I₂ + Stärke → blauviolette Färbung (**Iod-Stärke-Nachweis** — Nachweisreaktion). **Schilddrüsenhormonsynthese:** I⁻ wird durch den Na⁺/I⁻-Symporter (NIS) aktiv aufgenommen → **Thyreoperoxidase (TPO)** oxidiert I⁻ zu I₂ (mit H₂O₂) → Iodierung von Thyreoglobulin-Tyrosinen → MIT (1 I), DIT (2 I) → Kopplung: MIT + DIT → **T₃** (Trijodthyronin, 3 I, biologisch aktiv); DIT + DIT → **T₄** (Thyroxin, 4 I, Prohormon). Iodmangel → Struma (Kropf), bei fetalem Mangel → Kretinismus. **Thyreostatika:** Methimazol und PTU hemmen TPO. Hochdosiertes Kaliumiodid bei Nuklearunfällen blockiert die Aufnahme von radioaktivem ¹³¹I.
+
+> **Merke:** Halogene Oxidationskraft: F₂ > Cl₂ > Br₂ > I₂ — abnehmendes E° in Gruppe 17 von oben nach unten. F⁻ für Zähne, I⁻ für Schilddrüse, Cl⁻ für Magensäure.`,
       sections: [
         {
           heading: "Stickstoff: Haber-Bosch und NO-Signaling",
@@ -737,6 +870,18 @@ Iodüberversorgung: Jod-Basedow-Phänomen (Hyperthyreose bei vorbestehender Stru
     {
       id: "ch-10-01",
       title: "Säure-Base-Definitionen und pH-Wert",
+      stichworte: [
+        "Arrhenius-Definition",
+        "Brønsted-Lowry Protonendonor",
+        "Lewis-Säure Elektronenpaarakzeptor",
+        "Korrespondierendes Säure-Base-Paar",
+        "Ampholyt",
+        "Autoprotolysé",
+        "Ionenprodukt Kw",
+        "pH-Wert Berechnung",
+        "pH + pOH = 14",
+        "Blut-pH 7,35-7,45",
+      ],
       content: `# Säure-Base-Definitionen und pH-Wert
 
 ## Historische Entwicklung der Säure-Base-Theorie
@@ -1028,6 +1173,18 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
     {
       id: "ch-10-02",
       title: "Starke und schwache Säuren/Basen – Ka, Kb, pKa",
+      stichworte: [
+        "Starke Säure vollständige Dissoziation",
+        "Schwache Säure Gleichgewicht",
+        "Säurekonstante Ka",
+        "pKa-Wert Säurestärke",
+        "pH schwache Säure Näherung",
+        "Mehrprotonige Säuren",
+        "Phosphorsäure pKa-Stufen",
+        "Kohlensäure pKa",
+        "pKa + pKb = 14",
+        "Dissoziationsgrad",
+      ],
       content: `# Starke und schwache Säuren/Basen: Ka, Kb, pKa
 
 ## Starke Säuren: Vollständige Dissoziation
@@ -1110,9 +1267,36 @@ Beziehung zwischen korrespondierendem Paar: **pKa(Säure) + pKb(korr. Base) = pK
 
 Beispiel: NH₃ hat pKb = 4,75 → korrespondierende Säure NH₄⁺ hat pKa = 9,25.
 
+## Dissoziationsgrad α
+
+Der **Dissoziationsgrad α** gibt an, welcher Anteil der eingesetzten Säure tatsächlich dissoziiert ist:
+
+**α = [H₃O⁺] / c₀**
+
+Für starke Säuren: α ≈ 1 (100 % dissoziiert). Für schwache Säuren: α << 1. Beispiel: 0,1 mol/L Essigsäure hat [H₃O⁺] = 1,33 × 10⁻³ mol/L → α = 0,0133 = **1,33 %** — nur jedes 75. Molekül ist dissoziiert.
+
+> **Merke:** α steigt bei Verdünnung (Le Chatelier: Gleichgewicht verschiebt sich zur dissoziierten Seite). Verdünnt man Essigsäure auf 10⁻⁵ mol/L, steigt α auf ~42 %.
+
+## Salze schwacher Säuren/Basen — Hydrolyse
+
+Die Lösung eines Salzes kann sauer, basisch oder neutral reagieren, abhängig davon, ob Kation und/oder Anion aus schwachen Säuren/Basen stammen:
+
+| Salz von | Reaktion in Lösung | Beispiel |
+|---|---|---|
+| Starke Säure + starke Base | Neutral (pH ≈ 7) | NaCl |
+| Schwache Säure + starke Base | Basisch (pH > 7) | CH₃COONa |
+| Starke Säure + schwache Base | Sauer (pH < 7) | NH₄Cl |
+| Schwache Säure + schwache Base | Abhängig von pKa/pKb | CH₃COONH₄ |
+
+Natriumacetat (CH₃COONa) reagiert basisch, weil Acetat als konjugierte Base der schwachen Essigsäure Protonen aus dem Wasser aufnimmt: CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻.
+
 ## Klinische Relevanz
 
-Im Blut agieren viele biologisch wichtige Moleküle als schwache Säuren oder Basen: CO₂/H₂CO₃ (pKa ≈ 6,1 im physiologischen Kontext), Phosphat (pKa2 ≈ 7,2), Proteine (Histidinreste pKa ≈ 6). Diese schwachen Säure-Base-Paare bilden die Grundlage der Puffersysteme des Blutes.`,
+Im Blut agieren viele biologisch wichtige Moleküle als schwache Säuren oder Basen: CO₂/H₂CO₃ (pKa ≈ 6,1 im physiologischen Kontext), Phosphat (pKa2 ≈ 7,2), Proteine (Histidinreste pKa ≈ 6). Diese schwachen Säure-Base-Paare bilden die Grundlage der Puffersysteme des Blutes.
+
+Die **Magensäure** (HCl, pH ≈ 1–2) ist die einzige starke Säure im Körper und wird von Belegzellen durch aktiven H⁺/K⁺-ATPase-Transport sezerniert. Protonenpumpeninhibitoren (PPI wie Omeprazol) hemmen dieses Enzym und erhöhen den Magen-pH — Standardtherapie bei Refluxerkrankung und Magenulzera.
+
+> **Merke:** pKa + pKb = 14 (bei 25 °C) für jedes korrespondierende Säure-Base-Paar. Starke Säure → schwache korrespondierende Base. Schwache Säure → starke korrespondierende Base.`,
       lernziele: [
         "Den Unterschied zwischen starken und schwachen Säuren anhand der Dissoziation und Ka/pKa erklären",
         "Den pH starker Säuren und Basen direkt berechnen",
@@ -1332,6 +1516,18 @@ Im Blut agieren viele biologisch wichtige Moleküle als schwache Säuren oder Ba
     {
       id: "ch-10-03",
       title: "Puffersysteme und Henderson-Hasselbalch",
+      stichworte: [
+        "Henderson-Hasselbalch-Gleichung",
+        "Pufferbereich pKa ± 1",
+        "Pufferkapazität",
+        "Carbonat-Puffersystem",
+        "Bicarbonat HCO₃⁻",
+        "Phosphatpuffer",
+        "Proteinpuffer Hämoglobin",
+        "Azidose Alkalose",
+        "Lunge CO₂ Regulation",
+        "Niere HCO₃⁻ Regulation",
+      ],
       content: `# Puffersysteme und die Henderson-Hasselbalch-Gleichung
 
 ## Was ist ein Puffer?
@@ -1618,6 +1814,19 @@ Der Carbonat-Puffer kann versagen, wenn:
     {
       id: "ch-10-04",
       title: "Titrationskurven, Indikatoren und klinische Anwendung",
+      stichworte: [
+        "Äquivalenzpunkt",
+        "Halbäquivalenzpunkt pH = pKa",
+        "Phenolphthalein",
+        "Methylorange",
+        "Titrationskurve",
+        "Respiratorische Azidose",
+        "Metabolische Azidose",
+        "Kussmaul-Atmung",
+        "Blutgasanalyse BGA",
+        "Anionenlücke",
+        "Kompensationsmechanismen",
+      ],
       content: `# Titrationskurven, Indikatoren und klinische Anwendung
 
 ## Grundprinzip der Titration
@@ -1930,6 +2139,18 @@ Der normale Blut-pH liegt bei **7,35–7,45**. Vier primäre Störungen sind zu 
     {
       id: "ch-11-01",
       title: "Oxidation und Reduktion — Grundlagen",
+      stichworte: [
+        "OIL RIG Elektronentransfer",
+        "Oxidationszahlen",
+        "Reduktionsmittel Oxidationsmittel",
+        "Halbreaktion-Methode",
+        "KMnO₄ Permanganat",
+        "Disproportionierung",
+        "Komproportionierung",
+        "NADH FADH₂ Atmungskette",
+        "Vitamin C Antioxidans",
+        "Redox-Gleichung ausgleichen",
+      ],
       content: `## Definitionen: OIL RIG
 
 Oxidation und Reduktion sind die grundlegendsten Elektronenübertragungsreaktionen der Chemie. Die Eselsbrücke **OIL RIG** fasst beide Prozesse zusammen: **O**xidation **I**s **L**oss (Oxidation = Elektronenverlust), **R**eduction **I**s **G**ain (Reduktion = Elektronengewinn). Beide Prozesse laufen stets gleichzeitig und gekoppelt ab — es kann keine Oxidation ohne gleichzeitige Reduktion geben.
@@ -2172,6 +2393,18 @@ Bei der **Komproportionierung** (Synproportionierung) reagieren zwei verschieden
     {
       id: "ch-11-02",
       title: "Elektrochemie — Galvanische Zellen und Elektrolyse",
+      stichworte: [
+        "Galvanische Zelle",
+        "Anode Kathode AnOx RedKat",
+        "Standardelektrodenpotenzial E°",
+        "Daniell-Element Zn/Cu",
+        "Zellspannung Berechnung",
+        "ΔG = −nFE°",
+        "Faraday-Gesetz Elektrolyse",
+        "Spannungsreihe",
+        "Blei-Akkumulator",
+        "Brennstoffzelle",
+      ],
       content: `## Galvanische Zellen (Voltasche Elemente)
 
 Eine galvanische Zelle wandelt chemische Energie spontan in elektrische Energie um. Sie besteht aus zwei **Halbzellen** (Elektroden), die durch eine Salzbrücke oder ein Diaphragma verbunden sind. An der **Anode** findet Oxidation statt (das Metall löst sich auf oder Anionen werden oxidiert), an der **Kathode** findet Reduktion statt (Kationen werden abgeschieden).
@@ -2226,7 +2459,36 @@ Bei der Elektrolyse wird eine nicht-spontane Redox-Reaktion durch externe elektr
 - Entladen (Kathode): PbO₂ + 4H⁺ + SO₄²⁻ + 2e⁻ → PbSO₄ + 2H₂O
 - Laden: Reaktionen umgekehrt, PbSO₄ → Pb und PbO₂
 
-**Brennstoffzellen:** H₂ + ½O₂ → H₂O mit direkter elektrischer Energiegewinnung (Wirkungsgrad bis 60%), ideal für CO₂-freie Energieerzeugung.`,
+**Brennstoffzellen:** H₂ + ½O₂ → H₂O mit direkter elektrischer Energiegewinnung (Wirkungsgrad bis 60%), ideal für CO₂-freie Energieerzeugung.
+
+> **Merke:** AnOx RedKat: Anode = Oxidation, Kathode = Reduktion — gilt sowohl in galvanischen Zellen als auch bei der Elektrolyse. In der galvanischen Zelle ist die Anode negativ, bei der Elektrolyse positiv (umgekehrte Polarität).
+
+## Korrosion — elektrochemische Zerstörung
+
+Korrosion ist eine unerwünschte galvanische Reaktion: Ein Metall (z. B. Eisen) wird in Gegenwart von Wasser und O₂ oxidiert: Fe → Fe²⁺ + 2e⁻ (Anode); O₂ + 2H₂O + 4e⁻ → 4OH⁻ (Kathode). Fe²⁺ und OH⁻ bilden Fe(OH)₂, das zu Fe₂O₃·xH₂O (Rost) weiteroxidiert.
+
+**Korrosionsschutz:**
+- **Kathodischer Schutz:** Opferanode aus unedlerem Metall (Zn an Stahlschiffen, Mg an Pipelines) — das unedlere Metall wird bevorzugt oxidiert
+- **Verzinkung:** Zn-Überzug schützt selbst bei Beschädigung (Zn als Opferanode)
+- **Passivierung:** Aluminium bildet eine dichte Al₂O₃-Schicht (selbstschützend)
+- **Lacke und Beschichtungen:** Verhindern Kontakt mit Elektrolyt
+
+## Rechenbeispiel: ΔG° aus Zellspannung
+
+Daniell-Element (Zn/Cu): E°Zelle = +1,10 V, n = 2 Elektronen.
+
+ΔG° = −n · F · E°Zelle = −2 × 96485 C/mol × 1,10 V = −212267 J/mol ≈ **−212 kJ/mol**
+
+Negativer ΔG°-Wert bestätigt: Die Reaktion Zn + Cu²⁺ → Zn²⁺ + Cu ist spontan und exergon. Verknüpfung mit Gleichgewichtskonstante: ln(K) = nFE°/(RT) → K = e^(2 × 96485 × 1,10 / (8,314 × 298)) ≈ 10³⁷ (praktisch vollständig).
+
+## Medizinische Anwendungen der Elektrochemie
+
+- **Herzschrittmacher:** Lithium-Iodid-Primärbatterien (5–10 Jahre Lebensdauer) oder Li-Ionen-Akkus
+- **Blutgasanalyse:** Potentiometrische pH- und pO₂-Elektroden basieren auf Standardelektrodenpotenzial-Prinzipien
+- **Defibrillator-Implantate:** Hohe Energiedichte durch Li-Ionen-Technologie
+- **Galvanik in der Zahnmedizin:** Verschiedene Metalle im Mund (Gold, Amalgam) können galvanische Elemente bilden → Galvanischer Geschmack
+
+> **Merke:** E°Zelle = E°Kathode − E°Anode. Positiv = spontan (ΔG° < 0). Je größer E°Zelle, desto mehr nutzbare elektrische Energie.`,
       lernziele: [
         "Aufbau und Funktionsweise galvanischer Zellen erläutern und Anode/Kathode zuordnen",
         "Standardelektrodenpotenziale lesen, interpretieren und zur Vorhersage spontaner Redox-Reaktionen nutzen",
@@ -2428,6 +2690,18 @@ Bei der Elektrolyse wird eine nicht-spontane Redox-Reaktion durch externe elektr
     {
       id: "ch-11-03",
       title: "Nernst-Gleichung und Elektrochemisches Gleichgewicht",
+      stichworte: [
+        "Nernst-Gleichung",
+        "Reaktionsquotient Q",
+        "Nernst-Faktor 59,16 mV",
+        "Glaselektrode pH-Messung",
+        "Gleichgewichtskonstante aus E°",
+        "Konzentrationszelle",
+        "Nernst-Potenzial biologisch",
+        "Ruhemembranpotenzial",
+        "Goldman-Gleichung",
+        "K⁺-Nernst −90 mV",
+      ],
       content: `## Die Nernst-Gleichung
 
 Das Standardelektrodenpotenzial E° gilt nur unter Standardbedingungen (25 °C, alle Konzentrationen 1 mol/L, Gasdruck 1 atm). Unter realen Bedingungen wird das tatsächliche Elektrodenpotenzial E durch die **Nernst-Gleichung** beschrieben:
@@ -2679,6 +2953,19 @@ Die Henderson-Hasselbalch-Gleichung pH = pKa + log([A⁻]/[HA]) lässt sich dire
     {
       id: "ch-11-04",
       title: "Oxidativer Stress, ROS und biologische Redox-Systeme",
+      stichworte: [
+        "Reaktive Sauerstoffspezies ROS",
+        "Superoxid O₂·⁻",
+        "Hydroxyl-Radikal Fenton",
+        "Superoxiddismutase SOD",
+        "Katalase",
+        "Glutathion GSH GPx",
+        "NADPH Pentosephosphatweg",
+        "G6PD-Mangel",
+        "Vitamin E Membranschutz",
+        "Lipidperoxidation",
+        "Oxidativer Burst NADPH-Oxidase",
+      ],
       content: `## Reaktive Sauerstoffspezies (ROS)
 
 Reaktive Sauerstoffspezies (ROS, englisch: Reactive Oxygen Species) sind hochreaktive, sauerstoffhaltige Moleküle, die in der Lage sind, zelluläre Biomoleküle zu oxidieren und zu schädigen. Sie entstehen als unvermeidliche Nebenprodukte des aeroben Stoffwechsels, aber auch gezielt durch Immunzellen zur Pathogenabwehr.

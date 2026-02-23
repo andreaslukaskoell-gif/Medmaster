@@ -13,9 +13,23 @@ export const physKap3: Kapitel = {
     {
       id: "ph-3-01",
       title: "Harmonische Schwingungen",
+      stichworte: [
+        "Harmonische Schwingung",
+        "Amplitude",
+        "Kreisfrequenz",
+        "Periodendauer",
+        "Fadenpendel",
+        "Federpendel",
+        "Isochronie",
+        "Resonanz",
+        "Dämpfung",
+        "Rückstellkraft",
+        "Energieerhaltung",
+        "Schwingungsenergie",
+      ],
       content: `# Harmonische Schwingungen
 
-Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschreibt die zeitliche Auslenkung eines Körpers um eine Gleichgewichtslage. Das mathematische Modell ist eine Sinus- oder Kosinusfunktion:
+Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschreibt die zeitliche Auslenkung eines Körpers um eine Gleichgewichtslage. Die Rückstellkraft ist dabei stets proportional zur Auslenkung und dieser entgegengerichtet: **F = −k·x** (Hooke'sches Gesetz). Das mathematische Modell ist eine Sinus- oder Kosinusfunktion:
 
 **x(t) = A · cos(ωt + φ₀)**
 
@@ -25,19 +39,35 @@ Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschrei
 - **f** (Frequenz) – Anzahl der Schwingungen pro Sekunde [Hz = 1/s]
 - **φ₀** (Anfangsphase) – bestimmt den Zustand zur Zeit t = 0
 
+> **Merke:** Die Kreisfrequenz ω = 2πf = 2π/T ist die zentrale Verknüpfungsgrösse zwischen allen Schwingungsparametern. Sie gibt an, welchen Winkel (in Radiant) die Schwingung pro Sekunde durchläuft.
+
 Aus der Auslenkungsfunktion lassen sich Geschwindigkeit und Beschleunigung durch Ableitung gewinnen:
 - v(t) = −A·ω·sin(ωt + φ₀)  →  v_max = A·ω (bei Durchgang durch Ruhelage)
-- a(t) = −A·ω²·cos(ωt + φ₀) = −ω²·x(t)
+- a(t) = −A·ω²·cos(ωt + φ₀) = −ω²·x(t)  →  a_max = A·ω² (bei maximaler Auslenkung)
 
-Die Beschleunigung ist stets der Auslenkung entgegengerichtet (Rückstellkraft), was die charakteristische Eigenschaft des harmonischen Oszillators ist.
+Die Beschleunigung ist stets der Auslenkung entgegengerichtet (Rückstellkraft), was die charakteristische Eigenschaft des harmonischen Oszillators ist. Dieses Merkmal a = −ω²·x ist die **Differentialgleichung der harmonischen Schwingung** und definiert, ob ein System tatsächlich harmonisch schwingt.
+
+## Schwingungsgrößen-Tabelle
+
+| Grösse | Symbol | Einheit | Zusammenhang |
+|--------|--------|---------|--------------|
+| Amplitude | A | m | Maximale Auslenkung |
+| Periodendauer | T | s | T = 1/f = 2π/ω |
+| Frequenz | f | Hz | f = 1/T = ω/(2π) |
+| Kreisfrequenz | ω | rad/s | ω = 2πf = 2π/T |
+| Phase | φ₀ | rad | Anfangsbedingung |
 
 ## Fadenpendel
 
-Für kleine Winkel (< 5°) verhält sich ein Pendel der Länge l harmonisch:
+Für kleine Winkel (< 5°, Kleinwinkelnäherung sin θ ≈ θ) verhält sich ein Pendel der Länge l harmonisch:
 
 **T = 2π · √(l/g)**
 
 Die Periodendauer ist **unabhängig** von Masse und Amplitude (Isochronie). Praktische Konsequenz: Verdoppelt man die Länge, steigt T um den Faktor √2 ≈ 1,41. Auf dem Mond (g ≈ 1,62 m/s²) schwingt dasselbe Pendel etwa 2,45-mal langsamer.
+
+> **Merke:** Beim Fadenpendel bestimmen nur Fadenlänge l und Erdbeschleunigung g die Periodendauer. Masse und Amplitude spielen keine Rolle (solange die Winkel klein bleiben).
+
+**Gültigkeitsgrenze:** Bei Auslenkungen > 15° weicht die wahre Periodendauer messbar vom idealisierten Wert ab. Für θ_max = 30° beträgt der Fehler bereits ~2 %.
 
 ## Federpendel (harmonischer Oszillator)
 
@@ -46,6 +76,8 @@ Eine Masse m an einer Feder mit Federkonstante k schwingt mit:
 **T = 2π · √(m/k)**
 
 Hier ist T unabhängig von der Amplitude (gleiche Isochronie), aber abhängig von der Masse. Größere Masse → längere Periodendauer; steifere Feder (größeres k) → kürzere Periodendauer.
+
+Die **Federkonstante k** (auch Federhärte, Einheit N/m) beschreibt den Widerstand der Feder gegen Dehnung. Sie lässt sich experimentell bestimmen: Hängt man eine Masse m an die Feder und misst die statische Dehnung Δx, gilt k = mg/Δx.
 
 ## Energie im harmonischen Oszillator
 
@@ -57,11 +89,50 @@ Die Gesamtmechanik-Energie bleibt konstant (ungedämpfter Fall) und pendelt zwis
 
 **Gleichstand** (E_kin = E_pot) herrscht bei x = ±A/√2 ≈ ±0,707·A.
 
+> **Merke:** E_ges ∝ A² — verdoppelt man die Amplitude, vervierfacht sich die Gesamtenergie des Oszillators. In der Ruhelage (x = 0) ist alle Energie kinetisch; bei maximaler Auslenkung (x = ±A) ist alle Energie potentiell.
+
+Die Schwingungsenergie geht während jeder Viertelperiode vollständig von einer Form in die andere über. Dieser periodische Energietausch wiederholt sich mit der **doppelten Frequenz** der Schwingung (2f), weil E_kin und E_pot als sin² und cos² schwingen.
+
 ## Resonanz und Dämpfung
 
-**Resonanz** tritt auf, wenn ein System mit seiner Eigenfrequenz f₀ durch eine externe periodische Kraft angeregt wird – die Amplitude wächst dann stark an. Beispiele: MRT-Gerät (Kernspinresonanz), Tacoma-Narrows-Brücke (Windresonanz).
+**Resonanz** tritt auf, wenn ein System mit seiner Eigenfrequenz f₀ durch eine externe periodische Kraft angeregt wird – die Amplitude wächst dann stark an. Beispiele: MRT-Gerät (Kernspinresonanz), Tacoma-Narrows-Brücke (Windresonanz), Mikrowelle (Resonanzfrequenz des Wassermoleküls).
 
-**Dämpfung** beschreibt den Energieverlust durch Reibung. Die Amplitude nimmt exponentiell ab: A(t) = A₀ · e^(−δt). In biologischen Systemen sorgt Dämpfung für Stabilität (z. B. Gelenkknorpel als Stossdämpfer).`,
+Bei schwacher Dämpfung zeigt die **Resonanzkurve** (Amplitude vs. Anregungsfrequenz) ein scharfes Maximum bei f₀. Die **Güte Q** des Oszillators beschreibt, wie scharf die Resonanzkurve ist: hohe Güte → scharfe Resonanz, niedrige Güte → breite Resonanz. Q = f₀/Δf, wobei Δf die Halbwertsbreite ist.
+
+**Dämpfung** beschreibt den Energieverlust durch Reibung. Die Amplitude nimmt exponentiell ab: A(t) = A₀ · e^(−δt). Man unterscheidet:
+- **Schwache Dämpfung** (δ < ω₀): Abklingende Schwingung, Amplitude nimmt langsam ab
+- **Aperiodischer Grenzfall** (δ = ω₀): Schnellstmögliche Rückkehr ohne Überschwinger
+- **Kriechfall** (δ > ω₀): Langsame Rückkehr ohne Schwingung
+
+In biologischen Systemen sorgt Dämpfung für Stabilität (z. B. Gelenkknorpel als Stossdämpfer, Trommelfell-Dämpfung verhindert Nachschwingen).
+
+## Rechenbeispiele
+
+**Beispiel 1 — Fadenpendel auf Erde und Mond:**
+Pendellänge l = 1 m. Auf der Erde (g = 9,81 m/s²): T = 2π√(1/9,81) = 2π · 0,319 = 2,01 s.
+Auf dem Mond (g = 1,62 m/s²): T = 2π√(1/1,62) = 2π · 0,786 = 4,94 s — fast 2,5-mal langsamer.
+
+**Beispiel 2 — Federpendel mit bekannter Masse:**
+m = 0,5 kg, Federkonstante k = 200 N/m. T = 2π√(0,5/200) = 2π · 0,05 = 0,314 s → f = 1/0,314 = 3,18 Hz. v_max = A · ω = A · 2πf = 0,1 · 2π · 3,18 = 2,0 m/s (bei A = 10 cm).
+
+**Beispiel 3 — Energiegleichstand:**
+Federpendel mit k = 100 N/m, A = 0,2 m. E_ges = ½ · 100 · 0,04 = 2 J. Gleichstand E_kin = E_pot bei x = A/√2 = 0,2/1,414 = 0,141 m. An diesem Punkt: E_kin = E_pot = 1 J.
+
+**Beispiel 4 — Resonanzfrequenz im MRT:**
+Die Larmorfrequenz eines Wasserstoffkerns im MRT berechnet sich als f = γ · B₀. Mit γ = 42,58 MHz/T und B₀ = 1,5 T: f = 42,58 · 1,5 = 63,87 MHz. Bei 3 T: f = 127,74 MHz. Die Anregung mit genau dieser Frequenz versetzt die Protonen in Resonanz — sie absorbieren die RF-Energie maximal.
+
+**Beispiel 5 — Federkonstante bestimmen:**
+An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k = mg/Δx = 0,3 · 9,81 / 0,06 = 49,1 N/m. Die Schwingungsdauer beträgt dann T = 2π√(0,3/49,1) = 0,491 s.
+
+## Klinische Vertiefung
+
+**Herzfrequenzvariabilität (HRV):** Der Herzrhythmus ist annähernd periodisch. Die Analyse der Frequenzkomponenten (Fourier-Analyse) liefert diagnostische Informationen: hohe HRV (viele Frequenzanteile) zeigt gesundes autonomes Nervensystem, niedrige HRV ist ein Risikofaktor für kardiovaskuläre Ereignisse.
+
+**Ultraschall-Schallkopf:** Der piezoelektrische Kristall im Schallkopf schwingt mit Frequenzen von 1–20 MHz. Die Resonanzfrequenz des Kristalls bestimmt die Sendefrequenz und damit die Eindringtiefe und Auflösung des Ultraschalls.
+
+**Gelenkknorpel als Dämpfer:** Bei jedem Schritt wirken Stösse auf die Gelenke. Der viskoelastische Knorpel absorbiert diese Stösse (Dämpfung) und verhindert so Resonanzschäden am Knochen. Bei Arthrose ist diese Dämpfungsfunktion eingeschränkt.
+
+**Aperiodischer Grenzfall in der Medizin:** Die Federung eines Krankenwagens ist so abgestimmt, dass sie im aperiodischen Grenzfall schwingt — der schnellste Ausgleich ohne Nachschwingen, um den Patienten nicht zusätzlich zu belasten.`,
 
       lernziele: [
         "Die Schwingungsgleichung x(t) = A·cos(ωt+φ) aufschreiben und Amplitude, Kreisfrequenz und Phase benennen.",
@@ -237,9 +308,22 @@ Die Gesamtmechanik-Energie bleibt konstant (ungedämpfter Fall) und pendelt zwis
     {
       id: "ph-3-02",
       title: "Wellen — Grundgrößen und Typen",
+      stichworte: [
+        "Wellengleichung",
+        "Wellenlänge",
+        "Frequenz",
+        "Transversalwelle",
+        "Longitudinalwelle",
+        "Schallgeschwindigkeit",
+        "Elektromagnetisches Spektrum",
+        "Ultraschall",
+        "Polarisation",
+        "Akustische Impedanz",
+        "Medienwechsel",
+      ],
       content: `# Wellen — Grundgrößen und Typen
 
-Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen transportieren **Energie, aber keine Materie** – die Teilchen des Mediums führen nur lokale Schwingungen aus, während die Störung weiterwandert.
+Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen transportieren **Energie, aber keine Materie** – die Teilchen des Mediums führen nur lokale Schwingungen aus, während die Störung weiterwandert. Dieser fundamentale Unterschied zu Teilchen ist entscheidend: Ein Korken auf einer Wasserwelle bewegt sich vertikal auf und ab, wandert aber nicht horizontal mit der Welle mit.
 
 ## Grundgrößen der Welle
 
@@ -249,36 +333,97 @@ Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen
 - **f** (Frequenz) [Hz] – wird von der Quelle festgelegt und ändert sich beim Medienwechsel nicht
 - **λ** (Wellenlänge) [m] – Abstand zweier benachbarter gleichphasiger Punkte (z. B. Wellenberg zu Wellenberg)
 
-Da c medium-spezifisch und f quellenspezifisch ist, ändert sich beim Medienwechsel die Wellenlänge λ = c/f.
+> **Merke:** c gehört zum Medium, f gehört zur Quelle, λ = c/f passt sich an. Beim Medienwechsel ändert sich die Wellenlänge, nicht die Frequenz!
+
+Da c medium-spezifisch und f quellenspezifisch ist, ändert sich beim Medienwechsel die Wellenlänge λ = c/f. In einem schnelleren Medium wird λ grösser, in einem langsameren kleiner – bei identischer Frequenz. Dieses Prinzip erklärt sowohl Brechung als auch die unterschiedlichen Wellenlängen von Ultraschall in verschiedenen Geweben.
 
 ## Transversal- vs. Longitudinalwellen
 
-**Transversalwellen**: Schwingungsrichtung **senkrecht** zur Ausbreitungsrichtung.
-Beispiele: Licht (elektromagnetisch), Seilwellen, Wasseroberflächenwellen.
-Transversalwellen können **polarisiert** werden (nur eine Schwingungsebene).
+| Eigenschaft | Transversalwelle | Longitudinalwelle |
+|-------------|-----------------|-------------------|
+| Schwingungsrichtung | senkrecht zur Ausbreitung | parallel zur Ausbreitung |
+| Polarisation | möglich | nicht möglich |
+| Medium | Festkörper + EM-Feld | Gase, Flüssigkeiten, Festkörper |
+| Beispiele | Licht, Seilwellen | Schall, Druckwellen |
 
-**Longitudinalwellen**: Schwingungsrichtung **parallel** zur Ausbreitungsrichtung.
-Beispiele: Schallwellen, Druckwellen in Gasen und Flüssigkeiten.
-In Gasen und Flüssigkeiten können nur Longitudinalwellen existieren (keine Scherwellen).
+**Transversalwellen**: Schwingungsrichtung **senkrecht** zur Ausbreitungsrichtung.
+Beispiele: Licht (elektromagnetisch), Seilwellen, Wasseroberflächenwellen, seismische S-Wellen.
+Transversalwellen können **polarisiert** werden (nur eine Schwingungsebene). Polarisationsfilter (z. B. Sonnenbrillen) nutzen dieses Phänomen.
+
+**Longitudinalwellen**: Schwingungsrichtung **parallel** zur Ausbreitungsrichtung. Es entstehen abwechselnd Verdichtungen und Verdünnungen im Medium.
+Beispiele: Schallwellen, Druckwellen in Gasen und Flüssigkeiten, seismische P-Wellen.
+In Gasen und Flüssigkeiten können nur Longitudinalwellen existieren (keine Scherkräfte → keine Transversalwellen). In Festkörpern existieren beide Typen.
 
 ## Schallwellen
 
 Schall ist eine **mechanische Längswelle** – sie braucht ein Medium zur Ausbreitung (im Vakuum kein Schall!).
 
 Schallgeschwindigkeiten:
-- Luft (20 °C): **c ≈ 340 m/s**
+- Luft (20 °C): **c ≈ 340 m/s** (temperaturabhängig: c ≈ 331 + 0,6·T [°C] m/s)
 - Wasser: c ≈ 1480 m/s
+- Weichgewebe: c ≈ 1540 m/s
 - Knochen: c ≈ 3000–4000 m/s
+- Stahl: c ≈ 5900 m/s
 
-Schall in dichteren/steiferen Medien ist schneller. Der Hörbereich des Menschen liegt bei 20 Hz bis 20 kHz. Infraschall (< 20 Hz) und Ultraschall (> 20 kHz) sind für das menschliche Ohr nicht wahrnehmbar.
+> **Merke:** Schall in dichteren/steiferen Medien ist schneller. Die Schallgeschwindigkeit in Luft steigt um ca. 0,6 m/s pro °C Temperaturerhöhung.
+
+Der Hörbereich des Menschen liegt bei **20 Hz bis 20 kHz**. Infraschall (< 20 Hz) wird z. B. von Elefanten zur Kommunikation genutzt. Ultraschall (> 20 kHz) wird von Fledermäusen zur Echolokation und in der Medizin zur Bildgebung eingesetzt. Mit dem Alter nimmt die obere Hörgrenze ab (Presbyakusis): 60-Jährige hören typischerweise nur noch bis ~12 kHz.
 
 ## Elektromagnetische Wellen
 
-Elektromagnetische (EM) Wellen sind Transversalwellen aus sich gegenseitig erzeugenden elektrischen und magnetischen Feldern. Sie benötigen **kein Medium** und breiten sich im Vakuum mit **c = 3 × 10⁸ m/s** aus. Das EM-Spektrum umfasst (von niedrig nach hoch Frequenz): Radiowellen, Mikrowellen, Infrarot, sichtbares Licht, UV, Röntgenstrahlung, Gammastrahlung. Die Frequenz bestimmt die Energie (E = h·f, Planck).
+Elektromagnetische (EM) Wellen sind Transversalwellen aus sich gegenseitig erzeugenden elektrischen und magnetischen Feldern. Sie benötigen **kein Medium** und breiten sich im Vakuum mit **c = 3 × 10⁸ m/s** aus. Die Frequenz bestimmt die Energie eines Photons: **E = h·f** (Planck'sche Beziehung, h = 6,626 × 10⁻³⁴ J·s).
+
+Das EM-Spektrum umfasst (von niedrig nach hoch Frequenz):
+- **Radiowellen** (< 300 MHz): MRT-Anregung, Radio
+- **Mikrowellen** (300 MHz – 300 GHz): Mikrowellenherd, WLAN
+- **Infrarot** (300 GHz – 400 THz): Wärmestrahlung, Thermographie
+- **Sichtbares Licht** (400–750 nm): Augendiagnostik, Endoskopie
+- **UV** (10–400 nm): Desinfektion, Vitamin-D-Synthese
+- **Röntgenstrahlung** (0,01–10 nm): Röntgendiagnostik, CT
+- **Gammastrahlung** (< 0,01 nm): Nuklearmedizin, PET
 
 ## Medizinischer Ultraschall
 
-Diagnostischer Ultraschall nutzt Frequenzen von **2–20 MHz** (weit über menschliches Hören hinaus). Hochfrequenter Ultraschall hat kurze Wellenlänge → bessere Ortsauflösung, aber geringere Gewebeeindringtiefe. Ultraschall breitet sich in Geweben mit c ≈ 1540 m/s aus.`,
+Diagnostischer Ultraschall nutzt Frequenzen von **2–20 MHz** (weit über menschliches Hören hinaus). Hochfrequenter Ultraschall hat kurze Wellenlänge → bessere Ortsauflösung, aber geringere Gewebeeindringtiefe. Ultraschall breitet sich in Geweben mit c ≈ 1540 m/s aus.
+
+Das **Impuls-Echo-Verfahren** (A-Mode, B-Mode) sendet kurze Ultraschallpulse und misst die Laufzeit des reflektierten Echos. Die Reflexionsstärke hängt vom Impedanzunterschied der Gewebe ab. Je grösser der Impedanzunterschied an einer Grenzfläche, desto stärker das Echo.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Wellenlänge berechnen:**
+Ultraschall mit f = 5 MHz in Gewebe (c = 1540 m/s):
+λ = c/f = 1540 / (5 × 10⁶) = 3,08 × 10⁻⁴ m = 0,308 mm.
+Die Auflösung liegt grössenordnungsmässig bei λ, also ca. 0,3 mm — ausreichend für die meisten diagnostischen Zwecke.
+
+**Beispiel 2 — Schallgeschwindigkeit und Eindringtiefe:**
+Ultraschallpuls in Gewebe, Echo nach t = 0,13 ms empfangen. Reflexionsort:
+d = c · t / 2 = 1540 · 0,00013 / 2 = 0,10 m = 10 cm (Hin- und Rückweg → durch 2).
+
+**Beispiel 3 — EM-Spektrum:**
+Sichtbares Licht (λ = 550 nm, grün): f = c/λ = (3 × 10⁸)/(550 × 10⁻⁹) = 5,45 × 10¹⁴ Hz.
+Röntgenstrahlung (λ = 0,1 nm): f = (3 × 10⁸)/(10⁻¹⁰) = 3 × 10¹⁸ Hz → 10.000× höhere Frequenz und Energie als Licht.
+
+**Beispiel 4 — Schallgeschwindigkeiten vergleichen:**
+
+| Medium | c [m/s] | Impedanz Z [kg/m²s] |
+|--------|---------|---------------------|
+| Luft | 340 | 420 |
+| Wasser | 1480 | 1,48 × 10⁶ |
+| Weichgewebe | 1540 | 1,63 × 10⁶ |
+| Knochen | 3500 | 6,3 × 10⁶ |
+
+Die akustische Impedanz Z = ρ · c bestimmt die Reflexion an Grenzflächen. Je grösser der Impedanzunterschied, desto stärker die Reflexion (z. B. Gewebe–Knochen-Grenze: starkes Echo im Ultraschall). Der Reflexionskoeffizient berechnet sich als R = ((Z₂ − Z₁)/(Z₂ + Z₁))².
+
+**Beispiel 5 — Reflexionskoeffizient Gewebe–Knochen:**
+R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347 → 34,7 % des Ultraschalls werden reflektiert. An der Grenze Gewebe–Luft wäre R ≈ 99,9 % — deshalb ist Ultraschallgel essenziell.
+
+## Klinische Vertiefung
+
+**Impedanzanpassung im Ultraschall:** Das Ultraschallgel zwischen Schallkopf und Haut eliminiert die Luft-Haut-Grenzfläche (Impedanzunterschied Luft–Haut wäre riesig → fast 100% Reflexion). Mit Gel wird die akustische Impedanz angeglichen und der Ultraschall kann ins Gewebe eindringen.
+
+**Röntgen- vs. Ultraschall-Wellenlänge:** Röntgenstrahlen (λ ~ 0,01–10 nm) durchdringen Gewebe und werden je nach Dichte unterschiedlich absorbiert. Ultraschall (λ ~ 0,1–1 mm) wird an Impedanzgrenzen reflektiert. Beide Methoden nutzen Wellenphysik, aber fundamental unterschiedliche Mechanismen.
+
+**Temperaturabhängigkeit im Alltag:** In einem Konzertsaal erwärmt das Publikum die Luft. Die Schallgeschwindigkeit steigt dadurch leicht an – ein Grund, warum Instrumente vor und nach dem Konzert nachgestimmt werden müssen.`,
 
       lernziele: [
         "Die Wellengleichung c = f·λ anwenden und die Rolle von Medium und Quelle erklären.",
@@ -460,14 +605,28 @@ Diagnostischer Ultraschall nutzt Frequenzen von **2–20 MHz** (weit über mensc
     {
       id: "ph-3-03",
       title: "Wellenphänomene",
+      stichworte: [
+        "Interferenz",
+        "Superpositionsprinzip",
+        "Stehende Welle",
+        "Doppler-Effekt",
+        "Reflexion",
+        "Brechung",
+        "Beugung",
+        "Totalreflexion",
+        "Gangunterschied",
+        "Snellius",
+        "Kohärenz",
+        "Doppler-Sonographie",
+      ],
       diagram: "wave-types",
       content: `# Wellenphänomene
 
-Wellen zeigen eine Reihe charakteristischer Phänomene, die sie von Teilchen unterscheiden: Interferenz, Beugung, Reflexion, Brechung und den Doppler-Effekt. Diese Phänomene sind in der modernen Medizintechnik allgegenwärtig.
+Wellen zeigen eine Reihe charakteristischer Phänomene, die sie von Teilchen unterscheiden: Interferenz, Beugung, Reflexion, Brechung und den Doppler-Effekt. Diese Phänomene sind in der modernen Medizintechnik allgegenwärtig und bilden die physikalische Grundlage für Ultraschall, MRT, Endoskopie und viele weitere diagnostische Verfahren.
 
 ## Überlagerung und Interferenz
 
-Wenn zwei Wellen gleichzeitig am selben Ort vorhanden sind, überlagern sie sich gemäss dem **Superpositionsprinzip**: die Ausschläge addieren sich algebraisch.
+Wenn zwei Wellen gleichzeitig am selben Ort vorhanden sind, überlagern sie sich gemäss dem **Superpositionsprinzip**: die Ausschläge addieren sich algebraisch. Dies gilt für alle Wellentypen – mechanische wie elektromagnetische.
 
 **Konstruktive Interferenz** (Verstärkung): Gangunterschied Δs = n·λ (n = 0, 1, 2, …)
 → Beide Wellen sind in Phase, resultierende Amplitude = A₁ + A₂
@@ -475,7 +634,13 @@ Wenn zwei Wellen gleichzeitig am selben Ort vorhanden sind, überlagern sie sich
 **Destruktive Interferenz** (Auslöschung): Gangunterschied Δs = (n + ½)·λ
 → Wellen sind gegenphasig, resultierende Amplitude = |A₁ − A₂|; bei gleichen Amplituden = 0
 
-Interferenz ist möglich bei **kohärenten** Wellen (gleiche Frequenz, feste Phasenbeziehung).
+> **Merke:** Gangunterschied = n·λ → konstruktiv (Verstärkung); = (n+½)·λ → destruktiv (Auslöschung). Dazwischen liegt partielle Interferenz.
+
+Interferenz ist möglich bei **kohärenten** Wellen (gleiche Frequenz, feste Phasenbeziehung). Inkohärente Wellen (z. B. weisses Licht von einer Glühbirne) zeigen keine stabilen Interferenzmuster, da sich die Phasenbeziehung ständig ändert.
+
+**Partielle Interferenz:** Bei einem Phasenunterschied von π/2 (90°) addieren sich die Amplituden vektoriell: A_res = √(A₁² + A₂²). Bei gleichen Amplituden ergibt das A·√2 ≈ 1,41·A.
+
+**Alltagsanwendung:** Noise-Cancelling-Kopfhörer erzeugen eine gegenphasige Kopie des Umgebungslärms → destruktive Interferenz → Stille.
 
 ## Stehende Wellen
 
@@ -488,6 +653,15 @@ Auf einer beidseitig eingespannten Saite der Länge L gilt für die n-te Harmoni
 
 Die n-te Harmonische hat (n−1) Knoten innerhalb der Saite.
 
+| Harmonische | λ | f | Innere Knoten |
+|-------------|-------|-------|---------------|
+| 1. (Grundton) | 2L | c/(2L) | 0 |
+| 2. (1. Oberton) | L | c/L | 1 |
+| 3. (2. Oberton) | 2L/3 | 3c/(2L) | 2 |
+| n-te | 2L/n | n·c/(2L) | n−1 |
+
+> **Merke:** Stehende Wellen entstehen auch in Blasinstrumenten und Körperhöhlen. Bei der Lungen-Perkussion erzeugt der Klopfschall stehende Wellen – der resultierende Klang (sonor vs. gedämpft) gibt Auskunft über den Luftgehalt.
+
 ## Doppler-Effekt
 
 Der Doppler-Effekt beschreibt die scheinbare Frequenzverschiebung, wenn sich Quelle und/oder Beobachter relativ zueinander bewegen:
@@ -496,15 +670,69 @@ Der Doppler-Effekt beschreibt die scheinbare Frequenzverschiebung, wenn sich Que
 
 Konvention: oberes Zeichen, wenn Quelle und Beobachter aufeinander zubewegen (f_obs > f_Quelle); unteres Zeichen bei Entfernung (f_obs < f_Quelle).
 
-Beispiel: Rettungswagen fährt auf Beobachter zu – Sirene klingt höher als tatsächlich. Nach Passieren: tieferer Ton.
+Beispiel: Rettungswagen fährt auf Beobachter zu – Sirene klingt höher als tatsächlich. Nach Passieren: tieferer Ton. Die Tonhöhenänderung beim Passieren ist ein klassisches MedAT-Prüfungsbeispiel.
+
+**Doppler-Sonographie:** Im medizinischen Kontext wird der Doppler-Effekt genutzt, um die Blutflussgeschwindigkeit zu messen. Der Ultraschallkopf sendet und empfängt gleichzeitig. Die Frequenzverschiebung ergibt sich aus:
+
+**Δf = 2 · f₀ · v · cos(θ) / c**
+
+Dabei ist θ der Winkel zwischen Schallstrahl und Blutfluss. Bei θ = 0° (parallel) ist Δf maximal; bei θ = 90° (senkrecht) ist Δf = 0 – der Blutfluss wird nicht detektiert. Daher muss der Schallkopf immer schräg zum Gefäss gehalten werden.
 
 ## Reflexion, Beugung, Brechung
 
-**Reflexion**: Welle wird an Grenzfläche zurückgeworfen. Einfallswinkel = Reflexionswinkel. Bei Reflexion am dichteren Medium: Phasensprung von π (Halbwelle).
+**Reflexion**: Welle wird an Grenzfläche zurückgeworfen. Einfallswinkel = Reflexionswinkel (Reflexionsgesetz). Bei Reflexion am dichteren Medium: Phasensprung von π (Halbwelle). Bei Reflexion am dünneren Medium: kein Phasensprung. Dieses Verhalten ist wichtig für die Bildung stehender Wellen.
 
-**Beugung**: Wellen breiten sich um Hindernisse oder durch Öffnungen in den geometrischen Schattenraum aus. Stärkstes Beugungseffekt, wenn Hindernisbreite ≈ λ. Beugung beweist den Wellencharakter von Licht.
+**Beugung**: Wellen breiten sich um Hindernisse oder durch Öffnungen in den geometrischen Schattenraum aus. Stärkstes Beugungseffekt, wenn Hindernisbreite ≈ λ. Beugung beweist den Wellencharakter von Licht. Schallwellen (λ ≈ 0,02–17 m) beugen leicht um Hindernisse wie Häuserecken; Lichtwellen (λ ≈ 500 nm) werden nur an Mikrostrukturen merklich gebeugt.
 
-**Brechung**: Änderung der Ausbreitungsrichtung beim Übergang zwischen Medien mit verschiedenen Ausbreitungsgeschwindigkeiten. Snellius'sches Brechungsgesetz: n₁·sin(α₁) = n₂·sin(α₂), wobei n = c₀/c (Brechungsindex).`,
+**Brechung**: Änderung der Ausbreitungsrichtung beim Übergang zwischen Medien mit verschiedenen Ausbreitungsgeschwindigkeiten. Snellius'sches Brechungsgesetz: **n₁·sin(α₁) = n₂·sin(α₂)**, wobei n = c₀/c (Brechungsindex). Übergang in dichteres Medium (n₂ > n₁) → Brechung zum Lot hin; in dünneres Medium → Brechung vom Lot weg.
+
+> **Merke:** Brechung zum Lot = langsameres Medium (grösserer n); Brechung vom Lot = schnelleres Medium (kleinerer n).
+
+**Totalreflexion**: Wenn eine Welle von einem optisch dichteren in ein dünneres Medium übergeht und der Einfallswinkel den **Grenzwinkel** α_G überschreitet, tritt keine Brechung mehr auf — die Welle wird vollständig reflektiert. sin(α_G) = n₂/n₁. Anwendung: Glasfasern (Endoskopie, Lichtleiter), Diamantschliff (hoher Brechungsindex n = 2,42 → niedriger Grenzwinkel von nur 24,4° → maximale Reflexion, daher das Funkeln).
+
+## Rechenbeispiele
+
+**Beispiel 1 — Doppler-Sonographie:**
+Ultraschall f = 5 MHz trifft auf Erythrozyten (v = 0,5 m/s) unter θ = 60° zur Flussrichtung.
+Δf = 2 · f · v · cos(θ) / c = 2 · 5×10⁶ · 0,5 · cos(60°) / 1540 = 2 · 5×10⁶ · 0,25 / 1540 ≈ 1623 Hz
+Die Frequenzverschiebung von ~1,6 kHz ist im hörbaren Bereich — daher kann der Blutfluss als Tonsignal wiedergegeben werden.
+
+**Beispiel 2 — Stehende Welle auf Saite:**
+Gitarrensaite l = 0,65 m, c = 300 m/s.
+Grundfrequenz: f₁ = c/(2L) = 300/(2·0,65) = 230,8 Hz (ca. Kammerton B).
+2. Harmonische: f₂ = 2 · 230,8 = 461,6 Hz. 3. Harmonische: f₃ = 692,3 Hz.
+
+**Beispiel 3 — Brechungsgesetz:**
+Lichtstrahl geht von Luft (n₁ = 1,00) in Glas (n₂ = 1,50) unter α₁ = 30°:
+sin(α₂) = n₁·sin(α₁)/n₂ = 1,00·sin(30°)/1,50 = 0,5/1,50 = 0,333 → α₂ = 19,5°
+Der Strahl wird zum Lot hin gebrochen (dichtereres Medium).
+
+**Beispiel 4 — Totalreflexion in Glasfaser:**
+Glas (n₁ = 1,50), Luft (n₂ = 1,00): sin(α_G) = 1,00/1,50 = 0,667 → α_G = 41,8°.
+Jeder Strahl, der unter einem Winkel > 41,8° auf die Grenzfläche trifft, wird total reflektiert — so funktioniert ein Glasfaser-Endoskop.
+
+**Beispiel 5 — Brechungsindizes medizinisch relevanter Materialien:**
+
+| Material | Brechungsindex n |
+|----------|-----------------|
+| Luft | 1,000 |
+| Wasser | 1,333 |
+| Hornhaut (Auge) | 1,376 |
+| Linse (Auge) | 1,386–1,406 |
+| Glaskörper (Auge) | 1,336 |
+| Glas (Brille) | 1,50–1,90 |
+
+Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut-Luft-Grenzfläche (grösster n-Sprung).
+
+## Klinische Vertiefung
+
+**Endoskopie:** Glasfaserbündel leiten Licht durch Totalreflexion zum Untersuchungsort und das reflektierte Bild zurück. Die Biegung der Fasern ist möglich, da Totalreflexion an den Innenwänden auftritt.
+
+**Pulsoximetrie:** Nutzt die unterschiedliche Lichtabsorption von oxygeniertem (rot, 660 nm) und deoxygeniertem (infrarot, 940 nm) Hämoglobin. Die Transmission durch das Gewebe hängt von der Wellenlänge ab — ein Wellenphänomen (Lambert-Beer-Gesetz). Das Verhältnis der Absorptionen bei beiden Wellenlängen ergibt die Sauerstoffsättigung SpO₂.
+
+**Laser in der Medizin:** LASER (Light Amplification by Stimulated Emission of Radiation) erzeugt kohärentes Licht durch stimulierte Emission in einem optischen Resonator (stehende Wellen!). Anwendungen: Augen-LASIK (Hornhaut-Remodelling), Laser-Koagulation (Retina), Laser-Lithotripsie (Nierensteine).
+
+**Farbdoppler-Sonographie:** In der klinischen Praxis wird der Doppler-Effekt farbkodiert dargestellt: Rot = Fluss auf den Schallkopf zu, Blau = Fluss vom Schallkopf weg. Turbulenzen (z. B. an Stenosen) erscheinen als Farbmosaik. Diese Methode ist essenziell in der Kardiologie und Gefässchirurgie.`,
 
       lernziele: [
         "Konstruktive und destruktive Interferenz anhand des Gangunterschieds erklären und berechnen.",
@@ -682,55 +910,115 @@ Beispiel: Rettungswagen fährt auf Beobachter zu – Sirene klingt höher als ta
     {
       id: "ph-3-04",
       title: "Akustik und Hörphysiologie",
+      stichworte: [
+        "Dezibel",
+        "Schallpegel",
+        "Hörschwelle",
+        "Schmerzgrenze",
+        "Tonotopie",
+        "Cochlea",
+        "Basilarmembran",
+        "Haarzellen",
+        "Schallleitungsschwerhörigkeit",
+        "Schallempfindungsschwerhörigkeit",
+        "Audiometrie",
+        "Lärmschwerhörigkeit",
+      ],
       diagram: "doppler-effect",
       content: `# Akustik und Hörphysiologie
 
-Akustik ist die Lehre vom Schall und seinen physiologischen sowie psychophysischen Wirkungen. Die menschliche Hörbahn ist ein aussergewöhnliches Messsystem, das Druckschwankungen von weniger als einem Milliardstel des atmosphärischen Drucks wahrnehmen kann.
+Akustik ist die Lehre vom Schall und seinen physiologischen sowie psychophysischen Wirkungen. Die menschliche Hörbahn ist ein aussergewöhnliches Messsystem, das Druckschwankungen von weniger als einem Milliardstel des atmosphärischen Drucks wahrnehmen kann. Das Ohr deckt dabei einen Dynamikbereich von 10⁶ im Schalldruck ab – vom leisesten wahrnehmbaren Ton bis zur Schmerzgrenze.
 
 ## Schallpegel und die Dezibel-Skala
 
-Der Schalldruck p einer Welle wird relativ zur Hörschwelle p₀ = 2×10⁻⁵ Pa angegeben. Da das menschliche Ohr einem sehr grossen Druckbereich folgt, verwendet man eine logarithmische Skala:
+Der Schalldruck p einer Welle wird relativ zur Hörschwelle p₀ = 2×10⁻⁵ Pa angegeben. Da das menschliche Ohr einem sehr grossen Druckbereich folgt (6 Zehnerpotenzen), verwendet man eine logarithmische Skala:
 
 **L = 20 · log₁₀(p / p₀)   [dB]**
 
 Alternativ über die Intensität I (Leistung pro Fläche):
 **L = 10 · log₁₀(I / I₀)**   mit I₀ = 10⁻¹² W/m²
 
-Wichtige Pegelwerte:
-- **0 dB**: Hörschwelle (p₀ = 2×10⁻⁵ Pa, f = 1 kHz)
-- **20 dB**: Stille Nacht
-- **60 dB**: Normales Gespräch
-- **85 dB**: Dauerhaft gesundheitsschädlich (Lärmschwerhörigkeit!)
-- **120 dB**: Schmerzgrenze
-- **140 dB**: Düsentriebwerk, Trommelfellriss möglich
+> **Merke:** Da Intensität ∝ p² gilt, hat die Schalldruck-Formel den Faktor 20, die Intensitäts-Formel den Faktor 10. Beide ergeben denselben Pegelwert.
 
-Entscheidend für die Schädlichkeit ist die **Exposition**: gleichmässige kurzzeitige Spitzen vs. dauerhafter Lärm über 85 dB.
+Der Zusammenhang zwischen den beiden Formeln: L = 10·log(I/I₀) = 10·log(p²/p₀²) = 20·log(p/p₀).
+
+Wichtige Pegelwerte:
+
+| Situation | Pegel | Schalldruck |
+|-----------|-------|-------------|
+| Hörschwelle (1 kHz) | 0 dB | 2×10⁻⁵ Pa |
+| Stille Nacht | 20 dB | 2×10⁻⁴ Pa |
+| Normales Gespräch | 60 dB | 0,02 Pa |
+| Strassenverkehr | 75 dB | 0,11 Pa |
+| Lärmschwelle | **85 dB** | 0,36 Pa |
+| Schmerzgrenze | 120 dB | 20 Pa |
+| Düsentriebwerk | 140 dB | 200 Pa |
+
+Entscheidend für die Schädlichkeit ist die **Exposition**: gleichmässige kurzzeitige Spitzen vs. dauerhafter Lärm über 85 dB. Die **Äquivalenzdosis** berücksichtigt: +3 dB halbiert die erlaubte Expositionszeit (bei 88 dB nur noch 4 h statt 8 h).
 
 ## Lautstärke und Tonhöhe: Psychoakustik
 
 **Tonhöhe** (Pitch) entspricht physikalisch der Frequenz. Das menschliche Ohr hört Frequenzen von 20 Hz bis 20 kHz, mit grösster Empfindlichkeit zwischen 1–4 kHz (Sprachbereich). Diese Empfindlichkeit ist evolutionär durch Sprachkommunikation geprägt.
 
-**Lautstärke** (Loudness) entspricht der Schallintensität/dem Schalldruck. Die subjektive Wahrnehmung ist frequenzabhängig – gleiche Dezibel-Werte klingen bei verschiedenen Frequenzen unterschiedlich laut (Lautheits-Konturlinien nach Fletcher-Munson).
+**Lautstärke** (Loudness) entspricht der Schallintensität/dem Schalldruck. Die subjektive Wahrnehmung ist frequenzabhängig – gleiche Dezibel-Werte klingen bei verschiedenen Frequenzen unterschiedlich laut (Lautheits-Konturlinien nach Fletcher-Munson). Bei 100 Hz muss der Pegel ca. 40 dB höher sein als bei 1 kHz, damit der Ton gleich laut empfunden wird.
+
+**Klangfarbe** (Timbre) wird durch das Oberton-Spektrum bestimmt. Derselbe Ton (z. B. 440 Hz) klingt auf einer Geige anders als auf einer Klarinette, weil die Obertöne (Harmonische) unterschiedliche Amplituden haben.
 
 ## Anatomie und Physiologie der Cochlea
 
 Das Innenohr (Cochlea) ist der eigentliche Wandler von Schallschwingungen in Nervenimpulse:
 
 1. **Schallleitung**: Trommelfell → Gehörknöchelchen (Hammer, Amboss, Steigbügel) → Ovales Fenster
-2. **Verstärkung**: Das Mittelohr verstärkt den Schalldruck durch das Flächenverhältnis Trommelfell/ovales Fenster (×22) und den Hebeleffekt der Gehörknöchelchen (×1,3) – gesamt ~30-fach.
-3. **Wanderwellen in der Cochlea**: Der Steigbügel regt Flüssigkeit im Schneckengang an. Es entstehen Wanderwellen auf der Basilarmembran, deren Maximum je nach Frequenz an unterschiedlichen Orten liegt: **Tonotopie**.
-4. **Tonotopie**: Hohe Frequenzen (z. B. 20 kHz) erregen die Basis der Cochlea; tiefe Frequenzen (z. B. 100 Hz) erregen die Apex. Dies ermöglicht Frequenzunterscheidung.
-5. **Haarzellen**: An der Basilarmembran befinden sich innere Haarzellen, die mechanische Auslenkung in elektrische Signale umwandeln (Mechanoelektrik). Äussere Haarzellen verstärken aktiv (cochleärer Verstärker).
+2. **Verstärkung**: Das Mittelohr verstärkt den Schalldruck durch das Flächenverhältnis Trommelfell/ovales Fenster (×17) und den Hebeleffekt der Gehörknöchelchen (×1,3) – gesamt ca. 22-fach (~27 dB). Diese **Impedanzanpassung** ist nötig, da ohne sie 99,9 % der Schallenergie an der Luft-Flüssigkeit-Grenze reflektiert würden.
+3. **Wanderwellen in der Cochlea**: Der Steigbügel regt Perilymphe im Schneckengang an. Es entstehen Wanderwellen auf der Basilarmembran, deren Maximum je nach Frequenz an unterschiedlichen Orten liegt: **Tonotopie**.
+4. **Tonotopie**: Hohe Frequenzen (z. B. 20 kHz) erregen die Basis der Cochlea (steife, schmale Membran); tiefe Frequenzen (z. B. 100 Hz) erregen die Apex (elastische, breite Membran). Dies ermöglicht Frequenzunterscheidung.
+5. **Haarzellen**: An der Basilarmembran befinden sich ca. 3500 innere Haarzellen (IHC), die mechanische Auslenkung in elektrische Signale umwandeln (Mechanoelektrik). Ca. 12.000 äussere Haarzellen (OHC) verstärken aktiv durch Motilität (Prestin-Protein) – der **cochleäre Verstärker** verbessert die Empfindlichkeit um den Faktor 1000 (60 dB).
+
+> **Merke:** Innere Haarzellen = Signalwandler (95 % der afferenten Nervenfasern); äussere Haarzellen = aktive Verstärker (empfindlich gegenüber Lärm und ototoxischen Medikamenten).
 
 ## Klinische Audiologie
 
 **Audiometrie**: Messung des Hörvermögens durch Reintonaudiogramm oder Sprachaudiogramm. Normalhörige haben eine Hörschwelle von ≤ 20 dB HL (Hearing Level) über alle Frequenzen.
 
-**Schallleitungsschwerhörigkeit**: Beeinträchtigung in Mittelohr (Trommelfell, Gehörknöchelchen). Knochenleitung intakt, Luftleitung gestört.
+**Schallleitungsschwerhörigkeit**: Beeinträchtigung in Mittelohr (Trommelfell, Gehörknöchelchen, Otosklerose, Paukenerguss). Knochenleitung intakt, Luftleitung gestört. Weber-Versuch: Lateralisation zum kranken Ohr. Rinne-Versuch: negativ (Knochen > Luft).
 
-**Schallempfindungsschwerhörigkeit (SNHL)**: Schäden an Haarzellen (Lärm, Alter, Toxine) oder Hörnerv. Knochen- und Luftleitung gleich gestört. Häufigste Form der Lärmschwerhörigkeit: Schaden bei 4 kHz (C5-Senke im Audiogramm).
+**Schallempfindungsschwerhörigkeit (SNHL)**: Schäden an Haarzellen (Lärm, Alter, ototoxische Medikamente wie Aminoglykoside/Cisplatin) oder Hörnerv. Knochen- und Luftleitung gleich gestört. Weber: Lateralisation zum gesunden Ohr. Rinne: positiv (Luft > Knochen, aber beides reduziert). Häufigste Form der Lärmschwerhörigkeit: Schaden bei 4 kHz (C5-Senke im Audiogramm).
 
-**Cochlea-Implantat**: Bei vollständiger Taubheit umgeht ein Elektrodenarray die defekten Haarzellen und stimuliert den Hörnerv direkt mit tonotop kodierten Impulsen.`,
+**Cochlea-Implantat**: Bei vollständiger Taubheit umgeht ein Elektrodenarray die defekten Haarzellen und stimuliert den Hörnerv direkt mit tonotop kodierten Impulsen. Elektroden an der Basis kodieren hohe, an der Apex tiefe Frequenzen.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Dezibel-Rechnung:**
+Schallintensität eines Gespräches: I = 10⁻⁶ W/m².
+L = 10 · log₁₀(10⁻⁶ / 10⁻¹²) = 10 · log₁₀(10⁶) = 10 · 6 = 60 dB — normales Gespräch.
+
+Verdopplung der Intensität: L_neu = 10 · log₁₀(2 × 10⁻⁶ / 10⁻¹²) = 10 · (6 + log₁₀ 2) = 10 · 6,3 = 63 dB.
+Verdopplung der Intensität entspricht +3 dB. Verzehnfachung = +10 dB.
+
+**Beispiel 2 — Verstärkung im Mittelohr:**
+Trommelfell-Fläche: ca. 55 mm². Ovales-Fenster-Fläche: ca. 3,2 mm². Verhältnis: 55/3,2 ≈ 17.
+Hebeleffekt Gehörknöchelchen: ≈ 1,3. Gesamtverstärkung: 17 × 1,3 ≈ 22-fach (Schalldruck).
+In Dezibel: 20 · log₁₀(22) = 20 · 1,34 ≈ 27 dB — diese Verstärkung kompensiert den Impedanzunterschied zwischen Luft und Flüssigkeit im Innenohr.
+
+**Beispiel 3 — Tonotopie:**
+Frequenz 500 Hz → Maximum der Wanderwelle ca. 7 mm vom Apex.
+Frequenz 4000 Hz → Maximum ca. 11 mm vom Apex (näher an der Basis).
+Frequenz 16000 Hz → Maximum direkt an der Basis der Cochlea.
+Bei Lärmschwerhörigkeit sind die Haarzellen im 4-kHz-Bereich zuerst betroffen → typische C5-Senke im Audiogramm.
+
+**Beispiel 4 — Expositionszeit bei Lärm:**
+Bei 85 dB sind 8 Stunden Exposition erlaubt. Pro +3 dB halbiert sich die Zeit: 88 dB → 4 h, 91 dB → 2 h, 94 dB → 1 h, 100 dB → 15 min, 110 dB → 1,5 min. Ein Rockkonzert mit 110 dB schädigt die Haarzellen bereits nach wenigen Minuten irreversibel.
+
+## Dezibel-Merkregel
+
+| Pegelveränderung | Physik | Wahrnehmung |
+|------------------|--------|-------------|
+| +3 dB | Intensität × 2 | Kaum merkbar |
+| +6 dB | Schalldruck × 2 | Leicht lauter |
+| +10 dB | Intensität × 10 | Doppelt so laut empfunden |
+| +20 dB | Schalldruck × 10 | 4× so laut empfunden |
+
+> **Merke:** 3-dB-Regel für Intensität, 6-dB-Regel für Schalldruck, 10-dB-Regel für subjektive Lautstärke. Diese drei Regeln sind MedAT-Klassiker!`,
 
       lernziele: [
         "Den Schalldruckpegel in Dezibel berechnen und die Skala mit klinisch relevanten Werten verknüpfen.",

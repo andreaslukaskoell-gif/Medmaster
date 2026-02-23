@@ -175,7 +175,20 @@ Wichtige Eigenschaften:
 **Prüfungsrelevante Zahlen/Fakten:**
 - 5! = 120, 6! = 720, 7! = 5.040, 10! = 3.628.800
 - C(6,2) = 15, C(7,3) = 35, C(8,3) = 56, C(10,3) = 120
-- Lotto 6 aus 45: C(45,6) = 8.145.060; Lotto 6 aus 49: C(49,6) ≈ 13,98 Mio.`,
+- Lotto 6 aus 45: C(45,6) = 8.145.060; Lotto 6 aus 49: C(49,6) ≈ 13,98 Mio.
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Blutgruppen-Phänotypen: Wie viele AB0-Rhesus-Kombinationen gibt es?**
+AB0 hat 4 Phänotypen (A, B, AB, 0), Rhesus hat 2 (Rh+ , Rh−). Jede Person hat genau eine AB0- und eine Rhesus-Eigenschaft (Reihenfolge egal, keine Wiederholung innerhalb der Kategorie). Multiplikationsprinzip: 4 × 2 = **8 verschiedene Blutgruppen-Phänotypen** (A+, A−, B+, B−, AB+, AB−, 0+, 0−). Erweitert man um Kell (2 Varianten): 4 × 2 × 2 = **16**.
+
+**Beispiel 2 — Studien-Randomisierung: 3 von 8 Medikamenten für einen Arm auswählen:**
+In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig getestet werden (Reihenfolge egal, ohne Wiederholung). → Kombination: C(8,3) = (8 · 7 · 6) / (3 · 2 · 1) = 336 / 6 = **56 mögliche Dreier-Kombinationen**. Soll zusätzlich ein viertes Medikament als Reserve bestimmt werden (Reihenfolge der Reserve zählt): Variation V(8,4) = 8!/4! = 8 · 7 · 6 · 5 = **1.680**.
+
+**Beispiel 3 — DNA-Codons: Wie viele verschiedene Basentripletts gibt es?**
+4 Basen (A, U/T, G, C), je 3 Positionen, Wiederholung erlaubt, Reihenfolge zählt (AUG ≠ GUA). → Variation mit Wiederholung: V(4,3) = 4³ = **64 mögliche Codons**. Davon codieren 61 für Aminosäuren (3 Stopp-Codons). Mit 20 Aminosäuren → Code ist degeneriert (redundant): im Schnitt 61/20 ≈ 3 Codons pro Aminosäure.`,
       lernziele: [
         "Die vier kombinatorischen Grundtypen (Permutation/Variation/Kombination × mit/ohne Wiederholung) anhand der Entscheidungsfragen 'geordnet?' und 'Wiederholung?' korrekt zuordnen",
         "Permutationen ohne und mit Wiederholung berechnen und die Formel für identische Elemente anwenden",
@@ -446,7 +459,20 @@ Erwartungswert: μ = 4 · 0,9 = 3,6 (im Schnitt 3,6 korrekte Ergebnisse)
 **Prüfungsrelevante Zahlen/Fakten:**
 - P(Ā) = 1 − P(A) — immer gültig
 - (1/2)^10 ≈ 0,001 (10 Münzwürfe alle Kopf: sehr unwahrscheinlich)
-- Binomial-Erwartungswert: n·p (bei n=100, p=0,05: μ=5)`,
+- Binomial-Erwartungswert: n·p (bei n=100, p=0,05: μ=5)
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Autosomal-rezessiv: Carrier-Wahrscheinlichkeit bei Mukoviszidose:**
+Trägerfrequenz q ≈ 1/25 in Mitteleuropa (heterozygot Aa). Beide Eltern Carrier → P(Kind krank = aa) = 1/4 (Mendel). Zufällig zwei Personen: P(beide Carrier) = (1/25)² = 1/625. P(Kind krank) = 1/625 · 1/4 = **1/2.500** ≈ 0,04%. Tatsächliche Inzidenz von CF: ca. 1:2.500 — passt!
+
+**Beispiel 2 — Komplement: Mindestens eine Nebenwirkung in 5 Dosen:**
+Ein Medikament verursacht pro Dosis mit P = 0,15 eine Nebenwirkung (unabhängig). P(mind. 1 Nebenwirkung in 5 Dosen) = 1 − P(keine) = 1 − 0,85⁵. 0,85⁵ = 0,85 · 0,85 · 0,85 · 0,85 · 0,85 ≈ 0,4437. P(mind. 1) = 1 − 0,4437 = **0,556 ≈ 55,6%**. Also: Mehr als jeder zweite Patient erlebt mindestens eine Nebenwirkung über 5 Dosen — obwohl die Einzelwahrscheinlichkeit nur 15% beträgt.
+
+**Beispiel 3 — Binomialverteilung: Impf-Wirksamkeit:**
+Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 geschützt) = C(6,6) · 0,92⁶ · 0,08⁰ = 1 · 0,92⁶ · 1 ≈ 0,92⁶. Rechnung: 0,92² = 0,8464; 0,92³ ≈ 0,7787; 0,92⁶ = (0,92³)² ≈ 0,7787² ≈ **0,606 ≈ 60,6%**. Erwartungswert: μ = 6 · 0,92 = **5,52** geschützte Personen.`,
       lernziele: [
         "Die klassische Wahrscheinlichkeit als P(A) = |A|/|Ω| berechnen und die Laplace-Bedingung prüfen",
         "Komplementregel, Additionssatz und Multiplikationssatz korrekt anwenden und dabei unvereinbare von unabhängigen Ereignissen unterscheiden",
@@ -695,7 +721,21 @@ Das entspricht exakt dem Bayes-Ergebnis — aber visuell viel klarer!
 - Hohe Sensitivität (>95%) → gut zum Ausschließen einer Erkrankung (Negativtest verlässlich)
 - Hohe Spezifität (>95%) → gut zum Bestätigen (Positivtest verlässlich)
 - Bei Prävalenz 1% und Sensitivität 99%, Spezifität 99%: PPV ≈ 50% (!)
-- NPV = TN / (TN + FN); PPV = TP / (TP + FP)`,
+- NPV = TN / (TN + FN); PPV = TP / (TP + FP)
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Mammographie-Screening: Vierfeldertafel komplett durchrechnen:**
+Prävalenz Brustkrebs bei 50–69-Jährigen: P(K) = 0,8% = 0,008. Mammographie: Sensitivität 87%, Spezifität 95%. Stichprobe n = 10.000.
+Krank: 10.000 · 0,008 = 80. Gesund: 9.920. TP = 80 · 0,87 = 69,6 ≈ 70. FN = 10. FP = 9.920 · 0,05 = 496. TN = 9.424. **PPV = 70 / (70 + 496) = 70 / 566 ≈ 12,4%**. Ergebnis: Nur ~1 von 8 positiven Mammographien ist tatsächlich Krebs — deshalb folgt immer eine Biopsie als Bestätigungstest.
+
+**Beispiel 2 — HIV-Screening (2-Stufen-Strategie):**
+Prävalenz 0,1% (Allgemeinbevölkerung). ELISA: Sens 99,7%, Spez 99,5%. n = 100.000. Krank: 100. TP = 99,7 ≈ 100. FP = 99.900 · 0,005 = 499,5 ≈ 500. PPV₁ = 100/600 ≈ 16,7%. Zweiter Test (Western Blot, Spez 99,99%) auf die 600 Positiven: TP₂ = 100 (echte bleiben positiv). FP₂ = 500 · 0,0001 = 0,05 ≈ 0. **PPV₂ ≈ 100/100 = ~100%**. Die 2-Stufen-Strategie hebt den PPV von 17% auf nahe 100%.
+
+**Beispiel 3 — Carrier-Test: P(Carrier | positiver Test) bei CF:**
+A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 · 0,04 + 0,01 · 0,96 = 0,036 + 0,0096 = 0,0456. P(Carrier|T+) = 0,036 / 0,0456 = **0,789 ≈ 79%**. Trotz 99% Spezifität: 1 von 5 positiv Getesteten ist kein Carrier. Bestätigungsdiagnostik (DNA-Analyse) nötig.`,
       lernziele: [
         "Bedingte Wahrscheinlichkeit P(A|B) = P(A∩B)/P(B) berechnen und den Unterschied zu P(B|A) erklären",
         "Den Satz der totalen Wahrscheinlichkeit auf medizinische Testszenarien anwenden",
@@ -1014,7 +1054,20 @@ Der **p-Wert** ist die Wahrscheinlichkeit, ein mindestens so extremes Ergebnis z
 - Normalverteilung: 68% in ±1σ, 95% in ±2σ, 99,7% in ±3σ
 - p-Wert Schwellenwert: p < 0,05 = signifikant (Konvention)
 - Hohe Sensitivität → gut zum Ausschließen (SnNout)
-- Hohe Spezifität → gut zum Bestätigen (SpPin)`,
+- Hohe Spezifität → gut zum Bestätigen (SpPin)
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Referenzbereich: Cholesterin in einer Population:**
+Gesamtcholesterin N(μ = 200, σ = 35) mg/dL. Referenzbereich = μ ± 2σ = 200 ± 70 = **130–270 mg/dL**. Anteil innerhalb: 95%. Anteil oberhalb 270 (> μ+2σ): 2,3% — als "erhöht" klassifiziert. Patient mit 235 mg/dL: z = (235 − 200)/35 = 1,0 → liegt bei μ+1σ, also im oberen 16%-Bereich — grenzwertig, aber innerhalb des Referenzbereichs.
+
+**Beispiel 2 — z-Transformation: Nüchtern-Blutzucker bewerten:**
+Population: N(μ = 90, σ = 12) mg/dL. Patient misst 126 mg/dL. z = (126 − 90) / 12 = 36/12 = **3,0**. Interpretation: 3 Standardabweichungen über dem Mittelwert → liegt außerhalb μ+3σ, also im obersten 0,15% der Bevölkerung. Klinisch: Nüchternglukose ≥ 126 mg/dL = Diabetes-Diagnosekriterium (WHO).
+
+**Beispiel 3 — Sens/Spez-Tradeoff: Troponin-Schwellenwert verschieben:**
+Troponin-Test für Herzinfarkt, aktueller Cutoff: Sens = 85%, Spez = 92%. Senkt man den Cutoff (empfindlicher): Sens steigt auf 95%, Spez sinkt auf 80%. In einer Notaufnahme (Prävalenz 10%, n = 1.000): Alter Cutoff: TP = 85, FP = 72, PPV = 85/157 ≈ **54%**. Neuer Cutoff: TP = 95, FP = 180, PPV = 95/275 ≈ **34,5%**. Klinische Entscheidung: höherer Sens-Cutoff in der Notaufnahme (kein Infarkt verpassen), dann Bestätigung mit spezifischerem Test.`,
       lernziele: [
         "Mittelwert, Median und Modus aus einem gegebenen Datensatz berechnen und bei schiefer Verteilung den geeigneteren Lageparameter auswählen",
         "Varianz und Standardabweichung berechnen und interpretieren",

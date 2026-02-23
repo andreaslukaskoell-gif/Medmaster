@@ -10,6 +10,20 @@ export const mathKap5: Kapitel = {
     {
       id: "ma-5-01",
       title: "Lineare Funktionen",
+      stichworte: [
+        "Lineare Funktion",
+        "Steigung",
+        "y-Achsenabschnitt",
+        "Nullstelle",
+        "Geradengleichung",
+        "Differenzenquotient",
+        "Parallele Geraden",
+        "Senkrechte Geraden",
+        "Schnittpunkt",
+        "Lambert-Beer-Gesetz",
+        "Infusionsrate",
+        "Kalibrierkurve",
+      ],
       content: `# Lineare Funktionen
 
 ## Grundform und Begriffe
@@ -18,11 +32,21 @@ Eine lineare Funktion hat die allgemeine Form **f(x) = mx + b**, wobei x die una
 
 Die Steigung m beschreibt, um wie viele Einheiten sich f(x) verändert, wenn x um eine Einheit zunimmt. Formal gilt: m = Δy / Δx = (y₂ − y₁) / (x₂ − x₁). Ist m > 0, steigt die Gerade von links nach rechts; ist m < 0, fällt sie; ist m = 0, handelt es sich um eine horizontale Gerade (konstante Funktion).
 
+> **Merke:** Die Steigung m einer Geraden ist der **Differenzenquotient** Δy/Δx. Sie gibt die Änderung des Funktionswerts pro Einheit der unabhängigen Variable an — im medizinischen Kontext z. B. "mg/L pro Stunde" oder "mmHg pro BMI-Punkt".
+
 ## Steigung und Achsenabschnitt im Detail
 
 Der **y-Achsenabschnitt b** gibt den Punkt an, an dem die Gerade die y-Achse schneidet, d. h. f(0) = b. Der **x-Achsenabschnitt** (Nullstelle) ergibt sich durch Setzen von f(x) = 0: 0 = mx + b → x₀ = −b/m (für m ≠ 0).
 
 Zwei Geraden sind **parallel**, wenn sie dieselbe Steigung m besitzen. Sie sind **senkrecht zueinander**, wenn das Produkt ihrer Steigungen −1 ergibt: m₁ · m₂ = −1, d. h. m₂ = −1/m₁.
+
+| Eigenschaft | Formel | Bedeutung |
+|---|---|---|
+| Steigung | m = Δy/Δx | Änderungsrate |
+| y-Achsenabschnitt | b = f(0) | Startwert bei x = 0 |
+| Nullstelle | x₀ = −b/m | Graph schneidet x-Achse |
+| Parallel | m₁ = m₂ | Geraden schneiden sich nie |
+| Senkrecht | m₁ · m₂ = −1 | 90°-Winkel |
 
 ## Aufstellen einer linearen Funktion
 
@@ -30,23 +54,52 @@ Zwei Geraden sind **parallel**, wenn sie dieselbe Steigung m besitzen. Sie sind 
 
 **Aus Steigung und einem Punkt:** Gegeben m und P(x₀|y₀). Dann gilt b = y₀ − m·x₀.
 
+**Punkt-Steigungs-Form:** Manchmal ist es bequemer, die Gerade direkt als y − y₀ = m · (x − x₀) zu schreiben. Diese Form wird in der Statistik bei **Regressionsgeraden** verwendet: Die Regressionsgerade verläuft immer durch den Schwerpunkt (x̄|ȳ) der Daten.
+
+> **Merke:** Zwei verschiedene Punkte bestimmen genau eine Gerade. Immer zuerst m berechnen, dann b durch Einsetzen eines Punktes ermitteln.
+
 ## Grafische Darstellung
 
 Eine Gerade ist durch zwei Punkte vollständig bestimmt. Praktisch wählt man oft den y-Achsenabschnitt (x = 0) und die Nullstelle (y = 0) als Zeichenpunkte. Die Steigung kann anschließend als Kontrollwert aus dem Graphen abgelesen werden: Man wählt zwei Gitterpunkte auf der Geraden und bildet den Quotienten Δy/Δx.
+
+**Steigungsdreieck:** Um die Steigung grafisch abzulesen, zeichnet man ein rechtwinkliges Dreieck unter der Geraden. Die horizontale Kathete (Δx) und die vertikale Kathete (Δy) ergeben m = Δy/Δx. Zeigt Δy nach unten, ist m negativ.
 
 ## Anwendungen im medizinischen Kontext
 
 Lineare Zusammenhänge begegnen uns in der Medizin bei der **Kalibrierung von Messgeräten** (z. B. Lambert-Beer-Gesetz bei niedrigen Konzentrationen), bei **Dosierungs-Wirkungsbeziehungen** im linearen Bereich sowie bei der Berechnung von **Infusionsraten** (ml/h = konstante Dosis × Körpergewicht/Konzentration). Auch die lineare Interpolation zwischen Messwerten in Laborkurven setzt das Verständnis linearer Funktionen voraus.
 
+**Lineare Pharmakokinetik (Kinetik nullter Ordnung):** Ethanol wird in der Leber mit konstanter Rate abgebaut (ca. 0,1–0,15 ‰/h), weil die Alkoholdehydrogenase gesättigt ist. Die Blutalkoholkonzentration sinkt also linear: C(t) = C₀ − k₀·t. Hier ist die Steigung m = −k₀ die **Eliminationsrate** (konstant, unabhängig von der Konzentration).
+
+> **Merke:** Im **linearen Messbereich** des Lambert-Beer-Gesetzes (A = ε·c·d) ist die Absorption A direkt proportional zur Konzentration c. Außerhalb dieses Bereichs weicht die Kalibrierkurve von der Linearität ab — ein häufiger MedAT-Aufgabentyp.
+
 ## Besondere Geraden
 
-- **Horizontale Gerade** (f(x) = b, m = 0): parallell zur x-Achse; beschreibt konstante Größen.
+- **Horizontale Gerade** (f(x) = b, m = 0): parallel zur x-Achse; beschreibt konstante Größen (z. B. konstanter Blutzuckerspiegel).
 - **Vertikale Gerade** (x = a): keine Funktion im mathematischen Sinne, da einem x-Wert unendlich viele y-Werte zugeordnet sind.
-- **Ursprungsgerade** (b = 0, f(x) = mx): verläuft durch den Ursprung; typisch für direkte Proportionalität.
+- **Ursprungsgerade** (b = 0, f(x) = mx): verläuft durch den Ursprung; typisch für direkte Proportionalität (z. B. Dosis proportional zum Körpergewicht).
 
 ## Lineare Gleichungssysteme
 
-Zwei lineare Funktionen f(x) = m₁x + b₁ und g(x) = m₂x + b₂ schneiden sich, wenn m₁ ≠ m₂. Der Schnittpunkt ergibt sich durch Gleichsetzen: m₁x + b₁ = m₂x + b₂ → x = (b₂ − b₁)/(m₁ − m₂). Sind m₁ = m₂ und b₁ ≠ b₂, sind die Geraden parallel und haben keinen Schnittpunkt. Sind m₁ = m₂ und b₁ = b₂, sind die Geraden identisch.`,
+Zwei lineare Funktionen f(x) = m₁x + b₁ und g(x) = m₂x + b₂ schneiden sich, wenn m₁ ≠ m₂. Der Schnittpunkt ergibt sich durch Gleichsetzen: m₁x + b₁ = m₂x + b₂ → x = (b₂ − b₁)/(m₁ − m₂). Sind m₁ = m₂ und b₁ ≠ b₂, sind die Geraden parallel und haben keinen Schnittpunkt. Sind m₁ = m₂ und b₁ = b₂, sind die Geraden identisch.
+
+**Lösungsmethoden für lineare Gleichungssysteme** (2 Gleichungen, 2 Unbekannte):
+- **Gleichsetzungsverfahren**: Beide Gleichungen nach y auflösen, dann gleichsetzen.
+- **Einsetzungsverfahren**: Eine Gleichung nach einer Variable auflösen, in die andere einsetzen.
+- **Additionsverfahren**: Gleichungen so multiplizieren, dass eine Variable beim Addieren wegfällt.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Kalibrierkurve Photometer:**
+Absorption A = 0,015 · c + 0,02 (c in mg/L). Probe zeigt A = 0,77. Auflösen: c = (0,77 − 0,02)/0,015 = 0,75/0,015 = **50 mg/L**. Steigung 0,015: pro mg/L steigt Absorption um 0,015 Einheiten. y-Achsenabschnitt 0,02: Hintergrundabsorption der Küvette.
+
+**Beispiel 2 — Regressionsgerade BMI vs. systolischer Blutdruck:**
+y = 1,8x + 85 (x = BMI, y = RR_sys in mmHg). Patient BMI = 30: RR = 1,8 · 30 + 85 = **139 mmHg** (Grenzwert Hypertonie 140). Pro BMI-Punkt: +1,8 mmHg. BMI-Reduktion von 30 auf 25: RR sinkt um 5 · 1,8 = **9 mmHg**.
+
+**Beispiel 3 — Infusionsrate und Gleichgewichtskonzentration:**
+Elimination: C(t) = C₀ − k₀ · t (Kinetik nullter Ordnung). k₀ = 10 mg/h. Dauertropfrate R = 10 mg/h → Gleichgewicht: Zufuhr = Abbau. Bei R = 15 mg/h: Akkumulation mit 5 mg/h. Bei R = 8 mg/h: C sinkt um 2 mg/h. Steady-State nur bei **R = k₀ = 10 mg/h**.
+
+**Beispiel 4 — Senkrechte Geraden bestimmen:**
+Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = −1/m₁ = −1/3. b₂ = y₀ − m₂·x₀ = 1 − (−1/3)·6 = 1 + 2 = 3. Also: **g₂: y = −(1/3)x + 3**. Probe: m₁·m₂ = 3·(−1/3) = −1.`,
       lernziele: [
         "Die Geradengleichung f(x) = mx + b aufstellen, wenn zwei Punkte oder Steigung und ein Punkt gegeben sind.",
         "Steigung und y-Achsenabschnitt aus einem Graphen oder einer Gleichung ablesen und interpretieren.",
@@ -113,35 +166,6 @@ Zwei lineare Funktionen f(x) = m₁x + b₁ und g(x) = m₂x + b₂ schneiden si
           tags: ["steigung", "lineare-funktion", "koordinaten"],
         },
         {
-          question: "Die Gerade f(x) = −3x + 6 schneidet die x-Achse bei:",
-          options: ["x = −2", "x = 6", "x = 2", "x = −6", "x = 3"],
-          correctIndex: 2,
-          explanation:
-            "Die Nullstelle (x-Achsenabschnitt) erhält man, indem man f(x) = 0 setzt: 0 = −3x + 6 → 3x = 6 → x = 2. An der Nullstelle x = 2 schneidet die Gerade die x-Achse. Der y-Achsenabschnitt liegt bei f(0) = 6. Die Steigung −3 besagt, dass die Gerade von links nach rechts fällt: Mit jeder x-Einheit sinkt y um 3.",
-          hints: ["Nullstelle: f(x) = 0 setzen und nach x auflösen", "x₀ = −b/m = −6/(−3) = 2"],
-          difficulty: 1,
-          tags: ["nullstelle", "lineare-funktion", "gleichung"],
-        },
-        {
-          question: "Welche der folgenden Geraden ist parallel zu f(x) = 4x − 7?",
-          options: [
-            "g(x) = −4x + 2",
-            "g(x) = 4x + 3",
-            "g(x) = 0,25x − 7",
-            "g(x) = 4 − x",
-            "g(x) = x + 4",
-          ],
-          correctIndex: 1,
-          explanation:
-            "Parallele Geraden haben identische Steigungen. Die Funktion f(x) = 4x − 7 hat die Steigung m = 4. Unter den Optionen hat nur g(x) = 4x + 3 dieselbe Steigung m = 4. Die unterschiedlichen y-Achsenabschnitte (−7 vs. +3) bestätigen, dass es sich um verschiedene, aber parallele Geraden handelt. Eine Steigung von −1/4 (Option C) wäre senkrecht zu f, nicht parallel.",
-          hints: [
-            "Parallele Geraden: gleiche Steigung m",
-            "Vergleiche die Steigungen aller Optionen mit m = 4",
-          ],
-          difficulty: 1,
-          tags: ["parallele-geraden", "steigung", "lineare-funktion"],
-        },
-        {
           question:
             "Eine Gerade hat die Steigung m = 2 und geht durch den Punkt (3|7). Welchen y-Achsenabschnitt hat sie?",
           options: ["b = 1", "b = 13", "b = −1", "b = 3", "b = 7"],
@@ -154,22 +178,6 @@ Zwei lineare Funktionen f(x) = m₁x + b₁ und g(x) = m₂x + b₂ schneiden si
           ],
           difficulty: 1,
           tags: ["lineare-funktion", "y-achsenabschnitt", "algebra"],
-        },
-        {
-          question: "Welche Gerade steht senkrecht auf f(x) = 3x + 1?",
-          options: [
-            "g(x) = 3x − 5",
-            "g(x) = −3x + 1",
-            "g(x) = −(1/3)x + 2",
-            "g(x) = (1/3)x + 2",
-            "g(x) = −x + 3",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Zwei Geraden stehen senkrecht aufeinander, wenn das Produkt ihrer Steigungen −1 ergibt: m₁·m₂ = −1. Die Steigung von f ist m₁ = 3, daher muss gelten: m₂ = −1/3. Unter den Optionen hat g(x) = −(1/3)x + 2 die Steigung −1/3. Probe: 3·(−1/3) = −1. Diese Beziehung ist wichtig, weil senkrechte Linien in der Geometrie und bei Normalenvektoren eine zentrale Rolle spielen.",
-          hints: ["Senkrecht: m₁ · m₂ = −1, also m₂ = −1/m₁", "m₁ = 3 → m₂ = −1/3"],
-          difficulty: 2,
-          tags: ["senkrechte-geraden", "steigung", "orthogonalität"],
         },
         {
           question:
@@ -218,6 +226,20 @@ Zwei lineare Funktionen f(x) = m₁x + b₁ und g(x) = m₂x + b₂ schneiden si
     {
       id: "ma-5-02",
       title: "Quadratische Funktionen",
+      stichworte: [
+        "Quadratische Funktion",
+        "Parabel",
+        "Scheitelpunkt",
+        "Diskriminante",
+        "Mitternachtsformel",
+        "pq-Formel",
+        "Quadratische Ergänzung",
+        "Satz von Vieta",
+        "Nullstellen",
+        "Symmetrieachse",
+        "Leitkoeffizient",
+        "Wurfparabel",
+      ],
       content: `# Quadratische Funktionen
 
 ## Allgemeine und Scheitelpunktform
@@ -225,6 +247,14 @@ Zwei lineare Funktionen f(x) = m₁x + b₁ und g(x) = m₂x + b₂ schneiden si
 Eine quadratische Funktion hat die allgemeine Form **f(x) = ax² + bx + c** mit dem Leitkoeffizienten a ≠ 0. Der Graph ist eine **Parabel**. Ist a > 0, öffnet die Parabel nach oben (Minimum); ist a < 0, öffnet sie nach unten (Maximum). |a| bestimmt die "Breite" der Parabel: Großes |a| → schmale Parabel; kleines |a| → flache Parabel.
 
 Die **Scheitelpunktform** f(x) = a(x − xs)² + ys ist besonders anschaulich: Der Scheitelpunkt S(xs|ys) ist der Hoch- oder Tiefpunkt der Parabel. Die Umformung von der allgemeinen in die Scheitelpunktform erfolgt durch **quadratische Ergänzung**.
+
+> **Merke:** Der Leitkoeffizient a bestimmt **zwei** Eigenschaften gleichzeitig: das Vorzeichen entscheidet über die Öffnungsrichtung (a > 0: oben, a < 0: unten), der Betrag |a| über die Breite (|a| > 1: schmaler als Normalparabel, |a| < 1: breiter).
+
+| Form | Darstellung | Vorteil |
+|---|---|---|
+| Allgemeine Form | f(x) = ax² + bx + c | y-Achsenabschnitt direkt ablesbar (c) |
+| Scheitelpunktform | f(x) = a(x − xs)² + ys | Scheitelpunkt direkt ablesbar |
+| Faktorisierte Form | f(x) = a(x − x₁)(x − x₂) | Nullstellen direkt ablesbar |
 
 ## Scheitelpunkt berechnen
 
@@ -239,6 +269,8 @@ Alternativ: quadratische Ergänzung. Beispiel: f(x) = 2x² − 8x + 3
 = 2(x − 2)² − 5
 
 Scheitelpunkt: S(2|−5), Öffnung nach oben (a = 2 > 0).
+
+> **Merke:** Quadratische Ergänzung Schritt für Schritt: (1) a ausklammern, (2) halben Koeffizienten von x quadrieren und addieren/subtrahieren, (3) binomische Formel rückwärts anwenden. Am MedAT spart die Formel xs = −b/(2a) oft mehr Zeit als die vollständige Ergänzung.
 
 ## Nullstellen und Diskriminante
 
@@ -255,9 +287,11 @@ Der Ausdruck unter der Wurzel heißt **Diskriminante**: **D = b² − 4ac**
 **pq-Formel** (für normierte Form x² + px + q = 0):
 x₁₂ = −p/2 ± √((p/2)² − q)
 
+**Achtung MedAT-Falle:** Die pq-Formel gilt nur für **normierte** quadratische Gleichungen (Koeffizient vor x² muss 1 sein). Hat x² einen anderen Koeffizienten, muss man zuerst durch a dividieren oder direkt die Mitternachtsformel verwenden.
+
 ## Symmetrie
 
-Jede Parabel f(x) = ax² + bx + c ist **achsensymmetrisch** zur vertikalen Geraden x = xs = −b/(2a). Diese Symmetrieachse halbiert die Strecke zwischen den beiden Nullstellen: xs = (x₁ + x₂)/2.
+Jede Parabel f(x) = ax² + bx + c ist **achsensymmetrisch** zur vertikalen Geraden x = xs = −b/(2a). Diese Symmetrieachse halbiert die Strecke zwischen den beiden Nullstellen: xs = (x₁ + x₂)/2. Kennt man eine Nullstelle und den Scheitelpunkt, kann man die zweite Nullstelle über die Symmetrie bestimmen: x₂ = 2·xs − x₁.
 
 ## Satz von Vieta
 
@@ -265,11 +299,31 @@ Bei normierten Gleichungen x² + px + q = 0 gilt der **Satz von Vieta**:
 - x₁ + x₂ = −p (Summe der Nullstellen)
 - x₁ · x₂ = q (Produkt der Nullstellen)
 
-Dies ermöglicht oft eine schnelle Bestimmung der Nullstellen ohne Rechnung.
+Dies ermöglicht oft eine schnelle Bestimmung der Nullstellen ohne Rechnung. **MedAT-Strategie:** Bei ganzzahligen p und q zuerst versuchen, zwei Zahlen mit passender Summe und passendem Produkt zu erraten — das ist schneller als die Formel.
 
-## Anwendungen
+> **Merke:** Vieta ist besonders effizient, wenn die Nullstellen ganzzahlig sind. Beispiel: x² − 7x + 12 = 0 → gesucht: Summe 7, Produkt 12 → x₁ = 3, x₂ = 4 (sofort lösbar ohne Formel).
 
-Quadratische Funktionen modellieren viele physikalische Vorgänge: Wurfparabeln, kinetische Energie (E_kin = ½mv²), die Beziehung zwischen Radius und Fläche eines Kreises (A = πr²). In der Pharmakologie erscheinen quadratische Terme in komplexeren Dosis-Wirkungsmodellen und bei der Berechnung der Bioverfügbarkeit bei bestimmten Freisetzungskinetiken.`,
+## Anwendungen in Physik und Medizin
+
+Quadratische Funktionen modellieren viele physikalische Vorgänge: Wurfparabeln, kinetische Energie (E_kin = ½mv²), die Beziehung zwischen Radius und Fläche eines Kreises (A = πr²). In der Pharmakologie erscheinen quadratische Terme in komplexeren Dosis-Wirkungsmodellen und bei der Berechnung der Bioverfügbarkeit bei bestimmten Freisetzungskinetiken.
+
+**Hagen-Poiseuille-Gesetz:** Der Volumenstrom V̇ durch ein Blutgefäß ist proportional zu r⁴ (Radius hoch 4). Da die Querschnittsfläche A = πr² quadratisch von r abhängt, führt eine Halbierung des Radius zu einer Reduktion der Fläche auf ein Viertel — und der Strömungswiderstand steigt auf das 16-Fache. Dies erklärt die dramatischen Auswirkungen von Arteriosklerose.
+
+**Wurfparabel:** Die Höhe h eines geworfenen Körpers folgt h(t) = −½g·t² + v₀·t + h₀. Der Scheitelpunkt gibt die maximale Höhe und den Zeitpunkt des Erreichens an. Diese Parabel ist ein Standardbeispiel für a < 0 (Öffnung nach unten).
+
+## Rechenbeispiele
+
+**Beispiel 1 — Optimale Dosis-Wirkung (Scheitelpunkt):**
+Wirkung W(d) = −0,4d² + 16d − 40 (d in mg). Optimale Dosis: d_opt = −b/(2a) = −16/(2·(−0,4)) = **20 mg**. W_max = −0,4·400 + 320 − 40 = **120 Einheiten**. Nullstellen (keine Wirkung): d = (−16 ± √(256−64))/(−0,8) → d₁ ≈ 2,8 mg, d₂ ≈ 37,2 mg. Therapeutisches Fenster: ca. 3–37 mg.
+
+**Beispiel 2 — Parabolische Flugbahn: Blutdruckwelle:**
+Näherung p(t) = −200t² + 200t + 80 (mmHg, t in Sekunden). Maximum: t = −200/(2·(−200)) = **0,5 s**. p_max = −200·0,25 + 100 + 80 = **130 mmHg**. Pulsdauer (p = 80): −200t² + 200t = 0 → t(−200t + 200) = 0 → t = 0 und t = **1 s**.
+
+**Beispiel 3 — Herzminutenvolumen und Gefäßwiderstand:**
+HMV = RR / TPR. Wenn RR = −0,02·HMV² + 4·HMV (nicht-lineare Beziehung). Nullstellen: HMV·(−0,02·HMV + 4) = 0 → HMV = 0 oder **200 L/min** (physiologisches Limit). Maximum: HMV = −4/(2·(−0,02)) = **100 L/min** mit RR_max = **200 mmHg**. Realwerte: HMV ≈ 5 L/min bei RR ≈ 19 mmHg (auf der Kurve).
+
+**Beispiel 4 — Vieta-Schnellmethode:**
+x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ · x₂ = 28. Systematisch probieren: 4 + 7 = 11, 4 · 7 = 28 → **x₁ = 4, x₂ = 7**. Probe: f(4) = 16 − 44 + 28 = 0, f(7) = 49 − 77 + 28 = 0.`,
       lernziele: [
         "Quadratische Funktionen in allgemeiner Form und Scheitelpunktform darstellen und ineinander umwandeln.",
         "Scheitelpunkt, Öffnungsrichtung und Symmetrieachse einer Parabel bestimmen.",
@@ -353,20 +407,6 @@ Quadratische Funktionen modellieren viele physikalische Vorgänge: Wurfparabeln,
           tags: ["vieta", "nullstellen", "parabel"],
         },
         {
-          question:
-            "Für welche Werte der Diskriminante hat eine quadratische Gleichung keine reellen Lösungen?",
-          options: ["D > 0", "D = 0", "D < 0", "D ≥ 0", "D ≠ 0"],
-          correctIndex: 2,
-          explanation:
-            "Die Diskriminante D = b² − 4ac entscheidet: D > 0 → zwei verschiedene reelle Lösungen; D = 0 → genau eine (doppelte) reelle Lösung; D < 0 → keine reellen Lösungen (die Parabel schneidet die x-Achse nicht). Bei D < 0 gibt es nur komplexe Lösungen, die für das MedAT keine Relevanz haben. Grafisch bedeutet D < 0, dass die Parabel entweder vollständig über (a > 0) oder vollständig unter (a < 0) der x-Achse liegt.",
-          hints: [
-            "D < 0 → √D existiert nicht im Reellen",
-            "Grafisch: Parabel berührt x-Achse nicht",
-          ],
-          difficulty: 1,
-          tags: ["diskriminante", "quadratische-funktion", "lösungsmenge"],
-        },
-        {
           question: "Welche Aussage trifft auf f(x) = −3(x − 2)² + 7 zu?",
           options: [
             "Die Parabel öffnet nach oben und hat ein Minimum bei S(2|7).",
@@ -415,42 +455,25 @@ Quadratische Funktionen modellieren viele physikalische Vorgänge: Wurfparabeln,
           difficulty: 3,
           tags: ["scheitelpunktform", "parabel", "algebra"],
         },
-        {
-          question:
-            "Welches ist die normierte quadratische Gleichung, wenn die Nullstellen x₁ = −2 und x₂ = 5 bekannt sind?",
-          options: [
-            "x² − 3x − 10 = 0",
-            "x² + 3x − 10 = 0",
-            "x² − 7x + 10 = 0",
-            "x² + 7x − 10 = 0",
-            "x² − 3x + 10 = 0",
-          ],
-          correctIndex: 0,
-          explanation:
-            "Aus Vieta: x₁ + x₂ = −2 + 5 = 3 = −p → p = −3. x₁ · x₂ = −2 · 5 = −10 = q. Normierte Gleichung: x² + px + q = x² − 3x − 10 = 0. Probe: Mitternachtsformel: D = 9 − 4·(−10) = 49. x = (3 ± 7)/2 → x₁ = 5, x₂ = −2. Diese umgekehrte Anwendung von Vieta (von Nullstellen zur Gleichung) ist häufig im MedAT gefragt.",
-          hints: ["p = −(x₁ + x₂) = −3; q = x₁ · x₂ = −10", "Normierte Form: x² − 3x − 10 = 0"],
-          difficulty: 2,
-          tags: ["vieta", "quadratische-gleichung", "algebra"],
-        },
-        {
-          question:
-            "Der Querschnitt einer Arterie beträgt A = πr² mit r = 3 mm. Um wie viel Prozent ändert sich die Fläche, wenn r auf 2 mm sinkt?",
-          options: ["ca. −33 %", "ca. −44 %", "ca. −56 %", "ca. −67 %", "ca. −25 %"],
-          correctIndex: 2,
-          explanation:
-            "A₁ = π·9 mm² und A₂ = π·4 mm². Relative Änderung: (A₂ − A₁)/A₁ = (4 − 9)/9 = −5/9 ≈ −55,6 % ≈ −56 %. Das ist das klinisch wichtige Prinzip: Eine Reduktion des Radius um nur ein Drittel (von 3 auf 2 mm) verringert die Durchblutungsfläche um mehr als die Hälfte. Nach Hagen-Poiseuille steigt gleichzeitig der Strömungswiderstand auf (3/2)⁴ ≈ 5-faches, was die gravierenden Folgen einer Gefäßverengung verdeutlicht.",
-          hints: [
-            "A ~ r², daher A₂/A₁ = (r₂/r₁)² = (2/3)² = 4/9",
-            "Relative Änderung = (4/9 − 1) = −5/9",
-          ],
-          difficulty: 3,
-          tags: ["kreisfläche", "quadratisch", "verhältnis"],
-        },
       ],
     },
     {
       id: "ma-5-03",
       title: "Exponentialfunktionen",
+      stichworte: [
+        "Exponentialfunktion",
+        "Eulersche Zahl",
+        "Halbwertszeit",
+        "Verdopplungszeit",
+        "Exponentieller Zerfall",
+        "Exponentielles Wachstum",
+        "Pharmakokinetik",
+        "Kinetik erster Ordnung",
+        "Zerfallskonstante",
+        "Asymptote",
+        "Radioaktiver Zerfall",
+        "Steady State",
+      ],
       content: `# Exponentialfunktionen
 
 ## Grundform und Eigenschaften
@@ -465,6 +488,8 @@ Eigenschaften der Exponentialfunktion:
 - **Monotonie**: b > 1 → streng monoton steigend (Wachstum); 0 < b < 1 → streng monoton fallend (Zerfall)
 - **Keine Nullstellen**: Da f(x) = a · bˣ > 0 für alle x gilt
 
+> **Merke:** Die Exponentialfunktion ist **immer positiv** — sie kann niemals den Wert 0 oder negative Werte annehmen. Das ist eine häufige MedAT-Falle: "Die Konzentration eines Medikaments erreicht nach unendlich langer Zeit den Wert 0" ist mathematisch falsch (sie nähert sich nur asymptotisch an).
+
 ## Wachstum und Zerfall
 
 **Exponentielles Wachstum** (b > 1 oder positiver Exponent): f(t) = f₀ · eᵏᵗ (k > 0)
@@ -474,6 +499,12 @@ Typische Beispiele: Bakterienwachstum, Zinseszins, unkontrollierte Zellvermehrun
 **Exponentieller Zerfall** (0 < b < 1 oder negativer Exponent): f(t) = f₀ · e⁻ᵏᵗ (k > 0)
 
 Typische Beispiele: Radioaktiver Zerfall, Medikamentenabbau im Blut (Pharmakokinetik erster Ordnung), Abklingen elektrischer Ströme.
+
+| Typ | Formel | k-Wert | Beispiel |
+|---|---|---|---|
+| Wachstum | f(t) = f₀ · eᵏᵗ | k > 0 | Bakterienkultur |
+| Zerfall | f(t) = f₀ · e⁻ᵏᵗ | k > 0 | Medikamentenabbau |
+| Sättigung | f(t) = A · (1 − e⁻ᵏᵗ) | k > 0 | Steady-State-Aufbau |
 
 ## Halbwertszeit
 
@@ -489,6 +520,16 @@ ln(1/2) = −k·T₁/₂
 
 Nach n Halbwertszeiten verbleiben: f(n·T₁/₂) = f₀ · (1/2)ⁿ
 
+| Anzahl T½ | Restmenge | In Prozent |
+|---|---|---|
+| 1 | f₀/2 | 50 % |
+| 2 | f₀/4 | 25 % |
+| 3 | f₀/8 | 12,5 % |
+| 4 | f₀/16 | 6,25 % |
+| 5 | f₀/32 | 3,1 % |
+
+> **Merke:** Nach **5 Halbwertszeiten** sind weniger als 3,2 % der Ausgangssubstanz übrig — klinisch gilt das Medikament als vollständig eliminiert. Diese Faustregel wird im MedAT häufig abgefragt.
+
 ## Verdopplungszeit
 
 Das Pendant beim Wachstum ist die **Verdopplungszeit T₂**:
@@ -503,6 +544,8 @@ e ≈ 2,71828 ist die Basis der natürlichen Exponentialfunktion. Sie ist defini
 - e = lim(n→∞)(1 + 1/n)ⁿ
 - e ist die Basis, für welche die Exponentialfunktion ihre eigene Ableitung ist: (eˣ)' = eˣ
 
+In der Finanzmathematik taucht e bei der stetigen Verzinsung auf: Kapital K nach t Jahren bei Zinssatz r ergibt sich als K(t) = K₀ · eʳᵗ. Beim Zinseszins mit n Zinsperioden pro Jahr: K = K₀ · (1 + r/n)ⁿᵗ, und für n → ∞ konvergiert dies gegen K₀ · eʳᵗ.
+
 ## Die e-Funktion in der Pharmakokinetik
 
 Bei der **Kinetik erster Ordnung** gilt: Die Eliminationsrate ist proportional zur aktuellen Konzentration. Das führt zur Differentialgleichung dC/dt = −k·C mit der Lösung:
@@ -511,9 +554,32 @@ Bei der **Kinetik erster Ordnung** gilt: Die Eliminationsrate ist proportional z
 
 wobei C₀ die Anfangskonzentration und k die Eliminationskonstante ist. Der pH-abhängige Ionisierungsgrad von Arzneimitteln folgt ebenfalls einer exponentiellen Beziehung (Henderson-Hasselbalch).
 
+**Kinetik erster Ordnung vs. nullter Ordnung:** Bei Kinetik erster Ordnung ist die Eliminationsrate proportional zur Konzentration (exponentieller Abfall). Bei Kinetik nullter Ordnung ist die Eliminationsrate konstant (linearer Abfall) — Beispiel: Ethanolabbau in der Leber bei gesättigter Alkoholdehydrogenase.
+
 ## Exponentialfunktionen umformen
 
-Jede Exponentialfunktion f(x) = aˣ lässt sich als f(x) = eˣ·ln(a) schreiben, da aˣ = e^(x·ln(a)). Diese Umformung verbindet Exponential- und Logarithmusfunktion und ist für Ableitungen und Integrale unerlässlich.`,
+Jede Exponentialfunktion f(x) = aˣ lässt sich als f(x) = eˣ·ln(a) schreiben, da aˣ = e^(x·ln(a)). Diese Umformung verbindet Exponential- und Logarithmusfunktion und ist für Ableitungen und Integrale unerlässlich.
+
+**Rechenregeln für Potenzen** (Wiederholung):
+- aˣ · aʸ = aˣ⁺ʸ
+- aˣ / aʸ = aˣ⁻ʸ
+- (aˣ)ʸ = aˣ·ʸ
+- a⁰ = 1 (für a ≠ 0)
+- a⁻ˣ = 1/aˣ
+
+## Rechenbeispiele
+
+**Beispiel 1 — Pharmakokinetik: Gentamicin-Talspiegel:**
+C₀ = 8 mg/L (Peak), k = 0,231 h⁻¹ (T½ = ln2/0,231 = 3 h). Talspiegel nach 8 h: C(8) = 8 · e^(−0,231·8) = 8 · e^(−1,848) = 8 · 0,158 = **1,26 mg/L**. Therapeutisch: Talspiegel < 2 mg/L (Nephrotoxizitätsgrenze) → **im sicheren Bereich**.
+
+**Beispiel 2 — Bakterienwachstum:**
+Ausgangskolonie: N₀ = 1000. Verdopplungszeit 30 min → k = ln2/30 = 0,0231 min⁻¹. Nach 4 h (240 min): N = 1000 · e^(0,0231·240) = 1000 · e^(5,544) = 1000 · 256 = **256.000 Bakterien**. Alternativ: 240/30 = 8 Verdopplungen → 1000 · 2⁸ = **256.000**.
+
+**Beispiel 3 — Radioaktiver Zerfall: ⁹⁹ᵐTc-Szintigraphie:**
+T½ = 6,01 h, Injektionsaktivität A₀ = 740 MBq. k = ln2/6,01 = 0,1153 h⁻¹. Nach 24 h: A = 740 · e^(−0,1153·24) = 740 · e^(−2,767) = 740 · 0,0628 = **46,5 MBq**. Restaktivität = 46,5/740 = **6,3%** — Patient kann nach 24 h bedenkenlos Kontakt mit Kindern haben (<5% gilt als unbedenklich, hier knapp darüber).
+
+**Beispiel 4 — Steady-State-Aufbau:**
+Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n Dosen: 1 − (½)ⁿ. Nach 1 Dosis: 50 %, nach 2: 75 %, nach 3: 87,5 %, nach 4: 93,75 %, nach 5: 96,9 %. Klinische Faustregel: **Steady State nach 4–5 T½** (94–97 % erreicht).`,
       lernziele: [
         "Exponentialfunktionen in der Form f(t) = f₀ · e^(kt) aufstellen und Wachstum von Zerfall unterscheiden.",
         "Die Halbwertszeit T₁/₂ = ln(2)/k aus der Eliminationskonstante berechnen und umgekehrt.",
@@ -607,17 +673,6 @@ Jede Exponentialfunktion f(x) = aˣ lässt sich als f(x) = eˣ·ln(a) schreiben,
         },
         {
           question:
-            "Nach einer radioaktiven Bestrahlung enthält eine Probe noch 12,5 % der ursprünglichen Aktivität. Wie viele Halbwertszeiten sind vergangen?",
-          options: ["2", "3", "4", "5", "6"],
-          correctIndex: 1,
-          explanation:
-            "12,5 % = 0,125 = (½)³. Es sind also 3 Halbwertszeiten vergangen. Probe: (½)¹ = 50 %, (½)² = 25 %, (½)³ = 12,5 %. Diese Berechnung kehrt die Halbwertszeitformel um: Statt der Restmenge nach n Halbwertszeiten suchen wir n aus der bekannten Restmenge. In der Nuklearmedizin ist das relevant für die Strahlenschutzplanung: Wann ist ein Patient wieder entlassungsfähig?",
-          hints: ["12,5 % = 1/8 = (½)³", "n = log₂(8) = 3"],
-          difficulty: 1,
-          tags: ["halbwertszeit", "logarithmus", "pharmakokinetik"],
-        },
-        {
-          question:
             "Eine Bakterienkultur verdoppelt sich alle 20 min. Wie viele Bakterien gibt es nach 2 h, wenn zu Beginn 1000 Bakterien vorhanden waren?",
           options: ["32 000", "64 000", "16 000", "128 000", "48 000"],
           correctIndex: 1,
@@ -638,41 +693,25 @@ Jede Exponentialfunktion f(x) = aˣ lässt sich als f(x) = eˣ·ln(a) schreiben,
           difficulty: 2,
           tags: ["steady-state", "pharmakokinetik", "halbwertszeit"],
         },
-        {
-          question: "Welcher Graph entspricht der Funktion f(x) = 2 · e^(−0,5x)?",
-          options: [
-            "Streng steigende Kurve, die die y-Achse bei y = 2 schneidet.",
-            "Streng fallende Kurve, die die y-Achse bei y = 2 schneidet und sich y = 0 annähert.",
-            "Parabel mit Scheitelpunkt bei (0|2).",
-            "Streng fallende Kurve, die die x-Achse bei x = 2 schneidet.",
-            "Gerade mit negativer Steigung durch den Ursprung.",
-          ],
-          correctIndex: 1,
-          explanation:
-            "f(x) = 2·e^(−0,5x): Da der Exponent −0,5x für wachsendes x immer negativer wird, fällt e^(−0,5x) von e⁰ = 1 gegen 0. Mit Vorfaktor 2: y-Achsenabschnitt f(0) = 2·1 = 2. Für x → ∞: f(x) → 0 (horizontale Asymptote y = 0). Die Funktion hat keine Nullstellen (bleibt stets positiv). Sie ist keine Gerade (nicht linear) und keine Parabel (kein x²-Term). Typischer Graph: starkes Abfallen zu Beginn, dann immer flacher werdend.",
-          hints: [
-            "Exponent −0,5x: negativ → fallende Funktion",
-            "f(0) = 2·e⁰ = 2; Asymptote: y = 0",
-          ],
-          difficulty: 2,
-          tags: ["exponentialfunktion", "zerfall", "asymptote"],
-        },
-        {
-          question:
-            "Ein Medikament wird intravenös mit C₀ = 10 mg/L appliziert. Die Eliminationskonstante ist k = 0,2 h⁻¹. Welche Konzentration liegt nach 5 h vor? (e^(−1) ≈ 0,368)",
-          options: ["3,68 mg/L", "1,84 mg/L", "5,0 mg/L", "0,37 mg/L", "2,0 mg/L"],
-          correctIndex: 0,
-          explanation:
-            "C(5) = C₀ · e^(−k·t) = 10 · e^(−0,2·5) = 10 · e^(−1) ≈ 10 · 0,368 = 3,68 mg/L. Die Halbwertszeit dieses Medikaments beträgt T½ = ln(2)/0,2 = 0,693/0,2 ≈ 3,47 h. Nach 5 h hat man somit etwa 1,44 Halbwertszeiten durchlaufen, was zu (½)^1,44 ≈ 0,368 = 36,8 % des Ausgangswerts führt — konsistent mit e^(−1). Klinisch: Liegt dieser Wert über dem therapeutischen Minimum?",
-          hints: ["C(t) = C₀ · e^(−kt); kt = 0,2 · 5 = 1", "C(5) = 10 · e^(−1) = 10 · 0,368"],
-          difficulty: 3,
-          tags: ["pharmakokinetik", "exponentialfunktion", "konzentration"],
-        },
       ],
     },
     {
       id: "ma-5-04",
       title: "Logarithmusfunktionen",
+      stichworte: [
+        "Logarithmus",
+        "Natürlicher Logarithmus",
+        "Zehnerlogarithmus",
+        "pH-Wert",
+        "Henderson-Hasselbalch",
+        "Logarithmengesetze",
+        "Basiswechsel",
+        "Semilog-Plot",
+        "Umkehrfunktion",
+        "Dezibel",
+        "Produktregel",
+        "Quotientenregel",
+      ],
       content: `# Logarithmusfunktionen
 
 ## Definition und Grundbegriffe
@@ -681,10 +720,14 @@ Der Logarithmus ist die **Umkehrfunktion der Exponentialfunktion**. Für die Bas
 
 **log_b(x) = y ⟺ b^y = x**
 
+In Worten: "Der Logarithmus von x zur Basis b ist der Exponent, mit dem man b potenzieren muss, um x zu erhalten." Diese Umkehrbeziehung ist der Schlüssel zum Lösen von Exponentialgleichungen.
+
 Wichtige Spezialfälle:
-- **log₁₀(x)** (Zehnerlogarithmus, oft kurz "log"): Basis 10
-- **ln(x)** (natürlicher Logarithmus): Basis e ≈ 2,718
-- **log₂(x)** (Binärlogarithmus): Basis 2
+- **log₁₀(x)** (Zehnerlogarithmus, oft kurz "log"): Basis 10 — verwendet für pH-Wert, Dezibel
+- **ln(x)** (natürlicher Logarithmus): Basis e ≈ 2,718 — verwendet in Pharmakokinetik, Physik
+- **log₂(x)** (Binärlogarithmus): Basis 2 — verwendet bei Halbwertszeiten, Informatik
+
+> **Merke:** Logarithmus beantwortet die Frage: "Wie oft muss ich die Basis mit sich selbst multiplizieren, um x zu erreichen?" Beispiel: log₂(8) = 3, weil 2³ = 8.
 
 ## Rechenregeln
 
@@ -696,6 +739,13 @@ Die wichtigsten Logarithmengesetze (für alle Basen gleich):
 4. **Basiswechsel**: log_b(x) = ln(x)/ln(b) = log(x)/log(b)
 5. **Spezialwerte**: log(1) = 0; log(b) = 1; log(b^n) = n; b^(log_b(x)) = x
 
+| Regel | Formel | Beispiel |
+|---|---|---|
+| Produktregel | log(a·b) = log a + log b | log(2·5) = log 2 + log 5 = log 10 = 1 |
+| Quotientenregel | log(a/b) = log a − log b | ln(1/2) = ln 1 − ln 2 = −ln 2 |
+| Potenzregel | log(aⁿ) = n · log a | log(10³) = 3 · log 10 = 3 |
+| Basiswechsel | log_b(x) = ln x / ln b | log₂(8) = ln 8 / ln 2 = 3 |
+
 ## Eigenschaften der Logarithmusfunktion
 
 - **Definitionsbereich**: D = (0, ∞) — nur positive Zahlen!
@@ -704,6 +754,8 @@ Die wichtigsten Logarithmengesetze (für alle Basen gleich):
 - **Vertikale Asymptote**: x = 0 (Funktion geht gegen −∞)
 - **Monotonie**: b > 1 → streng monoton steigend; 0 < b < 1 → streng monoton fallend
 - **Kein Maximum, kein Minimum**: Funktion wächst unbegrenzt (aber sehr langsam)
+
+**Achtung MedAT-Falle:** Der Logarithmus ist nur für **positive** Argumente definiert. log(0) und log(−3) existieren nicht! Das ist ein häufiger Fehler bei Gleichungsumformungen.
 
 ## pH-Wert — Logarithmus in der Medizin
 
@@ -720,6 +772,8 @@ Beispiele:
 
 Eine pH-Änderung um 1 entspricht einer **10-fachen** Änderung der [H⁺]! Eine Änderung um 2 Einheiten entspricht einem Faktor 100.
 
+> **Merke:** pH = 7,4 (Normalblut) entspricht [H⁺] ≈ 40 nmol/L. Eine Verdoppelung der [H⁺] auf 80 nmol/L senkt den pH nur um log(2) ≈ 0,3 auf pH 7,1 — bereits eine lebensbedrohliche Azidose. Der logarithmische Maßstab "versteckt" große absolute Änderungen.
+
 ## Henderson-Hasselbalch-Gleichung
 
 Die Henderson-Hasselbalch-Gleichung beschreibt den pH einer Pufferlösung:
@@ -727,6 +781,8 @@ Die Henderson-Hasselbalch-Gleichung beschreibt den pH einer Pufferlösung:
 **pH = pKₐ + log₁₀([A⁻]/[HA])**
 
 wobei [A⁻] die Konzentration der konjugierten Base und [HA] die Konzentration der schwachen Säure ist. Bei pH = pKₐ liegt genau ein 1:1-Verhältnis vor — der Puffer ist am effektivsten in einem pH-Bereich von pKₐ ± 1.
+
+Für den **Bicarbonatpuffer im Blut** gilt speziell: pH = 6,1 + log([HCO₃⁻] / (0,03 · pCO₂)). Die Normwerte HCO₃⁻ = 24 mmol/L und pCO₂ = 40 mmHg ergeben: pH = 6,1 + log(24/1,2) = 6,1 + log(20) = 6,1 + 1,3 = **7,4**.
 
 ## Logarithmische Skalen (Semilog-Plot)
 
@@ -742,7 +798,27 @@ log_b(x) = ln(x)/ln(b)
 
 Besonders nützlich: log₂(x) = ln(x)/ln(2) = ln(x)/0,693
 
-Diese Umrechnung ist bei der Berechnung von Halbwertszeiten wichtig: T½ = log₂(2)/k = 1/k (wenn k in "pro Halbwertszeit" gemessen wird).`,
+Diese Umrechnung ist bei der Berechnung von Halbwertszeiten wichtig: T½ = log₂(2)/k = 1/k (wenn k in "pro Halbwertszeit" gemessen wird).
+
+**Nützliche Merkwerte für den MedAT:**
+- ln(2) ≈ 0,693
+- log(2) ≈ 0,301
+- log(3) ≈ 0,477
+- ln(10) ≈ 2,303
+
+## Rechenbeispiele
+
+**Beispiel 1 — Henderson-Hasselbalch (Säure-Base):**
+pH = pKs + log([A⁻]/[HA]). Essigsäure pKs = 4,76; [A⁻] = 0,1 M, [HA] = 0,01 M. pH = 4,76 + log(0,1/0,01) = 4,76 + log(10) = 4,76 + 1 = **5,76**. Klinisch: Bicarbonatpuffer im Blut: pH = 6,1 + log([HCO₃⁻]/(0,03·pCO₂)). Bei HCO₃⁻ = 24, pCO₂ = 40: pH = 6,1 + log(24/1,2) = 6,1 + log(20) = 6,1 + 1,30 = **7,40**.
+
+**Beispiel 2 — Semilog: k und T½ aus Messdaten:**
+Messwerte: C(0) = 100 mg/L, C(3h) = 50 mg/L. Steigung im Semilog: m = (ln50 − ln100)/(3−0) = (3,912 − 4,605)/3 = **−0,231 h⁻¹**. k = 0,231 h⁻¹. T½ = ln2/k = 0,693/0,231 = **3,0 h**. Clearance bei Vd = 20 L: CL = k · Vd = 0,231 · 20 = **4,62 L/h**.
+
+**Beispiel 3 — Dezibel und Hörverlust:**
+Normalgehör: 0 dB HL. Patient hört erst ab 40 dB HL (Schwerhörigkeit). Intensitätsverhältnis: I₂/I₁ = 10^(40/10) = 10⁴ = **10.000-fach** höhere Intensität nötig. Verbesserung durch Hörgerät um 30 dB: Verstärkungsfaktor = 10^(30/10) = **1000-fach**.
+
+**Beispiel 4 — Logarithmengesetze zur Gleichungslösung:**
+Gesucht: x aus 5ˣ = 200. Logarithmieren: x · ln(5) = ln(200) → x = ln(200)/ln(5) = 5,298/1,609 = **3,29**. Alternativ: x = log(200)/log(5) = 2,301/0,699 = **3,29**. Basiswechsel liefert identische Ergebnisse.`,
       lernziele: [
         "Den Logarithmus als Umkehrfunktion der Exponentialfunktion verstehen und Logarithmengesetze sicher anwenden.",
         "Den pH-Wert aus der Protonenkonzentration berechnen und die Bedeutung des negativen dekadischen Logarithmus erklären.",
@@ -807,16 +883,6 @@ Diese Umrechnung ist bei der Berechnung von Halbwertszeiten wichtig: T½ = log�
           tags: ["ph-wert", "logarithmus", "säure-base"],
         },
         {
-          question: "Vereinfachen Sie: ln(e⁵) + ln(1) − ln(e²).",
-          options: ["3", "5", "7", "e³", "ln(3)"],
-          correctIndex: 0,
-          explanation:
-            "ln(e⁵) = 5 (Potenzregel: ln(eⁿ) = n). ln(1) = 0 (da e⁰ = 1, also log(1) = 0 für jede Basis). ln(e²) = 2. Summe: 5 + 0 − 2 = 3. Diese Aufgabe prüft die Kenntnis der Spezialwerte des natürlichen Logarithmus. Alternativ als Quotient: ln(e⁵/e²) = ln(e³) = 3.",
-          hints: ["ln(eⁿ) = n; ln(1) = 0", "5 + 0 − 2 = 3"],
-          difficulty: 1,
-          tags: ["logarithmus", "euler", "rechenregeln"],
-        },
-        {
           question: "Welche Konzentration [H⁺] entspricht dem physiologischen Blut-pH von 7,4?",
           options: [
             "[H⁺] = 4·10⁻⁸ mol/L",
@@ -831,26 +897,6 @@ Diese Umrechnung ist bei der Berechnung von Halbwertszeiten wichtig: T½ = log�
           hints: ["[H⁺] = 10^(−pH) = 10^(−7,4)", "10^(−7,4) ≈ 4·10⁻⁸ ≈ 40 nmol/L"],
           difficulty: 2,
           tags: ["ph-wert", "h-konzentration", "blutchemie"],
-        },
-        {
-          question: "Berechnen Sie log₂(64).",
-          options: ["4", "5", "6", "8", "32"],
-          correctIndex: 2,
-          explanation:
-            "log₂(64) = y bedeutet 2^y = 64. Da 2⁶ = 64 (2¹=2, 2²=4, 2³=8, 2⁴=16, 2⁵=32, 2⁶=64), ist y = 6. Alternativ über Basiswechsel: log₂(64) = ln(64)/ln(2) = ln(2⁶)/ln(2) = 6·ln(2)/ln(2) = 6. Der Binärlogarithmus spielt in der Informatik eine zentrale Rolle und beim Berechnen von Verdopplungszeiten.",
-          hints: ["2^? = 64: zählen Sie die Potenzen von 2", "2⁶ = 64 → log₂(64) = 6"],
-          difficulty: 1,
-          tags: ["logarithmus", "basis-2", "potenz"],
-        },
-        {
-          question: "Vereinfachen Sie log₁₀(1000) − log₁₀(10).",
-          options: ["1", "2", "10", "100", "3"],
-          correctIndex: 1,
-          explanation:
-            "log₁₀(1000) = log₁₀(10³) = 3. log₁₀(10) = 1. Differenz: 3 − 1 = 2. Alternativ direkt: log₁₀(1000/10) = log₁₀(100) = log₁₀(10²) = 2. Die Quotientenregel log(a/b) = log(a) − log(b) ist hier besonders elegant. Klinisches Beispiel: Der Unterschied zwischen zwei Hörpegeln in dB ist ebenfalls ein Logarithmus eines Lautstärke-Quotienten.",
-          hints: ["log₁₀(1000) = 3; log₁₀(10) = 1", "Oder: log(1000/10) = log(100) = 2"],
-          difficulty: 1,
-          tags: ["logarithmus", "quotientenregel", "rechenregeln"],
         },
         {
           question:
@@ -907,6 +953,20 @@ Diese Umrechnung ist bei der Berechnung von Halbwertszeiten wichtig: T½ = log�
     {
       id: "ma-5-05",
       title: "Grapheninterpretation, Asymptoten und Semilog-Plots",
+      stichworte: [
+        "Asymptote",
+        "Semilog-Plot",
+        "Monotonie",
+        "Extrempunkt",
+        "Wendepunkt",
+        "Linearisierung",
+        "Michaelis-Menten",
+        "Dosis-Wirkungskurve",
+        "EC50",
+        "Krümmung",
+        "Rationale Funktion",
+        "Kaplan-Meier-Kurve",
+      ],
       content: `# Grapheninterpretation, Asymptoten und Semilog-Plots
 
 ## Graphen und ihre Eigenschaften ablesen
@@ -921,13 +981,22 @@ Das Lesen und Interpretieren von Funktionsgraphen ist eine zentrale mathematisch
 - **Wendepunkte**: Stellen, an denen die Kurve ihre Krümmungsrichtung wechselt
 - **Asymptoten**: Grenzlinien, an die sich der Graph annähert, ohne sie zu erreichen
 
+> **Merke:** Beim MedAT werden Graphen oft ohne explizite Funktionsgleichung gezeigt. Man muss dann aus dem **Kurvenverlauf** auf den Funktionstyp schließen: Gerade = linear, Parabel = quadratisch, S-Kurve = sigmoidal, asymptotische Annäherung = exponentiell oder Sättigungskinetik.
+
 ## Asymptoten im Detail
 
 **Horizontale Asymptote**: Eine Gerade y = a heißt horizontale Asymptote, wenn lim(x→±∞) f(x) = a. Beispiele: f(x) = e^(−x) → y = 0 für x → ∞; f(x) = (2x+1)/(x+1) → y = 2 für x → ±∞.
 
 **Vertikale Asymptote**: Eine Gerade x = a heißt vertikale Asymptote, wenn lim(x→a) f(x) = ±∞. Beispiele: f(x) = ln(x) → x = 0 (f → −∞); f(x) = 1/x → x = 0.
 
-**Schräge Asymptote**: Eine Gerade y = mx + b heißt schräge Asymptote, wenn lim(x→∞) [f(x) − (mx+b)] = 0.
+**Schräge Asymptote**: Eine Gerade y = mx + b heißt schräge Asymptote, wenn lim(x→∞) [f(x) − (mx+b)] = 0. Sie tritt bei rationalen Funktionen auf, wenn der Grad des Zählers genau um 1 größer ist als der des Nenners.
+
+| Asymptoten-Typ | Bedingung bei rationalen Funktionen f(x) = P(x)/Q(x) | Ergebnis |
+|---|---|---|
+| Horizontale y = 0 | Grad(P) < Grad(Q) | Funktion → 0 |
+| Horizontale y = c | Grad(P) = Grad(Q) | c = führender Koeff. P / führender Koeff. Q |
+| Schräge y = mx + b | Grad(P) = Grad(Q) + 1 | Polynomdivision ergibt mx + b |
+| Keine horizontale | Grad(P) > Grad(Q) + 1 | f(x) → ±∞ |
 
 ## Monotonie und Krümmung
 
@@ -939,6 +1008,8 @@ Krümmung beschreibt, ob sich die Steigung ändert:
 - **Konvex (linksgekrümmt)**: Kurve liegt wie ein Hügel, Steigung nimmt ab
 - **Konkav (rechtsgekrümmt)**: Kurve liegt wie eine Schüssel, Steigung nimmt zu
 - **Wendepunkt**: Übergang zwischen Konvex und Konkav
+
+**Zusammenhang Monotonie und Extrempunkte:** Ein lokales Maximum liegt vor, wenn die Funktion von steigend auf fallend wechselt. Ein lokales Minimum liegt vor, wenn die Funktion von fallend auf steigend wechselt. Der Wendepunkt einer sigmoiden Kurve (z. B. Dosis-Wirkungskurve) markiert den Punkt der steilsten Steigung — bei der Hill-Gleichung liegt er bei der EC₅₀.
 
 ## Semilogarithmische und doppelt-logarithmische Darstellung
 
@@ -954,6 +1025,8 @@ In Naturwissenschaften und Medizin begegnet man häufig Daten, die sich über vi
 - Potenzfunktionen y = A·xⁿ erscheinen als Geraden: log y = log A + n·log x
 - Anwendung: Skalierungsgesetze in der Biologie (Allometrie), Dosis-Wirkungskurven
 
+> **Merke:** **Welcher Plot für welche Funktion?** Semilog-Plot linearisiert Exponentialfunktionen. Log-Log-Plot linearisiert Potenzfunktionen. Linearer Plot zeigt lineare Funktionen als Gerade. Wenn eine Kurve im Semilog-Plot keine Gerade ist, liegt **keine** reine Kinetik erster Ordnung vor.
+
 ## Linearisierung von Daten
 
 Die Überführung einer nichtlinearen Funktion in eine lineare durch geeignete Transformation heißt Linearisierung. Für pharmakokinetische Daten:
@@ -964,6 +1037,8 @@ In einem ln C vs. t Diagramm ergibt sich eine Gerade mit:
 - Steigung: m = −k → k = −m
 - Achsenabschnitt: b = ln C₀ → C₀ = eᵇ
 - Aus k: T½ = ln(2)/k = 0,693/k
+
+**Lineweaver-Burk-Linearisierung** der Michaelis-Menten-Gleichung: 1/v = (Km/(v_max)) · 1/[S] + 1/v_max. In einem 1/v vs. 1/[S] Diagramm ergibt sich eine Gerade mit Steigung Km/v_max und y-Achsenabschnitt 1/v_max. Der x-Achsenabschnitt liegt bei −1/Km.
 
 ## Graphische Kurvenarten in der Medizin
 
@@ -981,7 +1056,7 @@ v = v_max · [S] / (Km + [S]) — hyperbolische Sättigungskurve
 - v = v_max/2 bei [S] = Km (Definition von Km!)
 
 **Überlebensfunktionen und Kaplan-Meier-Kurven**:
-In der klinischen Epidemiologie zeigen Kaplan-Meier-Kurven den zeitlichen Verlauf des Überlebens in einer Patientengruppe — treppenartige Abfälle, die in Form und Steigung pharmakokinetischen Zerfallskurven ähneln.
+In der klinischen Epidemiologie zeigen Kaplan-Meier-Kurven den zeitlichen Verlauf des Überlebens in einer Patientengruppe — treppenartige Abfälle, die in Form und Steigung pharmakokinetischen Zerfallskurven ähneln. Ein steiler Abfall zeigt hohe Mortalität, ein flacher Verlauf gute Prognose.
 
 ## Graphen vergleichen und interpretieren
 
@@ -989,7 +1064,28 @@ Beim Vergleich zweier Graphen achtet man auf:
 - Schnitt- und Berührpunkte (gemeinsame x-Werte mit gleichem f(x))
 - Steigungsunterschiede (Welche Kurve steigt/fällt schneller?)
 - Lage der Asymptoten
-- Verschiebungen und Spiegelungen (vertikale/horizontale Shifts, Streckungen)`,
+- Verschiebungen und Spiegelungen (vertikale/horizontale Shifts, Streckungen)
+
+**Graphentransformationen** (häufig am MedAT):
+- f(x) + c: Graph um c Einheiten **nach oben** verschieben
+- f(x − c): Graph um c Einheiten **nach rechts** verschieben
+- −f(x): Spiegelung an der **x-Achse**
+- f(−x): Spiegelung an der **y-Achse**
+- a · f(x): Streckung/Stauchung in y-Richtung (a > 1: Streckung; 0 < a < 1: Stauchung)
+
+## Rechenbeispiele
+
+**Beispiel 1 — Michaelis-Menten: Enzymsättigung:**
+v_max = 10 µmol/(L·s), Km = 2 mmol/L. Bei [S] = 2 mmol/L (= Km): v = 10·2/(2+2) = **5 µmol/(L·s)** (halbe Maximalgeschwindigkeit — Definition von Km). Bei [S] = 20 mmol/L: v = 10·20/(2+20) = 200/22 = **9,1 µmol/(L·s)** (91% von v_max). Bei [S] = 0,5 mmol/L: v = 10·0,5/2,5 = **2,0 µmol/(L·s)** (20% von v_max).
+
+**Beispiel 2 — Semilog-Plot: Zweiphasenkinetik ablesen:**
+C(t) nach i.v.-Bolus zeigt im Semilog-Plot eine biphasische Kurve. Alpha-Phase (0–2h): ln C sinkt von 4,6 auf 2,3 → k_α = (4,6−2,3)/2 = **1,15 h⁻¹** (T½α = 0,6 h). Beta-Phase (2–12h): ln C sinkt von 2,3 auf 0 → k_β = 2,3/10 = **0,23 h⁻¹** (T½β = 3 h). Klinisch: Alpha = Verteilung, Beta = Elimination.
+
+**Beispiel 3 — Asymptoten einer rationalen Funktion:**
+f(x) = (3x² + 6)/(x² − 4). Horizontale Asymptote: Grad Zähler = Grad Nenner → y = 3/1 = **y = 3**. Vertikale Asymptoten: x² − 4 = 0 → x = ±2. Für x = 2: Nenner → 0, Zähler = 18 ≠ 0 → **VA bei x = 2 und x = −2**. Klinisch relevant bei Dosis-Wirkungs-Kurven: horizontale Asymptote = maximale Wirkung (E_max).
+
+**Beispiel 4 — Graphentransformation erkennen:**
+Gegeben: f(x) = eˣ. Wie sieht g(x) = 2·e^(−(x−3)) + 1 aus? Analyse: (1) x−3 → Verschiebung 3 nach rechts, (2) negatives Vorzeichen im Exponenten → Spiegelung an der y-Achse (Zerfall statt Wachstum), (3) Faktor 2 → Streckung in y-Richtung, (4) +1 → Verschiebung 1 nach oben. Neue Asymptote: **y = 1** (statt y = 0). y-Wert bei x = 3: g(3) = 2·e⁰ + 1 = **3**.`,
       lernziele: [
         "Horizontale, vertikale und schräge Asymptoten aus Graphen ablesen und berechnen.",
         "Monotoniebereiche, Extrempunkte und Wendepunkte in Funktionsgraphen identifizieren.",
@@ -1035,7 +1131,7 @@ Beim Vergleich zweier Graphen achtet man auf:
         question:
           "Erklären Sie, wie Sie aus einem Semilog-Plot pharmakokinetische Parameter ablesen und welche Voraussetzung erfüllt sein muss, damit die Darstellung als Gerade erscheint.",
         answer:
-          "Ein semilogarithmischer Plot (Semilog-Plot) in der Pharmakokinetik trägt den natürlichen Logarithmus der Plasmakonzentration (ln C) auf der y-Achse gegen die Zeit t auf der linearen x-Achse auf. Die Grundlage ist die mathematische Umformung der Formel für Kinetik erster Ordnung: C(t) = C₀·e^(−kt) → ln C = ln C₀ − k·t. Das ist eine lineare Gleichung in t, also eine Gerade. Die Geradensteigung ist −k (negativ, da die Konzentration abnimmt), und der y-Achsenabschnitt ist ln C₀, woraus C₀ = e^(Achsenabschnitt) berechnet wird. Die Eliminationskonstante k ergibt sich als k = −Steigung. Die Halbwertszeit folgt daraus: T½ = ln(2)/k ≈ 0,693/k. Voraussetzung für die Linearität im Semilog-Plot ist die Kinetik erster Ordnung: Die Eliminationsrate muss proportional zur aktuellen Konzentration sein (dC/dt = −kC). Liegt stattdessen Kinetik nullter Ordnung vor (konstante Eliminationsrate), ist C(t) = C₀ − k₀·t eine Gerade im linearen Plot, im Semilog-Plot aber eine Kurve. Wenn im Semilog-Plot eine gebogene Kurve erscheint, ist das ein Hinweis auf eine Kinetik höherer Ordnung, ein Mehrkompartimentmodell oder Sättigungskinetik (z. B. bei Ethanol oder Phenytoin). In der Praxis werden die experimentellen Konzentrations-Zeit-Paare gemessen, logarithmiert und eine Ausgleichsgerade durch lineare Regression bestimmt.",
+          "Ein semilogarithmischer Plot (Semilog-Plot) trägt ln C auf der y-Achse gegen t auf der x-Achse auf. Für Kinetik erster Ordnung: C(t) = C₀·e^(−kt) → ln C = ln C₀ − k·t. Geradensteigung = −k, y-Achsenabschnitt = ln C₀. T½ = ln(2)/k ≈ 0,693/k. Voraussetzung: Kinetik erster Ordnung (Eliminationsrate proportional zur Konzentration). Bei Kinetik nullter Ordnung erscheint im Semilog-Plot eine Kurve.",
       },
       klinischerBezug:
         "Im Semilog-Plot der Plasmakonzentration nach intravenöser Bolusinjektion kann man bei einem Einkompartimentmodell sofort T½ und Clearance ablesen; Abweichungen von der Linearität (biphasische oder triphasische Kurven) deuten auf Mehr-Kompartiment-Kinetik hin, wie sie bei Gentamicin und Vancomycin klinisch relevant ist. Die Michaelis-Menten-Kinetik erklärt, warum Phenytoin bei therapeutischen Plasmakonzentrationen von nichtlinearer Kinetik geprägt ist: Km ≈ 5 mg/L liegt im therapeutischen Bereich (10–20 mg/L), d. h. das Enzymsystem ist nahezu gesättigt, was zu unverhältnismäßig großen Konzentrationsanstiegen bei Dosiserhöhung führt. Dosis-Wirkungskurven mit ihrer EC₅₀ werden zur Charakterisierung von Agonisten (Potenz) und zur Berechnung therapeutischer und toxischer Dosisbereiche (therapeutischer Index = TD₅₀/ED₅₀) genutzt.",
@@ -1097,26 +1193,6 @@ Beim Vergleich zweier Graphen achtet man auf:
         },
         {
           question:
-            "Welche Eigenschaft unterscheidet den Wendepunkt vom Extrempunkt einer Funktion?",
-          options: [
-            "Am Wendepunkt ist f(x) = 0.",
-            "Am Extrempunkt wechselt die Krümmungsrichtung, nicht am Wendepunkt.",
-            "Am Wendepunkt wechselt die Krümmungsrichtung; am Extrempunkt wechselt die Monotonie.",
-            "Am Wendepunkt ist f'(x) maximal.",
-            "Extrempunkte existieren nur bei quadratischen Funktionen.",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Am Extrempunkt wechselt die Monotonie: Die Funktion wechselt von steigend zu fallend (Maximum) oder von fallend zu steigend (Minimum). Am Wendepunkt wechselt die Krümmungsrichtung: Die Kurve geht von konvex zu konkav oder umgekehrt. Option D ist eine wichtige Zusatzinformation: Am Wendepunkt ist die Steigung f'(x) tatsächlich oft lokal maximal oder minimal (aber nicht zwingend). Bei sigmoiden Dosis-Wirkungskurven liegt der Wendepunkt bei EC₅₀ — dort ist die Steigung der Kurve am steilsten.",
-          hints: [
-            "Extrempunkt: Steigung = 0, Vorzeichenwechsel von f'",
-            "Wendepunkt: f'' = 0, Vorzeichenwechsel von f''",
-          ],
-          difficulty: 2,
-          tags: ["extrempunkt", "wendepunkt", "ableitung"],
-        },
-        {
-          question:
             "Ein Enzym hat Km = 2 mmol/L und v_max = 10 µmol/(L·s). Wie groß ist v bei [S] = 8 mmol/L?",
           options: [
             "4 µmol/(L·s)",
@@ -1131,26 +1207,6 @@ Beim Vergleich zweier Graphen achtet man auf:
           hints: ["v = 10·8/(2+8) = 80/10", "Bei [S] = 4·Km: v = v_max · 4/5"],
           difficulty: 2,
           tags: ["michaelis-menten", "enzymkinetik", "sättigung"],
-        },
-        {
-          question:
-            "Ein log-log-Plot zeigt eine Gerade mit Steigung 2 und y-Achsenabschnitt log(3). Welche Funktion wird dargestellt?",
-          options: [
-            "f(x) = 3·x²",
-            "f(x) = 2·x³",
-            "f(x) = 3·e^(2x)",
-            "f(x) = 2·log(x) + 3",
-            "f(x) = x² + 3",
-          ],
-          correctIndex: 0,
-          explanation:
-            "Im log-log-Plot gilt: log f = m·log x + b, wobei m die Steigung und b der Achsenabschnitt ist. Mit m = 2 und b = log(3): log f = 2·log x + log(3) = log(x²) + log(3) = log(3·x²). Also f(x) = 3·x². Diese Potenzfunktion erscheint im log-log-Plot als Gerade mit Steigung = Exponent. In der Biologie folgen viele Allometrien (z. B. Körpermasse vs. Stoffwechselrate) solchen Potenzgesetzen.",
-          hints: [
-            "log-log: log f = m·log x + b → f = 10^b · x^m",
-            "m = 2, 10^b = 10^(log 3) = 3 → f = 3·x²",
-          ],
-          difficulty: 3,
-          tags: ["log-log", "potenzfunktion", "kurvenanalyse"],
         },
         {
           question:

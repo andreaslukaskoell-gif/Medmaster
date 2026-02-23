@@ -15,50 +15,85 @@ export const chemKapAtom: Kapitel = {
     {
       id: "ch-1-01",
       title: "Atommodelle und Atomaufbau",
+      stichworte: [
+        "Atommodell",
+        "Thomson",
+        "Rutherford",
+        "Bohr",
+        "Orbital",
+        "Quantenmechanik",
+        "Proton",
+        "Neutron",
+        "Isotop",
+        "Massenzahl",
+        "Ordnungszahl",
+      ],
       content: `# Atommodelle und Atomaufbau
 
-Die Geschichte der Atommodelle zeigt, wie wissenschaftliche Erkenntnisse schrittweise verfeinert wurden. Jedes Modell war ein Fortschritt gegenüber seinem Vorgänger, wurde aber durch neue Experimente ergänzt oder korrigiert.
+Die Geschichte der Atommodelle zeigt, wie wissenschaftliche Erkenntnisse schrittweise verfeinert wurden. Jedes Modell war ein Fortschritt gegenüber seinem Vorgänger, wurde aber durch neue Experimente ergänzt oder korrigiert. Für den MedAT ist das Verständnis der Modelle und ihrer Grenzen zentral.
+
+## Demokrit und Dalton — die Anfänge
+
+Bereits ca. 400 v. Chr. postulierte der griechische Philosoph **Demokrit** unteilbare Teilchen ("átomos"). Wissenschaftlich wurde die Atomtheorie erst durch **John Dalton** (1808): Elemente bestehen aus identischen, unteilbaren Atomen; verschiedene Elemente haben verschiedene Atommassen; chemische Reaktionen = Umlagerung von Atomen.
 
 ## Thomson-Modell (Rosinenmodell, 1904)
 
-J. J. Thomson, der 1897 das Elektron entdeckte, stellte sich das Atom als eine gleichmäßig positiv geladene Kugel vor, in die negativ geladene Elektronen – wie Rosinen in einem Kuchen – eingebettet sind. Das Modell erklärt Ionisation und elektrische Neutralität, scheitert jedoch an den Ergebnissen des Rutherford-Streuversuchs.
+J. J. Thomson, der 1897 das Elektron entdeckte (Kathodenstrahlröhre, e/m-Verhältnis), stellte sich das Atom als eine gleichmäßig positiv geladene Kugel vor, in die negativ geladene Elektronen — wie Rosinen in einem Kuchen — eingebettet sind. Das Modell erklärt Ionisation und elektrische Neutralität, scheitert jedoch an den Ergebnissen des Rutherford-Streuversuchs.
+
+> **Merke:** Thomson wies nach, dass Elektronen negativ geladene Teilchen mit definierter Masse sind. Seine Entdeckung widerlegte die Vorstellung vom unteilbaren Atom.
 
 ## Rutherford-Streuversuch (1911) → Kern-Modell
 
-Ernest Rutherford beschoss eine hauchdünne Goldfolie mit positiv geladenen Alphateilchen (⁴He²⁺). Der Befund: Die meisten Teilchen passierten die Folie ungelenkt, wenige wurden stark abgelenkt, manche sogar fast direkt zurückgeworfen.
+Ernest Rutherford beschoss eine hauchdünne Goldfolie (ca. 100 Atomlagen) mit positiv geladenen Alphateilchen (⁴He²⁺). Der Befund: Die meisten Teilchen passierten die Folie ungelenkt, wenige wurden stark abgelenkt, manche sogar fast direkt zurückgeworfen (ca. 1 von 8000).
 
-Schlussfolgerung: Die positive Ladung und fast die gesamte Masse sind in einem winzigen, dichten **Atomkern** konzentriert. Die Elektronenhülle macht fast das gesamte Volumen aus (Kerndurchmesser ≈ 10⁻¹⁵ m, Atomdurchmesser ≈ 10⁻¹⁰ m). Das Atom besteht zu 99,9 % aus leerem Raum.
+Schlussfolgerung: Die positive Ladung und fast die gesamte Masse sind in einem winzigen, dichten **Atomkern** konzentriert. Die Elektronenhülle macht fast das gesamte Volumen aus (Kerndurchmesser ≈ 10⁻¹⁵ m, Atomdurchmesser ≈ 10⁻¹⁰ m — Verhältnis 1:100 000). Das Atom besteht zu 99,9 % aus leerem Raum.
+
+> **Merke:** Wenn der Atomkern so groß wäre wie eine Murmel (1 cm), hätte das gesamte Atom einen Durchmesser von ca. 100 m (Fußballstadion).
+
+**Grenzen des Rutherford-Modells:** Es erklärt nicht, warum Elektronen nicht spiralförmig in den Kern stürzen (beschleunigte Ladungen strahlen klassisch Energie ab), und liefert keine Erklärung für diskrete Spektrallinien.
 
 ## Bohrsches Atommodell (1913)
 
 Niels Bohr postulierte, dass Elektronen auf **festen Kreisbahnen (Schalen)** um den Kern kreisen, ohne Energie abzustrahlen. Schalen werden als K, L, M, N, ... oder mit der Hauptquantenzahl n = 1, 2, 3, 4, ... bezeichnet. Maximale Elektronenzahl pro Schale: **2n²**.
 
-Beim Übergang von einer höheren auf eine niedrigere Schale (Emission) gibt das Elektron ein Photon mit genau definierter Energie ab. Dies erklärt die Spektrallinien des Wasserstoffs (Lyman-, Balmer-, Paschen-Serie). Beim Übergang auf höhere Schalen (Absorption) wird ein Photon absorbiert.
+| Schale | n | Max. Elektronen (2n²) |
+|--------|---|----------------------|
+| K | 1 | 2 |
+| L | 2 | 8 |
+| M | 3 | 18 |
+| N | 4 | 32 |
+
+Beim Übergang von einer höheren auf eine niedrigere Schale (Emission) gibt das Elektron ein Photon mit genau definierter Energie ab: **ΔE = h·f** (h = Planck-Konstante 6,626 × 10⁻³⁴ J·s). Dies erklärt die Spektrallinien des Wasserstoffs (Lyman-Serie: n→1, UV; Balmer-Serie: n→2, sichtbar; Paschen-Serie: n→3, IR). Beim Übergang auf höhere Schalen (Absorption) wird ein Photon absorbiert.
 
 Das Bohr-Modell versagt für Mehrelektronenatome und erklärt keine Feinstruktur der Spektren.
 
 ## Quantenmechanisches Modell (Orbital-Modell, ab 1925)
 
-Heisenberg (Unschärfeprinzip), Schrödinger (Wellengleichung) und Dirac entwickelten das moderne Modell: Elektronen sind keine Teilchen auf festen Bahnen, sondern werden durch **Wellenfunktionen (Orbitale)** beschrieben. Ein Orbital ist ein Raumbereich, in dem ein Elektron mit 90 % Wahrscheinlichkeit anzutreffen ist.
+Heisenberg (Unschärfeprinzip: Ort und Impuls eines Elektrons nicht gleichzeitig exakt bestimmbar), Schrödinger (Wellengleichung) und Dirac entwickelten das moderne Modell: Elektronen sind keine Teilchen auf festen Bahnen, sondern werden durch **Wellenfunktionen (Orbitale)** beschrieben. Ein Orbital ist ein Raumbereich, in dem ein Elektron mit 90 % Wahrscheinlichkeit anzutreffen ist.
 
-Orbitaltypen:
-- **s-Orbitale**: kugelförmig, 1 Orbital pro Unterschale
-- **p-Orbitale**: hantelförmig, 3 Orbitale (pₓ, p_y, p_z) pro Unterschale
-- **d-Orbitale**: kleeblattförmig (4) + ringförmig (1), 5 Orbitale pro Unterschale
-- **f-Orbitale**: komplex, 7 Orbitale pro Unterschale
+Orbitaltypen und Kapazitäten:
+- **s-Orbitale**: kugelförmig, 1 Orbital pro Unterschale → max. 2 e⁻
+- **p-Orbitale**: hantelförmig, 3 Orbitale (pₓ, p_y, p_z) pro Unterschale → max. 6 e⁻
+- **d-Orbitale**: kleeblattförmig (4) + ringförmig (1), 5 Orbitale pro Unterschale → max. 10 e⁻
+- **f-Orbitale**: komplex, 7 Orbitale pro Unterschale → max. 14 e⁻
+
+> **Merke:** Die Gesamtkapazität pro Schale ergibt sich aus: Schale n hat n Unterschalen (l = 0 bis n−1) → Summe = 2n² Elektronen.
 
 ## Atomkern: Protonen, Neutronen, Isotope
 
-- **Protonen**: positiv geladen (+1e), Masse ≈ 1 u; Anzahl = **Ordnungszahl Z** → definiert das Element eindeutig
-- **Neutronen**: elektrisch neutral, Masse ≈ 1 u; Anzahl = **Neutronenzahl N**
+- **Protonen**: positiv geladen (+1e), Masse ≈ 1,00728 u; Anzahl = **Ordnungszahl Z** → definiert das Element eindeutig
+- **Neutronen**: elektrisch neutral, Masse ≈ 1,00867 u; Anzahl = **Neutronenzahl N**
+- **Elektronen**: negativ geladen (−1e), Masse ≈ 0,000549 u (vernachlässigbar gegenüber Nukleonen)
 - **Massenzahl**: A = Z + N (Summe aller Nukleonen)
 - Schreibweise: ᴬ_Z X, z. B. ²³⁸₉₂U (Uran-238: 92 Protonen, 146 Neutronen)
 
+**Kernkraft und Massendefekt:** Protonen und Neutronen werden durch die **starke Kernkraft** (Reichweite ≈ 10⁻¹⁵ m) zusammengehalten. Der **Massendefekt** (Δm) — die Differenz zwischen Summe der freien Nukleonenmassen und tatsächlicher Kernmasse — wird nach E = mc² als **Kernbindungsenergie** freigesetzt. Diese ist bei Fe-56 pro Nukleon am höchsten (8,8 MeV/Nukleon) → stabilster Kern.
+
 **Isotope** besitzen dieselbe Ordnungszahl (gleiches Element), aber unterschiedliche Neutronenzahl → verschiedene Massenzahlen. Chemische Eigenschaften sind (nahezu) identisch, physikalische Eigenschaften (Masse, Kernstabilität) unterscheiden sich.
 
-Beispiele: ¹H (Protium), ²H (Deuterium, D), ³H (Tritium, T); ¹²C, ¹³C, ¹⁴C.
+Beispiele: ¹H (Protium, 99,98 %), ²H (Deuterium, D, 0,02 %), ³H (Tritium, T, radioaktiv); ¹²C (98,9 %), ¹³C (1,1 %), ¹⁴C (Spuren, radioaktiv, T½ = 5730 a).
 
-**Stabile Isotope** haben ein günstiges N/Z-Verhältnis (bei leichten Elementen N ≈ Z; bei schwereren Z wird größer: bei Z = 82 ist N ≈ 1,5 × Z). Instabile Nuklide sind radioaktiv.`,
+**Stabile Isotope** haben ein günstiges N/Z-Verhältnis (bei leichten Elementen N ≈ Z; bei schwereren Elementen überwiegen Neutronen: bei Z = 82 ist N ≈ 1,5 × Z). Instabile Nuklide sind radioaktiv. Alle Elemente mit Z > 83 (Bismut) sind ausschließlich radioaktiv.`,
 
       lernziele: [
         "Die historische Entwicklung der Atommodelle (Thomson → Rutherford → Bohr → Quantenmechanik) erklären und die entscheidenden Experimente benennen.",
@@ -251,49 +286,73 @@ Beispiele: ¹H (Protium), ²H (Deuterium, D), ³H (Tritium, T); ¹²C, ¹³C, ¹
     {
       id: "ch-1-02",
       title: "Elektronenkonfiguration und Quantenzahlen",
+      stichworte: [
+        "Quantenzahlen",
+        "Hauptquantenzahl",
+        "Nebenquantenzahl",
+        "Pauliprinzip",
+        "Hundsche Regel",
+        "Aufbauprinzip",
+        "Madelung-Regel",
+        "Valenzelektron",
+        "Elektronenkonfiguration",
+        "Übergangsmetalle",
+      ],
       content: `# Elektronenkonfiguration und Quantenzahlen
 
-Die genaue Beschreibung der Elektronen in einem Atom erfolgt über vier Quantenzahlen. Sie legen fest, auf welchem Energieniveau sich jedes Elektron befindet und welchen Spin es trägt.
+Die genaue Beschreibung der Elektronen in einem Atom erfolgt über vier Quantenzahlen. Sie legen fest, auf welchem Energieniveau sich jedes Elektron befindet und welchen Spin es trägt. Im MedAT wird regelmäßig nach den Prinzipien der Elektronenkonfiguration und nach Ausnahmen gefragt.
 
 ## Die vier Quantenzahlen
 
+| Quantenzahl | Symbol | Werte | Bestimmt |
+|-------------|--------|-------|----------|
+| Hauptquantenzahl | n | 1, 2, 3, ... | Schale, Energieniveau |
+| Nebenquantenzahl | l | 0, 1, ..., n−1 | Orbitalform (s, p, d, f) |
+| Magnetische QZ | mₗ | −l, ..., 0, ..., +l | Raumausrichtung |
+| Spinquantenzahl | mₛ | +½ oder −½ | Eigendrehimpuls |
+
 **1. Hauptquantenzahl n** (n = 1, 2, 3, ...):
-Bestimmt die Hauptschale (Energieniveau) und die mittlere Entfernung des Elektrons vom Kern. Bei n = 1 ist die Energie am niedrigsten (innerste Schale). Entspricht den Bohrschen Schalen K (n=1), L (n=2), M (n=3), N (n=4).
+Bestimmt die Hauptschale (Energieniveau) und die mittlere Entfernung des Elektrons vom Kern. Bei n = 1 ist die Energie am niedrigsten (innerste Schale). Entspricht den Bohrschen Schalen K (n=1), L (n=2), M (n=3), N (n=4). Maximale Elektronenzahl pro Schale: 2n².
 
 **2. Nebenquantenzahl l** (l = 0, 1, 2, ..., n−1):
 Bestimmt die Unterschale (Subschale) und die Form des Orbitals:
-- l = 0 → s-Orbital (kugelig)
-- l = 1 → p-Orbital (hantelförmig)
-- l = 2 → d-Orbital (kleeblattförmig)
-- l = 3 → f-Orbital (komplex)
+- l = 0 → s-Orbital (kugelig), 1 Orbital → max. 2 e⁻
+- l = 1 → p-Orbital (hantelförmig), 3 Orbitale → max. 6 e⁻
+- l = 2 → d-Orbital (kleeblattförmig), 5 Orbitale → max. 10 e⁻
+- l = 3 → f-Orbital (komplex), 7 Orbitale → max. 14 e⁻
 
 **3. Magnetische Quantenzahl mₗ** (mₗ = −l, ..., 0, ..., +l):
-Bestimmt die Raumausrichtung des Orbitals. Für l = 1 (p) gibt es mₗ = −1, 0, +1 → drei p-Orbitale (pₓ, p_y, p_z).
+Bestimmt die Raumausrichtung des Orbitals. Für l = 1 (p) gibt es mₗ = −1, 0, +1 → drei p-Orbitale (pₓ, p_y, p_z). Anzahl der Orbitale pro Unterschale: 2l + 1.
 
 **4. Spinquantenzahl mₛ** (mₛ = +½ oder −½):
-Beschreibt den Eigendrehimpuls (Spin) des Elektrons. Zwei Elektronen im selben Orbital haben entgegengesetzte Spins (↑↓).
+Beschreibt den Eigendrehimpuls (Spin) des Elektrons. Zwei Elektronen im selben Orbital haben entgegengesetzte Spins (↑↓). Der Stern-Gerlach-Versuch (1922) wies den Elektronenspin experimentell nach.
+
+> **Merke:** Vier Quantenzahlen beschreiben jedes Elektron eindeutig: n = Schale, l = Form, mₗ = Richtung, mₛ = Spin. Kein Quantenzahlen-Quartett darf doppelt vorkommen (Pauli).
 
 ## Fundamentale Prinzipien der Elektronenkonfiguration
 
-**Pauliprinzip (Ausschlussprinzip):** Kein Atom kann zwei Elektronen mit identischen Quantenzahlen besitzen. Folge: Jedes Orbital kann maximal 2 Elektronen aufnehmen, und diese müssen entgegengesetzte Spins haben (↑↓).
+**Pauliprinzip (Ausschlussprinzip, 1925):** Kein Atom kann zwei Elektronen mit identischen vier Quantenzahlen besitzen. Folge: Jedes Orbital kann maximal 2 Elektronen aufnehmen, und diese müssen entgegengesetzte Spins haben (↑↓).
 
-**Aufbauprinzip (Energieminimumprinzip):** Elektronen besetzen zunächst die Orbitale mit der niedrigsten Energie. Die Energiereihenfolge richtet sich nach n + l (Madelung-Regel):
+**Aufbauprinzip (Energieminimumprinzip):** Elektronen besetzen zunächst die Orbitale mit der niedrigsten Energie. Die Energiereihenfolge richtet sich nach n + l (Madelung-Regel, auch Klechkowski-Regel):
 1s < 2s < 2p < 3s < 3p < 4s < 3d < 4p < 5s < 4d < 5p < 6s < 4f < 5d ...
 
-Achtung: 4s liegt vor 3d (n+l: 4s→4+0=4; 3d→3+2=5). Bei Übergangselementen werden nach der 3d-Füllung die 4s-Elektronen zuerst entfernt, wenn Ionen gebildet werden.
+Bei gleichem n + l wird das kleinere n zuerst besetzt. Achtung: 4s liegt energetisch vor 3d (n+l: 4s→4+0=4; 3d→3+2=5). Bei Übergangselementen werden bei der Ionenbildung die 4s-Elektronen zuerst entfernt (4s ist im Ion energetisch höher als 3d).
 
-**Hundsche Regel:** Orbitale einer Unterschale werden zunächst einfach (mit parallelem Spin ↑↑) besetzt, bevor eine Doppelbesetzung stattfindet. Das Ergebnis ist die maximal mögliche Spinmultiplizität (paramagnetisch). Beispiel: Kohlenstoff hat 2 ungepaarte Elektronen in den 2p-Orbitalen.
+> **Merke:** Aufbau: 4s vor 3d füllen. Ionisierung: 4s vor 3d entfernen. Fe → Fe²⁺: [Ar]3d⁶4s² → [Ar]3d⁶ (beide 4s-Elektronen weg).
+
+**Hundsche Regel (1925):** Orbitale einer Unterschale werden zunächst einfach (mit parallelem Spin ↑↑↑) besetzt, bevor eine Doppelbesetzung stattfindet. Das Ergebnis ist die maximal mögliche Spinmultiplizität → paramagnetisch. Beispiel: Stickstoff (Z=7) hat 3 ungepaarte Elektronen in den 2p-Orbitalen: ↑|↑|↑. Kohlenstoff (Z=6) hat 2 ungepaarte p-Elektronen: ↑|↑|_.
 
 ## Elektronenkonfigurationen schreiben
 
 **Schreibweise:** [Edelgas-Rumpf] + Valenzelektronen. Edelgase bilden eine besonders stabile, vollständig gefüllte Konfiguration.
 
-Beispiele:
+Beispiele (mit Z und Elektronenzahl):
 - Wasserstoff H (Z=1): 1s¹
-- Helium He (Z=2): 1s²
+- Helium He (Z=2): 1s² → Edelgas, 1. Periode
 - Lithium Li (Z=3): 1s²2s¹ = [He]2s¹
-- Natrium Na (Z=11): 1s²2s²2p⁶3s¹ = [Ne]3s¹
-- Schwefel S (Z=16): [Ne]3s²3p⁴
+- Kohlenstoff C (Z=6): [He]2s²2p² → 2 ungepaarte e⁻
+- Natrium Na (Z=11): [Ne]3s¹ → 1 Valenzelektron, Gruppe 1
+- Schwefel S (Z=16): [Ne]3s²3p⁴ → 2 ungepaarte e⁻
 - Eisen Fe (Z=26): [Ar]3d⁶4s² (Achtung: 4s wird vor 3d aufgebaut, aber Ionen → 4s zuerst weg)
 - Kupfer Cu (Z=29): [Ar]3d¹⁰4s¹ (Ausnahme: volle 3d-Schale stabilisiert)
 - Chrom Cr (Z=24): [Ar]3d⁵4s¹ (Ausnahme: halb-gefüllte 3d-Schale stabilisiert)
@@ -304,9 +363,13 @@ Beispiele:
 
 **Rumpfelektronen** sind alle inneren, vollständig abgeschlossenen Elektronen (im Edelgas-Rumpf). Sie schirmen die Kernladung ab und nehmen an chemischen Reaktionen normalerweise nicht teil.
 
-Für Hauptgruppenelemente gilt: Valenzelektronen = Zahl der äußersten s- und p-Elektronen = Gruppennummer im PSE.
+Für Hauptgruppenelemente gilt: Valenzelektronen = Zahl der äußersten s- und p-Elektronen = Gruppennummer im PSE. Beispiel: Chlor (Gruppe 17) hat 7 Valenzelektronen (3s²3p⁵); nimmt 1 Elektron auf → Cl⁻ mit Edelgaskonfiguration [Ar].
 
-## Klinische Relevanz – Übergangsmetalle als Spurenelemente
+## Dia- und Paramagnetismus
+
+Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden von Magnetfeldern angezogen). Beispiel: Fe³⁺ ([Ar]3d⁵) hat 5 ungepaarte e⁻ → stark paramagnetisch. Atome ohne ungepaarte Elektronen sind **diamagnetisch** (werden schwach abgestoßen). Beispiel: Zn²⁺ ([Ar]3d¹⁰) → alle gepaart → diamagnetisch. MRT-Kontrastmittel (Gadolinium, Gd³⁺, [Xe]4f⁷) nutzen starken Paramagnetismus (7 ungepaarte f-Elektronen).
+
+## Klinische Relevanz — Übergangsmetalle als Spurenelemente
 
 Übergangsmetalle nutzen ihre unvollständigen d-Orbitale für katalytische und koordinative Funktionen:
 - **Fe** ([Ar]3d⁶4s²): Hämoglobin (O₂-Transport), Zytochrome (Elektronentransportkette), Katalase
@@ -497,6 +560,19 @@ Für Hauptgruppenelemente gilt: Valenzelektronen = Zahl der äußersten s- und p
     {
       id: "ch-1-03",
       title: "Radioaktivität und Kernreaktionen",
+      stichworte: [
+        "Radioaktivität",
+        "Alpha-Zerfall",
+        "Beta-Zerfall",
+        "Gamma-Strahlung",
+        "Halbwertszeit",
+        "Zerfallsgesetz",
+        "PET",
+        "Strahlenschutz",
+        "Sievert",
+        "Nuklearmedizin",
+        "Radon",
+      ],
       content: `# Radioaktivität und Kernreaktionen
 
 Radioaktivität bezeichnet die Eigenschaft instabiler Atomkerne, spontan Energie in Form von Strahlung abzugeben und dabei in stabilere Kerne umzuwandeln (Kernzerfall). Die Entdeckung erfolgte 1896 durch Antoine Henri Becquerel (Uransalze), wenig später durch Marie und Pierre Curie (Polonium, Radium).
@@ -539,32 +615,48 @@ N(t) = N₀ × (½)^(t / T½) = N₀ × e^(−λt)
 
 Dabei ist λ = ln2 / T½ ≈ 0,693 / T½ die **Zerfallskonstante** (s⁻¹).
 
+> **Merke:** Nach n Halbwertszeiten verbleibt noch N₀/2ⁿ. Nach 1 HWZ: 50 %; nach 2: 25 %; nach 3: 12,5 %; nach 10: ca. 0,1 %.
+
 **Aktivität A** = λ × N(t) [Einheit: Becquerel, Bq = 1 Zerfall/s; älter: Curie, Ci = 3,7 × 10¹⁰ Bq]
 
 Medizinisch relevante Halbwertszeiten:
-- ⁹⁹ᵐTc: T½ = 6 h (ideal für Diagnostik: kurz genug für geringe Dosis, lang genug für Aufnahme)
-- ¹⁸F: T½ = 110 min (PET)
-- ¹³¹I: T½ = 8 d (Schilddrüsentherapie)
-- ¹⁴C: T½ = 5730 a (Archäologie und Geochronologie)
-- ²³⁸U: T½ = 4,5 × 10⁹ a (Geologische Datierung)
+
+| Nuklid | T½ | Anwendung |
+|--------|-----|-----------|
+| ⁹⁹ᵐTc | 6 h | Szintigraphie (Knochen, Schilddrüse) |
+| ¹⁸F | 110 min | PET (FDG, Onkologie) |
+| ¹³¹I | 8 d | Radiojodtherapie (Schilddrüse) |
+| ⁶⁰Co | 5,27 a | Gamma Knife (Strahlentherapie) |
+| ¹⁴C | 5730 a | Radiokohlenstoffdatierung |
+| ²³⁸U | 4,5 × 10⁹ a | Geologische Datierung |
+
+**Beispielrechnung:** Ein Patient erhält ⁹⁹ᵐTc (T½ = 6 h). Wie viel Aktivität verbleibt nach 24 h? n = 24/6 = 4 Halbwertszeiten → Restaktivität = 1/2⁴ = 1/16 = 6,25 % der Ausgangsdosis.
+
+## Kernspaltung und Kernfusion
+
+**Kernspaltung:** Schwere Kerne (z. B. ²³⁵U) werden durch Neutronenbeschuss in zwei leichtere Kerne gespalten → Freisetzung von 2–3 Neutronen + ca. 200 MeV Energie pro Spaltung. Kettenreaktion möglich → Kernreaktor (kontrolliert) oder Atombombe (unkontrolliert). Medizinisch relevant: Spaltprodukte wie ¹³¹I und ⁹⁰Sr bei Reaktorunfällen.
+
+**Kernfusion:** Leichte Kerne (z. B. ²H + ³H → ⁴He + n) verschmelzen unter extremen Bedingungen (>10⁷ K) → Energiequelle der Sonne. Noch nicht als kontrollierte Energiequelle realisiert.
 
 ## Strahlenschutz
 
 Die drei Grundprinzipien des Strahlenschutzes:
-1. **Abstand**: Intensität nimmt mit 1/r² ab (Abstandsgesetz)
-2. **Zeit**: Exposition so kurz wie möglich halten
+1. **Abstand**: Intensität nimmt mit 1/r² ab (Abstandsgesetz) — doppelter Abstand → 1/4 der Dosis
+2. **Zeit**: Exposition so kurz wie möglich halten (ALARA-Prinzip: As Low As Reasonably Achievable)
 3. **Abschirmung**: Material je nach Strahlungsart (Papier → α; Al → β; Pb/Beton → γ/n)
 
 Internationale Einheiten:
-- **Gray (Gy)**: absorbierte Energiedosis = J/kg
-- **Sievert (Sv)**: effektive Dosis = Gy × Strahlungs-Wichtungsfaktor (für α: 20; für β/γ: 1)
+- **Gray (Gy)**: absorbierte Energiedosis = J/kg (physikalische Dosis)
+- **Sievert (Sv)**: effektive Dosis = Gy × Strahlungs-Wichtungsfaktor (biologische Dosis; für α: 20; für β/γ: 1)
+
+Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische Strahlung, Nahrung). Ein Thorax-Röntgen: ca. 0,02 mSv; CT-Abdomen: ca. 10 mSv.
 
 ## Klinische Anwendungen und Gefahren
 
-- **Diagnostisch**: Szintigraphie (⁹⁹ᵐTc), PET (¹⁸F-FDG), Röntgen/CT (X-Strahlen, kein Kernzerfall)
-- **Therapeutisch**: ¹³¹I-Therapie (Schilddrüsenkarzinom, M. Basedow), ⁹⁰Y-Mikrosphären (hepatozelluläres Karzinom), externe Strahlentherapie (linac, Gamma Knife)
-- **Gefahren**: Radon-222 (Alphazerfall, Inhalation → Lungenkrebsrisiko); ionisierende Strahlung → DNA-Doppelstrangbrüche, Krebsrisiko
-- **Schutzmaßnahme nach Atomunfall**: Kaliumiodid (KI) sättigt die Schilddrüse mit stabilem Iod → verhindert Einbau von radioaktivem ¹³¹I`,
+- **Diagnostisch**: Szintigraphie (⁹⁹ᵐTc), PET (¹⁸F-FDG), SPECT, Röntgen/CT (X-Strahlen, kein Kernzerfall)
+- **Therapeutisch**: ¹³¹I-Therapie (Schilddrüsenkarzinom, M. Basedow), ⁹⁰Y-Mikrosphären (hepatozelluläres Karzinom), ²²³Ra-Dichlorid (Xofigo, Knochenmetastasen), externe Strahlentherapie (Linearbeschleuniger, Gamma Knife)
+- **Gefahren**: Radon-222 (Alphazerfall, Inhalation → zweitgrößte Ursache von Lungenkrebs nach Rauchen in Europa); ionisierende Strahlung → DNA-Doppelstrangbrüche → Krebsrisiko (stochastisch, kein Schwellenwert nach LNT-Modell)
+- **Schutzmaßnahme nach Atomunfall**: Kaliumiodid (KI) sättigt die Schilddrüse mit stabilem Iod → verhindert Einbau von radioaktivem ¹³¹I. Besonders wichtig für Kinder (höherer Jodumsatz, längere Restlebenserwartung)`,
 
       lernziele: [
         "Die drei Hauptarten der radioaktiven Strahlung (α, β, γ) hinsichtlich Natur, Reichweite, Abschirmung und Veränderung von Z und A beschreiben.",
@@ -760,24 +852,43 @@ Internationale Einheiten:
     {
       id: "ch-1-04",
       title: "Massenzahl, Atommasse und Mol-Konzept",
+      stichworte: [
+        "Atommasse",
+        "Mol",
+        "Avogadro-Konstante",
+        "Molare Masse",
+        "Molarität",
+        "Osmolarität",
+        "Stöchiometrie",
+        "Dalton",
+        "Infusionslösung",
+        "Laborwerte",
+      ],
       content: `# Massenzahl, Atommasse und Mol-Konzept
 
-Um mit Atomen und Molekülen rechnen zu können, braucht die Chemie eine Einheit für atomare Massen und ein Konzept, das die winzigen atomaren Teilchen mit wiegbaren, handhabbaren Substanzmengen verbindet: das **Mol-Konzept**.
+Um mit Atomen und Molekülen rechnen zu können, braucht die Chemie eine Einheit für atomare Massen und ein Konzept, das die winzigen atomaren Teilchen mit wiegbaren, handhabbaren Substanzmengen verbindet: das **Mol-Konzept**. Im MedAT sind Berechnungen mit mol, Molarität und Osmolarität häufig.
 
 ## Atomare Masseneinheit u
 
 Die **atomare Masseneinheit** (u, unified atomic mass unit; IUPAC: Da, Dalton) ist definiert als **1/12 der Masse eines ¹²C-Atoms**:
 1 u = 1,66054 × 10⁻²⁷ kg
 
-Massen der Nukleonen:
-- Proton: 1,00728 u ≈ 1 u
-- Neutron: 1,00867 u ≈ 1 u
-- Elektron: 0,000549 u (vernachlässigbar!)
+Massen der subatomaren Teilchen:
+- Proton: 1,00728 u ≈ 1 u (positiv geladen)
+- Neutron: 1,00867 u ≈ 1 u (neutral)
+- Elektron: 0,000549 u (vernachlässigbar! → Faktor 1836 leichter als Proton)
 
-Deshalb gilt näherungsweise: **Atommasse in u ≈ Massenzahl A** (Nukleonenanzahl).
+> **Merke:** Die Elektronenmasse ist ~1/2000 der Protonenmasse → sie trägt praktisch nichts zur Atommasse bei. Deshalb gilt: **Atommasse in u ≈ Massenzahl A** (Nukleonenanzahl).
 
 Die **relative Atommasse Aᵣ** ist das gewichtete Mittel aller Isotopenmengen im natürlichen Vorkommen (daher oft keine ganze Zahl):
-- H: 1,008 u | C: 12,011 u | N: 14,007 u | O: 15,999 u | Na: 22,990 u | Cl: 35,453 u
+
+| Element | Aᵣ [u] | Häufigste Isotope |
+|---------|---------|-------------------|
+| H | 1,008 | ¹H (99,98 %), ²H (0,02 %) |
+| C | 12,011 | ¹²C (98,9 %), ¹³C (1,1 %) |
+| N | 14,007 | ¹⁴N (99,6 %), ¹⁵N (0,4 %) |
+| O | 15,999 | ¹⁶O (99,8 %), ¹⁸O (0,2 %) |
+| Cl | 35,453 | ³⁵Cl (75,8 %), ³⁷Cl (24,2 %) |
 
 ## Molare Masse M
 
@@ -830,14 +941,31 @@ Beispiel: 1 mol/L NaCl → 2 mosmol/L (Na⁺ + Cl⁻ getrennt).
 
 **Serumchemie:** Laborwerte oft in mmol/L: Na⁺ 135–145 mmol/L, K⁺ 3,5–5,0 mmol/L, Glukose 3,9–6,1 mmol/L, Kreatinin 62–115 µmol/L.
 
-## Stöchiometrie – Mol-Verhältnisse in Reaktionsgleichungen
+## Verdünnungsformel
+
+Bei der Verdünnung einer Lösung bleibt die Stoffmenge n konstant:
+**c₁ × V₁ = c₂ × V₂**
+
+Beispiel: 50 mL einer 2 mol/L HCl-Lösung sollen auf 0,1 mol/L verdünnt werden. V₂ = (c₁ × V₁)/c₂ = (2 × 50)/0,1 = 1000 mL. Also mit Wasser auf 1000 mL auffüllen.
+
+> **Merke:** Die Verdünnungsformel c₁V₁ = c₂V₂ gilt für alle Konzentrationsberechnungen bei Verdünnung — klinisch wichtig bei Medikamentenherstellung und Infusionsansatz.
+
+## Stöchiometrie — Mol-Verhältnisse in Reaktionsgleichungen
 
 Die Koeffizienten in einer Reaktionsgleichung geben direkt die Mol-Verhältnisse an:
 2 H₂ + O₂ → 2 H₂O bedeutet: 2 mol H₂ + 1 mol O₂ → 2 mol H₂O
 
-Beispiel in der Medizin (Haber-Bosch-Analogie zur Aminosäuresynthese):
+**Schrittweises Vorgehen bei stöchiometrischen Berechnungen:**
+1. Reaktionsgleichung ausgleichen (Massenerhaltung)
+2. Gegebene Masse in mol umrechnen: n = m/M
+3. Mol-Verhältnis aus Koeffizienten ablesen
+4. Gesuchte mol in Masse umrechnen: m = n × M
+
+Beispiel in der Medizin:
 C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Glukose, ΔG° = −2870 kJ/mol)
-1 mol Glukose (180 g) reagiert mit 6 mol O₂ (192 g) und liefert 6 mol CO₂ + 6 mol H₂O.`,
+1 mol Glukose (180 g) reagiert mit 6 mol O₂ (192 g) und liefert 6 mol CO₂ + 6 mol H₂O.
+
+**Limitierender Reaktand:** Liegt ein Edukt im Unterschuss vor, bestimmt es die maximale Produktmenge. Die übrigen Edukte verbleiben als Überschuss.`,
 
       lernziele: [
         "Die atomare Masseneinheit u definieren und die Massen von Proton, Neutron und Elektron in u angeben.",
@@ -1010,20 +1138,46 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
     {
       id: "ch-2-01",
       title: "Intermolekulare Wechselwirkungen",
+      stichworte: [
+        "Van-der-Waals-Kräfte",
+        "London-Dispersion",
+        "Dipol-Dipol",
+        "Wasserstoffbrücke",
+        "H-Brücke",
+        "Siedepunkt",
+        "DNA-Basenpaarung",
+        "Proteinfaltung",
+        "Denaturierung",
+        "Polarisierbarkeit",
+      ],
       content: `## Überblick
 
-Zwischen Molekülen und Ionen wirken **nicht-kovalente Wechselwirkungen**, die zwar schwächer als kovalente Bindungen sind, aber gemeinsam physikalische Eigenschaften (Siedepunkte, Löslichkeit) und biologische Strukturen (Proteinfaltung, DNA-Doppelhelix) bestimmen. Man unterscheidet drei Hauptklassen van-der-Waals-Kräfte sowie die besonders starken **Wasserstoffbrückenbindungen**.
+Zwischen Molekülen und Ionen wirken **nicht-kovalente Wechselwirkungen**, die zwar schwächer als kovalente Bindungen sind, aber gemeinsam physikalische Eigenschaften (Siedepunkte, Löslichkeit) und biologische Strukturen (Proteinfaltung, DNA-Doppelhelix) bestimmen. Man unterscheidet drei Hauptklassen van-der-Waals-Kräfte sowie die besonders starken **Wasserstoffbrückenbindungen**. Im MedAT wird das Stärkeranking und die biologische Bedeutung regelmäßig geprüft.
 
 ## Van-der-Waals-Kräfte
 
 **London-Dispersionskräfte** (induziert-Dipol–induziert-Dipol):
-Entstehen durch kurzzeitige Unsymmetrien in der Elektronenverteilung, die in Nachbarmolekülen einen **induzierten Dipol** erzeugen. Sie existieren in *allen* Molekülen (polar wie unpolar). Ihre Stärke steigt mit zunehmender **Molmasse** (mehr Elektronen → größere Polarisierbarkeit) und mit größerer Moleküloberfläche. Beispiel: n-Pentan (Siedepunkt 36 °C) siedet höher als Neopentan (9,5 °C) trotz gleicher Summenformel, weil n-Pentan mehr Kontaktfläche besitzt.
+Entstehen durch kurzzeitige Unsymmetrien in der Elektronenverteilung, die in Nachbarmolekülen einen **induzierten Dipol** erzeugen. Sie existieren in *allen* Molekülen (polar wie unpolar). Ihre Stärke steigt mit zunehmender **Molmasse** (mehr Elektronen → größere Polarisierbarkeit) und mit größerer Moleküloberfläche.
+
+> **Merke:** London-Kräfte sind die einzige Wechselwirkung bei völlig unpolaren Molekülen (Edelgase, O₂, N₂, CH₄). Bei großen Molekülen können sie erstaunlich stark werden.
+
+Beispiel: n-Pentan (Siedepunkt 36 °C) siedet höher als Neopentan (9,5 °C) trotz gleicher Summenformel C₅H₁₂, weil n-Pentan (linear) mehr Kontaktfläche besitzt als Neopentan (kugelförmig).
 
 **Keesom-Wechselwirkungen** (Dipol–Dipol):
-Wirken zwischen Molekülen mit permanentem Dipolmoment. Die positiven Enden zweier Dipole ordnen sich zu den negativen Enden benachbarter Moleküle aus. Stärke ∝ μ²/r⁶ (μ = Dipolmoment, r = Abstand). Beispiele: HCl, Aceton.
+Wirken zwischen Molekülen mit permanentem Dipolmoment. Die positiven Enden zweier Dipole ordnen sich zu den negativen Enden benachbarter Moleküle aus. Stärke ∝ μ²/r⁶ (μ = Dipolmoment, r = Abstand). Beispiele: HCl (μ = 1,08 D), Aceton (μ = 2,88 D). Aceton siedet bei 56 °C, obwohl seine Molmasse nur 58 g/mol beträgt — deutlich höher als bei unpolarem Butan (M = 58, Sdp. −1 °C).
 
 **Debye-Wechselwirkungen** (Dipol–induzierter Dipol):
-Ein permanenter Dipol polarisiert ein benachbartes unpolares Molekül. Geringer als London- und Keesom-Kräfte, aber stets vorhanden, wenn polare und unpolare Moleküle benachbart sind.
+Ein permanenter Dipol polarisiert ein benachbartes unpolares Molekül. Geringer als London- und Keesom-Kräfte, aber stets vorhanden, wenn polare und unpolare Moleküle benachbart sind. Klinisch relevant bei der Löslichkeit von O₂ in Wasser (polares Wasser induziert Dipol in O₂).
+
+## Stärkeranking der Wechselwirkungen
+
+| Wechselwirkung | Energie (kJ/mol) | Beispiel |
+|----------------|-------------------|----------|
+| Ionenbindung (Gitter) | 400–4000 | NaCl (786) |
+| Kovalente Bindung | 150–800 | C–C (348), C=O (745) |
+| Wasserstoffbrücke | 10–40 | H₂O···H₂O (~20) |
+| Dipol–Dipol (Keesom) | 3–10 | HCl···HCl |
+| London-Dispersion | 0,05–40 | CH₄···CH₄ (~1) |
 
 ## Wasserstoffbrückenbindungen
 
@@ -1033,14 +1187,23 @@ Wasserstoffbrücken (H-Brücken) entstehen, wenn ein **elektropositives H-Atom**
 
 H-Brücken sind **nicht kovalent**, aber deutlich stärker als gewöhnliche van-der-Waals-Kräfte. Sie sind **gerichtet** (optimaler Winkel ≈ 180°) und **kooperativ** (mehrere H-Brücken stabilisieren sich gegenseitig).
 
+> **Merke:** H-Brücken-Donor = X–H (gibt H an Brücke); Akzeptor = freies Elektronenpaar von Y. Nur N, O, F sind elektronegativ genug. C–H bildet keine signifikanten H-Brücken.
+
 **Biologische Beispiele:**
-- *Wasser*: jedes Molekül kann bis zu 4 H-Brücken ausbilden (2 Donoren, 2 Akzeptoren) → hohe Siedetemperatur (100 °C), hohe Verdampfungswärme, Anomalie des Wassers
-- *DNA-Doppelhelix*: A–T bildet 2 H-Brücken, G–C bildet 3 → G-C-reiche DNA ist thermisch stabiler (relevant für PCR-Denaturierungstemperatur)
-- *Proteine*: α-Helix (i–i+4 H-Brücken entlang der Helix) und β-Faltblatt (intermolekulare H-Brücken zwischen Strängen) werden durch H-Brücken stabilisiert
+- *Wasser*: jedes Molekül kann bis zu 4 H-Brücken ausbilden (2 Donoren über O–H, 2 Akzeptoren über freie e⁻-Paare) → hohe Siedetemperatur (100 °C statt der nach Molmasse erwarteten ca. −80 °C), hohe Verdampfungswärme (2257 J/g → Thermoregulation durch Schwitzen), Anomalie des Wassers (Dichtemaximum bei 4 °C)
+- *DNA-Doppelhelix*: A–T bildet 2 H-Brücken, G–C bildet 3 → G-C-reiche DNA ist thermisch stabiler (Schmelztemperatur Tm ≈ 69,3 + 0,41 × %GC). Relevant für PCR-Primer-Design
+- *Proteine*: α-Helix (i–i+4 H-Brücken entlang der Helix, C=O···H–N) und β-Faltblatt (intermolekulare H-Brücken zwischen Strängen) werden durch H-Brücken stabilisiert
+- *Enzym-Substrat-Bindung*: H-Brücken vermitteln Substratspezifität im aktiven Zentrum
+
+## Hydrophober Effekt
+
+Unpolare Moleküle in Wasser erzwingen eine geordnete Wasserstruktur um sich herum ("Eisberg-Modell"), was entropisch ungünstig ist. Die Zusammenlagerung unpolarer Bereiche (hydrophobe Wechselwirkung) setzt geordnetes Wasser frei → Entropiegewinn → treibende Kraft der Proteinfaltung und Membranbildung. Obwohl der hydrophobe Effekt auf London-Kräften basiert, ist er entropisch getrieben, nicht enthalpisch.
 
 ## Klinische Relevanz
 
-Die Wasserlöslichkeit von Pharmaka hängt direkt von intermolekularen Wechselwirkungen ab: **polare, H-Brücken-bildende Moleküle** (Paracetamol, viele Antibiotika) sind wasserlöslich und renal eliminierbar; **unpolare Moleküle** (Anästhetika, Steroide) akkumulieren in Lipidphasen. Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydrophoben Wechselwirkungen (London-Kräften) und ionischen Kontakten — **Denaturierung** durch Hitze, Harnstoff oder pH-Änderung bricht dieses Netzwerk auf. Bei der **PCR** wird die DNA durch Erhitzen auf 94–98 °C (Denaturierungsschritt) vollständig aufgebrochen, weil alle H-Brücken zwischen den Basenpaaren überwunden werden.`,
+Die Wasserlöslichkeit von Pharmaka hängt direkt von intermolekularen Wechselwirkungen ab: **polare, H-Brücken-bildende Moleküle** (Paracetamol, viele Antibiotika) sind wasserlöslich und renal eliminierbar; **unpolare Moleküle** (Anästhetika, Steroide) akkumulieren in Lipidphasen und werden hepatisch metabolisiert. Lipinski-Regel (Rule of Five): Gute orale Bioverfügbarkeit, wenn ≤5 H-Brücken-Donoren, ≤10 Akzeptoren, M ≤500 g/mol, logP ≤5.
+
+Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydrophoben Wechselwirkungen und ionischen Kontakten — **Denaturierung** durch Hitze, Harnstoff oder pH-Änderung bricht dieses Netzwerk auf. Bei der **PCR** wird die DNA durch Erhitzen auf 94–98 °C (Denaturierungsschritt) vollständig aufgebrochen, weil alle H-Brücken zwischen den Basenpaaren überwunden werden, während die kovalenten Phosphodiesterbindungen intakt bleiben.`,
 
       lernziele: [
         "Die drei Klassen der van-der-Waals-Kräfte (London, Keesom, Debye) und ihre Entstehungsmechanismen erklären können.",
@@ -1257,13 +1420,37 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
     {
       id: "ch-2-02",
       title: "Löslichkeit, Konzentration und Osmose",
+      stichworte: [
+        "Löslichkeit",
+        "Osmose",
+        "Osmolarität",
+        "Isotonisch",
+        "Hypotonisch",
+        "Hypertonisch",
+        "Onkotischer Druck",
+        "Albumin",
+        "Van-t-Hoff-Faktor",
+        "Hämolyse",
+        "Infusion",
+      ],
       content: `## Löslichkeit und das Prinzip "Similia similibus solvuntur"
 
-**Polare Lösungsmittel** (z. B. Wasser) lösen **polare und ionische** Substanzen: Wasser hydratisiert Ionen und bildet H-Brücken mit polaren Molekülen (OH, NH, C=O). Die Hydratationsenthalpie kompensiert die Gitterenergie.
+**Polare Lösungsmittel** (z. B. Wasser, ε = 80) lösen **polare und ionische** Substanzen: Wasser hydratisiert Ionen durch Ausbildung von Hydrathüllen (Ion-Dipol-Wechselwirkung) und bildet H-Brücken mit polaren Molekülen (OH, NH, C=O). Die Hydratationsenthalpie kompensiert die Gitterenergie.
 
-**Unpolare Lösungsmittel** (Hexan, Dichlormethan) lösen **unpolare** Substanzen (Lipide, Steroide, Wachse) über London-Wechselwirkungen.
+> **Merke:** Ein Salz löst sich in Wasser, wenn die Hydratationsenthalpie (Energie beim Umhüllen der Ionen mit Wasser) die Gitterenergie (Energie zum Aufbrechen des Ionengitters) übersteigt oder annähernd erreicht.
 
-**Amphiphile Moleküle** (Detergenzien, Phospholipide) besitzen einen polaren Kopf und einen unpolaren Schwanz → Mizellenbildung in Wasser: Schwänze innen, Köpfe außen.
+**Unpolare Lösungsmittel** (Hexan, Dichlormethan) lösen **unpolare** Substanzen (Lipide, Steroide, Wachse) über London-Wechselwirkungen. Die Dielektrizitätskonstante ε ist niedrig (Hexan: ε = 1,9), was die Abschwächung von Coulomb-Kräften zwischen Ionen verhindert — ionische Verbindungen bleiben unlöslich.
+
+**Amphiphile Moleküle** (Detergenzien, Phospholipide, Gallensäuren) besitzen einen polaren Kopf und einen unpolaren Schwanz → Mizellenbildung in Wasser: Schwänze innen, Köpfe außen. Kritische Mizellkonzentration (CMC): Mindestkonzentration für Mizellenbildung. Gallensäuren im Darm bilden Mizellen, die Fettverdauungsprodukte (Monoglyzeride, Fettsäuren) solubilisieren und zur Resorption an die Enterozytenmembran transportieren.
+
+## Löslichkeitsprodukt Ksp
+
+Für schwerlösliche Salze gilt: Ksp = [Kation]^n × [Anion]^m (bei Sättigung).
+- BaSO₄: Ksp ≈ 1,1 × 10⁻¹⁰ → extrem schwerlöslich → sicheres GI-Kontrastmittel
+- CaSO₄: Ksp ≈ 4,9 × 10⁻⁵ → leicht löslich
+- Ca-Oxalat: Ksp ≈ 2,3 × 10⁻⁹ → Nierensteinbildung bei Hyperoxalurie
+
+Wenn das Ionenprodukt Q > Ksp → Ausfällung (Kristallisation). Wenn Q < Ksp → Lösung noch nicht gesättigt.
 
 **Umrechnung Molarität ↔ g/L:** c [mol/L] × M [g/mol] = β [g/L]
 Beispiel: 0,9 % NaCl (m/v) = 9 g NaCl / L; M(NaCl) = 58,44 g/mol → c = 9/58,44 ≈ 0,154 mol/L
@@ -1521,18 +1708,41 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
     {
       id: "ch-2-03",
       title: "Aggregatzustände, Phasenübergänge und Kolloidchemie",
-      content: `## Phasenübergänge und Wärmetönung
+      stichworte: [
+        "Aggregatzustand",
+        "Phasenübergang",
+        "Sublimation",
+        "Siedepunkt",
+        "Dampfdruck",
+        "Kolloid",
+        "Tyndall-Effekt",
+        "Brownsche Bewegung",
+        "Surfactant",
+        "Emulsion",
+        "HAES",
+      ],
+      content: `## Die drei Aggregatzustände
+
+Materie existiert in drei klassischen Aggregatzuständen, deren Unterschiede auf Teilchenbewegung und intermolekularen Kräften beruhen:
+
+- **Fest:** Teilchen in geordneter Struktur (Kristallgitter), nur Schwingung um Gitterplätze. Definiertes Volumen und Form. Geringe Kompressibilität.
+- **Flüssig:** Teilchen dicht gepackt, aber ohne Fernordnung (nur Nahordnung). Definiertes Volumen, aber passt sich der Behälterform an. Fließfähig.
+- **Gasförmig:** Teilchen weit voneinander entfernt, schnelle Bewegung (mittlere Geschwindigkeit O₂ bei 25 °C: ~480 m/s). Kein definiertes Volumen oder Form. Hohe Kompressibilität. Ideales Gasgesetz: pV = nRT.
+
+> **Merke:** Plasma (ionisiertes Gas) gilt als 4. Aggregatzustand — klinisch relevant bei der Argon-Plasma-Koagulation (APC), einer endoskopischen Blutstillungsmethode.
+
+## Phasenübergänge und Wärmetönung
 
 Die Phasenübergänge und ihre thermodynamischen Vorzeichen:
 
-- **Schmelzen** (fest → flüssig): endotherm (Schmelzenthalpie ΔH > 0)
+- **Schmelzen** (fest → flüssig): endotherm (Schmelzenthalpie ΔH > 0). Wasser: ΔHfus = 334 J/g
 - **Erstarren** (flüssig → fest): exotherm (ΔH < 0)
-- **Verdampfen/Sieden** (flüssig → gasförmig): endotherm (Verdampfungsenthalpie ΔHvap > 0)
-- **Kondensieren** (gasförmig → flüssig): exotherm
-- **Sublimation** (fest → gasförmig, direkt): endotherm; Beispiel: trockenes Eis (CO₂), Iod, Naphthalin
+- **Verdampfen/Sieden** (flüssig → gasförmig): endotherm (Verdampfungsenthalpie ΔHvap > 0). Wasser: ΔHvap = 2257 J/g → Thermoregulation durch Schweiß
+- **Kondensieren** (gasförmig → flüssig): exotherm → Dampfverbrennungen schlimmer als Wasserverbrennungen gleicher Temperatur
+- **Sublimation** (fest → gasförmig, direkt): endotherm; Beispiel: trockenes Eis (CO₂), Iod, Naphthalin. Technisch: Gefriertrocknung (Lyophilisation) konserviert Impfstoffe und Lebensmittel
 - **Desublimation/Resublimation** (gasförmig → fest, direkt): exotherm; Beispiel: Reifbildung
 
-**Eselsbrücke:** Beim Übergang zu "ungeordneter/freier" Phase wird Energie aufgenommen (endo); beim Übergang zu "geordneter" Phase wird Energie abgegeben (exo).
+> **Merke:** Beim Übergang zu "ungeordneter/freier" Phase wird Energie aufgenommen (endo); beim Übergang zu "geordneter" Phase wird Energie abgegeben (exo). Während eines Phasenübergangs bleibt die Temperatur konstant (Haltepunkte in Heiz-/Kühlkurven).
 
 ## Dampfdruck und Siedepunkt
 
@@ -1809,6 +2019,19 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
     {
       id: "ch-5-01",
       title: "Aufbau und Ordnungsprinzip des PSE",
+      stichworte: [
+        "Periodensystem",
+        "Mendelejew",
+        "Ordnungszahl",
+        "Periode",
+        "Gruppe",
+        "s-Block",
+        "p-Block",
+        "d-Block",
+        "Halbmetalle",
+        "Metallcharakter",
+        "Valenzelektron",
+      ],
       content: `## Geschichte und Entwicklung des Periodensystems
 
 Das Periodensystem der Elemente (PSE) ist eines der fundamentalsten Ordnungssysteme der Naturwissenschaften. Im Jahr 1869 veröffentlichten **Dmitri Iwanowitsch Mendelejew** (Russland) und **Lothar Meyer** (Deutschland) unabhaengig Tabellen, die Elemente nach Atommasse anordneten und Periodizitaeten der Eigenschaften zeigten. Mendelejews geniale Leistung lag darin, Luecken fuer noch unentdeckte Elemente vorherzusagen: Eka-Aluminium (Gallium, 1875), Eka-Bor (Scandium, 1879), Eka-Silicium (Germanium, 1886) stimmten fast exakt mit seinen Vorhersagen ueberein.
@@ -2080,6 +2303,18 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
     {
       id: "ch-5-02",
       title: "Periodische Trends — Eigenschaften im PSE",
+      stichworte: [
+        "Effektive Kernladung",
+        "Atomradius",
+        "Ionisierungsenergie",
+        "Elektronenaffinität",
+        "Elektronegativität",
+        "Pauling",
+        "Ionenradius",
+        "Bindungscharakter",
+        "Pairing Penalty",
+        "Fluorierte Arzneistoffe",
+      ],
       content: `## Effektive Kernladung: die treibende Kraft aller Trends
 
 Alle periodischen Trends lassen sich auf die **effektive Kernladung** (Z_eff) zurückführen. Ein Valenzelektron spürt nicht die volle Kernladung Z, weil innere Elektronen die Kernladung teilweise abschirmen:
@@ -2354,6 +2589,19 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
     {
       id: "ch-5-03",
       title: "Wichtige Elementgruppen",
+      stichworte: [
+        "Alkalimetalle",
+        "Erdalkalimetalle",
+        "Halogene",
+        "Edelgase",
+        "Übergangsmetalle",
+        "Na⁺/K⁺-ATPase",
+        "Calcium",
+        "Jod",
+        "Eisen",
+        "Hämoglobin",
+        "Schilddrüse",
+      ],
       content: `## Alkalimetalle (Gruppe 1): Die reaktivsten Metalle
 
 **Elemente**: Li (Z=3), Na (Z=11), K (Z=19), Rb (Z=37), Cs (Z=55), Fr (Z=87).

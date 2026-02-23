@@ -11,6 +11,20 @@ export const physKapMechanik: Kapitel = {
     {
       id: "ph-1-01",
       title: "SI-Grundgrößen und abgeleitete Einheiten",
+      stichworte: [
+        "SI-System",
+        "Basisgrößen",
+        "Meter",
+        "Kilogramm",
+        "Sekunde",
+        "Newton",
+        "Pascal",
+        "Joule",
+        "Watt",
+        "Skalare und Vektoren",
+        "intensive und extensive Größen",
+        "Gewichtskraft",
+      ],
       diagram: "coordinate-system",
       content: `## Das Internationale Einheitensystem (SI)
 
@@ -72,7 +86,28 @@ Diese Unterscheidung ist in der Pharmakologie und Physiologie von Bedeutung: Die
 
 ## Körpergewicht, Masse und Gewichtskraft
 
-Ein häufiger Irrtum im Alltag: Die Masse eines Menschen (in kg) und seine Gewichtskraft (in N) sind verschiedene Größen. Die Masse ist eine intrinsische, ortsunabhängige Eigenschaft. Die Gewichtskraft F_G = m × g hängt von der Erdbeschleunigung g = 9,81 m/s² ab. Ein Mensch mit Masse 70 kg hat auf der Erde eine Gewichtskraft von 70 × 9,81 = 686,7 N. Auf dem Mond (g = 1,62 m/s²) wäre F_G = 113,4 N — aber seine Masse bleibt 70 kg. Diese Unterscheidung ist in der Weltraummedizin und bei Astronautentraining relevant.`,
+Ein häufiger Irrtum im Alltag: Die Masse eines Menschen (in kg) und seine Gewichtskraft (in N) sind verschiedene Größen. Die Masse ist eine intrinsische, ortsunabhängige Eigenschaft. Die Gewichtskraft F_G = m × g hängt von der Erdbeschleunigung g = 9,81 m/s² ab. Ein Mensch mit Masse 70 kg hat auf der Erde eine Gewichtskraft von 70 × 9,81 = 686,7 N. Auf dem Mond (g = 1,62 m/s²) wäre F_G = 113,4 N — aber seine Masse bleibt 70 kg. Diese Unterscheidung ist in der Weltraummedizin und bei Astronautentraining relevant.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Infusionsrate berechnen (Dopamin):**
+Verordnung: 5 µg/kg/min Dopamin, Patient 80 kg. Lösung: 200 mg in 250 mL NaCl.
+Gesamtdosis pro Minute: 5 µg/kg/min × 80 kg = 400 µg/min = 0,4 mg/min.
+Konzentration der Lösung: 200 mg / 250 mL = 0,8 mg/mL.
+Infusionsrate: 0,4 mg/min / 0,8 mg/mL = 0,5 mL/min = **30 mL/h**.
+> **Merke:** Einheiten systematisch kürzen: (µg/kg/min) × kg = µg/min → mg/min ÷ mg/mL = mL/min → × 60 = mL/h.
+
+**Beispiel 2 — Blutdruck: mmHg → Pascal:**
+Normaler Blutdruck 120/80 mmHg in SI-Einheiten:
+Systolisch: 120 mmHg × 133,3 Pa/mmHg = 15 996 Pa ≈ **16,0 kPa**.
+Diastolisch: 80 mmHg × 133,3 Pa/mmHg = 10 664 Pa ≈ **10,7 kPa**.
+Druckdifferenz (Pulsamplitude): 40 mmHg ≈ 5,3 kPa — diese Pulsamplitude treibt die Pulswelle in den Arterien.
+
+**Beispiel 3 — Grundumsatz in Watt:**
+Grundumsatz eines Erwachsenen: ~1800 kcal/Tag.
+Umrechnung: 1800 kcal × 4184 J/kcal = 7 531 200 J/Tag.
+Ein Tag = 86 400 s.
+Leistung P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glühbirne! Bei körperlicher Aktivität steigt der Energieumsatz auf 300–500 W.`,
 
       lernziele: [
         "Die sieben SI-Basisgrößen mit ihren Einheiten und Formelzeichen nennen und erklären können",
@@ -189,25 +224,6 @@ Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrie
           tags: ["konzentration", "einheiten", "pharmakologie"],
         },
         {
-          question: "Welche der folgenden ist eine INTENSIVE physikalische Größe?",
-          options: [
-            "Masse eines Patienten (80 kg)",
-            "Volumen des Blutes im Körper (5 L)",
-            "Gesamtenergie des Körpers (500 kJ)",
-            "Körpertemperatur (37 °C)",
-            "Gesamtstoffmenge an Hämoglobin (mol)",
-          ],
-          correctIndex: 3,
-          explanation:
-            "Die Körpertemperatur ist eine intensive Größe, weil sie unabhängig von der Menge des Systems ist. Egal ob man einen kleinen oder großen Menschen misst — 37 °C bleibt 37 °C. Intensive Größen charakterisieren den Zustand eines Systems, nicht seine Menge. Beispiele: Temperatur, Druck, Konzentration, Dichte, spezifische Wärmekapazität. Extensive Größen hingegen (Masse, Volumen, Energie, Stoffmenge) sind proportional zur Systemmenge. Wenn man ein System verdoppelt, verdoppeln sich extensive Größen — intensive nicht. Diese Unterscheidung ist in der Pharmakologie fundamental: Der therapeutische Effekt hängt von der Plasmakonzentration (intensiv) ab, nicht von der absoluten Wirkstoffmenge allein.",
-          hints: [
-            "Intensiv = unabhängig von der Menge. Frage dich: Ändert sich die Größe, wenn ich mehr Substanz nehme?",
-            "Temperatur ändert sich nicht, wenn man mehr Blut nimmt — Masse schon.",
-          ],
-          difficulty: 2,
-          tags: ["intensive-größe", "extensive-größe", "temperatur"],
-        },
-        {
           question:
             "Die SI-Einheit des Drucks (Pascal) lässt sich in Basiseinheiten ausdrücken als:",
           options: ["kg·m·s⁻¹", "kg·m⁻¹·s⁻²", "kg·m²·s⁻²", "kg·m²·s⁻³", "kg·m·s⁻²"],
@@ -236,44 +252,6 @@ Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrie
           tags: ["arbeit", "kraft", "joule"],
         },
         {
-          question: "Welche Aussage über Vektoren und Skalare ist KORREKT?",
-          options: [
-            "Temperatur ist ein Vektor, weil Wärme fließt.",
-            "Druck ist ein Vektor, weil er auf Flächen wirkt.",
-            "Masse ist ein Vektor, weil sie durch Schwerkraft nach unten zieht.",
-            "Geschwindigkeit ist ein Vektor, weil sie Betrag und Richtung hat.",
-            "Energie ist ein Vektor, weil sie übertragen werden kann.",
-          ],
-          correctIndex: 3,
-          explanation:
-            "Geschwindigkeit ist ein klassischer Vektor: Sie hat einen Betrag (z.B. 30 m/s) und eine Richtung (z.B. nach Norden). Im Gegensatz dazu ist Temperatur ein Skalar — sie hat nur einen Zahlenwert, keine Richtung. Auch wenn Wärme fließt, ist die Temperatur selbst skalar (der Temperaturgradient ist ein Vektor, die Temperatur nicht). Druck ist ebenfalls ein Skalar — er wirkt in alle Richtungen gleich (isotropisch). Masse ist skalar — die Gewichtskraft (= m·g) ist ein Vektor, nicht die Masse selbst. Energie ist skalar — auch wenn Energieübertragung gerichtet sein kann, ist die Energie selbst eine skalare Größe ohne räumliche Richtungskomponente.",
-          hints: [
-            "Vektor = Betrag + Richtung. Frage dich: Hat die Größe eine definierte Richtung im Raum?",
-            "Kraft, Geschwindigkeit, Beschleunigung → Vektoren. Masse, Temperatur, Energie → Skalare.",
-          ],
-          difficulty: 1,
-          tags: ["vektoren", "skalare", "geschwindigkeit"],
-        },
-        {
-          question: "Welche Aussage zur SI-Reform von 2019 ist KORREKT?",
-          options: [
-            "Das Kilogramm wird jetzt durch die Avogadro-Konstante definiert.",
-            "Das Kilogramm wird jetzt durch die Planck-Konstante definiert.",
-            "Das Meter wird jetzt durch die Boltzmann-Konstante definiert.",
-            "Die Anzahl der Basisgrößen wurde von 7 auf 6 reduziert.",
-            "Das Mol wird jetzt durch die Planck-Konstante definiert.",
-          ],
-          correctIndex: 1,
-          explanation:
-            "Seit der SI-Reform von 2019 wird das Kilogramm durch den festgelegten Zahlenwert der Planck-Konstante h = 6,626 070 15 × 10⁻³⁴ J·s definiert. Diese Reform macht das Einheitensystem vollständig unabhängig von physischen Artefakten. Das Mol wird durch die Avogadro-Konstante NA = 6,022 140 76 × 10²³ mol⁻¹ definiert. Das Kelvin wird durch die Boltzmann-Konstante kB = 1,380 649 × 10⁻²³ J·K⁻¹ definiert. Das Meter war bereits seit 1983 durch die Lichtgeschwindigkeit c = 299 792 458 m/s definiert. Die Anzahl der Basisgrößen blieb bei sieben. Diese Reform ist historisch bedeutend: Erstmals sind alle Basiseinheiten durch unveränderliche Naturkonstanten definiert.",
-          hints: [
-            "Die Planck-Konstante h spielt in der Quantenmechanik eine zentrale Rolle — und seit 2019 auch in der Metrologie.",
-            'Jede Basisgröße hat "ihre" Naturkonstante: kg → Planck, mol → Avogadro, K → Boltzmann.',
-          ],
-          difficulty: 3,
-          tags: ["si-einheiten", "planck-konstante", "einheitensystem"],
-        },
-        {
           question: "Ein Patient wiegt 70 kg. Welche Gewichtskraft wirkt auf ihn? (g = 9,81 m/s²)",
           options: ["70 N", "686,7 N", "7,13 N", "700 Pa", "6867 J"],
           correctIndex: 1,
@@ -292,6 +270,20 @@ Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrie
     {
       id: "ph-1-02",
       title: "Präfixe und wissenschaftliche Notation",
+      stichworte: [
+        "SI-Präfixe",
+        "Zehnerpotenz",
+        "wissenschaftliche Notation",
+        "Mantisse",
+        "Exponent",
+        "Mikro",
+        "Milli",
+        "Nano",
+        "Kilo",
+        "Volumenumrechnung",
+        "Größenordnungen",
+        "Dosierungsfehler",
+      ],
       content: `## Warum brauchen wir Präfixe?
 
 Die Natur operiert auf extrem unterschiedlichen Größenskalen. Ein Wasserstoffatom hat einen Durchmesser von etwa 0,000 000 000 106 m, während der Abstand von der Erde zur Sonne ca. 150 000 000 000 m beträgt. Das Herz schlägt in einer Frequenz von ca. 1,2 Hz, Röntgenstrahlung schwingt bei 10¹⁸ Hz, und radioaktive Isotope haben Halbwertszeiten von Millisekunden bis zu Milliarden Jahren. Um diese enormen Spannen handhabbar zu machen, gibt es zwei komplementäre Werkzeuge: **SI-Präfixe** und **wissenschaftliche Notation**.
@@ -367,7 +359,47 @@ Klinisch wichtig:
 - Halbwertszeit von ¹³¹I (Schilddrüsentherapie): ~8 Tage = ~6,9 × 10⁵ s
 - Aktionspotentialdauer: ~1–5 ms = 10⁻³ s
 
-Das Beherrschen dieser Größenordnungen ermöglicht eine schnelle Plausibilitätsprüfung im klinischen Alltag: Wenn ein Laborwert "außerhalb des Rahmens" erscheint, könnte ein Einheitenfehler vorliegen.`,
+Das Beherrschen dieser Größenordnungen ermöglicht eine schnelle Plausibilitätsprüfung im klinischen Alltag: Wenn ein Laborwert "außerhalb des Rahmens" erscheint, könnte ein Einheitenfehler vorliegen.
+
+> **Merke:** Die korrekte Zuordnung von Präfixen und Zehnerpotenzen ist eine der häufigsten Fehlerquellen bei Dosierungsberechnungen. Ein Sprung von Milli (10⁻³) zu Mikro (10⁻⁶) bedeutet Faktor 1000 — bei Medikamenten wie Fentanyl, Digoxin oder Adrenalin kann diese Verwechslung tödlich sein.
+
+## Signifikante Stellen und Rundung
+
+In der Medizin und Naturwissenschaft ist es wichtig, Messergebnisse mit der korrekten Anzahl **signifikanter Stellen** anzugeben. Signifikante Stellen sind alle Ziffern eines Messwertes, die Informationsgehalt haben — führende Nullen zählen nicht.
+
+**Regeln:**
+- Alle Nicht-Null-Ziffern sind signifikant: 3,14 hat 3 signifikante Stellen
+- Nullen zwischen Nicht-Null-Ziffern sind signifikant: 1,005 hat 4 signifikante Stellen
+- Führende Nullen sind NICHT signifikant: 0,0045 hat nur 2 signifikante Stellen (4 und 5)
+- Endnullen nach dem Komma sind signifikant: 2,50 hat 3 signifikante Stellen
+
+Beim Rechnen: Das Ergebnis hat so viele signifikante Stellen wie der ungenaueste Eingangswert. In der wissenschaftlichen Notation wird die Anzahl signifikanter Stellen sofort sichtbar: 4,5 × 10⁻⁵ hat 2 signifikante Stellen.
+
+> **Merke:** Klinische Relevanz: Ein Blutzuckerwert von 5,5 mmol/L hat 2 signifikante Stellen. Ihn als 5,500 mmol/L anzugeben würde eine Messgenauigkeit suggerieren, die das Gerät gar nicht liefert.
+
+## Häufige Präfix-Fallen im MedAT
+
+Beim MedAT werden regelmäßig Aufgaben gestellt, die gezielt Präfix-Verwechslungen prüfen. Die typischsten Fallen:
+
+- **cm² vs. m²:** 1 cm² = 10⁻⁴ m² (nicht 10⁻² m²!) — der Exponent wird quadriert
+- **mL vs. L vs. m³:** 1 mL = 10⁻³ L = 10⁻⁶ m³ — zwei verschiedene Umrechnungsschritte
+- **ng vs. µg vs. mg:** ng → µg (÷ 1000), µg → mg (÷ 1000) — jeder Sprung ist Faktor 10³
+- **Verwechslung Mega/Milli:** M (groß) = 10⁶, m (klein) = 10⁻³ — Groß-/Kleinschreibung entscheidet über Faktor 10⁹!
+
+## Rechenbeispiele
+
+**Beispiel 1 — Volumenumrechnung Blutprobe:**
+PCR-Ansatz: 25 µL Template-DNA + 12,5 µL Mastermix + 2,5 µL Primer = 40 µL Gesamtvolumen.
+In mL: 40 µL × 10⁻³ mL/µL = 0,040 mL.
+In m³: 40 µL = 40 × 10⁻⁶ L = 40 × 10⁻⁹ m³ = **4 × 10⁻⁸ m³**.
+
+**Beispiel 2 — Wirkstoffmenge aus Plasmakonzentration:**
+Gentamicin-Spitzenspiegel: 8 µg/mL. Verteilungsvolumen: 17,5 L (0,25 L/kg × 70 kg).
+Gesamtmenge = 8 µg/mL × 17 500 mL = 140 000 µg = 140 mg = **0,14 g**.
+Einheitenkette: µg/mL × mL = µg → ÷ 10³ = mg → ÷ 10³ = g.
+
+**Beispiel 3 — Röntgenstrahlung Frequenz in Wellenlänge:**
+Röntgenstrahlung f = 3 × 10¹⁸ Hz. Wellenlänge λ = c/f = (3 × 10⁸ m/s) / (3 × 10¹⁸ s⁻¹) = 10⁻¹⁰ m = **0,1 nm = 1 Å** (Ångström). Diese Wellenlänge liegt im Bereich atomarer Abstände — erklärt, warum Röntgenstrahlung Kristallstrukturen auflösen kann.`,
 
       lernziele: [
         "Die SI-Präfixe von Femto (10⁻¹⁵) bis Tera (10¹²) mit Symbolen und Faktoren nennen können",
@@ -518,19 +550,6 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
           tags: ["pharmakologie", "konzentration", "präfixe"],
         },
         {
-          question: "Welcher Präfix entspricht dem Faktor 10⁻⁹?",
-          options: ["Mikro (µ)", "Piko (p)", "Nano (n)", "Femto (f)", "Milli (m)"],
-          correctIndex: 2,
-          explanation:
-            "Nano (n) entspricht dem Faktor 10⁻⁹. Die Reihenfolge der kleinen Präfixe: Milli (m) = 10⁻³, Mikro (µ) = 10⁻⁶, Nano (n) = 10⁻⁹, Piko (p) = 10⁻¹², Femto (f) = 10⁻¹⁵. Nano ist in der Biomedizin besonders wichtig: DNA-Strukturen liegen im Nanometerbereich (Helixdurchmesser ~2 nm), Nanopartikel für Drug Delivery (10–1000 nm), hochsensitives Troponin T Referenzwert < 14 ng/L = 14 × 10⁻⁹ g/L. Merkhilfe: zwischen Mikro (10⁻⁶) und Piko (10⁻¹²) liegt Nano (10⁻⁹) — jeweils 3 Zehnerpotenzen Abstand. Zwischen je zwei benachbarten Präfixen liegt immer ein Faktor 10³ = 1000.",
-          hints: [
-            "Merke die Reihenfolge: Milli(10⁻³), Mikro(10⁻⁶), Nano(10⁻⁹), Piko(10⁻¹²), Femto(10⁻¹⁵).",
-            "Zwischen je zwei Präfixen ist ein Faktor 10³ = 1000 Unterschied.",
-          ],
-          difficulty: 1,
-          tags: ["präfixe", "nano", "einheiten"],
-        },
-        {
           question:
             "Die Halbwertszeit eines Medikaments beträgt 1,5 × 10⁴ s. Wie viele Stunden sind das?",
           options: ["4,17 h", "41,7 h", "0,417 h", "15 000 min", "250 min"],
@@ -541,45 +560,25 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
           difficulty: 2,
           tags: ["halbwertszeit", "zeitumrechnung", "pharmakologie"],
         },
-        {
-          question: "Wie viele nm sind 1 µm?",
-          options: ["0,001 nm", "1000 nm", "100 nm", "0,1 nm", "10 nm"],
-          correctIndex: 1,
-          explanation:
-            "1 µm = 10⁻⁶ m und 1 nm = 10⁻⁹ m. Also: 1 µm / 1 nm = 10⁻⁶ m / 10⁻⁹ m = 10³ = 1000. Daher gilt: 1 µm = 1000 nm. Umgekehrt: 1 nm = 0,001 µm = 10⁻³ µm. Diese Umrechnung ist in der Zellbiologie fundamental: Zellorganellen (Mitochondrien: 1–10 µm = 1000–10 000 nm), Proteine (10–100 nm), DNA-Helix (2 nm Durchmesser). Das Auflösungsvermögen des Lichtmikroskops beträgt ca. 200 nm = 0,2 µm — alles Kleinere braucht Elektronenmikroskopie. Viren (20–300 nm) liegen unterhalb der Lichtmikroskopgrenze — sie sind im Lichtmikroskop nicht direkt sichtbar.",
-          hints: [
-            "Mikro = 10⁻⁶, Nano = 10⁻⁹. Faktor = 10⁻⁶/10⁻⁹ = 10³ = 1000.",
-            "Je drei Potenzen → ein Präfix-Sprung → Faktor 1000.",
-          ],
-          difficulty: 1,
-          tags: ["präfixe", "mikro", "nano"],
-        },
-        {
-          question:
-            "Ein Körper hat eine Masse von 0,075 kg. Wie lautet das in Gramm (g) und Milligramm (mg)?",
-          options: [
-            "75 g und 75 000 mg",
-            "0,75 g und 750 mg",
-            "7,5 g und 7500 mg",
-            "750 g und 750 000 mg",
-            "75 g und 7500 mg",
-          ],
-          correctIndex: 0,
-          explanation:
-            "0,075 kg × (1000 g/kg) = 75 g. 75 g × (1000 mg/g) = 75 000 mg = 7,5 × 10⁴ mg. Die Kette der Umrechnungen: kg → g: Faktor × 10³; g → mg: Faktor × 10³; also kg → mg: Faktor × 10⁶. 0,075 kg = 7,5 × 10⁻² kg = 7,5 × 10⁻² × 10³ g = 7,5 × 10¹ g = 75 g = 75 × 10³ mg = 75 000 mg. In der Pharmakologie entspricht 75 mg der Standarddosis von Clopidogrel (Thrombozytenaggregationshemmer) oder der Erhaltungsdosis von Diclofenac. Das Denken in Masseneinheiten und das sichere Konvertieren zwischen kg, g, mg und µg ist eine Grundkompetenz für Dosiersicherheit.",
-          hints: [
-            "1 kg = 1000 g = 10⁶ mg. Also × 10³ pro Präfix-Stufe.",
-            "0,075 kg × 1000 = 75 g; 75 g × 1000 = 75 000 mg.",
-          ],
-          difficulty: 1,
-          tags: ["masse", "präfixe", "einheiten"],
-        },
       ],
     },
 
     {
       id: "ph-1-03",
       title: "Dimensionsanalyse und Einheitenumrechnung",
+      stichworte: [
+        "Dimensionsanalyse",
+        "dimensionale Homogenität",
+        "Basisdimensionen",
+        "Kettenmultiplikation",
+        "Einheitenumrechnung",
+        "Reynolds-Zahl",
+        "Wirkungsgrad",
+        "mmHg zu Pascal",
+        "kcal zu kJ",
+        "Temperaturumrechnung",
+        "dimensionslose Größen",
+      ],
       content: `## Was ist Dimensionsanalyse?
 
 Die **Dimensionsanalyse** (auch: Einheitenanalyse oder dimensionale Analyse) ist eine mächtige Technik, die auf folgender Grundaussage beruht: **Jede korrekte physikalische Gleichung muss auf beiden Seiten dieselbe Dimension haben.** Wenn man eine Formel aufschreibt und die Einheiten nicht übereinstimmen, ist die Formel falsch — oder es liegt ein Umrechnungsfehler vor. Diese Methode dient gleichzeitig als Werkzeug zur Einheitenumrechnung und als Überprüfungsinstrument für Formeln.
@@ -667,7 +666,30 @@ Klinische Anwendung: Bei Anämie sinkt die Blutviskosität η, Re steigt, Turbul
 
 ## Wirkungsgrad: Ein weiterer dimensionsloser Quotient
 
-Der **Wirkungsgrad** η (eta) = nutzbarer Energieoutput / zugeführter Energieinput ist dimensionslos (Energie/Energie = 1). Der Wirkungsgrad des menschlichen Herzens beträgt ca. 20–25 % — d.h. von der chemischen Energie des ATP werden nur 20–25 % in hydraulische Herzarbeit umgewandelt, der Rest wird als Wärme abgegeben. Das erklärt, warum körperliche Arbeit wärmt.`,
+Der **Wirkungsgrad** η (eta) = nutzbarer Energieoutput / zugeführter Energieinput ist dimensionslos (Energie/Energie = 1). Der Wirkungsgrad des menschlichen Herzens beträgt ca. 20–25 % — d.h. von der chemischen Energie des ATP werden nur 20–25 % in hydraulische Herzarbeit umgewandelt, der Rest wird als Wärme abgegeben. Das erklärt, warum körperliche Arbeit wärmt.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Dimensionsprüfung einer Formel:**
+Ist die Formel v = √(2·g·h) dimensionskonsistent?
+[v] = L·T⁻¹. Rechte Seite: [g·h] = (L·T⁻²)·L = L²·T⁻². Also [√(g·h)] = L·T⁻¹ ✓ — die Formel ist korrekt.
+Zahlenbeispiel: Sturz aus h = 3 m → v = √(2 × 9,81 × 3) = √58,86 ≈ **7,67 m/s** ≈ 27,6 km/h.
+
+**Beispiel 2 — Blutdruck: mmHg → cmH₂O → Pa:**
+Systolischer Blutdruck 140 mmHg.
+In cmH₂O: 140 × 1,36 = **190,4 cmH₂O** (Vergleich: Beatmungsdruck PEEP ~5–15 cmH₂O).
+In Pascal: 140 × 133,3 = **18 662 Pa ≈ 18,7 kPa**.
+Dimensionscheck: mmHg × (Pa/mmHg) = Pa ✓.
+
+**Beispiel 3 — Kalorimetrische Berechnung einer Mahlzeit:**
+Mahlzeit: 80 g Kohlenhydrate, 30 g Fett, 25 g Protein.
+KH: 80 × 17 kJ/g = 1 360 kJ. Fett: 30 × 37 kJ/g = 1 110 kJ. Protein: 25 × 17 kJ/g = 425 kJ.
+Gesamt: 1 360 + 1 110 + 425 = **2 895 kJ ≈ 692 kcal** (÷ 4,184).
+Bei Grundumsatz ~7 500 kJ/d deckt diese Mahlzeit ~38,6 % des Tagesbedarfs.
+
+**Beispiel 4 — Reynolds-Zahl der Aorta:**
+ρ_Blut = 1060 kg/m³, v = 0,5 m/s, d_Aorta = 0,025 m, η = 3,5 × 10⁻³ Pa·s.
+Re = (1060 × 0,5 × 0,025) / (3,5 × 10⁻³) = 13,25 / 0,0035 ≈ **3786** → Übergangsbereich (2300–4000), bei Belastung turbulent.`,
 
       lernziele: [
         "Die Methode der Dimensionsanalyse verstehen und zur Formelprüfung einsetzen können",
@@ -763,39 +785,6 @@ Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung u
           tags: ["dimensionsanalyse", "druck", "pascal"],
         },
         {
-          question: "Wie lautet die Umrechnung von 36 km/h in m/s?",
-          options: ["100 m/s", "9,97 m/s", "10 m/s", "0,1 m/s", "360 m/s"],
-          correctIndex: 2,
-          explanation:
-            "36 km/h × (1000 m/km) × (1 h/3600 s) = 36 × 1000/3600 m/s = 36/3,6 m/s = 10 m/s. Die Faustregel lautet: km/h ÷ 3,6 = m/s. Also: 36 km/h ÷ 3,6 = 10 m/s. Umgekehrt: m/s × 3,6 = km/h. Diese Umrechnung kommt häufig in Physikaufgaben vor. Zum Vergleich: Maximale Blutströmungsgeschwindigkeit in der Aorta ca. 1,5 m/s = 5,4 km/h; Schrittmachergeschwindigkeit beim Gehen ca. 1,4 m/s ≈ 5 km/h; Nervenleitungsgeschwindigkeit motorisch bis 70 m/s = 252 km/h. Die Nervenleitungsgeschwindigkeit übersteigt damit ein Auto auf der Autobahn!",
-          hints: [
-            "Faustformel: km/h ÷ 3,6 = m/s. Oder: × (1000/3600).",
-            "36 ÷ 3,6 = 10. Einheitenprüfung: km/h × m/km × h/s = m/s.",
-          ],
-          difficulty: 1,
-          tags: ["geschwindigkeit", "einheitsumrechnung", "kinematik"],
-        },
-        {
-          question:
-            "Ein Patient hat eine Körpertemperatur von 39,5 °C (Fieber). Wie viel ist das in Kelvin und Fahrenheit?",
-          options: [
-            "312,65 K und 103,1 °F",
-            "312,65 K und 71,1 °F",
-            "366,5 K und 103,1 °F",
-            "39,5 K und 103,1 °F",
-            "310,15 K und 102,1 °F",
-          ],
-          correctIndex: 0,
-          explanation:
-            "Kelvin: T(K) = T(°C) + 273,15 = 39,5 + 273,15 = 312,65 K. Fahrenheit: T(°F) = 1,8 × T(°C) + 32 = 1,8 × 39,5 + 32 = 71,1 + 32 = 103,1 °F. Körpertemperatur 37,0 °C = 310,15 K = 98,6 °F (Normwert). Fieberdefinition: > 38,0 °C = > 100,4 °F. 39,5 °C gilt als hohes Fieber. Ab 41 °C (= 105,8 °F = 314,15 K) drohen Hirnschäden durch Proteindenaturierung — Enzyme verlieren ihre Raumstruktur und damit ihre Funktion. Die Kelvin-Skala beginnt beim absoluten Nullpunkt (0 K = -273,15 °C), wo jede thermische Bewegung aufhört — relevant für Gasgesetze und thermodynamische Berechnungen.",
-          hints: [
-            "T(K) = T(°C) + 273,15. T(°F) = 1,8 × T(°C) + 32.",
-            "39,5 + 273,15 = 312,65 K. 1,8 × 39,5 = 71,1; 71,1 + 32 = 103,1 °F.",
-          ],
-          difficulty: 1,
-          tags: ["temperatur", "kelvin", "fahrenheit"],
-        },
-        {
           question: "Welche der folgenden Gleichungen ist dimensionsanalytisch FALSCH?",
           options: [
             "v = s / t (Geschwindigkeit = Weg/Zeit)",
@@ -848,19 +837,6 @@ Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung u
           tags: ["reynolds-zahl", "strömung", "dimensionslose-größe"],
         },
         {
-          question: "Welche Dimension hat die Leistung P = W/t (Arbeit/Zeit)?",
-          options: ["M·L·T⁻²", "M·L²·T⁻²", "M·L²·T⁻³", "M·L⁻¹·T⁻²", "M·L·T⁻³"],
-          correctIndex: 2,
-          explanation:
-            "Leistung P = Arbeit/Zeit = W/t. Die Dimension der Arbeit (Energie) ist M·L²·T⁻². Die Dimension der Zeit ist T. Also: [P] = M·L²·T⁻²/T = M·L²·T⁻³. In SI-Einheiten: Watt (W) = J/s = kg·m²·s⁻³. Zur Übersicht: M·L·T⁻² ist Newton, M·L²·T⁻² ist Joule, M·L⁻¹·T⁻² ist Pascal. Die Herzleistung in Ruhe beträgt ca. 1–2 W (hydraulisch); bei maximaler Belastung bis ~20–25 W. Die metabolische Gesamtleistung des Körpers in Ruhe (Grundumsatz) beträgt ca. 80–90 W — davon erbringt das Herz nur ~2 W hydraulisch, der Rest wird als Wärme abgegeben oder von anderen Organen verbraucht.",
-          hints: [
-            "[Leistung] = [Energie]/[Zeit] = M·L²·T⁻²/T — Exponent von T um 1 erhöhen.",
-            "Watt = Joule/Sekunde = kg·m²·s⁻³. Der Exponent -3 bei T (nicht -2 wie bei Joule).",
-          ],
-          difficulty: 2,
-          tags: ["dimensionsanalyse", "leistung", "watt"],
-        },
-        {
           question:
             "Ein Blutdruck von 80 mmHg (diastolisch) soll in cmH₂O umgerechnet werden. (1 mmHg = 1,36 cmH₂O)",
           options: ["58,8 cmH₂O", "108,8 cmH₂O", "80 cmH₂O", "1088 cmH₂O", "5,88 cmH₂O"],
@@ -880,6 +856,19 @@ Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung u
     {
       id: "ph-2-01",
       title: "Newtonsche Gesetze und Kinematik",
+      stichworte: [
+        "Trägheitsgesetz",
+        "F=ma",
+        "actio=reactio",
+        "Kinematik",
+        "freier Fall",
+        "Beschleunigung",
+        "Dezelerationstrauma",
+        "Superpositionsprinzip",
+        "Geschwindigkeit",
+        "gleichförmige Bewegung",
+        "Vektoren",
+      ],
       content: `## Newtonsche Gesetze und Kinematik
 
 Die klassische Mechanik ist das Fundament der Physik und beschreibt, wie sich Körper unter dem Einfluss von Kräften bewegen. Isaac Newton formulierte im 17. Jahrhundert drei Grundgesetze, die für Geschwindigkeiten weit unterhalb der Lichtgeschwindigkeit bis heute uneingeschränkt gültig sind. Diese Gesetze sind keine abstrakten Theorien — sie erklären, warum Knochen brechen, wie das Herz Blut pumpt und weshalb Venenpunktionen eine bestimmte Kraft erfordern.
@@ -918,7 +907,27 @@ Beim Laufen: Der Fuß drückt die Erde nach hinten-unten (Aktionskraft). Die Erd
 
 ## Freie und erzwungene Schwingungen
 
-Ein Pendel schwingt mit seiner Eigenfrequenz f₀ = (1/2π)·√(g/l). Resonanz tritt auf, wenn die Anregungsfrequenz gleich der Eigenfrequenz ist — dann wächst die Amplitude dramatisch. Im Körper: Knochen und Gelenke haben mechanische Eigenfrequenzen. Vibrationstraining nutzt Resonanzeffekte zur Muskelstimulation.`,
+Ein Pendel schwingt mit seiner Eigenfrequenz f₀ = (1/2π)·√(g/l). Resonanz tritt auf, wenn die Anregungsfrequenz gleich der Eigenfrequenz ist — dann wächst die Amplitude dramatisch. Im Körper: Knochen und Gelenke haben mechanische Eigenfrequenzen. Vibrationstraining nutzt Resonanzeffekte zur Muskelstimulation.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Bremskraft bei Auffahrunfall:**
+Auto (m = 1200 kg) bremst von 50 km/h (= 13,9 m/s) auf 0 in 0,5 s (Kollision).
+Verzögerung: a = Δv/Δt = 13,9 / 0,5 = **27,8 m/s²** ≈ 2,8 g.
+Kraft auf Insasse (80 kg): F = 80 × 27,8 = **2224 N** ≈ 227 kgf — ohne Gurt wirkt diese Kraft auf Thorax/Kopf.
+Mit Airbag (Δt ≈ 0,15 s): a = 13,9/0,15 = 92,7 m/s² → F = 7416 N, aber über große Fläche verteilt → Druck reduziert.
+
+**Beispiel 2 — Freier Fall und Sturztrauma:**
+Patient stürzt von Leiter (h = 2 m): v = √(2 × 9,81 × 2) = √39,24 = **6,26 m/s** ≈ 22,5 km/h.
+Kinetische Energie: E_kin = ½ × 75 × 39,24 = **1471 J**.
+Bremsstrecke bei Aufprall auf Beton ~2 cm: a = v²/(2s) = 39,24/0,04 = **981 m/s² ≈ 100 g** → Frakturgefahr.
+Bremsstrecke bei Aufprall auf Rasen ~10 cm: a = 39,24/0,2 = **196 m/s² ≈ 20 g** → deutlich weniger Verletzungsgefahr.
+
+**Beispiel 3 — Herzdruckmassage (CPR):**
+Kompressionstiefe s = 5 cm = 0,05 m, Kompressionsdauer Δt ≈ 0,3 s.
+Gleichmäßige Beschleunigung: s = ½at² → a = 2s/t² = 2 × 0,05 / 0,09 ≈ 1,11 m/s².
+Thoraxmasse ~20 kg: F = m × a = 20 × 1,11 ≈ **22 N** (dynamischer Anteil) + statische Last des Brustbeins.
+Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominiert über Trägheitskraft).`,
       lernziele: [
         "Die drei Newtonschen Gesetze korrekt formulieren und auf biologische Beispiele anwenden",
         "Gleichförmige und gleichmäßig beschleunigte Bewegungen mathematisch beschreiben (v(t), s(t))",
@@ -1034,59 +1043,6 @@ Klinisches Beispiel 3 — Injektion und Venenpunktion: Um eine Kanüle in eine V
           tags: ["kinematik", "bremsen", "beschleunigung"],
         },
         {
-          question: "Was beschreibt die Kinematik im Unterschied zur Dynamik?",
-          options: [
-            "Kinematik untersucht die Ursachen der Bewegung (Kräfte).",
-            "Kinematik beschreibt Bewegung rein geometrisch ohne Betrachtung der Kräfte.",
-            "Kinematik gilt nur für rotierende Körper.",
-            "Kinematik ist ein Teilgebiet der Thermodynamik.",
-            "Kinematik beschäftigt sich ausschließlich mit der Gleichgewichtslehre.",
-          ],
-          correctIndex: 1,
-          explanation:
-            "Kinematik (gr. kinema = Bewegung) beschreibt Bewegung rein durch Größen wie Ort, Geschwindigkeit und Beschleunigung — ohne die verursachenden Kräfte zu hinterfragen. Die Dynamik (gr. dynamis = Kraft) hingegen verknüpft Bewegung mit Kräften über F = m·a. Die Statik ist der Sonderfall der Dynamik, bei dem alle Kräfte im Gleichgewicht sind (F_res = 0). Kinematische Größen: s(t), v(t), a(t). Dynamische Größen: F, m, Impuls p, Energie E.",
-          hints: [
-            'Das Wort "Kinematik" kommt vom griechischen "kinema" = Bewegung — reine Bewegungsbeschreibung.',
-            'Die Dynamik fügt die Ursache (Kraft) hinzu — Kinematik beschreibt nur das "Was", nicht das "Warum".',
-          ],
-          difficulty: 1,
-          tags: ["kinematik", "dynamik", "bewegung"],
-        },
-        {
-          question:
-            "Eine Krankenschwester schiebt ein Krankenbett (Masse 80 kg) mit einer horizontalen Kraft von 160 N über einen reibungsfreien Boden. Welche Beschleunigung erreicht das Bett?",
-          options: ["0,5 m/s²", "1,0 m/s²", "2,0 m/s²", "4,0 m/s²", "12,8 m/s²"],
-          correctIndex: 2,
-          explanation:
-            "F = m·a → a = F/m = 160 N / 80 kg = 2,0 m/s². Ohne Reibung ist die Nettokraft gleich der aufgebrachten Kraft. In der Praxis gibt es immer Reibung (Rollreibung der Räder), die die tatsächliche Beschleunigung reduziert. Die Reibungskraft F_R = μ·F_N = μ·m·g müsste von der Antriebskraft subtrahiert werden. Für ein Krankenhausbett mit guten Rädern liegt μ_Roll ≈ 0,01–0,02, also F_R ≈ 8–16 N — der Effekt ist klein, aber vorhanden.",
-          hints: [
-            "Ohne Reibung ist die Nettokraft gleich der aufgebrachten Kraft: F_netto = F = 160 N.",
-            "a = F/m — teile die Kraft durch die Masse.",
-          ],
-          difficulty: 1,
-          tags: ["newton", "kraft", "beschleunigung"],
-        },
-        {
-          question:
-            "Welches kinematische Merkmal unterscheidet gleichförmige von gleichmäßig beschleunigter Bewegung im v-t-Diagramm?",
-          options: [
-            "Gleichförmige Bewegung zeigt eine Parabel, beschleunigte Bewegung eine Gerade.",
-            "Gleichförmige Bewegung zeigt eine Horizontale (v = const), beschleunigte Bewegung eine Gerade mit Steigung.",
-            "Beide Bewegungen zeigen identische v-t-Kurven.",
-            "Beschleunigte Bewegung zeigt eine Horizontale, gleichförmige eine Parabel.",
-            "Im v-t-Diagramm lässt sich kein Unterschied erkennen.",
-          ],
-          correctIndex: 1,
-          explanation:
-            "Im v-t-Diagramm gilt: Gleichförmige Bewegung (a = 0, v = const) erscheint als horizontale Gerade. Gleichmäßig beschleunigte Bewegung (a = const ≠ 0) zeigt eine geneigte Gerade mit Steigung a (Steigung = Beschleunigung). Die Fläche unter der v-t-Kurve ergibt in beiden Fällen den zurückgelegten Weg. Im s-t-Diagramm (Ort-Zeit) ist gleichförmige Bewegung eine Gerade, beschleunigte Bewegung eine Parabel. Diese Diagramminterpretation ist grundlegend für die Auswertung von Bewegungsdaten.",
-          hints: [
-            "Die Steigung der v-t-Kurve entspricht der Beschleunigung: Δv/Δt = a.",
-            "Bei a = 0 ist die Steigung null → horizontale Linie. Bei a ≠ 0 steigt oder fällt die Gerade.",
-          ],
-          difficulty: 2,
-          tags: ["kinematik", "diagramm", "beschleunigung"],
-        },
-        {
           question:
             "Beim Venenpunktionstraining wird die Kanüle mit v₀ = 0 durch eine gleichförmige Beschleunigung von a = 0,4 m/s² in die Vene geführt. Wie lange dauert es, bis sie eine Tiefe von 2 cm (0,02 m) erreicht?",
           options: ["0,05 s", "0,1 s", "0,16 s", "0,32 s", "1,0 s"],
@@ -1105,6 +1061,20 @@ Klinisches Beispiel 3 — Injektion und Venenpunktion: Um eine Kanüle in eine V
     {
       id: "ph-2-02",
       title: "Erhaltungssätze — Energie, Impuls, Drehimpuls",
+      stichworte: [
+        "Energieerhaltung",
+        "Impulserhaltung",
+        "Drehimpulserhaltung",
+        "kinetische Energie",
+        "potenzielle Energie",
+        "Arbeit",
+        "Leistung",
+        "Wirkungsgrad",
+        "elastischer Stoß",
+        "inelastischer Stoß",
+        "Kraftstoß",
+        "Herzarbeit",
+      ],
       diagram: "coordinate-system",
       content: `## Erhaltungssätze — Energie, Impuls, Drehimpuls
 
@@ -1134,9 +1104,35 @@ Leistung P = W/t = F·v (Einheit: Watt, W = J/s). Leistung ist Arbeit pro Zeit. 
 
 Wirkungsgrad η = P_nutz / P_ges · 100 %. Der menschliche Körper hat beim Laufen einen Wirkungsgrad von ca. 20–25 % — der Rest wird als Wärme abgegeben.
 
+> **Merke:** Die Energieerhaltung ist das universellste Prinzip der Physik — Energie kann weder erzeugt noch zerstört, sondern nur umgewandelt werden. In biologischen Systemen: chemische Energie (ATP) → mechanische Arbeit (Muskelkontraktion) + Wärme. Der Erste Hauptsatz der Thermodynamik ist nichts anderes als die Energieerhaltung, angewandt auf Wärmeprozesse.
+
+## Federkraft und elastische Energie
+
+In der Biomechanik spielen elastische Strukturen eine zentrale Rolle. Die **Federkraft** folgt dem Hookeschen Gesetz: F = -k·x, wobei k die Federkonstante (N/m) und x die Auslenkung aus der Ruheposition ist. Die in einer gedehnten Feder gespeicherte elastische Energie beträgt E_el = ½·k·x². Sehnen und Bänder verhalten sich näherungsweise wie Federn — sie speichern bei Dehnung Energie, die bei Entlastung wieder freigegeben wird. Die Achillessehne speichert beim Laufen pro Schritt ca. 35 J elastische Energie und gibt sie beim Abstoß zurück — ein wichtiger Beitrag zur Laufeffizienz. Auch die Aortenwand fungiert als elastisches Reservoir (Windkesselfunktion): Während der Systole dehnt sich die Aorta und speichert Energie, die während der Diastole den Blutfluss aufrechterhält.
+
 ## Drehimpuls und Rotationsenergie
 
-Drehimpuls L = I · ω, wobei I das Trägheitsmoment (kg·m²) und ω die Winkelgeschwindigkeit (rad/s) ist. Drehimpulserhaltung: In Abwesenheit äußerer Drehmomente bleibt L = const. Der Pirouetten-Effekt: Wenn ein Eiskunstläufer die Arme anzieht (verringert I), erhöht sich ω — bei konstantem L. Rotationsenergie: E_rot = ½·I·ω². Im Körper bestimmt das Trägheitsmoment der Gliedmaßen die Energieeffizienz der Bewegung.`,
+Drehimpuls L = I · ω, wobei I das Trägheitsmoment (kg·m²) und ω die Winkelgeschwindigkeit (rad/s) ist. Drehimpulserhaltung: In Abwesenheit äußerer Drehmomente bleibt L = const. Der Pirouetten-Effekt: Wenn ein Eiskunstläufer die Arme anzieht (verringert I), erhöht sich ω — bei konstantem L. Rotationsenergie: E_rot = ½·I·ω². Im Körper bestimmt das Trägheitsmoment der Gliedmaßen die Energieeffizienz der Bewegung.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Sturzenergie und Frakturrisiko:**
+Patient (m = 75 kg) stürzt aus Standhöhe (h = 1,5 m).
+E_pot = mgh = 75 × 9,81 × 1,5 = **1103 J**. Aufprallgeschwindigkeit: v = √(2gh) = √(29,43) = **5,42 m/s** ≈ 19,5 km/h.
+Bruchenergie Oberschenkelhals (Osteoporose): ~20–40 J. → Nur ein Bruchteil (~3 %) der Sturzenergie reicht für eine Fraktur.
+
+**Beispiel 2 — Impulsübertragung bei ballistischem Trauma:**
+Projektil: m₁ = 8 g = 0,008 kg, v₁ = 400 m/s.
+Impuls: p = 0,008 × 400 = **3,2 N·s**. Kinetische Energie: E = ½ × 0,008 × 160 000 = **640 J**.
+Vollkommen inelastischer Stoß mit Gewebe (m₂ = 5 kg Torso-Segment):
+v' = p/(m₁+m₂) = 3,2/5,008 = 0,64 m/s. Energieverlust: ΔE = 640 - ½ × 5,008 × 0,41 ≈ **639 J** → fast gesamte Energie in Gewebezerstörung.
+
+**Beispiel 3 — Herzarbeit und Tagesleistung:**
+Schlagvolumen SV = 70 mL, Herzfrequenz f = 72/min, mittlerer Aortendruck p = 100 mmHg = 13 300 Pa.
+Arbeit pro Schlag: W = p × ΔV = 13 300 × 70 × 10⁻⁶ = **0,93 J**.
+Mechanische Leistung: P = W × f = 0,93 × 72/60 = **1,12 W**.
+Tagesarbeit: 0,93 × 72 × 60 × 24 = **96 422 J ≈ 96 kJ/Tag**.
+Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/Tag**.`,
       lernziele: [
         "Impuls (p = mv) und Kraftstoß (J = FΔt) definieren und den Impulserhaltungssatz anwenden",
         "Mechanische Arbeit, kinetische und potenzielle Energie berechnen",
@@ -1232,25 +1228,6 @@ Klinisches Beispiel: Bei einem Sturz auf den Kopf (Schädel-Hirn-Trauma) trifft 
           tags: ["arbeit", "energie", "kinetische-energie"],
         },
         {
-          question: "Welche Energieform wird beim inelastischen Stoß NICHT erhalten?",
-          options: [
-            "Gesamtenergie (inkl. Wärme)",
-            "Gesamtimpuls",
-            "Kinetische Energie",
-            "Drehimpuls (bei Abwesenheit äußerer Drehmomente)",
-            "Elektrische Ladung",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Beim inelastischen Stoß ist nur der Gesamtimpuls erhalten (kein äußerer Kraftstoß), nicht aber die kinetische Energie. Ein Teil der kinetischen Energie wird in Verformungsenergie, Wärme und Schall umgewandelt. Die Gesamtenergie (inkl. aller Energieformen) ist gemäß dem ersten Hauptsatz der Thermodynamik immer erhalten — kinetische Energie ist aber nicht erhalten. Beim elastischen Stoß sind sowohl Impuls als auch kinetische Energie erhalten.",
-          hints: [
-            "Beim inelastischen Stoß hört man oft ein Geräusch (Schallenergie) oder sieht eine Verformung — das ist die umgewandelte kinetische Energie.",
-            "Impuls ist immer erhalten (solange keine äußere Kraft wirkt). Kinetische Energie nur beim elastischen Stoß.",
-          ],
-          difficulty: 1,
-          tags: ["stoß", "impulserhaltung", "kinetische-energie"],
-        },
-        {
           question:
             "Ein Eiskunstläufer (I₁ = 4 kg·m²) dreht mit ω₁ = 2 rad/s. Er zieht die Arme an und reduziert sein Trägheitsmoment auf I₂ = 1 kg·m². Wie groß ist die neue Winkelgeschwindigkeit ω₂?",
           options: ["0,5 rad/s", "2 rad/s", "4 rad/s", "8 rad/s", "16 rad/s"],
@@ -1263,20 +1240,6 @@ Klinisches Beispiel: Bei einem Sturz auf den Kopf (Schädel-Hirn-Trauma) trifft 
           ],
           difficulty: 3,
           tags: ["drehimpuls", "trägheitsmoment", "rotation"],
-        },
-        {
-          question:
-            "Ein Kraftstoß von F = 5 N wirkt über Δt = 0,02 s auf die Haut. Welchen Impuls überträgt er?",
-          options: ["0,001 N·s", "0,01 N·s", "0,1 N·s", "1 N·s", "250 N·s"],
-          correctIndex: 2,
-          explanation:
-            "Kraftstoß J = F·Δt = 5 N · 0,02 s = 0,1 N·s. Der Kraftstoß entspricht der Impulsänderung Δp = 0,1 kg·m/s. Das bedeutet: Wenn die Nadel (Masse z. B. 0,01 kg) diese Impulsänderung erfährt, ändert sich ihre Geschwindigkeit um Δv = Δp/m = 0,1/0,01 = 10 m/s. Das Konzept des Kraftstoßes erklärt, warum schnelle, kurze Krafteinwirkungen (Schlag) und langsame, längere Einwirkungen (Druck) denselben Impuls übertragen können, aber sehr unterschiedliche Gewebeschäden verursachen.",
-          hints: [
-            "Kraftstoß J = F·Δt. Einfaches Produkt aus Kraft und Zeitdauer.",
-            "5 N · 0,02 s = 0,10 N·s.",
-          ],
-          difficulty: 1,
-          tags: ["kraftstoß", "impuls", "kraft"],
         },
         {
           question:
@@ -1297,6 +1260,20 @@ Klinisches Beispiel: Bei einem Sturz auf den Kopf (Schädel-Hirn-Trauma) trifft 
     {
       id: "ph-2-03",
       title: "Statik, Druck und Hydrodynamik",
+      stichworte: [
+        "Gleichgewicht",
+        "Drehmoment",
+        "Hebelgesetz",
+        "Druck",
+        "Pascal-Prinzip",
+        "hydrostatischer Druck",
+        "Auftrieb",
+        "Bernoulli-Gleichung",
+        "Kontinuitätsgleichung",
+        "Poiseuille-Gesetz",
+        "Viskosität",
+        "laminare Strömung",
+      ],
       diagram: "newton-forces",
       content: `## Statik, Druck und Hydrodynamik
 
@@ -1328,7 +1305,33 @@ Druck p = F/A (Einheit: Pascal, Pa = N/m²). Der Druck wirkt in alle Richtungen 
 
 ## Viskosität und Strömungstypen
 
-Viskosität η (Einheit: Pa·s) beschreibt den inneren Reibungswiderstand einer Flüssigkeit. Wasser: η ≈ 10⁻³ Pa·s; Blut: η ≈ 3–4·10⁻³ Pa·s (nicht-newtonsches Fluid — abhängig von Hämatokrit und Scherrate). Bei laminarer Strömung (Reynoldszahl Re < 2300) fließen Flüssigkeitsschichten parallel ohne Vermischung. Bei turbulenter Strömung (Re > 4000) entstehen Wirbel — Herzgeräusche (Turbulenzen an verengten Klappen) sind klinisch diagnostisch wichtig.`,
+Viskosität η (Einheit: Pa·s) beschreibt den inneren Reibungswiderstand einer Flüssigkeit. Wasser: η ≈ 10⁻³ Pa·s; Blut: η ≈ 3–4·10⁻³ Pa·s (nicht-newtonsches Fluid — abhängig von Hämatokrit und Scherrate). Bei laminarer Strömung (Reynoldszahl Re < 2300) fließen Flüssigkeitsschichten parallel ohne Vermischung. Bei turbulenter Strömung (Re > 4000) entstehen Wirbel — Herzgeräusche (Turbulenzen an verengten Klappen) sind klinisch diagnostisch wichtig.
+
+> **Merke:** Der **totale periphere Widerstand** (TPR) des Kreislaufs lässt sich analog zum Ohmschen Gesetz formulieren: Δp = Q · R_ges, wobei R_ges = 8ηl/(πr⁴) nach Poiseuille. Da die Arteriolen den größten Widerstand liefern und ihren Radius aktiv regulieren (Vasokonstriktion/Vasodilatation), sind sie der wichtigste Stellhebel für den Blutdruck.
+
+## Oberflächenspannung und Kapillarität
+
+Die **Oberflächenspannung** σ (Einheit: N/m) entsteht durch intermolekulare Anziehungskräfte an der Grenzfläche einer Flüssigkeit. Wasser hat eine Oberflächenspannung von σ ≈ 0,073 N/m bei 20 °C. In der Lunge ist Oberflächenspannung klinisch zentral: Die Alveolen sind mit einem dünnen Flüssigkeitsfilm bedeckt, dessen Oberflächenspannung die Alveolen zum Kollaps bringen würde. **Surfactant** (surface-active agent), ein Phospholipid-Gemisch, reduziert die Oberflächenspannung in den Alveolen auf ca. 0,001–0,025 N/m und verhindert so den Alveolarkollaps (Atelektase). Frühgeborene vor der 34. Schwangerschaftswoche haben häufig einen Surfactant-Mangel, was zum **Atemnotsyndrom des Neugeborenen** (IRDS) führt.
+
+Die **Kapillarität** (Kapillarwirkung) beschreibt das Aufsteigen oder Absenken von Flüssigkeiten in engen Röhren. Die Steighöhe h = 2σ·cos(θ)/(ρ·g·r), wobei θ der Kontaktwinkel ist. Im Körper spielt Kapillarität beim Tränenfilm des Auges und bei der Verteilung von Gewebeflüssigkeit in engen Gewebespalten eine Rolle.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Bizepskraft beim Tragen (Hebelgesetz):**
+Last in der Hand: 5 kg (= 49 N). Abstand Hand↔Ellenbogen: 35 cm. Bizepsansatz: 5 cm vom Ellenbogen.
+Momentengleichgewicht: F_B × 0,05 = 49 × 0,35 → F_B = 17,15 / 0,05 = **343 N** ≈ 35 kgf.
+Der Bizeps muss das Siebenfache der Last aufbringen — erklärt Sehnenverletzungen bei schwerem Heben.
+
+**Beispiel 2 — Koronarstenose (Poiseuille-Gesetz):**
+Normale Koronararterie: r = 1,5 mm. Stenose reduziert Radius auf r' = 1,0 mm (33 % Reduktion).
+Q'/Q = (r'/r)⁴ = (1,0/1,5)⁴ = (0,667)⁴ = **0,198 ≈ 20 %** des normalen Flusses!
+Nur 33 % Radiusverengung → 80 % Flussreduktion. Bei 50 % Stenose: (0,5)⁴ = **6,25 %** → kritische Ischämie.
+
+**Beispiel 3 — Hydrostatischer Druck im Stehen:**
+Blutdruckdifferenz Kopf↔Fuß: Höhe h = 1,7 m, ρ_Blut = 1060 kg/m³.
+Δp = ρgh = 1060 × 9,81 × 1,7 = **17 677 Pa ≈ 133 mmHg**.
+Am Fuß: 120 + 133 ≈ **253 mmHg** systolisch. Am Kopf: 120 - 25 ≈ **95 mmHg** (30 cm über Herz).
+Klinisch: Bei längerem Stehen → venöse Pooling in Beinen → orthostatische Hypotonie → Schwindel.`,
       lernziele: [
         "Die zwei Gleichgewichtsbedingungen (Kräfte- und Momentengleichgewicht) anwenden",
         "Drehmomente berechnen und das Hebelgesetz auf den Bewegungsapparat anwenden",
@@ -1412,25 +1415,6 @@ Therapeutische Konsequenzen aus dem r⁴-Gesetz: (1) Perkutane transluminale Kor
           tags: ["kontinuität", "strömung", "blutfluss"],
         },
         {
-          question: "Welche Aussage zur Bernoulli-Gleichung ist KORREKT?",
-          options: [
-            "An engen Stellen eines Gefäßes steigt der Druck an.",
-            "An engen Stellen eines Gefäßes sinkt der Druck (bei steigender Geschwindigkeit).",
-            "Die Bernoulli-Gleichung gilt nur für turbulente Strömungen.",
-            "Die Bernoulli-Gleichung ignoriert die Strömungsgeschwindigkeit.",
-            "Hohe Viskosität ist Voraussetzung für die Bernoulli-Gleichung.",
-          ],
-          correctIndex: 1,
-          explanation:
-            "Die Bernoulli-Gleichung (½ρv² + ρgh + p = const) ist der Energieerhaltungssatz für ideale (reibungsfreie, inkompressible) Strömungen. Da die Summe konstant ist: Wenn v steigt (enge Stelle), muss p sinken. Dieser Venturi-Effekt ist medizinisch bedeutsam: An einer Arterienstenose steigt v → p fällt poststenotisch → das Gefäß könnte kollabieren. Die Bernoulli-Gleichung gilt idealisiert für reibungsfreie Strömungen — Reibungseffekte werden im Poiseuille-Gesetz berücksichtigt.",
-          hints: [
-            "Bernoulli: Wenn ein Term steigt, müssen andere sinken (Summe = const).",
-            "Engere Stelle → höhere Geschwindigkeit (Kontinuität) → nach Bernoulli muss der Druck sinken.",
-          ],
-          difficulty: 2,
-          tags: ["bernoulli", "druck", "strömung"],
-        },
-        {
           question:
             "Ein Koronargefäß wird auf 1/3 seines ursprünglichen Radius verengt. Auf welchen Bruchteil sinkt der Volumenstrom (nach Poiseuille, bei gleichem Δp)?",
           options: ["1/3", "1/9", "1/27", "1/81", "1/243"],
@@ -1459,25 +1443,6 @@ Therapeutische Konsequenzen aus dem r⁴-Gesetz: (1) Perkutane transluminale Kor
           tags: ["hydrostatik", "druck", "blutdruck"],
         },
         {
-          question: "Welche Aussage zur Reynolds-Zahl ist KORREKT?",
-          options: [
-            "Re > 4000 beschreibt laminare Strömung ohne Wirbel.",
-            "Re < 2300 beschreibt laminare Strömung; Re > 4000 turbulente Strömung.",
-            "Die Reynolds-Zahl ist dimensionsbehaftet (Einheit: Pa).",
-            "Turbulente Strömung ist leiser als laminare Strömung.",
-            "Eine hohe Viskosität erhöht die Reynolds-Zahl.",
-          ],
-          correctIndex: 1,
-          explanation:
-            "Die Reynolds-Zahl Re = ρ·v·d/η ist dimensionslos. Re < 2300: laminare Strömung (Schichtströmung, geordnet, kein Vermischen, energieeffizient, geräuscharm). Re > 4000: turbulente Strömung (Wirbelbildung, Energieverlust, Geräuscherzeugung). Klinisch: Herzgeräusche entstehen durch Turbulenzen an verengten Herzklappen oder Septumdefekten. Eine hohe Viskosität η steht im Nenner — erhöhte Viskosität senkt Re (begünstigt Laminarströmung).",
-          hints: [
-            "Re = ρvd/η. Der Nenner ist η (Viskosität) — größeres η → kleineres Re → laminarer.",
-            "Laminar bei Re < 2300, turbulent bei Re > 4000. Turbulenz → Geräusche.",
-          ],
-          difficulty: 2,
-          tags: ["reynolds-zahl", "laminare-strömung", "viskosität"],
-        },
-        {
           question:
             "Ein Taucher befindet sich auf 10 m Tiefe (ρ_Wasser = 1000 kg/m³, g = 10 m/s², p_atm = 100000 Pa). Wie groß ist der Gesamtdruck auf ihn?",
           options: ["10000 Pa", "100000 Pa", "110000 Pa", "200000 Pa", "1000000 Pa"],
@@ -1496,6 +1461,20 @@ Therapeutische Konsequenzen aus dem r⁴-Gesetz: (1) Perkutane transluminale Kor
     {
       id: "ph-2-04",
       title: "Gravitation und Rotation",
+      stichworte: [
+        "Gravitationsgesetz",
+        "Gewichtskraft",
+        "Masse vs. Gewicht",
+        "Keplersche Gesetze",
+        "Kreisbewegung",
+        "Zentripetalkraft",
+        "Zentrifugalkraft",
+        "Zentrifuge",
+        "RCF",
+        "Trägheitsmoment",
+        "Winkelgeschwindigkeit",
+        "Schwerpunkt",
+      ],
       diagram: "coordinate-system",
       content: `## Gravitation und Rotation
 
@@ -1529,7 +1508,34 @@ Das Trägheitsmoment I = Σmᵢ·rᵢ² (Einheit: kg·m²) ist das rotatorische 
 
 **Winkelkinematik:** ω = ω₀ + α·t und θ = θ₀ + ω₀·t + ½·α·t² (mit Winkelbeschleunigung α). Das Drehmoment M = I·α ist das rotatorische Analogon zu F = m·a.
 
-**Stabilität und Gleichgewicht:** Ein Körper ist im stabilen Gleichgewicht, wenn sein Schwerpunkt möglichst tief liegt und die Standfläche groß ist. Das Gleichgewichtskriterium: Die senkrechte Projektion des Schwerpunkts muss innerhalb der Standfläche liegen. Ältere Menschen mit hohem Schwerpunkt und schmaler Standfläche sind sturzgefährdeter.`,
+**Stabilität und Gleichgewicht:** Ein Körper ist im stabilen Gleichgewicht, wenn sein Schwerpunkt möglichst tief liegt und die Standfläche groß ist. Das Gleichgewichtskriterium: Die senkrechte Projektion des Schwerpunkts muss innerhalb der Standfläche liegen. Ältere Menschen mit hohem Schwerpunkt und schmaler Standfläche sind sturzgefährdeter.
+
+> **Merke:** Die drei Gleichgewichtsarten: **Stabiles Gleichgewicht** — bei kleiner Auslenkung kehrt der Körper zurück (Schwerpunkt steigt bei Auslenkung, z. B. Kugel in Mulde). **Labiles Gleichgewicht** — bei kleiner Auslenkung kippt der Körper (Schwerpunkt sinkt, z. B. Stift auf Spitze). **Indifferentes Gleichgewicht** — der Schwerpunkt bleibt auf gleicher Höhe (z. B. Kugel auf Ebene).
+
+## g-Kräfte in der Medizin
+
+Die Belastung des menschlichen Körpers durch Beschleunigung wird häufig in Vielfachen der Erdbeschleunigung g angegeben. Im Alltag erfahren wir 1 g. In einer Achterbahn wirken kurzzeitig 3–5 g. Piloten von Kampfjets erleben bis zu 9 g — dabei wird das Blut in die Beine gedrückt, die Sauerstoffversorgung des Gehirns kann sistieren (G-LOC, g-induced loss of consciousness). Anti-G-Hosen komprimieren die Beinvenen und verhindern venöses Pooling.
+
+In der Notfallmedizin sind g-Kräfte bei Dezelerationstraumen zentral: Ein Frontalaufprall bei 50 km/h mit Bremsstrecke 50 cm erzeugt ca. 20 g. Die dabei auf innere Organe wirkenden Kräfte (F = m·a = m·20g) können Gefäßabrisse (Aortentranssektion), Leberrupturen und diffuse axonale Hirnverletzungen verursachen. Sicherheitsgurte und Airbags verlängern die Bremsstrecke und reduzieren damit die maximale g-Belastung — ein direktes Resultat von F = m·a.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Zentrifuge: RCF berechnen:**
+Laborzentrifuge: Drehzahl n = 3000 rpm, Radius r = 15 cm = 0,15 m.
+ω = 2π × 3000/60 = **314 rad/s**.
+a_z = ω²r = 314² × 0,15 = 98 596 × 0,15 = **14 789 m/s²**.
+RCF = a_z/g = 14 789/9,81 ≈ **1507 × g** → ausreichend für Serumgewinnung aus Vollblut.
+
+**Beispiel 2 — Geostationärer Satellit (GPS-Anwendung):**
+Umlaufzeit T = 24 h = 86 400 s. M_Erde = 5,97 × 10²⁴ kg, G = 6,674 × 10⁻¹¹ N·m²/kg².
+Aus F_z = F_G: m·ω²·r = G·M·m/r² → r³ = G·M/ω² = G·M·T²/(4π²).
+r³ = 6,674 × 10⁻¹¹ × 5,97 × 10²⁴ × (86 400)² / (4π²) = 7,53 × 10²² m³.
+r = **42 164 km** ≈ 35 786 km über der Erdoberfläche — dort kreisen TV- und Kommunikationssatelliten.
+
+**Beispiel 3 — Sturzsicherheit (Standfläche und Schwerpunkt):**
+Patient (h = 1,80 m, Schwerpunkt bei 0,56 × h = 1,01 m) steht auf Standfläche Breite 25 cm.
+Max. Neigungswinkel bis Kipp: tan(θ) = (0,125 m) / (1,01 m) → θ = arctan(0,124) ≈ **7,1°**.
+Mit Gehstock (effektive Standbreite ~60 cm): θ = arctan(0,30/1,01) ≈ **16,5°** → doppelte Kippstabilität.`,
       lernziele: [
         "Das Newtonsche Gravitationsgesetz anwenden und zwischen Masse und Gewichtskraft unterscheiden",
         "Zentripetalbeschleunigung und Zentripetalkraft für gleichförmige Kreisbewegungen berechnen",
@@ -1630,17 +1636,6 @@ Ultrazentrifugation (100.000–500.000 × g): Trennt Lipoproteine (LDL, HDL nach
         },
         {
           question:
-            "Auf dem Mond (g_Mond = 1,6 m/s²) wiegt ein Astronaut 120 N. Wie groß ist seine Masse?",
-          options: ["12 kg", "48 kg", "75 kg", "192 kg", "750 kg"],
-          correctIndex: 2,
-          explanation:
-            "F_G = m·g_Mond → m = F_G/g_Mond = 120 N / 1,6 m/s² = 75 kg. Zur Kontrolle: Auf der Erde würde dieser Astronaut wiegen F_G,Erde = 75·10 = 750 N ≈ 76 kg. Das Verhältnis: g_Mond/g_Erde = 1,6/10 = 0,16 ≈ 1/6 — auf dem Mond wiegt man ca. 1/6 seines Erdgewichts. Die Masse bleibt identisch (75 kg), denn sie ist eine intrinsische Eigenschaft des Körpers, unabhängig von g.",
-          hints: ["F_G = m · g. Umstellen nach m: m = F_G / g_Mond.", "m = 120 N / 1,6 m/s² = ?"],
-          difficulty: 1,
-          tags: ["gravitation", "masse", "gewichtskraft"],
-        },
-        {
-          question:
             "Welche Bedingung muss für stabiles Gleichgewicht des menschlichen Körpers im Stand erfüllt sein?",
           options: [
             "Der Schwerpunkt muss möglichst hoch liegen.",
@@ -1672,25 +1667,6 @@ Ultrazentrifugation (100.000–500.000 × g): Trennt Lipoproteine (LDL, HDL nach
           ],
           difficulty: 3,
           tags: ["gravitation", "kreisbewegung", "satellit"],
-        },
-        {
-          question: "Welche Aussage zum Trägheitsmoment I ist KORREKT?",
-          options: [
-            "I ist eine Vektorgröße.",
-            "I hängt nur von der Masse ab, nicht von der Massenverteilung.",
-            "I ist das rotatorische Analogon zur Masse und hängt von der Massenverteilung um die Drehachse ab.",
-            "Kleineres I bedeutet langsamere Rotation bei konstantem Drehimpuls.",
-            "Das Trägheitsmoment ist in allen Situationen konstant.",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Das Trägheitsmoment I = Σmᵢ·rᵢ² (Einheit: kg·m²) ist eine skalare Größe (kein Vektor). Es ist das rotatorische Pendant zur Masse und beschreibt den Widerstand gegen Winkelgeschwindigkeitsänderungen. Entscheidend: I hängt von der Massenverteilung um die Drehachse ab — je weiter die Masse von der Achse entfernt ist, desto größer I. Beim Eiskunstläufer: Ausgestreckte Arme → großes I → langsame Rotation; Arme angelegt → kleines I → schnelle Rotation (Drehimpulserhaltung: L = I·ω = const → kleines I → großes ω).",
-          hints: [
-            "I = Σm·r² — der Abstand r von der Drehachse geht quadratisch ein.",
-            "Bei L = I·ω = const: Wenn I kleiner wird, muss ω größer werden.",
-          ],
-          difficulty: 2,
-          tags: ["trägheitsmoment", "rotation", "drehimpuls"],
         },
       ],
     },

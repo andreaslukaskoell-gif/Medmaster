@@ -1,10 +1,10 @@
-export type { Kapitel, Unterkapitel, SelfTestQuestion, QuizItem } from './types';
+export type { Kapitel, Unterkapitel, SelfTestQuestion, QuizItem } from "./types";
 
-import { biologieKapitel } from './biologie/index';
-import { chemieKapitel } from './chemie/index';
-import { physikKapitel } from './physik/index';
-import { mathematikKapitel } from './mathematik/index';
-import type { Kapitel } from './types';
+import { biologieKapitel } from "./biologie/index";
+import { chemieKapitel } from "./chemie/index";
+import { physikKapitel } from "./physik/index";
+import { mathematikKapitel } from "./mathematik/index";
+import type { Kapitel } from "./types";
 
 // Safe array spreading with fallback to empty arrays
 export const alleKapitel: Kapitel[] = [
@@ -19,7 +19,7 @@ export function getKapitelBySubject(subject: string): Kapitel[] {
   try {
     return alleKapitel.filter((k) => !!(k && k.subject === subject));
   } catch (error) {
-    console.error('❌ Error filtering chapters by subject:', error);
+    console.error("❌ Error filtering chapters by subject:", error);
     return [];
   }
 }
@@ -48,12 +48,12 @@ export function findChapterByUnterkapitelId(
  * (Phase 4: STRUCT-02 quality gate)
  */
 export function validateChapterSequence() {
-  const subjects = ['biologie', 'chemie', 'physik', 'mathematik'] as const;
-  subjects.forEach(subject => {
+  const subjects = ["biologie", "chemie", "physik", "mathematik"] as const;
+  subjects.forEach((subject) => {
     const chapters = getKapitelBySubject(subject);
-    const missing = chapters.filter(c => c.sequence === undefined);
+    const missing = chapters.filter((c) => c.sequence === undefined);
     if (missing.length > 0) {
-      console.warn(`⚠️ ${subject} missing sequence: ${missing.map(c => c.id).join(', ')}`);
+      console.warn(`⚠️ ${subject} missing sequence: ${missing.map((c) => c.id).join(", ")}`);
     }
   });
 }
@@ -64,11 +64,11 @@ export function validateChapterSequence() {
  * (Phase 4: STRUCT-05 quality gate)
  */
 export function validateSmartLinks() {
-  const allIds = new Set(alleKapitel.map(c => c.id));
+  const allIds = new Set(alleKapitel.map((c) => c.id));
 
-  alleKapitel.forEach(chapter => {
+  alleKapitel.forEach((chapter) => {
     if (chapter.linkedChapters && chapter.linkedChapters.length > 0) {
-      chapter.linkedChapters.forEach(linkedId => {
+      chapter.linkedChapters.forEach((linkedId) => {
         if (!allIds.has(linkedId)) {
           console.warn(`❌ Chapter ${chapter.id} links to missing ${linkedId}`);
         }

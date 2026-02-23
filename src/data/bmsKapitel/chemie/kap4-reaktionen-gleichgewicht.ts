@@ -15,56 +15,117 @@ export const chemKapReaktionen: Kapitel = {
     {
       id: "ch-7-01",
       title: "Reaktionstypen und Grundprinzipien",
+      stichworte: [
+        "Synthesereaktion",
+        "Zersetzungsreaktion",
+        "Substitutionsreaktion",
+        "Metathese",
+        "Redoxreaktion",
+        "Säure-Base-Reaktion",
+        "Katalyse",
+        "Aktivierungsenergie",
+        "Reaktionsenthalpie",
+        "Gibbs-Energie",
+        "OIL RIG",
+        "Fällungsreaktion",
+      ],
       content: `## Grundbegriffe chemischer Reaktionen
 
-Eine **chemische Reaktion** ist ein Vorgang, bei dem Bindungen zwischen Atomen gebrochen und neu geknüpft werden — im Unterschied zu physikalischen Vorgängen (z. B. Schmelzen), bei denen die Molekülstruktur erhalten bleibt. Das Gesetz der Massenerhaltung (Lavoisier): Die Gesamtmasse der Edukte gleich der Gesamtmasse der Produkte. Atome werden dabei weder erzeugt noch vernichtet, nur umgeordnet.
+Eine **chemische Reaktion** ist ein Vorgang, bei dem Bindungen zwischen Atomen gebrochen und neu geknüpft werden — im Unterschied zu physikalischen Vorgängen (z. B. Schmelzen), bei denen die Molekülstruktur erhalten bleibt. Das Gesetz der Massenerhaltung (Lavoisier, 1789): Die Gesamtmasse der Edukte ist gleich der Gesamtmasse der Produkte. Atome werden dabei weder erzeugt noch vernichtet, nur umgeordnet.
+
+> **Merke:** Bei jeder chemischen Reaktion gilt: Masse der Edukte = Masse der Produkte. Die Anzahl jeder Atomsorte bleibt auf beiden Seiten der Gleichung gleich.
+
+**Wichtige Grundbegriffe:**
+- **Edukte (Reaktanten):** Ausgangsstoffe, die in die Reaktion eingehen
+- **Produkte:** Stoffe, die bei der Reaktion entstehen
+- **Reaktionsgleichung:** Symbolische Darstellung mit ausgeglichenen Koeffizienten
+- **Stöchiometrische Koeffizienten:** Ganzzahlige Verhältnisse der beteiligten Mol-Mengen
+- **Reaktionspfeil:** → (irreversibel) bzw. ⇌ (reversibel/Gleichgewicht)
 
 ## Die vier klassischen Reaktionstypen
+
+| Reaktionstyp | Schema | Beispiel | Klinischer Bezug |
+|---|---|---|---|
+| Synthese | A + B → AB | 2 Na + Cl₂ → 2 NaCl | Harnstoffsynthese (NH₃ + CO₂ → Harnstoff) |
+| Zersetzung | AB → A + B | 2 H₂O₂ → 2 H₂O + O₂ | Katalase baut H₂O₂ in Peroxisomen ab |
+| Substitution | A + BC → AC + B | CH₃Br + OH⁻ → CH₃OH + Br⁻ | Transaminierung (ALT, AST) |
+| Metathese | AB + CD → AD + CB | NaCl + AgNO₃ → AgCl↓ + NaNO₃ | CaC₂O₄-Fällung bei Nierensteinen |
 
 **1. Synthesereaktion (Kombination):** Zwei oder mehr Substanzen reagieren zu einem einzigen Produkt.
 Allgemein: A + B → AB
 Beispiel: 2 Na + Cl₂ → 2 NaCl (Natriumchlorid-Bildung)
+Biologisch: Die Bildung von Peptidketten aus Aminosäuren (Kondensationsreaktion) ist im weiteren Sinne eine Synthese.
 
 **2. Zersetzungsreaktion (Analyse):** Eine Verbindung zerfällt in zwei oder mehr einfachere Produkte.
 Allgemein: AB → A + B
 Beispiel: 2 H₂O₂ → 2 H₂O + O₂ (Abbau von Wasserstoffperoxid durch Katalase)
+Klinisch: Katalase-Mangel (Akatalasämie) führt zu Gewebeschäden durch H₂O₂-Akkumulation — besonders in der Mundschleimhaut.
 
 **3. Substitutionsreaktion:** Ein Atom oder eine Gruppe ersetzt ein anderes Atom oder eine andere Gruppe.
-Beispiel (nukleophile Substitution): CH₃Br + OH⁻ → CH₃OH + Br⁻
-Biologisch: enzymatische Transaminierungen; Methylierungsreaktionen (SAM als Methylgruppendonor)
+- **Nukleophile Substitution (Sₙ):** Ein Nukleophil (elektronenreicher Angreifer) ersetzt eine Abgangsgruppe. Beispiel: CH₃Br + OH⁻ → CH₃OH + Br⁻
+- **Elektrophile Substitution:** Typisch für Aromaten (z. B. Nitrierung von Benzol)
+- **Radikalische Substitution:** Über Radikale (z. B. Halogenierung von Alkanen: CH₄ + Cl₂ → CH₃Cl + HCl)
+Biologisch: Enzymatische Transaminierungen (ALT, AST); Methylierungsreaktionen (SAM als Methylgruppendonor)
 
 **4. Metathese (Doppelumsatz / Doppelsubstitution):** Zwei Verbindungen tauschen Partner.
 Allgemein: AB + CD → AD + CB
 Beispiel: NaCl + AgNO₃ → AgCl↓ + NaNO₃ (Fällungsreaktion)
+Treibende Kraft: Bildung eines schwerlöslichen Niederschlags, eines Gases oder von Wasser.
 
 ## Säure-Base-Reaktionen und Redoxreaktionen
 
-**Säure-Base-Reaktion (Brønsted):** Übertragung eines Protons (H⁺) vom Donor (Säure) auf den Akzeptor (Base).
+**Säure-Base-Reaktion (Brønsted, 1923):** Übertragung eines Protons (H⁺) vom Donor (Säure) auf den Akzeptor (Base).
 Beispiel: HCl + H₂O → H₃O⁺ + Cl⁻
-Die konjugierte Base einer starken Säure ist eine schwache Base. Puffergleichgewichte (z. B. HCO₃⁻/CO₂ im Blut) beruhen auf diesem Prinzip.
+Die konjugierte Base einer starken Säure ist eine schwache Base. Konjugierte Paare: HCl/Cl⁻, NH₄⁺/NH₃, H₂CO₃/HCO₃⁻. Puffergleichgewichte (z. B. HCO₃⁻/CO₂ im Blut) beruhen auf diesem Prinzip.
+
+> **Merke:** Säure-Base = H⁺-Transfer; Redox = e⁻-Transfer. Dies sind die zwei fundamentalen Reaktionsklassen in der Biochemie.
 
 **Redoxreaktion:** Übertragung von Elektronen (e⁻). Oxidation = Elektronenabgabe (Oxidationszahl ↑); Reduktion = Elektronenaufnahme (Oxidationszahl ↓). Oxidationsmittel wird reduziert; Reduktionsmittel wird oxidiert. Gedächtnisstütze: **OIL RIG** (Oxidation Is Loss, Reduction Is Gain).
-Beispiel: Zn + CuSO₄ → ZnSO₄ + Cu (Zn wird oxidiert, Cu²⁺ reduziert)
 
-**Fällungsreaktion:** Zwei lösliche Salze reagieren zu einem unlöslichen Niederschlag (Präzipitat).
-Klinisch: Nierensteine (CaC₂O₄-Fällung im Harn), Röntgenkontrastmittel (BaSO₄).
+**Rechenbeispiel — Oxidationszahlen bestimmen:**
+Zn + CuSO₄ → ZnSO₄ + Cu
+- Zn: 0 → +2 (Oxidation, gibt 2 e⁻ ab → Reduktionsmittel)
+- Cu: +2 → 0 (Reduktion, nimmt 2 e⁻ auf → Oxidationsmittel)
+- S und O: unverändert (+6 bzw. −2)
+
+Biologisch: Die Atmungskette ist eine Kaskade von Redoxreaktionen, bei der Elektronen von NADH (E° = −0,32 V) über Cytochrome auf O₂ (E° = +0,82 V) übertragen werden. Die Spannung ΔE° = 1,14 V treibt die ATP-Synthese an.
+
+**Fällungsreaktion:** Zwei lösliche Salze reagieren zu einem unlöslichen Niederschlag (Präzipitat). Die Löslichkeit wird durch das **Löslichkeitsprodukt K_sp** beschrieben: Ist das Ionenprodukt Q > K_sp, fällt der Stoff aus.
+Klinisch: Nierensteine (CaC₂O₄-Fällung im Harn bei Hyperoxalurie), Röntgenkontrastmittel (BaSO₄ — unlöslich, daher nicht toxisch trotz Ba²⁺), Gichtanfälle (Harnsäurekristall-Fällung in Gelenken).
 
 ## Katalyse
 
-Ein **Katalysator** erhöht die Reaktionsgeschwindigkeit, indem er die Aktivierungsenergie senkt, ohne selbst verbraucht zu werden. Er verändert nicht die Thermodynamik (ΔG, ΔH bleiben gleich), sondern nur den Reaktionsweg.
+Ein **Katalysator** erhöht die Reaktionsgeschwindigkeit, indem er die Aktivierungsenergie E_A senkt, ohne selbst verbraucht zu werden. Er verändert nicht die Thermodynamik (ΔG, ΔH bleiben gleich), sondern nur den Reaktionsweg.
 
-- **Homogene Katalyse:** Katalysator und Reaktanten in derselben Phase (z. B. H⁺ als Katalysator in wässriger Lösung).
-- **Heterogene Katalyse:** Unterschiedliche Phasen — meist Feststoffkatalysator, gasförmige/flüssige Reaktanten (z. B. Platin im Autokatalysator; Eisen beim Haber-Bosch-Verfahren).
-- **Enzymkatalyse:** Hochspezifische biologische Katalyse durch Proteine. Enzyme senken die Aktivierungsenergie durch Ausbildung eines Enzym-Substrat-Komplexes im aktiven Zentrum (Schlüssel-Schloss- bzw. induced-fit-Modell). Coenzyme (z. B. NAD⁺, FAD) fungieren als Elektronenüberträger.
+- **Homogene Katalyse:** Katalysator und Reaktanten in derselben Phase (z. B. H⁺ als Katalysator in wässriger Lösung; NO bei der Ozonzerstörung in der Stratosphäre).
+- **Heterogene Katalyse:** Unterschiedliche Phasen — meist Feststoffkatalysator, gasförmige/flüssige Reaktanten (z. B. Platin im Autokatalysator; Eisen beim Haber-Bosch-Verfahren: N₂ + 3 H₂ → 2 NH₃ bei 400–500 °C, 150–300 bar).
+- **Enzymkatalyse:** Hochspezifische biologische Katalyse durch Proteine. Enzyme senken die Aktivierungsenergie durch Ausbildung eines Enzym-Substrat-Komplexes im aktiven Zentrum (Schlüssel-Schloss- bzw. induced-fit-Modell). Beschleunigung: Faktor 10⁶–10¹². Coenzyme (z. B. NAD⁺, FAD) fungieren als Elektronenüberträger.
+
+> **Merke:** Katalysatoren beschleunigen Hin- UND Rückreaktion gleichermaßen. Sie verschieben das Gleichgewicht nicht, sondern verkürzen nur die Zeit bis zur Einstellung.
+
+**Vergleich der Katalysearten:**
+
+| Eigenschaft | Homogen | Heterogen | Enzymatisch |
+|---|---|---|---|
+| Phase | gleich | verschieden | wässrig (meist) |
+| Selektivität | mäßig | variabel | extrem hoch |
+| Beispiel | H⁺ in Lösung | Fe (Haber-Bosch) | Katalase, Pepsin |
+| Klinisch | Säurekatalyse | Autoabgaskatalysator | Enzymdiagnostik |
 
 ## Energetik: Exotherme und endotherme Reaktionen
 
 Die **Reaktionsenthalpie ΔH** beschreibt den Wärmeaustausch bei konstantem Druck.
 
-- **Exotherm (ΔH < 0):** Energie wird an die Umgebung abgegeben → Produkte energieärmer als Edukte. Beispiel: Verbrennung von Glucose: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O + 2803 kJ/mol.
-- **Endotherm (ΔH > 0):** Energie wird aus der Umgebung aufgenommen → Produkte energiereicher. Beispiel: Photosynthese, thermische Zersetzung von CaCO₃.
+- **Exotherm (ΔH < 0):** Energie wird an die Umgebung abgegeben → Produkte energieärmer als Edukte. Beispiel: Verbrennung von Glucose: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O; ΔH = −2803 kJ/mol.
+- **Endotherm (ΔH > 0):** Energie wird aus der Umgebung aufgenommen → Produkte energiereicher. Beispiel: Photosynthese (6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂; ΔH = +2803 kJ/mol), thermische Zersetzung von CaCO₃.
 
-Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern von der freien Enthalpie **ΔG = ΔH − T·ΔS** (Gibbs-Energie). ΔG < 0 → spontan (exergon); ΔG > 0 → nicht spontan (endergon).`,
+**Rechenbeispiel — Energiebilanz:**
+Verbrennung von 1 mol Ethanol: C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O; ΔH = −1367 kJ/mol
+Bei 46 g Ethanol (= 1 mol) werden 1367 kJ frei. Der physiologische Brennwert von Alkohol beträgt daher 29,7 kJ/g (= 7,1 kcal/g) — fast doppelt so viel wie Kohlenhydrate (4 kcal/g).
+
+**Satz von Hess:** Die Reaktionsenthalpie ist wegunabhängig — nur Anfangs- und Endzustand zählen. ΔH_gesamt = ΣΔH_Teilschritte. Dies erlaubt die Berechnung von ΔH aus Bildungsenthalpien.
+
+Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern von der freien Enthalpie **ΔG = ΔH − T·ΔS** (Gibbs-Energie). ΔG < 0 → spontan (exergon); ΔG > 0 → nicht spontan (endergon). Im Körper koppelt die Zelle exergone Reaktionen (ATP-Hydrolyse, ΔG° ≈ −30,5 kJ/mol) an endergone Biosynthesen, um thermodynamisch ungünstige Prozesse anzutreiben (energetische Kopplung).`,
 
       lernziele: [
         "Die vier klassischen Reaktionstypen (Synthese, Zersetzung, Substitution, Metathese) anhand von Beispielen unterscheiden.",
@@ -263,6 +324,18 @@ Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern vo
     {
       id: "ch-7-02",
       title: "Reaktionskinetik — Geschwindigkeit und Faktoren",
+      stichworte: [
+        "Reaktionsgeschwindigkeit",
+        "Geschwindigkeitsgesetz",
+        "Reaktionsordnung",
+        "Arrhenius-Gleichung",
+        "RGT-Regel",
+        "Michaelis-Menten-Kinetik",
+        "Halbwertszeit",
+        "Aktivierungsenergie",
+        "Geschwindigkeitskonstante",
+        "Enzymkinetik",
+      ],
       content: `## Reaktionsgeschwindigkeit
 
 Die **Reaktionsgeschwindigkeit v** beschreibt, wie schnell sich Konzentrationen mit der Zeit ändern:
@@ -271,37 +344,53 @@ Die **Reaktionsgeschwindigkeit v** beschreibt, wie schnell sich Konzentrationen 
 
 Das negative Vorzeichen bei Edukten zeigt, dass deren Konzentration abnimmt. Die momentane Reaktionsgeschwindigkeit ist der Grenzwert des Differenzenquotienten (Ableitung der Konzentrations-Zeit-Kurve). Im Verlauf einer Reaktion nimmt v in der Regel ab, weil die Eduktkonzentrationen sinken.
 
+> **Merke:** Bei der Reaktion aA + bB → cC + dD gilt: v = −(1/a)·Δ[A]/Δt = (1/c)·Δ[C]/Δt. Die stöchiometrischen Koeffizienten müssen berücksichtigt werden!
+
 ## Das Geschwindigkeitsgesetz
 
 Das **empirische Geschwindigkeitsgesetz** verknüpft v mit den Konzentrationen:
 
 **v = k · [A]ᵐ · [B]ⁿ**
 
-- k = Geschwindigkeitskonstante (temperaturabhängig)
+- k = Geschwindigkeitskonstante (temperaturabhängig, Einheit hängt von Ordnung ab)
 - m = partielle Ordnung bezüglich A; n = partielle Ordnung bezüglich B
 - Gesamtordnung = m + n
+- Wichtig: m und n müssen **experimentell** bestimmt werden — sie ergeben sich nicht aus den stöchiometrischen Koeffizienten!
 
-**Reaktionsordnungen:**
-- **0. Ordnung (v = k):** v ist konzentrationsunabhängig. Konzentrations-Zeit-Kurve ist eine Gerade. Beispiel: Ethanol-Abbau in der Leber (~0,1–0,15 ‰/h, enzymgesättigt).
-- **1. Ordnung (v = k · [A]):** Verdopplung von [A] verdoppelt v. Konzentration sinkt exponentiell. Halbwertszeit t₁/₂ = ln 2 / k ist konzentrationsunabhängig. Beispiel: radioaktiver Zerfall, Pharmakokinetik (viele Medikamente).
-- **2. Ordnung (v = k · [A]²):** Verdopplung von [A] vervierfacht v. Halbwertszeit ist konzentrationsabhängig.
+**Reaktionsordnungen im Vergleich:**
+
+| Ordnung | Gesetz | [A]-t-Kurve | t₁/₂ | Einheit k | Beispiel |
+|---|---|---|---|---|---|
+| 0. | v = k | linear | [A]₀/(2k) | mol·L⁻¹·s⁻¹ | Ethanol-Abbau |
+| 1. | v = k·[A] | exponentiell | ln 2/k | s⁻¹ | Radioakt. Zerfall |
+| 2. | v = k·[A]² | hyperbolisch | 1/(k·[A]₀) | L·mol⁻¹·s⁻¹ | 2 NO₂ → 2 NO + O₂ |
+
+- **0. Ordnung (v = k):** v konzentrationsunabhängig. [A] sinkt linear. Halbwertszeit t₁/₂ = [A]₀/(2k) — konzentrationsabhängig. Beispiel: Ethanol-Abbau in der Leber (~0,1–0,15 ‰/h, enzymgesättigt durch ADH/ALDH).
+- **1. Ordnung (v = k · [A]):** Verdopplung von [A] verdoppelt v. [A] = [A]₀ · e^(−kt), sinkt exponentiell. t₁/₂ = ln 2/k ≈ 0,693/k ist konzentrationsunabhängig. Beispiel: radioaktiver Zerfall, Pharmakokinetik.
+- **2. Ordnung (v = k · [A]²):** Verdopplung von [A] vervierfacht v. t₁/₂ = 1/(k·[A]₀) — konzentrationsabhängig.
+
+**Rechenbeispiel — Halbwertszeit 1. Ordnung:**
+Medikament mit k = 0,0693 h⁻¹. t₁/₂ = 0,693 / 0,0693 = 10 h. Nach 10 h: 50 %. Nach 20 h: 25 %. Nach 30 h: 12,5 %. Steady-State nach ~5 Halbwertszeiten (< 3 % Rest).
 
 ## Einflussfaktoren auf die Reaktionsgeschwindigkeit
 
-**1. Konzentration:** Höhere Konzentration → mehr Kollisionen pro Zeiteinheit → höheres v (gilt nicht für 0. Ordnung).
+**1. Konzentration:** Höhere Konzentration → mehr Kollisionen pro Zeiteinheit → höheres v (gilt nicht für 0. Ordnung). Grundlage: Stoßtheorie — nur wirksame Zusammenstöße (Energie ≥ E_A + richtige Orientierung) führen zur Reaktion.
 
-**2. Temperatur (RGT-Regel):** Erhöhung um 10 °C verdoppelt bis verdreifacht v (Q₁₀ = 2–3). Begründung: Mehr Moleküle besitzen genug kinetische Energie, um E_A zu überwinden. Bei Enzymen gilt dies nur bis zur Denaturierungstemperatur (~42 °C beim Menschen).
+**2. Temperatur (RGT-Regel):** Erhöhung um 10 °C verdoppelt bis verdreifacht v (Q₁₀ = 2–3). Begründung: Maxwell-Boltzmann-Verteilung verschiebt sich — mehr Moleküle überschreiten E_A. Bei Enzymen gilt dies nur bis zur Denaturierungstemperatur (~42 °C beim Menschen).
+
+**Rechenbeispiel — RGT:** v₂₀°C = 2 mmol/s, Q₁₀ = 2,5. Bei 40 °C (+20 °C): v = 2 × 2,5² = 12,5 mmol/s — über 6× schneller.
 
 **3. Aktivierungsenergie E_A (Arrhenius-Gleichung):**
 k = A · e^(−E_A / RT)
 - A = Frequenzfaktor (Stoßfrequenz × Geometriefaktor)
 - R = 8,314 J·mol⁻¹·K⁻¹; T in Kelvin
 - Je kleiner E_A, desto größer k und damit v.
-- Katalysatoren senken E_A → k steigt → Reaktion wird schneller.
+- Katalysatoren senken E_A → k steigt exponentiell → Reaktion wird schneller.
+- E_A ist die Differenz zwischen Eduktniveau und Übergangszustand — nicht identisch mit ΔH!
 
-**4. Oberfläche:** Bei heterogenen Reaktionen gilt: Größere Reaktionsfläche → höheres v. Fein pulverisierte Feststoffe reagieren deutlich schneller als kompakte Stücke (Beispiel: Zündung von Mehlstaub, Staubexplosionen in der Industrie).
+**4. Oberfläche:** Bei heterogenen Reaktionen: Größere Kontaktfläche → höheres v. Fein pulverisierte Feststoffe reagieren deutlich schneller (Staubexplosionen). Klinisch: Mikronisierung von Tabletten erhöht die Bioverfügbarkeit schlecht löslicher Wirkstoffe.
 
-**5. Lösungsmittel und Ionenstärke:** Beeinflussen die effektive Konzentration und die Aktivität der Reaktanten in wässrigen Systemen.
+**5. Lösungsmittel und Ionenstärke:** Beeinflussen die effektive Konzentration und Aktivität der Reaktanten. Höhere Ionenstärke kann beschleunigend oder hemmend wirken je nach Ladung der Reaktanten.
 
 ## Michaelis-Menten-Kinetik
 
@@ -309,19 +398,28 @@ Für Enzymreaktionen gilt eine spezielle Kinetik:
 
 **v = vₘₐₓ · [S] / (Kₘ + [S])**
 
-- vₘₐₓ = maximale Geschwindigkeit (bei gesättigtem Enzym)
-- Kₘ = Michaelis-Konstante: [S], bei der v = vₘₐₓ/2 → Maß für Substrataffinität (kleines Kₘ = hohe Affinität)
+- vₘₐₓ = maximale Geschwindigkeit (alle aktiven Zentren besetzt)
+- Kₘ = Michaelis-Konstante: [S] bei v = vₘₐₓ/2 → Maß für Substrataffinität (kleines Kₘ = hohe Affinität)
 - Bei [S] ≪ Kₘ: v ≈ (vₘₐₓ/Kₘ) · [S] → 1. Ordnung
 - Bei [S] ≫ Kₘ: v ≈ vₘₐₓ → 0. Ordnung (Sättigung)
+- **Lineweaver-Burk-Plot** (1/v vs. 1/[S]): x-Achsenabschnitt = −1/Kₘ, y-Achsenabschnitt = 1/vₘₐₓ
 
-Kompetitive Inhibition: erhöht Kₘ (apparentes Kₘ ↑), vₘₐₓ unverändert. Unkompetitive/nicht-kompetitive Inhibition senkt vₘₐₓ.
+> **Merke:** Kompetitive Hemmung: Kₘ(app) ↑, vₘₐₓ gleich — durch Substratüberschuss aufhebbar. Nicht-kompetitive Hemmung: vₘₐₓ ↓, Kₘ gleich — nicht durch Substratüberschuss aufhebbar.
+
+| Hemmtyp | Kₘ | vₘₐₓ | Aufhebbar? | Beispiel |
+|---|---|---|---|---|
+| Kompetitiv | ↑ | gleich | ja (↑[S]) | Methotrexat/DHFR |
+| Nicht-kompetitiv | gleich | ↓ | nein | Schwermetalle (Pb²⁺) |
+| Unkompetitiv | ↓ | ↓ | nein | Lithium/IMPase |
 
 ## Halbwertszeit und Pharmaka
 
 Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die Hälfte abfällt.
 - Für 1. Ordnung: t₁/₂ = ln 2 / k ≈ 0,693 / k (konzentrationsunabhängig → klinisch praktisch!)
 - Viele Pharmakokinetik-Modelle nutzen dies: Medikamentenspiegel, Dosierungsintervalle.
-- Ethanol hingegen: 0. Ordnung wegen Enzymkapazitätssättigung → konstante Abnahme (~0,1–0,15 ‰/h).`,
+- Faustregel: Nach 5 Halbwertszeiten ist der Wirkstoff praktisch eliminiert (< 3 % verbleibend).
+- Ethanol hingegen: 0. Ordnung wegen Enzymkapazitätssättigung → konstante Abnahme (~0,1–0,15 ‰/h).
+- Klinisch: Ibuprofen (t₁/₂ ≈ 2 h, häufige Gabe) vs. Amlodipin (t₁/₂ ≈ 35 h, 1× täglich). Dosierungsintervall ≈ 1–2 × t₁/₂.`,
 
       lernziele: [
         "Die Reaktionsgeschwindigkeit formal definieren und das Geschwindigkeitsgesetz v = k·[A]ᵐ·[B]ⁿ interpretieren.",
@@ -511,24 +609,50 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
     {
       id: "ch-7-03",
       title: "Stöchiometrie und Ausbeute",
+      stichworte: [
+        "Stöchiometrie",
+        "Mol-Verhältnis",
+        "Mangelreagenz",
+        "Limiting Reagent",
+        "Prozentuale Ausbeute",
+        "Haber-Bosch-Prozess",
+        "Molmasse",
+        "Reaktionsgleichung",
+        "Massenerhaltung",
+        "Respirationsquotient",
+      ],
       content: `## Was ist Stöchiometrie?
 
-Die **Stöchiometrie** (von griech. stoicheion = Element, metron = Maß) beschreibt die quantitativen Verhältnisse der an einer chemischen Reaktion beteiligten Stoffe. Basis ist die ausgeglichene Reaktionsgleichung, die Atome, Ladungen und Massen erhält.
+Die **Stöchiometrie** (von griech. stoicheion = Element, metron = Maß) beschreibt die quantitativen Verhältnisse der an einer chemischen Reaktion beteiligten Stoffe. Basis ist die ausgeglichene Reaktionsgleichung, die Atome, Ladungen und Massen erhält. Die Stöchiometrie ist das mathematische Fundament der Chemie und essenziell für Dosierungen in der Medizin.
+
+> **Merke:** Stöchiometrische Koeffizienten geben Mol-Verhältnisse an, NICHT Massenverhältnisse! Die Grundformeln: n = m/M, m = n × M, c = n/V.
 
 **Grundprinzip:** Die stöchiometrischen Koeffizienten geben die Mol-Verhältnisse an.
 
 Beispiel: **2 H₂ + O₂ → 2 H₂O**
 - 2 mol H₂ reagieren mit 1 mol O₂ zu 2 mol H₂O
-- Massenerhaltung: 4 g H₂ + 32 g O₂ → 36 g H₂O
+- Massenerhaltung: 2 × 2 g + 32 g = 36 g → 4 g H₂ + 32 g O₂ → 36 g H₂O ✓
 - Koeffizient 2:1:2 gilt für Mol, nicht für Gramm!
+- Volumen bei Gasen (Normalbedingungen, 0 °C, 1 atm): V = n × 22,4 L/mol
+
+**Wichtige Konstanten für Stöchiometrie:**
+- Avogadro-Zahl: N_A = 6,022 × 10²³ mol⁻¹ (1 mol = 6,022 × 10²³ Teilchen)
+- Molares Gasvolumen (Normalbedingungen): V_m = 22,4 L/mol
+- Universelle Gaskonstante: R = 8,314 J·mol⁻¹·K⁻¹
 
 ## Reaktionsgleichung ausgleichen (Bilanzierung)
 
-Eine Reaktionsgleichung ist ausgeglichen, wenn die Anzahl jeder Atomsorte auf Edukt- und Produktseite gleich ist. Vorgehensweise:
-1. Formeln aufschreiben (Symbole der Stoffe).
-2. Koeffizienten so wählen, dass Atome auf beiden Seiten gleich sind (erst Metalle/Nichtmetalle, zuletzt H und O).
-3. Ionen und Ladungen bei ionischen Gleichungen separat bilanzieren.
-4. Prüfen: Massenerhaltung; Ladungserhaltung bei Redoxgleichungen.
+Eine Reaktionsgleichung ist ausgeglichen, wenn die Anzahl jeder Atomsorte auf Edukt- und Produktseite gleich ist. Systematische Vorgehensweise:
+1. Formeln aufschreiben (Symbole der Stoffe, keine Summenformeln ändern!)
+2. Koeffizienten so wählen, dass Atome auf beiden Seiten gleich sind (erst Metalle/Nichtmetalle, zuletzt H und O)
+3. Ionen und Ladungen bei ionischen Gleichungen separat bilanzieren
+4. Prüfen: Massenerhaltung; Ladungserhaltung bei Redoxgleichungen
+
+**Rechenbeispiel — Bilanzierung einer Reaktionsgleichung:**
+Fe₂O₃ + CO → Fe + CO₂ (unausgeglichen)
+- Fe: links 2, rechts 1 → Koeffizient 2 vor Fe
+- Versuch: Fe₂O₃ + 3 CO → 2 Fe + 3 CO₂
+- Prüfung: Fe: 2=2 ✓, C: 3=3 ✓, O: 3+3=6 und 3×2=6 ✓ → ausgeglichen!
 
 ## Mol-zu-Mol-Umrechnungen und Stöchiometrische Berechnungen
 
@@ -546,15 +670,18 @@ Beispiel: Wie viel Gramm H₂O entstehen aus 4 g H₂?
 
 In der Realität reagieren Edukte selten im exakten stöchiometrischen Verhältnis. Das **Mangelreagenz (limiting reagent)** ist der Reaktionspartner, der zuerst aufgebraucht wird — er begrenzt die Ausbeute. Das **Überschussreagenz** liegt nach der Reaktion noch vor.
 
-**Vorgehen:**
-1. n beider Edukte berechnen.
-2. Tatsächliches Verhältnis mit stöchiometrischem Verhältnis vergleichen.
-3. Das Reagenz mit dem kleineren Quotienten n(vorhanden)/n(stöchiometrisch) ist das Mangelreagenz.
+**Systematisches Vorgehen:**
+1. n beider Edukte berechnen: n = m / M
+2. Quotienten bilden: n(vorhanden) / stöchiometrischer Koeffizient für jedes Edukt
+3. Das Reagenz mit dem **kleineren Quotienten** ist das Mangelreagenz
+4. Ausbeute ausschließlich auf Basis des Mangelreagenzes berechnen
 
-Beispiel: N₂ + 3 H₂ → 2 NH₃ mit 2 mol N₂ und 5 mol H₂.
-- Stöchiometrisch: 2 mol N₂ benötigen 6 mol H₂.
-- Vorhanden: nur 5 mol H₂ → H₂ ist das Mangelreagenz.
-- n(NH₃) = 5 mol H₂ × (2/3) = 3,33 mol NH₃ (nicht 4 mol!).
+**Rechenbeispiel — Mangelreagenz bestimmen:**
+N₂ + 3 H₂ → 2 NH₃ mit 2 mol N₂ und 5 mol H₂.
+- Quotienten: N₂: 2/1 = 2; H₂: 5/3 = 1,67
+- H₂ hat den kleineren Quotienten → H₂ ist das Mangelreagenz
+- n(NH₃) = 5 mol H₂ × (2/3) = 3,33 mol NH₃ (nicht 4 mol!)
+- N₂-Rest: 2 − 5×(1/3) = 2 − 1,67 = 0,33 mol N₂ (Überschuss)
 
 ## Prozentuale Ausbeute
 
@@ -562,14 +689,37 @@ In der Praxis wird die theoretische Ausbeute selten vollständig erreicht (Neben
 
 **Ausbeute % = (tatsächliche Ausbeute / theoretische Ausbeute) × 100**
 
-Klinisch/industriell: Der Haber-Bosch-Prozess (N₂ + 3 H₂ ⇌ 2 NH₃) erreicht nur ~15 % Gleichgewichtsausbeute pro Durchlauf — durch Rückführung der Edukte wird die Gesamtausbeute jedoch auf >90 % gesteigert. Optimale Bedingungen: 400–500 °C, 150–300 bar, Fe-Katalysator.
+**Rechenbeispiel — Prozentuale Ausbeute:**
+Theoretisch sollten 50 g Produkt entstehen. Tatsächlich werden 38 g isoliert.
+Ausbeute = (38/50) × 100 = 76 %. Die 24 % Verlust: Nebenreaktionen, unvollständiger Umsatz, Aufarbeitungsverluste.
+
+> **Merke:** Die theoretische Ausbeute ist immer die Obergrenze. In der Realität wird sie durch Nebenreaktionen, Gleichgewichtslage und Verluste bei der Isolierung unterschritten.
+
+Klinisch/industriell: Der Haber-Bosch-Prozess (N₂ + 3 H₂ ⇌ 2 NH₃) erreicht nur ~15 % Gleichgewichtsausbeute pro Durchlauf — durch Rückführung der Edukte wird die Gesamtausbeute jedoch auf >90 % gesteigert. Optimale Bedingungen: 400–500 °C, 150–300 bar, Fe-Katalysator. Fritz Haber und Carl Bosch erhielten für diesen Prozess jeweils den Nobelpreis — er versorgt heute ~40 % der Weltbevölkerung mit Nahrung (Düngemittel).
 
 ## Stöchiometrie in der Klinik und Pharmazie
 
 - **Infusionszubereitung:** m = c × V × M (z. B. 500 mL einer 0,9 %-igen NaCl-Lösung: 4,5 g NaCl)
-- **Molmasse und Dosierung:** Wirkstoffmenge in mol berechnen; bei Antibiotika ist die molare Dosis entscheidend, nicht nur die Masse.
+- **Molmasse und Dosierung:** Wirkstoffmenge in mol berechnen; bei Antibiotika ist die molare Dosis entscheidend, nicht nur die Masse
 - **Blutgasanalyse:** Stöchiometrie des CO₂/HCO₃⁻-Puffersystems: CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
-- **Glucose-Oxidation:** C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O; pro Mol Glucose 6 Mol CO₂ → Respirationsquotient = 1,0`,
+- **Glucose-Oxidation:** C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O; pro Mol Glucose 6 Mol CO₂ → Respirationsquotient = 1,0
+
+**Rechenbeispiel — Physiologische Kochsalzlösung (NaCl 0,9 %):**
+- 0,9 % (w/v) bedeutet 0,9 g NaCl pro 100 mL
+- In 1000 mL: 9 g NaCl
+- Molare Konzentration: c = 9 g / (58,5 g/mol × 1 L) = 0,154 mol/L = 154 mmol/L
+- Entspricht annähernd der physiologischen Na⁺-Konzentration im Blutplasma (~140 mmol/L)
+
+**Respirationsquotienten verschiedener Nährstoffe:**
+
+| Nährstoff | RQ (CO₂/O₂) | Brennwert |
+|---|---|---|
+| Kohlenhydrate | 1,0 | 4,1 kcal/g |
+| Fette | ~0,7 | 9,3 kcal/g |
+| Proteine | ~0,8 | 4,1 kcal/g |
+| Ethanol | 0,67 | 7,1 kcal/g |
+
+Klinisch: RQ > 1,0 deutet auf Lipogenese hin (Umwandlung von Kohlenhydraten in Fett, vermehrte CO₂-Produktion). Bei Beatmungspatienten kann dies die CO₂-Elimination erschweren — relevant für die Ernährungstherapie bei ARDS.`,
 
       lernziele: [
         "Reaktionsgleichungen korrekt ausgleichen und stöchiometrische Koeffizienten als Mol-Verhältnisse interpretieren.",
@@ -743,13 +893,27 @@ Klinisch/industriell: Der Haber-Bosch-Prozess (N₂ + 3 H₂ ⇌ 2 NH₃) erreic
     {
       id: "ch-7-04",
       title: "Chemisches Gleichgewicht und Le Chatelier",
+      stichworte: [
+        "Chemisches Gleichgewicht",
+        "Massenwirkungsgesetz",
+        "Le Chatelier",
+        "Gleichgewichtskonstante",
+        "Haber-Bosch",
+        "Blutpuffer",
+        "Bohr-Effekt",
+        "Henderson-Hasselbalch",
+        "Dynamisches Gleichgewicht",
+        "Kc",
+      ],
       content: `## Das chemische Gleichgewicht
 
 Bei reversiblen Reaktionen (⇌) läuft die Reaktion in beide Richtungen. Der **Gleichgewichtszustand** ist erreicht, wenn die Geschwindigkeit der Hinreaktion gleich der Rückreaktion ist:
 
 **v_hin = v_rück**
 
-Wichtig: Im Gleichgewicht sind die Konzentrationen der Stoffe **konstant, aber nicht notwendigerweise gleich**. Es ist ein dynamisches Gleichgewicht — Reaktionen laufen weiterhin, heben sich aber gegenseitig auf.
+Wichtig: Im Gleichgewicht sind die Konzentrationen der Stoffe **konstant, aber nicht notwendigerweise gleich**. Es ist ein dynamisches Gleichgewicht — Reaktionen laufen weiterhin, heben sich aber gegenseitig auf. Isotopen-Tracerexperimente bestätigen: Auch im Gleichgewicht wechseln Moleküle ständig zwischen Edukt- und Produktzustand.
+
+> **Merke:** Dynamisches Gleichgewicht ≠ statischer Stillstand. Konzentrationen ändern sich netto nicht, aber auf molekularer Ebene herrscht rege Aktivität.
 
 ## Massenwirkungsgesetz (MWG)
 
@@ -757,16 +921,26 @@ Für die allgemeine Reaktion **aA + bB ⇌ cC + dD** gilt:
 
 **Kc = [C]^c · [D]^d / ([A]^a · [B]^b)**
 
-- Kc = Gleichgewichtskonstante (dimensionslos, bezogen auf Standardkonzentration 1 mol/L)
+- Kc = Gleichgewichtskonstante (bezogen auf Standardkonzentration 1 mol/L)
 - Konzentrationen von reinen Feststoffen und flüssigem Wasser werden nicht einbezogen (Aktivität = 1)
-- Bei Gasen kann auch Kp (mit Partialdrücken) verwendet werden: Kp = Kc · (RT)^Δn
+- Bei Gasen kann auch Kp (mit Partialdrücken) verwendet werden: Kp = Kc · (RT)^Δn (Δn = Differenz der Gasmole)
+
+**Rechenbeispiel — Kc aufstellen:**
+Für 2 SO₂(g) + O₂(g) ⇌ 2 SO₃(g):
+Kc = [SO₃]² / ([SO₂]² · [O₂])
+Die Koeffizienten 2, 1, 2 werden als Exponenten verwendet, nicht als Faktoren!
 
 **Bedeutung von Kc:**
-- Kc ≫ 1: Gleichgewicht liegt auf Produktseite (Reaktion nahezu vollständig).
-- Kc ≪ 1: Gleichgewicht liegt auf Eduktseite (Reaktion läuft kaum ab).
-- Kc = 1: Beide Seiten etwa gleich konzentriert.
 
-Für die umgekehrte Reaktion gilt: K'c = 1/Kc.
+| Kc-Wert | Bedeutung | Beispiel |
+|---|---|---|
+| Kc ≫ 1 (z. B. 10⁶) | Gleichgewicht auf Produktseite | HCl-Dissoziation |
+| Kc ≈ 1 | Edukte und Produkte etwa gleich | Esterbildung |
+| Kc ≪ 1 (z. B. 10⁻⁶) | Gleichgewicht auf Eduktseite | N₂ + O₂ ⇌ 2 NO |
+
+Für die umgekehrte Reaktion gilt: K'c = 1/Kc. Kc ist temperaturabhängig, aber unabhängig von Konzentrationsänderungen oder Katalysatoren.
+
+**Reaktionsquotient Q:** Wird wie Kc berechnet, aber mit aktuellen (nicht Gleichgewichts-)Konzentrationen. Vergleich: Q < Kc → Reaktion läuft vorwärts; Q > Kc → Reaktion läuft rückwärts; Q = Kc → Gleichgewicht erreicht.
 
 ## Le Chatelier-Prinzip
 
@@ -789,7 +963,18 @@ Das **Prinzip von Le Chatelier** (Henry Louis Le Chatelier, 1884): Wenn ein Syst
 - Wenn auf beiden Seiten gleich viele Gasmoläquivalente → kein Druckeffekt.
 
 ### Katalysatoren und Gleichgewicht
-Katalysatoren beschleunigen Hin- und Rückreaktion gleichermaßen — sie verändern die Lage des Gleichgewichts **nicht**, sondern die Geschwindigkeit der Gleichgewichtseinstellung.
+Katalysatoren beschleunigen Hin- und Rückreaktion gleichermaßen — sie verändern die Lage des Gleichgewichts **nicht**, sondern die Geschwindigkeit der Gleichgewichtseinstellung. Kc bleibt durch Katalysatoren unverändert.
+
+> **Merke:** Le Chatelier-Zusammenfassung: Konzentration und Druck ändern Q (nicht Kc). Temperatur ist die einzige Störung, die Kc selbst verändert!
+
+**Le Chatelier im industriellen Einsatz — Haber-Bosch:**
+
+| Parameter | Bedingung | Le-Chatelier-Begründung |
+|---|---|---|
+| Druck | 150–300 bar | Δn = −2 → hoher Druck begünstigt NH₃ |
+| Temperatur | 400–500 °C | Kompromiss: K sinkt, aber v steigt |
+| Katalysator | Fe₃O₄/Al₂O₃ | Senkt E_A, ändert K nicht |
+| NH₃-Entnahme | Verflüssigung | Produktentzug → Q < K → mehr NH₃ |
 
 ## Blut-Puffersystem als biologisches Gleichgewicht
 
@@ -810,7 +995,21 @@ Die O₂-Bindung an Hämoglobin ist ebenfalls ein Gleichgewicht:
 
 - Hoher pO₂ (Lunge): Gleichgewicht → rechts → O₂ wird gebunden.
 - Niedriger pO₂ (Gewebe): Gleichgewicht → links → O₂ wird abgegeben.
-- **Bohr-Effekt:** Erhöhter CO₂-Druck / niedrigerer pH → Hb-Affinität für O₂ sinkt → mehr O₂-Abgabe ans Gewebe (kooperative Allosterie). Dies ist Le Chatelier auf molekularer Ebene.`,
+- **Bohr-Effekt:** Erhöhter CO₂-Druck / niedrigerer pH → Hb-Affinität für O₂ sinkt → mehr O₂-Abgabe ans Gewebe (kooperative Allosterie). Dies ist Le Chatelier auf molekularer Ebene.
+
+## Zusammenhang K und ΔG°
+
+Die Gleichgewichtskonstante ist direkt mit der Standard-Gibbs-Energie verknüpft:
+
+**ΔG° = −RT · ln(K)**
+
+- ΔG° < 0 → K > 1 → Reaktion thermodynamisch begünstigt (Produkte überwiegen)
+- ΔG° > 0 → K < 1 → Edukte überwiegen im Gleichgewicht
+- ΔG° = 0 → K = 1 → Edukte und Produkte gleich stabil
+
+**Rechenbeispiel — ΔG° aus K berechnen:**
+Für die Ammoniaksynthese bei 500 °C (773 K): K = 600.
+ΔG° = −8,314 J/(mol·K) × 773 K × ln(600) = −8,314 × 773 × 6,40 = −41.100 J/mol ≈ −41,1 kJ/mol → stark exergon.`,
 
       lernziele: [
         "Den Gleichgewichtszustand als dynamisches Gleichgewicht beschreiben und von statischen Zuständen abgrenzen.",
@@ -1009,6 +1208,18 @@ Die O₂-Bindung an Hämoglobin ist ebenfalls ein Gleichgewicht:
     {
       id: "ch-8-01",
       title: "Reaktionsgeschwindigkeit und Aktivierungsenergie",
+      stichworte: [
+        "Reaktionsgeschwindigkeit",
+        "Aktivierungsenergie",
+        "Arrhenius-Gleichung",
+        "RGT-Regel",
+        "Stoßtheorie",
+        "Übergangszustand",
+        "Energieprofil",
+        "Katalysator",
+        "Geschwindigkeitskonstante",
+        "Therapeutische Hypothermie",
+      ],
       content: `## Reaktionsgeschwindigkeit
 
 Die Reaktionsgeschwindigkeit v beschreibt, wie schnell sich die Konzentration einer Substanz mit der Zeit ändert. Formal gilt:
@@ -1027,9 +1238,16 @@ wobei k die temperaturabhängige Geschwindigkeitskonstante und m, n die partiell
 
 **Temperatur und die RGT-Regel:** Die Van't-Hoff-Regel (Reaktionsgeschwindigkeits-Temperatur-Regel, RGT-Regel) besagt, dass eine Temperaturerhöhung um 10 °C die Reaktionsgeschwindigkeit näherungsweise verdoppelt bis verdreifacht. Der Temperaturfaktor Q₁₀ ≈ 2–3 gilt für viele chemische und biologische Reaktionen. Grund dafür ist, dass bei höherer Temperatur mehr Moleküle genug Energie besitzen, um die Aktivierungsenergie zu überwinden. Bei Enzymen gilt dies jedoch nur im physiologischen Bereich; oberhalb der optimalen Temperatur (meist 37–42 °C beim Menschen) kommt es zur Denaturierung und die Reaktionsgeschwindigkeit bricht ein.
 
-**Oberfläche:** Bei heterogenen Reaktionen (z. B. Feststoff in Lösung) steigt die Reaktionsgeschwindigkeit mit der Kontaktfläche. Fein verteilte Feststoffe reagieren schneller als grobe Stücke.
+**Oberfläche:** Bei heterogenen Reaktionen (z. B. Feststoff in Lösung) steigt die Reaktionsgeschwindigkeit mit der Kontaktfläche. Fein verteilte Feststoffe reagieren schneller als grobe Stücke. Beispiel: Staubexplosionen in Mühlen (fein verteilter Mehlstaub hat riesige Oberfläche). Klinisch: Mikronisierung von Tabletten erhöht die Bioverfügbarkeit.
 
 **Lösungsmittel und Ionenstärke:** In wässriger Lösung beeinflussen Ionenstärke und Dielektrizitätskonstante des Lösungsmittels die effektiven Konzentrationen der Reaktanten.
+
+> **Merke:** Fünf Einflussfaktoren auf v: (1) Konzentration, (2) Temperatur, (3) Aktivierungsenergie/Katalysator, (4) Oberfläche, (5) Lösungsmittel. Die ersten drei sind für die Prüfung am wichtigsten!
+
+**Rechenbeispiel — RGT-Regel und Fieber:**
+Grundumsatz bei 37 °C: v₁. Bei Fieber 40 °C (ΔT = 3 °C, Q₁₀ = 2,5):
+v₂ = v₁ × Q₁₀^(ΔT/10) = v₁ × 2,5^(0,3) ≈ v₁ × 1,30 → ca. 30 % höherer Grundumsatz.
+Das erklärt den erhöhten Kalorienverbrauch, die Tachykardie und die Tachypnoe bei Fieber.
 
 ## Aktivierungsenergie und das Arrhenius-Konzept
 
@@ -1046,15 +1264,34 @@ Die **Arrhenius-Gleichung** beschreibt den quantitativen Zusammenhang:
 
 Je kleiner E_A, desto schneller läuft die Reaktion ab. Katalysatoren (inkl. Enzyme) senken E_A, ohne die Thermodynamik (ΔG der Reaktion) zu ändern.
 
+**Rechenbeispiel — Arrhenius qualitativ:**
+Zwei Reaktionen bei 37 °C (310 K): Reaktion A hat E_A = 40 kJ/mol, Reaktion B hat E_A = 80 kJ/mol.
+Da E_A im negativen Exponenten steht: e^(−40.000/(8,314×310)) vs. e^(−80.000/(8,314×310))
+= e^(−15,5) vs. e^(−31,0) ≈ 1,8×10⁻⁷ vs. 2,9×10⁻¹⁴
+→ Reaktion A ist ~6 Millionen Mal schneller als B (bei gleichem A-Faktor)!
+
 ## Endotherme vs. exotherme Reaktionen im Energieprofil
 
-Bei **exothermen** Reaktionen liegt das Produktniveau energetisch tiefer als das Eduktniveau (ΔH < 0). Die Aktivierungsenergie der Rückreaktion ist größer als die der Hinreaktion. Bei **endothermen** Reaktionen ist es umgekehrt (ΔH > 0). Im dynamischen Gleichgewicht laufen Hin- und Rückreaktion gleichzeitig ab — das Energieprofil erklärt, warum beide Richtungen unterschiedliche Aktivierungsenergien und damit unterschiedliche Geschwindigkeitskonstanten besitzen.
+Bei **exothermen** Reaktionen liegt das Produktniveau energetisch tiefer als das Eduktniveau (ΔH < 0). Die Aktivierungsenergie der Rückreaktion (E_A,rück) ist größer als die der Hinreaktion (E_A,hin). Es gilt: ΔH = E_A,hin − E_A,rück.
+
+Bei **endothermen** Reaktionen ist es umgekehrt (ΔH > 0): E_A,rück < E_A,hin. Im dynamischen Gleichgewicht laufen Hin- und Rückreaktion gleichzeitig ab — das Energieprofil erklärt, warum beide Richtungen unterschiedliche Aktivierungsenergien und damit unterschiedliche Geschwindigkeitskonstanten besitzen.
+
+> **Merke:** E_A ist NICHT gleich ΔH! E_A ist die Höhe des Energiebergs über dem Eduktniveau. ΔH ist die Nettodifferenz zwischen Edukt- und Produktniveau. Ein Katalysator senkt E_A, ohne ΔH zu ändern.
 
 ## Stoßtheorie und Übergangszustandstheorie
 
-Die **Stoßtheorie** erklärt Reaktionsgeschwindigkeiten durch die Frequenz und Energie wirksamer Molekülkollisionen. Nicht jeder Stoß führt zur Reaktion — nur solche, bei denen (1) die kinetische Energie die Aktivierungsenergie übersteigt und (2) die räumliche Orientierung der Moleküle günstig ist.
+Die **Stoßtheorie** erklärt Reaktionsgeschwindigkeiten durch die Frequenz und Energie wirksamer Molekülkollisionen. Nicht jeder Stoß führt zur Reaktion — nur solche, bei denen (1) die kinetische Energie die Aktivierungsenergie übersteigt und (2) die räumliche Orientierung der Moleküle günstig ist. Der Anteil wirksamer Stöße ist typischerweise sehr klein (< 1 %).
 
-Die **Übergangszustandstheorie (Eyring)** verfeinert dieses Bild: Edukte bilden zunächst einen hochenergetischen Aktivierungskomplex (Übergangszustand), der dann entweder zu Produkten zerfällt oder zurück zu Edukten. Die Theorie erlaubt die Berechnung von k aus thermodynamischen Größen (Enthalpie und Entropie der Aktivierung).`,
+Die **Übergangszustandstheorie (Eyring)** verfeinert dieses Bild: Edukte bilden zunächst einen hochenergetischen Aktivierungskomplex (Übergangszustand, ‡), der dann entweder zu Produkten zerfällt oder zurück zu Edukten. Die Theorie erlaubt die Berechnung von k aus thermodynamischen Größen (Enthalpie und Entropie der Aktivierung): k = (k_B·T/h) · e^(−ΔG‡/RT).
+
+**Klinische Anwendung — Therapeutische Hypothermie vs. Fieber:**
+
+| Zustand | Temperatur | Effekt auf v | Klinische Konsequenz |
+|---|---|---|---|
+| Hypothermie | 32–36 °C | v ↓ ~30–50 % | Neuroprotektion nach Herzstillstand |
+| Normal | 37 °C | v = Normalwert | Physiologischer Stoffwechsel |
+| Fieber | 40 °C | v ↑ ~30 % | Erhöhter O₂-Bedarf, Tachykardie |
+| Denaturierung | > 42 °C | v bricht ein | Enzymverlust, lebensbedrohlich |`,
 
       lernziele: [
         "Die Reaktionsgeschwindigkeit formal definieren und Einflussfaktoren (Konzentration, Temperatur, Oberfläche) erläutern.",
@@ -1268,6 +1505,18 @@ Therapeutische Hypothermie (Kühlung auf 32–36 °C nach Herzstillstand oder be
     {
       id: "ch-8-02",
       title: "Chemisches Gleichgewicht und Massenwirkungsgesetz",
+      stichworte: [
+        "Dynamisches Gleichgewicht",
+        "Massenwirkungsgesetz",
+        "Gleichgewichtskonstante Kc",
+        "Reaktionsquotient Q",
+        "Kp und Kc",
+        "Temperaturabhängigkeit",
+        "Gibbs-Energie",
+        "Hämoglobin-O₂-Bindung",
+        "Michaelis-Konstante",
+        "Guldberg-Waage",
+      ],
       content: `## Das dynamische Gleichgewicht
 
 Viele chemische Reaktionen sind reversibel: Die Produkte können wieder zu Edukten zurückreagieren. Man schreibt dies mit einem Doppelpfeil:
@@ -1277,6 +1526,14 @@ Viele chemische Reaktionen sind reversibel: Die Produkte können wieder zu Edukt
 Anfänglich dominiert die Hinreaktion. Mit steigenden Produktkonzentrationen nimmt die Rückreaktion zu. Irgendwann werden Hin- und Rückreaktion gleich schnell — es stellt sich ein **dynamisches Gleichgewicht** ein. Dynamisch bedeutet: Beide Reaktionen laufen weiterhin ab, aber ihre Geschwindigkeiten sind gleich. Makroskopisch scheint die Reaktion zu stehen; mikroskopisch herrscht rege Aktivität.
 
 Das Gleichgewicht ist kein statischer Zustand. Isotopen-Tracerexperimente zeigen, dass im Gleichgewicht ständig Moleküle zwischen Edukt- und Produktzustand wechseln — nur netto findet keine Änderung statt.
+
+> **Merke:** Dynamisches Gleichgewicht = v_hin = v_rück. Konzentrationen sind konstant (aber nicht gleich!). Beide Reaktionsrichtungen laufen weiterhin ab.
+
+**Zeitlicher Verlauf bis zum Gleichgewicht:**
+- Beginn: [Edukte] hoch, [Produkte] = 0 → v_hin maximal, v_rück = 0
+- Verlauf: [Edukte] sinkt, [Produkte] steigt → v_hin sinkt, v_rück steigt
+- Gleichgewicht: v_hin = v_rück → Konzentrationen bleiben konstant
+- Je höher E_A, desto länger dauert die Einstellung (Kinetik). Ein Katalysator beschleunigt die Einstellung, ändert aber die Lage nicht.
 
 ## Das Massenwirkungsgesetz (MWG)
 
@@ -1304,6 +1561,8 @@ Die Größe von K_c gibt Auskunft über die Lage des Gleichgewichts:
 - K_c << 1 (z. B. 10⁻⁶): Gleichgewicht stark auf Seite der Edukte
 
 Ein großes K_c bedeutet nicht, dass die Reaktion schnell abläuft — das regelt die Kinetik (Aktivierungsenergie). K_c ist eine rein thermodynamische Größe.
+
+> **Merke:** K_c sagt, WO das Gleichgewicht liegt (Thermodynamik). E_A sagt, WIE SCHNELL es erreicht wird (Kinetik). Beides ist unabhängig!
 
 ## K_p und K_c bei Gasreaktionen
 

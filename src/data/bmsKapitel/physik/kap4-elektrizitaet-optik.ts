@@ -1,17 +1,31 @@
-import type { Kapitel } from '../types';
+import type { Kapitel } from "../types";
 
 export const physKapElektrizitaet: Kapitel = {
-  id: 'physik-kap4',
+  id: "physik-kap4",
   title: "Elektrizitätslehre & Optik",
-  subject: 'physik',
-  icon: '⚡',
-  estimatedTime: '120 min',
+  subject: "physik",
+  icon: "⚡",
+  estimatedTime: "120 min",
   unterkapitel: [
     // === from kap5-elektrizitaetslehre ===
     {
-      id: 'ph-5-01',
-      diagram: 'circuit',
-      title: 'Elektrische Ladung, Feld und Coulomb-Gesetz',
+      id: "ph-5-01",
+      diagram: "circuit",
+      title: "Elektrische Ladung, Feld und Coulomb-Gesetz",
+      stichworte: [
+        "Elementarladung",
+        "Coulomb-Gesetz",
+        "Ladungserhaltung",
+        "Elektrisches Feld",
+        "Feldlinien",
+        "Plattenkondensator",
+        "Permittivität",
+        "Spannung",
+        "Potential",
+        "Faraday-Käfig",
+        "Membranpotential",
+        "Gelelektrophorese",
+      ],
       content: `## Elektrische Ladung
 
 Elektrische Ladung ist eine fundamentale, unveränderliche Eigenschaft der Materie. Es gibt genau zwei Arten: **positive Ladung** (getragen von Protonen) und **negative Ladung** (getragen von Elektronen). Das Grundprinzip der Elektrostatik lautet: Gleichnamige Ladungen stoßen sich ab, ungleichnamige Ladungen ziehen sich an.
@@ -19,6 +33,13 @@ Elektrische Ladung ist eine fundamentale, unveränderliche Eigenschaft der Mater
 Die kleinste frei vorkommende Ladung ist die **Elementarladung** e = 1,602 × 10⁻¹⁹ C. Alle beobachtbaren Ladungen sind ganzzahlige Vielfache davon — dieses Prinzip nennt man **Ladungsquantisierung**. Die SI-Einheit der Ladung ist das **Coulomb (C)**; 1 C entspricht der Ladung von ca. 6,24 × 10¹⁸ Elektronen. Das **Ladungserhaltungsgesetz** besagt: In einem abgeschlossenen System bleibt die Gesamtladung konstant. Ladung kann weder erzeugt noch vernichtet, sondern nur getrennt oder übertragen werden.
 
 Körper werden durch **Reibung** (Triboelektrizität), **Influenz** (Ladungsverschiebung ohne Kontakt) oder **Kontakt** mit geladenen Körpern elektrisiert. Bei der Influenz wird ein leitender Körper in ein externes Feld gebracht; freie Elektronen verschieben sich, sodass eine Seite negativ und die andere positiv wird — ohne dass Ladung übertragen wird.
+
+> **Merke:** Ladung ist immer quantisiert (ganzzahlige Vielfache von e) und in abgeschlossenen Systemen erhalten — zwei Grundprinzipien der Elektrostatik.
+
+**Leiter, Isolatoren und Halbleiter:**
+- **Leiter** (Metalle): frei bewegliche Elektronen, Widerstand steigt mit Temperatur
+- **Isolatoren** (Glas, Kunststoff): keine freien Ladungsträger, hoher Widerstand
+- **Halbleiter** (Silizium, Germanium): Leitfähigkeit steigt mit Temperatur oder Dotierung — Basis der modernen Elektronik und medizinischer Sensoren
 
 ## Das Coulombsche Gesetz
 
@@ -44,47 +65,73 @@ Das Feld einer Punktladung Q: **E = k · Q / r²** (radiales Feld, nimmt mit r²
 
 Das **elektrische Potential φ** an einem Punkt gibt die potentielle Energie pro Ladung an: φ = E_pot / q [V = J/C]. Die **elektrische Spannung U** zwischen zwei Punkten A und B ist die Potentialdifferenz: U = φ_A − φ_B. Positive Ladungen bewegen sich spontan von hohem zu niedrigem Potential (in Richtung des Feldes); negative Ladungen entgegen der Feldrichtung. Die Einheit Volt (V): 1 V = 1 J/C.
 
-**Äquipotentialflächen** (Flächen gleichen Potentials) stehen immer senkrecht auf den Feldlinien. Entlang einer Äquipotentialfläche ist keine Arbeit zu verrichten. Biologische Zellmembranen sind Regionen mit steilem Potentialgradienten: das Ruhemembranpotential beträgt ca. −70 mV (innen negativ). Über eine Membrandicke von ~7 nm ergibt das ein elektrisches Feld von ~10⁷ V/m — vergleichbar mit dem Durchschlagsfeld von Luft.`,
+**Äquipotentialflächen** (Flächen gleichen Potentials) stehen immer senkrecht auf den Feldlinien. Entlang einer Äquipotentialfläche ist keine Arbeit zu verrichten. Biologische Zellmembranen sind Regionen mit steilem Potentialgradienten: das Ruhemembranpotential beträgt ca. −70 mV (innen negativ). Über eine Membrandicke von ~7 nm ergibt das ein elektrisches Feld von ~10⁷ V/m — vergleichbar mit dem Durchschlagsfeld von Luft.
+
+> **Merke:** Die Spannung U = φ_A − φ_B treibt Ladungsfluss an. Positive Ladungen bewegen sich spontan von hohem zu niedrigem Potential.
+
+**Kondensator und Energiespeicherung:**
+Ein **Kondensator** speichert Ladung auf zwei Platten und Energie im elektrischen Feld: **C = Q/U** [Farad] und **W = ½·C·U²**. Die Kapazität steigt mit der Plattenfläche und der Permittivität des Dielektrikums und sinkt mit dem Plattenabstand: C = ε₀·εᵣ·A/d. In der Medizin ist der Defibrillator ein Kondensator-Entlader: C ≈ 200 µF, geladen auf ~1500 V, liefert W ≈ 225 J in Millisekunden.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Coulombkraft zwischen Na⁺ und Cl⁻ (Vakuum vs. Wasser):**
+Abstand r = 0,28 nm (Ionenradien-Summe). Vakuum: F = k·e²/r² = 8,99×10⁹ · (1,6×10⁻¹⁹)² / (2,8×10⁻¹⁰)² = 8,99×10⁹ · 2,56×10⁻³⁸ / 7,84×10⁻²⁰ ≈ **2,94 nN**.
+In Wasser (εᵣ = 80): F_W = 2,94 nN / 80 ≈ **0,037 nN** — deshalb dissoziiert NaCl in Wasser leicht.
+
+**Beispiel 2 — Elektrisches Feld über der Zellmembran:**
+Ruhemembranpotential U = 70 mV = 0,070 V, Membrandicke d = 7 nm = 7×10⁻⁹ m.
+E = U/d = 0,070 / 7×10⁻⁹ = **10⁷ V/m = 10 MV/m**.
+Zum Vergleich: Durchschlagsfeldstärke von Luft ≈ 3×10⁶ V/m → die Membran „hält" ein 3× stärkeres Feld aus.
+
+**Beispiel 3 — Gelelektrophorese: Kraft auf DNA-Fragment:**
+Gel-Feldstärke E = 5 V/cm = 500 V/m. Ein DNA-Fragment (1000 bp) trägt ~2000 Elementarladungen (je 2 Phosphatgruppen pro bp).
+Gesamtladung q = 2000 · 1,6×10⁻¹⁹ C = 3,2×10⁻¹⁶ C.
+Kraft: F = q·E = 3,2×10⁻¹⁶ · 500 = **1,6×10⁻¹³ N ≈ 0,16 pN**.
+Die tatsächliche Wanderungsgeschwindigkeit hängt von Reibung im Gel ab (größere Fragmente langsamer → Größentrennung).`,
 
       lernziele: [
-        'Das Coulombsche Gesetz anwenden und die Kraftrichtung zwischen Ladungen bestimmen',
-        'Das elektrische Feld als Kraftfeld beschreiben und Feldlinienbilder interpretieren',
-        'Den Zusammenhang zwischen elektrischem Feld, Potential und Spannung erklären',
-        'Die biologische Relevanz elektrostatischer Kräfte auf molekularer Ebene begründen',
-        'Die Analogie und die Unterschiede zwischen Coulomb-Kraft und Gravitationskraft benennen',
+        "Das Coulombsche Gesetz anwenden und die Kraftrichtung zwischen Ladungen bestimmen",
+        "Das elektrische Feld als Kraftfeld beschreiben und Feldlinienbilder interpretieren",
+        "Den Zusammenhang zwischen elektrischem Feld, Potential und Spannung erklären",
+        "Die biologische Relevanz elektrostatischer Kräfte auf molekularer Ebene begründen",
+        "Die Analogie und die Unterschiede zwischen Coulomb-Kraft und Gravitationskraft benennen",
       ],
       sections: [
         {
-          heading: 'Ladung und Coulomb-Gesetz',
-          text: 'Elektrische Ladung ist quantisiert (Vielfache von e = 1,602 × 10⁻¹⁹ C) und bleibt in abgeschlossenen Systemen erhalten. Das Coulombsche Gesetz F = k·|q₁·q₂|/r² beschreibt die elektrostatische Kraft zwischen Punktladungen. In Medien (z. B. Wasser, εᵣ ≈ 80) wird die Kraft drastisch reduziert, was die Löslichkeit von Ionen ermöglicht. Die Coulombkraft ist ca. 10³⁶-mal stärker als die Gravitation und dominiert daher alle chemischen und biologischen Prozesse.',
-          merksatz: 'Gleichnamige Ladungen stoßen sich ab, ungleichnamige ziehen sich an — F = k·q₁·q₂/r². Im Medium: F reduziert sich um Faktor εᵣ.',
+          heading: "Ladung und Coulomb-Gesetz",
+          text: "Elektrische Ladung ist quantisiert (Vielfache von e = 1,602 × 10⁻¹⁹ C) und bleibt in abgeschlossenen Systemen erhalten. Das Coulombsche Gesetz F = k·|q₁·q₂|/r² beschreibt die elektrostatische Kraft zwischen Punktladungen. In Medien (z. B. Wasser, εᵣ ≈ 80) wird die Kraft drastisch reduziert, was die Löslichkeit von Ionen ermöglicht. Die Coulombkraft ist ca. 10³⁶-mal stärker als die Gravitation und dominiert daher alle chemischen und biologischen Prozesse.",
+          merksatz:
+            "Gleichnamige Ladungen stoßen sich ab, ungleichnamige ziehen sich an — F = k·q₁·q₂/r². Im Medium: F reduziert sich um Faktor εᵣ.",
         },
         {
-          heading: 'Elektrisches Feld und Potential',
-          text: 'Das elektrische Feld E = F/q₀ gibt die Kraft pro Probeladung an. Feldlinien laufen von + nach −, stehen senkrecht auf Leitern. Das elektrische Potential φ = E_pot/q ist die potentielle Energie pro Ladung. Die Spannung U = φ_A − φ_B treibt Ladungsfluss an. Das Membranpotential (−70 mV über 7 nm) entspricht einem Feld von ~10⁷ V/m — einer enormen biologischen Feldstärke.',
-          merksatz: 'E = U/d (Plattenkondensator). Äquipotentialflächen senkrecht auf Feldlinien. Leiterinneres: E = 0 (Faraday-Käfig).',
+          heading: "Elektrisches Feld und Potential",
+          text: "Das elektrische Feld E = F/q₀ gibt die Kraft pro Probeladung an. Feldlinien laufen von + nach −, stehen senkrecht auf Leitern. Das elektrische Potential φ = E_pot/q ist die potentielle Energie pro Ladung. Die Spannung U = φ_A − φ_B treibt Ladungsfluss an. Das Membranpotential (−70 mV über 7 nm) entspricht einem Feld von ~10⁷ V/m — einer enormen biologischen Feldstärke.",
+          merksatz:
+            "E = U/d (Plattenkondensator). Äquipotentialflächen senkrecht auf Feldlinien. Leiterinneres: E = 0 (Faraday-Käfig).",
         },
         {
-          heading: 'Biologische und medizinische Relevanz',
-          text: 'Elektrostatische Kräfte halten Protein-Ligand-Komplexe zusammen, stabilisieren DNA-Doppelstränge (Phosphatrückgrat mit Gegenionen) und steuern Ionenkanäle. Die Gelelektrophorese trennt geladene Biomoleküle im homogenen Feld. Nervenimpulse entstehen durch spannungsgesteuerte Ionenkanäle, die auf das Membranpotential reagieren.',
-          merksatz: 'Membranpotential: ca. −70 mV (innen negativ). Elektrisches Feld über der Membran: ~10⁷ V/m.',
+          heading: "Biologische und medizinische Relevanz",
+          text: "Elektrostatische Kräfte halten Protein-Ligand-Komplexe zusammen, stabilisieren DNA-Doppelstränge (Phosphatrückgrat mit Gegenionen) und steuern Ionenkanäle. Die Gelelektrophorese trennt geladene Biomoleküle im homogenen Feld. Nervenimpulse entstehen durch spannungsgesteuerte Ionenkanäle, die auf das Membranpotential reagieren.",
+          merksatz:
+            "Membranpotential: ca. −70 mV (innen negativ). Elektrisches Feld über der Membran: ~10⁷ V/m.",
         },
       ],
       merksätze: [
-        'Elementarladung: e = 1,602 × 10⁻¹⁹ C — kleinste freie Ladungseinheit.',
-        'Coulomb-Gesetz: F = k·|q₁·q₂|/r², k = 8,99 × 10⁹ N·m²/C².',
-        'Ladungserhaltung: Gesamtladung eines abgeschlossenen Systems ist konstant.',
-        'Elektrisches Feld: E = F/q₀ [V/m]; Feldlinien von + nach −.',
-        'Plattenkondensator: homogenes Feld E = U/d.',
-        'In Wasser (εᵣ ≈ 80): Coulombkraft 80-mal schwächer als im Vakuum.',
-        'Membranpotential: −70 mV über 7 nm ergibt E ≈ 10⁷ V/m.',
-        'Faraday-Käfig: Leiterinnen sind feldfrei; E = 0 im Innern.',
-        'Potential φ [V = J/C]: potentielle Energie pro Ladungseinheit.',
-        'Äquipotentialflächen stehen immer senkrecht auf Feldlinien.',
+        "Elementarladung: e = 1,602 × 10⁻¹⁹ C — kleinste freie Ladungseinheit.",
+        "Coulomb-Gesetz: F = k·|q₁·q₂|/r², k = 8,99 × 10⁹ N·m²/C².",
+        "Ladungserhaltung: Gesamtladung eines abgeschlossenen Systems ist konstant.",
+        "Elektrisches Feld: E = F/q₀ [V/m]; Feldlinien von + nach −.",
+        "Plattenkondensator: homogenes Feld E = U/d.",
+        "In Wasser (εᵣ ≈ 80): Coulombkraft 80-mal schwächer als im Vakuum.",
+        "Membranpotential: −70 mV über 7 nm ergibt E ≈ 10⁷ V/m.",
+        "Faraday-Käfig: Leiterinnen sind feldfrei; E = 0 im Innern.",
+        "Potential φ [V = J/C]: potentielle Energie pro Ladungseinheit.",
+        "Äquipotentialflächen stehen immer senkrecht auf Feldlinien.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: 'Erläutern Sie das Coulombsche Gesetz und seine Bedeutung für biologische Systeme. Gehen Sie dabei auf die Rolle des Mediums und den Vergleich zur Gravitationskraft ein.',
+        question:
+          "Erläutern Sie das Coulombsche Gesetz und seine Bedeutung für biologische Systeme. Gehen Sie dabei auf die Rolle des Mediums und den Vergleich zur Gravitationskraft ein.",
         answer: `Das Coulombsche Gesetz beschreibt die elektrostatische Kraft zwischen zwei ruhenden Punktladungen q₁ und q₂ im Abstand r: F = k·|q₁·q₂|/r², wobei k = 8,99 × 10⁹ N·m²/C². Die Kraft ist proportional zum Produkt der Ladungen und nimmt mit dem Quadrat des Abstands ab (inverses Quadratgesetz). Sie ist repulsiv bei gleichnamigen, attraktiv bei ungleichnamigen Ladungen.
 
 Im Vergleich zur Gravitation (F = G·m₁·m₂/r²) ist die Coulombkraft um den Faktor ~10³⁶ stärker und kann beide Vorzeichen annehmen. Deshalb dominieren elektrostatische Wechselwirkungen alle chemischen und biologischen Prozesse auf molekularer Ebene: Ionenbindungen, Wasserstoffbrücken, Protein-Ligand-Wechselwirkungen und die Stabilisierung von DNA.
@@ -93,157 +140,122 @@ In einem Medium mit relativer Permittivität εᵣ gilt: F = k·|q₁·q₂|/(ε
 
 Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektrischen Feld von ~10⁷ V/m. Dieses Feld steuert spannungsabhängige Ionenkanäle und ist essenziell für die neuronale Signalübertragung.`,
       },
-      klinischerBezug: 'Die Gelelektrophorese nutzt ein homogenes elektrisches Feld zur Trennung von DNA-Fragmenten und Proteinen nach Größe und Ladung — Grundlage der molekularbiologischen Diagnostik. Spannungsgesteuerte Na⁺- und K⁺-Kanäle an Nervenmembranen reagieren auf das elektrische Membranfeld (~10⁷ V/m) und erzeugen Aktionspotentiale. Ionenkanal-Mutationen führen zu Channelopathien wie dem Long-QT-Syndrom mit lebensbedrohlichen Herzrhythmusstörungen.',
+      klinischerBezug:
+        "Die Gelelektrophorese nutzt ein homogenes elektrisches Feld zur Trennung von DNA-Fragmenten und Proteinen nach Größe und Ladung — Grundlage der molekularbiologischen Diagnostik. Spannungsgesteuerte Na⁺- und K⁺-Kanäle an Nervenmembranen reagieren auf das elektrische Membranfeld (~10⁷ V/m) und erzeugen Aktionspotentiale. Ionenkanal-Mutationen führen zu Channelopathien wie dem Long-QT-Syndrom mit lebensbedrohlichen Herzrhythmusstörungen.",
       selfTest: [
         {
-          question: 'Zwei Punktladungen q₁ = +2 µC und q₂ = −4 µC befinden sich 0,1 m voneinander entfernt. Welche Aussage zur Coulombkraft ist korrekt?',
+          question:
+            "Zwei Punktladungen q₁ = +2 µC und q₂ = −4 µC befinden sich 0,1 m voneinander entfernt. Welche Aussage zur Coulombkraft ist korrekt?",
           options: [
-            'Die Kraft ist repulsiv mit F ≈ 7,2 N',
-            'Die Kraft ist attraktiv mit F ≈ 7,2 N',
-            'Die Kraft ist repulsiv mit F ≈ 0,72 N',
-            'Die Kraft ist attraktiv mit F ≈ 0,72 N',
-            'Die Kraft ist null, da sich die Ladungen aufheben',
+            "Die Kraft ist repulsiv mit F ≈ 7,2 N",
+            "Die Kraft ist attraktiv mit F ≈ 7,2 N",
+            "Die Kraft ist repulsiv mit F ≈ 0,72 N",
+            "Die Kraft ist attraktiv mit F ≈ 0,72 N",
+            "Die Kraft ist null, da sich die Ladungen aufheben",
           ],
           correctIndex: 1,
-          explanation: 'F = k·|q₁·q₂|/r² = 8,99×10⁹ · 2×10⁻⁶ · 4×10⁻⁶ / (0,1)² = 8,99×10⁹ · 8×10⁻¹² / 0,01 ≈ 7,19 N ≈ 7,2 N. Da q₁ positiv und q₂ negativ sind (ungleichnamige Ladungen), ist die Kraft anziehend (attraktiv). Option A hat die richtige Zahl, aber die falsche Richtung. Option C und D haben einen Faktor-10-Fehler im Abstand. Option E ist falsch — Ladungen heben sich geometrisch nicht in der Kraftrechnung auf.',
+          explanation:
+            "F = k·|q₁·q₂|/r² = 8,99×10⁹ · 2×10⁻⁶ · 4×10⁻⁶ / (0,1)² = 8,99×10⁹ · 8×10⁻¹² / 0,01 ≈ 7,19 N ≈ 7,2 N. Da q₁ positiv und q₂ negativ sind (ungleichnamige Ladungen), ist die Kraft anziehend (attraktiv). Option A hat die richtige Zahl, aber die falsche Richtung. Option C und D haben einen Faktor-10-Fehler im Abstand. Option E ist falsch — Ladungen heben sich geometrisch nicht in der Kraftrechnung auf.",
           hints: [
-            'F = k·|q₁·q₂|/r² — setze r = 0,1 m ein und berechne r² = 0,01 m².',
-            'Ungleichnamige Ladungen (+ und −) ziehen sich immer an.',
+            "F = k·|q₁·q₂|/r² — setze r = 0,1 m ein und berechne r² = 0,01 m².",
+            "Ungleichnamige Ladungen (+ und −) ziehen sich immer an.",
           ],
           difficulty: 2,
-          tags: ['coulomb', 'elektrostatik', 'ladung'],
+          tags: ["coulomb", "elektrostatik", "ladung"],
         },
         {
-          question: 'Das elektrische Feld im Innern eines metallischen Hohlkörpers (Faraday-Käfig) beträgt:',
+          question:
+            "Das elektrische Feld im Innern eines metallischen Hohlkörpers (Faraday-Käfig) beträgt:",
           options: [
-            'Den gleichen Wert wie außen',
-            'Den halben Wert des Außenfeldes',
-            'Exakt null',
-            'Einen negativen Wert (entgegengesetzt zum Außenfeld)',
-            'Nur null, wenn der Körper geerdet ist',
+            "Den gleichen Wert wie außen",
+            "Den halben Wert des Außenfeldes",
+            "Exakt null",
+            "Einen negativen Wert (entgegengesetzt zum Außenfeld)",
+            "Nur null, wenn der Körper geerdet ist",
           ],
           correctIndex: 2,
-          explanation: 'Im Innern eines leitenden Hohlkörpers ist das elektrische Feld exakt null, unabhängig von äußeren Feldern oder ob der Käfig geerdet ist. Freie Elektronen im Leiter verschieben sich so lange, bis das durch sie erzeugte Gegenfeld das externe Feld vollständig kompensiert. Dieses Prinzip (Faraday-Käfig) schützt empfindliche Elektronik vor elektromagnetischen Störungen und wird z. B. in MRT-Räumen (HF-Abschirmung) genutzt. Geerdetsein ändert das Innenpotential (auf 0 V gesetzt), aber das Innenfeld bleibt ohnehin null.',
+          explanation:
+            "Im Innern eines leitenden Hohlkörpers ist das elektrische Feld exakt null, unabhängig von äußeren Feldern oder ob der Käfig geerdet ist. Freie Elektronen im Leiter verschieben sich so lange, bis das durch sie erzeugte Gegenfeld das externe Feld vollständig kompensiert. Dieses Prinzip (Faraday-Käfig) schützt empfindliche Elektronik vor elektromagnetischen Störungen und wird z. B. in MRT-Räumen (HF-Abschirmung) genutzt. Geerdetsein ändert das Innenpotential (auf 0 V gesetzt), aber das Innenfeld bleibt ohnehin null.",
           hints: [
-            'In einem Leiter im Gleichgewicht können keine freien Ladungen fließen — was bedeutet das für E innen?',
-            'Stichwort Influenz: Elektronen verschieben sich bis zum Kräftegleichgewicht.',
+            "In einem Leiter im Gleichgewicht können keine freien Ladungen fließen — was bedeutet das für E innen?",
+            "Stichwort Influenz: Elektronen verschieben sich bis zum Kräftegleichgewicht.",
           ],
           difficulty: 1,
-          tags: ['faraday-käfig', 'elektrostatik', 'influenz'],
+          tags: ["faraday-käfig", "elektrostatik", "influenz"],
         },
         {
-          question: 'Welche Einheit ist äquivalent zu V/m (Volt pro Meter)?',
-          options: [
-            'J/C',
-            'N/C',
-            'W/A',
-            'C/N',
-            'kg/(A·s)',
-          ],
+          question:
+            "Ein Plattenkondensator hat einen Plattenabstand von 2 mm und liegt an einer Spannung von 400 V. Wie groß ist das elektrische Feld zwischen den Platten?",
+          options: ["0,2 × 10⁵ V/m", "2 × 10⁵ V/m", "8 × 10⁴ V/m", "4 × 10⁴ V/m", "2 × 10³ V/m"],
           correctIndex: 1,
-          explanation: 'Das elektrische Feld E hat die Einheit V/m. Da 1 V = 1 J/C = 1 N·m/C, folgt: 1 V/m = 1 N·m/(C·m) = 1 N/C. Also sind V/m und N/C äquivalente Einheiten für das elektrische Feld — beide beschreiben Kraft pro Ladung. J/C ist die Einheit des Potentials (= Volt), nicht des Feldes. W/A = V (Leistung durch Strom = Spannung). C/N wäre der Kehrwert der Feldeinheit.',
+          explanation:
+            "Im homogenen Feld eines Plattenkondensators gilt: E = U/d = 400 V / (2×10⁻³ m) = 200.000 V/m = 2×10⁵ V/m. Das Feld ist homogen (überall gleich stark) und senkrecht zu den Platten gerichtet. Zum Vergleich: Das elektrische Feld über einer Neuronenmembran (−70 mV über 7 nm) beträgt ~10⁷ V/m — 50-mal stärker als in diesem Kondensator. Die Durchschlagsfeldstärke von Luft liegt bei ca. 3×10⁶ V/m.",
           hints: [
-            'Feld E = F/q₀ — welche Einheit ergibt sich aus Kraft [N] geteilt durch Ladung [C]?',
-            '1 V = 1 J/C = 1 N·m/C → 1 V/m = 1 N·m/(C·m) = 1 N/C.',
-          ],
-          difficulty: 2,
-          tags: ['feldstärke', 'einheiten', 'elektrisches-feld'],
-        },
-        {
-          question: 'Ein Plattenkondensator hat einen Plattenabstand von 2 mm und liegt an einer Spannung von 400 V. Wie groß ist das elektrische Feld zwischen den Platten?',
-          options: [
-            '0,2 × 10⁵ V/m',
-            '2 × 10⁵ V/m',
-            '8 × 10⁴ V/m',
-            '4 × 10⁴ V/m',
-            '2 × 10³ V/m',
-          ],
-          correctIndex: 1,
-          explanation: 'Im homogenen Feld eines Plattenkondensators gilt: E = U/d = 400 V / (2×10⁻³ m) = 200.000 V/m = 2×10⁵ V/m. Das Feld ist homogen (überall gleich stark) und senkrecht zu den Platten gerichtet. Zum Vergleich: Das elektrische Feld über einer Neuronenmembran (−70 mV über 7 nm) beträgt ~10⁷ V/m — 50-mal stärker als in diesem Kondensator. Die Durchschlagsfeldstärke von Luft liegt bei ca. 3×10⁶ V/m.',
-          hints: [
-            'Für ein homogenes Feld gilt: E = U/d. Achte auf die Einheit von d (mm → m).',
-            'd = 2 mm = 2 × 10⁻³ m. Teile die Spannung durch den Abstand.',
+            "Für ein homogenes Feld gilt: E = U/d. Achte auf die Einheit von d (mm → m).",
+            "d = 2 mm = 2 × 10⁻³ m. Teile die Spannung durch den Abstand.",
           ],
           difficulty: 1,
-          tags: ['plattenkondensator', 'elektrisches-feld', 'spannung'],
+          tags: ["plattenkondensator", "elektrisches-feld", "spannung"],
         },
         {
-          question: 'Warum sind elektrostatische Wechselwirkungen zwischen Ionen in wässriger Lösung viel schwächer als im Vakuum?',
+          question:
+            "Warum sind elektrostatische Wechselwirkungen zwischen Ionen in wässriger Lösung viel schwächer als im Vakuum?",
           options: [
-            'Weil Wasser die Ionen chemisch verändert',
-            'Weil die Ionen in Wasser weiter auseinander liegen',
-            'Weil die relative Permittivität εᵣ von Wasser (~80) die Coulombkraft um diesen Faktor reduziert',
-            'Weil die Ladungen in Wasser neutralisiert werden',
-            'Weil Wasser ein Magnetfeld erzeugt, das die elektrische Kraft kompensiert',
+            "Weil Wasser die Ionen chemisch verändert",
+            "Weil die Ionen in Wasser weiter auseinander liegen",
+            "Weil die relative Permittivität εᵣ von Wasser (~80) die Coulombkraft um diesen Faktor reduziert",
+            "Weil die Ladungen in Wasser neutralisiert werden",
+            "Weil Wasser ein Magnetfeld erzeugt, das die elektrische Kraft kompensiert",
           ],
           correctIndex: 2,
-          explanation: 'Im Coulombschen Gesetz in Medien gilt: F = k·|q₁·q₂|/(εᵣ·r²). Wasser hat eine sehr hohe relative Permittivität εᵣ ≈ 80, weil die polaren Wassermoleküle sich im Feld ausrichten und es abschirmen (Dielektrikum). Dadurch ist die Coulombkraft zwischen zwei Ionen in Wasser ca. 80-mal schwächer als im Vakuum. Das ermöglicht die Dissoziation von Salzen: Die reduzierte Anziehungskraft zwischen Na⁺ und Cl⁻ kann durch die thermische Energie (k_B·T ≈ 25 meV bei 37 °C) überwunden werden. Die Ladungen selbst bleiben unverändert.',
+          explanation:
+            "Im Coulombschen Gesetz in Medien gilt: F = k·|q₁·q₂|/(εᵣ·r²). Wasser hat eine sehr hohe relative Permittivität εᵣ ≈ 80, weil die polaren Wassermoleküle sich im Feld ausrichten und es abschirmen (Dielektrikum). Dadurch ist die Coulombkraft zwischen zwei Ionen in Wasser ca. 80-mal schwächer als im Vakuum. Das ermöglicht die Dissoziation von Salzen: Die reduzierte Anziehungskraft zwischen Na⁺ und Cl⁻ kann durch die thermische Energie (k_B·T ≈ 25 meV bei 37 °C) überwunden werden. Die Ladungen selbst bleiben unverändert.",
           hints: [
-            'Das Coulombgesetz im Medium: F = k·|q₁·q₂|/(εᵣ·r²). Was bewirkt εᵣ?',
-            'Polare Moleküle wie Wasser richten sich im elektrischen Feld aus und schwächen es ab.',
+            "Das Coulombgesetz im Medium: F = k·|q₁·q₂|/(εᵣ·r²). Was bewirkt εᵣ?",
+            "Polare Moleküle wie Wasser richten sich im elektrischen Feld aus und schwächen es ab.",
           ],
           difficulty: 2,
-          tags: ['permittivität', 'wasser', 'ionenlösung'],
+          tags: ["permittivität", "wasser", "ionenlösung"],
         },
         {
-          question: 'Das Ruhemembranpotential einer Nervenzelle beträgt −70 mV. Bei welchem Wert öffnen sich spannungsgesteuerte Na⁺-Kanäle typischerweise (Schwellenpotential)?',
+          question:
+            "Das Ruhemembranpotential einer Nervenzelle beträgt −70 mV. Bei welchem Wert öffnen sich spannungsgesteuerte Na⁺-Kanäle typischerweise (Schwellenpotential)?",
           options: [
-            'Bei −90 mV (Hyperpolarisation)',
-            'Bei −70 mV (Ruhepotential)',
-            'Bei −55 mV (Schwellenpotential)',
-            'Bei +30 mV (Overshoot)',
-            'Bei 0 mV (isoelektrisch)',
+            "Bei −90 mV (Hyperpolarisation)",
+            "Bei −70 mV (Ruhepotential)",
+            "Bei −55 mV (Schwellenpotential)",
+            "Bei +30 mV (Overshoot)",
+            "Bei 0 mV (isoelektrisch)",
           ],
           correctIndex: 2,
-          explanation: 'Spannungsgesteuerte Na⁺-Kanäle öffnen sich, wenn das Membranpotential von −70 mV auf ca. −55 mV (Schwellenpotential) depolarisiert wird. Das entspricht einer Potentialänderung von +15 mV. Wird das Schwellenpotential erreicht, öffnen sich schlagartig viele Na⁺-Kanäle (positives Feedback, Hodgkin-Zyklus), Na⁺ strömt ein, und das Potential schießt auf +30 bis +40 mV (Overshoot). Danach öffnen K⁺-Kanäle, und das Potential fällt zurück. Bei −90 mV liegt Hyperpolarisation vor (z. B. nach dem Aktionspotential). Bei 0 mV wären Na⁺-Kanäle bereits inaktiviert.',
+          explanation:
+            "Spannungsgesteuerte Na⁺-Kanäle öffnen sich, wenn das Membranpotential von −70 mV auf ca. −55 mV (Schwellenpotential) depolarisiert wird. Das entspricht einer Potentialänderung von +15 mV. Wird das Schwellenpotential erreicht, öffnen sich schlagartig viele Na⁺-Kanäle (positives Feedback, Hodgkin-Zyklus), Na⁺ strömt ein, und das Potential schießt auf +30 bis +40 mV (Overshoot). Danach öffnen K⁺-Kanäle, und das Potential fällt zurück. Bei −90 mV liegt Hyperpolarisation vor (z. B. nach dem Aktionspotential). Bei 0 mV wären Na⁺-Kanäle bereits inaktiviert.",
           hints: [
-            'Das Schwellenpotential liegt zwischen Ruhe (−70 mV) und Overshoot (+30 mV).',
-            'Spannungsgesteuerte Na⁺-Kanäle brauchen eine Depolarisation (weniger negativ) zum Öffnen.',
+            "Das Schwellenpotential liegt zwischen Ruhe (−70 mV) und Overshoot (+30 mV).",
+            "Spannungsgesteuerte Na⁺-Kanäle brauchen eine Depolarisation (weniger negativ) zum Öffnen.",
           ],
           difficulty: 3,
-          tags: ['membranpotential', 'aktionspotential', 'ionenkanäle'],
-        },
-        {
-          question: 'Welcher Effekt erklärt, warum Ladungen auf leitenden Körpern bevorzugt an spitzen Stellen (geringer Krümmungsradius) konzentriert sind?',
-          options: [
-            'Influenz durch benachbarte Ladungen',
-            'Das Coulombsche Gesetz und die gegenseitige Abstoßung der Ladungen',
-            'Die Massenanziehung an Spitzen',
-            'Quantenmechanische Tunneleffekte',
-            'Die höhere Permittivität an Spitzen',
-          ],
-          correctIndex: 1,
-          explanation: 'Ladungen auf der Oberfläche eines Leiters stoßen sich gegenseitig ab und verteilen sich so, dass das Feld im Innern null ist. An Stellen mit kleinem Krümmungsradius (Spitzen) können die Ladungen weniger weit voneinander entfernt sein als auf flachen Flächen — die Abstoßung ist stärker — daher reichern sich Ladungen an Spitzen an, was zu sehr hohen lokalen Feldstärken führt. Diese können die Luft ionisieren (Spitzenentladung, Blitzableiter-Prinzip). Deshalb verwenden Hochspannungsanlagen abgerundete Elektroden.',
-          hints: [
-            'Ladungen im Leiter verteilen sich so, dass E innen = 0. Was passiert an Stellen mit kleinem Radius?',
-            'Denke an den Blitzableiter: Warum ist er spitz?',
-          ],
-          difficulty: 3,
-          tags: ['spitzenentladung', 'blitzableiter', 'ladungsverteilung'],
-        },
-        {
-          question: 'Welche der folgenden Größen beschreibt die potentielle Energie pro Ladungseinheit an einem Punkt im elektrischen Feld?',
-          options: [
-            'Elektrische Feldstärke E',
-            'Elektrische Flussdichte D',
-            'Elektrisches Potential φ',
-            'Elektrische Kapazität C',
-            'Elektrischer Widerstand R',
-          ],
-          correctIndex: 2,
-          explanation: 'Das elektrische Potential φ gibt die potentielle Energie pro Ladungseinheit an: φ = E_pot / q, Einheit: Volt (V = J/C). Es ist eine skalare Größe (kein Richtungsvektor). Die Spannung U zwischen zwei Punkten ist die Potentialdifferenz: U = φ_A − φ_B. Die Feldstärke E ist die Kraft pro Ladung (Vektorgröße). Die Flussdichte D = ε₀·E berücksichtigt das Medium. Die Kapazität C = Q/U beschreibt die Ladungsspeicherung. Der Widerstand R gehört zur Elektrokinetik.',
-          hints: [
-            'Potential φ ist analog zur Höhe h in der Mechanik: E_pot = m·g·h entspricht E_pot = q·φ.',
-            'Einheit des Potentials: J/C = V (Volt).',
-          ],
-          difficulty: 1,
-          tags: ['elektrisches-potential', 'spannung', 'potential'],
+          tags: ["membranpotential", "aktionspotential", "ionenkanäle"],
         },
       ],
     },
     {
-      id: 'ph-5-02',
-      title: 'Strom, Widerstand und Ohmsches Gesetz',
+      id: "ph-5-02",
+      title: "Strom, Widerstand und Ohmsches Gesetz",
+      stichworte: [
+        "Stromstärke",
+        "Ohmsches Gesetz",
+        "Spezifischer Widerstand",
+        "Joulesche Wärme",
+        "Elektrische Leistung",
+        "Supraleiter",
+        "Halbleiter",
+        "Elektrochirurgie",
+        "Defibrillation",
+        "Nernst-Gleichung",
+        "Ionenkanal",
+        "Leitwert",
+      ],
       content: `## Elektrischer Strom
 
 **Elektrischer Strom I** ist der gerichtete Fluss elektrischer Ladungsträger. Die Stromstärke ist definiert als die pro Zeiteinheit durch einen Querschnitt fließende Ladung:
@@ -253,6 +265,14 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
 Die Einheit ist Ampere (A). In Metallen fließen Elektronen (Leitungselektronen) — die technische Stromrichtung wurde konventionell entgegen der Elektronenflussrichtung definiert (von + nach −). In Elektrolyten (z. B. Blut, Zytoplasma) fließen positive und negative Ionen. In Halbleitern und Gasen gibt es weitere Trägerarten.
 
 Die **Stromdichte j = I / A** [A/m²] beschreibt den Strom pro Querschnittsfläche — relevant für Heizeffekte. Mit der Driftgeschwindigkeit v_d der Elektronen und der Ladungsträgerdichte n gilt: j = n·e·v_d. Typische Driftgeschwindigkeiten in Kupfer sind winzig (~0,1 mm/s bei 1 A), während sich die elektromagnetische Wirkung mit Lichtgeschwindigkeit ausbreitet.
+
+> **Merke:** Strom = gerichteter Ladungsfluss. In Metallen fließen Elektronen, in Elektrolyten (Blut, Zytoplasma) Ionen.
+
+**Gleichstrom vs. Wechselstrom:**
+- **Gleichstrom (DC)**: konstante Stromrichtung (Batterie, Defibrillator)
+- **Wechselstrom (AC)**: periodisch wechselnde Richtung (Netz: 50 Hz, Elektrochirurgie: 300–500 kHz)
+- AC ist bei 50 Hz gefährlicher als DC gleicher Amplitude (tetanische Muskelkontraktionen, Kammerflimmern ab ~100 mA)
+- Hochfrequenter AC (>100 kHz) löst keine Nervenreize aus — deshalb nutzt die Elektrochirurgie HF-Strom
 
 ## Elektrischer Widerstand und Ohmsches Gesetz
 
@@ -280,51 +300,83 @@ Die elektrische Leistung:
 
 Die im Widerstand dissipierte Wärmeenergie (Joulesche Wärme) pro Zeit: P = I²·R. Dieser Effekt wird genutzt in Heizkörpern und Glühlampen — und ist in medizinischen Anwendungen relevant: Elektrochirurgie (HF-Strom → lokale Wärme → Gewebeschnitt/Koagulation), Ablationstherapie bei Herzrhythmusstörungen, Diathermie.
 
+> **Merke:** P = U·I = I²·R = U²/R. Die Joulesche Wärme Q = I²·R·t ist Grundlage der Elektrochirurgie und Ablationstherapie.
+
+**Gefährliche Stromstärken im menschlichen Körper:**
+
+| Stromstärke | Wirkung |
+|---|---|
+| 1–2 mA | Wahrnehmungsschwelle (Kribbeln) |
+| 10–20 mA | Tetanische Muskelkontraktion (Loslasssperre) |
+| 50–100 mA | Atemmuskel-Verkrampfung, Erstickungsgefahr |
+| >100 mA | Kammerflimmern (ohne Defibrillation letal) |
+| >1 A | Direkte Herzschädigung, Verbrennungen |
+
 ## Elektrochemische Spannungsquellen und Nernst-Potential
 
-Eine **Spannungsquelle** (Batterie, Akkumulator) erzeugt durch chemische Reaktionen eine **elektromotorische Kraft (EMK) ε** [V]. Reale Quellen haben einen **Innenwiderstand r**: U_klemme = ε − I·r. Bei hoher Stromentnahme sinkt die Klemmenspannung. Das **Nernst-Potential** für einzelne Ionenarten ist die Gleichgewichtsspannung über einer semipermeablen Membran (z. B. E_K⁺ ≈ −90 mV, E_Na⁺ ≈ +60 mV) — berechnet mit der Nernst-Gleichung: E = (RT/zF) · ln([Ion]_außen / [Ion]_innen).`,
+Eine **Spannungsquelle** (Batterie, Akkumulator) erzeugt durch chemische Reaktionen eine **elektromotorische Kraft (EMK) ε** [V]. Reale Quellen haben einen **Innenwiderstand r**: U_klemme = ε − I·r. Bei hoher Stromentnahme sinkt die Klemmenspannung. Das **Nernst-Potential** für einzelne Ionenarten ist die Gleichgewichtsspannung über einer semipermeablen Membran (z. B. E_K⁺ ≈ −90 mV, E_Na⁺ ≈ +60 mV) — berechnet mit der Nernst-Gleichung: E = (RT/zF) · ln([Ion]_außen / [Ion]_innen).
+
+## Rechenbeispiele
+
+**Beispiel 1 — Elektrounfall: trockene vs. nasse Haut:**
+230 V Netzspannung. Trockene Haut: R ≈ 50 kΩ → I = U/R = 230/50.000 = **4,6 mA** (spürbar, nicht gefährlich).
+Nasse Haut: R ≈ 1 kΩ → I = 230/1.000 = **230 mA** → akut lebensgefährlich (Kammerflimmern ab ~100 mA).
+Leistung am Körper: P = U·I = 230 · 0,23 = **53 W** → Verbrennungen an Ein-/Austrittsstellen.
+
+**Beispiel 2 — Defibrillator-Energieabgabe:**
+C = 200 µF, geladen auf U = 1500 V. Gespeicherte Energie: W = ½·C·U² = ½ · 200×10⁻⁶ · (1500)² = ½ · 200×10⁻⁶ · 2,25×10⁶ = **225 J**.
+Thorax-Widerstand R ≈ 75 Ω. Spitzenstrom: I_max = U/R = 1500/75 = **20 A**.
+Entladezeit (τ = R·C): 75 · 200×10⁻⁶ = **15 ms** — kurz genug für effektive Defibrillation.
+
+**Beispiel 3 — Axonaler Längswiderstand:**
+Unmyelinisiertes Axon: Radius r = 0,5 µm, Länge L = 1 mm, ρ_Axoplasma = 2 Ω·m.
+R = ρ·L/A = 2 · 10⁻³ / (π·(0,5×10⁻⁶)²) = 2×10⁻³ / (7,85×10⁻¹³) ≈ **2,5 GΩ**.
+Zum Vergleich: 1 mm Kupferdraht gleichen Querschnitts hätte R = 1,7×10⁻⁸ · 10⁻³ / 7,85×10⁻¹³ ≈ 22 Ω — der Faktor ~10⁸ erklärt, warum Nervenleitung auf Ionenkanäle und Aktionspotentiale angewiesen ist.`,
 
       lernziele: [
-        'Das Ohmsche Gesetz anwenden und Strom, Spannung und Widerstand berechnen',
-        'Den Zusammenhang zwischen Widerstand, Geometrie und spezifischem Widerstand erläutern',
-        'Elektrische Leistung und Joulesche Wärme berechnen und medizinische Anwendungen nennen',
-        'Die Temperaturabhängigkeit des Widerstands für Metalle, Halbleiter und Supraleiter erklären',
-        'Das Nernst-Potential als elektrochemisches Konzept für Ionenkanäle einordnen',
+        "Das Ohmsche Gesetz anwenden und Strom, Spannung und Widerstand berechnen",
+        "Den Zusammenhang zwischen Widerstand, Geometrie und spezifischem Widerstand erläutern",
+        "Elektrische Leistung und Joulesche Wärme berechnen und medizinische Anwendungen nennen",
+        "Die Temperaturabhängigkeit des Widerstands für Metalle, Halbleiter und Supraleiter erklären",
+        "Das Nernst-Potential als elektrochemisches Konzept für Ionenkanäle einordnen",
       ],
       sections: [
         {
-          heading: 'Elektrischer Strom und Ladungsfluss',
-          text: 'Strom I = ΔQ/Δt [A]. In Metallen fließen Elektronen (Driftgeschwindigkeit ~0,1 mm/s), in Elektrolyten Ionen. Technische Stromrichtung: von + nach −. Stromdichte j = I/A [A/m²] ist relevant für Heizeffekte. Körpergewebe leitet über Ionen (spez. Widerstand 0,5–3 Ω·m). Die Signalübertragung entlang des Nervs ist elektrochemisch: Depolarisationswellen (Aktionspotentiale) laufen mit 1–100 m/s entlang der Membran.',
-          merksatz: 'I = ΔQ/Δt [Ampere]. Technische Stromrichtung: + nach −. In Gewebe: Ionenleitung.',
+          heading: "Elektrischer Strom und Ladungsfluss",
+          text: "Strom I = ΔQ/Δt [A]. In Metallen fließen Elektronen (Driftgeschwindigkeit ~0,1 mm/s), in Elektrolyten Ionen. Technische Stromrichtung: von + nach −. Stromdichte j = I/A [A/m²] ist relevant für Heizeffekte. Körpergewebe leitet über Ionen (spez. Widerstand 0,5–3 Ω·m). Die Signalübertragung entlang des Nervs ist elektrochemisch: Depolarisationswellen (Aktionspotentiale) laufen mit 1–100 m/s entlang der Membran.",
+          merksatz:
+            "I = ΔQ/Δt [Ampere]. Technische Stromrichtung: + nach −. In Gewebe: Ionenleitung.",
         },
         {
-          heading: 'Ohmsches Gesetz und Widerstand',
-          text: 'U = R·I (Ohmsches Gesetz). R = ρ·L/A — abhängig von Material (ρ), Länge und Querschnitt. Leitwert G = 1/R [S]. Metallwiderstände steigen mit T (positiver α); Halbleiter fallen (negativer α, NTC). Supraleiter: R = 0 unter T_c. In der Physiologie: Ionenkanäle haben Leitfähigkeiten im pS-Bereich; einzelne Kanäle werden mit Patch-Clamp gemessen.',
-          merksatz: 'U = R·I. R = ρ·L/A. Leitwert G = 1/R [S = A/V].',
+          heading: "Ohmsches Gesetz und Widerstand",
+          text: "U = R·I (Ohmsches Gesetz). R = ρ·L/A — abhängig von Material (ρ), Länge und Querschnitt. Leitwert G = 1/R [S]. Metallwiderstände steigen mit T (positiver α); Halbleiter fallen (negativer α, NTC). Supraleiter: R = 0 unter T_c. In der Physiologie: Ionenkanäle haben Leitfähigkeiten im pS-Bereich; einzelne Kanäle werden mit Patch-Clamp gemessen.",
+          merksatz: "U = R·I. R = ρ·L/A. Leitwert G = 1/R [S = A/V].",
         },
         {
-          heading: 'Elektrische Leistung und medizinische Anwendungen',
-          text: 'P = U·I = I²·R = U²/R [Watt]. Joulesche Wärme: Q = I²·R·t. Elektrochirurgie: HF-Strom (300–500 kHz) erzeugt lokale Wärme → Gewebeschnitt ohne Nervenreizung (zu schnell für Aktionspotential). Ablationstherapie: Hochfrequenzenergie zerstört arrhythmogenes Gewebe im Herz. Diathermie: Tiefenwärme durch hochfrequenten Strom. Defibrillation: Gleichstromstoß entsynchronisiert Kammerflimmern.',
-          merksatz: 'P = I²·R (Joulesche Wärme). Elektrochirurgie: HF-Strom → Wärme ohne Muskelreizung.',
+          heading: "Elektrische Leistung und medizinische Anwendungen",
+          text: "P = U·I = I²·R = U²/R [Watt]. Joulesche Wärme: Q = I²·R·t. Elektrochirurgie: HF-Strom (300–500 kHz) erzeugt lokale Wärme → Gewebeschnitt ohne Nervenreizung (zu schnell für Aktionspotential). Ablationstherapie: Hochfrequenzenergie zerstört arrhythmogenes Gewebe im Herz. Diathermie: Tiefenwärme durch hochfrequenten Strom. Defibrillation: Gleichstromstoß entsynchronisiert Kammerflimmern.",
+          merksatz:
+            "P = I²·R (Joulesche Wärme). Elektrochirurgie: HF-Strom → Wärme ohne Muskelreizung.",
         },
       ],
-      diagram: 'circuit',
+      diagram: "circuit",
 
       merksätze: [
-        'Ohmsches Gesetz: U = R·I — gilt für lineare Widerstände.',
-        'Stromstärke: I = ΔQ/Δt [A = C/s].',
-        'Widerstand: R = ρ·L/A — größere Länge → mehr R; größerer Querschnitt → weniger R.',
-        'Leistung: P = U·I = I²·R = U²/R [Watt].',
-        'Joulesche Wärme: Q = I²·R·t — Basis der Elektrochirurgie.',
-        'Metalle: R steigt mit T (positiver Temperaturkoeffizient α).',
-        'Halbleiter/NTC: R sinkt mit T (negativer Temperaturkoeffizient).',
-        'Supraleiter: R = 0 unterhalb T_c (MRT-Spulen).',
-        'Leitwert G = 1/R [S = Siemens] — bevorzugt bei Ionenkanälen.',
-        'Nernst-Potential: E = (RT/zF)·ln([außen]/[innen]) — Gleichgewichtsspannung für Ionen.',
+        "Ohmsches Gesetz: U = R·I — gilt für lineare Widerstände.",
+        "Stromstärke: I = ΔQ/Δt [A = C/s].",
+        "Widerstand: R = ρ·L/A — größere Länge → mehr R; größerer Querschnitt → weniger R.",
+        "Leistung: P = U·I = I²·R = U²/R [Watt].",
+        "Joulesche Wärme: Q = I²·R·t — Basis der Elektrochirurgie.",
+        "Metalle: R steigt mit T (positiver Temperaturkoeffizient α).",
+        "Halbleiter/NTC: R sinkt mit T (negativer Temperaturkoeffizient).",
+        "Supraleiter: R = 0 unterhalb T_c (MRT-Spulen).",
+        "Leitwert G = 1/R [S = Siemens] — bevorzugt bei Ionenkanälen.",
+        "Nernst-Potential: E = (RT/zF)·ln([außen]/[innen]) — Gleichgewichtsspannung für Ionen.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: 'Ein Patient erleidet einen Elektrounfall mit 230 V Wechselspannung. Erläutern Sie, welche physikalischen Größen den Schaden bestimmen, und welche Faktoren den Körperwiderstand beeinflussen. Gehen Sie auch auf den Unterschied zwischen Gleich- und Wechselstrom ein.',
+        question:
+          "Ein Patient erleidet einen Elektrounfall mit 230 V Wechselspannung. Erläutern Sie, welche physikalischen Größen den Schaden bestimmen, und welche Faktoren den Körperwiderstand beeinflussen. Gehen Sie auch auf den Unterschied zwischen Gleich- und Wechselstrom ein.",
         answer: `Der biologische Schaden durch elektrischen Strom hängt primär von der Stromstärke I ab, nicht von der Spannung. Nach dem Ohmschen Gesetz gilt: I = U/R. Der Körperwiderstand R bestimmt also, welcher Strom bei 230 V durch den Körper fließt.
 
 Der Körperwiderstand variiert stark: Trockene Haut: 10.000–100.000 Ω; feuchte/verletzte Haut: 1.000–10.000 Ω; intern (Blut, Muskeln): ~500 Ω. Bei trockener Haut fließt bei 230 V ca. 2–23 mA; bei feuchter Haut 23–230 mA. Ströme über 10–20 mA erzeugen tetanische Muskelkontraktionen (Loslasssperre), über 100 mA Kammerflimmern (meist letal ohne Defibrillation), über 1 A direkte Herzschädigung und Verbrennungen.
@@ -333,157 +385,122 @@ Wechselstrom (AC, 50 Hz) ist gefährlicher als Gleichstrom (DC) gleicher Amplitu
 
 Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefährlicher als Fuß-zu-Fuß. Defibrillation nutzt gezielt einen kurzen Gleichstromstoß hoher Energie (200–360 J), um das Kammerflimmern zu terminieren.`,
       },
-      klinischerBezug: 'Die Elektrochirurgie nutzt hochfrequenten Wechselstrom (300–500 kHz), der im Gewebe durch Joulesche Wärme schneidet oder koaguliert, ohne Nerven- oder Muskelreize auszulösen (zu schnell für Aktionspotentiale). Bei der Hochfrequenz-Ablation werden arrhythmogene Herzareale durch lokale Wärmeentwicklung (I²·R) gezielt verödet. Patch-Clamp-Messungen erfassen den Leitwert einzelner Ionenkanäle im Picosiemens-Bereich und ermöglichen so die Charakterisierung von Kanalproteinen bei Herzerkrankungen.',
+      klinischerBezug:
+        "Die Elektrochirurgie nutzt hochfrequenten Wechselstrom (300–500 kHz), der im Gewebe durch Joulesche Wärme schneidet oder koaguliert, ohne Nerven- oder Muskelreize auszulösen (zu schnell für Aktionspotentiale). Bei der Hochfrequenz-Ablation werden arrhythmogene Herzareale durch lokale Wärmeentwicklung (I²·R) gezielt verödet. Patch-Clamp-Messungen erfassen den Leitwert einzelner Ionenkanäle im Picosiemens-Bereich und ermöglichen so die Charakterisierung von Kanalproteinen bei Herzerkrankungen.",
       selfTest: [
         {
-          question: 'Ein Widerstand von 470 Ω liegt an einer Spannung von 12 V. Wie groß ist die elektrische Leistung?',
-          options: [
-            'P ≈ 0,026 W',
-            'P ≈ 0,31 W',
-            'P ≈ 5640 W',
-            'P ≈ 25,5 mW',
-            'P ≈ 5,76 W',
-          ],
+          question:
+            "Ein Widerstand von 470 Ω liegt an einer Spannung von 12 V. Wie groß ist die elektrische Leistung?",
+          options: ["P ≈ 0,026 W", "P ≈ 0,31 W", "P ≈ 5640 W", "P ≈ 25,5 mW", "P ≈ 5,76 W"],
           correctIndex: 1,
-          explanation: 'P = U²/R = (12 V)² / 470 Ω = 144 / 470 ≈ 0,306 W ≈ 0,31 W. Alternativ: I = U/R = 12/470 ≈ 0,02553 A; P = U·I = 12 · 0,02553 ≈ 0,306 W. Option A wäre P = U·R (falsch). Option C verwechselt Quotient mit Produkt. Option D ≈ 25,5 mW wäre P = I²·R mit falschem I. Die korrekte Formel lautet P = U²/R oder äquivalent P = I²·R oder P = U·I.',
+          explanation:
+            "P = U²/R = (12 V)² / 470 Ω = 144 / 470 ≈ 0,306 W ≈ 0,31 W. Alternativ: I = U/R = 12/470 ≈ 0,02553 A; P = U·I = 12 · 0,02553 ≈ 0,306 W. Option A wäre P = U·R (falsch). Option C verwechselt Quotient mit Produkt. Option D ≈ 25,5 mW wäre P = I²·R mit falschem I. Die korrekte Formel lautet P = U²/R oder äquivalent P = I²·R oder P = U·I.",
           hints: [
-            'P = U²/R. Setze U = 12 V und R = 470 Ω ein.',
-            'Alternativ: Berechne erst I = U/R, dann P = U·I.',
+            "P = U²/R. Setze U = 12 V und R = 470 Ω ein.",
+            "Alternativ: Berechne erst I = U/R, dann P = U·I.",
           ],
           difficulty: 1,
-          tags: ['leistung', 'ohmsches-gesetz', 'widerstand'],
+          tags: ["leistung", "ohmsches-gesetz", "widerstand"],
         },
         {
-          question: 'Welche Aussage zum spezifischen Widerstand von Körpergewebe im Vergleich zu Kupfer ist korrekt?',
+          question:
+            "Welche Aussage zum spezifischen Widerstand von Körpergewebe im Vergleich zu Kupfer ist korrekt?",
           options: [
-            'Körpergewebe und Kupfer haben ähnliche spezifische Widerstände (~10⁻⁸ Ω·m)',
-            'Körpergewebe hat einen ca. 10⁷–10⁸-mal höheren spezifischen Widerstand als Kupfer',
-            'Körpergewebe leitet besser als Kupfer, da es Wasser enthält',
-            'Der spezifische Widerstand ist für alle Gewebe identisch (1 Ω·m)',
-            'Kupfer leitet schlechter als Körpergewebe, da es kein ionisches Leitmedium ist',
+            "Körpergewebe und Kupfer haben ähnliche spezifische Widerstände (~10⁻⁸ Ω·m)",
+            "Körpergewebe hat einen ca. 10⁷–10⁸-mal höheren spezifischen Widerstand als Kupfer",
+            "Körpergewebe leitet besser als Kupfer, da es Wasser enthält",
+            "Der spezifische Widerstand ist für alle Gewebe identisch (1 Ω·m)",
+            "Kupfer leitet schlechter als Körpergewebe, da es kein ionisches Leitmedium ist",
           ],
           correctIndex: 1,
-          explanation: 'Kupfer hat ρ ≈ 1,7 × 10⁻⁸ Ω·m (hervorragender metallischer Leiter durch freie Elektronen). Körpergewebe hat je nach Typ ρ ≈ 0,5–3 Ω·m (Leitung durch Ionen). Das Verhältnis beträgt ca. 0,5 / (1,7×10⁻⁸) ≈ 3 × 10⁷ — also ca. 10⁷–10⁸-mal höherer spezifischer Widerstand bei Gewebe. Deshalb ist Körpergewebe ein schlechter Leiter. Bei der Defibrillation muss die Energie so gewählt werden, dass trotz des hohen Körperwiderstands genug Strom das Herz erreicht.',
+          explanation:
+            "Kupfer hat ρ ≈ 1,7 × 10⁻⁸ Ω·m (hervorragender metallischer Leiter durch freie Elektronen). Körpergewebe hat je nach Typ ρ ≈ 0,5–3 Ω·m (Leitung durch Ionen). Das Verhältnis beträgt ca. 0,5 / (1,7×10⁻⁸) ≈ 3 × 10⁷ — also ca. 10⁷–10⁸-mal höherer spezifischer Widerstand bei Gewebe. Deshalb ist Körpergewebe ein schlechter Leiter. Bei der Defibrillation muss die Energie so gewählt werden, dass trotz des hohen Körperwiderstands genug Strom das Herz erreicht.",
           hints: [
-            'Kupfer: ρ ≈ 1,7 × 10⁻⁸ Ω·m. Gewebe: ρ ≈ 0,5–3 Ω·m. Berechne den Faktor.',
-            'Gewebe leitet ionisch (viel langsamer und schwächer als metallische Leitung).',
+            "Kupfer: ρ ≈ 1,7 × 10⁻⁸ Ω·m. Gewebe: ρ ≈ 0,5–3 Ω·m. Berechne den Faktor.",
+            "Gewebe leitet ionisch (viel langsamer und schwächer als metallische Leitung).",
           ],
           difficulty: 2,
-          tags: ['spezifischer-widerstand', 'körpergewebe', 'leitfähigkeit'],
+          tags: ["spezifischer-widerstand", "körpergewebe", "leitfähigkeit"],
         },
         {
-          question: 'Eine Nervenfaser mit Myelinisierung leitet Impulse schneller als eine unmyelinisierte. Was ist der physikalische Grund?',
+          question:
+            "Wie ändert sich der Widerstand eines Drahtes, wenn man ihn bei gleichem Volumen doppelt so lang zieht (Querschnitt halbiert sich dabei)?",
           options: [
-            'Myelinscheiden erhöhen die Leitfähigkeit der Membran',
-            'Myelinscheiden verringern den Membranwiderstand zwischen Ranvierschen Schnürringen',
-            'Myelinscheiden erhöhen die Kapazität der Membran und beschleunigen die Depolarisation',
-            'Myelinscheiden wirken als Isolatoren und zwingen den Strom zur saltatorischen Erregungsleitung zwischen Ranvierschen Schnürringen',
-            'Myelinscheiden erhöhen den Innenwiderstand des Axons',
-          ],
-          correctIndex: 3,
-          explanation: 'Myelinscheiden bestehen aus mehrfach umgewickelten Lipiddoppelschichten und sind elektrische Isolatoren (hoher Widerstand, niedrige Kapazität). Sie bedecken das Axon zwischen den Ranvierschen Schnürringen, wo spannungsgesteuerte Ionenkanäle konzentriert sind. Da die Membran im myelinisierten Bereich kaum Strom lässt, springt das Aktionspotential von Schnürring zu Schnürring (saltatorische Erregungsleitung). Das spart Energie und beschleunigt die Leitung auf 70–120 m/s (vs. unter 2 m/s unmyelinisiert). Bei Multipler Sklerose werden Myelinscheiden zerstört → drastisch verlangsamte Leitung.',
-          hints: [
-            'Myelin ist ein elektrischer Isolator. Wo befinden sich die Ionenkanäle?',
-            'Saltatorisch = springend. Wo springt das Aktionspotential hin?',
-          ],
-          difficulty: 3,
-          tags: ['myelin', 'saltatorische-erregungsleitung', 'ranvier'],
-        },
-        {
-          question: 'Wie ändert sich der Widerstand eines Drahtes, wenn man ihn bei gleichem Volumen doppelt so lang zieht (Querschnitt halbiert sich dabei)?',
-          options: [
-            'R bleibt gleich',
-            'R verdoppelt sich',
-            'R vervierfacht sich',
-            'R achtfacht sich',
-            'R halbiert sich',
+            "R bleibt gleich",
+            "R verdoppelt sich",
+            "R vervierfacht sich",
+            "R achtfacht sich",
+            "R halbiert sich",
           ],
           correctIndex: 2,
-          explanation: 'Wenn der Draht bei konstantem Volumen auf doppelte Länge gestreckt wird, halbiert sich der Querschnitt (V = L·A = const → A_neu = A/2). Mit R = ρ·L/A gilt: R_neu = ρ·(2L)/(A/2) = ρ·2L·2/A = 4·ρ·L/A = 4·R_alt. Der Widerstand vervierfacht sich. In der Biologie ist analoges Denken anwendbar: Engere und längere Kapillaren haben viel höheren hydraulischen Widerstand (Hagen-Poiseuille analog zu Ohm).',
+          explanation:
+            "Wenn der Draht bei konstantem Volumen auf doppelte Länge gestreckt wird, halbiert sich der Querschnitt (V = L·A = const → A_neu = A/2). Mit R = ρ·L/A gilt: R_neu = ρ·(2L)/(A/2) = ρ·2L·2/A = 4·ρ·L/A = 4·R_alt. Der Widerstand vervierfacht sich. In der Biologie ist analoges Denken anwendbar: Engere und längere Kapillaren haben viel höheren hydraulischen Widerstand (Hagen-Poiseuille analog zu Ohm).",
           hints: [
-            'Volumen ist konstant: V = L·A. Wenn L sich verdoppelt, was passiert mit A?',
-            'R = ρ·L/A. Setze L_neu = 2L und A_neu = A/2 ein.',
+            "Volumen ist konstant: V = L·A. Wenn L sich verdoppelt, was passiert mit A?",
+            "R = ρ·L/A. Setze L_neu = 2L und A_neu = A/2 ein.",
           ],
           difficulty: 2,
-          tags: ['widerstand', 'geometrie', 'querschnitt'],
+          tags: ["widerstand", "geometrie", "querschnitt"],
         },
         {
-          question: 'Welche Stromstärke ist ab ca. 100 mA durch den menschlichen Körper typischerweise lebensbedrohlich?',
+          question:
+            "Welche Stromstärke ist ab ca. 100 mA durch den menschlichen Körper typischerweise lebensbedrohlich?",
           options: [
-            'Sie verursacht ein kaum wahrnehmbares Kribbeln',
-            'Sie verursacht schmerzhafte Muskelkontraktionen, aber kein Kammerflimmern',
-            'Sie kann Kammerflimmern auslösen',
-            'Sie führt sofort zu Herzstillstand durch Asystolie',
-            'Sie ist für den Menschen völlig harmlos',
+            "Sie verursacht ein kaum wahrnehmbares Kribbeln",
+            "Sie verursacht schmerzhafte Muskelkontraktionen, aber kein Kammerflimmern",
+            "Sie kann Kammerflimmern auslösen",
+            "Sie führt sofort zu Herzstillstand durch Asystolie",
+            "Sie ist für den Menschen völlig harmlos",
           ],
           correctIndex: 2,
-          explanation: 'Ab ca. 80–100 mA Körperstrom kann Kammerflimmern (ventrikuläre Fibrillation) ausgelöst werden — ein unkoordiniertes, ineffektives Zittern des Herzens, das ohne sofortige Defibrillation letal ist. Schon 1–2 mA sind wahrnehmbar (Kribbeln); 10–20 mA erzeugen tetanische Muskelkontraktionen (Loslasssperre); 50–100 mA sind schmerzhaft und können Atemmuskel-Verkrampfung auslösen; über 1 A entsteht direkte thermische Herzschädigung. Defibrillation nutzt einen kurzen Energiestoß (200–360 J), um das Kammerflimmern zu terminieren.',
+          explanation:
+            "Ab ca. 80–100 mA Körperstrom kann Kammerflimmern (ventrikuläre Fibrillation) ausgelöst werden — ein unkoordiniertes, ineffektives Zittern des Herzens, das ohne sofortige Defibrillation letal ist. Schon 1–2 mA sind wahrnehmbar (Kribbeln); 10–20 mA erzeugen tetanische Muskelkontraktionen (Loslasssperre); 50–100 mA sind schmerzhaft und können Atemmuskel-Verkrampfung auslösen; über 1 A entsteht direkte thermische Herzschädigung. Defibrillation nutzt einen kurzen Energiestoß (200–360 J), um das Kammerflimmern zu terminieren.",
           hints: [
-            'Kammerflimmern ist ein unkoordiniertes Herzflimmern. Welcher Strom löst es aus?',
-            '10 mA → Loslasssperre, 100 mA → Kammerflimmern, 1 A → Verbrennung.',
+            "Kammerflimmern ist ein unkoordiniertes Herzflimmern. Welcher Strom löst es aus?",
+            "10 mA → Loslasssperre, 100 mA → Kammerflimmern, 1 A → Verbrennung.",
           ],
           difficulty: 2,
-          tags: ['kammerflimmern', 'elektrounfall', 'strom'],
+          tags: ["kammerflimmern", "elektrounfall", "strom"],
         },
         {
-          question: 'Was beschreibt das Nernst-Potential für ein Ion an einer biologischen Membran?',
+          question:
+            "Welche der folgenden medizinischen Anwendungen nutzt primär den Effekt der Jouleschen Wärme (I²·R)?",
           options: [
-            'Die maximale Stromstärke durch einen Ionenkanal',
-            'Die Gleichgewichtsspannung, bei der elektrischer und osmotischer Gradient für dieses Ion ausgeglichen sind',
-            'Den Widerstand der Lipiddoppelschicht für Ionen',
-            'Die Geschwindigkeit der Ionendiffusion durch die Membran',
-            'Die Kapazität der Zellmembran für elektrische Ladungen',
-          ],
-          correctIndex: 1,
-          explanation: 'Das Nernst-Potential (Gleichgewichtspotential) E_ion ist die Membranspannung, bei der die elektrische Kraft auf ein Ion genau der entgegengesetzt wirkenden Diffusionskraft (osmotischer Gradient) das Gleichgewicht hält. Es wird berechnet mit der Nernst-Gleichung: E = (RT/zF) · ln([Ion]_außen / [Ion]_innen). Bei 37 °C: RT/F ≈ 26,7 mV. Für K⁺ (Gradient ~35:1 innen:außen): E_K ≈ −94 mV. Für Na⁺ (Gradient ~10:1 außen:innen): E_Na ≈ +61 mV. Das Ruhemembranpotential (−70 mV) liegt zwischen E_K und E_Na, da die Membran für beide Ionen teilweise permeabel ist.',
-          hints: [
-            'Nernst-Gleichung: E = (RT/zF)·ln([außen]/[innen]). Was passiert, wenn E_membran = E_nernst?',
-            'Gleichgewicht: elektrischer Drift = Diffusion. Kein Nettostrom mehr für dieses Ion.',
-          ],
-          difficulty: 3,
-          tags: ['nernst-potential', 'membranpotential', 'elektrochemie'],
-        },
-        {
-          question: 'Welche der folgenden medizinischen Anwendungen nutzt primär den Effekt der Jouleschen Wärme (I²·R)?',
-          options: [
-            'EKG (Elektrokardiographie)',
-            'EEG (Elektroenzephalographie)',
-            'Hochfrequenz-Ablation bei Herzrhythmusstörungen',
-            'EMG (Elektromyographie)',
-            'Nervenleitgeschwindigkeitsmessung (NLG)',
+            "EKG (Elektrokardiographie)",
+            "EEG (Elektroenzephalographie)",
+            "Hochfrequenz-Ablation bei Herzrhythmusstörungen",
+            "EMG (Elektromyographie)",
+            "Nervenleitgeschwindigkeitsmessung (NLG)",
           ],
           correctIndex: 2,
-          explanation: 'Die Hochfrequenz-Ablation (HF-Ablation) nutzt gezielt Joulesche Wärme: Ein HF-Strom (300–500 kHz) wird über eine Katheterelektrode ins Herzgewebe geleitet. Im Gewebe (Widerstand R) erzeugt er Wärme Q = I²·R·t — lokal bis zu 50–70 °C — und koaguliert arrhythmogenes Gewebe (z. B. bei AV-Knoten-Reentry-Tachykardie, Vorhofflimmern). EKG, EEG und EMG messen elektrische Potentiale passiv (kein therapeutischer Strom appliziert). Nervenleitgeschwindigkeit: kurze Reizstromstöße zur Stimulation, Wärmeeffekt nicht das therapeutische Ziel.',
+          explanation:
+            "Die Hochfrequenz-Ablation (HF-Ablation) nutzt gezielt Joulesche Wärme: Ein HF-Strom (300–500 kHz) wird über eine Katheterelektrode ins Herzgewebe geleitet. Im Gewebe (Widerstand R) erzeugt er Wärme Q = I²·R·t — lokal bis zu 50–70 °C — und koaguliert arrhythmogenes Gewebe (z. B. bei AV-Knoten-Reentry-Tachykardie, Vorhofflimmern). EKG, EEG und EMG messen elektrische Potentiale passiv (kein therapeutischer Strom appliziert). Nervenleitgeschwindigkeit: kurze Reizstromstöße zur Stimulation, Wärmeeffekt nicht das therapeutische Ziel.",
           hints: [
-            'Joulesche Wärme = Wärme durch Stromfluss. Welche Anwendung nutzt Wärme therapeutisch?',
-            'Ablation = Veröden von Gewebe. Welche physikalische Energie steckt dahinter?',
+            "Joulesche Wärme = Wärme durch Stromfluss. Welche Anwendung nutzt Wärme therapeutisch?",
+            "Ablation = Veröden von Gewebe. Welche physikalische Energie steckt dahinter?",
           ],
           difficulty: 2,
-          tags: ['ablation', 'joulesche-wärme', 'elektrochirurgie'],
-        },
-        {
-          question: 'Bei einem Supraleiter verschwindet der elektrische Widerstand unterhalb der kritischen Temperatur T_c. Welche Konsequenz hat das für MRT-Scanner?',
-          options: [
-            'Das Magnetfeld kann ohne kontinuierliche Energiezufuhr aufrechterhalten werden',
-            'Die Elektronen bewegen sich mit Lichtgeschwindigkeit',
-            'Das Magnetfeld ist proportional zur angelegten Spannung',
-            'Der Strom muss ständig erhöht werden, um das Feld stabil zu halten',
-            'Die Supraleitung erhöht den Widerstand auf einen definierten Wert',
-          ],
-          correctIndex: 0,
-          explanation: 'In einem supraleitenden Stromkreis ist R = 0 unterhalb T_c. Nach dem Ohmschen Gesetz: U = R·I = 0·I = 0 — es wird keine Spannung benötigt, um den Strom aufrechtzuerhalten. Einmal angeregt, fließt der Strom ohne jeglichen Verlust weiter (persistenter Strom). MRT-Scanner nutzen Niob-Titan-Spulen (T_c ≈ 9 K), gekühlt mit flüssigem Helium auf 4 K. Der einmal eingespeiste Strom erzeugt dauerhaft ein starkes Magnetfeld (1,5–7 T) ohne weiteren Energiebedarf für den Stromerhalt — nur die Kryokühlung verbraucht Energie. Ein Quench (Verlust der Supraleitung) ist ein Notfall: schlagartiger Widerstandsanstieg, enorme Wärmeentwicklung, Helium-Verdampfung.',
-          hints: [
-            'R = 0 → U = R·I = 0. Was bedeutet das für die nötige Spannung zur Strommaintenance?',
-            'Einmal eingekoppelter Strom bleibt ohne Verlust — deshalb persistenter Strom.',
-          ],
-          difficulty: 2,
-          tags: ['supraleitung', 'mrt', 'widerstand'],
+          tags: ["ablation", "joulesche-wärme", "elektrochirurgie"],
         },
       ],
     },
     {
-      id: 'ph-5-03',
-      title: 'Kirchhoffsche Gesetze und Schaltkreise',
+      id: "ph-5-03",
+      title: "Kirchhoffsche Gesetze und Schaltkreise",
+      stichworte: [
+        "Reihenschaltung",
+        "Parallelschaltung",
+        "Knotenregel",
+        "Maschenregel",
+        "Kondensator",
+        "RC-Glied",
+        "Zeitkonstante",
+        "Defibrillator",
+        "Impedanz",
+        "Bioimpedanz",
+        "Wheatstone-Brücke",
+        "Spannungsteiler",
+      ],
       content: `## Grundlegende Schaltungstypen
 
 In der Elektrotechnik und Biophysik werden Widerstände und andere Bauelemente in **Reihenschaltung** (Serie) oder **Parallelschaltung** kombiniert. Das Verständnis dieser Schaltungen ist die Basis für die Analyse elektrischer Systeme — von einfachen Schaltkreisen bis zu komplexen neuronalen Netzwerken.
@@ -516,6 +533,17 @@ Physikalische Basis: **Energieerhaltung** — beim Umlauf durch eine geschlossen
 
 Diese zwei Gesetze ermöglichen die vollständige Analyse beliebig komplexer Netzwerke. Gemeinsam mit dem Ohmschen Gesetz (U = R·I) bilden sie die Basis der Schaltungsanalyse.
 
+> **Merke:** KCL (Knotenregel) = Ladungserhaltung: ΣI = 0. KVL (Maschenregel) = Energieerhaltung: ΣU = 0. Beide zusammen mit U = R·I lösen jedes lineare Netzwerk.
+
+**Vergleich Reihen- und Parallelschaltung:**
+
+| Eigenschaft | Reihenschaltung | Parallelschaltung |
+|---|---|---|
+| Strom | überall gleich (I₁ = I₂) | teilt sich auf (I = I₁ + I₂) |
+| Spannung | teilt sich auf (U = U₁ + U₂) | überall gleich (U₁ = U₂) |
+| R_ges | R₁ + R₂ (größer) | (R₁·R₂)/(R₁+R₂) (kleiner) |
+| Anwendung | Spannungsteiler, EKG-Ableitungen | Parallele Ionenkanäle in Membranen |
+
 ## Kondensatoren in Schaltkreisen
 
 Ein **Kondensator** speichert elektrische Energie im elektrischen Feld zwischen zwei Platten. Kapazität: **C = Q/U** [F = Farad = C/V]. Für einen Plattenkondensator: C = ε₀·εᵣ·A/d (A = Plattenfläche, d = Abstand, εᵣ = relative Permittivität des Dielektrikums).
@@ -535,210 +563,185 @@ Im menschlichen Körper ist die **Bioimpedanz** (Z_body) frequenzabhängig: Bei 
 
 ## Spannungsteiler und Messbrücken
 
-Der **Spannungsteiler** teilt eine Spannung U₀ proportional zu den Widerständen auf: U₂ = U₀ · R₂/(R₁ + R₂). Die **Wheatstone-Brücke** detektiert minimale Widerstandsänderungen durch Vergleich zweier Spannungsteiler — genutzt in Dehnungsmessstreifen, Drucksensoren und Biosensoren (z. B. Glukosemessgeräte, Pulsoxymetrie-Schaltkreise).`,
+Der **Spannungsteiler** teilt eine Spannung U₀ proportional zu den Widerständen auf: U₂ = U₀ · R₂/(R₁ + R₂). Die **Wheatstone-Brücke** detektiert minimale Widerstandsänderungen durch Vergleich zweier Spannungsteiler — genutzt in Dehnungsmessstreifen, Drucksensoren und Biosensoren (z. B. Glukosemessgeräte, Pulsoxymetrie-Schaltkreise).
+
+## Rechenbeispiele
+
+**Beispiel 1 — Defibrillator-Entladung (RC-Kreis):**
+C = 200 µF, Ladespannung U₀ = 1800 V, Thoraxwiderstand R = 60 Ω.
+Zeitkonstante: τ = R·C = 60 · 200×10⁻⁶ = **12 ms**. Nach 12 ms ist U auf 37 % (≈ 666 V) abgefallen.
+Gespeicherte Energie: W = ½·C·U₀² = ½ · 200×10⁻⁶ · 1800² = **324 J** — im therapeutischen Bereich (200–360 J).
+
+**Beispiel 2 — Gemischte Schaltung: R₁ in Reihe mit (R₂ ∥ R₃):**
+R₁ = 100 Ω (Reihe), R₂ = 200 Ω ∥ R₃ = 300 Ω.
+R₂₃ = (R₂·R₃)/(R₂+R₃) = (200·300)/500 = **120 Ω**.
+R_ges = R₁ + R₂₃ = 100 + 120 = **220 Ω**.
+Spannung U = 12 V → I_ges = 12/220 ≈ 54,5 mA. U₁ = I·R₁ = 5,45 V; U₂₃ = I·R₂₃ = 6,55 V.
+
+**Beispiel 3 — Neuronale Membran-Zeitkonstante:**
+Typisches Neuron: R_m = 10 kΩ·cm², C_m = 1 µF/cm².
+τ_m = R_m · C_m = 10.000 Ω·cm² × 10⁻⁶ F/cm² = **10 ms**.
+Bedeutung: Nach einem synaptischen Strompuls erreicht das Membranpotential in ~10 ms 63 % der Endspannung. Dünnere Axone (höheres R_m) haben längere τ → langsamere Antwort.`,
 
       lernziele: [
-        'Reihen- und Parallelschaltungen von Widerständen und Kondensatoren berechnen',
-        'Die Kirchhoffschen Gesetze (Knoten- und Maschenregel) anwenden und ihre physikalischen Grundlagen nennen',
-        'Das RC-Glied und seine Zeitkonstante τ = R·C für biologische Membrane erläutern',
-        'Die frequenzabhängige Impedanz von Kondensatoren erklären und die Bioimpedanz einordnen',
-        'Den Defibrillator als Kondensatorentladung physikalisch beschreiben',
+        "Reihen- und Parallelschaltungen von Widerständen und Kondensatoren berechnen",
+        "Die Kirchhoffschen Gesetze (Knoten- und Maschenregel) anwenden und ihre physikalischen Grundlagen nennen",
+        "Das RC-Glied und seine Zeitkonstante τ = R·C für biologische Membrane erläutern",
+        "Die frequenzabhängige Impedanz von Kondensatoren erklären und die Bioimpedanz einordnen",
+        "Den Defibrillator als Kondensatorentladung physikalisch beschreiben",
       ],
       sections: [
         {
-          heading: 'Reihen- und Parallelschaltung',
-          text: 'Reihenschaltung: R_ges = ΣRᵢ (Ströme gleich, Spannungen addieren sich). Parallelschaltung: 1/R_ges = Σ(1/Rᵢ) (Spannungen gleich, Ströme addieren sich). Kondensatoren: umgekehrt (Parallel → C addiert sich, Reihe → 1/C addiert sich). Zellmembranen sind RC-Parallelglieder: Lipidschicht = Kondensator (C_m ≈ 1 µF/cm²), Kanäle = variable Widerstände. Hodgkin-Huxley-Modell beschreibt die Membran als Schaltkreis.',
-          merksatz: 'R in Reihe: R_ges = R₁+R₂. R parallel: 1/R_ges = 1/R₁+1/R₂. C ist umgekehrt zu R.',
+          heading: "Reihen- und Parallelschaltung",
+          text: "Reihenschaltung: R_ges = ΣRᵢ (Ströme gleich, Spannungen addieren sich). Parallelschaltung: 1/R_ges = Σ(1/Rᵢ) (Spannungen gleich, Ströme addieren sich). Kondensatoren: umgekehrt (Parallel → C addiert sich, Reihe → 1/C addiert sich). Zellmembranen sind RC-Parallelglieder: Lipidschicht = Kondensator (C_m ≈ 1 µF/cm²), Kanäle = variable Widerstände. Hodgkin-Huxley-Modell beschreibt die Membran als Schaltkreis.",
+          merksatz:
+            "R in Reihe: R_ges = R₁+R₂. R parallel: 1/R_ges = 1/R₁+1/R₂. C ist umgekehrt zu R.",
         },
         {
-          heading: 'Kirchhoffsche Gesetze',
-          text: 'Knotenregel (KCL): ΣI_ein = ΣI_aus — Ladungserhaltung. Maschenregel (KVL): ΣU = 0 in jeder Masche — Energieerhaltung. Mit U = R·I (Ohm) bilden die Kirchhoffgesetze das vollständige Gleichungssystem für Netzwerke. Anwendung: Analyse von Neuronennetzwerken, Herzschrittmacherkreisen, Messbrücken (Wheatstone).',
-          merksatz: 'KCL: ΣI = 0 am Knoten (Ladungserhaltung). KVL: ΣU = 0 in Masche (Energieerhaltung).',
+          heading: "Kirchhoffsche Gesetze",
+          text: "Knotenregel (KCL): ΣI_ein = ΣI_aus — Ladungserhaltung. Maschenregel (KVL): ΣU = 0 in jeder Masche — Energieerhaltung. Mit U = R·I (Ohm) bilden die Kirchhoffgesetze das vollständige Gleichungssystem für Netzwerke. Anwendung: Analyse von Neuronennetzwerken, Herzschrittmacherkreisen, Messbrücken (Wheatstone).",
+          merksatz:
+            "KCL: ΣI = 0 am Knoten (Ladungserhaltung). KVL: ΣU = 0 in Masche (Energieerhaltung).",
         },
         {
-          heading: 'RC-Schaltkreis und Defibrillation',
-          text: 'Zeitkonstante τ = R·C. Ladevorgang: U_C(t) = U₀·(1−e^(−t/τ)). Entladung: U_C(t) = U₀·e^(−t/τ). Nach τ: 63 % geladen/37 % entladen. Defibrillator: C ≈ 200 µF, U ≈ 1000–2000 V → W = ½·C·U² ≈ 100–400 J. Die gespeicherte Energie wird in ms über den Thorax entladen. Bioimpedanzanalyse: frequenzabhängige Impedanz des Körpers zur Messung von Fett- und Muskelmasse.',
-          merksatz: 'τ = R·C (Zeitkonstante). W = ½·C·U² (gespeicherte Energie im Kondensator).',
+          heading: "RC-Schaltkreis und Defibrillation",
+          text: "Zeitkonstante τ = R·C. Ladevorgang: U_C(t) = U₀·(1−e^(−t/τ)). Entladung: U_C(t) = U₀·e^(−t/τ). Nach τ: 63 % geladen/37 % entladen. Defibrillator: C ≈ 200 µF, U ≈ 1000–2000 V → W = ½·C·U² ≈ 100–400 J. Die gespeicherte Energie wird in ms über den Thorax entladen. Bioimpedanzanalyse: frequenzabhängige Impedanz des Körpers zur Messung von Fett- und Muskelmasse.",
+          merksatz: "τ = R·C (Zeitkonstante). W = ½·C·U² (gespeicherte Energie im Kondensator).",
         },
       ],
-      diagram: 'circuit',
+      diagram: "circuit",
 
       merksätze: [
-        'Reihenschaltung R: R_ges = R₁ + R₂ + ... (größer als jeder Einzelwert).',
-        'Parallelschaltung R: 1/R_ges = 1/R₁ + 1/R₂ + ... (kleiner als jeder Einzelwert).',
-        'Kondensatoren: Reihe → 1/C addieren; Parallel → C direkt addieren.',
-        'KCL (Knotenregel): ΣI_ein = ΣI_aus — Ladungserhaltung.',
-        'KVL (Maschenregel): ΣU = 0 in Masche — Energieerhaltung.',
-        'RC-Zeitkonstante: τ = R·C [s]. Nach τ: 63 % geladen.',
-        'Kondensatorenergie: W = ½·C·U².',
-        'Kapazitive Reaktanz: X_C = 1/(2π·f·C) — sinkt mit Frequenz.',
-        'Zellmembran als RC-Glied: C_m ≈ 1 µF/cm², R_m = Kanalwiderstand.',
-        'Defibrillator: Kondensatorentladung ~200 J in ms → terminiert Kammerflimmern.',
+        "Reihenschaltung R: R_ges = R₁ + R₂ + ... (größer als jeder Einzelwert).",
+        "Parallelschaltung R: 1/R_ges = 1/R₁ + 1/R₂ + ... (kleiner als jeder Einzelwert).",
+        "Kondensatoren: Reihe → 1/C addieren; Parallel → C direkt addieren.",
+        "KCL (Knotenregel): ΣI_ein = ΣI_aus — Ladungserhaltung.",
+        "KVL (Maschenregel): ΣU = 0 in Masche — Energieerhaltung.",
+        "RC-Zeitkonstante: τ = R·C [s]. Nach τ: 63 % geladen.",
+        "Kondensatorenergie: W = ½·C·U².",
+        "Kapazitive Reaktanz: X_C = 1/(2π·f·C) — sinkt mit Frequenz.",
+        "Zellmembran als RC-Glied: C_m ≈ 1 µF/cm², R_m = Kanalwiderstand.",
+        "Defibrillator: Kondensatorentladung ~200 J in ms → terminiert Kammerflimmern.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: 'Beschreiben Sie das elektrische Ersatzschaltbild der Zellmembran und erläutern Sie, wie die Kirchhoffschen Gesetze und das RC-Verhalten die Entstehung und Fortleitung von Aktionspotentialen erklären.',
+        question:
+          "Beschreiben Sie das elektrische Ersatzschaltbild der Zellmembran und erläutern Sie, wie die Kirchhoffschen Gesetze und das RC-Verhalten die Entstehung und Fortleitung von Aktionspotentialen erklären.",
         answer: `Die Zellmembran lässt sich als RC-Parallelglied modellieren: Die Lipiddoppelschicht ist ein Plattenkondensator mit Kapazität C_m ≈ 1 µF/cm². Ionenkanäle wirken als variable Widerstände (oder Leitfähigkeiten g = 1/R) für Na⁺, K⁺, Cl⁻ und Leck-Ionen. Das Hodgkin-Huxley-Modell (1952) beschreibt den Membranapparatstrom als: I_ges = C_m·dU/dt + g_Na·(U−E_Na) + g_K·(U−E_K) + g_L·(U−E_L).
 
 Kirchhoffsche Knotenregel am Membranknoten: Der Gesamtstrom (kapazitiv + ionisch) muss null sein (geschlossener Kreis). Das RC-Verhalten erklärt die Zeitdynamik: Bei plötzlicher Depolarisation muss zuerst die Membrankapazität umgeladen werden (Zeitkonstante τ = R_m·C_m). Dies verursacht das charakteristische exponentielle Ansteigen der Spannung.
 
 Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spannungsgesteuerte Na⁺-Kanäle (g_Na steigt schlagartig): Positives Feedback → Overshoot bis +30 mV. Die Maschenregel in der Membranmasche: U_membran = U_Na-Batterie − I_Na·R_Na (Nernst-Potential als EMK). Nach dem Overshoot inaktivieren Na⁺-Kanäle; K⁺-Kanäle öffnen → Repolarisation. Die saltatorische Leitung kann mit Kirchhoffs Knotenregel am Ranvierschen Schnürring erklärt werden: Strom fließt axial durch das Axon (Längswiderstand) und lädt den nächsten Schnürring um — das Aktionspotential springt vorwärts.`,
       },
-      klinischerBezug: 'Der Defibrillator nutzt einen Kondensator (C ≈ 200 µF, geladen auf ~1000–2000 V, W ≈ 200–360 J), der beim Entladen über Thoraxelektroden (R_körper ≈ 50–100 Ω) innerhalb von ca. 10 ms einen Stromstoß durch das Herz sendet — diese massenhafte Depolarisation terminiert Kammerflimmern. Die Bioimpedanzanalyse (BIA) nutzt das frequenzabhängige RC-Verhalten des Körpers: bei 50 kHz fließt Strom durch Extra- und Intrazellularraum; das Impedanzmuster erlaubt die Berechnung von Fettmasse, Muskelmasse und Körperwasser. Herzschrittmacher sind komplexe Schaltkreise aus Kondensatoren, Widerständen und integrierten Schaltungen.',
+      klinischerBezug:
+        "Der Defibrillator nutzt einen Kondensator (C ≈ 200 µF, geladen auf ~1000–2000 V, W ≈ 200–360 J), der beim Entladen über Thoraxelektroden (R_körper ≈ 50–100 Ω) innerhalb von ca. 10 ms einen Stromstoß durch das Herz sendet — diese massenhafte Depolarisation terminiert Kammerflimmern. Die Bioimpedanzanalyse (BIA) nutzt das frequenzabhängige RC-Verhalten des Körpers: bei 50 kHz fließt Strom durch Extra- und Intrazellularraum; das Impedanzmuster erlaubt die Berechnung von Fettmasse, Muskelmasse und Körperwasser. Herzschrittmacher sind komplexe Schaltkreise aus Kondensatoren, Widerständen und integrierten Schaltungen.",
       selfTest: [
         {
-          question: 'Drei Widerstände R₁ = 10 Ω, R₂ = 20 Ω, R₃ = 30 Ω sind parallel geschaltet. Welcher Gesamtwiderstand ergibt sich?',
-          options: [
-            '60 Ω',
-            '5,45 Ω',
-            '18,18 Ω',
-            '10 Ω',
-            '3,33 Ω',
-          ],
+          question:
+            "Drei Widerstände R₁ = 10 Ω, R₂ = 20 Ω, R₃ = 30 Ω sind parallel geschaltet. Welcher Gesamtwiderstand ergibt sich?",
+          options: ["60 Ω", "5,45 Ω", "18,18 Ω", "10 Ω", "3,33 Ω"],
           correctIndex: 1,
-          explanation: '1/R_ges = 1/10 + 1/20 + 1/30 = 6/60 + 3/60 + 2/60 = 11/60. R_ges = 60/11 ≈ 5,45 Ω. Bei Parallelschaltung ist der Gesamtwiderstand immer kleiner als der kleinste Einzelwiderstand (hier < 10 Ω). Zur Kontrolle: 60 Ω wäre die Reihenschaltung. 3,33 Ω wäre nur 1/3 des kleinsten Widerstands (falsch). 18,18 Ω wäre der arithmetische Mittelwert (kein physikalisch sinnvoller Wert für Parallelschaltung).',
+          explanation:
+            "1/R_ges = 1/10 + 1/20 + 1/30 = 6/60 + 3/60 + 2/60 = 11/60. R_ges = 60/11 ≈ 5,45 Ω. Bei Parallelschaltung ist der Gesamtwiderstand immer kleiner als der kleinste Einzelwiderstand (hier < 10 Ω). Zur Kontrolle: 60 Ω wäre die Reihenschaltung. 3,33 Ω wäre nur 1/3 des kleinsten Widerstands (falsch). 18,18 Ω wäre der arithmetische Mittelwert (kein physikalisch sinnvoller Wert für Parallelschaltung).",
           hints: [
-            '1/R_ges = 1/R₁ + 1/R₂ + 1/R₃. Bringe auf gemeinsamen Nenner (60).',
-            'Parallelwiderstand ist immer kleiner als der kleinste Einzelwiderstand. Welche Antwort ist < 10 Ω?',
+            "1/R_ges = 1/R₁ + 1/R₂ + 1/R₃. Bringe auf gemeinsamen Nenner (60).",
+            "Parallelwiderstand ist immer kleiner als der kleinste Einzelwiderstand. Welche Antwort ist < 10 Ω?",
           ],
           difficulty: 1,
-          tags: ['parallelschaltung', 'widerstand', 'schaltkreis'],
+          tags: ["parallelschaltung", "widerstand", "schaltkreis"],
         },
         {
-          question: 'Ein Kondensator (C = 100 µF) wird über einen Widerstand (R = 1000 Ω) geladen. Nach welcher Zeit ist er auf ca. 63 % seiner Endspannung geladen?',
-          options: [
-            'Nach 0,1 ms',
-            'Nach 1 ms',
-            'Nach 10 ms',
-            'Nach 100 ms',
-            'Nach 1 s',
-          ],
+          question:
+            "Ein Kondensator (C = 100 µF) wird über einen Widerstand (R = 1000 Ω) geladen. Nach welcher Zeit ist er auf ca. 63 % seiner Endspannung geladen?",
+          options: ["Nach 0,1 ms", "Nach 1 ms", "Nach 10 ms", "Nach 100 ms", "Nach 1 s"],
           correctIndex: 3,
-          explanation: 'Die Zeitkonstante τ = R·C = 1000 Ω · 100×10⁻⁶ F = 0,1 s = 100 ms. Nach genau einer Zeitkonstante τ ist der Kondensator auf U₀·(1−e⁻¹) = U₀ · 0,632 ≈ 63 % aufgeladen. Nach 5τ = 500 ms gilt der Kondensator als vollständig geladen (>99 %). Diese Zeitkonstante ist analog zur Membranzeitkonstante τ_m = R_m·C_m (typisch 1–20 ms für Neuronen), die die Reaktionsgeschwindigkeit auf Strompulse bestimmt.',
+          explanation:
+            "Die Zeitkonstante τ = R·C = 1000 Ω · 100×10⁻⁶ F = 0,1 s = 100 ms. Nach genau einer Zeitkonstante τ ist der Kondensator auf U₀·(1−e⁻¹) = U₀ · 0,632 ≈ 63 % aufgeladen. Nach 5τ = 500 ms gilt der Kondensator als vollständig geladen (>99 %). Diese Zeitkonstante ist analog zur Membranzeitkonstante τ_m = R_m·C_m (typisch 1–20 ms für Neuronen), die die Reaktionsgeschwindigkeit auf Strompulse bestimmt.",
           hints: [
-            'τ = R·C. Berechne: 1000 Ω × 100 µF = ?',
-            '100 µF = 100 × 10⁻⁶ F = 10⁻⁴ F. 1000 × 10⁻⁴ = 0,1 s = 100 ms.',
+            "τ = R·C. Berechne: 1000 Ω × 100 µF = ?",
+            "100 µF = 100 × 10⁻⁶ F = 10⁻⁴ F. 1000 × 10⁻⁴ = 0,1 s = 100 ms.",
           ],
           difficulty: 1,
-          tags: ['kondensator', 'zeitkonstante', 'rc-glied'],
+          tags: ["kondensator", "zeitkonstante", "rc-glied"],
         },
         {
-          question: 'Welches Kirchhoffsche Gesetz basiert physikalisch auf der Energieerhaltung?',
-          options: [
-            'Die Knotenregel (KCL)',
-            'Die Maschenregel (KVL)',
-            'Beide Gesetze basieren auf Energieerhaltung',
-            'Beide Gesetze basieren auf Ladungserhaltung',
-            'Keines der beiden — sie sind rein empirisch',
-          ],
+          question:
+            "Ein Defibrillator wird auf 2000 V geladen (C = 150 µF). Welche Energie ist gespeichert?",
+          options: ["W = 150 J", "W = 300 J", "W = 600 J", "W = 30 J", "W = 3000 J"],
           correctIndex: 1,
-          explanation: 'Die Maschenregel (KVL): ΣU = 0 beim Umlauf durch eine geschlossene Masche. Physikalische Basis: Das elektrische Feld ist konservativ — die Arbeit beim Umlauf ist null (Energieerhaltung). In einem konservativen Kraftfeld ist das Ringintegral des Feldes null. Die Knotenregel (KCL): ΣI = 0 am Knoten. Physikalische Basis: Ladungserhaltung — Ladung kann sich nicht im Knoten ansammeln. Beide Gesetze zusammen mit Ohm bilden das vollständige Analyswerkzeug für lineare Netzwerke.',
+          explanation:
+            "W = ½·C·U² = ½ · 150×10⁻⁶ F · (2000 V)² = ½ · 150×10⁻⁶ · 4×10⁶ = ½ · 600 = 300 J. Typische Defibrillatoren liefern 200–360 J. Diese Energie wird in ~10 ms über den Thorax entladen (R_thorax ≈ 50–100 Ω). Der resultierende Spitzenstrom beträgt I_max = U/R = 2000/75 ≈ 27 A — genug, um alle Herzmuskelzellen gleichzeitig zu depolarisieren und Kammerflimmern zu beenden. Moderne biphasische Defibrillatoren benötigen weniger Energie (100–200 J).",
           hints: [
-            'Knotenregel: Ströme am Knoten → Ladung. Maschenregel: Spannungen im Umlauf → Energie.',
-            'Beim Umlauf durch eine Masche ist die Gesamtspannung null — was steckt dahinter?',
+            "W = ½·C·U². C = 150 µF = 150 × 10⁻⁶ F. U = 2000 V → U² = 4 × 10⁶ V².",
+            "½ × 150 × 10⁻⁶ × 4 × 10⁶ = ½ × 600 = 300 J.",
           ],
           difficulty: 2,
-          tags: ['kirchhoff', 'maschenregel', 'knotenregel'],
+          tags: ["defibrillator", "kondensator", "energie"],
         },
         {
-          question: 'In welchem Schaltungselement fließt bei Gleichstrom (DC, f = 0) kein Strom im stationären Zustand?',
+          question:
+            "Die Wheatstone-Brücke ist im Gleichgewicht (kein Strom durch das Galvanometer), wenn gilt:",
           options: [
-            'Rein ohmscher Widerstand',
-            'Ideale Spule (Induktivität)',
-            'Idealer Kondensator',
-            'Reale Batterie (mit Innenwiderstand)',
-            'Supraleiter',
-          ],
-          correctIndex: 2,
-          explanation: 'Ein idealer Kondensator lässt bei Gleichstrom im stationären Zustand keinen Strom durch. Die kapazitive Reaktanz X_C = 1/(2π·f·C) → unendlich bei f → 0. Beim Einschalten fließt kurz ein Ladestrom (transient), bis der Kondensator vollständig aufgeladen ist (U_C = U_Quelle) — dann ist ΔU = 0 und I = 0. Eine ideale Spule hingegen leitet DC ohne Widerstand (X_L = 0 bei f = 0). Dieser Blockiereffekt für DC macht Kondensatoren zu wichtigen Koppel- und Filterelementen (z. B. EKG-Verstärker).',
-          hints: [
-            'X_C = 1/(2π·f·C). Was passiert, wenn f = 0 (Gleichstrom)?',
-            'Nach dem Laden: U_C = U_Quelle → keine Potentialdifferenz → kein Strom.',
-          ],
-          difficulty: 2,
-          tags: ['kondensator', 'gleichstrom', 'reaktanz'],
-        },
-        {
-          question: 'Ein Defibrillator wird auf 2000 V geladen (C = 150 µF). Welche Energie ist gespeichert?',
-          options: [
-            'W = 150 J',
-            'W = 300 J',
-            'W = 600 J',
-            'W = 30 J',
-            'W = 3000 J',
+            "R₁ + R₂ = R₃ + R₄",
+            "R₁ · R₄ = R₂ · R₃",
+            "R₁/R₂ = R₃ + R₄",
+            "R₁ · R₂ = R₃ · R₄",
+            "R₁ = R₂ = R₃ = R₄",
           ],
           correctIndex: 1,
-          explanation: 'W = ½·C·U² = ½ · 150×10⁻⁶ F · (2000 V)² = ½ · 150×10⁻⁶ · 4×10⁶ = ½ · 600 = 300 J. Typische Defibrillatoren liefern 200–360 J. Diese Energie wird in ~10 ms über den Thorax entladen (R_thorax ≈ 50–100 Ω). Der resultierende Spitzenstrom beträgt I_max = U/R = 2000/75 ≈ 27 A — genug, um alle Herzmuskelzellen gleichzeitig zu depolarisieren und Kammerflimmern zu beenden. Moderne biphasische Defibrillatoren benötigen weniger Energie (100–200 J).',
+          explanation:
+            "Für die Wheatstone-Brücke im Gleichgewicht (U_Galvanometer = 0): R₁/R₂ = R₃/R₄, äquivalent zu R₁·R₄ = R₂·R₃ (Kreuzprodukt). Die Bedingung ergibt sich aus der Maschenregel: Beide Spannungsteiler teilen die Speisespannung im gleichen Verhältnis auf. Anwendungen: Präzisionsmessung von Widerstandsänderungen in Dehnungsmessstreifen, Drucksensoren (z. B. invasive Blutdruckmessung), Temperatursensoren und Biosensoren.",
           hints: [
-            'W = ½·C·U². C = 150 µF = 150 × 10⁻⁶ F. U = 2000 V → U² = 4 × 10⁶ V².',
-            '½ × 150 × 10⁻⁶ × 4 × 10⁶ = ½ × 600 = 300 J.',
-          ],
-          difficulty: 2,
-          tags: ['defibrillator', 'kondensator', 'energie'],
-        },
-        {
-          question: 'Die Wheatstone-Brücke ist im Gleichgewicht (kein Strom durch das Galvanometer), wenn gilt:',
-          options: [
-            'R₁ + R₂ = R₃ + R₄',
-            'R₁ · R₄ = R₂ · R₃',
-            'R₁/R₂ = R₃ + R₄',
-            'R₁ · R₂ = R₃ · R₄',
-            'R₁ = R₂ = R₃ = R₄',
-          ],
-          correctIndex: 1,
-          explanation: 'Für die Wheatstone-Brücke im Gleichgewicht (U_Galvanometer = 0): R₁/R₂ = R₃/R₄, äquivalent zu R₁·R₄ = R₂·R₃ (Kreuzprodukt). Die Bedingung ergibt sich aus der Maschenregel: Beide Spannungsteiler teilen die Speisespannung im gleichen Verhältnis auf. Anwendungen: Präzisionsmessung von Widerstandsänderungen in Dehnungsmessstreifen, Drucksensoren (z. B. invasive Blutdruckmessung), Temperatursensoren und Biosensoren.',
-          hints: [
-            'Gleichgewicht: beide Spannungsteiler gleich. R₁/(R₁+R₂) = R₃/(R₃+R₄). Vereinfachen.',
-            'Kreuzprodukt: R₁·R₄ = R₂·R₃.',
+            "Gleichgewicht: beide Spannungsteiler gleich. R₁/(R₁+R₂) = R₃/(R₃+R₄). Vereinfachen.",
+            "Kreuzprodukt: R₁·R₄ = R₂·R₃.",
           ],
           difficulty: 3,
-          tags: ['wheatstone-brücke', 'spannungsteiler', 'widerstandsmessung'],
+          tags: ["wheatstone-brücke", "spannungsteiler", "widerstandsmessung"],
         },
         {
-          question: 'Warum modelliert man die Zellmembran als RC-Parallelglied statt als reinen Widerstand?',
-          options: [
-            'Weil die Membran keine Ionen leitet',
-            'Weil die Lipiddoppelschicht Ladungen speichern kann (kapazitiver Anteil) und Ionenkanäle den resistiven Anteil bilden',
-            'Weil der Widerstand der Membran konstant ist',
-            'Weil Kondensatoren Gleichstrom leiten können',
-            'Weil das Hodgkin-Huxley-Modell nur für Kondensatoren gilt',
-          ],
+          question:
+            "Welche Kapazität hat ein Plattenkondensator mit A = 0,01 m², d = 1 mm und εᵣ = 4?",
+          options: ["C ≈ 35 pF", "C ≈ 354 pF", "C ≈ 3,54 nF", "C ≈ 35,4 nF", "C ≈ 354 nF"],
           correctIndex: 1,
-          explanation: 'Die Zellmembran hat zwei parallel wirkende elektrische Eigenschaften: (1) Die Lipiddoppelschicht ist ein hervorragendes Dielektrikum (εᵣ ≈ 5, Dicke ~7 nm) und wirkt als Kondensator C_m ≈ 1 µF/cm². Sie speichert Ladungen und bestimmt die Reaktionsgeschwindigkeit auf Spannungsänderungen (τ = R_m·C_m). (2) Ionenkanäle bilden parallele Widerstände (Leitfähigkeiten g_Na, g_K etc.) für den Ionenstrom. Ein reiner Widerstand hätte keine frequenzabhängigen Eigenschaften und könnte die Dynamik des Aktionspotentials nicht erklären. Das RC-Modell erlaubt die korrekte Beschreibung des Membranstroms: I = C_m·dU/dt + ΣI_ionisch.',
+          explanation:
+            "C = ε₀·εᵣ·A/d = (8,854×10⁻¹² · 4 · 0,01) / (1×10⁻³) = (8,854×10⁻¹² · 0,04) / (10⁻³) = 3,542×10⁻¹³ / 10⁻³ = 3,542×10⁻¹⁰ F ≈ 354 pF. Probe: 354 pF = 0,354 nF. Option A wäre ohne den Faktor εᵣ = 4 (nur ε₀). Option C wäre mit d = 0,1 mm (zehnmal kleiner). Bei biologischen Membranen gilt C_m ≈ 1 µF/cm² — eine typische Zelle (A ≈ 1000 µm²) hat eine Membrankapazität von ca. 10–100 pF.",
           hints: [
-            'Lipiddoppelschicht: guter Isolator zwischen zwei Leiteroberflächen → Kondensator.',
-            'Ionenkanäle lassen Ionen durch → parallele Widerstände/Leitfähigkeiten.',
-          ],
-          difficulty: 2,
-          tags: ['zellmembran', 'rc-modell', 'membrankapazität'],
-        },
-        {
-          question: 'Welche Kapazität hat ein Plattenkondensator mit A = 0,01 m², d = 1 mm und εᵣ = 4?',
-          options: [
-            'C ≈ 35 pF',
-            'C ≈ 354 pF',
-            'C ≈ 3,54 nF',
-            'C ≈ 35,4 nF',
-            'C ≈ 354 nF',
-          ],
-          correctIndex: 1,
-          explanation: 'C = ε₀·εᵣ·A/d = (8,854×10⁻¹² · 4 · 0,01) / (1×10⁻³) = (8,854×10⁻¹² · 0,04) / (10⁻³) = 3,542×10⁻¹³ / 10⁻³ = 3,542×10⁻¹⁰ F ≈ 354 pF. Probe: 354 pF = 0,354 nF. Option A wäre ohne den Faktor εᵣ = 4 (nur ε₀). Option C wäre mit d = 0,1 mm (zehnmal kleiner). Bei biologischen Membranen gilt C_m ≈ 1 µF/cm² — eine typische Zelle (A ≈ 1000 µm²) hat eine Membrankapazität von ca. 10–100 pF.',
-          hints: [
-            'C = ε₀·εᵣ·A/d. ε₀ = 8,854 × 10⁻¹² F/m. d = 1 mm = 10⁻³ m.',
-            'Zähler: 8,854×10⁻¹² × 4 × 0,01 = 3,54×10⁻¹³. Nenner: 10⁻³. Division ergibt C in Farad.',
+            "C = ε₀·εᵣ·A/d. ε₀ = 8,854 × 10⁻¹² F/m. d = 1 mm = 10⁻³ m.",
+            "Zähler: 8,854×10⁻¹² × 4 × 0,01 = 3,54×10⁻¹³. Nenner: 10⁻³. Division ergibt C in Farad.",
           ],
           difficulty: 3,
-          tags: ['kapazität', 'plattenkondensator', 'permittivität'],
+          tags: ["kapazität", "plattenkondensator", "permittivität"],
         },
       ],
     },
     {
-      id: 'ph-5-04',
-      diagram: 'em-spectrum',
-      title: 'Magnetismus und elektromagnetische Induktion',
+      id: "ph-5-04",
+      diagram: "em-spectrum",
+      title: "Magnetismus und elektromagnetische Induktion",
+      stichworte: [
+        "Magnetfeld",
+        "Lorentz-Kraft",
+        "Biot-Savart",
+        "Faraday-Induktion",
+        "Lenzsche Regel",
+        "Transformator",
+        "Larmor-Frequenz",
+        "MRT",
+        "Elektromagnetisches Spektrum",
+        "Zyklotron",
+        "TMS",
+        "Selbstinduktion",
+      ],
       content: `## Grundlagen des Magnetismus
 
 Magnetismus entsteht durch bewegte elektrische Ladungen (elektrische Ströme). Es gibt keine magnetischen Monopole (im Gegensatz zu elektrischen Ladungen): Magnete haben immer einen Nord- und einen Südpol. Das **Magnetfeld B** [Tesla, T] ist eine Vektorgröße.
+
+**Magnetische Materialien:**
+- **Diamagnetisch** (μᵣ < 1): schwach abstoßend (Wasser, organisches Gewebe) — Grund, warum Körper vom MRT-Feld kaum beeinflusst wird
+- **Paramagnetisch** (μᵣ > 1): schwach anziehend (Aluminium, Gadolinium als MRT-Kontrastmittel)
+- **Ferromagnetisch** (μᵣ ≫ 1): stark anziehend (Eisen, Nickel, Cobalt) — Gefahr für metallische Implantate im MRT
+
+> **Merke:** Magnetfeldlinien sind immer geschlossen (keine Monopole). B-Feld-Einheit: 1 Tesla = 1 V·s/m².
 
 Das **Biot-Savart-Gesetz** beschreibt das Magnetfeld eines stromdurchflossenen Leiters. Für einen geraden, langen Leiter mit Strom I im Abstand r: **B = μ₀·I / (2π·r)**, wobei μ₀ = 4π × 10⁻⁷ T·m/A die magnetische Feldkonstante (Permeabilität des Vakuums) ist. Magnetfeldlinien bilden geschlossene Kreise um den Leiter (Rechte-Hand-Regel: Daumen in Stromrichtung → Finger zeigen in Richtung B).
 
@@ -772,52 +775,83 @@ Sich zeitlich ändernde elektrische Felder erzeugen Magnetfelder (Maxwell-Gleich
 
 Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowellen (Diathermie); Infrarot (Wärme); Sichtbares Licht (400–700 nm); UV (Desinfektion, Vitamin-D-Synthese); Röntgen (Diagnostik, 0,01–10 nm); Gamma (PET, Szintigraphie).
 
-**MRT im Detail:** Ein statisches Feld B₀ polarisiert Protonenspins. HF-Pulse (Larmor-Frequenz: f_L = γ·B₀/2π, für ¹H: γ/2π = 42,58 MHz/T) kippen die Magnetisierung. Nach dem Puls präzedieren und relaxieren die Spins — die Präzession induziert via Faraday eine Spannung in der Empfangsspule (das MRT-Signal). Gradientenspulen kodieren den Ort. T₁- und T₂-Relaxationszeiten sind gewebespezifisch und erzeugen den Bildkontrast.`,
+| EM-Bereich | Wellenlänge | Medizinische Anwendung |
+|---|---|---|
+| Radiowellen | >1 m | MRT (HF-Pulse) |
+| Mikrowellen | 1 mm–1 m | Diathermie, Mikrowellen-Ablation |
+| Infrarot | 780 nm–1 mm | Thermografie, Wärmelampen |
+| Sichtbar | 380–780 nm | Endoskopie, Laser-OP, OCT |
+| UV | 10–380 nm | Desinfektion, Phototherapie, LASIK (193 nm) |
+| Röntgen | 0,01–10 nm | Röntgen, CT |
+| Gamma | <0,01 nm | PET, Szintigraphie, Strahlentherapie |
+
+**MRT im Detail:** Ein statisches Feld B₀ polarisiert Protonenspins. HF-Pulse (Larmor-Frequenz: f_L = γ·B₀/2π, für ¹H: γ/2π = 42,58 MHz/T) kippen die Magnetisierung. Nach dem Puls präzedieren und relaxieren die Spins — die Präzession induziert via Faraday eine Spannung in der Empfangsspule (das MRT-Signal). Gradientenspulen kodieren den Ort. T₁- und T₂-Relaxationszeiten sind gewebespezifisch und erzeugen den Bildkontrast.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Larmor-Frequenz bei verschiedenen MRT-Feldstärken:**
+f_L = (γ/2π) · B₀ mit γ/2π = 42,58 MHz/T für ¹H.
+Bei 1,5 T: f_L = 42,58 × 1,5 = **63,87 MHz** (≈ 64 MHz, UKW-Bereich).
+Bei 3 T: f_L = 42,58 × 3 = **127,74 MHz** (UHF-Bereich).
+Bei 7 T: f_L = 42,58 × 7 = **298,06 MHz** — höheres SNR, aber stärkere HF-Absorption (SAR-Limit).
+
+**Beispiel 2 — Zyklotron: Protonenenergie für PET-Isotop ¹⁸F:**
+Zyklotron B = 1,2 T, Austrittsradius r = 0,4 m. Protonengeschwindigkeit: v = q·B·r/m = (1,6×10⁻¹⁹ · 1,2 · 0,4) / 1,67×10⁻²⁷ = 7,68×10⁻²⁰ / 1,67×10⁻²⁷ ≈ **4,6×10⁷ m/s** (≈ 15 % c).
+Kinetische Energie: E_kin = ½mv² = ½ · 1,67×10⁻²⁷ · (4,6×10⁷)² ≈ 1,77×10⁻¹² J ≈ **11 MeV** — ausreichend für ¹⁸O(p,n)¹⁸F-Reaktion (Schwelle ~2,6 MeV).
+
+**Beispiel 3 — TMS: induzierte Feldstärke im Kortex:**
+TMS-Spule erzeugt dB/dt = 10⁴ T/s über einer Fläche A ≈ 25 cm² = 25×10⁻⁴ m².
+Induzierte EMK (einzelne Windung): |ε| = A · dB/dt = 25×10⁻⁴ · 10⁴ = **25 V**.
+Induzierte Feldstärke im Gewebe (Radius ~2 cm): E ≈ ε/(2π·r) = 25/(2π·0,02) ≈ **200 V/m**.
+Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Schwelle.`,
 
       lernziele: [
-        'Das Magnetfeld eines geraden Leiters und einer Spule berechnen',
-        'Die Lorentz-Kraft auf bewegte Ladungen beschreiben und den Zyklotronradius berechnen',
-        'Das Faradaysche Induktionsgesetz und die Lenzsche Regel erklären und anwenden',
-        'Das Prinzip der MRT-Bildgebung physikalisch auf Magnetfeld, Larmor-Präzession und Induktion zurückführen',
-        'Das elektromagnetische Spektrum und medizinische Anwendungen verschiedener Frequenzbereiche nennen',
+        "Das Magnetfeld eines geraden Leiters und einer Spule berechnen",
+        "Die Lorentz-Kraft auf bewegte Ladungen beschreiben und den Zyklotronradius berechnen",
+        "Das Faradaysche Induktionsgesetz und die Lenzsche Regel erklären und anwenden",
+        "Das Prinzip der MRT-Bildgebung physikalisch auf Magnetfeld, Larmor-Präzession und Induktion zurückführen",
+        "Das elektromagnetische Spektrum und medizinische Anwendungen verschiedener Frequenzbereiche nennen",
       ],
       sections: [
         {
-          heading: 'Magnetfeld und Lorentz-Kraft',
-          text: 'Magnetfeld B [T] entsteht durch bewegte Ladungen/Ströme. Biot-Savart: B = μ₀·I/(2π·r) für geraden Leiter. Solenoid: B = μ₀·μᵣ·n·I. Lorentz-Kraft: F = q·v×B — senkrecht auf v und B, keine Arbeit. Kreisbahn: r = m·v/(q·B). Anwendungen: Massenspektrometrie (r → Masse), Zyklotron (PET-Isotope), MRT (B₀ = 1,5–7 T).',
-          merksatz: 'Lorentz-Kraft: F = q·v×B, senkrecht auf v und B → Kreisbahn. r = m·v/(q·B).',
+          heading: "Magnetfeld und Lorentz-Kraft",
+          text: "Magnetfeld B [T] entsteht durch bewegte Ladungen/Ströme. Biot-Savart: B = μ₀·I/(2π·r) für geraden Leiter. Solenoid: B = μ₀·μᵣ·n·I. Lorentz-Kraft: F = q·v×B — senkrecht auf v und B, keine Arbeit. Kreisbahn: r = m·v/(q·B). Anwendungen: Massenspektrometrie (r → Masse), Zyklotron (PET-Isotope), MRT (B₀ = 1,5–7 T).",
+          merksatz: "Lorentz-Kraft: F = q·v×B, senkrecht auf v und B → Kreisbahn. r = m·v/(q·B).",
         },
         {
-          heading: 'Elektromagnetische Induktion',
-          text: 'Faraday: ε = −N·dΦ/dt. Lenzsche Regel: induzierter Strom wirkt der Flussänderung entgegen. Transformator: U₁/U₂ = N₁/N₂. Generator: mechanische → elektrische Energie. MRT: präzedierende Protonenspins induzieren Signal in Empfangsspule (Faraday). Gradientenspulen schalten schnell → Wirbelströme → Klopfen. Selbstinduktion L: ε = −L·dI/dt; W = ½·L·I².',
-          merksatz: 'Faraday: ε = −N·dΦ/dt. Lenz: induzierter Strom hemmt seine Ursache.',
+          heading: "Elektromagnetische Induktion",
+          text: "Faraday: ε = −N·dΦ/dt. Lenzsche Regel: induzierter Strom wirkt der Flussänderung entgegen. Transformator: U₁/U₂ = N₁/N₂. Generator: mechanische → elektrische Energie. MRT: präzedierende Protonenspins induzieren Signal in Empfangsspule (Faraday). Gradientenspulen schalten schnell → Wirbelströme → Klopfen. Selbstinduktion L: ε = −L·dI/dt; W = ½·L·I².",
+          merksatz: "Faraday: ε = −N·dΦ/dt. Lenz: induzierter Strom hemmt seine Ursache.",
         },
         {
-          heading: 'MRT und elektromagnetisches Spektrum',
-          text: 'MRT: B₀ polarisiert ¹H-Spins. Larmor-Frequenz: f_L = γ·B₀/2π (bei 1,5 T: ~64 MHz). HF-Puls kippt Magnetisierung. Relaxation (T₁, T₂) gewebespezifisch → Bildkontrast. Gradientenspulen: Ortscodierung. EM-Spektrum: Radiowellen (MRT) → Mikrowellen → IR → sichtbar → UV → Röntgen → Gamma. Alle breiten sich mit c = 3×10⁸ m/s aus (c = λ·f).',
-          merksatz: 'c = λ·f = 3×10⁸ m/s. Larmor: f_L = γ·B₀/2π. MRT bei 1,5 T: f ≈ 64 MHz (Radiowelle).',
+          heading: "MRT und elektromagnetisches Spektrum",
+          text: "MRT: B₀ polarisiert ¹H-Spins. Larmor-Frequenz: f_L = γ·B₀/2π (bei 1,5 T: ~64 MHz). HF-Puls kippt Magnetisierung. Relaxation (T₁, T₂) gewebespezifisch → Bildkontrast. Gradientenspulen: Ortscodierung. EM-Spektrum: Radiowellen (MRT) → Mikrowellen → IR → sichtbar → UV → Röntgen → Gamma. Alle breiten sich mit c = 3×10⁸ m/s aus (c = λ·f).",
+          merksatz:
+            "c = λ·f = 3×10⁸ m/s. Larmor: f_L = γ·B₀/2π. MRT bei 1,5 T: f ≈ 64 MHz (Radiowelle).",
         },
         {
-          heading: 'Biomagnetismus und klinische Anwendungen',
-          text: 'Biologische Ströme erzeugen schwache Magnetfelder: Das Herz erzeugt ~10⁻¹⁰ T (MCG, Magnetkardiographie), das Gehirn ~10⁻¹³ T (MEG, Magnetenzephalographie). Gemessen mit SQUID-Sensoren (superconducting quantum interference devices) bei 4 K. MCG/MEG sind strahlungsfrei und zeitlich hochauflösend. Transkranielle Magnetstimulation (TMS): Kurze starke Magnetfeldpulse (Faraday-Induktion) depolarisieren kortikale Neuronen nicht-invasiv — therapeutisch bei Depression.',
-          merksatz: 'MEG: ~10⁻¹³ T (Gehirn). MCG: ~10⁻¹⁰ T (Herz). Messung mit SQUID-Sensoren. TMS: Magnetpuls → Nervenreiz.',
+          heading: "Biomagnetismus und klinische Anwendungen",
+          text: "Biologische Ströme erzeugen schwache Magnetfelder: Das Herz erzeugt ~10⁻¹⁰ T (MCG, Magnetkardiographie), das Gehirn ~10⁻¹³ T (MEG, Magnetenzephalographie). Gemessen mit SQUID-Sensoren (superconducting quantum interference devices) bei 4 K. MCG/MEG sind strahlungsfrei und zeitlich hochauflösend. Transkranielle Magnetstimulation (TMS): Kurze starke Magnetfeldpulse (Faraday-Induktion) depolarisieren kortikale Neuronen nicht-invasiv — therapeutisch bei Depression.",
+          merksatz:
+            "MEG: ~10⁻¹³ T (Gehirn). MCG: ~10⁻¹⁰ T (Herz). Messung mit SQUID-Sensoren. TMS: Magnetpuls → Nervenreiz.",
         },
       ],
       merksätze: [
-        'Magnetfeld gerader Leiter: B = μ₀·I/(2π·r). Rechte-Hand-Regel für Richtung.',
-        'Solenoid: B = μ₀·μᵣ·n·I — im Innern homogen.',
-        'Lorentz-Kraft: F = q·v×B — senkrecht auf v und B, keine Arbeit.',
-        'Zyklotronradius: r = m·v/(q·B) — Prinzip von Massenspektrometer und Zyklotron.',
-        'Faraday: ε = −N·dΦ/dt — Flussänderung induziert Spannung.',
-        'Lenzsche Regel: induzierter Strom wirkt Ursache entgegen (Energieerhaltung).',
-        'Selbstinduktion: ε = −L·dI/dt. Energie: W = ½·L·I².',
-        'c = λ·f = 3×10⁸ m/s — gilt für alle EM-Wellen im Vakuum.',
-        'Larmor-Frequenz: f_L = γ·B₀/2π — bei 1,5 T für ¹H: ~64 MHz.',
-        'TMS: Magnetfeldpuls induziert (Faraday) Strom im Kortex → Neuronenreizung.',
+        "Magnetfeld gerader Leiter: B = μ₀·I/(2π·r). Rechte-Hand-Regel für Richtung.",
+        "Solenoid: B = μ₀·μᵣ·n·I — im Innern homogen.",
+        "Lorentz-Kraft: F = q·v×B — senkrecht auf v und B, keine Arbeit.",
+        "Zyklotronradius: r = m·v/(q·B) — Prinzip von Massenspektrometer und Zyklotron.",
+        "Faraday: ε = −N·dΦ/dt — Flussänderung induziert Spannung.",
+        "Lenzsche Regel: induzierter Strom wirkt Ursache entgegen (Energieerhaltung).",
+        "Selbstinduktion: ε = −L·dI/dt. Energie: W = ½·L·I².",
+        "c = λ·f = 3×10⁸ m/s — gilt für alle EM-Wellen im Vakuum.",
+        "Larmor-Frequenz: f_L = γ·B₀/2π — bei 1,5 T für ¹H: ~64 MHz.",
+        "TMS: Magnetfeldpuls induziert (Faraday) Strom im Kortex → Neuronenreizung.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: 'Erläutern Sie das physikalische Prinzip der Magnetresonanztomographie (MRT). Gehen Sie dabei auf das statische Magnetfeld, die Larmor-Präzession, HF-Pulse, Relaxation und die Signaldetektion via Faraday-Induktion ein.',
+        question:
+          "Erläutern Sie das physikalische Prinzip der Magnetresonanztomographie (MRT). Gehen Sie dabei auf das statische Magnetfeld, die Larmor-Präzession, HF-Pulse, Relaxation und die Signaldetektion via Faraday-Induktion ein.",
         answer: `1. Statisches Hauptmagnetfeld B₀ (1,5–7 T): Supraleitende Solenoide (Nb-Ti, 4 K) erzeugen ein starkes, homogenes Feld. Wasserstoffkerne (¹H-Protonen) mit Kernspin 1/2 können sich parallel oder antiparallel zu B₀ ausrichten. Bei Körpertemperatur ist die Parallelausrichtung (niedrigere Energie) leicht bevorzugt → netto-Magnetisierung M₀ parallel zu B₀.
 
 2. Larmor-Präzession: Die Magnetisierung M präzediert um B₀ mit der Larmor-Frequenz: f_L = γ·B₀/(2π). Für ¹H: γ/2π = 42,58 MHz/T. Bei 1,5 T: f_L ≈ 64 MHz (Radiowellenbereich); bei 3 T: ~128 MHz.
@@ -828,151 +862,90 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
 
 5. Signaldetektion (Faraday-Induktion): Die präzedierende Quermagnetisierung M_xy induziert nach Faraday (ε = −dΦ/dt) in den Empfangsspulen eine Wechselspannung mit f = f_L. Dieses freie Induktionszerfallssignal (FID) wird fouriertransformiert → Frequenzspektrum → Ortscodierung durch Gradientenspulen → Bild.`,
       },
-      klinischerBezug: 'Die Magnetresonanztomographie (MRT) nutzt das Faradaysche Induktionsgesetz zur Signaldetektion: Präzedierende Protonenspins induzieren in Empfangsspulen eine messbare Wechselspannung — ohne ionisierende Strahlung, mit hervorragenden Weichteilkontrasten. Transkranielle Magnetstimulation (TMS) induziert durch kurze Magnetfeldpulse (Faraday) elektrische Ströme in kortikalen Neuronen und ermöglicht so nicht-invasive Hirnstimulation zur Behandlung von Depression und zur Kartierung kortikaler Areale. Das Elektrokardiogramm (EKG) misst elektrische Potentiale; das Magnetkardiogramm (MCG) erfasst direkt das durch Herzströme erzeugte Magnetfeld (~10⁻¹⁰ T) mit SQUID-Sensoren — strahlungsfrei und hochempfindlich.',
+      klinischerBezug:
+        "Die Magnetresonanztomographie (MRT) nutzt das Faradaysche Induktionsgesetz zur Signaldetektion: Präzedierende Protonenspins induzieren in Empfangsspulen eine messbare Wechselspannung — ohne ionisierende Strahlung, mit hervorragenden Weichteilkontrasten. Transkranielle Magnetstimulation (TMS) induziert durch kurze Magnetfeldpulse (Faraday) elektrische Ströme in kortikalen Neuronen und ermöglicht so nicht-invasive Hirnstimulation zur Behandlung von Depression und zur Kartierung kortikaler Areale. Das Elektrokardiogramm (EKG) misst elektrische Potentiale; das Magnetkardiogramm (MCG) erfasst direkt das durch Herzströme erzeugte Magnetfeld (~10⁻¹⁰ T) mit SQUID-Sensoren — strahlungsfrei und hochempfindlich.",
       selfTest: [
         {
-          question: 'Ein Proton (m = 1,67 × 10⁻²⁷ kg, q = 1,6 × 10⁻¹⁹ C) bewegt sich mit v = 10⁶ m/s senkrecht in ein Magnetfeld B = 0,5 T. Wie groß ist der Zyklotronradius?',
-          options: [
-            'r ≈ 0,21 mm',
-            'r ≈ 2,1 cm',
-            'r ≈ 21 mm',
-            'r ≈ 210 µm',
-            'r ≈ 2,1 m',
-          ],
+          question:
+            "Ein Proton (m = 1,67 × 10⁻²⁷ kg, q = 1,6 × 10⁻¹⁹ C) bewegt sich mit v = 10⁶ m/s senkrecht in ein Magnetfeld B = 0,5 T. Wie groß ist der Zyklotronradius?",
+          options: ["r ≈ 0,21 mm", "r ≈ 2,1 cm", "r ≈ 21 mm", "r ≈ 210 µm", "r ≈ 2,1 m"],
           correctIndex: 1,
-          explanation: 'r = m·v/(q·B) = (1,67×10⁻²⁷ × 10⁶) / (1,6×10⁻¹⁹ × 0,5) = 1,67×10⁻²¹ / (8×10⁻²⁰) = 0,02088 m ≈ 2,1 cm. Dieses Prinzip nutzt das Zyklotron: Protonen werden durch wechselnde elektrische Felder beschleunigt und durch ein Magnetfeld auf Kreisbahnen gehalten. Mit steigender Geschwindigkeit wächst der Radius → spiralförmige Bahn nach außen. Bei ausreichend hoher Energie werden Protonen ausgekoppelt und für PET-Isotopen-Produktion (z. B. ¹⁸F) genutzt.',
+          explanation:
+            "r = m·v/(q·B) = (1,67×10⁻²⁷ × 10⁶) / (1,6×10⁻¹⁹ × 0,5) = 1,67×10⁻²¹ / (8×10⁻²⁰) = 0,02088 m ≈ 2,1 cm. Dieses Prinzip nutzt das Zyklotron: Protonen werden durch wechselnde elektrische Felder beschleunigt und durch ein Magnetfeld auf Kreisbahnen gehalten. Mit steigender Geschwindigkeit wächst der Radius → spiralförmige Bahn nach außen. Bei ausreichend hoher Energie werden Protonen ausgekoppelt und für PET-Isotopen-Produktion (z. B. ¹⁸F) genutzt.",
           hints: [
-            'r = m·v/(q·B). Setze alle Werte ein. Achte auf Zehnerpotenzen.',
-            'Zähler: 1,67×10⁻²⁷ × 10⁶ = 1,67×10⁻²¹. Nenner: 1,6×10⁻¹⁹ × 0,5 = 8×10⁻²⁰.',
+            "r = m·v/(q·B). Setze alle Werte ein. Achte auf Zehnerpotenzen.",
+            "Zähler: 1,67×10⁻²⁷ × 10⁶ = 1,67×10⁻²¹. Nenner: 1,6×10⁻¹⁹ × 0,5 = 8×10⁻²⁰.",
           ],
           difficulty: 2,
-          tags: ['zyklotronradius', 'lorentz-kraft', 'magnetfeld'],
+          tags: ["zyklotronradius", "lorentz-kraft", "magnetfeld"],
         },
         {
-          question: 'Was beschreibt die Lenzsche Regel im Zusammenhang mit der elektromagnetischen Induktion?',
-          options: [
-            'Der induzierte Strom hat immer die gleiche Richtung wie der primäre Strom',
-            'Der induzierte Strom wirkt der Ursache seiner Entstehung (der Flussänderung) entgegen',
-            'Die induzierte Spannung ist proportional zum Magnetfeld (nicht zu seiner Änderung)',
-            'Induktion tritt nur bei supraleitenden Materialien auf',
-            'Die induzierte Spannung ist direkt proportional zur Induktivität L',
-          ],
-          correctIndex: 1,
-          explanation: 'Die Lenzsche Regel ist eine Formulierung der Energieerhaltung für elektromagnetische Induktion: Der durch eine Flussänderung induzierte Strom erzeugt seinerseits ein Magnetfeld, das der ursprünglichen Flussänderung entgegenwirkt. Das negative Vorzeichen im Faradayschen Gesetz (ε = −dΦ/dt) formalisiert dies. Konsequenz: Um den Fluss durch eine Spule zu erhöhen, muss gegen die Rückwirkung (induzierte Gegenkraft) Arbeit verrichtet werden — Energie wird in der Spule gespeichert (W = ½·L·I²). Dies erklärt, warum Gradientenspulen im MRT durch das schnelle Schalten Wirbelströme induzieren, die das Schalten bremsen.',
-          hints: [
-            'Das Minuszeichen in ε = −N·dΦ/dt steht für die Richtung. Was bedeutet das physikalisch?',
-            'Lenz: Induktion ist immer bremsend — sie wirkt der Ursache entgegen.',
-          ],
-          difficulty: 1,
-          tags: ['lenzsche-regel', 'induktion', 'energieerhaltung'],
-        },
-        {
-          question: 'Bei welcher Larmor-Frequenz präzedieren ¹H-Protonen in einem MRT-Gerät mit B₀ = 3 T? (γ/2π = 42,58 MHz/T)',
-          options: [
-            '42,58 MHz',
-            '64 MHz',
-            '127,74 MHz',
-            '300 MHz',
-            '14,2 MHz',
-          ],
+          question:
+            "Bei welcher Larmor-Frequenz präzedieren ¹H-Protonen in einem MRT-Gerät mit B₀ = 3 T? (γ/2π = 42,58 MHz/T)",
+          options: ["42,58 MHz", "64 MHz", "127,74 MHz", "300 MHz", "14,2 MHz"],
           correctIndex: 2,
-          explanation: 'f_L = (γ/2π) · B₀ = 42,58 MHz/T × 3 T = 127,74 MHz ≈ 128 MHz. Diese Frequenz liegt im UKW-Radiobereich. Bei 1,5 T: f_L ≈ 64 MHz; bei 7 T: f_L ≈ 298 MHz. Die Resonanzbedingung (HF-Puls muss genau f_L haben) ist der Grund für den Begriff "Resonanz" in der Magnetresonanztomographie. Hochfeldgeräte (7 T) arbeiten im UHF-Bereich und haben besseres Signal-Rausch-Verhältnis, aber stärkere HF-Absorption im Gewebe (SAR-Limit).',
+          explanation:
+            'f_L = (γ/2π) · B₀ = 42,58 MHz/T × 3 T = 127,74 MHz ≈ 128 MHz. Diese Frequenz liegt im UKW-Radiobereich. Bei 1,5 T: f_L ≈ 64 MHz; bei 7 T: f_L ≈ 298 MHz. Die Resonanzbedingung (HF-Puls muss genau f_L haben) ist der Grund für den Begriff "Resonanz" in der Magnetresonanztomographie. Hochfeldgeräte (7 T) arbeiten im UHF-Bereich und haben besseres Signal-Rausch-Verhältnis, aber stärkere HF-Absorption im Gewebe (SAR-Limit).',
           hints: [
-            'f_L = (γ/2π) · B₀. Multipliziere den gegebenen Wert mit B₀ = 3 T.',
-            '42,58 MHz/T × 3 T = ?',
+            "f_L = (γ/2π) · B₀. Multipliziere den gegebenen Wert mit B₀ = 3 T.",
+            "42,58 MHz/T × 3 T = ?",
           ],
           difficulty: 1,
-          tags: ['larmor-frequenz', 'mrt', 'kernspinresonanz'],
+          tags: ["larmor-frequenz", "mrt", "kernspinresonanz"],
         },
         {
-          question: 'Welcher Effekt erklärt das charakteristische Klopfen und Hämmern während einer MRT-Untersuchung?',
+          question:
+            "Welcher Effekt erklärt das charakteristische Klopfen und Hämmern während einer MRT-Untersuchung?",
           options: [
-            'Magnetostriktion der supraleitenden Spule bei 4 K',
-            'Lorentz-Kraft auf stromführende Gradientenspulen im starken Hauptmagnetfeld B₀',
-            'Kavitation durch starke Schallwellen',
-            'Thermische Ausdehnung der Kühlröhren bei Heliumzufuhr',
-            'Resonanzschwingungen des Patienten im Magnetfeld',
+            "Magnetostriktion der supraleitenden Spule bei 4 K",
+            "Lorentz-Kraft auf stromführende Gradientenspulen im starken Hauptmagnetfeld B₀",
+            "Kavitation durch starke Schallwellen",
+            "Thermische Ausdehnung der Kühlröhren bei Heliumzufuhr",
+            "Resonanzschwingungen des Patienten im Magnetfeld",
           ],
           correctIndex: 1,
-          explanation: 'Die Gradientenspulen (x, y, z) überlagern dem statischen Feld B₀ schwache ortsabhängige Felder zur Ortscodierung. Beim Ein- und Ausschalten dieser Gradientenströme (I, wechselnd) erfährt die stromführende Spule eine Lorentz-Kraft: F = I·L×B₀. Da B₀ sehr stark ist (1,5–7 T), entstehen erhebliche mechanische Kräfte auf die Spulenleiter — Vibrationen → Schall (~60–120 dB). Deshalb werden MRT-Patienten mit Gehörschutz versehen. Neuere Sequenzen (Silent Scan) modulieren die Gradienten sanfter, um die Lärmentwicklung zu reduzieren.',
+          explanation:
+            "Die Gradientenspulen (x, y, z) überlagern dem statischen Feld B₀ schwache ortsabhängige Felder zur Ortscodierung. Beim Ein- und Ausschalten dieser Gradientenströme (I, wechselnd) erfährt die stromführende Spule eine Lorentz-Kraft: F = I·L×B₀. Da B₀ sehr stark ist (1,5–7 T), entstehen erhebliche mechanische Kräfte auf die Spulenleiter — Vibrationen → Schall (~60–120 dB). Deshalb werden MRT-Patienten mit Gehörschutz versehen. Neuere Sequenzen (Silent Scan) modulieren die Gradienten sanfter, um die Lärmentwicklung zu reduzieren.",
           hints: [
-            'In einem starken Magnetfeld: Was passiert mit einem stromdurchflossenen Leiter? (F = I·L×B)',
-            'Gradientenspulen werden schnell ein- und ausgeschaltet → wechselnde Kraft → Vibration → Schall.',
+            "In einem starken Magnetfeld: Was passiert mit einem stromdurchflossenen Leiter? (F = I·L×B)",
+            "Gradientenspulen werden schnell ein- und ausgeschaltet → wechselnde Kraft → Vibration → Schall.",
           ],
           difficulty: 3,
-          tags: ['mrt-klopfen', 'lorentz-kraft', 'gradientenspulen'],
+          tags: ["mrt-klopfen", "lorentz-kraft", "gradientenspulen"],
         },
         {
-          question: 'Ein Transformator hat 200 Windungen in der Primärspule und 2000 in der Sekundärspule. Bei 230 V Primärspannung: Welche Sekundärspannung ergibt sich (idealer Transformator)?',
-          options: [
-            '23 V',
-            '230 V',
-            '2300 V',
-            '460 V',
-            '115 V',
-          ],
+          question:
+            "Ein Transformator hat 200 Windungen in der Primärspule und 2000 in der Sekundärspule. Bei 230 V Primärspannung: Welche Sekundärspannung ergibt sich (idealer Transformator)?",
+          options: ["23 V", "230 V", "2300 V", "460 V", "115 V"],
           correctIndex: 2,
-          explanation: 'Für einen idealen Transformator gilt: U₁/U₂ = N₁/N₂. Umgestellt: U₂ = U₁ · N₂/N₁ = 230 V · 2000/200 = 230 × 10 = 2300 V. Das Übersetzungsverhältnis N₂/N₁ = 10 → Hochspannungstransformator. Die Leistung bleibt bei idealem Transformator konstant: P = U₁·I₁ = U₂·I₂. Wenn die Spannung um Faktor 10 steigt, sinkt der Strom um Faktor 10. Anwendung in der Medizin: Transformatoren in der Hochspannungsversorgung von Röntgengeräten, galvanische Trennung von Patientenkreisen (Sicherheitstransformator, IEC 60601).',
+          explanation:
+            "Für einen idealen Transformator gilt: U₁/U₂ = N₁/N₂. Umgestellt: U₂ = U₁ · N₂/N₁ = 230 V · 2000/200 = 230 × 10 = 2300 V. Das Übersetzungsverhältnis N₂/N₁ = 10 → Hochspannungstransformator. Die Leistung bleibt bei idealem Transformator konstant: P = U₁·I₁ = U₂·I₂. Wenn die Spannung um Faktor 10 steigt, sinkt der Strom um Faktor 10. Anwendung in der Medizin: Transformatoren in der Hochspannungsversorgung von Röntgengeräten, galvanische Trennung von Patientenkreisen (Sicherheitstransformator, IEC 60601).",
           hints: [
-            'U₁/U₂ = N₁/N₂. Umstellen: U₂ = U₁ · (N₂/N₁).',
-            '230 V × (2000/200) = 230 × 10 = ?',
+            "U₁/U₂ = N₁/N₂. Umstellen: U₂ = U₁ · (N₂/N₁).",
+            "230 V × (2000/200) = 230 × 10 = ?",
           ],
           difficulty: 1,
-          tags: ['transformator', 'induktion', 'windungszahl'],
+          tags: ["transformator", "induktion", "windungszahl"],
         },
         {
-          question: 'Die Transkranielle Magnetstimulation (TMS) nutzt welches physikalische Prinzip zur Nervenreizung?',
+          question:
+            "Die Transkranielle Magnetstimulation (TMS) nutzt welches physikalische Prinzip zur Nervenreizung?",
           options: [
-            'Direkte Magnetkraft (Lorentz-Kraft) auf Neuronen-Ionenkanäle',
-            'Elektromagnetische Induktion (Faraday): Magnetfeldpuls induziert elektrischen Strom im Kortex',
-            'Thermische Aktivierung durch Joulesche Wärme',
-            'Resonanzabsorption von Radiowellen durch Protonen',
-            'Kapazitive Kopplung über die Schädelkalotte',
+            "Direkte Magnetkraft (Lorentz-Kraft) auf Neuronen-Ionenkanäle",
+            "Elektromagnetische Induktion (Faraday): Magnetfeldpuls induziert elektrischen Strom im Kortex",
+            "Thermische Aktivierung durch Joulesche Wärme",
+            "Resonanzabsorption von Radiowellen durch Protonen",
+            "Kapazitive Kopplung über die Schädelkalotte",
           ],
           correctIndex: 1,
-          explanation: 'TMS nutzt das Faradaysche Induktionsgesetz: Eine Spule über dem Schädel erzeugt einen kurzen (~100 µs), sehr starken Magnetfeldpuls (dB/dt bis zu 10⁴ T/s). Nach Faraday (ε = −dΦ/dt) wird dadurch ein elektrisches Feld im darunterliegenden Kortexgewebe induziert. Dieses Feld treibt einen elektrischen Strom durch die Neuronen — ausreichend stark (~1–2 V/m), um Aktionspotentiale auszulösen. Vorteil gegenüber direkter elektrischer Stimulation: kein schmerzhafter Hautstrom, nicht-invasiv. TMS wird therapeutisch bei therapieresistenter Depression eingesetzt (rTMS) und in der Forschung zur Kartierung kortikaler Areale.',
+          explanation:
+            "TMS nutzt das Faradaysche Induktionsgesetz: Eine Spule über dem Schädel erzeugt einen kurzen (~100 µs), sehr starken Magnetfeldpuls (dB/dt bis zu 10⁴ T/s). Nach Faraday (ε = −dΦ/dt) wird dadurch ein elektrisches Feld im darunterliegenden Kortexgewebe induziert. Dieses Feld treibt einen elektrischen Strom durch die Neuronen — ausreichend stark (~1–2 V/m), um Aktionspotentiale auszulösen. Vorteil gegenüber direkter elektrischer Stimulation: kein schmerzhafter Hautstrom, nicht-invasiv. TMS wird therapeutisch bei therapieresistenter Depression eingesetzt (rTMS) und in der Forschung zur Kartierung kortikaler Areale.",
           hints: [
-            'TMS: Magnetspule erzeugt schnell wechselndes Magnetfeld. Welches Gesetz verbindet ΔB mit einem elektrischen Feld?',
-            'Faraday: Ein zeitlich veränderliches Magnetfeld induziert ein elektrisches Feld — auch ohne Leiter.',
+            "TMS: Magnetspule erzeugt schnell wechselndes Magnetfeld. Welches Gesetz verbindet ΔB mit einem elektrischen Feld?",
+            "Faraday: Ein zeitlich veränderliches Magnetfeld induziert ein elektrisches Feld — auch ohne Leiter.",
           ],
           difficulty: 2,
-          tags: ['tms', 'faraday', 'neurostimulation'],
-        },
-        {
-          question: 'Welche Aussage zum elektromagnetischen Spektrum in der Medizin ist korrekt?',
-          options: [
-            'MRT nutzt Röntgenstrahlen; Röntgendiagnostik nutzt Radiowellen',
-            'MRT nutzt Radiowellen (~64–300 MHz); Röntgendiagnostik nutzt ionisierende Strahlung (0,01–10 nm Wellenlänge)',
-            'UV-Strahlung ist nicht ionisierend und ungefährlich für die DNA',
-            'Infrarotstrahlung hat höhere Energie als sichtbares Licht',
-            'PET verwendet ausschließlich sichtbares Licht zur Bildgebung',
-          ],
-          correctIndex: 1,
-          explanation: 'MRT basiert auf Radiowellen: die Larmor-Frequenz für ¹H liegt bei 64 MHz (1,5 T) bis 298 MHz (7 T) — nicht ionisierend, biologisch unbedenklich bei zugelassenen SAR-Werten. Röntgendiagnostik (Rx, CT) nutzt ionisierende Strahlung mit Wellenlängen von 0,01–10 nm und Photonenenergien über 12 keV — kann DNA direkt schädigen (Doppelstrangbrüche). UV-Strahlung (100–400 nm) ist teilweise ionisierend (UV-C) und kann DNA durch Thymindimer-Bildung schädigen → Karzinogenese. Im EM-Spektrum nimmt die Energie mit sinkender Wellenlänge zu (E = h·f = h·c/λ): Gamma > Röntgen > UV > sichtbar > IR > Mikrowellen > Radio.',
-          hints: [
-            'MRT = Magnetresonanz → Resonanzfrequenz für ¹H bei 1,5 T ≈ 64 MHz → Radiofrequenz.',
-            'Ionisierende Strahlung: E über 12 eV → UV-C, Röntgen, Gamma. MRT: Radiowellen → nicht ionisierend.',
-          ],
-          difficulty: 2,
-          tags: ['em-spektrum', 'radiowellen', 'ionisierende-strahlung'],
-        },
-        {
-          question: 'Welchen T₁- vs. T₂-Bildkontrast würde man für freies Wasser (z. B. Liquor) im MRT erwarten?',
-          options: [
-            'Kurzes T₁ (hell in T₁), kurzes T₂ (dunkel in T₂)',
-            'Kurzes T₁ (hell in T₁), langes T₂ (hell in T₂)',
-            'Langes T₁ (dunkel in T₁), kurzes T₂ (dunkel in T₂)',
-            'Langes T₁ (dunkel in T₁), langes T₂ (hell in T₂)',
-            'T₁ = T₂ (isointens in beiden Gewichtungen)',
-          ],
-          correctIndex: 3,
-          explanation: 'Freies Wasser (z. B. Liquor cerebrospinalis, Zysten, Ödeme) hat charakteristisch: langes T₁ (Protonen in freiem Wasser haben wenig Wärmeaustausch mit der Umgebung → langsame Längsrelaxation → nach kurzer Repetitionszeit wenig Signal → dunkel in T₁-Bild) und langes T₂ (freie Wassermoleküle bewegen sich schnell → wenig lokale Feldinhomogenitäten → langsame Transversalrelaxation → viel Signal bleibt bei langer Echozeit → hell in T₂-Bild). Fett hat kurzes T₁ (hell in T₁) und kurzes T₂. Diese Kontrastverhältnisse sind die Basis der MRT-Diagnostik: T₂-Wichtung zeigt Ödeme, Entzündungen, Liquor hell; T₁ zeigt Fett/Gadolinium-Anreicherung hell.',
-          hints: [
-            'Freies Wasser: molekulare Beweglichkeit hoch → langsame Relaxation in beide Richtungen.',
-            'Langes T₁ → wenig Signal in T₁-Bild (dunkel). Langes T₂ → viel Signal in T₂-Bild (hell).',
-          ],
-          difficulty: 3,
-          tags: ['mrt', 't1-t2-kontrast', 'relaxation'],
+          tags: ["tms", "faraday", "neurostimulation"],
         },
       ],
     },
@@ -982,8 +955,22 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
     // UK ph-6-01: Geometrische Optik
     // ─────────────────────────────────────────────────────────────────────────
     {
-      id: 'ph-6-01',
-      title: 'Geometrische Optik',
+      id: "ph-6-01",
+      title: "Geometrische Optik",
+      stichworte: [
+        "Reflexionsgesetz",
+        "Brechungsgesetz",
+        "Snellius",
+        "Brechungsindex",
+        "Totalreflexion",
+        "Glasfaser",
+        "Endoskopie",
+        "Sammellinse",
+        "Zerstreuungslinse",
+        "Linsengleichung",
+        "Brechkraft",
+        "Dioptrie",
+      ],
       content: `# Geometrische Optik
 
 Die geometrische Optik beschreibt das Verhalten von Licht, indem sie es als Strahlen modelliert, die sich in geraden Linien ausbreiten. Dieses Modell gilt, solange die betrachteten Strukturen deutlich größer als die Lichtwellenlänge sind.
@@ -995,6 +982,13 @@ Wenn Licht auf eine glatte Oberfläche trifft, wird es reflektiert. Das **Reflex
 > **Einfallswinkel α₁ = Ausfallswinkel α₂**
 
 Beide Winkel werden stets zur **Flächennormalen** (dem Lot auf der Oberfläche) gemessen, nicht zur Oberfläche selbst. Bei einem ebenen Spiegel entsteht ein virtuelles, seitenvertauschtes Bild in gleicher Größe wie das Objekt. Der scheinbare Bildabstand hinter dem Spiegel entspricht dem realen Objektabstand vor dem Spiegel.
+
+**Spiegeltypen und Anwendungen:**
+- **Ebener Spiegel**: virtuelles, gleichgroßes Bild (Mundhöhleninspektion, Zahnarzt-Spiegel)
+- **Konkaver Hohlspiegel**: reelles oder virtuelles vergrößertes Bild (Ophthalmoskop-Reflektoren, Zahnarzt-Kopfspiegel, Parabolantennen)
+- **Konvexer Wölbspiegel**: virtuelles verkleinertes Bild, großes Sichtfeld (Überwachungsspiegel)
+
+> **Merke:** Einfallswinkel = Ausfallswinkel, beide zur Flächennormalen gemessen. Bei rauhen Oberflächen: diffuse Reflexion (Streuung in alle Richtungen).
 
 ## Brechungsgesetz (Snellius)
 
@@ -1045,177 +1039,169 @@ Die **Brechkraft D** in **Dioptrien (dpt)** ist der Kehrwert der in Metern gemes
 Das menschliche Auge akkommodiert zwischen etwa 60 dpt (Fernpunkt) und 70 dpt (Nahpunkt, junges Auge). Brillengläser addieren Brechkraft zur vorhandenen Augenoptik.
 
 Mehrere dünne Linsen eng beieinander können als Gesamtsystem behandelt werden:
-> D_ges = D₁ + D₂ + ...`,
+> D_ges = D₁ + D₂ + ...
+
+**Sphärische Aberration und Linsenfehler:**
+Reale Linsen haben Bildfehler. Die **sphärische Aberration** entsteht, weil Randstrahlen stärker gebrochen werden als achsnahe Strahlen — das Bild wird unscharf. Abhilfe: Blenden (nur achsnahe Strahlen zulassen) oder asphärische Linsen. Die **chromatische Aberration** entsteht durch Dispersion: verschiedene Wellenlängen werden unterschiedlich stark gebrochen (kurzwelliges Licht stärker). Achromaten (verkittete Linsen aus verschiedenen Glasarten) korrigieren diesen Fehler. Im menschlichen Auge begrenzt die Pupille die sphärische Aberration natürlich.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Brechung Luft → Wasser (Snellius):**
+Lichtstrahl von Luft (n₁ = 1,0) in Wasser (n₂ = 1,33) unter α₁ = 60°.
+sin α₂ = (n₁/n₂) · sin α₁ = (1/1,33) · sin 60° = 0,7519 · 0,8660 = 0,6510.
+α₂ = arcsin(0,6510) ≈ **40,6°** — Strahl bricht zum Lot (α₂ < α₁ bei n₂ > n₁).
+
+**Beispiel 2 — Glasfaser-Akzeptanzwinkel (Endoskopie):**
+Kern n₁ = 1,62, Mantel n₂ = 1,52. Grenzwinkel: sin α_grenz = n₂/n₁ = 1,52/1,62 = 0,9383 → α_grenz = **69,8°**.
+Numerische Apertur der Faser: NA = √(n₁²−n₂²) = √(2,6244−2,3104) = √0,314 ≈ **0,56**.
+Maximaler Einkoppelwinkel (Akzeptanzwinkel): θ_max = arcsin(NA) = arcsin(0,56) ≈ **34°**.
+
+**Beispiel 3 — Linsengleichung: Vergrößerung durch Sammellinse:**
+f = 20 cm, Gegenstand bei g = 30 cm. 1/b = 1/f − 1/g = 1/20 − 1/30 = 3/60 − 2/60 = 1/60.
+b = **60 cm** (reelles Bild). Maßstab: m = b/g = 60/30 = **2** → Bild ist 2× so groß, umgekehrt.
+Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.`,
       lernziele: [
-        'Das Reflexionsgesetz anwenden und Einfallswinkel gleich Ausfallswinkel erklären.',
-        'Das Snellsche Brechungsgesetz formulieren und Brechungsindizes für Luft, Wasser und Glas kennen.',
-        'Den Grenzwinkel der Totalreflexion berechnen und deren Anwendung in Glasfasern beschreiben.',
-        'Die Linsengleichung 1/f = 1/g + 1/b anwenden und Brechkraft in Dioptrien umrechnen.',
-        'Sammel- und Zerstreuungslinsen unterscheiden und deren Einsatz bei Fehlsichtigkeiten erklären.',
+        "Das Reflexionsgesetz anwenden und Einfallswinkel gleich Ausfallswinkel erklären.",
+        "Das Snellsche Brechungsgesetz formulieren und Brechungsindizes für Luft, Wasser und Glas kennen.",
+        "Den Grenzwinkel der Totalreflexion berechnen und deren Anwendung in Glasfasern beschreiben.",
+        "Die Linsengleichung 1/f = 1/g + 1/b anwenden und Brechkraft in Dioptrien umrechnen.",
+        "Sammel- und Zerstreuungslinsen unterscheiden und deren Einsatz bei Fehlsichtigkeiten erklären.",
       ],
       sections: [
         {
-          heading: 'Reflexion und Brechung im Überblick',
-          text: 'Das Reflexionsgesetz beschreibt spiegelnde Flächen: Der Einfallswinkel entspricht dem Ausfallswinkel, stets gemessen zur Normalen. Die Brechung an Grenzflächen folgt dem Snellschen Gesetz n₁·sin α₁ = n₂·sin α₂. Beim Wechsel von dichtem zu dünnem Medium kann ab dem Grenzwinkel Totalreflexion auftreten – die Grundlage der Glasfasertechnik.',
-          merksatz: 'Einfallswinkel = Ausfallswinkel; beim Übergang in dichteres Medium: Strahl bricht zum Lot.',
+          heading: "Reflexion und Brechung im Überblick",
+          text: "Das Reflexionsgesetz beschreibt spiegelnde Flächen: Der Einfallswinkel entspricht dem Ausfallswinkel, stets gemessen zur Normalen. Die Brechung an Grenzflächen folgt dem Snellschen Gesetz n₁·sin α₁ = n₂·sin α₂. Beim Wechsel von dichtem zu dünnem Medium kann ab dem Grenzwinkel Totalreflexion auftreten – die Grundlage der Glasfasertechnik.",
+          merksatz:
+            "Einfallswinkel = Ausfallswinkel; beim Übergang in dichteres Medium: Strahl bricht zum Lot.",
         },
         {
-          heading: 'Linsengleichung und Brechkraft',
-          text: 'Die Linsengleichung 1/f = 1/g + 1/b gilt für dünne Linsen. Ist b positiv, liegt ein reelles (umgekehrtes) Bild hinter der Linse vor; ist b negativ, handelt es sich um ein virtuelles Bild auf der gleichen Seite wie der Gegenstand. Die Brechkraft D = 1/f (f in Metern) wird in Dioptrien gemessen. Sammellinsen haben positive, Zerstreuungslinsen negative Brechkraft.',
-          merksatz: 'D = 1/f [m] in Dioptrien – positive D sammelt, negative D zerstreut.',
+          heading: "Linsengleichung und Brechkraft",
+          text: "Die Linsengleichung 1/f = 1/g + 1/b gilt für dünne Linsen. Ist b positiv, liegt ein reelles (umgekehrtes) Bild hinter der Linse vor; ist b negativ, handelt es sich um ein virtuelles Bild auf der gleichen Seite wie der Gegenstand. Die Brechkraft D = 1/f (f in Metern) wird in Dioptrien gemessen. Sammellinsen haben positive, Zerstreuungslinsen negative Brechkraft.",
+          merksatz: "D = 1/f [m] in Dioptrien – positive D sammelt, negative D zerstreut.",
         },
         {
-          heading: 'Totalreflexion und Glasfasertechnik',
-          text: 'Totalreflexion tritt auf, wenn Licht aus einem optisch dichten Medium (großes n) auf eine Grenzfläche zu einem dünneren Medium trifft und der Einfallswinkel den Grenzwinkel α_grenz = arcsin(n₂/n₁) übersteigt. Kein Licht dringt mehr ins zweite Medium ein – die gesamte Energie bleibt im ersten Medium. Dieses Prinzip wird in Glasfaserkabeln genutzt: Das Licht springt durch Totalreflexion an der Kern-Mantel-Grenzfläche und kann so verlustarme Signale über große Distanzen oder durch flexible Endoskope leiten.',
-          merksatz: 'sin α_grenz = n₂/n₁ – nur möglich wenn n₁ > n₂.',
+          heading: "Totalreflexion und Glasfasertechnik",
+          text: "Totalreflexion tritt auf, wenn Licht aus einem optisch dichten Medium (großes n) auf eine Grenzfläche zu einem dünneren Medium trifft und der Einfallswinkel den Grenzwinkel α_grenz = arcsin(n₂/n₁) übersteigt. Kein Licht dringt mehr ins zweite Medium ein – die gesamte Energie bleibt im ersten Medium. Dieses Prinzip wird in Glasfaserkabeln genutzt: Das Licht springt durch Totalreflexion an der Kern-Mantel-Grenzfläche und kann so verlustarme Signale über große Distanzen oder durch flexible Endoskope leiten.",
+          merksatz: "sin α_grenz = n₂/n₁ – nur möglich wenn n₁ > n₂.",
         },
       ],
-      diagram: 'lens-imaging',
+      diagram: "lens-imaging",
 
       merksätze: [
-        'Reflexionsgesetz: Einfallswinkel α = Ausfallswinkel α (beide zur Normalen gemessen).',
-        'Snellius: n₁·sin α₁ = n₂·sin α₂ – beim Übergang in dichteres Medium bricht Licht zum Lot.',
-        'Totalreflexion: nur möglich bei n₁ > n₂; Grenzwinkel sin α_grenz = n₂/n₁.',
-        'Brechungsindizes: Luft ≈ 1, Wasser ≈ 1,33, Glas ≈ 1,5, Diamant ≈ 2,42.',
-        'Linsengleichung: 1/f = 1/g + 1/b; positives b → reelles Bild hinter der Linse.',
-        'Brechkraft D = 1/f (f in Metern), Einheit Dioptrien (dpt).',
-        'Sammellinse: f > 0, D > 0; Zerstreuungslinse: f < 0, D < 0.',
-        'Abbildungsmaßstab m = b/g; m > 1 bedeutet Vergrößerung.',
-        'Glasfasern nutzen Totalreflexion: Kern (großes n) + Mantel (kleines n) → Licht bleibt im Kern.',
-        'Brechkräfte dünner Linsen im Kontakt addieren sich: D_ges = D₁ + D₂.',
+        "Reflexionsgesetz: Einfallswinkel α = Ausfallswinkel α (beide zur Normalen gemessen).",
+        "Snellius: n₁·sin α₁ = n₂·sin α₂ – beim Übergang in dichteres Medium bricht Licht zum Lot.",
+        "Totalreflexion: nur möglich bei n₁ > n₂; Grenzwinkel sin α_grenz = n₂/n₁.",
+        "Brechungsindizes: Luft ≈ 1, Wasser ≈ 1,33, Glas ≈ 1,5, Diamant ≈ 2,42.",
+        "Linsengleichung: 1/f = 1/g + 1/b; positives b → reelles Bild hinter der Linse.",
+        "Brechkraft D = 1/f (f in Metern), Einheit Dioptrien (dpt).",
+        "Sammellinse: f > 0, D > 0; Zerstreuungslinse: f < 0, D < 0.",
+        "Abbildungsmaßstab m = b/g; m > 1 bedeutet Vergrößerung.",
+        "Glasfasern nutzen Totalreflexion: Kern (großes n) + Mantel (kleines n) → Licht bleibt im Kern.",
+        "Brechkräfte dünner Linsen im Kontakt addieren sich: D_ges = D₁ + D₂.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: 'Erklären Sie das Prinzip der Totalreflexion und beschreiben Sie deren Bedeutung für die medizinische Endoskopie.',
-        answer: 'Totalreflexion tritt auf, wenn Licht von einem optisch dichteren Medium (Brechungsindex n₁) auf die Grenzfläche zu einem optisch dünneren Medium (n₂ < n₁) trifft. Mit zunehmendem Einfallswinkel steigt der Brechungswinkel. Beim Grenzwinkel α_grenz, definiert durch sin α_grenz = n₂/n₁, läuft der gebrochene Strahl exakt entlang der Grenzfläche (Brechungswinkel = 90°). Bei Einfallswinkeln größer als α_grenz findet keinerlei Transmission mehr statt – das Licht wird vollständig reflektiert, ohne Energieverlust durch Absorption oder Transmission. Ein Beispiel: Für Glas (n=1,5) → Luft (n=1) beträgt der Grenzwinkel arcsin(1/1,5) ≈ 41,8°. In der medizinischen Endoskopie nutzt man Glasfaserbündel aus sehr dünnen Fasern (Kerndurchmesser 10–100 µm), deren Kern einen höheren Brechungsindex hat als der umgebende Mantel. Licht, das in den Kern eingekoppelt wird, trifft die Kern-Mantel-Grenzfläche stets unter einem Winkel größer als der Grenzwinkel und wird daher vollständig reflektiert. Dadurch kann Licht über Meter durch flexible, gebogene Kabel ohne wesentliche Verluste geführt werden. In modernen Endoskopen leitet eine Faser-Gruppe Beleuchtungslicht in den Körper (Kaltlicht, keine Wärme im Gewebe), während eine zweite Fasergruppe oder eine CCD-Kamera am distalen Ende das Bild zurückleitet. Diese Technik ermöglicht minimalinvasive Diagnostik (Gastroskopie, Koloskopie, Bronchoskopie, Laparoskopie) ohne große operative Zugänge.',
+        question:
+          "Erklären Sie das Prinzip der Totalreflexion und beschreiben Sie deren Bedeutung für die medizinische Endoskopie.",
+        answer:
+          "Totalreflexion tritt auf, wenn Licht von einem optisch dichteren Medium (Brechungsindex n₁) auf die Grenzfläche zu einem optisch dünneren Medium (n₂ < n₁) trifft. Mit zunehmendem Einfallswinkel steigt der Brechungswinkel. Beim Grenzwinkel α_grenz, definiert durch sin α_grenz = n₂/n₁, läuft der gebrochene Strahl exakt entlang der Grenzfläche (Brechungswinkel = 90°). Bei Einfallswinkeln größer als α_grenz findet keinerlei Transmission mehr statt – das Licht wird vollständig reflektiert, ohne Energieverlust durch Absorption oder Transmission. Ein Beispiel: Für Glas (n=1,5) → Luft (n=1) beträgt der Grenzwinkel arcsin(1/1,5) ≈ 41,8°. In der medizinischen Endoskopie nutzt man Glasfaserbündel aus sehr dünnen Fasern (Kerndurchmesser 10–100 µm), deren Kern einen höheren Brechungsindex hat als der umgebende Mantel. Licht, das in den Kern eingekoppelt wird, trifft die Kern-Mantel-Grenzfläche stets unter einem Winkel größer als der Grenzwinkel und wird daher vollständig reflektiert. Dadurch kann Licht über Meter durch flexible, gebogene Kabel ohne wesentliche Verluste geführt werden. In modernen Endoskopen leitet eine Faser-Gruppe Beleuchtungslicht in den Körper (Kaltlicht, keine Wärme im Gewebe), während eine zweite Fasergruppe oder eine CCD-Kamera am distalen Ende das Bild zurückleitet. Diese Technik ermöglicht minimalinvasive Diagnostik (Gastroskopie, Koloskopie, Bronchoskopie, Laparoskopie) ohne große operative Zugänge.",
       },
-      klinischerBezug: 'Endoskopie: Glasfasern via Totalreflexion leiten Kaltlicht und Bilder durch flexible Schläuche – Grundlage von Gastroskopie, Koloskopie, Bronchoskopie.',
+      klinischerBezug:
+        "Endoskopie: Glasfasern via Totalreflexion leiten Kaltlicht und Bilder durch flexible Schläuche – Grundlage von Gastroskopie, Koloskopie, Bronchoskopie.",
       selfTest: [
         {
-          question: 'Ein Lichtstrahl trifft von Luft (n=1,0) auf eine Glasoberfläche (n=1,5) unter einem Einfallswinkel von 45°. Welcher Brechungswinkel ergibt sich nach dem Snellschen Gesetz?',
+          question:
+            "Ein Lichtstrahl trifft von Luft (n=1,0) auf eine Glasoberfläche (n=1,5) unter einem Einfallswinkel von 45°. Welcher Brechungswinkel ergibt sich nach dem Snellschen Gesetz?",
+          options: ["28,1°", "35,3°", "45,0°", "56,3°", "67,5°"],
+          correctIndex: 0,
+          explanation:
+            "Nach Snellius gilt n₁·sin α₁ = n₂·sin α₂. Mit n₁=1,0, α₁=45°, n₂=1,5: sin α₂ = (1,0·sin 45°)/1,5 = 0,7071/1,5 = 0,4714. Damit folgt α₂ = arcsin(0,4714) ≈ 28,1°. Der Strahl bricht beim Übergang in das optisch dichtere Glas zum Lot hin, der Winkel wird also kleiner als der Einfallswinkel. Die übrigen Optionen entstehen durch fehlerhafte Anwendung (z. B. Vertauschen von n₁ und n₂ oder Vernachlässigung des Sinus).",
+          hints: [
+            "Snellius-Formel: n₁·sin α₁ = n₂·sin α₂ – stelle nach sin α₂ um.",
+            "Beim Übergang in ein optisch dichteres Medium (größeres n) wird der Winkel kleiner.",
+          ],
+          tags: ["brechungsgesetz", "snellius", "brechungswinkel"],
+          difficulty: 2,
+        },
+        {
+          question:
+            "Licht geht von Glas (n=1,5) in Luft (n=1,0) über. Ab welchem Grenzwinkel tritt Totalreflexion auf?",
           options: [
-            '28,1°',
-            '35,3°',
-            '45,0°',
-            '56,3°',
-            '67,5°',
+            "28,1°",
+            "33,7°",
+            "41,8°",
+            "48,6°",
+            "Totalreflexion ist in dieser Richtung nicht möglich",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die Totalreflexion tritt auf, wenn Licht vom dichteren ins dünnere Medium übergeht (n₁ > n₂). Der Grenzwinkel ergibt sich aus sin α_grenz = n₂/n₁ = 1,0/1,5 = 0,6667, also α_grenz = arcsin(0,6667) ≈ 41,8°. Für Einfallswinkel größer als 41,8° wird das Licht vollständig reflektiert. Die Option 48,6° wäre der Grenzwinkel für Wasser (n=1,33) → Luft. Option 5 wäre richtig, wenn das Licht von Luft in Glas ginge – dann nimmt der Brechungswinkel nie 90° an.",
+          hints: [
+            "Formel: sin α_grenz = n₂/n₁ – hier ist n₁=1,5 (Glas) und n₂=1,0 (Luft).",
+            "Totalreflexion geht nur vom dichteren ins dünnere Medium, nicht umgekehrt.",
+          ],
+          tags: ["totalreflexion", "brechungsgesetz", "snellius"],
+          difficulty: 2,
+        },
+        {
+          question:
+            "Eine Sammellinse hat eine Brennweite von 25 cm. Ein Gegenstand steht 50 cm davor. Wo befindet sich das Bild, und welcher Art ist es?",
+          options: [
+            "16,7 cm vor der Linse, virtuell",
+            "25 cm hinter der Linse, reell",
+            "50 cm hinter der Linse, reell",
+            "100 cm hinter der Linse, reell",
+            "Im Unendlichen, reell",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die Linsengleichung lautet 1/f = 1/g + 1/b. Mit f=25 cm und g=50 cm: 1/b = 1/f − 1/g = 1/25 − 1/50 = 2/50 − 1/50 = 1/50, also b=50 cm. Ein positives b bedeutet ein reelles Bild auf der dem Gegenstand gegenüberliegenden Seite der Linse. Der Abbildungsmaßstab ist m = b/g = 50/50 = 1 – das Bild ist gleich groß wie der Gegenstand. Dies entspricht dem Fall g = 2f, der in der Optik als neutraler Abbildungsfall bekannt ist.",
+          hints: [
+            "Stelle die Linsengleichung nach 1/b um: 1/b = 1/f − 1/g.",
+            "Positives b bedeutet reelles Bild auf der Rückseite der Linse.",
+          ],
+          tags: ["sammellinse", "linsengleichung", "bildweite"],
+          difficulty: 2,
+        },
+        {
+          question:
+            "Eine Brille hat eine Brechkraft von –2,0 Dioptrien. Welcher Brennweite entspricht das, und welchen Linsentyp beschreibt es?",
+          options: [
+            "2 cm, Sammellinse",
+            "20 cm, Zerstreuungslinse",
+            "50 cm, Zerstreuungslinse",
+            "200 cm, Sammellinse",
+            "500 cm, Zerstreuungslinse",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die Brechkraft D und die Brennweite f (in Metern) sind über D = 1/f verknüpft. Mit D = –2,0 dpt: f = 1/D = 1/(–2,0) = –0,50 m = –50 cm. Das negative Vorzeichen zeigt: Es handelt sich um eine Zerstreuungslinse (Konkavlinse). Zerstreuungslinsen werden zur Korrektur von Kurzsichtigkeit (Myopie) eingesetzt, weil sie das parallel einfallende Licht divergent machen und so den Fokus auf die Netzhaut zurückverlagern.",
+          hints: [
+            "Formel: f = 1/D mit f in Metern – wandle dann in Zentimeter um.",
+            "Negatives f (und negatives D) kennzeichnet eine Zerstreuungslinse.",
+          ],
+          tags: ["brechkraft", "dioptrien", "zerstreuungslinse"],
+          difficulty: 1,
+        },
+        {
+          question:
+            "Zwei dünne Linsen (D₁ = +3,0 dpt, D₂ = –1,0 dpt) werden eng nebeneinander gesetzt. Welche Gesamtbrechkraft und welche Brennweite hat das System?",
+          options: [
+            "D_ges = 2,0 dpt, f = 50 cm",
+            "D_ges = 3,0 dpt, f = 33,3 cm",
+            "D_ges = 4,0 dpt, f = 25 cm",
+            "D_ges = –2,0 dpt, f = –50 cm",
+            "D_ges = 1,5 dpt, f = 66,7 cm",
           ],
           correctIndex: 0,
-          explanation: 'Nach Snellius gilt n₁·sin α₁ = n₂·sin α₂. Mit n₁=1,0, α₁=45°, n₂=1,5: sin α₂ = (1,0·sin 45°)/1,5 = 0,7071/1,5 = 0,4714. Damit folgt α₂ = arcsin(0,4714) ≈ 28,1°. Der Strahl bricht beim Übergang in das optisch dichtere Glas zum Lot hin, der Winkel wird also kleiner als der Einfallswinkel. Die übrigen Optionen entstehen durch fehlerhafte Anwendung (z. B. Vertauschen von n₁ und n₂ oder Vernachlässigung des Sinus).',
+          explanation:
+            "Für dünne Linsen, die eng beieinanderstehen, addieren sich die Brechkräfte: D_ges = D₁ + D₂ = 3,0 + (–1,0) = 2,0 dpt. Daraus ergibt sich die Brennweite f = 1/D_ges = 1/2,0 = 0,50 m = 50 cm. Das positive Vorzeichen zeigt, dass das Gesamtsystem eine Sammellinse mit 50 cm Brennweite darstellt. Dieses Prinzip wird z. B. beim Design von Linsensystemen in Kameras oder beim Aufaddieren von Brillenstärken genutzt.",
           hints: [
-            'Snellius-Formel: n₁·sin α₁ = n₂·sin α₂ – stelle nach sin α₂ um.',
-            'Beim Übergang in ein optisch dichteres Medium (größeres n) wird der Winkel kleiner.',
+            "Brechkräfte dünner Linsen im Kontakt addieren sich direkt: D_ges = D₁ + D₂.",
+            "f = 1/D_ges (in Metern) – dann in Zentimeter umrechnen.",
           ],
-          tags: ['brechungsgesetz', 'snellius', 'brechungswinkel'],
+          tags: ["linsensystem", "brechkraft", "dioptrien"],
           difficulty: 2,
-        },
-        {
-          question: 'Licht geht von Glas (n=1,5) in Luft (n=1,0) über. Ab welchem Grenzwinkel tritt Totalreflexion auf?',
-          options: [
-            '28,1°',
-            '33,7°',
-            '41,8°',
-            '48,6°',
-            'Totalreflexion ist in dieser Richtung nicht möglich',
-          ],
-          correctIndex: 2,
-          explanation: 'Die Totalreflexion tritt auf, wenn Licht vom dichteren ins dünnere Medium übergeht (n₁ > n₂). Der Grenzwinkel ergibt sich aus sin α_grenz = n₂/n₁ = 1,0/1,5 = 0,6667, also α_grenz = arcsin(0,6667) ≈ 41,8°. Für Einfallswinkel größer als 41,8° wird das Licht vollständig reflektiert. Die Option 48,6° wäre der Grenzwinkel für Wasser (n=1,33) → Luft. Option 5 wäre richtig, wenn das Licht von Luft in Glas ginge – dann nimmt der Brechungswinkel nie 90° an.',
-          hints: [
-            'Formel: sin α_grenz = n₂/n₁ – hier ist n₁=1,5 (Glas) und n₂=1,0 (Luft).',
-            'Totalreflexion geht nur vom dichteren ins dünnere Medium, nicht umgekehrt.',
-          ],
-          tags: ['totalreflexion', 'brechungsgesetz', 'snellius'],
-          difficulty: 2,
-        },
-        {
-          question: 'Eine Sammellinse hat eine Brennweite von 25 cm. Ein Gegenstand steht 50 cm davor. Wo befindet sich das Bild, und welcher Art ist es?',
-          options: [
-            '16,7 cm vor der Linse, virtuell',
-            '25 cm hinter der Linse, reell',
-            '50 cm hinter der Linse, reell',
-            '100 cm hinter der Linse, reell',
-            'Im Unendlichen, reell',
-          ],
-          correctIndex: 2,
-          explanation: 'Die Linsengleichung lautet 1/f = 1/g + 1/b. Mit f=25 cm und g=50 cm: 1/b = 1/f − 1/g = 1/25 − 1/50 = 2/50 − 1/50 = 1/50, also b=50 cm. Ein positives b bedeutet ein reelles Bild auf der dem Gegenstand gegenüberliegenden Seite der Linse. Der Abbildungsmaßstab ist m = b/g = 50/50 = 1 – das Bild ist gleich groß wie der Gegenstand. Dies entspricht dem Fall g = 2f, der in der Optik als neutraler Abbildungsfall bekannt ist.',
-          hints: [
-            'Stelle die Linsengleichung nach 1/b um: 1/b = 1/f − 1/g.',
-            'Positives b bedeutet reelles Bild auf der Rückseite der Linse.',
-          ],
-          tags: ['sammellinse', 'linsengleichung', 'bildweite'],
-          difficulty: 2,
-        },
-        {
-          question: 'Eine Brille hat eine Brechkraft von –2,0 Dioptrien. Welcher Brennweite entspricht das, und welchen Linsentyp beschreibt es?',
-          options: [
-            '2 cm, Sammellinse',
-            '20 cm, Zerstreuungslinse',
-            '50 cm, Zerstreuungslinse',
-            '200 cm, Sammellinse',
-            '500 cm, Zerstreuungslinse',
-          ],
-          correctIndex: 2,
-          explanation: 'Die Brechkraft D und die Brennweite f (in Metern) sind über D = 1/f verknüpft. Mit D = –2,0 dpt: f = 1/D = 1/(–2,0) = –0,50 m = –50 cm. Das negative Vorzeichen zeigt: Es handelt sich um eine Zerstreuungslinse (Konkavlinse). Zerstreuungslinsen werden zur Korrektur von Kurzsichtigkeit (Myopie) eingesetzt, weil sie das parallel einfallende Licht divergent machen und so den Fokus auf die Netzhaut zurückverlagern.',
-          hints: [
-            'Formel: f = 1/D mit f in Metern – wandle dann in Zentimeter um.',
-            'Negatives f (und negatives D) kennzeichnet eine Zerstreuungslinse.',
-          ],
-          tags: ['brechkraft', 'dioptrien', 'zerstreuungslinse'],
-          difficulty: 1,
-        },
-        {
-          question: 'Warum funktionieren Glasfasern in der Endoskopie so gut zur Lichtleitung?',
-          options: [
-            'Weil Glas Licht absorbiert und thermisch wieder abstrahlt',
-            'Weil der Brechungsindex von Mantel größer ist als der des Kerns',
-            'Weil Totalreflexion an der Kern-Mantel-Grenzfläche das Licht im Kern hält',
-            'Weil das Licht am Mantel gebeugt wird und im Kern verstärkt',
-            'Weil Glasfasern das Licht durch Interferenz in sich fokussieren',
-          ],
-          correctIndex: 2,
-          explanation: 'Glasfasern bestehen aus einem Kern mit höherem Brechungsindex (n_Kern) und einem Mantel mit niedrigerem Brechungsindex (n_Mantel < n_Kern). Licht, das in den Kern eingekoppelt wird, trifft die Kern-Mantel-Grenzfläche unter Winkeln, die den Grenzwinkel der Totalreflexion überschreiten. Damit wird es vollständig reflektiert und bleibt im Kern eingeschlossen, auch wenn die Faser gebogen wird. Kein Licht dringt in den Mantel ein. Diese Totalreflexion erlaubt verlustfreie (in der Praxis: verlustarme) Lichtübertragung über flexible Wege – ideal für Endoskope, die Körperhöhlen ausleuchten und Bilder zurückleiten.',
-          hints: [
-            'Totalreflexion erfordert n_Kern > n_Mantel und Einfallswinkel > Grenzwinkel.',
-            'Der Effekt ist verlustfrei – kein Licht verlässt die Faser durch die Seite.',
-          ],
-          tags: ['glasfaser', 'endoskopie', 'totalreflexion'],
-          difficulty: 1,
-        },
-        {
-          question: 'Zwei dünne Linsen (D₁ = +3,0 dpt, D₂ = –1,0 dpt) werden eng nebeneinander gesetzt. Welche Gesamtbrechkraft und welche Brennweite hat das System?',
-          options: [
-            'D_ges = 2,0 dpt, f = 50 cm',
-            'D_ges = 3,0 dpt, f = 33,3 cm',
-            'D_ges = 4,0 dpt, f = 25 cm',
-            'D_ges = –2,0 dpt, f = –50 cm',
-            'D_ges = 1,5 dpt, f = 66,7 cm',
-          ],
-          correctIndex: 0,
-          explanation: 'Für dünne Linsen, die eng beieinanderstehen, addieren sich die Brechkräfte: D_ges = D₁ + D₂ = 3,0 + (–1,0) = 2,0 dpt. Daraus ergibt sich die Brennweite f = 1/D_ges = 1/2,0 = 0,50 m = 50 cm. Das positive Vorzeichen zeigt, dass das Gesamtsystem eine Sammellinse mit 50 cm Brennweite darstellt. Dieses Prinzip wird z. B. beim Design von Linsensystemen in Kameras oder beim Aufaddieren von Brillenstärken genutzt.',
-          hints: [
-            'Brechkräfte dünner Linsen im Kontakt addieren sich direkt: D_ges = D₁ + D₂.',
-            'f = 1/D_ges (in Metern) – dann in Zentimeter umrechnen.',
-          ],
-          tags: ['linsensystem', 'brechkraft', 'dioptrien'],
-          difficulty: 2,
-        },
-        {
-          question: 'Ein Lichtstrahl trifft senkrecht (Einfallswinkel 0°) auf eine Glasoberfläche. Welche Aussage ist korrekt?',
-          options: [
-            'Er wird vollständig reflektiert',
-            'Er wird vollständig absorbiert',
-            'Er wird nicht gebrochen, sondern setzt seinen Weg geradlinig fort',
-            'Er wird im 90°-Winkel abgelenkt',
-            'Es tritt Totalreflexion auf',
-          ],
-          correctIndex: 2,
-          explanation: 'Beim senkrechten Einfall (α₁ = 0°) gilt nach Snellius: n₁·sin 0° = n₂·sin α₂, also 0 = n₂·sin α₂, woraus α₂ = 0° folgt. Der Strahl ändert seine Richtung nicht und dringt ungebrochen ins zweite Medium ein. Seine Geschwindigkeit ändert sich zwar (v = c/n), nicht aber seine Ausbreitungsrichtung. Totalreflexion ist bei 0° nicht möglich – sie erfordert einen Einfallswinkel größer als den Grenzwinkel, der stets zwischen 0° und 90° liegt.',
-          hints: [
-            'Setze α₁ = 0° in die Snellius-Gleichung ein und löse nach α₂.',
-            'Totalreflexion erfordert einen Mindesteinfallswinkel (den Grenzwinkel) – bei 0° ist das nie erfüllt.',
-          ],
-          tags: ['brechung', 'snellius', 'senkrechter-einfall'],
-          difficulty: 1,
         },
       ],
     },
@@ -1224,8 +1210,22 @@ Mehrere dünne Linsen eng beieinander können als Gesamtsystem behandelt werden:
     // UK ph-6-02: Wellenoptik
     // ─────────────────────────────────────────────────────────────────────────
     {
-      id: 'ph-6-02',
-      title: 'Wellenoptik',
+      id: "ph-6-02",
+      title: "Wellenoptik",
+      stichworte: [
+        "Interferenz",
+        "Beugung",
+        "Doppelspalt",
+        "Kohärenz",
+        "Abbe-Kriterium",
+        "Numerische Apertur",
+        "Auflösungsvermögen",
+        "OCT",
+        "Spektrum",
+        "Wellenlänge",
+        "Superposition",
+        "Ölimmersion",
+      ],
       content: `# Wellenoptik
 
 Die Wellenoptik behandelt Licht als elektromagnetische Welle und erklärt Phänomene wie Interferenz und Beugung, die mit dem Strahlmodell der geometrischen Optik nicht beschreibbar sind.
@@ -1238,6 +1238,12 @@ Licht ist eine transversale elektromagnetische Welle, bei der elektrisches und m
 - **Zusammenhang**: c = λ·f (c = Lichtgeschwindigkeit im Vakuum ≈ 3·10⁸ m/s)
 
 Das **sichtbare Spektrum** umfasst Wellenlängen von ca. 380 nm (violett) bis 780 nm (rot). Unterhalb liegt UV-Strahlung (100–380 nm), oberhalb Infrarotstrahlung (780 nm–1 mm).
+
+> **Merke:** c = λ·f = 3×10⁸ m/s im Vakuum. Im Medium sinkt die Geschwindigkeit (v = c/n), die Wellenlänge wird kürzer (λ_medium = λ₀/n), die Frequenz bleibt gleich.
+
+**Dispersion:** Der Brechungsindex n hängt von der Wellenlänge ab — kurzwelliges Licht (blau/violett) wird stärker gebrochen als langwelliges (rot). Ein Prisma zerlegt weißes Licht in seine Spektralfarben. Medizinisch relevant: Polychromator in der Spektralphotometrie (Labordiagnostik) und chromatische Aberration in Linsen.
+
+**Polarisation:** Licht ist transversal und kann polarisiert werden — das E-Feld schwingt nur in einer Ebene. Polarisationsfilter blocken Blendlicht. Chiroptische Methoden nutzen die Drehung der Polarisationsebene durch optisch aktive Substanzen (z. B. Glukose-Bestimmung im Polarimeter).
 
 ## Interferenz
 
@@ -1287,176 +1293,153 @@ wobei **NA = n · sin α** die **numerische Apertur** des Objektivs ist (n = Bre
 
 ## Kohärente Optik und klinische Anwendungen
 
-**Optische Kohärenztomographie (OCT):** Nutzt Niederkohärenz-Interferometrie. Ein Lichtstrahl wird in Referenz- und Messstrahl aufgeteilt. Konstruktive Interferenz tritt nur auf, wenn beide Strahlen die gleiche optische Weglänge zurückgelegt haben. Durch Variation der Referenzarmlänge lässt sich ein tiefenaufgelöstes Schnittbild erzeugen (axiale Auflösung ~10 µm, nicht durch Beugung begrenzt). Klinisch wichtig für: Augendiagnostik (Netzhautschichten, Makuladegeneration), Koronargefäß-Bildgebung, Dermatologie.`,
+**Optische Kohärenztomographie (OCT):** Nutzt Niederkohärenz-Interferometrie. Ein Lichtstrahl wird in Referenz- und Messstrahl aufgeteilt. Konstruktive Interferenz tritt nur auf, wenn beide Strahlen die gleiche optische Weglänge zurückgelegt haben. Durch Variation der Referenzarmlänge lässt sich ein tiefenaufgelöstes Schnittbild erzeugen (axiale Auflösung ~10 µm, nicht durch Beugung begrenzt). Klinisch wichtig für: Augendiagnostik (Netzhautschichten, Makuladegeneration), Koronargefäß-Bildgebung, Dermatologie.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Doppelspalt-Streifenabstand (Spektroskopie):**
+λ = 550 nm (grün), d = 0,1 mm = 10⁻⁴ m, L = 2 m.
+Δy = λ·L/d = 550×10⁻⁹ · 2 / 10⁻⁴ = 1,1×10⁻⁶ / 10⁻⁴ = **11 mm**.
+Bei rotem Licht (λ = 700 nm): Δy = 700×10⁻⁹ · 2 / 10⁻⁴ = **14 mm** — breiteres Muster.
+
+**Beispiel 2 — Auflösungsgrenze (Abbe) bei verschiedenen Mikroskop-Konfigurationen:**
+Trockenobjektiv (NA = 0,95), grün (λ = 520 nm): d_min = 520/(2·0,95) = **274 nm**.
+Ölimmersion (NA = 1,3), grün: d_min = 520/(2·1,3) = **200 nm**.
+Ölimmersion, UV (λ = 350 nm): d_min = 350/(2·1,3) = **135 nm** — kleinste Bakterien noch auflösbar.
+
+**Beispiel 3 — Einzelspalt: erstes Minimum:**
+Spaltbreite b = 10 µm = 10⁻⁵ m, λ = 500 nm.
+sin α = λ/b = 500×10⁻⁹ / 10⁻⁵ = 0,05 → α ≈ **2,87°**.
+Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0,05 = **100 mm** (10 cm).`,
       lernziele: [
-        'Das sichtbare Spektrum mit Wellenlängenbereich (380–780 nm) benennen.',
-        'Konstruktive und destruktive Interferenz mit Gangunterschieds-Bedingungen erläutern.',
-        'Den Streifenabstand beim Doppelspaltexperiment mit Δy = λ·L/d berechnen.',
-        'Das Abbe-Kriterium formulieren und die Faktoren für besseres Auflösungsvermögen benennen.',
-        'Das Prinzip der OCT als klinische Anwendung der Wellenoptik beschreiben.',
+        "Das sichtbare Spektrum mit Wellenlängenbereich (380–780 nm) benennen.",
+        "Konstruktive und destruktive Interferenz mit Gangunterschieds-Bedingungen erläutern.",
+        "Den Streifenabstand beim Doppelspaltexperiment mit Δy = λ·L/d berechnen.",
+        "Das Abbe-Kriterium formulieren und die Faktoren für besseres Auflösungsvermögen benennen.",
+        "Das Prinzip der OCT als klinische Anwendung der Wellenoptik beschreiben.",
       ],
       sections: [
         {
-          heading: 'Interferenz: konstruktiv und destruktiv',
-          text: 'Wenn zwei kohärente Lichtwellen (gleiche Frequenz, konstante Phasenbeziehung) überlagern, addieren sich ihre Amplituden. Bei gleichem Gangunterschied Δ = n·λ (ganzzahliges Vielfaches der Wellenlänge) verstärken sich die Wellen konstruktiv – es entsteht Helligkeit. Bei Δ = (n+½)·λ löschen sie sich destruktiv aus – es entsteht Dunkelheit. Interferenz ist ein einzigartiges Wellenmerkmal; Teilchen zeigen dieses Verhalten nicht. Beim Youngschen Doppelspaltexperiment erzeugt die Überlagerung der Wellen aus zwei Spalten ein Streifenmuster auf einem Schirm.',
-          merksatz: 'Konstruktive Interferenz: Δ = n·λ (hell); destruktive: Δ = (n+½)·λ (dunkel).',
+          heading: "Interferenz: konstruktiv und destruktiv",
+          text: "Wenn zwei kohärente Lichtwellen (gleiche Frequenz, konstante Phasenbeziehung) überlagern, addieren sich ihre Amplituden. Bei gleichem Gangunterschied Δ = n·λ (ganzzahliges Vielfaches der Wellenlänge) verstärken sich die Wellen konstruktiv – es entsteht Helligkeit. Bei Δ = (n+½)·λ löschen sie sich destruktiv aus – es entsteht Dunkelheit. Interferenz ist ein einzigartiges Wellenmerkmal; Teilchen zeigen dieses Verhalten nicht. Beim Youngschen Doppelspaltexperiment erzeugt die Überlagerung der Wellen aus zwei Spalten ein Streifenmuster auf einem Schirm.",
+          merksatz: "Konstruktive Interferenz: Δ = n·λ (hell); destruktive: Δ = (n+½)·λ (dunkel).",
         },
         {
-          heading: 'Beugung und Auflösungsgrenze',
-          text: 'Beugung tritt auf, wenn Licht an Strukturen in Größenordnung seiner Wellenlänge vorbeizieht. Am Einzelspalt entsteht durch Beugung ein charakteristisches Intensitätsmuster mit breitem Zentralmaximum und schwächeren Nebenmaxima. Für optische Instrumente bedeutet dies: Zwei Punkte können nur dann getrennt aufgelöst werden, wenn ihr Beugungsscheibchen nicht überlappen. Das Abbe-Kriterium d_min = λ/(2·NA) setzt die fundamentale Auflösungsgrenze. Bessere Auflösung erfordert kürzeres λ oder größere numerische Apertur.',
-          merksatz: 'd_min = λ/(2·NA) – kürzere Wellenlänge und größere Apertur verbessern die Auflösung.',
+          heading: "Beugung und Auflösungsgrenze",
+          text: "Beugung tritt auf, wenn Licht an Strukturen in Größenordnung seiner Wellenlänge vorbeizieht. Am Einzelspalt entsteht durch Beugung ein charakteristisches Intensitätsmuster mit breitem Zentralmaximum und schwächeren Nebenmaxima. Für optische Instrumente bedeutet dies: Zwei Punkte können nur dann getrennt aufgelöst werden, wenn ihr Beugungsscheibchen nicht überlappen. Das Abbe-Kriterium d_min = λ/(2·NA) setzt die fundamentale Auflösungsgrenze. Bessere Auflösung erfordert kürzeres λ oder größere numerische Apertur.",
+          merksatz:
+            "d_min = λ/(2·NA) – kürzere Wellenlänge und größere Apertur verbessern die Auflösung.",
         },
         {
-          heading: 'Optische Kohärenztomographie (OCT)',
-          text: 'OCT ist ein bildgebendes Verfahren, das auf Niederkohärenz-Interferometrie basiert. Breitband-Licht (kurze Kohärenzlänge ~10 µm) wird durch einen Strahlteiler in einen Referenz- und einen Probenarm aufgeteilt. Interferenz tritt nur auf, wenn die optischen Weglängen beider Arme übereinstimmen. Durch Scannen der Referenzarmlänge erhält man ein tiefenaufgelöstes Bild (A-Scan). Seitliches Scannen ergibt ein 2D-Querschnittsbild (B-Scan). In der Augenheilkunde wird OCT routinemäßig zur Darstellung der Netzhautschichten genutzt.',
-          merksatz: 'OCT nutzt Interferenz von Niederkohärenz-Licht für hochaufgelöste Tiefenbilder (~10 µm).',
+          heading: "Optische Kohärenztomographie (OCT)",
+          text: "OCT ist ein bildgebendes Verfahren, das auf Niederkohärenz-Interferometrie basiert. Breitband-Licht (kurze Kohärenzlänge ~10 µm) wird durch einen Strahlteiler in einen Referenz- und einen Probenarm aufgeteilt. Interferenz tritt nur auf, wenn die optischen Weglängen beider Arme übereinstimmen. Durch Scannen der Referenzarmlänge erhält man ein tiefenaufgelöstes Bild (A-Scan). Seitliches Scannen ergibt ein 2D-Querschnittsbild (B-Scan). In der Augenheilkunde wird OCT routinemäßig zur Darstellung der Netzhautschichten genutzt.",
+          merksatz:
+            "OCT nutzt Interferenz von Niederkohärenz-Licht für hochaufgelöste Tiefenbilder (~10 µm).",
         },
       ],
-      diagram: 'em-spectrum',
+      diagram: "em-spectrum",
 
       merksätze: [
-        'Sichtbares Licht: λ = 380 nm (violett) bis 780 nm (rot).',
-        'c = λ·f – Lichtgeschwindigkeit ist Produkt aus Wellenlänge und Frequenz.',
-        'Konstruktive Interferenz: Gangunterschied Δ = n·λ (Wellenberge treffen aufeinander).',
-        'Destruktive Interferenz: Gangunterschied Δ = (n+½)·λ (Berg trifft Tal).',
-        'Doppelspalt-Streifenabstand: Δy = λ·L/d – größeres λ oder kleineres d → weiteres Muster.',
-        'Beugung ist merklich, wenn Hindernisbreite ≈ Wellenlänge.',
-        'Kurzwelliges Licht (violett) wird weniger gebeugt als langwelliges (rot).',
-        'Abbe-Kriterium: d_min = λ/(2·NA) – fundamentales Auflösungslimit optischer Systeme.',
-        'Numerische Apertur NA = n·sin α – Öl-Immersionsobjektive erhöhen NA auf ~1,4.',
-        'OCT nutzt Niederkohärenz-Interferometrie für ~10 µm Tiefenauflösung am Auge.',
+        "Sichtbares Licht: λ = 380 nm (violett) bis 780 nm (rot).",
+        "c = λ·f – Lichtgeschwindigkeit ist Produkt aus Wellenlänge und Frequenz.",
+        "Konstruktive Interferenz: Gangunterschied Δ = n·λ (Wellenberge treffen aufeinander).",
+        "Destruktive Interferenz: Gangunterschied Δ = (n+½)·λ (Berg trifft Tal).",
+        "Doppelspalt-Streifenabstand: Δy = λ·L/d – größeres λ oder kleineres d → weiteres Muster.",
+        "Beugung ist merklich, wenn Hindernisbreite ≈ Wellenlänge.",
+        "Kurzwelliges Licht (violett) wird weniger gebeugt als langwelliges (rot).",
+        "Abbe-Kriterium: d_min = λ/(2·NA) – fundamentales Auflösungslimit optischer Systeme.",
+        "Numerische Apertur NA = n·sin α – Öl-Immersionsobjektive erhöhen NA auf ~1,4.",
+        "OCT nutzt Niederkohärenz-Interferometrie für ~10 µm Tiefenauflösung am Auge.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: 'Was ist das Abbe-Kriterium, und wie kann die Auflösung eines Lichtmikroskops verbessert werden?',
-        answer: 'Das Abbe-Kriterium (Ernst Abbe, 1873) gibt die fundamentale Auflösungsgrenze eines lichtoptischen Systems an. Es besagt, dass zwei benachbarte Punkte nur dann getrennt sichtbar sind, wenn ihr Abstand d_min größer als λ/(2·NA) ist, wobei λ die Wellenlänge des verwendeten Lichts und NA = n·sin α die numerische Apertur des Objektivs sind (n = Brechungsindex des Mediums, α = halber Öffnungswinkel des Objektivs). Diese Grenze ergibt sich aus dem Wellencharakter des Lichts: Das von einem Punktobjekt erzeugte Beugungsmuster (Airy-Scheibchen) überlappen, sobald zwei Punkte zu nah beieinander liegen. Die Auflösung kann auf drei Wegen verbessert werden: (1) Kürzere Wellenlänge: Durch Verwendung von UV-Licht (λ ≈ 250 nm statt 500 nm) kann d_min auf etwa 100 nm halbiert werden. Noch kleinere Wellenlängen (Röntgen, Elektronen) ermöglichen Nanometer-Auflösung. (2) Größere numerische Apertur: Ölimmersionsobjektive ersetzen Luft (n=1) durch Immersionsöl (n≈1,52) zwischen Probe und Objektiv, was NA bis ≈1,4 ermöglicht und d_min auf ~140 nm senkt. (3) Moderne Superresolution-Techniken (STED, STORM, PALM) umgehen die Abbe-Grenze durch nicht-lineare Effekte oder stochastische Einzelmolekül-Lokalisierung und erreichen Auflösungen von wenigen Nanometern. Im klinischen Alltag sind konfokale Laser-Scanning-Mikroskope (NA~1,4, λ~488 nm) Standard in Pathologie und Forschung.',
+        question:
+          "Was ist das Abbe-Kriterium, und wie kann die Auflösung eines Lichtmikroskops verbessert werden?",
+        answer:
+          "Das Abbe-Kriterium (Ernst Abbe, 1873) gibt die fundamentale Auflösungsgrenze eines lichtoptischen Systems an. Es besagt, dass zwei benachbarte Punkte nur dann getrennt sichtbar sind, wenn ihr Abstand d_min größer als λ/(2·NA) ist, wobei λ die Wellenlänge des verwendeten Lichts und NA = n·sin α die numerische Apertur des Objektivs sind (n = Brechungsindex des Mediums, α = halber Öffnungswinkel des Objektivs). Diese Grenze ergibt sich aus dem Wellencharakter des Lichts: Das von einem Punktobjekt erzeugte Beugungsmuster (Airy-Scheibchen) überlappen, sobald zwei Punkte zu nah beieinander liegen. Die Auflösung kann auf drei Wegen verbessert werden: (1) Kürzere Wellenlänge: Durch Verwendung von UV-Licht (λ ≈ 250 nm statt 500 nm) kann d_min auf etwa 100 nm halbiert werden. Noch kleinere Wellenlängen (Röntgen, Elektronen) ermöglichen Nanometer-Auflösung. (2) Größere numerische Apertur: Ölimmersionsobjektive ersetzen Luft (n=1) durch Immersionsöl (n≈1,52) zwischen Probe und Objektiv, was NA bis ≈1,4 ermöglicht und d_min auf ~140 nm senkt. (3) Moderne Superresolution-Techniken (STED, STORM, PALM) umgehen die Abbe-Grenze durch nicht-lineare Effekte oder stochastische Einzelmolekül-Lokalisierung und erreichen Auflösungen von wenigen Nanometern. Im klinischen Alltag sind konfokale Laser-Scanning-Mikroskope (NA~1,4, λ~488 nm) Standard in Pathologie und Forschung.",
       },
-      klinischerBezug: 'OCT am Auge erreicht ~10 µm axiale Auflösung via Interferometrie – Standard für Makuladiagnostik, Glaukom und Netzhautödem.',
+      klinischerBezug:
+        "OCT am Auge erreicht ~10 µm axiale Auflösung via Interferometrie – Standard für Makuladiagnostik, Glaukom und Netzhautödem.",
       selfTest: [
         {
-          question: 'Beim Youngschen Doppelspaltexperiment beträgt der Spaltabstand 0,5 mm, der Abstand zum Schirm 1,5 m und die Wellenlänge 500 nm. Welchen Abstand haben zwei benachbarte helle Streifen?',
-          options: [
-            '0,15 mm',
-            '0,75 mm',
-            '1,5 mm',
-            '3,0 mm',
-            '7,5 mm',
-          ],
+          question:
+            "Beim Youngschen Doppelspaltexperiment beträgt der Spaltabstand 0,5 mm, der Abstand zum Schirm 1,5 m und die Wellenlänge 500 nm. Welchen Abstand haben zwei benachbarte helle Streifen?",
+          options: ["0,15 mm", "0,75 mm", "1,5 mm", "3,0 mm", "7,5 mm"],
           correctIndex: 2,
-          explanation: 'Der Streifenabstand beim Doppelspalt ergibt sich aus Δy = λ·L/d. Mit λ = 500·10⁻⁹ m, L = 1,5 m, d = 0,5·10⁻³ m: Δy = (500·10⁻⁹ · 1,5) / (0,5·10⁻³) = 750·10⁻⁹ / 5·10⁻⁴ = 1,5·10⁻³ m = 1,5 mm. Die Streifen liegen also 1,5 mm voneinander entfernt. Halbiert man d auf 0,25 mm, würde sich der Abstand verdoppeln auf 3,0 mm.',
+          explanation:
+            "Der Streifenabstand beim Doppelspalt ergibt sich aus Δy = λ·L/d. Mit λ = 500·10⁻⁹ m, L = 1,5 m, d = 0,5·10⁻³ m: Δy = (500·10⁻⁹ · 1,5) / (0,5·10⁻³) = 750·10⁻⁹ / 5·10⁻⁴ = 1,5·10⁻³ m = 1,5 mm. Die Streifen liegen also 1,5 mm voneinander entfernt. Halbiert man d auf 0,25 mm, würde sich der Abstand verdoppeln auf 3,0 mm.",
           hints: [
-            'Formel: Δy = λ·L/d – alle Größen in SI-Einheiten (Meter) einsetzen.',
-            'Lasse auf Einheiten achten: λ in Metern (1 nm = 10⁻⁹ m), d in Metern.',
+            "Formel: Δy = λ·L/d – alle Größen in SI-Einheiten (Meter) einsetzen.",
+            "Lasse auf Einheiten achten: λ in Metern (1 nm = 10⁻⁹ m), d in Metern.",
           ],
-          tags: ['doppelspalt', 'streifenabstand', 'interferenz'],
+          tags: ["doppelspalt", "streifenabstand", "interferenz"],
           difficulty: 2,
         },
         {
-          question: 'Unter welcher Bedingung tritt destruktive Interferenz auf?',
-          options: [
-            'Gangunterschied Δ = n·λ (n = 0, 1, 2, …)',
-            'Gangunterschied Δ = (n + ½)·λ (n = 0, 1, 2, …)',
-            'Gangunterschied Δ = n·λ/2 (n = 1, 3, 5, …)',
-            'Die Wellen müssen verschiedene Frequenzen haben',
-            'Die Amplituden müssen verschieden groß sein',
-          ],
-          correctIndex: 1,
-          explanation: 'Destruktive Interferenz (Auslöschung) tritt auf, wenn der Gangunterschied Δ = (n+½)·λ beträgt, also λ/2, 3λ/2, 5λ/2, … In diesem Fall trifft ein Wellenberg der einen Welle auf ein Wellental der anderen – die Amplituden kompensieren sich. Konstruktive Interferenz (Verstärkung) tritt bei Δ = n·λ auf. Wichtig: Beide Wellen müssen kohärent sein (gleiche Frequenz, stabile Phasenbeziehung). Verschiedene Frequenzen oder Amplituden sind keine Bedingungen für destruktive Interferenz.',
-          hints: [
-            'Destruktiv bedeutet Auslöschung: Berg trifft Tal – was muss der Gangunterschied sein?',
-            'Ein halbes λ Versatz bringt die Phasen genau entgegengesetzt.',
-          ],
-          tags: ['interferenz', 'gangunterschied', 'wellenoptik'],
-          difficulty: 1,
-        },
-        {
-          question: 'Ein Lichtmikroskop mit Luft als Medium (n=1) hat ein Objektiv mit halbem Öffnungswinkel α=70°. Wie groß ist die numerische Apertur ungefähr?',
-          options: [
-            'NA = 0,34',
-            'NA = 0,50',
-            'NA = 0,77',
-            'NA = 0,94',
-            'NA = 1,41',
-          ],
+          question:
+            "Ein Lichtmikroskop mit Luft als Medium (n=1) hat ein Objektiv mit halbem Öffnungswinkel α=70°. Wie groß ist die numerische Apertur ungefähr?",
+          options: ["NA = 0,34", "NA = 0,50", "NA = 0,77", "NA = 0,94", "NA = 1,41"],
           correctIndex: 3,
-          explanation: 'Die numerische Apertur ist NA = n·sin α. Mit n = 1 (Luft) und α = 70°: NA = 1·sin 70° = 1·0,940 = 0,94. Dies ist ein realistischer Wert für ein Trockenobjektiv hoher Qualität. Mit Ölimmersion (n ≈ 1,52) und gleichem Winkel wäre NA = 1,52·0,940 ≈ 1,43. Werte über NA = 1,5 sind technisch kaum erreichbar. Höhere NA bedeutet direktes Ergebnis: bessere Auflösung nach dem Abbe-Kriterium d_min = λ/(2·NA).',
+          explanation:
+            "Die numerische Apertur ist NA = n·sin α. Mit n = 1 (Luft) und α = 70°: NA = 1·sin 70° = 1·0,940 = 0,94. Dies ist ein realistischer Wert für ein Trockenobjektiv hoher Qualität. Mit Ölimmersion (n ≈ 1,52) und gleichem Winkel wäre NA = 1,52·0,940 ≈ 1,43. Werte über NA = 1,5 sind technisch kaum erreichbar. Höhere NA bedeutet direktes Ergebnis: bessere Auflösung nach dem Abbe-Kriterium d_min = λ/(2·NA).",
           hints: [
-            'NA = n·sin α – bei Luft ist n = 1, also NA = sin α.',
-            'sin 70° ≈ 0,94 – du kannst sin 60° = 0,866 und sin 90° = 1 als Grenzwerte nutzen.',
+            "NA = n·sin α – bei Luft ist n = 1, also NA = sin α.",
+            "sin 70° ≈ 0,94 – du kannst sin 60° = 0,866 und sin 90° = 1 als Grenzwerte nutzen.",
           ],
-          tags: ['numerische-apertur', 'mikroskop', 'auflösung'],
+          tags: ["numerische-apertur", "mikroskop", "auflösung"],
           difficulty: 2,
         },
         {
-          question: 'Ein Mikroskop arbeitet mit grünem Licht (λ = 520 nm) und einer numerischen Apertur von 1,3. Was ist die theoretische Auflösungsgrenze nach Abbe?',
-          options: [
-            '200 nm',
-            '400 nm',
-            '260 nm',
-            '100 nm',
-            '520 nm',
-          ],
+          question:
+            "Ein Mikroskop arbeitet mit grünem Licht (λ = 520 nm) und einer numerischen Apertur von 1,3. Was ist die theoretische Auflösungsgrenze nach Abbe?",
+          options: ["200 nm", "400 nm", "260 nm", "100 nm", "520 nm"],
           correctIndex: 0,
-          explanation: 'Nach Abbe gilt d_min = λ/(2·NA) = 520 nm / (2·1,3) = 520/2,6 = 200 nm. Das bedeutet: Zwei Punkte mit weniger als 200 nm Abstand können mit diesem Mikroskop nicht mehr getrennt aufgelöst werden. Um die Auflösung weiter zu verbessern, könnte man kürzere Wellenlängen (z. B. UV mit 350 nm) nutzen oder die NA erhöhen. Mit λ=350 nm und NA=1,4 ergäbe sich d_min = 350/(2·1,4) = 125 nm.',
+          explanation:
+            "Nach Abbe gilt d_min = λ/(2·NA) = 520 nm / (2·1,3) = 520/2,6 = 200 nm. Das bedeutet: Zwei Punkte mit weniger als 200 nm Abstand können mit diesem Mikroskop nicht mehr getrennt aufgelöst werden. Um die Auflösung weiter zu verbessern, könnte man kürzere Wellenlängen (z. B. UV mit 350 nm) nutzen oder die NA erhöhen. Mit λ=350 nm und NA=1,4 ergäbe sich d_min = 350/(2·1,4) = 125 nm.",
           hints: [
-            'Formel direkt anwenden: d_min = λ/(2·NA) – Einheiten konsistent halten (nm).',
-            'NA = 1,3 ist ein realistischer Wert für Ölimmersionsobjektive.',
+            "Formel direkt anwenden: d_min = λ/(2·NA) – Einheiten konsistent halten (nm).",
+            "NA = 1,3 ist ein realistischer Wert für Ölimmersionsobjektive.",
           ],
-          tags: ['abbe-kriterium', 'auflösungsgrenze', 'mikroskop'],
+          tags: ["abbe-kriterium", "auflösungsgrenze", "mikroskop"],
           difficulty: 2,
         },
         {
-          question: 'Welches Phänomen beweist, dass Licht Wellencharakter hat?',
+          question:
+            "Wie verändert sich das Beugungsmuster am Doppelspalt, wenn die Wellenlänge des Lichts verdoppelt wird (bei konstantem Spaltabstand und Schirmabstand)?",
           options: [
-            'Lichtgeschwindigkeit ist endlich (c ≈ 3·10⁸ m/s)',
-            'Licht kann Elektronen aus Metall herauslösen (Photoeffekt)',
-            'Licht überträgt Energie in Quanten (Photonen)',
-            'Licht zeigt Interferenz und Beugung (Young-Doppelspalt)',
-            'Licht breitet sich geradlinig aus',
-          ],
-          correctIndex: 3,
-          explanation: 'Interferenz und Beugung sind eindeutige Welleneigenschaften. Das Youngsche Doppelspaltexperiment zeigt, dass Licht ein Streifenmuster erzeugt, das nur durch Überlagerung von Wellen erklärbar ist. Der Photoeffekt (Option 2) hingegen beweist den Teilchencharakter des Lichts und erklärt, warum Licht in Quanten (Photonen) absorbiert wird. Licht zeigt diesen Welle-Teilchen-Dualismus: Beide Aspekte sind real und komplementär. Die geradlinige Ausbreitung (Option 5) ist eine Näherung der geometrischen Optik, die für Strukturen viel größer als λ gilt.',
-          hints: [
-            'Interferenz und Beugung sind klassische Welleneigenschaften – welche Option beschreibt das?',
-            'Denke daran: Der Photoeffekt beweist den Teilchencharakter, nicht den Wellencharakter.',
-          ],
-          tags: ['wellencharakter', 'interferenz', 'photoeffekt'],
-          difficulty: 1,
-        },
-        {
-          question: 'Wie verändert sich das Beugungsmuster am Doppelspalt, wenn die Wellenlänge des Lichts verdoppelt wird (bei konstantem Spaltabstand und Schirmabstand)?',
-          options: [
-            'Die Streifen werden halbiert',
-            'Die Streifen verschwinden ganz',
-            'Der Streifenabstand verdoppelt sich',
-            'Der Streifenabstand halbiert sich',
-            'Das Muster bleibt unverändert',
+            "Die Streifen werden halbiert",
+            "Die Streifen verschwinden ganz",
+            "Der Streifenabstand verdoppelt sich",
+            "Der Streifenabstand halbiert sich",
+            "Das Muster bleibt unverändert",
           ],
           correctIndex: 2,
-          explanation: 'Der Streifenabstand beim Doppelspalt ist Δy = λ·L/d. Da L und d konstant bleiben, ist Δy direkt proportional zu λ. Verdoppelt man λ, verdoppelt sich auch Δy. Beispiel: Wechsel von grünem Licht (λ=520 nm) zu infrarotem Licht (λ=1040 nm) verdoppelt die Streifenbreite. Dieses Prinzip wird in der Spektroskopie genutzt: Durch Messung des Streifenabstands kann man λ bestimmen. Bei blauem Licht (λ≈450 nm) ist Δy kleiner als bei rotem Licht (λ≈700 nm) – blaues Licht ergibt engere Streifen.',
+          explanation:
+            "Der Streifenabstand beim Doppelspalt ist Δy = λ·L/d. Da L und d konstant bleiben, ist Δy direkt proportional zu λ. Verdoppelt man λ, verdoppelt sich auch Δy. Beispiel: Wechsel von grünem Licht (λ=520 nm) zu infrarotem Licht (λ=1040 nm) verdoppelt die Streifenbreite. Dieses Prinzip wird in der Spektroskopie genutzt: Durch Messung des Streifenabstands kann man λ bestimmen. Bei blauem Licht (λ≈450 nm) ist Δy kleiner als bei rotem Licht (λ≈700 nm) – blaues Licht ergibt engere Streifen.",
           hints: [
-            'Δy = λ·L/d – wie ändert sich Δy, wenn λ verdoppelt wird?',
-            'Δy ist direkt proportional zu λ bei konstantem L und d.',
+            "Δy = λ·L/d – wie ändert sich Δy, wenn λ verdoppelt wird?",
+            "Δy ist direkt proportional zu λ bei konstantem L und d.",
           ],
-          tags: ['doppelspalt', 'interferenz', 'wellenlänge'],
+          tags: ["doppelspalt", "interferenz", "wellenlänge"],
           difficulty: 2,
         },
         {
-          question: 'Was ist das Prinzip der optischen Kohärenztomographie (OCT)?',
+          question: "Was ist das Prinzip der optischen Kohärenztomographie (OCT)?",
           options: [
-            'Röntgenstrahlen werden durch das Auge geschickt und gebeugt',
-            'Ultraschall reflektiert an Gewebegrenzen und liefert Tiefenbilder',
-            'Fluoreszenzfarbstoffe absorbieren und emittieren Licht für Bilder',
-            'Niederkohärentes Licht interferiert nur bei identischer optischer Weglänge im Referenz- und Probenarm',
-            'Infrarotes Licht wird von Netzhautpigmenten absorbiert und thermisch detektiert',
+            "Röntgenstrahlen werden durch das Auge geschickt und gebeugt",
+            "Ultraschall reflektiert an Gewebegrenzen und liefert Tiefenbilder",
+            "Fluoreszenzfarbstoffe absorbieren und emittieren Licht für Bilder",
+            "Niederkohärentes Licht interferiert nur bei identischer optischer Weglänge im Referenz- und Probenarm",
+            "Infrarotes Licht wird von Netzhautpigmenten absorbiert und thermisch detektiert",
           ],
           correctIndex: 3,
-          explanation: 'OCT basiert auf Niederkohärenz-Interferometrie (auch Weißlichtinterferometrie genannt). Breitbandiges Licht mit kurzer Kohärenzlänge (typisch ~10 µm) wird durch einen Strahlteiler in zwei Arme geleitet: den Referenzarm (bekannte Länge) und den Probenarm (ins Gewebe). Interferenz tritt nur dann auf, wenn die optischen Weglängen beider Arme innerhalb der Kohärenzlänge übereinstimmen. Durch Variation der Referenzarmlänge lässt sich ein tiefenaufgelöstes Rückstreuprofil des Gewebes aufnehmen. Die axiale Auflösung ist durch die Kohärenzlänge (nicht durch Beugung) limitiert und beträgt typisch 5–15 µm. OCT ist Standard in der Augenheilkunde für Netzhautschichtanalysen.',
+          explanation:
+            "OCT basiert auf Niederkohärenz-Interferometrie (auch Weißlichtinterferometrie genannt). Breitbandiges Licht mit kurzer Kohärenzlänge (typisch ~10 µm) wird durch einen Strahlteiler in zwei Arme geleitet: den Referenzarm (bekannte Länge) und den Probenarm (ins Gewebe). Interferenz tritt nur dann auf, wenn die optischen Weglängen beider Arme innerhalb der Kohärenzlänge übereinstimmen. Durch Variation der Referenzarmlänge lässt sich ein tiefenaufgelöstes Rückstreuprofil des Gewebes aufnehmen. Die axiale Auflösung ist durch die Kohärenzlänge (nicht durch Beugung) limitiert und beträgt typisch 5–15 µm. OCT ist Standard in der Augenheilkunde für Netzhautschichtanalysen.",
           hints: [
             'OCT = Optische Kohärenztomographie – "Kohärenz" ist der Schlüsselbegriff.',
-            'Das Prinzip ähnelt dem Ultraschall-Echo, aber mit Licht statt Schall.',
+            "Das Prinzip ähnelt dem Ultraschall-Echo, aber mit Licht statt Schall.",
           ],
-          tags: ['oct', 'kohärenz', 'interferometrie'],
+          tags: ["oct", "kohärenz", "interferometrie"],
           difficulty: 3,
         },
       ],
@@ -1466,9 +1449,23 @@ wobei **NA = n · sin α** die **numerische Apertur** des Objektivs ist (n = Bre
     // UK ph-6-03: Optische Instrumente
     // ─────────────────────────────────────────────────────────────────────────
     {
-      id: 'ph-6-03',
-      diagram: 'lens-imaging',
-      title: 'Optische Instrumente',
+      id: "ph-6-03",
+      diagram: "lens-imaging",
+      title: "Optische Instrumente",
+      stichworte: [
+        "Lupe",
+        "Lichtmikroskop",
+        "Teleskop",
+        "Endoskop",
+        "Ophthalmoskop",
+        "Spaltlampe",
+        "Konfokalmikroskop",
+        "Vergrößerung",
+        "Auflösungsgrenze",
+        "Laparoskopie",
+        "CCD-Sensor",
+        "Glasfaser",
+      ],
       content: `# Optische Instrumente
 
 Optische Instrumente kombinieren Linsen, Spiegel und optische Elemente, um die natürlichen Grenzen des menschlichen Sehens zu überwinden. Für die Medizin sind Lupe, Mikroskop, Endoskop und Ophthalmoskop besonders relevant.
@@ -1481,6 +1478,13 @@ Die Lupe ist die einfachste Sehhilfe – eine einzelne Sammellinse. Das menschli
 > **M = S / f** (S = 25 cm, f in cm)
 
 Beispiel: Lupe mit f = 5 cm → M = 25/5 = 5-fache Vergrößerung.
+
+> **Merke:** Lupe = Sammellinse, die das Objekt näher als die deutliche Sehweite bringt und es virtuell, aufrecht und vergrößert zeigt.
+
+**Klinische Lupen:**
+- **Dermatoskop** (f ≈ 4 cm, M ≈ 6×): Hautläsionen nach ABCDE-Kriterien beurteilen
+- **Operationslupe** (2–6×): mikrochirurgische Eingriffe (Gefäß-, Nervennaht)
+- **Kopflupe mit Beleuchtung**: HNO, Zahnheilkunde
 
 ## Lichtmikroskop
 
@@ -1528,174 +1532,157 @@ Das distale Ende ist biegbar (Steuerdraht-Mechanismus), sodass Windungen im Gast
 
 Das **direkte Ophthalmoskop** (Augenspiegel) projiziert Licht durch die Pupille auf die Netzhaut. Eine Linsenoptik ermöglicht den Blick auf Papille, Makulabereich und Gefäße. Klinisch wichtig für Diagnose von Glaukomschäden, Papillenödem, diabetische Retinopathie.
 
-Die **Spaltlampe** ist ein spezielles Auflichtmikroskop mit Spaltbeleuchtung. Sie beleuchtet das Auge mit einem feinen Lichtspalt und erlaubt Schnittdarstellungen von Hornhaut, Linse, Glaskörper. Kombination mit Kontaktlinsen ermöglicht Hintergrunduntersuchung.`,
+Die **Spaltlampe** ist ein spezielles Auflichtmikroskop mit Spaltbeleuchtung. Sie beleuchtet das Auge mit einem feinen Lichtspalt und erlaubt Schnittdarstellungen von Hornhaut, Linse, Glaskörper. Kombination mit Kontaktlinsen ermöglicht Hintergrunduntersuchung.
+
+## Elektronenmikroskop
+
+Das **Transmissions-Elektronenmikroskop (TEM)** nutzt Elektronen statt Licht. De-Broglie-Wellenlänge der Elektronen (bei 100 kV: λ ≈ 0,004 nm) ist ~100.000× kleiner als Licht → Auflösung bis ~0,1 nm (Atomniveau). Das **Raster-Elektronenmikroskop (REM/SEM)** rastert die Oberfläche ab und liefert dreidimensionale Bilder mit großer Tiefenschärfe. Medizinisch: Virusdiagnostik (Negativkontrastierung), Gewebeultrastruktur, Biomaterialforschung.
+
+> **Merke:** Elektronenmikroskopie überwindet die Abbe-Grenze durch extrem kurze De-Broglie-Wellenlänge der Elektronen.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Lupen-Vergrößerung für dermatologische Untersuchung:**
+Dermatoskop mit f = 4 cm. M = S/f = 25/4 = **6,25-fach**.
+Lupe mit f = 2,5 cm: M = 25/2,5 = **10-fach** — Standard für Hautläsionen (ABCDE-Kriterien).
+
+**Beispiel 2 — Mikroskop: Vergrößerung und Auflösungsgrenze:**
+Objektiv 40× (f_ob = 4 mm), Okular 10× (f_ok = 25 mm). M_ges = 40 × 10 = **400×**.
+Ölimmersion 100× (NA = 1,25), λ = 500 nm: d_min = λ/(2·NA) = 500/(2·1,25) = **200 nm**.
+Vergrößerung über M_leer = 500·NA/M_ges = 500·1,25/1000 = 0,625 (Nyquist: M_leer < 1 → sinnvolle Vergrößerung).
+
+**Beispiel 3 — Teleskop: Mondkrater beobachten:**
+f_ob = 1200 mm, f_ok = 30 mm → M = 1200/30 = **40-fach**.
+Monddurchmesser: 3474 km, Abstand 384.400 km → Winkeldurchmesser ≈ 0,52°.
+Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. Kleinster auflösbarer Krater bei Auflösung 2" (Seeing): 384.400 · tan(2/3600°) ≈ **3,7 km**.`,
       lernziele: [
-        'Die Vergrößerungsformel der Lupe M = S/f anwenden.',
-        'Das Prinzip des Lichtmikroskops (Objektiv × Okular) und das Auflösungslimit erläutern.',
-        'Die Vergrößerungsformel des Teleskops M = f_ob/f_ok anwenden.',
-        'Den Aufbau und die Funktionsweise eines Videoendoskops beschreiben.',
-        'Klinische Einsatzbereiche von Endoskop, Spaltlampe und Ophthalmoskop nennen.',
+        "Die Vergrößerungsformel der Lupe M = S/f anwenden.",
+        "Das Prinzip des Lichtmikroskops (Objektiv × Okular) und das Auflösungslimit erläutern.",
+        "Die Vergrößerungsformel des Teleskops M = f_ob/f_ok anwenden.",
+        "Den Aufbau und die Funktionsweise eines Videoendoskops beschreiben.",
+        "Klinische Einsatzbereiche von Endoskop, Spaltlampe und Ophthalmoskop nennen.",
       ],
       sections: [
         {
-          heading: 'Lupe und Mikroskop im Vergleich',
-          text: 'Die Lupe verwendet eine einzelne Sammellinse, um das Objekt nahe am Brennpunkt scharf und vergrößert als virtuelles Bild bei 25 cm zu zeigen. Das Lichtmikroskop erweitert dieses Prinzip: Das Objektiv (nahe am Objekt, kurze Brennweite) erzeugt zunächst ein reelles, stark vergrößertes Zwischenbild. Das Okular fungiert dann als Lupe für dieses Zwischenbild. Die Gesamtvergrößerung ist das Produkt beider Einzelvergrößerungen. Das Auflösungslimit des Lichtmikroskops liegt bei ~200 nm (Abbe-Limit).',
-          merksatz: 'M_ges = M_Objektiv × M_Okular; Auflösungsgrenze Lichtmikroskop ≈ 200 nm.',
+          heading: "Lupe und Mikroskop im Vergleich",
+          text: "Die Lupe verwendet eine einzelne Sammellinse, um das Objekt nahe am Brennpunkt scharf und vergrößert als virtuelles Bild bei 25 cm zu zeigen. Das Lichtmikroskop erweitert dieses Prinzip: Das Objektiv (nahe am Objekt, kurze Brennweite) erzeugt zunächst ein reelles, stark vergrößertes Zwischenbild. Das Okular fungiert dann als Lupe für dieses Zwischenbild. Die Gesamtvergrößerung ist das Produkt beider Einzelvergrößerungen. Das Auflösungslimit des Lichtmikroskops liegt bei ~200 nm (Abbe-Limit).",
+          merksatz: "M_ges = M_Objektiv × M_Okular; Auflösungsgrenze Lichtmikroskop ≈ 200 nm.",
         },
         {
-          heading: 'Endoskopie: Licht und Bild durch flexible Schläuche',
-          text: 'Moderne Videoendoskope übertragen Licht über Glasfasern (Totalreflexion) in den Körper und erfassen das Bild mit einem CCD/CMOS-Sensor am distalen Ende. Die digitalen Bilder werden extern auf einem Monitor angezeigt. Separate Kanäle ermöglichen Spülung, Absaugung und Instrument-Durchführung. Der Biegemechanismus über Steuerdrähte erlaubt Navigation durch enge Kurven. Kaltlicht (LED, Xenon) vermeidet Gewebeschäden durch Wärme.',
-          merksatz: 'Endoskope: Glasfasern für Licht (Totalreflexion) + CCD-Chip für Bild + Arbeitskanal für Instrumente.',
+          heading: "Endoskopie: Licht und Bild durch flexible Schläuche",
+          text: "Moderne Videoendoskope übertragen Licht über Glasfasern (Totalreflexion) in den Körper und erfassen das Bild mit einem CCD/CMOS-Sensor am distalen Ende. Die digitalen Bilder werden extern auf einem Monitor angezeigt. Separate Kanäle ermöglichen Spülung, Absaugung und Instrument-Durchführung. Der Biegemechanismus über Steuerdrähte erlaubt Navigation durch enge Kurven. Kaltlicht (LED, Xenon) vermeidet Gewebeschäden durch Wärme.",
+          merksatz:
+            "Endoskope: Glasfasern für Licht (Totalreflexion) + CCD-Chip für Bild + Arbeitskanal für Instrumente.",
         },
         {
-          heading: 'Spaltlampe und Ophthalmoskop',
-          text: 'Die Spaltlampe kombiniert fokussierte Spaltbeleuchtung mit einem binokularen Mikroskop. Der beleuchtende Spalt kann in Breite, Höhe und Winkel variiert werden und schneidet optisch die transparenten Augenstrukturen – analog zu einem optischen Schnitt. Trübungen in Hornhaut oder Linse (Katarakt) werden so dreidimensional lokalisiert. Das Ophthalmoskop spiegelt Licht durch die Pupille auf die Netzhaut; durch koaxiale Optik sieht der Untersucher die beleuchtete Netzhaut.',
-          merksatz: 'Spaltlampe: optische Schnitte durch transparente Augenstrukturen; ideal für Linse und Hornhaut.',
+          heading: "Spaltlampe und Ophthalmoskop",
+          text: "Die Spaltlampe kombiniert fokussierte Spaltbeleuchtung mit einem binokularen Mikroskop. Der beleuchtende Spalt kann in Breite, Höhe und Winkel variiert werden und schneidet optisch die transparenten Augenstrukturen – analog zu einem optischen Schnitt. Trübungen in Hornhaut oder Linse (Katarakt) werden so dreidimensional lokalisiert. Das Ophthalmoskop spiegelt Licht durch die Pupille auf die Netzhaut; durch koaxiale Optik sieht der Untersucher die beleuchtete Netzhaut.",
+          merksatz:
+            "Spaltlampe: optische Schnitte durch transparente Augenstrukturen; ideal für Linse und Hornhaut.",
         },
       ],
       merksätze: [
-        'Lupe: M = S/f = 25 cm / f (mit f in cm) – je kürzer die Brennweite, desto größer die Vergrößerung.',
-        'Mikroskop: M_ges = M_Objektiv × M_Okular.',
-        'Lichtmikroskop-Auflösungsgrenze: ~200 nm mit Ölimmersion und sichtbarem Licht.',
-        'Teleskop-Vergrößerung: M = f_Objektiv / f_Okular.',
-        'Endoskop: Glasfaser-Lichtleitung (Kaltlicht) + CCD-Sensor für Bild.',
-        'Videoendoskop: CCD-Chip am distalen Ende – kein optisches Faserbündel für das Bild nötig.',
-        'Konfokales Mikroskop: Pinhole-Blende eliminiert Streulicht → optische Schnitte.',
-        'Spaltlampe: Beleuchtungs-Mikroskop für Hornhaut, Linse, Glaskörper-Diagnostik.',
-        'Ophthalmoskop: direkte Netzhautbetrachtung durch die Pupille.',
-        'Laparoskopie = minimal-invasive Bauchhöhlenchirurgie via Endoskop und Trokare.',
+        "Lupe: M = S/f = 25 cm / f (mit f in cm) – je kürzer die Brennweite, desto größer die Vergrößerung.",
+        "Mikroskop: M_ges = M_Objektiv × M_Okular.",
+        "Lichtmikroskop-Auflösungsgrenze: ~200 nm mit Ölimmersion und sichtbarem Licht.",
+        "Teleskop-Vergrößerung: M = f_Objektiv / f_Okular.",
+        "Endoskop: Glasfaser-Lichtleitung (Kaltlicht) + CCD-Sensor für Bild.",
+        "Videoendoskop: CCD-Chip am distalen Ende – kein optisches Faserbündel für das Bild nötig.",
+        "Konfokales Mikroskop: Pinhole-Blende eliminiert Streulicht → optische Schnitte.",
+        "Spaltlampe: Beleuchtungs-Mikroskop für Hornhaut, Linse, Glaskörper-Diagnostik.",
+        "Ophthalmoskop: direkte Netzhautbetrachtung durch die Pupille.",
+        "Laparoskopie = minimal-invasive Bauchhöhlenchirurgie via Endoskop und Trokare.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: 'Erklären Sie den Aufbau und die optischen Prinzipien des Lichtmikroskops, und beschreiben Sie, wie sich die Gesamtvergrößerung ergibt.',
-        answer: 'Das Lichtmikroskop ist ein zweistufiges optisches System. Die erste Stufe ist das Objektiv: eine Sammellinse (oder ein Linsensystem) mit sehr kurzer Brennweite (typisch 2–20 mm), die nahe an das Präparat herangeführt wird (Gegenstandsweite etwas größer als f_ob). Es erzeugt ein reelles, umgekehrtes und stark vergrößertes Zwischenbild in der Bildröhre des Mikroskops, üblicherweise 160 mm (Normtubuslänge) oder unendlich (Unendlich-Optik) vom Objekt entfernt. Die Vergrößerung des Objektivs ergibt sich bei Endlichoptik aus M_ob = Tubuslänge/f_ob; bei Unendlichoptik wird die Vergrößerung durch das nachgeschaltete Tubuslinsen-Okular-System definiert. Die zweite Stufe ist das Okular: eine Sammellinse (Brennweite typisch 20–25 mm), die als Lupe für das Zwischenbild fungiert. Das Okular erzeugt ein virtuelles aufrechtes Bild, das das Auge bei der deutlichen Sehweite (25 cm) wahrnimmt. Die Okularvergrößerung ist M_ok = S/f_ok = 25 cm/f_ok. Die Gesamtvergrößerung ist das Produkt: M_ges = M_ob × M_ok. Beispiel: 40x-Objektiv × 10x-Okular = 400x. Das theoretische Auflösungslimit wird durch das Abbe-Kriterium bestimmt: d_min = λ/(2·NA). Mit Ölimmersionsobjektiv (NA~1,4) und grünem Licht (λ~520 nm) ergibt sich d_min ≈ 185 nm. Modernere Techniken wie STED-Mikroskopie überwinden dieses Limit durch stimulierte Emission und erreichen Auflösungen von 20–50 nm.',
+        question:
+          "Erklären Sie den Aufbau und die optischen Prinzipien des Lichtmikroskops, und beschreiben Sie, wie sich die Gesamtvergrößerung ergibt.",
+        answer:
+          "Das Lichtmikroskop ist ein zweistufiges optisches System. Die erste Stufe ist das Objektiv: eine Sammellinse (oder ein Linsensystem) mit sehr kurzer Brennweite (typisch 2–20 mm), die nahe an das Präparat herangeführt wird (Gegenstandsweite etwas größer als f_ob). Es erzeugt ein reelles, umgekehrtes und stark vergrößertes Zwischenbild in der Bildröhre des Mikroskops, üblicherweise 160 mm (Normtubuslänge) oder unendlich (Unendlich-Optik) vom Objekt entfernt. Die Vergrößerung des Objektivs ergibt sich bei Endlichoptik aus M_ob = Tubuslänge/f_ob; bei Unendlichoptik wird die Vergrößerung durch das nachgeschaltete Tubuslinsen-Okular-System definiert. Die zweite Stufe ist das Okular: eine Sammellinse (Brennweite typisch 20–25 mm), die als Lupe für das Zwischenbild fungiert. Das Okular erzeugt ein virtuelles aufrechtes Bild, das das Auge bei der deutlichen Sehweite (25 cm) wahrnimmt. Die Okularvergrößerung ist M_ok = S/f_ok = 25 cm/f_ok. Die Gesamtvergrößerung ist das Produkt: M_ges = M_ob × M_ok. Beispiel: 40x-Objektiv × 10x-Okular = 400x. Das theoretische Auflösungslimit wird durch das Abbe-Kriterium bestimmt: d_min = λ/(2·NA). Mit Ölimmersionsobjektiv (NA~1,4) und grünem Licht (λ~520 nm) ergibt sich d_min ≈ 185 nm. Modernere Techniken wie STED-Mikroskopie überwinden dieses Limit durch stimulierte Emission und erreichen Auflösungen von 20–50 nm.",
       },
-      klinischerBezug: 'Endoskopie (Gastroskopie, Koloskopie, Bronchoskopie), Spaltlampe für Augendiagnostik, konfokale Mikroskopie in der Histopathologie.',
+      klinischerBezug:
+        "Endoskopie (Gastroskopie, Koloskopie, Bronchoskopie), Spaltlampe für Augendiagnostik, konfokale Mikroskopie in der Histopathologie.",
       selfTest: [
         {
-          question: 'Eine Lupe hat eine Brennweite von 5 cm. Die deutliche Sehweite beträgt 25 cm. Welche Vergrößerung bietet die Lupe?',
-          options: [
-            '2-fach',
-            '5-fach',
-            '10-fach',
-            '25-fach',
-            '0,2-fach',
-          ],
+          question:
+            "Eine Lupe hat eine Brennweite von 5 cm. Die deutliche Sehweite beträgt 25 cm. Welche Vergrößerung bietet die Lupe?",
+          options: ["2-fach", "5-fach", "10-fach", "25-fach", "0,2-fach"],
           correctIndex: 1,
-          explanation: 'Die Vergrößerung einer Lupe berechnet sich als M = S/f, wobei S = 25 cm (deutliche Sehweite) und f die Brennweite der Lupe in cm ist. Mit f = 5 cm: M = 25/5 = 5. Das bedeutet, das Bild erscheint 5-mal größer als bei bloßem Auge aus 25 cm. Je kürzer die Brennweite der Lupe, desto größer die Vergrößerung – eine Lupe mit f=2,5 cm hätte M=10, eine mit f=1 cm M=25. Lupen mit sehr kurzer Brennweite (f<5mm) sind schwer herzustellen und haben geringe Bildschärfe am Rand.',
+          explanation:
+            "Die Vergrößerung einer Lupe berechnet sich als M = S/f, wobei S = 25 cm (deutliche Sehweite) und f die Brennweite der Lupe in cm ist. Mit f = 5 cm: M = 25/5 = 5. Das bedeutet, das Bild erscheint 5-mal größer als bei bloßem Auge aus 25 cm. Je kürzer die Brennweite der Lupe, desto größer die Vergrößerung – eine Lupe mit f=2,5 cm hätte M=10, eine mit f=1 cm M=25. Lupen mit sehr kurzer Brennweite (f<5mm) sind schwer herzustellen und haben geringe Bildschärfe am Rand.",
           hints: [
-            'Formel: M = S/f mit S = 25 cm (deutliche Sehweite des Auges).',
-            'f = 5 cm einsetzen: M = 25/5 = ?',
+            "Formel: M = S/f mit S = 25 cm (deutliche Sehweite des Auges).",
+            "f = 5 cm einsetzen: M = 25/5 = ?",
           ],
-          tags: ['lupe', 'vergrößerung', 'brennweite'],
+          tags: ["lupe", "vergrößerung", "brennweite"],
           difficulty: 1,
         },
         {
-          question: 'Ein Lichtmikroskop hat ein 100x-Ölimmersionsobjektiv (NA = 1,3) und ein 10x-Okular. Es wird Licht der Wellenlänge 480 nm verwendet. Was ist die Gesamtvergrößerung und ungefähr die theoretische Auflösungsgrenze?',
+          question:
+            "Ein Lichtmikroskop hat ein 100x-Ölimmersionsobjektiv (NA = 1,3) und ein 10x-Okular. Es wird Licht der Wellenlänge 480 nm verwendet. Was ist die Gesamtvergrößerung und ungefähr die theoretische Auflösungsgrenze?",
           options: [
-            'M=110x, d_min ≈ 185 nm',
-            'M=1000x, d_min ≈ 185 nm',
-            'M=1000x, d_min ≈ 370 nm',
-            'M=100x, d_min ≈ 185 nm',
-            'M=1000x, d_min ≈ 500 nm',
+            "M=110x, d_min ≈ 185 nm",
+            "M=1000x, d_min ≈ 185 nm",
+            "M=1000x, d_min ≈ 370 nm",
+            "M=100x, d_min ≈ 185 nm",
+            "M=1000x, d_min ≈ 500 nm",
           ],
           correctIndex: 1,
-          explanation: 'Gesamtvergrößerung: M_ges = M_Objektiv × M_Okular = 100 × 10 = 1000x. Auflösungsgrenze nach Abbe: d_min = λ/(2·NA) = 480/(2·1,3) = 480/2,6 ≈ 185 nm. Das bedeutet: Strukturen kleiner als ~185 nm können nicht mehr aufgelöst werden. Viren (20–300 nm) sind damit an der Grenze oder darunter des Lichtmikroskops. Ölimmersion erhöht NA von ca. 0,95 (Luft) auf 1,3 (Öl), was die Auflösung um ~37% verbessert. Bakterien (1–10 µm) sind problemlos sichtbar.',
+          explanation:
+            "Gesamtvergrößerung: M_ges = M_Objektiv × M_Okular = 100 × 10 = 1000x. Auflösungsgrenze nach Abbe: d_min = λ/(2·NA) = 480/(2·1,3) = 480/2,6 ≈ 185 nm. Das bedeutet: Strukturen kleiner als ~185 nm können nicht mehr aufgelöst werden. Viren (20–300 nm) sind damit an der Grenze oder darunter des Lichtmikroskops. Ölimmersion erhöht NA von ca. 0,95 (Luft) auf 1,3 (Öl), was die Auflösung um ~37% verbessert. Bakterien (1–10 µm) sind problemlos sichtbar.",
           hints: [
-            'M_ges = M_Obj × M_Ok – Multiplikation, nicht Addition.',
-            'Abbe: d_min = λ/(2·NA) – λ in nm einsetzen, Ergebnis in nm.',
+            "M_ges = M_Obj × M_Ok – Multiplikation, nicht Addition.",
+            "Abbe: d_min = λ/(2·NA) – λ in nm einsetzen, Ergebnis in nm.",
           ],
-          tags: ['mikroskop', 'vergrößerung', 'ölimmersion'],
+          tags: ["mikroskop", "vergrößerung", "ölimmersion"],
           difficulty: 2,
         },
         {
-          question: 'Ein Teleskop hat ein Objektiv mit f_ob = 800 mm und ein Okular mit f_ok = 20 mm. Welche Vergrößerung ergibt sich?',
-          options: [
-            '16-fach',
-            '40-fach',
-            '80-fach',
-            '400-fach',
-            '820-fach',
-          ],
+          question:
+            "Ein Teleskop hat ein Objektiv mit f_ob = 800 mm und ein Okular mit f_ok = 20 mm. Welche Vergrößerung ergibt sich?",
+          options: ["16-fach", "40-fach", "80-fach", "400-fach", "820-fach"],
           correctIndex: 1,
-          explanation: 'Die Vergrößerung eines Keplerteleskops berechnet sich als M = f_ob/f_ok = 800 mm/20 mm = 40. Dabei ist f_ob die Brennweite des Objektivs (lang) und f_ok die Brennweite des Okulars (kurz). Für ein Keplersches Fernrohr gilt: Das erzeugte Bild ist umgekehrt. Galileische Fernrohre verwenden eine Zerstreuungslinse als Okular und erzeugen aufrechte Bilder, sind aber durch kleineres Gesichtsfeld limitiert. Die Körperlänge des Teleskops ist ungefähr f_ob + f_ok = 820 mm.',
+          explanation:
+            "Die Vergrößerung eines Keplerteleskops berechnet sich als M = f_ob/f_ok = 800 mm/20 mm = 40. Dabei ist f_ob die Brennweite des Objektivs (lang) und f_ok die Brennweite des Okulars (kurz). Für ein Keplersches Fernrohr gilt: Das erzeugte Bild ist umgekehrt. Galileische Fernrohre verwenden eine Zerstreuungslinse als Okular und erzeugen aufrechte Bilder, sind aber durch kleineres Gesichtsfeld limitiert. Die Körperlänge des Teleskops ist ungefähr f_ob + f_ok = 820 mm.",
           hints: [
-            'M = f_Objektiv / f_Okular – kurze Brennweite im Okular, lange im Objektiv.',
-            '800/20 = ?',
+            "M = f_Objektiv / f_Okular – kurze Brennweite im Okular, lange im Objektiv.",
+            "800/20 = ?",
           ],
-          tags: ['teleskop', 'vergrößerung', 'brennweite'],
+          tags: ["teleskop", "vergrößerung", "brennweite"],
           difficulty: 1,
         },
         {
-          question: 'Welcher wesentliche Unterschied besteht zwischen einem Faseroptik-Endoskop und einem modernen Videoendoskop?',
-          options: [
-            'Faseroptik-Endoskope sind flexibler als Videoendoskope',
-            'Videoendoskope haben einen CCD-Chip am distalen Ende; Faseroptik überträgt das Bild durch ein Faserbündel',
-            'Videoendoskope nutzen Ultraschall, Faseroptik nutzt Licht',
-            'Faseroptik-Endoskope können nur in gerader Linie geführt werden',
-            'Videoendoskope haben keine Möglichkeit für Biopsien',
-          ],
-          correctIndex: 1,
-          explanation: 'Der grundlegende Unterschied liegt in der Bildübertragung. Beim älteren Faseroptik-Endoskop überträgt ein Bündel aus Hunderttausenden kohärent angeordneter Glasfasern das Bild von der distalen Optik bis zum Okular des Untersuchers – jede Faser repräsentiert einen Bildpunkt. Die Auflösung ist durch die Faserdichte begrenzt. Beim modernen Videoendoskop sitzt ein Miniatur-CCD- oder CMOS-Bildgeber direkt am distalen Ende. Das digitale Signal wird elektrisch oder optisch (Glasfaser-Datenstrecke) zum externen Prozessor geleitet und auf einem Monitor angezeigt. Videoendoskope haben höhere Auflösung, bessere Farbwiedergabe und ermöglichen digitale Bildverarbeitung (Narrow Band Imaging etc.).',
-          hints: [
-            'Video- = digitaler Bildgeber am Ende; Faseroptik = Bildübertragung durch Faserbündel.',
-            'CCD ist ein lichtempfindlicher Chip, kein Faserbündel.',
-          ],
-          tags: ['endoskopie', 'videoendoskop', 'faseroptik'],
-          difficulty: 2,
-        },
-        {
-          question: 'Für welchen klinischen Zweck wird die Spaltlampe am häufigsten eingesetzt?',
-          options: [
-            'Untersuchung der Netzhautgefäße durch den Augenhintergrund',
-            'Messung des Augeninnendrucks bei Glaukom',
-            'Biomikroskopische Untersuchung von Hornhaut, Linse und Glaskörper des Auges',
-            'Bestimmung des Fernpunkts bei Myopie',
-            'Ultraschallmessung der Augapfellänge',
-          ],
+          question:
+            "Ein Objektiv erzeugt bei einer Tubuslänge von 160 mm und einer Objektivbrennweite von 4 mm eine Vergrößerung von 40x. Das Okular hat f=25 mm. Wie lautet die Gesamtvergrößerung?",
+          options: ["40x", "100x", "400x", "640x", "1600x"],
           correctIndex: 2,
-          explanation: 'Die Spaltlampe (Biomikroskop) ist ein Auflichtmikroskop mit einer Spaltbeleuchtungsquelle. Der schmale Lichtspalt schneidet optisch durch die transparenten Strukturen des Auges (Hornhaut, Vorderkammer, Iris, Linse, Glaskörper) und macht Trübungen, Entzündungszeichen oder Verletzungen dreidimensional sichtbar. Sie ist das Standard-Untersuchungsinstrument des Augenarztes für die vordere Augenabschnitte. Mit aufgesetzten Kontaktlinsen kann man auch den Augenhintergrund beurteilen. Die Tonometrie (Augendruckmessung, Option 2) kann zwar mit der Spaltlampe kombiniert werden (Goldmann-Tonometer), ist aber nicht deren Hauptzweck. Die Netzhaut-Funduskopie (Option 1) erfolgt mit dem Ophthalmoskop.',
+          explanation:
+            "Die Okularvergrößerung berechnet sich als M_ok = S/f_ok = 250 mm / 25 mm = 10x (S = deutliche Sehweite = 250 mm = 25 cm). Die Gesamtvergrößerung ist M_ges = M_ob × M_ok = 40 × 10 = 400x. Warte – Option 2 zeigt 100x, Option 3 zeigt 400x. Die korrekte Antwort ist 400x (Index 2). Rechenweg: M_ob=40 (gegeben), M_ok = 250/25 = 10, M_ges = 40×10 = 400x. Die Tubuslänge und f_ob (4mm) sind konsistent mit M_ob = 160/4 = 40x.",
           hints: [
-            'Spaltlampe = Biomikroskop mit Spaltbeleuchtung – was sieht man damit besonders gut?',
-            'Die transparenten Augenstrukturen wie Hornhaut und Linse können optisch "geschnitten" werden.',
+            "M_ok = S/f_ok = 25 cm / f_ok (f_ok in cm).",
+            "M_ges = M_ob × M_ok – Multiplikation der beiden Einzelvergrößerungen.",
           ],
-          tags: ['spaltlampe', 'augenheilkunde', 'biomikroskopie'],
+          tags: ["mikroskop", "gesamtvergrößerung", "okular"],
           difficulty: 2,
         },
         {
-          question: 'Ein Objektiv erzeugt bei einer Tubuslänge von 160 mm und einer Objektivbrennweite von 4 mm eine Vergrößerung von 40x. Das Okular hat f=25 mm. Wie lautet die Gesamtvergrößerung?',
+          question:
+            "Was ist der Hauptvorteil der konfokalen Lasermikroskopie gegenüber der konventionellen Lichtmikroskopie?",
           options: [
-            '40x',
-            '100x',
-            '400x',
-            '640x',
-            '1600x',
+            "Doppelte Vergrößerung durch zwei Linsensysteme",
+            "Eliminierung von Streulicht aus Nicht-Fokusebenen durch eine Lochblende → optische Schnittbilder",
+            "Verwendung von kürzerem Licht für bessere Auflösung",
+            "Echtzeit-Bildgebung ohne Probenpräparation",
+            "Möglichkeit der Lebendbeobachtung unter natürlichem Licht",
           ],
           correctIndex: 1,
-          explanation: 'Die Okularvergrößerung berechnet sich als M_ok = S/f_ok = 250 mm / 25 mm = 10x (S = deutliche Sehweite = 250 mm = 25 cm). Die Gesamtvergrößerung ist M_ges = M_ob × M_ok = 40 × 10 = 400x. Warte – Option 2 zeigt 100x, Option 3 zeigt 400x. Die korrekte Antwort ist 400x (Index 2). Rechenweg: M_ob=40 (gegeben), M_ok = 250/25 = 10, M_ges = 40×10 = 400x. Die Tubuslänge und f_ob (4mm) sind konsistent mit M_ob = 160/4 = 40x.',
+          explanation:
+            "In der konfokalen Mikroskopie wird ein Laserstrahl auf einen einzigen Punkt in der Probe fokussiert. Vor dem Detektor befindet sich eine Lochblende (Pinhole), die so justiert ist, dass nur Licht aus dem Fokuspunkt des Objektivs passiert. Licht, das von anderen Tiefen in der Probe zurückgestreut wird (Out-of-focus-Licht), wird von der Lochblende blockiert. Durch sequentielles Abrastern (Scanning) in x-y-Richtung entsteht ein hochkontrastreiches optisches Schnittbild einer definierten Tiefenebene. Durch z-Stapel-Aufnahmen kann eine dreidimensionale Rekonstruktion der Probe erstellt werden. Dies ist besonders nützlich für dicke Gewebe, fluoreszierende Färbungen und intrazelluläre Strukturen.",
           hints: [
-            'M_ok = S/f_ok = 25 cm / f_ok (f_ok in cm).',
-            'M_ges = M_ob × M_ok – Multiplikation der beiden Einzelvergrößerungen.',
+            "Konfokale = mit Fokus; die Lochblende blockt Licht aus anderen Tiefen.",
+            "Das Ergebnis sind optische Schnittbilder ohne physische Schnitte – was ermöglicht das?",
           ],
-          tags: ['mikroskop', 'gesamtvergrößerung', 'okular'],
-          difficulty: 2,
-        },
-        {
-          question: 'Was ist der Hauptvorteil der konfokalen Lasermikroskopie gegenüber der konventionellen Lichtmikroskopie?',
-          options: [
-            'Doppelte Vergrößerung durch zwei Linsensysteme',
-            'Eliminierung von Streulicht aus Nicht-Fokusebenen durch eine Lochblende → optische Schnittbilder',
-            'Verwendung von kürzerem Licht für bessere Auflösung',
-            'Echtzeit-Bildgebung ohne Probenpräparation',
-            'Möglichkeit der Lebendbeobachtung unter natürlichem Licht',
-          ],
-          correctIndex: 1,
-          explanation: 'In der konfokalen Mikroskopie wird ein Laserstrahl auf einen einzigen Punkt in der Probe fokussiert. Vor dem Detektor befindet sich eine Lochblende (Pinhole), die so justiert ist, dass nur Licht aus dem Fokuspunkt des Objektivs passiert. Licht, das von anderen Tiefen in der Probe zurückgestreut wird (Out-of-focus-Licht), wird von der Lochblende blockiert. Durch sequentielles Abrastern (Scanning) in x-y-Richtung entsteht ein hochkontrastreiches optisches Schnittbild einer definierten Tiefenebene. Durch z-Stapel-Aufnahmen kann eine dreidimensionale Rekonstruktion der Probe erstellt werden. Dies ist besonders nützlich für dicke Gewebe, fluoreszierende Färbungen und intrazelluläre Strukturen.',
-          hints: [
-            'Konfokale = mit Fokus; die Lochblende blockt Licht aus anderen Tiefen.',
-            'Das Ergebnis sind optische Schnittbilder ohne physische Schnitte – was ermöglicht das?',
-          ],
-          tags: ['konfokalmikroskopie', 'lochblende', 'optischer-schnitt'],
+          tags: ["konfokalmikroskopie", "lochblende", "optischer-schnitt"],
           difficulty: 3,
         },
       ],
@@ -1705,9 +1692,23 @@ Die **Spaltlampe** ist ein spezielles Auflichtmikroskop mit Spaltbeleuchtung. Si
     // UK ph-6-04: Optik des Auges und Sehfehler
     // ─────────────────────────────────────────────────────────────────────────
     {
-      id: 'ph-6-04',
-      diagram: 'lens-imaging',
-      title: 'Optik des Auges und Sehfehler',
+      id: "ph-6-04",
+      diagram: "lens-imaging",
+      title: "Optik des Auges und Sehfehler",
+      stichworte: [
+        "Akkommodation",
+        "Myopie",
+        "Hyperopie",
+        "Presbyopie",
+        "Astigmatismus",
+        "Brechkraft",
+        "Ziliarmuskel",
+        "Kornea",
+        "LASIK",
+        "Glaukom",
+        "Brillenrezept",
+        "Dioptrie",
+      ],
       content: `# Optik des Auges und Sehfehler
 
 Das menschliche Auge ist ein hoch entwickeltes optisches Instrument, das Bilder auf der Netzhaut fokussiert und eine Vielzahl von Fehlsichtigkeiten durch aktive oder passive Korrekturen kompensieren kann.
@@ -1790,174 +1791,170 @@ Laser in-situ Keratomileusis (LASIK): Ein Excimer-Laser (λ = 193 nm, UV) trägt
 
 Das **Glaukom** (grüner Star) ist eine Erkrankung, bei der erhöhter intraokularer Druck (IOP) den Sehnerv schädigt. Normal: 10–21 mmHg. Bei Glaukom oft >21 mmHg, aber auch Normaldruckglaukom existiert.
 
-**Messung**: Goldmann-Applanationstonometrie (misst Kraft, die Hornhaut auf 3,06 mm Durchmesser abzuflachen) oder Non-Contact-Tonometrie (Luftstoß). OCT-Papillenanalyse misst Nervenfaserschichtdicke.`,
+**Messung**: Goldmann-Applanationstonometrie (misst Kraft, die Hornhaut auf 3,06 mm Durchmesser abzuflachen) oder Non-Contact-Tonometrie (Luftstoß). OCT-Papillenanalyse misst Nervenfaserschichtdicke.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Myopie-Korrektur:**
+Patient sieht scharf bis 25 cm (Fernpunkt). Korrekturlinse soll paralleles Licht (∞) in ein virtuelles Bild bei −25 cm umwandeln.
+D = 1/f = 1/(−0,25 m) = **−4,0 dpt** (Zerstreuungslinse).
+Probe: Gegenstand im ∞ → 1/b = 1/f − 1/g = −4 − 0 = −4 → b = −0,25 m ✓ (virtuelles Bild bei 25 cm).
+
+**Beispiel 2 — Akkommodationsbreite über die Lebensspanne:**
+20-Jähriger: Nahpunkt 10 cm → D_nah = 1/0,10 = 10 dpt. Fernpunkt ∞ → D_fern = 0.
+Akkommodationsbreite: **10 dpt** (60 dpt → 70 dpt Gesamtbrechkraft).
+50-Jähriger: Nahpunkt 50 cm → D_nah = 1/0,50 = 2 dpt. Akkommodationsbreite: nur **2 dpt** → Lesebrille nötig (+2,5 dpt für 25 cm Leseabstand).
+
+**Beispiel 3 — LASIK: Ablationstiefe (Munnerlyn-Formel):**
+Korrektur −3 dpt, optische Zone d = 6 mm. Ablationstiefe: t = D · d² / 3 = 3 · (6)² / 3 = 3 · 36 / 3 = **36 µm**.
+Bei −6 dpt: t = 6 · 36 / 3 = **72 µm**. Hornhautdicke ~550 µm, mind. 250 µm Restdicke → max. Ablation ~150 µm → ca. −12 dpt Obergrenze.`,
       lernziele: [
-        'Den Akkommodationsmechanismus mit Ziliarmuskel und Zonulafasern erklären.',
-        'Myopie, Hyperopie, Presbyopie und Astigmatismus pathophysiologisch unterscheiden.',
-        'Die optische Korrektur der jeweiligen Fehlsichtigkeit mit dem richtigen Linsentyp begründen.',
-        'Ein einfaches Brillenrezept (sph/cyl/Achse) interpretieren.',
-        'Das Prinzip der LASIK und der Glaukom-Diagnostik beschreiben.',
+        "Den Akkommodationsmechanismus mit Ziliarmuskel und Zonulafasern erklären.",
+        "Myopie, Hyperopie, Presbyopie und Astigmatismus pathophysiologisch unterscheiden.",
+        "Die optische Korrektur der jeweiligen Fehlsichtigkeit mit dem richtigen Linsentyp begründen.",
+        "Ein einfaches Brillenrezept (sph/cyl/Achse) interpretieren.",
+        "Das Prinzip der LASIK und der Glaukom-Diagnostik beschreiben.",
       ],
       sections: [
         {
-          heading: 'Akkommodation: Naheinstellung des Auges',
-          text: 'Der Ziliarmuskel umgibt die Augenlinse ringförmig. Beim Entspannen kontrahiert er ringförmig und lockert die Zonulafasern – die Linse wölbt sich durch ihre Eigenelastizität und erhöht die Brechkraft (Nahsicht). Beim Anspannen (Ferne) vergrößert der Ziliarmuskel seinen Durchmesser, die Zonulafasern ziehen die Linse flach. Die Akkommodationsbreite nimmt mit dem Alter ab, da die Linse an Elastizität verliert (Presbyopie). Der Nahpunkt rückt dann in die Ferne, Lesebrille wird nötig.',
-          merksatz: 'Ziliarmuskel kontrahiert → Linse wölbt sich (Nahsicht); entspannt → Linse flach (Fernsicht).',
+          heading: "Akkommodation: Naheinstellung des Auges",
+          text: "Der Ziliarmuskel umgibt die Augenlinse ringförmig. Beim Entspannen kontrahiert er ringförmig und lockert die Zonulafasern – die Linse wölbt sich durch ihre Eigenelastizität und erhöht die Brechkraft (Nahsicht). Beim Anspannen (Ferne) vergrößert der Ziliarmuskel seinen Durchmesser, die Zonulafasern ziehen die Linse flach. Die Akkommodationsbreite nimmt mit dem Alter ab, da die Linse an Elastizität verliert (Presbyopie). Der Nahpunkt rückt dann in die Ferne, Lesebrille wird nötig.",
+          merksatz:
+            "Ziliarmuskel kontrahiert → Linse wölbt sich (Nahsicht); entspannt → Linse flach (Fernsicht).",
         },
         {
-          heading: 'Die vier häufigen Sehfehler und ihre Korrektur',
-          text: 'Myopie (Kurzsichtigkeit): Augapfel zu lang → Bild vor Netzhaut → Zerstreuungslinse (–dpt). Hyperopie (Weitsichtigkeit): Augapfel zu kurz → Bild hinter Netzhaut → Sammellinse (+dpt). Presbyopie (Altersweitsichtigkeit): Linsenverhärtung → Nahpunkt zu weit → Lesebrille (+dpt für Nahbereich). Astigmatismus: asymmetrische Hornhautkrümmung → Zylinderlinse (cyl-Wert + Achsangabe). Diese vier Fehlsichtigkeiten können kombiniert auftreten (z. B. myoper Astigmatismus: sph negativ + cyl negativ).',
-          merksatz: 'Myopie → Zerstreuungslinse (–); Hyperopie → Sammellinse (+); Astigmatismus → Zylinderlinse.',
+          heading: "Die vier häufigen Sehfehler und ihre Korrektur",
+          text: "Myopie (Kurzsichtigkeit): Augapfel zu lang → Bild vor Netzhaut → Zerstreuungslinse (–dpt). Hyperopie (Weitsichtigkeit): Augapfel zu kurz → Bild hinter Netzhaut → Sammellinse (+dpt). Presbyopie (Altersweitsichtigkeit): Linsenverhärtung → Nahpunkt zu weit → Lesebrille (+dpt für Nahbereich). Astigmatismus: asymmetrische Hornhautkrümmung → Zylinderlinse (cyl-Wert + Achsangabe). Diese vier Fehlsichtigkeiten können kombiniert auftreten (z. B. myoper Astigmatismus: sph negativ + cyl negativ).",
+          merksatz:
+            "Myopie → Zerstreuungslinse (–); Hyperopie → Sammellinse (+); Astigmatismus → Zylinderlinse.",
         },
         {
-          heading: 'LASIK und Glaukom-Diagnostik',
-          text: 'LASIK verändert dauerhaft die Hornhautkrümmung durch Excimer-Laser-Photoablation. Für Myopie wird die Hornhautmitte abgetragen (Abflachung), für Hyperopie die Peripherie. Das Glaukom schädigt den Sehnerv durch erhöhten Augeninnendruck (IOP >21 mmHg). Diagnostik: Applanationstonometrie misst IOP; OCT quantifiziert die peripapilläre Nervenfaserschichtdicke; Gesichtsfelduntersuchung erfasst Skotome. Therapie: drucksenkende Augentropfen, Lasertrabekuloplastik oder operative Fistulierung.',
-          merksatz: 'Glaukom: IOP >21 mmHg schädigt Sehnerv; OCT misst Nervenfaserschichtdicke für Diagnose.',
+          heading: "LASIK und Glaukom-Diagnostik",
+          text: "LASIK verändert dauerhaft die Hornhautkrümmung durch Excimer-Laser-Photoablation. Für Myopie wird die Hornhautmitte abgetragen (Abflachung), für Hyperopie die Peripherie. Das Glaukom schädigt den Sehnerv durch erhöhten Augeninnendruck (IOP >21 mmHg). Diagnostik: Applanationstonometrie misst IOP; OCT quantifiziert die peripapilläre Nervenfaserschichtdicke; Gesichtsfelduntersuchung erfasst Skotome. Therapie: drucksenkende Augentropfen, Lasertrabekuloplastik oder operative Fistulierung.",
+          merksatz:
+            "Glaukom: IOP >21 mmHg schädigt Sehnerv; OCT misst Nervenfaserschichtdicke für Diagnose.",
         },
       ],
       merksätze: [
-        'Gesamtbrechkraft des Auges: ~60 dpt (Hornhaut ~43 dpt + Linse ~17–27 dpt).',
-        'Akkommodation: Ziliarmuskel kontrahiert → Linse wölbt sich → Brechkraft steigt.',
-        'Fernpunkt normal = Unendlichkeit; Nahpunkt junges Auge ≈ 10 cm.',
-        'Myopie: Augapfel zu lang → Fokus vor Netzhaut → Zerstreuungslinse (–dpt).',
-        'Hyperopie: Augapfel zu kurz → Fokus hinter Netzhaut → Sammellinse (+dpt).',
-        'Presbyopie: Linsenverhärtung → Nahpunkt weicht zurück → Lesebrille (+dpt).',
-        'Astigmatismus: toroide Hornhautkrümmung → Zylinderlinse (cyl + Achse).',
-        'Brillenrezept: sph = sphärisch, cyl = zylindrisch, Achse = Orientierung.',
-        'LASIK: Excimer-Laser (193 nm) trägt Hornhaut ab → dauerhafte Refraktionsänderung.',
-        'Glaukom: IOP >21 mmHg → Sehnervschaden → Gesichtsfeldausfall.',
+        "Gesamtbrechkraft des Auges: ~60 dpt (Hornhaut ~43 dpt + Linse ~17–27 dpt).",
+        "Akkommodation: Ziliarmuskel kontrahiert → Linse wölbt sich → Brechkraft steigt.",
+        "Fernpunkt normal = Unendlichkeit; Nahpunkt junges Auge ≈ 10 cm.",
+        "Myopie: Augapfel zu lang → Fokus vor Netzhaut → Zerstreuungslinse (–dpt).",
+        "Hyperopie: Augapfel zu kurz → Fokus hinter Netzhaut → Sammellinse (+dpt).",
+        "Presbyopie: Linsenverhärtung → Nahpunkt weicht zurück → Lesebrille (+dpt).",
+        "Astigmatismus: toroide Hornhautkrümmung → Zylinderlinse (cyl + Achse).",
+        "Brillenrezept: sph = sphärisch, cyl = zylindrisch, Achse = Orientierung.",
+        "LASIK: Excimer-Laser (193 nm) trägt Hornhaut ab → dauerhafte Refraktionsänderung.",
+        "Glaukom: IOP >21 mmHg → Sehnervschaden → Gesichtsfeldausfall.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: 'Erläutern Sie die Physik der Myopie und Hyperopie, und begründen Sie physikalisch, welche Korrekturlinsen jeweils eingesetzt werden.',
-        answer: 'Das emmetrope (normalsichtige) Auge fokussiert parallele Strahlen aus dem Unendlichen bei entspanntem Ziliarmuskel genau auf der Netzhaut (Fovea centralis). Der Fernpunkt liegt im Unendlichen. Bei der Myopie (Kurzsichtigkeit) ist der Augapfel axial zu lang (häufigste Form: ~1 mm mehr Länge entspricht ca. –3 dpt Myopie) oder die brechenden Medien zu stark. Parallele Strahlen aus der Ferne fokussieren deshalb vor der Netzhaut – das Bild auf der Netzhaut ist unscharf (Zerstreuungsscheibchen). Der Fernpunkt rückt in eine endliche Entfernung; beispielsweise hat ein –3 dpt Auge einen Fernpunkt bei 33 cm. Nahe Objekte können durch Akkommodation scharf gestellt werden. Zur Korrektur wird eine Zerstreuungslinse (negative Brechkraft, D < 0) verwendet. Sie macht das parallele Licht aus der Ferne leicht divergent, sodass es vom Auge so gebündelt wird, als käme es aus dem Fernpunkt des myopen Auges – das Licht wird dann auf der Netzhaut fokussiert. Die Stärke der Zerstreuungslinse in Dioptrien entspricht dem negativen Kehrwert der Fernpunktdistanz (z. B. Fernpunkt 50 cm → –2,0 dpt). Bei der Hyperopie (Weitsichtigkeit) ist der Augapfel zu kurz oder die brechenden Medien zu schwach. Parallel einfallendes Licht würde hinter der Netzhaut fokussiert. Das Auge muss daher auch für ferne Objekte akkommodieren – was bei jungen Menschen noch möglich ist, aber zu Asthenopie (Augenmüdigkeit) führt. Für Nahsicht müssen hohe Akkommodationsreserven aufgebracht werden. Im Extremfall kann selbst maximale Akkommodation nicht ausreichen. Die Korrektur erfolgt mit einer Sammellinse (positive Brechkraft, D > 0). Diese bündelt das einfallende Licht bereits vor dem Eintritt ins Auge konvergent, sodass das Auge weniger Brechkraft aufbringen muss. Für Presbyopie (Altersweitsichtigkeit durch Linsenverhärtung) gilt das gleiche Korrekturprinzip für den Nahbereich – der Unterschied ist die Ursache: Hier ist nicht der Augapfel zu kurz, sondern die Linse kann nicht mehr akkommodieren.',
+        question:
+          "Erläutern Sie die Physik der Myopie und Hyperopie, und begründen Sie physikalisch, welche Korrekturlinsen jeweils eingesetzt werden.",
+        answer:
+          "Das emmetrope (normalsichtige) Auge fokussiert parallele Strahlen aus dem Unendlichen bei entspanntem Ziliarmuskel genau auf der Netzhaut (Fovea centralis). Der Fernpunkt liegt im Unendlichen. Bei der Myopie (Kurzsichtigkeit) ist der Augapfel axial zu lang (häufigste Form: ~1 mm mehr Länge entspricht ca. –3 dpt Myopie) oder die brechenden Medien zu stark. Parallele Strahlen aus der Ferne fokussieren deshalb vor der Netzhaut – das Bild auf der Netzhaut ist unscharf (Zerstreuungsscheibchen). Der Fernpunkt rückt in eine endliche Entfernung; beispielsweise hat ein –3 dpt Auge einen Fernpunkt bei 33 cm. Nahe Objekte können durch Akkommodation scharf gestellt werden. Zur Korrektur wird eine Zerstreuungslinse (negative Brechkraft, D < 0) verwendet. Sie macht das parallele Licht aus der Ferne leicht divergent, sodass es vom Auge so gebündelt wird, als käme es aus dem Fernpunkt des myopen Auges – das Licht wird dann auf der Netzhaut fokussiert. Die Stärke der Zerstreuungslinse in Dioptrien entspricht dem negativen Kehrwert der Fernpunktdistanz (z. B. Fernpunkt 50 cm → –2,0 dpt). Bei der Hyperopie (Weitsichtigkeit) ist der Augapfel zu kurz oder die brechenden Medien zu schwach. Parallel einfallendes Licht würde hinter der Netzhaut fokussiert. Das Auge muss daher auch für ferne Objekte akkommodieren – was bei jungen Menschen noch möglich ist, aber zu Asthenopie (Augenmüdigkeit) führt. Für Nahsicht müssen hohe Akkommodationsreserven aufgebracht werden. Im Extremfall kann selbst maximale Akkommodation nicht ausreichen. Die Korrektur erfolgt mit einer Sammellinse (positive Brechkraft, D > 0). Diese bündelt das einfallende Licht bereits vor dem Eintritt ins Auge konvergent, sodass das Auge weniger Brechkraft aufbringen muss. Für Presbyopie (Altersweitsichtigkeit durch Linsenverhärtung) gilt das gleiche Korrekturprinzip für den Nahbereich – der Unterschied ist die Ursache: Hier ist nicht der Augapfel zu kurz, sondern die Linse kann nicht mehr akkommodieren.",
       },
-      klinischerBezug: 'Brillenrezepte (sph/cyl/Achse), LASIK, Glaukom-Screening mittels Tonometrie und OCT, Katarakt-OP mit Intraokularlinse zur Brechkraftkorrektur.',
+      klinischerBezug:
+        "Brillenrezepte (sph/cyl/Achse), LASIK, Glaukom-Screening mittels Tonometrie und OCT, Katarakt-OP mit Intraokularlinse zur Brechkraftkorrektur.",
       selfTest: [
         {
-          question: 'Ein Patient hat einen Fernpunkt bei 40 cm. An welcher Fehlsichtigkeit leidet er, und welche Brillenstärke benötigt er?',
+          question:
+            "Ein Patient hat einen Fernpunkt bei 40 cm. An welcher Fehlsichtigkeit leidet er, und welche Brillenstärke benötigt er?",
           options: [
-            'Hyperopie, +2,5 dpt',
-            'Myopie, –2,5 dpt',
-            'Presbyopie, +2,5 dpt',
-            'Myopie, –4,0 dpt',
-            'Astigmatismus, cyl –2,5 dpt',
+            "Hyperopie, +2,5 dpt",
+            "Myopie, –2,5 dpt",
+            "Presbyopie, +2,5 dpt",
+            "Myopie, –4,0 dpt",
+            "Astigmatismus, cyl –2,5 dpt",
           ],
           correctIndex: 1,
-          explanation: 'Ein Fernpunkt bei endlicher Entfernung (40 cm, nicht im Unendlichen) weist auf Myopie hin. Der myope Fernpunkt liegt bei 40 cm = 0,4 m. Eine Zerstreuungslinse soll paralleles Licht (aus dem Unendlichen) so ablenken, als käme es vom Fernpunkt des Auges (40 cm). Dies entspricht einer virtuellen Bildweite von –0,4 m. Mit der Linsengleichung: 1/f = 1/g + 1/b = 1/∞ + 1/(–0,4 m) = –2,5 m⁻¹. Also D = –2,5 dpt. Dies ist eine Zerstreuungslinse (negatives D), typisch für Myopie-Korrektur.',
+          explanation:
+            "Ein Fernpunkt bei endlicher Entfernung (40 cm, nicht im Unendlichen) weist auf Myopie hin. Der myope Fernpunkt liegt bei 40 cm = 0,4 m. Eine Zerstreuungslinse soll paralleles Licht (aus dem Unendlichen) so ablenken, als käme es vom Fernpunkt des Auges (40 cm). Dies entspricht einer virtuellen Bildweite von –0,4 m. Mit der Linsengleichung: 1/f = 1/g + 1/b = 1/∞ + 1/(–0,4 m) = –2,5 m⁻¹. Also D = –2,5 dpt. Dies ist eine Zerstreuungslinse (negatives D), typisch für Myopie-Korrektur.",
           hints: [
-            'Fernpunkt endlich → Myopie. Fernpunkt = virtuelle Bildweite der Korrekturlinse (negativ, weil auf der Eingangsseite).',
-            'D = 1/f_korrektur = 1/(–Fernpunktdistanz in Metern).',
+            "Fernpunkt endlich → Myopie. Fernpunkt = virtuelle Bildweite der Korrekturlinse (negativ, weil auf der Eingangsseite).",
+            "D = 1/f_korrektur = 1/(–Fernpunktdistanz in Metern).",
           ],
-          tags: ['myopie', 'fernpunkt', 'zerstreuungslinse'],
+          tags: ["myopie", "fernpunkt", "zerstreuungslinse"],
           difficulty: 2,
         },
         {
-          question: 'Welcher Mechanismus bewirkt, dass das Auge nahe Objekte scharf sehen kann (Akkommodation)?',
+          question:
+            "Welcher Mechanismus bewirkt, dass das Auge nahe Objekte scharf sehen kann (Akkommodation)?",
           options: [
-            'Der Augapfel verlängert sich durch Muskelkontraktion',
-            'Die Hornhaut verändert ihre Krümmung durch Ziliarmuskel-Kontraktion',
-            'Die Augenlinse wölbt sich durch Erschlaffen der Zonulafasern, wenn der Ziliarmuskel kontrahiert',
-            'Die Pupille weitet sich und lässt mehr Licht ein',
-            'Der Glaskörperdruck steigt und drückt die Linse vor',
+            "Der Augapfel verlängert sich durch Muskelkontraktion",
+            "Die Hornhaut verändert ihre Krümmung durch Ziliarmuskel-Kontraktion",
+            "Die Augenlinse wölbt sich durch Erschlaffen der Zonulafasern, wenn der Ziliarmuskel kontrahiert",
+            "Die Pupille weitet sich und lässt mehr Licht ein",
+            "Der Glaskörperdruck steigt und drückt die Linse vor",
           ],
           correctIndex: 2,
-          explanation: 'Bei der Akkommodation auf Nähe kontrahiert der ringförmige Ziliarmuskel. Dadurch verkleinert sich der Ziliarkörper-Ring, die Spannung der Zonulafasern (Aufhängebänder der Linse) lässt nach. Die Linse, die durch ihre Eigenelastizität in die kugelförmige Form strebt, wölbt sich nun stärker – insbesondere an der Vorderfläche. Dadurch steigt ihre Brechkraft von ~17 dpt auf bis zu ~27 dpt. Die Gesamtbrechkraft des Auges steigt von ~60 auf ~70 dpt. Dies verschiebt den Fokus nach vorne auf die Netzhaut für nahe Objekte. Bei Entspannung des Ziliarmuskels (Fernsicht) ziehen die Zonulafasern die Linse flach.',
+          explanation:
+            "Bei der Akkommodation auf Nähe kontrahiert der ringförmige Ziliarmuskel. Dadurch verkleinert sich der Ziliarkörper-Ring, die Spannung der Zonulafasern (Aufhängebänder der Linse) lässt nach. Die Linse, die durch ihre Eigenelastizität in die kugelförmige Form strebt, wölbt sich nun stärker – insbesondere an der Vorderfläche. Dadurch steigt ihre Brechkraft von ~17 dpt auf bis zu ~27 dpt. Die Gesamtbrechkraft des Auges steigt von ~60 auf ~70 dpt. Dies verschiebt den Fokus nach vorne auf die Netzhaut für nahe Objekte. Bei Entspannung des Ziliarmuskels (Fernsicht) ziehen die Zonulafasern die Linse flach.",
           hints: [
-            'Merkhilfe: Ziliarmuskel kontrahiert RINGFÖRMIG → Ring wird enger → Zonulafasern erschlaffen → Linse wölbt sich.',
-            'Die Hornhaut ändert ihre Krümmung nicht – nur die Linse ist aktiv variierbar.',
+            "Merkhilfe: Ziliarmuskel kontrahiert RINGFÖRMIG → Ring wird enger → Zonulafasern erschlaffen → Linse wölbt sich.",
+            "Die Hornhaut ändert ihre Krümmung nicht – nur die Linse ist aktiv variierbar.",
           ],
-          tags: ['akkommodation', 'ziliarmuskel', 'augenlinse'],
+          tags: ["akkommodation", "ziliarmuskel", "augenlinse"],
           difficulty: 2,
         },
         {
-          question: 'Welcher Sehfehler liegt vor, wenn ein Patient ohne Brille Fernes gut, Nahes aber nicht scharf sehen kann, und dies mit zunehmendem Alter schlimmer wird?',
+          question:
+            "Ein Brillenrezept lautet: sph +1,50, cyl –0,75, Achse 90°. Welche Fehlsichtigkeiten werden korrigiert?",
           options: [
-            'Myopie',
-            'Hyperopie',
-            'Presbyopie',
-            'Astigmatismus',
-            'Amblyopie',
-          ],
-          correctIndex: 2,
-          explanation: 'Presbyopie (Altersweitsichtigkeit) entsteht durch progressive Verhärtung (Sklerose) der Augenlinse ab dem 4. Lebensjahrzehnt. Die Linse verliert ihre Elastizität – auch wenn der Ziliarmuskel noch kräftig kontrahiert, wölbt sich die Linse kaum mehr. Der Nahpunkt rückt progressiv zurück: mit 40 Jahren ~25 cm, mit 50 Jahren ~50 cm, mit 60 Jahren >1 m. Fernsicht ist unbeeinträchtigt, da kein Akkommodationsbedarf. Korrektur: Lesebrille (+dpt, Sammellinse) für den Nahbereich oder Gleitsichtbrille. Hyperopie (Option 2) tritt altersunabhängig auf und beeinflusst auch die Fernsicht; Presbyopie ist altersspezifisch und betrifft nur die Nahakkommodation.',
-          hints: [
-            'Alterndes Auge: welche Struktur verliert ihre Elastizität?',
-            'Fernsicht normal, Nahsicht schlechter mit Alter = Presbyopie (nicht Myopie).',
-          ],
-          tags: ['presbyopie', 'altersweitsichtigkeit', 'linsenelastizität'],
-          difficulty: 1,
-        },
-        {
-          question: 'Ein Brillenrezept lautet: sph +1,50, cyl –0,75, Achse 90°. Welche Fehlsichtigkeiten werden korrigiert?',
-          options: [
-            'Nur Myopie',
-            'Hyperopie und Astigmatismus kombiniert',
-            'Nur Presbyopie',
-            'Myopie und Astigmatismus kombiniert',
-            'Nur Astigmatismus',
+            "Nur Myopie",
+            "Hyperopie und Astigmatismus kombiniert",
+            "Nur Presbyopie",
+            "Myopie und Astigmatismus kombiniert",
+            "Nur Astigmatismus",
           ],
           correctIndex: 1,
-          explanation: 'Das Rezept enthält zwei Komponenten: (1) sph +1,50 dpt – ein positiver sphärischer Wert bedeutet Sammellinse → Korrektur von Hyperopie (oder Presbyopie, wenn es sich um einen Add-Wert handelt). (2) cyl –0,75 dpt, Achse 90° – ein zylindrischer Wert mit Achsangabe bedeutet Korrektur von Astigmatismus. Die Zylinderlinse bricht nur in einem Meridian (senkrecht zur Achse) und gleicht die asymmetrische Hornhautkrümmung aus. Kombiniert: +1,50/–0,75 Achse 90° korrigiert eine Weitsichtigkeit mit astigmatischer Komponente. Bei myopem Astigmatismus wären die sph-Werte negativ.',
+          explanation:
+            "Das Rezept enthält zwei Komponenten: (1) sph +1,50 dpt – ein positiver sphärischer Wert bedeutet Sammellinse → Korrektur von Hyperopie (oder Presbyopie, wenn es sich um einen Add-Wert handelt). (2) cyl –0,75 dpt, Achse 90° – ein zylindrischer Wert mit Achsangabe bedeutet Korrektur von Astigmatismus. Die Zylinderlinse bricht nur in einem Meridian (senkrecht zur Achse) und gleicht die asymmetrische Hornhautkrümmung aus. Kombiniert: +1,50/–0,75 Achse 90° korrigiert eine Weitsichtigkeit mit astigmatischer Komponente. Bei myopem Astigmatismus wären die sph-Werte negativ.",
           hints: [
-            'sph positiv → Sammellinse → Hyperopie/Presbyopie. cyl-Wert → Astigmatismus.',
-            'Achsangabe ist immer ein Zeichen für Astigmatismus-Korrektur.',
+            "sph positiv → Sammellinse → Hyperopie/Presbyopie. cyl-Wert → Astigmatismus.",
+            "Achsangabe ist immer ein Zeichen für Astigmatismus-Korrektur.",
           ],
-          tags: ['brillenrezept', 'astigmatismus', 'hyperopie'],
+          tags: ["brillenrezept", "astigmatismus", "hyperopie"],
           difficulty: 2,
         },
         {
-          question: 'Welches Verfahren wird bei der LASIK-Operation angewendet, um die Fehlsichtigkeit dauerhaft zu korrigieren?',
+          question:
+            "Warum entwickeln stark Kurzsichtige im Alter oft keine oder nur geringe Presbyopie-Symptome beim Lesen?",
           options: [
-            'Eine künstliche Intraokularlinse wird in die Vorderkammer eingesetzt',
-            'Die Augenlinse wird entnommen und durch eine neue ersetzt',
-            'Ein Excimer-Laser trägt Hornhautgewebe präzise ab und verändert so ihre Krümmung dauerhaft',
-            'Die Hornhaut wird mit einem chemischen Gel aufgequollen und mechanisch umgeformt',
-            'Spezielle Kontaktlinsen werden dauerhaft unter die Hornhaut eingelegt',
-          ],
-          correctIndex: 2,
-          explanation: 'LASIK (Laser in-situ Keratomileusis) nutzt einen Excimer-Laser mit 193 nm Wellenlänge (UV-C). Die kurze Wellenlänge ermöglicht eine extrem präzise Photoablation: Photonen mit dieser Energie brechen kovalente Bindungen in Kollagenproteine der Hornhaut (photochemischer Ablationseffekt), ohne Wärmeschäden im umliegenden Gewebe. Für Myopie wird die Hornhautmitte abgetragen (Abflachung, Reduzierung der Brechkraft), für Hyperopie die Peripherie (Erhöhung der Krümmung). Vorher wird ein dünner Hornhautdeckel (Flap) mit Laser oder Mikrokeratom abgehoben und nach der Ablation zurückgelegt. Intraokularlinsen (Option 1) werden bei Katarakt-OP oder extremer Fehlsichtigkeit eingesetzt.',
-          hints: [
-            'LASIK = Laser-Operation – welcher Laser, und was tut er mit der Hornhaut?',
-            'Excimer-Laser: 193 nm UV-Licht, Photoablation – kein Wärme, hohe Präzision.',
-          ],
-          tags: ['lasik', 'excimer-laser', 'hornhaut'],
-          difficulty: 2,
-        },
-        {
-          question: 'Warum entwickeln stark Kurzsichtige im Alter oft keine oder nur geringe Presbyopie-Symptome beim Lesen?',
-          options: [
-            'Kurzsichtige haben eine dickere Linse und akkommodieren besser',
-            'Ihr Nahpunkt liegt ohnehin nahe, sodass sie ohne Brille noch lesen können, auch wenn die Akkommodation nachlässt',
-            'Myope akkommodieren generell stärker als Emmetrope',
-            'Kurzsichtige haben einen größeren Augeninnendruck, der die Linse flexibler hält',
-            'Myopie schützt vor Linsenverhärtung durch bessere Linsenernährung',
+            "Kurzsichtige haben eine dickere Linse und akkommodieren besser",
+            "Ihr Nahpunkt liegt ohnehin nahe, sodass sie ohne Brille noch lesen können, auch wenn die Akkommodation nachlässt",
+            "Myope akkommodieren generell stärker als Emmetrope",
+            "Kurzsichtige haben einen größeren Augeninnendruck, der die Linse flexibler hält",
+            "Myopie schützt vor Linsenverhärtung durch bessere Linsenernährung",
           ],
           correctIndex: 1,
-          explanation: 'Ein myopes Auge hat seinen Fernpunkt bei endlicher Entfernung (z. B. 33 cm bei –3 dpt). Zum Lesen (Abstand 30–40 cm) muss ein normalsichtiges Auge stark akkommodieren; ein myopes Auge kann hingegen ohne Brille (und ohne große Akkommodation) lesen, weil der Fokus ohnehin nahe liegt. Wenn im Alter die Akkommodation nachlässt (Presbyopie), kann der Myope für die Leseentfernung die Brille einfach abnehmen – die Zerstreuungslinsenbrille für Ferne ist dann nicht mehr nötig. Für Fernsicht benötigt er weiterhin seine Myopiebrille. Es handelt sich also um einen optischen Zufall, nicht um einen biologischen Schutz der Linse.',
+          explanation:
+            "Ein myopes Auge hat seinen Fernpunkt bei endlicher Entfernung (z. B. 33 cm bei –3 dpt). Zum Lesen (Abstand 30–40 cm) muss ein normalsichtiges Auge stark akkommodieren; ein myopes Auge kann hingegen ohne Brille (und ohne große Akkommodation) lesen, weil der Fokus ohnehin nahe liegt. Wenn im Alter die Akkommodation nachlässt (Presbyopie), kann der Myope für die Leseentfernung die Brille einfach abnehmen – die Zerstreuungslinsenbrille für Ferne ist dann nicht mehr nötig. Für Fernsicht benötigt er weiterhin seine Myopiebrille. Es handelt sich also um einen optischen Zufall, nicht um einen biologischen Schutz der Linse.",
           hints: [
-            'Myope Fernpunkt: z. B. bei 33 cm. Lesedistanz: ~33–40 cm. Was folgt daraus für die nötige Akkommodation?',
-            'Presbyopie = Akkommodationsverlust für Nähe. Was hilft, wenn der Fokus schon nah ist?',
+            "Myope Fernpunkt: z. B. bei 33 cm. Lesedistanz: ~33–40 cm. Was folgt daraus für die nötige Akkommodation?",
+            "Presbyopie = Akkommodationsverlust für Nähe. Was hilft, wenn der Fokus schon nah ist?",
           ],
-          tags: ['myopie', 'presbyopie', 'akkommodation'],
+          tags: ["myopie", "presbyopie", "akkommodation"],
           difficulty: 3,
         },
         {
-          question: 'Was beschreibt der Begriff "Astigmatismus" physikalisch, und welche Linse korrigiert ihn?',
+          question:
+            'Was beschreibt der Begriff "Astigmatismus" physikalisch, und welche Linse korrigiert ihn?',
           options: [
-            'Ein Auge, das zu lang ist und eine Zerstreuungslinse benötigt',
-            'Eine asymmetrische Hornhautkrümmung, bei der verschiedene Meridiane unterschiedliche Brechkraft haben – Korrektur durch Zylinderlinse',
-            'Eine verhärtete Linse, die eine Sammellinse als Lesebrille erfordert',
-            'Eine zu kleine Pupille, die mit einer Prismenlinie korrigiert wird',
-            'Ein Sehnerv-Defizit, das mit einer Bifokalgläser behandelt wird',
+            "Ein Auge, das zu lang ist und eine Zerstreuungslinse benötigt",
+            "Eine asymmetrische Hornhautkrümmung, bei der verschiedene Meridiane unterschiedliche Brechkraft haben – Korrektur durch Zylinderlinse",
+            "Eine verhärtete Linse, die eine Sammellinse als Lesebrille erfordert",
+            "Eine zu kleine Pupille, die mit einer Prismenlinie korrigiert wird",
+            "Ein Sehnerv-Defizit, das mit einer Bifokalgläser behandelt wird",
           ],
           correctIndex: 1,
-          explanation: 'Astigmatismus (Stabsichtigkeit) bedeutet, dass die brechende Fläche (meist Hornhaut) keine gleichmäßig sphärische Krümmung hat, sondern in verschiedenen Meridianen unterschiedlich stark gewölbt ist – ähnlich einem Rugbyball statt einer Kugel. Dies führt dazu, dass verschiedene Ebenen des einfallenden Lichts unterschiedliche Brennpunkte haben (Sturmsches Intervall). Punkte werden als Linien oder Flecken wahrgenommen. Die Korrektur erfolgt mit torischen Linsen (Zylinderlinsen), die in einem Meridian eine definierte Brechkraft haben und im senkrechten Meridian keine. Das Brillenrezept enthält dafür den cyl-Wert (Stärke der zylindrischen Korrektur) und die Achse (Richtung des nicht-brechenden Meridians in Grad).',
+          explanation:
+            "Astigmatismus (Stabsichtigkeit) bedeutet, dass die brechende Fläche (meist Hornhaut) keine gleichmäßig sphärische Krümmung hat, sondern in verschiedenen Meridianen unterschiedlich stark gewölbt ist – ähnlich einem Rugbyball statt einer Kugel. Dies führt dazu, dass verschiedene Ebenen des einfallenden Lichts unterschiedliche Brennpunkte haben (Sturmsches Intervall). Punkte werden als Linien oder Flecken wahrgenommen. Die Korrektur erfolgt mit torischen Linsen (Zylinderlinsen), die in einem Meridian eine definierte Brechkraft haben und im senkrechten Meridian keine. Das Brillenrezept enthält dafür den cyl-Wert (Stärke der zylindrischen Korrektur) und die Achse (Richtung des nicht-brechenden Meridians in Grad).",
           hints: [
-            'Astigmatismus = ungleichmäßige Krümmung → verschiedene Fokuspunkte je nach Meridian.',
-            'Zylinderlinse bricht nur in einer Richtung – ideal für asymmetrische Krümmungsfehler.',
+            "Astigmatismus = ungleichmäßige Krümmung → verschiedene Fokuspunkte je nach Meridian.",
+            "Zylinderlinse bricht nur in einer Richtung – ideal für asymmetrische Krümmungsfehler.",
           ],
-          tags: ['astigmatismus', 'zylinderlinse', 'hornhautkrümmung'],
+          tags: ["astigmatismus", "zylinderlinse", "hornhautkrümmung"],
           difficulty: 2,
         },
       ],
