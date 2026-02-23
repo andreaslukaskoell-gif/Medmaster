@@ -18,9 +18,7 @@ export const chemKapOrganisch: Kapitel = {
 
 Organische Chemie ist die Chemie des Kohlenstoffs — und damit die Chemie des Lebens. Kohlenhydrate, Fette, Proteine, DNA: alle sind organische Moleküle. Den einfachsten Baustein bilden die **Kohlenwasserstoffe**: Verbindungen aus C und H. Schon hier entscheidet die Sättigung (Alkane, Alkene, Alkine) über die Reaktivität. Für den MedAT sind IUPAC-Nomenklatur, Hybridisierung (sp³/sp²/sp), die Markovnikov-Regel sowie der Bromwassertest prüfungsrelevant.
 
-# Kohlenwasserstoffe — Alkane, Alkene, Alkine
-
-Die organische Chemie befasst sich mit Verbindungen des Kohlenstoffs. Der Kohlenstoff ist einzigartig, weil er stabile Ketten und Ringe bilden kann (Katenation). Kohlenwasserstoffe (KW) enthalten ausschließlich C- und H-Atome und bilden die Grundgerüste aller organischen Verbindungen.
+---
 
 ## Alkane — gesättigte Kohlenwasserstoffe
 
@@ -91,6 +89,31 @@ In der homologen Reihe der Alkane gilt: Je länger die Kette, desto größer die
 ## Klinischer Bezug
 
 Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform CHCl₃, Diethylether). Ethanol (ein alkoholischer KW-Abkömmling) wird in der Leber zweistufig abgebaut: Ethanol →[ADH] Acetaldehyd (toxisch!) →[ALDH] Essigsäure → Acetyl-CoA. Disulfiram (Antabus) hemmt ALDH → Acetaldehydakkumulation → Aversionstherapie bei Alkoholismus. Kohlenwasserstoffe in der Atemluft (z.B. Ethan, Pentan) gelten als Biomarker für Lipidperoxidation und oxidativen Stress. **Benzol** (aromatischer KW, 6π-Elektronen, Hückel-Regel) ist krebserregend (akute myeloische Leukämie bei chronischer Exposition). **Methan (CH₄)** als Treibhausgas: 80× stärkerer Treibhauseffekt als CO₂ (auf 20 Jahre), entsteht bei anaerober Zersetzung. **Halogenkohlenwasserstoffe**: Chloroform (CHCl₃, historisches Narkotikum, hepatotoxisch), Tetrachlorkohlenstoff (CCl₄, lebertoxisch → radikalische Metabolisierung in Leber). **FCKW** (Fluorchlorkohlenwasserstoffe): zerstören Ozonschicht durch Freisetzung von Cl-Radikalen in der Stratosphäre (Montreal-Protokoll 1987).
+
+> **Merke:** Ethanol →[ADH] Acetaldehyd (Kater!) →[ALDH] Acetat. Disulfiram hemmt ALDH. Benzol → AML. FCKW → Ozonabbau.
+
+---
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Welche Hybridisierung hat C in Ethen?" → sp² (120°, trigonal-planar); in Ethin → sp (180°, linear)
+- "Was zeigt der Bromwassertest?" → Entfärbung der orangen Bromwasser-Lösung bei Anwesenheit von C=C oder C≡C (elektrophile Addition von Br₂)
+- "Wie lautet die Markovnikov-Regel?" → H addiert an das C mit mehr H-Atomen (H-reichere Seite); stabileres Carbokation als Intermediat bestimmt das Hauptprodukt
+- "Warum siedet verzweigtes Alkan tiefer als lineares?" → Kleinere Kontaktfläche → schwächere van-der-Waals-Kräfte → niedrigerer Siedepunkt
+
+**Achtung — typische Verwechslungen:**
+- Alkan-Formel CₙH₂ₙ₊₂ vs. Alken-Formel CₙH₂ₙ — Cycloalkane und Alkene haben GLEICHE Summenformel CₙH₂ₙ!
+- Radikalische Substitution (Alkane + UV, Halogene) ≠ elektrophile Addition (Alkene + Br₂)
+- n-Butan (Sdp. −1°C) siedet HÖHER als Isobutan (Sdp. −12°C) trotz gleicher Summenformel C₄H₁₀
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Bindungswinkel: sp³ → 109,5° (Tetraeder); sp² → 120° (planar); sp → 180° (linear)
+- Alkan-Siedepunkte: Methan −162°C, Ethan −89°C, Propan −42°C, Butan −1°C, Pentan 36°C, Heptan 98°C
+- Benzol: krebserregend (AML bei chronischer Exposition, 6 π-Elektronen)
+- Disulfiram hemmt ALDH → Acetaldehydakkumulation (Alkoholismustherapie)
+
+---
 
 ## Zusammenfassung
 
@@ -315,9 +338,7 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform 
 
 Zwei Moleküle, gleiche Formel — aber völlig verschiedene Wirkung. Das S-Enantiomer von Thalidomid (Contergan) verursachte Missbildungen, das R-Enantiomer war harmlos. Enzymaktivzentren, Rezeptoren und Ionenkanäle erkennen Moleküle dreidimensional und unterscheiden Spiegelbilder. Das ist **Stereochemie**. Für den MedAT sind Konstitutionsisomere, Enantiomere, Diastereomere, das Chiralitätszentrum (R/S-Konfiguration) und Cis-Trans-Isomerie prüfungsrelevant.
 
-# Isomerie und Stereochemie
-
-Isomere sind Verbindungen mit gleicher Summenformel aber unterschiedlicher Struktur. Das Konzept der Isomerie ist grundlegend für das Verständnis biologischer Aktivität, da oft nur ein Isomer eine spezifische Wirkung hat.
+---
 
 ## Konstitutionsisomere (Strukturisomere)
 
@@ -399,6 +420,30 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
 **L-Dopa vs. D-Dopa:** Bei Parkinson wird nur L-Dopa therapeutisch eingesetzt; D-Dopa hat keine Wirkung, da die DOPA-Decarboxylase stereoselektiv ist.
 
 **Eutomer und Distomer**: Bei chiralen Arzneimitteln heißt das wirksamere Enantiomer **Eutomer**, das weniger wirksame **Distomer**. Moderne Arzneimittelzulassung verlangt separate Prüfung beider Enantiomere. Racemate werden zunehmend durch reine Enantiomere ersetzt: Omeprazol (Racemat) → Esomeprazol (S-Enantiomer, stärkere Wirkung).
+
+> **Merke:** Thalidomid: R=Sedativum, S=teratogen; in vivo Racemisierung → Trennung klinisch unwirksam. Chirale Arzneimittel müssen auf jedes Enantiomer separat geprüft werden.
+
+---
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was ist ein Chiralitätszentrum?" → sp³-C mit vier verschiedenen Substituenten → nicht-superponierbare Spiegelbilder (Enantiomere)
+- "Warum sind Enantiomere biologisch relevant?" → Enzyme/Rezeptoren sind chiral → stereoselektive Erkennung (z.B. nur L-Aminosäuren in Proteinen, L-Dopa wirksam)
+- "Was ist ein Racemat?" → 1:1-Gemisch aus R- und S-Enantiomer → optisch inaktiv (Drehungen heben sich auf)
+
+**Achtung — typische Verwechslungen:**
+- Enantiomere (Spiegelbilder, nicht superponierbar, gleiche physikochem. Eigenschaften) ≠ Diastereomere (nicht Spiegelbilder, verschiedene physikochem. Eigenschaften → trennbar durch Chromatographie)
+- R/S-Konfiguration sagt NICHTS über (+)/(−)-Drehung aus — muss experimentell bestimmt werden
+- cis/trans-Isomerie an C=C (freie Rotation blockiert durch π-Bindung) ≠ Konformationsisomerie (freie Rotation, keine Bindung gebrochen)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Bei n Chiralitätszentren: max. 2ⁿ Stereoisomere (Ausnahme: meso-Verbindungen mit innerer Spiegelebene)
+- Thalidomid: R-Enantiomer (Sedativum), S-Enantiomer (teratogen) — in vivo Racemisierung macht reines R unwirksam!
+- Proteinogene Aminosäuren: alle L-konfiguriert; D-Aminosäuren in Bakterienzellwänden
+- Polarimeter misst spezifische Drehung: [α] = α / (c × l); (+) = rechtsdrehend, (−) = linksdrehend
+
+---
 
 ## Zusammenfassung
 
@@ -609,9 +654,7 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
 
 Alle Pharmaka, Hormone, Enzyme-Substrate und Metabolite haben eines gemeinsam: Sie enthalten **funktionelle Gruppen** — definierte Atomgruppen, die das chemische Verhalten bestimmen. Eine Hydroxylgruppe (–OH) macht aus einem Kohlenwasserstoff einen Alkohol; eine Carboxylgruppe (–COOH) macht daraus eine Säure. Wer die funktionellen Gruppen kennt, versteht Reaktivität, Löslichkeit, Acidität und Biologische Funktion. Für den MedAT sind Alkohole, Aldehyde, Ketone, Carbonsäuren, Ester, Amine und Thiole prüfungsrelevant.
 
-# Funktionelle Gruppen der Organischen Chemie
-
-Funktionelle Gruppen sind spezifische Atomanordnungen im Molekül, die dessen chemisches Verhalten bestimmen. Sie sind verantwortlich für die charakteristischen Reaktionen einer Verbindungsklasse. Das Grundgerüst (Kohlenwasserstoffrest R) ist in den meisten Reaktionen relativ inert; die Reaktivität liegt in der funktionellen Gruppe.
+---
 
 ## Alkohole (−OH, Hydroxylgruppe)
 
@@ -712,6 +755,26 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
 - **Serotonin** (5-HT): aus Tryptophan; Stimmungsregulation, Darmperistaltik
 - **Histamin**: aus Histidin (Decarboxylierung); Entzündungsmediator, Magensäuresekretion, allergische Reaktionen. Antihistaminika blockieren H₁-/H₂-Rezeptoren
 - **GABA** (γ-Aminobuttersäure): wichtigster inhibitorischer Neurotransmitter im ZNS; Benzodiazepine verstärken GABA-Wirkung
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was entsteht bei der Oxidation eines primären Alkohols?" → Zuerst Aldehyd → dann Carbonsäure (sekundärer Alkohol → Keton, keine weitere Oxidation ohne C-C-Spaltung!)
+- "Was ist Veresterung?" → Carbonsäure + Alkohol ⇌ Ester + H₂O (Gleichgewicht, reversibel, H₂SO₄-Katalyse)
+- "Warum sind Amine basisch?" → Freies Elektronenpaar am N nimmt Protonen auf (Brønsted-Base): R-NH₂ + H₂O ⇌ R-NH₃⁺ + OH⁻
+
+**Achtung — typische Verwechslungen:**
+- Aldehyde (–CHO am Kettenende) vs. Ketone (C=O in der Kette) — Aldehyde reduzieren Fehling/Tollens, Ketone nicht!
+- Methanol-Abbau → Formaldehyd (toxisch, Erblindung!) ≠ Ethanol-Abbau → Acetaldehyd → Acetat
+- Verseifung (Ester + NaOH → Carboxylat + Alkohol, irreversibel) ≠ saure Esterspaltung (reversibel)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Carbonsäure-pKₐ: 4–5 (schwache Säure); Essigsäure pKₐ = 4,75; Ameisensäure pKₐ = 3,75
+- Ethanol-Abbauweg: Ethanol →[ADH] Acetaldehyd →[ALDH] Acetat → Acetyl-CoA
+- Ketonkörper bei Diabetes/Fasten: Aceton (Atemgeruch), Acetoacetat, β-Hydroxybutyrat → Ketoazidose (pH < 7,35), Kußmaul-Atmung
+- Aspirin = Ester (Acetylsalicylsäure); Peptidbindung = Amid; Disulfidbrücke aus zwei Thiol-Gruppen (–SH)
+
+---
 
 ## Zusammenfassung: Funktionelle Gruppen und Oxidationsstufen
 
@@ -928,7 +991,7 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
 
 Benzol, Pyridin, Purin — aromatische Ringe sind überall in der Biochemie: in den Basen der DNA, in Aminosäuren wie Phenylalanin und Tryptophan, in Hormonen, Neurotransmittern und Cofaktoren wie FAD und NAD⁺. Was macht ein Molekül aromatisch? Die **Hückel-Regel** liefert die Antwort: ein planarer Ring mit 4n+2 π-Elektronen. Aromatische Systeme sind besonders stabil. Für den MedAT sind Aromatizität, elektrophile aromatische Substitution, Aminosäurestruktur, Purine/Pyrimidine und die Peptidbindung prüfungsrelevant.
 
-# Aromate und biologisch relevante organische Verbindungen
+---
 
 ## Benzol und Aromatizität
 
@@ -1037,7 +1100,33 @@ Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein 
 - **Gicht**: Harnsäure = Endprodukt des Purinabbaus; Ablagerung in Gelenken; Allopurinol hemmt Xanthinoxidase
 - **Aminosäuren**: α-C mit –NH₂, –COOH, –H, –R; in wässriger Lösung Zwitterionen; 20 proteinogene AS
 - **Peptidbindung**: sp²-hybridisiert, planar, partieller Doppelbindungscharakter; nicht frei drehbar
-- **Neurotransmitter aus AS**: Tyrosin → Dopamin → Noradrenalin → Adrenalin; Tryptophan → Serotonin, Melatonin`,
+- **Neurotransmitter aus AS**: Tyrosin → Dopamin → Noradrenalin → Adrenalin; Tryptophan → Serotonin, Melatonin
+
+---
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was besagt die Hückel-Regel?" → Planarer, vollständig konjugierter Ring mit 4n+2 π-Elektronen ist aromatisch (n=1: Benzol mit 6 π-e⁻)
+- "Warum EAS statt Addition bei Benzol?" → Aromatizität (Resonanzenergie ≈150 kJ/mol) bleibt erhalten; Addition würde aromatisches System zerstören
+- "Was ist Gicht?" → Harnsäureablagerung in Gelenken (Natriumurat-Kristalle) bei Hyperurikämie >6,8 mg/dL; Podagra = Großzehengrundgelenk
+
+**Achtung — typische Verwechslungen:**
+- Purine (Doppelring: Adenin, Guanin) ≠ Pyrimidine (Einzelring: Cytosin, Thymin, Uracil) — Eselsbrücke: "CUT-Pyrimidine" (Cytosin, Uracil, Thymin)
+- Cyclooctatetraen (C₈H₈, 8 π-e⁻) ist NICHT aromatisch — 4n+2=8 hat keine ganzzahlige Lösung n
+- Allopurinol hemmt Xanthinoxidase (→ Harnsäuresynthese↓), löst bestehende Kristalle nicht auf (kein akuter Gichtanfall-Mittel!)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Hückel: 4n+2 π-Elektronen → n=0 (2 π-e), n=1 (6, Benzol!), n=2 (10, Naphthalin), n=3 (14)
+- Purine → Xanthin →[Xanthinoxidase] Harnsäure; Gicht bei Harnsäure >6,8 mg/dL
+- PKU: Phenylalanin-Hydroxylase-Defekt → Phe akkumuliert, Tyrosin-Mangel; Neugeborenenscreening (Guthrie-Test)
+- Tyrosin → L-DOPA → Dopamin → Noradrenalin → Adrenalin (Catecholaminbiosynthese; L-DOPA bei Parkinson)
+
+---
+
+## Zusammenfassung
+
+- **Aromatizität**: planarer Ring, vollständige Konjugation, 4n+2 π-Elektronen (Hückel); Benzol: 6 π-e⁻ (n=1)`,
       stichworte: [
         "Benzol",
         "Aromatizität",
@@ -1242,7 +1331,7 @@ Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein 
 
 Proteine sind die Maschinen des Lebens: Enzyme, Antikörper, Strukturproteine, Hormone, Transportmoleküle — alle bestehen aus **Aminosäuren**, verknüpft durch Peptidbindungen. Die Reihenfolge der Aminosäuren (Primärstruktur) bestimmt die Faltung (Sekundär- und Tertiärstruktur) und damit die Funktion. Eine einzige Aminosäure-Mutation kann tödlich sein (Sichelzellanämie). Für den MedAT sind die 20 proteinogenen Aminosäuren, Peptidbindung, Proteinstrukturebenen, Denaturierung und klinische Biomarker prüfungsrelevant.
 
-# Aminosäuren und Proteine
+---
 
 ## Grundstruktur der Aminosäuren
 
@@ -1334,6 +1423,30 @@ Denaturierung kann **reversibel** sein (Renaturierung durch langsames Entfernen 
 **Phenylketonurie (PKU)**: Autosomal-rezessiver Enzymdefekt der Phenylalanin-Hydroxylase → Phenylalanin akkumuliert, Tyrosin (und damit Dopamin, Melanin, Schilddrüsenhormone) fehlt. Unbehandelt: schwere intellektuelle Behinderung. Therapie: phenylalaninarme Diät ab Geburt. Neugeborenenscreening (Guthrie-Test) ist in Österreich Pflicht.
 
 **Enzym-Biomarker**: Troponin T/I (hochspezifisch Herzinfarkt, Anstieg 3-6 h), CK-MB (Herzmuskelnekrose, früherer Anstieg), LDH (unspezifisch: Hämolyse, Infarkt), GPT/ALT (leberspezifisch: Hepatitis), AST/GOT (Herz + Leber). **Lipase** und **Amylase**: akute Pankreatitis.
+
+> **Merke:** Troponin = Goldstandard Herzinfarkt (3–6 h). Sichelzellanämie = Glu6Val in β-Globin. PKU = Phe-Hydroxylase-Defekt, Neugeborenenscreening Pflicht.
+
+---
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was sind die 4 Ebenen der Proteinstruktur?" → Primär (Sequenz, Peptidbindungen), Sekundär (α-Helix/β-Faltblatt, H-Brücken im Rückgrat), Tertiär (3D-Faltung durch Seitenketten-WW), Quartär (Oligomere, z.B. Hämoglobin α₂β₂)
+- "Was ist Denaturierung?" → Verlust von Sekundär- bis Quartärstruktur (Primärstruktur = Peptidbindungen bleiben!); durch Hitze, extremer pH, Harnstoff, Reduktionsmittel
+- "Was ist der isoelektrische Punkt (pI)?" → pH, bei dem Nettoladung = 0 (Zwitterion: –NH₃⁺ und –COO⁻); bei pH < pI ist AS positiv geladen, bei pH > pI negativ
+
+**Achtung — typische Verwechslungen:**
+- α-Helix (H-Brücken im Rückgrat: C=O(n) mit N-H(n+4), parallel zur Helixachse) ≠ β-Faltblatt (H-Brücken zwischen Strängen, senkrecht zur Kettenrichtung)
+- Disulfidbrücken (–S–S–) stabilisieren Tertiärstruktur (kovalent!) ≠ H-Brücken der Sekundärstruktur (nicht-kovalent)
+- Denaturierung ≠ Hydrolyse — Primärstruktur (Peptidbindungen) bleibt bei Denaturierung erhalten
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Essentielle Aminosäuren (8 Erwachsene): Ile, Leu, Lys, Met, Phe, Thr, Trp, Val (+ His für Kinder)
+- Sichelzellanämie: Glu6→Val in β-Globin → HbS-Polymerisation bei Desoxigenierung → Sichelzellen
+- Biomarker Herzinfarkt: Troponin T/I (3–6 h, hochspezifisch); CK-MB (früh); LDH (unspezifisch)
+- Biomarker Leber: GPT/ALT (hepatozellulärer Schaden); AST/GOT (Herz + Leber)
+
+---
 
 ## Zusammenfassung
 
@@ -1547,7 +1660,7 @@ Denaturierung kann **reversibel** sein (Renaturierung durch langsames Entfernen 
 
 Glucose ist der Hauptenergieträger des Körpers. Cellulose ist das häufigste organische Polymer der Erde. Beide bestehen aus identischen Glucose-Einheiten — aber durch unterschiedliche Verknüpfung (α- vs. β-glycosidisch) haben sie völlig verschiedene Eigenschaften. **Kohlenhydrate** (Zucker) sind mehr als Energiequellen: Sie sind Informationsträger (Blutgruppen!), Strukturmoleküle und wichtige Marker (HbA1c). Für den MedAT sind Monosaccharidstruktur (Anomere, Fischer/Haworth), wichtige Di- und Polysaccharide sowie klinische Bezüge (HbA1c, Laktoseintoleranz) prüfungsrelevant.
 
-# Kohlenhydrate — Mono-, Di- und Polysaccharide
+---
 
 ## Monosaccharide — Grundbausteine
 
@@ -1596,6 +1709,30 @@ Zwei Monosaccharide verbinden sich unter Wasserabspaltung durch eine **glykosidi
 **Diabetes mellitus / HbA1c**: Chronische Hyperglykämie → nicht-enzymatische Glykierung (Amadori-Umlagerung) von Hämoglobin an N-terminalem Valin der β-Globinkette → **HbA1c** als Langzeitmarker (8–12 Wochen, Erythrozyten-Lebensdauer ~120 Tage). Zielwert bei Typ-2-Diabetes: <7% (53 mmol/mol).
 
 **Glykogenspeicherkrankheiten (Glykogenosen)**: Morbus von Gierke (Typ I, Glucose-6-phosphatase-Mangel → Hypoglykämie, Hepatomegalie), Morbus Pompe (Typ II, lysosomale α-Glucosidase-Mangel → Kardiomyopathie, Muskelschwäche), Morbus McArdle (Typ V, Muskel-Phosphorylase-Mangel → Belastungsintoleranz, Myoglobinurie).
+
+> **Merke:** Cellulose (β-1,4) = unverdaulich; Stärke (α-1,4) = verdaulich. HbA1c = Glykiertes Hb = 8–12 Wochen Glukosegedächtnis. Saccharose = einziges nicht-reduzierendes häufiges Disaccharid.
+
+---
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was ist HbA1c?" → Nicht-enzymatische Glykierung von Hämoglobin; spiegelt Ø-Blutglukose der letzten 8–12 Wochen wider; Zielwert <7% (53 mmol/mol) bei Typ-2-Diabetes
+- "Warum ist Cellulose unverdaulich?" → β-1,4-glycosidische Bindung (Mensch hat kein β-1,4-Glucosidase/Cellulase); Stärke mit α-1,4-Bindung ist verdaulich
+- "Was ist ein reduzierender Zucker?" → Besitzt freie Halbacetalgruppe (anomeres C) → reduziert Fehling (Cu²⁺ → Cu₂O roter Niederschlag); Saccharose ist NICHT reduzierend
+
+**Achtung — typische Verwechslungen:**
+- α-Anomer (OH am C1 axial/unten in Haworth) ≠ β-Anomer (OH äquatorial/oben in Haworth)
+- Amylose (linear, α-1,4, Helix → Iod-Blaufärbung) ≠ Amylopektin (verzweigt, α-1,6 alle 20–25 Reste → rotbraun mit Iod)
+- Laktoseintoleranz (Laktasemangel, erworbener Phänotyp, ~75% Weltbevölkerung) ≠ Galaktosämie (Enzymdefekt im Galactose-Abbau, neonatal gefährlich)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Nüchternblutglukose normal: 3,9–6,1 mmol/L; Diabetes-Diagnose-Grenze: ≥7,0 mmol/L nüchtern
+- Glykogen-Verzweigung: α-1,6 alle 8–12 Reste (Glykogen) vs. alle 20–25 Reste (Amylopektin) → schnellere Glucose-Freisetzung aus Glykogen
+- Disaccharide: Maltose (α-1,4 Glc+Glc, reduz.), Laktose (β-1,4 Gal+Glc, reduz.), Saccharose (α-1→β-2 Glc+Frc, NICHT reduz.)
+- Altersbedingte Laktaseabnahme bei >75% der Weltbevölkerung (Laktasepersistenz v.a. Nordeuropa durch positive Selektion)
+
+---
 
 ## Zusammenfassung
 
@@ -1832,7 +1969,7 @@ Zwei Monosaccharide verbinden sich unter Wasserabspaltung durch eine **glykosidi
 
 Fett hat schlechten Ruf — aber ist lebensnotwendig. Phospholipide bilden alle Membranen, Cholesterin ist Ausgangsstoff für Steroidhormone und Vitamin D, Eicosanoide (aus Fettsäuren) regulieren Entzündungen. **Lipide** sind eine chemisch heterogene Gruppe: Was sie vereint, ist ihre Unlöslichkeit in Wasser (Hydrophobie). Für den MedAT sind gesättigte vs. ungesättigte Fettsäuren, Triglyceride, Phospholipid-Membranstruktur, Cholesterin/LDL/HDL, Statine und Ketonkörper prüfungsrelevant.
 
-# Lipide — Fette, Phospholipide und Steroide
+---
 
 ## Fettsäuren
 
@@ -1887,6 +2024,30 @@ Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): d
 **Ketonkörper** (Acetoacetat, β-Hydroxybutyrat, Aceton): Entstehen in Leber-Mitochondrien aus überschüssigem Acetyl-CoA bei gesteigerter β-Oxidation, wenn Oxalacetat für den Citratzyklus nicht ausreicht (Fasten, unkontrollierter Typ-1-Diabetes). Extrahepatische Gewebe (Gehirn, Herz, Muskel) können Ketonkörper als alternative Energiequelle nutzen. Bei unkontrolliertem Diabetes: massive Ketonkörperproduktion → metabolische Azidose (diabetische Ketoazidose, pH < 7,3, Acetongeruch der Atemluft, Kußmaul-Atmung).
 
 **Morbus Gaucher**: Häufigste Sphingolipidose — Mangel an Glucocerebrosidase → Glucocerebrosid akkumuliert in Makrophagen (Gaucher-Zellen) → Hepatosplenomegalie, Knochenbefall. Enzymersatztherapie verfügbar.
+
+> **Merke:** Statine hemmen HMG-CoA-Reduktase → LDL-Rezeptor-Hochregulation → LDL↓ 30–50%. LDL atherogen, HDL protektiv. Ketoazidose (Typ-1-Diabetes): Acetongeruch, pH <7,3, Kußmaul-Atmung.
+
+---
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Warum sind Phospholipide Membranbausteine?" → Amphipathisch (polarer Phosphatkopf + 2 apolare Fettsäureschwänze) → spontane Bilayer-Bildung durch hydrophoben Effekt
+- "Was tun Statine?" → Hemmen HMG-CoA-Reduktase (Schlüsselenzym der Cholesterinsynthese) → weniger Cholesterin in Leber → LDL-Rezeptor-Hochregulation → LDL-Senkung 30–50%
+- "Woher kommt der höhere Energiegehalt von Fett?" → Fettsäuren stärker reduziert als KH (mehr H, weniger O); Glykogen bindet außerdem Wasser → effektive Energiedichte von Glykogen noch geringer
+
+**Achtung — typische Verwechslungen:**
+- cis-Fettsäuren (Knick in Kette → schlechte Packung → flüssig, protektiv) ≠ trans-Fettsäuren (gestreckt wie gesättigte FS → fest, atherogen: LDL↑, HDL↓)
+- LDL ("schlechtes" Cholesterin, atherogen, liefert Cholesterin an periphere Gewebe) ≠ HDL ("gutes" Cholesterin, reverser Cholesterintransport zur Leber)
+- Ketoazidose (Typ-1-Diabetes, absoluter Insulinmangel, pH <7,3, lebensbedrohlich) ≠ physiologische Ketonämie beim Fasten (kontrolliert, mild)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Energiedichte: Lipide 38 kJ/g (≈9 kcal/g) vs. Kohlenhydrate + Protein je 17 kJ/g (≈4 kcal/g)
+- Essentielle Fettsäuren: Linolsäure (ω-6, C18:2) und α-Linolensäure (ω-3, C18:3) — müssen mit Nahrung zugeführt werden
+- Häufigste gesättigte Fettsäure: Palmitinsäure C16:0; häufigste einfach-ungesättigte: Ölsäure C18:1Δ9 (cis, Olivenöl)
+- LDL-Grenzwert: <160 mg/dL normal; Atheroskleroserisiko ↑ bei LDL >160 mg/dL
+
+---
 
 ## Zusammenfassung
 
@@ -2123,7 +2284,7 @@ Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): d
 
 DNA ist der Bauplan des Lebens — ein langer Doppelstrang aus Nukleotiden, der in jeder Körperzelle die vollständige genetische Information trägt. RNA übersetzt diese Information in Proteine. **Nukleinsäuren** bestehen aus den gleichen Bausteinen: Zucker (Ribose/Desoxyribose) + Phosphat + Base. Ihre spezifische Basenpaarung (A-T, G-C) ermöglicht die präzise Replikation und Transkription. Für den MedAT sind Nukleotidaufbau, Chargaff-Regeln, DNA-Struktur, RNA-Typen, PCR und DNA-Reparatur prüfungsrelevant.
 
-# Nukleinsäuren — DNA und RNA
+---
 
 ## Nukleotid-Aufbau
 
@@ -2211,7 +2372,27 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
 - **RNA-Typen**: mRNA (Matrize), tRNA (Aminosäuretransport), rRNA (Ribosombestandteil), miRNA (post-transkriptionale Regulation)
 - **PCR**: Denaturierung (95°C) → Annealing → Elongation mit Taq-Polymerase; RT-PCR für RNA-Nachweis
 - **Nukleosid-Analoga**: Aciclovir (Herpes), Tenofovir (HIV), Remdesivir (COVID-19) → Kettenabbruch durch fehlendes 3'-OH
-- **DNA-Reparatur**: MMR (Fehlpaarungen, Lynch-Syndrom), NER (UV-Thymin-Dimere, Xeroderma pigmentosum), BER (oxidierte Basen)`,
+- **DNA-Reparatur**: MMR (Fehlpaarungen, Lynch-Syndrom), NER (UV-Thymin-Dimere, Xeroderma pigmentosum), BER (oxidierte Basen)
+
+---
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Wie viele H-Brücken verbinden A-T und G-C?" → A=T: 2 H-Brücken; G≡C: 3 H-Brücken — GC-reiche DNA thermisch stabiler (höhere Schmelztemperatur)
+- "Was ist das Wirkprinzip von Aciclovir?" → Kein 3'-OH → Kettenabbruch nach Einbau durch virale DNA-Polymerase; aktiviert durch viruseigene Thymidinkinase (→ Selektivität für infizierte Zellen!)
+- "Was zeigt RT-PCR?" → Erst RNA → cDNA (durch Reverse Transkriptase), dann PCR-Amplifikation → Nachweis von RNA-Viren (COVID-19, HIV-Viruslast)
+
+**Achtung — typische Verwechslungen:**
+- Thymin (nur DNA) ≠ Uracil (nur RNA) — beide paaren mit Adenin, aber RNA enthält kein Thymin, DNA kein Uracil
+- Nukleosid (Base + Zucker, ohne Phosphat) ≠ Nukleotid (Base + Zucker + Phosphat); ATP = Adenosin-Triphosphat
+- Purine (Doppelring, 9 Atome: A+G) ≠ Pyrimidine (Einzelring, 6 Atome: C+T+U); Purine sind größer
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- DNA-Helix (B-Form): 10,5 bp/Windung; 3,4 nm Steigung; antiparallel (5'→3' || 3'→5'); rechtsgängig
+- PCR: Denaturierung 95°C → Annealing ~55–65°C → Elongation 72°C (Taq-Polymerase); 30 Zyklen ≈ 10⁹-fache Vervielfältigung
+- DNA-Reparatur-Defekte: MMR-Defekt → Lynch-Syndrom (HNPCC); NER-Defekt → Xeroderma pigmentosum
+- GC-Berechnung: 60% GC bei 100 bp → 60×3 + 40×2 = 260 H-Brücken (Rechenaufgabe merken!)`,
       lernziele: [
         "Die drei Komponenten eines Nukleotids nennen und Nukleosid von Nukleotid unterscheiden",
         "Die Purin- und Pyrimidinbasen und ihre Paarungsregeln (Chargaff) mit Anzahl der Wasserstoffbrücken beschreiben",
