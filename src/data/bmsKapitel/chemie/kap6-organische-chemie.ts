@@ -1092,18 +1092,6 @@ Die **Peptidbindung** (−CO−NH−) entsteht durch Kondensation zwischen der �
 
 Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein (>100 AS, gefaltete 3D-Struktur). Proteinstrukturebenen: Primär (AS-Sequenz), Sekundär (α-Helix, β-Faltblatt durch H-Brücken im Rückgrat), Tertiär (3D-Faltung durch hydrophobe WW, ionische WW, Disulfidbrücken, H-Brücken der Seitenketten), Quartär (Anordnung mehrerer Untereinheiten, z.B. Hämoglobin α₂β₂).
 
-## Zusammenfassung
-
-- **Aromatizität**: planarer Ring, vollständige Konjugation, 4n+2 π-Elektronen (Hückel); Benzol: 6 π-e⁻ (n=1)
-- **EAS**: Benzol bevorzugt elektrophile aromatische Substitution (Addition würde Aromatizität zerstören)
-- **Purine**: Adenin, Guanin (2-Ring-System: Pyrimidin + Imidazol); **Pyrimidine**: Cytosin, Thymin, Uracil (1-Ring)
-- **Gicht**: Harnsäure = Endprodukt des Purinabbaus; Ablagerung in Gelenken; Allopurinol hemmt Xanthinoxidase
-- **Aminosäuren**: α-C mit –NH₂, –COOH, –H, –R; in wässriger Lösung Zwitterionen; 20 proteinogene AS
-- **Peptidbindung**: sp²-hybridisiert, planar, partieller Doppelbindungscharakter; nicht frei drehbar
-- **Neurotransmitter aus AS**: Tyrosin → Dopamin → Noradrenalin → Adrenalin; Tryptophan → Serotonin, Melatonin
-
----
-
 ## MedAT-Fokus
 
 **Häufige Fragen:**
@@ -1126,7 +1114,13 @@ Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein 
 
 ## Zusammenfassung
 
-- **Aromatizität**: planarer Ring, vollständige Konjugation, 4n+2 π-Elektronen (Hückel); Benzol: 6 π-e⁻ (n=1)`,
+- **Aromatizität**: planarer Ring, vollständige Konjugation, 4n+2 π-Elektronen (Hückel); Benzol: 6 π-e⁻ (n=1)
+- **EAS**: Benzol bevorzugt elektrophile aromatische Substitution (Addition würde Aromatizität zerstören)
+- **Purine**: Adenin, Guanin (2-Ring-System: Pyrimidin + Imidazol); **Pyrimidine**: Cytosin, Thymin, Uracil (1-Ring)
+- **Gicht**: Harnsäure = Endprodukt des Purinabbaus; Ablagerung in Gelenken; Allopurinol hemmt Xanthinoxidase
+- **Aminosäuren**: α-C mit –NH₂, –COOH, –H, –R; in wässriger Lösung Zwitterionen; 20 proteinogene AS
+- **Peptidbindung**: sp²-hybridisiert, planar, partieller Doppelbindungscharakter; nicht frei drehbar
+- **Neurotransmitter aus AS**: Tyrosin → Dopamin → Noradrenalin → Adrenalin; Tryptophan → Serotonin, Melatonin`,
       stichworte: [
         "Benzol",
         "Aromatizität",

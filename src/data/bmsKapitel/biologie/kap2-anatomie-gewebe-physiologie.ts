@@ -1218,7 +1218,7 @@ Der Reflexbogen besteht aus Rezeptor, afferenter Faser, (Interneuron), efferente
     },
     {
       id: "bio-3-02",
-      title: "Sinnesorgane Haut",
+      title: "Sinnesorgane",
       stichworte: [
         "Auge",
         "Ohr",
@@ -1291,7 +1291,7 @@ Das Ohr löst ein physikalisches Problem: Luftschwingungen müssen in Flüssigke
 
 **Anatomische Gliederung:**
 - **Außenohr**: Ohrmuschel + äußerer Gehörgang → sammelt Schall → Trommelfell
-- **Mittelohr** (luftgefüllt, Tube → Druckausgleich): Gehörknöchelchen **Hammer → Amboss → Steigbügel** → **Impedanzanpassung ~22-fach** (Hebelwirkung ~1,3× + Flächenreduktion: Trommelfell 55 mm² → Oval-Fenster 3,2 mm²)
+- **Mittelohr** (luftgefüllt, Tube → Druckausgleich): Gehörknöchelchen **Hammer → Amboss → Steigbügel** → **Impedanzanpassung** (= Überwindung des Luft-Wasser-Widerstands durch Hebelwerk des Mittelohrs, ~22-fach Druckverstärkung durch Hebelwirkung ~1,3× + Flächenreduktion: Trommelfell 55 mm² → Oval-Fenster 3,2 mm²)
 - **Innenohr** (flüssigkeitsgefüllt): Cochlea (Hören) + Vestibularapparat (Gleichgewicht)
 
 **Schallübertragung — Schritt für Schritt:**
@@ -1349,6 +1349,10 @@ Das Ohr löst ein physikalisches Problem: Luftschwingungen müssen in Flüssigke
 - **TRPM8**: aktiviert <~25 °C + **Menthol** → erklärt "Kühle" von Pfefferminz
 
 > **Merke:** Schnell adaptierende Rezeptoren (Meissner, Pacini): erkennen Reizänderungen. Langsam adaptierende (Merkel, Ruffini): melden konstante Zustände. Epidermis = avaskulär, Dermis = vaskularisiert. TRPV1 (>43 °C + Capsaicin) = Wärme/Schmerz — deshalb "brennt" Chili.
+
+---
+
+> **Merke:** Alle Sinnesorgane arbeiten nach dem Transduktionsprinzip: Der spezifische Reiz öffnet/schließt Ionenkanäle → Membranpotenzialänderung → Aktionspotenzial. Was sich unterscheidet ist der Rezeptortyp, nicht das Grundprinzip. Auge: Fotorezeptoren (Hyperpolarisation bei Licht). Ohr: Mechanorezeptoren (Depolarisation durch K⁺). Nase/Zunge: Chemorezeptoren (G-Protein → cAMP). Haut: Mechano-/Thermorezeptoren (direkte Kanalöffnung).
 
 ---
 
@@ -1508,8 +1512,6 @@ Das Ohr löst ein physikalisches Problem: Luftschwingungen müssen in Flüssigke
 
 Nervensystem = Blitz (Millisekunden). Hormonsystem = langsames Feuer (Minuten bis Tage). Beide kommunizieren, aber auf grundlegend verschiedene Weise. Hormone sind chemische Botenstoffe, die über das Blut zu Zielorganen gelangen. Die Schlüsselstruktur: die **Hypothalamus-Hypophyse-Achse** — ein hierarchischer Regelkreis, in dem Hypothalamus-Hormone die Hypophyse steuern, die wiederum periphere Drüsen steuert, die dann über negative Rückkopplung den Kreis schließen. Für die Medizin ist das enorm wichtig: Schilddrüsenerkrankungen, Diabetes, Cushing — fast alle endokrinen Diagnosen basieren auf diesem Prinzip. MedAT-Klassiker: Peptidhormone vs. Steroidhormone, Insulin/Glukagon, Schilddrüsen-Regelkreis.
 
-> **Merke:** **Hypothalamus-Hypophyse-Regelkreis:** Hypothalamus (TRH, CRH, GnRH, GHRH) → Hypophyse (TSH, ACTH, LH/FSH, GH) → periphere Drüse (T₃/T₄, Cortisol, Östrogen/Testosteron) → **negative Rückkopplung** hemmt Hypothalamus + Hypophyse. Primäre Insuffizienz: periphere Drüse ↓ → trophe Hormone ↑.
-
 ---
 
 ## Hormonklassen und Wirkungsmechanismen
@@ -1522,7 +1524,15 @@ Peptidhormone (Insulin, ACTH, TSH) sind hydrophil und wirken über Membranrezept
 
 ## Schilddrüse und Nebenniere
 
-Die Schilddrüse synthetisiert T₃ und T₄ durch TPO-katalysierte Jodierung von Tyrosin-Resten in Thyreoglobulin (2×DIT → T₄; MIT+DIT → T₃). T₃ ist 3–5× potenter als das Prohormon T₄. Die Nebenniere hat Rinde (Aldosteron, Cortisol, DHEA) und Mark (Adrenalin 80%, Noradrenalin 20%). Cortisol steigert Glukoneogenese, wirkt immunsuppressiv (Phospholipase A₂ ↓) und hemmt Osteoblasten.
+Die Schilddrüse synthetisiert T₃ und T₄ durch TPO-katalysierte Jodierung von Tyrosin-Resten in Thyreoglobulin (2×DIT → T₄; MIT+DIT → T₃). T₃ ist 3–5× potenter als das Prohormon T₄.
+
+Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %). Die Rinde hat drei Zonen: Zona glomerulosa (Aldosteron), Zona fasciculata (Cortisol), Zona reticularis (DHEA/Androgene).
+
+**Cortisol** (Zona fasciculata, Glukokortikoid): das zentrale Stresshormon, reguliert über die CRH–ACTH-Achse. Wirkt über intrazelluläre Glukokortikoid-Rezeptoren (GR) → Genexpression. Katabol: steigert Glukoneogenese in der Leber (Blutzucker ↑, diabetogene Wirkung), fördert Protein- und Fettkatabolismus in Muskel und Fettgewebe. Immunsuppressiv: hemmt Phospholipase A₂ → Arachidonsäure ↓ → Prostaglandine und Leukotriene ↓. Langfristig hemmt Cortisol Osteoblasten → Knochenaufbau ↓ → Osteoporoserisiko bei chronischer Therapie (Cushing-Syndrom).
+
+**Aldosteron** (Zona glomerulosa, Mineralokortikoid): reguliert Na⁺/K⁺-Haushalt in der Niere über ENaC (epithelialer Na⁺-Kanal) → Na⁺-Retention + K⁺-Exkretion → Volumen ↑, Blutdruck ↑. Eingebunden in das RAAS: Renin (Niere bei Druckabfall) → Angiotensin II → Aldosteron ↑. Klinisch: Conn-Syndrom (primärer Hyperaldosteronismus) → Hypertonie + Hypokaliämie.
+
+**Adrenalin/Noradrenalin** (Nebennierenmark): Chromaffine Zellen sezernieren Adrenalin (80 %) und Noradrenalin (20 %) bei sympathischer Stimulation (Fight-or-Flight). Adrenalin: β₁ (Herzfrequenz ↑), β₂ (Bronchodilatation, Glykogenolyse), α₁ (Vasokonstriktion).
 
 > **Merke:** **Schilddrüsenhormone:** T₃ (aktiv, 3 Jod) + T₄ (Prohormon, 4 Jod, peripher → T₃). TPO jodiert Tyrosin in Thyreoglobulin: MIT + DIT → T₃, 2×DIT → T₄. Wirkung: Grundumsatz ↑, Herzfrequenz ↑ (β-Rezeptor-Upregulation), Genexpression ↑. TSH stimuliert (TRH-abhängig). Hashimoto → T₃/T₄ ↓, TSH ↑.
 
@@ -1540,11 +1550,7 @@ Die Langerhans-Inseln des Pankreas enthalten β-Zellen (Insulin, 65–80%) und �
 
 Das endokrine System nutzt negative Rückkopplung zur Homöostase: Effektor-Hormone hemmen Hypothalamus und Hypophyse, um ihre eigene Produktion zu drosseln. Bei primärer Drüseninsuffizienz (z.B. Schilddrüse zerstört) fehlt die Hemmung, und die trophen Hormone steigen kompensatorisch an (TSH ↑↑). Positive Rückkopplung ist selten und tritt z.B. beim LH-Surge zur Ovulation oder bei Geburts-Wehen (Oxytocin) auf.
 
----
-
-## Klinischer Bezug
-
-Diabetes mellitus ist die häufigste endokrine Erkrankung: Typ 1 (autoimmune β-Zell-Zerstörung, Insulinmangel absolut, Ketoacidose-Gefahr) vs. Typ 2 (Insulinresistenz + relativer Mangel, Adipositas, Metabolisches Syndrom). Hypothyreose (Hashimoto-Thyreoiditis, häufigste Autoimmunerkrankung): TSH ↑, T₃/T₄ ↓ → Müdigkeit, Kälteintoleranz, Gewichtszunahme, Bradykardie; Therapie: L-Thyroxin. Hyperthyreose (Morbus Basedow: TSH-Rezeptor-Antikörper): TSH ↓, T₃/T₄ ↑ → Tachykardie, Gewichtsabnahme, Exophthalmus; Therapie: Thionamide (Thiamazol). Cushing-Syndrom (Cortisol ↑): Stammfettsucht, Vollmondgesicht, Striae rubrae, Hyperglykämie, Osteoporose, Immunsuppression. Morbus Addison (NNR-Insuffizienz): Hypotonie, Hyponatriämie, Hyperkaliämie, Hyperpigmentierung (ACTH ↑ → MSH-Effekt). Conn-Syndrom (Aldosteron ↑): Hypertonie, Hypokaliämie, metabolische Alkalose.
+> **Merke:** **Hypothalamus-Hypophyse-Regelkreis:** Hypothalamus (TRH, CRH, GnRH, GHRH) → Hypophyse (TSH, ACTH, LH/FSH, GH) → periphere Drüse (T₃/T₄, Cortisol, Östrogen/Testosteron) → **negative Rückkopplung** hemmt Hypothalamus + Hypophyse. Primäre Insuffizienz: periphere Drüse ↓ → trophe Hormone ↑.
 
 ---
 
@@ -3111,6 +3117,27 @@ Das Skelett ist kein statisches Gerüst — ~10 % der Knochenmasse werden jährl
 
 ---
 
+## Ossifikation — Knochenbildung
+
+Knochen entstehen durch zwei Wege:
+
+**Enchondrale Ossifikation** (indirekter Weg):
+Ein Knorpelmodell (Chondrozyten) wird zunächst gebildet und dann schrittweise durch Knochen ersetzt. Ablauf: Chondrozyten hypertrophieren → Knorpelmatrix kalzifiziert → Osteoblasten wandern ein → Knochen ersetzt Knorpel. Betrifft: Röhrenknochen (Femur, Tibia, Humerus), Rippen, Wirbelkörper.
+
+**Desmale Ossifikation** (direkter Weg):
+Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betrifft: Schädelknochen (Frontal-, Parietalknochen), Schlüsselbein, Teile des Unterkiefers.
+
+**Zelltypen der Knochenentwicklung:**
+- **Osteoblasten**: knochenbildende Zellen, sezernieren Kollagen I + Osteoid, werden zu Osteozyten eingemauert
+- **Osteozyten**: reife Knochenzellen im Lakunen-Kanälchen-System, mechanosensitiv
+- **Osteoklasten**: knochenabbauende mehrkernige Riesenzellen (RANKL/OPG-System)
+
+**Klinisch:** Rachitis (Vitamin-D-Mangel → gestörte Mineralisation), Osteogenesis imperfecta (Kollagen-I-Defekt).
+
+> **Merke:** Enchondral = Knorpel zuerst (Extremitäten). Desmal = direkt (Schädel). Beide Wege produzieren identisch strukturierten Lamellenknochen — nur der Weg ist verschieden.
+
+---
+
 ## MedAT-Fokus
 
 **Häufige Fragen:**
@@ -3127,7 +3154,7 @@ Das Skelett ist kein statisches Gerüst — ~10 % der Knochenmasse werden jährl
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - 206 Knochen beim Erwachsenen; Knochenumbau: ~10 %/Jahr erneuert
-- Knochen: 30 % organisch (Kollagen I, Flexibilität) + 70 % anorganisch (Hydroxyapatit, Härte)
+- Knochen: 30 % organisch (Kollagen I, Flexibilität) + 70 % anorganisch (**Hydroxyapatit** [Ca₅(PO₄)₃OH] — das anorganische Calciumphosphat-Mineral, das Knochen Härte und Druckfestigkeit verleiht)
 - Osteoporose-Diagnostik: DXA-Messung, T-Score ≤ −2,5
 - Wirbelsäule: 7 HWK + 12 BWK + 5 LWK + 5 SWK (fusioniert) + 4 Steißbeinwirbel
 - Kugelgelenk: 3 Achsen; Scharniergelenk: 1 Achse; Sattelgelenk: 2 Achsen
@@ -3136,7 +3163,7 @@ Das Skelett ist kein statisches Gerüst — ~10 % der Knochenmasse werden jährl
 
 ## Zusammenfassung
 
-- **Knochenstruktur**: Kompakta (80%, Havers-Systeme) + Spongiosa (20%, rotes Mark → Hämatopoese). Matrix: Kollagen I (30%, Flexibilität) + Hydroxyapatit (70%, Härte)
+- **Knochenstruktur**: Kompakta (80%, Havers-Systeme) + Spongiosa (20%, rotes Mark → Hämatopoese). **Periost** (äußere bindegewebige Knochenhaut, enthält Blutgefäße, Nerven und osteogene Vorläuferzellen — wichtig für Frakturheilung) + Endost (innen). Matrix: Kollagen I (30%, Flexibilität) + Hydroxyapatit [Ca₅(PO₄)₃OH] (70%, Härte, Druckfestigkeit)
 - **Osteoblasten** (Aufbau): Kollagen-I-Synthese, Mineralisierung, ALP als Marker. Produzieren RANKL (Osteoklasten ↑) und OPG (Osteoklasten ↓)
 - **Osteoklasten** (Abbau): mehrkernig (Monozyten-Fusion), H⁺ + Proteasen, TRAP als Marker. Aktivierung durch RANKL; Denosumab = Anti-RANKL-Antikörper
 - **Ca²⁺-Regulation**: PTH (Osteoklasten ↑ → Ca²⁺ ↑), Calcitonin (Osteoklasten ↓ → Ca²⁺ ↓), Vitamin D (intestinale Ca²⁺-Resorption ↑)
