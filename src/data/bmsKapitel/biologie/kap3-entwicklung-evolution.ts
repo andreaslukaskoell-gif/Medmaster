@@ -248,13 +248,7 @@ Epiblastzellen wandern zum Primitivstreifen, durchlaufen eine **epithelial-mesen
 
 Aus dem Primitiv-Knoten bildet sich zusätzlich das **Notochord** (Chorda dorsalis), eine transiente Achsenstruktur aus Mesoderm, die als Induktor der Neurulation wirkt und später zu den **Nuclei pulposi** der Bandscheiben wird.
 
----
-
-## Primitivstreifen und Keimblatt-Entstehung
-
-Der Primitivstreifen ist die morphologische Achse der Gastrulation und erscheint am kaudalen Pol der zweischichtigen Keimscheibe. Er legt die Körperachsen fest (kranial-kaudal, dorsal-ventral, links-rechts). Epiblastzellen durchlaufen eine epithelial-mesenchymale Transition (EMT), wandern zum Primitivstreifen, schieben sich durch die Primitivrinne unter den Epiblast und bewegen sich seitlich wie kranial. Die erste Welle von Zellen bildet das definitive Endoderm, indem sie den Hypoblast lateral verdrängen. Die zweite Welle bildet das intra- und extraembryonale Mesoderm. Die verbleibenden Epiblastzellen auf der Oberfläche werden zum Ektoderm. Das Notochord entsteht aus dem Primitiv-Knoten und bildet die transiente Längsachse; es induziert das Neuralrohr und wird später zu den Nucleus-pulposus-Kernen der Bandscheiben.
-
-> **Merke:** Primitivstreifen → Invagination: Endo → Meso; Rest des Epiblasts → Ekto.
+> **Merke:** Primitivstreifen → alle drei Keimblätter entstehen aus dem Epiblast: invaginierende Zellen → Endo + Meso; verbleibende Oberfläche → Ekto.
 
 ---
 
@@ -861,9 +855,13 @@ Wie ist aus unbelebter Materie das erste Leben entstanden? Diese Frage beschäft
 
 ---
 
-## Entstehung des Lebens — Grundüberlegungen
+## Miller-Urey-Experiment — Abiotische Synthese organischer Moleküle
 
-Wie entstand das erste Leben auf der Erde vor ca. 3,8 Milliarden Jahren? Die Wissenschaft untersucht chemische und physikalische Prozesse, die zur Bildung erster biologischer Moleküle und schließlich lebender Zellen führten. Religiöse und philosophische Ansichten liegen außerhalb des naturwissenschaftlichen Rahmens.
+Stanley Miller und Harold Urey simulierten 1953 die Bedingungen der frühen Erde: Sie mischten **CH₄ (Methan), NH₃ (Ammoniak), H₂ (Wasserstoff)** und **H₂O (Wasserdampf)** — die damals angenommenen Bestandteile der Uratmosphäre — in einem geschlossenen Kolben und erzeugten durch elektrische Entladungen Blitze. Nach wenigen Tagen enthielt die Lösung diverse **Aminosäuren** sowie weitere organische Verbindungen (Blausäure, Formaldehyd, Zuckervorstufen). Das Experiment bewies erstmals, dass organische Bausteine des Lebens **ohne Lebewesen** aus anorganischen Vorstufen entstehen können — **abiotische Synthese**.
+
+Dieser Befund stützt die Hypothese der **Ursuppe** (engl. *primordial soup*; Oparin 1924, Haldane 1929): Die Urmeere der frühen Erde sollen eine reichhaltige Lösung organischer Moleküle enthalten haben, die als chemische Rohstoffbasis für die Lebensentstehung diente. Alternativen zur Ursuppe sind hydrothermale Schlote (Black Smokers am Meeresboden) und intermittierende Tümpel an Land.
+
+> **Merke:** Miller-Urey (1953): CH₄ + NH₃ + H₂ + H₂O + elektrische Entladungen → Aminosäuren. Beweist abiotische Entstehung organischer Moleküle — **nicht** die Entstehung von Leben selbst.
 
 ---
 
@@ -1958,20 +1956,6 @@ Lange glaubte man, dass Gehirnvergrößerung und aufrechter Gang parallel evolvi
 
 ---
 
-## Neanderthaler — Verwandte, keine Vorfahren
-
-Homo neanderthalensis war keine primitive Vorstufe des modernen Menschen, sondern eine eigenständige, an Kälteklima adaptierte Menschenart in Europa. Neanderthaler hatten ein vergleichbares oder sogar etwas größeres Hirnvolumen als wir (~1.400–1.600 ccm), bestatteten ihre Toten, nutzten Schmuck (Muschelperlen, Pigmente) und pflegten Kranke. Genetische Analysen (Svante Pääbo, Nobelpreis 2022) zeigen, dass moderne Menschen außerhalb Afrikas 1–4% neanderthalische DNA tragen — Beweis für Hybridisierung nach dem Out-of-Africa-Ereignis. Einige neanderthalische Allele haben Konsequenzen für moderne Menschen: TLR-Allele (Immunabwehr), Allergie-Risiko, COVID-19-Schwere-Risikofaktoren. Das Aussterben der Neanderthaler vor ca. 40.000 Jahren war wahrscheinlich eine Kombination aus Konkurrenz mit H. sapiens, Klimawandel und demografischen Effekten.
-
-> **Merke:** Neanderthaler: eigenständige Art, nicht Vorstufe. 1–4% ihrer DNA in modernen Menschen. Svante Pääbo: Paläogenomik, Nobelpreis 2022.
-
----
-
-## Klinischer Bezug
-
-Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderthaler zeigte, dass bestimmte neanderthalische Allele das COVID-19-Schwereverlaufsrisiko erhöhen (Chromosom 3-Risikohaplotyp). Dies verbindet prähistorische Homininen-Forschung direkt mit klinisch relevanten Fragestellungen der modernen Medizin.
-
----
-
 ## Homo habilis — Der erste Werkzeugmacher
 
 **Homo habilis** (ca. 2,4–1,5 Mya) gilt als erster Vertreter der Gattung *Homo* und wurde wegen seiner Assoziation mit einfachen Steinwerkzeugen der **Oldowan-Kultur** als „geschickter Mensch" benannt. Sein Hirnvolumen lag bei ca. **630 ccm** — deutlich mehr als bei Australopithecus (~450 ccm), aber weit unter dem von H. erectus. Die Fähigkeit zur Werkzeugherstellung setzte kognitive Leistungen voraus, die bei früheren Homininen nicht nachweisbar sind: vorausschauendes Planen und präzise Feinmotorik. H. habilis lebte zeitlich überlappend mit späten Australopithecus-Populationen und frühen H. erectus-Gruppen in Ostafrika.
@@ -1985,6 +1969,20 @@ Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderth
 **Homo erectus** (ca. 1,9 Mya–100.000 Jahre) war der erste Hominin, der den afrikanischen Kontinent verließ und weite Teile Asiens und Europas besiedelte. Fossilien wurden in **Java** (Java-Mensch, Dubois 1891), **China** (Peking-Mensch) und dem Nahen Osten gefunden. Sein Hirnvolumen lag bei ca. **900–1.100 ccm** — deutlich größer als bei H. habilis, aber noch unter dem des modernen Menschen (~1.350 ccm). H. erectus fertigte komplexere Steinwerkzeuge der **Acheuléen-Kultur** (symmetrische Faustkeile) und gilt als erster Hominin mit regelmäßiger **Feuernutzung**. Seine Körpergröße und Proportionen ähnelten bereits stark dem modernen Menschen. Die fast zwei Millionen Jahre umfassende Existenz macht H. erectus zu einem der erfolgreichsten Homininen.
 
 > **Merke:** H. erectus: ~1,9 Mya; erster Hominin außerhalb Afrikas; Hirnvolumen ~1.000 ccm; Feuer; Acheuléen-Werkzeuge.
+
+---
+
+## Neanderthaler — Verwandte, keine Vorfahren
+
+Homo neanderthalensis war keine primitive Vorstufe des modernen Menschen, sondern eine eigenständige, an Kälteklima adaptierte Menschenart in Europa. Neanderthaler hatten ein vergleichbares oder sogar etwas größeres Hirnvolumen als wir (~1.400–1.600 ccm), bestatteten ihre Toten, nutzten Schmuck (Muschelperlen, Pigmente) und pflegten Kranke. Genetische Analysen (Svante Pääbo, Nobelpreis 2022) zeigen, dass moderne Menschen außerhalb Afrikas 1–4% neanderthalische DNA tragen — Beweis für Hybridisierung nach dem Out-of-Africa-Ereignis. Einige neanderthalische Allele haben Konsequenzen für moderne Menschen: TLR-Allele (Immunabwehr), Allergie-Risiko, COVID-19-Schwere-Risikofaktoren. Das Aussterben der Neanderthaler vor ca. 40.000 Jahren war wahrscheinlich eine Kombination aus Konkurrenz mit H. sapiens, Klimawandel und demografischen Effekten.
+
+> **Merke:** Neanderthaler: eigenständige Art, nicht Vorstufe. 1–4% ihrer DNA in modernen Menschen. Svante Pääbo: Paläogenomik, Nobelpreis 2022.
+
+---
+
+## Klinischer Bezug
+
+Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderthaler zeigte, dass bestimmte neanderthalische Allele das COVID-19-Schwereverlaufsrisiko erhöhen (Chromosom 3-Risikohaplotyp). Dies verbindet prähistorische Homininen-Forschung direkt mit klinisch relevanten Fragestellungen der modernen Medizin.
 
 ---
 
