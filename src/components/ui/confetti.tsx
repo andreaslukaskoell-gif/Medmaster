@@ -12,7 +12,10 @@ export function Confetti({ active }: { active: boolean }) {
   const [pieces, setPieces] = useState<ConfettiPiece[]>([]);
 
   useEffect(() => {
-    if (!active) { setPieces([]); return; }
+    if (!active) {
+      setPieces([]);
+      return;
+    }
     const colors = ["#0f766e", "#14b8a6", "#f59e0b", "#ef4444", "#8b5cf6", "#3b82f6", "#ec4899"];
     const newPieces = Array.from({ length: 60 }, (_, i) => ({
       id: i,

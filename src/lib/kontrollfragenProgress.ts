@@ -6,6 +6,10 @@
  */
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 
-export function updateStichwortProgress(stichwortId: string, correct: boolean, timeSeconds = 30): void {
+export function updateStichwortProgress(
+  stichwortId: string,
+  correct: boolean,
+  timeSeconds = 30
+): void {
   useAdaptiveStore.getState().recordAnswer(stichwortId, correct, timeSeconds);
 }

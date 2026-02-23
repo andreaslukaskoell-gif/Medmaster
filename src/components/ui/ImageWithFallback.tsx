@@ -58,10 +58,7 @@ export function ImageWithFallback({
       >
         {/* Progressive: blur placeholder while loading */}
         {status === "loading" && (
-          <div
-            className={`${placeholderBase} animate-pulse`}
-            aria-hidden
-          >
+          <div className={`${placeholderBase} animate-pulse`} aria-hidden>
             <div className="h-16 w-16 rounded-full bg-slate-200/80 dark:bg-slate-600/50 blur-md" />
             <ImageIcon className="absolute w-8 h-8 text-slate-400 dark:text-slate-500" />
           </div>
@@ -89,7 +86,9 @@ export function ImageWithFallback({
             onLoad={handleLoad}
             onError={handleError}
             className={`${className} transition-opacity duration-300 ${
-              status === "loaded" ? "opacity-100" : "opacity-0 absolute inset-0 w-full h-full object-contain"
+              status === "loaded"
+                ? "opacity-100"
+                : "opacity-0 absolute inset-0 w-full h-full object-contain"
             } ${lightbox ? "cursor-zoom-in" : ""}`}
             onClick={lightbox ? () => setLightboxOpen(true) : undefined}
             role={lightbox ? "button" : undefined}

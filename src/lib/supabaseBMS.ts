@@ -1,20 +1,20 @@
 /**
  * Supabase Service for BMS Chapters and User Progress
- * 
+ *
  * Provides functions to:
  * - Load BMS chapters from Supabase
  * - Save/update user progress
  * - Sync with localStorage as fallback
  */
 
-import { supabase } from './supabase';
-import type { Kapitel, Unterkapitel } from '@/data/bmsKapitel/types';
+import { supabase } from "./supabase";
+import type { Kapitel, Unterkapitel } from "@/data/bmsKapitel/types";
 
 // Database types
 export interface BMSChapterRow {
   id: string;
   title: string;
-  subject: 'biologie' | 'chemie' | 'physik' | 'mathematik';
+  subject: "biologie" | "chemie" | "physik" | "mathematik";
   icon: string;
   estimated_time: string;
   order_index: number;
@@ -55,28 +55,28 @@ export interface UserProgressRow {
 function dbRowToKapitel(row: BMSChapterRow): Kapitel | null {
   try {
     // If content is already structured, use it
-    if (row.content && typeof row.content === 'object' && row.content.unterkapitel) {
+    if (row.content && typeof row.content === "object" && row.content.unterkapitel) {
       return {
         id: row.id,
         title: row.title,
         subject: row.subject,
-        icon: row.icon || '📚',
-        estimatedTime: row.estimated_time || '',
+        icon: row.icon || "📚",
+        estimatedTime: row.estimated_time || "",
         unterkapitel: row.content.unterkapitel || [],
       };
     }
-    
+
     // Otherwise, return minimal structure (subchapters loaded separately)
     return {
       id: row.id,
       title: row.title,
       subject: row.subject,
-      icon: row.icon || '📚',
-      estimatedTime: row.estimated_time || '',
+      icon: row.icon || "📚",
+      estimatedTime: row.estimated_time || "",
       unterkapitel: [],
     };
   } catch (error) {
-    console.error('Error converting DB row to Kapitel:', error);
+    console.error("Error converting DB row to Kapitel:", error);
     return null;
   }
 }
@@ -89,17 +89,17 @@ export async function loadBMSChaptersFromSupabase(): Promise<Kapitel[]> {
   if (!client) return [];
   try {
     const { data, error } = await client
-      .from('bms_chapters')
-      .select('*')
-      .order('order_index', { ascending: true });
+      .from("bms_chapters")
+      .select("*")
+      .order("order_index", { ascending: true });
 
     if (error) {
-      console.error('Error loading chapters from Supabase:', error);
+      console.error("Error loading chapters from Supabase:", error);
       return [];
     }
 
     if (!data || data.length === 0) {
-      console.log('No chapters found in Supabase');
+      console.log("No chapters found in Supabase");
       return [];
     }
 
@@ -107,10 +107,10 @@ export async function loadBMSChaptersFromSupabase(): Promise<Kapitel[]> {
     const chaptersWithSubchapters = await Promise.all(
       data.map(async (chapterRow) => {
         const { data: subchapters, error: subError } = await client
-          .from('bms_subchapters')
-          .select('*')
-          .eq('chapter_id', chapterRow.id)
-          .order('order_index', { ascending: true });
+          .from("bms_subchapters")
+          .select("*")
+          .eq("chapter_id", chapterRow.id)
+          .order("order_index", { ascending: true });
 
         if (subError) {
           console.error(`Error loading subchapters for ${chapterRow.id}:`, subError);
@@ -124,7 +124,7 @@ export async function loadBMSChaptersFromSupabase(): Promise<Kapitel[]> {
           kapitel.unterkapitel = subchapters.map((sub) => ({
             id: sub.id,
             title: sub.title,
-            content: sub.content || '',
+            content: sub.content || "",
             lernziele: sub.lernziele || [],
             sections: sub.sections || [],
             merksätze: sub.merksätze || [],
@@ -138,7 +138,7 @@ export async function loadBMSChaptersFromSupabase(): Promise<Kapitel[]> {
 
     return chaptersWithSubchapters.filter((ch): ch is Kapitel => ch !== null);
   } catch (error) {
-    console.error('Error in loadBMSChaptersFromSupabase:', error);
+    console.error("Error in loadBMSChaptersFromSupabase:", error);
     return [];
   }
 }
@@ -147,16 +147,16 @@ export async function loadBMSChaptersFromSupabase(): Promise<Kapitel[]> {
  * Load chapters by subject from Supabase
  */
 export async function loadBMSChaptersBySubject(
-  subject: 'biologie' | 'chemie' | 'physik' | 'mathematik'
+  subject: "biologie" | "chemie" | "physik" | "mathematik"
 ): Promise<Kapitel[]> {
   const client = supabase;
   if (!client) return [];
   try {
     const { data, error } = await client
-      .from('bms_chapters')
-      .select('*')
-      .eq('subject', subject)
-      .order('order_index', { ascending: true });
+      .from("bms_chapters")
+      .select("*")
+      .eq("subject", subject)
+      .order("order_index", { ascending: true });
 
     if (error) {
       console.error(`Error loading ${subject} chapters:`, error);
@@ -171,10 +171,10 @@ export async function loadBMSChaptersBySubject(
     const chaptersWithSubchapters = await Promise.all(
       data.map(async (chapterRow) => {
         const { data: subchapters } = await client
-          .from('bms_subchapters')
-          .select('*')
-          .eq('chapter_id', chapterRow.id)
-          .order('order_index', { ascending: true });
+          .from("bms_subchapters")
+          .select("*")
+          .eq("chapter_id", chapterRow.id)
+          .order("order_index", { ascending: true });
 
         const kapitel = dbRowToKapitel(chapterRow);
         if (!kapitel) return null;
@@ -183,7 +183,7 @@ export async function loadBMSChaptersBySubject(
           kapitel.unterkapitel = subchapters.map((sub) => ({
             id: sub.id,
             title: sub.title,
-            content: sub.content || '',
+            content: sub.content || "",
             lernziele: sub.lernziele || [],
             sections: sub.sections || [],
             merksätze: sub.merksätze || [],
@@ -213,28 +213,25 @@ export async function getUserProgress(
   const client = supabase;
   if (!client) return [];
   try {
-    let query = client
-      .from('user_progress')
-      .select('*')
-      .eq('user_id', userId);
+    let query = client.from("user_progress").select("*").eq("user_id", userId);
 
     if (chapterId) {
-      query = query.eq('chapter_id', chapterId);
+      query = query.eq("chapter_id", chapterId);
     }
     if (subchapterId) {
-      query = query.eq('subchapter_id', subchapterId);
+      query = query.eq("subchapter_id", subchapterId);
     }
 
-    const { data, error } = await query.order('updated_at', { ascending: false });
+    const { data, error } = await query.order("updated_at", { ascending: false });
 
     if (error) {
-      console.error('Error loading user progress:', error);
+      console.error("Error loading user progress:", error);
       return [];
     }
 
     return data || [];
   } catch (error) {
-    console.error('Error in getUserProgress:', error);
+    console.error("Error in getUserProgress:", error);
     return [];
   }
 }
@@ -252,30 +249,28 @@ export async function saveUserProgress(
   const client = supabase;
   if (!client) return false;
   try {
-    const { error } = await client
-      .from('user_progress')
-      .upsert(
-        {
-          user_id: userId,
-          chapter_id: chapterId,
-          subchapter_id: subchapterId,
-          is_completed: isCompleted,
-          last_reviewed: new Date().toISOString(),
-          progress_data: progressData || null,
-        },
-        {
-          onConflict: 'user_id,chapter_id,subchapter_id',
-        }
-      );
+    const { error } = await client.from("user_progress").upsert(
+      {
+        user_id: userId,
+        chapter_id: chapterId,
+        subchapter_id: subchapterId,
+        is_completed: isCompleted,
+        last_reviewed: new Date().toISOString(),
+        progress_data: progressData || null,
+      },
+      {
+        onConflict: "user_id,chapter_id,subchapter_id",
+      }
+    );
 
     if (error) {
-      console.error('Error saving user progress:', error);
+      console.error("Error saving user progress:", error);
       return false;
     }
 
     return true;
   } catch (error) {
-    console.error('Error in saveUserProgress:', error);
+    console.error("Error in saveUserProgress:", error);
     return false;
   }
 }
@@ -286,10 +281,12 @@ export async function saveUserProgress(
 export async function getCurrentUserId(): Promise<string | null> {
   if (!supabase) return null;
   try {
-    const { data: { user } } = await supabase.auth.getUser();
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
     return user?.id || null;
   } catch (error) {
-    console.error('Error getting current user:', error);
+    console.error("Error getting current user:", error);
     return null;
   }
 }
@@ -304,35 +301,33 @@ export async function syncChaptersToSupabase(chapters: Kapitel[]): Promise<boole
   try {
     const currentUser = await getCurrentUserId();
     if (!currentUser) {
-      console.error('No authenticated user for sync');
+      console.error("No authenticated user for sync");
       return false;
     }
 
     const { data: profile } = await client
-      .from('profiles')
-      .select('email')
-      .eq('id', currentUser)
+      .from("profiles")
+      .select("email")
+      .eq("id", currentUser)
       .single();
 
-    if (!profile || !profile.email?.includes('@admin')) {
-      console.error('User is not authorized to sync chapters');
+    if (!profile || !profile.email?.includes("@admin")) {
+      console.error("User is not authorized to sync chapters");
       return false;
     }
 
     for (const chapter of chapters) {
-      const { error: chapterError } = await client
-        .from('bms_chapters')
-        .upsert(
-          {
-            id: chapter.id,
-            title: chapter.title,
-            subject: chapter.subject,
-            icon: chapter.icon,
-            estimated_time: chapter.estimatedTime,
-            content: { unterkapitel: chapter.unterkapitel },
-          },
-          { onConflict: 'id' }
-        );
+      const { error: chapterError } = await client.from("bms_chapters").upsert(
+        {
+          id: chapter.id,
+          title: chapter.title,
+          subject: chapter.subject,
+          icon: chapter.icon,
+          estimated_time: chapter.estimatedTime,
+          content: { unterkapitel: chapter.unterkapitel },
+        },
+        { onConflict: "id" }
+      );
 
       if (chapterError) {
         console.error(`Error syncing chapter ${chapter.id}:`, chapterError);
@@ -340,21 +335,19 @@ export async function syncChaptersToSupabase(chapters: Kapitel[]): Promise<boole
       }
 
       for (const subchapter of chapter.unterkapitel) {
-        const { error: subError } = await client
-          .from('bms_subchapters')
-          .upsert(
-            {
-              id: subchapter.id,
-              chapter_id: chapter.id,
-              title: subchapter.title,
-              content: subchapter.content,
-              lernziele: subchapter.lernziele || [],
-              sections: subchapter.sections || [],
-              merksätze: subchapter.merksätze || [],
-              self_test: subchapter.selfTest || [],
-            },
-            { onConflict: 'id' }
-          );
+        const { error: subError } = await client.from("bms_subchapters").upsert(
+          {
+            id: subchapter.id,
+            chapter_id: chapter.id,
+            title: subchapter.title,
+            content: subchapter.content,
+            lernziele: subchapter.lernziele || [],
+            sections: subchapter.sections || [],
+            merksätze: subchapter.merksätze || [],
+            self_test: subchapter.selfTest || [],
+          },
+          { onConflict: "id" }
+        );
 
         if (subError) {
           console.error(`Error syncing subchapter ${subchapter.id}:`, subError);
@@ -365,7 +358,7 @@ export async function syncChaptersToSupabase(chapters: Kapitel[]): Promise<boole
     console.log(`✅ Synced ${chapters.length} chapters to Supabase`);
     return true;
   } catch (error) {
-    console.error('Error syncing chapters to Supabase:', error);
+    console.error("Error syncing chapters to Supabase:", error);
     return false;
   }
 }

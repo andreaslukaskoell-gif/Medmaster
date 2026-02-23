@@ -5,7 +5,8 @@ import type { SelfTestQuestion } from "../../data/bmsKapitel/types";
 import { playCorrectAnswerSound } from "../../lib/sounds";
 import { useQuizSessionStore } from "../../store/quizSessionStore";
 
-const FALLBACK_HINT = "Überlege: Welcher Begriff in der Frage ist zentral? Was hast du im Kapitel dazu gelernt?";
+const FALLBACK_HINT =
+  "Überlege: Welcher Begriff in der Frage ist zentral? Was hast du im Kapitel dazu gelernt?";
 
 interface QuizQuestionProps {
   question: SelfTestQuestion;
@@ -91,14 +92,14 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                 disabled={isAnswered}
                 className={`w-full min-w-0 text-left px-4 py-3 rounded-xl border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500/50
                   ${
-                  isCorrectOption
-                    ? "bg-green-500/20 border-green-500 text-green-900 dark:text-green-100 font-medium shadow-[0_0_12px_rgba(34,197,94,0.25)]"
-                    : isWrongChosen
-                    ? "bg-red-500/20 border-red-500 text-red-900 dark:text-red-100 shadow-[0_0_12px_rgba(239,68,68,0.2)]"
-                    : isAnswered
-                    ? "border-slate-200 dark:border-white/10 bg-slate-50/80 dark:bg-slate-800/50 text-gray-500 cursor-not-allowed"
-                    : "bg-white/70 dark:bg-slate-800/50 border-white/30 dark:border-white/10 hover:border-emerald-400 text-gray-700 dark:text-slate-100 cursor-pointer"
-                }`}
+                    isCorrectOption
+                      ? "bg-green-500/20 border-green-500 text-green-900 dark:text-green-100 font-medium shadow-[0_0_12px_rgba(34,197,94,0.25)]"
+                      : isWrongChosen
+                        ? "bg-red-500/20 border-red-500 text-red-900 dark:text-red-100 shadow-[0_0_12px_rgba(239,68,68,0.2)]"
+                        : isAnswered
+                          ? "border-slate-200 dark:border-white/10 bg-slate-50/80 dark:bg-slate-800/50 text-gray-500 cursor-not-allowed"
+                          : "bg-white/70 dark:bg-slate-800/50 border-white/30 dark:border-white/10 hover:border-emerald-400 text-gray-700 dark:text-slate-100 cursor-pointer"
+                  }`}
               >
                 <span className="font-bold mr-3 text-base shrink-0">
                   {String.fromCharCode(65 + oi)})
@@ -163,8 +164,23 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                       {hints.slice(0, hintIndex).map((hint, i) => (
                         <motion.div
                           key={i}
-                          initial={{ opacity: 0, scale: 0.98, boxShadow: "0 0 0 0 rgba(251, 191, 36, 0)" }}
-                          animate={{ opacity: 1, scale: 1, boxShadow: i === hintIndex - 1 ? ["0 0 0 0 rgba(251, 191, 36, 0)", "0 0 16px 2px rgba(251, 191, 36, 0.25)", "0 0 0 0 rgba(251, 191, 36, 0)"] : "0 0 0 0 rgba(251, 191, 36, 0)" }}
+                          initial={{
+                            opacity: 0,
+                            scale: 0.98,
+                            boxShadow: "0 0 0 0 rgba(251, 191, 36, 0)",
+                          }}
+                          animate={{
+                            opacity: 1,
+                            scale: 1,
+                            boxShadow:
+                              i === hintIndex - 1
+                                ? [
+                                    "0 0 0 0 rgba(251, 191, 36, 0)",
+                                    "0 0 16px 2px rgba(251, 191, 36, 0.25)",
+                                    "0 0 0 0 rgba(251, 191, 36, 0)",
+                                  ]
+                                : "0 0 0 0 rgba(251, 191, 36, 0)",
+                          }}
                           transition={{ duration: i === hintIndex - 1 ? 0.5 : 0.2 }}
                           className="flex gap-2 text-sm text-amber-800 dark:text-amber-200 bg-amber-50 dark:bg-amber-900/20 rounded-lg px-3 py-2 border border-amber-200 dark:border-amber-800"
                         >
@@ -187,7 +203,8 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                     </>
                   ) : (
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                      Versuche es mit einem Tipp, bevor du die Lösung siehst – so prägt sich der Stoff besser ein.
+                      Versuche es mit einem Tipp, bevor du die Lösung siehst – so prägt sich der
+                      Stoff besser ein.
                     </p>
                   )}
                   <div className="flex flex-wrap gap-2 mt-3">

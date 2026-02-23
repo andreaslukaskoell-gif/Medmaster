@@ -2,7 +2,7 @@
  * Leaderboard: Global, Wochen-Champions, Fachbereich-Profi.
  * Mock-Daten für Anzeige; aktueller User wird aus Store eingefügt.
  */
-import type { SupabaseClient } from '@supabase/supabase-js';
+import type { SupabaseClient } from "@supabase/supabase-js";
 
 export type LeaderboardCategory = "global" | "weekly" | "fach";
 export type FachFilter = "biologie" | "chemie" | "physik" | "mathematik" | "kff";
@@ -50,7 +50,13 @@ const MOCK_NICKNAMES = [
   "NachtOwl",
 ];
 
-const BADGE_IDS = ["fruehaufsteher", "bms-gigant", "praezisions-koenig", "fehler-fresser", "physik-profi"];
+const BADGE_IDS = [
+  "fruehaufsteher",
+  "bms-gigant",
+  "praezisions-koenig",
+  "fehler-fresser",
+  "physik-profi",
+];
 
 function pick<T>(arr: T[], n: number): T[] {
   const shuffled = [...arr].sort(() => Math.random() - 0.5);
@@ -58,11 +64,14 @@ function pick<T>(arr: T[], n: number): T[] {
 }
 
 /** Erzeugt deterministische Mock-Einträge (ohne aktuellen User). */
-export function generateMockLeaderboardEntries(count: number): Omit<LeaderboardEntry, "isCurrentUser">[] {
+export function generateMockLeaderboardEntries(
+  count: number
+): Omit<LeaderboardEntry, "isCurrentUser">[] {
   const entries: Omit<LeaderboardEntry, "isCurrentUser">[] = [];
   const usedNicknames = new Set<string>();
   for (let i = 0; i < count; i++) {
-    const nickname = MOCK_NICKNAMES[i % MOCK_NICKNAMES.length] + (i >= MOCK_NICKNAMES.length ? String(i) : "");
+    const nickname =
+      MOCK_NICKNAMES[i % MOCK_NICKNAMES.length] + (i >= MOCK_NICKNAMES.length ? String(i) : "");
     const baseXp = 4000 - i * 150 + Math.floor(Math.random() * 100);
     const xpThisWeek = Math.floor(200 - i * 5 + Math.random() * 80);
     const level = Math.max(1, Math.floor(baseXp / 100) + 1);
@@ -109,7 +118,9 @@ export function rankByWeekly(entries: LeaderboardEntry[]): LeaderboardEntry[] {
 
 /** Sortiert nach Fach-Score. */
 export function rankByFach(entries: LeaderboardEntry[], fach: FachFilter): LeaderboardEntry[] {
-  const sorted = [...entries].sort((a, b) => (b.subjectScores[fach] ?? 0) - (a.subjectScores[fach] ?? 0));
+  const sorted = [...entries].sort(
+    (a, b) => (b.subjectScores[fach] ?? 0) - (a.subjectScores[fach] ?? 0)
+  );
   sorted.forEach((e, i) => {
     e.rank = i + 1;
   });
@@ -139,10 +150,10 @@ export async function syncUserToLeaderboard(
   data: LeaderboardSyncData
 ): Promise<void> {
   try {
-    await supabase.from('leaderboard_snapshots').upsert(
+    await supabase.from("leaderboard_snapshots").upsert(
       {
         user_id: userId,
-        nickname: data.nickname || 'Anonym',
+        nickname: data.nickname || "Anonym",
         xp: data.xp ?? 0,
         level: data.level ?? 1,
         xp_this_week: data.xpThisWeek ?? 0,
@@ -150,7 +161,7 @@ export async function syncUserToLeaderboard(
         badge_ids: data.badgeIds ?? [],
         updated_at: new Date().toISOString(),
       },
-      { onConflict: 'user_id' }
+      { onConflict: "user_id" }
     );
   } catch {
     // Silently fail — leaderboard sync is non-critical
@@ -164,18 +175,15 @@ export async function fetchLeaderboardFromDB(
   fach?: FachFilter
 ): Promise<LeaderboardEntry[]> {
   try {
-    let query = supabase
-      .from('leaderboard_snapshots')
-      .select('*')
-      .limit(50);
+    let query = supabase.from("leaderboard_snapshots").select("*").limit(50);
 
-    if (category === 'weekly') {
-      query = query.order('xp_this_week', { ascending: false });
-    } else if (category === 'fach' && fach) {
+    if (category === "weekly") {
+      query = query.order("xp_this_week", { ascending: false });
+    } else if (category === "fach" && fach) {
       // Order by fach-specific score extracted from jsonb
       query = query.order(`subject_scores->>${fach}`, { ascending: false });
     } else {
-      query = query.order('xp', { ascending: false });
+      query = query.order("xp", { ascending: false });
     }
 
     const { data, error } = await query;

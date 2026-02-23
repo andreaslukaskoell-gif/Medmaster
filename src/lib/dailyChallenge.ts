@@ -1,13 +1,13 @@
-import { alleKapitel } from '@/data/bmsKapitel';
+import { alleKapitel } from "@/data/bmsKapitel";
 
 export interface DailyChallenge {
-  date: string;        // YYYY-MM-DD
+  date: string; // YYYY-MM-DD
   questionId: string;
   question: string;
   options: string[];
   correctIndex: number;
   explanation: string;
-  fach: string;        // kapitel.subject
+  fach: string; // kapitel.subject
   kapitelTitle: string;
 }
 
@@ -20,12 +20,12 @@ export interface DailyChallengeResult {
 
 // Deterministic: same date → same question for everyone
 function getDateSeed(dateStr: string): number {
-  return Math.abs(dateStr.split('').reduce((acc, c) => acc * 31 + c.charCodeAt(0), 0));
+  return Math.abs(dateStr.split("").reduce((acc, c) => acc * 31 + c.charCodeAt(0), 0));
 }
 
 function getAllBMSQuestions() {
-  return alleKapitel.flatMap(kapitel =>
-    kapitel.unterkapitel.flatMap(uk =>
+  return alleKapitel.flatMap((kapitel) =>
+    kapitel.unterkapitel.flatMap((uk) =>
       uk.selfTest.map((q, idx) => ({
         questionId: `${uk.id}-${idx}`,
         question: q.question,
@@ -40,7 +40,7 @@ function getAllBMSQuestions() {
 }
 
 export function getTodayDateStr(): string {
-  return new Date().toISOString().split('T')[0];
+  return new Date().toISOString().split("T")[0];
 }
 
 export function getDailyQuestion(): DailyChallenge | null {
@@ -59,7 +59,7 @@ export function getXPForAttempt(attempt: number): number {
   return 25; // wrong all 3 times
 }
 
-const STORAGE_PREFIX = 'daily_challenge_';
+const STORAGE_PREFIX = "daily_challenge_";
 
 export function saveDailyResult(result: DailyChallengeResult): void {
   try {
@@ -78,11 +78,11 @@ export function getTodaysResult(): DailyChallengeResult | null {
 }
 
 export function generateShareText(result: DailyChallengeResult): string {
-  const date = new Date().toLocaleDateString('de-AT', { day: 'numeric', month: 'long' });
-  let emoji = '🟥🟥🟥';
-  if (result.correctOnAttempt === 1) emoji = '🟩⬜⬜';
-  else if (result.correctOnAttempt === 2) emoji = '🟥🟩⬜';
-  else if (result.correctOnAttempt === 3) emoji = '🟥🟥🟩';
+  const date = new Date().toLocaleDateString("de-AT", { day: "numeric", month: "long" });
+  let emoji = "🟥🟥🟥";
+  if (result.correctOnAttempt === 1) emoji = "🟩⬜⬜";
+  else if (result.correctOnAttempt === 2) emoji = "🟥🟩⬜";
+  else if (result.correctOnAttempt === 3) emoji = "🟥🟥🟩";
 
   if (result.solved) {
     return `🎯 BMS des Tages – ${date}\n${emoji}\n\nIn ${result.correctOnAttempt}/3 Versuchen gelöst! +${result.xpEarned} XP\n\nKostenlose MedAT-Vorbereitung: medmaster.app 🧠`;
@@ -98,5 +98,5 @@ export function getCountdownToMidnight(): string {
   const h = Math.floor(diff / 3600000);
   const m = Math.floor((diff % 3600000) / 60000);
   const s = Math.floor((diff % 60000) / 1000);
-  return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+  return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
 }

@@ -42,7 +42,8 @@ export function aggregateWrongAnswersByTopic(quizResults: QuizResult[]): {
       if (a.correct) continue;
       totalWrong += 1;
       const subject = getQuestionSubject(a.questionId) || r.subject || "Sonstige";
-      const topicId = getDirectStichwortId(a.questionId) || getStichwortForQuestion(a.questionId) || "unbekannt";
+      const topicId =
+        getDirectStichwortId(a.questionId) || getStichwortForQuestion(a.questionId) || "unbekannt";
       const topicLabel = getStichwortById(topicId)?.thema ?? topicId;
       if (!bySubjectTopic.has(subject)) bySubjectTopic.set(subject, new Map());
       const topicMap = bySubjectTopic.get(subject)!;
@@ -59,7 +60,10 @@ export function aggregateWrongAnswersByTopic(quizResults: QuizResult[]): {
  * Ohne echte Kategorisierung: z.B. 65% Wissenslücke, 35% Flüchtigkeit.
  * Später: pro Frage kategorisieren (z.B. "nah dran" = Flüchtigkeit).
  */
-export function getRootCauseDistribution(totalWrong: number): { Wissenslücke: number; Flüchtigkeit: number } {
+export function getRootCauseDistribution(totalWrong: number): {
+  Wissenslücke: number;
+  Flüchtigkeit: number;
+} {
   if (totalWrong === 0) return { Wissenslücke: 0, Flüchtigkeit: 0 };
   const wissenslücke = Math.round(totalWrong * 0.65);
   const flüchtigkeit = totalWrong - wissenslücke;
@@ -69,8 +73,11 @@ export function getRootCauseDistribution(totalWrong: number): { Wissenslücke: n
 /**
  * Treemap-Daten für Recharts: { name, value, children?: { name, value }[] }
  */
-export function buildTreemapData(bySubjectTopic: Map<string, Map<string, number>>): { name: string; value: number; children?: { name: string; value: number }[] }[] {
-  const result: { name: string; value: number; children?: { name: string; value: number }[] }[] = [];
+export function buildTreemapData(
+  bySubjectTopic: Map<string, Map<string, number>>
+): { name: string; value: number; children?: { name: string; value: number }[] }[] {
+  const result: { name: string; value: number; children?: { name: string; value: number }[] }[] =
+    [];
   for (const [subject, topicMap] of bySubjectTopic) {
     const children = Array.from(topicMap.entries())
       .map(([name, value]) => ({ name, value }))
@@ -90,7 +97,10 @@ export function buildTreemapData(bySubjectTopic: Map<string, Map<string, number>
 /**
  * Donut-Daten: Root-Cause-Verteilung
  */
-export function buildDonutData(rootCause: { Wissenslücke: number; Flüchtigkeit: number }): { name: string; value: number }[] {
+export function buildDonutData(rootCause: {
+  Wissenslücke: number;
+  Flüchtigkeit: number;
+}): { name: string; value: number }[] {
   return [
     { name: "Wissenslücke", value: rootCause.Wissenslücke },
     { name: "Flüchtigkeit", value: rootCause.Flüchtigkeit },
@@ -115,7 +125,7 @@ export function buildActionSentence(
   }
   const pctLost = Math.round((rootCause.Flüchtigkeit / totalAnswered) * 100);
   const topSubject = getTopSubjectByWrong(bySubjectTopic);
-  const fachLabel = topSubject ? SUBJECT_LABELS[topSubject] ?? topSubject : "einem Fach";
+  const fachLabel = topSubject ? (SUBJECT_LABELS[topSubject] ?? topSubject) : "einem Fach";
   return `Du verlierst etwa ${pctLost}% deiner Punkte durch Flüchtigkeitsfehler – besonders in ${fachLabel}. Arbeite an deiner Konzentration, nicht am Stoff!`;
 }
 

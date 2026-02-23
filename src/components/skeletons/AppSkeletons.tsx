@@ -11,11 +11,7 @@ function SkeletonBox({
     <div
       role="presentation"
       aria-hidden
-      className={cn(
-        "skeleton-shimmer rounded-md",
-        pulse && "animate-pulse",
-        className
-      )}
+      className={cn("skeleton-shimmer rounded-md", pulse && "animate-pulse", className)}
       {...props}
     />
   );
@@ -69,13 +65,7 @@ export function LeaderboardSkeleton({ className }: { className?: string }) {
       >
         <div className="divide-y divide-white/10">
           {Array.from({ length: TOP_LIST_SIZE }).map((_, i) => (
-            <div
-              key={i}
-              className={cn(
-                "flex items-center gap-3 px-4",
-                LEADERBOARD_ROW_HEIGHT
-              )}
-            >
+            <div key={i} className={cn("flex items-center gap-3 px-4", LEADERBOARD_ROW_HEIGHT)}>
               <SkeletonBox className="h-5 w-10 shrink-0 rounded" />
               <SkeletonBox className="h-9 w-9 shrink-0 rounded-full" />
               <div className="flex-1 min-w-0 space-y-1.5">

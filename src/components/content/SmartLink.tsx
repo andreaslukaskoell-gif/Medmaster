@@ -73,7 +73,9 @@ export function SmartLink({ to, description, children, className }: SmartLinkPro
             }}
           >
             {description}
-            <span className="block text-xs text-slate-300 dark:text-slate-400 mt-1">Klicken zum Öffnen</span>
+            <span className="block text-xs text-slate-300 dark:text-slate-400 mt-1">
+              Klicken zum Öffnen
+            </span>
           </motion.div>
         )}
       </AnimatePresence>

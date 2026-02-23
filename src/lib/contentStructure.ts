@@ -166,14 +166,24 @@ export function getXpForContent(metadata: ContentMetadata | null | undefined): n
 /**
  * Normalisiert Metadaten für die Analyse: Garantiert immer gültige Werte.
  */
-export function normalizeMetadata(meta: Partial<ContentMetadata> | null | undefined): ContentMetadata {
+export function normalizeMetadata(
+  meta: Partial<ContentMetadata> | null | undefined
+): ContentMetadata {
   if (!meta) return { ...DEFAULT_METADATA };
   return {
-    subject: meta.subject && String(meta.subject).trim() ? String(meta.subject).trim() : DEFAULT_METADATA.subject,
-    topic: meta.topic && String(meta.topic).trim() ? String(meta.topic).trim() : DEFAULT_METADATA.topic,
+    subject:
+      meta.subject && String(meta.subject).trim()
+        ? String(meta.subject).trim()
+        : DEFAULT_METADATA.subject,
+    topic:
+      meta.topic && String(meta.topic).trim() ? String(meta.topic).trim() : DEFAULT_METADATA.topic,
     difficulty:
-      Number(meta.difficulty) >= 1 && Number(meta.difficulty) <= 5 ? Number(meta.difficulty) : DEFAULT_METADATA.difficulty,
-    keywords: Array.isArray(meta.keywords) ? meta.keywords.filter((k) => typeof k === "string" && k.trim()) : DEFAULT_METADATA.keywords,
+      Number(meta.difficulty) >= 1 && Number(meta.difficulty) <= 5
+        ? Number(meta.difficulty)
+        : DEFAULT_METADATA.difficulty,
+    keywords: Array.isArray(meta.keywords)
+      ? meta.keywords.filter((k) => typeof k === "string" && k.trim())
+      : DEFAULT_METADATA.keywords,
   };
 }
 

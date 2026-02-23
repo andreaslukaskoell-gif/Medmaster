@@ -83,7 +83,9 @@ export function KnowledgeBridgeSlideOver({
                     <Network className="w-5 h-5" />
                   </div>
                   <div>
-                    <h2 className="text-lg font-bold text-slate-900 dark:text-white">Knowledge Bridge</h2>
+                    <h2 className="text-lg font-bold text-slate-900 dark:text-white">
+                      Knowledge Bridge
+                    </h2>
                     <p className="text-xs text-slate-500 dark:text-slate-400">Verknüpfte Themen</p>
                   </div>
                 </div>
@@ -98,7 +100,8 @@ export function KnowledgeBridgeSlideOver({
               </div>
 
               <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">
-                Schlagworte in diesem Kapitel verknüpfen sich mit Themen in anderen Fächern – so lernst du nicht in Silos, sondern vernetzt.
+                Schlagworte in diesem Kapitel verknüpfen sich mit Themen in anderen Fächern – so
+                lernst du nicht in Silos, sondern vernetzt.
               </p>
 
               {showDeep && deepRelated.length > 0 && (
@@ -119,9 +122,15 @@ export function KnowledgeBridgeSlideOver({
                           "hover:border-amber-400 dark:hover:border-amber-600"
                         )}
                       >
-                        <span className="text-[10px] text-amber-600 dark:text-amber-400 font-medium">{keyword}</span>
-                        <p className="font-medium text-slate-900 dark:text-white mt-0.5">{topic.label}</p>
-                        <p className="text-xs text-slate-500 dark:text-slate-400">{topic.chapterTitle} · {SUBJECT_LABELS[topic.subject] ?? topic.subject}</p>
+                        <span className="text-[10px] text-amber-600 dark:text-amber-400 font-medium">
+                          {keyword}
+                        </span>
+                        <p className="font-medium text-slate-900 dark:text-white mt-0.5">
+                          {topic.label}
+                        </p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">
+                          {topic.chapterTitle} · {SUBJECT_LABELS[topic.subject] ?? topic.subject}
+                        </p>
                       </button>
                     ))}
                   </div>
@@ -132,7 +141,11 @@ export function KnowledgeBridgeSlideOver({
                 <div className="rounded-xl border border-dashed border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-800/50 p-6 text-center">
                   <BookOpen className="w-10 h-10 mx-auto text-slate-400 dark:text-slate-500 mb-2" />
                   <p className="text-sm text-slate-600 dark:text-slate-400">
-                    Keine Brücken für dieses Kapitel gefunden. Mehr Schlagworte in <code className="text-xs bg-slate-200 dark:bg-slate-700 px-1 rounded">knowledgeBridge.ts</code> anlegen.
+                    Keine Brücken für dieses Kapitel gefunden. Mehr Schlagworte in{" "}
+                    <code className="text-xs bg-slate-200 dark:bg-slate-700 px-1 rounded">
+                      knowledgeBridge.ts
+                    </code>{" "}
+                    anlegen.
                   </p>
                 </div>
               ) : (
@@ -167,14 +180,18 @@ export function KnowledgeBridgeSlideOver({
                             <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">
                               Schlagwort: {keyword}
                             </span>
-                            <p className="font-medium text-slate-900 dark:text-white mt-0.5">{topic.label}</p>
+                            <p className="font-medium text-slate-900 dark:text-white mt-0.5">
+                              {topic.label}
+                            </p>
                             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                              {topic.chapterTitle} · {SUBJECT_LABELS[topic.subject] ?? topic.subject}
+                              {topic.chapterTitle} ·{" "}
+                              {SUBJECT_LABELS[topic.subject] ?? topic.subject}
                             </p>
                             <span
                               className={cn(
                                 "inline-block mt-2 text-[10px] font-medium px-2 py-0.5 rounded border",
-                                SUBJECT_COLORS[topic.subject] ?? "bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300"
+                                SUBJECT_COLORS[topic.subject] ??
+                                  "bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300"
                               )}
                             >
                               {SUBJECT_LABELS[topic.subject] ?? topic.subject}

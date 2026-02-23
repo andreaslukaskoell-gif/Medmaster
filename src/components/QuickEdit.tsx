@@ -115,7 +115,8 @@ export function QuickEdit<T extends object>({
               </div>
               <div className="flex items-center justify-between gap-3 px-4 py-3 border-t border-slate-200/80 dark:border-slate-700/50 bg-slate-50/50 dark:bg-slate-900/30">
                 <span className="text-xs text-slate-500 dark:text-slate-400">
-                  Speichert lokal &amp; gibt JSON in der Konsole aus (zum Kopieren in die Datendatei).
+                  Speichert lokal &amp; gibt JSON in der Konsole aus (zum Kopieren in die
+                  Datendatei).
                 </span>
                 <div className="flex gap-2">
                   <Button

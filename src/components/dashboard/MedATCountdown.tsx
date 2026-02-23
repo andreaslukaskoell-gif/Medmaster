@@ -16,11 +16,15 @@ export function MedATCountdown() {
             <Clock className="w-7 h-7 text-[#007AFF] dark:text-primary-400" />
           </div>
           <div>
-            <p className="text-sm font-medium text-slate-500 dark:text-slate-400">MedAT Countdown</p>
+            <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
+              MedAT Countdown
+            </p>
             <p className="text-4xl sm:text-5xl font-bold text-[#1e293b] dark:text-slate-100 tabular-nums tracking-tight">
               {days}
             </p>
-            <p className="text-sm text-slate-600 dark:text-slate-400">Tage bis zum MedAT ({TARGET_LABEL})</p>
+            <p className="text-sm text-slate-600 dark:text-slate-400">
+              Tage bis zum MedAT ({TARGET_LABEL})
+            </p>
           </div>
         </div>
         <div className="w-full sm:w-80 shrink-0">

@@ -14,24 +14,136 @@ interface Person {
 
 const people: Person[] = [
   /* Generation I */
-  { id: "I-1", x: 100, y: 60, sex: "m", affected: true, genotype: { dominant: "Aa", recessive: "Aa" }, label: "I-1" },
-  { id: "I-2", x: 200, y: 60, sex: "f", affected: false, genotype: { dominant: "aa", recessive: "Aa" }, label: "I-2" },
-  { id: "I-3", x: 320, y: 60, sex: "m", affected: false, genotype: { dominant: "aa", recessive: "Aa" }, label: "I-3" },
-  { id: "I-4", x: 420, y: 60, sex: "f", affected: false, genotype: { dominant: "aa", recessive: "Aa" }, label: "I-4" },
+  {
+    id: "I-1",
+    x: 100,
+    y: 60,
+    sex: "m",
+    affected: true,
+    genotype: { dominant: "Aa", recessive: "Aa" },
+    label: "I-1",
+  },
+  {
+    id: "I-2",
+    x: 200,
+    y: 60,
+    sex: "f",
+    affected: false,
+    genotype: { dominant: "aa", recessive: "Aa" },
+    label: "I-2",
+  },
+  {
+    id: "I-3",
+    x: 320,
+    y: 60,
+    sex: "m",
+    affected: false,
+    genotype: { dominant: "aa", recessive: "Aa" },
+    label: "I-3",
+  },
+  {
+    id: "I-4",
+    x: 420,
+    y: 60,
+    sex: "f",
+    affected: false,
+    genotype: { dominant: "aa", recessive: "Aa" },
+    label: "I-4",
+  },
 
   /* Generation II */
-  { id: "II-1", x: 70, y: 160, sex: "m", affected: true, genotype: { dominant: "Aa", recessive: "Aa" }, label: "II-1" },
-  { id: "II-2", x: 150, y: 160, sex: "f", affected: false, genotype: { dominant: "aa", recessive: "Aa" }, label: "II-2" },
-  { id: "II-3", x: 230, y: 160, sex: "m", affected: false, genotype: { dominant: "aa", recessive: "aa" }, label: "II-3" },
-  { id: "II-4", x: 340, y: 160, sex: "f", affected: true, genotype: { dominant: "Aa", recessive: "aa" }, label: "II-4" },
-  { id: "II-5", x: 420, y: 160, sex: "m", affected: false, genotype: { dominant: "aa", recessive: "Aa" }, label: "II-5" },
+  {
+    id: "II-1",
+    x: 70,
+    y: 160,
+    sex: "m",
+    affected: true,
+    genotype: { dominant: "Aa", recessive: "Aa" },
+    label: "II-1",
+  },
+  {
+    id: "II-2",
+    x: 150,
+    y: 160,
+    sex: "f",
+    affected: false,
+    genotype: { dominant: "aa", recessive: "Aa" },
+    label: "II-2",
+  },
+  {
+    id: "II-3",
+    x: 230,
+    y: 160,
+    sex: "m",
+    affected: false,
+    genotype: { dominant: "aa", recessive: "aa" },
+    label: "II-3",
+  },
+  {
+    id: "II-4",
+    x: 340,
+    y: 160,
+    sex: "f",
+    affected: true,
+    genotype: { dominant: "Aa", recessive: "aa" },
+    label: "II-4",
+  },
+  {
+    id: "II-5",
+    x: 420,
+    y: 160,
+    sex: "m",
+    affected: false,
+    genotype: { dominant: "aa", recessive: "Aa" },
+    label: "II-5",
+  },
 
   /* Generation III */
-  { id: "III-1", x: 80, y: 260, sex: "f", affected: true, genotype: { dominant: "Aa", recessive: "Aa" }, label: "III-1" },
-  { id: "III-2", x: 140, y: 260, sex: "m", affected: false, genotype: { dominant: "aa", recessive: "aa" }, label: "III-2" },
-  { id: "III-3", x: 340, y: 260, sex: "f", affected: false, genotype: { dominant: "aa", recessive: "Aa" }, label: "III-3" },
-  { id: "III-4", x: 410, y: 260, sex: "m", affected: true, genotype: { dominant: "Aa", recessive: "aa" }, label: "III-4" },
-  { id: "III-5", x: 465, y: 260, sex: "f", affected: false, genotype: { dominant: "aa", recessive: "Aa" }, label: "III-5" },
+  {
+    id: "III-1",
+    x: 80,
+    y: 260,
+    sex: "f",
+    affected: true,
+    genotype: { dominant: "Aa", recessive: "Aa" },
+    label: "III-1",
+  },
+  {
+    id: "III-2",
+    x: 140,
+    y: 260,
+    sex: "m",
+    affected: false,
+    genotype: { dominant: "aa", recessive: "aa" },
+    label: "III-2",
+  },
+  {
+    id: "III-3",
+    x: 340,
+    y: 260,
+    sex: "f",
+    affected: false,
+    genotype: { dominant: "aa", recessive: "Aa" },
+    label: "III-3",
+  },
+  {
+    id: "III-4",
+    x: 410,
+    y: 260,
+    sex: "m",
+    affected: true,
+    genotype: { dominant: "Aa", recessive: "aa" },
+    label: "III-4",
+  },
+  {
+    id: "III-5",
+    x: 465,
+    y: 260,
+    sex: "f",
+    affected: false,
+    genotype: { dominant: "aa", recessive: "Aa" },
+    label: "III-5",
+  },
 ];
 
 const matingLines = [
@@ -80,9 +192,15 @@ export default function PedigreeAnalysis() {
 
       <svg viewBox="0 0 500 340" className="w-full max-w-xl mx-auto">
         {/* Generation labels */}
-        <text x="15" y="64" fontSize="13" fill="#0d9488" fontWeight="bold">I</text>
-        <text x="15" y="164" fontSize="13" fill="#0d9488" fontWeight="bold">II</text>
-        <text x="15" y="264" fontSize="13" fill="#0d9488" fontWeight="bold">III</text>
+        <text x="15" y="64" fontSize="13" fill="#0d9488" fontWeight="bold">
+          I
+        </text>
+        <text x="15" y="164" fontSize="13" fill="#0d9488" fontWeight="bold">
+          II
+        </text>
+        <text x="15" y="264" fontSize="13" fill="#0d9488" fontWeight="bold">
+          III
+        </text>
 
         {/* Mating lines Gen I */}
         <line x1={100 + r} y1="60" x2={200 - r} y2="60" stroke={strokeColor} strokeWidth="1.5" />
@@ -135,71 +253,140 @@ export default function PedigreeAnalysis() {
             >
               {p.sex === "m" ? (
                 <rect
-                  x={p.x - r} y={p.y - r} width={r * 2} height={r * 2}
-                  fill={fill} stroke={strokeColor} strokeWidth="2"
+                  x={p.x - r}
+                  y={p.y - r}
+                  width={r * 2}
+                  height={r * 2}
+                  fill={fill}
+                  stroke={strokeColor}
+                  strokeWidth="2"
                   rx="2"
                 />
               ) : (
                 <circle cx={p.x} cy={p.y} r={r} fill={fill} stroke={strokeColor} strokeWidth="2" />
               )}
               {/* Genotype */}
-              <text x={p.x} y={p.y + 4} textAnchor="middle" fontSize="13" fill={textColor} fontWeight="bold">
+              <text
+                x={p.x}
+                y={p.y + 4}
+                textAnchor="middle"
+                fontSize="13"
+                fill={textColor}
+                fontWeight="bold"
+              >
                 {getGenotype(p)}
               </text>
               {/* Label */}
-              <text x={p.x} y={p.y + r + 12} textAnchor="middle" fontSize="6" fill="#0d9488">{p.label}</text>
+              <text x={p.x} y={p.y + r + 12} textAnchor="middle" fontSize="6" fill="#0d9488">
+                {p.label}
+              </text>
             </g>
           );
         })}
 
         {/* Hover highlight */}
-        {activePerson && (
-          activePerson.sex === "m" ? (
+        {activePerson &&
+          (activePerson.sex === "m" ? (
             <rect
-              x={activePerson.x - r - 3} y={activePerson.y - r - 3}
-              width={(r + 3) * 2} height={(r + 3) * 2}
-              fill="none" stroke="#0d9488" strokeWidth="2" strokeDasharray="4 2" className="animate-pulse" rx="2"
+              x={activePerson.x - r - 3}
+              y={activePerson.y - r - 3}
+              width={(r + 3) * 2}
+              height={(r + 3) * 2}
+              fill="none"
+              stroke="#0d9488"
+              strokeWidth="2"
+              strokeDasharray="4 2"
+              className="animate-pulse"
+              rx="2"
             />
           ) : (
             <circle
-              cx={activePerson.x} cy={activePerson.y} r={r + 3}
-              fill="none" stroke="#0d9488" strokeWidth="2" strokeDasharray="4 2" className="animate-pulse"
+              cx={activePerson.x}
+              cy={activePerson.y}
+              r={r + 3}
+              fill="none"
+              stroke="#0d9488"
+              strokeWidth="2"
+              strokeDasharray="4 2"
+              className="animate-pulse"
             />
-          )
-        )}
+          ))}
 
         {/* Legend */}
-        <rect x="30" y="305" width="440" height="28" rx="6" fill="#f0fdfa" stroke="#14b8a6" strokeWidth="1" />
-        <rect x="45" y="313" width="14" height="14" rx="2" fill={emptyFill} stroke={strokeColor} strokeWidth="1.5" />
-        <text x="64" y="324" fontSize="7" fill="#115e59">Männlich</text>
+        <rect
+          x="30"
+          y="305"
+          width="440"
+          height="28"
+          rx="6"
+          fill="#f0fdfa"
+          stroke="#14b8a6"
+          strokeWidth="1"
+        />
+        <rect
+          x="45"
+          y="313"
+          width="14"
+          height="14"
+          rx="2"
+          fill={emptyFill}
+          stroke={strokeColor}
+          strokeWidth="1.5"
+        />
+        <text x="64" y="324" fontSize="7" fill="#115e59">
+          Männlich
+        </text>
         <circle cx="120" cy="320" r="7" fill={emptyFill} stroke={strokeColor} strokeWidth="1.5" />
-        <text x="132" y="324" fontSize="7" fill="#115e59">Weiblich</text>
-        <rect x="185" y="313" width="14" height="14" rx="2" fill={fillColor} stroke={strokeColor} strokeWidth="1.5" />
-        <text x="204" y="324" fontSize="7" fill="#115e59">Betroffen</text>
-        <text x="290" y="324" fontSize="7" fill="#115e59" fontWeight="bold">A = dominantes Allel, a = rezessives Allel</text>
+        <text x="132" y="324" fontSize="7" fill="#115e59">
+          Weiblich
+        </text>
+        <rect
+          x="185"
+          y="313"
+          width="14"
+          height="14"
+          rx="2"
+          fill={fillColor}
+          stroke={strokeColor}
+          strokeWidth="1.5"
+        />
+        <text x="204" y="324" fontSize="7" fill="#115e59">
+          Betroffen
+        </text>
+        <text x="290" y="324" fontSize="7" fill="#115e59" fontWeight="bold">
+          A = dominantes Allel, a = rezessives Allel
+        </text>
       </svg>
 
       <div className="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-3">
         {mode === "dominant" ? (
           <>
-            <p className="text-sm font-semibold text-teal-700 dark:text-teal-300">Autosomal-dominanter Erbgang</p>
+            <p className="text-sm font-semibold text-teal-700 dark:text-teal-300">
+              Autosomal-dominanter Erbgang
+            </p>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-1">
-              Ein dominantes Allel (A) reicht für die Merkmalsausprägung. Betroffene haben mindestens einen betroffenen Elternteil.
-              Merkmal ueberspringt keine Generation. Genotyp der Betroffenen: Aa oder AA.
+              Ein dominantes Allel (A) reicht für die Merkmalsausprägung. Betroffene haben
+              mindestens einen betroffenen Elternteil. Merkmal ueberspringt keine Generation.
+              Genotyp der Betroffenen: Aa oder AA.
             </p>
           </>
         ) : (
           <>
-            <p className="text-sm font-semibold text-teal-700 dark:text-teal-300">Autosomal-rezessiver Erbgang</p>
+            <p className="text-sm font-semibold text-teal-700 dark:text-teal-300">
+              Autosomal-rezessiver Erbgang
+            </p>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-1">
-              Zwei rezessive Allele (aa) nötig für Merkmalsausprägung. Eltern können Träger sein (Aa) ohne selbst betroffen zu sein.
-              Merkmal kann Generationen ueberspringen. 25% Wahrscheinlichkeit bei Aa x Aa.
+              Zwei rezessive Allele (aa) nötig für Merkmalsausprägung. Eltern können Träger sein
+              (Aa) ohne selbst betroffen zu sein. Merkmal kann Generationen ueberspringen. 25%
+              Wahrscheinlichkeit bei Aa x Aa.
             </p>
           </>
         )}
         {activePerson && (
           <p className="text-xs text-gray-600 dark:text-gray-400 mt-2">
-            <span className="font-semibold">{activePerson.label}</span>: Genotyp = {getGenotype(activePerson)}, {isAffected(activePerson) ? "betroffen" : "nicht betroffen"}
+            <span className="font-semibold">{activePerson.label}</span>: Genotyp ={" "}
+            {getGenotype(activePerson)},{" "}
+            {isAffected(activePerson) ? "betroffen" : "nicht betroffen"}
           </p>
         )}
       </div>

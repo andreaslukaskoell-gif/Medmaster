@@ -15,9 +15,7 @@ if (missing.length > 0) {
 }
 
 export const supabase: SupabaseClient | null =
-  supabaseUrl && supabaseAnonKey
-    ? createClient(supabaseUrl, supabaseAnonKey)
-    : null;
+  supabaseUrl && supabaseAnonKey ? createClient(supabaseUrl, supabaseAnonKey) : null;
 
 export function isSupabaseConfigured(): boolean {
   return supabase != null;

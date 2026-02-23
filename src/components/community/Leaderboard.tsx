@@ -63,15 +63,20 @@ export function Leaderboard() {
       },
       badgeIds: earnedBadges.slice(0, 3),
     });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [profile?.id]);
 
   useEffect(() => {
-    if (!supabase) { setDbLoaded(true); return; }
-    fetchLeaderboardFromDB(supabase, category, category === "fach" ? fach : undefined).then((rows) => {
-      setDbEntries(rows);
+    if (!supabase) {
       setDbLoaded(true);
-    });
+      return;
+    }
+    fetchLeaderboardFromDB(supabase, category, category === "fach" ? fach : undefined).then(
+      (rows) => {
+        setDbEntries(rows);
+        setDbLoaded(true);
+      }
+    );
   }, [category, fach]);
 
   const xpThisWeek = useMemo(() => {
@@ -113,7 +118,10 @@ export function Leaderboard() {
 
   const rankedList = useMemo(() => {
     if (!dbLoaded) return [];
-    const base: LeaderboardEntry[] = dbEntries.map((e) => ({ ...e, isCurrentUser: e.id === profile?.id }));
+    const base: LeaderboardEntry[] = dbEntries.map((e) => ({
+      ...e,
+      isCurrentUser: e.id === profile?.id,
+    }));
     const all = [...base.filter((e) => !e.isCurrentUser), currentUserEntry];
     if (category === "global") return rankByGlobal(all);
     if (category === "weekly") return rankByWeekly(all);
@@ -125,16 +133,15 @@ export function Leaderboard() {
   const currentEntry = rankedList.find((e) => e.isCurrentUser);
   const totalCount = rankedList.length;
   const topPercent = currentEntry ? getTopPercent(currentRank, totalCount) : 0;
-  const valueLabel =
-    category === "global"
-      ? "XP"
-      : category === "weekly"
-        ? "XP (7 Tage)"
-        : "%";
+  const valueLabel = category === "global" ? "XP" : category === "weekly" ? "XP (7 Tage)" : "%";
   const valueSuffix = category === "fach" ? "%" : " XP";
 
   const getValue = (e: LeaderboardEntry) =>
-    category === "global" ? e.xp : category === "weekly" ? e.xpThisWeek : (e.subjectScores[fach] ?? 0);
+    category === "global"
+      ? e.xp
+      : category === "weekly"
+        ? e.xpThisWeek
+        : (e.subjectScores[fach] ?? 0);
 
   if (!mounted || !dbLoaded) {
     return <LeaderboardSkeleton />;
@@ -150,13 +157,18 @@ export function Leaderboard() {
           <p className="text-slate-400 text-sm mb-4">
             Die Rangliste füllt sich wenn mehr Lernende beitreten.
           </p>
-          <p className="text-primary-400 font-semibold text-sm mb-6">Du kannst der Erste sein! 🥇</p>
+          <p className="text-primary-400 font-semibold text-sm mb-6">
+            Du kannst der Erste sein! 🥇
+          </p>
           <button
             type="button"
             onClick={() => {
               const text = "Bereite dich kostenlos auf den MedAT vor: medmaster.app 🧠";
-              if (navigator.share) { navigator.share({ text }).catch(() => {}); }
-              else { navigator.clipboard.writeText(text).catch(() => {}); }
+              if (navigator.share) {
+                navigator.share({ text }).catch(() => {});
+              } else {
+                navigator.clipboard.writeText(text).catch(() => {});
+              }
             }}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-sm font-medium transition-colors cursor-pointer"
           >
@@ -209,8 +221,14 @@ export function Leaderboard() {
       {currentEntry && (
         <div className="rounded-xl bg-primary-500/15 dark:bg-primary-500/20 border border-primary-400/30 dark:border-primary-400/20 px-4 py-3 text-center">
           <p className="text-sm font-semibold text-primary-800 dark:text-primary-200">
-            Du bist in den <span className="text-primary-600 dark:text-primary-400">Top {topPercent}%</span>
-            {category === "weekly" ? " dieser Woche" : category === "fach" ? ` in ${FACH_OPTIONS.find((o) => o.value === fach)?.label}` : ""}!
+            Du bist in den{" "}
+            <span className="text-primary-600 dark:text-primary-400">Top {topPercent}%</span>
+            {category === "weekly"
+              ? " dieser Woche"
+              : category === "fach"
+                ? ` in ${FACH_OPTIONS.find((o) => o.value === fach)?.label}`
+                : ""}
+            !
           </p>
           <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
             Rang {currentRank} von {totalCount}
@@ -252,7 +270,9 @@ export function Leaderboard() {
           )}
         >
           <div className="flex items-center gap-3">
-            <span className="text-lg font-bold text-primary-400 w-8 text-center">{currentRank}</span>
+            <span className="text-lg font-bold text-primary-400 w-8 text-center">
+              {currentRank}
+            </span>
             <div className="w-10 h-10 rounded-full bg-primary-500/30 flex items-center justify-center text-sm font-bold text-primary-200 shrink-0">
               {currentEntry.avatar}
             </div>
@@ -331,8 +351,12 @@ function LeaderboardRow({
         </span>
         {entry.rankChange !== 0 && (
           <span className="flex items-center">
-            {entry.rankChange > 0 && <ChevronUp className="w-3.5 h-3.5 text-green-500" aria-hidden />}
-            {entry.rankChange < 0 && <ChevronDown className="w-3.5 h-3.5 text-red-500" aria-hidden />}
+            {entry.rankChange > 0 && (
+              <ChevronUp className="w-3.5 h-3.5 text-green-500" aria-hidden />
+            )}
+            {entry.rankChange < 0 && (
+              <ChevronDown className="w-3.5 h-3.5 text-red-500" aria-hidden />
+            )}
             {entry.rankChange === 0 && <Minus className="w-3.5 h-3.5 text-slate-500" aria-hidden />}
           </span>
         )}
@@ -341,7 +365,12 @@ function LeaderboardRow({
         {entry.avatar}
       </div>
       <div className="flex-1 min-w-0">
-        <p className={cn("text-sm font-medium truncate", entry.isCurrentUser ? "text-primary-300" : "text-slate-200")}>
+        <p
+          className={cn(
+            "text-sm font-medium truncate",
+            entry.isCurrentUser ? "text-primary-300" : "text-slate-200"
+          )}
+        >
           {entry.nickname}
           {entry.isCurrentUser && (
             <span className="ml-1.5 text-[10px] font-normal text-primary-400">Du</span>
@@ -352,7 +381,13 @@ function LeaderboardRow({
           {entry.badgeIds.slice(0, 3).map((bid) => {
             const def = BADGE_DEFINITIONS.find((b) => b.id === bid);
             return def ? (
-              <BadgeIcon key={bid} tier={def.tier} earned size="sm" className="w-6! h-6! [&>svg]:w-3! [&>svg]:h-3!" />
+              <BadgeIcon
+                key={bid}
+                tier={def.tier}
+                earned
+                size="sm"
+                className="w-6! h-6! [&>svg]:w-3! [&>svg]:h-3!"
+              />
             ) : null;
           })}
         </div>

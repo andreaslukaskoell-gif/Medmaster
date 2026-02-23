@@ -4,38 +4,45 @@ const parts = [
   {
     id: "g1",
     label: "G1-Phase",
-    detail: "Wachstumsphase: Zellwachstum, Proteinsynthese, Organellenvermehrung. Zelle bereitet sich auf DNA-Replikation vor. G1/S-Checkpoint kontrolliert Zellgröße und DNA-Schäden."
+    detail:
+      "Wachstumsphase: Zellwachstum, Proteinsynthese, Organellenvermehrung. Zelle bereitet sich auf DNA-Replikation vor. G1/S-Checkpoint kontrolliert Zellgröße und DNA-Schäden.",
   },
   {
     id: "s",
     label: "S-Phase",
-    detail: "Synthesephase: DNA-Replikation, Verdopplung des Genoms. Chromosomen werden dupliziert, Histonsynthese. Zelle hat nach S-Phase diploiden Chromosomensatz mit verdoppelter DNA."
+    detail:
+      "Synthesephase: DNA-Replikation, Verdopplung des Genoms. Chromosomen werden dupliziert, Histonsynthese. Zelle hat nach S-Phase diploiden Chromosomensatz mit verdoppelter DNA.",
   },
   {
     id: "g2",
     label: "G2-Phase",
-    detail: "Zweite Wachstumsphase: Vorbereitung auf Mitose, Proteinsynthese für Zellteilung, Organellenverdopplung. G2/M-Checkpoint prüft DNA-Replikation und Zellgröße."
+    detail:
+      "Zweite Wachstumsphase: Vorbereitung auf Mitose, Proteinsynthese für Zellteilung, Organellenverdopplung. G2/M-Checkpoint prüft DNA-Replikation und Zellgröße.",
   },
   {
     id: "m",
     label: "M-Phase (Mitose)",
-    detail: "Mitosephase: Kernteilung (Prophase, Metaphase, Anaphase, Telophase) und Cytokinese. Chromosomen werden auf zwei Tochterzellen verteilt. Spindelapparat trennt Schwesterchromatiden."
+    detail:
+      "Mitosephase: Kernteilung (Prophase, Metaphase, Anaphase, Telophase) und Cytokinese. Chromosomen werden auf zwei Tochterzellen verteilt. Spindelapparat trennt Schwesterchromatiden.",
   },
   {
     id: "g0",
     label: "G0-Phase",
-    detail: "Ruhephase: Zellen treten aus Zellzyklus aus, differenzierte Zellen (z.B. Neuronen, Muskelzellen). Können permanent oder temporär in G0 verbleiben. Metabolisch aktiv aber nicht teilungsfähig."
+    detail:
+      "Ruhephase: Zellen treten aus Zellzyklus aus, differenzierte Zellen (z.B. Neuronen, Muskelzellen). Können permanent oder temporär in G0 verbleiben. Metabolisch aktiv aber nicht teilungsfähig.",
   },
   {
     id: "g1s-checkpoint",
     label: "G1/S-Checkpoint",
-    detail: "Restriktionspunkt: Kontrolliert Zellgröße, Nährstoffverfügbarkeit, Wachstumssignale und DNA-Integrität. Entscheidet über Eintritt in S-Phase oder G0-Phase."
+    detail:
+      "Restriktionspunkt: Kontrolliert Zellgröße, Nährstoffverfügbarkeit, Wachstumssignale und DNA-Integrität. Entscheidet über Eintritt in S-Phase oder G0-Phase.",
   },
   {
     id: "g2m-checkpoint",
     label: "G2/M-Checkpoint",
-    detail: "Kontrolliert vollständige DNA-Replikation, DNA-Schäden und Zellgröße. Verhindert Eintritt in Mitose bei Replikationsfehlern. Aktiviert DNA-Reparaturmechanismen."
-  }
+    detail:
+      "Kontrolliert vollständige DNA-Replikation, DNA-Schäden und Zellgröße. Verhindert Eintritt in Mitose bei Replikationsfehlern. Aktiviert DNA-Reparaturmechanismen.",
+  },
 ];
 
 type Part = (typeof parts)[number];
@@ -58,7 +65,7 @@ export default function CellCycle() {
           stroke="#4b5563"
           strokeWidth="2"
           className="cursor-pointer hover:opacity-50 transition-opacity"
-          onMouseEnter={() => setActive(parts.find(p => p.id === "g0") || null)}
+          onMouseEnter={() => setActive(parts.find((p) => p.id === "g0") || null)}
           onMouseLeave={() => setActive(null)}
         />
 
@@ -70,7 +77,7 @@ export default function CellCycle() {
           stroke="#2563eb"
           strokeWidth="2"
           className="cursor-pointer hover:opacity-90 transition-opacity"
-          onMouseEnter={() => setActive(parts.find(p => p.id === "g1") || null)}
+          onMouseEnter={() => setActive(parts.find((p) => p.id === "g1") || null)}
           onMouseLeave={() => setActive(null)}
         />
 
@@ -82,7 +89,7 @@ export default function CellCycle() {
           stroke="#059669"
           strokeWidth="2"
           className="cursor-pointer hover:opacity-90 transition-opacity"
-          onMouseEnter={() => setActive(parts.find(p => p.id === "s") || null)}
+          onMouseEnter={() => setActive(parts.find((p) => p.id === "s") || null)}
           onMouseLeave={() => setActive(null)}
         />
 
@@ -94,7 +101,7 @@ export default function CellCycle() {
           stroke="#d97706"
           strokeWidth="2"
           className="cursor-pointer hover:opacity-90 transition-opacity"
-          onMouseEnter={() => setActive(parts.find(p => p.id === "g2") || null)}
+          onMouseEnter={() => setActive(parts.find((p) => p.id === "g2") || null)}
           onMouseLeave={() => setActive(null)}
         />
 
@@ -106,7 +113,7 @@ export default function CellCycle() {
           stroke="#dc2626"
           strokeWidth="2"
           className="cursor-pointer hover:opacity-90 transition-opacity"
-          onMouseEnter={() => setActive(parts.find(p => p.id === "m") || null)}
+          onMouseEnter={() => setActive(parts.find((p) => p.id === "m") || null)}
           onMouseLeave={() => setActive(null)}
         />
 
@@ -118,7 +125,7 @@ export default function CellCycle() {
           stroke="#2563eb"
           strokeWidth="2"
           className="cursor-pointer hover:opacity-70 transition-opacity"
-          onMouseEnter={() => setActive(parts.find(p => p.id === "g1") || null)}
+          onMouseEnter={() => setActive(parts.find((p) => p.id === "g1") || null)}
           onMouseLeave={() => setActive(null)}
         />
 
@@ -166,29 +173,87 @@ export default function CellCycle() {
         />
 
         {/* G0 label line and text */}
-        <line x1="240" y1="210" x2="240" y2="160" stroke="#6b7280" strokeWidth="1" strokeDasharray="3,3" />
-        <text x="240" y="155" textAnchor="middle" fontSize="11" fontWeight="600" fill="#4b5563">G0</text>
+        <line
+          x1="240"
+          y1="210"
+          x2="240"
+          y2="160"
+          stroke="#6b7280"
+          strokeWidth="1"
+          strokeDasharray="3,3"
+        />
+        <text x="240" y="155" textAnchor="middle" fontSize="11" fontWeight="600" fill="#4b5563">
+          G0
+        </text>
 
         {/* Phase labels with leader lines */}
         {/* G1 label */}
-        <line x1="310" y1="130" x2="380" y2="90" stroke="#2563eb" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="385" y="90" fontSize="12" fontWeight="600" fill="#2563eb">G1</text>
-        <text x="385" y="103" fontSize="9" fill="#1e40af">(Wachstum)</text>
+        <line
+          x1="310"
+          y1="130"
+          x2="380"
+          y2="90"
+          stroke="#2563eb"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="385" y="90" fontSize="12" fontWeight="600" fill="#2563eb">
+          G1
+        </text>
+        <text x="385" y="103" fontSize="9" fill="#1e40af">
+          (Wachstum)
+        </text>
 
         {/* S label */}
-        <line x1="360" y1="210" x2="420" y2="210" stroke="#059669" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="425" y="210" fontSize="12" fontWeight="600" fill="#059669">S</text>
-        <text x="425" y="223" fontSize="9" fill="#047857">(DNA-Synthese)</text>
+        <line
+          x1="360"
+          y1="210"
+          x2="420"
+          y2="210"
+          stroke="#059669"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="425" y="210" fontSize="12" fontWeight="600" fill="#059669">
+          S
+        </text>
+        <text x="425" y="223" fontSize="9" fill="#047857">
+          (DNA-Synthese)
+        </text>
 
         {/* G2 label */}
-        <line x1="310" y1="290" x2="380" y2="330" stroke="#d97706" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="385" y="335" fontSize="12" fontWeight="600" fill="#d97706">G2</text>
-        <text x="385" y="348" fontSize="9" fill="#b45309">(Vorbereitung)</text>
+        <line
+          x1="310"
+          y1="290"
+          x2="380"
+          y2="330"
+          stroke="#d97706"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="385" y="335" fontSize="12" fontWeight="600" fill="#d97706">
+          G2
+        </text>
+        <text x="385" y="348" fontSize="9" fill="#b45309">
+          (Vorbereitung)
+        </text>
 
         {/* M label */}
-        <line x1="180" y1="290" x2="110" y2="330" stroke="#dc2626" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="50" y="335" fontSize="12" fontWeight="600" fill="#dc2626">M (Mitose)</text>
-        <text x="50" y="348" fontSize="9" fill="#b91c1c">(Zellteilung)</text>
+        <line
+          x1="180"
+          y1="290"
+          x2="110"
+          y2="330"
+          stroke="#dc2626"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="50" y="335" fontSize="12" fontWeight="600" fill="#dc2626">
+          M (Mitose)
+        </text>
+        <text x="50" y="348" fontSize="9" fill="#b91c1c">
+          (Zellteilung)
+        </text>
 
         {/* Checkpoint markers */}
         {/* G1/S Checkpoint */}
@@ -200,11 +265,21 @@ export default function CellCycle() {
           stroke="#f59e0b"
           strokeWidth="2"
           className="cursor-pointer hover:r-10 transition-all"
-          onMouseEnter={() => setActive(parts.find(p => p.id === "g1s-checkpoint") || null)}
+          onMouseEnter={() => setActive(parts.find((p) => p.id === "g1s-checkpoint") || null)}
           onMouseLeave={() => setActive(null)}
         />
-        <line x1="340" y1="155" x2="390" y2="135" stroke="#f59e0b" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="395" y="132" fontSize="9" fontWeight="600" fill="#d97706">G1/S-CP</text>
+        <line
+          x1="340"
+          y1="155"
+          x2="390"
+          y2="135"
+          stroke="#f59e0b"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="395" y="132" fontSize="9" fontWeight="600" fill="#d97706">
+          G1/S-CP
+        </text>
 
         {/* G2/M Checkpoint */}
         <circle
@@ -215,11 +290,21 @@ export default function CellCycle() {
           stroke="#f59e0b"
           strokeWidth="2"
           className="cursor-pointer hover:r-10 transition-all"
-          onMouseEnter={() => setActive(parts.find(p => p.id === "g2m-checkpoint") || null)}
+          onMouseEnter={() => setActive(parts.find((p) => p.id === "g2m-checkpoint") || null)}
           onMouseLeave={() => setActive(null)}
         />
-        <line x1="300" y1="300" x2="340" y2="360" stroke="#f59e0b" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="345" y="365" fontSize="9" fontWeight="600" fill="#d97706">G2/M-CP</text>
+        <line
+          x1="300"
+          y1="300"
+          x2="340"
+          y2="360"
+          stroke="#f59e0b"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="345" y="365" fontSize="9" fontWeight="600" fill="#d97706">
+          G2/M-CP
+        </text>
 
         {/* G0 exit arrow */}
         <path
@@ -230,10 +315,14 @@ export default function CellCycle() {
           strokeDasharray="3,3"
           markerEnd="url(#arrowhead)"
         />
-        <text x="100" y="195" fontSize="8" fill="#6b7280">G0-Austritt</text>
+        <text x="100" y="195" fontSize="8" fill="#6b7280">
+          G0-Austritt
+        </text>
 
         {/* Center indicator */}
-        <text x="240" y="215" textAnchor="middle" fontSize="10" fontWeight="600" fill="#374151">Interphase</text>
+        <text x="240" y="215" textAnchor="middle" fontSize="10" fontWeight="600" fill="#374151">
+          Interphase
+        </text>
       </svg>
       {active && (
         <div className="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-3">

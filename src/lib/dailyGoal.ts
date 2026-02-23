@@ -50,15 +50,11 @@ export function getDailyGoalFromPlan(
   }
 
   const dayResults = quizResults.filter((r) => r.timestamp?.startsWith(date));
-  const dailyMinutes = Math.round(
-    plan.weeklyPlan.reduce((s, p) => s + p.minutesPerWeek, 0) / 7
-  );
+  const dailyMinutes = Math.round(plan.weeklyPlan.reduce((s, p) => s + p.minutesPerWeek, 0) / 7);
 
   const todayTasks: TodayTask[] = plan.weeklyPlan.map((item) => {
     const dailyMins = Math.round(item.minutesPerWeek / 7);
-    const moduleResults = dayResults.filter(
-      (r) => (r.type || "").toUpperCase() === item.module
-    );
+    const moduleResults = dayResults.filter((r) => (r.type || "").toUpperCase() === item.module);
     const moduleQuestions = moduleResults.reduce((s, r) => s + r.total, 0);
     const doneMinutes = Math.round(moduleQuestions * MINUTES_PER_QUESTION);
     return {
@@ -76,9 +72,7 @@ export function getDailyGoalFromPlan(
     0
   );
   const primaryProgressPct =
-    dailyMinutes > 0
-      ? Math.min(100, Math.round((primaryMinutesDone / dailyMinutes) * 100))
-      : 0;
+    dailyMinutes > 0 ? Math.min(100, Math.round((primaryMinutesDone / dailyMinutes) * 100)) : 0;
   const isPrimaryComplete = todayTasks.every((t) => t.done);
 
   return {
@@ -93,9 +87,7 @@ export function getDailyGoalFromPlan(
 }
 
 /** Zählt ab gestern rückwärts, wie viele Tage in Folge das Tagesziel verfehlt wurde */
-export function getConsecutiveDaysGoalMissed(
-  goalAchievedByDate: Record<string, boolean>
-): number {
+export function getConsecutiveDaysGoalMissed(goalAchievedByDate: Record<string, boolean>): number {
   const d = new Date();
   d.setDate(d.getDate() - 1);
   let count = 0;

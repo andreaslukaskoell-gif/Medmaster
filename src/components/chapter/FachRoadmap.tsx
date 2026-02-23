@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import type { Kapitel } from '@/data/bmsKapitel/types';
-import { getSubjectColors, type SubjectId } from '@/data/bmsKapitel/colors';
-import { ArrowRight } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import type { Kapitel } from "@/data/bmsKapitel/types";
+import { getSubjectColors, type SubjectId } from "@/data/bmsKapitel/colors";
+import { ArrowRight } from "lucide-react";
 
 interface FachRoadmapProps {
   /** All chapters for this subject */
@@ -47,7 +47,9 @@ export function FachRoadmap({ chapters, currentChapterId, onSelectChapter }: Fac
       transition={{ duration: 0.3 }}
       className={`p-6 rounded-lg border-l-4 ${colors.border} ${colors.bg} ${colors.bgDark}`}
     >
-      <h3 className={`font-semibold ${colors.text} ${colors.textDark} mb-4 flex items-center gap-2`}>
+      <h3
+        className={`font-semibold ${colors.text} ${colors.textDark} mb-4 flex items-center gap-2`}
+      >
         Lernpfad
       </h3>
 
@@ -59,26 +61,26 @@ export function FachRoadmap({ chapters, currentChapterId, onSelectChapter }: Fac
 
         <div className="flex items-center gap-2 overflow-x-auto pb-2">
           {sorted.map((chapter, idx) => (
-          <React.Fragment key={chapter.id}>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => onSelectChapter?.(chapter.id)}
-              className={`px-3 py-2 rounded-md whitespace-nowrap text-sm font-medium transition ${
-                currentChapterId === chapter.id
-                  ? `${colors.button} text-white shadow-md`
-                  : 'bg-white/50 dark:bg-slate-700/50 hover:bg-white/70 dark:hover:bg-slate-700/70'
-              }`}
-            >
-              {chapter.sequence ? `${chapter.sequence}. ` : ''}
-              {chapter.sequenceTitle || chapter.title}
-            </motion.button>
+            <React.Fragment key={chapter.id}>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => onSelectChapter?.(chapter.id)}
+                className={`px-3 py-2 rounded-md whitespace-nowrap text-sm font-medium transition ${
+                  currentChapterId === chapter.id
+                    ? `${colors.button} text-white shadow-md`
+                    : "bg-white/50 dark:bg-slate-700/50 hover:bg-white/70 dark:hover:bg-slate-700/70"
+                }`}
+              >
+                {chapter.sequence ? `${chapter.sequence}. ` : ""}
+                {chapter.sequenceTitle || chapter.title}
+              </motion.button>
 
-            {idx < sorted.length - 1 && (
-              <ArrowRight className="w-4 h-4 text-slate-400 dark:text-slate-500 flex-shrink-0" />
-            )}
-          </React.Fragment>
-        ))}
+              {idx < sorted.length - 1 && (
+                <ArrowRight className="w-4 h-4 text-slate-400 dark:text-slate-500 flex-shrink-0" />
+              )}
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </motion.div>

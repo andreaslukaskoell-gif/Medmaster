@@ -64,7 +64,10 @@ function getAdaptiveTasks(
     if (phase === "vertiefung") {
       const weakStr =
         bmsWeak.length > 0
-          ? bmsWeak.slice(0, 3).map((t) => t.thema).join(", ")
+          ? bmsWeak
+              .slice(0, 3)
+              .map((t) => t.thema)
+              .join(", ")
           : "alle Themen";
       return [
         `${Math.round(minutes * 0.2)} Min: Schwachstellen-Trainer (${weakStr})`,
@@ -116,22 +119,14 @@ function getAdaptiveTasks(
 }
 
 export function generateAdaptivePlan(input: AdaptivePlanInput): AdaptivePlanResult {
-  const {
-    hoursPerWeek,
-    weeksLeft,
-    readiness,
-    fachReadiness,
-    weakTopics,
-    phase,
-  } = input;
+  const { hoursPerWeek, weeksLeft, readiness, fachReadiness, weakTopics, phase } = input;
   const minutesPerWeek = hoursPerWeek * 60;
 
   const avgBmsReadiness = Object.entries(fachReadiness).reduce(
     (sum, [fach, r]) => sum + r * (bmsSubjectWeights[fach] || 0),
     0
   );
-  const bmsBoost =
-    avgBmsReadiness < 50 ? 0.1 : avgBmsReadiness < 70 ? 0.05 : 0;
+  const bmsBoost = avgBmsReadiness < 50 ? 0.1 : avgBmsReadiness < 70 ? 0.05 : 0;
 
   const adjustedWeights = {
     BMS: moduleBaseWeights.BMS + bmsBoost,

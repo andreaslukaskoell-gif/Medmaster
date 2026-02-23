@@ -79,7 +79,10 @@ export function TopBar({ menuButtonRef, onMenuToggle }: TopBarProps) {
 
         {!onboardingCompleted && (
           <Link to="/onboarding" className="shrink-0">
-            <Button size="sm" className="gap-1.5 bg-[var(--color-primary-500)] hover:bg-[var(--color-primary-600)] text-white border-0">
+            <Button
+              size="sm"
+              className="gap-1.5 bg-[var(--color-primary-500)] hover:bg-[var(--color-primary-600)] text-white border-0"
+            >
               <ClipboardList className="w-4 h-4" />
               Einstufungstest
             </Button>
@@ -89,7 +92,6 @@ export function TopBar({ menuButtonRef, onMenuToggle }: TopBarProps) {
 
       {/* Right: stats + controls */}
       <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
-
         {/* Days counter */}
         <div className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[var(--border)] text-sm">
           <CalendarClock className="w-3.5 h-3.5 text-[var(--color-primary-500)] shrink-0" />
@@ -107,7 +109,9 @@ export function TopBar({ menuButtonRef, onMenuToggle }: TopBarProps) {
         >
           <Search className="w-3.5 h-3.5" />
           <span className="hidden sm:inline text-xs">Suche</span>
-          <kbd className="hidden sm:inline text-[10px] bg-[var(--border)] text-[var(--muted)] px-1.5 py-0.5 rounded font-mono">⌘K</kbd>
+          <kbd className="hidden sm:inline text-[10px] bg-[var(--border)] text-[var(--muted)] px-1.5 py-0.5 rounded font-mono">
+            ⌘K
+          </kbd>
         </button>
 
         {/* XP */}
@@ -121,17 +125,13 @@ export function TopBar({ menuButtonRef, onMenuToggle }: TopBarProps) {
           )}
         >
           <Star className="w-3.5 h-3.5 text-amber-500 shrink-0" />
-          <span className="min-w-5 text-center">
-            {showStoreValues ? (xp ?? 0) : "–"}
-          </span>
+          <span className="min-w-5 text-center">{showStoreValues ? (xp ?? 0) : "–"}</span>
         </motion.div>
 
         {/* Streak */}
         <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-[var(--border)] text-xs font-semibold text-[var(--muted)] hover:text-[var(--foreground)] transition-colors">
           <Flame className="w-3.5 h-3.5 text-orange-500 shrink-0" />
-          <span className="min-w-5 text-center">
-            {showStoreValues ? (streak ?? 0) : "–"}
-          </span>
+          <span className="min-w-5 text-center">{showStoreValues ? (streak ?? 0) : "–"}</span>
         </div>
 
         <SyncStatus />
@@ -143,10 +143,7 @@ export function TopBar({ menuButtonRef, onMenuToggle }: TopBarProps) {
           className="p-2 rounded-lg border border-[var(--border)] text-[var(--muted)] hover:text-[var(--foreground)] hover:border-[var(--foreground)]/20 transition-colors cursor-pointer"
           aria-label={darkMode ? "Hellmodus" : "Darkmodus"}
         >
-          {darkMode
-            ? <Sun className="w-4 h-4" />
-            : <Moon className="w-4 h-4" />
-          }
+          {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
         </button>
       </div>
     </motion.header>

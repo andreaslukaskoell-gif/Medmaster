@@ -30,7 +30,10 @@ export function computeXP(params: XPParams): number {
   let timeBonus = 0;
   if (typeof params.timeSeconds === "number") {
     if (params.timeSeconds <= FAST_THRESHOLD_SEC) {
-      timeBonus = Math.min(MAX_TIME_BONUS, Math.round((FAST_THRESHOLD_SEC - params.timeSeconds) * 0.3));
+      timeBonus = Math.min(
+        MAX_TIME_BONUS,
+        Math.round((FAST_THRESHOLD_SEC - params.timeSeconds) * 0.3)
+      );
     }
   }
   const raw = baseXP * difficulty + timeBonus;

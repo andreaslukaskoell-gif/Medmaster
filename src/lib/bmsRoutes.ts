@@ -1,31 +1,31 @@
 /**
  * BMS Route / ID Mapping
- * 
+ *
  * Stellt sicher, dass Kapitel-IDs aus der DB mit den Routen übereinstimmen.
  * Routen: /bms, /bms/:fach, /bms/:fach/:kapitel
- * 
+ *
  * DB-IDs: z.B. "bio-kap1", "biologie" (subject), "bio-kap1-uk-123" (subchapter)
  * URL fach: "biologie" | "bio" | "chemie" | "physik" | "mathematik"
  * URL kapitel: "bio-kap1" oder "kap1" (wird mit fach zu chapter id ergänzt)
  */
 
 export const SUBJECT_SLUG_TO_ID: Record<string, string> = {
-  bio: 'biologie',
-  biologie: 'biologie',
-  chemie: 'chemie',
-  chem: 'chemie',
-  physik: 'physik',
-  phys: 'physik',
-  mathematik: 'mathematik',
-  mathe: 'mathematik',
-  math: 'mathematik',
+  bio: "biologie",
+  biologie: "biologie",
+  chemie: "chemie",
+  chem: "chemie",
+  physik: "physik",
+  phys: "physik",
+  mathematik: "mathematik",
+  mathe: "mathematik",
+  math: "mathematik",
 };
 
 export const SUBJECT_ID_TO_SLUG: Record<string, string> = {
-  biologie: 'biologie',
-  chemie: 'chemie',
-  physik: 'physik',
-  mathematik: 'mathematik',
+  biologie: "biologie",
+  chemie: "chemie",
+  physik: "physik",
+  mathematik: "mathematik",
 };
 
 /**
@@ -38,7 +38,7 @@ export function subjectFromSlug(slug: string | undefined): string | null {
 }
 
 function subjectsHasId(id: string): boolean {
-  return ['biologie', 'chemie', 'physik', 'mathematik'].includes(id);
+  return ["biologie", "chemie", "physik", "mathematik"].includes(id);
 }
 
 /**
@@ -61,11 +61,11 @@ export function chapterIdFromParams(
   // Kurzform "kap1" mit fach → "bio-kap1"
   const shortMatch = k.match(/^kap(\d+)$/i);
   if (shortMatch && subjectId) {
-    const prefix = subjectId === 'biologie' ? 'bio' : subjectId.slice(0, 3);
+    const prefix = subjectId === "biologie" ? "bio" : subjectId.slice(0, 3);
     const candidate = `${prefix}-kap${shortMatch[1]}`;
     if (allChapterIds.includes(candidate)) return candidate;
     // Fallback: biologie -> bio
-    if (subjectId === 'biologie' && allChapterIds.some((id) => id === `bio-kap${shortMatch[1]}`)) {
+    if (subjectId === "biologie" && allChapterIds.some((id) => id === `bio-kap${shortMatch[1]}`)) {
       return `bio-kap${shortMatch[1]}`;
     }
   }

@@ -3,14 +3,7 @@
  * Nur Bereiche mit "intensivem" Lernen zählen für den 45-Min-Timer.
  */
 
-export type LearningArea =
-  | "bms"
-  | "kff"
-  | "tv"
-  | "sek"
-  | "simulation"
-  | "wissencheck"
-  | "other";
+export type LearningArea = "bms" | "kff" | "tv" | "sek" | "simulation" | "wissencheck" | "other";
 
 const BMS_PREFIX = "/bms";
 const KFF_PREFIX = "/kff";
@@ -31,7 +24,14 @@ export function pathnameToLearningArea(pathname: string): LearningArea {
 }
 
 /** Bereiche, in denen wir die aktive Zeit tracken und nach 45 Min einen Wechsel vorschlagen. */
-export const TRACKED_AREAS: LearningArea[] = ["bms", "kff", "tv", "sek", "simulation", "wissencheck"];
+export const TRACKED_AREAS: LearningArea[] = [
+  "bms",
+  "kff",
+  "tv",
+  "sek",
+  "simulation",
+  "wissencheck",
+];
 
 export function isTrackedArea(area: LearningArea): boolean {
   return area !== "other";
@@ -51,14 +51,13 @@ export function areaLabel(area: LearningArea): string {
 }
 
 /** Vorschlag für Kontextwechsel: wenn User in X ist, wohin wechseln? */
-export function suggestedAlternateArea(current: LearningArea): { area: LearningArea; path: string; label: string } | null {
-  if (current === "bms")
-    return { area: "kff", path: "/kff", label: "5 KFF-Aufgaben" };
-  if (current === "kff")
-    return { area: "bms", path: "/bms", label: "BMS-Kapitel" };
+export function suggestedAlternateArea(
+  current: LearningArea
+): { area: LearningArea; path: string; label: string } | null {
+  if (current === "bms") return { area: "kff", path: "/kff", label: "5 KFF-Aufgaben" };
+  if (current === "kff") return { area: "bms", path: "/bms", label: "BMS-Kapitel" };
   if (current === "tv" || current === "sek" || current === "simulation")
     return { area: "kff", path: "/kff", label: "5 KFF-Aufgaben" };
-  if (current === "wissencheck")
-    return { area: "kff", path: "/kff", label: "5 KFF-Aufgaben" };
+  if (current === "wissencheck") return { area: "kff", path: "/kff", label: "5 KFF-Aufgaben" };
   return null;
 }

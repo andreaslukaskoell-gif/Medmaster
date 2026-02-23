@@ -13,8 +13,12 @@ export function EulerAlleXsindY({ width = 220, height = 150, className }: EulerP
     <svg viewBox="0 0 220 150" width={width} height={height} className={className}>
       <circle cx="110" cy="75" r="60" fill="none" stroke="#6366f1" strokeWidth="2" />
       <circle cx="110" cy="85" r="32" fill="#c7d2fe" stroke="#6366f1" strokeWidth="2" />
-      <text x="110" y="90" textAnchor="middle" fontSize="13" fontWeight="600" fill="#4338ca">X</text>
-      <text x="110" y="35" textAnchor="middle" fontSize="13" fontWeight="600" fill="#4338ca">Y</text>
+      <text x="110" y="90" textAnchor="middle" fontSize="13" fontWeight="600" fill="#4338ca">
+        X
+      </text>
+      <text x="110" y="35" textAnchor="middle" fontSize="13" fontWeight="600" fill="#4338ca">
+        Y
+      </text>
     </svg>
   );
 }
@@ -25,8 +29,12 @@ export function EulerAlleXkeineY({ width = 220, height = 150, className }: Euler
     <svg viewBox="0 0 220 150" width={width} height={height} className={className}>
       <circle cx="70" cy="75" r="45" fill="#fecaca" stroke="#dc2626" strokeWidth="2" />
       <circle cx="155" cy="75" r="45" fill="#c7d2fe" stroke="#6366f1" strokeWidth="2" />
-      <text x="70" y="80" textAnchor="middle" fontSize="13" fontWeight="600" fill="#dc2626">X</text>
-      <text x="155" y="80" textAnchor="middle" fontSize="13" fontWeight="600" fill="#4338ca">Y</text>
+      <text x="70" y="80" textAnchor="middle" fontSize="13" fontWeight="600" fill="#dc2626">
+        X
+      </text>
+      <text x="155" y="80" textAnchor="middle" fontSize="13" fontWeight="600" fill="#4338ca">
+        Y
+      </text>
     </svg>
   );
 }
@@ -35,11 +43,33 @@ export function EulerAlleXkeineY({ width = 220, height = 150, className }: Euler
 export function EulerEinigeXsindY({ width = 220, height = 150, className }: EulerProps) {
   return (
     <svg viewBox="0 0 220 150" width={width} height={height} className={className}>
-      <circle cx="85" cy="75" r="50" fill="#fef3c7" fillOpacity="0.5" stroke="#f59e0b" strokeWidth="2" />
-      <circle cx="135" cy="75" r="50" fill="#c7d2fe" fillOpacity="0.5" stroke="#6366f1" strokeWidth="2" />
-      <text x="65" y="80" textAnchor="middle" fontSize="13" fontWeight="600" fill="#d97706">X</text>
-      <text x="155" y="80" textAnchor="middle" fontSize="13" fontWeight="600" fill="#4338ca">Y</text>
-      <text x="110" y="80" textAnchor="middle" fontSize="10" fill="#78716c">∩</text>
+      <circle
+        cx="85"
+        cy="75"
+        r="50"
+        fill="#fef3c7"
+        fillOpacity="0.5"
+        stroke="#f59e0b"
+        strokeWidth="2"
+      />
+      <circle
+        cx="135"
+        cy="75"
+        r="50"
+        fill="#c7d2fe"
+        fillOpacity="0.5"
+        stroke="#6366f1"
+        strokeWidth="2"
+      />
+      <text x="65" y="80" textAnchor="middle" fontSize="13" fontWeight="600" fill="#d97706">
+        X
+      </text>
+      <text x="155" y="80" textAnchor="middle" fontSize="13" fontWeight="600" fill="#4338ca">
+        Y
+      </text>
+      <text x="110" y="80" textAnchor="middle" fontSize="10" fill="#78716c">
+        ∩
+      </text>
     </svg>
   );
 }
@@ -48,14 +78,46 @@ export function EulerEinigeXsindY({ width = 220, height = 150, className }: Eule
 export function EulerEinigeXkeineY({ width = 220, height = 150, className }: EulerProps) {
   return (
     <svg viewBox="0 0 220 150" width={width} height={height} className={className}>
-      <circle cx="85" cy="75" r="50" fill="#fecaca" fillOpacity="0.4" stroke="#dc2626" strokeWidth="2" />
-      <circle cx="135" cy="75" r="50" fill="#c7d2fe" fillOpacity="0.4" stroke="#6366f1" strokeWidth="2" />
+      <circle
+        cx="85"
+        cy="75"
+        r="50"
+        fill="#fecaca"
+        fillOpacity="0.4"
+        stroke="#dc2626"
+        strokeWidth="2"
+      />
+      <circle
+        cx="135"
+        cy="75"
+        r="50"
+        fill="#c7d2fe"
+        fillOpacity="0.4"
+        stroke="#6366f1"
+        strokeWidth="2"
+      />
       {/* Markierung des nicht-überlappenden Teils von X */}
-      <line x1="45" y1="60" x2="55" y2="90" stroke="#dc2626" strokeWidth="2" strokeDasharray="3,3" />
-      <text x="55" y="80" textAnchor="middle" fontSize="13" fontWeight="600" fill="#dc2626">X</text>
-      <text x="165" y="80" textAnchor="middle" fontSize="13" fontWeight="600" fill="#4338ca">Y</text>
-      <text x="110" y="55" textAnchor="middle" fontSize="9" fill="#78716c">nicht alle X</text>
-      <text x="110" y="67" textAnchor="middle" fontSize="9" fill="#78716c">sind in Y</text>
+      <line
+        x1="45"
+        y1="60"
+        x2="55"
+        y2="90"
+        stroke="#dc2626"
+        strokeWidth="2"
+        strokeDasharray="3,3"
+      />
+      <text x="55" y="80" textAnchor="middle" fontSize="13" fontWeight="600" fill="#dc2626">
+        X
+      </text>
+      <text x="165" y="80" textAnchor="middle" fontSize="13" fontWeight="600" fill="#4338ca">
+        Y
+      </text>
+      <text x="110" y="55" textAnchor="middle" fontSize="9" fill="#78716c">
+        nicht alle X
+      </text>
+      <text x="110" y="67" textAnchor="middle" fontSize="9" fill="#78716c">
+        sind in Y
+      </text>
     </svg>
   );
 }
@@ -64,7 +126,15 @@ interface EulerThreeCircleProps extends EulerProps {
   /** Labels for the three circles */
   labels?: [string, string, string];
   /** Layout type */
-  layout: "chain" | "all-overlap" | "ab-separated" | "bc-separated" | "a-in-b-overlap-c" | "a-in-b-separated-c" | "a-in-b-in-c" | "all-separated";
+  layout:
+    | "chain"
+    | "all-overlap"
+    | "ab-separated"
+    | "bc-separated"
+    | "a-in-b-overlap-c"
+    | "a-in-b-separated-c"
+    | "a-in-b-in-c"
+    | "all-separated";
 }
 
 /** Flexibles 3-Kreis-Euler-Diagramm für Schlussfolgerungen */
@@ -75,7 +145,10 @@ export function EulerThreeCircles({
   labels = ["A", "B", "C"],
   layout,
 }: EulerThreeCircleProps) {
-  const configs: Record<string, { circles: { cx: number; cy: number; r: number; color: string; fill: string }[] }> = {
+  const configs: Record<
+    string,
+    { circles: { cx: number; cy: number; r: number; color: string; fill: string }[] }
+  > = {
     // A-B überlappen, B-C überlappen, A-C nicht direkt
     chain: {
       circles: [
@@ -145,11 +218,12 @@ export function EulerThreeCircles({
   const config = configs[layout] || configs.chain;
 
   // For nested layouts, draw largest first
-  const sortedCircles = layout === "a-in-b-in-c"
-    ? [...config.circles].reverse()
-    : layout === "a-in-b-overlap-c" || layout === "a-in-b-separated-c"
-      ? [config.circles[1], config.circles[2], config.circles[0]]
-      : config.circles;
+  const sortedCircles =
+    layout === "a-in-b-in-c"
+      ? [...config.circles].reverse()
+      : layout === "a-in-b-overlap-c" || layout === "a-in-b-separated-c"
+        ? [config.circles[1], config.circles[2], config.circles[0]]
+        : config.circles;
 
   return (
     <svg viewBox="0 0 280 160" width={width} height={height} className={className}>
@@ -217,7 +291,7 @@ export function EulerTwoCircles({
   };
 
   const c = configs[overlap];
-  const drawOrder = overlap === "contained" ? ["c2", "c1"] as const : ["c1", "c2"] as const;
+  const drawOrder = overlap === "contained" ? (["c2", "c1"] as const) : (["c1", "c2"] as const);
 
   return (
     <svg viewBox="0 0 220 140" width={width} height={height} className={className}>
@@ -237,10 +311,24 @@ export function EulerTwoCircles({
           />
         );
       })}
-      <text x={c.c1.cx - (overlap === "partial" ? 15 : 0)} y={c.c1.cy + (overlap === "contained" ? 5 : 4)} textAnchor="middle" fontSize="13" fontWeight="600" fill="#dc2626">
+      <text
+        x={c.c1.cx - (overlap === "partial" ? 15 : 0)}
+        y={c.c1.cy + (overlap === "contained" ? 5 : 4)}
+        textAnchor="middle"
+        fontSize="13"
+        fontWeight="600"
+        fill="#dc2626"
+      >
         {labels[0]}
       </text>
-      <text x={c.c2.cx + (overlap === "partial" ? 15 : 0)} y={overlap === "contained" ? 35 : c.c2.cy + 4} textAnchor="middle" fontSize="13" fontWeight="600" fill="#4338ca">
+      <text
+        x={c.c2.cx + (overlap === "partial" ? 15 : 0)}
+        y={overlap === "contained" ? 35 : c.c2.cy + 4}
+        textAnchor="middle"
+        fontSize="13"
+        fontWeight="600"
+        fill="#4338ca"
+      >
         {labels[1]}
       </text>
     </svg>

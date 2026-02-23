@@ -1,9 +1,9 @@
-import { useState, useMemo, useRef, useEffect, useCallback } from "react";
+import { useState, useMemo } from "react";
 import type { ComponentProps, ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { ChevronDown, ChevronUp, HelpCircle, Check } from "lucide-react";
-import type { Unterkapitel, SelfTestQuestion, ContentSection } from "@/data/bmsKapitel/types";
+import { HelpCircle } from "lucide-react";
+import type { Unterkapitel, SelfTestQuestion } from "@/data/bmsKapitel/types";
 import DiagramSVG from "@/components/diagrams/DiagramSVG";
 import { extractKontrollfragen } from "@/utils/parseKontrollfragen";
 import {
@@ -12,7 +12,6 @@ import {
   getKeywordLinkDescription,
   type KeywordLinkEntry,
 } from "@/data/glossary";
-import { pathForChapter } from "@/lib/bmsRoutes";
 import { SmartLink } from "@/components/content/SmartLink";
 import {
   parseHinterfragMarkers,
@@ -69,9 +68,38 @@ const SMART_LINK_SUBTLE_CLASS =
 function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
   return {
     table: ({ children, ...props }: ComponentProps<"table">) => (
-      <div className="overflow-x-auto">
-        <table {...props}>{children}</table>
+      <div className="overflow-x-auto my-4">
+        <table
+          className="w-full text-sm border-collapse border border-gray-200 dark:border-gray-700"
+          {...props}
+        >
+          {children}
+        </table>
       </div>
+    ),
+    th: ({ children, ...props }: ComponentProps<"th">) => (
+      <th
+        className="text-left p-3 font-bold text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700"
+        {...props}
+      >
+        {children}
+      </th>
+    ),
+    td: ({ children, ...props }: ComponentProps<"td">) => (
+      <td
+        className="p-3 text-gray-700 dark:text-gray-300 border border-gray-100 dark:border-gray-800"
+        {...props}
+      >
+        {children}
+      </td>
+    ),
+    blockquote: ({ children, ...props }: ComponentProps<"blockquote">) => (
+      <blockquote
+        className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-400 dark:border-blue-600 pl-4 pr-4 py-3 my-4 rounded-r-lg not-italic"
+        {...props}
+      >
+        {children}
+      </blockquote>
     ),
     a: ({ href, title, children }: { href?: string; title?: string; children?: ReactNode }) => {
       if (href?.startsWith("/bms/") && href.length > 8 && title) {
@@ -96,22 +124,19 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
   };
 }
 
-/** Renders plain text or Markdown with prose; Smart-Links (inkl. Keyword-Links dezent); optional Hinterfrag-Marker. */
+/** Renders Markdown content with AMBOSS-style blockquotes, tables, and smart links. */
 function MarkdownContent({
   text,
-  size = "sm",
   className = "",
   hinterfragMode = false,
   keywordLinkEntries,
 }: {
   text: string;
-  size?: "sm" | "base";
   className?: string;
   hinterfragMode?: boolean;
   keywordLinkEntries?: KeywordLinkEntry[];
 }) {
   if (!text.trim()) return null;
-  const proseSize = size === "base" ? "prose-base" : "prose-sm";
   const { contentWithPlaceholders, blocks } = useMemo(() => parseHinterfragMarkers(text), [text]);
   const processedBase = useMemo(
     () => processTextForSmartLinks(contentWithPlaceholders, keywordLinkEntries),
@@ -125,7 +150,7 @@ function MarkdownContent({
   if (blocks.length === 0) {
     return (
       <div
-        className={`prose prose-slate dark:prose-invert max-w-none leading-relaxed ${proseSize} text-gray-700 dark:text-slate-100 ${className}`}
+        className={`prose prose-slate dark:prose-invert prose-base max-w-none leading-relaxed text-gray-700 dark:text-slate-100 ${className}`}
       >
         <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
           {processedBase}
@@ -137,7 +162,7 @@ function MarkdownContent({
   const segments = processedBase.split(PLACEHOLDER_REGEX);
   return (
     <div
-      className={`prose prose-slate dark:prose-invert max-w-none leading-relaxed ${proseSize} text-gray-700 dark:text-slate-100 ${className}`}
+      className={`prose prose-slate dark:prose-invert prose-base max-w-none leading-relaxed text-gray-700 dark:text-slate-100 ${className}`}
     >
       {segments.map((part, i) => {
         if (i % 2 === 0) {
@@ -187,461 +212,70 @@ const SUBJECT_COLORS: Record<string, { border: string; text: string; bg: string 
   },
 };
 
-/** Eine Untersektion mit Progressive Disclosure: ausgegraut/kollabiert bis Scroll oder "Verstanden". */
-function DisclosableSection({
-  section,
-  sectionIndex,
-  isLast,
-  isDisclosed,
-  onDisclose,
-  onScrollIntoView,
-  scrollToNextSection,
-  sectionRef,
-  colors,
-  enhancedFormatting,
-  hinterfragMode,
-  keywordLinkEntries,
-}: {
-  section: ContentSection;
-  sectionIndex: number;
-  isLast: boolean;
-  isDisclosed: boolean;
-  onDisclose: () => void;
-  onScrollIntoView: () => void;
-  scrollToNextSection: (() => void) | null;
-  sectionRef: (el: HTMLDivElement | null) => void;
-  colors: { border: string; text: string; bg: string };
-  enhancedFormatting?: boolean;
-  hinterfragMode: boolean;
-  keywordLinkEntries?: KeywordLinkEntry[];
-}) {
-  const localRef = useRef<HTMLDivElement | null>(null);
-  useEffect(() => {
-    const el = localRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry?.isIntersecting) onScrollIntoView();
-      },
-      { rootMargin: "0px 0px -25% 0px", threshold: 0.05 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [onScrollIntoView]);
-
-  const handleVerstanden = useCallback(() => {
-    onDisclose();
-    scrollToNextSection?.();
-  }, [onDisclose, scrollToNextSection]);
-
-  const setRef = useCallback(
-    (node: HTMLDivElement | null) => {
-      sectionRef(node);
-      (localRef as React.MutableRefObject<HTMLDivElement | null>).current = node;
-    },
-    [sectionRef]
-  );
-
-  const isDieZelle = enhancedFormatting ?? false;
-
-  return (
-    <div
-      ref={setRef}
-      className={`space-y-4 ${isDieZelle ? "mb-6" : "space-y-3"} transition-all duration-300 ${
-        isDisclosed ? "opacity-100" : "opacity-85"
-      }`}
-    >
-      <h3
-        className={`${isDieZelle ? "text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 pb-2 border-b-2" : "text-lg font-semibold text-gray-800 dark:text-gray-200"} border-l-4 ${colors.border} pl-4 ${isDieZelle ? "pt-1" : "pl-3"} ${!isDisclosed ? "text-gray-600 dark:text-gray-400" : ""}`}
-      >
-        {isDieZelle && (
-          <span className="text-base font-normal text-gray-500 dark:text-gray-400 mr-2">
-            {sectionIndex + 1}.
-          </span>
-        )}
-        {section.heading}
-      </h3>
-
-      {isDisclosed ? (
-        <>
-          <div
-            className={`${isDieZelle ? "text-base leading-relaxed" : "text-sm leading-relaxed"} text-gray-700 dark:text-gray-300 space-y-3`}
-          >
-            <MarkdownContent
-              text={section.text}
-              size="base"
-              hinterfragMode={hinterfragMode}
-              keywordLinkEntries={keywordLinkEntries}
-            />
-          </div>
-          {section.merksatz && (
-            <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-400 dark:border-blue-600 pl-4 pr-4 py-3 my-4">
-              <p className="text-xs font-bold uppercase tracking-wider text-blue-800 dark:text-blue-300 mb-1">
-                Merke
-              </p>
-              <div className="text-base text-blue-900 dark:text-blue-200 leading-relaxed">
-                <MarkdownContent
-                  text={section.merksatz}
-                  size="base"
-                  hinterfragMode={hinterfragMode}
-                  keywordLinkEntries={keywordLinkEntries}
-                />
-              </div>
-            </div>
-          )}
-          {section.table && (
-            <div
-              className={`overflow-x-auto rounded-lg border ${isDieZelle ? "border-2 shadow-sm" : "border"} border-gray-200 dark:border-gray-700 my-4`}
-            >
-              <table className={`w-full ${isDieZelle ? "text-base" : "text-sm"}`}>
-                <thead>
-                  <tr className={`${colors.bg}`}>
-                    {section.table.headers.map((h, hi) => (
-                      <th
-                        key={hi}
-                        className={`text-left ${isDieZelle ? "p-4" : "p-3"} font-bold ${colors.text} border-b-2 border-gray-300 dark:border-gray-600`}
-                      >
-                        {h}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {section.table.rows.map((row, ri) => (
-                    <tr
-                      key={ri}
-                      className={`${isDieZelle ? "hover:bg-gray-50 dark:hover:bg-gray-800/70" : ""} even:bg-gray-50 dark:even:bg-gray-800/50 transition-colors`}
-                    >
-                      {row.map((cell, ci) => (
-                        <td
-                          key={ci}
-                          className={`${isDieZelle ? "p-4" : "p-3"} text-gray-700 dark:text-gray-300 border-b border-gray-100 dark:border-gray-800`}
-                          dangerouslySetInnerHTML={{ __html: cell }}
-                        />
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-          {!isLast && (
-            <button
-              type="button"
-              onClick={handleVerstanden}
-              className="flex items-center gap-2 text-sm font-medium text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
-            >
-              <Check className="w-4 h-4" />
-              Verstanden – weiter
-            </button>
-          )}
-        </>
-      ) : (
-        <div className="rounded-lg bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 p-4">
-          <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
-            Scroll hierher oder klicke „Verstanden“, um den Abschnitt anzuzeigen.
-          </p>
-          <button
-            type="button"
-            onClick={handleVerstanden}
-            className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 hover:bg-primary-200 dark:hover:bg-primary-900/50 font-medium text-sm transition-colors"
-          >
-            <Check className="w-4 h-4" />
-            Verstanden
-          </button>
-        </div>
-      )}
-    </div>
-  );
-}
-
 interface Props {
   uk: Unterkapitel;
   subject: string;
-  chapterId?: string; // Optional: to check if this is "Die Zelle" (bio-kap1)
-  enhancedFormatting?: boolean; // If true: larger text, more spacing, numbered headings
-  /** Aktiviert Active Recall: [? Frage | Antwort ]-Stellen als Frage anzeigen, Antwort bei Klick/Hover. */
+  chapterId?: string;
+  enhancedFormatting?: boolean;
   hinterfragMode?: boolean;
-  /** Progressive Disclosure: Untersektionen erst bei Scroll oder „Verstanden“ voll anzeigen. */
   progressiveDisclosure?: boolean;
-  /** Keywords anderer Kapitel für Smart-Linker (Knowledge-Bridge); Begriffe werden dezent verlinkt. */
   keywordLinkEntries?: KeywordLinkEntry[];
-}
-
-/** Extrahiert ## Überschriften aus Markdown-Content als Stichworte-Chips */
-function extractTopicsFromContent(content: string): string[] {
-  const matches = content.match(/^##\s+(.+)$/gm);
-  if (!matches) return [];
-  return matches
-    .map((m) => m.replace(/^##\s+/, "").trim())
-    .filter((t) => t.length > 0 && t.length < 60);
 }
 
 export function SubchapterContent({
   uk,
   subject,
-  chapterId,
-  enhancedFormatting,
   hinterfragMode = false,
-  progressiveDisclosure = true,
   keywordLinkEntries,
 }: Props) {
   const colors = SUBJECT_COLORS[subject] || SUBJECT_COLORS.biologie;
-  const [lernzieleOpen, setLernzieleOpen] = useState(false);
 
+  // Stichworte: explicit or auto-extracted from ## headings
   const topics = useMemo(() => {
     if (uk.stichworte && uk.stichworte.length > 0) return uk.stichworte;
-    return extractTopicsFromContent(uk.content || "");
+    const matches = (uk.content || "").match(/^##\s+(.+)$/gm);
+    if (!matches) return [];
+    return matches
+      .map((m) => m.replace(/^##\s+/, "").trim())
+      .filter((t) => t.length > 0 && t.length < 60);
   }, [uk.stichworte, uk.content]);
 
-  // Progressive Disclosure: welche Sektionen sind „enthüllt“ (Scroll oder Verstanden)
-  const sectionCount = uk.sections?.length ?? 0;
-  const [disclosedSections, setDisclosedSections] = useState<Set<number>>(() => new Set([0]));
-  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
-  useEffect(() => {
-    sectionRefs.current = sectionRefs.current.slice(0, sectionCount);
-  }, [sectionCount]);
-
-  const setSectionDisclosed = useCallback((index: number) => {
-    setDisclosedSections((prev) => new Set([...prev, index]));
-  }, []);
-
-  // Check if this is "Die Zelle" chapter for enhanced formatting
-  const isDieZelle = enhancedFormatting ?? false;
-
-  // Extract Kontrollfragen from content if they exist as free text
+  // Clean content: remove Kontrollfragen (they're rendered separately as interactive quiz)
   const cleanedContent = useMemo(() => {
     if (!uk.content) return "";
     const { cleanedContent: cleaned } = extractKontrollfragen(uk.content);
     return cleaned;
   }, [uk.content]);
 
-  const topicsBar =
-    topics.length > 0 ? (
-      <div className="flex flex-wrap gap-1.5 pb-3 border-b border-gray-100 dark:border-gray-800 mb-2">
-        <span className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide self-center mr-1">
-          Themen:
-        </span>
-        {topics.map((topic) => (
-          <span
-            key={topic}
-            className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${colors.bg} ${colors.text}`}
-          >
-            {topic}
-          </span>
-        ))}
-      </div>
-    ) : null;
-
-  // If sections exist, render structured content; otherwise fall back to plain content
-  if (uk.sections && uk.sections.length > 0) {
-    const useProgressive = progressiveDisclosure;
-
-    return (
-      <div className="space-y-6">
-        {topicsBar}
-        {/* Full content shown first when both content and sections are present */}
-        {uk.content && cleanedContent && (
-          <div
-            className={`${"text-base"} text-gray-700 dark:text-gray-300 leading-relaxed space-y-3`}
-          >
-            <MarkdownContent
-              text={cleanedContent}
-              size="base"
-              hinterfragMode={hinterfragMode}
-              keywordLinkEntries={keywordLinkEntries}
-            />
-          </div>
-        )}
-
-        {/* Section divider when both content and sections exist */}
-        {uk.content && cleanedContent && (
-          <hr className="my-6 border-t-2 border-gray-200 dark:border-gray-700" />
-        )}
-
-        {/* Lernziele */}
-        {uk.lernziele && uk.lernziele.length > 0 && (
-          <div
-            className={`${colors.bg} ${isDieZelle ? "rounded-xl shadow-sm border-2" : "rounded-xl border"} ${colors.border} ${isDieZelle ? "border-opacity-50" : "border-opacity-30"} overflow-hidden mb-6`}
-          >
-            <button
-              onClick={() => setLernzieleOpen(!lernzieleOpen)}
-              className={`w-full flex items-center justify-between ${isDieZelle ? "p-5" : "p-4"} cursor-pointer hover:bg-opacity-80 transition-colors`}
-            >
-              <span
-                className={`${isDieZelle ? "font-bold text-base" : "font-semibold"} ${colors.text} flex items-center gap-2`}
-              >
-                📚 Lernziele
-              </span>
-              {lernzieleOpen ? (
-                <ChevronUp className={`w-5 h-5 ${colors.text}`} />
-              ) : (
-                <ChevronDown className={`w-5 h-5 ${colors.text}`} />
-              )}
-            </button>
-            {lernzieleOpen && (
-              <ul className={`${isDieZelle ? "px-6 pb-5" : "px-4 pb-4"} space-y-2.5`}>
-                {uk.lernziele.map((ziel, i) => (
-                  <li
-                    key={i}
-                    className={`flex items-start gap-3 ${isDieZelle ? "text-base" : "text-sm"} text-gray-700 dark:text-gray-300`}
-                  >
-                    <span
-                      className={`${colors.text} ${isDieZelle ? "text-lg mt-0.5 font-bold" : "mt-0.5"}`}
-                    >
-                      &#8226;
-                    </span>
-                    <span className="leading-relaxed">{ziel}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        )}
-
-        {/* Structured sections: mit oder ohne Progressive Disclosure */}
-        {uk.sections.map((section, i) => {
-          if (useProgressive) {
-            const scrollToNext =
-              i < uk.sections!.length - 1
-                ? () =>
-                    sectionRefs.current[i + 1]?.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    })
-                : null;
-            return (
-              <div key={i}>
-                <DisclosableSection
-                  section={section}
-                  sectionIndex={i}
-                  isLast={i === uk.sections!.length - 1}
-                  isDisclosed={disclosedSections.has(i)}
-                  onDisclose={() => setSectionDisclosed(i)}
-                  onScrollIntoView={() => setSectionDisclosed(i)}
-                  scrollToNextSection={scrollToNext}
-                  sectionRef={(el) => {
-                    sectionRefs.current[i] = el;
-                  }}
-                  colors={colors}
-                  enhancedFormatting={isDieZelle}
-                  hinterfragMode={hinterfragMode}
-                  keywordLinkEntries={keywordLinkEntries}
-                />
-                {i < uk.sections!.length - 1 && (
-                  <hr
-                    className={`${isDieZelle ? "my-8 border-t-2" : "my-4"} border-gray-200 dark:border-gray-700`}
-                  />
-                )}
-              </div>
-            );
-          }
-          return (
-            <div key={i} className={`space-y-4 ${isDieZelle ? "mb-6" : "space-y-3"}`}>
-              <h3
-                className={`${isDieZelle ? "text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 pb-2 border-b-2" : "text-lg font-semibold text-gray-800 dark:text-gray-200"} border-l-4 ${colors.border} pl-4 ${isDieZelle ? "pt-1" : "pl-3"}`}
-              >
-                {isDieZelle && (
-                  <span className="text-base font-normal text-gray-500 dark:text-gray-400 mr-2">
-                    {i + 1}.
-                  </span>
-                )}
-                {section.heading}
-              </h3>
-              <div
-                className={`${isDieZelle ? "text-base leading-relaxed" : "text-sm leading-relaxed"} text-gray-700 dark:text-gray-300 space-y-3`}
-              >
-                <MarkdownContent
-                  text={section.text}
-                  size="base"
-                  hinterfragMode={hinterfragMode}
-                  keywordLinkEntries={keywordLinkEntries}
-                />
-              </div>
-              {section.merksatz && (
-                <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-400 dark:border-blue-600 pl-4 pr-4 py-3 my-4">
-                  <p className="text-xs font-bold uppercase tracking-wider text-blue-800 dark:text-blue-300 mb-1">
-                    Merke
-                  </p>
-                  <div className="text-base text-blue-900 dark:text-blue-200 leading-relaxed">
-                    <MarkdownContent
-                      text={section.merksatz}
-                      size="base"
-                      hinterfragMode={hinterfragMode}
-                      keywordLinkEntries={keywordLinkEntries}
-                    />
-                  </div>
-                </div>
-              )}
-              {section.table && (
-                <div
-                  className={`overflow-x-auto rounded-lg border ${isDieZelle ? "border-2 shadow-sm" : "border"} border-gray-200 dark:border-gray-700 my-4`}
-                >
-                  <table className={`w-full ${isDieZelle ? "text-base" : "text-sm"}`}>
-                    <thead>
-                      <tr className={`${colors.bg}`}>
-                        {section.table.headers.map((h, hi) => (
-                          <th
-                            key={hi}
-                            className={`text-left ${isDieZelle ? "p-4" : "p-3"} font-bold ${colors.text} border-b-2 border-gray-300 dark:border-gray-600`}
-                          >
-                            {h}
-                          </th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {section.table.rows.map((row, ri) => (
-                        <tr
-                          key={ri}
-                          className={`${isDieZelle ? "hover:bg-gray-50 dark:hover:bg-gray-800/70" : ""} even:bg-gray-50 dark:even:bg-gray-800/50 transition-colors`}
-                        >
-                          {row.map((cell, ci) => (
-                            <td
-                              key={ci}
-                              className={`${isDieZelle ? "p-4" : "p-3"} text-gray-700 dark:text-gray-300 border-b border-gray-100 dark:border-gray-800`}
-                              dangerouslySetInnerHTML={{ __html: cell }}
-                            />
-                          ))}
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
-              {i < uk.sections!.length - 1 && (
-                <hr
-                  className={`${isDieZelle ? "my-8 border-t-2" : "my-4"} border-gray-200 dark:border-gray-700`}
-                />
-              )}
-            </div>
-          );
-        })}
-
-        {/* Diagram */}
-        {uk.diagram && (
-          <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-            <DiagramSVG type={uk.diagram} />
-          </div>
-        )}
-      </div>
-    );
-  }
-
-  // Fallback: render plain content (with Kontrollfragen removed)
   return (
-    <div className={`${isDieZelle ? "space-y-8" : "space-y-6"}`}>
-      {topicsBar}
-      <div className={`${"text-base"} text-gray-700 dark:text-gray-300 leading-relaxed space-y-3`}>
-        <MarkdownContent
-          text={cleanedContent}
-          size="base"
-          hinterfragMode={hinterfragMode}
-          keywordLinkEntries={keywordLinkEntries}
-        />
-      </div>
+    <div className="space-y-6">
+      {/* Stichworte chips */}
+      {topics.length > 0 && (
+        <div className="flex flex-wrap gap-1.5 pb-3 border-b border-gray-100 dark:border-gray-800">
+          <span className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide self-center mr-1">
+            Themen:
+          </span>
+          {topics.map((topic) => (
+            <span
+              key={topic}
+              className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${colors.bg} ${colors.text}`}
+            >
+              {topic}
+            </span>
+          ))}
+        </div>
+      )}
+
+      {/* Main content — pure Markdown, AMBOSS style */}
+      <MarkdownContent
+        text={cleanedContent}
+        hinterfragMode={hinterfragMode}
+        keywordLinkEntries={keywordLinkEntries}
+      />
+
+      {/* Diagram (SVG) */}
       {uk.diagram && (
-        <div className={`${isDieZelle ? "p-6" : "p-4"} bg-gray-50 dark:bg-gray-800/50 rounded-xl`}>
+        <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
           <DiagramSVG type={uk.diagram} />
         </div>
       )}

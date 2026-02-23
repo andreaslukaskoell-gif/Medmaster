@@ -33,9 +33,7 @@ export function KapitelFortschritt({ chapterTitle, xp = 25 }: KapitelFortschritt
       <h3 className="text-xl font-bold text-teal-800 dark:text-teal-200 mb-1">
         Kapitel abgeschlossen!
       </h3>
-      <p className="text-teal-600 dark:text-teal-400 text-sm mb-3">
-        {chapterTitle}
-      </p>
+      <p className="text-teal-600 dark:text-teal-400 text-sm mb-3">{chapterTitle}</p>
       <div className="inline-block bg-teal-600 text-white font-bold text-lg px-6 py-2 rounded-full">
         +{xp} XP
       </div>
@@ -101,7 +99,8 @@ export function KeyFactsGrid({ title, facts }: KeyFactsGridProps) {
           <div key={i} className="flex items-start gap-2">
             <span className="text-teal-500 font-bold mt-0.5">•</span>
             <span className="text-sm text-gray-700 dark:text-gray-300">
-              {fact.label}: <strong className="text-gray-900 dark:text-gray-100">{fact.value}</strong>
+              {fact.label}:{" "}
+              <strong className="text-gray-900 dark:text-gray-100">{fact.value}</strong>
             </span>
           </div>
         ))}
@@ -189,7 +188,10 @@ export function MerksatzBox({ text, type = "merke" }: MerksatzBoxProps) {
       <p className={`font-bold ${c.title} flex items-center gap-2`}>
         {c.icon} {c.label}
       </p>
-      <p className={`${c.body} mt-1 text-sm leading-relaxed`} dangerouslySetInnerHTML={{ __html: text }} />
+      <p
+        className={`${c.body} mt-1 text-sm leading-relaxed`}
+        dangerouslySetInnerHTML={{ __html: text }}
+      />
     </div>
   );
 }
@@ -209,7 +211,11 @@ interface SelbstTestProps {
   questions: SelfTestQuestion[];
   unterkapitelId?: string;
   /** Called after each answer. secondTry = correct after "Nochmal versuchen" (50% XP). */
-  onAnswer?: (questionIndex: number, isCorrect: boolean, secondTry?: boolean) => void | StreakUpdate;
+  onAnswer?: (
+    questionIndex: number,
+    isCorrect: boolean,
+    secondTry?: boolean
+  ) => void | StreakUpdate;
   /** Called when user finishes (e.g. back from report); (correctCount, total) for SRS. */
   onAllComplete?: (correctCount: number, total: number) => void;
 }
@@ -321,8 +327,10 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
             </div>
             <div className="flex-1">
               <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                Du hast <strong className="text-[#1e293b] dark:text-slate-100">{totalCorrect}</strong> von{" "}
-                <strong className="text-[#1e293b] dark:text-slate-100">{questions.length}</strong> Fragen richtig beantwortet.
+                Du hast{" "}
+                <strong className="text-[#1e293b] dark:text-slate-100">{totalCorrect}</strong> von{" "}
+                <strong className="text-[#1e293b] dark:text-slate-100">{questions.length}</strong>{" "}
+                Fragen richtig beantwortet.
               </p>
               <p className="text-base font-medium text-[#007AFF] dark:text-primary-400 mt-2">
                 {getMotivationText(pct)}
@@ -375,7 +383,8 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
           📝 Kontrollfragen
         </h2>
         <p className="text-sm text-gray-600 dark:text-gray-400">
-          Teste dein Wissen mit diesen Fragen. Wähle eine Antwort und klicke auf "Antwort prüfen" für sofortiges Feedback.
+          Teste dein Wissen mit diesen Fragen. Wähle eine Antwort und klicke auf "Antwort prüfen"
+          für sofortiges Feedback.
         </p>
         {totalAnswered > 0 && (
           <div className="mt-3 text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -388,7 +397,10 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
         if (!displayIndices.includes(index)) return null;
         if (!question || !question.question || !question.options || question.options.length === 0) {
           return (
-            <div key={index} className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
+            <div
+              key={index}
+              className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4"
+            >
               <p className="text-sm text-yellow-800 dark:text-yellow-300">
                 ⚠️ Frage {index + 1} hat unvollständige Daten und wird übersprungen.
               </p>
@@ -400,7 +412,9 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
             key={index}
             question={question}
             questionNumber={index + 1}
-            onAnswerChange={(isCorrect, secondTry) => handleAnswerChange(index, isCorrect, secondTry)}
+            onAnswerChange={(isCorrect, secondTry) =>
+              handleAnswerChange(index, isCorrect, secondTry)
+            }
           />
         );
       })}

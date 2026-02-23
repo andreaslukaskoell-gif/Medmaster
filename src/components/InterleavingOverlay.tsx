@@ -2,11 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { RefreshCw, X } from "lucide-react";
 import { useInterleavingStore } from "@/store/interleaving";
-import {
-  suggestedAlternateArea,
-  areaLabel,
-  type LearningArea,
-} from "@/lib/learningArea";
+import { suggestedAlternateArea, areaLabel, type LearningArea } from "@/lib/learningArea";
 import { Button } from "@/components/ui/button";
 
 interface Props {
@@ -47,25 +43,17 @@ export function InterleavingOverlay({ visible, currentArea, onDismiss }: Props) 
                 Zeit für einen Kontextwechsel?
               </p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
-                Du bist seit über 45 Minuten in {areaLabel(currentArea)}. Ein kurzer Wechsel trainiert die kognitive Flexibilität und beugt Ermüdung vor.
+                Du bist seit über 45 Minuten in {areaLabel(currentArea)}. Ein kurzer Wechsel
+                trainiert die kognitive Flexibilität und beugt Ermüdung vor.
               </p>
               <div className="flex flex-wrap gap-2">
                 {suggestion && (
-                  <Button
-                    size="sm"
-                    onClick={handleSwitch}
-                    className="gap-2"
-                  >
+                  <Button size="sm" onClick={handleSwitch} className="gap-2">
                     <RefreshCw className="w-4 h-4" />
                     {suggestion.label}
                   </Button>
                 )}
-                <Button
-                  size="sm"
-                  variant="outline"
-                  onClick={onDismiss}
-                  className="gap-2"
-                >
+                <Button size="sm" variant="outline" onClick={onDismiss} className="gap-2">
                   <X className="w-4 h-4" />
                   Weiter hier
                 </Button>

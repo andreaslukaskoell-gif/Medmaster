@@ -4,47 +4,54 @@ const parts = [
   {
     id: "mouth",
     label: "Mundhöhle",
-    detail: "Mechanische Verdauung durch Zähne, enzymatische Verdauung durch Amylase aus Speicheldrüsen"
+    detail:
+      "Mechanische Verdauung durch Zähne, enzymatische Verdauung durch Amylase aus Speicheldrüsen",
   },
   {
     id: "esophagus",
     label: "Ösophagus",
-    detail: "Peristaltik: rhythmische Muskelkontraktionen transportieren Nahrung zum Magen (~25 cm)"
+    detail:
+      "Peristaltik: rhythmische Muskelkontraktionen transportieren Nahrung zum Magen (~25 cm)",
   },
   {
     id: "stomach",
     label: "Magen",
-    detail: "Produktion von HCl und Pepsin für Proteinverdauung, sehr saures Milieu (pH 1-2), Speicherung und Durchmischung"
+    detail:
+      "Produktion von HCl und Pepsin für Proteinverdauung, sehr saures Milieu (pH 1-2), Speicherung und Durchmischung",
   },
   {
     id: "liver",
     label: "Leber",
-    detail: "Galleproduktion für Fettverdauung, Entgiftung, Glykogenspeicherung, Proteinbiosynthese, größtes inneres Organ"
+    detail:
+      "Galleproduktion für Fettverdauung, Entgiftung, Glykogenspeicherung, Proteinbiosynthese, größtes inneres Organ",
   },
   {
     id: "gallbladder",
     label: "Gallenblase",
-    detail: "Speicherung und Konzentration der Galle, Abgabe in Duodenum bei Nahrungsaufnahme"
+    detail: "Speicherung und Konzentration der Galle, Abgabe in Duodenum bei Nahrungsaufnahme",
   },
   {
     id: "pancreas",
     label: "Pankreas (Bauchspeicheldrüse)",
-    detail: "Exokrine Funktion: Verdauungsenzyme (Lipase, Amylase, Trypsin) und Bikarbonat. Endokrine Funktion: Insulin und Glukagon"
+    detail:
+      "Exokrine Funktion: Verdauungsenzyme (Lipase, Amylase, Trypsin) und Bikarbonat. Endokrine Funktion: Insulin und Glukagon",
   },
   {
     id: "small-intestine",
     label: "Dünndarm (Duodenum, Jejunum, Ileum)",
-    detail: "Hauptort der Nährstoffaufnahme, Zotten und Mikrovilli vergrößern Oberfläche enorm, Länge 6-7 m"
+    detail:
+      "Hauptort der Nährstoffaufnahme, Zotten und Mikrovilli vergrößern Oberfläche enorm, Länge 6-7 m",
   },
   {
     id: "large-intestine",
     label: "Dickdarm (Colon)",
-    detail: "Wasserrückresorption, bakterielle Flora produziert Vitamine (K, B12), Länge ca. 1,5 m"
+    detail: "Wasserrückresorption, bakterielle Flora produziert Vitamine (K, B12), Länge ca. 1,5 m",
   },
   {
     id: "rectum",
     label: "Rektum/Anus",
-    detail: "Speicherung der Fäzes, kontrollierte Defäkation durch Schließmuskeln (innerer glatt, äußerer quergestreift)"
+    detail:
+      "Speicherung der Fäzes, kontrollierte Defäkation durch Schließmuskeln (innerer glatt, äußerer quergestreift)",
   },
 ];
 
@@ -254,43 +261,140 @@ export default function DigestiveSystem() {
         {/* Labels with dashed leader lines */}
 
         {/* Mundhöhle label */}
-        <line x1="225" y1="30" x2="280" y2="20" stroke="#9ca3af" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="285" y="22" fontSize="10" fill="#374151" className="dark:fill-gray-300">Mundhöhle</text>
+        <line
+          x1="225"
+          y1="30"
+          x2="280"
+          y2="20"
+          stroke="#9ca3af"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="285" y="22" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Mundhöhle
+        </text>
 
         {/* Ösophagus label */}
-        <line x1="220" y1="70" x2="280" y2="60" stroke="#9ca3af" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="285" y="62" fontSize="10" fill="#374151" className="dark:fill-gray-300">Ösophagus</text>
+        <line
+          x1="220"
+          y1="70"
+          x2="280"
+          y2="60"
+          stroke="#9ca3af"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="285" y="62" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Ösophagus
+        </text>
 
         {/* Magen label */}
-        <line x1="245" y1="130" x2="300" y2="120" stroke="#9ca3af" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="305" y="122" fontSize="10" fill="#374151" className="dark:fill-gray-300">Magen</text>
+        <line
+          x1="245"
+          y1="130"
+          x2="300"
+          y2="120"
+          stroke="#9ca3af"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="305" y="122" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Magen
+        </text>
 
         {/* Leber label */}
-        <line x1="120" y1="135" x2="60" y2="110" stroke="#9ca3af" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="15" y="112" fontSize="10" fill="#374151" className="dark:fill-gray-300">Leber</text>
+        <line
+          x1="120"
+          y1="135"
+          x2="60"
+          y2="110"
+          stroke="#9ca3af"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="15" y="112" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Leber
+        </text>
 
         {/* Gallenblase label */}
-        <line x1="257" y1="145" x2="310" y2="155" stroke="#9ca3af" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="315" y="157" fontSize="10" fill="#374151" className="dark:fill-gray-300">Gallenblase</text>
+        <line
+          x1="257"
+          y1="145"
+          x2="310"
+          y2="155"
+          stroke="#9ca3af"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="315" y="157" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Gallenblase
+        </text>
 
         {/* Pankreas label */}
-        <line x1="140" y1="155" x2="80" y2="165" stroke="#9ca3af" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="15" y="167" fontSize="10" fill="#374151" className="dark:fill-gray-300">Pankreas</text>
+        <line
+          x1="140"
+          y1="155"
+          x2="80"
+          y2="165"
+          stroke="#9ca3af"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="15" y="167" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Pankreas
+        </text>
 
         {/* Dünndarm label */}
-        <line x1="255" y1="240" x2="310" y2="235" stroke="#9ca3af" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="315" y="237" fontSize="10" fill="#374151" className="dark:fill-gray-300">Dünndarm</text>
+        <line
+          x1="255"
+          y1="240"
+          x2="310"
+          y2="235"
+          stroke="#9ca3af"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="315" y="237" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Dünndarm
+        </text>
 
         {/* Dickdarm label */}
-        <line x1="140" y1="340" x2="80" y2="340" stroke="#9ca3af" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="15" y="342" fontSize="10" fill="#374151" className="dark:fill-gray-300">Dickdarm</text>
+        <line
+          x1="140"
+          y1="340"
+          x2="80"
+          y2="340"
+          stroke="#9ca3af"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="15" y="342" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Dickdarm
+        </text>
 
         {/* Rektum/Anus label */}
-        <line x1="220" y1="415" x2="280" y2="425" stroke="#9ca3af" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="285" y="427" fontSize="10" fill="#374151" className="dark:fill-gray-300">Rektum/Anus</text>
+        <line
+          x1="220"
+          y1="415"
+          x2="280"
+          y2="425"
+          stroke="#9ca3af"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="285" y="427" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Rektum/Anus
+        </text>
 
         {/* Additional anatomical markers */}
-        <text x="150" y="505" fontSize="9" fill="#6b7280" className="dark:fill-gray-400" fontStyle="italic">
+        <text
+          x="150"
+          y="505"
+          fontSize="9"
+          fill="#6b7280"
+          className="dark:fill-gray-400"
+          fontStyle="italic"
+        >
           Gesamtlänge GI-Trakt: ~8-9 m
         </text>
       </svg>

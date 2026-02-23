@@ -14,7 +14,8 @@ export function KeyFactsGrid({ title, facts }: KeyFactsGridProps) {
           <div key={i} className="flex items-start gap-2">
             <span className="text-teal-500 font-bold mt-0.5">•</span>
             <span className="text-sm text-gray-700 dark:text-gray-300">
-              {fact.label}: <strong className="text-gray-900 dark:text-gray-100">{fact.value}</strong>
+              {fact.label}:{" "}
+              <strong className="text-gray-900 dark:text-gray-100">{fact.value}</strong>
             </span>
           </div>
         ))}

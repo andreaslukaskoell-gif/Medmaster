@@ -52,7 +52,9 @@ export default function CoordinateSystem() {
 
   return (
     <div className="space-y-3">
-      <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Koordinatensystem — Funktionstypen</h4>
+      <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+        Koordinatensystem — Funktionstypen
+      </h4>
       <p className="text-xs text-muted">Schalte Funktionen ein und aus.</p>
 
       <div className="flex gap-2 flex-wrap mb-2">
@@ -73,37 +75,92 @@ export default function CoordinateSystem() {
       </div>
 
       <svg viewBox="0 0 420 310" className="w-full max-w-lg mx-auto">
-        <text x="210" y="18" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">Funktionstypen im Vergleich</text>
+        <text x="210" y="18" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">
+          Funktionstypen im Vergleich
+        </text>
 
         {/* Grid lines */}
         {Array.from({ length: 15 }, (_, i) => i - 7).map((v) => (
           <g key={`grid-${v}`}>
             {/* Vertical */}
-            <line x1={toSvgX(v)} y1={toSvgY(7)} x2={toSvgX(v)} y2={toSvgY(-3)} stroke="#f3f4f6" strokeWidth="1" />
+            <line
+              x1={toSvgX(v)}
+              y1={toSvgY(7)}
+              x2={toSvgX(v)}
+              y2={toSvgY(-3)}
+              stroke="#f3f4f6"
+              strokeWidth="1"
+            />
             {/* Horizontal */}
             {v >= -3 && v <= 7 && (
-              <line x1={toSvgX(-7)} y1={toSvgY(v)} x2={toSvgX(7)} y2={toSvgY(v)} stroke="#f3f4f6" strokeWidth="1" />
+              <line
+                x1={toSvgX(-7)}
+                y1={toSvgY(v)}
+                x2={toSvgX(7)}
+                y2={toSvgY(v)}
+                stroke="#f3f4f6"
+                strokeWidth="1"
+              />
             )}
           </g>
         ))}
 
         {/* X axis */}
-        <line x1={toSvgX(-7)} y1={ORIGIN_Y} x2={toSvgX(7.5)} y2={ORIGIN_Y} stroke="#374151" strokeWidth="1.5" />
-        <polygon points={`${toSvgX(7.5)},${ORIGIN_Y - 4} ${toSvgX(7.5)},${ORIGIN_Y + 4} ${toSvgX(7.5) + 8},${ORIGIN_Y}`} fill="#374151" />
-        <text x={toSvgX(7.5) + 10} y={ORIGIN_Y + 4} fontSize="13" fill="#374151" fontWeight="bold">x</text>
+        <line
+          x1={toSvgX(-7)}
+          y1={ORIGIN_Y}
+          x2={toSvgX(7.5)}
+          y2={ORIGIN_Y}
+          stroke="#374151"
+          strokeWidth="1.5"
+        />
+        <polygon
+          points={`${toSvgX(7.5)},${ORIGIN_Y - 4} ${toSvgX(7.5)},${ORIGIN_Y + 4} ${toSvgX(7.5) + 8},${ORIGIN_Y}`}
+          fill="#374151"
+        />
+        <text x={toSvgX(7.5) + 10} y={ORIGIN_Y + 4} fontSize="13" fill="#374151" fontWeight="bold">
+          x
+        </text>
 
         {/* Y axis */}
-        <line x1={ORIGIN_X} y1={toSvgY(-3)} x2={ORIGIN_X} y2={toSvgY(7.5)} stroke="#374151" strokeWidth="1.5" />
-        <polygon points={`${ORIGIN_X - 4},${toSvgY(7.5)} ${ORIGIN_X + 4},${toSvgY(7.5)} ${ORIGIN_X},${toSvgY(7.5) - 8}`} fill="#374151" />
-        <text x={ORIGIN_X + 8} y={toSvgY(7.5) - 2} fontSize="13" fill="#374151" fontWeight="bold">y</text>
+        <line
+          x1={ORIGIN_X}
+          y1={toSvgY(-3)}
+          x2={ORIGIN_X}
+          y2={toSvgY(7.5)}
+          stroke="#374151"
+          strokeWidth="1.5"
+        />
+        <polygon
+          points={`${ORIGIN_X - 4},${toSvgY(7.5)} ${ORIGIN_X + 4},${toSvgY(7.5)} ${ORIGIN_X},${toSvgY(7.5) - 8}`}
+          fill="#374151"
+        />
+        <text x={ORIGIN_X + 8} y={toSvgY(7.5) - 2} fontSize="13" fill="#374151" fontWeight="bold">
+          y
+        </text>
 
         {/* Tick marks and labels */}
         {Array.from({ length: 13 }, (_, i) => i - 6).map((v) => (
           <g key={`tick-x-${v}`}>
             {v !== 0 && (
               <>
-                <line x1={toSvgX(v)} y1={ORIGIN_Y - 3} x2={toSvgX(v)} y2={ORIGIN_Y + 3} stroke="#374151" strokeWidth="1" />
-                <text x={toSvgX(v)} y={ORIGIN_Y + 14} textAnchor="middle" fontSize="7" fill="#6b7280">{v}</text>
+                <line
+                  x1={toSvgX(v)}
+                  y1={ORIGIN_Y - 3}
+                  x2={toSvgX(v)}
+                  y2={ORIGIN_Y + 3}
+                  stroke="#374151"
+                  strokeWidth="1"
+                />
+                <text
+                  x={toSvgX(v)}
+                  y={ORIGIN_Y + 14}
+                  textAnchor="middle"
+                  fontSize="7"
+                  fill="#6b7280"
+                >
+                  {v}
+                </text>
               </>
             )}
           </g>
@@ -112,13 +169,30 @@ export default function CoordinateSystem() {
           <g key={`tick-y-${v}`}>
             {v !== 0 && v <= 7 && (
               <>
-                <line x1={ORIGIN_X - 3} y1={toSvgY(v)} x2={ORIGIN_X + 3} y2={toSvgY(v)} stroke="#374151" strokeWidth="1" />
-                <text x={ORIGIN_X - 10} y={toSvgY(v) + 3} textAnchor="end" fontSize="7" fill="#6b7280">{v}</text>
+                <line
+                  x1={ORIGIN_X - 3}
+                  y1={toSvgY(v)}
+                  x2={ORIGIN_X + 3}
+                  y2={toSvgY(v)}
+                  stroke="#374151"
+                  strokeWidth="1"
+                />
+                <text
+                  x={ORIGIN_X - 10}
+                  y={toSvgY(v) + 3}
+                  textAnchor="end"
+                  fontSize="7"
+                  fill="#6b7280"
+                >
+                  {v}
+                </text>
               </>
             )}
           </g>
         ))}
-        <text x={ORIGIN_X - 8} y={ORIGIN_Y + 12} textAnchor="end" fontSize="7" fill="#6b7280">0</text>
+        <text x={ORIGIN_X - 8} y={ORIGIN_Y + 12} textAnchor="end" fontSize="7" fill="#6b7280">
+          0
+        </text>
 
         {/* Linear function: y = 2x */}
         {visible.linear && (
@@ -132,33 +206,29 @@ export default function CoordinateSystem() {
 
         {/* Quadratic function: y = x^2 */}
         {visible.quadratic && (
-          <polyline
-            points={quadPoints.join(" ")}
-            fill="none"
-            stroke="#22c55e"
-            strokeWidth="2.5"
-          />
+          <polyline points={quadPoints.join(" ")} fill="none" stroke="#22c55e" strokeWidth="2.5" />
         )}
 
         {/* Exponential function: y = 2^x */}
         {visible.exponential && (
-          <polyline
-            points={expPoints.join(" ")}
-            fill="none"
-            stroke="#ef4444"
-            strokeWidth="2.5"
-          />
+          <polyline points={expPoints.join(" ")} fill="none" stroke="#ef4444" strokeWidth="2.5" />
         )}
 
         {/* Function labels on the graph */}
         {visible.linear && (
-          <text x={toSvgX(3) + 5} y={toSvgY(6) + 5} fontSize="13" fill="#3b82f6" fontWeight="bold">y = 2x</text>
+          <text x={toSvgX(3) + 5} y={toSvgY(6) + 5} fontSize="13" fill="#3b82f6" fontWeight="bold">
+            y = 2x
+          </text>
         )}
         {visible.quadratic && (
-          <text x={toSvgX(2.5) + 5} y={toSvgY(6.25)} fontSize="13" fill="#22c55e" fontWeight="bold">y = x\u00B2</text>
+          <text x={toSvgX(2.5) + 5} y={toSvgY(6.25)} fontSize="13" fill="#22c55e" fontWeight="bold">
+            y = x\u00B2
+          </text>
         )}
         {visible.exponential && (
-          <text x={toSvgX(2.8) + 5} y={toSvgY(7)} fontSize="13" fill="#ef4444" fontWeight="bold">y = 2\u02E3</text>
+          <text x={toSvgX(2.8) + 5} y={toSvgY(7)} fontSize="13" fill="#ef4444" fontWeight="bold">
+            y = 2\u02E3
+          </text>
         )}
 
         {/* Origin marker */}
@@ -167,9 +237,11 @@ export default function CoordinateSystem() {
 
       <div className="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-3">
         <p className="text-xs text-gray-700 dark:text-gray-300">
-          <strong className="text-blue-600">Linear (y=2x):</strong> Konstante Steigung, Gerade durch den Ursprung.{" "}
-          <strong className="text-green-600">Quadratisch (y=x\u00B2):</strong> Parabel, symmetrisch zur y-Achse.{" "}
-          <strong className="text-red-600">Exponentiell (y=2\u02E3):</strong> Waechst immer schneller, Asymptote bei y=0.
+          <strong className="text-blue-600">Linear (y=2x):</strong> Konstante Steigung, Gerade durch
+          den Ursprung. <strong className="text-green-600">Quadratisch (y=x\u00B2):</strong>{" "}
+          Parabel, symmetrisch zur y-Achse.{" "}
+          <strong className="text-red-600">Exponentiell (y=2\u02E3):</strong> Waechst immer
+          schneller, Asymptote bei y=0.
         </p>
       </div>
     </div>

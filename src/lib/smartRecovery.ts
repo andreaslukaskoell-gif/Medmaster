@@ -34,7 +34,9 @@ export function hasCriticalErrorPattern(quizResults: QuizResult[]): boolean {
  * Liefert die Recovery-Session: Fragen (mit Erklärung für Re-Entry),
  * nur solche die in allBmsQuestions existieren.
  */
-export function getRecoverySession(quizResults: QuizResult[]): { questionId: string; explanation: string }[] {
+export function getRecoverySession(
+  quizResults: QuizResult[]
+): { questionId: string; explanation: string }[] {
   const wrongIds = getWrongBmsQuestionIds(quizResults);
   const session: { questionId: string; explanation: string }[] = [];
   const seen = new Set<string>();

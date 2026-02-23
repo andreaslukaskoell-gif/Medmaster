@@ -31,7 +31,10 @@ export function GlobalBreadcrumb() {
                   </BreadcrumbPage>
                 ) : item.href ? (
                   <BreadcrumbLink asChild>
-                    <Link to={item.href} className="hover:text-primary-500 truncate max-w-[120px] sm:max-w-[200px]">
+                    <Link
+                      to={item.href}
+                      className="hover:text-primary-500 truncate max-w-[120px] sm:max-w-[200px]"
+                    >
                       {item.label}
                     </Link>
                   </BreadcrumbLink>

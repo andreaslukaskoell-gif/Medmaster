@@ -22,7 +22,12 @@ function getOfflineQueue(): OfflineQueueItem[] {
     const raw = localStorage.getItem(OFFLINE_QUEUE_KEY);
     if (!raw) return [];
     const parsed = JSON.parse(raw) as unknown;
-    return Array.isArray(parsed) ? parsed.filter((x): x is OfflineQueueItem => x && typeof x.userId === "string" && typeof x.queuedAt === "string") : [];
+    return Array.isArray(parsed)
+      ? parsed.filter(
+          (x): x is OfflineQueueItem =>
+            x && typeof x.userId === "string" && typeof x.queuedAt === "string"
+        )
+      : [];
   } catch {
     return [];
   }
@@ -46,7 +51,12 @@ function addToOfflineQueue(userId: string) {
 function isNetworkError(err: unknown): boolean {
   const msg = err instanceof Error ? err.message : String(err);
   const s = msg.toLowerCase();
-  return s.includes("fetch") || s.includes("network") || s.includes("failed to fetch") || s.includes("networkerror");
+  return (
+    s.includes("fetch") ||
+    s.includes("network") ||
+    s.includes("failed to fetch") ||
+    s.includes("networkerror")
+  );
 }
 
 /** Row shape from stichwort_stats (Supabase) */
@@ -91,7 +101,9 @@ interface FachStatRow {
 // Push: localStorage → Supabase
 // ============================================================
 
-export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean; error?: string }> {
+export async function pushStatsToSupabase(
+  userId: string
+): Promise<{ ok: boolean; error?: string }> {
   if (!supabase) return { ok: true };
   useSyncStatus.getState().setSyncing(true);
   const errors: string[] = [];
@@ -158,17 +170,15 @@ export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean
     }
 
     // 3) Upsert fach_stats (non-blocking)
-    const fachRows = Object.entries(profile.fachStats).map(
-      ([fach, stat]: [string, FachStat]) => ({
-        user_id: userId,
-        fach,
-        overall_success_rate: stat.overallSuccessRate,
-        weak_topics: JSON.stringify(stat.weakTopics),
-        strong_topics: JSON.stringify(stat.strongTopics),
-        recommended_daily_questions: stat.recommendedDailyQuestions,
-        updated_at: new Date().toISOString(),
-      })
-    );
+    const fachRows = Object.entries(profile.fachStats).map(([fach, stat]: [string, FachStat]) => ({
+      user_id: userId,
+      fach,
+      overall_success_rate: stat.overallSuccessRate,
+      weak_topics: JSON.stringify(stat.weakTopics),
+      strong_topics: JSON.stringify(stat.strongTopics),
+      recommended_daily_questions: stat.recommendedDailyQuestions,
+      updated_at: new Date().toISOString(),
+    }));
     if (fachRows.length > 0) {
       try {
         const { error: fachErr } = await supabase
@@ -207,14 +217,18 @@ export async function pushStatsToSupabase(userId: string): Promise<{ ok: boolean
 // Pull: Supabase → localStorage
 // ============================================================
 
-export async function pullStatsFromSupabase(userId: string): Promise<{ ok: boolean; error?: string }> {
+export async function pullStatsFromSupabase(
+  userId: string
+): Promise<{ ok: boolean; error?: string }> {
   if (!supabase) return { ok: true };
   useSyncStatus.getState().setSyncing(true);
   try {
     // 1) Fetch profile fields — use maybeSingle() so missing row is not an error
     const { data: profileData, error: profileErr } = await supabase
       .from("profiles")
-      .select("learning_phase, exam_date, daily_challenge_streak, last_daily_challenge, total_questions_answered, total_correct")
+      .select(
+        "learning_phase, exam_date, daily_challenge_streak, last_daily_challenge, total_questions_answered, total_correct"
+      )
       .eq("id", userId)
       .maybeSingle();
 
@@ -258,8 +272,7 @@ export async function pullStatsFromSupabase(userId: string): Promise<{ ok: boole
     }
 
     // Only overwrite local if Supabase actually has data
-    const remoteHasData =
-      (profileData?.total_questions_answered ?? 0) > 0 || swData.length > 0;
+    const remoteHasData = (profileData?.total_questions_answered ?? 0) > 0 || swData.length > 0;
 
     if (!remoteHasData) {
       console.log("[sync] No remote data found, keeping localStorage");
@@ -283,7 +296,11 @@ export async function pullStatsFromSupabase(userId: string): Promise<{ ok: boole
     const stichwortStats: Record<string, StichwortStat> = {};
     if (swData) {
       for (const row of swData) {
-        const confidence = (row.confidence === "sicher" || row.confidence === "unsicher" ? row.confidence : "unbekannt") as StichwortStat["confidence"];
+        const confidence = (
+          row.confidence === "sicher" || row.confidence === "unsicher"
+            ? row.confidence
+            : "unbekannt"
+        ) as StichwortStat["confidence"];
         stichwortStats[row.stichwort_id] = {
           totalAttempts: row.total_attempts,
           correctAttempts: row.correct_attempts,
@@ -404,9 +421,12 @@ export function startAutoSync(userId: string) {
 
   // Push every 2 minutes
   stopAutoSync();
-  syncInterval = setInterval(() => {
-    void pushStatsToSupabase(userId);
-  }, 2 * 60 * 1000);
+  syncInterval = setInterval(
+    () => {
+      void pushStatsToSupabase(userId);
+    },
+    2 * 60 * 1000
+  );
 
   // Push on page unload
   window.addEventListener("beforeunload", () => {

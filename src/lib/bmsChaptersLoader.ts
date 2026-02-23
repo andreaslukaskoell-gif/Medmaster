@@ -6,15 +6,15 @@
  * 3. Bei Fehler/Offline: Cache bleibt sichtbar, kein Error-Screen solange Daten da sind
  */
 
-import { loadBMSChaptersFromSupabase } from './supabaseBMS';
-import type { Kapitel } from '@/data/bmsKapitel/types';
+import { loadBMSChaptersFromSupabase } from "./supabaseBMS";
+import type { Kapitel } from "@/data/bmsKapitel/types";
 
-const CACHE_KEY = 'bms-chapters-cache';
-const CACHE_VERSION = '2.0.0';
+const CACHE_KEY = "bms-chapters-cache";
+const CACHE_VERSION = "2.0.0";
 
 export interface BMSChaptersResult {
   chapters: Kapitel[];
-  source: 'cache' | 'supabase' | 'cache-then-supabase';
+  source: "cache" | "supabase" | "cache-then-supabase";
   error: string | null;
   isRevalidating: boolean;
 }
@@ -28,7 +28,7 @@ function readCache(): Kapitel[] | null {
       return parsed.chapters as Kapitel[];
     }
   } catch (e) {
-    console.warn('[BMS] Cache read failed:', e);
+    console.warn("[BMS] Cache read failed:", e);
   }
   return null;
 }
@@ -39,11 +39,11 @@ function writeCache(chapters: Kapitel[]): void {
       version: CACHE_VERSION,
       chapters,
       lastUpdated: new Date().toISOString(),
-      source: 'supabase-cache',
+      source: "supabase-cache",
     };
     localStorage.setItem(CACHE_KEY, JSON.stringify(data));
   } catch (e) {
-    console.warn('[BMS] Cache write failed:', e);
+    console.warn("[BMS] Cache write failed:", e);
   }
 }
 
@@ -52,7 +52,7 @@ function writeCache(chapters: Kapitel[]): void {
  * Gibt initial cache zurück falls vorhanden; ruft dann revalidate() auf.
  */
 export async function loadBMSChaptersSWR(
-  onChapters: (chapters: Kapitel[], source: 'cache' | 'supabase') => void,
+  onChapters: (chapters: Kapitel[], source: "cache" | "supabase") => void,
   onError: (error: string | null) => void,
   onRevalidating: (revalidating: boolean) => void
 ): Promise<void> {
@@ -60,7 +60,7 @@ export async function loadBMSChaptersSWR(
 
   // 1. Stale: sofort Cache anzeigen
   if (cached && cached.length > 0) {
-    onChapters(cached, 'cache');
+    onChapters(cached, "cache");
     onError(null);
   }
 
@@ -70,17 +70,17 @@ export async function loadBMSChaptersSWR(
     const chapters = await loadBMSChaptersFromSupabase();
     if (chapters.length > 0) {
       writeCache(chapters);
-      onChapters(chapters, 'supabase');
+      onChapters(chapters, "supabase");
       onError(null);
     } else {
       // Keine Daten in Supabase – nur Fehler setzen wenn auch kein Cache
       if (!cached || cached.length === 0) {
-        onError('Keine Kapitel in Supabase gefunden.');
+        onError("Keine Kapitel in Supabase gefunden.");
       }
     }
   } catch (err) {
-    const message = err instanceof Error ? err.message : 'Fehler beim Laden von Supabase';
-    console.error('[BMS] Supabase load failed:', err);
+    const message = err instanceof Error ? err.message : "Fehler beim Laden von Supabase";
+    console.error("[BMS] Supabase load failed:", err);
     if (!cached || cached.length === 0) {
       onError(message);
     }

@@ -33,7 +33,13 @@ export function Paywall({ feature, requiredTier = "standard", children }: Props)
   );
 }
 
-export function PaywallBanner({ feature, requiredTier = "standard" }: { feature: string; requiredTier?: "standard" | "pro" }) {
+export function PaywallBanner({
+  feature,
+  requiredTier = "standard",
+}: {
+  feature: string;
+  requiredTier?: "standard" | "pro";
+}) {
   return (
     <div className="bg-linear-to-r from-primary-50 to-teal-50 dark:from-primary-900/20 dark:to-teal-900/20 border border-primary-200 dark:border-primary-800 rounded-xl p-4 flex items-center gap-4">
       <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center shrink-0">

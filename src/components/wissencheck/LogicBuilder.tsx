@@ -20,7 +20,12 @@ interface LogicBuilderProps {
   accentClass?: string;
 }
 
-export function LogicBuilder({ question, onCorrect, onWrong, accentClass = "bg-primary-600" }: LogicBuilderProps) {
+export function LogicBuilder({
+  question,
+  onCorrect,
+  onWrong,
+  accentClass = "bg-primary-600",
+}: LogicBuilderProps) {
   const { title, correctOrder, explanation } = question;
 
   const [selectedOrder, setSelectedOrder] = useState<string[]>([]);
@@ -65,11 +70,10 @@ export function LogicBuilder({ question, onCorrect, onWrong, accentClass = "bg-p
 
   return (
     <div className="space-y-5">
-      <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-        {title}
-      </p>
+      <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{title}</p>
       <p className="text-xs text-muted">
-        Tippe die Fragmente in der richtigen Reihenfolge an. Klicke auf ein gewähltes Fragment, um es zurückzusetzen.
+        Tippe die Fragmente in der richtigen Reihenfolge an. Klicke auf ein gewähltes Fragment, um
+        es zurückzusetzen.
       </p>
 
       {/* Ausgewählte Reihenfolge (mit Pfeilen) */}
@@ -88,7 +92,10 @@ export function LogicBuilder({ question, onCorrect, onWrong, accentClass = "bg-p
                 {fragment}
               </motion.button>
               {i < selectedOrder.length - 1 && (
-                <ArrowRight className="w-4 h-4 text-gray-400 dark:text-gray-500 shrink-0" aria-hidden />
+                <ArrowRight
+                  className="w-4 h-4 text-gray-400 dark:text-gray-500 shrink-0"
+                  aria-hidden
+                />
               )}
             </span>
           ))

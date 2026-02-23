@@ -15,21 +15,21 @@
  *   ))}
  */
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 interface BlurFadeProps {
-  children: React.ReactNode
+  children: React.ReactNode;
   /** Delay before animation starts, in seconds */
-  delay?: number
+  delay?: number;
   /** Duration of animation, in seconds. Default 0.3 */
-  duration?: number
+  duration?: number;
   /** Vertical offset to animate from. Default 6 */
-  yOffset?: number
+  yOffset?: number;
   /** Only animate when in viewport. Default true */
-  inView?: boolean
+  inView?: boolean;
   /** Extra className on the wrapper div */
-  className?: string
+  className?: string;
 }
 
 export function BlurFade({
@@ -40,9 +40,9 @@ export function BlurFade({
   inView = true,
   className,
 }: BlurFadeProps) {
-  const ref = useRef<HTMLDivElement>(null)
-  const inViewResult = useInView(ref, { once: true, margin: "-20px" })
-  const isVisible = !inView || inViewResult
+  const ref = useRef<HTMLDivElement>(null);
+  const inViewResult = useInView(ref, { once: true, margin: "-20px" });
+  const isVisible = !inView || inViewResult;
 
   return (
     <motion.div
@@ -62,5 +62,5 @@ export function BlurFade({
     >
       {children}
     </motion.div>
-  )
+  );
 }

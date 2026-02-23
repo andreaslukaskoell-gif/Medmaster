@@ -16,12 +16,7 @@ export function StreakFire({ streak, hasActivityToday, className }: StreakFirePr
   const isGray = !hasActivityToday;
 
   return (
-    <div
-      className={cn(
-        "flex flex-col items-center justify-center gap-1",
-        className
-      )}
-    >
+    <div className={cn("flex flex-col items-center justify-center gap-1", className)}>
       <div
         className={cn(
           "relative flex items-center justify-center w-14 h-14 rounded-2xl transition-colors",
@@ -33,9 +28,7 @@ export function StreakFire({ streak, hasActivityToday, className }: StreakFirePr
         <Flame
           className={cn(
             "w-8 h-8 transition-colors",
-            isGray
-              ? "text-gray-400 dark:text-gray-500"
-              : "text-orange-500 dark:text-orange-400"
+            isGray ? "text-gray-400 dark:text-gray-500" : "text-orange-500 dark:text-orange-400"
           )}
           fill={isGray ? "currentColor" : "currentColor"}
         />

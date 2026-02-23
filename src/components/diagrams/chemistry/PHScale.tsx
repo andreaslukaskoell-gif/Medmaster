@@ -13,9 +13,21 @@ const substances = [
 ];
 
 const phColors = [
-  "#dc2626", "#ef4444", "#f97316", "#f59e0b", "#eab308",
-  "#84cc16", "#22c55e", "#14b8a6", "#0d9488", "#0ea5e9",
-  "#3b82f6", "#6366f1", "#8b5cf6", "#a855f7", "#9333ea",
+  "#dc2626",
+  "#ef4444",
+  "#f97316",
+  "#f59e0b",
+  "#eab308",
+  "#84cc16",
+  "#22c55e",
+  "#14b8a6",
+  "#0d9488",
+  "#0ea5e9",
+  "#3b82f6",
+  "#6366f1",
+  "#8b5cf6",
+  "#a855f7",
+  "#9333ea",
 ];
 
 export default function PHScale() {
@@ -33,22 +45,72 @@ export default function PHScale() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">pH-Skala</h4>
       <p className="text-xs text-muted">Klicke auf eine Substanz für Details.</p>
       <svg viewBox="0 0 460 280" className="w-full max-w-lg mx-auto">
-        <text x="230" y="22" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">pH-Skala (0 - 14)</text>
+        <text x="230" y="22" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">
+          pH-Skala (0 - 14)
+        </text>
 
         {/* Section labels */}
-        <text x={SCALE_X + SCALE_W * 0.21} y="50" textAnchor="middle" fontSize="13" fill="#ef4444" fontWeight="bold">Sauer</text>
-        <text x={SCALE_X + SCALE_W * 0.5} y="50" textAnchor="middle" fontSize="13" fill="#22c55e" fontWeight="bold">Neutral</text>
-        <text x={SCALE_X + SCALE_W * 0.79} y="50" textAnchor="middle" fontSize="13" fill="#8b5cf6" fontWeight="bold">Basisch</text>
+        <text
+          x={SCALE_X + SCALE_W * 0.21}
+          y="50"
+          textAnchor="middle"
+          fontSize="13"
+          fill="#ef4444"
+          fontWeight="bold"
+        >
+          Sauer
+        </text>
+        <text
+          x={SCALE_X + SCALE_W * 0.5}
+          y="50"
+          textAnchor="middle"
+          fontSize="13"
+          fill="#22c55e"
+          fontWeight="bold"
+        >
+          Neutral
+        </text>
+        <text
+          x={SCALE_X + SCALE_W * 0.79}
+          y="50"
+          textAnchor="middle"
+          fontSize="13"
+          fill="#8b5cf6"
+          fontWeight="bold"
+        >
+          Basisch
+        </text>
 
         {/* Arrows */}
-        <line x1={SCALE_X} y1="55" x2={SCALE_X + SCALE_W * 0.42} y2="55" stroke="#ef4444" strokeWidth="1.5" />
+        <line
+          x1={SCALE_X}
+          y1="55"
+          x2={SCALE_X + SCALE_W * 0.42}
+          y2="55"
+          stroke="#ef4444"
+          strokeWidth="1.5"
+        />
         <polygon points={`${SCALE_X},52 ${SCALE_X},58 ${SCALE_X - 5},55`} fill="#ef4444" />
-        <line x1={SCALE_X + SCALE_W * 0.58} y1="55" x2={SCALE_X + SCALE_W} y2="55" stroke="#8b5cf6" strokeWidth="1.5" />
-        <polygon points={`${SCALE_X + SCALE_W},52 ${SCALE_X + SCALE_W},58 ${SCALE_X + SCALE_W + 5},55`} fill="#8b5cf6" />
+        <line
+          x1={SCALE_X + SCALE_W * 0.58}
+          y1="55"
+          x2={SCALE_X + SCALE_W}
+          y2="55"
+          stroke="#8b5cf6"
+          strokeWidth="1.5"
+        />
+        <polygon
+          points={`${SCALE_X + SCALE_W},52 ${SCALE_X + SCALE_W},58 ${SCALE_X + SCALE_W + 5},55`}
+          fill="#8b5cf6"
+        />
 
         {/* H+ / OH- labels */}
-        <text x={SCALE_X + 15} y="75" fontSize="13" fill="#ef4444">H\u207A-Konzentration hoch</text>
-        <text x={SCALE_X + SCALE_W - 15} y="75" textAnchor="end" fontSize="13" fill="#8b5cf6">OH\u207B-Konzentration hoch</text>
+        <text x={SCALE_X + 15} y="75" fontSize="13" fill="#ef4444">
+          H\u207A-Konzentration hoch
+        </text>
+        <text x={SCALE_X + SCALE_W - 15} y="75" textAnchor="end" fontSize="13" fill="#8b5cf6">
+          OH\u207B-Konzentration hoch
+        </text>
 
         {/* pH Scale bar */}
         {phColors.map((color, i) => (
@@ -62,7 +124,16 @@ export default function PHScale() {
             opacity="0.85"
           />
         ))}
-        <rect x={SCALE_X} y={SCALE_Y} width={SCALE_W} height={SCALE_H} fill="none" stroke="#374151" strokeWidth="1.5" rx="4" />
+        <rect
+          x={SCALE_X}
+          y={SCALE_Y}
+          width={SCALE_W}
+          height={SCALE_H}
+          fill="none"
+          stroke="#374151"
+          strokeWidth="1.5"
+          rx="4"
+        />
 
         {/* pH numbers */}
         {Array.from({ length: 15 }, (_, i) => (
@@ -92,9 +163,24 @@ export default function PHScale() {
               onMouseLeave={() => setActive(null)}
             >
               {/* Marker line */}
-              <line x1={x} y1={SCALE_Y - 2} x2={x} y2={SCALE_Y + SCALE_H + 20} stroke={s.color} strokeWidth={isActive ? 2.5 : 1} strokeDasharray={isActive ? "none" : "3 2"} />
+              <line
+                x1={x}
+                y1={SCALE_Y - 2}
+                x2={x}
+                y2={SCALE_Y + SCALE_H + 20}
+                stroke={s.color}
+                strokeWidth={isActive ? 2.5 : 1}
+                strokeDasharray={isActive ? "none" : "3 2"}
+              />
               {/* Marker dot */}
-              <circle cx={x} cy={SCALE_Y + SCALE_H / 2} r={isActive ? 6 : 4} fill="#fff" stroke={s.color} strokeWidth="2" />
+              <circle
+                cx={x}
+                cy={SCALE_Y + SCALE_H / 2}
+                r={isActive ? 6 : 4}
+                fill="#fff"
+                stroke={s.color}
+                strokeWidth="2"
+              />
               {/* Label */}
               <g transform={`translate(${x}, ${SCALE_Y + SCALE_H + 28}) rotate(-45)`}>
                 <text
@@ -108,7 +194,14 @@ export default function PHScale() {
                 </text>
               </g>
               {/* pH value label */}
-              <text x={x} y={SCALE_Y - 8} textAnchor="middle" fontSize="7" fill={s.color} fontWeight="bold">
+              <text
+                x={x}
+                y={SCALE_Y - 8}
+                textAnchor="middle"
+                fontSize="7"
+                fill={s.color}
+                fontWeight="bold"
+              >
                 {s.ph}
               </text>
             </g>
@@ -116,16 +209,24 @@ export default function PHScale() {
         })}
 
         {/* Formula */}
-        <text x="230" y="248" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">pH = \u2013 log\u2081\u2080 [H\u207A]</text>
-        <text x="230" y="262" textAnchor="middle" fontSize="13" fill="#6b7280">pH + pOH = 14 (bei 25\u00B0C)</text>
+        <text x="230" y="248" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">
+          pH = \u2013 log\u2081\u2080 [H\u207A]
+        </text>
+        <text x="230" y="262" textAnchor="middle" fontSize="13" fill="#6b7280">
+          pH + pOH = 14 (bei 25\u00B0C)
+        </text>
       </svg>
 
       {activeSubstance && (
         <div className="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-3">
-          <p className="text-sm font-semibold" style={{ color: activeSubstance.color }}>{activeSubstance.label}</p>
+          <p className="text-sm font-semibold" style={{ color: activeSubstance.color }}>
+            {activeSubstance.label}
+          </p>
           <p className="text-xs text-gray-700 dark:text-gray-300 mt-1">
-            pH-Wert: {activeSubstance.ph} | {activeSubstance.ph < 7 ? "Sauer" : activeSubstance.ph === 7 ? "Neutral" : "Basisch"}
-            {" | [H\u207A] = 10\u207B"}{String(activeSubstance.ph).replace(".", ",")} mol/L
+            pH-Wert: {activeSubstance.ph} |{" "}
+            {activeSubstance.ph < 7 ? "Sauer" : activeSubstance.ph === 7 ? "Neutral" : "Basisch"}
+            {" | [H\u207A] = 10\u207B"}
+            {String(activeSubstance.ph).replace(".", ",")} mol/L
           </p>
         </div>
       )}

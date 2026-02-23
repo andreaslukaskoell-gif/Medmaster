@@ -26,8 +26,12 @@ export default function StrategyGuideView({ guide, onBack }: Props) {
       {guide.sections.map((s, i) => (
         <Card key={i}>
           <CardContent className="p-6">
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">{s.heading}</h2>
-            <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">{s.content}</div>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+              {s.heading}
+            </h2>
+            <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+              {s.content}
+            </div>
           </CardContent>
         </Card>
       ))}

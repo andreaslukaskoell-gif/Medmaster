@@ -4,37 +4,44 @@ const parts = [
   {
     id: "nasenhohle",
     label: "Nasenhöhle",
-    detail: "Erwärmt, befeuchtet und filtert die eingeatmete Luft. Enthält Flimmerhärchen und Schleimhäute."
+    detail:
+      "Erwärmt, befeuchtet und filtert die eingeatmete Luft. Enthält Flimmerhärchen und Schleimhäute.",
   },
   {
     id: "pharynx",
     label: "Pharynx (Rachen)",
-    detail: "Gemeinsamer Durchgang für Luft und Nahrung. Verbindet Nasenhöhle mit Larynx und Mund mit Ösophagus."
+    detail:
+      "Gemeinsamer Durchgang für Luft und Nahrung. Verbindet Nasenhöhle mit Larynx und Mund mit Ösophagus.",
   },
   {
     id: "larynx",
     label: "Larynx (Kehlkopf)",
-    detail: "Enthält die Stimmbänder zur Lauterzeugung. Der Kehldeckel (Epiglottis) verschließt beim Schlucken die Luftröhre."
+    detail:
+      "Enthält die Stimmbänder zur Lauterzeugung. Der Kehldeckel (Epiglottis) verschließt beim Schlucken die Luftröhre.",
   },
   {
     id: "trachea",
     label: "Trachea (Luftröhre)",
-    detail: "C-förmige Knorpelringe stabilisieren die Luftröhre. Flimmerepithel transportiert Schleim nach oben ab."
+    detail:
+      "C-förmige Knorpelringe stabilisieren die Luftröhre. Flimmerepithel transportiert Schleim nach oben ab.",
   },
   {
     id: "bronchien",
     label: "Bronchien",
-    detail: "Verzweigte Atemwege in die Lungen. Rechter Hauptbronchus versorgt 3 Lungenlappen, linker 2 Lappen."
+    detail:
+      "Verzweigte Atemwege in die Lungen. Rechter Hauptbronchus versorgt 3 Lungenlappen, linker 2 Lappen.",
   },
   {
     id: "bronchiolen",
     label: "Bronchiolen",
-    detail: "Kleinste Atemwege ohne Knorpel, aber mit glatter Muskulatur. Regulieren den Luftstrom zu den Alveolen."
+    detail:
+      "Kleinste Atemwege ohne Knorpel, aber mit glatter Muskulatur. Regulieren den Luftstrom zu den Alveolen.",
   },
   {
     id: "alveolen",
     label: "Alveolen",
-    detail: "Lungenbläschen für Gasaustausch (O₂ ↔ CO₂). Surfactant verhindert Kollaps. Etwa 300 Millionen pro Lunge."
+    detail:
+      "Lungenbläschen für Gasaustausch (O₂ ↔ CO₂). Surfactant verhindert Kollaps. Etwa 300 Millionen pro Lunge.",
   },
 ];
 
@@ -85,7 +92,10 @@ export default function RespiratorySystem() {
         />
 
         {/* Trachea */}
-        <g onClick={() => setActive(parts[3])} className="cursor-pointer hover:opacity-80 transition-opacity">
+        <g
+          onClick={() => setActive(parts[3])}
+          className="cursor-pointer hover:opacity-80 transition-opacity"
+        >
           <rect
             x="185"
             y="90"
@@ -104,7 +114,10 @@ export default function RespiratorySystem() {
         </g>
 
         {/* Bronchien */}
-        <g onClick={() => setActive(parts[4])} className="cursor-pointer hover:opacity-80 transition-opacity">
+        <g
+          onClick={() => setActive(parts[4])}
+          className="cursor-pointer hover:opacity-80 transition-opacity"
+        >
           {/* Right main bronchus */}
           <path
             d="M 200 170 Q 240 190 260 210"
@@ -139,12 +152,33 @@ export default function RespiratorySystem() {
         </g>
 
         {/* Lungs with Bronchiolen */}
-        <g onClick={() => setActive(parts[5])} className="cursor-pointer hover:opacity-80 transition-opacity">
+        <g
+          onClick={() => setActive(parts[5])}
+          className="cursor-pointer hover:opacity-80 transition-opacity"
+        >
           {/* Right lung (3 lobes) */}
-          <ellipse cx="280" cy="270" rx="70" ry="110" fill="#fda4af" fillOpacity="0.3" stroke="#be123c" strokeWidth="2" />
+          <ellipse
+            cx="280"
+            cy="270"
+            rx="70"
+            ry="110"
+            fill="#fda4af"
+            fillOpacity="0.3"
+            stroke="#be123c"
+            strokeWidth="2"
+          />
 
           {/* Left lung (2 lobes) */}
-          <ellipse cx="120" cy="270" rx="60" ry="100" fill="#fda4af" fillOpacity="0.3" stroke="#be123c" strokeWidth="2" />
+          <ellipse
+            cx="120"
+            cy="270"
+            rx="60"
+            ry="100"
+            fill="#fda4af"
+            fillOpacity="0.3"
+            stroke="#be123c"
+            strokeWidth="2"
+          />
 
           {/* Bronchiolen network - right */}
           <path d="M 260 210 L 270 230 L 260 250" fill="none" stroke="#1e40af" strokeWidth="3" />
@@ -158,7 +192,10 @@ export default function RespiratorySystem() {
         </g>
 
         {/* Alveolen (scattered in lungs) */}
-        <g onClick={() => setActive(parts[6])} className="cursor-pointer hover:opacity-80 transition-opacity">
+        <g
+          onClick={() => setActive(parts[6])}
+          className="cursor-pointer hover:opacity-80 transition-opacity"
+        >
           {/* Right lung alveoli clusters */}
           <circle cx="270" cy="260" r="4" fill="#fda4af" stroke="#be123c" strokeWidth="1" />
           <circle cx="280" cy="265" r="4" fill="#fda4af" stroke="#be123c" strokeWidth="1" />
@@ -180,39 +217,126 @@ export default function RespiratorySystem() {
 
         {/* Labels with leader lines */}
         {/* Nasenhöhle label */}
-        <line x1="225" y1="30" x2="260" y2="20" stroke="#6b7280" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="265" y="22" fontSize="10" fill="#374151" className="dark:fill-gray-300">Nasenhöhle</text>
+        <line
+          x1="225"
+          y1="30"
+          x2="260"
+          y2="20"
+          stroke="#6b7280"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="265" y="22" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Nasenhöhle
+        </text>
 
         {/* Pharynx label */}
-        <line x1="215" y1="57" x2="250" y2="50" stroke="#6b7280" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="255" y="52" fontSize="10" fill="#374151" className="dark:fill-gray-300">Pharynx</text>
+        <line
+          x1="215"
+          y1="57"
+          x2="250"
+          y2="50"
+          stroke="#6b7280"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="255" y="52" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Pharynx
+        </text>
 
         {/* Larynx label */}
-        <line x1="225" y1="80" x2="260" y2="75" stroke="#6b7280" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="265" y="77" fontSize="10" fill="#374151" className="dark:fill-gray-300">Larynx</text>
+        <line
+          x1="225"
+          y1="80"
+          x2="260"
+          y2="75"
+          stroke="#6b7280"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="265" y="77" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Larynx
+        </text>
 
         {/* Trachea label */}
-        <line x1="215" y1="130" x2="250" y2="130" stroke="#6b7280" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="255" y="132" fontSize="10" fill="#374151" className="dark:fill-gray-300">Trachea</text>
+        <line
+          x1="215"
+          y1="130"
+          x2="250"
+          y2="130"
+          stroke="#6b7280"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="255" y="132" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Trachea
+        </text>
 
         {/* Bronchien label */}
-        <line x1="200" y1="180" x2="160" y2="175" stroke="#6b7280" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="85" y="177" fontSize="10" fill="#374151" className="dark:fill-gray-300">Bronchien</text>
+        <line
+          x1="200"
+          y1="180"
+          x2="160"
+          y2="175"
+          stroke="#6b7280"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="85" y="177" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Bronchien
+        </text>
 
         {/* Bronchiolen label */}
-        <line x1="260" y1="230" x2="320" y2="220" stroke="#6b7280" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="325" y="222" fontSize="10" fill="#374151" className="dark:fill-gray-300">Bronchiolen</text>
+        <line
+          x1="260"
+          y1="230"
+          x2="320"
+          y2="220"
+          stroke="#6b7280"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="325" y="222" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Bronchiolen
+        </text>
 
         {/* Alveolen label */}
-        <line x1="270" y1="260" x2="320" y2="250" stroke="#6b7280" strokeWidth="1" strokeDasharray="2,2" />
-        <text x="325" y="252" fontSize="10" fill="#374151" className="dark:fill-gray-300">Alveolen</text>
+        <line
+          x1="270"
+          y1="260"
+          x2="320"
+          y2="250"
+          stroke="#6b7280"
+          strokeWidth="1"
+          strokeDasharray="2,2"
+        />
+        <text x="325" y="252" fontSize="10" fill="#374151" className="dark:fill-gray-300">
+          Alveolen
+        </text>
 
         {/* Zoomed-in Alveolus Detail */}
         <g transform="translate(50, 380)">
-          <text x="90" y="-5" fontSize="11" fontWeight="bold" fill="#374151" className="dark:fill-gray-300">Gasaustausch Detail</text>
+          <text
+            x="90"
+            y="-5"
+            fontSize="11"
+            fontWeight="bold"
+            fill="#374151"
+            className="dark:fill-gray-300"
+          >
+            Gasaustausch Detail
+          </text>
 
           {/* Alveolus structure */}
-          <circle cx="100" cy="40" r="35" fill="#fda4af" fillOpacity="0.2" stroke="#be123c" strokeWidth="2" />
+          <circle
+            cx="100"
+            cy="40"
+            r="35"
+            fill="#fda4af"
+            fillOpacity="0.2"
+            stroke="#be123c"
+            strokeWidth="2"
+          />
 
           {/* Capillaries around alveolus */}
           <path
@@ -222,7 +346,9 @@ export default function RespiratorySystem() {
             strokeWidth="4"
             strokeLinecap="round"
           />
-          <text x="45" y="38" fontSize="8" fill="#dc2626">O₂-reich</text>
+          <text x="45" y="38" fontSize="8" fill="#dc2626">
+            O₂-reich
+          </text>
 
           <path
             d="M 130 20 Q 120 35 130 50"
@@ -231,29 +357,58 @@ export default function RespiratorySystem() {
             strokeWidth="4"
             strokeLinecap="round"
           />
-          <text x="135" y="38" fontSize="8" fill="#3b82f6">CO₂-reich</text>
+          <text x="135" y="38" fontSize="8" fill="#3b82f6">
+            CO₂-reich
+          </text>
 
           {/* Gas exchange arrows */}
           <path d="M 85 35 L 95 40" stroke="#dc2626" strokeWidth="1.5" markerEnd="url(#arrowO2)" />
-          <path d="M 115 40 L 105 35" stroke="#3b82f6" strokeWidth="1.5" markerEnd="url(#arrowCO2)" />
+          <path
+            d="M 115 40 L 105 35"
+            stroke="#3b82f6"
+            strokeWidth="1.5"
+            markerEnd="url(#arrowCO2)"
+          />
 
           {/* Labels */}
-          <text x="82" y="55" fontSize="7" fill="#374151" className="dark:fill-gray-300">O₂</text>
-          <text x="112" y="28" fontSize="7" fill="#374151" className="dark:fill-gray-300">CO₂</text>
+          <text x="82" y="55" fontSize="7" fill="#374151" className="dark:fill-gray-300">
+            O₂
+          </text>
+          <text x="112" y="28" fontSize="7" fill="#374151" className="dark:fill-gray-300">
+            CO₂
+          </text>
 
           {/* Surfactant indication */}
           <circle cx="100" cy="15" r="3" fill="#fbbf24" opacity="0.6" />
           <circle cx="108" cy="18" r="2.5" fill="#fbbf24" opacity="0.6" />
           <circle cx="92" cy="18" r="2.5" fill="#fbbf24" opacity="0.6" />
-          <text x="60" y="12" fontSize="7" fill="#f59e0b">Surfactant</text>
+          <text x="60" y="12" fontSize="7" fill="#f59e0b">
+            Surfactant
+          </text>
         </g>
 
         {/* Arrow markers for gas exchange */}
         <defs>
-          <marker id="arrowO2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+          <marker
+            id="arrowO2"
+            markerWidth="10"
+            markerHeight="10"
+            refX="9"
+            refY="3"
+            orient="auto"
+            markerUnits="strokeWidth"
+          >
             <path d="M0,0 L0,6 L9,3 z" fill="#dc2626" />
           </marker>
-          <marker id="arrowCO2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+          <marker
+            id="arrowCO2"
+            markerWidth="10"
+            markerHeight="10"
+            refX="9"
+            refY="3"
+            orient="auto"
+            markerUnits="strokeWidth"
+          >
             <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6" />
           </marker>
         </defs>

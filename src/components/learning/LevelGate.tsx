@@ -28,7 +28,8 @@ export function LevelGate({ requiredLevel, featureLabel, children }: LevelGatePr
           {featureLabel} ab Level {requiredLevel}
         </h2>
         <p className="text-slate-600 dark:text-slate-400 mb-2">
-          Du bist aktuell Level {level}. Lese Kapitel und beantworte Quizfragen, um XP zu sammeln und Level {requiredLevel} zu erreichen.
+          Du bist aktuell Level {level}. Lese Kapitel und beantworte Quizfragen, um XP zu sammeln
+          und Level {requiredLevel} zu erreichen.
         </p>
         <p className="text-sm text-amber-700 dark:text-violet-300 font-medium mb-6">
           +50 XP pro Kapitel · +10 XP pro richtige Quizfrage

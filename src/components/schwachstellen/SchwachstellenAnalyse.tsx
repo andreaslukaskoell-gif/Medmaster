@@ -1,12 +1,5 @@
 import { useMemo } from "react";
-import {
-  Treemap,
-  ResponsiveContainer,
-  Tooltip,
-  PieChart,
-  Pie,
-  Cell,
-} from "recharts";
+import { Treemap, ResponsiveContainer, Tooltip, PieChart, Pie, Cell } from "recharts";
 import { useStore } from "@/store/useStore";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { RadarHexagonSkeleton } from "@/components/skeletons/AppSkeletons";
@@ -40,7 +33,11 @@ export function SchwachstellenAnalyse() {
   const quizResults = useStore((s) => s.quizResults);
 
   const { treemapRoot, donutData, actionSentence, totalWrong, totalAnswered } = useMemo(() => {
-    const { bySubjectTopic, totalWrong: tw, totalAnswered: ta } = aggregateWrongAnswersByTopic(quizResults);
+    const {
+      bySubjectTopic,
+      totalWrong: tw,
+      totalAnswered: ta,
+    } = aggregateWrongAnswersByTopic(quizResults);
     const rootCause = getRootCauseDistribution(tw);
     const treemapNodes = buildTreemapData(bySubjectTopic);
     const maxValue = Math.max(0, ...treemapNodes.map((n) => n.value));
@@ -90,7 +87,8 @@ export function SchwachstellenAnalyse() {
           </div>
         ) : !hasData ? (
           <p className="text-slate-400 text-sm text-center py-8">
-            Noch keine BMS-Quizze absolviert. Sobald Fehler vorliegen, siehst du hier Treemap und Empfehlung.
+            Noch keine BMS-Quizze absolviert. Sobald Fehler vorliegen, siehst du hier Treemap und
+            Empfehlung.
           </p>
         ) : (
           <>
@@ -115,7 +113,9 @@ export function SchwachstellenAnalyse() {
                               width={width}
                               height={height}
                               fill={typeof fill === "string" ? fill : SLATE_700}
-                              stroke={typeof fill === "string" && fill === NEON_RED ? NEON_RED : SLATE_700}
+                              stroke={
+                                typeof fill === "string" && fill === NEON_RED ? NEON_RED : SLATE_700
+                              }
                               strokeWidth={fill === NEON_RED ? 2 : 1}
                               rx={4}
                             />
@@ -150,7 +150,9 @@ export function SchwachstellenAnalyse() {
                         }}
                         labelStyle={{ color: "white" }}
                         formatter={(value?: number) => [`${value ?? 0} Fehler`, ""]}
-                        labelFormatter={(label: unknown) => (typeof label === "string" ? label : String(label ?? ""))}
+                        labelFormatter={(label: unknown) =>
+                          typeof label === "string" ? label : String(label ?? "")
+                        }
                       />
                     </Treemap>
                   </ResponsiveContainer>
@@ -216,9 +218,7 @@ export function SchwachstellenAnalyse() {
                 borderColor: "rgba(255, 51, 102, 0.35)",
               }}
             >
-              <p className="text-sm font-medium text-white leading-relaxed">
-                {actionSentence}
-              </p>
+              <p className="text-sm font-medium text-white leading-relaxed">{actionSentence}</p>
             </div>
           </>
         )}

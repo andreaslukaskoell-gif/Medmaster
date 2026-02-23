@@ -18,7 +18,12 @@ interface InteractiveQuizProps {
  * Shows immediate feedback per question with explanations
  * FIXED: Now uses reusable QuizQuestion component for consistency
  */
-export function InteractiveQuiz({ questions, unterkapitelId, onAnswer, onAllComplete }: InteractiveQuizProps) {
+export function InteractiveQuiz({
+  questions,
+  unterkapitelId,
+  onAnswer,
+  onAllComplete,
+}: InteractiveQuizProps) {
   const [questionResults, setQuestionResults] = useState<Record<number, boolean>>({});
 
   const handleAnswerChange = (questionIndex: number, isCorrect: boolean, secondTry?: boolean) => {
@@ -68,7 +73,8 @@ export function InteractiveQuiz({ questions, unterkapitelId, onAnswer, onAllComp
           📝 Kontrollfragen
         </h2>
         <p className="text-sm text-gray-600 dark:text-gray-400">
-          Teste dein Wissen mit diesen Fragen. Wähle eine Antwort und klicke auf "Antwort prüfen" für sofortiges Feedback.
+          Teste dein Wissen mit diesen Fragen. Wähle eine Antwort und klicke auf "Antwort prüfen"
+          für sofortiges Feedback.
         </p>
         {totalAnswered > 0 && (
           <div className="mt-3 text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -82,7 +88,10 @@ export function InteractiveQuiz({ questions, unterkapitelId, onAnswer, onAllComp
         // Safe fallback for missing data
         if (!question || !question.question || !question.options || question.options.length === 0) {
           return (
-            <div key={index} className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
+            <div
+              key={index}
+              className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4"
+            >
               <p className="text-sm text-yellow-800 dark:text-yellow-300">
                 ⚠️ Frage {index + 1} hat unvollständige Daten und wird übersprungen.
               </p>
@@ -95,7 +104,9 @@ export function InteractiveQuiz({ questions, unterkapitelId, onAnswer, onAllComp
             key={index}
             question={question}
             questionNumber={index + 1}
-            onAnswerChange={(isCorrect, secondTry) => handleAnswerChange(index, isCorrect, secondTry)}
+            onAnswerChange={(isCorrect, secondTry) =>
+              handleAnswerChange(index, isCorrect, secondTry)
+            }
           />
         );
       })}

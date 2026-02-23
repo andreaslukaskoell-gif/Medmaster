@@ -13,8 +13,6 @@ interface ContentVisualizerProps {
   contentClassName?: string;
   /** Hinterfrag-Modus: [? Frage | Antwort ] als Frage anzeigen, Antwort bei Klick/Hover. */
   hinterfragMode?: boolean;
-  /** Progressive Disclosure: Abschnitte erst bei Scroll/Verstanden einblenden. */
-  progressiveDisclosure?: boolean;
   /** Keywords anderer Kapitel für Smart-Linker (Knowledge-Bridge). */
   keywordLinkEntries?: KeywordLinkEntry[];
 }
@@ -30,7 +28,6 @@ export function ContentVisualizer({
   enhancedFormatting,
   contentClassName = "",
   hinterfragMode = false,
-  progressiveDisclosure = true,
   keywordLinkEntries,
 }: ContentVisualizerProps) {
   const isDieZelle = enhancedFormatting ?? false;
@@ -55,16 +52,21 @@ export function ContentVisualizer({
       )}
 
       {/* Text content */}
-      <SubchapterContent uk={uk} subject={subject} chapterId={chapterId} enhancedFormatting={enhancedFormatting} hinterfragMode={hinterfragMode} progressiveDisclosure={progressiveDisclosure} keywordLinkEntries={keywordLinkEntries} />
+      <SubchapterContent
+        uk={uk}
+        subject={subject}
+        chapterId={chapterId}
+        enhancedFormatting={enhancedFormatting}
+        hinterfragMode={hinterfragMode}
+        keywordLinkEntries={keywordLinkEntries}
+      />
 
       {/* Quiz – only if data present */}
       {uk?.quiz && uk.quiz.length > 0 && (
         <div className={isDieZelle ? "mt-8" : ""}>
           <div
             className={
-              isDieZelle
-                ? "mb-4 pb-3 border-b-2 border-gray-300 dark:border-gray-600"
-                : ""
+              isDieZelle ? "mb-4 pb-3 border-b-2 border-gray-300 dark:border-gray-600" : ""
             }
           >
             <h2

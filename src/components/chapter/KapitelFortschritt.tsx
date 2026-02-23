@@ -32,9 +32,7 @@ export function KapitelFortschritt({ chapterTitle, xp = 25 }: KapitelFortschritt
       <h3 className="text-xl font-bold text-teal-800 dark:text-teal-200 mb-1">
         Kapitel abgeschlossen!
       </h3>
-      <p className="text-teal-600 dark:text-teal-400 text-sm mb-3">
-        {chapterTitle}
-      </p>
+      <p className="text-teal-600 dark:text-teal-400 text-sm mb-3">{chapterTitle}</p>
       <div className="inline-block bg-teal-600 text-white font-bold text-lg px-6 py-2 rounded-full">
         +{xp} XP
       </div>

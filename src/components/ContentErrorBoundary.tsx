@@ -44,7 +44,8 @@ export class ContentErrorBoundary extends Component<Props, State> {
             Inhalt konnte nicht geladen werden
           </h2>
           <p className="text-sm text-amber-800 dark:text-amber-200/80">
-            Dieser Abschnitt ist möglicherweise fehlerhaft oder die Datei (z. B. Kapitel-Daten) fehlt bzw. ist beschädigt. Prüfe die Konsole (F12) für Details.
+            Dieser Abschnitt ist möglicherweise fehlerhaft oder die Datei (z. B. Kapitel-Daten)
+            fehlt bzw. ist beschädigt. Prüfe die Konsole (F12) für Details.
           </p>
         </div>
       );

@@ -34,7 +34,10 @@ export function getMedATProgress(): { daysLeft: number; totalDays: number; progr
   start.setHours(0, 0, 0, 0);
   const totalDays = Math.ceil((medat.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
   const elapsed = Math.ceil((now.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
-  const daysLeft = Math.max(0, Math.ceil((medat.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)));
+  const daysLeft = Math.max(
+    0,
+    Math.ceil((medat.getTime() - now.getTime()) / (1000 * 60 * 60 * 24))
+  );
   const progress = totalDays > 0 ? Math.min(1, Math.max(0, elapsed / totalDays)) : 0;
   return { daysLeft, totalDays, progress };
 }
@@ -52,10 +55,7 @@ export function getReviewDaysFromStreak(streak: number): number {
  * Nächstes Wiederholungsdatum aus lastPracticed + Vergessenskurve (Streak).
  * Streak 0: sofort fällig, 1: +1 Tag, 2: +3, 3: +7, 4+: +14.
  */
-export function getNextReviewDate(
-  lastPracticed: string | null,
-  streak: number
-): string | null {
+export function getNextReviewDate(lastPracticed: string | null, streak: number): string | null {
   if (!lastPracticed || typeof lastPracticed !== "string") return null;
   const day = lastPracticed.split("T")[0];
   if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) return null;
@@ -66,7 +66,11 @@ export function getNextReviewDate(
 }
 
 /** Fortschritt 01.01.2026 bis 03.07.2026 (fixes Startdatum). */
-export function getMedATProgressFromJan2026(): { daysLeft: number; totalDays: number; progress: number } {
+export function getMedATProgressFromJan2026(): {
+  daysLeft: number;
+  totalDays: number;
+  progress: number;
+} {
   const start = new Date(2026, 0, 1);
   const medat = new Date(2026, 6, 3);
   const now = new Date();
@@ -75,7 +79,10 @@ export function getMedATProgressFromJan2026(): { daysLeft: number; totalDays: nu
   medat.setHours(0, 0, 0, 0);
   const totalDays = Math.ceil((medat.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
   const elapsed = Math.ceil((now.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
-  const daysLeft = Math.max(0, Math.ceil((medat.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)));
+  const daysLeft = Math.max(
+    0,
+    Math.ceil((medat.getTime() - now.getTime()) / (1000 * 60 * 60 * 24))
+  );
   const progress = totalDays > 0 ? Math.min(1, Math.max(0, elapsed / totalDays)) : 0;
   return { daysLeft, totalDays, progress };
 }
@@ -101,8 +108,9 @@ export function generateMockPercentile(userScore: number): number {
   const sd = 12;
   const z = (userScore - mean) / sd;
   const t = 1 / (1 + 0.2316419 * Math.abs(z));
-  const d = 0.3989422804014327 * Math.exp(-z * z / 2);
-  const p = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.8212560 + t * 1.3302744))));
+  const d = 0.3989422804014327 * Math.exp((-z * z) / 2);
+  const p =
+    d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.3302744))));
   return Math.round(z > 0 ? (1 - p) * 100 : p * 100);
 }
 
@@ -148,12 +156,34 @@ export function generateMockActivityData(): Record<string, { minutes: number; qu
   return data;
 }
 
-export function generateLeaderboard(): { rank: number; name: string; xp: number; isUser: boolean; trend: "up" | "down" | "same" }[] {
+export function generateLeaderboard(): {
+  rank: number;
+  name: string;
+  xp: number;
+  isUser: boolean;
+  trend: "up" | "down" | "same";
+}[] {
   const names = [
-    "Alex M.", "Sophie K.", "Lukas R.", "Emma W.", "Felix B.", "Laura S.",
-    "Jonas H.", "Mia T.", "David P.", "Anna L.", "Maximilian G.", "Lena F.",
-    "Paul N.", "Hannah D.", "Tim V.", "Sarah C.", "Niklas E.", "Julia A.",
-    "Moritz Z.", "Du",
+    "Alex M.",
+    "Sophie K.",
+    "Lukas R.",
+    "Emma W.",
+    "Felix B.",
+    "Laura S.",
+    "Jonas H.",
+    "Mia T.",
+    "David P.",
+    "Anna L.",
+    "Maximilian G.",
+    "Lena F.",
+    "Paul N.",
+    "Hannah D.",
+    "Tim V.",
+    "Sarah C.",
+    "Niklas E.",
+    "Julia A.",
+    "Moritz Z.",
+    "Du",
   ];
   const trends: ("up" | "down" | "same")[] = ["up", "down", "same"];
   const entries = names.map((name, i) => ({
@@ -164,6 +194,8 @@ export function generateLeaderboard(): { rank: number; name: string; xp: number;
     trend: trends[i % 3],
   }));
   entries.sort((a, b) => b.xp - a.xp);
-  entries.forEach((e, i) => { e.rank = i + 1; });
+  entries.forEach((e, i) => {
+    e.rank = i + 1;
+  });
   return entries;
 }

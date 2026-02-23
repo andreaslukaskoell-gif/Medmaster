@@ -4,42 +4,50 @@ const parts = [
   {
     id: "hypothalamus",
     label: "Hypothalamus",
-    detail: "Oberste Steuerungsinstanz. Produziert Releasing- und Inhibiting-Hormone (CRH, GnRH, TRH, GHRH, Dopamin) zur Steuerung der Hypophyse."
+    detail:
+      "Oberste Steuerungsinstanz. Produziert Releasing- und Inhibiting-Hormone (CRH, GnRH, TRH, GHRH, Dopamin) zur Steuerung der Hypophyse.",
   },
   {
     id: "hypophyse",
     label: "Hypophyse (Hirnanhangdrüse)",
-    detail: "Adenohypophyse (HVL): ACTH, TSH, FSH, LH, GH, Prolaktin. Neurohypophyse (HHL): ADH (Wasserhaushalt), Oxytocin (Wehentätigkeit, Milchfluss)."
+    detail:
+      "Adenohypophyse (HVL): ACTH, TSH, FSH, LH, GH, Prolaktin. Neurohypophyse (HHL): ADH (Wasserhaushalt), Oxytocin (Wehentätigkeit, Milchfluss).",
   },
   {
     id: "schilddruese",
     label: "Schilddrüse",
-    detail: "Produziert T3 und T4 (Stoffwechsel, Wachstum, Entwicklung) sowie Calcitonin (senkt Ca²⁺-Spiegel im Blut)."
+    detail:
+      "Produziert T3 und T4 (Stoffwechsel, Wachstum, Entwicklung) sowie Calcitonin (senkt Ca²⁺-Spiegel im Blut).",
   },
   {
     id: "nebenschilddruese",
     label: "Nebenschilddrüse",
-    detail: "4 kleine Drüsen dorsal der Schilddrüse. Produzieren Parathormon (PTH) zur Erhöhung des Ca²⁺-Spiegels (Gegenspieler Calcitonin)."
+    detail:
+      "4 kleine Drüsen dorsal der Schilddrüse. Produzieren Parathormon (PTH) zur Erhöhung des Ca²⁺-Spiegels (Gegenspieler Calcitonin).",
   },
   {
     id: "nebenniere",
     label: "Nebenniere",
-    detail: "Nebennierenrinde (Cortex): Cortisol (Stresshormon), Aldosteron (Na⁺/K⁺-Haushalt), Androgene. Nebennierenmark (Medulla): Adrenalin, Noradrenalin (Sympathikus)."
+    detail:
+      "Nebennierenrinde (Cortex): Cortisol (Stresshormon), Aldosteron (Na⁺/K⁺-Haushalt), Androgene. Nebennierenmark (Medulla): Adrenalin, Noradrenalin (Sympathikus).",
   },
   {
     id: "pankreas",
     label: "Pankreas (Langerhans-Inseln)",
-    detail: "Endokriner Teil: β-Zellen → Insulin (senkt Blutzucker), α-Zellen → Glucagon (erhöht Blutzucker), δ-Zellen → Somatostatin."
+    detail:
+      "Endokriner Teil: β-Zellen → Insulin (senkt Blutzucker), α-Zellen → Glucagon (erhöht Blutzucker), δ-Zellen → Somatostatin.",
   },
   {
     id: "ovar",
     label: "Ovar (Eierstock)",
-    detail: "Weibliche Keimdrüse. Produziert Östrogen (Follikelphase, sekundäre Geschlechtsmerkmale) und Progesteron (Lutealphase, Schwangerschaft)."
+    detail:
+      "Weibliche Keimdrüse. Produziert Östrogen (Follikelphase, sekundäre Geschlechtsmerkmale) und Progesteron (Lutealphase, Schwangerschaft).",
   },
   {
     id: "hoden",
     label: "Hoden",
-    detail: "Männliche Keimdrüse. Leydig-Zellen produzieren Testosteron (Spermienbildung, sekundäre Geschlechtsmerkmale, Muskelwachstum)."
+    detail:
+      "Männliche Keimdrüse. Leydig-Zellen produzieren Testosteron (Spermienbildung, sekundäre Geschlechtsmerkmale, Muskelwachstum).",
   },
 ];
 
@@ -50,8 +58,12 @@ export default function HormoneSystem() {
 
   return (
     <div className="space-y-3">
-      <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Hormonsystem (Endokrines System)</h4>
-      <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf die Drüsen für Details zu Hormonen und Funktionen.</p>
+      <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+        Hormonsystem (Endokrines System)
+      </h4>
+      <p className="text-xs text-gray-600 dark:text-gray-400">
+        Klicke auf die Drüsen für Details zu Hormonen und Funktionen.
+      </p>
 
       <svg viewBox="0 0 500 620" className="w-full max-w-2xl mx-auto">
         {/* Body silhouette */}
@@ -64,7 +76,16 @@ export default function HormoneSystem() {
         />
 
         {/* Head outline */}
-        <ellipse cx="267.5" cy="35" rx="22" ry="28" fill="none" stroke="#d1d5db" strokeWidth="1.5" opacity="0.4" />
+        <ellipse
+          cx="267.5"
+          cy="35"
+          rx="22"
+          ry="28"
+          fill="none"
+          stroke="#d1d5db"
+          strokeWidth="1.5"
+          opacity="0.4"
+        />
 
         {/* Hypothalamus - in brain */}
         <ellipse
@@ -294,41 +315,148 @@ export default function HormoneSystem() {
         {/* Labels with leader lines */}
 
         {/* Hypothalamus label */}
-        <line x1="275.5" y1="38" x2="320" y2="25" stroke="#9ca3af" strokeWidth="0.8" strokeDasharray="2,2" />
-        <text x="325" y="28" fontSize="9" fill="#4b5563" className="dark:fill-gray-400">Hypothalamus</text>
+        <line
+          x1="275.5"
+          y1="38"
+          x2="320"
+          y2="25"
+          stroke="#9ca3af"
+          strokeWidth="0.8"
+          strokeDasharray="2,2"
+        />
+        <text x="325" y="28" fontSize="9" fill="#4b5563" className="dark:fill-gray-400">
+          Hypothalamus
+        </text>
 
         {/* Hypophyse label */}
-        <line x1="274.5" y1="50" x2="320" y2="50" stroke="#9ca3af" strokeWidth="0.8" strokeDasharray="2,2" />
-        <text x="325" y="53" fontSize="9" fill="#4b5563" className="dark:fill-gray-400">Hypophyse</text>
+        <line
+          x1="274.5"
+          y1="50"
+          x2="320"
+          y2="50"
+          stroke="#9ca3af"
+          strokeWidth="0.8"
+          strokeDasharray="2,2"
+        />
+        <text x="325" y="53" fontSize="9" fill="#4b5563" className="dark:fill-gray-400">
+          Hypophyse
+        </text>
 
         {/* Schilddrüse label */}
-        <line x1="278" y1="82" x2="330" y2="82" stroke="#9ca3af" strokeWidth="0.8" strokeDasharray="2,2" />
-        <text x="335" y="85" fontSize="9" fill="#4b5563" className="dark:fill-gray-400">Schilddrüse</text>
+        <line
+          x1="278"
+          y1="82"
+          x2="330"
+          y2="82"
+          stroke="#9ca3af"
+          strokeWidth="0.8"
+          strokeDasharray="2,2"
+        />
+        <text x="335" y="85" fontSize="9" fill="#4b5563" className="dark:fill-gray-400">
+          Schilddrüse
+        </text>
 
         {/* Nebenschilddrüse label */}
-        <line x1="280" y1="81" x2="350" y2="70" stroke="#9ca3af" strokeWidth="0.8" strokeDasharray="2,2" />
-        <text x="355" y="73" fontSize="8" fill="#4b5563" className="dark:fill-gray-400">Nebenschilddrüse</text>
+        <line
+          x1="280"
+          y1="81"
+          x2="350"
+          y2="70"
+          stroke="#9ca3af"
+          strokeWidth="0.8"
+          strokeDasharray="2,2"
+        />
+        <text x="355" y="73" fontSize="8" fill="#4b5563" className="dark:fill-gray-400">
+          Nebenschilddrüse
+        </text>
 
         {/* Nebenniere label */}
-        <line x1="315" y1="250" x2="360" y2="250" stroke="#9ca3af" strokeWidth="0.8" strokeDasharray="2,2" />
-        <text x="365" y="253" fontSize="9" fill="#4b5563" className="dark:fill-gray-400">Nebenniere</text>
+        <line
+          x1="315"
+          y1="250"
+          x2="360"
+          y2="250"
+          stroke="#9ca3af"
+          strokeWidth="0.8"
+          strokeDasharray="2,2"
+        />
+        <text x="365" y="253" fontSize="9" fill="#4b5563" className="dark:fill-gray-400">
+          Nebenniere
+        </text>
 
         {/* Pankreas label */}
-        <line x1="220" y1="285" x2="150" y2="285" stroke="#9ca3af" strokeWidth="0.8" strokeDasharray="2,2" />
-        <text x="80" y="288" fontSize="9" fill="#4b5563" className="dark:fill-gray-400">Pankreas</text>
+        <line
+          x1="220"
+          y1="285"
+          x2="150"
+          y2="285"
+          stroke="#9ca3af"
+          strokeWidth="0.8"
+          strokeDasharray="2,2"
+        />
+        <text x="80" y="288" fontSize="9" fill="#4b5563" className="dark:fill-gray-400">
+          Pankreas
+        </text>
 
         {/* Ovar label */}
-        <line x1="222" y1="380" x2="160" y2="380" stroke="#9ca3af" strokeWidth="0.8" strokeDasharray="2,2" />
-        <text x="120" y="383" fontSize="9" fill="#4b5563" className="dark:fill-gray-400">Ovar</text>
+        <line
+          x1="222"
+          y1="380"
+          x2="160"
+          y2="380"
+          stroke="#9ca3af"
+          strokeWidth="0.8"
+          strokeDasharray="2,2"
+        />
+        <text x="120" y="383" fontSize="9" fill="#4b5563" className="dark:fill-gray-400">
+          Ovar
+        </text>
 
         {/* Hoden label */}
-        <line x1="255" y1="608" x2="310" y2="608" stroke="#9ca3af" strokeWidth="0.8" strokeDasharray="2,2" />
-        <text x="315" y="611" fontSize="9" fill="#4b5563" className="dark:fill-gray-400">Hoden</text>
+        <line
+          x1="255"
+          y1="608"
+          x2="310"
+          y2="608"
+          stroke="#9ca3af"
+          strokeWidth="0.8"
+          strokeDasharray="2,2"
+        />
+        <text x="315" y="611" fontSize="9" fill="#4b5563" className="dark:fill-gray-400">
+          Hoden
+        </text>
 
         {/* Axis labels */}
-        <text x="10" y="120" fontSize="8" fill="#6b7280" className="dark:fill-gray-500" fontStyle="italic">HPA-Achse</text>
-        <text x="10" y="80" fontSize="8" fill="#6b7280" className="dark:fill-gray-500" fontStyle="italic">HPT-Achse</text>
-        <text x="10" y="200" fontSize="8" fill="#6b7280" className="dark:fill-gray-500" fontStyle="italic">HPG-Achse</text>
+        <text
+          x="10"
+          y="120"
+          fontSize="8"
+          fill="#6b7280"
+          className="dark:fill-gray-500"
+          fontStyle="italic"
+        >
+          HPA-Achse
+        </text>
+        <text
+          x="10"
+          y="80"
+          fontSize="8"
+          fill="#6b7280"
+          className="dark:fill-gray-500"
+          fontStyle="italic"
+        >
+          HPT-Achse
+        </text>
+        <text
+          x="10"
+          y="200"
+          fontSize="8"
+          fill="#6b7280"
+          className="dark:fill-gray-500"
+          fontStyle="italic"
+        >
+          HPG-Achse
+        </text>
 
         {/* Arrow markers */}
         <defs>

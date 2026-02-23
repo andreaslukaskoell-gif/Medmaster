@@ -33,20 +33,18 @@ export function ProgressionCard({ xp, className }: ProgressionCardProps) {
           <p className="text-2xl font-bold text-gray-900 dark:text-gray-100 tabular-nums">
             {xp.toLocaleString()} MedPoints
           </p>
-          <p className="text-sm font-medium text-primary-600 dark:text-primary-400">
-            {levelName}
-          </p>
+          <p className="text-sm font-medium text-primary-600 dark:text-primary-400">{levelName}</p>
         </div>
         <div className="text-right shrink-0">
-          <span className="text-lg font-bold text-gray-700 dark:text-gray-300">
-            Level {level}
-          </span>
+          <span className="text-lg font-bold text-gray-700 dark:text-gray-300">Level {level}</span>
         </div>
       </div>
       <div className="space-y-1">
         <div className="flex justify-between text-xs text-muted">
           <span>Zum nächsten Level</span>
-          <span>{xpInLevel} / {XP_PER_LEVEL}</span>
+          <span>
+            {xpInLevel} / {XP_PER_LEVEL}
+          </span>
         </div>
         <Progress value={progress} className="h-2" />
       </div>

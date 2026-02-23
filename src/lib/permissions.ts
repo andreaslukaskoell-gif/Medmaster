@@ -77,14 +77,16 @@ const PERMISSIONS: Record<Tier, TierPermissions> = {
 };
 
 // In development mode, grant full access (pro tier) regardless of actual tier
-const effectiveTier = (tier: Tier): Tier =>
-  import.meta.env.DEV ? "pro" : tier;
+const effectiveTier = (tier: Tier): Tier => (import.meta.env.DEV ? "pro" : tier);
 
 export function getPermissions(tier: Tier): TierPermissions {
   return PERMISSIONS[effectiveTier(tier)];
 }
 
-export function canAccess(tier: Tier, feature: keyof TierPermissions): boolean | number | "unlimited" {
+export function canAccess(
+  tier: Tier,
+  feature: keyof TierPermissions
+): boolean | number | "unlimited" {
   return PERMISSIONS[effectiveTier(tier)][feature];
 }
 

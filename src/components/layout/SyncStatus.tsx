@@ -30,11 +30,7 @@ export function SyncStatus() {
     <div className="flex items-center gap-2 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
       {syncing ? (
         <>
-          <span
-            className="relative flex h-2 w-2 shrink-0"
-            title="Synchronisiere..."
-            aria-hidden
-          >
+          <span className="relative flex h-2 w-2 shrink-0" title="Synchronisiere..." aria-hidden>
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-500" />
           </span>
@@ -46,7 +42,11 @@ export function SyncStatus() {
         <>
           <span
             className="h-2 w-2 shrink-0 rounded-full bg-green-500"
-            title={lastSyncedAt ? `Zuletzt: ${new Date(lastSyncedAt).toLocaleString()}` : "Synchronisiert"}
+            title={
+              lastSyncedAt
+                ? `Zuletzt: ${new Date(lastSyncedAt).toLocaleString()}`
+                : "Synchronisiert"
+            }
             aria-hidden
           />
           <span className="text-xs text-gray-600 dark:text-gray-400 whitespace-nowrap">

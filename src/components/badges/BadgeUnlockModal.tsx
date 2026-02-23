@@ -82,9 +82,7 @@ export function BadgeUnlockModal({ badgeId, onDismiss }: BadgeUnlockModalProps) 
               <h2 id="badge-unlock-title" className="text-xl font-bold text-white mb-2">
                 {badge.name}
               </h2>
-              <p className="text-slate-400 dark:text-slate-400 text-sm mb-4">
-                {badge.description}
-              </p>
+              <p className="text-slate-400 dark:text-slate-400 text-sm mb-4">{badge.description}</p>
               <p className="text-primary-300 dark:text-primary-400 text-sm font-medium">
                 {MOTIVATIONAL_MESSAGES[badge.tier]}
               </p>

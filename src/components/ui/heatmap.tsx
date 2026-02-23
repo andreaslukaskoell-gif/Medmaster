@@ -65,10 +65,32 @@ export function Heatmap({ className }: HeatmapProps) {
     const medat = new Date(MEDAT_DATE);
     medat.setHours(0, 0, 0, 0);
     if (today > medat) {
-      return [[{ date: "03.07.2026", count: 0, level: 0 as 0 | 1 | 2 | 3, key: "2026-07-03", isMedAT: true }]];
+      return [
+        [
+          {
+            date: "03.07.2026",
+            count: 0,
+            level: 0 as 0 | 1 | 2 | 3,
+            key: "2026-07-03",
+            isMedAT: true,
+          },
+        ],
+      ];
     }
-    const result: { date: string; count: number; level: 0 | 1 | 2 | 3; key: string; isMedAT: boolean }[][] = [];
-    let currentWeek: { date: string; count: number; level: 0 | 1 | 2 | 3; key: string; isMedAT: boolean }[] = [];
+    const result: {
+      date: string;
+      count: number;
+      level: 0 | 1 | 2 | 3;
+      key: string;
+      isMedAT: boolean;
+    }[][] = [];
+    let currentWeek: {
+      date: string;
+      count: number;
+      level: 0 | 1 | 2 | 3;
+      key: string;
+      isMedAT: boolean;
+    }[] = [];
     const d = new Date(today);
     while (d <= medat) {
       const key = toDateKey(d);

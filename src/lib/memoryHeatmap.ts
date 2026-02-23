@@ -30,10 +30,7 @@ const SUBJECT_IDS: SubjectId[] = ["biologie", "chemie", "physik", "mathematik"];
  * - Nie wiederholt → 0.4 (gelb)
  * - Kürzlich wiederholt, nicht fällig → 0 (grün)
  */
-function chapterHeat(
-  progress: ChapterProgress | undefined,
-  today: string
-): number {
+function chapterHeat(progress: ChapterProgress | undefined, today: string): number {
   if (!progress) return 0.4; // Nie wiederholt → mittlere Dringlichkeit
   const { nextReviewDate, lastReviewed } = progress;
   if (nextReviewDate <= today) return 1; // Überfällig → rot
@@ -48,9 +45,7 @@ function chapterHeat(
 /**
  * Heat pro Fach: Maximum der Kapitel-Heats (ein überfälliges Kapitel = Fach rot).
  */
-export function getSubjectHeats(
-  userProgress: Record<string, ChapterProgress>
-): SubjectHeat[] {
+export function getSubjectHeats(userProgress: Record<string, ChapterProgress>): SubjectHeat[] {
   const today = new Date().toISOString().split("T")[0];
   return SUBJECT_IDS.map((subject) => {
     const chapters = getKapitelBySubject(subject);
@@ -76,7 +71,12 @@ export function getSubjectHeats(
  * Farbe für Heat 0..1: Grün → Gelb → Rot.
  * heat < 0 = kein Inhalt (neutral/grau).
  */
-export function heatToColor(heat: number): { bg: string; border: string; text: string; pulse: string } {
+export function heatToColor(heat: number): {
+  bg: string;
+  border: string;
+  text: string;
+  pulse: string;
+} {
   if (heat < 0) {
     return {
       bg: "bg-gray-300 dark:bg-gray-600",

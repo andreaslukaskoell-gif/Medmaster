@@ -34,17 +34,29 @@ function generateLocalResponse(question: TutorQuestion, userMessage: string): st
     return `Die richtige Antwort ist ${correctOpt?.id.toUpperCase()}) ${correctOpt?.text}. ${explanation}`;
   }
 
-  if (msg.includes("erklär") || msg.includes("erklaer") || msg.includes("versteh") || msg.includes("kapier")) {
+  if (
+    msg.includes("erklär") ||
+    msg.includes("erklaer") ||
+    msg.includes("versteh") ||
+    msg.includes("kapier")
+  ) {
     return `Lass mich das genauer erklären:\n\n${explanation}\n\nDie korrekte Antwort ist also: ${correctOpt?.id.toUpperCase()}) ${correctOpt?.text}`;
   }
 
-  if (msg.includes("tipp") || msg.includes("strategie") || msg.includes("merken") || msg.includes("eselsbrücke")) {
+  if (
+    msg.includes("tipp") ||
+    msg.includes("strategie") ||
+    msg.includes("merken") ||
+    msg.includes("eselsbrücke")
+  ) {
     return `Hier ein Lerntipp: Versuche dir die Kernaussage einzuprägen — ${explanation.split(".")[0]}. Wenn du dir unsicher bist, schließe zuerst die offensichtlich falschen Antworten aus und entscheide dann zwischen den verbleibenden.`;
   }
 
   if (msg.includes("andere") || msg.includes("option") || msg.includes("antwort")) {
     const options = question.options
-      .map((o) => `${o.id.toUpperCase()}) ${o.text}${o.id === question.correctOptionId ? " ✓" : ""}`)
+      .map(
+        (o) => `${o.id.toUpperCase()}) ${o.text}${o.id === question.correctOptionId ? " ✓" : ""}`
+      )
       .join("\n");
     return `Hier sind alle Antwortmöglichkeiten:\n\n${options}\n\n${explanation}`;
   }
@@ -85,11 +97,14 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
     setIsTyping(true);
 
     // Simulate typing delay
-    setTimeout(() => {
-      const response = generateLocalResponse(question, text);
-      setMessages((prev) => [...prev, { role: "ai", text: response }]);
-      setIsTyping(false);
-    }, 600 + Math.random() * 800);
+    setTimeout(
+      () => {
+        const response = generateLocalResponse(question, text);
+        setMessages((prev) => [...prev, { role: "ai", text: response }]);
+        setIsTyping(false);
+      },
+      600 + Math.random() * 800
+    );
   };
 
   const quickQuestions = [
@@ -116,7 +131,10 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
               <p className="text-[10px] text-gray-400">Erklärt dir die Antwort</p>
             </div>
           </div>
-          <button onClick={onClose} className="text-gray-400 hover:text-white transition-colors cursor-pointer p-1">
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-white transition-colors cursor-pointer p-1"
+          >
             <X className="w-5 h-5" />
           </button>
         </div>
@@ -132,7 +150,10 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
         {/* Messages */}
         <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
           {messages.map((msg, i) => (
-            <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"} gap-2`}>
+            <div
+              key={i}
+              className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"} gap-2`}
+            >
               {msg.role === "ai" && (
                 <div className="w-7 h-7 bg-indigo-600 rounded-full flex items-center justify-center shrink-0 mt-1">
                   <Sparkles className="w-3.5 h-3.5 text-white" />
@@ -180,11 +201,14 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
                     setMessages((prev) => [...prev, { role: "user", text: qq }]);
                     setInput("");
                     setIsTyping(true);
-                    setTimeout(() => {
-                      const response = generateLocalResponse(question, qq);
-                      setMessages((prev) => [...prev, { role: "ai", text: response }]);
-                      setIsTyping(false);
-                    }, 600 + Math.random() * 800);
+                    setTimeout(
+                      () => {
+                        const response = generateLocalResponse(question, qq);
+                        setMessages((prev) => [...prev, { role: "ai", text: response }]);
+                        setIsTyping(false);
+                      },
+                      600 + Math.random() * 800
+                    );
                   }, 50);
                 }}
                 className="text-xs bg-gray-800 hover:bg-gray-700 text-gray-300 px-3 py-1.5 rounded-full transition-colors cursor-pointer border border-gray-700"

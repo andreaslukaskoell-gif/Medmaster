@@ -1,4 +1,4 @@
-export async function shareText(text: string, title = 'Medmaster'): Promise<void> {
+export async function shareText(text: string, title = "Medmaster"): Promise<void> {
   try {
     if (navigator.share) {
       await navigator.share({ title, text });
@@ -16,7 +16,7 @@ export function getStreakShareText(days: number): string {
 }
 
 export function getBadgeShareText(badgeName: string, badgeTier?: string): string {
-  const tierEmoji = badgeTier === 'gold' ? '🥇' : badgeTier === 'silver' ? '🥈' : '🥉';
+  const tierEmoji = badgeTier === "gold" ? "🥇" : badgeTier === "silver" ? "🥈" : "🥉";
   return `${tierEmoji} Ich hab gerade das Badge "${badgeName}" auf Medmaster verdient!\nKostenlose MedAT-Vorbereitung: medmaster.app 🧠`;
 }
 

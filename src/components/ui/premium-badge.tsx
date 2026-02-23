@@ -46,7 +46,9 @@ export function PremiumBadge({ size = "sm", variant = "inline" }: PremiumBadgePr
   }
 
   return (
-    <span className={`inline-flex items-center ${sizeClasses[size]} bg-linear-to-r from-amber-500 to-yellow-500 text-white rounded-full font-bold`}>
+    <span
+      className={`inline-flex items-center ${sizeClasses[size]} bg-linear-to-r from-amber-500 to-yellow-500 text-white rounded-full font-bold`}
+    >
       <Crown className={iconSizes[size]} />
       PRO
     </span>

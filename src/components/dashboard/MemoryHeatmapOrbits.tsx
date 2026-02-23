@@ -6,13 +6,7 @@ import { getSubjectHeats, heatToColor, type SubjectHeat } from "@/lib/memoryHeat
 import { pathForSubject } from "@/lib/bmsRoutes";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-function OrbitRing({
-  subjectHeat,
-  index,
-}: {
-  subjectHeat: SubjectHeat;
-  index: number;
-}) {
+function OrbitRing({ subjectHeat, index }: { subjectHeat: SubjectHeat; index: number }) {
   const { heat, label, overdueCount, totalChapters } = subjectHeat;
   const colors = heatToColor(heat);
   const path = pathForSubject(subjectHeat.subject);
@@ -20,7 +14,10 @@ function OrbitRing({
   const isEmpty = totalChapters === 0;
 
   return (
-    <Link to={path} className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded-full">
+    <Link
+      to={path}
+      className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded-full"
+    >
       <motion.div
         className="relative flex flex-col items-center justify-center"
         initial={{ opacity: 0, scale: 0.8 }}
@@ -29,7 +26,18 @@ function OrbitRing({
       >
         <motion.div
           className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 ${colors.border} ${colors.bg} flex items-center justify-center shadow-lg ${colors.pulse}`}
-          animate={isUrgent ? { scale: [1, 1.08, 1], boxShadow: ["0 4px 14px rgba(239,68,68,0.3)", "0 4px 20px rgba(239,68,68,0.5)", "0 4px 14px rgba(239,68,68,0.3)"] } : {}}
+          animate={
+            isUrgent
+              ? {
+                  scale: [1, 1.08, 1],
+                  boxShadow: [
+                    "0 4px 14px rgba(239,68,68,0.3)",
+                    "0 4px 20px rgba(239,68,68,0.5)",
+                    "0 4px 14px rgba(239,68,68,0.3)",
+                  ],
+                }
+              : {}
+          }
           transition={{ duration: 2, repeat: isUrgent ? Infinity : 0, ease: "easeInOut" }}
         >
           <span className={`text-sm sm:text-base font-bold ${colors.text}`}>
@@ -44,9 +52,7 @@ function OrbitRing({
             {overdueCount}
           </span>
         )}
-        {isEmpty && (
-          <span className="text-[10px] text-muted">kein Inhalt</span>
-        )}
+        {isEmpty && <span className="text-[10px] text-muted">kein Inhalt</span>}
       </motion.div>
     </Link>
   );

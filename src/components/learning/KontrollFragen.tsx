@@ -11,7 +11,8 @@ interface KontrollFrage {
   hint?: string;
 }
 
-const DEFAULT_HINT = "Überlege: Welcher Begriff in der Frage ist zentral? Was hast du im Kapitel dazu gelernt?";
+const DEFAULT_HINT =
+  "Überlege: Welcher Begriff in der Frage ist zentral? Was hast du im Kapitel dazu gelernt?";
 
 interface KontrollFragenProps {
   questions: KontrollFrage[];
@@ -40,9 +41,7 @@ export function KontrollFragen({ questions, onAnswer }: KontrollFragenProps) {
   if (total === 0) {
     return (
       <div className="rounded-xl border border-emerald-200 dark:border-emerald-800 bg-white dark:bg-gray-900 p-6 text-center">
-        <p className="text-sm text-gray-500 dark:text-gray-400">
-          Keine Kontrollfragen verfügbar.
-        </p>
+        <p className="text-sm text-gray-500 dark:text-gray-400">Keine Kontrollfragen verfügbar.</p>
       </div>
     );
   }
@@ -134,10 +133,10 @@ export function KontrollFragen({ questions, onAnswer }: KontrollFragenProps) {
               {pct === 100
                 ? "Perfekt! Alles richtig!"
                 : pct >= 80
-                ? "Sehr gut! Fast alles richtig."
-                : pct >= 60
-                ? "Gut, aber schau dir die Fehler nochmal an."
-                : "Wiederhole den Lernstoff und versuche es erneut."}
+                  ? "Sehr gut! Fast alles richtig."
+                  : pct >= 60
+                    ? "Gut, aber schau dir die Fehler nochmal an."
+                    : "Wiederhole den Lernstoff und versuche es erneut."}
             </p>
           </div>
 
@@ -249,8 +248,8 @@ export function KontrollFragen({ questions, onAnswer }: KontrollFragenProps) {
                     answered && isCorrectOpt
                       ? "bg-emerald-500 text-white"
                       : isWrongSelected
-                      ? "bg-red-500 text-white"
-                      : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
+                        ? "bg-red-500 text-white"
+                        : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
                   }`}
                 >
                   {String.fromCharCode(65 + oi)}
@@ -290,21 +289,36 @@ export function KontrollFragen({ questions, onAnswer }: KontrollFragenProps) {
               ) : (
                 <>
                   <XCircle className="w-5 h-5" />
-                  Leider falsch — die richtige Antwort ist {String.fromCharCode(65 + (q?.correctIndex ?? 0))}.
+                  Leider falsch — die richtige Antwort ist{" "}
+                  {String.fromCharCode(65 + (q?.correctIndex ?? 0))}.
                 </>
               )}
             </div>
 
             {showHintOnly && !showExplanation && (
               <div className="space-y-2 p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800">
-                <p className="text-sm font-medium text-amber-800 dark:text-amber-200">💡 Sokratischer Hinweis</p>
+                <p className="text-sm font-medium text-amber-800 dark:text-amber-200">
+                  💡 Sokratischer Hinweis
+                </p>
                 <p className="text-sm text-amber-900 dark:text-amber-100">{hint}</p>
                 <div className="flex flex-wrap gap-2 mt-2">
-                  <Button type="button" variant="outline" size="sm" onClick={handleSecondTry} className="text-xs">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    onClick={handleSecondTry}
+                    className="text-xs"
+                  >
                     <RotateCcw className="w-3.5 h-3.5 mr-1" />
                     Nochmal versuchen (50% XP)
                   </Button>
-                  <Button type="button" variant="ghost" size="sm" onClick={handleShowSolution} className="text-xs">
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="sm"
+                    onClick={handleShowSolution}
+                    className="text-xs"
+                  >
                     Lösung anzeigen
                   </Button>
                 </div>
@@ -313,7 +327,9 @@ export function KontrollFragen({ questions, onAnswer }: KontrollFragenProps) {
 
             {showExplanation && (
               <div className="p-3 rounded-lg bg-emerald-50 dark:bg-emerald-900/15 border border-emerald-200 dark:border-emerald-800 text-sm text-emerald-900 dark:text-emerald-200 leading-relaxed">
-                <p className="font-medium text-emerald-800 dark:text-emerald-300 mb-1">Lösungsweg</p>
+                <p className="font-medium text-emerald-800 dark:text-emerald-300 mb-1">
+                  Lösungsweg
+                </p>
                 {q?.explanation ?? ""}
               </div>
             )}
