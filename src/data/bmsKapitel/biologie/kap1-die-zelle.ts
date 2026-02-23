@@ -26,58 +26,100 @@ export const bioKap1: Kapitel = {
         "Systembiologie",
         "Negative Rückkopplung",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Was macht etwas lebendig? Die Zellbiologie definiert sieben Kennzeichen des Lebens — Stoffwechsel, Reizbarkeit, Fortpflanzung, Wachstum, Evolution, Bewegung und Homöostase — deren Zusammenspiel lebende Systeme von unbelebter Materie abgrenzt. Dieses Kapitel behandelt die Grundlagen der Lebensmerkmale, die Systembiologie als integrativen Ansatz und das Konzept der Emergenz. Für den MedAT ist dieses Thema direkt prüfungsrelevant, da Fragen zur Abgrenzung von Lebewesen (insbesondere Viren als Grenzfall) und zu Homöostasemechanismen regelmäßig vorkommen.
-
-**Das Wichtigste auf einen Blick:**
-- Sieben Kennzeichen des Lebens: StReForWaEvoBeHo (Stoffwechsel, Reizbarkeit, Fortpflanzung, Wachstum, Evolution, Bewegung, Homöostase)
-- Viren sind ein Grenzfall: kein eigenständiger Stoffwechsel, keine Zellstruktur
-- Homöostase wird durch negative Rückkopplung aufrechterhalten (Thermostat-Prinzip)
-- Emergenz: Neue Eigenschaften entstehen auf höherer Organisationsebene (z. B. Bewusstsein aus Neuronen)
-- Hierarchische Organisation: Atom → Molekül → Organell → Zelle → Gewebe → Organ → Organsystem → Organismus
-
----
-
-## Historischer und philosophischer Kontext
-
-Die Frage "Was ist Leben?" beschäftigt die Menschheit seit der Antike. Aristoteles unterschied "beseelte" von "unbeseelter" Materie und postulierte eine "Lebenskraft" (vis vitalis). Diese vitalistische Vorstellung hielt sich bis ins 19. Jahrhundert. 1828 synthetisierte Friedrich Wöhler erstmals Harnstoff aus anorganischen Ausgangsstoffen – ein vernichtender Schlag gegen den Vitalismus. Seitdem versucht die Biologie, Leben rein mechanistisch zu erklären. Die moderne Systembiologie, geprägt durch Fortschritte in Genomik und Computational Biology, versteht Leben als emergentes Phänomen komplexer Netzwerke. Bedeutende Meilensteine: 1839 Zelltheorie (Schleiden & Schwann), 1859 Evolutionstheorie (Darwin), 1953 DNA-Doppelhelix (Watson & Crick), 2003 Human Genome Project.
-
-**Lernziele:**
-- Die sieben Kennzeichen des Lebens benennen, erläutern und mit klinischen Beispielen verknüpfen
-- Den Begriff Emergenz im Kontext der Systembiologie präzise erklären und Beispiele nennen
-- Homöostase und negative Rückkopplung am Beispiel des Blutzuckers und der Körpertemperatur beschreiben
-- Den Unterschied zwischen Reduktionismus und systemischem Denken in der Biologie erläutern
+Was unterscheidet eine lebende Zelle von einem Stein? Was macht einen Virus zum Grenzfall zwischen belebt und unbelebt? Die Biologie beantwortet diese Fragen mit sieben definierten Kennzeichen des Lebens. Für die Medizin ist das nicht nur Theorie: Wann gilt ein Organ als "tot"? Warum wirken Antibiotika nicht gegen Viren? Warum entstehen manche Krankheiten wie Krebs erst auf Systemebene, nicht in einzelnen Zellen? All das baut auf dem Grundverständnis von Leben auf. Das Herzstück ist die **Homöostase** — die Fähigkeit, innere Gleichgewichte aktiv aufrechtzuerhalten. Für den MedAT sind die sieben Kennzeichen (StReForWaEvoBeHo), Viren als Grenzfall und negative vs. positive Rückkopplung prüfungsrelevant.
 
 ---
 
 ## Die sieben Kennzeichen des Lebens
 
-Alle Lebewesen teilen sieben grundlegende Eigenschaften: Stoffwechsel (Katabolismus + Anabolismus, Zentralwährung ATP), Reizbarkeit (Wahrnehmung und Reaktion auf Umweltreize via Rezeptoren und Signalkaskaden), Fortpflanzung (sexuell mit Rekombination oder asexuell), Wachstum und Entwicklung (Zellteilung und differentielle Genexpression), Evolution (Anpassung über Generationen durch Mutation und Selektion), Bewegung (aktiv oder intern) sowie Homöostase (Aufrechterhaltung innerer Gleichgewichte durch negative Rückkopplungskreise). Kein einzelnes Merkmal allein definiert Leben – erst ihre Kombination kennzeichnet ein lebendes System. Viren sind ein Grenzfall: Sie zeigen Fortpflanzung (in Wirtszellen) und Evolution (z.B. Antigendrift bei Influenza), haben aber keinen eigenständigen Stoffwechsel, keine Zellstruktur und keine Ribosomen.
+Kein einzelnes Merkmal allein definiert Leben — erst ihr Zusammenspiel kennzeichnet ein lebendes System:
 
-> **Merke:** StReForWaEvoBeHo: Stoffwechsel – Reizbarkeit – Fortpflanzung – Wachstum – Evolution – Bewegung – Homöostase.
+1. **Stoffwechsel** (Metabolismus): Chemische Reaktionen zum Aufbau (Anabolismus) und Abbau (Katabolismus) körpereigener Stoffe. Treibstoff ist ATP (Adenosintriphosphat) — die universelle Energiewährung jeder Zelle.
 
----
+2. **Reizbarkeit**: Wahrnehmung von Umweltreizen und gezielte Reaktion darauf — über Rezeptoren, Nervenleitungen und Signalkaskaden. Beispiel: Nervenzelle feuert bei Berührung; Immunzelle reagiert auf Pathogen.
 
-## Systembiologie und Emergenz
+3. **Fortpflanzung**: Weitergabe genetischer Information — sexuell (mit Rekombination, erhöht Vielfalt) oder asexuell (genetisch identische Kopien). Einzigartig für Lebewesen.
 
-Die Systembiologie analysiert Lebewesen als vernetzte Systeme. Emergenz beschreibt Eigenschaften, die auf höherer Organisationsebene entstehen und aus den Eigenschaften der einzelnen Komponenten nicht direkt vorhersagbar sind. Klassische Beispiele: Bewusstsein aus Nervenzellen, Krebs aus gestörten Regulationsnetzwerken, Sepsis aus unkontrollierter Immunreaktion. Biologische Systeme werden durch Regelkreise (Rückkopplungsschleifen) stabilisiert. Negative Rückkopplung wirkt dem auslösenden Reiz entgegen und hält Parameter wie Körpertemperatur oder Blut-pH im physiologischen Bereich. Positive Rückkopplung verstärkt Signale (Blutgerinnung, Wehen, Aktionspotential).
+4. **Wachstum und Entwicklung**: Zellvermehrung durch Zellteilung und differentielle Genexpression. Aus einer einzelnen befruchteten Eizelle entstehen mehr als 200 verschiedene Zelltypen.
 
-> **Merke:** Emergenz: Das Ganze ist mehr als die Summe seiner Teile – neue Eigenschaften entstehen auf höherer Organisationsebene.
+5. **Evolution**: Anpassung an die Umwelt über Generationen durch Mutation, Rekombination und natürliche Selektion. Beispiel: Antibiotikaresistenz bei Bakterien entsteht genau so.
 
----
+6. **Bewegung**: Aktive Ortsveränderung (Flagellen, Muskelkontraktion) oder interne Bewegung (Vesikelransport, Chromosomenverteilung bei Zellteilung).
 
-## Hierarchische Organisation des Lebens
+7. **Homöostase**: Aktive Aufrechterhaltung innerer Gleichgewichte (pH, Temperatur, Blutzucker, Osmolarität) trotz schwankender Außenbedingungen — über Regelkreise. Das für die Medizin wichtigste Kennzeichen.
 
-Leben ist hierarchisch organisiert: von Atomen über Moleküle, Organellen, Zellen, Gewebe, Organe und Organsysteme bis zum Organismus, Populationen, Ökosystemen und der Biosphäre. Auf jeder Ebene entstehen neue emergente Eigenschaften. Diese Hierarchie erklärt, warum Medizin auf mehreren Ebenen gleichzeitig operiert: Molekularbiologie (Gentherapie, targeted therapy), Zellbiologie (Krebsbiologie), Physiologie (Organsysteme) und Epidemiologie (Populationen). Reduktionismus (Zerlegung in Bestandteile) und Systemdenken (Netzwerke, Emergenz) ergänzen sich gegenseitig.
-
-> **Merke:** Homöostase durch negative Rückkopplung: Der Effekt wirkt dem auslösenden Reiz entgegen und stabilisiert das System.
+> **Merke:** **StReForWaEvoBeHo**: Stoffwechsel – Reizbarkeit – Fortpflanzung – Wachstum – Evolution – Bewegung – Homöostase
 
 ---
 
-## Klinischer Bezug
+## Homöostase und Rückkopplung
 
-Diabetes mellitus Typ 2 ist die prototypische Homöostase-Störung: Der Blutzuckerregelkreis versagt durch Insulinresistenz und relative Insulininsuffizienz. Die Folge ist chronische Hyperglykämie mit Glykation von Proteinen (HbA1c als Laborparameter), Endothelschäden und Mikroangiopathie. Klinische Konsequenzen: diabetische Retinopathie (häufigste Erblindungsursache im Erwachsenenalter), Nephropathie (häufigste Ursache terminaler Niereninsuffizienz), Polyneuropathie und kardiovaskuläre Erkrankungen. Systembiologisches Denken hat hier zur Entwicklung personalisierter Therapieansätze (CGM, Insulinpumpen, SGLT2-Inhibitoren mit kardioprotektiver Wirkung) geführt.
+Homöostase bedeutet: Der Körper hält Parameter wie Blutzucker, Körpertemperatur oder Blut-pH in engen Grenzen — aktiv und unabhängig von äußeren Schwankungen. Das Prinzip dahinter ist die **negative Rückkopplung (Feedback-Regelung)**:
+
+**Ablauf:**
+1. **Sensor** misst den aktuellen Wert (z.B. Blutzucker = 8 mmol/L)
+2. Messwert wird mit **Sollwert** verglichen (z.B. 4–6 mmol/L → zu hoch!)
+3. **Korrekturreaktion** wird ausgelöst (Insulin wird ausgeschüttet)
+4. **Effekt wirkt dem Auslöser entgegen** → Blutzucker sinkt zurück zum Sollwert
+
+**Weitere Beispiele negativer Rückkopplung:**
+- Körpertemperatur: Temp ↑ → Schwitzen + Vasodilatation → Temp ↓
+- Schilddrüsenachse: T3/T4 ↑ → TSH ↓ (hypothalamo-hypophysäre Hemmung)
+- Blutdruck: Druck ↑ → Barorezeptoren → Parasympathikus → Herzfrequenz ↓
+
+**Positive Rückkopplung** verstärkt den ursprünglichen Reiz — sinnvoll für schnelle "Alles-oder-Nichts"-Reaktionen:
+- **Blutgerinnung**: Thrombin bildet → aktiviert mehr Thrombin
+- **Wehen**: Oxytocin → Kontraktion → mehr Oxytocin → stärkere Kontraktion
+- **Aktionspotential**: Na⁺-Einstrom → Depolarisation → mehr Na⁺-Kanäle öffnen
+
+**Klinisch — Homöostasestörung:** Diabetes mellitus Typ 2: Insulinresistenz → der Regelkreis versagt → chronische Hyperglykämie → Proteinglykation (HbA1c als Laborparameter) → Gefäßschäden → Retinopathie, Nephropathie, Neuropathie.
+
+> **Merke:** Negative Rückkopplung = stabilisiert (Homöostase). Positive Rückkopplung = verstärkt für Alles-oder-Nichts-Effekte (Blutgerinnung, Wehen, Aktionspotential).
+
+---
+
+## Viren — ein Grenzfall des Lebens
+
+Viren zeigen nur einige Kennzeichen des Lebens, andere fehlen vollständig:
+
+| Kennzeichen | Virus | Lebewesen |
+|---|---|---|
+| Stoffwechsel | ✗ (kein eigenständiger Metabolismus) | ✓ |
+| Reizbarkeit | ✗ | ✓ |
+| Fortpflanzung | ✓ (in Wirtszellen) | ✓ |
+| Wachstum | ✗ | ✓ |
+| Evolution | ✓ (Antigendrift, Antigenshifts) | ✓ |
+| Bewegung | ✗ | ✓ |
+| Zellstruktur | ✗ (keine Zelle, keine Ribosomen) | ✓ |
+
+**Fazit:** Viren sind **obligat intrazelluläre Parasiten** — sie kapern den Stoffwechsel einer Wirtszelle, um sich zu replizieren. Außerhalb einer Wirtszelle sind sie metabolisch inaktiv.
+
+**Klinische Konsequenz:** Da Viren keine Zellwand, keine eigenen Ribosomen und keinen eigenen Stoffwechsel haben, wirken klassische Antibiotika (die auf Bakterienstrukturen zielen) nicht. Antivirale Therapien müssen selektiv virale Strukturen angreifen (z.B. HIV-Reverse-Transkriptase, Influenza-Neuraminidase).
+
+> **Merke:** Viren: Fortpflanzung ✓, Evolution ✓ — aber kein Stoffwechsel, keine Zellstruktur ✗ → Grenzfall; kein Ansprechen auf Antibiotika.
+
+---
+
+## Emergenz und hierarchische Organisation
+
+Leben ist hierarchisch aufgebaut — auf jeder Ebene entstehen neue Eigenschaften, die die Ebene darunter nicht hat:
+
+**Atom → Molekül → Organell → Zelle → Gewebe → Organ → Organsystem → Organismus**
+
+Dieses Phänomen nennt sich **Emergenz**: Das Ganze ist mehr als die Summe seiner Teile.
+- Keine einzelne Nervenzelle denkt — aber das Gehirn (Milliarden vernetzte Neuronen) denkt
+- Kein einzelner Herzmuskel pumpt Blut — aber das Herzorgan pumpt
+- Keine einzelne Immunzelle schützt vollständig — aber das Immunsystem schützt
+
+**Für die Medizin bedeutet das:** Krankheiten können auf verschiedenen Ebenen entstehen:
+- Molekülebene: Genmutation (Sichelzellanämie, Krebs)
+- Zellebene: Infektionen, Apoptosedefekte
+- Gewebeebene: Fibrose, Atherosklerose
+- Systemebene: Sepsis, Herzversagen
+
+> **Merke:** Emergenz = neue Eigenschaften auf höherer Ebene, nicht vorhersagbar aus den Teilen. Bewusstsein, Immunschutz, Herzpumpleistung sind emergente Eigenschaften.
 
 ---
 
@@ -97,14 +139,18 @@ Diabetes mellitus Typ 2 ist die prototypische Homöostase-Störung: Der Blutzuck
 **Prüfungsrelevante Zahlen/Fakten:**
 - 7 Kennzeichen des Lebens (Eselsbrücke: StReForWaEvoBeHo)
 - ATP: universelle Energiewährung, ~40 kg Umsatz/Tag beim Menschen
-- Hierarchie des Lebens: 10 Ebenen (Atom bis Biosphäre)
-- Zelltheorie: 1839 (Schleiden & Schwann), DNA-Struktur: 1953 (Watson & Crick)
+- Hierarchie des Lebens: Atom → Biosphäre
 
 ---
 
 ## Zusammenfassung
 
-Alle Lebewesen teilen sieben grundlegende Kennzeichen — Stoffwechsel, Reizbarkeit, Fortpflanzung, Wachstum, Evolution, Bewegung und Homöostase — wobei erst deren Kombination ein lebendes System definiert, weshalb Viren als Grenzfall gelten: Sie zeigen zwar Fortpflanzung und Evolution, besitzen aber keinen eigenständigen Stoffwechsel und keine Zellstruktur. Die Homöostase wird primär durch negative Rückkopplungskreise aufrechterhalten, bei denen der Effekt dem auslösenden Reiz entgegenwirkt — wie beim Blutzuckerregelkreis, dessen Versagen bei Diabetes mellitus die klinische Relevanz dieses Konzepts verdeutlicht. Leben ist hierarchisch organisiert, und auf jeder Organisationsebene entstehen durch Emergenz neue Eigenschaften, die aus den Einzelkomponenten nicht vorhersagbar sind — ein Prinzip, das die moderne Systembiologie nutzt, um Genomik, Proteomik und Metabolomik zu einem integrativen Verständnis biologischer Systeme zu verbinden.`,
+- **Sieben Kennzeichen** (StReForWaEvoBeHo): Erst ihre Kombination definiert ein lebendes System — kein einzelnes Merkmal allein reicht
+- **Homöostase** = aktive Aufrechterhaltung innerer Gleichgewichte durch **negative Rückkopplung** (Effekt wirkt dem Auslöser entgegen; Beispiel: Blutzucker-Insulin-Regelkreis)
+- **Positive Rückkopplung** verstärkt: Blutgerinnung, Wehen, Aktionspotential — sinnvoll für schnelle Alles-oder-Nichts-Reaktionen
+- **Viren = Grenzfall**: Fortpflanzung + Evolution ✓, aber kein Stoffwechsel + keine Zellstruktur ✗ → keine Antibiotika wirksam
+- **Emergenz**: Auf jeder Hierarchieebene entstehen neue Eigenschaften, die aus den Einzelkomponenten nicht vorhersagbar sind (Bewusstsein, Immunschutz)
+- **Klinisch**: Diabetes mellitus Typ 2 = Homöostasestörung des Blutzuckerregelkreises`,
       lernziele: [
         "Die sieben Kennzeichen des Lebens benennen, erläutern und mit klinischen Beispielen verknüpfen",
         "Den Begriff Emergenz im Kontext der Systembiologie präzise erklären und Beispiele nennen",
@@ -244,69 +290,105 @@ Alle Lebewesen teilen sieben grundlegende Kennzeichen — Stoffwechsel, Reizbark
         "Kompartimentierung",
         "Antibiotika-Zielstrukturen",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Die Unterscheidung zwischen Prokaryoten und Eukaryoten ist eines der fundamentalsten Konzepte der Biologie und für den MedAT hochrelevant: Strukturelle Unterschiede (Zellkern, Organellen, Ribosomengröße) bilden die Grundlage der Antibiotikatherapie und der Endosymbiontentheorie. Dieses Kapitel behandelt den Vergleich beider Zelltypen, die Gram-Färbung, die Archäen als dritte Domäne und die medizinische Bedeutung prokaryotischer Strukturen als Angriffspunkte von Antibiotika.
-
-**Das Wichtigste auf einen Blick:**
-- Prokaryoten: kein Zellkern, keine Membranorganellen, 70S-Ribosomen, zirkuläre DNA
-- Eukaryoten: membranumschlossener Zellkern, Organellen, 80S-Ribosomen, lineare Chromosomen
-- 70S vs. 80S Ribosomen = Antibiotika-Zielstruktur (Aminoglykoside, Makrolide, Tetracycline)
-- Endosymbiontentheorie: Mitochondrien stammen von α-Proteobakterien ab (5 Belege)
-- Drei-Domänen-Modell: Bacteria, Archaea, Eukarya (Carl Woese, 1977)
-- Gram-Färbung: positiv (dicke Peptidoglykanschicht, violett) vs. negativ (LPS-Außenmembran, rosa)
+Penicillin tötet Bakterien, aber schadet unserem Körper nicht. Chloramphenicol hemmt Ribosomen in Bakterien, nicht in unseren Zellen. Wie ist das möglich? Die Antwort liegt in einem der fundamentalsten Unterschiede der Biologie: Prokaryoten (Bakterien, Archäen) und Eukaryoten (unsere Zellen) sind grundlegend unterschiedlich aufgebaut. Genau diese Unterschiede machen Antibiotika möglich — und erklären, warum falsch gewählte Antibiotika gefährlich sein können. Für den MedAT sind die Merkmalsunterschiede, Gram-Färbung, 70S vs. 80S Ribosomen und die Endosymbiontentheorie prüfungsrelevant.
 
 ---
 
-## Historischer und evolutionärer Kontext
+## Grundstruktur im Vergleich
 
-Die Unterscheidung zwischen Prokaryoten und Eukaryoten wurde im 20. Jahrhundert durch Elektronenmikroskopie und molekulare Phylogenetik etabliert. Édouard Chatton prägte 1925 die Begriffe "procaryote" und "eucaryote". Carl Woese revolutionierte 1977 unser Verständnis des Lebens durch rRNA-Sequenzanalysen: Er entdeckte, dass Archäen eine eigenständige Domäne bilden – das Drei-Domänen-Modell (Bacteria, Archaea, Eukarya) ersetzte die alte Zweiteilung. Die Endosymbiontentheorie (Lynn Margulis, 1967) erklärt die Entstehung der Eukaryoten: Mitochondrien und Chloroplasten stammen von endosymbiontischen Prokaryoten ab – ein der wichtigsten evolutionären Übergänge in der Geschichte des Lebens.
-
-**Lernziele:**
-- Prokaryoten und Eukaryoten anhand von mindestens sieben Merkmalen unterscheiden
-- Die Bedeutung der Ribosomengröße (70S vs. 80S) für die Antibiotikatherapie mit konkreten Beispielen erklären
-- Die Endosymbiontentheorie und ihre fünf Hauptbeweise beschreiben
-- Gram-positive und Gram-negative Bakterien in Zellwandaufbau und klinischer Bedeutung unterscheiden
-
----
-
-## Strukturelle Unterschiede auf einen Blick
-
-Der entscheidende Unterschied zwischen Prokaryoten und Eukaryoten ist das Fehlen eines membranumschlossenen Zellkerns bei Prokaryoten. Die DNA von Prokaryoten liegt als zirkuläres Chromosom frei im Nukleoid. Eukaryoten dagegen haben lineare Chromosomen, die an Histonen verpackt sind, und einen echten Kern mit Doppelmembran und Kernporen. Prokaryoten besitzen außerdem keine Membranorganellen: keine Mitochondrien, kein ER, keinen Golgi-Apparat. Alle Stoffwechselprozesse laufen im Zytoplasma oder an der Plasmamembran ab. Eukaryoten nutzen Kompartimentierung für räumliche Trennung von Reaktionen – ein enormer Vorteil für Komplexität und Regulation. Die Gram-Färbung ist eine klinisch essenzielle Schnellmethode: Gram-positiv (dicke Peptidoglykan-Schicht, violett) vs. Gram-negativ (dünne Schicht + LPS-haltige äußere Membran, rosa).
-
-> **Merke:** Prokaryoten = Keine Membranorganellen, kein Kern, 70S-Ribosomen. Eukaryoten = Kern + Organellen + 80S-Ribosomen.
+Das definierendste Merkmal: Prokaryoten haben keinen membranumschlossenen Zellkern — ihre DNA liegt als zirkuläres Chromosom frei im **Nukleoid**-Bereich. Eukaryoten haben echte Kerne mit Doppelmembran, Kernporen und linear verpackter DNA an Histonen.
 
 | Merkmal | Prokaryoten | Eukaryoten |
-| --- | --- | --- |
+|---|---|---|
 | Zellkern | Kein Kern (Nukleoid) | Membranumschlossener Kern |
 | DNA | Zirkulär, keine Histone | Linear, Histone |
-| Ribosomen | 70S (30S + 50S) | 80S (40S + 60S) |
-| Organellen | Keine Membranorganellen | Mitochondrien, ER, Golgi |
-| Zellwand | Peptidoglykan (Bakterien) | Keine (Tiere), Cellulose (Pflanzen) |
+| Ribosomen | **70S** (30S + 50S) | **80S** (40S + 60S) |
+| Membranorganellen | Keine (kein Mito, ER, Golgi) | Mitochondrien, ER, Golgi |
+| Zellwand | Peptidoglykan (Bakterien) | Keine (Tiere); Cellulose (Pflanzen) |
 | Zellteilung | Binäre Fission | Mitose / Meiose |
-| Größe | 0,5–5 μm | 10–100 μm |
+| Größe | 0,5–5 µm | 10–100 µm |
+| Plasmide | Häufig (extra-chromosomale DNA) | Selten |
+
+**Warum ist Kompartimentierung (Eukaryoten) ein Vorteil?** Räumliche Trennung von Reaktionen — Transkription im Kern, Translation im Zytoplasma — ermöglicht umfangreiche mRNA-Prozessierung (Spleißen, 5'-Kappe, Poly-A-Schwanz) und feinere Regulation. Prokaryoten haben das nicht → ihre Gene haben keine Introns, keine RNA-Prozessierung.
+
+> **Merke:** Pro = kein Kern: Prokaryoten = Nukleoid (keine Membran), 70S, binäre Fission. Eukaryoten = echter Kern, 80S, Mitose.
 
 ---
 
-## Medizinische Relevanz: Antibiotika und Ribosomen
+## Zellwand und Gram-Färbung: klinisch unverzichtbar
 
-Die unterschiedliche Ribosomengröße (Prokaryoten: 70S; Eukaryoten: 80S) ist die molekulare Grundlage vieler Antibiotika. Aminoglykoside (z.B. Streptomycin), Tetracycline, Makrolide (z.B. Erythromycin) und Chloramphenicol binden spezifisch an prokaryotische 70S-Ribosomen und hemmen die bakterielle Proteinsynthese. Menschliche 80S-Ribosomen werden nicht gebunden – daher geringe Toxizität für den Patienten. Ausnahme: Mitochondrien haben 70S-Ribosomen (Endosymbiontentheorie), weshalb manche Antibiotika in hohen Dosen mitochondriale Nebenwirkungen zeigen können (Chloramphenicol → aplastische Anämie durch Hemmung mitochondrialer Proteinsynthese in hämatopoetischen Vorläuferzellen).
+Die **Gram-Färbung** ist eine einfache Schnellfärbung zur Unterscheidung von Bakterien und hat direkte Konsequenzen für die Antibiotikawahl:
 
-> **Merke:** 70S (Prokaryoten) vs. 80S (Eukaryoten): Dieser Unterschied ist die Zielstruktur vieler Antibiotika.
+**Gram-positive Bakterien** (Ergebnis: **violett/lila**):
+- **Dicke Peptidoglykanschicht** (20–80 nm) außen
+- Kein LPS, keine äußere Membran
+- Beispiele: *Staphylococcus aureus*, *Streptococcus pneumoniae*, *Enterococcus*
+- Gut zugänglich für Penicillin (PBP-Bindung direkt möglich)
+
+**Gram-negative Bakterien** (Ergebnis: **rosa/rot**):
+- Dünne Peptidoglykanschicht (2–7 nm) + **äußere Membran mit LPS** (Lipopolysaccharid)
+- LPS = Endotoxin → bei Bakteriämie → TLR4-Aktivierung → Zytokin-Sturm → **septischer Schock**
+- Beispiele: *E. coli*, *Salmonella*, *Pseudomonas*, *Neisseria meningitidis*
+- Penicillin muss erst äußere Membran überwinden → schlechterer Zugang → häufiger resistent
+
+**Peptidoglykan (Murein):** Netzwerk aus Zuckerketten (N-Acetylglucosamin + N-Acetylmuraminsäure), quervernetzt durch kurze Peptide. Gibt der Bakterienzelle mechanische Festigkeit gegen osmotischen Druck.
+
+> **Merke:** Gram-positiv (violett) = dicke Peptidoglykanschicht. Gram-negativ (rosa) = dünn + LPS-Außenmembran. LPS → septischer Schock!
 
 ---
 
-## Archäen – die dritte Domäne
+## Ribosomen 70S vs. 80S: Grundlage der Antibiotikatherapie
 
-Archäen sind Prokaryoten, unterscheiden sich aber biochemisch erheblich von Bakterien. Ihre Zellmembranen bestehen aus Isoprenoid-Etherlipiden (nicht Fettsäure-Esterlipiden wie bei Bakterien und Eukaryoten), und ihre Zellwand enthält kein Peptidoglykan – deshalb sind sie resistent gegen Penicilline. Archäen besiedeln oft Extremstandorte: Thermophile (Sulfolobus bis 121°C), Halophile (Halobacterium in gesättigten Salzlösungen), Methanogene (Methanobacterium im Darm und Sumpfböden). Trotz prokaryotischem Grundbauplan zeigen Archäen in Genexpression (TATA-Box, Transkriptionsfaktoren) und DNA-Replikation (Orc1, MCM-Helikasen) mehr Ähnlichkeit mit Eukaryoten – was sie zum evolutionären Bindeglied macht.
+Prokaryotische Ribosomen (70S = 30S + 50S) unterscheiden sich strukturell von eukaryotischen (80S = 40S + 60S). Diese Unterschiede erlauben eine **selektive Hemmung** bakterieller Proteinbiosynthese:
 
-> **Merke:** Archäen: kein Peptidoglykan, Ether-Lipide – deshalb Penicillin-resistent. Extremophile Lebensweise.
+| Antibiotikum | Zielstruktur | Wirkung |
+|---|---|---|
+| Aminoglykoside (Gentamicin) | 30S-Untereinheit | Fehllesen der mRNA, Proteinsynthese gestört |
+| Tetracycline | 30S-Untereinheit | Blockiert tRNA-Bindung |
+| Makrolide (Erythromycin) | 50S-Untereinheit | Blockiert Translokation |
+| Chloramphenicol | 50S-Untereinheit | Hemmt Peptidyltransferase |
+| Linezolid | 50S-Untereinheit | Verhindert 70S-Assemblierung |
+
+**Wichtige Ausnahme:** Mitochondrien haben **70S-Ribosomen** (Beweis für Endosymbiontentheorie). Deshalb kann **Chloramphenicol** in hohen Dosen die mitochondriale Proteinsynthese hemmen → aplastische Anämie durch Schädigung hämatopoetischer Vorläuferzellen.
+
+> **Merke:** 70S (Pro) vs. 80S (Eu) = Antibiotika-Selektivität. Cave: Mitochondrien sind 70S → Chloramphenicol-Toxizität möglich!
 
 ---
 
-## Klinischer Bezug
+## Endosymbiontentheorie: Woher kommen Mitochondrien?
 
-Penicillin hemmt die Synthese der bakteriellen Peptidoglykan-Zellwand (PBP-Hemmung) – menschliche Zellen besitzen keine solche Zellwand und sind daher unempfindlich. Bei Gram-negativen Bakterien muss Penicillin die äußere Membran überwinden (schlechterer Zugang → Resistenzproblem). MRSA (Methicillin-resistenter Staphylococcus aureus) hat ein verändertes PBP2a, an das Beta-Laktame nicht binden. Therapie: Vancomycin, Linezolid, Daptomycin. LPS gram-negativer Bakterien aktiviert TLR4 auf Immunzellen → Cytokinausschüttung → septischer Schock. Therapie: antibiotische Eradikation, hämodynamische Stabilisierung (Noradrenalin), Organschutz.
+Die **Endosymbiontentheorie** (Lynn Margulis) erklärt, wie Eukaryoten entstanden: Vor ~1,5–2 Milliarden Jahren wurde ein α-Proteobakterium von einer Urzelle aufgenommen — nicht verdaut, sondern als Endosymbiont integriert. Daraus wurden die **Mitochondrien**.
+
+**5 Beweise:**
+1. **Zirkuläre DNA:** Mitochondrien haben eigene zirkuläre DNA (mtDNA), wie Bakterien
+2. **70S-Ribosomen:** Mitochondriale Ribosomen sind 70S (bakteriell), nicht 80S
+3. **Doppelmembran:** Äußere Membran = ehemalige Wirtszellmembran; innere = bakterielle Membran
+4. **Binäre Fission:** Mitochondrien teilen sich durch binäre Teilung, nicht durch Mitose
+5. **Antibiotika-Empfindlichkeit:** Chloramphenicol hemmt mitochondriale Proteinsynthese (wie bei Bakterien)
+
+**Besonderheiten der mtDNA:** Kodiert nur ~13 Proteine der Atmungskette; maternale Vererbung (Mitochondrien kommen aus dem Eizellzytoplasma); häufige Mutationsstellen → mitochondriale Erkrankungen (MELAS, Leber-Optikusneuropathie).
+
+> **Merke:** Endosymbiontentheorie: 5 Belege = zirkuläre DNA, 70S-Ribosomen, Doppelmembran, binäre Fission, Antibiotika-Empfindlichkeit. mtDNA = maternale Vererbung.
+
+---
+
+## Archäen — die dritte Domäne des Lebens
+
+Das **Drei-Domänen-Modell** (Carl Woese, 1977, basierend auf 16S rRNA-Sequenzvergleichen) teilt das Leben in:
+- **Bacteria** (Bakterien)
+- **Archaea** (Archäen)
+- **Eukarya** (Eukaryoten)
+
+**Archäen sind Prokaryoten** (kein membranumschlossener Kern), aber biochemisch eigenständig:
+- **Keine Peptidoglykan-Zellwand** → **Penicillin-resistent** (wichtig!)
+- **Ether-Lipide** statt Ester-Lipide in Zellmembran (stabiler in Extrembedingungen)
+- Genexpressionsapparat ähnelt Eukaryoten (TATA-Box, Transkriptionsfaktoren)
+
+**Extremophile:** Thermophile (bis 121°C), Halophile (gesättigte Salzlösungen), Methanogene (produzieren CH₄ im Darm und Sumpf)
+
+> **Merke:** Archäen: Prokaryoten-Bau, aber kein Peptidoglykan → Penicillin-resistent. Dritte Domäne neben Bakterien und Eukaryoten.
 
 ---
 
@@ -335,7 +417,12 @@ Penicillin hemmt die Synthese der bakteriellen Peptidoglykan-Zellwand (PBP-Hemmu
 
 ## Zusammenfassung
 
-Prokaryoten und Eukaryoten unterscheiden sich fundamental im Zellaufbau: Prokaryoten besitzen keinen membranumschlossenen Zellkern und keine Membranorganellen, ihre DNA liegt als zirkuläres Chromosom frei im Nukleoid, und ihre Ribosomen sind mit 70S kleiner als die eukaryotischen 80S-Ribosomen — ein Unterschied, der die molekulare Grundlage vieler Antibiotika bildet. Die Endosymbiontentheorie erklärt den Ursprung der Mitochondrien aus aufgenommenen α-Proteobakterien und der Chloroplasten aus Cyanobakterien, gestützt durch fünf zentrale Belege: zirkuläre DNA, 70S-Ribosomen, Doppelmembran, binäre Fission und Antibiotika-Empfindlichkeit. Carl Woeses Drei-Domänen-Modell gliedert das Leben in Bacteria, Archaea und Eukarya, wobei Archäen trotz prokaryotischem Grundbauplan biochemisch eigenständig sind — ihre Membranen bestehen aus Ether-Lipiden, sie besitzen kein Peptidoglykan und sind daher Penicillin-resistent. Die Gram-Färbung unterteilt Bakterien klinisch relevant in Gram-positive (dicke Peptidoglykanschicht, violett) und Gram-negative (dünne Schicht plus LPS-haltige Außenmembran, rosa), was für die Antibiotikawahl entscheidend ist.`,
+- **Grundunterschied**: Prokaryoten = kein Kern (Nukleoid), 70S-Ribosomen, binäre Fission; Eukaryoten = Kern + 80S-Ribosomen + Mitose
+- **Gram-Färbung**: positiv (violett) = dicke Peptidoglykanschicht; negativ (rosa) = dünne Schicht + LPS-Außenmembran → septischer Schock-Risiko
+- **Antibiotika**: 70S-Ribosomen als Ziel (Aminoglykoside, Makrolide, Tetracycline, Chloramphenicol) — 80S-Ribosomen der Eukaryoten werden nicht gebunden
+- **Cave Mitochondrien**: haben 70S-Ribosomen (Endosymbiontentheorie!) → Chloramphenicol kann mitochondriale Proteinsynthese hemmen → aplastische Anämie
+- **Endosymbiontentheorie**: 5 Belege (zirkuläre DNA, 70S, Doppelmembran, binäre Fission, Antibiotika-Empfindlichkeit); mtDNA = maternal vererbt
+- **Archäen**: dritte Domäne, kein Peptidoglykan → Penicillin-resistent; Extremophile`,
       lernziele: [
         "Prokaryoten und Eukaryoten anhand von mindestens sieben Merkmalen unterscheiden",
         "Die Bedeutung der Ribosomengröße (70S vs. 80S) für die Antibiotikatherapie mit konkreten Beispielen erklären",
@@ -473,59 +560,93 @@ Prokaryoten und Eukaryoten unterscheiden sich fundamental im Zellaufbau: Prokary
         "Aktiver Transport",
         "Na⁺/K⁺-ATPase",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Die Zellmembran ist die zentrale Grenzstruktur jeder Zelle — sie kontrolliert den Stoffaustausch, ermöglicht Signalübertragung und definiert die zelluläre Identität. Dieses Kapitel erklärt das Flüssig-Mosaik-Modell, die Rolle von Cholesterin und Membranproteinen sowie klinisch relevante Membranpathologien wie Mukoviszidose und ABO-Inkompatibilität. Für den MedAT sind insbesondere der Aufbau der Phospholipid-Doppelschicht, die Transportmechanismen und die Funktion der Glykokalix prüfungsrelevant.
-
-**Das Wichtigste auf einen Blick:**
-- Flüssig-Mosaik-Modell (Singer & Nicolson, 1972): Fluide Phospholipid-Doppelschicht mit lateral beweglichen Proteinen
-- Phospholipide: amphiphil (hydrophiler Kopf + hydrophobe Schwänze) → spontane Bilayer-Bildung
-- Cholesterin: bidirektionaler Fluiditätspuffer (verhindert Erstarren UND Verflüssigen)
-- Membranproteine: Ionenkanäle, Transporter, Rezeptoren (integral vs. peripher)
-- Glykokalix: Zellerkennung, Blutgruppenantigene (ABO-System), Immunschutz
-- Klinisch: CFTR-Mutation → Mukoviszidose; ABO-Inkompatibilität → Hämolyse
+Jede Zelle ist von ihrer Umgebung durch die Zellmembran getrennt — aber diese Trennung ist keine Mauer, sondern eine hochdynamische, selektive Grenze. Die Membran entscheidet, was rein- und rauskommt, empfängt Signale von außen und bestimmt die Identität der Zelle (z.B. Blutgruppe). Wenn die Membran defekt ist, entstehen Krankheiten: Mukoviszidose (defekter Chlorid-Kanal), Hämolyse bei Blutgruppeninkompatibilität, Atherosklerose durch Cholesterin-Ablagerungen. Das Grundprinzip der Membran ist das **Flüssig-Mosaik-Modell** (Singer & Nicolson, 1972). Für den MedAT sind amphiphile Phospholipide, Cholesterin als Fluiditätspuffer, integrale vs. periphere Proteine, Transportmechanismen und Glykokalix prüfungsrelevant.
 
 ---
 
-## Historischer Kontext
+## Grundstruktur: Phospholipid-Doppelschicht
 
-Das Flüssig-Mosaik-Modell der Zellmembran wurde 1972 von S. Jonathan Singer und Garth Nicolson in Science publiziert und revolutionierte das Verständnis der Membranstruktur. Zuvor galt das Sandwich-Modell (Davson & Danielli, 1935): eine Lipiddoppelschicht, bedeckt von Proteinschichten – statisch und homogen. Singer & Nicolson erkannten, dass Proteine lateral beweglich und heterogen verteilt sind ("Mosaik"). Die Entdeckung der Lipid-Rafts (Simon & Ikonen, 1997) verfeinerte das Modell: Spezielle Mikrodomänen mit Cholesterin und Sphingolipiden konzentrieren Signalproteine. Die Aquaporine (Peter Agre, Nobelpreis 2003) lösten das Rätsel, warum Wasser so viel schneller durch Membranen diffundiert als berechnet.
+Das Gerüst der Zellmembran sind **Phospholipide** — amphiphile (griech.: beide Seiten liebend) Moleküle mit:
+- **Hydrophilem Kopf** (wasserlöslich): Phosphatgruppe + Glycerin + polarer Rest (z.B. Cholin)
+- **Hydrophoben Schwänzen** (wasserabweisend): zwei Fettsäureketten
 
-**Lernziele:**
-- Das Flüssig-Mosaik-Modell mit allen Komponenten (Phospholipide, Cholesterin, Membranproteine, Glykokalix) erklären
-- Die Rolle von Cholesterin und Fettsäurezusammensetzung für die Membranfluidität beschreiben
-- Integrale und periphere Membranproteine sowie Lipid-Rafts in Struktur und Funktion unterscheiden
-- Klinische Konsequenzen von Membrananomalien (Mukoviszidose, ABO-Inkompatibilität, Atherosklerose) erläutern
+**Selbstorganisation:** In wässriger Umgebung drehen sich die Köpfe zum Wasser (außen), die Schwänze zeigen ins Innere → spontane **Doppelschicht** (Bilayer). Diese Selbstorganisation ist thermodynamisch günstig (hydrophober Effekt).
 
----
+**Semipermeable Barriere — was kann die Membran passieren?**
+- **Frei**: kleine unpolare Moleküle (O₂, CO₂, Steroide, Ethanol, fettlösliche Vitamine)
+- **Via Aquaporine (AQP)**: Wasser (schnell, gerichtet)
+- **Via Ionenkanäle**: Na⁺, K⁺, Ca²⁺, Cl⁻ (schnell, selektiv)
+- **Via Transporter**: Glucose (GLUT), Aminosäuren, große polare Moleküle (langsam, sättigbar)
+- **Blockiert**: geladene Ionen ohne Kanal (Hydrathülle = hohe Energiebarriere)
 
-## Phospholipid-Doppelschicht: Aufbau und Selbstorganisation
+**Lipid-Asymmetrie:** Die beiden Schichten sind nicht gleich:
+- Außen: Phosphatidylcholin, Sphingomyelin, Glykolipide (Blutgruppenantigene!)
+- Innen: Phosphatidylserin (PS), Phosphatidylethanolamin (PE)
+- **Bei Apoptose:** PS flippt nach außen → "Eat me"-Signal für Makrophagen → phagozytäre Clearance apoptotischer Zellen
 
-Phospholipide sind amphiphile Moleküle: Sie haben einen hydrophilen Kopf (Phosphat + Glycerin + polarer Rest) und zwei hydrophobe Fettsäureschwänze. In wässrigem Milieu ordnen sich Phospholipide spontan zur Doppelschicht an, wobei die hydrophoben Schwänze im Innern und die hydrophilen Köpfe außen liegen. Diese Selbstorganisation ist entropisch getrieben (hydrophober Effekt). Die Doppelschicht ist semipermeabel: Kleine unpolare Moleküle (O2, CO2, Ethanol) diffundieren frei hindurch; geladene Ionen und große polare Moleküle werden blockiert; Wasser passiert bevorzugt durch Aquaporin-Kanäle. Lipid-Asymmetrie: Phosphatidylserin ist normalerweise auf der Innenseite; bei Apoptose flippt es nach außen → "Eat me"-Signal für Makrophagen (Grundlage für Annexin-V-Apoptose-Assay).
-
-> **Merke:** Phospholipid = amphiphil: hydrophiler Kopf + hydrophobe Schwänze → spontane Bilayer-Bildung im Wasser durch hydrophoben Effekt.
-
----
-
-## Membranproteine: Tore, Transporter und Signalempfänger
-
-Integrale Transmembranproteine durchspannen die Lipiddoppelschicht mit hydrophoben Helices (z.B. GPCRs: 7 Transmembranhelices) und sind nicht ohne Detergenzien löslich. Ionenkanäle (Na+, K+, Ca2+, Cl-) ermöglichen selektive, schnelle Ionenflüsse. Carrier/Transporter (GLUT1-4 für Glucose, LAT1 für Aminosäuren) sind langsamer und sättigbar. Rezeptoren (EGFR, Insulinrezeptor) koppeln extrazelluläre Signale an intrazelluläre Kaskaden. Periphere Proteine sind an der Membranoberfläche verankert (Myristylierung, GPI-Anker) und leichter ablösbar. Glykoproteine auf der Außenseite bilden die Glykokalix für Zellerkennung, Blutgruppenantigene und Immunschutz. CFTR als integrales Membranprotein ist das Paradebeispiel: Fehlfaltung → kein Membraneinbau → Mukoviszidose.
-
-> **Merke:** CFTR = integrales Membranprotein (Cl--Kanal); deltaF508-Mutation → Fehlfaltung → Mukoviszidose.
+> **Merke:** Phospholipide = amphiphil → Bilayer durch Selbstorganisation. Innen PS/PE, außen Glykolipide. PS-Flip = Apoptosesignal.
 
 ---
 
-## Cholesterin und Membranfluidität
+## Membranfluidität: Cholesterin und Fettsäurezusammensetzung
 
-Cholesterin ist ein Steroidmolekül, das zwischen den Phospholipiden eingelagert ist. Bei hoher Temperatur begrenzt es die Beweglichkeit der Fettsäureketten (Pufferung gegen übermäßige Verflüssigung). Bei niedriger Temperatur verhindert es die enge Packung der Fettsäuren (Pufferung gegen Erstarrung). Diese bidirektionale Regulationsfunktion macht Cholesterin unentbehrlich für die Membranstabilität in Säugerzellen. In Lipid-Rafts reichert sich Cholesterin zusammen mit Sphingolipiden an und schafft geordnete Mikrodomänen, die Signalproteine konzentrieren. Statine senken den Cholesterinspiegel durch HMG-CoA-Reduktase-Hemmung – ein Musterbeispiel rationaler Arzneimittelentwicklung.
+Die Membran muss fließfähig bleiben, ohne zu verflüssigen. Zwei Faktoren steuern die **Membranfluidität**:
 
-> **Merke:** Cholesterin = Membranfluiditätspuffer: verhindert sowohl Erstarren (Kälte) als auch übermäßiges Verflüssigen (Wärme).
+**1. Cholesterin** (Steroidmolekül, eingelagert zwischen Phospholipiden):
+- Bei **hoher Temperatur**: begrenzt die Beweglichkeit der Fettsäureketten → verhindert übermäßige Verflüssigung
+- Bei **niedriger Temperatur**: verhindert dichte Packung der Fettsäuren → verhindert Erstarrung
+- **Bidirektionaler Puffer** — stabilisiert Membranfluidität in beiden Richtungen
+- Konzentriert sich in **Lipid-Rafts** zusammen mit Sphingolipiden → geordnete Mikrodomänen → konzentrieren Signalproteine (z.B. GPI-verankerte Proteine, GPCRs)
+
+**2. Fettsäurezusammensetzung:**
+- **Ungesättigte Fettsäuren** (cis-Doppelbindungen = Knicke in der Kette): verhindern enge Packung → **erhöhen Fluidität** (z.B. Ölsäure, DHA in Nervenzellmembranen)
+- **Gesättigte Fettsäuren** (gerade Ketten, können sich eng zusammenlagern): **senken Fluidität** (z.B. Palmitinsäure, Stearinsäure → Butter ist fest)
+
+> **Merke:** Cholesterin = Fluiditätspuffer (weder zu fest noch zu flüssig). Ungesättigte Fettsäuren → mehr Fluidität; gesättigte → weniger.
 
 ---
 
-## Klinischer Bezug
+## Membranproteine: Funktion und Typen
 
-Statine (z.B. Atorvastatin) hemmen die HMG-CoA-Reduktase und senken den Blutcholesterinspiegel. Überschüssiges LDL-Cholesterin oxidiert und wird von Makrophagen als Schaumzellen gespeichert → Atherosklerose → Myokardinfarkt und Schlaganfall. Das ABO-Blutgruppensystem basiert auf Glykoproteinen und Glykolipiden der Erythrozytenoberfläche: falsche Blutgruppe → Hämolyse durch präformierte Antikörper → hämolytische Transfusionsreaktion (ABO-Inkompatibilität). CFTR-Mutationen (deltaF508) → Mukoviszidose: keine funktionsfähigen Cl--Kanäle in der apikalen Membran von Atemwegs- und Darmepithel → visköser Schleim → chronische Pseudomonas-Infektionen → Lungenversagen.
+Membranproteine übernehmen alle aktiven Funktionen der Membran. Es gibt zwei Grundtypen:
+
+**Integrale (Transmembran-)Proteine:**
+- Durchspannen die Lipiddoppelschicht vollständig mit **hydrophoben α-Helices**
+- Nicht ablösbar ohne Detergenzien (sie sind "eingebaut")
+- Funktionen:
+  - **Ionenkanäle** (Na⁺, K⁺, Ca²⁺, Cl⁻): schnell, selektiv, kanalbildend
+  - **Carrier/Transporter** (GLUT1–4 für Glucose, SGLT für Na⁺-Glucose-Kotransport): langsamer, sättigbar
+  - **Rezeptoren** (Insulinrezeptor, EGFR, GPCRs mit 7 Helices): Signalübertragung
+  - **Pumpen** (Na⁺/K⁺-ATPase): aktiver Transport gegen Gradienten (ATP-verbrauchend)
+
+**Periphere Proteine:**
+- Sitzen an der Membranoberfl äche (innen oder außen), nicht durch die Membran
+- Leichter ablösbar (ionische Wechselwirkungen)
+- Verankerung z.B. durch GPI-Anker (außen) oder Myristylierung (innen)
+
+**Klinisches Beispiel CFTR:**
+CFTR (Cystic Fibrosis Transmembrane Conductance Regulator) ist ein **integrales Membranprotein** (Cl⁻-Kanal). Die häufigste Mutation ΔF508 führt zur **Fehlfaltung** → kein Einbau in die apikale Membran der Atemwegs- und Darmepithelzellen → kein Cl⁻-Transport → zu wenig Wasser im Schleim → **visköser Schleim** → Stauung → chronische *Pseudomonas aeruginosa*-Infektion → Lungenversagen → Mukoviszidose.
+
+> **Merke:** Integral = durch die Membran (hydrophobe Helices). Peripher = nur an Oberfläche. CFTR = integraler Cl⁻-Kanal; ΔF508 → Fehlfaltung → Mukoviszidose.
+
+---
+
+## Glykokalix: Identität und Zellerkennung
+
+Die **Glykokalix** ist eine Schicht aus Kohlenhydratketten auf der Außenseite der Membran (gebunden an Glykoproteine und Glykolipide). Sie hat drei Hauptfunktionen:
+
+1. **Zellerkennung:** Immunzellen erkennen körpereigene Zellen über MHC-Moleküle (HLA-System); falsche Erkennung → Autoimmunreaktion
+2. **Blutgruppenantigene (ABO-System):** Glykolipide auf Erythrozytenoberfläche definieren Blutgruppe
+   - Blutgruppe A: A-Antigen + Anti-B-Antikörper
+   - Blutgruppe B: B-Antigen + Anti-A-Antikörper
+   - Blutgruppe AB: A+B-Antigene, keine Antikörper (Universalempfänger)
+   - Blutgruppe 0: keine Antigene, Anti-A+Anti-B (Universalspender)
+   - Falsche Blutgruppe bei Transfusion → Komplementaktivierung → **hämolytische Transfusionsreaktion**
+3. **Schutz:** Schutzschicht der Epithelzellen gegen Verdauungsenzyme, mechanische Kräfte, Pathogene
+
+> **Merke:** ABO-System = Glykolipide auf Erythrozyten. 0 = keine Antigene (Universalspender), AB = keine Antikörper (Universalempfänger). Falsche Blutgruppe → Hämolyse!
 
 ---
 
@@ -544,9 +665,7 @@ Statine (z.B. Atorvastatin) hemmen die HMG-CoA-Reduktase und senken den Blutchol
 - CFTR ist ein Chloridkanal (nicht ein Transporter!) — deltaF508-Mutation → Fehlfaltung → kein Membraneinbau
 
 **Prüfungsrelevante Zahlen/Fakten:**
-- Flüssig-Mosaik-Modell: Singer & Nicolson, 1972
-- Aquaporine: Peter Agre, Nobelpreis 2003
-- CFTR-Mutation deltaF508: häufigste Mukoviszidose-Mutation (~70% in Europa)
+- CFTR-Mutation ΔF508: häufigste Mukoviszidose-Mutation (~70% in Europa)
 - ABO-Blutgruppen: basieren auf Glykolipiden/Glykoproteinen der Erythrozytenoberfläche
 - Ionenkanäle: schnell, selektiv; Carrier/Transporter: langsamer, sättigbar
 
@@ -554,7 +673,12 @@ Statine (z.B. Atorvastatin) hemmen die HMG-CoA-Reduktase und senken den Blutchol
 
 ## Zusammenfassung
 
-Die Zellmembran ist nach dem Flüssig-Mosaik-Modell eine fluide Phospholipid-Doppelschicht, in der integrale und periphere Proteine lateral beweglich eingebettet sind und Funktionen wie Stofftransport, Signalübertragung und Zellerkennung übernehmen. Phospholipide organisieren sich aufgrund ihres amphiphilen Charakters spontan zur Doppelschicht, wobei Cholesterin als bidirektionaler Fluiditätspuffer fungiert und ungesättigte Fettsäuren durch ihre cis-Doppelbindungen die Membranfluidität erhöhen. Die Glykokalix auf der Membranaußenseite vermittelt Zellerkennung und trägt die ABO-Blutgruppenantigene, während Lipid-Rafts als cholesterinreiche Mikrodomänen Signalproteine konzentrieren. Klinisch bedeutsam sind Membrandefekte wie die CFTR-Mutation bei Mukoviszidose, die ABO-Inkompatibilität bei Transfusionen und die Rolle von LDL-Cholesterin bei der Atherosklerose — Beispiele, die zeigen, wie fundamentales Membranwissen direkt klinische Relevanz hat.`,
+- **Phospholipid-Doppelschicht**: amphiphile Moleküle (hydrophiler Kopf + hydrophobe Schwänze) → spontane Selbstorganisation; semipermeabel — O₂/CO₂ frei, Ionen brauchen Kanäle
+- **Fluidität**: Cholesterin = bidirektionaler Puffer (verhindert Erstarren UND Verflüssigen); ungesättigte Fettsäuren ↑ Fluidität, gesättigte ↓
+- **Integrale Proteine**: durchspannen die Membran (Kanäle, Transporter, Rezeptoren, Pumpen); nicht ablösbar ohne Detergenzien
+- **Periphere Proteine**: nur an Oberfläche, leichter ablösbar (GPI-Anker, Myristylierung)
+- **Glykokalix**: Kohlenhydratschicht außen — ABO-Blutgruppenantigene (Glykolipide), Zellerkennung, Immunschutz
+- **Klinisch**: CFTR ΔF508 → Mukoviszidose (Fehlfaltung → kein Cl⁻-Kanal); ABO-Inkompatibilität → hämolytische Transfusionsreaktion; LDL → Atherosklerose`,
       lernziele: [
         "Das Flüssig-Mosaik-Modell mit allen Komponenten (Phospholipide, Cholesterin, Membranproteine, Glykokalix) erklären",
         "Die Rolle von Cholesterin und Fettsäurezusammensetzung für die Membranfluidität beschreiben",
@@ -683,138 +807,114 @@ Die Zellmembran ist nach dem Flüssig-Mosaik-Modell eine fluide Phospholipid-Dop
     {
       id: "bio-1-04",
       title: "Zellorganellen — Funktion und medizinische Relevanz",
-      content: `## Überblick
+      content: `## Einleitung
 
-Zellorganellen sind die spezialisierten Funktionseinheiten eukaryotischer Zellen — von den Mitochondrien als Kraftwerke über das ER als Proteinfabrik bis zu den Lysosomen als Recyclinganlagen. Ihre Struktur und Funktion gehören zum absoluten Kernstoff des MedAT-BMS, wobei insbesondere Mitochondrien (Endosymbiontentheorie, Atmungskette), der sekretorische Weg (ER → Golgi → Lysosom) und lysosomale Speicherkrankheiten regelmäßig geprüft werden.
-
-**Das Wichtigste auf einen Blick:**
-- Mitochondrien: Doppelmembran, Cristae, eigene zirkuläre DNA (70S-Ribosomen), ATP-Synthese via OXPHOS
-- ER: raues ER (Ribosomen, Proteinsynthese) vs. glattes ER (Lipidsynthese, Detox, Ca²⁺-Speicher)
-- Golgi-Apparat: Proteinmodifikation, Sortierung (Mannose-6-Phosphat → Lysosom)
-- Lysosomen: saure Hydrolasen (pH 4,5), Autophagie/Heterophagie; Defekte → Speicherkrankheiten
-- Peroxisomen: VLCFA-Abbau, Katalase; Defekt → Zellweger-Syndrom
-- Proteasomen: Ubiquitin-markierte Proteine abbauen (Bortezomib als Myelom-Therapie)
+Stell dir eine Fabrik vor: Sie hat Produktionshallen (ER), eine Poststelle (Golgi), ein Kraftwerk (Mitochondrien), einen Recyclinghof (Lysosomen) und eine Qualitätskontrolle (Proteasomen). Genau so funktioniert eine eukaryotische Zelle — durch **Kompartimentierung** in spezialisierte Organellen. Jedes Organell hat eine definierte Aufgabe, eigene Enzyme und ein eigenes Milieu. Ohne diese Arbeitsteilung wären die Komplexität des Lebens und damit die Medizin undenkbar. Für den MedAT sind der sekretorische Weg (rER → Golgi → Lysosom), Mitochondrien (Endosymbiontentheorie, ATP-Synthese), lysosomale Speicherkrankheiten und das Ubiquitin-Proteasom-System prüfungsrelevant.
 
 ---
 
-## Historischer Kontext
-
-Die systematische Erforschung der Zellorganellen wurde durch die Entwicklung der Elektronenmikroskopie in den 1930–50er Jahren ermöglicht. George Palade (Nobelpreis 1974) entschlüsselte den sekretorischen Weg vom rauen ER über den Golgi-Apparat zur Plasmamembran — das "Palade-Pathway". Christian de Duve entdeckte 1955 die Lysosomen bei der Aufreinigung von Enzymen aus Rattenlebern und prägte den Begriff "Lysosom". Die Endosymbiontentheorie (Lynn Margulis, 1967) erklärt den evolutionären Ursprung von Mitochondrien und Chloroplasten aus endosymbiontischen Bakterien — unterstützt durch ihre eigene zirkuläre DNA und 70S-Ribosomen.
+## Übersicht: Organellen auf einen Blick
 
 | Organell | Membran | Hauptfunktion | Klinischer Bezug |
-| --- | --- | --- | --- |
-| Mitochondrien | Doppel | ATP (OXPHOS), Apoptose | MELAS, Cytochrom-c-Freisetzung |
+|---|---|---|---|
+| Mitochondrien | Doppel | ATP (OXPHOS), Apoptose | MELAS, Cytochrom-c |
 | Raues ER | Einfach | Proteinsynthese, N-Glykosylierung | ER-Stress → Diabetes |
-| Glattes ER | Einfach | Lipidsynthese, Detox, Ca²⁺ | CYP450-Metabolismus |
-| Golgi | Einfach | Sortierung (M6P), O-Glykosylierung | I-Zell-Krankheit |
+| Glattes ER | Einfach | Lipidsynthese, Detox, Ca²⁺-Speicher | CYP450 (Leber) |
+| Golgi-Apparat | Einfach | Sortierung (M6P), O-Glykosylierung | I-Zell-Krankheit |
 | Lysosomen | Einfach | Abbau (pH 4,5), Autophagie | Gaucher, Tay-Sachs |
-| Peroxisomen | Einfach | VLCFA-Abbau, Katalase | Zellweger-Syndrom |
-| Proteasomen | Keine | Ubiquitin-Abbau, MHC-I | Bortezomib (Myelom) |
+| Peroxisomen | Einfach | VLCFA-Abbau, H₂O₂-Abbau | Zellweger-Syndrom |
+| Proteasomen | Keine | Ubiquitin-markierte Proteine abbauen | Bortezomib (Myelom) |
+| Zentrosom | Keine | Spindelapparat bei Mitose | Ziliendyskinesie |
 
 ---
 
-## Mitochondrien — Das Kraftwerk der Zelle
+## Der sekretorische Weg: rER → Golgi → Ziel
 
-**Struktur:** Doppelmembranorganell (Ø 0,5–2 µm). Äußere Membran: glatt, permeabel für kleine Moleküle (Porin-Kanäle). Innere Membran: stark gefaltet zu **Cristae** → riesige Oberflächenvergrößerung für die Atmungskette. Der Raum zwischen beiden Membranen heißt **Intermembranraum**. Das innere Kompartiment ist die **Matrix**.
+Proteine, die für Membranen, Lysosomen oder die Sekretion (Hormone, Antikörper) bestimmt sind, durchlaufen den **sekretorischen Weg** in drei Stationen:
 
-**Funktion:** ATP-Synthese via oxidative Phosphorylierung (OXPHOS):
-1. **Glykolyse** (Zytoplasma): Glucose → 2 Pyruvat + 2 ATP + 2 NADH
-2. **Pyruvat-Dehydrogenase** (Mitochondrien-Matrix): Pyruvat → Acetyl-CoA + CO₂ + NADH
-3. **Citratzyklus** (Matrix): Acetyl-CoA → CO₂ + 3 NADH + 1 FADH₂ + 1 GTP
-4. **Atmungskette** (innere Membran): NADH + FADH₂ → Elektronen → Protonengradient → ATP-Synthase → ATP
+**1. Raues ER (rER) — Proteinfabrik:**
+- Mit Ribosomen besetzt → Co-translationale Proteinsynthese
+- **N-Glykosylierung**: Zuckerketten werden an Asparagin-Reste angehängt (Qualitätsmerkmal)
+- **Qualitätskontrolle**: Chaperone (Calnexin, Calreticulin) überprüfen Faltung; fehlgefaltete Proteine → ERAD (ER-assoziierter Abbau durch Proteasomen)
+- **ER-Stress**: Bei Überflutung mit fehlgefalteten Proteinen → Unfolded Protein Response (UPR) → bei Überlastung → Apoptose (relevant bei Typ-2-Diabetes: ER-Stress in β-Zellen)
 
-Pro Glucose: ~30–32 ATP (aerob) vs. 2 ATP (anaerob).
-
-**Besonderheiten (Endosymbiontentheorie):**
-- Eigene **zirkuläre mtDNA** (maternale Vererbung!) codiert ~13 Proteine
-- **70S-Ribosomen** (wie Bakterien, nicht 80S wie Zytoplasma-Ribosomen)
-- **Binäre Fission** (nicht Mitose)
-- Empfindlich gegenüber Antibiotika (Chloramphenicol → mitochondriale Toxizität)
-
-**Medizin:** Mitochondriale Erkrankungen (z.B. MELAS, Leber'sche Optikusneuropathie) durch mtDNA-Mutationen. Apoptose: Cytochrom c-Freisetzung aus Mitochondrien → Caspase-Aktivierung.
-
-## Endoplasmatisches Retikulum (ER)
-
-**Raues ER (rER):**
-- Mit **Ribosomen** besetzt → Proteinsynthese
-- Funktion: Synthese und Co-translationale Modifikation von Membranproteinen, Sekretproteinen, Lysosomenproteinen
-- **N-Glykosylierung** im rER: Oligosaccharid-Vorstufe auf Asn-Reste (NXS/T-Sequon)
-- **Qualitätskontrolle:** Fehlgefaltete Proteine → Calnexin/Calreticulin-Chaperone → ERAD (ER-assoziierter Abbau)
-- Klinisch: **ER-Stress** → Unfolded Protein Response (UPR) → bei Überlastung → Apoptose (z.B. Typ-2-Diabetes: ER-Stress in β-Zellen)
-
-**Glattes ER (gER):**
+**2. Glattes ER (gER) — Lipidsynthese und Entgiftung:**
 - Ohne Ribosomen
-- Funktion: **Lipidsynthese** (Phospholipide, Steroide, Cholesterin), **Detoxifikation** (CYP450-Enzyme in Leberzellen), **Ca²⁺-Speicher** (IP3 → Ca²⁺-Freisetzung → Signalkaskade)
-- Stark ausgeprägt in: Leberzellen (Detox), Steroidhormon-produzierenden Zellen (Zona fasciculata der Nebenniere), Muskelzellen (Sarkoplasmatisches Retikulum = spezialisiertes gER)
+- **Lipidsynthese**: Phospholipide, Steroide, Cholesterin
+- **Detoxifikation**: CYP450-Enzyme in Leberzellen oxidieren Pharmaka, Toxine, Steroide
+- **Ca²⁺-Speicher**: IP3 → Ca²⁺-Freisetzung → intrazelluläre Signalkaskade (Muskelkontraktion, Sekretion)
+- Sarkoplasmatisches Retikulum in Muskelzellen = spezialisiertes gER
 
-## Golgi-Apparat — Die Zellpoststelle
+**3. Golgi-Apparat — Sortierung und Modifikation:**
+- Gestapelte Membransäcke: Cis-Seite (ER-nah) → medial → Trans-Seite (Membran-nah)
+- **Proteinmodifikation**: O-Glykosylierung (an Serin/Threonin), weitere Zuckermodifikationen
+- **Schlüssel für Lysosomales Targeting**: Mannose-6-Phosphat (M6P) wird angehängt → M6P-Rezeptor → Transport zu Lysosomen
+- **Sekretion**: reguliert (auf Signal, z.B. Insulin aus Granula) vs. konstitutiv (immer)
 
-**Struktur:** Gestapelte Membransäcke (Dictyosomen). Cis-Seite (ER-zugewandt) → Medial → Trans-Seite (Plasmamembran-zugewandt). Vesikeltransport: COPII (ER→Golgi), COPI (Golgi→ER, retrograd), Clathrin (Trans-Golgi→Lysosomen/PM).
+**Klinisch — I-Zell-Krankheit (Mukolipidose II):** Defektes M6P-Tagging → lysosomale Enzyme landen im Blut statt im Lysosom → Substratakkumulation in Zellen.
 
-**Funktion:**
-- **Proteinmodifikation:** O-Glykosylierung (Ser/Thr), Phosphorylierung (Mannose-6-Phosphat → Lysosom-Targeting!)
-- **Proteinsortierung:** Mannose-6-Phosphat-Rezeptor leitet Lysosom-Enzyme zum Lysosom
-- **Lipidsynthese:** Sphingolipide, Glykosphingolipide
-- **Sekretion:** Konstitutiv (immer) vs. reguliert (auf Signal, z.B. Insulinfreisetzung)
+> **Merke:** rER → Golgi → Lysosom: N-Glykosylierung im ER, M6P-Tag im Golgi als Adresse für Lysosomen. M6P fehlt → I-Zell-Krankheit.
 
-**Klinisch:** I-Zell-Krankheit (Mukolipidose II): defektes Mannose-6-Phosphat-Tagging → lysosomale Enzyme landen extrazellulär statt im Lysosom → Akkumulation von Substraten.
+---
 
-## Lysosomen — Recyclinganlagen der Zelle
+## Mitochondrien — Kraftwerk und Endosymbiont
 
-**Entstehung:** Trans-Golgi-Netzwerk → frühe Endosomen → späte Endosomen → Lysosomen. Saures Milieu (pH 4,5–5) durch H⁺-ATPase in der Membran.
+**Struktur:**
+- **Äußere Membran**: glatt, permeabel für kleine Moleküle (Porin-Kanäle)
+- **Innere Membran**: tief gefaltet zu **Cristae** → enorme Oberflächenvergrößerung für die Atmungskette
+- **Intermembranraum**: zwischen beiden Membranen (H⁺ werden hierhin gepumpt)
+- **Matrix**: innerster Bereich — hier läuft der Citratzyklus
 
-**Inhalt:** >50 saure Hydrolasen (Proteasen, Nukleasen, Lipasen, Glykosidasen, Sulfatasen, Phosphatasen) — alle optimiert für pH ~5.
+**Funktion (ATP-Synthese):**
+Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (Matrix) → NADH/FADH₂ → Atmungskette (innere Membran) → Protonengradient → ATP-Synthase → **~30–32 ATP pro Glucose** (aerob, vs. 2 ATP anaerob)
 
-**Funktionen:**
-- **Autophagie:** Abbau defekter Zellorganellen (Autophagosomen → Autolysosom)
-- **Heterophagie:** Abbau von durch Endozytose aufgenommenen Stoffen (Bakterien, Partikel → Phagolysosom)
-- **Rezeptorrecycling:** EGF-Rezeptor wird nach Aktivierung internalisiert und lysosomal degradiert
-- **Knochenresorption:** Osteoklasten sezernieren lysosomale Enzyme extrazellulär
+**Apoptose:** Bei Zellstress → Cytochrom c wird aus Mitochondrien ins Zytoplasma freigesetzt → Apoptosom → Caspase-9/3-Aktivierung → kontrollierter Zelltod
 
-**Lysosomale Speicherkrankheiten** (wenn Hydrolasen fehlen → Substratakkumulation):
-| Krankheit | Defektes Enzym | Akkumulierendes Substrat |
-|-----------|---------------|------------------------|
-| Morbus Gaucher | Glukozerebrosidase | Glukozerebrosid |
-| Morbus Tay-Sachs | Hexosaminidase A | GM2-Gangliosid |
-| Morbus Pompe | α-Glukosidase | Glykogen |
-| Niemann-Pick Typ C | NPC1-Protein | Cholesterin |
+**Endosymbiontentheorie — 5 Belege:**
+1. Eigene **zirkuläre mtDNA** (~16.500 bp, kodiert 13 Proteine)
+2. **70S-Ribosomen** (bakteriell, nicht 80S)
+3. **Doppelmembran** (innere = ehemalige Bakterienmembran)
+4. **Binäre Fission** (nicht Mitose)
+5. **Antibiotika-Empfindlichkeit** (Chloramphenicol → aplastische Anämie bei hoher Dosis)
 
-## Peroxisomen
+**Maternale Vererbung:** mtDNA kommt ausschließlich aus dem Ei → mitochondriale Erkrankungen (MELAS, Leber-Optikusneuropathie) werden maternal vererbt.
 
-**Funktion:** β-Oxidation von **very long chain fatty acids** (VLCFA >C22), H₂O₂-Produktion und -Abbau (Katalase: 2H₂O₂ → 2H₂O + O₂), Synthese von Plasmalogenen (Ether-Phospholipiden, wichtig für Myelinisierung).
+> **Merke:** Cristae = gefaltete innere Membran = Ort der Atmungskette. Mitochondrien = 5 Bakterien-Belege. Cytochrom c frei → Apoptose.
 
-**Klinisch:** Zellweger-Syndrom (Peroxisom-Biogenese-Defekt) → VLCFA-Akkumulation → schwere neurologische Schäden. Adrenoleukodystrophie (ALD): X-chromosomal, ABCD1-Transporter-Defekt → VLCFA-Akkumulation im ZNS.
+---
 
-## Ribosomen
+## Lysosomen, Peroxisomen und Proteasomen: Abbau und Recycling
 
-**Freie Ribosomen** (Zytoplasma): Synthese zytosolischer Proteine, mitochondrialer Import-Proteine, nukleärer Proteine.
-**Membrangebundene Ribosomen** (rER): Sekretorische Proteine, Membranproteine, lysosomale Enzyme.
-**Mitochondriale Ribosomen** (70S): ~13 Proteine der Atmungskette.
+**Lysosomen — zellulärer Recyclinghof:**
+- Entstehen aus dem Trans-Golgi-Netzwerk; pH 4,5–5 durch H⁺-ATPase in der Membran
+- Enthalten >50 **saure Hydrolasen** (Proteasen, Lipasen, Glykosidasen — alle optimiert für pH ~5)
+- **Autophagie**: eigene defekte Organellen werden in Autophagosomen verpackt → Fusion mit Lysosom → Abbau
+- **Heterophagie**: aufgenommene Bakterien/Partikel (Phagolysosom), Rezeptor-Recycling
 
-Zusammensetzung in Eukaryoten: 80S = 40S (kleine UE) + 60S (große UE). Unterschied zu Prokaryoten: 70S = 30S + 50S. Klinische Relevanz: Antibiotika-Targets (Aminoglykoside, Tetracycline, Makrolide, Chloramphenicol).
+**Lysosomale Speicherkrankheiten** (fehlendes Enzym → Substrat akkumuliert):
 
-## Proteasomen
+| Krankheit | Defektes Enzym | Substrat | Symptome |
+|---|---|---|---|
+| Morbus Gaucher | Glukozerebrosidase | Glukozerebrosid | Hepatosplenomegalie, Knochenschmerzen |
+| Morbus Tay-Sachs | Hexosaminidase A | GM2-Gangliosid | Neurodegeneration, kirschroter Fleck |
+| Morbus Pompe | α-Glukosidase | Glykogen | Myopathie, Herzinsuffizienz |
+| Niemann-Pick C | NPC1-Protein | Cholesterin | Neurodegeneration |
 
-**Proteasomen** sind zytoplasmatische Multiproteasekomplexe zum Abbau fehlgefalteter, beschädigter oder regulatorisch überflüssiger Proteine. Keine Membranorganellen — reine Proteinkomplexe mit enzymatischer Funktion.
+**Peroxisomen:**
+- Einmembranorganellen; entstehen durch Teilung oder de-novo aus ER
+- Funktion: **β-Oxidation sehr langkettiger Fettsäuren (VLCFA >C22)**, H₂O₂-Abbau durch **Katalase** (2H₂O₂ → 2H₂O + O₂), Plasmalogen-Synthese (Myelinisierung)
+- Klinisch: **Zellweger-Syndrom** (Peroxisom-Biogenese-Defekt) → VLCFA ↑ → schwere Neurodegeneration; **Adrenoleukodystrophie (ALD)** (X-chromosomal, ABCD1-Defekt) → VLCFA im ZNS
 
-**Aufbau:**
-- **20S-Kernkomplex:** Fassförmige Struktur aus 4 gestapelten Ringen (α-β-β-α). Die β-Untereinheiten tragen die katalytischen Zentren (Chymotrypsin-, Trypsin- und Caspase-ähnliche Aktivität).
-- **26S-Proteasom:** 20S-Kern + 2× 19S-regulatorische Partikel (Kappen). Die 19S-Kappe erkennt Ubiquitin-Ketten, entfaltet das Substrat (AAA⁺-ATPasen) und öffnet den 20S-Kanal.
+**Proteasomen — molekulare Schredder:**
+- Keine Membranorganellen; zytosolische Proteinkomplexe (26S = 20S-Kern + 2×19S-Kappen)
+- Abbau von: fehlgefalteten Proteinen, regulatorischen Proteinen (Cycline!), Entzündungsmediatoren
+- **Ubiquitin-System**: fehlgefaltete Proteine werden durch Polyubiquitin-Ketten (Lys48) markiert → 26S-Proteasom erkennt Ubiquitin → entfaltet und zerlegt Protein in ~8 AS-Peptide
+- Klinisch:
+  - **MHC-I-Antigenpräsentation**: Peptide aus dem Proteasom werden auf MHC-I geladen → Erkennung durch CD8⁺-T-Zellen
+  - **Bortezomib** (Proteasom-Inhibitor) beim multiplen Myelom → fehlgefaltete Myelomproteine akkumulieren → Apoptose
+  - **CFTR-ΔF508** bei Mukoviszidose: fehlgefaltetes CFTR wird durch ERAD + Proteasom abgebaut → kein Cl⁻-Kanal in der Membran
 
-**Ubiquitin-Proteasom-System (UPS):**
-Proteine werden durch eine Polyubiquitin-Kette (≥4 Ubiquitin über Lys48) für den Abbau markiert. Drei Enzymklassen: E1 (Ubiquitin-aktivierend), E2 (konjugierend), E3 (Ligase, substratspezifisch). Das Proteasom zerlegt das Protein in kurze Peptide (~8 AS).
-
-**Klinische Bedeutung:**
-- **Immunologie:** MHC-I-Präsentation — intrazelluläre Peptide für zytotoxische T-Zellen werden im Immunoproteasom (IFN-γ-induzierbar) generiert
-- **ERAD:** Fehlgefaltete ER-Proteine werden via Ubiquitin markiert und proteasomal abgebaut (ΔF508-CFTR bei Mukoviszidose → ERAD → kein Cl⁻-Kanal → Mukoviszidose)
-- **Krebstherapie:** Proteasom-Inhibitoren (Bortezomib) beim multiplen Myelom → Akkumulation fehlgefalteter Proteine → Apoptose von Tumorzellen
-- **Zellzyklus:** Cyclin-Abbau durch APC/C (E3-Ubiquitin-Ligase) → Proteasom → Phasenwechsel; Securin-Abbau → Separase-Aktivierung → Anaphase
-
-## Zytoskelett-assoziierte Strukturen
-
-**Zentrosom:** Aus 2 Zentriolen (9+0 Mikrotubuli-Triplets) + PCM (Pericentrioläres Material). Funktion: Organisiert Mikrotubuli-Spindelapparat bei Mitose. Fehlt in reifen Erythrozyten und Thrombozyten.
-
-**Zilien & Flagellen:** 9+2-Axonema-Struktur. Zilien: Mukozilientransport (respiratorisches Epithel), Eileiter. Flagellum: Spermienmotilität. Klinisch: Primäre Ziliäre Dyskinesie (PZD) → Kartagener-Syndrom (Situs inversus + chronische Bronchitis + Infertilität).
+> **Merke:** Lysosom = saures Milieu pH 4,5, saure Hydrolasen. Fehlendes Lysosom-Enzym → Speicherkrankheit. Proteasom + Ubiquitin = Zellmüllentsorgung; Bortezomib blockiert das beim Myelom.
 
 ---
 
@@ -843,7 +943,12 @@ Proteine werden durch eine Polyubiquitin-Kette (≥4 Ubiquitin über Lys48) für
 
 ## Zusammenfassung
 
-Eukaryotische Zellen sind durch Kompartimentierung in spezialisierte Organellen gegliedert, wobei Mitochondrien als Doppelmembranorganellen mit eigener zirkulärer DNA und 70S-Ribosomen die ATP-Synthese via oxidative Phosphorylierung an ihrer inneren Membran (Cristae) durchführen — ein evolutionäres Erbe ihres bakteriellen Ursprungs gemäß der Endosymbiontentheorie. Das raue ER synthetisiert Proteine für den sekretorischen Weg, die über den Golgi-Apparat modifiziert, mit Mannose-6-Phosphat markiert und zu den Lysosomen sortiert werden, wo über 50 saure Hydrolasen bei pH 4,5 den Abbau von Makromolekülen übernehmen — fehlt eine dieser Hydrolasen, resultieren lysosomale Speicherkrankheiten wie Morbus Gaucher oder Tay-Sachs. Peroxisomen bauen langkettige Fettsäuren (VLCFA) ab und entgiften Wasserstoffperoxid mittels Katalase, während das Ubiquitin-Proteasom-System fehlgefaltete Proteine gezielt abbaut und damit sowohl für die MHC-I-Antigenpräsentation als auch als therapeutisches Target (Bortezomib beim multiplen Myelom) klinisch bedeutsam ist.`,
+- **Sekretorischer Weg**: rER (Proteinsynthese + N-Glykosylierung) → Golgi (M6P-Tag + O-Glykosylierung) → Lysosom; I-Zell-Krankheit: M6P fehlt → Enzyme extrazellulär
+- **Mitochondrien**: Doppelmembran, Cristae (innere Membran = Ort der Atmungskette), ~30–32 ATP/Glucose; Endosymbiontenbeweis: zirkuläre DNA + 70S + Doppelmembran + binäre Fission + Antibiotika-Empfindlichkeit
+- **Lysosomale Speicherkrankheiten**: fehlendes Lysosom-Enzym → Substrat akkumuliert (Gaucher: Glukozerebrosidase; Tay-Sachs: Hexosaminidase A; Pompe: α-Glukosidase)
+- **Peroxisomen**: VLCFA-Abbau + Katalase; Defekt → Zellweger-Syndrom / ALD
+- **Proteasomen**: Ubiquitin-markierte Proteine → 26S-Abbau → Peptide für MHC-I; Bortezomib hemmt → Myelom-Therapie
+- **Cave Glykolyse**: findet im Zytoplasma statt (nicht in Mitochondrien!)`,
       stichworte: [
         "Mitochondrien",
         "Endoplasmatisches Retikulum",
@@ -976,59 +1081,95 @@ Eukaryotische Zellen sind durch Kompartimentierung in spezialisierte Organellen 
         "Barr-Körper",
         "NLS/NES-Transport",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Der Zellkern ist die Steuerzentrale der eukaryotischen Zelle — er enthält das Genom, kontrolliert die Genexpression und reguliert über Kernporen den gesamten Transport zwischen Kern und Zytoplasma. Für den MedAT sind insbesondere der Aufbau der Kernhülle, die hierarchische Chromatinverpackung (Nukleosom → Chromosom), der selektive Kernporenkomplex-Transport und die Funktion des Nucleolus prüfungsrelevant. Klinisch bedeutsam sind Erkrankungen wie Progeria (Kernlamina-Defekt), die epigenetische Regulation durch Histon-Modifikationen und die Nutzung von Kernporen durch Viren wie HIV.
-
-**Das Wichtigste auf einen Blick:**
-- Kernhülle: Doppelmembran mit Kernporen (NPCs), äußere Membran = ER-Kontinuum
-- Kernporen: <40 kDa frei, >40 kDa nur mit NLS (Import) oder NES (Export); RanGTP-Gradient treibt Transport
-- Chromatin: Nukleosom (147 bp DNA um Histon-Oktamer) → hierarchische Kompaktierung
-- Euchromatin (acetyliert, aktiv) vs. Heterochromatin (methyliert, inaktiv); Barr-Körper = inaktives X
-- Nucleolus: rRNA-Synthese + Ribosomen-Assemblierung; groß bei proliferierenden Zellen (Malignitätsmerkmal)
-- Kernlamina (Lamine): Defekt → Progeria (Hutchinson-Gilford-Syndrom)
+Warum können Körperzellen nur im Körper existieren, nicht aber eigenständig überleben? Weil der Zellkern sämtliche Informationen enthält, aber diese Information nur innerhalb des komplexen zellulären Systems umgesetzt werden kann. Der Kern ist das Informationszentrum der Zelle: Er bewahrt das Erbgut, kontrolliert, welche Gene wann aktiv sind, und reguliert über Kernporen, welche Moleküle in die Zelle gelangen oder aus ihr heraus. Das Grundprinzip: **räumliche Trennung** von Transkription (Kern) und Translation (Zytoplasma) ermöglicht die umfangreiche Prozessierung der RNA — ein eukaryotisches Alleinstellungsmerkmal. Für den MedAT sind Kernhülle, Kernporen (NLS/NES), Chromatinverpackung (Nukleosom, Euchromatin/Heterochromatin), Nucleolus und Progeria prüfungsrelevant.
 
 ---
 
-## Historischer und klinischer Kontext
+## Kernhülle und Kernporen: die selektive Schleuse
 
-Der Zellkern wurde 1831 von Robert Brown beschrieben. Die funktionelle Bedeutung als "Steuerzentrale" wurde erst im 20. Jahrhundert durch Kernübertragungsexperimente bewiesen: Ein enukleiertes Ei, dem ein fremder Kern eingesetzt wird, entwickelt sich gemäß dem transplantierten Kern (Gurdon, Nobelpreis 2012). Die Entdeckung der Kernporen als selektive Tore wurde durch Elektronenmikroskopie in den 1950er Jahren ermöglicht. Die Entdeckung von Laminen und ihre Rolle bei der Progeria (Hutchinson-Gilford-Syndrom) zeigte die medizinische Relevanz der Kernstruktur. HIV und andere Viren nutzen den Kernporenkomplex aktiv für den Import viraler DNA – ein therapeutisches Angriffsziel.
+Der Zellkern ist von einer **Doppelmembran** (Kernhülle) umhüllt:
+- **Äußere Kernmembran**: direkt verbunden mit dem rauen ER (trägt ebenfalls Ribosomen)
+- **Innere Kernmembran**: innen ausgekleidet durch die **Kernlamina** (Netz aus Lamin-Intermediärfilamenten → mechanische Stütze + Heterochromatin-Verankerung)
+- **Perinukleärer Spalt**: Raum zwischen beiden Membranen (kontinuierlich mit ER-Lumen)
 
-**Lernziele:**
-- Die Struktur des Zellkerns (Kernhülle, Kernporen, Kernlamina, Nucleolus) vollständig beschreiben
-- Chromatin-Kompaktierung hierarchisch erklären und Euchromatin/Heterochromatin unterscheiden
-- Den Import/Export durch Kernporen (NLS, NES, Importine, Ran-GTPase) beschreiben
-- Die Funktion des Nucleolus und klinische Relevanz von Kernstrukturen (Progeria, HIV) erläutern
+**Kernporenkomplexe (NPC):**
+- Einzige Kommunikationskanäle zwischen Kern und Zytoplasma
+- Aufbau: ~30 verschiedene Nucleoporine, ~120 MDa
+- **Freie Diffusion**: Moleküle <40 kDa (Ionen, kleine Proteine, Metabolite)
+- **Aktiver Transport** (>40 kDa): braucht ein "Ticket"
 
----
+**Kernimport und -export:**
+- **NLS** (Nuclear Localization Signal): basische Aminosäuren (Lys, Arg) → wird von **Importin-α** erkannt → Importin-α/β-Komplex trägt Protein durch NPC → im Kern: RanGTP bindet Importin → Cargo-Dissoziation
+- **NES** (Nuclear Export Signal): hydrophobe Sequenz → wird von Exportin (CRM1) gebunden → Export ins Zytoplasma
+- **RanGTPase-Gradient**: RanGTP (Kern) ↔ RanGDP (Zytoplasma) treibt den gerichteten Transport; RanGAP im Zytoplasma hydrolysiert GTP → Zyklus
 
-## Kernhülle und Kernporen: selektive Barriere
+**Klinisch:** HIV nutzt das NLS seines Preintegrationskomplexes (PIC) + Importin-α/β → Kerntransport → Integration ins Wirtsgenom. HIV-Integrase-Inhibitoren (Dolutegravir) blockieren diesen Schritt.
 
-Die doppelte Kernmembran trennt das Nukleoplasma vom Zytoplasma. Kernporenkomplexe (NPCs) sind die einzigen Kommunikationskanäle zwischen diesen Kompartimenten. Ein NPC besteht aus ~30 verschiedenen Nucleoporinen und bildet einen selektiven wässrigen Kanal. Kleine Moleküle (<40 kDa) diffundieren frei; größere Moleküle werden aktiv transportiert. Proteine benötigen ein NLS (Kernlokalisierungssignal) – basische Aminosäuren (Lys, Arg), die von Importin-alpha erkannt werden. mRNA verlässt den Kern als mRNP-Komplex. Der Ran-GTPase-Gradient (RanGTP im Kern, RanGDP im Zytoplasma) treibt den gerichteten Transport: Importine laden im Zytoplasma, entladen im Kern (RanGTP bindet Importin → Cargo-Dissoziation).
-
-> **Merke:** Kernporen: <40 kDa frei, >40 kDa nur mit NLS (Import) oder NES (Export). RanGTP-Gradient treibt Transport.
-
----
-
-## Chromatin: DNA verpackt und reguliert
-
-Das menschliche Genom (3,2 Milliarden Basenpaare pro haploidem Satz) würde ausgestreckt ca. 2 Meter messen. Es muss in einen ~6 µm großen Zellkern passen – Kompaktierung ~10.000-fach. Hierarchische Verpackung: Nukleosom (DNA um Histon-Oktamer, ~10 nm) → 30 nm-Faser → Schleifen → Chromatin-Kompartimente (Hi-C-Daten). Histon-Modifikationen (Azetylierung durch HATs → offenes Euchromatin → aktive Transkription; Deazetylierung durch HDACs → Heterochromatin → Stille) regulieren die Zugänglichkeit für Transkriptionsfaktoren (Epigenetik). HDAC-Inhibitoren (Vorinostat) werden therapeutisch eingesetzt.
-
-> **Merke:** Nukleosom = 147 bp DNA um Histon-Oktamer (H2A, H2B, H3, H4, je 2×). Grundeinheit der Chromatinverpackung.
+> **Merke:** Kernporen: <40 kDa frei, >40 kDa nur mit NLS (Import) oder NES (Export). Äußere Kernmembran = Fortsatz des rauen ER. Kernlamina = Lamine (nicht Aktin!).
 
 ---
 
-## Nucleolus und Ribosomensynthese
+## Chromatin: 2 Meter DNA in 6 µm verpackt
 
-Der Nucleolus ist eine membranlose Kondensatstruktur (Phasenseparation), organisiert um rRNA-Gene. RNA-Pol I synthetisiert 45S-prä-rRNA → Prozessierung zu 28S, 18S, 5.8S rRNA → Assemblierung mit ribosomalen Proteinen (aus dem Zytoplasma importiert) → Export der 40S- und 60S-Vorläufer durch Kernporen. Tumorzellen mit hoher Proliferationsrate haben prominente Nucleoli – wichtiges histopathologisches Malignitätsmerkmal. Nukleolus-Stress (rRNA-Synthesehemmung) aktiviert p53 durch Freisetzung von Nucleophosmin (NPM1) → Zellzyklus-Arrest.
+Das menschliche Genom umfasst 3,2 Milliarden Basenpaare — ausgestreckt ca. **2 Meter**. Es muss in einen ~6 µm großen Zellkern passen: **~10.000-fache Kompaktierung**.
 
-> **Merke:** Großer Nucleolus = viel Proteinsynthese (viele Ribosomen) = Zeichen aktiver/proliferierender Zellen. Wichtiges Malignitätsmerkmal!
+**Hierarchische Verpackung:**
+1. **Nukleosom** (~10 nm): 147 bp DNA um Histon-Oktamer (je 2× H2A, H2B, H3, H4) gewickelt — wie "Perlen auf einer Schnur"
+2. **Chromatinfaser** (~30 nm): Nukleosomen kompaktieren durch Histon H1 und Protein-Protein-Wechselwirkungen
+3. **Schleifen und Domänen**: regulatorische Einheiten (TADs — Topologically Associating Domains)
+4. **Metaphasechromosom**: maximale Kompaktierung (sichtbar in Mitose)
+
+**Epigenetische Regulation — Euchromatin vs. Heterochromatin:**
+
+| | Euchromatin | Heterochromatin |
+|---|---|---|
+| Struktur | weniger kompakt | stark kompakt |
+| Histone | acetyliert (HAT) | methyliert (HMT) |
+| Transkription | aktiv | inaktiv |
+| Lage | Kerninneres | an Kernhülle |
+| Beispiel | aktive Gene | Barr-Körper, Satelliten-DNA |
+
+**Histon-Modifikationen:**
+- **Acetylierung** (durch HAT, Histon-Acetyltransferasen): neutralisiert positive Histon-Ladung → DNA-Histon-Wechselwirkung ↓ → Chromatin öffnet sich → Transkription möglich
+- **Deacetylierung** (durch HDAC, Histon-Deacetylasen): Chromatin schließt sich → Gensilencing
+- **HDAC-Inhibitoren** (Vorinostat, Romidepsin): epigenetische Krebstherapie — öffnen Heterochromatin → Tumorsuppressor-Gene reaktivieren
+
+**Barr-Körper:** Inaktiviertes X-Chromosom bei XX-Individuen (Lyon-Hypothese: zufällige X-Inaktivierung in jeder somatischen Zelle) → erscheint als dunkles Heterochromatin-Klümpchen am Kernrand. Anzahl Barr-Körper = X-Chromosomenanzahl − 1.
+
+> **Merke:** Nukleosom = 147 bp DNA um Histon-Oktamer (H2A,H2B,H3,H4 je 2×). Acetylierung → offen (aktiv). Methylierung → geschlossen (inaktiv). Barr-Körper = inaktives X.
 
 ---
 
-## Klinischer Bezug
+## Nucleolus: Ribosomenfabrik
 
-Progeria (Hutchinson-Gilford-Syndrom): LMNA-Mutation c.1824C>T erzeugt Progerin, das die Kernlamina destabilisiert. Klinisch: vorzeitige Arteriosklerose, Lipodystrophie, Minderwuchs, Alopezie, Tod mit ~13 Jahren. Lonafarnib (Farnesyltransferase-Hemmer) verhindert die Farnesylierung von Progerin und verlängert das Leben um ~2,5 Jahre. HIV nutzt Importin-alpha/beta für den Kerntransport des Preintegrationskomplexes – LEDGF/p75 als Kofaktor der Integration. HIV-Integrase-Hemmer (Dolutegravir) = Standardtherapie. Prominente Nucleoli in Tumorbiopsien = Hinweis auf hohe Proliferationsaktivität, wichtiges histopathologisches Kriterium bei Prostata-, Nierenzell- und Lymphomdiagnose.
+Der **Nucleolus** ist keine Membranstruktur, sondern ein **Phasenseparations-Kondensatstruktur** (organisiert um rRNA-Gene auf Chromosomen 13, 14, 15, 21, 22).
+
+**Funktion:**
+1. RNA-Polymerase I synthetisiert 45S-prä-rRNA → Prozessierung zu 28S, 18S, 5.8S rRNA
+2. Ribosomale Proteine werden im Zytoplasma synthetisiert → Import in Nucleolus
+3. Assemblierung zu 40S- und 60S-Vorläufer-Untereinheiten
+4. Export durch Kernporen ins Zytoplasma → vollständige 80S-Ribosomen
+
+**Klinisch:**
+- **Großer Nucleolus** = hohe Proliferationsrate = histopathologisches **Malignitätsmerkmal** (Prostata-, Nierenzell-, Lymphomdiagnose)
+- **Nukleolus-Stress**: rRNA-Synthesehemmung → NPM1-Freisetzung → p53-Aktivierung → Zellzyklus-Arrest (Tumorsuppressorweg)
+
+> **Merke:** Nucleolus = Ribosomenfabrik, NICHT membranumschlossen. Groß = viel Proliferation = Malignitätsmerkmal.
+
+---
+
+## Klinisch: Progeria und epigenetische Therapie
+
+**Progeria (Hutchinson-Gilford-Syndrom):**
+- LMNA-Mutation (c.1824C>T) → Progerin (verkürztes Lamin A) → Kernlamina destabilisiert → Kerndeformation
+- Klinisch: vorzeitige Atherosklerose, Lipodystrophie, Minderwuchs, Alopezie, Tod ~13 Jahre
+- Therapie: Lonafarnib (Farnesyltransferase-Inhibitor) verhindert Progerin-Verankerung → verlängert Leben ~2,5 Jahre
+
+**Epigenetische Krebstherapie:**
+- HDAC-Inhibitoren (Vorinostat, Romidepsin): Tumorzellen haben oft hypermethylierte Tumorsuppressor-Gene → HDAC-Inhibitoren öffnen Chromatin → Tumorsuppressor-Reaktivierung → Apoptose
+- Indikation: kutanes T-Zell-Lymphom, Myelom
 
 ---
 
@@ -1051,13 +1192,17 @@ Progeria (Hutchinson-Gilford-Syndrom): LMNA-Mutation c.1824C>T erzeugt Progerin,
 - Kernporen: <40 kDa freie Diffusion, >40 kDa aktiver Transport (NLS/NES)
 - Nukleosom: 147 bp DNA, Histon-Oktamer (H2A, H2B, H3, H4 je 2×)
 - Progeria: LMNA-Mutation, Tod mit ~13 Jahren, Lonafarnib verlängert Leben ~2,5 Jahre
-- rRNA-Gene auf Chromosomen 13, 14, 15, 21, 22 (NOR-Regionen)
 
 ---
 
 ## Zusammenfassung
 
-Der Zellkern als Steuerzentrale der Eukaryotenzelle ermöglicht durch die räumliche Trennung von Transkription (Kern) und Translation (Zytoplasma) eine ausgedehnte mRNA-Prozessierung, wobei der selektive Transport durch Kernporenkomplexe — gesteuert durch NLS/NES-Signale und den RanGTP-Gradienten — den gesamten Informationsfluss zwischen beiden Kompartimenten reguliert. Das menschliche Genom wird im Zellkern durch hierarchische Chromatinverpackung organisiert, beginnend mit dem Nukleosom als Grundeinheit, wobei Histon-Modifikationen epigenetisch steuern, ob Chromatin als transkriptionell aktives Euchromatin (acetyliert) oder als inaktives Heterochromatin (methyliert, z. B. Barr-Körper) vorliegt. Der Nucleolus als membranlose Kondensatstruktur synthetisiert ribosomale RNA und assembliert Ribosomenuntereinheiten — seine Größe korreliert mit der Proliferationsrate und dient histopathologisch als Malignitätsmerkmal. Die klinische Relevanz der Kernstruktur zeigt sich eindrucksvoll bei der Progeria, wo eine LMNA-Mutation zur Kerndeformation und vorzeitiger Alterung führt, sowie bei der epigenetischen Krebstherapie mit HDAC-Inhibitoren, die durch Chromatinöffnung Tumorsuppressor-Gene reaktivieren.`,
+- **Kernhülle**: Doppelmembran; äußere = rER-Kontinuum; innere = Kernlamina (Lamine, nicht Aktin)
+- **Kernporen**: <40 kDa frei; >40 kDa mit NLS (Import via Importin) oder NES (Export via CRM1); RanGTP-Gradient treibt Richtung
+- **Nukleosom**: 147 bp DNA + Histon-Oktamer (H2A,H2B,H3,H4 je ×2) = Grundeinheit der Chromatinverpackung
+- **Euchromatin** (acetyliert, HAT) = offen, aktiv; **Heterochromatin** (methyliert, HDAC) = geschlossen, inaktiv; Barr-Körper = inaktives X
+- **Nucleolus**: Ribosomenfabrik (rRNA + Assemblierung), nicht membranumschlossen; groß = Malignitätsmerkmal
+- **Klinisch**: Progeria (LMNA-Mutation → Kerndeformation); HDAC-Inhibitoren (Vorinostat) reaktivieren Tumorsuppressor-Gene`,
       lernziele: [
         "Die Struktur des Zellkerns (Kernhülle, Kernporen, Kernlamina, Nucleolus) vollständig beschreiben",
         "Chromatin-Kompaktierung hierarchisch erklären und Euchromatin/Heterochromatin unterscheiden",
@@ -1195,16 +1340,9 @@ Der Zellkern als Steuerzentrale der Eukaryotenzelle ermöglicht durch die räuml
         "Cycline",
         "Trisomie",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Der Zellzyklus und die Zellteilung sind fundamentale Prozesse des Lebens: Sie ermöglichen Wachstum, Gewebereparatur und Fortpflanzung. Zwei Formen der Kernteilung existieren: die **Mitose** (für somatische Zellen) und die **Meiose** (für Keimzellen). Ihr Unterschied ist für die MedAT-Prüfung zentral.
-
-**Das Wichtigste auf einen Blick:**
-- Zellzyklus: G1 → S (DNA-Verdopplung) → G2 → M (Mitose) → Zytokinese
-- Mitose: 1 Mutterzelle → 2 identische diploide Tochterzellen (2n → 2n)
-- Meiose: 1 Mutterzelle → 4 genetisch verschiedene haploide Keimzellen (2n → n)
-- Crossing-over in Meiose I = genetische Rekombination
-- Fehler (Non-disjunction) → Trisomien (Down-Syndrom) oder Monosomien
+Jede Sekunde teilt sich im menschlichen Körper die Zelle 3,8 Millionen Mal. Wachstum, Gewebeheilung, Blutbildung — all das erfordert präzise Zellteilung. Zwei Typen existieren: die **Mitose** (identische Kopien für Körperzellen) und die **Meiose** (genetisch verschiedene Keimzellen für die Fortpflanzung). Wenn diese Prozesse fehler gehen, entstehen Chromosomenaberrationen (Down-Syndrom) oder Krebs (Kontrollpunktverlust). Das Grundprinzip: Der Zellzyklus ist ein streng kontrollierter Ablauf mit eingebauten Checkpoints — Sicherheitsschleusen, die Fehler erkennen und korrigieren. Für den MedAT sind Zellzyklus-Phasen, Checkpoints, Mitose- und Meiose-Phasen, Crossing-over und Non-disjunction prüfungsrelevant.
 
 ---
 
@@ -1327,9 +1465,38 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
 
 ---
 
+## Non-disjunction und Chromosomenaberrationen
+
+**Non-disjunction** = fehlerhafte Chromosomentrennung → eine Tochterzelle erhält ein Chromosom zu viel, die andere zu wenig.
+
+**Kann in der Meiose I oder II auftreten:**
+- **Meiose I:** Homologe Chromosomen trennen sich nicht → alle 4 Tochterzellen betroffen
+- **Meiose II:** Schwesterchromatiden trennen sich nicht → 2 von 4 Tochterzellen betroffen (2 normal, 2 mit Aberration)
+
+**Häufige Chromosomenaberrationen:**
+
+| Chromosom | Aberration | Syndrom | Häufigkeit |
+|---|---|---|---|
+| Trisomie 21 | +21 | Down-Syndrom | 1:700, steigt mit Mutteralter |
+| Trisomie 18 | +18 | Edwards-Syndrom | 1:5.000, meist letal |
+| Trisomie 13 | +13 | Patau-Syndrom | 1:10.000, meist letal |
+| 45,X0 | Monosomie X | Turner-Syndrom | 1:2.500 Frauen |
+| 47,XXY | Trisomie X | Klinefelter-Syndrom | 1:1.000 Männer |
+
+**Risikofaktoren:** Mütterliches Alter bei Trisomien (Oozyten werden in Prophase I arretiert und mit dem Alter schlechter kontrolliert). Pränatale Diagnostik: Amniozentese (15.–18. SSW), Chorionzottenbiopsie (10.–12. SSW), nichtinvasive Pränataldiagnostik (NIPD, cell-free fetal DNA ab 10. SSW).
+
+> **Merke:** Trisomie 21 = häufigste Chromosomenaberration Lebendgeborener; Non-disjunction in Meiose I: alle 4 Keimzellen betroffen; in Meiose II: 2 von 4.
+
+---
+
 ## Zusammenfassung
 
-Der Zellzyklus gliedert sich in die Interphase (G1, S, G2) und die M-Phase, wobei Checkpoints an den Übergängen G1/S (Cyclin D/CDK4, Rb-Phosphorylierung) und G2/M (Cyclin B/CDK1) die Zellteilung kontrollieren und deren Defekte zur Krebsentstehung führen. Die Mitose erzeugt durch eine einzige Teilung zwei genetisch identische diploide Tochterzellen (2n → 2n), indem in der Anaphase die Schwesterchromatiden getrennt werden, während die Meiose durch zwei aufeinanderfolgende Teilungen vier genetisch verschiedene haploide Keimzellen (2n → n) hervorbringt — wobei in der Anaphase I die homologen Chromosomen getrennt werden und das Crossing-over in der Prophase I durch DNA-Austausch zwischen Homologen neue Allelkombinationen schafft. Fehler bei der Chromosomentrennung (Non-disjunction) führen zu numerischen Chromosomenaberrationen wie Trisomie 21 (Down-Syndrom), Trisomie 18 (Edwards-Syndrom) oder Monosomie X (Turner-Syndrom), wobei das Risiko mit dem mütterlichen Alter steigt.`,
+- **Zellzyklus**: G1 (Wachstum) → S (DNA-Replikation, 2n→4n DNA) → G2 (Kontrolle) → M (Mitose + Zytokinese)
+- **Checkpoints**: G1/S (Cyclin D/CDK4, Rb-Phosphorylierung → E2F) und G2/M (Cyclin B/CDK1); Verlust → Krebs (p53, Rb)
+- **Mitose** (2n → 2×2n): PMATS — Prophase (Kondensation), Metaphase (Metaphasenplatte), Anaphase (Schwesterchromatiden trennen), Telophase (neue Kernhülle), Zytokinese
+- **Meiose** (2n → 4×n): 2 Teilungen; Meiose I = Homologe trennen sich (Reduktion); Meiose II = Schwesterchromatiden trennen
+- **Crossing-over**: Prophase I; DNA-Austausch zwischen homologen Chromosomen → genetische Vielfalt
+- **Non-disjunction**: Trisomie 21 (Down), Trisomie 18 (Edwards); Meiose I = alle 4 Keimzellen betroffen`,
       merksätze: [
         "Mitose: 2n → 2 × 2n (identisch). Meiose: 2n → 4 × n (genetisch verschieden). Der Schlüssel: Meiose hat 2 Teilungen!",
         "Crossing-over: Austausch von DNA-Segmenten zwischen homologen Chromosomen in der Prophase I. Erzeugt genetische Vielfalt.",
@@ -1470,16 +1637,9 @@ Der Zellzyklus gliedert sich in die Interphase (G1, S, G2) und die M-Phase, wobe
         "Chemiosmose",
         "Anaerober Stoffwechsel",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
-Der zelluläre Energiestoffwechsel wandelt chemische Energie aus Nährstoffen in ATP um — die universelle Energiewährung der Zelle. Der aerobe Abbau einer Glucosemolekül liefert ~30–32 ATP in drei aufeinanderfolgenden Prozessen.
-
-**Das Wichtigste auf einen Blick:**
-- Glykolyse: Glucose → 2 Pyruvat (Zytoplasma, 2 ATP netto, 2 NADH)
-- Pyruvat-Dehydrogenase: Pyruvat → Acetyl-CoA (Mitochondrien-Matrix, Brückenschritt)
-- Citratzyklus: Acetyl-CoA → CO₂ + Reduktionsäquivalente (Matrix, 2 GTP, 6 NADH, 2 FADH₂ pro Glucose)
-- Atmungskette: NADH/FADH₂ → ATP via Protonengradient (innere Mitochondrienmembran, ~26 ATP)
-- Anaerob (ohne O₂): nur 2 ATP + Laktat
+Jede Muskelkontraktion, jeder Gedanke, jeder Herzschlag braucht Energie in Form von ATP (Adenosintriphosphat). Woher kommt dieses ATP? Aus Nährstoffen — vor allem Glucose. Der Energiestoffwechsel zerlegt Glucose in drei aufeinanderfolgenden Schritten vollständig ab und gewinnt dabei ~30–32 ATP pro Molekül. Das Grundprinzip: Je mehr Sauerstoff verfügbar ist, desto mehr ATP entsteht. Ohne Sauerstoff gibt es nur 2 ATP und Laktat. Für die Medizin ist das täglich relevant: Cyanidvergiftung blockiert die Atmungskette, Thiaminmangel lähmt den Brückenschritt, Laktatazidose bei Schock zeigt Sauerstoffmangel an. Für den MedAT sind Glykolyse (PFK-1!), Citratzyklus (Bilanz), Atmungskette (Komplexe, Cyanid), Chemiosmose und anaerober Stoffwechsel (Laktat) prüfungsrelevant.
 
 ---
 
@@ -1632,7 +1792,12 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
 
 ## Zusammenfassung
 
-Der zelluläre Energiestoffwechsel gewinnt ATP in drei aufeinanderfolgenden Prozessen: Die Glykolyse im Zytoplasma spaltet Glucose in zwei Pyruvat und liefert netto 2 ATP sowie 2 NADH, wobei die Phosphofructokinase-1 (PFK-1) als Schlüsselenzym den Energiestatus der Zelle abfragt — ATP hemmt, AMP aktiviert. Über den Brückenschritt der Pyruvat-Dehydrogenase (Thiamin-abhängig!) gelangt Acetyl-CoA in den Citratzyklus der Mitochondrien-Matrix, der pro Durchgang 3 NADH, 1 FADH₂ und 1 GTP erzeugt und dessen Kohlenstoff als CO₂ abgibt. Die Atmungskette an der inneren Mitochondrienmembran überträgt die Elektronen von NADH und FADH₂ über die Komplexe I–IV auf den finalen Elektronenakzeptor Sauerstoff und baut dabei einen Protonengradienten auf, der die ATP-Synthase antreibt (Chemiosmose nach Mitchell) — insgesamt ~30–32 ATP pro Glucose aerob, verglichen mit nur 2 ATP bei anaerobem Laktatstoffwechsel. Klinisch relevant sind Cyanidvergiftungen (Komplex-IV-Blockade), Thiamin-Mangel (Wernicke-Enzephalopathie durch PDH-Ausfall) und Laktatazidosen bei Gewebehypoxie.`,
+- **Glykolyse** (Zytoplasma): Glucose → 2 Pyruvat, **2 ATP netto**, 2 NADH; **PFK-1** = Schlüsselenzym (ATP hemmt, AMP aktiviert)
+- **Pyruvat-Dehydrogenase** (Matrix): Brückenschritt Pyruvat → Acetyl-CoA + CO₂ + NADH; **Thiamin (B1)** nötig; B1-Mangel → Wernicke-Enzephalopathie
+- **Citratzyklus** (Matrix): pro Acetyl-CoA: 3 NADH + 1 FADH₂ + 1 GTP + 2 CO₂; pro Glucose (×2): 6 NADH + 2 FADH₂ + 2 GTP
+- **Atmungskette** (innere Membran): Komplex I (NADH) → Ubichinon → Komplex III → Cytochrom c → **Komplex IV** → O₂ → H₂O; Protonengradient → ATP-Synthase (Chemiosmose)
+- **ATP-Bilanz**: aerob ~30–32 ATP; anaerob (Laktat) nur 2 ATP; NADH ≈ 2,5 ATP, FADH₂ ≈ 1,5 ATP
+- **Klinisch**: Cyanid → Komplex IV blockiert → keine Atmungskette; Laktatazidose bei Hypoxie (Sepsis, Schock); Metformin schwach Komplex I`,
       merksätze: [
         "Glykolyse = Zytoplasma, 2 ATP netto, 2 NADH. PFK-1 = Schlüsselenzym, ATP hemmt, AMP aktiviert.",
         "Pyruvat-DH: Pyruvat → Acetyl-CoA + CO₂ + NADH. Brückenschritt! Thiamin (B1) nötig. Wernicke bei B1-Mangel.",
