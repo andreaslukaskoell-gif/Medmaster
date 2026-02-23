@@ -103,19 +103,11 @@ Für H₂O: a = 5,537, b = 0,03049. Für He: a = 0,0346, b = 0,0238 (fast ideale
 
 > **Merke:** Druckerhöhung (Boyle-Mariotte) verkleinert das Volumen, Temperaturerhöhung (Charles) vergrößert es. Beide Effekte müssen stets kombiniert werden. Celsius NIEMALS direkt einsetzen – immer erst in Kelvin umrechnen!
 
-## MedAT-relevante Zahlenwerte
-
-Für die MedAT-Prüfung sind folgende Werte auswendig zu lernen:
-- R = **8,314 J/(mol·K)** = 0,08314 L·bar/(mol·K)
-- V_m bei STP = **22,4 L/mol** (0 °C, 1 bar)
-- N_A = **6,022 × 10²³ mol⁻¹** (Avogadro-Zahl)
-- k_B = **1,381 × 10⁻²³ J/K** (Boltzmann-Konstante, R/N_A)
-- 0 °C = **273,15 K** (absoluter Nullpunkt bei 0 K = −273,15 °C)
-- 1 atm = **101.325 Pa** = 760 mmHg = 1,013 bar
-
 ## Klinische Relevanz: Beatmungsmedizin
 
 In der Intensivmedizin ist die ideale Gasgleichung bei der maschinellen Beatmung direkt relevant. Bei der **Volumen-kontrollierten Beatmung** wird ein definiertes Tidalvolumen (V_T ≈ 6–8 ml/kg Idealgewicht) appliziert. Der resultierende Atemwegsdruck hängt von der Compliance (Dehnbarkeit) der Lunge ab: p = V_T / C_stat. Bei **ARDS** (Acute Respiratory Distress Syndrome) sinkt die Compliance drastisch – der gleiche Volumenhub erzeugt höhere Drücke, was Barotrauma verursachen kann. Zudem muss bei der Befeuchtung der Atemgase der Wasserdampfdruck bei 37 °C (6,27 kPa) berücksichtigt werden (Dalton).
+
+> **Merke:** In der Beatmungsmedizin gilt: gleiches Tidalvolumen bei sinkender Compliance = steigender Atemwegsdruck → Barotrauma-Risiko bei ARDS.
 
 ## Kinetische Gastheorie
 
@@ -124,6 +116,30 @@ Die mikroskopische Erklärung liefert die **kinetische Gastheorie** (Maxwell, Bo
 - Quadratischer Mittelwert der Geschwindigkeit: v_rms = √(3·R·T/M).
 - Bei 25 °C hat N₂ (M = 0,028 kg/mol): v_rms = √(3 × 8,314 × 298 / 0,028) ≈ 515 m/s.
 - Die **Maxwell-Boltzmann-Verteilung** beschreibt die Geschwindigkeitsverteilung: Die meisten Moleküle bewegen sich nahe der wahrscheinlichsten Geschwindigkeit v_p = √(2RT/M), einige wenige sind deutlich schneller. Diese schnellen Moleküle ermöglichen die Verdunstung unterhalb des Siedepunkts.
+
+> **Merke:** Leichtere Gase sind bei gleicher Temperatur schneller: v_rms = √(3RT/M) — M muss in kg/mol eingesetzt werden!
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was ergibt pV=nRT umgestellt nach V?" → V = nRT/p (Celsius zuerst in Kelvin umrechnen!)
+- "Welches Volumen hat 1 mol ideales Gas bei STP (0 °C, 1 bar)?" → 22,4 L/mol
+- "Was passiert mit Volumen bei doppeltem Druck, T = const?" → Halbierung (Boyle-Mariotte)
+- "Wie unterscheiden sich R und k_B?" → R gilt pro Mol, k_B gilt pro Teilchen: R = k_B × N_A
+
+**Achtung — typische Verwechslungen:**
+- Celsius NIEMALS direkt in pV=nRT einsetzen — immer T[K] = T[°C] + 273,15 zuerst!
+- R (8,314 J/(mol·K)) ≠ k_B (1,381 × 10⁻²³ J/K) ≠ N_A (6,022 × 10²³ mol⁻¹)
+- Van-der-Waals: **a** korrigiert Druck (Anziehungskräfte) — **b** korrigiert Volumen (Eigenvolumen der Moleküle)
+- Z > 1 (hoher Druck): Eigenvolumen dominiert → Gas schwerer komprimierbar
+- Z < 1 (tiefe T): Anziehung dominiert → Gas leichter komprimierbar als ideal
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- R = **8,314 J/(mol·K)** = 0,08314 L·bar/(mol·K) = 0,08206 L·atm/(mol·K)
+- V_m bei STP = **22,4 L/mol** (0 °C, 1 bar)
+- N_A = **6,022 × 10²³ mol⁻¹**; k_B = **1,381 × 10⁻²³ J/K**
+- 0 °C = **273,15 K**; absoluter Nullpunkt = 0 K = −273,15 °C
+- 1 atm = **101.325 Pa** = 760 mmHg = 1,013 bar
 
 ## Zusammenfassung
 
@@ -422,18 +438,6 @@ wobei k_H die substanzspezifische Henry-Konstante ist. Bei erhöhtem O₂-Partia
 
 > **Merke:** Die vollständige Alveolargasgleichung berücksichtigt Wasserdampf UND CO₂-Produktion. Der alveoläre p(O₂) von 13,3 kPa ist deutlich niedriger als der inspiratorische von 21 kPa – das wird in der MedAT-Prüfung gerne abgefragt!
 
-## MedAT-relevante Zahlenwerte für Partialdrücke
-
-| Parameter | Wert | Einheit |
-|-----------|------|---------|
-| p(O₂) Raumluft | 21,2 | kPa (159 mmHg) |
-| p(O₂) alveolär | 13,3 | kPa (100 mmHg) |
-| p(O₂) arteriell | 10,7–13,3 | kPa (80–100 mmHg) |
-| p(O₂) venös | 5,3 | kPa (40 mmHg) |
-| p(CO₂) arteriell | 4,7–6,0 | kPa (35–45 mmHg) |
-| p(CO₂) venös | 6,1 | kPa (46 mmHg) |
-| p(H₂O) bei 37 °C | 6,27 | kPa (47 mmHg) |
-
 ## Sauerstofftoxizität und Hyperoxie
 
 Zu hohe O₂-Partialdrücke sind schädlich! Bei F_IO₂ > 0,6 über längere Zeit drohen:
@@ -449,6 +453,34 @@ In der Klinik werden Blutgaswerte oft in mmHg angegeben, in der Physiologie häu
 - **1 kPa = 7,5 mmHg** (Faktor 7,5)
 - **1 mmHg = 0,1333 kPa** (Faktor 0,133)
 - Schnelle Umrechnung: kPa × 7,5 = mmHg; mmHg / 7,5 = kPa
+
+> **Merke:** 1 kPa = 7,5 mmHg — klinische Blutgaswerte kommen oft in mmHg (pO₂ > 80 mmHg = > 10,7 kPa).
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Wie berechnet man den Partialdruck von O₂ in Raumluft?" → 0,21 × 101,3 kPa = 21,2 kPa
+- "Warum ist der alveoläre p(O₂) niedriger als in der Außenluft?" → Wasserdampf (6,27 kPa) + CO₂ verdrängen O₂
+- "Was bewirkt das Henry-Gesetz?" → Mehr Druck → mehr Gas physikalisch gelöst (c = k_H × p)
+- "Was ist Heliox und wofür wird es eingesetzt?" → He/O₂-Gemisch, geringere Dichte → weniger Atemwiderstand bei Obstruktion
+
+**Achtung — typische Verwechslungen:**
+- Molenbruch (nᵢ/n_gesamt) ≠ Massenanteil (mᵢ/m_gesamt) — nur Molenbruch für Partialdrücke verwenden!
+- Wasserdampfdruck bei 37 °C = 6,27 kPa IMMER abziehen bei Berechnung alveolarer Partialdrücke
+- Henry-Gesetz beschreibt Gaslöslichkeit (c = k_H·p), nicht Druckverteilung im Gemisch (das ist Dalton)
+- Erhöhte Temperatur → geringere Gaslöslichkeit (anders als bei Feststoffen in Wasser!)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+
+| Parameter | Wert | Einheit |
+|-----------|------|---------|
+| p(O₂) Raumluft | 21,2 | kPa (159 mmHg) |
+| p(O₂) alveolär | 13,3 | kPa (100 mmHg) |
+| p(O₂) arteriell | 10,7–13,3 | kPa (80–100 mmHg) |
+| p(O₂) venös | 5,3 | kPa (40 mmHg) |
+| p(CO₂) arteriell | 4,7–6,0 | kPa (35–45 mmHg) |
+| p(CO₂) venös | 6,1 | kPa (46 mmHg) |
+| p(H₂O) bei 37 °C | 6,27 | kPa (47 mmHg) |
 
 ## Zusammenfassung
 
@@ -768,6 +800,29 @@ Der **DLCO-Test** (Transfer-Faktor für CO) ist die wichtigste klinische Messung
 - Polyzythämie (mehr Hb)
 - Links-Rechts-Shunt (erhöhtes pulmonales Blutvolumen)
 
+> **Merke:** DLCO ↓ bei Fibrose (d↑) und Emphysem (A↓) — beide Erkrankungen schädigen die Diffusionsstrecke durch verschiedene Mechanismen.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Wie verhält sich die Diffusionsrate von H₂ (2 g/mol) zu O₂ (32 g/mol)?" → r(H₂)/r(O₂) = √(32/2) = 4 — H₂ diffundiert 4× schneller
+- "Warum diffundiert CO₂ in der Lunge 20× schneller als O₂, obwohl es schwerer ist?" → Löslichkeit von CO₂ in Wasser ist 24× höher; D ∝ Löslichkeit/√M
+- "Was misst der DLCO-Test?" → Diffusionskapazität der Lunge; CO als Tracergas (maximaler Gradient garantiert)
+- "Was zeigt ein erniedrigter DLCO?" → Fibrose (dickere Membran d↑) oder Emphysem (weniger Fläche A↓)
+
+**Achtung — typische Verwechslungen:**
+- Graham's Gesetz: Massenverhältnis muss unter der WURZEL stehen — r ∝ 1/√M, nicht 1/M!
+- Diffusion ≠ Effusion: Diffusion = Transport durch Medium; Effusion = Ausströmen durch Öffnung ins Vakuum (gleiche Formel!)
+- CO₂ in Lunge schneller als O₂ obwohl schwerer → Löslichkeit schlägt Masse (D ∝ α/√M)
+- Diffusionszeit ∝ x²/(2D): über nm = ns; über cm = Stunden → Kreislauf ist nötig!
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Graham: r₁/r₂ = √(M₂/M₁) — schwereres Gas unter der Wurzel im Zähler
+- H₂ (2 g/mol) diffundiert **4×** schneller als O₂ (32 g/mol): √(32/2) = √16 = 4
+- CO₂ diffundiert in Lunge ca. **20×** schneller als O₂ (Löslichkeit ≫ Massennachteil)
+- Alveolarfläche: **60–80 m²** (Tennisplatz!); alveolo-kapilläre Membran: **0,3–0,5 μm** dünn
+- DLCO ↓: Fibrose, Emphysem, pulmHypertonie, Anämie; DLCO ↑: Hämorrhagie, Polyzythämie
+
 ## Zusammenfassung
 
 - **Diffusion**: spontaner Transport von hoher → niedriger Konzentration; Antrieb = Entropiezunahme
@@ -1043,9 +1098,9 @@ Die Art und Stärke der intermolekularen Wechselwirkungen bestimmt maßgeblich, 
 
 **Ionische Wechselwirkungen**: Elektrische Anziehung zwischen entgegengesetzt geladenen Ionen. Energie bis zu 1000 kJ/mol. Ionische Verbindungen haben extrem hohe Schmelzpunkte.
 
-## MedAT-relevante Siedepunktvergleiche
+## Siedepunktvergleiche: Intermolekulare Kräfte
 
-Die Stärke der intermolekularen Kräfte bestimmt den Siedepunkt direkt. Folgende Vergleiche werden im MedAT häufig abgefragt:
+Die Stärke der intermolekularen Kräfte bestimmt den Siedepunkt direkt. Folgende Vergleiche sind für den MedAT zentral:
 
 | Substanz | M (g/mol) | Kp (°C) | Dominante Kraft |
 |----------|-----------|---------|-----------------|
@@ -1062,6 +1117,29 @@ Die Stärke der intermolekularen Kräfte bestimmt den Siedepunkt direkt. Folgend
 ## Amorphe Feststoffe vs. Kristalline Feststoffe
 
 Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunststoffe, Schokolade) besitzen keine Fernordnung im atomaren Aufbau. Sie haben keinen scharfen Schmelzpunkt, sondern einen **Glasübergangsbereich** (T_g), in dem sie graduell erweichen. Technisch und pharmazeutisch relevant: Viele Arzneistoffe können in amorpher Form vorliegen, die eine höhere Löslichkeitsrate aufweist als die kristalline Form – wichtig für die Bioverfügbarkeit.
+
+> **Merke:** Amorph = keine Fernordnung, kein scharfer Schmelzpunkt, höhere Löslichkeit → pharmazeutisch bedeutsam für Bioverfügbarkeit von Arzneistoffen.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Welcher Aggregatzustand hat definiertes Volumen aber keine eigene Form?" → flüssig (Nahordnung, fließfähig)
+- "Warum siedet H₂O bei 100 °C, CH₄ (ähnliche Masse) bei −162 °C?" → H₂O bildet starke Wasserstoffbrücken
+- "Bei welcher Temperatur hat Wasser seine maximale Dichte?" → 3,98 °C (≈ 4 °C)
+- "Was hält einen Metallkristall zusammen?" → delokalisiertes Elektronengas (freie Elektronen)
+
+**Achtung — typische Verwechslungen:**
+- Ionenkristall (NaCl) leitet Strom NICHT im festen Zustand (Ionen fixiert), wohl aber in Schmelze und Lösung
+- Diamant (Netzwerkkristall) ist extrem hart aber spröde und leitet NICHT; Metall ist duktil und leitet
+- H-Brücken nur zwischen H (gebunden an N, O, F) und freiem Elektronenpaar von N, O, F — NICHT mit C-H!
+- Dichteanomalie: Eis ist LEICHTER als Wasser (ρ_Eis ≈ 0,917 vs. ρ_Wasser = 1,000 g/cm³)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Dichtemaximum Wasser: **3,98 °C** (≈ 4 °C); ρ_Eis ≈ 0,917 g/cm³ — Eis schwimmt auf Wasser
+- H-Brücken: **10–40 kJ/mol**; ionische Bindungen: bis **1000 kJ/mol**
+- Stärke intermol. Kräfte: ionisch > H-Brücken > Dipol-Dipol > London-Dispersion
+- Oberflächenspannung Wasser bei 20 °C: **72 mN/m** (sehr hoch durch H-Brücken)
+- Blutviskosität: **3–4 mPa·s** (Wasser: 1 mPa·s) → Polyzythämie/Paraproteinämie erhöht sie
 
 ## Zusammenfassung
 
@@ -1372,6 +1450,16 @@ Das **Phasendiagramm** zeigt die Stabilitätsbereiche der Aggregatzustände als 
 
 > **Merke:** Sublimation (fest → gasförmig ohne flüssige Phase) ist nur unterhalb des Tripelpunktdrucks möglich. Bei der Gefriertrocknung wird der Druck unter 611 Pa gesenkt, damit Eis direkt sublimiert.
 
+## Dampfdruck und Clausius-Clapeyron-Gleichung
+
+Der Sättigungsdampfdruck steigt exponentiell mit der Temperatur (Clausius-Clapeyron):
+
+**ln(p₂/p₁) = (ΔH_v/R) × (1/T₁ − 1/T₂)**
+
+Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gegebenem Druck siedet. Klinisch relevant: Bei Fieber (z.B. 40 °C statt 37 °C) steigt der Wasserdampfdruck der Atemluft – der Patient verliert mehr Wasser über die Atmung (**Perspiratio insensibilis** steigt um ca. 12 % pro °C Fieber).
+
+> **Merke:** Auf dem Everest (340 hPa) siedet Wasser bei nur ~70 °C. Im Schnellkochtopf (2 bar) bei ~120 °C. Druck verändert den Siedepunkt!
+
 ## Rechenbeispiel: Gefrierpunktserniedrigung
 
 **Aufgabe:** Wie stark senkt eine physiologische NaCl-Lösung (0,9 %, d.h. 9 g NaCl pro 1000 g H₂O) den Gefrierpunkt?
@@ -1385,13 +1473,27 @@ Das **Phasendiagramm** zeigt die Stabilitätsbereiche der Aggregatzustände als 
 
 > **Merke:** Die physiologische Kochsalzlösung (0,9 %) hat nahezu die gleiche Osmolalität wie Blutplasma (≈ 290 mosmol/kg) und einen Gefrierpunkt von ca. −0,52 °C. Diese Isotonie ist der Grund, warum 0,9 % NaCl als Infusionslösung verträglich ist.
 
-## Dampfdruck und Clausius-Clapeyron-Gleichung
+## MedAT-Fokus
 
-Der Sättigungsdampfdruck steigt exponentiell mit der Temperatur (Clausius-Clapeyron):
+**Häufige Fragen:**
+- "Welche Phasenübergänge sind endotherm?" → Schmelzen, Verdampfen, Sublimieren (Energie wird zugeführt)
+- "Warum bleibt die Temperatur bei einem Phasenübergang konstant?" → Energie wird für Umordnung der Teilchen genutzt (latente Wärme), nicht für Temperaturerhöhung
+- "Wie viel Energie braucht 1 g Wasser zum Verdampfen?" → 2257 J/g (40,7 kJ/mol) — Verdampfen braucht ~7× mehr Energie als Schmelzen (333 J/g)
+- "Wie berechnet man die Gefrierpunktserniedrigung bei NaCl?" → ΔT_f = K_f × b × i (i = 2 für NaCl)
 
-**ln(p₂/p₁) = (ΔH_v/R) × (1/T₁ − 1/T₂)**
+**Achtung — typische Verwechslungen:**
+- Phasenübergänge sind KEINE Reaktionen — kein neues Produkt, nur andere Anordnung der Moleküle
+- Verdunstung ≠ Sieden: Verdunstung an der Oberfläche bei jeder T; Sieden = Dampfdruckblasen im Volumen wenn p_Dampf = p_außen
+- Van't-Hoff-Faktor i: Glucose (i = 1), NaCl (i ≈ 2), CaCl₂ (i ≈ 3) — Elektrolyte senken Gefrierpunkt MEHR
+- Sublimation ist nur UNTERHALB des Tripelpunktdrucks (< 611 Pa für Wasser) möglich
 
-Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gegebenem Druck siedet. Klinisch relevant: Bei Fieber (z.B. 40 °C statt 37 °C) steigt der Wasserdampfdruck der Atemluft – der Patient verliert mehr Wasser über die Atmung (**Perspiratio insensibilis** steigt um ca. 12 % pro °C Fieber).
+**Prüfungsrelevante Zahlen/Fakten:**
+- ΔH_s(H₂O) = **333 J/g** = 6,01 kJ/mol; ΔH_v(H₂O) = **2257 J/g** = 40,7 kJ/mol
+- Verhältnis ΔH_v/ΔH_s ≈ 6,8 — Verdampfen benötigt fast 7× mehr Energie als Schmelzen
+- K_f(H₂O) = **1,86 K·kg/mol** (Gefrierpunkt); K_s(H₂O) = **0,512 K·kg/mol** (Siedepunkt)
+- Tripelpunkt Wasser: T = **0,01 °C**, p = **611 Pa**; kritischer Punkt: 374 °C, 221 bar
+- Normaler Gefrierpunkt Blut: ca. **−0,52 °C** (entspricht ~290 mosmol/kg)
+- Schwitzen: 1 L/h Verdunstung → ~**627 W** Wärmeabgabe
 
 ## Zusammenfassung
 
