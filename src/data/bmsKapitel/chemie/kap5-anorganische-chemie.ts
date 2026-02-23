@@ -31,7 +31,11 @@ export const chemKapAnorganisch: Kapitel = {
         "Die Rolle von Wasser als Lösungsmittel, Reaktionsmedium und Temperaturpuffer im menschlichen Körper erklären",
         "Den Autoprotolyseprozess des Wassers und seine Bedeutung für den pH-Wert verstehen",
       ],
-      content: `## Struktur des Wassermoleküls
+      content: `## Einleitung
+
+Wasser ist das Medium des Lebens. Ohne Wasser gibt es keine Biochemie — kein Enzym, kein Protein, kein Membranpotenzial funktioniert ohne es. Aber warum ist Wasser so besonders? Wasser hat eine **gewinkelte Struktur** (104,5°) und ist stark polar — das ermöglicht Wasserstoffbrückenbindungen, die für außergewöhnliche Eigenschaften sorgen: hohe Siedetemperatur, hohe spezifische Wärmekapazität, Anomalie des Wassers (Eis schwimmt auf Wasser). Für den MedAT sind die Eigenschaften von Wasser, Wasserstoffbrückenbindungen, Osmose und Hydr(at)ation von Ionen prüfungsrelevant.
+
+## Struktur des Wassermoleküls
 
 Wasser (H₂O) ist das häufigste und biologisch bedeutsamste anorganische Molekül auf der Erde. Der menschliche Körper besteht zu **60–70 %** aus Wasser — es ist Lösungsmittel, Reaktionsmedium, Transportvehikel und Temperaturpuffer in einem. Das zentrale Sauerstoffatom trägt vier Elektronenpaare: zwei bindende (zu den H-Atomen) und zwei nichtbindende (freie Elektronenpaare). Nach dem **VSEPR-Modell** (Valence Shell Electron Pair Repulsion) komprimieren die freien Elektronenpaare den Bindungswinkel von theoretisch 109,5° (Tetraeder) auf **104,5°**. Die Sauerstoff-Wasserstoff-Bindung ist stark polar (ΔEN = 1,24 nach Pauling), woraus ein permanentes Dipolmoment von **μ = 1,85 Debye (D)** resultiert — einer der höchsten Werte kleiner Moleküle.
 
@@ -98,7 +102,17 @@ Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in
 - Proteinfaltung: hydrophobe Aminosäuren im Inneren, hydrophile außen
 - Mizellbildung von Gallensalzen und Detergenzien
 
-> **Merke:** Hydrophober Effekt = entropischer Antrieb — apolare Gruppen aggregieren, um geordnete Wasserkäfige zu minimieren. Treibkraft für Membranbildung und Proteinfaltung.`,
+> **Merke:** Hydrophober Effekt = entropischer Antrieb — apolare Gruppen aggregieren, um geordnete Wasserkäfige zu minimieren. Treibkraft für Membranbildung und Proteinfaltung.
+
+## Zusammenfassung
+
+- **Geometrie**: gewinkelt, 104,5° (VSEPR: 2 bindende + 2 freie Elektronenpaare am O); Dipolmoment μ = 1,85 D
+- **H-Brücken**: je Molekül bis zu 4 (2× Donor + 2× Akzeptor); ~20 kJ/mol; Netzwerk erklärt alle Anomalien
+- **Hoher Siedepunkt** (100 °C): H-Brücken müssen beim Verdampfen gebrochen werden; H₂S (keine H-Brücken) siedet bei −60 °C
+- **Dichtemaximum** bei 4 °C; Eis ~9 % weniger dicht → schwimmt; Seen frieren von oben → aquatisches Leben überlebt
+- **Hohe Wärmekapazität** 4182 J/(kg·K) → Temperaturpuffer im Körper; Schwitzen kühlt effizient
+- **Kw = 10⁻¹⁴** (25 °C) → pH-Neutralpunkt = 7; bei 37 °C pH ≈ 6,8; Wasser ist amphoter
+- **Hydrophober Effekt**: apolare Stoffe erzwingen geordnete Wasserkäfige → entropisch ungünstig → Aggregation apolarer Gruppen → Proteinfaltung, Membranbildung`,
       sections: [
         {
           heading: "Dipolcharakter und H-Brücken",
@@ -331,7 +345,11 @@ Die Dichteanomalie (Maximum bei 4 °C) lässt Eis schwimmen (9 % weniger dicht) 
         "Das Bicarbonat-Puffersystem und Henderson-Hasselbalch berechnen und interpretieren können",
         "Acetyl-CoA als zentrale metabolische Schnittstelle benennen",
       ],
-      content: `## Kohlenstoff — das Element des Lebens
+      content: `## Einleitung
+
+Alle Biomoleküle — Proteine, DNA, Kohlenhydrate, Fette — haben eines gemeinsam: Sie bestehen aus **Kohlenstoffgerüsten**. Kein anderes Element kann so vielfältige Strukturen bilden wie Kohlenstoff. Der Grund: C hat 4 Valenzelektronen, kann sich selbst verketten (Katenation) und in drei verschiedenen Hybridisierungen auftreten (sp³, sp², sp), was Einfach-, Doppel- und Dreifachbindungen ermöglicht. Für den MedAT sind Allotrope (Diamant/Graphit/Fulleren), CO₂-Chemie und CO-Toxizität, Cyanid sowie der Kohlenstoffzyklus prüfungsrelevant.
+
+## Kohlenstoff — das Element des Lebens
 
 Kohlenstoff (C, Atomnr. 6, Elektronenkonfiguration [He] 2s² 2p²) kann mit seinen **vier Valenzelektronen** vier kovalente Bindungen eingehen. Zusammen mit der Fähigkeit zur **Katenation** (Verkettung von C-Atomen zu Ketten, Ringen und Verzweigungen) entsteht eine nahezu unbegrenzte strukturelle Vielfalt — die Grundlage der gesamten organischen Chemie.
 
@@ -395,7 +413,17 @@ Metabolisch zentrale Kohlenstoffverbindungen:
 - **Citrat:** Erster Metabolit im Zitratzyklus; allosterischer Inhibitor der PFK-1
 - **Malonyl-CoA:** Substrat der Fettsäuresynthese; inhibiert CPT-1 (blockiert FA-Import ins Mitochondrium)
 
-> **Merke:** Acetyl-CoA = Drehkreuz des Energiestoffwechsels — Glykolyse, β-Oxidation und Aminosäureabbau münden hier ein.`,
+> **Merke:** Acetyl-CoA = Drehkreuz des Energiestoffwechsels — Glykolyse, β-Oxidation und Aminosäureabbau münden hier ein.
+
+## Zusammenfassung
+
+- **Kohlenstoff**: 4 Valenzelektronen → tetravalent; Katenation = Fähigkeit zur C-C-Kettenbildung → Grundlage der organischen Chemie
+- **Hybridisierung**: sp³ (Tetraeder, 109,5°, Diamant/Alkane); sp² (trigonal-planar, 120°, Benzol/Graphit); sp (linear, 180°, CO₂)
+- **Allotrope**: Diamant (sp³, Isolator, hart); Graphit (sp², Leiter, weich); Graphen (Einzelschicht); Fullerene (C₆₀-Käfige)
+- **CO₂**: sp-hybridisiert, linear, apolar (Dipole kompensieren sich); Treibhausgas; CO₂ + H₂O ⇌ H⁺ + HCO₃⁻ (Puffersystem)
+- **CO-Toxizität**: 250× höhere Hb-Affinität als O₂ → HbCO → O₂-Transport blockiert; kirschrote Haut (Spätzeichen); Antidot: 100 % O₂
+- **Cyanid (CN⁻)**: hemmt Cytochrom-c-Oxidase (Komplex IV) → Atmungskette blockiert → histotoxische Hypoxie
+- **Acetyl-CoA**: Drehkreuz des Stoffwechsels — Glykolyse, β-Oxidation, Aminosäureabbau münden ein → Zitratzyklus`,
       sections: [
         {
           heading: "Allotrope des Kohlenstoffs",
@@ -598,7 +626,11 @@ Das Bicarbonat-Puffersystem (pKa = 6,1) hält arteriellen Blut-pH bei 7,40: pH =
         "Salpeter- und Schwefelsäure als Industriesäuren und ihre Reaktionen darstellen",
         "Die medizinische Bedeutung von Iod (Schilddrüse), Chlor (Desinfektion) und Fluor (Kariesprophylaxe) erläutern",
       ],
-      content: `## Stickstoff (N) — das häufigste Atmosphärengas
+      content: `## Einleitung
+
+Stickstoff, Schwefel und Halogene sind für das Leben unverzichtbar — und gleichzeitig in falscher Konzentration toxisch. Stickstoff ist Bestandteil aller Aminosäuren und DNA-Basen; NO (Stickstoffmonoxid) ist ein wichtiger Botenstoff. Schwefel stabilisiert Proteinstrukturen durch Disulfidbrücken und ist Bestandteil von Coenzym A. Halogene haben vielfältige Rollen: Iod für Schilddrüsenhormone, Chlor für Magensäure und Desinfektion, Fluor für Kariesprophylaxe. Für den MedAT sind NO-Signalweg, Schwefelbindungen in Proteinen sowie Halogen-Redoxreaktionen prüfungsrelevant.
+
+## Stickstoff (N) — das häufigste Atmosphärengas
 
 Stickstoff macht **78 % der Erdatmosphäre** aus und ist damit das häufigste Gas. Das N₂-Molekül besitzt eine Dreifachbindung (N≡N, 945 kJ/mol — eine der stärksten Bindungen überhaupt) und ist daher extrem reaktionsträge. Stickstoff ist Bestandteil aller Aminosäuren, Nukleotide und zahlreicher Cofaktoren — ein unverzichtbares Bioelement.
 
@@ -651,7 +683,17 @@ Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel mit abnehmender Oxidati
 
 **Iod (I):** Sublimiert bei Raumtemperatur zu violettem Dampf. I₂ + Stärke → blauviolette Färbung (**Iod-Stärke-Nachweis** — Nachweisreaktion). **Schilddrüsenhormonsynthese:** I⁻ wird durch den Na⁺/I⁻-Symporter (NIS) aktiv aufgenommen → **Thyreoperoxidase (TPO)** oxidiert I⁻ zu I₂ (mit H₂O₂) → Iodierung von Thyreoglobulin-Tyrosinen → MIT (1 I), DIT (2 I) → Kopplung: MIT + DIT → **T₃** (Trijodthyronin, 3 I, biologisch aktiv); DIT + DIT → **T₄** (Thyroxin, 4 I, Prohormon). Iodmangel → Struma (Kropf), bei fetalem Mangel → Kretinismus. **Thyreostatika:** Methimazol und PTU hemmen TPO. Hochdosiertes Kaliumiodid bei Nuklearunfällen blockiert die Aufnahme von radioaktivem ¹³¹I.
 
-> **Merke:** Halogene Oxidationskraft: F₂ > Cl₂ > Br₂ > I₂ — abnehmendes E° in Gruppe 17 von oben nach unten. F⁻ für Zähne, I⁻ für Schilddrüse, Cl⁻ für Magensäure.`,
+> **Merke:** Halogene Oxidationskraft: F₂ > Cl₂ > Br₂ > I₂ — abnehmendes E° in Gruppe 17 von oben nach unten. F⁻ für Zähne, I⁻ für Schilddrüse, Cl⁻ für Magensäure.
+
+## Zusammenfassung
+
+- **N₂**: N≡N (945 kJ/mol) → sehr stabil; Fixierung durch Nitrogenase (16 ATP) oder Haber-Bosch (Fe-Kat.)
+- **NO**: aus L-Arginin (NOS) → Guanylatzyklase → cGMP → Vasodilatation; Basis der Nitrat-Therapie (Nitroglyzerin) und PDE5-Hemmer (Sildenafil)
+- **Schwefel**: Cystein (-SH) + Methionin (-S-); Disulfidbrücken stabilisieren Proteine; H₂S hemmt Komplex IV (wie CN⁻); Geruchslähmung ab ~100 ppm
+- **Halogene Oxidationskraft**: F₂ > Cl₂ > Br₂ > I₂ (E° nimmt von oben nach unten ab)
+- **F⁻**: Fluorapatit (säurefester als Hydroxylapatit) → Kariesprophylaxe; Fluorose bei Überdosierung
+- **Cl₂/HClO**: Desinfektion; Cl⁻ = wichtigstes extrazelluläres Anion; HCl in Magensäure
+- **I⁻**: essenziell für T₃ (3 I) und T₄ (4 I); TPO oxidiert I⁻ zu I₂ → Iodierung von Thyreoglobulin; Iodmangel → Struma`,
       sections: [
         {
           heading: "Stickstoff: Haber-Bosch und NO-Signaling",
@@ -882,7 +924,9 @@ Iodüberversorgung: Jod-Basedow-Phänomen (Hyperthyreose bei vorbestehender Stru
         "pH + pOH = 14",
         "Blut-pH 7,35-7,45",
       ],
-      content: `# Säure-Base-Definitionen und pH-Wert
+      content: `## Einleitung
+
+Was macht Essig sauer und Seife glatt? Säuren und Basen begegnen uns überall im Alltag und sind in der Medizin allgegenwärtig: Der Blut-pH von 7,4 muss millimetergenau gehalten werden, Magensäure verdaut Eiweiß bei pH ~1. Doch was genau ist eine Säure? Es gibt drei wichtige Definitionen, die sich ergänzen: Arrhenius (H⁺/OH⁻-Ionen), Brønsted-Lowry (Protonendonator/-akzeptor) und Lewis (Elektronenpaar-Akzeptor/-Donor). Für den MedAT sind pH-Berechnungen, das Ionenprodukt Kw und die Unterschiede zwischen starken und schwachen Säuren/Basen prüfungsrelevant.
 
 ## Historische Entwicklung der Säure-Base-Theorie
 
@@ -963,7 +1007,18 @@ Eine **Veränderung um eine pH-Einheit** bedeutet eine **10-fache Änderung** de
 
 ## Klinischer Kontext: Blut-pH
 
-Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichung nach unten heißt **Azidose** (< 7,35), nach oben **Alkalose** (> 7,45). Diese engen Grenzen sind lebenswichtig, da Enzymstrukturen und Proteinfunktionen pH-sensitiv sind. Schon bei pH < 7,0 oder pH > 7,7 besteht Lebensgefahr.`,
+Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichung nach unten heißt **Azidose** (< 7,35), nach oben **Alkalose** (> 7,45). Diese engen Grenzen sind lebenswichtig, da Enzymstrukturen und Proteinfunktionen pH-sensitiv sind. Schon bei pH < 7,0 oder pH > 7,7 besteht Lebensgefahr.
+
+## Zusammenfassung
+
+- **Arrhenius**: Säure = H⁺ in Wasser; Base = OH⁻ in Wasser (engste Definition, nur wässrig)
+- **Brønsted-Lowry**: Säure = Protonendonator (gibt H⁺ ab); Base = Protonenakzeptor (nimmt H⁺ auf) — gilt auch in nicht-wässrigen Medien
+- **Lewis**: Säure = Elektronenpaar-Akzeptor; Base = Elektronenpaar-Donor (allgemeinste Definition, kein H⁺ nötig)
+- **Korrespondierendes Paar**: HA und A⁻ (unterscheiden sich um H⁺); starke Säure → schwache konjugierte Base
+- **Ampholyt**: kann sowohl H⁺ abgeben als auch aufnehmen (H₂O, HCO₃⁻, HPO₄²⁻)
+- **Kw = [H₃O⁺]·[OH⁻] = 10⁻¹⁴** (25 °C); pH + pOH = 14; pH = −log[H₃O⁺]
+- **pH ±1** = Faktor 10 in H₃O⁺-Konzentration; Blut-pH 7,35–7,45; < 7,35 = Azidose; > 7,45 = Alkalose
+- **Bei 37 °C**: Kw ≈ 2,4×10⁻¹⁴ → Neutralpunkt pH ≈ 6,8 (nicht 7)`,
       lernziele: [
         "Die Säure-Base-Definitionen nach Arrhenius, Brønsted-Lowry und Lewis erklären und vergleichen können",
         "Korrespondierende Säure-Base-Paare identifizieren und den Begriff Ampholyt erklären",
@@ -1185,7 +1240,9 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
         "pKa + pKb = 14",
         "Dissoziationsgrad",
       ],
-      content: `# Starke und schwache Säuren/Basen: Ka, Kb, pKa
+      content: `## Einleitung
+
+Warum ätzt Salzsäure (HCl) sofort, während Essigsäure (CH₃COOH) im Salat nur säuerlich schmeckt? Beide sind Säuren — aber HCl ist vollständig dissoziiert (starke Säure), während Essigsäure nur partiell dissoziiert (schwache Säure). Der Unterschied liegt in der Säurekonstante Ka. Je kleiner der pKa, desto stärker die Säure. Für den MedAT sind pH-Berechnungen für schwache Säuren, pKa-Werte wichtiger biologischer Säuren (Kohlensäure, Phosphat) und mehrprotonige Säuren prüfungsrelevant.
 
 ## Starke Säuren: Vollständige Dissoziation
 
@@ -1296,7 +1353,17 @@ Im Blut agieren viele biologisch wichtige Moleküle als schwache Säuren oder Ba
 
 Die **Magensäure** (HCl, pH ≈ 1–2) ist die einzige starke Säure im Körper und wird von Belegzellen durch aktiven H⁺/K⁺-ATPase-Transport sezerniert. Protonenpumpeninhibitoren (PPI wie Omeprazol) hemmen dieses Enzym und erhöhen den Magen-pH — Standardtherapie bei Refluxerkrankung und Magenulzera.
 
-> **Merke:** pKa + pKb = 14 (bei 25 °C) für jedes korrespondierende Säure-Base-Paar. Starke Säure → schwache korrespondierende Base. Schwache Säure → starke korrespondierende Base.`,
+> **Merke:** pKa + pKb = 14 (bei 25 °C) für jedes korrespondierende Säure-Base-Paar. Starke Säure → schwache korrespondierende Base. Schwache Säure → starke korrespondierende Base.
+
+## Zusammenfassung
+
+- **Starke Säuren** (HCl, HNO₃, H₂SO₄): α ≈ 1 (vollständige Dissoziation); pH = −log c₀ direkt
+- **Schwache Säuren**: α << 1; pH = ½(pKa − log c₀) (Näherung für c₀ >> Ka); Ka = [H₃O⁺][A⁻]/[HA]
+- **pKa**: kleiner = stärkere Säure; pKa < 0: stark; 4–7: schwach; > 10: sehr schwach
+- **Biologisch wichtig**: H₂CO₃ pKa1 = 6,35 (oder 6,1 effektiv); H₃PO₄ pKa2 = 7,2; NH₄⁺ pKa = 9,25
+- **Mehrprotonige Säuren**: Ka1 >> Ka2 >> Ka3; pH durch Ka1 dominiert; Puffer nutzt relevante pKa-Stufe
+- **pKa + pKb = 14**: Starke Säure ↔ schwache konjugierte Base; schwache Säure ↔ starke konjugierte Base
+- **Halbäquivalenzpunkt** der Titration: pH = pKa (optimale Pufferzone)`,
       lernziele: [
         "Den Unterschied zwischen starken und schwachen Säuren anhand der Dissoziation und Ka/pKa erklären",
         "Den pH starker Säuren und Basen direkt berechnen",
@@ -1528,7 +1595,9 @@ Die **Magensäure** (HCl, pH ≈ 1–2) ist die einzige starke Säure im Körper
         "Lunge CO₂ Regulation",
         "Niere HCO₃⁻ Regulation",
       ],
-      content: `# Puffersysteme und die Henderson-Hasselbalch-Gleichung
+      content: `## Einleitung
+
+Blut hat einen pH von 7,4 — und dieser Wert ist lebenswichtig. Schon bei pH 7,0 oder 7,8 drohen lebensbedrohliche Komplikationen. Wie hält der Körper diesen Wert trotz ständiger Säureproduktion (CO₂ aus der Atmung, Laktat aus Muskeln) so stabil? Durch **Puffersysteme** — Gemische aus schwacher Säure und ihrer konjugierten Base, die Säure und Base abfangen ohne drastische pH-Änderungen. Die zentrale Formel ist die **Henderson-Hasselbalch-Gleichung**. Für den MedAT sind Carbonat-Puffer, Phosphatpuffer, Henderson-Hasselbalch und klinische Säure-Base-Störungen prüfungsrelevant.
 
 ## Was ist ein Puffer?
 
@@ -1626,7 +1695,18 @@ Der Carbonat-Puffer kann versagen, wenn:
 - **CO₂ steigt** (respiratorische Azidose: z. B. Hyperventilationsausfall, COPD)
 - **HCO₃⁻ sinkt** (metabolische Azidose: z. B. Ketoazidose, Laktazidose, Nierenversagen)
 - **CO₂ sinkt** (respiratorische Alkalose: Hyperventilation)
-- **HCO₃⁻ steigt** (metabolische Alkalose: z. B. Erbrechen, Diuretika)`,
+- **HCO₃⁻ steigt** (metabolische Alkalose: z. B. Erbrechen, Diuretika)
+
+## Zusammenfassung
+
+- **Puffer** = schwache Säure + konjugierte Base; fängt H⁺ (durch A⁻) und OH⁻ (durch HA) ab
+- **Henderson-Hasselbalch**: pH = pKa + log([A⁻]/[HA]); Pufferoptimum bei pH = pKa (Verhältnis 1:1)
+- **Pufferbereich**: pKa ± 1 (Verhältnis 1:10 bis 10:1); außerhalb → Puffer versagt
+- **Blut-Carbonat-Puffer**: pKa(eff.) = 6,1; pH 7,4 → [HCO₃⁻]/[CO₂] ≈ 20:1
+- **Lunge**: reguliert CO₂ schnell (Minuten); **Niere**: reguliert HCO₃⁻ langsam (Stunden–Tage)
+- **Phosphatpuffer**: H₂PO₄⁻/HPO₄²⁻, pKa = 7,2; v.a. intrazellulär und im Urin
+- **Proteinpuffer**: quantitativ wichtigster Puffer; Histidinreste (pKa ≈ 6); Bohr-Effekt bei Hb
+- **Azidose** (pH < 7,35): resp. (↑pCO₂) oder metab. (↓HCO₃⁻); **Alkalose** (pH > 7,45): resp. (↓pCO₂) oder metab. (↑HCO₃⁻)`,
       lernziele: [
         "Die Henderson-Hasselbalch-Gleichung anwenden und den pH von Pufferlösungen berechnen",
         "Den Pufferbereich (pH = pKa ± 1) und die Pufferkapazität erklären",
@@ -1827,7 +1907,9 @@ Der Carbonat-Puffer kann versagen, wenn:
         "Anionenlücke",
         "Kompensationsmechanismen",
       ],
-      content: `# Titrationskurven, Indikatoren und klinische Anwendung
+      content: `## Einleitung
+
+Wie findet man heraus, wie konzentriert eine Säure ist? Mit einer **Titration** — man gibt schrittweise bekannte Mengen einer Base hinzu, bis die Säure genau neutralisiert ist. Der pH-Verlauf dabei (Titrationskurve) hat eine charakteristische S-Form. Am **Äquivalenzpunkt** sind Säure und Base genau neutralisiert; am **Halbäquivalenzpunkt** gilt pH = pKa. **Indikatoren** zeigen diesen Punkt farblich an. Klinisch sind Titrationsprinzipien in der Blutgasanalyse angewendet. Für den MedAT sind Titrationskurven, Äquivalenz-/Halbäquivalenzpunkt und pH-Indikatoren prüfungsrelevant.
 
 ## Grundprinzip der Titration
 
@@ -1932,7 +2014,18 @@ Der normale Blut-pH liegt bei **7,35–7,45**. Vier primäre Störungen sind zu 
 - pCO₂: 35–45 mmHg
 - pO₂: 75–100 mmHg (arteriell)
 - HCO₃⁻: 22–26 mmol/L
-- Base Excess (BE): −2 bis +2 mmol/L`,
+- Base Excess (BE): −2 bis +2 mmol/L
+
+## Zusammenfassung
+
+- **Titration**: c₁V₁ = c₂V₂ am Äquivalenzpunkt (1:1-Stöchiometrie); n(Säure) = n(Base)
+- **Äquivalenzpunkt pH**: Starke Säure + starke Base → pH 7; schwache Säure + starke Base → pH > 7; schwache Base + starke Säure → pH < 7
+- **Halbäquivalenzpunkt**: pH = pKa der Säure (Henderson-Hasselbalch, Verhältnis 1:1)
+- **Indikatoren**: schwache Säuren mit zwei Farbformen; Farbumschlag bei pKa(Indikator); muss mit Äquivalenzpunkt-pH übereinstimmen
+- **Phenolphthalein**: pH 8,2–10 (farblos → rot-violett); für schwache Säure + starke Base
+- **Methylorange**: pH 3,1–4,4 (rot → gelb); für starke Säure + schwache Base
+- **4 Säure-Base-Störungen**: Resp. Azidose (↑pCO₂, ↓pH); Resp. Alkalose (↓pCO₂, ↑pH); Met. Azidose (↓HCO₃⁻, ↓pH); Met. Alkalose (↑HCO₃⁻, ↑pH)
+- **BGA-Normwerte**: pH 7,35–7,45; pCO₂ 35–45 mmHg; HCO₃⁻ 22–26 mmol/L; BE ±2`,
       lernziele: [
         "Titrationskurven für starke und schwache Säure/Base-Kombinationen beschreiben und den Äquivalenzpunkt lokalisieren",
         "Den pH am Äquivalenzpunkt vorhersagen (neutral, sauer oder basisch) und begründen",
@@ -2151,7 +2244,11 @@ Der normale Blut-pH liegt bei **7,35–7,45**. Vier primäre Störungen sind zu 
         "Vitamin C Antioxidans",
         "Redox-Gleichung ausgleichen",
       ],
-      content: `## Definitionen: OIL RIG
+      content: `## Einleitung
+
+Warum rostet Eisen? Warum verbrennt Holz? Warum funktioniert die Atmungskette? All das sind **Redoxreaktionen** — Reaktionen, bei denen Elektronen übertragen werden. Die Eselsbrücke **OIL RIG** hilft: Oxidation Is Loss (Elektronenverlust), Reduction Is Gain (Elektronengewinn). Oxidation und Reduktion passieren immer gleichzeitig — ein Stoff kann nicht Elektronen verlieren, ohne dass ein anderer sie aufnimmt. Für den MedAT sind Oxidationszahlen, Standardpotenziale (E°), Redox-Gleichungen ausgleichen und biologische Redoxreaktionen (NADH, Cytochrome) prüfungsrelevant.
+
+## Definitionen: OIL RIG
 
 Oxidation und Reduktion sind die grundlegendsten Elektronenübertragungsreaktionen der Chemie. Die Eselsbrücke **OIL RIG** fasst beide Prozesse zusammen: **O**xidation **I**s **L**oss (Oxidation = Elektronenverlust), **R**eduction **I**s **G**ain (Reduktion = Elektronengewinn). Beide Prozesse laufen stets gleichzeitig und gekoppelt ab — es kann keine Oxidation ohne gleichzeitige Reduktion geben.
 
@@ -2198,7 +2295,18 @@ Oxidationszahlen (OZ) sind formale, hypothetische Ladungen, die einem Atom zugew
 
 Bei der **Disproportionierung** reagiert ein Element gleichzeitig als Oxidans und Reduktans: Das gleiche Element wird teils oxidiert, teils reduziert. Beispiel: 2H₂O₂ → 2H₂O + O₂. O hat in H₂O₂ OZ = −1; im Produkt H₂O hat O OZ = −2 (Reduktion) und in O₂ hat O OZ = 0 (Oxidation). Auch Chlor disproportioniert in Lauge: Cl₂ + 2OH⁻ → Cl⁻ + ClO⁻ + H₂O.
 
-Bei der **Komproportionierung** (Synproportionierung) reagieren zwei verschiedene Oxidationsstufen desselben Elements zur einheitlichen Mittelstufe: Cu⁰ + Cu²⁺ → 2Cu⁺ oder 5HNO₂ + 2KMnO₄ → ... (N: +3 geht teilweise zu +5).`,
+Bei der **Komproportionierung** (Synproportionierung) reagieren zwei verschiedene Oxidationsstufen desselben Elements zur einheitlichen Mittelstufe: Cu⁰ + Cu²⁺ → 2Cu⁺ oder 5HNO₂ + 2KMnO₄ → ... (N: +3 geht teilweise zu +5).
+
+## Zusammenfassung
+
+- **OIL RIG**: Oxidation Is Loss (e⁻ abgeben, OZ steigt); Reduction Is Gain (e⁻ aufnehmen, OZ sinkt)
+- **Reduktionsmittel** wird oxidiert; **Oxidationsmittel** wird reduziert — immer gekoppelt
+- **OZ-Regeln**: Elemente = 0; Ionen = Ladung; F immer −1; O meist −2 (Peroxide −1); H meist +1 (Hydride −1)
+- **Summenregel**: Σ(OZ × n) = Gesamtladung; Neutralmolekül = 0
+- **Halbreaktion-Methode**: Atome → O (H₂O) → H (H⁺) → Ladung (e⁻) → Elektronen angleichen → addieren
+- **Disproportionierung**: ein Element wird gleichzeitig oxidiert UND reduziert (2H₂O₂ → 2H₂O + O₂)
+- **NADH/FADH₂**: biologische Reduktionsmittel; geben Elektronen an Atmungskette ab → ATP-Synthese
+- **KMnO₄**: Mn +7 → +2 (sauer), +4 (neutral), +6 (basisch); starkes Oxidationsmittel`,
       lernziele: [
         "Oxidation und Reduktion mithilfe des Elektronen-Konzepts (OIL RIG) definieren und anwenden",
         "Oxidationszahlen für beliebige Verbindungen nach den Prioritätsregeln systematisch bestimmen",
@@ -2405,7 +2513,11 @@ Bei der **Komproportionierung** (Synproportionierung) reagieren zwei verschieden
         "Blei-Akkumulator",
         "Brennstoffzelle",
       ],
-      content: `## Galvanische Zellen (Voltasche Elemente)
+      content: `## Einleitung
+
+Wie liefert eine Batterie Strom? Wie erzeugt der Herzschrittmacher seine Energie? Die Antwort liegt in der **Elektrochemie**: Wenn eine Redoxreaktion freiwillig abläuft, können die übertragenen Elektronen als elektrischer Strom genutzt werden. Im Umkehrschluss kann elektrischer Strom eine nicht-spontane Redoxreaktion antreiben (Elektrolyse) — so funktionieren zum Beispiel Chlor-Produktion und Galvanisierung. Für den MedAT sind Standardpotenziale (E°), die Faraday-Gleichung (ΔG = −nFE°) und Grundprinzipien von Akkumulatoren und Brennstoffzellen prüfungsrelevant.
+
+## Galvanische Zellen (Voltasche Elemente)
 
 Eine galvanische Zelle wandelt chemische Energie spontan in elektrische Energie um. Sie besteht aus zwei **Halbzellen** (Elektroden), die durch eine Salzbrücke oder ein Diaphragma verbunden sind. An der **Anode** findet Oxidation statt (das Metall löst sich auf oder Anionen werden oxidiert), an der **Kathode** findet Reduktion statt (Kationen werden abgeschieden).
 
@@ -2488,7 +2600,17 @@ Negativer ΔG°-Wert bestätigt: Die Reaktion Zn + Cu²⁺ → Zn²⁺ + Cu ist 
 - **Defibrillator-Implantate:** Hohe Energiedichte durch Li-Ionen-Technologie
 - **Galvanik in der Zahnmedizin:** Verschiedene Metalle im Mund (Gold, Amalgam) können galvanische Elemente bilden → Galvanischer Geschmack
 
-> **Merke:** E°Zelle = E°Kathode − E°Anode. Positiv = spontan (ΔG° < 0). Je größer E°Zelle, desto mehr nutzbare elektrische Energie.`,
+> **Merke:** E°Zelle = E°Kathode − E°Anode. Positiv = spontan (ΔG° < 0). Je größer E°Zelle, desto mehr nutzbare elektrische Energie.
+
+## Zusammenfassung
+
+- **Galvanische Zelle**: Anode (Oxidation, negativ) + Kathode (Reduktion, positiv); Elektronen fließen Anode → Kathode
+- **AnOx RedKat**: Anode = Oxidation, Kathode = Reduktion (gilt auch bei Elektrolyse)
+- **E°Zelle = E°Kathode − E°Anode**: positiv = spontan; Daniell: 0,34 − (−0,76) = +1,10 V
+- **ΔG° = −n·F·E°Zelle**: n = Elektronen, F = 96485 C/mol; ΔG° < 0 ↔ E°Zelle > 0 ↔ spontan
+- **Spannungsreihe**: höheres E° = stärkeres Oxidationsmittel; F₂ (+2,87 V) > MnO₄⁻ > Cl₂ > ... > Zn (−0,76 V) > Li (−3,04 V)
+- **Elektrolyse**: erzwungene nicht-spontane Reaktion; m = M·I·t / (n·F) (Faraday-Gesetz)
+- **Korrosionsschutz**: Opferanode (unedles Metall wie Zn), Passivierung (Al₂O₃-Schutzschicht)`,
       lernziele: [
         "Aufbau und Funktionsweise galvanischer Zellen erläutern und Anode/Kathode zuordnen",
         "Standardelektrodenpotenziale lesen, interpretieren und zur Vorhersage spontaner Redox-Reaktionen nutzen",
@@ -2702,7 +2824,11 @@ Negativer ΔG°-Wert bestätigt: Die Reaktion Zn + Cu²⁺ → Zn²⁺ + Cu ist 
         "Goldman-Gleichung",
         "K⁺-Nernst −90 mV",
       ],
-      content: `## Die Nernst-Gleichung
+      content: `## Einleitung
+
+Standardpotenziale (E°) gelten bei perfekten Laborbedingungen — 1 mol/L, 25 °C, 1 atm. Im Körper aber herrschen andere Konzentrationen. Eine Nervenzelle hat innen 140 mmol/L K⁺ und außen nur 5 mmol/L — wie stark ist das resultierende Potenzial? Genau das berechnet die **Nernst-Gleichung**: Sie passt das Elektrodenpotenzial an reale Konzentrationen an. Das Membranpotenzial von Neuronen folgt direkt diesem Prinzip. Für den MedAT sind Nernst-Gleichung, Nerst-Potenzial, Gleichgewichtspotenziale und das Ruhemembranpotenzial prüfungsrelevant.
+
+## Die Nernst-Gleichung
 
 Das Standardelektrodenpotenzial E° gilt nur unter Standardbedingungen (25 °C, alle Konzentrationen 1 mol/L, Gasdruck 1 atm). Unter realen Bedingungen wird das tatsächliche Elektrodenpotenzial E durch die **Nernst-Gleichung** beschrieben:
 
@@ -2766,7 +2892,17 @@ Das **Goldman-Hodgkin-Katz-Gleichung** berechnet das tatsächliche Membranpotenz
 
 ## Henderson-Hasselbalch und Elektrochemie
 
-Die Henderson-Hasselbalch-Gleichung pH = pKa + log([A⁻]/[HA]) lässt sich direkt aus der Nernst-Gleichung ableiten. In biologischen Systemen beeinflusst der pH-Wert direkt die Redoxpotenziale biochemischer Reaktionen — z. B. sinkt E für O₂/H₂O mit steigendem pH (0,059 V pro pH-Einheit), was die Reaktivität von Sauerstoff bei physiologischem pH (7,4) moduliert.`,
+Die Henderson-Hasselbalch-Gleichung pH = pKa + log([A⁻]/[HA]) lässt sich direkt aus der Nernst-Gleichung ableiten. In biologischen Systemen beeinflusst der pH-Wert direkt die Redoxpotenziale biochemischer Reaktionen — z. B. sinkt E für O₂/H₂O mit steigendem pH (0,059 V pro pH-Einheit), was die Reaktivität von Sauerstoff bei physiologischem pH (7,4) moduliert.
+
+## Zusammenfassung
+
+- **Nernst-Gleichung**: E = E° − (0,05916/n) · log(Q) bei 25 °C; Q = [Produkte]/[Edukte]
+- **Nernst-Faktor**: 59,16 mV pro Dekade in Q (bei 25 °C, n = 1); bei 37 °C ≈ 61,5 mV
+- **Hohe [Ox]**: Q klein → E > E°; **hohe [Red]**: Q groß → E < E°
+- **Gleichgewicht**: E = 0; K = 10^(n·E°/0,05916); großes E° → großes K
+- **Glaselektrode**: E_Membran = const − 0,05916 · pH; −59,16 mV pro pH-Einheit (25 °C)
+- **Nernst-Potenzial**: E_Ion = (RT/zF)·ln([außen]/[innen]); K⁺ ≈ −90 mV; Na⁺ ≈ +62 mV
+- **Ruhemembranpotenzial**: ≈ −70 mV (liegt zwischen K⁺- und Na⁺-Nernst-Potenzial)`,
       lernziele: [
         "Die Nernst-Gleichung formulieren und auf konkrete Elektroden- und Zellpotenziale anwenden",
         "Den Einfluss von Konzentration und Temperatur auf Elektrodenpotenziale berechnen und interpretieren",
@@ -2966,7 +3102,11 @@ Die Henderson-Hasselbalch-Gleichung pH = pKa + log([A⁻]/[HA]) lässt sich dire
         "Lipidperoxidation",
         "Oxidativer Burst NADPH-Oxidase",
       ],
-      content: `## Reaktive Sauerstoffspezies (ROS)
+      content: `## Einleitung
+
+Sauerstoff ist lebensnotwendig — aber auch gefährlich. Bei der Atmung entstehen als Nebenprodukte hochreaktive Sauerstoffmoleküle, sogenannte **Reaktive Sauerstoffspezies (ROS)**: Sie können DNA, Proteine und Zellmembranen beschädigen. Zu viele ROS führen zu **oxidativem Stress** — einem Zustand, der mit Arteriosklerose, Krebs, Alzheimer und Diabetes in Verbindung gebracht wird. Die Zelle schützt sich mit einem ausgeklügelten Antioxidans-System aus Enzymen (SOD, Katalase, Glutathion-Peroxidase) und Vitaminen (C, E). Für den MedAT sind ROS-Bildung, Fenton-Reaktion, Antioxidantien und der G6PD-Mangel besonders prüfungsrelevant.
+
+## Reaktive Sauerstoffspezies (ROS)
 
 Reaktive Sauerstoffspezies (ROS, englisch: Reactive Oxygen Species) sind hochreaktive, sauerstoffhaltige Moleküle, die in der Lage sind, zelluläre Biomoleküle zu oxidieren und zu schädigen. Sie entstehen als unvermeidliche Nebenprodukte des aeroben Stoffwechsels, aber auch gezielt durch Immunzellen zur Pathogenabwehr.
 
@@ -3018,7 +3158,17 @@ ROS haben nicht ausschließlich schädliche Funktionen. In physiologischen Konze
 - H₂O₂ oxidiert Cystein-SH-Gruppen von Signalproteinen → Konformationsänderung → Signalübertragung
 - Aktivierung von NF-κB, HIF-1α, Nrf2 (antioxidativer Transkriptionsfaktor)
 - NADPH-Oxidase (NOX) in Phagozyten produziert O₂·⁻ gezielt zur Pathogenabwehr (oxidativer Burst)
-- Mitochondriale ROS regulieren Apoptose und Autophagie`,
+- Mitochondriale ROS regulieren Apoptose und Autophagie
+
+## Zusammenfassung
+
+- **ROS-Kaskade**: O₂ →(1e⁻)→ O₂·⁻ →(SOD)→ H₂O₂ →(Fenton: Fe²⁺)→ ·OH (reaktivstes ROS)
+- **Fenton-Reaktion**: Fe²⁺ + H₂O₂ → ·OH + OH⁻ + Fe³⁺; erklärt, warum Eisenüberschuss gefährlich ist
+- **Oxidativer Stress**: ROS > Antioxidanskapazität → Lipidperoxidation, DNA-Schäden, Proteinoxidation
+- **Enzymatische Abwehr**: SOD (O₂·⁻ → H₂O₂) → Katalase/GPx (H₂O₂ → H₂O); GPx braucht GSH, GSH-Reduktase braucht NADPH
+- **NADPH aus PPW**: G6PD ist geschwindigkeitsbestimmend; G6PD-Mangel → hämolytische Anämie bei Oxidantienexposition
+- **Nicht-enzymatisch**: Vitamin E (Membranschutz), Vitamin C (regeneriert Vit. E), Glutathion, Harnsäure
+- **ROS als Signal**: Niedrige H₂O₂-Konzentrationen aktivieren Nrf2, HIF-1α; oxidativer Burst in Phagozyten gezielt`,
       lernziele: [
         "Die wichtigsten reaktiven Sauerstoffspezies (ROS), ihre Bildungsmechanismen und Reaktivität benennen",
         "Oxidativen Stress definieren und seine Folgen auf Lipide, Proteine und DNA beschreiben",
