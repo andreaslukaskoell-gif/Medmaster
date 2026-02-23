@@ -95,6 +95,25 @@ Beispiele: ¹H (Protium, 99,98 %), ²H (Deuterium, D, 0,02 %), ³H (Tritium, T, 
 
 **Stabile Isotope** haben ein günstiges N/Z-Verhältnis (bei leichten Elementen N ≈ Z; bei schwereren Elementen überwiegen Neutronen: bei Z = 82 ist N ≈ 1,5 × Z). Instabile Nuklide sind radioaktiv. Alle Elemente mit Z > 83 (Bismut) sind ausschließlich radioaktiv.
 
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Welcher Schluss folgt aus dem Rutherford-Streuversuch?" → Positive Ladung und Masse im winzigen Kern konzentriert; Atom = fast vollständig leerer Raum
+- "Was ist ein Isotop?" → Gleiches Element (gleiche Z), unterschiedliche Neutronenzahl N → verschiedene Massenzahl A, (fast) gleiche chemische Eigenschaften
+- "Wie viele Elektronen fasst die dritte Schale (n=3)?" → 2n² = 18
+
+**Achtung — typische Verwechslungen:**
+- Ordnungszahl Z ≠ Massenzahl A: Z = Protonenzahl (definiert Element), A = Z + N (Nukleonen gesamt)
+- Thomson-Modell (Rosinen-Kuchen, gleichmäßig positive Kugel) ≠ Rutherford-Modell (winziger Kern, fast leerer Raum)
+- Isotope sind chemisch (fast) identisch, physikalisch verschieden (Masse, Kernstabilität)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Kerndurchmesser ≈ 10⁻¹⁵ m; Atomdurchmesser ≈ 10⁻¹⁰ m; Verhältnis 1 : 100 000 (Murmel : Fußballstadion)
+- Schalen-Kapazität: 2n² (K=2, L=8, M=18, N=32)
+- Radioisotope: ⁹⁹ᵐTc (T½ 6 h, Szintigraphie), ¹⁸F (110 min, PET), ¹³¹I (8 d, Schilddrüsentherapie), ¹⁴C (5730 a, Datierung)
+- Alle Elemente mit Z > 83 (Bismut) ausschließlich radioaktiv
+
+---
 ## Zusammenfassung
 
 - Atom: **Kern** (Protonen + Neutronen, winzig: ~10⁻¹⁵ m) + **Hülle** (Elektronen, ~10⁻¹⁰ m); 99 % leerer Raum
@@ -390,6 +409,25 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
 - **Co** ([Ar]3d⁷4s²): Kern von Vitamin B12 (Cobalamin), essenziell für Methylierungsreaktionen
 - **Mn** ([Ar]3d⁵4s²): Mn-SOD (mitochondriale Superoxid-Dismutase), Arginase (Harnstoffzyklus)
 
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Welche Aussage zum Pauliprinzip ist korrekt?" → Kein Atom hat zwei Elektronen mit identischen vier Quantenzahlen → max. 2 e⁻ pro Orbital, entgegengesetzter Spin
+- "Was ist die Elektronenkonfiguration von Fe³⁺?" → [Ar]3d⁵ (zuerst beide 4s-, dann ein 3d-Elektron entfernt)
+- "Warum ist Fe³⁺ stark paramagnetisch?" → [Ar]3d⁵ — 5 ungepaarte Elektronen mit parallelem Spin
+
+**Achtung — typische Verwechslungen:**
+- Aufbau: 4s vor 3d füllen; Ionisierung: 4s vor 3d entfernen (Fe²⁺: [Ar]3d⁶; Fe³⁺: [Ar]3d⁵)
+- Hundsche Regel ≠ Pauliprinzip: Hund → entartete Orbitale erst einfach besetzen (↑↑); Pauli → keine identischen 4 Quantenzahlen
+- Ausnahmen merken: Cr ([Ar]3d⁵4s¹) und Cu ([Ar]3d¹⁰4s¹) — halbgefüllte/vollgefüllte d-Schalen stabilisiert
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- 4 Quantenzahlen: n (1,2,3…), l (0 bis n−1), mₗ (−l bis +l), mₛ (±½)
+- Fe²⁺: [Ar]3d⁶ — 4 ungepaarte e⁻; Fe³⁺: [Ar]3d⁵ — 5 ungepaarte e⁻ (stark paramagnetisch)
+- MRT-Kontrastmittel Gadolinium Gd³⁺: [Xe]4f⁷ — 7 ungepaarte f-Elektronen → sehr stark paramagnetisch
+- Energiereihenfolge: 1s < 2s < 2p < 3s < 3p < **4s < 3d** < 4p (Madelung-Regel)
+
+---
 ## Zusammenfassung
 
 - **4 Quantenzahlen**: n (Schale), l (Orbitalform: 0=s, 1=p, 2=d, 3=f), mₗ (Raumausrichtung), mₛ (Spin ±½)
@@ -693,7 +731,27 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
 - Wichtige Nuklide: **⁹⁹ᵐTc** (T½ 6 h, Szintigraphie), **¹⁸F** (110 min, PET), **¹³¹I** (8 d, Schilddrüsentherapie), **¹⁴C** (5730 a, Datierung)
 - Strahlenschutz: Abstand (Intensität ∝ 1/r²), Zeit minimieren, Material abschirmen
 - Einheiten: **Gray (Gy)** = absorbierte Dosis; **Sievert (Sv)** = biologisch gewichtete Dosis (α-Faktor: 20!)
-- Bei Kernatomunfall: **Kaliumiodid (KI)** sättigt Schilddrüse → verhindert ¹³¹I-Aufnahme`,
+- Bei Kernatomunfall: **Kaliumiodid (KI)** sättigt Schilddrüse → verhindert ¹³¹I-Aufnahme
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was verändert sich beim α-Zerfall?" → Z sinkt um 2, A sinkt um 4 (Emission von ⁴He)
+- "Was bleibt beim γ-Zerfall gleich?" → Z und A bleiben unverändert — nur Energieabgabe, kein Kernwandel
+- "Was ist das Prinzip der PET?" → β⁺-Zerfall → Positron annihiliert mit Elektron → 2 Gammaquanten (511 keV, 180°) → Koinzidenzdetektion
+
+**Achtung — typische Verwechslungen:**
+- β⁻ (n→p, Z+1, A gleich) ≠ β⁺ (p→n, Z−1, A gleich) — Z-Änderung ist umgekehrt!
+- Gray (Gy) = absorbierte Energiedosis (physikalisch); Sievert (Sv) = biologisch gewichtete Dosis; α-Wichtungsfaktor = 20!
+- Gammastrahlung: kein Kernteilchen, kein Zerfall → Z und A unverändert (≠ α- und β-Zerfall)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Nuklid-Tabelle: ⁹⁹ᵐTc (T½ = 6 h, Szintigraphie); ¹⁸F (110 min, PET); ¹³¹I (8 d, Schilddrüsentherapie); ¹⁴C (5730 a, Datierung)
+- Nach n Halbwertszeiten: Restmenge = N₀/2ⁿ (nach 4 HWZ: 1/16 = 6,25 %)
+- Abschirmung: α → Papier; β → Aluminium (mm); γ/n → Blei/Beton
+- 1 Gy α-Strahlung = 20 Sv biologischer Wirkung (Wichtungsfaktor 20)
+
+---`,
 
       lernziele: [
         "Die drei Hauptarten der radioaktiven Strahlung (α, β, γ) hinsichtlich Natur, Reichweite, Abschirmung und Veränderung von Z und A beschreiben.",
@@ -1013,7 +1071,27 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
 - **Osmolarität** [mosmol/L] = Summe aller Teilchenkonzentrationen; Ionen einzeln zählen (NaCl: i = 2)
 - Blutplasma-Osmolarität ≈ **290 mosmol/L**; 0,9 % NaCl ≈ 308 mosmol/L (klinisch als isoton verwendet)
 - **Verdünnungsformel**: c₁ × V₁ = c₂ × V₂ (Stoffmenge bleibt konstant)
-- **Stöchiometrie**: Koeffizienten in Reaktionsgleichungen = Mol-Verhältnisse; limitierender Reaktand bestimmt max. Ausbeute`,
+- **Stöchiometrie**: Koeffizienten in Reaktionsgleichungen = Mol-Verhältnisse; limitierender Reaktand bestimmt max. Ausbeute
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Wie viele mol sind in 90 g H₂O?" → n = 90/18 = 5 mol
+- "Osmolarität einer 1 mol/L NaCl-Lösung?" → 1 × 2 × 1000 = 2000 mosmol/L (i = 2)
+- "Was ist die Blutplasma-Osmolarität?" → ≈ 290 mosmol/L (durch ADH geregelt)
+
+**Achtung — typische Verwechslungen:**
+- Molarität [mol/L] ≠ Osmolarität [mosmol/L]: Osmolarität = c × i × 1000 (van't-Hoff-Faktor beachten!)
+- Van't-Hoff-Faktor: NaCl → i = 2; CaCl₂ → i = 3; Glukose → i = 1 (dissoziiert nicht)
+- Formel: n = m/M (mol = g ÷ g/mol) — nicht m = M/n!
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Nₐ = 6,022 × 10²³ mol⁻¹; 1 u = 1/12 der Masse von ¹²C = 1,66 × 10⁻²⁷ kg
+- M(H₂O) = 18 g/mol; M(NaCl) = 58,44 g/mol; M(Glukose) = 180 g/mol; M(Aspirin) = 180 g/mol
+- Blutplasma: ≈ 290 mosmol/L; 0,9 % NaCl ≈ 308 mosmol/L (klinisch als isoton verwendet)
+- Verdünnungsformel: c₁ × V₁ = c₂ × V₂ (Stoffmenge bleibt konstant)
+
+---`,
 
       lernziele: [
         "Die atomare Masseneinheit u definieren und die Massen von Proton, Neutron und Elektron in u angeben.",
@@ -1262,7 +1340,26 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
 - **DNA**: A–T bildet 2 H-Brücken, G–C bildet 3 → GC-reiche DNA stabiler (höhere Schmelztemperatur)
 - Proteine: α-Helix und β-Faltblatt durch H-Brücken stabilisiert; Denaturierung bricht diese auf
 - **Hydrophober Effekt**: unpolare Gruppen lagern sich zusammen → Entropiegewinn; treibt Proteinfaltung und Membranbildung
-- Pharmaka: polar = wasserlöslich (renal eliminiert); unpolar = lipophil (hepatisch metabolisiert); Lipinski-Regel`,
+- Pharmaka: polar = wasserlöslich (renal eliminiert); unpolar = lipophil (hepatisch metabolisiert); Lipinski-Regel
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Welche Voraussetzung hat ein H-Brücken-Donor?" → X–H mit X = N, O oder F (Donor gibt H); Akzeptor = freies e⁻-Paar von Y ∈ {N, O, F}
+- "Warum siedet H₂O bei 100 °C, H₂S bei −60 °C?" → H₂O bildet H-Brücken (O elektronegativer), H₂S nicht (S zu wenig elektronegativ)
+- "Wie viele H-Brücken bildet das Basenpaar G–C?" → 3 (A–T bildet 2)
+
+**Achtung — typische Verwechslungen:**
+- London-Kräfte existieren in ALLEN Molekülen (auch in polaren), nicht nur in unpolaren
+- Denaturierung durch Hitze zerstört nicht-kovalente Wechselwirkungen (H-Brücken, hydrophob, ionisch) — kovalente Peptidbindungen bleiben intakt!
+- H-Brücken-Donor (gibt H) ≠ Akzeptor (nimmt H auf mit freiem e⁻-Paar)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Stärkeranking: Ionenbindung (400–4000) > kovalent (150–800) > H-Brücken (10–40) > Dipol–Dipol (3–10) > London (0,05–40) [alle kJ/mol]
+- DNA: A=T (2 H-Brücken); G≡C (3 H-Brücken) → GC-reiche DNA thermisch stabiler (höhere Schmelztemperatur Tm)
+- PCR-Denaturierung: 94–98 °C bricht H-Brücken in DNA auf; kovalente Phosphodiesterbindungen bleiben intakt
+
+---`,
 
       lernziele: [
         "Die drei Klassen der van-der-Waals-Kräfte (London, Keesom, Debye) und ihre Entstehungsmechanismen erklären können.",
@@ -1561,7 +1658,27 @@ Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechne
 - Osmotischer Druck π = i · c · R · T; van't-Hoff-Faktor i: Glukose = 1, NaCl = 2
 - **Blutplasma-Osmolarität**: 285–295 mOsmol/L → hypoton (<270): Hämolyse; hyperton (>310): Erythrozyten schrumpfen
 - **Onkotischer Druck**: Albumin (~25 mmHg) hält Wasser im Gefäß; Hypoalbuminämie → Ödeme
-- Kolligative Eigenschaften (abhängig nur von Teilchenzahl): Siedepunktserhöhung, Gefrierpunktserniedrigung, Osmose`,
+- Kolligative Eigenschaften (abhängig nur von Teilchenzahl): Siedepunktserhöhung, Gefrierpunktserniedrigung, Osmose
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Was passiert, wenn Erythrozyten in destilliertes Wasser gegeben werden?" → Hämolyse (hypotone Lösung → Wasser strömt ins Zellinnere → Zelle platzt)
+- "Osmolarität von 0,5 mol/L CaCl₂?" → 0,5 × 3 × 1000 = 1500 mosmol/L (CaCl₂ → Ca²⁺ + 2 Cl⁻, i = 3)
+- "Warum bilden sich Ödeme bei Hypoalbuminämie?" → Sinkt onkotischer Druck → hydrostatischer Druck überwiegt → Wasser aus Kapillaren ins Interstitium
+
+**Achtung — typische Verwechslungen:**
+- Osmose: Wasser wandert von niedrigerer zu höherer Teilchenkonzentration (= von niedrigem zu hohem osmotischem Druck) — NICHT umgekehrt!
+- Hypoton (<270 mosmol/L) → Hämolyse; Hyperton (>310 mosmol/L) → Crenation (Schrumpfen)
+- Onkotischer Druck ≠ osmotischer Druck: onkotisch = durch Makromoleküle (Albumin), die Membran nicht passieren können
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Blutplasma-Osmolarität: 285–295 mosmol/L (normaler Bereich)
+- 0,9 % NaCl = 154 mmol/L → 308 mosmol/L (klinisch als isoton verwendet); 5 % Glukose ≈ 278 mosmol/L
+- Van't-Hoff-Faktor i: NaCl = 2; CaCl₂ = 3; AlCl₃ = 4; Glukose = 1
+- Albumin: ≈ 25 mmHg onkotischer Druck; Hypoalbuminämie → Ödeme (nephrotisches Syndrom, Leberzirrhose)
+
+---`,
 
       lernziele: [
         'Das Löslichkeitsprinzip "Similia similibus solvuntur" auf polare, unpolare und amphiphile Substanzen anwenden können.',
@@ -1872,7 +1989,27 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
 - **Siedepunkt** = wenn Dampfdruck = äußerer Druck; im Gebirge (↓ Luftdruck) → niedrigerer Siedepunkt
 - **Kolloide**: Partikel 1–1000 nm; zwischen echter Lösung und Suspension; zeigen Brownsche Bewegung und Tyndall-Effekt
 - Kolloide: Typen — Sol, Emulsion, Gel, Aerosol; medizinisch: HAES, Albumin als Volumenersatz
-- **Surfactant** (Dipalmitoylphosphatidylcholin): senkt Alveolen-Oberflächenspannung; Frühgeborene: fehlend → Atemnotsyndrom (RDS)`,
+- **Surfactant** (Dipalmitoylphosphatidylcholin): senkt Alveolen-Oberflächenspannung; Frühgeborene: fehlend → Atemnotsyndrom (RDS)
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Welcher Phasenübergang ist exotherm?" → Kondensation, Erstarren, Desublimation (Übergänge zu geordneterem Zustand geben Energie ab)
+- "Warum siedet Wasser im Gebirge bei 90 °C statt 100 °C?" → Niedrigerer Luftdruck → Dampfdruck erreicht Außendruck bei niedrigerer Temperatur
+- "Woran erkennt man ein Kolloid?" → Tyndall-Effekt: Kolloid streut Licht sichtbar; echte Lösung tut das nicht
+
+**Achtung — typische Verwechslungen:**
+- Sublimation (fest→gas) ist ENDOtherm; Desublimation (gas→fest) ist EXOtherm
+- Kolloid (1 nm–1 μm) ≠ echte Lösung (<1 nm, kein Tyndall) ≠ Suspension (>1 μm, sedimentiert)
+- Dampfverbrennung ist schlimmer als Wasserverbrennung gleicher Temperatur, weil Kondensation zusätzlich Verdampfungswärme freisetzt (exotherm)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Verdampfungswärme Wasser: 2257 J/g → Thermoregulation durch Schwitzen
+- Siedepunkt = Temperatur, bei der Dampfdruck = äußerer Luftdruck; Druckkochtopf: ↑Druck → ↑Siedepunkt
+- Kolloide: 1 nm–1 μm; zeigen Tyndall-Effekt; Brownsche Bewegung verhindert Sedimentation
+- Surfactant (DPPC): fehlt bei Frühgeborenen (<34 SSW) → Alveolarkollaps → Atemnotsyndrom (RDS)
+
+---`,
 
       lernziele: [
         "Die drei Aggregatzustände und ihre Eigenschaften kennen sowie alle Phasenübergänge mit Wärmetönung (endo-/exotherm) benennen können.",
@@ -2192,7 +2329,26 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
 - Gruppenposition im p-Block: Gruppennummer = 10 + Valenzelektronenzahl (z.B. Gr. 17 = 7 VE = Halogene)
 - **Metallcharakter**: in Periode von links→rechts abnehmend; in Gruppe von oben→unten zunehmend
 - Halbmetalle (Metalloide) entlang der Treppe: B, Si, Ge, As, Sb, Te, At
-- **Mendelejew** (1869): ordnete nach Atommasse, sagte Eigenschaften unbekannter Elemente vorher; **Moseley** (1913): Ordnung nach Kernladungszahl Z`,
+- **Mendelejew** (1869): ordnete nach Atommasse, sagte Eigenschaften unbekannter Elemente vorher; **Moseley** (1913): Ordnung nach Kernladungszahl Z
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "In welchem Block steht Calcium (Z=20)?" → s-Block, Gruppe 2 ([Ar]4s²)
+- "Warum hat das PSE 18 Gruppen, aber nur 7 Perioden?" → Gruppen = Valenzelektronentyp (18 Möglichkeiten); Perioden = höchste Hauptquantenzahl n (7 Schalen)
+- "Welche Elektronenkonfiguration hat Schwefel (Gruppe 16, Periode 3)?" → [Ne]3s²3p⁴
+
+**Achtung — typische Verwechslungen:**
+- Perioden (horizontal, 7 Stück) ≠ Gruppen (vertikal, 18 Stück) — häufige Verwechslung!
+- p-Block: Gruppenummer = 10 + Valenzelektronen (Gr.17 = 7 VE); s-Block: Gruppenummer = Valenzelektronen (Gr.2 = 2 VE)
+- Cr ([Ar]3d⁵4s¹) und Cu ([Ar]3d¹⁰4s¹) — Ausnahmen vom Aufbauprinzip, regelmäßig geprüft
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Periodenlängen: 2 – 8 – 8 – 18 – 18 – 32 – 32 (aus Kapazität der Unterschalen s, p, d, f)
+- Halbmetalle (Treppenlinie): B, Si, Ge, As, Sb, Te, At — Halbleitereigenschaften
+- Mendelejew (1869): nach Atommasse, Vorhersage unentdeckter Elemente; Moseley (1913): nach Kernladungszahl Z (löst alle Anomalien)
+
+---`,
 
       lernziele: [
         "Den Aufbau des PSE mit Perioden, Gruppen und Bloecken erklaeren und den Zusammenhang zur Quantenzahlsystematik herstellen",
@@ -2477,6 +2633,25 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
 - 0,4 ≤ ΔEN < 1,7: polare kovalente Bindung (H₂O: ΔEN=1,24; HCl: ΔEN=0,96)
 - ΔEN ≥ 1,7: überwiegend ionisch (NaCl: ΔEN=2,23; MgO: ΔEN=2,13)
 
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Welches Element hat die höchste Elektronegativität?" → Fluor (F, EN = 4,0 nach Pauling)
+- "Welchen Bindungscharakter hat O–H (EN(O)=3,44; EN(H)=2,20)?" → ΔEN = 1,24 → polar kovalent (0,4–1,7)
+- "Warum ist IE₁(O) < IE₁(N)?" → Pairing Penalty: O muss 4. 2p-Elektron in besetztes Orbital → Coulomb-Abstoßung → leichter entfernbar
+
+**Achtung — typische Verwechslungen:**
+- Höchste EA ≠ höchste EN: Höchste EA = Chlor (349 kJ/mol), nicht Fluor! (Fluors 2p-Orbitale zu beengt → Abstoßung)
+- Atomradius: in Periode ↓ (Z_eff steigt); in Gruppe ↑ (neue Schalen) — NICHT umgekehrt!
+- ΔEN-Grenzen: <0,4 unpolar kovalent; 0,4–1,7 polar kovalent; ≥1,7 ionisch
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- EN-Werte (Pauling): F(4,0) > O(3,44) > Cl(3,16) > N(3,04) > Br(2,96) > S(2,58) > C(2,55) > H(2,20)
+- IE-Ausnahmen Periode 2: IE₁(B) < IE₁(Be) [2p energiereicher als 2s] und IE₁(O) < IE₁(N) [Pairing Penalty]; analog Periode 3: IE(Al)<IE(Mg) und IE(S)<IE(P)
+- Successive IE: großer Sprung (Faktor >3) nach n Ionisierungen → n Valenzelektronen → Gruppe n
+- C–F-Bindung: ΔEN = 1,45; stabil (~485 kJ/mol), metabolisch resistent → fluorierte Arzneistoffe (Ciprofloxacin, 5-FU, Fluoxetin) haben lange HWZ
+
+---
 ## Zusammenfassung
 
 - **Effektive Kernladung Z_eff** = Z − σ; steigt in Periode (links→rechts), bleibt in Gruppe ähnlich
@@ -2788,6 +2963,25 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
 - **Mo**: Xanthinoxidase (Hypoxanthin → Xanthin → Harnsäure). Gicht-Therapie: Allopurinol hemmt Xanthinoxidase.
 - **Pt**: Cisplatin, Carboplatin (Pt(II)-Komplexe) quervernetzen DNA (Guanin-Guanin intrastrand crosslinks) → Apoptose. Wichtige Zytostatika bei Hoden-, Ovarial-, Lungen-, Blasenkarzinomen.
 
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Welches Halogen ist essenziell für T3/T4?" → Jod (I, Z=53): T3 = 3 I-Atome, T4 = 4 I-Atome; Aufnahme über NIS-Symporter
+- "Welches Übergangsmetall ist Zentralatom in Hämoglobin?" → Eisen (Fe²⁺) — Fe³⁺ (Methämoglobin) bindet kein O₂!
+- "Warum bilden Erdalkalimetalle +2-Ionen?" → 2 Valenzelektronen (ns²) → Abgabe → stabile Edelgaskonfiguration; IE₃ enorm hoch → kein +3-Ion
+
+**Achtung — typische Verwechslungen:**
+- Fe²⁺ bindet O₂ in Hämoglobin ≠ Fe³⁺ (Methämoglobin = bindet kein O₂)
+- Alkalimetalle: Reaktivität steigt von Li→Cs (IE sinkt); Halogene: Reaktivität sinkt von F₂→I₂ (IE sinkt in der Gruppe)
+- Na⁺ (extrazellulär, ~140 mmol/L) ≠ K⁺ (intrazellulär, ~150 mmol/L) — Verwechslung gefährlich für Klinik-Fragen!
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein, 1 ATP → Ruhemembranpotenzial ≈ −70 mV
+- Ca²⁺: 99 % als Hydroxyapatit; Plasma 2,2–2,6 mmol/L; Hypokalzämie → Tetanie, Chvostek-Zeichen
+- Jodmangel → Kretinismus (häufigste vermeidbare Ursache geistiger Behinderung weltweit)
+- Cisplatin (Pt(II)): Guanin-Guanin-DNA-Quervernetzung → Apoptose; Hoden-/Ovarialkarzinom
+
+---
 ## Zusammenfassung
 
 - **Alkalimetalle** (Gr. 1): 1 VE, bilden +1-Ionen; **Na⁺** Hauptkation extrazellulär (140 mmol/L), **K⁺** intrazellulär (~150 mmol/L); Hypo-/Hyperkaliämie → Herzrhythmusstörungen
