@@ -852,6 +852,8 @@ Beispiele:
 - *Ressourcendifferenzierung:* Unterschiedliche Wirtspflanzen bei Insekten (Assortative mating nach Wirtspflanze)
 - *Saisonale Isolation:* Verschiedene Blüte-/Laichzeiten
 
+---
+
 ## MedAT-Fokus
 
 **Häufige Fragen:**
@@ -1419,6 +1421,8 @@ Ein **Massenaussterben** ist definiert als Verlust von ≥ 75% aller Arten in ei
 **Ex-situ-Erhaltung:** Schutz außerhalb des natürlichen Habitats (Zoos, Botanische Gärten, Genbanken, Kryokonservierung). Notfallmaßnahme, wenn Habitat zerstört.
 
 **Ökologische Restauration:** Aktive Wiederherstellung degradierter Ökosysteme — Aufforstung, Renaturierung von Flüssen, Wiederansiedlung ausgestorbener Arten (Rewilding).
+
+---
 
 ## MedAT-Fokus
 
