@@ -22,7 +22,7 @@ export const bioKapGenetik: Kapitel = {
         "Phänotyp",
         "Genotyp",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Die klassische Genetik bildet das Fundament der Vererbungslehre und geht auf Gregor Mendels Kreuzungsversuche mit Erbsen zurück. Sie beschreibt, wie Merkmale über Generationen hinweg nach vorhersagbaren Regeln weitergegeben werden. Für den MedAT ist das sichere Beherrschen der Mendelschen Regeln, der Dominanzverhältnisse und der Kreuzungsschemata unverzichtbar, da diese Themen regelmäßig geprüft werden.
 
@@ -108,7 +108,13 @@ Beim **dihybriden Erbgang** werden zwei unabhängige Gene gleichzeitig betrachte
 
 ## Zusammenfassung
 
-Die klassische Genetik basiert auf den drei Mendelschen Regeln, die Vererbungsmuster bei monohybriden und dihybriden Erbgängen beschreiben. Bei Kreuzung homozygoter Eltern (AA × aa) entsteht eine uniforme F₁-Generation (100% Aa), deren Weiterkreuzung in F₂ ein Phänotyp-Verhältnis von 3:1 bei dominant-rezessiver Vererbung ergibt. Neben der klassischen Dominanz existieren intermediäre Erbgänge (Mischphänotyp bei Heterozygoten, Verhältnis 1:2:1) und Kodominanz (beide Allele gleichzeitig exprimiert, z. B. Blutgruppe AB). Die Testkreuzung mit einem homozygot rezessiven Partner erlaubt die Genotypbestimmung, und die Risikoberechnung bei autosomal-rezessiven Erkrankungen (Aa × Aa → 25% aa) ist Grundlage der genetischen Beratung.`,
+- **Uniformitätsregel**: Kreuzung homozygoter Eltern (AA × aa) → F₁ einheitlich heterozygot (Aa)
+- **Spaltungsregel**: F₁ × F₁ (Aa × Aa) → F₂: 3 dominant : 1 rezessiv (Phänotyp-Verhältnis 3:1)
+- **Unabhängigkeitsregel**: Gene auf verschiedenen Chromosomen segregieren unabhängig → dihybride Kreuzung: 9:3:3:1
+- **Genotyp** = genetische Ausstattung; **Phänotyp** = äußerlich sichtbares Merkmal
+- Dominant-rezessiv: Aa zeigt nur dominanten Phänotyp; **intermediär**: Mischphänotyp; **kodominant**: beide Allele sichtbar (Beispiel: Blutgruppe AB)
+- **Testkreuzung** (× aa): bestimmt ob Genotyp AA oder Aa vorliegt (1:1 → Aa; alle dominant → AA)
+- Autosomal-rezessiv Risikoberechnung: Aa × Aa → 25% AA, 50% Aa, **25% aa** (erkrankt)`,
       lernziele: [
         "Die Mendelschen Regeln (Uniformitäts-, Spaltungs- und Unabhängigkeitsregel) erklären und auf Kreuzungsbeispiele anwenden können.",
         "Den Unterschied zwischen Genotyp und Phänotyp sowie zwischen homozygot und heterozygot beschreiben können.",
@@ -224,7 +230,7 @@ Die klassische Genetik basiert auf den drei Mendelschen Regeln, die Vererbungsmu
         "Heterochromatin",
         "Chromosomen",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Chromosomen sind die strukturellen Träger der Erbinformation und bestehen aus DNA, die um Histonproteine gewickelt ist. Der Mensch besitzt 46 Chromosomen (22 Autosomenpaare + XX oder XY), und Abweichungen in Zahl oder Struktur führen zu klinisch bedeutsamen Syndromen. Im MedAT werden Karyotyp-Notation, numerische Aberrationen (Trisomie 21, Turner, Klinefelter) und strukturelle Chromosomenstörungen häufig abgefragt.
 
@@ -310,7 +316,13 @@ Chromosomenaberrationen werden pränatal durch verschiedene Methoden diagnostizi
 
 ## Zusammenfassung
 
-Chromosomen bestehen aus DNA und Histonen und tragen die Erbinformation in organisierter Form im Zellkern. Der menschliche Karyotyp umfasst 46 Chromosomen, wobei Abweichungen in der Chromosomenzahl (Aneuploidie) durch Nicht-Disjunktion in der Meiose entstehen und mit dem mütterlichen Alter zunehmen. Die drei wichtigsten numerischen Aberrationen sind Trisomie 21 (Down-Syndrom mit fazialer Dysmorphie und Herzfehlern), das Klinefelter-Syndrom (47,XXY mit Hypogonadismus) und das Turner-Syndrom (45,X mit Kleinwuchs und Gonadendysgenesie). Strukturelle Aberrationen wie Deletionen verursachen spezifische Syndrome (Cri-du-chat bei 5p-Deletion, DiGeorge bei 22q11-Deletion), und ihre Kenntnis ist für die Pränataldiagnostik und genetische Beratung essenziell.`,
+- Mensch: **46 Chromosomen** (44 Autosomen + 2 Geschlechtschromosomen); ♀ = 46,XX; ♂ = 46,XY
+- **Aneuploidie** = falsche Chromosomenzahl; entsteht durch **Nicht-Disjunktion** in der Meiose; Risiko steigt mit mütterlichem Alter
+- **Trisomie 21** (Down-Syndrom, 47,+21): faziale Dysmorphie, Herzfehler, Trisomie-bedingte Intelligenzminderung, erhöhtes Leukämierisiko
+- **Klinefelter-Syndrom** (47,XXY): Mann mit Hypogonadismus, Infertilität, evtl. Gynäkomastie
+- **Turner-Syndrom** (45,X): Frau mit Kleinwuchs, Gonadendysgenesie, Herzfehler (Aortenisthmusstenose)
+- Strukturelle Aberrationen: Deletion, Duplikation, Translokation (Robertson: 14/21 → familiäres Down-Syndrom), Inversion
+- **Cri-du-chat** (5p-): Katzenschreien im Säuglingsalter; **DiGeorge** (22q11): Herzfehler, Thymusaplasie → T-Zell-Mangel`,
       lernziele: [
         "Den Aufbau eines Chromosoms (Zentromer, Telomere, p- und q-Arm) beschreiben können.",
         "Karyotyp-Notation lesen und interpretieren können (z. B. 46,XX; 47,XY,+21).",
@@ -423,7 +435,7 @@ Chromosomen bestehen aus DNA und Histonen und tragen die Erbinformation in organ
         "Epistasie",
         "Komplementation",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Geninteraktionen beschreiben Phänomene, bei denen Gene nicht unabhängig voneinander wirken, sondern sich gegenseitig beeinflussen. Dies führt zu Abweichungen von den klassischen Mendelschen Spaltungsverhältnissen und erklärt die Komplexität vieler Merkmale. Für den MedAT ist es wichtig, Epistasie, Polygenie und Pleiotropie sicher zu unterscheiden und die modifizierten F₂-Verhältnisse ableiten zu können.
 
@@ -509,7 +521,13 @@ Ein Sonderfall der Geninteraktion ist die **mitochondriale (maternale) Vererbung
 
 ## Zusammenfassung
 
-Geninteraktionen erklären, warum viele Merkmale nicht den einfachen Mendelschen Spaltungsverhältnissen folgen. Bei Epistasie überdeckt ein epistatisches Gen die Wirkung eines anderen, wie beim Albino-Locus der Maus, wo cc unabhängig vom B-Locus stets zu weißer Fellfarbe führt (Verhältnis 9:3:4). Polygenie beschreibt die additive Wirkung vieler Gene auf ein Merkmal wie Hautfarbe oder Körpergröße und erzeugt eine glockenförmige Verteilung, während Pleiotropie bedeutet, dass ein einziges Gen mehrere Phänotypen beeinflusst — das HbS-Allel der Sichelzellanämie verursacht gleichzeitig Sichelzellen, Anämie und Malaria-Resistenz bei Heterozygoten. Bei Komplementierung ergänzen sich funktionale Allele verschiedener Gene (aaBB × AAbb → F₁ normal), und das resultierende F₂-Verhältnis von 9:7 ist ein wichtiger Hinweis auf Geninteraktion.`,
+- **Epistasie**: ein Gen maskiert die Wirkung eines anderen → modifiziertes F₂-Verhältnis (z. B. 9:3:4 oder 9:7 statt 9:3:3:1)
+- **Polygenie**: viele Gene mit additivem Effekt auf ein Merkmal (Hautfarbe, Körpergröße) → stetige, glockenförmige Verteilung
+- **Pleiotropie**: ein Gen beeinflusst mehrere Phänotypen (Beispiel: HbS → Sichelzellen + Anämie + Malaria-Resistenz bei Heterozygoten)
+- **Komplementierung**: zwei verschiedene Gene müssen je ein funktionales Allel liefern → bei Defekt in beiden → kranker Phänotyp (9:7-Verhältnis)
+- **Penetranz**: Anteil der Genträger, die den Phänotyp zeigen (100% = vollständig; <100% = unvollständig)
+- **Expressivität**: Ausprägungsgrad des Phänotyps bei Genträgern (variabel = unterschiedliche Schwere)
+- Klinische Relevanz: Epistasie und Penetranz erklären, warum Familienmitglieder mit gleichem Genotyp unterschiedlich erkranken`,
       lernziele: [
         "Den Begriff Epistase erklären und das modifizierte Phänotypverhältnis 9:3:4 ableiten können.",
         "Polygenie von Pleiotropie unterscheiden und je ein Beispiel nennen können.",
@@ -623,7 +641,7 @@ Geninteraktionen erklären, warum viele Merkmale nicht den einfachen Mendelschen
         "Gonosomale Vererbung",
         "Konduktorin",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Die geschlechtsgebundene Vererbung betrifft Gene auf den Geschlechtschromosomen und zeigt charakteristische Muster, die sich von autosomalen Erbgängen unterscheiden. Aufgrund der Hemizygotie bei Männern (nur ein X-Chromosom) manifestieren sich X-chromosomal rezessive Erkrankungen wie Hämophilie A oder Duchenne-Muskeldystrophie fast ausschließlich bei männlichen Individuen. Das Verständnis dieser Vererbungsmuster ist für den MedAT essenziell, da sie regelmäßig in Stammbaumaufgaben geprüft werden.
 
@@ -713,7 +731,13 @@ Die X-Inaktivierung hat wichtige klinische Konsequenzen, die über das Kaliko-Ka
 
 ## Zusammenfassung
 
-Die geschlechtsgebundene Vererbung folgt besonderen Regeln, da Männer nur ein X-Chromosom besitzen und somit hemizygot für alle X-chromosomalen Gene sind. Bei X-chromosomal rezessiven Erkrankungen wie Hämophilie A oder Duchenne-Muskeldystrophie sind daher fast ausschließlich Männer betroffen, während Frauen als heterozygote Konduktorinnen das Allel weitergeben, ohne selbst zu erkranken. Ein charakteristisches Merkmal ist die fehlende Vater-Sohn-Übertragung, da Väter ihr X-Chromosom nur an Töchter weitergeben. Die X-Inaktivierung sorgt bei Frauen für Dosiskompensation, indem zufällig eines der beiden X-Chromosomen als Barr-Körperchen stillgelegt wird, was zu einem Mosaik-Muster führen kann, wie es bei Kaliko-Katzen sichtbar wird.`,
+- Männer sind **hemizygot** für X-chromosomale Gene (nur 1 X-Chromosom) → ein einziges rezessives Allel reicht zur Erkrankung
+- **X-chromosomal rezessiv**: fast nur Männer betroffen; Frauen als Konduktorinnen (50% Söhne betroffen, 50% Töchter Konduktorin)
+- **Kein Vater-Sohn-Transfer**: Väter geben ihr X-Chromosom ausschließlich an Töchter weiter
+- Beispiele X-rez.: Hämophilie A (Faktor VIII), Duchenne-Muskeldystrophie, Rot-Grün-Blindheit
+- **X-Inaktivierung** (Lyon-Hypothese): zufällige Stilllegung eines der beiden X in jeder Körperzelle → Barr-Körperchen; führt zum Mosaik-Phänotyp (Kaliko-Katze)
+- **Y-chromosomal (holandrisch)**: Vater überträgt auf alle Söhne; Beispiel: SRY-Gen (Hodenentwicklung)
+- **X-chromosomal dominant**: beide Geschlechter betroffen; alle Töchter eines betroffenen Vaters erkranken`,
       lernziele: [
         "X-chromosomal rezessive und dominante Vererbungsmuster anhand von Genotypen und Vererbungsregeln erklären können.",
         "Den Begriff Hemizygotie verstehen und erklären, warum Männer bei X-chromosomal rezessiven Erkrankungen häufiger betroffen sind.",
@@ -832,7 +856,7 @@ Die geschlechtsgebundene Vererbung folgt besonderen Regeln, da Männer nur ein X
         "Stammbaum",
         "Erbgang",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Die Stammbaumanalyse ist das zentrale Werkzeug der klinischen Genetik zur Identifikation von Erbgängen und zur Risikoberechnung in Familien. Durch systematische Auswertung betroffener und gesunder Familienmitglieder lässt sich der Vererbungsmodus bestimmen und die Wahrscheinlichkeit für das Auftreten einer Erkrankung bei Nachkommen berechnen. Im MedAT ist die Stammbaumanalyse ein Klassiker und erfordert sicheres Erkennen der vier Haupterbgänge sowie die Anwendung der Wahrscheinlichkeitsrechnung.
 
@@ -916,7 +940,13 @@ Die Erbgangbestimmung erfolgt systematisch durch Ausschlussprinzip. **Schritt 1:
 
 ## Zusammenfassung
 
-Die Stammbaumanalyse ermöglicht die systematische Bestimmung des Erbgangs einer Erkrankung anhand charakteristischer Vererbungsmuster in Familien. Autosomal-dominante Erbgänge zeigen eine vertikale Transmission mit Betroffenen in jeder Generation und gleichmäßiger Geschlechterverteilung, während autosomal-rezessive Erkrankungen typischerweise Generationensprünge aufweisen und durch Konsanguinität begünstigt werden. Bei X-chromosomal rezessiven Erbgängen sind fast ausschließlich Männer betroffen, und das charakteristische Diagonal-Muster (Großvater → Tochter als Konduktorin → Enkel) sowie die fehlende Vater-Sohn-Übertragung sind diagnostische Schlüsselmerkmale. Die Wahrscheinlichkeitsberechnung folgt den Mendelschen Regeln, wobei jede Geburt ein unabhängiges Ereignis darstellt und die bedingte Wahrscheinlichkeit nach Bayes (P(Aa | gesund) = 2/3) eine wichtige Rolle in der genetischen Beratung spielt.`,
+- **Autosomal-dominant**: betroffen in jeder Generation (vertikal), ♂ und ♀ gleich, ein Elternteil meist betroffen, 50% Weitergabe
+- **Autosomal-rezessiv**: Generationensprünge, beide Eltern meist gesund (Träger), Konsanguinität erhöht Risiko, 25% Erkrankungsrisiko
+- **X-chromosomal rezessiv**: fast nur Männer betroffen; Diagonal-Muster (Großvater → Konduktorin → betroffener Enkel); kein Vater-Sohn-Transfer
+- **X-chromosomal dominant**: ♂ und ♀ betroffen; alle Töchter eines betroffenen Vaters krank
+- **Y-chromosomal**: nur Männer, Vater → alle Söhne (holandrisch)
+- Bedingte Wahrscheinlichkeit nach **Bayes**: P(Aa | phänotypisch gesund, Eltern Aa × Aa) = 2/3
+- Symbole: Quadrat = ♂; Kreis = ♀; ausgefüllt = betroffen; Doppellinie = Konsanguinität`,
       lernziele: [
         "Die Standardsymbole der Stammbaumanalyse (Quadrat, Kreis, ausgefüllt, Doppellinie) kennen und anwenden können.",
         "Autosomal-dominante, autosomal-rezessive, X-chromosomale und Y-chromosomale Erbgänge anhand typischer Stammbaummerkmale erkennen können.",
@@ -1035,7 +1065,7 @@ Die Stammbaumanalyse ermöglicht die systematische Bestimmung des Erbgangs einer
         "Populationsgenetik",
         "Gleichgewicht",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Die Populationsgenetik untersucht die Verteilung und Veränderung von Allelfrequenzen in Populationen über Generationen hinweg. Das Hardy-Weinberg-Gleichgewicht bildet das zentrale mathematische Modell, mit dem aus bekannten Erkrankungshäufigkeiten Trägerfrequenzen berechnet werden können. Im MedAT wird die Hardy-Weinberg-Formel regelmäßig in Rechenaufgaben geprüft, weshalb ihre sichere Anwendung unverzichtbar ist.
 
@@ -1122,7 +1152,13 @@ Neben den fünf klassischen HWE-Voraussetzungen gibt es weitere Faktoren, die Al
 
 ## Zusammenfassung
 
-Die Populationsgenetik beschreibt die Verteilung von Allelen in großen Populationen mithilfe des Hardy-Weinberg-Gleichgewichts, das unter idealen Bedingungen stabile Allelfrequenzen vorhersagt. Die Formel p² + 2pq + q² = 1 ermöglicht die Berechnung von Trägerfrequenzen aus Erkrankungshäufigkeiten und zeigt, dass Konduktoren bei seltenen rezessiven Erkrankungen wesentlich häufiger sind als Betroffene. Evolutionäre Kräfte wie Selektion, genetischer Drift, Migration und Mutation verändern Allelfrequenzen und verursachen Abweichungen vom Gleichgewicht, wobei der Heterozygoten-Vorteil bei Sichelzellanämie in Malaria-Gebieten das bekannteste klinische Beispiel für Balancing Selection darstellt. Genetischer Drift betrifft vor allem kleine Populationen und kann über Gründereffekt oder Flaschenhals-Effekt zum Verlust genetischer Diversität führen.`,
+- **Hardy-Weinberg-Gleichgewicht**: p² + 2pq + q² = 1; beschreibt stabile Allelfrequenzen ohne Evolution
+- 5 Voraussetzungen: keine Mutation, Panmixie, keine Selektion, große Population, keine Migration/Genfluss
+- Anwendung: Erkrankungshäufigkeit (q²) bekannt → Trägerfrequenz (2pq) berechnen (z. B. Mukoviszidose 1:2.500 → Träger ~1:25)
+- **Heterozygoten-Vorteil** (balancierte Selektion): Sichelzellanämie-Träger in Malariaregionen → beide Allele bleiben in der Population
+- **Genetischer Drift**: zufällige Allelfrequenzänderung; besonders stark in kleinen Populationen
+- **Gründereffekt**: kleine Gründerpopulation → zufällige Allele dominieren neue Population
+- **Flaschenhals-Effekt**: drastische Populationsreduktion → Verlust genetischer Diversität`,
       lernziele: [
         "Die Hardy-Weinberg-Formel (p² + 2pq + q² = 1) anwenden und Genotypfrequenzen aus Allelfrequenzen berechnen können.",
         "Die fünf Voraussetzungen des Hardy-Weinberg-Gleichgewichts nennen und erklären können.",
@@ -1244,7 +1280,7 @@ Die Populationsgenetik beschreibt die Verteilung von Allelen in großen Populati
         "p53",
         "Mehrstufenmodell",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Mutationen sind dauerhafte Veränderungen der DNA-Sequenz und stellen die Grundlage sowohl für genetische Variation als auch für Erbkrankheiten und Krebsentstehung dar. Sie werden nach Ausmaß in Genmutationen (Punktmutationen), Chromosomenmutationen (strukturell) und Genommutationen (numerisch) eingeteilt. Für den MedAT ist die sichere Unterscheidung der Mutationstypen und ihrer Auswirkungen auf das Protein zentral, ebenso wie das Verständnis von DNA-Reparaturdefekten als Krebsprädispositionen.
 
@@ -1325,7 +1361,14 @@ Mutagene werden nach ihrer Natur eingeteilt: **Physikalische Mutagene** (UV-Stra
 
 ## Zusammenfassung
 
-Mutationen sind dauerhafte DNA-Veränderungen, die von stillen Punktmutationen ohne funktionelle Konsequenz bis zu schwerwiegenden Frameshift-Mutationen reichen, die das gesamte nachfolgende Protein verändern. Die Sichelzellanämie entsteht durch eine einzelne Missense-Mutation (Glu → Val) in der β-Globinkette, während die Mukoviszidose auf einer In-Frame-Deletion (ΔF508) beruht, bei der der Leserahmen erhalten bleibt, aber ein kritisches Phenylalanin im CFTR-Protein fehlt. Defekte in DNA-Reparaturmechanismen prädisponieren zu Krebserkrankungen, wobei MMR-Defekte zum Lynch-Syndrom, NER-Defekte zu Xeroderma pigmentosum und BRCA1/2-Mutationen zu hereditärem Brust- und Eierstockkrebs führen. Die Unterscheidung zwischen Keimbahnmutationen und somatischen Mutationen ist für Therapieentscheidungen und genetische Beratung von zentraler Bedeutung. Transitionen (Purin zu Purin oder Pyrimidin zu Pyrimidin) sind dabei häufiger als Transversionen (Purin zu Pyrimidin oder umgekehrt).`,
+- **Stille Mutation**: Codon ändert sich, aber gleiche Aminosäure (Degeneriertheit des Codes) → kein Effekt
+- **Missense-Mutation**: andere Aminosäure → Proteinveränderung (Beispiel: Sichelzellanämie GAG→GTG: Glu→Val)
+- **Nonsense-Mutation**: Stopp-Codon vorzeitig → abgebrochenes, nicht-funktionelles Protein
+- **Frameshift** (Insertion/Deletion ≠ Vielfaches von 3): gesamter nachfolgender Leserahmen verschoben → schwerwiegend
+- **In-Frame-Deletion** (Vielfaches von 3): einzelne Aminosäure fehlt (Beispiel: Mukoviszidose ΔF508 → Phe fehlt im CFTR)
+- **Transition** (häufiger): Purin↔Purin oder Pyrimidin↔Pyrimidin; **Transversion** (seltener): Purin↔Pyrimidin
+- DNA-Reparaturdefekte → Krebs: MMR-Defekt → Lynch-Syndrom; NER-Defekt → Xeroderma pigmentosum; BRCA1/2 → hereditärer Brustkrebs
+- **Keimbahnmutation**: vererbbar; **somatische Mutation**: nur in einer Zelllinie, nicht vererbbar`,
       lernziele: [
         "Die drei Typen von Genmutationen (stille Mutation, Missense, Nonsense) unterscheiden und klinische Beispiele zuordnen können.",
         "Frameshift-Mutationen und In-Frame-Indels erklären und deren Folgen für das Protein beschreiben können.",
@@ -1448,7 +1491,7 @@ Mutationen sind dauerhafte DNA-Veränderungen, die von stillen Punktmutationen o
         "Degeneriertheit",
         "Start-/Stoppcodons",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Die DNA-Doppelhelix speichert die gesamte genetische Information eines Organismus und wird vor jeder Zellteilung semikonservativ repliziert. Das Verständnis der DNA-Struktur (antiparallele Stränge, Basenpaarung nach Chargaff) und des Replikationsmechanismus (Leitstrang, Folgestrang, Okazaki-Fragmente) ist für die MedAT-Vorbereitung fundamental. Besonders prüfungsrelevant sind die Chargaff-Regeln, die Funktion der Replikationsenzyme und die Bedeutung der Telomerase für Zellalterung und Krebs.
 
@@ -1545,7 +1588,14 @@ Doppelstrangbrüche (DSB), die gefährlichste Schadensform, werden durch zwei Ha
 
 ## Zusammenfassung
 
-Die DNA besteht aus zwei antiparallelen Strängen, die über komplementäre Basenpaarung (A-T mit 2 und G-C mit 3 Wasserstoffbrücken) verbunden sind und eine rechtsgängige Doppelhelix bilden. Bei der semikonservativen Replikation dient jeder Elternstrang als Matrize, wobei der Leitstrang kontinuierlich und der Folgestrang diskontinuierlich in Form von Okazaki-Fragmenten synthetisiert wird, da die DNA-Polymerase ausschließlich in 5'→3'-Richtung arbeitet. Die koordinierte Aktivität von Helicase, Primase, DNA-Polymerase und Ligase gewährleistet eine hochpräzise Verdopplung, während die Telomerase in Keimbahn- und Stammzellen die Chromosomenenden (TTAGGG-Repeats) verlängert und so der replikativen Seneszenz entgegenwirkt. Die Reaktivierung der Telomerase in Krebszellen ist ein Hallmark of Cancer und Ziel therapeutischer Ansätze.`,
+- DNA: antiparallele Doppelhelix; **A-T** (2 Wasserstoffbrücken), **G≡C** (3 Wasserstoffbrücken, stabiler)
+- **Chargaff-Regeln**: A = T; G = C (folgt aus komplementärer Basenpaarung)
+- **Semikonservative Replikation**: jeder Elternstrang dient als Matrize → je ein Tochterstrang neu
+- **Leitstrang**: kontinuierlich synthetisiert (5'→3'); **Folgestrang**: diskontinuierlich als Okazaki-Fragmente
+- DNA-Polymerase arbeitet ausschließlich **5'→3'** und braucht einen Primer (von der Primase gelegt)
+- Enzyme der Replikation: Helicase (öffnet), Primase (Primer), DNA-Pol III (Synthese), Ligase (verbindet Fragmente)
+- **Telomere** (TTAGGG-Repeats): Schutz der Chromosomenenden; Telomerase verlängert sie (Stammzellen, Keimbahn)
+- Telomerase-Reaktivierung in Krebszellen → unkontrolliertes Wachstum (Hallmark of Cancer)`,
       lernziele: [
         "Den Aufbau der DNA-Doppelhelix und die Chargaff-Regeln (A=T, G≡C) erklären können.",
         "Das semikonservative Prinzip der DNA-Replikation beschreiben und das Meselson-Stahl-Experiment interpretieren können.",
@@ -1687,7 +1737,7 @@ Die DNA besteht aus zwei antiparallelen Strängen, die über komplementäre Base
         "RNA-Polymerase",
         "Alternatives Spleißen",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Die Transkription ist der erste Schritt der Genexpression, bei dem die genetische Information der DNA in eine mRNA-Kopie umgeschrieben wird. Bei Eukaryoten durchläuft die prä-mRNA anschließend drei Prozessierungsschritte (Capping, Polyadenylierung, Splicing), bevor sie als reife mRNA zur Translation ins Zytoplasma exportiert wird. Im MedAT sind die Unterschiede zwischen DNA und RNA, die Rolle der RNA-Polymerase II und die Besonderheiten des eukaryotischen Splicings besonders prüfungsrelevant.
 
@@ -1775,7 +1825,15 @@ Für das Verständnis der Splicing-Regulation ist die Zusammensetzung des Splice
 
 ## Zusammenfassung
 
-Die Transkription überträgt die genetische Information der DNA in eine mRNA-Kopie, wobei die RNA-Polymerase den Template Strand in 3'→5'-Richtung liest und die RNA in 5'→3'-Richtung synthetisiert, ohne einen Primer zu benötigen. Bei Eukaryoten wird die prä-mRNA durch drei posttranskriptionelle Modifikationen zur reifen mRNA verarbeitet: das 5'-Capping mit einer m7G-Kappe schützt vor Abbau und wird vom Ribosom erkannt, der 3'-Poly-A-Tail stabilisiert die mRNA, und das Spleißen durch das Spliceosom entfernt Introns und verbindet Exons. Alternatives Splicing ermöglicht die Bildung verschiedener Proteine aus einem einzigen Gen und erklärt, warum das menschliche Proteom mit über 100.000 Proteinen die Zahl von etwa 20.000 Genen weit übersteigt. Im Gegensatz dazu besitzen Prokaryoten keine Introns und keine RNA-Prozessierung, sodass Transkription und Translation zeitlich und räumlich gekoppelt ablaufen.`,
+- **Transkription**: RNA-Polymerase liest Template Strand (3'→5') → synthetisiert prä-mRNA (5'→3'); **kein Primer nötig**
+- RNA-Polymerase braucht Promotor (TATA-Box) zur Initiation; Transkriptionsfaktoren binden zuerst
+- **Template Strand** = Matrize (3'→5'); **Coding Strand** = gleiches Vorzeichen wie mRNA (5'→3', T statt U)
+- **RNA-Prozessierung** bei Eukaryoten (3 Schritte):
+  1. **5'-Cap** (m7G): schützt vor Abbau, ermöglicht Ribosom-Bindung
+  2. **Poly-A-Tail** (3'-Ende): stabilisiert mRNA
+  3. **Splicing** (Spliceosom): Introns entfernen, Exons verbinden
+- **Alternatives Splicing**: ein Gen → verschiedene mRNA-Varianten → verschiedene Proteine → erklärt 100.000+ Proteine aus ~20.000 Genen
+- **Prokaryoten**: keine Introns, keine Prozessierung; Transkription und Translation zeitlich-räumlich gekoppelt`,
       lernziele: [
         "Den Unterschied zwischen DNA und RNA (Zucker, Basen, Strangigkeit) erklären können.",
         "Die drei Phasen der Transkription (Initiation, Elongation, Termination) bei Pro- und Eukaryoten beschreiben können.",
@@ -1917,7 +1975,7 @@ Die Transkription überträgt die genetische Information der DNA in eine mRNA-Ko
         "mRNA",
         "rRNA",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Die Translation ist der zweite Schritt der Genexpression, bei dem die Nukleotidsequenz der mRNA am Ribosom in eine Aminosäuresequenz übersetzt wird. Der genetische Code ist ein degenerierter Triplett-Code, bei dem 64 Codons für 20 Aminosäuren und 3 Stoppsignale codieren. Für den MedAT sind die Eigenschaften des genetischen Codes, der Ribosomenaufbau (70S vs. 80S) und die Wirkungsweise translationshemmender Antibiotika besonders wichtig.
 
@@ -2011,7 +2069,14 @@ Die Proteinfaltung wird durch Chaperone (z. B. Hsp70, Hsp60/GroEL) unterstützt,
 
 ## Zusammenfassung
 
-Die Translation übersetzt die mRNA-Sequenz am Ribosom in ein Protein, wobei der degenerierte Triplett-Code 64 Codons auf 20 Aminosäuren und 3 Stoppsignale abbildet. Das Start-Codon AUG codiert für Methionin und markiert den Translationsbeginn, während Stopp-Codons (UAA, UAG, UGA) keine tRNA binden und stattdessen Release-Faktoren rekrutieren, die das fertige Protein freisetzen. Die Peptidyl-Transferase, ein Ribozym in der großen ribosomalen Untereinheit, katalysiert die Peptidbindungsknüpfung zwischen den Aminosäuren an der A- und P-Site. Klinisch bedeutsam ist der Unterschied zwischen prokaryotischen (70S) und eukaryotischen (80S) Ribosomen, der die selektive Wirkung von Antibiotika wie Tetracyclin, Chloramphenicol und Erythromycin auf bakterielle Proteinbiosynthese ermöglicht, wobei Mitochondrien aufgrund ihrer 70S-Ribosomen als Nebenwirkung ebenfalls betroffen sein können.`,
+- **Genetischer Code**: Triplett (3 Basen = 1 Codon), universell, degeneriert (mehrere Codons für 1 Aminosäure), kommafrei
+- 64 Codons: 61 codieren für 20 Aminosäuren, 3 sind Stopp-Codons (UAA, UAG, UGA)
+- **Start-Codon**: AUG (Methionin) → Translationsbeginn
+- **Ribosomen**: Prokaryoten 70S (30S + 50S); Eukaryoten 80S (40S + 60S)
+- tRNA trägt Aminosäure und Anticodon; **Peptidyl-Transferase** (rRNA-Ribozym!) katalysiert Peptidbindungsknüpfung
+- Ribosom-Sites: **A** (Aminoacyl-tRNA eingebaut), **P** (wachsende Kette), **E** (austretende leere tRNA)
+- Antibiotika hemmen Prokaryoten-Ribosomen: Tetracyclin (A-Site), Chloramphenicol (Peptidyl-Transferase), Erythromycin (Translokation)
+- Mitochondrien mit 70S-Ribosomen → können ebenfalls von Antibiotika betroffen sein (mitochondriale Toxizität)`,
       lernziele: [
         "Die Eigenschaften des genetischen Codes (Triplett, universell, degeneriert, kommafrei) erklären können.",
         "Start- und Stopp-Codons sowie die Wobble-Hypothese und die Rolle der tRNA beschreiben können.",
@@ -2152,7 +2217,7 @@ Die Translation übersetzt die mRNA-Sequenz am Ribosom in ein Protein, wobei der
         "Proteom",
         "ncRNA",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Die Genregulation steuert, welche Gene in einer Zelle wann und wie stark exprimiert werden, und erklärt, warum verschiedene Zelltypen trotz identischem Genom unterschiedliche Funktionen erfüllen. Prokaryoten nutzen Operons als regulatorische Einheiten, während Eukaryoten über Transkriptionsfaktoren, Enhancer, epigenetische Mechanismen und RNA-Interferenz ein hochkomplexes Regulationsnetzwerk besitzen. Im MedAT ist besonders das lac-Operon als Modellsystem sowie die Grundlagen der Epigenetik prüfungsrelevant.
 
@@ -2240,7 +2305,13 @@ Genomic Imprinting (genomische Prägung) beschreibt die elternspezifische Stilll
 
 ## Zusammenfassung
 
-Die Genregulation ermöglicht die differentielle Genexpression in verschiedenen Zelltypen und wird auf prokaryotischer Ebene durch das Operon-Modell veranschaulicht, wobei das lac-Operon als induzierbares System bei Laktosepräsenz aktiviert und das trp-Operon als reprimierbares System bei Tryptophanüberschuss stillgelegt wird. Eukaryoten regulieren ihre Gene wesentlich komplexer über Transkriptionsfaktoren, die an Enhancer und Silencer binden und über DNA-Looping mit dem Promotor interagieren. Epigenetische Mechanismen wie DNA-Methylierung an CpG-Inseln und Histon-Modifikationen verändern die Genexpression ohne Änderung der DNA-Sequenz und sind an Phänomenen wie X-Inaktivierung und Genomic Imprinting beteiligt. Auf posttranskriptioneller Ebene regulieren miRNAs und siRNAs die Genexpression durch Translationsrepression oder mRNA-Abbau, was therapeutisch bereits bei der siRNA-basierten Therapie Patisiran genutzt wird.`,
+- **lac-Operon** (E. coli): induzierbares System; bei Laktose → Repressor inaktiviert → Gene AN; bei Glukose (Katabolit-Repression) → trotz Laktose herabgesetzt
+- **trp-Operon**: reprimierbares System; bei Tryptophan-Überschuss → Repressor aktiv → Gene AUS
+- **Eukaryotische Genregulation**: Transkriptionsfaktoren binden Enhancer/Silencer → DNA-Looping → Interaktion mit Promotor
+- **Epigenetik**: Änderung der Genexpression ohne DNA-Sequenzänderung; vererbbar
+- **DNA-Methylierung** (CpG-Inseln): stille Gene; Hypomethylierung in Krebs → Tumorgene aktiv
+- **Histonmodifikation**: Acetylierung → Chromatin offen (Expression ↑); Methylierung → Chromatin dicht (Expression ↓)
+- **miRNA/siRNA**: posttranskriptionell; binden komplementäre mRNA → Abbau oder Translationsrepression (Therapeutikum: Patisiran)`,
       lernziele: [
         "Das lac- und trp-Operon als Beispiele für induzierbare und reprimierbare Operons erklären können.",
         "Die Rolle von Transkriptionsfaktoren, Enhancern und Silencern bei der eukaryotischen Genregulation beschreiben können.",
@@ -2383,7 +2454,7 @@ Die Genregulation ermöglicht die differentielle Genexpression in verschiedenen 
         "Primer",
         "Thermocycler",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Die Polymerase-Kettenreaktion (PCR) ermöglicht die exponentielle Vervielfältigung spezifischer DNA-Abschnitte in vitro und ist die wichtigste Methode der molekularen Diagnostik. Mit drei zyklisch wiederholten Schritten (Denaturierung, Annealing, Elongation) können aus einem einzigen DNA-Molekül innerhalb weniger Stunden Milliarden Kopien erzeugt werden. Im MedAT werden PCR-Varianten (RT-PCR, qPCR), die Berechnung der Amplifikation (2ⁿ) und die klinische Anwendung bei COVID-19-Diagnostik regelmäßig geprüft.
 
@@ -2451,7 +2522,13 @@ PCR ist Goldstandard für Infektionsdiagnostik (COVID-19, HIV-VL), Genotypisieru
 
 ## Zusammenfassung
 
-Die PCR vervielfältigt spezifische DNA-Abschnitte exponentiell durch zyklische Wiederholung von Denaturierung (94-95 °C), Primer-Annealing (50-68 °C) und Elongation (72 °C), wobei die hitzestabile Taq-Polymerase aus Thermus aquaticus die Automatisierung im Thermocycler ermöglicht. Nach 30 Zyklen entstehen aus einem einzigen DNA-Molekül etwa eine Milliarde Kopien (2³⁰ ≈ 10⁹), wobei die Spezifität durch kurze Oligonukleotid-Primer (18-25 nt) definiert wird. Die RT-PCR erweitert das Prinzip auf RNA-Vorlagen, indem zunächst mittels Reverser Transkriptase cDNA hergestellt wird, und die quantitative Variante RT-qPCR mit TaqMan-Sonden ist der Goldstandard der COVID-19-Diagnostik, bei der der CT-Wert invers mit der Viruslast korreliert. Mg²⁺ ist als essenzieller Cofaktor der Taq-Polymerase unverzichtbar, und für Anwendungen, die hohe Genauigkeit erfordern, wird die langsamere Pfu-Polymerase mit Proofreading-Funktion eingesetzt. Weitere PCR-Varianten umfassen die Nested PCR (zwei aufeinanderfolgende Primerpaare für maximale Sensitivität), die Multiplex-PCR (gleichzeitige Amplifikation mehrerer Zielsequenzen) und die digitale PCR (ddPCR), die eine absolute Quantifizierung ohne Standardkurve ermöglicht und zunehmend in der Liquid-Biopsy-Diagnostik eingesetzt wird.`,
+- **PCR** (3 Schritte): Denaturierung (~95 °C), Primer-Annealing (~55-65 °C), Elongation (72 °C) → exponentiell: 30 Zyklen ≈ 10⁹ Kopien
+- **Taq-Polymerase** (aus Thermus aquaticus): hitzestabil, synthetisiert 5'→3', braucht Mg²⁺ als Cofaktor
+- **RT-PCR**: RNA → cDNA (via Reverse Transkriptase) → dann PCR; für Nachweis von RNA-Viren und Genexpression
+- **RT-qPCR** (quantitativ): Ct-Wert invers zur Viruslast; Goldstandard der COVID-19-Diagnostik
+- Pfu-Polymerase: langsamere Alternative mit Proofreading → höhere Genauigkeit (für Klonierung)
+- **Mg²⁺**: unverzichtbarer Cofaktor; zu wenig → kein Produkt; zu viel → Fehler; EDTA hemmt PCR
+- Varianten: Nested-PCR (maximale Sensitivität), Multiplex-PCR (viele Ziele gleichzeitig), ddPCR (absolute Quantifizierung)`,
 
       lernziele: [
         "Die drei PCR-Schritte (Denaturierung, Annealing, Elongation) mit Temperaturen, Dauer und molekularen Vorgängen präzise erklären",
@@ -2604,7 +2681,7 @@ Die PCR vervielfältigt spezifische DNA-Abschnitte exponentiell durch zyklische 
         "Didesoxynukleotide",
         "Nanopore",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Die DNA-Sequenzierung bestimmt die exakte Basenfolge eines DNA-Abschnitts und ist Grundlage der modernen Genommedizin. Von der klassischen Sanger-Methode über Next-Generation-Sequencing (NGS) bis hin zur Nanopore-Technologie hat sich die Sequenzierung von einem Milliardenprojekt (Human Genome Project, 2003) zu einer Routinemethode für wenige hundert Euro entwickelt. Im MedAT sind das Sanger-Prinzip (ddNTPs), die Grundzüge von NGS und die klinischen Anwendungen wie Exomsequenzierung und Tumor-NGS prüfungsrelevant.
 
@@ -2682,7 +2759,12 @@ Die Sanger-Methode (auch Kettenabbruchmethode oder Didesoxymethode) beruht auf d
 
 ## Zusammenfassung
 
-Die DNA-Sequenzierung hat sich von der klassischen Sanger-Methode, die mittels Didesoxynukleotiden (ddNTPs) als Kettenabbrechern Fragmente verschiedener Länge erzeugt und über Kapillarelektrophorese auflöst, zum massiv parallelen Next-Generation-Sequencing entwickelt. Illumina-NGS ermöglicht die gleichzeitige Analyse hunderter Gene in einem einzigen Lauf und hat die Exomsequenzierung als diagnostisches Werkzeug bei unklaren genetischen Syndromen etabliert, wo sie eine Diagnoseausbeute von 25-40% erreicht. Die Nanopore-Technologie ergänzt das Spektrum durch sehr lange Reads und portable Geräte, die bei Ausbruchsdiagnostik wie COVID-19-Variantenüberwachung eingesetzt werden. Die klinische Interpretation der Sequenzierdaten erfordert die ACMG-Klassifikation von Varianten und den Abgleich mit Populationsdatenbanken wie gnomAD, wobei Varianten unklarer Signifikanz (VUS) eine besondere Herausforderung in der genetischen Beratung darstellen.`,
+- **Sanger-Sequenzierung**: ddNTPs als Kettenabbrecher → Fragmente verschiedener Länge → Kapillarelektrophorese → Sequenz; Goldstandard für einzelne Gene
+- **Next-Generation Sequencing (NGS)**: massiv parallel → Millionen Fragmente gleichzeitig; Illumina = häufigste Plattform
+- **Exomsequenzierung**: alle kodierenden Regionen (~1% des Genoms) → Diagnoseausbeute ~25-40% bei unklaren Syndromen
+- **Nanopore-Sequenzierung**: sehr lange Reads (>1 Mb), portabel; für Ausbruchsdiagnostik und Chromosomenstruktur
+- **ACMG-Klassifikation**: 5 Kategorien (pathogen, wahrscheinlich pathogen, VUS, wahrscheinlich benigne, benigne)
+- **VUS** (Variant of Uncertain Significance): häufige Herausforderung in der genetischen Beratung`,
 
       lernziele: [
         "Das Sanger-Verfahren mit der Funktion von ddNTPs als Kettenabbrecher und der Kapillarelektrophorese erklären",
@@ -2835,7 +2917,7 @@ Die DNA-Sequenzierung hat sich von der klassischen Sanger-Methode, die mittels D
         "Microarray",
         "Bioinformatik",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Gel-Elektrophorese, Restriktionsenzyme und Blot-Techniken gehören zu den klassischen Methoden der Molekularbiologie, die trotz modernerer Alternativen nach wie vor prüfungsrelevant sind. Die Agarosegel-Elektrophorese trennt DNA-Fragmente nach Größe, Restriktionsenzyme schneiden DNA an spezifischen palindromischen Sequenzen, und die drei Blot-Verfahren (Southern, Northern, Western) detektieren DNA, RNA bzw. Protein. Im MedAT wird besonders die Zuordnung der Blot-Verfahren zu ihren Zielmolekülen sowie das Prinzip des HIV-Western-Blots geprüft.
 
@@ -2911,7 +2993,13 @@ HIV-Western-Blot war jahrzehntelang Goldstandard zur Bestätigung positiver HIV-
 
 ## Zusammenfassung
 
-Die Agarosegel-Elektrophorese trennt negativ geladene DNA-Fragmente nach ihrer Größe im elektrischen Feld, wobei kleine Fragmente schneller zur Anode wandern als große. Restriktionsenzyme vom Typ II erkennen palindromische DNA-Sequenzen und erzeugen entweder sticky ends (komplementäre Überhänge für gerichtete Klonierung) oder blunt ends (stumpfe Enden), wobei EcoRI mit der Erkennungssequenz GAATTC das bekannteste Beispiel darstellt. Die drei Blot-Verfahren detektieren unterschiedliche Biomoleküle entlang des Zentraldogmas: Southern Blot weist DNA mittels markierter Sonden nach, Northern Blot analysiert RNA-Expression, und Western Blot identifiziert spezifische Proteine über Antikörperdetektion nach SDS-PAGE. Der HIV-Western-Blot war als Bestätigungstest nach positivem ELISA-Screening jahrzehntelang klinischer Standard und galt als positiv bei Nachweis von mindestens zwei spezifischen Banden gegen virale Proteine. Moderne Alternativen wie DNA-Microarrays ermöglichen die gleichzeitige Analyse tausender Gene auf einem einzigen Chip und haben die Genexpressionsanalyse revolutioniert.`,
+- **Agarosegel-Elektrophorese**: DNA negativ geladen → wandert zur Anode; kleine Fragmente schneller → Größentrennung
+- **Restriktionsenzyme (Typ II)**: erkennen palindromische Sequenzen (z. B. EcoRI: GAATTC); sticky ends (Überhänge) oder blunt ends
+- Blot-Verfahren merken: **So-No-We** (Southern=DNA; Northern=RNA; Western=Protein)
+- **Southern Blot**: DNA → markierte Sonde → Genotypisierung, RFLP-Analyse
+- **Northern Blot**: RNA → Genexpressionsanalyse (welche mRNA wird exprimiert?)
+- **Western Blot**: Protein → SDS-PAGE → Antikörperdetektion; HIV-Bestätigungstest
+- **DNA-Microarray** (Chip): Hybridisierung von markierter cDNA/cRNA → gleichzeitige Analyse tausender Gene → Genexpressionsprofil`,
 
       lernziele: [
         "Das Prinzip der Agarosegel-Elektrophorese mit Wanderungsrichtung und Größentrennung erklären",
@@ -3062,7 +3150,7 @@ Die Agarosegel-Elektrophorese trennt negativ geladene DNA-Fragmente nach ihrer G
         "Genetischer Fingerabdruck",
         "DNA-Profil",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Der genetische Fingerabdruck ermöglicht die eindeutige Identifizierung von Individuen anhand hochvariabler repetitiver DNA-Sequenzen (STR, Short Tandem Repeats) und ist das Standardverfahren in Forensik und Vaterschaftstests. Die Kombination von 20 STR-Loci erzeugt ein statistisch einzigartiges DNA-Profil mit einer Übereinstimmungswahrscheinlichkeit von etwa 1:10²⁶. Im MedAT sind das Prinzip der STR-Analyse, der Vaterschaftstest und die Besonderheiten der mtDNA-Analyse prüfungsrelevant.
 
@@ -3137,7 +3225,11 @@ Neben autosomalen STRs werden auch geschlechtschromosomale Marker eingesetzt. Y-
 
 ## Zusammenfassung
 
-Der genetische Fingerabdruck basiert auf der Analyse hochvariabler Short Tandem Repeats, wobei die unterschiedliche Anzahl der 2-6 bp langen Wiederholungseinheiten an 20 unabhängigen Loci ein statistisch einzigartiges DNA-Profil ergibt. Die STR-Analyse verläuft über Multiplex-PCR mit fluoreszenzmarkierten Primern und Kapillarelektrophorese, und bei Vaterschaftstests müssen alle Allele des Kindes von den potentiellen Eltern ableitbar sein, wobei ein fehlendes väterliches Allel zum Ausschluss führt. Die mtDNA-Analyse ergänzt die STR-Typisierung bei degradiertem Material, da Mitochondrien in hundertfacher Kopienzahl vorliegen und maternal vererbt werden, ermöglicht aber keine individuelle Identifikation, da alle maternalen Verwandten dieselbe Sequenz tragen. Klinisch wird die STR-Analyse auch zur Chimärismus-Überwachung nach allogener Stammzelltransplantation eingesetzt, wobei ein zunehmender Empfänger-Anteil ein frühes Warnsignal für ein Rezidiv darstellt.`,
+- **Genetischer Fingerabdruck**: basiert auf **STRs** (Short Tandem Repeats); Anzahl der 2–6 bp Wiederholungen variiert zwischen Individuen
+- Analyse: Multiplex-PCR mit fluoreszenzmarkierten Primern → Kapillarelektrophorese → Allel-Profil an 20 Loci → statistisch einzigartig
+- Vaterschaftstest: alle Allele des Kindes müssen von Mutter ODER Vater ableitbar sein; fehlendes väterliches Allel = Ausschluss
+- **mtDNA-Analyse**: bei degradiertem Material (Mitochondrien 100× höhere Kopienzahl); maternal vererbt → keine individuelle Identifikation (alle mütterlichen Verwandten identisch)
+- Klinisch: STR-Analyse für Chimärismus-Monitoring nach Stammzelltransplantation → steigender Empfänger-Anteil = Rezidiv-Warnsignal`,
 
       lernziele: [
         "STR (Short Tandem Repeats) als Grundlage des genetischen Fingerabdrucks definieren und die Analyse in Schritten erklären",
@@ -3290,7 +3382,7 @@ Der genetische Fingerabdruck basiert auf der Analyse hochvariabler Short Tandem 
         "Transformation",
         "Rekombinante Proteine",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Die molekulare Klonierung ermöglicht die Einbringung und Vermehrung spezifischer DNA-Fragmente in Wirtsorganismen wie E. coli mithilfe von Vektoren (Plasmide, BAC, YAC). Rekombinante Proteine wie Insulin, EPO und monoklonale Antikörper sind das Ergebnis dieser Technologie und bilden die Grundlage moderner Biopharmazeutika. Im MedAT sind die Klonierungsschritte, die Blau-Weiß-Selektion und die Unterscheidung der Vektortypen nach Insertkapazität prüfungsrelevant.
 
@@ -3376,7 +3468,12 @@ Rekombinante Proteine (Insulin, EPO, Wachstumshormon, monoklonale Antikörper) s
 
 ## Zusammenfassung
 
-Die molekulare Klonierung umfasst den Restriktionsverdau von Insert und Vektor, die Ligation durch T4-Ligase, die Transformation kompetenter Bakterien und die Selektion rekombinanter Klone, wobei die Blau-Weiß-Selektion eine elegante Methode zur Identifikation insertionshaltiger Plasmide darstellt. Die Wahl des Vektors richtet sich nach der Insertgröße: Plasmide eignen sich für Fragmente bis etwa 15 kb, während BAC (bis 300 kb) und YAC (bis 2 Mb) zunehmend größere genomische Abschnitte aufnehmen können. Rekombinante Proteine wie Humaninsulin werden seit 1982 in E. coli oder Hefe produziert, wobei cDNA statt genomischer DNA verwendet wird, da Prokaryoten keine Introns spleißen können. Monoklonale Antikörper, die zunächst über Hybridomtechnologie hergestellt wurden, werden heute zunehmend mittels Phagen-Display als vollständig humane Therapeutika in CHO-Zellen produziert und sind aus der modernen Onkologie und Immunologie nicht mehr wegzudenken.`,
+- **Klonierungsschritte**: Restriktionsverdau (Insert + Vektor mit gleichem Enzym) → Ligation (T4-Ligase) → Transformation (kompetente Bakterien) → Selektion
+- **Blau-Weiß-Selektion**: weiße Kolonien = rekombinante Plasmide (Insert unterbricht lacZ-Gen)
+- Vektoren nach Insertgröße: Plasmid (<15 kb), Cosmid (~45 kb), BAC (<300 kb), YAC (<2 Mb)
+- **Rekombinante Proteine**: cDNA (nicht genomische DNA!) → Prokaryoten können Introns nicht spleißen; Insulin seit 1982 in E. coli
+- **Monoklonale Antikörper**: Hybridomtechnologie (Maus) oder Phagen-Display (humanisiert); produziert in CHO-Zellen
+- Anwendungen: Insulin, Erythropoietin, Impfstoffe (HBsAg in Hefe), Antikörpertherapeutika (Trastuzumab, Rituximab)`,
 
       lernziele: [
         "Die Klonierungsschritte (Restriktionsverdau, Ligation, Transformation, Selektion) in der richtigen Reihenfolge und mit molekularen Details beschreiben",
@@ -3530,7 +3627,7 @@ Die molekulare Klonierung umfasst den Restriktionsverdau von Insert und Vektor, 
         "Gentherapie",
         "Ethik",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 CRISPR-Cas9 ist das revolutionärste Werkzeug der Genomeditierung und ermöglicht präzise, gezielte Veränderungen im Genom mithilfe einer kurzen Guide-RNA und der Endonuklease Cas9. Die Technologie stammt aus dem bakteriellen Immunsystem und wurde von Doudna und Charpentier weiterentwickelt (Nobelpreis 2020). Im MedAT ist das Grundprinzip von CRISPR (sgRNA, PAM, Doppelstrangbruch), die Unterscheidung der Reparaturwege NHEJ vs. HDR sowie die ethische Diskussion um Keimbahn-Editierung prüfungsrelevant.
 
@@ -3605,7 +3702,13 @@ Klassisches CRISPR-Cas9 erzeugt Doppelstrangbrüche (DSB), die zu unerwünschten
 
 ## Zusammenfassung
 
-CRISPR-Cas9 nutzt eine 20-Nukleotid-Guide-RNA, um die Endonuklease Cas9 gezielt an eine komplementäre Genomsequenz neben einem PAM-Motiv (NGG) zu führen und dort einen Doppelstrangbruch zu erzeugen, der entweder durch fehleranfälliges NHEJ (Genknockout) oder präzises HDR mit Donor-Template (Genkorrektur) repariert wird. Die erste zugelassene CRISPR-Therapie Casgevy heilt Sichelzellanämie durch ex-vivo-Knockout des BCL11A-Repressors in hämatopoetischen Stammzellen, was fetales Hämoglobin reaktiviert und die pathologische Sichelung verhindert. Gentherapie-Vehikel umfassen AAV-Vektoren (nicht-integrierend, serotypspezifisch, z. B. Zolgensma bei SMA), lentivirale Vektoren (integrierend, dauerhaft, Insertionsmutagenese-Risiko) und Lipid-Nanopartikel für transiente mRNA-Delivery. Die ethische Debatte konzentriert sich auf die Grenze zwischen somatischer Gentherapie, die international akzeptiert ist, und Keimbahn-Editierung, die seit dem He-Jiankui-Skandal 2018 weitgehend verboten bleibt, da Veränderungen an alle nachfolgenden Generationen weitergegeben würden.`,
+- **CRISPR-Cas9**: Guide-RNA (20 nt) führt Cas9 zur Zielsequenz neben PAM-Motiv (NGG) → Doppelstrangbruch → Reparatur via NHEJ (Knockout) oder HDR (Genkorrektur)
+- **Casgevy** (2023): erste zugelassene CRISPR-Therapie; heilt Sichelzellanämie durch ex-vivo-Knockout von BCL11A → fetales Hämoglobin reaktiviert
+- **AAV-Vektoren**: nicht-integrierend, serotypspezifisch, vorübergehend; Beispiel: Zolgensma (SMA)
+- **Lentivirale Vektoren**: integrieren ins Genom → dauerhafte Expression; Risiko: Insertionsmutagenese
+- **Lipid-Nanopartikel (LNP)**: transiente mRNA-Delivery; Basis der COVID-19-mRNA-Impfstoffe
+- **Somatische Gentherapie** (erlaubt): nur beim Patienten, nicht vererbbar
+- **Keimbahngentherapie** (verboten): würde Veränderung an alle Nachkommen weitergeben; He-Jiankui-Skandal 2018`,
 
       lernziele: [
         "Den CRISPR-Cas9-Mechanismus (sgRNA, PAM, DSB) molekular erklären",
@@ -3758,7 +3861,7 @@ CRISPR-Cas9 nutzt eine 20-Nukleotid-Guide-RNA, um die Endonuklease Cas9 gezielt 
         "Konduktorin",
         "Stammbaumsymbole",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Dieses Unterkapitel vertieft die Stammbaumanalyse mit Fokus auf die vier Haupterbgänge und ihre klinischen Krankheitsbeispiele. Die sichere Zuordnung von Stammbaummustern zu Erbgängen und die Berechnung von Erkrankungswahrscheinlichkeiten sind Kernkompetenzen für den BMS-Teil des MedAT. Besondere Aufmerksamkeit verdienen Sonderfälle wie Antizipation bei Huntington und die Rolle der Konduktorin bei X-chromosomal rezessiven Erkrankungen.
 
@@ -3830,7 +3933,12 @@ Beim X-chromosomal rezessiven Erbgang muss zwischen mütterlicher und väterlich
 
 ## Zusammenfassung
 
-Die Stammbaumanalyse unterscheidet vier Haupterbgänge mit jeweils charakteristischen Mustern: autosomal-dominante Erkrankungen wie Marfan-Syndrom und Huntington-Krankheit zeigen Betroffene in jeder Generation mit 50% Wiederholungsrisiko, während autosomal-rezessive Erkrankungen wie Mukoviszidose und PKU typischerweise Generationssprünge aufweisen und bei zwei heterozygoten Trägern ein 25%iges Erkrankungsrisiko besteht. Bei X-chromosomal rezessiven Erkrankungen wie Hämophilie A und Duchenne-Muskeldystrophie sind fast ausschließlich Männer aufgrund ihrer Hemizygotie betroffen, und Konduktorinnen geben das pathogene Allel an 50% ihrer Söhne weiter, ohne selbst zu erkranken. Besondere Phänomene wie die Antizipation bei Huntington (zunehmende CAG-Repeats in Folgegenerationen) und das späte Manifestationsalter unterstreichen, dass die klinische Genetik über einfache Mendelsche Muster hinausgeht.`,
+- **Autosomal-dominant** (Beispiele: Marfan, Huntington): jede Generation betroffen, 50% Weitergabe, ♂ = ♀
+- **Autosomal-rezessiv** (Beispiele: Mukoviszidose, PKU): Generationssprünge, 25% Erkrankungsrisiko bei Aa × Aa, Konsanguinität ↑ Risiko
+- **X-rez.** (Beispiele: Hämophilie A, DMD): fast nur ♂ betroffen; 50% Söhne von Konduktorin betroffen; kein Vater-Sohn-Transfer
+- **Antizipation**: CAG-Repeat-Expansion nimmt über Generationen zu → Huntington manifestiert sich früher und schwerer
+- **Genomic Imprinting**: Prader-Willi (paternale Deletion 15q11) vs. Angelman-Syndrom (maternale Deletion 15q11) — trotz gleicher Deletion verschiedene Erkrankung
+- Seltene Erbgänge: mitochondrial (maternal), digene Vererbung, Uniparentale Disomie`,
       lernziele: [
         "Die vier Erbgänge (autosomal dominant/rezessiv, X-chromosomal dominant/rezessiv) anhand von Stammbaum-Merkmalen erkennen",
         "Konkrete Krankheitsbeispiele jedem Erbgang zuordnen und klinische Merkmale nennen",
@@ -3959,7 +4067,7 @@ Die Stammbaumanalyse unterscheidet vier Haupterbgänge mit jeweils charakteristi
         "Expressivität",
         "Multifaktorielle Vererbung",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Viele Merkmale und Erkrankungen folgen nicht den einfachen Mendelschen Regeln, sondern zeigen komplexere Vererbungsmuster wie Polygenie, Pleiotropie und unvollständige Penetranz. Diese Konzepte erklären, warum identische Genotypen zu unterschiedlichen Phänotypen führen können und warum Merkmale wie Körpergröße eine Normalverteilung zeigen. Im MedAT ist die sichere Unterscheidung von Polygenie und Pleiotropie sowie das Verständnis von Penetranz und Expressivität essenziell.
 
@@ -4031,7 +4139,13 @@ Der Polygene Risikoscore (PRS) fasst die Effekte von Hunderten bis Tausenden Ris
 
 ## Zusammenfassung
 
-Jenseits der klassischen Mendelschen Regeln erklären Polygenie und Pleiotropie die Komplexität vieler Merkmale und Erkrankungen. Polygenie beschreibt die additive Wirkung vieler Gene auf ein einzelnes Merkmal wie Körpergröße oder Hautfarbe, was durch den Zentralen Grenzwertsatz zu einer Normalverteilung in der Population führt, während Pleiotropie bedeutet, dass ein einzelnes Gen mehrere scheinbar unabhängige Phänotypen beeinflusst, wie bei der PKU, die sowohl Hirnschäden als auch Hypopigmentierung verursacht. Der klinisch wichtige Unterschied zwischen Penetranz und Expressivität zeigt sich exemplarisch an der Neurofibromatose Typ 1, bei der fast 100% der Genträger erkranken (hohe Penetranz), aber die Schwere von minimalen Cafe-au-lait-Flecken bis zu schweren Tumoren reicht (variable Expressivität). Das Konzept der unvollständigen Penetranz hat direkte klinische Konsequenz, etwa bei BRCA1/2-Mutationsträgerinnen, deren Lebenszeitrisiko für Brustkrebs bei ca. 70% liegt und daher im Rahmen der genetischen Beratung individuell diskutiert werden muss.`,
+- **Polygenie**: viele Gene wirken additiv → stetige Normalverteilung (Körpergröße, Hautfarbe); multifaktorielle Erkrankungen (z. B. Diabetes Typ 2)
+- **Pleiotropie**: ein Gen → mehrere Phänotypen (Beispiel: PKU → Hirnschaden + Hypopigmentierung)
+- **Penetranz**: Anteil der Genträger, die den Phänotyp zeigen; NF1 ≈ 100% (fast vollständig); BRCA1/2 ~70% (unvollständig)
+- **Expressivität**: Ausprägungsgrad; NF1 variabel (wenige Café-au-lait-Flecken bis schwere Tumoren)
+- **Antizipation**: Repeat-Expansion wird mit jeder Generation größer und tritt früher auf (Huntington, Myotone Dystrophie)
+- **Genomic Imprinting**: Gen-Expression abhängig von elterlicher Herkunft; Prader-Willi (paternal) vs. Angelman (maternal) bei Deletion 15q11
+- **Uniparentale Disomie (UPD)**: beide homologen Chromosomen von einem Elternteil → Imprinting-Effekte ohne chromosomale Deletion`,
       lernziele: [
         "Polygenie und Pleiotropie definieren und mit je einem Beispiel erläutern",
         "Vollständige und unvollständige Penetranz sowie variable Expressivität unterscheiden",
@@ -4163,7 +4277,7 @@ Jenseits der klassischen Mendelschen Regeln erklären Polygenie und Pleiotropie 
         "Heterozygotentest",
         "Neugeborenenscreening",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Die genetische Beratung ist ein zentrales Element der klinischen Genetik und verbindet Risikoberechnung mit nicht-direktiver Kommunikation, um Ratsuchende bei Entscheidungen zur Familienplanung und prädiktiven Diagnostik zu unterstützen. Die Anwendung des Hardy-Weinberg-Gesetzes zur Berechnung von Trägerfrequenzen und die Bayessche Analyse zur Aktualisierung von Wahrscheinlichkeiten sind die wichtigsten mathematischen Werkzeuge. Im MedAT werden konkrete Rechenaufgaben zur Risikoberechnung (HW-Gesetz, bedingte Wahrscheinlichkeit) regelmäßig gestellt.
 
@@ -4234,7 +4348,12 @@ In der Praxis wird die Bayessche Analyse tabellarisch aufgebaut: Hypothese 1 (Tr
 
 ## Zusammenfassung
 
-Die genetische Beratung verbindet sachliche Risikoinformation mit dem ethischen Grundprinzip der Nicht-Direktivität und ermöglicht Ratsuchenden eine informierte, selbstbestimmte Entscheidung über Familienplanung und prädiktive Diagnostik. Das Hardy-Weinberg-Gesetz ist das wichtigste Werkzeug zur Berechnung von Trägerfrequenzen aus bekannten Erkrankungshäufigkeiten und zeigt beispielsweise, dass bei einer Mukoviszidose-Inzidenz von 1:2.500 etwa jede 25. Person in der europäischen Bevölkerung heterozygoter Träger ist. Die Bayessche Analyse ermöglicht die Aktualisierung von Risikowahrscheinlichkeiten durch Integration neuer klinischer Information (z. B. negative Testergebnisse oder unauffällige Familienangehörige) und ist damit ein wesentliches Instrument der individuellen Risikoberatung. In Österreich regelt das Genanalysegesetz die Rahmenbedingungen für prädiktive Gentests und schreibt eine genetische Beratung sowohl vor als auch nach dem Test vor.`,
+- **Genetische Beratung**: Grundprinzip **Nicht-Direktivität** — Informieren, nicht lenken; Autonomie der Ratsuchenden
+- Risikoberechnung: Mendel-Regeln anwenden (Aa × Aa → 25%; Aa × aa → 50%); für seltene rez. Erkrankungen: Hardy-Weinberg
+- **Mukoviszidose** (1:2.500): q² = 1/2.500 → q = 1/50 → Trägerfrequenz 2pq ≈ 1:25 in Europa
+- **Bayes-Analyse**: bedingte Wahrscheinlichkeit aktualisieren nach neuen Informationen (z. B. gesundes Kind senkt Träger-Wahrscheinlichkeit)
+- Prädiktive Tests: Beratung VOR und NACH dem Test gesetzlich vorgeschrieben (Österreich: Genanalysegesetz)
+- **Recht auf Nichtwissen**: Ratsuchende können entscheiden, ob sie ihr genetisches Risiko erfahren wollen`,
       lernziele: [
         "Erkrankungsrisiken für Nachkommen aus Stammbäumen berechnen (autosomal dominant/rezessiv, X-chromosomal)",
         "Das Hardy-Weinberg-Gesetz anwenden, um Trägerfrequenzen aus Erkrankungshäufigkeiten zu berechnen",
@@ -4355,7 +4474,7 @@ Die genetische Beratung verbindet sachliche Risikoinformation mit dem ethischen 
         "Pränataldiagnostik",
         "Ethik",
       ],
-      content: `## Überblick
+      content: `## Einleitung
 
 Die Pränataldiagnostik (PND) umfasst alle Methoden zur vorgeburtlichen Untersuchung des Embryos oder Feten auf genetische und strukturelle Auffälligkeiten und hat durch den nicht-invasiven Pränataltest (NIPT) eine Revolution erfahren. In Abgrenzung dazu findet die Präimplantationsdiagnostik (PID) vor der Einnistung im Rahmen einer IVF statt. Im MedAT sind die Unterscheidung der diagnostischen Methoden (NIPT, Amniozentese, CVS) mit ihren Zeitpunkten, Risiken und der Abgrenzung PID vs. PND prüfungsrelevant.
 
@@ -4427,7 +4546,13 @@ Die ethische Debatte um PID und PND berührt fundamentale Fragen: Selektion von 
 
 ## Zusammenfassung
 
-Die Pränataldiagnostik hat durch den NIPT eine nicht-invasive, hochsensitive Screening-Methode für chromosomale Anomalien gewonnen, die ab der 10. SSW aus dem mütterlichen Blut zellfreie fetale DNA analysiert und für Trisomie 21 eine Sensitivität von über 99% erreicht, ohne ein Fehlgeburtsrisiko zu verursachen. Invasive diagnostische Verfahren wie die Chorionzottenbiopsie (11.-13. SSW) und die Amniozentese (16.-18. SSW) bleiben als Bestätigungstests unverzichtbar und liefern einen vollständigen Karyotyp, wobei die CVS zwar früher durchführbar ist, aber ein leicht höheres Fehlgeburtsrisiko birgt. Die Präimplantationsdiagnostik (PID) unterscheidet sich grundlegend, da sie Embryonen vor der Implantation im Rahmen einer IVF untersucht und in Österreich nur bei hohem Risiko für schwere Erbkrankheiten zugelassen ist. Die ethische Dimension der Pränataldiagnostik erfordert eine nicht-direktive Beratung, die den Ratsuchenden ermöglicht, informierte und selbstbestimmte Entscheidungen zu treffen.`,
+- **NIPT** (nicht-invasiv): zellfreie fetale DNA aus mütterlichem Blut; ab SSW 10; Trisomie-21-Sensitivität >99%; kein Fehlgeburtsrisiko
+- **Amniozentese** (SSW 16–18): Fruchtwasser → fetale Zellen → vollständiger Karyotyp; Fehlgeburtsrisiko ~0,5%
+- **Chorionzottenbiopsie (CVS)** (SSW 11–13): früher, aber leicht höheres Fehlgeburtsrisiko (~1%); vollständiger Karyotyp
+- **Ultraschall**: Nackentransparenz (SSW 11–13) → Screening auf Chromosomenaberrationen; Fehlbildungsdiagnostik SSW 20–22
+- **PID** (Präimplantationsdiagnostik): Embryo-Diagnostik vor Einpflanzung im Rahmen von IVF; in Österreich nur bei schwerem Erkrankungsrisiko zugelassen
+- **PND** (Pränataldiagnostik) vs. **PID**: PND während Schwangerschaft; PID vor Einnistung
+- Ethische Prinzipien: Nicht-Direktivität, Recht auf Nichtwissen, Schutz des Embryos`,
       lernziele: [
         "Die Methoden der Pränataldiagnostik (Ultraschall, NIPT, Amniozentese, CVS) mit Zeitpunkt und Risiken beschreiben",
         "PID von PND abgrenzen und die Voraussetzungen für PID in Österreich nennen",
