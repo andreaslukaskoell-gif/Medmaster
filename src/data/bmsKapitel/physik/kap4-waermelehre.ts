@@ -31,8 +31,6 @@ export const physKap4: Kapitel = {
 
 Fieber über 40 °C ist lebensgefährlich — aber warum? Hypothermie unter 35 °C ebenfalls. Die Körperkerntemperatur ist ein kritischer Vitalparameter, der physiologische Prozesse steuert. Dahinter steckt der Begriff **Temperatur**: ein Maß für die mittlere kinetische Energie der Teilchen. Wärme fließt immer von heiß nach kalt — bis zum Gleichgewicht. Für den MedAT sind Temperaturskalen (Celsius/Kelvin/Fahrenheit), spezifische Wärmekapazität, thermische Ausdehnung und Körpertemperaturregulation prüfungsrelevant.
 
-# Temperatur und Wärme
-
 ## Temperaturskalen
 
 Temperatur ist ein Maß für die mittlere kinetische Energie der Teilchen eines Stoffes. Drei Skalen sind praxisrelevant:
@@ -120,6 +118,25 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
 
 **Beispiel 5 — Verdunstungskühlung:**
 Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der Haut entzogen. Bei 1 Liter Schweiss = 1000 g: Q = 1000 · 2400 = 2,4 MJ. Das reicht, um den Metabolismus einer Stunde Sport (~600 W × 3600 s = 2,16 MJ) fast vollständig abzuleiten.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Welche Temperatur in K entspricht 37 °C?" → T[K] = 37 + 273,15 = 310 K
+- "Wie viel Energie braucht man, um 500 g Wasser um 60 K zu erwärmen?" → Q = 0,5 · 4180 · 60 = 125 400 J
+- "Mischtemperatur zweier Wassermengen?" → T_m = (m₁·T₁ + m₂·T₂) / (m₁ + m₂)
+
+**Achtung — typische Verwechslungen:**
+- Bei Temperaturdifferenzen (ΔT) sind °C und K gleichwertig — bei absoluten Temperaturen in Formeln immer Kelvin!
+- Wärmekapazität c [J/(kg·K)] beschreibt Speichern von Wärme — nicht verwechseln mit Wärmeleitfähigkeit λ [W/(m·K)]
+- Dichteanomalie: Wasser ist bei **4 °C** am dichtesten (nicht bei 0 °C!)
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- c(Wasser) = 4180 J/(kg·K); c(Eis) = 2090 J/(kg·K); c(Luft) ≈ 1005 J/(kg·K)
+- Körpertemperatur: 37 °C = 310 K = 98,6 °F
+- Fieber ab 38 °C, klinisch kritisch ab 40 °C; Hypothermie unter 35 °C
+
+---
 
 ## Zusammenfassung
 
@@ -332,10 +349,6 @@ Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der 
 
 Warum wärmt eine Wollmütze, obwohl Wolle keine Wärme produziert? Warum kühlt Schweiß die Haut? Warum wird Infrarotstrahlung zur Tiefenwärme in der Physikotherapie eingesetzt? Wärmeübertragung geschieht auf drei Wegen — **Konduktion, Konvektion und Strahlung** — und alle drei sind im Körper gleichzeitig aktiv. Das Fourier-Gesetz beschreibt den Wärmefluss durch Kleidung und Körpergewebe. Für den MedAT sind Wärmeleitfähigkeit, Fourier-Gesetz, Strahlung (Stefan-Boltzmann), Gegenstrom-Wärmeaustausch und klinische Wärmetherapie prüfungsrelevant.
 
-# Wärmeübertragung
-
-Wärme kann auf drei grundlegend verschiedene Arten übertragen werden: Wärmeleitung (Konduktion), Konvektion und Wärmestrahlung. Im biologischen System treten alle drei gleichzeitig auf.
-
 ## Wärmeleitung (Konduktion)
 
 Bei der Wärmeleitung wird Energie durch direkte Wechselwirkung benachbarter Teilchen übertragen, ohne dass Materie transportiert wird. Das **Fouriersche Gesetz** beschreibt den stationären Wärmestrom:
@@ -421,6 +434,25 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
 **Wärmflasche vs. Rotlichtlampe:** Wärmflasche überträgt Wärme durch Konduktion (direkter Kontakt, λ_Wasser = 0,6 W/(m·K)) und Konvektion (Wasserströmung im Inneren). Rotlichtlampe überträgt durch Infrarotstrahlung (berührungslos, tiefere Gewebepenetration bei λ = 780–1400 nm). Die Infrarotlampe hat den Vorteil, dass sie Wärme direkt im Gewebe deponiert, ohne die Hautoberfläche zuerst maximal zu erwärmen — geringeres Verbrennungsrisiko.
 
 **Gegenstrom-Wärmeaustausch:** In den Extremitäten verlaufen Arterien und Venen eng beieinander. Das warme arterielle Blut gibt Wärme an das kühle venöse Blut ab, bevor es die Peripherie erreicht. Dies minimiert den Wärmeverlust über die Akren bei Kälte und ist ein wichtiger Überlebensmechanismus. Das gleiche Prinzip wird in der Dialyse (Bluterwärmung) und bei Herz-Lungen-Maschinen eingesetzt.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Wärmestrom durch Fettschicht: λ = 0,2, A = 0,5 m², ΔT = 4 K, d = 2 cm?" → Q̇ = 0,2 · 0,5 · 4 / 0,02 = 20 W
+- "Wie ändert sich die Strahlungsleistung bei Fieber 37 → 42 °C?" → P ∝ T⁴; (315/310)⁴ ≈ 1,066 → +6,6 %
+- "Bei welcher Wellenlänge strahlt der Mensch maximal?" → λ_max = 2898/310 ≈ 9,4 μm (mittleres Infrarot)
+
+**Achtung — typische Verwechslungen:**
+- Stefan-Boltzmann: T **unbedingt in Kelvin** einsetzen (nicht °C!)
+- Wärmeleitung (Konduktion) braucht Materialkontakt; **Strahlung** funktioniert auch im Vakuum
+- ε(Menschliche Haut) ≈ 0,97 — fast idealer Schwarzkörper im Infrarot, aber nicht exakt 1
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- λ(Luft) ≈ 0,026; λ(Körperfett) ≈ 0,2; λ(Wasser) ≈ 0,6; λ(Stahl) ≈ 50 W/(m·K)
+- σ = 5,67 × 10⁻⁸ W/(m²·K⁴); typische Körperoberfläche ≈ 1,8 m²
+- Wärmeabgabe im Ruhezustand: Strahlung ≈ 50 %, Konvektion ≈ 25 %, Verdunstung ≈ 25 %
+
+---
 
 ## Zusammenfassung
 
@@ -621,10 +653,6 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
 
 Kein Perpetuum mobile, kein 100-prozentiger Wirkungsgrad, kein spontaner Wärmefluss von kalt nach warm — das sind die Aussagen der Thermodynamik. Die Hauptsätze stecken das Mögliche ab. Für Mediziner: ATP-Synthese ist ein Energieumwandlungsprozess (1. Hauptsatz), Entropie erklärt, warum biologische Ordnung Energieinput braucht (2. Hauptsatz), und Körperwärme erklärt sich aus dem Energieerhaltungssatz. Für den MedAT sind 1. bis 3. Hauptsatz, ΔU = Q + W, Carnot-Wirkungsgrad und Entropie prüfungsrelevant.
 
-# Thermodynamische Hauptsätze
-
-Die vier Hauptsätze der Thermodynamik beschreiben fundamentale Gesetzmäßigkeiten, die für alle physikalischen, chemischen und biologischen Prozesse gelten.
-
 ## Nullter Hauptsatz: Thermisches Gleichgewicht
 
 "Wenn zwei Systeme je im thermischen Gleichgewicht mit einem dritten System stehen, dann stehen sie auch untereinander im thermischen Gleichgewicht."
@@ -712,6 +740,25 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
 **Maligne Hyperthermie:** Eine pharmakogenetische Störung, bei der volatile Anästhetika (z. B. Halothan) und Succinylcholin eine unkontrollierte Calciumfreisetzung im Muskel auslösen → maximaler Metabolismus → Körpertemperatur steigt auf >40 °C in Minuten. Thermodynamisch betrachtet: Die metabolische Wärmeproduktion übersteigt die Wärmeabgabekapazität (Strahlung + Konvektion + Verdunstung) massiv. Therapie: Dantrolen (blockiert Ryanodinrezeptor) + aggressive Kühlung.
 
 **Kryotherapie und Kryochirurgie:** Kontrolliertes Einfrieren von Gewebe (−20 bis −196 °C mit flüssigem Stickstoff). Der Phasenübergang Wasser→Eis in den Zellen zerstört diese durch Eiskristallbildung und osmotischen Stress. Nutzung: Warzenentfernung, Tumortherapie (Leber, Prostata). Thermodynamisch: Dem Gewebe wird die Schmelzwärme entzogen (Q = m · L_f), die Temperatur bleibt während des Phasenübergangs konstant bei 0 °C.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Carnot-Wirkungsgrad bei T_warm = 600 K, T_kalt = 300 K?" → η = 1 − 300/600 = 50 %
+- "Was passiert bei adiabatischer Kompression?" → T steigt, weil ΔU = W > 0 (Q = 0)
+- "Was passiert bei isochorer Erwärmung?" → W = 0, daher ΔU = Q (gesamte Wärme erhöht innere Energie)
+
+**Achtung — typische Verwechslungen:**
+- Carnot-Formel: **T immer in Kelvin** — mit °C-Werten liefert die Formel falsche Ergebnisse!
+- 1. Hauptsatz-Vorzeichenkonvention: ΔU = Q + W (W = Arbeit AM System) — oder ΔU = Q − W_System (W = Arbeit DURCH das System); Konvention prüfen!
+- Perpetuum mobile 1. Art (Energie aus nichts) verletzt 1. HS; Perpetuum mobile 2. Art (vollständige Wärme→Arbeit) verletzt 2. HS
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- ATP-Synthese-Wirkungsgrad ≈ 38 %; restliche ≈ 62 % werden als Körperwärme abgegeben
+- Ruhemetabolismus: ~80 W Gesamtenergieumsatz, davon ~50–60 W als Wärme
+- ΔS = Q/T [J/K]; Entropie abgeschlossener Systeme nimmt bei irreversiblen Prozessen zu (ΔS ≥ 0)
+
+---
 
 ## Zusammenfassung
 
@@ -889,8 +936,6 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
 
 Der Autoklav sterilisiert bei 121 °C / 2 bar — möglich, weil Druck den Siedepunkt erhöht. Stickstoffnarkose beim Tauchen entsteht, weil Gase unter Druck mehr im Blut lösen (Henry-Gesetz). Blut-Sauerstoffsättigung hängt vom Partialdruck ab. Hinter all dem stecken das ideale Gasgesetz und die Physik der Phasenübergänge. Für den MedAT sind ideales Gasgesetz (pV = nRT), Boyle, Gay-Lussac, Charles, Phasendiagramm, Latentwärme und medizinische Anwendungen (Autoklav, Tauchmedizin) prüfungsrelevant.
 
-# Phasenübergänge und Ideales Gas
-
 ## Ideales Gasgesetz
 
 Das ideale Gas ist ein Modell, bei dem Wechselwirkungen zwischen den Teilchen und das Eigenvolumen der Teilchen vernachlässigt werden. Bei niedrigem Druck und hoher Temperatur verhalten sich viele reale Gase näherungsweise ideal.
@@ -978,6 +1023,26 @@ V₂ = V₁ × T₂/T₁ = 500 × 310/293 = 529 mL. Die eingeatmete Luft expandi
 **Pulsoxymetrie und Gaspartialdrücke:** Die O₂-Sättigung des Hämoglobins hängt vom pO₂ ab (Sauerstoff-Bindungskurve). Nach dem Henry-Gesetz bestimmt der pO₂ auch die physikalisch gelöste O₂-Menge im Plasma (≈ 0,3 mL O₂ pro 100 mL Blut bei pO₂ = 100 mmHg). Bei hyperbarer Therapie (3 bar reiner O₂) steigt der physikalisch gelöste Anteil auf ≈ 6 mL/100 mL — genug, um Gewebe auch ohne Hämoglobin zu versorgen.
 
 **Sublimation in der Medizin (Gefriertrocknung):** Impfstoffe und Blutplasma werden durch Lyophilisation haltbar gemacht: Einfrieren → Druck senken unter den Tripelpunkt → Eis sublimiert direkt zu Dampf. Das Produkt behält seine Struktur (Proteine bleiben funktionsfähig) und ist bei Raumtemperatur lagerbar. Beim Rekonstituieren wird Wasser zugefügt — die ursprüngliche Lösung entsteht wieder.
+
+## MedAT-Fokus
+
+**Häufige Fragen:**
+- "Gas bei 27 °C und 2 bar, isochor auf 127 °C erhitzt — neuer Druck?" → p₂ = 2 × (400/300) ≈ 2,67 bar
+- "Energie zum Schmelzen von 200 g Eis?" → Q = 0,2 · 334 000 = 66 800 J
+- "Warum siedet Wasser im Autoklav bei 121 °C?" → Außendruck 2 bar verschiebt Siedepunkt nach oben
+
+**Achtung — typische Verwechslungen:**
+- Ideales Gasgesetz: **T immer in Kelvin** einsetzen! (27 °C → 300 K, 127 °C → 400 K)
+- Boyle-Mariotte (p·V = const) gilt nur bei **konstanter Temperatur** (isotherm)
+- Latentwärme (Q = m·L): während des Phasenübergangs bleibt T konstant — keine Temperaturänderung!
+
+**Prüfungsrelevante Zahlen/Fakten:**
+- L_Schmelz(Eis) = 334 kJ/kg; L_Verdampf(Wasser, 100 °C) = 2260 kJ/kg (≈ 7-mal größer!)
+- Autoklav: 121 °C / 2 bar (Standard); 134 °C / 3 bar (für Prionen)
+- Henry-Gesetz: c = k_H · p; in 30 m Tiefe (4 bar) → 4× mehr N₂ im Blut gelöst
+- Normvolumen ideales Gas: V_m = 22,4 L/mol bei 0 °C und 1 atm
+
+---
 
 ## Zusammenfassung
 
