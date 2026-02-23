@@ -1235,37 +1235,120 @@ Ohne Sinnesorgane keine Wahrnehmung. Die verschiedenen Sinnesorgane lösen alle 
 
 ---
 
-## Auge
+## Grundprinzip: Transduktion — Reize als elektrische Signale
 
-Das Auge besteht aus drei Schichten: äußere Tunica fibrosa (Sklera + Kornea), mittlere Uvea (Choroidea, Ziliarkörper, Iris) und innere Retina. Photorezeptoren (Stäbchen: skotopisch, Rhodopsin; Zapfen: photopisch, 3 Opsine) wandeln Licht über Fototransduktion (Rhodopsin → Transducin → PDE → cGMP ↓ → Na⁺-Kanäle schließen → Hyperpolarisation) in Nervenimpulse um. Akkommodation erfolgt durch Ziliarmuskel-Kontraktion (Parasympathikus, M3).
+Alle Sinnesorgane folgen demselben Grundprinzip: Ein physikalischer oder chemischer Reiz wird in ein elektrisches Signal umgewandelt. Die Art der Transduktion unterscheidet sich je nach Sinn:
 
-> **Merke:** **Photorezeptoren:** **Stäbchen** (skotopisch [Dämmerung], Rhodopsin [11-cis-Retinal + Opsin, λ_max ~500 nm], ~120 Mio., peripher, hohe Empfindlichkeit, niedrige Auflösung). **Zapfen** (photopisch [Tageslicht, Farben], 3 Opsine [S-blau ~420 nm, M-grün ~530 nm, L-rot ~560 nm], ~6 Mio., Fovea centralis, niedrige Empfindlichkeit, hohe Auflösung [1:1 Ganglienzelle]).
+1. **Photorezeptoren** (Auge): Lichtquanten → Rhodopsin-Aktivierung → G-Protein-Kaskade → cGMP ↓ → Ionenkanäle schließen → **Hyperpolarisation** (atypisch — weil Photorezeptoren im Dunkeln depolarisiert sind!)
+2. **Mechanorezeptoren** (Ohr, Haut): Mechanische Verformung → Mechanosensitive Ionenkanäle öffnen direkt → **Depolarisation**
+3. **Chemorezeptoren** (Nase, Zunge): Moleküle binden G-Protein-gekoppelte Rezeptoren → Second Messenger → Rezeptorpotential
+
+> **Merke:** Transduktion = Reiz → elektrisches Signal. Auge: Licht → Hyperpolarisation (paradox, weil Dunkelzustand = depolarisiert durch offene cGMP-Kanäle). Ohr/Haut: Mechanische Kraft → Kanalöffnung → Depolarisation.
 
 ---
 
-## Ohr
+## Auge — Aufbau und Fototransduktion
 
-Das Ohr gliedert sich in Außenohr (Ohrmuschel, Trommelfell), Mittelohr (Gehörknöchelchen: Hammer, Amboss, Steigbügel, Impedanzanpassung ~22-fach) und Innenohr (Cochlea mit Corti-Organ, Vestibularapparat). Im Corti-Organ biegen sich Stereozilien der Haarzellen gegen die Tektorialmembran → Tip-Links spannen → K⁺-Kanäle öffnen → Depolarisation → Glutamat-Freisetzung.
+**Anatomie des Auges** (drei Schichten von außen nach innen):
+- **Tunica fibrosa** (äußere Hülle): Sklera (weiß, mechanischer Schutz) + Kornea (transparent, Lichtbrechung ~40 dpt, avaskulär, durch Kammerwasser ernährt)
+- **Uvea** (Gefäßhaut): Choroidea (Blutversorgung der Retina) + Ziliarkörper (Ziliarmuskel → Akkommodation; Kammerwasserproduktion) + Iris (regelt Pupillengröße)
+- **Retina** (innere Nervenschicht): Photorezeptoren → Bipolarzellen → Ganglienzellen → N. opticus → Gehirn
 
-> **Merke:** **Corti-Organ** (Hören): Schallwellen → Trommelfell → Gehörknöchelchen (Impedanzanpassung ~22-fach) → Oval-Fenster → Perilymphe → **Basilarmembran** (Tonotopie: Basis = hohe Frequenz ~20 kHz, Apex = niedrige Frequenz ~20 Hz) → **Haarzellen** (Stereozilien biegen, **Tip-Links** spannen) → **K⁺-Kanäle öffnen** (Endolymphe K⁺-reich, +80 mV) → Depolarisation → **Glutamat** → N. cochlearis.
+**Stäbchen vs. Zapfen im Vergleich:**
+
+| Merkmal | Stäbchen | Zapfen |
+|---|---|---|
+| Anzahl | ~120 Mio. | ~6 Mio. |
+| Lokalisation | Peripher (NICHT in Fovea!) | Fovea centralis |
+| Funktion | Skotopisch (Dämmerung, Nachtsehen) | Photopisch (Tageslicht, Farbsehen) |
+| Pigment | Rhodopsin (λ_max ~500 nm) | S ~420 nm, M ~530 nm, L ~560 nm |
+| Empfindlichkeit | Hoch (1 Photon genügt) | Gering (viele Photonen nötig) |
+| Auflösung | Niedrig (viele Stäbchen → 1 Ganglienzelle) | Hoch (1 Zapfen → 1 Ganglienzelle in Fovea) |
+
+**Fototransduktionskaskade** — wie Licht ein Signal erzeugt (Schritt für Schritt):
+
+1. **Dunkelzustand** (Ruhezustand!): cGMP hoch → cGMP-gesteuerte **Na⁺-Kanäle geöffnet** → Stäbchen **depolarisiert** (~-40 mV) → tonische Glutamat-Freisetzung
+2. **Licht trifft Rhodopsin**: Photon → **11-cis-Retinal** isomerisiert zu **all-trans-Retinal** → Rhodopsin aktiviert → **Metarhodopsin II** (R*)
+3. **Amplifikation Stufe 1**: R* aktiviert viele **Transducin**-Moleküle (G-Protein, Gt, α-Untereinheit)
+4. **Amplifikation Stufe 2**: Transducin aktiviert **Phosphodiesterase (PDE)** → PDE hydrolysiert cGMP → GMP (cGMP ↓↓↓, ~1.000-fach in ms)
+5. **Na⁺-Kanäle schließen** (kein cGMP mehr) → K⁺-Leckkanäle dominieren → Stäbchen **hyperpolarisiert** (~-70 mV)
+6. **Signal**: Ca²⁺-Einstrom ↓ → **Glutamat-Freisetzung ↓** → "Signal durch Stille" → Bipolarzellen reagieren
+
+**Merkhilfe:** Licht → cGMP ↓ → Kanalschluss → Hyperpolarisation → weniger Glutamat.
+
+**Akkommodation (Naheinstellung):**
+- **Ferneinstellung** (Ruhezustand): Ziliarmuskel relaxiert → Zonulafasern gespannt → Linse flach (~20 dpt)
+- **Naheinstellung** (aktiver Prozess): Ziliarmuskel **kontrahiert** (Parasympathikus, M3, N. oculomotorius III) → Ziliarring verkleinert → Zonulafasern **entspannen** → Linse **wölbt sich** (elastische Rückstellkraft) → Brechkraft ↑ (~24 dpt)
+- **Nahakkommodationstrias**: Akkommodation + Konvergenz (beide Augen nach innen) + **Miosis** (Pupille verengt → Tiefenschärfe ↑)
+
+> **Merke:** Licht → Rhodopsin → Transducin → PDE → cGMP ↓ → Na⁺-Kanäle schließen → **Hyperpolarisation** → Glutamat ↓. Akkommodation (Nah): Ziliarmuskel kontrahiert → Zonulafasern entspannen (nicht spannen!) → Linse wölbt sich.
+
+---
+
+## Ohr — Schallübertragung und Hörphysiologie
+
+Das Ohr löst ein physikalisches Problem: Luftschwingungen müssen in Flüssigkeitsschwingungen umgewandelt werden. Ohne das Mittelohr gingen 99,9 % der Schallenergie an der Luft-Wasser-Grenze verloren — das Mittelohr gleicht diesen Impedanzunterschied aus.
+
+**Anatomische Gliederung:**
+- **Außenohr**: Ohrmuschel + äußerer Gehörgang → sammelt Schall → Trommelfell
+- **Mittelohr** (luftgefüllt, Tube → Druckausgleich): Gehörknöchelchen **Hammer → Amboss → Steigbügel** → **Impedanzanpassung ~22-fach** (Hebelwirkung ~1,3× + Flächenreduktion: Trommelfell 55 mm² → Oval-Fenster 3,2 mm²)
+- **Innenohr** (flüssigkeitsgefüllt): Cochlea (Hören) + Vestibularapparat (Gleichgewicht)
+
+**Schallübertragung — Schritt für Schritt:**
+
+1. Schallwellen → Trommelfell schwingt → Gehörknöchelchen leiten Vibration weiter (Impedanzanpassung!)
+2. **Steigbügel-Fußplatte** drückt auf Oval-Fenster → erzeugt **Wanderwelle** in der Perilymphe der Cochlea
+3. **Basilarmembran** schwingt: **Tonotopie** — Basis (eng, steif) = hohe Frequenzen (~20 kHz); Apex (breit, flexibel) = niedrige Frequenzen (~20 Hz)
+4. Basilarmembran-Bewegung → **Stereozilien** der inneren Haarzellen biegen gegen Tektorialmembran → **Tip-Links** spannen
+5. Mechanosensitive **K⁺-Kanäle öffnen** direkt (kein Second Messenger!) → K⁺ strömt aus Endolymphe ein
+6. **K⁺-reiche Endolymphe** (+80 mV, von Stria vascularis produziert) → starke Treibkraft → Haarzelle **depolarisiert** → Ca²⁺ → **Glutamat** → N. cochlearis (Spiralganglion) → Gehirn
+
+> **Merke:** Impedanzanpassung ~22-fach (ohne Mittelohr → 99,9 % Verlust). Tonotopie: Basis = hohe Frequenzen, Apex = niedrige Frequenzen. Haarzellen: Tip-Links öffnen K⁺-Kanäle → Depolarisation durch K⁺ aus K⁺-reicher Endolymphe (+80 mV).
 
 ---
 
 ## Geruch und Geschmack
 
-Das Riechepithel enthält ~10 Millionen olfaktorische Rezeptorneuronen mit ~400 G-Protein-gekoppelten Rezeptortypen. Das Geschmackssystem erkennt fünf Qualitäten: süß (T1R2/T1R3), umami (T1R1/T1R3), bitter (T2R), sauer (H⁺, PKD2L1) und salzig (Na⁺, ENaC). Die Innervation erfolgt über N. facialis (vordere 2/3 Zunge), N. glossopharyngeus (hintere 1/3) und N. vagus (Epiglottis).
+**Geruchssinn (Olfaktion):** ~10 Millionen olfaktorische Rezeptorneuronen im Riechepithel (Nasenschleimhaut). Jedes Neuron exprimiert einen von ~400 G-Protein-gekoppelten Rezeptortypen (größte Genfamilie beim Menschen!). Duftmoleküle → Rezeptor → Golf-Protein → Adenylatzyklase → cAMP ↑ → CNG-Kanäle → Depolarisation → Axone über N. olfactorius (I) direkt in Bulbus olfactorius → limbisches System (Amygdala, Hippocampus). Besonderheit: Der Geruchssinn wird als einziger Sinn **ohne Thalamus-Umschaltung** direkt ins limbische System geleitet — das erklärt starke emotionale Geruchserinnerungen.
+
+**Geschmackssinn:** Fünf Grundqualitäten in Geschmacksknospen auf der Zunge:
+
+| Qualität | Rezeptor | Mechanismus | Biologische Bedeutung |
+|---|---|---|---|
+| **Süß** | T1R2/T1R3 (GPCR) | Gq → IP₃ → Ca²⁺ | Energiereiche Nahrung |
+| **Umami** | T1R1/T1R3 (GPCR) | Gq → Ca²⁺ | Proteinreiche Nahrung |
+| **Bitter** | T2R-Familie (~25 Typen, GPCR) | Gq → Ca²⁺ | Warnsignal (Gifte!) |
+| **Sauer** | H⁺ → PKD2L1-Kanal | ionisch | Säurevierdacht |
+| **Salzig** | Na⁺ → ENaC-Kanal | ionisch | Elektrolytbedarf |
+
+**Innervation der Zunge:** N. facialis (VII) — vordere 2/3 Zunge; N. glossopharyngeus (IX) — hintere 1/3; N. vagus (X) — Epiglottis.
+
+> **Merke:** Süß/Umami/Bitter via GPCR (Second Messenger cAMP/Ca²⁺). Sauer/Salzig direkt ionisch. Geruch: ~400 olfaktorische Rezeptortypen, N. olfactorius → Bulbus → limbisches System (OHNE Thalamus!).
 
 ---
 
-## Haut
+## Haut — Schichten und Rezeptortypen
 
-Die Haut besteht aus Epidermis (verhorntes Plattenepithel, Keratinozyten), Dermis (Bindegewebe, Kollagen I, Elastin) und Subcutis (Fettgewebe). Hautrezeptoren umfassen Meissner-Körperchen (Berührung, schnell adaptierend), Pacini-Körperchen (Vibration, schnell), Merkel-Zellen (Druck, langsam), Ruffini-Körperchen (Dehnung, langsam) und freie Nervenendigungen (Schmerz/Temperatur, Aδ/C-Fasern).
+**Hautschichten von außen nach innen:**
+- **Epidermis** (0,1–1,5 mm, avaskulär, verhorntes Plattenepithel): Stratum basale (Stammzellen, Mitose) → spinosum (Desmosomen) → granulosum (Keratohyalin) → corneum (tote Korneozyten). Zellen: Keratinozyten (80%), Melanozyten (UV-Schutz), Langerhans-Zellen (Immunabwehr), Merkel-Zellen (Mechanorezeptoren)
+- **Dermis** (1–4 mm, vaskularisiert, Kollagen I + Elastin): Stratum papillare (Papillen mit Meissner-Körperchen, Kapillaren) + Stratum reticulare (tiefes Kollagen, Ruffini-Körperchen)
+- **Subcutis** (Hypodermis, Fettgewebe): Thermoregulation, Energiespeicher, Polsterung; Pacini-Körperchen in der Tiefe
 
----
+**Fünf Hautrezeptortypen im Vergleich:**
 
-## Klinischer Bezug
+| Rezeptor | Lage | Modalität | Adaptation | Besonderheit |
+|---|---|---|---|---|
+| **Meissner-Körperchen** | Dermis-Papillen (Finger, Lippen) | Berührung, Textur | Schnell (phasisch) | Braille-Lesen, feine Textur |
+| **Pacini-Körperchen** | Tiefe Dermis, Subcutis | Vibration (200–300 Hz) | Schnell | Zwiebelschalen-Struktur filtert |
+| **Merkel-Zellen** | Stratum basale | Druck, Konturen | Langsam (tonisch) | Höchste räumliche Auflösung (~1 mm) |
+| **Ruffini-Körperchen** | Tiefe Dermis, Gelenkkapseln | Dehnung, Gelenkstellung | Langsam | Propriozeption |
+| **Freie Nervenendigungen** | Epidermis/Dermis | Schmerz, Temperatur | — | Aδ (schnell, scharf) + C (langsam, brennend) |
 
-Glaukom (Grüner Star): erhöhter Augeninnendruck (>21 mmHg) durch gestörten Kammerwasser-Abfluss (Schlemm-Kanal) → Papillenexkavation (N. opticus) → Gesichtsfeldverlust. Therapie: Betablocker (Timolol, β₁-Hemmung → Kammerwasserproduktion ↓), Prostaglandinanaloga (Latanoprost → Abfluss ↑), Pilocarpin (M3-Agonist → Ziliarmuskel → Trabekelwerk öffnet). Katarakt (Grauer Star): Linsentrübung (UV, Diabetes, Kortison, Alter) → verschwommene Sicht; Therapie: OP (Phakoemulsifikation + IOL). Schalltrauma: chronische Lärm-Exposition → Cochlea-Haarzellen zerstört (Stereozilien, Apex der Basilarmembran bei 4 kHz besonders vulnerabel) → Lärmschwerhörigkeit (Hochton-Verlust, Tinnitus). Presbyakusis: Altersbedingte Hochtonschwerhörigkeit durch Haarzell-Verlust. Retinitis pigmentosa: genetische Stäbchen-Degeneration → Nachtblindheit → Tunnelblick. Makuladegeneration: Photorezeptoren in Fovea geschädigt → Verlust von feinem zentralem Sehen.
+**Temperaturrezeptoren:**
+- **TRPV1**: aktiviert >43 °C + **Capsaicin** (Chili) → erklärt warum Chili "brennt" (gleicher Kanal wie Hitzeschmerz)
+- **TRPM8**: aktiviert <~25 °C + **Menthol** → erklärt "Kühle" von Pfefferminz
+
+> **Merke:** Schnell adaptierende Rezeptoren (Meissner, Pacini): erkennen Reizänderungen. Langsam adaptierende (Merkel, Ruffini): melden konstante Zustände. Epidermis = avaskulär, Dermis = vaskularisiert. TRPV1 (>43 °C + Capsaicin) = Wärme/Schmerz — deshalb "brennt" Chili.
 
 ---
 
@@ -1294,11 +1377,13 @@ Glaukom (Grüner Star): erhöhter Augeninnendruck (>21 mmHg) durch gestörten Ka
 
 ## Zusammenfassung
 
+- **Transduktion**: Reiz → elektrisches Signal. Photorezeptoren: paradoxe Hyperpolarisation bei Licht (Dunkelzustand = depolarisiert durch cGMP-Kanäle)
 - **Stäbchen** (skotopisch, peripher, ~120 Mio., Rhodopsin) vs. **Zapfen** (photopisch, Fovea, ~6 Mio., 3 Opsine für Farbe)
 - **Fototransduktion**: Licht → Rhodopsin → Transducin → PDE → cGMP ↓ → Na⁺-Kanäle schließen → **Hyperpolarisation** (paradox!)
 - **Akkommodation (Nah)**: Ziliarmuskel kontrahiert → Zonulafasern entspannen → Linse wölbt sich. Trias: Akkommodation + Konvergenz + Miosis
-- **Ohr**: Schall → Trommelfell → Gehörknöchelchen (Impedanzanpassung ~22-fach) → Basilarmembran-Tonotopie (Basis = hoch, Apex = niedrig) → K⁺-Einstrom Haarzellen → Glutamat → N. cochlearis
-- **Hautrezeptoren**: Meissner (Berührung, schnell), Pacini (Vibration, schnell), Merkel (Druck, langsam), Ruffini (Dehnung, langsam), freie Nervenendigungen (Schmerz/Temp, Aδ/C-Fasern)
+- **Ohr**: Schall → Trommelfell → Gehörknöchelchen (Impedanzanpassung ~22-fach) → Basilarmembran-Tonotopie (Basis = hoch, Apex = niedrig) → Tip-Links → K⁺-Einstrom Haarzellen → Glutamat → N. cochlearis
+- **Geruch**: N. olfactorius → Bulbus → limbisches System (ohne Thalamus!). Geschmack: 5 Qualitäten (süß/umami/bitter = GPCR; sauer/salzig = ionisch)
+- **Hautschichten**: Epidermis (avaskulär) → Dermis (vaskularisiert) → Subcutis. 5 Rezeptoren: Meissner/Pacini (schnell) vs. Merkel/Ruffini (langsam) vs. freie Nervenendigungen (Schmerz/Temp)
 - **Klinisch**: Glaukom (Augeninnendruck ↑), Katarakt (Linsentrübung), Schalltrauma (Haarzellverlust)`,
       lernziele: [
         "Den Aufbau des Auges beschreiben und die Fototransduktion in Stäbchen von der Lichtabsorption durch Rhodopsin bis zur Hyperpolarisation erklären.",
