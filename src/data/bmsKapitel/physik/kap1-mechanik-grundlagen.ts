@@ -28,71 +28,125 @@ export const physKapMechanik: Kapitel = {
       diagram: "coordinate-system",
       content: `## Einleitung
 
-Wie misst man Blutdruck in mmHg, Körpermasse in kg und Herzleistung in Watt? Physik und Medizin teilen dieselbe Sprache: Einheiten. Das **Internationale Einheitensystem (SI)** stellt sicher, dass alle Messungen weltweit vergleichbar sind. Wer die Basisgrößen und abgeleiteten Einheiten kennt, kann Messwerte verstehen, Formeln anwenden und klinische Werte interpretieren. Für den MedAT sind SI-Einheiten, Präfixe, Vektoren vs. Skalare und Dimensionsanalyse prüfungsrelevant.
+Wie misst man Blutdruck in mmHg, Körpermasse in kg und Herzleistung in Watt? Physik und Medizin teilen dieselbe Sprache: **Einheiten**. Das **Internationale Einheitensystem (SI)** stellt sicher, dass alle Messungen weltweit vergleichbar sind. Wer die Basisgrößen und abgeleiteten Einheiten kennt, kann Messwerte verstehen, Formeln anwenden und klinische Werte interpretieren. Für den MedAT sind SI-Einheiten, Präfixe, Vektoren vs. Skalare und Dimensionsanalyse prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- die **sieben SI-Basisgrößen** (Länge, Masse, Zeit, Strom, Temperatur, Stoffmenge, Lichtstärke) und ihre Einheiten
+- **abgeleitete Einheiten** (Newton, Pascal, Joule, Watt) und ihre Darstellung in Basiseinheiten
+- den Unterschied **Skalar vs. Vektor** (nur Betrag vs. Betrag + Richtung) und **intensiv vs. extensiv**
+- **Masse** und **Gewichtskraft** (F_G = m·g) und warum sie nicht dasselbe sind
+- klinische Anwendungen: Blutdruck (mmHg ↔ Pa), Infusionsrate, Grundumsatz in Watt
+
+---
 
 ## Das Internationale Einheitensystem (SI)
 
-Die Physik beschreibt die Natur mit Hilfe von **Größen** — messbaren Eigenschaften wie Länge, Masse oder Zeit. Um weltweit vergleichbare Messungen zu ermöglichen, haben sich Wissenschaftlerinnen und Wissenschaftler auf ein einheitliches System geeinigt: das **Internationale Einheitensystem** (SI, Système International d'unités). Es bildet das Fundament jeder exakten Naturwissenschaft und damit auch der Medizin.
+**Um Messungen weltweit vergleichbar zu machen,** braucht man ein einheitliches System. **Dafür** dient das SI.
 
-Das SI-System definiert **sieben Basisgrößen**, aus denen sich alle anderen physikalischen Größen ableiten lassen.
+Die Physik beschreibt die Natur mit **Größen** — das sind messbare Eigenschaften wie Länge, Masse oder Zeit; jede Größe hat einen Zahlenwert und eine Einheit. Um weltweit vergleichbare Messungen zu ermöglichen, haben sich Wissenschaftler auf ein einheitliches System geeinigt: das **Internationale Einheitensystem** (SI, Système International d'unités). Es bildet das Fundament jeder exakten Naturwissenschaft und damit auch der Medizin.
 
-Die **Länge** wird in Meter (m) gemessen — ursprünglich als ein Zehnmillionstel des Weges vom Nordpol zum Äquator festgelegt, heute über die Lichtgeschwindigkeit definiert: 1 m ist die Strecke, die Licht im Vakuum in 1/299 792 458 Sekunde zurücklegt. Die **Masse** hat die Einheit Kilogramm (kg); bis 2019 war ein physisches Platiniridiumzylinder in Paris der internationale Standard, seither wird das Kilogramm über die Planck-Konstante h = 6,626 × 10⁻³⁴ J·s definiert. Die **Zeit** in Sekunden (s) wird durch Atomuhren mit einer Genauigkeit von 10⁻¹⁸ s realisiert — basierend auf 9 192 631 770 Schwingungen der Cäsium-133-Hyperfeinstruktur.
+Das SI definiert **sieben Basisgrößen** — das sind die fundamentalen Größen, aus denen sich alle anderen physikalischen Größen durch Multiplikation und Division ableiten lassen. Sie sind so gewählt, dass keine aus den anderen herleitbar ist.
+
+**Die sieben SI-Basisgrößen im Überblick:**
+
+| Basisgröße | Formelzeichen | SI-Einheit | Einheitenzeichen |
+|------------|---------------|------------|------------------|
+| Länge | l | Meter | m |
+| Masse | m | Kilogramm | kg |
+| Zeit | t | Sekunde | s |
+| Elektrische Stromstärke | I | Ampere | A |
+| Thermodynamische Temperatur | T | Kelvin | K |
+| Stoffmenge | n | Mol | mol |
+| Lichtstärke | I_v | Candela | cd |
+
+**Definitionen (Auszug):** Die **Länge** wird in **Meter (m)** gemessen — heute definiert über die Lichtgeschwindigkeit: 1 m ist die Strecke, die Licht im Vakuum in 1/299 792 458 s zurücklegt. Die **Masse** hat die Einheit **Kilogramm (kg)**; seit 2019 wird sie über die Planck-Konstante definiert (nicht mehr über einen physischen Zylinder). Die **Zeit** in **Sekunden (s)** wird durch Atomuhren realisiert — 1 s entspricht 9 192 631 770 Schwingungen der Cäsium-133-Hyperfeinstruktur.
+
+> **Merke:** Es gibt **genau 7** SI-Basisgrößen. Alle anderen Einheiten (z. B. Newton, Pascal, Joule) sind **abgeleitet** — sie lassen sich als Produkt von Potenzen der Basiseinheiten schreiben.
+
+**SVG-Hinweis (SI-Basisgrößen — Übersichtstabelle):** Eine kompakte Tabelle oder Grafik mit den sieben Basisgrößen, Einheiten und Symbolen unterstützt die Merkfähigkeit. *Typ: Übersichtstabelle / Schema.*
+
+---
 
 ## Abgeleitete Einheiten
 
-Alle weiteren physikalischen Größen werden aus den Basisgrößen durch Multiplikation und Division abgeleitet. Diese **abgeleiteten Einheiten** tragen oft eigene Namen:
+**Bisher haben wir gesehen:** Die sieben Basisgrößen bilden das Fundament. **Alle weiteren** physikalischen Größen werden daraus durch Multiplikation und Division gebildet — das sind die **abgeleiteten Einheiten**; sie tragen oft eigene Namen und sind für Klinik und MedAT zentral.
 
-**Kraft** (Newton, N): Ein Newton ist die Kraft, die einer Masse von 1 kg die Beschleunigung 1 m/s² erteilt.
-1 N = 1 kg·m·s⁻²
+| Größe | Einheit | Definition (kurz) | In Basiseinheiten |
+|-------|---------|-------------------|-------------------|
+| **Kraft** | Newton (N) | Kraft, die 1 kg die Beschleunigung 1 m/s² erteilt | kg·m·s⁻² |
+| **Druck** | Pascal (Pa) | Kraft pro Fläche | N/m² = kg·m⁻¹·s⁻² |
+| **Energie / Arbeit** | Joule (J) | Kraft × Weg | N·m = kg·m²·s⁻² |
+| **Leistung** | Watt (W) | Energie pro Zeit | J/s = kg·m²·s⁻³ |
+| **Elektrische Spannung** | Volt (V) | Leistung / Stromstärke | kg·m²·A⁻¹·s⁻³ |
+| **Frequenz** | Hertz (Hz) | Schwingungen pro Sekunde | s⁻¹ |
 
-**Druck** (Pascal, Pa): Druck ist Kraft pro Fläche.
-1 Pa = 1 N/m² = 1 kg·m⁻¹·s⁻²
+> **Merke:** **Newton ist keine Basiseinheit:** N = kg·m·s⁻². Pascal = N/m², Joule = N·m, Watt = J/s. Diese Kette solltest du sicher auf- und abgeleitet können.
 
-**Energie und Arbeit** (Joule, J): Energie ist Kraft mal Weg.
-1 J = 1 N·m = 1 kg·m²·s⁻²
-
-**Leistung** (Watt, W): Leistung ist Energie pro Zeit.
-1 W = 1 J/s = 1 kg·m²·s⁻³
-
-**Elektrische Spannung** (Volt, V): Spannung ist Leistung pro Stromstärke.
-1 V = 1 W/A = 1 kg·m²·A⁻¹·s⁻³
-
-**Frequenz** (Hertz, Hz): Frequenz ist Anzahl der Schwingungen pro Sekunde.
-1 Hz = 1 s⁻¹
+---
 
 ## Physikalische Größen als Produkt: Zahlenwert × Einheit
 
-Eine physikalische Größe G ist immer das Produkt aus einem **Zahlenwert** {G} und einer **Einheit** [G]:
+**Bisher haben wir gesehen:** Basis- und abgeleitete Einheiten. **Damit ein Messwert eindeutig ist,** braucht man immer beides: die Zahl und die Einheit.
+
+Eine physikalische Größe G ist immer das Produkt aus einem **Zahlenwert** {G} (die reine Zahl) und einer **Einheit** [G] (z. B. m, kg, Pa):
 
 G = {G} · [G]
 
-Beispiel: Eine Körpergröße von 1,75 m bedeutet: Zahlenwert = 1,75 und Einheit = m. Dies ist keine bloße Konvention — es hat mathematische Konsequenzen: Wenn man die Einheit wechselt (z.B. von m zu cm), ändert sich der Zahlenwert entsprechend. 1,75 m = 175 cm. Die Größe selbst — die tatsächliche Körpergröße — bleibt natürlich unverändert.
+Beispiel: Eine Körpergröße von 1,75 m bedeutet: Zahlenwert = 1,75, Einheit = m. Beim Einheitenwechsel (z. B. m → cm) ändert sich der Zahlenwert: 1,75 m = 175 cm — die Größe selbst bleibt unverändert.
+
+> **Merke:** Jede physikalische Größe = **Zahlenwert × Einheit**. Ohne Einheit ist die Zahl mehrdeutig; die Dimensionsanalyse prüft, ob linke und rechte Seite einer Gleichung dieselbe Einheit haben.
+
+---
 
 ## Skalare und vektorielle Größen
 
+**Bisher haben wir gesehen:** Basis- und abgeleitete Einheiten sowie Zahlenwert × Einheit. **Nicht jede Größe** ist aber vollständig durch eine Zahl und eine Einheit beschrieben — manche brauchen zusätzlich eine **Richtung**. **Um das zu verstehen,** unterscheidet man Skalare und Vektoren.
+
 Physikalische Größen lassen sich in **skalare** und **vektorielle** Größen unterteilen:
 
-**Skalare Größen** werden vollständig durch einen Zahlenwert mit Einheit beschrieben. Beispiele: Masse (5 kg), Temperatur (37 °C), Energie (500 J), Zeit (3 s). Skalare haben keine Richtung.
+- **Skalare Größen** (Skalare) werden vollständig durch einen **Zahlenwert mit Einheit** beschrieben — sie haben **keine Richtung**. Beispiele: Masse (5 kg), Temperatur (37 °C), Energie (500 J), Zeit (3 s), Druck (120 mmHg).
 
-**Vektorielle Größen** (Vektoren) benötigen zusätzlich zum Betrag eine **Richtungsangabe**. Beispiele: Kraft (10 N nach oben), Geschwindigkeit (30 m/s nach Norden), Beschleunigung (9,81 m/s² nach unten). In der Notation werden Vektoren oft mit einem Pfeil über dem Symbol geschrieben.
+- **Vektorielle Größen** (Vektoren) haben neben dem **Betrag** (Zahlenwert + Einheit) eine **Richtungsangabe**. Beispiele: Kraft (10 N nach oben), Geschwindigkeit (30 m/s nach Norden), Beschleunigung (9,81 m/s² nach unten). In der Notation werden Vektoren oft mit einem Pfeil über dem Symbol geschrieben (z. B. **F**⃗).
 
-Im medizinischen Kontext ist diese Unterscheidung wichtig: Der **Blutdruck** (Pa) ist eine skalare Größe — er wirkt in alle Richtungen gleich. Die **Blutströmungsgeschwindigkeit** hingegen ist ein Vektor — sie hat eine definierte Richtung im Gefäß.
+**Klinisch:** Der **Blutdruck** (in Pa oder mmHg) ist ein **Skalar** — er wirkt in alle Richtungen gleich. Die **Blutströmungsgeschwindigkeit** ist ein **Vektor** — sie hat eine definierte Richtung im Gefäß.
+
+> **Merke:** **Skalar** = nur Betrag (Temperatur, Druck, Masse). **Vektor** = Betrag + Richtung (Kraft, Geschwindigkeit, Beschleunigung). Vektoren addiert man nicht einfach arithmetisch, sondern wie Pfeile (komponentenweise oder geometrisch).
+
+**SVG-Hinweis (Skalar vs. Vektor):** Ein Vergleichsschema zeigt ein Skalar (z. B. ein Thermometer mit 37 °C) und einen Vektor als Pfeil (Betrag + Richtung, z. B. Kraftpfeil). So wird der Unterschied auf einen Blick klar. *Typ: Vergleich / Schema.*
+
+---
 
 ## Intensive und extensive Größen
 
-Eine weitere wichtige Unterscheidung:
+**Bisher haben wir gesehen:** Skalare und Vektoren. **Eine weitere wichtige Unterscheidung** betrifft die Abhängigkeit von der **Systemgröße** — also ob eine Größe mit der Menge „mitwächst“ oder nicht.
 
-**Extensive Größen** sind abhängig von der Systemgröße — sie addieren sich, wenn man Systeme zusammenfügt. Beispiele: Masse, Volumen, Energie, Stoffmenge. Ein Liter Wasser + ein Liter Wasser = zwei Liter Wasser.
+- **Extensive Größen** sind **abhängig von der Systemgröße**: Sie **addieren sich**, wenn man Teilsysteme zusammenfügt. Beispiele: Masse, Volumen, Energie, Stoffmenge. Ein Liter Wasser + ein Liter Wasser = **zwei** Liter Wasser.
 
-**Intensive Größen** sind unabhängig von der Systemgröße. Beispiele: Temperatur, Druck, Dichte, Konzentration. Zwei Behälter mit Wasser bei 20 °C ergeben nach dem Zusammenschütten immer noch 20 °C (nicht 40 °C!).
+- **Intensive Größen** sind **unabhängig von der Systemgröße**: Sie bleiben gleich, wenn man gleiche Systeme vereinigt. Beispiele: Temperatur, Druck, Dichte, Konzentration. Zwei Behälter Wasser bei 20 °C ergeben zusammengeschüttet **weiterhin 20 °C** — nicht 40 °C!
 
-Diese Unterscheidung ist in der Pharmakologie und Physiologie von Bedeutung: Die Konzentration eines Medikaments im Blut (intensiv) ist entscheidend für die Wirkung, nicht die absolute Menge (extensiv). Der Arzt berechnet die Dosis (extensive Größe in mg) so, dass die gewünschte Konzentration (intensive Größe in mg/L) im Plasma erreicht wird — unter Berücksichtigung des Verteilungsvolumens und der Nierenclearance.
+> **Merke:** **Extensiv** = proportional zur Menge (Masse, Volumen). **Intensiv** = unabhängig von der Menge (Temperatur, Konzentration). Zwei Tassen Kaffee → doppeltes Volumen, aber dieselbe Temperatur.
+
+**Klinisch:** Die **Konzentration** eines Medikaments (intensiv, z. B. mg/L) ist für die Wirkung entscheidend, nicht die absolute Dosis allein. Die **Dosis** (extensiv, in mg) wird so gewählt, dass die gewünschte Plasmakonzentration erreicht wird — unter Berücksichtigung von Verteilungsvolumen und Nierenclearance.
+
+---
 
 ## Körpergewicht, Masse und Gewichtskraft
 
-Ein häufiger Irrtum im Alltag: Die Masse eines Menschen (in kg) und seine Gewichtskraft (in N) sind verschiedene Größen. Die Masse ist eine intrinsische, ortsunabhängige Eigenschaft. Die Gewichtskraft F_G = m × g hängt von der Erdbeschleunigung g = 9,81 m/s² ab. Ein Mensch mit Masse 70 kg hat auf der Erde eine Gewichtskraft von 70 × 9,81 = 686,7 N. Auf dem Mond (g = 1,62 m/s²) wäre F_G = 113,4 N — aber seine Masse bleibt 70 kg. Diese Unterscheidung ist in der Weltraummedizin und bei Astronautentraining relevant.
+**Bisher haben wir gesehen:** Verschiedene Arten von Größen. **Im Alltag** werden zwei Begriffe oft verwechselt: **Masse** und **Gewicht**. Physikalisch sind sie unterschieden.
+
+- Die **Masse** (Einheit kg) ist eine **intrinsische, ortsunabhängige** Eigenschaft des Körpers — sie gibt an, wie viel „Stoff“ vorhanden ist und ändert sich nicht mit dem Ort.
+
+- Die **Gewichtskraft** F_G (Einheit N) ist die **Kraft**, mit der die Erde (oder ein anderer Himmelskörper) den Körper anzieht. Sie berechnet sich zu **F_G = m · g**, wobei **g** die **Fallbeschleunigung** am Ort ist (auf der Erde g ≈ 9,81 m/s²).
+
+Ein Mensch mit **Masse** 70 kg hat auf der Erde eine **Gewichtskraft** F_G = 70 × 9,81 ≈ **687 N**. Auf dem Mond (g ≈ 1,62 m/s²) wäre F_G ≈ 113 N — die **Masse** bleibt 70 kg. Umgangssprachlich „ich wiege 70 kg“ meint physikalisch die Masse; die Gewichtskraft beträgt etwa 687 N.
+
+> **Merke:** **Masse (kg) ≠ Gewichtskraft (N).** Masse ortsunabhängig, Gewichtskraft F_G = m·g (g abhängig vom Ort). Newton ist **keine** Basiseinheit: N = kg·m·s⁻².
+
+---
 
 ## Rechenbeispiele
+
+**Um das Gelernte anzuwenden,** folgen drei typische MedAT-relevante Rechnungen: Infusionsrate, Blutdruck-Umrechnung und Grundumsatz in Watt.
 
 **Beispiel 1 — Infusionsrate berechnen (Dopamin):**
 Verordnung: 5 µg/kg/min Dopamin, Patient 80 kg. Lösung: 200 mg in 250 mL NaCl.
@@ -113,8 +167,15 @@ Umrechnung: 1800 kcal × 4184 J/kcal = 7 531 200 J/Tag.
 Ein Tag = 86 400 s.
 Leistung P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glühbirne! Bei körperlicher Aktivität steigt der Energieumsatz auf 300–500 W.
 
+Mit diesen drei Beispielen hast du **Einheitenumrechnung**, **Dimensionsanalyse** und **klinische Anwendung** verknüpft — genau das, was im MedAT abgefragt werden kann.
+
 ---
 ## MedAT-Fokus
+
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist die SI-Einheit des Drucks?" → Pascal (Pa = N/m² = kg·m⁻¹·s⁻²)
@@ -123,7 +184,7 @@ Leistung P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glü
 - "Was ist 1 Watt in Basiseinheiten?" → W = J/s = kg·m²·s⁻³
 - "Was ist der Unterschied zwischen intensiver und extensiver Größe?" → Intensiv: unabhängig von der Menge (Konzentration, Temperatur); extensiv: proportional zur Menge (Masse, Volumen)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Masse (kg) ≠ Gewichtskraft (N): Masse ist ortsunabhängig, Gewichtskraft F_G = m·g hängt von g ab
 - Newton ist KEINE Basiseinheit, sondern abgeleitet: N = kg·m/s²
 - Intensive Größen addieren sich NICHT beim Zusammenfügen: 2 × (20°C Wasser) = 20°C, nicht 40°C
@@ -136,7 +197,7 @@ Leistung P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glü
 - 7 SI-Basisgrößen — Kraft (Newton) ist KEINE Basisgröße!
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **7 SI-Basisgrößen**: Länge (m), Masse (kg), Zeit (s), Stromstärke (A), Temperatur (K), Stoffmenge (mol), Lichtstärke (cd)
 - **Abgeleitete Einheiten**: Newton (N = kg·m/s²), Pascal (Pa = N/m²), Joule (J = N·m), Watt (W = J/s)
@@ -435,6 +496,9 @@ Röntgenstrahlung f = 3 × 10¹⁸ Hz. Wellenlänge λ = c/f = (3 × 10⁸ m/s) 
 ---
 ## MedAT-Fokus
 
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Was ist 0,000 045 m in wissenschaftlicher Notation?" → 4,5 × 10⁻⁵ m = 45 µm
 - "Wie viele µg sind 1 mg?" → 1000 µg (Faktor 10³)
@@ -442,7 +506,7 @@ Röntgenstrahlung f = 3 × 10¹⁸ Hz. Wellenlänge λ = c/f = (3 × 10⁸ m/s) 
 - "Was ist 5 mL in m³?" → 5 × 10⁻⁶ m³ (1 mL = 1 cm³ = 10⁻⁶ m³)
 - "Was bedeutet M (Mega) vs. m (Milli)?" → M = 10⁶; m = 10⁻³ — Unterschied Faktor 10⁹!
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - **cm² vs. m²:** 1 cm² = 10⁻⁴ m² (nicht 10⁻² m²!) — der Exponent wird quadriert
 - **mL vs. m³:** 1 mL = 1 cm³ = 10⁻⁶ m³ (nicht 10⁻³ m³!)
 - **ng vs. µg vs. mg:** jeder Schritt ist Faktor 1000; ng → µg → mg (÷ 1000 je Schritt)
@@ -456,7 +520,7 @@ Röntgenstrahlung f = 3 × 10¹⁸ Hz. Wellenlänge λ = c/f = (3 × 10⁸ m/s) 
 - Lichtgeschwindigkeit c ≈ 3 × 10⁸ m/s; Avogadro N_A ≈ 6 × 10²³ mol⁻¹
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Präfixe**: f (10⁻¹⁵), p (10⁻¹²), n (10⁻⁹), μ (10⁻⁶), m (10⁻³), c (10⁻²), k (10³), M (10⁶), G (10⁹), T (10¹²)
 - **Groß-/Kleinschreibung**: M (Mega, 10⁶) ≠ m (Milli, 10⁻³) — Faktor 10⁹ Unterschied!
@@ -761,6 +825,9 @@ Re = (1060 × 0,5 × 0,025) / (3,5 × 10⁻³) = 13,25 / 0,0035 ≈ **3786** →
 ---
 ## MedAT-Fokus
 
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welche Dimension hat Druck?" → M·L⁻¹·T⁻² (= kg·m⁻¹·s⁻² = Pa)
 - "Welche Dimension hat Energie?" → M·L²·T⁻² (= kg·m²·s⁻² = J)
@@ -768,7 +835,7 @@ Re = (1060 × 0,5 × 0,025) / (3,5 × 10⁻³) = 13,25 / 0,0035 ≈ **3786** →
 - "Wie rechnet man 72 km/h in m/s um?" → 72 ÷ 3,6 = 20 m/s (oder × 1000/3600)
 - "Was ist 2500 kcal in kJ?" → 2500 × 4,184 = 10 460 kJ ≈ 10,5 MJ
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - [m·v] = M·L·T⁻¹ ist Impuls (kg·m/s), NICHT Energie! Energie = M·L²·T⁻² benötigt v²
 - [m·a] = N (Kraft), [m·v²] = J (Energie), [m·v] = kg·m/s (Impuls) — alle ähnlich, aber verschieden!
 - 1 mmHg ≠ 1 cmH₂O: 1 mmHg = 1,36 cmH₂O (Dichteverhältnis Hg/H₂O = 13,6)
@@ -782,7 +849,7 @@ Re = (1060 × 0,5 × 0,025) / (3,5 × 10⁻³) = 13,25 / 0,0035 ≈ **3786** →
 - 1 g Kohlenhydrate: ~17 kJ; 1 g Fett: ~37 kJ; 1 g Protein: ~17 kJ
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Dimensionsanalyse**: beide Seiten einer Gleichung müssen gleiche Dimension haben → Fehlerprüfung für Formeln
 - **Basisdimensionen**: L (Länge), M (Masse), T (Zeit), I (Strom), Θ (Temperatur), N (Stoffmenge), J (Lichtstärke)
@@ -1036,6 +1103,9 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
 ---
 ## MedAT-Fokus
 
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Was besagt das 1. Newtonsche Gesetz?" → Kein Nettokraft → keine Zustandsänderung (Trägheit)
 - "Was ist die Einheit der Kraft?" → Newton: N = kg·m/s² (abgeleitet, keine Basiseinheit!)
@@ -1043,7 +1113,7 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
 - "Was gilt für actio = reactio?" → Gleich groß, entgegengesetzt, verschiedene Körper — heben sich NICHT auf
 - "Wie berechnet man den Bremsweg?" → v² = v₀² − 2·a·s → a = v₀²/(2s)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - actio = reactio: Beide Kräfte wirken auf VERSCHIEDENE Körper — deshalb heben sie sich nicht auf!
 - v(t) = v₀ + at (Geschwindigkeit, linear) vs. s(t) = v₀t + ½at² (Weg, parabolisch) — nicht verwechseln
 - Freier Fall: a = g (Beschleunigung), nicht F = g (g ist keine Kraft, sondern m/s²)
@@ -1056,7 +1126,7 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
 - Dezelerationstrauma: Aorta descendens besonders gefährdet (am Aortenbogen fixiert)
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **1. Newtonsches Gesetz (Trägheit)**: kein Nettokraft → kein Δv; Dezelerationstrauma: Organe bewegen sich weiter
 - **2. Newtonsches Gesetz**: F = m·a; 1 N = 1 kg·m/s²; größere Masse → geringere Beschleunigung bei gleicher Kraft
@@ -1277,6 +1347,9 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
 ---
 ## MedAT-Fokus
 
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Was ist E_kin bei doppelter Geschwindigkeit?" → 4-fach (E_kin ~ v²)
 - "Welche Erhaltungsgröße gilt immer, auch beim inelastischen Stoß?" → Impuls (nicht kinetische Energie!)
@@ -1284,7 +1357,7 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
 - "Was ist der Unterschied zwischen Arbeit und Leistung?" → Arbeit = F·s (J); Leistung = W/t (W = J/s)
 - "Wann leistet eine Kraft keine Arbeit?" → Wenn Kraft senkrecht zum Weg steht (cos 90° = 0)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Impuls p = mv (Vektor, N·s) ≠ kinetische Energie E = ½mv² (Skalar, J) — verschiedene Größen!
 - Kraftstoß J = F·Δt = Δp, beschreibt Impulsänderung — NICHT Energieänderung
 - Elastischer Stoß: Impuls UND kinetische Energie erhalten; inelastischer: NUR Impuls erhalten
@@ -1298,7 +1371,7 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
 - Achillessehne speichert ~35 J elastische Energie pro Laufschritt
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Kinetische Energie**: E_kin = ½mv²; **Potenzielle Energie**: E_pot = mgh; Erhaltung (ohne Reibung): E_kin + E_pot = const
 - **Impuls**: p = m·v (Vektor, kg·m/s); **Kraftstoß**: J = F·Δt = Δp; Impulserhaltung in abgeschlossenen Systemen
@@ -1513,6 +1586,9 @@ Klinisch: Bei längerem Stehen → venöse Pooling in Beinen → orthostatische 
 ---
 ## MedAT-Fokus
 
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Was besagt das Poiseuille-Gesetz?" → Q = π·r⁴·Δp/(8·η·l); Q ~ r⁴ — Radius ist der dominierende Parameter
 - "Was folgt aus der Kontinuitätsgleichung?" → A₁·v₁ = A₂·v₂; enger Querschnitt → höhere Strömungsgeschwindigkeit
@@ -1520,7 +1596,7 @@ Klinisch: Bei längerem Stehen → venöse Pooling in Beinen → orthostatische 
 - "Wie berechnet man Bizepskraft für 10 kg Last (Hebelarm 35 cm, Ansatz 5 cm)?" → F_B × 5 = 100 × 35 → F_B = 700 N
 - "Was erklärt Bernoulli bei Stenosen?" → Enger Querschnitt → v↑ → p↓ (poststenotischer Druckabfall)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Poiseuille: Q ~ r⁴ (4. Potenz!), NICHT Q ~ r²! Radius halbieren → Fluss auf 1/16 (nicht 1/4)
 - Bernoulli: Enge Stelle → Geschwindigkeit↑, Druck↓ — nicht umgekehrt!
 - Drehmoment M = F·d (d = senkrechter Hebelarm!) — wenn die Kraft nicht senkrecht zum Hebel steht, gilt nur die senkrechte Komponente
@@ -1535,7 +1611,7 @@ Klinisch: Bei längerem Stehen → venöse Pooling in Beinen → orthostatische 
 - Surfactant verhindert Alveolarkollaps; fehlt bei Frühgeborenen < 34. SSW → IRDS
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Gleichgewicht**: ΣF = 0 UND ΣM = 0; **Drehmoment**: M = F·d (N·m)
 - **Hebelgesetz**: F₁·d₁ = F₂·d₂; Muskelansatz nahe Gelenk → große Muskelkraft erforderlich
@@ -1756,6 +1832,9 @@ Mit Gehstock (effektive Standbreite ~60 cm): θ = arctan(0,30/1,01) ≈ **16,5°
 ---
 ## MedAT-Fokus
 
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Was ist der Unterschied zwischen Masse und Gewichtskraft?" → Masse (kg): ortsunabhängig, Materieeigenschaft; Gewichtskraft (N) = m·g, ortsabhängig
 - "Was ist RCF?" → Relative Zentrifugalbeschleunigung = ω²·r/g (gibt an, wie oft größer als g)
@@ -1763,7 +1842,7 @@ Mit Gehstock (effektive Standbreite ~60 cm): θ = arctan(0,30/1,01) ≈ **16,5°
 - "Was gilt für stabiles Gleichgewicht?" → Projektion des Schwerpunkts muss innerhalb der Standfläche liegen
 - "Wie berechnet man die Zentripetalbeschleunigung?" → a_z = v²/r = ω²·r
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Zentrifugalkraft ist eine SCHEINKRAFT im rotierenden System — sie existiert nicht im ruhenden (Inertial-)System der Erde
 - Im Weltraum (ISS): Gewichtskraft ≈ 0 (Schwerelosigkeit), aber die Masse des Körpers bleibt unverändert
 - Stabiles Gleichgewicht: die PROJEKTION (das Lot) des Schwerpunkts muss innerhalb der Standfläche liegen — nicht der Schwerpunkt selbst
@@ -1776,7 +1855,7 @@ Mit Gehstock (effektive Standbreite ~60 cm): θ = arctan(0,30/1,01) ≈ **16,5°
 - ISS-Umlaufgeschwindigkeit: ~7,7 km/s bei ~400 km Höhe; Umlaufzeit ~90 min
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Gravitationsgesetz**: F_G = G·m₁·m₂/r²; auf Erde: F_G = m·g (g = 9,81 m/s²); **Masse** (kg) ≠ **Gewicht** (N)
 - **Kreisbewegung**: v = ω·r; a_z = v²/r = ω²·r (Zentripetal-); F_z = m·ω²·r zeigt zur Kreismitte

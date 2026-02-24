@@ -27,83 +27,134 @@ export const mathKapZahlen: Kapitel = {
       ],
       content: `## Einleitung
 
-Ein rotes Blutkörperchen ist 8 µm groß. Ein Virus misst 100 nm. Glukose im Blut liegt bei 5 mmol/L. All das lässt sich nur mit Zehnerpotenzen bequem und fehlerfrei schreiben. Wer Zehnerpotenzen nicht sicher beherrscht, stolpert über Dosierungsberechnungen, Laborwerte und Einheitenumrechnungen — exakt die Aufgaben, die im MedAT und im klinischen Alltag vorkommen. Für den MedAT sind Potenzschreibweise, die vier Rechenregeln und schnelles Abschätzen von Verhältnissen prüfungsrelevant.
+Ein rotes Blutkörperchen ist 8 µm groß. Ein Virus misst 100 nm. Glukose im Blut liegt bei 5 mmol/L. All das lässt sich nur mit **Zehnerpotenzen** bequem und fehlerfrei schreiben — also mit Ausdrücken der Form 10ⁿ, bei denen die **Zehnerpotenz** die kompakte Schreibweise für „10 mal 10 mal … (n-mal)“ oder „1 geteilt durch 10ⁿ“ ist. Wer Zehnerpotenzen nicht sicher beherrscht, stolpert über Dosierungsberechnungen, Laborwerte und Einheitenumrechnungen — exakt die Aufgaben, die im MedAT und im klinischen Alltag vorkommen. Für den MedAT sind Potenzschreibweise, die vier Rechenregeln und schnelles Abschätzen von Verhältnissen prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- **Zehnerpotenzen** mit positivem und negativem **Exponenten** zu lesen und in Dezimalzahlen umzurechnen (10³ = 1.000, 10⁻⁶ = 0,000001)
+- die **vier Rechenregeln** für Zehnerpotenzen: Multiplikation (Exponenten addieren), Division (subtrahieren), Potenzieren (multiplizieren), Wurzel (Exponent halbieren)
+- Produkte und Quotienten der Form (a × 10ᵐ) × (b × 10ⁿ) zu berechnen und in **normalisierter Form** (Vorfaktor zwischen 1 und 10) zu bringen
+- **Verhältnisse** und **Größenordnungen** durch Exponenten-Subtraktion schnell abzuschätzen (z. B. wie oft konzentrierter?)
+- typische **Fehlerquellen** zu vermeiden (10⁻³ ≠ −10³; bei Addition erst auf gleichen Exponenten bringen)
+
+---
 
 ## Grunddefinition und positive Exponenten
 
-Die Schreibweise 10ⁿ bedeutet, dass die Zahl 10 genau n-mal mit sich selbst multipliziert wird:
-- 10¹ = 10
-- 10² = 10 × 10 = 100
-- 10³ = 10 × 10 × 10 = 1.000
-- 10⁶ = 1.000.000
-- 10⁹ = 1.000.000.000
+**Um Zehnerpotenzen sicher zu nutzen,** starten wir mit der Definition. Danach bauen wir negative Exponenten und die Rechenregeln darauf auf.
 
-Der Exponent n gibt direkt an, wie viele Stellen die Zahl hat — oder anders formuliert: wie viele Nullen hinter der 1 stehen. Diese Regel gilt exakt nur für ganzzahlige Potenzen von 10, ist aber eine verlässliche Eselsbrücke: Bei 10¹² stehen zwölf Nullen. Im Blut zirkulieren beim Erwachsenen ca. 5 × 10¹² rote Blutkörperchen pro Liter — eine Zahl, die man nur durch Zehnerpotenzen handhabbar macht.
+Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl 10 genau **n-mal** mit sich selbst multipliziert wird. Die Zahl **n** heißt **Exponent** (Hochzahl) und gibt an, wie oft die 10 als Faktor vorkommt.
+
+| Schreibweise | Bedeutung | Dezimal |
+|--------------|------------|---------|
+| 10¹ | 10 | 10 |
+| 10² | 10 × 10 | 100 |
+| 10³ | 10 × 10 × 10 | 1.000 |
+| 10⁶ | 10 × … × 10 (6 Faktoren) | 1.000.000 |
+| 10⁹ | 10 × … × 10 (9 Faktoren) | 1.000.000.000 |
+
+**Eselsbrücke:** Bei **positivem** Exponenten gibt **n** an, wie viele **Nullen hinter der 1** stehen. Bei 10¹² stehen zwölf Nullen. Im Blut zirkulieren beim Erwachsenen ca. **5 × 10¹²** rote Blutkörperchen pro Liter — eine Zahl, die man nur mit Zehnerpotenzen handhabbar macht.
+
+> **Merke:** **10ⁿ** (n positiv) = 1 mit **n Nullen** dahinter. Der **Exponent** ist die Hochzahl und bestimmt die **Größenordnung** (die „Macht von Zehn“) der Zahl.
+
+---
 
 ## Negative Exponenten und der Sonderfall 10⁰
 
-Negative Exponenten beschreiben Brüche, also Zahlen kleiner als 1:
-- 10⁻¹ = 1/10 = 0,1
-- 10⁻² = 1/100 = 0,01
-- 10⁻³ = 1/1.000 = 0,001
-- 10⁻⁶ = 0,000 001
-- 10⁻⁹ = 0,000 000 001
+**Bisher haben wir gesehen:** Positive Exponenten beschreiben große Zahlen. **Aber was ist mit sehr kleinen Werten** — z. B. Konzentrationen in mmol/L oder Größen in nm? **Dafür** brauchen wir **negative Exponenten**.
 
-Allgemein gilt: 10⁻ⁿ = 1 / 10ⁿ. Der Exponent gibt an, um wie viele Stellen die 1 nach rechts verschoben wird (d. h., wie viele Nullen nach dem Komma vor der 1 stehen). So ist 10⁻⁶ eine Zahl, bei der die 1 an der sechsten Dezimalstelle steht.
+**Negative Exponenten** beschreiben Brüche, also Zahlen **kleiner als 1**. Es gilt: **10⁻ⁿ = 1 / 10ⁿ**. Der Exponent gibt an, um wie viele Stellen die 1 **nach rechts** verschoben wird (wie viele Nullen **nach dem Komma vor** der 1 stehen).
 
-Der Sonderfall 10⁰ = 1 überrascht viele Anfänger, folgt aber zwingend aus der Algebra: Wenn man 10² / 10² = 1 schreibt, ergibt die Potenzregel 10²⁻² = 10⁰ = 1. Jede Zahl (außer 0) hoch null ergibt 1.
+| Schreibweise | Bedeutung | Dezimal |
+|--------------|------------|---------|
+| 10⁻¹ | 1/10 | 0,1 |
+| 10⁻² | 1/100 | 0,01 |
+| 10⁻³ | 1/1.000 | 0,001 |
+| 10⁻⁶ | 1/10⁶ | 0,000 001 |
+| 10⁻⁹ | 1/10⁹ | 0,000 000 001 |
+
+**Wichtig:** 10⁻³ ist eine **positive** Zahl (0,001) — der Exponent ist negativ, die Zahl selbst nicht! Verwechslung mit −10³ (minus tausend) ist eine häufige Fehlerquelle.
+
+**Sonderfall 10⁰ = 1:** Aus 10² / 10² = 1 und der Potenzregel 10²⁻² = 10⁰ folgt **10⁰ = 1**. Jede Zahl (außer 0) hoch null ergibt 1.
+
+> **Merke:** **10⁻ⁿ = 1/10ⁿ** — negativer Exponent = Kehrbruch, Ergebnis ist **positiv** und kleiner als 1. **10⁰ = 1**.
 
 ## Die vier Grundrechenregeln für Zehnerpotenzen
 
-**Regel 1 — Multiplikation:** Beim Multiplizieren werden die Exponenten addiert.
-10ᵃ × 10ᵇ = 10^(a+b)
-Beispiel: 10³ × 10⁴ = 10⁷
+**Um mit Zehnerpotenzen zu rechnen,** brauchst du vier feste Regeln. **Sie gelten nur für die Potenzen selbst** (10ᵃ, 10ᵇ); wenn später ein **Vorfaktor** davorsteht (z. B. 3 × 10⁴), kommt ein zusätzlicher Schritt dazu.
 
-**Regel 2 — Division:** Beim Dividieren werden die Exponenten subtrahiert.
-10ᵃ / 10ᵇ = 10^(a−b)
-Beispiel: 10⁶ / 10² = 10⁴
+| Operation | Regel | Beispiel |
+|-----------|-------|----------|
+| **Multiplikation** | 10ᵃ × 10ᵇ = 10^(a+b) | 10³ × 10⁴ = 10⁷ |
+| **Division** | 10ᵃ / 10ᵇ = 10^(a−b) | 10⁶ / 10² = 10⁴ |
+| **Potenzieren** | (10ᵃ)ᵇ = 10^(a×b) | (10³)² = 10⁶ |
+| **Wurzel** | √(10ⁿ) = 10^(n/2) | √(10⁶) = 10³ |
 
-**Regel 3 — Potenzieren:** Beim Potenzieren werden die Exponenten multipliziert.
-(10ᵃ)ᵇ = 10^(a×b)
-Beispiel: (10³)² = 10⁶
+**Kurz:** Multiplikation → Exponenten **addieren**. Division → Exponenten **subtrahieren**. Potenzieren → Exponenten **multiplizieren**. Wurzel → Exponent **halbieren**. Für die Basis 10 ist jede Potenz eine klar benennbare **Größenordnung** (Tausend, Million, Millionstel usw.).
 
-**Regel 4 — Wurzelziehen:** Das Wurzelziehen ist ein Spezialfall des Potenzierens mit gebrochenem Exponenten.
-√(10ⁿ) = 10^(n/2)
-Beispiel: √(10⁶) = 10³
+> **Merke:** Multiplikation → Exponenten **addieren** | Division → Exponenten **subtrahieren** | Potenzieren → Exponenten **multiplizieren** | Wurzel → Exponent halbieren. **Nicht** vertauschen (z. B. bei Multiplikation niemals Exponenten multiplizieren!).
 
-Diese vier Regeln gelten analog für beliebige Basen, sind für die Basis 10 aber besonders intuitiv, weil jede Potenz eine klar benennbare Größenordnung darstellt.
+**SVG-Hinweis (Vier Rechenregeln — Zehnerpotenzen):** Ein kleines Schema mit vier Kästchen: Multiplikation (Pfeil „Exponenten addieren“), Division („subtrahieren“), Potenzieren („multiplizieren“), Wurzel („halbieren“). Unterstützt das Einprägen der Operationen. *Typ: Übersicht / Schema.*
 
-> **Merke:** Multiplikation → Exponenten addieren | Division → Exponenten subtrahieren | Potenzieren → Exponenten multiplizieren | Wurzel → Exponent halbieren. Nie vertauschen!
+---
 
 ## Multiplikation von Zahlen in Zehnerpotenzen-Form
 
-Wenn nicht nur die Zehnerpotenzen, sondern ganze Ausdrücke der Form (a × 10ᵐ) × (b × 10ⁿ) multipliziert werden, geht man in zwei Schritten vor:
-1. Die Vorfaktoren a und b werden normal multipliziert.
-2. Die Zehnerpotenzen werden nach Regel 1 addiert.
+**Bisher haben wir gesehen:** Reine Zehnerpotenzen 10ᵃ × 10ᵇ. **In der Praxis** stehen oft Ausdrücke wie **3 × 10⁴** oder **1,4 × 10⁻¹** — hier ist die Zahl in **Zehnerpotenzen-Form** geschrieben: ein **Vorfaktor** (die Zahl vor dem „mal“) mal eine Zehnerpotenz. **Um solche Produkte zu berechnen,** gehst du in zwei Schritten vor.
 
-Ergebnis: (a × b) × 10^(m+n), danach ggf. in normalisierte Form bringen (Vorfaktor zwischen 1 und 10).
+Wenn Ausdrücke der Form **(a × 10ᵐ) × (b × 10ⁿ)** multipliziert werden:
 
-Beispiel: (3 × 10⁴) × (4 × 10⁻²) = 12 × 10² = 1,2 × 10³
+1. **Vorfaktoren** a und b **normal multiplizieren** (a × b).
+2. **Zehnerpotenzen** nach Regel 1 **addieren** (10ᵐ × 10ⁿ = 10^(m+n)).
+
+Ergebnis: **(a × b) × 10^(m+n)**. Wenn der neue Vorfaktor (a×b) **≥ 10** oder **< 1** ist, bringst du das Ergebnis in **normalisierte Form**: Der **Vorfaktor** liegt dann zwischen **1 und 10** (1 inklusive, 10 exklusive), der Exponent wird entsprechend angepasst. Beispiel: 12 × 10² = **1,2 × 10³**.
+
+**Beispiel:** (3 × 10⁴) × (4 × 10⁻²) = 12 × 10² = **1,2 × 10³**.
+
+> **Merke:** Zuerst **Vorfaktoren** verrechnen, dann **Exponenten** addieren. Am Ende **normalisieren**, wenn der Vorfaktor nicht zwischen 1 und 10 liegt.
 
 ## Größenordnungen vergleichen und abschätzen
 
-Ein wesentlicher Vorteil der Zehnerpotenzen-Darstellung liegt in der schnellen Abschätzung von Verhältnissen. Wenn die Konzentration von Substanz A 10⁻³ mol/L beträgt und die von Substanz B 10⁻⁶ mol/L, dann ist A genau 10³ = 1.000-mal konzentrierter als B. Diese Methode des "Exponenten-Subtrahierens" ist in der Pharmakologie, Toxikologie und klinischen Chemie alltäglich.
+**Bisher haben wir gesehen:** Einzelne Zehnerpotenzen und ihre Rechenregeln. **Ein großer Vorteil** der Schreibweise ist das **schnelle Vergleichen von Größenordnungen**: Wie oft ist A größer oder konzentrierter als B? **Dafür** subtrahierst du die Exponenten — das Verhältnis ist dann 10^(Differenz).
 
-Ein Virus (ca. 10⁻⁷ m) ist etwa 10-mal kleiner als eine Bakterienzelle (ca. 10⁻⁶ m), etwa 100-mal kleiner als eine menschliche Zelle (ca. 10⁻⁵ m) und etwa 10 Millionen Mal kleiner als ein Mensch (ca. 1 m = 10⁰ m). Solche Verhältnisse werden durch Exponenten-Subtraktion sofort sichtbar.
+- Konzentration A: 10⁻³ mol/L, B: 10⁻⁶ mol/L → Verhältnis A/B = 10⁻³ / 10⁻⁶ = 10³ → A ist **1.000-mal** konzentrierter als B.
+- **Exponenten-Subtraktion** ersetzt komplizierte Divisionen und ist in Pharmakologie, Toxikologie und Labor alltäglich.
 
-> **Merke:** Verhältnis zweier Zehnerpotenzen = Differenz der Exponenten als neue Zehnerpotenz. 10⁻³ / 10⁻⁶ = 10³ = Faktor 1.000. Exponentendifferenz abschätzen, nicht ausrechnen!
+**Größenordnungen in der Biologie (Längen):**
+
+| Objekt | Größenordnung | Ungefähr |
+|--------|----------------|----------|
+| Virus | 10⁻⁷ m | 100 nm |
+| Bakterienzelle | 10⁻⁶ m | 1 µm |
+| Menschliche Zelle | 10⁻⁵ m | 10 µm |
+| Mensch (1 m) | 10⁰ m | 1 m |
+
+Ein Virus (10⁻⁷ m) ist etwa **10-mal** kleiner als eine Bakterienzelle (10⁻⁶ m), **100-mal** kleiner als eine menschliche Zelle (10⁻⁵ m) und **10 Millionen Mal** kleiner als ein Mensch (10⁰ m). Solche Verhältnisse siehst du sofort durch Exponenten-Subtraktion.
+
+> **Merke:** **Verhältnis** zweier Zehnerpotenzen = **Differenz der Exponenten** als neue Zehnerpotenz. 10⁻³ / 10⁻⁶ = 10³ = Faktor 1.000. Exponentendifferenz abschätzen — nicht lange ausrechnen!
+
+**SVG-Hinweis (Größenordnungen — Medizin/Biologie):** Eine logarithmische Skala von 10⁻⁹ m (Nanometer) bis 10⁰ m (Meter) mit eingezeichneten Objekten (Atom, Virus, Bakterium, Zelle, Mensch) macht die Größenordnungen auf einen Blick erfassbar. *Typ: logarithmische Skala / Übersicht.*
+
+---
 
 ## Fehlerquellen und häufige Missverständnisse
 
-**Fallstrick 1:** 10⁻³ ist NICHT das gleiche wie −10³. Der Exponent ist negativ, die Zahl selbst (0,001) ist positiv.
+**Um typische MedAT-Fallen zu vermeiden,** hier die drei wichtigsten Fallstricke.
 
-**Fallstrick 2:** Beim Addieren von Zahlen in Zehnerpotenzen-Darstellung können die Exponenten NICHT einfach addiert werden. Erst müssen beide Zahlen auf denselben Exponenten gebracht werden, dann werden die Vorfaktoren addiert.
-Falsch: 3 × 10³ + 2 × 10² ≠ 5 × 10⁵
-Richtig: 3 × 10³ + 0,2 × 10³ = 3,2 × 10³
+| Fallstrick | Falsch | Richtig |
+|------------|--------|---------|
+| **1** Negativer Exponent ≠ negative Zahl | 10⁻³ = „minus tausend“ | 10⁻³ = 0,001 (positiv!) |
+| **2** Addition: Exponenten nicht addieren | 3×10³ + 2×10² = 5×10⁵ | Erst auf gleichen Exponenten: 3×10³ + 0,2×10³ = 3,2×10³ |
+| **3** Multiplikation: Exponenten addieren, nicht multiplizieren | 10³ × 10⁴ = 10¹² | 10³ × 10⁴ = 10⁷ |
 
-**Fallstrick 3:** (10³)² = 10⁶, aber 10³ × 10³ ergibt ebenfalls 10⁶ — das ist kein Zufall, sondern Konsequenz der Regeln 1 und 3.
+**Zu Fallstrick 2:** Beim **Addieren** müssen beide Summanden **denselben Exponenten** haben. Dann werden nur die **Vorfaktoren** addiert. Falsch wäre, die Exponenten zu addieren (→ 10⁵) oder die Vorfaktoren ohne Angleichung zu addieren.
+
+> **Merke:** 10⁻³ ≠ −10³. Bei **Addition** zuerst auf **gleichen Exponenten** bringen, dann Vorfaktoren addieren. Bei **Multiplikation** Exponenten **addieren**, nicht multiplizieren.
+
+---
 
 ## Rechenbeispiele für den MedAT
+
+**Um das Gelernte anzuwenden,** folgen drei typische Aufgaben: Dosierung, Laborwert-Verhältnis und Zellbiologie. **Kernkompetenz** ist das schnelle Abschätzen durch Exponenten-Subtraktion.
 
 **Aufgabe 1 — Dosierung:** Ein Patient (70 kg) erhält 5 µg/kg Fentanyl. Die Gesamtdosis beträgt: 5 × 10⁻⁶ g/kg × 70 kg = 350 × 10⁻⁶ g = 3,5 × 10⁻⁴ g = 0,35 mg. Hier zeigt sich die Stärke der Zehnerpotenzen: Man rechnet den Vorfaktor (5 × 70 = 350) und den Exponenten (10⁻⁶) getrennt, normalisiert am Ende.
 
@@ -113,7 +164,11 @@ Richtig: 3 × 10³ + 0,2 × 10³ = 3,2 × 10³
 
 > **Merke:** Die Kernkompetenz bei Zehnerpotenzen am MedAT ist das schnelle Abschätzen von Verhältnissen durch Exponenten-Subtraktion — nicht das Ausrechnen langer Dezimalzahlen. Wer die vier Potenzgesetze beherrscht, löst jede Aufgabe in unter 30 Sekunden.
 
+---
+
 ## Übersichtstabelle der Potenzgesetze
+
+Zur **schnellen Wiederholung** die vier Regeln im Überblick:
 
 | Operation | Regel | Beispiel |
 |-----------|-------|----------|
@@ -122,14 +177,20 @@ Richtig: 3 × 10³ + 0,2 × 10³ = 3,2 × 10³
 | Potenzieren | (10ᵃ)ᵇ = 10^(a×b) | (10³)² = 10⁶ |
 | Wurzel | √(10ⁿ) = 10^(n/2) | √(10⁶) = 10³ |
 
+---
 ## MedAT-Fokus
+
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist 10⁻⁶ in Dezimalform?" → 0,000001 (eine Millionstel; positiv!)
 - "Was ergibt 10³ × 10⁻⁵?" → 10⁻² = 0,01 (Exponenten addieren: 3 + (−5) = −2)
 - "Wie oft ist Substanz A (10⁻³ mol/L) konzentrierter als B (10⁻⁶ mol/L)?" → Exponentendifferenz: 10³ = 1.000-mal
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - 10⁻³ ≠ −10³ — negativer Exponent ≠ negatives Vorzeichen; 10⁻³ = 0,001, eine **positive** Zahl
 - 10ᵃ × 10ᵇ ≠ 10^(a×b) — Multiplikation: Exponenten **addieren**, nicht multiplizieren!
 - 3 × 10³ + 2 × 10² ≠ 5 × 10⁵ — Addition: erst auf gleichen Exponenten bringen: = 3,2 × 10³
@@ -141,7 +202,7 @@ Richtig: 3 × 10³ + 0,2 × 10³ = 3,2 × 10³
 - pH-Wert: Abfall um 1 Einheit = zehnfache H⁺-Konzentration (log-Skala)
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Zehnerpotenzen**: 10³ = 1.000; 10⁻⁶ = 0,000 001; negative Exponenten = Kehrwert
 - **Multiplikation**: 10ᵃ × 10ᵇ = 10^(a+b); **Division**: 10ᵃ / 10ᵇ = 10^(a−b)
@@ -450,12 +511,15 @@ Lösung: 0,01 µg/mL = 10 ng/mL (da 1 µg = 1.000 ng → 0,01 × 1.000 = 10). Al
 
 ## MedAT-Fokus
 
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welcher Faktor entspricht Nano (n)?" → 10⁻⁹ (= 0,000000001)
 - "Wie viele µg sind 0,005 mg?" → 0,005 × 1.000 = 5 µg (mg → µg: × 1.000)
 - "4,2 mmol/L Kalium in µmol/L?" → 4.200 µmol/L (mmol → µmol: × 1.000; kleinere Einheit = größere Zahl)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - µ (Mikro, 10⁻⁶) ≠ m (Milli, 10⁻³) — 1 mg = 1.000 µg; Verwechslung = **1.000-facher** Dosierungsfehler!
 - M (Mega, 10⁶, Großbuchstabe) ≠ m (Milli, 10⁻³, Kleinbuchstabe) — Groß-/Kleinschreibung entscheidend
 - Umrechnungsrichtung: kleinere Einheit → größere Zahl ("wer kleiner misst, zählt mehr")
@@ -467,7 +531,7 @@ Lösung: 0,01 µg/mL = 10 ng/mL (da 1 µg = 1.000 ng → 0,01 × 1.000 = 10). Al
 - MCV (Erythrozytenvolumen): 80–96 fL (Femtoliter = 10⁻¹⁵ L); <80 fL = mikrozytär; >96 fL = makrozytär
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Kleine Präfixe**: m (Milli, 10⁻³), µ (Mikro, 10⁻⁶), n (Nano, 10⁻⁹), p (Piko, 10⁻¹²), f (Femto, 10⁻¹⁵)
 - **Große Präfixe**: k (Kilo, 10³), M (Mega, 10⁶), G (Giga, 10⁹), T (Tera, 10¹²)
@@ -817,12 +881,15 @@ Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
 
 ## MedAT-Fokus
 
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Schreibe 0,000047 in normalisierter Form" → 4,7 × 10⁻⁵ (5 Stellen nach rechts = negativer Exponent)
 - "Was ist (4 × 10⁻³) × (3 × 10⁵)?" → Vorfaktoren: 4×3=12; Exponenten: −3+5=2 → 12×10² → normiert: 1,2 × 10³
 - "pH, wenn [H⁺] = 10⁻⁷ mol/L?" → pH = −log₁₀(10⁻⁷) = 7
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Nicht normalisiert ≠ falsch, aber Prüfung verlangt normalisierte Form: 15 × 10³ → richtig: 1,5 × 10⁴
 - Bei Division: Exponenten **subtrahieren** (nicht dividieren!): 10⁶ / 10² = 10⁴
 - Addition: erst gleiche Exponenten herstellen — 3 × 10³ + 4 × 10² = 3 × 10³ + 0,4 × 10³ = **3,4 × 10³** (nicht 7 × 10⁵!)
@@ -833,7 +900,7 @@ Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
 - Avogadro: 6,022 × 10²³ mol⁻¹; Erythrozyten: 5 × 10¹²/L; Lichtgeschwindigkeit: 2,998 × 10⁸ m/s
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Normierte Form**: a × 10ⁿ mit 1 ≤ a < 10; z.B. 0,0045 → 4,5 × 10⁻³
 - **Multiplikation**: Vorfaktoren multiplizieren + Exponenten addieren; Ergebnis normieren
@@ -1187,13 +1254,16 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
 
 ## MedAT-Fokus
 
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "1 m² = ? cm²" → 10.000 cm² (Faktor quadrieren: 100² = 10.000 — nicht 100!)
 - "2,5 L = ? mL" → 2.500 mL (1 L = 1.000 mL)
 - "1 mL = ? cm³" → 1 cm³ (exakte Gleichheit per Definition — kein Umrechnen nötig!)
 - "14 g/dL Hb = ? g/L" → 140 g/L (1 dL = 0,1 L → × 10)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - 1 m² ≠ 100 cm² — **häufigster MedAT-Fehler!** Richtig: 10.000 cm² (= 100²)
 - 1 m³ ≠ 1.000 cm³ — Richtig: 1.000.000 cm³ (= 10⁶ cm³; Faktor kubieren: 100³)
 - 1 mm² ≠ 1.000 µm² — Richtig: 1.000.000 µm² (1 mm = 10³ µm → quadriert: 10⁶ µm²)
@@ -1205,7 +1275,7 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
 - Alveolenfläche: 70–140 m²; Darmoberfläche: ~250–400 m²; Körperoberfläche: ~1,7–2,0 m²
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Länge**: 1 m = 100 cm = 1.000 mm = 10⁶ µm = 10⁹ nm; 1 km = 1.000 m
 - **Fläche**: 1 m² = 10.000 cm² = 10⁶ mm²; Umrechnungsfaktor wird quadriert!
@@ -1485,12 +1555,15 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
 
 ## MedAT-Fokus
 
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "72 km/h = ? m/s" → 20 m/s (÷ 3,6; Merkhilfe: 36 km/h = 10 m/s)
 - "Herzfrequenz 75/min → Periodendauer?" → T = 60/75 = 0,8 s = 800 ms
 - "Fallhöhe aus 5 m → Aufprallgeschwindigkeit?" → v = √(2 × 10 × 5) = 10 m/s = 36 km/h
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - km/h ÷ 3,6 = m/s (nicht × 3,6!) — und m/s × 3,6 = km/h
 - s = ½ × g × t² (Fallweg) ≠ v = g × t (Fallgeschwindigkeit) — nicht verwechseln!
 - Herzfrequenz in Hz: 60/min = 1 Hz (÷ 60 nicht vergessen; Einheit ist 1/s, nicht 1/min)
@@ -1502,7 +1575,7 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
 - Ab Sturzhöhe 3 m: Verdacht auf Hochrasanztrauma → Polytrauma-CT
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Zeitumrechnung**: 1 min = 60 s; 1 h = 3.600 s; EKG-Intervalle in ms (QRS ~80 ms)
 - **Geschwindigkeit**: v = s/t [m/s]; km/h → m/s: durch 3,6; m/s → km/h: mal 3,6
@@ -1808,12 +1881,15 @@ Lösung: 100 mg/dL = 1.000 mg/L = 1 g/L. Molarität = 1 g/L ÷ 180 g/mol = 0,005
 
 ## MedAT-Fokus
 
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welche SI-Grundeinheit misst Stoffmenge?" → Mol (mol); Avogadro: 6,022 × 10²³ Teilchen/mol
 - "Newton in SI-Grundeinheiten?" → kg·m/s² (F = m × a; Masse × Beschleunigung)
 - "37°C in Kelvin?" → 37 + 273 = 310 K
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - SI-Grundeinheit der Masse = kg (nicht g!) — kg ist die **einzige** Grundeinheit mit Vorsilbe
 - Joule (Energie, J = N·m) ≠ Watt (Leistung, W = J/s) — Leistung ist Energie **pro Zeit**
 - 1 mmHg ≈ 133 Pa (nicht 100 Pa!) — Blutdruck 120 mmHg ≈ 16.000 Pa ≈ 16 kPa
@@ -1825,7 +1901,7 @@ Lösung: 100 mg/dL = 1.000 mg/L = 1 g/L. Molarität = 1 g/L ÷ 180 g/mol = 0,005
 - Glukose mg/dL → mmol/L: ÷ 18 (Molmasse Glukose 180 g/mol); Herzleistung Ruhe: ~1 W
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **7 Grundeinheiten**: m (Länge), kg (Masse), s (Zeit), A (Strom), K (Temperatur), mol (Stoffmenge), cd (Lichtstärke)
 - **Abgeleitete Einheiten**: N = kg·m/s² (Kraft); Pa = N/m² (Druck); J = N·m (Energie); W = J/s (Leistung); V = J/C (Spannung)
