@@ -76,12 +76,17 @@ Das Minimumgesetz gilt weit über Pflanzenwachstum hinaus. In der Gewässerökol
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Beschriftung und Interpretation einer Toleranzkurve (Optimum, Pessimum, Todespunkt, ökologische Amplitude)
 - Unterscheidung euryök vs. stenök mit Beispielen und Bedeutung als Bioindikator
 - Anwendung des Liebig-Minimumgesetzes auf konkrete Szenarien (Landwirtschaft, Gewässer)
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Liebig (nur Mangel limitiert) vs. Shelford (auch Überschuss limitiert) — Shelford ist die Erweiterung
 - Euryök (breit, Generalist) vs. stenök (eng, Spezialist) — Merkhilfe: stenos = griech. eng
 - Bioindikator ≠ häufigste Art, sondern stenöke Art mit enger Toleranz
@@ -97,7 +102,7 @@ Das Minimumgesetz gilt weit über Pflanzenwachstum hinaus. In der Gewässerökol
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Toleranzkurve**: Leistung eines Organismus als Funktion eines Umweltfaktors; Optimum (max. Fitness), Pessimum, Todespunkte
 - **Ökologische Amplitude**: Toleranzbereich eines Organismus zwischen den Todespunkten
@@ -313,12 +318,17 @@ Das humane Darmmikrobiom umfasst ca. 3,8 × 10¹³ Bakterienzellen (ungefähr gl
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Symbioseformen mit Vorzeichen unterscheiden: Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−)
 - Gauß'sches Konkurrenzausschlussprinzip anhand des Paramecium-Experiments erklären
 - Lotka-Volterra-Dynamik: Welche Population hinkt nach? (Räuber hinkt Beute nach)
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Parasitismus (+/−) vs. Prädation (+/−): Parasit tötet den Wirt normalerweise nicht sofort, Räuber schon
 - Kommensalismus (+/0) vs. Mutualismus (+/+): Beim Kommensalismus ist der zweite Partner unbeeinflusst
 - Intraspezifische (innerhalb einer Art) vs. interspezifische (zwischen Arten) Konkurrenz verwechseln
@@ -334,7 +344,7 @@ Das humane Darmmikrobiom umfasst ca. 3,8 × 10¹³ Bakterienzellen (ungefähr gl
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Konkurrenzausschlussprinzip** (Gauß): zwei Arten mit identischer Nische können nicht dauerhaft koexistieren → eine verdrängt die andere
 - **Nischendifferenzierung**: ermöglicht Koexistenz durch zeitliche, räumliche oder trophische Ressourcenteilung
@@ -617,12 +627,17 @@ Die **Altersstruktur** einer Population (Alterspyramide) gibt Auskunft über Ver
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - J-Kurve vs. S-Kurve unterscheiden und die zugehörigen Gleichungen nennen
 - r- und K-Strategen mit Merkmalen und Beispielen zuordnen
 - Maximale Wachstumsrate bei N = K/2 erklären (Wendepunkt der logistischen Kurve)
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - r = intrinsische Wachstumsrate (nicht "Räuber"), K = Kapazitätsgrenze (carrying capacity)
 - Exponentielles Wachstum (J-Kurve) vs. logistisches Wachstum (S-Kurve) — in der Natur dominiert logistisch
 - K/2 = maximale absolute Wachstumsrate, nicht maximale relative Wachstumsrate
@@ -638,7 +653,7 @@ Die **Altersstruktur** einer Population (Alterspyramide) gibt Auskunft über Ver
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Exponentielles Wachstum** (J-Kurve): dN/dt = r·N; bei unbegrenzten Ressourcen; r = intrinsische Wachstumsrate
 - **Logistisches Wachstum** (S-Kurve): dN/dt = r·N·(K−N)/K; K = Kapazitätsgrenze (maximale Populationsgröße)
@@ -856,12 +871,17 @@ Beispiele:
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Fundamentale vs. realisierte Nische definieren und das Connell-Seepocken-Experiment erklären
 - Nischendifferenzierung als Mechanismus für Koexistenz beschreiben (zeitlich, räumlich, trophisch)
 - Allopatrische vs. sympatrische Artbildung mit Beispielen unterscheiden
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Nische ≠ Habitat: Nische = funktionale Rolle + Toleranzbereiche, Habitat = physischer Ort
 - Konvergente Evolution (ökologische Äquivalente, nicht verwandt) vs. divergente Evolution (verwandt, unterschiedlich)
 - Fundamentale Nische ≥ realisierte Nische, niemals umgekehrt
@@ -877,7 +897,7 @@ Beispiele:
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Ökologische Nische** (Hutchinson): n-dimensionaler Hyperraum; jeder Umweltfaktor = eine Achse
 - **Fundamentale Nische**: physiologisch möglicher Lebensraum; **Realisierte Nische**: durch Konkurrenz eingeschränkter tatsächlicher Lebensraum
@@ -1128,12 +1148,17 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - 10%-Regel erklären und auf konkrete Nahrungsketten anwenden (Berechnung über mehrere Stufen)
 - GPP vs. NPP definieren: NPP = GPP − autotrophe Respiration
 - Stickstoffkreislauf-Schritte in korrekter Reihenfolge aufzählen und beteiligte Organismen nennen
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - GPP (gesamte Photosynthese) vs. NPP (nach Abzug der Pflanzeneigen-Atmung) — NPP ist für Konsumenten verfügbar
 - Phosphorkreislauf hat kein gasförmiges Reservoir — im Gegensatz zu C- und N-Kreislauf
 - Nitrifikation (NH₄⁺ → NO₃⁻, aerob) vs. Denitrifikation (NO₃⁻ → N₂, anaerob) — gegenläufige Prozesse
@@ -1149,7 +1174,7 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Ökosystem** = Biozönose (alle Lebewesen) + Biotop (abiotische Umwelt); Energie fließt einseitig, Materie kreist
 - **Trophiestufen**: Produzenten (Pflanzen) → Konsumenten I, II, III → Destruenten; **10%-Regel**: ~90% Energie geht als Wärme verloren
@@ -1426,12 +1451,17 @@ Ein **Massenaussterben** ist definiert als Verlust von ≥ 75% aller Arten in ei
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Die drei Ebenen der Biodiversität benennen und deren Bedeutung erklären
 - Inselbiographie: Einfluss von Inselgröße und -distanz auf die Gleichgewichts-Artenzahl
 - Primäre vs. sekundäre Sukzession unterscheiden und Pionierorganismen nennen
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - HIPPO-Reihenfolge: Habitatverlust ist die größte Bedrohung, nicht Pollution oder Overexploitation
 - Primäre Sukzession (nacktes Substrat, Flechten zuerst, langsam) vs. sekundäre Sukzession (Samenbänke vorhanden, schneller)
 - Klimaxgesellschaft ≠ artenreichste Phase — Intermediate Disturbance Hypothesis: mittlere Störung maximiert Diversität
@@ -1447,7 +1477,7 @@ Ein **Massenaussterben** ist definiert als Verlust von ≥ 75% aller Arten in ei
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Biodiversität**: 3 Ebenen — genetische Diversität, Artendiversität, Ökosystem-Diversität
 - **Inselbiographie** (MacArthur & Wilson): Artenzahl = Gleichgewicht aus Immigration und Extinktion; große, festlandnahe Inseln haben mehr Arten
@@ -1656,12 +1686,17 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - IgG-Aufbau beschreiben: 2 schwere + 2 leichte Ketten, Fab (Antigenbindung) vs. Fc (Effektorfunktion)
 - Die fünf Ig-Klassen mit jeweiliger Hauptfunktion und Vorkommen nennen
 - Serologische Diagnostik: IgM (akute Infektion) vs. IgG (durchgemachte Infektion/Immunität)
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - IgM (Primärantwort, akut) vs. IgG (Sekundärantwort, dauerhaft) — Reihenfolge merken: M kommt vor G im Alphabet, M kommt zuerst
 - IgA (Schleimhautschutz, Sekrete) vs. IgE (Allergie, Mastzellen) — verschiedene Lokalisation und Funktion
 - Fab (Fragment antigen-binding, variabel) vs. Fc (Fragment crystallizable, konstant) — nicht verwechseln
@@ -1677,7 +1712,7 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - Antikörper (Ig): Y-förmig; **Fab-Region** (variabel, Antigenerkennung) + **Fc-Region** (konstant, Effektorfunktionen)
 - **IgG**: dominiert Serum; einziges Ig das die Plazenta passiert → Nestschutz; Sekundärantwort
@@ -1857,12 +1892,17 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Das Prinzip der V(D)J-Rekombination und die beteiligten Enzyme (RAG1/RAG2, TdT) erklären
 - Die drei Quellen der Antikörperdiversität unterscheiden (kombinatorisch, junctional, somatische Hypermutation)
 - Primärantwort (IgM, niedrige Affinität) vs. Sekundärantwort (IgG, hohe Affinität durch Gedächtniszellen) vergleichen
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - V(D)J-Rekombination (vor Antigenkontakt, Knochenmark) vs. somatische Hypermutation (nach Antigenkontakt, Keimzentren)
 - Kombinatorische Diversität (Segmentwahl) vs. junctionale Diversität (N-Nukleotide durch TdT an Schnittstellen)
 - Klonale Selektion: das Antigen wählt den passenden Klon aus — Antikörper werden nicht nach Bedarf neu konstruiert
@@ -1878,7 +1918,7 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **V(D)J-Rekombination** (B-Zellen): RAG1/RAG2 kombiniert V-, D- und J-Gensegmente zufällig → ~10¹¹ mögliche Antikörper-Varianten
 - **TdT**: fügt N-Nukleotide an Verbindungsstellen ein → erhöht Diversität (junctionale Diversität)
@@ -2082,12 +2122,17 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Genotypen aller vier Blutgruppen aufzählen und Kreuzungsschemata mit Punnett-Quadrat lösen
 - Den Unterschied zwischen Kodominanz und unvollständiger Dominanz am Beispiel AB0 erklären
 - Antikörper-Antigen-Zuordnung: Wer hat welche Antikörper und warum?
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Kodominanz (beide Allele voll exprimiert: AB zeigt A UND B) vs. unvollständige Dominanz (Intermediärphänotyp)
 - Blutgruppe 0 hat H-Antigen auf den Erythrozyten, nicht "kein Antigen"
 - I^A und I^B sind kodominant zueinander, aber beide dominant über i⁰
@@ -2103,7 +2148,7 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **AB0-System**: 3 Allele (I^A, I^B, i⁰); I^A und I^B kodominant, beide dominant über i⁰ → 4 Phänotypen (A, B, AB, 0)
 - Natürliche Antikörper: Blutgruppe A → Anti-B; B → Anti-A; AB → keine; 0 → Anti-A + Anti-B
@@ -2293,12 +2338,17 @@ Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medi
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Den Zweiphasen-Mechanismus der Rhesus-Inkompatibilität erklären (Sensibilisierung → Reaktion)
 - Warum ist das erste Kind meist nicht betroffen, das zweite aber gefährdet?
 - Wirkmechanismus und Zeitpunkt der Anti-D-Prophylaxe beschreiben
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - 1. Schwangerschaft = Sensibilisierung (IgM, kann Plazenta nicht passieren), 2. Schwangerschaft = Reaktion (IgG, passiert Plazenta)
 - RhD ist autosomal dominant (nicht kodominant wie AB0), dd = Rh-negativ
 - Anti-D-Prophylaxe verhindert die Sensibilisierung, sie behandelt nicht eine bereits bestehende
@@ -2314,7 +2364,7 @@ Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medi
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Rhesusfaktor D**: autosomal dominant; ein RHD-Allel reicht für Rh-positiv; nur dd = Rh-negativ (~15% Europa)
 - **Rh-Inkompatibilität** (2 Phasen): 1. Schwangerschaft → mütterliche Sensibilisierung (IgM, keine Gefahr); 2. Schwangerschaft → IgG-Anti-D passieren Plazenta → fetale Hämolyse

@@ -107,13 +107,18 @@ Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gi
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Warum hat MgO einen viel höheren Schmelzpunkt als NaCl?" → Mg²⁺ und O²⁻ sind doppelt geladen und kleiner → E ∝ q₁·q₂/r → 5× größere Gitterenergie (~3795 vs. 786 kJ/mol)
 - "Warum leitet NaCl-Kristall keinen Strom, NaCl-Lösung aber schon?" → Fester Kristall: Ionen fixiert, nicht beweglich; Lösung: Ionen frei → Elektrolyt
 - "Welcher Schritt im Born-Haber-Kreisprozess ist der stärkste exotherme?" → Gitterenergie (beim Zusammentreten der Ionen zum Kristall)
 - "Was bedeutet Koordinationszahl 6 im NaCl-Gitter?" → Jedes Na⁺ ist von 6 Cl⁻ umgeben (oktaedrisch), und umgekehrt
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Gitterenergie ≠ Hydratationsenthalpie — beide müssen bilanziert werden, um Löslichkeit zu beurteilen
 - Ionenkristall fester Zustand = KEIN Stromleiter (Ionen nicht beweglich); erst in Schmelze oder Lösung = Elektrolyt
 - Coulomb-Gesetz: E ∝ q₁·q₂ — bei doppelter Ladung BEIDER Ionen ist E 4× größer (nicht 2×!)
@@ -126,7 +131,7 @@ Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gi
 - NaCl-Gitter: Koordinationszahl **6** (oktaedrisch); CsCl-Gitter: KZ **8** (kubisch)
 - EN-Differenz > **1,7** → ionischer Charakter; < 1,7 → kovalent
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Ionenbindung**: vollständige Elektronenübertragung Metall → Nichtmetall; beide erreichen Edelgaskonfiguration
 - **Triebkraft**: Gitterenergie überwiegt Ionisierungsenergie + Elektronenaffinität → Reaktion exotherm
@@ -445,13 +450,18 @@ Delokalisierung stabilisiert Moleküle (Resonanzenergie). Aromatizität ist ein 
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Ist CO₂ polar oder unpolar?" → CO₂ hat polare C=O-Bindungen (ΔEN = 1,0), aber lineare Geometrie → Dipole heben sich auf → unpolar (μ = 0)
 - "Welche Hybridisierung hat der Kohlenstoff der Peptidbindung?" → sp² (Carbonylkohlenstoff mit Doppelbindung zu O)
 - "Warum ist NH₃ ein trigonales Pyramide, kein Tetraeder?" → 3 bindende + 1 freies EP → VSEPR ergibt Elektronenanordnung Tetraeder, Molekülgeometrie trigonal pyramidal (wegen freiem EP)
 - "Was verhindert Rotation um C=C?" → die π-Bindung (laterale p-Orbital-Überlappung würde aufgebrochen werden)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Polare Bindungen ≠ polares Molekül: CO₂ und CCl₄ sind trotz polarer Bindungen UNPOLAR (symmetrische Geometrie!)
 - VSEPR gibt die Elektronenanordnung (inkl. freier EP) — Molekülgeometrie bezieht sich nur auf Atome: NH₃ = trigonal pyramidal (NICHT tetraedrisch)
 - π-Bindung verhindert Rotation; σ-Bindung erlaubt Rotation → Cis-Trans-Isomerie nur bei Doppelbindungen
@@ -463,7 +473,7 @@ Delokalisierung stabilisiert Moleküle (Resonanzenergie). Aromatizität ist ein 
 - C–C: **154 pm**, 347 kJ/mol; C=C: **134 pm**, 614 kJ/mol; C≡C: **120 pm**, 839 kJ/mol
 - Dipolmoment H₂O: **1,85 D** (polar); CO₂: **0 D** (unpolar); NH₃: **1,47 D** (polar)
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Kovalente Bindung**: Elektronenteilung (nicht Übertragung); ΔEN < 1,7; entsteht zwischen Nichtmetallen
 - **ΔEN-Skala**: < 0,4 unpolar; 0,4–1,7 polar kovalent; > 1,7 ionisch
@@ -796,13 +806,18 @@ Wasser siedet bei 100 °C (H₂O, MM = 18 g/mol), während H₂S bei −60 °C s
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welche intermolekularen Kräfte wirken zwischen unpolaren Molekülen wie Edelgasen?" → ausschließlich London-Dispersionskräfte (instantane Dipole)
 - "Warum siedet H₂O bei 100 °C, H₂S aber schon bei −60 °C?" → H₂O bildet bis zu 4 starke H-Brücken (O an N, O, F); S ist nicht elektronegativ genug für echte H-Brücken
 - "Wie viele H-Brücken bilden A-T bzw. G-C in der DNA?" → A-T: **2 H-Brücken**; G-C: **3 H-Brücken** → GC-reiche DNA ist stabiler (höhere Schmelztemperatur)
 - "Was erklärt die Duktilität von Metallen?" → Elektronengas hält Ionenschichten zusammen auch beim Gleiten → kein Bruch (im Gegensatz zu spröden Ionenkristallen)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - H-Brücken nur mit **N, O, F** als Donor/Akzeptor — NICHT Schwefel (S–H bildet nur sehr schwache H-Brücken)!
 - C–H-Bindungen sind KEINE H-Brücken-Donoren (C ist nicht elektronegativ genug)
 - Dichteanomalie: Eis ist LEICHTER als Wasser (ρ_Eis ≈ 0,917 g/cm³ < ρ_Wasser = 1,000 g/cm³) — merken durch „Eis schwimmt"
@@ -815,7 +830,7 @@ Wasser siedet bei 100 °C (H₂O, MM = 18 g/mol), während H₂S bei −60 °C s
 - Verdampfungsenthalpie Wasser: **40,7 kJ/mol** (580 kcal/L) → effiziente Thermoregulation durch Schwitzen
 - Siedepunkt H₂O: **100 °C** vs. H₂S: **−60 °C** — Unterschied durch H-Brücken!
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Van-der-Waals-Kräfte**: London (alle Moleküle) < Dipol-Dipol (polare) < H-Brücken (N/O/F); stärkere Kräfte → höhere Siedepunkte
 - **Wasserstoffbrücke**: H kovalent an N, O oder F → wechselwirkt mit freiem EP an N, O oder F; Stärke ~20 kJ/mol
@@ -1184,13 +1199,18 @@ Lipinski's Rule of Five für orale Bioverfügbarkeit: MW ≤ 500, logP ≤ 5, H-
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Warum kann der Mensch Cellulose nicht verdauen, Stärke aber schon?" → Stärke: α-1,4-glycosidische Bindungen → spaltet α-Amylase; Cellulose: β-1,4 → kein menschliches Enzym (Cellulase)
 - "Was treibt die Proteinfaltung thermodynamisch an?" → hydrophober Effekt (entropisch!) — Aggregation hydrophober Seitenketten setzt geordnetes Hydratationswasser frei → ΔS > 0
 - "Was passiert bei Denaturierung mit der Primärstruktur?" → NICHTS! Peptidbindungen (kovalent) bleiben intakt; nur nichtkovalente Wechselwirkungen werden gestört
 - "Warum wirkt Aspirin irreversibel, obwohl es ein kleines Molekül ist?" → Aspirin acetyliert COX kovalent — Thrombozyten sind kernlos, können kein neues COX synthetisieren → Effekt ~10 Tage
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Hydrophober Effekt ist ENTROPISCH (nicht enthalpisch): Triebkraft = Entropiegewinn des Wassers, nicht Anziehung zwischen unpolaren Molekülen!
 - Denaturierung ≠ Hydrolyse: Primärstruktur (Peptidbindungen) bleibt bei Denaturierung intakt — erst Proteasen spalten Peptidbindungen
 - α-glycosidisch ≠ β-glycosidisch: α = Stärke/Glykogen (verdaulich); β = Cellulose (Ballaststoff, unverdaulich)
@@ -1203,7 +1223,7 @@ Lipinski's Rule of Five für orale Bioverfügbarkeit: MW ≤ 500, logP ≤ 5, H-
 - Lipinski Rule of Five: MW ≤ **500**, logP ≤ **5**, HBD ≤ **5**, HBA ≤ **10**
 - Aspirin-COX-Hemmung: **irreversibel** (kovalente Acetylierung), Thrombozytenleben ~**10 Tage**
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Kovalente Bindungen** (150–1000 kJ/mol): Gerüst der Biomoleküle — Peptidbindung, Phosphodiesterbindung (DNA/RNA), glycosidische Bindung; enzymatisch spaltbar
 - **Disulfidbrücke** (~250 kJ/mol): –SH + –SH → –S–S–; stabilisiert Proteinstruktur (Insulin, Antikörper); reduzierbar durch DTT/NADPH

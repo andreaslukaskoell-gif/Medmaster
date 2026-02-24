@@ -496,6 +496,8 @@ Röntgenstrahlung f = 3 × 10¹⁸ Hz. Wellenlänge λ = c/f = (3 × 10⁸ m/s) 
 ---
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
 **Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
 **Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -825,6 +827,8 @@ Re = (1060 × 0,5 × 0,025) / (3,5 × 10⁻³) = 13,25 / 0,0035 ≈ **3786** →
 ---
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
 **Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
 **Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -1103,6 +1107,8 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
 ---
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
 **Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
 **Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -1347,6 +1353,8 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
 ---
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
 **Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
 **Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -1585,6 +1593,8 @@ Klinisch: Bei längerem Stehen → venöse Pooling in Beinen → orthostatische 
 
 ---
 ## MedAT-Fokus
+
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
 
 **Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
 **Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
@@ -1831,6 +1841,8 @@ Mit Gehstock (effektive Standbreite ~60 cm): θ = arctan(0,30/1,01) ≈ **16,5°
 
 ---
 ## MedAT-Fokus
+
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
 
 **Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
 **Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.

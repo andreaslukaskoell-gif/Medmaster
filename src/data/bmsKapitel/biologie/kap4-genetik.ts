@@ -77,12 +77,17 @@ Beim **dihybriden Erbgang** werden zwei unabhängige Gene gleichzeitig betrachte
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Phänotyp-Verhältnis in F₂ bei dominant-rezessivem monohybridem Erbgang (3:1)
 - Berechnung von Genotyp-Verhältnissen bei dihybridem Erbgang (9:3:3:1)
 - Testkreuzung zur Unterscheidung von AA vs. Aa
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Genotyp-Verhältnis 1:2:1 vs. Phänotyp-Verhältnis 3:1 (bei dominant-rezessiv)
 - Intermediär (Mischphänotyp, z. B. rosa) vs. Kodominanz (beide exprimiert, z. B. AB)
 - 1. Regel (homozygote Eltern → F₁ uniform) vs. 2. Regel (heterozygote Eltern → F₂ spaltet)
@@ -98,7 +103,7 @@ Beim **dihybriden Erbgang** werden zwei unabhängige Gene gleichzeitig betrachte
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Uniformitätsregel**: Kreuzung homozygoter Eltern (AA × aa) → F₁ einheitlich heterozygot (Aa)
 - **Spaltungsregel**: F₁ × F₁ (Aa × Aa) → F₂: 3 dominant : 1 rezessiv (Phänotyp-Verhältnis 3:1)
@@ -277,12 +282,17 @@ Chromosomenaberrationen werden pränatal durch verschiedene Methoden diagnostizi
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Karyotyp-Notation interpretieren (z. B. 47,XY,+21)
 - Klinische Merkmale von Trisomie 21, Klinefelter und Turner zuordnen
 - Unterscheidung numerische vs. strukturelle Chromosomenaberrationen
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Klinefelter (47,XXY, männlich) vs. Turner (45,X, weiblich) — Geschlecht durch Y-Chromosom bestimmt
 - p-Arm (kurz, petit) vs. q-Arm (lang) eines Chromosoms
 - Balancierte Translokation (Träger gesund) vs. unbalancierte (Phänotyp betroffen)
@@ -298,7 +308,7 @@ Chromosomenaberrationen werden pränatal durch verschiedene Methoden diagnostizi
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - Mensch: **46 Chromosomen** (44 Autosomen + 2 Geschlechtschromosomen); ♀ = 46,XX; ♂ = 46,XY
 - **Aneuploidie** = falsche Chromosomenzahl; entsteht durch **Nicht-Disjunktion** in der Meiose; Risiko steigt mit mütterlichem Alter
@@ -474,12 +484,17 @@ Ein Sonderfall der Geninteraktion ist die **mitochondriale (maternale) Vererbung
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Modifizierte F₂-Verhältnisse ableiten (9:3:4 bei Epistasie, 9:7 bei Komplementierung)
 - Polygenie vs. Pleiotropie unterscheiden und Beispiele nennen
 - Heterozygoten-Vorteil der Sichelzellanämie erklären
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Polygenie (viele Gene → ein Merkmal) vs. Pleiotropie (ein Gen → viele Merkmale)
 - Epistasie (Gen überdeckt anderes Gen) vs. Dominanz (Allel überdeckt anderes Allel desselben Gens)
 - Komplementierung (9:7) vs. Epistasie (9:3:4) — beide weichen von 9:3:3:1 ab
@@ -495,7 +510,7 @@ Ein Sonderfall der Geninteraktion ist die **mitochondriale (maternale) Vererbung
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Epistasie**: ein Gen maskiert die Wirkung eines anderen → modifiziertes F₂-Verhältnis (z. B. 9:3:4 oder 9:7 statt 9:3:3:1)
 - **Polygenie**: viele Gene mit additivem Effekt auf ein Merkmal (Hautfarbe, Körpergröße) → stetige, glockenförmige Verteilung
@@ -674,12 +689,17 @@ Die X-Inaktivierung hat wichtige klinische Konsequenzen, die über das Kaliko-Ka
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Vererbungsmuster X-chromosomal rezessiver Erkrankungen in Stammbäumen erkennen
 - Warum sind Männer bei X-rez. Erkrankungen häufiger betroffen als Frauen?
 - X-Inaktivierung und Barr-Körperchen erklären
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - X-chromosomal rezessiv (Männer häufiger krank) vs. X-chromosomal dominant (Frauen häufiger betroffen)
 - Konduktorin (heterozygot, gesund) vs. homozygot betroffene Frau (X^a X^a, sehr selten)
 - X-Inaktivierung (Dosiskompensation, zufällig) vs. Imprinting (elternspezifisch)
@@ -697,7 +717,7 @@ Die X-Inaktivierung hat wichtige klinische Konsequenzen, die über das Kaliko-Ka
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - Männer sind **hemizygot** für X-chromosomale Gene (nur 1 X-Chromosom) → ein einziges rezessives Allel reicht zur Erkrankung
 - **X-chromosomal rezessiv**: fast nur Männer betroffen; Frauen als Konduktorinnen (50% Söhne betroffen, 50% Töchter Konduktorin)
@@ -879,12 +899,17 @@ Die Erbgangbestimmung erfolgt systematisch durch Ausschlussprinzip. **Schritt 1:
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Erbgang aus einem Stammbaum bestimmen (autosomal vs. gonosomal, dominant vs. rezessiv)
 - Erkrankungswahrscheinlichkeit für ein bestimmtes Familienmitglied berechnen
 - Bedingte Wahrscheinlichkeit P(Aa | gesund) = 2/3 anwenden
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Autosomal-dominant (jede Generation) vs. autosomal-rezessiv (Generationensprünge)
 - X-chromosomal rezessiv (Diagonal-Muster) vs. autosomal-rezessiv (Männer = Frauen betroffen)
 - Konsanguinität (Doppellinie) erhöht Risiko für autosomal-rezessiv, nicht für dominant
@@ -901,7 +926,7 @@ Die Erbgangbestimmung erfolgt systematisch durch Ausschlussprinzip. **Schritt 1:
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Autosomal-dominant**: betroffen in jeder Generation (vertikal), ♂ und ♀ gleich, ein Elternteil meist betroffen, 50% Weitergabe
 - **Autosomal-rezessiv**: Generationensprünge, beide Eltern meist gesund (Träger), Konsanguinität erhöht Risiko, 25% Erkrankungsrisiko
@@ -1083,12 +1108,17 @@ Neben den fünf klassischen HWE-Voraussetzungen gibt es weitere Faktoren, die Al
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Aus Erkrankungshäufigkeit (q²) die Trägerfrequenz (2pq) berechnen
 - Voraussetzungen des Hardy-Weinberg-Gleichgewichts nennen
 - Heterozygoten-Vorteil am Beispiel Sichelzellanämie erklären
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - q² (Erkrankungsfrequenz) vs. q (Allelfrequenz) vs. 2pq (Trägerfrequenz)
 - Allelfrequenz (p, q) vs. Genotypfrequenz (p², 2pq, q²)
 - Genetischer Drift (zufällig, kleine Populationen) vs. Selektion (gerichtet, Fitness)
@@ -1105,7 +1135,7 @@ Neben den fünf klassischen HWE-Voraussetzungen gibt es weitere Faktoren, die Al
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Hardy-Weinberg-Gleichgewicht**: p² + 2pq + q² = 1; beschreibt stabile Allelfrequenzen ohne Evolution
 - 5 Voraussetzungen: keine Mutation, Panmixie, keine Selektion, große Population, keine Migration/Genfluss
@@ -1282,12 +1312,17 @@ Mutagene werden nach ihrer Natur eingeteilt: **Physikalische Mutagene** (UV-Stra
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Stille, Missense und Nonsense-Mutation unterscheiden und Beispiele zuordnen
 - Auswirkung einer Frameshift-Mutation auf das Protein erklären
 - DNA-Reparaturdefekte den entsprechenden Krebssyndromen zuordnen
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Frameshift (≠ 3n Nukleotide, Leserahmen verschoben) vs. In-Frame (3n, Leserahmen intakt)
 - Missense (Aminosäureaustausch) vs. Nonsense (Stopp-Codon) — beides Substitutionen
 - Genmutation (Einzelnukleotid) vs. Chromosomenmutation (Abschnitte) vs. Genommutation (Chromosomenzahl)
@@ -1306,7 +1341,7 @@ Mutagene werden nach ihrer Natur eingeteilt: **Physikalische Mutagene** (UV-Stra
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Stille Mutation**: Codon ändert sich, aber gleiche Aminosäure (Degeneriertheit des Codes) → kein Effekt
 - **Missense-Mutation**: andere Aminosäure → Proteinveränderung (Beispiel: Sichelzellanämie GAG→GTG: Glu→Val)
@@ -1504,12 +1539,17 @@ Doppelstrangbrüche (DSB), die gefährlichste Schadensform, werden durch zwei Ha
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Chargaff-Regeln anwenden: Aus A-Anteil den C-Anteil berechnen
 - Leitstrang vs. Folgestrang: Syntheserichtung und Okazaki-Fragmente erklären
 - Funktion der Telomerase und Zusammenhang mit Krebs
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - A = T (2 H-Brücken) vs. G ≡ C (3 H-Brücken, stärker) — Verwechslung der Bindungsstärke
 - Leitstrang (kontinuierlich, 1 Primer) vs. Folgestrang (diskontinuierlich, viele Primer)
 - DNA-Polymerase synthetisiert nur 5'→3' — liest Template 3'→5'
@@ -1525,7 +1565,7 @@ Doppelstrangbrüche (DSB), die gefährlichste Schadensform, werden durch zwei Ha
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - DNA: antiparallele Doppelhelix; **A-T** (2 Wasserstoffbrücken), **G≡C** (3 Wasserstoffbrücken, stabiler)
 - **Chargaff-Regeln**: A = T; G = C (folgt aus komplementärer Basenpaarung)
@@ -1733,12 +1773,17 @@ Für das Verständnis der Splicing-Regulation ist die Zusammensetzung des Splice
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Unterschied DNA vs. RNA (Zucker, Basen, Strangigkeit) nennen
 - Die drei RNA-Prozessierungsschritte bei Eukaryoten erklären
 - Template Strand vs. Coding Strand unterscheiden
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Template Strand (3'→5', Matrize) vs. Coding Strand (5'→3', mRNA-Sequenz mit T statt U)
 - RNA-Polymerase braucht KEINEN Primer (anders als DNA-Polymerase)
 - Prokaryoten: KEINE Introns, KEINE RNA-Prozessierung — direkt gekoppelt
@@ -1754,7 +1799,7 @@ Für das Verständnis der Splicing-Regulation ist die Zusammensetzung des Splice
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Transkription**: RNA-Polymerase liest Template Strand (3'→5') → synthetisiert prä-mRNA (5'→3'); **kein Primer nötig**
 - RNA-Polymerase braucht Promotor (TATA-Box) zur Initiation; Transkriptionsfaktoren binden zuerst
@@ -1774,6 +1819,7 @@ Für das Verständnis der Splicing-Regulation ist die Zusammensetzung des Splice
       ],
       sections: [],
       diagram: "transcription-translation",
+      imageUrl: "/grafik-16-zentraldogma.svg",
 
       merksätze: [
         "RNA-Polymerase liest den Template Strand (3'->5') und synthetisiert RNA in 5'->3'-Richtung — ohne Primer (anders als DNA-Polymerase).",
@@ -1969,12 +2015,17 @@ Die Proteinfaltung wird durch Chaperone (z. B. Hsp70, Hsp60/GroEL) unterstützt,
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Eigenschaften des genetischen Codes (Triplett, degeneriert, universell) erklären
 - Ribosomenaufbau Pro- vs. Eukaryoten vergleichen (70S vs. 80S)
 - Antibiotika-Wirkmechanismen auf die Translation zuordnen
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Degeneriert (mehrere Codons für 1 AS) vs. ambig (1 Codon für mehrere AS — das ist NICHT der Fall)
 - 70S Ribosomen (Prokaryoten) vs. 80S (Eukaryoten) — Mitochondrien haben auch 70S!
 - A-Site (neues Aminoacyl-tRNA) vs. P-Site (Peptidkette) vs. E-Site (Exit/entladen)
@@ -1990,7 +2041,7 @@ Die Proteinfaltung wird durch Chaperone (z. B. Hsp70, Hsp60/GroEL) unterstützt,
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Genetischer Code**: Triplett (3 Basen = 1 Codon), universell, degeneriert (mehrere Codons für 1 Aminosäure), kommafrei
 - 64 Codons: 61 codieren für 20 Aminosäuren, 3 sind Stopp-Codons (UAA, UAG, UGA)
@@ -2009,6 +2060,7 @@ Die Proteinfaltung wird durch Chaperone (z. B. Hsp70, Hsp60/GroEL) unterstützt,
       ],
       sections: [],
       diagram: "transcription-translation",
+      imageUrl: "/grafik-16-zentraldogma.svg",
 
       merksätze: [
         "Genetischer Code: Triplett-Code (3 Basen = 1 Codon = 1 Aminosaeure), degeneriert (mehrere Codons pro AS), universell, kommafrei. Start: AUG (Met). Stopp: UAA, UAG, UGA.",
@@ -2197,12 +2249,17 @@ Genomic Imprinting (genomische Prägung) beschreibt die elternspezifische Stilll
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - lac-Operon-Regulation mit und ohne Laktose/Glukose erklären
 - DNA-Methylierung und Histon-Acetylierung mit Genaktivierung/-stilllegung verknüpfen
 - miRNA vs. siRNA unterscheiden
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - lac-Operon (induzierbar, Laktose AN) vs. trp-Operon (reprimierbar, Tryptophan AUS)
 - DNA-Methylierung (CpG → Gen AUS) vs. Histon-Acetylierung (Euchromatin → Gen AN)
 - HAT (Acetylierung → offen) vs. HDAC (Deacetylierung → geschlossen)
@@ -2218,7 +2275,7 @@ Genomic Imprinting (genomische Prägung) beschreibt die elternspezifische Stilll
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **lac-Operon** (E. coli): induzierbares System; bei Laktose → Repressor inaktiviert → Gene AN; bei Glukose (Katabolit-Repression) → trotz Laktose herabgesetzt
 - **trp-Operon**: reprimierbares System; bei Tryptophan-Überschuss → Repressor aktiv → Gene AUS
@@ -2414,12 +2471,17 @@ PCR ist Goldstandard für Infektionsdiagnostik (COVID-19, HIV-VL), Genotypisieru
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Die drei PCR-Schritte mit Temperaturen und molekularen Vorgängen beschreiben
 - Exponentielle Amplifikation berechnen (2ⁿ)
 - RT-PCR, qPCR und RT-qPCR unterscheiden und klinische Anwendungen nennen
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - RT-PCR (Reverse Transkriptase-PCR, RNA→cDNA) vs. qPCR (quantitative/Real-Time-PCR)
 - Taq (kein Proofreading, schnell) vs. Pfu (Proofreading, langsam, präziser)
 - SYBR Green (unspezifisch, jede dsDNA) vs. TaqMan-Sonde (spezifisch, zielgerichtet)
@@ -2435,7 +2497,7 @@ PCR ist Goldstandard für Infektionsdiagnostik (COVID-19, HIV-VL), Genotypisieru
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **PCR** (3 Schritte): Denaturierung (~95 °C), Primer-Annealing (~55-65 °C), Elongation (72 °C) → exponentiell: 30 Zyklen ≈ 10⁹ Kopien
 - **Taq-Polymerase** (aus Thermus aquaticus): hitzestabil, synthetisiert 5'→3', braucht Mg²⁺ als Cofaktor
@@ -2643,12 +2705,17 @@ Die Sanger-Methode (auch Kettenabbruchmethode oder Didesoxymethode) beruht auf d
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Sanger-Prinzip mit ddNTPs und Kettenabbruch erklären
 - Sanger vs. NGS in Bezug auf Durchsatz und Anwendung vergleichen
 - Klinische Indikationen für Exomsequenzierung nennen
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - ddNTPs (kein 3'-OH → Kettenabbruch) vs. dNTPs (normale Verlängerung)
 - Sanger (1 Gen, hohe Genauigkeit) vs. NGS (viele Gene parallel, Bioinformatik nötig)
 - Nanopore (lange Reads, portabel, höhere Fehlerrate) vs. Illumina (Short Reads, niedrige Fehlerrate)
@@ -2664,7 +2731,7 @@ Die Sanger-Methode (auch Kettenabbruchmethode oder Didesoxymethode) beruht auf d
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Sanger-Sequenzierung**: ddNTPs als Kettenabbrecher → Fragmente verschiedener Länge → Kapillarelektrophorese → Sequenz; Goldstandard für einzelne Gene
 - **Next-Generation Sequencing (NGS)**: massiv parallel → Millionen Fragmente gleichzeitig; Illumina = häufigste Plattform
@@ -2875,12 +2942,17 @@ HIV-Western-Blot war jahrzehntelang Goldstandard zur Bestätigung positiver HIV-
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Wanderungsrichtung der DNA im Gel und Trennprinzip erklären
 - Southern, Northern und Western Blot den Zielmolekülen zuordnen
 - HIV-Western-Blot als Bestätigungstest interpretieren
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Southern (DNA) vs. Northern (RNA) vs. Western (Protein) — Merkhilfe: S→N→W = Zentraldogma
 - Sticky ends (Überhänge, gerichtete Klonierung) vs. Blunt ends (keine Überhänge, ineffizienter)
 - SDS-PAGE trennt nur nach Größe (SDS maskiert Eigenladung) — native PAGE trennt auch nach Ladung
@@ -2896,7 +2968,7 @@ HIV-Western-Blot war jahrzehntelang Goldstandard zur Bestätigung positiver HIV-
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Agarosegel-Elektrophorese**: DNA negativ geladen → wandert zur Anode; kleine Fragmente schneller → Größentrennung
 - **Restriktionsenzyme (Typ II)**: erkennen palindromische Sequenzen (z. B. EcoRI: GAATTC); sticky ends (Überhänge) oder blunt ends
@@ -3100,12 +3172,17 @@ Genetischer Fingerabdruck per STR-Analyse ist Standard in Forensik, Vaterschafts
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - STR-Analyse-Ablauf in Schritten erklären (Extraktion → PCR → Elektrophorese → Profil)
 - Warum sind STRs als forensische Marker geeignet?
 - Vaterschaftstest: Ausschlussprinzip erklären
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - STR (2-6 bp, modern, PCR-basiert) vs. VNTR (10-100 bp, historisch, Jeffreys 1984)
 - mtDNA (maternal, keine individuelle ID) vs. STR (biparental, individuell eindeutig)
 - Allel-Dropout bei degradierter DNA (scheinbare Homozygotie) vs. echte Homozygotie
@@ -3126,7 +3203,7 @@ Neben autosomalen STRs werden auch geschlechtschromosomale Marker eingesetzt. Y-
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Genetischer Fingerabdruck**: basiert auf **STRs** (Short Tandem Repeats); Anzahl der 2–6 bp Wiederholungen variiert zwischen Individuen
 - Analyse: Multiplex-PCR mit fluoreszenzmarkierten Primern → Kapillarelektrophorese → Allel-Profil an 20 Loci → statistisch einzigartig
@@ -3346,12 +3423,17 @@ Rekombinante Proteine (Insulin, EPO, Wachstumshormon, monoklonale Antikörper) s
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Klonierungsschritte in richtiger Reihenfolge beschreiben
 - Blau-Weiß-Selektion: Was bedeuten weiße vs. blaue Kolonien?
 - cDNA-Bibliothek vs. genomische Bibliothek unterscheiden
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Weiß = Insert vorhanden (lacZ unterbrochen) vs. Blau = kein Insert (lacZ intakt) — oft verwechselt
 - cDNA (nur Exons, aus mRNA) vs. genomische DNA (Exons + Introns)
 - Transformation (DNA-Aufnahme in Bakterien) vs. Transfektion (DNA-Aufnahme in eukaryotische Zellen)
@@ -3367,7 +3449,7 @@ Rekombinante Proteine (Insulin, EPO, Wachstumshormon, monoklonale Antikörper) s
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Klonierungsschritte**: Restriktionsverdau (Insert + Vektor mit gleichem Enzym) → Ligation (T4-Ligase) → Transformation (kompetente Bakterien) → Selektion
 - **Blau-Weiß-Selektion**: weiße Kolonien = rekombinante Plasmide (Insert unterbricht lacZ-Gen)
@@ -3573,12 +3655,17 @@ Casgevy ist die erste CRISPR-basierte Therapie (FDA Dez. 2023); AAV-Gentherapien
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - CRISPR-Cas9-Mechanismus mit sgRNA, PAM und DSB erklären
 - NHEJ vs. HDR: Konsequenzen für Genknockout vs. Genkorrektur ableiten
 - Ex-vivo- vs. In-vivo-Gentherapie unterscheiden und Beispiele nennen
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - NHEJ (fehleranfällig, Knockout) vs. HDR (präzise, Korrektur) — beide reparieren DSB
 - AAV (nicht-integrierend, sicher, geringe Kapazität) vs. Lentivirus (integrierend, Insertionsmutagenese-Risiko)
 - Somatische Gentherapie (ethisch akzeptiert) vs. Keimbahn-Editierung (weitgehend verboten)
@@ -3599,7 +3686,7 @@ Klassisches CRISPR-Cas9 erzeugt Doppelstrangbrüche (DSB), die zu unerwünschten
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **CRISPR-Cas9**: Guide-RNA (20 nt) führt Cas9 zur Zielsequenz neben PAM-Motiv (NGG) → Doppelstrangbruch → Reparatur via NHEJ (Knockout) oder HDR (Genkorrektur)
 - **Casgevy** (2023): erste zugelassene CRISPR-Therapie; heilt Sichelzellanämie durch ex-vivo-Knockout von BCL11A → fetales Hämoglobin reaktiviert
@@ -3801,12 +3888,17 @@ Beim X-chromosomal rezessiven Erbgang muss zwischen mütterlicher und väterlich
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Erbgang aus Stammbaum bestimmen und konkrete Krankheitsbeispiele zuordnen
 - Konduktorin-Begriff erklären und Vererbungswahrscheinlichkeiten berechnen
 - Antizipation am Beispiel Huntington erklären
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - AD (jede Generation, 50% Risiko) vs. AR (Generationssprung, 25% Risiko)
 - Konduktorin (heterozygot gesund) vs. obligate Konduktorin (Trägerstatus sicher)
 - Penetranz (binär: erkrankt ja/nein) vs. Expressivität (Schweregrad variabel)
@@ -3822,7 +3914,7 @@ Beim X-chromosomal rezessiven Erbgang muss zwischen mütterlicher und väterlich
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Autosomal-dominant** (Beispiele: Marfan, Huntington): jede Generation betroffen, 50% Weitergabe, ♂ = ♀
 - **Autosomal-rezessiv** (Beispiele: Mukoviszidose, PKU): Generationssprünge, 25% Erkrankungsrisiko bei Aa × Aa, Konsanguinität ↑ Risiko
@@ -3999,12 +4091,17 @@ Der Polygene Risikoscore (PRS) fasst die Effekte von Hunderten bis Tausenden Ris
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Polygenie von Pleiotropie unterscheiden und Beispiele nennen
 - Penetranz vs. Expressivität erklären
 - Multifaktorielle von monogenen Erkrankungen abgrenzen
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Polygenie (viele Gene → ein Merkmal) vs. Pleiotropie (ein Gen → viele Merkmale)
 - Penetranz (ob man erkrankt, binär) vs. Expressivität (wie schwer man erkrankt, graduell)
 - Vollständige Penetranz (100%, z. B. Huntington) vs. unvollständige (z. B. BRCA: ca. 70%)
@@ -4020,7 +4117,7 @@ Der Polygene Risikoscore (PRS) fasst die Effekte von Hunderten bis Tausenden Ris
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Polygenie**: viele Gene wirken additiv → stetige Normalverteilung (Körpergröße, Hautfarbe); multifaktorielle Erkrankungen (z. B. Diabetes Typ 2)
 - **Pleiotropie**: ein Gen → mehrere Phänotypen (Beispiel: PKU → Hirnschaden + Hypopigmentierung)
@@ -4199,12 +4296,17 @@ Im Rahmen der präkonzeptionellen Beratung bei Risikofamilien (z. B. bekannte BR
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Trägerfrequenz aus Erkrankungshäufigkeit mit Hardy-Weinberg berechnen
 - Erkrankungsrisiko für ein Kind aus Stammbaumdaten ableiten
 - Nicht-Direktivität als Grundprinzip der genetischen Beratung erklären
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - q² (Erkrankungsfrequenz) vs. 2pq (Trägerfrequenz) — 2pq >> q² bei seltenen Erkrankungen
 - Nicht-Direktivität (Berater informiert, entscheidet nicht) vs. patientenzentrierte Beratung (kann Empfehlungen einschließen)
 - HW-Voraussetzung Panmixie (zufällige Partnerwahl) vs. Inzucht (gezielte Verwandtenpaarung)
@@ -4229,7 +4331,7 @@ In der Praxis wird die Bayessche Analyse tabellarisch aufgebaut: Hypothese 1 (Tr
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Genetische Beratung**: Grundprinzip **Nicht-Direktivität** — Informieren, nicht lenken; Autonomie der Ratsuchenden
 - Risikoberechnung: Mendel-Regeln anwenden (Aa × Aa → 25%; Aa × aa → 50%); für seltene rez. Erkrankungen: Hardy-Weinberg
@@ -4396,12 +4498,17 @@ NIPT hat in vielen europäischen Ländern das Erstrimester-Screening als Erstlin
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - NIPT, Amniozentese und CVS mit Zeitpunkt und Risiken vergleichen
 - PID von PND abgrenzen
 - Ethische Argumente zu PID und PND diskutieren
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - PID (vor Implantation, IVF nötig) vs. PND (während Schwangerschaft)
 - NIPT (Screening, kein Fehlgeburtsrisiko) vs. Amniozentese (diagnostisch, invasiv)
 - CVS (11.-13. SSW, schnelleres Ergebnis) vs. Amniozentese (16.-18. SSW, geringeres Risiko)
@@ -4427,7 +4534,7 @@ Die ethische Debatte um PID und PND berührt fundamentale Fragen: Selektion von 
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **NIPT** (nicht-invasiv): zellfreie fetale DNA aus mütterlichem Blut; ab SSW 10; Trisomie-21-Sensitivität >99%; kein Fehlgeburtsrisiko
 - **Amniozentese** (SSW 16–18): Fruchtwasser → fetale Zellen → vollständiger Karyotyp; Fehlgeburtsrisiko ~0,5%

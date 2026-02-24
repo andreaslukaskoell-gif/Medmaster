@@ -32,29 +32,62 @@ export const chemKapAtom: Kapitel = {
 
 Alles, was uns umgibt — Luft, Wasser, unser Körper — besteht aus winzigen Teilchen: den **Atomen**. Sie sind so klein, dass auf einem Millimeter zehn Millionen nebeneinander passen würden. Doch was steckt im Inneren eines Atoms? Diese Frage beschäftigte Wissenschaftler über Jahrhunderte. Jede neue Entdeckung veränderte das Bild vom Atom grundlegend: vom unzerteilbaren Kugelmodell über den Rosinen-Kuchen bis hin zum modernen Orbitalmodell. Für den MedAT sind die wichtigsten Atommodelle, ihre Schlüsselexperimente, sowie die Begriffe Ordnungszahl, Massenzahl und Isotop prüfungsrelevant.
 
+**In diesem Kapitel lernst du:**
+- die **Entwicklung der Atommodelle** (Thomson → Rutherford → Bohr → Quantenmechanik) und die Schlüsselexperimente
+- den **Rutherford-Streuversuch** und seine Folgerung: winziger Kern, fast leerer Raum
+- **Bohr-Schalen** (K, L, M, N) und die Formel **2n²** für die maximale Elektronenzahl pro Schale
+- **Orbitale** (s, p, d, f) als Aufenthaltswahrscheinlichkeitsräume — das moderne Bild der Elektronenhülle
+- **Ordnungszahl Z**, **Massenzahl A** und **Isotope** (gleiches Element, verschiedene Neutronenzahl)
+
+---
+
 ## Demokrit und Dalton — die Anfänge
 
-Bereits ca. 400 v. Chr. postulierte der griechische Philosoph **Demokrit** unteilbare Teilchen ("átomos"). Wissenschaftlich wurde die Atomtheorie erst durch **John Dalton** (1808): Elemente bestehen aus identischen, unteilbaren Atomen; verschiedene Elemente haben verschiedene Atommassen; chemische Reaktionen = Umlagerung von Atomen.
+**Um zu verstehen,** wie wir zum heutigen Bild vom Atom kamen, lohnt ein kurzer Blick auf die Anfänge: Ohne die Idee des „unteilbaren Teilchens“ gäbe es keine Atommodelle.
+
+Bereits ca. 400 v. Chr. postulierte der griechische Philosoph **Demokrit** unteilbare Teilchen (griech. *átomos* = unteilbar). Wissenschaftlich wurde die Atomtheorie erst durch **John Dalton** (1808) begründet: Elemente bestehen aus identischen, unteilbaren Atomen; verschiedene Elemente haben verschiedene Atommassen; chemische Reaktionen sind Umlagerungen von Atomen — keine Erzeugung oder Vernichtung.
+
+> **Merke:** Dalton: Atome sind die kleinsten Bausteine der Elemente; gleiches Element = gleiche Atome; Reaktionen = Umlagerung.
+
+---
 
 ## Thomson-Modell (Rosinenmodell, 1904)
 
-J. J. Thomson, der 1897 das Elektron entdeckte (Kathodenstrahlröhre, e/m-Verhältnis), stellte sich das Atom als eine gleichmäßig positiv geladene Kugel vor, in die negativ geladene Elektronen — wie Rosinen in einem Kuchen — eingebettet sind. Das Modell erklärt Ionisation und elektrische Neutralität, scheitert jedoch an den Ergebnissen des Rutherford-Streuversuchs.
+**Bisher haben wir gesehen:** Die Idee des Atoms als Grundbaustein. **Aber was *ist* im Atom?** Die erste experimentelle Antwort kam mit der Entdeckung des **Elektrons** — eines negativ geladenen, sehr leichten Teilchens.
+
+J. J. Thomson entdeckte 1897 das **Elektron** (Kathodenstrahlröhre, Bestimmung des e/m-Verhältnisses) und widerlegte damit die Vorstellung vom unteilbaren Atom. Er stellte sich das Atom als eine **gleichmäßig positiv geladene Kugel** vor, in die negativ geladene Elektronen — wie Rosinen in einem Kuchen — eingebettet sind. Das Modell erklärt **Ionisation** (Abgabe von Elektronen) und elektrische Neutralität des Atoms, scheitert jedoch an den Ergebnissen des Rutherford-Streuversuchs.
 
 > **Merke:** Thomson wies nach, dass Elektronen negativ geladene Teilchen mit definierter Masse sind. Seine Entdeckung widerlegte die Vorstellung vom unteilbaren Atom.
 
+---
+
 ## Rutherford-Streuversuch (1911) → Kern-Modell
 
-Ernest Rutherford beschoss eine hauchdünne Goldfolie (ca. 100 Atomlagen) mit positiv geladenen Alphateilchen (⁴He²⁺). Der Befund: Die meisten Teilchen passierten die Folie ungelenkt, wenige wurden stark abgelenkt, manche sogar fast direkt zurückgeworfen (ca. 1 von 8000).
+**Bisher haben wir gesehen:** Thomson sah das Atom als positive Kugel mit eingebetteten Elektronen. **Ein entscheidendes Experiment** widerlegte dieses Bild und führte zum Kern-Hülle-Modell.
 
-Schlussfolgerung: Die positive Ladung und fast die gesamte Masse sind in einem winzigen, dichten **Atomkern** konzentriert. Die Elektronenhülle macht fast das gesamte Volumen aus (Kerndurchmesser ≈ 10⁻¹⁵ m, Atomdurchmesser ≈ 10⁻¹⁰ m — Verhältnis 1:100 000). Das Atom besteht zu 99,9 % aus leerem Raum.
+Ernest Rutherford beschoss eine hauchdünne **Goldfolie** (ca. 100 Atomlagen) mit positiv geladenen **Alphateilchen** — das sind ⁴He²⁺-Kerne (Heliumkerne ohne Elektronen), die bei radioaktivem Zerfall entstehen und hier als Projektile dienten.
 
-> **Merke:** Wenn der Atomkern so groß wäre wie eine Murmel (1 cm), hätte das gesamte Atom einen Durchmesser von ca. 100 m (Fußballstadion).
+**Befund in drei Punkten:**
 
-**Grenzen des Rutherford-Modells:** Es erklärt nicht, warum Elektronen nicht spiralförmig in den Kern stürzen (beschleunigte Ladungen strahlen klassisch Energie ab), und liefert keine Erklärung für diskrete Spektrallinien.
+| Beobachtung | Anteil | Deutung |
+|-------------|--------|---------|
+| Teilchen passieren ungelenkt | > 99 % | Atom ist überwiegend **leerer Raum** |
+| Starke Ablenkung | wenige | Treffer auf einen **kleinen, massereichen, positiven** Bereich |
+| Fast Rückwurf | ca. 1 von 8000 | Dieser Bereich ist **extrem klein und dicht** |
+
+**Schlussfolgerung:** Die positive Ladung und fast die gesamte Masse sind in einem winzigen, dichten **Atomkern** konzentriert — dem massereichen Zentrum des Atoms. Die **Elektronenhülle** (der Raum um den Kern, in dem sich die Elektronen aufhalten) macht fast das gesamte Volumen aus. Kerndurchmesser ≈ 10⁻¹⁵ m, Atomdurchmesser ≈ 10⁻¹⁰ m → Verhältnis **1 : 100 000**. Das Atom besteht zu 99,9 % aus leerem Raum.
+
+> **Merke:** Rutherford: Meiste Teilchen durch → leerer Raum. Wenige stark abgelenkt → winziger, positiver, massereicher **Kern**. Vergleich: Kern = Murmel (1 cm), Atom = Fußballstadion (~100 m).
+
+**SVG-Hinweis (Rutherford-Streuversuch / Kern-Hülle-Modell):** Ein Schema zeigt den Versuchsaufbau (Alphateilchen-Quelle, Goldfolie, Streuung) und das daraus folgende Bild: winziger Kern, umgeben von leerem Raum und Elektronenhülle. So wird die Schlussfolgerung auf einen Blick nachvollziehbar. *Typ: Schema / Versuchsaufbau + Kernmodell.*
+
+**Grenzen des Rutherford-Modells:** Es erklärt nicht, warum Elektronen nicht spiralförmig in den Kern stürzen (beschleunigte Ladungen strahlen klassisch Energie ab), und liefert keine Erklärung für **diskrete Spektrallinien** (charakteristische Lichtfarben von angeregten Atomen).
 
 ## Bohrsches Atommodell (1913)
 
-Niels Bohr postulierte, dass Elektronen auf **festen Kreisbahnen (Schalen)** um den Kern kreisen, ohne Energie abzustrahlen. Schalen werden als K, L, M, N, ... oder mit der Hauptquantenzahl n = 1, 2, 3, 4, ... bezeichnet. Maximale Elektronenzahl pro Schale: **2n²**.
+**Bisher haben wir gesehen:** Kern + leere Hülle — aber warum stürzen die Elektronen nicht in den Kern? Und warum leuchten Gase nur in **bestimmten Farben** (Spektrallinien)? **Um das zu verstehen,** führte Niels Bohr feste Bahnen ein.
+
+Niels Bohr postulierte, dass Elektronen auf **festen Kreisbahnen** um den Kern kreisen, ohne Energie abzustrahlen. Diese Bahnen heißen **Schalen** (K, L, M, N, …) und werden mit der **Hauptquantenzahl** n = 1, 2, 3, 4, … bezeichnet. **Schalen** sind also die nach Bohr angenommenen Kreisbahnen, auf denen Elektronen den Kern umkreisen. Maximale Elektronenzahl pro Schale: **2n²**.
 
 | Schale | n | Max. Elektronen (2n²) |
 |--------|---|----------------------|
@@ -63,46 +96,83 @@ Niels Bohr postulierte, dass Elektronen auf **festen Kreisbahnen (Schalen)** um 
 | M | 3 | 18 |
 | N | 4 | 32 |
 
-Beim Übergang von einer höheren auf eine niedrigere Schale (Emission) gibt das Elektron ein Photon mit genau definierter Energie ab: **ΔE = h·f** (h = Planck-Konstante 6,626 × 10⁻³⁴ J·s). Dies erklärt die Spektrallinien des Wasserstoffs (Lyman-Serie: n→1, UV; Balmer-Serie: n→2, sichtbar; Paschen-Serie: n→3, IR). Beim Übergang auf höhere Schalen (Absorption) wird ein Photon absorbiert.
+Beim **Übergang** von einer höheren auf eine niedrigere Schale (Emission) gibt das Elektron ein **Photon** ab — ein **Lichtquant**, die kleinste Einheit elektromagnetischer Strahlung, mit der Energie **ΔE = h·f** (h = Planck-Konstante 6,626 × 10⁻³⁴ J·s). Das erklärt die Spektrallinien des Wasserstoffs (Lyman-Serie: n→1, UV; Balmer-Serie: n→2, sichtbar; Paschen-Serie: n→3, IR). Beim Übergang auf höhere Schalen (Absorption) wird ein Photon aufgenommen.
 
-Das Bohr-Modell versagt für Mehrelektronenatome und erklärt keine Feinstruktur der Spektren.
+> **Merke:** Bohr: Elektronen auf **Schalen** (K, L, M, N); max. **2n²** Elektronen pro Schale. Übergänge zwischen Schalen → Photon abgegeben oder aufgenommen → Spektrallinien.
+
+**Grenzen:** Das Bohr-Modell versagt für Mehrelektronenatome und erklärt keine Feinstruktur der Spektren.
+
+**SVG-Hinweis (Bohr-Schalen):** Ein Schema zeigt den Kern und konzentrische Kreise (Schalen K, L, M) mit den maximalen Elektronenzahlen 2, 8, 18. So ist die räumliche Vorstellung sofort erfassbar. *Typ: Schema / Schalenmodell.*
 
 ## Quantenmechanisches Modell (Orbital-Modell, ab 1925)
 
-Heisenberg (Unschärfeprinzip: Ort und Impuls eines Elektrons nicht gleichzeitig exakt bestimmbar), Schrödinger (Wellengleichung) und Dirac entwickelten das moderne Modell: Elektronen sind keine Teilchen auf festen Bahnen, sondern werden durch **Wellenfunktionen (Orbitale)** beschrieben. Ein Orbital ist ein Raumbereich, in dem ein Elektron mit 90 % Wahrscheinlichkeit anzutreffen ist.
+**Bisher haben wir gesehen:** Bohr-Schalen erklären Wasserstoff und Spektrallinien. **Für komplexere Atome und die chemische Bindung** reicht das Bild fester Bahnen nicht aus. **Um das moderne Bild zu verstehen,** ersetzen wir Bahnen durch **Orbitale**.
 
-Orbitaltypen und Kapazitäten:
-- **s-Orbitale**: kugelförmig, 1 Orbital pro Unterschale → max. 2 e⁻
-- **p-Orbitale**: hantelförmig, 3 Orbitale (pₓ, p_y, p_z) pro Unterschale → max. 6 e⁻
-- **d-Orbitale**: kleeblattförmig (4) + ringförmig (1), 5 Orbitale pro Unterschale → max. 10 e⁻
-- **f-Orbitale**: komplex, 7 Orbitale pro Unterschale → max. 14 e⁻
+Heisenberg (Unschärfeprinzip: Ort und Impuls eines Elektrons nicht gleichzeitig exakt bestimmbar), Schrödinger (Wellengleichung) und Dirac entwickelten das moderne Modell: Elektronen sind keine klassischen Teilchen auf festen Bahnen, sondern werden durch **Wellenfunktionen** beschrieben — das ist die mathematische Größe, deren Betrag zum Quadrat die Aufenthaltswahrscheinlichkeit des Elektrons angibt. Daraus leiten sich die **Orbitale** ab: Ein **Orbital** ist ein Raumbereich, in dem ein Elektron mit 90 % Wahrscheinlichkeit anzutreffen ist — also kein fester Pfad, sondern ein **Aufenthaltswahrscheinlichkeitsraum** (das quantenmechanische Gegenstück zu Bohrs Schalen).
 
-> **Merke:** Die Gesamtkapazität pro Schale ergibt sich aus: Schale n hat n Unterschalen (l = 0 bis n−1) → Summe = 2n² Elektronen.
+**Orbitaltypen und Kapazitäten:**
+
+| Typ | Form | Anzahl Orbitale pro Unterschale | Max. Elektronen |
+|-----|------|---------------------------------|-----------------|
+| **s** | kugelförmig | 1 | 2 |
+| **p** | hantelförmig (3 Richtungen: pₓ, p_y, p_z) | 3 | 6 |
+| **d** | kleeblatt- bzw. ringförmig | 5 | 10 |
+| **f** | komplex | 7 | 14 |
+
+> **Merke:** **Orbital ≠ Bahn.** Orbitale sind Aufenthaltswahrscheinlichkeitsräume. Schale n hat n Unterschalen (l = 0 bis n−1) → Gesamtkapazität pro Schale = **2n²** Elektronen.
+
+**SVG-Hinweis (Orbitale s und p):** Ein Vergleichsschema zeigt ein kugelförmiges s-Orbital und die drei hantelförmigen p-Orbitale (pₓ, p_y, p_z) im Raum — so wird der Unterschied zwischen s und p sofort sichtbar. *Typ: Vergleich / Schema.*
 
 ## Atomkern: Protonen, Neutronen, Isotope
 
-- **Protonen**: positiv geladen (+1e), Masse ≈ 1,00728 u; Anzahl = **Ordnungszahl Z** → definiert das Element eindeutig
-- **Neutronen**: elektrisch neutral, Masse ≈ 1,00867 u; Anzahl = **Neutronenzahl N**
-- **Elektronen**: negativ geladen (−1e), Masse ≈ 0,000549 u (vernachlässigbar gegenüber Nukleonen)
-- **Massenzahl**: A = Z + N (Summe aller Nukleonen)
-- Schreibweise: ᴬ_Z X, z. B. ²³⁸₉₂U (Uran-238: 92 Protonen, 146 Neutronen)
+**Bisher haben wir gesehen:** Die Elektronenhülle und ihre Modelle (Bohr, Orbitale). **Der Kern selbst** besteht aus **Protonen** und **Neutronen** — zusammen heißen sie **Nukleonen** (von lat. *nucleus* = Kern). Sie bestimmen **Element** und **Isotop**.
 
-**Kernkraft und Massendefekt:** Protonen und Neutronen werden durch die **starke Kernkraft** (Reichweite ≈ 10⁻¹⁵ m) zusammengehalten. Der **Massendefekt** (Δm) — die Differenz zwischen Summe der freien Nukleonenmassen und tatsächlicher Kernmasse — wird nach E = mc² als **Kernbindungsenergie** freigesetzt. Diese ist bei Fe-56 pro Nukleon am höchsten (8,8 MeV/Nukleon) → stabilster Kern.
+**Bausteine des Atoms — Übersicht:**
 
-**Isotope** besitzen dieselbe Ordnungszahl (gleiches Element), aber unterschiedliche Neutronenzahl → verschiedene Massenzahlen. Chemische Eigenschaften sind (nahezu) identisch, physikalische Eigenschaften (Masse, Kernstabilität) unterscheiden sich.
+| Teilchen | Ladung | Masse (ca.) | Ort | Wichtige Größe |
+|----------|--------|-------------|-----|-----------------|
+| **Proton** | +1e | ≈ 1,007 u | Kern | Anzahl = **Ordnungszahl Z** → definiert das Element |
+| **Neutron** | 0 | ≈ 1,009 u | Kern | Anzahl = **Neutronenzahl N** |
+| **Elektron** | −1e | ≈ 0,0005 u (vernachlässigbar) | Hülle | Anzahl = Z (im neutralen Atom) |
 
-Beispiele: ¹H (Protium, 99,98 %), ²H (Deuterium, D, 0,02 %), ³H (Tritium, T, radioaktiv); ¹²C (98,9 %), ¹³C (1,1 %), ¹⁴C (Spuren, radioaktiv, T½ = 5730 a).
+Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen — sie **definiert das Element eindeutig**. Die **Massenzahl A** ist die Summe aus Protonen- und Neutronenzahl: **A = Z + N**; sie kennzeichnet ein bestimmtes **Nuklid** (eine Atomart mit festem Z und N).
 
-**Stabile Isotope** haben ein günstiges N/Z-Verhältnis (bei leichten Elementen N ≈ Z; bei schwereren Elementen überwiegen Neutronen: bei Z = 82 ist N ≈ 1,5 × Z). Instabile Nuklide sind radioaktiv. Alle Elemente mit Z > 83 (Bismut) sind ausschließlich radioaktiv.
+**Nuklid-Notation:** ᴬ_Z X. Beispiel: ²³⁸₉₂U = Uran mit 92 Protonen und 146 Neutronen (A − Z = 146).
+
+**Kernkraft und Massendefekt:** Protonen und Neutronen werden durch die **starke Kernkraft** zusammengehalten — eine Anziehung mit sehr kurzer Reichweite (≈ 10⁻¹⁵ m), die den Kern gegen die elektrische Abstoßung der Protonen stabilisiert. Der **Massendefekt** ist die Differenz zwischen der Summe der Massen der einzelnen Nukleonen und der tatsächlichen Kernmasse; diese „fehlende“ Masse steckt als **Kernbindungsenergie** (E = mc²) im Kern. Bei Fe-56 ist die Bindungsenergie pro Nukleon am höchsten (8,8 MeV/Nukleon) → stabilster Kern.
+
+**Isotope** sind Atome desselben Elements (gleiche **Ordnungszahl Z**) mit unterschiedlicher **Neutronenzahl N** — also gleiche Chemie, unterschiedliche Massenzahl A und unterschiedliche Kernstabilität. Chemische Eigenschaften sind (nahezu) identisch, physikalische (Masse, Radioaktivität) unterscheiden sich.
+
+**Beispiele:**
+
+| Nuklid | Z | N | A | Anmerkung |
+|--------|---|---|---|-----------|
+| ¹H (Protium) | 1 | 0 | 1 | 99,98 % des Wasserstoffs |
+| ²H (Deuterium, D) | 1 | 1 | 2 | schwerer Wasserstoff |
+| ³H (Tritium, T) | 1 | 2 | 3 | radioaktiv |
+| ¹²C | 6 | 6 | 12 | 98,9 %; Bezug für Atommasse |
+| ¹³C | 6 | 7 | 13 | 1,1 % |
+| ¹⁴C | 6 | 8 | 14 | Spuren, radioaktiv (T½ = 5730 a, Datierung) |
+
+> **Merke:** **Z** = Protonenzahl = Element. **A** = Z + N = Massenzahl. **Isotope**: gleiche Z, verschiedene N → gleiche Chemie, verschiedene Masse/Stabilität. Notation ᴬ_Z X.
+
+**Stabile vs. instabile Kerne:** Stabile Isotope haben ein günstiges N/Z-Verhältnis (bei leichten Elementen N ≈ Z; bei schweren überwiegen Neutronen). Instabile Nuklide sind **radioaktiv**. Alle Elemente mit **Z > 83** (Bismut) sind ausschließlich radioaktiv.
+
+---
 
 ## MedAT-Fokus
+
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welcher Schluss folgt aus dem Rutherford-Streuversuch?" → Positive Ladung und Masse im winzigen Kern konzentriert; Atom = fast vollständig leerer Raum
 - "Was ist ein Isotop?" → Gleiches Element (gleiche Z), unterschiedliche Neutronenzahl N → verschiedene Massenzahl A, (fast) gleiche chemische Eigenschaften
 - "Wie viele Elektronen fasst die dritte Schale (n=3)?" → 2n² = 18
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Ordnungszahl Z ≠ Massenzahl A: Z = Protonenzahl (definiert Element), A = Z + N (Nukleonen gesamt)
 - Thomson-Modell (Rosinen-Kuchen, gleichmäßig positive Kugel) ≠ Rutherford-Modell (winziger Kern, fast leerer Raum)
 - Isotope sind chemisch (fast) identisch, physikalisch verschieden (Masse, Kernstabilität)
@@ -114,7 +184,7 @@ Beispiele: ¹H (Protium, 99,98 %), ²H (Deuterium, D, 0,02 %), ³H (Tritium, T, 
 - Alle Elemente mit Z > 83 (Bismut) ausschließlich radioaktiv
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - Atom: **Kern** (Protonen + Neutronen, winzig: ~10⁻¹⁵ m) + **Hülle** (Elektronen, ~10⁻¹⁰ m); 99 % leerer Raum
 - **Ordnungszahl Z** = Protonenzahl = definiert das Element; **Massenzahl A** = Z + N; Neutronenzahl N = A − Z
@@ -411,12 +481,17 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welche Aussage zum Pauliprinzip ist korrekt?" → Kein Atom hat zwei Elektronen mit identischen vier Quantenzahlen → max. 2 e⁻ pro Orbital, entgegengesetzter Spin
 - "Was ist die Elektronenkonfiguration von Fe³⁺?" → [Ar]3d⁵ (zuerst beide 4s-, dann ein 3d-Elektron entfernt)
 - "Warum ist Fe³⁺ stark paramagnetisch?" → [Ar]3d⁵ — 5 ungepaarte Elektronen mit parallelem Spin
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Aufbau: 4s vor 3d füllen; Ionisierung: 4s vor 3d entfernen (Fe²⁺: [Ar]3d⁶; Fe³⁺: [Ar]3d⁵)
 - Hundsche Regel ≠ Pauliprinzip: Hund → entartete Orbitale erst einfach besetzen (↑↑); Pauli → keine identischen 4 Quantenzahlen
 - Ausnahmen merken: Cr ([Ar]3d⁵4s¹) und Cu ([Ar]3d¹⁰4s¹) — halbgefüllte/vollgefüllte d-Schalen stabilisiert
@@ -428,7 +503,7 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
 - Energiereihenfolge: 1s < 2s < 2p < 3s < 3p < **4s < 3d** < 4p (Madelung-Regel)
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **4 Quantenzahlen**: n (Schale), l (Orbitalform: 0=s, 1=p, 2=d, 3=f), mₗ (Raumausrichtung), mₛ (Spin ±½)
 - **Pauliprinzip**: kein Atom hat zwei Elektronen mit identischen vier Quantenzahlen → max. 2 e⁻ pro Orbital (entgegengesetzter Spin)
@@ -723,12 +798,17 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Was verändert sich beim α-Zerfall?" → Z sinkt um 2, A sinkt um 4 (Emission von ⁴He)
 - "Was bleibt beim γ-Zerfall gleich?" → Z und A bleiben unverändert — nur Energieabgabe, kein Kernwandel
 - "Was ist das Prinzip der PET?" → β⁺-Zerfall → Positron annihiliert mit Elektron → 2 Gammaquanten (511 keV, 180°) → Koinzidenzdetektion
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - β⁻ (n→p, Z+1, A gleich) ≠ β⁺ (p→n, Z−1, A gleich) — Z-Änderung ist umgekehrt!
 - Gray (Gy) = absorbierte Energiedosis (physikalisch); Sievert (Sv) = biologisch gewichtete Dosis; α-Wichtungsfaktor = 20!
 - Gammastrahlung: kein Kernteilchen, kein Zerfall → Z und A unverändert (≠ α- und β-Zerfall)
@@ -740,7 +820,7 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
 - 1 Gy α-Strahlung = 20 Sv biologischer Wirkung (Wichtungsfaktor 20)
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **α-Zerfall**: Z−2, A−4; Teilchen = ⁴He; Reichweite nur cm in Luft → stoppt bei Papier; gefährlich bei Inhalation
 - **β⁻-Zerfall**: n → p + e⁻ + ν̄ₑ; Z+1, A gleich; Reichweite mm–cm; stoppt bei Aluminiumfolie
@@ -1063,12 +1143,17 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Wie viele mol sind in 90 g H₂O?" → n = 90/18 = 5 mol
 - "Osmolarität einer 1 mol/L NaCl-Lösung?" → 1 × 2 × 1000 = 2000 mosmol/L (i = 2)
 - "Was ist die Blutplasma-Osmolarität?" → ≈ 290 mosmol/L (durch ADH geregelt)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Molarität [mol/L] ≠ Osmolarität [mosmol/L]: Osmolarität = c × i × 1000 (van't-Hoff-Faktor beachten!)
 - Van't-Hoff-Faktor: NaCl → i = 2; CaCl₂ → i = 3; Glukose → i = 1 (dissoziiert nicht)
 - Formel: n = m/M (mol = g ÷ g/mol) — nicht m = M/n!
@@ -1080,7 +1165,7 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
 - Verdünnungsformel: c₁ × V₁ = c₂ × V₂ (Stoffmenge bleibt konstant)
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **1 u** (atomare Masseneinheit) = 1/12 der Masse von ¹²C; Proton ≈ Neutron ≈ 1 u; Elektron vernachlässigbar (~1/2000 Protonmasse)
 - **Molare Masse M** [g/mol]: numerisch gleich der relativen Atommasse; M(H₂O) = 18 g/mol, M(NaCl) = 58,4 g/mol, M(Glukose) = 180 g/mol
@@ -1331,12 +1416,17 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welche Voraussetzung hat ein H-Brücken-Donor?" → X–H mit X = N, O oder F (Donor gibt H); Akzeptor = freies e⁻-Paar von Y ∈ {N, O, F}
 - "Warum siedet H₂O bei 100 °C, H₂S bei −60 °C?" → H₂O bildet H-Brücken (O elektronegativer), H₂S nicht (S zu wenig elektronegativ)
 - "Wie viele H-Brücken bildet das Basenpaar G–C?" → 3 (A–T bildet 2)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - London-Kräfte existieren in ALLEN Molekülen (auch in polaren), nicht nur in unpolaren
 - Denaturierung durch Hitze zerstört nicht-kovalente Wechselwirkungen (H-Brücken, hydrophob, ionisch) — kovalente Peptidbindungen bleiben intakt!
 - H-Brücken-Donor (gibt H) ≠ Akzeptor (nimmt H auf mit freiem e⁻-Paar)
@@ -1347,7 +1437,7 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
 - PCR-Denaturierung: 94–98 °C bricht H-Brücken in DNA auf; kovalente Phosphodiesterbindungen bleiben intakt
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Van-der-Waals-Kräfte** (3 Typen): London (alle Moleküle, ∝ Molmasse), Keesom (Dipol–Dipol), Debye (Dipol–induzierter Dipol)
 - Stärkeranking: Ionenbindung > kovalent > **Wasserstoffbrücke** (10–40 kJ/mol) > Dipol–Dipol > London
@@ -1648,12 +1738,17 @@ Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechne
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Was passiert, wenn Erythrozyten in destilliertes Wasser gegeben werden?" → Hämolyse (hypotone Lösung → Wasser strömt ins Zellinnere → Zelle platzt)
 - "Osmolarität von 0,5 mol/L CaCl₂?" → 0,5 × 3 × 1000 = 1500 mosmol/L (CaCl₂ → Ca²⁺ + 2 Cl⁻, i = 3)
 - "Warum bilden sich Ödeme bei Hypoalbuminämie?" → Sinkt onkotischer Druck → hydrostatischer Druck überwiegt → Wasser aus Kapillaren ins Interstitium
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Osmose: Wasser wandert von niedrigerer zu höherer Teilchenkonzentration (= von niedrigem zu hohem osmotischem Druck) — NICHT umgekehrt!
 - Hypoton (<270 mosmol/L) → Hämolyse; Hyperton (>310 mosmol/L) → Crenation (Schrumpfen)
 - Onkotischer Druck ≠ osmotischer Druck: onkotisch = durch Makromoleküle (Albumin), die Membran nicht passieren können
@@ -1665,7 +1760,7 @@ Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechne
 - Albumin: ≈ 25 mmHg onkotischer Druck; Hypoalbuminämie → Ödeme (nephrotisches Syndrom, Leberzirrhose)
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **"Similia similibus solvuntur"**: Polar löst polar (Wasser → Ionen, OH-Gruppen); unpolar löst unpolar (Hexan → Fette, Steroide)
 - **Amphiphile Moleküle** (Phospholipide, Detergenzien, Gallensäuren): polarer Kopf + unpolarer Schwanz → Mizellen in Wasser
@@ -1978,12 +2073,17 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welcher Phasenübergang ist exotherm?" → Kondensation, Erstarren, Desublimation (Übergänge zu geordneterem Zustand geben Energie ab)
 - "Warum siedet Wasser im Gebirge bei 90 °C statt 100 °C?" → Niedrigerer Luftdruck → Dampfdruck erreicht Außendruck bei niedrigerer Temperatur
 - "Woran erkennt man ein Kolloid?" → Tyndall-Effekt: Kolloid streut Licht sichtbar; echte Lösung tut das nicht
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Sublimation (fest→gas) ist ENDOtherm; Desublimation (gas→fest) ist EXOtherm
 - Kolloid (1 nm–1 μm) ≠ echte Lösung (<1 nm, kein Tyndall) ≠ Suspension (>1 μm, sedimentiert)
 - Dampfverbrennung ist schlimmer als Wasserverbrennung gleicher Temperatur, weil Kondensation zusätzlich Verdampfungswärme freisetzt (exotherm)
@@ -1995,7 +2095,7 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
 - Surfactant (DPPC): fehlt bei Frühgeborenen (<34 SSW) → Alveolarkollaps → Atemnotsyndrom (RDS)
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **3 Aggregatzustände**: fest (Gitter, definiertes Volumen), flüssig (Nahordnung, fließfähig), gasförmig (keine Ordnung, kompressibel)
 - Übergänge zu "freierem" Zustand sind **endotherm** (Energie nötig); zu "geordnetem" Zustand sind **exotherm** (Energie frei)
@@ -2317,12 +2417,17 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "In welchem Block steht Calcium (Z=20)?" → s-Block, Gruppe 2 ([Ar]4s²)
 - "Warum hat das PSE 18 Gruppen, aber nur 7 Perioden?" → Gruppen = Valenzelektronentyp (18 Möglichkeiten); Perioden = höchste Hauptquantenzahl n (7 Schalen)
 - "Welche Elektronenkonfiguration hat Schwefel (Gruppe 16, Periode 3)?" → [Ne]3s²3p⁴
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Perioden (horizontal, 7 Stück) ≠ Gruppen (vertikal, 18 Stück) — häufige Verwechslung!
 - p-Block: Gruppenummer = 10 + Valenzelektronen (Gr.17 = 7 VE); s-Block: Gruppenummer = Valenzelektronen (Gr.2 = 2 VE)
 - Cr ([Ar]3d⁵4s¹) und Cu ([Ar]3d¹⁰4s¹) — Ausnahmen vom Aufbauprinzip, regelmäßig geprüft
@@ -2333,7 +2438,7 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
 - Mendelejew (1869): nach Atommasse, Vorhersage unentdeckter Elemente; Moseley (1913): nach Kernladungszahl Z (löst alle Anomalien)
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **PSE**: 7 Perioden (Zeilen, Hauptquantenzahl n), 18 Gruppen (Spalten, Valenzelektronen), 4 Blöcke (s, p, d, f)
 - Perioden-Längen: 2 – 8 – 8 – 18 – 18 – 32 – 32 (Kapazität der Unterschalen)
@@ -2629,12 +2734,17 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welches Element hat die höchste Elektronegativität?" → Fluor (F, EN = 4,0 nach Pauling)
 - "Welchen Bindungscharakter hat O–H (EN(O)=3,44; EN(H)=2,20)?" → ΔEN = 1,24 → polar kovalent (0,4–1,7)
 - "Warum ist IE₁(O) < IE₁(N)?" → Pairing Penalty: O muss 4. 2p-Elektron in besetztes Orbital → Coulomb-Abstoßung → leichter entfernbar
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Höchste EA ≠ höchste EN: Höchste EA = Chlor (349 kJ/mol), nicht Fluor! (Fluors 2p-Orbitale zu beengt → Abstoßung)
 - Atomradius: in Periode ↓ (Z_eff steigt); in Gruppe ↑ (neue Schalen) — NICHT umgekehrt!
 - ΔEN-Grenzen: <0,4 unpolar kovalent; 0,4–1,7 polar kovalent; ≥1,7 ionisch
@@ -2646,7 +2756,7 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
 - C–F-Bindung: ΔEN = 1,45; stabil (~485 kJ/mol), metabolisch resistent → fluorierte Arzneistoffe (Ciprofloxacin, 5-FU, Fluoxetin) haben lange HWZ
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Effektive Kernladung Z_eff** = Z − σ; steigt in Periode (links→rechts), bleibt in Gruppe ähnlich
 - **Atomradius**: in Periode ↓ (Z_eff steigt); in Gruppe ↑ (neue Schalen); Kationen < Neutralatom < Anionen
@@ -2959,12 +3069,17 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welches Halogen ist essenziell für T3/T4?" → Jod (I, Z=53): T3 = 3 I-Atome, T4 = 4 I-Atome; Aufnahme über NIS-Symporter
 - "Welches Übergangsmetall ist Zentralatom in Hämoglobin?" → Eisen (Fe²⁺) — Fe³⁺ (Methämoglobin) bindet kein O₂!
 - "Warum bilden Erdalkalimetalle +2-Ionen?" → 2 Valenzelektronen (ns²) → Abgabe → stabile Edelgaskonfiguration; IE₃ enorm hoch → kein +3-Ion
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Fe²⁺ bindet O₂ in Hämoglobin ≠ Fe³⁺ (Methämoglobin = bindet kein O₂)
 - Alkalimetalle: Reaktivität steigt von Li→Cs (IE sinkt); Halogene: Reaktivität sinkt von F₂→I₂ (IE sinkt in der Gruppe)
 - Na⁺ (extrazellulär, ~140 mmol/L) ≠ K⁺ (intrazellulär, ~150 mmol/L) — Verwechslung gefährlich für Klinik-Fragen!
@@ -2976,7 +3091,7 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
 - Cisplatin (Pt(II)): Guanin-Guanin-DNA-Quervernetzung → Apoptose; Hoden-/Ovarialkarzinom
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Alkalimetalle** (Gr. 1): 1 VE, bilden +1-Ionen; **Na⁺** Hauptkation extrazellulär (140 mmol/L), **K⁺** intrazellulär (~150 mmol/L); Hypo-/Hyperkaliämie → Herzrhythmusstörungen
 - **Erdalkalimetalle** (Gr. 2): 2 VE, bilden +2-Ionen; **Ca²⁺** für Muskelkontraktion, Blutgerinnung, Knochen (99 % als Hydroxyapatit); **Mg²⁺** Kofaktor von >300 Enzymen

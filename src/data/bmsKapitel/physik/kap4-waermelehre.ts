@@ -121,12 +121,17 @@ Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der 
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welche Temperatur in K entspricht 37 °C?" → T[K] = 37 + 273,15 = 310 K
 - "Wie viel Energie braucht man, um 500 g Wasser um 60 K zu erwärmen?" → Q = 0,5 · 4180 · 60 = 125 400 J
 - "Mischtemperatur zweier Wassermengen?" → T_m = (m₁·T₁ + m₂·T₂) / (m₁ + m₂)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Bei Temperaturdifferenzen (ΔT) sind °C und K gleichwertig — bei absoluten Temperaturen in Formeln immer Kelvin!
 - Wärmekapazität c [J/(kg·K)] beschreibt Speichern von Wärme — nicht verwechseln mit Wärmeleitfähigkeit λ [W/(m·K)]
 - Dichteanomalie: Wasser ist bei **4 °C** am dichtesten (nicht bei 0 °C!)
@@ -138,7 +143,7 @@ Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der 
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Temperaturskalen**: T[K] = T[°C] + 273,15; T[°F] = T[°C] · 9/5 + 32; 0 K = absoluter Nullpunkt
 - **Wärmemenge**: Q = m·c·ΔT; c(Wasser) = 4180 J/(kg·K) — höchste natürliche spez. Wärmekapazität
@@ -437,12 +442,17 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Wärmestrom durch Fettschicht: λ = 0,2, A = 0,5 m², ΔT = 4 K, d = 2 cm?" → Q̇ = 0,2 · 0,5 · 4 / 0,02 = 20 W
 - "Wie ändert sich die Strahlungsleistung bei Fieber 37 → 42 °C?" → P ∝ T⁴; (315/310)⁴ ≈ 1,066 → +6,6 %
 - "Bei welcher Wellenlänge strahlt der Mensch maximal?" → λ_max = 2898/310 ≈ 9,4 μm (mittleres Infrarot)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Stefan-Boltzmann: T **unbedingt in Kelvin** einsetzen (nicht °C!)
 - Wärmeleitung (Konduktion) braucht Materialkontakt; **Strahlung** funktioniert auch im Vakuum
 - ε(Menschliche Haut) ≈ 0,97 — fast idealer Schwarzkörper im Infrarot, aber nicht exakt 1
@@ -454,7 +464,7 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Konduktion**: Q̇ = λ·A·ΔT/d [W]; λ(Luft) = 0,025, λ(Wasser) = 0,6, λ(Fett) = 0,2, λ(Knochen) = 0,3 W/(m·K)
 - **Konvektion**: erzwungen (Wind, Blutfluss) effektiver als freie; Kühlung durch Luftbewegung am Körper
@@ -746,12 +756,17 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Carnot-Wirkungsgrad bei T_warm = 600 K, T_kalt = 300 K?" → η = 1 − 300/600 = 50 %
 - "Was passiert bei adiabatischer Kompression?" → T steigt, weil ΔU = W > 0 (Q = 0)
 - "Was passiert bei isochorer Erwärmung?" → W = 0, daher ΔU = Q (gesamte Wärme erhöht innere Energie)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Carnot-Formel: **T immer in Kelvin** — mit °C-Werten liefert die Formel falsche Ergebnisse!
 - 1. Hauptsatz-Vorzeichenkonvention: ΔU = Q + W (W = Arbeit AM System) — oder ΔU = Q − W_System (W = Arbeit DURCH das System); Konvention prüfen!
 - Perpetuum mobile 1. Art (Energie aus nichts) verletzt 1. HS; Perpetuum mobile 2. Art (vollständige Wärme→Arbeit) verletzt 2. HS
@@ -763,7 +778,7 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **0. Hauptsatz**: Thermisches Gleichgewicht ist transitiv — Grundlage der Temperaturmessung
 - **1. Hauptsatz**: ΔU = Q + W (Energieerhaltung); Q > 0 = Wärme zugeführt, W > 0 = Arbeit am System
@@ -1029,12 +1044,17 @@ V₂ = V₁ × T₂/T₁ = 500 × 310/293 = 529 mL. Die eingeatmete Luft expandi
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Gas bei 27 °C und 2 bar, isochor auf 127 °C erhitzt — neuer Druck?" → p₂ = 2 × (400/300) ≈ 2,67 bar
 - "Energie zum Schmelzen von 200 g Eis?" → Q = 0,2 · 334 000 = 66 800 J
 - "Warum siedet Wasser im Autoklav bei 121 °C?" → Außendruck 2 bar verschiebt Siedepunkt nach oben
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Ideales Gasgesetz: **T immer in Kelvin** einsetzen! (27 °C → 300 K, 127 °C → 400 K)
 - Boyle-Mariotte (p·V = const) gilt nur bei **konstanter Temperatur** (isotherm)
 - Latentwärme (Q = m·L): während des Phasenübergangs bleibt T konstant — keine Temperaturänderung!
@@ -1047,7 +1067,7 @@ V₂ = V₁ × T₂/T₁ = 500 × 310/293 = 529 mL. Die eingeatmete Luft expandi
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Ideales Gasgesetz**: pV = nRT; R = 8,314 J/(mol·K); Sonderfälle: Boyle (T=const), Gay-Lussac (V=const), Charles (p=const)
 - **Latentwärme**: Q = m·L; während Phasenübergang konstante Temperatur; L_Schmelz(Eis) = 334 kJ/kg, L_Verdampf(Wasser) = 2260 kJ/kg

@@ -121,13 +121,18 @@ Die mikroskopische Erklärung liefert die **kinetische Gastheorie** (Maxwell, Bo
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Was ergibt pV=nRT umgestellt nach V?" → V = nRT/p (Celsius zuerst in Kelvin umrechnen!)
 - "Welches Volumen hat 1 mol ideales Gas bei STP (0 °C, 1 bar)?" → 22,4 L/mol
 - "Was passiert mit Volumen bei doppeltem Druck, T = const?" → Halbierung (Boyle-Mariotte)
 - "Wie unterscheiden sich R und k_B?" → R gilt pro Mol, k_B gilt pro Teilchen: R = k_B × N_A
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Celsius NIEMALS direkt in pV=nRT einsetzen — immer T[K] = T[°C] + 273,15 zuerst!
 - R (8,314 J/(mol·K)) ≠ k_B (1,381 × 10⁻²³ J/K) ≠ N_A (6,022 × 10²³ mol⁻¹)
 - Van-der-Waals: **a** korrigiert Druck (Anziehungskräfte) — **b** korrigiert Volumen (Eigenvolumen der Moleküle)
@@ -141,7 +146,7 @@ Die mikroskopische Erklärung liefert die **kinetische Gastheorie** (Maxwell, Bo
 - 0 °C = **273,15 K**; absoluter Nullpunkt = 0 K = −273,15 °C
 - 1 atm = **101.325 Pa** = 760 mmHg = 1,013 bar
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **pV = nRT**: p [Pa oder bar], V [L oder m³], n [mol], R = 8,314 J/(mol·K), T [Kelvin!]
 - Herkunft: Boyle-Mariotte (p·V = const bei T,n = const), Charles (V/T = const bei p,n = const), Avogadro (V/n = const bei p,T = const)
@@ -458,13 +463,18 @@ In der Klinik werden Blutgaswerte oft in mmHg angegeben, in der Physiologie häu
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Wie berechnet man den Partialdruck von O₂ in Raumluft?" → 0,21 × 101,3 kPa = 21,2 kPa
 - "Warum ist der alveoläre p(O₂) niedriger als in der Außenluft?" → Wasserdampf (6,27 kPa) + CO₂ verdrängen O₂
 - "Was bewirkt das Henry-Gesetz?" → Mehr Druck → mehr Gas physikalisch gelöst (c = k_H × p)
 - "Was ist Heliox und wofür wird es eingesetzt?" → He/O₂-Gemisch, geringere Dichte → weniger Atemwiderstand bei Obstruktion
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Molenbruch (nᵢ/n_gesamt) ≠ Massenanteil (mᵢ/m_gesamt) — nur Molenbruch für Partialdrücke verwenden!
 - Wasserdampfdruck bei 37 °C = 6,27 kPa IMMER abziehen bei Berechnung alveolarer Partialdrücke
 - Henry-Gesetz beschreibt Gaslöslichkeit (c = k_H·p), nicht Druckverteilung im Gemisch (das ist Dalton)
@@ -482,7 +492,7 @@ In der Klinik werden Blutgaswerte oft in mmHg angegeben, in der Physiologie häu
 | p(CO₂) venös | 6,1 | kPa (46 mmHg) |
 | p(H₂O) bei 37 °C | 6,27 | kPa (47 mmHg) |
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Daltonsches Gesetz**: p_gesamt = Σ pᵢ; pᵢ = xᵢ × p_gesamt (xᵢ = Molenbruch)
 - Luft: 78 % N₂, 21 % O₂, ~0,04 % CO₂; p(O₂) in Raumluft ≈ 21,2 kPa (159 mmHg)
@@ -804,13 +814,18 @@ Der **DLCO-Test** (Transfer-Faktor für CO) ist die wichtigste klinische Messung
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Wie verhält sich die Diffusionsrate von H₂ (2 g/mol) zu O₂ (32 g/mol)?" → r(H₂)/r(O₂) = √(32/2) = 4 — H₂ diffundiert 4× schneller
 - "Warum diffundiert CO₂ in der Lunge 20× schneller als O₂, obwohl es schwerer ist?" → Löslichkeit von CO₂ in Wasser ist 24× höher; D ∝ Löslichkeit/√M
 - "Was misst der DLCO-Test?" → Diffusionskapazität der Lunge; CO als Tracergas (maximaler Gradient garantiert)
 - "Was zeigt ein erniedrigter DLCO?" → Fibrose (dickere Membran d↑) oder Emphysem (weniger Fläche A↓)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Graham's Gesetz: Massenverhältnis muss unter der WURZEL stehen — r ∝ 1/√M, nicht 1/M!
 - Diffusion ≠ Effusion: Diffusion = Transport durch Medium; Effusion = Ausströmen durch Öffnung ins Vakuum (gleiche Formel!)
 - CO₂ in Lunge schneller als O₂ obwohl schwerer → Löslichkeit schlägt Masse (D ∝ α/√M)
@@ -823,7 +838,7 @@ Der **DLCO-Test** (Transfer-Faktor für CO) ist die wichtigste klinische Messung
 - Alveolarfläche: **60–80 m²** (Tennisplatz!); alveolo-kapilläre Membran: **0,3–0,5 μm** dünn
 - DLCO ↓: Fibrose, Emphysem, pulmHypertonie, Anämie; DLCO ↑: Hämorrhagie, Polyzythämie
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Diffusion**: spontaner Transport von hoher → niedriger Konzentration; Antrieb = Entropiezunahme
 - **1. Ficksches Gesetz**: J = −D · (dc/dx); J ∝ Fläche × Gradient / Strecke
@@ -1122,13 +1137,18 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welcher Aggregatzustand hat definiertes Volumen aber keine eigene Form?" → flüssig (Nahordnung, fließfähig)
 - "Warum siedet H₂O bei 100 °C, CH₄ (ähnliche Masse) bei −162 °C?" → H₂O bildet starke Wasserstoffbrücken
 - "Bei welcher Temperatur hat Wasser seine maximale Dichte?" → 3,98 °C (≈ 4 °C)
 - "Was hält einen Metallkristall zusammen?" → delokalisiertes Elektronengas (freie Elektronen)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Ionenkristall (NaCl) leitet Strom NICHT im festen Zustand (Ionen fixiert), wohl aber in Schmelze und Lösung
 - Diamant (Netzwerkkristall) ist extrem hart aber spröde und leitet NICHT; Metall ist duktil und leitet
 - H-Brücken nur zwischen H (gebunden an N, O, F) und freiem Elektronenpaar von N, O, F — NICHT mit C-H!
@@ -1141,7 +1161,7 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
 - Oberflächenspannung Wasser bei 20 °C: **72 mN/m** (sehr hoch durch H-Brücken)
 - Blutviskosität: **3–4 mPa·s** (Wasser: 1 mPa·s) → Polyzythämie/Paraproteinämie erhöht sie
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Aggregatzustände**: fest (Kristallgitter, definiertes V + Form), flüssig (Nahordnung, fließfähig), gasförmig (keine Ordnung, kompressibel), Plasma (ionisiert)
 - Kristalltypen: Ionenkristall (NaCl, hohe Smp.), Molekülkristall (Eis, niedrige Smp.), Netzwerkkristall (Diamant, extrem hart), Metallkristall (leitend, duktil)
@@ -1475,13 +1495,18 @@ Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gege
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welche Phasenübergänge sind endotherm?" → Schmelzen, Verdampfen, Sublimieren (Energie wird zugeführt)
 - "Warum bleibt die Temperatur bei einem Phasenübergang konstant?" → Energie wird für Umordnung der Teilchen genutzt (latente Wärme), nicht für Temperaturerhöhung
 - "Wie viel Energie braucht 1 g Wasser zum Verdampfen?" → 2257 J/g (40,7 kJ/mol) — Verdampfen braucht ~7× mehr Energie als Schmelzen (333 J/g)
 - "Wie berechnet man die Gefrierpunktserniedrigung bei NaCl?" → ΔT_f = K_f × b × i (i = 2 für NaCl)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Phasenübergänge sind KEINE Reaktionen — kein neues Produkt, nur andere Anordnung der Moleküle
 - Verdunstung ≠ Sieden: Verdunstung an der Oberfläche bei jeder T; Sieden = Dampfdruckblasen im Volumen wenn p_Dampf = p_außen
 - Van't-Hoff-Faktor i: Glucose (i = 1), NaCl (i ≈ 2), CaCl₂ (i ≈ 3) — Elektrolyte senken Gefrierpunkt MEHR
@@ -1495,7 +1520,7 @@ Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gege
 - Normaler Gefrierpunkt Blut: ca. **−0,52 °C** (entspricht ~290 mosmol/kg)
 - Schwitzen: 1 L/h Verdunstung → ~**627 W** Wärmeabgabe
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **6 Phasenübergänge**: Schmelzen, Erstarren, Verdampfen, Kondensieren, Sublimieren, Resublimieren; Übergänge zu "freierem" Zustand = **endotherm**
 - Während Phasenübergang: Temperatur konstant (Plateau in Heizkurve) — Energie für Umordnung genutzt

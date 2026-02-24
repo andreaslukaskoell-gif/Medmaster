@@ -162,13 +162,18 @@ Wichtige Eigenschaften:
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Auf wie viele Arten können 5 Medikamente auf einer Ablage angeordnet werden?" → Permutation: 5! = 120
 - "Ein Arzt wählt 3 Tests aus 8 möglichen — wie viele Kombinationen?" → C(8,3) = 56
 - "Wie viele 4-stellige Codes aus Ziffern 1–6 ohne Wiederholung?" → V(6,4) = 6!/2! = 360
 - "Lotto 6 aus 45 (österreichischer Lotto-Sonderfall)?" → C(45,6) = 8.145.060
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Variation vs. Kombination: Wenn "Vorstandswahl mit Vorsitzendem und Stellvertreter" gefragt wird → Variation (Reihenfolge zählt!), nicht Kombination
 - "Ohne Zurücklegen" = ohne Wiederholung; "mit Zurücklegen" = mit Wiederholung — bei Lottofragen explizit angegeben
 - n! im Nenner des Binomialkoeffizienten: k! eliminiert Anordnungen der Auswahl, (n-k)! eliminiert die Anordnungen der Nicht-Auswahl
@@ -191,7 +196,7 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
 **Beispiel 3 — DNA-Codons: Wie viele verschiedene Basentripletts gibt es?**
 4 Basen (A, U/T, G, C), je 3 Positionen, Wiederholung erlaubt, Reihenfolge zählt (AUG ≠ GUA). → Variation mit Wiederholung: V(4,3) = 4³ = **64 mögliche Codons**. Davon codieren 61 für Aminosäuren (3 Stopp-Codons). Mit 20 Aminosäuren → Code ist degeneriert (redundant): im Schnitt 61/20 ≈ 3 Codons pro Aminosäure.
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Permutation** (alle n, geordnet, ohne WH): P = n!; mit WH: P = n!/k₁!·k₂!·...
 - **Variation** (k aus n, geordnet, ohne WH): V = n!/(n−k)!; mit WH: V = nᵏ
@@ -456,12 +461,17 @@ Erwartungswert: μ = 4 · 0,9 = 3,6 (im Schnitt 3,6 korrekte Ergebnisse)
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Wie wahrscheinlich ist mindestens ein Treffer bei 3 Versuchen mit p=0,3?" → Komplement: 1 − 0,7^3 = 1 − 0,343 = 0,657
 - "Würfel: P(keine 6 in 4 Würfen)?" → (5/6)^4 ≈ 0,482
 - "Baumdiagramm: 2 Kugeln aus Urne ohne Zurücklegen — P(beide gleich)?" → Pfadregeln anwenden
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Mit vs. ohne Zurücklegen: ohne Zurücklegen ändern sich die Nenner in jedem Schritt (4/5, dann 3/4, etc.) — kein festes p mehr → keine Binomialverteilung
 - Disjunkt vs. unabhängig verwechseln: Zwei disjunkte Ereignisse (A∩B=∅) mit P(A)>0 und P(B)>0 sind niemals unabhängig, denn wenn A eintritt, kann B nicht eintreten
 - Additionssatz: P(A∩B) vergessen abzuziehen → Überzählung!
@@ -484,7 +494,7 @@ Ein Medikament verursacht pro Dosis mit P = 0,15 eine Nebenwirkung (unabhängig)
 **Beispiel 3 — Binomialverteilung: Impf-Wirksamkeit:**
 Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 geschützt) = C(6,6) · 0,92⁶ · 0,08⁰ = 1 · 0,92⁶ · 1 ≈ 0,92⁶. Rechnung: 0,92² = 0,8464; 0,92³ ≈ 0,7787; 0,92⁶ = (0,92³)² ≈ 0,7787² ≈ **0,606 ≈ 60,6%**. Erwartungswert: μ = 6 · 0,92 = **5,52** geschützte Personen.
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Laplace**: P(A) = günstige/mögliche Ergebnisse; nur wenn alle Ergebnisse gleich wahrscheinlich
 - **Additionssatz**: P(A∪B) = P(A)+P(B)−P(A∩B); bei disjunkten Ereignissen: P(A∩B) = 0
@@ -727,12 +737,17 @@ Das entspricht exakt dem Bayes-Ergebnis — aber visuell viel klarer!
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Gegeben Sensitivität, Spezifität, Prävalenz → berechne PPV oder NPV mittels Vierfeldertafel
 - "In einer Urne sind 4 rote und 6 blaue Kugeln. Eine rote wird gezogen, ohne zurückzulegen. Wie groß ist P(zweite auch rot)?" → Bedingte Wahrscheinlichkeit: P(2.rot | 1.rot) = 3/9 = 1/3
 - Bayes-Anwendung auf Erbkrankheiten: Eltern als Träger bekannt → P(Kind krank)?
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - P(T+|K) ist die Sensitivität; P(K|T+) ist der PPV — diese werden im Alltag ständig verwechselt
 - Bedingte Wahrscheinlichkeit ist nicht symmetrisch: P(A|B) ≠ P(B|A) in der Regel
 - Satz von Bayes: Im Zähler steht P(B|A)·P(A), nicht P(A|B) — die Formel nicht umdrehen
@@ -757,7 +772,7 @@ Prävalenz 0,1% (Allgemeinbevölkerung). ELISA: Sens 99,7%, Spez 99,5%. n = 100.
 **Beispiel 3 — Carrier-Test: P(Carrier | positiver Test) bei CF:**
 A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 · 0,04 + 0,01 · 0,96 = 0,036 + 0,0096 = 0,0456. P(Carrier|T+) = 0,036 / 0,0456 = **0,789 ≈ 79%**. Trotz 99% Spezifität: 1 von 5 positiv Getesteten ist kein Carrier. Bestätigungsdiagnostik (DNA-Analyse) nötig.
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Bedingte Wahrscheinlichkeit**: P(A|B) = P(A∩B)/P(B); "A gegeben B ist eingetreten"
 - **Satz von Bayes**: P(A|B) = P(B|A)·P(A) / P(B); kehrt die Bedingung um
@@ -1068,13 +1083,18 @@ Der **p-Wert** ist die Wahrscheinlichkeit, ein mindestens so extremes Ergebnis z
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Datensatz gegeben → Mittelwert, Median, Modus berechnen
 - Normalverteilung N(μ=170, σ=8): Wie viel Prozent liegen zwischen 162 und 178? → 68% (μ±1σ)
 - Sensitivität aus Vierfeldertafel: TP=45, FN=5, also Sens = 45/50 = 90%
 - p-Wert: "Was bedeutet p=0,03?" → Unter H0 würde dieses extreme Ergebnis nur in 3% der Fälle auftreten → statistisch signifikant
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Mittelwert ≠ Median bei schiefer Verteilung (Ausreißer ziehen nur den Mittelwert)
 - Standardabweichung ≠ Standardfehler (SEM = σ/√n ist kleiner und unterschätzt die Streuung der Rohwerte)
 - Sensitivität und Spezifität sind komplementär zum Fehler: FPR = 1 − Spezifität; FNR = 1 − Sensitivität
@@ -1099,7 +1119,7 @@ Population: N(μ = 90, σ = 12) mg/dL. Patient misst 126 mg/dL. z = (126 − 90)
 **Beispiel 3 — Sens/Spez-Tradeoff: Troponin-Schwellenwert verschieben:**
 Troponin-Test für Herzinfarkt, aktueller Cutoff: Sens = 85%, Spez = 92%. Senkt man den Cutoff (empfindlicher): Sens steigt auf 95%, Spez sinkt auf 80%. In einer Notaufnahme (Prävalenz 10%, n = 1.000): Alter Cutoff: TP = 85, FP = 72, PPV = 85/157 ≈ **54%**. Neuer Cutoff: TP = 95, FP = 180, PPV = 95/275 ≈ **34,5%**. Klinische Entscheidung: höherer Sens-Cutoff in der Notaufnahme (kein Infarkt verpassen), dann Bestätigung mit spezifischerem Test.
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Lagemaße**: Mittelwert x̄ = Σxᵢ/n; Median = mittlerer Wert (bei Ausreißern bevorzugt); Modus = häufigster Wert
 - **Streumaße**: Varianz s² = Σ(xᵢ−x̄)²/(n−1); Standardabweichung s = √s²; IQR = Q3−Q1
@@ -1114,6 +1134,7 @@ Troponin-Test für Herzinfarkt, aktueller Cutoff: Sens = 85%, Spez = 92%. Senkt 
         "Sensitivität, Spezifität, PPV und NPV aus einer Vierfeldertafel berechnen und klinisch interpretieren",
         "Den p-Wert konzeptuell erklären und den Unterschied zu klinischer Bedeutsamkeit benennen",
       ],
+      imageUrl: "/grafik-33-vierfeldertafel.svg",
       sections: [
         {
           heading: "68-95-99,7-Regel — prüfungsrelevant anwenden",

@@ -105,6 +105,11 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Geradengleichung aus 2 Punkten aufstellen (zuerst m, dann b)
 - Nullstelle berechnen: x₀ = −b/m
@@ -112,7 +117,7 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
 - Kalibrierkurve: Konzentration aus Absorption berechnen (Lambert-Beer: A = ε·c·d)
 - Steigung und y-Achsenabschnitt aus einem Graphen ablesen
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Nullstelle linearer Funktion: x₀ = −b/m (NICHT die Mitternachtsformel!)
 - Senkrechte Geraden: m₂ = −1/m₁ (nicht m₂ = −m₁)
 - Steigung m = Δy/Δx: Zähler ist y-Differenz, Nenner x-Differenz (nicht umgekehrt!)
@@ -126,7 +131,7 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Lineare Funktion**: f(x) = m·x + b; m = Steigung (Δy/Δx); b = y-Achsenabschnitt
 - **Steigung**: m > 0 → steigend; m < 0 → fallend; m = 0 → konstant
@@ -362,6 +367,11 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ · x₂ = 28. Systematisch p
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Scheitelpunkt berechnen: xs = −b/(2a), ys = f(xs)
 - Diskriminante bestimmen und Anzahl der Nullstellen ableiten (D > 0 / D = 0 / D < 0)
@@ -369,7 +379,7 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ · x₂ = 28. Systematisch p
 - Aus Scheitelpunktform: Öffnungsrichtung und Maximum/Minimum direkt ablesen
 - Optimale Dosis aus quadratischem Wirkungsmodell (Scheitelpunkt = Optimum)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - a < 0 → Maximum (nicht Minimum!); Parabel öffnet nach UNTEN
 - Scheitelpunktform f(x) = a(x − xs)² + ys: Vorzeichen beachten — (x − 2)² → xs = +2
 - pq-Formel gilt nur für normierte Form (x² + px + q = 0, Koeffizient vor x² muss 1 sein)
@@ -383,7 +393,7 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ · x₂ = 28. Systematisch p
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **f(x) = ax²+bx+c**: a > 0 → Parabel öffnet nach oben (Minimum); a < 0 → nach unten (Maximum)
 - **Scheitelpunktform**: f(x) = a(x−d)²+e; Scheitelpunkt S(d, e); Symmetrieachse x = d
@@ -652,6 +662,11 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Halbwertszeit berechnen: T½ = ln(2)/k ≈ 0,693/k
 - Restmenge nach n Halbwertszeiten: C = C₀ · (½)ⁿ
@@ -659,7 +674,7 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
 - Steady-State-Zeitpunkt: nach 4–5 T½
 - Bakterienanzahl nach gegebener Zeit: N = N₀ · 2^(t/T₂)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Exponentialfunktion erreicht NIEMALS den Wert 0 (nähert sich nur asymptotisch an)
 - Nach 5 T½ verbleiben ca. 3 % — nicht 0 %!
 - Kinetik 1. Ordnung (exponentiell) ≠ Kinetik 0. Ordnung (linear — Beispiel: Ethanol!)
@@ -673,7 +688,7 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Wachstum**: N(t) = N₀·eᵏᵗ (k > 0); **Zerfall**: C(t) = C₀·e⁻ᵏᵗ (k > 0)
 - **Halbwertszeit**: T½ = ln(2)/k ≈ 0,693/k; k = ln(2)/T½; N(t) = N₀·(½)^(t/T½)
@@ -924,6 +939,11 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x · ln(5) = ln(200) → x = ln(200)/l
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - pH-Wert aus [H⁺] berechnen: pH = −log₁₀([H⁺])
 - Henderson-Hasselbalch anwenden: pH = pKₐ + log([A⁻]/[HA])
@@ -931,7 +951,7 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x · ln(5) = ln(200) → x = ln(200)/l
 - Exponentialgleichung lösen durch Logarithmieren beider Seiten
 - Semilog-Plot: Steigung = −k aus ln C-vs-t-Gerade ablesen und T½ berechnen
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - log(0) und log(negativer Zahl) sind NICHT definiert!
 - pH ↑ → [H⁺] ↓ (höherer pH = basischer = weniger Protonen)
 - ln ≠ log: ln hat Basis e, log hat Basis 10
@@ -945,7 +965,7 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x · ln(5) = ln(200) → x = ln(200)/l
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Definition**: log_b(x) = y ↔ bʸ = x; log₁₀ = lg; log_e = ln; log(1) = 0; log(b) = 1
 - **Logarithmengesetze**: log(a·b) = log a+log b; log(a/b) = log a−log b; log(aⁿ) = n·log a
@@ -1225,6 +1245,11 @@ Gegeben: f(x) = eˣ. Wie sieht g(x) = 2·e^(−(x−3)) + 1 aus? Analyse: (1) x�
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Horizontale Asymptote aus Funktionsterm ablesen (Grenzwert x → ±∞)
 - Semilog-Plot: k und T½ aus Steigung berechnen (Steigung = −k; T½ = 0,693/k)
@@ -1232,7 +1257,7 @@ Gegeben: f(x) = eˣ. Wie sieht g(x) = 2·e^(−(x−3)) + 1 aus? Analyse: (1) x�
 - Graphentyp aus Kurvenform erkennen (Gerade = linear, Parabel = quadratisch, S-Kurve = sigmoidal)
 - Graphentransformationen: Verschiebung, Streckung, Spiegelung
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Semilog-Plot: Gerade = Kinetik 1. Ordnung; Kurve = KEINE reine Kinetik 1. Ordnung
 - Michaelis-Menten: v = v_max/2 bei [S] = Km (NICHT bei [S] = v_max/2!)
 - Horizontale Asymptote ist keine Nullstelle — Graph nähert sich an, schneidet sie (meist) nicht
@@ -1246,7 +1271,7 @@ Gegeben: f(x) = eˣ. Wie sieht g(x) = 2·e^(−(x−3)) + 1 aus? Analyse: (1) x�
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Asymptoten**: horizontal (y = c, wenn x → ±∞); vertikal (x = a, wenn f → ∞); schräg (bei Polynomdivision)
 - **Monotonie**: f steigt, wo f' > 0; fällt, wo f' < 0; Extrempunkt, wo f' = 0 und Vorzeichenwechsel

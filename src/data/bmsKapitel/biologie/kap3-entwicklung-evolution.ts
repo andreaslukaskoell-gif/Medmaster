@@ -66,12 +66,17 @@ Die Extrauteringravidität (ektope Schwangerschaft, 95 % im Eileiter) entsteht, 
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Wo findet die Befruchtung statt? (Ampulle des Eileiters)
 - Welche Reaktion verhindert Polyspermie? (Kortikalreaktion)
 - Welches Hormon erhält das Corpus luteum in der Frühschwangerschaft? (hCG)
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Akrosomreaktion (Spermium, Enzymfreisetzung) vs. Kortikalreaktion (Eizelle, Polyspermie-Block)
 - Trophoblast (→ Plazenta, hCG) vs. Embryoblast (→ Embryo)
 - Morula (Tag 3–4, kompakter Zellhaufen) vs. Blastozyste (Tag 5–6, Hohlraum mit ICM)
@@ -87,7 +92,7 @@ Die Extrauteringravidität (ektope Schwangerschaft, 95 % im Eileiter) entsteht, 
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - Befruchtung findet in der **Ampulle des Eileiters** statt — nicht im Uterus
 - **Kapazitation** (~7 h): biochemische Reifung der Samenzelle im weiblichen Genitaltrakt → notwendige Voraussetzung für die Akrosomreaktion
@@ -283,12 +288,17 @@ Neuralrohrdefekte (Spina bifida, Anenzephalie) entstehen, wenn der posteriore od
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Aus welchem Keimblatt entstehen Gehirn und Rückenmark? (Ektoderm, via Neurulation)
 - Welche Organe sind Mesoderm-Derivate? (Muskel, Knochen, Herz, Niere, Gonaden)
 - Was induziert die Neuralplattenbildung? (Notochord via Sonic Hedgehog)
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Ektoderm (Epidermis + Nervensystem) vs. Endoderm (Darmepithel + Drüsen) — Epidermis ist NICHT Endoderm
 - Neuralleiste (Ektoderm-Derivat!) vs. Mesoderm — Melanozyten und Nebennierenmark stammen von der Neuralleiste
 - Primitivstreifen (Gastrulation, Keimblattbildung) vs. Neuralrinne (Neurulation, ZNS-Anlage)
@@ -304,7 +314,7 @@ Neuralrohrdefekte (Spina bifida, Anenzephalie) entstehen, wenn der posteriore od
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Gastrulation** (3. Woche, Tag 15–21): Epiblastzellen wandern durch den **Primitivstreifen** ein → alle drei Keimblätter entstehen aus dem Epiblast
 - **Ektoderm** → Epidermis, ZNS (Neuralrohr), Sinnesorgane, Zahnschmelz
@@ -486,12 +496,17 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Wann endet die Embryonalperiode? (Nach Woche 8, alle Organe angelegt)
 - Was besagt das Alles-oder-Nichts-Prinzip? (Woche 1–2: Fruchttod oder normale Entwicklung)
 - Ab wann produzieren Typ-II-Pneumozyten Surfactant? (Ab Woche 24)
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Embryonalperiode (Organogenese, Wochen 1–8) vs. Fetalperiode (Wachstum/Reifung, ab Woche 9)
 - Alles-oder-Nichts-Prinzip (nur Woche 1–2!) vs. kritische Perioden (ab Woche 3, organspezifisch)
 - SSL (Scheitel-Steiß-Länge, Maß in Embryonalperiode) vs. BPD (Biparietaler Durchmesser, Fetalperiode)
@@ -507,7 +522,7 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Embryonalperiode** (Wochen 1–8): Organogenese — alle Organe werden angelegt; höchste Empfindlichkeit gegenüber Teratogenen
 - **Fetalperiode** (ab Woche 9): Wachstum und Reifung der angelegten Organe; keine neue Organanlage
@@ -681,12 +696,17 @@ Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren 
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Welches Blut führt die Nabelvene? (Sauerstoffreiches Blut zum Fötus)
 - Wie gelangt IgG von Mutter zu Kind? (Transzytose via FcRn-Rezeptoren)
 - Was ist der fetale Anteil der Plazenta? (Chorion frondosum / Chorionzotten)
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Nabelarterie (O₂-arm, VOM Kind) vs. Nabelvene (O₂-reich, ZUM Kind) — umgekehrt zur systemischen Konvention
 - Chorion frondosum (fetaler Anteil) vs. Decidua basalis (mütterlicher Anteil) — häufig vertauscht
 - Synzytiotrophoblast (mehrkernig, invasiv, hCG) vs. Zytotrophoblast (Stammzellschicht, Langhan-Zellen)
@@ -702,7 +722,7 @@ Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren 
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - Plazenta: **fetaler Anteil** = Chorion frondosum (Chorionzotten); **mütterlicher Anteil** = Decidua basalis
 - Mütterliches und fetales Blut mischen sich **niemals direkt** — Austausch über Plazentaschranke (Synzytiotrophoblast) in intervillösen Räumen
@@ -897,12 +917,17 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Was bewies das Miller-Urey-Experiment? (Abiotische Synthese von Aminosäuren aus anorganischen Gasen)
 - Warum löst die RNA-Welt-Hypothese das Henne-Ei-Problem? (RNA speichert Information UND katalysiert)
 - Nennen Sie drei Belege für die Endosymbiontentheorie (eigenes Genom, 70S-Ribosomen, Doppelmembran)
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Miller-Urey bewies NICHT die Entstehung von Leben, sondern die abiotische Synthese organischer Moleküle
 - 70S-Ribosomen (Mitochondrien, Bakterien) vs. 80S-Ribosomen (eukaryotisches Zytoplasma)
 - RNA-Welt (RNA als erstes Molekül) vs. Panspermie (Leben aus dem Weltall) — verschiedene Konzepte
@@ -918,7 +943,7 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Miller-Urey** (1953): CH₄ + NH₃ + H₂ + H₂O + elektrische Entladungen → Aminosäuren → abiotische Entstehung organischer Moleküle ist möglich
 - **RNA-Welt-Hypothese**: RNA kann als **Ribozym** Informationen speichern UND Reaktionen katalysieren → löst das Henne-Ei-Problem zwischen DNA und Protein
@@ -1115,12 +1140,17 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Was ist der Unterschied zwischen Homologie und Analogie? (Gemeinsamer Ursprung vs. konvergente Evolution)
 - Was ist ein Clade? (Monophyletische Gruppe: gemeinsamer Vorfahre + ALLE Nachkommen)
 - Was misst die molekulare Uhr? (Akkumulation neutraler Mutationen zur Datierung von Divergenzereignissen)
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Homologie (gleicher Ursprung, evtl. verschiedene Funktion) vs. Analogie (verschiedener Ursprung, gleiche Funktion)
 - Vogelflügel + Menschenarm = homolog (Wirbeltier-Vorderextremität); Vogelflügel + Insektenflügel = analog
 - Monophyletisch (Clade: Vorfahre + ALLE Nachkommen) vs. paraphyletisch (nicht alle Nachkommen eingeschlossen)
@@ -1136,7 +1166,7 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Homologie**: gleicher evolutionärer Ursprung, ggf. verschiedene Funktion (Beispiel: Menschenarm, Walflosse, Vogelflügel = homologe Vorderextremitäten)
 - **Analogie**: verschiedener Ursprung, gleiche Funktion durch **konvergente Evolution** (Beispiel: Vogelflügel vs. Insektenflügel)
@@ -1339,6 +1369,11 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Was sind Darwins vier Voraussetzungen für natürliche Selektion? (Variation, Erblichkeit, Überproduktion, Differentialreproduktion)
 - Was bedeutet Fitness in der Evolutionsbiologie? (Reproduktiver Erfolg, NICHT physische Stärke)
@@ -1350,7 +1385,7 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
 | Gerichtet | Mittelwert verschiebt sich | Ein Extrem | Antibiotikaresistenz (MRSA) |
 | Disruptiv | Verteilung spaltet sich | Beide Extreme | Schnabelgröße (2 Nischen) |
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Fitness = reproduktiver Erfolg, NICHT physische Kraft oder Überlebensrate
 - Stabilisierende Selektion (Mittelwert bleibt) vs. gerichtete Selektion (Mittelwert verschiebt sich) vs. disruptive Selektion (Extreme bevorzugt)
 - Intrasexuelle Selektion (Konkurrenz innerhalb eines Geschlechts) vs. intersexuelle Selektion (Partnerwahl durch das andere Geschlecht)
@@ -1366,7 +1401,7 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - Darwins **4 Kernprinzipien**: Variation (vererbbar) + Überproduktion (mehr Nachkommen als möglich überleben) + Differentialreproduktion → **natürliche Selektion**
 - **Fitness** = reproduktiver Erfolg (nicht körperliche Stärke); wer mehr überlebensfähige Nachkommen hat, ist fitter
@@ -1561,6 +1596,11 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Was besagt der biologische Artbegriff? (Reproduktionsgemeinschaft + reproduktive Isolation)
 - Warum ist das Maultier steril? (Postzygotische Isolation durch Hybridsterilität; Pferd 64 + Esel 62 Chromosomen → Meiose-Probleme)
@@ -1574,7 +1614,7 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
 | Häufigkeit | Häufigster Modus | Selten bei Tieren |
 | Beispiel | Darwin-Finken (Galapagos) | Weizen (6n = 42) |
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Präzygotisch (vor Befruchtung: geografisch, zeitlich, Verhalten, mechanisch) vs. postzygotisch (nach Befruchtung: Hybridsterilität, -lethalität)
 - Allopatrisch (geografische Barriere → Divergenz) vs. sympatrisch (im selben Gebiet, v. a. Polyploidie)
 - Autopolyploidie (Verdoppelung innerhalb einer Art) vs. Allopolyploidie (Hybridisierung zwischen Arten + Verdoppelung)
@@ -1590,7 +1630,7 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Biologischer Artbegriff** (Ernst Mayr): Populationen, die sich tatsächlich oder potenziell untereinander fortpflanzen und von anderen reproduktiv isoliert sind; Grenzen: nicht anwendbar auf asexuelle Organismen oder Fossilien
 - **Präzygotische Isolation** (vor Befruchtung): geografisch, zeitlich (Blütezeit), Verhaltens- (Balzritual), mechanisch (Genitalien passen nicht)
@@ -1778,6 +1818,11 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Welcher Evolutionsfaktor dominiert in kleinen Populationen? (Gendrift)
 - Was besagt das Hardy-Weinberg-Gleichgewicht? (p² + 2pq + q² = 1; keine Evolution bei idealen Bedingungen)
@@ -1790,7 +1835,7 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
 | Gendrift | Zufällige Frequenzänderung | Nein | Sehr stark |
 | Genfluss | Homogenisierung | Nein | Stark (wirkt gegen Divergenz) |
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Flaschenhals (bestehende große Population wird durch Katastrophe reduziert) vs. Gründereffekt (kleine Gruppe gründet neue Population)
 - Gendrift (zufällig, ungerichtet, stark in kleinen Populationen) vs. Selektion (gerichtet, stärker in großen Populationen)
 - Genfluss (homogenisiert Populationen, wirkt gegen Artbildung) vs. Gendrift (führt zu Divergenz)
@@ -1806,7 +1851,7 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **4 Evolutionsfaktoren**: Mutation (Rohstoff neuer Varianten), Selektion (gerichtet, fitnessbezogen), **Gendrift** (zufällig, stark in kleinen Populationen), Genfluss (homogenisierend zwischen Populationen)
 - **Flaschenhals-Effekt**: bestehende Population wird drastisch reduziert → zufälliger Verlust genetischer Vielfalt
@@ -1988,12 +2033,17 @@ Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderth
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - In welcher Reihenfolge erschienen die Homininen? (Australopithecus → H. habilis → H. erectus → H. sapiens)
 - Was evolvierte zuerst: aufrechter Gang oder großes Gehirn? (Bipedie vor Gehirnvergrößerung)
 - Wie viel Neanderthaler-DNA tragen moderne Nicht-Afrikaner? (1–4 %)
 
-**Typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Neanderthaler sind NICHT Vorfahren des modernen Menschen, sondern eine eigenständige, parallel existierende Art
 - Bipedie evolvierte VOR der Gehirnvergrößerung (Australopithecus: aufrecht, aber kleines Gehirn)
 - Homo erectus (erster Auswanderer aus Afrika, ~1,8 Mya) vs. Homo sapiens (Out-of-Africa ~60.000–70.000 Jahre)
@@ -2009,7 +2059,7 @@ Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderth
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Bipedie ging der Gehirnvergrößerung voraus** — erster evolutionärer Schritt der Hominisation
 - **Australopithecus afarensis** (Lucy, ~3,2 Mya): bereits bipede, Hirnvolumen ~450 ccm (schimpansenähnlich)

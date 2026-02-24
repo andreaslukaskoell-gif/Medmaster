@@ -123,6 +123,11 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Betrag eines 2D- oder 3D-Vektors berechnen (Pythagoras-Formel anwenden)
 - Einheitsvektor bestimmen: Vektor durch seinen Betrag dividieren
@@ -130,7 +135,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
 - Lineare Abhängigkeit prüfen: Ist $\\vec{b} = k \\cdot \\vec{a}$ für ein skalares $k$?
 - Verbindungsvektor und Abstand zweier Punkte berechnen
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Skalar ≠ Vektor: Temperatur, Energie, Masse = Skalare; Kraft, Geschwindigkeit, Verschiebung = Vektoren
 - Betrag ≠ Komponentensumme: $|\\vec{v}| = \\sqrt{v_1^2+v_2^2}$, NICHT $v_1+v_2$
 - Verbindungsvektor: **immer Ziel minus Start** ($\\vec{AB} = B - A$, nicht $A - B$)
@@ -143,7 +148,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Vektor**: gerichtete Größe (Betrag + Richtung); Skalar: nur Betrag; Notation: **a** = (a₁, a₂, a₃)
 - **Betrag**: |**a**| = √(a₁²+a₂²+a₃²); **Einheitsvektor**: **e** = **a**/|**a**| (Betrag = 1)
@@ -446,6 +451,11 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Skalarprodukt berechnen und Orthogonalität prüfen: $\\vec{a} \\cdot \\vec{b} = 0$?
 - Winkel zwischen zwei Vektoren: $\\cos\\theta = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|}$ — dann $\\arccos$ anwenden
@@ -453,7 +463,7 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
 - Betrag des Kreuzprodukts als Parallelogrammfläche interpretieren
 - Drehmoment: $|\\vec{M}| = |\\vec{r}| \\cdot |\\vec{F}| \\cdot \\sin\\theta$; maximal bei $\\theta = 90°$
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Skalarprodukt liefert **Skalar** (keine Richtung); Kreuzprodukt liefert **Vektor** (mit Richtung)
 - Kreuzprodukt ist **antikommutativ**: $\\vec{a}\\times\\vec{b} = -(\\vec{b}\\times\\vec{a})$ — Reihenfolge kritisch!
 - Kreuzprodukt nur im $\\mathbb{R}^3$ definiert — nicht im $\\mathbb{R}^2$!
@@ -467,7 +477,7 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Skalarprodukt**: **a**·**b** = a₁b₁+a₂b₂+a₃b₃ = |**a**|·|**b**|·cos φ; Ergebnis ist Skalar
 - **Orthogonalität**: **a**⊥**b** ↔ **a**·**b** = 0; Winkelberechnung: cos φ = (**a**·**b**)/(|**a**|·|**b**|)
@@ -794,6 +804,11 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Normalenvektor aus Koordinatenform direkt ablesen: $ax+by+cz=d$ → $\\vec{n}=(a,b,c)$
 - Determinante einer 2×2-Matrix berechnen: $\\det = ad - bc$
@@ -801,7 +816,7 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
 - Dimensionsregel bei Matrizenmultiplikation: $(m\\times n) \\cdot (n\\times p) = (m\\times p)$
 - Inverse 2×2-Matrix berechnen (Hauptdiag. tauschen, Nebendiag. negieren, durch det dividieren)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Determinante $= 0$ → Matrix ist **singulär** (keine Inverse, kein eindeutiges LGS) — bei det $\\neq 0$ ist sie regulär
 - Matrizenmultiplikation ist **nicht kommutativ**: $A \\cdot B \\neq B \\cdot A$ im Allgemeinen
 - Normalenvektor steht **senkrecht** auf der Ebene — er liegt nicht in der Ebene!
@@ -814,7 +829,7 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Geradengleichung** (Parameterform): **x** = **p** + t·**v**; p = Stützpunkt; v = Richtungsvektor; t ∈ ℝ
 - **Ebenengleichung**: Normalenform **n**·(**x**−**p**) = 0; Koordinatenform ax+by+cz = d; Parameterform
@@ -1136,13 +1151,18 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - Punkt-Ebene-Abstand mit der Hesseschen Normalform berechnen (4-Schritte-Vorgehen)
 - Euklidische Distanz zweier 3D-Punkte (verallgemeinerter Pythagoras)
 - Lagebeziehung zweier Geraden bestimmen: parallel / identisch / schneidend / windschief
 - Schnittwinkel zweier Geraden oder zweier Ebenen berechnen
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Gerade–Ebene-Winkel: **sin** verwenden ($\\sin\\alpha = \\frac{|\\vec{d}\\cdot\\vec{n}|}{|\\vec{d}||\\vec{n}|}$), NICHT cos!
 - Gerade–Gerade und Ebene–Ebene: **cos** mit Richtungsvektoren bzw. Normalenvektoren
 - Windschief gibt es nur im $\\mathbb{R}^3$ — in der Ebene ($\\mathbb{R}^2$) schneiden sich nicht-parallele Geraden immer
@@ -1155,7 +1175,7 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Punkt-Punkt**: d = |**b**−**a**| = √((b₁−a₁)²+(b₂−a₂)²+(b₃−a₃)²)
 - **Punkt-Gerade**: d = |(**a**−**p**)×**v**|/|**v**|; Kreuzprodukt des Verbindungsvektors mit Richtungsvektor

@@ -127,12 +127,17 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Löse 3x − 7 = 2(x + 1)" → 3x − 7 = 2x + 2, also x = 9
 - "Welche Lösungen hat x² − 5x + 6 = 0?" → Vieta: Summe 5, Produkt 6 → x₁ = 2, x₂ = 3
 - "Für welche x gilt −2x + 4 > 10?" → −2x > 6, Vorzeichen dreht um → x < −3
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Ungleichung: Division durch negative Zahl → Zeichen UMKEHREN (−2x > 6 → x < −3, nicht x > −3)
 - Diskriminante: D = b² − 4ac, NICHT b² − 2ac
 - Gleichungssystem: Ergebnis in BEIDE Gleichungen als Probe einsetzen
@@ -144,7 +149,7 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Lineare Gleichung**: ax + b = 0 → x = −b/a; Äquivalenzumformungen: beidseitig +/−/×/÷
 - **Gleichungssystem**: Substitution (eine Variable ersetzen) oder Elimination (Gleichungen addieren/subtrahieren)
@@ -423,12 +428,17 @@ Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "32 sind X% von 400?" → p = 32/400 × 100 = 8%
 - "Hämatokrit sinkt von 42% auf 28% — wie viel % relativer Rückgang?" → (42−28)/42 × 100 = 33,3%
 - "Serumverdünnung 1:100 zeigt Titer 50 AU/mL — Originaltiter?" → 50 × 100 = 5000 AU/mL
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Prozentpunkte ≠ relative Änderung: Von 40% auf 30% sind 10 Prozentpunkte, aber 25% relative Senkung
 - Direkter vs. indirekter Dreisatz: Mehr Helfer → weniger Zeit (indirekt!), nicht mehr Zeit
 - NNT aus Prozent berechnen: ARR erst in Dezimalzahl umrechnen (3% → 0,03), dann NNT = 1/0,03 = 33
@@ -440,7 +450,7 @@ Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Prozentrechnung**: P% = W/G×100; Prozentwert W = G×P/100; Grundwert G = W×100/P
 - **ARR**: Absoluter Risikountersch. = R_Kontrolle − R_Behandlung; **RRR** = ARR/R_Kontrolle; **NNT** = 1/ARR
@@ -709,12 +719,17 @@ Wirksamkeit E(d) = minus 0,5 d hoch zwei + 10d minus 12 (d = Dosis in mg). Schei
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "(x + 4)² = ?" → x² + 8x + 16 (mittlerer Term 2·x·4 = 8x nicht vergessen!)
 - "Faktorisiere x² − 36" → (x+6)(x−6) — dritte binomische Formel rückwärts
 - "Scheitelpunkt von f(x) = x² − 4x + 7?" → x_S = −(−4)/(2·1) = 2, y_S = f(2) = 4−8+7 = 3
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - (a+b)² ≠ a² + b² — der mittlere Term 2ab wird häufig vergessen!
 - Vieta-Summe: x₁+x₂ = −p (MINUS p!), nicht +p, für x² + px + q = 0
 - Scheitelpunkt: x_S = −b/(2a), NICHT b/(2a) — das Minuszeichen gilt immer
@@ -726,7 +741,7 @@ Wirksamkeit E(d) = minus 0,5 d hoch zwei + 10d minus 12 (d = Dosis in mg). Schei
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Binomische Formeln**: (a+b)² = a²+2ab+b²; (a−b)² = a²−2ab+b²; (a+b)(a−b) = a²−b²
 - **pq-Formel**: x² + px + q = 0 → x = −p/2 ± √(p²/4 − q); Diskriminante D = p²/4 − q
@@ -1030,12 +1045,17 @@ Blut-pH 7,40: [H+] = 10 hoch (minus 7,40) = **3,98 mal 10 hoch (minus 8) mol/L**
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Was ist 8^(2/3)?" → (∛8)² = 2² = 4
 - "Welchen pH hat [H⁺] = 10⁻⁵ mol/L?" → pH = −log(10⁻⁵) = 5
 - "Nach 3 Halbwertszeiten: wie viel % verbleiben?" → (½)³ = 1/8 = 12,5%
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - (aⁿ)ᵐ = aⁿˣᵐ (Multiplikation der Exponenten!), NICHT aⁿ⁺ᵐ
 - a⁻ⁿ = 1/aⁿ, NICHT −aⁿ
 - √(a+b) ≠ √a + √b — häufigster Wurzelfehler!
@@ -1047,7 +1067,7 @@ Blut-pH 7,40: [H+] = 10 hoch (minus 7,40) = **3,98 mal 10 hoch (minus 8) mol/L**
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Potenzgesetze**: aᵐ·aⁿ = aᵐ⁺ⁿ; aᵐ/aⁿ = aᵐ⁻ⁿ; (aᵐ)ⁿ = aᵐⁿ; a⁰ = 1; a⁻ⁿ = 1/aⁿ; a^(1/n) = ⁿ√a
 - **Logarithmus**: log(a·b) = log a + log b; log(a/b) = log a − log b; log(aⁿ) = n·log a
@@ -1316,12 +1336,17 @@ Koronararterie: Außendurchmesser 4 mm (R = 2 mm), Wanddicke 0,5 mm (r = 1,5 mm)
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Kreisförmige Verbrennung Ø 12 cm — Anteil an BSA 1,8 m²?" → A = π·36 ≈ 113 cm² = 0,0113 m² → ~0,63% KOF
 - "Tumor wächst von r = 1 cm auf r = 1,5 cm — Flächenzunahme?" → k = 1,5; Fläche × k² = 2,25 → +125%
 - "Dreieck: a=5, b=7, c=8 cm — Fläche?" → s=10, A = √(10·5·3·2) = √300 ≈ 17,3 cm²
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Kreisfläche A = π·r² (r im Quadrat!), Kreisumfang U = 2·π·r (r linear) — nicht vertauschen
 - Parallelogramm-Höhe ≠ Schrägseite — h ist die SENKRECHTE Höhe
 - Ähnlichkeit: Flächen skalieren mit k², nicht k (k=2 → Fläche ×4, nicht ×2)
@@ -1333,7 +1358,7 @@ Koronararterie: Außendurchmesser 4 mm (R = 2 mm), Wanddicke 0,5 mm (r = 1,5 mm)
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Rechteck**: A = a·b; U = 2(a+b); **Dreieck**: A = ½·g·h; **Heron**: A = √(s·(s−a)·(s−b)·(s−c)); s = (a+b+c)/2
 - **Kreis**: A = π·r²; U = 2π·r; **Kreisring**: A = π(R²−r²); **Trapez**: A = ½·(a+c)·h
@@ -1603,12 +1628,17 @@ Zylindrische Kapsel: r = 0,4 cm, h = 1,5 cm. V_Zyl = π · 0,16 · 1,5 = 0,24π 
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Zyste mit Ø 4 cm — Volumen?" → r = 2, V = (4/3)·π·8 ≈ 33,5 mL
 - "70%-Stenose (Radius auf 30%) — Flussreduktion?" → 0,3⁴ = 0,0081 → auf ~0,8% des Normalflusses
 - "Tumor 3×4×5 cm (Ellipsoid) — Volumen?" → 0,524·60 ≈ 31,4 cm³
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Kegel: V = ⅓·π·r²·h (DRITTEL, nicht ½!); Pyramide: V = ⅓·A_G·h
 - Hagen-Poiseuille: Fluss ~ r⁴, NICHT ~ r² (r² wäre nur der Querschnitt)
 - Mantelfläche Zylinder: M = 2πr·h (ohne Grundkreise); Gesamtoberfläche: O = 2πr(r+h)
@@ -1620,7 +1650,7 @@ Zylindrische Kapsel: r = 0,4 cm, h = 1,5 cm. V_Zyl = π · 0,16 · 1,5 = 0,24π 
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Quader**: V = l·b·h; O = 2(lb+lh+bh); **Zylinder**: V = π·r²·h; M = 2π·r·h; **Kegel**: V = ⅓π·r²·h; M = π·r·s
 - **Kugel**: V = (4/3)π·r³; O = 4π·r²; O/V-Verhältnis = 3/r (je kleiner r, desto effizienter der Stoffaustausch)
@@ -1915,12 +1945,17 @@ g₁: y = ¾x + 2. Parallele Gerade durch P(4, 1): y = ¾x + b. Einsetzen: 1 = �
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Geradengleichung durch P(2,3) und P(6,11)?" → m = (11−3)/(6−2) = 2; b = 3−4 = −1 → y = 2x−1
 - "Schnittpunkt y=2x+1 und y=−x+7?" → 3x = 6, x = 2, y = 5 → Schnittpunkt (2, 5)
 - "Sind y = 3x+1 und y = −⅓x+5 senkrecht?" → 3·(−1/3) = −1 → ja!
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Kreisgleichung: (x−x₀)²+(y−y₀)² = r² — rechts steht r² (nicht r); Mittelpunkt bei (x+2)² ist x₀ = −2!
 - Parallele Geraden: gleiche Steigung, VERSCHIEDENER y-Abschnitt — kein Schnittpunkt
 - arctan: Bereich nur −90° bis +90° → im II./III. Quadranten +180° addieren
@@ -1932,7 +1967,7 @@ g₁: y = ¾x + 2. Parallele Gerade durch P(4, 1): y = ¾x + b. Einsetzen: 1 = �
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Kartesische Koordinaten**: Punkt P(x,y); Abstand d = √((x₂−x₁)²+(y₂−y₁)²); Mittelpunkt M = ((x₁+x₂)/2, (y₁+y₂)/2)
 - **Geradengleichung**: y = m·x + b; m = Steigung (Δy/Δx); b = y-Achsenabschnitt; Schnittpunkt: Gleichungssystem
@@ -2226,12 +2261,17 @@ Resektionsebene: 2x − y + 2z = 10. Tumorzentrum bei T(3, 2, 4). Abstand: |2·3
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Skalarprodukt a=(1,2,3) und b=(4,0,−2)?" → 4+0−6 = −2
 - "Sind a=(2,1) und b=(−1,2) senkrecht?" → 2·(−1)+1·2 = 0 → ja!
 - "Drehmoment: F=200N, r=6cm, θ=90°?" → |M| = 0,06·200·sin90° = 12 N·m
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Skalarprodukt = Zahl (Skalar!), Kreuzprodukt = Vektor — nicht verwechseln
 - Kreuzprodukt: a×b ≠ b×a (antikommutativ!) — Richtung kehrt sich um
 - EKG-Herzachse: Linkstyp = NEGATIVER Winkel (< 0°), Rechtstyp > +90°
@@ -2243,7 +2283,7 @@ Resektionsebene: 2x − y + 2z = 10. Tumorzentrum bei T(3, 2, 4). Abstand: |2·3
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Vektor**: Größe mit Betrag und Richtung; |v| = √(x²+y²+z²); Einheitsvektor e = v/|v|
 - **Addition/Subtraktion**: komponentenweise; geometrisch: Parallelogramm- oder Dreiecksregel

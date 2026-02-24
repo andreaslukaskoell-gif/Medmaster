@@ -139,13 +139,18 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
 ---
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Wie ändert sich T beim Fadenpendel, wenn die Länge vervierfacht wird?" → T verdoppelt sich (T ∝ √l; √4 = 2)
 - "Bei welcher Auslenkung sind E_kin und E_pot gleich?" → x = A/√2 ≈ 0,707·A
 - "Wovon hängt die Periodendauer des Fadenpendels ab?" → nur von l und g (nicht von Masse oder Amplitude)
 - "Was ist Resonanz?" → Anregungsfrequenz = Eigenfrequenz → maximale Amplitudenzunahme
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - ω = 2πf (Kreisfrequenz, rad/s) ≠ f = 1/T (normale Frequenz, Hz) — beides beschreibt die Schwingungsrate, aber in verschiedenen Einheiten
 - E_ges ∝ A² (nicht ∝ A): doppelte Amplitude → **viermal** mehr Energie
 - Fadenpendel: T unabhängig von Masse; Federpendel: T abhängig von Masse — aber beide zeigen Isochronie
@@ -158,7 +163,7 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
 - MRT-Resonanzfrequenz: f = γ·B₀; ¹H bei 1,5 T → f ≈ 64 MHz (Larmorfrequenz)
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Harmonische Schwingung**: x(t) = A·cos(ωt + φ₀); Rückstellkraft F = −k·x (Hooke)
 - **Kreisfrequenz**: ω = 2πf = 2π/T [rad/s] — verbindet alle Schwingungsparameter
@@ -194,6 +199,7 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
       ],
 
       diagram: "wave-types",
+      imageUrl: "/grafik-25-schwingung.svg",
 
       merksätze: [
         "x(t) = A · cos(ωt + φ₀) – die Grundformel der harmonischen Schwingung.",
@@ -478,13 +484,18 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
 ---
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Was ändert sich beim Medienwechsel einer Welle?" → λ ändert sich, f bleibt gleich (c ist mediumspezifisch)
 - "Welche Wellenlänge hat Ultraschall (5 MHz) in Gewebe (c = 1540 m/s)?" → λ = 1540/5×10⁶ ≈ 0,3 mm
 - "Können Transversalwellen in Flüssigkeiten existieren?" → Nein, nur Longitudinalwellen (keine Scherkräfte)
 - "Warum braucht man Ultraschallgel?" → Luft-Haut-Impedanzsprung eliminieren (R ≈ 99,9 % ohne Gel)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - c gehört zum **Medium** (nicht zur Quelle); f gehört zur **Quelle** (nicht zum Medium)
 - Schall = Longitudinalwelle; Licht = Transversalwelle — nicht umgekehrt!
 - Höhere US-Frequenz → bessere Auflösung, **aber** geringere Eindringtiefe (Dämpfung ∝ f²)
@@ -497,7 +508,7 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
 - EM-Spektrum (niedrig → hoch): Radio → Mikrowelle → IR → Sichtbar → UV → Röntgen → Gamma
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Wellengleichung**: c = f·λ; c hängt vom Medium ab (nicht von f oder λ)
 - **Transversal** (z.B. Licht): Schwingung ⊥ Ausbreitung → polarisierbar; **Longitudinal** (Schall): Schwingung ∥ Ausbreitung → nicht polarisierbar
@@ -533,6 +544,7 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
       ],
 
       diagram: "wave-types",
+      imageUrl: "/grafik-26-welle.svg",
 
       merksätze: [
         "c = f · λ – die Grundgleichung jeder Welle.",
@@ -820,13 +832,18 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
 ---
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Wann ist Interferenz konstruktiv?" → Gangunterschied Δs = n·λ (ganzzahlige Vielfache der Wellenlänge)
 - "Wie berechnet man die Doppler-Frequenzverschiebung?" → Δf = 2·f₀·v·cos(θ)/c
 - "Warum muss der Schallkopf bei der Doppler-Sonographie schräg gehalten werden?" → Bei θ = 90° ist cos(90°) = 0 → kein Signal
 - "Wann tritt Totalreflexion auf?" → Übergang vom optisch dichteren ins dünnere Medium mit α > α_G; sin(α_G) = n₂/n₁
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Gangunterschied n·λ → **konstruktiv** (Verstärkung); (n+½)·λ → **destruktiv** (Auslöschung) — nicht umgekehrt!
 - Doppler: Quelle nähert sich → f_obs > f_Quelle (höherer Ton); entfernt sich → f_obs < f_Quelle (tieferer Ton)
 - Totalreflexion nur bei Übergang vom optisch **DICHTEREN** ins **DÜNNERE** Medium (nicht umgekehrt)
@@ -839,7 +856,7 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
 - Brechungsindex wichtiger Augenmedien: Hornhaut ≈ 1,376; Linse ≈ 1,40; Gesamtbrechkraft Auge ≈ 60 D
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Interferenz**: konstruktiv (Δφ = 0, 2π, …) → Verstärkung; destruktiv (Δφ = π, 3π, …) → Auslöschung
 - **Doppler-Effekt**: f_beobachtet = f_Quelle · (c ± v_Beobachter)/(c ∓ v_Quelle); Annäherung → f↑; Entfernung → f↓
@@ -1139,13 +1156,18 @@ Bei 85 dB sind 8 Stunden Exposition erlaubt. Pro +3 dB halbiert sich die Zeit: 8
 ---
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Wie viel dB entspricht einer Verdopplung der Schallintensität?" → +3 dB (I×2 → 10·log 2 ≈ 3 dB)
 - "Wie viel dB entspricht einer Verdopplung des Schalldrucks?" → +6 dB (p×2 → 20·log 2 ≈ 6 dB)
 - "Welcher Pegel gilt als Gehörschaden-Grenzwert?" → 85 dB (> 8 Stunden täglich → irreversibler Haarzellschaden)
 - "Hohe Frequenzen in der Cochlea — wo?" → Basis (nahe ovalem Fenster, steife Membran); tiefe Frequenzen → Apex
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - +3 dB ≠ +6 dB: Intensitätsverdopplung (+3 dB) vs. Schalldruckverdopplung (+6 dB) — I ∝ p², daher der Faktor 2
 - Schallleitungsschwerhörigkeit = **Mittelohrproblem** (Knochenleitung intakt!) — Weber lateralisiert zum kranken Ohr
 - Schallempfindungsschwerhörigkeit = **Innenohr/Haarzellproblem** (Knochen- und Luftleitung gleich gestört)
@@ -1160,7 +1182,7 @@ Bei 85 dB sind 8 Stunden Exposition erlaubt. Pro +3 dB halbiert sich die Zeit: 8
 - Hörbereich: 20 Hz – 20 kHz; grösste Empfindlichkeit 1–4 kHz (Sprachbereich)
 
 ---
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Dezibel**: L = 20·log(p/p₀) = 10·log(I/I₀); p₀ = 2×10⁻⁵ Pa, I₀ = 10⁻¹² W/m²
 - **3-dB-Regel**: +3 dB → I×2; **6-dB-Regel**: +6 dB → p×2; **10-dB-Regel**: +10 dB → doppelt so laut empfunden

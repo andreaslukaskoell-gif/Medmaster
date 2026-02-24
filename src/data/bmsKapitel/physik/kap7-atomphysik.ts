@@ -111,13 +111,18 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welche Wellenlänge hat die Hα-Linie der Balmer-Serie?" → 656 nm (rot); Übergang n=3→2; ΔE = 1,89 eV
 - "Was besagt das Bohrsche Modell?" → Elektronen auf diskreten Schalen; Eₙ = −13,6 eV/n²; Emission/Absorption nur beim Schalensprung
 - "Formel Lambert-Beer?" → A = ε·c·d; A = log₁₀(I₀/I)
 - "Welche Wellenlängen nutzt die Pulsoximetrie?" → 660 nm (Hb absorbiert stark) + 940 nm (HbO₂ absorbiert stärker)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Emissionsspektrum (helle Linien auf dunklem Hintergrund) ≠ Absorptionsspektrum (dunkle Linien im Kontinuum)
 - Lyman-Serie (UV, n→1) ≠ Balmer-Serie (sichtbar, n→2) ≠ Paschen-Serie (IR, n→3)
 - Bei Lambert-Beer: A ist nicht die Absorption in Prozent, sondern A = log₁₀(I₀/I); bei A = 1 gilt T = 10 %
@@ -130,7 +135,7 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
 - SpO₂-Normwert ≥ 95 %; < 90 % = klinische Hypoxämie
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Bohr-Modell**: E_n = −13,6 eV/n²; Licht entsteht beim Übergang n_hoch → n_tief; E_Photon = |E_n2 − E_n1|
 - **Photonenenergie**: E = hf = hc/λ; h = 6,626×10⁻³⁴ J·s; Balmer-Serie (sichtbar), Lyman (UV), Paschen (IR)
@@ -282,6 +287,7 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
     {
       id: "ph-7-02",
       diagram: "em-spectrum",
+      imageUrl: "/grafik-29-zerfall.svg",
       title: "Radioaktivität – Strahlenarten und Zerfallsgesetze",
       stichworte: [
         "Alpha-Strahlung",
@@ -408,13 +414,18 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Was ändert sich bei α-Zerfall?" → Z−2, A−4 (Tochterkern 2 Positionen links im PSE)
 - "Was ändert sich bei β⁻-Zerfall?" → Z+1, A gleich (Neutron → Proton + e⁻ + ν̄ₑ)
 - "Formel Halbwertszeit?" → T½ = ln2/λ = 0,693/λ; nach n Halbwertszeiten: N = N₀·(½)ⁿ
 - "Warum ist ⁹⁹ᵐTc ideal für Diagnostik?" → reiner γ-Strahler (140 keV), T½ = 6 h → niedrige Strahlendosis, gute Kameradetektion
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Gray (Gy) ≠ Sievert (Sv): Gy = absorbierte Energie (J/kg); Sv = Gy × w_R (biologische Wirksamkeit)
 - α äußerlich harmlos (Papier stoppt), aber innerlich extrem gefährlich (w_R = 20!)
 - β⁺-Zerfall (Positronenemitter, Z−1, für PET) ≠ β⁻-Zerfall (Elektronemitter, Z+1, für Therapie)
@@ -428,7 +439,7 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
 - Abschirmung: α → Papier; β → Aluminium; γ → Blei/Beton
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **α-Strahlung**: ⁴He-Kern; +2e; 4–8 MeV; Reichweite cm in Luft, µm in Gewebe; Abschirmung: Papier; w_R = 20
 - **β⁻-Strahlung**: Elektron; −e; bis MeV; Reichweite m in Luft, mm in Gewebe; Abschirmung: Aluminium; w_R = 1
@@ -689,13 +700,18 @@ Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Was ist Bremsstrahlung vs. charakteristische Strahlung?" → Bremsstrahlung: kontinuierliches Spektrum (Abbremsung im Coulomb-Feld); charakteristische Strahlung: diskrete Linien (elementspezifische Schalenübergänge)
 - "Warum erscheinen Knochen hell im Röntgenbild?" → höheres μ durch Ca (Z=20) → mehr Absorption → weniger Photonen erreichen Detektor
 - "Unterschied stochastisch vs. deterministisch?" → stochastisch: kein Schwellenwert, Krebsrisiko ∝ Dosis; deterministisch: Schwellendosis, Schwere wächst mit Dosis
 - "ALARA-Prinzip?" → Abstand ↑ (1/r²), Zeit ↓, Abschirmung ↑
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Bremsstrahlung (kontinuierlich) ≠ charakteristische Strahlung (Linienspektrum, elementspezifisch)
 - Stochastisch (kein Schwellenwert, Krebsinduktion) ≠ deterministisch (Schwellendosis, Strahlenkater)
 - Halbwertsschichtdicke HVL = ln2/μ — analog zur Halbwertszeit, aber für Röntgenabschirmung
@@ -708,7 +724,7 @@ Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/
 - Berufsgrenzwert: ≤ 20 mSv/Jahr; Bevölkerungsgrenzwert: ≤ 1 mSv/Jahr
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Röntgenröhre**: Elektronen werden mit U beschleunigt → Wolfram-Anode; λ_min = hc/(eU) ≈ 1240/U[kV] pm
 - **Bremsstrahlung**: kontinuierliches Spektrum; **charakteristische Strahlung**: diskrete Linien (elementspezifisch)
@@ -953,13 +969,18 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Warum 511 keV bei der PET?" → Ruheenergie eines Elektrons = m_e·c² = 0,511 MeV; Annihilation wandelt Ruhemasse beider Teilchen vollständig in Energie um
 - "Larmorfrequenz bei 1,5 T?" → f = 42,58 MHz/T × 1,5 T ≈ 64 MHz; bei 3,0 T ≈ 128 MHz
 - "T1 vs. T2?" → T1 = Längsrelaxation (Spin-Gitter, Fett hell); T2 = Querrelaxation (Spin-Spin, Wasser hell)
 - "Warum reichert FDG sich in Tumoren an?" → Warburg-Effekt: erhöhter Glukosestoffwechsel; FDG nach Phosphorylierung blockiert → metabolic trapping
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - PET (β⁺-Strahler, kein Kollimator nötig, Koinzidenz, höhere Auflösung) ≠ SPECT (γ-Strahler, Kollimator nötig, günstiger)
 - T1 ≠ T2: T1 = Längsmagnetisierung erholt sich; T2 = Transversalmagnetisierung zerfällt durch Dephasierung
 - Photoeffekt: Intensität beeinflusst Anzahl der emittierten Elektronen — die kinetische Energie hängt nur von der Frequenz ab
@@ -973,7 +994,7 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
 - Photoeffekt: E_kin = hf − φ; Emission nur wenn f ≥ f_Grenz = φ/h (Einstein, Nobelpreis 1921)
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **PET**: β⁺-Zerfall → Positron + Elektron → Annihilation → 2 × 511 keV γ (antiparallel) → Koinzidenzdetektion
 - **¹⁸F-FDG**: T½ = 110 min; Glukoseanalogon → Anreicherung in Tumoren (Warburg-Effekt) und Gehirn

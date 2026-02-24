@@ -95,13 +95,18 @@ Die tatsächliche Wanderungsgeschwindigkeit hängt von Reibung im Gel ab (größ
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Wie ändert sich die Coulombkraft, wenn der Abstand verdoppelt wird?" → Kraft wird auf ¼ reduziert (1/r²-Gesetz)
 - "In welchem Medium ist die Coulombkraft zwischen Ionen am schwächsten?" → Wasser (εᵣ ≈ 80 → Kraft 80× reduziert)
 - "Was ist das elektrische Feld im Innern eines Faraday-Käfigs?" → Exakt null
 - "Wie groß ist das Membranpotential einer Nervenzelle in Ruhe?" → ca. −70 mV (innen negativ)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Spannung ≠ Feld: U [V] ist Potentialdifferenz, E [V/m] ist Feldstärke (E = U/d für Plattenkondensator)
 - Coulombkraft wirkt entlang der Verbindungslinie — Lorentz-Kraft hingegen senkrecht zur Bewegungsrichtung
 - Im Medium erscheint εᵣ im Nenner (Kraft wird geschwächt), nicht im Zähler
@@ -115,7 +120,7 @@ Die tatsächliche Wanderungsgeschwindigkeit hängt von Reibung im Gel ab (größ
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Coulombgesetz**: F = k·q₁·q₂/r²; k = 8,99×10⁹ N·m²/C²; in Medium: F_M = F/εᵣ (in Wasser 80× kleiner!)
 - **Elektrisches Feld**: E = F/q = k·Q/r² [V/m]; Feld zeigt von + nach −
@@ -376,13 +381,18 @@ Zum Vergleich: 1 mm Kupferdraht gleichen Querschnitts hätte R = 1,7×10⁻⁸ �
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welcher Strom ist ab ~100 mA durch den Körper lebensgefährlich?" → Kammerflimmern ab ~100 mA
 - "Wie ändert sich der Widerstand eines Drahtes bei Verdopplung der Länge?" → R verdoppelt sich (R = ρ·L/A)
 - "Warum ist nasse Haut gefährlicher bei Stromberührung?" → R sinkt von ~50 kΩ auf ~1 kΩ → Strom ~50× höher
 - "Welche Anwendung nutzt Joulesche Wärme therapeutisch?" → HF-Ablation, Elektrochirurgie
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - P = U·I = I²·R = U²/R — alle drei Formen äquivalent, aber unterschiedliche Variablen nötig
 - Metalle: R steigt mit T; Halbleiter/NTC: R sinkt mit T (entgegengesetzt!)
 - Leitwert G = 1/R [Siemens] — wird bei Ionenkanälen statt R verwendet
@@ -395,7 +405,7 @@ Zum Vergleich: 1 mm Kupferdraht gleichen Querschnitts hätte R = 1,7×10⁻⁸ �
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Ohm'sches Gesetz**: U = R·I; R = ρ·L/A; ρ sinkt mit Feuchtigkeit (nasse Haut ~1 kΩ statt 50 kΩ → lebensgefährlich!)
 - **Leistung**: P = U·I = U²/R = I²·R [W]; Joule'sche Wärme Q = P·t
@@ -659,13 +669,18 @@ Bedeutung: Nach einem synaptischen Strompuls erreicht das Membranpotential in ~1
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Wie berechnet man den Gesamtwiderstand bei Parallelschaltung?" → 1/R_ges = 1/R₁ + 1/R₂ + ... (immer kleiner als kleinster Einzelwert)
 - "Nach welcher Zeit ist ein RC-Kondensator auf 63 % geladen?" → Nach einer Zeitkonstante τ = R·C
 - "Welche Energie speichert ein Defibrillator-Kondensator (200 µF, 1500 V)?" → W = ½·C·U² = 225 J
 - "Was besagt die Knotenregel?" → ΣI_ein = ΣI_aus (Ladungserhaltung)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Kondensatoren in Reihe → 1/C_ges = 1/C₁ + 1/C₂ (umgekehrt zu Widerständen in Reihe!)
 - Kondensatoren parallel → C_ges = C₁ + C₂ (wie Widerstände in Reihe addieren sich)
 - Nach 1τ: 63 % geladen (nicht 50 %, nicht 100 %)
@@ -679,7 +694,7 @@ Bedeutung: Nach einem synaptischen Strompuls erreicht das Membranpotential in ~1
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Reihenschaltung**: R_ges = R₁+R₂+…; Strom gleich; Spannung teilt sich auf (Spannungsteiler)
 - **Parallelschaltung**: 1/R_ges = 1/R₁+1/R₂+…; R_ges < R_kleinst; Spannung gleich; Strom teilt sich auf
@@ -916,13 +931,18 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welche Frequenz hat das MRT-Anregungssignal bei 1,5 T?" → f_L = 42,58 × 1,5 ≈ 64 MHz (Radiowellenbereich)
 - "Warum klopft ein MRT-Gerät?" → Lorentz-Kraft F = I·L×B auf stromführende Gradientenspulen im Hauptfeld B₀
 - "Was bewirkt die Lenzsche Regel?" → Induzierter Strom wirkt der Flussänderung entgegen (Energieerhaltung)
 - "Welche Wellenlängen hat sichtbares Licht?" → 380 nm (violett) bis 780 nm (rot)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Lorentz-Kraft verrichtet keine Arbeit (senkrecht auf v), ändert aber die Richtung → Kreisbahn
 - Faraday-Induktion: ε ∝ Änderungsrate dΦ/dt, nicht dem Feld B selbst (konstantes B induziert nichts!)
 - MRT-Signal kommt von ¹H-Protonen (Wasser), nicht von anderen Atomkernen
@@ -937,7 +957,7 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Magnetfeld**: B [T]; Biot-Savart: B = μ₀·I/(2π·r) (Leiter); Solenoid: B = μ₀·μᵣ·n·I
 - **Lorentz-Kraft**: F = q·v×B; senkrecht auf v und B → keine Arbeit; Kreisbahn: r = m·v/(q·B)
@@ -1204,13 +1224,18 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Was ist der Grenzwinkel für Totalreflexion bei Glas (n=1,5) → Luft (n=1)?" → sin α_G = 1/1,5 → α_G ≈ 41,8°
 - "Wie berechnet man die Bildweite mit der Linsengleichung?" → 1/b = 1/f − 1/g
 - "Welche Brille korrigiert Kurzsichtigkeit?" → Zerstreuungslinse (negatives D)
 - "Wie addieren sich Brechkräfte mehrerer Linsen?" → D_ges = D₁ + D₂ + ...
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Totalreflexion nur vom dichteren zum dünneren Medium (n₁ > n₂), NICHT umgekehrt
 - Winkel werden immer gegen das Lot (Flächennormale) gemessen, nicht gegen die Oberfläche
 - Positives b → reelles Bild hinter der Linse; negatives b → virtuelles Bild auf der Gegenstandsseite
@@ -1223,7 +1248,7 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Reflexion**: Einfallswinkel α = Ausfallswinkel α' (beide gegen das Lot)
 - **Snellius**: n₁·sin α₁ = n₂·sin α₂; in dichterem Medium (n↑) → Strahl bricht zum Lot
@@ -1485,13 +1510,18 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Was ist die Auflösungsgrenze eines Mikroskops mit NA = 1,3 bei λ = 520 nm?" → d_min = 520/(2·1,3) = 200 nm
 - "Wie verbessert Ölimmersion die Mikroskop-Auflösung?" → Erhöht NA = n·sin α (n_Öl ≈ 1,52 > n_Luft = 1)
 - "Welcher Gangunterschied bewirkt konstruktive Interferenz?" → Δ = n·λ (ganzzahliges Vielfaches)
 - "Wie groß ist der Streifenabstand beim Doppelspalt?" → Δy = λ·L/d
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Konstruktiv = ganzzahliges Vielfaches (Δ = nλ, hell); Destruktiv = halbzahliges (Δ = (n+½)λ, dunkel)
 - Beugung wird stärker (nicht schwächer) bei längerer Wellenlänge
 - OCT nutzt Interferenz (nicht Beugung) für Tiefenauflösung — axiale Auflösung durch Kohärenzlänge begrenzt
@@ -1504,7 +1534,7 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Interferenz**: konstruktiv wenn Δ = m·λ (m = 0, 1, 2…); destruktiv wenn Δ = (m+½)·λ
 - **Doppelspalt (Young)**: Streifenabstand Δy = λ·L/d; wichtig für Wellenlängenbestimmung
@@ -1759,13 +1789,18 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welche Vergrößerung hat eine Lupe mit f = 5 cm?" → M = 25/5 = 5-fach
 - "Wie berechnet sich die Gesamtvergrößerung eines Mikroskops?" → M_ges = M_Objektiv × M_Okular
 - "Welche Vergrößerung hat ein Teleskop mit f_ob = 1000 mm und f_ok = 25 mm?" → M = 1000/25 = 40-fach
 - "Wie wird Licht im Endoskop weitergeleitet?" → Totalreflexion in Glasfasern (Kaltlicht)
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Lupe: M = S/f mit S = 25 cm (deutliche Sehweite); f in cm einsetzen
 - Mikroskop: M_ges = M_ob × M_ok (Produkt, nicht Summe!)
 - Teleskop: M = f_ob/f_ok — langes Objektiv, kurzes Okular → hohe Vergrößerung
@@ -1779,7 +1814,7 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Lupe**: M = S/f (S = 25 cm); f = 2,5 cm → 10-fache Vergrößerung; aufrechtes virtuelles Bild
 - **Lichtmikroskop**: M_ges = M_Objektiv × M_Okular; d_min = λ/(2·NA); Ölimmersion verbessert NA auf ~1,3
@@ -2043,13 +2078,18 @@ Bei −6 dpt: t = 6 · 36 / 3 = **72 µm**. Hornhautdicke ~550 µm, mind. 250 µ
 
 ## MedAT-Fokus
 
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
+**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+
 **Häufige Fragen:**
 - "Welche Brille korrigiert Myopie?" → Zerstreuungslinse (negatives D); Myopie = Auge zu lang
 - "Was passiert beim Akkommodieren auf Nähe mit dem Ziliarmuskel?" → Kontrahiert → Linse wölbt sich → Brechkraft steigt
 - "Welche Korrektur benötigt Presbyopie?" → Sammellinse (+dpt) für Nahbereich (Lesebrille)
 - "Fernpunkt eines Patienten liegt bei 50 cm — welche Brillenstärke?" → D = −1/0,5 m = −2,0 dpt
 
-**Achtung — typische Verwechslungen:**
+**Typische Prüfungsfallen / Verwechslungen:**
 - Myopie: Auge zu LANG (zu stark brechend) → Zerstreuungslinse (−dpt)
 - Hyperopie: Auge zu KURZ (zu schwach brechend) → Sammellinse (+dpt)
 - Presbyopie ≠ Hyperopie: gleiche Korrektur (Lesebrille +dpt), aber unterschiedliche Ursache (Elastizitätsverlust vs. kurzes Auge)
@@ -2064,7 +2104,7 @@ Bei −6 dpt: t = 6 · 36 / 3 = **72 µm**. Hornhautdicke ~550 µm, mind. 250 µ
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Brechkraft Auge**: ~60 dpt gesamt; Hornhaut ~43 dpt (fix), Linse ~17–20 dpt (variabel durch Akkommodation)
 - **Akkommodation**: Ziliarmuskel spannt → Zonulafasern locker → Linse wölbt sich → f sinkt → Nahsicht
