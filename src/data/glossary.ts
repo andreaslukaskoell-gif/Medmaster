@@ -823,3 +823,26 @@ export function isKeywordLinkTitle(title: string): boolean {
 export function getKeywordLinkDescription(title: string): string | undefined {
   return glossaryEntries.find((e) => e.term === title)?.description;
 }
+
+/** Tooltip-only Glossar: Begriff → Erklärung (für <GlossaryTerm />, keine Navigation). */
+export const glossary: Record<string, string> = Object.fromEntries(
+  glossaryEntries.map((e) => [e.term, e.description])
+);
+
+const extraDefinitions: Record<string, string> = {
+  Osmose:
+    "Gerichtete Diffusion von Wasser durch eine semipermeable Membran (von niedriger zu höherer Konzentration).",
+  Euchromatin: "Locker gepackte, transkriptionsaktive Form des Chromatins.",
+  Heterochromatin: "Dicht gepacktes, weitgehend inaktives Chromatin.",
+  Glykolyse: "Abbau von Glucose zu Pyruvat im Zytoplasma; liefert ATP und Vorstufen.",
+  Mitose: "Zellkernteilung; entstehen zwei genetisch identische Tochterzellen.",
+  Meiose: "Reifeteilung; Reduktion der Chromosomenzahl; Bildung von Keimzellen.",
+  ATP: "Adenosintriphosphat – universelle Energiewährung der Zelle.",
+  DNA: "Desoxyribonukleinsäure – Träger der genetischen Information.",
+  RNA: "Ribonukleinsäure – u.a. Botenstoff bei der Proteinbiosynthese.",
+};
+Object.assign(glossary, extraDefinitions);
+
+export function hasGlossaryTerm(term: string): boolean {
+  return term in glossary;
+}
