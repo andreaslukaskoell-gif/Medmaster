@@ -2,8 +2,9 @@ import type { RefObject } from "react";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Flame, Star, CalendarClock, Sun, Moon, Search, Menu, ClipboardList } from "lucide-react";
+import { Star, CalendarClock, Sun, Moon, Search, Menu, ClipboardList } from "lucide-react";
 import { useStore } from "@/store/useStore";
+import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { SyncStatus } from "./SyncStatus";
 import { daysUntilMedAT } from "@/lib/utils";
@@ -15,18 +16,23 @@ import { cn } from "@/lib/utils";
 interface TopBarProps {
   menuButtonRef?: RefObject<HTMLButtonElement | null>;
   onMenuToggle: () => void;
+  /** When true (e.g. chapter focus mode), show hamburger on all screen sizes. */
+  showHamburgerAlways?: boolean;
 }
 
-export function TopBar({ menuButtonRef, onMenuToggle }: TopBarProps) {
+export function TopBar({ menuButtonRef, onMenuToggle, showHamburgerAlways = false }: TopBarProps) {
   const mounted = useIsMounted();
   const store = useStore();
   const xp = store?.xp ?? 0;
   const streak = store?.streak ?? 0;
+  const lastActiveDate = store?.lastActiveDate ?? "";
   const darkMode = store?.darkMode ?? false;
   const toggleDarkMode = store?.toggleDarkMode ?? (() => {});
   const onboardingCompleted = store?.onboardingCompleted ?? false;
   const days = daysUntilMedAT();
   const showStoreValues = mounted;
+  const todayStr = new Date().toISOString().split("T")[0];
+  const hasActivityToday = lastActiveDate === todayStr;
   const [scrolled, setScrolled] = useState(false);
   const [xpFlash, setXpFlash] = useState(false);
   const prevXpRef = useRef<number>(xp);
@@ -68,7 +74,10 @@ export function TopBar({ menuButtonRef, onMenuToggle }: TopBarProps) {
         <button
           ref={menuButtonRef}
           type="button"
-          className="lg:hidden p-2 rounded-lg text-[var(--muted)] hover:bg-[var(--border)] hover:text-[var(--foreground)] transition-colors cursor-pointer shrink-0"
+          className={cn(
+            "p-2 rounded-lg text-[var(--muted)] hover:bg-[var(--border)] hover:text-[var(--foreground)] transition-colors cursor-pointer shrink-0",
+            !showHamburgerAlways && "lg:hidden"
+          )}
           onClick={onMenuToggle}
           aria-label="Menü öffnen"
         >
@@ -130,7 +139,12 @@ export function TopBar({ menuButtonRef, onMenuToggle }: TopBarProps) {
 
         {/* Streak */}
         <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-[var(--border)] text-xs font-semibold text-[var(--muted)] hover:text-[var(--foreground)] transition-colors">
-          <Flame className="w-3.5 h-3.5 text-orange-500 shrink-0" />
+          <StreakFlameIcon
+            streak={streak ?? 0}
+            hasActivityToday={hasActivityToday}
+            size="inherit"
+            className="w-3.5 h-3.5 shrink-0"
+          />
           <span className="min-w-5 text-center">{showStoreValues ? (streak ?? 0) : "–"}</span>
         </div>
 

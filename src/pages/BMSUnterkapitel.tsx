@@ -347,18 +347,16 @@ export default function BMSUnterkapitel({
           <>
             <div
               className={
-                kapitel?.enhancedFormatting
-                  ? "mb-4 pb-3 border-b-2 border-gray-300 dark:border-gray-600"
-                  : ""
+                kapitel?.enhancedFormatting ? "mb-4 pb-3 border-b-2 border-[var(--border)]" : ""
               }
             >
               <h2
-                className={`${kapitel?.enhancedFormatting ? "text-2xl font-bold" : "text-xl font-semibold"} text-gray-900 dark:text-gray-100`}
+                className={`${kapitel?.enhancedFormatting ? "text-2xl font-bold" : "text-xl font-semibold"} text-[var(--text-primary)]`}
               >
                 {kapitel?.enhancedFormatting && "📝 "}Kontrollfragen
               </h2>
               {kapitel?.enhancedFormatting && (
-                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                <p className="text-sm text-[var(--muted)] mt-1">
                   Teste dein Wissen mit diesen Fragen
                 </p>
               )}
@@ -373,7 +371,7 @@ export default function BMSUnterkapitel({
   // Defensive checks for chapter and subchapter data
   if (!kapitel || !kapitel.id) {
     return (
-      <div className="max-w-3xl mx-auto space-y-6 p-6">
+      <div className="w-full max-w-6xl mx-auto space-y-6 p-6">
         <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
           <CardContent className="p-6 text-center">
             <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
@@ -392,7 +390,7 @@ export default function BMSUnterkapitel({
   // Validate index
   if (unterkapitelIndex < 0 || unterkapitelIndex >= unterkapitel.length) {
     return (
-      <div className="max-w-3xl mx-auto space-y-6 p-6">
+      <div className="w-full max-w-6xl mx-auto space-y-6 p-6">
         <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
           <CardContent className="p-6 text-center">
             <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
@@ -411,7 +409,7 @@ export default function BMSUnterkapitel({
   // Validate subchapter
   if (!uk || !uk.id) {
     return (
-      <div className="max-w-3xl mx-auto space-y-6 p-6">
+      <div className="w-full max-w-6xl mx-auto space-y-6 p-6">
         <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
           <CardContent className="p-6 text-center">
             <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
@@ -430,7 +428,7 @@ export default function BMSUnterkapitel({
   // After early returns, uk is guaranteed non-null and uk.id is valid
 
   return (
-    <div className="max-w-3xl mx-auto space-y-6 pb-12 relative">
+    <div className="w-full max-w-6xl 2xl:max-w-[80rem] mx-auto space-y-6 pb-12 relative px-0">
       {/* Reading progress bar — fixed at top */}
       <div className="fixed top-0 left-0 right-0 z-[200] h-0.5 bg-transparent pointer-events-none">
         <div
@@ -516,7 +514,7 @@ export default function BMSUnterkapitel({
             <ChapterSRSBadge chapterId={kapitel.id} />
           </div>
           <div className="flex items-center gap-3 mt-1">
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{uk.title}</h1>
+            <h1 className="text-2xl font-bold text-[var(--text-primary)]">{uk.title}</h1>
             <span className="flex items-center gap-1 text-xs text-muted shrink-0">
               <Clock className="w-3 h-3" />~{readingTimeMin} min
             </span>
@@ -535,7 +533,7 @@ export default function BMSUnterkapitel({
                 value={noteText}
                 onChange={(e) => setNoteText(e.target.value)}
                 placeholder="Notizen zu diesem Unterkapitel..."
-                className="w-full h-24 p-3 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-yellow-50 dark:bg-yellow-900/10 text-sm text-gray-900 dark:text-gray-100 placeholder:text-muted outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 dark:focus:border-primary-400 resize-y"
+                className="w-full h-24 p-3 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-yellow-50 dark:bg-yellow-900/10 text-sm text-[var(--text-primary)] placeholder:text-muted outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 dark:focus:border-primary-400 resize-y"
               />
               <Button size="sm" onClick={() => setNote(uk.id, noteText)}>
                 Speichern
@@ -565,7 +563,7 @@ export default function BMSUnterkapitel({
                       {s.heading}
                     </p>
                     <p
-                      className="text-sm text-gray-800 dark:text-gray-200 leading-relaxed"
+                      className="text-sm text-[var(--text-primary)] leading-relaxed"
                       dangerouslySetInnerHTML={{
                         __html: (s.merksatz ?? "").replace(
                           /\*\*(.*?)\*\*/g,
@@ -583,7 +581,7 @@ export default function BMSUnterkapitel({
           </div>
         ) : (
           /* Main content: im Fluss (relative), kein Overlap mit Header */
-          <Card className="relative">
+          <Card className="relative card-interactive">
             <CardContent className={`relative ${kapitel?.enhancedFormatting ? "p-8" : "p-6"}`}>
               <ContentErrorBoundary context={`${kapitel?.id ?? "chapter"}-${uk?.id ?? "uk"}`}>
                 <ContentVisualizer
@@ -624,7 +622,7 @@ export default function BMSUnterkapitel({
         {selfTestBlock}
 
         {/* Gelesen-Markierung: triggert Fortschrittsbalken in der Sidebar */}
-        <Card className="border-gray-200 dark:border-gray-700 bg-gray-50/80 dark:bg-gray-800/40">
+        <Card className="border-[var(--border)] bg-[var(--surface)]">
           <CardContent className="p-4 flex items-center gap-3">
             {isCompleted ? (
               <span className="flex items-center gap-2 text-sm font-medium text-green-700 dark:text-green-400">
@@ -639,7 +637,7 @@ export default function BMSUnterkapitel({
                   onChange={() => completeChapter(uk.id)}
                   className="w-4 h-4 rounded border-2 border-slate-300 dark:border-white/20 text-primary-500 focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500"
                 />
-                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                <span className="text-sm font-medium text-[var(--text-primary)]">
                   Als gelesen markieren
                 </span>
               </label>
@@ -648,7 +646,7 @@ export default function BMSUnterkapitel({
         </Card>
 
         {/* Navigation: Previous / Next (book-like, inkl. benachbarte Kapitel) */}
-        <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+        <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
           <Button variant="outline" onClick={handlePrev} disabled={!canGoPrev}>
             <ArrowLeft className="w-4 h-4 mr-1" />
             {isFirst && onPrevChapter ? "Vorheriges Kapitel" : "Vorheriges Unterkapitel"}
@@ -662,7 +660,7 @@ export default function BMSUnterkapitel({
 
         {/* Dev-only: Status-Overlay am Seitenende */}
         {(process.env.NODE_ENV === "development" || import.meta.env.DEV) && (
-          <div className="mt-6 py-3 px-4 rounded-lg bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 text-xs text-gray-600 dark:text-gray-400">
+          <div className="mt-6 py-3 px-4 rounded-lg bg-[var(--surface)] border border-[var(--border)] text-xs text-[var(--muted)]">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
               <span>
                 Word Count:{" "}
@@ -679,7 +677,7 @@ export default function BMSUnterkapitel({
                 onClick={() => {
                   void navigator.clipboard.writeText(uk.id);
                 }}
-                className="ml-auto px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                className="ml-auto px-2 py-1 rounded bg-[var(--surface)] text-[var(--text-secondary)] hover:bg-[var(--border)] transition-colors"
               >
                 Copy ID
               </button>

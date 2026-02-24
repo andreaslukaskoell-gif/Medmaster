@@ -34,6 +34,12 @@ import { getLevelFromXP, getLevelName, getFeatureUnlockedAtLevel } from "@/lib/p
 import { cn } from "@/lib/utils";
 import { SIDEBAR_MAIN_ML } from "./sidebarLayout";
 
+/** True when route is a BMS chapter (e.g. /bms/biologie/kap1-zellbiologie) — focus mode: sidebar hidden, content full width. */
+function isChapterFocusRoute(pathname: string): boolean {
+  const parts = pathname.split("/").filter(Boolean);
+  return parts[0] === "bms" && parts.length >= 3;
+}
+
 const pageVariants = {
   initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0 },
@@ -158,6 +164,8 @@ export function AppShell() {
     });
   }, []);
 
+  const isChapterFocus = isChapterFocusRoute(location.pathname);
+
   return (
     <BreadcrumbProvider>
       <div className="min-h-screen bg-[var(--background)]">
@@ -195,11 +203,25 @@ export function AppShell() {
             onDismiss={() => setPendingBadgeId(null)}
           />
         </Suspense>
-        <Sidebar mobileOpen={mobileOpen} onClose={closeSidebar} />
-        {/* Main area: full width on small screens; from lg reserve space for sidebar (sync: sidebarLayout.ts) */}
-        <div className={cn("min-h-screen flex flex-col relative z-50 w-full", SIDEBAR_MAIN_ML)}>
-          <TopBar menuButtonRef={menuButtonRef} onMenuToggle={() => setMobileOpen(!mobileOpen)} />
-          <main className="flex-1 pt-14 sm:pt-16 p-4 lg:p-6 pb-6">
+        <Sidebar mobileOpen={mobileOpen} onClose={closeSidebar} focusMode={isChapterFocus} />
+        {/* Main area: in chapter focus mode no sidebar margin; otherwise reserve space for sidebar */}
+        <div
+          className={cn(
+            "min-h-screen flex flex-col relative z-50 w-full bg-[var(--background)]",
+            !isChapterFocus && SIDEBAR_MAIN_ML
+          )}
+        >
+          <TopBar
+            menuButtonRef={menuButtonRef}
+            onMenuToggle={() => setMobileOpen(!mobileOpen)}
+            showHamburgerAlways={isChapterFocus}
+          />
+          <main
+            className={cn(
+              "flex-1 pt-14 sm:pt-16 p-4 lg:p-6 pb-8 w-full",
+              isChapterFocus ? "max-w-none mx-auto" : "max-w-5xl mx-auto"
+            )}
+          >
             <ErrorBoundary>
               <AnimatePresence mode="wait">
                 <motion.div

@@ -46,7 +46,7 @@ export function ContentVisualizer({
         <ImageWithFallback
           src={uk.imageUrl}
           alt=""
-          containerClassName="rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-700"
+          containerClassName="rounded-xl overflow-hidden shadow-sm border border-[var(--border)]"
           lightbox
         />
       )}
@@ -64,15 +64,11 @@ export function ContentVisualizer({
       {/* Quiz – only if data present */}
       {uk?.quiz && uk.quiz.length > 0 && (
         <div className={isDieZelle ? "mt-8" : ""}>
-          <div
-            className={
-              isDieZelle ? "mb-4 pb-3 border-b-2 border-gray-300 dark:border-gray-600" : ""
-            }
-          >
+          <div className={isDieZelle ? "mb-4 pb-3 border-b-2 border-[var(--border)]" : ""}>
             <h2
               className={`${
                 isDieZelle ? "text-2xl font-bold" : "text-xl font-semibold"
-              } text-gray-900 dark:text-gray-100`}
+              } text-[var(--text-primary)]`}
             >
               {isDieZelle && "📝 "}Quiz
             </h2>

@@ -1,9 +1,8 @@
 import { useMemo, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   Award,
-  Flame,
   BookOpen,
   Sparkles,
   ArrowRight,
@@ -21,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Heatmap } from "@/components/ui/heatmap";
 import { SyncIndicator } from "@/components/dashboard/SyncIndicator";
+import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { BadgeIcon } from "@/components/badges/BadgeIcon";
 import { useLevelUpSound } from "@/hooks/useLevelUpSound";
 import { useStore } from "@/store/useStore";
@@ -53,6 +53,7 @@ export default function Dashboard() {
     completedChapters,
     quizResults,
     streak,
+    lastActiveDate,
     unlockedFachMilestones,
     unlockFachMilestone,
     firstActivityTimeByDay,
@@ -67,6 +68,12 @@ export default function Dashboard() {
   } = useStore();
   const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
   const todayStr = useMemo(() => new Date().toISOString().split("T")[0], []);
+  const hasActivityToday = lastActiveDate === todayStr;
+  const [searchParams] = useSearchParams();
+  const streakPreview = searchParams.get("streakPreview");
+  const flameStreak =
+    streakPreview != null ? Math.max(0, parseInt(streakPreview, 10) || 0) : streak;
+  const flameHasActivity = streakPreview != null ? flameStreak > 0 : hasActivityToday;
   const profile = useDashboardProfile();
   const days = daysUntilMedAT();
   const weeksLeft = Math.max(1, Math.floor(days / 7));
@@ -151,7 +158,7 @@ export default function Dashboard() {
     <div className="min-h-screen bg-linear-to-b from-slate-50/95 to-slate-100/80 dark:from-slate-950/95 dark:to-slate-900/80">
       <div className="max-w-5xl mx-auto px-4 py-8 pb-24 lg:pb-12">
         <SyncIndicator />
-        <p className="text-center text-xs text-slate-400 dark:text-slate-500 italic mb-6">
+        <p className="text-center text-xs text-[var(--muted)] italic mb-6">
           By doctors for future doctors
         </p>
 
@@ -180,10 +187,10 @@ export default function Dashboard() {
                     <BookOpen className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                    <h2 className="text-xl sm:text-2xl font-bold text-[var(--text-primary)]">
                       Das steht heute an
                     </h2>
-                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
+                    <p className="text-sm text-[var(--muted)] mt-0.5">
                       {dailyGoalState.hasPlan
                         ? `${Math.round(questProgress)}% erledigt`
                         : "Lernplan anlegen für tägliche Ziele"}
@@ -204,7 +211,7 @@ export default function Dashboard() {
                               "inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-all",
                               t.done
                                 ? "bg-emerald-500/20 text-emerald-800 dark:text-emerald-200"
-                                : "bg-slate-100/80 dark:bg-white/10 text-slate-700 dark:text-slate-200 hover:bg-slate-200/80 dark:hover:bg-white/15"
+                                : "bg-slate-100/80 dark:bg-white/10 text-[var(--text-primary)] hover:bg-slate-200/80 dark:hover:bg-white/15"
                             )}
                           >
                             {t.module} · {t.doneMinutes}/{t.targetMinutes} Min
@@ -253,10 +260,10 @@ export default function Dashboard() {
                         <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-slate-900 dark:text-white">
+                        <p className="text-sm font-semibold text-[var(--text-primary)]">
                           ✅ BMS des Tages gelöst!
                         </p>
-                        <p className="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1 mt-0.5">
+                        <p className="text-xs text-[var(--muted)] flex items-center gap-1 mt-0.5">
                           <Clock className="w-3 h-3" /> Nächste Frage morgen
                         </p>
                       </div>
@@ -282,10 +289,10 @@ export default function Dashboard() {
                         <Target className="w-5 h-5 text-amber-600 dark:text-amber-400" />
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-slate-900 dark:text-white">
+                        <p className="text-sm font-semibold text-[var(--text-primary)]">
                           🎯 BMS des Tages wartet!
                         </p>
-                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                        <p className="text-xs text-[var(--muted)] mt-0.5">
                           Täglich eine Frage — bis zu 100 XP
                         </p>
                       </div>
@@ -312,11 +319,11 @@ export default function Dashboard() {
               <CardContent className="relative p-5">
                 <div className="flex items-center justify-between mb-4">
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
+                    <h3 className="font-semibold text-[var(--text-primary)] flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-blue-500" />
                       Heute für dich
                     </h3>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                    <p className="text-xs text-[var(--muted)] mt-0.5">
                       Basierend auf deinem Fortschritt
                     </p>
                   </div>
@@ -331,28 +338,26 @@ export default function Dashboard() {
                   <Link to="/simulation">
                     <div className="bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50">
                       <Timer className="w-4 h-4 text-orange-500 mb-1.5" />
-                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">
+                      <p className="text-xs font-medium text-[var(--text-primary)]">
                         Testsimulation
                       </p>
-                      <p className="text-[10px] text-slate-500 dark:text-slate-400">Gesamtstand</p>
+                      <p className="text-[10px] text-[var(--muted)]">Gesamtstand</p>
                     </div>
                   </Link>
                   <Link to="/schwachstellen">
                     <div className="bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50">
                       <Target className="w-4 h-4 text-rose-500 mb-1.5" />
-                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">
+                      <p className="text-xs font-medium text-[var(--text-primary)]">
                         Schwachstellen
                       </p>
-                      <p className="text-[10px] text-slate-500 dark:text-slate-400">Gezielt üben</p>
+                      <p className="text-[10px] text-[var(--muted)]">Gezielt üben</p>
                     </div>
                   </Link>
                   <Link to="/prognose">
                     <div className="bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50">
                       <TrendingUp className="w-4 h-4 text-green-500 mb-1.5" />
-                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">
-                        Prognose
-                      </p>
-                      <p className="text-[10px] text-slate-500 dark:text-slate-400">Punktestand</p>
+                      <p className="text-xs font-medium text-[var(--text-primary)]">Prognose</p>
+                      <p className="text-[10px] text-[var(--muted)]">Punktestand</p>
                     </div>
                   </Link>
                   <Link to="/bms?filter=due">
@@ -363,12 +368,8 @@ export default function Dashboard() {
                       )}
                     >
                       <Layers className="w-4 h-4 text-emerald-500 mb-1.5" />
-                      <p className="text-xs font-medium text-gray-900 dark:text-gray-100">
-                        Wiederholen
-                      </p>
-                      <p className="text-[10px] text-slate-500 dark:text-slate-400">
-                        Fällige Kapitel
-                      </p>
+                      <p className="text-xs font-medium text-[var(--text-primary)]">Wiederholen</p>
+                      <p className="text-[10px] text-[var(--muted)]">Fällige Kapitel</p>
                     </div>
                   </Link>
                 </div>
@@ -385,18 +386,12 @@ export default function Dashboard() {
                     <Award className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-slate-900 dark:text-white">
-                      Level {level}
-                    </p>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">
-                      {xp.toLocaleString()} XP
-                    </p>
+                    <p className="text-2xl font-bold text-[var(--text-primary)]">Level {level}</p>
+                    <p className="text-xs text-[var(--muted)]">{xp.toLocaleString()} XP</p>
                   </div>
                 </div>
                 <Progress value={levelProgress} className="h-2 rounded-full" />
-                <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
-                  Zum nächsten Level
-                </p>
+                <p className="text-xs text-[var(--muted)] mt-2">Zum nächsten Level</p>
               </CardContent>
             </div>
           </motion.section>
@@ -407,13 +402,22 @@ export default function Dashboard() {
               <CardContent className="p-5 flex flex-col justify-center">
                 <div className="flex items-center gap-3">
                   <div className="w-11 h-11 rounded-xl bg-orange-500/20 dark:bg-orange-500/30 flex items-center justify-center shrink-0">
-                    <Flame className="w-5 h-5 text-orange-600 dark:text-orange-400" />
+                    <StreakFlameIcon
+                      streak={flameStreak}
+                      hasActivityToday={flameHasActivity}
+                      size="sm"
+                      className="w-5 h-5"
+                    />
                   </div>
                   <div className="flex-1">
-                    <p className="text-2xl font-bold text-slate-900 dark:text-white">{streak}</p>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">Tage Streak</p>
+                    <p className="text-2xl font-bold text-[var(--text-primary)]">
+                      {streakPreview != null ? flameStreak : streak}
+                    </p>
+                    <p className="text-xs text-[var(--muted)]">
+                      {streakPreview != null ? "Tage Streak (Vorschau)" : "Tage Streak"}
+                    </p>
                   </div>
-                  {streak > 0 && <StreakShareButton streak={streak} />}
+                  {streak > 0 && !streakPreview && <StreakShareButton streak={streak} />}
                 </div>
               </CardContent>
             </div>
@@ -423,9 +427,7 @@ export default function Dashboard() {
           <motion.section variants={tileMotion} aria-label="Letzte Badges">
             <div className={cn(glassClass, "h-full")}>
               <CardContent className="p-5">
-                <p className="text-xs font-medium text-slate-500 dark:text-slate-400 mb-3">
-                  Letzte Badges
-                </p>
+                <p className="text-xs font-medium text-[var(--muted)] mb-3">Letzte Badges</p>
                 {earnedBadges.length > 0 ? (
                   <div className="space-y-2">
                     {earnedBadges.map((badge) => (
@@ -435,7 +437,7 @@ export default function Dashboard() {
                         className="flex items-center gap-2 p-2 rounded-lg bg-amber-50/80 dark:bg-amber-900/20"
                       >
                         <BadgeIcon tier={badge.tier} earned={true} size="sm" />
-                        <span className="text-sm font-medium text-slate-700 dark:text-slate-300 truncate">
+                        <span className="text-sm font-medium text-[var(--text-primary)] truncate">
                           {badge.name}
                         </span>
                       </div>
@@ -463,9 +465,7 @@ export default function Dashboard() {
           >
             <div className={cn(glassClass, "h-full")}>
               <CardContent className="p-5">
-                <p className="text-xs font-medium text-slate-500 dark:text-slate-400 mb-3">
-                  Wochen-Aktivität
-                </p>
+                <p className="text-xs font-medium text-[var(--muted)] mb-3">Wochen-Aktivität</p>
                 <Heatmap />
               </CardContent>
             </div>
@@ -485,11 +485,11 @@ export default function Dashboard() {
             >
               <h2
                 id="smart-adjust-title"
-                className="text-lg font-semibold text-slate-900 dark:text-white mb-2"
+                className="text-lg font-semibold text-[var(--text-primary)] mb-2"
               >
                 Tagesziel öfter verfehlt
               </h2>
-              <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
+              <p className="text-sm text-[var(--muted)] mb-4">
                 Sollen wir das Pensum für die nächsten Tage anpassen?
               </p>
               <div className="flex gap-3">

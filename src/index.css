@@ -4,34 +4,67 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ── Design System: Semantic CSS Variables ─────────────────────────── */
+/* ── Design System: Premium Lernplattform (Navy-Basis, AMBOSS-like) ───
+ * Light: heller Hintergrund, Navy-Akzente.
+ * Dark: Navy als Base, weiche Oberflächen.
+ */
 :root {
-  --background: #fafafa;
-  --foreground: #0a0a0a;
+  /* Base */
+  --background: #f1f5f9;
+  --surface: #ffffff;
   --card: #ffffff;
-  --border: #82868c;
+  --foreground: #0f172a;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border: #e2e8f0;
+  --muted: #64748b;
+  /* Accent (Navy / Primary) */
+  --accent: #1b3ea7;
+  --accent-hover: #163286;
+  /* Semantic */
+  --success: #0d9488;
+  --success-bg: #ccfbf1;
+  --warning: #d97706;
+  --warning-bg: #fef3c7;
+  /* Shell */
+  --sidebar-bg: #ffffff;
+  --topbar-bg: rgba(255, 255, 255, 0.92);
+  --radius: 12px;
+  --radius-lg: 16px;
+  /* Spacing (Luft zwischen Abschnitten) */
+  --space-section: 1.5rem;
+  --space-block: 1rem;
+  /* Transitions */
+  --ease-out: 0.15s ease-out;
+  --ease-out-slow: 0.2s ease-out;
+  /* Fach-Akzente (unverändert) */
   --accent-bio: #329556;
-  --accent-chem: #f0ff24;
+  --accent-chem: #c2410c;
   --accent-phys: #2563eb;
   --accent-math: #9333ea;
-  --muted: #888888;
-  --sidebar-bg: rgba(255, 255, 255, 0.92);
-  --topbar-bg: rgba(250, 250, 250, 0.9);
-  --radius: 24px;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #fafafa;
-  --card: #111111;
-  --border: #222222;
-  --muted: #666666;
-  --sidebar-bg: rgba(12, 12, 12, 0.92);
-  --topbar-bg: rgba(10, 10, 10, 0.9);
+  --background: #0f172a;
+  --surface: #1e293b;
+  --card: #1e293b;
+  --foreground: #f1f5f9; /* slate-100: main text */
+  --text-primary: #f1f5f9; /* slate-100: body/main content */
+  --text-secondary: #cbd5e1; /* slate-300: secondary */
+  --border: #334155;
+  --muted: #94a3b8; /* slate-400: meta, labels */
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --success: #2dd4bf;
+  --success-bg: rgba(45, 212, 191, 0.15);
+  --warning: #f59e0b;
+  --warning-bg: rgba(245, 158, 11, 0.15);
+  --sidebar-bg: #0f172a;
+  --topbar-bg: rgba(15, 23, 42, 0.92);
 }
 
 @theme {
-  /* Medical UI: Deep Blue primary (#1b3ea7) */
+  /* Medical UI: Deep Blue primary (Navy) */
   --color-primary-50: #e8ecf7;
   --color-primary-100: #c5cee9;
   --color-primary-200: #8b9dd3;
@@ -44,11 +77,11 @@
   --color-primary-900: #050c21;
   --color-primary-950: #030611;
 
-  --color-midnight: #1e293b;
+  --color-midnight: #0f172a;
   --color-soft-white: #f8fafc;
   --color-surface: #f8fafc;
   --color-card: #ffffff;
-  --color-border: #82868c;
+  --color-border: #e2e8f0;
   --color-muted: #64748b;
 
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -80,17 +113,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Glassmorphism cards */
+/* Content-Spacing: mehr Luft zwischen Abschnitten */
+.content-section {
+  margin-bottom: var(--space-section);
+}
+.content-block {
+  margin-bottom: var(--space-block);
+}
+
+/* Cards: ruhige Oberfläche, einheitlicher Radius */
 .card-glass {
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--surface);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
 }
 .dark .card-glass,
 body.dark-body .card-glass {
-  background: rgba(30, 41, 59, 0.6);
-  border-color: rgba(255, 255, 255, 0.08);
+  background: var(--surface);
+  border-color: var(--border);
 }
 
 /* Button hover: subtle scale + shadow */
@@ -245,18 +287,25 @@ body.dark-body {
   animation: strikethrough-scale 0.4s ease-out forwards;
 }
 
-.prose blockquote {
-  border-left: 4px solid #10b981; /* grün */
-  background: #ecfdf5;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
+/* Merksatz / Callout: Accent-Leiste links, Premium-Look */
+.prose blockquote,
+.content-callout {
+  border-left: 4px solid var(--accent);
+  background: var(--surface);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
   font-style: normal;
+  color: var(--text-primary);
+  border-color: var(--border);
 }
-
+.prose blockquote {
+  border-left-color: var(--success);
+  background: var(--success-bg);
+}
 .dark .prose blockquote {
-  border-left-color: #10b981;
-  background: rgba(16, 185, 129, 0.1);
-  color: #d1fae5;
+  border-left-color: var(--success);
+  background: var(--success-bg);
+  color: var(--foreground);
 }
 
 .content h1:has(+ ol) {
@@ -283,36 +332,106 @@ select:focus {
   @apply outline-none ring-2 ring-primary-500/50 border-primary-500 dark:border-primary-400;
 }
 
-/* Typography: Lesbarkeit langer medizinischer Texte */
+/* Typography: Lesbarkeit für Lerntexte (Line-Height, Hierarchie) */
 .prose,
 .content {
-  @apply leading-relaxed;
+  line-height: 1.7;
+  color: var(--text-primary);
 }
-.prose h1,
-.prose h2,
-.prose h3,
-.prose h4,
+.prose h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: var(--space-block);
+  color: var(--text-primary);
+}
+.prose h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+}
+.prose h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+.prose h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
 .text-midnight.dark .prose h1,
 .dark .prose h1,
 .dark .prose h2,
 .dark .prose h3,
 .dark .prose h4 {
-  @apply text-slate-900 dark:text-white font-semibold;
+  color: #ffffff; /* Headings: white, klar vom Body abgehoben */
 }
 .prose p,
 .prose li,
 .prose td,
 .prose th {
-  @apply text-slate-700 dark:text-slate-100;
+  color: var(--text-secondary);
+}
+.dark .prose p,
+.dark .prose li,
+.dark .prose td,
+.dark .prose th {
+  color: var(--text-primary); /* Body: slate-100 (über --text-primary) */
+}
+.dark .prose strong {
+  color: #ffffff;
+}
+.dark .prose a {
+  color: var(--accent);
+}
+.dark .prose blockquote {
+  color: #e2e8f0; /* slate-200 für Zitate */
 }
 
-/* Sidebar: schmale Scrollbar im Midnight-Blue Look */
+/* SVG-Container: einheitliche Abstände, optional Caption */
+.content-svg-wrap {
+  margin: var(--space-block) 0;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.content-svg-wrap figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Micro-Interactions: subtile Hover, 100–200ms */
+.sidebar-nav-item,
+.btn-interactive,
+.card-interactive {
+  transition: background-color var(--ease-out), color var(--ease-out), border-color var(--ease-out),
+    box-shadow var(--ease-out);
+}
+.card-interactive:hover {
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  border-color: var(--border);
+}
+.dark .card-interactive:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar: schmale Scrollbar, Navy-Konsistenz */
 .sidebar-scroll {
   scrollbar-width: thin;
-  scrollbar-color: rgba(71, 85, 105, 0.6) transparent;
-}
-.dark .sidebar-scroll {
-  scrollbar-color: rgba(148, 163, 184, 0.4) transparent;
+  scrollbar-color: var(--border) transparent;
 }
 .sidebar-scroll::-webkit-scrollbar {
   width: 6px;
@@ -321,17 +440,11 @@ select:focus {
   background: transparent;
 }
 .sidebar-scroll::-webkit-scrollbar-thumb {
-  background: rgba(71, 85, 105, 0.5);
+  background: var(--border);
   border-radius: 3px;
 }
-.dark .sidebar-scroll::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.35);
-}
 .sidebar-scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(71, 85, 105, 0.7);
-}
-.dark .sidebar-scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(148, 163, 184, 0.5);
+  background: var(--muted);
 }
 
 /* Skeleton: Shimmer von Dunkelblau zu hellerem Blau (links nach rechts) */
@@ -366,4 +479,120 @@ select:focus {
   );
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.8s ease-in-out infinite;
+}
+
+/* ── Streak-Flamme: realistisches Flackern (Premium, subtil) ─────────────────
+ * CSS-only: leichte Skalierung, minimal rotate/skew, Höhenpuls, Glow/Opacity.
+ * Zwei getrennte Animationen mit unterschiedlicher Dauer/Phase = nicht synchron.
+ * L0: keine Animation. L1–L4: zunehmend sichtbares Flackern.
+ */
+@keyframes streak-flicker-shape {
+  0%,
+  100% {
+    transform: scale(1, 1) rotate(0deg) skew(0deg, 0deg);
+  }
+  15% {
+    transform: scale(0.97, 1.04) rotate(0.35deg) skew(-0.2deg, 0.12deg);
+  }
+  30% {
+    transform: scale(1.04, 0.96) rotate(-0.3deg) skew(0.15deg, -0.18deg);
+  }
+  45% {
+    transform: scale(0.96, 1.02) rotate(-0.35deg) skew(0.18deg, 0deg);
+  }
+  60% {
+    transform: scale(1.02, 0.97) rotate(0.25deg) skew(-0.12deg, 0.2deg);
+  }
+  75% {
+    transform: scale(0.98, 1.03) rotate(0.4deg) skew(0deg, -0.15deg);
+  }
+  90% {
+    transform: scale(1.03, 0.98) rotate(-0.2deg) skew(-0.1deg, 0.1deg);
+  }
+}
+
+@keyframes streak-flicker-glow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0.94;
+  }
+  66% {
+    opacity: 0.97;
+  }
+}
+
+@keyframes streak-ignite {
+  0% {
+    filter: drop-shadow(0 0 2px rgba(251, 191, 36, 0.4))
+      drop-shadow(0 0 8px rgba(245, 158, 11, 0.5));
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  40% {
+    filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.7))
+      drop-shadow(0 0 16px rgba(245, 158, 11, 0.6));
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    filter: drop-shadow(0 0 2px rgba(251, 191, 36, 0.3));
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Level 0: aus / grau — keine Animation */
+.streak-flame-wrap.streak-l0 .streak-flame-inner {
+  animation: none;
+}
+
+/* Gemeinsame Basis: Transform-Origin (Dashboard + TopBar identisch) */
+.streak-flame-wrap .streak-flame-inner {
+  transform-origin: center center;
+}
+
+/* Level 1 (1–3): subtiles Flackern, zwei Phasen (Shape + Glow) */
+.streak-flame-wrap.streak-l1 .streak-flame-inner {
+  animation:
+    streak-flicker-shape 2.8s ease-in-out infinite,
+    streak-flicker-glow 2.1s ease-in-out 0.4s infinite;
+  filter: drop-shadow(0 0 4px rgba(251, 146, 60, 0.25));
+  will-change: transform, opacity;
+}
+
+/* Level 2 (4–7): leichtes Flackern */
+.streak-flame-wrap.streak-l2 .streak-flame-inner {
+  animation:
+    streak-flicker-shape 2.4s ease-in-out infinite,
+    streak-flicker-glow 1.9s ease-in-out 0.2s infinite;
+  filter: drop-shadow(0 0 6px rgba(251, 146, 60, 0.35))
+    drop-shadow(0 0 12px rgba(245, 158, 11, 0.2));
+  will-change: transform, opacity;
+}
+
+/* Level 3 (8–14): stärkeres Flackern */
+.streak-flame-wrap.streak-l3 .streak-flame-inner {
+  animation:
+    streak-flicker-shape 2s ease-in-out infinite,
+    streak-flicker-glow 1.6s ease-in-out 0.1s infinite;
+  filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.4))
+    drop-shadow(0 0 16px rgba(245, 158, 11, 0.3));
+  will-change: transform, opacity;
+}
+
+/* Level 4 (15+): deutliches Flackern + goldener Glow */
+.streak-flame-wrap.streak-l4 .streak-flame-inner {
+  animation:
+    streak-flicker-shape 1.7s ease-in-out infinite,
+    streak-flicker-glow 1.4s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.5))
+    drop-shadow(0 0 20px rgba(245, 158, 11, 0.35));
+  will-change: transform, opacity;
+}
+
+.streak-flame-wrap.streak-ignite .streak-flame-inner {
+  animation: streak-ignite 0.6s ease-out forwards;
 }

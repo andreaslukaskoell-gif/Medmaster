@@ -178,11 +178,11 @@ function CollapsibleSection({
   children: ReactNode;
 }) {
   return (
-    <div className="mb-1">
+    <div className="mb-2 mt-3 first:mt-0">
       <button
         type="button"
         onClick={onToggle}
-        className="flex items-center gap-1.5 w-full py-1.5 px-2 text-[10px] font-semibold uppercase tracking-widest text-[var(--muted)] hover:text-[var(--foreground)] transition-colors cursor-pointer"
+        className="sidebar-nav-item flex items-center gap-1.5 w-full py-2 px-2 text-[10px] font-semibold uppercase tracking-widest text-[var(--muted)] hover:text-[var(--foreground)] cursor-pointer rounded-md hover:bg-[var(--foreground)]/5"
       >
         {open ? (
           <ChevronDown className="w-3 h-3 shrink-0" />
@@ -226,17 +226,14 @@ function NavItemRow({
   return (
     <div
       className={cn(
-        "group flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 cursor-pointer relative",
+        "sidebar-nav-item group flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium cursor-pointer relative",
         active
-          ? "bg-[var(--foreground)]/8 dark:bg-[var(--foreground)]/10 text-[var(--foreground)]"
-          : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5",
+          ? "bg-[var(--accent)]/10 text-[var(--foreground)] border-l-[3px] border-[var(--accent)] pl-[9px]"
+          : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 border-l-[3px] border-transparent",
         highlight && !active && "ring-1 ring-[var(--color-primary-500)]/25"
       )}
     >
-      {/* Active indicator bar */}
-      {active && (
-        <span className="absolute left-0 top-1/2 -translate-y-1/2 w-[3px] h-5 bg-[var(--color-primary-500)] rounded-full" />
-      )}
+      {/* Active indicator: bereits via border-l umgesetzt */}
 
       {highlight && <Sparkles className="w-3.5 h-3.5 shrink-0 text-[var(--color-primary-500)]" />}
       <Icon className={cn("w-4 h-4 shrink-0", active ? undefined : iconColor)} />
@@ -250,9 +247,11 @@ function NavItemRow({
 interface SidebarProps {
   mobileOpen: boolean;
   onClose: () => void;
+  /** When true (e.g. chapter view): sidebar is overlay-only even on desktop, no reserved space. */
+  focusMode?: boolean;
 }
 
-export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
+export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps) {
   const { user, signOut } = useAuth();
   const location = useLocation();
   const lastPathRef = useRef<HTMLDivElement>(null);
@@ -400,7 +399,7 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
   const sidebarContent = (
     <>
       {/* Brand header */}
-      <div className="px-4 py-4 flex items-center justify-between border-b border-[var(--border)]">
+      <div className="px-4 py-4 flex items-center justify-between border-b border-[var(--border)] bg-[var(--sidebar-bg)]">
         <div className="flex items-center gap-3 min-w-0">
           <div className="w-8 h-8 rounded-lg bg-[var(--color-primary-500)] flex items-center justify-center shrink-0">
             <GraduationCap className="w-4 h-4 text-white" />
@@ -504,15 +503,12 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                         <NavLink to="/bms" end={false} onClick={onClose} className="flex-1 min-w-0">
                           <div
                             className={cn(
-                              "flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer relative",
+                              "sidebar-nav-item flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium cursor-pointer relative border-l-[3px]",
                               isBmsActive
-                                ? "bg-[var(--foreground)]/8 dark:bg-[var(--foreground)]/10 text-[var(--foreground)]"
-                                : "hover:bg-[var(--foreground)]/5"
+                                ? "bg-[var(--accent)]/10 text-[var(--foreground)] border-[var(--accent)] pl-[9px]"
+                                : "border-transparent hover:bg-[var(--foreground)]/5"
                             )}
                           >
-                            {isBmsActive && (
-                              <span className="absolute left-0 top-1/2 -translate-y-1/2 w-[3px] h-5 bg-[var(--color-primary-500)] rounded-full" />
-                            )}
                             <item.icon
                               className={cn(
                                 "w-4 h-4 shrink-0",
@@ -643,9 +639,9 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                                                     to={href}
                                                     onClick={onClose}
                                                     className={cn(
-                                                      "block py-1.5 px-2 rounded-md text-xs transition-colors border-l-2 -ml-px pl-3",
+                                                      "sidebar-nav-item block py-1.5 px-2 rounded-md text-xs border-l-2 -ml-px pl-3",
                                                       chapterActive
-                                                        ? "border-[var(--color-primary-500)] bg-[var(--color-primary-500)]/8 text-[var(--foreground)] font-medium"
+                                                        ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--foreground)] font-medium"
                                                         : "border-transparent text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5"
                                                     )}
                                                   >
@@ -712,7 +708,7 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
 
   return (
     <>
-      {/* Mobile backdrop */}
+      {/* Backdrop: on mobile always; in focus mode (chapter) also on desktop */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -720,24 +716,26 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-100 bg-black/50 backdrop-blur-sm lg:hidden"
+            className={cn(
+              "fixed inset-0 z-100 bg-black/50 backdrop-blur-sm",
+              focusMode ? "" : "lg:hidden"
+            )}
             onClick={onClose}
             aria-hidden
           />
         )}
       </AnimatePresence>
 
-      {/* Sidebar panel */}
+      {/* Sidebar panel: in focus mode always overlay (slide in/out); otherwise on lg fixed visible */}
       <aside
         className={cn(
           "fixed left-0 top-0 h-screen flex flex-col",
           SIDEBAR_PANEL_WIDTH,
-          SIDEBAR_LG_POSITION,
-          /* Glass effect */
+          !focusMode && SIDEBAR_LG_POSITION,
           "bg-[var(--sidebar-bg)] backdrop-blur-sm",
-          "border-r border-[var(--border)] lg:border-r-0",
+          "border-r border-[var(--border)]",
           "z-101 lg:z-40",
-          "transition-transform duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)]",
+          "transition-transform duration-200 ease-out",
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         )}
         role={mobileOpen ? "dialog" : undefined}
