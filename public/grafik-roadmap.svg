@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" width="100%">
+  <defs>
+    <style>
+      .title{font:600 14px system-ui,sans-serif;fill:#1a1a2e}
+      .subtitle{font:500 11px system-ui,sans-serif;fill:#4a5568}
+      .card{fill:#fff;stroke:#cbd5e0;stroke-width:1;rx:4}
+      .card-top10{fill:#fef3c7;stroke:#d97706;stroke-width:1.5;rx:4}
+      .axis{font:600 12px system-ui,sans-serif;fill:#1a1a2e}
+      .small{font:10px system-ui,sans-serif;fill:#4a5568}
+    </style>
+    <linearGradient id="bio" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#c6f6d5"/><stop offset="100%" stop-color="#9ae6b4"/></linearGradient>
+    <linearGradient id="ch" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#bee3f8"/><stop offset="100%" stop-color="#90cdf4"/></linearGradient>
+    <linearGradient id="ph" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#fbd38d"/><stop offset="100%" stop-color="#f6ad55"/></linearGradient>
+    <linearGradient id="ma" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#e9d8fd"/><stop offset="100%" stop-color="#d6bcfa"/></linearGradient>
+  </defs>
+  <text x="460" y="28" text-anchor="middle" class="title">MedMaster BMS Grafik-Roadmap</text>
+  <text x="460" y="44" text-anchor="middle" class="subtitle">Empfohlene Grafiken. Top-10 gelb. Siehe GRAFIK-ROADMAP.md</text>
+  <rect x="20" y="56" width="220" height="360" fill="url(#bio)" opacity="0.35" rx="6"/>
+  <text x="130" y="76" text-anchor="middle" class="axis">Biologie</text>
+  <rect x="28" y="88" width="204" height="28" class="card-top10"/><text x="38" y="106" class="small">#4 Transduktion (alle Sinne)</text>
+  <rect x="28" y="122" width="204" height="28" class="card-top10"/><text x="38" y="140" class="small">#5 Hypothalamus-Hypophyse</text>
+  <rect x="28" y="156" width="204" height="28" class="card-top10"/><text x="38" y="174" class="small">#6 Herzzyklus Systole/Diastole</text>
+  <rect x="28" y="190" width="204" height="28" class="card"/><text x="38" y="208" class="small">#7 Gerinnungskaskade</text>
+  <rect x="28" y="224" width="204" height="28" class="card-top10"/><text x="38" y="242" class="small">#8 Angeborene vs. adaptive Immunitat</text>
+  <rect x="28" y="258" width="204" height="28" class="card"/><text x="38" y="276" class="small">#9 Lymphabfluss Ductus thoracicus</text>
+  <rect x="28" y="292" width="204" height="28" class="card-top10"/><text x="38" y="310" class="small">#10 Nephron Segmente und Resorption</text>
+  <rect x="28" y="326" width="204" height="28" class="card-top10"/><text x="38" y="344" class="small">#11 Gegenstromprinzip Niere</text>
+  <rect x="28" y="360" width="204" height="28" class="card-top10"/><text x="38" y="378" class="small">#12 Ossifikation enchondral/desmal</text>
+  <rect x="252" y="56" width="160" height="200" fill="url(#ch)" opacity="0.35" rx="6"/>
+  <text x="332" y="76" text-anchor="middle" class="axis">Chemie</text>
+  <rect x="260" y="88" width="144" height="28" class="card"/><text x="270" y="106" class="small">#20 pH-Skala und Puffer</text>
+  <rect x="260" y="122" width="144" height="28" class="card"/><text x="270" y="140" class="small">#21 Energieprofil Reaktion</text>
+  <rect x="260" y="156" width="144" height="28" class="card"/><text x="270" y="174" class="small">#22 Galvanische Zelle</text>
+  <rect x="260" y="190" width="144" height="28" class="card"/><text x="270" y="208" class="small">#23 Bindungstypen #24 Aminosaure</text>
+  <rect x="424" y="56" width="160" height="200" fill="url(#ph)" opacity="0.35" rx="6"/>
+  <text x="504" y="76" text-anchor="middle" class="axis">Physik</text>
+  <rect x="432" y="88" width="144" height="28" class="card"/><text x="442" y="106" class="small">#25 Schwingung #26 Welle</text>
+  <rect x="432" y="122" width="144" height="28" class="card"/><text x="442" y="140" class="small">#27 Reflexion/Brechung</text>
+  <rect x="432" y="156" width="144" height="28" class="card"/><text x="442" y="174" class="small">#28 Stromkreis #29 Zerfall</text>
+  <rect x="432" y="190" width="144" height="28" class="card"/><text x="442" y="208" class="small">#30 Rontgen Wechselwirkungen</text>
+  <rect x="596" y="56" width="160" height="200" fill="url(#ma)" opacity="0.35" rx="6"/>
+  <text x="676" y="76" text-anchor="middle" class="axis">Mathematik</text>
+  <rect x="604" y="88" width="144" height="28" class="card"/><text x="614" y="106" class="small">#31 Exponentialzerfall</text>
+  <rect x="604" y="122" width="144" height="28" class="card"/><text x="614" y="140" class="small">#32 Vektor Komponenten</text>
+  <rect x="604" y="156" width="144" height="28" class="card-top10"/><text x="614" y="174" class="small">#33 Vierfeldertafel Sens/Spez</text>
+  <rect x="604" y="190" width="144" height="28" class="card"/><text x="614" y="208" class="small">#34 ROC-Kurve</text>
+  <rect x="20" y="430" width="736" height="178" fill="#fffbeb" stroke="#d97706" stroke-width="1" rx="6"/>
+  <text x="388" y="452" text-anchor="middle" class="title">Top-10 Grafiken (groesster Lerneffekt)</text>
+  <text x="40" y="474" class="small">1 Transduktion  2 Nephron Segmente  3 Hypothalamus-Hypophyse  4 Gegenstrom Niere  5 Herzzyklus</text>
+  <text x="40" y="492" class="small">6 Zellzyklus/Mitose  7 Zentraldogma  8 Vierfeldertafel Sens/Spez/PPV/NPV  9 Angeborene vs. adaptive Immunitat  10 Ossifikation</text>
+  <text x="40" y="518" class="subtitle">Stil: reduziert, beschriftet, einheitliche Farben/Pfeile, keine Deko, Fokus Prozesse/Beziehungen/Vergleiche</text>
+  <text x="40" y="538" class="subtitle">Vollstandige Liste inkl. Was zeigt / Didaktik / Diagrammtyp: GRAFIK-ROADMAP.md</text>
+</svg>
