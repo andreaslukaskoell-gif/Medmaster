@@ -12,16 +12,12 @@ import {
   BarChart3,
   GraduationCap,
   CalendarDays,
-  Radar,
-  Users,
   StickyNote,
   Layers,
-  Swords,
   ListChecks,
   Target,
   X,
   LogOut,
-  MessageCircle,
   TrendingUp,
   Award,
   ChevronDown,
@@ -34,7 +30,6 @@ import {
   Dumbbell,
   BookMarked,
   Lock,
-  Trophy,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useStore } from "@/store/useStore";
@@ -102,6 +97,7 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
     id: "mehr",
     title: "MEHR",
     items: [
+      { to: "/lernplan", icon: CalendarDays, label: "Lernplan" },
       { to: "/stichwortliste", icon: ListChecks, label: "Stichwortliste" },
       { to: "/performance", icon: Award, label: "Erfolge" },
       { to: "/preise", icon: Settings, label: "Konto & Preise" },

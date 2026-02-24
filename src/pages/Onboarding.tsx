@@ -330,15 +330,6 @@ function StepDone() {
 
   const firstActions = [
     {
-      label: "Simulation starten",
-      description: "Teste dich mit echten MedAT-Fragen",
-      icon: "🎯",
-      path: "/simulation",
-      color:
-        "bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-900/40",
-      textColor: "text-blue-700 dark:text-blue-300",
-    },
-    {
       label: "BMS lernen",
       description: "Biologie, Chemie, Physik & Mathe",
       icon: "📚",
@@ -348,13 +339,22 @@ function StepDone() {
       textColor: "text-emerald-700 dark:text-emerald-300",
     },
     {
-      label: "Prognose ansehen",
-      description: "Deine Erfolgschancen im Überblick",
+      label: "Fortschritt & Prognose",
+      description: "Schwachstellen, Statistik, Prognose",
       icon: "📈",
-      path: "/prognose",
+      path: "/fortschritt",
       color:
         "bg-violet-50 dark:bg-violet-900/20 border-violet-200 dark:border-violet-800 hover:bg-violet-100 dark:hover:bg-violet-900/40",
       textColor: "text-violet-700 dark:text-violet-300",
+    },
+    {
+      label: "Simulation starten",
+      description: "Teste dich mit echten MedAT-Fragen",
+      icon: "🎯",
+      path: "/simulation",
+      color:
+        "bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-900/40",
+      textColor: "text-blue-700 dark:text-blue-300",
     },
   ];
 

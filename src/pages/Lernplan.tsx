@@ -231,10 +231,10 @@ export default function Lernplan() {
               ))}
             </div>
             <Link
-              to="/schwachstellen"
+              to="/fortschritt"
               className="inline-flex items-center gap-1 text-xs text-red-600 dark:text-red-400 mt-3 hover:underline"
             >
-              Zum Schwachstellen-Trainer <ArrowRight className="w-3 h-3" />
+              Fortschritt & Schwachstellen <ArrowRight className="w-3 h-3" />
             </Link>
           </CardContent>
         </Card>
