@@ -42,6 +42,28 @@ Jedes Unterkapitel: Einleitung → **„In diesem Kapitel lernst du:“** (4–5
 - KFF generators: `/src/data/kffGenerators.ts`
 - Split large data files into <75 questions per agent call (token limit)
 
+### KFF: Generator ≠ Zufall (Regel → Konstruktion → Validator)
+
+Für alle KFF-Untertests gilt: **Erst Regel/Modell definieren → Aufgabe daraus konstruieren → automatisch prüfen → nur bei ✔️ anzeigen.**
+
+- **Pipeline:** `generateTask() { while(true) { const c = generateCandidate(); if (validate(c)) return c; } }`
+- **Validator prüft:** Eindeutigkeit, Lösbarkeit, MedAT-Konformität, keine Trivialität/Mehrdeutigkeit.
+- **Qualitäts-Gates:** Mehr als 1 richtige Lösung → verwerfen. Keine richtige Lösung → verwerfen. Regel nicht rekonstruierbar → verwerfen.
+- **Wortflüssigkeit:** Nur echte Wörter aus Lexikon, Optionen = Buchstaben aus dem Wort; Validator: genau 1 Wort aus Buchstaben bildbar.
+- **Implikationen:** Formale Aussagen (Alle/Einige/Keine), Validator: genau 1 Option zwingend korrekt.
+- **Zahlenfolgen:** Regel wählen → Folge generieren → Validator: Folge nur mit dieser Regel eindeutig.
+- **Figuren:** Zielpolygon zerschneiden, Validator: Teile passen exakt nur zu 1 Option.
+- **Merkfähigkeit:** Fester Profil-Pool, Validator: genau 1 richtige Antwort.
+
+### KFF: Mehr Aufgaben generieren
+
+Wenn wir mehr Übungsaufgaben (Zahlenfolgen, Implikationen, Wortflüssigkeit) generieren wollen, **immer am Skript in der jeweiligen Data-Datei orientieren**:
+
+- **Implikationen:** `src/data/kffImplikationen.ts` – oben „SKRIPT FÜR NEUE / WEITERE ÜBUNGSAUFGABEN“; Format an OFFICIAL_IMPLICATION_EXAMPLES anpassen (Prämissen/Optionen mit Punkt, E exakt „Keine der Schlussfolgerungen ist zwingend“).
+- **Zahlenfolgen:** `src/data/kffZahlenfolgenMedAT.ts` – OFFICIAL_ZF_EXAMPLES als Formatvorbild; neue Aufgaben nur über Generator, offizielle nie verändern.
+- **Wortflüssigkeit:** `src/data/kffWortfluessigkeitMedAT.ts` – OFFICIAL_WF_EXAMPLES; Training in `kffGenerators.ts` (assertNotOfficialLikeWordFluency).
+- **Figuren zusammensetzen:** `src/data/kffFigurenZusammensetzenMedAT.ts` – OFFICIAL_FZ_EXAMPLES (1:1 aus IB_FZ_26.pdf); Training via cutPolygonStrategically/generateFigurenTrainingTask (vom Ziel aus strategisch schneiden). UI: zwei Modi (Offizielle Beispiele / Training mit leicht–mittel–schwer).
+
 ### React / Frontend
 
 - Tailwind v4 — use `bg-linear-to-br` NOT `bg-gradient-to-br`

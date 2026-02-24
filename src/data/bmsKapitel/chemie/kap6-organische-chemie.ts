@@ -33,6 +33,8 @@ Alkane sind unpolare Moleküle. Die einzigen intermolekularen Wechselwirkungen s
 
 **Nomenklatur (IUPAC)**: Längste Kette = Stammname (Methan, Ethan, Propan...). Seitenketten als Präfix: Methyl-, Ethyl-. Nummerierung so, dass Substituenten die niedrigsten Ziffern erhalten. Beispiel: 2-Methylpropan = Isobutan (C₄H₁₀, verzweigt).
 
+**Klassifikation von C-Atomen (prüfungsrelevant):** Ein **sekundäres C-Atom** ist an **zwei weitere C-Atome** gebunden (nicht „an Position 2“, nicht „trägt 2 OH-Gruppen“, nicht „2 NH₂-Gruppen“). Primäres C: an 1 C gebunden; sekundäres C: an 2 C-Atome gebunden; tertiäres C: an 3 C-Atome gebunden.
+
 **Konstitutionsisomerie**: Ab Butan (C₄H₁₀) existieren Konstitutionsisomere: n-Butan (linear) und Isobutan (verzweigt). Die Zahl der Isomere steigt stark: C₅ hat 3, C₆ hat 5, C₁₀ hat 75 Isomere.
 
 **Cycloalkane**: Ringförmige Alkane (CₙH₂ₙ, gleiche Formel wie Alkene!). Cyclohexan (Sesselkonformation) ist spannungsfrei. Cyclopropan hat hohe Ringspannung (Bindungswinkel 60° statt 109,5°) → reaktiver. **cis/trans-Isomerie** bei disubstituierten Cycloalkanen: cis = Substituenten auf gleicher Seite, trans = gegenüberliegend.
@@ -98,7 +100,7 @@ In der homologen Reihe der Alkane gilt: Je länger die Kette, desto größer die
 
 ## Klinischer Bezug
 
-Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform CHCl₃, Diethylether). Ethanol (ein alkoholischer KW-Abkömmling) wird in der Leber zweistufig abgebaut: Ethanol →[ADH] Acetaldehyd (toxisch!) →[ALDH] Essigsäure → Acetyl-CoA. Disulfiram (Antabus) hemmt ALDH → Acetaldehydakkumulation → Aversionstherapie bei Alkoholismus. Kohlenwasserstoffe in der Atemluft (z.B. Ethan, Pentan) gelten als Biomarker für Lipidperoxidation und oxidativen Stress. **Benzol** (aromatischer KW, 6π-Elektronen, Hückel-Regel) ist krebserregend (akute myeloische Leukämie bei chronischer Exposition). **Methan (CH₄)** als Treibhausgas: 80× stärkerer Treibhauseffekt als CO₂ (auf 20 Jahre), entsteht bei anaerober Zersetzung. **Halogenkohlenwasserstoffe**: Chloroform (CHCl₃, historisches Narkotikum, hepatotoxisch), Tetrachlorkohlenstoff (CCl₄, lebertoxisch → radikalische Metabolisierung in Leber). **FCKW** (Fluorchlorkohlenwasserstoffe): zerstören Ozonschicht durch Freisetzung von Cl-Radikalen in der Stratosphäre (Montreal-Protokoll 1987).
+Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform CHCl₃, Diethylether). Ethanol (ein alkoholischer KW-Abkömmling) wird in der Leber zweistufig abgebaut: Ethanol →[ADH] Acetaldehyd (toxisch!) →[ALDH] Essigsäure → Acetyl-CoA. Disulfiram (Antabus) hemmt ALDH → Acetaldehydakkumulation → Aversionstherapie bei Alkoholismus. Kohlenwasserstoffe in der Atemluft (z.B. Ethan, Pentan) gelten als Biomarker für Lipidperoxidation und oxidativen Stress. **Benzol (Benzen)** ist ein **Aromat** (6 π-Elektronen, Hückel-Regel), **kein Alken**. Alkene haben lokalisierte C=C-Doppelbindungen; Benzol hat delokalisierte π-Elektronen und gehört **nicht** zu den Alkenen. MedAT-Falle: „Welche Verbindung gehört NICHT zu den Alkenen?“ → **Benzen (Benzol)**. Benzol ist krebserregend (akute myeloische Leukämie bei chronischer Exposition). **Methan (CH₄)** als Treibhausgas: 80× stärkerer Treibhauseffekt als CO₂ (auf 20 Jahre), entsteht bei anaerober Zersetzung. **Halogenkohlenwasserstoffe**: Chloroform (CHCl₃, historisches Narkotikum, hepatotoxisch), Tetrachlorkohlenstoff (CCl₄, lebertoxisch → radikalische Metabolisierung in Leber). **FCKW** (Fluorchlorkohlenwasserstoffe): zerstören Ozonschicht durch Freisetzung von Cl-Radikalen in der Stratosphäre (Montreal-Protokoll 1987).
 
 > **Merke:** Ethanol →[ADH] Acetaldehyd (Kater!) →[ALDH] Acetat. Disulfiram hemmt ALDH. Benzol → AML. FCKW → Ozonabbau.
 
@@ -108,7 +110,7 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Organische C-Hybridisierung (sp³, sp², sp), Ethen (sp², 120°), Ethin (sp, 180°), Doppel-/Dreifachbindung, Isomerie (Struktur, cis/trans).
+**Zentral prüfungsrelevant:** Organische C-Hybridisierung (sp³, sp², sp), Ethen (sp², 120°), Ethin (sp, 180°), Doppel-/Dreifachbindung, Isomerie (Struktur, cis/trans). **Sekundäres C-Atom** = an **zwei weitere C-Atome** gebunden (nicht Position 2, nicht 2 OH oder 2 NH₂). **Proteine** = **Aminosäure-Bausteine**.
 
 **Ergänzend vertiefend:** Bindungslänge; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -119,8 +121,10 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform 
 - "Warum siedet verzweigtes Alkan tiefer als lineares?" → Kleinere Kontaktfläche → schwächere van-der-Waals-Kräfte → niedrigerer Siedepunkt
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Benzen (Benzol) gehört NICHT zu den Alkenen** — Benzol ist ein Aromat (delokalisierte π-Elektronen). Alkene: Buten, Pentadien, Cyclohexen, Isobuten; nicht: Benzen.
 - Alkan-Formel CₙH₂ₙ₊₂ vs. Alken-Formel CₙH₂ₙ — Cycloalkane und Alkene haben GLEICHE Summenformel CₙH₂ₙ!
 - Radikalische Substitution (Alkane + UV, Halogene) ≠ elektrophile Addition (Alkene + Br₂)
+- **Sieden ≠ Erstarren:** Pentan Sdp. 36 °C → bei 36 °C siedet Pentan (flüssig → gas); bei 34 °C ist Pentan noch flüssig; „erstarrt bei 36 °C“ wäre falsch. Heptan (länger als Pentan) hat höheren Sdp. → bei Raumtemperatur flüssig.
 - n-Butan (Sdp. −1°C) siedet HÖHER als Isobutan (Sdp. −12°C) trotz gleicher Summenformel C₄H₁₀
 
 **Prüfungsrelevante Zahlen/Fakten:**
@@ -684,7 +688,7 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
       title: "Funktionelle Gruppen der Organik",
       content: `## Einleitung
 
-**Funktionelle Gruppen** (–OH, –COOH, –CHO, C=O, –NH₂, …) bestimmen Reaktivität, Löslichkeit und Acidität. Für den MedAT sind Alkohole, Aldehyde, Ketone, Carbonsäuren, Ester, Amine, Thiole prüfungsrelevant.
+**Funktionelle Gruppen** (–OH, –COOH, –CHO, C=O, –NH₂, –O–, C≡C, …) bestimmen Reaktivität, Löslichkeit und Acidität. Für den MedAT sind die **Bezeichnungen** prüfungsrelevant: **Carbonsäure** (−COOH), **Ether** (R−O−R′), **Amin** (−NH₂, Aminogruppe), **Alkin** (C≡C-Dreifachbindung). Alkohole, Aldehyde, Ketone, Ester, Thiole ebenfalls.
 
 **In diesem Kapitel lernst du:** **Alkohole** (–OH), **Aldehyde/Ketone** (C=O), **Carbonsäuren** (–COOH), **Ester**, **Amine**, **Thiole**; Oxidationsstufen; biologische Rolle. **Kontext:** Von der Gruppe zur Funktion; Pharmaka, Metabolite.
 
@@ -802,7 +806,7 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Oxidation Alkohole (primär → Aldehyd → Carbonsäure, sekundär → Keton, tertiär nicht oxidierbar), Reduktion Carbonylverbindungen, funktionelle Gruppen (OH, CHO, COOH, C=O).
+**Zentral prüfungsrelevant:** Oxidation Alkohole (primär → Aldehyd → Carbonsäure, sekundär → Keton, tertiär nicht oxidierbar), Reduktion Carbonylverbindungen, funktionelle Gruppen: **Carbonsäure** (−COOH), **Ether** (R−O−R′), **Amin** (−NH₂), **Alkin** (C≡C) — Bezeichnungen prüfungssicher zuordnen.
 
 **Ergänzend vertiefend:** Oxidationsmittel (CrO₃, PCC); typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -1101,7 +1105,7 @@ Heteroaromaten enthalten neben Kohlenstoff mindestens ein Heteroatom (N, O, S) i
 
 ## Aminosäuren — Struktur und Eigenschaften
 
-Aminosäuren sind die Bausteine der Proteine. Sie enthalten am α-C-Atom vier Gruppen: −NH₂ (Aminogruppe), −COOH (Carboxylgruppe), −R (Seitenkette), −H. Das α-C ist chiral (außer Glycin, R=H).
+**Proteine bestehen aus Aminosäure-Bausteinen.** Aminosäuren sind die Bausteine der Proteine (nicht Isopren-, Nucleotid-, Zucker- oder Glycerin/Fettsäure-Bausteine). Sie enthalten am α-C-Atom vier Gruppen: −NH₂ (Aminogruppe), −COOH (Carboxylgruppe), −R (Seitenkette), −H. Das α-C ist chiral (außer Glycin, R=H).
 
 **20 proteinogene Aminosäuren** — eingeteilt nach Seitenkette:
 - Unpolar, aliphatisch: Glycin, Alanin, Valin, Leucin, Isoleucin, Prolin, Methionin

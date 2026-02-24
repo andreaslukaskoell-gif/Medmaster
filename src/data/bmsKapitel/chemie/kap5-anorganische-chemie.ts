@@ -758,7 +758,7 @@ Disulfidbrücken stabilisieren die Tertiär- und Quartärstruktur von Proteinen 
 
 **H₂S (Schwefelwasserstoff):** Faulende-Eier-Geruch bei niedrigen Konzentrationen (0,01–10 ppm); ab **~100 ppm Geruchslähmung** (Olfaktorius-Paralyse) — extrem tückisch, weil die Warnung durch Geruch wegfällt! Hemmt **Cytochrom-c-Oxidase (Komplex IV)** analog zu HCN → histotoxische Hypoxie → Bewusstlosigkeit, Atemstillstand. Tückisch in Güllekellern und Kanalschächten. Endogen wirkt H₂S in niedrigen Konzentrationen vasodilatatorisch (gasförmiger Signalstoff neben NO und CO).
 
-**SO₂ (Schwefeldioxid):** Reizgas, Luftschadstoff (saurer Regen: SO₂ + H₂O → H₂SO₃), Konservierungsmittel (E220), **Asthmaprovokator** bei empfindlichen Personen.
+**SO₂ (Schwefeldioxid):** Reizgas, Luftschadstoff (saurer Regen: SO₂ + H₂O → H₂SO₃, weiter zu H₂SO₄). **Saurer Regen** wird am meisten durch **HNO₃** (Stickoxide aus Verbrennung) und **H₂SO₄** (Schwefeloxide) verursacht. SO₂ ist Konservierungsmittel (E220), **Asthmaprovokator** bei empfindlichen Personen.
 
 **H₂SO₄ (Schwefelsäure) — Kontaktverfahren:** Mengenmäßig wichtigste Industriechemikalie (~250 Mio. t/Jahr weltweit):
 1. S + O₂ → SO₂ (Schwefelverbrennung oder Pyrit-Röstung)
@@ -1139,7 +1139,7 @@ Der **pH-Wert** ist der negative dekadische Logarithmus der Hydronium-Ionen-Konz
 
 **pH = −log₁₀[H₃O⁺]**
 
-Daraus folgt: **[H₃O⁺] = 10⁻pH**
+Daraus folgt: **[H₃O⁺] = 10⁻pH** (in mol/L). **Beispiel:** Eine Lösung mit **pH 3** enthält **[H₃O⁺] = 10⁻³ mol/L** — nicht 0,003 g/L oder 10³ mol/L; die Einheit ist mol/L und der Wert 10⁻³.
 
 Analog: **pOH = −log₁₀[OH⁻]** und **pH + pOH = pK_W = 14** (bei 25 °C)
 
@@ -1183,11 +1183,15 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
 - Kw ist **temperaturabhängig**: steigt mit T (Autoprotolysé ist endotherm)
 
 **Prüfungsrelevante Zahlen/Fakten:**
+- **pH = −log[H₃O⁺]**; **[H₃O⁺] = 10⁻pH** (mol/L). **pH 3 → [H₃O⁺] = 10⁻³ mol/L** (nicht 0,003 mol/L schreiben als Zahl ohne Zehnerpotenz, Einheit ist mol/L).
 - **Kw = [H₃O⁺] · [OH⁻] = 10⁻¹⁴** (25 °C); bei 37 °C: Kw ≈ 2,4 × 10⁻¹⁴
 - **pH + pOH = 14** (bei 25 °C); pH = −log[H₃O⁺]
 - Neutralpunkt: pH = 7,0 bei 25 °C; pH ≈ **6,8** bei 37 °C
 - pH-Skala: ±1 pH-Einheit = **Faktor 10** in [H₃O⁺]
 - Blut-pH normal: **7,35–7,45**; Azidose: < 7,35; Alkalose: > 7,45
+- **Saurer Regen:** Hauptsächlich **HNO₃** (Stickoxide) und **H₂SO₄** (Schwefeloxide) — nicht H₃PO₄, HCl oder H₂S als Hauptverursacher.
+- **Vitamin C = Ascorbinsäure** — wichtige wasserlösliche Säure als Vitamin (Antioxidans).
+- **Gase in Wasser gelöst:** **HCl** und **SO₂** ergeben **Säuren** (HCl → H₃O⁺ + Cl⁻; SO₂ + H₂O → H₂SO₃); **NH₃** ergibt eine **Base** (NH₃ + H₂O ⇌ NH₄⁺ + OH⁻); **CH₄** (Methan) ist **neutral** (keine Protonenabgabe/-aufnahme). MedAT-Frage: „Zwei Gase ergeben in Wasser Säuren“ → HCl und SO₂.
 - Korrespondierendes Paar: HA und A⁻ unterscheiden sich um **genau 1 H⁺**; pKa(HA) + pKb(A⁻) = 14
 
 ---
@@ -2605,6 +2609,7 @@ Oxidationszahlen (OZ) sind formale, hypothetische Ladungen, die einem Atom zugew
 - KMnO₄: (+1) + OZ(Mn) + 4(−2) = 0 → OZ(Mn) = **+7**
 - K₂Cr₂O₇: 2(+1) + 2·OZ(Cr) + 7(−2) = 0 → OZ(Cr) = **+6**
 - Na₂S₂O₃: 2(+1) + 2·OZ(S) + 3(−2) = 0 → OZ(S) = **+2** (Thiosulfat)
+- **CaC₂O₄ (Calciumoxalat):** Ca hat OZ +2, Oxalat C₂O₄²⁻ hat Gesamtladung −2. 2·OZ(C) + 4(−2) = −2 → 2·OZ(C) = +6 → **OZ(C) = +3** (prüfungsrelevant!)
 
 ## Aufstellen von Redox-Gleichungen (Halbreaktion-Methode)
 
@@ -2648,6 +2653,7 @@ Bei der **Komproportionierung** (Synproportionierung) reagieren zwei verschieden
 - "Wie gleicht man Redox-Gleichungen aus?" → Halbreaktion-Methode: Atome → O (H₂O) → H (H⁺) → Ladung (e⁻) → Elektronen angleichen
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Oxidation** = Elektronenabgabe (OZ steigt). Ein Stoff, der Elektronen abgibt, wird **oxidiert**. Für Oxidation ist **Sauerstoff nicht zwingend nötig** (Elektronenabgabe reicht). **Oxidationsmittel** nimmt Elektronen auf (wird reduziert); **Reduktionsmittel** gibt Elektronen ab (wird oxidiert). „Oxidationsmittel gibt leicht Elektronen ab“ ist **falsch**.
 - Das **Oxidationsmittel** wird **reduziert** (nimmt Elektronen auf); das **Reduktionsmittel** wird **oxidiert** (gibt Elektronen ab)
 - Sauerstoff hat OZ −2, AUSSER in **Peroxiden** (−1, z. B. H₂O₂) und OF₂ (+2)
 - Wasserstoff hat OZ +1, AUSSER in **Metallhydriden** (−1, z. B. NaH, CaH₂)

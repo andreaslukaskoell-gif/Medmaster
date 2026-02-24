@@ -75,7 +75,7 @@ Das Feld einer Punktladung Q: **E = k · Q / r²** (radiales Feld, nimmt mit r²
 
 ## Elektrisches Potential und Spannung
 
-Das **elektrische Potential φ** an einem Punkt gibt die potentielle Energie pro Ladung an: φ = E_pot / q [V = J/C]. Die **elektrische Spannung U** zwischen zwei Punkten A und B ist die Potentialdifferenz: U = φ_A − φ_B. Positive Ladungen bewegen sich spontan von hohem zu niedrigem Potential (in Richtung des Feldes); negative Ladungen entgegen der Feldrichtung. Die Einheit Volt (V): 1 V = 1 J/C.
+Das **elektrische Potential φ** an einem Punkt gibt die potentielle Energie pro Ladung an: φ = E_pot / q. Die **elektrische Spannung U** zwischen zwei Punkten ist die **Potentialdifferenz**: **U = Δφ = φ₂ − φ₁** (wobei φ₂ das Potential am Punkt mit dem Pluspol des Voltmeters, φ₁ am Minuspol). Einheit: **Volt = J/C** (1 V = 1 J/C). **Vorzeichen:** Wird der Plus-Eingang des Voltmeters an die Klemme mit höherem Potential angeschlossen, zeigt die Spannung positiv. Beispiel: Klemme 1 hat −3 V, Klemme 2 hat +7 V; Pluspol an Klemme 2, Minus an Klemme 1 → U = φ₂ − φ₁ = (+7) − (−3) = **+10 V** (bzw. +10 J/C). Positive Ladungen bewegen sich spontan von hohem zu niedrigem Potential (in Richtung des Feldes); negative Ladungen entgegen der Feldrichtung.
 
 **Äquipotentialflächen** (Flächen gleichen Potentials) stehen immer senkrecht auf den Feldlinien. Entlang einer Äquipotentialfläche ist keine Arbeit zu verrichten. Biologische Zellmembranen sind Regionen mit steilem Potentialgradienten: das Ruhemembranpotential beträgt ca. −70 mV (innen negativ). Über eine Membrandicke von ~7 nm ergibt das ein elektrisches Feld von ~10⁷ V/m — vergleichbar mit dem Durchschlagsfeld von Luft.
 
@@ -109,7 +109,7 @@ Die tatsächliche Wanderungsgeschwindigkeit hängt von Reibung im Gel ab (größ
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Coulombkraft F ~ 1/r², elektrische Ladung (e, C), Feldstärke E = F/q, Potential, Spannung U = Arbeit pro Ladung, Kondensator (Q = C·U).
+**Zentral prüfungsrelevant:** Coulombkraft F ~ 1/r², elektrische Ladung (e, C), Feldstärke E = F/q, **Spannung U = Δφ = φ₂ − φ₁**, **Volt = J/C**; Vorzeichen bei Voltmeter (Plus an höherem Potential → positive Anzeige); Kondensator (Q = C·U).
 
 **Ergänzend vertiefend:** Dipol; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -120,6 +120,7 @@ Die tatsächliche Wanderungsgeschwindigkeit hängt von Reibung im Gel ab (größ
 - "Wie groß ist das Membranpotential einer Nervenzelle in Ruhe?" → ca. −70 mV (innen negativ)
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Spannung U = φ₂ − φ₁**; 1 V = 1 J/C; Pluspol an Klemme mit höherem Potential → positive Anzeige (z. B. −3 V und +7 V → U = +10 V).
 - Spannung ≠ Feld: U [V] ist Potentialdifferenz, E [V/m] ist Feldstärke (E = U/d für Plattenkondensator)
 - Coulombkraft wirkt entlang der Verbindungslinie — Lorentz-Kraft hingegen senkrecht zur Bewegungsrichtung
 - Im Medium erscheint εᵣ im Nenner (Kraft wird geschwächt), nicht im Zähler
@@ -354,7 +355,9 @@ Die Einheit ist Ohm (Ω). Ein Ohmscher Leiter ist linear: Verdoppelt man U, verd
 
 **R = ρ · L / A**
 
-Dabei ist ρ der spezifische Widerstand [Ω·m], L die Länge und A der Querschnitt. Kupfer: ρ ≈ 1,7 × 10⁻⁸ Ω·m (sehr guter Leiter). Körpergewebe: ρ ≈ 0,5–3 Ω·m (schlechter Leiter, relevant für Defibrillation und Elektrounfall). Der **Leitwert G = 1/R** [Siemens, S] ist der Kehrwert des Widerstands; er wird bei Ionenkanälen bevorzugt verwendet.
+Dabei ist ρ der spezifische Widerstand [Ω·m], L die Länge und A der Querschnitt. **R ist proportional zur Länge und umgekehrt proportional zum Querschnitt** (R ∝ l/A). Kupfer: ρ ≈ 1,7 × 10⁻⁸ Ω·m (sehr guter Leiter). Körpergewebe: ρ ≈ 0,5–3 Ω·m (schlechter Leiter, relevant für Defibrillation und Elektrounfall). Der **Leitwert G = 1/R** [Siemens, S] ist der Kehrwert des Widerstands; er wird bei Ionenkanälen bevorzugt verwendet.
+
+**Prüfungsbeispiel (gleiches Material):** Draht 1: L₁ = 100 m, Durchmesser d₁ = 1 mm (A₁ = π·(d₁/2)²). Draht 2: L₂ = 50 m, d₂ = 2 mm (A₂ = π·(d₂/2)²). Mit R = ρ·L/A und ρ gleich: R₁/R₂ = (L₁/A₁)·(A₂/L₂) = (L₁/L₂)·(A₂/A₁) = (100/50)·((2/1)²) = 2·4 = **8** → **R₁ : R₂ = 8 : 1** (R₁ ist achtmal größer als R₂).
 
 ## Temperaturabhängigkeit des Widerstands
 
@@ -391,7 +394,9 @@ Eine **Spannungsquelle** (Batterie, Akkumulator) erzeugt durch chemische Reaktio
 ## Rechenbeispiele
 
 **Beispiel 1 — Elektrounfall: trockene vs. nasse Haut:**
-230 V Netzspannung. Trockene Haut: R ≈ 50 kΩ → I = U/R = 230/50.000 = **4,6 mA** (spürbar, nicht gefährlich).
+**Wechselspannung (Steckdose):** Die Angabe **„230 V“** an der Steckdose bezeichnet den **Effektivwert** der sinusförmigen Wechselspannung. **Effektivwert** = die Gleichspannung, die an einem ohmschen Widerstand die **gleiche elektrische Leistung** ergeben würde. Die **Amplitude** (Maximalwert) der Sinusspannung ist **größer als 230 V**: U_amplitude = 230 V × √2 ≈ **325 V**; die Spannung wechselt also zwischen etwa +325 V und −325 V. Der **Mittelwert** der Spannung über eine Periodendauer bei Sinus ist **0** (nicht 230 V). Typische Falle: „230 V Effektivwert bedeutet, die Spannung wechselt zwischen +230 V und −230 V“ ist **falsch** (das wären Amplitude = 230 V); richtig: Amplitude > 230 V, Effektivwert = 230 V.
+
+230 V Netzspannung (Effektivwert). Trockene Haut: R ≈ 50 kΩ → I = U/R = 230/50.000 = **4,6 mA** (spürbar, nicht gefährlich).
 Nasse Haut: R ≈ 1 kΩ → I = 230/1.000 = **230 mA** → akut lebensgefährlich (Kammerflimmern ab ~100 mA).
 Leistung am Körper: P = U·I = 230 · 0,23 = **53 W** → Verbrennungen an Ein-/Austrittsstellen.
 
@@ -409,7 +414,7 @@ Zum Vergleich: 1 mm Kupferdraht gleichen Querschnitts hätte R = 1,7×10⁻⁸ �
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Ohm U = R·I, Widerstand R = ρ·l/A, Stromgefahr (ab ~100 mA Kammerflimmern), Leistung P = U·I, Reihen-/Parallelschaltung (R_seriell = R₁+R₂, 1/R_parallel = 1/R₁+1/R₂).
+**Zentral prüfungsrelevant:** Ohm U = R·I, **Widerstand R = ρ·l/A** (R ∝ L, R ∝ 1/A); bei gleichem Material: doppelte Länge → doppelter R, doppelter Durchmesser → A vervierfacht → R auf 1/4; Beispiel 100 m/1 mm vs. 50 m/2 mm → R₁:R₂ = 8. Stromgefahr (ab ~100 mA Kammerflimmern), Leistung P = U·I, Reihen-/Parallelschaltung (R_seriell = R₁+R₂, 1/R_parallel = 1/R₁+1/R₂).
 
 **Ergänzend vertiefend:** Kirchhoff; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -420,11 +425,13 @@ Zum Vergleich: 1 mm Kupferdraht gleichen Querschnitts hätte R = 1,7×10⁻⁸ �
 - "Welche Anwendung nutzt Joulesche Wärme therapeutisch?" → HF-Ablation, Elektrochirurgie
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **230 V Effektivwert:** Amplitude der Sinusspannung ist **größer als 230 V** (≈ 325 V); Mittelwert über eine Periode = 0. „Spannung wechselt zwischen +230 V und −230 V“ ist falsch (das wäre Amplitude 230 V). Richtig: Effektivwert = Gleichspannung mit gleicher Leistung; Amplitude = 230√2 V.
 - P = U·I = I²·R = U²/R — alle drei Formen äquivalent, aber unterschiedliche Variablen nötig
 - Metalle: R steigt mit T; Halbleiter/NTC: R sinkt mit T (entgegengesetzt!)
 - Leitwert G = 1/R [Siemens] — wird bei Ionenkanälen statt R verwendet
 
 **Prüfungsrelevante Zahlen/Fakten:**
+- **Wechselspannung Steckdose:** 230 V = Effektivwert; Amplitude ≈ 325 V > 230 V; Volt = J/C.
 - 1–2 mA: wahrnehmbar; 10–20 mA: Loslasssperre; >100 mA: Kammerflimmern; >1 A: Verbrennungen
 - Spez. Widerstand: Kupfer ~1,7 × 10⁻⁸ Ω·m; Körpergewebe ~0,5–3 Ω·m
 - MRT-Magnete: Supraleiter (Nb-Ti) bei 4 K, R = 0
@@ -1295,7 +1302,7 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Brechung (Snellius n₁·sin α = n₂·sin β), Brechzahl n, Totalreflexion (sin α_G = n₂/n₁), Grenzwinkel, Anwendung (Lichtleiter, Endoskopie).
+**Zentral prüfungsrelevant:** Brechung (Snellius n₁·sin α = n₂·sin β), Brechzahl n, Totalreflexion (sin α_G = n₂/n₁), Grenzwinkel, **Dispersion = wellenlängenabhängige Brechung** (Regenbogen: Auffächerung durch Brechung in Tropfen, nicht durch Streuung/Beugung/Totalreflexion/Absorption), Anwendung (Lichtleiter, Endoskopie).
 
 **Ergänzend vertiefend:** Dispersion; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -1306,6 +1313,7 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
 - "Wie addieren sich Brechkräfte mehrerer Linsen?" → D_ges = D₁ + D₂ + ...
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Dispersion** = **wellenlängenabhängige Brechung** (n(λ)); Regenbogen durch Brechung in Tropfen. Nicht: wellenlängenabhängige Totalreflexion, Beugung, Absorption oder Streuung.
 - Totalreflexion nur vom dichteren zum dünneren Medium (n₁ > n₂), NICHT umgekehrt
 - Winkel werden immer gegen das Lot (Flächennormale) gemessen, nicht gegen die Oberfläche
 - Positives b → reelles Bild hinter der Linse; negatives b → virtuelles Bild auf der Gegenstandsseite
@@ -1515,7 +1523,7 @@ Das **sichtbare Spektrum** umfasst Wellenlängen von ca. 380 nm (violett) bis 78
 
 > **Merke:** c = λ·f = 3×10⁸ m/s im Vakuum. Im Medium sinkt die Geschwindigkeit (v = c/n), die Wellenlänge wird kürzer (λ_medium = λ₀/n), die Frequenz bleibt gleich.
 
-**Dispersion:** Der Brechungsindex n hängt von der Wellenlänge ab — kurzwelliges Licht (blau/violett) wird stärker gebrochen als langwelliges (rot). Ein Prisma zerlegt weißes Licht in seine Spektralfarben. Medizinisch relevant: Polychromator in der Spektralphotometrie (Labordiagnostik) und chromatische Aberration in Linsen.
+**Dispersion:** **Dispersion** ist die **wellenlängenabhängige Brechung** — der Brechungsindex n hängt von der Wellenlänge ab; kurzwelliges Licht (blau/violett) wird stärker gebrochen als langwelliges (rot). Beim Regenbogen entsteht die Auffächerung von weißem Licht durch **wellenlängenabhängige Brechung** in den Wassertropfen, **nicht** durch wellenlängenabhängige Totalreflexion, Beugung, Absorption oder Streuung. Ein Prisma zerlegt weißes Licht in Spektralfarben. Medizinisch relevant: Polychromator in der Spektralphotometrie (Labordiagnostik) und chromatische Aberration in Linsen.
 
 ![Wellen und Spektrum](/grafik-optik.svg)
 
@@ -1798,7 +1806,7 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
 
 **Erklärung zur Grafik:** Die Abbildung zeigt die Lupenvergrößerung M = S/f, die Gesamtvergrößerung des Mikroskops M_ges = M_ob×M_ok und die Auflösungsgrenze.
 
-Die Lupe ist die einfachste Sehhilfe – eine einzelne Sammellinse. Das menschliche Auge kann einen Gegenstand bei der **deutlichen Sehweite** (konventionell S = 25 cm) scharf sehen. Bringt man eine Sammellinse mit Brennweite f vor das Auge und platziert das Objekt nahe am Brennpunkt, entsteht ein aufrechtes, vergrößertes virtuelles Bild bei der deutlichen Sehweite.
+Die Lupe ist die einfachste Sehhilfe – eine einzelne **Sammellinse**. **Um eine Sammellinse als Lupe zu verwenden** (vergrößertes, aufrechtes virtuelles Bild), muss sich der **Gegenstand innerhalb der einfachen Brennweite** befinden (g < f). Außerhalb der Brennweite entstünde ein reelles (umgekehrtes) Bild; als Lupe nutzt man bewusst g < f. Das menschliche Auge kann einen Gegenstand bei der **deutlichen Sehweite** (konventionell S = 25 cm) scharf sehen. Bringt man eine Sammellinse mit Brennweite f vor das Auge und platziert das Objekt **innerhalb der Brennweite** (nahe am Brennpunkt), entsteht ein aufrechtes, vergrößertes virtuelles Bild bei der deutlichen Sehweite.
 
 **Vergrößerung der Lupe:**
 > **M = S / f** (S = 25 cm, f in cm)
@@ -1894,7 +1902,7 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Linse (Brennweite f, Brechkraft D = 1/f in dpt), Lupe (Vergrößerung M = 25 cm/f), Abbildungsgleichung 1/f = 1/g + 1/b, reelles/virtuelles Bild.
+**Zentral prüfungsrelevant:** Linse (Brennweite f, Brechkraft D = 1/f in dpt), **Lupe: Sammellinse als Lupe → Gegenstand innerhalb der einfachen Brennweite** (g < f); Vergrößerung M = 25 cm/f; Abbildungsgleichung 1/f = 1/g + 1/b, reelles/virtuelles Bild.
 
 **Ergänzend vertiefend:** Linsenfehler; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -1905,6 +1913,7 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
 - "Wie wird Licht im Endoskop weitergeleitet?" → Totalreflexion in Glasfasern (Kaltlicht)
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Sammellinse als Lupe:** Gegenstand muss **innerhalb der einfachen Brennweite** liegen (nicht außerhalb der einfachen oder doppelten Brennweite). Mit einer Sammellinse lässt sich eine Lupe realisieren, wenn g < f.
 - Lupe: M = S/f mit S = 25 cm (deutliche Sehweite); f in cm einsetzen
 - Mikroskop: M_ges = M_ob × M_ok (Produkt, nicht Summe!)
 - Teleskop: M = f_ob/f_ok — langes Objektiv, kurzes Okular → hohe Vergrößerung

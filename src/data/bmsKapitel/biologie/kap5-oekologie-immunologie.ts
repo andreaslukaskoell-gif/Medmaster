@@ -833,6 +833,8 @@ Das Konzept der ökologischen Nische nach Hutchinson ist eines der fundamentalst
 
 ## Das Nischenkonzept nach Hutchinson
 
+**Definition (prüfungssicher):** Die **ökologische Nische** ist die **Gesamtheit aller biotischen und abiotischen Umweltfaktoren, die für die Existenz einer bestimmten Art wichtig sind** — also nicht nur der Lebensraum, sondern alle Ressourcen, Feinde, Konkurrenten und physikalisch-chemischen Bedingungen, unter denen die Art gedeihen und sich fortpflanzen kann.
+
 **G. Evelyn Hutchinson** (1957) definierte die ökologische Nische als **n-dimensionalen Hyperraum**: Jeder für eine Art relevante Umweltfaktor (Temperatur, Feuchtigkeit, Nahrungsgröße, pH, Räuberfrequenz, ...) stellt eine Achse in einem mehrdimensionalen Raum dar. Die ökologische Nische ist der Teilraum dieses Hyperraums, in dem eine Art überleben und sich erfolgreich reproduzieren kann.
 
 Dies ist eine bedeutende Erweiterung des ursprünglichen Nischenbegriffs von Grinnell (1917), der Nische als physikalischen Lebensraum verstand, und Elton (1927), der Nische als funktionale Rolle im Ökosystem (trophische Position) beschrieb. Hutchinsons Hyperraum-Konzept integriert beide Aspekte mathematisch.
@@ -908,7 +910,7 @@ Beispiele:
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Nische (fundamental vs. realisiert), Konkurrenzausschluss, Connell-Seepocken-Experiment, Ressourcenaufteilung, ökologische Nische.
+**Zentral prüfungsrelevant:** **Definition ökologische Nische (MedAT):** Gesamtheit **aller biotischen und abiotischen** Umweltfaktoren, die für die Existenz einer bestimmten Art wichtig sind — nicht nur Lebensgemeinschaft, nicht nur ein Temperaturbereich, nicht nur abiotische Faktoren eines Biotops. Nische (fundamental vs. realisiert), Konkurrenzausschluss, Connell-Seepocken-Experiment, Ressourcenaufteilung.
 
 **Ergänzend vertiefend:** Nischenüberlappung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 

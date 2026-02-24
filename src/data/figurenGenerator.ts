@@ -238,6 +238,11 @@ const FIGNAME: Record<FK, string> = {
   vollkreis: "einen Vollkreis",
 };
 
+/** Für Strategie-View: alle 13 Lösungsfiguren mit Pfad und Anzeigename (richtige Farbe wie beim Üben). */
+export const FIGURE_STRATEGY_GALLERY: { key: string; path: string; name: string }[] = ALL_FK.map(
+  (key) => ({ key, path: FIG[key], name: FIGNAME[key] })
+);
+
 /** Plausible Distraktoren pro Figur: gleiche Kategorie (z. B. gleiche Eckenzahl, andere Winkel/Silhouette).
  * So ist nur die richtige Option aus den Teilen exakt rekonstruierbar; keine triviale Lösung durch reines Kanten-Zählen. */
 const SIMILAR: Record<FK, FK[]> = {

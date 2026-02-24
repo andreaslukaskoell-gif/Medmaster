@@ -376,6 +376,10 @@ Quadratische Funktionen modellieren viele physikalische Vorgänge: Wurfparabeln,
 
 **Wurfparabel:** Die Höhe h eines geworfenen Körpers folgt h(t) = −½g×t² + v₀×t + h₀. Der Scheitelpunkt gibt die maximale Höhe und den Zeitpunkt des Erreichens an. Diese Parabel ist ein Standardbeispiel für a < 0 (Öffnung nach unten).
 
+**MedAT-typisch — Herzfrequenz als Parabel in t:** Ist **f(t) = f_Ruhe − a·t + b·t²** (Herzfrequenz: zuerst Verlangsamung −a·t, dann quadratische Beschleunigung +b·t²), so liegt das **Minimum** der Herzfrequenz dort, wo die Ableitung nach t null ist: −a + 2b·t = 0 ⇒ **t = a/(2b)**. Merke: Vor x² steht hier +b (Koeffizient von t²), also Scheitel bei **t = a/(2b)** Minuten (nicht a/b, nicht 2a/b, nicht a²/b).
+
+**MedAT-typisch — Parabel erkennen:** **y = −x² − 5** hat a = −1, b = 0, c = −5. Wegen **a < 0** öffnet die Parabel **nach unten**. Scheitel: x_s = −b/(2a) = 0, y_s = f(0) = −5 ⇒ **Scheitelpunkt (0|−5)**. Der Graph liegt vollständig unterhalb der x-Achse (Maximum bei y = −5).
+
 ## Rechenbeispiele
 
 **Beispiel 1 — Optimale Dosis-Wirkung (Scheitelpunkt):**
@@ -406,6 +410,8 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
 - Optimale Dosis aus quadratischem Wirkungsmodell (Scheitelpunkt = Optimum)
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Vorzeichen von a entscheidet über Öffnung der Parabel:** a < 0 → Maximum, Parabel öffnet nach UNTEN (z. B. y = −x² − 5: Scheitel (0, −5))
+- f(t) = f_Ruhe − a·t + b·t²: Minimum bei **t = a/(2b)** (nicht a/b, 2a/b oder a²/b)
 - a < 0 → Maximum (nicht Minimum!); Parabel öffnet nach UNTEN
 - Scheitelpunktform f(x) = a(x − xs)² + ys: Vorzeichen beachten — (x − 2)² → xs = +2
 - pq-Formel gilt nur für normierte Form (x² + px + q = 0, Koeffizient vor x² muss 1 sein)
@@ -892,10 +898,10 @@ In Worten: "Der Logarithmus von x zur Basis b ist der Exponent, mit dem man b po
 
 Wichtige Spezialfälle:
 - **log₁₀(x)** (Zehnerlogarithmus, oft kurz "log"): Basis 10 — verwendet für pH-Wert, Dezibel
-- **ln(x)** (natürlicher Logarithmus): Basis e ≈ 2,718 — verwendet in Pharmakokinetik, Physik
-- **log₂(x)** (Binärlogarithmus): Basis 2 — verwendet bei Halbwertszeiten, Informatik
+- **ln(x)** (natürlicher Logarithmus): Basis e ≈ 2,718 — verwendet in Pharmakokinetik, Physik. **ln(x) ist nur für x > 0 definiert** (MedAT-Falle: ln(0) und ln(negativ) existieren nicht).
+- **log₂(x)** bzw. **ld(x)** (Logarithmus dualis, Binärlogarithmus): Basis 2 — **ld = log₂**. Es gilt **ld(2ⁿ) = n**, z. B. **ld(16) = 4** (weil 2⁴ = 16). Verwendet bei Halbwertszeiten, Informatik.
 
-> **Merke:** Logarithmus beantwortet die Frage: "Wie oft muss ich die Basis mit sich selbst multiplizieren, um x zu erreichen?" Beispiel: log₂(8) = 3, weil 2³ = 8.
+> **Merke:** Logarithmus beantwortet die Frage: "Wie oft muss ich die Basis mit sich selbst multiplizieren, um x zu erreichen?" **ld(16) = 4**, weil 2⁴ = 16. **log(a·b) = log a + log b** gilt nur bei **gleicher Basis**; **ld(a+b) ≠ ld a + ld b** (typische Falle!).
 
 ## Rechenregeln
 
@@ -923,7 +929,7 @@ Die wichtigsten Logarithmengesetze (für alle Basen gleich):
 - **Monotonie**: b > 1 → streng monoton steigend; 0 < b < 1 → streng monoton fallend
 - **Kein Maximum, kein Minimum**: Funktion wächst unbegrenzt (aber sehr langsam)
 
-**Achtung MedAT-Falle:** Der Logarithmus ist nur für **positive** Argumente definiert. log(0) und log(−3) existieren nicht! Das ist ein häufiger Fehler bei Gleichungsumformungen.
+**Achtung MedAT-Falle:** **ln(x) nur für x > 0 definiert.** log(0) und log(negativ) existieren nicht. Bei Gleichungen der Form U = (a/b)·ln(A/B): U = 0 nur wenn A = B (nicht wenn A = 0 oder B = 0 — dann ist ln nicht definiert!). Bei a > 0 und b < 0 ist a/b < 0; für A > B > 0 ist ln(A/B) > 0, also **U < 0**.
 
 ## pH-Wert — Logarithmus in der Medizin
 
@@ -992,7 +998,7 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/l
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Logarithmus (log₁₀, ln), pH = −log₁₀([H⁺]), pH-Abfall 1 = zehnfache [H⁺], pK_s, Henderson-Hasselbalch, logarithmische Skalen (Lautstärke, pH).
+**Zentral prüfungsrelevant:** Logarithmus (log₁₀, ln), **ld = log₂**, **ld(16) = 4**, **ld(2ⁿ) = n**; **log(a+b) ≠ log a + log b** (Falle!); **ln(x) nur für x > 0**; pH = −log₁₀([H⁺]); Gleichung **U = (a/b)·ln(A/B)** mit a>0, b<0: U < 0 wenn A > B > 0, U = 0 wenn A = B; A = 0 oder B = 0 nicht erlaubt. Henderson-Hasselbalch, logarithmische Skalen.
 
 **Ergänzend vertiefend:** Natürlicher Logarithmus und e; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -1004,6 +1010,8 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/l
 - Semilog-Plot: Steigung = −k aus ln C-vs-t-Gerade ablesen und T½ berechnen
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **log(a+b) ≠ log a + log b** (und **ld(a+b) ≠ ld a + ld b**) — nur Produktregel: log(a·b) = log a + log b (gleiche Basis!)
+- **ln(x) nur für x > 0** definiert; U = (a/b)·ln(A/B): U = 0 nur wenn A = B; A = 0 oder B = 0 nicht erlaubt
 - log(0) und log(negativer Zahl) sind NICHT definiert!
 - pH ↑ → [H⁺] ↓ (höherer pH = basischer = weniger Protonen)
 - ln ≠ log: ln hat Basis e, log hat Basis 10

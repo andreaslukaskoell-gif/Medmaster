@@ -644,7 +644,7 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 
 | Durchlässigkeit | Stoffe | Mechanismus |
 |-----------------|--------|-------------|
-| **Frei (ohne Protein)** | O₂, CO₂, Ethanol, Steroide, fettlösliche Vitamine (A, D, E, K) | Einfache Diffusion durch die Lipidschicht |
+| **Frei (ohne Protein)** | O₂, CO₂, Ethanol, Steroide, fettlösliche Vitamine (A, D, E, K) | Einfache Diffusion durch die Lipidschicht (O₂ braucht **kein** Transportprotein!) |
 | **Via Kanal/Transporter** | Wasser (AQP), Ionen (Na⁺, K⁺, Ca²⁺, Cl⁻), Glucose (GLUT), Aminosäuren | Membranproteine, entlang oder gegen Gradient (siehe UK „Membrantransport“) |
 | **Blockiert** | Geladene Ionen ohne Kanal | Hydrophobes Membraninneres + Hydrathülle der Ionen = hohe Energiebarriere |
 
@@ -726,7 +726,7 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Flüssig-Mosaik-Modell, Phospholipid-Bilayer (amphiphil, Selbstorganisation), Cholesterin als bidirektionaler Fluiditätspuffer, ungesättigt ↑ / gesättigt ↓ Fluidität, integrale vs. periphere Proteine, Glykokalix (Zuckerschicht außen, Zellerkennung, Schutz), CFTR (Cl⁻-Kanal, ΔF508 → Mukoviszidose).
+**Zentral prüfungsrelevant:** Flüssig-Mosaik-Modell, Phospholipid-Bilayer (amphiphil, Selbstorganisation), Cholesterin als bidirektionaler Fluiditätspuffer, ungesättigt ↑ / gesättigt ↓ Fluidität, integrale vs. periphere Proteine, Glykokalix (Zuckerschicht außen, Zellerkennung, Schutz), CFTR (Cl⁻-Kanal, ΔF508 → Mukoviszidose). **O₂ und CO₂** werden **nicht** über Transportproteine transportiert — einfache Diffusion durch die Lipidschicht.
 
 **Ergänzend vertiefend (noch prüfungsnah):** Lipid-Asymmetrie, PS-Flip bei Apoptose, Lipid-Rafts, GLUT/SGLT als Beispiele für Transporter (Details im UK Membrantransport).
 
@@ -739,6 +739,7 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
 - "Was ist CFTR?" → Cl⁻-Kanal; ΔF508 → Fehlfaltung → Mukoviszidose
 
 **Typische Prüfungsfallen / Abgrenzungen:**
+- **Sauerstoff (O₂) braucht KEIN Transportprotein** — O₂ diffundiert frei durch die Lipidschicht (kleines unpolares Molekül). Eine Aussage wie „Über Transportproteine werden Sauerstoffmoleküle transportiert“ ist **falsch**.
 - **Cholesterin ≠ Hauptbestandteil** der Membran — das sind Phospholipide; Cholesterin reguliert nur die Fluidität.
 - **Ungesättigte Fettsäuren erhöhen** Fluidität (Knicke), **gesättigte senken** sie — oft vertauscht in Multiple-Choice.
 - **PS normalerweise innen** — Flip nach außen = Apoptose-Signal.
@@ -1172,6 +1173,8 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 
 ## Übersicht: Organellen auf einen Blick
 
+**Organellen mit zwei (Doppel-)Membranen:** **Mitochondrien**, **Zellkern**. Peroxisom, Lysosom, ER, Golgi haben eine einfache Membran. **Peroxisom:** von eigener Membran umgeben, **Wasserstoffperoxid-Stoffwechsel** (Katalase). **Nukleosom** (Histon-DNA-Komplex) und **Ribosom** (Protein-rRNA-Komplex) haben **keine** eigene Membran.
+
 | Organell | Membran | Hauptfunktion | Klinischer Bezug |
 |---|---|---|---|
 | Mitochondrien | Doppel | ATP (OXPHOS), Apoptose | MELAS, Cytochrom-c |
@@ -1199,6 +1202,8 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 - "Was ist der Unterschied zwischen rauem und glattem ER?" → rER: Ribosomen, Proteinsynthese; gER: Lipidsynthese, Detox, Ca²⁺
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Organellen mit zwei Membranen:** Mitochondrien, Zellkern. Peroxisom, Lysosom, ER, Golgi haben nur **eine** Membran.
+- **Struktur „von eigener Membran umgeben“:** Peroxisom (Wasserstoffperoxid-Stoffwechsel) ja; Nukleosom (Histon-DNA), Ribosom (Protein-rRNA), MTOC (Mikrotubuli-Organisationszentrum) **nein** — keine umschließende Membran.
 - Glykolyse findet im Zytoplasma statt, NICHT in Mitochondrien!
 - Ribosomen sind KEINE Membranorganellen — sie sind Ribonukleoprotein-Komplexe
 - Proteasomen sind KEINE Membranorganellen — sie sind zytosolische Proteinkomplexe
@@ -1406,6 +1411,14 @@ Warum können Körperzellen nur im Körper existieren, nicht aber eigenständig 
 
 Das menschliche Genom umfasst 3,2 Milliarden Basenpaare — ausgestreckt ca. **2 Meter**. Es muss in einen ~6 µm großen Zellkern passen: **~10.000-fache Kompaktierung**.
 
+**Definitionen (prüfungssicher):**
+- **Chromosom:** stark kondensierte, transportfähige Form der DNA (mit **Histonen** = basische Proteine); enthält die Erbinformation; sichtbar in Mitose/Meiose.
+- **Centromer:** die Einschnürung des Chromosoms; Ansatzpunkt für Spindelfasern (Kinetochor); **wichtig für die richtige Aufteilung der Chromosomen bei Mitose und bei Meiose**.
+- **Telomer:** die Endregionen der Chromosomen (repetitive DNA); **schützen die DNA vor Abbau** und verkürzen sich bei jeder Zellteilung (Alterung); Telomerase verlängert sie (Stammzellen, Keimzellen).
+- **Histone:** basische Proteine (reich an Lysin, Arginin), um die die DNA gewickelt ist (Nukleosom); Chromosomen **enthalten basische Proteine** (Histone).
+
+**Wichtig — typische Falschaussage:** „Chromosomen erlauben die freie Kombination der Gene“ ist **falsch**. Die **freie Kombination der Gene** erfolgt durch **Crossing-over** und zufällige Verteilung der homologen Chromosomen in der **Meiose**, nicht durch die Chromosomenstruktur selbst. Chromosomen sind die Verpackungsform; die Neukombination ist ein Vorgang der Meiose.
+
 **Hierarchische Verpackung:**
 1. **Nukleosom** (~10 nm): 147 bp DNA um Histon-Oktamer (je 2× H2A, H2B, H3, H4) gewickelt — wie "Perlen auf einer Schnur"
 2. **Chromatinfaser** (~30 nm): Nukleosomen kompaktieren durch Histon H1 und Protein-Protein-Wechselwirkungen
@@ -1476,7 +1489,7 @@ Der **Nucleolus** ist keine Membranstruktur, sondern ein **Phasenseparations-Kon
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Nukleosom (147 bp + Histon-Oktamer), Euchromatin vs. Heterochromatin (Acetylierung vs. Methylierung), Kernporen (<40 kDa frei, NLS/NES), Transkription (Kern) vs. Translation (Zytoplasma), Barr-Körper (Lyon-Hypothese).
+**Zentral prüfungsrelevant:** Nukleosom (147 bp + Histon-Oktamer), Euchromatin vs. Heterochromatin (Acetylierung vs. Methylierung), Kernporen (<40 kDa frei, NLS/NES), Transkription (Kern) vs. Translation (Zytoplasma), Barr-Körper (Lyon-Hypothese). **Chromosom, Centromer, Telomer, Histone** (Definitionen siehe oben). **Strukturen im Zellkern:** Chromatin, Nukleolus (rRNA-Synthese, Ribosomen-Assemblierung). **NICHT im Zellkern:** Akrosom (Spermium), Ribosom (Zytoplasma/ER), Zentriol (Zytoplasma), Lysosom (Zytoplasma).
 
 **Ergänzend vertiefend:** Nucleolus (rRNA, Ribosomen-Assemblierung), Progeria (Lamin), HDAC-Inhibitoren, NLS/NES-Transport.
 
@@ -1486,6 +1499,8 @@ Der **Nucleolus** ist keine Membranstruktur, sondern ein **Phasenseparations-Kon
 - "Was ist der Barr-Körper?" → Inaktiviertes X-Chromosom (Lyon-Hypothese), sichtbar als kondensiertes Heterochromatin
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **„Chromosomen erlauben die freie Kombination der Gene“ ist FALSCH** — die freie Kombination erfolgt in der Meiose (Crossing-over, zufällige Verteilung).
+- **Im Zellkern finden sich:** Chromatin, Nukleolus. **Nicht im Zellkern:** Akrosom (Spermium), Ribosom (Zytoplasma), Zentriol (Zytoplasma), Lysosom (Zytoplasma).
 - Transkription im Kern, Translation im Zytoplasma — NICHT umgekehrt!
 - Die äußere Kernmembran ist mit dem rauen ER verbunden (Kontinuum), NICHT die innere
 - Kernlamina besteht aus Lamin-Intermediärfilamenten, NICHT aus Aktin
@@ -1659,7 +1674,7 @@ Jede Sekunde teilt sich im menschlichen Körper die Zelle 3,8 Millionen Mal. Wac
 
 ## Der Zellzyklus
 
-**Bisher haben wir gesehen:** Organellen und Zellkern liefern Struktur und Steuerung. **Um zu verstehen,** wie Zellen sich vermehren, schauen wir uns den **Zellzyklus** an — den Ablauf von einer Zellteilung zur nächsten. Der Zellzyklus beschreibt den gesamten Lebenszyklus einer sich teilenden Zelle. Er gliedert sich in die **Interphase** (G1, S, G2) und die **M-Phase** (Mitose + Zytokinese).
+**Bisher haben wir gesehen:** Organellen und Zellkern liefern Struktur und Steuerung. **Um zu verstehen,** wie Zellen sich vermehren, schauen wir uns den **Zellzyklus** an — den Ablauf von einer Zellteilung zur nächsten. Der Zellzyklus beschreibt den gesamten Lebenszyklus einer sich teilenden Zelle. Er gliedert sich in die **Interphase** (G1, S, G2) und die **M-Phase** (Mitose + Zytokinese). **Reihenfolge immer: G1 → S → G2 → M** (nicht G1–G2–S–M!).
 
 **G1-Phase (Gap 1, erste Wachstumsphase):**
 Proteinsynthese, Zellwachstum, Erfüllung der Voraussetzungen für DNA-Replikation. Zellen, die dauerhaft nicht teilen (differenzierte Zellen wie Neuronen, Muskelzellen), verlassen den Zyklus in die **G0-Phase** (Ruhephase). Der **G1/S-Checkpoint** (Restriktionspunkt) überwacht, ob die Zelle groß genug ist und ob die DNA intakt ist. Schlüsselmolekül: **Cyclin D / CDK4** → Phosphorylierung von Rb (Retinoblastom-Protein) → Freigabe von E2F → Transkription von S-Phase-Genen. Bei Krebszellen ist dieser Checkpoint oft defekt (Rb-Mutation, Cyclin-D-Überexpression).
@@ -1784,7 +1799,7 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Zellzyklus (G₁–S–G₂–M), Mitose-Phasen (Pro/Meta/Ana/Telo), Meiose I (Reduktion, Bivalent, Crossing-over) vs. Meiose II (Äquation), Trennung homolog vs. Schwesterchromatiden (Anaphase I vs. II), Non-disjunction (Trisomie 21).
+**Zentral prüfungsrelevant:** Zellzyklus **G1 → S → G2 → M** (nicht G1–G2–S–M!). Mitose-Phasen (Pro/Meta/Ana/Telo), **Meiose I: Trennung der replizierten, homologen Chromosomen**; Meiose II: Trennung der Schwesterchromatiden. **Geschlechtszellen (Gameten) sind haploid (n)**, nicht diploid. **Kerngenom** wird in **Chromosomen** verpackt und an Spindelfasern verteilt — **nicht in Mitochondrien**. Non-disjunction (Trisomie 21).
 
 **Ergänzend vertiefend:** Zellzyklus-Checkpoints (G1/S, G2/M, Spindel), Spindelapparat, Cohesin/Separase.
 
@@ -1795,8 +1810,12 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
 - "Was passiert beim Crossing-over?" → DNA-Austausch zwischen homologen Chromosomen in Prophase I → neue Allelkombinationen
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Crossing-over findet NUR in der Meiose (Prophase I) statt, NICHT in der Mitose** — auch nicht in der Telophase der Mitose. In der Mitose gibt es kein Crossing-over.
+- **Zellzyklus-Reihenfolge: G1 → S → G2 → M** (nicht G1–G2–S–M!).
+- **Kerngenom wird in Chromosomen verpackt** (im Zellkern), nicht in Mitochondrien.
 - Mitose Anaphase: Schwesterchromatiden trennen sich (NICHT homologe Chromosomen!)
 - Meiose I Anaphase: Homologe Chromosomen trennen sich (Schwesterchromatiden bleiben verbunden!)
+- „Durch Crossing-over werden diploide Zellen zu haploiden“ ist **falsch** — die Reduktion auf haploid erfolgt durch die **Trennung der homologen Chromosomen in Meiose I**, nicht durch Crossing-over (Crossing-over erzeugt nur genetische Vielfalt).
 - "Haploid" vs. "1 Chromatide": Nach Meiose I haben die Zellen n Chromosomen, aber jedes besteht noch aus 2 Schwesterchromatiden (technisch: haploid aber mit verdoppelter DNA)
 - G0 ≠ G1: G0 ist eine Ruhephase außerhalb des aktiven Zellzyklus
 

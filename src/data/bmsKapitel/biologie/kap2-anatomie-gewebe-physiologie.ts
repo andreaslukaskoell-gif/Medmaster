@@ -38,14 +38,14 @@ Jede Oberfläche im Körper ist mit **Epithel** bedeckt — die Haut, die Darmsc
 
 1. **Polarität**: Die Zelle hat eine **apikale Seite** (zur Körperhöhle/Oberfläche hin) und eine **basolaterale Seite** (zur Basalmembran/Interstitium). Transporter sind ungleichmäßig verteilt → **gerichteter Transport** (z.B. SGLT1 apikal, GLUT2 basolateral im Dünndarm)
 
-2. **Basalmembran**: Alle Epithelzellen sitzen auf einer strukturierten Bindegewebsschicht (Kollagen IV, Laminin, Proteoglykane). Sie verankert das Epithel und stellt eine weitere selektive Barriere dar.
+2. **Basalmembran**: Das Epithelgewebe ist durch die **Basalmembran** mit dem darunterliegenden Bindegewebe verbunden (Kollagen IV, Laminin, Proteoglykane). Sie verankert das Epithel und stellt eine weitere selektive Barriere dar. **Prüfungssicher:** Die Verbindung Epithel–Bindegewebe ist die Basalmembran (nicht apikale Fortsätze, nicht Lipid-Doppelschicht, nicht Bürstensaum).
 
 3. **Avaskulär**: Epithelien haben keine eigenen Blutgefäße — Versorgung erfolgt durch Diffusion aus darunter liegenden Kapillaren. → Hohe Zellerneuerungsrate nötig (Dünndarm alle 3–5 Tage, Haut alle ~2 Wochen)
 
 **Zellkontakte in Epithelien:**
 - **Tight Junctions** (Zonula occludens): Versiegeln apikalen Interzellularspalt; Barriere- und Fence-Funktion (trennen apikale und basolaterale Membranproteine). Aus Claudinen und Occludin.
 - **Desmosomen**: Mechanischer Zusammenhalt (Cadherine + Intermediärfilamente). Knotenförmig, gürtelartig.
-- **Gap Junctions**: Direkter Ionenaustausch zwischen Zellen (Connexine). Wichtig für Herzmuskel, glatte Muskulatur.
+- **Gap Junctions**: Direkter Ionenaustausch zwischen Zellen (Connexine). **Die einzelnen Muskelzellen des Herzens sind elektrisch leitend durch Gap Junctions miteinander verbunden** (nicht durch Tight Junctions, Desmosomen oder Adhärens-Kontakte) — so breitet sich die Erregung koordiniert aus.
 - **Hemidesmosomen**: Verankerung an Basalmembran (Integrine + Laminin).
 
 > **Merke:** Tight Junctions = apikal, Barriere + Fence. Desmosomen = mechanisch. Gap Junctions = Ionenaustausch. Hemidesmosomen = Basalmembran-Verankerung.
@@ -654,7 +654,7 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Sarkomer (Z-Scheibe, A-/I-Bande, H-Zone; I und H kürzer, A konstant), Gleitfilamenttheorie, Ca²⁺/Troponin/Tropomyosin, ATP löst Myosin (Rigor mortis), drei Muskeltypen (Skelett/Herz/glatt), Herzmuskel (Gap Junctions, kein Tetanus), glatt (Calmodulin/MLCK), Troponin I/T als Herzinfarkt-Marker.
+**Zentral prüfungsrelevant:** Sarkomer (Z-Scheibe, A-/I-Bande, H-Zone; I und H kürzer, A konstant), Gleitfilamenttheorie, Ca²⁺/Troponin/Tropomyosin, ATP löst Myosin (Rigor mortis), drei Muskeltypen (Skelett/Herz/glatt), Herzmuskel (Gap Junctions, kein Tetanus), glatt (Calmodulin/MLCK), Troponin I/T als Herzinfarkt-Marker. **Glatte Muskulatur** (z. B. Darm): typisch **ausdauernde Tätigkeit**, unwillkürlich — nicht schnelle Kontraktion, nicht willkürlich beeinflussbar, keine aktive Streckung.
 
 **Ergänzend vertiefend:** Motorische Einheit, Rekrutierung, Titin/Nebulin.
 
@@ -837,7 +837,7 @@ Das Gehirn enthält ~86 Milliarden **Neuronen** — aber fast doppelt so viele *
 **Um Nervenleitung zu verstehen,** brauchst du zuerst den Bauplan einer Nervenzelle. **Neuron = Grundbaustein der Nervenleitung:**
 - **Soma** (Zellkörper): Zellkern, Synthese, Metabolismus
 - **Dendriten**: Kurze, stark verzweigte Fortsätze → empfangen Signale (Input)
-- **Axon**: Langer Fortsatz → leitet Signale weiter (Output), entspringt am Axonhügel
+- **Axon**: Langer Fortsatz → leitet Erregungen **vom Zellkörper weg** (Output). **Dendriten** leiten zum Zellkörper hin (Input). Die Fortsätze, über die Erregungen **vom Zellkörper weg**geleitet werden, heißen **Axone** (nicht Dendriten, Synapsen, Aktionspotentiale oder Ranvier-Schnürringe).
 - **Axonhügel** (Axon Initial Segment): Höchste Na⁺-Kanalddichte → hier wird das Aktionspotential initiiert (Schwellenwert ~-55 mV)
 - **Präsynaptische Endknöpfchen**: Vesikel mit Neurotransmittern → Synapse zum nächsten Neuron
 
@@ -1118,7 +1118,7 @@ Das vegetative Nervensystem (ANS) reguliert Herzfrequenz, Blutdruck, Atmung, Ver
 | Organ | Sympathikus | Parasympathikus |
 | --- | --- | --- |
 | Herz | Frequenz ↑, Kontraktilität ↑ (β1) | Frequenz ↓ (M2, Vagus) |
-| Bronchien | Dilatation (β2) | Konstriktion (M3) |
+| Bronchien | Erweiterung (β2) | Konstriktion (M3) |
 | Pupille | Mydriasis (α1) | Miosis (M3) |
 | GI-Trakt | Peristaltik ↓ (α2) | Peristaltik ↑ (M3) |
 | Blase | Sphinkter-Kontraktion (α1) | Detrusor-Kontraktion (M3) |
@@ -1188,7 +1188,7 @@ Der Reflexbogen besteht aus Rezeptor, afferenter Faser, (Interneuron), efferente
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Vegetatives Nervensystem (Sympathikus vs. Parasympathikus), Wirkung auf Herz/Bronchien/Pupille/GI-Trakt, Acetylcholin vs. Noradrenalin, Rezeptoren (nikotinisch/muskarinisch, α/β).
+**Zentral prüfungsrelevant:** Vegetatives Nervensystem (Sympathikus vs. Parasympathikus), Wirkung auf Herz/Bronchien/Pupille/GI-Trakt, Acetylcholin vs. Noradrenalin, Rezeptoren (nikotinisch/muskarinisch, α/β). **Atem- und Kreislaufzentrum** befinden sich im **Hirnstamm** (Medulla oblongata + Pons) — nicht im Großhirn, Kleinhirn oder Rückenmark.
 
 **Ergänzend vertiefend:** Enterisches NS; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -1198,6 +1198,7 @@ Der Reflexbogen besteht aus Rezeptor, afferenter Faser, (Interneuron), efferente
 - Synaptische Transmission: SNARE-Komplex, ionotrope vs. metabotrope Rezeptoren
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **„Verminderung der Schlagfrequenz des Herzens“ ist KEINE Wirkung des Sympathikus** — das ist Parasympathikus (M2, Vagus). Sympathikus **erhöht** Herzfrequenz (β1).
 - Sympathikus: Noradrenalin postganglionär, aber ACh präganglionär (im Ganglion nikotinisch!)
 - EPSP (Glutamat, Depolarisation) vs. IPSP (GABA, Hyperpolarisation)
 - Absolute Refraktärzeit (Na⁺-Kanäle inaktiviert, KEIN AP) vs. relative (überschwelliger Reiz nötig)
@@ -1412,10 +1413,10 @@ Alle Sinnesorgane folgen demselben Grundprinzip: Ein physikalischer oder chemisc
 
 Das Ohr löst ein physikalisches Problem: Luftschwingungen müssen in Flüssigkeitsschwingungen umgewandelt werden. Ohne das Mittelohr gingen 99,9 % der Schallenergie an der Luft-Wasser-Grenze verloren — das Mittelohr gleicht diesen Impedanzunterschied aus.
 
-**Anatomische Gliederung:**
-- **Außenohr**: Ohrmuschel + äußerer Gehörgang → sammelt Schall → Trommelfell
-- **Mittelohr** (luftgefüllt, Tube → Druckausgleich): Gehörknöchelchen **Hammer → Amboss → Steigbügel** → **Impedanzanpassung** (= Überwindung des Luft-Wasser-Widerstands durch Hebelwerk des Mittelohrs, ~22-fach Druckverstärkung durch Hebelwirkung ~1,3× + Flächenreduktion: Trommelfell 55 mm² → Oval-Fenster 3,2 mm²)
-- **Innenohr** (flüssigkeitsgefüllt): Cochlea (Hören) + Vestibularapparat (Gleichgewicht)
+**Anatomische Gliederung (prüfungssicher):**
+- **Außenohr**: Ohrmuschel + **Gehörgang** → sammelt Schall → **Trommelfell** (Membrana tympani). **Das Mittelohr wird vom Gehörgang durch das Trommelfell abgegrenzt.**
+- **Mittelohr** (luftgefüllt, **Paukenhöhle**): **Drei** miteinander verbundene **Gehörknöchelchen** (Hammer → Amboss → Steigbügel) → **Impedanzanpassung**. **Ohrtrompete (Tuba auditiva)** verbindet **Paukenhöhle mit dem Rachen** (Druckausgleich). **Ovales Fenster** verbindet **Mittelohr mit Innenohr** (Steigbügel-Fußplatte) — nicht mit der Ohrtrompete!
+- **Innenohr** (flüssigkeitsgefüllt): **Cochlea** (Hören) + **Vestibularapparat** (Gleichgewicht: **Bogengänge**, Utriculus, Sacculus). **Bogengänge liegen im Innenohr** und dienen dem **Gleichgewicht** (Drehbeschleunigung), **nicht** der Schallweiterleitung — Schallweiterleitung erfolgt über Gehörknöchelchen im Mittelohr.
 
 **Schallübertragung — Schritt für Schritt:**
 
@@ -1493,10 +1494,12 @@ Das Ohr löst ein physikalisches Problem: Luftschwingungen müssen in Flüssigke
 - Schallübertragung und Impedanzanpassung im Mittelohr
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Ohr:** Mittelohr/Gehörgang = **Trommelfell** als Grenze (richtig). **Bogengänge** sind im **Innenohr**, dienen dem **Gleichgewicht**, nicht der Schallweiterleitung. **Gehörknöchelchen** (3 Stück) = **Mittelohr**. **Ovales Fenster** = Mittelohr–**Innenohr** (nicht Mittelohr–Ohrtrompete). **Ohrtrompete** = Paukenhöhle–**Rachen** (nicht Gehörgang).
 - Licht führt zur Hyperpolarisation (nicht Depolarisation!) der Photorezeptoren
 - Stäbchen: peripher, hohe Empfindlichkeit, niedrige Auflösung vs. Zapfen: Fovea, hohe Auflösung, niedrige Empfindlichkeit
 - Endolymphe ist K⁺-reich (+80 mV), Perilymphe ist Na⁺-reich (wie EZF)
 - Basilarmembran-Tonotopie: Basis (steif, schmal) = hohe Frequenzen; Apex (flexibel, breit) = niedrige Frequenzen
+- **Ziliarkörper** ist primär für die **Änderung der Linsenkrümmung** (Akkommodation) nötig — nicht Hornhaut, Glaskörper, Regenbogenhaut oder äußere Augenmuskeln.
 - Akkommodation: Ziliarmuskel kontrahiert → Zonulafasern ENTSPANNEN → Linse wölbt sich (nicht umgekehrt!)
 
 **Prüfungsrelevante Zahlen/Fakten:**
@@ -1701,12 +1704,15 @@ Das endokrine System nutzt negative Rückkopplung zur Homöostase: Effektor-Horm
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Peptidhormone (membranständiger Rezeptor, schnell) vs. Steroidhormone (Kernrezeptor, langsam, genexpression), Beispiele (Insulin, Cortisol, Schilddrüsenhormon), Hypophysenachsen.
+**Zentral prüfungsrelevant:** Peptidhormone (membranständiger Rezeptor, schnell) vs. Steroidhormone (Kernrezeptor, langsam, genexpression), Beispiele (Insulin, Cortisol, Schilddrüsenhormon), Hypophysenachsen. **Somatotropin (Wachstumshormon, GH)** wird in der **Hypophyse** gebildet (nicht Schilddrüse, Nebenniere, Nebenschilddrüse, Keimdrüsen); zu viel bei Kindern → Riesenwuchs, zu wenig → Zwergwuchs. **Glukagon** wird von **α-Zellen** der Langerhans-Inseln (Pankreas) gebildet — neben Insulin wichtig für Blutzucker (Glukagon ↑ bei Fasten). **Pepsinogen** (inaktive Vorstufe von Pepsin) wird in der **Magenschleimhaut** gebildet (Hauptzellen), nicht in Bauchspeicheldrüse, Leber oder Mundspeicheldrüsen. Die **Galle** (aus der Gallenblase) wird in den **Dünndarm** abgegeben (nicht in Magen, Leber, Pfortader oder Dickdarm).
 
 **Ergänzend vertiefend:** Second Messenger; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Peptidhormone vs. Steroidhormone: Rezeptortyp, Wirkgeschwindigkeit, Beispiele
+- Wo wird Somatotropin gebildet? (Hypophyse)
+- Wo wird Pepsinogen gebildet? (Magenschleimhaut)
+- Wohin wird Galle abgegeben? (Dünndarm)
 - Primäre vs. sekundäre Hypothyreose: TSH-Werte als Schlüssel zur Differenzierung
 - Insulin-Sekretionsmechanismus: GLUT2 → ATP ↑ → K-ATP schließen → Ca²⁺ → Exozytose
 
@@ -1935,7 +1941,7 @@ Kurzfristig: Barorezeptor-Reflex (Aortenbogen, Karotis-Sinus) – Druck ↑ → 
 - LV-Wanddicke: 10--15 mm; RV: 3--5 mm
 - HZV in Ruhe: ca. 5 L/min; Belastung: bis 25 L/min
 - AV-Verzögerung: ca. 100 ms
-- Normaler Blutdruck: 120/80 mmHg; Lungenkreislauf: 25/10 mmHg
+- **Normaler Blutdruck** (junger Erwachsener, Ruhe): systolisch **~115 mmHg** (bzw. 120/80 mmHg); Lungenkreislauf: 25/10 mmHg
 - Kapillaroberfläche: ca. 600 m² für Stoffaustausch
 
 ---
@@ -1944,7 +1950,7 @@ Kurzfristig: Barorezeptor-Reflex (Aortenbogen, Karotis-Sinus) – Druck ↑ → 
 
 - **Herzaufbau**: 4 Kammern; LV-Wand ~10–15 mm (3× dicker als RV), da gegen hohen Systemwiderstand (~120 mmHg)
 - **Klappen**: AV-Klappen (Trikuspidal 3 Segel, Mitral 2) mit Sehnenfäden; Taschenklappen (Pulmonal, Aorta je 3) ohne
-- **Kreisläufe**: Kleiner Kreislauf: RV → Lungenarterien (O₂-arm!) → Lunge → Lungenvenen (O₂-reich!) → LA. Großer: LV → Aorta → Körper → RA
+- **Kreisläufe**: Kleiner Kreislauf: RV → Lungenarterien (O₂-arm!) → Lunge → **Lungenvenen (O₂-reich!) → linker Vorhof (Vorkammer)** — nicht linke Kammer, nicht Aorta, nicht rechter Vorhof. Großer: LV → Aorta → Körper → RA
 - **Erregungsleitung**: SA-Knoten (60–80/min) → AV-Knoten (Verzögerung ~100 ms) → His → Tawara → Purkinje (2–4 m/s)
 - **Blutdruck**: MAP = HZV × TPR = (SV × HF) × TPR. Kurzfristig: Barorezeptor-Reflex. Langfristig: RAAS (Renin → AII → Vasokonstriktion + Aldosteron → Na⁺/H₂O-Retention)
 - **Klinisch**: Herzinfarkt (Troponin!), Herzinsuffizienz (EF <40%), Hypertonie (>140/90 → Schlaganfall)`,
@@ -2083,7 +2089,7 @@ Blut ist das flüssige Transportmittel des Körpers — 5–6 Liter, die kontinu
 
 ## Erythrozyten und Hämoglobin
 
-Erythrozyten sind bikonkave Scheiben ohne Zellkern mit Hämoglobin (Tetramer 2α2β, Fe²⁺). Der Bohr-Effekt beschreibt die Rechtsverschiebung der O₂-Bindungskurve bei CO₂↑/pH↓/Temperatur↑ → O₂-Abgabe ↑ im Gewebe. Abbau nach ~120 Tagen in der Milz: Hämoglobin → Bilirubin (unkonjugiert) → Leber → konjugiertes Bilirubin → Galle → Stuhl (Sterkobilin) + Urin (Urobilin).
+Erythrozyten sind bikonkave Scheiben **ohne Zellkern** (reife menschliche Erythrozyten haben keinen Zellkern!) mit Hämoglobin (Tetramer 2α2β, Fe²⁺). **Mittlerer Durchmesser ~7,5 µm** (= 7,5×10⁻⁶ m; nicht 7,5 nm, nicht 7,5 mm). Der Bohr-Effekt beschreibt die Rechtsverschiebung der O₂-Bindungskurve bei CO₂↑/pH↓/Temperatur↑ → O₂-Abgabe ↑ im Gewebe. Abbau nach ~120 Tagen in der Milz: Hämoglobin → Bilirubin (unkonjugiert) → Leber → konjugiertes Bilirubin → Galle → Stuhl (Sterkobilin) + Urin (Urobilin).
 
 > **Merke:** **Hämatokrit:** Männer ~45%, Frauen ~42% – Erythrozyten-Volumen im Blut (Anämie ↓, Polyglobulie ↑). (Hämatokrit = Volumenanteil Erythrozyten, Männer höher wegen Testosteron)
 
@@ -2143,7 +2149,7 @@ AB0-System: Blutgruppe A (Antigen A, Anti-B IgM), B (Antigen B, Anti-A IgM), AB 
 - Gerinnungskaskade: Extrinsisch (TF+VII) vs. intrinsisch (XII), gemeinsame Endstrecke
 
 **Typische Prüfungsfallen / Verwechslungen:**
-- Plasma (mit Fibrinogen) vs. Serum (ohne Fibrinogen, nach Gerinnung)
+- **Serum vs. Plasma:** Unterschied = **Gerinnungsfaktoren**. **Plasma** enthält Fibrinogen und andere Gerinnungsfaktoren (Blut + Antikoagulans). **Serum** = Plasma **ohne** Gerinnungsfaktoren (nach Gerinnung abgetrennt). Serum ≠ Plasma wegen Fehlen der Gerinnungsfaktoren.
 - AB0-Antikörper sind natürlich vorhanden (IgM), Rhesus-Antikörper erst nach Sensibilisierung (IgG)
 - Hämophilie A = Faktor VIII-Mangel (nicht IX); Hämophilie B = Faktor IX
 - Fe²⁺ in Hämoglobin (O₂-bindend) vs. Fe³⁺ = Methämoglobin (kann kein O₂ binden)
@@ -2332,6 +2338,8 @@ IgM (Primärantwort, Pentamer, aktiviert Komplement); IgG (Sekundärantwort, mon
 ---
 
 ## Allergie und Autoimmunität
+
+**Definition (prüfungssicher):** Eine **Autoimmunerkrankung** ist eine Erkrankung, die **durch eine Immunreaktion auf körpereigene Antigene** hervorgerufen wird — nicht durch allergische Reaktion auf körperfremde Antigene, nicht durch Injektion von Immunglobulinen, nicht durch gesteigerte NK-Zellen-Aktivität, nicht durch Transplantatabstoßung (die zwar immunologisch ist, aber gegen fremde Gewebeantigene).
 
 Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf Mastzellen) → Re-Exposition (Allergen kreuzvernetzt IgE → Mastzell-Degranulation → Histamin, Leukotriene). Manifestationen: Rhinitis, Asthma, Urtikaria, Anaphylaxie. Notfalltherapie Anaphylaxie: Adrenalin i.m. (β₂ Bronchodilatation, α₁ Vasokonstriktion). Allergie-Typen II–IV: Typ II (zytotoxisch: Antikörper gegen Zelloberflächenantigene, z.B. Autoimmunhämolyse); Typ III (Immunkomplexe: z.B. Serumkrankheit, SLE-Nephritis); Typ IV (verzögert/zellulär: T-Zell-vermittelt, z.B. Tuberkulin-Test, Kontaktdermatitis). Nur Typ I ist IgE-vermittelt und soforttyp. Autoimmunerkrankungen entstehen durch Verlust der Selbsttoleranz.
 
@@ -2704,6 +2712,8 @@ Ohne Sauerstoff kein Leben — und ohne ein System, das O₂ aus der Luft ins Bl
 ---
 
 ## Surfactant und Alveolarstruktur
+
+**Gasaustausch findet in den Alveolen statt, nicht in den Bronchien.** Die Bronchien leiten die Luft; der eigentliche O₂/CO₂-Austausch erfolgt in den **Alveolen**. Sauerstoff wird im Blut an **Hämoglobin der Erythrozyten** gebunden; ein Teil des CO₂ wird ebenfalls an Hämoglobin gebunden (als Carbaminohämoglobin). Mit jedem Atemzug wird **nicht** die gesamte Luftmenge erneuert (Totraum, Residualvolumen).
 
 Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. Ihre Wand besteht aus zwei Pneumozytentypen:
 - **Typ-I-Pneumozyten** (~95 % der Oberfläche): Hauchfein (0,2 µm), ermöglichen den Gasaustausch
@@ -3136,7 +3146,7 @@ Der **Dickdarm** (Colon) ist ca. 1,5 m lang und besteht aus Caecum, Colon ascend
 
 Die Niere ist weit mehr als ein Abfallfilter: Sie reguliert Blutvolumen, Blutdruck, pH-Wert und Elektrolyte — und produziert Hormone (Erythropoetin, Renin). Jede Niere hat ~1 Million Nephrone, die täglich 180 Liter Primärharn filtrieren — durch Rückresorption werden davon >99% zurückgewonnen, nur 1–2 Liter werden als Endurin ausgeschieden. Das RAAS (Renin-Angiotensin-Aldosteron-System) ist zentraler Blutdruckregulator. Für die Medizin: Niereninsuffizienz ist häufig (diabetische Nephropathie als Hauptursache), renale Anämie durch EPO-Mangel, ACE-Hemmer als RAAS-Blocker. MedAT-Schwerpunkte: GFR, Tubulustransporte, ADH/Aldosteron, RAAS-Kaskade.
 
-Der **Harntrakt** besteht aus: Nieren (Urinbildung) → **Harnleiter** (Ureter, je 25–30 cm, peristaltischer Transport des Urins zur Blase) → **Harnblase** (Speicherung, 300–500 mL) → **Urethra** (Ausleitung). Die Harnleiter münden vesikoureteral ein; Reflux wird durch den schrägen Eintrittswinkel verhindert.
+Der **Harntrakt** besteht aus: Nieren (Urinbildung) → **rechter und linker Harnleiter** (Ureter) → **Harnblase** (Speicherung, 300–500 mL) → **Harnröhre** (Urethra, eine gemeinsame Ausleitung). **Prüfungssicher:** Die korrekte Reihenfolge ist **Harnleiter → Harnblase → Harnröhre** (nicht „rechte und linke Harnröhre“ — es gibt nur eine Harnröhre).
 
 **In diesem Kapitel lernst du:**
 - **Nephron** (Glomerulus, Tubuli, GFR ~180 L/Tag) und **Gegenstromprinzip** (Henle-Schleife)
@@ -3657,7 +3667,7 @@ Der 28-tägige Menstruationszyklus ist ein Musterbeispiel für negative und posi
 **Lutealphase (Tag 15–28):**
 - Follikelreste → **Corpus luteum** → **Progesteron** (+ Östrogen) ↑
 - Progesteron: Endometrium vorbereiten (sekretorisch), Cervixschleim eindicken, Basaltemperatur ↑ ~0,5 °C
-- Keine Befruchtung → Corpus luteum degeneriert (Tag ~25) → Hormonabfall → **Menstruation**
+- Keine Befruchtung → Corpus luteum degeneriert (Tag ~25) → Hormonabfall → **Menstruation**. **Blut und ausgeschiedene Gewebeteile stammen aus der Uterusschleimhaut** (Endometrium) — nicht aus Follikel, Gelbkörper, Tuben- oder Vaginalschleimhaut.
 - Befruchtung: Trophoblast → **hCG** → erhält Corpus luteum → Progesteron hoch → Schwangerschaft
 
 > **Merke:** **Menstruationszyklus**: FSH → Östrogen ↑ (Follikelphase) → Östrogen ↑↑ → **positive Rückkopplung → LH-Peak** (Tag 14) → Ovulation → Corpus luteum → Progesteron ↑ (Lutealphase). Keine Befruchtung → Corpus luteum degeneriert → Menstruation. **hCG** (Trophoblast ab Tag 6–7): erhält Corpus luteum → Basis des Schwangerschaftstests.
@@ -3668,7 +3678,7 @@ Der 28-tägige Menstruationszyklus ist ein Musterbeispiel für negative und posi
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Sertoli-Zellen (FSH, Inhibin, ABP, Blut-Hoden-Schranke, Ernährung der Spermien) vs. Leydig-Zellen (LH → Testosteron), Spermatogenese, Hormonregulation Hoden.
+**Zentral prüfungsrelevant:** Sertoli-Zellen (FSH, Inhibin, ABP, Blut-Hoden-Schranke, Ernährung der Spermien) vs. Leydig-Zellen (LH → Testosteron), Spermatogenese, Hormonregulation Hoden. **Bis zur Ejakulation werden Spermien in den Nebenhodengängen (Nebenhoden) gespeichert** — nicht in Samenkanälchen, Samenbläschen, Samenleitern oder Prostata.
 
 **Ergänzend vertiefend:** Spermatogonien; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 

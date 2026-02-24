@@ -133,7 +133,7 @@ Ein **Katalysator** erhöht die Reaktionsgeschwindigkeit, indem er die Aktivieru
 Die **Reaktionsenthalpie ΔH** beschreibt den Wärmeaustausch bei konstantem Druck.
 
 - **Exotherm (ΔH < 0):** Energie wird an die Umgebung abgegeben → Produkte energieärmer als Edukte. Beispiel: Verbrennung von Glucose: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O; ΔH = −2803 kJ/mol.
-- **Endotherm (ΔH > 0):** Energie wird aus der Umgebung aufgenommen → Produkte energiereicher. Beispiel: Photosynthese (6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂; ΔH = +2803 kJ/mol), thermische Zersetzung von CaCO₃.
+- **Endotherm (ΔH > 0):** Das System **nimmt Wärme aus der Umgebung auf** → Produkte energiereicher. Definition: *Eine Reaktion, bei der das System Wärme aus der Umgebung aufnimmt, nennt man endotherm.* Beispiel: Photosynthese (6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂; ΔH = +2803 kJ/mol), thermische Zersetzung von CaCO₃.
 
 **Rechenbeispiel — Energiebilanz:**
 Verbrennung von 1 mol Ethanol: C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O; ΔH = −1367 kJ/mol
@@ -157,6 +157,7 @@ Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern vo
 - „Wann ist eine Reaktion spontan?" → Wenn ΔG < 0 (exergon) — nicht allein durch ΔH bestimmbar
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Durch Katalysator lässt sich die Lage des chemischen Gleichgewichts NICHT beeinflussen.** (Konzentration, Druck, Temperatur, Edukt-/Produktentfernung schon.)
 - Exotherm (ΔH < 0) ≠ spontan. Spontaneität wird durch ΔG = ΔH − T·ΔS bestimmt
 - Katalysator verändert die **Geschwindigkeit**, nicht die **Gleichgewichtslage** oder Thermodynamik
 - OIL RIG: **O**xidation **I**s **L**oss (von e⁻), **R**eduction **I**s **G**ain — nicht umdrehen!
@@ -1816,6 +1817,9 @@ gilt die Gleichgewichtskonstante K_c (konzentrationsbasiert):
 
 Die eckigen Klammern bezeichnen Gleichgewichtskonzentrationen in mol/L, die Hochzahlen sind die stöchiometrischen Koeffizienten. Wichtig: Reine Feststoffe und flüssiges Wasser (bei wässrigen Reaktionen) tauchen nicht im MWG auf, da ihre Aktivität (näherungsweise) 1 ist.
 
+**Beispiel (MedAT-relevant):** Für **Fe + 2 HCl ⇌ FeCl₂ + H₂** lautet das Massenwirkungsgesetz:
+**K = [FeCl₂]·[H₂] / ([Fe]·[HCl]²)** — der Koeffizient 2 vor HCl wird zum Exponenten bei [HCl].
+
 **Reaktionsquotient Q:** Zu einem beliebigen Zeitpunkt berechnet man Q mit denselben Formeln. Vergleich von Q mit K_c:
 - Q < K_c: Reaktion läuft in Richtung Produkte (Hinreaktion überwiegt)
 - Q > K_c: Reaktion läuft in Richtung Edukte (Rückreaktion überwiegt)
@@ -1878,9 +1882,11 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
 - „Wie berechnet sich Kp aus Kc?" → Kp = Kc · (RT)^Δn; bei Δn = 0 gilt Kp = Kc
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Einsatz eines Katalysators** beeinflusst die **Lage des Gleichgewichts nicht** — nur Konzentration, Druck, Temperatur, Entfernung von Edukten/Produkten tun das.
 - Großes K ≠ schnelle Reaktion — K ist Thermodynamik, E_A ist Kinetik (beide unabhängig!)
 - Kc ist temperaturabhängig, aber **nicht** konzentrations- oder druckabhängig
 - Q hat gleiche Form wie Kc, aber mit **aktuellen** (nicht Gleichgewichts-)Konzentrationen
+- **MWG-Beispiel Fe + 2 HCl ⇌ FeCl₂ + H₂:** K = [FeCl₂][H₂] / ([Fe][HCl]²) — Koeffizient 2 → Exponent bei [HCl]
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - ΔG° = −RT·ln(K): K > 1 → ΔG° < 0 → thermodynamisch begünstigt (exergon)

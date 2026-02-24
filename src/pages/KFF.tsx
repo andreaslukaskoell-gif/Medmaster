@@ -6,8 +6,6 @@ import {
   Send,
   BookOpen,
   Play,
-  Eye,
-  EyeOff,
   CheckCircle2,
   XCircle,
   Shuffle,
@@ -22,24 +20,45 @@ import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { usePageTitle } from "@/hooks/usePageTitle";
-import StrategyGuideView from "@/components/shared/StrategyGuideView";
-import { kffStrategyGuide } from "@/data/kffData";
+import KFFStrategyView from "@/components/shared/KFFStrategyView";
 import {
-  generateZahlenfolgenSet,
-  generateAllergyCards,
-  generateMemoryQuestions,
   generateWortflüssigkeitSet,
   generateSyllogismSet,
+  generateImplicationTrainingSet,
+  generateWordFluencyTrainingSet,
+  generateAllergyPasses,
+  generateGedaechtnisQuestionsFromPasses,
 } from "@/data/kffGenerators";
-import type {
-  ZahlenfolgeGenerated,
-  AllergyCard,
-  MemoryQuestion,
-  WortflüssigkeitQuestion,
-  SyllogismQuestion,
-} from "@/data/kffGenerators";
-import { figurenAufgaben, figurenStrategyGuide, difficultyLabel } from "@/data/figurenGenerator";
-import type { FZAufgabe } from "@/data/figurenGenerator";
+import type { WortflüssigkeitQuestion, SyllogismQuestion } from "@/data/kffGenerators";
+import {
+  OFFICIAL_GM_EXAMPLES,
+  validateOfficialGedaechtnisExamples,
+  type AllergyPass,
+  type GedaechtnisQuestion,
+} from "@/data/kffGedaechtnisMedAT";
+import { OFFICIAL_IMPLICATION_EXAMPLES, type ImplikationTask } from "@/data/kffImplikationen";
+import { OFFICIAL_WF_EXAMPLES, type WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
+import {
+  generateSequenceTaskSet,
+  OFFICIAL_ZF_EXAMPLES,
+  type SequenceTask,
+} from "@/data/kffZahlenfolgenMedAT";
+import { difficultyLabel } from "@/data/figurenGenerator";
+import {
+  OFFICIAL_FZ_EXAMPLES,
+  generateFigurenTrainingSet,
+  polygonToPath,
+  isOptionE,
+  type FigureAssembleTask,
+} from "@/data/kffFigurenZusammensetzenMedAT";
+import {
+  filterValidSequenceTasks,
+  filterValidImplikationTasks,
+  filterValidWordFluencyTasks,
+  filterValidFigurenTasks,
+  filterValidGedaechtnisQuestions,
+  logPoolWarning,
+} from "@/data/kffValidation";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -47,18 +66,18 @@ type KffView =
   | "overview"
   | "strategy"
   | "zahlenfolgen"
+  | "gedaechtnis-setup"
   | "gedaechtnis-learn"
   | "gedaechtnis-quiz"
   | "implikationen"
   | "wortflüssigkeit"
-  | "figuren-strategy"
   | "figuren-quiz";
 type StrategyKey = "zahlenfolgen" | "gedaechtnis" | "implikationen" | "wortflüssigkeit" | "figuren";
 
 const QUICK_START_VIEWS: Record<string, KffView> = {
   zahlenfolgen: "zahlenfolgen",
   implikationen: "implikationen",
-  gedaechtnis: "gedaechtnis-quiz",
+  gedaechtnis: "gedaechtnis-setup",
   wortfluessigkeit: "wortflüssigkeit",
 };
 
@@ -95,33 +114,25 @@ export default function KFF() {
     );
   }
 
-  if (view === "figuren-strategy") {
-    return <StrategyGuideView guide={figurenStrategyGuide} onBack={() => setView("overview")} />;
-  }
-
   if (view === "figuren-quiz") return <FigurenQuiz onBack={() => setView("overview")} />;
 
   if (view === "strategy") {
-    const guide = kffStrategyGuide[strategyKey as keyof typeof kffStrategyGuide];
-    if (!guide) {
-      return (
-        <div className="max-w-3xl mx-auto space-y-6">
-          <Button variant="ghost" size="sm" onClick={() => setView("overview")}>
-            <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
-          </Button>
-          <p className="text-muted">Strategie-Guide noch nicht verfügbar.</p>
-        </div>
-      );
-    }
-    return <StrategyGuideView guide={guide} onBack={() => setView("overview")} />;
+    return <KFFStrategyView strategyKey={strategyKey} onBack={() => setView("overview")} />;
   }
 
   if (view === "zahlenfolgen") return <ZahlenfolgenQuiz onBack={() => setView("overview")} />;
+  if (view === "gedaechtnis-setup")
+    return (
+      <GedaechtnisSetup
+        onLearn={() => setView("gedaechtnis-learn")}
+        onBack={() => setView("overview")}
+      />
+    );
   if (view === "gedaechtnis-learn")
     return (
       <GedaechtnisLearn
         onStart={() => setView("gedaechtnis-quiz")}
-        onBack={() => setView("overview")}
+        onBack={() => setView("gedaechtnis-setup")}
       />
     );
   if (view === "gedaechtnis-quiz") return <GedaechtnisQuiz onBack={() => setView("overview")} />;
@@ -132,28 +143,28 @@ export default function KFF() {
     {
       id: "zahlenfolgen" as const,
       title: "Zahlenfolgen",
-      desc: "Erkenne das Muster und finde die nächste Zahl. Unendlich viele generierte Aufgaben!",
+      desc: "Erkenne das Muster und finde die nächste Zahl. Unendlich viele geprüfte Trainingsaufgaben.",
       strategyKey: "zahlenfolgen" as StrategyKey,
       startView: "zahlenfolgen" as KffView,
       color: "bg-blue-100 dark:bg-blue-900/30",
       textColor: "text-blue-600 dark:text-blue-400",
-      badge: "Generiert",
+      badge: "Geprüft",
     },
     {
       id: "gedaechtnis" as const,
-      title: "Allergiepässe merken",
-      desc: "Lerne 8 generierte Allergieausweise und beantworte Fragen dazu.",
+      title: "Gedächtnis & Merkfähigkeit (Allergiepässe)",
+      desc: "Lernphase: Allergieausweise einprägen. Prüfphase: Fragen A–E wie im MedAT.",
       strategyKey: "gedaechtnis" as StrategyKey,
-      startView: "gedaechtnis-learn" as KffView,
+      startView: "gedaechtnis-setup" as KffView,
       color: "bg-green-100 dark:bg-green-900/30",
       textColor: "text-green-600 dark:text-green-400",
-      badge: "Generiert",
+      badge: "MedAT 1:1",
     },
     {
       id: "implikationen" as const,
       title: "Implikationen erkennen",
       desc: "Kategorische Syllogismen: Alle/Einige/Kein — finde die korrekte Schlussfolgerung (A-E).",
-      badge: "Generiert",
+      badge: "Geprüft",
       strategyKey: "implikationen" as StrategyKey,
       startView: "implikationen" as KffView,
       color: "bg-purple-100 dark:bg-purple-900/30",
@@ -167,7 +178,7 @@ export default function KFF() {
       startView: "wortflüssigkeit" as KffView,
       color: "bg-orange-100 dark:bg-orange-900/30",
       textColor: "text-orange-600 dark:text-orange-400",
-      badge: "Generiert",
+      badge: "Geprüft",
     },
     {
       id: "figuren" as const,
@@ -177,7 +188,6 @@ export default function KFF() {
       startView: "figuren-quiz" as KffView,
       color: "bg-rose-100 dark:bg-rose-900/30",
       textColor: "text-rose-600 dark:text-rose-400",
-      customStrategyView: "figuren-strategy" as KffView,
       icon: "puzzle",
     },
   ];
@@ -224,12 +234,8 @@ export default function KFF() {
                   variant="outline"
                   size="sm"
                   onClick={() => {
-                    if (m.customStrategyView) {
-                      setView(m.customStrategyView);
-                    } else {
-                      setStrategyKey(m.strategyKey);
-                      setView("strategy");
-                    }
+                    setStrategyKey(m.strategyKey);
+                    setView("strategy");
                   }}
                 >
                   <BookOpen className="w-4 h-4 mr-1" /> Strategie
@@ -271,21 +277,49 @@ function shuffleMixed<T>(
 // ZAHLENFOLGEN
 // ==========================================
 
+function shuffleArray<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+type ZahlenfolgenMode = "official" | "training";
+
 function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
+  const [mode, setMode] = useState<ZahlenfolgenMode | null>(null);
   const [questionCount, setQuestionCount] = useState(10);
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
-  const [questions, setQuestions] = useState<ZahlenfolgeGenerated[]>([]);
+  const [questions, setQuestions] = useState<SequenceTask[]>([]);
   const [index, setIndex] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [answers, setAnswers] = useState<Record<string, string>>({});
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
   const safeQuestions = questions || [];
   const currentQ = safeQuestions[index];
   const allAnswered = safeQuestions.every((qu) => answers[qu.id] !== undefined);
+  const isOfficialMode = mode === "official";
 
-  const startQuiz = () => {
-    const generated = shuffleMixed(generateZahlenfolgenSet, questionCount);
-    setQuestions(generated);
+  const startOfficial = () => {
+    const valid = filterValidSequenceTasks([...OFFICIAL_ZF_EXAMPLES]);
+    setQuestions(valid);
+    logPoolWarning("zahlenfolgen", valid.length, "offiziell");
+    setMode("official");
+    setIndex(0);
+    setAnswers({});
+    setPhase("quiz");
+  };
+
+  const startTraining = () => {
+    const raw = shuffleArray(generateSequenceTaskSet(questionCount, Date.now()));
+    const valid = filterValidSequenceTasks(raw);
+    setQuestions(valid);
+    if (valid.length < questionCount && import.meta.env?.DEV) {
+      logPoolWarning("zahlenfolgen", valid.length, "Training");
+    }
+    setMode("training");
     setIndex(0);
     setAnswers({});
     setPhase("quiz");
@@ -293,7 +327,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
 
   const handleSubmit = () => {
     const list = questions || [];
-    const score = list.filter((q) => answers[q.id] === q.correctOption).length;
+    const score = list.filter((q) => answers[q.id] === q.correctOptionId).length;
     saveQuizResult({
       id: `kff-zf-${Date.now()}`,
       type: "kff",
@@ -303,8 +337,8 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
       date: new Date().toLocaleDateString("de-AT"),
       answers: list.map((q) => ({
         questionId: q.id,
-        selectedAnswer: q.options?.[answers[q.id]] ?? "",
-        correct: answers[q.id] === q.correctOption,
+        selectedAnswer: answers[q.id] ?? "",
+        correct: answers[q.id] === q.correctOptionId,
       })),
     });
     addXP(score * 10);
@@ -315,10 +349,10 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
 
   useKeyboardShortcuts({
     disabled: phase !== "quiz",
-    maxOptions: currentQ?.options?.length ?? 4,
+    maxOptions: 5,
     onSelectOption: (idx) => {
       if (currentQ && currentQ.options && idx < currentQ.options.length)
-        setAnswers((p) => ({ ...p, [currentQ.id]: idx }));
+        setAnswers((p) => ({ ...p, [currentQ.id]: currentQ.options[idx].key }));
     },
     onConfirm: () => {
       if (index < safeQuestions.length - 1) setIndex((i) => i + 1);
@@ -339,11 +373,42 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Zahlenfolgen</h1>
-        <Card>
-          <CardContent className="p-6 space-y-6">
+
+        <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-lg">
+              🏛️ Offizielle Beispiele
+            </CardTitle>
             <p className="text-sm text-muted">
-              Schwierigkeit wird automatisch gemischt (leicht, mittel, schwer).
+              Original MedAT-Beispielaufgaben aus der Informationsbroschüre (IB_ZF_26.pdf) – 1:1
+              übernommen, in derselben Reihenfolge wie im PDF.
             </p>
+          </CardHeader>
+          <CardContent>
+            {OFFICIAL_ZF_EXAMPLES.length > 0 ? (
+              <Button className="w-full" size="lg" variant="outline" onClick={startOfficial}>
+                <BookOpen className="w-5 h-5 mr-2" /> {OFFICIAL_ZF_EXAMPLES.length} offizielle
+                Beispielaufgaben starten
+              </Button>
+            ) : (
+              <p className="text-sm text-amber-700 dark:text-amber-400">
+                Noch keine offiziellen Beispiele eingetragen. Bitte IB_ZF_26.pdf öffnen und
+                Beispielaufgaben in <code className="text-xs">OFFICIAL_ZF_EXAMPLES</code> in{" "}
+                <code className="text-xs">src/data/kffZahlenfolgenMedAT.ts</code> 1:1 übernehmen.
+              </p>
+            )}
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Training</CardTitle>
+            <p className="text-sm text-muted">
+              Geprüfte Trainingsaufgaben – Schwierigkeit wird automatisch gemischt (leicht, mittel,
+              schwer). Offizielle Beispiele werden dabei nicht verändert.
+            </p>
+          </CardHeader>
+          <CardContent className="space-y-6">
             <div>
               <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">
                 Anzahl Fragen
@@ -364,7 +429,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
                 ))}
               </div>
             </div>
-            <Button className="w-full" size="lg" onClick={startQuiz}>
+            <Button className="w-full" size="lg" onClick={startTraining}>
               <Shuffle className="w-5 h-5 mr-2" /> {questionCount} Fragen generieren
             </Button>
           </CardContent>
@@ -375,7 +440,12 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
 
   if (phase === "result") {
     const resultQuestions = questions || [];
-    const score = resultQuestions.filter((q) => answers[q.id] === q.correctOption).length;
+    const score = resultQuestions.filter((q) => answers[q.id] === q.correctOptionId).length;
+    const selectedLabel = (q: SequenceTask, key: string) => {
+      const opt = q.options?.find((o) => o.key === key);
+      if (!opt) return key;
+      return opt.value ? `${opt.value[0]}, ${opt.value[1]}` : (opt.text ?? key);
+    };
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <Button variant="ghost" size="sm" onClick={onBack}>
@@ -394,33 +464,41 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
           </CardContent>
         </Card>
         {resultQuestions.map((q, i) => {
-          const correct = answers[q.id] === q.correctOption;
+          const correct = answers[q.id] === q.correctOptionId;
           return (
             <Card
               key={q.id}
               className={`border-l-4 ${correct ? "border-l-green-500" : "border-l-red-500"}`}
             >
               <CardContent className="p-5">
-                <div className="flex items-center gap-2 mb-2">
+                <div className="flex items-center gap-2 mb-2 flex-wrap">
                   {correct ? (
                     <CheckCircle2 className="w-5 h-5 text-green-500" />
                   ) : (
                     <XCircle className="w-5 h-5 text-red-500" />
                   )}
                   <span className="font-medium">
-                    {i + 1}. {q.sequence.join(", ")}, ?, ?
+                    {i + 1}. {q.sequence.join(", ")}
                   </span>
-                  <Badge variant="info" className="text-[10px]">
-                    {difficultyLabel(q.difficulty)}
-                  </Badge>
+                  {q.source && (
+                    <Badge variant="default" className="text-[10px]">
+                      🏛️ Offizielles MedAT-Beispiel
+                    </Badge>
+                  )}
+                  {!q.source && (
+                    <Badge variant="info" className="text-[10px]">
+                      {difficultyLabel(q.difficulty)}
+                    </Badge>
+                  )}
                 </div>
+                {q.source && <p className="text-xs text-muted mb-2 ml-7">Quelle: {q.source}</p>}
                 {!correct && answers[q.id] !== undefined && (
                   <p className="text-sm text-red-600 dark:text-red-400 ml-7">
-                    Deine Antwort: {q.options?.[answers[q.id]]}
+                    Deine Antwort: {selectedLabel(q, answers[q.id])}
                   </p>
                 )}
                 <p className="text-sm text-green-700 dark:text-green-400 ml-7">
-                  Richtige Antwort: {q.correctPair?.[0]}, {q.correctPair?.[1]}
+                  Richtige Antwort: {q.correctNext[0]}, {q.correctNext[1]}
                 </p>
                 <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
                   <p className="text-xs text-blue-700 dark:text-blue-400">{q.explanation}</p>
@@ -433,7 +511,12 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
           <Button variant="outline" onClick={onBack}>
             Zurück
           </Button>
-          <Button onClick={() => setPhase("setup")}>
+          <Button
+            onClick={() => {
+              setPhase("setup");
+              setMode(null);
+            }}
+          >
             <Shuffle className="w-4 h-4 mr-1" /> Neue Fragen
           </Button>
         </div>
@@ -449,7 +532,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
         </Button>
         <div className="flex flex-col items-center justify-center gap-4 text-muted">
           <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full" />
-          <p>Fragen werden generiert...</p>
+          <p>Fragen werden geladen und geprüft...</p>
         </div>
       </div>
     );
@@ -466,6 +549,8 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   }
 
   const total = safeQuestions.length;
+  const optionDisplay = (opt: (typeof currentQ.options)[number]) =>
+    opt.value ? `${opt.value[0]}, ${opt.value[1]}` : (opt.text ?? "");
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
@@ -484,6 +569,11 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
       </div>
       <Card>
         <CardContent className="p-6">
+          {currentQ.source && (
+            <Badge variant="default" className="mb-2">
+              🏛️ Offizielles MedAT-Beispiel
+            </Badge>
+          )}
           <p className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">
             {currentQ.sequence?.join(", ") ?? ""},{" "}
             <span className="text-primary-700 dark:text-primary-400">?, ?</span>
@@ -493,12 +583,12 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
             {currentQ.options && Array.isArray(currentQ.options) ? (
               currentQ.options.map((opt, oi) => (
                 <button
-                  key={oi}
-                  onClick={() => setAnswers((p) => ({ ...p, [currentQ.id]: oi }))}
-                  className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer text-left ${answers[currentQ.id] === oi ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"}`}
+                  key={opt.key}
+                  onClick={() => setAnswers((p) => ({ ...p, [currentQ.id]: opt.key }))}
+                  className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer text-left ${answers[currentQ.id] === opt.key ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"}`}
                 >
-                  <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>
-                  {opt}
+                  <span className="font-semibold mr-2">{opt.key})</span>
+                  {optionDisplay(opt)}
                   <kbd className="float-right text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded text-muted">
                     {oi + 1}
                   </kbd>
@@ -508,6 +598,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
               <p className="text-sm text-muted">Keine Optionen geladen.</p>
             )}
           </div>
+          {currentQ.source && <p className="text-xs text-muted mt-3">Quelle: {currentQ.source}</p>}
         </CardContent>
       </Card>
       <div className="flex justify-between">
@@ -530,95 +621,231 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
 }
 
 // ==========================================
-// GEDAECHTNIS - with procedural cards
+// GEDAECHTNIS & MERKFAEHIGKEIT (Allergiepässe) – MedAT 1:1
 // ==========================================
 
-let _currentCards: AllergyCard[] = [];
-let _currentMemoryQuestions: MemoryQuestion[] = [];
+let _currentGmPasses: AllergyPass[] = [];
+let _currentGmQuestions: GedaechtnisQuestion[] = [];
+let _currentGmIsOfficial = false;
+
+function AllergyPassCard({ pass }: { pass: AllergyPass }) {
+  return (
+    <div className="flex rounded-xl border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 shadow-md overflow-hidden min-h-[200px]">
+      <div className="w-28 shrink-0 flex items-center justify-center bg-gray-100 dark:bg-gray-700 border-r border-gray-300 dark:border-gray-600">
+        {pass.photo ? (
+          <img src={pass.photo} alt="" className="w-full h-full object-cover" />
+        ) : (
+          <div className="w-20 h-24 rounded bg-gray-300 dark:bg-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400">
+            <svg className="w-12 h-14" viewBox="0 0 24 28" fill="currentColor" aria-hidden>
+              <path d="M12 2c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4zm0 10c3.3 0 6 2.7 6 6v6H6v-6c0-3.3 2.7-6 6-6z" />
+            </svg>
+          </div>
+        )}
+      </div>
+      <div className="flex-1 p-3 grid grid-cols-1 gap-1 text-sm">
+        <div className="font-semibold text-base text-gray-900 dark:text-gray-100 border-b border-gray-200 dark:border-gray-600 pb-1">
+          {pass.name}
+        </div>
+        <div className="grid grid-cols-[auto_1fr] gap-x-2 gap-y-0.5">
+          <span className="text-muted shrink-0">Geburtsdatum:</span>
+          <span className="text-gray-800 dark:text-gray-200">{pass.birthdate}</span>
+          <span className="text-muted shrink-0">Blutgruppe:</span>
+          <span className="font-semibold text-primary-700 dark:text-primary-400">
+            {pass.bloodGroup}
+          </span>
+          <span className="text-muted shrink-0">Medikamente:</span>
+          <span className="text-gray-800 dark:text-gray-200">
+            {pass.medications.length ? pass.medications.join(", ") : "Keine"}
+          </span>
+          <span className="text-muted shrink-0">Allergien:</span>
+          <span className="text-gray-800 dark:text-gray-200">{pass.allergies.join(", ")}</span>
+          <span className="text-muted shrink-0">Ausweisnr.:</span>
+          <span className="font-mono text-gray-800 dark:text-gray-200">{pass.passportNumber}</span>
+          <span className="text-muted shrink-0">Land:</span>
+          <span className="text-gray-800 dark:text-gray-200">{pass.country}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onBack: () => void }) {
+  const [passCount, setPassCount] = useState(8);
+  const officialValid = useMemo(() => validateOfficialGedaechtnisExamples(), []);
+  const hasOfficial =
+    OFFICIAL_GM_EXAMPLES.passes.length > 0 && OFFICIAL_GM_EXAMPLES.questions.length > 0;
+
+  const startOfficial = () => {
+    _currentGmPasses = [...OFFICIAL_GM_EXAMPLES.passes];
+    _currentGmQuestions = filterValidGedaechtnisQuestions([...OFFICIAL_GM_EXAMPLES.questions]);
+    logPoolWarning("gedaechtnis", _currentGmQuestions.length, "offiziell");
+    _currentGmIsOfficial = true;
+    onLearn();
+  };
+
+  const startTraining = () => {
+    _currentGmPasses = generateAllergyPasses(passCount);
+    const raw = generateGedaechtnisQuestionsFromPasses(_currentGmPasses, 25);
+    _currentGmQuestions = filterValidGedaechtnisQuestions(raw);
+    if (_currentGmQuestions.length < raw.length && import.meta.env?.DEV) {
+      logPoolWarning("gedaechtnis", _currentGmQuestions.length, "Training");
+    }
+    _currentGmIsOfficial = false;
+    onLearn();
+  };
+
+  return (
+    <div className="max-w-2xl mx-auto space-y-6">
+      <Button variant="ghost" size="sm" onClick={onBack}>
+        <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+      </Button>
+      <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+        Gedächtnis & Merkfähigkeit (Allergiepässe)
+      </h1>
+      <p className="text-sm text-muted">
+        Lernphase: Allergieausweise einprägen. Prüfphase: Fragen A–E. E = „Keine der
+        Antwortmöglichkeiten ist richtig.“
+      </p>
+
+      <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-lg">🏛️ Offizielle Beispiele</CardTitle>
+          <p className="text-sm text-muted">
+            Fixe Beispiele aus dem MedAT-PDF (IB_GM_26 o. ä.) – 1:1 übernommen, Reihenfolge wie im
+            PDF.
+          </p>
+        </CardHeader>
+        <CardContent>
+          {hasOfficial ? (
+            <Button className="w-full" size="lg" variant="outline" onClick={startOfficial}>
+              <BookOpen className="w-5 h-5 mr-2" /> {OFFICIAL_GM_EXAMPLES.passes.length} Pässe,{" "}
+              {OFFICIAL_GM_EXAMPLES.questions.length} Fragen – Lernphase starten
+            </Button>
+          ) : (
+            <p className="text-sm text-amber-700 dark:text-amber-400">
+              Noch keine offiziellen Beispiele. PDF in OFFICIAL_GM_EXAMPLES in
+              src/data/kffGedaechtnisMedAT.ts eintragen.
+            </p>
+          )}
+          {import.meta.env?.DEV && !officialValid && hasOfficial && (
+            <p className="text-xs text-red-600 dark:text-red-400 mt-2">
+              Dev-Check: Validierung fehlgeschlagen (z. B. nicht genau 5 Optionen oder correctIndex
+              nicht 0–4).
+            </p>
+          )}
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-lg">🧠 Training</CardTitle>
+          <p className="text-sm text-muted">
+            Geprüfte Trainingsaufgaben: Allergiepässe und 25 Fragen – realistische Namen,
+            Blutgruppen, Allergien, Medikamente.
+          </p>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <div>
+            <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">
+              Anzahl Allergiepässe (Lernphase)
+            </label>
+            <div className="flex flex-wrap gap-2">
+              {[6, 7, 8, 9, 10].map((n) => (
+                <button
+                  key={n}
+                  onClick={() => setPassCount(n)}
+                  className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
+                    passCount === n
+                      ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                      : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                  }`}
+                >
+                  {n}
+                </button>
+              ))}
+            </div>
+          </div>
+          <Button className="w-full" size="lg" onClick={startTraining}>
+            <Shuffle className="w-5 h-5 mr-2" /> {passCount} Pässe + 25 Fragen (geprüft) starten
+          </Button>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
 
 function GedaechtnisLearn({ onStart, onBack }: { onStart: () => void; onBack: () => void }) {
-  const [revealed, setRevealed] = useState<Record<string, boolean>>({});
-  const [cards] = useState<AllergyCard[]>(() => {
-    const generated = generateAllergyCards(8);
-    _currentCards = generated;
-    _currentMemoryQuestions = generateMemoryQuestions(generated, 25);
-    return generated;
-  });
+  const [learnMinutes, setLearnMinutes] = useState(5);
+  const [secondsLeft, setSecondsLeft] = useState(learnMinutes * 60);
+  const [started, setStarted] = useState(false);
+  const passes = useMemo(() => _currentGmPasses, []);
+  const isOfficial = _currentGmIsOfficial;
+
+  useEffect(() => {
+    if (!started || secondsLeft <= 0) return;
+    const t = setInterval(() => setSecondsLeft((s) => s - 1), 1000);
+    return () => clearInterval(t);
+  }, [started, secondsLeft]);
+
+  const startTimer = () => setStarted(true);
+  const m = Math.floor(secondsLeft / 60);
+  const s = secondsLeft % 60;
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between flex-wrap gap-2">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
-        <Badge variant="warning">Lernphase - Präge dir alles ein!</Badge>
+        <div className="flex items-center gap-2">
+          {isOfficial && (
+            <Badge variant="default" className="text-[10px]">
+              🏛️ Offizielles MedAT-Beispiel
+            </Badge>
+          )}
+          <Badge variant="warning">Lernphase – präge dir alles ein!</Badge>
+          {!started ? (
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-muted">Zeit:</span>
+              {[3, 4, 5, 6, 7, 8].map((min) => (
+                <button
+                  key={min}
+                  onClick={() => {
+                    setLearnMinutes(min);
+                    setSecondsLeft(min * 60);
+                  }}
+                  className={`px-2 py-1 rounded text-sm ${
+                    learnMinutes === min
+                      ? "bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200"
+                      : "bg-gray-100 dark:bg-gray-800 text-muted"
+                  }`}
+                >
+                  {min} min
+                </button>
+              ))}
+              <Button size="sm" onClick={startTimer}>
+                Timer starten
+              </Button>
+            </div>
+          ) : (
+            <span className="font-mono text-lg font-semibold text-gray-900 dark:text-gray-100">
+              {m}:{s.toString().padStart(2, "0")}
+            </span>
+          )}
+        </div>
       </div>
       <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Allergieausweise</h1>
       <p className="text-sm text-muted">
-        Präge dir die folgenden 8 Allergieausweise ein. Klicke auf die Karten, um Details
-        anzuzeigen. Wenn du bereit bist, starte die Prüfphase.
+        Präge dir die folgenden Ausweise ein. In der Prüfphase sind sie nicht mehr sichtbar.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {cards.map((a) => (
-          <Card
-            key={a.id}
-            className="cursor-pointer hover:shadow-md transition-shadow"
-            onClick={() => setRevealed((p) => ({ ...p, [a.id]: !p[a.id] }))}
-          >
-            <CardContent className="p-4">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="font-semibold text-gray-900 dark:text-gray-100">{a.name}</h3>
-                {revealed[a.id] ? (
-                  <EyeOff className="w-4 h-4 text-muted" />
-                ) : (
-                  <Eye className="w-4 h-4 text-muted" />
-                )}
-              </div>
-              {revealed[a.id] ? (
-                <div className="space-y-1 text-sm">
-                  <p>
-                    <span className="text-muted">Geburtsdatum:</span>{" "}
-                    <span className="text-gray-800 dark:text-gray-200">{a.geburtsdatum}</span>
-                  </p>
-                  <p>
-                    <span className="text-muted">Blutgruppe:</span>{" "}
-                    <span className="font-semibold text-primary-700 dark:text-primary-400">
-                      {a.blutgruppe}
-                    </span>
-                  </p>
-                  <p>
-                    <span className="text-muted">Allergien:</span>{" "}
-                    <span className="text-gray-800 dark:text-gray-200">
-                      {a.allergien.join(", ")}
-                    </span>
-                  </p>
-                  <p>
-                    <span className="text-muted">Land:</span>{" "}
-                    <span className="text-gray-800 dark:text-gray-200">{a.land}</span>
-                  </p>
-                  <p>
-                    <span className="text-muted">Ausweisnummer:</span>{" "}
-                    <span className="font-mono text-gray-800 dark:text-gray-200">
-                      {a.ausweisnummer}
-                    </span>
-                  </p>
-                  <p>
-                    <span className="text-muted">Medikamente:</span>{" "}
-                    <span className="text-gray-800 dark:text-gray-200">
-                      {a.medikamente ? "Ja" : "Nein"}
-                    </span>
-                  </p>
-                </div>
-              ) : (
-                <p className="text-sm text-muted italic">Klicke, um Details zu sehen</p>
-              )}
-            </CardContent>
-          </Card>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+        {passes.map((p) => (
+          <AllergyPassCard key={p.id} pass={p} />
         ))}
       </div>
       <div className="flex justify-center">
         <Button size="lg" onClick={onStart}>
-          <Play className="w-5 h-5 mr-2" /> Prüfphase starten
+          <Play className="w-5 h-5 mr-2" /> Zur Prüfphase
         </Button>
       </div>
     </div>
@@ -626,17 +853,18 @@ function GedaechtnisLearn({ onStart, onBack }: { onStart: () => void; onBack: ()
 }
 
 function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
-  const questions = useMemo(() => _currentMemoryQuestions, []);
+  const questions = useMemo(() => _currentGmQuestions, []);
   const [index, setIndex] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
   const { addXP, checkStreak, saveQuizResult } = useStore();
+  const isOfficial = _currentGmIsOfficial;
 
   const q = questions[index];
-  const allAnswered = questions.every((qu) => answers[qu.id]);
+  const allAnswered = questions.every((qu) => answers[qu.id] !== undefined);
 
   const handleSubmit = () => {
-    const score = questions.filter((qu) => answers[qu.id] === qu.correctAnswer).length;
+    const score = questions.filter((qu) => answers[qu.id] === qu.correctIndex).length;
     saveQuizResult({
       id: `kff-ged-${Date.now()}`,
       type: "kff",
@@ -646,8 +874,8 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
       date: new Date().toLocaleDateString("de-AT"),
       answers: questions.map((qu) => ({
         questionId: qu.id,
-        selectedAnswer: answers[qu.id] || "",
-        correct: answers[qu.id] === qu.correctAnswer,
+        selectedAnswer: qu.options[answers[qu.id] ?? -1] ?? "",
+        correct: answers[qu.id] === qu.correctIndex,
       })),
     });
     addXP(score * 10);
@@ -658,10 +886,9 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
 
   useKeyboardShortcuts({
     disabled: submitted,
-    maxOptions: q?.options?.length ?? 5,
+    maxOptions: 5,
     onSelectOption: (idx) => {
-      if (q && q.options && idx < q.options.length)
-        setAnswers((p) => ({ ...p, [q.id]: q.options[idx] }));
+      if (q && idx >= 0 && idx < 5) setAnswers((p) => ({ ...p, [q.id]: idx }));
     },
     onConfirm: () => {
       if (index < questions.length - 1) setIndex((i) => i + 1);
@@ -687,7 +914,7 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
   }
 
   if (submitted) {
-    const score = questions.filter((q) => answers[q.id] === q.correctAnswer).length;
+    const score = questions.filter((qu) => answers[qu.id] === qu.correctIndex).length;
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <Button variant="ghost" size="sm" onClick={onBack}>
@@ -704,31 +931,37 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
             <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{score * 10} XP</p>
           </CardContent>
         </Card>
-        {questions.map((q, i) => {
-          const correct = answers[q.id] === q.correctAnswer;
+        {questions.map((qu, i) => {
+          const correct = answers[qu.id] === qu.correctIndex;
+          const selectedOpt = qu.options[answers[qu.id] ?? -1];
           return (
             <Card
-              key={q.id}
+              key={qu.id}
               className={`border-l-4 ${correct ? "border-l-green-500" : "border-l-red-500"}`}
             >
               <CardContent className="p-5">
-                <div className="flex items-center gap-2 mb-2">
+                <div className="flex items-center gap-2 mb-2 flex-wrap">
                   {correct ? (
                     <CheckCircle2 className="w-5 h-5 text-green-500" />
                   ) : (
                     <XCircle className="w-5 h-5 text-red-500" />
                   )}
                   <span className="font-medium text-sm">
-                    {i + 1}. {q.text}
+                    {i + 1}. {qu.question}
                   </span>
+                  {isOfficial && qu.source && (
+                    <Badge variant="default" className="text-[10px]">
+                      🏛️ {qu.source}
+                    </Badge>
+                  )}
                 </div>
-                {!correct && (
+                {!correct && selectedOpt !== undefined && (
                   <p className="text-sm text-red-600 dark:text-red-400 ml-7">
-                    Deine Antwort: {answers[q.id]}
+                    Deine Antwort: {selectedOpt}
                   </p>
                 )}
                 <p className="text-sm text-green-700 dark:text-green-400 ml-7">
-                  Richtig: {q.correctAnswer}
+                  Richtig: {qu.options[qu.correctIndex]}
                 </p>
               </CardContent>
             </Card>
@@ -758,6 +991,11 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
         </Button>
+        {isOfficial && (
+          <Badge variant="default" className="text-[10px]">
+            🏛️ Offizielles MedAT-Beispiel
+          </Badge>
+        )}
         <Badge variant="danger">Prüfphase</Badge>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
@@ -771,15 +1009,25 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
           <p className="text-sm text-muted mb-1">
             Frage {index + 1} von {questions.length}
           </p>
-          <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">{q.text}</p>
-          <div className="space-y-3">
-            {q.options?.map((opt) => (
+          <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">
+            {q.question}
+          </p>
+          <div className="space-y-2">
+            {q.options.map((opt, oi) => (
               <button
-                key={opt}
-                onClick={() => setAnswers((p) => ({ ...p, [q.id]: opt }))}
-                className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${answers[q.id] === opt ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"}`}
+                key={oi}
+                onClick={() => setAnswers((p) => ({ ...p, [q.id]: oi }))}
+                className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer flex items-center gap-2 ${
+                  answers[q.id] === oi
+                    ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                    : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                }`}
               >
+                <span className="font-semibold shrink-0">{String.fromCharCode(65 + oi)})</span>
                 {opt}
+                <kbd className="ml-auto text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded text-muted">
+                  {oi + 1}
+                </kbd>
               </button>
             ))}
           </div>
@@ -808,10 +1056,17 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
 // IMPLIKATIONEN (Kategorische Syllogismen)
 // ==========================================
 
+function impDifficultyLabel(d: 1 | 2 | 3): string {
+  return d === 1 ? "Leicht" : d === 2 ? "Mittel" : "Schwer";
+}
+
+type ImplikationenMode = "official" | "training";
+
 function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
+  const [mode, setMode] = useState<ImplikationenMode | null>(null);
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [questionCount, setQuestionCount] = useState(10);
-  const [questions, setQuestions] = useState<SyllogismQuestion[]>([]);
+  const [questions, setQuestions] = useState<ImplikationTask[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const { addXP, checkStreak, saveQuizResult } = useStore();
@@ -820,15 +1075,38 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
   const currentQ = safeQuestions[index];
   const allAnswered = safeQuestions.every((qu) => answers[qu.id] !== undefined);
 
-  const startQuiz = () => {
-    setQuestions(shuffleMixed(generateSyllogismSet, questionCount));
+  const startOfficial = () => {
+    const valid = filterValidImplikationTasks([...OFFICIAL_IMPLICATION_EXAMPLES]);
+    setQuestions(valid);
+    logPoolWarning("implikationen", valid.length, "offiziell");
+    setMode("official");
+    setIndex(0);
+    setAnswers({});
+    setPhase("quiz");
+  };
+
+  const startTraining = () => {
+    const n1 = Math.max(0, Math.floor(questionCount / 3));
+    const n2 = Math.max(0, Math.floor(questionCount / 3));
+    const n3 = questionCount - n1 - n2;
+    const raw = shuffleArray([
+      ...generateImplicationTrainingSet(n1, 1),
+      ...generateImplicationTrainingSet(n2, 2),
+      ...generateImplicationTrainingSet(n3, 3),
+    ]);
+    const valid = filterValidImplikationTasks(raw);
+    setQuestions(valid);
+    if (valid.length < raw.length && import.meta.env?.DEV) {
+      logPoolWarning("implikationen", valid.length, "Training");
+    }
+    setMode("training");
     setIndex(0);
     setAnswers({});
     setPhase("quiz");
   };
 
   const handleSubmit = () => {
-    const score = safeQuestions.filter((qu) => answers[qu.id] === qu.correctOption).length;
+    const score = safeQuestions.filter((qu) => answers[qu.id] === qu.correctAnswer).length;
     saveQuizResult({
       id: `kff-imp-${Date.now()}`,
       type: "kff",
@@ -839,7 +1117,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
       answers: safeQuestions.map((qu) => ({
         questionId: qu.id,
         selectedAnswer: qu.options?.[answers[qu.id]] || "",
-        correct: answers[qu.id] === qu.correctOption,
+        correct: answers[qu.id] === qu.correctAnswer,
       })),
     });
     addXP(score * 10);
@@ -880,11 +1158,34 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
           Kategorische Syllogismen: Zwei Prämissen mit "Alle" / "Einige" / "Kein" — welche
           Schlussfolgerung ist korrekt?
         </p>
-        <Card>
-          <CardContent className="p-6 space-y-6">
+
+        <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-lg">
+              🏛️ Offizielle Beispiele
+            </CardTitle>
             <p className="text-sm text-muted">
-              Schwierigkeit wird automatisch gemischt (leicht, mittel, schwer).
+              Fixe Beispielaufgaben – unverändert, in fester Reihenfolge, niemals vom Generator
+              verwendet.
             </p>
+          </CardHeader>
+          <CardContent>
+            <Button className="w-full" size="lg" variant="outline" onClick={startOfficial}>
+              <BookOpen className="w-5 h-5 mr-2" /> {OFFICIAL_IMPLICATION_EXAMPLES.length}{" "}
+              offizielle Beispielaufgaben starten
+            </Button>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">🧪 Training</CardTitle>
+            <p className="text-sm text-muted">
+              Geprüfte Trainingsaufgaben – gleiche Logik-Typen, andere Inhalte. Keine Überlappung
+              mit den offiziellen Beispielen.
+            </p>
+          </CardHeader>
+          <CardContent className="space-y-6">
             <div>
               <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">
                 Anzahl Fragen
@@ -905,8 +1206,8 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
                 ))}
               </div>
             </div>
-            <Button className="w-full" size="lg" onClick={startQuiz}>
-              <Shuffle className="w-5 h-5 mr-2" /> {questionCount} Syllogismen generieren
+            <Button className="w-full" size="lg" onClick={startTraining}>
+              <Shuffle className="w-5 h-5 mr-2" /> {questionCount} Trainingsaufgaben generieren
             </Button>
           </CardContent>
         </Card>
@@ -915,7 +1216,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
   }
 
   if (phase === "result") {
-    const score = safeQuestions.filter((qu) => answers[qu.id] === qu.correctOption).length;
+    const score = safeQuestions.filter((qu) => answers[qu.id] === qu.correctAnswer).length;
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <Button variant="ghost" size="sm" onClick={onBack}>
@@ -933,24 +1234,35 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
           </CardContent>
         </Card>
         {safeQuestions.map((qu, i) => {
-          const correct = answers[qu.id] === qu.correctOption;
+          const correct = answers[qu.id] === qu.correctAnswer;
           return (
             <Card
               key={qu.id}
               className={`border-l-4 ${correct ? "border-l-green-500" : "border-l-red-500"}`}
             >
               <CardContent className="p-5">
-                <div className="flex items-center gap-2 mb-2">
+                <div className="flex items-center gap-2 mb-2 flex-wrap">
                   {correct ? (
                     <CheckCircle2 className="w-5 h-5 text-green-500" />
                   ) : (
                     <XCircle className="w-5 h-5 text-red-500" />
                   )}
                   <span className="font-medium text-sm">{i + 1}.</span>
-                  <Badge variant="info" className="text-[10px]">
-                    {difficultyLabel(qu.difficulty)}
-                  </Badge>
+                  {qu.source ? (
+                    <Badge variant="default" className="text-[10px]">
+                      🏛️ Offizielles MedAT-Beispiel
+                    </Badge>
+                  ) : (
+                    <Badge variant="info" className="text-[10px]">
+                      🧪 Trainingsaufgabe · {impDifficultyLabel(qu.difficulty)}
+                    </Badge>
+                  )}
                 </div>
+                {(qu.source || (qu.id.startsWith("imp-") && !qu.id.startsWith("imp-train"))) && (
+                  <p className="text-xs text-muted mb-2 ml-7">
+                    {qu.source ? `Quelle: ${qu.source}` : "Offizielle Beispielaufgabe"}
+                  </p>
+                )}
                 <p className="text-sm text-gray-700 dark:text-gray-300 ml-7 mb-1">
                   <strong>Prämisse 1:</strong> {qu.premise1}
                 </p>
@@ -963,7 +1275,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
                   </p>
                 )}
                 <p className="text-sm text-green-700 dark:text-green-400 ml-7">
-                  Richtig: {qu.options?.[qu.correctOption]}
+                  Richtig: {qu.options?.[qu.correctAnswer]}
                 </p>
                 <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
                   <p className="text-xs text-blue-700 dark:text-blue-400">{qu.explanation}</p>
@@ -976,7 +1288,12 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
           <Button variant="outline" onClick={onBack}>
             Zurück
           </Button>
-          <Button onClick={() => setPhase("setup")}>
+          <Button
+            onClick={() => {
+              setPhase("setup");
+              setMode(null);
+            }}
+          >
             <Shuffle className="w-4 h-4 mr-1" /> Neue Fragen
           </Button>
         </div>
@@ -993,7 +1310,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
         <Card>
           <CardContent className="p-6 text-center">
             <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500 mx-auto" />
-            <p className="text-sm text-muted mt-4">Fragen werden generiert...</p>
+            <p className="text-sm text-muted mt-4">Fragen werden geladen und geprüft...</p>
           </CardContent>
         </Card>
       </div>
@@ -1037,6 +1354,22 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
       </div>
       <Card>
         <CardContent className="p-6">
+          {currentQ.source ||
+          (currentQ.id.startsWith("imp-") && !currentQ.id.startsWith("imp-train")) ? (
+            <Badge variant="default" className="mb-2">
+              🏛️ Offizielles MedAT-Beispiel
+            </Badge>
+          ) : (
+            <Badge variant="info" className="mb-2">
+              Geprüfte Trainingsaufgabe (MedAT-Logik)
+            </Badge>
+          )}
+          {(currentQ.source ||
+            (currentQ.id.startsWith("imp-") && !currentQ.id.startsWith("imp-train"))) && (
+            <p className="text-xs text-muted mb-3">
+              {currentQ.source ? `Quelle: ${currentQ.source}` : "Offizielle Beispielaufgabe"}
+            </p>
+          )}
           <p className="text-sm text-muted mb-2">Prämisse 1:</p>
           <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-4 border-l-4 border-purple-400 pl-3">
             {currentQ.premise1 ?? "Fehler beim Laden"}
@@ -1095,31 +1428,67 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
 }
 
 // ==========================================
-// WORTFLUESSIGKEIT - new module
+// WORTFLUESSIGKEIT - Offizielle Beispiele vs. Training (strikt getrennt)
 // ==========================================
 
+type WortfluessigkeitMode = "official" | "training";
+
 function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
+  const [mode, setMode] = useState<WortfluessigkeitMode | null>(null);
   const [questionCount, setQuestionCount] = useState(10);
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
-  const [questions, setQuestions] = useState<WortflüssigkeitQuestion[]>([]);
+  const [questions, setQuestions] = useState<WordFluencyTask[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
   const safeQuestions = questions || [];
   const currentQ = safeQuestions[index];
-  const allAnswered = safeQuestions.every((qu) => answers[qu.id] !== undefined);
+  const allAnswered = safeQuestions.every((qu) => {
+    const id = qu.id ?? "";
+    return answers[id] !== undefined;
+  });
 
-  const startQuiz = () => {
-    const generated = shuffleMixed(generateWortflüssigkeitSet, questionCount);
-    setQuestions(generated);
+  const startOfficial = () => {
+    const withIds = OFFICIAL_WF_EXAMPLES.map((t, i) => ({
+      ...t,
+      id: t.id ?? `wf-off-${i}`,
+    }));
+    const valid = filterValidWordFluencyTasks(withIds);
+    setQuestions(valid);
+    logPoolWarning("wortflüssigkeit", valid.length, "offiziell");
+    setMode("official");
+    setIndex(0);
+    setAnswers({});
+    setPhase("quiz");
+  };
+
+  const startTraining = () => {
+    const n1 = Math.max(0, Math.floor(questionCount / 3));
+    const n2 = Math.max(0, Math.floor(questionCount / 3));
+    const n3 = questionCount - n1 - n2;
+    const raw = shuffleArray([
+      ...generateWordFluencyTrainingSet(n1, 1),
+      ...generateWordFluencyTrainingSet(n2, 2),
+      ...generateWordFluencyTrainingSet(n3, 3),
+    ]);
+    const valid = filterValidWordFluencyTasks(raw);
+    setQuestions(valid);
+    if (valid.length < raw.length && import.meta.env?.DEV) {
+      logPoolWarning("wortflüssigkeit", valid.length, "Training");
+    }
+    setMode("training");
     setIndex(0);
     setAnswers({});
     setPhase("quiz");
   };
 
   const handleSubmit = () => {
-    const score = safeQuestions.filter((qu) => answers[qu.id] === qu.correctWord[0]).length;
+    const score = safeQuestions.filter((qu) => {
+      const id = qu.id ?? "";
+      const correctOption = qu.options[qu.correctIndex];
+      return answers[id] === correctOption;
+    }).length;
     saveQuizResult({
       id: `kff-wf-${Date.now()}`,
       type: "kff",
@@ -1128,9 +1497,9 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
       total: safeQuestions.length,
       date: new Date().toLocaleDateString("de-AT"),
       answers: safeQuestions.map((qu) => ({
-        questionId: qu.id,
-        selectedAnswer: answers[qu.id] || "",
-        correct: answers[qu.id] === qu.correctWord[0],
+        questionId: qu.id ?? "",
+        selectedAnswer: answers[qu.id ?? ""] || "",
+        correct: answers[qu.id ?? ""] === qu.options[qu.correctIndex],
       })),
     });
     addXP(score * 10);
@@ -1143,8 +1512,10 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
     disabled: phase !== "quiz",
     maxOptions: currentQ?.options?.length ?? 5,
     onSelectOption: (idx) => {
-      if (currentQ && currentQ.options && idx < currentQ.options.length)
-        setAnswers((p) => ({ ...p, [currentQ.id]: currentQ.options[idx] }));
+      if (currentQ && currentQ.options && idx < currentQ.options.length) {
+        const id = currentQ.id ?? "";
+        setAnswers((p) => ({ ...p, [id]: currentQ.options[idx] }));
+      }
     },
     onConfirm: () => {
       if (index < safeQuestions.length - 1) setIndex((i) => i + 1);
@@ -1167,13 +1538,43 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Wortflüssigkeit</h1>
         <p className="text-sm text-muted">
           Die Buchstaben eines Wortes wurden vertauscht. Finde heraus, mit welchem Buchstaben das
-          Wort beginnt!
+          Wort beginnt (oder ob keine der Antworten passt)!
         </p>
-        <Card>
-          <CardContent className="p-6 space-y-6">
+
+        <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-lg">
+              🏛️ Offizielle Beispiele
+            </CardTitle>
             <p className="text-sm text-muted">
-              Schwierigkeit wird automatisch gemischt (kurze bis lange Wörter).
+              Fixe Beispielaufgaben aus dem MedAT-Material – 1:1, unverändert, nicht generiert.
             </p>
+          </CardHeader>
+          <CardContent>
+            {OFFICIAL_WF_EXAMPLES.length > 0 ? (
+              <Button className="w-full" size="lg" variant="outline" onClick={startOfficial}>
+                <BookOpen className="w-5 h-5 mr-2" /> {OFFICIAL_WF_EXAMPLES.length} offizielle
+                Beispielaufgaben starten
+              </Button>
+            ) : (
+              <p className="text-sm text-amber-700 dark:text-amber-400">
+                Noch keine offiziellen Beispiele eingetragen. Bitte MedAT-Material öffnen und
+                Beispiele in <code className="text-xs">OFFICIAL_WF_EXAMPLES</code> in{" "}
+                <code className="text-xs">src/data/kffWortfluessigkeitMedAT.ts</code> 1:1 eintragen.
+              </p>
+            )}
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">🧪 Training</CardTitle>
+            <p className="text-sm text-muted">
+              Geprüfte Trainingsaufgaben – andere Wörter, gleiche Regel. Keine Überlappung mit
+              offiziellen Beispielen.
+            </p>
+          </CardHeader>
+          <CardContent className="space-y-6">
             <div>
               <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">
                 Anzahl Fragen
@@ -1194,8 +1595,8 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
                 ))}
               </div>
             </div>
-            <Button className="w-full" size="lg" onClick={startQuiz}>
-              <Shuffle className="w-5 h-5 mr-2" /> {questionCount} Wörter generieren
+            <Button className="w-full" size="lg" onClick={startTraining}>
+              <Shuffle className="w-5 h-5 mr-2" /> {questionCount} Trainingsaufgaben generieren
             </Button>
           </CardContent>
         </Card>
@@ -1204,7 +1605,10 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
   }
 
   if (phase === "result") {
-    const score = safeQuestions.filter((qu) => answers[qu.id] === qu.correctWord[0]).length;
+    const score = safeQuestions.filter((qu) => {
+      const id = qu.id ?? "";
+      return answers[id] === qu.options[qu.correctIndex];
+    }).length;
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <Button variant="ghost" size="sm" onClick={onBack}>
@@ -1222,30 +1626,47 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
           </CardContent>
         </Card>
         {safeQuestions.map((qu, i) => {
-          const correct = answers[qu.id] === qu.correctWord[0];
+          const id = qu.id ?? "";
+          const correct = answers[id] === qu.options[qu.correctIndex];
+          const lettersStr = qu.letters.join(" ");
+          const isOfficial = !!qu.source || (qu.id?.startsWith("wf-off-") ?? false);
           return (
             <Card
-              key={qu.id}
+              key={qu.id ?? i}
               className={`border-l-4 ${correct ? "border-l-green-500" : "border-l-red-500"}`}
             >
               <CardContent className="p-5">
-                <div className="flex items-center gap-2 mb-2">
+                <div className="flex items-center gap-2 mb-2 flex-wrap">
                   {correct ? (
                     <CheckCircle2 className="w-5 h-5 text-green-500" />
                   ) : (
                     <XCircle className="w-5 h-5 text-red-500" />
                   )}
-                  <span className="font-mono text-lg tracking-wider">{qu.scrambled}</span>
+                  <span className="font-mono text-lg tracking-wider">{lettersStr}</span>
+                  {isOfficial ? (
+                    <Badge variant="default" className="text-[10px]">
+                      🏛️ Offizielles MedAT-Beispiel
+                    </Badge>
+                  ) : (
+                    <Badge variant="info" className="text-[10px]">
+                      Geprüfte Trainingsaufgabe (MedAT-Logik)
+                    </Badge>
+                  )}
                 </div>
-                {!correct && (
+                {qu.source && <p className="text-xs text-muted mb-2">Quelle: {qu.source}</p>}
+                {!correct && answers[id] !== undefined && (
                   <p className="text-sm text-red-600 dark:text-red-400 ml-7">
-                    Dein Buchstabe: {answers[qu.id]}
+                    Deine Antwort: {answers[id] === "-" ? "Keine passt" : answers[id]}
                   </p>
                 )}
                 <p className="text-sm text-green-700 dark:text-green-400 ml-7">
-                  Lösung: <span className="font-semibold">{qu.correctWord}</span> (beginnt mit{" "}
-                  {qu.correctWord[0]})
+                  Lösung: <span className="font-semibold">{qu.solutionWord}</span>
+                  {qu.correctIndex < 4 && ` (beginnt mit ${qu.options[qu.correctIndex]})`}
+                  {qu.correctIndex === 4 && " (keine der Antworten war richtig)"}
                 </p>
+                <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
+                  <p className="text-xs text-blue-700 dark:text-blue-400">{qu.explanation}</p>
+                </div>
               </CardContent>
             </Card>
           );
@@ -1254,7 +1675,12 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
           <Button variant="outline" onClick={onBack}>
             Zurück
           </Button>
-          <Button onClick={() => setPhase("setup")}>
+          <Button
+            onClick={() => {
+              setPhase("setup");
+              setMode(null);
+            }}
+          >
             <Shuffle className="w-4 h-4 mr-1" /> Neue Wörter
           </Button>
         </div>
@@ -1276,6 +1702,10 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
     );
   }
 
+  const taskId = currentQ.id ?? "";
+  const lettersStr = currentQ.letters.join(" ");
+  const isOfficial = !!currentQ.source || (currentQ.id?.startsWith("wf-off-") ?? false);
+
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
@@ -1294,23 +1724,37 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
       </div>
       <Card>
         <CardContent className="p-6 text-center">
-          <p className="text-sm text-muted mb-4">Mit welchem Buchstaben beginnt dieses Wort?</p>
+          {isOfficial ? (
+            <Badge variant="default" className="mb-2">
+              🏛️ Offizielles MedAT-Beispiel
+            </Badge>
+          ) : (
+            <Badge variant="info" className="mb-2">
+              Geprüfte Trainingsaufgabe (MedAT-Logik)
+            </Badge>
+          )}
+          {currentQ.source && <p className="text-xs text-muted mb-3">Quelle: {currentQ.source}</p>}
+          <p className="text-sm text-muted mb-4">
+            Mit welchem Buchstaben beginnt dieses Wort? (oder: Keine passt)
+          </p>
           <p className="text-3xl font-mono font-bold tracking-[0.3em] text-gray-900 dark:text-gray-100 mb-8">
-            {currentQ.scrambled}
+            {lettersStr}
           </p>
           <div className="flex justify-center gap-3 flex-wrap">
-            {(currentQ.options ?? []).map((letter, li) => (
+            {(currentQ.options ?? []).map((opt, li) => (
               <button
-                key={letter}
-                onClick={() => setAnswers((p) => ({ ...p, [currentQ.id]: letter }))}
+                key={`${opt}-${li}`}
+                onClick={() => setAnswers((p) => ({ ...p, [taskId]: opt }))}
                 className={`w-14 h-14 rounded-xl border-2 text-xl font-bold transition-all cursor-pointer ${
-                  answers[currentQ.id] === letter
+                  answers[taskId] === opt
                     ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300 scale-110"
                     : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:scale-105"
                 }`}
               >
-                {letter}
-                <span className="block text-[9px] text-muted font-mono">{li + 1}</span>
+                {opt === "-" ? "–" : opt}
+                <span className="block text-[9px] text-muted font-mono">
+                  {String.fromCharCode(65 + li)}
+                </span>
               </button>
             ))}
           </div>
@@ -1336,28 +1780,48 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
 }
 
 // ==========================================
-// FIGUREN ZUSAMMENSETZEN
+// FIGUREN ZUSAMMENSETZEN (Offizielle Beispiele + Training, Polygon-basiert)
 // ==========================================
 
+const FZ_OPTION_LABELS = ["A", "B", "C", "D", "E"] as const;
+const FILL_FZ = "#5eb8f0";
+
 function FigurenQuiz({ onBack }: { onBack: () => void }) {
-  const [questionCount, setQuestionCount] = useState(10);
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
-  const [questions, setQuestions] = useState<FZAufgabe[]>([]);
+  const [mode, setMode] = useState<"official" | "training" | null>(null);
+  const [trainingDifficulty, setTrainingDifficulty] = useState<"easy" | "medium" | "hard">(
+    "medium"
+  );
+  const [questionCount, setQuestionCount] = useState(10);
+  const [questions, setQuestions] = useState<FigureAssembleTask[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [timeLeft, setTimeLeft] = useState(90);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
-  const startQuiz = () => {
-    const pool = [...figurenAufgaben];
-    // Shuffle
-    for (let i = pool.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [pool[i], pool[j]] = [pool[j], pool[i]];
+  const startOfficial = () => {
+    const list = [...OFFICIAL_FZ_EXAMPLES];
+    const valid = filterValidFigurenTasks(list);
+    setQuestions(valid);
+    logPoolWarning("figuren", valid.length, "offiziell");
+    setIndex(0);
+    setAnswers({});
+    setTimeLeft(90);
+    setPhase("quiz");
+  };
+
+  const startTraining = () => {
+    const list = generateFigurenTrainingSet(
+      Math.min(questionCount, 20),
+      trainingDifficulty,
+      Date.now()
+    );
+    const valid = filterValidFigurenTasks(list);
+    setQuestions(valid);
+    if (valid.length < list.length && import.meta.env?.DEV) {
+      logPoolWarning("figuren", valid.length, "Training");
     }
-    const selected = pool.slice(0, Math.min(questionCount, pool.length));
-    setQuestions(selected);
     setIndex(0);
     setAnswers({});
     setTimeLeft(90);
@@ -1383,9 +1847,14 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
     };
   }, [phase, index]);
 
+  const correctAnswerLabel = (q: FigureAssembleTask) => FZ_OPTION_LABELS[q.correctIndex];
+  const isCorrect = (q: FigureAssembleTask) => answers[q.id] === correctAnswerLabel(q);
+
   const handleFzSubmit = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
-    const score = questions.filter((q) => answers[q.id] === q.correctOptionId).length;
+    const score = questions.filter(
+      (q) => answers[q.id] === FZ_OPTION_LABELS[q.correctIndex]
+    ).length;
     saveQuizResult({
       id: `kff-fz-${Date.now()}`,
       type: "kff",
@@ -1396,7 +1865,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
       answers: questions.map((q) => ({
         questionId: q.id,
         selectedAnswer: answers[q.id] || "",
-        correct: answers[q.id] === q.correctOptionId,
+        correct: answers[q.id] === FZ_OPTION_LABELS[q.correctIndex],
       })),
     });
     addXP(score * 10);
@@ -1428,47 +1897,120 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
           Figuren zusammensetzen
         </h1>
         <p className="text-sm text-muted">
-          Finde heraus, welche Figur aus den gezeigten Puzzleteilen entsteht. Du hast 1:30 Minuten
+          Welche Figur entsteht aus den Teilen? (Nur Drehen/Verschieben, keine Spiegelung.) 1:30 min
           pro Aufgabe.
         </p>
-        <Card>
-          <CardContent className="p-6 space-y-6">
-            <p className="text-sm text-muted">
-              Gemischte Schwierigkeit (3-7 Puzzleteile). Die Schwierigkeit wird automatisch
-              angepasst.
-            </p>
-            <div>
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">
-                Anzahl Aufgaben
-              </label>
+
+        {mode === null ? (
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Card
+              className="cursor-pointer border-2 border-transparent hover:border-rose-500 dark:hover:border-rose-500"
+              onClick={() => setMode("official")}
+            >
+              <CardContent className="p-6">
+                <span className="text-2xl" aria-hidden>
+                  🏛️
+                </span>
+                <h2 className="font-semibold text-gray-900 dark:text-gray-100 mt-2">
+                  Offizielle MedAT-Beispiele
+                </h2>
+                <p className="text-sm text-muted mt-1">
+                  Aufgaben 1:1 aus dem PDF (IB_FZ_26). Exakt wie in der Prüfung.
+                </p>
+              </CardContent>
+            </Card>
+            <Card
+              className="cursor-pointer border-2 border-transparent hover:border-rose-500 dark:hover:border-rose-500"
+              onClick={() => setMode("training")}
+            >
+              <CardContent className="p-6">
+                <span className="text-2xl" aria-hidden>
+                  🧠
+                </span>
+                <h2 className="font-semibold text-gray-900 dark:text-gray-100 mt-2">Training</h2>
+                <p className="text-sm text-muted mt-1">
+                  Geprüfte Trainingsaufgaben mit wählbarer Schwierigkeit (leicht / mittel / schwer).
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        ) : mode === "official" ? (
+          <Card>
+            <CardContent className="p-6 space-y-4">
+              <Badge variant="info">Offizielle Beispiele</Badge>
+              <p className="text-sm text-muted">
+                {OFFICIAL_FZ_EXAMPLES.length} Aufgabe{OFFICIAL_FZ_EXAMPLES.length !== 1 ? "n" : ""}{" "}
+                aus dem MedAT-PDF.
+              </p>
               <div className="flex gap-3">
-                {[5, 10, 15, 20].map((c) => (
+                <Button variant="outline" onClick={() => setMode(null)}>
+                  Zurück
+                </Button>
+                <Button size="lg" onClick={startOfficial}>
+                  <Puzzle className="w-5 h-5 mr-2" /> Starten
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        ) : (
+          <Card>
+            <CardContent className="p-6 space-y-6">
+              <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Schwierigkeit</p>
+              <div className="flex gap-2">
+                {(["easy", "medium", "hard"] as const).map((d) => (
                   <button
-                    key={c}
-                    onClick={() => setQuestionCount(c)}
-                    className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
-                      questionCount === c
+                    key={d}
+                    onClick={() => setTrainingDifficulty(d)}
+                    className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
+                      trainingDifficulty === d
                         ? "border-rose-500 bg-rose-50 dark:bg-rose-900/20 text-rose-800 dark:text-rose-300"
                         : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
                     }`}
                   >
-                    {c}
+                    {difficultyLabel(d)}
                   </button>
                 ))}
               </div>
-            </div>
-            <Button className="w-full" size="lg" onClick={startQuiz}>
-              <Puzzle className="w-5 h-5 mr-2" /> {questionCount} Aufgaben starten
-            </Button>
-          </CardContent>
-        </Card>
+              <div>
+                <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 block">
+                  Anzahl Aufgaben
+                </label>
+                <div className="flex gap-2">
+                  {[5, 10, 15, 20].map((c) => (
+                    <button
+                      key={c}
+                      onClick={() => setQuestionCount(c)}
+                      className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
+                        questionCount === c
+                          ? "border-rose-500 bg-rose-50 dark:bg-rose-900/20"
+                          : "border-border dark:border-gray-700"
+                      }`}
+                    >
+                      {c}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <Button variant="outline" onClick={() => setMode(null)}>
+                  Zurück
+                </Button>
+                <Button size="lg" onClick={startTraining}>
+                  <Puzzle className="w-5 h-5 mr-2" /> {questionCount} Aufgaben starten
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        )}
       </div>
     );
   }
 
   // --- RESULT ---
   if (phase === "result") {
-    const score = questions.filter((q) => answers[q.id] === q.correctOptionId).length;
+    const score = questions.filter(
+      (q) => answers[q.id] === FZ_OPTION_LABELS[q.correctIndex]
+    ).length;
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <Button variant="ghost" size="sm" onClick={onBack}>
@@ -1486,9 +2028,9 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
           </CardContent>
         </Card>
         {questions.map((q, i) => {
-          const correct = answers[q.id] === q.correctOptionId;
-          const selectedOpt = q.options.find((o) => o.id === answers[q.id]);
-          const correctOpt = q.options.find((o) => o.id === q.correctOptionId);
+          const correct = isCorrect(q);
+          const selectedLabel = answers[q.id] || "";
+          const correctLabel = correctAnswerLabel(q);
           return (
             <Card
               key={q.id}
@@ -1505,6 +2047,14 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                   <Badge variant="info" className="text-[10px]">
                     {difficultyLabel(q.difficulty)}
                   </Badge>
+                  {q.source && (
+                    <span
+                      className="text-[10px] text-muted truncate max-w-[180px]"
+                      title={q.source}
+                    >
+                      {q.source}
+                    </span>
+                  )}
                 </div>
                 <div className="flex items-center gap-4 ml-7 mb-2 flex-wrap">
                   <div>
@@ -1517,8 +2067,8 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                           className="w-10 h-10 bg-white dark:bg-gray-900 rounded"
                         >
                           <path
-                            d={piece.path}
-                            fill={piece.fill}
+                            d={polygonToPath(piece)}
+                            fill={FILL_FZ}
                             stroke="#374151"
                             strokeWidth="1.2"
                           />
@@ -1526,78 +2076,70 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                       ))}
                     </div>
                   </div>
-                  {q.pieces.some((p) => p.assemblyPath) && (
-                    <div>
-                      <p className="text-xs text-muted mb-1">So setzen sich die Teile zusammen:</p>
+                  <div>
+                    <p className="text-xs text-muted mb-1">So setzen sich die Teile zusammen:</p>
+                    <svg
+                      viewBox="0 0 200 200"
+                      className="w-20 h-20 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-700"
+                    >
+                      <path
+                        d={polygonToPath(q.target)}
+                        fill={FILL_FZ}
+                        stroke="#0e7490"
+                        strokeWidth="1.2"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs text-green-600 dark:text-green-400 mb-1">
+                      Richtig ({correctLabel}):
+                    </p>
+                    {q.correctIndex === 4 ? (
+                      <span className="text-xs text-green-600 dark:text-green-400 font-medium">
+                        E – Keine der Figuren ist richtig
+                      </span>
+                    ) : (
                       <svg
                         viewBox="0 0 200 200"
-                        className="w-20 h-20 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-700"
+                        className="w-12 h-12 bg-green-50 dark:bg-green-900/20 rounded border border-green-300 dark:border-green-700"
                       >
-                        {q.pieces.map(
-                          (piece, pi) =>
-                            piece.assemblyPath && (
-                              <path
-                                key={pi}
-                                d={piece.assemblyPath}
-                                fill={piece.fill}
-                                stroke="#0e7490"
-                                strokeWidth="1.2"
-                              />
-                            )
-                        )}
+                        <path
+                          d={polygonToPath(
+                            q.options[q.correctIndex] as { points: { x: number; y: number }[] }
+                          )}
+                          fill="#22c55e"
+                          stroke="#15803d"
+                          strokeWidth="1.2"
+                        />
                       </svg>
-                    </div>
-                  )}
-                  {correctOpt && (
-                    <div>
-                      <p className="text-xs text-green-600 dark:text-green-400 mb-1">
-                        Richtig ({correctOpt.id.toUpperCase()}):
-                      </p>
-                      {correctOpt.text ? (
-                        <span className="text-xs text-green-600 dark:text-green-400 font-medium">
-                          {correctOpt.text}
-                        </span>
-                      ) : (
-                        <svg
-                          viewBox="0 0 200 200"
-                          className="w-12 h-12 bg-green-50 dark:bg-green-900/20 rounded border border-green-300 dark:border-green-700"
-                        >
-                          {correctOpt.paths.map((p, pi) => (
-                            <path
-                              key={pi}
-                              d={p}
-                              fill="#22c55e"
-                              stroke="#15803d"
-                              strokeWidth="1.2"
-                            />
-                          ))}
-                        </svg>
-                      )}
-                    </div>
-                  )}
-                  {!correct && selectedOpt && (
+                    )}
+                  </div>
+                  {!correct && selectedLabel && (
                     <div>
                       <p className="text-xs text-red-600 dark:text-red-400 mb-1">
-                        Deine Antwort ({selectedOpt.id.toUpperCase()}):
+                        Deine Antwort ({selectedLabel}):
                       </p>
-                      {selectedOpt.text ? (
+                      {selectedLabel === "E" ? (
                         <span className="text-xs text-red-600 dark:text-red-400 font-medium">
-                          {selectedOpt.text}
+                          E – Keine der Figuren ist richtig
                         </span>
                       ) : (
                         <svg
                           viewBox="0 0 200 200"
                           className="w-12 h-12 bg-red-50 dark:bg-red-900/20 rounded border border-red-300 dark:border-red-700"
                         >
-                          {selectedOpt.paths.map((p, pi) => (
-                            <path
-                              key={pi}
-                              d={p}
-                              fill="#ef4444"
-                              stroke="#b91c1c"
-                              strokeWidth="1.2"
-                            />
-                          ))}
+                          <path
+                            d={polygonToPath(
+                              q.options[
+                                FZ_OPTION_LABELS.indexOf(
+                                  selectedLabel as "A" | "B" | "C" | "D" | "E"
+                                )
+                              ] as { points: { x: number; y: number }[] }
+                            )}
+                            fill="#ef4444"
+                            stroke="#b91c1c"
+                            strokeWidth="1.2"
+                          />
                         </svg>
                       )}
                     </div>
@@ -1614,7 +2156,12 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
           <Button variant="outline" onClick={onBack}>
             Zurück
           </Button>
-          <Button onClick={() => setPhase("setup")}>
+          <Button
+            onClick={() => {
+              setPhase("setup");
+              setMode(null);
+            }}
+          >
             <Shuffle className="w-4 h-4 mr-1" /> Neue Aufgaben
           </Button>
         </div>
@@ -1624,7 +2171,19 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
 
   // --- QUIZ ---
   const fzQ = questions[index];
-  const fzAllAnswered = questions.every((qu) => answers[qu.id] !== undefined);
+  if (!fzQ) {
+    return (
+      <div className="max-w-2xl mx-auto p-6">
+        <Button variant="ghost" size="sm" onClick={onBack}>
+          Zurück
+        </Button>
+        <p className="text-muted">Keine Aufgabe geladen.</p>
+      </div>
+    );
+  }
+  const fzAllAnswered = questions.every(
+    (qu) => answers[qu.id] !== undefined && answers[qu.id] !== ""
+  );
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
   const timerColor =
@@ -1658,7 +2217,6 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
         />
       </div>
 
-      {/* MedAT-Layout: links Puzzleteile, rechts Antwortoptionen A–E */}
       <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
         Welche Figur entsteht aus den Teilen? (Nur Drehen/Verschieben, keine Spiegelung.)
       </p>
@@ -1675,7 +2233,12 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                   className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 shrink-0"
                 >
                   <svg viewBox="0 0 200 200" className="w-full h-full">
-                    <path d={piece.path} fill={piece.fill} stroke="#0e7490" strokeWidth="1.2" />
+                    <path
+                      d={polygonToPath(piece)}
+                      fill={FILL_FZ}
+                      stroke="#0e7490"
+                      strokeWidth="1.2"
+                    />
                   </svg>
                 </div>
               ))}
@@ -1687,12 +2250,13 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
             Antwortoptionen
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-5 lg:grid-cols-2 gap-3">
-            {fzQ.options.map((opt) => {
-              const selected = answers[fzQ.id] === opt.id;
+            {fzQ.options.map((opt, optIdx) => {
+              const label = FZ_OPTION_LABELS[optIdx];
+              const selected = answers[fzQ.id] === label;
               return (
                 <button
-                  key={opt.id}
-                  onClick={() => setAnswers((p) => ({ ...p, [fzQ.id]: opt.id }))}
+                  key={optIdx}
+                  onClick={() => setAnswers((p) => ({ ...p, [fzQ.id]: label }))}
                   className={`flex flex-col items-center justify-center min-h-[90px] p-3 rounded-lg border-2 transition-colors cursor-pointer ${
                     selected
                       ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
@@ -1700,15 +2264,20 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                   }`}
                 >
                   <span className="text-sm font-bold text-gray-600 dark:text-gray-400 mb-1">
-                    {opt.id.toUpperCase()}
+                    {label}
                   </span>
-                  {opt.text ? (
-                    <span className="text-xs text-center text-muted leading-tight">{opt.text}</span>
+                  {isOptionE(opt) ? (
+                    <span className="text-xs text-center text-muted leading-tight">
+                      Keine der Figuren ist richtig
+                    </span>
                   ) : (
                     <svg viewBox="0 0 200 200" className="w-full max-w-[64px] max-h-[64px] flex-1">
-                      {opt.paths.map((p, pii) => (
-                        <path key={pii} d={p} fill={opt.fill} stroke="#0e7490" strokeWidth="1.2" />
-                      ))}
+                      <path
+                        d={polygonToPath(opt)}
+                        fill={FILL_FZ}
+                        stroke="#0e7490"
+                        strokeWidth="1.2"
+                      />
                     </svg>
                   )}
                 </button>

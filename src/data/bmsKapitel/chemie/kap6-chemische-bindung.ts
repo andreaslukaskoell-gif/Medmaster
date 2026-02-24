@@ -397,6 +397,8 @@ Lewis-Schreibweise: Einfachbindung (—), Doppelbindung (=), Dreifachbindung (�
 
 > **Merke:** Ionenbindung = Elektronenübertragung (ΔEN > 1,7); kovalente Bindung = Elektronenteilung (ΔEN < 1,7). Der Übergang ist fließend — polare kovalente Bindungen liegen dazwischen.
 
+**Prüfungsrelevant — kovalent vs. ionisch:** **Kovalent** aufgebaut: Verbindungen aus Nichtmetallen mit gemeinsamer Elektronenpaarbindung, z. B. **H₂O₂** (Wasserstoffperoxid), H₂O, CO₂. **Ionisch:** Metall–Nichtmetall, z. B. **NaCl**, **Fe₂O₃**, **CuCl₂**, **AlCl₃**. MedAT: „Welche Verbindung ist kovalent?“ → **H₂O₂**; NaCl, Fe₂O₃, CuCl₂ sind ionisch.
+
 **Bindungslänge und Bindungsenergie:** Kürzere Bindungen sind stärker. Einfachbindung C–C: 154 pm, 347 kJ/mol; Doppelbindung C=C: 134 pm, 614 kJ/mol; Dreifachbindung C≡C: 120 pm, 839 kJ/mol. Die Dreifachbindung ist die kürzeste und stärkste, aber nicht dreimal so stark wie die Einfachbindung (π-Bindungen sind schwächer als σ).
 
 ## Elektronegativität und Bindungspolarität
@@ -410,6 +412,8 @@ Lewis-Schreibweise: Einfachbindung (—), Doppelbindung (=), Dreifachbindung (�
 | > 1,7 | Ionisch | Na–Cl (2,1), K–F (3,1) |
 
 Bei polaren kovalenten Bindungen sind die Elektronen zum elektronegativeren Atom hin verschoben → **Partialladungen** (δ+ und δ−) → **Dipolmoment** μ = q · d (in Debye, D). Die C–H-Bindung (ΔEN = 0,4) gilt als nahezu unpolar, weshalb Kohlenwasserstoffe hydrophob sind.
+
+**Die polarste Bindung** unter mehreren Optionen hat die **größte Elektronegativitätsdifferenz (ΔEN)**. Beispiele: P–O (ΔEN ≈ 1,3), Li–H (≈ 1,1), C–Cl (≈ 0,5), H–C (≈ 0,4). Bei ionischen Bindungen (z. B. Ca–Cl, ΔEN > 1,7) ist die Polarität maximal (vollständige Ladungstrennung).
 
 ## Molekülpolarität
 

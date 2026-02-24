@@ -517,7 +517,7 @@ Die **Embryonalperiode** umfasst die ersten 8 Wochen nach der Befruchtung. In di
 
 ## Organogenese in der Embryonalperiode
 
-Die Organogenese bezeichnet die Anlage aller Organsysteme während der Wochen 3–8. Sie beginnt mit der Gastrulation (Woche 3) und der Entstehung des Neuralrohrs (Neurulation, Woche 3–4). In Woche 4 faltet sich der Embryo vom flachen Scheibenstadium zur zylindrischen Körperform (laterale und cephalo-caudale Faltung), wodurch der Darm entsteht. Das Herzschlauch-Paar fusioniert und beginnt zu schlagen (Tag 22–23). Die Gliedmaßenleisten erscheinen in Woche 4 (Arm) und Woche 5 (Bein). Bis Ende Woche 8 sind Finger und Zehen (durch Apoptose zwischen den Strahlungen) sichtbar, Augen und Ohren angelegt, und alle Organsysteme zumindest rudimentär vorhanden. Die SSL (Scheitel-Steiß-Länge) beträgt am Ende der Woche 8 ca. 3 cm; das Gewicht ca. 3 g.
+Die Organogenese bezeichnet die Anlage aller Organsysteme während der Wochen 3–8. Sie beginnt mit der Gastrulation (Woche 3) und der Entstehung des Neuralrohrs (Neurulation, Woche 3–4). In Woche 4 faltet sich der Embryo vom flachen Scheibenstadium zur zylindrischen Körperform (laterale und cephalo-caudale Faltung), wodurch der Darm entsteht. Das Herzschlauch-Paar fusioniert und **das Herz beginnt bereits in Woche 4 (Tag 22–23) zu schlagen** — **nicht** erst am Ende der 8. Woche (typische Falschaussage in MC-Fragen!). Die **4.–8. Woche** ist die **kritische Phase**: der Embryo ist gegenüber Teratogenen besonders anfällig. **Aus Ektoderm, Mesoderm und Entoderm entwickeln sich alle Organe** des Embryos. Der Embryo entwickelt sich in der mit Fruchtwasser gefüllten **Amnionhöhle**. Die Gliedmaßenleisten erscheinen in Woche 4 (Arm) und Woche 5 (Bein). Bis Ende Woche 8 sind Finger und Zehen (durch Apoptose zwischen den Strahlungen) sichtbar, Augen und Ohren angelegt, und alle Organsysteme zumindest rudimentär vorhanden. Die SSL (Scheitel-Steiß-Länge) beträgt am Ende der Woche 8 ca. 3 cm; das Gewicht ca. 3 g.
 
 > **Merke:** Embryonalperiode (Wochen 1–8) = Organogenese; Fetalperiode (ab Woche 9) = Wachstum und Reifung.
 
@@ -549,7 +549,7 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Embryonalperiode (bis Woche 8, alle Organe angelegt), Fetalperiode, Alles-oder-Nichts-Prinzip (Woche 1–2), Teratogene (kritische Phasen), Organogenese.
+**Zentral prüfungsrelevant:** Embryonalperiode (bis Woche 8, alle Organe angelegt), **kritische Phase 4.–8. Woche** (besonders anfällig für Teratogene). **Aus Ektoderm, Mesoderm und Entoderm entwickeln sich alle Organe.** Embryo in **Amnionhöhle** (Fruchtwasser). **Herz schlägt ab Woche 4** (Tag 22–23), Finger/Zehen Ende 8. Woche. Fetalperiode, Alles-oder-Nichts-Prinzip (Woche 1–2), Teratogene, Organogenese.
 
 **Ergänzend vertiefend:** Plazenta; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -559,6 +559,7 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
 - Ab wann produzieren Typ-II-Pneumozyten Surfactant? (Ab Woche 24)
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **„Das Herz beginnt am Ende der 8. Woche zu schlagen“ ist FALSCH** — das Herz schlägt bereits in **Woche 4** (Tag 22–23). Am Ende der 8. Woche sind Finger und Zehen ausgebildet.
 - Embryonalperiode (Organogenese, Wochen 1–8) vs. Fetalperiode (Wachstum/Reifung, ab Woche 9)
 - Alles-oder-Nichts-Prinzip (nur Woche 1–2!) vs. kritische Perioden (ab Woche 3, organspezifisch)
 - SSL (Scheitel-Steiß-Länge, Maß in Embryonalperiode) vs. BPD (Biparietaler Durchmesser, Fetalperiode)
@@ -1454,7 +1455,7 @@ Das Ergebnis dieser vier Bedingungen ist **natürliche Selektion**: Populationen
 
 Der Begriff 'Survival of the Fittest' (Spencer, nicht Darwin) wird oft missverstanden. In der Evolutionsbiologie bedeutet Fitness nicht physische Stärke, sondern **reproduktive Fitness**: die Fähigkeit eines Individuums, überlebensfähige, fertile Nachkommen zu erzeugen. Ein schwächliches, aber besonders fertiles Individuum hat höhere Fitness als ein starkes, nicht-reproduktives Individuum. Inklusive Fitness (Hamilton) erweitert das Konzept: Indirekte Fitness durch Verwandtenunterstützung (Altruismus gegenüber genetisch verwandten Individuen). Beispiel: Eine Biene, die zugunsten der Königin auf eigene Reproduktion verzichtet, aber die gemeinsamen Gene durch die Königin weitervererbt (kin selection). Fitness ist immer relativ zur aktuellen Umwelt — was heute vorteilhaft ist, kann in veränderter Umwelt neutral oder nachteilig sein.
 
-> **Merke:** Fitness = reproduktiver Erfolg (nicht Kraft). Inklusive Fitness = eigene + indirekte Reproduktion durch Verwandte (Kin Selection).
+> **Merke:** **Fitness = Fortpflanzungserfolg** (nicht Körperkraft, nicht Schnelligkeit). Nach Darwin sind die **erfolgreichsten Individuen die mit den meisten fortpflanzungsfähigen Nachkommen**. Inklusive Fitness = eigene + indirekte Reproduktion durch Verwandte (Kin Selection).
 
 ---
 

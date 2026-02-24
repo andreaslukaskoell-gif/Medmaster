@@ -74,14 +74,20 @@ Das SI definiert **sieben Basisgrößen** — das sind die fundamentalen Größe
 
 ## Abgeleitete Einheiten
 
+**Definition (prüfungssicher):** **Abgeleitete Größen** sind physikalische Größen, die aus den **Basiseinheiten** (bzw. Basisgrößen) durch algebraische Verknüpfung (Produkt, Quotient, Potenzen) hervorgehen. Sie **besitzen** SI-Einheiten (abgeleitete SI-Einheiten wie N, Pa, J, W) und sind messbar. Beispiele: Kraft (N = kg·m/s²), Druck (Pa), Energie (J), Leistung (W). Nicht: „nicht messbar“, „keine SI-Einheiten“, „aus Differentialquotienten entstanden“ als Definition — abgeleitete Größen sind messbar und haben SI-Einheiten.
+
 **Bisher haben wir gesehen:** Die sieben Basisgrößen bilden das Fundament. **Alle weiteren** physikalischen Größen werden daraus durch Multiplikation und Division gebildet — das sind die **abgeleiteten Einheiten**; sie tragen oft eigene Namen und sind für Klinik und MedAT zentral.
 
 | Größe | Einheit | Definition (kurz) | In Basiseinheiten |
 |-------|---------|-------------------|-------------------|
-| **Kraft** | Newton (N) | Kraft, die 1 kg die Beschleunigung 1 m/s² erteilt | kg·m·s⁻² |
+| **Kraft** | Newton (N) | Kraft, die 1 kg die Beschleunigung 1 m/s² erteilt | **kg·m·s⁻²** (= kg·m/s²) |
 | **Druck** | Pascal (Pa) | Kraft pro Fläche | N/m² = kg·m⁻¹·s⁻² |
 | **Energie / Arbeit** | Joule (J) | Kraft × Weg | N·m = kg·m²·s⁻² |
 | **Leistung** | Watt (W) | Energie pro Zeit | J/s = kg·m²·s⁻³ |
+
+**Kraft wird in der Physik in der Einheit kg·m/s² angegeben** (= Newton, N). Nicht in m/s² (das ist Beschleunigung), nicht in Coulomb, Nm (das ist Arbeit) oder Ampere.
+
+**Umrechnung von Joule:** Man kann **Joule in Newtonmeter** umrechnen (1 J = 1 N·m), **Joule in Elektronenvolt** (1 eV ≈ 1,602×10⁻¹⁹ J) und **Joule in Kalorien** (1 cal = 4,184 J). **Nicht** umrechenbar: **Joule in Watt** — Watt ist die Einheit der **Leistung** (Energie pro Zeit, W = J/s), keine Energieeinheit. Typische Falle: „Joule in Watt umrechnen“ ist falsch.
 | **Elektrische Spannung** | Volt (V) | Leistung / Stromstärke | kg·m²·A⁻¹·s⁻³ |
 | **Frequenz** | Hertz (Hz) | Schwingungen pro Sekunde | s⁻¹ |
 
@@ -193,13 +199,17 @@ Mit diesen drei Beispielen hast du **Einheitenumrechnung**, **Dimensionsanalyse*
 - "Was ist der Unterschied zwischen intensiver und extensiver Größe?" → Intensiv: unabhängig von der Menge (Konzentration, Temperatur); extensiv: proportional zur Menge (Masse, Volumen)
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Joule** umrechenbar in **Nm, eV, Kalorien** — **nicht** in Watt (Watt ist Leistungseinheit, J ist Energie).
+- **Kraft** wird in **kg·m/s²** (Newton) angegeben — nicht in m/s², Coulomb, Nm oder Ampere.
+- **Abgeleitete Größen** = aus Basiseinheiten abgeleitet, haben SI-Einheiten, sind messbar.
 - Masse (kg) ≠ Gewichtskraft (N): Masse ist ortsunabhängig, Gewichtskraft F_G = m·g hängt von g ab
 - Newton ist KEINE Basiseinheit, sondern abgeleitet: N = kg·m/s²
 - Intensive Größen addieren sich NICHT beim Zusammenfügen: 2 × (20°C Wasser) = 20°C, nicht 40°C
 - "Körpergewicht 70 kg" ist physikalisch die Masse — die Gewichtskraft beträgt 70 × 9,81 ≈ 687 N
 
 **Prüfungsrelevante Zahlen/Fakten:**
-- 1 mmHg ≈ 133 Pa; 120 mmHg ≈ 16 kPa (normaler systolischer Blutdruck in SI)
+- **1 J = 1 N·m**; 1 eV ≈ 1,602×10⁻¹⁹ J; 1 cal = 4,184 J. Joule **nicht** in Watt umrechenbar (W = J/s = Leistung).
+- **Kraft** in **kg·m/s²** (Newton). 1 mmHg ≈ 133 Pa; 120 mmHg ≈ 16 kPa (normaler systolischer Blutdruck in SI)
 - Grundumsatz Erwachsener ≈ 87 W (vergleichbar mit einer Glühbirne)
 - Gewichtskraft 70 kg: F_G = 70 × 9,81 ≈ 687 N
 - 7 SI-Basisgrößen — Kraft (Newton) ist KEINE Basisgröße!
@@ -1401,7 +1411,7 @@ Anwendungen: Bei einem elastischen Stoß (Billardkugeln) sind sowohl Impuls als 
 
 ## Arbeit, Energie und der Energieerhaltungssatz
 
-Mechanische Arbeit W = F · s · cos(θ) ist das Produkt aus Kraft, Weg und dem Kosinus des Winkels zwischen Kraft- und Wegrichtung (Einheit: Joule, J = N·m = kg·m²/s²). Nur die Kraftkomponente parallel zum Weg leistet Arbeit. Eine Kraft senkrecht zur Bewegungsrichtung (z. B. Zentripetalkraft) leistet keine Arbeit!
+**Arbeit** ist definiert als **W = F · s** (bzw. W = F·s·cos θ bei schrägem Kraftvektor) — Einheit Joule (J = N·m). **Mechanische Arbeit wird nur bei einer Verschiebung (Weg s ≠ 0) verrichtet.** Beim **Halten** eines Gegenstands (z. B. Sack Zement in gleicher Höhe) ist der Weg null → **es wird keine mechanische Arbeit geleistet** — unabhängig von der Dauer des Haltens. Nur beim **Heben** (Weg nach oben) wird Arbeit verrichtet; die Dauer des Hebens ändert die verrichtete Arbeit nicht (W = F·s hängt nicht von t ab), wohl aber die **Leistung** P = W/t. Typische Falle: „Beim Halten wird Arbeit geleistet, umso länger umso mehr“ ist **falsch**.
 
 **Kinetische Energie** (Bewegungsenergie): E_kin = ½·m·v². Sie ist proportional zum Quadrat der Geschwindigkeit — bei doppelter Geschwindigkeit viermal so viel kinetische Energie. Das erklärt, warum Hochgeschwindigkeitsprojektile so verheerend sind und warum der Bremsweg bei Kraftfahrzeugen quadratisch mit der Geschwindigkeit wächst.
 
@@ -1454,7 +1464,7 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Kinetische Energie E_kin = ½mv² (E~v²), potentielle Energie (Lage), Energieerhaltung, Arbeit W = F·s, Leistung P = W/t, Rollreibung.
+**Zentral prüfungsrelevant:** Kinetische Energie E_kin = ½mv² (E~v²), potentielle Energie (Lage), Energieerhaltung, **Arbeit W = F·s nur bei Weg** (beim Halten keine Arbeit!), Leistung P = W/t, Rollreibung. **Formeln:** W = F·s, P = W/t, F = m·a.
 
 **Ergänzend vertiefend:** Elastischer Stoß (Impuls und E_kin erhalten); vollkommen inelastischer Stoß (nur Impuls); Drehimpuls L = I·ω und Pirouetteneffekt; typische Verwechslungen (Impuls ≠ Energie, Arbeit nur bei Kraft parallel zum Weg) — siehe „Typische Prüfungsfallen“.
 
@@ -1469,6 +1479,7 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
 - Impuls p = mv (Vektor, N·s) ≠ kinetische Energie E = ½mv² (Skalar, J) — verschiedene Größen!
 - Kraftstoß J = F·Δt = Δp, beschreibt Impulsänderung — NICHT Energieänderung
 - Elastischer Stoß: Impuls UND kinetische Energie erhalten; inelastischer: NUR Impuls erhalten
+- **Arbeit nur bei Weg:** Beim Halten (s = 0) wird **keine** mechanische Arbeit verrichtet — nur beim Heben/Bewegen. Dauer des Haltens ist irrelevant.
 - Arbeit W = F·s·cosα: senkrechte Kraft (α = 90°) → cos 90° = 0 → keine Arbeit geleistet (z.B. Zentripetalkraft)
 - Federkraft F = −k·x (negatives Vorzeichen = Rückstellkraft!); elastische Energie E_el = ½·k·x²
 
@@ -1671,7 +1682,7 @@ Druck p = F/A (Einheit: Pascal, Pa = N/m²). Der Druck wirkt in alle Richtungen 
 
 ## Strömungslehre: Kontinuitätsgleichung und Bernoulli
 
-**Kontinuitätsgleichung:** In einer inkompressiblen, reibungsfreien Strömung gilt: A₁·v₁ = A₂·v₂ (Volumenstrom Q = A·v = const). Wenn der Querschnitt kleiner wird, steigt die Strömungsgeschwindigkeit. Im Körper: In der Aorta (Durchmesser ca. 2,5 cm, Querschnitt ca. 5 cm²) fließt Blut mit ca. 20 cm/s. In den Kapillaren (Gesamtquerschnitt ca. 5000 cm², 1000-fach größer) fließt Blut nur ca. 0,03 cm/s — optimal für den Stoffaustausch.
+**Kontinuitätsgleichung:** In einer inkompressiblen, reibungsfreien Strömung gilt: **A₁·v₁ = A₂·v₂** (Volumenstrom Q = A·v = const). **Bei einer Verengung** (A₂ < A₁) wird der Querschnitt kleiner → **die Geschwindigkeit steigt: v₂ > v₁**. Am Anfang des Rohres (größerer Querschnitt) ist v₁, am Ende (Verengung) v₂ — es gilt stets **v₂ > v₁**. Im Körper: In der Aorta (Durchmesser ca. 2,5 cm, Querschnitt ca. 5 cm²) fließt Blut mit ca. 20 cm/s. In den Kapillaren (Gesamtquerschnitt ca. 5000 cm², 1000-fach größer) fließt Blut nur ca. 0,03 cm/s — optimal für den Stoffaustausch.
 
 **Bernoulli-Gleichung:** ½·ρ·v² + ρ·g·h + p = const. Dies ist der Energieerhaltungssatz für Strömungen. An engen Stellen (hohe Geschwindigkeit) ist der Druck niedrig, an weiten Stellen (geringe Geschwindigkeit) ist der Druck hoch. Anwendung: Bei einer Arterienstenose steigt die Strömungsgeschwindigkeit — der Druck fällt hinter der Stenose ab (poststenotischer Druckabfall).
 
@@ -1716,13 +1727,13 @@ Klinisch: Bei längerem Stehen → venöse Pooling in Beinen → orthostatische 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Poiseuille Q = π·r⁴·Δp/(8·η·l), Q ~ r⁴ (Radius dominierend), Viskosität η, laminare Strömung, Widerstand bei Rohr/ Gefäß (Klinik: Stenose).
+**Zentral prüfungsrelevant:** **Kontinuitätsgleichung:** Verengung → **v₂ > v₁** (A₁v₁ = A₂v₂). Poiseuille Q = π·r⁴·Δp/(8·η·l), Q ~ r⁴ (Radius dominierend), Viskosität η, laminare Strömung, Widerstand bei Rohr/Gefäß (Klinik: Stenose).
 
 **Ergänzend vertiefend:** Reynolds-Zahl Re = ρvd/η (laminar < 2300, turbulent > 4000); Bernoulli und Venturi-Effekt bei Stenosen; Oberflächenspannung und Surfactant; typische Verwechslungen (Q ~ r⁴ nicht r², enge Stelle → v↑ p↓) — siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was besagt das Poiseuille-Gesetz?" → Q = π·r⁴·Δp/(8·η·l); Q ~ r⁴ — Radius ist der dominierende Parameter
-- "Was folgt aus der Kontinuitätsgleichung?" → A₁·v₁ = A₂·v₂; enger Querschnitt → höhere Strömungsgeschwindigkeit
+- "Was folgt aus der Kontinuitätsgleichung bei Verengung?" → **v₂ > v₁** (A₁v₁ = A₂v₂; enger Querschnitt → höhere Geschwindigkeit)
 - "Was bedeutet Re < 2300?" → Laminare Strömung (geordnet, schichtenweise, geräuschlos)
 - "Wie berechnet man Bizepskraft für 10 kg Last (Hebelarm 35 cm, Ansatz 5 cm)?" → F_B × 5 = 100 × 35 → F_B = 700 N
 - "Was erklärt Bernoulli bei Stenosen?" → Enger Querschnitt → v↑ → p↓ (poststenotischer Druckabfall)

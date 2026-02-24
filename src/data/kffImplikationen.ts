@@ -1,5 +1,5 @@
 // Implikationen erkennen – MedAT-H KFF Subtest
-// 42 Aufgaben, 3 Schwierigkeitsstufen (je 14)
+// 42 Übungsaufgaben (IMPLIKATION_PRACTICE_TASKS) + 4 offizielle Beispiele (OFFICIAL_IMPLICATION_EXAMPLES)
 //
 // Goldene Regeln:
 // 1. Zwei "einige"-Prämissen → KEIN gültiger Schluss (Antwort E)
@@ -7,6 +7,22 @@
 // 3. Kein "keine" in Prämissen → Schluss darf KEIN "keine" enthalten
 // 4. Ein "keine" in Prämisse → Schluss MUSS "keine" enthalten
 // 5. Ein "einige" in Prämisse → Schluss MUSS "einige" enthalten
+//
+// =============================================================================
+// SKRIPT FÜR NEUE / WEITERE ÜBUNGSAUFGABEN
+// =============================================================================
+// Wenn wir mehr Übungsaufgaben generieren wollen, immer an die offiziellen
+// Beispiele (OFFICIAL_IMPLICATION_EXAMPLES) anpassen:
+//
+// - Prämissen: In Anführungszeichen, mit Punkt am Ende (z. B. "Alle X sind Y.")
+// - Optionen A–D: Vollständige Sätze mit Punkt am Ende (z. B. "Einige X sind Y.")
+// - Option E: exakt "Keine der Schlussfolgerungen ist zwingend" (ohne Punkt)
+// - Genau 5 Optionen, correctAnswer 0–4, explanation sachlich, rulesApplied [1–5]
+// - Vorbild: MedAT 2026 PDF „Implikationen erkennen“ (medizinstudieren.at)
+//
+// Offizielle Beispiele werden nie verändert; Übungsaufgaben und Generator
+// orientieren sich an diesem Format.
+// =============================================================================
 
 export interface ImplikationTask {
   id: string;
@@ -17,22 +33,103 @@ export interface ImplikationTask {
   explanation: string;
   difficulty: 1 | 2 | 3;
   rulesApplied: number[]; // which golden rules apply (1-5)
+  /** Nur bei offiziellen Beispielen: Quelle (z. B. PDF). */
+  source?: string;
 }
 
-export const implikationenTasks: ImplikationTask[] = [
-  // ============================================================
-  // DIFFICULTY 1 (imp-01 bis imp-14): Absolute Aussagen, klare Syllogismen
-  // ============================================================
+// =============================================================================
+// OFFIZIELLE BEISPIELAUFGABEN – exakt aus MedAT 2026 PDF, niemals vom Generator verwendet
+// =============================================================================
+export const OFFICIAL_IMPLICATION_EXAMPLES: readonly ImplikationTask[] = [
+  {
+    id: "imp-off-1",
+    premise1: "Alle Stofftiere sind Spielsachen.",
+    premise2: "Einige Stofftiere sind Wertanlagen.",
+    options: [
+      "Alle Wertanlagen sind Spielsachen.",
+      "Alle Wertanlagen sind keine Spielsachen.",
+      "Einige Wertanlagen sind Spielsachen.",
+      "Einige Wertanlagen sind keine Spielsachen.",
+      "Keine der Schlussfolgerungen ist zwingend",
+    ],
+    correctAnswer: 2,
+    explanation:
+      "Alle Stofftiere sind Spielsachen; ein Teil der Stofftiere sind Wertanlagen. Diese Wertanlagen-Stofftiere sind also Spielsachen. Daher folgt zwingend: Einige Wertanlagen sind Spielsachen (C).",
+    difficulty: 1,
+    rulesApplied: [3, 5],
+    source: "MedAT 2026 – Implikationen erkennen – Beispielaufgabe 1",
+  },
+  {
+    id: "imp-off-2",
+    premise1: "Alle Menschen sind Säugetiere.",
+    premise2: "Alle Säugetiere sind Lebewesen.",
+    options: [
+      "Alle Menschen sind Lebewesen.",
+      "Alle Menschen sind keine Lebewesen.",
+      "Einige Menschen sind Lebewesen.",
+      "Einige Menschen sind keine Lebewesen.",
+      "Keine der Schlussfolgerungen ist zwingend",
+    ],
+    correctAnswer: 0,
+    explanation:
+      "Klassischer Kettenschluss: Alle A sind B, Alle B sind C → Alle A sind C. Alle Menschen sind zwingend Lebewesen (A).",
+    difficulty: 1,
+    rulesApplied: [3],
+    source: "MedAT 2026 – Implikationen erkennen – Beispielaufgabe 2",
+  },
+  {
+    id: "imp-off-3",
+    premise1: "Einige Nüsse sind Gewürze.",
+    premise2: "Alle Nüsse sind keine Pflanzen.",
+    options: [
+      "Alle Gewürze sind Pflanzen.",
+      "Alle Gewürze sind keine Pflanzen.",
+      "Einige Gewürze sind Pflanzen.",
+      "Einige Gewürze sind keine Pflanzen.",
+      "Keine der Schlussfolgerungen ist zwingend",
+    ],
+    correctAnswer: 3,
+    explanation:
+      "Die Nüsse, die Gewürze sind, sind keine Pflanzen (weil alle Nüsse keine Pflanzen sind). Also sind einige Gewürze (nämlich diese Nüsse) keine Pflanzen. Antwort D ist zwingend.",
+    difficulty: 2,
+    rulesApplied: [4, 5],
+    source: "MedAT 2026 – Implikationen erkennen – Beispielaufgabe 3",
+  },
+  {
+    id: "imp-off-4",
+    premise1: "Alle Kinder sind Lebewesen.",
+    premise2: "Alle Erwachsenen sind keine Kinder.",
+    options: [
+      "Alle Lebewesen sind Erwachsene.",
+      "Alle Lebewesen sind keine Erwachsenen.",
+      "Einige Lebewesen sind Erwachsene.",
+      "Einige Lebewesen sind keine Erwachsenen.",
+      "Keine der Schlussfolgerungen ist zwingend",
+    ],
+    correctAnswer: 3,
+    explanation:
+      "Kinder sind Lebewesen; Erwachsene sind keine Kinder. Daraus folgt nicht, dass alle Lebewesen Erwachsene sind (A falsch), aber es folgt zwingend: Einige Lebewesen (nämlich die Kinder) sind keine Erwachsenen (D).",
+    difficulty: 2,
+    rulesApplied: [4],
+    source: "MedAT 2026 – Implikationen erkennen – Beispielaufgabe 4",
+  },
+];
 
+// ============================================================
+// Zusätzliche Übungsaufgaben (für ImplikationenUeben, Simulation)
+// Format wie OFFICIAL_IMPLICATION_EXAMPLES (siehe Skript oben).
+// ============================================================
+const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
+  // DIFFICULTY 1 (imp-01 bis imp-14)
   {
     id: "imp-01",
-    premise1: "Alle Hunde sind Säugetiere",
-    premise2: "Alle Säugetiere sind Wirbeltiere",
+    premise1: "Alle Hunde sind Säugetiere.",
+    premise2: "Alle Säugetiere sind Wirbeltiere.",
     options: [
-      "Alle Hunde sind Wirbeltiere",
-      "Alle Wirbeltiere sind Hunde",
-      "Einige Wirbeltiere sind keine Hunde",
-      "Alle Säugetiere sind Hunde",
+      "Alle Hunde sind Wirbeltiere.",
+      "Alle Wirbeltiere sind Hunde.",
+      "Einige Wirbeltiere sind keine Hunde.",
+      "Alle Säugetiere sind Hunde.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 0,
@@ -43,13 +140,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-02",
-    premise1: "Alle Rosen sind Blumen",
-    premise2: "Alle Blumen sind Pflanzen",
+    premise1: "Alle Rosen sind Blumen.",
+    premise2: "Alle Blumen sind Pflanzen.",
     options: [
-      "Alle Pflanzen sind Rosen",
-      "Alle Rosen sind Pflanzen",
-      "Einige Pflanzen sind keine Blumen",
-      "Alle Blumen sind Rosen",
+      "Alle Pflanzen sind Rosen.",
+      "Alle Rosen sind Pflanzen.",
+      "Einige Pflanzen sind keine Blumen.",
+      "Alle Blumen sind Rosen.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 1,
@@ -60,13 +157,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-03",
-    premise1: "Alle Ärzte sind Akademiker",
-    premise2: "Alle Akademiker sind Absolventen",
+    premise1: "Alle Ärzte sind Akademiker.",
+    premise2: "Alle Akademiker sind Absolventen.",
     options: [
-      "Einige Ärzte sind keine Absolventen",
-      "Alle Absolventen sind Ärzte",
-      "Alle Ärzte sind Absolventen",
-      "Einige Akademiker sind keine Ärzte",
+      "Einige Ärzte sind keine Absolventen.",
+      "Alle Absolventen sind Ärzte.",
+      "Alle Ärzte sind Absolventen.",
+      "Einige Akademiker sind keine Ärzte.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 2,
@@ -77,13 +174,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-04",
-    premise1: "Alle Adler sind Vögel",
-    premise2: "Alle Vögel sind keine Säugetiere",
+    premise1: "Alle Adler sind Vögel.",
+    premise2: "Alle Vögel sind keine Säugetiere.",
     options: [
-      "Alle Adler sind Säugetiere",
-      "Einige Adler sind Säugetiere",
-      "Alle Adler sind keine Säugetiere",
-      "Einige Säugetiere sind Adler",
+      "Alle Adler sind Säugetiere.",
+      "Einige Adler sind Säugetiere.",
+      "Alle Adler sind keine Säugetiere.",
+      "Einige Säugetiere sind Adler.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 2,
@@ -94,13 +191,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-05",
-    premise1: "Alle Tulpen sind Blumen",
-    premise2: "Alle Blumen sind keine Steine",
+    premise1: "Alle Tulpen sind Blumen.",
+    premise2: "Alle Blumen sind keine Steine.",
     options: [
-      "Alle Steine sind keine Tulpen",
-      "Einige Tulpen sind Steine",
-      "Alle Tulpen sind keine Steine",
-      "Einige Steine sind Tulpen",
+      "Alle Steine sind keine Tulpen.",
+      "Einige Tulpen sind Steine.",
+      "Alle Tulpen sind keine Steine.",
+      "Einige Steine sind Tulpen.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 2,
@@ -111,13 +208,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-06",
-    premise1: "Alle Violinen sind Musikinstrumente",
-    premise2: "Alle Musikinstrumente sind Gegenstände",
+    premise1: "Alle Violinen sind Musikinstrumente.",
+    premise2: "Alle Musikinstrumente sind Gegenstände.",
     options: [
-      "Einige Gegenstände sind keine Violinen",
-      "Alle Gegenstände sind Violinen",
-      "Alle Violinen sind Gegenstände",
-      "Alle Gegenstände sind Musikinstrumente",
+      "Einige Gegenstände sind keine Violinen.",
+      "Alle Gegenstände sind Violinen.",
+      "Alle Violinen sind Gegenstände.",
+      "Alle Gegenstände sind Musikinstrumente.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 2,
@@ -128,13 +225,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-07",
-    premise1: "Alle Lastwagen sind Fahrzeuge",
-    premise2: "Alle Fahrzeuge sind keine Lebewesen",
+    premise1: "Alle Lastwagen sind Fahrzeuge.",
+    premise2: "Alle Fahrzeuge sind keine Lebewesen.",
     options: [
-      "Einige Lastwagen sind Lebewesen",
-      "Alle Lastwagen sind keine Lebewesen",
-      "Alle Lebewesen sind Fahrzeuge",
-      "Einige Lebewesen sind keine Fahrzeuge",
+      "Einige Lastwagen sind Lebewesen.",
+      "Alle Lastwagen sind keine Lebewesen.",
+      "Alle Lebewesen sind Fahrzeuge.",
+      "Einige Lebewesen sind keine Fahrzeuge.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 1,
@@ -145,13 +242,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-08",
-    premise1: "Alle Diamanten sind Edelsteine",
-    premise2: "Alle Edelsteine sind Mineralien",
+    premise1: "Alle Diamanten sind Edelsteine.",
+    premise2: "Alle Edelsteine sind Mineralien.",
     options: [
-      "Alle Mineralien sind Diamanten",
-      "Einige Mineralien sind keine Edelsteine",
-      "Alle Diamanten sind Mineralien",
-      "Alle Edelsteine sind Diamanten",
+      "Alle Mineralien sind Diamanten.",
+      "Einige Mineralien sind keine Edelsteine.",
+      "Alle Diamanten sind Mineralien.",
+      "Alle Edelsteine sind Diamanten.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 2,
@@ -162,13 +259,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-09",
-    premise1: "Alle Autos sind keine Flugzeuge",
-    premise2: "Alle Busse sind Autos",
+    premise1: "Alle Autos sind keine Flugzeuge.",
+    premise2: "Alle Busse sind Autos.",
     options: [
-      "Alle Busse sind Flugzeuge",
-      "Einige Busse sind Flugzeuge",
-      "Alle Flugzeuge sind keine Busse",
-      "Alle Busse sind keine Flugzeuge",
+      "Alle Busse sind Flugzeuge.",
+      "Einige Busse sind Flugzeuge.",
+      "Alle Flugzeuge sind keine Busse.",
+      "Alle Busse sind keine Flugzeuge.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 3,
@@ -179,13 +276,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-10",
-    premise1: "Alle Bananen sind Früchte",
-    premise2: "Alle Früchte sind Lebensmittel",
+    premise1: "Alle Bananen sind Früchte.",
+    premise2: "Alle Früchte sind Lebensmittel.",
     options: [
-      "Alle Lebensmittel sind Bananen",
-      "Alle Lebensmittel sind Früchte",
-      "Einige Lebensmittel sind keine Bananen",
-      "Alle Bananen sind Lebensmittel",
+      "Alle Lebensmittel sind Bananen.",
+      "Alle Lebensmittel sind Früchte.",
+      "Einige Lebensmittel sind keine Bananen.",
+      "Alle Bananen sind Lebensmittel.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 3,
@@ -196,13 +293,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-11",
-    premise1: "Alle Pinguine sind Vögel",
-    premise2: "Alle Vögel sind Tiere",
+    premise1: "Alle Pinguine sind Vögel.",
+    premise2: "Alle Vögel sind Tiere.",
     options: [
-      "Alle Tiere sind Pinguine",
-      "Alle Pinguine sind Tiere",
-      "Einige Tiere sind keine Vögel",
-      "Alle Vögel sind Pinguine",
+      "Alle Tiere sind Pinguine.",
+      "Alle Pinguine sind Tiere.",
+      "Einige Tiere sind keine Vögel.",
+      "Alle Vögel sind Pinguine.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 1,
@@ -213,13 +310,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-12",
-    premise1: "Alle Smartphones sind Elektronikgeräte",
-    premise2: "Alle Elektronikgeräte sind keine Naturprodukte",
+    premise1: "Alle Smartphones sind Elektronikgeräte.",
+    premise2: "Alle Elektronikgeräte sind keine Naturprodukte.",
     options: [
-      "Alle Smartphones sind keine Naturprodukte",
-      "Einige Smartphones sind Naturprodukte",
-      "Alle Naturprodukte sind Smartphones",
-      "Einige Naturprodukte sind Elektronikgeräte",
+      "Alle Smartphones sind keine Naturprodukte.",
+      "Einige Smartphones sind Naturprodukte.",
+      "Alle Naturprodukte sind Smartphones.",
+      "Einige Naturprodukte sind Elektronikgeräte.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 0,
@@ -230,13 +327,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-13",
-    premise1: "Alle Tischler sind Handwerker",
-    premise2: "Alle Handwerker sind Berufstätige",
+    premise1: "Alle Tischler sind Handwerker.",
+    premise2: "Alle Handwerker sind Berufstätige.",
     options: [
-      "Alle Berufstätige sind Tischler",
-      "Einige Berufstätige sind keine Handwerker",
-      "Alle Tischler sind Berufstätige",
-      "Alle Handwerker sind Tischler",
+      "Alle Berufstätige sind Tischler.",
+      "Einige Berufstätige sind keine Handwerker.",
+      "Alle Tischler sind Berufstätige.",
+      "Alle Handwerker sind Tischler.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 2,
@@ -247,13 +344,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-14",
-    premise1: "Alle Haie sind Fische",
-    premise2: "Alle Fische sind keine Insekten",
+    premise1: "Alle Haie sind Fische.",
+    premise2: "Alle Fische sind keine Insekten.",
     options: [
-      "Einige Haie sind Insekten",
-      "Alle Insekten sind Fische",
-      "Einige Insekten sind Haie",
-      "Alle Haie sind keine Insekten",
+      "Einige Haie sind Insekten.",
+      "Alle Insekten sind Fische.",
+      "Einige Insekten sind Haie.",
+      "Alle Haie sind keine Insekten.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 3,
@@ -269,13 +366,13 @@ export const implikationenTasks: ImplikationTask[] = [
 
   {
     id: "imp-15",
-    premise1: "Alle Katzen sind Haustiere",
-    premise2: "Einige Haustiere sind schwarz",
+    premise1: "Alle Katzen sind Haustiere.",
+    premise2: "Einige Haustiere sind schwarz.",
     options: [
-      "Alle Katzen sind schwarz",
-      "Einige Katzen sind schwarz",
-      "Einige schwarze Dinge sind Katzen",
-      "Alle schwarzen Dinge sind Katzen",
+      "Alle Katzen sind schwarz.",
+      "Einige Katzen sind schwarz.",
+      "Einige schwarze Dinge sind Katzen.",
+      "Alle schwarzen Dinge sind Katzen.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 4,
@@ -286,13 +383,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-16",
-    premise1: "Alle Eichen sind Bäume",
-    premise2: "Einige Eichen sind alt",
+    premise1: "Alle Eichen sind Bäume.",
+    premise2: "Einige Eichen sind alt.",
     options: [
-      "Alle Bäume sind alt",
-      "Einige Bäume sind alt",
-      "Alle alten Dinge sind Bäume",
-      "Einige Eichen sind keine Bäume",
+      "Alle Bäume sind alt.",
+      "Einige Bäume sind alt.",
+      "Alle alten Dinge sind Bäume.",
+      "Einige Eichen sind keine Bäume.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 1,
@@ -303,13 +400,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-17",
-    premise1: "Alle Chirurgen sind Ärzte",
-    premise2: "Einige Chirurgen sind keine Sportler",
+    premise1: "Alle Chirurgen sind Ärzte.",
+    premise2: "Einige Chirurgen sind keine Sportler.",
     options: [
-      "Alle Ärzte sind keine Sportler",
-      "Einige Ärzte sind keine Sportler",
-      "Einige Sportler sind keine Ärzte",
-      "Alle Chirurgen sind Sportler",
+      "Alle Ärzte sind keine Sportler.",
+      "Einige Ärzte sind keine Sportler.",
+      "Einige Sportler sind keine Ärzte.",
+      "Alle Chirurgen sind Sportler.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 1,
@@ -320,13 +417,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-18",
-    premise1: "Einige Musiker sind Lehrer",
-    premise2: "Alle Lehrer sind Angestellte",
+    premise1: "Einige Musiker sind Lehrer.",
+    premise2: "Alle Lehrer sind Angestellte.",
     options: [
-      "Alle Musiker sind Angestellte",
-      "Einige Musiker sind Angestellte",
-      "Alle Angestellte sind Musiker",
-      "Einige Angestellte sind keine Musiker",
+      "Alle Musiker sind Angestellte.",
+      "Einige Musiker sind Angestellte.",
+      "Alle Angestellte sind Musiker.",
+      "Einige Angestellte sind keine Musiker.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 1,
@@ -337,13 +434,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-19",
-    premise1: "Alle Tennisspieler sind Sportler",
-    premise2: "Einige Sportler sind keine Vegetarier",
+    premise1: "Alle Tennisspieler sind Sportler.",
+    premise2: "Einige Sportler sind keine Vegetarier.",
     options: [
-      "Einige Tennisspieler sind keine Vegetarier",
-      "Alle Tennisspieler sind keine Vegetarier",
-      "Einige Vegetarier sind Tennisspieler",
-      "Alle Sportler sind Tennisspieler",
+      "Einige Tennisspieler sind keine Vegetarier.",
+      "Alle Tennisspieler sind keine Vegetarier.",
+      "Einige Vegetarier sind Tennisspieler.",
+      "Alle Sportler sind Tennisspieler.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 4,
@@ -354,13 +451,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-20",
-    premise1: "Alle Forellen sind Fische",
-    premise2: "Einige Forellen sind wild",
+    premise1: "Alle Forellen sind Fische.",
+    premise2: "Einige Forellen sind wild.",
     options: [
-      "Alle Fische sind wild",
-      "Einige Fische sind wild",
-      "Alle wilden Tiere sind Fische",
-      "Einige Fische sind keine Forellen",
+      "Alle Fische sind wild.",
+      "Einige Fische sind wild.",
+      "Alle wilden Tiere sind Fische.",
+      "Einige Fische sind keine Forellen.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 1,
@@ -371,13 +468,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-21",
-    premise1: "Einige Studenten sind Sportler",
-    premise2: "Alle Sportler sind fit",
+    premise1: "Einige Studenten sind Sportler.",
+    premise2: "Alle Sportler sind fit.",
     options: [
-      "Alle Studenten sind fit",
-      "Alle fitten Personen sind Studenten",
-      "Einige Studenten sind fit",
-      "Einige Sportler sind keine Studenten",
+      "Alle Studenten sind fit.",
+      "Alle fitten Personen sind Studenten.",
+      "Einige Studenten sind fit.",
+      "Einige Sportler sind keine Studenten.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 2,
@@ -388,13 +485,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-22",
-    premise1: "Alle Gitarren sind Saiteninstrumente",
-    premise2: "Alle Saiteninstrumente sind keine Blasinstrumente",
+    premise1: "Alle Gitarren sind Saiteninstrumente.",
+    premise2: "Alle Saiteninstrumente sind keine Blasinstrumente.",
     options: [
-      "Einige Gitarren sind Blasinstrumente",
-      "Alle Gitarren sind keine Blasinstrumente",
-      "Einige Blasinstrumente sind Saiteninstrumente",
-      "Alle Blasinstrumente sind Gitarren",
+      "Einige Gitarren sind Blasinstrumente.",
+      "Alle Gitarren sind keine Blasinstrumente.",
+      "Einige Blasinstrumente sind Saiteninstrumente.",
+      "Alle Blasinstrumente sind Gitarren.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 1,
@@ -405,13 +502,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-23",
-    premise1: "Alle Laptops sind Computer",
-    premise2: "Einige Laptops sind keine tragbaren Geräte",
+    premise1: "Alle Laptops sind Computer.",
+    premise2: "Einige Laptops sind keine tragbaren Geräte.",
     options: [
-      "Alle Computer sind keine tragbaren Geräte",
-      "Einige Computer sind keine tragbaren Geräte",
-      "Einige tragbare Geräte sind Computer",
-      "Alle Laptops sind tragbare Geräte",
+      "Alle Computer sind keine tragbaren Geräte.",
+      "Einige Computer sind keine tragbaren Geräte.",
+      "Einige tragbare Geräte sind Computer.",
+      "Alle Laptops sind tragbare Geräte.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 1,
@@ -422,13 +519,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-24",
-    premise1: "Einige Wiener sind Fußballfans",
-    premise2: "Alle Fußballfans sind Sportbegeisterte",
+    premise1: "Einige Wiener sind Fußballfans.",
+    premise2: "Alle Fußballfans sind Sportbegeisterte.",
     options: [
-      "Alle Wiener sind Sportbegeisterte",
-      "Einige Wiener sind Sportbegeisterte",
-      "Alle Sportbegeisterten sind Wiener",
-      "Einige Sportbegeisterte sind keine Wiener",
+      "Alle Wiener sind Sportbegeisterte.",
+      "Einige Wiener sind Sportbegeisterte.",
+      "Alle Sportbegeisterten sind Wiener.",
+      "Einige Sportbegeisterte sind keine Wiener.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 1,
@@ -439,13 +536,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-25",
-    premise1: "Alle Kirschen sind Früchte",
-    premise2: "Einige Kirschen sind keine roten Dinge",
+    premise1: "Alle Kirschen sind Früchte.",
+    premise2: "Einige Kirschen sind keine roten Dinge.",
     options: [
-      "Alle Früchte sind keine roten Dinge",
-      "Einige Früchte sind keine roten Dinge",
-      "Einige rote Dinge sind keine Kirschen",
-      "Alle Kirschen sind rote Dinge",
+      "Alle Früchte sind keine roten Dinge.",
+      "Einige Früchte sind keine roten Dinge.",
+      "Einige rote Dinge sind keine Kirschen.",
+      "Alle Kirschen sind rote Dinge.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 1,
@@ -456,13 +553,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-26",
-    premise1: "Alle Fußbälle sind Sportgeräte",
-    premise2: "Einige Sportgeräte sind teuer",
+    premise1: "Alle Fußbälle sind Sportgeräte.",
+    premise2: "Einige Sportgeräte sind teuer.",
     options: [
-      "Alle Fußbälle sind teuer",
-      "Einige Fußbälle sind teuer",
-      "Einige teure Dinge sind Fußbälle",
-      "Alle Sportgeräte sind Fußbälle",
+      "Alle Fußbälle sind teuer.",
+      "Einige Fußbälle sind teuer.",
+      "Einige teure Dinge sind Fußbälle.",
+      "Alle Sportgeräte sind Fußbälle.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 4,
@@ -473,13 +570,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-27",
-    premise1: "Alle Grazer sind Steirer",
-    premise2: "Einige Grazer sind Bergsteiger",
+    premise1: "Alle Grazer sind Steirer.",
+    premise2: "Einige Grazer sind Bergsteiger.",
     options: [
-      "Alle Steirer sind Bergsteiger",
-      "Einige Steirer sind Bergsteiger",
-      "Alle Bergsteiger sind Steirer",
-      "Einige Bergsteiger sind keine Grazer",
+      "Alle Steirer sind Bergsteiger.",
+      "Einige Steirer sind Bergsteiger.",
+      "Alle Bergsteiger sind Steirer.",
+      "Einige Bergsteiger sind keine Grazer.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 1,
@@ -490,13 +587,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-28",
-    premise1: "Einige Maler sind Künstler",
-    premise2: "Alle Künstler sind kreativ",
+    premise1: "Einige Maler sind Künstler.",
+    premise2: "Alle Künstler sind kreativ.",
     options: [
-      "Alle Maler sind kreativ",
-      "Einige kreative Personen sind keine Maler",
-      "Einige Maler sind kreativ",
-      "Alle kreativen Personen sind Maler",
+      "Alle Maler sind kreativ.",
+      "Einige kreative Personen sind keine Maler.",
+      "Einige Maler sind kreativ.",
+      "Alle kreativen Personen sind Maler.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 2,
@@ -513,13 +610,13 @@ export const implikationenTasks: ImplikationTask[] = [
 
   {
     id: "imp-29",
-    premise1: "Einige Ärzte sind Sportler",
-    premise2: "Einige Sportler sind Vegetarier",
+    premise1: "Einige Ärzte sind Sportler.",
+    premise2: "Einige Sportler sind Vegetarier.",
     options: [
-      "Einige Ärzte sind Vegetarier",
-      "Alle Sportler sind Ärzte",
-      "Einige Vegetarier sind Ärzte",
-      "Alle Ärzte sind Vegetarier",
+      "Einige Ärzte sind Vegetarier.",
+      "Alle Sportler sind Ärzte.",
+      "Einige Vegetarier sind Ärzte.",
+      "Alle Ärzte sind Vegetarier.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 4,
@@ -530,13 +627,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-30",
-    premise1: "Einige Katzen sind wild",
-    premise2: "Einige wilde Tiere sind gefährlich",
+    premise1: "Einige Katzen sind wild.",
+    premise2: "Einige wilde Tiere sind gefährlich.",
     options: [
-      "Einige Katzen sind gefährlich",
-      "Alle wilden Tiere sind Katzen",
-      "Einige gefährliche Tiere sind Katzen",
-      "Alle Katzen sind gefährlich",
+      "Einige Katzen sind gefährlich.",
+      "Alle wilden Tiere sind Katzen.",
+      "Einige gefährliche Tiere sind Katzen.",
+      "Alle Katzen sind gefährlich.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 4,
@@ -547,13 +644,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-31",
-    premise1: "Alle Äpfel sind keine Gemüse",
-    premise2: "Alle Karotten sind keine Gemüse",
+    premise1: "Alle Äpfel sind keine Gemüse.",
+    premise2: "Alle Karotten sind keine Gemüse.",
     options: [
-      "Alle Äpfel sind Karotten",
-      "Einige Äpfel sind keine Karotten",
-      "Alle Karotten sind Äpfel",
-      "Einige Karotten sind Äpfel",
+      "Alle Äpfel sind Karotten.",
+      "Einige Äpfel sind keine Karotten.",
+      "Alle Karotten sind Äpfel.",
+      "Einige Karotten sind Äpfel.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 4,
@@ -564,13 +661,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-32",
-    premise1: "Alle Hunde sind keine Katzen",
-    premise2: "Alle Perser sind keine Katzen",
+    premise1: "Alle Hunde sind keine Katzen.",
+    premise2: "Alle Perser sind keine Katzen.",
     options: [
-      "Alle Hunde sind Perser",
-      "Einige Hunde sind Perser",
-      "Alle Perser sind keine Hunde",
-      "Einige Perser sind keine Hunde",
+      "Alle Hunde sind Perser.",
+      "Einige Hunde sind Perser.",
+      "Alle Perser sind keine Hunde.",
+      "Einige Perser sind keine Hunde.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 4,
@@ -581,13 +678,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-33",
-    premise1: "Einige Wiener sind Studenten",
-    premise2: "Einige Studenten sind Sportler",
+    premise1: "Einige Wiener sind Studenten.",
+    premise2: "Einige Studenten sind Sportler.",
     options: [
-      "Einige Wiener sind Sportler",
-      "Alle Studenten sind Wiener",
-      "Einige Sportler sind Wiener",
-      "Alle Wiener sind Sportler",
+      "Einige Wiener sind Sportler.",
+      "Alle Studenten sind Wiener.",
+      "Einige Sportler sind Wiener.",
+      "Alle Wiener sind Sportler.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 4,
@@ -598,13 +695,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-34",
-    premise1: "Alle Pianisten sind keine Tänzer",
-    premise2: "Alle Sänger sind keine Tänzer",
+    premise1: "Alle Pianisten sind keine Tänzer.",
+    premise2: "Alle Sänger sind keine Tänzer.",
     options: [
-      "Alle Pianisten sind Sänger",
-      "Einige Sänger sind Pianisten",
-      "Alle Sänger sind keine Pianisten",
-      "Einige Pianisten sind keine Sänger",
+      "Alle Pianisten sind Sänger.",
+      "Einige Sänger sind Pianisten.",
+      "Alle Sänger sind keine Pianisten.",
+      "Einige Pianisten sind keine Sänger.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 4,
@@ -615,13 +712,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-35",
-    premise1: "Einige Lehrer sind keine Eltern",
-    premise2: "Einige Eltern sind keine Berufstätige",
+    premise1: "Einige Lehrer sind keine Eltern.",
+    premise2: "Einige Eltern sind keine Berufstätige.",
     options: [
-      "Einige Lehrer sind keine Berufstätige",
-      "Einige Berufstätige sind keine Lehrer",
-      "Alle Lehrer sind Berufstätige",
-      "Einige Lehrer sind Berufstätige",
+      "Einige Lehrer sind keine Berufstätige.",
+      "Einige Berufstätige sind keine Lehrer.",
+      "Alle Lehrer sind Berufstätige.",
+      "Einige Lehrer sind Berufstätige.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 4,
@@ -632,13 +729,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-36",
-    premise1: "Alle Piloten sind Angestellte",
-    premise2: "Alle Ingenieure sind Angestellte",
+    premise1: "Alle Piloten sind Angestellte.",
+    premise2: "Alle Ingenieure sind Angestellte.",
     options: [
-      "Alle Piloten sind Ingenieure",
-      "Einige Piloten sind Ingenieure",
-      "Einige Ingenieure sind Piloten",
-      "Alle Ingenieure sind Piloten",
+      "Alle Piloten sind Ingenieure.",
+      "Einige Piloten sind Ingenieure.",
+      "Einige Ingenieure sind Piloten.",
+      "Alle Ingenieure sind Piloten.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 4,
@@ -649,13 +746,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-37",
-    premise1: "Alle Rosen sind Blumen",
-    premise2: "Alle Tulpen sind Blumen",
+    premise1: "Alle Rosen sind Blumen.",
+    premise2: "Alle Tulpen sind Blumen.",
     options: [
-      "Alle Rosen sind Tulpen",
-      "Einige Rosen sind Tulpen",
-      "Alle Tulpen sind Rosen",
-      "Einige Blumen sind Rosen",
+      "Alle Rosen sind Tulpen.",
+      "Einige Rosen sind Tulpen.",
+      "Alle Tulpen sind Rosen.",
+      "Einige Blumen sind Rosen.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 4,
@@ -666,13 +763,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-38",
-    premise1: "Einige Schüler sind keine Sportler",
-    premise2: "Einige Sportler sind keine Musiker",
+    premise1: "Einige Schüler sind keine Sportler.",
+    premise2: "Einige Sportler sind keine Musiker.",
     options: [
-      "Einige Schüler sind keine Musiker",
-      "Einige Musiker sind keine Schüler",
-      "Alle Schüler sind Musiker",
-      "Einige Schüler sind Musiker",
+      "Einige Schüler sind keine Musiker.",
+      "Einige Musiker sind keine Schüler.",
+      "Alle Schüler sind Musiker.",
+      "Einige Schüler sind Musiker.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 4,
@@ -683,13 +780,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-39",
-    premise1: "Alle Löwen sind keine Pflanzenfresser",
-    premise2: "Alle Giraffen sind keine Pflanzenfresser",
+    premise1: "Alle Löwen sind keine Pflanzenfresser.",
+    premise2: "Alle Giraffen sind keine Pflanzenfresser.",
     options: [
-      "Alle Löwen sind Giraffen",
-      "Einige Löwen sind Giraffen",
-      "Alle Giraffen sind keine Löwen",
-      "Einige Giraffen sind keine Löwen",
+      "Alle Löwen sind Giraffen.",
+      "Einige Löwen sind Giraffen.",
+      "Alle Giraffen sind keine Löwen.",
+      "Einige Giraffen sind keine Löwen.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 4,
@@ -700,13 +797,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-40",
-    premise1: "Einige Bücher sind alt",
-    premise2: "Einige alte Dinge sind wertvoll",
+    premise1: "Einige Bücher sind alt.",
+    premise2: "Einige alte Dinge sind wertvoll.",
     options: [
-      "Einige Bücher sind wertvoll",
-      "Alle alten Bücher sind wertvoll",
-      "Einige wertvolle Dinge sind Bücher",
-      "Alle Bücher sind wertvoll",
+      "Einige Bücher sind wertvoll.",
+      "Alle alten Bücher sind wertvoll.",
+      "Einige wertvolle Dinge sind Bücher.",
+      "Alle Bücher sind wertvoll.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 4,
@@ -717,13 +814,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-41",
-    premise1: "Alle Autos sind keine Fahrräder",
-    premise2: "Einige Fahrzeuge sind Autos",
+    premise1: "Alle Autos sind keine Fahrräder.",
+    premise2: "Einige Fahrzeuge sind Autos.",
     options: [
-      "Alle Fahrzeuge sind keine Fahrräder",
-      "Einige Fahrzeuge sind keine Fahrräder",
-      "Alle Fahrräder sind keine Fahrzeuge",
-      "Einige Autos sind Fahrräder",
+      "Alle Fahrzeuge sind keine Fahrräder.",
+      "Einige Fahrzeuge sind keine Fahrräder.",
+      "Alle Fahrräder sind keine Fahrzeuge.",
+      "Einige Autos sind Fahrräder.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 1,
@@ -734,13 +831,13 @@ export const implikationenTasks: ImplikationTask[] = [
   },
   {
     id: "imp-42",
-    premise1: "Alle Diamanten sind keine Metalle",
-    premise2: "Einige Edelsteine sind Diamanten",
+    premise1: "Alle Diamanten sind keine Metalle.",
+    premise2: "Einige Edelsteine sind Diamanten.",
     options: [
-      "Alle Edelsteine sind keine Metalle",
-      "Einige Edelsteine sind keine Metalle",
-      "Alle Metalle sind keine Edelsteine",
-      "Einige Diamanten sind Metalle",
+      "Alle Edelsteine sind keine Metalle.",
+      "Einige Edelsteine sind keine Metalle.",
+      "Alle Metalle sind keine Edelsteine.",
+      "Einige Diamanten sind Metalle.",
       "Keine der Schlussfolgerungen ist zwingend",
     ],
     correctAnswer: 1,
@@ -750,3 +847,18 @@ export const implikationenTasks: ImplikationTask[] = [
     rulesApplied: [4, 5],
   },
 ];
+
+/**
+ * Struktureller Validator: Genau 5 Optionen, genau 1 korrekte Antwort (correctAnswer 0–4).
+ * Volle logische Prüfung („nur 1 Option zwingend korrekt“) erfordert einen Solver (Goldene Regeln).
+ */
+export function validateImplikationTask(task: ImplikationTask): boolean {
+  if (!task.options || task.options.length !== 5) return false;
+  if (task.correctAnswer < 0 || task.correctAnswer > 4) return false;
+  if (task.correctAnswer === 4 && task.options[4] !== "Keine der Schlussfolgerungen ist zwingend")
+    return false;
+  return true;
+}
+
+/** Übungsaufgaben für ImplikationenUeben und ImplikationenSimulation (42 Aufgaben). */
+export const implikationenTasks: ImplikationTask[] = [...IMPLIKATION_PRACTICE_TASKS];

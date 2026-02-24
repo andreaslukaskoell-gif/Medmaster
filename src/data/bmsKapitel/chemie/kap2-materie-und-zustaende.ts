@@ -55,6 +55,8 @@ Die ideale Gasgleichung ergibt sich aus der Kombination dreier historischer Gasg
 
 Kombiniert: p·V/(n·T) = R = const → **pV = nRT**.
 
+**Prüfungsrelevanter Sonderfall:** Wenn bei konstanter Stoffmenge n **sowohl das Volumen V als auch die Temperatur T (in Kelvin) verdoppelt** werden, bleibt der **Druck p unverändert**: p = nRT/V → p' = nR·(2T)/(2V) = nRT/V = p. (Verdopplung von V halbiert p; Verdopplung von T verdoppelt p → beides hebt sich auf.)
+
 ![Ideales Gas](/grafik-ideales-gas.svg)
 
 **Erklärung zur Grafik:** Die Abbildung zeigt die ideale Gasgleichung pV = nRT mit den vier Größen p, V, n, T und die drei Einzelgesetze (Boyle-Mariotte, Charles, Avogadro).
@@ -121,6 +123,15 @@ In der Intensivmedizin ist die ideale Gasgleichung bei der maschinellen Beatmung
 
 > **Merke:** In der Beatmungsmedizin gilt: gleiches Tidalvolumen bei sinkender Compliance = steigender Atemwegsdruck → Barotrauma-Risiko bei ARDS.
 
+## Eigenschaften von Gasen (prüfungsrelevant)
+
+- Ein Gas **verteilt sich gleichmäßig** im verfügbaren Raum (Diffusion).
+- Ein Gas **ist komprimierbar** — Druckerhöhung verringert das Volumen (Boyle-Mariotte). **Typische Falle:** „Ein Gas kann nicht komprimiert werden“ ist **falsch**.
+- Gase **lassen sich durch Abkühlen verflüssigen** (Kondensation unterhalb der kritischen Temperatur).
+- Das **Mischen von Gasen** ist **in jedem Verhältnis möglich** (ideale Gasmischung).
+
+> **Merke:** Richtig sind: (1) Gas verteilt sich gleichmäßig, (2) Gas ist komprimierbar, (3) Gase lassen sich verflüssigen, (4) Gase sind in jedem Verhältnis mischbar. Falsch: „Ein Gas kann nicht komprimiert werden.“
+
 ## Kinetische Gastheorie
 
 Die mikroskopische Erklärung liefert die **kinetische Gastheorie** (Maxwell, Boltzmann):
@@ -131,22 +142,31 @@ Die mikroskopische Erklärung liefert die **kinetische Gastheorie** (Maxwell, Bo
 
 > **Merke:** Leichtere Gase sind bei gleicher Temperatur schneller: v_rms = √(3RT/M) — M muss in kg/mol eingesetzt werden!
 
+## Licht (elektromagnetische Welle)
+
+Licht kann als **elektromagnetische Welle** beschrieben werden (Wellenlänge λ, Frequenz ν, c = λ·ν). Die **Lichtgeschwindigkeit im Vakuum** beträgt **c ≈ 300 000 km/s = 3·10⁸ m/s** (exakt 299 792 458 m/s). Licht zeigt sowohl Wellen- als auch Teilchencharakter: Die Lichtteilchen heißen **Photonen** (nicht Protonen!). Die Energie eines Photons ist **umgekehrt proportional zur Wellenlänge**: E ∝ 1/λ — je kürzer die Wellenlänge, desto energiereicher das Licht (UV energiereicher als sichtbares Licht, Röntgen noch energiereicher).
+
+> **Merke:** Licht = elektromagnetische Welle; c ≈ 300 000 km/s; Lichtteilchen = **Photonen**; Energie ~ 1/Wellenlänge.
+
 ## MedAT-Fokus
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Ideales Gasgesetz pV = nRT, R = 8,314 J/(mol·K), Temperatur in Kelvin, Umstellung nach p, V, n, T, Anwendung (Druck, Volumen, Atmung).
+**Zentral prüfungsrelevant:** Ideales Gasgesetz pV = nRT, R = 8,314 J/(mol·K), Temperatur in Kelvin, Umstellung nach p, V, n, T; **V und T verdoppelt → p bleibt gleich**. Gase: gleichmäßig verteilt, **komprimierbar**, verflüssigbar, in jedem Verhältnis mischbar. **Licht:** elektromagnetische Welle; **Lichtgeschwindigkeit c ≈ 300 000 km/s** (3·10⁸ m/s); Lichtteilchen = **Photonen** (nicht Protonen); E ∝ 1/λ.
 
 **Ergänzend vertiefend:** Van-der-Waals-Gleichung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ergibt pV=nRT umgestellt nach V?" → V = nRT/p (Celsius zuerst in Kelvin umrechnen!)
+- "Wenn V und T (in Kelvin) verdoppelt werden, wie ändert sich p?" → p bleibt **gleich** (p = nRT/V → 2T/2V = T/V)
 - "Welches Volumen hat 1 mol ideales Gas bei STP (0 °C, 1 bar)?" → 22,4 L/mol
+- "Kann ein Gas komprimiert werden?" → Ja (Boyle-Mariotte: Druck ↑ → Volumen ↓)
 - "Was passiert mit Volumen bei doppeltem Druck, T = const?" → Halbierung (Boyle-Mariotte)
 - "Wie unterscheiden sich R und k_B?" → R gilt pro Mol, k_B gilt pro Teilchen: R = k_B × N_A
 
 **Typische Prüfungsfallen / Verwechslungen:**
 - Celsius NIEMALS direkt in pV=nRT einsetzen — immer T[K] = T[°C] + 273,15 zuerst!
+- **„Ein Gas kann nicht komprimiert werden“** ist **falsch** — Gase sind komprimierbar.
 - R (8,314 J/(mol·K)) ≠ k_B (1,381 × 10⁻²³ J/K) ≠ N_A (6,022 × 10²³ mol⁻¹)
 - Van-der-Waals: **a** korrigiert Druck (Anziehungskräfte) — **b** korrigiert Volumen (Eigenvolumen der Moleküle)
 - Z > 1 (hoher Druck): Eigenvolumen dominiert → Gas schwerer komprimierbar
@@ -155,6 +175,7 @@ Die mikroskopische Erklärung liefert die **kinetische Gastheorie** (Maxwell, Bo
 **Prüfungsrelevante Zahlen/Fakten:**
 - R = **8,314 J/(mol·K)** = 0,08314 L·bar/(mol·K) = 0,08206 L·atm/(mol·K)
 - V_m bei STP = **22,4 L/mol** (0 °C, 1 bar)
+- **Lichtgeschwindigkeit im Vakuum:** c ≈ **300 000 km/s** = 3·10⁸ m/s
 - N_A = **6,022 × 10²³ mol⁻¹**; k_B = **1,381 × 10⁻²³ J/K**
 - 0 °C = **273,15 K**; absoluter Nullpunkt = 0 K = −273,15 °C
 - 1 atm = **101.325 Pa** = 760 mmHg = 1,013 bar
@@ -1458,13 +1479,23 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
 
 Phasenübergänge sind Zustandsänderungen zwischen den Aggregatzuständen, die bei definierten Temperatur-Druck-Bedingungen stattfinden. Sie sind stets mit einer Enthalpieänderung verbunden (latente Wärme), die **nicht** zur Temperaturänderung, sondern zur Änderung der Molekülanordnung und der intermolekularen Abstände verwendet wird. Auf einer **Heizkurve** (Temperatur gegen Zeit bei konstanter Wärmezufuhr) erscheinen Phasenübergänge als **Plateaus** – die Temperatur bleibt konstant, obwohl weiterhin Energie zugeführt wird.
 
-Die sechs Phasenübergänge:
+Die sechs Phasenübergänge (Richtung und Name — prüfungssicher):
+
+| Von → Nach | Name des Übergangs |
+|------------|---------------------|
+| fest → flüssig | **Schmelzen** (endotherm) |
+| flüssig → fest | **Erstarren** (exotherm) |
+| flüssig → gasförmig | **Verdampfen / Sieden** (endotherm) |
+| gasförmig → flüssig | **Kondensieren** (exotherm) |
+| fest → gasförmig | **Sublimieren** (endotherm) |
+| gasförmig → fest | **Resublimieren / Desublimieren** (exotherm) |
+
 - **Schmelzen** (fest → flüssig): endotherm, ΔH > 0; Gitterstruktur wird aufgebrochen
-- **Erstarren** (flüssig → fest): exotherm, ΔH < 0; Kristallgitter bildet sich
-- **Verdampfen** (flüssig → gasförmig): endotherm, ΔH > 0; alle intermolekularen Bindungen werden gelöst
-- **Kondensieren** (gasförmig → flüssig): exotherm, ΔH < 0; intermolekulare Bindungen bilden sich
-- **Sublimieren** (fest → gasförmig): endotherm, ΔH > 0; ΔH_sub = ΔH_s + ΔH_v
-- **Resublimieren** (gasförmig → fest): exotherm, ΔH < 0; z.B. Reifbildung
+- **Erstarren** (flüssig → fest): exotherm, ΔH < 0; Kristallgitter bildet sich. **Merke:** Von flüssig nach fest heißt immer **Erstarren**, nicht „Sublimieren“ oder „Verdampfen“.
+- **Verdampfen** (flüssig → gasförmig): endotherm; **Sieden** = Verdampfen bei Siedepunkt (Blasenbildung)
+- **Kondensieren** (gasförmig → flüssig): exotherm. **Falle:** Von gasförmig nach **fest** heißt Resublimieren, nicht Kondensieren.
+- **Sublimieren** (fest → gasförmig): endotherm; **Falle:** Von fest nach gasförmig = Sublimieren, nicht „Verdampfen“.
+- **Resublimieren** (gasförmig → fest): exotherm; z.B. Reifbildung
 
 Die Enthalpie eines Phasenübergangs und seines Umkehrprozesses sind stets betragsmäßig gleich und haben entgegengesetztes Vorzeichen (Hess'scher Satz).
 
@@ -1572,6 +1603,8 @@ Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gege
 - "Wie berechnet man die Gefrierpunktserniedrigung bei NaCl?" → ΔT_f = K_f × b × i (i = 2 für NaCl)
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Phasenübergang-Namen:** Von **flüssig nach fest** = **Erstarren** (nicht Sublimieren, nicht Verdampfen). Von **gasförmig nach flüssig** = **Kondensieren** (nicht Sublimieren). Von **fest nach gasförmig** = **Sublimieren** (nicht Verdampfen). Von gasförmig nach fest = Resublimieren (nicht Kondensieren).
+- **Sieden ≠ Erstarren:** Siedepunkt = Temperatur beim Übergang flüssig → gas; Erstarren = flüssig → fest. Pentan Sdp. 36 °C heißt: bei 36 °C siedet Pentan (wird gasförmig); bei 34 °C liegt Pentan noch flüssig vor; „erstarrt bei 36 °C“ wäre falsch.
 - Phasenübergänge sind KEINE Reaktionen — kein neues Produkt, nur andere Anordnung der Moleküle
 - Verdunstung ≠ Sieden: Verdunstung an der Oberfläche bei jeder T; Sieden = Dampfdruckblasen im Volumen wenn p_Dampf = p_außen
 - Van't-Hoff-Faktor i: Glucose (i = 1), NaCl (i ≈ 2), CaCl₂ (i ≈ 3) — Elektrolyte senken Gefrierpunkt MEHR

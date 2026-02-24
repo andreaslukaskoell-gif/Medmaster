@@ -55,7 +55,9 @@ Eine Gleichung ist eine Aussage der Form A = B, wobei A und B mathematische Ausd
 
 Ziel ist stets, die gesuchte Variable zu isolieren, d.h. allein auf einer Seite stehen zu haben.
 
-> **Merke:** Was links passiert, passiert auch rechts — jede Operation auf BEIDE Seiten der Gleichung anwenden, sonst verliert sie ihre Gültigkeit.
+**Umformen von Termen (MedAT-typisch):** Ist **a = b/c** gegeben und **d = a⁻¹** (Kehrwert von a), so gilt **d = 1/a = 1/(b/c) = c/b**. Merke: Bruch invertieren heißt Zähler und Nenner tauschen — also **d = c/b** (nicht d = b/c, nicht d = b−c). Allgemein: **a/b invertieren → (a/b)⁻¹ = b/a**.
+
+> **Merke:** Was links passiert, passiert auch rechts — jede Operation auf BEIDE Seiten der Gleichung anwenden, sonst verliert sie ihre Gültigkeit. **a = b/c und d = a⁻¹ ⇒ d = c/b.**
 
 ## Lineare Gleichungen
 
@@ -346,6 +348,8 @@ Die fundamentale Formel: P = G × p/100, wobei:
 - G = Grundwert (die Ausgangsgröße, das Ganze)
 - p = Prozentsatz (in %)
 
+**Prozent als Verhältnis:** **p % = p/100** (z. B. 25 % = 0,25). **„x % von y“** = **(x/100) × y**. Prozent ist kein absoluter Wert, sondern ein Verhältnis zum Grundwert (MedAT-Falle).
+
 Die drei Grundfragen:
 
 Frage 1 — Den Prozentwert berechnen: P = G × p/100 = G × 0,01 × p.
@@ -456,6 +460,11 @@ Ausgangstiter: 1:16. Dreifache 1:2-Verdünnung: 1:16 × 2 × 2 × 2 = **1:128**.
 **Beispiel 3 — Kreatinin-Clearance (Dreisatz):**
 Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P = 1,5 mg/dL. Clearance = (U × V) / P = (120 × 1,2) / 1,5 = 144 / 1,5 = **96 mL/min**. Normwert: 80–120 mL/min → Patient im Normalbereich.
 
+**Beispiel 4 — Textaufgabe „2/3 dazu, 1/3 weg“ (MedAT-typisch):**
+„Gibt man zu einer Zahl zwei Drittel ihrer selbst dazu und nimmt davon ein Drittel dieser Summe wieder weg, so bleibt 10. Wie lautet die Zahl?“ — Zahl = x. Zwei Drittel dazu: x + (2/3)x = (5/3)x. Davon ein Drittel weg: (5/3)x − (1/3)·(5/3)x = (5/3)x·(1 − 1/3) = (5/3)x·(2/3) = (10/9)x. Gleichung: (10/9)x = 10 ⇒ x = **9**. Probe: 9 + 6 = 15; 15 − 5 = 10 ✓.
+
+> **Merke:** „2/3 dazu“ = x + (2/3)x; „1/3 davon weg“ = Rest ist (2/3) der Summe. Sauber als Gleichung aufstellen, dann nach x auflösen.
+
 ## MedAT-Fokus
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
@@ -470,9 +479,11 @@ Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P
 - "Serumverdünnung 1:100 zeigt Titer 50 AU/mL — Originaltiter?" → 50 × 100 = 5000 AU/mL
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **% ist kein absoluter Wert, sondern ein Verhältnis** — „x % von y“ = (x/100)·y.
 - Prozentpunkte ≠ relative Änderung: Von 40% auf 30% sind 10 Prozentpunkte, aber 25% relative Senkung
 - Direkter vs. indirekter Dreisatz: Mehr Helfer → weniger Zeit (indirekt!), nicht mehr Zeit
 - NNT aus Prozent berechnen: ARR erst in Dezimalzahl umrechnen (3% → 0,03), dann NNT = 1/0,03 = 33
+- Textaufgaben „2/3 dazu, 1/3 weg“: Summe bilden, dann (2/3) der Summe behalten → Gleichung (10/9)x = 10 ⇒ x = 9.
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - ARR = R_Kontrolle − R_Behandlung; RRR = ARR/R_Kontrolle; NNT = 1/ARR (ARR als Dezimalzahl)
@@ -1302,6 +1313,8 @@ Das Quadrat ist ein Sonderfall mit l = b = a: A = a², U = 4a, d = a × √2.
 
 ## Dreieck
 
+**Flächenformel:** **A(Dreieck) = (Grundseite × Höhe) / 2** = ½ × g × h. Rechteck zum Vergleich: **A(Rechteck) = Länge × Breite.**
+
 Die allgemeine Dreiecksfläche berechnet sich über Grundlinie g und zugehörige Höhe h:
 **A = ½ × g × h**
 
@@ -1316,6 +1329,8 @@ Die **Winkelsumme** in jedem Dreieck beträgt **180°**. Im rechtwinkligen Dreie
 Spezialfälle: Im gleichseitigen Dreieck (alle Seiten a) gilt: A = (√3/4) × a², Höhe h = (√3/2) × a. Im gleichschenkligen Dreieck mit Basis b und Schenkeln a: h = √(a² − (b/2)²).
 
 **Rechenbeispiel — Heron:** Dreieck mit a = 7, b = 8, c = 9 cm. s = (7+8+9)/2 = 12. A = √(12 × 5 × 4 × 3) = √720 = √(144 × 5) = 12√5 ≈ 26,8 cm². Probe: Die Höhe auf c = 9 wäre h = 2A/c = 2 × 26,8/9 ≈ 5,96 cm.
+
+**Rechenbeispiel — Dreieck vs. Rechteck (MedAT-typisch):** Ein Dreieck mit Grundlinie 5 cm und Höhe 8 cm hat die Fläche A = (5 × 8) / 2 = **20 cm²**. Hat dieses Dreieck ein Drittel der Fläche eines Rechtecks mit Breite 5 cm, so ist die Rechteckfläche 3 × 20 = **60 cm²**, also Länge = 60 / 5 = **12 cm**.
 
 ## Kreis und Kreissektor
 
@@ -1615,8 +1630,10 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
 
 **Erklärung zur Grafik:** Volumeneinheiten (m³, Liter, mL) und Umrechnungen; relevant für Herzvolumen, Dosisberechnung und klinische Volumina.
 
-Ein Quader mit Länge l, Breite b und Höhe h:
-- **Volumen: V = l × b × h**
+Ein Quader mit Länge l, Breite b und Höhe h (bzw. Kanten a, b, c):
+- **Volumen: V = l × b × h = a · b · c** (alle drei Kanten multiplizieren, nicht addieren!)
+
+> **Merke:** **V(Quader) = a · b · c.** MedAT-Falle: Das Volumen ist **nicht** 2(a·b + a·c + b·c) (das ist die Oberfläche O), **nicht** (a+b+c)³ und **nicht** 2·a·b·c.
 - **Oberfläche: O = 2 × (l×b + b×h + l×h)**
 - **Raumdiagonale: d = √(l² + b² + h²)**
 
@@ -1634,6 +1651,8 @@ Ein Zylinder mit Radius r und Höhe h:
 - **Gesamtoberfläche: O = 2 × π × r × h + 2 × π × r² = 2πr(h + r)**
 
 **Rechenbeispiel — Infusionsflasche:** Zylindrische Flasche mit r = 3 cm, h = 20 cm. V = π × 9 × 20 = 180π ≈ 565 cm³ ≈ 565 mL. Mantelfläche (Etikettengröße): M = 2π × 3 × 20 = 120π ≈ 377 cm².
+
+**MedAT-typisch — Zylinder, Volumen konstant:** Ein zylinderförmiger Muskel (Länge l, Durchmesser d) verkürzt sich um 30 %, das Volumen bleibt konstant. Dann L' = 0,7·l. V = π·(d/2)²·l = π·(D/2)²·L' ⇒ (d/2)²·l = (D/2)²·0,7·l ⇒ D² = d²/0,7 ⇒ D = d/√0,7 ≈ 1,195·d. Der Durchmesser steigt um etwa **19,5 %** (nicht 54 %, 39 %, 82 % oder 83 % — typische MedAT-Falschantworten).
 
 **MedAT-typisch:** Aus der Formel V = π × r² × h kann nach jeder Variablen aufgelöst werden: r = √(V/(πh)) oder h = V/(πr²). Beispiel: Welche Höhe muss ein Zylindergefäß (r = 2 cm) haben, um 250 mL = 250 cm³ zu fassen? h = 250/(π × 4) = 250/12,57 ≈ 19,9 cm.
 
@@ -1949,8 +1968,10 @@ M = ((x₁ + x₂) / 2, (y₁ + y₂) / 2)
 
 Die **Normalform** (Slope-Intercept-Form):
 **y = m × x + b**
-- m = Steigung (Tangens des Steigungswinkels α: m = tan α)
+- m = Steigung (Tangens des Steigungswinkels α: **m = tan α**)
 - b = y-Achsenabschnitt (Wert bei x = 0)
+
+**Trigonometrie im rechtwinkligen Dreieck (MedAT-relevant):** Mit Hypotenuse, Gegenkathete (gegenüber von α) und Ankathete (an α): **sin(α) = Gegenkathete/Hypotenuse**, **cos(α) = Ankathete/Hypotenuse**, **tan(α) = Gegenkathete/Ankathete**. **Steigung in %** = (Höhenunterschied / Horizontaldistanz) × 100 = **tan(α) × 100 %**. Beispiel: 16 % Steigung bedeutet bei 100 m horizontaler Strecke 16 m Höhendifferenz — das Verhältnis 16/100 entspricht dem **Tangens** des Steigungswinkels (nicht Sinus, nicht Cosinus). MedAT-Frage „Welche Winkelfunktion?“ → **Tangens**.
 
 Steigung aus zwei Punkten: **m = (y₂ − y₁) / (x₂ − x₁) = Δy / Δx**
 
@@ -2035,7 +2056,7 @@ g₁: y = ¾x + 2. Parallele Gerade durch P(4, 1): y = ¾x + b. Einsetzen: 1 = �
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Geradengleichung y = mx + b, Steigung m = Δy/Δx, zwei Punkte → Gerade, Schnittpunkt, Abstand Punkt–Gerade, Parabel (Scheitelpunkt, Öffnung).
+**Zentral prüfungsrelevant:** Geradengleichung y = mx + b, Steigung m = Δy/Δx, zwei Punkte → Gerade, Schnittpunkt, Abstand Punkt–Gerade, Parabel (Scheitelpunkt, Öffnung). **Trigonometrie:** sin = Gegenkathete/Hypotenuse, cos = Ankathete/Hypotenuse, tan = Gegenkathete/Ankathete; **Steigung in % = Höhenunterschied/Horizontaldistanz = tan(α)** — Angabe „16 % Steigung“ entspricht **Tangens** (nicht Sinus/Cosinus).
 
 **Ergänzend vertiefend:** Lineare Funktionen in der Klinik (Dosis-Wirkung); typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -2045,6 +2066,7 @@ g₁: y = ¾x + 2. Parallele Gerade durch P(4, 1): y = ¾x + b. Einsetzen: 1 = �
 - "Sind y = 3x+1 und y = −⅓x+5 senkrecht?" → 3×(−1/3) = −1 → ja!
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Steigung in % (z. B. 16 %) = Tangens** des Steigungswinkels (Höhe/Horizontale) — nicht Sinus, nicht Cosinus
 - Kreisgleichung: (x−x₀)²+(y−y₀)² = r² — rechts steht r² (nicht r); Mittelpunkt bei (x+2)² ist x₀ = −2!
 - Parallele Geraden: gleiche Steigung, VERSCHIEDENER y-Abschnitt — kein Schnittpunkt
 - arctan: Bereich nur −90° bis +90° → im II./III. Quadranten +180° addieren
@@ -2062,6 +2084,7 @@ g₁: y = ¾x + 2. Parallele Gerade durch P(4, 1): y = ¾x + b. Einsetzen: 1 = �
 - **Geradengleichung**: y = m×x + b; m = Steigung (Δy/Δx); b = y-Achsenabschnitt; Schnittpunkt: Gleichungssystem
 - **Steigung**: m > 0 → steigend; m < 0 → fallend; m = 0 → waagrecht; Parallele: gleiche m; Senkrechte: m₁×m₂ = −1
 - **Kreisgleichung**: (x−a)² + (y−b)² = r²; Mittelpunkt M(a,b); Radius r
+- **Trigonometrie**: sin = Gegenkathete/Hypotenuse, cos = Ankathete/Hypotenuse, tan = Gegenkathete/Ankathete; **Steigung in % = tan(α)×100 %**
 - **Klinisch**: Regressionsgerade HbA1c–Blutzucker; EKG-Achse; Abstand von Lymphknoten im CT; Vierfelder-Tafel (Sensitivität/Spezifität)`,
       lernziele: [
         "Abstände und Mittelpunkte im kartesischen Koordinatensystem berechnen.",

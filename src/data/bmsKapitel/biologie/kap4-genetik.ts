@@ -87,7 +87,7 @@ Beim **dihybriden Erbgang** werden zwei unabhängige Gene gleichzeitig betrachte
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Monohybrider Erbgang (3:1 in F₂), dominant/rezessiv, Genotyp/Phänotyp, Kreuzungsschema, Mendel-Regeln.
+**Zentral prüfungsrelevant:** Monohybrider Erbgang: F₂ **Genotyp 1:2:1** [(B/B):(B/b):(b/b)], **Phänotyp 3:1** (bei dominant-rezessiv). Dominant/rezessiv, Kreuzungsschema, Mendel-Regeln. **X-chromosomal dominant:** Merkmal von betroffenen Vätern an **alle Töchter** weitergegeben → typisches Stammbaum-Muster. **AB0:** Eltern 0 und AB können **keine** Kinder mit Blutgruppe 0, A und B haben (Kind nur A oder B möglich).
 
 **Ergänzend vertiefend:** Dihybride Kreuzung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -1612,7 +1612,7 @@ Doppelstrangbrüche (DSB), die gefährlichste Schadensform, werden durch zwei Ha
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Chargaff (A=T, G=C), Doppelhelix, Basenpaarung (A-T 2 H-Brücken, G-C 3 H-Brücken), Antiparallelität, 5'-3'-Richtung.
+**Zentral prüfungsrelevant:** Chargaff (A=T, G=C), Doppelhelix, Basenpaarung (A-T 2 H-Brücken, G-C 3 H-Brücken), Antiparallelität, 5'-3'-Richtung. **A=T-Basenregel:** Liegt Adenin zu z. B. 27 % vor, liegt Thymin ebenfalls zu **27 %** vor (komplementäre Basenpaarung). **RNA-Synthese am DNA-Strang = Transkription** (nicht Translation, Replikation, Transformation). **Anticodon** ist in der **tRNA** (nicht in mRNA, Gen, Protein oder Exon).
 
 **Ergänzend vertiefend:** Z-DNA; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 

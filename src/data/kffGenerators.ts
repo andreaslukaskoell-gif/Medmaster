@@ -3,6 +3,12 @@
 // Generiert unendlich viele Übungsaufgaben prozedural
 // ============================================================
 
+import type { ImplikationTask } from "@/data/kffImplikationen";
+import { OFFICIAL_IMPLICATION_EXAMPLES, validateImplikationTask } from "@/data/kffImplikationen";
+import type { WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
+import { OFFICIAL_WF_EXAMPLES } from "@/data/kffWortfluessigkeitMedAT";
+import type { AllergyPass, GedaechtnisQuestion } from "@/data/kffGedaechtnisMedAT";
+
 // --- ZAHLENFOLGEN-GENERATOR ---
 
 export interface ZahlenfolgeGenerated {
@@ -549,6 +555,32 @@ const COUNTRIES = [
 
 const BLOOD_GROUPS = ["A+", "A-", "B+", "B-", "AB+", "AB-", "0+", "0-"];
 
+/** Für Gedächtnis Allergiepässe: MedAT-Stil A | B | AB | 0 (ohne Rhesus in Typ) */
+const BLOOD_GROUPS_GM: AllergyPass["bloodGroup"][] = ["A", "B", "AB", "0"];
+
+const MEDICATIONS = [
+  "Metformin",
+  "Levothyroxin",
+  "Amlodipin",
+  "Omeprazol",
+  "Simvastatin",
+  "Ibuprofen",
+  "Pantoprazol",
+  "Metoprolol",
+  "Losartan",
+  "Gabapentin",
+  "Sertralin",
+  "Montelukast",
+  "Prednisolon",
+  "Insulin",
+  "ASS 100",
+  "Bisoprolol",
+  "Ramipril",
+  "Allopurinol",
+  "Diazepam",
+  "L-Thyroxin",
+];
+
 function generateName(): string {
   const s1 = FIRST_SYLLABLES[randInt(0, FIRST_SYLLABLES.length - 1)];
   const s2 = SECOND_SYLLABLES[randInt(0, SECOND_SYLLABLES.length - 1)];
@@ -683,6 +715,167 @@ export function generateMemoryQuestions(
       options: shuffle(options),
       correctAnswer: gen.correct,
       questionType: gen.type,
+    });
+  }
+
+  return questions;
+}
+
+// --- GEDAECHTNIS ALLERGIEPAESSE (MedAT-Stil) ---
+
+const OPTION_E_LABEL = "Keine der Antwortmöglichkeiten ist richtig.";
+
+/** Ausweisnummer: immer genau 5 Ziffern (MedAT-Stil). */
+function generatePassportNumber(): string {
+  return randInt(10000, 99999).toString();
+}
+
+/** Generiert 6–10 realistische Allergiepässe für Training (niemals für offizielle Beispiele). */
+export function generateAllergyPasses(count: number): AllergyPass[] {
+  const usedNames = new Set<string>();
+  const usedPassportNumbers = new Set<string>();
+  const passes: AllergyPass[] = [];
+
+  for (let i = 0; i < count; i++) {
+    let name = generateName();
+    while (usedNames.has(name)) name = generateName();
+    usedNames.add(name);
+
+    let passportNumber = generatePassportNumber();
+    while (usedPassportNumbers.has(passportNumber)) passportNumber = generatePassportNumber();
+    usedPassportNumbers.add(passportNumber);
+
+    const numAllergies = randInt(1, 3);
+    const allergien = shuffle([...ALLERGIES]).slice(0, numAllergies);
+
+    const numMeds = randInt(0, 2);
+    const medications = numMeds === 0 ? [] : shuffle([...MEDICATIONS]).slice(0, numMeds);
+
+    passes.push({
+      id: `gm-pass-${i + 1}-${Date.now()}`,
+      name,
+      birthdate: generateDate(),
+      bloodGroup: BLOOD_GROUPS_GM[randInt(0, BLOOD_GROUPS_GM.length - 1)],
+      medications,
+      allergies: allergien,
+      passportNumber,
+      country: COUNTRIES[randInt(0, COUNTRIES.length - 1)],
+      photo: "", // Platzhalter – UI zeigt Silhouette
+    });
+  }
+
+  return passes;
+}
+
+/** Erzeugt 25 Fragen zu den gegebenen Pässen; A–E, E manchmal korrekt. */
+export function generateGedaechtnisQuestionsFromPasses(
+  passes: AllergyPass[],
+  count: number = 25
+): GedaechtnisQuestion[] {
+  const questions: GedaechtnisQuestion[] = [];
+  const usedCombos = new Set<string>();
+  const allMeds = new Set(passes.flatMap((x) => x.medications));
+  const medsNotUsed = MEDICATIONS.filter((m) => !allMeds.has(m));
+
+  const builders: Array<
+    (p: AllergyPass) => { question: string; correct: string; pool: string[]; allowE?: boolean }
+  > = [
+    (p) => ({
+      question: `Wann hat ${p.name} Geburtstag?`,
+      correct: p.birthdate,
+      pool: passes.map((x) => x.birthdate),
+    }),
+    (p) => ({
+      question: `Welche Blutgruppe hat ${p.name}?`,
+      correct: p.bloodGroup,
+      pool: BLOOD_GROUPS_GM as unknown as string[],
+    }),
+    (p) => ({
+      question: `Welche Allergie hat die Person mit Blutgruppe ${p.bloodGroup}?`,
+      correct: p.allergies[0] ?? "",
+      pool: [...new Set(passes.flatMap((x) => x.allergies))],
+    }),
+    (p) => ({
+      question: `Welche Person nimmt das Medikament ${p.medications[0] ?? "Unbekannt"}?`,
+      correct: p.medications.length > 0 ? p.name : "",
+      pool: passes.map((x) => x.name),
+      allowE: true,
+    }),
+    (p) => ({
+      question: `Welche Ausweisnummer gehört zu ${p.name}?`,
+      correct: p.passportNumber,
+      pool: passes.map((x) => x.passportNumber),
+    }),
+    (p) => ({
+      question: `Aus welchem Land stammt ${p.name}?`,
+      correct: p.country,
+      pool: [...COUNTRIES],
+    }),
+    (p) => ({
+      question: `Wem gehört die Ausweisnummer ${p.passportNumber}?`,
+      correct: p.name,
+      pool: passes.map((x) => x.name),
+    }),
+    (p) => ({
+      question: `Wer ist allergisch gegen ${p.allergies[0]}?`,
+      correct: p.name,
+      pool: passes.map((x) => x.name),
+    }),
+    (p) => ({
+      question: `Welche Medikamente nimmt ${p.name}?`,
+      correct: p.medications.length > 0 ? p.medications.join(", ") : "Keine",
+      pool: ["Keine", ...passes.flatMap((x) => x.medications).filter((m) => m)].filter(Boolean),
+      allowE: true,
+    }),
+  ];
+
+  let attempts = 0;
+  const maxAttempts = count * 4;
+
+  while (questions.length < count && attempts < maxAttempts) {
+    attempts++;
+    const p = passes[randInt(0, passes.length - 1)];
+    const builderIdx = randInt(0, builders.length - 1);
+    const key = `${p.id}-${builderIdx}-${questions.length}`;
+    if (usedCombos.has(key)) continue;
+    usedCombos.add(key);
+
+    const b = builders[builderIdx](p);
+    const wrongPool = b.pool.filter((x) => x !== b.correct);
+    const useE =
+      b.allowE &&
+      Math.random() < 0.15 &&
+      (builderIdx === 3 ? medsNotUsed.length > 0 : wrongPool.length >= 4);
+
+    let questionText = b.question;
+    let correctVal = b.correct;
+    let options: string[];
+    let correctIndex: number;
+
+    if (useE && builderIdx === 3 && medsNotUsed.length > 0) {
+      const fakeMed = medsNotUsed[randInt(0, medsNotUsed.length - 1)];
+      questionText = `Welche Person nimmt das Medikament ${fakeMed}?`;
+      const fourNames = shuffle(passes.map((x) => x.name)).slice(0, 4);
+      options = shuffle([...fourNames, OPTION_E_LABEL]);
+      correctIndex = 4;
+    } else if (useE && wrongPool.length >= 4) {
+      const wrong = shuffle(wrongPool).slice(0, 4);
+      options = shuffle([...wrong, OPTION_E_LABEL]);
+      correctIndex = 4;
+    } else {
+      if (!correctVal && correctVal !== "Keine") continue;
+      const wrong = shuffle(wrongPool).slice(0, 4);
+      options = shuffle([b.correct, ...wrong].slice(0, 5));
+      if (!options.includes(b.correct)) options[4] = b.correct;
+      correctIndex = options.indexOf(b.correct);
+      if (correctIndex < 0) continue;
+    }
+
+    questions.push({
+      id: `gm-q-${questions.length + 1}-${Date.now()}`,
+      question: questionText,
+      options,
+      correctIndex,
     });
   }
 
@@ -1298,6 +1491,388 @@ export function generateWortflüssigkeitSet(
   return questions;
 }
 
+// --- WORTFLÜSSIGKEIT MEDAT: Offizielle vs. Training (strikt getrennt) ---
+
+/** Nur für Training: deutsche Hauptwörter ohne Ä/Ö/Ü/ß, nicht in OFFICIAL_WF_EXAMPLES. */
+const TRAINING_WF_WORDS: Record<1 | 2 | 3, string[]> = {
+  1: [
+    "HAUS",
+    "BAUM",
+    "HUND",
+    "TIER",
+    "ARZT",
+    "BLUT",
+    "HERZ",
+    "MOND",
+    "BILD",
+    "WAND",
+    "DACH",
+    "GELD",
+    "RING",
+    "BERG",
+    "TUCH",
+    "WORT",
+    "SEIL",
+    "HAND",
+    "GOLD",
+    "BALL",
+    "MAUS",
+    "REIS",
+    "SALZ",
+    "HAUT",
+    "NASE",
+    "OFEN",
+    "TOPF",
+    "BROT",
+    "MILCH",
+    "LAMPE",
+    "STUHL",
+    "TISCH",
+    "STERN",
+    "KRAFT",
+    "BRIEF",
+    "STEIN",
+    "GABEL",
+    "NADEL",
+    "KERZE",
+    "BIRNE",
+    "WOLKE",
+    "BLUME",
+    "FARBE",
+    "KARTE",
+    "ORGAN",
+    "LEBER",
+    "LUNGE",
+    "NIERE",
+    "ZELLE",
+    "GEIST",
+    "SONNE",
+    "REGEN",
+    "FEDER",
+    "DRAHT",
+    "KOHLE",
+    "SUPPE",
+    "SAHNE",
+    "KNOPF",
+    "GRUND",
+    "PFERD",
+    "KATZE",
+    "FLORA",
+    "STURM",
+    "VOGEL",
+    "PILZ",
+    "ROSE",
+  ],
+  2: [
+    "GARTEN",
+    "SCHULE",
+    "KIRCHE",
+    "WASSER",
+    "BRILLE",
+    "PFLEGE",
+    "FENSTER",
+    "MESSER",
+    "KISSEN",
+    "BALKON",
+    "KAFFEE",
+    "ZUCKER",
+    "FORMEN",
+    "FLIEGE",
+    "SOMMER",
+    "WINTER",
+    "FRUCHT",
+    "KELLER",
+    "FINGER",
+    "MUTTER",
+    "BRUDER",
+    "STANGE",
+    "MAGNET",
+    "PLATTE",
+    "FELSEN",
+    "MANTEL",
+    "TELLER",
+    "DECKEL",
+    "BREMSE",
+    "BECHER",
+    "SYMPTOM",
+    "FIEBER",
+    "RISIKO",
+    "CHANCE",
+    "FLASCHE",
+    "PFLICHT",
+    "KNOCHEN",
+    "SKELETT",
+    "TROPFEN",
+    "SCHMERZ",
+    "PATIENT",
+    "THEORIE",
+    "WIRKUNG",
+    "URSACHE",
+    "HEILUNG",
+    "STEMPEL",
+    "SCHRANK",
+    "STIEFEL",
+    "PROTEIN",
+    "NAHRUNG",
+    "RAHMEN",
+    "BILDUNG",
+    "AMPERE",
+  ],
+  3: [
+    "DIAGNOSE",
+    "OPERATION",
+    "KRANKHEIT",
+    "THERAPIE",
+    "ANATOMIE",
+    "MATHEMATIK",
+    "VERDAUUNG",
+    "KREISLAUF",
+    "CHROMOSOM",
+    "BLUTDRUCK",
+    "SAUERSTOFF",
+    "STICKSTOFF",
+    "KOHLENSTOFF",
+    "MAGNETFELD",
+    "SCHWERKRAFT",
+    "EVOLUTION",
+    "MUTATION",
+    "INFEKTION",
+    "MEDIKAMENT",
+    "ANTIBIOTIKA",
+    "CHIRURGIE",
+    "NEUROLOGIE",
+    "KARDIOLOGIE",
+    "BIOCHEMIE",
+    "ORGANISMUS",
+    "PATHOLOGIE",
+    "PHARMAZIE",
+    "ZELLKERN",
+    "REAKTION",
+    "GLEICHUNG",
+    "SEHKRAFT",
+    "BLUTZUCKER",
+    "CHOLESTERIN",
+    "THROMBOSE",
+    "HYPOTHESE",
+    "STATISTIK",
+    "PARAMETER",
+    "INSTRUMENT",
+    "DIMENSION",
+    "FREQUENZ",
+    "AMPLITUDE",
+    "FORSCHUNG",
+    "BIBLIOTHEK",
+    "UNIVERSUM",
+    "TEMPERATUR",
+    "EXPERIMENT",
+    "BEHANDLUNG",
+    "SPANNUNG",
+    "KRANKENHAUS",
+    "WISSENSCHAFT",
+    "PHILOSOPHIE",
+    "NERVENSYSTEM",
+    "GLEICHGEWICHT",
+  ],
+};
+
+const WF_MAX_RETRIES = 5;
+
+/** Alle Wörter, die als Lösung in Frage kommen (Lexikon für Solver/Validator). */
+function getWFLexicon(): string[] {
+  const set = new Set<string>();
+  for (const d of [1, 2, 3] as const) {
+    for (const w of TRAINING_WF_WORDS[d]) set.add(w.toUpperCase());
+  }
+  for (const o of OFFICIAL_WF_EXAMPLES) set.add(o.solutionWord.toUpperCase());
+  return [...set];
+}
+
+/** Prüft, ob sich das Wort aus dem Buchstaben-Multiset bilden lässt (jeder Buchstabe höchstens so oft wie in letters). */
+function wordCanBeFormedFromLetters(word: string, letters: string[]): boolean {
+  const need = new Map<string, number>();
+  for (const c of word.toUpperCase()) need.set(c, (need.get(c) ?? 0) + 1);
+  const have = new Map<string, number>();
+  for (const c of letters) have.set(c, (have.get(c) ?? 0) + 1);
+  for (const [c, n] of need) {
+    if ((have.get(c) ?? 0) < n) return false;
+  }
+  return true;
+}
+
+/**
+ * Findet alle Wörter im Lexikon, die das exakt gleiche Buchstaben-Multiset nutzen (Anagramme).
+ * So ist die Lösung eindeutig: genau ein Wort passt zu den gezeigten Buchstaben.
+ */
+function findAllWordsFromLetters(letters: string[], lexicon: string[]): string[] {
+  return lexicon.filter(
+    (w) => w.length === letters.length && wordCanBeFormedFromLetters(w, letters)
+  );
+}
+
+/**
+ * Validator Wortflüssigkeit: Genau 1 Wort aus dem Lexikon bildbar, Lösung stimmt, Optionen nur Buchstaben aus dem Wort.
+ * Qualitäts-Gate: keine Mehrdeutigkeit, keine falsche Lösung.
+ */
+export function validateWordFluencyTask(task: WordFluencyTask): boolean {
+  const lexicon = getWFLexicon();
+  const words = findAllWordsFromLetters(task.letters, lexicon);
+  if (words.length !== 1) return false;
+  const soleWord = words[0]!;
+  if (soleWord.toUpperCase() !== task.solutionWord.toUpperCase()) return false;
+  const correctLetter = soleWord[0];
+  if (task.correctIndex === 4) {
+    if (task.options[4] !== "-") return false;
+    for (let i = 0; i < 4; i++) if (task.options[i] === correctLetter) return false;
+  } else if (task.options[task.correctIndex] !== correctLetter) {
+    return false;
+  }
+  const letterSet = new Set(task.letters.map((c) => c.toUpperCase()));
+  for (let i = 0; i < 5; i++) {
+    const opt = task.options[i];
+    if (opt === "-") continue;
+    if (!letterSet.has(opt.toUpperCase())) return false;
+  }
+  if (task.options.length !== 5) return false;
+  return true;
+}
+
+function lettersSortedKey(letters: string[]): string {
+  return [...letters].sort().join("");
+}
+
+/**
+ * Prüft, ob eine Wortflüssigkeit-Trainingsaufgabe zu ähnlich zu einer offiziellen ist.
+ * Kein gleiches Lösungswort, keine identische Buchstabenkombination.
+ */
+export function assertNotOfficialLikeWordFluency(task: WordFluencyTask): boolean {
+  const wordUpper = task.solutionWord.toUpperCase();
+  const key = lettersSortedKey(task.letters);
+  for (const o of OFFICIAL_WF_EXAMPLES) {
+    if (o.solutionWord.toUpperCase() === wordUpper) return false;
+    if (lettersSortedKey(o.letters) === key) return false;
+  }
+  return true;
+}
+
+/**
+ * Generiert eine Wortflüssigkeit-Trainingsaufgabe.
+ * Nutzt nur TRAINING_WF_WORDS; kein Wort aus OFFICIAL_WF_EXAMPLES.
+ */
+export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask {
+  const pool = TRAINING_WF_WORDS[difficulty];
+  const officialWords = new Set(OFFICIAL_WF_EXAMPLES.map((o) => o.solutionWord.toUpperCase()));
+  const allowed = pool.filter((w) => !officialWords.has(w.toUpperCase()));
+  if (allowed.length === 0) {
+    if (import.meta.env?.DEV) {
+      console.warn("WF-Generator: Keine Wörter mehr verfügbar – Wortliste prüfen");
+    }
+    return generateWordFluencyTaskFallback(difficulty);
+  }
+
+  for (let attempt = 0; attempt < WF_MAX_RETRIES; attempt++) {
+    const word = allowed[randInt(0, allowed.length - 1)].toUpperCase();
+    const letters = word.split("");
+    const lettersInWord = [...new Set(letters)];
+    if (lettersInWord.length < 5) continue; // mind. 5 verschiedene Buchstaben: 1 korrekt + 4 Optionen (oder 4 Falsche + "-")
+    const shuffled = shuffle([...letters]);
+    const correctFirst = word[0];
+    const useNone = difficulty === 3 && Math.random() < 0.25;
+
+    // Nur Buchstaben, die im Wort vorkommen, als Antwortoptionen – sonst macht die Aufgabe keinen Sinn
+    const wrongPool = lettersInWord.filter((l) => l !== correctFirst);
+    const wrongLetters = shuffle(wrongPool).slice(0, 4);
+
+    let options: string[];
+    let correctIndex: number;
+    if (useNone) {
+      options = [...wrongLetters, "-"];
+      correctIndex = 4;
+    } else {
+      const mixed = shuffle([correctFirst, ...wrongLetters]);
+      options = [...mixed, "-"];
+      correctIndex = mixed.indexOf(correctFirst);
+    }
+
+    const task: WordFluencyTask = {
+      id: `wf-train-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      letters: shuffled,
+      options,
+      correctIndex,
+      solutionWord: word,
+      explanation: useNone
+        ? "Keines der angegebenen Buchstaben ist der korrekte Anfangsbuchstabe des Lösungswortes."
+        : `Das Wort lautet „${word}" und beginnt mit „${correctFirst}".`,
+      difficulty,
+    };
+
+    if (!validateWordFluencyTask(task)) continue;
+    if (!assertNotOfficialLikeWordFluency(task)) continue;
+    return task;
+  }
+
+  if (import.meta.env?.DEV) {
+    console.warn("WF-Generator erzeugt zu ähnliche Aufgaben – Wortliste/Logik prüfen");
+  }
+  return generateWordFluencyTaskFallback(difficulty);
+}
+
+function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask {
+  const pool = TRAINING_WF_WORDS[difficulty];
+  const withEnoughLetters = pool.filter((w) => new Set(w.toUpperCase().split("")).size >= 4);
+  const usePool = withEnoughLetters.length > 0 ? withEnoughLetters : pool;
+  for (let tryCount = 0; tryCount < 10; tryCount++) {
+    const word = usePool[randInt(0, usePool.length - 1)].toUpperCase();
+    const letters = shuffle(word.split(""));
+    const correctFirst = word[0];
+    const lettersInWord = [...new Set(word.split(""))];
+    const wrongPool = lettersInWord.filter((l) => l !== correctFirst);
+    const wrong = shuffle(wrongPool).slice(0, 4);
+    const options = [...shuffle([correctFirst, ...wrong]), "-"];
+    const task: WordFluencyTask = {
+      id: `wf-train-fb-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+      letters,
+      options,
+      correctIndex: options.indexOf(correctFirst),
+      solutionWord: word,
+      explanation: `Das Wort lautet „${word}" und beginnt mit „${correctFirst}".`,
+      difficulty,
+    };
+    if (validateWordFluencyTask(task)) return task;
+  }
+  const word = usePool[0].toUpperCase();
+  const letters = shuffle(word.split(""));
+  const correctFirst = word[0];
+  const lettersInWord = [...new Set(word.split(""))];
+  const wrongPool = lettersInWord.filter((l) => l !== correctFirst);
+  const wrong = shuffle(wrongPool).slice(0, 4);
+  const options = [...shuffle([correctFirst, ...wrong]), "-"];
+  return {
+    id: `wf-train-fb-last-${Date.now()}`,
+    letters,
+    options,
+    correctIndex: options.indexOf(correctFirst),
+    solutionWord: word,
+    explanation: `Das Wort lautet „${word}" und beginnt mit „${correctFirst}".`,
+    difficulty,
+  };
+}
+
+export function generateWordFluencyTrainingSet(
+  count: number,
+  difficulty: 1 | 2 | 3
+): WordFluencyTask[] {
+  const used = new Set<string>();
+  const out: WordFluencyTask[] = [];
+  while (out.length < count) {
+    const t = generateWordFluencyTask(difficulty);
+    if (!used.has(t.solutionWord)) {
+      used.add(t.solutionWord);
+      out.push(t);
+    }
+  }
+  return out;
+}
+
 // --- IMPLIKATIONEN-GENERATOR (Kategorische Syllogismen) ---
 
 export interface SyllogismQuestion {
@@ -1563,4 +2138,396 @@ export function generateSyllogismSet(
   difficulty: "leicht" | "mittel" | "schwer"
 ): SyllogismQuestion[] {
   return Array.from({ length: count }, () => generateSyllogism(difficulty));
+}
+
+// =============================================================================
+// IMPLIKATIONEN – Offizielle Beispiele vs. Trainings-Generator (strikt getrennt)
+// =============================================================================
+// Der Generator nutzt nur abstrakte Regeltypen, keine Inhalte der offiziellen Aufgaben.
+// OFFICIAL_IMPLICATION_EXAMPLES wird nur in assertNotOfficialLike zum Abgleich gelesen.
+
+/** Abstrakte Muster aus offiziellen Beispielen (nur Struktur, keine Inhalte). */
+export type ImplicationPattern = {
+  premise1Type: "Alle_X_sind_Y" | "Kein_X_ist_Y" | "Einige_X_sind_Y" | "Einige_X_sind_keine_Y";
+  premise2Type: "Alle_X_sind_Y" | "Kein_X_ist_Y" | "Einige_X_sind_Y" | "Einige_X_sind_keine_Y";
+  conclusionType:
+    | "Alle_X_sind_Y"
+    | "Einige_X_sind_Y"
+    | "Einige_X_sind_keine_Y"
+    | "Kein_X_ist_Y"
+    | "E_keine_zwingend";
+  ruleIds: number[]; // 1–5 (Goldene Regeln)
+};
+
+/** Extrahiert nur abstrakte Muster aus offiziellen Aufgaben – keine Texte, keine Begriffe. */
+export function extractImplicationPatterns(
+  official: readonly ImplikationTask[]
+): ImplicationPattern[] {
+  const patterns: ImplicationPattern[] = [];
+  for (const t of official) {
+    const p1 = getPremiseType(t.premise1);
+    const p2 = getPremiseType(t.premise2);
+    const concl = getConclusionType(t.options[t.correctAnswer] ?? "");
+    if (p1 && p2 && concl) {
+      patterns.push({
+        premise1Type: p1,
+        premise2Type: p2,
+        conclusionType: concl,
+        ruleIds: [...t.rulesApplied],
+      });
+    }
+  }
+  return patterns;
+}
+
+function getPremiseType(s: string): ImplicationPattern["premise1Type"] | null {
+  if (
+    /^Alle\s+.+\s+sind\s+.+\.?$/.test(s.trim()) ||
+    /^Alle\s+.+\s+sind\s+keine\s+.+\.?$/.test(s.trim())
+  ) {
+    return s.includes("keine") ? "Alle_X_sind_Y" : "Alle_X_sind_Y"; // "Alle X sind keine Y" bleibt als Alle-Variante
+  }
+  if (
+    /^Kein\s+.+\s+ist\s+ein\s+.+\.?$/.test(s.trim()) ||
+    /^Alle\s+.+\s+sind\s+keine\s+.+/.test(s.trim())
+  )
+    return "Kein_X_ist_Y";
+  if (/^Einige\s+.+\s+sind\s+keine\s+.+\.?$/.test(s.trim())) return "Einige_X_sind_keine_Y";
+  if (/^Einige\s+.+\s+sind\s+.+\.?$/.test(s.trim())) return "Einige_X_sind_Y";
+  return null;
+}
+
+function getConclusionType(s: string): ImplicationPattern["conclusionType"] | null {
+  if (/^Keine der Schlussfolgerungen ist zwingend/.test(s.trim())) return "E_keine_zwingend";
+  if (/^Alle\s+.+\s+sind\s+.+\.?$/.test(s.trim()) && !s.includes("keine")) return "Alle_X_sind_Y";
+  if (/^Kein\s+.+\s+ist\s+ein\s+.+\.?$/.test(s.trim())) return "Kein_X_ist_Y";
+  if (/^Einige\s+.+\s+sind\s+keine\s+.+\.?$/.test(s.trim())) return "Einige_X_sind_keine_Y";
+  if (/^Einige\s+.+\s+sind\s+.+\.?$/.test(s.trim())) return "Einige_X_sind_Y";
+  return null;
+}
+
+/** Nur für Training: Begriffe, die in OFFICIAL_IMPLICATION_EXAMPLES nicht vorkommen. */
+interface TrainingBegriff {
+  s: string;
+  p: string;
+}
+const TRAINING_TERM_TRIPELS: [TrainingBegriff, TrainingBegriff, TrainingBegriff][] = [
+  [
+    { s: "Kante", p: "Kanten" },
+    { s: "Linie", p: "Linien" },
+    { s: "Strecke", p: "Strecken" },
+  ],
+  [
+    { s: "Möbelstück", p: "Möbelstücke" },
+    { s: "Sitzgelegenheit", p: "Sitzgelegenheiten" },
+    { s: "Sessel", p: "Sessel" },
+  ],
+  [
+    { s: "Werkzeug", p: "Werkzeuge" },
+    { s: "Gerät", p: "Geräte" },
+    { s: "Hilfsmittel", p: "Hilfsmittel" },
+  ],
+  [
+    { s: "Gewürz", p: "Gewürze" },
+    { s: "Zutat", p: "Zutaten" },
+    { s: "Pulver", p: "Pulver" },
+  ],
+  [
+    { s: "Verbindung", p: "Verbindungen" },
+    { s: "Route", p: "Routen" },
+    { s: "Strecke", p: "Strecken" },
+  ],
+  [
+    { s: "Fach", p: "Fächer" },
+    { s: "Bereich", p: "Bereiche" },
+    { s: "Disziplin", p: "Disziplinen" },
+  ],
+  [
+    { s: "Symbol", p: "Symbole" },
+    { s: "Zeichen", p: "Zeichen" },
+    { s: "Markierung", p: "Markierungen" },
+  ],
+  [
+    { s: "Behälter", p: "Behälter" },
+    { s: "Gefäß", p: "Gefäße" },
+    { s: "Kontainer", p: "Kontainer" },
+  ],
+  [
+    { s: "Verfahren", p: "Verfahren" },
+    { s: "Methode", p: "Methoden" },
+    { s: "Technik", p: "Techniken" },
+  ],
+  [
+    { s: "Rahmen", p: "Rahmen" },
+    { s: "Struktur", p: "Strukturen" },
+    { s: "Schema", p: "Schemata" },
+  ],
+  [
+    { s: "Modul", p: "Module" },
+    { s: "Komponente", p: "Komponenten" },
+    { s: "Einheit", p: "Einheiten" },
+  ],
+  [
+    { s: "Filter", p: "Filter" },
+    { s: "Siebelement", p: "Siebelemente" },
+    { s: "Barriere", p: "Barrieren" },
+  ],
+  [
+    { s: "Katalysator", p: "Katalysatoren" },
+    { s: "Stoff", p: "Stoffe" },
+    { s: "Reaktant", p: "Reaktanten" },
+  ],
+  [
+    { s: "Indikator", p: "Indikatoren" },
+    { s: "Anzeiger", p: "Anzeiger" },
+    { s: "Signal", p: "Signale" },
+  ],
+  [
+    { s: "Variante", p: "Varianten" },
+    { s: "Ausführung", p: "Ausführungen" },
+    { s: "Version", p: "Versionen" },
+  ],
+];
+
+const MAX_ASSERT_RETRIES = 5;
+
+/**
+ * Prüft, ob eine Aufgabe zu ähnlich zu einer offiziellen ist.
+ * Keine identischen Sätze, keine identischen Begriffe, keine identische Anordnung.
+ */
+export function assertNotOfficialLike(task: ImplikationTask): boolean {
+  const a1 = task.premise1.toLowerCase();
+  const a2 = task.premise2.toLowerCase();
+  const optSet = new Set(task.options.map((o) => o.toLowerCase().trim()));
+  const taskWords = new Set(
+    [...a1.split(/\s+/), ...a2.split(/\s+/), ...task.options.flatMap((o) => o.split(/\s+/))]
+      .map((w) => w.replace(/[.,]/g, ""))
+      .filter((w) => w.length > 2)
+  );
+
+  for (const o of OFFICIAL_IMPLICATION_EXAMPLES) {
+    const o1 = o.premise1.toLowerCase();
+    const o2 = o.premise2.toLowerCase();
+    if (a1 === o1 && a2 === o2) return false;
+    if (a1 === o2 && a2 === o1) return false;
+    const oWords = new Set(
+      [...o1.split(/\s+/), ...o2.split(/\s+/), ...o.options.flatMap((x) => x.split(/\s+/))]
+        .map((w) => w.replace(/[.,]/g, ""))
+        .filter((w) => w.length > 2)
+    );
+    const overlap = [...taskWords].filter((w) => oWords.has(w));
+    if (overlap.length >= 4) return false;
+    const oOptSet = new Set(o.options.map((x) => x.toLowerCase().trim()));
+    if (
+      task.options.some(
+        (opt, i) => o.options[i] && opt.toLowerCase().trim() === o.options[i].toLowerCase().trim()
+      )
+    ) {
+      const sameCount = task.options.filter(
+        (opt, i) => o.options[i] && opt.toLowerCase().trim() === o.options[i].toLowerCase().trim()
+      ).length;
+      if (sameCount >= 3) return false;
+    }
+  }
+  return true;
+}
+
+/** Trainings-Syllogismen-Modi (nur Struktur, Inhalte aus TRAINING_TERM_TRIPELS). */
+type TrainingSyllogismMode = {
+  p1: (s: TrainingBegriff, m: TrainingBegriff, p: TrainingBegriff) => string;
+  p2: (s: TrainingBegriff, m: TrainingBegriff, p: TrainingBegriff) => string;
+  conclusion: (s: TrainingBegriff, m: TrainingBegriff, p: TrainingBegriff) => string;
+  name: string;
+};
+
+const TRAINING_MODES: TrainingSyllogismMode[] = [
+  {
+    p1: (_s, m, p) => `Alle ${m.p} sind ${p.p}`,
+    p2: (s, m) => `Alle ${s.p} sind ${m.p}`,
+    conclusion: (s, _m, p) => `Alle ${s.p} sind ${p.p}`,
+    name: "Barbara",
+  },
+  {
+    p1: (_s, m, p) => `Kein ${m.s} ist ein ${p.s}`,
+    p2: (s, m) => `Alle ${s.p} sind ${m.p}`,
+    conclusion: (s, _m, p) => `Kein ${s.s} ist ein ${p.s}`,
+    name: "Celarent",
+  },
+  {
+    p1: (_s, m, p) => `Alle ${m.p} sind ${p.p}`,
+    p2: (s, m) => `Einige ${s.p} sind ${m.p}`,
+    conclusion: (s, _m, p) => `Einige ${s.p} sind ${p.p}`,
+    name: "Darii",
+  },
+  {
+    p1: (_s, m, p) => `Kein ${m.s} ist ein ${p.s}`,
+    p2: (s, m) => `Einige ${s.p} sind ${m.p}`,
+    conclusion: (s, _m, p) => `Einige ${s.p} sind keine ${p.p}`,
+    name: "Ferio",
+  },
+  {
+    p1: (_s, m, p) => `Alle ${m.p} sind keine ${p.p}`,
+    p2: (s, m) => `Alle ${s.p} sind ${m.p}`,
+    conclusion: (s, _m, p) => `Alle ${s.p} sind keine ${p.p}`,
+    name: "Alle-keine-Kette",
+  },
+  {
+    p1: (_s, m, p) => `Alle ${m.p} sind ${p.p}`,
+    p2: (s, m) => `Alle ${m.p} sind ${s.p}`,
+    conclusion: (s, _m, p) => `Einige ${s.p} sind ${p.p}`,
+    name: "Darapti",
+  },
+  {
+    p1: (_s, m, p) => `Einige ${m.p} sind ${p.p}`,
+    p2: (s, m) => `Alle ${m.p} sind ${s.p}`,
+    conclusion: (s, _m, p) => `Einige ${s.p} sind ${p.p}`,
+    name: "Disamis",
+  },
+];
+
+function trainingWrongOptions(s: TrainingBegriff, p: TrainingBegriff, correct: string): string[] {
+  const candidates = [
+    `Alle ${s.p} sind ${p.p}`,
+    `Einige ${s.p} sind ${p.p}`,
+    `Kein ${s.s} ist ein ${p.s}`,
+    `Einige ${s.p} sind keine ${p.p}`,
+    `Alle ${p.p} sind ${s.p}`,
+    `Einige ${p.p} sind ${s.p}`,
+    `Kein ${p.s} ist ein ${s.s}`,
+    `Einige ${p.p} sind keine ${s.p}`,
+  ];
+  return shuffle(candidates.filter((c) => c !== correct));
+}
+
+/**
+ * Generiert eine Trainingsaufgabe Implikationen – nur Strukturtypen, andere Inhalte.
+ * Darf keine Texte/Zahlen/Struktur/Lösung der offiziellen Beispiele kopieren.
+ */
+export function generateImplicationTrainingTask(difficulty: 1 | 2 | 3): ImplikationTask {
+  const official = OFFICIAL_IMPLICATION_EXAMPLES;
+  for (let attempt = 0; attempt < MAX_ASSERT_RETRIES; attempt++) {
+    const tripel = TRAINING_TERM_TRIPELS[randInt(0, TRAINING_TERM_TRIPELS.length - 1)];
+    const [s, m, p] = shuffle([...tripel]);
+    const useENone = difficulty >= 2 && Math.random() < (difficulty === 3 ? 0.45 : 0.25);
+    const mode =
+      difficulty === 1
+        ? TRAINING_MODES[randInt(0, 2)]
+        : TRAINING_MODES[randInt(0, TRAINING_MODES.length - 1)];
+
+    const premise1 = mode.p1(s, m, p);
+    const premise2 = mode.p2(s, m, p);
+    const correctConclusion = mode.conclusion(s, m, p);
+    const wrongOptions = trainingWrongOptions(s, p, correctConclusion).slice(0, 4);
+
+    let options: [string, string, string, string, string];
+    let correctAnswer: number;
+
+    if (useENone) {
+      options = [
+        wrongOptions[0] ?? correctConclusion,
+        wrongOptions[1] ?? correctConclusion,
+        wrongOptions[2] ?? correctConclusion,
+        wrongOptions[3] ?? correctConclusion,
+        "Keine der Schlussfolgerungen ist zwingend",
+      ];
+      correctAnswer = 4;
+    } else {
+      const insertIdx = randInt(0, 3);
+      const four: string[] = [...wrongOptions];
+      four[insertIdx] = correctConclusion;
+      options = [
+        four[0] ?? "",
+        four[1] ?? "",
+        four[2] ?? "",
+        four[3] ?? "",
+        "Keine der Schlussfolgerungen ist zwingend",
+      ];
+      correctAnswer = insertIdx;
+    }
+
+    const task: ImplikationTask = {
+      id: `imp-train-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      premise1,
+      premise2,
+      options,
+      correctAnswer,
+      explanation: useENone
+        ? "Aus den gegebenen Prämissen lässt sich keine der angegebenen Schlussfolgerungen zwingend ableiten."
+        : `${mode.name}: Aus den Prämissen folgt zwingend: „${correctConclusion}".`,
+      difficulty,
+      rulesApplied: useENone ? [1] : [3],
+    };
+
+    if (!validateImplikationTask(task)) continue;
+    if (assertNotOfficialLike(task)) return task;
+  }
+
+  if (import.meta.env?.DEV) {
+    console.warn("Generator erzeugt zu ähnliche Aufgaben – Muster anpassen");
+  }
+  return generateImplicationTrainingTaskFallback(difficulty);
+}
+
+function generateImplicationTrainingTaskFallback(difficulty: 1 | 2 | 3): ImplikationTask {
+  for (let t = 0; t < 5; t++) {
+    const tripel = TRAINING_TERM_TRIPELS[randInt(0, TRAINING_TERM_TRIPELS.length - 1)];
+    const [s, m, p] = shuffle([...tripel]);
+    const mode = TRAINING_MODES[randInt(0, TRAINING_MODES.length - 1)];
+    const premise1 = mode.p1(s, m, p);
+    const premise2 = mode.p2(s, m, p);
+    const correctConclusion = mode.conclusion(s, m, p);
+    const wrongOptions = trainingWrongOptions(s, p, correctConclusion).slice(0, 4);
+    const insertIdx = randInt(0, 3);
+    const four: string[] = [...wrongOptions];
+    four[insertIdx] = correctConclusion;
+    const task: ImplikationTask = {
+      id: `imp-train-fb-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+      premise1,
+      premise2,
+      options: [
+        four[0] ?? "",
+        four[1] ?? "",
+        four[2] ?? "",
+        four[3] ?? "",
+        "Keine der Schlussfolgerungen ist zwingend",
+      ],
+      correctAnswer: insertIdx,
+      explanation: `Aus den Prämissen folgt: „${correctConclusion}".`,
+      difficulty,
+      rulesApplied: [3],
+    };
+    if (validateImplikationTask(task)) return task;
+  }
+  const tripel = TRAINING_TERM_TRIPELS[0];
+  const [s, m, p] = tripel;
+  const mode = TRAINING_MODES[0];
+  const premise1 = mode.p1(s, m, p);
+  const premise2 = mode.p2(s, m, p);
+  const correctConclusion = mode.conclusion(s, m, p);
+  const wrongOptions = trainingWrongOptions(s, p, correctConclusion).slice(0, 4);
+  const four: string[] = [...wrongOptions];
+  four[0] = correctConclusion;
+  return {
+    id: `imp-train-fb-last-${Date.now()}`,
+    premise1,
+    premise2,
+    options: [
+      four[0] ?? "",
+      four[1] ?? "",
+      four[2] ?? "",
+      four[3] ?? "",
+      "Keine der Schlussfolgerungen ist zwingend",
+    ],
+    correctAnswer: 0,
+    explanation: `Aus den Prämissen folgt: „${correctConclusion}".`,
+    difficulty,
+    rulesApplied: [3],
+  };
+}
+
+export function generateImplicationTrainingSet(
+  count: number,
+  difficulty: 1 | 2 | 3
+): ImplikationTask[] {
+  return Array.from({ length: count }, () => generateImplicationTrainingTask(difficulty));
 }

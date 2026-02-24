@@ -141,6 +141,8 @@ Heisenberg (Unschärfeprinzip: Ort und Impuls eines Elektrons nicht gleichzeitig
 | **Neutron** | 0 | ≈ 1,009 u | Kern | Anzahl = **Neutronenzahl N** |
 | **Elektron** | −1e | ≈ 0,0005 u (vernachlässigbar) | Hülle | Anzahl = Z (im neutralen Atom) |
 
+> **Merke:** Die **Masse eines Atoms** resultiert überwiegend aus der **Summe der Massen von Protonen und Neutronen**. Die Elektronenmasse ist vernachlässigbar (~1/1836 der Protonenmasse). Massenzahl A = Z + N.
+
 Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen — sie **definiert das Element eindeutig**. Die **Massenzahl A** ist die Summe aus Protonen- und Neutronenzahl: **A = Z + N**; sie kennzeichnet ein bestimmtes **Nuklid** (eine Atomart mit festem Z und N).
 
 **Nuklid-Notation:** ᴬ_Z X. Beispiel: ²³⁸₉₂U = Uran mit 92 Protonen und 146 Neutronen (A − Z = 146).
@@ -2463,8 +2465,8 @@ Das moderne PSE basiert auf der **Kernladungszahl (Ordnungszahl Z)**, also der P
 Das PSE besitzt **7 Perioden** (horizontale Zeilen). Die Periodennummer entspricht der hoechsten Hauptquantenzahl n der Valenzelektronen:
 
 - **Periode 1** (n=1): H, He - nur 1s-Orbitale, 2 Elemente
-- **Periode 2** (n=2): Li bis Ne - 2s und 2p-Orbitale, 8 Elemente
-- **Periode 3** (n=3): Na bis Ar - 3s und 3p-Orbitale, 8 Elemente
+- **Periode 2** (n=2): **Li, Be, B, C, N, O, F, Ne** — 2s- und 2p-Orbitale, 8 Elemente. **Magnesium (Mg) gehört nicht zur 2. Periode**, sondern zur **3. Periode** (Z = 12).
+- **Periode 3** (n=3): **Na, Mg, Al, Si, P, S, Cl, Ar** — 3s- und 3p-Orbitale, 8 Elemente
 - **Periode 4** (n=4): K bis Kr - 4s, 3d und 4p-Orbitale, 18 Elemente (erstmals d-Block)
 - **Periode 5** (n=5): Rb bis Xe - 5s, 4d und 5p-Orbitale, 18 Elemente
 - **Periode 6** (n=6): Cs bis Rn - 6s, 4f, 5d und 6p-Orbitale, 32 Elemente (Lanthanoide)
@@ -2525,6 +2527,7 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
 
 **Typische Prüfungsfallen / Verwechslungen:**
 - Perioden (horizontal, 7 Stück) ≠ Gruppen (vertikal, 18 Stück) — häufige Verwechslung!
+- **2. Periode:** nur Li, Be, B, C, N, O, F, Ne. **Magnesium (Mg) ist 3. Periode** — typische MedAT-Falle: „Welches Element findet man NICHT in der zweiten Periode?“ → Mg.
 - p-Block: Gruppenummer = 10 + Valenzelektronen (Gr.17 = 7 VE); s-Block: Gruppenummer = Valenzelektronen (Gr.2 = 2 VE)
 - Cr ([Ar]3d⁵4s¹) und Cu ([Ar]3d¹⁰4s¹) — Ausnahmen vom Aufbauprinzip, regelmäßig geprüft
 

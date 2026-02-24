@@ -449,6 +449,8 @@ Für die Medizin sind die Bereiche von **Femto (10⁻¹⁵)** bis **Tera (10¹²
 
 ### Milli (m) — 10⁻³
 
+**Präfixe prüfungssicher (Auszug):** **pico (p)** = **10⁻¹²**; **nano (n)** = **10⁻⁹**; **mikro (µ)** = **10⁻⁶**; **milli (m)** = **10⁻³**. Reihenfolge: … → n → µ → m → Basis. **Typische Falle:** µ (Mikro) = 10⁻⁶, **nicht** 10⁻³ (10⁻³ = Milli).
+
 **Milli** (Symbol **m**) steht für **10⁻³ = 0,001** — also ein Tausendstel der Basiseinheit. Es ist der am häufigsten verwendete Präfix in der Klinik:
 - **Millimeter (mm):** Blutdruckmessung in mmHg (z. B. 120/80 mmHg), EKG-Papier in mm-Abstand
 - **Milligramm (mg):** Tablettendosen (250 mg Aspirin, 500 mg Paracetamol)
@@ -571,11 +573,14 @@ Lösung: 0,01 µg/mL = 10 ng/mL (da 1 µg = 1.000 ng → 0,01 × 1.000 = 10). Al
 - "4,2 mmol/L Kalium in µmol/L?" → 4.200 µmol/L (mmol → µmol: × 1.000; kleinere Einheit = größere Zahl)
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **µ (Mikro) = 10⁻⁶, nicht 10⁻³** — 10⁻³ = Milli (m). MedAT-Frage „Welches Präfix?“: pico = 10⁻¹², nano = 10⁻⁹, mikro = 10⁻⁶, milli = 10⁻³.
 - µ (Mikro, 10⁻⁶) ≠ m (Milli, 10⁻³) — 1 mg = 1.000 µg; Verwechslung = **1.000-facher** Dosierungsfehler!
 - M (Mega, 10⁶, Großbuchstabe) ≠ m (Milli, 10⁻³, Kleinbuchstabe) — Groß-/Kleinschreibung entscheidend
 - Umrechnungsrichtung: kleinere Einheit → größere Zahl ("wer kleiner misst, zählt mehr")
 
 **Prüfungsrelevante Zahlen/Fakten:**
+- **15 μmol/L** = 15 × 10⁻⁶ mol/L = **1,5 × 10⁻⁵ mol/L** (normalisierte Form: Vorfaktor 1–10). MedAT: „15 μmol/L in mol/L?“ → 1,5·10⁻⁵ mol/L.
+- **Pico (p)** = **10⁻¹²** (nicht 10⁻⁹, nicht 10⁻⁶, nicht 10⁻¹⁵).
 - Reihe klein→groß: f (10⁻¹⁵) → p (10⁻¹²) → n (10⁻⁹) → µ (10⁻⁶) → m (10⁻³) → [Basis] → k (10³) → M (10⁶) → G (10⁹) → T (10¹²)
 - 1 mg = 1.000 µg = 1.000.000 ng = 10⁹ pg; jede Stufe: Faktor 1.000
 - Elektrolyte: Na⁺ 135–145 mmol/L; K⁺ 3,5–5,0 mmol/L; Hormone: nmol/L–pmol/L
