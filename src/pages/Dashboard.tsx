@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import {
   Award,
   BookOpen,
-  Sparkles,
   ArrowRight,
   Target,
   CheckCircle2,
@@ -12,8 +11,6 @@ import {
   Share2,
   Timer,
   TrendingUp,
-  Layers,
-  AlertCircle,
 } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -67,6 +64,7 @@ export default function Dashboard() {
     spacedRepetition,
   } = useStore();
   const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
+  const lastPath = useAdaptiveStore((s) => s.lastPath);
   const todayStr = useMemo(() => new Date().toISOString().split("T")[0], []);
   const hasActivityToday = lastActiveDate === todayStr;
   const [searchParams] = useSearchParams();
@@ -151,323 +149,271 @@ export default function Dashboard() {
   const questProgress = dailyGoalState.hasPlan ? dailyGoalState.primaryProgressPct : 0;
   const dailyResult = getTodaysResult();
 
-  const glassClass =
-    "rounded-2xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-white/10 dark:border-white/10 shadow-lg shadow-slate-200/20 dark:shadow-black/20 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300";
+  const cardClass =
+    "rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-sm hover:shadow-md transition-all duration-200";
+  const bmsProgressPct = useMemo(() => {
+    const total = alleKapitel.reduce((s, k) => s + (k?.unterkapitel?.length ?? 0), 0);
+    if (total === 0) return 0;
+    const done = alleKapitel.reduce(
+      (s, k) =>
+        s + (k?.unterkapitel?.filter((u) => u?.id && completedChapters.includes(u.id)).length ?? 0),
+      0
+    );
+    return Math.round((done / total) * 100);
+  }, [alleKapitel, completedChapters]);
+  const daysThisWeekActive = useMemo(() => {
+    const keys = Object.keys(firstActivityTimeByDay ?? {});
+    const now = new Date();
+    const startOfWeek = new Date(now);
+    startOfWeek.setDate(now.getDate() - 6);
+    startOfWeek.setHours(0, 0, 0, 0);
+    return keys.filter((d) => d >= startOfWeek.toISOString().split("T")[0]).length;
+  }, [firstActivityTimeByDay]);
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-slate-50/95 to-slate-100/80 dark:from-slate-950/95 dark:to-slate-900/80">
-      <div className="max-w-5xl mx-auto px-4 py-8 pb-24 lg:pb-12">
+    <div className="min-h-screen bg-[var(--background)]">
+      <div className="max-w-6xl mx-auto px-4 py-6 sm:py-8 pb-24 lg:pb-12">
         <SyncIndicator />
-        <p className="text-center text-xs text-[var(--muted)] italic mb-6">
-          By doctors for future doctors
-        </p>
 
-        <motion.div
-          variants={stagger}
-          initial="initial"
-          animate="animate"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6"
-        >
-          {/* Hero: Das steht heute an */}
-          <motion.section
-            variants={tileMotion}
-            className="sm:col-span-2 lg:col-span-4"
-            aria-label="Das steht heute an"
-          >
+        <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-6">
+          {/* Hero: CTA + MedAT + Fortschritt */}
+          <motion.section variants={tileMotion} aria-label="Start" className="space-y-4">
             <div
               className={cn(
-                glassClass,
-                "relative overflow-hidden min-h-[180px] flex flex-col justify-between"
+                cardClass,
+                "p-6 sm:p-8 border-l-4 border-l-[var(--accent)] bg-[var(--card)]"
               )}
             >
-              <div className="absolute inset-0 bg-linear-to-br from-indigo-500/10 via-transparent to-violet-500/10 dark:from-indigo-500/20 dark:to-violet-500/15 pointer-events-none" />
-              <CardContent className="relative p-6 sm:p-8 flex flex-col gap-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-2xl bg-linear-to-br from-indigo-500/20 to-violet-500/20 dark:from-indigo-400/30 dark:to-violet-400/30 flex items-center justify-center shrink-0 ring-2 ring-indigo-200/50 dark:ring-indigo-500/30">
-                    <BookOpen className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h2 className="text-xl sm:text-2xl font-bold text-[var(--text-primary)]">
-                      Das steht heute an
-                    </h2>
-                    <p className="text-sm text-[var(--muted)] mt-0.5">
-                      {dailyGoalState.hasPlan
-                        ? `${Math.round(questProgress)}% erledigt`
-                        : "Lernplan anlegen für tägliche Ziele"}
-                    </p>
-                  </div>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div>
+                  <h1 className="text-xl sm:text-2xl font-bold text-[var(--text-primary)]">
+                    {lastPath && lastPath !== "/" && lastPath !== "/bms"
+                      ? "Weiterlernen"
+                      : "Heute lernen"}
+                  </h1>
+                  <p className="text-sm text-[var(--muted)] mt-1">Noch {days} Tage bis MedAT</p>
                 </div>
-                {dailyGoalState.hasPlan && dailyGoalState.todayTasks.length > 0 ? (
-                  <>
-                    <Progress value={questProgress} className="h-2 rounded-full" />
-                    <div className="flex flex-wrap gap-2">
-                      {dailyGoalState.todayTasks.map((t) => {
-                        const path = MODULE_TO_PATH[t.module] ?? "/bms";
-                        return (
-                          <Link
-                            key={t.module}
-                            to={path}
-                            className={cn(
-                              "inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-all",
-                              t.done
-                                ? "bg-emerald-500/20 text-emerald-800 dark:text-emerald-200"
-                                : "bg-slate-100/80 dark:bg-white/10 text-[var(--text-primary)] hover:bg-slate-200/80 dark:hover:bg-white/15"
-                            )}
-                          >
-                            {t.module} · {t.doneMinutes}/{t.targetMinutes} Min
-                            {t.done && " ✓"}
-                          </Link>
-                        );
-                      })}
-                    </div>
-                    <Link to="/bms" className="self-start">
-                      <Button size="sm" className="gap-2">
-                        Weiter lernen
-                        <ArrowRight className="w-4 h-4" />
-                      </Button>
-                    </Link>
-                  </>
-                ) : (
-                  <Link to="/lernplan" className="self-start">
-                    <Button variant="outline" size="sm" className="gap-2">
-                      <Sparkles className="w-4 h-4" />
-                      Lernplan anlegen
-                    </Button>
-                  </Link>
-                )}
-              </CardContent>
+                <Link
+                  to={lastPath && lastPath !== "/" && lastPath !== "/bms" ? lastPath : "/bms"}
+                  className="shrink-0"
+                >
+                  <Button size="lg" className="gap-2">
+                    <BookOpen className="w-5 h-5" />
+                    {lastPath && lastPath !== "/" && lastPath !== "/bms"
+                      ? "Weiterlernen"
+                      : "Jetzt starten"}
+                    <ArrowRight className="w-4 h-4" />
+                  </Button>
+                </Link>
+              </div>
+              <div className="mt-4 pt-4 border-t border-[var(--border)]">
+                <div className="flex items-center justify-between text-sm mb-1">
+                  <span className="text-[var(--muted)]">BMS-Fortschritt</span>
+                  <span className="font-medium text-[var(--text-primary)]">{bmsProgressPct} %</span>
+                </div>
+                <Progress value={bmsProgressPct} className="h-2 rounded-full" />
+              </div>
             </div>
           </motion.section>
 
-          {/* Daily Challenge Widget */}
+          {/* Daily + Streak in einer Zeile */}
           <motion.section
             variants={tileMotion}
-            className="sm:col-span-2 lg:col-span-4"
-            aria-label="BMS des Tages"
+            aria-label="Daily und Streak"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
           >
-            {dailyResult ? (
-              <Link to="/daily">
-                <div
-                  className={cn(
-                    glassClass,
-                    "relative overflow-hidden border-l-4 border-emerald-500"
-                  )}
-                >
-                  <div className="absolute inset-0 bg-linear-to-r from-emerald-500/5 to-transparent pointer-events-none" />
-                  <CardContent className="relative p-4 sm:p-5 flex items-center justify-between gap-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-emerald-500/15 flex items-center justify-center shrink-0">
-                        <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+            {/* Daily Challenge Widget */}
+            <div className="sm:col-span-1" aria-label="BMS des Tages">
+              {dailyResult ? (
+                <Link to="/daily">
+                  <div
+                    className={cn(
+                      cardClass,
+                      "relative overflow-hidden border-l-4 border-[var(--success)]"
+                    )}
+                  >
+                    <CardContent className="p-4 sm:p-5 flex items-center justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-emerald-500/15 flex items-center justify-center shrink-0">
+                          <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-[var(--text-primary)]">
+                            ✅ BMS des Tages gelöst!
+                          </p>
+                          <p className="text-xs text-[var(--muted)] flex items-center gap-1 mt-0.5">
+                            <Clock className="w-3 h-3" /> Nächste Frage morgen
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-sm font-semibold text-[var(--text-primary)]">
-                          ✅ BMS des Tages gelöst!
-                        </p>
-                        <p className="text-xs text-[var(--muted)] flex items-center gap-1 mt-0.5">
-                          <Clock className="w-3 h-3" /> Nächste Frage morgen
-                        </p>
+                      <span className="shrink-0 text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-900/40 px-2.5 py-1 rounded-full">
+                        +{dailyResult.xpEarned} XP
+                      </span>
+                    </CardContent>
+                  </div>
+                </Link>
+              ) : (
+                <Link to="/daily">
+                  <div
+                    className={cn(cardClass, "border-l-4 border-[var(--accent)] cursor-pointer")}
+                  >
+                    <CardContent className="p-4 sm:p-5 flex items-center justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-amber-500/15 flex items-center justify-center shrink-0">
+                          <Target className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-[var(--text-primary)]">
+                            🎯 BMS des Tages wartet!
+                          </p>
+                          <p className="text-xs text-[var(--muted)] mt-0.5">
+                            Täglich eine Frage — bis zu 100 XP
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <span className="shrink-0 text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-900/40 px-2.5 py-1 rounded-full">
-                      +{dailyResult.xpEarned} XP
-                    </span>
-                  </CardContent>
-                </div>
-              </Link>
-            ) : (
-              <Link to="/daily">
-                <div
-                  className={cn(
-                    glassClass,
-                    "relative overflow-hidden border-l-4 border-amber-400 hover:border-amber-500 cursor-pointer"
-                  )}
-                >
-                  <div className="absolute inset-0 bg-linear-to-r from-amber-500/8 to-transparent pointer-events-none" />
-                  <CardContent className="relative p-4 sm:p-5 flex items-center justify-between gap-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-amber-500/15 flex items-center justify-center shrink-0">
-                        <Target className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-semibold text-[var(--text-primary)]">
-                          🎯 BMS des Tages wartet!
-                        </p>
-                        <p className="text-xs text-[var(--muted)] mt-0.5">
-                          Täglich eine Frage — bis zu 100 XP
-                        </p>
-                      </div>
-                    </div>
-                    <span className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-amber-700 dark:text-amber-300 bg-amber-100 dark:bg-amber-900/40 px-3 py-1.5 rounded-full">
-                      Jetzt lösen <ArrowRight className="w-3 h-3" />
-                    </span>
-                  </CardContent>
-                </div>
-              </Link>
-            )}
-          </motion.section>
-
-          {/* Smart Recommendation Card: "Heute für dich" */}
-          <motion.section
-            variants={tileMotion}
-            className="sm:col-span-2 lg:col-span-4"
-            aria-label="Heute für dich"
-          >
+                      <span className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-amber-700 dark:text-amber-300 bg-amber-100 dark:bg-amber-900/40 px-3 py-1.5 rounded-full">
+                        Jetzt lösen <ArrowRight className="w-3 h-3" />
+                      </span>
+                    </CardContent>
+                  </div>
+                </Link>
+              )}
+            </div>
+            {/* Streak-Karte */}
             <div
-              className={cn(glassClass, "relative overflow-hidden border-l-4 border-l-blue-500")}
+              className={cn(cardClass, "p-4 sm:p-5 flex items-center gap-4")}
+              aria-label="Streak"
             >
-              <div className="absolute inset-0 bg-linear-to-r from-blue-500/5 to-transparent pointer-events-none" />
-              <CardContent className="relative p-5">
-                <div className="flex items-center justify-between mb-4">
-                  <div>
-                    <h3 className="font-semibold text-[var(--text-primary)] flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-blue-500" />
-                      Heute für dich
-                    </h3>
-                    <p className="text-xs text-[var(--muted)] mt-0.5">
-                      Basierend auf deinem Fortschritt
-                    </p>
-                  </div>
-                  {dueCount > 0 && (
-                    <div className="flex items-center gap-1 text-xs font-semibold text-amber-700 dark:text-amber-300 bg-amber-100 dark:bg-amber-900/40 px-2.5 py-1 rounded-full">
-                      <AlertCircle className="w-3 h-3" />
-                      {dueCount} fällig
-                    </div>
-                  )}
-                </div>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                  <Link to="/simulation">
-                    <div className="bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50">
-                      <Timer className="w-4 h-4 text-orange-500 mb-1.5" />
-                      <p className="text-xs font-medium text-[var(--text-primary)]">
-                        Testsimulation
-                      </p>
-                      <p className="text-[10px] text-[var(--muted)]">Gesamtstand</p>
-                    </div>
-                  </Link>
-                  <Link to="/schwachstellen">
-                    <div className="bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50">
-                      <Target className="w-4 h-4 text-rose-500 mb-1.5" />
-                      <p className="text-xs font-medium text-[var(--text-primary)]">
-                        Schwachstellen
-                      </p>
-                      <p className="text-[10px] text-[var(--muted)]">Gezielt üben</p>
-                    </div>
-                  </Link>
-                  <Link to="/prognose">
-                    <div className="bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50">
-                      <TrendingUp className="w-4 h-4 text-green-500 mb-1.5" />
-                      <p className="text-xs font-medium text-[var(--text-primary)]">Prognose</p>
-                      <p className="text-[10px] text-[var(--muted)]">Punktestand</p>
-                    </div>
-                  </Link>
-                  <Link to="/bms?filter=due">
-                    <div
-                      className={cn(
-                        "bg-white/40 dark:bg-gray-800/40 rounded-lg p-3 cursor-pointer hover:bg-white/60 dark:hover:bg-gray-700/60 transition-colors border border-gray-200/50 dark:border-gray-700/50",
-                        dueCount > 0 && "border-amber-300 dark:border-amber-600/50"
-                      )}
-                    >
-                      <Layers className="w-4 h-4 text-emerald-500 mb-1.5" />
-                      <p className="text-xs font-medium text-[var(--text-primary)]">Wiederholen</p>
-                      <p className="text-[10px] text-[var(--muted)]">Fällige Kapitel</p>
-                    </div>
-                  </Link>
-                </div>
-              </CardContent>
+              <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
+                <StreakFlameIcon
+                  streak={flameStreak}
+                  hasActivityToday={flameHasActivity}
+                  size="sm"
+                  className="w-6 h-6"
+                />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-2xl font-bold text-[var(--text-primary)]">{flameStreak}</p>
+                <p className="text-sm text-[var(--muted)]">Tage Streak</p>
+              </div>
+              {streak > 0 && !streakPreview && <StreakShareButton streak={streak} />}
             </div>
           </motion.section>
 
-          {/* Kachel 1: XP / Level + Progress */}
-          <motion.section variants={tileMotion} aria-label="Level und XP">
-            <div className={cn(glassClass, "h-full")}>
-              <CardContent className="p-5">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-11 h-11 rounded-xl bg-linear-to-br from-indigo-500/20 to-violet-500/20 dark:from-indigo-400/30 dark:to-violet-400/30 flex items-center justify-center shrink-0">
-                    <Award className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+          {/* Empfohlene Aktion: 1 groß + 2–3 klein */}
+          <motion.section
+            variants={tileMotion}
+            aria-label="Empfohlen"
+            className="grid grid-cols-1 lg:grid-cols-4 gap-4"
+          >
+            <Link
+              to={dueCount > 0 ? "/bms?filter=due" : "/schwachstellen"}
+              className="lg:col-span-2"
+            >
+              <div
+                className={cn(
+                  cardClass,
+                  "h-full p-5 border-l-4 border-l-[var(--accent)] flex flex-col justify-between min-h-[120px]"
+                )}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
+                    <Target className="w-6 h-6 text-[var(--accent)]" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-[var(--text-primary)]">Level {level}</p>
+                    <h3 className="font-semibold text-[var(--text-primary)]">
+                      {dueCount > 0 ? "Fällige Kapitel wiederholen" : "Schwachstellen trainieren"}
+                    </h3>
+                    <p className="text-sm text-[var(--muted)] mt-0.5">
+                      {dueCount > 0 ? `${dueCount} Kapitel fällig` : "Gezielt Lücken schließen"}
+                    </p>
+                  </div>
+                </div>
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)] mt-3">
+                  Jetzt starten <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+            </Link>
+            <Link to="/simulation">
+              <div className={cn(cardClass, "h-full p-4 flex items-center gap-3 min-h-[120px]")}>
+                <Timer className="w-8 h-8 text-[var(--muted)] shrink-0" />
+                <div>
+                  <p className="font-medium text-[var(--text-primary)]">Simulation</p>
+                  <p className="text-xs text-[var(--muted)]">Gesamtstand</p>
+                </div>
+              </div>
+            </Link>
+            <Link to="/prognose">
+              <div className={cn(cardClass, "h-full p-4 flex items-center gap-3 min-h-[120px]")}>
+                <TrendingUp className="w-8 h-8 text-[var(--muted)] shrink-0" />
+                <div>
+                  <p className="font-medium text-[var(--text-primary)]">Prognose</p>
+                  <p className="text-xs text-[var(--muted)]">Punktestand</p>
+                </div>
+              </div>
+            </Link>
+          </motion.section>
+
+          {/* Kompakter Fortschritt: Level + XP + Streak + Badge-Hinweis */}
+          <motion.section variants={tileMotion} aria-label="Fortschritt">
+            <div className={cn(cardClass, "p-5")}>
+              <div className="flex flex-wrap items-center gap-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
+                    <Award className="w-5 h-5 text-[var(--accent)]" />
+                  </div>
+                  <div>
+                    <p className="text-lg font-bold text-[var(--text-primary)]">Level {level}</p>
                     <p className="text-xs text-[var(--muted)]">{xp.toLocaleString()} XP</p>
                   </div>
                 </div>
-                <Progress value={levelProgress} className="h-2 rounded-full" />
-                <p className="text-xs text-[var(--muted)] mt-2">Zum nächsten Level</p>
-              </CardContent>
-            </div>
-          </motion.section>
-
-          {/* Kachel 2: Streak */}
-          <motion.section variants={tileMotion} aria-label="Streak">
-            <div className={cn(glassClass, "h-full")}>
-              <CardContent className="p-5 flex flex-col justify-center">
-                <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-xl bg-orange-500/20 dark:bg-orange-500/30 flex items-center justify-center shrink-0">
-                    <StreakFlameIcon
-                      streak={flameStreak}
-                      hasActivityToday={flameHasActivity}
-                      size="sm"
-                      className="w-5 h-5"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-2xl font-bold text-[var(--text-primary)]">
-                      {streakPreview != null ? flameStreak : streak}
-                    </p>
-                    <p className="text-xs text-[var(--muted)]">
-                      {streakPreview != null ? "Tage Streak (Vorschau)" : "Tage Streak"}
-                    </p>
-                  </div>
-                  {streak > 0 && !streakPreview && <StreakShareButton streak={streak} />}
+                <div className="flex-1 min-w-[180px] max-w-xs">
+                  <Progress value={levelProgress} className="h-2 rounded-full" />
+                  <p className="text-xs text-[var(--muted)] mt-1">Zum nächsten Level</p>
                 </div>
-              </CardContent>
-            </div>
-          </motion.section>
-
-          {/* Kachel 3: Letzte Badges */}
-          <motion.section variants={tileMotion} aria-label="Letzte Badges">
-            <div className={cn(glassClass, "h-full")}>
-              <CardContent className="p-5">
-                <p className="text-xs font-medium text-[var(--muted)] mb-3">Letzte Badges</p>
-                {earnedBadges.length > 0 ? (
-                  <div className="space-y-2">
-                    {earnedBadges.map((badge) => (
-                      <div
-                        key={badge.id}
-                        title={badge.description}
-                        className="flex items-center gap-2 p-2 rounded-lg bg-amber-50/80 dark:bg-amber-900/20"
-                      >
-                        <BadgeIcon tier={badge.tier} earned={true} size="sm" />
-                        <span className="text-sm font-medium text-[var(--text-primary)] truncate">
-                          {badge.name}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <p className="text-sm text-slate-500 dark:text-slate-400">Noch keine Badges</p>
-                )}
+                <div className="flex items-center gap-2 shrink-0">
+                  <StreakFlameIcon
+                    streak={flameStreak}
+                    hasActivityToday={flameHasActivity}
+                    size="sm"
+                    className="w-5 h-5 text-[var(--accent)]"
+                  />
+                  <span className="font-semibold text-[var(--text-primary)]">
+                    {flameStreak} Tage
+                  </span>
+                </div>
                 <Link
                   to="/performance"
-                  className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary-600 dark:text-primary-400 hover:underline"
+                  className="text-sm font-medium text-[var(--accent)] hover:underline inline-flex items-center gap-1 shrink-0"
                 >
-                  Alle anzeigen
+                  {earnedBadges.length > 0 ? (
+                    <>
+                      <BadgeIcon
+                        tier={earnedBadges[earnedBadges.length - 1].tier}
+                        earned
+                        size="sm"
+                      />
+                      Badges
+                    </>
+                  ) : (
+                    "Badges anzeigen"
+                  )}
                   <ArrowRight className="w-3 h-3" />
                 </Link>
-              </CardContent>
+              </div>
             </div>
           </motion.section>
 
-          {/* Kachel 4: Wochen-Aktivität */}
-          <motion.section
-            variants={tileMotion}
-            className="sm:col-span-2"
-            aria-label="Wochen-Aktivität"
-          >
-            <div className={cn(glassClass, "h-full")}>
-              <CardContent className="p-5">
-                <p className="text-xs font-medium text-[var(--muted)] mb-3">Wochen-Aktivität</p>
-                <Heatmap />
-              </CardContent>
+          {/* Wochen-Aktivität + Legende */}
+          <motion.section variants={tileMotion} aria-label="Wochen-Aktivität">
+            <div className={cn(cardClass, "p-5")}>
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <p className="text-sm font-medium text-[var(--muted)]">Wochen-Aktivität</p>
+                <p className="text-sm text-[var(--text-primary)]">
+                  Diese Woche an <strong>{daysThisWeekActive}/7</strong> Tagen aktiv
+                </p>
+              </div>
+              <Heatmap />
             </div>
           </motion.section>
         </motion.div>
