@@ -3,7 +3,15 @@
  * Nur Bereiche mit "intensivem" Lernen zählen für den 45-Min-Timer.
  */
 
-export type LearningArea = "bms" | "kff" | "tv" | "sek" | "simulation" | "wissencheck" | "other";
+export type LearningArea =
+  | "bms"
+  | "kff"
+  | "tv"
+  | "sek"
+  | "simulation"
+  | "wissencheck"
+  | "fortschritt"
+  | "other";
 
 const BMS_PREFIX = "/bms";
 const KFF_PREFIX = "/kff";
@@ -11,6 +19,10 @@ const TV_PREFIX = "/tv";
 const SEK_PREFIX = "/sek";
 const SIMULATION_PREFIX = "/simulation";
 const WISSENCHECK_PREFIX = "/wissencheck";
+const FORTSCHRITT_PREFIX = "/fortschritt";
+const SCHWACHSTELLEN_PREFIX = "/schwachstellen";
+const STATISTIK_PREFIX = "/statistik";
+const PROGNOSE_PREFIX = "/prognose";
 
 export function pathnameToLearningArea(pathname: string): LearningArea {
   const p = pathname.replace(/\/$/, "") || "/";
@@ -20,6 +32,13 @@ export function pathnameToLearningArea(pathname: string): LearningArea {
   if (p.startsWith(SEK_PREFIX)) return "sek";
   if (p.startsWith(SIMULATION_PREFIX)) return "simulation";
   if (p.startsWith(WISSENCHECK_PREFIX)) return "wissencheck";
+  if (
+    p.startsWith(FORTSCHRITT_PREFIX) ||
+    p.startsWith(SCHWACHSTELLEN_PREFIX) ||
+    p.startsWith(STATISTIK_PREFIX) ||
+    p.startsWith(PROGNOSE_PREFIX)
+  )
+    return "fortschritt";
   return "other";
 }
 
@@ -31,6 +50,7 @@ export const TRACKED_AREAS: LearningArea[] = [
   "sek",
   "simulation",
   "wissencheck",
+  "fortschritt",
 ];
 
 export function isTrackedArea(area: LearningArea): boolean {
@@ -45,6 +65,7 @@ export function areaLabel(area: LearningArea): string {
     sek: "SEK",
     simulation: "Simulation",
     wissencheck: "Wissen-Check",
+    fortschritt: "Fortschritt",
     other: "Sonstiges",
   };
   return labels[area];
@@ -59,5 +80,6 @@ export function suggestedAlternateArea(
   if (current === "tv" || current === "sek" || current === "simulation")
     return { area: "kff", path: "/kff", label: "5 KFF-Aufgaben" };
   if (current === "wissencheck") return { area: "kff", path: "/kff", label: "5 KFF-Aufgaben" };
+  if (current === "fortschritt") return { area: "bms", path: "/bms", label: "BMS-Kapitel" };
   return null;
 }

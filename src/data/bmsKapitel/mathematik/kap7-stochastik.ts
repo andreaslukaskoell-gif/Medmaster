@@ -10,7 +10,7 @@ export const mathKapStochastik: Kapitel = {
   sequenceTitle: "Stochastik",
   unterkapitel: [
     {
-      id: "ma-stoch-01",
+      id: "ma-7-01",
       title: "Kombinatorik — Permutationen, Variationen, Kombinationen",
       stichworte: [
         "Permutation",
@@ -49,8 +49,8 @@ Bevor man eine Formel anwendet, beantwortet man zwei Fragen:
 |-------------|--------------|---------|--------|
 | Ja | Nein | Variation ohne Wdh. | n! / (n-k)! |
 | Ja | Ja | Variation mit Wdh. | n^k |
-| Nein | Nein | Kombination ohne Wdh. | n! / (k! · (n-k)!) |
-| Nein | Ja | Kombination mit Wdh. | (n+k-1)! / (k! · (n-1)!) |
+| Nein | Nein | Kombination ohne Wdh. | n! / (k! × (n-k)!) |
+| Nein | Ja | Kombination mit Wdh. | (n+k-1)! / (k! × (n-1)!) |
 
 > **Merke:** Die Entscheidung "geordnet oder ungeordnet" ist der wichtigste erste Schritt — sie bestimmt, ob man Permutation/Variation oder Kombination verwendet.
 
@@ -60,11 +60,11 @@ Bevor man eine Formel anwendet, beantwortet man zwei Fragen:
 
 Die **Fakultät** n! (sprich: "n Fakultät") ist das Produkt aller natürlichen Zahlen von 1 bis n:
 
-n! = 1 · 2 · 3 · ... · n
+n! = 1 × 2 × 3 × ... × n
 
 Besondere Werte: 0! = 1 (per Definition), 1! = 1, 2! = 2, 3! = 6, 4! = 24, 5! = 120, 6! = 720, 7! = 5040, 10! = 3.628.800
 
-> **Merke:** 0! = 1 ist keine Ausnahme, sondern folgt aus der Rekursionsformel (n+1)! = (n+1) · n!, rückwärts angewendet.
+> **Merke:** 0! = 1 ist keine Ausnahme, sondern folgt aus der Rekursionsformel (n+1)! = (n+1) × n!, rückwärts angewendet.
 
 ---
 
@@ -82,11 +82,11 @@ P(5) = 5! = 120
 
 **Mit Wiederholung** (wenn gleiche Objekte vorkommen): Sind von n Objekten k1 gleich vom Typ 1, k2 gleich vom Typ 2 usw., dann gilt:
 
-P(n; k1, k2, ...) = n! / (k1! · k2! · ...)
+P(n; k1, k2, ...) = n! / (k1! × k2! × ...)
 
 Beispiel: Wie viele unterschiedliche Wörter lassen sich aus den Buchstaben ANNA bilden?
 n = 4, A kommt 2-mal vor (k1 = 2), N kommt 2-mal vor (k2 = 2).
-P = 4! / (2! · 2!) = 24 / 4 = 6
+P = 4! / (2! × 2!) = 24 / 4 = 6
 Die 6 Anordnungen: ANNA, ANAN, AANN, NANA, NAAN, NNAA.
 
 > **Merke:** Bei Permutationen mit Wiederholung teilt man durch die Fakultäten der identischen Elemente, weil ihre Vertauschungen nicht unterscheidbar sind.
@@ -102,7 +102,7 @@ Eine **Variation** ordnet k Elemente aus n an — die Reihenfolge zählt, aber e
 Beispiel: Wie viele 3-stellige Zahlen aus den Ziffern 1, 2, 3, 4, 5 (ohne Wiederholung)?
 V(5, 3) = 5! / (5-3)! = 120 / 2 = 60
 
-Erklärung: Für die erste Stelle 5 Möglichkeiten, für die zweite 4, für die dritte 3 → 5 · 4 · 3 = 60.
+Erklärung: Für die erste Stelle 5 Möglichkeiten, für die zweite 4, für die dritte 3 → 5 × 4 × 3 = 60.
 
 **Mit Wiederholung:** V(n, k) = n^k
 
@@ -112,7 +112,7 @@ V(10, 4) = 10^4 = 10.000
 Beispiel: Wie viele Möglichkeiten hat ein Schloss mit 3 Walzen, jede mit 8 Symbolen?
 V(8, 3) = 8^3 = 512
 
-> **Merke:** "Mit Wiederholung" heißt: Jede Stelle kann unabhängig von den anderen belegt werden — Multiplikationsprinzip: n · n · n · ... (k-mal) = n^k.
+> **Merke:** "Mit Wiederholung" heißt: Jede Stelle kann unabhängig von den anderen belegt werden — Multiplikationsprinzip: n × n × n × ... (k-mal) = n^k.
 
 ---
 
@@ -120,16 +120,16 @@ V(8, 3) = 8^3 = 512
 
 Eine **Kombination** wählt k Elemente aus n aus — die Reihenfolge spielt keine Rolle.
 
-**Ohne Wiederholung:** C(n, k) = "n über k" = n! / (k! · (n-k)!)
+**Ohne Wiederholung:** C(n, k) = "n über k" = n! / (k! × (n-k)!)
 
 Der Ausdruck "n über k" heißt **Binomialkoeffizient** und wird geschrieben als (n k) oder C(n,k).
 
 Beispiel Lotto "6 aus 49": Wie viele Möglichkeiten gibt es, 6 Zahlen aus 49 zu ziehen?
-C(49, 6) = 49! / (6! · 43!) = (49 · 48 · 47 · 46 · 45 · 44) / (6 · 5 · 4 · 3 · 2 · 1)
+C(49, 6) = 49! / (6! × 43!) = (49 × 48 × 47 × 46 × 45 × 44) / (6 × 5 × 4 × 3 × 2 × 1)
 = 10.068.347.520 / 720 = **13.983.816**
 
 Rechenweg (Zähler: nur die oberen k Faktoren zählen):
-Zähler = 49 · 48 · 47 · 46 · 45 · 44 = 10.068.347.520
+Zähler = 49 × 48 × 47 × 46 × 45 × 44 = 10.068.347.520
 Nenner = 6! = 720
 Ergebnis = 13.983.816
 
@@ -197,16 +197,16 @@ Wichtige Eigenschaften:
 AB0 hat 4 Phänotypen (A, B, AB, 0), Rhesus hat 2 (Rh+ , Rh−). Jede Person hat genau eine AB0- und eine Rhesus-Eigenschaft (Reihenfolge egal, keine Wiederholung innerhalb der Kategorie). Multiplikationsprinzip: 4 × 2 = **8 verschiedene Blutgruppen-Phänotypen** (A+, A−, B+, B−, AB+, AB−, 0+, 0−). Erweitert man um Kell (2 Varianten): 4 × 2 × 2 = **16**.
 
 **Beispiel 2 — Studien-Randomisierung: 3 von 8 Medikamenten für einen Arm auswählen:**
-In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig getestet werden (Reihenfolge egal, ohne Wiederholung). → Kombination: C(8,3) = (8 · 7 · 6) / (3 · 2 · 1) = 336 / 6 = **56 mögliche Dreier-Kombinationen**. Soll zusätzlich ein viertes Medikament als Reserve bestimmt werden (Reihenfolge der Reserve zählt): Variation V(8,4) = 8!/4! = 8 · 7 · 6 · 5 = **1.680**.
+In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig getestet werden (Reihenfolge egal, ohne Wiederholung). → Kombination: C(8,3) = (8 × 7 × 6) / (3 × 2 × 1) = 336 / 6 = **56 mögliche Dreier-Kombinationen**. Soll zusätzlich ein viertes Medikament als Reserve bestimmt werden (Reihenfolge der Reserve zählt): Variation V(8,4) = 8!/4! = 8 × 7 × 6 × 5 = **1.680**.
 
 **Beispiel 3 — DNA-Codons: Wie viele verschiedene Basentripletts gibt es?**
 4 Basen (A, U/T, G, C), je 3 Positionen, Wiederholung erlaubt, Reihenfolge zählt (AUG ≠ GUA). → Variation mit Wiederholung: V(4,3) = 4³ = **64 mögliche Codons**. Davon codieren 61 für Aminosäuren (3 Stopp-Codons). Mit 20 Aminosäuren → Code ist degeneriert (redundant): im Schnitt 61/20 ≈ 3 Codons pro Aminosäure.
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Permutation** (alle n, geordnet, ohne WH): P = n!; mit WH: P = n!/k₁!·k₂!·...
+- **Permutation** (alle n, geordnet, ohne WH): P = n!; mit WH: P = n!/k₁!×k₂!×...
 - **Variation** (k aus n, geordnet, ohne WH): V = n!/(n−k)!; mit WH: V = nᵏ
-- **Kombination** (k aus n, ungeordnet, ohne WH): C = n!/(k!·(n−k)!) = C(n,k); mit WH: C = C(n+k−1,k)
+- **Kombination** (k aus n, ungeordnet, ohne WH): C = n!/(k!×(n−k)!) = C(n,k); mit WH: C = C(n+k−1,k)
 - **Entscheidung**: Reihenfolge zählt? → geordnet (Variation/Permutation); Wiederholung erlaubt? → mit WH
 - **Klinisch**: Blutgruppen (8 Kombinationen); DNA-Codons (64 = 4³); Studienrandomisierung (C(8,3) = 56)`,
       lernziele: [
@@ -225,15 +225,15 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
         },
         {
           heading: "Binomialkoeffizient — Rechenschritte",
-          text: "Für C(n,k) kürzt man zuerst den Nenner (n-k)! gegen die letzten (n-k) Faktoren im Zähler n!, so dass im Zähler nur die k größten Faktoren (n, n-1, ..., n-k+1) stehen. Dann teilt man durch k!. Beispiel C(8,3) = (8·7·6)/(3·2·1) = 336/6 = 56. Diese Schreibweise ist rechnerisch viel einfacher als das vollständige Ausschreiben der Fakultäten.",
+          text: "Für C(n,k) kürzt man zuerst den Nenner (n-k)! gegen die letzten (n-k) Faktoren im Zähler n!, so dass im Zähler nur die k größten Faktoren (n, n-1, ..., n-k+1) stehen. Dann teilt man durch k!. Beispiel C(8,3) = (8×7×6)/(3×2×1) = 336/6 = 56. Diese Schreibweise ist rechnerisch viel einfacher als das vollständige Ausschreiben der Fakultäten.",
           merksatz:
-            "C(n,k) Rechenschritt: Zähler = n·(n-1)·...·(n-k+1) (k Faktoren), Nenner = k!. Symmetrie: C(n,k) = C(n, n-k) — nimm immer das kleinere k.",
+            "C(n,k) Rechenschritt: Zähler = n×(n-1)×...×(n-k+1) (k Faktoren), Nenner = k!. Symmetrie: C(n,k) = C(n, n-k) — nimm immer das kleinere k.",
         },
       ],
       merksätze: [
-        "Permutation (alle anordnen): n! ohne, n!/(k1!·k2!·...) mit identischen Elementen",
+        "Permutation (alle anordnen): n! ohne, n!/(k1!×k2!×...) mit identischen Elementen",
         "Variation (k aus n, geordnet): n!/(n-k)! ohne Wiederholung, n^k mit Wiederholung",
-        "Kombination (k aus n, ungeordnet): C(n,k) = n!/(k!·(n-k)!) ohne Wiederholung",
+        "Kombination (k aus n, ungeordnet): C(n,k) = n!/(k!×(n-k)!) ohne Wiederholung",
         "Lotto 6 aus 45: C(45,6) = 8.145.060 — Reihenfolge zählt nicht, ohne Zurücklegen",
         "Pascalsches Dreieck: C(n,k) = C(n-1,k-1) + C(n-1,k) — Additions-Eigenschaft",
         "0! = 1 per Definition — wichtig für C(n,0) = 1 und C(n,n) = 1",
@@ -246,10 +246,10 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
           options: ["24", "12", "16", "8", "4"],
           correctIndex: 0,
           explanation:
-            "Es werden alle 4 Patienten angeordnet (Reihenfolge wichtig, alle Objekte) → Permutation: P(4) = 4! = 4 · 3 · 2 · 1 = 24. Merkhilfe: Für den ersten Termin 4 Möglichkeiten, dann 3, dann 2, dann 1. Multiplikationsprinzip: 4 · 3 · 2 · 1 = 24.",
+            "Es werden alle 4 Patienten angeordnet (Reihenfolge wichtig, alle Objekte) → Permutation: P(4) = 4! = 4 × 3 × 2 × 1 = 24. Merkhilfe: Für den ersten Termin 4 Möglichkeiten, dann 3, dann 2, dann 1. Multiplikationsprinzip: 4 × 3 × 2 × 1 = 24.",
           hints: [
             "Alle 4 Patienten werden angeordnet, Reihenfolge zählt → Permutation.",
-            "P(4) = 4! = 4 · 3 · 2 · 1 = ?",
+            "P(4) = 4! = 4 × 3 × 2 × 1 = ?",
           ],
           difficulty: 1,
           tags: ["permutation", "fakultät", "kombinatorik"],
@@ -260,10 +260,10 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
           options: ["35", "21", "210", "42", "105"],
           correctIndex: 0,
           explanation:
-            "Reihenfolge unwichtig, ohne Wiederholung → Kombination: C(7,3) = 7!/(3!·4!) = (7·6·5)/(3·2·1) = 210/6 = 35. Kurzrechnung: Zähler nur die 3 oberen Faktoren (7·6·5 = 210), Nenner = 3! = 6. Ergebnis: 35.",
+            "Reihenfolge unwichtig, ohne Wiederholung → Kombination: C(7,3) = 7!/(3!×4!) = (7×6×5)/(3×2×1) = 210/6 = 35. Kurzrechnung: Zähler nur die 3 oberen Faktoren (7×6×5 = 210), Nenner = 3! = 6. Ergebnis: 35.",
           hints: [
             "Reihenfolge spielt keine Rolle → Kombination, nicht Variation.",
-            "C(7,3) = (7·6·5)/(3·2·1) = ?",
+            "C(7,3) = (7×6×5)/(3×2×1) = ?",
           ],
           difficulty: 2,
           tags: ["kombination", "binomialkoeffizient", "kombinatorik"],
@@ -274,7 +274,7 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
           options: ["216", "120", "36", "18", "729"],
           correctIndex: 0,
           explanation:
-            "Reihenfolge zählt (Code 123 ≠ Code 321), Wiederholung erlaubt → Variation mit Wiederholung: V(6,3) = 6^3 = 216. Jede der 3 Stellen hat unabhängig 6 Möglichkeiten: 6 · 6 · 6 = 216.",
+            "Reihenfolge zählt (Code 123 ≠ Code 321), Wiederholung erlaubt → Variation mit Wiederholung: V(6,3) = 6^3 = 216. Jede der 3 Stellen hat unabhängig 6 Möglichkeiten: 6 × 6 × 6 = 216.",
           hints: [
             "Reihenfolge zählt (Code), Wiederholung erlaubt → V(n,k) = n^k.",
             "V(6,3) = 6^3 = ?",
@@ -288,10 +288,10 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
           options: ["30", "60", "120", "24", "10"],
           correctIndex: 0,
           explanation:
-            "Permutation mit Wiederholung: n = 5, L kommt 2× vor (k1=2), E kommt 2× vor (k2=2). P = 5!/(2!·2!) = 120/(2·2) = 120/4 = 30. Die Formel teilt durch die Fakultäten der identischen Elemente, weil deren Vertauschungen nicht unterscheidbar sind.",
+            "Permutation mit Wiederholung: n = 5, L kommt 2× vor (k1=2), E kommt 2× vor (k2=2). P = 5!/(2!×2!) = 120/(2×2) = 120/4 = 30. Die Formel teilt durch die Fakultäten der identischen Elemente, weil deren Vertauschungen nicht unterscheidbar sind.",
           hints: [
-            "Permutation mit identischen Elementen: P = n!/(k1!·k2!·...)",
-            "n=5, L: 2×, E: 2× → 5!/(2!·2!) = ?",
+            "Permutation mit identischen Elementen: P = n!/(k1!×k2!×...)",
+            "n=5, L: 2×, E: 2× → 5!/(2!×2!) = ?",
           ],
           difficulty: 2,
           tags: ["permutation", "wiederholung", "kombinatorik"],
@@ -302,10 +302,10 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
           options: ["8 Millionen", "1 Million", "45 Millionen", "120.000", "300.000"],
           correctIndex: 0,
           explanation:
-            "C(45,6) = (45·44·43·42·41·40)/(6!) = 8.145.060 ≈ 8 Millionen. Zähler: 45·44·43·42·41·40 = 5.864.443.200. Nenner: 6! = 720. Ergebnis: 8.145.060. Zum Vergleich: Lotto 6/49 ergibt C(49,6) ≈ 13,98 Millionen Möglichkeiten.",
+            "C(45,6) = (45×44×43×42×41×40)/(6!) = 8.145.060 ≈ 8 Millionen. Zähler: 45×44×43×42×41×40 = 5.864.443.200. Nenner: 6! = 720. Ergebnis: 8.145.060. Zum Vergleich: Lotto 6/49 ergibt C(49,6) ≈ 13,98 Millionen Möglichkeiten.",
           hints: [
             "Reihenfolge egal, ohne Zurücklegen → C(45,6).",
-            "Zähler: 45·44·43·42·41·40, Nenner: 6! = 720.",
+            "Zähler: 45×44×43×42×41×40, Nenner: 6! = 720.",
           ],
           difficulty: 3,
           tags: ["kombination", "lotto", "binomialkoeffizient"],
@@ -315,14 +315,14 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
         question:
           "In einer Notaufnahme sollen 6 Ärzte so auf 6 Behandlungsräume aufgeteilt werden, dass jeder Arzt genau einen Raum übernimmt. (a) Wie viele Möglichkeiten gibt es? (b) Zwei der Ärzte (Dr. A und Dr. B) wollen auf keinen Fall benachbarte Räume (Räume 1&2, 2&3, 3&4, 4&5, 5&6). Wie viele Anordnungen erfüllen diese Bedingung?",
         answer:
-          "Teil (a): Alle 6 Ärzte auf 6 Räume anordnen → Permutation P(6) = 6! = 720. Teil (b): Günstige Fälle = Gesamt − Ungünstige. Ungünstige Fälle (A und B benachbart): Es gibt 5 Paare benachbarter Räume. A und B können in 2 Reihenfolgen diese Räume besetzen (AB oder BA), die restlichen 4 Ärzte auf 4 verbleibende Räume: 4! = 24 Wege. Ungünstig = 5 · 2 · 24 = 240. Günstig = 720 − 240 = 480. Komplementstrategie: Gesamtmenge berechnen, Verbotenes abziehen — die effizienteste Methode bei Ausschlussbedingungen.",
+          "Teil (a): Alle 6 Ärzte auf 6 Räume anordnen → Permutation P(6) = 6! = 720. Teil (b): Günstige Fälle = Gesamt − Ungünstige. Ungünstige Fälle (A und B benachbart): Es gibt 5 Paare benachbarter Räume. A und B können in 2 Reihenfolgen diese Räume besetzen (AB oder BA), die restlichen 4 Ärzte auf 4 verbleibende Räume: 4! = 24 Wege. Ungünstig = 5 × 2 × 24 = 240. Günstig = 720 − 240 = 480. Komplementstrategie: Gesamtmenge berechnen, Verbotenes abziehen — die effizienteste Methode bei Ausschlussbedingungen.",
       },
       klinischerBezug:
         "Die Kombinatorik ist die Grundlage für die Berechnung von Wahrscheinlichkeiten in klinischen Studien. Die Anzahl möglicher Genotypen in der Genetik (Kombinationen von Allelen), die Bewertung von Testergebnissen (Sensitivität/Spezifität basiert auf Vierfeldertafeln) und die Randomisierung in klinischen Studien nutzen kombinatorische Prinzipien. Im österreichischen MedAT erscheinen Kombinatorikaufgaben regelmäßig im BMS-Mathematik-Teil.",
     },
 
     {
-      id: "ma-stoch-02",
+      id: "ma-7-02",
       title: "Grundlagen der Wahrscheinlichkeitsrechnung",
       stichworte: [
         "Laplace-Experiment",
@@ -411,13 +411,13 @@ Beispiel Würfel: A = "gerade" = {2,4,6}, B = "größer als 4" = {5,6}
 
 **Unabhängige Ereignisse** A und B: Das Eintreten von A beeinflusst B nicht.
 
-P(A ∩ B) = P(A) · P(B)
+P(A ∩ B) = P(A) × P(B)
 
-Beispiel: Zwei unabhängige Münzwürfe. P(beide Kopf) = 1/2 · 1/2 = 1/4
+Beispiel: Zwei unabhängige Münzwürfe. P(beide Kopf) = 1/2 × 1/2 = 1/4
 
-Beispiel klinisch: Ein Gendefekt tritt mit P = 0,01 auf, unabhängig in zwei verschiedenen Genen. P(beide defekt) = 0,01 · 0,01 = 0,0001 = 0,01%.
+Beispiel klinisch: Ein Gendefekt tritt mit P = 0,01 auf, unabhängig in zwei verschiedenen Genen. P(beide defekt) = 0,01 × 0,01 = 0,0001 = 0,01%.
 
-Erweiterung auf n unabhängige Ereignisse: P(A1 ∩ A2 ∩ ... ∩ An) = P(A1) · P(A2) · ... · P(An)
+Erweiterung auf n unabhängige Ereignisse: P(A1 ∩ A2 ∩ ... ∩ An) = P(A1) × P(A2) × ... × P(An)
 
 > **Merke:** Unabhängige Ereignisse: Wahrscheinlichkeiten multiplizieren. Achtung: Unabhängigkeit ≠ Disjunktheit! Zwei Ereignisse können gleichzeitig eintreten (nicht disjunkt) und trotzdem unabhängig sein.
 
@@ -438,7 +438,7 @@ Stufe 1: P(rot) = 3/5, P(blau) = 2/5
 Stufe 2 nach rot: P(rot|1.rot) = 2/4 = 1/2, P(blau|1.rot) = 2/4 = 1/2
 Stufe 2 nach blau: P(rot|1.blau) = 3/4, P(blau|1.blau) = 1/4
 
-P(genau eine rote) = P(rot,blau) + P(blau,rot) = (3/5 · 2/4) + (2/5 · 3/4) = 6/20 + 6/20 = 12/20 = 3/5
+P(genau eine rote) = P(rot,blau) + P(blau,rot) = (3/5 × 2/4) + (2/5 × 3/4) = 6/20 + 6/20 = 12/20 = 3/5
 
 > **Merke:** Im Baumdiagramm: Entlang eines Astes multiplizieren (UND), zwischen parallelen Ästen addieren (ODER).
 
@@ -448,7 +448,7 @@ P(genau eine rote) = P(rot,blau) + P(blau,rot) = (3/5 · 2/4) + (2/5 · 3/4) = 6
 
 Die **Binomialverteilung** B(n, p, k) beschreibt die Wahrscheinlichkeit, bei n unabhängigen Versuchen mit Erfolgswahrscheinlichkeit p genau k Erfolge zu erzielen.
 
-P(X = k) = C(n, k) · p^k · (1−p)^(n−k)
+P(X = k) = C(n, k) × p^k × (1−p)^(n−k)
 
 Dabei ist:
 - n = Anzahl der Versuche
@@ -456,14 +456,14 @@ Dabei ist:
 - k = gewünschte Anzahl Erfolge (0 ≤ k ≤ n)
 - C(n,k) = Binomialkoeffizient (Anzahl der Wege)
 
-**Erwartungswert:** μ = n · p (mittlere Anzahl Erfolge)
-**Standardabweichung:** σ = √(n · p · (1−p))
+**Erwartungswert:** μ = n × p (mittlere Anzahl Erfolge)
+**Standardabweichung:** σ = √(n × p × (1−p))
 
 Beispiel: Ein Gen-Test hat 90% Treffsicherheit (p = 0,9). Bei 4 unabhängigen Tests: wie wahrscheinlich sind genau 3 korrekte Ergebnisse?
 
-P(X = 3) = C(4,3) · 0,9^3 · 0,1^1 = 4 · 0,729 · 0,1 = 4 · 0,0729 = 0,2916 ≈ 29,2%
+P(X = 3) = C(4,3) × 0,9^3 × 0,1^1 = 4 × 0,729 × 0,1 = 4 × 0,0729 = 0,2916 ≈ 29,2%
 
-Erwartungswert: μ = 4 · 0,9 = 3,6 (im Schnitt 3,6 korrekte Ergebnisse)
+Erwartungswert: μ = 4 × 0,9 = 3,6 (im Schnitt 3,6 korrekte Ergebnisse)
 
 > **Merke:** Binomialverteilung gilt nur wenn: (1) n Versuche sind unabhängig, (2) jeder Versuch hat genau zwei Ausgänge (Erfolg/Misserfolg), (3) p ist konstant. Wird eine Kugel ohne Zurücklegen gezogen, gilt Binomial nicht mehr!
 
@@ -490,34 +490,34 @@ Erwartungswert: μ = 4 · 0,9 = 3,6 (im Schnitt 3,6 korrekte Ergebnisse)
 **Prüfungsrelevante Zahlen/Fakten:**
 - P(Ā) = 1 − P(A) — immer gültig
 - (1/2)^10 ≈ 0,001 (10 Münzwürfe alle Kopf: sehr unwahrscheinlich)
-- Binomial-Erwartungswert: n·p (bei n=100, p=0,05: μ=5)
+- Binomial-Erwartungswert: n×p (bei n=100, p=0,05: μ=5)
 
 ---
 
 ## Rechenbeispiele
 
 **Beispiel 1 — Autosomal-rezessiv: Carrier-Wahrscheinlichkeit bei Mukoviszidose:**
-Trägerfrequenz q ≈ 1/25 in Mitteleuropa (heterozygot Aa). Beide Eltern Carrier → P(Kind krank = aa) = 1/4 (Mendel). Zufällig zwei Personen: P(beide Carrier) = (1/25)² = 1/625. P(Kind krank) = 1/625 · 1/4 = **1/2.500** ≈ 0,04%. Tatsächliche Inzidenz von CF: ca. 1:2.500 — passt!
+Trägerfrequenz q ≈ 1/25 in Mitteleuropa (heterozygot Aa). Beide Eltern Carrier → P(Kind krank = aa) = 1/4 (Mendel). Zufällig zwei Personen: P(beide Carrier) = (1/25)² = 1/625. P(Kind krank) = 1/625 × 1/4 = **1/2.500** ≈ 0,04%. Tatsächliche Inzidenz von CF: ca. 1:2.500 — passt!
 
 **Beispiel 2 — Komplement: Mindestens eine Nebenwirkung in 5 Dosen:**
-Ein Medikament verursacht pro Dosis mit P = 0,15 eine Nebenwirkung (unabhängig). P(mind. 1 Nebenwirkung in 5 Dosen) = 1 − P(keine) = 1 − 0,85⁵. 0,85⁵ = 0,85 · 0,85 · 0,85 · 0,85 · 0,85 ≈ 0,4437. P(mind. 1) = 1 − 0,4437 = **0,556 ≈ 55,6%**. Also: Mehr als jeder zweite Patient erlebt mindestens eine Nebenwirkung über 5 Dosen — obwohl die Einzelwahrscheinlichkeit nur 15% beträgt.
+Ein Medikament verursacht pro Dosis mit P = 0,15 eine Nebenwirkung (unabhängig). P(mind. 1 Nebenwirkung in 5 Dosen) = 1 − P(keine) = 1 − 0,85⁵. 0,85⁵ = 0,85 × 0,85 × 0,85 × 0,85 × 0,85 ≈ 0,4437. P(mind. 1) = 1 − 0,4437 = **0,556 ≈ 55,6%**. Also: Mehr als jeder zweite Patient erlebt mindestens eine Nebenwirkung über 5 Dosen — obwohl die Einzelwahrscheinlichkeit nur 15% beträgt.
 
 **Beispiel 3 — Binomialverteilung: Impf-Wirksamkeit:**
-Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 geschützt) = C(6,6) · 0,92⁶ · 0,08⁰ = 1 · 0,92⁶ · 1 ≈ 0,92⁶. Rechnung: 0,92² = 0,8464; 0,92³ ≈ 0,7787; 0,92⁶ = (0,92³)² ≈ 0,7787² ≈ **0,606 ≈ 60,6%**. Erwartungswert: μ = 6 · 0,92 = **5,52** geschützte Personen.
+Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 geschützt) = C(6,6) × 0,92⁶ × 0,08⁰ = 1 × 0,92⁶ × 1 ≈ 0,92⁶. Rechnung: 0,92² = 0,8464; 0,92³ ≈ 0,7787; 0,92⁶ = (0,92³)² ≈ 0,7787² ≈ **0,606 ≈ 60,6%**. Erwartungswert: μ = 6 × 0,92 = **5,52** geschützte Personen.
 
 ## Zusammenfassung (ultrakompakt)
 
 - **Laplace**: P(A) = günstige/mögliche Ergebnisse; nur wenn alle Ergebnisse gleich wahrscheinlich
 - **Additionssatz**: P(A∪B) = P(A)+P(B)−P(A∩B); bei disjunkten Ereignissen: P(A∩B) = 0
 - **Komplementregel**: P(Ā) = 1−P(A); "mindestens einmal" = 1 − P(keinmal)
-- **Unabhängigkeit**: P(A∩B) = P(A)·P(B); Kettenregel: P(A∩B∩C) = P(A)·P(B)·P(C)
-- **Binomialverteilung**: P(X=k) = C(n,k)·pᵏ·(1−p)^(n−k); μ = n·p; σ² = n·p·(1−p)
-- **Klinisch**: Autosomal-rezessiv P(krank)=1/4; Nebenwirkungen kumulieren; Impfschutz C(6,6)·p⁶`,
+- **Unabhängigkeit**: P(A∩B) = P(A)×P(B); Kettenregel: P(A∩B∩C) = P(A)×P(B)×P(C)
+- **Binomialverteilung**: P(X=k) = C(n,k)×pᵏ×(1−p)^(n−k); μ = n×p; σ² = n×p×(1−p)
+- **Klinisch**: Autosomal-rezessiv P(krank)=1/4; Nebenwirkungen kumulieren; Impfschutz C(6,6)×p⁶`,
       lernziele: [
         "Die klassische Wahrscheinlichkeit als P(A) = |A|/|Ω| berechnen und die Laplace-Bedingung prüfen",
         "Komplementregel, Additionssatz und Multiplikationssatz korrekt anwenden und dabei unvereinbare von unabhängigen Ereignissen unterscheiden",
         "Mehrstufige Zufallsexperimente mit Baumdiagrammen darstellen und die Pfadregeln (Multiplikation entlang, Addition zwischen Pfaden) anwenden",
-        "Die Binomialformel P(X=k) = C(n,k)·p^k·(1−p)^(n−k) berechnen und Erwartungswert μ = n·p bestimmen",
+        "Die Binomialformel P(X=k) = C(n,k)×p^k×(1−p)^(n−k) berechnen und Erwartungswert μ = n×p bestimmen",
         "Die Strategie 'Komplement für mindestens-Aufgaben' gezielt einsetzen",
       ],
       sections: [
@@ -529,18 +529,18 @@ Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 g
         },
         {
           heading: "Unabhängigkeit vs. Disjunktheit — häufigste Verwechslung",
-          text: "Zwei Ereignisse sind unabhängig, wenn P(A∩B) = P(A)·P(B) gilt — das Eintreten des einen beeinflusst das andere nicht. Zwei Ereignisse sind disjunkt (unvereinbar), wenn A∩B = ∅ — sie können nicht gleichzeitig eintreten. Merke: Wenn P(A)>0 und P(B)>0, dann sind disjunkte Ereignisse immer abhängig, denn wenn A eintritt (A passiert), kann B nicht eintreten — also beeinflusst A das Eintreten von B.",
+          text: "Zwei Ereignisse sind unabhängig, wenn P(A∩B) = P(A)×P(B) gilt — das Eintreten des einen beeinflusst das andere nicht. Zwei Ereignisse sind disjunkt (unvereinbar), wenn A∩B = ∅ — sie können nicht gleichzeitig eintreten. Merke: Wenn P(A)>0 und P(B)>0, dann sind disjunkte Ereignisse immer abhängig, denn wenn A eintritt (A passiert), kann B nicht eintreten — also beeinflusst A das Eintreten von B.",
           merksatz:
-            "Unabhängig: P(A∩B) = P(A)·P(B). Disjunkt: P(A∩B) = 0. Disjunkt ≠ Unabhängig — verwechsle die Begriffe nicht!",
+            "Unabhängig: P(A∩B) = P(A)×P(B). Disjunkt: P(A∩B) = 0. Disjunkt ≠ Unabhängig — verwechsle die Begriffe nicht!",
         },
       ],
       merksätze: [
         "Laplace: P(A) = günstige Ergebnisse / alle Ergebnisse — nur bei gleichwahrscheinlichen Ergebnissen",
         "Komplementregel: P(Ā) = 1 − P(A) — gilt immer, sehr häufig im MedAT",
         "Additionssatz: P(A∪B) = P(A) + P(B) − P(A∩B) — Schnittmenge nicht vergessen",
-        "Unabhängige Ereignisse: P(A∩B) = P(A) · P(B) — Multiplikation",
+        "Unabhängige Ereignisse: P(A∩B) = P(A) × P(B) — Multiplikation",
         "Baumdiagramm: Ast entlang = multiplizieren (UND), Äste addieren = ODER",
-        "Binomial: P(X=k) = C(n,k) · p^k · (1-p)^(n-k), Erwartungswert μ = n·p",
+        "Binomial: P(X=k) = C(n,k) × p^k × (1-p)^(n-k), Erwartungswert μ = n×p",
         "'Mindestens eines' immer über Komplement: 1 − P(keines) = 1 − (1-p)^n",
       ],
       selfTest: [
@@ -591,10 +591,10 @@ Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 g
           options: ["0,095", "0,85", "0,1", "0,05", "0,9"],
           correctIndex: 0,
           explanation:
-            "Unabhängige Ereignisse: P(krank) = 0,1, P(Test positiv | krank) = 0,95. P(positiv UND krank) = P(krank) · P(pos|krank) = 0,1 · 0,95 = 0,095 = 9,5%. Dies ist die Wahrscheinlichkeit für 'richtig positiv' — der erste Schritt zur Vierfeldertafel.",
+            "Unabhängige Ereignisse: P(krank) = 0,1, P(Test positiv | krank) = 0,95. P(positiv UND krank) = P(krank) × P(pos|krank) = 0,1 × 0,95 = 0,095 = 9,5%. Dies ist die Wahrscheinlichkeit für 'richtig positiv' — der erste Schritt zur Vierfeldertafel.",
           hints: [
-            "Unabhängige Ereignisse: P(A∩B) = P(A) · P(B).",
-            "P(krank) · P(positiv) = 0,1 · 0,95 = ?",
+            "Unabhängige Ereignisse: P(A∩B) = P(A) × P(B).",
+            "P(krank) × P(positiv) = 0,1 × 0,95 = ?",
           ],
           difficulty: 2,
           tags: ["unabhängigkeit", "multiplikation", "klinisch"],
@@ -605,10 +605,10 @@ Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 g
           options: ["5/16", "1/4", "3/8", "1/16", "5/32"],
           correctIndex: 0,
           explanation:
-            "P(X=2) = C(5,2) · 0,5^2 · 0,5^3 = 10 · 0,25 · 0,125 = 10 · 0,03125 = 0,3125 = 5/16. C(5,2) = 10, und 0,5^5 = 1/32. Also P(X=2) = 10/32 = 5/16. Probe: alle P(X=k) für k=0..5 summieren sich zu 1.",
+            "P(X=2) = C(5,2) × 0,5^2 × 0,5^3 = 10 × 0,25 × 0,125 = 10 × 0,03125 = 0,3125 = 5/16. C(5,2) = 10, und 0,5^5 = 1/32. Also P(X=2) = 10/32 = 5/16. Probe: alle P(X=k) für k=0..5 summieren sich zu 1.",
           hints: [
-            "P(X=k) = C(n,k) · p^k · (1-p)^(n-k) mit n=5, k=2, p=0,5.",
-            "C(5,2) = 10. 0,5^5 = 1/32. P(X=2) = 10 · (1/32) = ?",
+            "P(X=k) = C(n,k) × p^k × (1-p)^(n-k) mit n=5, k=2, p=0,5.",
+            "C(5,2) = 10. 0,5^5 = 1/32. P(X=2) = 10 × (1/32) = ?",
           ],
           difficulty: 3,
           tags: ["binomialverteilung", "wahrscheinlichkeit", "kombinatorik"],
@@ -618,14 +618,14 @@ Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 g
         question:
           "In einem Genetik-Labor werden 3 unabhängige PCR-Tests auf ein Gendefekt-Allel durchgeführt. Jeder Test erkennt das Allel mit Wahrscheinlichkeit p = 0,8 (und übersieht es mit 0,2). (a) Wie wahrscheinlich ist es, dass alle 3 Tests positiv ausfallen? (b) Wie wahrscheinlich ist es, dass mindestens 1 Test positiv ausfällt? (c) Was ist der Erwartungswert für die Anzahl positiver Tests?",
         answer:
-          "Teil (a): Unabhängige Ereignisse, alle positiv: P(alle 3 positiv) = 0,8 · 0,8 · 0,8 = 0,8^3 = 0,512 = 51,2%. Teil (b): Komplement-Strategie: P(mind. 1 positiv) = 1 − P(kein einziger positiv) = 1 − 0,2^3 = 1 − 0,008 = 0,992 = 99,2%. Teil (c): Binomialverteilung B(3, 0,8): Erwartungswert μ = n · p = 3 · 0,8 = 2,4. Im Schnitt werden also 2,4 der 3 Tests positiv ausfallen. Kontrolle: P(X=0)=0,008, P(X=1)=3·0,8·0,04=0,096, P(X=2)=3·0,64·0,2=0,384, P(X=3)=0,512. Summe: 0,008+0,096+0,384+0,512=1. Korrekt.",
+          "Teil (a): Unabhängige Ereignisse, alle positiv: P(alle 3 positiv) = 0,8 × 0,8 × 0,8 = 0,8^3 = 0,512 = 51,2%. Teil (b): Komplement-Strategie: P(mind. 1 positiv) = 1 − P(kein einziger positiv) = 1 − 0,2^3 = 1 − 0,008 = 0,992 = 99,2%. Teil (c): Binomialverteilung B(3, 0,8): Erwartungswert μ = n × p = 3 × 0,8 = 2,4. Im Schnitt werden also 2,4 der 3 Tests positiv ausfallen. Kontrolle: P(X=0)=0,008, P(X=1)=3×0,8×0,04=0,096, P(X=2)=3×0,64×0,2=0,384, P(X=3)=0,512. Summe: 0,008+0,096+0,384+0,512=1. Korrekt.",
       },
       klinischerBezug:
         "Wahrscheinlichkeitsrechnung ist das Fundament der diagnostischen Medizin. P(Diagnose | Symptom) — also die Wahrscheinlichkeit einer Diagnose gegeben einem Symptom — kann nur mit den Regeln der Wahrscheinlichkeitsrechnung und dem Bayes-Theorem berechnet werden. Klinisch relevant: Bei seltenen Erkrankungen (niedrige Prävalenz) ist selbst bei hoher Treffsicherheit eines Tests die Wahrscheinlichkeit einer echten Erkrankung nach positivem Test überraschend niedrig.",
     },
 
     {
-      id: "ma-stoch-03",
+      id: "ma-7-03",
       title: "Bedingte Wahrscheinlichkeit & Bayes-Theorem",
       stichworte: [
         "Bedingte Wahrscheinlichkeit",
@@ -670,7 +670,7 @@ Hier: Wenn wir wissen, dass eine gerade Zahl gefallen ist ({2,4,6}), ist die Cha
 
 **Multiplikationssatz (Umformung):**
 
-P(A ∩ B) = P(A|B) · P(B) = P(B|A) · P(A)
+P(A ∩ B) = P(A|B) × P(B) = P(B|A) × P(A)
 
 > **Merke:** Bedingte Wahrscheinlichkeit verkleinert den Ergebnisraum. P(A|B) ≠ P(B|A) — diese Verwechslung ist der klassische "Prosecutors' Fallacy"-Fehler in der forensischen Medizin!
 
@@ -680,9 +680,9 @@ P(A ∩ B) = P(A|B) · P(B) = P(B|A) · P(A)
 
 Wenn Ω in disjunkte, vollständige Teilereignisse B1, B2, ..., Bn zerfällt (d.h. sie schließen sich aus und decken alles ab), dann gilt:
 
-P(A) = P(A|B1) · P(B1) + P(A|B2) · P(B2) + ... + P(A|Bn) · P(Bn)
+P(A) = P(A|B1) × P(B1) + P(A|B2) × P(B2) + ... + P(A|Bn) × P(Bn)
 
-= Σ P(A|Bi) · P(Bi)
+= Σ P(A|Bi) × P(Bi)
 
 **Medizinisches Beispiel (Prävalenz und Test):**
 
@@ -691,8 +691,8 @@ Test hat Sensitivität (richtig positiv) P(T+|K) = 0,90 und Spezifität P(T−|K
 Also P(T+|K̄) = 1 − 0,95 = 0,05 (falsch positiv).
 
 Totale Wahrscheinlichkeit für positiven Test:
-P(T+) = P(T+|K) · P(K) + P(T+|K̄) · P(K̄)
-= 0,90 · 0,05 + 0,05 · 0,95
+P(T+) = P(T+|K) × P(K) + P(T+|K̄) × P(K̄)
+= 0,90 × 0,05 + 0,05 × 0,95
 = 0,045 + 0,0475
 = 0,0925 = 9,25%
 
@@ -706,16 +706,16 @@ Von allen Getesteten sind also 9,25% positiv. Aber wie viele davon sind wirklich
 
 Der **Satz von Bayes** ermöglicht die Umkehrung der Bedingung — aus P(Test+|krank) wird P(krank|Test+):
 
-P(A|B) = P(B|A) · P(A) / P(B)
+P(A|B) = P(B|A) × P(A) / P(B)
 
 Mit dem Satz der totalen Wahrscheinlichkeit für P(B):
 
-P(A|B) = P(B|A) · P(A) / [P(B|A) · P(A) + P(B|Ā) · P(Ā)]
+P(A|B) = P(B|A) × P(A) / [P(B|A) × P(A) + P(B|Ā) × P(Ā)]
 
 **Fortsetzung obiges Beispiel (positiver Vorhersagewert / PPV):**
 
-P(K|T+) = P(T+|K) · P(K) / P(T+)
-= 0,90 · 0,05 / 0,0925
+P(K|T+) = P(T+|K) × P(K) / P(T+)
+= 0,90 × 0,05 / 0,0925
 = 0,045 / 0,0925
 = 0,486 ≈ 48,6%
 
@@ -731,11 +731,11 @@ Die Vierfeldertafel ist für viele Studierende die intuitivste Methode für Baye
 
 Beispiel: n = 10.000 Personen, Prävalenz 5%, Sensitivität 90%, Spezifität 95%
 
-**Schritt 1:** Kranke berechnen: 10.000 · 0,05 = 500 krank, 9.500 nicht krank.
+**Schritt 1:** Kranke berechnen: 10.000 × 0,05 = 500 krank, 9.500 nicht krank.
 
 **Schritt 2:** Testkategorien aufteilen:
-- Krank: Test+ (TP) = 500 · 0,90 = 450; Test− (FN) = 500 · 0,10 = 50
-- Nicht krank: Test− (TN) = 9.500 · 0,95 = 9.025; Test+ (FP) = 9.500 · 0,05 = 475
+- Krank: Test+ (TP) = 500 × 0,90 = 450; Test− (FN) = 500 × 0,10 = 50
+- Nicht krank: Test− (TN) = 9.500 × 0,95 = 9.025; Test+ (FP) = 9.500 × 0,05 = 475
 
 | | Test + | Test − | Gesamt |
 |---|---|---|---|
@@ -767,7 +767,7 @@ Das entspricht exakt dem Bayes-Ergebnis — aber visuell viel klarer!
 **Typische Prüfungsfallen / Verwechslungen:**
 - P(T+|K) ist die Sensitivität; P(K|T+) ist der PPV — diese werden im Alltag ständig verwechselt
 - Bedingte Wahrscheinlichkeit ist nicht symmetrisch: P(A|B) ≠ P(B|A) in der Regel
-- Satz von Bayes: Im Zähler steht P(B|A)·P(A), nicht P(A|B) — die Formel nicht umdrehen
+- Satz von Bayes: Im Zähler steht P(B|A)×P(A), nicht P(A|B) — die Formel nicht umdrehen
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - Hohe Sensitivität (>95%) → gut zum Ausschließen einer Erkrankung (Negativtest verlässlich)
@@ -781,19 +781,19 @@ Das entspricht exakt dem Bayes-Ergebnis — aber visuell viel klarer!
 
 **Beispiel 1 — Mammographie-Screening: Vierfeldertafel komplett durchrechnen:**
 Prävalenz Brustkrebs bei 50–69-Jährigen: P(K) = 0,8% = 0,008. Mammographie: Sensitivität 87%, Spezifität 95%. Stichprobe n = 10.000.
-Krank: 10.000 · 0,008 = 80. Gesund: 9.920. TP = 80 · 0,87 = 69,6 ≈ 70. FN = 10. FP = 9.920 · 0,05 = 496. TN = 9.424. **PPV = 70 / (70 + 496) = 70 / 566 ≈ 12,4%**. Ergebnis: Nur ~1 von 8 positiven Mammographien ist tatsächlich Krebs — deshalb folgt immer eine Biopsie als Bestätigungstest.
+Krank: 10.000 × 0,008 = 80. Gesund: 9.920. TP = 80 × 0,87 = 69,6 ≈ 70. FN = 10. FP = 9.920 × 0,05 = 496. TN = 9.424. **PPV = 70 / (70 + 496) = 70 / 566 ≈ 12,4%**. Ergebnis: Nur ~1 von 8 positiven Mammographien ist tatsächlich Krebs — deshalb folgt immer eine Biopsie als Bestätigungstest.
 
 **Beispiel 2 — HIV-Screening (2-Stufen-Strategie):**
-Prävalenz 0,1% (Allgemeinbevölkerung). ELISA: Sens 99,7%, Spez 99,5%. n = 100.000. Krank: 100. TP = 99,7 ≈ 100. FP = 99.900 · 0,005 = 499,5 ≈ 500. PPV₁ = 100/600 ≈ 16,7%. Zweiter Test (Western Blot, Spez 99,99%) auf die 600 Positiven: TP₂ = 100 (echte bleiben positiv). FP₂ = 500 · 0,0001 = 0,05 ≈ 0. **PPV₂ ≈ 100/100 = ~100%**. Die 2-Stufen-Strategie hebt den PPV von 17% auf nahe 100%.
+Prävalenz 0,1% (Allgemeinbevölkerung). ELISA: Sens 99,7%, Spez 99,5%. n = 100.000. Krank: 100. TP = 99,7 ≈ 100. FP = 99.900 × 0,005 = 499,5 ≈ 500. PPV₁ = 100/600 ≈ 16,7%. Zweiter Test (Western Blot, Spez 99,99%) auf die 600 Positiven: TP₂ = 100 (echte bleiben positiv). FP₂ = 500 × 0,0001 = 0,05 ≈ 0. **PPV₂ ≈ 100/100 = ~100%**. Die 2-Stufen-Strategie hebt den PPV von 17% auf nahe 100%.
 
 **Beispiel 3 — Carrier-Test: P(Carrier | positiver Test) bei CF:**
-A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 · 0,04 + 0,01 · 0,96 = 0,036 + 0,0096 = 0,0456. P(Carrier|T+) = 0,036 / 0,0456 = **0,789 ≈ 79%**. Trotz 99% Spezifität: 1 von 5 positiv Getesteten ist kein Carrier. Bestätigungsdiagnostik (DNA-Analyse) nötig.
+A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 × 0,04 + 0,01 × 0,96 = 0,036 + 0,0096 = 0,0456. P(Carrier|T+) = 0,036 / 0,0456 = **0,789 ≈ 79%**. Trotz 99% Spezifität: 1 von 5 positiv Getesteten ist kein Carrier. Bestätigungsdiagnostik (DNA-Analyse) nötig.
 
 ## Zusammenfassung (ultrakompakt)
 
 - **Bedingte Wahrscheinlichkeit**: P(A|B) = P(A∩B)/P(B); "A gegeben B ist eingetreten"
-- **Satz von Bayes**: P(A|B) = P(B|A)·P(A) / P(B); kehrt die Bedingung um
-- **Totale Wahrscheinlichkeit**: P(B) = P(B|A₁)·P(A₁) + P(B|A₂)·P(A₂) + ...
+- **Satz von Bayes**: P(A|B) = P(B|A)×P(A) / P(B); kehrt die Bedingung um
+- **Totale Wahrscheinlichkeit**: P(B) = P(B|A₁)×P(A₁) + P(B|A₂)×P(A₂) + ...
 - **Vierfeldertafel**: TP, FP, FN, TN; Sens = TP/(TP+FN); Spez = TN/(TN+FP); PPV = TP/(TP+FP); NPV = TN/(TN+FN)
 - **Merkhilfe SpPin/SnNout**: Hohe Spezifität → positiver Test = krank (bestätigt); hohe Sensitivität → negativer Test = gesund (ausschließt)
 - **Klinisch**: Mammographie PPV ~12%; HIV-Screening 2-Stufen (ELISA + Western Blot); CF-Carrier-Test`,
@@ -807,13 +807,13 @@ A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 · 0,04 
       sections: [
         {
           heading: "Vierfeldertafel als Universalwerkzeug",
-          text: "Die Vierfeldertafel macht Bayes-Aufgaben rechnerisch einfach und fehlerarm. Strategie: (1) Gesamtstichprobe n wählen (z.B. 10.000), (2) Erkrankte und Gesunde berechnen (n·Prävalenz), (3) TP, FN, TN, FP mit Sensitivität/Spezifität befüllen, (4) PPV = TP/(TP+FP), NPV = TN/(TN+FN). Diese Methode ist äquivalent zur Bayes-Formel, aber anschaulicher und fehleranfälliger — im MedAT immer bevorzugen.",
+          text: "Die Vierfeldertafel macht Bayes-Aufgaben rechnerisch einfach und fehlerarm. Strategie: (1) Gesamtstichprobe n wählen (z.B. 10.000), (2) Erkrankte und Gesunde berechnen (n×Prävalenz), (3) TP, FN, TN, FP mit Sensitivität/Spezifität befüllen, (4) PPV = TP/(TP+FP), NPV = TN/(TN+FN). Diese Methode ist äquivalent zur Bayes-Formel, aber anschaulicher und fehleranfälliger — im MedAT immer bevorzugen.",
           merksatz:
             "Vierfeldertafel: TP = krank UND positiv, FP = gesund ABER positiv, FN = krank ABER negativ, TN = gesund UND negativ. PPV = TP/(TP+FP).",
         },
         {
           heading: "Prävalenz-Paradox — warum Tests bei seltenen Krankheiten täuschen",
-          text: "Bei sehr niedriger Prävalenz (z.B. 0,1%) gibt es viele Gesunde, von denen selbst ein sehr spezifischer Test (99,9%) noch viele falsch als positiv markiert. Diese Falsch-Positiven überwiegen die wenigen echten Positiven, sodass der PPV trotz exzellentem Test erschreckend niedrig ist. Konkret: Bei 1 Million Menschen mit 0,1% Prävalenz (1.000 Kranke) und 99% Spezifität: FP = 0,01 · 999.000 = 9.990. TP ≈ 990. PPV = 990/10.980 ≈ 9%. Das ist das Bayes-Paradox — klinisch von größter Bedeutung.",
+          text: "Bei sehr niedriger Prävalenz (z.B. 0,1%) gibt es viele Gesunde, von denen selbst ein sehr spezifischer Test (99,9%) noch viele falsch als positiv markiert. Diese Falsch-Positiven überwiegen die wenigen echten Positiven, sodass der PPV trotz exzellentem Test erschreckend niedrig ist. Konkret: Bei 1 Million Menschen mit 0,1% Prävalenz (1.000 Kranke) und 99% Spezifität: FP = 0,01 × 999.000 = 9.990. TP ≈ 990. PPV = 990/10.980 ≈ 9%. Das ist das Bayes-Paradox — klinisch von größter Bedeutung.",
           merksatz:
             "Niedriger PPV bei niedriger Prävalenz ist kein Testversagen — es ist Mathematik. Deshalb werden Screening-Tests nur bei erhöhtem Risiko (Vorselektionierung) eingesetzt.",
         },
@@ -821,8 +821,8 @@ A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 · 0,04 
       merksätze: [
         "P(A|B) = P(A∩B) / P(B) — Bedingung verkleinert den Ergebnisraum auf B",
         "P(A|B) ≠ P(B|A) — bedingte Wahrscheinlichkeit ist nicht symmetrisch!",
-        "Totale Wahrscheinlichkeit: P(A) = Σ P(A|Bi) · P(Bi) — gewichtetes Mittel",
-        "Bayes: P(K|T+) = P(T+|K) · P(K) / P(T+) — das ist der PPV",
+        "Totale Wahrscheinlichkeit: P(A) = Σ P(A|Bi) × P(Bi) — gewichtetes Mittel",
+        "Bayes: P(K|T+) = P(T+|K) × P(K) / P(T+) — das ist der PPV",
         "Sensitivität = P(T+|K) = TP/(TP+FN); Spezifität = P(T−|K̄) = TN/(TN+FP)",
         "Vierfeldertafel: n wählen → Erkrankte berechnen → TP,FP,TN,FN befüllen → PPV ablesen",
         "Niedrige Prävalenz senkt den PPV drastisch — Bayes-Paradox!",
@@ -844,10 +844,10 @@ A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 · 0,04 
           options: ["80", "100", "90", "180", "8"],
           correctIndex: 0,
           explanation:
-            "Vierfeldertafel: 1000 Personen. Krank: 1000 · 0,10 = 100. Nicht krank: 900. TP = krank · Sensitivität = 100 · 0,80 = 80. FN = 100 · 0,20 = 20. TN = 900 · 0,90 = 810. FP = 900 · 0,10 = 90. TP = 80.",
+            "Vierfeldertafel: 1000 Personen. Krank: 1000 × 0,10 = 100. Nicht krank: 900. TP = krank × Sensitivität = 100 × 0,80 = 80. FN = 100 × 0,20 = 20. TN = 900 × 0,90 = 810. FP = 900 × 0,10 = 90. TP = 80.",
           hints: [
-            "Krank = 1000 · 0,10 = 100 Personen.",
-            "TP = Krank · Sensitivität = 100 · 0,80 = ?",
+            "Krank = 1000 × 0,10 = 100 Personen.",
+            "TP = Krank × Sensitivität = 100 × 0,80 = ?",
           ],
           difficulty: 2,
           tags: ["vierfeldertafel", "sensitivität", "bayes"],
@@ -889,10 +889,10 @@ A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 · 0,04 
           options: ["ca. 49%", "ca. 95%", "ca. 2%", "ca. 75%", "ca. 20%"],
           correctIndex: 0,
           explanation:
-            "P(T+) = P(T+|K)·P(K) + P(T+|K̄)·P(K̄) = 0,95·0,02 + 0,02·0,98 = 0,019 + 0,0196 = 0,0386. P(K|T+) = 0,019 / 0,0386 ≈ 0,492 ≈ 49%. Bei Prävalenz 2% und gleichem Fehlerrate der Falsch-Positiven (2%) sind von allen Positiven fast die Hälfte falsch positiv — ein klassisches Bayes-Paradox.",
+            "P(T+) = P(T+|K)×P(K) + P(T+|K̄)×P(K̄) = 0,95×0,02 + 0,02×0,98 = 0,019 + 0,0196 = 0,0386. P(K|T+) = 0,019 / 0,0386 ≈ 0,492 ≈ 49%. Bei Prävalenz 2% und gleichem Fehlerrate der Falsch-Positiven (2%) sind von allen Positiven fast die Hälfte falsch positiv — ein klassisches Bayes-Paradox.",
           hints: [
             "Zuerst P(T+) berechnen (totale Wahrscheinlichkeit).",
-            "P(K|T+) = P(T+|K)·P(K) / P(T+) = 0,019 / ?",
+            "P(K|T+) = P(T+|K)×P(K) / P(T+) = 0,019 / ?",
           ],
           difficulty: 3,
           tags: ["bayes", "ppv", "prävalenz", "klinisch"],
@@ -902,14 +902,14 @@ A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 · 0,04 
         question:
           "In einer österreichischen Studie zur Früherkennung einer genetischen Erkrankung (Prävalenz 0,5%) wird ein neuer Test mit Sensitivität 92% und Spezifität 96% eingesetzt. (a) Berechnen Sie den PPV mit einer Vierfeldertafel für n = 100.000 Personen. (b) Interpretieren Sie das Ergebnis klinisch. (c) Welche Maßnahme würde den PPV am stärksten erhöhen?",
         answer:
-          "Teil (a): n=100.000. Krank: 500. Nicht krank: 99.500. TP = 500 · 0,92 = 460. FN = 40. FP = 99.500 · 0,04 = 3.980. TN = 95.520. Positiv gesamt = 460 + 3.980 = 4.440. PPV = 460 / 4.440 = 0,1036 ≈ 10,4%. Teil (b): Klinisch bedeutet das: Von 100 Personen mit positivem Test sind nur etwa 10 tatsächlich krank — 90 erhalten ein falsch positives Ergebnis. Das verursacht unnötige Angst, kostspielige Folgeuntersuchungen und eventuell unnötige Behandlungen. Teil (c): Erhöhung der Prävalenz in der Teststichprobe durch Vorselektion (Screening nur bei Risikogruppen, z.B. Familienanamnese). Bei Prävalenz 10% (Risikogruppe) würde PPV auf ~72% steigen. Alternativ: Spezifität erhöhen (weniger FP), hat bei seltenen Erkrankungen den stärksten Effekt auf PPV.",
+          "Teil (a): n=100.000. Krank: 500. Nicht krank: 99.500. TP = 500 × 0,92 = 460. FN = 40. FP = 99.500 × 0,04 = 3.980. TN = 95.520. Positiv gesamt = 460 + 3.980 = 4.440. PPV = 460 / 4.440 = 0,1036 ≈ 10,4%. Teil (b): Klinisch bedeutet das: Von 100 Personen mit positivem Test sind nur etwa 10 tatsächlich krank — 90 erhalten ein falsch positives Ergebnis. Das verursacht unnötige Angst, kostspielige Folgeuntersuchungen und eventuell unnötige Behandlungen. Teil (c): Erhöhung der Prävalenz in der Teststichprobe durch Vorselektion (Screening nur bei Risikogruppen, z.B. Familienanamnese). Bei Prävalenz 10% (Risikogruppe) würde PPV auf ~72% steigen. Alternativ: Spezifität erhöhen (weniger FP), hat bei seltenen Erkrankungen den stärksten Effekt auf PPV.",
       },
       klinischerBezug:
         "Das Bayes-Theorem ist das mathematische Fundament der evidenzbasierten Medizin. Jede Diagnose ist ein Bayes-Update: die Vortestwahrscheinlichkeit (Prior = Prävalenz in dieser Population) wird durch Testergebnisse zur Nachtestwahrscheinlichkeit (Posterior = PPV/NPV). Klinisch gilt: Sens/Spez sind Eigenschaften des Tests; PPV/NPV sind Eigenschaften des Tests UND der Population. Deshalb gelten Screeningtests nur in spezifischen Bevölkerungsgruppen mit bekanntem Risiko.",
     },
 
     {
-      id: "ma-stoch-04",
+      id: "ma-7-04",
       title: "Normalverteilung, Sensitivität & Spezifität",
       stichworte: [
         "Normalverteilung",
@@ -982,7 +982,7 @@ Beispiel: s = √4 = 2. Interpretation: Die Messwerte weichen im Schnitt etwa 2 
 Eigenschaft: Gleiche Einheit wie die Daten (im Gegensatz zur Varianz, die in Einheit² ist). Deshalb ist s die praxisnähere Maßzahl.
 
 **Interquartilsabstand (IQA):**
-IQA = Q3 − Q1 (75. Perzentile minus 25. Perzentile). Robust gegen Ausreißer. Wird im Boxplot dargestellt.
+IQA = Q3 − Q1 (75. Perzentil − 25. Perzentil). Robust gegen Ausreißer. Wird im Boxplot dargestellt.
 
 | Maß | Formel | Eigenschaft |
 |-----|--------|-------------|

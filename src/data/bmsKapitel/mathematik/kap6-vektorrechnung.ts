@@ -31,7 +31,11 @@ export const mathKap6: Kapitel = {
 
 **Vektoren** = gerichtete Größen (Betrag + Richtung): Blutfluss, EKG-Achse, Kräfte. Für den MedAT sind Vektordefinition, Addition, Skalarmultiplikation, Betrag, Einheitsvektor prüfungsrelevant.
 
-**In diesem Kapitel lernst du:** **Vektor** vs. Skalar; **Betrag** |v|; **Addition** (Parallelogramm); Skalarmultiplikation; **Einheitsvektor**; Linearkombination, lineare Unabhängigkeit. **Kontext:** Physik und Medizin — wo Richtung zählt.
+**Einstieg:** Vektoren werden in **Algebra & Geometrie** (ma-3-04) erstmals eingeführt. Hier vertiefen wir Rechenregeln, Skalar- und Kreuzprodukt, Geraden und Ebenen sowie Abstandsberechnungen und medizinische Anwendungen.
+
+**Kontext:** Im MedAT und in der Medizin zählt oft die **Richtung**: EKG-Herzachse, Kraftzerlegung in der Biomechanik, Blutflussrichtung, Strahlentherapie. Wer Vektoren sicher handhabt, kann solche Aufgaben fehlerfrei lösen.
+
+**In diesem Kapitel lernst du:** **Vektor** vs. Skalar; **Betrag** |v|; **Addition** (Parallelogramm); Skalarmultiplikation; **Einheitsvektor**; Linearkombination, lineare Unabhängigkeit.
 
 ---
 
@@ -70,6 +74,8 @@ Im zweidimensionalen Fall entfällt die dritte Komponente: $|\\vec{v}| = \\sqrt{
 
 ## Linearkombination und lineare Unabhängigkeit
 
+> **Intuition vor der Definition:** Zwei Vektoren in der Ebene sind **linear abhängig**, wenn sie **parallel** sind (einer ist ein Vielfaches des anderen). Drei Vektoren im Raum sind linear abhängig, wenn sie **in einer Ebene liegen**. So behältst du die formale Definition im Griff.
+
 Eine **Linearkombination** mehrerer Vektoren ist eine Summe der Form $\\lambda_1 \\vec{v_1} + \\lambda_2 \\vec{v_2} + \\ldots$ mit skalaren Koeffizienten $\\lambda_i$. Vektoren heißen **linear unabhängig**, wenn keiner von ihnen als Linearkombination der anderen darstellbar ist, d. h. $\\lambda_1 \\vec{v_1} + \\lambda_2 \\vec{v_2} = \\vec{0}$ nur für $\\lambda_1 = \\lambda_2 = 0$ gilt.
 
 > **Merke:** Zwei Vektoren sind genau dann linear abhängig, wenn sie parallel (kollinear) sind. Drei Vektoren im ℝ³ sind linear abhängig, wenn sie in einer Ebene liegen (koplanar).
@@ -95,7 +101,7 @@ Der **Ortsvektor** $\\vec{r}_P$ eines Punktes $P(x, y, z)$ zeigt vom Koordinaten
 
 $$\\vec{AB} = \\vec{r}_B - \\vec{r}_A = (b_1 - a_1,\\; b_2 - a_2,\\; b_3 - a_3)^\\top$$
 
-> **Merke:** Verbindungsvektor = Ziel minus Start. Der Abstand $d(A,B) = |\\vec{AB}|$ ist der Betrag dieses Verbindungsvektors. Achtung: $\\vec{AB} = -\\vec{BA}$ — die Richtung kehrt sich um!
+> **Merke:** Verbindungsvektor = Ziel − Start. Der Abstand $d(A,B) = |\\vec{AB}|$ ist der Betrag dieses Verbindungsvektors. Achtung: $\\vec{AB} = -\\vec{BA}$ — die Richtung kehrt sich um!
 
 **Mittelpunkt** der Strecke $\\overline{AB}$: $M = \\frac{1}{2}(\\vec{r}_A + \\vec{r}_B)$ — das arithmetische Mittel der Ortsvektoren. Allgemeiner teilt ein Punkt $T$ die Strecke im Verhältnis $\\lambda:(1-\\lambda)$: $\\vec{r}_T = (1-\\lambda)\\vec{r}_A + \\lambda\\vec{r}_B$.
 
@@ -151,7 +157,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
 **Typische Prüfungsfallen / Verwechslungen:**
 - Skalar ≠ Vektor: Temperatur, Energie, Masse = Skalare; Kraft, Geschwindigkeit, Verschiebung = Vektoren
 - Betrag ≠ Komponentensumme: $|\\vec{v}| = \\sqrt{v_1^2+v_2^2}$, NICHT $v_1+v_2$
-- Verbindungsvektor: **immer Ziel minus Start** ($\\vec{AB} = B - A$, nicht $A - B$)
+- Verbindungsvektor: **immer Ziel − Start** ($\\vec{AB} = B - A$, nicht $A - B$)
 - Einheitsvektor: durch den Betrag dividieren (nicht durch das Quadrat)
 
 **Prüfungsrelevante Zahlen/Fakten:**
@@ -533,9 +539,9 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
         },
         {
           heading: "Klinische Anwendungen: Drehmoment und Lorentz-Kraft",
-          text: "Das Drehmoment $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist das Kreuzprodukt aus Hebelarm $\\vec{r}$ und Kraft $\\vec{F}$. Im Knie beispielsweise ergibt die Quadrizepskraft mal dem Hebelarm das Streckmoment. In der MRT-Sicherheit ist die Lorentz-Kraft $\\vec{F} = q(\\vec{v}\\times\\vec{B})$ relevant: Ein im Magnetfeld bewegtes metallisches Implantat kann eine Kraft durch das Kreuzprodukt aus Ladungsgeschwindigkeit und Magnetfeld erfahren. Das Skalarprodukt erlaubt die Projektion einer Kraft auf eine Bewegungsrichtung (mechanische Arbeit: $W = \\vec{F}\\cdot\\vec{s}$).",
+          text: "Das Drehmoment $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist das Kreuzprodukt aus Hebelarm $\\vec{r}$ und Kraft $\\vec{F}$. Im Knie beispielsweise ergibt die Quadrizepskraft × dem Hebelarm das Streckmoment. In der MRT-Sicherheit ist die Lorentz-Kraft $\\vec{F} = q(\\vec{v}\\times\\vec{B})$ relevant: Ein im Magnetfeld bewegtes metallisches Implantat kann eine Kraft durch das Kreuzprodukt aus Ladungsgeschwindigkeit und Magnetfeld erfahren. Das Skalarprodukt erlaubt die Projektion einer Kraft auf eine Bewegungsrichtung (mechanische Arbeit: $W = \\vec{F}\\cdot\\vec{s}$).",
           merksatz:
-            "Drehmoment M = r × F (Kreuzprodukt). Mechanische Arbeit W = F · s (Skalarprodukt). MRT: Lorentz-Kraft F = q·(v×B).",
+            "Drehmoment M = r × F (Kreuzprodukt). Mechanische Arbeit W = F × s (Skalarprodukt). MRT: Lorentz-Kraft F = q·(v×B).",
         },
         {
           heading: "Orthogonalprojektion und Spatprodukt",
@@ -757,9 +763,9 @@ Eine **Matrix** $A$ ist ein rechteckiges Schema von Zahlen (m Zeilen × n Spalte
 
 **Skalare Multiplikation:** $(\\lambda A)_{ij} = \\lambda \\cdot A_{ij}$
 
-**Matrizenprodukt:** $A$ (m×n) mal $B$ (n×p) = $C$ (m×p). Das Element $C_{ij} = \\sum_k A_{ik} B_{kj}$ (Zeile von $A$ mal Spalte von $B$). Matrizenmultiplikation ist i. A. **nicht kommutativ**: $A \\cdot B \\neq B \\cdot A$.
+**Matrizenprodukt:** $A$ (m×n) × $B$ (n×p) = $C$ (m×p). Das Element $C_{ij} = \\sum_k A_{ik} B_{kj}$ (Zeile von $A$ × Spalte von $B$). Matrizenmultiplikation ist i. A. **nicht kommutativ**: $A \\cdot B \\neq B \\cdot A$.
 
-> **Merke:** Dimensionsregel: (m×n) · (n×p) = (m×p). Die inneren Dimensionen müssen übereinstimmen! Wenn A 3 Spalten und B 3 Zeilen hat, ist das Produkt definiert.
+> **Merke:** Dimensionsregel: (m×n) × (n×p) = (m×p). Die inneren Dimensionen müssen übereinstimmen! Wenn A 3 Spalten und B 3 Zeilen hat, ist das Produkt definiert.
 
 **Transponierte Matrix:** $A^\\top$ entsteht durch Vertauschen von Zeilen und Spalten: $(A^\\top)_{ij} = A_{ji}$. Eine Matrix heißt **symmetrisch**, wenn $A = A^\\top$. Die **Einheitsmatrix** $E$ hat Einsen auf der Hauptdiagonale und Nullen sonst; sie ist das neutrale Element der Matrizenmultiplikation: $A \\cdot E = E \\cdot A = A$.
 
@@ -862,7 +868,7 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
 - Cramersche Regel: Die **$i$-te Spalte** von $A$ wird durch $\\vec{b}$ ersetzt (nicht die $i$-te Zeile)
 
 **Prüfungsrelevante Zahlen/Fakten:**
-- Determinante 2×2: $\\det\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix} = ad - bc$ (Hauptdiag. minus Nebendiag.)
+- Determinante 2×2: $\\det\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix} = ad - bc$ (Hauptdiag. − Nebendiag.)
 - Inverse 2×2: $A^{-1} = \\frac{1}{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$ — nur bei $\\det \\neq 0$ definiert
 - CT-Rekonstruktion: Radon-Transformation + gefilterte Rückprojektion = Matrizenoperationen auf Sinogramm
 
@@ -879,7 +885,7 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
       lernziele: [
         "Die Parameterform einer Geraden im ℝ³ aufstellen und Punkte auf der Geraden berechnen können.",
         "Ebenengleichungen in Normalenform, Koordinatenform und Parameterform ineinander umrechnen können.",
-        "Matrizenaddition, skalare Multiplikation und Matrizenmultiplikation (mit Dimensionsregel m×n · n×p = m×p) durchführen können.",
+        "Matrizenaddition, skalare Multiplikation und Matrizenmultiplikation (mit Dimensionsregel m×n × n×p = m×p) durchführen können.",
         "Die Determinante einer 2×2-Matrix berechnen und ihre geometrische/algebraische Bedeutung erklären können.",
         "Die klinische Bedeutung von Matrizenoperationen in der CT-Bildrekonstruktion und Bioinformatik beschreiben können.",
       ],
@@ -894,7 +900,7 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
           heading: "Matrizenrechnung — Grundoperationen und Determinante",
           text: "Matrizen werden elementweise addiert; das Produkt $A\\cdot B$ erfordert gleiche innere Dimensionen (n) und ist nicht kommutativ. Die Transponierte $A^\\top$ entsteht durch Zeile-Spalte-Tausch. Die Determinante einer 2×2-Matrix: $\\det(A) = ad-bc$. Ist sie null, sind die Zeilen linear abhängig — das entsprechende LGS hat keine eindeutige Lösung. Wichtige Anwendung: Prüfung auf lineare Unabhängigkeit von Vektoren.",
           merksatz:
-            "Matrizenprodukt: m×n · n×p = m×p. Determinante 2×2: ad−bc. det = 0 → linear abhängig, kein eindeutiges LGS.",
+            "Matrizenprodukt: m×n × n×p = m×p. Determinante 2×2: ad−bc. det = 0 → linear abhängig, kein eindeutiges LGS.",
         },
         {
           heading: "Klinische Anwendungen: CT und Bioinformatik",
@@ -915,7 +921,7 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
         "Ebene Normalenform: n·(r − r₀) = 0, wobei n ⊥ Ebene.",
         "Ebene Koordinatenform: ax + by + cz = d — Koeffizienten (a,b,c) sind der Normalenvektor.",
         "Matrizenaddition: nur für gleich große Matrizen, elementweise.",
-        "Matrizenprodukt: A(m×n) · B(n×p) = C(m×p) — innere Dimensionen müssen übereinstimmen.",
+        "Matrizenprodukt: A(m×n) × B(n×p) = C(m×p) — innere Dimensionen müssen übereinstimmen.",
         "Matrizenmultiplikation ist nicht kommutativ: A·B ≠ B·A (im Allgemeinen).",
         "Transponierte Aᵀ: Zeilen und Spalten vertauschen; symmetrisch wenn A = Aᵀ.",
         "Determinante 2×2: det(A) = ad − bc.",
@@ -975,10 +981,10 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
           ],
           correctIndex: 0,
           explanation:
-            "A ist 2×2, B ist 2×1 → Ergebnis C ist 2×1. $C_{11} = 1\\cdot1+2\\cdot0 = 1$; $C_{21} = 3\\cdot1+4\\cdot0 = 3$. Also $C = (1,3)^\\top$. Beim Matrizenprodukt wird jede Zeile von A mit der (einzigen) Spalte von B skalar multipliziert. Dimensionsregel: 2×2 mal 2×1 = 2×1 — die inneren Dimensionen (beide 2) stimmen überein.",
+            "A ist 2×2, B ist 2×1 → Ergebnis C ist 2×1. $C_{11} = 1\\cdot1+2\\cdot0 = 1$; $C_{21} = 3\\cdot1+4\\cdot0 = 3$. Also $C = (1,3)^\\top$. Beim Matrizenprodukt wird jede Zeile von A mit der (einzigen) Spalte von B skalar multipliziert. Dimensionsregel: 2×2 × 2×1 = 2×1 — die inneren Dimensionen (beide 2) stimmen überein.",
           hints: [
             "Dimensionsregel: A ist (2×2), B ist (2×1). Das Ergebnis ist (2×1).",
-            "Zeile 1 von A mal Spalte von B: 1·1 + 2·0 = 1. Zeile 2 von A mal Spalte von B: 3·1 + 4·0 = 3.",
+            "Zeile 1 von A × Spalte von B: 1·1 + 2·0 = 1. Zeile 2 von A × Spalte von B: 3·1 + 4·0 = 3.",
           ],
           tags: ["matrizenmultiplikation", "dimensionsregel", "matrix"],
           difficulty: 2,
@@ -991,7 +997,7 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
           explanation:
             "Für eine 2×2-Matrix gilt: $\\det(A) = ad - bc = 3\\cdot2 - 5\\cdot1 = 6 - 5 = 1$. Da $\\det(A) = 1 \\neq 0$, ist die Matrix regulär und invertierbar — das zugehörige LGS hat genau eine Lösung. Der Wert 1 ist besonders praktisch, da die Inverse $A^{-1}$ dann einfach zu berechnen ist.",
           hints: [
-            "Determinante 2×2: det(A) = a·d − b·c (Hauptdiagonale minus Nebendiagonale).",
+            "Determinante 2×2: det(A) = a·d − b·c (Hauptdiagonale − Nebendiagonale).",
             "Hier: a=3, b=5, c=1, d=2. Also: 3·2 − 5·1 = ?",
           ],
           tags: ["determinante", "matrix", "algebra"],
@@ -1096,7 +1102,7 @@ $$d(A, B) = |\\vec{AB}| = \\sqrt{(b_1-a_1)^2 + (b_2-a_2)^2 + (b_3-a_3)^2}$$
 
 Dies ist die **euklidische Distanz** — die direkte Verbindung ("Luftlinie") zwischen zwei Punkten. Im 2D-Fall entfällt die dritte Komponente. Diese Formel ist die Verallgemeinerung des Satzes des Pythagoras auf beliebig viele Dimensionen.
 
-> **Merke:** Abstand = Betrag des Verbindungsvektors. Immer: Ziel minus Start, dann Betrag berechnen. Häufiger MedAT-Fehler: Vorzeichen beim Quadrieren vergessen — $(b_i - a_i)^2$ ist immer positiv!
+> **Merke:** Abstand = Betrag des Verbindungsvektors. Immer: Ziel − Start, dann Betrag berechnen. Häufiger MedAT-Fehler: Vorzeichen beim Quadrieren vergessen — $(b_i - a_i)^2$ ist immer positiv!
 
 **MedAT-typische Aufgabe:** Abstand $A(2, 3, -1)$ zu $B(5, 7, -1)$: $d = \\sqrt{9 + 16 + 0} = \\sqrt{25} = 5$. Da die z-Koordinaten gleich sind, reduziert sich das Problem auf 2D mit dem 3-4-5-Tripel.
 
@@ -1307,10 +1313,10 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
             "Wie berechnet man den Abstand eines Punktes $P$ von einer Geraden $g: \\vec{r} = \\vec{r_0} + t \\cdot \\vec{d}$?",
           options: [
             "d = |r₀P × d| / |d| (Kreuzprodukt-Formel)",
-            "d = |r₀P · d| / |d| (Skalarprodukt-Formel)",
+            "d = |r₀P × d| / |d| (Skalarprodukt-Formel)",
             "d = |r₀P| − |d| (Differenz der Betrage)",
             "d = |r₀P + d| (Summe)",
-            "d = |r₀P| · |d| (Produkt der Betrage)",
+            "d = |r₀P| × |d| (Produkt der Betrage)",
           ],
           correctIndex: 0,
           explanation:

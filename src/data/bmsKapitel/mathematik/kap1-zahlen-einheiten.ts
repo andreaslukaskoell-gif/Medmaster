@@ -27,7 +27,7 @@ export const mathKapZahlen: Kapitel = {
       ],
       content: `## Einleitung
 
-Ein rotes Blutkörperchen ist 8 µm groß. Ein Virus misst 100 nm. Glukose im Blut liegt bei 5 mmol/L. All das lässt sich nur mit **Zehnerpotenzen** bequem und fehlerfrei schreiben — also mit Ausdrücken der Form 10ⁿ, bei denen die **Zehnerpotenz** die kompakte Schreibweise für „10 mal 10 mal … (n-mal)“ oder „1 geteilt durch 10ⁿ“ ist. Wer Zehnerpotenzen nicht sicher beherrscht, stolpert über Dosierungsberechnungen, Laborwerte und Einheitenumrechnungen — exakt die Aufgaben, die im MedAT und im klinischen Alltag vorkommen. Für den MedAT sind Potenzschreibweise, die vier Rechenregeln und schnelles Abschätzen von Verhältnissen prüfungsrelevant.
+Ein rotes Blutkörperchen ist 8 µm groß. Ein Virus misst 100 nm. Glukose im Blut liegt bei 5 mmol/L. All das lässt sich nur mit **Zehnerpotenzen** bequem und fehlerfrei schreiben — also mit Ausdrücken der Form 10ⁿ, bei denen die **Zehnerpotenz** die kompakte Schreibweise für „10 × 10 × … (n-mal)“ oder „1 geteilt durch 10ⁿ“ ist. Wer Zehnerpotenzen nicht sicher beherrscht, stolpert über Dosierungsberechnungen, Laborwerte und Einheitenumrechnungen — exakt die Aufgaben, die im MedAT und im klinischen Alltag vorkommen. Für den MedAT sind Potenzschreibweise, die vier Rechenregeln und schnelles Abschätzen von Verhältnissen prüfungsrelevant.
 
 **In diesem Kapitel lernst du:**
 - **Zehnerpotenzen** mit positivem und negativem **Exponenten** zu lesen und in Dezimalzahlen umzurechnen (10³ = 1.000, 10⁻⁶ = 0,000001)
@@ -72,7 +72,7 @@ Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl
 | 10⁻⁶ | 1/10⁶ | 0,000 001 |
 | 10⁻⁹ | 1/10⁹ | 0,000 000 001 |
 
-**Wichtig:** 10⁻³ ist eine **positive** Zahl (0,001) — der Exponent ist negativ, die Zahl selbst nicht! Verwechslung mit −10³ (minus tausend) ist eine häufige Fehlerquelle.
+**Wichtig:** 10⁻³ ist eine **positive** Zahl (0,001) — der Exponent ist negativ, die Zahl selbst nicht! Verwechslung mit −10³ (−1000) ist eine häufige Fehlerquelle.
 
 **Sonderfall 10⁰ = 1:** Aus 10² / 10² = 1 und der Potenzregel 10²⁻² = 10⁰ folgt **10⁰ = 1**. Jede Zahl (außer 0) hoch null ergibt 1.
 
@@ -101,7 +101,7 @@ Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl
 
 ## Multiplikation von Zahlen in Zehnerpotenzen-Form
 
-**Bisher haben wir gesehen:** Reine Zehnerpotenzen 10ᵃ × 10ᵇ. **In der Praxis** stehen oft Ausdrücke wie **3 × 10⁴** oder **1,4 × 10⁻¹** — hier ist die Zahl in **Zehnerpotenzen-Form** geschrieben: ein **Vorfaktor** (die Zahl vor dem „mal“) mal eine Zehnerpotenz. **Um solche Produkte zu berechnen,** gehst du in zwei Schritten vor.
+**Bisher haben wir gesehen:** Reine Zehnerpotenzen 10ᵃ × 10ᵇ. **In der Praxis** stehen oft Ausdrücke wie **3 × 10⁴** oder **1,4 × 10⁻¹** — hier ist die Zahl in **Zehnerpotenzen-Form** geschrieben: ein **Vorfaktor** (die Zahl vor dem „mal“) × eine Zehnerpotenz. **Um solche Produkte zu berechnen,** gehst du in zwei Schritten vor.
 
 Wenn Ausdrücke der Form **(a × 10ᵐ) × (b × 10ⁿ)** multipliziert werden:
 
@@ -146,7 +146,7 @@ Ein Virus (10⁻⁷ m) ist etwa **10-mal** kleiner als eine Bakterienzelle (10�
 
 | Fallstrick | Falsch | Richtig |
 |------------|--------|---------|
-| **1** Negativer Exponent ≠ negative Zahl | 10⁻³ = „minus tausend“ | 10⁻³ = 0,001 (positiv!) |
+| **1** Negativer Exponent ≠ negative Zahl | 10⁻³ = „−1000“ | 10⁻³ = 0,001 (positiv!) |
 | **2** Addition: Exponenten nicht addieren | 3×10³ + 2×10² = 5×10⁵ | Erst auf gleichen Exponenten: 3×10³ + 0,2×10³ = 3,2×10³ |
 | **3** Multiplikation: Exponenten addieren, nicht multiplizieren | 10³ × 10⁴ = 10¹² | 10³ × 10⁴ = 10⁷ |
 
@@ -211,7 +211,7 @@ Zur **schnellen Wiederholung** die vier Regeln im Überblick:
 
 - **Zehnerpotenzen**: 10³ = 1.000; 10⁻⁶ = 0,000 001; negative Exponenten = Kehrwert
 - **Multiplikation**: 10ᵃ × 10ᵇ = 10^(a+b); **Division**: 10ᵃ / 10ᵇ = 10^(a−b)
-- **Potenzieren**: (10ᵃ)ᵇ = 10^(a·b); **Wurzel**: ⁿ√(10ᵐ) = 10^(m/n)
+- **Potenzieren**: (10ᵃ)ᵇ = 10^(a×b); **Wurzel**: ⁿ√(10ᵐ) = 10^(m/n)
 - **Verhältnisse**: Exponentendifferenz gibt Faktor an (10⁶ / 10⁻³ = 10⁹ = Milliardenfaktor)
 - **Klinisch**: Zellgröße 8 µm = 8×10⁻⁶ m; Virus 100 nm = 10⁻⁷ m; [Na⁺] 140 mmol/L = 0,14 mol/L`,
       lernziele: [
@@ -387,7 +387,7 @@ Zusammenfassend ermöglichen Zehnerpotenzen das schnelle Abschätzen von Verhäl
           ],
           correctIndex: 2,
           explanation:
-            "Das Verhältnis berechnet man als (2 × 10⁻⁶) / (2 × 10⁻⁸) = (2/2) × 10^(−6−(−8)) = 1 × 10² = 100. Das Bakterium ist 100-mal größer als das Virus. Zur Probe: 0,000 002 / 0,000 000 02 = 100. Diese Größenordnung ist biologisch bedeutsam: Sie erklärt, warum Bakterien mit dem Lichtmikroskop sichtbar sind (Auflösung ca. 200 nm = 2 × 10⁻⁷ m), während Viren ein Elektronenmikroskop erfordern. Der Mensch selbst ist nochmals ca. 10⁸ mal größer als ein Virus.",
+            "Das Verhältnis berechnet man als (2 × 10⁻⁶) / (2 × 10⁻⁸) = (2/2) × 10^(−6−(−8)) = 1 × 10² = 100. Das Bakterium ist 100-mal größer als das Virus. Zur Probe: 0,000 002 / 0,000 000 02 = 100. Diese Größenordnung ist biologisch bedeutsam: Sie erklärt, warum Bakterien mit dem Lichtmikroskop sichtbar sind (Auflösung ca. 200 nm = 2 × 10⁻⁷ m), während Viren ein Elektronenmikroskop erfordern. Der Mensch selbst ist nochmals ca. 10⁸ × größer als ein Virus.",
           hints: [
             "Dividiere die beiden Größen: Vorfaktoren teilen, Exponenten subtrahieren.",
             "Exponenten: (−6) − (−8) = +2. Faktor = 10² = 100.",
@@ -1212,7 +1212,7 @@ Klinisch bedeutsam: Der arteriell gemessene pH liegt im Blut strikt bei 7,35–7
             "Bei Division werden Vorfaktoren geteilt und Exponenten subtrahiert: (9,6 / 3,2) × 10^(6 − (−2)) = 3,0 × 10^(6+2) = 3,0 × 10⁸. Option A dividiert fälschlicherweise die Exponenten (statt zu subtrahieren). Option C multipliziert die Exponenten (das wäre Potenzieren, nicht Division). Option D subtrahiert die Vorfaktoren statt sie zu dividieren. Option E ist identisch mit B in der Rechnung (6 − (−2) = 6 + 2 = 8) und führt zum gleichen richtigen Ergebnis — B ist die Standardformulierung mit expliziter Subtraktion.",
           hints: [
             "Division: Vorfaktoren dividieren (9,6 / 3,2 = 3), Exponenten subtrahieren: 6 − (−2) = 8.",
-            "Minus minus gibt plus: 6 − (−2) = 6 + 2 = 8. Ergebnis: 3,0 × 10⁸.",
+            "Minus − gibt plus: 6 − (−2) = 6 + 2 = 8. Ergebnis: 3,0 × 10⁸.",
           ],
           difficulty: 2,
           tags: ["wissenschaftliche-notation", "division", "exponenten"],
@@ -1440,7 +1440,7 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
         },
         {
           heading: "Volumeneinheiten — Faktor kubieren",
-          text: "Wenn 1 m = 100 cm, dann 1 m³ = (100 cm)³ = 10⁶ cm³. Die wichtigste Merkhilfe: 1 L = 1 dm³. Da 1 dm = 10 cm, gilt 1 dm³ = (10 cm)³ = 1.000 cm³. Also 1 L = 1.000 mL = 1.000 cm³. Daraus: 1 mL = 1 cm³. Diese Gleichheit ist in der Medizin allgegenwärtig: Infusionsmengen in mL, Injektionsvolumina in mL, Harnausscheidung in mL/h. Die Flüssigkeitsbilanz auf der Intensivstation wird stundengenau in mL geführt — Einfuhr minus Ausfuhr ergibt die Bilanz.",
+          text: "Wenn 1 m = 100 cm, dann 1 m³ = (100 cm)³ = 10⁶ cm³. Die wichtigste Merkhilfe: 1 L = 1 dm³. Da 1 dm = 10 cm, gilt 1 dm³ = (10 cm)³ = 1.000 cm³. Also 1 L = 1.000 mL = 1.000 cm³. Daraus: 1 mL = 1 cm³. Diese Gleichheit ist in der Medizin allgegenwärtig: Infusionsmengen in mL, Injektionsvolumina in mL, Harnausscheidung in mL/h. Die Flüssigkeitsbilanz auf der Intensivstation wird stundengenau in mL geführt — Einfuhr − Ausfuhr ergibt die Bilanz.",
           merksatz: "1 L = 1 dm³ = 1.000 mL = 1.000 cm³; 1 mL = 1 cm³ (exakte Gleichheit!)",
         },
         {
@@ -1592,7 +1592,7 @@ Ein EKG-Intervall wird in **ms** gemessen. Blutfluss in **m/s** oder cm/s. Brems
 - **Zeiteinheiten** im 60er-System (1 min = 60 s, 1 h = 3.600 s) und medizinische Zeitskalen (EKG, Halbwertszeit)
 - **Geschwindigkeit** v = s/t [m/s] und Umrechnung **km/h ↔ m/s** (Faktor 3,6)
 - **Beschleunigung** a = Δv/Δt und die **drei Formeln** der gleichmäßig beschleunigten Bewegung
-- **Freier Fall:** v = g·t, s = ½·g·t², Aufprall **v = √(2gh)**; g ≈ 10 m/s²
+- **Freier Fall:** v = g×t, s = ½×g×t², Aufprall **v = √(2gh)**; g ≈ 10 m/s²
 - **Herzfrequenz** in Hz (÷ 60) und **Nervenleitgeschwindigkeit** (NLG) als klinische Anwendung
 
 ---
@@ -1654,7 +1654,7 @@ Physiologische Geschwindigkeiten:
 
 Der erste, scharfe Schmerz bei Verletzung wird über A-delta-Fasern (5–30 m/s) geleitet; der anhaltende, dumpfe Schmerz über C-Fasern (0,5–2 m/s). Das erklärt das zeitliche Muster der Schmerzwahrnehmung.
 
-> **Merke:** **km/h → m/s:** durch **3,6**; **m/s → km/h:** mal **3,6**. Merkhilfe: 36 km/h = 10 m/s; 72 km/h = 20 m/s.
+> **Merke:** **km/h → m/s:** durch **3,6**; **m/s → km/h:** × **3,6**. Merkhilfe: 36 km/h = 10 m/s; 72 km/h = 20 m/s.
 
 **SVG-Hinweis (km/h ↔ m/s):** Ein kleines Schema mit Pfeilen „÷ 3,6“ und „× 3,6“ und den Beispielen 36 km/h = 10 m/s unterstützt die Merkfähigkeit. *Typ: Schema / Eselsbrücke.*
 
@@ -1705,7 +1705,7 @@ v = √(2 × g × h)
 - Aus 5 m: v = √(100) = 10 m/s = 36 km/h
 - Aus 20 m: v = √(400) = 20 m/s = 72 km/h
 
-> **Merke:** **Freier Fall:** v = g·t; s = ½·g·t²; **Aufprallgeschwindigkeit** v = √(2·g·h). g ≈ 10 m/s². Ab 3 m Sturzhöhe: Hochrasanztrauma.
+> **Merke:** **Freier Fall:** v = g×t; s = ½×g×t²; **Aufprallgeschwindigkeit** v = √(2×g×h). g ≈ 10 m/s². Ab 3 m Sturzhöhe: Hochrasanztrauma.
 
 ---
 
@@ -1734,7 +1734,7 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Zeiteinheiten: 1 min = 60 s, 1 h = 3.600 s, 1 Tag = 86.400 s; Geschwindigkeit v = s/t [m/s]; **km/h ÷ 3,6 = m/s**, m/s × 3,6 = km/h (36 km/h = 10 m/s); Beschleunigung a = Δv/Δt; drei Formeln gleichmäßig beschleunigt (v = v₀+at, s = v₀t+½at², v² = v₀²+2as); **Freier Fall:** v = g·t, s = ½·g·t², **Aufprall v = √(2gh)**; g ≈ 10 m/s²; Herzfrequenz: f [Hz] = HF [1/min] ÷ 60, T = 1/f; NLG A-alpha 60–80 m/s, C-Fasern 0,5–2 m/s; ab 3 m Sturzhöhe Hochrasanztrauma.
+**Zentral prüfungsrelevant:** Zeiteinheiten: 1 min = 60 s, 1 h = 3.600 s, 1 Tag = 86.400 s; Geschwindigkeit v = s/t [m/s]; **km/h ÷ 3,6 = m/s**, m/s × 3,6 = km/h (36 km/h = 10 m/s); Beschleunigung a = Δv/Δt; drei Formeln gleichmäßig beschleunigt (v = v₀+at, s = v₀t+½at², v² = v₀²+2as); **Freier Fall:** v = g×t, s = ½×g×t², **Aufprall v = √(2gh)**; g ≈ 10 m/s²; Herzfrequenz: f [Hz] = HF [1/min] ÷ 60, T = 1/f; NLG A-alpha 60–80 m/s, C-Fasern 0,5–2 m/s; ab 3 m Sturzhöhe Hochrasanztrauma.
 
 **Ergänzend vertiefend (noch prüfungsnah):** Trauma g-Kräfte; EKG-Intervalle in ms; Halbwertszeiten in verschiedenen Zeiteinheiten.
 
@@ -1750,7 +1750,7 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - 1 h = 3.600 s; 1 Tag = 86.400 s; 1 Jahr ≈ π × 10⁷ s
-- g ≈ 9,81 m/s² ≈ 10 m/s²; Formeln freier Fall: v = g·t; s = ½·g·t²; Aufprall: v = √(2gh)
+- g ≈ 9,81 m/s² ≈ 10 m/s²; Formeln freier Fall: v = g×t; s = ½×g×t²; Aufprall: v = √(2gh)
 - NLG: A-alpha 60–80 m/s; A-delta 5–30 m/s; C-Fasern 0,5–2 m/s (myelinisiert = schneller)
 - Ab Sturzhöhe 3 m: Verdacht auf Hochrasanztrauma → Polytrauma-CT
 ---
@@ -1758,9 +1758,9 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
 ## Zusammenfassung (ultrakompakt)
 
 - **Zeitumrechnung**: 1 min = 60 s; 1 h = 3.600 s; EKG-Intervalle in ms (QRS ~80 ms)
-- **Geschwindigkeit**: v = s/t [m/s]; km/h → m/s: durch 3,6; m/s → km/h: mal 3,6
+- **Geschwindigkeit**: v = s/t [m/s]; km/h → m/s: durch 3,6; m/s → km/h: × 3,6
 - **Beschleunigung**: a = Δv/Δt [m/s²]; g = 9,81 ≈ 10 m/s²
-- **Freier Fall**: v = g·t; s = ½·g·t²; Aufprallgeschwindigkeit v = √(2·g·h)
+- **Freier Fall**: v = g×t; s = ½×g×t²; Aufprallgeschwindigkeit v = √(2×g×h)
 - **Herzfrequenz**: HF [1/min] ÷ 60 = f [Hz]; Periodendauer T = 1/f = 60/HF
 - **Klinisch**: Sturzgeschwindigkeit aus 3 m ≈ 7,7 m/s; ab 3 m Hochrasanztrauma → Polytrauma-CT
 
@@ -1790,7 +1790,7 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
           heading: "Geschwindigkeitsumrechnung: km/h ↔ m/s",
           text: "Der Faktor 3,6 verbindet km/h und m/s: m/s = km/h ÷ 3,6; km/h = m/s × 3,6. Herleitung: 1 km/h = 1.000 m / 3.600 s = 1/3,6 m/s. Merkhilfe: 36 km/h = 10 m/s. Physiologische Referenzwerte: Aorta ~1 m/s = 3,6 km/h; Kapillarfluss ~1 mm/s = 0,0036 km/h; Nervenleitgeschwindigkeit 70 m/s = 252 km/h. Diese Größenordnungen helfen, Aufgaben sofort auf Plausibilität zu prüfen.",
           merksatz:
-            "km/h → m/s: durch 3,6; m/s → km/h: mal 3,6; Merke: 36 km/h = 10 m/s; 72 km/h = 20 m/s",
+            "km/h → m/s: durch 3,6; m/s → km/h: × 3,6; Merke: 36 km/h = 10 m/s; 72 km/h = 20 m/s",
         },
         {
           heading: "Kinematik — Gleichförmig und beschleunigt",
@@ -1991,7 +1991,7 @@ Temperatur: Grundeinheit **Kelvin (K)**, KEIN Grad-Symbol! Umrechnung: T [K] = T
 
 ![Dimensionsanalyse](/grafik-dimensionsanalyse.svg)
 
-**Erklärung zur Grafik:** Abgeleitete Einheiten entstehen aus Basiseinheiten (z. B. N = kg·m/s²); die Grafik unterstützt die Dimensionskontrolle bei Umrechnungen.
+**Erklärung zur Grafik:** Abgeleitete Einheiten entstehen aus Basiseinheiten (z. B. N = kg×m/s²); die Grafik unterstützt die Dimensionskontrolle bei Umrechnungen.
 
 ---
 
@@ -1999,11 +1999,11 @@ Temperatur: Grundeinheit **Kelvin (K)**, KEIN Grad-Symbol! Umrechnung: T [K] = T
 
 **Bisher haben wir gesehen:** Die sieben Grundeinheiten. **Alle weiteren** Einheiten (Kraft, Druck, Energie, Leistung, …) sind **abgeleitet** — sie entstehen durch Produkte und Quotienten der Grundeinheiten. **Dafür** die wichtigsten für den MedAT:
 
-Kraft → **Newton (N)** = kg·m/s²; Klinisch: Gewebezug, Herzkontraktion
-Druck → Pascal (Pa) = N/m² = kg/(m·s²); Klinisch: Blutdruck, Atemwegsdruck
-Energie/Arbeit → Joule (J) = N·m = kg·m²/s²; Klinisch: Nahrungsenergie, Herzarbeit
-Leistung → Watt (W) = J/s = kg·m²/s³; Klinisch: Herzleistung, Metabolismus
-El. Ladung → Coulomb (C) = A·s; Klinisch: Defibrillationsenergie
+Kraft → **Newton (N)** = kg×m/s²; Klinisch: Gewebezug, Herzkontraktion
+Druck → Pascal (Pa) = N/m² = kg/(m×s²); Klinisch: Blutdruck, Atemwegsdruck
+Energie/Arbeit → Joule (J) = N×m = kg×m²/s²; Klinisch: Nahrungsenergie, Herzarbeit
+Leistung → Watt (W) = J/s = kg×m²/s³; Klinisch: Herzleistung, Metabolismus
+El. Ladung → Coulomb (C) = A×s; Klinisch: Defibrillationsenergie
 El. Spannung → Volt (V) = J/C; Klinisch: Membranpotenzial (−70 mV), EKG
 El. Widerstand → Ohm (Ω) = V/A; Klinisch: Körperwiderstand, Impedanz
 Frequenz → Hertz (Hz) = 1/s; Klinisch: Herzfrequenz, Ultraschall (MHz)
@@ -2012,10 +2012,10 @@ Strahlendosis → Gray (Gy) = J/kg; Klinisch: Strahlentherapie (60–70 Gy)
 Äquivalentdosis → Sievert (Sv) = J/kg × Wichtungsfaktor; Klinisch: Strahlenschutz
 
 Ableitungsketten:
-Newton → Joule → Watt: N (kg·m/s²) → N·m = J (kg·m²/s²) → J/s = W (kg·m²/s³)
-Newton → Pascal: N/m² = Pa (kg/(m·s²))
+Newton → Joule → Watt: N (kg×m/s²) → N×m = J (kg×m²/s²) → J/s = W (kg×m²/s³)
+Newton → Pascal: N/m² = Pa (kg/(m×s²))
 
-> **Merke:** **Ableitungskette:** N = kg·m/s² → Pa = N/m² (Druck) → J = N·m (Energie) → W = J/s (Leistung). Diese Kette genügt für fast alle MedAT-Physikaufgaben!
+> **Merke:** **Ableitungskette:** N = kg×m/s² → Pa = N/m² (Druck) → J = N×m (Energie) → W = J/s (Leistung). Diese Kette genügt für fast alle MedAT-Physikaufgaben!
 
 ---
 
@@ -2043,15 +2043,15 @@ Molekülmasse:
 Prinzip: Die Einheiten auf beiden Seiten einer Gleichung müssen übereinstimmen.
 
 Beispiel 1 — Arbeit: W = F × s
-[N] × [m] = [kg·m/s²] × [m] = [kg·m²/s²] = [J] ✓
+[N] × [m] = [kg×m/s²] × [m] = [kg×m²/s²] = [J] ✓
 
 Beispiel 2 — Hydrostatischer Druck: p = ρ × g × h
-[kg/m³] × [m/s²] × [m] = [kg/(m·s²)] = [Pa] ✓
+[kg/m³] × [m/s²] × [m] = [kg/(m×s²)] = [Pa] ✓
 
 Beispiel 3 — Herzleistung: P = MAP × HZV
 MAP = 100 mmHg = 13.300 Pa; HZV = 5 L/min = 8,33 × 10⁻⁵ m³/s
 P = 13.300 × 8,33 × 10⁻⁵ ≈ 1,1 W
-Dimensionen: [Pa] × [m³/s] = [N/m²] × [m³/s] = [N·m/s] = [J/s] = [W] ✓
+Dimensionen: [Pa] × [m³/s] = [N/m²] × [m³/s] = [N×m/s] = [J/s] = [W] ✓
 
 Das Herz leistet in Ruhe ~1 Watt!
 
@@ -2085,34 +2085,34 @@ Lösung: 80 mmHg × 133 Pa/mmHg = 10.640 Pa ≈ 10,6 kPa. Der systolische Wert v
 Lösung: 2.000 kcal × 4,184 kJ/kcal = 8.368 kJ ≈ 8.400 kJ/Tag. Davon nutzt der Grundumsatz ~60–70 %, der Rest geht in Thermogenese und körperliche Aktivität.
 
 **Aufgabe 3 — Dimensionsanalyse:** Prüfe die Formel p = ρ × g × h (hydrostatischer Druck).
-Lösung: [ρ] = kg/m³; [g] = m/s²; [h] = m. Eingesetzt: (kg/m³) × (m/s²) × m = kg/(m·s²) = N/m² = Pa. Die Einheit stimmt — die Formel ist dimensionell korrekt.
+Lösung: [ρ] = kg/m³; [g] = m/s²; [h] = m. Eingesetzt: (kg/m³) × (m/s²) × m = kg/(m×s²) = N/m² = Pa. Die Einheit stimmt — die Formel ist dimensionell korrekt.
 
 **Aufgabe 4 — Molkonzentration:** Ein Laborwert zeigt Glukose 100 mg/dL. Molmasse Glukose = 180 g/mol. Umrechnung in mmol/L?
 Lösung: 100 mg/dL = 1.000 mg/L = 1 g/L. Molarität = 1 g/L ÷ 180 g/mol = 0,00556 mol/L = 5,56 mmol/L. Normwert nüchtern: 3,9–6,1 mmol/L → 100 mg/dL liegt im oberen Normbereich.
 
-> **Merke:** Die Dimensionsanalyse ist am MedAT ein mächtiges Werkzeug: Wenn man eine Formel vergisst, kann man sie aus den Einheiten der gesuchten Größe rekonstruieren. Kraft [N = kg·m/s²], Druck [Pa = N/m²], Energie [J = N·m], Leistung [W = J/s] — diese Kette genügt für die meisten Physikaufgaben.
+> **Merke:** Die Dimensionsanalyse ist am MedAT ein mächtiges Werkzeug: Wenn man eine Formel vergisst, kann man sie aus den Einheiten der gesuchten Größe rekonstruieren. Kraft [N = kg×m/s²], Druck [Pa = N/m²], Energie [J = N×m], Leistung [W = J/s] — diese Kette genügt für die meisten Physikaufgaben.
 
 ## MedAT-Fokus
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** 7 SI-Grundeinheiten: m, kg, s, A, K, mol, cd; **kg** einzige mit Vorsilbe; Temperatur in K: T[K] = T[°C] + 273; Ableitungskette N = kg·m/s² → Pa = N/m² → J = N·m → W = J/s; 1 mmHg ≈ 133 Pa; 1 kcal = 4,184 kJ; Dimensionsanalyse (Einheiten beider Seiten müssen übereinstimmen); Mol, Avogadro 6,022×10²³; Glukose mg/dL → mmol/L (÷ 18 bzw. Molmasse 180).
+**Zentral prüfungsrelevant:** 7 SI-Grundeinheiten: m, kg, s, A, K, mol, cd; **kg** einzige mit Vorsilbe; Temperatur in K: T[K] = T[°C] + 273; Ableitungskette N = kg×m/s² → Pa = N/m² → J = N×m → W = J/s; 1 mmHg ≈ 133 Pa; 1 kcal = 4,184 kJ; Dimensionsanalyse (Einheiten beider Seiten müssen übereinstimmen); Mol, Avogadro 6,022×10²³; Glukose mg/dL → mmol/L (÷ 18 bzw. Molmasse 180).
 
 **Ergänzend vertiefend (noch prüfungsnah):** Coulomb, Volt, Ohm, Hertz, Becquerel, Gray, Sievert; Da (Dalton); cmH₂O; mOsmol/kg.
 
 **Häufige Fragen:**
 - "Welche SI-Grundeinheit misst Stoffmenge?" → Mol (mol); Avogadro: 6,022 × 10²³ Teilchen/mol
-- "Newton in SI-Grundeinheiten?" → kg·m/s² (F = m × a; Masse × Beschleunigung)
+- "Newton in SI-Grundeinheiten?" → kg×m/s² (F = m × a; Masse × Beschleunigung)
 - "37°C in Kelvin?" → 37 + 273 = 310 K
 
 **Typische Prüfungsfallen / Verwechslungen:**
 - SI-Grundeinheit der Masse = kg (nicht g!) — kg ist die **einzige** Grundeinheit mit Vorsilbe
-- Joule (Energie, J = N·m) ≠ Watt (Leistung, W = J/s) — Leistung ist Energie **pro Zeit**
+- Joule (Energie, J = N×m) ≠ Watt (Leistung, W = J/s) — Leistung ist Energie **pro Zeit**
 - 1 mmHg ≈ 133 Pa (nicht 100 Pa!) — Blutdruck 120 mmHg ≈ 16.000 Pa ≈ 16 kPa
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - 7 SI-Grundeinheiten: m, kg, s, A, K, mol, cd
-- Ableitungskette: N = kg·m/s² → Pa = N/m² → J = N·m → W = J/s → V = J/C
+- Ableitungskette: N = kg×m/s² → Pa = N/m² → J = N×m → W = J/s → V = J/C
 - 1 mmHg = 133 Pa; 760 mmHg = 1 atm ≈ 10⁵ Pa; 1 kcal = 4,184 kJ
 - Glukose mg/dL → mmol/L: ÷ 18 (Molmasse Glukose 180 g/mol); Herzleistung Ruhe: ~1 W
 ---
@@ -2120,7 +2120,7 @@ Lösung: 100 mg/dL = 1.000 mg/L = 1 g/L. Molarität = 1 g/L ÷ 180 g/mol = 0,005
 ## Zusammenfassung (ultrakompakt)
 
 - **7 Grundeinheiten**: m (Länge), kg (Masse), s (Zeit), A (Strom), K (Temperatur), mol (Stoffmenge), cd (Lichtstärke)
-- **Abgeleitete Einheiten**: N = kg·m/s² (Kraft); Pa = N/m² (Druck); J = N·m (Energie); W = J/s (Leistung); V = J/C (Spannung)
+- **Abgeleitete Einheiten**: N = kg×m/s² (Kraft); Pa = N/m² (Druck); J = N×m (Energie); W = J/s (Leistung); V = J/C (Spannung)
 - **Dimensionsanalyse**: Prüfe Einheiten beider Gleichungsseiten → stimmen sie, ist die Formel plausibel
 - **Nicht-SI**: 1 mmHg ≈ 133 Pa; 1 kcal ≈ 4,184 kJ; 1 Da ≈ 1,66×10⁻²⁷ kg (Dalton/atomare Masseneinheit)
 - **Klinisch**: Blutdruck 120/80 mmHg = 16/10,7 kPa; 2.000 kcal/Tag = 8.368 kJ; Glukose mg/dL → mmol/L: ÷ 18`,
@@ -2139,8 +2139,8 @@ Lösung: 100 mg/dL = 1.000 mg/L = 1 g/L. Molarität = 1 g/L ÷ 180 g/mol = 0,005
         },
         {
           heading: "Abgeleitete Einheiten — Ableitungsketten",
-          text: "Newton N = kg·m/s² (F = ma). Pascal Pa = N/m² (Druck = Kraft/Fläche). Joule J = N·m (Arbeit = Kraft × Weg). Watt W = J/s (Leistung = Energie/Zeit). Volt V = J/C. Die Kette N → Pa, N → J → W hilft beim Ableiten ohne Auswendiglernen. Medizinisch: Blutdruck in Pa (1 mmHg = 133 Pa); Herzleistung in W (~1 W Ruhe); EKG-Potenziale in mV (Membranruhepotenzial −70 mV, Aktionspotenzial +30 mV); Defibrillationsenergie in J (200–360 J biphasisch); Strahlendosis in Gray (Gy = J/kg).",
-          merksatz: "N = kg·m/s²; Pa = N/m²; J = N·m = kg·m²/s²; W = J/s; V = J/C",
+          text: "Newton N = kg×m/s² (F = ma). Pascal Pa = N/m² (Druck = Kraft/Fläche). Joule J = N×m (Arbeit = Kraft × Weg). Watt W = J/s (Leistung = Energie/Zeit). Volt V = J/C. Die Kette N → Pa, N → J → W hilft beim Ableiten ohne Auswendiglernen. Medizinisch: Blutdruck in Pa (1 mmHg = 133 Pa); Herzleistung in W (~1 W Ruhe); EKG-Potenziale in mV (Membranruhepotenzial −70 mV, Aktionspotenzial +30 mV); Defibrillationsenergie in J (200–360 J biphasisch); Strahlendosis in Gray (Gy = J/kg).",
+          merksatz: "N = kg×m/s²; Pa = N/m²; J = N×m = kg×m²/s²; W = J/s; V = J/C",
         },
         {
           heading: "Klinische Konzentrationseinheiten — mmol/L, mg/dL, mEq/L",
@@ -2150,14 +2150,14 @@ Lösung: 100 mg/dL = 1.000 mg/L = 1 g/L. Molarität = 1 g/L ÷ 180 g/mol = 0,005
         },
         {
           heading: "Dimensionsanalyse — Formeln überprüfen",
-          text: "Die Dimensionsanalyse prüft, ob eine Formel dimensionell konsistent ist. Methode: SI-Grundeinheiten einsetzen, vereinfachen, mit Zieleinheit vergleichen. Herzleistungs-Beispiel: P = MAP × HZV. MAP = 100 mmHg = 13.300 Pa = 13.300 N/m²; HZV = 5 L/min = 8,33 × 10⁻⁵ m³/s. P = 13.300 N/m² × 8,33 × 10⁻⁵ m³/s = 1,1 N·m/s = 1,1 J/s = 1,1 W. Dimensionen: [N/m²] × [m³/s] = [N·m/s] = [J/s] = [W] ✓. Nützlich am MedAT: Wenn man eine Formel vergisst, kann man sie aus der Einheit der gesuchten Größe rekonstruieren.",
+          text: "Die Dimensionsanalyse prüft, ob eine Formel dimensionell konsistent ist. Methode: SI-Grundeinheiten einsetzen, vereinfachen, mit Zieleinheit vergleichen. Herzleistungs-Beispiel: P = MAP × HZV. MAP = 100 mmHg = 13.300 Pa = 13.300 N/m²; HZV = 5 L/min = 8,33 × 10⁻⁵ m³/s. P = 13.300 N/m² × 8,33 × 10⁻⁵ m³/s = 1,1 N×m/s = 1,1 J/s = 1,1 W. Dimensionen: [N/m²] × [m³/s] = [N×m/s] = [J/s] = [W] ✓. Nützlich am MedAT: Wenn man eine Formel vergisst, kann man sie aus der Einheit der gesuchten Größe rekonstruieren.",
           merksatz:
             "Dimensionsanalyse: Einheiten links = Einheiten rechts — Formelcheck ohne Formelblatt!",
         },
       ],
       merksätze: [
         "7 SI-Grundeinheiten: m, kg, s, A, K, mol, cd — kg EINZIGE mit Vorsilbe",
-        "N = kg·m/s² (Kraft); Pa = N/m² (Druck); J = N·m (Energie); W = J/s (Leistung)",
+        "N = kg×m/s² (Kraft); Pa = N/m² (Druck); J = N×m (Energie); W = J/s (Leistung)",
         "1 mmHg = 133 Pa; 760 mmHg = 1 atm = 101.325 Pa ≈ 10⁵ Pa",
         "1 kcal = 4,184 kJ; Ruheumsatz ~2.000 kcal/Tag = ~8.400 kJ/Tag",
         "1 Da = 1 g/mol = 1,66 × 10⁻²⁷ kg; Albumin 66 kDa; IgG 150 kDa; Hb 64 kDa",
@@ -2172,7 +2172,7 @@ Lösung: 100 mg/dL = 1.000 mg/L = 1 g/L. Molarität = 1 g/L ÷ 180 g/mol = 0,005
         question:
           "Ein Patient hat einen systolischen Blutdruck von 160 mmHg. Drücken Sie diesen Wert in Pascal aus und berechnen Sie die Herzleistung (Watt) des linken Herzens, wenn HZV = 5 L/min und MAP = 110 mmHg. Kommentieren Sie klinisch. (1 mmHg = 133 Pa)",
         answer:
-          "Teil 1: Systolischer Blutdruck in Pascal: 160 mmHg × 133 Pa/mmHg = 21.280 Pa ≈ 21,3 kPa. Normwert: <120 mmHg = <15.960 Pa. 160 mmHg entspricht arteriellem Hypertonus Grad II (ESC-Leitlinie: Grad I 140–159; Grad II 160–179; Grad III ≥180 mmHg). Teil 2: Herzleistungsberechnung: MAP = 110 mmHg × 133 Pa/mmHg = 14.630 Pa. HZV = 5 L/min = 5.000 mL/min = 5 × 10⁻³ m³ / 60 s = 8,33 × 10⁻⁵ m³/s. Herzleistung P = MAP × HZV = 14.630 Pa × 8,33 × 10⁻⁵ m³/s = 1,22 W. Dimensionskontrolle: [Pa] × [m³/s] = [N/m²] × [m³/s] = [N·m/s] = [J/s] = [W] ✓. Klinischer Kommentar: ~1,2 W für das linke Herz entspricht ~20 % mehr als beim Normotonus (MAP ~100 mmHg → ~1,0 W). Chronische Hypertonie erhöht dauerhaft die kardiale Nachlast (Afterload). Über Jahre führt dies zu linksventrikulärer Hypertrophie (LVH, Wand >1,2 cm) und schließlich diastolischer Herzinsuffizienz. Echokardiographisch: verdickte Wand, eingeschränktes E/A-Verhältnis. Therapie: ACE-Hemmer/ARB, Kalziumantagonisten, Diuretika gemäß ESC-Leitlinien.",
+          "Teil 1: Systolischer Blutdruck in Pascal: 160 mmHg × 133 Pa/mmHg = 21.280 Pa ≈ 21,3 kPa. Normwert: <120 mmHg = <15.960 Pa. 160 mmHg entspricht arteriellem Hypertonus Grad II (ESC-Leitlinie: Grad I 140–159; Grad II 160–179; Grad III ≥180 mmHg). Teil 2: Herzleistungsberechnung: MAP = 110 mmHg × 133 Pa/mmHg = 14.630 Pa. HZV = 5 L/min = 5.000 mL/min = 5 × 10⁻³ m³ / 60 s = 8,33 × 10⁻⁵ m³/s. Herzleistung P = MAP × HZV = 14.630 Pa × 8,33 × 10⁻⁵ m³/s = 1,22 W. Dimensionskontrolle: [Pa] × [m³/s] = [N/m²] × [m³/s] = [N×m/s] = [J/s] = [W] ✓. Klinischer Kommentar: ~1,2 W für das linke Herz entspricht ~20 % mehr als beim Normotonus (MAP ~100 mmHg → ~1,0 W). Chronische Hypertonie erhöht dauerhaft die kardiale Nachlast (Afterload). Über Jahre führt dies zu linksventrikulärer Hypertrophie (LVH, Wand >1,2 cm) und schließlich diastolischer Herzinsuffizienz. Echokardiographisch: verdickte Wand, eingeschränktes E/A-Verhältnis. Therapie: ACE-Hemmer/ARB, Kalziumantagonisten, Diuretika gemäß ESC-Leitlinien.",
       },
       klinischerBezug:
         "Die Herzarbeit (Joule) und Herzleistung (Watt) sind physikalische Maße der Pumpfunktion. In 70 Lebensjahren bei 70 Schlägen/min und Herzschlagvolumen 70 mL leistet das Herz eine Gesamtarbeit von ~3 × 10⁹ J. Strahlenschutz: Die Äquivalentdosis in Sievert (Sv) gibt die biologische Strahlenwirkung an. Ein Röntgen-Thorax liefert ~0,02 mSv; CT-Abdomen ~10–15 mSv; natürliche Jahreshintergrunddosis ~2,1 mSv in Österreich; Strahlenschutz-Grenze für beruflich Strahlenexponierte 20 mSv/Jahr nach österreichischem Strahlenschutzgesetz (§ 42 StrSchG 2020).",
@@ -2192,10 +2192,10 @@ Lösung: 100 mg/dL = 1.000 mg/L = 1 g/L. Molarität = 1 g/L ÷ 180 g/mol = 0,005
         },
         {
           question: "Welche Einheit hat Druck im SI-System?",
-          options: ["Pa = N/m²", "N = kg·m/s²", "J = N·m", "W = J/s", "bar"],
+          options: ["Pa = N/m²", "N = kg×m/s²", "J = N×m", "W = J/s", "bar"],
           correctIndex: 0,
           explanation:
-            "Druck = Kraft/Fläche. SI-Einheit: Pascal (Pa) = N/m² = kg/(m·s²). Newton ist die Einheit der Kraft. Joule ist die Einheit der Energie. Watt ist die Einheit der Leistung. Bar ist keine SI-Einheit (toleriert): 1 bar = 10⁵ Pa. Klinisch: Blutdruck 120 mmHg = 15.960 Pa; Augeninnendruck normal 10–21 mmHg = 1.330–2.800 Pa; Liquordruck im Liegen normal 7–18 cmH₂O = 686–1.765 Pa.",
+            "Druck = Kraft/Fläche. SI-Einheit: Pascal (Pa) = N/m² = kg/(m×s²). Newton ist die Einheit der Kraft. Joule ist die Einheit der Energie. Watt ist die Einheit der Leistung. Bar ist keine SI-Einheit (toleriert): 1 bar = 10⁵ Pa. Klinisch: Blutdruck 120 mmHg = 15.960 Pa; Augeninnendruck normal 10–21 mmHg = 1.330–2.800 Pa; Liquordruck im Liegen normal 7–18 cmH₂O = 686–1.765 Pa.",
           hints: [
             "Druck = Kraft / Fläche. Einheit der Kraft ist N, der Fläche ist m².",
             "N/m² = Pa.",
@@ -2218,7 +2218,7 @@ Lösung: 100 mg/dL = 1.000 mg/L = 1 g/L. Molarität = 1 g/L ÷ 180 g/mol = 0,005
           options: ["Watt (W = J/s)", "Joule (J)", "Newton (N)", "Pascal (Pa)", "Volt (V)"],
           correctIndex: 0,
           explanation:
-            "Leistung P = Energie/Zeit. SI-Einheit: Watt (W) = J/s = kg·m²/s³. Joule ist die Einheit der Energie/Arbeit, nicht der Leistung. 1 kW = 1.000 W. Herzleistung in Ruhe ~1 W; menschlicher Grundumsatz ~80–100 W (der Körper gibt so viel Wärme ab wie eine Glühbirne!); bei körperlicher Maximalbelastung bis ~1.000 W kurzzeitig möglich. Ein Ausdauersportler kann über 1 h ~300–400 W aufrechterhalten.",
+            "Leistung P = Energie/Zeit. SI-Einheit: Watt (W) = J/s = kg×m²/s³. Joule ist die Einheit der Energie/Arbeit, nicht der Leistung. 1 kW = 1.000 W. Herzleistung in Ruhe ~1 W; menschlicher Grundumsatz ~80–100 W (der Körper gibt so viel Wärme ab wie eine Glühbirne!); bei körperlicher Maximalbelastung bis ~1.000 W kurzzeitig möglich. Ein Ausdauersportler kann über 1 h ~300–400 W aufrechterhalten.",
           hints: ["Leistung = Energie / Zeit. Energie in J, Zeit in s.", "J/s = W (Watt)."],
           difficulty: 1,
           tags: ["si-einheiten", "leistung", "watt"],
@@ -2228,20 +2228,20 @@ Lösung: 100 mg/dL = 1.000 mg/L = 1 g/L. Molarität = 1 g/L ÷ 180 g/mol = 0,005
           options: ["310 K", "37 K", "273 K", "100 K", "236 K"],
           correctIndex: 0,
           explanation:
-            "T [K] = T [°C] + 273 = 37 + 273 = 310 K. Absolutnullpunkt 0 K = −273°C; Gefrierpunkt Wasser 0°C = 273 K; Siedepunkt Wasser 100°C = 373 K; Körpertemperatur 37°C = 310 K; Fieber >38°C = >311 K. In der Biochemie (Arrhenius-Gleichung k = A × exp(−Ea/RT), R = 8,314 J/(mol·K)): Q10-Regel — Temperaturerhöhung um 10 K (≈ 10°C) verdoppelt Reaktionsgeschwindigkeit, erklärt erhöhten Metabolismus bei Fieber.",
+            "T [K] = T [°C] + 273 = 37 + 273 = 310 K. Absolutnullpunkt 0 K = −273°C; Gefrierpunkt Wasser 0°C = 273 K; Siedepunkt Wasser 100°C = 373 K; Körpertemperatur 37°C = 310 K; Fieber >38°C = >311 K. In der Biochemie (Arrhenius-Gleichung k = A × exp(−Ea/RT), R = 8,314 J/(mol×K)): Q10-Regel — Temperaturerhöhung um 10 K (≈ 10°C) verdoppelt Reaktionsgeschwindigkeit, erklärt erhöhten Metabolismus bei Fieber.",
           hints: ["T [K] = T [°C] + 273.", "37 + 273 = 310 K."],
           difficulty: 1,
           tags: ["temperatureinheiten", "kelvin", "celsius"],
         },
         {
           question: "Welche Einheit hat Energie in SI-Grundeinheiten ausgedrückt?",
-          options: ["kg·m²/s²", "kg·m/s²", "kg/m·s²", "kg·m²/s", "kg·m²·s"],
+          options: ["kg×m²/s²", "kg×m/s²", "kg/m×s²", "kg×m²/s", "kg×m²×s"],
           correctIndex: 0,
           explanation:
-            "Energie = Kraft × Weg: [E] = [F] × [s] = N × m = (kg·m/s²) × m = kg·m²/s² = J. Falsche Optionen: kg·m/s² ist Newton (Kraft); kg/m·s² = kg/(m·s²) ist Pascal (Druck: Pa = N/m² = kg·m/s² / m² = kg/(m·s²)); kg·m²/s ist Drehimpuls; kg·m²·s hat keine Standardbedeutung. Die Dimensionsanalyse: Energie = Leistung × Zeit = W × s = (kg·m²/s³) × s = kg·m²/s².",
+            "Energie = Kraft × Weg: [E] = [F] × [s] = N × m = (kg×m/s²) × m = kg×m²/s² = J. Falsche Optionen: kg×m/s² ist Newton (Kraft); kg/m×s² = kg/(m×s²) ist Pascal (Druck: Pa = N/m² = kg×m/s² / m² = kg/(m×s²)); kg×m²/s ist Drehimpuls; kg×m²×s hat keine Standardbedeutung. Die Dimensionsanalyse: Energie = Leistung × Zeit = W × s = (kg×m²/s³) × s = kg×m²/s².",
           hints: [
-            "Energie = Kraft × Weg. Kraft in SI = N = kg·m/s². Mal Meter = ?",
-            "kg·m/s² × m = kg·m²/s².",
+            "Energie = Kraft × Weg. Kraft in SI = N = kg×m/s². Mal Meter = ?",
+            "kg×m/s² × m = kg×m²/s².",
           ],
           difficulty: 3,
           tags: ["si-einheiten", "energie", "joule"],
@@ -2262,13 +2262,13 @@ Lösung: 100 mg/dL = 1.000 mg/L = 1 g/L. Molarität = 1 g/L ÷ 180 g/mol = 0,005
         {
           question:
             "Was ist der korrekte Ausdruck für 1 Gy (Gray, Strahlendosis) in SI-Grundeinheiten?",
-          options: ["J/kg = m²/s²", "J/s = W", "C/kg (Coulomb/kg)", "N/m²", "J·kg"],
+          options: ["J/kg = m²/s²", "J/s = W", "C/kg (Coulomb/kg)", "N/m²", "J×kg"],
           correctIndex: 0,
           explanation:
-            "1 Gy = 1 J/kg (absorbierte Energie pro Kilogramm Gewebe). In Grundeinheiten: J/kg = (kg·m²/s²)/kg = m²/s². Sievert: 1 Sv = Gy × Wichtungsfaktor w_R. Für Röntgen/Gamma: w_R = 1 → 1 Sv = 1 Gy. Für Alphastrahlung: w_R = 20 → 1 Gy Alpha-Strahlung = 20 Sv biologische Wirkung. Klinisch: Ganzkörperbestrahlung >1 Gy → Strahlenkrankheit; >6 Gy → letal ohne KMT; Strahlentherapie Karzinom: 60–70 Gy in 30 Fraktionen à 2 Gy.",
+            "1 Gy = 1 J/kg (absorbierte Energie pro Kilogramm Gewebe). In Grundeinheiten: J/kg = (kg×m²/s²)/kg = m²/s². Sievert: 1 Sv = Gy × Wichtungsfaktor w_R. Für Röntgen/Gamma: w_R = 1 → 1 Sv = 1 Gy. Für Alphastrahlung: w_R = 20 → 1 Gy Alpha-Strahlung = 20 Sv biologische Wirkung. Klinisch: Ganzkörperbestrahlung >1 Gy → Strahlenkrankheit; >6 Gy → letal ohne KMT; Strahlentherapie Karzinom: 60–70 Gy in 30 Fraktionen à 2 Gy.",
           hints: [
-            "1 Gy = 1 J/kg. Joule in Grundeinheiten: J = kg·m²/s².",
-            "J/kg = kg·m²/s² / kg = m²/s².",
+            "1 Gy = 1 J/kg. Joule in Grundeinheiten: J = kg×m²/s².",
+            "J/kg = kg×m²/s² / kg = m²/s².",
           ],
           difficulty: 3,
           tags: ["strahlendosis", "gray", "si-einheiten"],
