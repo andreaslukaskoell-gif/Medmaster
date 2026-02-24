@@ -365,550 +365,329 @@ Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art.
 
     {
       id: "bio-10-03",
-      title: "Populationsbiologie — Wachstum, r/K-Strategien & Demographie",
+      title: "Ökologische Nische vs. Lebensraum",
       stichworte: [
-        "Exponentielles Wachstum",
-        "Logistisches Wachstum",
-        "Kapazitätsgrenze K",
-        "r-Strategen",
-        "K-Strategen",
-        "Altersstruktur",
-        "Minimallebensfähige Population",
+        "Ökologische Nische",
+        "Lebensraum",
+        "Habitat",
+        "Fundamentale Nische",
+        "Realisierte Nische",
+        "Nischendifferenzierung",
       ],
       content: `## Einleitung
 
-**Worum geht es?** Die Populationsbiologie untersucht, wie sich Populationen in Abhängigkeit von Ressourcen, Konkurrenz und Umweltfaktoren entwickeln. **Warum ist das für den MedAT relevant?** Exponentielles und logistisches Wachstum, die Kapazitätsgrenze K und die Unterscheidung von r- und K-Strategen sind zentrale Prüfungsthemen; sie finden direkte Anwendung in der Infektionsepidemiologie (Basisreproduktionszahl R₀). **Welche Fragetypen?** Typische BMS-Fragen: Wachstumskurven zuordnen (J- vs. S-Form), r- vs. K-Strategen unterscheiden, K und Tragfähigkeit interpretieren, Demographie und Altersstruktur einordnen.
+Die **ökologische Nische** beschreibt die Rolle und die Umweltansprüche einer Art im Ökosystem — nicht nur den Ort, an dem sie lebt. Der **Lebensraum** (Habitat) ist dagegen der konkrete physische Ort. Für den MedAT ist die Trennung „Nische ≠ Lebensraum“ zentral; ebenso die Begriffe **fundamentale** und **realisierte Nische** sowie **Nischendifferenzierung** als Mechanismus der Koexistenz. Damit lassen sich typische BMS-Fragen zu Konkurrenz und Artengemeinschaften sicher beantworten.
 
 **In diesem Kapitel lernst du:**
-- **Populationsparameter:** Dichte (N), Geburtenrate (b), Sterberate (d), Wachstumsrate r = b − d
-- **Exponentielles Wachstum:** dN/dt = r·N → J-förmige Kurve (unbegrenzte Ressourcen)
-- **Logistisches Wachstum:** dN/dt = r·N·(K−N)/K → S-förmige (sigmoidale) Kurve, Annäherung an Kapazitätsgrenze K
-- **r-Strategen:** viele Nachkommen, wenig Brutpflege, kurze Generationszeit
-- **K-Strategen:** wenige Nachkommen, intensive Brutpflege, lange Generationszeit
-- **Demographie:** Altersstruktur, Überlebenskurven, minimallebensfähige Population
-
-![Wachstum und Kapazitätsgrenze](/grafik-exponential.svg)
-
-**Erklärung zur Grafik:** Exponentielles (J-förmiges) vs. logistisches (S-förmiges) Wachstum; die Kapazitätsgrenze K begrenzt die Populationsgröße im Gleichgewicht.
-
-![Verteilung und Altersstruktur](/grafik-normalverteilung.svg)
-
-**Erklärung zur Grafik:** Verteilung von Individuen über Altersklassen; Grundlage für Demographie und r- vs. K-Strategien (Alterspyramiden, Überlebenskurven).
+- **Ökologische Nische** von **Lebensraum (Habitat)** zu unterscheiden
+- **Fundamentale Nische** (theoretisch möglich) und **realisierte Nische** (tatsächlich genutzt) zu erklären
+- Wie **Nischendifferenzierung** Koexistenz konkurrierender Arten ermöglicht
+- Das Connell-Seepocken-Experiment als Beleg für fundamentale vs. realisierte Nische
 
 ---
 
-## Populationsparameter
+## Nische vs. Lebensraum (Habitat)
 
-Eine **Population** ist die Gesamtheit aller Individuen einer Art in einem definierten Raum und Zeitraum, die sich miteinander fortpflanzen können. Die wichtigsten Parameter:
+**Lebensraum (Habitat)** = der **physische Ort**, an dem eine Art vorkommt (z. B. Teichufer, Wald, Felszone). Beschreibt „wo“ die Art lebt.
 
-**Populationsdichte (N):** Anzahl der Individuen pro Flächeneinheit (z. B. Individuen/km²) oder Volumeneinheit. Relative Dichte = Anzahl pro Habitat-Einheit (z. B. Tiere pro Hektar). Die Dichte wird durch Geburten, Todesfälle, Immigration und Emigration bestimmt.
+**Ökologische Nische** = die **Gesamtheit aller abiotischen und biotischen Umweltfaktoren**, die für das Überleben und die Fortpflanzung einer Art bedeutsam sind: Temperatur, Feuchtigkeit, Nahrung, Konkurrenten, Räuber, Parasiten, Brutplätze usw. Beschreibt „wie“ die Art lebt und welche Rolle sie im Ökosystem hat — also nicht nur der Ort, sondern alle Bedingungen und Wechselwirkungen.
 
-**Geburtenrate (b, natality):** Anzahl der Geburten pro Individuum und Zeiteinheit.
+| Begriff | Bedeutung |
+|--------|-----------|
+| **Lebensraum (Habitat)** | Physischer Ort („Adresse“) |
+| **Ökologische Nische** | Alle Umweltansprüche und die Rolle der Art („Beruf“) |
 
-**Sterberate (d, mortality):** Anzahl der Todesfälle pro Individuum und Zeiteinheit.
-
-**Intrinsische Wachstumsrate (r):** r = b − d. Wenn r > 0: Wachstum; r = 0: stabile Population; r < 0: Schrumpfung. Die maximale intrinsische Wachstumsrate (r_max) ist die theoretische Wachstumsrate unter optimalen Bedingungen ohne begrenzende Faktoren.
-
-**Generationszeit:** Mittleres Alter der Mütter bei der Geburt der ersten Tochter. Kurze Generationszeiten (r-Strategen) vs. lange Generationszeiten (K-Strategen) haben fundamentalen Einfluss auf Populationsdynamik und Evolutionsgeschwindigkeit.
-
-> **Merke:** r = b − d. r > 0 → Wachstum. r = 0 → stabil. r < 0 → Schrumpfung. r_max ist die maximale Rate unter idealen Bedingungen.
+> **Merke:** Nische ≠ Lebensraum. Lebensraum = wo. Nische = alle Umweltfaktoren + Rolle im Ökosystem.
 
 ---
 
-## Exponentielles Wachstum
+## Fundamentale und realisierte Nische
 
-**Exponentielles Wachstum** tritt auf, wenn Ressourcen unbegrenzt verfügbar sind und jedes Individuum sein volles reproduktives Potenzial ausschöpfen kann. Die mathematische Beschreibung:
+**Fundamentale Nische:** Der Bereich aller Umweltbedingungen, den eine Art **theoretisch** besetzen könnte, wenn keine Konkurrenten oder Feinde da wären — begrenzt nur durch ihre physiologischen Toleranzen.
 
-**dN/dt = r · N**
+**Realisierte Nische:** Der **tatsächlich** von der Art genutzte Bereich. Er ist durch Konkurrenz, Prädation und andere biotische Faktoren **eingeschränkt**. Die realisierte Nische ist daher **immer kleiner oder gleich** der fundamentalen Nische.
 
-Die Lösung dieser Differentialgleichung ist: N(t) = N₀ · e^(r·t)
+**Connell-Seepocken-Experiment (1961):** An schottischen Felsen leben zwei Seepockenarten: *Chthamalus* in der oberen, *Balanus* in der unteren Gezeitenzone. Wird *Balanus* entfernt, besiedelt *Chthamalus* auch die untere Zone. Folgerung: Die **fundamentale** Nische von *Chthamalus* umfasst auch die untere Zone; die **realisierte** Nische wird durch Konkurrenz mit *Balanus* auf die obere Zone beschränkt.
 
-Das bedeutet: Die Wachstumsrate ist proportional zur aktuellen Populationsgröße — je mehr Individuen, desto mehr neue Individuen werden pro Zeiteinheit geboren. Grafisch ergibt sich eine **J-förmige Kurve** — zunächst langsam, dann immer steiler ansteigend.
-
-**Biologische Bedeutung des exponentiellen Wachstums:**
-- Frisch gegründete Populationen in einem neuen, ressourcenreichen Habitat
-- Pionierorganismen nach Störungen (Waldbrand, Eisschmelze)
-- Invasive Arten in neuen Gebieten ohne natürliche Feinde
-- Pathogene am Beginn einer Infektion (vor Immunantwort)
-- Bakterienwachstum in reichem Kulturmedium (Logphase)
-
-**Verdopplungszeit (t_D):** t_D = ln(2)/r ≈ 0,693/r. Bei r = 0,1 pro Jahr → Verdopplungszeit ≈ 6,9 Jahre. Dieses Prinzip erklärt das "explosive" Wachstum invasiver Arten oder Pathogene.
-
-> **Merke:** Exponentielles Wachstum = J-Kurve. dN/dt = r·N. Unbegrenzte Ressourcen. Tritt in der Natur nur kurzfristig auf.
+> **Merke:** Fundamentale Nische ≥ realisierte Nische. Konkurrenz (und andere biotische Faktoren) schränken die realisierte Nische ein.
 
 ---
 
-## Logistisches Wachstum
+## Nischendifferenzierung und Koexistenz
 
-In der Realität limitieren Ressourcen, Konkurrenz und Prädation das Wachstum. Das **logistische Wachstumsmodell** (Verhulst, 1838) beschreibt Wachstum unter Ressourcenbeschränkung:
+Zwei Arten mit **identischer** Nische können nicht dauerhaft koexistieren (Konkurrenzausschlussprinzip). **Koexistenz** ist möglich durch **Nischendifferenzierung** — die Arten nutzen die Ressourcen in mindestens einer Dimension unterschiedlich:
 
-**dN/dt = r · N · (K − N) / K**
+- **Zeitlich:** Tag- vs. nachtaktiv (z. B. Falke vs. Eule)
+- **Räumlich:** Verschiedene Zonen im gleichen Habitat (z. B. verschiedene Baumhöhen)
+- **Trophisch:** Verschiedene Beutegrößen oder -typen (z. B. unterschiedliche Schnabelformen bei Darwinfinken)
 
-**K = Kapazitätsgrenze (carrying capacity):** Die maximale Populationsgröße, die ein Habitat dauerhaft tragen kann. Sie wird durch Nahrungsverfügbarkeit, Wasser, Raum und andere Ressourcen bestimmt.
-
-**Interpretation der Gleichung:**
-- Wenn N << K: (K−N)/K ≈ 1 → nahezu exponentielles Wachstum
-- Wenn N = K/2: maximale absolute Wachstumsrate (Wendepunkt der Sigmoid-Kurve)
-- Wenn N → K: (K−N)/K → 0 → Wachstum verlangsamt sich
-- Wenn N = K: dN/dt = 0 → Populationsgröße stabil
-- Wenn N > K (Überschreitung durch zufällige Ereignisse): dN/dt < 0 → Population schrumpft zurück auf K
-
-Grafisch ergibt sich eine **S-förmige (sigmoidale) Kurve** mit drei Phasen: (1) Anlaufphase (langsames anfängliches Wachstum bei kleiner N), (2) Wachstumsphase (exponentielle Phase, Wachstum beschleunigt sich), (3) Plateauphase (Annäherung an K, Wachstum verlangsamt sich).
-
-**Biologische Bedeutung:**
-- Die Kapazitätsgrenze K ist dynamisch — sie ändert sich mit Klima, Ressourcenverfügbarkeit und menschlichen Eingriffen
-- Dichteabhängige Faktoren (Konkurrenz, Prädation, Krankheiten) verstärken sich, wenn N → K
-- Das Maximum Sustainable Yield (MSY, maximaler nachhaltiger Ertrag) liegt bei N = K/2 — der Bestand mit maximaler Wachstumsrate ist die optimale Fischereigröße
-
-> **Merke:** Logistisches Wachstum = S-Kurve. dN/dt = r·N·(K−N)/K. K = Kapazitätsgrenze. Maximales Wachstum bei N = K/2. Bei N = K: Gleichgewicht.
+> **Merke:** Nischendifferenzierung = Aufteilung der Ressourcen (zeitlich, räumlich oder trophisch) → ermöglicht Koexistenz.
 
 ---
-
-## r-Strategen vs. K-Strategen
-
-Das **r/K-Kontinuum** (MacArthur & Wilson, 1967) beschreibt zwei grundlegende Lebensgeschichtsstrategien:
-
-| Merkmal | r-Strategen | K-Strategen |
-|---|---|---|
-| Nachkommenzahl | Sehr viele | Wenige |
-| Brutpflege | Minimal | Intensiv und lang |
-| Generationszeit | Kurz | Lang |
-| Erstreproduktion | Früh | Spät |
-| Körpergröße | Meist klein | Meist groß |
-| Lebenserwartung | Kurz | Lang |
-| Populationsdynamik | Starke Fluktuationen, boom-bust | Stabil, nahe K |
-| Sterblichkeit | Dichte-unabhängig | Dichteabhängig |
-| Habitat | Instabil, störungsreich | Stabil, ressourcenlimitiert |
-| Beispiele | Insekten, Mäuse, Unkräuter, Fliegen, Löwenzahn | Elefanten, Wale, Eichen, Adler, Menschen |
-
-**r-Strategen:** Investieren in maximale Reproduktionsrate (r_max) — produzieren viele, kleine Nachkommen mit wenig elterlicher Investition. Unter stabilen Bedingungen sind sie durch K-Strategen konkurrenzunterlegen, in gestörten, ressourcenreichen Habitaten dominieren sie durch schnelle Kolonisierung. Überleben durch Quantität.
-
-**K-Strategen:** Investieren in wenige, gut versorgte Nachkommen mit hoher Überlebenswahrscheinlichkeit. Konkurrenzstark in stabilen, ressourcenlimitierten Umgebungen (nahe K). Überleben durch Qualität. Langsame Generationszeit macht sie anfällig für Umweltkatastrophen und menschlichen Einfluss (Jagd, Habitatverlust).
-
-> **Merke:** r-Strategen = viele Kinder, wenig Fürsorge, kurzes Leben, instabile Habitate. K-Strategen = wenige Kinder, viel Fürsorge, langes Leben, stabile Habitate. Menschen und Elefanten sind K-Strategen.
-
----
-
-## Altersstruktur und Demographischer Übergang
-
-Die **Altersstruktur** einer Population (Alterspyramide) gibt Auskunft über Vergangenheit und Zukunft der Populationsentwicklung:
-
-**Wachsende Population (breite Basis):** Hoher Anteil junger Individuen (hohe Geburtenraten), schmale Spitze (hohe Sterblichkeit). Typisch für Entwicklungsländer und r-Strategen-Populationen.
-
-**Stabile Population (gleichmäßige Verteilung):** Ähnliche Anteile in allen Altersklassen. Geburten = Sterbefälle.
-
-**Schrumpfende Population (schmale Basis):** Geringer Anteil junger Individuen (niedrige Geburtenraten), breite Mittelstufe. Typisch für westliche Industrieländer mit demographischem Übergang.
-
-**Demographischer Übergang:** Industrialisierung und verbesserte Medizin führen zuerst zu sinkender Sterberate (Bevölkerungsexplosion), dann verzögert zu sinkender Geburtenrate (Stabilisierung). Aktuelle globale Menschenpopulation (~8 Mrd.) wächst noch, wird bei ca. 10–11 Mrd. erwartet zu stabilisieren.
-
----
-
-## Minimallebensfähige Populationsgröße (MVP) und Aussterbevortex
-
-**Minimallebensfähige Populationsgröße (MVP, minimum viable population):** Die kleinste Populationsgröße, die mit einer bestimmten Wahrscheinlichkeit (z. B. 95%) über einen definierten Zeitraum (z. B. 100 Jahre) überleben kann.
-
-**Aussterbevortex:** Kleine Populationen geraten in eine selbstverstärkende Abwärtsspirale:
-- Kleine Population → Inzucht → genetische Verarmung → reduzierte Fitness
-- Kleine Population → stochastische demographische Ereignisse (zufällige Fluktuationen in Geburten/Toden) können Population unter kritische Schwelle bringen
-- Kleine Population → stochastische Umweltereignisse (Dürre, Epidemie) können Population dezimieren
-- Kleine Population → genetische Drift → Verlust adaptiver Variabilität
-
-**Allee-Effekt:** Unter einem kritischen Schwellenwert (Allee-Schwelle) sinkt die Pro-Kopf-Fitness mit abnehmender Populationsgröße (z. B. Schwierigkeiten bei Partnersuche, kein Herdenverhalten mehr als Schutz vor Prädatoren). Populationen unterhalb der Allee-Schwelle sind zum Aussterben verurteilt, auch ohne externe Bedrohungen.
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Zentral prüfungsrelevant:**
+- Nische ≠ Lebensraum: Nische = alle Umweltansprüche + Rolle; Lebensraum = physischer Ort.
+- Fundamentale Nische (ohne Konkurrenz) ≥ realisierte Nische (mit Konkurrenz).
+- Connell-Experiment: Entfernung von *Balanus* → *Chthamalus* nutzt größeren Bereich = Beleg für realisierte vs. fundamentale Nische.
+- Nischendifferenzierung ermöglicht Koexistenz (zeitlich, räumlich, trophisch).
 
-**Zentral prüfungsrelevant:** Populationswachstum (exponentiell J-Kurve, logistisch S-Kurve), Kapazitätsgrenze K, Wachstumsrate r, dN/dt = rN(1−N/K), Tragfähigkeit.
+**Häufige Prüfungsfragen:**
+- Was ist der Unterschied zwischen ökologischer Nische und Lebensraum?
+- Erkläre fundamentale und realisierte Nische. Was zeigt das Connell-Seepocken-Experiment?
+- Wie ermöglicht Nischendifferenzierung das Zusammenleben konkurrierender Arten?
 
-**Ergänzend vertiefend:** Zeitverzögerung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Typische Prüfungsfallen:**
+- Nische ≠ Lebensraum (Nische ist die „Rolle“ und alle Ansprüche, nicht nur der Ort).
+- Realisierte Nische ist nie größer als die fundamentale Nische.
+- Nischendifferenzierung ≠ Konkurrenzausschluss — Differenzierung ist der Weg zur Koexistenz.
 
-**Häufige Fragen:**
-- J-Kurve vs. S-Kurve unterscheiden und die zugehörigen Gleichungen nennen
-- r- und K-Strategen mit Merkmalen und Beispielen zuordnen
-- Maximale Wachstumsrate bei N = K/2 erklären (Wendepunkt der logistischen Kurve)
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- r = intrinsische Wachstumsrate (nicht "Räuber"), K = Kapazitätsgrenze (carrying capacity)
-- Exponentielles Wachstum (J-Kurve) vs. logistisches Wachstum (S-Kurve) — in der Natur dominiert logistisch
-- K/2 = maximale absolute Wachstumsrate, nicht maximale relative Wachstumsrate
-- r-Strategen sind nicht generell "schlechter" — sie dominieren in instabilen, störungsreichen Habitaten
-- Allee-Effekt: bei kleinen Populationen sinkt die Fitness, statt wie erwartet zu steigen (weniger Konkurrenz ≠ mehr Fitness)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Exponentiell: dN/dt = r·N; Logistisch: dN/dt = r·N·(K−N)/K
-- Verdopplungszeit: t_D = ln(2)/r ≈ 0,693/r
-- Maximum Sustainable Yield (MSY) bei N = K/2
-- Weltbevölkerung: ~8 Mrd., erwartet ~10–11 Mrd. (Stabilisierung)
-- K-Strategen-Beispiele: Elefant (Tragezeit 22 Monate, 1 Junges alle 4–5 Jahre), Mensch, Wale
+**Wichtige Begriffe & Definitionen:**
+- Lebensraum (Habitat), ökologische Nische, fundamentale Nische, realisierte Nische, Nischendifferenzierung.
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Exponentielles Wachstum** (J-Kurve): dN/dt = r·N; bei unbegrenzten Ressourcen; r = intrinsische Wachstumsrate
-- **Logistisches Wachstum** (S-Kurve): dN/dt = r·N·(K−N)/K; K = Kapazitätsgrenze (maximale Populationsgröße)
-- **r-Strategen**: viele Nachkommen, wenig Brutpflege, kurze Generationszeit (Insekten, Mäuse); schnell bei Ressourcen
-- **K-Strategen**: wenige Nachkommen, intensive Brutpflege, lange Generationszeit (Elefanten, Menschen); nahe K stable
-- **Allee-Effekt**: unter kritischer Populationsgröße sinkt Pro-Kopf-Fitness → Aussterbevortex (Inzucht + Drift + Stochastik)
-- Epidemiologische Analogie: Infektionsausbreitung folgt exponentiellem Modell; R₀ = populationsbiologisches r-Äquivalent`,
-      merksätze: [
-        "Exponentielles Wachstum (J-Kurve): dN/dt = r·N. Logistisches Wachstum (S-Kurve): dN/dt = r·N·(K−N)/K. K = Kapazitätsgrenze.",
-        "r-Strategen: viele Nachkommen, wenig Brutpflege, kurze Generationszeit (Insekten, Mäuse). K-Strategen: wenige Nachkommen, viel Brutpflege, lange Generationszeit (Elefanten, Menschen).",
-        "Maximale Wachstumsrate beim logistischen Wachstum bei N = K/2 (Wendepunkt der S-Kurve). Bei N = K: dN/dt = 0.",
-        "Allee-Effekt: unter kritischer Populationsgröße sinkt die Pro-Kopf-Fitness weiter → Aussterbevortex.",
-        "K-Strategen sind besonders durch menschliche Eingriffe gefährdet: lange Generationszeit → langsame Erholung nach Populationsrückgang.",
-      ],
-      klinischerBezug:
-        "Populationsdynamik ist direkt relevant für Epidemiologie: Die Ausbreitung von Infektionskrankheiten folgt dem exponentiellen Wachstumsmodell (R0 = Basisreproduktionszahl). SARS-CoV-2 mit R0 ≈ 2-3 vs. Masern R0 ≈ 12-18. Herdimmunitätsschwelle = 1 - 1/R0. r/K-Strategien gelten auch für Mikroorganismen: E. coli (r-Stratege, schnelle Vermehrung) vs. Mycobacterium tuberculosis (K-Stratege, langsame Teilung).",
+- **Lebensraum** = physischer Ort; **ökologische Nische** = alle Umweltansprüche + Rolle der Art.
+- **Fundamentale Nische** = theoretisch möglicher Bereich; **realisierte Nische** = tatsächlich genutzter Bereich (immer ≤ fundamental).
+- Konkurrenz schränkt die realisierte Nische ein (Connell: *Chthamalus* ohne *Balanus* → größere Nutzung).
+- **Nischendifferenzierung** (zeitlich, räumlich, trophisch) ermöglicht Koexistenz konkurrierender Arten.`,
       lernziele: [
-        "Exponentielles und logistisches Populationswachstum mathematisch beschreiben und graphisch darstellen",
-        "r- und K-Strategen definieren und Beispiele zuordnen",
-        "Dichteabhängige und dichteunabhängige Faktoren der Populationsregulation unterscheiden",
+        "Ökologische Nische und Lebensraum (Habitat) unterscheiden.",
+        "Fundamentale und realisierte Nische erklären und das Connell-Experiment zuordnen.",
+        "Nischendifferenzierung als Mechanismus der Koexistenz beschreiben.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
-      altfrage: {
-        question:
-          "Welche Wachstumsform zeigt eine Population mit unbegrenzten Ressourcen und welche Gleichung beschreibt sie?",
-        answer:
-          "Exponentielles Wachstum (J-Kurve): dN/dt = r·N. Die Population wächst proportional zu ihrer Größe N mit der intrinsischen Wachstumsrate r. In der Natur wird dieses Wachstum durch limitierende Faktoren gebremst → logistisches Wachstum (S-Kurve): dN/dt = r·N·(K-N)/K mit K = Kapazitätsgrenze.",
-      },
+      sections: [],
+      merksätze: [
+        "Nische ≠ Lebensraum. Nische = alle Umweltansprüche + Rolle; Lebensraum = Ort.",
+        "Fundamentale Nische ≥ realisierte Nische. Connell-Seepocken: Konkurrenz schränkt realisierte Nische ein.",
+      ],
       selfTest: [
         {
           question:
-            "Eine Mäusepopulation wächst in einem Getreidelager ohne natürliche Feinde und mit unbegrenzter Nahrung. Welche Wachstumsform ist am wahrscheinlichsten und welche Kurve beschreibt sie?",
+            "Was ist der Unterschied zwischen ökologischer Nische und Lebensraum (Habitat)?",
           options: [
-            "Logistisches Wachstum — S-Kurve, weil Ressourcen immer limitiert sind",
-            "Exponentielles Wachstum — J-Kurve, weil Ressourcen unbegrenzt und keine Feinde vorhanden",
-            "Logistisches Wachstum — J-Kurve mit Kapazitätsgrenze K",
-            "Exponentielles Wachstum — S-Kurve, weil viele Individuen vorhanden sind",
-            "Stabiles Wachstum — horizontale Linie bei K",
+            "Nische und Lebensraum sind dasselbe",
+            "Lebensraum = physischer Ort; Nische = Gesamtheit aller Umweltansprüche und die Rolle der Art im Ökosystem",
+            "Nische = nur abiotische Faktoren, Lebensraum = nur biotische",
+            "Lebensraum = realisierte Nische, Nische = fundamentale Nische",
+            "Nische = ein Landschaftstyp, Lebensraum = ein einzelner Teich",
           ],
           correctIndex: 1,
           explanation:
-            "Exponentielles Wachstum (J-Kurve) tritt auf, wenn Ressourcen praktisch unbegrenzt verfügbar sind und keine dichteabhängigen Begrenzungsfaktoren (Prädatoren, Konkurrenz, Nahrungsmangel) wirken. Im Getreidelager mit unbegrenzter Nahrung und ohne natürliche Feinde nähert sich die Mäusepopulation exponentiellem Wachstum (dN/dt = r·N). In der Realität wird irgendwann die Nahrung doch begrenzt oder andere Faktoren treten ein, aber kurzfristig dominiert exponentielles Wachstum.",
+            "Der **Lebensraum (Habitat)** ist der physische Ort („wo“). Die **ökologische Nische** umfasst alle abiotischen und biotischen Faktoren, die für die Art wichtig sind, und ihre Rolle im Ökosystem („wie“ und „welche Funktion“).",
           difficulty: 1,
-          tags: ["exponentielles-wachstum", "j-kurve", "populationsdynamik"],
+          tags: ["nische", "lebensraum", "habitat"],
         },
         {
           question:
-            "Eine Fischpopulation mit Kapazitätsgrenze K = 1.000.000 Individuen wird nachhaltig befischt. Bei welcher Populationsgröße ist der jährliche Zuwachs (und damit der nachhaltige Ertrag) am größten?",
+            "Im Connell-Experiment wird die Seepocke *Balanus* (untere Zone) entfernt. *Chthamalus* (obere Zone) besiedelt daraufhin auch die untere Zone. Was belegt das?",
           options: [
-            "Bei N = 1.000.000 (K) — maximale Population = maximaler Ertrag",
-            "Bei N = 100.000 — kleine Population wächst am schnellsten relativ gesehen",
-            "Bei N = 500.000 (K/2) — Wendepunkt der logistischen Kurve, maximale absolute Wachstumsrate",
-            "Bei N = 750.000 — oberhalb K/2 ist das Wachstum noch groß",
-            "Bei N = 0 — ausgeleerte See füllt sich am schnellsten",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Beim logistischen Wachstum (dN/dt = r·N·(K−N)/K) ist die absolute Wachstumsrate (dN/dt) am größten, wenn N = K/2. Dies ist der Wendepunkt der S-Kurve. Bei N = K/2 = 500.000 ist der jährliche Zuwachs maximal — genau diese Menge kann nachhaltig entnommen werden, ohne die Population langfristig zu reduzieren. Dieses Konzept heißt Maximum Sustainable Yield (MSY) und ist Grundlage nachhaltiger Fischereiwirtschaft. Bei N = K ist dN/dt = 0, also kein Zuwachs.",
-          difficulty: 2,
-          tags: ["logistisches-wachstum", "k-haelfte", "msy", "fischerei"],
-        },
-        {
-          question: "Welche der folgenden Kombinationen beschreibt korrekt einen K-Strategen?",
-          options: [
-            "Viele Nachkommen, kurze Generationszeit, wenig Brutpflege, instabile Habitate",
-            "Wenige Nachkommen, lange Generationszeit, intensive Brutpflege, stabile Habitate",
-            "Viele Nachkommen, lange Generationszeit, intensive Brutpflege, instabile Habitate",
-            "Wenige Nachkommen, kurze Generationszeit, wenig Brutpflege, stabile Habitate",
-            "Viele Nachkommen, kurze Generationszeit, intensive Brutpflege, stabile Habitate",
+            "Die fundamentale Nische von Chthamalus ist kleiner als die realisierte",
+            "Die realisierte Nische von Chthamalus war durch Konkurrenz mit Balanus auf die obere Zone beschränkt",
+            "Balanus ist ein Parasit von Chthamalus",
+            "Beide Arten haben identische fundamentale Nischen",
+            "Chthamalus kann nur ohne Räuber die untere Zone nutzen",
           ],
           correctIndex: 1,
           explanation:
-            "K-Strategen sind an stabile, ressourcenlimitierte Habitate (nahe der Kapazitätsgrenze K) angepasst. Sie investieren in Qualität der Nachkommen: wenige Nachkommen, intensive und lange Brutpflege, lange Generationszeit, große Körpergröße, lange Lebenserwartung. Beispiele: Elefant (1 Junges alle 4–5 Jahre, Tragezeit 22 Monate, intensive Brutpflege), Mensch, Blauwale, Adler. Im Gegensatz dazu sind r-Strategen (Insekten, Mäuse) an instabile Habitate mit schnellem Wachstum angepasst: viele Nachkommen, wenig Brutpflege, kurze Generationszeit.",
-          difficulty: 1,
-          tags: ["k-strategen", "r-k-strategie", "populationsbiologie"],
-        },
-        {
-          question:
-            "Der Allee-Effekt beschreibt ein Phänomen bei sehr kleinen Populationen. Was passiert bei einer Population unterhalb der Allee-Schwelle?",
-          options: [
-            "Die Population wächst exponentiell, weil weniger Konkurrenz herrscht",
-            "Die Fitness pro Individuum steigt, weil mehr Ressourcen pro Individuum vorhanden sind",
-            "Die Fitness pro Individuum sinkt mit abnehmender Populationsgröße → Aussterbevortex",
-            "Die Kapazitätsgrenze K sinkt, die Population stabilisiert sich aber trotzdem",
-            "Die intrinsische Wachstumsrate r steigt kompensatorisch an",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Der Allee-Effekt (W.C. Allee, 1931) beschreibt ein positives Feedback bei sehr kleinen Populationen: Unterhalb einer kritischen Dichte (Allee-Schwelle) sinkt die Pro-Kopf-Fitness mit abnehmender Populationsgröße. Gründe: Schwierigkeiten bei Partnersuche (v.a. seltene, weit verstreute Tiere), Verlust des Herdeneffekts (Antipredator-Verteidigung), inzuchtbedingte Fitnessdepression, Zusammenbruch kooperativer Verhaltensweisen. Dies führt zum Aussterbevortex: Population schrumpft → Fitness sinkt weiter → Population schrumpft noch schneller → Aussterben. Naturschutzbiologisch hochrelevant für das Management bedrohter Arten.",
+            "Ohne Konkurrent *Balanus* nutzt *Chthamalus* einen größeren Bereich (auch untere Zone) = Ausweitung zur fundamentalen Nische. Mit *Balanus* ist die realisierte Nische auf die obere Zone beschränkt. Somit: fundamentale Nische ≥ realisierte Nische; Konkurrenz schränkt die realisierte Nische ein.",
           difficulty: 2,
-          tags: ["allee-effekt", "aussterbevortex", "kleine-population", "naturschutz"],
-        },
-        {
-          question:
-            "Eine Alterspyramide zeigt eine breite Basis (viele Jugendliche), schmale Mitte und schmale Spitze. Was beschreibt diese Altersstruktur am besten?",
-          options: [
-            "Schrumpfende Population mit negativem Wachstum",
-            "Stabile Population im Gleichgewicht bei Kapazitätsgrenze K",
-            "Wachsende Population mit hohen Geburtenraten und noch hoher Kindersterblichkeit",
-            "Alternde Population mit niedrigen Geburtenraten in Industrieländern",
-            "Population direkt nach einem Populationseinbruch (Bottleneck)",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Eine breite Basis (viele Kinder/Jugendliche) in der Alterspyramide zeigt hohe Geburtenraten und eine wachsende Population an. Die schmale Spitze bedeutet, dass wenige das hohe Alter erreichen (noch hohe Mortalität in mittleren und späten Lebensphasen). Dieses Muster ist typisch für Entwicklungsländer im frühen demographischen Übergang sowie für r-Strategen-Populationen. Im Gegensatz dazu haben Industrieländer eine 'Urnenform' (schmale Basis, breite Mitte) — schrumpfende oder stabile Population mit niedrigen Geburtenraten.",
-          difficulty: 1,
-          tags: [
-            "altersstruktur",
-            "alterspyramide",
-            "demographischer-uebergang",
-            "populationswachstum",
-          ],
+          tags: ["connell", "fundamentale-nische", "realisierte-nische"],
         },
       ],
     },
 
     {
       id: "bio-10-04",
-      title: "Ökologische Nische & Artinteraktionen",
+      title: "Konkurrenz & Symbiose",
       stichworte: [
-        "Ökologische Nische",
-        "Hutchinson",
-        "Fundamentale Nische",
-        "Realisierte Nische",
-        "Nischendifferenzierung",
-        "Generalisten vs. Spezialisten",
-        "Allopatrische Artbildung",
-        "Sympatrische Artbildung",
+        "Konkurrenz",
+        "intraspezifisch",
+        "interspezifisch",
+        "Konkurrenzausschluss",
+        "Gauß",
+        "Mutualismus",
+        "Parasitismus",
+        "Kommensalismus",
+        "Prädation",
+        "Räuber-Beute",
       ],
       content: `## Einleitung
 
-Das Konzept der ökologischen Nische nach Hutchinson ist eines der fundamentalsten Prinzipien der Ökologie und erklärt, wie Arten in Lebensgemeinschaften koexistieren oder sich gegenseitig verdrängen. Für den MedAT ist die Unterscheidung von fundamentaler und realisierter Nische ein Prüfungsklassiker, ebenso wie Nischendifferenzierung als Mechanismus der Koexistenz und die Grundlagen der Artbildung. Klinisch relevant ist das Nischenkonzept bei der Erklärung opportunistischer Infektionen nach Antibiotikatherapie.
+**Konkurrenz** und **Symbiose** sind zentrale biotische Wechselwirkungen: Sie bestimmen, welche Arten wo koexistieren können und wie Lebensgemeinschaften aufgebaut sind. Für den MedAT sind das **Konkurrenzausschlussprinzip** (Gauß), die **Symbioseformen** mit Vorzeichen (Mutualismus +/+, Kommensalismus +/0, Parasitismus +/−, Prädation +/−) und die **Räuber-Beute-Dynamik** (Lotka-Volterra) prüfungsrelevant. Typische BMS-Fragen: Gauß-Experiment, Symbioseformen zuordnen, Unterschied Parasit vs. Räuber, Räuber-Beute-Zyklus.
 
-**Das Wichtigste auf einen Blick:**
-- Ökologische Nische = n-dimensionaler Hyperraum (Hutchinson) aller Umweltfaktoren, die eine Art nutzt und toleriert
-- Fundamentale Nische: theoretisch möglicher Raum ohne Konkurrenten
-- Realisierte Nische: tatsächlich bewohnter Raum (eingeschränkt durch Konkurrenz)
-- Nischendifferenzierung ermöglicht Koexistenz konkurrierender Arten
-- Generalisten = breite Nische; Spezialisten = enge Nische
-
-![Toleranz und Nische](/grafik-toleranzkurve.svg)
-
-**Erklärung zur Grafik:** Fundamentale vs. realisierte Nische entlang Umweltgradienten; Toleranzkurven begrenzen die fundamentale Nische, Konkurrenz die realisierte.
-
-![Wechselwirkungen und Koexistenz](/grafik-33-vierfeldertafel.svg)
-
-**Erklärung zur Grafik:** Systematische Einordnung von Artinteraktionen; Nischendifferenzierung und Konkurrenzausschluss lassen sich damit veranschaulichen.
+**In diesem Kapitel lernst du:**
+- **Intraspezifische** und **interspezifische Konkurrenz** zu unterscheiden
+- Das **Konkurrenzausschlussprinzip** (Gauß) und den Beleg (Paramecium-Experiment)
+- **Symbioseformen** mit Vorzeichen: Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−)
+- **Parasitismus** von **Prädation** zu unterscheiden (Parasit tötet Wirt nicht sofort)
+- Die Grundidee der **Räuber-Beute-Dynamik** (Räuberpopulation hinkt Beute nach)
 
 ---
 
-## Das Nischenkonzept nach Hutchinson
+## Konkurrenz: intraspezifisch und interspezifisch
 
-**Definition (prüfungssicher):** Die **ökologische Nische** ist die **Gesamtheit aller biotischen und abiotischen Umweltfaktoren, die für die Existenz einer bestimmten Art wichtig sind** — also nicht nur der Lebensraum, sondern alle Ressourcen, Feinde, Konkurrenten und physikalisch-chemischen Bedingungen, unter denen die Art gedeihen und sich fortpflanzen kann.
+**Konkurrenz** entsteht, wenn Individuen dieselbe begrenzte Ressource benötigen.
 
-**G. Evelyn Hutchinson** (1957) definierte die ökologische Nische als **n-dimensionalen Hyperraum**: Jeder für eine Art relevante Umweltfaktor (Temperatur, Feuchtigkeit, Nahrungsgröße, pH, Räuberfrequenz, ...) stellt eine Achse in einem mehrdimensionalen Raum dar. Die ökologische Nische ist der Teilraum dieses Hyperraums, in dem eine Art überleben und sich erfolgreich reproduzieren kann.
+- **Intraspezifische Konkurrenz:** innerhalb **einer Art**. Besonders intensiv, weil die Nischenüberlappung vollständig ist; führt zu dichteabhängiger Regulation und logistischem Wachstum (Annäherung an K).
+- **Interspezifische Konkurrenz:** **zwischen Arten**. Treibt Nischendifferenzierung und Evolution an.
 
-Dies ist eine bedeutende Erweiterung des ursprünglichen Nischenbegriffs von Grinnell (1917), der Nische als physikalischen Lebensraum verstand, und Elton (1927), der Nische als funktionale Rolle im Ökosystem (trophische Position) beschrieb. Hutchinsons Hyperraum-Konzept integriert beide Aspekte mathematisch.
-
-**Beispiel:** Für eine Vogelart könnten die Nischen-Achsen sein: Temperaturbereich (z. B. 5–30°C), bevorzugte Nahrungsgröße (1–5 mm Insekten), Vegetationshöhe (2–10 m), Neststandorte (Baumhöhlen), Tageslänge für Brutauslösung, etc. Die Nische ist der n-dimensionale Überschneidungsbereich all dieser Toleranzbereiche.
-
-> **Merke:** Hutchinson (1957): Ökologische Nische = n-dimensionaler Hyperraum. Jeder Umweltfaktor = eine Dimension. Nische ≠ nur Lebensraum, sondern funktionale Rolle + Toleranzbereich.
+> **Merke:** Intraspezifisch = innerhalb einer Art. Interspezifisch = zwischen Arten.
 
 ---
 
-## Fundamentale vs. Realisierte Nische
+## Konkurrenzausschlussprinzip (Gauß, 1934)
 
-**Fundamentale Nische (fundamental niche):** Der gesamte n-dimensionale Hyperraum, den eine Art theoretisch besetzen könnte, wenn keine Konkurrenten oder Feinde vorhanden wären — nur limitiert durch die physiologischen Toleranzen der Art.
+Zwei Arten mit **identischer ökologischer Nische** können nicht dauerhaft im selben Habitat koexistieren — eine Art verdrängt die andere. **Koexistenz** ist nur möglich durch **Nischendifferenzierung** (zeitlich, räumlich oder trophisch).
 
-**Realisierte Nische (realized niche):** Der tatsächlich genutzte Teilraum der fundamentalen Nische, der durch biotische Interaktionen (insbesondere interspezifische Konkurrenz, aber auch Prädation und Parasitismus) eingeschränkt wird.
+**Klassischer Beleg — Paramecium-Experiment (Gauß 1934):** *Paramecium aurelia* und *P. caudatum* in Mischkultur bei gleicher Nahrung → *P. aurelia* verdrängt *P. caudatum* vollständig. Identische Nische → Konkurrenzausschluss.
 
-**Die realisierte Nische ist immer kleiner oder gleich der fundamentalen Nische.**
-
-**Experimenteller Nachweis — Balanus/Chthamalus-Experiment (Connell, 1961):**
-Auf schottischen Felsen leben zwei Seepockenarten. *Chthamalus stellatus* (obere Felszone) und *Balanus balanoides* (untere Felszone). Experiment: Wenn *Balanus* entfernt wird, kolonisiert *Chthamalus* auch die untere Zone → die fundamentale Nische von *Chthamalus* erstreckt sich weiter unten, wird aber durch *Balanus* (konkurrenzüberlegen in der unteren Zone) auf die obere Zone reduziert. Die realisierte Nische von *Chthamalus* ist kleiner als ihre fundamentale Nische.
-
-> **Merke:** Fundamentale Nische ≥ Realisierte Nische. Biotische Interaktionen (v.a. Konkurrenz) schränken die realisierte Nische ein. Experimentell trennbar durch Ausschlussexperimente.
+> **Merke:** Gauß: Identische Nische → eine Art verdrängt die andere. Koexistenz nur durch Nischendifferenzierung.
 
 ---
 
-## Nischendifferenzierung und Koexistenz
+## Symbioseformen: Wer profitiert, wer verliert?
 
-Das **Gauß'sche Konkurrenzausschlussprinzip** sagt: Zwei Arten in identischer Nische können nicht dauerhaft koexistieren. Koexistenz ist aber in der Natur häufig — der Mechanismus ist **Nischendifferenzierung (niche differentiation)**.
+Biotische Wechselwirkungen werden nach der Wirkung auf jeden Partner klassifiziert (Vorzeichen: + Nutzen, − Schaden, 0 unbeeinflusst):
 
-**Ressourcenteilung (resource partitioning):** Koexistierende Arten nutzen ähnliche Ressourcen, differenzieren sich aber in einer oder mehreren Nischendimensionen:
-- *Zeitliche Nischendifferenzierung:* Tag-aktive vs. nacht-aktive Arten nutzen ähnliche Ressourcen zu verschiedenen Zeiten (Falken tagsüber, Eulen nachts)
-- *Räumliche Nischendifferenzierung:* MacArthur (1958) beschrieb 5 Waldsängerarten (*Dendroica*), die im selben Baum koexistieren, indem sie verschiedene Baumzonen nutzen (Wipfel, Mittelbereiche, Stammbasis)
-- *Trophische Nischendifferenzierung:* Verschiedene Beutetypen oder -größen (z. B. Darwinfinken mit verschieden geformten Schnäbeln für verschiedene Samenkategorien)
+| Interaktion | Partner 1 | Partner 2 | Beispiel |
+|-------------|--------|--------|----------|
+| **Mutualismus** | + | + | Mykorrhiza (Pilz + Pflanze), Bestäubung, Leguminosen + Rhizobien |
+| **Kommensalismus** | + | 0 | Epiphyten auf Bäumen, Remoren an Haien |
+| **Parasitismus** | + | − | Plasmodium (Malaria), Bandwurm, Zecke |
+| **Prädation** | + | − | Fuchs frisst Hase, Adler frisst Maus |
+| **Konkurrenz** | − | − | Zwei Arten um dieselbe Ressource |
 
-**Charakterverschiebung (character displacement):** Wenn zwei konkurrierende Arten im selben Habitat vorkommen (Sympatrie), verstärkt natürliche Selektion die Unterschiede zwischen ihnen — die Arten "divergieren" phänotypisch voneinander. Dies reduziert Nischenüberlappung und ermöglicht Koexistenz. Klassisches Beispiel: Darwinfinken auf Galapagos — Schnabelgröße divergiert stärker in Sympatrie als in Allopatrie (Grant & Grant, 2002).
+**Parasitismus vs. Prädation (beide +/−):** Der **Parasit** lebt auf oder im Wirt und schädigt ihn, tötet ihn aber **normalerweise nicht sofort** — ein toter Wirt wäre für den Parasiten nachteilig. Der **Räuber** tötet die Beute direkt und frisst sie. Parasiten sind meist kleiner als der Wirt, Räuber oft gleich groß oder größer.
 
----
-
-## Generalisten vs. Spezialisten
-
-**Generalisten** haben eine breite ökologische Nische: Sie tolerieren ein weites Spektrum an Umweltbedingungen, nutzen diverse Ressourcen und können in verschiedenen Habitaten überleben. Vorteile: Flexibilität, Widerstandsfähigkeit gegenüber Umweltveränderungen. Nachteile: Konkurrenzunterlegen gegenüber Spezialisten, wenn Ressourcen stabil und reichlich vorhanden sind. Beispiele: Fuchs (omnivorer Allesfresser), Ratte, Hauskatze, Mensch.
-
-**Spezialisten** haben eine enge ökologische Nische: Hochangepasst an spezifische Ressourcen oder Habitate. Vorteile: Überlegen in stabilen Umgebungen mit dieser spezifischen Ressource; effizientere Nutzung der Spezialressource. Nachteile: Vulnerabel gegenüber Veränderungen der Ressource oder des Habitats. Beispiele: Großer Panda (nur Bambus), Koala (nur Eukalyptus).
-
-> **Merke:** Generalisten: breite Nische, flexibel, resilient. Spezialisten: enge Nische, effizient, aber vulnerabel. Klima- und Habitatveränderungen bedrohen Spezialisten besonders.
+> **Merke:** Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−), Konkurrenz (−/−). Parasit tötet Wirt nicht sofort — Räuber tötet Beute sofort.
 
 ---
 
-## Ökologische Äquivalente (Konvergente Anpassungen)
+## Räuber-Beute-Dynamik (Lotka-Volterra)
 
-**Ökologische Äquivalente** sind Arten in verschiedenen geographischen Regionen, die dieselbe ökologische Nische besetzen, aber taxonomisch nicht eng verwandt sind. Ihr ähnliches Aussehen und ihre ähnlichen Verhaltensweisen entstanden durch **konvergente Evolution** — unabhängige Anpassung an gleiche ökologische Anforderungen.
+Räuber- und Beutepopulationen beeinflussen sich wechselseitig und können **zyklisch** schwanken:
 
-Beispiele:
-- Wölfe (Nordamerika, Eurasien) und Tasmanische Wölfe (Australien, ausgestorben): ähnliche Raubtier-Nische, nicht verwandt
-- Haie (Chondrichthyes) und Delfine (Mammalia): stromlinienförmige Körper für schnelles Schwimmen
-- Kakteen (Nordamerika) und Euphorbien (Afrika): ähnliche Sukkulenten-Anpassung an Trockenheit
-- Beuteltiere (Australien) und Plazentatiere (übrige Welt): Beutelär/Koala ≈ Faultier; Quoll ≈ Marder
+1. Viel Beute → Räuber finden genug Nahrung → Räuberpopulation wächst.
+2. Viele Räuber → Beutepopulation wird stark dezimiert → sinkt.
+3. Wenig Beute → Räuber verhungern → Räuberpopulation sinkt.
+4. Wenige Räuber → Beutepopulation erholt sich → Zyklus wiederholt sich.
 
----
+Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt der Räuber folgt auf den Höhepunkt der Beute). Klassisches Beispiel: Luchs und Schneehase (ca. 10-Jahres-Zyklus).
 
-## Artbildung — Allopatrisch vs. Sympatrisch
-
-**Allopatrische Artbildung (geographische Isolation):** Geografische Barrieren (Gebirge, Meeresarme, Gletscher) trennen Populationen einer Art → kein Genfluss → unabhängige Evolution → reproduktive Isolation → neue Arten. Häufigster Artbildungsmechanismus. Beispiel: Galapagos-Finken (durch Ozean isolierte Inseln).
-
-**Sympatrische Artbildung (ohne geographische Isolation):** Artbildung im selben Gebiet durch andere Isolationsmechanismen:
-- *Polyploidie* (besonders bei Pflanzen): Chromosomenverdopplung → sofortige reproduktive Isolation
-- *Ressourcendifferenzierung:* Unterschiedliche Wirtspflanzen bei Insekten (Assortative mating nach Wirtspflanze)
-- *Saisonale Isolation:* Verschiedene Blüte-/Laichzeiten
+> **Merke:** Lotka-Volterra: Räuber- und Beute-Populationen schwingen; Räuber-Zyklus hinkt Beute-Zyklus nach.
 
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Zentral prüfungsrelevant:**
+- Konkurrenz intraspezifisch (innerhalb einer Art) vs. interspezifisch (zwischen Arten).
+- Konkurrenzausschlussprinzip (Gauß): identische Nische → eine Art verdrängt die andere; Paramecium-Experiment.
+- Symbioseformen: Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−).
+- Parasit tötet Wirt nicht sofort; Räuber tötet Beute sofort.
+- Räuber-Beute: Räuberpopulation hinkt Beutepopulation nach.
 
-**Zentral prüfungsrelevant:** **Definition ökologische Nische (MedAT):** Gesamtheit **aller biotischen und abiotischen** Umweltfaktoren, die für die Existenz einer bestimmten Art wichtig sind — nicht nur Lebensgemeinschaft, nicht nur ein Temperaturbereich, nicht nur abiotische Faktoren eines Biotops. Nische (fundamental vs. realisiert), Konkurrenzausschluss, Connell-Seepocken-Experiment, Ressourcenaufteilung.
+**Häufige Prüfungsfragen:**
+- Was besagt das Konkurrenzausschlussprinzip? Nenne ein Experiment.
+- Ordne Symbioseformen mit Vorzeichen zu (Mutualismus, Kommensalismus, Parasitismus, Prädation).
+- Worin unterscheiden sich Parasitismus und Prädation?
+- Bei Räuber-Beute-Zyklen: Welche Population hinkt nach? (Räuber)
 
-**Ergänzend vertiefend:** Nischenüberlappung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Typische Prüfungsfallen:**
+- Parasitismus (+/−) und Prädation (+/−) verwechseln: Parasit tötet nicht sofort, Räuber schon.
+- Kommensalismus (+/0) vs. Mutualismus (+/+): Beim Kommensalismus ist der zweite Partner unbeeinflusst.
+- Intraspezifisch = innerhalb einer Art, interspezifisch = zwischen Arten.
 
-**Häufige Fragen:**
-- Fundamentale vs. realisierte Nische definieren und das Connell-Seepocken-Experiment erklären
-- Nischendifferenzierung als Mechanismus für Koexistenz beschreiben (zeitlich, räumlich, trophisch)
-- Allopatrische vs. sympatrische Artbildung mit Beispielen unterscheiden
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Nische ≠ Habitat: Nische = funktionale Rolle + Toleranzbereiche, Habitat = physischer Ort
-- Konvergente Evolution (ökologische Äquivalente, nicht verwandt) vs. divergente Evolution (verwandt, unterschiedlich)
-- Fundamentale Nische ≥ realisierte Nische, niemals umgekehrt
-- Allopatrisch (geografische Trennung) vs. sympatrisch (im selben Gebiet) — Verwechslungsgefahr bei den griechischen Vorsilben
-- Charakterverschiebung: stärker in Sympatrie als in Allopatrie — nicht umgekehrt
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Hutchinson (1957): n-dimensionaler Hyperraum
-- Connell-Experiment (1961): Chthamalus vs. Balanus auf schottischen Felsen
-- MacArthur (1958): 5 Waldsängerarten (Dendroica) im selben Baum
-- Grant & Grant (2002): Darwinfinken — Charakterverschiebung auf Galapagos
-- Sympatrische Artbildung: Polyploidie besonders bei Pflanzen häufig
+**Wichtige Begriffe & Definitionen:**
+- Konkurrenz (intraspezifisch, interspezifisch), Konkurrenzausschlussprinzip (Gauß), Mutualismus, Kommensalismus, Parasitismus, Prädation, Räuber-Beute-Dynamik.
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Ökologische Nische** (Hutchinson): n-dimensionaler Hyperraum; jeder Umweltfaktor = eine Achse
-- **Fundamentale Nische**: physiologisch möglicher Lebensraum; **Realisierte Nische**: durch Konkurrenz eingeschränkter tatsächlicher Lebensraum
-- **Connell-Experiment** (Seepocken): Entfernung des Konkurrenten → Ausweitung auf fundamentale Nische belegt
-- **Nischendifferenzierung**: zeitliche, räumliche oder trophische Ressourcenteilung → Koexistenz möglich
-- **Charakterverschiebung**: Merkmale divergieren in Sympatrie evolutionär → reduziert Konkurrenz
-- **Habitat**: physischer Ort (Adresse); **Nische**: Rolle im Ökosystem (Beruf) — wichtige Unterscheidung`,
-      merksätze: [
-        "Hutchinson (1957): Ökologische Nische = n-dimensionaler Hyperraum. Jeder Umweltfaktor eine Dimension.",
-        "Fundamentale Nische ≥ realisierte Nische. Konkurrenz schränkt die realisierte Nische ein (Connell-Seepocken-Experiment).",
-        "Nischendifferenzierung ermöglicht Koexistenz: zeitlich (Tag/Nacht), räumlich (verschiedene Baumzonen), trophisch (verschiedene Beutegrößen).",
-        "Charakterverschiebung: konkurrierende Arten in Sympatrie divergieren phänotypisch → reduzierte Nischenüberlappung.",
-        "Ökologische Äquivalente: taxonomisch nicht verwandt, gleiche Nische → konvergente Evolution (Hai vs. Delfin).",
-        "Allopatrische Artbildung: geografische Isolation → kein Genfluss → neue Arten. Sympatrisch: Polyploidie oder Wirtspflanzendifferenzierung.",
-      ],
-      klinischerBezug:
-        "Das Konkurrenzausschlussprinzip erklärt, warum opportunistische Pathogene nach Antibiotikatherapie überhandnehmen: Breitbandantibiotika eliminieren die Normalflora (Konkurrenten) → Clostridioides difficile besetzt die freigewordene Nische → pseudomembranöse Kolitis. Probiotika nutzen das Prinzip der kompetitiven Exklusion therapeutisch.",
+- **Intraspezifische Konkurrenz** = innerhalb einer Art; **interspezifische** = zwischen Arten.
+- **Gauß:** Zwei Arten in identischer Nische können nicht dauerhaft koexistieren (Paramecium-Experiment).
+- **Mutualismus** (+/+), **Kommensalismus** (+/0), **Parasitismus** (+/−), **Prädation** (+/−). Parasit tötet Wirt nicht sofort, Räuber tötet Beute sofort.
+- **Räuber-Beute:** Zyklen; Räuberpopulation hinkt Beutepopulation zeitlich nach.`,
       lernziele: [
-        "Fundamentale und realisierte ökologische Nische unterscheiden und das Konkurrenzausschlussprinzip erklären",
-        "Symbiose, Parasitismus, Kommensalismus und Konkurrenz als interspezifische Wechselbeziehungen definieren",
-        "Allopatrische und sympatrische Artbildung mit Beispielen erläutern",
+        "Intraspezifische und interspezifische Konkurrenz unterscheiden und das Konkurrenzausschlussprinzip (Gauß) erklären.",
+        "Symbioseformen (Mutualismus, Kommensalismus, Parasitismus, Prädation) mit Vorzeichen und Beispielen zuordnen.",
+        "Parasitismus von Prädation unterscheiden und die Räuber-Beute-Dynamik (Räuber hinkt nach) beschreiben.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
-      altfrage: {
-        question:
-          "Was besagt das Konkurrenzausschlussprinzip (Gause) und welche Konsequenz hat es für die Koexistenz von Arten?",
-        answer:
-          "Zwei Arten mit identischer ökologischer Nische können nicht dauerhaft im selben Habitat koexistieren — eine Art wird die andere verdrängen. Koexistenz erfordert Nischendifferenzierung (zeitlich, räumlich oder trophisch). Beispiel: Connells Seepocken-Experiment zeigte, dass Chthamalus und Balanus nur koexistieren, weil sie verschiedene Gezeitenzonen nutzen.",
-      },
+      sections: [],
+      merksätze: [
+        "Gauß: Identische Nische → eine Art verdrängt die andere. Koexistenz durch Nischendifferenzierung.",
+        "Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−). Parasit tötet Wirt nicht sofort.",
+        "Räuber-Beute: Räuberpopulation hinkt Beutepopulation zeitlich nach.",
+      ],
       selfTest: [
         {
           question:
-            "Hutchinsons Nischenkonzept (1957) definiert die ökologische Nische als n-dimensionalen Hyperraum. Was bedeutet das konkret?",
+            "Zwei Paramecium-Arten werden in Mischkultur gehalten und nutzen dieselbe Nahrung. Nach einigen Wochen überlebt nur noch eine Art. Welches Prinzip erklärt das?",
           options: [
-            "Die Nische ist der physikalische Lebensraum (Habitat) einer Art",
-            "Die Nische ist die trophische Rolle (Räuber, Beute, Destruent) einer Art",
-            "Die Nische ist ein mehrdimensionaler Raum, bei dem jeder für die Art relevante Umweltfaktor eine eigene Achse darstellt",
-            "Die Nische beschreibt den Aktionsradius einer Art in Kilometern",
-            "Die Nische ist die Breite der Toleranzkurve für einen einzelnen abiotischen Faktor",
+            "Prädation — eine Art frisst die andere",
+            "Mutualismus — eine Art verdrängt die andere durch Nutzen",
+            "Konkurrenzausschlussprinzip (Gauß) — zwei Arten in identischer Nische können nicht dauerhaft koexistieren",
+            "Allopatrische Artbildung",
+            "Dichteabhängige Regulation",
           ],
           correctIndex: 2,
           explanation:
-            "Hutchinsons Hyperraum-Konzept ist ein abstrakter n-dimensionaler Raum: Jeder für die Art relevante Faktor (Temperatur, Feuchtigkeit, Nahrungsgröße, pH, Prädationsdruck etc.) bildet eine Achse. Die Nische ist der Teilbereich dieses Hyperraums, in dem die Art überleben und reproduzieren kann. Das Konzept integriert Grinnells Habitat-Nische und Eltons trophische Nische in einem mathematischen Framework. Die 'Größe' der Nische im Hyperraum entspricht der ökologischen Spezialisierung der Art (groß = Generalist, klein = Spezialist).",
+            "Gauß-Experiment (1934): Zwei Arten mit identischer Nische (gleiche Nahrung, gleiches Habitat) können nicht koexistieren; die konkurrenzstärkere Art verdrängt die andere. Koexistenz wäre nur durch Nischendifferenzierung möglich.",
           difficulty: 1,
-          tags: ["hutchinson", "nische", "hyperraum", "n-dimensional"],
+          tags: ["gauß", "konkurrenzausschluss", "paramecium"],
         },
         {
           question:
-            "In einem Experiment auf schottischen Felsen wird *Balanus* (Seepocke der unteren Zone) entfernt. Daraufhin besiedelt *Chthamalus* (Seepocke der oberen Zone) auch die untere Zone. Was zeigt dieses Experiment?",
+            "Mykorrhizapilze und Pflanzenwurzeln: Pilz erhält Zucker von der Pflanze, Pflanze erhält Wasser und Mineralien vom Pilz. Welche Symbioseform?",
           options: [
-            "Die fundamentale Nische von Chthamalus ist kleiner als ihre realisierte Nische",
-            "Balanus ist ein Parasit von Chthamalus",
-            "Die realisierte Nische von Chthamalus war durch Konkurrenz mit Balanus auf die obere Zone eingeschränkt",
-            "Beide Seepockenarten haben identische fundamentale Nischen",
-            "Chthamalus kann die untere Zone nur bei Abwesenheit von Räubern besiedeln",
+            "Parasitismus (+/−)",
+            "Kommensalismus (+/0)",
+            "Mutualismus (+/+) — beide profitieren",
+            "Konkurrenz (−/−)",
+            "Prädation (+/−)",
           ],
           correctIndex: 2,
           explanation:
-            "Das Connell-Experiment (1961) ist der klassische Beleg für die Unterscheidung von fundamentaler und realisierter Nische. Die fundamentale Nische von Chthamalus erstreckt sich in die untere Zone — die Art kann dort physiologisch überleben. In Anwesenheit von Balanus (konkurrenzüberlegen in der unteren Zone) wird Chthamalus auf die obere Zone verdrängt — das ist die realisierte Nische. Wenn Balanus entfernt wird, dehnt sich die realisierte Nische zur fundamentalen aus. Merksatz: Fundamentale Nische ≥ realisierte Nische. Konkurrenz schränkt immer ein.",
-          difficulty: 2,
-          tags: ["fundamentale-nische", "realisierte-nische", "connell", "seepocken"],
-        },
-        {
-          question:
-            "Zwei nahe verwandte Vogelarten konkurrieren um Insekten in einem Wald. Im Laufe der Evolution entwickeln sie zunehmend unterschiedliche Schnabelformen — in Sympatrie stärker als in Allopatrie. Wie heißt dieser Prozess?",
-          options: [
-            "Konvergente Evolution — beide Arten werden ähnlicher",
-            "Charakterverschiebung (character displacement) — Konkurrenz treibt phänotypische Divergenz an",
-            "Genetische Drift — zufällige Allelhäufigkeitsveränderungen",
-            "Allopatrische Artbildung — geografische Isolation erzeugt neue Arten",
-            "Nischenkonservativismus — Arten behalten ihre Nische bei",
-          ],
-          correctIndex: 1,
-          explanation:
-            "Charakterverschiebung (character displacement) bezeichnet die evolutionäre Divergenz konkurrierender Arten in Merkmalen, die Nischenüberlappung reduzieren. In Sympatrie (gemeinsamem Vorkommen) ist der Selektionsdruck zur Nischendifferenzierung hoch: Individuen, die weniger mit der Konkurrenzart konkurrieren (z.B. durch anderen Schnabel → andere Beute), haben einen Fitnessvorteil. Dadurch divergieren die Arten. In Allopatrie (geografischer Trennung) fehlt dieser Selektionsdruck → Merkmale bleiben ähnlicher. Klassisches Beispiel: Galapagos-Darwinfinken und Grant & Grants Studien.",
-          difficulty: 2,
-          tags: ["charakterverschiebung", "nischendifferenzierung", "konkurrenz", "sympatrie"],
-        },
-        {
-          question:
-            "Welche der folgenden Paare sind ökologische Äquivalente durch konvergente Evolution?",
-          options: [
-            "Hund und Wolf — beide Caniden, dieselbe Abstammung",
-            "Hai (Fisch) und Delfin (Säuger) — ähnliche Körperform durch analoge Anpassung an schnelles Schwimmen",
-            "Katze und Löwe — beide Felidae, nah verwandt",
-            "Fuchs in Europa und Fuchs in Nordamerika — selbe Art, verschiedene Kontinente",
-            "Gorilla und Schimpanse — beide Hominidae, verschiedene Nischen",
-          ],
-          correctIndex: 1,
-          explanation:
-            "Ökologische Äquivalente entstehen durch konvergente Evolution: Nicht verwandte Arten entwickeln ähnliche Merkmale durch ähnliche Selektionsdrücke (analoge Strukturen, nicht homologe). Hai (Knorpelfisch, Chondrichthyes) und Delfin (Säuger, Mammalia) sind evolutionär sehr entfernt, haben aber beide eine stromlinienförmige Körperform, Flossen und ähnliches Schwimmverhalten als Anpassung an die aquatische Raubtier-Nische. Andere Beispiele: Kakteen (Amerika) und Euphorbien (Afrika) als Sukkulenten; Beuteltiere und Plazentatiere in ähnlichen Nischen.",
+            "Mutualismus (+/+): Beide Partner profitieren. Mykorrhiza: Pilz bekommt Zucker, Pflanze bekommt Wasser und Nährstoffe.",
           difficulty: 1,
-          tags: ["konvergente-evolution", "oekologische-aequivalente", "analogie", "hai-delfin"],
+          tags: ["mykorrhiza", "mutualismus"],
         },
         {
           question:
-            "Was ist der Hauptmechanismus der allopatrischen Artbildung und wie unterscheidet er sich von der sympatrischen Artbildung?",
+            "Worin besteht der entscheidende Unterschied zwischen Parasitismus und Prädation (beide haben das Vorzeichen +/−)?",
           options: [
-            "Allopatrisch: Polyploidie innerhalb einer Population. Sympatrisch: geografische Barriere.",
-            "Allopatrisch: geografische Barriere → kein Genfluss → Isolation. Sympatrisch: Artbildung ohne geografische Trennung (z. B. Polyploidie, Wirtspflanzendifferenzierung).",
-            "Allopatrisch: sexual selection. Sympatrisch: natürliche Selektion.",
-            "Allopatrisch: saisonale Isolation. Sympatrisch: geografische Isolation.",
-            "Beide Mechanismen erfordern geografische Barrieren — der Unterschied liegt nur in der Dauer.",
+            "Parasitismus ist positiv für den Wirt",
+            "Parasitismus tötet den Wirt sofort, Prädation nur selten",
+            "Parasitismus schädigt den Wirt, tötet ihn aber normalerweise nicht sofort; Prädation tötet die Beute direkt",
+            "Parasitismus betrifft nur Tiere",
+            "Es gibt keinen biologischen Unterschied",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
-            "Allopatrische Artbildung (griech. allos = anders, patria = Vaterland): Eine Population wird durch eine geografische Barriere (Gebirge, Ozean, Gletscher) getrennt → kein Genfluss zwischen den Teilpopulationen → unabhängige genetische Evolution → reproduktive Isolation → neue Arten. Häufigster Mechanismus. Sympatrische Artbildung (griech. syn = zusammen): Artbildung ohne geografische Trennung, im selben Areal. Wichtigste Mechanismen: Polyploidie (besonders Pflanzen; Chromosomenverdopplung → sofortige reproduktive Isolation), Wirtspflanzendifferenzierung bei Insekten, saisonale Isolation. Sympatrische Artbildung ist seltener, aber gut dokumentiert.",
+            "Beide sind (+/−). Beim Parasitismus lebt der Parasit auf/in dem Wirt und schädigt ihn, tötet ihn aber meist nicht sofort (toter Wirt = kein Habitat mehr). Beim Räuber tötet der Räuber die Beute und frisst sie.",
           difficulty: 2,
-          tags: ["allopatrisch", "sympatrisch", "artbildung", "isolation"],
+          tags: ["parasitismus", "prädation"],
+        },
+        {
+          question:
+            "Bei Räuber-Beute-Zyklen nach Lotka-Volterra: Wenn die Beutepopulation ihren Höhepunkt erreicht, was passiert mit der Räuberpopulation?",
+          options: [
+            "Die Räuberpopulation erreicht gleichzeitig ihren Höhepunkt",
+            "Die Räuberpopulation sinkt sofort auf null",
+            "Die Räuberpopulation beginnt zu steigen und erreicht ihren Höhepunkt zeitlich nach der Beute",
+            "Die Räuberpopulation bleibt konstant",
+            "Die Räuberpopulation wechselt zu anderer Beute",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Räuberpopulation hinkt der Beutepopulation zeitlich nach: Viel Beute → Räuber profitieren → Räuberpopulation steigt und erreicht ihren Höhepunkt später als die Beute.",
+          difficulty: 2,
+          tags: ["lotka-volterra", "räuber-beute"],
         },
       ],
     },
@@ -929,14 +708,14 @@ Beispiele:
       ],
       content: `## Einleitung
 
-Ökosysteme sind die funktionellen Einheiten der Biosphäre, in denen Lebewesen und ihre abiotische Umwelt durch Energie- und Stoffflüsse miteinander verbunden sind. Für den MedAT sind die 10%-Regel des Energietransfers, die Unterscheidung von GPP und NPP sowie die biogeochemischen Kreisläufe von Kohlenstoff, Stickstoff und Phosphor zentrale Prüfungsthemen. Medizinisch relevant sind Bioakkumulation von Schadstoffen entlang der Nahrungskette sowie die Nitratbelastung des Trinkwassers als Ursache der Methämoglobinämie bei Säuglingen.
+Ökosysteme sind die funktionellen Einheiten, in denen **Biozönose** und **Biotop** durch **Energie- und Stoffflüsse** verbunden sind. Für den MedAT sind **Nahrungsketten** und **Nahrungsnetze**, die **10%-Regel** des Energietransfers, die Unterscheidung **Energiefluss (gerichtet) vs. Stoffkreisläufe (geschlossen)** sowie die wichtigsten biogeochemischen Kreisläufe (Kohlenstoff, Stickstoff, Phosphor) zentral. Typische BMS-Fragen: Trophieebenen zuordnen, 10%-Regel anwenden, Energiefluss von Stoffkreisläufen unterscheiden.
 
-**Das Wichtigste auf einen Blick:**
-- Ökosystem = biotische (Lebewesen) + abiotische (Umwelt) Komponenten in Wechselwirkung
-- Trophieebenen: Produzenten → Konsumenten (I, II, III) → Destruenten
-- 10%-Regel: ca. 10% der Energie gelangt auf die nächste Trophieebene
-- Primärproduktion: GPP (brutto) vs. NPP (netto = GPP − Respiration)
-- Biogeochemische Kreisläufe: Kohlenstoff, Stickstoff, Phosphor, Wasser
+**In diesem Kapitel lernst du:**
+- **Nahrungskette** und **Nahrungsnetz** (Produzenten → Konsumenten → Destruenten)
+- **10%-Regel:** nur ca. 10% der Energie gelangt auf die nächste Trophieebene
+- **Energiefluss** (einrichtungsgerichtet, Verlust als Wärme) vs. **Stoffkreisläufe** (Materie zirkuliert)
+- **Primärproduktion:** GPP (brutto) vs. NPP (netto)
+- Grundidee der **Stoffkreisläufe** (Kohlenstoff, Stickstoff, Phosphor)
 
 ![Energiefluss und Trophieebenen](/grafik-21-energieprofil.svg)
 
@@ -1070,11 +849,13 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
 - Stickstoffkreislauf-Schritte in korrekter Reihenfolge aufzählen und beteiligte Organismen nennen
 
 **Typische Prüfungsfallen / Verwechslungen:**
-- GPP (gesamte Photosynthese) vs. NPP (nach Abzug der Pflanzeneigen-Atmung) — NPP ist für Konsumenten verfügbar
-- Phosphorkreislauf hat kein gasförmiges Reservoir — im Gegensatz zu C- und N-Kreislauf
-- Nitrifikation (NH₄⁺ → NO₃⁻, aerob) vs. Denitrifikation (NO₃⁻ → N₂, anaerob) — gegenläufige Prozesse
-- Nahrungskette (linear, vereinfacht) vs. Nahrungsnetz (komplex, realistisch)
-- Destruenten werden oft vergessen, obwohl ca. 90% der Primärproduktion als Detritus zu ihnen gelangt
+- Energiefluss (einrichtungsgerichtet, 10%-Regel) ≠ Stoffkreislauf (Materie zirkuliert).
+- GPP (gesamte Photosynthese) vs. NPP (nach Abzug der Pflanzeneigen-Atmung) — NPP ist für Konsumenten verfügbar.
+- Phosphorkreislauf hat kein gasförmiges Reservoir — im Gegensatz zu C- und N-Kreislauf.
+- Nahrungskette (linear) vs. Nahrungsnetz (komplex, realistisch). Destruenten nicht vergessen.
+
+**Wichtige Begriffe & Definitionen:**
+- Produzenten, Konsumenten (I–III), Destruenten, Trophieebene, Nahrungskette, Nahrungsnetz, 10%-Regel, GPP, NPP, Stoffkreislauf, Eutrophierung.
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - 10%-Regel (Lindeman 1942): ca. 10% Energieübertragung pro Trophiestufe
@@ -1205,313 +986,161 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
 
     {
       id: "bio-10-06",
-      title: "Biodiversität & Evolutionäre Ökologie",
+      title: "Sukzession und Populationsdynamik",
       stichworte: [
-        "Biodiversität",
-        "Artenreichtum",
-        "Inselbiographie",
         "Sukzession",
-        "Keystone-Arten",
-        "Massenaussterben",
-        "HIPPO",
-        "Hotspots",
+        "Primäre Sukzession",
+        "Sekundäre Sukzession",
+        "Pionier",
+        "Klimaxgesellschaft",
+        "Populationswachstum",
+        "exponentiell",
+        "logistisch",
+        "Kapazitätsgrenze K",
+        "r-Strategen",
+        "K-Strategen",
       ],
       content: `## Einleitung
 
-Biodiversität beschreibt die Vielfalt des Lebens auf drei hierarchischen Ebenen — genetisch, Arten und Ökosysteme — und ist die Grundlage für Ökosystemstabilität, evolutionäre Anpassungsfähigkeit und zahlreiche medizinisch relevante Naturstoffe. Für den MedAT sind die Inselbiographie-Theorie, das Sukzessionskonzept, die HIPPO-Bedrohungsfaktoren und die historischen Massenaussterben regelmäßig abgeprüfte Themen. Die Pharmazie ist direkt von Biodiversität abhängig, da etwa 50% aller zugelassenen Medikamente auf Naturstoffen basieren.
+**Sukzession** ist die gerichtete Abfolge von Lebensgemeinschaften auf einer Fläche über die Zeit; **Populationsdynamik** beschreibt, wie Populationen wachsen und durch Ressourcen begrenzt werden. Beide Themen sind für den MedAT BMS-relevant: Primär vs. sekundäre Sukzession, Pionier- und Klimaxgesellschaft, exponentielles vs. logistisches Wachstum, Kapazitätsgrenze K und r- vs. K-Strategen. Typische Fragen: Welche Sukzession beginnt wo? Was ist die 10%-Regel der Energie? J- vs. S-Kurve, r- vs. K-Strategen zuordnen.
 
-**Das Wichtigste auf einen Blick:**
-- Biodiversität umfasst drei Ebenen: genetisch, Arten (Spezies), Ökosysteme
-- Biodiversitäts-Hotspots: Regionen mit extrem hohem Artenreichtum und hohem Endemismus
-- Inselbiographie (MacArthur & Wilson): Gleichgewicht Artenzahl durch Einwanderung = Extinktion
-- Sukzession: primär (nackte Fläche) vs. sekundär (nach Störung) → Klimaxgesellschaft
-- Hauptbedrohungen: HIPPO (Habitatverlust, Invasive Arten, Pollution, Population, Overexploitation)
-- 5 historische Massenaussterben + aktuelles 6. Massenaussterben (anthropogen)
-
-![Artenzahl und Gleichgewicht](/grafik-normalverteilung.svg)
-
-**Erklärung zur Grafik:** Inselbiographie: Gleichgewicht aus Einwanderung und Extinktion; Artenzahl hängt von Fläche und Isolation ab.
-
-![Sukzession und Diversität](/grafik-toleranzkurve.svg)
-
-**Erklärung zur Grafik:** Sukzession verändert Artenzusammensetzung und Diversität; von Pionier- zur Klimaxgesellschaft.
+**In diesem Kapitel lernst du:**
+- **Primäre** und **sekundäre Sukzession** zu unterscheiden und Pionierorganismen zu nennen
+- Das Endstadium **Klimaxgesellschaft** und die Abfolge der Sukzessionsstadien
+- **Exponentielles** (J-Kurve) und **logistisches** (S-Kurve) Wachstum zu unterscheiden
+- **Kapazitätsgrenze K** und **r- vs. K-Strategen** (viele Nachkommen vs. wenige mit Brutpflege)
 
 ---
 
-## Biodiversitäts-Ebenen
+## Sukzession: Primär und Sekundär
 
-**Biodiversität** (biologische Vielfalt) bezeichnet die Vielfalt des Lebens auf Erde und umfasst drei hierarchische Ebenen:
+**Sukzession** = die gerichtete, vorhersagbare Abfolge von Biozönosen (Lebensgemeinschaften) auf einer Fläche über die Zeit.
 
-**1. Genetische Diversität:** Variabilität der genetischen Information innerhalb einer Population oder Art. Hohe genetische Diversität ermöglicht Anpassung an Umweltveränderungen (evolutionäre Flexibilität); sie ist die Grundlage für natürliche Selektion. Maßnahme: Populationsgröße erhalten (verhindert genetische Drift und Inzucht).
+**Primäre Sukzession:** Beginnt auf **völlig unbelebtem Substrat** ohne Boden und ohne Samenbänke — z. B. nach Gletscherrückzug, Vulkanausbruch (Lava), neuer Sandstrand. **Pionierorganismen** (Flechten, Moose, Cyanobakterien) besiedeln zuerst, verwittern Gestein und bilden Humus; danach folgen Gräser, Kräuter, Sträucher, Bäume. Langsam (Jahrzehnte bis Jahrhunderte).
 
-**2. Artendiversität (Spezies-Diversität):** Anzahl der Arten in einem Gebiet (Artenreichtum/species richness) + relative Abundanz (Gleichverteilung der Arten, Evenness). Biodiversitäts-Indizes (z. B. Shannon-Index H) kombinieren beide Aspekte. Die Gesamtzahl beschriebener Arten: ca. 1,9 Millionen; geschätzte Gesamtzahl: ca. 8–10 Millionen Arten.
+**Sekundäre Sukzession:** Beginnt nach einer **Störung auf Flächen mit vorhandenem Boden** und Samenbänken — z. B. nach Waldbrand, Sturmwurf, Brache. Schneller als primär, weil Nährstoffe und Samen schon da sind.
 
-**3. Ökosystem-Diversität:** Vielfalt der Habitate, Ökosysteme und ökologischen Prozesse in einer Region. Unterschiedliche Ökosystemtypen bieten unterschiedliche Lebensräume und ökologische Dienstleistungen.
+**Klimaxgesellschaft:** Das **stabile Endstadium**, das vom regionalen Klima bestimmt wird (z. B. Buchenwald in Mitteleuropa). Die Artenzusammensetzung ändert sich ohne weitere Störung nur noch wenig.
 
-> **Merke:** Biodiversität = 3 Ebenen: genetisch + Arten + Ökosysteme. Alle drei sind für Funktion, Stabilität und Evolutionspotenzial essenziell.
+| Typ | Ausgangslage | Geschwindigkeit | Erstbesiedler |
+|-----|--------------|-----------------|---------------|
+| **Primär** | Nacktes Substrat (Lava, Gletscher) | Langsam | Flechten, Moose |
+| **Sekundär** | Boden + Samen vorhanden | Schneller | Gräser, Kräuter, Pionierbäume |
 
----
-
-## Biodiversitäts-Hotspots
-
-**Biodiversitäts-Hotspots** sind Regionen mit außergewöhnlich hohem Artenreichtum UND hohem Endemismus (Arten, die nur dort vorkommen) UND erheblichem Habitatverlust. Das Konzept wurde von Norman Myers (1988, 2000) entwickelt.
-
-**Kriterien (Conservation International):** ≥ 1.500 endemische Gefäßpflanzenarten UND ≤ 30% des ursprünglichen Habitats noch erhalten.
-
-Weltweit wurden 36 Hotspots identifiziert. Obwohl sie nur ca. 2,5% der Erdoberfläche bedecken, beherbergen sie ca. 44% aller Gefäßpflanzenarten und ca. 35% aller Wirbeltierarten.
-
-**Wichtige Hotspots:**
-- *Tropischer Regenwald (Amazonasbecken, Kongobecken, Südostasien):* Höchste absolute Biodiversität der Erde
-- *Korallenriffe (Coral Triangle, Great Barrier Reef):* "Regenwälder des Meeres" — obwohl < 1% Meeresfläche, beherbergen sie ca. 25% aller Meeresfischarten
-- *Mittelmeer-Hotspot:* Mediterraner Raum mit hohem Pflanzen-Endemismus
-- *Kapregion (Südafrika):* Extrem hoher Endemismus auf kleiner Fläche (Fynbos)
-- *Madagaskar:* >90% Endemismus bei Wirbeltieren (Lemuren, Chamäleons)
-
-> **Merke:** Hotspots: 2,5% Fläche = 44% aller Pflanzen + 35% aller Wirbeltiere. Krit.: hoher Endemismus + Habitatverlust. Höchste Priorität im Naturschutz.
+> **Merke:** Primäre Sukzession = nacktes Substrat, Pionierorganismen (Flechten, Moose) zuerst. Sekundäre Sukzession = Boden vorhanden, schneller. Endstadium = Klimaxgesellschaft.
 
 ---
 
-## Inselbiographie — MacArthur & Wilson
+## Populationsdynamik: Wachstum und Begrenzung
 
-**Inselbiographietheorie** (Robert MacArthur & E.O. Wilson, 1967): Erklärt die Artenanzahl auf Inseln (oder Habitatinseln wie Nationalparks, Berggipfeln) durch ein dynamisches Gleichgewicht.
+Eine **Population** ist die Gesamtheit aller Individuen **einer Art** in einem definierten Gebiet. Ihr Wachstum hängt von Geburten, Todesfällen, Ein- und Auswanderung ab.
 
-**Kernaussage:** Die Artenzahl auf einer Insel erreicht ein Gleichgewicht (Ŝ), wenn die Immigrationsrate (Einwanderung neuer Arten) gleich der Extinktionsrate (Aussterben von Arten) ist.
+**Exponentielles Wachstum (J-Kurve):** Wenn Ressourcen praktisch unbegrenzt sind, wächst die Population exponentiell: dN/dt = r·N. Die Wachstumsrate ist proportional zur aktuellen Größe N. Grafisch: **J-förmige Kurve**. Tritt in der Natur nur kurzfristig auf (Pionierphase, invasive Arten, Bakterien in Logphase).
 
-**Einflussfaktoren:**
-- *Inselgröße:* Größere Inseln → niedrigere Extinktionsrate UND höheres Gleichgewichts-Ŝ
-- *Inseldistanz zum Festland:* Nähere Inseln → höhere Immigrationsrate UND höheres Gleichgewichts-Ŝ
+**Logistisches Wachstum (S-Kurve):** In der Realität limitieren Ressourcen das Wachstum. Die Population nähert sich einer **Kapazitätsgrenze K** (carrying capacity): dN/dt = r·N·(K−N)/K. Grafisch: **S-förmige (sigmoidale) Kurve**. Bei N = K ist das Wachstum null (Gleichgewicht). Die maximale absolute Wachstumsrate liegt bei N = K/2.
 
-**Arten-Areal-Beziehung:** S = c · A^z (S = Artenzahl, A = Inselfläche). Faustregel: 10× Fläche ≈ Verdopplung der Artenzahl. Praktische Implikation: Habitatfragmentierung reduziert effektive Inselgröße → Artenverlust.
+**Kapazitätsgrenze K:** Die maximale Populationsgröße, die ein Habitat dauerhaft tragen kann (Nahrung, Raum, Nester etc.).
 
-**Naturschutzrelevanz:** Nationalparks sind Habitatinseln in einer Landschaftsmatrix. Große, verbundene Schutzgebiete erhalten mehr Arten als kleine, isolierte (SLOSS-Debatte: Single Large Or Several Small).
+> **Merke:** Exponentiell = J-Kurve, unbegrenzte Ressourcen. Logistisch = S-Kurve, K = Kapazitätsgrenze. Bei N = K: Gleichgewicht.
 
 ---
 
-## Sukzession
+## r-Strategen und K-Strategen
 
-**Sukzession** bezeichnet die gerichtete, vorhersagbare Abfolge von Biozönosen (Lebensgemeinschaften) über die Zeit nach einer Störung oder auf neuem Substrat.
+Zwei grundlegende Lebensstrategien:
 
-**Primäre Sukzession:** Beginn auf völlig unbelebtem Substrat ohne Bodenorganismen oder Samenbänke — nach Gletscherrückzug, Vulkanausbruch (Lavafeld), an Sandstränden. Pionierorganismen (Flechten, Moose, Cyanobakterien) besiedeln die Fläche als Erste, bereiten den Boden vor (Humusbildung, Windschutz), werden durch folgende Gemeinschaften ersetzt.
+- **r-Strategen:** Viele Nachkommen, wenig Brutpflege, kurze Generationszeit, kleine Körper, instabile Habitate. Beispiele: Insekten, Mäuse, Löwenzahn. Überleben durch **Quantität**.
+- **K-Strategen:** Wenige Nachkommen, intensive Brutpflege, lange Generationszeit, große Körper, stabile Habitate nahe K. Beispiele: Elefant, Mensch, Adler. Überleben durch **Qualität**.
 
-**Sekundäre Sukzession:** Nach einer Störung auf Flächen mit noch vorhandenem Bodenprofil und Samenbänken — nach Waldbrand, Sturmwurf, landwirtschaftlicher Aufgabe. Schneller als primäre Sukzession.
-
-**Sukzessionsstadien (Beispiel: Wald nach Brand):**
-1. *Pionierphase:* Annuelle Pflanzen, Farne, Moose (lichtbedürftig, schnell wachsend)
-2. *Frühe Sukzession:* Gräser, Stauden, Birken, Pappeln (Lichtbaumarten)
-3. *Mittlere Sukzession:* Vorwaldstadium mit Birken/Kiefern → Buchen-/Eichen-Keimung im Schatten
-4. *Klimaxgesellschaft:* Stabiles Endstadium (z. B. Buchenwald in Mitteleuropa)
-
-**Mechanismen der Sukzession:**
-- *Fazilitation:* Frühere Arten verbessern Bedingungen für spätere (Flechten → Boden → Moose → Kräuter)
-- *Toleranz:* Spätere Arten können unter schwierigen Bedingungen bereits keimen, setzen sich aber erst mit der Zeit durch
-- *Inhibition:* Frühe Arten verhindern aktiv die Besiedlung durch spätere Arten (z. B. durch Allelopathie)
-
-**Intermediate Disturbance Hypothesis (Connell):** Mittlere Störungsfrequenz maximiert Biodiversität — verhindert Dominanz durch Klimax-Arten, erlaubt gleichzeitig Pionier-Arten.
-
----
-
-## Keystone-Arten und Ökosystem-Ingenieure
-
-**Keystone-Arten (Schlüsselarten):** Arten mit überproportional großem Ökosystemeinfluss relativ zu ihrer Biomasse. Ihr Fehlen verändert die Ökosystemstruktur fundamental (Konzept: R.T. Paine, 1969).
-
-**Keystone-Prädatoren:** Regulieren Populationen anderer Arten und ermöglichen dadurch Artenvielfalt (Seestern-Experiment Paine 1969, Yellowstone-Wölfe 1995).
-
-**Keystone-Mutualisisten:** Arten, von denen viele andere abhängen (Feigen und Feigenwespen — obligater Mutualismus; Verlust der Wespen führt zum Verlust der Feigen und Kollaps abhängiger Ökosysteme).
-
-**Ökosystem-Ingenieure:** Arten, die das physikalische Habitat maßgeblich strukturieren (Biber → Dämme → Feuchtgebiete; Würmer → Bodenstruktur; Korallen → Riffstrukturen).
-
----
-
-## Hauptbedrohungen der Biodiversität — HIPPO
-
-Das Akronym **HIPPO** (E.O. Wilson) fasst die fünf Hauptbedrohungen zusammen:
-
-| Buchstabe | Bedrohung | Bedeutung |
-|---|---|---|
-| H | **H**abitatverlust und -fragmentierung | Größte Bedrohung: Abholzung, Urbanisierung, Landwirtschaft |
-| I | **I**nvasive Arten | Eingeschleppte Arten verdrängen einheimische |
-| P | **P**ollution (Verschmutzung) | Pestizide, Plastik, Schwermetalle |
-| P | **P**opulation (Menschliche Überbevölkerung) | Treibt alle anderen Faktoren an |
-| O | **O**verexploitation (Übernutzung) | Überfischung, Wilderei, illegaler Wildtierhandel |
-
-**Habitatverlust** ist quantitativ die bedeutendste Bedrohung: ca. 75% aller Landlebensräume durch menschliche Aktivität signifikant verändert, ca. 85% der Feuchtgebiete verloren.
-
-**Invasive Arten** sind nach Habitatverlust die zweitgrößte Bedrohung. Beispiele: Nilbarsch im Viktoriasee (führte zu Aussterben von ca. 200 Cichlidenarten); Braune Baumschlange auf Guam (hat fast alle einheimischen Vogelarten ausgerottet).
-
----
-
-## Massenaussterben
-
-Ein **Massenaussterben** ist definiert als Verlust von ≥ 75% aller Arten in einem geologisch kurzen Zeitraum.
-
-**5 historische Massenaussterben:**
-
-| Ereignis | Zeit | Verlust | Ursache |
-|---|---|---|---|
-| Ordovizium-Silur | 443 Mio. Jahre | ~86% Meeresarten | Gletscherung, Meeresspiegel-Abfall |
-| Devon (Frasnium-Famennium) | 375 Mio. Jahre | ~75% | Anoxia Ozeane |
-| Perm-Trias ("The Great Dying") | 252 Mio. Jahre | ~96% Meeresarten, ~70% Landarten | Vulkanismus (Sibirische Traps), CO₂, Anoxia |
-| Trias-Jura | 201 Mio. Jahre | ~80% | Vulkanismus (CAMP), Klimawechsel |
-| Kreide-Paläogen (K-Pg) | 66 Mio. Jahre | ~76% (inkl. Nicht-Vogel-Dinosaurier) | Chicxulub-Meteorit + Vulkanismus (Dekkan) |
-
-**6. Massenaussterben (aktuell, anthropogen):** Aktuelle Aussterberate ca. 100–1.000× höher als natürliche Hintergrundrate. Primärer Treiber: menschliche Aktivität (HIPPO). Ob es ein "echtes" Massenaussterben (≥ 75% aller Arten) werden wird, hängt vom Verlauf der nächsten Jahrzehnte ab.
-
----
-
-## Schutzmaßnahmen
-
-**In-situ-Erhaltung:** Schutz von Arten in ihrem natürlichen Habitat (Nationalparks, Naturreservate, Biosphärenreservate). Effektivste Langzeitmaßnahme. Kritisch: Verbundkorridore zwischen Schutzgebieten (Genfluss, Migration).
-
-**Ex-situ-Erhaltung:** Schutz außerhalb des natürlichen Habitats (Zoos, Botanische Gärten, Genbanken, Kryokonservierung). Notfallmaßnahme, wenn Habitat zerstört.
-
-**Ökologische Restauration:** Aktive Wiederherstellung degradierter Ökosysteme — Aufforstung, Renaturierung von Flüssen, Wiederansiedlung ausgestorbener Arten (Rewilding).
+> **Merke:** r-Strategen = viele Kinder, wenig Fürsorge, kurze Generation. K-Strategen = wenige Kinder, viel Fürsorge, lange Generation.
 
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Zentral prüfungsrelevant:**
+- **Primäre Sukzession:** nacktes Substrat → Pionierorganismen (Flechten, Moose) → … → Klimaxgesellschaft. **Sekundäre Sukzession:** Boden/Samen vorhanden → schneller.
+- **Exponentielles Wachstum:** J-Kurve, dN/dt = r·N. **Logistisches Wachstum:** S-Kurve, K = Kapazitätsgrenze.
+- **r-Strategen:** viele Nachkommen, wenig Brutpflege. **K-Strategen:** wenige Nachkommen, viel Brutpflege.
 
-**Zentral prüfungsrelevant:** Biodiversität (genetisch, Arten, Ökosystem), Bedeutung (Stabilität, Ökosystemleistungen), Gefährdung, Artenschutz, Rote Liste.
+**Häufige Prüfungsfragen:**
+- Primär vs. sekundäre Sukzession unterscheiden. Was sind Pionierorganismen?
+- J-Kurve vs. S-Kurve zuordnen. Was ist K?
+- r- vs. K-Strategen mit Beispielen zuordnen.
 
-**Ergänzend vertiefend:** Hotspots; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Typische Prüfungsfallen:**
+- Primäre Sukzession = auf nacktem Substrat (nicht „nach Waldbrand“ — das ist sekundär).
+- Exponentiell (J) vs. logistisch (S): In der Natur dominiert logistisches Wachstum.
+- r = Wachstumsrate, K = Kapazitätsgrenze (nicht verwechseln).
 
-**Häufige Fragen:**
-- Die drei Ebenen der Biodiversität benennen und deren Bedeutung erklären
-- Inselbiographie: Einfluss von Inselgröße und -distanz auf die Gleichgewichts-Artenzahl
-- Primäre vs. sekundäre Sukzession unterscheiden und Pionierorganismen nennen
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- HIPPO-Reihenfolge: Habitatverlust ist die größte Bedrohung, nicht Pollution oder Overexploitation
-- Primäre Sukzession (nacktes Substrat, Flechten zuerst, langsam) vs. sekundäre Sukzession (Samenbänke vorhanden, schneller)
-- Klimaxgesellschaft ≠ artenreichste Phase — Intermediate Disturbance Hypothesis: mittlere Störung maximiert Diversität
-- Perm-Trias = größtes Massenaussterben ("The Great Dying", ~96%), nicht K-Pg (das mit den Dinosauriern, ~76%)
-- Keystone-Arten: überproportionaler Einfluss relativ zur Biomasse — nicht die häufigste oder größte Art
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- 36 Biodiversitäts-Hotspots: 2,5% der Erdoberfläche, 44% aller Pflanzen, 35% aller Wirbeltiere
-- MacArthur & Wilson (1967): Inselbiographie-Theorie; Arten-Areal: S = c·A^z
-- Perm-Trias (252 Mio. Jahre): ~96% Meeresarten; K-Pg (66 Mio. Jahre): ~76% aller Arten
-- Aktuelle Aussterberate: 100–1.000× höher als natürliche Hintergrundrate
-- Ca. 1,9 Mio. beschriebene Arten, geschätzt 8–10 Mio. insgesamt
+**Wichtige Begriffe & Definitionen:**
+- Sukzession (primär, sekundär), Pionierorganismen, Klimaxgesellschaft, exponentielle/logistische Wachstum, Kapazitätsgrenze K, r-Strategen, K-Strategen.
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Biodiversität**: 3 Ebenen — genetische Diversität, Artendiversität, Ökosystem-Diversität
-- **Inselbiographie** (MacArthur & Wilson): Artenzahl = Gleichgewicht aus Immigration und Extinktion; große, festlandnahe Inseln haben mehr Arten
-- Anwendung Naturschutz: größere Reservate, verbundene Habitate → höhere Artenvielfalt
-- **Primäre Sukzession**: nackte Fläche (Lava, Gletscher) → Flechten/Moose → Gräser → Gebüsch → Klimaxgesellschaft
-- **Sekundäre Sukzession**: vorhandener Boden → schneller, weil Samendepot und Nährstoffe vorhanden
-- **6. Massenaussterben** (anthropogen): Aussterberate 100–1.000× natürliche Hintergrundrate; Ursachen: HIPPO (Habitatverlust, Invasive Arten, Pollution, Popul.-Wachstum, Übernutzung)`,
-      merksätze: [
-        "Biodiversität: 3 Ebenen — genetisch, Arten (Spezies), Ökosysteme. Alle drei essenziell für Stabilität und Evolution.",
-        "Hotspots: 2,5% der Erdoberfläche, aber 44% aller Pflanzen und 35% aller Wirbeltiere. Krit.: hoher Endemismus + Habitatverlust.",
-        "Inselbiographie (MacArthur & Wilson 1967): Gleichgewicht-Artenzahl wenn Immigration = Extinktion. Größere Insel → mehr Arten. Nähere Insel → mehr Arten.",
-        "Sukzession: primär (nackter Boden, Flechten zuerst) → sekundär (Samenbänke vorhanden) → Klimaxgesellschaft (von Klima bestimmt).",
-        "HIPPO: Habitatverlust, Invasive Arten, Pollution, Population, Overexploitation — 5 Hauptbedrohungen der Biodiversität (E.O. Wilson).",
-        "5 Massenaussterben: Ordovizium, Devon, Perm-Trias (größtes, ~96%), Trias-Jura, Kreide-Paläogen (K-Pg, Dinosaurier). 6. aktuell/anthropogen.",
-        "Keystone-Arten: überproportionaler Ökosystemeinfluss trotz geringer Biomasse (Seestern Paine 1969, Wölfe Yellowstone).",
-      ],
-      klinischerBezug:
-        "Biodiversitätsverlust bedroht die Pharmazie: ~50% aller zugelassenen Medikamente stammen direkt oder indirekt aus Naturstoffen (Taxol aus Eibe, Artemisinin aus Beifuß, Penicillin aus Pilzen). Die Zerstörung tropischer Regenwälder vernichtet potenziell unentdeckte Wirkstoffe. Antimikrobielle Resistenzen (AMR) und die Suche nach neuen Antibiotika machen Biodiversitätserhalt medizinisch relevant.",
+- **Primäre Sukzession:** nacktes Substrat → Flechten/Moose → … → Klimax. **Sekundäre Sukzession:** Boden vorhanden → schneller.
+- **Exponentiell:** J-Kurve, r·N. **Logistisch:** S-Kurve, Annäherung an K.
+- **r-Strategen:** viele Nachkommen, wenig Brutpflege. **K-Strategen:** wenige Nachkommen, viel Brutpflege.`,
       lernziele: [
-        "Die drei Ebenen der Biodiversität (genetisch, Arten, Ökosysteme) definieren",
-        "Biodiversitäts-Hotspots und die HIPPO-Bedrohungsfaktoren benennen",
-        "Primäre und sekundäre Sukzession unterscheiden und das Konzept der Klimaxgesellschaft erklären",
+        "Primäre und sekundäre Sukzession unterscheiden und Pionierorganismen nennen.",
+        "Exponentielles und logistisches Wachstum sowie Kapazitätsgrenze K beschreiben.",
+        "r- und K-Strategen mit Merkmalen und Beispielen zuordnen.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
-      altfrage: {
-        question:
-          "Was sind Biodiversitäts-Hotspots und nach welchen Kriterien werden sie definiert?",
-        answer:
-          "Hotspots sind Regionen mit besonders hoher Biodiversität und gleichzeitig starker Bedrohung. Kriterien (Myers 2000): mindestens 1.500 endemische Gefäßpflanzen UND mindestens 70% des ursprünglichen Habitats verloren. 36 Hotspots bedecken nur 2,5% der Erdoberfläche, beherbergen aber 44% aller Pflanzen und 35% aller Wirbeltiere.",
-      },
+      sections: [],
+      merksätze: [
+        "Primäre Sukzession: nacktes Substrat, Flechten/Moose zuerst. Sekundäre: Boden/Samen da, schneller.",
+        "Exponentiell = J-Kurve, logistisch = S-Kurve, K = Kapazitätsgrenze.",
+        "r-Strategen = viele Nachkommen, wenig Fürsorge. K-Strategen = wenige Nachkommen, viel Fürsorge.",
+      ],
       selfTest: [
         {
-          question: "Welche drei hierarchischen Ebenen umfasst Biodiversität?",
-          options: [
-            "Individuum, Population, Art",
-            "Genetische Diversität, Artenvielfalt, Ökosystem-Diversität",
-            "Produzenten, Konsumenten, Destruenten",
-            "DNA, Protein, Phänotyp",
-            "Biom, Habitat, Mikrohabitat",
-          ],
-          correctIndex: 1,
-          explanation:
-            "Biodiversität umfasst drei hierarchische Ebenen: (1) Genetische Diversität — Variabilität des Erbguts innerhalb einer Art (Grundlage für Evolution und Anpassungsfähigkeit); (2) Artenvielfalt (Spezies-Diversität) — Anzahl und relative Häufigkeit der Arten in einem Gebiet; (3) Ökosystem-Diversität — Vielfalt der Habitate, Ökosysteme und ökologischen Prozesse. Der Verlust auf jeder Ebene hat Auswirkungen auf die anderen — genetisch verarmte Populationen sind anfälliger für Aussterben; das Aussterben von Schlüsselarten destabilisiert Ökosysteme.",
-          difficulty: 1,
-          tags: [
-            "biodiversitaet",
-            "genetische-diversitaet",
-            "artenvielfalt",
-            "oekosystem-diversitaet",
-          ],
-        },
-        {
           question:
-            "Nach der Inselbiographie-Theorie (MacArthur & Wilson): Welche Insel hat voraussichtlich die höchste Artenzahl im Gleichgewicht?",
+            "Nach einem Vulkanausbruch ist eine Fläche vollständig mit Lava bedeckt. Welche Sukzession beginnt, und wer besiedelt zuerst?",
           options: [
-            "Kleine Insel, weit vom Festland entfernt",
-            "Große Insel, weit vom Festland entfernt",
-            "Kleine Insel, nah am Festland",
-            "Große Insel, nah am Festland",
-            "Die Artenzahl ist unabhängig von Größe und Entfernung",
-          ],
-          correctIndex: 3,
-          explanation:
-            "Die Gleichgewichts-Artenzahl (Ŝ) hängt von zwei Faktoren ab: (1) Inselgröße: Größere Inseln haben niedrigere Extinktionsraten (mehr Habitat = größere Populationen = weniger anfällig für zufälliges Aussterben) → höheres Ŝ; (2) Distanz zum Festland: Nähere Inseln haben höhere Immigrationsraten (leichter zu erreichen) → höheres Ŝ. Also: Große Insel + nah am Festland = maximale Artenzahl. Diese Theorie ist fundamental für das Design von Schutzgebieten (große, verbundene Schutzgebiete > kleine, isolierte).",
-          difficulty: 1,
-          tags: ["inselbiographie", "artenzahl", "inselgroesse", "distanz", "macarthur-wilson"],
-        },
-        {
-          question:
-            "Ein Vulkanausbruch hat eine Insel vollständig mit Lava bedeckt und alles Leben vernichtet. Welche Sukzessionsart beginnt, und was sind die ersten Besiedler?",
-          options: [
-            "Sekundäre Sukzession — Gräser und Sträucher, weil Samenbänke im Boden vorhanden",
+            "Sekundäre Sukzession — Gräser und Sträucher",
             "Primäre Sukzession — Flechten, Moose und Cyanobakterien als Pionierorganismen",
-            "Primäre Sukzession — Bäume, weil die Insel schon vorher bewaldet war",
-            "Sekundäre Sukzession — Mikroorganismen aus dem Boden überleben und starten die Besiedlung",
-            "Klimaxgesellschaft — Wald entsteht direkt, da die klimatischen Bedingungen günstig sind",
+            "Sekundäre Sukzession — Bäume aus Samenbänken",
+            "Primäre Sukzession — nur Bakterien",
+            "Klimaxgesellschaft — Wald",
           ],
           correctIndex: 1,
           explanation:
-            "Primäre Sukzession beginnt auf völlig unbelebtem Substrat ohne Bodenorganismen oder Samenbänke — genau wie nach einem totalen Lavaausbruch. Die ersten Besiedler (Pionierorganismen) sind Organismen, die auf nacktem Gestein überleben können: Flechten (Symbiose Pilz + Alge/Cyanobakterium; können Gestein chemisch verwittern), Moose, Cyanobakterien. Diese bereiten langsam den Boden vor, sodass Gräser, Kräuter und schließlich Bäume Fuß fassen können. Primäre Sukzession ist deutlich langsamer als sekundäre, die auf Böden mit Samenbänken nach Störungen beginnt.",
+            "Primäre Sukzession: nacktes Substrat ohne Boden und Samen. Pionierorganismen = Flechten, Moose, Cyanobakterien. Sekundäre Sukzession wäre es, wenn noch Boden/Samen vorhanden wären (z. B. nach Waldbrand).",
           difficulty: 1,
-          tags: ["primaere-sukzession", "pionierorganismen", "flechten", "vulkan"],
+          tags: ["sukzession", "primär", "pionier"],
         },
         {
           question:
-            "Welches Massenaussterben wird als 'The Great Dying' bezeichnet, und was war die ungefähre Aussterberate?",
+            "Eine Population wächst in einem Habitat mit begrenzten Ressourcen und nähert sich einer oberen Grenze. Welche Wachstumsform und welche Kurve?",
           options: [
-            "Kreide-Paläogen (K-Pg) — ~76% aller Arten, verursacht durch Chicxulub-Meteorit",
-            "Perm-Trias — ~96% der Meeresarten und ~70% der Landarten, verursacht durch massiven Vulkanismus",
-            "Devon (Frasnium-Famennium) — ~75% der Meeresarten, verursacht durch Anoxia",
-            "Ordovizium-Silur — ~86% der Meeresarten, verursacht durch Vergletscherung",
-            "Trias-Jura — ~80% aller Arten, verursacht durch CAMP-Vulkanismus",
+            "Exponentielles Wachstum — J-Kurve",
+            "Logistisches Wachstum — S-Kurve (Annäherung an Kapazitätsgrenze K)",
+            "Exponentielles Wachstum — S-Kurve",
+            "Logistisches Wachstum — J-Kurve",
+            "Kein Wachstum — horizontale Linie",
           ],
           correctIndex: 1,
           explanation:
-            "'The Great Dying' (das Große Sterben) bezeichnet das Perm-Trias-Massenaussterben vor ca. 252 Millionen Jahren. Es ist das größte bekannte Massenaussterben: ca. 96% aller Meeresarten und ca. 70% aller Landwirbeltierarten gingen verloren. Ursache: Massiver Vulkanismus der Sibirischen Traps → CO₂-Anstieg → Klimaerwärmung → Ozean-Anoxia → Ozonabbau. Das bekannteste Massenaussterben ist das Kreide-Paläogen (K-Pg, 66 Mio. Jahre), das die Nicht-Vogel-Dinosaurier auslöschte (Chicxulub-Meteorit), aber das Perm-Trias-Ereignis war deutlich größer.",
-          difficulty: 2,
-          tags: ["massenaussterben", "perm-trias", "great-dying", "vulkanismus"],
+            "Begrenzte Ressourcen → logistisches Wachstum, S-Kurve, Annäherung an die Kapazitätsgrenze K. Exponentiell (J-Kurve) gilt nur bei unbegrenzten Ressourcen.",
+          difficulty: 1,
+          tags: ["logistisch", "s-kurve", "k"],
         },
         {
-          question:
-            "Welches ist laut E.O. Wilsons HIPPO-Schema die quantitativ bedeutendste Bedrohung für die globale Biodiversität?",
+          question: "Welche Kombination kennzeichnet einen K-Strategen?",
           options: [
-            "Invasive Arten (I) — verdrängen einheimische Arten am effektivsten",
-            "Pollution (P) — Pestizide und Chemikalien töten am meisten Arten",
-            "Habitatverlust und -fragmentierung (H) — Abholzung, Urbanisierung, Landwirtschaft",
-            "Overexploitation (O) — Überfischung und Wilderei bedrohen die meisten Arten",
-            "Population (P) — Überbevölkerung ist die direkte Hauptursache",
+            "Viele Nachkommen, kurze Generationszeit, wenig Brutpflege",
+            "Wenige Nachkommen, lange Generationszeit, intensive Brutpflege",
+            "Viele Nachkommen, intensive Brutpflege",
+            "Wenige Nachkommen, kurze Generationszeit",
+            "Unbegrenzte Nachkommen, keine Brutpflege",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
-            "Habitatverlust und -fragmentierung (H in HIPPO) ist die quantitativ bedeutendste Bedrohung: Ca. 75% aller Landlebensräume sind durch menschliche Aktivität signifikant verändert; ca. 85% der Feuchtgebiete wurden zerstört. Haupttreiber: Landwirtschaft (ca. 50% der eisfreien Landfläche), Urbanisierung, Infrastruktur. Invasive Arten (I) sind nach Habitatverlust die zweitwichtigste Bedrohung, besonders auf Inseln. Menschliche Überbevölkerung (P) treibt alle anderen Faktoren an, ist aber selbst weniger direkt wirksam.",
+            "K-Strategen: wenige Nachkommen, intensive Brutpflege, lange Generationszeit, stabile Habitate. r-Strategen: viele Nachkommen, wenig Brutpflege, kurze Generationszeit.",
           difficulty: 1,
-          tags: ["HIPPO", "habitatverlust", "biodiversitaetsbedrohung", "naturschutz"],
+          tags: ["k-strategen", "r-k"],
         },
       ],
     },
