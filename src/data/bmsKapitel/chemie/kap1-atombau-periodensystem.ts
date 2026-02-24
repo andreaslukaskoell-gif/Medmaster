@@ -30,7 +30,7 @@ export const chemKapAtom: Kapitel = {
       ],
       content: `## Einleitung
 
-Alles, was uns umgibt — Luft, Wasser, unser Körper — besteht aus winzigen Teilchen: den **Atomen**. Sie sind so klein, dass auf einem Millimeter zehn Millionen nebeneinander passen würden. Doch was steckt im Inneren eines Atoms? Diese Frage beschäftigte Wissenschaftler über Jahrhunderte. Jede neue Entdeckung veränderte das Bild vom Atom grundlegend: vom unzerteilbaren Kugelmodell über den Rosinen-Kuchen bis hin zum modernen Orbitalmodell. Für den MedAT sind die wichtigsten Atommodelle, ihre Schlüsselexperimente, sowie die Begriffe Ordnungszahl, Massenzahl und Isotop prüfungsrelevant.
+Worum geht es hier? Alles, was uns umgibt — Luft, Wasser, unser Körper — besteht aus **Atomen**. Dieses Unterkapitel erklärt, wie sich das Bild vom Atom entwickelt hat: vom unzerteilbaren Teilchen über das Rosinenmodell bis zum Kern-Hülle-Modell und zum heutigen Orbitalmodell. Warum ist das für den MedAT relevant? Atommodelle, Ordnungszahl, Massenzahl und Isotope sind Grundlage für das Periodensystem, die Chemie der Bindungen und für klinische Anwendungen (z. B. Radioisotope in der Diagnostik). Mit diesem Stoff kannst du typische BMS-Fragen beantworten: Welcher Schluss folgt aus dem Rutherford-Versuch? Was ist ein Isotop? Wie viele Elektronen fasst die dritte Schale?
 
 **In diesem Kapitel lernst du:**
 - die **Entwicklung der Atommodelle** (Thomson → Rutherford → Bohr → Quantenmechanik) und die Schlüsselexperimente
@@ -172,25 +172,43 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Atommodelle (Thomson Rosinenmodell, Rutherford Streuversuch → Kern/Hülle/leerer Raum, Bohr Schalen 2n², Orbitalmodell s/p/d/f), Ordnungszahl Z und Massenzahl A (A = Z + N), Isotope (gleiche Z, verschiedene N), Nuklidnotation ᴬ_Z X, Schalenkapazität 2n², Z > 83 alle radioaktiv.
+**Zentral prüfungsrelevant:**
+- Thomson-Modell (1904): Rosinenmodell — positive Kugel mit eingebetteten Elektronen; Entdeckung des Elektrons
+- Rutherford-Streuversuch (1911): Goldfolie + Alphateilchen → Schluss: positive Ladung und Masse im **winzigen Kern**; Atom = fast vollständig **leerer Raum**
+- Bohr-Modell (1913): Elektronen auf festen Schalen (K, L, M, N); max. **2n²** Elektronen pro Schale; Übergänge → Spektrallinien
+- Quantenmechanisches Modell: **Orbitale** (s, p, d, f) = Aufenthaltswahrscheinlichkeitsräume; max. 2 e⁻ pro Orbital
+- **Ordnungszahl Z** = Protonenzahl = definiert das Element; **Massenzahl A** = Z + N
+- **Isotope**: gleiche Z (gleiches Element), verschiedene Neutronenzahl N → verschiedene A; chemisch (fast) identisch, physikalisch verschieden
+- **Nuklidnotation** ᴬ_Z X (z. B. ²³⁸₉₂U); Schalenkapazität 2n² (K=2, L=8, M=18, N=32)
+- Alle Elemente mit **Z > 83** (Bismut) sind ausschließlich radioaktiv
 
-**Ergänzend vertiefend:** Grenzen der Modelle (Thomson vs. Rutherford), Spektrallinien (Bohr), Orbitaltypen; Verwechslungen siehe „Typische Prüfungsfallen“.
+**Häufige Prüfungsfragen:**
+- Welcher Schluss folgt aus dem Rutherford-Streuversuch? → Positive Ladung und Masse im winzigen Kern; Atom = leerer Raum
+- Was ist ein Isotop? → Gleiches Element (gleiche Z), verschiedene Neutronenzahl N
+- Wie viele Elektronen fasst die dritte Schale (n=3)? → 2n² = 18
+- Was bedeutet die Nuklidnotation ¹⁴₆C? → Kohlenstoff mit A=14, Z=6; 6 Protonen, 8 Neutronen
+- Warum stürzen Elektronen nicht in den Kern? → Bohr: feste Bahnen; Quantenmechanik: Orbital als Aufenthaltsbereich
+- Welches Modell erklärt die Spektrallinien? → Bohr (Übergänge zwischen Schalen)
 
-**Häufige Fragen:**
-- "Welcher Schluss folgt aus dem Rutherford-Streuversuch?" → Positive Ladung und Masse im winzigen Kern konzentriert; Atom = fast vollständig leerer Raum
-- "Was ist ein Isotop?" → Gleiches Element (gleiche Z), unterschiedliche Neutronenzahl N → verschiedene Massenzahl A, (fast) gleiche chemische Eigenschaften
-- "Wie viele Elektronen fasst die dritte Schale (n=3)?" → 2n² = 18
+**Typische Prüfungsfallen:**
+- Ordnungszahl Z ≠ Massenzahl A: Z = Protonenzahl (Element), A = Z + N (Nukleonen)
+- Thomson (Rosinen-Kuchen) ≠ Rutherford (winziger Kern, leerer Raum)
+- Isotope: chemisch (fast) identisch, physikalisch verschieden (Masse, Radioaktivität)
+- Orbital ≠ Bahn: Orbital = Aufenthaltswahrscheinlichkeitsraum
+- Relative Atommasse im PSE oft keine ganze Zahl (Isotopengemisch, z. B. Cl 35,5)
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Ordnungszahl Z ≠ Massenzahl A: Z = Protonenzahl (definiert Element), A = Z + N (Nukleonen gesamt)
-- Thomson-Modell (Rosinen-Kuchen, gleichmäßig positive Kugel) ≠ Rutherford-Modell (winziger Kern, fast leerer Raum)
-- Isotope sind chemisch (fast) identisch, physikalisch verschieden (Masse, Kernstabilität)
+**Wichtige Begriffe & Definitionen:**
+- **Ordnungszahl Z**: Anzahl der Protonen im Kern; definiert das Element
+- **Massenzahl A**: Z + N (Protonen + Neutronen)
+- **Isotop**: Atome gleichen Elements (gleiche Z) mit unterschiedlicher Neutronenzahl N
+- **Nuklid**: Atomart mit festem Z und N; Schreibweise ᴬ_Z X
+- **Orbital**: Raumbereich, in dem ein Elektron mit 90 % Wahrscheinlichkeit anzutreffen ist
+- **Photon**: Lichtquant; bei Elektronenübergang emittiert oder absorbiert (ΔE = h·f)
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- Kerndurchmesser ≈ 10⁻¹⁵ m; Atomdurchmesser ≈ 10⁻¹⁰ m; Verhältnis 1 : 100 000 (Murmel : Fußballstadion)
-- Schalen-Kapazität: 2n² (K=2, L=8, M=18, N=32)
-- Radioisotope: ⁹⁹ᵐTc (T½ 6 h, Szintigraphie), ¹⁸F (110 min, PET), ¹³¹I (8 d, Schilddrüsentherapie), ¹⁴C (5730 a, Datierung)
-- Alle Elemente mit Z > 83 (Bismut) ausschließlich radioaktiv
+**Prüfungsrelevante Zahlen:**
+- Kerndurchmesser ≈ 10⁻¹⁵ m; Atomdurchmesser ≈ 10⁻¹⁰ m; Verhältnis 1 : 100 000
+- 2n²: K=2, L=8, M=18, N=32
+- Radioisotope: ⁹⁹ᵐTc (Szintigraphie), ¹⁸F (PET), ¹³¹I (Schilddrüse), ¹⁴C (Datierung)
 
 ---
 ## Zusammenfassung (ultrakompakt)
@@ -410,9 +428,15 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
       ],
       content: `## Einleitung
 
-Warum reagiert Natrium heftig mit Wasser, während Edelgase nahezu inert sind? Die Antwort liegt in der **Elektronenkonfiguration** — also darin, wie Elektronen um den Atomkern angeordnet sind. Vier Quantenzahlen beschreiben jeden Elektronen-"Wohnort" eindeutig. Für den MedAT sind Quantenzahlen, Aufbauprinzip, Pauli, Hund und Valenzelektronen prüfungsrelevant.
+Worum geht es hier? Die **Elektronenkonfiguration** beschreibt, wie die Elektronen eines Atoms auf Schalen und Orbitalen verteilt sind. Vier **Quantenzahlen** legen jeden „Wohnort“ eines Elektrons fest; **Pauliprinzip**, **Aufbauprinzip** und **Hundsche Regel** bestimmen die Besetzungsreihenfolge. Warum ist das für den MedAT relevant? Ohne Konfiguration versteht man weder das Periodensystem noch die Bindungstypen noch die Reaktivität der Elemente; Übergangsmetalle (Fe, Cu, Zn) und ihre biologische Rolle bauen direkt darauf auf. Typische BMS-Fragen: Welche Konfiguration hat Fe³⁺? Was besagt die Hundsche Regel? Warum wird bei Ionenbildung zuerst 4s, dann 3d entfernt?
 
-**In diesem Kapitel lernst du:** Die vier **Quantenzahlen** (n, l, mₗ, mₛ) und was sie festlegen; **Pauliprinzip** (max. 2 e⁻ pro Orbital, entgegengesetzter Spin); **Aufbauprinzip** und **Madelung** (1s < 2s < 2p < 3s < 3p < 4s < 3d …); **Hundsche Regel** (einfache Besetzung vor Doppelbesetzung); **Valenz-** und Rumpfelektronen; Schreibweise [Edelgas] + Valenz. **Kontext:** Die Anordnung der Elektronen bestimmt chemisches Verhalten und Periodizität; du brauchst das für Bindung, PSE und MedAT-Fragen zu Konfiguration und Stabilität.
+**In diesem Kapitel lernst du:**
+- die **vier Quantenzahlen** (n, l, mₗ, mₛ) und was sie festlegen
+- **Pauliprinzip** (max. 2 e⁻ pro Orbital, entgegengesetzter Spin)
+- **Aufbauprinzip** und **Madelung-Regel** (1s < 2s < 2p < 3s < 3p < 4s < 3d …)
+- **Hundsche Regel** (einfache Besetzung vor Doppelbesetzung in entarteten Orbitalen)
+- **Valenz-** und **Rumpfelektronen** sowie Schreibweise [Edelgas] + Valenz
+- Ausnahmen bei Cr und Cu sowie Ionisierung bei Übergangsmetallen (4s vor 3d entfernen)
 
 ---
 
@@ -504,25 +528,41 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Quantenzahlen (n, l, mₗ, mₛ), Pauliprinzip (max. 2 e⁻ pro Orbital), Aufbauprinzip (Madelung 4s vor 3d), Hundsche Regel, Elektronenkonfiguration (Fe²⁺/Fe³⁺, Cr/Cu-Ausnahmen), Valenzelektronen, Paramagnetismus.
+**Zentral prüfungsrelevant:**
+- Vier **Quantenzahlen**: n (Schale), l (Orbitalform: 0=s, 1=p, 2=d, 3=f), mₗ (Raumausrichtung), mₛ (Spin ±½)
+- **Pauliprinzip**: Kein Atom hat zwei Elektronen mit identischen vier Quantenzahlen → max. 2 e⁻ pro Orbital, entgegengesetzter Spin
+- **Aufbauprinzip** (Madelung): 1s < 2s < 2p < 3s < 3p < 4s < 3d < 4p … (4s vor 3d füllen)
+- **Ionisierung bei Übergangsmetallen**: 4s vor 3d entfernen → Fe²⁺: [Ar]3d⁶, Fe³⁺: [Ar]3d⁵
+- **Hundsche Regel**: Entartete Orbitale zuerst einfach besetzen (paralleler Spin), dann paaren
+- **Valenzelektronen** = äußerste s- und p-Elektronen; bestimmen Reaktivität und Gruppennummer
+- Ausnahmen: **Cr** [Ar]3d⁵4s¹ (halbgefüllte 3d), **Cu** [Ar]3d¹⁰4s¹ (vollgefüllte 3d)
+- **Paramagnetismus**: ungepaarte Elektronen (Fe³⁺: 5 ungepaarte); **Diamagnetismus**: alle gepaart
 
-**Ergänzend vertiefend:** Übergangsmetalle (Fe, Cu, Zn, Co, Mn) und biologische Funktion; Verwechslungen siehe „Typische Prüfungsfallen“.
+**Häufige Prüfungsfragen:**
+- Welche Aussage zum Pauliprinzip ist korrekt? → Max. 2 e⁻ pro Orbital, entgegengesetzter Spin
+- Was ist die Elektronenkonfiguration von Fe³⁺? → [Ar]3d⁵
+- Warum wird bei Fe-Ionen zuerst 4s, dann 3d entfernt? → Im Ion ist 4s energetisch höher als 3d
+- Was besagt die Hundsche Regel? → Entartete Orbitale zuerst einfach besetzen (↑↑), dann paaren
+- Warum ist Fe³⁺ paramagnetisch? → [Ar]3d⁵ — 5 ungepaarte Elektronen
+- Welche Konfiguration haben Cr und Cu und warum? → Cr: 3d⁵4s¹, Cu: 3d¹⁰4s¹ (Stabilisierung halb-/vollgefüllter d-Schale)
 
-**Häufige Fragen:**
-- "Welche Aussage zum Pauliprinzip ist korrekt?" → Kein Atom hat zwei Elektronen mit identischen vier Quantenzahlen → max. 2 e⁻ pro Orbital, entgegengesetzter Spin
-- "Was ist die Elektronenkonfiguration von Fe³⁺?" → [Ar]3d⁵ (zuerst beide 4s-, dann ein 3d-Elektron entfernt)
-- "Warum ist Fe³⁺ stark paramagnetisch?" → [Ar]3d⁵ — 5 ungepaarte Elektronen mit parallelem Spin
+**Typische Prüfungsfallen:**
+- Aufbau: 4s vor 3d füllen; Ionisierung: 4s vor 3d entfernen (nicht umgekehrt!)
+- Hundsche Regel ≠ Pauliprinzip: Hund = Reihenfolge der Besetzung; Pauli = max. 2 e⁻ pro Orbital
+- Cr und Cu haben abweichende Konfigurationen — nicht 3d⁴4s² bzw. 3d⁹4s²
+- Valenzelektronen bei Hauptgruppen = Gruppennummer (z. B. Cl Gruppe 17 → 7 Valenzelektronen)
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Aufbau: 4s vor 3d füllen; Ionisierung: 4s vor 3d entfernen (Fe²⁺: [Ar]3d⁶; Fe³⁺: [Ar]3d⁵)
-- Hundsche Regel ≠ Pauliprinzip: Hund → entartete Orbitale erst einfach besetzen (↑↑); Pauli → keine identischen 4 Quantenzahlen
-- Ausnahmen merken: Cr ([Ar]3d⁵4s¹) und Cu ([Ar]3d¹⁰4s¹) — halbgefüllte/vollgefüllte d-Schalen stabilisiert
+**Wichtige Begriffe & Definitionen:**
+- **Quantenzahlen** (n, l, mₗ, mₛ): Eindeutige Beschreibung jedes Elektrons; Pauli: kein doppeltes Quartett
+- **Pauliprinzip**: Max. 2 Elektronen pro Orbital, mit entgegengesetztem Spin
+- **Aufbauprinzip**: Besetzung nach aufsteigender Energie (Madelung: 1s < 2s < 2p < … < 4s < 3d)
+- **Hundsche Regel**: In entarteten Orbitalen zuerst einfach besetzen (paralleler Spin)
+- **Valenzelektronen**: Elektronen der äußersten Schale; bestimmen Reaktivität
+- **Paramagnetismus**: Ungepaarte Elektronen → Anziehung im Magnetfeld
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- 4 Quantenzahlen: n (1,2,3…), l (0 bis n−1), mₗ (−l bis +l), mₛ (±½)
-- Fe²⁺: [Ar]3d⁶ — 4 ungepaarte e⁻; Fe³⁺: [Ar]3d⁵ — 5 ungepaarte e⁻ (stark paramagnetisch)
-- MRT-Kontrastmittel Gadolinium Gd³⁺: [Xe]4f⁷ — 7 ungepaarte f-Elektronen → sehr stark paramagnetisch
-- Energiereihenfolge: 1s < 2s < 2p < 3s < 3p < **4s < 3d** < 4p (Madelung-Regel)
+**Prüfungsrelevante Zahlen:**
+- Fe²⁺: [Ar]3d⁶ (4 ungepaarte); Fe³⁺: [Ar]3d⁵ (5 ungepaarte); Gd³⁺: [Xe]4f⁷ (7 ungepaarte, MRT)
+- Energiereihenfolge: 4s vor 3d (n+l: 4+0 < 3+2)
 
 ---
 ## Zusammenfassung (ultrakompakt)
@@ -733,9 +773,14 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
       ],
       content: `## Einleitung
 
-Manche Atomkerne sind instabil und wandeln sich spontan um — dabei geben sie **Strahlung** ab. Dieses Phänomen heißt **Radioaktivität**. Drei Haupttypen: Alpha, Beta, Gamma — mit unterschiedlichem Durchdringungsvermögen und biologischer Wirkung. Für den MedAT sind α/β/γ, Halbwertszeit, Zerfallsgesetz, Aktivität (Bq), Dosis (Sv) und Nuklearmedizin prüfungsrelevant.
+Worum geht es hier? **Radioaktivität** ist die spontane Umwandlung instabiler Atomkerne unter Abgabe von **Strahlung**. Man unterscheidet **Alpha-** (⁴He-Kern), **Beta-minus** (Elektron), **Beta-plus** (Positron) und **Gamma-Strahlung** (Photon). **Halbwertszeit** und **Zerfallsgesetz** beschreiben den zeitlichen Verlauf; **Gray** und **Sievert** messen Dosis und biologische Wirkung. Warum ist das für den MedAT relevant? Nuklearmedizin (PET, Szintigraphie, Radiojodtherapie) und Strahlenschutz sind klinisch zentral; BMS fragt regelmäßig nach Zerfallstypen, T½ und Einheiten. Typische Fragen: Was ändert sich bei α- bzw. γ-Zerfall? Wie funktioniert PET? Was schützt die Schilddrüse bei ¹³¹I-Freisetzung?
 
-**In diesem Kapitel lernst du:** **α-** (⁴He-Kern), **β⁻/β⁺** (Elektron/Positron), **γ-**Strahlung (Photon); **Halbwertszeit** T½ und **Zerfallsgesetz** N(t) = N₀·(½)^(t/T½); **Aktivität** A [Bq]; Dosis und **Sievert**; Anwendung PET, ⁹⁹ᵐTc, ¹³¹I. **Kontext:** Radioaktivität in Diagnostik und Therapie; Strahlenschutz und ALARA; du brauchst das für Nuklearmedizin und MedAT-Fragen zu Zerfall und Dosis.
+**In diesem Kapitel lernst du:**
+- **α-, β⁻-, β⁺- und γ-Strahlung**: Teilchenart, Änderung von Z und A, Reichweite und Abschirmung
+- **Halbwertszeit T½** und **Zerfallsgesetz** N(t) = N₀·(½)^(t/T½)
+- **Aktivität** A [Bq] und Dosis: **Gray (Gy)** vs. **Sievert (Sv)** (biologischer Wichtungsfaktor)
+- Prinzip der **PET** (β⁺-Annihilation → 2×γ 511 keV)
+- Klinische Nuklide: ⁹⁹ᵐTc, ¹⁸F, ¹³¹I, ¹⁴C; **Kaliumiodid** bei Atomunfall
 
 ---
 
@@ -832,25 +877,42 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** α-Zerfall (Z−2, A−4), β⁻/β⁺ (Z±1, A gleich), γ (Z/A unverändert), Halbwertszeit N(t)=N₀·(½)^(t/T½), PET (β⁺-Annihilation), Gray/Sievert, Strahlenschutz, klinische Nuklide (⁹⁹ᵐTc, ¹⁸F, ¹³¹I, ¹⁴C), KI-Prophylaxe.
+**Zentral prüfungsrelevant:**
+- **α-Zerfall**: Z−2, A−4; Teilchen = ⁴He-Kern; Reichweite gering (Papier stoppt); gefährlich bei Inkorporation (z. B. Radon)
+- **β⁻-Zerfall**: n → p + e⁻ + ν̄; Z+1, A gleich; Reichweite mm–cm; Al stoppt
+- **β⁺-Zerfall**: p → n + e⁺ + ν; Z−1, A gleich; e⁺ + e⁻ → 2×γ (511 keV, 180°) = **Basis der PET**
+- **γ-Strahlung**: elektromagnetisch; Z und A unverändert; hohe Reichweite; Blei/Beton zur Abschirmung
+- **Halbwertszeit T½**: N(t) = N₀·(½)^(t/T½); nach n HWZ: Rest = N₀/2ⁿ
+- **Gray (Gy)** = absorbierte Dosis; **Sievert (Sv)** = biologisch gewichtete Dosis (α-Faktor 20)
+- Klinische Nuklide: ⁹⁹ᵐTc (6 h, Szintigraphie), ¹⁸F (110 min, PET), ¹³¹I (8 d, Schilddrüse), ¹⁴C (5730 a, Datierung)
+- **Kaliumiodid (KI)** bei Atomunfall: sättigt Schilddrüse mit stabilem Iod → verhindert ¹³¹I-Aufnahme
 
-**Ergänzend vertiefend:** Abschirmung (α Papier, β Al, γ Pb); Verwechslungen siehe „Typische Prüfungsfallen“.
+**Häufige Prüfungsfragen:**
+- Was verändert sich beim α-Zerfall? → Z sinkt um 2, A sinkt um 4
+- Was bleibt beim γ-Zerfall gleich? → Z und A unverändert (nur Energieabgabe)
+- Wie funktioniert PET? → β⁺-Zerfall → Positron annihiliert mit Elektron → 2×γ 511 keV → Koinzidenzdetektion
+- Nach wie vielen Halbwertszeiten sind 6,25 % übrig? → 4 (1/2⁴ = 1/16)
+- Was schützt die Schilddrüse bei ¹³¹I-Freisetzung? → Kaliumiodid (KI)
+- Was ist der Unterschied zwischen Gray und Sievert? → Gy = physikalische Dosis; Sv = biologisch gewichtet (α: Faktor 20)
 
-**Häufige Fragen:**
-- "Was verändert sich beim α-Zerfall?" → Z sinkt um 2, A sinkt um 4 (Emission von ⁴He)
-- "Was bleibt beim γ-Zerfall gleich?" → Z und A bleiben unverändert — nur Energieabgabe, kein Kernwandel
-- "Was ist das Prinzip der PET?" → β⁺-Zerfall → Positron annihiliert mit Elektron → 2 Gammaquanten (511 keV, 180°) → Koinzidenzdetektion
+**Typische Prüfungsfallen:**
+- β⁻ (Z+1) ≠ β⁺ (Z−1) — Z-Änderung ist umgekehrt
+- Gray ≠ Sievert: Sv = Gy × Wichtungsfaktor (α = 20)
+- γ ist kein Kernteilchen und kein Kernzerfall → Z und A bleiben gleich
+- Abschirmung: α → Papier; β → Al; γ → Blei/Beton (nicht verwechseln)
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- β⁻ (n→p, Z+1, A gleich) ≠ β⁺ (p→n, Z−1, A gleich) — Z-Änderung ist umgekehrt!
-- Gray (Gy) = absorbierte Energiedosis (physikalisch); Sievert (Sv) = biologisch gewichtete Dosis; α-Wichtungsfaktor = 20!
-- Gammastrahlung: kein Kernteilchen, kein Zerfall → Z und A unverändert (≠ α- und β-Zerfall)
+**Wichtige Begriffe & Definitionen:**
+- **Halbwertszeit T½**: Zeit, nach der die Hälfte der Kerne zerfallen ist
+- **Zerfallsgesetz**: N(t) = N₀·(½)^(t/T½)
+- **Aktivität A**: Zerfälle pro Sekunde [Bq]
+- **Gray (Gy)**: absorbierte Energiedosis (J/kg)
+- **Sievert (Sv)**: effektive Dosis = Gy × Wichtungsfaktor (α: 20; β/γ: 1)
+- **PET**: Positronen-Emissions-Tomographie; nutzt β⁺-Annihilation
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- Nuklid-Tabelle: ⁹⁹ᵐTc (T½ = 6 h, Szintigraphie); ¹⁸F (110 min, PET); ¹³¹I (8 d, Schilddrüsentherapie); ¹⁴C (5730 a, Datierung)
-- Nach n Halbwertszeiten: Restmenge = N₀/2ⁿ (nach 4 HWZ: 1/16 = 6,25 %)
-- Abschirmung: α → Papier; β → Aluminium (mm); γ/n → Blei/Beton
-- 1 Gy α-Strahlung = 20 Sv biologischer Wirkung (Wichtungsfaktor 20)
+**Prüfungsrelevante Zahlen:**
+- ⁹⁹ᵐTc T½ 6 h; ¹⁸F 110 min; ¹³¹I 8 d; ¹⁴C 5730 a
+- Nach 4 HWZ: 1/16 = 6,25 %; nach 10 HWZ: < 0,1 %
+- 1 Gy α = 20 Sv (Wichtungsfaktor)
 
 ---
 ## Zusammenfassung (ultrakompakt)
@@ -1073,9 +1135,14 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
       ],
       content: `## Einleitung
 
-Einzelne Atome sind so winzig, dass man sie nicht wiegen kann. Das **Mol-Konzept** löst das: 1 Mol = 6,022×10²³ Teilchen — eine wägbare Menge. Für den MedAT sind Mol, Molarität, Osmolarität und Stöchiometrie häufig prüfungsrelevant.
+Worum geht es hier? Einzelne Atome kann man nicht wiegen — das **Mol-Konzept** verknüpft Teilchenzahlen mit wägbaren Mengen: 1 Mol = 6,022×10²³ Teilchen. Dazu gehören **atomare Masseneinheit** u, **molare Masse** M, **Stoffmenge** n = m/M, **Molarität** c = n/V und **Osmolarität** (Teilchenkonzentration für physiologische Anwendungen). Warum ist das für den MedAT relevant? Laborwerte (mmol/L), Infusionslösungen (0,9 % NaCl, Osmolarität), Stöchiometrie und Verdünnungen sind in BMS und Klinik allgegenwärtig. Typische Fragen: Wie viele Mol sind in 90 g H₂O? Welche Osmolarität hat 1 M NaCl? Was besagt die Verdünnungsformel?
 
-**In diesem Kapitel lernst du:** **Atomare Masseneinheit** u (1/12 von ¹²C); **molare Masse** M [g/mol]; **Avogadro-Konstante** Nₐ; **n = m/M** und **n = N/Nₐ**; **Molarität** c [mol/L]; **Osmolarität** (Teilchenkonzentration); Stöchiometrie und Infusionsberechnung. **Kontext:** Vom Teilchen zur wägbaren Menge; Laborwerte (mmol/L), Infusionen, Stöchiometrie — zentral für Chemie und Klinik.
+**In diesem Kapitel lernst du:**
+- **Atomare Masseneinheit** u (1/12 von ¹²C) und **molare Masse** M [g/mol]
+- **Avogadro-Konstante** Nₐ und **Stoffmenge** n = m/M bzw. n = N/Nₐ
+- **Molarität** c = n/V [mol/L] und **Osmolarität** (van't-Hoff-Faktor, z. B. NaCl: i = 2)
+- **Verdünnungsformel** c₁V₁ = c₂V₂
+- **Stöchiometrie**: Mol-Verhältnisse aus Reaktionsgleichungen; limitierender Reaktand
 
 ---
 
@@ -1190,22 +1257,39 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Atomare Masseneinheit u, molare Masse M, Avogadro Nₐ, n=m/M, c=n/V, Osmolarität (i=2 für NaCl), Blutplasma ≈290 mosmol/L, Verdünnungsformel c₁V₁=c₂V₂, Stöchiometrie (Mol-Verhältnisse).
+**Zentral prüfungsrelevant:**
+- **Atomare Masseneinheit** u = 1/12 Masse von ¹²C; **molare Masse** M [g/mol] numerisch = Aᵣ in u
+- **Avogadro-Konstante** Nₐ = 6,022×10²³ mol⁻¹; **Stoffmenge** n = m/M und n = N/Nₐ
+- **Molarität** c = n/V [mol/L]; **Osmolarität** = Teilchenkonzentration (Ionen zählen einzeln)
+- **Van't-Hoff-Faktor**: NaCl → i = 2; CaCl₂ → i = 3; Glukose → i = 1
+- Blutplasma-Osmolarität ≈ 290 mosmol/L; 0,9 % NaCl ≈ 308 mosmol/L (isoton)
+- **Verdünnungsformel** c₁V₁ = c₂V₂ (Stoffmenge n konstant)
+- **Stöchiometrie**: Koeffizienten = Mol-Verhältnisse; **limitierender Reaktand** bestimmt maximale Ausbeute
 
-**Ergänzend vertiefend:** Van't-Hoff-Faktor, limitierender Reaktand; Verwechslungen siehe „Typische Prüfungsfallen“.
+**Häufige Prüfungsfragen:**
+- Wie viele Mol sind in 90 g H₂O? → n = 90/18 = 5 mol
+- Welche Osmolarität hat 1 mol/L NaCl? → 2 mol/L Teilchen = 2000 mosmol/L (i = 2)
+- Was ist die Blutplasma-Osmolarität? → ≈ 290 mosmol/L
+- Wie verdünnt man von c₁ auf c₂? → c₁V₁ = c₂V₂
+- Was ist die molare Masse von Glukose C₆H₁₂O₆? → 6×12 + 12×1 + 6×16 = 180 g/mol
 
-**Häufige Fragen:**
-- "Wie viele mol sind in 90 g H₂O?" → n = 90/18 = 5 mol
-- "Osmolarität einer 1 mol/L NaCl-Lösung?" → 1 × 2 × 1000 = 2000 mosmol/L (i = 2)
-- "Was ist die Blutplasma-Osmolarität?" → ≈ 290 mosmol/L (durch ADH geregelt)
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Molarität [mol/L] ≠ Osmolarität [mosmol/L]: Osmolarität = c × i × 1000 (van't-Hoff-Faktor beachten!)
-- Van't-Hoff-Faktor: NaCl → i = 2; CaCl₂ → i = 3; Glukose → i = 1 (dissoziiert nicht)
+**Typische Prüfungsfallen:**
+- Molarität ≠ Osmolarität: NaCl 1 M → 2 osmol/L (i = 2); Glukose 1 M → 1 osmol/L (i = 1)
+- Van't-Hoff: NaCl i = 2; CaCl₂ i = 3; Glukose (nicht dissoziiert) i = 1
+- Verdünnung: n bleibt konstant → c₁V₁ = c₂V₂ (nicht Masse!)
+- Relative Atommasse im PSE oft keine ganze Zahl (Isotopengemisch)
 - Formel: n = m/M (mol = g ÷ g/mol) — nicht m = M/n!
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- Nₐ = 6,022 × 10²³ mol⁻¹; 1 u = 1/12 der Masse von ¹²C = 1,66 × 10⁻²⁷ kg
+**Wichtige Begriffe & Definitionen:**
+- **Mol**: Stoffmenge; 1 mol = Nₐ = 6,022×10²³ Teilchen
+- **Molare Masse M**: Masse pro Mol [g/mol]; numerisch = relative Atom- bzw. Molekülmasse in u
+- **Molarität c**: Stoffmenge pro Volumen, c = n/V [mol/L]
+- **Osmolarität**: Summe der Teilchenkonzentrationen [mosmol/L]; für NaCl (i=2) verdoppelt
+- **Verdünnungsformel**: c₁V₁ = c₂V₂ (Stoffmenge n konstant)
+- **Limitierender Reaktand**: Edukt im Unterschuss; begrenzt die maximale Produktmenge
+
+**Prüfungsrelevante Zahlen:**
+- Nₐ = 6,022 × 10²³ mol⁻¹; 1 u = 1/12 der Masse von ¹²C
 - M(H₂O) = 18 g/mol; M(NaCl) = 58,44 g/mol; M(Glukose) = 180 g/mol; M(Aspirin) = 180 g/mol
 - Blutplasma: ≈ 290 mosmol/L; 0,9 % NaCl ≈ 308 mosmol/L (klinisch als isoton verwendet)
 - Verdünnungsformel: c₁ × V₁ = c₂ × V₂ (Stoffmenge bleibt konstant)
@@ -1407,9 +1491,13 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
       ],
       content: `## Einleitung
 
-Warum siedet Wasser bei 100 °C, obwohl H₂S schon bei −60 °C siedet? Warum löst sich Kochsalz in Wasser, aber nicht in Benzin? Die Antwort: **intermolekulare Wechselwirkungen** (van-der-Waals, Dipol-Dipol, H-Brücken). Sie bestimmen Siedepunkte, Löslichkeit, Proteinfaltung und DNA-Doppelhelix. Für den MedAT sind Stärkeranking, H-Brücken (Donor/Akzeptor) und biologische Bedeutung prüfungsrelevant.
+Worum geht es hier? **Intermolekulare Wechselwirkungen** sind Kräfte zwischen Molekülen (nicht innerhalb einer Bindung): **London-Dispersion**, **Dipol-Dipol** und **Wasserstoffbrücken**. Sie erklären, warum Wasser bei 100 °C siedet und H₂S schon bei −60 °C, warum Salz sich in Wasser löst und wie DNA und Proteine ihre Struktur halten. Warum ist das für den MedAT relevant? Siedepunkte, Löslichkeit, Proteinfaltung und DNA-Basenpaarung bauen darauf auf; typische BMS-Fragen: Welche Wechselwirkung ist die stärkste? Was ist eine H-Brücke? Warum denaturieren Proteine bei Hitze?
 
-**In diesem Kapitel lernst du:** **London-Dispersion** (alle Moleküle), **Dipol-Dipol** (Keesom), **Wasserstoffbrücken** (X–H···Y mit X,Y = N,O,F); Stärkeranking; **hydrophober Effekt**; Denaturierung. **Kontext:** Schwächere Kräfte als kovalent, aber entscheidend für Siedepunkt, Löslichkeit, DNA/Proteine; klinisch Pharmaka-Löslichkeit, PCR.
+**In diesem Kapitel lernst du:**
+- **London-Dispersion** (alle Moleküle, polarisierbar), **Dipol-Dipol** (permanente Dipole), **Wasserstoffbrücken** (X–H···Y mit X,Y = N,O,F)
+- Stärkeranking: kovalent > H-Brücke > Dipol-Dipol > London
+- **Hydrophober Effekt** und **Denaturierung** (Hitze, pH, Harnstoff)
+- Biologische Bedeutung: DNA-Doppelhelix, Proteinfaltung, Siedepunkt-Anomalie des Wassers
 
 ---
 
@@ -1476,24 +1564,34 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Periodensystem (Perioden/Gruppen, s/p/d/f-Blöcke), Valenzelektronen, H-Brücken (Donor X–H mit X=N,O,F; Akzeptor freies e⁻-Paar), Siedepunkte (H₂O vs. H₂S), Ionenbindung vs. kovalente Bindung, Elektronegativität.
+**Zentral prüfungsrelevant:**
+- **Stärkeranking**: kovalent > **Wasserstoffbrücken** (10–40 kJ/mol) > Dipol-Dipol > London (alle Moleküle)
+- **H-Brücken**: X–H···Y mit X, Y ∈ {N, O, F}; Donor = X–H (gibt H ab); Akzeptor = Y mit freiem e⁻-Paar
+- **Warum H₂O bei 100 °C, H₂S bei −60 °C?** → H₂O bildet H-Brücken (O elektronegativ), H₂S nicht
+- **DNA**: A–T = 2 H-Brücken, G–C = 3 H-Brücken → GC-reiche DNA thermisch stabiler
+- **Denaturierung**: bricht H-Brücken, hydrophobe Wechselwirkungen; **kovalente Bindungen** (Peptid, Phosphodiester) bleiben intakt (z. B. PCR 94–98 °C)
+- **Hydrophober Effekt**: unpolare Gruppen lagern sich zusammen; treibt Proteinfaltung
 
-**Ergänzend vertiefend:** Van-der-Waals-Kräfte, Dipol-Dipol; Verwechslungen siehe „Typische Prüfungsfallen“.
+**Häufige Prüfungsfragen:**
+- Welche Voraussetzung hat ein H-Brücken-Donor? → X–H mit X = N, O oder F
+- Warum siedet H₂O bei 100 °C, H₂S bei −60 °C? → H₂O bildet H-Brücken, H₂S nicht
+- Wie viele H-Brücken bildet G–C? → 3 (A–T = 2)
+- Was zerstört Denaturierung? → Nicht-kovalente Wechselwirkungen (H-Brücken, hydrophob); Peptidbindungen bleiben
 
-**Häufige Fragen:**
-- "Welche Voraussetzung hat ein H-Brücken-Donor?" → X–H mit X = N, O oder F (Donor gibt H); Akzeptor = freies e⁻-Paar von Y ∈ {N, O, F}
-- "Warum siedet H₂O bei 100 °C, H₂S bei −60 °C?" → H₂O bildet H-Brücken (O elektronegativer), H₂S nicht (S zu wenig elektronegativ)
-- "Wie viele H-Brücken bildet das Basenpaar G–C?" → 3 (A–T bildet 2)
+**Typische Prüfungsfallen:**
+- London-Kräfte in **allen** Molekülen (auch polaren), nicht nur in unpolaren
+- Denaturierung zerstört **nicht** kovalente Bindungen; Peptid- und Phosphodiesterbindungen bleiben
+- H-Brücken-Donor (X–H) ≠ Akzeptor (Y mit freiem e⁻-Paar)
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- London-Kräfte existieren in ALLEN Molekülen (auch in polaren), nicht nur in unpolaren
-- Denaturierung durch Hitze zerstört nicht-kovalente Wechselwirkungen (H-Brücken, hydrophob, ionisch) — kovalente Peptidbindungen bleiben intakt!
-- H-Brücken-Donor (gibt H) ≠ Akzeptor (nimmt H auf mit freiem e⁻-Paar)
+**Wichtige Begriffe & Definitionen:**
+- **Wasserstoffbrücke**: X–H···Y mit X, Y = N, O, F; 10–40 kJ/mol; gerichtet
+- **London-Dispersion**: temporäre Dipole durch Elektronenbewegung; in allen Molekülen
+- **Denaturierung**: Aufbrechen der räumlichen Struktur (H-Brücken, hydrophob); kovalente Bindungen intakt
+- **Hydrophober Effekt**: Zusammenlagerung unpolarer Gruppen in wässriger Umgebung
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- Stärkeranking: Ionenbindung (400–4000) > kovalent (150–800) > H-Brücken (10–40) > Dipol–Dipol (3–10) > London (0,05–40) [alle kJ/mol]
-- DNA: A=T (2 H-Brücken); G≡C (3 H-Brücken) → GC-reiche DNA thermisch stabiler (höhere Schmelztemperatur Tm)
-- PCR-Denaturierung: 94–98 °C bricht H-Brücken in DNA auf; kovalente Phosphodiesterbindungen bleiben intakt
+**Prüfungsrelevante Zahlen:**
+- Stärkeranking: H-Brücke 10–40 kJ/mol; Dipol-Dipol 3–10; London 0,05–40 kJ/mol
+- A–T = 2, G–C = 3 H-Brücken; PCR-Denaturierung 94–98 °C
 
 ---
 ## Zusammenfassung (ultrakompakt)
@@ -1737,9 +1835,13 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
       ],
       content: `## Einleitung
 
-Warum löst sich Zucker in Wasser, aber Öl nicht? Warum schrumpfen Erythrozyten in hypertoner Lösung? **Löslichkeit** („Gleiches löst Gleiches“) und **Osmose** (Wasserfluss durch semipermeable Membran) beantworten das. Für den MedAT sind Osmolarität, isoton/hypoton/hyperton, van't-Hoff-Faktor und onkotischer Druck prüfungsrelevant.
+Worum geht es hier? **Löslichkeit** folgt dem Prinzip „Gleiches löst Gleiches“: polare Stoffe in polaren Lösungsmitteln (Wasser), unpolare in unpolaren (z. B. Fett in Hexan). **Osmose** ist die Bewegung von Wasser durch eine semipermeable Membran von niedrigerer zu höherer Teilchenkonzentration; **osmotischer Druck** und **Osmolarität** beschreiben die Triebkraft. Warum ist das für den MedAT relevant? Infusionen (0,9 % NaCl, isoton), Erythrozyten (Hämolyse in hypotoner Lösung), Ödeme bei Hypoalbuminämie (onkotischer Druck) und Löslichkeitsprodukt (z. B. BaSO₄ als Kontrastmittel) sind klassische BMS-Themen. Typische Fragen: Was passiert mit Erythrozyten in destilliertem Wasser? Welche Osmolarität hat 0,5 M CaCl₂?
 
-**In diesem Kapitel lernst du:** **Löslichkeit** (polar/unpolar, Hydratation); **Löslichkeitsprodukt** Ksp; **Osmose** und **osmotischer Druck** π = i·c·R·T; **Osmolarität** [mOsmol/L]; isoton/hypoton/hyperton, **Hämolyse**; **onkotischer Druck** (Albumin). **Kontext:** Infusionen, Erythrozyten, Ödeme bei Hypoalbuminämie; zentral für Klinik und MedAT.
+**In diesem Kapitel lernst du:**
+- **Löslichkeit**: polar/unpolar, Hydratation, **Löslichkeitsprodukt** Ksp (z. B. BaSO₄, Ca-Oxalat)
+- **Osmose** und **osmotischer Druck** π = i·c·R·T; **Osmolarität** [mosmol/L]; van't-Hoff-Faktor i
+- **Isoton / hypoton / hyperton**; **Hämolyse** (hypoton) und **Krenation** (hyperton)
+- **Onkotischer Druck** (Albumin); Hypoalbuminämie und Ödembildung
 
 ---
 
@@ -1811,25 +1913,35 @@ Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechne
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Löslichkeit, Konzentration (mol/L), Osmolarität/Osmolalität, Tonizität (hypoton → Hämolyse, hyperton → Krenation, isoton 0,9 % NaCl), Van't-Hoff-Faktor (NaCl i=2, CaCl₂ i=3), Erythrozyten in hypotoner Lösung.
+**Zentral prüfungsrelevant:**
+- **Löslichkeit**: „Gleiches löst Gleiches“; polar/polar, unpolar/unpolar; **Löslichkeitsprodukt** Ksp (BaSO₄, Ca-Oxalat)
+- **Osmose**: Wasserfluss durch semipermeable Membran von **niedrigerer** zu **höherer** Teilchenkonzentration
+- **Osmotischer Druck** π = i·c·R·T; **Osmolarität** = Teilchenkonzentration; **van't-Hoff-Faktor** i (NaCl: 2; CaCl₂: 3; Glukose: 1)
+- **Isoton** (≈285–295 mosmol/L): keine Volumenänderung; **hypoton**: Hämolyse; **hyperton**: Krenation
+- **Onkotischer Druck**: durch Albumin; Hypoalbuminämie → Ödeme
 
-**Ergänzend vertiefend:** Kolligative Eigenschaften; Verwechslungen siehe „Typische Prüfungsfallen“.
+**Häufige Prüfungsfragen:**
+- Was passiert mit Erythrozyten in destilliertem Wasser? → Hämolyse (hypoton)
+- Osmolarität von 0,5 mol/L CaCl₂? → 0,5 × 3 × 1000 = 1500 mosmol/L (i = 3)
+- Warum Ödeme bei Hypoalbuminämie? → Onkotischer Druck sinkt → Wasser ins Interstitium
+- In welche Richtung fließt Wasser bei Osmose? → Von niedrigerer zu höherer Teilchenkonzentration
+- Was ist isoton? → Lösung mit gleicher Osmolarität wie Plasma (0,9 % NaCl, 5 % Glukose)
 
-**Häufige Fragen:**
-- "Was passiert, wenn Erythrozyten in destilliertes Wasser gegeben werden?" → Hämolyse (hypotone Lösung → Wasser strömt ins Zellinnere → Zelle platzt)
-- "Osmolarität von 0,5 mol/L CaCl₂?" → 0,5 × 3 × 1000 = 1500 mosmol/L (CaCl₂ → Ca²⁺ + 2 Cl⁻, i = 3)
-- "Warum bilden sich Ödeme bei Hypoalbuminämie?" → Sinkt onkotischer Druck → hydrostatischer Druck überwiegt → Wasser aus Kapillaren ins Interstitium
+**Typische Prüfungsfallen:**
+- Osmose: Wasser von **niedriger** zu **höherer** Teilchenkonzentration (nicht umgekehrt!)
+- Hypoton → Hämolyse; hyperton → Krenation (Schrumpfen)
+- Onkotischer Druck ≠ osmotischer Druck: onkotisch = durch Proteine (Albumin), die die Kapillarmembran nicht passieren
+- Van't-Hoff: NaCl i = 2; CaCl₂ i = 3; Glukose i = 1
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Osmose: Wasser wandert von niedrigerer zu höherer Teilchenkonzentration (= von niedrigem zu hohem osmotischem Druck) — NICHT umgekehrt!
-- Hypoton (<270 mosmol/L) → Hämolyse; Hyperton (>310 mosmol/L) → Crenation (Schrumpfen)
-- Onkotischer Druck ≠ osmotischer Druck: onkotisch = durch Makromoleküle (Albumin), die Membran nicht passieren können
+**Wichtige Begriffe & Definitionen:**
+- **Osmose**: Netto-Wasserfluss durch semipermeable Membran zum Konzentrationsausgleich
+- **Osmolarität**: Summe der osmotisch aktiven Teilchen pro Liter [mosmol/L]
+- **Onkotischer Druck**: Anteil am osmotischen Druck durch Makromoleküle (v. a. Albumin), die Kapillaren nicht verlassen
+- **Hämolyse**: Zerfall der Erythrozyten in hypotoner Lösung (Wassereinstrom)
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- Blutplasma-Osmolarität: 285–295 mosmol/L (normaler Bereich)
-- 0,9 % NaCl = 154 mmol/L → 308 mosmol/L (klinisch als isoton verwendet); 5 % Glukose ≈ 278 mosmol/L
-- Van't-Hoff-Faktor i: NaCl = 2; CaCl₂ = 3; AlCl₃ = 4; Glukose = 1
-- Albumin: ≈ 25 mmHg onkotischer Druck; Hypoalbuminämie → Ödeme (nephrotisches Syndrom, Leberzirrhose)
+**Prüfungsrelevante Zahlen:**
+- Plasma-Osmolarität 285–295 mosmol/L; 0,9 % NaCl ≈ 308 mosmol/L; 5 % Glukose ≈ 278 mosmol/L
+- i: NaCl = 2, CaCl₂ = 3, Glukose = 1; Albumin onkotisch ≈ 25 mmHg
 
 ---
 ## Zusammenfassung (ultrakompakt)
@@ -2077,9 +2189,13 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
       ],
       content: `## Einleitung
 
-**Aggregatzustände** (fest, flüssig, gasförmig) und **Phasenübergänge** (Schmelzen, Sieden, Sublimation) sind mit Energieumsatz verbunden. **Kolloide** (1 nm–1 μm) liegen zwischen Lösung und Suspension — relevant für Blut, Infusionen, Surfactant. Für den MedAT sind Phasenübergänge (endo/exotherm), Dampfdruck/Siedepunkt und Kolloidchemie prüfungsrelevant.
+Worum geht es hier? **Aggregatzustände** (fest, flüssig, gasförmig) und **Phasenübergänge** (Schmelzen, Sieden, Kondensieren, Sublimation) hängen mit Energieumsatz zusammen: endotherm beim Übergang zu „freier“ Phase (z. B. Verdampfen), exotherm beim Übergang zu „geordneter“ Phase (z. B. Kondensieren). **Kolloide** (Partikel 1 nm–1 μm) liegen zwischen echter Lösung und Suspension und zeigen **Tyndall-Effekt** und **Brownsche Bewegung**. Warum ist das für den MedAT relevant? Siedepunkt und Dampfdruck, Blut und Infusionskolloide (HAES, Albumin), Surfactant der Lunge und Emulsionen sind prüfungsnah. Typische Fragen: Welcher Phasenübergang ist exotherm? Warum kocht Wasser im Gebirge bei unter 100 °C? Woran erkennt man ein Kolloid?
 
-**In diesem Kapitel lernst du:** Drei **Aggregatzustände**; **Phasenübergänge** (Schmelzen, Sieden, Sublimation) und Vorzeichen (endo/exo); **Dampfdruck** und Siedepunkt (Druckabhängigkeit); **Kolloide** (Tyndall, Brownsche Bewegung); klinisch: Blut als Kolloid, Surfactant, Emulsionen. **Kontext:** Zustände und Übergänge; Kolloide in Biologie und Medizin.
+**In diesem Kapitel lernst du:**
+- **Drei Aggregatzustände** und **Phasenübergänge** mit Vorzeichen (endo/exo)
+- **Dampfdruck** und **Siedepunkt** (Abhängigkeit vom äußeren Druck)
+- **Kolloide**: Tyndall-Effekt, Brownsche Bewegung; Kolloidale Infusionen, Surfactant, Emulsionen
+- Klinisch: Blut als Kolloid, HAES, Albumin, Atemnotsyndrom (Surfactant-Mangel)
 
 ---
 
@@ -2159,21 +2275,30 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Aggregatzustände, Phasenübergänge (Schmelzen/Erstarren, Sieden/Kondensieren, Sublimation/Desublimation), exotherm (Kondensation, Erstarren) vs. endotherm (Verdampfen, Schmelzen), Dampfdruck, Siedepunkt und äußerer Druck.
+**Zentral prüfungsrelevant:**
+- **Phasenübergänge**: Schmelzen, Verdampfen, Sublimation = **endotherm**; Erstarren, Kondensieren, Desublimation = **exotherm**
+- **Dampfdruck** und **Siedepunkt**: Siedepunkt = Temperatur, bei der Dampfdruck = äußerer Druck; im Gebirge (niedriger Druck) siedet Wasser unter 100 °C
+- **Kolloide**: Partikel 1 nm–1 μm; **Tyndall-Effekt** (Lichtstreuung), **Brownsche Bewegung**
+- Klinisch: Blut als Kolloid, HAES, Albumin, **Surfactant** (Lunge, RDS bei Frühgeborenen), Emulsionen (parenterale Ernährung)
 
-**Ergänzend vertiefend:** Tripelpunkt, kritischer Punkt; Verwechslungen siehe „Typische Prüfungsfallen“.
+**Häufige Prüfungsfragen:**
+- Welcher Phasenübergang ist exotherm? → Kondensation, Erstarren, Desublimation
+- Warum siedet Wasser im Gebirge unter 100 °C? → Niedrigerer Luftdruck
+- Woran erkennt man ein Kolloid? → Tyndall-Effekt (Lichtkegel sichtbar)
+- Was ist Surfactant und wofür? → Phospholipide in der Lunge; senken Oberflächenspannung; RDS bei Surfactant-Mangel
 
-**Häufige Fragen:**
-- "Welcher Phasenübergang ist exotherm?" → Kondensation, Erstarren, Desublimation (Übergänge zu geordneterem Zustand geben Energie ab)
-- "Warum siedet Wasser im Gebirge bei 90 °C statt 100 °C?" → Niedrigerer Luftdruck → Dampfdruck erreicht Außendruck bei niedrigerer Temperatur
-- "Woran erkennt man ein Kolloid?" → Tyndall-Effekt: Kolloid streut Licht sichtbar; echte Lösung tut das nicht
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Sublimation (fest→gas) ist ENDOtherm; Desublimation (gas→fest) ist EXOtherm
+**Typische Prüfungsfallen:**
+- Sublimation (fest→gas) ist **endotherm**; Desublimation (gas→fest) ist **exotherm**
 - Kolloid (1 nm–1 μm) ≠ echte Lösung (<1 nm, kein Tyndall) ≠ Suspension (>1 μm, sedimentiert)
 - Dampfverbrennung ist schlimmer als Wasserverbrennung gleicher Temperatur, weil Kondensation zusätzlich Verdampfungswärme freisetzt (exotherm)
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Wichtige Begriffe & Definitionen:**
+- **Phasenübergang**: Wechsel zwischen Aggregatzuständen; endotherm = Energie aufnehmen, exotherm = Energie abgeben
+- **Siedepunkt**: Temperatur, bei der Dampfdruck = äußerer Druck
+- **Kolloid**: Dispersion mit Partikelgröße 1 nm–1 μm; **Tyndall-Effekt** = sichtbare Lichtstreuung; **Brownsche Bewegung** = thermische Zitterbewegung
+- **Surfactant**: grenzflächenaktive Substanz (z. B. Phospholipide in der Lunge); senkt Oberflächenspannung
+
+**Prüfungsrelevante Zahlen:**
 - Verdampfungswärme Wasser: 2257 J/g → Thermoregulation durch Schwitzen
 - Siedepunkt = Temperatur, bei der Dampfdruck = äußerer Luftdruck; Druckkochtopf: ↑Druck → ↑Siedepunkt
 - Kolloide: 1 nm–1 μm; zeigen Tyndall-Effekt; Brownsche Bewegung verhindert Sedimentation
@@ -2440,9 +2565,13 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
       ],
       content: `## Einleitung
 
-Das **Periodensystem (PSE)** ordnet Elemente nach **Ordnungszahl Z**; **Perioden** (Zeilen) und **Gruppen** (Spalten) zeigen wiederkehrende Eigenschaften. Gleiche Gruppe = gleiche Valenzelektronenanzahl. Für den MedAT sind Aufbau (s/p/d/f-Blöcke), Perioden/Gruppen und Zusammenhang Position–Eigenschaften prüfungsrelevant.
+Worum geht es hier? Das **Periodensystem der Elemente (PSE)** ordnet alle Elemente nach steigender **Ordnungszahl Z**. **Perioden** (Zeilen) und **Gruppen** (Spalten) spiegeln die Elektronenkonfiguration wider: gleiche Gruppe = gleiche Anzahl **Valenzelektronen** und ähnliche Chemie. **s-**, **p-**, **d-** und **f-Blöcke** entsprechen den besetzten Orbitaltypen. Warum ist das für den MedAT relevant? Das PSE ist die zentrale Übersicht für Elementeigenschaften, Bindungstypen und periodische Trends; BMS fragt nach Aufbau, Gruppen/Perioden und der Stellung von Metallen vs. Nichtmetallen. Typische Fragen: In welcher Gruppe steht Chlor? Was kennzeichnet den s-Block?
 
-**In diesem Kapitel lernst du:** **PSE-Aufbau** (7 Perioden, Gruppen 1–18); **s-**, **p-**, **d-**, **f-Block**; Ordnungszahl und Valenzelektronen; Metall/Nichtmetall/Halbmetall. **Kontext:** PSE als Ordnungsprinzip; Grundlage für Trends und Gruppenchemie; MedAT-Fragen zu Position und Eigenschaften.
+**In diesem Kapitel lernst du:**
+- **PSE-Aufbau**: 7 Perioden, 18 Gruppen; Ordnungszahl Z = Protonenzahl
+- **s-**, **p-**, **d-**, **f-Block** und Zuordnung der Valenzelektronen
+- **Metall** vs. **Nichtmetall** vs. **Halbmetall**; biogene Elemente (C, N, O, P, S)
+- Zusammenhang zwischen Position im PSE und typischen Eigenschaften
 
 ---
 
@@ -2516,25 +2645,36 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** PSE-Aufbau (18 Gruppen, 7 Perioden), s-/p-/d-/f-Blöcke, Hauptgruppen vs. Nebengruppen, Valenzelektronen = Gruppennummer (Hauptgruppe), Periodennummer = höchstes n, Metalle/Halbleiter/Nichtmetalle.
+**Zentral prüfungsrelevant:**
+- **PSE-Aufbau**: 7 Perioden (horizontal, n = Schale), 18 Gruppen (vertikal, Valenzelektronen); Ordnungszahl Z = Protonenzahl
+- **s-Block** (Gr. 1–2), **p-Block** (Gr. 13–18), **d-Block** (Gr. 3–12), **f-Block** (Lanthanoide/Actinoide)
+- **Periodenlängen**: 2 – 8 – 8 – 18 – 18 – 32 – 32
+- **Valenzelektronen**: Hauptgruppe = Gruppennummer (p-Block: Gruppennr. = 10 + VE); **Halbmetalle**: B, Si, Ge, As, Sb, Te, At
+- **Metallcharakter**: in Periode von links nach rechts abnehmend; in Gruppe von oben nach unten zunehmend
+- **Ausnahmen**: Cr [Ar]3d⁵4s¹, Cu [Ar]3d¹⁰4s¹
 
-**Ergänzend vertiefend:** Gruppenbezeichnungen (Alkali, Erdalkali, Halogene, Edelgase); Verwechslungen siehe „Typische Prüfungsfallen“.
+**Häufige Prüfungsfragen:**
+- In welchem Block steht Calcium? → s-Block, Gruppe 2 ([Ar]4s²)
+- Warum 18 Gruppen, 7 Perioden? → Gruppen = Valenzelektronentyp; Perioden = höchstes n
+- Welche Konfiguration hat Schwefel (Gr. 16, Periode 3)? → [Ne]3s²3p⁴
+- Welches Element ist NICHT in der 2. Periode? → Mg (steht in 3. Periode)
+- In welcher Gruppe stehen die Halogene? → Gruppe 17 (7 Valenzelektronen)
 
-**Häufige Fragen:**
-- "In welchem Block steht Calcium (Z=20)?" → s-Block, Gruppe 2 ([Ar]4s²)
-- "Warum hat das PSE 18 Gruppen, aber nur 7 Perioden?" → Gruppen = Valenzelektronentyp (18 Möglichkeiten); Perioden = höchste Hauptquantenzahl n (7 Schalen)
-- "Welche Elektronenkonfiguration hat Schwefel (Gruppe 16, Periode 3)?" → [Ne]3s²3p⁴
+**Typische Prüfungsfallen:**
+- Perioden (7, horizontal) ≠ Gruppen (18, vertikal)
+- 2. Periode: nur Li, Be, B, C, N, O, F, Ne — **Mg ist 3. Periode**
+- p-Block: Gruppennummer = 10 + Valenzelektronen (Gr. 17 = 7 VE)
+- Cr und Cu: Ausnahmen vom Aufbauprinzip
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Perioden (horizontal, 7 Stück) ≠ Gruppen (vertikal, 18 Stück) — häufige Verwechslung!
-- **2. Periode:** nur Li, Be, B, C, N, O, F, Ne. **Magnesium (Mg) ist 3. Periode** — typische MedAT-Falle: „Welches Element findet man NICHT in der zweiten Periode?“ → Mg.
-- p-Block: Gruppenummer = 10 + Valenzelektronen (Gr.17 = 7 VE); s-Block: Gruppenummer = Valenzelektronen (Gr.2 = 2 VE)
-- Cr ([Ar]3d⁵4s¹) und Cu ([Ar]3d¹⁰4s¹) — Ausnahmen vom Aufbauprinzip, regelmäßig geprüft
+**Wichtige Begriffe & Definitionen:**
+- **Periode**: Zeile im PSE; entspricht höchster besetzter Hauptquantenzahl n
+- **Gruppe**: Spalte; Elemente mit gleicher Valenzelektronenzahl
+- **s-/p-/d-/f-Block**: nach dem zuletzt besetzten Orbitaltyp
+- **Halbmetall (Metalloid)**: entlang der Treppenlinie; Halbleitereigenschaften
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- Periodenlängen: 2 – 8 – 8 – 18 – 18 – 32 – 32 (aus Kapazität der Unterschalen s, p, d, f)
-- Halbmetalle (Treppenlinie): B, Si, Ge, As, Sb, Te, At — Halbleitereigenschaften
-- Mendelejew (1869): nach Atommasse, Vorhersage unentdeckter Elemente; Moseley (1913): nach Kernladungszahl Z (löst alle Anomalien)
+**Prüfungsrelevante Zahlen:**
+- Periodenlängen: 2 – 8 – 8 – 18 – 18 – 32 – 32
+- Mendelejew (1869): Ordnung nach Atommasse; Moseley (1913): nach Kernladungszahl Z
 
 ---
 ## Zusammenfassung (ultrakompakt)
