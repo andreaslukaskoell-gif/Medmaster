@@ -30,7 +30,7 @@ export const chemKapAtom: Kapitel = {
       ],
       content: `## Einleitung
 
-Worum geht es hier? Alles, was uns umgibt — Luft, Wasser, unser Körper — besteht aus **Atomen**. Dieses Unterkapitel erklärt, wie sich das Bild vom Atom entwickelt hat: vom unzerteilbaren Teilchen über das Rosinenmodell bis zum Kern-Hülle-Modell und zum heutigen Orbitalmodell. Warum ist das für den MedAT relevant? Atommodelle, Ordnungszahl, Massenzahl und Isotope sind Grundlage für das Periodensystem, die Chemie der Bindungen und für klinische Anwendungen (z. B. Radioisotope in der Diagnostik). Mit diesem Stoff kannst du typische BMS-Fragen beantworten: Welcher Schluss folgt aus dem Rutherford-Versuch? Was ist ein Isotop? Wie viele Elektronen fasst die dritte Schale?
+**Worum geht es?** Alles um uns herum besteht aus **Atomen**. Dieses Unterkapitel erklärt die Entwicklung des Atommodells: vom unzerteilbaren Teilchen über Thomson (Rosinenmodell) und Rutherford (Kern-Hülle) bis Bohr (Schalen) und zum Orbitalmodell. **Warum für den MedAT relevant?** Atommodelle, Ordnungszahl, Massenzahl und Isotope sind Grundlage für das Periodensystem, Bindungen und klinische Anwendungen (Radioisotope). **Welche Fragen werden beantwortet?** „Welcher Schluss aus dem Rutherford-Versuch?“; „Was ist ein Isotop?“; „Max. Elektronen pro Schale (2n²)?“; „Orbital vs. Bahn?“; „Z und A?“.
 
 **In diesem Kapitel lernst du:**
 - die **Entwicklung der Atommodelle** (Thomson → Rutherford → Bohr → Quantenmechanik) und die Schlüsselexperimente
@@ -181,6 +181,8 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
 - **Isotope**: gleiche Z (gleiches Element), verschiedene Neutronenzahl N → verschiedene A; chemisch (fast) identisch, physikalisch verschieden
 - **Nuklidnotation** ᴬ_Z X (z. B. ²³⁸₉₂U); Schalenkapazität 2n² (K=2, L=8, M=18, N=32)
 - Alle Elemente mit **Z > 83** (Bismut) sind ausschließlich radioaktiv
+
+**Ergänzend vertiefend:** Grenzen Rutherford (kein Sturz der Elektronen, keine Spektrallinien); Lyman-/Balmer-/Paschen-Serien; starke Kernkraft, Massendefekt; Stabilitätsgürtel der Nuklide.
 
 **Häufige Prüfungsfragen:**
 - Welcher Schluss folgt aus dem Rutherford-Streuversuch? → Positive Ladung und Masse im winzigen Kern; Atom = leerer Raum
@@ -2915,9 +2917,14 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
       ],
       content: `## Einleitung
 
-**Periodische Trends** (Atomradius, Ionisierungsenergie, Elektronegativität) haben eine gemeinsame Ursache: die **effektive Kernladung** Z_eff. Sie bestimmt, wie stark Valenzelektronen gebunden werden. Für den MedAT sind Z_eff, Radius/IE/EN-Trends (Periode vs. Gruppe), Ausnahmen und Bindungscharakter prüfungsrelevant.
+Worum geht es hier? **Periodische Trends** sind die systematischen Änderungen von Atomradius, **Ionisierungsenergie** (IE), **Elektronenaffinität** (EA) und **Elektronegativität** (EN) im PSE. Gemeinsame Ursache ist die **effektive Kernladung** Z_eff (Z − σ): Sie bestimmt, wie stark Valenzelektronen gebunden werden. In der **Periode** steigen Z_eff und EN, der Radius sinkt; in der **Gruppe** wächst der Radius, IE und EN sinken. Warum ist das für den MedAT relevant? Reaktivität, Bindungstyp (ΔEN → ionisch/polar/unpolar) und Ausnahmen (Pairing Penalty bei O/N, EA(F) < EA(Cl)) sind klassische BMS-Themen. Typische Fragen: Welches Element hat die höchste EN? Warum ist IE(O) < IE(N)? Welchen Bindungscharakter hat O–H?
 
-**In diesem Kapitel lernst du:** **Effektive Kernladung** Z_eff (Z − σ); **Atomradius** (↓ in Periode, ↑ in Gruppe); **Ionisierungsenergie** IE (↑ in Periode, ↓ in Gruppe); **Elektronegativität** (Pauling); Ionenradius; Einfluss auf Bindungscharakter. **Kontext:** Trends erklären Reaktivität und Bindungstyp; MedAT-Fragen zu IE, EN, Radius.
+**In diesem Kapitel lernst du:**
+- **Effektive Kernladung** Z_eff = Z − σ als Ursache aller Trends
+- **Atomradius**: in Periode ↓, in Gruppe ↑; **Ionenradius** (Kation < Atom < Anion)
+- **Ionisierungsenergie** IE₁: in Periode ↑, in Gruppe ↓; Ausnahmen (Pairing Penalty: IE(O) < IE(N))
+- **Elektronegativität** (Pauling): F = 4,0 höchste; **ΔEN** und Bindungscharakter (<0,4 unpolar; 0,4–1,7 polar; ≥1,7 ionisch)
+- Successive IE: großer Sprung → Anzahl Valenzelektronen → Gruppennummer
 
 ---
 
@@ -2987,25 +2994,38 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Elektronegativität (Pauling-Skala, F=4,0), Bindungsarten (ionisch ΔEN>1,7; polar kovalent 0,4–1,7; unpolar kovalent <0,4), Dipol, H-Brücken, Oktettregel, formale Ladung.
+**Zentral prüfungsrelevant:**
+- **Effektive Kernladung** Z_eff = Z − σ: in Periode ↑, in Gruppe ähnlich; Ursache aller Trends
+- **Atomradius**: in Periode ↓ (Z_eff ↑); in Gruppe ↑ (neue Schalen); Kation < Atom < Anion
+- **Ionisierungsenergie IE₁**: in Periode ↑, in Gruppe ↓; **Ausnahmen**: IE(O) < IE(N) (Pairing Penalty), IE(Al) < IE(Mg)
+- **Elektronegativität** (Pauling): F = 4,0 höchste; Trend: in Periode ↑, in Gruppe ↓
+- **ΔEN → Bindungscharakter**: ΔEN < 0,4 unpolar kovalent; 0,4–1,7 polar kovalent; ≥ 1,7 ionisch
+- **Successive IE**: großer Sprung nach n Ionisierungen → n Valenzelektronen → Gruppe n
+- **EA-Ausnahme**: EA(Cl) > EA(F) (2p-Orbitale bei F zu kompakt → Abstoßung)
 
-**Ergänzend vertiefend:** EN-Trends im PSE; Verwechslungen siehe „Typische Prüfungsfallen“.
+**Häufige Prüfungsfragen:**
+- Welches Element hat die höchste Elektronegativität? → Fluor (EN = 4,0)
+- Welchen Bindungscharakter hat O–H (EN 3,44 / 2,20)? → ΔEN = 1,24 → polar kovalent
+- Warum ist IE₁(O) < IE₁(N)? → Pairing Penalty: 4. 2p-Elektron in besetztes Orbital
+- Wie verhält sich der Atomradius in Periode und Gruppe? → Periode ↓, Gruppe ↑
+- Warum hat Chlor höhere EA als Fluor? → Fluors 2p-Orbitale zu beengt
 
-**Häufige Fragen:**
-- "Welches Element hat die höchste Elektronegativität?" → Fluor (F, EN = 4,0 nach Pauling)
-- "Welchen Bindungscharakter hat O–H (EN(O)=3,44; EN(H)=2,20)?" → ΔEN = 1,24 → polar kovalent (0,4–1,7)
-- "Warum ist IE₁(O) < IE₁(N)?" → Pairing Penalty: O muss 4. 2p-Elektron in besetztes Orbital → Coulomb-Abstoßung → leichter entfernbar
+**Typische Prüfungsfallen:**
+- Höchste EA ≠ höchste EN: EA(Cl) > EA(F); EN(F) > EN(Cl)
+- Atomradius: in Periode **abnehmend**, in Gruppe **zunehmend** (nicht verwechseln)
+- ΔEN-Grenzen: <0,4 unpolar; 0,4–1,7 polar kovalent; ≥1,7 ionisch
+- Successive IE: Sprung nach **n** Ionisierungen → **n** Valenzelektronen → Gruppe **n**
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Höchste EA ≠ höchste EN: Höchste EA = Chlor (349 kJ/mol), nicht Fluor! (Fluors 2p-Orbitale zu beengt → Abstoßung)
-- Atomradius: in Periode ↓ (Z_eff steigt); in Gruppe ↑ (neue Schalen) — NICHT umgekehrt!
-- ΔEN-Grenzen: <0,4 unpolar kovalent; 0,4–1,7 polar kovalent; ≥1,7 ionisch
+**Wichtige Begriffe & Definitionen:**
+- **Z_eff**: effektive Kernladung = Z − σ (Abschirmung durch innere Elektronen)
+- **Ionisierungsenergie IE₁**: Energie zum Entfernen des 1. Elektrons aus dem neutralen Atom
+- **Elektronegativität EN**: Tendenz, Bindungselektronen anzuziehen (Pauling; F = 4,0)
+- **Pairing Penalty**: zusätzliche Abstoßung, wenn 2 e⁻ im selben Orbital → IE(O) < IE(N)
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- EN-Werte (Pauling): F(4,0) > O(3,44) > Cl(3,16) > N(3,04) > Br(2,96) > S(2,58) > C(2,55) > H(2,20)
-- IE-Ausnahmen Periode 2: IE₁(B) < IE₁(Be) [2p energiereicher als 2s] und IE₁(O) < IE₁(N) [Pairing Penalty]; analog Periode 3: IE(Al)<IE(Mg) und IE(S)<IE(P)
-- Successive IE: großer Sprung (Faktor >3) nach n Ionisierungen → n Valenzelektronen → Gruppe n
-- C–F-Bindung: ΔEN = 1,45; stabil (~485 kJ/mol), metabolisch resistent → fluorierte Arzneistoffe (Ciprofloxacin, 5-FU, Fluoxetin) haben lange HWZ
+**Prüfungsrelevante Zahlen:**
+- EN: F(4,0) > O(3,44) > Cl(3,16) > N(3,04); ΔEN O–H = 1,24 (polar kovalent)
+- IE-Ausnahmen: O < N (Pairing Penalty); Al < Mg; S < P
+- C–F-Bindung: metabolisch stabil → fluorierte Arzneistoffe (5-FU, Ciprofloxacin, Fluoxetin)
 
 ---
 ## Zusammenfassung (ultrakompakt)
@@ -3253,9 +3273,14 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
       ],
       content: `## Einleitung
 
-**Elementgruppen** prägen die Chemie: Alkalimetalle (Na, K) als Elektrolyte, Halogene (F, Cl, I) für Schilddrüse und Desinfektion, Edelgase inert, Übergangsmetalle (Fe, Zn, Cu) als Cofaktoren. Für den MedAT sind Gruppenmerkmale, Oxidationsstufen und klinische Bedeutung (Elektrolyte, Spurenelemente) prüfungsrelevant.
+Worum geht es hier? **Elementgruppen** im PSE teilen sich nach Valenzelektronen und typischen Oxidationszahlen: **Alkalimetalle** (Gruppe 1, +1), **Erdalkalimetalle** (Gruppe 2, +2), **Halogene** (Gruppe 17, −1, starke Oxidationsmittel), **Edelgase** (inert), **Übergangsmetalle** (variable Oxidationsstufen). Ihre **klinische Bedeutung** ist zentral: Na⁺/K⁺ für Membranpotenzial und Elektrolythomöostase, Ca²⁺ für Knochen und Signaltransduktion, Jod für Schilddrüsenhormone T3/T4, Eisen für Hämoglobin und Zytochrome. Warum ist das für den MedAT relevant? BMS fragt nach Gruppenmerkmalen, Ionenladungen, Spurenelementen und Syndromen bei Mangel/Überschuss (z. B. Hypokaliämie, Kretinismus, Vitamin-B12-Mangel). Typische Fragen: Welches Halogen braucht die Schilddrüse? Welches Metall ist Zentralatom in Hämoglobin? Warum bilden Erdalkalimetalle +2-Ionen?
 
-**In diesem Kapitel lernst du:** **Alkalimetalle** (Gruppe 1, ns¹, +1); **Erdalkalimetalle** (Gruppe 2, ns², +2); **Halogene** (Gruppe 17, Oxidationsmittel); **Edelgase** (inert); **Übergangsmetalle** (variable Oxidationsstufen); biologische Rolle (Na⁺/K⁺, Ca²⁺, Fe, I). **Kontext:** Von der Gruppe zur Klinik — Elektrolyte, Schilddrüse, Hämoglobin; MedAT-Fragen zu Gruppen und Mangel/Überschuss.
+**In diesem Kapitel lernst du:**
+- **Alkalimetalle** (Gr. 1): ns¹, +1-Ionen; Na⁺/K⁺, Na⁺/K⁺-ATPase, Hypo-/Hyperkaliämie
+- **Erdalkalimetalle** (Gr. 2): ns², +2-Ionen; Ca²⁺ (Knochen, Signaling), Mg²⁺ (Enzymkofaktor)
+- **Halogene** (Gr. 17): −1-Ionen; Jod für T3/T4, Fluor für Kariesschutz, fluorierte Arzneistoffe
+- **Edelgase** (Gr. 18): inert; Xe als Narkotikum
+- **Übergangsmetalle**: Fe (Hämoglobin, Zytochrome), Cu, Zn, Co (Vitamin B12), Pt (Cisplatin)
 
 ---
 
@@ -3335,25 +3360,37 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Hauptgruppen (Alkali, Erdalkali, Halogene, Edelgase), biologische Relevanz (Na⁺/K⁺, Ca²⁺, Cl⁻, Jod T3/T4, Fe²⁺ Hämoglobin), Übergangsmetalle (Fe, Cu, Zn, Co, Mn), NIS-Symporter, Methämoglobin (Fe³⁺ bindet kein O₂).
+**Zentral prüfungsrelevant:**
+- **Alkalimetalle** (Gr. 1): +1-Ionen; Na⁺ extrazellulär (~140 mmol/L), K⁺ intrazellulär (~150 mmol/L); Na⁺/K⁺-ATPase (3 Na⁺ raus, 2 K⁺ rein); Hypo-/Hyperkaliämie → Herzrhythmusstörungen
+- **Erdalkalimetalle** (Gr. 2): +2-Ionen; Ca²⁺ (Knochen/Hydroxyapatit, Muskel, Gerinnung); Mg²⁺ (>300 Enzyme); BaSO₄ unlöslich → sicheres Röntgenkontrastmittel
+- **Halogene** (Gr. 17): Jod für T3/T4 (NIS-Symporter); Jodmangel → Kretinismus, Struma; Fluor für Kariesschutz; fluorierte Arzneistoffe
+- **Edelgase**: inert; Xe als Narkotikum; Rn α-Strahler → Lungenkrebsrisiko
+- **Übergangsmetalle**: Fe²⁺ in Hämoglobin (O₂-Bindung); Fe³⁺ (Methämoglobin bindet kein O₂); Cu, Zn, Co (B12), Pt (Cisplatin)
 
-**Ergänzend vertiefend:** Spurenelemente, Toxizität; Verwechslungen siehe „Typische Prüfungsfallen“.
+**Häufige Prüfungsfragen:**
+- Welches Halogen ist essenziell für T3/T4? → Jod (T3 = 3 I, T4 = 4 I; NIS-Symporter)
+- Welches Metall ist Zentralatom in Hämoglobin? → Eisen (Fe²⁺); Fe³⁺ bindet kein O₂ (Methämoglobin)
+- Warum bilden Erdalkalimetalle +2-Ionen? → 2 Valenzelektronen (ns²) → Edelgaskonfiguration
+- Was ist Kretinismus? → Kongenitale Hypothyreose durch Jodmangel → irreversible geistige Behinderung
+- Wo ist Na⁺, wo K⁺? → Na⁺ extrazellulär (~140), K⁺ intrazellulär (~150 mmol/L)
 
-**Häufige Fragen:**
-- "Welches Halogen ist essenziell für T3/T4?" → Jod (I, Z=53): T3 = 3 I-Atome, T4 = 4 I-Atome; Aufnahme über NIS-Symporter
-- "Welches Übergangsmetall ist Zentralatom in Hämoglobin?" → Eisen (Fe²⁺) — Fe³⁺ (Methämoglobin) bindet kein O₂!
-- "Warum bilden Erdalkalimetalle +2-Ionen?" → 2 Valenzelektronen (ns²) → Abgabe → stabile Edelgaskonfiguration; IE₃ enorm hoch → kein +3-Ion
+**Typische Prüfungsfallen:**
+- Fe²⁺ bindet O₂ in Hämoglobin; **Fe³⁺ (Methämoglobin) bindet kein O₂**
+- Na⁺ extrazellulär ≠ K⁺ intrazellulär (nicht verwechseln!)
+- Alkalimetalle: Reaktivität Li < Na < K < Rb < Cs; Halogene: F₂ > Cl₂ > Br₂ > I₂
+- BaSO₄ sicher (unlöslich); lösliche Ba-Salze hochgiftig
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Fe²⁺ bindet O₂ in Hämoglobin ≠ Fe³⁺ (Methämoglobin = bindet kein O₂)
-- Alkalimetalle: Reaktivität steigt von Li→Cs (IE sinkt); Halogene: Reaktivität sinkt von F₂→I₂ (IE sinkt in der Gruppe)
-- Na⁺ (extrazellulär, ~140 mmol/L) ≠ K⁺ (intrazellulär, ~150 mmol/L) — Verwechslung gefährlich für Klinik-Fragen!
+**Wichtige Begriffe & Definitionen:**
+- **Na⁺/K⁺-ATPase**: 3 Na⁺ raus, 2 K⁺ rein pro ATP → Ruhemembranpotenzial ~−70 mV
+- **Methämoglobin**: Fe³⁺ statt Fe²⁺ im Häm → bindet kein O₂
+- **Kretinismus**: schwere geistige Behinderung durch Jodmangel in der frühen Entwicklung
+- **NIS-Symporter**: Natrium-Jodid-Symporter in der Schilddrüse für Jodaufnahme
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein, 1 ATP → Ruhemembranpotenzial ≈ −70 mV
-- Ca²⁺: 99 % als Hydroxyapatit; Plasma 2,2–2,6 mmol/L; Hypokalzämie → Tetanie, Chvostek-Zeichen
+**Prüfungsrelevante Zahlen:**
+- Na⁺ ~140 mmol/L extrazellulär; K⁺ ~150 mmol/L intrazellulär; Ca²⁺ Plasma 2,2–2,6 mmol/L
+- Ca²⁺: 99 % als Hydroxyapatit in Knochen; Hypokalzämie → Tetanie, Chvostek, Trousseau
 - Jodmangel → Kretinismus (häufigste vermeidbare Ursache geistiger Behinderung weltweit)
-- Cisplatin (Pt(II)): Guanin-Guanin-DNA-Quervernetzung → Apoptose; Hoden-/Ovarialkarzinom
+- Cisplatin (Pt(II)): DNA-Quervernetzung → Hoden-, Ovarialkarzinom
 
 ---
 ## Zusammenfassung (ultrakompakt)
