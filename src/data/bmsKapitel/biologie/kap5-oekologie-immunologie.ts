@@ -60,6 +60,10 @@ Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art: Breite 
 
 **Erklärung zur Grafik:** Die Glockenkurve zeigt Optimum, Pessimum und Todespunkte sowie die ökologische Amplitude — Grundlage für die Abgrenzung euryök (Generalist) vs. stenök (Spezialist).
 
+![Abiotische Faktoren und Verteilung](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Verteilung von Arten entlang eines Umweltgradienten; die Grafik veranschaulicht Toleranzbreite und ökologische Amplitude (stenök vs. euryök).
+
 ---
 
 ## Euryök vs. stenök — Konsequenzen für den Naturschutz
@@ -271,6 +275,14 @@ Biotische Faktoren umfassen alle Wechselwirkungen zwischen Lebewesen und sind ze
 ## Biotische Faktoren — Definition und Überblick
 
 **Biotische Faktoren** sind alle lebenden Bestandteile der Umwelt, die einen Organismus beeinflussen. Sie umfassen Interaktionen mit Individuen der eigenen Art (intraspezifische Interaktionen) und mit Individuen anderer Arten (interspezifische Interaktionen). Die wichtigsten biotischen Wechselwirkungen sind Konkurrenz, Prädation und die verschiedenen Formen der Symbiose. Diese Interaktionen sind treibende Kräfte der Evolution und strukturieren Lebensgemeinschaften (Biozönosen).
+
+![Toleranz und Wechselwirkungen](/grafik-toleranzkurve.svg)
+
+**Erklärung zur Grafik:** Toleranzkurve und Ressourcennutzung; Konkurrenz und Prädation wirken entlang abiotischer Gradienten — euryöke Arten haben breitere Nischen.
+
+![Räuber-Beute und Dynamik](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Systematische Erfassung von Wechselwirkungen; die Grafik unterstützt die Einordnung von Mutualismus (+/+), Parasitismus (+/−) und Prädation.
 
 ---
 
@@ -510,6 +522,14 @@ Die Populationsbiologie untersucht, wie sich Populationen in Abhängigkeit von R
 - Logistisches Wachstum: dN/dt = r·N·(K−N)/K → S-förmige (sigmoidale) Kurve, Annäherung an Kapazitätsgrenze K
 - r-Strategen: viele Nachkommen, wenig Brutpflege, kurze Generationszeit
 - K-Strategen: wenige Nachkommen, intensive Brutpflege, lange Generationszeit
+
+![Wachstum und Kapazitätsgrenze](/grafik-exponential.svg)
+
+**Erklärung zur Grafik:** Exponentielles (J-förmiges) vs. logistisches (S-förmiges) Wachstum; die Kapazitätsgrenze K begrenzt die Populationsgröße im Gleichgewicht.
+
+![Verteilung und Altersstruktur](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Verteilung von Individuen über Altersklassen; Grundlage für Demographie und r- vs. K-Strategien (Alterspyramiden, Überlebenskurven).
 
 ---
 
@@ -801,6 +821,14 @@ Das Konzept der ökologischen Nische nach Hutchinson ist eines der fundamentalst
 - Nischendifferenzierung ermöglicht Koexistenz konkurrierender Arten
 - Generalisten = breite Nische; Spezialisten = enge Nische
 
+![Toleranz und Nische](/grafik-toleranzkurve.svg)
+
+**Erklärung zur Grafik:** Fundamentale vs. realisierte Nische entlang Umweltgradienten; Toleranzkurven begrenzen die fundamentale Nische, Konkurrenz die realisierte.
+
+![Wechselwirkungen und Koexistenz](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Systematische Einordnung von Artinteraktionen; Nischendifferenzierung und Konkurrenzausschluss lassen sich damit veranschaulichen.
+
 ---
 
 ## Das Nischenkonzept nach Hutchinson
@@ -1043,6 +1071,14 @@ Beispiele:
 - 10%-Regel: ca. 10% der Energie gelangt auf die nächste Trophieebene
 - Primärproduktion: GPP (brutto) vs. NPP (netto = GPP − Respiration)
 - Biogeochemische Kreisläufe: Kohlenstoff, Stickstoff, Phosphor, Wasser
+
+![Energiefluss und Trophieebenen](/grafik-21-energieprofil.svg)
+
+**Erklärung zur Grafik:** Energie verringert sich pro Trophieebene; die 10%-Regel und der Energieverlust als Wärme werden so veranschaulicht.
+
+![Stoffkreislauf und Reaktionen](/grafik-kohlenstoff.svg)
+
+**Erklärung zur Grafik:** Kohlenstoff- und andere Stoffkreisläufe; Produzenten, Konsumenten und Destruenten schließen die Kreisläufe.
 
 ---
 
@@ -1325,6 +1361,14 @@ Biodiversität beschreibt die Vielfalt des Lebens auf drei hierarchischen Ebenen
 - Sukzession: primär (nackte Fläche) vs. sekundär (nach Störung) → Klimaxgesellschaft
 - Hauptbedrohungen: HIPPO (Habitatverlust, Invasive Arten, Pollution, Population, Overexploitation)
 - 5 historische Massenaussterben + aktuelles 6. Massenaussterben (anthropogen)
+
+![Artenzahl und Gleichgewicht](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Inselbiographie: Gleichgewicht aus Einwanderung und Extinktion; Artenzahl hängt von Fläche und Isolation ab.
+
+![Sukzession und Diversität](/grafik-toleranzkurve.svg)
+
+**Erklärung zur Grafik:** Sukzession verändert Artenzusammensetzung und Diversität; von Pionier- zur Klimaxgesellschaft.
 
 ---
 
@@ -1633,6 +1677,14 @@ Antikörper sind die zentralen Effektormoleküle der adaptiven humoralen Immunan
 - 5 Klassen: IgG (häufigster, plazentagängig), IgA (Sekrete), IgM (Primärantwort, Pentamer), IgE (Allergie), IgD (B-Zell-Signal)
 - Effektorfunktionen: Neutralisierung, Opsonisierung, Komplementaktivierung (MAC)
 
+![Antikörper und Komplement](/grafik-19-komplement.svg)
+
+**Erklärung zur Grafik:** Komplementaktivierung durch Antigen-Antikörper-Komplexe; klassischer Weg (C1q bindet Fc) bis zur Lyse (MAC).
+
+![Immunantwort und Abwehr](/grafik-8-immunitaet.svg)
+
+**Erklärung zur Grafik:** Übersicht der humoralen Immunantwort; Antikörper (IgG, IgA, IgM u. a.) und ihre Effektorfunktionen im Kontext.
+
 ---
 
 ## IgG-Grundstruktur — Fab und Fc
@@ -1869,6 +1921,14 @@ Die enorme Antikörperdiversität des menschlichen Immunsystems — über 10¹�
 - Affinitätsreifung: somatische Hypermutation (AID) in Keimzentren → Selektion auf höhere Affinität
 - Gedächtnis-B-Zellen: Grundlage der Sekundärantwort (schneller, stärker, höhere Affinität)
 
+![Zentraldogma und Rekombination](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** DNA als Informationsträger; V(D)J-Rekombination verändert die DNA-Sequenz in B-Zellen und erzeugt Antikörperdiversität.
+
+![Kombinatorik und Diversität](/grafik-kombinatorik.svg)
+
+**Erklärung zur Grafik:** Kombinatorische Vielfalt durch Auswahl von V-, D-, J-Segmenten; Grundprinzip der klonalen Diversität.
+
 ---
 
 ## Antikörperdiversität — Das Grundproblem
@@ -2077,6 +2137,14 @@ Das AB0-Blutgruppensystem ist eines der wichtigsten Beispiele für multiple Alle
 - Genotyp-Phänotyp: A (I^AI^A oder I^Ai⁰), B (I^BI^B oder I^Bi⁰), AB (I^AI^B), 0 (i⁰i⁰)
 - Antikörper-Regel: Man bildet Antikörper gegen das, was man nicht hat
 - 0 Rh- = universeller Spender, AB Rh+ = universeller Empfänger (vereinfacht)
+
+![Vererbung und Genotypen](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Kreuzungsschema (Punnett-Quadrat) für AB0; Kombination der Allele I^A, I^B, i⁰ und Zuordnung zu Phänotypen.
+
+![Kodominanz und multiple Allele](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** Genotyp und Phänotyp bei Kodominanz; beide Allele (I^A, I^B) werden exprimiert, i⁰ ist rezessiv.
 
 ---
 
@@ -2311,6 +2379,14 @@ Das Rhesus-System ist nach dem AB0-System das klinisch bedeutsamste Blutgruppens
 - Rhesus-Inkompatibilität: Rh- Mutter + Rh+ Kind → Sensibilisierung → Anti-D-IgG → Hämolyse beim nächsten Rh+ Kind
 - Anti-D-Prophylaxe: 28. SSW + <72h postpartal → verhindert Sensibilisierung
 - IgG passiert Plazenta (FcRn-Transport), IgM nicht (zu groß als Pentamer)
+
+![Plazentatransfer und IgG](/grafik-1-membrantransport.svg)
+
+**Erklärung zur Grafik:** Transzytose von IgG über die Plazentaschranke (FcRn); nur IgG passiert, Anti-D-IgG kann so den Fötus schädigen.
+
+![Gerinnung und Blutgruppen](/grafik-7-gerinnung.svg)
+
+**Erklärung zur Grafik:** Blut und Gefäßsystem; Rhesus-Inkompatibilität betrifft Erythrozyten und kann zu Hämolyse führen.
 
 ---
 

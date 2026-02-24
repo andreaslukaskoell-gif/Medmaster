@@ -58,7 +58,9 @@ Kein einzelnes Merkmal allein definiert Leben — erst ihr Zusammenspiel kennzei
 
 > **Merke:** **StReForWaEvoBeHo**: Stoffwechsel – Reizbarkeit – Fortpflanzung – Wachstum – Evolution – Bewegung – Homöostase
 
-**SVG-Hinweis (Sieben Kennzeichen des Lebens):** Eine kompakte Übersicht mit den sieben Kennzeichen und der Eselsbrücke StReForWaEvoBeHo unterstützt die Merkfähigkeit. *Typ: Übersicht / Schema.*
+![Zelle und Stoffwechsel](/grafik-1-membrantransport.svg)
+
+**Erklärung zur Grafik:** Die Zelle als Einheit mit Membran und Transport — Grundlage für Stoffwechsel, Reizbarkeit und Homöostase; Kennzeichen des Lebens zeigen sich auf Zellebene.
 
 ---
 
@@ -88,7 +90,9 @@ Homöostase bedeutet: Der Körper hält Parameter wie Blutzucker, Körpertempera
 
 > **Merke:** Negative Rückkopplung = stabilisiert (Homöostase). Positive Rückkopplung = verstärkt für Alles-oder-Nichts-Effekte (Blutgerinnung, Wehen, Aktionspotential).
 
-**SVG-Hinweis (Negativ vs. positiv Rückkopplung):** Ein Regelkreis-Schema mit Soll-Ist-Vergleich und Pfeil „wirkt entgegen“ (negativ) bzw. „verstärkt“ (positiv) macht den Unterschied auf einen Blick klar. *Typ: Schema / Regelkreis.*
+![Hypophysen-Achsen und Regelkreise](/grafik-5-hypophysen-achsen.svg)
+
+**Erklärung zur Grafik:** Hormonelle Regelkreise (z. B. Schilddrüsenachse) mit negativer Rückkopplung — Soll-Ist-Vergleich und Stabilisierung des Sollwerts (Homöostase).
 
 ---
 
@@ -343,7 +347,13 @@ Das definierendste Merkmal: Prokaryoten haben **keinen membranumschlossenen Zell
 
 **Warum ist Kompartimentierung (Eukaryoten) ein Vorteil?** Räumliche Trennung von Reaktionen — Transkription im Kern, Translation im Zytoplasma — ermöglicht umfangreiche mRNA-Prozessierung (Spleißen, 5'-Kappe, Poly-A-Schwanz) und feinere Regulation. Prokaryoten haben das nicht → ihre Gene haben keine Introns, keine RNA-Prozessierung.
 
-**SVG-Hinweis (Prokaryot vs. Eukaryot):** Ein Schema mit Kern/Nukleoid, Ribosomen (70S vs. 80S) und Organellen macht den Grundunterschied auf einen Blick klar und unterstützt die Einordnung von Antibiotika-Zielstrukturen. *Typ: Vergleichsschema.*
+![Zellaufbau und Kompartimentierung](/grafik-1-membrantransport.svg)
+
+**Erklärung zur Grafik:** Membranen und Kompartimente — Eukaryoten haben Zellkern und Organellen (ER, Vesikel); Prokaryoten haben nur Nukleoid ohne Kernhülle.
+
+![Zellteilung Eukaryoten](/grafik-2-mitose.svg)
+
+**Erklärung zur Grafik:** Mitose als typische Zellteilung der Eukaryoten; Prokaryoten teilen sich durch binäre Fission ohne Spindelapparat.
 
 > **Merke:** Pro = kein Kern: Prokaryoten = Nukleoid (keine Membran), 70S, binäre Fission. Eukaryoten = echter Kern, 80S, Mitose.
 
@@ -919,6 +929,10 @@ Polare oder geladene Moleküle nutzen Proteine — weiterhin **entlang** des Gra
 
 > **Merke:** Passiv = immer entlang des Gradienten, kein ATP. Ionenkanäle schnell; Carrier sättigbar.
 
+![Membrantransport — passiv und aktiv](/grafik-1-membrantransport.svg)
+
+**Erklärung zur Grafik:** Die fünf Transportmechanismen: einfache und erleichterte Diffusion, Osmose, primär und sekundär aktiver Transport (Na⁺/K⁺-ATPase, Symport/Antiport).
+
 ---
 
 ## Osmose und Tonizität
@@ -938,6 +952,10 @@ Polare oder geladene Moleküle nutzen Proteine — weiterhin **entlang** des Gra
 **Hämolyse** = Zerfall der Zellmembran (z. B. Erythrozyt platzt); **Krenation** = Schrumpfung der Zelle durch Wasseraustritt. Isotone NaCl-Lösung: **0,9 %** (~290 mosmol/kg) = physiologische Kochsalzlösung (Infusion).
 
 > **Merke:** Osmose = Wassertransport zur höheren Osmolalität. Hypoton → Hämolyse; hyperton → Krenation.
+
+![Osmose und Tonizität](/grafik-10-nephron.svg)
+
+**Erklärung zur Grafik:** Wasser folgt der Osmolalität; in der Niere entscheiden Konzentrationsgradienten über Harnkonzentrierung — gleiches Prinzip wie bei Zellen (hypoton/isoton/hyperton).
 
 **SVG-Hinweis (5 Mechanismen):** Schema „Membrantransport — 5 Mechanismen“ (einfache Diffusion, erleichterte Diffusion, Osmose, primär aktiv, sekundär aktiv). Bereits vorhanden: \`grafik-1-membrantransport.svg\`. Unterstützt die Abgrenzung passiv/aktiv und die Richtung der Gradienten. *Typ: Übersichtsschema.*
 
@@ -1069,6 +1087,14 @@ Proteine, die für Membranen, Lysosomen oder die Sekretion (Hormone, Antikörper
 
 > **Merke:** rER → Golgi → Lysosom: N-Glykosylierung im ER, M6P-Tag im Golgi als Adresse für Lysosomen. M6P fehlt → I-Zell-Krankheit.
 
+![Proteinbiosynthese und sekretorischer Weg](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** DNA → RNA → Protein; im rER beginnt die Translation sekretorischer Proteine, dann Vesikeltransport über Golgi zu Lysosomen oder nach außen.
+
+![Organellen und Vesikeltransport](/grafik-1-membrantransport.svg)
+
+**Erklärung zur Grafik:** Vesikel und Membranfluss (rER → Golgi → Ziel); die Grafik veranschaulicht Kompartimentierung und Transport zu Lysosomen oder Zellmembran.
+
 **SVG-Hinweis (Sekretorischer Weg):** Ein Flussschema rER → Golgi → Lysosom mit M6P-Targeting und Vesikeltransport unterstützt die räumliche Vorstellung und die Abgrenzung zu anderen Wegen. *Typ: Flussschema / Übersicht.*
 
 ---
@@ -1098,6 +1124,10 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 **Maternale Vererbung:** mtDNA kommt ausschließlich aus dem Ei → mitochondriale Erkrankungen (MELAS, Leber-Optikusneuropathie) werden maternal vererbt.
 
 > **Merke:** Cristae = gefaltete innere Membran = Ort der Atmungskette. Mitochondrien = 5 Bakterien-Belege. Cytochrom c frei → Apoptose.
+
+![Lysosom und Abbau](/grafik-1-membrantransport.svg)
+
+**Erklärung zur Grafik:** Lysosomen entstehen aus dem Trans-Golgi; Fusion mit Autophagosomen oder Phagolysosomen — Abbau in saurem Milieu (pH 4,5).
 
 **SVG-Hinweis (Mitochondrien-Querschnitt):** Ein Schema mit äußerer/innerer Membran, Cristae, Matrix und Intermembranraum macht den Ort der Atmungskette und die 5 Endosymbionten-Belege auf einen Blick klar. *Typ: Querschnitt / Schema.*
 
@@ -1362,6 +1392,10 @@ Warum können Körperzellen nur im Körper existieren, nicht aber eigenständig 
 
 > **Merke:** Kernporen: <40 kDa frei, >40 kDa nur mit NLS (Import) oder NES (Export). Äußere Kernmembran = Fortsatz des rauen ER. Kernlamina = Lamine (nicht Aktin!).
 
+![Kern und Genexpression](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** Transkription im Kern, Translation im Zytoplasma; NLS/NES steuern den Kerntransport von Proteinen und RNA.
+
 **SVG-Hinweis (Kernporen / NLS-NES-Transport):** Ein Schema mit NPC, Importin/Exportin und RanGTP-Gradient veranschaulicht, warum große Proteine ein NLS oder NES brauchen und wie die Richtung des Transports entsteht. *Typ: Schema / Transport.*
 
 ---
@@ -1396,6 +1430,10 @@ Das menschliche Genom umfasst 3,2 Milliarden Basenpaare — ausgestreckt ca. **2
 **Barr-Körper:** Inaktiviertes X-Chromosom bei XX-Individuen (Lyon-Hypothese: zufällige X-Inaktivierung in jeder somatischen Zelle) → erscheint als dunkles Heterochromatin-Klümpchen am Kernrand. Anzahl Barr-Körper = X-Chromosomenanzahl − 1.
 
 > **Merke:** Nukleosom = 147 bp DNA um Histon-Oktamer (H2A,H2B,H3,H4 je 2×). Acetylierung → offen (aktiv). Methylierung → geschlossen (inaktiv). Barr-Körper = inaktives X.
+
+![Chromosomen und Mitose](/grafik-2-mitose.svg)
+
+**Erklärung zur Grafik:** Chromatin kondensiert in der Mitose zu sichtbaren Chromosomen; die Grafik zeigt die Verpackung von der Interphase bis zur Metaphase.
 
 **SVG-Hinweis (Nukleosom / Chromatin-Hierarchie):** Ein Schema von Nukleosom („Perlen auf der Schnur“) bis zur 30-nm-Faser und Euchromatin vs. Heterochromatin festigt die Verpackungsstufen und die epigenetische Regulation. *Typ: Schema / Hierarchie.*
 
@@ -1637,6 +1675,10 @@ Kernspaltung + Zellteilung. Kontrolliert durch den **Spindel-Checkpoint** (Kinet
 
 > **Merke:** G0 = Ruhephase, G1/S = Tumor-Checkpoint (Rb/E2F), G2/M = CDK1/CyclinB. Tumorzellen überwinden Checkpoints durch Mutationen in p53, Rb, Cyclin-Genen.
 
+![Mitose — Phasen](/grafik-2-mitose.svg)
+
+**Erklärung zur Grafik:** Prophase → Metaphase → Anaphase → Telophase: Kondensation, Metaphasenplatte, Trennung der Schwesterchromatiden, Zytokinese.
+
 **SVG-Hinweis (Zellzyklus):** Ein Kreisschema mit G1 → S → G2 → M und G0-Abstieg sowie den Checkpoints (G1/S, G2/M, Spindel) unterstützt die Einordnung der Phasen und der Tumorrelevanz. *Typ: Kreisschema / Übersicht.*
 
 ---
@@ -1645,7 +1687,9 @@ Kernspaltung + Zellteilung. Kontrolliert durch den **Spindel-Checkpoint** (Kinet
 
 **Bisher haben wir gesehen:** Der Zellzyklus bereitet die Zelle auf die Teilung vor (G1, S, G2). **In der M-Phase** findet die eigentliche Kernteilung statt — bei Körperzellen als **Mitose**. **Um sie zu verstehen,** gehen wir die Phasen nacheinander durch. Die Mitose ist die Standardform der Zellteilung für Körperzellen. Sie erzeugt zwei genetisch identische Tochterzellen.
 
-**SVG-Hinweis (Mitose-Phasen):** Ein Schema der Phasen Prophase → Metaphase → Anaphase → Telophase (z. B. \`grafik-2-mitose.svg\`) veranschaulicht Kondensation, Metaphasenplatte, Trennung der Schwesterchromatiden und Zytokinese auf einen Blick. *Typ: Phasenschema / Übersicht.*
+![Meiose — Reduktion und Crossing-over](/grafik-3-meiose.svg)
+
+**Erklärung zur Grafik:** Meiose I (Bivalente, Crossing-over, Trennung der homologen Chromosomen) und Meiose II (Trennung der Schwesterchromatiden); Grundlage für genetische Vielfalt.
 
 **Prophase:**
 Chromosomen kondensieren (werden sichtbar durch Histon-H3-Phosphorylierung). Das **Zentrosom** dupliziert sich und wandert zu den Polen. Die **Kernhülle löst sich auf**. Der **Spindelapparat** (Mikrotubuli aus Zentrosomen) beginnt sich zu bilden.
@@ -1951,6 +1995,10 @@ Aus 2 G3P entstehen 2 Pyruvat. Pro Triose: 2 ATP + 1 NADH. Für beide Triosen: 4
 
 > **Merke:** PFK-1 = das wichtigste Regulationsenzym der Glykolyse. ATP hemmt, AMP aktiviert. Insulin aktiviert über Fructose-2,6-bisphosphat. Merke: "ATP bremst, wenn Energie da ist."
 
+![Redox und Atmungskette](/grafik-redox.svg)
+
+**Erklärung zur Grafik:** NADH und FADH₂ liefern Elektronen für die Atmungskette; die Grafik veranschaulicht den Zusammenhang zwischen Glykolyse, Citratzyklus und oxidativer Phosphorylierung.
+
 **SVG-Hinweis (Glykolyse — Bilanz):** Ein kompaktes Schema mit Glucose → 2 Pyruvat, 2 ATP netto, 2 NADH und der Stellung von PFK-1 in der Kette unterstützt die Merkfähigkeit für Prüfungsfragen. *Typ: Flussschema / Bilanz.*
 
 ---
@@ -2019,6 +2067,10 @@ Pro Glucose (2 Pyruvat): 2 Acetyl-CoA + 2 CO₂ + 2 NADH
 - FADH₂: ~1,5 ATP pro FADH₂ (frühere Angabe: 2 ATP)
 
 > **Merke:** NADH → Komplex I → Q → Komplex III → Cyt c → Komplex IV → O₂ → H₂O. FADH₂ → Komplex II → Q (kein H⁺-Pumpen → weniger ATP). O₂ = finale Elektronenakzeptor. Cyanid blockiert Komplex IV!
+
+![Energie und ATP-Synthese](/grafik-21-energieprofil.svg)
+
+**Erklärung zur Grafik:** Protonengradient und ATP-Synthese (Chemiosmose); die Grafik veranschaulicht die Kopplung von Redoxreaktionen und Phosphorylierung (~30–32 ATP/Glucose).
 
 ---
 

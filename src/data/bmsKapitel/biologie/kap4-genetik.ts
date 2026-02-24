@@ -33,6 +33,14 @@ Die klassische Genetik bildet das Fundament der Vererbungslehre und geht auf Gre
 - Testkreuzung mit aa zur Genotypbestimmung
 - Autosomal-rezessive Erkrankungen: 25% Risiko bei Aa × Aa
 
+![Kreuzungsschema und Spaltung](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Punnett-Quadrat für mono- und dihybride Erbgänge; Verhältnisse 3:1 (Spaltung) und 9:3:3:1 (Unabhängigkeit) lassen sich damit ableiten.
+
+![Vererbung und Verteilung](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Phänotypische Verteilung in F₂; Mendelsche Spaltungsverhältnisse und Wahrscheinlichkeiten (Produktregel) im Überblick.
+
 ---
 
 ## Grundbegriffe der Genetik
@@ -239,6 +247,14 @@ Chromosomen sind die strukturellen Träger der Erbinformation und bestehen aus D
 - Klinefelter (47,XXY) und Turner (45,X) als häufige gonosomale Aberrationen
 - Nicht-Disjunktion als Hauptursache, Risiko steigt mit mütterlichem Alter
 
+![Chromosomen und Mitose](/grafik-2-mitose.svg)
+
+**Erklärung zur Grafik:** Chromosomenverteilung bei der Zellteilung; Nicht-Disjunktion führt zu Trisomien (z. B. 47,+21) oder Monosomien (45,X).
+
+![Verteilung und Karyotyp](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Systematische Einordnung von Karyotypen; 46,XX / 46,XY und Abweichungen (Trisomie, Monosomie) lassen sich damit erfassen.
+
 ---
 
 ## Chromosomenstruktur und Karyotyp
@@ -441,6 +457,14 @@ Geninteraktionen beschreiben Phänomene, bei denen Gene nicht unabhängig vonein
 - Pleiotropie: ein Gen beeinflusst mehrere Merkmale (z. B. Sichelzellanämie)
 - Komplementierung: zwei rezessive Mutationen in verschiedenen Genen → F₂ = 9:7
 - Abweichungen von 9:3:3:1 deuten immer auf Geninteraktion hin
+
+![Kreuzungsschema und Epistasie](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Modifizierte F₂-Verhältnisse (9:3:4, 9:7); Epistasie und Komplementierung verändern die Aufspaltung gegenüber 9:3:3:1.
+
+![Polygenie und Verteilung](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Polygenie führt zu kontinuierlicher Variation und glockenförmiger Phänotypverteilung (z. B. Hautfarbe, Körpergröße).
 
 ---
 
@@ -645,6 +669,14 @@ Die geschlechtsgebundene Vererbung betrifft Gene auf den Geschlechtschromosomen 
 - X-Inaktivierung (Lyon-Hypothese): Zufällige Stilllegung eines X-Chromosoms → Barr-Körperchen
 - Y-chromosomal: Nur Männer betroffen, Vater → 100% Söhne
 - Klinische Beispiele: Hämophilie A, Duchenne, Rot-Grün-Blindheit (alle X-rezessiv)
+
+![Gonosomen und Mitose](/grafik-2-mitose.svg)
+
+**Erklärung zur Grafik:** Verteilung der Geschlechtschromosomen bei der Meiose; X und Y werden getrennt → geschlechtsgebundene Gene folgen dem Gonosomen-Erbgang.
+
+![Kreuzungsschema X-chromosomal](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Punnett-Quadrat für X-chromosomal rezessive Vererbung; Hemizygotie bei Männern und Konduktorinnen-Status bei Frauen ablesbar.
 
 ---
 
@@ -859,6 +891,14 @@ Die Stammbaumanalyse ist das zentrale Werkzeug der klinischen Genetik zur Identi
 - X-chromosomal rezessiv: Männer betroffen, Diagonal-Muster, keine Vater-Sohn-Übertragung
 - Bayes-Theorem: P(Aa | gesund) = 2/3 bei Aa × Aa
 
+![Stammbaum und Erbgänge](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Systematische Zuordnung von Genotypen und Phänotypen; Stammbaum-Symbole (Quadrat/Kreis, ausgefüllt/halb) und Erbgangsmuster.
+
+![Wahrscheinlichkeit und Risiko](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Risikoberechnung und Bayes; Verteilung von Merkmalsträgern in Familien für autosomal-dominant, -rezessiv und X-chromosomal.
+
 ---
 
 ## Stammbaumsymbole und Erbgangserkennung
@@ -1068,6 +1108,14 @@ Die Populationsgenetik untersucht die Verteilung und Veränderung von Allelfrequ
 - Konduktoren (2pq) sind bei rezessiven Erkrankungen viel häufiger als Betroffene (q²)
 - Heterozygoten-Vorteil: HbA/HbS → Malaria-Resistenz (Balancing Selection)
 - Genetischer Drift: zufällige Frequenzänderungen in kleinen Populationen
+
+![Allelfrequenzen und Genotypverteilung](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Hardy-Weinberg: p², 2pq, q² als Verteilung; bei konstanten Bedingungen bleiben die Frequenzen über Generationen stabil.
+
+![Vierfeldertafel und Kreuzung](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Ableitung von p² + 2pq + q² aus den möglichen Genotypkombinationen bei zufälliger Paarung (Hardy-Weinberg-Voraussetzung).
 
 ---
 
@@ -1282,6 +1330,14 @@ Mutationen sind dauerhafte Veränderungen der DNA-Sequenz und stellen die Grundl
 - DNA-Reparaturdefekte: MMR → Lynch-Syndrom, NER → Xeroderma pigmentosum, BRCA → Brustkrebs
 - Keimbahnmutation (vererbbar) vs. somatische Mutation (nur im betroffenen Gewebe)
 
+![Zentraldogma und Mutation](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** DNA → RNA → Protein; Punktmutationen (Missense, Nonsense, still) und Frameshift verändern die Genexpression und das Proteinprodukt.
+
+![DNA-Struktur und Basen](/grafik-wasser-h-bruecken.svg)
+
+**Erklärung zur Grafik:** Basenpaarung und Wasserstoffbrücken; Substitutionen können die Paarung und Stabilität verändern (z. B. G-C vs. A-T).
+
 ---
 
 ## Genmutationen: Substitutionen
@@ -1490,6 +1546,14 @@ Die DNA-Doppelhelix speichert die gesamte genetische Information eines Organismu
 - Leitstrang: kontinuierlich; Folgestrang: diskontinuierlich (Okazaki-Fragmente)
 - Telomerase: verlängert Telomere in Keimbahn, Stammzellen und Krebszellen
 - DNA-Polymerase: synthetisiert nur 5'→3', benötigt RNA-Primer
+
+![DNA-Doppelhelix und Basenpaarung](/grafik-wasser-h-bruecken.svg)
+
+**Erklärung zur Grafik:** Wasserstoffbrücken zwischen Basen (A-T, G-C); antiparallele Stränge und Chargaff-Regeln (A+G = C+T).
+
+![Replikation und Zellteilung](/grafik-2-mitose.svg)
+
+**Erklärung zur Grafik:** Semikonservative Replikation vor der Mitose; jeder Tochterstrang enthält einen alten und einen neu synthetisierten Strang.
 
 ---
 
@@ -1771,6 +1835,10 @@ Prokaryoten haben 1 RNA-Polymerase, keine Introns, keine RNA-Prozessierung und g
 
 **Erklärung zur Grafik:** Die Abbildung zeigt den Informationsfluss Replikation → Transkription → Translation und die räumliche Zuordnung (Kern: Replikation, Transkription; Zytoplasma: Translation) bei Eukaryoten.
 
+![RNA-Prozessierung und Splicing](/grafik-2-mitose.svg)
+
+**Erklärung zur Grafik:** Zellzyklus und Genexpression; Transkription und Prozessierung (Capping, Splicing, Poly-A) laufen im Kern vor der Translation ab.
+
 ---
 
 ## Die drei eukaryotischen RNA-Polymerasen
@@ -1971,6 +2039,10 @@ Die Translation ist der zweite Schritt der Genexpression, bei dem die Nukleotids
 ![Zentraldogma](/grafik-16-zentraldogma.svg)
 
 **Erklärung zur Grafik:** Die Grafik ordnet die Translation als dritten Schritt des Zentraldogmas ein: mRNA wird am Ribosom in Protein übersetzt (mRNA → Ribosom → Protein).
+
+![Ribosom und Proteinbiosynthese](/grafik-21-energieprofil.svg)
+
+**Erklärung zur Grafik:** Energetik und Ablauf der Translation; Initiation, Elongation und Termination am Ribosom (A-, P-, E-Stelle).
 
 **Das Wichtigste auf einen Blick:**
 - Triplett-Code: 3 Basen = 1 Codon = 1 Aminosäure; degeneriert und universell
@@ -2219,6 +2291,14 @@ Die Genregulation steuert, welche Gene in einer Zelle wann und wie stark exprimi
 - miRNA: endogen, partiell komplementär, Translationsrepression; siRNA: exogen, vollständig komplementär, mRNA-Abbau
 - Enhancer können Millionen Basenpaare vom Promotor entfernt liegen (DNA-Looping)
 
+![Zentraldogma und Genexpression](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** Transkription als erster Schritt der Genexpression; Operons (Prokaryoten) und Transkriptionsfaktoren (Eukaryoten) steuern, wann welches Gen abgelesen wird.
+
+![Regulation und Chromatin](/grafik-2-mitose.svg)
+
+**Erklärung zur Grafik:** Chromatin und Zellteilung; DNA-Methylierung und Histonmodifikationen beeinflussen die Zugänglichkeit der DNA für die Transkription.
+
 ---
 
 ## Prokaryotische Genregulation: Operon-Modell
@@ -2454,6 +2534,14 @@ Die Polymerase-Kettenreaktion (PCR) ermöglicht die exponentielle Vervielfältig
 - RT-qPCR: Goldstandard für COVID-19-Diagnostik; CT-Wert korreliert invers mit Viruslast
 - Mg²⁺ als essenzieller Cofaktor (1,5-2,5 mM optimal)
 
+![Exponentielle Amplifikation](/grafik-exponential.svg)
+
+**Erklärung zur Grafik:** PCR: n Zyklen → 2ⁿ Kopien; die Kurve veranschaulicht die exponentielle Vervielfältigung der Ziel-DNA.
+
+![Zentraldogma und PCR](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** PCR amplifiziert DNA-Abschnitte; bei RT-PCR wird zuerst RNA in cDNA umgeschrieben, dann die cDNA amplifiziert.
+
 ---
 
 ## Taq-Polymerase — Warum ein Enzym aus einer heißen Quelle?
@@ -2686,6 +2774,14 @@ Die DNA-Sequenzierung bestimmt die exakte Basenfolge eines DNA-Abschnitts und is
 - Nanopore: lange Reads (>10 kb), portabel (MinION), höhere Fehlerrate
 - ACMG-Klassifikation: Pathogen bis Benigne (5 Klassen), VUS = unklare Signifikanz
 - Exomsequenzierung: Diagnoseausbeute ~25-40% bei unklaren genetischen Syndromen
+
+![DNA-Sequenz und Basen](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** Sequenzierung liest die Basenfolge der DNA; Sanger (ddNTPs), NGS (parallele Reads) und Nanopore (Ionenstrom) als Methoden.
+
+![Kettenabbruch und Fragmentlänge](/grafik-29-zerfall.svg)
+
+**Erklärung zur Grafik:** Sanger-Prinzip: Kettenabbruch durch ddNTPs erzeugt Fragmente definierter Länge; die Länge markiert die Position jeder Base.
 
 ---
 
@@ -2920,6 +3016,14 @@ Gel-Elektrophorese, Restriktionsenzyme und Blot-Techniken gehören zu den klassi
 - Southern = DNA, Northern = RNA, Western = Protein (S→N→W = Zentraldogma)
 - SDS-PAGE: Proteintrennung nur nach Größe (kDa)
 - HIV-Western-Blot: Bestätigungstest, positiv bei ≥2 Banden (gp120/gp41/p24)
+
+![Zentraldogma und Blot-Zuordnung](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** Southern = DNA, Northern = RNA, Western = Protein — die Reihenfolge S→N→W folgt dem Informationsfluss.
+
+![Trennung und Nachweis](/grafik-titration.svg)
+
+**Erklärung zur Grafik:** Trennung nach Größe/Ladung; Gel-Elektrophorese trennt Fragmente, Restriktionsenzyme schneiden an palindromischen Sequenzen.
 
 ---
 
@@ -3158,6 +3262,14 @@ Der genetische Fingerabdruck ermöglicht die eindeutige Identifizierung von Indi
 - mtDNA: maternal vererbt, hohe Kopienzahl, gut für degradierte Proben
 - Polymerase-Slippage erklärt die hohe Mutationsrate von STRs
 
+![STR und Verteilung](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Verteilung von STR-Allelen in der Population; hohe Polymorphie ermöglicht einzigartige DNA-Profile und Vaterschaftsanalyse.
+
+![Kreuzungsschema und Allelübertragung](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Vaterschaftstest: jedes Allel des Kindes muss von Mutter oder Vater stammen; systematische Zuordnung der Herkunft.
+
 ---
 
 ## STR-Polymorphismus — Warum sind Menschen verschieden?
@@ -3393,6 +3505,14 @@ Die molekulare Klonierung ermöglicht die Einbringung und Vermehrung spezifische
 - Vektorkapazität: Plasmid ~15 kb, BAC ~300 kb, YAC bis 2 Mb
 - cDNA-Bibliothek (nur Exons) vs. genomische Bibliothek (gesamtes Genom inkl. Introns)
 - Rekombinantes Insulin seit 1982 (erstes gentechnisch hergestelltes Medikament)
+
+![Zentraldogma und Klonierung](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** DNA wird isoliert, geschnitten und in Vektoren eingebaut; rekombinante Gene werden exprimiert (DNA → RNA → Protein).
+
+![Restriktion und Ligation](/grafik-redox.svg)
+
+**Erklärung zur Grafik:** Restriktionsverdau und Ligation; komplementäre Enden (sticky ends) ermöglichen gezieltes Einbauen von Inserts in Plasmide.
 
 ---
 
@@ -3643,6 +3763,14 @@ CRISPR-Cas9 ist das revolutionärste Werkzeug der Genomeditierung und ermöglich
 - Ex-vivo (Zellen entnehmen, editieren, reinfundieren) vs. In-vivo (Vektor direkt in Patient)
 - Keimbahn-Editierung: international weitgehend verboten (He Jiankui-Skandal 2018)
 
+![Zentraldogma und Genomeditierung](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** CRISPR-Cas9 schneidet DNA gezielt; sgRNA führt Cas9 zur Zielsequenz, NHEJ oder HDR reparieren den Doppelstrangbruch (Knockout oder Korrektur).
+
+![DNA und Reparatur](/grafik-2-mitose.svg)
+
+**Erklärung zur Grafik:** Doppelstrangbruch und Reparatur; NHEJ (fehleranfällig) vs. HDR (mit Donor-Template) bestimmen das Ergebnis der Genomeditierung.
+
 ---
 
 ## CRISPR-Cas9 vs. klassische Genomeditierungswerkzeuge
@@ -3881,6 +4009,14 @@ Dieses Unterkapitel vertieft die Stammbaumanalyse mit Fokus auf die vier Haupter
 - Konduktorin: heterozygote Überträgerin, phänotypisch gesund
 - Huntington: CAG-Repeats >40, vollständige Penetranz, Antizipation
 
+![Stammbaum und Erbgänge](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Systematische Zuordnung von Genotypen zu Phänotypen; die vier Erbgänge (autosomal-dominant/rezessiv, X-chromosomal) zeigen charakteristische Stammbaummuster.
+
+![Wahrscheinlichkeit und Risiko](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Risikoberechnung für Nachkommen; 50% (AD), 25% (AR bei Trägerpaar), bedingte Wahrscheinlichkeit (2/3 Träger bei gesundem Kind).
+
 ---
 
 ## Der Begriff 'Konduktorin' beim X-chromosomal rezessiven Erbgang
@@ -4084,6 +4220,14 @@ Viele Merkmale und Erkrankungen folgen nicht den einfachen Mendelschen Regeln, s
 - Penetranz: Anteil der Genträger, die erkranken (vollständig vs. unvollständig)
 - Expressivität: Schweregrad bei den Betroffenen (variabel vs. konstant)
 - Multifaktorielle Erkrankungen: Gene + Umwelt (z. B. Diabetes Typ 2, Bluthochdruck)
+
+![Polygenie und Normalverteilung](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Polygenie führt zu kontinuierlicher Variation und glockenförmiger Verteilung (z. B. Körpergröße); viele Gene additiv.
+
+![Kreuzungsschema und Phänotyp](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Penetranz (Anteil der Träger mit Phänotyp) und Expressivität (Schweregrad); Abweichungen von Mendelschen Verhältnissen.
 
 ---
 
@@ -4293,7 +4437,13 @@ Die genetische Beratung ist ein zentrales Element der klinischen Genetik und ver
 - Mukoviszidose: Inzidenz 1:2.500 → Trägerfrequenz ca. 1:25
 - In Österreich regelt das Genanalysegesetz (GAG) prädiktive Gentests
 
----
+![Hardy-Weinberg und Verteilung](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Genotypverteilung p², 2pq, q²; aus der Erkrankungshäufigkeit (q²) wird die Trägerfrequenz (2pq) berechnet.
+
+![Bayes und Risikoberechnung](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Bedingte Wahrscheinlichkeiten und Bayessche Aktualisierung; Prior × Likelihood → Posterior für genetische Risikoberechnung.
 
 ---
 
@@ -4496,7 +4646,13 @@ Die Pränataldiagnostik (PND) umfasst alle Methoden zur vorgeburtlichen Untersuc
 - PID: Diagnostik VOR Implantation (IVF), nur bei hohem Risiko für schwere Erbkrankheit
 - NIPT ist Screening, keine Diagnose — positives Ergebnis muss invasiv bestätigt werden
 
----
+![Pränataldiagnostik und Zeitpunkt](/grafik-5-hypophysen-achsen.svg)
+
+**Erklärung zur Grafik:** Zeitliche Einordnung der Methoden; NIPT ab 10. SSW, CVS 11.–13. SSW, Amniozentese 16.–18. SSW (analog zu Schwangerschaftsphasen).
+
+![Embryo und Eihäute](/grafik-blastozyste.svg)
+
+**Erklärung zur Grafik:** Chorionzotten (CVS) und Amnion (Amniozentese); fetale Zellen oder cffDNA für die pränatale genetische Diagnostik.
 
 ---
 

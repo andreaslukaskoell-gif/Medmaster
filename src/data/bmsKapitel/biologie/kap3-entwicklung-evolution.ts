@@ -61,6 +61,10 @@ Die Blastozyste (Tag 5–6) ist das erste Stadium mit zwei zellulär verschieden
 
 **Erklärung zur Grafik:** Die Abbildung zeigt einen Querschnitt der Blastozyste: Trophoblast (Zyto- und Synzytiotrophoblast) außen, Embryoblast (Epiblast/Hypoblast) als innere Zellmasse und den flüssigkeitsgefüllten Blastozoel. So erkennst du die Zuordnung Trophoblast → Plazenta, Embryoblast → Embryo.
 
+![Hormonachse und hCG](/grafik-5-hypophysen-achsen.svg)
+
+**Erklärung zur Grafik:** hCG aus dem Trophoblast bindet an LH-Rezeptoren und erhält das Corpus luteum; die Grafik veranschaulicht die hormonelle Steuerung (analog zu Hypophysenachsen).
+
 ---
 
 ## hCG und die Corpus-luteum-Erhaltung
@@ -277,6 +281,14 @@ Aus dem Primitiv-Knoten bildet sich zusätzlich das **Notochord** (Chorda dorsal
 
 > **Merke:** Primitivstreifen → alle drei Keimblätter entstehen aus dem Epiblast: invaginierende Zellen → Endo + Meso; verbleibende Oberfläche → Ekto.
 
+![Keimblätter und Entwicklung](/grafik-blastozyste.svg)
+
+**Erklärung zur Grafik:** Aus dem Embryoblast (Epiblast/Hypoblast) entstehen durch Gastrulation die drei Keimblätter; die Grafik veranschaulicht die Herkunft von Ektoderm, Mesoderm und Endoderm.
+
+![Neuralrohr und Achsen](/grafik-12-ossifikation.svg)
+
+**Erklärung zur Grafik:** Notochord und Achsenstrukturen; die Grafik ergänzt die Embryonalentwicklung (Neurulation, Somiten) und die spätere Knochenbildung.
+
 ---
 
 ## Neurulation und Neuralleiste
@@ -487,6 +499,14 @@ In den ersten **8 Wochen** (Embryonalperiode) werden alle Organe angelegt; danac
 
 **Kontext:** Warum der erste Trimenon so empfindlich ist und was Frühgeburtlichkeit bedeutet.
 
+![Embryonalentwicklung und Organanlage](/grafik-blastozyste.svg)
+
+**Erklärung zur Grafik:** Aus dem Embryoblast entstehen die Keimblätter und in der Embryonalperiode alle Organanlagen; die Grafik veranschaulicht die frühe Entwicklung bis zur Organogenese.
+
+![Ossifikation und Wachstum](/grafik-12-ossifikation.svg)
+
+**Erklärung zur Grafik:** In der Fetalperiode wachsen und reifen die angelegten Strukturen; die Grafik zeigt Knochenbildung und Wachstum als Teil der Reifung.
+
 ---
 
 ## Embryonalperiode (Wochen 1–8)
@@ -695,6 +715,14 @@ Der Fötus kann nicht selbst atmen, essen oder Hormone produzieren — die **Pla
 - Klinik: Plazentainsuffizienz, Infektionen (TORCH)
 
 **Kontext:** Warum der Fötus geschützt ist und wie der Stoffaustausch funktioniert.
+
+![Membrantransport und Plazentaschranke](/grafik-1-membrantransport.svg)
+
+**Erklärung zur Grafik:** Der Stoffaustausch an der Plazentaschranke erfolgt über Diffusion und aktiven Transport; die Grafik veranschaulicht Transportmechanismen an Membranen.
+
+![Hormonachse und hCG](/grafik-5-hypophysen-achsen.svg)
+
+**Erklärung zur Grafik:** Die Plazenta produziert hCG und erhält so das Corpus luteum; hormonelle Steuerung ist für die Schwangerschaftserhaltung zentral.
 
 ---
 
@@ -922,6 +950,14 @@ Wie ist aus unbelebter Materie das erste Leben entstanden? **Miller-Urey** zeigt
 
 **Kontext:** Von der Chemie zum ersten Leben — und warum unsere Zellkraftwerke „fremd“ sind.
 
+![Zellaufbau und Organellen](/grafik-1-membrantransport.svg)
+
+**Erklärung zur Grafik:** Moderne Zellen mit Membranen und Kompartimenten; Mitochondrien als Organellen mit eigenem Ursprung (Endosymbiontentheorie).
+
+![Zentraldogma und RNA](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** RNA als Informations- und Katalysemolekül in der RNA-Welt; die Grafik veranschaulicht den Fluss von Information (DNA → RNA → Protein).
+
 ---
 
 ## Miller-Urey-Experiment — Abiotische Synthese organischer Moleküle
@@ -1140,6 +1176,14 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
       content: `## Einleitung
 
 Die **Phylogenetik** rekonstruiert Verwandtschaft (Fossilien, DNA) und stellt sie in **Stammbäumen** dar. Zentral: **Homologie** (gleicher Ursprung, oft verschiedene Funktion) vs. **Analogie** (unabhängige Entstehung, ähnliche Funktion). Diese Unterscheidung ist ein MedAT-Klassiker.
+
+![Stammbaum und Verwandtschaft](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Systematische Einordnung von Merkmalen; Stammbäume und Kladistik ordnen Arten und Merkmale nach gemeinsamer Abstammung.
+
+![Wahrscheinlichkeit und Verteilung](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Statistische Verteilung von Merkmalen in Populationen; Grundlage für phylogenetische und populationsgenetische Analysen.
 
 **In diesem Kapitel lernst du:**
 - **Homologie** = gemeinsamer evolutionärer Ursprung (z. B. Vogelflügel – Menschenarm)
@@ -1378,6 +1422,14 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
 - **Synthetische Evolutionstheorie** (Darwin + Genetik)
 
 **Kontext:** Warum Arten sich anpassen und warum Antibiotikaresistenz entsteht.
+
+![Variation und Verteilung](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Variation in Populationen; natürliche Selektion wirkt auf die Verteilung von Merkmalen — besser angepasste Individuen haben höheren Fortpflanzungserfolg.
+
+![Wahrscheinlichkeit und Allelfrequenzen](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Systematische Erfassung von Merkmalen und Ergebnissen; Grundlage für die Synthetische Evolutionstheorie (Änderung von Allelfrequenzen).
 
 ---
 
@@ -1627,6 +1679,14 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
 
 **Kontext:** Wann zwei Populationen als verschiedene Arten gelten und wie neue Arten entstehen.
 
+![Stammbaum und Aufspaltung](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Artbildung durch Aufspaltung von Linien; prä- und postzygotische Isolation verhindern Genfluss und führen zu getrennten Arten.
+
+![Verteilung und Isolation](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Räumliche oder ökologische Trennung von Populationen; Grundlage für allopatrische und sympatrische Artbildung.
+
 ---
 
 ## Reproduktive Isolation — Präzygotisch und Postzygotisch
@@ -1861,6 +1921,14 @@ Vier **Evolutionsfaktoren** verändern Allelfrequenzen: **Mutation** (Rohstoff),
 
 **Kontext:** Warum sich Populationen verändern — und wann sie (theoretisch) gleich bleiben.
 
+![Allelfrequenzen und Verteilung](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Hardy-Weinberg beschreibt die erwartete Genotypverteilung (p², 2pq, q²); Abweichungen zeigen Wirkung von Mutation, Selektion, Drift oder Genfluss.
+
+![Vierfeldertafel und Häufigkeiten](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Systematische Erfassung von Genotypen und Phänotypen; nützlich für die Anwendung des Hardy-Weinberg-Gleichgewichts und die Identifikation von Evolutionsfaktoren.
+
 ---
 
 ## Die vier Evolutionsfaktoren
@@ -2084,6 +2152,14 @@ Der Mensch stammt **nicht** vom Schimpansen ab — beide haben einen gemeinsamen
 - **Hirnvolumina** (Schimpanse ~450, H. sapiens ~1400 ccm)
 
 **Kontext:** Woher wir kommen und warum „der Mensch stammt vom Affen ab“ falsch formuliert ist.
+
+![Stammbaum und Verwandtschaft](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Systematische Einordnung von Merkmalen und Linien; Stammbäume der Hominiden zeigen Verzweigung von Schimpanse und Mensch aus einem gemeinsamen Vorfahren.
+
+![Ossifikation und Skelett](/grafik-12-ossifikation.svg)
+
+**Erklärung zur Grafik:** Skelettanpassungen an Bipedie (Wirbelsäule, Becken, Beine); die Grafik veranschaulicht strukturelle Veränderungen während der Hominisation.
 
 ---
 

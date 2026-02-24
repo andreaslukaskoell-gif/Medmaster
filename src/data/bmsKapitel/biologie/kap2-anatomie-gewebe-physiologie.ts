@@ -50,6 +50,10 @@ Jede Oberfläche im Körper ist mit **Epithel** bedeckt — die Haut, die Darmsc
 
 > **Merke:** Tight Junctions = apikal, Barriere + Fence. Desmosomen = mechanisch. Gap Junctions = Ionenaustausch. Hemidesmosomen = Basalmembran-Verankerung.
 
+![Zellkontakte und Polarität](/grafik-1-membrantransport.svg)
+
+**Erklärung zur Grafik:** Epithelzellen mit apikaler und basolateraler Seite; Transporter und Kanäle sind polar verteilt — Grundlage für gerichteten Transport und Barrierefunktion.
+
 ---
 
 ## Klassifikation der Epithelien
@@ -72,6 +76,10 @@ Jede Oberfläche im Körper ist mit **Epithel** bedeckt — die Haut, die Darmsc
 - **Verhorntes Plattenepithel**: 4 Schichten: Stratum basale (Mitose, Stammzellen) → spinosum (Desmosomen) → granulosum (Keratohyalin) → corneum (tote Korneozyten, Keratin)
 
 > **Merke:** Pseudostratifiziert ≠ mehrschichtig — alle Zellen berühren Basalmembran! Urothel = Schirmzellen. Trachea = mehrreihiges Flimmerepithel.
+
+![Epitheltypen und Organe](/grafik-zellmembran-integral-peripher.svg)
+
+**Erklärung zur Grafik:** Integrale und periphere Proteine in Epithelzellen; die Polarität (apikal/basolateral) bestimmt Resorption, Sekretion und Barriere — von Dünndarm bis Alveole.
 
 ---
 
@@ -287,6 +295,10 @@ Knochen, Sehnen, Knorpel, Fettgewebe — all das ist **Bindegewebe**. Was diese 
 
 > **Merke:** Bindegewebe = Matrix dominiert über Zellen. EZM aus Kollagen (Festigkeit) + Proteoglykane (Wasser/Druck) + Fibronektin (Adhäsion).
 
+![Extrazelluläre Matrix und Zellen](/grafik-zellmembran-fettsaeuren.svg)
+
+**Erklärung zur Grafik:** Zellen und umgebende Matrix; die Grafik veranschaulicht die Grenzfläche zwischen Zelle und EZM (Integrine, Kollagen, Proteoglykane).
+
 ---
 
 ## Kollagen — Struktur und Typen
@@ -328,6 +340,10 @@ Knochen, Sehnen, Knorpel, Fettgewebe — all das ist **Bindegewebe**. Was diese 
 **Therapeutisch:** Bisphosphonate (hemmen Osteoklasten, direkt), Denosumab (RANKL-Antikörper).
 
 > **Merke:** OsteoBlast = Baut. OsteoKlast = Klaut (resorbiert). RANKL aktiviert Osteoklasten. Östrogen schützt Knochen.
+
+![Knochenumbau und Ossifikation](/grafik-12-ossifikation.svg)
+
+**Erklärung zur Grafik:** Osteoblasten und Osteoklasten beim Knochenumbau; die Grafik zeigt Auf- und Abbau sowie die Rolle von RANKL/OPG.
 
 ---
 
@@ -563,6 +579,10 @@ Muskeln machen Bewegung möglich — aber das stimmt nur zu einem Drittel. Es gi
 
 > **Merke:** Herzmuskel = quergestreift (wie Skelett) + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur = kein Troponin → Calmodulin stattdessen.
 
+![Herzzyklus und Kontraktion](/grafik-6-herzzyklus.svg)
+
+**Erklärung zur Grafik:** Herzmuskelkontraktion im EKG-Kontext; die Grafik veranschaulicht die Koordination von Vorhof und Kammer (Gap Junctions, kein Tetanus).
+
 ---
 
 ## Sarkomerstruktur: Grundprinzip der Querstreifung
@@ -581,6 +601,10 @@ Muskeln machen Bewegung möglich — aber das stimmt nur zu einem Drittel. Es gi
 - **Nebulin**: Parallel zu Aktin, legt Filamentlänge fest
 
 > **Merke:** Bei Kontraktion: **I-Bande ↓, H-Zone ↓, A-Bande = konstant**. Filamente gleiten, nicht schrumpfen!
+
+![Aktin-Myosin und Sarkomer](/grafik-1-membrantransport.svg)
+
+**Erklärung zur Grafik:** Ionenkanäle und Transport — Ca²⁺-Freisetzung aus dem SR und Rückpumpe (SERCA) steuern die Kontraktion; die Grafik ergänzt die elektromechanische Kopplung.
 
 ---
 
@@ -819,6 +843,10 @@ Das Gehirn enthält ~86 Milliarden **Neuronen** — aber fast doppelt so viele *
 
 **Neurontypen:** sensorisch (Input), motorisch (Output), Interneuron (Verarbeitung)
 
+![Membran und Ionenkanäle](/grafik-1-membrantransport.svg)
+
+**Erklärung zur Grafik:** Axon und Dendriten mit Ionenkanälen und Transport; die Grafik veranschaulicht die Grundlage für Ruhepotenzial und Aktionspotential (Na⁺/K⁺-ATPase, Kanäle).
+
 ---
 
 ## Myelinisierung: Schwann-Zellen vs. Oligodendrozyten
@@ -836,6 +864,10 @@ Das Gehirn enthält ~86 Milliarden **Neuronen** — aber fast doppelt so viele *
 **Klinisch — Multiple Sklerose (MS):** Autoreaktive T-Zellen zerstören Oligodendrozyten → Demyelinisierung im ZNS → Leitungsverlangsamung/-block → wechselnde neurologische Ausfälle (Sehstörungen, Paresen, Sensibilitätsverlust). Plaques (Vernarbungen) typischerweise periventrikular, im Corpus callosum und im Rückenmark.
 
 > **Merke:** Schwann-Zelle (PNS) = **1 Segment**. Oligodendrozyt (ZNS) = **bis 50 Segmente**. PNS regeneriert (Büngner-Bänder), ZNS nicht (Nogo-A).
+
+![Myelin und Schnürringe](/grafik-zellmembran-integral-peripher.svg)
+
+**Erklärung zur Grafik:** Myelinscheide als Isolationsschicht; die Grafik ergänzt die Vorstellung von Segmenten und Ranvier-Schnürringen für die saltatorische Leitung.
 
 ---
 
@@ -1092,6 +1124,14 @@ Das vegetative Nervensystem (ANS) reguliert Herzfrequenz, Blutdruck, Atmung, Ver
 | Blase | Sphinkter-Kontraktion (α1) | Detrusor-Kontraktion (M3) |
 | Leber | Glykogenolyse ↑ (β2) | — |
 | Neurotransmitter | Noradrenalin | Acetylcholin |
+
+![Signalübertragung und Transporter](/grafik-1-membrantransport.svg)
+
+**Erklärung zur Grafik:** Ionenkanäle und Transporter an der Synapse; die Grafik veranschaulicht die Grundlage für Neurotransmitter-Freisetzung (Ca²⁺) und Wiederaufnahme.
+
+![Redox und Energie](/grafik-redox.svg)
+
+**Erklärung zur Grafik:** Energiebereitstellung in Neuronen; die Grafik ergänzt den Zusammenhang zwischen Stoffwechsel und Na⁺/K⁺-ATPase für Ruhe- und Aktionspotenzial.
 
 ---
 
@@ -1361,6 +1401,10 @@ Alle Sinnesorgane folgen demselben Grundprinzip: Ein physikalischer oder chemisc
 ![Fototransduktion und Sinnesorgane](/grafik-transduktion-sinne.svg)
 
 **Erklärung zur Grafik:** Die Abbildung zeigt die Fototransduktion (Licht → Rhodopsin → Transducin → PDE → cGMP ↓ → Hyperpolarisation) und die Zuordnung von Auge, Ohr und Geruch zur jeweiligen Transduktion.
+
+![Auge und Akkommodation](/grafik-optik-lupe.svg)
+
+**Erklärung zur Grafik:** Brechung und Scharfstellung; die Grafik veranschaulicht das Prinzip von Linse und Brennweite — Bezug zur Nahakkommodation (Ziliarmuskel, Linse).
 
 ---
 
@@ -1647,6 +1691,10 @@ Das endokrine System nutzt negative Rückkopplung zur Homöostase: Effektor-Horm
 
 **Erklärung zur Grafik:** Die Grafik zeigt die hormonellen Achsen (Hypothalamus → Hypophyse → Schilddrüse/NNR/Gonaden) mit Releasing- und trophen Hormonen sowie die Rückkopplungspfeile (primäre vs. sekundäre Insuffizienz).
 
+![Regelkreise und Homöostase](/grafik-puffer.svg)
+
+**Erklärung zur Grafik:** Negative Rückkopplung stabilisiert Hormonspiegel; die Grafik veranschaulicht das Prinzip Soll-Ist-Vergleich und Korrektur (analog zu pH-Pufferung).
+
 ---
 
 ## MedAT-Fokus
@@ -1830,6 +1878,10 @@ Das Herz hat 4 Kammern (RA, RV, LA, LV) und 3 Wandschichten: Endokard (Endothel,
 ![Herzzyklus](/grafik-6-herzzyklus.svg)
 
 **Erklärung zur Grafik:** Die Abbildung veranschaulicht die vier Phasen des Herzzyklus (Füllung, isovolumetrische Kontraktion, Auswurf, isovolumetrische Relaxation) und die Druckverläufe in Vorhof, Kammer und Aorta.
+
+![Kreislauf und Druck](/grafik-11-gegenstrom-niere.svg)
+
+**Erklärung zur Grafik:** Druck- und Volumenverhältnisse; die Grafik ergänzt das Verständnis von Vorlast, Nachlast und Füllung (analog zu Gradienten in Gefäßsystemen).
 
 > **Merke:** **Herzklappen:** AV-Klappen haben Sehnenfäden (Trikuspidal 3, Mitral 2), Taschenklappen haben Taschen (Pulmonal, Aorta je 3) – beide stoppen Rückfluss! (AV = Atrioventrikulär, Sehnenfäden verhindern Prolaps; Taschenklappen öffnen/schließen passiv)
 
@@ -2063,6 +2115,10 @@ Primäre Hämostase: Vasokonstriktion → Thrombozytenadhäsion (vWF (von-Willeb
 
 **Erklärung zur Grafik:** Die Grafik zeigt die primäre Hämostase (Thrombozytenpfropf), den extrinsischen und intrinsischen Weg sowie die gemeinsame Endstrecke (Thrombin → Fibrin) inkl. Vitamin-K-abhängiger Faktoren.
 
+![Positive Rückkopplung und Kaskade](/grafik-19-komplement.svg)
+
+**Erklärung zur Grafik:** Kaskaden und Verstärkung; die Grafik veranschaulicht das Prinzip der Gerinnung (positive Rückkopplung: Thrombin aktiviert weitere Thrombinbildung).
+
 ---
 
 ## Blutgruppen
@@ -2252,6 +2308,10 @@ Zelluläre Komponenten: Neutrophile (Phagozytose, Respiratory Burst), Makrophage
 ![Immunsystem](/grafik-8-immunitaet.svg)
 
 **Erklärung zur Grafik:** Die Abbildung fasst angeborene (Barrieren, Phagozyten, Komplement) und erworbene Immunität (T-/B-Zellen) sowie MHC I/II und Antikörper zusammen.
+
+![Komplement und Kaskaden](/grafik-19-komplement.svg)
+
+**Erklärung zur Grafik:** Komplementsystem (klassisch, Lektin, alternativ) und Lyse/Opsonierung; die Grafik ergänzt die angeborene Immunität und die Verbindung zur Antikörper-Aktivierung.
 
 ---
 
@@ -2485,6 +2545,10 @@ Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % d
 
 **Erklärung zur Grafik:** Die Grafik zeigt den Lymphabfluss von den Kapillaren über Sammelgefäße zum Ductus thoracicus bzw. ductus dexter und den Eintritt in die Venenwinkel (~75 % links).
 
+![Lymphknoten und Immunabwehr](/grafik-8-immunitaet.svg)
+
+**Erklärung zur Grafik:** Lymphozyten und Immunzellen in Lymphknoten; die Grafik verknüpft Lymphabfluss mit Filterfunktion und Immunantwort (T-/B-Zellen).
+
 ---
 
 ## MedAT-Fokus
@@ -2650,6 +2714,14 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
 **Klinisch — RDS (Neonatales Atemnotsyndrom):** Frühgeborene (<28 SSW) haben unreife Typ-II-Pneumozyten → Surfactant-Mangel → Atelektase → Hypoxie. Prophylaxe: Betamethason/Dexamethason (Mutter antenatal → Lungenreifung ↑). Therapie: Surfactant-Instillation.
 
 > **Merke:** **Surfactant**: Typ-II-Pneumozyten, DPPC (~90 % Phospholipide) → Oberflächenspannung ↓ → Alveolarkollaps (Atelektase) verhindert. **RDS** bei Frühgeborenen: Surfactant-Mangel → Betamethason antenatal (Prophylaxe).
+
+![Alveolen und Gasaustausch](/grafik-1-membrantransport.svg)
+
+**Erklärung zur Grafik:** Membran und Diffusion; die Grafik veranschaulicht den Gasaustausch über die dünne Blut-Luft-Schranke (O₂ und CO₂ entlang Konzentrationsgradienten).
+
+![Oberflächenspannung und Puffer](/grafik-puffer.svg)
+
+**Erklärung zur Grafik:** Surfactant senkt die Oberflächenspannung; die Grafik ergänzt das Prinzip der Stabilität (analog zu Pufferung) — kleine Alveolen ohne Surfactant kollabieren.
 
 ---
 
@@ -2864,6 +2936,14 @@ Die Magenschleimhaut enthält fünf spezialisierte Zelltypen mit klar definierte
 **Aktivierungskaskade im Pankreas:** Trypsinogen wird im Dünndarm durch **Enterokinase** (= Enteropeptidase, auf Bürstensaum-Enterozyten) → Trypsin aktiviert. Trypsin aktiviert dann alle anderen Pankreasenzyme (Chymotrypsinogen, Proelastase, Phospholipase A₂). Gefährlich: Trypsin-Aktivierung schon im Pankreas → **akute Pankreatitis** (Autodigestion).
 
 > **Merke:** **Magenzellen**: Belegzellen = HCl + IF, Hauptzellen = Pepsinogen, Nebenzellen = Mukus, G-Zellen = Gastrin (↑HCl), D-Zellen = Somatostatin (↓HCl). **Trypsinogen → Trypsin** via Enterokinase (Dünndarm) → aktiviert alle anderen Pankreas-Proenzyme.
+
+![Resorption und Transporter](/grafik-1-membrantransport.svg)
+
+**Erklärung zur Grafik:** Epithel mit apikalem und basolateralem Transport; SGLT1, GLUT2 und andere Transporter ermöglichen die Resorption von Glukose, Aminosäuren und Ionen im Dünndarm.
+
+![pH und Verdauung](/grafik-20-ph-skala.svg)
+
+**Erklärung zur Grafik:** Magen-pH ~1 (HCl), Dünndarm neutral bis leicht basisch; die Grafik ergänzt die Bedeutung des pH für Pepsin-Aktivierung und Pankreasenzyme.
 
 ---
 
@@ -3087,6 +3167,10 @@ Das Nephron filtert täglich ~180 L Primärharn (GFR ~120 mL/min). Über 99 % we
 ![Nephron](/grafik-10-nephron.svg)
 
 **Erklärung zur Grafik:** Die Abbildung zeigt den Aufbau des Nephrons (Glomerulus, proximaler Tubulus, Henle-Schleife, distaler Tubulus, Sammelrohr) und den osmotischen Gradienten im Gegenstromsystem.
+
+![Gegenstrom und Konzentration](/grafik-11-gegenstrom-niere.svg)
+
+**Erklärung zur Grafik:** Gegenstromprinzip in der Henle-Schleife; die Grafik veranschaulicht den Aufbau des osmotischen Gradienten und die ADH-abhängige Harnkonzentrierung.
 
 ---
 
@@ -3335,6 +3419,10 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
 
 **Erklärung zur Grafik:** Die Grafik vergleicht die enchondrale Ossifikation (Knorpelmodell → Kalzifizierung → Osteoblasten) mit der desmalen Ossifikation (direkter Knochenaufbau aus Mesenchym).
 
+![Knochenumbau und Zellen](/grafik-12-ossifikation.svg)
+
+**Erklärung zur Grafik:** Osteoblasten (Aufbau) und Osteoklasten (Abbau) im Gleichgewicht; RANKL/OPG-System und Kalziumhomöostase (PTH, Vitamin D, Calcitonin).
+
 **Zelltypen der Knochenentwicklung:**
 - **Osteoblasten**: knochenbildende Zellen, sezernieren Kollagen I + Osteoid, werden zu Osteozyten eingemauert
 - **Osteozyten**: reife Knochenzellen im Lakunen-Kanälchen-System, mechanosensitiv
@@ -3514,6 +3602,14 @@ Fortpflanzung erfordert **Gameten** (Spermien + Eizellen), deren präzise hormon
 - **Spermatogenese** (4 Spermien, Sertoli/Leydig) vs. **Oogenese** (1 Eizelle + 3 Polkörperchen, Meiose-Arrests)
 - **Menstruationszyklus** (Follikelphase, LH-Peak, Lutealphase) und **Östrogen/Progesteron**
 - **Befruchtung** (Akrosom-Reaktion, Kortikalreaktion, Polyspermie-Block) und **hCG**
+
+![Hypophysen-Achsen und Gonaden](/grafik-5-hypophysen-achsen.svg)
+
+**Erklärung zur Grafik:** FSH und LH aus der Hypophyse steuern Ovar und Hoden; die Grafik zeigt die Achse Hypothalamus → Hypophyse → Gonaden mit negativer Rückkopplung.
+
+![Meiose und Keimzellen](/grafik-3-meiose.svg)
+
+**Erklärung zur Grafik:** Meiose in Spermatogenese (4 Spermien) und Oogenese (1 Eizelle + 3 Polkörperchen); Reduktionsteilung und genetische Rekombination.
 
 ---
 
