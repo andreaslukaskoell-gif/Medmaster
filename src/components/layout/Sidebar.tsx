@@ -31,7 +31,6 @@ import {
   Zap,
   Calculator,
   Settings,
-  Sparkles,
   Dumbbell,
   BookMarked,
   Lock,
@@ -64,101 +63,63 @@ type NavItem = {
   to: string;
   icon: typeof BookOpen;
   label: string;
-  iconColor?: string;
-  highlight?: boolean;
   hasChildren?: boolean;
   requiredLevel?: number;
+  /** Visuell hervorgehoben (z. B. Schwachstellen). */
+  emphasized?: boolean;
 };
 
+/** 4 Hauptsektionen: LERNEN → TRAINIEREN → FORTSCHRITT → MEHR (einklappbar). */
 const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
   {
     id: "lernen",
     title: "LERNEN",
     items: [
-      { to: "/daily", icon: Trophy, label: "Daily", iconColor: "text-amber-500", highlight: true },
-      {
-        to: "/bms",
-        icon: BookOpen,
-        label: "BMS",
-        iconColor: "text-[var(--accent-bio)]",
-        hasChildren: true,
-      },
-      { to: "/kff", icon: Brain, label: "KFF", iconColor: "text-amber-500" },
-      { to: "/tv", icon: FileText, label: "TV", iconColor: "text-indigo-500" },
-      { to: "/sek", icon: Heart, label: "SEK", iconColor: "text-rose-500" },
-    ],
-  },
-  {
-    id: "training",
-    title: "TRAINING",
-    items: [
-      {
-        to: "/ai-tutor",
-        icon: MessageCircle,
-        label: "AI-Tutor",
-        iconColor: "text-purple-500",
-        highlight: true,
-        requiredLevel: 0,
-      },
-      {
-        to: "/simulation",
-        icon: Timer,
-        label: "Simulation",
-        iconColor: "text-orange-500",
-        requiredLevel: 0,
-      },
-      {
-        to: "/wissencheck",
-        icon: BookOpen,
-        label: "Wissenscheck",
-        iconColor: "text-[var(--accent-bio)]",
-      },
-      {
-        to: "/stichwortliste",
-        icon: ListChecks,
-        label: "Stichwortliste",
-        iconColor: "text-[var(--accent-bio)]",
-      },
-      { to: "/karteikarten", icon: Layers, label: "Karteikarten", iconColor: "text-emerald-500" },
-      {
-        to: "/fragen-trainer",
-        icon: Dumbbell,
-        label: "Fragen-Trainer",
-        iconColor: "text-violet-500",
-      },
-      {
-        to: "/formelsammlung",
-        icon: BookMarked,
-        label: "Formelsammlung",
-        iconColor: "text-teal-500",
-      },
+      { to: "/bms", icon: BookOpen, label: "BMS-Inhalte", hasChildren: true },
+      { to: "/stichwortliste", icon: ListChecks, label: "Stichwortliste" },
       { to: "/notizen", icon: StickyNote, label: "Notizen" },
     ],
   },
   {
-    id: "performance",
-    title: "PERFORMANCE",
+    id: "training",
+    title: "TRAINIEREN",
     items: [
-      { to: "/performance", icon: Award, label: "Erfolge" },
-      { to: "/prognose", icon: TrendingUp, label: "Prognose" },
-      { to: "/statistik", icon: BarChart3, label: "Statistik" },
-      { to: "/analyse", icon: Radar, label: "Analyse" },
+      { to: "/fragen-trainer", icon: Dumbbell, label: "Fragen-Trainer" },
+      { to: "/simulation", icon: Timer, label: "Simulation", requiredLevel: 0 },
+      { to: "/wissencheck", icon: BookOpen, label: "Wissenscheck" },
+      { to: "/karteikarten", icon: Layers, label: "Karteikarten" },
+    ],
+  },
+  {
+    id: "fortschritt",
+    title: "FORTSCHRITT",
+    items: [
       {
         to: "/schwachstellen",
         icon: Target,
         label: "Schwachstellen",
-        iconColor: "text-rose-500",
         requiredLevel: 0,
+        emphasized: true,
       },
+      { to: "/statistik", icon: BarChart3, label: "Statistik" },
+      { to: "/prognose", icon: TrendingUp, label: "Prognose" },
     ],
   },
   {
-    id: "system",
-    title: "SYSTEM",
+    id: "mehr",
+    title: "MEHR",
     items: [
+      { to: "/", icon: LayoutDashboard, label: "Dashboard" },
+      { to: "/ai-tutor", icon: MessageCircle, label: "AI-Tutor", requiredLevel: 0 },
+      { to: "/formelsammlung", icon: BookMarked, label: "Formelsammlung" },
+      { to: "/performance", icon: Award, label: "Erfolge" },
+      { to: "/daily", icon: Trophy, label: "Daily" },
+      { to: "/kff", icon: Brain, label: "KFF" },
+      { to: "/tv", icon: FileText, label: "TV" },
+      { to: "/sek", icon: Heart, label: "SEK" },
+      { to: "/lernplan", icon: CalendarDays, label: "Lernplan" },
       { to: "/community", icon: Users, label: "Community" },
       { to: "/duell", icon: Swords, label: "Duell" },
-      { to: "/lernplan", icon: CalendarDays, label: "Lernplan" },
       { to: "/preise", icon: Settings, label: "Konto & Preise" },
     ],
   },
@@ -213,30 +174,27 @@ function CollapsibleSection({
 function NavItemRow({
   icon: Icon,
   label,
-  iconColor,
-  highlight,
   active,
+  emphasized,
 }: {
   icon: typeof BookOpen;
   label: string;
-  iconColor?: string;
-  highlight?: boolean;
   active: boolean;
+  emphasized?: boolean;
 }) {
   return (
     <div
       className={cn(
-        "sidebar-nav-item group flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium cursor-pointer relative",
+        "sidebar-nav-item flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium cursor-pointer border-l-[3px] pl-[9px]",
         active
-          ? "bg-[var(--accent)]/10 text-[var(--foreground)] border-l-[3px] border-[var(--accent)] pl-[9px]"
-          : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 border-l-[3px] border-transparent",
-        highlight && !active && "ring-1 ring-[var(--color-primary-500)]/25"
+          ? "bg-[var(--accent)]/10 text-[var(--foreground)] border-[var(--accent)] font-semibold"
+          : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 border-transparent",
+        emphasized && !active && "bg-[var(--accent)]/5 border-[var(--accent)]/40"
       )}
     >
-      {/* Active indicator: bereits via border-l umgesetzt */}
-
-      {highlight && <Sparkles className="w-3.5 h-3.5 shrink-0 text-[var(--color-primary-500)]" />}
-      <Icon className={cn("w-4 h-4 shrink-0", active ? undefined : iconColor)} />
+      <Icon
+        className={cn("w-4 h-4 shrink-0", active ? "text-[var(--accent)]" : "text-[var(--muted)]")}
+      />
       <span className="truncate flex-1">{label}</span>
     </div>
   );
@@ -262,9 +220,9 @@ export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps
 
   const [openSections, setOpenSections] = useState<Record<string, boolean>>(() => ({
     lernen: true,
-    training: false,
-    performance: false,
-    system: false,
+    training: true,
+    fortschritt: true,
+    mehr: false,
   }));
   const [openBmsSubject, setOpenBmsSubject] = useState<string | null>(null);
   const [bmsExpanded, setBmsExpanded] = useState(false);
@@ -424,33 +382,26 @@ export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps
 
       {/* Nav */}
       <nav className="flex-1 min-h-0 overflow-y-auto px-3 py-3 space-y-0.5 sidebar-scroll">
-        {/* Resume last path */}
+        {/* Weiterlernen – primärer Einstieg */}
         {lastPathLabel && lastPath && lastPath !== "/" && (
           <div ref={lastPathRef} className="mb-3">
             <NavLink to={lastPath} end={false} onClick={onClose}>
               {({ isActive: active }) => (
                 <div
                   className={cn(
-                    "flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer border border-[var(--border)]",
+                    "flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors cursor-pointer border-l-[3px] pl-[9px]",
                     active
-                      ? "bg-[var(--foreground)]/8 text-[var(--foreground)] border-[var(--foreground)]/20"
-                      : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5"
+                      ? "bg-[var(--accent)]/15 text-[var(--foreground)] border-[var(--accent)]"
+                      : "bg-[var(--accent)]/8 text-[var(--foreground)] border-[var(--accent)]/50 hover:bg-[var(--accent)]/12"
                   )}
                 >
-                  <BookOpen className="w-3.5 h-3.5 shrink-0 text-[var(--accent-bio)]" />
+                  <BookOpen className="w-4 h-4 shrink-0 text-[var(--accent)]" />
                   <span className="truncate">{lastPathLabel}</span>
                 </div>
               )}
             </NavLink>
           </div>
         )}
-
-        {/* Dashboard */}
-        <NavLink to="/" end onClick={onClose} className="block mb-2">
-          {({ isActive: active }) => (
-            <NavItemRow icon={LayoutDashboard} label="Dashboard" active={active} />
-          )}
-        </NavLink>
 
         {/* Sections */}
         {NAV_SECTIONS.map((section) => (
@@ -503,16 +454,16 @@ export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps
                         <NavLink to="/bms" end={false} onClick={onClose} className="flex-1 min-w-0">
                           <div
                             className={cn(
-                              "sidebar-nav-item flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium cursor-pointer relative border-l-[3px]",
+                              "sidebar-nav-item flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium cursor-pointer relative border-l-[3px] pl-[9px]",
                               isBmsActive
-                                ? "bg-[var(--accent)]/10 text-[var(--foreground)] border-[var(--accent)] pl-[9px]"
+                                ? "bg-[var(--accent)]/10 text-[var(--foreground)] border-[var(--accent)] font-semibold"
                                 : "border-transparent hover:bg-[var(--foreground)]/5"
                             )}
                           >
                             <item.icon
                               className={cn(
                                 "w-4 h-4 shrink-0",
-                                isBmsActive ? undefined : item.iconColor
+                                isBmsActive ? "text-[var(--accent)]" : "text-[var(--muted)]"
                               )}
                             />
                             <span className="truncate flex-1">{item.label}</span>
@@ -674,9 +625,8 @@ export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps
                       <NavItemRow
                         icon={item.icon}
                         label={item.label}
-                        iconColor={item.iconColor}
-                        highlight={item.highlight}
                         active={itemActive}
+                        emphasized={item.emphasized}
                       />
                     )}
                   </NavLink>
@@ -717,8 +667,8 @@ export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             className={cn(
-              "fixed inset-0 z-100 bg-black/50 backdrop-blur-sm",
-              focusMode ? "" : "lg:hidden"
+              "fixed inset-0 bg-black/50 backdrop-blur-sm",
+              focusMode ? "z-[110]" : "z-100 lg:hidden"
             )}
             onClick={onClose}
             aria-hidden
@@ -726,7 +676,7 @@ export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps
         )}
       </AnimatePresence>
 
-      {/* Sidebar panel: in focus mode always overlay (slide in/out); otherwise on lg fixed visible */}
+      {/* Sidebar panel: in focus mode always overlay with high z so it's above content (z-50); otherwise on lg fixed visible */}
       <aside
         className={cn(
           "fixed left-0 top-0 h-screen flex flex-col",
@@ -734,7 +684,7 @@ export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps
           !focusMode && SIDEBAR_LG_POSITION,
           "bg-[var(--sidebar-bg)] backdrop-blur-sm",
           "border-r border-[var(--border)]",
-          "z-101 lg:z-40",
+          focusMode ? "z-[120]" : "z-101 lg:z-40",
           "transition-transform duration-200 ease-out",
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         )}
