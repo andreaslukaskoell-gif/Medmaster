@@ -30,6 +30,7 @@ import { useInterleavingStore, shouldShowInterleavingOverlay } from "@/store/int
 import { useQuizSessionStore } from "@/store/quizSessionStore";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
+import { useFocusMode } from "@/hooks/useFocusMode";
 import { getLevelFromXP, getLevelName, getFeatureUnlockedAtLevel } from "@/lib/progression";
 import { cn } from "@/lib/utils";
 
@@ -163,7 +164,22 @@ export function AppShell() {
     });
   }, []);
 
-  const isChapterFocus = isChapterFocusRoute(location.pathname);
+  const isChapterRoute = isChapterFocusRoute(location.pathname);
+  const { isFocusMode, toggleFocusMode } = useFocusMode();
+  const focusModeActive = isChapterRoute && isFocusMode;
+
+  useEffect(() => {
+    if (!isChapterRoute) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key !== "f" && e.key !== "F") return;
+      const target = e.target as HTMLElement;
+      if (target?.closest("input, textarea, [contenteditable=true]")) return;
+      e.preventDefault();
+      toggleFocusMode();
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [isChapterRoute, toggleFocusMode]);
 
   return (
     <BreadcrumbProvider>
@@ -202,18 +218,32 @@ export function AppShell() {
             onDismiss={() => setPendingBadgeId(null)}
           />
         </Suspense>
-        <Sidebar mobileOpen={mobileOpen} onClose={closeSidebar} focusMode={isChapterFocus} />
+        <Sidebar
+          mobileOpen={mobileOpen}
+          onClose={closeSidebar}
+          focusMode={isChapterRoute}
+          focusModeActive={focusModeActive}
+        />
         {/* Main area: volle Breite, Sidebar nur per Burger als Overlay */}
-        <div className="min-h-screen flex flex-col relative z-50 w-full bg-[var(--background)]">
+        <div
+          className={cn(
+            "min-h-screen flex flex-col relative z-50 w-full transition-colors duration-200",
+            focusModeActive ? "bg-slate-100 dark:bg-slate-900/80" : "bg-[var(--background)]"
+          )}
+        >
           <TopBar
             menuButtonRef={menuButtonRef}
             onMenuToggle={() => setMobileOpen(!mobileOpen)}
             showHamburgerAlways={true}
+            isChapterRoute={isChapterRoute}
+            isFocusMode={isFocusMode}
+            onToggleFocusMode={toggleFocusMode}
           />
           <main
             className={cn(
-              "flex-1 pt-14 sm:pt-16 p-4 lg:p-6 pb-8 w-full",
-              isChapterFocus ? "max-w-none mx-auto" : "max-w-5xl mx-auto"
+              "flex-1 p-4 lg:p-6 pb-8 w-full transition-[max-width,padding-top] duration-200",
+              focusModeActive ? "pt-12 max-w-6xl mx-auto" : "pt-14 sm:pt-16",
+              !focusModeActive && (isChapterRoute ? "max-w-none mx-auto" : "max-w-5xl mx-auto")
             )}
           >
             <ErrorBoundary>

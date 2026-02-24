@@ -1,7 +1,7 @@
 import type { Kapitel } from "../types";
 
 export const physKapElektrizitaet: Kapitel = {
-  id: "physik-kap4",
+  id: "phys-kap5",
   title: "Elektrizitätslehre & Optik",
   subject: "physik",
   icon: "⚡",

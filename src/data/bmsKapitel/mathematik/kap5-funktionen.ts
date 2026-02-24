@@ -1,7 +1,7 @@
 import type { Kapitel } from "../types";
 
 export const mathKap5: Kapitel = {
-  id: "math-kap5",
+  id: "mathe-kap5",
   title: "Analysis & Funktionen",
   subject: "mathematik",
   icon: "📈",

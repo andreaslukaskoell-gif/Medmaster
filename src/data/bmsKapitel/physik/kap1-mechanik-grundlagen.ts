@@ -1,7 +1,7 @@
 import type { Kapitel } from "../types";
 
 export const physKapMechanik: Kapitel = {
-  id: "physik-kap1",
+  id: "phys-kap1",
   title: "Grundlagen & Mechanik",
   subject: "physik",
   icon: "⚙️",
@@ -1250,7 +1250,7 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
 
       merksätze: [
         "Trägheitsgesetz: Kein F_res → kein Δv. Alles bleibt so, wie es ist.",
-        "F = m·a: Kraft ist Masse mal Beschleunigung. 1 N = 1 kg·m/s².",
+        "F = m×a: Kraft ist Masse × Beschleunigung. 1 N = 1 kg×m/s².",
         "actio = reactio: Immer gleich groß, entgegengesetzt, verschiedene Körper.",
         "Freier Fall: g = 9,81 m/s² ≈ 10 m/s². Nach 1 s: v = 10 m/s, s = 5 m.",
         "v(t) = v₀ + a·t — lineare Geschwindigkeitszunahme bei konstanter Beschleunigung.",

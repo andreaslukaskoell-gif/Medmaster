@@ -1,7 +1,7 @@
 import type { Kapitel } from "../types";
 
 export const mathKap6: Kapitel = {
-  id: "math-kap6",
+  id: "mathe-kap6",
   title: "Vektorrechnung",
   subject: "mathematik",
   icon: "➡️",
@@ -172,7 +172,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
 - **Vektor**: gerichtete Größe (Betrag + Richtung); Skalar: nur Betrag; Notation: **a** = (a₁, a₂, a₃)
 - **Betrag**: |**a**| = √(a₁²+a₂²+a₃²); **Einheitsvektor**: **e** = **a**/|**a**| (Betrag = 1)
 - **Addition**: **a**+**b** = (a₁+b₁, a₂+b₂, a₃+b₃); Parallelogrammregel; **Subtraktion**: Differenzvektor
-- **Skalarmultiplikation**: k·**a** = (k·a₁, k·a₂, k·a₃); streckt/spiegelt den Vektor
+- **Skalarmultiplikation**: k×**a** = (k×a₁, k×a₂, k×a₃); streckt/spiegelt den Vektor
 - **Klinisch**: EKG-Herzachse; Blutfluss (Doppler); Muskelkraft-Zerlegung; Vektorsumme an Gelenken`,
       lernziele: [
         "Vektoren als gerichtete Größen definieren und von Skalaren abgrenzen können.",
@@ -192,7 +192,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
           heading: "Vektoroperationen und geometrische Interpretation",
           text: "Addition komponentenweise: $(a_1+b_1, a_2+b_2)^\\top$. Geometrisch: Parallelogrammregel (Resultierende). Skalarmultiplikation $\\lambda \\cdot \\vec{v}$ streckt (|λ|>1), staucht (|λ|<1) oder spiegelt (λ<0) den Vektor. Zwei Vektoren sind **parallel**, wenn einer ein skalares Vielfaches des anderen ist: $\\vec{a} = k \\cdot \\vec{b}$.",
           merksatz:
-            "Parallelogrammregel: Die Diagonale ist der Summenvektor. Parallele Vektoren: a = k·b für ein k ≠ 0.",
+            "Parallelogrammregel: Die Diagonale ist der Summenvektor. Parallele Vektoren: a = k×b für ein k ≠ 0.",
         },
         {
           heading: "Linearkombination, Basis und klinische Anwendung",
@@ -207,11 +207,11 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
         "Ein Vektor besitzt Betrag UND Richtung — ein Skalar nur einen Zahlenwert.",
         "Betrag im Raum: |v| = √(v₁² + v₂² + v₃²) — verallgemeinerter Pythagoras.",
         "Addition: komponentenweise; geometrisch Parallelogrammregel (Resultierende = Diagonale).",
-        "Skalare Multiplikation λ·v: λ > 1 streckt, 0 < λ < 1 staucht, λ < 0 dreht Richtung um.",
+        "Skalare Multiplikation λ×v: λ > 1 streckt, 0 < λ < 1 staucht, λ < 0 dreht Richtung um.",
         "Einheitsvektor ê = v/|v|: Betrag genau 1, zeigt die Richtung von v.",
         "Linear unabhängig: Kein Vektor ist Linearkombination der anderen.",
         "Standardbasis im ℝ³: e₁=(1,0,0), e₂=(0,1,0), e₃=(0,0,1) — spannen den Raum auf.",
-        "Parallele Vektoren: a = k·b für ein skalares k ≠ 0.",
+        "Parallele Vektoren: a = k×b für ein skalares k ≠ 0.",
         "Biomechanik: Gelenkkraft = Vektorsumme aller angreifenden Muskelkräfte.",
         "EKG-Herzachse: elektrischer Vektor der Erregungsausbreitung — darstellbar im Cabrera-Kreis.",
       ],
@@ -274,7 +274,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
           explanation:
             "Orthogonalität bedeutet: das Skalarprodukt ist gleich null. $\\vec{a} \\cdot \\vec{b} = 4 \\cdot x + 3 \\cdot 5 = 4x + 15 = 0$. Auflösen nach $x$: $4x = -15 \\Rightarrow x = -15/4 = -3{,}75$. Zur Probe: Skalarprodukt $= 4 \\cdot (-15/4) + 3 \\cdot 5 = -15 + 15 = 0$ — korrekt. In der Biomechanik bedeutet Orthogonalität, dass zwei Kraftkomponenten keine gemeinsame Wirkungsrichtung teilen.",
           hints: [
-            "Orthogonale Vektoren haben Skalarprodukt 0: a₁·b₁ + a₂·b₂ = 0.",
+            "Orthogonale Vektoren haben Skalarprodukt 0: a₁×b₁ + a₂×b₂ = 0.",
             "Setzen Sie die bekannten Werte ein und lösen Sie die entstehende lineare Gleichung nach x auf.",
           ],
           tags: ["skalarprodukt", "orthogonalität", "vektorrechnung"],
@@ -306,8 +306,8 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
           explanation:
             "Zwei Vektoren sind linear abhängig genau dann, wenn einer ein skalares Vielfaches des anderen ist. Hier: $-2 \\cdot \\vec{b} = -2 \\cdot (-1,-2,1) = (2,4,-2) = \\vec{a}$. Also ist $\\vec{a} = -2 \\cdot \\vec{b}$ — die Vektoren sind parallel (gegenläufig) und damit linear abhängig. Unterschiedliche Beträge schließen lineare Abhängigkeit nicht aus; auch das Skalarprodukt allein entscheidet nicht darüber (es muss für parallele Vektoren $\\vec{a} \\cdot \\vec{b} = \\pm|\\vec{a}||\\vec{b}|$ gelten).",
           hints: [
-            "Linear abhängig bedeutet: einer der Vektoren lässt sich als skalares Vielfaches des anderen darstellen: a = k·b.",
-            "Prüfen Sie, ob b = k·a für ein reelles k gilt, indem Sie die Komponenten vergleichen: k = a₁/b₁ = ?",
+            "Linear abhängig bedeutet: einer der Vektoren lässt sich als skalares Vielfaches des anderen darstellen: a = k×b.",
+            "Prüfen Sie, ob b = k×a für ein reelles k gilt, indem Sie die Komponenten vergleichen: k = a₁/b₁ = ?",
           ],
           tags: ["lineare-abhängigkeit", "parallele-vektoren", "vektor"],
           difficulty: 3,
@@ -320,7 +320,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
           explanation:
             "Ein Vektor mit Betrag $r$ und Winkel $\\alpha$ zur x-Achse hat die Komponenten $(r\\cos\\alpha,\\; r\\sin\\alpha)$. Hier: y-Komponente $= 10 \\cdot \\sin(60°) = 10 \\cdot \\frac{\\sqrt{3}}{2} = 5\\sqrt{3} \\approx 8{,}66$. Die x-Komponente wäre $10 \\cdot \\cos(60°) = 10 \\cdot 0{,}5 = 5$. Der Merksatz: $\\sin(60°) = \\frac{\\sqrt{3}}{2}$, $\\cos(60°) = \\frac{1}{2}$.",
           hints: [
-            "Erinnern Sie sich: Die Komponenten eines Vektors der Länge r mit Winkel α zur x-Achse sind (r·cos α, r·sin α).",
+            "Erinnern Sie sich: Die Komponenten eines Vektors der Länge r mit Winkel α zur x-Achse sind (r×cos α, r×sin α).",
             "sin(60°) = √3/2 ≈ 0,866. Multiplizieren Sie mit dem Betrag 10.",
           ],
           tags: ["vektorkomponenten", "trigonometrie", "winkel"],
@@ -351,7 +351,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
       ],
       content: `## Einleitung
 
-**Skalarprodukt** (a·b = |a||b|cos θ) → Winkel, Orthogonalität; **Kreuzprodukt** → Drehmoment, senkrechte Richtung. Für den MedAT sind Skalarprodukt, Kreuzprodukt, Projektion prüfungsrelevant.
+**Skalarprodukt** (a×b = |a||b|cos θ) → Winkel, Orthogonalität; **Kreuzprodukt** → Drehmoment, senkrechte Richtung. Für den MedAT sind Skalarprodukt, Kreuzprodukt, Projektion prüfungsrelevant.
 
 **In diesem Kapitel lernst du:** **Skalarprodukt** (Winkel, Orthogonalität); **Kreuzprodukt** (Rechte-Hand, Betrag = Fläche); **Projektion**. **Kontext:** Kräfte, Arbeit, Drehmoment.
 
@@ -361,11 +361,11 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
 
 ![Skalarprodukt Kreuzprodukt](/grafik-vektoren.svg)
 
-**Erklärung zur Grafik:** Die Grafik veranschaulicht das Skalarprodukt a·b = |a||b|cos θ (Winkel, Orthogonalität), das Kreuzprodukt a×b mit der Rechte-Hand-Regel und den Betrag |a×b| als Fläche des Parallelogramms.
+**Erklärung zur Grafik:** Die Grafik veranschaulicht das Skalarprodukt a×b = |a||b|cos θ (Winkel, Orthogonalität), das Kreuzprodukt a×b mit der Rechte-Hand-Regel und den Betrag |a×b| als Fläche des Parallelogramms.
 
 ![Vektoren und Winkel](/grafik-vektoren-betrag.svg)
 
-**Erklärung zur Grafik:** Winkel zwischen Vektoren und Orthogonalität (Skalarprodukt = 0); Grundlage für Arbeit W = F·s und Normalenvektoren.
+**Erklärung zur Grafik:** Winkel zwischen Vektoren und Orthogonalität (Skalarprodukt = 0); Grundlage für Arbeit W = F×s und Normalenvektoren.
 
 Das **Skalarprodukt** (Dot-Produkt, inneres Produkt) zweier Vektoren $\\vec{a}$ und $\\vec{b}$ ist definiert als:
 
@@ -484,7 +484,7 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Skalarprodukt a·b = aₓbₓ+aᵧbᵧ(+a_zb_z), Orthogonalität a·b=0, Winkel zwischen Vektoren, Kreuzprodukt (Rechte-Hand-Regel, Fläche Parallelogramm).
+**Zentral prüfungsrelevant:** Skalarprodukt a×b = aₓbₓ+aᵧbᵧ(+a_zb_z), Orthogonalität a×b=0, Winkel zwischen Vektoren, Kreuzprodukt (Rechte-Hand-Regel, Fläche Parallelogramm).
 
 **Ergänzend vertiefend:** Anwendung Kräfte/ Geschwindigkeit; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -511,11 +511,11 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Skalarprodukt**: **a**·**b** = a₁b₁+a₂b₂+a₃b₃ = |**a**|·|**b**|·cos φ; Ergebnis ist Skalar
-- **Orthogonalität**: **a**⊥**b** ↔ **a**·**b** = 0; Winkelberechnung: cos φ = (**a**·**b**)/(|**a**|·|**b**|)
-- **Projektion**: **a** auf **b**: proj = (**a**·**b**/|**b**|²)·**b**; Betrag der Projektion = (**a**·**b**)/|**b**|
-- **Kreuzprodukt**: **a**×**b** steht senkrecht auf **a** und **b**; |**a**×**b**| = |**a**|·|**b**|·sin φ
-- **Drehmoment**: **M** = **r**×**F**; |M| = r·F·sin θ; max. bei 90° (Bizeps); Richtung: Rechte-Hand-Regel
+- **Skalarprodukt**: **a**×**b** = a₁b₁+a₂b₂+a₃b₃ = |**a**|×|**b**|×cos φ; Ergebnis ist Skalar
+- **Orthogonalität**: **a**⊥**b** ↔ **a**×**b** = 0; Winkelberechnung: cos φ = (**a**×**b**)/(|**a**|×|**b**|)
+- **Projektion**: **a** auf **b**: proj = (**a**×**b**/|**b**|²)×**b**; Betrag der Projektion = (**a**×**b**)/|**b**|
+- **Kreuzprodukt**: **a**×**b** steht senkrecht auf **a** und **b**; |**a**×**b**| = |**a**|×|**b**|×sin φ
+- **Drehmoment**: **M** = **r**×**F**; |M| = r×F×sin θ; max. bei 90° (Bizeps); Richtung: Rechte-Hand-Regel
 - **Klinisch**: Gelenkbelastung (Kreuzprodukt); MRT-Sicherheit (Lorentz-Kraft); Strahlentherapiedosis`,
       lernziele: [
         "Das Skalarprodukt komponentenweise und über den Winkel berechnen und interpretieren können.",
@@ -541,30 +541,30 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
           heading: "Klinische Anwendungen: Drehmoment und Lorentz-Kraft",
           text: "Das Drehmoment $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist das Kreuzprodukt aus Hebelarm $\\vec{r}$ und Kraft $\\vec{F}$. Im Knie beispielsweise ergibt die Quadrizepskraft × dem Hebelarm das Streckmoment. In der MRT-Sicherheit ist die Lorentz-Kraft $\\vec{F} = q(\\vec{v}\\times\\vec{B})$ relevant: Ein im Magnetfeld bewegtes metallisches Implantat kann eine Kraft durch das Kreuzprodukt aus Ladungsgeschwindigkeit und Magnetfeld erfahren. Das Skalarprodukt erlaubt die Projektion einer Kraft auf eine Bewegungsrichtung (mechanische Arbeit: $W = \\vec{F}\\cdot\\vec{s}$).",
           merksatz:
-            "Drehmoment M = r × F (Kreuzprodukt). Mechanische Arbeit W = F × s (Skalarprodukt). MRT: Lorentz-Kraft F = q·(v×B).",
+            "Drehmoment M = r × F (Kreuzprodukt). Mechanische Arbeit W = F × s (Skalarprodukt). MRT: Lorentz-Kraft F = q×(v×B).",
         },
         {
           heading: "Orthogonalprojektion und Spatprodukt",
           text: "Die Projektion $\\text{proj}_{\\vec{b}}\\vec{a} = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|^2}\\cdot\\vec{b}$ zerlegt einen Vektor in parallele und senkrechte Komponenten. In der Biomechanik wird damit die Kompressionskraft (entlang der Gelenkachse) von der Scherkraft (senkrecht dazu) getrennt. Das Spatprodukt $V = |\\vec{a}\\cdot(\\vec{b}\\times\\vec{c})|$ berechnet das Volumen eines Parallelepipeds. Drei koplanare Vektoren haben Spatprodukt null. In der CT-Volumetrie dient es zur Berechnung von Organsegment-Volumina.",
           merksatz:
-            "Projektion von a auf b: proj = (a·b/|b|²)·b. Spatprodukt = |a·(b×c)| = Volumen des Spats. Spatprodukt = 0 → koplanar.",
+            "Projektion von a auf b: proj = (a×b/|b|²)×b. Spatprodukt = |a×(b×c)| = Volumen des Spats. Spatprodukt = 0 → koplanar.",
         },
       ],
       diagram: "vector-addition",
 
       merksätze: [
-        "Skalarprodukt: a·b = a₁b₁ + a₂b₂ + a₃b₃ — Ergebnis ist ein Skalar.",
-        "a·b = |a|·|b|·cos θ — damit lässt sich der Winkel zwischen Vektoren berechnen.",
-        "a·b = 0 bedeutet Orthogonalität (θ = 90°) — zentrales Kriterium!",
+        "Skalarprodukt: a×b = a₁b₁ + a₂b₂ + a₃b₃ — Ergebnis ist ein Skalar.",
+        "a×b = |a|×|b|×cos θ — damit lässt sich der Winkel zwischen Vektoren berechnen.",
+        "a×b = 0 bedeutet Orthogonalität (θ = 90°) — zentrales Kriterium!",
         "Kreuzprodukt: a×b steht senkrecht auf a UND b — Ergebnis ist ein Vektor.",
-        "|a×b| = |a|·|b|·sin θ = Fläche des aufgespannten Parallelogramms.",
+        "|a×b| = |a|×|b|×sin θ = Fläche des aufgespannten Parallelogramms.",
         "Rechte-Hand-Regel: Finger von a nach b einrollen, Daumen zeigt a×b.",
         "Antikommutativ: a×b = −(b×a) — Reihenfolge vertauschen ändert das Vorzeichen.",
         "Parallele Vektoren: Kreuzprodukt = Nullvektor (sin 0° = 0).",
         "Drehmoment M = r×F — Kreuzprodukt aus Hebelarm und Kraft in der Biomechanik.",
-        "Mechanische Arbeit W = F·s — Skalarprodukt aus Kraft und Weg.",
-        "Projektion von a auf b: proj = (a·b/|b|²)·b — zerlegt Kraft in Kompressions- und Scherkomponente.",
-        "Spatprodukt: V = |a·(b×c)| — Volumen des aufgespannten Parallelepipeds.",
+        "Mechanische Arbeit W = F×s — Skalarprodukt aus Kraft und Weg.",
+        "Projektion von a auf b: proj = (a×b/|b|²)×b — zerlegt Kraft in Kompressions- und Scherkomponente.",
+        "Spatprodukt: V = |a×(b×c)| — Volumen des aufgespannten Parallelepipeds.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
@@ -574,7 +574,7 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
           "Das **Skalarprodukt** $\\vec{a}\\cdot\\vec{b} = a_1b_1+a_2b_2+a_3b_3 = |\\vec{a}||\\vec{b}|\\cos\\theta$ liefert einen **Skalar** ohne Richtung. Es misst die Übereinstimmung der Richtungen zweier Vektoren. Ist das Skalarprodukt null, stehen die Vektoren senkrecht (orthogonal) aufeinander. Bei positivem Wert schließen sie einen spitzen Winkel ein, bei negativem einen stumpfen. Klinisch wird das Skalarprodukt für die mechanische Arbeit $W = \\vec{F}\\cdot\\vec{s}$ verwendet: Nur die Kraftkomponente in Bewegungsrichtung leistet Arbeit. Das **Kreuzprodukt** $\\vec{a}\\times\\vec{b}$ ist nur im $\\mathbb{R}^3$ definiert und liefert einen **Vektor**, der senkrecht auf beiden Ausgangsvektoren steht. Sein Betrag $|\\vec{a}\\times\\vec{b}| = |\\vec{a}||\\vec{b}|\\sin\\theta$ entspricht dem Flächeninhalt des von beiden Vektoren aufgespannten Parallelogramms. Die Richtung folgt der Rechten-Hand-Regel. Im Gegensatz zum Skalarprodukt ist das Kreuzprodukt **antikommutativ**: $\\vec{a}\\times\\vec{b} = -(\\vec{b}\\times\\vec{a})$. Klinisch ist das Drehmoment $\\vec{M} = \\vec{r}\\times\\vec{F}$ die wichtigste Anwendung: Es beschreibt die Dreheigenschaft einer Kraft um einen Gelenkpunkt und ist zentral für das Verständnis von Hebelkräften in der Biomechanik.",
       },
       klinischerBezug:
-        "Drehmoment M = r×F an Gelenken (Biomechanik); Lorentz-Kraft F = q·(v×B) für MRT-Implantat-Sicherheit; mechanische Arbeit W = F·s (Skalarprodukt).",
+        "Drehmoment M = r×F an Gelenken (Biomechanik); Lorentz-Kraft F = q×(v×B) für MRT-Implantat-Sicherheit; mechanische Arbeit W = F×s (Skalarprodukt).",
       selfTest: [
         {
           question:
@@ -584,8 +584,8 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
           explanation:
             "Das Skalarprodukt wird komponentenweise berechnet: $\\vec{a}\\cdot\\vec{b} = 3\\cdot1 + (-2)\\cdot4 + 1\\cdot(-2) = 3 - 8 - 2 = -7$. Das negative Ergebnis bedeutet, dass der Winkel zwischen den Vektoren stumpf ist ($\\theta > 90°$). Eine häufige Fehlerquelle ist das Übersehen der negativen Vorzeichen bei den Komponenten.",
           hints: [
-            "Skalarprodukt: a₁·b₁ + a₂·b₂ + a₃·b₃ — multiplizieren Sie die entsprechenden Komponenten und addieren Sie.",
-            "Beachten Sie die Vorzeichen: (−2)·4 = −8 und 1·(−2) = −2.",
+            "Skalarprodukt: a₁×b₁ + a₂×b₂ + a₃×b₃ — multiplizieren Sie die entsprechenden Komponenten und addieren Sie.",
+            "Beachten Sie die Vorzeichen: (−2)×4 = −8 und 1×(−2) = −2.",
           ],
           tags: ["skalarprodukt", "vektorrechnung", "rechnen"],
           difficulty: 2,
@@ -597,7 +597,7 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
           explanation:
             "$\\vec{a}\\cdot\\vec{b} = 1\\cdot1 + 0\\cdot1 = 1$. Betrag: $|\\vec{a}| = 1$, $|\\vec{b}| = \\sqrt{1^2+1^2} = \\sqrt{2}$. Also $\\cos\\theta = \\frac{1}{1\\cdot\\sqrt{2}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$, was $\\theta = 45°$ entspricht. Merksatz: $\\cos(45°) = \\frac{\\sqrt{2}}{2} \\approx 0{,}707$.",
           hints: [
-            "Berechnen Sie cos θ = (a·b) / (|a|·|b|) und bestimmen Sie daraus den Winkel.",
+            "Berechnen Sie cos θ = (a×b) / (|a|×|b|) und bestimmen Sie daraus den Winkel.",
             "cos(45°) = √2/2 ≈ 0,707; cos(60°) = 0,5; cos(30°) = √3/2 ≈ 0,866.",
           ],
           tags: ["winkel", "skalarprodukt", "trigonometrie"],
@@ -645,7 +645,7 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
             "$\\vec{r}\\times\\vec{F} = (0\\cdot0-0\\cdot0,\\; 0\\cdot0-0{,}3\\cdot0,\\; 0{,}3\\cdot10-0\\cdot0) = (0,0,3)$ Nm. Also $|\\vec{M}| = 3$ Nm. Alternativ: $|\\vec{M}| = |\\vec{r}||\\vec{F}|\\sin(90°) = 0{,}3 \\cdot 10 \\cdot 1 = 3$ Nm. Da Hebelarm (x-Richtung) und Kraft (y-Richtung) senkrecht stehen, gilt $\\sin(90°)=1$, und das Drehmoment ist maximal.",
           hints: [
             "Drehmoment M = r × F. Berechnen Sie das Kreuzprodukt komponentenweise.",
-            "Da r und F senkrecht stehen (x- und y-Richtung), gilt |M| = |r|·|F|·sin(90°) = |r|·|F|·1.",
+            "Da r und F senkrecht stehen (x- und y-Richtung), gilt |M| = |r|×|F|×sin(90°) = |r|×|F|×1.",
           ],
           tags: ["drehmoment", "kreuzprodukt", "biomechanik"],
           difficulty: 2,
@@ -678,7 +678,7 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
           explanation:
             "$\\cos\\theta = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|} = \\frac{-12}{4\\cdot6} = \\frac{-12}{24} = -\\frac{1}{2}$. Da $\\cos(120°) = -\\frac{1}{2}$, folgt $\\theta = 120°$. Das negative Skalarprodukt bestätigt: der Winkel ist stumpf ($> 90°$). Merksatz: $\\cos(60°) = \\frac{1}{2}$, $\\cos(120°) = -\\frac{1}{2}$, $\\cos(90°) = 0$, $\\cos(180°) = -1$.",
           hints: [
-            "Berechnen Sie cos θ = (a·b) / (|a|·|b|). Das negative Ergebnis deutet auf einen stumpfen Winkel hin.",
+            "Berechnen Sie cos θ = (a×b) / (|a|×|b|). Das negative Ergebnis deutet auf einen stumpfen Winkel hin.",
             "cos(120°) = −½. Denken Sie an den Einheitskreis: Im zweiten Quadrant ist der Kosinus negativ.",
           ],
           tags: ["winkel", "skalarprodukt", "kosinus"],
@@ -709,7 +709,7 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
       ],
       content: `## Einleitung
 
-**Geraden** (r = r₀ + t·d), **Ebenen** (n·(r−r₀)=0), **Matrizen** (LGS, Gauß). CT, Radiologie. Für den MedAT sind Geradenparameter, Ebenengleichung, LGS, Determinante, 2×2-Inverse prüfungsrelevant.
+**Geraden** (r = r₀ + t×d), **Ebenen** (n×(r−r₀)=0), **Matrizen** (LGS, Gauß). CT, Radiologie. Für den MedAT sind Geradenparameter, Ebenengleichung, LGS, Determinante, 2×2-Inverse prüfungsrelevant.
 
 **In diesem Kapitel lernst du:** **Gerade im Raum**; **Ebene** (Parameter-, Normalenform); **LGS** (Gauß); **Determinante**; **2×2-Inverse**. **Kontext:** Von 3D-Geometrie zu Bildgebung.
 
@@ -719,7 +719,7 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
 
 ![Gerade Ebene Matrix](/grafik-vektoren.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt die Geradengleichung r = r₀ + t·d, die Ebenengleichung n·(r−r₀) = 0 sowie 2×2-Determinante und Inverse A⁻¹ für lineare Gleichungssysteme.
+**Erklärung zur Grafik:** Die Abbildung zeigt die Geradengleichung r = r₀ + t×d, die Ebenengleichung n×(r−r₀) = 0 sowie 2×2-Determinante und Inverse A⁻¹ für lineare Gleichungssysteme.
 
 ![Richtungsvektor und Normalenvektor](/grafik-vektoren.svg)
 
@@ -876,11 +876,11 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Geradengleichung** (Parameterform): **x** = **p** + t·**v**; p = Stützpunkt; v = Richtungsvektor; t ∈ ℝ
-- **Ebenengleichung**: Normalenform **n**·(**x**−**p**) = 0; Koordinatenform ax+by+cz = d; Parameterform
+- **Geradengleichung** (Parameterform): **x** = **p** + t×**v**; p = Stützpunkt; v = Richtungsvektor; t ∈ ℝ
+- **Ebenengleichung**: Normalenform **n**×(**x**−**p**) = 0; Koordinatenform ax+by+cz = d; Parameterform
 - **LGS (Gauß)**: Stufenform durch Zeilenoperationen; eindeutig/keine/unendlich viele Lösungen
 - **Cramer-Regel** (2×2): x = det_x/det_A; y = det_y/det_A; det(2×2) = ad−bc
-- **Inverse 2×2**: A⁻¹ = (1/det)·[[d,−b],[−c,a]]; existiert nur wenn det ≠ 0
+- **Inverse 2×2**: A⁻¹ = (1/det)×[[d,−b],[−c,a]]; existiert nur wenn det ≠ 0
 - **Klinisch**: CT-Rekonstruktion (LGS mit Millionen Gleichungen); PCA in Bioinformatik (Eigenwerte)`,
       lernziele: [
         "Die Parameterform einer Geraden im ℝ³ aufstellen und Punkte auf der Geraden berechnen können.",
@@ -894,7 +894,7 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
           heading: "Geraden und Ebenen im dreidimensionalen Raum",
           text: "Eine Gerade im ℝ³ wird durch Stützvektor $\\vec{r_0}$ und Richtungsvektor $\\vec{d}$ dargestellt: $\\vec{r} = \\vec{r_0} + t\\cdot\\vec{d}$. Eine Ebene kann durch zwei Richtungsvektoren aufgespannt werden (Parameterform) oder durch ihren Normalenvektor $\\vec{n}$ beschrieben werden (Normalenform: $\\vec{n}\\cdot(\\vec{r}-\\vec{r_0})=0$). In der Koordinatenform $ax+by+cz=d$ bilden die Koeffizienten $(a,b,c)$ genau den Normalenvektor.",
           merksatz:
-            "Gerade: r = r₀ + t·d (Stützvektor + Vielfaches des Richtungsvektors). Ebene-Normalenform: n·(r−r₀)=0.",
+            "Gerade: r = r₀ + t×d (Stützvektor + Vielfaches des Richtungsvektors). Ebene-Normalenform: n×(r−r₀)=0.",
         },
         {
           heading: "Matrizenrechnung — Grundoperationen und Determinante",
@@ -912,23 +912,23 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
           heading: "Inverse Matrix, LGS und Eigenwerte",
           text: "Die inverse Matrix $A^{-1}$ existiert nur bei $\\det(A) \\neq 0$. Fur 2×2: $A^{-1} = \\frac{1}{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$. Die Cramersche Regel löst ein LGS uber Determinanten: $x_i = \\det(A_i)/\\det(A)$, wobei $A_i$ die $i$-te Spalte durch den Losungsvektor ersetzt. Eigenwerte $\\lambda$ erfüllen $\\det(A-\\lambda E)=0$; der zugehorige Eigenvektor wird nur gestreckt, nicht gedreht. Eigenwerte sind zentral fur PCA, Schwingungsanalyse und pharmakokinetische Kompartimentmodelle.",
           merksatz:
-            "Inverse: A⁻¹ = (1/det)·adj(A). Cramer: xᵢ = det(Aᵢ)/det(A). Eigenwert: A·v = λ·v — Richtung bleibt, nur Betrag ändert sich.",
+            "Inverse: A⁻¹ = (1/det)×adj(A). Cramer: xᵢ = det(Aᵢ)/det(A). Eigenwert: A×v = λ×v — Richtung bleibt, nur Betrag ändert sich.",
         },
       ],
       diagram: "vector-addition",
       merksätze: [
-        "Geradengleichung Raum: r = r₀ + t·d (Stützvektor + Parameter × Richtungsvektor).",
-        "Ebene Normalenform: n·(r − r₀) = 0, wobei n ⊥ Ebene.",
+        "Geradengleichung Raum: r = r₀ + t×d (Stützvektor + Parameter × Richtungsvektor).",
+        "Ebene Normalenform: n×(r − r₀) = 0, wobei n ⊥ Ebene.",
         "Ebene Koordinatenform: ax + by + cz = d — Koeffizienten (a,b,c) sind der Normalenvektor.",
         "Matrizenaddition: nur für gleich große Matrizen, elementweise.",
         "Matrizenprodukt: A(m×n) × B(n×p) = C(m×p) — innere Dimensionen müssen übereinstimmen.",
-        "Matrizenmultiplikation ist nicht kommutativ: A·B ≠ B·A (im Allgemeinen).",
+        "Matrizenmultiplikation ist nicht kommutativ: A×B ≠ B×A (im Allgemeinen).",
         "Transponierte Aᵀ: Zeilen und Spalten vertauschen; symmetrisch wenn A = Aᵀ.",
         "Determinante 2×2: det(A) = ad − bc.",
         "det(A) = 0 → Zeilen/Spalten linear abhängig → LGS nicht eindeutig lösbar.",
-        "Inverse 2×2: A⁻¹ = (1/det)·(d, −b; −c, a) — nur bei det ≠ 0.",
+        "Inverse 2×2: A⁻¹ = (1/det)×(d, −b; −c, a) — nur bei det ≠ 0.",
         "Cramersche Regel: xᵢ = det(Aᵢ)/det(A) — spaltenweise Determinantenberechnung.",
-        "Eigenwert λ: A·v = λ·v → det(A−λE) = 0 (charakteristisches Polynom).",
+        "Eigenwert λ: A×v = λ×v → det(A−λE) = 0 (charakteristisches Polynom).",
         "CT: Bildrekonstruktion durch Radon-Transformation und Matrizenoperationen (Rückprojektion).",
         "PCA: Eigenvektoren der Kovarianzmatrix = Hauptkomponenten → Dimensionsreduktion.",
       ],
@@ -951,7 +951,7 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
             "Für $t=2$: $\\vec{r} = (1,2,3)+2(1,0,-1) = (1+2,\\;2+0,\\;3-2) = (3,2,1)$. Zur Kontrolle: $t=1$ gibt $(2,2,2)$ — diese Antwort ist nicht im Angebot. Das Einsetzen von $t=2$ in die Parameterform liefert eindeutig $(3,2,1)$. Die anderen Optionen ergeben bei keinem $t$ einen konsistenten Wert für alle drei Koordinaten.",
           hints: [
             "Setzen Sie verschiedene Werte für t ein: t=0 gibt den Stützvektor selbst, t=1 gibt r₀ + d, t=2 gibt r₀ + 2d.",
-            "Überprüfen Sie jede Antwortoption: Gibt es ein t, sodass (1,2,3) + t·(1,0,−1) = Antwortoption?",
+            "Überprüfen Sie jede Antwortoption: Gibt es ein t, sodass (1,2,3) + t×(1,0,−1) = Antwortoption?",
           ],
           tags: ["geradengleichung", "parameterform", "vektorrechnung"],
           difficulty: 2,
@@ -984,7 +984,7 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
             "A ist 2×2, B ist 2×1 → Ergebnis C ist 2×1. $C_{11} = 1\\cdot1+2\\cdot0 = 1$; $C_{21} = 3\\cdot1+4\\cdot0 = 3$. Also $C = (1,3)^\\top$. Beim Matrizenprodukt wird jede Zeile von A mit der (einzigen) Spalte von B skalar multipliziert. Dimensionsregel: 2×2 × 2×1 = 2×1 — die inneren Dimensionen (beide 2) stimmen überein.",
           hints: [
             "Dimensionsregel: A ist (2×2), B ist (2×1). Das Ergebnis ist (2×1).",
-            "Zeile 1 von A × Spalte von B: 1·1 + 2·0 = 1. Zeile 2 von A × Spalte von B: 3·1 + 4·0 = 3.",
+            "Zeile 1 von A × Spalte von B: 1×1 + 2×0 = 1. Zeile 2 von A × Spalte von B: 3×1 + 4×0 = 3.",
           ],
           tags: ["matrizenmultiplikation", "dimensionsregel", "matrix"],
           difficulty: 2,
@@ -997,8 +997,8 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
           explanation:
             "Für eine 2×2-Matrix gilt: $\\det(A) = ad - bc = 3\\cdot2 - 5\\cdot1 = 6 - 5 = 1$. Da $\\det(A) = 1 \\neq 0$, ist die Matrix regulär und invertierbar — das zugehörige LGS hat genau eine Lösung. Der Wert 1 ist besonders praktisch, da die Inverse $A^{-1}$ dann einfach zu berechnen ist.",
           hints: [
-            "Determinante 2×2: det(A) = a·d − b·c (Hauptdiagonale − Nebendiagonale).",
-            "Hier: a=3, b=5, c=1, d=2. Also: 3·2 − 5·1 = ?",
+            "Determinante 2×2: det(A) = a×d − b×c (Hauptdiagonale − Nebendiagonale).",
+            "Hier: a=3, b=5, c=1, d=2. Also: 3×2 − 5×1 = ?",
           ],
           tags: ["determinante", "matrix", "algebra"],
           difficulty: 1,
@@ -1030,7 +1030,7 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
           explanation:
             "Die Dimensionsregel lautet: $(m\\times n)\\cdot(n\\times p) = (m\\times p)$. Hier: $(3\\times4)\\cdot(4\\times2) = (3\\times2)$. Die inneren Dimensionen (beide 4) stimmen überein, daher ist das Produkt definiert. Das Ergebnis hat m=3 Zeilen (aus A) und p=2 Spalten (aus B). Dies ist die wichtigste Voraussetzung bei der Matrizenmultiplikation — die Anzahl der Spalten von A muss gleich der Anzahl der Zeilen von B sein.",
           hints: [
-            "Merkhilfe: (m×n)·(n×p) = (m×p). Die 'innere' Dimension n muss übereinstimmen und 'verschwindet'.",
+            "Merkhilfe: (m×n)×(n×p) = (m×p). Die 'innere' Dimension n muss übereinstimmen und 'verschwindet'.",
             "Nehmen Sie die äußeren Dimensionen: 3 (Zeilen von A) und 2 (Spalten von B).",
           ],
           tags: ["matrizenmultiplikation", "dimensionsregel", "matrix"],
@@ -1210,7 +1210,7 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Hessesche Normalform der Ebene, Abstand Punkt–Ebene (d = |n·p−d|/|n|), Abstand Punkt–Gerade, Anwendung (Anatomie, Bildgebung).
+**Zentral prüfungsrelevant:** Hessesche Normalform der Ebene, Abstand Punkt–Ebene (d = |n×p−d|/|n|), Abstand Punkt–Gerade, Anwendung (Anatomie, Bildgebung).
 
 **Ergänzend vertiefend:** Lotfußpunkt; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -1237,8 +1237,8 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
 
 - **Punkt-Punkt**: d = |**b**−**a**| = √((b₁−a₁)²+(b₂−a₂)²+(b₃−a₃)²)
 - **Punkt-Gerade**: d = |(**a**−**p**)×**v**|/|**v**|; Kreuzprodukt des Verbindungsvektors mit Richtungsvektor
-- **Punkt-Ebene**: d = |**n**·(**a**−**p**)|/|**n**| = |ax₀+by₀+cz₀−d|/√(a²+b²+c²)
-- **Schnittwinkel**: cos φ = |**n₁**·**n₂**|/(|**n₁**|·|**n₂**|) für Ebenen; gleich für Geraden mit Richtungsvektoren
+- **Punkt-Ebene**: d = |**n**×(**a**−**p**)|/|**n**| = |ax₀+by₀+cz₀−d|/√(a²+b²+c²)
+- **Schnittwinkel**: cos φ = |**n₁**×**n₂**|/(|**n₁**|×|**n₂**|) für Ebenen; gleich für Geraden mit Richtungsvektoren
 - **Klinisch**: Strahlentherapie-Sicherheitsmarge (5–10 mm); Kniewinkel via Skalarprodukt; Stereotaxie im Gehirn`,
       lernziele: [
         "Den Abstand zwischen zwei Punkten im 2D- und 3D-Raum berechnen konnen.",
@@ -1258,7 +1258,7 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
           heading: "Punkt-Ebene-Abstand und Hessessche Normalform",
           text: "Der Abstand eines Punktes P von der Ebene ax+by+cz=d betragt $d = |ap_1+bp_2+cp_3-d|/\\sqrt{a^2+b^2+c^2}$. Man setzt die Koordinaten in die Ebenengleichung ein und normiert durch den Betrag des Normalenvektors. Die Hessesche Normalform ($\\vec{n_0} \\cdot \\vec{r} = d_0$ mit $|\\vec{n_0}|=1$) vereinfacht dies: Abstand = Einsetzen des Punktes, Betrag nehmen.",
           merksatz:
-            "Punkt–Ebene: d = |a·p₁+b·p₂+c·p₃−d| / √(a²+b²+c²). Hessesche NF: Normalenvektor normieren, dann einfach einsetzen.",
+            "Punkt–Ebene: d = |a×p₁+b×p₂+c×p₃−d| / √(a²+b²+c²). Hessesche NF: Normalenvektor normieren, dann einfach einsetzen.",
         },
         {
           heading: "Lagebeziehungen und Schnittwinkel",
@@ -1277,12 +1277,12 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
       merksätze: [
         "Punkt–Punkt: d(A,B) = |AB| = √((b₁−a₁)² + (b₂−a₂)² + (b₃−a₃)²).",
         "Punkt–Gerade: d = |r₀P × d| / |d| — Kreuzprodukt-Formel (Flache ÷ Grundseite = Hohe).",
-        "Punkt–Ebene: d = |a·p₁+b·p₂+c·p₃−d| / √(a²+b²+c²) — Hessessche Normalform.",
+        "Punkt–Ebene: d = |a×p₁+b×p₂+c×p₃−d| / √(a²+b²+c²) — Hessessche Normalform.",
         "Windschief: Geraden im 3D ohne Schnittpunkt und nicht parallel.",
-        "Abstand windschiefer Geraden: d = |(r₂−r₁)·(d₁×d₂)| / |d₁×d₂| (Spatprodukt).",
-        "Schnittwinkel Geraden: cos α = |d₁·d₂| / (|d₁|·|d₂|) — stets spitzer Winkel.",
-        "Winkel Gerade–Ebene: sin α = |d·n| / (|d|·|n|) — Komplement zum Normalenwinkel.",
-        "Diederwinkel: cos α = |n₁·n₂| / (|n₁|·|n₂|) — Winkel zwischen Normalenvektoren.",
+        "Abstand windschiefer Geraden: d = |(r₂−r₁)×(d₁×d₂)| / |d₁×d₂| (Spatprodukt).",
+        "Schnittwinkel Geraden: cos α = |d₁×d₂| / (|d₁|×|d₂|) — stets spitzer Winkel.",
+        "Winkel Gerade–Ebene: sin α = |d×n| / (|d|×|n|) — Komplement zum Normalenwinkel.",
+        "Diederwinkel: cos α = |n₁×n₂| / (|n₁|×|n₂|) — Winkel zwischen Normalenvektoren.",
         "Strahlentherapie: Sicherheitsabstand Tumor–Risikorgan als vektorielle Distanzberechnung.",
         "Ganganalyse: Gelenkwinkel = Schnittwinkel der Knochen-Richtungsvektoren.",
       ],
@@ -1335,7 +1335,7 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
           explanation:
             "Einsetzen: $|1 + 2 \\cdot 1 + 2 \\cdot 1 - 10| = |1 + 2 + 2 - 10| = |-5| = 5$. Betrag des Normalenvektors: $|(1,2,2)| = \\sqrt{1+4+4} = 3$. Abstand: $d = 5/3 \\approx 1{,}67$. Der Normalenvektor $(1,2,2)$ hat den praktischen Betrag 3, was die Berechnung vereinfacht.",
           hints: [
-            "Formel: d = |a·p₁ + b·p₂ + c·p₃ − d| / √(a²+b²+c²).",
+            "Formel: d = |a×p₁ + b×p₂ + c×p₃ − d| / √(a²+b²+c²).",
             "Normalenvektor (1,2,2): Betrag = √(1+4+4) = 3.",
           ],
           tags: ["punkt-ebene-abstand", "hesse-normalform", "analytische-geometrie"],
@@ -1350,7 +1350,7 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
             "Im dreidimensionalen Raum konnen zwei Geraden **windschief** sein: Sie haben keinen Schnittpunkt und sind nicht parallel. Dies ist nur im 3D moglich — in der Ebene (2D) schneiden sich nicht-parallele Geraden immer. Der Abstand windschiefer Geraden wird uber das Spatprodukt berechnet: $d = |(\\vec{r_2}-\\vec{r_1}) \\cdot (\\vec{d_1} \\times \\vec{d_2})| / |\\vec{d_1} \\times \\vec{d_2}|$.",
           hints: [
             "In 2D gibt es nur parallel oder schneidend. Was ist im 3D zusatzlich moglich?",
-            "Wenn Geraden sich nicht schneiden und nicht parallel sind, heisst das...",
+            "Wenn Geraden sich nicht schneiden und nicht parallel sind, heißt das...",
           ],
           tags: ["lagebeziehung", "windschief", "analytische-geometrie"],
           difficulty: 1,

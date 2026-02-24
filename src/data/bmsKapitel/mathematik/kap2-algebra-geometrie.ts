@@ -95,7 +95,7 @@ Eine quadratische Gleichung hat die Normalform ax² + bx + c = 0 (a ungleich nul
 
 x = (−b +/- Wurzel aus (b² − 4ac)) / (2a)
 
-Der Ausdruck D = b² − 4ac heisst Diskriminante:
+Der Ausdruck D = b² − 4ac heißt Diskriminante:
 - D > 0: zwei verschiedene reelle Lösungen
 - D = 0: genau eine Lösung (Doppellösung): x = − b / (2a)
 - D < 0: keine reelle Lösung
@@ -116,7 +116,7 @@ Bei Multiplikation oder Division mit einer negativen Zahl kehrt sich das Ungleic
 
 Beispiel: − 3x + 6 > 12. Subtrahiere 6: − 3x > 6. Dividiere durch − 3 (Vorzeichen dreht um!): x < − 2.
 
-Doppelte Ungleichungen: Alle Operationen auf alle drei Teile anwenden. Beispiel: 1 ≤ 2x − 3 kleiner 7. Addiere 3 überall: 4 ≤ 2x kleiner 10. Dividiere durch 2: 2 ≤ x kleiner 5. Lösungsmenge: [2, 5).
+Doppelte Ungleichungen: Alle Operationen auf alle drei Teile anwenden. Beispiel: 1 ≤ 2x − 3 < 7. Addiere 3 überall: 4 ≤ 2x < 10. Dividiere durch 2: 2 ≤ x < 5. Lösungsmenge: [2, 5).
 
 > **Merke:** Ungleichungs-Falle: Bei Multiplikation/Division mit einer NEGATIVEN Zahl dreht sich das Ungleichungszeichen um! Aus < wird >, aus ≥ wird ≤. Positive Zahlen → kein Umdrehen.
 

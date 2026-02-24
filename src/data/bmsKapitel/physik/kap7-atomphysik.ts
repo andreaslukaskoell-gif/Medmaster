@@ -607,7 +607,7 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
             "Gesucht: Anzahl n der Halbwertszeiten, bis A = 100 Bq. 800 · (1/2)ⁿ = 100 → (1/2)ⁿ = 100/800 = 1/8 = (1/2)³ → n = 3. Kontrolle: 800 → 400 (8d) → 200 (16d) → 100 (24d). Die Zeit beträgt t = n · T½ = 3 · 8 d = 24 Tage. Dies ist klinisch relevant: Nach der ¹³¹I-Schilddrüsentherapie muss der Patient Kontaktbeschränkungen einhalten, bis die Aktivität unter einen Schwellenwert fällt.",
           hints: [
             "Stelle A = A₀·(½)ⁿ nach n um, dann t = n·T½.",
-            "Wieviel mal muss man 800 halbieren, bis man 100 erhält? 800 → 400 → 200 → 100 (3 Schritte).",
+            "Wie oft muss man 800 halbieren, bis man 100 erhält? 800 → 400 → 200 → 100 (3 Schritte).",
           ],
           tags: ["jod-131", "halbwertszeit", "aktivitätsabfall"],
           difficulty: 2,
@@ -866,7 +866,7 @@ Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/
           explanation:
             "12,5 % = 1/8 = (1/2)³, also sind 3 Halbwertsschichtdicken erforderlich. Benötigte Dicke: 3 × 5 mm = 15 mm. Allgemein gilt: I/I₀ = (1/2)ⁿ mit n = Anzahl der HVL. Lösung: (1/2)ⁿ = 0,125 = (1/2)³ → n = 3 → Dicke = 3 × HVL = 15 mm. Die Halbwertsschichtdicke HVL = ln2/μ ist das Analogon zur Halbwertszeit in der Radioaktivität und wird zur praktischen Abschirmberechnung eingesetzt.",
           hints: [
-            "12,5 % = 1/8: Wieviel Halbierungen brauche ich, um von 100 % auf 12,5 % zu gelangen?",
+            "12,5 % = 1/8: Wie viele Halbierungen brauche ich, um von 100 % auf 12,5 % zu gelangen?",
             "HVL ist die Dicke für Halbierung. Für n Halbierungen: n × HVL Gesamtdicke.",
           ],
           tags: ["halbwertsschichtdicke", "abschirmung", "blei"],

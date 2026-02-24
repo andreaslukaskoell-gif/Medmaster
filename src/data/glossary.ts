@@ -480,34 +480,34 @@ export const glossaryEntries: GlossaryEntry[] = [
     description: "Physikalische Größen; messbare Eigenschaften der Natur.",
   },
 
-  // ============= PHYSIK – Mechanik (phys-kap2) =============
+  // ============= PHYSIK – Mechanik (phys-kap1) =============
   {
     term: "Wellenlänge",
-    chapterId: "phys-kap2",
+    chapterId: "phys-kap1",
     subject: "physik",
     description: "Räumliche Periode einer Welle; λ = c/f.",
   },
   {
     term: "Frequenz",
-    chapterId: "phys-kap2",
+    chapterId: "phys-kap1",
     subject: "physik",
     description: "Anzahl der Schwingungen pro Sekunde; Einheit Hertz.",
   },
   {
     term: "Druck",
-    chapterId: "phys-kap2",
+    chapterId: "phys-kap1",
     subject: "physik",
     description: "Kraft pro Fläche; p = F/A, Einheit Pascal.",
   },
   {
     term: "Masse",
-    chapterId: "phys-kap2",
+    chapterId: "phys-kap1",
     subject: "physik",
     description: "Maß für Trägheit; unveränderlich (nicht Gewichtskraft!).",
   },
   {
     term: "Kraft",
-    chapterId: "phys-kap2",
+    chapterId: "phys-kap1",
     subject: "physik",
     description: "Vektorgröße; F = m·a (Newton).",
   },
@@ -548,10 +548,10 @@ export const glossaryEntries: GlossaryEntry[] = [
     description: "Elektrischer Widerstand; R = U/I, Einheit Ohm.",
   },
 
-  // ============= PHYSIK – Optik (phys-kap6) =============
+  // ============= PHYSIK – Optik (phys-kap5) =============
   {
     term: "Optik",
-    chapterId: "phys-kap6",
+    chapterId: "phys-kap5",
     subject: "physik",
     description: "Lehre von Licht und optischen Phänomenen.",
   },
@@ -564,68 +564,68 @@ export const glossaryEntries: GlossaryEntry[] = [
     description: "Physik von Atomen und Kernen.",
   },
 
-  // ============= MATHEMATIK – Zehnerpotenzen (math-kap1) =============
+  // ============= MATHEMATIK – Zehnerpotenzen (mathe-kap1) =============
   {
     term: "Zehnerpotenzen",
-    chapterId: "math-kap1",
+    chapterId: "mathe-kap1",
     subject: "mathematik",
     description: "Exponentialschreibweise für große und kleine Zahlen.",
   },
 
-  // ============= MATHEMATIK – Algebra (math-kap2) =============
+  // ============= MATHEMATIK – Algebra (mathe-kap2) =============
   {
     term: "Algebra",
-    chapterId: "math-kap2",
+    chapterId: "mathe-kap2",
     subject: "mathematik",
     description: "Rechengesetze und Gleichungslösungen.",
   },
 
-  // ============= MATHEMATIK – Geometrie (math-kap3) =============
+  // ============= MATHEMATIK – Geometrie (mathe-kap2) =============
   {
     term: "Geometrie",
-    chapterId: "math-kap3",
+    chapterId: "mathe-kap2",
     subject: "mathematik",
     description: "Lehre von Figuren, Formen und Raum.",
   },
 
-  // ============= MATHEMATIK – Einheiten (math-kap4) =============
+  // ============= MATHEMATIK – Einheiten (mathe-kap1) =============
   {
     term: "Einheiten",
-    chapterId: "math-kap4",
+    chapterId: "mathe-kap1",
     subject: "mathematik",
     description: "SI-Einheiten und Umrechnungen.",
   },
 
-  // ============= MATHEMATIK – Funktionen (math-kap5) =============
+  // ============= MATHEMATIK – Funktionen (mathe-kap5) =============
   {
     term: "Logarithmus",
-    chapterId: "math-kap5",
+    chapterId: "mathe-kap5",
     subject: "mathematik",
     description: "Umkehrfunktion der Exponentialfunktion; log_b(x).",
   },
   {
     term: "Integral",
-    chapterId: "math-kap5",
+    chapterId: "mathe-kap5",
     subject: "mathematik",
     description: "Flächeninhalt unter einer Kurve; Umkehrung der Ableitung.",
   },
   {
     term: "Ableitung",
-    chapterId: "math-kap5",
+    chapterId: "mathe-kap5",
     subject: "mathematik",
     description: "Momentane Änderungsrate; Steigung der Tangente.",
   },
 
-  // ============= MATHEMATIK – Vektorrechnung (math-kap6) =============
+  // ============= MATHEMATIK – Vektorrechnung (mathe-kap6) =============
   {
     term: "Matrix",
-    chapterId: "math-kap6",
+    chapterId: "mathe-kap6",
     subject: "mathematik",
     description: "Rechteckiges Zahlenschema; für lineare Abbildungen.",
   },
   {
     term: "Vektor",
-    chapterId: "math-kap6",
+    chapterId: "mathe-kap6",
     subject: "mathematik",
     description: "Mathematisches Objekt mit Betrag und Richtung.",
   },

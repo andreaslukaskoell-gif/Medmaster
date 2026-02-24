@@ -101,7 +101,7 @@ Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl
 
 ## Multiplikation von Zahlen in Zehnerpotenzen-Form
 
-**Bisher haben wir gesehen:** Reine Zehnerpotenzen 10ᵃ × 10ᵇ. **In der Praxis** stehen oft Ausdrücke wie **3 × 10⁴** oder **1,4 × 10⁻¹** — hier ist die Zahl in **Zehnerpotenzen-Form** geschrieben: ein **Vorfaktor** (die Zahl vor dem „mal“) × eine Zehnerpotenz. **Um solche Produkte zu berechnen,** gehst du in zwei Schritten vor.
+**Bisher haben wir gesehen:** Reine Zehnerpotenzen 10ᵃ × 10ᵇ. **In der Praxis** stehen oft Ausdrücke wie **3 × 10⁴** oder **1,4 × 10⁻¹** — hier ist die Zahl in **Zehnerpotenzen-Form** geschrieben: ein **Vorfaktor** (die Zahl vor dem „×“) × eine Zehnerpotenz. **Um solche Produkte zu berechnen,** gehst du in zwei Schritten vor.
 
 Wenn Ausdrücke der Form **(a × 10ᵐ) × (b × 10ⁿ)** multipliziert werden:
 
@@ -263,7 +263,7 @@ Zur **schnellen Wiederholung** die vier Regeln im Überblick:
 
 **Beispiel 2 — Pharmakologie:** Die therapeutische Konzentration von Digoxin im Serum liegt bei 0,5–2 × 10⁻⁹ g/mL (Nanogrammbereich). Die toxische Konzentration beginnt bei >2 × 10⁻⁹ g/mL. Das therapeutische Fenster ist also extrem schmal — ein Faktor von ca. 4. Das erklärt, warum Digoxin engmaschiges Monitoring erfordert.
 
-**Beispiel 3 — Zellbiologie:** Menschliche Zellen haben einen Durchmesser von ca. 10–100 µm = 10⁻⁵ bis 10⁻⁴ m. Viren messen ca. 20–300 nm = 2 × 10⁻⁸ bis 3 × 10⁻⁷ m. Das Verhältnis Zelle zu Virus beträgt 10⁻⁵ / 10⁻⁷ = 10² = Faktor 100 — eine Zelle ist mindestens 100-mal größer als ein typisches Virus. Dieses Verhältnis erklärt, warum Viren problemlos in Zellen eindringen und sich dort vervielflältigen können.
+**Beispiel 3 — Zellbiologie:** Menschliche Zellen haben einen Durchmesser von ca. 10–100 µm = 10⁻⁵ bis 10⁻⁴ m. Viren messen ca. 20–300 nm = 2 × 10⁻⁸ bis 3 × 10⁻⁷ m. Das Verhältnis Zelle zu Virus beträgt 10⁻⁵ / 10⁻⁷ = 10² = Faktor 100 — eine Zelle ist mindestens 100-mal größer als ein typisches Virus. Dieses Verhältnis erklärt, warum Viren problemlos in Zellen eindringen und sich dort vervielfältigen können.
 
 Zusammenfassend ermöglichen Zehnerpotenzen das schnelle Abschätzen von Verhältnissen durch bloße Subtraktion der Exponenten, was in der klinischen Entscheidungsfindung und im wissenschaftlichen Denken unverzichtbar ist.`,
       },
@@ -833,7 +833,7 @@ Der Serumkreatinin-Normwert liegt bei 0,000088 mol/L — oder sauberer: **8,8 ×
 **Um mit der wissenschaftlichen Notation zu rechnen,** brauchst du zuerst die **Definition** und die **normalisierte Form**. **Dafür** die feste Konvention.
 
 Die **wissenschaftliche Notation** schreibt jede Zahl in der Form **a × 10ⁿ**, wobei:
-- **a** der **Vorfaktor** ist (die Zahl vor „mal 10ⁿ“) und
+- **a** der **Vorfaktor** ist (die Zahl vor „× 10ⁿ“) und
 - **n** der **Exponent** (ganze Zahl) ist.
 
 In der **normalisierten Form** gilt zusätzlich: **1 ≤ a < 10** — der Vorfaktor hat also genau **eine Stelle vor dem Komma** (1 bis 9,…). So ist die Schreibweise **eindeutig** und der Exponent gibt direkt die **Größenordnung** an.

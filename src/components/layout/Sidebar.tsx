@@ -187,9 +187,16 @@ interface SidebarProps {
   onClose: () => void;
   /** When true (e.g. chapter view): sidebar is overlay-only even on desktop, no reserved space. */
   focusMode?: boolean;
+  /** User has enabled Fokusmodus on chapter page → sidebar ausblenden (animate out). */
+  focusModeActive?: boolean;
 }
 
-export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps) {
+export function Sidebar({
+  mobileOpen,
+  onClose,
+  focusMode = false,
+  focusModeActive = false,
+}: SidebarProps) {
   const { user, signOut } = useAuth();
   const location = useLocation();
   const lastPathRef = useRef<HTMLDivElement>(null);
@@ -666,14 +673,14 @@ export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps
 
   return (
     <>
-      {/* Backdrop: immer wenn Sidebar offen (auf allen Viewports) */}
+      {/* Backdrop: nur wenn Sidebar offen und nicht Fokusmodus aktiv */}
       <AnimatePresence>
-        {mobileOpen && (
+        {mobileOpen && !focusModeActive && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.18, ease: [0.25, 0.1, 0.25, 1] }}
             className={cn(
               "fixed inset-0 bg-black/50 backdrop-blur-sm",
               focusMode ? "z-[110]" : "z-100"
@@ -684,23 +691,27 @@ export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps
         )}
       </AnimatePresence>
 
-      {/* Sidebar panel: immer eingeklappt, nur bei mobileOpen sichtbar (Overlay auf allen Viewports) */}
-      <aside
+      {/* Sidebar panel: bei focusModeActive ausblenden (animate out) */}
+      <motion.aside
+        initial={false}
+        animate={{
+          x: focusModeActive ? "-100%" : mobileOpen ? 0 : "-100%",
+        }}
+        transition={{ duration: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
         className={cn(
           "fixed left-0 top-0 h-screen flex flex-col",
           SIDEBAR_PANEL_WIDTH,
           "bg-[var(--sidebar-bg)] backdrop-blur-sm",
           "border-r border-[var(--border)]",
           focusMode ? "z-[120]" : "z-101",
-          "transition-transform duration-200 ease-out",
-          mobileOpen ? "translate-x-0" : "-translate-x-full"
+          focusModeActive && "pointer-events-none"
         )}
-        role={mobileOpen ? "dialog" : undefined}
-        aria-modal={mobileOpen ? true : undefined}
-        aria-label={mobileOpen ? "Hauptmenü" : undefined}
+        role={mobileOpen && !focusModeActive ? "dialog" : undefined}
+        aria-modal={mobileOpen && !focusModeActive ? true : undefined}
+        aria-label={mobileOpen && !focusModeActive ? "Hauptmenü" : undefined}
       >
         {sidebarContent}
-      </aside>
+      </motion.aside>
     </>
   );
 }
