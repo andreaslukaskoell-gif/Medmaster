@@ -38,7 +38,7 @@ import type {
   WortflüssigkeitQuestion,
   SyllogismQuestion,
 } from "@/data/kffGenerators";
-import { figurenAufgaben, figurenStrategyGuide } from "@/data/figurenGenerator";
+import { figurenAufgaben, figurenStrategyGuide, difficultyLabel } from "@/data/figurenGenerator";
 import type { FZAufgabe } from "@/data/figurenGenerator";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
@@ -411,7 +411,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
                     {i + 1}. {q.sequence.join(", ")}, ?, ?
                   </span>
                   <Badge variant="info" className="text-[10px]">
-                    {q.difficulty}
+                    {difficultyLabel(q.difficulty)}
                   </Badge>
                 </div>
                 {!correct && answers[q.id] !== undefined && (
@@ -948,7 +948,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
                   )}
                   <span className="font-medium text-sm">{i + 1}.</span>
                   <Badge variant="info" className="text-[10px]">
-                    {qu.difficulty}
+                    {difficultyLabel(qu.difficulty)}
                   </Badge>
                 </div>
                 <p className="text-sm text-gray-700 dark:text-gray-300 ml-7 mb-1">
@@ -1503,7 +1503,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                   )}
                   <span className="font-medium text-sm">Aufgabe {i + 1}</span>
                   <Badge variant="info" className="text-[10px]">
-                    {q.difficulty}
+                    {difficultyLabel(q.difficulty)}
                   </Badge>
                 </div>
                 <div className="flex items-center gap-4 ml-7 mb-2 flex-wrap">
@@ -1516,11 +1516,38 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                           viewBox="0 0 200 200"
                           className="w-10 h-10 bg-white dark:bg-gray-900 rounded"
                         >
-                          <path d={piece.path} fill={piece.fill} />
+                          <path
+                            d={piece.path}
+                            fill={piece.fill}
+                            stroke="#374151"
+                            strokeWidth="1.2"
+                          />
                         </svg>
                       ))}
                     </div>
                   </div>
+                  {q.pieces.some((p) => p.assemblyPath) && (
+                    <div>
+                      <p className="text-xs text-muted mb-1">So setzen sich die Teile zusammen:</p>
+                      <svg
+                        viewBox="0 0 200 200"
+                        className="w-20 h-20 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-700"
+                      >
+                        {q.pieces.map(
+                          (piece, pi) =>
+                            piece.assemblyPath && (
+                              <path
+                                key={pi}
+                                d={piece.assemblyPath}
+                                fill={piece.fill}
+                                stroke="#0e7490"
+                                strokeWidth="1.2"
+                              />
+                            )
+                        )}
+                      </svg>
+                    </div>
+                  )}
                   {correctOpt && (
                     <div>
                       <p className="text-xs text-green-600 dark:text-green-400 mb-1">
@@ -1536,7 +1563,13 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                           className="w-12 h-12 bg-green-50 dark:bg-green-900/20 rounded border border-green-300 dark:border-green-700"
                         >
                           {correctOpt.paths.map((p, pi) => (
-                            <path key={pi} d={p} fill="#22c55e" />
+                            <path
+                              key={pi}
+                              d={p}
+                              fill="#22c55e"
+                              stroke="#15803d"
+                              strokeWidth="1.2"
+                            />
                           ))}
                         </svg>
                       )}
@@ -1557,7 +1590,13 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                           className="w-12 h-12 bg-red-50 dark:bg-red-900/20 rounded border border-red-300 dark:border-red-700"
                         >
                           {selectedOpt.paths.map((p, pi) => (
-                            <path key={pi} d={p} fill="#ef4444" />
+                            <path
+                              key={pi}
+                              d={p}
+                              fill="#ef4444"
+                              stroke="#b91c1c"
+                              strokeWidth="1.2"
+                            />
                           ))}
                         </svg>
                       )}
@@ -1619,78 +1658,64 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
         />
       </div>
 
+      {/* MedAT-Layout: links Puzzleteile, rechts Antwortoptionen A–E */}
+      <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+        Welche Figur entsteht aus den Teilen? (Nur Drehen/Verschieben, keine Spiegelung.)
+      </p>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Left: Puzzle pieces */}
-        <Card>
+        <Card className="border-gray-200 dark:border-gray-700">
           <CardContent className="p-6">
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-              <Puzzle className="w-4 h-4 text-rose-500" /> Puzzleteile ({fzQ.pieces.length} Stücke)
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <p className="text-xs font-medium text-muted uppercase tracking-wider mb-3">
+              Puzzleteile
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center py-4 bg-gray-50/50 dark:bg-gray-900/30 rounded-lg">
               {fzQ.pieces.map((piece, pi) => (
                 <div
                   key={pi}
-                  className="bg-white dark:bg-gray-900 rounded-xl p-2 border border-gray-200 dark:border-gray-700 flex items-center justify-center aspect-square"
+                  className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 shrink-0"
                 >
-                  <svg viewBox="0 0 200 200" className="w-full h-full max-w-[100px] max-h-[100px]">
-                    <path d={piece.path} fill={piece.fill} />
+                  <svg viewBox="0 0 200 200" className="w-full h-full">
+                    <path d={piece.path} fill={piece.fill} stroke="#0e7490" strokeWidth="1.2" />
                   </svg>
                 </div>
               ))}
             </div>
           </CardContent>
         </Card>
-
-        {/* Right: Answer options */}
-        <Card>
-          <CardContent className="p-6">
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-4">
-              Welche Figur entsteht?
-            </h3>
-            <div className="grid grid-cols-2 gap-2">
-              {fzQ.options.map((opt) => {
-                const selected = answers[fzQ.id] === opt.id;
-                return (
-                  <button
-                    key={opt.id}
-                    onClick={() => setAnswers((p) => ({ ...p, [fzQ.id]: opt.id }))}
-                    className={`relative p-3 rounded-xl border-2 transition-all cursor-pointer flex flex-col items-center gap-2 ${
-                      opt.text ? "col-span-2" : "aspect-square"
-                    } ${
-                      selected
-                        ? "border-rose-500 bg-rose-50 dark:bg-rose-900/20 shadow-md"
-                        : "border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-600"
-                    }`}
-                  >
-                    <span
-                      className={`absolute top-1.5 left-2.5 text-xs font-bold ${
-                        selected
-                          ? "text-rose-600 dark:text-rose-400"
-                          : "text-gray-400 dark:text-gray-500"
-                      }`}
-                    >
-                      {opt.id.toUpperCase()}
-                    </span>
-                    {opt.text ? (
-                      <span className="text-sm text-gray-500 dark:text-gray-400 py-2">
-                        {opt.text}
-                      </span>
-                    ) : (
-                      <svg
-                        viewBox="0 0 200 200"
-                        className="w-full h-full max-w-[80px] max-h-[80px] mt-2"
-                      >
-                        {opt.paths.map((p, pi) => (
-                          <path key={pi} d={p} fill="#6b7280" />
-                        ))}
-                      </svg>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-          </CardContent>
-        </Card>
+        <div>
+          <p className="text-xs font-medium text-muted uppercase tracking-wider mb-3">
+            Antwortoptionen
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-5 lg:grid-cols-2 gap-3">
+            {fzQ.options.map((opt) => {
+              const selected = answers[fzQ.id] === opt.id;
+              return (
+                <button
+                  key={opt.id}
+                  onClick={() => setAnswers((p) => ({ ...p, [fzQ.id]: opt.id }))}
+                  className={`flex flex-col items-center justify-center min-h-[90px] p-3 rounded-lg border-2 transition-colors cursor-pointer ${
+                    selected
+                      ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                      : "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 hover:border-gray-300 dark:hover:border-gray-600"
+                  }`}
+                >
+                  <span className="text-sm font-bold text-gray-600 dark:text-gray-400 mb-1">
+                    {opt.id.toUpperCase()}
+                  </span>
+                  {opt.text ? (
+                    <span className="text-xs text-center text-muted leading-tight">{opt.text}</span>
+                  ) : (
+                    <svg viewBox="0 0 200 200" className="w-full max-w-[64px] max-h-[64px] flex-1">
+                      {opt.paths.map((p, pii) => (
+                        <path key={pii} d={p} fill={opt.fill} stroke="#0e7490" strokeWidth="1.2" />
+                      ))}
+                    </svg>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </div>
       </div>
 
       <div className="flex justify-between">

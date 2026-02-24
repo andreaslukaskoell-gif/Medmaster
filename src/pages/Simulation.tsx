@@ -1872,54 +1872,54 @@ export default function Simulation() {
     const aufgabe = q.figurenAufgabe;
     if (!aufgabe) return null;
     return (
-      <Card>
+      <Card className="border-gray-200 dark:border-gray-700">
         <CardContent className="p-6">
-          <p className="text-sm text-muted mb-4">
-            Welche Figur entsteht, wenn man alle Teile zusammensetzt?
+          <p className="text-xs font-medium text-muted uppercase tracking-wider mb-3">
+            Puzzleteile
           </p>
-
-          {/* Puzzle pieces */}
-          <div className="bg-white dark:bg-gray-900 rounded-lg p-4 mb-6">
-            <p className="text-xs text-muted mb-2">Puzzleteile:</p>
-            <div className="flex flex-wrap gap-3 justify-center">
-              {aufgabe.pieces.map((piece, i) => (
-                <svg key={i} viewBox="0 0 200 200" className="w-20 h-20">
-                  <path d={piece.path} fill={piece.fill} />
-                </svg>
-              ))}
-            </div>
-          </div>
-
-          {/* Options */}
-          <div className="grid grid-cols-2 gap-2">
-            {aufgabe.options.map((opt) => (
-              <button
-                key={opt.id}
-                onClick={() => setAnswers((p) => ({ ...p, [q.id]: opt.id }))}
-                className={`p-2 rounded-lg border-2 transition-colors cursor-pointer ${
-                  opt.text ? "col-span-2" : ""
-                } ${
-                  answers[q.id] === opt.id
-                    ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20"
-                    : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
-                }`}
+          <div className="flex flex-wrap gap-4 justify-center py-4 bg-gray-50/50 dark:bg-gray-900/30 rounded-lg mb-6">
+            {aufgabe.pieces.map((piece, i) => (
+              <div
+                key={i}
+                className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 shrink-0"
               >
-                {opt.text ? (
-                  <p className="text-sm text-gray-500 dark:text-gray-400 py-2 text-center">
-                    {opt.text}
-                  </p>
-                ) : (
-                  <svg viewBox="0 0 200 200" className="w-full h-auto">
-                    {opt.paths.map((p, i) => (
-                      <path key={i} d={p} fill="#6b7280" />
-                    ))}
-                  </svg>
-                )}
-                <p className="text-xs text-center font-bold text-gray-700 dark:text-gray-300 mt-1">
-                  {opt.id.toUpperCase()}
-                </p>
-              </button>
+                <svg viewBox="0 0 200 200" className="w-full h-full">
+                  <path d={piece.path} fill={piece.fill} stroke="#374151" strokeWidth="1.2" />
+                </svg>
+              </div>
             ))}
+          </div>
+          <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
+            Welche Figur entsteht aus den Teilen?
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
+            {aufgabe.options.map((opt) => {
+              const selected = answers[q.id] === opt.id;
+              return (
+                <button
+                  key={opt.id}
+                  onClick={() => setAnswers((p) => ({ ...p, [q.id]: opt.id }))}
+                  className={`flex flex-col items-center justify-center min-h-[100px] p-4 rounded-lg border-2 transition-colors cursor-pointer ${
+                    selected
+                      ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20"
+                      : "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 hover:border-gray-300 dark:hover:border-gray-600"
+                  }`}
+                >
+                  <span className="text-sm font-bold text-gray-600 dark:text-gray-400 mb-2">
+                    {opt.id.toUpperCase()}
+                  </span>
+                  {opt.text ? (
+                    <span className="text-xs text-center text-muted leading-tight">{opt.text}</span>
+                  ) : (
+                    <svg viewBox="0 0 200 200" className="w-full max-w-[72px] max-h-[72px] flex-1">
+                      {opt.paths.map((p, pi) => (
+                        <path key={pi} d={p} fill={opt.fill} stroke="#374151" strokeWidth="1.2" />
+                      ))}
+                    </svg>
+                  )}
+                </button>
+              );
+            })}
           </div>
         </CardContent>
       </Card>

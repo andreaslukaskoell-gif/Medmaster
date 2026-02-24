@@ -1,12 +1,16 @@
-// Programmatischer Generator für "Figuren zusammensetzen"
-// MedAT-authentisch: fill="#6b7280", kein stroke, 5 Optionen (a–e)
-// Seeded PRNG, difficulty-based rotation, ~20% "e ist korrekt"
+// Figuren zusammensetzen (KFF) – MedAT-Stil (IB_FZ_26)
+//
+// Zielfiguren werden strategisch zerschnitten (gerade Schnitte, klare Teile). STRATEGIC_SCHEMES;
+// Flächenvalidierung: Summe Teile ≈ Zielfigur. 5 Optionen A–E, 1 korrekt, E = "Keine ist richtig".
+// SVG: flaches Hellblau, klare Kontur. Lösungsansicht = dieselben Teile korrekt zusammengesetzt (assemblyPath).
 
 // ─── Types ───────────────────────────────────────────────────────────
 
 export interface FZPiece {
   path: string;
   fill: string;
+  /** Pfad in Assembly-Koordinaten (gleiches viewBox wie andere Teile); alle assemblyPath zusammen ergeben die zusammengesetzte Figur. */
+  assemblyPath?: string;
 }
 
 export interface FZOption {
@@ -16,12 +20,35 @@ export interface FZOption {
   text?: string;
 }
 
+/** Kanonische Schwierigkeit: easy (2–3 Teile, gerade Schnitte), medium (3–5, Rotation nötig), hard (5–7, komplex). */
+export type FZDifficultyLevel = "easy" | "medium" | "hard";
+
+/** Anzeige im UI: leicht / mittel / schwer. Akzeptiert auch deutsche Werte (für andere KFF-Module). */
+export function difficultyLabel(
+  level: FZDifficultyLevel | "leicht" | "mittel" | "schwer"
+): "leicht" | "mittel" | "schwer" {
+  if (level === "leicht" || level === "mittel" || level === "schwer") return level;
+  return level === "easy" ? "leicht" : level === "medium" ? "mittel" : "schwer";
+}
+
+/** @deprecated Nutze FZDifficultyLevel + difficultyLabel für Anzeige. */
+export type FZDifficulty = "leicht" | "mittel" | "schwer";
+
+/** Exakte Position + Rotation eines Teils in der Lösungsfigur (Kantenbündig, keine Überlappung). */
+export type FZSolutionLayoutItem = { rotation: number; translation: [number, number] };
+
 export interface FZAufgabe {
   id: string;
+  /** Zielfigur als SVG-Pfad (200×200); für Validierung und Referenz. */
+  targetShapePath?: string;
   pieces: FZPiece[];
+  /** Immer genau 5 Optionen (A–E). E = "Keine der Figuren ist richtig". */
   options: FZOption[];
-  correctOptionId: string;
-  difficulty: "leicht" | "mittel" | "schwer";
+  correctOptionId: "a" | "b" | "c" | "d" | "e";
+  /** Echte Schwierigkeitsstufe (easy/medium/hard). */
+  difficulty: FZDifficultyLevel;
+  /** Lösung: Position + Rotation pro Teil; bei strategischen Schnitten rotation 0 (exakte Überdeckung). */
+  solutionLayout?: FZSolutionLayoutItem[];
   explanation: string;
 }
 
@@ -29,7 +56,9 @@ export interface FZAufgabe {
 
 const PI = Math.PI;
 const TAU = 2 * PI;
-const FILL = "#6b7280";
+/** Einheitliche Figurenfarbe (hellblau, MedAT-ähnlich). Export für UI. */
+export const FILL = "#5eb8f0";
+const STROKE = "#0e7490";
 
 function rd(n: number): number {
   return Math.round(n * 100) / 100;
@@ -74,6 +103,17 @@ function centroid(pts: Pt[]): Pt {
 
 function midPt(a: Pt, b: Pt): Pt {
   return [rd((a[0] + b[0]) / 2), rd((a[1] + b[1]) / 2)];
+}
+
+/** Fläche eines Polygons (Shoelace); für Validierung: Summe Teile ≈ Zielfigur. */
+function polygonArea(pts: Pt[]): number {
+  let area = 0;
+  const n = pts.length;
+  for (let i = 0; i < n; i++) {
+    const j = (i + 1) % n;
+    area += pts[i][0] * pts[j][1] - pts[j][0] * pts[i][1];
+  }
+  return Math.abs(area) / 2;
 }
 
 function circPath(cx: number, cy: number, r: number): string {
@@ -198,7 +238,8 @@ const FIGNAME: Record<FK, string> = {
   vollkreis: "einen Vollkreis",
 };
 
-/** 3 similar distractors per figure (same visual category) */
+/** Plausible Distraktoren pro Figur: gleiche Kategorie (z. B. gleiche Eckenzahl, andere Winkel/Silhouette).
+ * So ist nur die richtige Option aus den Teilen exakt rekonstruierbar; keine triviale Lösung durch reines Kanten-Zählen. */
 const SIMILAR: Record<FK, FK[]> = {
   dreieck: ["fünfeck", "raute", "trapez"],
   quadrat: ["raute", "parallelogramm", "trapez"],
@@ -215,11 +256,297 @@ const SIMILAR: Record<FK, FK[]> = {
   vollkreis: ["dreiviertelkreis", "halbkreis", "viertelkreis"],
 };
 
-// ─── Piece Splitting (generated at CX=100, CY=100, R=65) ────────────
+// ─── Zielfiguren & strategische Schnitte (MedAT IB_FZ_26-Stil) ───────
+// Gerade Schnitte, wenige klare Teile, realistisch zusammensetzbar.
 
 const CX = 100,
   CY = 100,
   R = 65;
+
+/** Zielfigur als Polygon-Punkte (für Flächenvalidierung und strategische Schnitte). */
+function getTargetVerts(fig: FK): Pt[] {
+  if (POLY_SIDES[fig]) {
+    return polygonPts(CX, CY, R, POLY_SIDES[fig]!);
+  }
+  if (fig === "raute" || fig === "parallelogramm" || fig === "trapez") {
+    return quadVerts(fig);
+  }
+  const [tot, st] = CIRCLE_SPECS[fig]!;
+  const steps = Math.max(12, Math.round((tot * 12) / PI));
+  const pts: Pt[] = [[CX, CY]];
+  for (let i = 0; i <= steps; i++) {
+    const a = st + (tot * i) / steps;
+    pts.push([rd(CX + R * Math.cos(a)), rd(CY + R * Math.sin(a))]);
+  }
+  return pts;
+}
+
+/** Strategischer Schnitt: Quadrat in 2 Teile (Diagonale). */
+function cutQuadratDiagonal(): Pt[][] {
+  const v = polygonPts(CX, CY, R, 4);
+  return [
+    [v[0], v[1], v[2]],
+    [v[0], v[2], v[3]],
+  ];
+}
+
+/** Strategischer Schnitt: Quadrat in 4 Teile (von Mittelpunkt zu Ecken). */
+function cutQuadratCenter4(): Pt[][] {
+  const v = polygonPts(CX, CY, R, 4);
+  const c = centroid(v);
+  return [
+    [c, v[0], v[1]],
+    [c, v[1], v[2]],
+    [c, v[2], v[3]],
+    [c, v[3], v[0]],
+  ];
+}
+
+/** Strategischer Schnitt: Dreieck in 2 Teile (Median). */
+function cutDreieckMedian(): Pt[][] {
+  const v = polygonPts(CX, CY, R, 3);
+  const m = midPt(v[1], v[2]);
+  return [
+    [v[0], v[1], m],
+    [v[0], m, v[2]],
+  ];
+}
+
+/** Strategischer Schnitt: Sechseck in 3 Teile (je 2 Kanten vom Zentrum). */
+function cutSechseck3(): Pt[][] {
+  const v = polygonPts(CX, CY, R, 6);
+  const c = centroid(v);
+  return [
+    [c, v[0], v[1], v[2]],
+    [c, v[2], v[3], v[4]],
+    [c, v[4], v[5], v[0]],
+  ];
+}
+
+/** Strategischer Schnitt: Sechseck in 2 Teile (durch gegenüberliegende Ecken). */
+function cutSechseck2(): Pt[][] {
+  const v = polygonPts(CX, CY, R, 6);
+  return [
+    [v[0], v[1], v[2], v[3]],
+    [v[0], v[3], v[4], v[5]],
+  ];
+}
+
+/** Strategischer Schnitt: Halbkreis in 2 Sektoren. */
+function cutHalbkreis2(): Pt[][] {
+  const [tot, st] = CIRCLE_SPECS["halbkreis"]!;
+  const mid = st + tot / 2;
+  return [arcToPts(CX, CY, R, st, mid), arcToPts(CX, CY, R, mid, st + tot)];
+}
+
+/** Strategischer Schnitt: Vollkreis in 3 gleiche Sektoren. */
+function cutVollkreis3(): Pt[][] {
+  const [tot, st] = CIRCLE_SPECS["vollkreis"]!;
+  const step = tot / 3;
+  return [
+    arcToPts(CX, CY, R, st, st + step),
+    arcToPts(CX, CY, R, st + step, st + 2 * step),
+    arcToPts(CX, CY, R, st + 2 * step, st + tot),
+  ];
+}
+
+/** Strategischer Schnitt: Vollkreis in 4 gleiche Sektoren. */
+function cutVollkreis4(): Pt[][] {
+  const [tot, st] = CIRCLE_SPECS["vollkreis"]!;
+  const step = tot / 4;
+  return [
+    arcToPts(CX, CY, R, st, st + step),
+    arcToPts(CX, CY, R, st + step, st + 2 * step),
+    arcToPts(CX, CY, R, st + 2 * step, st + 3 * step),
+    arcToPts(CX, CY, R, st + 3 * step, st + tot),
+  ];
+}
+
+/** Strategischer Schnitt: Fünfeck in 3 Teile (Zentrum zu Kanten). */
+function cutFünfeck3(): Pt[][] {
+  const v = polygonPts(CX, CY, R, 5);
+  const c = centroid(v);
+  return [
+    [c, v[0], v[1], v[2]],
+    [c, v[2], v[3]],
+    [c, v[3], v[4], v[0]],
+  ];
+}
+
+/** Strategischer Schnitt: Trapez in 2 Teile (parallel zur Grundlinie). */
+function cutTrapez2(): Pt[][] {
+  const v = quadVerts("trapez");
+  const m1 = midPt(v[0], v[1]);
+  const m2 = midPt(v[2], v[3]);
+  return [
+    [v[0], v[1], m2, m1],
+    [m1, m2, v[3], v[2]],
+  ];
+}
+
+/** Raute in 2 Teile (eine Diagonale). */
+function cutRaute2(): Pt[][] {
+  const v = quadVerts("raute");
+  return [
+    [v[0], v[1], v[2]],
+    [v[0], v[2], v[3]],
+  ];
+}
+
+/** Viertelkreis in 2 Teile (Winkelhalbierende). */
+function cutViertelkreis2(): Pt[][] {
+  const [tot, st] = CIRCLE_SPECS["viertelkreis"]!;
+  const mid = st + tot / 2;
+  return [arcToPts(CX, CY, R, st, mid), arcToPts(CX, CY, R, mid, st + tot)];
+}
+
+/** Sechseck in 6 Teile (Zentrum zu jeder Ecke) – schwer. */
+function cutSechseck6(): Pt[][] {
+  const v = polygonPts(CX, CY, R, 6);
+  const c = centroid(v);
+  return Array.from({ length: 6 }, (_, i) => [c, v[i], v[(i + 1) % 6]]);
+}
+
+/** Achteck in 4 Teile (je 2 gegenüberliegende Ecken) – schwer. */
+function cutAchteck4(): Pt[][] {
+  const v = polygonPts(CX, CY, R, 8);
+  const c = centroid(v);
+  return [
+    [c, v[0], v[1], v[2]],
+    [c, v[2], v[3], v[4]],
+    [c, v[4], v[5], v[6]],
+    [c, v[6], v[7], v[0]],
+  ];
+}
+
+/** Fünfeck in 5 Teile (Zentrum zu jeder Ecke) – schwer. */
+function cutFünfeck5(): Pt[][] {
+  const v = polygonPts(CX, CY, R, 5);
+  const c = centroid(v);
+  return Array.from({ length: 5 }, (_, i) => [c, v[i], v[(i + 1) % 5]]);
+}
+
+/** Vollkreis in 6 gleiche Sektoren – schwer. */
+function cutVollkreis6(): Pt[][] {
+  const [tot, st] = CIRCLE_SPECS["vollkreis"]!;
+  const step = tot / 6;
+  return Array.from({ length: 6 }, (_, i) =>
+    arcToPts(CX, CY, R, st + i * step, st + (i + 1) * step)
+  );
+}
+
+/** Siebeneck in 7 Teile (Zentrum zu jeder Ecke) – schwer. */
+function cutSiebeneck7(): Pt[][] {
+  const v = polygonPts(CX, CY, R, 7);
+  const c = centroid(v);
+  return Array.from({ length: 7 }, (_, i) => [c, v[i], v[(i + 1) % 7]]);
+}
+
+/** Dreiviertelkreis in 3 Sektoren – mittel. */
+function cutDreiviertelkreis3(): Pt[][] {
+  const [tot, st] = CIRCLE_SPECS["dreiviertelkreis"]!;
+  const step = tot / 3;
+  return [
+    arcToPts(CX, CY, R, st, st + step),
+    arcToPts(CX, CY, R, st + step, st + 2 * step),
+    arcToPts(CX, CY, R, st + 2 * step, st + tot),
+  ];
+}
+
+const STRATEGIC_SCHEMES: Array<{ fig: FK; pieces: () => Pt[][]; diff: FZDifficultyLevel }> = [
+  // ── Easy: 2–3 Teile, gerade Schnitte ──
+  { fig: "quadrat", pieces: cutQuadratDiagonal, diff: "easy" },
+  { fig: "dreieck", pieces: cutDreieckMedian, diff: "easy" },
+  { fig: "raute", pieces: cutRaute2, diff: "easy" },
+  { fig: "halbkreis", pieces: cutHalbkreis2, diff: "easy" },
+  { fig: "viertelkreis", pieces: cutViertelkreis2, diff: "easy" },
+  // ── Medium: 3–5 Teile, 1–2 Rotationen ──
+  { fig: "quadrat", pieces: cutQuadratCenter4, diff: "medium" },
+  { fig: "sechseck", pieces: cutSechseck2, diff: "medium" },
+  { fig: "sechseck", pieces: cutSechseck3, diff: "medium" },
+  { fig: "vollkreis", pieces: cutVollkreis3, diff: "medium" },
+  { fig: "vollkreis", pieces: cutVollkreis4, diff: "medium" },
+  { fig: "fünfeck", pieces: cutFünfeck3, diff: "medium" },
+  { fig: "trapez", pieces: cutTrapez2, diff: "medium" },
+  { fig: "dreiviertelkreis", pieces: cutDreiviertelkreis3, diff: "medium" },
+  // ── Hard: 5–7 Teile, mehrere Rotationen ──
+  { fig: "sechseck", pieces: cutSechseck6, diff: "hard" },
+  { fig: "achteck", pieces: cutAchteck4, diff: "hard" },
+  { fig: "fünfeck", pieces: cutFünfeck5, diff: "hard" },
+  { fig: "vollkreis", pieces: cutVollkreis6, diff: "hard" },
+  { fig: "siebeneck", pieces: cutSiebeneck7, diff: "hard" },
+];
+
+/** Flächenvalidierung: Polygone exakt (1e-6), Kreissegmente relativ (2 %), da arcToPts-Polygone nur Näherung. */
+const AREA_TOLERANCE_POLY = 1e-6;
+
+function isCircleFig(fig: FK): boolean {
+  return !!CIRCLE_SPECS[fig];
+}
+
+/** Zielfläche: Polygone exakt über Shoelace, Kreissegmente analytisch (R²·θ/2). */
+function getTargetArea(fig: FK): number {
+  if (isCircleFig(fig)) {
+    const [tot] = CIRCLE_SPECS[fig]!;
+    return (R * R * tot) / 2;
+  }
+  return polygonArea(getTargetVerts(fig));
+}
+
+/** Toleranz für Kreissegmente: 2 % der Zielfläche (Diskretisierungsfehler von arcToPts). */
+function getAreaTolerance(fig: FK): number {
+  return isCircleFig(fig) ? Math.max(0.5, getTargetArea(fig) * 0.02) : AREA_TOLERANCE_POLY;
+}
+
+/** Skaliert/zentriert ein Polygon-Set in 200×200 (ein gemeinsamer Transform für exakte Überdeckung). */
+function scaleToViewBox(pieces: Pt[][], pad: number): Pt[][] {
+  let minX = Infinity,
+    maxX = -Infinity,
+    minY = Infinity,
+    maxY = -Infinity;
+  for (const pts of pieces) {
+    for (const [x, y] of pts) {
+      minX = Math.min(minX, x);
+      maxX = Math.max(maxX, x);
+      minY = Math.min(minY, y);
+      maxY = Math.max(maxY, y);
+    }
+  }
+  const midX = (minX + maxX) / 2,
+    midY = (minY + maxY) / 2;
+  const w = maxX - minX || 1,
+    h = maxY - minY || 1;
+  const scale = Math.min((200 - 2 * pad) / w, (200 - 2 * pad) / h);
+  return pieces.map((pts) =>
+    pts.map(([x, y]) => [rd(100 + (x - midX) * scale), rd(100 + (y - midY) * scale)] as Pt)
+  );
+}
+
+/** Liefert Display-Pfade (rotiert, pro Teil zentriert) und exakte Assembly-Pfade (Roh-Teile, keine Rotation). */
+function makePiecesFromRaw(
+  rawPieces: Pt[][],
+  diff: FZDifficultyLevel,
+  seed: number
+): { display: string[]; assembly: string[]; solutionLayout: FZSolutionLayoutItem[] } {
+  const rand = createRng(seed);
+  const angles = rawPieces.map(() => quantizedAngleForLevel(diff, rand));
+  const displayPaths = rawPieces.map((pts, i) => pts2path(transformPiece(pts, angles[i])));
+  // Lösung = exakt dieselben Teile ohne Rotation, gemeinsam skaliert → kantenbündig, keine Lücken/Überlappung
+  const assemblyScaled = scaleToViewBox(rawPieces, 15);
+  const assemblyPaths = assemblyScaled.map((pts) => pts2path(pts));
+  const solutionLayout: FZSolutionLayoutItem[] = rawPieces.map(() => ({
+    rotation: 0,
+    translation: [100, 100],
+  }));
+  return { display: displayPaths, assembly: assemblyPaths, solutionLayout };
+}
+
+/** Quantisierte Rotation je nach Level (für Display-Verschlüsselung). */
+function quantizedAngleForLevel(level: FZDifficultyLevel, rand: () => number): number {
+  if (level === "easy") return Math.floor(rand() * 4) * (PI / 2);
+  if (level === "medium") return Math.floor(rand() * 8) * (PI / 4);
+  return Math.floor(rand() * 24) * (PI / 12);
+}
 
 /** Split polygon from centroid → vertices into numPieces sectors */
 function splitPoly(verts: Pt[], numPieces: number, rand: () => number): Pt[][] {
@@ -320,13 +647,19 @@ const CIRCLE_SPECS: Partial<Record<FK, [number, number]>> = {
   viertelkreis: [PI / 2, -PI / 2],
 };
 
-/** Generate piece SVG paths: split → rotate (quantized) → center+scale */
+/** Rotate piece in figure coords (no per-piece scale); for assembly view. */
+function rotatePieceInPlace(pts: Pt[], angle: number): Pt[] {
+  const c = centroid(pts);
+  return rotatePts(pts, angle, c[0], c[1]);
+}
+
+/** Generate piece SVG paths: split → rotate (quantized) → center+scale. Plus assembly paths in shared coords. */
 function makePieces(
   fig: FK,
   numPieces: number,
   diff: "leicht" | "mittel" | "schwer",
   seed: number
-): string[] {
+): { display: string[]; assembly: string[] } {
   const rand = createRng(seed);
 
   let rawPieces: Pt[][];
@@ -339,16 +672,46 @@ function makePieces(
     rawPieces = splitCirc(tot, st, numPieces, rand);
   }
 
-  return rawPieces.map((pts) => {
-    const angle = quantizedAngle(diff, rand);
-    return pts2path(transformPiece(pts, angle));
-  });
+  const angles = rawPieces.map(() => quantizedAngle(diff, rand));
+  const displayPaths = rawPieces.map((pts, i) => pts2path(transformPiece(pts, angles[i])));
+  const rotatedInFigure = rawPieces.map((pts, i) => rotatePieceInPlace(pts, angles[i]));
+
+  let minX = Infinity,
+    maxX = -Infinity,
+    minY = Infinity,
+    maxY = -Infinity;
+  for (const pts of rotatedInFigure) {
+    for (const [x, y] of pts) {
+      minX = Math.min(minX, x);
+      maxX = Math.max(maxX, x);
+      minY = Math.min(minY, y);
+      maxY = Math.max(maxY, y);
+    }
+  }
+  const midX = (minX + maxX) / 2,
+    midY = (minY + maxY) / 2;
+  const pad = 15,
+    w = maxX - minX || 1,
+    h = maxY - minY || 1;
+  const scale = Math.min((200 - 2 * pad) / w, (200 - 2 * pad) / h);
+  const assemblyPaths = rotatedInFigure.map((pts) =>
+    pts2path(
+      pts.map(([x, y]) => [rd(100 + (x - midX) * scale), rd(100 + (y - midY) * scale)] as Pt)
+    )
+  );
+
+  return { display: displayPaths, assembly: assemblyPaths };
 }
 
 // ─── Option Generation ───────────────────────────────────────────────
 
-/** Normal task: correct figure at random position a–d + 3 similar distractors + e */
-function makeOptionsNormal(correct: FK, seed: number): { options: FZOption[]; correctId: string } {
+/** Normal task: correct figure at random position a–d + 3 similar distractors + e.
+ * Distraktoren: gleiche Kategorie (SIMILAR), z. B. gleiche Eckenzahl/falsche Winkel oder ähnliche Silhouette.
+ * Nur die richtige Option ist aus den gegebenen Teilen exakt rekonstruierbar (keine Spiegelung). */
+function makeOptionsNormal(
+  correct: FK,
+  seed: number
+): { options: FZOption[]; correctId: "a" | "b" | "c" | "d" } {
   const rand = createRng(seed);
   const distractors = [...SIMILAR[correct]];
   const pos = Math.floor(rand() * 4);
@@ -361,11 +724,11 @@ function makeOptionsNormal(correct: FK, seed: number): { options: FZOption[]; co
     fill: FILL,
   }));
   options.push({ id: "e", paths: [], fill: "none", text: "Keine der Figuren ist richtig" });
-  return { options, correctId: String.fromCharCode(97 + pos) };
+  return { options, correctId: String.fromCharCode(97 + pos) as "a" | "b" | "c" | "d" };
 }
 
 /** E-correct task: 4 distractors (none is the correct figure) + e is correct */
-function makeOptionsE(correct: FK, seed: number): { options: FZOption[]; correctId: string } {
+function makeOptionsE(correct: FK, seed: number): { options: FZOption[]; correctId: "e" } {
   const rand = createRng(seed);
   const sim = [...SIMILAR[correct]];
   // 4th distractor from a different category
@@ -386,63 +749,97 @@ function makeOptionsE(correct: FK, seed: number): { options: FZOption[]; correct
   return { options, correctId: "e" };
 }
 
-// ─── 30 Task Specifications ──────────────────────────────────────────
+// ─── Task Specifications (MedAT IB_FZ_26: strategische Schnitte, 5–10 Aufgaben) ─
 
-interface TaskSpec {
-  id: string;
-  fig: FK;
-  pc: number;
-  diff: "leicht" | "mittel" | "schwer";
-  seed: number;
-  eCorrect?: boolean; // ~20% of tasks
-}
+type TaskSpec =
+  | {
+      id: string;
+      schemeIndex: number; // Index in STRATEGIC_SCHEMES
+      seed: number;
+      eCorrect?: boolean;
+    }
+  | {
+      id: string;
+      fig: FK;
+      pc: number;
+      diff: FZDifficulty;
+      seed: number;
+      eCorrect?: boolean;
+    };
 
+/** 15 Aufgaben: 5× easy, 5× medium, 5× hard; 2× E korrekt. Nur geometrisch valide Aufgaben. */
 const TASKS: TaskSpec[] = [
-  // ── Leicht: 10 tasks, 3–4 pieces, 90° rotation ──
-  { id: "fz-1", fig: "vollkreis", pc: 3, diff: "leicht", seed: 1001 },
-  { id: "fz-2", fig: "quadrat", pc: 3, diff: "leicht", seed: 1002 },
-  { id: "fz-3", fig: "dreieck", pc: 3, diff: "leicht", seed: 1003 },
-  { id: "fz-4", fig: "halbkreis", pc: 3, diff: "leicht", seed: 1004 },
-  { id: "fz-5", fig: "raute", pc: 3, diff: "leicht", seed: 1005, eCorrect: true },
-  { id: "fz-6", fig: "sechseck", pc: 4, diff: "leicht", seed: 1006 },
-  { id: "fz-7", fig: "dreiviertelkreis", pc: 3, diff: "leicht", seed: 1007 },
-  { id: "fz-8", fig: "quadrat", pc: 4, diff: "leicht", seed: 1008, eCorrect: true },
-  { id: "fz-9", fig: "vollkreis", pc: 4, diff: "leicht", seed: 1009 },
-  { id: "fz-10", fig: "dreieck", pc: 4, diff: "leicht", seed: 1010 },
-
-  // ── Mittel: 12 tasks, 4–5 pieces, 45° rotation ──
-  { id: "fz-11", fig: "fünfeck", pc: 5, diff: "mittel", seed: 2001 },
-  { id: "fz-12", fig: "parallelogramm", pc: 4, diff: "mittel", seed: 2002 },
-  { id: "fz-13", fig: "trapez", pc: 4, diff: "mittel", seed: 2003 },
-  { id: "fz-14", fig: "sechseck", pc: 5, diff: "mittel", seed: 2004 },
-  { id: "fz-15", fig: "halbkreis", pc: 4, diff: "mittel", seed: 2005, eCorrect: true },
-  { id: "fz-16", fig: "raute", pc: 4, diff: "mittel", seed: 2006 },
-  { id: "fz-17", fig: "viertelkreis", pc: 4, diff: "mittel", seed: 2007 },
-  { id: "fz-18", fig: "siebeneck", pc: 5, diff: "mittel", seed: 2008 },
-  { id: "fz-19", fig: "quadrat", pc: 5, diff: "mittel", seed: 2009, eCorrect: true },
-  { id: "fz-20", fig: "vollkreis", pc: 5, diff: "mittel", seed: 2010 },
-  { id: "fz-21", fig: "trapez", pc: 5, diff: "mittel", seed: 2011 },
-  { id: "fz-22", fig: "parallelogramm", pc: 5, diff: "mittel", seed: 2012 },
-
-  // ── Schwer: 8 tasks, 5–7 pieces, 15° rotation ──
-  { id: "fz-23", fig: "achteck", pc: 6, diff: "schwer", seed: 3001 },
-  { id: "fz-24", fig: "siebeneck", pc: 7, diff: "schwer", seed: 3002 },
-  { id: "fz-25", fig: "dreiviertelkreis", pc: 5, diff: "schwer", seed: 3003, eCorrect: true },
-  { id: "fz-26", fig: "fünfeck", pc: 6, diff: "schwer", seed: 3004 },
-  { id: "fz-27", fig: "vollkreis", pc: 6, diff: "schwer", seed: 3005 },
-  { id: "fz-28", fig: "achteck", pc: 7, diff: "schwer", seed: 3006, eCorrect: true },
-  { id: "fz-29", fig: "halbkreis", pc: 5, diff: "schwer", seed: 3007 },
-  { id: "fz-30", fig: "sechseck", pc: 6, diff: "schwer", seed: 3008 },
+  { id: "fz-e1", schemeIndex: 0, seed: 1001 },
+  { id: "fz-e2", schemeIndex: 1, seed: 1002 },
+  { id: "fz-e3", schemeIndex: 2, seed: 1003 },
+  { id: "fz-e4", schemeIndex: 3, seed: 1004 },
+  { id: "fz-e5", schemeIndex: 4, seed: 1005, eCorrect: true },
+  { id: "fz-m1", schemeIndex: 5, seed: 2001 },
+  { id: "fz-m2", schemeIndex: 6, seed: 2002 },
+  { id: "fz-m3", schemeIndex: 7, seed: 2003 },
+  { id: "fz-m4", schemeIndex: 8, seed: 2004 },
+  { id: "fz-m5", schemeIndex: 9, seed: 2005 },
+  { id: "fz-h1", schemeIndex: 13, seed: 3001 },
+  { id: "fz-h2", schemeIndex: 14, seed: 3002 },
+  { id: "fz-h3", schemeIndex: 15, seed: 3003 },
+  { id: "fz-h4", schemeIndex: 16, seed: 3004, eCorrect: true },
+  { id: "fz-h5", schemeIndex: 17, seed: 3005 },
 ];
 
 // ─── Build & Export ──────────────────────────────────────────────────
 
-function buildAufgabe(spec: TaskSpec): FZAufgabe {
-  const pieces = makePieces(spec.fig, spec.pc, spec.diff, spec.seed);
+function buildStrategicAufgabe(spec: Extract<TaskSpec, { schemeIndex: number }>): FZAufgabe | null {
+  const scheme = STRATEGIC_SCHEMES[spec.schemeIndex];
+  if (!scheme) return null;
+  const rawPieces = scheme.pieces();
+  const targetArea = getTargetArea(scheme.fig);
+  const piecesArea = rawPieces.reduce((s, p) => s + polygonArea(p), 0);
+  const tolerance = getAreaTolerance(scheme.fig);
+  if (Math.abs(piecesArea - targetArea) > tolerance) {
+    console.warn(
+      `Figuren ${spec.id}: ungültig – Flächenabweichung ${Math.abs(piecesArea - targetArea).toFixed(4)} (Toleranz ${tolerance})`
+    );
+    return null;
+  }
+  const { display, assembly, solutionLayout } = makePiecesFromRaw(
+    rawPieces,
+    scheme.diff,
+    spec.seed
+  );
+  const optSeed = spec.seed * 3 + 7;
+  const { options, correctId } = spec.eCorrect
+    ? makeOptionsE(scheme.fig, optSeed)
+    : makeOptionsNormal(scheme.fig, optSeed);
+  if (options.length !== 5) return null;
+
+  const explanation = spec.eCorrect
+    ? `Keine der Figuren A\u2013D ist korrekt. Die ${rawPieces.length} Teile ergeben ${FIGNAME[scheme.fig]}.`
+    : `Die ${rawPieces.length} Teile ergeben zusammengesetzt ${FIGNAME[scheme.fig]}.`;
+
+  return {
+    id: spec.id,
+    targetShapePath: FIG[scheme.fig],
+    pieces: display.map((path, i) => ({ path, fill: FILL, assemblyPath: assembly[i] })),
+    options,
+    correctOptionId: correctId,
+    difficulty: scheme.diff,
+    solutionLayout,
+    explanation,
+  };
+}
+
+function legacyDiffToLevel(d: "leicht" | "mittel" | "schwer"): FZDifficultyLevel {
+  return d === "leicht" ? "easy" : d === "mittel" ? "medium" : "hard";
+}
+
+function buildLegacyAufgabe(spec: Extract<TaskSpec, { fig: FK }>): FZAufgabe {
+  const { display, assembly } = makePieces(spec.fig, spec.pc, spec.diff, spec.seed);
   const optSeed = spec.seed * 3 + 7;
   const { options, correctId } = spec.eCorrect
     ? makeOptionsE(spec.fig, optSeed)
     : makeOptionsNormal(spec.fig, optSeed);
+  if (options.length !== 5)
+    throw new Error(`Figuren Aufgabe ${spec.id}: genau 5 Optionen erforderlich`);
 
   const explanation = spec.eCorrect
     ? `Keine der Figuren A\u2013D ist korrekt. Die ${spec.pc} Teile ergeben ${FIGNAME[spec.fig]}.`
@@ -450,15 +847,32 @@ function buildAufgabe(spec: TaskSpec): FZAufgabe {
 
   return {
     id: spec.id,
-    pieces: pieces.map((p) => ({ path: p, fill: FILL })),
+    targetShapePath: FIG[spec.fig],
+    pieces: display.map((path, i) => ({ path, fill: FILL, assemblyPath: assembly[i] })),
     options,
     correctOptionId: correctId,
-    difficulty: spec.diff,
+    difficulty: legacyDiffToLevel(spec.diff),
     explanation,
   };
 }
 
-export const figurenAufgaben: FZAufgabe[] = TASKS.map(buildAufgabe);
+function buildAufgabe(spec: TaskSpec): FZAufgabe | null {
+  if ("schemeIndex" in spec) return buildStrategicAufgabe(spec);
+  return buildLegacyAufgabe(spec);
+}
+
+/** Nur geometrisch valide Aufgaben (Fläche exakt, Lösung kantenbündig). */
+export const figurenAufgaben: FZAufgabe[] = TASKS.map(buildAufgabe).filter(
+  (a): a is FZAufgabe => a != null
+);
+
+/** MedAT-Beispielaufgaben (alle 10 mit strategischen Schnitten). */
+export const figurenBeispielaufgaben: FZAufgabe[] = figurenAufgaben;
+
+// QA: mind. 2 Aufgaben mit E korrekt; Flächenvalidierung bei strategischen Aufgaben
+if (figurenAufgaben.filter((a) => a.correctOptionId === "e").length < 2) {
+  console.warn("Figuren: QA erfordert mind. 2 Aufgaben mit korrekter Option E.");
+}
 
 // ─── Strategy Guide ──────────────────────────────────────────────────
 
