@@ -3574,6 +3574,10 @@ Die Henderson-Hasselbalch-Gleichung pH = pKa + log([A⁻]/[HA]) lässt sich dire
 
 **Erklärung zur Grafik:** Die Abbildung zeigt die Bildungskaskade reaktiver Sauerstoffspezies (O₂·⁻ → H₂O₂ → ·OH, Fenton-Reaktion) und das antioxidative System (SOD, Katalase, GSH/GPx) — wichtig für oxidativen Stress und G6PD-Mangel.
 
+![Redox in der Atmungskette](/grafik-redox.svg)
+
+**Erklärung zur Grafik:** ROS entstehen bei der Reduktion von O₂; die Grafik veranschaulicht Elektronenübertragung und Oxidationszahlen — Bezug zu NADH, Cytochromen und antioxidativer Abwehr.
+
 Reaktive Sauerstoffspezies (ROS, englisch: Reactive Oxygen Species) sind hochreaktive, sauerstoffhaltige Moleküle, die in der Lage sind, zelluläre Biomoleküle zu oxidieren und zu schädigen. Sie entstehen als unvermeidliche Nebenprodukte des aeroben Stoffwechsels, aber auch gezielt durch Immunzellen zur Pathogenabwehr.
 
 **Wichtige ROS und ihre Bildung:**
