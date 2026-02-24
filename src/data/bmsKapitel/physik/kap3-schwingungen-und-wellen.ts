@@ -408,11 +408,13 @@ Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen
 
 ## Grundgrößen der Welle
 
-**c = f · λ** – die fundamentale Wellengleichung
+**c = f · λ** – die fundamentale Wellengleichung (bzw. **c = λ · f**)
 
 - **c** (Wellengeschwindigkeit) [m/s] – wird durch das Medium bestimmt, nicht durch die Quelle
 - **f** (Frequenz) [Hz] – wird von der Quelle festgelegt und ändert sich beim Medienwechsel nicht
 - **λ** (Wellenlänge) [m] – Abstand zweier benachbarter gleichphasiger Punkte (z. B. Wellenberg zu Wellenberg)
+
+**Prüfungsrelevante Zahlen:** **Lichtgeschwindigkeit** (Vakuum/Luft) **c ≈ 3·10⁸ m/s = 300 000 km/s**. **Sichtbares Licht** hat Wellenlängen im Bereich **380 nm bis 750 nm** (nanometer, nicht mm, cm oder km). Beispiel: Trägerfrequenz 2 GHz (z. B. Mobilfunk) → λ = c/f = 3·10⁸/(2·10⁹) = 0,15 m = **15 cm**.
 
 > **Merke:** c gehört zum Medium, f gehört zur Quelle, λ = c/f passt sich an. Beim Medienwechsel ändert sich die Wellenlänge, nicht die Frequenz!
 
@@ -458,7 +460,7 @@ Das EM-Spektrum umfasst (von niedrig nach hoch Frequenz):
 - **Radiowellen** (< 300 MHz): MRT-Anregung, Radio
 - **Mikrowellen** (300 MHz – 300 GHz): Mikrowellenherd, WLAN
 - **Infrarot** (300 GHz – 400 THz): Wärmestrahlung, Thermographie
-- **Sichtbares Licht** (400–750 nm): Augendiagnostik, Endoskopie
+- **Sichtbares Licht** (**380–750 nm**): Augendiagnostik, Endoskopie; Wellenlänge in **Nanometern** (nm), nicht mm, cm oder m
 - **UV** (10–400 nm): Desinfektion, Vitamin-D-Synthese
 - **Röntgenstrahlung** (0,01–10 nm): Röntgendiagnostik, CT
 - **Gammastrahlung** (< 0,01 nm): Nuklearmedizin, PET
@@ -526,7 +528,7 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Wellengrößen (λ, f, c = λ·f), Medienwechsel (f konstant, λ und c ändern sich), Reflexion, Brechung, Snellius, Dopplereffekt (f' bei Bewegung).
+**Zentral prüfungsrelevant:** **c = λ·f**; **Lichtgeschwindigkeit c ≈ 3·10⁸ m/s**; **sichtbares Licht 380–750 nm**; Wellenlänge aus λ = c/f (z. B. 2 GHz → λ ≈ 15 cm). Wellengrößen (λ, f, c), Medienwechsel (f konstant, λ und c ändern sich), Reflexion, Brechung, Snellius, Dopplereffekt (f' bei Bewegung).
 
 **Ergänzend vertiefend:** Stehende Welle (Knoten/Bäuche, λₙ = 2L/n); Kohärenz; Snellius und Totalreflexion; typische Verwechslungen (Doppler-Vorzeichen, konstruktiv n·λ vs. destruktiv (n+½)·λ) — siehe „Typische Prüfungsfallen“.
 
@@ -537,6 +539,8 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
 - "Warum braucht man Ultraschallgel?" → Luft-Haut-Impedanzsprung eliminieren (R ≈ 99,9 % ohne Gel)
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Sichtbares Licht:** Wellenlänge **380–750 nm** (Nanometer), nicht 380–750 mm, cm, m oder km.
+- **c = λ·f** mit c ≈ 3·10⁸ m/s; z. B. 2 GHz → λ = 0,15 m = 15 cm.
 - c gehört zum **Medium** (nicht zur Quelle); f gehört zur **Quelle** (nicht zum Medium)
 - Schall = Longitudinalwelle; Licht = Transversalwelle — nicht umgekehrt!
 - Höhere US-Frequenz → bessere Auflösung, **aber** geringere Eindringtiefe (Dämpfung ∝ f²)

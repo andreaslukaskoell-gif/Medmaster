@@ -28,11 +28,11 @@ export const bioKap1: Kapitel = {
       ],
       content: `## Einleitung
 
-Was unterscheidet eine lebende Zelle von einem Stein? Was macht einen Virus zum Grenzfall zwischen belebt und unbelebt? Die Biologie beantwortet diese Fragen mit sieben definierten **Kennzeichen des Lebens**. Für die Medizin ist das nicht nur Theorie: Wann gilt ein Organ als "tot"? Warum wirken Antibiotika nicht gegen Viren? Warum entstehen manche Krankheiten wie Krebs erst auf Systemebene, nicht in einzelnen Zellen? All das baut auf dem Grundverständnis von Leben auf. Das Herzstück ist die **Homöostase** — die Fähigkeit, innere Gleichgewichte aktiv aufrechtzuerhalten. Für den MedAT sind die sieben Kennzeichen (StReForWaEvoBeHo), Viren als Grenzfall und negative vs. positive Rückkopplung prüfungsrelevant.
+Was unterscheidet eine lebende Zelle von einem Stein? Was macht einen Virus zum Grenzfall zwischen belebt und unbelebt? Die Biologie definiert Leben über **sieben Kennzeichen** — erst ihr Zusammenspiel kennzeichnet ein lebendes System. Für die Medizin ist das zentral: Wann gilt ein Organ als „tot“? Warum wirken Antibiotika nicht gegen Viren? Warum entstehen Krankheiten wie Krebs auf Systemebene? Das Herzstück ist die **Homöostase** (die aktive Aufrechterhaltung innerer Gleichgewichte wie Blutzucker, Temperatur oder pH). Dieses Kapitel legt das Fundament für alle weiteren Zellthemen: Ohne klare Abgrenzung von „Leben“ sind Membran, Stoffwechsel und Zellteilung nicht einzuordnen.
 
 **In diesem Kapitel lernst du:**
 - die **sieben Kennzeichen des Lebens** (StReForWaEvoBeHo) und warum kein einzelnes allein reicht
-- **Homöostase** und **Rückkopplung** (negativ = stabilisierend, positiv = verstärkend)
+- **Homöostase** und **Rückkopplung** (negativ = stabilisierend, positiv = verstärkend) mit Beispielen
 - warum **Viren** als Grenzfall gelten (kein Stoffwechsel, keine Zellstruktur) und warum Antibiotika nicht wirken
 - **Emergenz** (neue Eigenschaften auf höheren Ebenen) und was das für die Medizin bedeutet
 
@@ -42,9 +42,9 @@ Was unterscheidet eine lebende Zelle von einem Stein? Was macht einen Virus zum 
 
 Kein einzelnes Merkmal allein definiert Leben — erst ihr Zusammenspiel kennzeichnet ein lebendes System:
 
-1. **Stoffwechsel** (Metabolismus): Chemische Reaktionen zum Aufbau (Anabolismus) und Abbau (Katabolismus) körpereigener Stoffe. Treibstoff ist **ATP** (Adenosintriphosphat) — die universelle **Energiewährung** jeder Zelle (ohne ATP keine Arbeit in der Zelle).
+1. **Stoffwechsel** (Metabolismus): Chemische Reaktionen zum Aufbau (Anabolismus) und Abbau (Katabolismus) körpereigener Stoffe. Treibstoff ist **ATP** (Adenosintriphosphat, die universelle Energiewährung jeder Zelle) — ohne ATP keine Arbeit in der Zelle.
 
-2. **Reizbarkeit**: Wahrnehmung von Umweltreizen und gezielte Reaktion darauf — über Rezeptoren, Nervenleitungen und Signalkaskaden. Beispiel: Nervenzelle feuert bei Berührung; Immunzelle reagiert auf Pathogen.
+2. **Reizbarkeit**: Wahrnehmung von Umweltreizen und gezielte Reaktion — über Rezeptoren, Nervenleitungen und Signalkaskaden. Beispiel: Nervenzelle feuert bei Berührung; Immunzelle reagiert auf ein Pathogen.
 
 3. **Fortpflanzung**: Weitergabe genetischer Information — sexuell (mit Rekombination, erhöht Vielfalt) oder asexuell (genetisch identische Kopien). Einzigartig für Lebewesen.
 
@@ -58,9 +58,9 @@ Kein einzelnes Merkmal allein definiert Leben — erst ihr Zusammenspiel kennzei
 
 > **Merke:** **StReForWaEvoBeHo**: Stoffwechsel – Reizbarkeit – Fortpflanzung – Wachstum – Evolution – Bewegung – Homöostase
 
-![Zelle und Stoffwechsel](/grafik-1-membrantransport.svg)
+**SVG-Hinweis: Zelle und Stoffwechsel** — Zeigt die Zelle als Einheit mit Membran und Transport; damit lassen sich Stoffwechsel, Reizbarkeit und Homöostase auf Zellebene verankern.
 
-**Erklärung zur Grafik:** Die Zelle als Einheit mit Membran und Transport — Grundlage für Stoffwechsel, Reizbarkeit und Homöostase; Kennzeichen des Lebens zeigen sich auf Zellebene.
+![Zelle und Stoffwechsel](/grafik-1-membrantransport.svg)
 
 ---
 
@@ -90,9 +90,9 @@ Homöostase bedeutet: Der Körper hält Parameter wie Blutzucker, Körpertempera
 
 > **Merke:** Negative Rückkopplung = stabilisiert (Homöostase). Positive Rückkopplung = verstärkt für Alles-oder-Nichts-Effekte (Blutgerinnung, Wehen, Aktionspotential).
 
-![Hypophysen-Achsen und Regelkreise](/grafik-5-hypophysen-achsen.svg)
+**SVG-Hinweis: Hypophysen-Achsen und Regelkreise** — Hormonelle Regelkreise (z. B. Schilddrüsenachse) mit negativer Rückkopplung; hilft, Soll-Ist-Vergleich und Homöostase zu verstehen.
 
-**Erklärung zur Grafik:** Hormonelle Regelkreise (z. B. Schilddrüsenachse) mit negativer Rückkopplung — Soll-Ist-Vergleich und Stabilisierung des Sollwerts (Homöostase).
+![Hypophysen-Achsen und Regelkreise](/grafik-5-hypophysen-achsen.svg)
 
 ---
 
@@ -149,25 +149,36 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Sieben Kennzeichen (StReForWaEvoBeHo), negative vs. positive Rückkopplung, Viren als Grenzfall (kein Stoffwechsel, keine Zellstruktur, keine Antibiotika), Homöostase (Blutzucker, Temperatur).
+**Zentral prüfungsrelevant:**
+- Sieben Kennzeichen des Lebens: StReForWaEvoBeHo (Stoffwechsel, Reizbarkeit, Fortpflanzung, Wachstum, Evolution, Bewegung, Homöostase)
+- Kein einzelnes Kennzeichen definiert Leben allein — erst die Kombination
+- Homöostase = aktive Aufrechterhaltung innerer Gleichgewichte (Blutzucker, Temperatur, pH)
+- Negative Rückkopplung: Effekt wirkt dem Auslöser entgegen → stabilisiert (Blutzucker-Insulin, Temperatur)
+- Positive Rückkopplung: Effekt verstärkt den Reiz → Blutgerinnung, Wehen, Aktionspotential
+- Viren: Fortpflanzung und Evolution ✓; kein Stoffwechsel, keine Zellstruktur ✗ → Grenzfall
+- Antibiotika wirken nicht gegen Viren (keine bakteriellen Zielstrukturen)
+- Emergenz: neue Eigenschaften auf höherer Ebene (Bewusstsein, Immunschutz)
 
-**Ergänzend vertiefend:** Emergenz-Hierarchie (Atom → Organismus), ATP als Energiewährung, Systembiologie-Begriff.
+**Ergänzend vertiefend:**
+- Hierarchie: Atom → Molekül → Organell → Zelle → Gewebe → Organ → Organismus
+- ATP = universelle Energiewährung der Zelle
+- Kristallisation ist kein biologisches Wachstum (häufiger MC-Distraktor)
 
-**Häufige Fragen:**
-- "Welche Kennzeichen des Lebens gibt es?" → Sieben: Stoffwechsel, Reizbarkeit, Fortpflanzung, Wachstum, Evolution, Bewegung, Homöostase
-- "Warum sind Viren keine Lebewesen?" → Kein eigenständiger Stoffwechsel, keine Zellstruktur, keine eigenen Ribosomen
-- "Was ist der Unterschied zwischen positiver und negativer Rückkopplung?" → Negativ stabilisiert (Homöostase), positiv verstärkt (Blutgerinnung, Wehen)
+**Häufige Prüfungsfragen:**
+- Welche Kennzeichen des Lebens gibt es? → Sieben: StReForWaEvoBeHo
+- Warum sind Viren keine Lebewesen? → Kein eigenständiger Stoffwechsel, keine Zellstruktur
+- Was ist der Unterschied zwischen positiver und negativer Rückkopplung? → Negativ stabilisiert, positiv verstärkt
+- Welche Rückkopplung hält die Homöostase aufrecht? → Negative
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Negative Rückkopplung ≠ "schlecht": Sie ist der Normalfall der Homöostase und stabilisiert das System
-- Positive Rückkopplung ≠ "gut": Sie ist ein Verstärkungsmechanismus (z. B. Blutgerinnung, Aktionspotential)
-- Viren zeigen Fortpflanzung UND Evolution — aber keinen eigenständigen Stoffwechsel
-- Kristallisation ≠ Wachstum im biologischen Sinne (häufiger Distraktor!)
+**Typische Prüfungsfallen:**
+- Negative Rückkopplung ≠ „schlecht“ — sie ist der Normalfall der Homöostase
+- Positive Rückkopplung ≠ „gut“ — Verstärkung (Blutgerinnung, Aktionspotential)
+- Viren zeigen Fortpflanzung und Evolution, aber keinen eigenständigen Stoffwechsel
+- Kristallisation ≠ Wachstum im biologischen Sinne
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- 7 Kennzeichen (StReForWaEvoBeHo); Hierarchie: Atom → Organismus
-
-**SVG-Stellen im Kapitel (optional):** (1) Übersicht sieben Kennzeichen mit StReForWaEvoBeHo. (2) Schema negativ vs. positiv Rückkopplung (Regelkreis). (3) Tabelle Viren vs. Lebewesen (bereits im Text).
+**Prüfungsrelevante Zahlen & Fakten:**
+- 7 Kennzeichen (StReForWaEvoBeHo)
+- Hierarchie: Atom → Organismus
 
 ---
 
@@ -177,8 +188,8 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
 - **Homöostase** = aktive Aufrechterhaltung innerer Gleichgewichte durch **negative Rückkopplung** (Effekt wirkt dem Auslöser entgegen; Beispiel: Blutzucker-Insulin-Regelkreis)
 - **Positive Rückkopplung** verstärkt: Blutgerinnung, Wehen, Aktionspotential — sinnvoll für schnelle Alles-oder-Nichts-Reaktionen
 - **Viren = Grenzfall**: Fortpflanzung + Evolution ✓, aber kein Stoffwechsel + keine Zellstruktur ✗ → keine Antibiotika wirksam
-- **Emergenz**: Auf jeder Hierarchieebene entstehen neue Eigenschaften, die aus den Einzelkomponenten nicht vorhersagbar sind (Bewusstsein, Immunschutz)
-- **Klinisch**: Diabetes mellitus Typ 2 = Homöostasestörung des Blutzuckerregelkreises`,
+- **Emergenz**: Neue Eigenschaften auf höherer Ebene (Bewusstsein, Immunschutz) — nicht aus Teilen vorhersagbar
+- **Klinisch**: Diabetes mellitus Typ 2 = Homöostasestörung des Blutzuckerregelkreises (Insulinresistenz)`,
       lernziele: [
         "Die sieben Kennzeichen des Lebens benennen, erläutern und mit klinischen Beispielen verknüpfen",
         "Den Begriff Emergenz im Kontext der Systembiologie präzise erklären und Beispiele nennen",
@@ -320,11 +331,11 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
       ],
       content: `## Einleitung
 
-Penicillin tötet Bakterien, aber schadet unserem Körper nicht. Chloramphenicol hemmt Ribosomen in Bakterien, nicht in unseren Zellen. Wie ist das möglich? Die Antwort liegt in einem der fundamentalsten Unterschiede der Biologie: **Prokaryoten** (Bakterien, Archäen) und **Eukaryoten** (unsere Zellen) sind grundlegend unterschiedlich aufgebaut. Genau diese Unterschiede machen Antibiotika möglich — und erklären, warum falsch gewählte Antibiotika gefährlich sein können. Für den MedAT sind die Merkmalsunterschiede, Gram-Färbung, 70S vs. 80S Ribosomen und die Endosymbiontentheorie prüfungsrelevant.
+Nach den Kennzeichen des Lebens stellt sich die Frage: Welche **Baupläne** haben Lebewesen? Penicillin tötet Bakterien, schadet unserem Körper aber nicht. Chloramphenicol hemmt Ribosomen in Bakterien, nicht in unseren Zellen. Das wird möglich durch einen der fundamentalsten Unterschiede der Biologie: **Prokaryoten** (Bakterien, Archäen) haben keinen membranumschlossenen Zellkern, **Eukaryoten** (Pflanzen, Tiere, Pilze, unsere Zellen) schon. Aus diesen Unterschieden folgen Gram-Färbung, 70S- vs. 80S-Ribosomen und die gezielte Wirkung von Antibiotika — und deren Gefahren, wenn man sie falsch einsetzt. Dieses Kapitel baut direkt auf „Kennzeichen des Lebens“ auf und führt in die Zellstruktur ein, die in den folgenden Kapiteln (Membran, Organellen, Zellkern, Zellteilung) vertieft wird.
 
 **In diesem Kapitel lernst du:**
 - den **Grundunterschied** Prokaryot vs. Eukaryot (Kern, Ribosomen, Zellteilung) und warum Antibiotika gezielt wirken können
-- **Gram-Färbung** (positiv violett / negativ rosa) und **Peptidoglykan** bzw. **LPS**
+- **Gram-Färbung** (positiv violett / negativ rosa) und **Peptidoglykan** bzw. **LPS** (Endotoxin)
 - **70S vs. 80S Ribosomen** und typische Antibiotika-Zielstrukturen (Cave: Mitochondrien haben 70S!)
 - die **Endosymbiontentheorie** (5 Belege) und **Archäen** als dritte Domäne
 
@@ -332,7 +343,7 @@ Penicillin tötet Bakterien, aber schadet unserem Körper nicht. Chloramphenicol
 
 ## Grundstruktur im Vergleich
 
-Das definierendste Merkmal: Prokaryoten haben **keinen membranumschlossenen Zellkern** — ihre DNA liegt als zirkuläres Chromosom frei im **Nukleoid**-Bereich (ein definierter Bereich im Zytoplasma, ohne Kernhülle). Eukaryoten haben echte Kerne mit Doppelmembran, Kernporen und linear verpackter DNA an Histonen.
+Das definierendste Merkmal: Prokaryoten haben **keinen membranumschlossenen Zellkern**. Ihre DNA liegt als zirkuläres Chromosom frei im **Nukleoid** (ein definierter Bereich im Zytoplasma ohne Kernhülle). Eukaryoten haben echte Kerne mit Doppelmembran, Kernporen und linear verpackter DNA an Histonen (Verpackungsproteinen).
 
 | Merkmal | Prokaryoten | Eukaryoten |
 |---|---|---|

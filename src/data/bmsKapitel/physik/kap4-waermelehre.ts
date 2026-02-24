@@ -65,7 +65,7 @@ Typische Werte: Zimmertemperatur 293 K (20 °C), Körpertemperatur 310 K (37 °C
 
 ## Thermische Ausdehnung
 
-Feste Stoffe dehnen sich bei Erwärmung aus, weil die Schwingungsamplitude der Gitteratome zunimmt. Die **lineare Wärmedehnung** gilt für stabförmige Körper:
+**Wie kommt die Ausdehnung eines Körpers bei Erwärmung zustande?** Durch die Erwärmung **steigt die mittlere Geschwindigkeit** der Teilchen (Atome/Moleküle). Dadurch werden die **Zusammenstöße** zwischen den Teilchen heftiger, und der **mittlere Abstand** zwischen den Teilchen wird **größer** – der Körper dehnt sich aus. (Nicht: „die Wärme braucht Platz“ oder „der Körper wird weicher“; auch nicht: Gase treiben aus dem Körper.) Feste Stoffe dehnen sich zusätzlich aus, weil die Schwingungsamplitude der Gitteratome zunimmt. Die **lineare Wärmedehnung** gilt für stabförmige Körper:
 
 **ΔL = α · L₀ · ΔT**
 
@@ -82,7 +82,7 @@ Für Flächen gilt entsprechend β ≈ 2α, für Volumina γ ≈ 3α.
 - Bimetallstreifen (zwei Metalle mit verschiedenem α) biegen sich bei Temperaturänderung — Grundlage von Thermoschaltern und Bimetallthermometern
 - Zahnfüllungen müssen einen ähnlichen α wie Zahnschmelz haben, um Rissbildung zu verhindern
 
-Besonderheit Wasser: Die **Dichteanomalie** macht Wasser bei 4 °C am dichtesten. Von 0 °C bis 4 °C schrumpft es beim Erwärmen (negatives α), darüber dehnt es sich normal aus. Die Ursache liegt in den Wasserstoffbrückenbindungen: Unter 4 °C bilden sich zunehmend eisähnliche, hexagonale Strukturen, die ein größeres Volumen einnehmen. Biologisch entscheidend: Seen frieren von oben nach unten, das wärmere 4 °C-Wasser am Grund schützt Aquaorganismen im Winter.
+**Anomalie des Wassers:** Die **Dichte des Wassers ist bei 4 °C am größten** (nicht bei 0 °C). Von 0 °C bis 4 °C schrumpft Wasser beim Erwärmen (Dichte steigt), darüber dehnt es sich normal aus. Die Ursache liegt in den Wasserstoffbrückenbindungen: Unter 4 °C bilden sich zunehmend eisähnliche, hexagonale Strukturen, die ein größeres Volumen einnehmen. **Deswegen frieren Seen im Winter von oben zu** (nicht von unten): Das dichtere 4 °C-Wasser sinkt nach unten, kälteres Wasser und Eis bleiben oben – das 4 °C-Wasser am Grund schützt Wasserorganismen.
 
 ## Wärme und Wärmekapazität
 
@@ -143,7 +143,7 @@ Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Temperatur (Kelvin T = °C + 273,15), Wärme Q = c·m·ΔT, spezifische Wärmekapazität, Phasenübergang (latente Wärme), Wärmebilanz.
+**Zentral prüfungsrelevant:** Temperatur (Kelvin T = °C + 273,15), Wärme Q = c·m·ΔT, spezifische Wärmekapazität, **thermische Ausdehnung durch Teilchenbewegung** (mittlere Geschwindigkeit ↑ → Stöße heftiger → mittlerer Abstand ↑), **Anomalie des Wassers** (Dichte bei **4 °C** am größten; Seen frieren von oben), Phasenübergang (latente Wärme), Wärmebilanz.
 
 **Ergänzend vertiefend:** Absolute Temperatur (0 K); Volumenausdehnung γ ≈ 3α; Verdampfungsenthalpie (Schwitzen); typische Verwechslungen (c vs. λ, Dichteanomalie bei 4 °C) — siehe „Typische Prüfungsfallen“.
 
@@ -153,6 +153,8 @@ Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der 
 - "Mischtemperatur zweier Wassermengen?" → T_m = (m₁·T₁ + m₂·T₂) / (m₁ + m₂)
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Thermische Ausdehnung:** Ursache = mittlere Teilchengeschwindigkeit ↑ → heftigere Stöße → mittlerer Abstand ↑. Falsch: „Wärme braucht Platz“, „Körper wird weicher“, „Gase treiben aus dem Körper“.
+- **Anomalie des Wassers:** Dichte bei **4 °C** am größten; Seen frieren **von oben** zu (nicht von unten). Nicht: „Wasser verhält sich normal“ oder „Dichte bei 0 °C am größten“.
 - Bei Temperaturdifferenzen (ΔT) sind °C und K gleichwertig — bei absoluten Temperaturen in Formeln immer Kelvin!
 - Wärmekapazität c [J/(kg·K)] beschreibt Speichern von Wärme — nicht verwechseln mit Wärmeleitfähigkeit λ [W/(m·K)]
 - Dichteanomalie: Wasser ist bei **4 °C** am dichtesten (nicht bei 0 °C!)

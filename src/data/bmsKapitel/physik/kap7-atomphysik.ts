@@ -67,7 +67,7 @@ Die erlaubten Bahnen entsprechen Hauptquantenzahlen n = 1, 2, 3, ... mit Energie
 
 **Erklärung zur Grafik:** Im quantenmechanischen Modell ersetzen Orbitale (s, p, d) die Kreisbahnen; die Grafik zeigt Aufenthaltswahrscheinlichkeit und Quantenzahlen.
 
-Das **quantenmechanische Modell** (Schrödinger, Heisenberg, 1920er) ersetzt feste Bahnen durch **Orbitale** – Raumgebiete, in denen die Aufenthaltswahrscheinlichkeit des Elektrons ≥ 90 % beträgt. Die Wellenfunktion ψ beschreibt den Quantenzustand; |ψ|² ist die Wahrscheinlichkeitsdichte. Vier Quantenzahlen charakterisieren jeden Zustand: Hauptquantenzahl n (Schale), Nebenquantenzahl l (Orbitalform: s, p, d, f), magnetische Quantenzahl mₗ (Orientierung) und Spinquantenzahl mₛ (±½). Das Pauli-Prinzip besagt, dass keine zwei Elektronen in allen vier Quantenzahlen übereinstimmen dürfen.
+Das **quantenmechanische Modell** (Schrödinger, Heisenberg, 1920er) ersetzt feste Bahnen durch **Orbitale** – Raumgebiete, in denen die Aufenthaltswahrscheinlichkeit des Elektrons ≥ 90 % beträgt. Die Wellenfunktion ψ beschreibt den Quantenzustand; |ψ|² ist die Wahrscheinlichkeitsdichte. Vier Quantenzahlen charakterisieren jeden Zustand: Hauptquantenzahl n (Schale), Nebenquantenzahl l (Orbitalform: s, p, d, f), magnetische Quantenzahl mₗ (Orientierung) und Spinquantenzahl mₛ (±½). **Pauli-Prinzip:** Keine zwei Elektronen dürfen in allen vier Quantenzahlen übereinstimmen. **Daraus folgt: Jedes Orbital der Atomhülle kann nur maximal 2 Elektronen aufnehmen** (mit entgegengesetztem Spin).
 
 ## Emission und Absorption – Spektrallinien
 
@@ -125,7 +125,7 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Wasserstoff-Spektrum (Lyman UV, Balmer sichtbar, Paschen IR), Hα 656 nm (n=3→2), Energieniveaus E_n ~ 1/n², Photon E = h·f, Rydberg.
+**Zentral prüfungsrelevant:** **Pauli-Prinzip:** Jedes Orbital kann **maximal 2 Elektronen** aufnehmen. Wasserstoff-Spektrum (Lyman UV, Balmer sichtbar, Paschen IR), Hα 656 nm (n=3→2), Energieniveaus E_n ~ 1/n², Photon E = h·f, Rydberg.
 
 **Ergänzend vertiefend:** Feinstruktur; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -379,6 +379,12 @@ Gamma-Strahlung ist hochenergetische **elektromagnetische Strahlung** (Photonen,
 | β⁺ | Positron | +1e | Aluminium | −1 | 0 | 1 |
 | γ | Photon | 0 | Blei/Beton | 0 | 0 | 1 |
 
+**Ionisierende Strahlung beim radioaktiven Zerfall:** Beim Zerfall radioaktiver Substanzen können **Alpha-, Beta- und Gamma-Strahlung** freigesetzt werden – alle drei sind **ionisierend** (können Elektronen aus Atomen lösen). **Infrarotstrahlung** ist **nicht** ionisierend und gehört nicht zu den beim Kernzerfall freigesetzten Strahlungsarten. Typische Falle: „Infrarot ist eine ionisierende Strahlungsart beim Zerfall“ ist **falsch**.
+
+**Kernspaltung (z. B. Uran):** Bei der **Kernspaltung** zur Energiegewinnung werden **Neutronen** benötigt – ein Neutron trifft auf einen schweren Kern (z. B. ²³⁵U) und löst die Spaltung aus. Nicht Alpha-, Beta-Teilchen, Protonen oder Neutrinos; **Neutronen** lösen die Kettenreaktion aus.
+
+**Massendefekt:** Die **Masse des Atomkerns** ist **etwas geringer** als die Summe der Massen der in ihm enthaltenen Nukleonen (Protonen + Neutronen). Diese Massendifferenz (Massendefekt) entspricht der **Bindungsenergie** des Kerns (E = Δm·c²). Nicht: „Die Masse des Atoms ist größer als die Summe der Nukleonen“ (das wäre falsch); auch nicht die Massenzunahme bei hohen Geschwindigkeiten oder der Massenunterschied zwischen Proton und Elektron.
+
 ![Exponentieller Zerfall](/grafik-exponential.svg)
 
 **Erklärung zur Grafik:** Die Aktivität und die Anzahl der Kerne fallen exponentiell mit der Zeit; die Halbwertszeit T½ kennzeichnet den typischen Abklingverlauf.
@@ -440,7 +446,7 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Radioaktiver Zerfall (α Z−2 A−4, β⁻ Z+1, β⁺ Z−1, γ unverändert), Halbwertszeit, Aktivität, Strahlenschutz, Anwendung (PET, Szintigraphie, Therapie).
+**Zentral prüfungsrelevant:** Radioaktiver Zerfall (α Z−2 A−4, β⁻ Z+1, β⁺ Z−1, γ unverändert), **ionisierende Strahlung beim Zerfall = Alpha, Beta, Gamma** (nicht Infrarot!). **Kernspaltung:** Auslösung durch **Neutronen**. **Massendefekt:** Kernmasse **kleiner** als Summe der Nukleonenmassen. Halbwertszeit, Aktivität, Strahlenschutz, Anwendung (PET, Szintigraphie, Therapie).
 
 **Ergänzend vertiefend:** Bindungsenergie; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -451,6 +457,9 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
 - "Warum ist ⁹⁹ᵐTc ideal für Diagnostik?" → reiner γ-Strahler (140 keV), T½ = 6 h → niedrige Strahlendosis, gute Kameradetektion
 
 **Typische Prüfungsfallen / Verwechslungen:**
+- **Ionisierend** beim Zerfall: nur **Alpha, Beta, Gamma** – **Infrarot ist nicht ionisierend** und keine Zerfallsstrahlung.
+- **Kernspaltung:** Auslösung durch **Neutronen** (nicht Alpha, Beta, Protonen, Neutrinos).
+- **Massendefekt:** Kernmasse **kleiner** als Summe der Nukleonen (nicht größer; nicht Massenzunahme bei hoher Geschwindigkeit).
 - Gray (Gy) ≠ Sievert (Sv): Gy = absorbierte Energie (J/kg); Sv = Gy × w_R (biologische Wirksamkeit)
 - α äußerlich harmlos (Papier stoppt), aber innerlich extrem gefährlich (w_R = 20!)
 - β⁺-Zerfall (Positronenemitter, Z−1, für PET) ≠ β⁻-Zerfall (Elektronemitter, Z+1, für Therapie)
