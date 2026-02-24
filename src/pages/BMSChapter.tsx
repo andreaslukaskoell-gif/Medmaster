@@ -189,7 +189,7 @@ export default function BMSChapter({ chapter, onBack }: Props) {
                 )}
 
                 {section.diagram && (
-                  <div className="mt-4 p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+                  <div className="content-svg-wrap mt-4">
                     <DiagramSVG type={section.diagram} />
                   </div>
                 )}
